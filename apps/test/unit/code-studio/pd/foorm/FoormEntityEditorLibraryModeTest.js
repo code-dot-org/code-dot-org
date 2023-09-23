@@ -20,7 +20,9 @@ import foorm, {
 } from '../../../../../src/code-studio/pd/foorm/editor/foormEditorRedux';
 import sinon from 'sinon';
 import _ from 'lodash';
-global.$ = require('jquery');
+import jquery from 'jquery';
+
+global.$ = jquery;
 
 describe('FoormEntityEditor in Library editing mode', () => {
   let defaultProps, store, server, wrapper;

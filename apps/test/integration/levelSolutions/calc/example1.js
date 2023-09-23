@@ -1,9 +1,9 @@
 import {TestResults} from '@cdo/apps/constants';
-var blockUtils = require('@cdo/apps/block_utils');
-var calcMsg = require('@cdo/apps/calc/locale');
-var commonMsg = require('@cdo/locale');
+import blockUtils from '@cdo/apps/block_utils';
+import calcMsg from '@cdo/apps/calc/locale';
+import commonMsg from '@cdo/locale';
 
-module.exports = {
+export default {
   app: 'calc',
   skinId: 'calc',
   levelFile: 'levels',

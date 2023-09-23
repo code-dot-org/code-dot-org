@@ -1,7 +1,7 @@
 import {testApplabConsoleOutput} from '../../util/levelTestHelpers';
 import {TestResults} from '@cdo/apps/constants';
 
-module.exports = {
+export default {
   app: 'applab',
   skinId: 'applab',
   levelFile: 'levels',

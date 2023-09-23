@@ -1,8 +1,9 @@
 /** @file Test of consoleShim.js which makes console functions safer to use
  *  on older browsers by filling in no-op functions. */
 
-var assert = require('assert');
-var consoleShim = require('@cdo/apps/code-studio/consoleShim');
+import assert from 'assert';
+
+import consoleShim from '@cdo/apps/code-studio/consoleShim';
 
 describe('consoleShim', function () {
   it('creates console object with standard functions if console is missing', function () {

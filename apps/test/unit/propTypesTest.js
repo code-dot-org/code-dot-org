@@ -1,6 +1,6 @@
 import React from 'react';
 import {expect} from '../util/reconfiguredChai';
-var propTypes = require('@cdo/apps/propTypes');
+import {whenNoChildOfTypes, childrenOfType} from '@cdo/apps/propTypes';
 
 describe('propTypes module', () => {
   function Foo() {}
@@ -11,7 +11,7 @@ describe('propTypes module', () => {
     var check;
     beforeEach(() => {
       check = ({children, someProp}) =>
-        propTypes.whenNoChildOfTypes(Foo)(
+        whenNoChildOfTypes(Foo)(
           {children, someProp},
           'someProp',
           'SomeComponent'
@@ -44,11 +44,7 @@ describe('propTypes module', () => {
     var check;
     beforeEach(() => {
       check = (...children) =>
-        propTypes.childrenOfType(Foo, Bar)(
-          {children},
-          'children',
-          'SomeComponent'
-        );
+        childrenOfType(Foo, Bar)({children}, 'children', 'SomeComponent');
     });
 
     describe('does not return an error when', () => {
@@ -69,7 +65,7 @@ describe('propTypes module', () => {
     describe('does return an error when', () => {
       it('used on a prop other than children', () => {
         check = (...children) =>
-          propTypes.childrenOfType(Foo, Bar)(
+          childrenOfType(Foo, Bar)(
             {children},
             'nonChildrenProp',
             'SomeComponent'

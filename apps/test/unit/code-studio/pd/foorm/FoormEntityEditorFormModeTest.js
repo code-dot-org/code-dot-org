@@ -18,8 +18,9 @@ import foorm, {
 } from '../../../../../src/code-studio/pd/foorm/editor/foormEditorRedux';
 import sinon from 'sinon';
 import {allowConsoleWarnings} from '../../../../util/throwOnConsole';
+import jquery from 'jquery';
 
-global.$ = require('jquery');
+global.$ = jquery;
 
 describe('FoormEntityEditor in Form editing mode', () => {
   let defaultProps, store, server;

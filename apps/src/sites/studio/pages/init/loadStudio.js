@@ -11,5 +11,6 @@ import skins from '@cdo/apps/studio/skins';
 export default function loadStudio(options) {
   options.skinsModule = skins;
   options.blocksModule = blocks;
+
   appMain(Studio, levels, options);
 }

@@ -95,7 +95,7 @@ const levelDef = {
   freePlay: false,
 };
 
-module.exports = {
+export default {
   app: 'turtle',
   skinId: 'artist',
   levelDefinition: levelDef,

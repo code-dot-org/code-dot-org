@@ -1,5 +1,5 @@
 import {TestResults} from '@cdo/apps/constants';
-var blockUtils = require('@cdo/apps/block_utils');
+import blockUtils from '@cdo/apps/block_utils';
 
 var solutionXml = blockUtils.mathBlockXml('place_image', {
   IMAGE: blockUtils.mathBlockXml('functional_circle', {
@@ -11,7 +11,7 @@ var solutionXml = blockUtils.mathBlockXml('place_image', {
   Y: blockUtils.mathBlockXml('functional_math_number', null, {NUM: 50}),
 });
 
-module.exports = {
+export default {
   app: 'eval',
   skinId: 'eval',
   levelDefinition: {

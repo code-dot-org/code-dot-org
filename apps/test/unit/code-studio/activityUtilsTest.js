@@ -1,4 +1,4 @@
-var assert = require('assert');
+import assert from 'assert';
 import {TestResults} from '@cdo/apps/constants';
 
 import {

@@ -1,7 +1,7 @@
 import $ from 'jquery';
 import {assert} from '../util/reconfiguredChai';
 
-var puzzleRatingUtils = require('@cdo/apps/puzzleRatingUtils');
+import puzzleRatingUtils from '@cdo/apps/puzzleRatingUtils';
 
 describe('Puzzle Rating Utils', function () {
   var sampleRatings = [];

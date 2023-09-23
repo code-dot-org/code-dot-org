@@ -6,7 +6,7 @@ function isNativeCode(func) {
  * Wraps window.addEventListener to catch all added listeners, allowing us to
  * dispose of them when our test finishes
  */
-module.exports = {
+export default {
   /**
    * Attach our wrapper, tracking all added listeners
    */

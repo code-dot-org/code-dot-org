@@ -1,17 +1,16 @@
 import {expect} from '../../util/reconfiguredChai';
 
-const FarmerHandler = require('@cdo/apps/maze/results/farmer');
-const BeeHandler = require('@cdo/apps/maze/results/bee');
-const CollectorHandler = require('@cdo/apps/maze/results/collector');
-const WordsearchHandler = require('@cdo/apps/maze/results/wordsearch');
-const HarvesterHandler = require('@cdo/apps/maze/results/harvester');
-const PlanterHandler = require('@cdo/apps/maze/results/planter');
-const ResultsHandler = require('@cdo/apps/maze/results/resultsHandler');
+import FarmerHandler from '@cdo/apps/maze/results/farmer';
+import BeeHandler from '@cdo/apps/maze/results/bee';
+import CollectorHandler from '@cdo/apps/maze/results/collector';
+import WordsearchHandler from '@cdo/apps/maze/results/wordsearch';
+import HarvesterHandler from '@cdo/apps/maze/results/harvester';
+import PlanterHandler from '@cdo/apps/maze/results/planter';
+import ResultsHandler from '@cdo/apps/maze/results/resultsHandler';
 
 import {MazeController} from '@code-dot-org/maze';
 
-const createResultsHandlerForSubtype =
-  require('@cdo/apps/maze/results/utils').createResultsHandlerForSubtype;
+import {createResultsHandlerForSubtype} from '@cdo/apps/maze/results/utils';
 
 describe('ResultsHandlers', function () {
   describe('createResultsHandlerForSubtype util', function () {

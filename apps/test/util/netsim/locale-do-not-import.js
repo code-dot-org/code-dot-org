@@ -7,7 +7,8 @@
  * which is important for making locale setup work seamlessly in tests.
  */
 // make sure Blockly is loaded
-require('../setupBlocklyGlobal')();
-require('../../../build/package/js/en_us/netsim_locale.js');
+import setupBlocklyGlobal from '../setupBlocklyGlobal';
+import '../../../build/package/js/en_us/netsim_locale.js';
+setupBlocklyGlobal();
 
-module.exports = window.locales.netsim_locale;
+export default window.locales.netsim_locale;

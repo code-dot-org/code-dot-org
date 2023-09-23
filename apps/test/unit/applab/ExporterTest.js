@@ -10,11 +10,12 @@ import {
   __testing_restoreRedux,
 } from '@cdo/apps/redux';
 
-var testUtils = require('../../util/testUtils');
+import * as testUtils from '../../util/testUtils';
 import * as assetPrefix from '@cdo/apps/assetManagement/assetPrefix';
 import {setAppOptions} from '@cdo/apps/code-studio/initApp/loadApp';
 import Exporter, {getAppOptionsFile} from '@cdo/apps/applab/Exporter';
-const assets = require('@cdo/apps/code-studio/assets');
+import assets from '@cdo/apps/code-studio/assets';
+import jquery from 'jquery';
 
 const WEBPACK_RUNTIME_JS_CONTENT = 'webpack-runtime.js content';
 const COMMON_LOCALE_JS_CONTENT = 'common_locale.js content';
@@ -486,13 +487,13 @@ describe('Applab Exporter,', function () {
             htmlFile.indexOf('<body>') + '<body>'.length,
             htmlFile.indexOf('</body>')
           );
-          window.$ = require('jquery');
+          window.$ = jquery;
 
           new Function(getAppOptionsFile())();
           setAppOptions(Object.assign(window.APP_OPTIONS, {isExported: true}));
           // webpack-runtime must appear exactly once on any page containing webpack entries.
-          require('../../../build/package/js/webpack-runtime.js');
-          require('../../../build/package/js/applab-api.js');
+          require('../../../build/package/js/webpack-runtime.js'); // eslint-disable-line import/no-commonjs
+          require('../../../build/package/js/applab-api.js'); // eslint-disable-line import/no-commonjs
           new Function(zipFiles['my-app/code.js'])();
           if (globalPromiseName) {
             await window[globalPromiseName];

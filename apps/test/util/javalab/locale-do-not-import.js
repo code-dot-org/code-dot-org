@@ -7,7 +7,8 @@
  * which is important for making locale setup work seamlessly in tests.
  */
 // locale for javalab
-require('../setupBlocklyGlobal')();
-require('../../../build/package/js/en_us/javalab_locale.js');
+import setupBlocklyGlobal from '../setupBlocklyGlobal.js';
+import '../../../build/package/js/en_us/javalab_locale.js';
+setupBlocklyGlobal();
 
-module.exports = window.locales.javalab_locale;
+export default window.locales.javalab_locale;

@@ -1,3 +1,5 @@
+/* eslint-disable import/no-commonjs */
+
 // This is the webpack entry point for all our karma tests, see: karma.conf.js
 //
 // Invocations of `karma start` run this file, which uses KARMA_CLI_FLAGS

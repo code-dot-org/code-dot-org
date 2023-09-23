@@ -1,8 +1,8 @@
 import {assert} from '../util/reconfiguredChai';
+import Observer from '@cdo/apps/Observer';
+import ObservableEventDEPRECATED from '@cdo/apps/ObservableEventDEPRECATED';
 
 describe('Observer', function () {
-  var Observer = require('@cdo/apps/Observer');
-  var ObservableEventDEPRECATED = require('@cdo/apps/ObservableEventDEPRECATED');
   var observer, eventA, eventB, log, funcX, funcY;
 
   beforeEach(function () {

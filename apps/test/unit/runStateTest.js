@@ -1,15 +1,12 @@
 import {assert} from '../util/reconfiguredChai';
 import JSInterpreter from '@cdo/apps/lib/tools/jsinterpreter/JSInterpreter';
-var testUtils = require('./../util/testUtils');
-
-var runState = require('@cdo/apps/redux/runState');
+import * as testUtils from './../util/testUtils';
+import reducer, * as runState from '@cdo/apps/redux/runState';
 
 describe('runState', () => {
   testUtils.setExternalGlobals();
 
   describe('stepSpeed', function () {
-    var reducer = runState.default;
-
     it('is initially 1', function () {
       var state = reducer(null, {});
       assert.strictEqual(state.stepSpeed, 1);
@@ -37,8 +34,6 @@ describe('runState', () => {
   });
 
   describe('isRunning reducer', function () {
-    var reducer = runState.default;
-
     it('starts out false', function () {
       var state = reducer(null, {});
       assert.strictEqual(state.isRunning, false);
@@ -110,8 +105,6 @@ describe('runState', () => {
   });
 
   describe('isDebuggerPaused reducer', function () {
-    var reducer = runState.default;
-
     it('starts out false', function () {
       var state = reducer(null, {});
       assert.strictEqual(state.isDebuggerPaused, false);
@@ -183,8 +176,6 @@ describe('runState', () => {
   });
 
   describe('isDebuggingSprites reducer', function () {
-    var reducer = runState.default;
-
     it('starts out false', function () {
       var state = reducer(null, {});
       assert.strictEqual(state.isDebuggingSprites, false);

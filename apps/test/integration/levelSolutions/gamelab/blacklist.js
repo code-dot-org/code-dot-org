@@ -2,7 +2,7 @@ import {gamelabLevelDefinition} from '../../gamelabLevelDefinition';
 import {testAsyncProgramGameLab} from '../../util/levelTestHelpers';
 
 // These tests try to call blacklisted p5 APIs, and expect them to fail.
-module.exports = {
+export default {
   app: 'gamelab',
   skinId: 'gamelab',
   levelDefinition: gamelabLevelDefinition,

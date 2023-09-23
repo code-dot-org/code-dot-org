@@ -1,5 +1,5 @@
 import {TestResults} from '@cdo/apps/constants';
-var blockUtils = require('@cdo/apps/block_utils');
+import blockUtils from '@cdo/apps/block_utils';
 
 var REPEAT_REQUIREMENT = {
   test: function (block) {
@@ -44,7 +44,7 @@ var levelDef = {
   requiredBlocks: [[REPEAT_REQUIREMENT]],
 };
 
-module.exports = {
+export default {
   app: 'maze',
   skinId: 'bee',
   levelDefinition: levelDef,

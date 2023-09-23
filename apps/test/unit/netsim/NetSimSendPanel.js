@@ -2,12 +2,11 @@
 import $ from 'jquery';
 import {assert} from '../../util/reconfiguredChai';
 import {KeyCodes} from '@cdo/apps/constants';
-var NetSimTestUtils = require('../../util/netsimTestUtils');
-var NetSimSendPanel = require('@cdo/apps/netsim/NetSimSendPanel');
-var NetSimLocalClientNode = require('@cdo/apps/netsim/NetSimLocalClientNode');
-var NetSimGlobals = require('@cdo/apps/netsim/NetSimGlobals');
-var NetSimConstants = require('@cdo/apps/netsim/NetSimConstants');
-var MessageGranularity = NetSimConstants.MessageGranularity;
+import * as NetSimTestUtils from '../../util/netsimTestUtils';
+import NetSimSendPanel from '@cdo/apps/netsim/NetSimSendPanel';
+import NetSimLocalClientNode from '@cdo/apps/netsim/NetSimLocalClientNode';
+import NetSimGlobals from '@cdo/apps/netsim/NetSimGlobals';
+import {MessageGranularity} from '@cdo/apps/netsim/NetSimConstants';
 
 /**
  * Simulate an enter key press when the given element is in focus.

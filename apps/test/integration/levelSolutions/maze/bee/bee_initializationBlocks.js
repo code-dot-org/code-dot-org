@@ -112,7 +112,7 @@ var levelDef = {
     '</block>',
 };
 
-module.exports = {
+export default {
   app: 'maze',
   skinId: 'bee',
   levelDefinition: levelDef,

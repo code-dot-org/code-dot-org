@@ -1,7 +1,7 @@
 import $ from 'jquery';
 import {assert} from '../../util/reconfiguredChai';
-var NetSimVizElement = require('@cdo/apps/netsim/NetSimVizElement');
-var NetSimVizNode = require('@cdo/apps/netsim/NetSimVizNode');
+import NetSimVizElement from '@cdo/apps/netsim/NetSimVizElement';
+import NetSimVizNode from '@cdo/apps/netsim/NetSimVizNode';
 
 describe('NetSimVizNode', function () {
   describe('defaults', function () {

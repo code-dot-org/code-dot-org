@@ -17,7 +17,7 @@ describe('dialogHelper', () => {
     // of import for boostrap-sass, otherwise babel moves the import to the top of
     // the file (before we've globalized jQuery)
     window.jQuery = $;
-    require('bootstrap-sass');
+    require('bootstrap-sass'); // eslint-disable-line import/no-commonjs
   });
 
   after(() => {

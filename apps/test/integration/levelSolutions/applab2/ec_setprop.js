@@ -1,6 +1,6 @@
 import $ from 'jquery';
-var testUtils = require('../../../util/testUtils');
-var tickWrapper = require('../../util/tickWrapper');
+import * as testUtils from '../../../util/testUtils';
+import tickWrapper from '../../util/tickWrapper';
 import {TestResults} from '@cdo/apps/constants';
 import {expect} from '../../../util/reconfiguredChai';
 
@@ -9,7 +9,7 @@ import {expect} from '../../../util/reconfiguredChai';
 const flappyImage = '/base/static/flappy_promo.png';
 const facebookImage = '/base/static/facebook_purple.png';
 
-module.exports = {
+export default {
   app: 'applab',
   skinId: 'applab',
   levelFile: 'levels',

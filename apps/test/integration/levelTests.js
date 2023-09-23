@@ -17,7 +17,7 @@ import {
   registerReducers,
 } from '@cdo/apps/redux';
 import jQuery from 'jquery';
-var tickWrapper = require('./util/tickWrapper');
+import tickWrapper from './util/tickWrapper';
 import lessonLock from '@cdo/apps/code-studio/lessonLockRedux';
 import runState from '@cdo/apps/redux/runState';
 import {reducers as jsDebuggerReducers} from '@cdo/apps/lib/tools/jsdebugger/redux';
@@ -31,14 +31,21 @@ import LegacyDialog from '@cdo/apps/code-studio/LegacyDialog';
 import loadSource from './util/loadSource';
 import projectRedux from '@cdo/apps/code-studio/projectRedux';
 
-var wrappedEventListener = require('./util/wrappedEventListener');
-var testCollectionUtils = require('./util/testCollectionUtils');
+import wrappedEventListener from './util/wrappedEventListener';
+import testCollectionUtils from './util/testCollectionUtils';
+import data from './util/data';
+import runLevelTest from './util/runLevelTest';
+
+import StudioAnimation from '@cdo/apps/studio/StudioAnimation';
+import elementLibrary from '@cdo/apps/applab/designElements/library';
+
+import {singleton as studioApp} from '@cdo/apps/StudioApp';
 
 window.appOptions = {};
 window.jQuery = jQuery;
 window.$ = jQuery;
 
-var testUtils = require('../util/testUtils');
+import * as testUtils from '../util/testUtils';
 import {setupBlocklyFrame} from './util/testBlockly';
 
 const defaultTimeout = 20000;
@@ -159,7 +166,6 @@ describe('Level tests', function () {
     };
 
     if (window.Studio) {
-      var StudioAnimation = require('@cdo/apps/studio/StudioAnimation');
       StudioAnimation.__resetIds();
       Studio.JSInterpreter = undefined;
       Object.defineProperty(Studio, 'Globals', {
@@ -170,7 +176,6 @@ describe('Level tests', function () {
     }
 
     if (window.Applab) {
-      var elementLibrary = require('@cdo/apps/applab/designElements/library');
       elementLibrary.resetIds();
     }
 
@@ -190,7 +195,6 @@ describe('Level tests', function () {
     __testing_restoreRedux();
     clock.restore();
     clearInterval(tickInterval);
-    var studioApp = require('@cdo/apps/StudioApp').singleton;
     if (
       studioApp().editor &&
       studioApp().editor.aceEditor &&
@@ -234,7 +238,6 @@ describe('Level tests', function () {
 
 // Loads a test collection at path and runs all the tests specified in it.
 function runTestCollection(item) {
-  var runLevelTest = require('./util/runLevelTest');
   // Append back the .js so that we can distinguish 2_1.js from 2_10.js when grepping
   var path = item.path;
   var testCollection = item.data;
@@ -243,7 +246,7 @@ function runTestCollection(item) {
 
   describe(path, function () {
     testCollection.tests.forEach(function (testData, index) {
-      var dataItem = require('./util/data')(app);
+      var dataItem = data(app);
 
       // todo - maybe change the name of expected to make it clear what type of
       // test is being run, since we're using the same JSON files for these

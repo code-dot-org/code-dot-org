@@ -17,9 +17,10 @@ import {
 } from './CircuitPlaygroundTestHelperFunctions';
 import {BOARD_TYPE} from '@cdo/apps/lib/kits/maker/util/boardUtils';
 import WebSerialPortWrapper from '@cdo/apps/lib/kits/maker/WebSerialPortWrapper';
+import browserProcessHrtime from 'browser-process-hrtime';
 
 // Polyfill node process.hrtime for the browser, which gets used by johnny-five
-process.hrtime = require('browser-process-hrtime');
+process.hrtime = browserProcessHrtime;
 
 const xPins = ['A0', 'A1', 'A2', 'A3', 'A4', 'A5', 'A6', 'A7'];
 const classicPins = [12, 6, 9, 10, 3, 2, 0, 1];

@@ -1,9 +1,9 @@
 import {TestResults} from '@cdo/apps/constants';
-var blockUtils = require('@cdo/apps/block_utils');
-var studioApp = require('@cdo/apps/StudioApp').singleton;
-var EquationSet = require('@cdo/apps/calc/equationSet');
-var Equation = require('@cdo/apps//calc/equation.js');
-var ExpressionNode = require('@cdo/apps/calc/expressionNode');
+import blockUtils from '@cdo/apps/block_utils';
+import {singleton as studioApp} from '@cdo/apps/StudioApp';
+import EquationSet from '@cdo/apps/calc/equationSet';
+import Equation from '@cdo/apps//calc/equation.js';
+import ExpressionNode from '@cdo/apps/calc/expressionNode';
 
 /**
  * This is a little bit strange. I want to test getEquationFromBlock, which
@@ -63,7 +63,7 @@ function validateGeneratedEquation(
   }
 }
 
-module.exports = {
+export default {
   app: 'calc',
   skinId: 'calc',
   levelDefinition: {

@@ -1,6 +1,7 @@
 import {assert} from '../util/reconfiguredChai';
 import {setupTestBlockly, getStudioAppSingleton} from './util/testBlockly';
 import CustomMarshalingInterpreter from '@cdo/apps/lib/tools/jsinterpreter/CustomMarshalingInterpreter';
+import sharedFunctionalBlocks from '@cdo/apps/sharedFunctionalBlocks';
 
 describe('functional_cond_number', function () {
   var studioApp;
@@ -10,7 +11,6 @@ describe('functional_cond_number', function () {
     setupTestBlockly();
     studioApp = getStudioAppSingleton();
 
-    var sharedFunctionalBlocks = require('@cdo/apps/sharedFunctionalBlocks');
     sharedFunctionalBlocks.install(Blockly, Blockly.JavaScript, null);
 
     studioApp.loadBlocks(

@@ -3,7 +3,7 @@ import {TestResults} from '@cdo/apps/constants';
 import {gamelabLevelDefinition} from '../../gamelabLevelDefinition';
 import {testAsyncProgramGameLab} from '../../util/levelTestHelpers';
 
-module.exports = {
+export default {
   app: 'gamelab',
   skinId: 'gamelab',
   levelDefinition: gamelabLevelDefinition,

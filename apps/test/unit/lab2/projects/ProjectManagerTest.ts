@@ -4,7 +4,8 @@ import {RemoteSourcesStore} from '@cdo/apps/lab2/projects/SourcesStore';
 import {ValidationError} from '@cdo/apps/lab2/responseValidators';
 import {ProjectSources, Channel} from '@cdo/apps/lab2/types';
 import {expect, assert} from 'chai';
-import {stubObject, StubbedInstance, stub} from 'ts-sinon';
+import {stubObject, StubbedInstance} from 'ts-sinon';
+import sinon from 'sinon';
 
 const FAKE_CHANNEL_ID = 'fakeChannelId';
 
@@ -168,7 +169,7 @@ describe('ProjectManager', () => {
       false
     );
 
-    const noopListener = stub();
+    const noopListener = sinon.stub();
     projectManager.addSaveNoopListener(noopListener);
     projectManager.save(UPDATED_SOURCE);
     assert.isTrue(noopListener.calledOnce);

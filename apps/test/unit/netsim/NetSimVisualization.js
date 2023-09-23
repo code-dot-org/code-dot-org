@@ -1,16 +1,16 @@
 import $ from 'jquery';
 import {assert} from '../../util/reconfiguredChai';
-var NetSimTestUtils = require('../../util/netsimTestUtils');
-var NetSimVisualization = require('@cdo/apps/netsim/NetSimVisualization');
-var NetSim = require('@cdo/apps/netsim/netsim');
+import * as NetSimTestUtils from '../../util/netsimTestUtils';
+import NetSimVisualization from '@cdo/apps/netsim/NetSimVisualization';
+import NetSim from '@cdo/apps/netsim/netsim';
 import {DnsMode, EncodingType} from '@cdo/apps/netsim/NetSimConstants';
-var NetSimGlobals = require('@cdo/apps/netsim/NetSimGlobals');
-var NetSimLocalClientNode = require('@cdo/apps/netsim/NetSimLocalClientNode');
-var NetSimRouterNode = require('@cdo/apps/netsim/NetSimRouterNode');
-var NetSimVizNode = require('@cdo/apps/netsim/NetSimVizNode');
-var NetSimVizSimulationNode = require('@cdo/apps/netsim/NetSimVizSimulationNode');
-var NetSimVizSimulationWire = require('@cdo/apps/netsim/NetSimVizSimulationWire');
-var NetSimWire = require('@cdo/apps/netsim/NetSimWire');
+import NetSimGlobals from '@cdo/apps/netsim/NetSimGlobals';
+import NetSimLocalClientNode from '@cdo/apps/netsim/NetSimLocalClientNode';
+import NetSimRouterNode from '@cdo/apps/netsim/NetSimRouterNode';
+import NetSimVizNode from '@cdo/apps/netsim/NetSimVizNode';
+import NetSimVizSimulationNode from '@cdo/apps/netsim/NetSimVizSimulationNode';
+import NetSimVizSimulationWire from '@cdo/apps/netsim/NetSimVizSimulationWire';
+import NetSimWire from '@cdo/apps/netsim/NetSimWire';
 
 var fakeShard = NetSimTestUtils.fakeShard;
 

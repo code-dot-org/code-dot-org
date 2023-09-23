@@ -17,7 +17,12 @@ import {KeyCodes, NOTIFICATION_ALERT_TYPE} from '../constants';
 import * as applabConstants from './constants';
 import sanitizeHtml from './sanitizeHtml';
 import * as utils from '../utils';
-import * as gridUtils from './gridUtils';
+import {
+  isDraggableContainer,
+  snapToGridSize,
+  isMouseEventInBounds as _isMouseEventInBounds,
+  scaledDropPoint,
+} from './gridUtils';
 import logToCloud from '../logToCloud';
 import {actions} from './redux/applab';
 import * as screens from './redux/screens';
@@ -264,14 +269,14 @@ designMode.updateProperty = function (
     case 'left':
       var newLeft = appendPx(value);
       element.style.left = newLeft;
-      if (gridUtils.isDraggableContainer(element.parentNode)) {
+      if (isDraggableContainer(element.parentNode)) {
         element.parentNode.style.left = newLeft;
       }
       break;
     case 'top':
       var newTop = appendPx(value);
       element.style.top = newTop;
-      if (gridUtils.isDraggableContainer(element.parentNode)) {
+      if (isDraggableContainer(element.parentNode)) {
         element.parentNode.style.top = newTop;
       }
       break;
@@ -284,14 +289,14 @@ designMode.updateProperty = function (
     case 'style-width':
       var newWidth = appendPx(value);
       element.style.width = newWidth;
-      if (gridUtils.isDraggableContainer(element.parentNode)) {
+      if (isDraggableContainer(element.parentNode)) {
         element.parentNode.style.width = newWidth;
       }
       break;
     case 'style-height':
       var newHeight = appendPx(value);
       element.style.height = newHeight;
-      if (gridUtils.isDraggableContainer(element.parentNode)) {
+      if (isDraggableContainer(element.parentNode)) {
         element.parentNode.style.height = newHeight;
       }
       break;
@@ -1316,8 +1321,8 @@ function makeDraggable(jqueryElements) {
           var newHeight = ui.originalSize.height + deltaHeight / scale;
 
           // Get positions that snap to the grid
-          newWidth = gridUtils.snapToGridSize(newWidth);
-          newHeight = gridUtils.snapToGridSize(newHeight);
+          newWidth = snapToGridSize(newWidth);
+          newHeight = snapToGridSize(newHeight);
 
           // Get positions that are bounded within app space
           var dimensions = boundedResize(
@@ -1367,8 +1372,8 @@ function makeDraggable(jqueryElements) {
           var newTop = ui.position.top / scale;
 
           // Get positions that snap to the grid
-          newLeft = gridUtils.snapToGridSize(newLeft);
-          newTop = gridUtils.snapToGridSize(newTop);
+          newLeft = snapToGridSize(newLeft);
+          newTop = snapToGridSize(newTop);
 
           // Update the position of wrapper (.ui-draggable) div to snap to grid
           ui.position.left = newLeft;
@@ -1471,7 +1476,7 @@ function enforceContainment(left, top, width, height) {
 function isMouseEventInBounds(mouseEvent) {
   const container = $('#designModeViz');
 
-  return gridUtils.isMouseEventInBounds(mouseEvent, container);
+  return _isMouseEventInBounds(mouseEvent, container);
 }
 
 /**
@@ -1569,7 +1574,7 @@ designMode.configureDragAndDrop = function () {
     drop: function (event, ui) {
       var elementType = ui.draggable[0].getAttribute('data-element-type');
 
-      var point = gridUtils.scaledDropPoint(ui.helper);
+      var point = scaledDropPoint(ui.helper);
 
       var element = designMode.createElement(
         elementType,

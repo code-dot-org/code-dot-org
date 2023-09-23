@@ -1,8 +1,8 @@
-var testUtils = require('../../../util/testUtils');
-var tickWrapper = require('../../util/tickWrapper');
+import * as testUtils from '../../../util/testUtils';
+import tickWrapper from '../../util/tickWrapper';
 import {TestResults} from '@cdo/apps/constants';
-var $ = require('jquery');
-var ReactTestUtils = require('react-dom/test-utils');
+import $ from 'jquery';
+import ReactTestUtils from 'react-dom/test-utils';
 
 // i'd like this test to not run through level tests, which has a lot of hacks,
 // but this is the easiest approach for now. hopefully at some point in the
@@ -32,7 +32,7 @@ function validateElementSelect(expected, assert) {
 const orange = 'rgb(255, 164, 0)';
 const white = 'rgb(255, 255, 255)';
 
-module.exports = {
+export default {
   app: 'applab',
   skinId: 'applab',
   levelFile: 'levels',

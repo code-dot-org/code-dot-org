@@ -1,8 +1,8 @@
 import {TestResults} from '@cdo/apps/constants';
-var blockUtils = require('@cdo/apps/block_utils');
-var evalMsg = require('@cdo/apps/eval/locale');
+import blockUtils from '@cdo/apps/block_utils';
+import evalMsg from '@cdo/apps/eval/locale';
 
-module.exports = {
+export default {
   app: 'eval',
   skinId: 'eval',
   levelDefinition: {

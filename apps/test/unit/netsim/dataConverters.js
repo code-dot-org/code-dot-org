@@ -1,5 +1,5 @@
 import {assert} from '../../util/reconfiguredChai';
-var DataConverters = require('@cdo/apps/netsim/DataConverters');
+import * as DataConverters from '@cdo/apps/netsim/DataConverters';
 
 describe('DataConverters', function () {
   describe('minifyAB', function () {

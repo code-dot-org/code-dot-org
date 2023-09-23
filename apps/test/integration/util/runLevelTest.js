@@ -10,9 +10,30 @@ import Firebase from 'firebase';
 import MockFirebase from '../../util/MockFirebase';
 import {installCustomBlocks} from '@cdo/apps/block_utils';
 
-var testCollectionUtils = require('./testCollectionUtils');
+import testCollectionUtils from './testCollectionUtils';
 
-module.exports = function (testCollection, testData, dataItem, done) {
+import applab from '@cdo/apps/sites/studio/pages/init/loadApplab';
+import calc from '@cdo/apps/sites/studio/pages/init/loadCalc';
+import craft from '@cdo/apps/sites/studio/pages/init/loadCraft';
+import loadEval from '@cdo/apps/sites/studio/pages/init/loadEval';
+import gamelab from '../../util/gamelab/loadTestableGamelab';
+import maze from '@cdo/apps/sites/studio/pages/init/loadMaze';
+import studio from '@cdo/apps/sites/studio/pages/init/loadStudio';
+import turtle from '@cdo/apps/sites/studio/pages/init/loadArtist';
+import {singleton as studioApp} from '@cdo/apps/StudioApp';
+
+const appLoaders = {
+  applab,
+  calc,
+  craft,
+  eval: loadEval,
+  gamelab,
+  maze,
+  studio,
+  turtle,
+};
+
+export default function (testCollection, testData, dataItem, done) {
   const finished = _.once(() => done(/*ensure no args*/));
 
   // LegacyDialog is stubbed in the beforeEach step in levelTests.js
@@ -113,22 +134,10 @@ module.exports = function (testCollection, testData, dataItem, done) {
   };
 
   runLevel(app, skinId, level, validateResult, finished, testData);
-};
+}
 
-const appLoaders = {
-  applab: require('@cdo/apps/sites/studio/pages/init/loadApplab'),
-  calc: require('@cdo/apps/sites/studio/pages/init/loadCalc'),
-  craft: require('@cdo/apps/sites/studio/pages/init/loadCraft'),
-  eval: require('@cdo/apps/sites/studio/pages/init/loadEval'),
-  gamelab: require('../../util/gamelab/loadTestableGamelab'),
-  maze: require('@cdo/apps/sites/studio/pages/init/loadMaze'),
-  studio: require('@cdo/apps/sites/studio/pages/init/loadStudio'),
-  turtle: require('@cdo/apps/sites/studio/pages/init/loadArtist'),
-};
 function runLevel(app, skinId, level, onAttempt, finished, testData) {
   var loadApp = appLoaders[app];
-
-  var studioApp = require('@cdo/apps/StudioApp').singleton;
 
   if (testData.libraries) {
     studioApp().libraries = testData.libraries;

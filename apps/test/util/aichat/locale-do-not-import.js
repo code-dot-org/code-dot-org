@@ -12,4 +12,4 @@ import localeWithI18nStringTracker from '@cdo/apps/util/i18nStringTracker';
 
 let locale = safeLoadLocale('aichat_locale');
 locale = localeWithI18nStringTracker(locale, 'aichat');
-module.exports = locale;
+export default locale;

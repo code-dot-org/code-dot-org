@@ -1,5 +1,5 @@
 import {TestResults} from '@cdo/apps/constants';
-var commonMsg = require('@cdo/locale');
+import commonMsg from '@cdo/locale';
 
 var levelDef = {
   map: [
@@ -20,7 +20,7 @@ var levelDef = {
   customGameType: 'Rocket Height',
 };
 
-module.exports = {
+export default {
   app: 'studio',
   skinId: 'studio',
   levelDefinition: levelDef,

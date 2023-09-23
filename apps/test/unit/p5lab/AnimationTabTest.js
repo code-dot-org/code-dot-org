@@ -1,9 +1,11 @@
-var animationTab = require('@cdo/apps/p5lab/redux/animationTab');
+import reducer, {
+  selectAnimation,
+  selectBackground,
+} from '@cdo/apps/p5lab/redux/animationTab';
 import {expect} from '../../util/reconfiguredChai';
 
 describe('AnimationTab', function () {
   describe('reducer', function () {
-    var reducer = animationTab.default;
     var initialState = {
       columnSizes: [150, undefined],
       currentAnimations: {ANIMATION: '', BACKGROUND: ''},
@@ -22,8 +24,6 @@ describe('AnimationTab', function () {
     });
 
     describe('action: selectAnimation', function () {
-      var selectAnimation = animationTab.selectAnimation;
-
       it('changes selected animation in state', function () {
         var newState = reducer(initialState, selectAnimation('animationKey'));
         expect(newState).not.to.equal(initialState);
@@ -44,8 +44,6 @@ describe('AnimationTab', function () {
     });
 
     describe('action: selectBackground', function () {
-      var selectBackground = animationTab.selectBackground;
-
       it('changes selected background in state', function () {
         var newState = reducer(initialState, selectBackground('backgroundKey'));
         expect(newState).not.to.equal(initialState);

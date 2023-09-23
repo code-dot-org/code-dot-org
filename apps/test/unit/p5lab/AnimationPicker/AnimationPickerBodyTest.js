@@ -1,7 +1,7 @@
 import React from 'react';
 import {shallow} from 'enzyme';
 import {expect} from '../../../util/reconfiguredChai';
-const msg = require('@cdo/locale');
+import msg from '@cdo/locale';
 import AnimationPickerBody, {
   WarningLabel,
 } from '@cdo/apps/p5lab/AnimationPicker/AnimationPickerBody';

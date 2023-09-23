@@ -1,9 +1,8 @@
-var testUtils = require('../util/testUtils');
+import * as testUtils from '../util/testUtils';
 import {assert, expect} from '../util/reconfiguredChai';
-var ReactDOM = require('react-dom');
-var sinon = require('sinon');
-
-var shareWarnings = require('@cdo/apps/shareWarnings');
+import ReactDOM from 'react-dom';
+import sinon from 'sinon';
+import shareWarnings from '@cdo/apps/shareWarnings';
 import * as utils from '@cdo/apps/utils';
 
 describe('shareWarnings', function () {

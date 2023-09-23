@@ -1,11 +1,10 @@
-var tickWrapper = require('../../util/tickWrapper');
+import tickWrapper from '../../util/tickWrapper';
 import {TestResults} from '@cdo/apps/constants';
-var Direction = require('@cdo/apps/studio/constants.js').Direction;
-var blockUtils = require('@cdo/apps/block_utils');
+import {Direction} from '@cdo/apps/studio/constants.js';
+import blockUtils from '@cdo/apps/block_utils';
+import commonMsg from '@cdo/locale';
 
-var commonMsg = require('@cdo/locale');
-
-module.exports = {
+export default {
   app: 'studio',
   skinId: 'studio',
   levelFile: 'levels',

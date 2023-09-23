@@ -83,7 +83,7 @@ var matchingExampleBlock =
   '  </functional_input>' +
   '</block>';
 
-module.exports = {
+export default {
   app: 'eval',
   skinId: 'eval',
   levelDefinition: {

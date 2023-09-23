@@ -27,6 +27,8 @@ import {
   VISIBLE_VALUE,
 } from './constants';
 
+const toExport = {};
+
 var msg = i18n;
 
 // 9 possible positions in playspace (+ random):
@@ -77,19 +79,19 @@ var startAvatars = [];
 
 var customGameLogic = null;
 
-exports.setSpriteCount = function (blockly, count) {
+toExport.setSpriteCount = function (blockly, count) {
   spriteCount = count;
 };
 
-exports.enableProjectileCollisions = function (blockly) {
+toExport.enableProjectileCollisions = function (blockly) {
   projectileCollisions = true;
 };
 
-exports.setStartAvatars = function (avatarList) {
+toExport.setStartAvatars = function (avatarList) {
   startAvatars = avatarList.slice(0);
 };
 
-exports.registerCustomGameLogic = function (customGameLogicToRegister) {
+toExport.registerCustomGameLogic = function (customGameLogicToRegister) {
   customGameLogic = customGameLogicToRegister;
 };
 
@@ -131,7 +133,7 @@ function getSpriteOrDropdownIndex(
 }
 
 // Install extensions to Blockly's language and JavaScript generator.
-exports.install = function (blockly, blockInstallOptions) {
+toExport.install = function (blockly, blockInstallOptions) {
   var skin = blockInstallOptions.skin;
   var isK1 = blockInstallOptions.isK1;
   var generator = blockly.getGenerator();
@@ -3859,4 +3861,4 @@ function installConditionals(
   );
 }
 
-export default exports;
+export {toExport as default};

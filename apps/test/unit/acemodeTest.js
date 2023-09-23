@@ -1,6 +1,6 @@
 import {assert} from '../util/reconfiguredChai';
 
-var errorMapper = require('@cdo/apps/acemode/errorMapper');
+import errorMapper from '@cdo/apps/acemode/errorMapper';
 
 describe('errorMapper correctly maps different errors', function () {
   it('defined but never used', function () {

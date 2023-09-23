@@ -1,19 +1,17 @@
-var actions = require('@cdo/apps/p5lab/actions');
-var {
+import {changeInterfaceMode} from '@cdo/apps/p5lab/actions';
+import {
   clearConsole,
   addConsoleMessage,
-} = require('@cdo/apps/p5lab/redux/textConsole');
-var createStore = require('../../util/redux').createStore;
-var combineReducers = require('redux').combineReducers;
+} from '@cdo/apps/p5lab/redux/textConsole';
+import {createStore} from '../../util/redux';
+import {combineReducers} from 'redux';
 import {expect} from '../../util/reconfiguredChai';
-var _ = require('lodash');
-var P5LabInterfaceMode =
-  require('@cdo/apps/p5lab/constants').P5LabInterfaceMode;
-var gamelabReducers = require('@cdo/apps/p5lab/reducers');
-var commonReducers = require('@cdo/apps/redux/commonReducers');
-var pageConstants = require('@cdo/apps/redux/pageConstants');
-
-var testUtils = require('../../util/testUtils');
+import _ from 'lodash';
+import {P5LabInterfaceMode} from '@cdo/apps/p5lab/constants';
+import gamelabReducers from '@cdo/apps/p5lab/reducers';
+import commonReducers from '@cdo/apps/redux/commonReducers';
+import {setPageConstants} from '@cdo/apps/redux/pageConstants';
+import * as testUtils from '../../util/testUtils';
 
 describe('gamelabReducer', function () {
   var store;
@@ -65,8 +63,6 @@ describe('gamelabReducer', function () {
   });
 
   describe('action: changeInterfaceMode', function () {
-    var changeInterfaceMode = actions.changeInterfaceMode;
-
     it('returns object with same values when already in given mode', function () {
       expect(initialState.interfaceMode).to.equal(CODE);
       store.dispatch(changeInterfaceMode(CODE));
@@ -86,8 +82,6 @@ describe('gamelabReducer', function () {
   });
 
   describe('action: setPageConstants', function () {
-    var setPageConstants = pageConstants.setPageConstants;
-
     it('allows setting assetUrl', function () {
       var newAssetUrlFunction = function () {};
       expect(initialState.pageConstants.assetUrl).to.not.equal(

@@ -2,14 +2,14 @@
  * A set of tests for blocks in the UI controls section of the toolbox
  */
 import $ from 'jquery';
-var tickWrapper = require('../../util/tickWrapper');
+import tickWrapper from '../../util/tickWrapper';
 import {TestResults} from '@cdo/apps/constants';
 
 // take advantage of the fact that we expose the filesystem via
 // localhost
 var imageUrl = '/base/static/flappy_promo.png';
 
-module.exports = {
+export default {
   app: 'applab',
   skinId: 'applab',
   levelFile: 'levels',

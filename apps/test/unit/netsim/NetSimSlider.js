@@ -1,5 +1,5 @@
 import {assert} from '../../util/reconfiguredChai';
-var NetSimSlider = require('@cdo/apps/netsim/NetSimSlider');
+import NetSimSlider from '@cdo/apps/netsim/NetSimSlider';
 
 describe('NetSimSlider', function () {
   var slider;

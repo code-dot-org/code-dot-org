@@ -1,9 +1,9 @@
 import {assert} from '../util/reconfiguredChai';
 
-var Eval = require('@cdo/apps/eval/eval');
-var EvalText = require('@cdo/apps/eval/evalText');
-var EvalMulti = require('@cdo/apps/eval/evalMulti');
-var EvalTriangle = require('@cdo/apps/eval/evalTriangle');
+import Eval from '@cdo/apps/eval/eval';
+import EvalText from '@cdo/apps/eval/evalText';
+import EvalMulti from '@cdo/apps/eval/evalMulti';
+import EvalTriangle from '@cdo/apps/eval/evalTriangle';
 
 function withSvgInDom() {
   let svg;

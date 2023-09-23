@@ -1,5 +1,5 @@
 import {TestResults} from '@cdo/apps/constants';
-var blockUtils = require('@cdo/apps/block_utils');
+import blockUtils from '@cdo/apps/block_utils';
 
 var solutionXml = blockUtils.mathBlockXml('overlay', {
   TOP: blockUtils.mathBlockXml('place_image', {
@@ -20,7 +20,7 @@ var solutionXml = blockUtils.mathBlockXml('overlay', {
   }),
 });
 
-module.exports = {
+export default {
   app: 'eval',
   skinId: 'eval',
   levelDefinition: {

@@ -1,9 +1,9 @@
 import {assert} from '../../util/reconfiguredChai';
 
-var ExpressionNode = require('@cdo/apps/calc/expressionNode');
-var EquationSet = require('@cdo/apps/calc/equationSet');
-var Equation = require('@cdo/apps/calc/equation');
-var utils = require('@cdo/apps/utils');
+import ExpressionNode from '@cdo/apps/calc/expressionNode';
+import EquationSet from '@cdo/apps/calc/equationSet';
+import Equation from '@cdo/apps/calc/equation';
+import {isInfiniteRecursionError} from '@cdo/apps/utils';
 
 describe('EquationSet', function () {
   describe('addEquation_', function () {
@@ -409,7 +409,7 @@ describe('EquationSet', function () {
 
       var evaluation = set.evaluate();
       assert.strictEqual(evaluation.result, undefined);
-      assert(utils.isInfiniteRecursionError(evaluation.err));
+      assert(isInfiniteRecursionError(evaluation.err));
     });
   });
 

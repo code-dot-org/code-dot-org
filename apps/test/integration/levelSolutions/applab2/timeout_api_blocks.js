@@ -33,7 +33,7 @@ function testAsyncProgram(testName, program, doneCondition, validator) {
   };
 }
 
-module.exports = {
+export default {
   app: 'applab',
   skinId: 'applab',
   levelFile: 'levels',

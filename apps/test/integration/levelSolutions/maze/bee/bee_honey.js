@@ -2,7 +2,7 @@ import {
   TestResults,
   BeeTerminationValue as TerminationValue,
 } from '@cdo/apps/constants';
-var blockUtils = require('@cdo/apps/block_utils');
+import blockUtils from '@cdo/apps/block_utils';
 
 // Honey goal of 2.  No specific hive goals
 var levelDef = {
@@ -31,7 +31,7 @@ var levelDef = {
   flowerType: 'redWithNectar',
 };
 
-module.exports = {
+export default {
   app: 'maze',
   skinId: 'bee',
   levelDefinition: levelDef,

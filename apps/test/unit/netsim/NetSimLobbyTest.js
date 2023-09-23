@@ -3,7 +3,7 @@ import $ from 'jquery';
 import {expect} from '../../util/reconfiguredChai';
 import NetSimLobby from '../../../src/netsim/NetSimLobby.js';
 import * as userSectionClient from '@cdo/apps/util/userSectionClient';
-var NetSimTestUtils = require('../../util/netsimTestUtils');
+import * as NetSimTestUtils from '../../util/netsimTestUtils';
 
 const SIGNED_IN_USER = {
   user: {

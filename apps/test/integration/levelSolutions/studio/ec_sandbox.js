@@ -1,8 +1,8 @@
-var tickWrapper = require('../../util/tickWrapper');
+import tickWrapper from '../../util/tickWrapper';
 import {TestResults} from '@cdo/apps/constants';
-var Direction = require('@cdo/apps/studio/constants.js').Direction;
+import {Direction} from '@cdo/apps/studio/constants.js';
 
-module.exports = {
+export default {
   app: 'studio',
   skinId: 'studio',
   levelFile: 'levels',
