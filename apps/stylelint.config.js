@@ -1,3 +1,4 @@
+/* eslint-disable import/no-commonjs */
 module.exports = {
   ignoreFiles: ['./build/**/*.scss', './storybook-deploy/*'],
   extends: ['stylelint-config-standard', 'stylelint-config-standard-scss'],

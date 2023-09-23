@@ -1,3 +1,4 @@
+/* eslint-disable import/no-commonjs */
 const ALL_APPS = [
   'ailab',
   'applab',

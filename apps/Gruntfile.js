@@ -1,3 +1,4 @@
+/* eslint-disable import/no-commonjs */
 var chalk = require('chalk');
 var child_process = require('child_process');
 var path = require('path');

@@ -1,3 +1,4 @@
+/* eslint-disable import/no-commonjs */
 const webpack = require('webpack');
 const path = require('path');
 const sass = require('sass');
