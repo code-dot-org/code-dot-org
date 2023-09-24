@@ -54,15 +54,9 @@
 .dialog {
   max-width: initial !important;
   width: 800px !important;
-  height: 400px;
+  height: 350px;
   display: flex;
   flex-direction: column;
-
-  .heading {
-    font-size: 16px;
-    margin-top: 10px;
-    font-family: 'Gotham 5r';
-  }
 
   .content {
     font-family: monospace;
@@ -130,11 +124,19 @@
   }
 
   .botContainer {
-    margin-top: 50px;
+    margin-top: 30px;
     flex: 0 0 140px;
 
     .bot {
       width: 110px;
+    }
+  }
+
+  .generatingMessage {
+    text-align: center;
+
+    &Text {
+      margin-top: 20px;
     }
   }
 
