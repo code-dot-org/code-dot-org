@@ -30,12 +30,8 @@ class LearningGoalEvaluationsController < ApplicationController
       teacher_id: current_user.id,
       learning_goal_id: learning_goal_evaluation_params[:learning_goal_id]
     )
+    render json: learning_goal_evaluation
 
-    if learning_goal_evaluation&.teacher_id == current_user.id
-      render json: learning_goal_evaluation
-    else
-      head :not_found
-    end
   end
 
   def get_or_create_evaluation
