@@ -392,12 +392,7 @@
               "visibleIf": "{ai_pl_101.video5} = 'didnt_watch'"
             }
           ]
-        }
-      ]
-    },
-    {
-      "name": "page3",
-      "elements": [
+        },
         {
           "type": "rating",
           "name": "post_pl_teaching_ai_confidence",
@@ -483,7 +478,7 @@
         {
           "type": "radiogroup",
           "name": "permission",
-          "title": "I give Code.org permission to quote my written feedback from this survey for use on social media, promotional materials, and other communications.",
+          "title": "I give Code.org, ETS, ISTE, and Khan Academy permission to quote my written feedback from this survey for use on social media, promotional materials, and other communications.",
           "choices": [
             {
               "value": "yes_anon",
@@ -498,7 +493,7 @@
         {
           "type": "radiogroup",
           "name": "can_contact",
-          "title": "Would you be open to code.org reaching out to you to gather additional feedback direct feedback about AI-focused professional learning?",
+          "title": "Would you be open to participate in a follow-up discussion to provide direct feedback about AI-focused professional learning?",
           "choices": [
             {
               "value": "yes",
@@ -514,7 +509,12 @@
           "type": "text",
           "name": "contact_email",
           "visibleIf": "{can_contact} = 'yes'",
-          "title": "Please enter the email address wherewe can contact you to gather additional feedback direct feedback about AI-focused professional learning."
+          "title": "Please enter the email address where we can contact you to gather additional feedback about AI-focused professional learning."
+        },
+        {
+          "type": "html",
+          "name": "cdo_heart_you",
+          "html": "<p><span style='font-size: 12pt;'><br /><img style='display: block; margin-left: auto; margin-right: auto;' src='https://www.jotform.com/uploads/bakerfranke/form_files/codeorg_heart_you.5cc89a7c7f2f20.88587690.png' /></span></p>\n<p><span style='font-size: 12pt;'>Thanks from Code.org for your time, thoughts, and passion for teaching.</span>&nbsp;</p>"
         }
       ]
     }

@@ -245,6 +245,27 @@
         "coursef-2022/The Internet": {
           "name": "ইন্টারনেট"
         },
+        "coursea-2023/Happy Maps": {
+          "name": "আনন্দের মানচিত্র"
+        },
+        "coursec-2023/The Big Event": {
+          "name": "বড় ঘটনা"
+        },
+        "coursed-2023/Graph Paper Programming": {
+          "name": "ছক-কাগজে প্রোগ্রামিং"
+        },
+        "coursed-2023/Relay Programming": {
+          "name": "রিলে-স্যুইচ প্রোগ্রামিং"
+        },
+        "coursed-2023/Conditionals with Cards": {
+          "name": "কার্ড সঙ্গে শর্ত"
+        },
+        "coursee-2023/Songwriting": {
+          "name": "গান লিখা"
+        },
+        "coursef-2023/The Internet": {
+          "name": "ইন্টারনেট"
+        },
         "artist/Artist": {
           "name": "শিল্পী"
         },

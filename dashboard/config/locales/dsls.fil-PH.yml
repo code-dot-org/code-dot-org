@@ -2164,11 +2164,23 @@ fil-PH:
         description: Mahusay na trabaho! Piliin ang susunod mong aktibidad. Kumpletuhin
           ang lahat ng kaya mo. Patuloy na magsanay sa mga loop at sa Artist!
         display_name: Pagsasanay sa Artist
+      CourseE_Artist_Practice_2023:
+        description: Mahusay na trabaho! Piliin ang susunod mong aktibidad. Kumpletuhin
+          ang lahat ng kaya mo. Patuloy na magsanay sa mga loop at sa Artist!
+        display_name: Pagsasanay sa Artist
       CourseE_Lesson_11_Artist_Practice_2022:
         description: Mahusay na trabaho! Piliin ang susunod mong aktibidad. Kumpletuhin
           ang lahat ng kaya mo. Patuloy na magsanay sa mga function at sa Artist!
         display_name: Pagsasanay sa Artist
+      CourseE_Lesson_11_Artist_Practice_2023:
+        description: Mahusay na trabaho! Piliin ang susunod mong aktibidad. Kumpletuhin
+          ang lahat ng kaya mo. Patuloy na magsanay sa mga function at sa Artist!
+        display_name: Pagsasanay sa Artist
       CourseE_Lesson_7_Artist_Practice_2022:
+        description: Mahusay na trabaho! Piliin ang susunod mong aktibidad. Kumpletuhin
+          ang lahat ng kaya mo. Patuloy na magsanay sa mga nested loop at sa Artist!
+        display_name: Pagsasanay sa Artist
+      CourseE_Lesson_7_Artist_Practice_2023:
         description: Mahusay na trabaho! Piliin ang susunod mong aktibidad. Kumpletuhin
           ang lahat ng kaya mo. Patuloy na magsanay sa mga nested loop at sa Artist!
         display_name: Pagsasanay sa Artist
@@ -2309,7 +2321,95 @@ fil-PH:
 
 
           Kapag tapos ka na, ibahagi ang iyong simulasyon sa iba. Ibahagi ang iyong mensahe tungkol sa kung ano sa palagay mo ang maaaring gawin upang matulungan ang iba na maging malusog pagdating ng isang virus sa bayan.
+      CourseF_outbreak_story2022_2022_pilot_-2022-2_2023:
+        content1: paglalarawan dito
+        markdown: |-
+          # Paglaganap: I-code ang Iyong Sariling Simulasyon
+
+          ## Maligayang pagdating sa Monster Town!
+          Ang Monster Town ay karaniwang isang masaya at malusog na lugar. Ang mga halimaw ng Monster town ay gustong maglibot upang bisitahin ang kanilang mga kaibigan.
+
+          <img src="https://images.code.org/3b55881f776348c6eb32379e4cbd34e1-image-1603133896503.png" style="width:8%"> <img src="https://images.code.org/3b55881f776348c6eb32379e4cbd34e1-image-1603133896503.png" style="width:8%"> <img src="https://images.code.org/3b55881f776348c6eb32379e4cbd34e1-image-1603133896503.png" style="width:8%"> <img src="https://images.code.org/3b55881f776348c6eb32379e4cbd34e1-image-1603133896503.png" style="width:8%"> <img src="https://images.code.org/3b55881f776348c6eb32379e4cbd34e1-image-1603133896503.png" style="width:8%"> <img src="https://images.code.org/3b55881f776348c6eb32379e4cbd34e1-image-1603133896503.png" style="width:8%"> <img src="https://images.code.org/3b55881f776348c6eb32379e4cbd34e1-image-1603133896503.png" style="width:8%"> <img src="https://images.code.org/3b55881f776348c6eb32379e4cbd34e1-image-1603133896503.png" style="width:8%"> <img src="https://images.code.org/3b55881f776348c6eb32379e4cbd34e1-image-1603133896503.png" style="width:8%"> <img src="https://images.code.org/3b55881f776348c6eb32379e4cbd34e1-image-1603133896503.png" style="width:8%"> <img src="https://images.code.org/3b55881f776348c6eb32379e4cbd34e1-image-1603133896503.png" style="width:8%">
+
+          Isang araw, isa sa mga halimaw ay nagsimulang sumama ang pakiramdam. Ang halimaw ay nakakuha ng **virus**! Ang virus ay isang maliit na mikrobyo na maaaring magdulot ng sakit sa'yo. Ang iba pang mga halimaw ay hindi masyadong nag-alala. Patuloy silang bumibisita sa kanilang mga kaibigan.
+
+          <img src="https://images.code.org/3b55881f776348c6eb32379e4cbd34e1-image-1603133896503.png" style="width:8%"> <img src="https://images.code.org/3b55881f776348c6eb32379e4cbd34e1-image-1603133896503.png" style="width:8%"> <img src="https://images.code.org/3b55881f776348c6eb32379e4cbd34e1-image-1603133896503.png" style="width:8%"> <img src="https://images.code.org/3b55881f776348c6eb32379e4cbd34e1-image-1603133896503.png" style="width:8%"> <img src="https://images.code.org/3b55881f776348c6eb32379e4cbd34e1-image-1603133896503.png" style="width:8%"> <img src="https://images.code.org/f30010a430a4189a734467094842b39d-image-1603134238257.png" style="width:8%"> <img src="https://images.code.org/3b55881f776348c6eb32379e4cbd34e1-image-1603133896503.png" style="width:8%"> <img src="https://images.code.org/3b55881f776348c6eb32379e4cbd34e1-image-1603133896503.png" style="width:8%"> <img src="https://images.code.org/3b55881f776348c6eb32379e4cbd34e1-image-1603133896503.png" style="width:8%"> <img src="https://images.code.org/3b55881f776348c6eb32379e4cbd34e1-image-1603133896503.png" style="width:8%"> <img src="https://images.code.org/3b55881f776348c6eb32379e4cbd34e1-image-1603133896503.png" style="width:8%">
+
+          Hindi nagtagal, dalawa pang halimaw ang nagkasakit. Ito ay ang parehong virus! Mukhang nakuha nila ang virus mula sa kanilang kaibigan.
+
+          <img src="https://images.code.org/3b55881f776348c6eb32379e4cbd34e1-image-1603133896503.png" style="width:8%"> <img src="https://images.code.org/3b55881f776348c6eb32379e4cbd34e1-image-1603133896503.png" style="width:8%"> <img src="https://images.code.org/3b55881f776348c6eb32379e4cbd34e1-image-1603133896503.png" style="width:8%"> <img src="https://images.code.org/3b55881f776348c6eb32379e4cbd34e1-image-1603133896503.png" style="width:8%"> <img src="https://images.code.org/f30010a430a4189a734467094842b39d-image-1603134238257.png" style="width:8%"> <img src="https://images.code.org/f30010a430a4189a734467094842b39d-image-1603134238257.png" style="width:8%"> <img src="https://images.code.org/f30010a430a4189a734467094842b39d-image-1603134238257.png" style="width:8%"> <img src="https://images.code.org/3b55881f776348c6eb32379e4cbd34e1-image-1603133896503.png" style="width:8%"> <img src="https://images.code.org/3b55881f776348c6eb32379e4cbd34e1-image-1603133896503.png" style="width:8%"> <img src="https://images.code.org/3b55881f776348c6eb32379e4cbd34e1-image-1603133896503.png" style="width:8%"> <img src="https://images.code.org/3b55881f776348c6eb32379e4cbd34e1-image-1603133896503.png" style="width:8%">
+
+          Ang virus ay dahan-dahang kumalat sa iba pang mga halimaw na nasa malapit. Ang malulusog na halimaw ay nagsimulang mag-alala na lahat sila ay magkakasakit. Ang mga may sakit na halimaw ay nagsimulang mag-alala na mahahawaan nila ng virus ang iba pa.
+
+          <img src="https://images.code.org/3b55881f776348c6eb32379e4cbd34e1-image-1603133896503.png" style="width:8%"> <img src="https://images.code.org/3b55881f776348c6eb32379e4cbd34e1-image-1603133896503.png" style="width:8%"> <img src="https://images.code.org/3b55881f776348c6eb32379e4cbd34e1-image-1603133896503.png" style="width:8%"> <img src="https://images.code.org/f30010a430a4189a734467094842b39d-image-1603134238257.png" style="width:8%"> <img src="https://images.code.org/f30010a430a4189a734467094842b39d-image-1603134238257.png" style="width:8%"> <img src="https://images.code.org/f30010a430a4189a734467094842b39d-image-1603134238257.png" style="width:8%"> <img src="https://images.code.org/f30010a430a4189a734467094842b39d-image-1603134238257.png" style="width:8%"> <img src="https://images.code.org/f30010a430a4189a734467094842b39d-image-1603134238257.png" style="width:8%"> <img src="https://images.code.org/3b55881f776348c6eb32379e4cbd34e1-image-1603133896503.png" style="width:8%"> <img src="https://images.code.org/3b55881f776348c6eb32379e4cbd34e1-image-1603133896503.png" style="width:8%"> <img src="https://images.code.org/3b55881f776348c6eb32379e4cbd34e1-image-1603133896503.png" style="width:8%">
+
+
+          <div style="display: inline-block">
+          <img src="https://images.code.org/89376b9ebd5fcee77545f13a7a444430-image-1603135356392.png" style="float:right; width:30%">
+
+          ## Pinipigilan ang pagkalat
+          Mabuti na lang, matapos pag-aralan ang virus, ang mga kapit-bahay ng Monster Town ay gumawa ng isang mahalagang pagtuklas. Napagtanto nilang mas malamang na hindi kumalat ang virus kung magsusuot sila ng mask sa kanilang mga bibig. Suot ang mask sa mukha, ang mga may sakit na halimaw ay mas mababa ang tsansa nilang magbigay ng virus sa mga malulusog na halimaw.
+
+          <img src="https://images.code.org/c98f28f9bf6a027143592109d59ee484-image-1603134766360.png" style="width:8%"> <img src="https://images.code.org/bac9dbfaf1815c6627fc24e8e6db396d-image-1603134760456.png" style="width:8%">
+
+          </div>
+
+          <img src="https://images.code.org/ef7499758496b39bcccc24aabd2af5d7-image-1603137920037.2020-10-19 16_04_58.gif" style="float:left; width:25%; padding-right:25px">
+
+          ## Ano ang susunod na mangyayari?
+
+          Ngayon, magsusulat ka ng code upang lumikha at magpatakbo ng iyong sariling **simulasyon** ng pagsiklab ng virus sa Monster Town. Ang simulation ay isang modelo ng computer ng isang proseso o system. Matutong mag-code at gumawa ng mga prediksiyon tungkol sa kung ano ang mangyayari sa mga kapit-bahay ng Monster Town.
+
+          <img src="https://images.code.org/fcbfd250d58652bdfd6393ec4f2fe2dd-image-1603134705074.png" style="float:right; width:15%">
+
+          * *Gaano kabilis ang pagkalat ng virus?*
+
+          * *Magkakasakit ba lahat?*
+
+          * *Paano makakatulong ang mga mask sa mukha?*
+
+
+          Kapag tapos ka na, ibahagi ang iyong simulasyon sa iba. Ibahagi ang iyong mensahe tungkol sa kung ano sa palagay mo ang maaaring gawin upang matulungan ang iba na maging malusog pagdating ng isang virus sa bayan.
       CourseF_outbreak_story22022_2022_pilot_-2022-2:
+        content1: paglalarawan dito
+        markdown: "# Pagsiklab: Nag-iisip Tulad ng isang Siyentista\n\n<img src=\"https://images.code.org/89376b9ebd5fcee77545f13a7a444430-image-1603135356392.png\"
+          style=\"float:right; width:30%\">\n\nAng simulasyon ay isang mahusay na
+          paraan upang malaman ang mga bagay na maaaring mahirap obserbahan sa totoong
+          mundo. Tinutulungan nila ang mga siyentista na malutas ang mga problema
+          at subukan ang mga bagong ideya nang ligtas at mahusay. Ang iyong simulasyon
+          ay isang paraan upang maipakita kung ano ang hitsura ng isang pagsiklab
+          ng virus sa Monster Town.\n\n## I-reset at I-replay!\nKahit ikaw ang nagsulat
+          ng code mo, imposibleng eksaktong malaman kung ano ang mangyayari kapag
+          pagaganahin mo ito. Ang mga halimaw ay random na gumagala, kaya hindi mo
+          alam kung kakalat ang virus nang mabilis o mabagal. Kapag binago mo ang
+          code mo, tiyaking paganahin ang simulasyon mo nang higit sa isang beses.
+          Hindi mangyayari ang mga bagay sa parehong paraan nang dalawang beses!\n\n##
+          Nangongolekta ng data\nSubukang isulat ang iyong mga naobserbahan habang
+          pinapagana ang iyong simulasyon. Maaari mong bilangin ang mga halimaw na
+          nagkakasakit o gumamit ng isang timer upang makita kung gaano kabilis mangyari
+          ang mga bagay. Halimbawa, gaano katagal upang magkasakit ang lahat ng mga
+          halimaw kung wala silang mga mask? \n\n## Paggawa ng Mga Hula\nKung naiintindihan
+          mo ang iyong modelo, maaari mo itong gamitin upang makagawa ng mga hula.
+          Maaari mo ring baguhin kung paano gumana ang simulasyon mo at hulaan kung
+          ano ang ibang mangyayari. Halimbawa:\n* Ano ang mangyayari kung merong mas
+          maraming mga halimaw?\n* Ano ang mangyayari kung ang mga halimaw ay gumalaw
+          sa kalahating bilis?\n\n<img src=\"https://images.code.org/2e83373ffd346ce3f42917a0624d441c-image-1603749526420.png\"
+          style=\"float:right\">\n\n## Ang Monster Town ba ay tulad ng totoong mundo?\nMerong
+          limitasyon sa anumang modelo sa kung gaano ito maaring maging makatotohanan.
+          \n* Ano ang pagkakatulad ng iyong simulasyon ng pagsiklab sa mga totoong
+          paglaganap ng virus sa mundo?\n* Ano ang mga pagkakaiba?\nKapag natapos
+          mo ang aktibidad na ito, talakayin ang mga katanungang ito sa mga guro o
+          sa iyong pamilya!\n\n## Ano pa ang maaari nating i-model?\nNakalikha ka
+          na ng isang gumaganang modelo ng pagsiklab sa Monster Town. Ano ang mga
+          bagay na hindi maaaring gawin o maipakita ng simulation mo na nais mong
+          magawa nito? Pindutin ang magpatuloy at matutong mag-modelo ng higit pa:\n*
+          Ang pagdaragdag ng bilang ng mga halimaw sa simulasyon\n* Pagtulong sa mga
+          halimaw na makabawi mula sa virus\n* Ang probabilidad, kaligtasan sa sakit,
+          bakuna, at marami pa!\n\nMaaari mo ring ibahagi ang iyong modelo ng simulasyon
+          sa iba, o magbahagi ng isang mensahe tungkol sa kung ano sa tingin mo ang
+          maaari naming gawin upang matulungan ang iba na maging malusog pagdating
+          ng isang virus sa bayan."
+      CourseF_outbreak_story22022_2022_pilot_-2022-2_2023:
         content1: paglalarawan dito
         markdown: "# Pagsiklab: Nag-iisip Tulad ng isang Siyentista\n\n<img src=\"https://images.code.org/89376b9ebd5fcee77545f13a7a444430-image-1603135356392.png\"
           style=\"float:right; width:30%\">\n\nAng simulasyon ay isang mahusay na
@@ -2418,6 +2518,11 @@ fil-PH:
 
           Sa araling ito, matututo kang gumamit at magsulat ng mga kwentong blank space. Panoorin ang video na ito para matutunan kung paano ito kumokonekta sa computer science.
       EnvelopeVariables-Unplugged_2021_22022_2022_pilot_-2022-2:
+        markdown: |-
+          # Mga Kwentong Blank Space
+
+          Sa araling ito, matututo kang gumamit at magsulat ng mga kwentong blank space. Panoorin ang video na ito para matutunan kung paano ito kumokonekta sa computer science.
+      EnvelopeVariables-Unplugged_2021_22022_2022_pilot_-2022-2_2023:
         markdown: |-
           # Mga Kwentong Blank Space
 
@@ -3745,10 +3850,14 @@ fil-PH:
         - {}
       courseAB_EOC2022:
         description: Naabot mo na ang huling aralin! Pumili ng proyektong gagawin.
+      courseAB_EOC2022_2023:
+        description: Naabot mo na ang huling aralin! Pumili ng proyektong gagawin.
       courseAB_EOC_2021:
         description: Naabot mo na ang huling aralin! Pumili ng proyektong gagawin.
         display_name: Proyekto sa Katapusan ng Kurso
       courseB_EOC2022:
+        description: Naabot mo na ang huling aralin! Pumili ng proyektong gagawin.
+      courseB_EOC2022_2023:
         description: Naabot mo na ang huling aralin! Pumili ng proyektong gagawin.
       courseB_EOC_2021:
         description: Naabot mo na ang huling aralin! Pumili ng proyektong gagawin.
@@ -3762,6 +3871,15 @@ fil-PH:
         questions:
         - {}
       courseC_multi_artist_prog6_predict12022:
+        answers:
+        - {}
+        - {}
+        - correct: true
+        - feedback: Mali. Ang artist ay guguhit ng parisukat.
+          text: Ang artist ay guguhit ng pentagon
+        questions:
+        - {}
+      courseC_multi_artist_prog6_predict12022_2023:
         answers:
         - {}
         - {}
@@ -3818,6 +3936,15 @@ fil-PH:
         questions:
         - {}
       courseC_multi_harvester_loops11_predict12022:
+        answers:
+        - text: '4'
+        - correct: true
+          text: '12'
+        - text: '15'
+        - text: '20'
+        questions:
+        - {}
+      courseC_multi_harvester_loops11_predict12022_2023:
         answers:
         - text: '4'
         - correct: true
@@ -3890,6 +4017,18 @@ fil-PH:
         - text: Si Scrat ay hindi lilipat sa unang block.
         questions:
         - {}
+      courseC_multi_maze_debugging8_predict12022_2023:
+        answers:
+        - feedback: Mali. Hindi maaabot ni Scrat ang acorn dahil siya ay  lumiko sa
+            maling daan.
+        - correct: true
+          feedback: Tama! Lumiko si Scrat sa maling direksyon at hindi maaabot ang
+            acorn.
+        - feedback: Mali. Hindi maaabot ni Scrat ang acorn dahil siya ay  lumiko sa
+            maling daan.
+        - text: Si Scrat ay hindi lilipat sa unang block.
+        questions:
+        - {}
       courseC_multi_maze_debugging8_predict1_2018:
         answers:
         - {}
@@ -3951,6 +4090,14 @@ fil-PH:
         - text: Tatama ang ibon sa pader.
         questions:
         - {}
+      courseC_multi_maze_programming8_predict12022_2023:
+        answers:
+        - {}
+        - correct: true
+        - {}
+        - text: Tatama ang ibon sa pader.
+        questions:
+        - {}
       courseC_multi_maze_programming8_predict1_2018:
         answers:
         - {}
@@ -3998,6 +4145,14 @@ fil-PH:
         questions:
         - {}
       courseC_multi_starWars_predict12022:
+        answers:
+        - {}
+        - {}
+        - correct: true
+        - text: Si BB-8 ay tatakbo lamang ng tatlong agwat.
+        questions:
+        - {}
+      courseC_multi_starWars_predict12022_2023:
         answers:
         - {}
         - {}
@@ -4061,6 +4216,14 @@ fil-PH:
         - text: Si BB-8 ay liliko sa maling direksiyon pagkatapos ng unang loop.
         questions:
         - {}
+      courseC_multi_starWars_predict22022_2023:
+        answers:
+        - {}
+        - correct: true
+        - {}
+        - text: Si BB-8 ay liliko sa maling direksiyon pagkatapos ng unang loop.
+        questions:
+        - {}
       courseC_multi_starWars_predict2_2018:
         answers:
         - {}
@@ -4108,6 +4271,10 @@ fil-PH:
           gagawin.
         display_name: Proyekto sa Katapusan ng Kurso
       courseD_EOC_examples2022:
+        description: Sisimulan mo na ang huli mong proyekto. Bago ka magsimula, gumugol
+          ng ilang oras sa pagtingin sa mga halimbawang proyekto.
+        display_name: Mga Halimbawa ng Proyekto
+      courseD_EOC_examples2022_2023:
         description: Sisimulan mo na ang huli mong proyekto. Bago ka magsimula, gumugol
           ng ilang oras sa pagtingin sa mga halimbawang proyekto.
         display_name: Mga Halimbawa ng Proyekto
@@ -4161,6 +4328,15 @@ fil-PH:
         questions:
         - {}
       courseD_multi_artist_nestedLoops9_predict12022:
+        answers:
+        - correct: true
+          text: A
+        - text: B
+        - text: C
+        - text: Wala sa anumang nabanggit
+        questions:
+        - {}
+      courseD_multi_artist_nestedLoops9_predict12022_2023:
         answers:
         - correct: true
           text: A
@@ -4228,6 +4404,14 @@ fil-PH:
         questions:
         - {}
       courseD_multi_bee_conditionals1_predict12022:
+        answers:
+        - {}
+        - correct: true
+        - {}
+        - text: Ang bubuyog ay hindi makakarating sa ulap.
+        questions:
+        - {}
+      courseD_multi_bee_conditionals1_predict12022_2023:
         answers:
         - {}
         - correct: true
@@ -4315,6 +4499,15 @@ fil-PH:
             bulaklak at pulot-pukyutan.
         questions:
         - {}
+      courseD_multi_bee_conditionals7_predict22022_2023:
+        answers:
+        - correct: true
+        - {}
+        - {}
+        - text: Susubukan ng bubuyog na makakuha ng pulot at nektar sa parehong mga
+            bulaklak at pulot-pukyutan.
+        questions:
+        - {}
       courseD_multi_bee_conditionals7_predict2_2018:
         answers:
         - correct: true
@@ -4379,6 +4572,14 @@ fil-PH:
         - text: Ang bubuyog ay liliko sa maling direksiyon.
         questions:
         - {}
+      courseD_multi_bee_nestedLoops2_predict12022_2023:
+        answers:
+        - {}
+        - {}
+        - correct: true
+        - text: Ang bubuyog ay liliko sa maling direksiyon.
+        questions:
+        - {}
       courseD_multi_bee_nestedLoops2_predict1_2018:
         answers:
         - {}
@@ -4433,6 +4634,15 @@ fil-PH:
         questions:
         - {}
       courseD_multi_bee_nestedLoops9_predict22022:
+        answers:
+        - text: '4'
+        - correct: true
+          text: '8'
+        - text: '10'
+        - text: '12'
+        questions:
+        - {}
+      courseD_multi_bee_nestedLoops9_predict22022_2023:
         answers:
         - text: '4'
         - correct: true
@@ -4512,6 +4722,14 @@ fil-PH:
         - text: Ang kalabasa lang ang pipitasin ng mang-aani.
         questions:
         - {}
+      courseD_multi_farmer_condLoops9_predict12022_2023:
+        answers:
+        - {}
+        - {}
+        - correct: true
+        - text: Ang kalabasa lang ang pipitasin ng mang-aani.
+        questions:
+        - {}
       courseD_multi_farmer_condLoops9_predict1_2018:
         answers:
         - {}
@@ -4582,6 +4800,14 @@ fil-PH:
         - text: Iiwang hindi nagalaw ng code na ito ang huling butas.
         questions:
         - {}
+      courseD_multi_farmer_while10_predict22022_2023:
+        answers:
+        - {}
+        - correct: true
+        - {}
+        - text: Iiwang hindi nagalaw ng code na ito ang huling butas.
+        questions:
+        - {}
       courseD_multi_farmer_while10_predict2_2018:
         answers:
         - {}
@@ -4630,6 +4856,14 @@ fil-PH:
         questions:
         - {}
       courseD_multi_farmer_while4_predict12022:
+        answers:
+        - {}
+        - {}
+        - correct: true
+        - text: Isang beses lang aalisin ng magsasaka ang dumi.
+        questions:
+        - {}
+      courseD_multi_farmer_while4_predict12022_2023:
         answers:
         - {}
         - {}
@@ -4701,6 +4935,20 @@ fil-PH:
           text: Ang zombie ay maiipit sa dulo ng landas patungo sa harap.
         questions:
         - {}
+      courseD_multi_maze_until10_predict22022_2023:
+        answers:
+        - correct: true
+          text: Ang zombie ay dadaan sa tamang landas at magtatapos nang pabalik-balik
+            magpakailanman.
+        - feedback: Mali. Ang zombie ay dadaan sa tamang landas at magtatapos nang
+            pabalik-balik magpakailanman.
+        - feedback: Mali. Ang zombie ay dadaan sa tamang landas at magtatapos nang
+            pabalik-balik magpakailanman.
+        - feedback: Sa code na ito, dadaan ang zombie sa tamang landas at magtatapos
+            nang pabalik-balik magpakailanman.
+          text: Ang zombie ay maiipit sa dulo ng landas patungo sa harap.
+        questions:
+        - {}
       courseD_multi_maze_until10_predict2_2018:
         answers:
         - correct: true
@@ -4752,6 +5000,14 @@ fil-PH:
         questions:
         - {}
       courseD_multi_maze_until2_predict12022:
+        answers:
+        - {}
+        - correct: true
+        - {}
+        - text: Ang ibon ay lumiliko sa maling direksiyon.
+        questions:
+        - {}
+      courseD_multi_maze_until2_predict12022_2023:
         answers:
         - {}
         - correct: true
@@ -4853,6 +5109,14 @@ fil-PH:
         - {}
         questions:
         - {}
+      courseE_multi_farmer_functions11_predict2022_2023:
+        answers:
+        - {}
+        - {}
+        - correct: true
+        - {}
+        questions:
+        - {}
       courseE_multi_farmer_functions11_predict_2018:
         answers:
         - {}
@@ -4906,6 +5170,14 @@ fil-PH:
         questions:
         - {}
       courseE_prediction_artistFunction12022:
+        answers:
+        - {}
+        - {}
+        - {}
+        - correct: true
+        questions:
+        - {}
+      courseE_prediction_artistFunction12022_2023:
         answers:
         - {}
         - {}
@@ -4982,6 +5254,17 @@ fil-PH:
           text: Ang tumbleweed ay kumukurap-kurap.
         questions:
         - {}
+      courseE_swim_fish_behavior_predict12022_2023:
+        answers:
+        - feedback: Mali. Magsisimulang bumagsak ang tumbleweed.
+        - feedback: Mali. Magsisimulang bumagsak ang tumbleweed.
+          text: Lulutang ang tumbleweed sa tuktok ng screen.
+        - correct: true
+          text: Magsisimulang bumagsak ang tumbleweed.
+        - feedback: Mali. Magsisimulang bumagsak ang tumbleweed.
+          text: Ang tumbleweed ay kumukurap-kurap.
+        questions:
+        - {}
       courseE_swim_fish_behavior_predict1_2021:
         answers:
         - feedback: Mali. Magsisimulang bumagsak ang tumbleweed.
@@ -5001,10 +5284,15 @@ fil-PH:
         display_name: Proyekto sa Katapusan ng Kurso
       courseF_EOC_examples2022_2022_pilot_-2022-2:
         description: Naabot mo na ang dulo ng Course F! Pumili ng proyektong tutuklasin.
+      courseF_EOC_examples2022_2022_pilot_-2022-2_2023:
+        description: Naabot mo na ang dulo ng Course F! Pumili ng proyektong tutuklasin.
       courseF_EOC_examples_2021:
         description: Naabot mo na ang dulo ng Course F! Pumili ng proyektong gagawin.
         display_name: Proyekto sa Katapusan ng Kurso
       courseF_EOC_samples2022:
+        description: Sisimulan mo na ang huli mong proyekto. Bago ka magsimula, gumugol
+          ng ilang oras sa pagtingin sa mga halimbawang proyekto.
+      courseF_EOC_samples2022_2023:
         description: Sisimulan mo na ang huli mong proyekto. Bago ka magsimula, gumugol
           ng ilang oras sa pagtingin sa mga halimbawang proyekto.
       courseF_EOC_samples_2021:
@@ -5056,11 +5344,20 @@ fil-PH:
           halimbawa ng mga proyekto sa ibaba. Pindutin ang \"Tapos na\" kapag handa
           ka nang magsimulang magplano ng sarili mong program.
         display_name: Pagtuklas - Halimbawa ng Mga Program
+      courseF_collector_samples_2022_pilot_-2022-2_2023:
+        description: Gagawa ka ng collector game. Bago ka magsimula, suriin ang mga
+          halimbawa ng mga proyekto sa ibaba. Pindutin ang \"Tapos na\" kapag handa
+          ka nang magsimulang magplano ng sarili mong program.
+        display_name: Pagtuklas - Halimbawa ng Mga Program
       courseF_events_freeplay:
         description: Magagamit mo na ngayon ang natutunan mo para mapaganda pa ang
           iyong proyekto! Patuloy na magdagdag sa iyong program o magsimula ng bago!
         display_name: Mga Kaganapan - Libreng Laro
       courseF_events_freeplay2022_2022_pilot_-2022-2:
+        description: Magagamit mo na ngayon ang natutunan mo para mapaganda pa ang
+          iyong proyekto! Patuloy na magdagdag sa iyong program o magsimula ng bago!
+        display_name: Mga Kaganapan - Libreng Laro
+      courseF_events_freeplay2022_2022_pilot_-2022-2_2023:
         description: Magagamit mo na ngayon ang natutunan mo para mapaganda pa ang
           iyong proyekto! Patuloy na magdagdag sa iyong program o magsimula ng bago!
         display_name: Mga Kaganapan - Libreng Laro
@@ -5079,6 +5376,10 @@ fil-PH:
           | ***I-type*** |**Repasuhin**|**Debug**|**Debug**|**Debug**|**Opsyonal na Nilalaman**|**Opsyonal na Nilalaman**
           | ***Konsepto***|*events, behaviors*|*mga kaganapan, mga pag-uugali*|*events, behaviors*|*mga kaganapan, mga pag-uugali*|*when/while events*|*kailan/habang na mga kaganapan*|
       courseF_events_practice2022_2022_pilot_-2022-2:
+        description: Mahusay na trabaho sa ngayon! Piliin angsusunod mong aktibidad.
+          Kumpletuhin ang lahat ng kaya mo. Patuloy na magsanay sa mga kaganapan!
+        display_name: Pagsasanay sa mga Kaganapan
+      courseF_events_practice2022_2022_pilot_-2022-2_2023:
         description: Mahusay na trabaho sa ngayon! Piliin angsusunod mong aktibidad.
           Kumpletuhin ang lahat ng kaya mo. Patuloy na magsanay sa mga kaganapan!
         display_name: Pagsasanay sa mga Kaganapan
@@ -5114,7 +5415,28 @@ fil-PH:
           text: Ang sprite ay iikot muna at pagkatapos ay lilipat sa ibang pagkakataon.
         questions:
         - text: Basahin ang code, pagkatapos ay gumawa ng hula.
+      courseF_events_predict_multi2022_2022_pilot_-2022-2_2023:
+        answers:
+        - feedback: Mali. Ang sprite ay lilipat din sa silangan.
+          text: Ang sprite ay iikot lamang sa kanan.
+        - feedback: Mali. Ang sprite ay hindi tumigil sa pag-ikot, kaya gagawin nito
+            ang pareho ng sabay-sabay.
+          text: Ang sprite ay lilipat lamang sa silangan.
+        - correct: true
+          feedback: Tama! Ang parehong pag-uugali ay mangyayari nang sabay-sabay.
+          text: Ang sprite ay iikot at gagalaw sa parehong oras.
+        - feedback: Mali. Sa Sprite Lab, ang mga konektadong block ay nangyayari kaagad
+            pagkatapos ng bawat huli, kaya ang parehong mga pag-uugali ay mangyayari
+            nang sabay-sabay.
+          text: Ang sprite ay iikot muna at pagkatapos ay lilipat sa ibang pagkakataon.
+        questions:
+        - text: Basahin ang code, pagkatapos ay gumawa ng hula.
       courseF_groups_freeplay_2022_pilot_-2022-2:
+        description: Ngayon ay maaari mong gamitin ang natutunan mo upang gawin ang
+          anumang gusto mo! Lumikha ng interactive na program na may maraming mga
+          sprite!
+        display_name: Maraming Sprite - Libreng Paglalaro
+      courseF_groups_freeplay_2022_pilot_-2022-2_2023:
         description: Ngayon ay maaari mong gamitin ang natutunan mo upang gawin ang
           anumang gusto mo! Lumikha ng interactive na program na may maraming mga
           sprite!
@@ -5125,7 +5447,27 @@ fil-PH:
           kaganapan at grupo ng mga sprite! Patuloy na magsanay sa mga event at grupo
           ng sprite!
         display_name: Maraming Mga Pagsasanay sa Sprite
+      courseF_groups_practice_2022_pilot_-2022-2_2023:
+        description: Mahusay na trabaho sa ngayon! Piliin ang susunod na aktibidad
+          mo. Kumpletuhin ang lahat na kaya mo. Panatilihin ang pagsasanay sa mga
+          kaganapan at grupo ng mga sprite! Patuloy na magsanay sa mga event at grupo
+          ng sprite!
+        display_name: Maraming Mga Pagsasanay sa Sprite
       courseF_groups_predict_multi_2022_pilot_-2022-2:
+        answers:
+        - correct: true
+          feedback: Tama! Ang sprite na na-click mo ay magiging mas malaki.
+          text: Ang sprite na iyong na-click ay magiging mas malaki.
+        - feedback: Mali. Ang sprite na na-click mo ay magiging mas malaki.
+          text: Ang sprite na na-click mo ay magiging mas maliit.
+        - feedback: Mali. Ang sprite na na-click mo ay magiging mas malaki.
+          text: Ang lahat ng mga sprite ay magiging mas malaki.
+        - feedback: Mali. Ang sprite na na-click mo ay magiging mas malaki.
+          text: Ang lahat ng mga sprite ay magiging mas maliit.
+        questions:
+        - text: 'Gumawa ng hula: Pagkatapos pindutin ang Run, ano ang mangyayari kapag
+            na-click mo ang isa sa mga sprite?'
+      courseF_groups_predict_multi_2022_pilot_-2022-2_2023:
         answers:
         - correct: true
           feedback: Tama! Ang sprite na na-click mo ay magiging mas malaki.
@@ -5158,6 +5500,12 @@ fil-PH:
           ng kursong ito, makakagawa ka na ng sarili mong mga proyekto tulad nito...
           at higit pa!
         display_name: Mga App sa Sprite Lab
+      courseF_intro_apps2022_2022_pilot_-2022-2_2023:
+        description: Ang mga proyektong ito ay nilikha lahat gamit ang Sprite Lab.
+          Subukan ang mga ito ngayon upang makita kung ano ang posible. Sa pagtatapos
+          ng kursong ito, makakagawa ka na ng sarili mong mga proyekto tulad nito...
+          at higit pa!
+        display_name: Mga App sa Sprite Lab
       courseF_labels_predict_multi:
         answers:
         - feedback: Mali. Ang mga variable na label ay hindi tugma.
@@ -5175,6 +5523,22 @@ fil-PH:
         - text: Maaaring mukhang pamilyar ang code na ito ngunit basahin itong mabuti.
             Ano ang ipi-print kung magta-type ang user sa "pizza"?
       courseF_labels_predict_multi2022_2022_pilot_-2022-2:
+        answers:
+        - feedback: Mali. Ang mga variable na label ay hindi tugma.
+          text: '"Isang pizza paparating na!"'
+        - feedback: Mali. Ang label ng variable ay hindi kailanman naka-print.
+          text: '"Isang pagkain paparating na!"'
+        - feedback: Mali. Ang label ng variable ay hindi kailanman naka-print.
+          text: '"Isang pagkain paparating na!"'
+        - correct: true
+          feedback: Tama! Ang mga variable na label ay hindi tugma.
+          text: '"May isang paparating na!"'
+        - feedback: Mali. Gagana pa rin ang kaganapan at ang print na block.
+          text: Walang mapi-print.
+        questions:
+        - text: Maaaring mukhang pamilyar ang code na ito ngunit basahin itong mabuti.
+            Ano ang ipi-print kung magta-type ang user sa "pizza"?
+      courseF_labels_predict_multi2022_2022_pilot_-2022-2_2023:
         answers:
         - feedback: Mali. Ang mga variable na label ay hindi tugma.
           text: '"Isang pizza paparating na!"'
@@ -5239,6 +5603,14 @@ fil-PH:
         questions:
         - {}
       courseF_multi_artist_variables3a_predict12022:
+        answers:
+        - correct: true
+        - {}
+        - {}
+        - text: Hihingi ang computer sa user ng isang numero.
+        questions:
+        - {}
+      courseF_multi_artist_variables3a_predict12022_2023:
         answers:
         - correct: true
         - {}
@@ -5321,6 +5693,15 @@ fil-PH:
             bilang 1 at 4. '
         questions:
         - {}
+      courseF_multi_bee_for3_predict12022_2023:
+        answers:
+        - {}
+        - correct: true
+        - {}
+        - text: 'Ang bubuyog ay susulong at mangongolekta ng isang nektar sa mga bulaklak
+            bilang 1 at 4. '
+        questions:
+        - {}
       courseF_multi_bee_for3_predict1_2018:
         answers:
         - {}
@@ -5394,6 +5775,10 @@ fil-PH:
         description: Ikaw naman ang gumawa ng kahit anong gusto mo! Anong uri ng proyekto
           ang gagawin mo?
         display_name: Mga Sprite - Libreng Laro
+      courseF_sprites_freeplay2022_2022_pilot_-2022-2_2023:
+        description: Ikaw naman ang gumawa ng kahit anong gusto mo! Anong uri ng proyekto
+          ang gagawin mo?
+        display_name: Mga Sprite - Libreng Laro
       courseF_sprites_practice:
         description: Mahusay na trabaho! Piliin ang susunod mong aktibidad. Kumpletuhin
           ang lahat ng kaya mo. Patuloy na magsanay sa mga sprite at pag-uugali!
@@ -5409,6 +5794,10 @@ fil-PH:
           | ***I-type*** |**Repaso**|**Review**|**Repaso**|**Repaso**|
           | ***Konsepto***|*sprites, locations*|*mga sprite, mga katangian*|*sprites, locations, behaviors*|*mga pag-uugali*|
       courseF_sprites_practice2022_2022_pilot_-2022-2:
+        description: Mahusay na trabaho! Piliin ang susunod mong aktibidad. Kumpletuhin
+          ang lahat ng kaya mo. Patuloy na magsanay sa mga sprite at pag-uugali!
+        display_name: Pagsasanay sa mga Sprite
+      courseF_sprites_practice2022_2022_pilot_-2022-2_2023:
         description: Mahusay na trabaho! Piliin ang susunod mong aktibidad. Kumpletuhin
           ang lahat ng kaya mo. Patuloy na magsanay sa mga sprite at pag-uugali!
         display_name: Pagsasanay sa mga Sprite
@@ -5450,6 +5839,25 @@ fil-PH:
           text: Babagsak ang mga eroplano.
         questions:
         - text: Basahin ang code, pagkatapos ay gumawa ng hula.
+      courseF_sprites_predict_multi2022_2022_pilot_-2022-2_2023:
+        answers:
+        - feedback: Mali. Ang mga sprite na ito ay may "mga pag-uugali" na patuloy
+            na tumatakbo hanggang sa sabihin sa kanila na huminto.
+          text: Ang parehong eroplano ay lilipat ng isang espasyo sa loob ng grid,
+            pagkatapos ay hihinto.
+        - correct: true
+          feedback: Tama! Ang mga pag-uugaling ito ay nagsasabi sa mga eroplano na
+            magsimulang gumalaw at magpatuloy.
+          text: Magsisimulang gumalaw ang dalawang eroplano at hindi titigil.
+        - feedback: Mali. Ang bawat block ng code sa Sprite Lab ay tumatakbo kaagad
+            pagkatapos ng susunod.
+          text: Ang isang eroplano ay unang lilipat, at ang isa pang eroplano ay lilipat
+            sa ibang pagkakataon.
+        - feedback: Mali. Ang mga eroplano ay hindi nakaposisyon sa paraang tatama
+            sila.
+          text: Babagsak ang mga eroplano.
+        questions:
+        - text: Basahin ang code, pagkatapos ay gumawa ng hula.
       courseF_text_practice:
         description: Mahusay na trabaho sa ngayon! Piliin angsusunod mong aktibidad.
           Kumpletuhin ang lahat ng kaya mo. Patuloy na magsanay sa mga text at prompt!
@@ -5465,6 +5873,10 @@ fil-PH:
           | ***I-type*** |**Repasuhin**|**Debug**|**Debug**|**Debug**|**Opsyonal na Nilalaman**|**Optional Content**|**Libreng Laro**
           | ***Konsepto***|*print block, events*|*mga prompt, mga kaganapan*|*adding spaces*|*tumutugma sa mga variable na label*|*title screen blocks*|*pag-iimbak ng mga kulay*|*walang bagong nilalaman*
       courseF_text_practice2022_2022_pilot_-2022-2:
+        description: Mahusay na trabaho sa ngayon! Piliin angsusunod mong aktibidad.
+          Kumpletuhin ang lahat ng kaya mo. Patuloy na magsanay sa mga text at prompt!
+        display_name: Pagsasanay sa Text at Mga Prompt
+      courseF_text_practice2022_2022_pilot_-2022-2_2023:
         description: Mahusay na trabaho sa ngayon! Piliin angsusunod mong aktibidad.
           Kumpletuhin ang lahat ng kaya mo. Patuloy na magsanay sa mga text at prompt!
         display_name: Pagsasanay sa Text at Mga Prompt
@@ -5486,7 +5898,43 @@ fil-PH:
           text: Walang mangyayari dahil ang `bilang` ay hindi isang numero.
         questions:
         - text: 'Gumawa ng hula: Ano ang sasabihin ng kuneho?'
+      courseF_variables2_predict2_multi2022_-2022-2_2023:
+        answers:
+        - correct: true
+          feedback: Tama! Ang numero 5 ay naka-imbak sa variable at pagkatapos ay
+            ginamit muli kapag nagsasalita ang sprite.
+          text: Ang kuneho ay magsasabi ng "5".
+        - feedback: Mali. Walang prompt sa programang ito. Ang numero ay direktang
+            nakatakda sa code.
+          text: Ang kunehong sprite ay magsasabi ng anumang numero na naisulat.
+        - feedback: Mali. Ang `bilang` ay isang variable. Kapag tumakbo ang block
+            na ito, nakukuha nito ang anumang numerong nakaimbak. Ang kuneho ay magsasabi
+            ng "5".
+          text: Ang kuneho ay magsasabi ng "bilang".
+        - feedback: Mali. Ang numero 5 ay naka-imbak sa variable at ginagamit kapag
+            nagsasalita ang sprite.
+          text: Walang mangyayari dahil ang `bilang` ay hindi isang numero.
+        questions:
+        - text: 'Gumawa ng hula: Ano ang sasabihin ng kuneho?'
       courseF_variables2_predict_multi2022_2022_pilot_-2022-2:
+        answers:
+        - feedback: Mali. Ang numero ay naka-imbak sa variable at ginagamit upang
+            lumikha ng mga karot na sprite.
+          text: Ang programa ay magpi-print ng anumang numero na naisulat.
+        - feedback: Mali. Ang numero ay naka-imbak sa variable at ginagamit upang
+            lumikha ng mga karot na sprite.
+          text: Ang kunehong sprite ay magsasabi ng anumang numero na naisulat.
+        - correct: true
+          feedback: Tama! Ang bilang ng mga sprite na ginawa ay ang numerong nakaimbak
+            sa variable.
+          text: Ang program ay gagawa ng maraming bagong karot na sprite.
+        - feedback: Mali. Ang isang numero ay naka-imbak sa variable at ginagamit
+            upang lumikha ng mga karot na sprite.
+          text: Walang mangyayari dahil ang `bilang` ay hindi isang numero.
+        questions:
+        - text: 'Gumawa ng hula: Ano ang mangyayari pagkatapos mag-type ng numero
+            sa prompt?'
+      courseF_variables2_predict_multi2022_2022_pilot_-2022-2_2023:
         answers:
         - feedback: Mali. Ang numero ay naka-imbak sa variable at ginagamit upang
             lumikha ng mga karot na sprite.
@@ -5538,6 +5986,23 @@ fil-PH:
             ng pag-type gamit ang keyboard mo. Ang `print` na block ay nagpapakita
             ng text sa screen. Gumawa ng hula: Ano ang mangyayari pagkatapos sagutin
             ang tanong?'
+      courseF_variables_predict_multi2022_2022_pilot_-2022-2_2023:
+        answers:
+        - feedback: Mali. Ang block ng pangalan ay papalitan ng anumang ita-type mo.
+          text: Ang program ay magpi-print ng "Hello pangalan!"
+        - correct: true
+          feedback: Tama! Ang tina-type mo ay ginagamit bilang kapalit ng name block.
+          text: Babatiin ka ng program gamit ang pangalan na tina-type mo.
+        - feedback: Mali. Ang text ay naka-print sa screen.
+          text: Magbabago ng laki ang sprite.
+        - feedback: Mali. Isang tanong lamang ang itinatanong, sa sandaling magsimula
+            ang program.
+          text: Magtatanong pa ang computer.
+        questions:
+        - text: 'Hinahayaan ka ng program na ito na sagutin ang tanong sa pamamagitan
+            ng pag-type gamit ang keyboard mo. Ang `print` na block ay nagpapakita
+            ng text sa screen. Gumawa ng hula: Ano ang mangyayari pagkatapos sagutin
+            ang tanong?'
       courseF_variables_projects:
         description: Gagawa ka ng isang kard ng pagbati, isang chatbot, o isang kwentong
           blank space. Kung natapos mo na ang \"Bahagi 1\" ng proyekto mo, pumunta
@@ -5549,6 +6014,11 @@ fil-PH:
 
           Talagang maaaring kailanganin ng mga mag-aaral ang malinaw na mga tagubilin upang maunawaan kung paano i-navigate ang mga pagpipilian dito. Sa bawat isa sa mga pagpipilian sa proyekto, mayroong dalawang sub-level dito. Upang magsimula, dapat pumili ang mga mag-aaral ng isa sa mga antas na may markang "Bahagi 1". Kapag natapos na nila ang antas na iyon, dapat silang bumalik dito at piliin ang "Bahagi 2" ng *parehong* proyekto. Ang unang antas sa bawat pagpipilian ay magbibigay sa mga mag-aaral ng feedback habang pinagsasama nila ang mga pangunahing bahagi ng kanilang proyekto. Ang pangalawang antas ay "libreng paglalaro" na nilalayon upang payagan ang mga mag-aaral na gumawa ng anumang mga pagbabago sa kanilang code na gusto nila.
       courseF_variables_projects2022_2022_pilot_-2022-2:
+        description: Gagawa ka ng isang kard ng pagbati, isang chatbot, o isang kwentong
+          blank space. Kung natapos mo na ang \"Bahagi 1\" ng proyekto mo, pumunta
+          sa \"Bahagi 2\".
+        display_name: Pumili ng Proyekto
+      courseF_variables_projects2022_2022_pilot_-2022-2_2023:
         description: Gagawa ka ng isang kard ng pagbati, isang chatbot, o isang kwentong
           blank space. Kung natapos mo na ang \"Bahagi 1\" ng proyekto mo, pumunta
           sa \"Bahagi 2\".
@@ -5568,6 +6038,12 @@ fil-PH:
           ito nang magkasama bilang isang klase o hayaan ang mga mag-aaral na tumuklas
           nang mag-isa."
       courseF_variables_samples2022_2022_pilot_-2022-2:
+        description: Gagawa ka ng kard ng pagbati, chatbot, o kuwentong blank space.
+          Bago ka magsimula, suriin ang mga halimbawa ng mga proyekto sa ibaba upang
+          makita kung saan ka interesado. Pindutin ang \"Tapos na\" kapag handa ka
+          nang simulan ang pagpaplano ng sarili mong program.
+        display_name: Pagtuklas - Halimbawa ng Mga Program
+      courseF_variables_samples2022_2022_pilot_-2022-2_2023:
         description: Gagawa ka ng kard ng pagbati, chatbot, o kuwentong blank space.
           Bago ka magsimula, suriin ang mga halimbawa ng mga proyekto sa ibaba upang
           makita kung saan ka interesado. Pindutin ang \"Tapos na\" kapag handa ka
@@ -5613,6 +6089,26 @@ fil-PH:
           * Isang paglalarawan o pagguhit ng mga sprite na kakailanganin mo (at ang kanilang mga pag-uugali).
 
           Kung hindi ka sigurado kung handa ka nang magpatuloy, magtanong sa iyong guro!
+      courseF_variables_stop2022_2022_pilot_-2022-2_2023:
+        content1: paglalarawan dito
+        markdown: |-
+          # Tigil!
+
+          ## Sigurado ka bang handa ka nang magpatuloy?
+
+
+          Sa susunod na antas, sisimulan mong isulat ang code para sa proyekto mo. Pinakamahusay itong gagana kung mayroon ka nang plano.
+
+          Dapat kasama sa nakumpleto mong plano ang:
+
+          <img src="https://images.code.org/b476ac330f2b66e44e02208fee386a56-image-1614802439867.png" style="float:left; height:70px; padding:10px"/>
+
+          * Ang uri ng proyekto na ginagawa mo. Halimbawa, isang kard ng pagbati, chatbot, o kwentong blank space.
+          * Isang listahan ng mga tanong na itatanong mo sa user.
+          * Ang iba pang text na ipapakita mo sa screen.
+          * Isang paglalarawan o pagguhit ng mga sprite na kakailanganin mo (at ang kanilang mga pag-uugali).
+
+          Kung hindi ka sigurado kung handa ka nang magpatuloy, magtanong sa iyong guro!
       coursee_prediction_artistfunction2:
         answers:
         - {}
@@ -5622,6 +6118,14 @@ fil-PH:
         questions:
         - {}
       coursee_prediction_artistfunction22022:
+        answers:
+        - {}
+        - correct: true
+        - {}
+        - {}
+        questions:
+        - {}
+      coursee_prediction_artistfunction22022_2023:
         answers:
         - {}
         - correct: true
@@ -5669,6 +6173,41 @@ fil-PH:
           text: Guguhit ang artist ng apat na parisukat sa ibabaw ng isa't isa.
         questions:
         - text: Ano ang mangyayari kapag pinindot mo ang "Run" button?
+      csc_animal_adaptations_predict:
+        answers:
+        - {}
+        - correct: true
+        - {}
+        - {}
+        questions:
+        - {}
+      csc_ecosystems_matching_cfu:
+        answers:
+        - {}
+        - {}
+        - {}
+        questions:
+        - {}
+        - {}
+        - {}
+      csc_ecosystems_matching_conditionals:
+        answers:
+        - {}
+        - {}
+        - {}
+        questions:
+        - {}
+        - {}
+        - {}
+      csc_ecosystems_matching_events:
+        answers:
+        - {}
+        - {}
+        questions:
+        - {}
+        - {}
+      csc_timecapsule_info_2023:
+        content1: paglalarawan dito
       csd-post-survey-2017-q11_2018:
         answers:
         - correct: true
@@ -8835,6 +9374,8 @@ fil-PH:
         content1: paglalarawan dito
       csf_be_a_super_digital_citizen2022:
         content1: paglalarawan dito
+      csf_be_a_super_digital_citizen2022_2023:
+        content1: paglalarawan dito
       csf_be_a_super_digital_citizen_2021:
         content1: paglalarawan dito
         markdown: |-
@@ -8849,6 +9390,8 @@ fil-PH:
       csf_password_power-up:
         content1: paglalarawan dito
       csf_password_power-up2022:
+        content1: paglalarawan dito
+      csf_password_power-up2022_2023:
         content1: paglalarawan dito
       csf_password_power-up_2021:
         content1: paglalarawan dito
@@ -8867,6 +9410,8 @@ fil-PH:
       csf_putting_a_stop_to_online_meanness:
         content1: paglalarawan dito
       csf_putting_a_stop_to_online_meanness2022:
+        content1: paglalarawan dito
+      csf_putting_a_stop_to_online_meanness2022_2023:
         content1: paglalarawan dito
       csf_putting_a_stop_to_online_meanness_2021:
         content1: paglalarawan dito
@@ -10451,6 +10996,10 @@ fil-PH:
         description: Sisimulan mo na ang huli mong proyekto. Bago ka magsimula, gumugol
           ng ilang oras sa pagtingin sa mga halimbawang proyekto.
         display_name: Mga Halimbawa ng Proyekto
+      express_EOC_examples2022_2023:
+        description: Sisimulan mo na ang huli mong proyekto. Bago ka magsimula, gumugol
+          ng ilang oras sa pagtingin sa mga halimbawang proyekto.
+        display_name: Mga Halimbawa ng Proyekto
       express_EOC_examples_2021:
         description: Sisimulan mo na ang huli mong proyekto. Bago ka magsimula, gumugol
           ng ilang oras sa pagtingin sa mga halimbawang proyekto.
@@ -10480,6 +11029,15 @@ fil-PH:
         questions:
         - {}
       grade2_multi_collector_A_predict12022:
+        answers:
+        - {}
+        - correct: true
+        - {}
+        - text: Mangongolekta si Laurel ng 1 piraso ng kayamanan gamit ang code na
+            ito.
+        questions:
+        - {}
+      grade2_multi_collector_A_predict12022_2023:
         answers:
         - {}
         - correct: true

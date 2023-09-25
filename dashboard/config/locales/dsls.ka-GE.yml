@@ -1936,7 +1936,11 @@ ka-GE:
         content1: მიუთითეთ აღწერა
       CourseF_outbreak_story2022_2022_pilot_-2022-2:
         content1: მიუთითეთ აღწერა
+      CourseF_outbreak_story2022_2022_pilot_-2022-2_2023:
+        content1: მიუთითეთ აღწერა
       CourseF_outbreak_story22022_2022_pilot_-2022-2:
+        content1: მიუთითეთ აღწერა
+      CourseF_outbreak_story22022_2022_pilot_-2022-2_2023:
         content1: მიუთითეთ აღწერა
       Eval Contracts F:
         answers:
@@ -2735,6 +2739,14 @@ ka-GE:
         - {}
         questions:
         - {}
+      courseC_multi_artist_prog6_predict12022_2023:
+        answers:
+        - {}
+        - {}
+        - {}
+        - {}
+        questions:
+        - {}
       courseC_multi_artist_prog6_predict1_2018:
         answers:
         - {}
@@ -2776,6 +2788,14 @@ ka-GE:
         questions:
         - {}
       courseC_multi_harvester_loops11_predict12022:
+        answers:
+        - text: '4'
+        - text: '12'
+        - text: '15'
+        - {}
+        questions:
+        - {}
+      courseC_multi_harvester_loops11_predict12022_2023:
         answers:
         - text: '4'
         - text: '12'
@@ -2831,6 +2851,14 @@ ka-GE:
         - {}
         questions:
         - {}
+      courseC_multi_maze_debugging8_predict12022_2023:
+        answers:
+        - {}
+        - {}
+        - {}
+        - {}
+        questions:
+        - {}
       courseC_multi_maze_debugging8_predict1_2018:
         answers:
         - {}
@@ -2872,6 +2900,14 @@ ka-GE:
         questions:
         - {}
       courseC_multi_maze_programming8_predict12022:
+        answers:
+        - {}
+        - {}
+        - {}
+        - {}
+        questions:
+        - {}
+      courseC_multi_maze_programming8_predict12022_2023:
         answers:
         - {}
         - {}
@@ -2927,6 +2963,14 @@ ka-GE:
         - {}
         questions:
         - {}
+      courseC_multi_starWars_predict12022_2023:
+        answers:
+        - {}
+        - {}
+        - {}
+        - {}
+        questions:
+        - {}
       courseC_multi_starWars_predict1_2018:
         answers:
         - {}
@@ -2975,6 +3019,14 @@ ka-GE:
         - {}
         questions:
         - {}
+      courseC_multi_starWars_predict22022_2023:
+        answers:
+        - {}
+        - {}
+        - {}
+        - {}
+        questions:
+        - {}
       courseC_multi_starWars_predict2_2018:
         answers:
         - {}
@@ -3008,6 +3060,9 @@ ka-GE:
         questions:
         - {}
       courseD_EOC_examples2022:
+        description: მალე თქვენს ბოლო პროექტს დაიწყებთ. სანამ დაიწყებთ, დაათვალიერეთ
+          პროექტების ნიმუშები.
+      courseD_EOC_examples2022_2023:
         description: მალე თქვენს ბოლო პროექტს დაიწყებთ. სანამ დაიწყებთ, დაათვალიერეთ
           პროექტების ნიმუშები.
       courseD_EOC_examples_2021:
@@ -3054,6 +3109,14 @@ ka-GE:
         questions:
         - {}
       courseD_multi_artist_nestedLoops9_predict12022:
+        answers:
+        - text: ა
+        - text: ბ
+        - text: გ
+        - {}
+        questions:
+        - {}
+      courseD_multi_artist_nestedLoops9_predict12022_2023:
         answers:
         - text: ა
         - text: ბ
@@ -3109,6 +3172,18 @@ ka-GE:
         - {}
         questions:
         - {}
+      courseD_multi_bee_conditionals1_predict12022_2023:
+        answers:
+        - {}
+        - {}
+        - {}
+        - {}
+        questions:
+        - text: არსებობს ღრუბელი, რომელიც ბლოკავს ჩვენს ხედვას. ღრუბელი გაქრება ერთხელ
+            ჩვენ დააჭირეთ „Run“. ამ ღრუბლის ქვეშ შეიძლება ყვავილი იყოს. თუ ყვავილია,
+            ფუტკარს ერთხელ დასჭირდება ნექტარის შეგროვება. თუ ყვავილი არ არის, ფუტკარმა
+            არაფერი უნდა გააკეთოს. კარგად გადახედეთ ქვემოთ მოცემულ კოდს. როგორ ფიქრობთ,
+            რა მოხდება მას შემდეგ, რაც დააჭირეთ „Run“?
       courseD_multi_bee_conditionals1_predict1_2018:
         answers:
         - {}
@@ -3173,6 +3248,14 @@ ka-GE:
         - {}
         questions:
         - {}
+      courseD_multi_bee_conditionals7_predict22022_2023:
+        answers:
+        - {}
+        - {}
+        - {}
+        - {}
+        questions:
+        - {}
       courseD_multi_bee_conditionals7_predict2_2018:
         answers:
         - {}
@@ -3221,6 +3304,14 @@ ka-GE:
         - {}
         questions:
         - {}
+      courseD_multi_bee_nestedLoops2_predict12022_2023:
+        answers:
+        - {}
+        - {}
+        - {}
+        - {}
+        questions:
+        - {}
       courseD_multi_bee_nestedLoops2_predict1_2018:
         answers:
         - {}
@@ -3262,6 +3353,14 @@ ka-GE:
         questions:
         - {}
       courseD_multi_bee_nestedLoops9_predict22022:
+        answers:
+        - text: '4'
+        - text: '8'
+        - {}
+        - text: '12'
+        questions:
+        - {}
+      courseD_multi_bee_nestedLoops9_predict22022_2023:
         answers:
         - text: '4'
         - text: '8'
@@ -3325,6 +3424,14 @@ ka-GE:
         - {}
         questions:
         - {}
+      courseD_multi_farmer_condLoops9_predict12022_2023:
+        answers:
+        - {}
+        - {}
+        - {}
+        - {}
+        questions:
+        - {}
       courseD_multi_farmer_condLoops9_predict1_2018:
         answers:
         - {}
@@ -3381,6 +3488,14 @@ ka-GE:
         - {}
         questions:
         - {}
+      courseD_multi_farmer_while10_predict22022_2023:
+        answers:
+        - {}
+        - {}
+        - {}
+        - {}
+        questions:
+        - {}
       courseD_multi_farmer_while10_predict2_2018:
         answers:
         - {}
@@ -3422,6 +3537,14 @@ ka-GE:
         questions:
         - {}
       courseD_multi_farmer_while4_predict12022:
+        answers:
+        - {}
+        - {}
+        - {}
+        - {}
+        questions:
+        - {}
+      courseD_multi_farmer_while4_predict12022_2023:
         answers:
         - {}
         - {}
@@ -3477,6 +3600,14 @@ ka-GE:
         - {}
         questions:
         - {}
+      courseD_multi_maze_until10_predict22022_2023:
+        answers:
+        - {}
+        - {}
+        - {}
+        - {}
+        questions:
+        - {}
       courseD_multi_maze_until10_predict2_2018:
         answers:
         - {}
@@ -3518,6 +3649,14 @@ ka-GE:
         questions:
         - {}
       courseD_multi_maze_until2_predict12022:
+        answers:
+        - {}
+        - {}
+        - {}
+        - {}
+        questions:
+        - {}
+      courseD_multi_maze_until2_predict12022_2023:
         answers:
         - {}
         - {}
@@ -3616,6 +3755,14 @@ ka-GE:
         - {}
         questions:
         - {}
+      courseE_multi_farmer_functions11_predict2022_2023:
+        answers:
+        - {}
+        - {}
+        - {}
+        - {}
+        questions:
+        - {}
       courseE_multi_farmer_functions11_predict_2018:
         answers:
         - {}
@@ -3657,6 +3804,14 @@ ka-GE:
         questions:
         - {}
       courseE_prediction_artistFunction12022:
+        answers:
+        - {}
+        - {}
+        - {}
+        - {}
+        questions:
+        - {}
+      courseE_prediction_artistFunction12022_2023:
         answers:
         - {}
         - {}
@@ -3724,6 +3879,14 @@ ka-GE:
         - {}
         questions:
         - {}
+      courseE_swim_fish_behavior_predict12022_2023:
+        answers:
+        - {}
+        - {}
+        - {}
+        - {}
+        questions:
+        - {}
       courseE_swim_fish_behavior_predict1_2021:
         answers:
         - {}
@@ -3735,6 +3898,9 @@ ka-GE:
       courseExpress_project_exemplars_2019_2020:
         content1: ტესტის გაფორმების სახელმძღვანელოს გვერდი
       courseF_EOC_samples2022:
+        description: მალე თქვენს ბოლო პროექტს დაიწყებთ. სანამ დაიწყებთ, დაათვალიერეთ
+          პროექტების ნიმუშები.
+      courseF_EOC_samples2022_2023:
         description: მალე თქვენს ბოლო პროექტს დაიწყებთ. სანამ დაიწყებთ, დაათვალიერეთ
           პროექტების ნიმუშები.
       courseF_EOC_samples_2021:
@@ -3780,7 +3946,23 @@ ka-GE:
         - {}
         questions:
         - {}
+      courseF_events_predict_multi2022_2022_pilot_-2022-2_2023:
+        answers:
+        - {}
+        - {}
+        - {}
+        - {}
+        questions:
+        - {}
       courseF_groups_predict_multi_2022_pilot_-2022-2:
+        answers:
+        - {}
+        - {}
+        - {}
+        - {}
+        questions:
+        - {}
+      courseF_groups_predict_multi_2022_pilot_-2022-2_2023:
         answers:
         - {}
         - {}
@@ -3798,6 +3980,15 @@ ka-GE:
         questions:
         - {}
       courseF_labels_predict_multi2022_2022_pilot_-2022-2:
+        answers:
+        - {}
+        - {}
+        - {}
+        - {}
+        - {}
+        questions:
+        - {}
+      courseF_labels_predict_multi2022_2022_pilot_-2022-2_2023:
         answers:
         - {}
         - {}
@@ -3906,6 +4097,14 @@ ka-GE:
         - {}
         questions:
         - {}
+      courseF_multi_artist_variables3a_predict12022_2023:
+        answers:
+        - {}
+        - {}
+        - {}
+        - {}
+        questions:
+        - {}
       courseF_multi_artist_variables3a_predict1_2018:
         answers:
         - {}
@@ -3963,6 +4162,14 @@ ka-GE:
         questions:
         - {}
       courseF_multi_bee_for3_predict12022:
+        answers:
+        - {}
+        - {}
+        - {}
+        - {}
+        questions:
+        - {}
+      courseF_multi_bee_for3_predict12022_2023:
         answers:
         - {}
         - {}
@@ -4038,6 +4245,14 @@ ka-GE:
         - {}
         questions:
         - {}
+      courseF_sprites_predict_multi2022_2022_pilot_-2022-2_2023:
+        answers:
+        - {}
+        - {}
+        - {}
+        - {}
+        questions:
+        - {}
       courseF_variables2_predict2_multi2022_-2022-2:
         answers:
         - {}
@@ -4046,7 +4261,23 @@ ka-GE:
         - {}
         questions:
         - {}
+      courseF_variables2_predict2_multi2022_-2022-2_2023:
+        answers:
+        - {}
+        - {}
+        - {}
+        - {}
+        questions:
+        - {}
       courseF_variables2_predict_multi2022_2022_pilot_-2022-2:
+        answers:
+        - {}
+        - {}
+        - {}
+        - {}
+        questions:
+        - {}
+      courseF_variables2_predict_multi2022_2022_pilot_-2022-2_2023:
         answers:
         - {}
         - {}
@@ -4070,9 +4301,19 @@ ka-GE:
         - {}
         questions:
         - {}
+      courseF_variables_predict_multi2022_2022_pilot_-2022-2_2023:
+        answers:
+        - {}
+        - {}
+        - {}
+        - {}
+        questions:
+        - {}
       courseF_variables_stop:
         content1: მიუთითეთ აღწერა
       courseF_variables_stop2022_2022_pilot_-2022-2:
+        content1: მიუთითეთ აღწერა
+      courseF_variables_stop2022_2022_pilot_-2022-2_2023:
         content1: მიუთითეთ აღწერა
       coursee_prediction_artistfunction2:
         answers:
@@ -4083,6 +4324,14 @@ ka-GE:
         questions:
         - {}
       coursee_prediction_artistfunction22022:
+        answers:
+        - {}
+        - {}
+        - {}
+        - {}
+        questions:
+        - {}
+      coursee_prediction_artistfunction22022_2023:
         answers:
         - {}
         - {}
@@ -4122,6 +4371,312 @@ ka-GE:
         - {}
         questions:
         - {}
+      csc_animal_adaptations_L3_intro:
+        markdown: "#Make საკუთარი ქცევა!\n\n<br>\n\n# #Now თქვენ აკონტროლებთ ქცევებს!\n\n##
+          #Edit არსებული ქცევები მათი შეცვლისა და შეცვლის მიზნით. \n! [] (https://images.code.org/e2e63b1cd7302b6548591c65ad23a0ee-image-1680019477336.gif)\n\n##
+          #Make თქვენი საკუთარი ახალი ქცევა ნებისმიერი მოქმედებით, რომელიც გსურთ!\n\n!
+          [] (https://images.code.org/5345f53f3b33b2ad2bbf2bc86539cb96-image-1680019210225.gif)\n\n\n"
+      csc_animal_adaptations_choice:
+        description: აირჩიეთ ქვემოთ მოცემული სცენარებიდან და გამოიყენეთ თქვენი საკუთარი
+          შემოქმედებითი კოდი ახალი და უნიკალური ცხოველების ადაპტაციის მოდელირებისთვის!
+          თქვენ შეგიძლიათ აირჩიოთ მრავალი ვარიანტი და გააკეთოთ ერთზე მეტი!
+        display_name: დააკოპირეთ თქვენი საკუთარი ცხოველის ადაპტაცია!
+      csc_animal_adaptations_intro:
+        markdown: "#Survival ქცევები\n\n# #Behaviors ბუნებაში\nცხოველებმა შეიმუშავეს
+          <strong>ქცევები</strong> და მოქმედებები, რათა დაეხმარონ მათ გადარჩენაში.
+          <br> მაგალითად, ზოგიერთი ცხოველი**მიგრირება** ზამთარში, ზოგი კი ცდილობს
+          დარჩეს **ჯგუფებში**.\n\n<img style=\" float: left; width:50%; padding-top:10px\"
+          src=\"https://images.code.org/424ef84f41b7cabdf62e8cc509abe62c-image-1678322413909.jpg\"
+          style= \"width:60%\">\n<img style=\" float: left; width:46%; padding-top:10px\"
+          src=\"https://images.code.org/7c79e255d048e7ccf099eb61976bb90c-image-1678322295452.jpg\"
+          style= \"width:60%\">\n\n<div style=\"float: left\">\n<h2>ქცევები კომპიუტერულ</h2>\nმეცნიერებაში
+          კომპიუტერულ მეცნიერებაში, <strong></strong> ქცევები არის მოქმედებების ერთობლიობა,
+          რომელსაც სპრაიტი იმეორებს უსასრულოდ, როგორც ანიმაცია. <br>\nქცევის შიგნით
+          მოქმედებები გრძელდება მანამ, სანამ არ დაავალებს შეჩერებას. \n<br>\n<br>\n\n<img
+          src=\"https://images.code.org/56809209ca823047729cc01a033a7ac0-image-1679937249706.gif\"
+          style=\" float: left; width:70%; padding-top:10px\">\n</div>\n"
+      csc_animal_adaptations_predict:
+        answers:
+        - feedback: არასწორია. სპრაიტი გაიზრდება.
+          text: Sprite იქნება დაიძაბება.
+        - text: სპრაიტი გაიზრდება.
+        - feedback: არასწორია. სპრაიტი გაიზრდება.
+        - feedback: არასწორია. სპრაიტი გაიზრდება.
+        questions:
+        - {}
+      csc_animal_adaptations_shareout:
+        markdown: "# #Share თქვენი\n<img src=\"https://images.code.org/c480c5c42d9c02e154943f49bbed87ff-image-1675984438344.13.53
+          PM.png\" style= \"width:60%\">\n<div style= \"width: 60%\"> \n\nპროექტი**
+          ახლა, როდესაც თქვენ დაშიფრეთ გადარჩენის ადაპტაცია, დროა გააზიაროთ იგი! **\n\nთქვენი
+          თანაკლასელების პროექტების მე-9 საფეხურიდან დანახვისას გაითვალისწინეთ შემდეგი
+          კითხვები: >1.\n\nერთი და იგივე გარემოს სცენარი აირჩიე თუ განსხვავებული?
+          \n> 2. გამოიყენეს თუ არა მათ ერთი და იგივე კოდირების ბლოკი? \n> 3. როგორ
+          ფიქრობთ, გადაურჩება ცხოველი გარემოს ცვლილებას? რატომ ან რატომ არა? \n\n</div>\n\n"
+      csc_bookcover_extensions_choice_2023:
+        description: აირჩიეთ ქვემოთ მოცემული აქტივობებიდან, რომ დაამატოთ თქვენი წიგნის
+          ყდა! თქვენ შეგიძლიათ აირჩიოთ მრავალი ვარიანტი და გააკეთოთ ერთზე მეტი!
+        display_name: გააფართოვეთ თქვენი წიგნის ყდა!
+      csc_bookcovers_markdown_lesson_4:
+        markdown: "# #Share თქვენი წიგნის\n<img src=\"https://images.code.org/c480c5c42d9c02e154943f49bbed87ff-image-1675984438344.13.53
+          PM.png\" style= \"width:60%\">\n<div style= \"width: 60%\"> \n\nყდა**ახლა,
+          როდესაც თქვენ დაშიფრეთ თქვენი წიგნის ყდა, დროა გააზიაროთ იგი! **\n\nთქვენი
+          თანაკლასელების პროექტების დათვალიერებისას გაითვალისწინეთ შემდეგი კითხვები:
+          >1.\n\nრა სპრიტები და დიალოგი დაინახეთ თქვენი თანაკლასელების წიგნის ყდაზე?\n>
+          2. რა ხდება, როდესაც თქვენ დააჭირეთ გმირები?\n> 2. როგორ ჰგავდა მათი არჩევანი
+          შენსას? როგორ განსხვავდებოდნენ ისინი?\n> 3. გსურთ წაიკითხოთ წიგნი მისი გარეკანზე
+          დაყრდნობით?\n</div>\n\n"
+      csc_bookcovers_planning:
+        markdown: "# #Plan თქვენი ციფრული წიგნის ყდა\n\n<div>\n<img style=\" float:
+          left; width:25%; padding-top:10px\" src=\"https://images.code.org/08ece3f13c8f0f82343e302fb52dc45c-image-1676499630865.png\"
+          />\n\n<div style=\"float: left; width: 70%; padding-left:20px\">\n<h4>\n<strong>დროა
+          შეადგინოთ თქვენი გეგმა!</strong>\n</h4>\n\n>თქვენ უნდა შეიცავდეს:\n> - წიგნის\nსათაური>
+          - ავტორი\n> - ორი მთავარი პერსონაჟი და ერთი წინადადება საკუთარი თავის აღსაწერად
+          \n> - წიგნის ერთი-ორი წინადადების შეჯამება\n\n** აქ არის გეგმის შაბლონი,
+          რომელიც შეგიძლიათ დააკოპიროთ, რომ თავად გამოიყენოთ: **  <a href=\"https://docs.google.com/document/d/18cVgDdq77dbdk6gmQ1rGjHIr7pQk3I2Wb2WsAEeNH64/template/preview\"
+          target=\"_blank\"> წიგნის ყდის დაგეგმვის სახელმძღვანელო</a>.\n\n</div>\n"
+      csc_codingwithpoetry_markdown_lesson_4:
+        markdown: "# #Share თქვენი ლექსის\n<img src=\"https://images.code.org/c480c5c42d9c02e154943f49bbed87ff-image-1675984438344.13.53
+          PM.png\" style= \"width:60%\">\n<div style= \"width: 60%\"> \n\nაპლიკაცია**
+          ახლა, როდესაც თქვენ დაშიფრეთ თქვენი ლექსი, დროა გააზიაროთ იგი! **\n\nროგორც
+          ხედავთ, თქვენი თანაკლასელების პროექტი იფიქრეთ „ბზინვარებაზე“, „ზრდაზე“ და
+          „კითხვაზე“, რომელიც შეგიძლიათ დაწეროთ თქვენი პარტნიორისთვის:\n\n- „ბრწყინვალება“
+          არის ის, რაც მათ კარგად გააკეთეს\n- „ზრდა“ არის ის, რაც მათ შეუძლიათ შეცვალონ
+          ან გააუმჯობესონ\n- „კითხვა“ არის ის, რისი შესახებაც გსურთ მეტი იცოდეთ\n</div>\n\n**
+          მზად ხართ დასაწყებად? ** გამოიყენეთ <a href=\"https://docs.google.com/document/d/1b6w_lOnibUHyDLYCP3rAWED5iElGm6LOQAJwG-hlih0/template/preview\"
+          target=\"_blank\">ეს რესურსი თქვენს პარტნიორთან უკუკავშირის</a> გასაზიარებლად.\n\n"
+      csc_ecosystemes_foodchain_info:
+        markdown: "\n##**ყველა ეკოსისტემას აქვს _ დელიკატურად დაბალანსებული _ კვების
+          ჯაჭვი** ## #The საზღვაო ეკოსისტემის კვების ჯაჭვი\n: >## #1.\n\n\n\n<img
+          src=\"https://images.code.org/2270cbb4656875db210e9871883a7d45-image-1683677265473.jpg\"
+          style= \"width:80%\">\n<div style= \"width: 80%\"> \n\nმზე უზრუნველყოფს
+          ენერგიას წყალმცენარეებში ფოტოსინთეზისთვის.\n>## #2. წყალმცენარეებს თევზები
+          ჭამენ.\n>## #3. თევზებს იჭერენ და ჭამენ ადამიანები, რომლებიც იყენებენ სათევზაო
+          ნავებს ბადეებით. \n\n</div>\n\n\n##**თუ კვებით ჯაჭვში ერთი ორგანიზმი ძალიან
+          ბევრი ან ძალიან ცოტაა, ეს გავლენას ახდენს მთელ ეკოსისტემაზე.**\n"
+      csc_ecosystems_choice_freeplay_2023:
+        description: თითოეული ეს ეკოსისტემის სიმულაცია უნდა იყოს მორგებული. აირჩიეთ
+          ეკოსისტემა, გაუშვით სიმულაცია პრობლემის დასაკვირვებლად და შეცვალეთ კოდი
+          მის გამოსასწორებლად.
+        display_name: აირჩიეთ ეკოსისტემა!
+      csc_ecosystems_conditionals_overview:
+        markdown: "#Cause & Effect Conditionals \n\n</div>\n\n## შემდეგ თქვენ დაამატებთ
+          კოდს, რომ შეამოწმოთ რამდენი წყალმცენარეა წყალში <br>\n<img src=\"https://images.code.org/8be316d4e408466b4300c614712fd652-image-1684798211348.jpg\"
+          \ width=50% style=\"margin-right: 10px; float: right\">\n<br> <br>\n\n-
+          პირველი, კომპიუტერი ამოწმებს თუ არა მდგომარეობა მართალია ან ყალბი.\n\n-
+          თუ ეს სიმართლეა, მაშინ ის აწარმოებს ბლოკებს შიგნით.\n- თუ ეს ყალბია, მაშინ
+          ის არაფერს გააკეთებს.\n\n<br>\n<br>\n<br>\n\n## თუ წყალმცენარეები ძალიან
+          ბევრია, მაშინ მარჯანი ავადდება\n\n<br>\n\n<img src=\"https://images.code.org/4d8aaa9c6562e0ca0b3d92ff7aed1d03-image-1681847951794.png\"
+          \ width=20% style=\"margin-right: 10px; float: left\">\n<img src=\"https://images.code.org/941774921f367566bef36cb712cf2bfb-image-1681840836607.png\"
+          \ width=30% style=\" margin-right: 10px; float: left\">\n\n<br>\n<br>\n<br>\n<br>\n<br>\n<br>\n<br>\n<br>\n\n***\n\n\n\n##
+          თუ წყალმცენარეები ძალიან ცოტაა, მაშინ თევზი დატოვებს\n<img src=\"https://images.code.org/6869f418200edfb88190c0a1e4e5cd10-image-1681838202310.png\"
+          \ width=20% style=\"margin-right: 10px; float: left\">\n\n\n<img src=\"https://images.code.org/233178645539bc7966f55af47865096d-image-1681840833690.png\"
+          \ width=20% style=\" margin-right: 10px; float: left\">\n\n<br>\n<br>\n<br>\n<br>\n<br>\n<br>\n<br>\n<br>\n<br>\n\n\n***\n\n\n\n##
+          თუ საკმარისია წყალმცენარეები, მაშინ ეკოსისტემა ჯანმრთელია\n\n<img src=\"https://images.code.org/8bb9247c35d7d167611b02764beaeff3-image-1681838011797.png\"
+          \ width=20% style=\"margin-right: 30px; float: left\">\n<img src=\"https://images.code.org/b1ed2f5c135f9637fd7a9c5778db2b0c-image-1681840830929.png\"
+          \ width=30% style=\"margin-left: 10px;float: left\">\n<br>\n<br>\n<br>\n<br>\n\n"
+      csc_ecosystems_matching_cfu:
+        answers:
+        - text: "! [] (https://images.code.org/284e3b6e09f5d58052a8840e756644c5-image-1683752491112.png)"
+        - text: "! [] (https://images.code.org/d466f0912cd0cadb3d655263c71c072f-image-1683752857648.jpg)"
+        - text: "! [] (https://images.code.org/de2ab3c63bc2cf7cb319be86d5dcdec0-image-1683752570051.png)"
+        markdown: |+
+          ## გადახედეთ თევზაობის სამ მდგრად პრაქტიკას,
+
+          გადაიტანეთ კოდი შესაბამის სურათზე.
+
+        questions:
+        - text: შექმენით სათევზაო ზონა ნავებისთვის! [] (https://images.code.org/5f5e0640a82242d632db10b872280e18-image-1683753001613.gif)
+        - text: |-
+            დაიწყეთ თევზაობის სეზონი და თევზაობის გარეშე სეზონი
+            ! [] (https://images.code.org/becad47fd19a4d0e938a0cd10c404e41-image-1683838684289.gif)
+        - text: დააყენეთ თევზაობის ლიმიტები! [] (https://images.code.org/f8bbd98ff6199af5d3ad23d64f39629d-image-1683753402925.gif)
+        title: შეადარეთ კოდი სურათს
+      csc_ecosystems_matching_conditionals:
+        answers:
+        - text: "! [] (https://images.code.org/db1db479bec9b40c6e0574ade394d32b-image-1680118613718.36.41
+            PM.png)"
+        - text: "! [] (https://images.code.org/7c9171ab2ee2e833e5ff60d5519d8728-image-1680118617438.31.00
+            PM.png)"
+        - text: "! [] (https://images.code.org/412968ba617ef19d2049e0e63d271937-image-1680118620636.30.50
+            PM.png)"
+        markdown: |
+          ## შეხედეთ სამ ეკოსისტემას
+
+          ერთი ეკოსისტემა დაბალანსებულია, ხოლო დანარჩენი ორი დისბალანსირებულია სხვადასხვა გზით. გადაათრიეთ კოდი შესაბამის სურათზე.
+        questions:
+        - text: ძალიან ცოტა წყალმცენარეები თევზს ტოვებს.! [] (https://images.code.org/c0a28473307b7e9b0e827532d2a6ddda-image-1680212227032.png)
+        - text: |-
+            ძალიან ბევრი წყალმცენარეები ხდის მარჯნის ავადმყოფს. <br>
+            ! [] (https://images.code.org/1230fd96832b692b0c8ab88e77957f33-image-1680212254888.png)
+        - text: წყალმცენარეების სწორი რაოდენობა საშუალებას აძლევს ავადმყოფ მარჯანს
+            განკურნოს და თევზსაც ჯანმრთელად ინარჩუნებს.! [] (https://images.code.org/3dd061538a7a73285aa0916fdde34e77-image-1680212284869.png)
+        title: შეადარეთ კოდი სურათს
+      csc_ecosystems_matching_events:
+        answers:
+        - text: "! [] (https://images.code.org/bf70d0664e68690f2359a48365e50ccc-image-1680556679495.16.33
+            PM.png)"
+        - text: "! [] (https://images.code.org/fe4d2803162186a8e53ec0027f27a206-image-1680556683660.36.04
+            PM.png)"
+        markdown: |+
+          შეხედეთ რა ხდება, როდესაც sprites შეეხოთ ორივე ანიმაცია. შემდეგ გადაიტანეთ კოდის თითოეული სურათი მის შესაბამის სურათზე.
+
+
+        questions:
+        - text: ნავი იჭერს თევზს.! [] (https://images.code.org/bcdefefdd1787330e3ad72558b5b492d-image-1680556053866.gif)
+        - text: თევზი ჭამს წყალმცენარეებს.! [] (https://images.code.org/73febc58a3d23fbf4c66e693abec9e3d-image-1680556608027.gif)
+        title: შეადარეთ კოდი ანიმაციას
+      csc_ecosystems_overfishing_solution2_overview:
+        markdown: "> #Sustainable თევზაობის პრაქტიკა #2:\n>># #Create თევზაობის სეზონი
+          <img src=\"https://images.code.org/123dd5c82e4c03dcbc32b775fd16ec60-image-1681937158113.png\"
+          \ width=400 style=\"margin-right: 30px; float: left\">\n** დააწესეთ შეზღუდვები,
+          როდესაც ადამიანებს შეუძლიათ თევზის დაჭერა. როდესაც თევზაობის სეზონი არ არის,
+          ეკოსისტემას აქვს დრო გამოჯანმრთელება.** \n<br>\n\n#Save ჩვენი ზღვები! \n<img
+          src=\"https://images.code.org/f3f55eddff9891464c8fb5a5405c31c3-image-1681781301257.png\"
+          width=250 style=\"margin-left: 30px; margin-bottom: 30px; float: right\">\n<img
+          src=\"https://images.code.org/cbccfc42b7e1fe329ac7c9c37dfcb6b5-image-1681781296669.png\"
+          width=250 style=\"margin-left: 30px; margin-bottom: 30px; float: right\">\n\n</div>\n\n###
+          გადაჭარბებული თევზაობა არის პრობლემა, რომელსაც შეუძლია ზიანი მიაყენოს საზღვაო
+          ცხოვრების ეკოსისტემებს და მათ, ვინც მათ ეყრდნობა. მნიშვნელოვანია მდგრადი
+          თევზაობის პრაქტიკა, რათა დაეხმაროს ამ ეკოსისტემების დაცვას და უზრუნველყოს
+          თევზის პოპულაციის ჯანმრთელობა.\n\n\n\n<br>\n<br>\n<br>\n"
+      csc_ecosystems_overfishing_solution3_overview:
+        markdown: "> #Sustainable თევზაობის პრაქტიკა #3:\n>># #Set თევზაობის შეზღუდვები
+          <img src=\"https://images.code.org/58d4ca52deba39a990c3165ba16e284b-image-1681747630352.png\"
+          \ width=300 style=\"margin-right: 30px; float: left\">\n**მეცნიერებს შეუძლიათ
+          გაარკვიონ რამდენი თევზის დაჭერა შეიძლება ოკეანეში ზიანის მიყენების გარეშე.
+          მაშინ მეთევზეებმა იციან მხოლოდ ამდენი თევზის დაჭერა.** \n<br>\n<br>\n<br>\n\n#Save
+          ჩვენი ზღვები! \n<img src=\"https://images.code.org/35e557d27c4bdb5f546da560716dc10b-image-1681756387784.jpg\"
+          width=400 style=\"margin-left: 30px; margin-bottom: 30px; float: right\">\n</div>\n\n###
+          ერთად მუშაობით, ჩვენ შეგვიძლია დავეხმაროთ ჩვენი ოკეანეების სიცოცხლით სავსე
+          თაობებს მომავალი თაობებისთვის!\n\n\n\n<br>\n<br>\n<br>\n\n"
+      csc_ecosystems_overfishing_solutions_overview:
+        markdown: "#Save ჩვენი ზღვები! \n<img src=\"https://images.code.org/d4267a1de975b8ea46468f74187eb95c-image-1681756621010.jpg\"
+          width=400 style=\"margin-left: 30px; margin-bottom: 30px; float: right\">\n</div>\n\n###
+          ოკეანეში ბევრი თევზია, მაგრამ ზოგჯერ ადამიანები ძალიან ბევრ თევზს იჭერენ
+          და ეს შეიძლება ცუდი იყოს ეკოსისტემისთვის. შემდეგ დონეზე თქვენ დააკოდირებთ**სამი
+          განსხვავებული მდგრადი თევზაობის პრაქტიკა**, რათა დავიცვათ ჩვენი ოკეანის
+          ეკოსისტემები.\n\n<br>\n\n## #To წაიკითხეთ მეტი ჩვენი ოკეანეების მდგრადი
+          გადაწყვეტილებების შესახებ: <a href=\"https://www.seafoodwatch.org/seafood-basics/sustainable-solutions/avoid-overfishing\"
+          target=\"_blank\">დააწკაპუნეთ</a>\n<br>\n<br>\n\nაქ> #Sustainable თევზაობა
+          პრაქტიკა #1:\n>> # #Fishing <img src=\"https://images.code.org/c33e46309c5335dc557c67c34310e723-image-1681511054034.png\"
+          \ width=300 style=\"margin-right: 30px; float: left\">\nზონები** სათევზაო
+          ნავებს შეუძლიათ თევზაობა მხოლოდ დანიშნულ ადგილებში. ზოგიერთი ტერიტორია შეზღუდულია
+          სათევზაო ნავებისთვის, რათა ეკოსისტემამ შეძლოს აღდგენა.** \n<br>\n<br>\n\n\n"
+      csc_ecosystems_planning:
+        markdown: "# #Share თქვენი ეკოსისტემის სიმულაცია!\n<img src=\"https://images.code.org/c480c5c42d9c02e154943f49bbed87ff-image-1675984438344.13.53
+          PM.png\" style= \"width:50%\">\n<div style= \"width: 60%\"> \n\n###**ეკოლოგები!
+          დროა გააზიაროთ თქვენი კვლევა! **\n\n## #Explain თქვენ მიერ გაკეთებული შემდეგი
+          დაკვირვებები:\n\n& gt1. ახსენით კვების ჯაჭვი თქვენს ეკოსისტემაში და როგორ
+          დაშიფრეთ იგი.\n> 2. იყო თუ არა ძალიან ბევრი ან ძალიან ცოტა ორგანიზმი?\n>
+          3. ახსენით სიმულაციაში განხორციელებული ცვლილებები. \n> 4. რა შეამჩნიეთ მას
+          შემდეგ, რაც შეცვალეთ მნიშვნელობები?\n</div>\n\n<div style=\"background-color:
+          #a6e3e8; border-radius: 10px; color: #000000; width: 95%; padding: 0.5px
+          20px 1px 20px;\">\n\n<p style=\"line-height: 1.5; margin-left: 10px; margin-right:
+          10px; margin-top: 20px; margin-bottom: 20px; font-size: 18px; \">\n\n###**მზად
+          ხართ მეტი კოდირებისთვის? ** \nსცადეთ code.org— ის [ექსპრეს კურსი] (https://studio.code.org/s/express-2022),
+          რომ გაიგოთ მეტი კომპიუტერული მეცნიერება საკუთარი ტემპით.   \n<br>\n</p></div>\n"
+      csc_mappinglandmarks_markdown_lesson_2:
+        markdown: |+
+          # #Plan თქვენი ღირშესანიშნაობების რუკა
+          <div>
+          <img style=" float: left; width:20%; padding-top:10px" src="https://images.code.org/08ece3f13c8f0f82343e302fb52dc45c-image-1676499630865.png" />
+
+          <div style="float: left; width: 70%; padding-left:20px">
+          <h4>
+          <strong>დროა დაგეგმოთ საკუთარი ღირშესანიშნაობების რუკა.</strong>
+          </h4>
+
+          თქვენ შეგიძლიათ შექმნათ თქვენი კლასის, სკოლის ან ქალაქის რუკა. იქნებ აირჩიოთ სახელმწიფო, რეგიონალური ან ეროვნული ღირსშესანიშნაობები. ან შეგიძლიათ აირჩიოთ რუკის შექმნა კლასში შესწავლილი ტერიტორიის მიხედვით.
+
+          თქვენი რუქის დაგეგმვისას იფიქრეთ იმ ფონზე, სპრიტებზე და მეტყველებაზე, რომლის გამოყენებაც გსურთ, რათა ასწავლოთ სხვა ადამიანებს თქვენს მიერ არჩეული ღირსშესანიშნაობების შესახებ.
+
+          ** გჭირდებათ დახმარება დასაწყებად? ** გამოიყენეთ <a href="https://docs.google.com/document/d/1t_-cd-f6EhhUbblu8nSGRajStY9FVwLnKn1Bj90GL3Q/template/preview" target="_blank">ეს რესურსი თქვენი სამუშაოს</a> დასაგეგმად.
+
+
+      csc_mappinglandmarks_markdown_lesson_4:
+        markdown: "# #Share თქვენი ადგილობრივი ღირშესანიშნაობების რუკა\n\nახლა, როდესაც
+          თქვენ დაშიფრეთ თქვენი რუკა, დროა გააზიაროთ იგი! პირველი დაასრულეთ მოკლე
+          ასახვა თქვენს პროექტზე: \n\n> 1. ახსენით თქვენი პროექტის თქვენი საყვარელი
+          ნაწილი.\n> 2. რა იყო კოდის სასარგებლო ბლოკი თქვენს პროექტში?\n> 3. ახსენით
+          ერთი ხარვეზი ან გამოწვევა, რომლის წინაშეც აღმოჩნდით თქვენი პროექტის შექმნისას.\n>
+          4. როგორ გამოასწორეთ შეცდომა ან გადალახეთ გამოწვევა?\n> 5. რა ცვლილებების
+          შეტანა გსურთ თქვენი პროექტის გასაუმჯობესებლად?\n\nროდესაც თქვენს ნამუშევარს
+          წარუდგენთ თანაკლასელებს, დარწმუნდით, რომ აუხსენით როგორ მუშაობს თქვენი კოდი,
+          რა დიზაინის არჩევანი გააკეთეთ და რა გამოწვევების წინაშე აღმოჩნდით.\n\n\n\n"
+      csc_starquilts_markdown_lesson_1:
+        markdown: |+
+          # #Plan შენი ვარსკვლავის ქვილთი
+
+          <div>
+          <img style=" float: left; width:25%; padding-top:10px" src="https://images.code.org/d5e1eedfbe978ba6feebd3f89da0a667-image-1679522801245.png" />
+
+          <div style="float: left; width: 70%; padding-left:20px">
+          <h4>
+          <strong>დროა დაგეგმოთ თქვენი ვარსკვლავის ქვილთი.</strong>
+          </h4>
+
+          > პირველ რიგში შეარჩიეთ ოთხი განსხვავებული ფერი და შეავსეთ თქვენი Star Quilt. შემდეგ თქვენ გააკეთებთ კიდევ რამდენიმე აქტივობას შაბლონებით.
+
+          ** მზად ხართ დასაწყებად? ** გამოიყენეთ <a href="https://docs.google.com/document/d/1c__530oWLDH-mX0kSxLMStSz-5Lt3cKUm5K3bTV7Uvo/template/preview" target="_blank">ეს რესურსი</a>.
+
+
+          </div>
+
+
+      csc_timecapsule_choice_lesson_3:
+        description: აირჩიეთ ქვემოთ მოცემული აქტივობებიდან, რათა განაახლოთ თქვენი
+          მეხსიერება, თუ როგორ დაამატოთ კოდი თქვენს დროის კაფსულის ლექსში! თქვენ შეგიძლიათ
+          აირჩიოთ მრავალი ვარიანტი და გააკეთოთ ერთზე მეტი!
+        display_name: გადახედეთ თქვენს კოდირების უნარებს!
+      csc_timecapsule_choice_lesson_3_ -l3:
+        description: აირჩიეთ ქვემოთ მოცემული აქტივობებიდან, რათა განაახლოთ თქვენი
+          მეხსიერება, თუ როგორ დაამატოთ კოდი თქვენს დროის კაფსულის ლექსში! თქვენ შეგიძლიათ
+          აირჩიოთ მრავალი ვარიანტი და გააკეთოთ ერთზე მეტი!
+        display_name: გადახედეთ თქვენს კოდირების უნარებს!
+      csc_timecapsule_info_2023:
+        content1: მიუთითეთ აღწერა
+        markdown: "# #Time კაფსულები\n\n<img src=\"https://images.code.org/846b0e2d7a84392a70f432fdce00cd29-image-1676501071993.png\"
+          style= \"float:left; width: 25%; padding-right:30px\"/>\n\n<div style= \"width:
+          70%\"> \n<strong>დროის კაფსულა საგანძურის ყუთს ჰგავს</strong>, მაგრამ იმის
+          ნაცვლად, რომ სათამაშოები და კანფეტები შიგნით შეინახოთ, ის ინახავს სპეციალურ
+          ნივთებს, რომლებიც მოგვითხრობენ იმაზე, თუ როგორი იყო ცხოვრება ახლა. შემდეგ,
+          იგი მრავალი წლის განმავლობაში იდება უსაფრთხო ადგილას, მაგალითად მიწაში დაკრძალული
+          ან ბიბლიოთეკის ძლიერ ყუთში. \n<br>\n<br>\n<strong>როდესაც დრო დადგება, ვიღაც
+          გახსნის ყუთს</strong> და დაინახავს ყველა განსაკუთრებულ ნივთს, რომელიც შიგნით
+          არის ჩასმული და მათ ყველაფერი იციან, როგორი იყო ცხოვრება დაკრძალვისას. \n<br>\n<br>\n<strong>ციფრული
+          დროის კაფსულის ლექსი </strong>მსგავსია, მაგრამ იმის ნაცვლად, რომ ნივთები
+          ყუთში შეინახოს, ის ინახავს სურათებს, ვიდეოებს და შეტყობინებებს, რომლებიც
+          ინახება კომპიუტერში ან ინტერნეტში.\n</div>\n\n"
+      csc_timecapsule_markdown_lesson_2:
+        markdown: "# #Plan თქვენი დროის კაფსულა\n\n<div>\n<img style=\" float: left;
+          width:25%; padding-top:10px\" src=\"https://images.code.org/08ece3f13c8f0f82343e302fb52dc45c-image-1676499630865.png\"
+          />\n\n<div style=\"float: left; width: 70%; padding-left:20px\">\n<h4>\n<strong>დროა
+          დაგეგმოთ საკუთარი დროის კაფსულის ლექსი.</strong>\n</h4>\n\n>თქვენ უნდა შეიცავდეს:\n>
+          - რისი გაკეთებაც მოგწონთ \n> - რა არის თქვენთვის მნიშვნელოვანი\n> - რა ხდება
+          ამჟამად თქვენს თემში \n> - მსოფლიოს რამდენიმე მიმდინარე მოვლენა\n\n** გჭირდებათ
+          დახმარება თქვენი ლექსის დაწყებაში? ** გამოიყენეთ <a href=\"https://docs.google.com/document/d/1fahr11zX92NW-rLdyZBqrNK2VqgOGtCACkcT87M_luU/template/preview\"
+          target=\"_blank\">ეს რესურსი</a>.\n\n** უბრალოდ გჭირდებათ შთაგონება? **
+          გამოიყენეთ <a href=\"https://docs.google.com/document/d/1-aPA3uJIKJAuQ_2Gtck1Ma79eCFY88ZC8YzegQIckG4/template/preview\"
+          target=\"_blank\">ეს რესურსი</a>.\n\n</div>\n"
+      csc_timecapsule_markdown_lesson_2_poetry:
+        markdown: "# #Plan შენი ლექსი\n\n<div>\n<img style=\" float: left; width:25%;
+          padding-top:10px\" src=\"https://images.code.org/08ece3f13c8f0f82343e302fb52dc45c-image-1676499630865.png\"
+          />\n\n<div style=\"float: left; width: 70%; padding-left:20px\">\n<h4>\n<strong>დროა
+          დაგეგმოთ საკუთარი ლექსი.</strong>\n</h4>\n\n> თქვენ უნდა შეიცავდეს:\n> -
+          ის, რისი კეთებაც გიყვარს.\n> - შენთვის მნიშვნელოვანი ადამიანი.\n> - ზოგიერთი
+          თქვენი საყვარელი რამ. \n\n** მზად ხართ დაგეგმვის დასაწყებად? ** გამოიყენეთ
+          <a href=\"https://docs.google.com/document/d/1b6w_lOnibUHyDLYCP3rAWED5iElGm6LOQAJwG-hlih0/template/preview\"
+          target=\"_blank\">ეს რესურსი</a>.\n\n** ეძებთ თემას? ** გამოიყენეთ <a href=\"https://docs.google.com/document/d/1V-DaWOIUk0xT7NYTzx3AEt4my-jc-Hx4vy21Kl4SPoE/template/preview\"
+          target=\"_blank\">ეს რესურსი</a>.\n\n</div>\n"
+      csc_timecapsule_markdown_lesson_4:
+        markdown: "# #Share თქვენი დროის\n<img src=\"https://images.code.org/c480c5c42d9c02e154943f49bbed87ff-image-1675984438344.13.53
+          PM.png\" style= \"width:60%\">\n<div style= \"width: 60%\"> \n\nკაფსულა**
+          ახლა, როდესაც თქვენ დაშიფრეთ თქვენი დროის კაფსულის ლექსი, დროა გააზიაროთ
+          იგი! **\n\nროგორც ხედავთ თქვენი თანაკლასელების პროექტები გაითვალისწინეთ
+          შემდეგი კითხვები: >1.\n\nრა სურათები და ხმები ნახეთ თქვენი თანაკლასელების
+          დროის კაფსულებში?\n> 2. რით განსხვავდებოდა მათი ისტორიები თქვენისაგან?\n>
+          3. როგორ ჰგავდა მათი ისტორიები შენს ისტორიებს?\n> 4. როგორ გაგრძნობინეს
+          მათმა სურათებმა?\n</div>\n\n"
       csd-post-survey-2017-q11_2018:
         answers:
         - {}
@@ -7232,17 +7787,23 @@ ka-GE:
         content1: მიუთითეთ აღწერა
       csf_be_a_super_digital_citizen2022:
         content1: მიუთითეთ აღწერა
+      csf_be_a_super_digital_citizen2022_2023:
+        content1: მიუთითეთ აღწერა
       csf_be_a_super_digital_citizen_2021:
         content1: მიუთითეთ აღწერა
       csf_password_power-up:
         content1: მიუთითეთ აღწერა
       csf_password_power-up2022:
         content1: მიუთითეთ აღწერა
+      csf_password_power-up2022_2023:
+        content1: მიუთითეთ აღწერა
       csf_password_power-up_2021:
         content1: მიუთითეთ აღწერა
       csf_putting_a_stop_to_online_meanness:
         content1: მიუთითეთ აღწერა
       csf_putting_a_stop_to_online_meanness2022:
+        content1: მიუთითეთ აღწერა
+      csf_putting_a_stop_to_online_meanness2022_2023:
         content1: მიუთითეთ აღწერა
       csf_putting_a_stop_to_online_meanness_2021:
         content1: მიუთითეთ აღწერა
@@ -8747,6 +9308,9 @@ ka-GE:
       express_EOC_examples2022:
         description: მალე თქვენს ბოლო პროექტს დაიწყებთ. სანამ დაიწყებთ, დაათვალიერეთ
           პროექტების ნიმუშები.
+      express_EOC_examples2022_2023:
+        description: მალე თქვენს ბოლო პროექტს დაიწყებთ. სანამ დაიწყებთ, დაათვალიერეთ
+          პროექტების ნიმუშები.
       express_EOC_examples_2021:
         description: მალე თქვენს ბოლო პროექტს დაიწყებთ. სანამ დაიწყებთ, დაათვალიერეთ
           პროექტების ნიმუშები.
@@ -8771,6 +9335,14 @@ ka-GE:
         questions:
         - {}
       grade2_multi_collector_A_predict12022:
+        answers:
+        - {}
+        - {}
+        - {}
+        - {}
+        questions:
+        - {}
+      grade2_multi_collector_A_predict12022_2023:
         answers:
         - {}
         - {}

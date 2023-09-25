@@ -77,6 +77,60 @@
         "define/express/2022": {
           "word": "Faamatala"
         },
+        "code/csc-adaptations/2023": {
+          "word": "Faailo"
+        },
+        "behavior/csc-adaptations/2023": {
+          "word": "Amio"
+        },
+        "code/csc-ecosystems/2023": {
+          "word": "Faailo"
+        },
+        "variable/csc-ecosystems/2023": {
+          "word": "Fuainumera lasi "
+        },
+        "code/csc-mappinglandmarks/2023": {
+          "word": "Faailo"
+        },
+        "map/csc-mappinglandmarks/2023": {
+          "word": "Faafanua"
+        },
+        "code/poetry/2023": {
+          "word": "Faailo"
+        },
+        "data/coursec/2023": {
+          "word": "Faamaumauga"
+        },
+        "behavior/coursee/2023": {
+          "word": "Amio"
+        },
+        "function/coursee/2023": {
+          "word": "Faiva"
+        },
+        "define/coursee/2023": {
+          "word": "Faamatala"
+        },
+        "behavior/coursef/2023": {
+          "word": "Amio"
+        },
+        "variable/coursef/2023": {
+          "word": "Fuainumera lasi "
+        },
+        "define/coursef/2023": {
+          "word": "Faamatala"
+        },
+        "behavior/express/2023": {
+          "word": "Amio"
+        },
+        "function/express/2023": {
+          "word": "Faiva"
+        },
+        "variable/express/2023": {
+          "word": "Fuainumera lasi "
+        },
+        "define/express/2023": {
+          "word": "Faamatala"
+        },
         "loops/aquatic/unversioned": {
           "word": "taamiloga"
         },

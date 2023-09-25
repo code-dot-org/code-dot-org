@@ -64,6 +64,10 @@ mr:
         ai-ethics-2021:
           description_audience: इयत्ता 6-12
           title: आमची एआय आचारसंहिता
+        ai-ethics-2023:
+          lessons:
+            lesson-1:
+              name: आमची एआय आचारसंहिता
         ai-temp:
           title: AI कसे कार्य करते
         aiml-2021:

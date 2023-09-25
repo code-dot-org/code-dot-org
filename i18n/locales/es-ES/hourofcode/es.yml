@@ -5,10 +5,10 @@ es:
   language: Español (España)
   front_title: Únete al mayor evento educativo de la historia, %{campaign_date}
   coming_soon: Próximamente
-  campaign_date_start_short: 5 de diciembre
+  campaign_date_start_short: Dic. 7
   campaign_date_start_long: 7 de diciembre
-  campaign_date_short: Del 5 al 11 de diciembre
-  campaign_date_full: Del 5 al 11 de diciembre
+  campaign_date_short: Dic. 7-13
+  campaign_date_full: Del 7 al 13 de diciembre
   campaign_date_year: '2022'
   campaign_date_full_year: Del 5 al 11 de diciembre de 2022
   nonus_campaign_date_start_short: '1 oct. '
@@ -197,6 +197,16 @@ es:
   grade_level_label_elementary: Escuela primaria
   grade_level_label_middle: Escuela secundaria
   grade_level_label_high: Escuela secundaria
+  curricula_title_elementary: Currículos de la escuela primaria
+  curricula_desc_elementary: Explore los divertidos cursos y actividades gratuitos
+    que lo invitan a explorar las ciencias de la computación con sus alumnos de primaria.
+  curricula_title_middle: Currículos de la escuela secundaria
+  curricula_desc_middle: Explore las atractivas ofertas que le permiten a usted y
+    a sus estudiantes de secundaria explorar la informática juntos.
+  curricula_title_high: Currículos de la escuela secundaria
+  curricula_desc_high: Explore los atractivos cursos y actividades que lo invitan
+    a usted y a sus estudiantes de secundaria a profundizar en las ciencias de la
+    computación.
   students_label: Estudiantes
   teachers_label: Profesores
   teacher_label_csf: Profesor de fundamentos de la informática
@@ -206,6 +216,7 @@ es:
   teacher_label_csa: AP® Computer Science A Teacher
   required_materials: 'Materiales obligatorios:'
   optional_materials: 'Materiales opcionales:'
+  call_to_action_explore_roles: Explore los puestos vacantes
   call_to_action_learn_more: Conoce más
   call_to_action_watch_now: Ver ahora
   call_to_action_try_activity: Prueba la actividad
@@ -223,6 +234,15 @@ es:
   call_to_action_explore_choice_level: Explora el nivel de elección del ejemplo
   call_to_action_explore_collection: Explora la colección
   call_to_action_explore_unplugged_lesson: Explora las lecciones desconectadas
+  call_to_action_explore_csf: Explore los fundamentos de CS
+  call_to_action_explore_csd: Explore CS Discoveries
+  call_to_action_explore_csp: Explore los principios de CS
+  call_to_action_explore_csc: Explore CS Connections
+  call_to_action_explore_csa: Explore AP® Computer Science A
+  call_to_action_explore_csa_short: Explore AP® CSA
+  call_to_action_explore_maker: Explore los planes de estudio de Maker
+  call_to_action_explore_hoc: Explora los tutoriales de La Hora del Código
+  call_to_action_explore_hoc_short: Explora La hora del código
   call_to_action_try_app_lab: Prueba el laboratorio de aplicaciones
   call_to_action_view_lesson_plan: Ver plan de lección
   call_to_action_self_paced_pl: Comience el aprendizaje profesional a su propio ritmo
@@ -246,6 +266,7 @@ es:
   call_to_action_resources_tools: Pruebe las herramientas de programación
   call_to_action_sign_up_free: Regístrate gratis
   call_to_action_explore_ai_resources: Explore los recursos de IA
+  call_to_action_explore_ai_curricula: Explore los planes de estudio de IA
   call_to_action_explore_curriculum_catalog: Explore el catálogo curricular
   call_to_action_see_full_curriculum_catalog: Ver el catálogo curricular completo
   call_to_action_find_self_paced_modules: Encuentre módulos autodidácticos
@@ -267,6 +288,7 @@ es:
   call_to_action_notify_available: Notificarme cuando esté disponible
   call_to_action_register_early_access: Regístrese para obtener acceso anticipado
   call_to_action_open_positions: Ver puestos vacantes
+  call_to_action_get_guide: Obtenga la guía
   aria_label_call_to_action_afe: Más información sobre Amazon Future Engineer
   aria_label_call_to_action_teaching_csf: Comience el programa de aprendizaje profesional
     para la enseñanza de los fundamentos de la informática
@@ -378,6 +400,8 @@ es:
   curriculum_name_csa: AP® Ciencias de la Computación A
   curriculum_name_csc_02: Cualquier módulo de conexiones CS
   curriculum_name_ai: IA y aprendizaje automático
+  curriculum_name_artificial_intelligence: Inteligencia artificial (IA)
+  curriculum_name_maker: Creador
   curriculum_name_maker_cp: Creación de aplicaciones con dispositivos (Circuit Playground)
   curriculum_name_maker_microbit: Creación de aplicaciones con dispositivos (micro:bit)
   curriculum_name_creating_apps_with_devices: Creación de aplicaciones con dispositivos
@@ -388,6 +412,8 @@ es:
   curriculum_name_interactive_animations_games: Animaciones interactivas y juegos
   curriculum_name_design_process: El proceso de diseño
   curriculum_name_data_society: Datos y sociedad
+  curriculum_desc_csf: Conjunto gratuito de planes de estudio de primaria que presenta
+    a los estudiantes los conceptos fundamentales de la informática.
   curriculum_desc_csf_express: "¡Aprende a crear programas de ordenador, desarrolla
     habilidades para resolver problemas y resuelve desafíos divertidos! Crea juegos
     y proyectos creativos para compartir con amigos, familiares y profesores."
@@ -438,6 +464,21 @@ es:
     dispositivos físicos en la informática. Desarrolla programas que utilicen entradas
     y salidas de hardware. Hay una versión de esta unidad tanto para el micro:bit
     como para el Circuit Playground.
+  curriculum_desc_csa: Introduzca a los estudiantes en la ingeniería de software y
+    el diseño orientado a objetos mientras aprenden el lenguaje de programación Java
+    en este plan de estudios gratuito de AP® Computer Science A (AP® CSA).
+  curriculum_desc_maker: Maker Education lleva las STEM (Ciencia, Tecnología, Ingeniería,
+    Matemáticas) un paso más allá al fomentar la experiencia práctica y la colaboración
+    en el aula para ayudar a enseñar la resolución de problemas y el pensamiento crítico.
+  curriculum_desc_maker_short: Maker Education invita a la experiencia práctica y
+    la colaboración al aula para ayudar a enseñar la resolución de problemas y el
+    pensamiento crítico.
+  curriculum_desc_csd: Curso flexible, que permite que cada unidad se imparta sola
+    o combinada. Introduce a los estudiantes a crear sitios web, aplicaciones, animaciones,
+    juegos y sistemas informáticos físicos.
+  curriculum_desc_csp: Curso introductorio gratuito para la escuela secundaria, respaldado
+    por AP® CSP, que presenta a los estudiantes los conceptos fundamentales de la
+    informática.
   collection_hardware: Enfoque en Hardware
   collection_hardware_desc: Capacita a los estudiantes para usar datos y dispositivos
     físicos para resolver problemas.
@@ -471,6 +512,7 @@ es:
   module_label_professional_learning: 'Aprendizaje profesional:'
   module_label_languages: 'Idiomas compatibles:'
   module_label_accessibility_features: 'Accesibilidad:'
+  module_label_accessibility_features_full: 'Características de accesibilidad:'
   module_label_educator_tool: Herramienta para educadores
   module_label_educator_course: Curso para educadores
   module_label_student_tool: Herramienta para estudiantes
@@ -478,6 +520,7 @@ es:
   module_label_student_content_resources: Contenido y recursos
   module_label_new: Nuevo
   module_label_coming_soon: Próximamente
+  module_label_available_now: Disponible ahora
   module_label_video_series: Serie de vídeos
   module_label_self_paced: Módulo autoguiado
   module_ages_5_10: 5-10
@@ -488,6 +531,8 @@ es:
   module_grade_2_5: 2-5
   module_grade_3_5: 3-5
   module_grade_3_8: 3-8
+  module_grade_k_12: K-12
+  module_grade_3_12: 3-12
   module_grade_6_12: 6-12
   module_grade_6_10: 6-10
   module_grade_9_12: 9-12
@@ -502,7 +547,9 @@ es:
   module_grade_9_12_teachers: 9-12 maestros
   module_level_beginner: Principiante
   module_level_intermediate: Intermedio
+  module_level_advanced: Avanzado
   module_duration_45_mins: 45 minutos
+  module_duration_2_weeks: 2 semanas
   module_duration_1_hr: 1 hora
   module_duration_2_hrs: 2 horas
   module_duration_3_hrs: 3 horas
@@ -518,6 +565,7 @@ es:
   module_duration_school_year: Año escolar
   module_duration_month_quarter: Mes o trimestre
   module_duration_month_semester_year: Mes, semestre o año
+  module_duration_varies: Varía
   module_prerequisites_none: Ninguno
   module_prerequisites_maker_cp: Acceso a un patio de recreo del circuito
   module_prerequisites_maker_microbit: Acceso a un micro:bit
@@ -587,6 +635,8 @@ es:
   heading_java_lab: Java Lab
   heading_objects_first: Los objetos primero
   heading_these_lessons_will: 'Estas lecciones permitirán:'
+  heading_explore_curriculum_catalog: Explore todos nuestros cursos en el catálogo
+    de planes de estudio
   professional_learning_section_desc: Recibe el apoyo que necesitas mientras te preparas
     para enseñar. A los profesores les encanta, ¡y más del 90% lo califica como el
     mejor desarrollo profesional de la historia!
@@ -864,6 +914,12 @@ es:
     grandes (como ChatGPT) y la IA generativa. Descubra cómo funcionan estas nuevas
     tecnologías directamente de la mano de los expertos: Mira Murati, directora de
     tecnología de OpenAI, y Cristóbal Valenzuela, director ejecutivo de RunwayML.'
+  ai_pl_101_llm_slides_title: Indicaciones de modelos lingüísticos de gran tamaño
+    para educadores
+  ai_pl_101_llm_slides_desc: Herramientas para obtener el mejor resultado posible
+    de LLM como ChatGPT, desde principiantes hasta avanzados. Incluye consejos de
+    inicio para aquellos que recién están empezando, así como herramientas avanzadas
+    para aquellos que buscan maximizar su potencial.
   how_ai_works_hero_heading: Cómo funciona la IA
   how_ai_works_hero_desc: "¡Sumérjase en el mundo de la IA con «Cómo funciona la IA»,
     nuestra serie de vídeos y las lecciones que la acompañan!"
@@ -1220,21 +1276,19 @@ es:
   teach_page_free_curriculum_desc: Queremos que lleves las Ciencias de la Computación
     a tu escuela sin preocuparte por el costo. ¡Es por eso que nos hemos comprometido
     a que nuestra oferta curricular sea gratuita para siempre!
-  teach_page_free_curriculum_list_heading_01: Plan de estudios atractivo para cada
-    nivel de grado
   teach_page_free_curriculum_list_desc_01: Plan de estudios gratuito, flexible y divertido
     con ofertas en más de 67 idiomas.
-  teach_page_free_curriculum_list_heading_02: Plan de estudios innovador y adaptable
   teach_page_free_curriculum_list_desc_02: Code.org ofrece de todo, desde planes de
     estudio de un año completo hasta actividades de una sola unidad. Además, actualizamos
     nuestros planes de estudio todos los años para respaldar las mejores prácticas
     y áreas de interés, y creamos nuevas ofertas que enseñan los temas más demandados
     en la actualidad.
-  teach_page_free_curriculum_list_heading_03: Plan de estudios estructurado adaptado
-    a los estándares nacionales
   teach_page_free_curriculum_list_desc_03: Cada plan de estudios se basa en al menos
     un conjunto de estándares nacionales, incluidos el CSTA, los Estándares de Ciencias
     de la Próxima Generación y el Common Core.
+  teach_page_free_curriculum_list_desc_04: Ofertas en más de 67 idiomas
+  teach_page_free_curriculum_list_desc_05: Asignado al menos a un conjunto de estándares
+    nacionales (incluidos CSTA, NGSS y Common Core)
   teach_page_free_curriculum_heading_02: 'Explore nuestras ofertas curriculares para
     diferentes niveles de grado:'
   teach_page_resources_heading: Recursos que lo respaldan en cada paso del camino
@@ -2167,6 +2221,13 @@ es:
     por correo electrónico?"
   signup_email_preference_privacy: "(consulta nuestra política de privacidad)"
   signup_email_preference_yes: Sí
+  signup_email_preference_yes_elementary: Sí, envíenme actualizaciones sobre los recursos
+    de la escuela primaria
+  signup_email_preference_yes_middle: Sí, envíenme actualizaciones sobre los recursos
+    de la escuela secundaria
+  signup_email_preference_yes_high: Sí, envíenme actualizaciones sobre los recursos
+    de la escuela secundaria
+  signup_email_preference_yes_general: Sí, envíame actualizaciones generales
   signup_email_preference_no: 'No'
   signup_email_preference_error: Debes elegir el correo electrónico como preferencia
   signup_multiple_event_warning: Pondremos el nombre de tu escuela y ciudad en el
@@ -13104,12 +13165,12 @@ es:
   tutorial_googlename _longdescription: Elige un nombre y usa código para darles vida
     a las letras que lo componen. Puedes elegir un sobrenombre, el nombre de una mascota,
     un animal, un deporte, un lugar o un pasatiempo.
-  tutorial_carnegiezillah_longdescription: Zillah City is thriving, and music is in
-    the air. Rumor has it, the famed Gargantua bot is online and sending the last
-    Toxibots to trash the city block by block…. Grab your cobot hoverboard and get
-    ready to groove, move, and finish off what you started! Players program their
-    cobot hoverbots to change lanes, avoid obstacles, and take out many Toxibots in
-    this rhythm-styled game.
+  tutorial_carnegiezillah_longdescription: La ciudad de Zillah está prosperando y
+    la música está en el aire. Se rumorea que el famoso robot Gargantua está en línea
+    y envía a los últimos Toxibots a destruir la ciudad cuadra por cuadra.…¡Coge tu
+    aerodeslizador tipo cobot y prepárate para surcar, moverte y acabar con lo que
+    has empezado! Los jugadores programan sus cobots hoverbots para cambiar de carril,
+    evitar obstáculos y acabar con muchos Toxibots en este juego de estilo rítmico.
   tutorial_nasachspacejam_longdescription: "¡Crea un sistema solar que realmente sea
     genial! Aprende sobre música, astronomía y programación en esta actividad autoguiada
     (no se requiere experiencia en programación). Programa planetas para hacer música
@@ -13963,6 +14024,351 @@ es:
     en toda la organización al final del año, también conocido como vacaciones de
     invierno), media jornada laboral los viernes durante el verano, también conocidos
     como viernes de verano, y otros beneficios generosos.
+  careers_hero_title: Carreras
+  careers_hero_description: Code.org es una organización sin fines de lucro dedicada
+    a ampliar el acceso a la informática en las escuelas. Estamos especialmente enfocados
+    en aumentar la participación de las mujeres jóvenes y los estudiantes subrepresentados.
+  careers_hero_description_under: "¡Ayúdanos a cambiar el mundo, un estudiante a la
+    vez!"
+  careers_vision_title: Nuestra visión
+  careers_vision_decsription: Nuestra visión es que todos los estudiantes de todas
+    las escuelas tengan la oportunidad de aprender ciencias de la computación como
+    parte de su educación básica K-12.
+  careers_vision_description_under: "¡Únase a nuestro equipo para ayudar a hacer realidad
+    esta visión!"
+  careers_values_title: Nuestros valores fundamentales
+  careers_values_first_column_text_1: Creemos que la informática es fundamental para
+    todos los estudiantes.
+  careers_values_first_column_text_2: Estamos comprometidos con la equidad, el acceso
+    y las oportunidades
+  careers_values_first_column_text_3: Creemos en el poder de una comunidad educativa
+    colaborativa
+  careers_values_second_column_text_1: Somos ágiles y respondemos a los comentarios
+  careers_values_second_column_text_2: Actuamos con integridad y transparencia
+  careers_values_second_column_text_3: Creemos que un impacto amplio requiere pensar
+    en grande y actuar de manera integral.
+  careers_approach_section_title: Nuestro enfoque unificador
+  careers_approach_section_description: El papel global de Code.org en el movimiento
+    de las ciencias de la computación desde primaria y secundaria solo es posible
+    porque utilizamos un enfoque unificador entre partes interesadas diversas y, a
+    menudo, divididas. En un momento de creciente polarización, la idea de aumentar
+    las oportunidades para los estudiantes une a personas de todo el espectro político.
+    Los miembros del equipo, los estudiantes, los profesores y los seguidores de Code.org
+    tienen puntos de vista diversos y divergentes, y todos son bienvenidos a nuestra
+    misión.
+  careers_aproach_section_description_link: Obtén más información sobre el enfoque
+    de unidad de Code.org.
+  careers_approach_section_button: Explore los puestos vacantes
+  careers_principle_section_title: Nuestros principios culturales
+  careers_principle_title_1: Nuestros estudiantes y profesores son nuestra estrella
+    polar
+  careers_principle_description_1: Usamos nuestros dones, tiempo y energía para llevar
+    la informática a quienes más la necesitan. Esto es lo que nos une. Este es nuestro
+    principio más importante.
+  careers_principle_title_2: Somos duros con los problemas y amables los unos con
+    los otros
+  careers_principle_description_2: Nos centramos en el desafío de llevar la informática
+    a los estudiantes y profesores de todo el mundo. Reconocemos que cada uno de nosotros
+    aporta lo mejor de nuestras intenciones para apoyar nuestra misión y dar gracia
+    cuando cometemos errores.
+  careers_principle_title_3: Busca soluciones, no consensos
+  careers_principle_description_3: Somos dueños de las decisiones, ya sea dando pequeños
+    pasos o grandes pasos hacia los resultados que buscamos. Los propietarios piden
+    y escuchan, pero los comentarios no los paralizan. Aceptamos y apoyamos las decisiones
+    de los propietarios, incluso si no estamos de acuerdo.
+  careers_principle_title_4: Adopta la mentalidad de un fundador
+  careers_principle_description_4: Nos obsesionamos con los resultados y centramos
+    nuestras acciones en impulsarlos. Nos sumergimos en los detalles y trabajamos
+    duro. Somos honestos, apostamos por la agilidad y evaluamos continuamente si vamos
+    por buen camino; no tenemos miedo de cambiar de rumbo. Cambiar el mundo lo exige.
+  careers_principle_title_5: Fomente la innovación
+  careers_principle_description_5: Pensamos en grande, asumimos riesgos y no tememos
+    fallar. Si vemos una forma mejor de lograr nuestras metas, lo hacemos y alentamos
+    a los demás a que también lo hagan. Las soluciones incrementales no ayudarán a
+    cambiar el mundo.
+  careers_principle_title_6: Anclar las decisiones en los hechos
+  careers_principle_description_6: Usamos los datos para entender nuestro negocio,
+    establecer los resultados deseados y guiar la toma de decisiones. Lo equilibramos
+    al reconocer que no siempre tendremos los datos que necesitamos para actuar.
+  careers_principle_title_7: Una mentalidad de crecimiento nos impulsa
+  careers_principle_description_7: Abordamos cada desafío con curiosidad. Damos nuestros
+    comentarios con amabilidad y franqueza; los recibimos abiertamente. Aprendemos
+    de nuestros errores y buscamos formas de aumentar el alcance y el impacto de nuestro
+    trabajo.
+  careers_balance_section_title: Nuestro equilibrio entre la vida laboral y personal
+  careers_balance_section_description: Nos preocupamos por nuestros empleados y nos
+    dedicamos a apoyar a todos, tanto en el trabajo como fuera del trabajo. Sabemos
+    que cada persona tiene necesidades diferentes, por lo que ofrecemos un paquete
+    integral de beneficios que garantizará que usted (y su familia) estén bien cuidados.
+  careers_balance_first_column_text_1: Beneficios de salud para usted y su familia
+  careers_balance_first_column_text_2: Generosos planes de vacaciones y vacaciones
+    remunerados
+  careers_balance_second_column_text_1: Entorno de trabajo flexible y de apoyo
+  careers_balance_second_column_text_2: Oportunidades de crecimiento y aprendizaje
+    profesional
+  careers_openroles_section_title: Roles abiertos
+  careers_openroles_section_description: Code.org tiene su sede en Seattle, pero muchos
+    de los miembros de nuestro equipo son remotos. Los candidatos remotos son bienvenidos
+    y se les anima a postularse.
+  careers_more_info_text: Para obtener más información sobre Code.org, consulta nuestras
+    [Preguntas frecuentes] (%{support_url}) o conoce [otras formas de participar en
+    nuestra misión] (%{help_url}).
+  careers_approach_section_title2: Nuestro enfoque de la diversidad
+  careers_approach_section_description_1: En Code.org adoptamos diversas perspectivas,
+    ideas y antecedentes. Nos comprometemos a brindar igualdad de oportunidades a
+    todos los empleados y candidatos. No discriminamos por motivos de raza, religión,
+    color, nacionalidad, género, orientación sexual, edad, estado civil, condición
+    de veterano o estado de discapacidad (mental y física).
+  careers_approach_section_description_2: Nos aseguraremos de que las personas con
+    discapacidades reciban adaptaciones razonables para participar en el proceso de
+    solicitud de empleo o entrevista, realizar funciones laborales esenciales y recibir
+    otros beneficios y privilegios del empleo. Si tiene necesidades individuales relacionadas
+    con una discapacidad, póngase en contacto con accommodations@code.org.
+  csa_ai_page_hero_title: Ingeniería de software y visión artificial
+  csa_ai_page_hero_description: 'Este módulo CSA posterior a la AP de dos capítulos
+    ofrece a los estudiantes de secundaria experiencia práctica con herramientas profesionales
+    de desarrollo de software, incluidas GitHub y GitHub Copilot, y les imparte las
+    habilidades del mundo real para desarrollar un programa de visión artificial. '
+  csa_ai_page_video_section_title: Vaya más allá del mundo de los entornos de programación
+    de Code.org
+  csa_ai_page_video_section_li_1: Más información sobre la IA y sus aplicaciones
+  csa_ai_page_video_section_li_2: Experiencia práctica con herramientas profesionales
+    de desarrollo de software
+  csa_ai_page_video_section_li_3: Conozca las prácticas estándar de la industria
+  csa_ai_page_video_section_li_4: Cultiva el pensamiento crítico
+  csa_ai_page_programming_tools: 'Herramientas de programación: Github, Github Copilot,
+    VSCode, TensorFlow '
+  csa_ai_page_professional_learning: Ninguno
+  csa_ai_page_curriculum_topics: 'Temas: Programación, Datos, Arte y diseño, Juegos
+    y animación'
+  csa_ai_page_curriculum_accessibility_features: Consulte la sección de preguntas
+    frecuentes para obtener más información
+  csa_ai_page_curriculum_languages_support: Español (España)
+  csa_ai_page_article_title_1: Construya con Copilot
+  csa_ai_page_article_description_1: Los estudiantes aprenden a usar GitHub Copilot
+    como un programador en pareja para explicar el código existente, encontrar y corregir
+    errores y generar soluciones a nuevos problemas.
+  csa_ai_page_article_link_1: Más información sobre Copilot
+  csa_ai_page_article_title_2: Cree su propio modelo de IA
+  csa_ai_page_article_description_2: Los estudiantes entrenan sus propios modelos
+    de IA con Teachable Machine para reconocer imágenes y gestos desde una cámara
+    web y considerar cómo la visión artificial afecta a la forma en que los usuarios
+    interactúan con las aplicaciones.
+  csa_ai_page_article_link_2: Explore el plan de la lección
+  csa_ai_page_article_title_3: Explore la visión artificial
+  csa_ai_page_article_description_3: Los estudiantes implementan los modelos de IA
+    que crearon con Teachable Machine en una aplicación Java, utilizando GitHub Copilot
+    para ayudarlos a modificar las versiones existentes de las aplicaciones para que
+    funcionen con las diferentes entradas.
+  csa_ai_page_article_link_3: Vea un ejemplo
+  csa_ai_page_learn_more_section_title: Más información sobre la inteligencia artificial
+  csa_ai_page_learn_more_title: Explore la IA 101 para profesores
+  csa_ai_page_learn_more_description: Descubra el innovador mundo de la inteligencia
+    artificial (IA) y su potencial transformador en la educación con nuestra completa
+    serie de aprendizaje en línea para profesores.
+  csa_ai_page_learn_more_link: Vea la serie AI 101 para profesores
+  csa_ai_page_faq_question_01: "¿Cuáles son los requisitos previos para este módulo?"
+  csa_ai_page_faq_answer_01_01: 'Antes de sumergirse en este módulo, los estudiantes
+    deben poseer un conocimiento básico de Java. En concreto, deben comprender:'
+  csa_ai_page_faq_answer_01_list_01: "**Clases y objetos: ** Los estudiantes deben
+    estar familiarizados con la definición y el uso de las clases, así como con la
+    creación y manipulación de objetos."
+  csa_ai_page_faq_answer_01_list_02: "**Métodos de escritura y llamada: ** Los estudiantes
+    deben poder definir métodos dentro de una clase, comprender los parámetros de
+    los métodos y los tipos de retorno, y llamar a los métodos desde objetos u otros
+    métodos."
+  csa_ai_page_faq_answer_01_list_03: "**Matrices 1D y ArrayLists: ** Deben ser competentes
+    en la declaración, inicialización y manipulación de matrices y ArrayLists unidimensionales,
+    incluida la iteración de ellas."
+  csa_ai_page_faq_answer_01_list_04: "**Selección e iteración: ** Es crucial contar
+    con una base sólida en las declaraciones condicionales y los bucles."
+  csa_ai_page_faq_question_01_02: Idealmente, los estudiantes que hayan completado
+    un curso de Ciencias de la Computación A o un curso de profundidad y rigor similares
+    estarían bien preparados para este módulo.
+  csa_ai_page_faq_question_02: "¿Cómo instalo el software necesario para este módulo?"
+  csa_ai_page_faq_answer_02_01: Este módulo es único porque implica el uso de software
+    de terceros en lugar de laboratorios y herramientas de Code.org. [Obtenga más
+    información sobre la instalación del software aquí] (%{accessibility_url}).
+  csa_ai_page_faq_question_03: "¿Cómo puedo apoyar las necesidades de accesibilidad
+    mientras enseño este módulo?"
+  csa_ai_page_faq_answer_03_01: Satisfacer las necesidades de accesibilidad es crucial
+    para un entorno de aprendizaje inclusivo. [Lea más sobre las funciones de accesibilidad
+    del software utilizado en este módulo aquí] (%{install_url}).
+  csa_ai_page_faq_question_04: "¿Cómo uso VS Code en las Chromebooks?"
+  csa_ai_page_faq_answer_04: El uso de VS Code en un Chromebook se ha vuelto más sencillo,
+    especialmente con la capacidad de ejecutar aplicaciones de Linux en los modelos
+    de Chromebook más nuevos. [Lea más sobre la configuración de VS Code en Chromebooks
+    aquí] ().%{chromebook_url}
+  csa_ai_page_faq_question_05: "¿Cómo puedo obtener desarrollo profesional para este
+    módulo?"
+  csa_ai_page_faq_answer_05: Actualmente no existe un desarrollo profesional específico
+    para este curso. Si quieres entender cómo abordar la inteligencia artificial en
+    tu aula, puedes [explorar AI 101 for Teachers] (%{ai_101_url}).
+  csa_ai_page_faq_question_06: "¿Cuál es el horario recomendado para impartir este
+    módulo?"
+  csa_ai_page_faq_answer_06_01: El módulo de ingeniería de software y visión artificial
+    está cuidadosamente estructurado para proporcionar un aprendizaje integral en
+    un período de tiempo conciso. Todo el módulo está diseñado para abarcar **2 semanas
+    de instrucción**. La mayoría de las clases están diseñadas para **45 minutos**,
+    mientras que las clases en las que los estudiantes profundizan en el desarrollo
+    práctico de proyectos Java están diseñadas para **90 minutos**. Este tiempo prolongado
+    garantiza que los estudiantes tengan amplias oportunidades de comprender, implementar
+    y solucionar problemas mientras trabajan.
+  csa_ai_page_faq_answer_06_02: También hay una flexibilidad intencional incorporada
+    en la estructura del módulo. Dependiendo de la dinámica del aula, la participación
+    de los estudiantes y la profundidad con la que desee explorar cada tema, puede
+    ajustar la duración. Por ejemplo, la lección de introducción a Copilot, diseñada
+    como una lección de 45 minutos, se puede ampliar a 90 minutos si deseas profundizar
+    en el funcionamiento de herramientas y modelos lingüísticos de gran tamaño, como
+    GitHub Copilot y ChatGPT.
+  csa_ai_page_faq_question_07: "¿Cómo puedo acceder a las claves de respuestas?"
+  csa_ai_page_faq_answer_07: Con una cuenta de profesor aprobada, encontrarás las
+    claves de respuestas en un panel azul exclusivo para profesores que aparece en
+    las clases y actividades en línea. Si necesitas una cuenta de profesor aprobada,
+    puedes solicitar el acceso a materiales protegidos exclusivos para profesores
+    (claves de respuestas, etc.) a través de [este formulario] ().%{form_url}Ten en
+    cuenta que la verificación de tu cuenta puede tardar entre 3 y 5 días laborables.
+  csa_ai_page_faq_question_08: "¿Este módulo está mapeado según los estándares?"
+  csa_ai_page_faq_answer_08: Sí, el plan de estudios de ingeniería de software y visión
+    artificial está adaptado a los [estándares K-12 de la CSTA] (%{csta_k12_url})
+    y a la IA para las [pautas de K-12] ().%{k12_url}
+  csa_ai_page_faq_question_09: "¿Cuánto cuesta impartir este módulo?"
+  csa_ai_page_faq_answer_09_01: "¡Nuestro plan de estudios y nuestra plataforma están
+    disponibles [sin costo] (%{no_cost_url}) para que cualquier persona, en cualquier
+    lugar, pueda enseñar!"
+  csa_ai_page_faq_answer_09_02: Además, el software y las herramientas utilizadas
+    en este módulo son gratuitos. GitHub Copilot es gratuito para verificados [teachers](%{teachers_url})
+    y [students](%{students_url}).
+  csa_ai_page_faq_question_10: "¿Qué hago si la instalación del software no funciona?"
+  csa_ai_page_faq_answer_10: Es común que surjan problemas durante la instalación
+    del software, pero hay pasos sistemáticos que puede seguir para solucionarlos
+    y resolverlos. [Consulte algunos consejos de solución de problemas aquí] (%{troubleshooting_url}).
+  csa_ai_page_faq_question_11: How was the curriculum developed?
+  csa_ai_page_faq_answer_11_01: 'Nuestro plan de estudios de ingeniería de software
+    y visión artificial se diseñó teniendo en cuenta los valores de nuestro plan de
+    estudios. Los siguientes objetivos guiaron la creación de este plan de estudios:'
+  csa_ai_page_faq_answer_11_list_01: "**Objetivo 1: ** Usa herramientas de IA para
+    generar, depurar y editar código."
+  csa_ai_page_faq_answer_11_list_02: "**Objetivo 2: ** Transición de Java Lab a herramientas
+    del mundo real."
+  csa_ai_page_faq_answer_11_list_03: "**Objetivo 3: ** Profundizar en la comprensión
+    de cómo se entrenan e integran los modelos de IA en los programas."
+  csa_ai_page_faq_answer_11_02: Para obtener más información sobre los valores que
+    guiaron nuestro trabajo, consulte nuestros [valores curriculares] (%{curriculum_values_url}).
+  video_library_page_main_title: Vídeos cortos educativos
+  video_library_page_hero_description: La creciente biblioteca de vídeos educativos
+    de Code.org está disponible para que los educadores de todo el mundo los reutilicen,
+    en línea o en las aulas. Nuestro objetivo es ampliar nuestros esfuerzos más allá
+    del alcance de nuestro propio plan de estudios.
+  video_library_page_title_ai_works: Cómo funciona la IA
+  video_library_page_description_ai_works: Esta serie de videos cortos le presentará
+    cómo funciona la inteligencia artificial y por qué es importante. Aprenda sobre
+    las redes neuronales, o cómo aprende la IA, y profundice en cuestiones como el
+    sesgo algorítmico y la ética de la toma de decisiones de la IA.
+  video_library_page_title_computers_work: Cómo funcionan las computadoras
+  video_library_page_description_computers_work: Explica qué hace que una computadora
+    sea una computadora, cómo se representa la información digital en números 1 y
+    0, cómo funcionan los circuitos de la computadora para manipular la información
+    digital y cómo una unidad central de procesamiento (CPU) y un sistema operativo
+    controlan las entradas, salidas, memoria y hardware de una computadora.
+  video_library_page_title_internet_works: Cómo funciona Internet
+  video_library_page_description_internet_works: Con Vint Cerf, el inventor del TCP/IP,
+    David Karp, el fundador de Tumblr, para explicar HTTP y HTML, Security Princess
+    de Google, para explicar SSL y ciberseguridad, e ingenieros de Microsoft, Spotify
+    y Symantec. Esta serie de vídeos cortos explican cómo funciona Internet.
+  video_library_page_title_not_hacked: Cómo no ser hackeado
+  video_library_page_description_not_hacked: Internet está abierto, por lo que todo
+    lo que sucede en él se puede ver a menos que esté protegido. En los países modernos,
+    las personas están más preocupadas por ser hackeadas que por cualquier otro delito.
+    ¿Por qué? Porque delincuentes, terroristas o incluso actores estatales prueban
+    periódicamente todas las computadoras o teléfonos de Internet para detectar vulnerabilidades.
+    Si no tienes cuidado, alguien podría hackear tu dispositivo o tus cuentas, e incluso
+    robar tu identidad o tu dinero.
+  video_library_page_title_blockchain: Cómo funciona la cadena de bloques
+  video_library_page_description_blockchain: Realizada en colaboración con Coinbase,
+    esta serie presenta a expertos de la industria y tiene como objetivo desmitificar
+    esta tecnología mediante la exploración de qué es la cadena de bloques, cómo funciona
+    y sus posibles implicaciones sociales, tanto buenas como malas.
+  video_library_page_title_careers: Carreras en CS
+  video_library_page_description_careers: Las carreras en informática y tecnología
+    pueden ser divertidas y gratificantes. Pero, ¿qué hace realmente una persona que
+    trabaja en estos campos? Con una gran variedad de trabajos y empresas, no hay
+    una sola respuesta a esta pregunta. Mira los vídeos que aparecen a continuación
+    para conocer a algunas de las personas que están abordando grandes problemas de
+    forma creativa.
+  video_library_page_title_inspirational: Inspirador
+  video_library_page_description_inspirational: "¿Qué cambiará la informática en nuestro
+    mundo? ¿Todo? ¿Para quién es? ¡Todos! Mira estos vídeos para inspirarte y motivarte."
+  video_library_page_footer_description: "¿Buscas algo más? Tenemos muchos videos
+    geniales disponibles en nuestro canal de Youtube."
+  video_library_page_footer_cta: Explora todos los vídeos de Code.org en YouTube
+  video_library_page_computer_work_video_title_1: Presentamos cómo funcionan las computadoras
+  video_library_page_computer_work_video_title_2: Binarios y datos
+  video_library_page_computer_work_video_title_3: CPU, memoria, entrada y salida
+  video_library_page_computer_work_video_title_4: "¿Qué hace que un ordenador sea
+    un ordenador?"
+  video_library_page_computer_work_video_title_5: Lógica de circuitos
+  video_library_page_computer_work_video_title_6: Hardware y software
+  video_library_page_internet_work_video_title_1: "¿Qué es Internet?"
+  video_library_page_internet_work_video_title_2: 'INTERNET: direcciones IP y DNS'
+  video_library_page_internet_work_video_title_3: 'INTERNET: HTTP y HTML'
+  video_library_page_internet_work_video_title_4: 'INTERNET: Ciberseguridad y delincuencia'
+  video_library_page_internet_work_video_title_5: 'INTERNET: alambres, cables y wifi'
+  video_library_page_internet_work_video_title_6: 'INTERNET: Paquetes, enrutamiento
+    y confiabilidad'
+  video_library_page_internet_work_video_title_7: 'INTERNET: Cifrado y claves públicas'
+  video_library_page_internet_work_video_title_8: 'INTERNET: Cómo funciona la búsqueda'
+  video_library_page_cs_video_title_1: Mi nombre es Jerome y soy tecnólogo de diseño
+    en Meow Wolf
+  video_library_page_cs_video_title_2: Mi nombre es Nikesha y soy ingeniero aeroespacial
+    en la NASA.
+  video_library_page_cs_video_title_3: Mi nombre es Brina y soy ingeniera de software
+    en Instagram
+  video_library_page_cs_video_title_4: Mi nombre es Kinsley y soy ingeniero de software
+    en Facebook
+  video_library_page_cs_video_title_5: Mi nombre es Polina y soy científica de datos
+    en Electronic Arts
+  video_library_page_cs_video_title_6: Mi nombre es Danelle y soy ingeniera de software
+    en MBARI
+  video_library_page_cs_video_title_7: Mi nombre es Christopher y soy analista de
+    seguridad en Tanium
+  video_library_page_cs_video_title_8: Mi nombre es Federico y soy director técnico
+    de programas en Microsoft
+  video_library_page_cs_video_title_9: Mi nombre es Tess y soy ingeniera de software
+    en Google
+  video_library_page_inspirational_video_title_1: Cambia la cara de la informática
+    (3 min)
+  video_library_page_inspirational_video_title_2: Esfuérzate. Cualquiera puede aprender.
+    (1 minuto)
+  video_library_page_inspirational_video_title_3: Inspira a una chica (2 min)
+  video_library_page_inspirational_video_title_4: "¿Qué no se aprende en colegios
+    e institutos? (5min)"
+  video_library_page_inspirational_video_title_5: 'La hora del código está aquí: cualquiera
+    puede aprender (2 min)'
+  video_library_page_inspirational_video_title_6: Me llamo Aracely (3 min)
+  video_library_page_inspirational_video_title_7: Hora de código con Steph Curry (2
+    min)
+  video_library_page_inspirational_video_title_8: La informática lo está cambiando
+    todo (5 min)
+  video_library_page_inspirational_video_title_9: Introducción a las ciencias de la
+    computación (1 minuto)
+  video_library_page_inspirational_video_title_10: El presidente Obama habla sobre
+    la informática (1 minuto)
+  video_library_page_inspirational_video_title_11: Todo el mundo puede aprender (1
+    min)
+  video_library_page_inspirational_video_title_12: Lo Que Falta En Nuestras Escuelas
+    (2 min)
+  video_library_page_not_hacked_video_title_1: 'Cómo no ser hackeado: Introducción'
+  video_library_page_not_hacked_video_title_2: 'Cómo no ser hackeado: contraseñas'
+  video_library_page_not_hacked_video_title_3: 'Cómo no ser hackeado: autenticación
+    y bloqueo de dispositivos'
+  video_library_page_not_hacked_video_title_4: 'Cómo no ser hackeado: suplantación
+    de identidad'
+  video_library_page_not_hacked_video_title_5: 'Cómo no ser hackeado: sitios web y
+    wifi'
+  video_library_page_not_hacked_video_title_6: 'Cómo no ser hackeado: mensajería y
+    descargas'
+  video_library_page_not_hacked_video_title_7: 'Cómo no ser hackeado: instala actualizaciones'
   language_code:
     ar: Árabe
     az: Azerí

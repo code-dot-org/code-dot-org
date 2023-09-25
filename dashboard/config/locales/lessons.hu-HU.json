@@ -1517,6 +1517,384 @@
         "pre-express-2022/A Royal Battle with Events": {
           "name": "Királyi csata eseményekkel"
         },
+        "csc-adaptations-2023/Modeling Animal Adaptations (pilot)": {
+          "name": "Állati adaptációk Bevezetés",
+          "overview": "Ebben a**készségépítés** leckében a diákok megtanulják spritek létrehozását és animálását, valamint események felhasználásával interaktívvá teszik őket. \n\nA hallgatók egy eseményalapú ok-okozati modellt kódolnak a Sprite Lab-ban, hogy bemutassák, hogyan élnek túl a fajok azáltal, hogy idővel alkalmazkodnak környezetükhöz. Interaktív modelleket és szimulációkat használnak a való világban, hogy segítsenek a mérnököknek és tudósoknak azonosítani a mintákat, megérteni a természetet, előrejelzéseket készíteni a jövőbeli változásokról, és megoldásokat tervezni a nagyobb zavarokra való felkészüléshez és/vagy leküzdéshez. \n\nA diákok csoportokban tárják fel az evolúció, az alkalmazkodás, a migráció, a természetes szelekció és a túlélés példáit. ",
+          "preparation": "-   Tekintse át és töltse ki az online oktatóanyagot.\n-   Előzetesen határozza meg, hogy mely szintek jelenthetnek nagyobb kihívást a hallgatók számára.\n-   Tekintse át a diákat, és döntsön a hallgatói munkaidő és az egész csoportos oktatás közötti ütemről.\n-   Mielőtt elkezdené (), fontolja meg az ajánlott előkészítési tevékenységek feltárását ([link](https://studio.code.org/s/csc-adaptations-2023/lessons/1#activity-3914166)).\n-   Fontolja meg ezeket a kapcsolódó kiterjesztési lehetőségeket ([link](https://studio.code.org/s/csc-adaptations-2023/lessons/1#activity-3914168)), hogy feltárja az utolsó lecke után.\n\n##### Opcionális\n\n-   Páros programozás - Döntse el, hogy szeretné-e, hogy a hallgatók részt vegyenek a páros programozásban. Nézze meg ezt a <a href=\"https://www.youtube.com/watch?v=sxToW3ixrwo\" target=\"_blank\">videót,</a> és látogasson el erre a <a href=\"https://support.code.org/hc/en-us/articles/115002122788-How-does-pair-programming-on-Code-org-work-\" target=\"_blank\">támogatási</a> oldalra, ahol további információt talál a páros programozásról.",
+          "purpose": "Ez a lecke vonzó és interaktív tanulási élményt nyújt, amely integrálja a tudományt és a technológiát. A kód használatával az ok-okozati összefüggés modellezésére a diákok felfedezhetik, hogyan alkalmazkodnak az állatok környezetükhöz, és mélyebben megérthetik a természeti világot. Később ez a modul ösztönzi a kreativitást és az önkifejezést azáltal, hogy lehetővé teszi a diákok számára, hogy személyre szabják modelljeiket saját egyedi stílusukkal és ötleteikkel.",
+          "student_overview": "Ebben a leckében modellezheti, hogyan alkalmazkodnak az állatok a környezetükhöz az idő múlásával. Megtanulod kódolni, hogyan kapták meg a zsiráfok hosszú nyakukat, hogyan változtatták meg a nyuszik szőrszínüket, hogy jobban elbújjanak, és hogyan fejlesztették ki a madarak különböző alakú csőrét."
+        },
+        "csc-adaptations-2023/lesson-2": {
+          "overview": "Ebben a CS és a tudományba integrált leckében a diákok a számítástechnika viselkedését fogják használni az állatok túlélési viselkedésének ábrázolására. Amikor a diákok „viselkedést” használnak a Sprite Lab-ban, akkor a sprite-nek utasításokat adnak, amelyeket újra és újra végrehajtanak, mint egy animációt. Először is, a diákok kipróbálják a különböző előre meghatározott viselkedéseket, beleértve a bálnák és lepkék vándorlási mintáit, a társ vonzására használt madártáncokat és a csoportosan utazó halakat. Ezután a diákok gyakorolják saját állati viselkedésük módosítását és kódolását.    ",
+          "preparation": "-   Tekintse át és töltse ki az online oktatóanyagot.\n-   Előzetesen határozza meg, hogy mely szintek jelenthetnek nagyobb kihívást a hallgatók számára.\n-   Tekintse át a diákat, és döntsön a hallgatói munkaidő és az egész csoportos oktatás közötti ütemről.\n-   Adjon meg írási anyagokat a bemelegítő reflexióhoz és a lezáró kilépési jegyhez.\n-   Fontolja meg ezeket a kapcsolódó kiterjesztési lehetőségeket ([link](https://studio.code.org/s/csc-adaptations-2023/lessons/2#activity-4165453)), hogy feltárja az utolsó lecke után.",
+          "purpose": "A kódolás segítségével az állatcsoportok viselkedésének modellezésére a diákok gyakorlati és magával ragadó módon fedezhetik fel a társas állatok mintáit és dinamikáját. Ez a lecke arra ösztönzi a tanulókat, hogy kódolási készségeiket értelmes és releváns kontextusban alkalmazzák. A hallgatók kreatívan dolgozhatnak a hátterek, a spritek és a viselkedés kiválasztásával, lehetővé téve számukra, hogy egyedi projekteket készítsenek.",
+          "student_overview": "Ma sok állatot és azok (néha ostoba) viselkedését fogja felfedezni. Az állatok bizonyos mozgásokat és viselkedéseket fejlesztettek ki a túlélés és a szaporodás érdekében. A kódod vezérli a sprite animációkat a játszótérben. "
+        },
+        "csc-adaptations-2023/lesson-3": {
+          "overview": "Ebben a CS és a tudományba integrált leckében a diákok megtanulják, hogyan szerkeszthetik az állatok viselkedését kódban. Először is, a diákok előrejelzést adnak a róka rejtélyes viselkedéséről. Ezután a következő szinteken a „szerkesztés” gombot használják az állatok különböző viselkedéseinek hibakeresésére, beleértve a sebességet, az irányt és a forgási stílust. Végül a diákok kiválasztják a környezeti változás forgatókönyvét, és saját kreatív kódjukat használják egy új és egyedi állati alkalmazkodás modellezésére! \n\nAz osztály végén, a diákok megosztják egyedi projektjeiket osztálytársaikkal. A hallgatóknak lehetőségük lesz elmélkedni azon, amit megtanultak a kód viselkedéséről és az állatok viselkedéséről a való életben. ",
+          "preparation": "-   Tekintse át és töltse ki az online oktatóanyagot.\n-   Előzetesen határozza meg, hogy mely szintek jelenthetnek nagyobb kihívást a hallgatók számára.\n-   Tekintse át a diákat, és döntsön a hallgatói munkaidő és az egész csoportos oktatás közötti ütemről.\n-   Fontolja meg ezeket a kapcsolódó kiterjesztési lehetőségeket ([link](https://studio.code.org/s/csc-adaptations-2023/lessons/3#activity-4233684)), hogy felfedezze ezt a leckét.",
+          "purpose": "A diákok előrejelzéseket tesznek a rejtélyes viselkedésről és az állatok viselkedésének hibakereséséről, amelyek nem működnek megfelelően. Ezután készségeikkel egy olyan egyedi állati adaptációt kódolnak, amelyet még soha nem láttak a környezet hirtelen változásának elképzelésével. Az „Upload My Own” sprite jelmez és háttér funkcióval a diákok olyan környezetet hozhatnak létre, amely teljesen saját."
+        },
+        "csc-bookcovers-2023/Learn to Code a Book Cover ": {
+          "name": "Tanulj meg kódolni egy könyvborítót ",
+          "overview": "Ebben a CS és ELA integrált leckében az új kódolók számára, a hallgatók megtanulják kódolni a digitális könyvborítót. Először megvizsgálják a meglévő könyvborítókat, és megvitatják, milyen grafikai tervezési döntéseket hoztak. Ezután a diákok megnéznek egy digitális könyvborító példát, mielőtt több sajátot készítenének. A hallgatók megtanulják kiválasztani a spriteket, amelyek a könyv szereplőit képviselik, és eseményeket használnak arra, hogy a karakterek beszéljenek. ",
+          "preparation": "-   Játsszon végig a szinteken, és tekintse át a lecke<a href=\"https://docs.google.com/presentation/d/1GTaZX9z0b-dwk6Z48TSwqwhjZ9pO9Onk7w8n9xNt_Zk/template/preview\" target=\"_blank\">diáit</a>\n-   Döntse el a hallgatói munkaidő és az egész csoportos oktatás közötti tempót.\n-   Mielőtt elkezdené (), fontolja meg az ajánlott előkészítési tevékenységek feltárását ([link](https://studio.code.org/s/csc-bookcovers-2023/lessons/1#activity-4350298)).\n\n##### Opcionális:\n\n-   Tekintse át ezt <a href=\"https://docs.google.com/presentation/d/1RSJhxO9ZMtyLrt160kvAVdyekR4wT2fVSgbrPHR4HS0/template/preview\" target=\"_blank\">a Hasznos tippek diavetítést.</a> \n-   Tekintse át a <a href=\"https://code.org/curriculum/docs/k-5/DebuggingTeacher.pdf\" target=\"_blank\">tanár hibakeresési útmutatóját, hogy készen álljon</a>  arra, hogy segítse a tanulókat a kód hibáinak megtalálásában és kijavításában. \n-   Páros programozás - Döntse el, hogy szeretné-e, hogy a hallgatók részt vegyenek a páros programozásban. Nézze meg ezt a <a href=\"https://www.youtube.com/watch?v=sxToW3ixrwo\" target=\"_blank\">videót,</a> és látogasson el erre a <a href=\"https://support.code.org/hc/en-us/articles/115002122788-How-does-pair-programming-on-Code-org-work-\" target=\"_blank\">támogatási</a> oldalra, ahol további információt talál a páros programozásról.\n-   Egyéni Sprite feltöltések - Bár ez a későbbi órákban kerül bevezetésre, dönthet úgy, hogy megtanítja a diákoknak, hogyan töltsék fel saját sprite jelmezeiket és hátterüket ezzel a videóval. <a href=\"https://youtu.be/CHipUGfL_0M\" target=\"_blank\"></a>",
+          "student_overview": "Ebben a leckében megtanulhatja, hogyan kell kódolni a digitális könyvborítót. Először kiválasztja a hátteret és a karaktereket. Ezután megtanulja, hogyan kell programozni a karakterek beszélgetését, amikor rákattintanak. A lecke végére számos példát kódolt az interaktív könyvborítókra."
+        },
+        "csc-bookcovers-2023/lesson-4": {
+          "overview": "Ebben a**Unpluginged** leckében a diákok megtervezik saját interaktív könyvborítójukat. A hallgatók azzal kezdik, hogy ötletelik az általuk kedvelt könyveket, és kiválasztanak egyet, amelyekhez könyvborítót terveznek. A diákoknak el kell képzelniük, hogy másnak ajánlják a könyvet, és felkeltik érdeklődésüket az olvasás iránt. A hallgatók két főszereplőt mutatnak be, és összefoglalót írnak a történetről. Ezután visszajelzést kapnak egy társaiktól, hogy megbizonyosodjanak arról, hogy készen állnak-e a következő leckére. A 3. leckében a diákok saját interaktív digitális könyvborítójukat kódolják.",
+          "preparation": "-   Segítsen minden hallgatónak kiválasztani egy könyvet a könyvborító projektjéhez.\n-   Nyomtasson ki egy **\\\\ \\*<a href=\"https://docs.google.com/document/d/18cVgDdq77dbdk6gmQ1rGjHIr7pQk3I2Wb2WsAEeNH64/template/preview\t\n    \" target=\"_blank\">Tervezési</a>útmutató** kiadványt minden hallgató számára\n-   Áttekintés**\\\\ \\*<a href=\"https://docs.google.com/document/d/1sinZLdMy8PLHJVKRwGt-mqhcADQtNq0bLYy4oZZwVpQ/template/preview\" target=\"_blank\">Tervezési útmutató - Tanári</a>kulcs**.",
+          "purpose": "Ennek a leckének az a célja, hogy bevonja a negyedik osztályos tanulókat egy kreatív és interaktív tanulási élménybe, amelynek középpontjában saját interaktív könyvborítójuk megtervezése áll. Azáltal, hogy reflektál az általuk élvezett könyvekre, a hallgatóknak lehetőségük lesz felfedezni személyes olvasási preferenciáikat, és kiválaszthatnak egy könyvet, amellyel magával ragadó borítót készíthetnek. \n\nEzen a folyamaton keresztül gyakorolják a történet összefoglalását és két főszereplő bemutatását, csiszolják képességüket az elbeszélés kulcsfontosságú elemeinek hatékony kommunikálására. Továbbá, a hallgatók szakértői visszajelzési tevékenységet folytatnak, hogy finomítsák munkájukat, mielőtt továbblépnének a következő órára, ahol megtanulják kódolni saját interaktív digitális könyvborítóikat. \n\nEz a lecke célja a hallgatók kreativitásának elősegítése, mesemondó készségek, és a technológiai műveltség, miközben ösztönzi a könyvajánlások olvasásának és megosztásának szeretetét."
+        },
+        "csc-bookcovers-2023/Code Your Own Book Cover ": {
+          "name": "Kódolja be interaktív könyvborítóját ",
+          "overview": "Ebben a leckében a diákok az első leckében megtanult készségeket felhasználva interaktív könyvborítót készítenek egy általuk választott könyvhöz. Melegedni fognak a szükséges kódoló blokkok egy részének spirális áttekintésével. Ezután a hallgatókat arra utasítják, hogy lépésről lépésre kódolják a Sprite Lab projektet, amely tartalmazza a könyv címét, szerzőjét, főszereplőit, beállítását és összefoglalását. Következő osztály, a diákok bemutatják munkájukat osztálytársaiknak.\n\nVegye figyelembe, hogy ez egy projekt előrehaladása, ami azt jelenti, hogy a hallgatói kód követi őket egyik szintről a másikra. Ösztönözze a tanulókat, hogy minden szinten nyomják meg a „Futtatás” gombot, hogy elmentsék kódjukat, mielőtt továbblépnének a következő szintre.",
+          "preparation": "-   Játsszon át a szinteken, és tekintse át a lecke <a href=\"https://docs.google.com/document/d/1r7dnygat_SH_us1TWYil-Bx5ulROZ2PDbF-Njcz27RM/template/preview\" target=\"_blank\">diáit</a>.\n-   Döntse el a hallgatói munkaidő és az egész csoportos oktatás közötti lépést.\n-   Hasznos lehet, ha elkészíti saját könyvborítóját, amelyet megoszthat a hallgatókkal.\n-   Győződjön meg arról, hogy a hallgatók rendelkeznek a tervezési útmutatóval, amelyet az előző leckében digitális könyvborítójuk megtervezéséhez használtak.\n\n##### Opcionális\n\n-   Ismerkedjen meg azzal, hogyan tölthet fel egyedi sprite jelmezeket és háttereket ezzel a videóval. <a href=\"https://youtu.be/CHipUGfL_0M\" target=\"_blank\"></a>",
+          "student_overview": "Ebben a leckében, kódolja saját digitális könyvborítóját. Először kiválasztja a hátteret és a karaktereket. Ezután beprogramozza a karaktereket, hogy bemutatkozzanak. És befejezheti a könyv összefoglalását, amikor megnyomja a felfelé mutató nyilat. Nagyon kreatív lehet, ha saját sprite-ket rajzol, használ néhányat a könyvtárból, vagy akár feltölti saját képeit. \n\nKövetni fogja az utolsó osztályon tervezett tervet. Kövesse az utasításokat minden szinten gondosan. Ebben a projektben a kód követi Önt szintről szintre. \nA következő osztályban bemutatod a munkádat."
+        },
+        "csc-bookcovers-2023/Share Your Book Cover": {
+          "name": "Ossza meg könyvborítóját",
+          "overview": "Ebben az utolsó leckében, a diákok megosztják egymással könyvborítóikat egy galéria séta során, ahol felfedezik és tesztelik osztálytársaik könyvborító projektjeit. Jegyzeteket hagynak minden osztálytársnak, gondolataikat és visszajelzéseiket kifejezve a megadott mondatindítók segítségével. A lecke során a diákok aktívan részt vesznek könyvborítóik megosztásában, megfigyelésében, reflektálásában és megvitatásában, elősegítve a tervezési döntések és a könyvválasztásra gyakorolt hatásuk mélyebb megértését. A lecke egy átfogó reflexiós gyakorlattal zárul, figyelembe véve a „ne ítélj meg egy könyvet a borítója alapján” mondást saját és osztálytársaik interaktív könyvborítóival kapcsolatban. Kis csoportokban, majd osztályként tárgyalnak, kiemelve a könyvborítók szerepét az információk közvetítésében és az egyedi tervek egyediségét.",
+          "preparation": "-   Tekintse át és töltse ki az online oktatóanyagot.\n-   Tekintse át a diákat, és döntsön a hallgatói munkaidő és az egész csoportos oktatás közötti ütemről.\n-   Rendelkezzen hallgatói tervezési útmutatókkal az előző órákból\n-   Adjon ki egy halom postai megjegyzést minden hallgatónak \n-   Fontolja meg ezeket a kapcsolódó kiterjesztési lehetőségeket ([link](https://studio.code.org/s/csc-bookcovers-2023/lessons/4#activity-4350299)), hogy felfedezze az utolsó lecke után",
+          "student_overview": "Ebben az utolsó leckében, meg fogja osztani könyvborítóját osztálytársaival. Lehetősége lesz arra, hogy megmutassa munkáját és tesztelje osztálytársai projektjeit. Az osztály végén, megbeszélést folytat arról, hogy osztálytársai milyen döntéseket hoztak a könyvborítóikban."
+        },
+        "csc-ecosystems-2023/Overfishing Simulation (pilot)": {
+          "name": "Túlhalászás szimuláció",
+          "overview": "Ebben a**készségépítés** leckében a diákok programozzák a vízi ökoszisztéma modelljét, majd szimulálják a túlhalászási helyzetet. A hallgatók megtanulják, hogyan kell programozni a feltételes állításokat, hogy ellenőrizzék az algák mennyiségét a vízben. Ha túl sok alga van, a korall megbetegszik. Ha túl kevés az alga, a halaknak nincs táplálékforrása, és elhagyják a területet. Ha csak megfelelő mennyiségű alga van, a beteg korall meggyógyul, és a halak a környéken maradnak. ",
+          "preparation": "-   Játsszon végig a szinteken, és tekintse át a <a href=\"https://docs.google.com/presentation/d/1LtXP3ssc5-kOV1DgccN3957oAyF1cf-VaghZJsL7Vtk/template/preview\" target=\"_blank\">lecke diáit</a> \n-   Döntse el a hallgatói munkaidő és az egész csoportos oktatás közötti tempót.\n-   Fontolja meg a hallgatók számára az ajánlott előkészítés hozzárendelését \n    ([link](https://studio.code.org/s/csc-ecosystems-2023/lessons/1#activity-4911962))\n-   Fontolja meg ezeket a kapcsolódó kiterjesztési lehetőségeket ([link](https://studio.code.org/s/csc-ecosystems-2023/lessons/1#activity-4911963)), hogy felfedezze az utolsó lecke után.\n\n##### Opcionális:\n\n-   [Optional] Tekintse át ezt <a href=\"https://docs.google.com/presentation/d/1RSJhxO9ZMtyLrt160kvAVdyekR4wT2fVSgbrPHR4HS0/template/preview\" target=\"_blank\">a Hasznos tippek diavetítést.</a> \n-   [Optional] Tekintse át a <a href=\"https://code.org/curriculum/docs/k-5/DebuggingTeacher.pdf\" target=\"_blank\">tanár hibakeresési útmutatóját, hogy készen álljon</a>  arra, hogy segítse a tanulókat a kód hibáinak megtalálásában és kijavításában. ",
+          "purpose": "A diákok megtanulják, hogy a tengeri ökoszisztémákban sok olyan organizmus található, amelyek kölcsönhatásba lépnek és egyensúlyban tartják egymást. Ez a lecke ötvözi a számítástechnikát az élettudományokkal, miközben a hallgatók olyan modellt hoznak létre, amely szimulálja a túlhalászás hatásait a számítástechnika feltételes állításaival, hogy megmutassa az ok és okozat a való életben. "
+        },
+        "csc-ecosystems-2023/Balancing the Ecosystem (pilot)": {
+          "name": "Az ökoszisztéma kiegyensúlyozása",
+          "overview": "Ebben a**készségépítés** leckében a tanulók három különböző megoldást olvasnak, majd programozzák a túlhalászás problémájára.\n\nEz a lecke ott kezdődik, ahol az előző lecke abbahagyta, a kiegyensúlyozatlan vízi ökoszisztéma modelljével. Először is, a hallgatók módosítják a hajó viselkedését, hogy az csak egy meghatározott „halászati zónán” belül mozoghasson. Második, a hallgatók új eseményt programozzák, hogy meghatározzák a „halászati szezont” és a „halászati tilalmakat”. Harmadszor, a hallgatók megtanulják, hogyan kell használni egy változót, hogy nyomon kövessék a hajó által eltávolított halak számát. Az óra a Check For Understanding szinttel zárul, hogy megbizonyosodjon arról, hogy a hallgatók megtanulták a túlhalászás három megoldását.",
+          "preparation": "-   Olvassa el a mellékelt cikket a</a>túlhalászás <a href=\"https://www.seafoodwatch.org/seafood-basics/sustainable-solutions/avoid-overfishing\" target=\"_blank\">megértéséről. Állványzat szükség szerint a hallgatók igényeinek kielégítéséhez. \n-   Játsszon végig a szinteken, és tekintse át a <a href=\"https://docs.google.com/presentation/d/1LtXP3ssc5-kOV1DgccN3957oAyF1cf-VaghZJsL7Vtk/template/preview\" target=\"_blank\">lecke diáit</a> \n-   Döntse el a hallgatói munkaidő és az egész csoportos oktatás közötti tempót.\n-   Fontolja meg a hallgatók számára az ajánlott előkészítés hozzárendelését [(link)](https://studio.code.org/s/csc-ecosystems-2023/lessons/2#activity-4986903).\n-   Fontolja meg ezeket a kapcsolódó kiterjesztési lehetőségeket [(link)](https://studio.code.org/s/csc-ecosystems-2023/lessons/2#activity-4986904).\n\n##### Opcionális:\n\n-   [Optional] Tekintse át ezt <a href=\"https://docs.google.com/presentation/d/1RSJhxO9ZMtyLrt160kvAVdyekR4wT2fVSgbrPHR4HS0/template/preview\" target=\"_blank\">a Hasznos tippek diavetítést.</a> \n-   [Optional] Tekintse át a <a href=\"https://code.org/curriculum/docs/k-5/DebuggingTeacher.pdf\" target=\"_blank\">tanár hibakeresési útmutatóját, hogy készen álljon</a>  arra, hogy segítse a tanulókat a kód hibáinak megtalálásában és kijavításában. ",
+          "purpose": "A diákok továbbra is tanulnak a kiegyensúlyozott és kiegyensúlyozatlan ökoszisztémákról. A túlhalászásról szóló tudományos cikket alapként használva a diákok gazdag megértést fognak kialakítani az ökoszisztéma élőlényei közötti kapcsolatokról. Végső soron a hallgatóknak lehetőségük lesz arra, hogy a helyi ökoszisztéma modellezésével alkalmazzák a tanultakat. "
+        },
+        "csc-ecosystems-2023/lesson-3": {
+          "name": "Az ökoszisztéma kódolása",
+          "overview": "Ebben a**készségépítés** leckében a diákok számos különböző ökoszisztéma-szimulációt fedeznek fel. A diákok választhatnak egy esőerdő, sivatag, sarkvidéki vagy vizes élőhelyek ökoszisztémájának felfedezését. Ökológus szerepet töltenek be, és megvizsgálják a növények és állatok közötti kölcsönhatásokat az egyes ökoszisztémák táplálékláncában. A hallgatók elolvassák az utasításokat, hogy megértsék az egyes ökoszisztémák előtt álló kihívást. Ezután módosítják a megfelelő kódot az ökoszisztéma kiegyensúlyozása érdekében. ",
+          "preparation": "-   Játsszon végig a szinteken, és tekintse át a <a href=\"https://docs.google.com/presentation/d/1LtXP3ssc5-kOV1DgccN3957oAyF1cf-VaghZJsL7Vtk/template/preview\" target=\"_blank\">lecke diáit</a> \n-   Döntse el a hallgatói munkaidő és az egész csoportos oktatás közötti tempót.\n-   Nyomtasson ökológus jegyzetfüzetet minden hallgató számára\n-   Fontolja meg ezeket a [bővítési lehetőségeket] a[0] lecke után"
+        },
+        "csc-mappinglandmarks-2023/US Landmarks": {
+          "name": "Térképkészítés Bevezetés",
+          "overview": "Ebben a**készségépítés** leckében a diákok megtanulják spritek létrehozását és animálását a térképen. \n\nEz a lecke két fő célt szolgál: (1) példát kínálni egy interaktív térkép kódolására, és (2) a hallgatók megismertetése a Sprite Lab kódolásával. A Sprite Lab egy nyílt végű kódolási környezet, amely blokk alapú kódot használ. A hallgatók ezen a leckén megtanulják a Sprite Lab alapjait, hogy megtervezzék és elkészítsék interaktív térképüket a következő órákban. \n\nEbben az integrált leckében a diákok megtanulják a társadalomtudományi fogalmakat egy kóddal ellátott térkép létrehozásával. Először is, a hallgatók megvizsgálják a térképek több példáját, és megvitatják, hogy milyen jellemzők alkotják a térképet. Az összefoglalóban, a hallgatók megvitatják a térképkészítő szerepét. \n\n\\_Megjegyzés: A térképek és képek nem minden esetben lesznek tökéletesen illeszkednek. Szerencsére van egy Sprite Upload eszköz, és hozzáférés az Animációs Könyvtárhoz, amelyet a hallgatók a testreszabást lehetővé tevő freeplay szinteken használhatnak. \\_",
+          "preparation": "-   Tekintse át és töltse ki az online oktatóanyagot.\n-   Tekintse át a diákat, és döntsön a hallgatói munkaidő és az egész csoportos oktatás közötti ütemről.\n-   Készítsen öntapadó jegyzeteket vagy kaparópapírt minden hallgató számára a befejező beszélgetésben.\n-   Ellenőrizze a technológiát, és döntse el, hogy előre kell-e elhárítania valamit.\n\n##### Opcionális:\n\n-   Tekintse át ezt <a href=\"https://docs.google.com/presentation/d/1RSJhxO9ZMtyLrt160kvAVdyekR4wT2fVSgbrPHR4HS0/template/preview\" target=\"_blank\">a Hasznos tippek diavetítést.</a> \n-   Tekintse át a <a href=\"https://code.org/curriculum/docs/k-5/DebuggingTeacher.pdf\" target=\"_blank\">tanár hibakeresési útmutatóját, hogy készen álljon</a>  arra, hogy segítse a tanulókat a kód hibáinak megtalálásában és kijavításában. \n-   Páros programozás - Döntse el, hogy szeretné-e, hogy a hallgatók részt vegyenek a páros programozásban. Nézze meg ezt a <a href=\"https://www.youtube.com/watch?v=sxToW3ixrwo\" target=\"_blank\">videót,</a> és látogasson el erre a <a href=\"https://support.code.org/hc/en-us/articles/115002122788-How-does-pair-programming-on-Code-org-work-\" target=\"_blank\">támogatási</a> oldalra, ahol további információt talál a páros programozásról.\n-   Egyéni Sprite feltöltések - Bár ez a későbbi órákban kerül bevezetésre, dönthet úgy, hogy megtanítja a diákoknak, hogyan töltsék fel saját sprite jelmezeiket és hátterüket ezzel a videóval. <a href=\"https://youtu.be/CHipUGfL_0M\" target=\"_blank\"></a>",
+          "purpose": "A hallgatók létrehoznak egy idegenvezető alkalmazást egy interaktív tanulási élményben, amely több tantárgyat integrál. A számítástechnika fogalmainak földrajzi tartalommal való kombinálásával az óra célja, hogy segítse a tanulókat mindkét tantárgy mélyebb megértésében és kapcsolataik megismerésében. Ez a lecke célja, hogy lehetővé tegye a hallgatók számára, hogy kódolási készségeiket valós kontextusban alkalmazzák egy idegenvezető alkalmazás létrehozásával, amely kiemeli a fontos tereptárgyakat, kulturális események, és történelmi helyek egy adott földrajzi helyen.",
+          "student_overview": "Ebben a leckében térképeket fogsz felfedezni! A térképek segítenek kitalálni, hová menjen. Történeteket mesélnek azokról az emberekről is, akik egy helyet alkotnak. \n\nA kóddal animálja a spriteket a háttérben, hogy interaktív térképet hozzon létre."
+        },
+        "csc-mappinglandmarks-2023/Local Landmarks - Unplugged Project Planning": {
+          "name": "Térképem megtervezése",
+          "overview": "Ebben a**nem csatlakoztatott** leckében a diákok elkészítik az idegenvezető alkalmazásuk projekttervét. A terv létrehozása fontos első lépés a kódolás megkezdése előtt. A pedagógusokat arra ösztönzik, hogy testre szabják ezt a projektet, hogy illeszkedjen a jelenleg tanított témák vagy szabványok kontextusába. Lásd alább a javaslatokat.  \n\n\\*\\*Javaslatok: \\*\\*\n\n-   A diákok feltérképezhetnek egy helyi területet, például otthonukat, osztálytermet vagy iskolájukat. \n-   A hallgatók túrát hozhatnak létre egy olyan államban, amelyet az osztályban tanulnak. \n-   Az oktató összekapcsolhatja a térképészeti projektet egy másik tanulmányi vagy kutatási területtel, például az ősi civilizációkkal. ",
+          "preparation": "-   Válasszon fókuszt a diákok tereptárgyak feltérképezésére.\n-   Nyomtasson ki egy <a href=\"https://docs.google.com/document/d/1t_-cd-f6EhhUbblu8nSGRajStY9FVwLnKn1Bj90GL3Q/template/preview\" target=\"_blank\">projekttervet minden hallgató</a> számára\n-   Tekintse át a <a href=\"https://docs.google.com/document/d/1fD9jkEkts5gtYN76P0I-1FGcEPi1q97Cuk0hBy18KvQ/template/preview\" target=\"_blank\">projekttervet - Tanári kulcs</a>",
+          "purpose": "Ennek a leckének az a célja, hogy strukturált és átgondolt megközelítést biztosítson az egyes hallgatók alkalmazásának tervezéséhez és fejlesztéséhez. Tevékenységi útmutató használatával az alkalmazás megtervezéséhez, a hallgatók felfedezhetik és rendszerezhetik ötleteiket, megalapozott döntéseket hozhat arról, hogy milyen információkat tartalmazzon, és felkészüljenek a projekt kódolási szakaszára.",
+          "student_overview": "Ebben a leckében elkészít egy tervet a tereptárgyak feltérképezéséhez. Mindig jó gyakorlat az, hogy megtervezze, mit fog kódolni, mielőtt beugrik. "
+        },
+        "csc-mappinglandmarks-2023/Local Landmarks - Coding Your Project": {
+          "name": "A térképem kódolása",
+          "overview": "Ebben a leckében a diákok az előző osztály projektterveivel készítik interaktív térképüket. A hallgatók a terv különböző szakaszaiban lehetnek.\n\nMiután a diákok számítógépekre költöznek, egy olyan szintű előrehaladást fognak követni, amely végigvezeti őket a háttér beállításának folyamatán, idegenvezető létrehozása, „Üdvözöljük” felirattal, mozgásba hozása, és legalább 2 tereptárgy hozzáadása, amelyek arra késztetik az idegenvezetőt, hogy mondjon valamit, amikor megérinti. \n\nVegye figyelembe, hogy ez egy projekt előrehaladása, ami azt jelenti, hogy a hallgatói kód követi őket egyik szintről a másikra. Ösztönözze a tanulókat, hogy minden szinten nyomják meg a „Futtatás” gombot, hogy elmentsék kódjukat, mielőtt továbblépnének a következő szintre.\n\nA lecke egy gyors galéria sétával ér véget a következő lecke előkészítése során, ahol a diákok megosztják projektjeiket az osztállyal. ",
+          "preparation": "-   Tekintse át és töltse ki az online oktatóanyagot.\n-   Készüljön fel az előző lecke tervezési útmutatóinak visszaküldésére. \n-   Fontolja meg a hallgatók támogatási stratégiáit, amelyek esetleg nem érzik magukat magabiztosnak vagy készen állnak a kreatív projekt megkezdésére. \n-   Fontolja meg ezeket a kapcsolódó kiterjesztési lehetőségeket ([link](https://studio.code.org/s/csc-mappinglandmarks-2023/lessons/3#activity-5197066))\n\n##### Opcionális:\n\n-   Kódolja be saját térképét példaként a diákok\n    számára - Tekintse át ezt a Hasznos tippek diavetítést. <a href=\"https://docs.google.com/presentation/d/1RSJhxO9ZMtyLrt160kvAVdyekR4wT2fVSgbrPHR4HS0/template/preview\" target=\"_blank\"></a> \n-   Tekintse át a <a href=\"https://code.org/curriculum/docs/k-5/DebuggingTeacher.pdf\" target=\"_blank\">tanár hibakeresési útmutatóját, hogy készen álljon</a>  arra, hogy segítse a tanulókat a kód hibáinak megtalálásában és kijavításában. ",
+          "purpose": "Ez a lecke célja, hogy gazdag és vonzó tanulási élményt nyújtson, amely ötvözi a számítástechnikát és a földrajzot, és segít a diákoknak olyan készségek és kompetenciák fejlesztésében, amelyek relevánsak a mai világban. Saját idegenvezető alkalmazásuk kódolásával, a hallgatók felfedezhetik egy adott hely földrajzi jellemzőit, kulturális események, és történelmi helyek. Kódon és technológián keresztül kifejezhetik megértésüket és elismerésüket e hely iránt. A lecke hangsúlyozza a tervezés, a problémamegoldás és az önkifejezés fontosságát is a kódolásban.",
+          "student_overview": "Itt az ideje, hogy elkészítse térképét egy idegenvezetővel, aki meglátogatja az egyes nevezetességeket. Követni fogja az utolsó osztályon tervezett tervet. Kövesse az utasításokat minden szinten gondosan. Ebben a projektben a kód követi Önt szintről szintre. "
+        },
+        "csc-mappinglandmarks-2023/Project Share Out": {
+          "name": "Térkép Share Out",
+          "overview": "Ez az utolsó lecke ebben a modulban, és az eddigi kemény munka megünneplésére szolgál. A hallgatók személyes gondolkodást fejeznek be a végső projektjükről. Ezután az egész osztály bemutatja projektjét társainak. Az előadások megkezdése előtt megvitatja a hatékony prezentáció tippjeit, beleértve a közönség elvárásait is.",
+          "preparation": "-   Nyomtasson ki egy **\\\\ \\* Interaktív térképek<a href=\"https://docs.google.com/document/d/1OxwZCmnJYKVUQIIsXqTkbbivvG_iXHVDL4FgR8j9V4E/template/preview\" target=\"_blank\">kódolása Reflections & Observations</a>** kiadványt minden hallgató számára.\n-   Fontolja meg ezeket a kapcsolódó \\*\\*bővítmények opciókat ([link](https://levelbuilder-studio.code.org/s/csc-mappinglandmarks-2023/lessons/4#activity-4335272)) \\*\\*",
+          "purpose": "Ez a lecke lehetővé teszi a hallgatók számára, hogy visszajelzés céljából megosszák idegenvezető alkalmazásukat társaikkal. Ez lehetőséget ad a hallgatók számára konstruktív kritikák fogadására, munkájuk elmélkedésére és projektjeik fejlesztésére. Azáltal, hogy megosztják alkalmazásukat társaikkal, a hallgatók visszajelzést kaphatnak munkájukról, és tanulhatnak osztálytársaik sikereiből és kihívásaiból.",
+          "student_overview": "Ebben az utolsó leckében, lehetősége lesz bemutatni projektjét az osztály többi tagjának! Első, időt vesz igénybe, hogy átgondolja a digitális mérföldkőnek számító térkép programozása során végzett kemény munkáját. Ezután megvitat néhány prezentációs tippet, és megmutatja kemény munkáját! "
+        },
+        "csc-starquilts-2023/Native American Star Quilts (beta)": {
+          "name": "Indián csillag paplanok",
+          "overview": "Ebben az Unplugged leckében, a hallgatók megismerkednek az indián csillagpaplanokkal és azok jelentőségével. Ezután a diákok 6 hegyes csillag alakot készítenek papíron. Az egyik fő cél az alakzaton belüli minták megvitatása. Ezek az ötletek kulcsfontosságúak lesznek a tevékenység online kódolási részeiben a későbbiekben. ",
+          "preparation": "-   Játsszon végig a szinteken, és tekintse át a lecke diáit\n-   Döntse el a hallgatói munkaidő és az egész csoportos oktatás közötti tempót.\n-   Fontolja meg ezeket a kapcsolódó kiterjesztési lehetőségeket (link), hogy felfedezze az utolsó lecke után.\n\n##### Opcionális:\n\n-   Tekintse át ezt <a href=\"https://docs.google.com/presentation/d/1RSJhxO9ZMtyLrt160kvAVdyekR4wT2fVSgbrPHR4HS0/template/preview\" target=\"_blank\">a Hasznos tippek diavetítést.</a> \n-   Tekintse át a <a href=\"https://code.org/curriculum/docs/k-5/DebuggingTeacher.pdf\" target=\"_blank\">tanár hibakeresési útmutatóját, hogy készen álljon</a>  arra, hogy segítse a tanulókat a kód hibáinak megtalálásában és kijavításában. \n-   Páros programozás - Döntse el, hogy szeretné-e, hogy a hallgatók részt vegyenek a páros programozásban. Nézze meg ezt a <a href=\"https://www.youtube.com/watch?v=sxToW3ixrwo\" target=\"_blank\">videót,</a> és látogasson el erre a <a href=\"https://support.code.org/hc/en-us/articles/115002122788-How-does-pair-programming-on-Code-org-work-\" target=\"_blank\">támogatási</a> oldalra, ahol további információt talál a páros programozásról.",
+          "purpose": "Ma mindent megtudhat a Csillagpaplanokról. Ezután ceruzával, papírral és színekkel kezdheti el megtervezni saját 6 pontos csillagalakját. Legyen figyelve a mintákra!"
+        },
+        "csc-starquilts-2023/Getting Started with The Artist (beta)": {
+          "name": "Első lépések a művészrel",
+          "overview": "Ez a készségfejlesztő lecke lehetőséget nyújt a hallgatók számára, hogy megismerjék az Artist Tool-t, és fontos kódolási készségeket építsenek ki. A hallgatók megtanulják, hogyan működik a bélyegző eszköz, hogyan lehet x fokkal szögben elfordítani, és hogyan kell használni a hurkokat. A diákok egyszerű csillag alakot hoznak létre. A szintek végére a hallgatók manipulálják a szögméréseket, hogy lássák a csillagon lévő pontok számára gyakorolt hatást. A számítógépek pontosságot és pontosságot tesznek lehetővé az alakzatok és minták tanulmányozásában, mivel a képek másodpercek alatt készülnek, ahelyett, hogy kézzel rajzolt alakzatokra támaszkodnának.",
+          "preparation": "-   Játsszon végig a szinteken, és tekintse át a lecke diáit\n-   Döntse el a hallgatói munkaidő és az egész csoportos oktatás közötti tempót.\n-   Mielőtt elkezdené (), fontolja meg az ajánlott előkészítési tevékenységek feltárását ([link](https://studio.code.org/s/csc-starquilts-2023/lessons/2#activity-4365327)).\n\n##### Opcionális:\n\n-   [Optional] Tekintse át ezt a\\*\\* [tanári útmutató a hibakereséshez](https://code.org/curriculum/docs/k-5/DebuggingTeacher.pdf)\\*\\*, hogy készen álljon arra, hogy segítsen a diákoknak megtalálni és kijavítani a kód hibáit. \n-   [Optional] **Páros programozás** - Döntse el, hogy szeretné-e, hogy a hallgatók részt vegyenek a páros programozásban. Nézze meg ezt, [video](https://youtu.be/sxToW3ixrwo) és látogasson el erre az [Support](https://support.code.org/hc/en-us/articles/115002122788-How-does-pair-programming-on-Code-org-work-) oldalra további információkért.\n-   [Optional] Ha az osztályterme mintatömbökkel rendelkezik, helyezzen néhányat a hallgatói asztalokhoz.",
+          "purpose": "Ebben a leckében bemutatjuk a Művész. Programozni fogja az Artist, hogy hozzon létre egy csillag alakot. Fontos lesz észrevenni a mintákat az alakzatokban. "
+        },
+        "csc-starquilts-2023/Code Your Star Quilt (beta)": {
+          "name": "A Star paplan kódolása",
+          "overview": "Ennek a tevékenységnek az utolsó leckéjében, a hallgatók készen állnak arra, hogy saját Csillagpaplanot építsenek. A hallgatók felépítik a csillag egy pontját, majd hurkolják a kódjukat, hogy végül a 8 pontos hagyományos csillagpaplan legyen. A csillagpaplanokat tehetségesnek szánják, így a hallgatók megoszthatják projektjüket valakivel.",
+          "preparation": "-   Játsszon végig a szinteken, és tekintse át a lecke diáit\n-   Döntse el a hallgatói munkaidő és az egész csoportos oktatás közötti tempót.\n-   Fontolja meg ezeket a kapcsolódó kiterjesztési lehetőségeket ([link](https://studio.code.org/s/csc-starquilts-2023/lessons/3#activity-4365328)), hogy feltárja az utolsó lecke után.\n\n##### Opcionális:\n\n-   Tekintse át a <a href=\"https://code.org/curriculum/docs/k-5/DebuggingTeacher.pdf\" target=\"_blank\">tanár hibakeresési útmutatóját, hogy készen álljon arra, hogy segítsen</a>  a diákoknak megtalálni és kijavítani a kódjukban található hibákat. \n-   Páros programozás - Döntse el, hogy szeretné-e, hogy a hallgatók részt vegyenek a páros programozásban. Nézze meg ezt a <a href=\"https://www.youtube.com/watch?v=sxToW3ixrwo\" target=\"_blank\">videót,</a> és látogasson el erre a <a href=\"https://support.code.org/hc/en-us/articles/115002122788-How-does-pair-programming-on-Code-org-work-\" target=\"_blank\">támogatási</a> oldalra, ahol további információt talál a páros programozásról.",
+          "purpose": "Ma, felépítjük a kódot, hogy létrehozzuk a saját csillagpaplanunkat. Emlékezik, az indián hagyomány szerint a csillagpaplanok különleges alkalmakkor történő ajándékozása szeretetet, tiszteletet és mások iránti tiszteletet fejezi ki. A digitális csillagpaplan ennek a hagyománynak a modern változata, amely lehetővé teszi, hogy új és kreatív módon ossza meg szeretetét és elismerését másokkal. Amikor elkészültünk, feltétlenül ossza meg csillagpaplanját valakivel, akit szeret és értékel.",
+          "student_overview": "Ma, felépítjük a kódot, hogy létrehozzuk a saját csillagpaplanunkat. Emlékezik, az indián hagyomány szerint a csillagpaplanok különleges alkalmakkor történő ajándékozása szeretetet, tiszteletet és mások iránti tiszteletet fejezi ki. A digitális csillagpaplan ennek a hagyománynak a modern változata, amely lehetővé teszi, hogy új és kreatív módon ossza meg szeretetét és elismerését másokkal. Amikor elkészültünk, feltétlenül ossza meg csillagpaplanját valakivel, akit szeret és értékel."
+        },
+        "csc-timecapsule-2023/Time Capsule Introduction (pilot)": {
+          "name": "Time Capsule Bevezetés",
+          "overview": "Az 1. leckében a hallgatók a számítástechnika segítségével életre keltenek egy digitális időkapszulát! A hallgatók megtanulják a Sprite Lab alapjait egy adott, fontos pillanatról írt rövid vers hangulatának és képeinek kódolásával. A hallgatóknak különféle példái lesznek az időkapszula-versek közül, amelyek közül választhatnak, 1905-2023 között. A hallgatók gyakorolják a kódblokkok használatát a háttér beállításához, szöveges effektusok beállításához, viselkedéssel spritek létrehozásához, hangok lejátszásához és események kiváltásához a szöveg bizonyos soraiban.",
+          "preparation": "-   Játsszon át a szinteken, és tekintse át a lecke\n    diáit - Azonosítsa azokat a szinteket, ahol a hallgatók további támogatást igényelnek\n-   Egyes szintek lejátszásához hang szükséges. Adja ki a fejhallgatót idő előtt. \n-   Mielőtt elkezdené (), fontolja meg az ajánlott előkészítési tevékenységek feltárását ([link](https://studio.code.org/s/csc-timecapsule-2023/lessons/1#activity-4365340)).\n-   Fontolja meg ezeket a kapcsolódó kiterjesztési lehetőségeket (link), hogy felfedezze az utolsó lecke után.",
+          "purpose": "Ez a lecke vonzó és interaktív tanulási élményt nyújt, amely integrálja a társadalomtudományi tanulási szabványokat a számítástechnikai célokkal. E két tartalmi szabvány kombinálásával, az óra célja, hogy segítse a hallgatókat mindkét tantárgy mélyebb megértésében és a közöttük lévő kapcsolatok megismerésében.",
+          "student_overview": "Ebben a leckében bemutatjuk az időkapszulák különböző példáit. Az Ön feladata, hogy megtanulja a Sprite Lab kódolásának alapjait, hogy ezeket a verseket színekkel, hangokkal, animációval és zenével életre kelthesse! Képzelje el, hogy elmondja valakinek 50 év múlva a mostani életről. Talán megosztja az első elektromos járműveket vagy az első dalt, amely eléri az 1 milliárd megtekintést a YouTube-on. Hátterek, szöveges effektusok, spritek és hangok kiválasztásával olyan részleteket adhat hozzá, amelyek a jövőben erőteljes időkapszulát hoznak létre valakinek. "
+        },
+        "csc-timecapsule-2023/My Time Capsule Story (pilot)": {
+          "name": "A Time Capsule írása",
+          "overview": "Ebben a leckében, a hallgatók megtervezik és megírják saját időkapszula-versüket. A hallgatók átgondolják életüket és személyes tapasztalataikat, hogy kiválasszanak egy fontos ötletet egy rövid vershez az aktuális időszakról. A hallgatóknak el kell képzelniük, hogy valaki 50 év múlva mit szeretne tudni a mai napról.",
+          "preparation": "-   Tekintse át a lecke diáit.\n-   Nyomtasson egyet **Írja meg saját időkapszula-vers-kiadványát** (<a href=\"https://docs.google.com/document/d/1fahr11zX92NW-rLdyZBqrNK2VqgOGtCACkcT87M_luU/template/preview\" target=\"_blank\">Mondatszárak</a> \\\\ | <a href=\"https://docs.google.com/document/d/1-aPA3uJIKJAuQ_2Gtck1Ma79eCFY88ZC8YzegQIckG4/template/preview\t\n    \" target=\"_blank\">Kérdésfogó táska</a>)\n    minden hallgató számára.",
+          "purpose": "Ma megírja saját időkapszula-versét. Ahogy tervezed, gondold át, mit szeretne valaki a jövőben megismerni az életedről. Képzelje el, hogy leendő unokái megkérdezik tőled, milyen volt fiatal korodban. A szemeden keresztül akarják látni az életet. A következő osztályban kódolja az időkapszula versét. Kezdje el gondolkodni azon, hogy milyen háttereket, szöveges effektusokat, hangokat, spriteket és eseményeket használhat."
+        },
+        "csc-timecapsule-2023/Coding My Time Capsule (pilot)": {
+          "name": "A Time Capsule kódolása",
+          "overview": "Ebben a leckében, a diákok felmelegednek, ha elolvassák az időkapszula-vers példáit. Aztán elkezdenek kódolni saját időkapszula-verseiket. A hallgatók az „Enter My Own” funkcióval adják meg kitöltött verseiket az utolsó osztályban kitöltött kiadványból. Végül a diákok kódblokkokat használnak projektjeik animálására és fejlesztésére. Ehhez áttekinti az 1. leckében megtanult készségeket.",
+          "preparation": "-   Játsszon végig a szinteken, és tekintse át a lecke diáit\n-   Azonosítsa azokat a szinteket, ahol a hallgatóknak további támogatásra lesz szükségük\n-   Győződjön meg arról, hogy a hallgatók rendelkezzenek a Write Your Time Capsule Poem segédlappal az utolsó osztályból.\n-   Nyomtasson ki egy <a href=\"https://docs.google.com/document/d/1_Hg7hhayhHsTCWDo0uJspseuBbtfTqgx1u9frnmvf1Y/template/preview\" target=\"_blank\">Time Capsule Poem ellenőrzőlistát</a> minden hallgató számára.\n-   Fontolja meg a fejhallgató szükségességét, ha a hallgatók hangokat terveznek hozzáadni projektjeikhez\n-   Készítsen saját időkapszula-verset példaként a hallgatók számára",
+          "purpose": "A hallgatók személyre szabhatják verseiket azáltal, hogy kiválasztják, milyen hatásokat szeretnének hozzáadni a programjukhoz. Saját érdekeik és személyes tapasztalataik szerint fogják kurálni projektjeiket.",
+          "student_overview": "Ma személyre szabhatja versét azzal, hogy kiválasztja, milyen effektusokat szeretne hozzáadni az időkapszulához. "
+        },
+        "csc-timecapsule-2023/Sharing My Time Capsule (pilot)": {
+          "name": "Megosztás",
+          "overview": "Ebben az utolsó leckében, a hallgatók megosztják egymással alkalmazásaikat. Először átmásolják és beillesztik alkalmazáshivatkozásaikat egy új lapra. Ezután a diákok körbejárják és lefuttatják egymás időkapszula-történeteit. Végül az egész osztály megbeszélést folytat a kuráció fontosságáról és arról, hogyan lehet eldönteni, hogy milyen elemeket tartson fenn a történelem átmondásában.",
+          "preparation": "-   Húzza ki a hallgatói segédanyagokat és projekteket az előző osztályból\n-   Adjon ki egy halom Post It jegyzetet (vagy a  <a href=\"https://docs.google.com/document/d/16OGg95k4WsOrusXBO-jjTBFMstI2Att8j6ggZCgpvls/template/preview\" target=\"_blank\">Gallery Walk Sticky Notes</a>) minden hallgatónak \n-   Fontolja meg ezeket a kapcsolódó kiterjesztési lehetőségeket ([link](https://studio.code.org/s/csc-timecapsule-2023/lessons/4#activity-4365344)), hogy felfedezze az utolsó lecke után.",
+          "purpose": "Ez a lecke lehetőséget nyújt a hallgatóknak arra, hogy bemutassák tanulásukat és visszajelzést kapjanak társaiktól. Az időkapszula-alkalmazások megosztásával a diákok láthatják, hogyan közelítették meg osztálytársaik ugyanazt a feladatot, és tanulhatnak egymás sikereiből és kihívásaiból."
+        },
+        "poetry-2023/Poem Art": {
+          "name": "Animáljon egy verset Bevezetés",
+          "overview": "Ebben a CS és ELA integrált leckében az új kódolók számára, a diákok egy verset animálnak kóddal, hogy szemléltessük a vers hangulatát. Először is, a diákok elolvassák és felismerik egy híres vers hangulatát. Ezután megtalálják a megfelelő effektusokat és képeket, amelyek segítenek szemléltetni a vers hangulatát. Végül a diákok eseményeket (kódot) használnak a hangulatváltozás szemléltetésére vagy új képek animálására egy versben.",
+          "preparation": "-   Játsszon végig a szinteken, és tekintse át a lecke diáit\n-   Döntse el a hallgatói munkaidő és az egész csoportos oktatás közötti tempót.\n-   Mielőtt elkezdené (), fontolja meg az ajánlott előkészítési tevékenységek feltárását ([link](https://studio.code.org/s/poetry-2023/lessons/1#activity-4365332)).\n-   Fontolja meg ezeket a kapcsolódó kiterjesztési lehetőségeket ([link](https://levelbuilder-studio.code.org/s/poetry-2023/lessons/1#activity-43653330)), hogy feltárja az utolsó lecke után.\n\n##### Opcionális:\n\n-   [Optional] Tekintse át ezt a\\*\\* [tanári útmutató a hibakereséshez](https://code.org/curriculum/docs/k-5/DebuggingTeacher.pdf)\\*\\*, hogy készen álljon arra, hogy segítsen a diákoknak megtalálni és kijavítani a kód hibáit. \n-   [Optional] **Páros programozás** - Döntse el, hogy szeretné-e, hogy a hallgatók részt vegyenek a páros programozásban. Nézze meg ezt, [video](https://youtu.be/sxToW3ixrwo) és látogasson el erre az [Support](https://support.code.org/hc/en-us/articles/115002122788-How-does-pair-programming-on-Code-org-work-) oldalra további információkért.",
+          "purpose": "Ennek a leckének az a célja, hogy megtanítsa a hallgatókat arra, hogyan kell versművészetet létrehozni egy vers hangulatának animálására szolgáló kód segítségével. Ez vonzó és interaktív tanulási élményt nyújt, amely integrálja a nyelvművészetet és a számítástechnikát. A költészetelemzés és a kódolás kombinálásával az óra célja, hogy segítse a tanulókat a nyelv érzelmi hatásainak mélyebb megértésében, és ezt a hatást a vizuális művészeten keresztül fejezze ki.",
+          "student_overview": "A költészet szavakkal alkotja a művészetet. A kód segítségével vizuális effektusokat és képeket adhat hozzá egy vers animálásához. "
+        },
+        "poetry-2023/Writing My Time Capsule Poem": {
+          "name": "A versem írása",
+          "overview": "Ebben a leckében a diákok megtervezik és megírják saját versüket. A hallgatók átgondolják életüket és személyes tapasztalataikat, hogy kiválasszanak egy fontos ötletet egy rövid vershez, amelyet animálhatnak. A következő leckében a diákok kódolják verseiket, ezért fontos, hogy rövid verset készítsenek.",
+          "preparation": "-   Tekintse át a lecke diáit.\n-   Nyomtasson egyet **Írja meg saját vers-kiadványát** (<a href=\"https://docs.google.com/document/d/1b6w_lOnibUHyDLYCP3rAWED5iElGm6LOQAJwG-hlih0/template/preview\n    \" target=\"_blank\">mondatszárak</a> \\\\ | <a href=\"https://docs.google.com/document/d/1V-DaWOIUk0xT7NYTzx3AEt4my-jc-Hx4vy21Kl4SPoE/template/preview\" target=\"_blank\">Témák</a>) minden hallgató számára.\n-   Fontolja meg ezeket a kapcsolódó kiterjesztési lehetőségeket ([link](https://studio.code.org/s/poetry-2023/lessons/2#activity-43653340)), hogy feltárja az utolsó lecke után.",
+          "purpose": "A költészet és a kódolás kombinálásával az óra célja, hogy segítse a tanulókat a kreatív folyamat mélyebb megértésében, és ötleteiket és érzelmeiket mind a nyelv, mind a technológia révén kifejezzék. Ahogy a diákok döntéseket hoznak a szóválasztásról, arra ösztönzik őket, hogy tervezzék meg, hogyan használják kódjukat kreatívan és értelmesen, hogy vizuálisan ábrázolják versük érzelmi hatását. ",
+          "student_overview": "Ma megírja a saját versét. Ahogy tervezed, gondolj arra, hogy milyen témák fontosak az Ön számára. Mit szeretne megosztani az olvasókkal? A következő osztályban kódolja a versét. Kezdje el gondolkodni azon, hogy milyen háttereket, szöveges effektusokat, hangokat, spriteket és eseményeket használhat."
+        },
+        "poetry-2023/Coding My Time Capsule": {
+          "name": "A versem kódolása",
+          "overview": "Ebben a CS és ELA integrált leckében a diákok számítógépükön dolgoznak, hogy verseiket kóddal animálják. Az 1. leckében a diákok egy vers legördülő menüvel választották ki az animálni kívánt verset. Ebben a leckében a diákok saját verseiket írják be a játszótérbe, majd kódblokkokkal adják hozzá a háttereket, effektusokat, hangokat és spriteket.",
+          "preparation": "-   Játsszon végig a szinteken, és nézze át a lecke diáit idő előtt, hogy felkészüljön a lecke kódolási és vitarészeire.\n-   Győződjön meg arról, hogy a hallgatók megkapják az Írd meg a saját versedet az utolsó osztályból.\n-   Nyomtasson egyet **<a href=\"https://docs.google.com/document/d/14M3WIBwJg-YUKVrchzKfunAmQaQhuA7-qxYpS738K_0/template/preview\" target=\"_blank\">Vers</a>ellenőrzőlista** minden hallgató számára.\n-   Fontolja meg ezeket a kapcsolódó kiterjesztési lehetőségeket ([link](https://studio.code.org/s/poetry-2023/lessons/3#activity-4365335)), hogy feltárja az utolsó lecke után.\n\n#### Opcionális\n\n-   Fontolja meg a fejhallgató szükségességét, ha a hallgatók hangokat terveznek hozzáadni projektjükhöz.\n-   Hozzon létre saját versalkalmazást példaként a hallgatók számára.",
+          "purpose": "A hallgatók személyre szabhatják verseiket azáltal, hogy kiválasztják, milyen hatásokat szeretnének hozzáadni a programjukhoz. Saját érdekeik és személyes tapasztalataik szerint fogják kurálni projektjeiket.",
+          "student_overview": "Ma személyre szabhatja versét azzal, hogy kiválasztja, milyen effektusokat szeretne hozzáadni az időkapszulához. "
+        },
+        "poetry-2023/Poetry Circle": {
+          "overview": "Ebben a leckében, a diákok felváltva osztják meg versalkalmazásukat társaikkal. A hallgatók azzal kezdik, hogy megvitatják a visszajelzés adásának és megszerzésének fontosságát. Azután, a hallgatók verspáros megosztást folytatnak azáltal, hogy megosztják versalkalmazásaikat egy partnerrel, és visszajelzést adnak és kapnak. Végül az egész osztálynak lesz egy Költészeti Kör, amelyet megbeszélés követ egy önkéntes diák versének hangulatáról és hangvételéről, valamint vizuális effektusairól.",
+          "preparation": "-   Készítsen elő egy számítógépet hallgatónként.\n-   Diákonként készítsen egy példányt a**<a href=\"https://docs.google.com/document/d/1kO4SNEIVyM0GrxxJb6NzVYauXXpi6rzQkDIfrzQf1Ls/template/preview\" target=\"_blank\">Ossza meg</a>alkalmazását** kiadványt.\n-   Győződjön meg arról, hogy a hallgatók kéznél vannak eredeti versük másolata ehhez a leckéhez.  \n-   Ossza fel az osztályt párokra a Poetry Pair-Share tevékenységhez.\n-   Fontolja meg ezeket a kapcsolódó kiterjesztési lehetőségeket ([link](https://studio.code.org/s/poetry-2023/lessons/4#activity-4365336)), hogy felfedezze ezt a leckét.\n\n##### Opcionális\n\n-   Különösen távoktatáshoz: Határozza meg, hogy be kell-e állítania egy digitális dokumentumot vagy megosztott online helyet az egyes hallgatók alkalmazás URL-jének közzétételéhez (lásd a tanár sablonját a „Linkek” részben). ",
+          "purpose": "A kreatív folyamat fontos szempontja a versművészeti projektek megosztása társaikkal. Lehetővé teszi a diákok számára, hogy visszajelzést kapjanak, együttműködjenek másokkal, tükrözzék saját munkájukat, és megünnepeljék teljesítményüket. Ha megosztják munkájukat másokkal, a diákok kreatív gondolkodókként növekedhetnek és fejlődhetnek, és fontos kommunikációs és interperszonális készségeket fejleszthetnek.",
+          "student_overview": "Ossza meg új verses alkalmazásait barátaival! "
+        },
+        "coursea-2023/Safety in My Online Neighborhood": {
+          "name": "Online környezetem biztonsága",
+          "overview": "[![common sense education](https://curriculum.code.org/static/img/common_sense_education.png)](https://www.commonsense.org)\n\nEredetileg a leckét a Common Sense Education készítette. [Tudj meg többet róla.](https://www.commonsense.org/education/digital-citizenship/curriculum)\n\nAz internet ereje által a diákok megtapasztalják és meg is láthathatják azokat a helyeket, amelyeket esetleg személyesen nem kereshetnek fel. De csakúgy, mint a való világban való utazás során, itt is fontos, hogy az utazás során biztonságban legyenek. Ezen a virtuális kirándoláson a gyerekek gyakorolhatják, hogy hogyan maradjanak biztonságban az online kalandozásaik során."
+        },
+        "coursea-2023/Learn to Drag and Drop": {
+          "name": "Ismerkedés a Fogd és Vidd technikával",
+          "overview": "Ez a **készségfejlesztő** lecke képet ad a hallgatóknak arról, hogy mire számíthatnak, amikor a számítógépes laborba indulnak. Egy rövid beszélgetéssel kezdődik, amelyben megismerik a a számítógépes laborban való viselkedést, majd áttérnek a számítógép használatára, és online rejtvényeket oldanak meg.",
+          "student_overview": "A feladvány befejezéséhez kattints és húzd át"
+        },
+        "coursea-2023/Happy Maps": {
+          "name": "Vidám térképek",
+          "overview": "Ez a **kontextusbeállító** lecke összehozza a csapatokat egy egyszerű feladattal: juttasd el a \"Flurb” -öt a gyümölcshöz. A diákok gyakorolják a pontos utasítások megadását, miközben azon dolgoznak, hogy az utasításokat lefordítsák a megadott szimbólumokra."
+        },
+        "coursea-2023/Sequencing with Scrat": {
+          "name": "Szekvenciák a Motkánnyal",
+          "overview": "Ebben a **készségépítő** leckében a diákok szekvenciális algoritmusokat dolgoznak ki, amelyek segítségével a mókusszerű karaktert a labirintus egyik oldaláról a másik oldalon lévő makkhoz mozgatják. Ehhez lineáris sorrendben rakják össze a kódblokkokat."
+        },
+        "coursea-2023/Programming with Rey and BB-8": {
+          "name": "Programozás Rey és BB-8 segítségével",
+          "overview": "Ebben a leckében a diákok újszerű programozási képességeiket bonyolultabb módon fogják használni egy trükkös tanfolyamban, BB-8-tet irányítva.",
+          "student_overview": "Segíts BB-8-nek begyűjteni a fémdarabokat"
+        },
+        "coursea-2023/The Big Event Jr": {
+          "name": "Az ifjabbik Nagy Esemény"
+        },
+        "coursea-2023/End of Course Project": {
+          "name": "Kurzus Projekt vége"
+        },
+        "courseb-2023/Digital Trails": {
+          "name": "Digitális útonalak",
+          "overview": " [![common sense education](https://curriculum.code.org/static/img/common_sense_education.png)](https://www.commonsense.org)\n\nEzt a leckét eredetileg a Common Sense Education készítette. [Learn more.](https://www.commonsense.org/education/digital-citizenship/curriculum)\n\nAmit online csinálsz, az mindig online marad? A diákok megtanulják, hogy az általuk online megosztott információk digitális lábnyomot hagynak maguk után. Az, hogy ez az útvonal egy keskeny ösvény lesz-e, vagy egy széles út, káros lesz-e számukra, vagy hasznos, attól függ, hogy hogyan kezelik ezt a lábnyomot. A tanulók összehasonlíthatják a különféle nyomvonalakat, és elsajátíthatják a kritikus gondolkodást, ami alapján képesek lesznek megfelelő döntéseket hozni arról, hogy milyen információkat hagynak maguk után a digiális úton.",
+          "preparation": "-   Az oktatási anyagok áttekintése.\n-   Egyes tanulók szórólapjának nyomtatása.",
+          "purpose": "A Common Sense digitális állampolgársági tanterve a gyermekekkel, a médiával és a technológiával kapcsolatos legújabb kitatások alapján hat fő témakörrel foglalkozik. Ez a lecke a digitális lábnyomra és identitásra összpontosít. A tanulók megismerik az online megosztás előnyeit és kockázatait, és felfedezik, hogy a digitális személyiség hogyan befolyásolhatja az önismeretet, hírnevet, és a kapcsolatokat.",
+          "student_overview": "A digitális lábnyom megismerése, valamint a biztonság megteremtése a webhelyek látogatása során. "
+        },
+        "courseb-2023/Move It, Move It": {
+          "name": "Gyerünk, gyerünk!"
+        },
+        "courseb-2023/Programming with Harvester": {
+          "name": "Programozás az aratóval"
+        },
+        "courseb-2023/Getting Loopy": {
+          "name": "Ciklikusság"
+        },
+        "courseb-2023/The Right App": {
+          "name": "A megfelelő alkalmazás"
+        },
+        "courseb-2023/The Big Event Jr": {
+          "name": "Az ifjabbik Nagy Esemény"
+        },
+        "courseb-2023/Mini-Project: A Royal Battle with Events": {
+          "name": "Mini-projekt: Királyi csata eseményekkel"
+        },
+        "courseb-2023/End of Course Project": {
+          "name": "Kurzus Projekt vége"
+        },
+        "coursec-2023/Loops with Rey and BB-8": {
+          "name": "Ciklusok Reyjel és BB-8-tel",
+          "overview": "A „Getting Loopy” című utasítások ismétlődésének koncepciójára építve ebben a szakaszban a tanulók ciklusokat használnak, amiben BB-8 lesz a segítségükre.",
+          "student_overview": "Segíts BB-8-nek teljesíteni ezt a kihívást ciklusok használatával! "
+        },
+        "coursec-2023/The Big Event": {
+          "name": "A nagy esemény"
+        },
+        "coursec-2023/Picturing Data": {
+          "name": "Az adatok leképezése"
+        },
+        "coursec-2023/Binary Bracelets": {
+          "name": "Bináris karkötők"
+        },
+        "coursec-2023/End of Course Project": {
+          "name": "Kurzus Projekt vége"
+        },
+        "coursed-2023/Graph Paper Programming": {
+          "name": "Grafikus programozás"
+        },
+        "coursed-2023/Relay Programming": {
+          "name": "Váltó programozás"
+        },
+        "coursed-2023/Dance Party": {
+          "name": "Táncos buli",
+          "purpose": "A leckék a kódírás és az eseményprogramozás fő számítástechnikai koncepcióit mutatják be (blokkok segítségével)."
+        },
+        "coursed-2023/Conditionals with Cards": {
+          "name": "Feltételek kártyákkal"
+        },
+        "coursed-2023/End of Course Project": {
+          "name": "Kurzus Projekt vége"
+        },
+        "coursee-2023/Private and Personal Information": {
+          "name": "Magán és személyes információk",
+          "preparation": "-   Az oktatási anyagok áttekintése.\n-   Egyes tanulók szórólapjának nyomtatása."
+        },
+        "coursee-2023/Swimming Fish with Sprite Lab": {
+          "preparation": "-   Játszd végig a feladványokat, keresd azokat a területeket, amelyek problémát jelenthetnek az osztályodnak.\n-   Ellenőrizd, hogy minden diáknak van egy olyan naplója, amelyben a gondolatait rögzíti."
+        },
+        "coursee-2023/Hello World": {
+          "name": "Helló világ"
+        },
+        "coursee-2023/Mini-Project: About Me": {
+          "name": "Miniprojekt: Rólam"
+        },
+        "coursee-2023/Drawing with Loops": {
+          "preparation": "-   Játszd végig a feladványokat, keresd azokat a területeket, amelyek problémát jelenthetnek az osztályodnak.\n-   Ellenőrizd, hogy minden diáknak van egy olyan naplója, amelyben a gondolatait rögzíti."
+        },
+        "coursee-2023/Songwriting": {
+          "name": "Dalszerzés paraméterekkel"
+        },
+        "coursee-2023/Functions in Minecraft": {
+          "preparation": "-   Játszd végig a feladványokat, keresd azokat a területeket, amelyek problémát jelenthetnek az osztályodnak.\n-   Ellenőrizd, hogy minden diáknak van egy olyan naplója, amelyben a gondolatait rögzíti."
+        },
+        "coursee-2023/Functions with Artist": {
+          "preparation": "-   Játszd végig a feladványokat, keresd azokat a területeket, amelyek problémát jelenthetnek az osztályodnak.\n-   Ellenőrizd, hogy minden diáknak van egy olyan naplója, amelyben a gondolatait rögzíti."
+        },
+        "coursee-2023/Conditionals with the Farmer": {
+          "preparation": "-   Játszd végig a feladványokat, keresd azokat a területeket, amelyek problémát jelenthetnek az osztályodnak.\n-   Ellenőrizd, hogy minden diáknak van egy olyan naplója, amelyben a gondolatait rögzíti."
+        },
+        "coursee-2023/Functions with Harvester": {
+          "preparation": "-   Játszd végig a feladványokat, keresd azokat a területeket, amelyek problémát jelenthetnek az osztályodnak.\n-   Ellenőrizd, hogy minden diáknak van egy olyan naplója, amelyben a gondolatait rögzíti."
+        },
+        "coursee-2023/Designing for Accessibility": {
+          "name": "Hozzáférhetőség tervezése"
+        },
+        "coursee-2023/Digital Sharing": {
+          "name": "Digitális megosztás"
+        },
+        "coursee-2023/End of Course Project": {
+          "name": "Kurzus Projekt vége"
+        },
+        "coursef-2023/Mini-Project: Virtual Pet": {
+          "name": "Miniprojekt: Virtuális kisállat",
+          "preparation": "-   Játszd végig a feladványokat, keresd azokat a területeket, amelyek problémát jelenthetnek az osztályodnak.\n-   Ellenőrizd, hogy minden diáknak van egy olyan naplója, amelyben a gondolatait rögzíti."
+        },
+        "coursef-2023/Mini-Project: User Input Programs": {
+          "name": "Miniprojekt: Felhasználói adatbeviteli programok"
+        },
+        "coursef-2023/Outbreak": {
+          "overview": "Ez a leckében az események köré épülő **készségfejlesztést** kombináljuk egy **miniprojekttel**, ahol a diákok saját számítógépes szimulációt készíthetnek a Sprite Lab program segítségével. A diákok tanulmányozva a szimulációt megértik, hogy milyen gyorsan terjed egy vírus, és hogy mit lehet tenni a terjedés lassítása érdekében. ",
+          "preparation": "-   Játszd végig a feladványokat, keresd azokat a területeket, amelyek problémát jelenthetnek az osztályodnak.\n-   Ellenőrizd, hogy minden diáknak van egy olyan naplója, amelyben a gondolatait rögzíti.",
+          "purpose": "Az előző leckében a diákok egy egyszerű szimulációból származó adatokat gyűjtöttek és értelmeztek.  Ebben a leckében a diákok az utasításokat követve saját szimulációs modelljüket programozzák. A diákok a valós világban előforduló vírusjárványokról szerzett előzetes ismereteiket egy fiktív forgatókönyvre fogják alkalmazni. ",
+          "student_overview": "Egy vírus elérte Szörnyvárost! Tanulj meg vírusszimulátort készíteni, és segíts a szörnyeknek, hogy újra egészségesek legyenek."
+        },
+        "coursef-2023/The Internet": {
+          "name": "Az internet"
+        },
+        "coursef-2023/End of Course Project": {
+          "name": "Kurzus Projekt vége"
+        },
+        "express-2023/Dance Party": {
+          "name": "Táncos buli",
+          "purpose": "A leckék a kódírás és az eseményprogramozás fő számítástechnikai koncepcióit mutatják be (blokkok segítségével)."
+        },
+        "express-2023/Loops with Rey and BB-8": {
+          "name": "Ciklusok Reyjel és BB-8-tel",
+          "student_overview": "Segíts BB-8-nek teljesíteni ezt a kihívást ciklusok használatával! "
+        },
+        "express-2023/End of Course Project": {
+          "name": "Kurzus Projekt vége"
+        },
+        "pre-express-2023/Learn to Drag and Drop": {
+          "name": "Ismerkedés a Fogd és Vidd technikával",
+          "overview": "Ez a **készségfejlesztő** lecke képet ad a hallgatóknak arról, hogy mire számíthatnak, amikor a számítógépes laborba indulnak. Egy rövid beszélgetéssel kezdődik, amelyben megismerik a a számítógépes laborban való viselkedést, majd áttérnek a számítógép használatára, és online rejtvényeket oldanak meg.",
+          "student_overview": "A feladvány befejezéséhez kattints és húzd át"
+        },
+        "pre-express-2023/Sequencing with Scrat": {
+          "name": "Szekvenciák a Motkánnyal",
+          "overview": "Ebben a **készségépítő** leckében a diákok szekvenciális algoritmusokat dolgoznak ki, amelyek segítségével a mókusszerű karaktert a labirintus egyik oldaláról a másik oldalon lévő makkhoz mozgatják. Ehhez lineáris sorrendben rakják össze a kódblokkokat."
+        },
+        "pre-express-2023/Programming with Rey and BB-8": {
+          "name": "Programozás Rey és BB-8 segítségével",
+          "overview": "Ebben a leckében a diákok újszerű programozási képességeiket bonyolultabb módon fogják használni egy trükkös tanfolyamban, BB-8-tet irányítva."
+        },
+        "pre-express-2023/Programming with Harvester": {
+          "name": "Programozás az aratóval"
+        },
+        "pre-express-2023/A Royal Battle with Events": {
+          "name": "Királyi csata eseményekkel"
+        },
+        "how-ai-works-2023/Introduction to Machine Learning": {
+          "overview": "Ez a lecke a [Hogyan működik az AI: Mi a gépi tanulás?](https://youtu.be/KHbwOetbmbs?list=PLzdnOPI1iJNeehd1RXhnVMBFi1WhWLx_Y) videó a [Hogyan működik az AI videósorozat](https://www.youtube.com/playlist?list=PLzdnOPI1iJNeehd1RXhnVMBFi1WhWLx_Y). Először nézze meg ezt a videót, mielőtt felfedezné az óratervet.\n\nEbben a leckében a tanulók megismerkednek a mesterséges intelligencia egyik formájával, az úgynevezett gépi tanulással, és hogyan használhatják a problémamegoldási folyamatot egy robot kiképzéséhez a problémák megoldására. Három gépi tanulási tevékenységben vesznek részt, ahol egy robot - AI Bot - megtanulja, hogyan kell felismerni a halak mintáit.\n\nEz a lecke önmagában is tanítható, vagy az AI működéséről szóló 7 órás sorozat részeként - [kattintson ide a sorozat összes leckéjének megtekintéséhez](https://code.org/ai/how-ai-works)."
+        },
+        "how-ai-works-2023/Computer Vision": {
+          "name": "Számítógépes látás",
+          "overview": "Ez a lecke a [Hogyan működik az AI: Computer Vision](https://youtu.be/2hXG8v8p0KM?list=PLzdnOPI1iJNeehd1RXhnVMBFi1WhWLx_Y) videó a [Hogyan működik az AI videósorozatból](https://www.youtube.com/playlist?list=PLzdnOPI1iJNeehd1RXhnVMBFi1WhWLx_Y). Először nézze meg ezt a videót, mielőtt felfedezné az óratervet.\n\nA diákok megtanulják, hogyan működik a számítógépes látás. Először az optikai illúziókat vizsgálják, hogy azonosítsák a rajz azon jellemzőit, amelyeket a szemük észrevett. A diákok videót néznek, amely elmagyarázza a számítógépes látást és azt, hogy a számítógép hogyan „lát”. Olyan algoritmust terveznek, amely hálózatot használ annak eldöntésére, hogy a hét szegmenses kijelző hány számot jelenít meg. Végül a diákok tesztelik algoritmusukat.\n\nEz a lecke önmagában is tanítható, vagy az AI működéséről szóló 7 órás sorozat részeként - [kattintson ide a sorozat összes leckéjének megtekintéséhez](https://code.org/ai/how-ai-works).",
+          "preparation": "-   Nyomtassa ki a Computer Vision Network tevékenységi útmutatójának másolatait minden csoporthoz\n-   (Opcionális) A hét szegmens Display Manipulative nyomtatása",
+          "student_overview": "Ismerje meg, hogyan működik a számítógépes látás, ha algoritmust tervez a számok észlelésére."
+        },
+        "how-ai-works-2023/Neural Networks": {
+          "name": "Neurális hálózatok",
+          "overview": "Ez a lecke a [Hogyan működik az AI: Neural Networks](https://youtu.be/JrXazCEACVo?list=PLzdnOPI1iJNeehd1RXhnVMBFi1WhWLx_Y) videó a [How AI Works videósorozatból](https://www.youtube.com/playlist?list=PLzdnOPI1iJNeehd1RXhnVMBFi1WhWLx_Y). Először nézze meg ezt a videót, mielőtt felfedezné az óratervet.\n\nA diákok megtanulják, hogyan működnek a neurális hálózatok. Először egy olyan tapasztalat példáját vitatják meg, amely dolgokat ajánl neked. Ezután egy widgetet használnak, amely egy személy alapján ajánlja a videókat. A diákok videót néznek, amely elmagyarázza a neurális hálózatokat. Frissített widgetet használnak az egyes személyek súlyának beállításához. Végül a hallgatók megvitatják a különböző perspektívák szükségességét az ajánlási rendszerek létrehozásakor.\n\nEz a lecke önmagában is tanítható, vagy az AI működéséről szóló 7 órás sorozat részeként - [kattintson ide a sorozat összes leckéjének megtekintéséhez](https://code.org/ai/how-ai-works).",
+          "preparation": "-   Nyomtassa ki a WeTube Content Creators erőforrás másolatait minden tanuló számára\n-   Nyomtassa ki a Neural Network tevékenységi útmutató másolatait minden diák számára",
+          "student_overview": "Ismerje meg, hogyan működnek a neurális hálózatok azáltal, hogy beállítja az ajánlási rendszer súlyát a kimenetek beállításához."
+        },
+        "how-ai-works-2023/Chatbots and Large Language Models (LLMs)": {
+          "name": "Chatbotok és nagy nyelvi modellek (LLM)",
+          "overview": "Ez a lecke a [Hogyan működik az AI: Chatbots and Large Language Models](https://youtu.be/X-AWdfSFCHQ) videó a [Hogyan működik az AI videósorozatból].[1]Először nézze meg ezt a videót, mielőtt felfedezné az óratervet.\n\nA nagy nyelvi modellek (LLM) új szöveget generálnak. Az LLM-ek által generált szöveg úgy néz ki, mintha egy ember írhatta volna, mert a nagy nyelvi modellek nagy szövegrészekre épülnek, mint például a Wikipedia. Ebben a leckében a diákok megtanulják, mi az LLM és hogyan működik, majd egy LLM segítségével közösen hozzanak létre egy szöveget az AI-vel. Végül, az osztály megbeszélést folytat arról, hogy az LLM-ek intelligensek vagy kreatívak-e vagy sem.\n\nEz a lecke önmagában is tanítható, vagy az AI működéséről szóló 7 órás sorozat részeként - [kattintson ide a sorozat összes leckéjének megtekintéséhez](https://code.org/ai/how-ai-works).",
+          "preparation": "-   Nyomtassa ki a tevékenységi útmutató másolatát minden hallgató számára",
+          "student_overview": "A nagy nyelvi modellek (LLM) intelligensek vagy kreatívak? Döntse el maga, amikor velük dolgozik, hogy hozzon létre valamit, és tudjon meg többet a működésükről!"
+        },
+        "how-ai-works-2023/Generative Images": {
+          "name": "Generatív képek",
+          "overview": "Ez a lecke a [Hogyan működik az AI: kreativitás és képzelet?](https://www.youtube.com/watch?v=X994dDnmRmY) videó a [Hogyan működik az AI videósorozat](https://www.youtube.com/playlist?list=PLzdnOPI1iJNeehd1RXhnVMBFi1WhWLx_Y). Először nézze meg ezt a videót, mielőtt felfedezné az óratervet.\n\nA diffúziós modellek képeket generálnak. A diffúziós AI a képet zajgá alakítja, és egy AI-t képez a folyamat megfordítására. Ebben a leckében a diákok megtanulják, hogyan generálhat az AI képeket, majd fedezze fel a diffúziós AI widgetet. Végül az osztály megbeszélést folytat arról, hogy ezek a modellek kreatívak-e vagy sem.\n\nEz a lecke önmagában is tanítható, vagy az AI működéséről szóló 7 órás sorozat részeként - [kattintson ide a sorozat összes leckéjének megtekintéséhez](https://code.org/ai/how-ai-works).",
+          "preparation": "-   Nyomtassa ki a tevékenységi útmutató másolatát minden hallgató számára",
+          "student_overview": "Ismerje meg, hogyan generálhat az AI képeket egy diffúziós AI widget felfedezésével."
+        },
+        "how-ai-works-2023/Algorithmic Bias": {
+          "name": "Algoritmikus torzítás",
+          "overview": "Ez a lecke a [Hogyan működik az AI: Egyenlő hozzáférés és algoritmikus torzítás](https://youtu.be/tJQSyzBUAew?list=PLzdnOPI1iJNeehd1RXhnVMBFi1WhWLx_Y) videó köré összpontosul [Hogyan működik az AI videó sorozat].[1]Először nézze meg ezt a videót, mielőtt felfedezné az óratervet.\n\nEbben a leckében a diákok gyakorolják a képek kivágását, hogy feltárják a Twitter vágási algoritmus alapjául szolgáló elfogultságot. Ezután a diákok elolvasnak és megnéznek egy videót az elfogult algoritmus felfedezéséről. Végül a diákok megvitatják az elfogultság felismerésének és csökkentésének módjait, valamint elemzik a Twitter válaszát a vágási algoritmusuk elfogultságára vonatkozó állításokra.\n\nEz a lecke önmagában is tanítható, vagy az AI működéséről szóló 7 órás sorozat részeként - [kattintson ide a sorozat összes leckéjének megtekintéséhez](https://code.org/ai/how-ai-works).",
+          "preparation": "-   Végezze el saját maga a vágási widget tevékenységet, hogy láthassa, mit fognak tapasztalni a hallgatók a widgettel, és milyen kérdéseket vagy kérdéseket vethetnek fel.\n-   Nézze meg a videó részeit [„Automatizáljuk a rasszizmust?”](https://youtu.be/Ok5sKLXqynQ) hivatkozik az óratervben.\n-   Olvassa el a két cikket az alábbi linkek részben.",
+          "student_overview": "Ebben a leckében a képek kivágásán fog dolgozni, és megvitatja azokat a kihívásokat és elfogultságot, amelyek a gép képvágásának megtanításával járnak."
+        },
+        "how-ai-works-2023/Our AI Code of Ethics": {
+          "overview": "Ez a lecke a [Hogyan működik az AI: Adatvédelem és a munka jövője](https://youtu.be/zNxw5gJtHLc?list=PLzdnOPI1iJNeehd1RXhnVMBFi1WhWLx_Y) videó a [Hogyan működik az AI videósorozat](https://www.youtube.com/playlist?list=PLzdnOPI1iJNeehd1RXhnVMBFi1WhWLx_Y). Először nézze meg ezt a videót, mielőtt felfedezné az óratervet.\n\nKis csoportokban a diákok kutatásokat végeznek olyan cikkek és videók felhasználásával, amelyek etikai buktatókat tárnak fel az általuk választott mesterséges intelligencia területén. Ezt követően minden csoport kifejleszt legalább egy megoldásorientált elvet, amely a választott területre vonatkozik. Ezeket az elveket ezután az egész osztályra kiterjedő „AI etikai kódexünk” forrássá (pl. Diavetítés, dokumentum vagy weboldal) állítják össze az AI alkotói és törvényhozói számára mindenhol.\n\nEz a lecke önmagában is tanítható, vagy az AI működéséről szóló 7 órás sorozat részeként - [kattintson ide a sorozat összes leckéjének megtekintéséhez](https://code.org/ai/how-ai-works).",
+          "student_overview": "Együttműködve kutasson az AI etikájáról, és hozzon létre egy megosztható magatartási kódexet."
+        },
+        "how-ai-works-2023/How AI Works In a Day": {
+          "name": "Hogyan működik az AI egy nap alatt",
+          "overview": "⚠️ Ez a lecke azoknak az osztálytermeknek szól, amelyek a teljes [How AI Works videósorozatot](https://www.youtube.com/playlist?list=PLzdnOPI1iJNeehd1RXhnVMBFi1WhWLx_Y) egyetlen nap alatta\\*\\* szeretnék bemutatni\\*\\*. Nem célja, hogy az egység többi órájával sorrendben tanítsák, amely minden videót egy-egy nap bemutat.\n\nA diákok követik az egyes videókat a videó szókincsének egyeztetésével, majd válaszolnak az egyes videókkal kapcsolatos reflexiós kérdésre. Az óraterv és a diák nagyon ritkák és nyitottak, hogy lehetővé tegyék az improvizációt és a testreszabást, hogy illeszkedjenek az osztályterembe.",
+          "preparation": "-   Nyomtassa ki a tevékenységi útmutatót\n-   Vetítse ki a diákat egy videoprojektoron"
+        },
         "Hour of Code/Hour of Code 2013": {
           "name": "Kódolás órája 2013"
         },

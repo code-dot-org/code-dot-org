@@ -79,6 +79,19 @@
           "spinning right": "spinning til højre",
           "wandering": "vandrende"
         },
+        "CourseE_Project_SpriteLab_2023": {
+          "growing": "vokser",
+          "jittering": "rystende",
+          "moving east": "bevæger sig østpå",
+          "moving north": "bevæger sig nordpå",
+          "moving south": "bevæger sig sydpå",
+          "moving west": "bevæger sig vestpå",
+          "patrolling": "patruljerer",
+          "shrinking": "krymper",
+          "spinning left": "spinning til venstre",
+          "spinning right": "spinning til højre",
+          "wandering": "vandrende"
+        },
         "CourseE_Project_SpriteLab_cupcake_examples2022": {
           "growing": "vokser",
           "jittering": "rystende",
@@ -107,6 +120,20 @@
           "spinning right": "spinning til højre",
           "wandering": "vandrende"
         },
+        "CourseE_Project_SpriteLab_cupcake_examples_2023": {
+          "growing": "vokser",
+          "jittering": "rystende",
+          "moving east": "bevæger sig østpå",
+          "moving north": "bevæger sig nordpå",
+          "moving south": "bevæger sig sydpå",
+          "moving west": "bevæger sig vestpå",
+          "moving with arrow keys": "bevæger sig med piletasterne",
+          "patrolling": "patruljerer",
+          "shrinking": "krymper",
+          "spinning left": "spinning til venstre",
+          "spinning right": "spinning til højre",
+          "wandering": "vandrende"
+        },
         "CourseE_Project_SpriteLab_examples2022": {
           "growing": "vokser",
           "jittering": "rystende",
@@ -122,6 +149,20 @@
           "wandering": "vandrende"
         },
         "CourseE_Project_SpriteLab_examples_2021": {
+          "growing": "vokser",
+          "jittering": "rystende",
+          "moving east": "bevæger sig østpå",
+          "moving north": "bevæger sig nordpå",
+          "moving south": "bevæger sig sydpå",
+          "moving west": "bevæger sig vestpå",
+          "moving with arrow keys": "bevæger sig med piletasterne",
+          "patrolling": "patruljerer",
+          "shrinking": "krymper",
+          "spinning left": "spinning til venstre",
+          "spinning right": "spinning til højre",
+          "wandering": "vandrende"
+        },
+        "CourseE_Project_SpriteLab_examples_2023": {
           "growing": "vokser",
           "jittering": "rystende",
           "moving east": "bevæger sig østpå",
@@ -209,6 +250,10 @@
           "recovering": "kommer sig",
           "wandering": "vandrende"
         },
+        "CourseF_outbreak1_2023": {
+          "recovering": "kommer sig",
+          "wandering": "vandrende"
+        },
         "CourseF_outbreak2": {
           "recovering": "kommer sig",
           "wandering": "vandrende"
@@ -217,11 +262,19 @@
           "recovering": "kommer sig",
           "wandering": "vandrende"
         },
+        "CourseF_outbreak2_2023": {
+          "recovering": "kommer sig",
+          "wandering": "vandrende"
+        },
         "CourseF_outbreak3": {
           "recovering": "kommer sig",
           "wandering": "vandrende"
         },
         "CourseF_outbreak3_-2022-2": {
+          "recovering": "kommer sig",
+          "wandering": "vandrende"
+        },
+        "CourseF_outbreak3_2023": {
           "recovering": "kommer sig",
           "wandering": "vandrende"
         },
@@ -255,6 +308,21 @@
           "spinning right": "spinning til højre",
           "wandering": "vandrende"
         },
+        "CourseF_outbreak4_2023": {
+          "growing": "vokser",
+          "jittering": "rystende",
+          "moving east": "bevæger sig østpå",
+          "moving north": "bevæger sig nordpå",
+          "moving south": "bevæger sig sydpå",
+          "moving west": "bevæger sig vestpå",
+          "moving with arrow keys": "bevæger sig med piletasterne",
+          "patrolling": "patruljerer",
+          "recovering": "kommer sig",
+          "shrinking": "krymper",
+          "spinning left": "spinning til venstre",
+          "spinning right": "spinning til højre",
+          "wandering": "vandrende"
+        },
         "CourseF_outbreak5": {
           "recovering": "kommer sig",
           "wandering": "vandrende"
@@ -263,11 +331,19 @@
           "recovering": "kommer sig",
           "wandering": "vandrende"
         },
+        "CourseF_outbreak5_2023": {
+          "recovering": "kommer sig",
+          "wandering": "vandrende"
+        },
         "CourseF_outbreak6": {
           "recovering": "kommer sig",
           "wandering": "vandrende"
         },
         "CourseF_outbreak6_-2022-2": {
+          "recovering": "kommer sig",
+          "wandering": "vandrende"
+        },
+        "CourseF_outbreak6_2023": {
           "recovering": "kommer sig",
           "wandering": "vandrende"
         },
@@ -303,6 +379,22 @@
           "spinning right": "spinning til højre",
           "wandering": "vandrende"
         },
+        "CourseF_outbreak7_2023": {
+          "growing": "vokser",
+          "jittering": "rystende",
+          "moving east": "bevæger sig østpå",
+          "moving left and right": "bevæger sig til venstre og højre",
+          "moving north": "bevæger sig nordpå",
+          "moving south": "bevæger sig sydpå",
+          "moving west": "bevæger sig vestpå",
+          "moving with arrow keys": "bevæger sig med piletasterne",
+          "patrolling": "patruljerer",
+          "recovering": "kommer sig",
+          "shrinking": "krymper",
+          "spinning left": "spinning til venstre",
+          "spinning right": "spinning til højre",
+          "wandering": "vandrende"
+        },
         "CourseF_outbreak8": {
           "growing": "vokser",
           "jittering": "rystende",
@@ -320,6 +412,22 @@
           "wandering": "vandrende"
         },
         "CourseF_outbreak8_-2022-2": {
+          "growing": "vokser",
+          "jittering": "rystende",
+          "moving east": "bevæger sig østpå",
+          "moving left and right": "bevæger sig til venstre og højre",
+          "moving north": "bevæger sig nordpå",
+          "moving south": "bevæger sig sydpå",
+          "moving west": "bevæger sig vestpå",
+          "moving with arrow keys": "bevæger sig med piletasterne",
+          "patrolling": "patruljerer",
+          "recovering": "kommer sig",
+          "shrinking": "krymper",
+          "spinning left": "spinning til venstre",
+          "spinning right": "spinning til højre",
+          "wandering": "vandrende"
+        },
+        "CourseF_outbreak8_2023": {
           "growing": "vokser",
           "jittering": "rystende",
           "moving east": "bevæger sig østpå",
@@ -648,6 +756,18 @@
           "spinning right": "spinning til højre",
           "wandering": "vandrende"
         },
+        "Fish Tank 2-validated_2023": {
+          "growing": "vokser",
+          "jittering": "rystende",
+          "moving east": "bevæger sig østpå",
+          "moving north": "bevæger sig nordpå",
+          "moving south": "bevæger sig sydpå",
+          "moving west": "bevæger sig vestpå",
+          "patrolling": "patruljerer",
+          "shrinking": "krymper",
+          "spinning right": "spinning til højre",
+          "wandering": "vandrende"
+        },
         "Fish Tank 3-validated2022": {
           "growing": "vokser",
           "jittering": "rystende",
@@ -685,6 +805,18 @@
           "wandering": "vandrende"
         },
         "Fish Tank 3-validated_2021": {
+          "growing": "vokser",
+          "jittering": "rystende",
+          "moving east": "bevæger sig østpå",
+          "moving north": "bevæger sig nordpå",
+          "moving south": "bevæger sig sydpå",
+          "moving west": "bevæger sig vestpå",
+          "patrolling": "patruljerer",
+          "shrinking": "krymper",
+          "spinning right": "spinning til højre",
+          "wandering": "vandrende"
+        },
+        "Fish Tank 3-validated_2023": {
           "growing": "vokser",
           "jittering": "rystende",
           "moving east": "bevæger sig østpå",
@@ -744,6 +876,18 @@
           "spinning right": "spinning til højre",
           "wandering": "vandrende"
         },
+        "Fish Tank 4-validated_2023": {
+          "growing": "vokser",
+          "jittering": "rystende",
+          "moving east": "bevæger sig østpå",
+          "moving north": "bevæger sig nordpå",
+          "moving south": "bevæger sig sydpå",
+          "moving west": "bevæger sig vestpå",
+          "patrolling": "patruljerer",
+          "shrinking": "krymper",
+          "spinning right": "spinning til højre",
+          "wandering": "vandrende"
+        },
         "Fish Tank 5-validated2022": {
           "growing": "vokser",
           "jittering": "rystende",
@@ -792,6 +936,18 @@
           "spinning right": "spinning til højre",
           "wandering": "vandrende"
         },
+        "Fish Tank 5-validated_2023": {
+          "growing": "vokser",
+          "jittering": "rystende",
+          "moving east": "bevæger sig østpå",
+          "moving north": "bevæger sig nordpå",
+          "moving south": "bevæger sig sydpå",
+          "moving west": "bevæger sig vestpå",
+          "patrolling": "patruljerer",
+          "shrinking": "krymper",
+          "spinning right": "spinning til højre",
+          "wandering": "vandrende"
+        },
         "Fish Tank 6-validated2022": {
           "growing": "vokser",
           "jittering": "rystende",
@@ -829,6 +985,18 @@
           "wandering": "vandrende"
         },
         "Fish Tank 6-validated_2021": {
+          "growing": "vokser",
+          "jittering": "rystende",
+          "moving east": "bevæger sig østpå",
+          "moving north": "bevæger sig nordpå",
+          "moving south": "bevæger sig sydpå",
+          "moving west": "bevæger sig vestpå",
+          "patrolling": "patruljerer",
+          "shrinking": "krymper",
+          "spinning right": "spinning til højre",
+          "wandering": "vandrende"
+        },
+        "Fish Tank 6-validated_2023": {
           "growing": "vokser",
           "jittering": "rystende",
           "moving east": "bevæger sig østpå",
@@ -954,6 +1122,20 @@
           "spinning right": "spinning til højre",
           "wandering": "vandrende"
         },
+        "Virtual Pet 1_2023": {
+          "growing": "vokser",
+          "jittering": "rystende",
+          "moving east": "bevæger sig østpå",
+          "moving north": "bevæger sig nordpå",
+          "moving south": "bevæger sig sydpå",
+          "moving west": "bevæger sig vestpå",
+          "moving with arrow keys": "bevæger sig med piletasterne",
+          "patrolling": "patruljerer",
+          "shrinking": "krymper",
+          "spinning left": "spinning til venstre",
+          "spinning right": "spinning til højre",
+          "wandering": "vandrende"
+        },
         "Virtual Pet 2": {
           "growing": "vokser",
           "jittering": "rystende",
@@ -1019,6 +1201,19 @@
           "spinning right": "spinning til højre",
           "wandering": "vandrende"
         },
+        "Virtual Pet 2_2023": {
+          "growing": "vokser",
+          "jittering": "rystende",
+          "moving east": "bevæger sig østpå",
+          "moving north": "bevæger sig nordpå",
+          "moving south": "bevæger sig sydpå",
+          "moving west": "bevæger sig vestpå",
+          "patrolling": "patruljerer",
+          "shrinking": "krymper",
+          "spinning left": "spinning til venstre",
+          "spinning right": "spinning til højre",
+          "wandering": "vandrende"
+        },
         "Virtual Pet 3_-2022-2": {
           "growing": "vokser",
           "jittering": "rystende",
@@ -1059,6 +1254,19 @@
           "wandering": "vandrende"
         },
         "Virtual Pet 3_2021": {
+          "growing": "vokser",
+          "jittering": "rystende",
+          "moving east": "bevæger sig østpå",
+          "moving north": "bevæger sig nordpå",
+          "moving south": "bevæger sig sydpå",
+          "moving west": "bevæger sig vestpå",
+          "patrolling": "patruljerer",
+          "shrinking": "krymper",
+          "spinning left": "spinning til venstre",
+          "spinning right": "spinning til højre",
+          "wandering": "vandrende"
+        },
+        "Virtual Pet 3_2023": {
           "growing": "vokser",
           "jittering": "rystende",
           "moving east": "bevæger sig østpå",
@@ -1444,6 +1652,19 @@
           "spinning right": "spinning til højre",
           "wandering": "vandrende"
         },
+        "courseE_aboutme_2_2023": {
+          "growing": "vokser",
+          "jittering": "rystende",
+          "moving east": "bevæger sig østpå",
+          "moving north": "bevæger sig nordpå",
+          "moving south": "bevæger sig sydpå",
+          "moving west": "bevæger sig vestpå",
+          "patrolling": "patruljerer",
+          "shrinking": "krymper",
+          "spinning left": "spinning til venstre",
+          "spinning right": "spinning til højre",
+          "wandering": "vandrende"
+        },
         "courseE_aboutme_3": {
           "growing": "vokser",
           "jittering": "rystende",
@@ -1484,6 +1705,19 @@
           "wandering": "vandrende"
         },
         "courseE_aboutme_3_2021": {
+          "growing": "vokser",
+          "jittering": "rystende",
+          "moving east": "bevæger sig østpå",
+          "moving north": "bevæger sig nordpå",
+          "moving south": "bevæger sig sydpå",
+          "moving west": "bevæger sig vestpå",
+          "patrolling": "patruljerer",
+          "shrinking": "krymper",
+          "spinning left": "spinning til venstre",
+          "spinning right": "spinning til højre",
+          "wandering": "vandrende"
+        },
+        "courseE_aboutme_3_2023": {
           "growing": "vokser",
           "jittering": "rystende",
           "moving east": "bevæger sig østpå",
@@ -1548,6 +1782,19 @@
           "spinning right": "spinning til højre",
           "wandering": "vandrende"
         },
+        "courseE_aboutme_4_2023": {
+          "growing": "vokser",
+          "jittering": "rystende",
+          "moving east": "bevæger sig østpå",
+          "moving north": "bevæger sig nordpå",
+          "moving south": "bevæger sig sydpå",
+          "moving west": "bevæger sig vestpå",
+          "patrolling": "patruljerer",
+          "shrinking": "krymper",
+          "spinning left": "spinning til venstre",
+          "spinning right": "spinning til højre",
+          "wandering": "vandrende"
+        },
         "courseE_aboutme_5": {
           "growing": "vokser",
           "jittering": "rystende",
@@ -1600,6 +1847,19 @@
           "spinning right": "spinning til højre",
           "wandering": "vandrende"
         },
+        "courseE_aboutme_5_2023": {
+          "growing": "vokser",
+          "jittering": "rystende",
+          "moving east": "bevæger sig østpå",
+          "moving north": "bevæger sig nordpå",
+          "moving south": "bevæger sig sydpå",
+          "moving west": "bevæger sig vestpå",
+          "patrolling": "patruljerer",
+          "shrinking": "krymper",
+          "spinning left": "spinning til venstre",
+          "spinning right": "spinning til højre",
+          "wandering": "vandrende"
+        },
         "courseF_apps_aquarium": {
           "growing": "vokser",
           "jittering": "rystende",
@@ -1629,6 +1889,20 @@
           "wandering": "vandrende"
         },
         "courseF_apps_aquarium_-2022-2": {
+          "growing": "vokser",
+          "jittering": "rystende",
+          "moving east": "bevæger sig østpå",
+          "moving north": "bevæger sig nordpå",
+          "moving south": "bevæger sig sydpå",
+          "moving west": "bevæger sig vestpå",
+          "moving with arrow keys": "bevæger sig med piletasterne",
+          "patrolling": "patruljerer",
+          "shrinking": "krymper",
+          "spinning left": "spinning til venstre",
+          "spinning right": "spinning til højre",
+          "wandering": "vandrende"
+        },
+        "courseF_apps_aquarium_2023": {
           "growing": "vokser",
           "jittering": "rystende",
           "moving east": "bevæger sig østpå",
@@ -1684,6 +1958,20 @@
           "spinning right": "spinning til højre",
           "wandering": "vandrende"
         },
+        "courseF_apps_card_2023": {
+          "growing": "vokser",
+          "jittering": "rystende",
+          "moving east": "bevæger sig østpå",
+          "moving north": "bevæger sig nordpå",
+          "moving south": "bevæger sig sydpå",
+          "moving west": "bevæger sig vestpå",
+          "moving with arrow keys": "bevæger sig med piletasterne",
+          "patrolling": "patruljerer",
+          "shrinking": "krymper",
+          "spinning left": "spinning til venstre",
+          "spinning right": "spinning til højre",
+          "wandering": "vandrende"
+        },
         "courseF_apps_chatbot": {
           "growing": "vokser",
           "jittering": "rystende",
@@ -1713,6 +2001,20 @@
           "wandering": "vandrende"
         },
         "courseF_apps_chatbot_-2022-2": {
+          "growing": "vokser",
+          "jittering": "rystende",
+          "moving east": "bevæger sig østpå",
+          "moving north": "bevæger sig nordpå",
+          "moving south": "bevæger sig sydpå",
+          "moving west": "bevæger sig vestpå",
+          "moving with arrow keys": "bevæger sig med piletasterne",
+          "patrolling": "patruljerer",
+          "shrinking": "krymper",
+          "spinning left": "spinning til venstre",
+          "spinning right": "spinning til højre",
+          "wandering": "vandrende"
+        },
+        "courseF_apps_chatbot_2023": {
           "growing": "vokser",
           "jittering": "rystende",
           "moving east": "bevæger sig østpå",
@@ -1765,6 +2067,19 @@
           "spinning right": "spinning til højre",
           "wandering": "vandrende"
         },
+        "courseF_apps_collector_2023": {
+          "growing": "vokser",
+          "jittering": "rystende",
+          "moving east": "bevæger sig østpå",
+          "moving north": "bevæger sig nordpå",
+          "moving south": "bevæger sig sydpå",
+          "moving with arrow keys": "bevæger sig med piletasterne",
+          "patrolling": "patruljerer",
+          "shrinking": "krymper",
+          "spinning left": "spinning til venstre",
+          "spinning right": "spinning til højre",
+          "wandering": "vandrende"
+        },
         "courseF_apps_madlib": {
           "growing": "vokser",
           "jittering": "rystende",
@@ -1794,6 +2109,20 @@
           "wandering": "vandrende"
         },
         "courseF_apps_madlib_-2022-2": {
+          "growing": "vokser",
+          "jittering": "rystende",
+          "moving east": "bevæger sig østpå",
+          "moving north": "bevæger sig nordpå",
+          "moving south": "bevæger sig sydpå",
+          "moving west": "bevæger sig vestpå",
+          "moving with arrow keys": "bevæger sig med piletasterne",
+          "patrolling": "patruljerer",
+          "shrinking": "krymper",
+          "spinning left": "spinning til venstre",
+          "spinning right": "spinning til højre",
+          "wandering": "vandrende"
+        },
+        "courseF_apps_madlib_2023": {
           "growing": "vokser",
           "jittering": "rystende",
           "moving east": "bevæger sig østpå",
@@ -1849,6 +2178,20 @@
           "spinning right": "spinning til højre",
           "wandering": "vandrende"
         },
+        "courseF_apps_pet_2023": {
+          "growing": "vokser",
+          "jittering": "rystende",
+          "moving east": "bevæger sig østpå",
+          "moving north": "bevæger sig nordpå",
+          "moving south": "bevæger sig sydpå",
+          "moving west": "bevæger sig vestpå",
+          "moving with arrow keys": "bevæger sig med piletasterne",
+          "patrolling": "patruljerer",
+          "shrinking": "krymper",
+          "spinning left": "spinning til venstre",
+          "spinning right": "spinning til højre",
+          "wandering": "vandrende"
+        },
         "courseF_editable_card": {
           "growing": "vokser",
           "jittering": "rystende",
@@ -1864,6 +2207,20 @@
           "wandering": "vandrende"
         },
         "courseF_editable_card_-2022-2": {
+          "growing": "vokser",
+          "jittering": "rystende",
+          "moving east": "bevæger sig østpå",
+          "moving north": "bevæger sig nordpå",
+          "moving south": "bevæger sig sydpå",
+          "moving west": "bevæger sig vestpå",
+          "moving with arrow keys": "bevæger sig med piletasterne",
+          "patrolling": "patruljerer",
+          "shrinking": "krymper",
+          "spinning left": "spinning til venstre",
+          "spinning right": "spinning til højre",
+          "wandering": "vandrende"
+        },
+        "courseF_editable_card_2023": {
           "growing": "vokser",
           "jittering": "rystende",
           "moving east": "bevæger sig østpå",
@@ -1905,6 +2262,20 @@
           "spinning right": "spinning til højre",
           "wandering": "vandrende"
         },
+        "courseF_editable_chatbot_2023": {
+          "growing": "vokser",
+          "jittering": "rystende",
+          "moving east": "bevæger sig østpå",
+          "moving north": "bevæger sig nordpå",
+          "moving south": "bevæger sig sydpå",
+          "moving west": "bevæger sig vestpå",
+          "moving with arrow keys": "bevæger sig med piletasterne",
+          "patrolling": "patruljerer",
+          "shrinking": "krymper",
+          "spinning left": "spinning til venstre",
+          "spinning right": "spinning til højre",
+          "wandering": "vandrende"
+        },
         "courseF_editable_madlib": {
           "growing": "vokser",
           "jittering": "rystende",
@@ -1920,6 +2291,20 @@
           "wandering": "vandrende"
         },
         "courseF_editable_madlib_-2022-2": {
+          "growing": "vokser",
+          "jittering": "rystende",
+          "moving east": "bevæger sig østpå",
+          "moving north": "bevæger sig nordpå",
+          "moving south": "bevæger sig sydpå",
+          "moving west": "bevæger sig vestpå",
+          "moving with arrow keys": "bevæger sig med piletasterne",
+          "patrolling": "patruljerer",
+          "shrinking": "krymper",
+          "spinning left": "spinning til venstre",
+          "spinning right": "spinning til højre",
+          "wandering": "vandrende"
+        },
+        "courseF_editable_madlib_2023": {
           "growing": "vokser",
           "jittering": "rystende",
           "moving east": "bevæger sig østpå",
@@ -1970,7 +2355,32 @@
           "spinning right": "spinning til højre",
           "wandering": "vandrende"
         },
+        "courseF_events_choice_conflict2_2023": {
+          "growing": "vokser",
+          "moving east": "bevæger sig østpå",
+          "moving north": "bevæger sig nordpå",
+          "moving south": "bevæger sig sydpå",
+          "moving west": "bevæger sig vestpå",
+          "patrolling": "patruljerer",
+          "shrinking": "krymper",
+          "spinning left": "spinning til venstre",
+          "spinning right": "spinning til højre",
+          "wandering": "vandrende"
+        },
         "courseF_events_choice_conflict_-2022-2": {
+          "growing": "vokser",
+          "jittering": "rystende",
+          "moving east": "bevæger sig østpå",
+          "moving north": "bevæger sig nordpå",
+          "moving south": "bevæger sig sydpå",
+          "moving west": "bevæger sig vestpå",
+          "patrolling": "patruljerer",
+          "shrinking": "krymper",
+          "spinning left": "spinning til venstre",
+          "spinning right": "spinning til højre",
+          "wandering": "vandrende"
+        },
+        "courseF_events_choice_conflict_2023": {
           "growing": "vokser",
           "jittering": "rystende",
           "moving east": "bevæger sig østpå",
@@ -2009,6 +2419,19 @@
           "spinning right": "spinning til højre",
           "wandering": "vandrende"
         },
+        "courseF_events_choice_penguin_2023": {
+          "growing": "vokser",
+          "jittering": "rystende",
+          "moving east": "bevæger sig østpå",
+          "moving north": "bevæger sig nordpå",
+          "moving south": "bevæger sig sydpå",
+          "moving west": "bevæger sig vestpå",
+          "patrolling": "patruljerer",
+          "shrinking": "krymper",
+          "spinning left": "spinning til venstre",
+          "spinning right": "spinning til højre",
+          "wandering": "vandrende"
+        },
         "courseF_events_choice_pufferfish": {
           "growing": "vokser",
           "jittering": "rystende",
@@ -2023,6 +2446,19 @@
           "wandering": "vandrende"
         },
         "courseF_events_choice_pufferfish_-2022-2": {
+          "growing": "vokser",
+          "jittering": "rystende",
+          "moving east": "bevæger sig østpå",
+          "moving north": "bevæger sig nordpå",
+          "moving south": "bevæger sig sydpå",
+          "moving west": "bevæger sig vestpå",
+          "patrolling": "patruljerer",
+          "shrinking": "krymper",
+          "spinning left": "spinning til venstre",
+          "spinning right": "spinning til højre",
+          "wandering": "vandrende"
+        },
+        "courseF_events_choice_pufferfish_2023": {
           "growing": "vokser",
           "jittering": "rystende",
           "moving east": "bevæger sig østpå",
@@ -2061,6 +2497,19 @@
           "spinning right": "spinning til højre",
           "wandering": "vandrende"
         },
+        "courseF_events_conflict_2023": {
+          "growing": "vokser",
+          "jittering": "rystende",
+          "moving east": "bevæger sig østpå",
+          "moving north": "bevæger sig nordpå",
+          "moving south": "bevæger sig sydpå",
+          "moving west": "bevæger sig vestpå",
+          "patrolling": "patruljerer",
+          "shrinking": "krymper",
+          "spinning left": "spinning til venstre",
+          "spinning right": "spinning til højre",
+          "wandering": "vandrende"
+        },
         "courseF_events_freeplay_air": {
           "growing": "vokser",
           "jittering": "rystende",
@@ -2074,6 +2523,18 @@
           "wandering": "vandrende"
         },
         "courseF_events_freeplay_air_-2022-2": {
+          "growing": "vokser",
+          "jittering": "rystende",
+          "moving east": "bevæger sig østpå",
+          "moving north": "bevæger sig nordpå",
+          "moving south": "bevæger sig sydpå",
+          "moving west": "bevæger sig vestpå",
+          "shrinking": "krymper",
+          "spinning left": "spinning til venstre",
+          "spinning right": "spinning til højre",
+          "wandering": "vandrende"
+        },
+        "courseF_events_freeplay_air_2023": {
           "growing": "vokser",
           "jittering": "rystende",
           "moving east": "bevæger sig østpå",
@@ -2109,6 +2570,18 @@
           "spinning right": "spinning til højre",
           "wandering": "vandrende"
         },
+        "courseF_events_freeplay_animals_2023": {
+          "growing": "vokser",
+          "jittering": "rystende",
+          "moving east": "bevæger sig østpå",
+          "moving north": "bevæger sig nordpå",
+          "moving south": "bevæger sig sydpå",
+          "moving west": "bevæger sig vestpå",
+          "shrinking": "krymper",
+          "spinning left": "spinning til venstre",
+          "spinning right": "spinning til højre",
+          "wandering": "vandrende"
+        },
         "courseF_events_freeplay_aquatic": {
           "growing": "vokser",
           "jittering": "rystende",
@@ -2122,6 +2595,18 @@
           "wandering": "vandrende"
         },
         "courseF_events_freeplay_aquatic_-2022-2": {
+          "growing": "vokser",
+          "jittering": "rystende",
+          "moving east": "bevæger sig østpå",
+          "moving north": "bevæger sig nordpå",
+          "moving south": "bevæger sig sydpå",
+          "moving west": "bevæger sig vestpå",
+          "shrinking": "krymper",
+          "spinning left": "spinning til venstre",
+          "spinning right": "spinning til højre",
+          "wandering": "vandrende"
+        },
+        "courseF_events_freeplay_aquatic_2023": {
           "growing": "vokser",
           "jittering": "rystende",
           "moving east": "bevæger sig østpå",
@@ -2157,6 +2642,18 @@
           "spinning right": "spinning til højre",
           "wandering": "vandrende"
         },
+        "courseF_events_freeplay_blank_2023": {
+          "growing": "vokser",
+          "jittering": "rystende",
+          "moving east": "bevæger sig østpå",
+          "moving north": "bevæger sig nordpå",
+          "moving south": "bevæger sig sydpå",
+          "moving west": "bevæger sig vestpå",
+          "shrinking": "krymper",
+          "spinning left": "spinning til venstre",
+          "spinning right": "spinning til højre",
+          "wandering": "vandrende"
+        },
         "courseF_events_freeplay_food": {
           "growing": "vokser",
           "jittering": "rystende",
@@ -2170,6 +2667,18 @@
           "wandering": "vandrende"
         },
         "courseF_events_freeplay_food_-2022-2": {
+          "growing": "vokser",
+          "jittering": "rystende",
+          "moving east": "bevæger sig østpå",
+          "moving north": "bevæger sig nordpå",
+          "moving south": "bevæger sig sydpå",
+          "moving west": "bevæger sig vestpå",
+          "shrinking": "krymper",
+          "spinning left": "spinning til venstre",
+          "spinning right": "spinning til højre",
+          "wandering": "vandrende"
+        },
+        "courseF_events_freeplay_food_2023": {
           "growing": "vokser",
           "jittering": "rystende",
           "moving east": "bevæger sig østpå",
@@ -2205,6 +2714,18 @@
           "spinning right": "spinning til højre",
           "wandering": "vandrende"
         },
+        "courseF_events_freeplay_space_2023": {
+          "growing": "vokser",
+          "jittering": "rystende",
+          "moving east": "bevæger sig østpå",
+          "moving north": "bevæger sig nordpå",
+          "moving south": "bevæger sig sydpå",
+          "moving west": "bevæger sig vestpå",
+          "shrinking": "krymper",
+          "spinning left": "spinning til venstre",
+          "spinning right": "spinning til højre",
+          "wandering": "vandrende"
+        },
         "courseF_events_key": {
           "growing": "vokser",
           "jittering": "rystende",
@@ -2219,6 +2740,19 @@
           "wandering": "vandrende"
         },
         "courseF_events_key_-2022-2": {
+          "growing": "vokser",
+          "jittering": "rystende",
+          "moving east": "bevæger sig østpå",
+          "moving north": "bevæger sig nordpå",
+          "moving south": "bevæger sig sydpå",
+          "moving west": "bevæger sig vestpå",
+          "patrolling": "patruljerer",
+          "shrinking": "krymper",
+          "spinning left": "spinning til venstre",
+          "spinning right": "spinning til højre",
+          "wandering": "vandrende"
+        },
+        "courseF_events_key_2023": {
           "growing": "vokser",
           "jittering": "rystende",
           "moving east": "bevæger sig østpå",
@@ -2259,6 +2793,20 @@
           "spinning right": "spinning til højre",
           "wandering": "vandrende"
         },
+        "courseF_events_practice_reorder_2023": {
+          "growing": "vokser",
+          "jittering": "rystende",
+          "moving east": "bevæger sig østpå",
+          "moving north": "bevæger sig nordpå",
+          "moving south": "bevæger sig sydpå",
+          "moving west": "bevæger sig vestpå",
+          "moving with arrow keys": "bevæger sig med piletasterne",
+          "patrolling": "patruljerer",
+          "shrinking": "krymper",
+          "spinning left": "spinning til venstre",
+          "spinning right": "spinning til højre",
+          "wandering": "vandrende"
+        },
         "courseF_events_predict": {
           "growing": "vokser",
           "jittering": "rystende",
@@ -2273,6 +2821,19 @@
           "wandering": "vandrende"
         },
         "courseF_events_predict_-2022-2": {
+          "growing": "vokser",
+          "jittering": "rystende",
+          "moving east": "bevæger sig østpå",
+          "moving north": "bevæger sig nordpå",
+          "moving south": "bevæger sig sydpå",
+          "moving west": "bevæger sig vestpå",
+          "patrolling": "patruljerer",
+          "shrinking": "krymper",
+          "spinning left": "spinning til venstre",
+          "spinning right": "spinning til højre",
+          "wandering": "vandrende"
+        },
+        "courseF_events_predict_2023": {
           "growing": "vokser",
           "jittering": "rystende",
           "moving east": "bevæger sig østpå",
@@ -2311,6 +2872,19 @@
           "spinning right": "spinning til højre",
           "wandering": "vandrende"
         },
+        "courseF_events_review_2023": {
+          "growing": "vokser",
+          "jittering": "rystende",
+          "moving east": "bevæger sig østpå",
+          "moving north": "bevæger sig nordpå",
+          "moving south": "bevæger sig sydpå",
+          "moving west": "bevæger sig vestpå",
+          "patrolling": "patruljerer",
+          "shrinking": "krymper",
+          "spinning left": "spinning til venstre",
+          "spinning right": "spinning til højre",
+          "wandering": "vandrende"
+        },
         "courseF_events_ship": {
           "growing": "vokser",
           "jittering": "rystende",
@@ -2325,6 +2899,19 @@
           "wandering": "vandrende"
         },
         "courseF_events_ship_-2022-2": {
+          "growing": "vokser",
+          "jittering": "rystende",
+          "moving east": "bevæger sig østpå",
+          "moving north": "bevæger sig nordpå",
+          "moving south": "bevæger sig sydpå",
+          "moving west": "bevæger sig vestpå",
+          "patrolling": "patruljerer",
+          "shrinking": "krymper",
+          "spinning left": "spinning til venstre",
+          "spinning right": "spinning til højre",
+          "wandering": "vandrende"
+        },
+        "courseF_events_ship_2023": {
           "growing": "vokser",
           "jittering": "rystende",
           "moving east": "bevæger sig østpå",
@@ -2389,6 +2976,19 @@
           "spinning right": "spinning til højre",
           "wandering": "vandrende"
         },
+        "courseF_events_time_2023": {
+          "growing": "vokser",
+          "jittering": "rystende",
+          "moving east": "bevæger sig østpå",
+          "moving north": "bevæger sig nordpå",
+          "moving south": "bevæger sig sydpå",
+          "moving west": "bevæger sig vestpå",
+          "patrolling": "patruljerer",
+          "shrinking": "krymper",
+          "spinning left": "spinning til venstre",
+          "spinning right": "spinning til højre",
+          "wandering": "vandrende"
+        },
         "courseF_label_predict": {
           "growing": "vokser",
           "jittering": "rystende",
@@ -2415,6 +3015,19 @@
           "spinning right": "spinning til højre",
           "wandering": "vandrende"
         },
+        "courseF_label_predict_2023": {
+          "growing": "vokser",
+          "jittering": "rystende",
+          "moving east": "bevæger sig østpå",
+          "moving north": "bevæger sig nordpå",
+          "moving south": "bevæger sig sydpå",
+          "moving west": "bevæger sig vestpå",
+          "patrolling": "patruljerer",
+          "shrinking": "krymper",
+          "spinning left": "spinning til venstre",
+          "spinning right": "spinning til højre",
+          "wandering": "vandrende"
+        },
         "courseF_place_fruit": {
           "growing": "vokser",
           "jittering": "rystende",
@@ -2427,6 +3040,17 @@
           "spinning right": "spinning til højre"
         },
         "courseF_place_fruit_-2022-2": {
+          "growing": "vokser",
+          "jittering": "rystende",
+          "moving east": "bevæger sig østpå",
+          "moving north": "bevæger sig nordpå",
+          "moving south": "bevæger sig sydpå",
+          "moving west": "bevæger sig vestpå",
+          "shrinking": "krymper",
+          "spinning left": "spinning til venstre",
+          "spinning right": "spinning til højre"
+        },
+        "courseF_place_fruit_2023": {
           "growing": "vokser",
           "jittering": "rystende",
           "moving east": "bevæger sig østpå",
@@ -2470,6 +3094,16 @@
           "spinning left": "spinning til venstre",
           "spinning right": "spinning til højre"
         },
+        "courseF_sprites_behaviors_2023": {
+          "growing": "vokser",
+          "moving east": "bevæger sig østpå",
+          "moving north": "bevæger sig nordpå",
+          "moving south": "bevæger sig sydpå",
+          "moving west": "bevæger sig vestpå",
+          "shrinking": "krymper",
+          "spinning left": "spinning til venstre",
+          "spinning right": "spinning til højre"
+        },
         "courseF_sprites_clouds": {
           "growing": "vokser",
           "jittering": "rystende",
@@ -2483,6 +3117,18 @@
           "wandering": "vandrende"
         },
         "courseF_sprites_clouds_-2022-2": {
+          "growing": "vokser",
+          "jittering": "rystende",
+          "moving east": "bevæger sig østpå",
+          "moving north": "bevæger sig nordpå",
+          "moving south": "bevæger sig sydpå",
+          "moving west": "bevæger sig vestpå",
+          "shrinking": "krymper",
+          "spinning left": "spinning til venstre",
+          "spinning right": "spinning til højre",
+          "wandering": "vandrende"
+        },
+        "courseF_sprites_clouds_2023": {
           "growing": "vokser",
           "jittering": "rystende",
           "moving east": "bevæger sig østpå",
@@ -2516,6 +3162,17 @@
           "spinning left": "spinning til venstre",
           "spinning right": "spinning til højre"
         },
+        "courseF_sprites_desert_2023": {
+          "growing": "vokser",
+          "jittering": "rystende",
+          "moving east": "bevæger sig østpå",
+          "moving north": "bevæger sig nordpå",
+          "moving south": "bevæger sig sydpå",
+          "moving west": "bevæger sig vestpå",
+          "shrinking": "krymper",
+          "spinning left": "spinning til venstre",
+          "spinning right": "spinning til højre"
+        },
         "courseF_sprites_freeplay_air": {
           "growing": "vokser",
           "jittering": "rystende",
@@ -2529,6 +3186,18 @@
           "wandering": "vandrende"
         },
         "courseF_sprites_freeplay_air_-2022-2": {
+          "growing": "vokser",
+          "jittering": "rystende",
+          "moving east": "bevæger sig østpå",
+          "moving north": "bevæger sig nordpå",
+          "moving south": "bevæger sig sydpå",
+          "moving west": "bevæger sig vestpå",
+          "shrinking": "krymper",
+          "spinning left": "spinning til venstre",
+          "spinning right": "spinning til højre",
+          "wandering": "vandrende"
+        },
+        "courseF_sprites_freeplay_air_2023": {
           "growing": "vokser",
           "jittering": "rystende",
           "moving east": "bevæger sig østpå",
@@ -2564,6 +3233,18 @@
           "spinning right": "spinning til højre",
           "wandering": "vandrende"
         },
+        "courseF_sprites_freeplay_animals_2023": {
+          "growing": "vokser",
+          "jittering": "rystende",
+          "moving east": "bevæger sig østpå",
+          "moving north": "bevæger sig nordpå",
+          "moving south": "bevæger sig sydpå",
+          "moving west": "bevæger sig vestpå",
+          "shrinking": "krymper",
+          "spinning left": "spinning til venstre",
+          "spinning right": "spinning til højre",
+          "wandering": "vandrende"
+        },
         "courseF_sprites_freeplay_aquatic": {
           "growing": "vokser",
           "jittering": "rystende",
@@ -2577,6 +3258,18 @@
           "wandering": "vandrende"
         },
         "courseF_sprites_freeplay_aquatic_-2022-2": {
+          "growing": "vokser",
+          "jittering": "rystende",
+          "moving east": "bevæger sig østpå",
+          "moving north": "bevæger sig nordpå",
+          "moving south": "bevæger sig sydpå",
+          "moving west": "bevæger sig vestpå",
+          "shrinking": "krymper",
+          "spinning left": "spinning til venstre",
+          "spinning right": "spinning til højre",
+          "wandering": "vandrende"
+        },
+        "courseF_sprites_freeplay_aquatic_2023": {
           "growing": "vokser",
           "jittering": "rystende",
           "moving east": "bevæger sig østpå",
@@ -2612,6 +3305,18 @@
           "spinning right": "spinning til højre",
           "wandering": "vandrende"
         },
+        "courseF_sprites_freeplay_blank_2023": {
+          "growing": "vokser",
+          "jittering": "rystende",
+          "moving east": "bevæger sig østpå",
+          "moving north": "bevæger sig nordpå",
+          "moving south": "bevæger sig sydpå",
+          "moving west": "bevæger sig vestpå",
+          "shrinking": "krymper",
+          "spinning left": "spinning til venstre",
+          "spinning right": "spinning til højre",
+          "wandering": "vandrende"
+        },
         "courseF_sprites_freeplay_food": {
           "growing": "vokser",
           "jittering": "rystende",
@@ -2625,6 +3330,18 @@
           "wandering": "vandrende"
         },
         "courseF_sprites_freeplay_food_-2022-2": {
+          "growing": "vokser",
+          "jittering": "rystende",
+          "moving east": "bevæger sig østpå",
+          "moving north": "bevæger sig nordpå",
+          "moving south": "bevæger sig sydpå",
+          "moving west": "bevæger sig vestpå",
+          "shrinking": "krymper",
+          "spinning left": "spinning til venstre",
+          "spinning right": "spinning til højre",
+          "wandering": "vandrende"
+        },
+        "courseF_sprites_freeplay_food_2023": {
           "growing": "vokser",
           "jittering": "rystende",
           "moving east": "bevæger sig østpå",
@@ -2660,6 +3377,18 @@
           "spinning right": "spinning til højre",
           "wandering": "vandrende"
         },
+        "courseF_sprites_freeplay_space_2023": {
+          "growing": "vokser",
+          "jittering": "rystende",
+          "moving east": "bevæger sig østpå",
+          "moving north": "bevæger sig nordpå",
+          "moving south": "bevæger sig sydpå",
+          "moving west": "bevæger sig vestpå",
+          "shrinking": "krymper",
+          "spinning left": "spinning til venstre",
+          "spinning right": "spinning til højre",
+          "wandering": "vandrende"
+        },
         "courseF_sprites_make": {
           "growing": "vokser",
           "jittering": "rystende",
@@ -2672,6 +3401,17 @@
           "spinning right": "spinning til højre"
         },
         "courseF_sprites_make_-2022-2": {
+          "growing": "vokser",
+          "jittering": "rystende",
+          "moving east": "bevæger sig østpå",
+          "moving north": "bevæger sig nordpå",
+          "moving south": "bevæger sig sydpå",
+          "moving west": "bevæger sig vestpå",
+          "shrinking": "krymper",
+          "spinning left": "spinning til venstre",
+          "spinning right": "spinning til højre"
+        },
+        "courseF_sprites_make_2023": {
           "growing": "vokser",
           "jittering": "rystende",
           "moving east": "bevæger sig østpå",
@@ -2704,6 +3444,17 @@
           "spinning left": "spinning til venstre",
           "spinning right": "spinning til højre"
         },
+        "courseF_sprites_moreSprites_2023": {
+          "growing": "vokser",
+          "jittering": "rystende",
+          "moving east": "bevæger sig østpå",
+          "moving north": "bevæger sig nordpå",
+          "moving south": "bevæger sig sydpå",
+          "moving west": "bevæger sig vestpå",
+          "shrinking": "krymper",
+          "spinning left": "spinning til venstre",
+          "spinning right": "spinning til højre"
+        },
         "courseF_sprites_positioning": {
           "growing": "vokser",
           "jittering": "rystende",
@@ -2716,6 +3467,17 @@
           "spinning right": "spinning til højre"
         },
         "courseF_sprites_positioning_-2022-2": {
+          "growing": "vokser",
+          "jittering": "rystende",
+          "moving east": "bevæger sig østpå",
+          "moving north": "bevæger sig nordpå",
+          "moving south": "bevæger sig sydpå",
+          "moving west": "bevæger sig vestpå",
+          "shrinking": "krymper",
+          "spinning left": "spinning til venstre",
+          "spinning right": "spinning til højre"
+        },
+        "courseF_sprites_positioning_2023": {
           "growing": "vokser",
           "jittering": "rystende",
           "moving east": "bevæger sig østpå",
@@ -2752,6 +3514,19 @@
           "spinning right": "spinning til højre",
           "wandering": "vandrende"
         },
+        "courseF_sprites_predict_2023": {
+          "growing": "vokser",
+          "jittering": "rystende",
+          "moving east": "bevæger sig østpå",
+          "moving north": "bevæger sig nordpå",
+          "moving south": "bevæger sig sydpå",
+          "moving west": "bevæger sig vestpå",
+          "patrolling": "patruljerer",
+          "shrinking": "krymper",
+          "spinning left": "spinning til venstre",
+          "spinning right": "spinning til højre",
+          "wandering": "vandrende"
+        },
         "courseF_sprites_properties": {
           "growing": "vokser",
           "jittering": "rystende",
@@ -2764,6 +3539,17 @@
           "spinning right": "spinning til højre"
         },
         "courseF_sprites_properties_-2022-2": {
+          "growing": "vokser",
+          "jittering": "rystende",
+          "moving east": "bevæger sig østpå",
+          "moving north": "bevæger sig nordpå",
+          "moving south": "bevæger sig sydpå",
+          "moving west": "bevæger sig vestpå",
+          "shrinking": "krymper",
+          "spinning left": "spinning til venstre",
+          "spinning right": "spinning til højre"
+        },
+        "courseF_sprites_properties_2023": {
           "growing": "vokser",
           "jittering": "rystende",
           "moving east": "bevæger sig østpå",
@@ -2796,6 +3582,17 @@
           "spinning left": "spinning til venstre",
           "spinning right": "spinning til højre"
         },
+        "courseF_sprites_ship_2023": {
+          "growing": "vokser",
+          "jittering": "rystende",
+          "moving east": "bevæger sig østpå",
+          "moving north": "bevæger sig nordpå",
+          "moving south": "bevæger sig sydpå",
+          "moving west": "bevæger sig vestpå",
+          "shrinking": "krymper",
+          "spinning left": "spinning til venstre",
+          "spinning right": "spinning til højre"
+        },
         "courseF_text_answer": {
           "growing": "vokser",
           "jittering": "rystende",
@@ -2810,6 +3607,19 @@
           "wandering": "vandrende"
         },
         "courseF_text_answer_-2022-2": {
+          "growing": "vokser",
+          "jittering": "rystende",
+          "moving east": "bevæger sig østpå",
+          "moving north": "bevæger sig nordpå",
+          "moving south": "bevæger sig sydpå",
+          "moving west": "bevæger sig vestpå",
+          "patrolling": "patruljerer",
+          "shrinking": "krymper",
+          "spinning left": "spinning til venstre",
+          "spinning right": "spinning til højre",
+          "wandering": "vandrende"
+        },
+        "courseF_text_answer_2023": {
           "growing": "vokser",
           "jittering": "rystende",
           "moving east": "bevæger sig østpå",
@@ -2848,6 +3658,19 @@
           "spinning right": "spinning til højre",
           "wandering": "vandrende"
         },
+        "courseF_text_choice_color_2023": {
+          "growing": "vokser",
+          "jittering": "rystende",
+          "moving east": "bevæger sig østpå",
+          "moving north": "bevæger sig nordpå",
+          "moving south": "bevæger sig sydpå",
+          "moving west": "bevæger sig vestpå",
+          "patrolling": "patruljerer",
+          "shrinking": "krymper",
+          "spinning left": "spinning til venstre",
+          "spinning right": "spinning til højre",
+          "wandering": "vandrende"
+        },
         "courseF_text_choice_conversation": {
           "growing": "vokser",
           "jittering": "rystende",
@@ -2863,6 +3686,20 @@
           "wandering": "vandrende"
         },
         "courseF_text_choice_conversation_-2022-2": {
+          "growing": "vokser",
+          "jittering": "rystende",
+          "moving east": "bevæger sig østpå",
+          "moving north": "bevæger sig nordpå",
+          "moving south": "bevæger sig sydpå",
+          "moving west": "bevæger sig vestpå",
+          "moving with arrow keys": "bevæger sig med piletasterne",
+          "patrolling": "patruljerer",
+          "shrinking": "krymper",
+          "spinning left": "spinning til venstre",
+          "spinning right": "spinning til højre",
+          "wandering": "vandrende"
+        },
+        "courseF_text_choice_conversation_2023": {
           "growing": "vokser",
           "jittering": "rystende",
           "moving east": "bevæger sig østpå",
@@ -2904,6 +3741,20 @@
           "spinning right": "spinning til højre",
           "wandering": "vandrende"
         },
+        "courseF_text_choice_events_2023": {
+          "growing": "vokser",
+          "jittering": "rystende",
+          "moving east": "bevæger sig østpå",
+          "moving north": "bevæger sig nordpå",
+          "moving south": "bevæger sig sydpå",
+          "moving west": "bevæger sig vestpå",
+          "moving with arrow keys": "bevæger sig med piletasterne",
+          "patrolling": "patruljerer",
+          "shrinking": "krymper",
+          "spinning left": "spinning til venstre",
+          "spinning right": "spinning til højre",
+          "wandering": "vandrende"
+        },
         "courseF_text_choice_freeplay": {
           "growing": "vokser",
           "jittering": "rystende",
@@ -2919,6 +3770,20 @@
           "wandering": "vandrende"
         },
         "courseF_text_choice_freeplay_-2022-2": {
+          "growing": "vokser",
+          "jittering": "rystende",
+          "moving east": "bevæger sig østpå",
+          "moving north": "bevæger sig nordpå",
+          "moving south": "bevæger sig sydpå",
+          "moving west": "bevæger sig vestpå",
+          "moving with arrow keys": "bevæger sig med piletasterne",
+          "patrolling": "patruljerer",
+          "shrinking": "krymper",
+          "spinning left": "spinning til venstre",
+          "spinning right": "spinning til højre",
+          "wandering": "vandrende"
+        },
+        "courseF_text_choice_freeplay_2023": {
           "growing": "vokser",
           "jittering": "rystende",
           "moving east": "bevæger sig østpå",
@@ -2960,6 +3825,20 @@
           "spinning right": "spinning til højre",
           "wandering": "vandrende"
         },
+        "courseF_text_choice_interview_2023": {
+          "growing": "vokser",
+          "jittering": "rystende",
+          "moving east": "bevæger sig østpå",
+          "moving north": "bevæger sig nordpå",
+          "moving south": "bevæger sig sydpå",
+          "moving west": "bevæger sig vestpå",
+          "moving with arrow keys": "bevæger sig med piletasterne",
+          "patrolling": "patruljerer",
+          "shrinking": "krymper",
+          "spinning left": "spinning til venstre",
+          "spinning right": "spinning til højre",
+          "wandering": "vandrende"
+        },
         "courseF_text_choice_multiprompt": {
           "growing": "vokser",
           "jittering": "rystende",
@@ -2975,6 +3854,20 @@
           "wandering": "vandrende"
         },
         "courseF_text_choice_multiprompt_-2022-2": {
+          "growing": "vokser",
+          "jittering": "rystende",
+          "moving east": "bevæger sig østpå",
+          "moving north": "bevæger sig nordpå",
+          "moving south": "bevæger sig sydpå",
+          "moving west": "bevæger sig vestpå",
+          "moving with arrow keys": "bevæger sig med piletasterne",
+          "patrolling": "patruljerer",
+          "shrinking": "krymper",
+          "spinning left": "spinning til venstre",
+          "spinning right": "spinning til højre",
+          "wandering": "vandrende"
+        },
+        "courseF_text_choice_multiprompt_2023": {
           "growing": "vokser",
           "jittering": "rystende",
           "moving east": "bevæger sig østpå",
@@ -3014,6 +3907,19 @@
           "spinning right": "spinning til højre",
           "wandering": "vandrende"
         },
+        "courseF_text_choice_title_2023": {
+          "growing": "vokser",
+          "jittering": "rystende",
+          "moving east": "bevæger sig østpå",
+          "moving north": "bevæger sig nordpå",
+          "moving south": "bevæger sig sydpå",
+          "moving west": "bevæger sig vestpå",
+          "patrolling": "patruljerer",
+          "shrinking": "krymper",
+          "spinning left": "spinning til venstre",
+          "spinning right": "spinning til højre",
+          "wandering": "vandrende"
+        },
         "courseF_text_concat": {
           "growing": "vokser",
           "jittering": "rystende",
@@ -3028,6 +3934,19 @@
           "wandering": "vandrende"
         },
         "courseF_text_concat_-2022-2": {
+          "growing": "vokser",
+          "jittering": "rystende",
+          "moving east": "bevæger sig østpå",
+          "moving north": "bevæger sig nordpå",
+          "moving south": "bevæger sig sydpå",
+          "moving west": "bevæger sig vestpå",
+          "patrolling": "patruljerer",
+          "shrinking": "krymper",
+          "spinning left": "spinning til venstre",
+          "spinning right": "spinning til højre",
+          "wandering": "vandrende"
+        },
+        "courseF_text_concat_2023": {
           "growing": "vokser",
           "jittering": "rystende",
           "moving east": "bevæger sig østpå",
@@ -3066,6 +3985,19 @@
           "spinning right": "spinning til højre",
           "wandering": "vandrende"
         },
+        "courseF_text_events_2023": {
+          "growing": "vokser",
+          "jittering": "rystende",
+          "moving east": "bevæger sig østpå",
+          "moving north": "bevæger sig nordpå",
+          "moving south": "bevæger sig sydpå",
+          "moving west": "bevæger sig vestpå",
+          "patrolling": "patruljerer",
+          "shrinking": "krymper",
+          "spinning left": "spinning til venstre",
+          "spinning right": "spinning til højre",
+          "wandering": "vandrende"
+        },
         "courseF_text_print": {
           "growing": "vokser",
           "jittering": "rystende",
@@ -3080,6 +4012,19 @@
           "wandering": "vandrende"
         },
         "courseF_text_print_-2022-2": {
+          "growing": "vokser",
+          "jittering": "rystende",
+          "moving east": "bevæger sig østpå",
+          "moving north": "bevæger sig nordpå",
+          "moving south": "bevæger sig sydpå",
+          "moving west": "bevæger sig vestpå",
+          "patrolling": "patruljerer",
+          "shrinking": "krymper",
+          "spinning left": "spinning til venstre",
+          "spinning right": "spinning til højre",
+          "wandering": "vandrende"
+        },
+        "courseF_text_print_2023": {
           "growing": "vokser",
           "jittering": "rystende",
           "moving east": "bevæger sig østpå",
@@ -3118,6 +4063,19 @@
           "spinning right": "spinning til højre",
           "wandering": "vandrende"
         },
+        "courseF_text_prompts_2023": {
+          "growing": "vokser",
+          "jittering": "rystende",
+          "moving east": "bevæger sig østpå",
+          "moving north": "bevæger sig nordpå",
+          "moving south": "bevæger sig sydpå",
+          "moving west": "bevæger sig vestpå",
+          "patrolling": "patruljerer",
+          "shrinking": "krymper",
+          "spinning left": "spinning til venstre",
+          "spinning right": "spinning til højre",
+          "wandering": "vandrende"
+        },
         "courseF_text_review": {
           "growing": "vokser",
           "jittering": "rystende",
@@ -3132,6 +4090,19 @@
           "wandering": "vandrende"
         },
         "courseF_text_review_-2022-2": {
+          "growing": "vokser",
+          "jittering": "rystende",
+          "moving east": "bevæger sig østpå",
+          "moving north": "bevæger sig nordpå",
+          "moving south": "bevæger sig sydpå",
+          "moving west": "bevæger sig vestpå",
+          "patrolling": "patruljerer",
+          "shrinking": "krymper",
+          "spinning left": "spinning til venstre",
+          "spinning right": "spinning til højre",
+          "wandering": "vandrende"
+        },
+        "courseF_text_review_2023": {
           "growing": "vokser",
           "jittering": "rystende",
           "moving east": "bevæger sig østpå",
@@ -3159,6 +4130,20 @@
           "wandering": "vandrende"
         },
         "courseF_variables_card_-2022-2": {
+          "growing": "vokser",
+          "jittering": "rystende",
+          "moving east": "bevæger sig østpå",
+          "moving north": "bevæger sig nordpå",
+          "moving south": "bevæger sig sydpå",
+          "moving west": "bevæger sig vestpå",
+          "moving with arrow keys": "bevæger sig med piletasterne",
+          "patrolling": "patruljerer",
+          "shrinking": "krymper",
+          "spinning left": "spinning til venstre",
+          "spinning right": "spinning til højre",
+          "wandering": "vandrende"
+        },
+        "courseF_variables_card_2023": {
           "growing": "vokser",
           "jittering": "rystende",
           "moving east": "bevæger sig østpå",
@@ -3200,6 +4185,20 @@
           "spinning right": "spinning til højre",
           "wandering": "vandrende"
         },
+        "courseF_variables_card_finish_2023": {
+          "growing": "vokser",
+          "jittering": "rystende",
+          "moving east": "bevæger sig østpå",
+          "moving north": "bevæger sig nordpå",
+          "moving south": "bevæger sig sydpå",
+          "moving west": "bevæger sig vestpå",
+          "moving with arrow keys": "bevæger sig med piletasterne",
+          "patrolling": "patruljerer",
+          "shrinking": "krymper",
+          "spinning left": "spinning til venstre",
+          "spinning right": "spinning til højre",
+          "wandering": "vandrende"
+        },
         "courseF_variables_chatbot": {
           "growing": "vokser",
           "jittering": "rystende",
@@ -3215,6 +4214,20 @@
           "wandering": "vandrende"
         },
         "courseF_variables_chatbot_-2022-2": {
+          "growing": "vokser",
+          "jittering": "rystende",
+          "moving east": "bevæger sig østpå",
+          "moving north": "bevæger sig nordpå",
+          "moving south": "bevæger sig sydpå",
+          "moving west": "bevæger sig vestpå",
+          "moving with arrow keys": "bevæger sig med piletasterne",
+          "patrolling": "patruljerer",
+          "shrinking": "krymper",
+          "spinning left": "spinning til venstre",
+          "spinning right": "spinning til højre",
+          "wandering": "vandrende"
+        },
+        "courseF_variables_chatbot_2023": {
           "growing": "vokser",
           "jittering": "rystende",
           "moving east": "bevæger sig østpå",
@@ -3256,6 +4269,20 @@
           "spinning right": "spinning til højre",
           "wandering": "vandrende"
         },
+        "courseF_variables_chatbot_finish_2023": {
+          "growing": "vokser",
+          "jittering": "rystende",
+          "moving east": "bevæger sig østpå",
+          "moving north": "bevæger sig nordpå",
+          "moving south": "bevæger sig sydpå",
+          "moving west": "bevæger sig vestpå",
+          "moving with arrow keys": "bevæger sig med piletasterne",
+          "patrolling": "patruljerer",
+          "shrinking": "krymper",
+          "spinning left": "spinning til venstre",
+          "spinning right": "spinning til højre",
+          "wandering": "vandrende"
+        },
         "courseF_variables_madlib": {
           "growing": "vokser",
           "jittering": "rystende",
@@ -3271,6 +4298,20 @@
           "wandering": "vandrende"
         },
         "courseF_variables_madlib_-2022-2": {
+          "growing": "vokser",
+          "jittering": "rystende",
+          "moving east": "bevæger sig østpå",
+          "moving north": "bevæger sig nordpå",
+          "moving south": "bevæger sig sydpå",
+          "moving west": "bevæger sig vestpå",
+          "moving with arrow keys": "bevæger sig med piletasterne",
+          "patrolling": "patruljerer",
+          "shrinking": "krymper",
+          "spinning left": "spinning til venstre",
+          "spinning right": "spinning til højre",
+          "wandering": "vandrende"
+        },
+        "courseF_variables_madlib_2023": {
           "growing": "vokser",
           "jittering": "rystende",
           "moving east": "bevæger sig østpå",
@@ -3312,6 +4353,20 @@
           "spinning right": "spinning til højre",
           "wandering": "vandrende"
         },
+        "courseF_variables_madlib_finish_2023": {
+          "growing": "vokser",
+          "jittering": "rystende",
+          "moving east": "bevæger sig østpå",
+          "moving north": "bevæger sig nordpå",
+          "moving south": "bevæger sig sydpå",
+          "moving west": "bevæger sig vestpå",
+          "moving with arrow keys": "bevæger sig med piletasterne",
+          "patrolling": "patruljerer",
+          "shrinking": "krymper",
+          "spinning left": "spinning til venstre",
+          "spinning right": "spinning til højre",
+          "wandering": "vandrende"
+        },
         "courseF_variables_predict": {
           "growing": "vokser",
           "jittering": "rystende",
@@ -3338,6 +4393,19 @@
           "spinning right": "spinning til højre",
           "wandering": "vandrende"
         },
+        "courseF_variables_predict_2023": {
+          "growing": "vokser",
+          "jittering": "rystende",
+          "moving east": "bevæger sig østpå",
+          "moving north": "bevæger sig nordpå",
+          "moving south": "bevæger sig sydpå",
+          "moving west": "bevæger sig vestpå",
+          "patrolling": "patruljerer",
+          "shrinking": "krymper",
+          "spinning left": "spinning til venstre",
+          "spinning right": "spinning til højre",
+          "wandering": "vandrende"
+        },
         "coursee_helloworld_events": {
           "growing": "vokser",
           "jittering": "rystende",
@@ -3345,6 +4413,201 @@
           "moving north": "bevæger sig nordpå",
           "moving south": "bevæger sig sydpå",
           "moving west": "bevæger sig vestpå",
+          "patrolling": "patruljerer",
+          "shrinking": "krymper",
+          "spinning left": "spinning til venstre",
+          "spinning right": "spinning til højre",
+          "wandering": "vandrende"
+        },
+        "coursee_helloworld_events_2023": {
+          "growing": "vokser",
+          "jittering": "rystende",
+          "moving east": "bevæger sig østpå",
+          "moving north": "bevæger sig nordpå",
+          "moving south": "bevæger sig sydpå",
+          "moving west": "bevæger sig vestpå",
+          "patrolling": "patruljerer",
+          "shrinking": "krymper",
+          "spinning left": "spinning til venstre",
+          "spinning right": "spinning til højre",
+          "wandering": "vandrende"
+        },
+        "csc_animal_adaptaions_fishschool": {
+          "growing": "vokser",
+          "jittering": "rystende",
+          "moving east": "bevæger sig østpå",
+          "moving north": "bevæger sig nordpå",
+          "moving south": "bevæger sig sydpå",
+          "moving west": "bevæger sig vestpå",
+          "moving with arrow keys": "bevæger sig med piletasterne",
+          "patrolling": "patruljerer",
+          "shrinking": "krymper",
+          "spinning left": "spinning til venstre",
+          "spinning right": "spinning til højre",
+          "wandering": "vandrende"
+        },
+        "csc_animal_adaptations_birds": {
+          "growing": "vokser",
+          "jittering": "rystende",
+          "moving east": "bevæger sig østpå",
+          "moving north": "bevæger sig nordpå",
+          "moving south": "bevæger sig sydpå",
+          "moving west": "bevæger sig vestpå",
+          "moving with arrow keys": "bevæger sig med piletasterne",
+          "patrolling": "patruljerer",
+          "shrinking": "krymper",
+          "spinning left": "spinning til venstre",
+          "spinning right": "spinning til højre",
+          "wandering": "vandrende"
+        },
+        "csc_animal_adaptations_bugs": {
+          "growing": "vokser",
+          "jittering": "rystende",
+          "moving east": "bevæger sig østpå",
+          "moving north": "bevæger sig nordpå",
+          "moving south": "bevæger sig sydpå",
+          "moving west": "bevæger sig vestpå",
+          "moving with arrow keys": "bevæger sig med piletasterne",
+          "patrolling": "patruljerer",
+          "shrinking": "krymper",
+          "spinning left": "spinning til venstre",
+          "spinning right": "spinning til højre",
+          "wandering": "vandrende"
+        },
+        "csc_animal_adaptations_butterfly": {
+          "growing": "vokser",
+          "jittering": "rystende",
+          "moving east": "bevæger sig østpå",
+          "moving north": "bevæger sig nordpå",
+          "moving south": "bevæger sig sydpå",
+          "moving west": "bevæger sig vestpå",
+          "moving with arrow keys": "bevæger sig med piletasterne",
+          "patrolling": "patruljerer",
+          "shrinking": "krymper",
+          "spinning left": "spinning til venstre",
+          "spinning right": "spinning til højre",
+          "wandering": "vandrende"
+        },
+        "csc_animal_adaptations_choice2": {
+          "growing": "vokser",
+          "jittering": "rystende",
+          "moving east": "bevæger sig østpå",
+          "moving north": "bevæger sig nordpå",
+          "moving south": "bevæger sig sydpå",
+          "moving west": "bevæger sig vestpå",
+          "moving with arrow keys": "bevæger sig med piletasterne",
+          "patrolling": "patruljerer",
+          "shrinking": "krymper",
+          "spinning left": "spinning til venstre",
+          "spinning right": "spinning til højre",
+          "wandering": "vandrende"
+        },
+        "csc_animal_adaptations_choice3": {
+          "growing": "vokser",
+          "jittering": "rystende",
+          "moving east": "bevæger sig østpå",
+          "moving north": "bevæger sig nordpå",
+          "moving south": "bevæger sig sydpå",
+          "moving west": "bevæger sig vestpå",
+          "moving with arrow keys": "bevæger sig med piletasterne",
+          "patrolling": "patruljerer",
+          "shrinking": "krymper",
+          "spinning left": "spinning til venstre",
+          "spinning right": "spinning til højre",
+          "wandering": "vandrende"
+        },
+        "csc_animal_adaptations_fish": {
+          "growing": "vokser",
+          "jittering": "rystende",
+          "moving east": "bevæger sig østpå",
+          "moving north": "bevæger sig nordpå",
+          "moving south": "bevæger sig sydpå",
+          "moving west": "bevæger sig vestpå",
+          "moving with arrow keys": "bevæger sig med piletasterne",
+          "patrolling": "patruljerer",
+          "shrinking": "krymper",
+          "spinning left": "spinning til venstre",
+          "spinning right": "spinning til højre",
+          "wandering": "vandrende"
+        },
+        "csc_animal_adaptations_groups": {
+          "growing": "vokser",
+          "jittering": "rystende",
+          "moving east": "bevæger sig østpå",
+          "moving north": "bevæger sig nordpå",
+          "moving south": "bevæger sig sydpå",
+          "moving west": "bevæger sig vestpå",
+          "moving with arrow keys": "bevæger sig med piletasterne",
+          "patrolling": "patruljerer",
+          "shrinking": "krymper",
+          "spinning left": "spinning til venstre",
+          "spinning right": "spinning til højre",
+          "wandering": "vandrende"
+        },
+        "csc_animal_adaptations_migration": {
+          "growing": "vokser",
+          "jittering": "rystende",
+          "moving east": "bevæger sig østpå",
+          "moving north": "bevæger sig nordpå",
+          "moving south": "bevæger sig sydpå",
+          "moving west": "bevæger sig vestpå",
+          "moving with arrow keys": "bevæger sig med piletasterne",
+          "patrolling": "patruljerer",
+          "shrinking": "krymper",
+          "spinning left": "spinning til venstre",
+          "spinning right": "spinning til højre",
+          "wandering": "vandrende"
+        },
+        "csc_animal_adaptations_speed": {
+          "growing": "vokser",
+          "jittering": "rystende",
+          "moving east": "bevæger sig østpå",
+          "moving north": "bevæger sig nordpå",
+          "moving south": "bevæger sig sydpå",
+          "moving west": "bevæger sig vestpå",
+          "moving with arrow keys": "bevæger sig med piletasterne",
+          "patrolling": "patruljerer",
+          "shrinking": "krymper",
+          "spinning left": "spinning til venstre",
+          "spinning right": "spinning til højre",
+          "wandering": "vandrende"
+        },
+        "csc_ecosystems_giraffe_evo_2023": {
+          "growing": "vokser",
+          "jittering": "rystende",
+          "moving east": "bevæger sig østpå",
+          "moving north": "bevæger sig nordpå",
+          "moving south": "bevæger sig sydpå",
+          "moving west": "bevæger sig vestpå",
+          "moving with arrow keys": "bevæger sig med piletasterne",
+          "patrolling": "patruljerer",
+          "shrinking": "krymper",
+          "spinning left": "spinning til venstre",
+          "spinning right": "spinning til højre",
+          "wandering": "vandrende"
+        },
+        "csc_ecosystems_whale_explain_2023": {
+          "growing": "vokser",
+          "jittering": "rystende",
+          "moving east": "bevæger sig østpå",
+          "moving north": "bevæger sig nordpå",
+          "moving south": "bevæger sig sydpå",
+          "moving west": "bevæger sig vestpå",
+          "moving with arrow keys": "bevæger sig med piletasterne",
+          "patrolling": "patruljerer",
+          "shrinking": "krymper",
+          "spinning left": "spinning til venstre",
+          "spinning right": "spinning til højre",
+          "wandering": "vandrende"
+        },
+        "csc_ecosystems_whale_movement_2023": {
+          "growing": "vokser",
+          "jittering": "rystende",
+          "moving east": "bevæger sig østpå",
+          "moving north": "bevæger sig nordpå",
+          "moving south": "bevæger sig sydpå",
+          "moving west": "bevæger sig vestpå",
+          "moving with arrow keys": "bevæger sig med piletasterne",
           "patrolling": "patruljerer",
           "shrinking": "krymper",
           "spinning left": "spinning til venstre",
@@ -3497,6 +4760,20 @@
           "spinning right": "spinning til højre",
           "wandering": "vandrende"
         },
+        "helloworld_food_backgrounds_2023": {
+          "growing": "vokser",
+          "jittering": "rystende",
+          "moving east": "bevæger sig østpå",
+          "moving north": "bevæger sig nordpå",
+          "moving south": "bevæger sig sydpå",
+          "moving west": "bevæger sig vestpå",
+          "moving with arrow keys": "bevæger sig med piletasterne",
+          "patrolling": "patruljerer",
+          "shrinking": "krymper",
+          "spinning left": "spinning til venstre",
+          "spinning right": "spinning til højre",
+          "wandering": "vandrende"
+        },
         "helloworld_food_backgrounds_soccer-2022": {
           "growing": "vokser",
           "jittering": "rystende",
@@ -3539,7 +4816,32 @@
           "spinning right": "spinning til højre",
           "wandering": "vandrende"
         },
+        "helloworld_food_behaviors_2023": {
+          "growing": "vokser",
+          "jittering": "rystende",
+          "moving east": "bevæger sig østpå",
+          "moving north": "bevæger sig nordpå",
+          "moving south": "bevæger sig sydpå",
+          "moving west": "bevæger sig vestpå",
+          "moving with arrow keys": "bevæger sig med piletasterne",
+          "patrolling": "patruljerer",
+          "shrinking": "krymper",
+          "spinning left": "spinning til venstre",
+          "spinning right": "spinning til højre",
+          "wandering": "vandrende"
+        },
         "helloworld_food_costumes": {
+          "growing": "vokser",
+          "jittering": "rystende",
+          "moving east": "bevæger sig østpå",
+          "moving north": "bevæger sig nordpå",
+          "moving south": "bevæger sig sydpå",
+          "moving west": "bevæger sig vestpå",
+          "shrinking": "krymper",
+          "spinning left": "spinning til venstre",
+          "spinning right": "spinning til højre"
+        },
+        "helloworld_food_costumes_2023": {
           "growing": "vokser",
           "jittering": "rystende",
           "moving east": "bevæger sig østpå",
@@ -3564,6 +4866,20 @@
           "wandering": "vandrende"
         },
         "helloworld_food_sounds": {
+          "growing": "vokser",
+          "jittering": "rystende",
+          "moving east": "bevæger sig østpå",
+          "moving north": "bevæger sig nordpå",
+          "moving south": "bevæger sig sydpå",
+          "moving west": "bevæger sig vestpå",
+          "moving with arrow keys": "bevæger sig med piletasterne",
+          "patrolling": "patruljerer",
+          "shrinking": "krymper",
+          "spinning left": "spinning til venstre",
+          "spinning right": "spinning til højre",
+          "wandering": "vandrende"
+        },
+        "helloworld_food_sounds_2023": {
           "growing": "vokser",
           "jittering": "rystende",
           "moving east": "bevæger sig østpå",
@@ -3885,6 +5201,20 @@
           "wandering": "vandrende"
         },
         "simcustom_2021": {
+          "growing": "vokser",
+          "jittering": "rystende",
+          "moving east": "bevæger sig østpå",
+          "moving north": "bevæger sig nordpå",
+          "moving south": "bevæger sig sydpå",
+          "moving west": "bevæger sig vestpå",
+          "moving with arrow keys": "bevæger sig med piletasterne",
+          "patrolling": "patruljerer",
+          "shrinking": "krymper",
+          "spinning left": "spinning til venstre",
+          "spinning right": "spinning til højre",
+          "wandering": "vandrende"
+        },
+        "simcustom_2023": {
           "growing": "vokser",
           "jittering": "rystende",
           "moving east": "bevæger sig østpå",

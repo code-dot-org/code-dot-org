@@ -421,6 +421,11 @@
             "name": "moja funkcija"
           }
         },
+        "Course E: Artist Project_examples_2023": {
+          "my function": {
+            "name": "moja funkcija"
+          }
+        },
         "Course E: Frozen Project_examples2022": {
           "draw a circle": {
             "name": "nariši krog"
@@ -463,6 +468,47 @@
           }
         },
         "Course E: Frozen Project_examples_2021": {
+          "draw a circle": {
+            "name": "nariši krog"
+          },
+          "draw a house": {
+            "name": "nariši hišo",
+            "parameters": {
+              "length": "dolžina"
+            }
+          },
+          "draw a pinwheel": {
+            "parameters": {
+              "length": "dolžina",
+              "repeat": "ponovi"
+            }
+          },
+          "draw a shape": {
+            "parameters": {
+              "length": "dolžina"
+            }
+          },
+          "draw a square": {
+            "name": "nariši kvadrat",
+            "parameters": {
+              "length": "dolžina"
+            }
+          },
+          "draw a star": {
+            "name": "nariši zvezdo",
+            "parameters": {
+              "length": "dolžina",
+              "points": "točk"
+            }
+          },
+          "draw a triangle": {
+            "name": "nariši trikotnik",
+            "parameters": {
+              "length": "dolžina"
+            }
+          }
+        },
+        "Course E: Frozen Project_examples_2023": {
           "draw a circle": {
             "name": "nariši krog"
           },
@@ -672,6 +718,47 @@
             }
           }
         },
+        "CourseD_EOC_artist_2023": {
+          "draw a circle": {
+            "name": "nariši krog"
+          },
+          "draw a house": {
+            "name": "nariši hišo",
+            "parameters": {
+              "length": "dolžina"
+            }
+          },
+          "draw a pinwheel": {
+            "parameters": {
+              "length": "dolžina",
+              "repeat": "ponovi"
+            }
+          },
+          "draw a shape": {
+            "parameters": {
+              "length": "dolžina"
+            }
+          },
+          "draw a square": {
+            "name": "nariši kvadrat",
+            "parameters": {
+              "length": "dolžina"
+            }
+          },
+          "draw a star": {
+            "name": "nariši zvezdo",
+            "parameters": {
+              "length": "dolžina",
+              "points": "točk"
+            }
+          },
+          "draw a triangle": {
+            "name": "nariši trikotnik",
+            "parameters": {
+              "length": "dolžina"
+            }
+          }
+        },
         "CourseD_EOC_artist_example2021": {
           "draw a circle": {
             "name": "nariši krog"
@@ -714,6 +801,47 @@
           }
         },
         "CourseD_EOC_artist_example20212022": {
+          "draw a circle": {
+            "name": "nariši krog"
+          },
+          "draw a house": {
+            "name": "nariši hišo",
+            "parameters": {
+              "length": "dolžina"
+            }
+          },
+          "draw a pinwheel": {
+            "parameters": {
+              "length": "dolžina",
+              "repeat": "ponovi"
+            }
+          },
+          "draw a shape": {
+            "parameters": {
+              "length": "dolžina"
+            }
+          },
+          "draw a square": {
+            "name": "nariši kvadrat",
+            "parameters": {
+              "length": "dolžina"
+            }
+          },
+          "draw a star": {
+            "name": "nariši zvezdo",
+            "parameters": {
+              "length": "dolžina",
+              "points": "točk"
+            }
+          },
+          "draw a triangle": {
+            "name": "nariši trikotnik",
+            "parameters": {
+              "length": "dolžina"
+            }
+          }
+        },
+        "CourseD_EOC_artist_example2021_2023": {
           "draw a circle": {
             "name": "nariši krog"
           },
@@ -1237,6 +1365,11 @@
             "name": "mogoča rešitev"
           }
         },
+        "courseB_artist_loops_challenge2_2023": {
+          "potential solution": {
+            "name": "mogoča rešitev"
+          }
+        },
         "courseC_artist_prog3": {
           "draw flame": {
             "parameters": {
@@ -1295,6 +1428,11 @@
           }
         },
         "courseC_data wizard_2021": {
+          "do something": {
+            "name": "naredi nekaj"
+          }
+        },
+        "courseC_data wizard_2023": {
           "do something": {
             "name": "naredi nekaj"
           }
@@ -1677,6 +1815,11 @@
             "name": "naredi nekaj"
           }
         },
+        "courseE_artist_functions10_2023": {
+          "do something": {
+            "name": "naredi nekaj"
+          }
+        },
         "courseE_artist_functions2": {
           "draw a square": {
             "name": "nariši kvadrat"
@@ -1703,6 +1846,11 @@
           }
         },
         "courseE_artist_functions2_2021": {
+          "draw a square": {
+            "name": "nariši kvadrat"
+          }
+        },
+        "courseE_artist_functions2_2023": {
           "draw a square": {
             "name": "nariši kvadrat"
           }
@@ -1738,6 +1886,11 @@
           }
         },
         "courseE_artist_functions3_2021": {
+          "draw a star": {
+            "name": "nariši zvezdo"
+          }
+        },
+        "courseE_artist_functions3_2023": {
           "draw a star": {
             "name": "nariši zvezdo"
           }
@@ -1783,6 +1936,11 @@
           }
         },
         "courseE_artist_functions5_2021": {
+          "draw a star": {
+            "name": "nariši zvezdo"
+          }
+        },
+        "courseE_artist_functions5_2023": {
           "draw a star": {
             "name": "nariši zvezdo"
           }
@@ -1860,6 +2018,14 @@
             "name": "nariši kvadrat"
           }
         },
+        "courseE_artist_functions8_2023": {
+          "do something": {
+            "name": "naredi nekaj"
+          },
+          "draw square": {
+            "name": "nariši kvadrat"
+          }
+        },
         "courseE_artist_functions8a2022": {
           "do something": {
             "name": "naredi nekaj"
@@ -1893,6 +2059,14 @@
           }
         },
         "courseE_artist_functions8a_2021": {
+          "do something": {
+            "name": "naredi nekaj"
+          },
+          "draw a square": {
+            "name": "nariši kvadrat"
+          }
+        },
+        "courseE_artist_functions8a_2023": {
           "do something": {
             "name": "naredi nekaj"
           },
@@ -1940,6 +2114,14 @@
             "name": "nariši kvadrat"
           }
         },
+        "courseE_artist_functions8b_2023": {
+          "do something": {
+            "name": "naredi nekaj"
+          },
+          "draw square": {
+            "name": "nariši kvadrat"
+          }
+        },
         "courseE_artist_functions8c2022": {
           "do something": {
             "name": "naredi nekaj"
@@ -1980,6 +2162,14 @@
             "name": "nariši kvadrat"
           }
         },
+        "courseE_artist_functions8c_2023": {
+          "do something": {
+            "name": "naredi nekaj"
+          },
+          "draw square": {
+            "name": "nariši kvadrat"
+          }
+        },
         "courseE_artist_functions9": {
           "do something": {
             "name": "naredi nekaj"
@@ -2010,6 +2200,11 @@
             "name": "naredi nekaj"
           }
         },
+        "courseE_artist_functions9_2023": {
+          "do something": {
+            "name": "naredi nekaj"
+          }
+        },
         "courseE_artist_functionsProj2022": {
           "draw square": {
             "name": "nariši kvadrat"
@@ -2031,6 +2226,11 @@
           }
         },
         "courseE_artist_functionsProj_2021": {
+          "draw square": {
+            "name": "nariši kvadrat"
+          }
+        },
+        "courseE_artist_functionsProj_2023": {
           "draw square": {
             "name": "nariši kvadrat"
           }
@@ -2065,6 +2265,11 @@
             "name": "naredi nekaj"
           }
         },
+        "courseE_artist_functions_challenge1_2023": {
+          "do something": {
+            "name": "naredi nekaj"
+          }
+        },
         "courseE_artist_functions_challenge2": {
           "do something": {
             "name": "naredi nekaj"
@@ -2095,6 +2300,11 @@
             "name": "naredi nekaj"
           }
         },
+        "courseE_artist_functions_challenge2_2023": {
+          "do something": {
+            "name": "naredi nekaj"
+          }
+        },
         "courseE_artist_functions_predict1": {
           "draw a square": {
             "name": "nariši kvadrat"
@@ -2121,6 +2331,11 @@
           }
         },
         "courseE_artist_functions_predict1_2021": {
+          "draw a square": {
+            "name": "nariši kvadrat"
+          }
+        },
+        "courseE_artist_functions_predict1_2023": {
           "draw a square": {
             "name": "nariši kvadrat"
           }
@@ -2161,6 +2376,11 @@
           }
         },
         "courseE_artist_functions_predict2_2021": {
+          "do something": {
+            "name": "naredi nekaj"
+          }
+        },
+        "courseE_artist_functions_predict2_2023": {
           "do something": {
             "name": "naredi nekaj"
           }
@@ -2226,6 +2446,11 @@
           }
         },
         "courseF_apps_collector_-2022-2": {
+          "end game": {
+            "name": "končaj igro"
+          }
+        },
+        "courseF_apps_collector_2023": {
           "end game": {
             "name": "končaj igro"
           }
