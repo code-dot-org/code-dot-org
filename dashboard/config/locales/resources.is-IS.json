@@ -1814,6 +1814,423 @@
         "pause_and_think_online/pre-express/2022": {
           "type": "Myndband"
         },
+        "star_quilts_1/csc-starquilts/2023": {
+          "type": "Myndband"
+        },
+        "poem_art_1_-_introduction/csc-timecapsule/2023": {
+          "type": "Myndband"
+        },
+        "poem_art_2_-_events/csc-timecapsule/2023": {
+          "type": "Myndband"
+        },
+        "poem_art_3_-_imagery/csc-timecapsule/2023": {
+          "type": "Myndband"
+        },
+        "poem_art_4_-_celebration/csc-timecapsule/2023": {
+          "type": "Myndband"
+        },
+        "poem_art_celebration_video_optional_/csc-timecapsule/2023": {
+          "type": "Myndband"
+        },
+        "poem_art_events_video_optional_/csc-timecapsule/2023": {
+          "type": "Myndband"
+        },
+        "poem_art_video_optional_/csc-timecapsule/2023": {
+          "type": "Myndband"
+        },
+        "enter_your_own_poem/csc-timecapsule/2023": {
+          "type": "Myndband"
+        },
+        "poem_art_1_-_introduction/poetry/2023": {
+          "type": "Myndband"
+        },
+        "poem_art_2_-_events/poetry/2023": {
+          "type": "Myndband"
+        },
+        "poem_art_3_-_imagery/poetry/2023": {
+          "type": "Myndband"
+        },
+        "poem_art_4_-_celebration/poetry/2023": {
+          "type": "Myndband"
+        },
+        "enter_your_own_poem/poetry/2023": {
+          "type": "Myndband"
+        },
+        "poem_art_celebration_video_optional_/poetry/2023": {
+          "type": "Myndband"
+        },
+        "poem_art_events_video_optional_/poetry/2023": {
+          "type": "Myndband"
+        },
+        "poem_art_video_optional_/poetry/2023": {
+          "type": "Myndband"
+        },
+        "implementation_guide/coursea/2023": {
+          "name": "Leiðarvísir innleiðingar"
+        },
+        "teacher_forum/coursea/2023": {
+          "name": "Kennaraspjall"
+        },
+        "getting_started_-_creating_a_class_section/coursea/2023": {
+          "type": "Myndband"
+        },
+        "pair_programming/coursea/2023": {
+          "name": "Félagaforritun"
+        },
+        "wiggles-go_noodle/coursea/2023": {
+          "type": "Myndband"
+        },
+        "happy_maps/coursea/2023": {
+          "name": "Krúttleg kort"
+        },
+        "wiggles_-_gonoodle/coursea/2023": {
+          "type": "Myndband"
+        },
+        "debugging_with_the_step_button/coursea/2023": {
+          "type": "Myndband"
+        },
+        "pair-programming/coursea/2023": {
+          "type": "Myndband"
+        },
+        "pause_and_think_online/coursea/2023": {
+          "type": "Myndband"
+        },
+        "the_big_event/coursea/2023": {
+          "name": "Stórviðburður"
+        },
+        "the_big_event_1/coursea/2023": {
+          "name": "Stórviðburður",
+          "type": "Mat"
+        },
+        "the_big_event_2/coursea/2023": {
+          "name": "Stórviðburður"
+        },
+        "implementation_guide/courseb/2023": {
+          "name": "Leiðarvísir innleiðingar"
+        },
+        "teacher_forum/courseb/2023": {
+          "name": "Kennaraspjall"
+        },
+        "move_it_move_it/courseb/2023": {
+          "name": "Hreyfa sig, hreyfa sig"
+        },
+        "move_it_move_it_1/courseb/2023": {
+          "name": "Hreyfa sig, hreyfa sig"
+        },
+        "move_it_move_it_2/courseb/2023": {
+          "name": "Hreyfa sig, hreyfa sig"
+        },
+        "move_it_move_it_3/courseb/2023": {
+          "name": "Hreyfa, hreyfa"
+        },
+        "pair_programming/courseb/2023": {
+          "name": "Félagaforritun"
+        },
+        "wiggles_-_gonoodle/courseb/2023": {
+          "type": "Myndband"
+        },
+        "stevie_and_the_big_project/courseb/2023": {
+          "name": "Stevie og Stóra verkefnið"
+        },
+        "unspotted_bugs/courseb/2023": {
+          "name": "Ófundnar villur",
+          "type": "Myndband"
+        },
+        "getting_loopy/courseb/2023": {
+          "name": "Lykkjulæti"
+        },
+        "getting_loopy_1/courseb/2023": {
+          "name": "Lykkjulæti"
+        },
+        "getting_loopy_2/courseb/2023": {
+          "name": "Lykkjulæti",
+          "type": "Mat"
+        },
+        "getting_loopy_3/courseb/2023": {
+          "name": "Lykkjulæti"
+        },
+        "pause_and_think_online/courseb/2023": {
+          "type": "Myndband"
+        },
+        "the_big_event/courseb/2023": {
+          "name": "Stórviðburður"
+        },
+        "the_big_event_1/courseb/2023": {
+          "name": "Stórviðburður",
+          "type": "Mat"
+        },
+        "the_big_event_2/courseb/2023": {
+          "name": "Stórviðburður"
+        },
+        "implementation_guide/coursec/2023": {
+          "name": "Leiðarvísir innleiðingar"
+        },
+        "teacher_forum/coursec/2023": {
+          "name": "Kennaraspjall"
+        },
+        "my_robotic_friends/coursec/2023": {
+          "name": "Vinir mínir vélmennin"
+        },
+        "my_robotic_friends_1/coursec/2023": {
+          "name": "Vinir mínir vélmennin"
+        },
+        "my_robotic_friends_2/coursec/2023": {
+          "name": "Vinir mínir vélmennin"
+        },
+        "my_robotic_friends_3/coursec/2023": {
+          "name": "Vinir mínir vélmennin"
+        },
+        "my_robotic_friends_4/coursec/2023": {
+          "name": "Vinir mínir vélmennin"
+        },
+        "pair_programming/coursec/2023": {
+          "name": "Félagaforritun",
+          "type": "Myndband"
+        },
+        "the_big_event/coursec/2023": {
+          "name": "Stórviðburður"
+        },
+        "the_big_event_1/coursec/2023": {
+          "name": "Stórviðburður",
+          "type": "Mat"
+        },
+        "the_big_event_2/coursec/2023": {
+          "name": "Stórviðburður"
+        },
+        "pause_and_think_online/coursec/2023": {
+          "type": "Myndband"
+        },
+        "binary_bracelets/coursec/2023": {
+          "name": "Stafræn armbönd"
+        },
+        "binary_bracelets_1/coursec/2023": {
+          "name": "Stafræn armbönd"
+        },
+        "binary_bracelets_2/coursec/2023": {
+          "name": "Stafræn armbönd"
+        },
+        "binary_bracelets_3/coursec/2023": {
+          "name": "Stafræn armbönd",
+          "type": "Mat"
+        },
+        "binary_bracelets_4/coursec/2023": {
+          "name": "Stafræn armbönd"
+        },
+        "implementation_guide/coursed/2023": {
+          "name": "Leiðarvísir innleiðingar"
+        },
+        "teacher_forum/coursed/2023": {
+          "name": "Kennaraspjall"
+        },
+        "graph_paper_programming/coursed/2023": {
+          "name": "Forritun rúðublaða"
+        },
+        "graph_paper_programming_1/coursed/2023": {
+          "name": "Forritun rúðublaða"
+        },
+        "graph_paper_programming_2/coursed/2023": {
+          "name": "Forritun rúðublaða"
+        },
+        "graph_paper_programming_3/coursed/2023": {
+          "name": "Forritun rúðublaða"
+        },
+        "graph_paper_programming_4/coursed/2023": {
+          "name": "Forritun rúðublaða",
+          "type": "Mat"
+        },
+        "graph_paper_programming_5/coursed/2023": {
+          "name": "Forritun rúðublaða"
+        },
+        "pair_programming/coursed/2023": {
+          "name": "Félagaforritun"
+        },
+        "relay_programming/coursed/2023": {
+          "name": "Boðhlaupsforritun"
+        },
+        "relay_programming_1/coursed/2023": {
+          "name": "Boðhlaupsforritun"
+        },
+        "relay_programming_2/coursed/2023": {
+          "name": "Boðhlaupsforritun"
+        },
+        "relay_programming_3/coursed/2023": {
+          "name": "Boðhlaupsforritun"
+        },
+        "relay_programming_4/coursed/2023": {
+          "name": "Boðhlaupsforritun"
+        },
+        "relay_programming_5/coursed/2023": {
+          "name": "Boðhlaupsforritun"
+        },
+        "pause_and_think_online/coursed/2023": {
+          "type": "Myndband"
+        },
+        "conditionals_with_cards/coursed/2023": {
+          "name": "Skilyrði með kortum"
+        },
+        "conditionals_with_cards_1/coursed/2023": {
+          "name": "Skilyrði með kortum"
+        },
+        "conditionals_with_cards_2/coursed/2023": {
+          "name": "Skilyrði með kortum",
+          "type": "Mat"
+        },
+        "conditionals_with_cards_3/coursed/2023": {
+          "name": "Skilyrði með kortum"
+        },
+        "conditionals_with_cards_4/coursed/2023": {
+          "name": "Skilyrði með kortum"
+        },
+        "implementation_guide/coursee/2023": {
+          "name": "Leiðarvísir innleiðingar"
+        },
+        "sprite_lab_documentation/coursee/2023": {
+          "name": "Upplýsingar um Kvikasmiðju"
+        },
+        "teacher_forum/coursee/2023": {
+          "name": "Kennaraspjall"
+        },
+        "pause_and_think_online/coursee/2023": {
+          "type": "Myndband"
+        },
+        "functions_unplugged_songwriting_2/coursee/2023": {
+          "type": "Mat"
+        },
+        "digital_sharing_ethics_video_/coursee/2023": {
+          "type": "Myndband"
+        },
+        "implementation_guide/coursef/2023": {
+          "name": "Leiðarvísir innleiðingar"
+        },
+        "sprite_lab_documentation_1/coursef/2023": {
+          "name": "Upplýsingar um Kvikasmiðju"
+        },
+        "teacher_forum/coursef/2023": {
+          "name": "Kennaraspjall"
+        },
+        "the_power_of_words_the_power_of_words/coursef/2023": {
+          "type": "Myndband"
+        },
+        "introducing_sprite_lab/coursef/2023": {
+          "name": "Kynning á Kvikasmiðjunni",
+          "type": "Myndband"
+        },
+        "sprite_lab_documentation/coursef/2023": {
+          "name": "Upplýsingar um Kvikasmiðju"
+        },
+        "ai_impact_on_society/coursef/2023": {
+          "type": "Myndband"
+        },
+        "ai_machine_learning/coursef/2023": {
+          "type": "Myndband"
+        },
+        "ai_training_data_bias/coursef/2023": {
+          "type": "Myndband"
+        },
+        "internet/coursef/2023": {
+          "name": "Internet",
+          "type": "Mat"
+        },
+        "internet_1/coursef/2023": {
+          "name": "Internet"
+        },
+        "the_internet/coursef/2023": {
+          "name": "Internetið"
+        },
+        "teacher_forum/express/2023": {
+          "name": "Kennaraspjall"
+        },
+        "pair_programming/express/2023": {
+          "name": "Félagaforritun",
+          "type": "Myndband"
+        },
+        "artist_introduction/express/2023": {
+          "type": "Myndband"
+        },
+        "turns_angles/express/2023": {
+          "type": "Myndband"
+        },
+        "sprite_lab_documentation/express/2023": {
+          "name": "Upplýsingar um Kvikasmiðju"
+        },
+        "sprites_in_action/express/2023": {
+          "name": "Kvikar í verki"
+        },
+        "pause_and_think_online/express/2023": {
+          "type": "Myndband"
+        },
+        "pair_programming_video/express/2023": {
+          "type": "Myndband"
+        },
+        "variables/express/2023": {
+          "name": "Breytur"
+        },
+        "teacher_forum/pre-express/2023": {
+          "name": "Kennaraspjall"
+        },
+        "20_20_20_rule/pre-express/2023": {
+          "type": "Myndband"
+        },
+        "pair_programming/pre-express/2023": {
+          "name": "Félagaforritun"
+        },
+        "wiggles_-_go_noodle/pre-express/2023": {
+          "type": "Myndband"
+        },
+        "pause_and_think_online/pre-express/2023": {
+          "type": "Myndband"
+        },
+        "how_ai_works_-_training_data_and_bias/how-ai-works/2023": {
+          "type": "Myndband"
+        },
+        "how_ai_works_-_what_is_machine_learning_/how-ai-works/2023": {
+          "type": "Myndband"
+        },
+        "how_ai_works_how_computer_vision_works/how-ai-works/2023": {
+          "type": "Myndband"
+        },
+        "what_a_neural_network_sees/how-ai-works/2023": {
+          "type": "Myndband"
+        },
+        "how_ai_works_how_neural_networks_work/how-ai-works/2023": {
+          "type": "Myndband"
+        },
+        "how_ai_works_chatbots_and_large_language_models_part_1_/how-ai-works/2023": {
+          "type": "Myndband"
+        },
+        "how_ai_works_chatbots_and_large_language_models_part_2_/how-ai-works/2023": {
+          "type": "Myndband"
+        },
+        "how_ai_works_creativity_and_imagination/how-ai-works/2023": {
+          "type": "Myndband"
+        },
+        "how_ai_works_-_societal_impact/how-ai-works/2023": {
+          "type": "Myndband"
+        },
+        "how_ai_works_-_privacy_and_future_of_work/how-ai-works/2023": {
+          "type": "Myndband"
+        },
+        "does_ai_have_creativity_and_imagination_/how-ai-works/2023": {
+          "type": "Myndband"
+        },
+        "how_ai_works_ethics_ai_equal_access_and_algorithmic_bias/how-ai-works/2023": {
+          "type": "Myndband"
+        },
+        "how_ai_works_ethics_ai_privacy_the_future_of_work/how-ai-works/2023": {
+          "type": "Myndband"
+        },
+        "how_ai_works_introduction/how-ai-works/2023": {
+          "type": "Myndband"
+        },
+        "how_ai_works_training_data_and_bias/how-ai-works/2023": {
+          "type": "Myndband"
+        },
+        "how_ai_works_what_is_machine_learning_/how-ai-works/2023": {
+          "type": "Myndband"
+        },
+        "how_chatbots_and_large_language_models_work/how-ai-works/2023": {
+          "type": "Myndband"
+        },
         "encryption-and-public-keys-optional-1/hoc-encryption/unversioned": {
           "type": "Myndband"
         },

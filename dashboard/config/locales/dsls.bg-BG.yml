@@ -481,6 +481,13 @@ bg-BG:
           Създайте гривна, която представлява името ви в система, която компютрите разбират!
 
           ![](https://images.code.org/ed15a484276c0989e4adb5daf480f68a-image-1557870226222.png)
+      BinaryBracelets-Unplugged2022_2023:
+        markdown: |
+          # Двоични Гривни
+
+          Създайте гривна, която представлява името ви в система, която компютрите разбират!
+
+          ![](https://images.code.org/ed15a484276c0989e4adb5daf480f68a-image-1557870226222.png)
       BinaryBracelets-Unplugged_2020:
         markdown: |
           # Двоични Гривни
@@ -2333,7 +2340,13 @@ bg-BG:
       CourseE_Lesson_11_Artist_Practice_2022:
         description: Добра работа досега! Изберете следващата си дейност. Завършете
           колко се може повече. Продължете да се упражнявате с функции и Художника!
+      CourseE_Lesson_11_Artist_Practice_2023:
+        description: Добра работа досега! Изберете следващата си дейност. Завършете
+          колко се може повече. Продължете да се упражнявате с функции и Художника!
       CourseE_Lesson_7_Artist_Practice_2022:
+        description: Добра работа досега! Изберете следващата си дейност. Завършете
+          колко се може повече. Продължете да се упражнявате с вложени цикли и Художника!
+      CourseE_Lesson_7_Artist_Practice_2023:
         description: Добра работа досега! Изберете следващата си дейност. Завършете
           колко се може повече. Продължете да се упражнявате с вложени цикли и Художника!
       CourseF_outbreak_story:
@@ -2342,7 +2355,11 @@ bg-BG:
         content1: описание тук
       CourseF_outbreak_story2022_2022_pilot_-2022-2:
         content1: описание тук
+      CourseF_outbreak_story2022_2022_pilot_-2022-2_2023:
+        content1: описание тук
       CourseF_outbreak_story22022_2022_pilot_-2022-2:
+        content1: описание тук
+      CourseF_outbreak_story22022_2022_pilot_-2022-2_2023:
         content1: описание тук
       Dance_Party_extras_intro:
         markdown: |-
@@ -2649,6 +2666,11 @@ bg-BG:
           # Моите Циклични Приятели Роботи
 
           Направете програмите си по-кратки с цикли!
+      MyLoopyRoboticFriends-Unplugged2022_2023:
+        markdown: |-
+          # Моите Циклични Приятели Роботи
+
+          Направете програмите си по-кратки с цикли!
       MyLoopyRoboticFriends-Unplugged_2020:
         markdown: |-
           # Моите Циклични Приятели Роботи
@@ -2665,6 +2687,11 @@ bg-BG:
 
           Научи се да програмираш като пишеш код с приятели!
       MyRoboticFriends-Unplugged2022:
+        markdown: |-
+          # Моите Приятели Роботи
+
+          Научи се да програмираш като пишеш код с приятели!
+      MyRoboticFriends-Unplugged2022_2023:
         markdown: |-
           # Моите Приятели Роботи
 
@@ -2813,6 +2840,11 @@ bg-BG:
           # Силата на Думите
 
           ## Какво трябва да направите, ако някой използва груб или нараняващ език в интернет?
+      PowerOfWords-Unplugged2022_2022_pilot_-2022-2_2023:
+        markdown: |-
+          # Силата на Думите
+
+          ## Какво трябва да направите, ако някой използва груб или нараняващ език в интернет?
       PowerOfWords-Unplugged_2020:
         markdown: |-
           # Силата на Думите
@@ -2833,6 +2865,11 @@ bg-BG:
       Prepare for your presentation:
         content1: описание тук
       PrivatePersonalInformation-Unplugged2022:
+        markdown: |-
+          # Поверителна и Лична Информация
+
+          ## Каква информация е OK да споделяте онлайн?
+      PrivatePersonalInformation-Unplugged2022_2023:
         markdown: |-
           # Поверителна и Лична Информация
 
@@ -3361,10 +3398,14 @@ bg-BG:
         - {}
       courseAB_EOC2022:
         display_name: Проект за Края на Курса
+      courseAB_EOC2022_2023:
+        display_name: Проект за Края на Курса
       courseAB_EOC_2021:
         description: Стигнахте последния урок! Изберете проект, който да създадете.
         display_name: Проект за Края на Курса
       courseB_EOC2022:
+        display_name: Проект за Края на Курса
+      courseB_EOC2022_2023:
         display_name: Проект за Края на Курса
       courseB_EOC_2021:
         display_name: Проект за Края на Курса
@@ -3377,6 +3418,14 @@ bg-BG:
         questions:
         - {}
       courseC_multi_artist_prog6_predict12022:
+        answers:
+        - {}
+        - {}
+        - {}
+        - {}
+        questions:
+        - {}
+      courseC_multi_artist_prog6_predict12022_2023:
         answers:
         - {}
         - {}
@@ -3432,6 +3481,14 @@ bg-BG:
         - text: '20'
         questions:
         - {}
+      courseC_multi_harvester_loops11_predict12022_2023:
+        answers:
+        - text: '4'
+        - text: '12'
+        - text: '15'
+        - text: '20'
+        questions:
+        - {}
       courseC_multi_harvester_loops11_predict1_2018:
         answers:
         - text: '4'
@@ -3473,6 +3530,20 @@ bg-BG:
         questions:
         - {}
       courseC_multi_maze_debugging8_predict12022:
+        answers:
+        - feedback: Неправилно. Скрат няма да стигне жълъда, защото се обръща в грешната
+            посока.
+          text: Скрат ще стигне жълъда. Няма грешки в кода.
+        - feedback: Правилно! Скрат се обръща в грешната посока и няма да стигне жълъда.
+          text: Скрат няма да стигне жълъда, защото се е обърнал в грешната посока.
+        - feedback: Неправилно. Скрат няма да стигне жълъда, защото се обръща в грешната
+            посока.
+          text: Скрат няма да стигне жълъда, защото няма достатъчно блоково `движи
+            напред`.
+        - feedback: Скрат няма да стигне жълъда, защото се е обърнал в грешната посока.
+        questions:
+        - text: Потърсете за грешки в кода. Скрат ще стигне ли жълъда или има проблем?
+      courseC_multi_maze_debugging8_predict12022_2023:
         answers:
         - feedback: Неправилно. Скрат няма да стигне жълъда, защото се обръща в грешната
             посока.
@@ -3550,6 +3621,14 @@ bg-BG:
         - {}
         questions:
         - {}
+      courseC_multi_maze_programming8_predict12022_2023:
+        answers:
+        - {}
+        - {}
+        - {}
+        - {}
+        questions:
+        - {}
       courseC_multi_maze_programming8_predict1_2018:
         answers:
         - {}
@@ -3591,6 +3670,14 @@ bg-BG:
         questions:
         - {}
       courseC_multi_starWars_predict12022:
+        answers:
+        - {}
+        - {}
+        - {}
+        - {}
+        questions:
+        - {}
+      courseC_multi_starWars_predict12022_2023:
         answers:
         - {}
         - {}
@@ -3646,6 +3733,14 @@ bg-BG:
         - {}
         questions:
         - {}
+      courseC_multi_starWars_predict22022_2023:
+        answers:
+        - {}
+        - {}
+        - {}
+        - {}
+        questions:
+        - {}
       courseC_multi_starWars_predict2_2018:
         answers:
         - {}
@@ -3679,6 +3774,10 @@ bg-BG:
         questions:
         - {}
       courseD_EOC2022:
+        description: Стигнахте последния урок на Курс D! Изберете проект, който да
+          създадете.
+        display_name: Проект за Края на Курса
+      courseD_EOC2022_2023:
         description: Стигнахте последния урок на Курс D! Изберете проект, който да
           създадете.
         display_name: Проект за Края на Курса
@@ -3738,6 +3837,14 @@ bg-BG:
         - {}
         questions:
         - {}
+      courseD_multi_artist_nestedLoops9_predict12022_2023:
+        answers:
+        - text: А
+        - text: Б
+        - text: В
+        - {}
+        questions:
+        - {}
       courseD_multi_artist_nestedLoops9_predict1_2018:
         answers:
         - text: А
@@ -3779,6 +3886,14 @@ bg-BG:
         questions:
         - {}
       courseD_multi_bee_conditionals1_predict12022:
+        answers:
+        - {}
+        - {}
+        - {}
+        - {}
+        questions:
+        - {}
+      courseD_multi_bee_conditionals1_predict12022_2023:
         answers:
         - {}
         - {}
@@ -3850,6 +3965,14 @@ bg-BG:
         - {}
         questions:
         - {}
+      courseD_multi_bee_conditionals7_predict22022_2023:
+        answers:
+        - {}
+        - {}
+        - {}
+        - {}
+        questions:
+        - {}
       courseD_multi_bee_conditionals7_predict2_2018:
         answers:
         - {}
@@ -3898,6 +4021,14 @@ bg-BG:
         - {}
         questions:
         - {}
+      courseD_multi_bee_nestedLoops2_predict12022_2023:
+        answers:
+        - {}
+        - {}
+        - {}
+        - {}
+        questions:
+        - {}
       courseD_multi_bee_nestedLoops2_predict1_2018:
         answers:
         - {}
@@ -3939,6 +4070,14 @@ bg-BG:
         questions:
         - {}
       courseD_multi_bee_nestedLoops9_predict22022:
+        answers:
+        - text: '4'
+        - text: '8'
+        - text: '10'
+        - text: '12'
+        questions:
+        - {}
+      courseD_multi_bee_nestedLoops9_predict22022_2023:
         answers:
         - text: '4'
         - text: '8'
@@ -4002,6 +4141,14 @@ bg-BG:
         - {}
         questions:
         - {}
+      courseD_multi_farmer_condLoops9_predict12022_2023:
+        answers:
+        - {}
+        - {}
+        - {}
+        - {}
+        questions:
+        - {}
       courseD_multi_farmer_condLoops9_predict1_2018:
         answers:
         - {}
@@ -4058,6 +4205,14 @@ bg-BG:
         - {}
         questions:
         - {}
+      courseD_multi_farmer_while10_predict22022_2023:
+        answers:
+        - {}
+        - {}
+        - {}
+        - {}
+        questions:
+        - {}
       courseD_multi_farmer_while10_predict2_2018:
         answers:
         - {}
@@ -4099,6 +4254,14 @@ bg-BG:
         questions:
         - {}
       courseD_multi_farmer_while4_predict12022:
+        answers:
+        - {}
+        - {}
+        - {}
+        - {}
+        questions:
+        - {}
+      courseD_multi_farmer_while4_predict12022_2023:
         answers:
         - {}
         - {}
@@ -4154,6 +4317,14 @@ bg-BG:
         - {}
         questions:
         - {}
+      courseD_multi_maze_until10_predict22022_2023:
+        answers:
+        - {}
+        - {}
+        - {}
+        - {}
+        questions:
+        - {}
       courseD_multi_maze_until10_predict2_2018:
         answers:
         - {}
@@ -4195,6 +4366,14 @@ bg-BG:
         questions:
         - {}
       courseD_multi_maze_until2_predict12022:
+        answers:
+        - {}
+        - {}
+        - {}
+        - {}
+        questions:
+        - {}
+      courseD_multi_maze_until2_predict12022_2023:
         answers:
         - {}
         - {}
@@ -4268,6 +4447,9 @@ bg-BG:
       courseE_EOC2022:
         description: Стигнахте края на Курс E! Изберете проект, който да създадете.
         display_name: Проект за Края на Курса
+      courseE_EOC2022_2023:
+        description: Стигнахте края на Курс E! Изберете проект, който да създадете.
+        display_name: Проект за Края на Курса
       courseE_EOC_2020:
         description: Стигнахте края на Курс E! Изберете проект, който да създадете.
         display_name: Проект за Края на Курса
@@ -4275,6 +4457,9 @@ bg-BG:
         description: Стигнахте края на Курс E! Изберете проект, който да създадете.
         display_name: Проект за Края на Курса
       courseE_EOC_examples2022:
+        description: Стигнахте края на Курс E! Изберете проект, който да създадете.
+        display_name: Проект за Края на Курса
+      courseE_EOC_examples2022_2023:
         description: Стигнахте края на Курс E! Изберете проект, който да създадете.
         display_name: Проект за Края на Курса
       courseE_EOC_examples_2021:
@@ -4305,6 +4490,14 @@ bg-BG:
         questions:
         - {}
       courseE_multi_farmer_functions11_predict2022:
+        answers:
+        - {}
+        - {}
+        - {}
+        - {}
+        questions:
+        - {}
+      courseE_multi_farmer_functions11_predict2022_2023:
         answers:
         - {}
         - {}
@@ -4353,6 +4546,14 @@ bg-BG:
         questions:
         - {}
       courseE_prediction_artistFunction12022:
+        answers:
+        - {}
+        - {}
+        - {}
+        - {}
+        questions:
+        - {}
+      courseE_prediction_artistFunction12022_2023:
         answers:
         - {}
         - {}
@@ -4435,6 +4636,14 @@ bg-BG:
         - {}
         questions:
         - {}
+      courseE_swim_fish_behavior_predict12022_2023:
+        answers:
+        - {}
+        - {}
+        - {}
+        - {}
+        questions:
+        - {}
       courseE_swim_fish_behavior_predict1_2021:
         answers:
         - {}
@@ -4471,10 +4680,15 @@ bg-BG:
       courseF_EOC_examples2022_2022_pilot_-2022-2:
         description: Стигнахте края на Курс F! Изберете проект да разгледате.
         display_name: Проект за Края на Курса
+      courseF_EOC_examples2022_2022_pilot_-2022-2_2023:
+        description: Стигнахте края на Курс F! Изберете проект да разгледате.
+        display_name: Проект за Края на Курса
       courseF_EOC_examples_2021:
         description: Стигнахте края на Курс F! Избере проект, който да създадете.
         display_name: Проект за Края на Курса
       courseF_EOC_samples2022:
+        display_name: Проект за Края на Курса
+      courseF_EOC_samples2022_2023:
         display_name: Проект за Края на Курса
       courseF_EOC_samples_2021:
         display_name: Проект за Края на Курса
@@ -4506,6 +4720,10 @@ bg-BG:
         description: Ще създавате игра за събиране. Преди да започнете, разгледайте
           примерните проекти отдолу. Натиснете \"Край\" когато сте готови да започнете
           да планирате своята програма.
+      courseF_collector_samples_2022_pilot_-2022-2_2023:
+        description: Ще създавате игра за събиране. Преди да започнете, разгледайте
+          примерните проекти отдолу. Натиснете \"Край\" когато сте готови да започнете
+          да планирате своята програма.
       courseF_events_predict_multi:
         answers:
         - {}
@@ -4522,7 +4740,19 @@ bg-BG:
         - {}
         questions:
         - {}
+      courseF_events_predict_multi2022_2022_pilot_-2022-2_2023:
+        answers:
+        - {}
+        - {}
+        - {}
+        - {}
+        questions:
+        - {}
       courseF_groups_freeplay_2022_pilot_-2022-2:
+        description: Сега можете да използвате наученето, за да създадете каквото
+          пожелаете! Създайте интерактивна програма с много спрайтове!
+        display_name: Много Спрайтове - Свободна Игра
+      courseF_groups_freeplay_2022_pilot_-2022-2_2023:
         description: Сега можете да използвате наученето, за да създадете каквото
           пожелаете! Създайте интерактивна програма с много спрайтове!
         display_name: Много Спрайтове - Свободна Игра
@@ -4531,7 +4761,25 @@ bg-BG:
           колкото се може повече. Продължете да се упражнявате със събития и групи
           от спрайтове!
         display_name: Много Спрайтове Упражнение
+      courseF_groups_practice_2022_pilot_-2022-2_2023:
+        description: Добра работа досега! Изберете следващата си дейност. Завършете
+          колкото се може повече. Продължете да се упражнявате със събития и групи
+          от спрайтове!
+        display_name: Много Спрайтове Упражнение
       courseF_groups_predict_multi_2022_pilot_-2022-2:
+        answers:
+        - feedback: Правилно! Спрайтът, който натиснете, ще стане по-голям.
+          text: Спрайтът, който натиснете, ще стане по-голям.
+        - feedback: Неправилно. Спрайтът, който натиснете, ще стане по-голям.
+          text: Спрайтът, който натиснете, ще стане по-малък.
+        - feedback: Неправилно. Спрайтът, който натиснете, ще стане по-голям.
+          text: Всички спрайтове ще станат по-големи.
+        - feedback: Неправилно. Спрайтът, който натиснете, ще стане по-голям.
+          text: Всички спрайтове ще станат по-малки.
+        questions:
+        - text: 'Направете предположение: След като натиснете Старт, какво ще се случи,
+            когато натиснете на някой от спрайтовете?'
+      courseF_groups_predict_multi_2022_pilot_-2022-2_2023:
         answers:
         - feedback: Правилно! Спрайтът, който натиснете, ще стане по-голям.
           text: Спрайтът, който натиснете, ще стане по-голям.
@@ -4554,6 +4802,11 @@ bg-BG:
           ги сега и вижте какво е възможно. На края на този курс, вие ще можете да
           създавате проекти като тези... и повече!
         display_name: Sprite Lab Приложения
+      courseF_intro_apps2022_2022_pilot_-2022-2_2023:
+        description: Всички тези проекти са създадени със Sprite Lab. Изпробвайте
+          ги сега и вижте какво е възможно. На края на този курс, вие ще можете да
+          създавате проекти като тези... и повече!
+        display_name: Sprite Lab Приложения
       courseF_labels_predict_multi:
         answers:
         - {}
@@ -4564,6 +4817,15 @@ bg-BG:
         questions:
         - {}
       courseF_labels_predict_multi2022_2022_pilot_-2022-2:
+        answers:
+        - {}
+        - {}
+        - {}
+        - {}
+        - {}
+        questions:
+        - {}
+      courseF_labels_predict_multi2022_2022_pilot_-2022-2_2023:
         answers:
         - {}
         - {}
@@ -4628,6 +4890,14 @@ bg-BG:
         - {}
         questions:
         - {}
+      courseF_multi_artist_variables3a_predict12022_2023:
+        answers:
+        - {}
+        - {}
+        - {}
+        - {}
+        questions:
+        - {}
       courseF_multi_artist_variables3a_predict1_2018:
         answers:
         - {}
@@ -4685,6 +4955,14 @@ bg-BG:
         questions:
         - {}
       courseF_multi_bee_for3_predict12022:
+        answers:
+        - {}
+        - {}
+        - {}
+        - {}
+        questions:
+        - {}
+      courseF_multi_bee_for3_predict12022_2023:
         answers:
         - {}
         - {}
@@ -4773,6 +5051,14 @@ bg-BG:
         - {}
         questions:
         - {}
+      courseF_sprites_predict_multi2022_2022_pilot_-2022-2_2023:
+        answers:
+        - {}
+        - {}
+        - {}
+        - {}
+        questions:
+        - {}
       courseF_variables2_predict2_multi2022_-2022-2:
         answers:
         - {}
@@ -4781,7 +5067,23 @@ bg-BG:
         - {}
         questions:
         - {}
+      courseF_variables2_predict2_multi2022_-2022-2_2023:
+        answers:
+        - {}
+        - {}
+        - {}
+        - {}
+        questions:
+        - {}
       courseF_variables2_predict_multi2022_2022_pilot_-2022-2:
+        answers:
+        - {}
+        - {}
+        - {}
+        - {}
+        questions:
+        - {}
+      courseF_variables2_predict_multi2022_2022_pilot_-2022-2_2023:
         answers:
         - {}
         - {}
@@ -4805,9 +5107,19 @@ bg-BG:
         - {}
         questions:
         - {}
+      courseF_variables_predict_multi2022_2022_pilot_-2022-2_2023:
+        answers:
+        - {}
+        - {}
+        - {}
+        - {}
+        questions:
+        - {}
       courseF_variables_stop:
         content1: описание тук
       courseF_variables_stop2022_2022_pilot_-2022-2:
+        content1: описание тук
+      courseF_variables_stop2022_2022_pilot_-2022-2_2023:
         content1: описание тук
       coursee_prediction_artistfunction2:
         answers:
@@ -4818,6 +5130,14 @@ bg-BG:
         questions:
         - {}
       coursee_prediction_artistfunction22022:
+        answers:
+        - {}
+        - {}
+        - {}
+        - {}
+        questions:
+        - {}
+      coursee_prediction_artistfunction22022_2023:
         answers:
         - {}
         - {}
@@ -4857,6 +5177,41 @@ bg-BG:
         - {}
         questions:
         - {}
+      csc_animal_adaptations_predict:
+        answers:
+        - {}
+        - {}
+        - {}
+        - {}
+        questions:
+        - {}
+      csc_ecosystems_matching_cfu:
+        answers:
+        - {}
+        - {}
+        - {}
+        questions:
+        - {}
+        - {}
+        - {}
+      csc_ecosystems_matching_conditionals:
+        answers:
+        - {}
+        - {}
+        - {}
+        questions:
+        - {}
+        - {}
+        - {}
+      csc_ecosystems_matching_events:
+        answers:
+        - {}
+        - {}
+        questions:
+        - {}
+        - {}
+      csc_timecapsule_info_2023:
+        content1: описание тук
       csd-post-survey-2017-q11_2018:
         answers:
         - {}
@@ -7975,6 +8330,12 @@ bg-BG:
           # Супер Дигитален Гражданин
 
           ## Как можете да застъпите, когато видите кибертормоз?
+      csf_be_a_super_digital_citizen2022_2023:
+        content1: описание тук
+        markdown: |-
+          # Супер Дигитален Гражданин
+
+          ## Как можете да застъпите, когато видите кибертормоз?
       csf_be_a_super_digital_citizen_2021:
         content1: описание тук
         markdown: |-
@@ -7987,6 +8348,11 @@ bg-BG:
 
           №№ Какво информация е OK да има във вашия цифровв отпечатък?
       csf_digital_trails2022:
+        markdown: |-
+          # Следвай Дигиталната Пътека
+
+          №№ Какво информация е OK да има във вашия цифровв отпечатък?
+      csf_digital_trails2022_2023:
         markdown: |-
           # Следвай Дигиталната Пътека
 
@@ -8011,6 +8377,20 @@ bg-BG:
 
           ![](https://images.code.org/bfa69295fbf33c77ecdeb79b5498d8f7-image-1584751340896.png)
       csf_password_power-up2022:
+        content1: описание тук
+        markdown: |-
+          # Подобрете Паролата си
+
+          ## Съвети за Парола да Запомните
+
+          * Започнете със запомняща се **фраза**.
+          * Само **родителите** ви трябва да знаят паролата ви.
+          * Никога не използвайте **лична** информация в паролата си.
+          * Създавайте пароли от поне **осем** знака.
+          * Използвайте букви, цифри и **знаци** в паролите си.
+
+          ![](https://images.code.org/bfa69295fbf33c77ecdeb79b5498d8f7-image-1584751340896.png)
+      csf_password_power-up2022_2023:
         content1: описание тук
         markdown: |-
           # Подобрете Паролата си
@@ -8064,6 +8444,19 @@ bg-BG:
           * **П**аузирайте и помислете онлайн.
 
           ![](https://images.code.org/f3e4987a130b27f7b589d7829b753aac-image-1584750971069.png)
+      csf_putting_a_stop_to_online_meanness2022_2023:
+        content1: описание тук
+        markdown: |-
+          # СТОП на Грубостта
+
+          ## Какво трябва да направите, ако някой е груб с вас онлайн?
+
+          * **С**тъпете назад.
+          * Каже**Т**е на възрастен, на когото имате доверие.
+          * **О**К сайтове първо
+          * **П**аузирайте и помислете онлайн.
+
+          ![](https://images.code.org/f3e4987a130b27f7b589d7829b753aac-image-1584750971069.png)
       csf_putting_a_stop_to_online_meanness_2021:
         content1: описание тук
         markdown: |-
@@ -8083,6 +8476,11 @@ bg-BG:
 
           ## Как отивате да пазарувате онлайн безопасно?
       csf_safety_in_my_online_neighborhood2022:
+        markdown: |-
+          # Моят Онлайн Квартал
+
+          ## Как отивате да пазарувате онлайн безопасно?
+      csf_safety_in_my_online_neighborhood2022_2023:
         markdown: |-
           # Моят Онлайн Квартал
 
@@ -9594,6 +9992,9 @@ bg-BG:
       express_EOC2022:
         description: Стигнахте края на Курс E! Изберете проект, който да създадете.
         display_name: Проект за Края на Курса
+      express_EOC2022_2023:
+        description: Стигнахте края на Курс E! Изберете проект, който да създадете.
+        display_name: Проект за Края на Курса
       express_EOC_2021:
         description: Стигнахте края на Курс E! Изберете проект, който да създадете.
         display_name: Проект за Края на Курса
@@ -9619,6 +10020,14 @@ bg-BG:
         - text: Разгледайте внимателно кода п-долу. Ако кода се изпълни до края (игнорирайки
             всякакви грешки), колко парчета съкровище би събрал Лаурел?
       grade2_multi_collector_A_predict12022:
+        answers:
+        - {}
+        - {}
+        - {}
+        - text: Лаурел ще събере 1 парче съкровище, използвайки този код.
+        questions:
+        - {}
+      grade2_multi_collector_A_predict12022_2023:
         answers:
         - {}
         - {}

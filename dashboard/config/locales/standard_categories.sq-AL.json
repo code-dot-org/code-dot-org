@@ -5,6 +5,12 @@
         "CT": {
           "description": "Te menduarit kompjuterik"
         },
+        "D2.Geo": {
+          "description": "Gjeografi"
+        },
+        "D2.His": {
+          "description": "Histori"
+        },
         "F": {
           "description": "funksione"
         },

@@ -381,6 +381,11 @@
             "name": "mijn functie"
           }
         },
+        "Course E: Artist Project_examples_2023": {
+          "my function": {
+            "name": "mijn functie"
+          }
+        },
         "Course E: Frozen Project_examples2022": {
           "draw a circle": {
             "description": "teken een cirkel met gegeven straal",
@@ -433,6 +438,57 @@
           }
         },
         "Course E: Frozen Project_examples_2021": {
+          "draw a circle": {
+            "description": "teken een cirkel met gegeven straal",
+            "name": "teken een cirkel",
+            "parameters": {
+              "radius": "straal"
+            }
+          },
+          "draw a house": {
+            "name": "teken een huis",
+            "parameters": {
+              "length": "lengte"
+            }
+          },
+          "draw a pinwheel": {
+            "name": "teken een windmolen",
+            "parameters": {
+              "length": "lengte",
+              "repeat": "herhaal",
+              "sides": "zijden"
+            }
+          },
+          "draw a shape": {
+            "name": "teken een vorm",
+            "parameters": {
+              "length": "lengte",
+              "sides": "zijden"
+            }
+          },
+          "draw a square": {
+            "name": "teken een vierkant",
+            "parameters": {
+              "length": "lengte",
+              "sides": "zijden"
+            }
+          },
+          "draw a star": {
+            "description": "teken een ster met gegeven punten en zijden van gegeven lengte",
+            "name": "teken een ster",
+            "parameters": {
+              "length": "lengte",
+              "points": "punten"
+            }
+          },
+          "draw a triangle": {
+            "name": "teken een driehoek",
+            "parameters": {
+              "length": "lengte"
+            }
+          }
+        },
+        "Course E: Frozen Project_examples_2023": {
           "draw a circle": {
             "description": "teken een cirkel met gegeven straal",
             "name": "teken een cirkel",
@@ -688,6 +744,56 @@
             }
           }
         },
+        "CourseD_EOC_artist_2023": {
+          "draw a circle": {
+            "description": "teken een cirkel met gegeven straal",
+            "name": "teken een cirkel",
+            "parameters": {
+              "radius": "straal"
+            }
+          },
+          "draw a house": {
+            "name": "teken een huis",
+            "parameters": {
+              "length": "lengte"
+            }
+          },
+          "draw a pinwheel": {
+            "name": "teken een windmolen",
+            "parameters": {
+              "length": "lengte",
+              "repeat": "herhaal",
+              "sides": "zijden"
+            }
+          },
+          "draw a shape": {
+            "name": "teken een vorm",
+            "parameters": {
+              "length": "lengte",
+              "sides": "zijden"
+            }
+          },
+          "draw a square": {
+            "name": "teken een vierkant",
+            "parameters": {
+              "length": "lengte"
+            }
+          },
+          "draw a star": {
+            "description": "teken een ster met gegeven punten en zijden van gegeven lengte",
+            "name": "teken een ster",
+            "parameters": {
+              "length": "lengte",
+              "points": "punten"
+            }
+          },
+          "draw a triangle": {
+            "name": "teken een driehoek",
+            "parameters": {
+              "length": "lengte"
+            }
+          }
+        },
         "CourseD_EOC_artist_example2021": {
           "draw a circle": {
             "description": "teken een cirkel met gegeven straal",
@@ -788,6 +894,56 @@
             }
           }
         },
+        "CourseD_EOC_artist_example2021_2023": {
+          "draw a circle": {
+            "description": "teken een cirkel met gegeven straal",
+            "name": "teken een cirkel",
+            "parameters": {
+              "radius": "straal"
+            }
+          },
+          "draw a house": {
+            "name": "teken een huis",
+            "parameters": {
+              "length": "lengte"
+            }
+          },
+          "draw a pinwheel": {
+            "name": "teken een windmolen",
+            "parameters": {
+              "length": "lengte",
+              "repeat": "herhaal",
+              "sides": "zijden"
+            }
+          },
+          "draw a shape": {
+            "name": "teken een vorm",
+            "parameters": {
+              "length": "lengte",
+              "sides": "zijden"
+            }
+          },
+          "draw a square": {
+            "name": "teken een vierkant",
+            "parameters": {
+              "length": "lengte"
+            }
+          },
+          "draw a star": {
+            "description": "teken een ster met gegeven punten en zijden van gegeven lengte",
+            "name": "teken een ster",
+            "parameters": {
+              "length": "lengte",
+              "points": "punten"
+            }
+          },
+          "draw a triangle": {
+            "name": "teken een driehoek",
+            "parameters": {
+              "length": "lengte"
+            }
+          }
+        },
         "Find the Wizard": {
           "do something": {
             "name": "do iets"
@@ -821,6 +977,11 @@
           }
         },
         "Function intro Ryan_2021": {
+          "build bridge": {
+            "name": "bouw brug"
+          }
+        },
+        "Function intro Ryan_2023": {
           "build bridge": {
             "name": "bouw brug"
           }
@@ -921,6 +1082,11 @@
             "name": "pad leegmaken"
           }
         },
+        "MC_HOC_2017_07_Cole_2023": {
+          "clear path": {
+            "name": "pad leegmaken"
+          }
+        },
         "MC_HOC_2017_10_RETRY": {
           "fix long path": {
             "name": "repareer lang pad"
@@ -954,6 +1120,14 @@
           }
         },
         "MC_HOC_2017_10_RETRY_2021": {
+          "fix long path": {
+            "name": "repareer lang pad"
+          },
+          "fix short path": {
+            "name": "repareer kort pad"
+          }
+        },
+        "MC_HOC_2017_10_RETRY_2023": {
           "fix long path": {
             "name": "repareer lang pad"
           },
@@ -1001,6 +1175,14 @@
             "name": "bouw korte brug"
           }
         },
+        "MC_HOC_2017_Ali_2023": {
+          "build long bridge": {
+            "name": "bouw lange brug"
+          },
+          "build short bridge": {
+            "name": "bouw korte brug"
+          }
+        },
         "MC_HOC_2017_FP20x20": {
           "function 1": {
             "name": "functie 1"
@@ -1034,6 +1216,14 @@
           }
         },
         "MC_HOC_2017_FP20x20_2021": {
+          "function 1": {
+            "name": "functie 1"
+          },
+          "function 2": {
+            "name": "functie 2"
+          }
+        },
+        "MC_HOC_2017_FP20x20_2023": {
           "function 1": {
             "name": "functie 1"
           },
@@ -1501,6 +1691,11 @@
             "name": "mogelijke oplossing"
           }
         },
+        "courseB_artist_loops_challenge2_2023": {
+          "potential solution": {
+            "name": "mogelijke oplossing"
+          }
+        },
         "courseC_artist_prog3": {
           "draw flame": {
             "parameters": {
@@ -1559,6 +1754,11 @@
           }
         },
         "courseC_data wizard_2021": {
+          "do something": {
+            "name": "do iets"
+          }
+        },
+        "courseC_data wizard_2023": {
           "do something": {
             "name": "do iets"
           }
@@ -1941,6 +2141,11 @@
             "name": "do iets"
           }
         },
+        "courseE_artist_functions10_2023": {
+          "do something": {
+            "name": "do iets"
+          }
+        },
         "courseE_artist_functions2": {
           "draw a square": {
             "name": "teken een vierkant"
@@ -1967,6 +2172,11 @@
           }
         },
         "courseE_artist_functions2_2021": {
+          "draw a square": {
+            "name": "teken een vierkant"
+          }
+        },
+        "courseE_artist_functions2_2023": {
           "draw a square": {
             "name": "teken een vierkant"
           }
@@ -2002,6 +2212,11 @@
           }
         },
         "courseE_artist_functions3_2021": {
+          "draw a star": {
+            "name": "teken een ster"
+          }
+        },
+        "courseE_artist_functions3_2023": {
           "draw a star": {
             "name": "teken een ster"
           }
@@ -2047,6 +2262,11 @@
           }
         },
         "courseE_artist_functions5_2021": {
+          "draw a star": {
+            "name": "teken een ster"
+          }
+        },
+        "courseE_artist_functions5_2023": {
           "draw a star": {
             "name": "teken een ster"
           }
@@ -2124,6 +2344,14 @@
             "name": "teken vierkant"
           }
         },
+        "courseE_artist_functions8_2023": {
+          "do something": {
+            "name": "do iets"
+          },
+          "draw square": {
+            "name": "teken vierkant"
+          }
+        },
         "courseE_artist_functions8a2022": {
           "do something": {
             "name": "do iets"
@@ -2157,6 +2385,14 @@
           }
         },
         "courseE_artist_functions8a_2021": {
+          "do something": {
+            "name": "do iets"
+          },
+          "draw a square": {
+            "name": "teken een vierkant"
+          }
+        },
+        "courseE_artist_functions8a_2023": {
           "do something": {
             "name": "do iets"
           },
@@ -2204,6 +2440,14 @@
             "name": "teken vierkant"
           }
         },
+        "courseE_artist_functions8b_2023": {
+          "do something": {
+            "name": "do iets"
+          },
+          "draw square": {
+            "name": "teken vierkant"
+          }
+        },
         "courseE_artist_functions8c2022": {
           "do something": {
             "name": "do iets"
@@ -2244,6 +2488,14 @@
             "name": "teken vierkant"
           }
         },
+        "courseE_artist_functions8c_2023": {
+          "do something": {
+            "name": "do iets"
+          },
+          "draw square": {
+            "name": "teken vierkant"
+          }
+        },
         "courseE_artist_functions9": {
           "do something": {
             "name": "do iets"
@@ -2274,6 +2526,11 @@
             "name": "do iets"
           }
         },
+        "courseE_artist_functions9_2023": {
+          "do something": {
+            "name": "do iets"
+          }
+        },
         "courseE_artist_functionsProj2022": {
           "draw square": {
             "name": "teken vierkant"
@@ -2295,6 +2552,11 @@
           }
         },
         "courseE_artist_functionsProj_2021": {
+          "draw square": {
+            "name": "teken vierkant"
+          }
+        },
+        "courseE_artist_functionsProj_2023": {
           "draw square": {
             "name": "teken vierkant"
           }
@@ -2329,6 +2591,11 @@
             "name": "do iets"
           }
         },
+        "courseE_artist_functions_challenge1_2023": {
+          "do something": {
+            "name": "do iets"
+          }
+        },
         "courseE_artist_functions_challenge2": {
           "do something": {
             "name": "do iets"
@@ -2359,6 +2626,11 @@
             "name": "do iets"
           }
         },
+        "courseE_artist_functions_challenge2_2023": {
+          "do something": {
+            "name": "do iets"
+          }
+        },
         "courseE_artist_functions_predict1": {
           "draw a square": {
             "name": "teken een vierkant"
@@ -2385,6 +2657,11 @@
           }
         },
         "courseE_artist_functions_predict1_2021": {
+          "draw a square": {
+            "name": "teken een vierkant"
+          }
+        },
+        "courseE_artist_functions_predict1_2023": {
           "draw a square": {
             "name": "teken een vierkant"
           }
@@ -2425,6 +2702,11 @@
           }
         },
         "courseE_artist_functions_predict2_2021": {
+          "do something": {
+            "name": "do iets"
+          }
+        },
+        "courseE_artist_functions_predict2_2023": {
           "do something": {
             "name": "do iets"
           }
@@ -2566,6 +2848,11 @@
           }
         },
         "courseF_apps_collector_-2022-2": {
+          "end game": {
+            "name": "einde spel"
+          }
+        },
+        "courseF_apps_collector_2023": {
           "end game": {
             "name": "einde spel"
           }

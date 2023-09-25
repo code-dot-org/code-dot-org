@@ -97,6 +97,9 @@
         "Overworld Chop Trees_2021": {
           "craft_callout_preplaced": "Hona hemen hainbat bloke zu hasi ahal izateko"
         },
+        "Overworld Chop Trees_2023": {
+          "craft_callout_preplaced": "Hona hemen hainbat bloke zu hasi ahal izateko"
+        },
         "Overworld House Frame Chosen": {
           "craft_callout_preplaced_house": "Kode honen bitartez, zure etxea eraikitzen hasiko da. Bukatu dezakezu zuk?"
         },
@@ -110,6 +113,9 @@
           "craft_callout_preplaced_house": "Kode honen bitartez, zure etxea eraikitzen hasiko da. Bukatu dezakezu zuk?"
         },
         "Overworld House Frame Chosen_2021": {
+          "craft_callout_preplaced_house": "Kode honen bitartez, zure etxea eraikitzen hasiko da. Bukatu dezakezu zuk?"
+        },
+        "Overworld House Frame Chosen_2023": {
           "craft_callout_preplaced_house": "Kode honen bitartez, zure etxea eraikitzen hasiko da. Bukatu dezakezu zuk?"
         },
         "Overworld Move to Sheep": {
@@ -127,6 +133,9 @@
         "Overworld Move to Sheep_2021": {
           "craft_run_button_callout": "Sakatu \"Hasi\" zure programa probatzeko"
         },
+        "Overworld Move to Sheep_2023": {
+          "craft_run_button_callout": "Sakatu \"Hasi\" zure programa probatzeko"
+        },
         "Overworld Place Wall": {
           "craft_inside_repeat": "Errepikatu ekintzak blokeak hemen txertatuz"
         },
@@ -140,6 +149,9 @@
           "craft_inside_repeat": "Errepikatu ekintzak blokeak hemen txertatuz"
         },
         "Overworld Place Wall_2021": {
+          "craft_inside_repeat": "Errepikatu ekintzak blokeak hemen txertatuz"
+        },
+        "Overworld Place Wall_2023": {
           "craft_inside_repeat": "Errepikatu ekintzak blokeak hemen txertatuz"
         },
         "Underground Avoiding Lava": {
@@ -157,6 +169,9 @@
         "Underground Avoiding Lava_2021": {
           "craft_callout_moveforward": "Kode honek laba bilatzen du. Gehitu dezakezu agindu bat aurrera mugitzeko?"
         },
+        "Underground Avoiding Lava_2023": {
+          "craft_callout_moveforward": "Kode honek laba bilatzen du. Gehitu dezakezu agindu bat aurrera mugitzeko?"
+        },
         "Underground Iron": {
           "craft_what_is_iron": "Erauzi burdina!"
         },
@@ -172,10 +187,16 @@
         "Underground Iron_2021": {
           "craft_what_is_iron": "Erauzi burdina!"
         },
+        "Underground Iron_2023": {
+          "craft_what_is_iron": "Erauzi burdina!"
+        },
         "courseA_EOC_playlab_animals": {
           "question_mark": "?"
         },
         "courseA_EOC_playlab_animals2022": {
+          "question_mark": "?"
+        },
+        "courseA_EOC_playlab_animals_2023": {
           "question_mark": "?"
         },
         "courseA_EOC_playlab_fantasy": {
@@ -184,10 +205,16 @@
         "courseA_EOC_playlab_fantasy2022": {
           "question_mark": "?"
         },
+        "courseA_EOC_playlab_fantasy_2023": {
+          "question_mark": "?"
+        },
         "courseA_EOC_playlab_people": {
           "question_mark": "?"
         },
         "courseA_EOC_playlab_people2022": {
+          "question_mark": "?"
+        },
+        "courseA_EOC_playlab_people_2023": {
           "question_mark": "?"
         },
         "courseD_bee_conditionals2": {
@@ -206,6 +233,9 @@
           "4_5_Bee_Conditionals_2_1": "Gogoan hartu, begiratu ea hodei bakoitzak lore bat duen. Ez da beharrezkoa abaraska guztiak egiaztatzea."
         },
         "courseD_bee_conditionals2_2021": {
+          "4_5_Bee_Conditionals_2_1": "Gogoan hartu, begiratu ea hodei bakoitzak lore bat duen. Ez da beharrezkoa abaraska guztiak egiaztatzea."
+        },
+        "courseD_bee_conditionals2_2023": {
           "4_5_Bee_Conditionals_2_1": "Gogoan hartu, begiratu ea hodei bakoitzak lore bat duen. Ez da beharrezkoa abaraska guztiak egiaztatzea."
         },
         "courseD_bee_conditionals2_copy": {

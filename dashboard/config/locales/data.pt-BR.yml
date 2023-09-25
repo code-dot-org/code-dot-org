@@ -919,7 +919,7 @@ pt:
           matrizes'
         csa_row_major_traversal: 'CSA: Linha principal de travessia'
         csa_scanner_class_methods: 'CSA: Métodos de classe de scanner'
-        csa_searching_algorithms: 'CSA: Algoritmos de busca'
+        csa_searching_algorithms: 'CSA: Algoritmos de Busca'
         csa_software_engineering_code_reviews: 'CSA: Engenharia de software - Revisões
           de código'
         csa_sorting_algorithms: 'CSA: Algoritmos de classificação'

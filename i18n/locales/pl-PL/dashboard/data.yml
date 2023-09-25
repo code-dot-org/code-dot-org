@@ -767,6 +767,7 @@ pl:
         blockchain-introd: 'Jak działa Blockchain: Wprowadzenie'
         ai-ethis: Etyka i sztuczna inteligencja
         how-ai-works-lessons: 'Jak działa sztuczna inteligencja: Przegląd lekcji'
+        se-cv-intro-to-lessons: 'Inżynieria oprogramowania i wizja komputerowa: wprowadzenie do lekcji'
     callout:
       text:
         drag_blocks: Przeciągnij blok "idź" i przypnij go poniżej innego bloku

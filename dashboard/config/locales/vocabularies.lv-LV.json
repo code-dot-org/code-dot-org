@@ -140,6 +140,81 @@
         "debugging/pre-express/2022": {
           "word": "Atkļūdošana"
         },
+        "code/csc-adaptations/2023": {
+          "word": "Kods"
+        },
+        "code/csc-ecosystems/2023": {
+          "word": "Kods"
+        },
+        "conditionals/csc-ecosystems/2023": {
+          "word": "Sazarojumi"
+        },
+        "variable/csc-ecosystems/2023": {
+          "word": "Mainīgais"
+        },
+        "code/csc-mappinglandmarks/2023": {
+          "word": "Kods"
+        },
+        "artist/csc-starquilts/2023": {
+          "word": "Mākslinieks"
+        },
+        "code/poetry/2023": {
+          "word": "Kods"
+        },
+        "debugging/coursea/2023": {
+          "word": "Atkļūdošana"
+        },
+        "debugging/courseb/2023": {
+          "word": "Atkļūdošana"
+        },
+        "debugging/coursec/2023": {
+          "word": "Atkļūdošana"
+        },
+        "binary/coursec/2023": {
+          "word": "Binārie"
+        },
+        "debugging/coursed/2023": {
+          "word": "Atkļūdošana"
+        },
+        "conditionals/coursed/2023": {
+          "word": "Sazarojumi"
+        },
+        "function/coursee/2023": {
+          "word": "Funkcija"
+        },
+        "conditionals/coursee/2023": {
+          "word": "Sazarojumi"
+        },
+        "define/coursee/2023": {
+          "word": "Definēt"
+        },
+        "variable/coursef/2023": {
+          "word": "Mainīgais"
+        },
+        "internet/coursef/2023": {
+          "word": "Internets"
+        },
+        "define/coursef/2023": {
+          "word": "Definēt"
+        },
+        "debugging/express/2023": {
+          "word": "Atkļūdošana"
+        },
+        "conditionals/express/2023": {
+          "word": "Sazarojumi"
+        },
+        "function/express/2023": {
+          "word": "Funkcija"
+        },
+        "variable/express/2023": {
+          "word": "Mainīgais"
+        },
+        "define/express/2023": {
+          "word": "Definēt"
+        },
+        "debugging/pre-express/2023": {
+          "word": "Atkļūdošana"
+        },
         "conditionals/aquatic/unversioned": {
           "word": "Sazarojumi"
         },

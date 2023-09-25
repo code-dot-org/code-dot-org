@@ -773,6 +773,207 @@
         "pair_programming/pre-express/2022": {
           "name": "Pariohjelmointi"
         },
+        "implementation_guide/coursea/2023": {
+          "name": "Toteutusopas"
+        },
+        "pair_programming/coursea/2023": {
+          "name": "Pariohjelmointi"
+        },
+        "happy_maps/coursea/2023": {
+          "name": "Iloiset kartat"
+        },
+        "the_big_event/coursea/2023": {
+          "name": "Suuri tapahtuma"
+        },
+        "the_big_event_1/coursea/2023": {
+          "name": "Suuri tapahtuma"
+        },
+        "the_big_event_2/coursea/2023": {
+          "name": "Suuri tapahtuma"
+        },
+        "implementation_guide/courseb/2023": {
+          "name": "Toteutusopas"
+        },
+        "move_it_move_it/courseb/2023": {
+          "name": "Liikuta, liikuta"
+        },
+        "move_it_move_it_1/courseb/2023": {
+          "name": "Liikuta, liikuta"
+        },
+        "move_it_move_it_2/courseb/2023": {
+          "name": "Liikuta, liikuta"
+        },
+        "move_it_move_it_3/courseb/2023": {
+          "name": "Liikuta, liikuta"
+        },
+        "pair_programming/courseb/2023": {
+          "name": "Pariohjelmointi"
+        },
+        "stevie_and_the_big_project/courseb/2023": {
+          "name": "Stevie ja iso projekti"
+        },
+        "unspotted_bugs/courseb/2023": {
+          "name": "Huomaamattomia vikoja"
+        },
+        "getting_loopy/courseb/2023": {
+          "name": "Mennään silmukoille"
+        },
+        "getting_loopy_1/courseb/2023": {
+          "name": "Mennään silmukoille"
+        },
+        "getting_loopy_2/courseb/2023": {
+          "name": "Mennään silmukoille"
+        },
+        "getting_loopy_3/courseb/2023": {
+          "name": "Mennään silmukoille"
+        },
+        "the_big_event/courseb/2023": {
+          "name": "Suuri tapahtuma"
+        },
+        "the_big_event_1/courseb/2023": {
+          "name": "Suuri tapahtuma"
+        },
+        "the_big_event_2/courseb/2023": {
+          "name": "Suuri tapahtuma"
+        },
+        "implementation_guide/coursec/2023": {
+          "name": "Toteutusopas"
+        },
+        "my_robotic_friends/coursec/2023": {
+          "name": "Robottiystäväni"
+        },
+        "my_robotic_friends_1/coursec/2023": {
+          "name": "Robottiystäväni"
+        },
+        "my_robotic_friends_2/coursec/2023": {
+          "name": "Robottiystäväni"
+        },
+        "my_robotic_friends_3/coursec/2023": {
+          "name": "Robottiystäväni"
+        },
+        "my_robotic_friends_4/coursec/2023": {
+          "name": "Robottiystäväni"
+        },
+        "pair_programming/coursec/2023": {
+          "name": "Pariohjelmointi"
+        },
+        "the_big_event/coursec/2023": {
+          "name": "Suuri tapahtuma"
+        },
+        "the_big_event_1/coursec/2023": {
+          "name": "Suuri tapahtuma"
+        },
+        "the_big_event_2/coursec/2023": {
+          "name": "Suuri tapahtuma"
+        },
+        "binary_bracelets/coursec/2023": {
+          "name": "Binäärikorut"
+        },
+        "binary_bracelets_1/coursec/2023": {
+          "name": "Binäärikorut"
+        },
+        "binary_bracelets_2/coursec/2023": {
+          "name": "Binäärikorut"
+        },
+        "binary_bracelets_3/coursec/2023": {
+          "name": "Binäärikorut"
+        },
+        "binary_bracelets_4/coursec/2023": {
+          "name": "Binäärikorut"
+        },
+        "implementation_guide/coursed/2023": {
+          "name": "Toteutusopas"
+        },
+        "graph_paper_programming/coursed/2023": {
+          "name": "Ruutupaperiohjelmointi"
+        },
+        "graph_paper_programming_1/coursed/2023": {
+          "name": "Ruutupaperiohjelmointi"
+        },
+        "graph_paper_programming_2/coursed/2023": {
+          "name": "Ruutupaperiohjelmointi"
+        },
+        "graph_paper_programming_3/coursed/2023": {
+          "name": "Ruutupaperiohjelmointi"
+        },
+        "graph_paper_programming_4/coursed/2023": {
+          "name": "Ruutupaperiohjelmointi"
+        },
+        "graph_paper_programming_5/coursed/2023": {
+          "name": "Ruutupaperiohjelmointi"
+        },
+        "pair_programming/coursed/2023": {
+          "name": "Pariohjelmointi"
+        },
+        "relay_programming/coursed/2023": {
+          "name": "Releohjelmointi"
+        },
+        "relay_programming_1/coursed/2023": {
+          "name": "Releohjelmointi"
+        },
+        "relay_programming_2/coursed/2023": {
+          "name": "Releohjelmointi"
+        },
+        "relay_programming_3/coursed/2023": {
+          "name": "Releohjelmointi"
+        },
+        "relay_programming_4/coursed/2023": {
+          "name": "Releohjelmointi"
+        },
+        "relay_programming_5/coursed/2023": {
+          "name": "Releohjelmointi"
+        },
+        "conditionals_with_cards/coursed/2023": {
+          "name": "Ehtolauseet pelikorteilla"
+        },
+        "conditionals_with_cards_1/coursed/2023": {
+          "name": "Ehtolauseet pelikorteilla"
+        },
+        "conditionals_with_cards_2/coursed/2023": {
+          "name": "Ehtolauseet pelikorteilla"
+        },
+        "conditionals_with_cards_3/coursed/2023": {
+          "name": "Ehtolauseet pelikorteilla"
+        },
+        "conditionals_with_cards_4/coursed/2023": {
+          "name": "Ehtolauseet pelikorteilla"
+        },
+        "implementation_guide/coursee/2023": {
+          "name": "Toteutusopas"
+        },
+        "sprite_lab_documentation/coursee/2023": {
+          "name": "Sprite-labra dokumentaatio"
+        },
+        "implementation_guide/coursef/2023": {
+          "name": "Toteutusopas"
+        },
+        "sprite_lab_documentation_1/coursef/2023": {
+          "name": "Sprite-labra dokumentaatio"
+        },
+        "sprite_lab_documentation/coursef/2023": {
+          "name": "Sprite-labra dokumentaatio"
+        },
+        "internet/coursef/2023": {
+          "name": "Internet"
+        },
+        "internet_1/coursef/2023": {
+          "name": "Internet"
+        },
+        "the_internet/coursef/2023": {
+          "name": "Internetti"
+        },
+        "pair_programming/express/2023": {
+          "name": "Pariohjelmointi"
+        },
+        "sprite_lab_documentation/express/2023": {
+          "name": "Sprite-labra dokumentaatio"
+        },
+        "variables/express/2023": {
+          "name": "Muuttujat"
+        },
+        "pair_programming/pre-express/2023": {
+          "name": "Pariohjelmointi"
+        },
         "list_of_poems_1/poem-art/unversioned": {
           "name": "",
           "url": "",
