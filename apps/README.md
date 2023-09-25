@@ -73,7 +73,7 @@ See also: [Full build with blockly changes](#full-build-with-blockly-changes)
 | All tests in parallel | `yarn test` |
 | Unit tests | `yarn test:unit` |
 | Integration tests | `yarn test:integration` |
-| A single unit test file | `yarn test:unit --entry=./test/unit/gridUtilsTest.js` |
+| A single unit test file | `yarn test:unit --entry=./test/unit/utilsTest.js` |
 | All unit tests in a folder | `yarn test:unit --entry=./test/unit/applab/` |
 | Unit tests named \*Tutorial\* | `yarn test:unit --grep='Tutorial'` |
 | Integration tests named \*data_blocks\* | `yarn test:integration --grep='data_blocks'` |
