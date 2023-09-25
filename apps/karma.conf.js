@@ -12,15 +12,15 @@ process.env.BABEL_ENV = 'test';
 // Single spot to define command-line arguments to `karma start`.
 // e.g. `karma start --myarg=value` => KARMA_CLI_FLAGS.myarg = 'value'
 //
-// Args are automatically available to tests: ./test/util/KARMA_CLI_FLAGS.js
-// Args are automatically passed on by grunt: e.g. `grunt karma --myarg=value`
+// Flags defined here are automatically available to tests: ./test/util/KARMA_CLI_FLAGS.js
+// Flags defined here are automatically passed on by grunt: e.g. `grunt karma --myarg=value`
 const karmaCliFlags = (config = {}) => ({
-  browser: config.browser || 'ChromeHeadless', // --browser=Chrome open in Chrome
+  browser: config.browser || 'ChromeHeadless', // --browser=Chrome
   entry: config.entry
     ? './' + path.relative('./test/unit', config.entry)
-    : undefined, // --entry=./test/unit/filename.js run the tests in filename.js
-  grep: config.grep, // --grep='clientApi' run tests whose name matches 'clientApi'
-  levelType: config.levelType, // --levelType=[maze|turtle|gamelab|etc...] run integrations tests for the given level
+    : undefined, // --entry=./test/unit/file.js run the tests in file.js
+  grep: config.grep, // --grep='clientApi' run tests matching name 'clientApi'
+  levelType: config.levelType, // --levelType=[maze|turtle|gamelab|etc...]
   port: config.port || 9876, // --port
   testType: config.testType, // --testType=[unit|integration|storybook]
   verbose: config.verbose, // --verbose streams test pass/fails as they happen
@@ -31,100 +31,70 @@ module.exports = function (config) {
   const KARMA_CLI_FLAGS = karmaCliFlags(config);
 
   config.set({
-    // base path that will be used to resolve all patterns (eg. files, exclude)
     basePath: '.',
-
-    // available frameworks: https://npmjs.org/browse/keyword/karma-adapter
     frameworks: ['mocha', 'webpack'],
-
-    // list of files / patterns to load in the browser
     files: [
       {
-        pattern: 'test/audio/**/*',
+        // Karma starts all test runs (and bundling) here:
+        pattern: `test/tests-entry.js`,
+        included: true,
+        watched: false,
+      },
+      // Remaining patterns are http-served by karma, but are not bundled in:
+      {
+        pattern: 'test/integration/assets/**/*',
         watched: false,
         included: false,
         nocache: true,
       },
       {
-        pattern: 'test/integration/**/*',
+        pattern: 'build/package/**/*',
         watched: false,
         included: false,
         nocache: true,
       },
       {
-        pattern: 'test/storybook/**/*',
-        watched: false,
-        included: false,
-        nocache: true,
-      },
-      {
-        pattern: 'test/unit/**/*',
-        watched: false,
-        included: false,
-        nocache: true,
-      },
-      {
-        pattern: 'test/util/**/*',
+        pattern: 'build/karma/**/*',
         watched: false,
         included: false,
         nocache: true,
       },
       {pattern: 'lib/**/*', watched: false, included: false, nocache: true},
-      {pattern: 'build/**/*', watched: false, included: false, nocache: true},
-      {
-        pattern: 'static/**/*',
-        watched: false,
-        included: false,
-        nocache: true,
-      },
-      {
-        pattern: `build/karma/*`,
-        watched: false,
-        included: false,
-        nocache: true,
-      },
-      {
-        pattern: `test/tests-entry.js`,
-        watched: false,
-      },
+      {pattern: 'static/**/*', watched: false, included: false, nocache: true},
     ],
 
+    // Configures the karma server to map urls to local file paths.
     proxies: {
-      // configure karma server to serve files from the source tree for
-      // various paths (the '/base' prefix points to the apps directory where
-      // karma.conf.js is located)
+      // e.g. "requests to /blockly/media/ should be served from ./static/"
       '/blockly/media/': '/base/static/',
       '/lib/blockly/media/': '/base/static/',
       '/v3/assets/': '/base/test/integration/assets/',
       '/base/static/1x1.gif': '/base/lib/blockly/media/1x1.gif',
 
-      // requests to the webpack output public path should be served from
-      // `apps/build/karma/`, where assets are written during the karma build
+      // Serve ./build/karma/, our webpack bundle, as /webpack_output/
       '/webpack_output/': '/base/build/karma/',
     },
 
-    // preprocess matching files before serving them to the browser
-    // available preprocessors: https://npmjs.org/browse/keyword/karma-preprocessor
     preprocessors: {
       'build/karma/*.js': ['sourcemap'],
+      // Webpack a bundle to ./build/karma/ with all our code: test/ AND src/
       'test/tests-entry.js': ['webpack', 'sourcemap'],
     },
 
     webpack: webpackKarmaConfig,
 
     client: {
-      // log console output in our test console
+      // Forward browser JS console.log(), console.error() etc to the terminal
       captureConsole: true,
       mocha: {
         timeout: 14000,
         grep: KARMA_CLI_FLAGS.grep,
       },
+      // Pass KARMA_CLI_FLAGS to tests, see: ./test/util/KARMA_CLI_FLAGS.js
       KARMA_CLI_FLAGS,
     },
 
-    // test results reporter to use
     reporters: [
-      //'spec',
       'mocha',
       ...(envConstants.DRONE ? ['junit', 'coverage-istanbul'] : []),
       ...(envConstants.COVERAGE ? ['coverage-istanbul'] : []),
@@ -156,23 +126,19 @@ module.exports = function (config) {
     // enable / disable colors in the output (reporters and logs)
     colors: true,
 
-    // level of logging
     // possible values: config.LOG_DISABLE || config.LOG_ERROR || config.LOG_WARN || config.LOG_INFO || config.LOG_DEBUG
     logLevel: config.LOG_INFO,
 
     // enable / disable watching file and executing tests whenever any file changes
     autoWatch: true,
 
-    // start these browsers
-    // available browser launchers: https://npmjs.org/browse/keyword/karma-launcher
+    // Test on these browsers, defaults to ChromeHeadless
     browsers: [KARMA_CLI_FLAGS.browser],
 
-    // Continuous Integration mode
-    // if true, Karma captures browsers, runs the tests and exits
+    // Run once or watch & keep running tests on file changes?
     singleRun: !KARMA_CLI_FLAGS.watchTests,
 
-    // Concurrency level
-    // how many browser should be started simultaneous
+    // how many browsers should be started simultaneously
     concurrency: Infinity,
 
     // increase timeout to wait for webpack to do its thing.
