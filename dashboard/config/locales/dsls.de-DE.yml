@@ -743,6 +743,11 @@ de-DE:
           # Das große Ereignis
 
           In der Informatik sind Ereignisse Aktionen, die ein Computer überwacht. In dieser Lektion werden Sie je nachdem, welche Taste gedrückt wird, unterschiedlich reagieren.
+      BigEvent-Unplugged2022_2023:
+        markdown: |
+          # Das große Ereignis
+
+          In der Informatik sind Ereignisse Aktionen, die ein Computer überwacht. In dieser Lektion werden Sie je nachdem, welche Taste gedrückt wird, unterschiedlich reagieren.
       BigEvent-Unplugged_2020:
         markdown: |
           # Das große Ereignis
@@ -761,6 +766,13 @@ de-DE:
 
           ![](https://images.code.org/ed15a484276c0989e4adb5daf480f68a-image-1557870226222.png)
       BinaryBracelets-Unplugged2022:
+        markdown: |
+          # Binäre Armbänder
+
+          Erstelle ein Armband, das deinen Namen in einem System repräsentiert, das Computer verstehen!
+
+          ![](https://images.code.org/ed15a484276c0989e4adb5daf480f68a-image-1557870226222.png)
+      BinaryBracelets-Unplugged2022_2023:
         markdown: |
           # Binäre Armbänder
 
@@ -1037,6 +1049,9 @@ de-DE:
           ## Resourcen
 
           * [Kartensortierungsalgorithm - Aktivitätsleitfaden](https://docs.google.com/document/d/1o4kVRnXnigufkS9WsjHjeD38f8MQrX6qCEFpka-F9Oo/export?format=pdf)
+        teacher_markdown: "* [Algorithmus zur Kartensortierung] (https://docs.google.com/document/d/1AYEKnN1uYMfmv1eJrck5tniOJDM4Ib2eEdRPkFzeEZk/edit?usp=sharing)
+          - Beispiel ([PDF](https://docs.google.com/document/d/1AYEKnN1uYMfmv1eJrck5tniOJDM4Ib2eEdRPkFzeEZk/export?format=pdf)
+          | [DOCX](https://docs.google.com/document/d/1AYEKnN1uYMfmv1eJrck5tniOJDM4Ib2eEdRPkFzeEZk/export?format=doc))\n"
       CSD U1 Lesson 7 Overview:
         markdown: |
           # Übersicht
@@ -1046,6 +1061,9 @@ de-DE:
           ## Resourcen
 
           * [Speicherung und Verarbeitung - Aktivitätsleitfaden](https://docs.google.com/document/d/1I-OzbJizf7m5DK5jfRxDtSYtc_SoSk6vGtSM9tqlGw0/export?format=pdf)
+        teacher_markdown: "* [Lagerung und Verarbeitung — Beispiel] (https://docs.google.com/a/code.org/document/d/1cuFrtoxPSBjr04-Js73CC4IYOZ6AQDetGAdxCtnknFY/edit?usp=sharing)
+          — Aktivitätsleitfaden ([PDF](https://docs.google.com/document/d/1cuFrtoxPSBjr04-Js73CC4IYOZ6AQDetGAdxCtnknFY/export?format=pdf)
+          | [DOCX](https://docs.google.com/a/code.org/document/d/1cuFrtoxPSBjr04-Js73CC4IYOZ6AQDetGAdxCtnknFY/edit?usp=sharing))\n"
       CSD U1 Lesson 8 Overview:
         markdown: |
           # Übersicht
@@ -1055,6 +1073,9 @@ de-DE:
           ## Resourcen
 
           * [App Erkundung - Aktivitätsleitfaden](https://docs.google.com/document/d/1OW-fkwA7xeNZWiduWescL-6a6zFigtJVP7hfL1oNgVA/export?format=pdf)
+        teacher_markdown: "* [Schlüssel zur App Entdeckung] (https://docs.google.com/document/d/126VyRZ5PdNnycmdSs_Us7tNRJyAiQvM8R1aeB8USUzA/edit)
+          — Leitfaden für Aktivitäten[PDF](https://docs.google.com/document/d/126VyRZ5PdNnycmdSs_Us7tNRJyAiQvM8R1aeB8USUzA/export?format=pdf)
+          | [DOCX](https://docs.google.com/document/d/126VyRZ5PdNnycmdSs_Us7tNRJyAiQvM8R1aeB8USUzA/export?format=doc)\n"
       CSD U1 Lesson 9 Overview:
         markdown: |
           # Übersicht
@@ -1066,6 +1087,11 @@ de-DE:
           * [Apps und Problemlösungen - Projektleitfaden](https://docs.google.com/document/d/1S7X-B2V1-WuT7ZLk1LAZRO1O5f4u7pgth4F7G00tGak/export?format=pdf)
           * [Apps und Problemlösungen - Peer Review](https://docs.google.com/document/d/13ekhJvtz1vovS6FhGBeDf1mcYFRyJe65bQdi8S8T9lU/export?format=pdf)
           * [Apps und Problemlösungen - Rubric](https://docs.google.com/document/d/1ix0LfgiVglwyC5Bb6PBlfBrnbeCOz2wPIPTgXu-qMZE/export?format=pdf)
+        teacher_markdown: |+
+          * [Apps und Problemlösung] (https://docs.google.com/document/d/1m8a9nnCGCriSvzWUr5Bh7Siod2iu2FdFQtMEz4TONuc/edit) — Beispiel eines Projekthandbuchs ([PDF](https://docs.google.com/document/d/1m8a9nnCGCriSvzWUr5Bh7Siod2iu2FdFQtMEz4TONuc/export?format=pdf) | [DOCX](https://docs.google.com/document/d/1m8a9nnCGCriSvzWUr5Bh7Siod2iu2FdFQtMEz4TONuc/export?format=doc))
+          * [Apps und Problemlösung] ( https://docs.google.com/document/d/1hm5wWoVqDhFHbs4MfN0gcAnskZ5a6a5KdO7N3Y0GLoA/edit) — Beispiel eines Peer-Reviews ([PDF](https://docs.google.com/document/d/1hm5wWoVqDhFHbs4MfN0gcAnskZ5a6a5KdO7N3Y0GLoA/export?format=pdf) | [DOCX](https://docs.google.com/document/d/1hm5wWoVqDhFHbs4MfN0gcAnskZ5a6a5KdO7N3Y0GLoA/export?format=doc))
+
+
       CSD U1 Test:
         title: Projektbezogener Test zum Thema Computer und Problemlösung
       CSD U1 Test PSP match:
@@ -1203,21 +1229,164 @@ de-DE:
         display_name: Hinzufügen von Bildern
       CSD U2 L1 Overview:
         content1: hier die Beschreibung
+        markdown: |
+          # Überblick
+
+          Diese Lektion behandelt die Zwecke, denen eine Website dienen kann, sowohl für die Benutzer als auch für die Ersteller. Der Kurs untersucht einige der am häufigsten genutzten Websites in den Vereinigten Staaten und erörtert, wie jede dieser Websites für Benutzer nützlich ist und wie sie auch ihren Erstellern dienen kann.
+          ## Wortschatz
+
+          * **Webseite** — Ein mit dem Internet verbundener Ort, der eine oder mehrere Seiten im World Wide Web verwaltet.
+
+
+          ## Ressourcen
+
+          * [Der Zweck von Webseiten — Leitfaden für Aktivitäten] (https://docs.google.com/document/d/16M-x8qNr0tdpfoHqyKo4sdbTzFOy5rKp8IBYmTQ7xkU/export?format=pdf)
+        teacher_markdown: "* [Der Zweck von Webseitens — Beispiel] (https://docs.google.com/document/d/1wgsW8XNLrXeelcoMLLjp0kVgiJ-pnBivrvfcyL06b-A/edit)
+          ([PDF](https://docs.google.com/document/d/1wgsW8XNLrXeelcoMLLjp0kVgiJ-pnBivrvfcyL06b-A/export?format=pdf)
+          | [DOCX](https://docs.google.com/document/d/1wgsW8XNLrXeelcoMLLjp0kVgiJ-pnBivrvfcyL06b-A/export?format=doc))\n"
       CSD U2 L2 Overview:
         content1: hier die Beschreibung
+        markdown: "# Überblick\n\nIn dieser Lektion werden Webseiten als persönliches
+          Ausdrucksmittel vorgestellt. In der Klasse werden zunächst verschiedene
+          Arten erörtert, wie Menschen ihre Interessen und Ideen zum Ausdruck bringen
+          und teilen. Anschließend werden einige Beispielwebseiten von Teilnehmern
+          aus einem früheren Kurs vorgestellt. Schließlich erstellt jeder ein Brainstorming
+          und teilt eine Liste mit Themen und Interessen, die aufgenommen werden sollen,
+          und erstellt so eine Quelle für die Entwicklung einer persönlichen Webseite
+          für den Rest der Lehreinheit. \n## Wortschatz\n\n* **Webseiteninhalt** —
+          Rohtext, Bilder und andere Elemente, die auf einer Webseite enthalten sind\n\n\n##
+          Ressourcen\n\n* [Persönlicher Webseiten Entwurf — Leitfaden für Aktivitäten]
+          (https://docs.google.com/document/d/1wnK0ntxFWvUyuEB6SksiTtUDqrEhZZn3VPLWynz-fV4/export?format=pdf)\n"
+        teacher_markdown: "* [Persönliche Webseitenskizze] (https://docs.google.com/document/d/10zHN3SErzKQLNEvr8e0j2UVjPCR5oSQdrfoFpbZbJiU/edit?usp=sharing)
+          - Beispiel ([PDF](https://docs.google.com/document/d/10zHN3SErzKQLNEvr8e0j2UVjPCR5oSQdrfoFpbZbJiU/export?format=pdf)
+          | [DOCX](https://docs.google.com/document/d/10zHN3SErzKQLNEvr8e0j2UVjPCR5oSQdrfoFpbZbJiU/export?format=doc))\n"
       CSD U2 L3 Overview:
         content1: hier die Beschreibung
+        markdown: |
+          # Überblick
+
+          In dieser Lektion wird HTML als Lösung für das Problem vorgestellt, wie sowohl der Inhalt als auch die Struktur einer Webseite an einen Computer übermittelt werden können. Die Lektion beginnt mit einer kurzen offline Übung, in der die Herausforderungen einer effektiven Vermittlung der Struktur einer Webseite veranschaulicht werden. Die Klasse betrachtet eine HTML-Seite in Web Lab und erörtert, wie HTML-Tags zur Lösung dieses Problems beitragen. Anschließend werden mithilfe von HTML die ersten Webseiten der Lerneinheit geschrieben.
+          ## Wortschatz
+
+          * **HTML** - Hypertext Markup Language, eine Sprache, die zur Erstellung von Webseiten verwendet wird
+          * **HTML-Element** - Ein Teil einer Website, der durch ein Start-Tag gekennzeichnet und manchmal mit einem Endtag abgeschlossen wird
+          * **HTML-Tag** - Der spezielle Zeichensatz, der den Anfang und das Ende eines HTML-Elements und den Typ dieses Elements angibt
+          * **Webseiteninhalt* * - Der Rohtext, die Bilder und andere Elemente, die in einer Webseite enthalten sind
+          * **Webseitenstruktur** - Der Zweck verschiedener Inhalte auf einer Webseite, der dem Computer hilft, zu bestimmen, wie dieser Inhalt angezeigt werden soll
+
+          ## Eingeführter Code
+
+          * **[HTML](//studio.code.org/docs/weblab/html/) ** - `<html></html>`
+          * **[Doctype](//studio.code.org/docs/weblab/doctype/) ** -` <!DOCTYPE>`
+          * **[Paragraph](//studio.code.org/docs/WebLab/P/) ** -`<p></p>`
+          * **[Body](// studio.code.org/docs/weblab/body/** -`<body></body>)`
+          ** -[Head]`` ** (//studio.code.org/docs/weblab/head/) ** - `<head></head>`
       CSD U2 L4 Overview:
         content1: hier die Beschreibung
+        markdown: |+
+          # Überblick
+
+          Diese Lektion setzt die Einführung in HTML-Tags fort, diesmal mit Überschriften. Die Klasse übt die Verwendung von Überschriften-Tags zur Erstellung von Seiten- und Abschnittstiteln und lernt, wie die verschiedenen Überschriftenelemente standardmäßig angezeigt werden. Als Nächstes plant die Klasse, wie die Inhalte auf den persönlichen Webseiten, die in der gesamten Einheit aufgebaut werden, organisiert werden sollen, und beginnt mit der ersten Seite des Projekts.
+          ## Wortschatz
+
+          * **Überschrift** — Ein Titel oder eine Zusammenfassung für ein Dokument oder einen Abschnitt eines Dokuments.
+
+          ## Code eingeführt
+
+          * **[Heading](//studio.code.org/docs/weblab/h/) ** - ``<h1></h1>
+
       CSD U2 L5 Overview:
         content1: hier die Beschreibung
+        markdown: |
+          # Überblick
+
+          In dieser Lektion geht es einen Schritt zurück von der Erstellung der persönlichen Website, um über persönliche Informationen zu sprechen, die Menschen gerne digital teilen. Der Kurs beginnt damit, zu besprechen, welche Arten von Informationen sich gut mit anderen teilen lassen. Anschließend werden einige Beispielseiten in sozialen Netzwerken untersucht, um herauszufinden, welche Arten von persönlichen Informationen absichtlich oder unbeabsichtigt weitergegeben werden könnten. Schließlich erarbeitet der Kurs eine Reihe von Richtlinien, die bei der Online-Bereitstellung von Informationen zu beachten sind.
+          ## Wortschatz
+
+          * **Digitaler Fußabdruck** — Die gesammelten Informationen über eine Person auf mehreren Websites im Internet.
+
+
+          ## Ressourcen
+
+          * [Wann ist deine Privatsphäre wichtig? - Leitfaden für Aktivitäten] (https://docs.google.com/document/d/1SmCceDGntI-rJI40dTR7rA0Tfa0cH1OQoRNNxPEmXG0/export?format=pdf)
+          * [Social Media Ermittler — Leitfaden für Aktivitäten] (https://docs.google.com/document/d/1A9q31rwrBA7tZZcZ3KZqjMb30UncM-eycwMvYgj9os4/export?format=pdf)
+        teacher_markdown: |+
+          * [Wann ist deine Privatsphäre wichtig?] (https://docs.google.com/document/d/1Lv8C4QK9HhPXguPoD6ygaaTs4a7YxMefaKojb_W5rLg/edit) — Beispiel für einen Aktivitätsleitfaden ([PDF](https://docs.google.com/document/d/1Lv8C4QK9HhPXguPoD6ygaaTs4a7YxMefaKojb_W5rLg/export?format=pdf) | [DOCX](https://docs.google.com/document/d/1Lv8C4QK9HhPXguPoD6ygaaTs4a7YxMefaKojb_W5rLg/export?format=doc))
+          * [Social Media Ermittler] (https://docs.google.com/document/d/1wbHlcYanBasUsIYjyCX6NytORAZxac-R0xSSOVU-DNA/) — Aktivität Leitfaden ([PDF](https://docs.google.com/document/d/1wbHlcYanBasUsIYjyCX6NytORAZxac-R0xSSOVU-DNA/export?format=pdf) | [DOCX](https://docs.google.com/document/d/1wbHlcYanBasUsIYjyCX6NytORAZxac-R0xSSOVU-DNA/export?format=doc))
+
       CSD U2 L6 Overview:
         content1: hier die Beschreibung
+        markdown: |+
+          # Überblick
+
+          In dieser Lektion werden geordnete und ungeordnete Listen und die zugehörigen  &lt;ul&gt;, &lt;ol&gt;, und &lt;li&gt; HTML-Tags vorgestellt. Die Klasse übt die Verwendung der Tags und kehrt dann zum Projekt der persönlichen Webseite zurück, um eine neue HTML-Seite hinzuzufügen, die die neuen Tags enthält.
+
+          ## Code eingeführt
+
+
+          * ** [Ungeordnete Liste] (//studio.code.org/docs/weblab/ul/) ** - `<ul></ul>`
+          * ** [Listenelement] (//studio.code.org/docs/weblab/li/) ** - `<li></li>`
+          * ** [Bestellte Liste] (//studio.code.org/docs/weblab/ol/) ** - `<ol></ol>`
+
       CSD U2 L7 Overview:
+        markdown: |
+          # Überblick
+
+          In dieser Lektion erfährst du, wie du von anderen erstellte Inhalte auf einer Website verwendest und dabei die Rechte des ursprünglichen Erstellers dieser Inhalte respektierst. Nach dem ersten Studium der Creative Commons-Lizenzierung lernt die Klasse, wie man Bilder zu Webseiten hinzufügt und dabei die richtige Quellenangabe angibt.
+
+          ## Wortschatz
+
+          * **Zitieren** — Ein Zitat aus oder ein Verweis auf ein Buch, eine Arbeit oder einen Autor, insbesondere in einer wissenschaftlichen Arbeit.
+          * **Urheberrecht** — das ausschließliche Recht, das einem Urheber oder einem Rechtsnachfolger eingeräumt wird, literarisches, künstlerisches oder musikalisches Material zu drucken, zu veröffentlichen, aufzuführen, zu verfilmen oder aufzunehmen und andere zu ermächtigen, dasselbe zu tun.
+          * **Creative Commons** — Eine öffentliche Urheberrechtslizenz, die die kostenlose Verbreitung eines ansonsten urheberrechtlich geschützten Werks ermöglicht. Eine CC-Lizenz wird verwendet, wenn ein Autor Personen das Recht geben möchte, ein von ihnen geschaffenes Werk zu teilen, zu verwenden und darauf aufzubauen.
+          * **Geistiges Eigentum** — Ein Werk oder eine Erfindung, die das Ergebnis von Kreativität ist, z. B. ein Manuskript oder ein Design, an dem man Rechte hat und für die man ein Patent, ein Urheberrecht, eine Marke usw. beantragen kann.
+
+          ## Eingeführter Code
+
+          * **[Image](//studio.code.org/docs/weblab/img/) ** -<img />`
+
+          # # Ressourcen
+
+          * [Überblick über Creative Commons] (https://www.youtube.com/watch?v=HKfqoPYJdVc) — Video
+          * [Deine Arbeit lizenzieren — Leitfaden für Aktivitäten] (https://docs.google.com/document/d/1twenNK2xrjc4bhIXuKfMXFA2yocLsR7MK8ZPvi-HckI/export?format=pdf)
         teacher_markdown: "* [Lizenzierung Deiner Arbeit - Aktivitätenleitfadenbeispiel]
           (https://docs.google.com/document/d/1NaoTAfCTdaMZ-CPlK3ii7gqvK674d320tPvQyz-2t9o/export?format=pdf)\n"
       CSD U2 Lesson 6 Overview:
         content1: hier die Beschreibung
+        markdown: |
+          # Überblick
+
+          In dieser Lektion werden häufig auftretende Probleme behandelt, die beim Entwerfen von Webseiten in HTML auftreten. In diesem Kurs werden Fehler in einer Folge immer komplexer werdender Webseiten in Code Studio korrigiert und die Bedeutung von Kommentaren, Leerzeichen und Einrückungen als Hilfsmittel zur besseren Lesbarkeit von Webseiten vermittelt.
+          ## Wortschatz
+
+          * **Bug** — Teil eines Programms, das nicht richtig funktioniert.
+          * **Kommentar** — Ein Kommentar ist eine vom Programmierer lesbare Notiz im Quellcode eines Computerprogramms.
+          * **Debugging** — Finden und Beheben von Problemen in Ihrem Algorithmus oder Programm.
+          * **Einrückung** — Die Platzierung von Text weiter rechts oder links, um ihn vom umgebenden Text zu trennen und so die Struktur des Programms besser zu vermitteln.
+          * **Leerraum** — Leerraum bezieht sich auf jedes Zeichen, das als Leerzeichen auf dem Bildschirm angezeigt wird, z. B. ein Leerzeichen, ein Tabulator oder eine neue Zeile. Leerzeichen helfen dabei, verschiedene Teile des Dokuments voneinander zu trennen, um das Lesen zu erleichtern.
+
+          ## Code eingeführt
+
+          * **[Comment](//studio.code.org/docs/weblab/comment/)** - `<!-- -->`
+      CSD U2 Lesson 9 Overview:
+        markdown: "# Überblick\n\nIn dieser Lektion werden Hyperlinks behandelt, die
+          es Webentwicklern ermöglichen, Seiten zu einer Website zu verbinden. In
+          der Klasse werden alle vorherigen Seiten zu einem Projekt verknüpft und
+          für jede Seite Navigationsleisten erstellt, bevor die gesamte Website im
+          Web veröffentlicht wird.  \n## Wortschatz\n\n* **Hyperlink** — Ein Link
+          von einer HTML-Datei zu einer anderen Stelle oder Datei, der normalerweise
+          durch Klicken auf ein markiertes Wort oder Bild auf dem Bildschirm aktiviert
+          wird.\n\n## Code eingeführt\n\n* **[Hyperlink](//studio.code.org/docs/WebLab/A/)
+          ** — `` ## Ressourcen * [Persönliche Webseite — Projekthandbuch] (https://docs.google.com/document/d/1sPdFBq1nrwG9742tu3sXQ93xWbCWmNdCgo0dv3eYfXY/export?format=pdf)**
+          - `<a></a>`\n\n\n\n\n* [Persönliche Website — Bewertung durch Fachkollegen]
+          (https://docs.google.com/document/d/1B5QXF0ASAy3vHcFQilQo3Q3J3GiiuQxBxnZFg8WDYaw/export?format=pdf)
+          * [Persönliche Website — Rubrik] (https://docs.google.com/document/d/16ddR5r96qvv_Ti5gWN-AcjvCx0-SP6B7shSp-caKuDI/export?format=pdf)\n\n"
+        teacher_markdown: |+
+          * [Persönliche Webseite] (https://docs.google.com/document/d/1mPwjeBMewyblcHU1fGLQD-og5f2U-cBwYduBG55TgIY/edit) - Beispiel eines Projekthandbuchs ([PDF](https://docs.google.com/document/d/1mPwjeBMewyblcHU1fGLQD-og5f2U-cBwYduBG55TgIY/export?format=pdf) | [DOCX](https://docs.google.com/document/d/1mPwjeBMewyblcHU1fGLQD-og5f2U-cBwYduBG55TgIY/export?format=doc))
+          * [Persönliche Webseite] ( https://docs.google.com/document/d/1OXAJvxuygTJyfvSUnrajhEbC34O_J26VQswwPsfnLZw/edit) — Beispiel eines Peer-Reviews ([PDF](https://docs.google.com/document/d/1OXAJvxuygTJyfvSUnrajhEbC34O_J26VQswwPsfnLZw/export?format=pdf) | [DOCX](https://docs.google.com/document/d/1OXAJvxuygTJyfvSUnrajhEbC34O_J26VQswwPsfnLZw/export?format=doc)
+
+
+
       CSD U2 Test Classes:
         answers:
         - correct: true
@@ -3507,6 +3676,11 @@ de-DE:
           # Bedingungen mit Karten
 
           Spielen Sie ein Kartenspiel und erstellen Sie Regeln wie "Wenn ich eine rote Karte ziehe, bekomme ich einen Punkt" und "Wenn ich eine schwarze Karte ziehe, bekommst du einen Punkt"
+      ConditionalsWithCards-Unplugged2022_2023:
+        markdown: |
+          # Bedingungen mit Karten
+
+          Spielen Sie ein Kartenspiel und erstellen Sie Regeln wie "Wenn ich eine rote Karte ziehe, bekomme ich einen Punkt" und "Wenn ich eine schwarze Karte ziehe, bekommst du einen Punkt"
       ConditionalsWithCards-Unplugged_2020:
         markdown: |
           # Bedingungen mit Karten
@@ -3521,9 +3695,27 @@ de-DE:
         description: Tolle Arbeit bis jetzt! Wähle deine nächste Aktivität. Schließe
           so viele ab, wie du kannst. Übe weiter mit Loops und dem Künstelr!
         display_name: Übung mit dem Künstler
+      CourseE_Artist_Practice_2023:
+        description: Tolle Arbeit bis jetzt! Wähle deine nächste Aktivität. Schließe
+          so viele ab, wie du kannst. Übe weiter mit Loops und dem Künstelr!
+        display_name: Übung mit dem Künstler
       CourseE_Lesson_11_Artist_Practice_2022:
+        description: Bisher tolle Arbeit! Wähle deine nächste Aktivität. Schließe
+          so viele wie möglich ab. Übe weiter mit Funktionen und dem Künstler!
+        display_name: Übung mit dem Künstler
+      CourseE_Lesson_11_Artist_Practice_2023:
+        description: Bisher tolle Arbeit! Wähle deine nächste Aktivität. Schließe
+          so viele wie möglich ab. Übe weiter mit Funktionen und dem Künstler!
         display_name: Übung mit dem Künstler
       CourseE_Lesson_7_Artist_Practice_2022:
+        description: Bisher tolle Arbeit! Wähle deine nächste Aktivität. Schließe
+          so viele wie möglich ab. Übe weiter mit verschachtelten Schleifen und dem
+          Künstler!
+        display_name: Übung mit dem Künstler
+      CourseE_Lesson_7_Artist_Practice_2023:
+        description: Bisher tolle Arbeit! Wähle deine nächste Aktivität. Schließe
+          so viele wie möglich ab. Übe weiter mit verschachtelten Schleifen und dem
+          Künstler!
         display_name: Übung mit dem Künstler
       CourseF_outbreak_story:
         content1: hier die Beschreibung
@@ -3592,7 +3784,58 @@ de-DE:
 
           ## Ausbruch!
           Das Virus breitete sich langsam auf andere Monster in der Nähe aus. Die gesunden Monster begannen sich Sorgen zu machen, dass sie alle krank werden würden. Die kranken Monster begannen sich Sorgen zu machen, dass sie das Virus an alle anderen weitergeben würden.
+      CourseF_outbreak_story2022_2022_pilot_-2022-2_2023:
+        content1: hier die Beschreibung
+        markdown: |
+          # Ausbruch: Codieren Sie Ihre eigene Simulation
+
+          ## Willkommen in Monster Town!
+          Monster Town war normalerweise ein glücklicher und gesunder Ort. Die Monster von Monster Town liebten es, ihre Freunde zu besuchen.
+
+          ## Ein Virus kommt in die Stadt
+          Eines Tages wurde einem der Monster schlecht. Das Monster hatte einen ** Virus ** gefangen! Ein Virus ist ein winziger Keim, der Sie krank machen kann. Die anderen Monster waren nicht allzu besorgt. Sie besuchten immer wieder ihre Freunde.
+
+          ## Das Virus verbreitet sich
+          Bald wurden zwei weitere Monster darauf krank. Es war der gleiche Virus! Es scheint, dass sie den Virus von ihrem Freund bekommen haben.
+
+          ## Ausbruch!
+          Das Virus breitete sich langsam auf andere Monster in der Nähe aus. Die gesunden Monster begannen sich Sorgen zu machen, dass sie alle krank werden würden. Die kranken Monster begannen sich Sorgen zu machen, dass sie das Virus an alle anderen weitergeben würden.
       CourseF_outbreak_story22022_2022_pilot_-2022-2:
+        content1: hier die Beschreibung
+        markdown: "# Ausbruch: Denke wie ein Wissenschaftler\n\n<img src=\"https://images.code.org/89376b9ebd5fcee77545f13a7a444430-image-1603135356392.png\"
+          style=\"float:right; width:30%\">\n\nSimulationen sind eine tolle Sache,
+          um etwas zu erfahren, was man in der realen Welt nicht beobachten kann.
+          Wissenschaftler lösen damit Probleme und testen gefahrlos und effizient
+          neue Ideen. Mit deiner Simulation kannst du zeigen, wie ein Virenausbruch
+          in Monster-Town ablaufen könnte.\n\n## Zurücksetzen und noch einmal spielen!\nAuch
+          wenn du deinen Code selbst schreibst,  weißt du vorher nie genau, was passiert,
+          wenn du auf Ausführen klickst. Die Monster bewegen sich willkürlich, deshalb
+          weißt du nicht, ob sich das Virus schnell oder langsam ausbreitet. Wenn
+          du deinen Code änderst, solltest du die Simulation immer mehrmals ausführen.
+          Das Spiel ist nie dasselbe!\n\n## Sammle Daten\nSchreibe deine Beobachtungen
+          auf, wenn du die Simulation ausführst. Zähle beispielsweise die Monster,
+          die krank werden oder beobachte mit dem Timer, wie schnell es geht. Du kannst
+          zum Beispiel beobachten, wie lange es  normalerweise dauert, bis alle Monster
+          krank sind, wenn sie keine Maske tragen. \n\n## Erstelle Prognosen\nWenn
+          du dein Modell gut kennst, kannst du Prognosen erstellen. Du kannst sogar
+          die Ausführungen deiner Simulation ändern und erraten, was diesmal anders
+          sein wird. Zum Beispiel:\n* Was würde passieren, wenn es doppelt so viele
+          Monster sind?\n* Was würde passieren, wenn sich die Monster halb so schnell
+          bewegen?\n\n<img src=\"https://images.code.org/2e83373ffd346ce3f42917a0624d441c-image-1603749526420.png\"
+          style=\"float:right\">\n\n## Funktioniert Monster-Town wie die wirkliche
+          Welt?\nEin Modell kann niemals zu hundert Prozent realistisch sein. \n*
+          Was haben deine Simulation des Ausbruchs und Virenausbrüche in der wirklichen
+          Welt gemeinsam?\n* Was unterscheidet sie?\nSprich mit deinen Lehrern oder
+          deiner Familie darüber, wenn du diese Aktivität abgeschlossen hast!\n\n##
+          Was könntest du noch simulieren?\nDu hast jetzt ein funktionierendes Arbeitsmodell
+          eines Ausbruchs in Monster-Town. Was kann deine Simulation nicht modellieren
+          oder zeigen, was du gerne zeigen würdest? Klicke auf Fortfahren und lerne,
+          noch mehr zu modellieren:\n* Erhöhe die Anzahl der Monster der Simulation\n*
+          Hilf den Monstern dabei, gesund zu werden\n* Wahrscheinlichkeit, Immunität,
+          Impfungen und mehr!\n\nDu kannst deine Simulation auch anderen zeigen oder
+          erklären, was wir tun könnten, damit andere gesund bleiben, wenn der Virus
+          in die Stadt gelangt ist. \n"
+      CourseF_outbreak_story22022_2022_pilot_-2022-2_2023:
         content1: hier die Beschreibung
         markdown: "# Ausbruch: Denke wie ein Wissenschaftler\n\n<img src=\"https://images.code.org/89376b9ebd5fcee77545f13a7a444430-image-1603135356392.png\"
           style=\"float:right; width:30%\">\n\nSimulationen sind eine tolle Sache,
@@ -3876,6 +4119,16 @@ de-DE:
           * Das Entwerfen von Apps, die für Menschen mit Behinderungen zugänglich sind, macht diese Apps auch für alle anderen besser!
 
           ![](https://images.code.org/0c670d0d9078657a870df0ca799492cb-image-1557166420066.png)
+      DesigningForAccessibilityMarkdownLevel2022_2023:
+        markdown: |
+          # Entwerfen für Barrierefreiheit
+
+          * In der Welt der Informatik geht es bei der **Barrierefreiheit** darum, Technologien für Menschen mit Behinderungen zu entwickeln.
+          * Behinderungen umfassen physische, auditive, visuelle und viele andere.
+          * Behinderungen sind vielfältig und beeinflussen Menschen auf unterschiedliche Weise, einschließlich der Art und Weise, wie sie Technologien wie **Smartphone Apps** nutzen.
+          * Das Entwerfen von Apps, die für Menschen mit Behinderungen zugänglich sind, macht diese Apps auch für alle anderen besser!
+
+          ![](https://images.code.org/0c670d0d9078657a870df0ca799492cb-image-1557166420066.png)
       DesigningForAccessibilityMarkdownLevel_2019:
         markdown: |
           # Entwerfen für Barrierefreiheit
@@ -3926,6 +4179,11 @@ de-DE:
           # Digital Sharing
 
           In dieser Lektion wirst du die Herausforderungen und Vorteile der Achtung von Eigentum und Urheberrecht, insbesondere in digitalen Umgebungen, betrachten.
+      DigitalSharing-Unplugged2022_2023:
+        markdown: |
+          # Digital Sharing
+
+          In dieser Lektion wirst du die Herausforderungen und Vorteile der Achtung von Eigentum und Urheberrecht, insbesondere in digitalen Umgebungen, betrachten.
       DigitalSharing-Unplugged_2020:
         markdown: |
           # Digital Sharing
@@ -3952,6 +4210,11 @@ de-DE:
 
           In dieser Lektion lernst du, Geschichten mit Eingabefeldern zu verwenden und zu schreiben. In diesem Video erfährst du, was das mit Informatik zu tun hat.
       EnvelopeVariables-Unplugged_2021_22022_2022_pilot_-2022-2:
+        markdown: |-
+          # Geschichten mit Eingabefeldern
+
+          In dieser Lektion lernst du, Geschichten mit Eingabefeldern zu verwenden und zu schreiben. In diesem Video erfährst du, was das mit Informatik zu tun hat.
+      EnvelopeVariables-Unplugged_2021_22022_2022_pilot_-2022-2_2023:
         markdown: |-
           # Geschichten mit Eingabefeldern
 
@@ -4018,6 +4281,11 @@ de-DE:
           # Getting Loopy
 
           Diese Lektion führt in das Programmierkonzept von Schleifen durch eine Tanzaktivität ein.
+      GettingLoopy-Unplugged2022_2023:
+        markdown: |
+          # Getting Loopy
+
+          Diese Lektion führt in das Programmierkonzept von Schleifen durch eine Tanzaktivität ein.
       GettingLoopy-Unplugged_2020:
         markdown: |
           # Getting Loopy
@@ -4041,6 +4309,11 @@ de-DE:
 
           Schreibe Algorithmen, mit denen Deine Mitschüler Bilder zeichnen können.
       GraphPaperProgramming-Unplugged2022:
+        markdown: |
+          # Grafische Papierprogrammierung
+
+          Schreibe Algorithmen, mit denen Deine Mitschüler Bilder zeichnen können.
+      GraphPaperProgramming-Unplugged2022_2023:
         markdown: |
           # Grafische Papierprogrammierung
 
@@ -4075,6 +4348,11 @@ de-DE:
 
           Erstelle einen Algorithmus, um einen Charakter durch ein Labyrinth zu bewegen.
       HappyMaps-Unplugged2022:
+        markdown: |
+          # Happy Maps
+
+          Erstelle einen Algorithmus, um einen Charakter durch ein Labyrinth zu bewegen.
+      HappyMaps-Unplugged2022_2023:
         markdown: |
           # Happy Maps
 
@@ -4209,6 +4487,11 @@ de-DE:
 
           Baue Dein eigenes Internet im Klassenzimmer auf, nur mit Papier.
       Internet-Unplugged2022_2022_pilot_-2022-2:
+        markdown: |
+          # Das Internet
+
+          Baue Dein eigenes Internet im Klassenzimmer auf, nur mit Papier.
+      Internet-Unplugged2022_2022_pilot_-2022-2_2023:
         markdown: |
           # Das Internet
 
@@ -4503,6 +4786,11 @@ de-DE:
           # Bewege etwas
 
           Benutze eine Karte und gib Befehle ein, um das Ziel zu erreichen.
+      MoveItMoveIt-Unplugged2022_2023:
+        markdown: |
+          # Bewege etwas
+
+          Benutze eine Karte und gib Befehle ein, um das Ziel zu erreichen.
       MoveItMoveIt-Unplugged_2020:
         markdown: |
           # Bewege etwas
@@ -4535,6 +4823,11 @@ de-DE:
           # Meine Roboterfreunde (Schleifen)
 
           Mache Dein Programme mit Schleifen kürzer!
+      MyLoopyRoboticFriends-Unplugged2022_2023:
+        markdown: |
+          # Meine Roboterfreunde (Schleifen)
+
+          Mache Dein Programme mit Schleifen kürzer!
       MyLoopyRoboticFriends-Unplugged_2020:
         markdown: |
           # Meine Roboterfreunde (Schleifen)
@@ -4551,6 +4844,11 @@ de-DE:
 
           Lerne zu programmieren, indem du Code für deine Freunde schreibst!
       MyRoboticFriends-Unplugged2022:
+        markdown: |
+          # Meine Roboterfreunde
+
+          Lerne zu programmieren, indem du Code für deine Freunde schreibst!
+      MyRoboticFriends-Unplugged2022_2023:
         markdown: |
           # Meine Roboterfreunde
 
@@ -7985,6 +8283,11 @@ de-DE:
           # Die Macht der Worte
 
           ## Was sollte man tun, wenn jemand im Internet eine gemeine oder verletzende Sprache verwendet?
+      PowerOfWords-Unplugged2022_2022_pilot_-2022-2_2023:
+        markdown: |-
+          # Die Macht der Worte
+
+          ## Was sollte man tun, wenn jemand im Internet eine gemeine oder verletzende Sprache verwendet?
       PowerOfWords-Unplugged_2020:
         markdown: |-
           # Die Macht der Worte
@@ -8025,6 +8328,11 @@ de-DE:
           # Private und persönliche Informationen
 
           ## Welche Informationen über dich darfst du online teilen?
+      PrivatePersonalInformation-Unplugged2022_2023:
+        markdown: |-
+          # Private und persönliche Informationen
+
+          ## Welche Informationen über dich darfst du online teilen?
       PrivatePersonalInformation-Unplugged_2020:
         markdown: |-
           # Private und persönliche Informationen
@@ -8041,6 +8349,11 @@ de-DE:
 
           Teilt euch in Teams auf und arbeitet zusammen, um Programme zu schreiben, die Bilder zeichnen.
       RelayProgramming-Unplugged2022:
+        markdown: |
+          # Relais-Programmierung
+
+          Teilt euch in Teams auf und arbeitet zusammen, um Programme zu schreiben, die Bilder zeichnen.
+      RelayProgramming-Unplugged2022_2023:
         markdown: |
           # Relais-Programmierung
 
@@ -8081,6 +8394,11 @@ de-DE:
 
           Verwende das Konzept des Refrains in einem Lied, um mehr über die Definition und den Aufruf von Funktionen zu erfahren.
       Songwriting-Unplugged2022:
+        markdown: |
+          # Songwriting
+
+          Verwende das Konzept des Refrains in einem Lied, um mehr über die Definition und den Aufruf von Funktionen zu erfahren.
+      Songwriting-Unplugged2022_2023:
         markdown: |
           # Songwriting
 
@@ -8211,6 +8529,12 @@ de-DE:
           Freunden zu reden, Musik zu hören, einzukaufen oder einfach nur im Internet
           zu surfen.\n* Es ist wichtig für Programmierer, die Bedürfnisse anderer
           zu verstehen und Anwendungen mit Blick auf sie zu entwickeln!\n\n![](https://images.code.org/fb17eeb9238d2f26c6ab40c9841517a7-image-1555611687284.png)\n"
+      TheRightAppMarkdownLevel2022_2023:
+        markdown: "# Die richtige App\n\n* Jeder benutzt heutzutage Computer, insbesondere
+          Smartphones. \n* Smartphone-Apps helfen Menschen, Dinge zu tun, wie mit
+          Freunden zu reden, Musik zu hören, einzukaufen oder einfach nur im Internet
+          zu surfen.\n* Es ist wichtig für Programmierer, die Bedürfnisse anderer
+          zu verstehen und Anwendungen mit Blick auf sie zu entwickeln!\n\n![](https://images.code.org/fb17eeb9238d2f26c6ab40c9841517a7-image-1555611687284.png)\n"
       TheRightAppMarkdownLevel_2019:
         markdown: "# Die richtige App\n\n* Jeder benutzt heutzutage Computer, insbesondere
           Smartphones. \n* Smartphone-Apps helfen Menschen, Dinge zu tun, wie mit
@@ -8233,12 +8557,12 @@ de-DE:
         markdown: |
           # Übersicht
 
-          Die Klasse arbeitet in Gruppen, um Aluminiumfolienboote zu entwerfen, die so viele Pennys wie möglich tragen.  Am Ende des Unterrichts reflektieren die Gruppen ihre Erfahrungen mit der Aktivität und stellen Verbindungen zu den Arten der Problemlösung her, die sie für den Rest des Kurses durchführen werden.
+          Die Klasse arbeitet in Gruppen, um Aluminiumfolienboote zu entwerfen, die so viele Cent-Stücke wie möglich tragen.  Am Ende des Unterrichts reflektieren die Gruppen ihre Erfahrungen mit der Aktivität und stellen Verbindungen zu den Arten der Problemlösung her, die sie für den Rest des Kurses durchführen werden.
 
 
-          ## Resourcen
+          ## Ressourcen
 
-          * [Aluminumfolienboote](https://docs.google.com/document/d/1C5RMzH0811r8e2XdVbWV-GANm3uIar2_N8hI9jqX2rk/export?format=pdf) - Activity Guide (copy as [MS Word](https://docs.google.com/document/d/1C5RMzH0811r8e2XdVbWV-GANm3uIar2_N8hI9jqX2rk/export?format=doc), [Google Doc](https://docs.google.com/document/d/1C5RMzH0811r8e2XdVbWV-GANm3uIar2_N8hI9jqX2rk/copy))
+          * [Aluminiumfolienboote](https://docs.google.com/document/d/1C5RMzH0811r8e2XdVbWV-GANm3uIar2_N8hI9jqX2rk/export?format=pdf) - Activity Guide (kopiere als [MS Word](https://docs.google.com/document/d/1C5RMzH0811r8e2XdVbWV-GANm3uIar2_N8hI9jqX2rk/export?format=doc), [Google Doc](https://docs.google.com/document/d/1C5RMzH0811r8e2XdVbWV-GANm3uIar2_N8hI9jqX2rk/copy))
         teacher_markdown: |-
           [key]
 
@@ -8265,6 +8589,9 @@ de-DE:
 
           ## Resourcen
           * [Problemlösung - Aktivitätsleitfaden](https://docs.google.com/document/d/1cym5lMuy41CbvXYe7F57N2XfI6Afp0hJsHovhR0GD2M/export?format=pdf)
+        teacher_markdown: "[Schlüssel zur Problemlösung] (https://docs.google.com/document/d/1hmbWujY2ii04XJRvoafIEtGyK-ZNBkJEtdSMFcXS5Uw/)
+          — Aktivitätsleitfaden[PDF]((https://docs.google.com/document/d/1hmbWujY2ii04XJRvoafIEtGyK-ZNBkJEtdSMFcXS5Uw/export?format=pdf)
+          | [DOCX](https://docs.google.com/document/d/1hmbWujY2ii04XJRvoafIEtGyK-ZNBkJEtdSMFcXS5Uw/export?format=doc))\n"
       Unit 1 Lesson 4 Overview:
         markdown: |
           # Übersicht
@@ -8290,6 +8617,41 @@ de-DE:
           * [Pixel Filtering](https://docs.google.com/document/d/1R92qKHBC8Bz3P3YXVSziyfpijJ0gMYob2j5RncWdWsA/edit?usp=sharing) - Activity Guide ([PDF](https://docs.google.com/document/d/1R92qKHBC8Bz3P3YXVSziyfpijJ0gMYob2j5RncWdWsA/export?format=pdf) | [DOCX](https://docs.google.com/document/d/1R92qKHBC8Bz3P3YXVSziyfpijJ0gMYob2j5RncWdWsA/export?format=doc))
         teacher_markdown: "* [Pixel Filterung](https://drive.google.com/open?id=1D3VELqNLAyrPeDl3o-PWxOPV8VD9bwdhoMIH0E9fLM8)
           - Answer Key"
+      Unit 2 Lesson 7 Overview:
+        markdown: |+
+          # Überblick
+
+          In dieser Lektion wird CSS als Möglichkeit vorgestellt, Elemente auf der Seite zu gestalten. Die Klasse lernt die grundlegende Syntax für CSS-Regelsätze und untersucht dann Eigenschaften, die sich auf HTML-Textelemente auswirken. Schließlich wendet jeder Textstile auf seine persönlichen Websites an.
+          ## Wortschatz
+
+          * **CSS** - CSS steht für Cascading Style Sheets. CSS ermöglicht es, jedes HTML-Element nach bestimmten Regeln zu stylen.
+          * **CSS-Selektor** — Gibt den Teil des Codes an, auf den der Stil angewendet werden soll.
+
+          ##eingeführter Code
+
+          *  **[Color](//studio.code.org/docs/weblab/color/)** - `color: value;`
+          *  **[Text Align](//studio.code.org/docs/weblab/text-align/)** - `text-align: value;`
+          *  **[Text Decoration](//studio.code.org/docs/weblab/Text-Dec/)** - `text-decoration: value;`
+          *  **[Font Family](//studio.code.org/docs/weblab/font-family/)** - `font-family:value;`
+          *  **[Font Size](//studio.code.org/docs/weblab/font-size/)** - `font-size:value;`
+
+      Unit 2 Lesson 8 Overview:
+        markdown: |+
+          # Überblick
+
+          Diese Lektion setzt die Einführung in CSS-Stileigenschaften fort und konzentriert sich diesmal mehr auf Nicht-Text-Elemente. Der Kurs beginnt mit der Untersuchung und Änderung der neuen CSS-Stile auf einer Desserts of the World-Seite. Anschließend wendet jeder dieses neue Wissen auf seine persönlichen Websites an.
+
+          ## Eingeführter Code
+
+          *  **[Background Color](//studio.code.org/docs/weblab/background-color/)** - `background-color: value;`
+          *  **[Float](//studio.code.org/docs/weblab/float/)** - `float: value;`
+          *  **[Margin](//studio.code.org/docs/weblab/margin/)** - `margin: value;`
+          *  **[Width](//studio.code.org/docs/weblab/width/)** - `width: value;`
+          *  **[Height](//studio.code.org/docs/weblab/height/)** - `height: value;`
+          *  **[Border Style](//studio.code.org/docs/weblab/border-style/)** - `border-style: value;`
+          *  **[Border Width](//studio.code.org/docs/weblab/border-width/)** - `border-width: value;`
+          *  **[Border Color](//studio.code.org/docs/weblab/border-color/)** - `border-color: value;`
+
       aiml-ch1-pulse-survey-q1_2021:
         answers:
         - correct: true
@@ -8726,11 +9088,19 @@ de-DE:
         description: Du hast die letzte Lektion erreicht! Wähle ein Projekt zum Weiterarbeiten
           aus.
         display_name: Projekt am Ende des Kurses
+      courseAB_EOC2022_2023:
+        description: Du hast die letzte Lektion erreicht! Wähle ein Projekt zum Weiterarbeiten
+          aus.
+        display_name: Projekt am Ende des Kurses
       courseAB_EOC_2021:
         description: Du hast die letzte Lektion erreicht! Wähle ein Projekt zum Weiterarbeiten
           aus.
         display_name: Projekt am Ende des Kurses
       courseB_EOC2022:
+        description: Du hast die letzte Lektion erreicht! Wähle ein Projekt zum Weiterarbeiten
+          aus.
+        display_name: Projekt am Ende des Kurses
+      courseB_EOC2022_2023:
         description: Du hast die letzte Lektion erreicht! Wähle ein Projekt zum Weiterarbeiten
           aus.
         display_name: Projekt am Ende des Kurses
@@ -8756,6 +9126,23 @@ de-DE:
         - text: Schau dir den Code unten genau an. Was passiert, wenn du auf "Ausführen"
             klickst?
       courseC_multi_artist_prog6_predict12022:
+        answers:
+        - correct: true
+          feedback: Falsch. Der Künstler zeichnet ein Quadrat.
+          text: Der Künstler zeichnet ein Dreieck mit drei gleichen Seiten.
+        - correct: true
+          feedback: Falsch. Der Künstler zeichnet ein Quadrat.
+          text: Der Künstler zeichnet eine einzelne Linie.
+        - correct: true
+          feedback: Richtig!
+          text: Der Zeichner zeichnet ein Quadrat.
+        - correct: true
+          feedback: 'Falsch. Der Zeichner zeichnet ein Quadrat. '
+          text: 'Der Zeichner zeichnet ein Fünfeck. '
+        questions:
+        - text: Schau dir den Code unten genau an. Was passiert, wenn du auf "Ausführen"
+            klickst?
+      courseC_multi_artist_prog6_predict12022_2023:
         answers:
         - correct: true
           feedback: Falsch. Der Künstler zeichnet ein Quadrat.
@@ -8880,6 +9267,26 @@ de-DE:
         questions:
         - text: Schau dir den Code unten genau an! Wie viele Kürbisse wird die Erntearbeiterin
             sammeln, nachdem du auf "Ausführen" geklickt hast?
+      courseC_multi_harvester_loops11_predict12022_2023:
+        answers:
+        - correct: true
+          feedback: Falsch. Die Erntearbeiterin sammelt 4 Kürbisse in jeder der 3
+            Schleifen.  4 mal 3 ist 12!
+          text: '4'
+        - correct: true
+          feedback: Richtig!
+          text: '12'
+        - correct: true
+          feedback: Falsch. Die Erntearbeiterin sammelt 4 Kürbisse in jeder der 3
+            Schleifen.  4 mal 3 ist 12!
+          text: '15'
+        - correct: true
+          feedback: Falsch. Die Erntearbeiterin sammelt 4 Kürbisse in jeder der 3
+            Schleifen.  4 mal 3 ist 12!
+          text: '20'
+        questions:
+        - text: Schau dir den Code unten genau an! Wie viele Kürbisse wird die Erntearbeiterin
+            sammeln, nachdem du auf "Ausführen" geklickt hast?
       courseC_multi_harvester_loops11_predict1_2018:
         answers:
         - correct: true
@@ -8984,15 +9391,42 @@ de-DE:
       courseC_multi_maze_debugging8_predict12022:
         answers:
         - correct: true
-          feedback: Nein. Scrat wird die Eichel nicht erreichen, da er sich in die
-            falsche Richtung dreht.
+          feedback: Falsch. Scrat wird die Eichel nicht erreichen, weil er in die
+            falsche Richtung abbiegt.
           text: Scrat wird die Eichel erreichen. Es gibt keine Fehler in diesem Code.
         - correct: true
+          feedback: Korrekt! Scrat biegt in die falsche Richtung ab und erreicht die
+            Eichel nicht.
           text: Scrat wird die Eichel nicht erreichen, da er sich in die falsche Richtung
             dreht.
         - correct: true
-          feedback: Nein. Scrat wird die Eichel nicht erreichen, da er sich in die
-            falsche Richtung dreht.
+          feedback: Falsch. Scrat wird die Eichel nicht erreichen, weil er in die
+            falsche Richtung abbiegt.
+          text: Scrat wird die Eichel nicht erreichen, da es nicht genug 'vorwärts
+            bewegen' Blöcke gibt.
+        - correct: true
+          feedback: Scrat wird die Eichel nicht erreichen, da er sich in die falsche
+            Richtung dreht.
+          text: 'Scrat bewegt sich nicht vom ersten Block weg.
+
+            '
+        questions:
+        - text: Suche nach Fehlern in diesem Code. Wird Scrat die Eichel erreichen
+            oder gibt es ein Problem?
+      courseC_multi_maze_debugging8_predict12022_2023:
+        answers:
+        - correct: true
+          feedback: Falsch. Scrat wird die Eichel nicht erreichen, weil er in die
+            falsche Richtung abbiegt.
+          text: Scrat wird die Eichel erreichen. Es gibt keine Fehler in diesem Code.
+        - correct: true
+          feedback: Korrekt! Scrat biegt in die falsche Richtung ab und erreicht die
+            Eichel nicht.
+          text: Scrat wird die Eichel nicht erreichen, da er sich in die falsche Richtung
+            dreht.
+        - correct: true
+          feedback: Falsch. Scrat wird die Eichel nicht erreichen, weil er in die
+            falsche Richtung abbiegt.
           text: Scrat wird die Eichel nicht erreichen, da es nicht genug 'vorwärts
             bewegen' Blöcke gibt.
         - correct: true
@@ -9130,6 +9564,23 @@ de-DE:
         questions:
         - text: Lies dir den Code unten sorgfältig durch. Was passiert, wenn du auf
             "Ausführen" klickst?
+      courseC_multi_maze_programming8_predict12022_2023:
+        answers:
+        - correct: true
+          feedback: Falsch. Dieser Code bringt den Vogel genau zum Schwein.
+          text: Der Vogel wird einen Schritt vor dem Schwein stoppen.
+        - correct: true
+          feedback: Richtig!
+          text: Der Vogel wird bis zum Schwein kommen.
+        - correct: true
+          feedback: Falsch. Dieser Code bringt den Vogel genau zum Schwein.
+          text: Der Vogel wird in das TNT laufen.
+        - correct: true
+          feedback: Falsch. Dieser Code bringt den Vogel genau zum Schwein.
+          text: Der Vogel wird gegen die Wand laufen.
+        questions:
+        - text: Lies dir den Code unten sorgfältig durch. Was passiert, wenn du auf
+            "Ausführen" klickst?
       courseC_multi_maze_programming8_predict1_2018:
         answers:
         - correct: true
@@ -9216,6 +9667,23 @@ de-DE:
         questions:
         - text: Was passiert, wenn Du auf "Ausführen" klickst?
       courseC_multi_starWars_predict12022:
+        answers:
+        - correct: true
+          feedback: Falsch! Der ‚wiederhole‘ Block bewegt BB-8 fünf mal vorwärts.
+          text: BB-8 wird sich nicht bewegen.
+        - correct: true
+          feedback: Falsch! Der ‚wiederhole‘ Block bewegt BB-8 fünf mal vorwärts.
+          text: BB-8 wird sich nur ein Feld vorwärts bewegen.
+        - correct: true
+          feedback: Richtig!
+          text: BB-8 wird sich 5 mal vorwärts bewegen und den ganzen Metallschrott
+            einsammeln.
+        - correct: true
+          feedback: Falsch! Der ‚wiederhole‘ Block bewegt BB-8 fünf mal vorwärts.
+          text: BB-8 bewegt sich nur 3 Felder vorwärts.
+        questions:
+        - text: Was passiert, wenn Du auf "Ausführen" klickst?
+      courseC_multi_starWars_predict12022_2023:
         answers:
         - correct: true
           feedback: Falsch! Der ‚wiederhole‘ Block bewegt BB-8 fünf mal vorwärts.
@@ -9342,6 +9810,27 @@ de-DE:
         questions:
         - text: Schau dir den Code unten genau an. Was passiert, wenn du auf "Ausführen"
             klickst?
+      courseC_multi_starWars_predict22022_2023:
+        answers:
+        - correct: true
+          feedback: Falsch. Die erste Schleife bewegt BB-8 nur 2 Felder vorwärts,
+            obwohl er 3 Felder vorwärts fahren müsste.
+          text: BB-8 wird mit der ersten Schleife zu weit fahren.
+        - correct: true
+          feedback: Richtig!
+          text: BB-8 wird mit der ersten Schleife nicht weit genug fahren, um den
+            gesamten Metallschrott einzusammeln.
+        - correct: true
+          feedback: Falsch. Die erste Schleife bewegt BB-8 nur 2 Felder vorwärts,
+            obwohl er 3 Felder vorwärts fahren müsste.
+          text: BB-8 sammelt ohne Probleme den ganzen Metallschrott ein.
+        - correct: true
+          feedback: Falsch. Die erste Schleife bewegt BB-8 nur 2 Felder vorwärts,
+            obwohl er 3 Felder vorwärts fahren müsste.
+          text: BB-8 wird sich nach der ersten Schleife in die falsche Richtung drehen.
+        questions:
+        - text: Schau dir den Code unten genau an. Was passiert, wenn du auf "Ausführen"
+            klickst?
       courseC_multi_starWars_predict2_2018:
         answers:
         - correct: true
@@ -9430,6 +9919,10 @@ de-DE:
         description: Du hast die letzte Lektion von Kurs D erreicht! Wähle eine Aktivität
           zum Weiterarbeiten aus.
         display_name: Projekt am Ende des Kurses
+      courseD_EOC2022_2023:
+        description: Du hast die letzte Lektion von Kurs D erreicht! Wähle eine Aktivität
+          zum Weiterarbeiten aus.
+        display_name: Projekt am Ende des Kurses
       courseD_EOC_2020:
         description: Du hast die letzte Lektion von Kurs D erreicht! Wähle eine Aktivität
           zum Weiterarbeiten aus.
@@ -9439,6 +9932,10 @@ de-DE:
           zum Weiterarbeiten aus.
         display_name: Projekt am Ende des Kurses
       courseD_EOC_examples2022:
+        description: Du bist dabei, dein Abschlussprojekt zu beginnen. Bevor du beginnst,
+          solltest du dir die Beispielprojekte genauer ansehen.
+        display_name: Projektbeispiele
+      courseD_EOC_examples2022_2023:
         description: Du bist dabei, dein Abschlussprojekt zu beginnen. Bevor du beginnst,
           solltest du dir die Beispielprojekte genauer ansehen.
         display_name: Projektbeispiele
@@ -9676,6 +10173,33 @@ de-DE:
         questions:
         - text: Schau dir den nachfolgenden Code genau an. Was wird das Programm zeichnen,
             wenn du auf "Ausführen" klickst?
+      courseD_multi_artist_nestedLoops9_predict12022_2023:
+        answers:
+        - correct: true
+          feedback: Richtig!
+          text: A
+        - correct: true
+          feedback: Falsch. Die innere Schleife zeichnet ein Fünfeck, und die äußere
+            Schleife wiederholt es 4 Mal in einem Kreis.
+          text: B
+        - correct: true
+          feedback: Falsch. Die innere Schleife zeichnet ein Fünfeck, und die äußere
+            Schleife wiederholt es 4 Mal in einem Kreis.
+          text: C
+        - correct: true
+          feedback: Falsch. Die innere Schleife zeichnet ein Fünfeck, und die äußere
+            Schleife wiederholt es 4 Mal in einem Kreis.
+          text: Nichts davon
+        markdown: |+
+          <table>
+          <tr><td>A</td><td><img src="https://images.code.org/cfc3f8206438a60afe3be9afe7fc0a22-image-1489118742610.10.15.png" width="100px" style="mix-blend-mode: multiply;"/></td><td>&nbsp;&nbsp;&nbsp;&nbsp;</td><td>B</td><td><img src="https://images.code.org/975b027684d2f5411b960bf82987663e-image-1489119999013.11.13.png" width="100px" style="mix-blend-mode: multiply;"/></td><td>&nbsp;&nbsp;&nbsp;&nbsp;</td><td>C</td><td><img src="https://images.code.org/635ac54ed7cb2e2d24eb341b3ec4eecb-image-1489120024059.12.00.png" width="80px" style="mix-blend-mode: multiply; clip: rect(0px,0px,0px,40px);"/></td></tr>
+          </table>
+
+          <br/><br/>
+
+        questions:
+        - text: Schau dir den nachfolgenden Code genau an. Was wird das Programm zeichnen,
+            wenn du auf "Ausführen" klickst?
       courseD_multi_artist_nestedLoops9_predict1_2018:
         answers:
         - correct: true
@@ -9841,6 +10365,36 @@ de-DE:
             Wenn dort keine Blüte ist, braucht die Biene nichts zu tun. Schau dir
             den nachfolgenden Code genau an. Was wird deiner Meinung nach geschehen,
             nachdem du auf "Ausführen" geklickt hast?
+      courseD_multi_bee_conditionals1_predict12022_2023:
+        answers:
+        - correct: true
+          feedback: Falsch. Der Baustein `wenn an Blume` bewirkt, dass die Biene nur
+            dann versucht, Nektar zu bekommen, wenn sich unter der Wolke eine Blüte
+            befindet.
+          text: Die Biene wird sich zur Wolke bewegen und versuchen, Nektar zu bekommen,
+            egal was passiert.
+        - correct: true
+          feedback: Richtig!
+          text: Die Biene wird sich zur Wolke bewegen und versucht nur dann Nektar
+            zu holen, wenn sich darunter eine Blüte befindet.
+        - correct: true
+          feedback: Falsch. Der Baustein `wenn an der Blume` sorgt dafür, dass die
+            Biene versucht, Nektar zu holen, wenn sich unter der Wolke eine Blüte
+            befindet.
+          text: Die Biene wird sich zur Wolke bewegen und dann in keinem Fall etwas
+            tun.
+        - correct: true
+          feedback: Falsch. Der Baustein `wenn an Blume` bewirkt, dass die Biene nur
+            dann versucht, Nektar zu bekommen, wenn sich unter der Wolke eine Blüte
+            befindet.
+          text: 'Die Biene wird die Wolke nicht erreichen. '
+        questions:
+        - text: Eine Wolke versperrt uns die Sicht. Die Wolke verschwindet, sobald
+            wir auf „Ausführen“ klicken. Unter dieser Wolke könnte sich eine Blume
+            befinden. Wenn es eine Blume gibt, muss die Biene einmal Nektar sammeln.
+            Wenn es keine Blume gibt, sollte die Biene nichts tun. Schauen Sie sich
+            den Code unten genau an. Was glaubst du, wird passieren, nachdem du auf
+            „Ausführen“ geklickt hast?
       courseD_multi_bee_conditionals1_predict1_2018:
         answers:
         - correct: true
@@ -10061,6 +10615,32 @@ de-DE:
         - text: 'Betrachte den untenstehenden Code genau.  Was wird deiner Meinung
             nach passieren, wenn du auf "Ausführen" klickst? Denke daran: Hinter jeder
             Wolke wird es immer nur *eine* Wabe oder *eine* Blume geben.'
+      courseD_multi_bee_conditionals7_predict22022_2023:
+        answers:
+        - correct: true
+          feedback: Richtig!
+          text: Die Biene bekommt an jeder Blüte Nektar und bei jeder Wabe Honig.
+        - correct: true
+          feedback: 'Falsch. Der Baustein `wenn an der Blume` sorgt dafür, dass die
+            Biene an jeder Blüte Nektar und an jeder Wabe Honig erhält. '
+          text: Die Biene wird versuchen, Nektar sowohl aus den Blüten als auch aus
+            den Waben zu holen.
+        - correct: true
+          feedback: Falsch. Falsch. Der 'wenn an der Blume'-Block lässt die Biene
+            Nektar an jeder Blume einsammeln, und Honig an jeder Honigwabe herstellen.
+          text: Die Biene wird versuchen, Honig sowohl aus den Blüten als auch aus
+            den Waben zu holen.
+        - correct: true
+          feedback: Falsch. Falsch. Der 'wenn an der Blume'-Block lässt die Biene
+            Nektar an jeder Blume einsammeln, und Honig an jeder Honigwabe herstellen.
+          text: 'Die Biene wird versuchen, Honig und Nektar sowohl von Blüten als
+            auch von Waben zu bekommen.
+
+            '
+        questions:
+        - text: 'Betrachte den untenstehenden Code genau.  Was wird deiner Meinung
+            nach passieren, wenn du auf "Ausführen" klickst? Denke daran: Hinter jeder
+            Wolke wird es immer nur *eine* Wabe oder *eine* Blume geben.'
       courseD_multi_bee_conditionals7_predict2_2018:
         answers:
         - correct: true
@@ -10198,6 +10778,26 @@ de-DE:
         questions:
         - text: Schau dir die verschachtelte Schleife unten genau an! Was passiert,
             wenn du auf "Ausführen" klickst?
+      courseD_multi_bee_nestedLoops2_predict12022_2023:
+        answers:
+        - correct: true
+          feedback: Falsch. Die Biene führt die Schleife aus, indem sie sich vorwärts
+            bewegt und Nektar sammelt, wodurch sie die Aufgabe lösen kann.
+          text: Die Biene wird sich vorwärts bewegen und nur einmal Nektar sammeln.
+        - correct: true
+          feedback: Falsch. Die Biene führt die Schleife aus, indem sie sich vorwärts
+            bewegt und Nektar sammelt, wodurch sie die Aufgabe lösen kann.
+          text: Die Biene wird nur 2 Einheiten Nektar sammeln.
+        - correct: true
+          feedback: Richtig!
+          text: Die Biene wird den gesamten Nektar sammeln.
+        - correct: true
+          feedback: Falsch. Die Biene führt die Schleife aus, indem sie sich vorwärts
+            bewegt und Nektar sammelt, wodurch sie die Aufgabe lösen kann.
+          text: Die Biene wird sich in die falsche Richtung drehen.
+        questions:
+        - text: Schau dir die verschachtelte Schleife unten genau an! Was passiert,
+            wenn du auf "Ausführen" klickst?
       courseD_multi_bee_nestedLoops2_predict1_2018:
         answers:
         - correct: true
@@ -10302,6 +10902,29 @@ de-DE:
         - text: Schau dir den nachfolgenden Code genau an. Wieviel Honig stellt die
             Biene her, wenn du auf "Ausführen" klickst?
       courseD_multi_bee_nestedLoops9_predict22022:
+        answers:
+        - correct: true
+          feedback: Falsch. Die Biene sammelt 2 Einheiten Nektar in einer Schleife
+            vorwärts, dann 2 Einheiten Nektar in einer Schleife abwärts. Und das alles
+            innerhalb einer weiteren Schleife, die zweimal läuft. 4 mal 2 = 8!
+          text: '4'
+        - correct: true
+          feedback: Richtig!
+          text: '8'
+        - correct: true
+          feedback: Falsch. Die Biene sammelt 2 Einheiten Nektar in einer Schleife
+            vorwärts, dann 2 Einheiten Nektar in einer Schleife abwärts. Und das alles
+            innerhalb einer weiteren Schleife, die zweimal läuft. 4 mal 2 = 8!
+          text: '10'
+        - correct: true
+          feedback: Falsch. Die Biene sammelt 2 Einheiten Nektar in einer Schleife
+            vorwärts, dann 2 Einheiten Nektar in einer Schleife abwärts. Und das alles
+            innerhalb einer weiteren Schleife, die zweimal läuft. 4 mal 2 = 8!
+          text: '12'
+        questions:
+        - text: Schau dir den nachfolgenden Code genau an. Wieviel Honig stellt die
+            Biene her, wenn du auf "Ausführen" klickst?
+      courseD_multi_bee_nestedLoops9_predict22022_2023:
         answers:
         - correct: true
           feedback: Falsch. Die Biene sammelt 2 Einheiten Nektar in einer Schleife
@@ -10467,6 +11090,30 @@ de-DE:
         - text: Schau dir den Code unten genau an. Was passiert, wenn du auf "Ausführen"
             klickst?
       courseD_multi_farmer_condLoops9_predict12022:
+        answers:
+        - correct: true
+          feedback: Falsch. Es gibt hier keinen Code für die Auswahl des Kürbisses.
+          text: Die Erntearbeiterin wird alle Feldfrüchte einsammeln.
+        - correct: true
+          feedback: Falsch. Der Code veranlasst die Erntearbeiterin, wiederholt, ein
+            Treppenstufenmuster zu erstellen und jeden Maiskolben oder Salat zu pflücken
+            an dem sie vorbeikommt. Der Kürbis wird dabei nicht gepflückt.
+          text: Der Erntemaschine wird keine Pflanze auf dem aktuellen Weg ernten.
+        - correct: true
+          feedback: Richtig!
+          text: Der Mähdrescher erntet das gesamte Getreide, außer dem Kürbis.
+        - correct: true
+          feedback: Falsch. Der Code veranlasst die Erntearbeiterin, wiederholt, ein
+            Treppenstufenmuster zu erstellen und jeden Maiskolben oder Salat zu pflücken
+            an dem sie vorbeikommt. Der Kürbis wird dabei nicht gepflückt.
+          text: Die Erntemaschine wird nur den Kürbis einsammeln.
+        markdown: |
+          Die Sprossen in diesem Puzzle werden entweder Mais oder Salat sein.
+          <br/>
+        questions:
+        - text: Schau dir den Code unten genau an. Was passiert, wenn du auf "Ausführen"
+            klickst?
+      courseD_multi_farmer_condLoops9_predict12022_2023:
         answers:
         - correct: true
           feedback: Falsch. Es gibt hier keinen Code für die Auswahl des Kürbisses.
@@ -10664,6 +11311,32 @@ de-DE:
         questions:
         - text: Schaue dir den nachfolgenden Code genau an. Was wird am Ende dieser
             Aufgabe übrig sein?
+      courseD_multi_farmer_while10_predict22022_2023:
+        answers:
+        - correct: true
+          feedback: 'Falsch. Es gibt keinen Code, um Erde vom Haufen zu entfernen.
+
+            '
+          text: Nichts. Dieser Code wird nur ebenen Boden hinterlassen.
+        - correct: true
+          feedback: Richtig!
+          text: 'Dieser Code lässt den Haufen völlig unberührt.
+
+            '
+        - correct: true
+          feedback: 'Falsch. Die `solange`-Schleife kann jede Schleifengröße verarbeiten,
+            aber es gibt keinen Code, um Erde vom Haufen zu entfernen.
+
+            '
+          text: Dieser Code lässt die Löcher völlig unberührt.
+        - correct: true
+          feedback: 'Falsch. Es gibt keinen Code, um Erde vom Haufen zu entfernen.
+
+            '
+          text: Dieser Code lässt das letzte Loch unverändert.
+        questions:
+        - text: Schaue dir den nachfolgenden Code genau an. Was wird am Ende dieser
+            Aufgabe übrig sein?
       courseD_multi_farmer_while10_predict2_2018:
         answers:
         - correct: true
@@ -10787,6 +11460,27 @@ de-DE:
         - text: Schau dir den Code unten genau an. Was passiert, wenn du auf "Ausführen"
             klickst?
       courseD_multi_farmer_while4_predict12022:
+        answers:
+        - correct: true
+          feedback: Falsch. Die Erntearbeiterin wird die Erde entfernen, solange es
+            einen Haufen gibt, und dann aufhören, wenn der Haufen weg ist.
+          text: Nichts wird passieren.
+        - correct: true
+          feedback: Falsch. Die Erntearbeiterin wird die Erde entfernen, solange es
+            einen Haufen gibt, und dann aufhören, wenn der Haufen weg ist.
+          text: Der Farmer wird niemals aufhören die Erde wegzuschaffen.
+        - correct: true
+          feedback: Richtig!
+          text: Der Farmer wird Erde wegschaffen, solange dort ein Haufen ist. Er
+            stoppt, wenn der Haufen weg ist.
+        - correct: true
+          feedback: Falsch. Die Erntearbeiterin wird die Erde entfernen, solange es
+            einen Haufen gibt, und dann aufhören, wenn der Haufen weg ist.
+          text: Der Landwirt wird nur einmal Schmutz entfernen.
+        questions:
+        - text: Schau dir den Code unten genau an. Was passiert, wenn du auf "Ausführen"
+            klickst?
+      courseD_multi_farmer_while4_predict12022_2023:
         answers:
         - correct: true
           feedback: Falsch. Die Erntearbeiterin wird die Erde entfernen, solange es
@@ -10935,6 +11629,28 @@ de-DE:
         questions:
         - text: Schau dir den nachfolgenden Code genau an. Was passiert, wenn du auf
             "Ausführen" klickst?
+      courseD_multi_maze_until10_predict22022_2023:
+        answers:
+        - correct: true
+          feedback: Richtig!
+          text: Der Zombie wird den richtigen Weg gehen und am Ende für immer hin
+            und her gehen.
+        - correct: true
+          feedback: Falsch. Der Zombie wird den richtigen Weg gehen und am Ende für
+            immer hin und her gehen.
+          text: Der Zombie wird es bis zur Sonnenblume schaffen.
+        - correct: true
+          feedback: Falsch. Der Zombie wird den richtigen Weg gehen und am Ende für
+            immer hin und her gehen.
+          text: Der Zombie wird auf dem ersten Weg nach rechts abbiegen und endlos
+            im Kreis herumlaufen.
+        - correct: true
+          feedback: In diesem Code wird der Zombie den richtigen Weg gehen und am
+            Ende für immer hin und her gehen.
+          text: Der Zombie bleibt am Ende des Weges vor ihm stecken.
+        questions:
+        - text: Schau dir den nachfolgenden Code genau an. Was passiert, wenn du auf
+            "Ausführen" klickst?
       courseD_multi_maze_until10_predict2_2018:
         answers:
         - correct: true
@@ -11051,6 +11767,33 @@ de-DE:
         - text: Schau dir den nachfolgenden Code genau an. Was passiert, wenn du auf
             "Ausführen" klickst?
       courseD_multi_maze_until2_predict12022:
+        answers:
+        - correct: true
+          feedback: 'Falsch. Der Code bewirkt, dass sich der Vogel vorwärts bewegt,
+            solange es einen Weg gibt, und sich dann nach links dreht. Das macht er
+            so lange, bis er das Schwein erreicht!
+
+            '
+          text: Der Vogel wird sich überhaupt nicht bewegen.
+        - correct: true
+          feedback: Richtig!
+          text: Der Vogel wird bis zum Schwein kommen.
+        - correct: true
+          feedback: 'Falsch. Der Code bewirkt, dass sich der Vogel vorwärts bewegt,
+            solange es einen sicheren Weg gibt, und sich dann nach links dreht. Das
+            macht er so lange, bis er das Schwein erreicht!
+
+            '
+          text: Der Vogel wird sich vorwärts bewegen und in das TNT laufen.
+        - correct: true
+          feedback: Der Code bewirkt, dass sich der Vogel vorwärts bewegt, solange
+            es einen Weg gibt, und sich dann nach links dreht. Das macht er so lange,
+            bis er das Schwein erreicht!
+          text: Der Vogel dreht sich in die falsche Richtung.
+        questions:
+        - text: Schau dir den nachfolgenden Code genau an. Was passiert, wenn du auf
+            "Ausführen" klickst?
+      courseD_multi_maze_until2_predict12022_2023:
         answers:
         - correct: true
           feedback: 'Falsch. Der Code bewirkt, dass sich der Vogel vorwärts bewegt,
@@ -11228,6 +11971,10 @@ de-DE:
         description: Du hast das Ende von Kurs E erreicht! Wähle ein Projekt zum Weiterarbeiten
           aus.
         display_name: Projekt am Ende des Kurses
+      courseE_EOC2022_2023:
+        description: Du hast das Ende von Kurs E erreicht! Wähle ein Projekt zum Weiterarbeiten
+          aus.
+        display_name: Projekt am Ende des Kurses
       courseE_EOC_2020:
         description: Du hast das Ende von Kurs E erreicht! Wähle ein Projekt zum Weiterarbeiten
           aus.
@@ -11237,6 +11984,10 @@ de-DE:
           aus.
         display_name: Projekt am Ende des Kurses
       courseE_EOC_examples2022:
+        description: Du hast das Ende von Kurs E erreicht! Wähle ein Projekt zum Weiterarbeiten
+          aus.
+        display_name: Projekt am Ende des Kurses
+      courseE_EOC_examples2022_2023:
         description: Du hast das Ende von Kurs E erreicht! Wähle ein Projekt zum Weiterarbeiten
           aus.
         display_name: Projekt am Ende des Kurses
@@ -11308,6 +12059,26 @@ de-DE:
         - text: Schaue dir die unten definierten Funktionen an. Was wird die Erntearbeiterin
             ernten?
       courseE_multi_farmer_functions11_predict2022:
+        answers:
+        - correct: true
+          feedback: Falsch. Die Erntearbeiterin fährt vorwärts bis zum Ende des Weges,
+            dreht sich dann um und fährt zurück, bis sie den Salat pflückt.
+          text: Die Erntearbeiterin wird zwei Kürbisse ernten.
+        - correct: true
+          feedback: Falsch. Die Erntearbeiterin fährt vorwärts bis zum Ende des Weges,
+            dreht sich dann um und fährt zurück, bis sie den Salat pflückt.
+          text: Die Erntearbeiterin wird alle Kürbisse ernten.
+        - correct: true
+          feedback: Richtig!
+          text: Die Erntearbeiterin wird den Salat ernten.
+        - correct: true
+          feedback: Falsch. Die Erntearbeiterin fährt vorwärts bis zum Ende des Weges,
+            dreht sich dann um und fährt zurück, bis sie den Salat pflückt.
+          text: Die Erntearbeiterin wird den Mais ernten.
+        questions:
+        - text: Schaue dir die unten definierten Funktionen an. Was wird die Erntearbeiterin
+            ernten?
+      courseE_multi_farmer_functions11_predict2022_2023:
         answers:
         - correct: true
           feedback: Falsch. Die Erntearbeiterin fährt vorwärts bis zum Ende des Weges,
@@ -11426,6 +12197,24 @@ de-DE:
         questions:
         - text: Was passiert, wenn du auf "Ausführen" drückst?
       courseE_prediction_artistFunction12022:
+        answers:
+        - correct: true
+          feedback: Falsch. Die Funktion wird im Programm zweimal aufgerufen.
+          text: Nichts. Die Funktion wird im Programm nicht aufgerufen.
+        - correct: true
+          feedback: Falsch. Die Funktion wird im Programm zweimal aufgerufen.
+          text: Der Künstler wird ein einzelnes Quadrat zeichnen.
+        - correct: true
+          feedback: Falsch. Jede Seite des Quadrats ist nur 100 Pixel lang, aber der
+            Künstler springt zwischen den Funktionen um 175 Pixel.
+          text: Der Künstler wird zwei Quadrate zeichnen, die sich überlappen.
+        - correct: true
+          feedback: Richtig! Die Funktion wird im Programm zweimal aufgerufen, mit
+            einem Sprung dazwischen.
+          text: Der Künstler zeichnet zwei Quadrate mit einer kleinen Lücke dazwischen.
+        questions:
+        - text: Was passiert, wenn du auf "Ausführen" drückst?
+      courseE_prediction_artistFunction12022_2023:
         answers:
         - correct: true
           feedback: Falsch. Die Funktion wird im Programm zweimal aufgerufen.
@@ -11610,6 +12399,23 @@ de-DE:
         questions:
         - text: Schau dir den Code unten genau an. Was passiert, wenn du auf "Ausführen"
             klickst?
+      courseE_swim_fish_behavior_predict12022_2023:
+        answers:
+        - correct: true
+          feedback: Falsch. Das Unkraut wird sich in Bewegung setzen
+          text: Nichts wird passieren.
+        - correct: true
+          feedback: Falsch. Das Unkraut wird sich in Bewegung setzen
+          text: Das Unkraut wird an den oberen Rand des Bildschirms schweben
+        - correct: true
+          feedback: Richtig!
+          text: Das Unkraut wird sich in Bewegung setzen
+        - correct: true
+          feedback: Falsch. Das Unkraut wird sich in Bewegung setzen
+          text: Das Unkraut blinkt an und aus.
+        questions:
+        - text: Schau dir den Code unten genau an. Was passiert, wenn du auf "Ausführen"
+            klickst?
       courseE_swim_fish_behavior_predict1_2021:
         answers:
         - correct: true
@@ -11657,12 +12463,22 @@ de-DE:
           aus.
         display_name: Projekt am Ende des Kurses
       courseF_EOC_examples2022_2022_pilot_-2022-2:
+        description: Du hast das Ende von Kurs F erreicht! Wähle ein Projekt aus,
+          das du erkunden möchtest.
+        display_name: Projekt am Ende des Kurses
+      courseF_EOC_examples2022_2022_pilot_-2022-2_2023:
+        description: Du hast das Ende von Kurs F erreicht! Wähle ein Projekt aus,
+          das du erkunden möchtest.
         display_name: Projekt am Ende des Kurses
       courseF_EOC_examples_2021:
         description: Du hast das Ende von Kurs F erreicht! Wähle ein Projekt zum Weiterarbeiten
           aus.
         display_name: Projekt am Ende des Kurses
       courseF_EOC_samples2022:
+        description: Du bist dabei, dein Abschlussprojekt zu beginnen. Bevor du beginnst,
+          solltest du dir die Beispielprojekte genauer ansehen.
+        display_name: Projekt am Ende des Kurses
+      courseF_EOC_samples2022_2023:
         description: Du bist dabei, dein Abschlussprojekt zu beginnen. Bevor du beginnst,
           solltest du dir die Beispielprojekte genauer ansehen.
         display_name: Projekt am Ende des Kurses
@@ -11762,12 +12578,24 @@ de-DE:
 
           '
       courseF_collector_samples_2022_pilot_-2022-2:
+        description: Du wirst ein Sammlerspiel erstellen. Bevor du beginnst, schaue
+          dir die folgenden Beispielprojekte an. Klicke auf\ "Fertig stellen\“, wenn
+          du bereit bist, mit der Planung deines eigenen Programms zu beginnen.
+        display_name: Erkundung - Beispielprogramme
+      courseF_collector_samples_2022_pilot_-2022-2_2023:
+        description: Du wirst ein Sammlerspiel erstellen. Bevor du beginnst, schaue
+          dir die folgenden Beispielprojekte an. Klicke auf\ "Fertig stellen\“, wenn
+          du bereit bist, mit der Planung deines eigenen Programms zu beginnen.
         display_name: Erkundung - Beispielprogramme
       courseF_events_freeplay:
         description: Jetzt kannst du das, was du gelernt hast, nutzen, um dein Projekt
           noch besser zu machen! Erweitere dein Programm oder beginne etwas Neues!
         display_name: Ereignisse - Freies Spielen
       courseF_events_freeplay2022_2022_pilot_-2022-2:
+        description: Jetzt kannst du das, was du gelernt hast, nutzen, um dein Projekt
+          noch besser zu machen! Erweitere dein Programm oder beginne etwas Neues!
+        display_name: Ereignisse - Freies Spielen
+      courseF_events_freeplay2022_2022_pilot_-2022-2_2023:
         description: Jetzt kannst du das, was du gelernt hast, nutzen, um dein Projekt
           noch besser zu machen! Erweitere dein Programm oder beginne etwas Neues!
         display_name: Ereignisse - Freies Spielen
@@ -11786,6 +12614,10 @@ de-DE:
           | ***Tippen*** |**Überprüfen**|**Fehlersuche**|**Fehlersuche**|**Optionaler Inhalt**|**Optionaler Inhalt**
           | ***Konzept****Ereignisse, Verhaltensweisen*|*Ereignisse, Verhaltensweisen*|*Ereignisse, Verhaltensweisen*|*Ereignisse, Verhaltensweisen*|*wenn/während Ereignisse*|*wenn/während Ereignisse*|
       courseF_events_practice2022_2022_pilot_-2022-2:
+        description: Tolle Arbeit bisher! Wähle jetzt deine nächste Aktivität. Schließe
+          so viele ab, wie du kannst. Übe weiter mit Ereignissen!
+        display_name: Übungen zu Ereignissen
+      courseF_events_practice2022_2022_pilot_-2022-2_2023:
         description: Tolle Arbeit bisher! Wähle jetzt deine nächste Aktivität. Schließe
           so viele ab, wie du kannst. Übe weiter mit Ereignissen!
         display_name: Übungen zu Ereignissen
@@ -11808,6 +12640,24 @@ de-DE:
         questions:
         - text: Lies dir den Code durch und mache dann eine Vorhersage.
       courseF_events_predict_multi2022_2022_pilot_-2022-2:
+        answers:
+        - correct: true
+          feedback: Falsch. Das Sprite wird sich auch nach Osten bewegen.
+          text: Das Sprite wird sich nur nach rechts drehen.
+        - correct: true
+          feedback: Falsch. Das Sprite hat nicht aufgehört sich zu drehen, also wird
+            es beides gleichzeitig tun.
+          text: Das Sprite wird sich nur nach Osten bewegen.
+        - correct: true
+          feedback: Richtig! Beide Verhaltensweisen werden gleichzeitig ablaufen.
+          text: Das Sprite wird sich drehen und gleichzeitig bewegen.
+        - correct: true
+          feedback: Falsch. In Sprite Lab laufen zusammenhängende Blöcke direkt nach
+            dem jeweils letzten ab, so dass beide Verhaltensweisen gleichzeitig ablaufen  werden.
+          text: Das Sprite wird sich erst drehen und später bewegen.
+        questions:
+        - text: Lies dir den Code durch und mache dann eine Vorhersage.
+      courseF_events_predict_multi2022_2022_pilot_-2022-2_2023:
         answers:
         - correct: true
           feedback: Falsch. Das Sprite wird sich auch nach Osten bewegen.
@@ -11867,14 +12717,56 @@ de-DE:
           Variablen schreiben, die sich innerhalb des Programms *verändern*.</h3>
 
           '
+      courseF_groups_freeplay_2022_pilot_-2022-2:
+        description: Jetzt kannst du das, was du gelernt hast, anwenden, um zu machen,
+          was du willst! Erstelle ein interaktives Programm mit vielen Sprites!
+        display_name: Viele Sprites - Kostenloses Spiel
+      courseF_groups_freeplay_2022_pilot_-2022-2_2023:
+        description: Jetzt kannst du das, was du gelernt hast, anwenden, um zu machen,
+          was du willst! Erstelle ein interaktives Programm mit vielen Sprites!
+        display_name: Viele Sprites - Kostenloses Spiel
+      courseF_groups_practice_2022_pilot_-2022-2:
+        description: Bisher tolle Arbeit! Wähle deine nächste Aktivität. Schließe
+          so viele wie möglich ab. Übe weiter mit Events und Sprites-Gruppen!
+        display_name: Viele Sprites Übung
+      courseF_groups_practice_2022_pilot_-2022-2_2023:
+        description: Bisher tolle Arbeit! Wähle deine nächste Aktivität. Schließe
+          so viele wie möglich ab. Übe weiter mit Events und Sprites-Gruppen!
+        display_name: Viele Sprites Übung
       courseF_groups_predict_multi_2022_pilot_-2022-2:
         answers:
         - correct: true
+          feedback: Korrekt! Das Sprite, auf das du klickst, wird größer.
+          text: Das Sprite, auf das du klickst, wird größer.
         - correct: true
+          feedback: Falsch. Das Sprite, auf das du klickst, wird größer.
+          text: Das Sprite, auf das du klickst, wird kleiner.
         - correct: true
+          feedback: Falsch. Das Sprite, auf das du klickst, wird größer.
+          text: Alle Sprites werden größer.
         - correct: true
+          feedback: Falsch. Das Sprite, auf das du klickst, wird größer.
+          text: Alle Sprites werden kleiner.
         questions:
-        - {}
+        - text: 'Mache eine Vorhersage: Was passiert, wenn du auf eines der Sprites
+            klickst, nachdem du auf Ausführen geklickt hast?'
+      courseF_groups_predict_multi_2022_pilot_-2022-2_2023:
+        answers:
+        - correct: true
+          feedback: Korrekt! Das Sprite, auf das du klickst, wird größer.
+          text: Das Sprite, auf das du klickst, wird größer.
+        - correct: true
+          feedback: Falsch. Das Sprite, auf das du klickst, wird größer.
+          text: Das Sprite, auf das du klickst, wird kleiner.
+        - correct: true
+          feedback: Falsch. Das Sprite, auf das du klickst, wird größer.
+          text: Alle Sprites werden größer.
+        - correct: true
+          feedback: Falsch. Das Sprite, auf das du klickst, wird größer.
+          text: Alle Sprites werden kleiner.
+        questions:
+        - text: 'Mache eine Vorhersage: Was passiert, wenn du auf eines der Sprites
+            klickst, nachdem du auf Ausführen geklickt hast?'
       courseF_intro_apps:
         description: Willkommen bei den Grundlagen der Informatik! Diese Projekte
           wurden alle mit Sprite Lab erstellt. Probiere sie jetzt aus, um zu sehen,
@@ -11889,6 +12781,16 @@ de-DE:
           Diese Aktivität soll mit dem Arbeitsblatt \"Apps erforschen\" koordiniert
           werden, das im [Unterrichtsplan](.././) zu finden ist."
       courseF_intro_apps2022_2022_pilot_-2022-2:
+        description: Diese Projekte wurden alle mit Sprite Lab erstellt. Probiere
+          sie jetzt aus, um zu sehen, was möglich ist. Am Ende dieses Kurses wirst
+          du in der Lage sein, deine eigenen Projekte wie diese zu erstellen... und
+          mehr!
+        display_name: Sprite Lab-Apps
+      courseF_intro_apps2022_2022_pilot_-2022-2_2023:
+        description: Diese Projekte wurden alle mit Sprite Lab erstellt. Probiere
+          sie jetzt aus, um zu sehen, was möglich ist. Am Ende dieses Kurses wirst
+          du in der Lage sein, deine eigenen Projekte wie diese zu erstellen... und
+          mehr!
         display_name: Sprite Lab-Apps
       courseF_labels_predict_multi:
         answers:
@@ -11911,6 +12813,26 @@ de-DE:
         - text: Dieser Code kommt dir vielleicht bekannt vor, aber lies ihn dir genau
             durch. Was wird gedruckt, wenn der Benutzer "Pizza" eintippt?
       courseF_labels_predict_multi2022_2022_pilot_-2022-2:
+        answers:
+        - correct: true
+          feedback: Falsch. Die Variablenbezeichnungen stimmen nicht überein.
+          text: '"Eine Pizza kommt sofort!"'
+        - correct: true
+          feedback: Falsch. Die Bezeichnung einer Variable wird nie gedruckt.
+          text: '"Eine Mahlzeit kommt sofort!"'
+        - correct: true
+          feedback: Falsch. Die Bezeichnung einer Variable wird nie gedruckt.
+          text: '"Ein Essen kommt sofort!"'
+        - correct: true
+          feedback: Richtig! Die Variablenbezeichnungen stimmen nicht überein.
+          text: '"Eine/r kommt sofort!"'
+        - correct: true
+          feedback: Falsch. Das Ereignis und der Druckblock werden trotzdem funktionieren.
+          text: Nichts wird gedruckt.
+        questions:
+        - text: Dieser Code kommt dir vielleicht bekannt vor, aber lies ihn dir genau
+            durch. Was wird gedruckt, wenn der Benutzer "Pizza" eintippt?
+      courseF_labels_predict_multi2022_2022_pilot_-2022-2_2023:
         answers:
         - correct: true
           feedback: Falsch. Die Variablenbezeichnungen stimmen nicht überein.
@@ -12356,6 +13278,33 @@ de-DE:
         questions:
         - text: Wir haben die Variable "länge" auf 50 festgelegt. Was wird passieren,
             wen du auf "Ausführen" klickst?
+      courseF_multi_artist_variables3a_predict12022_2023:
+        answers:
+        - correct: true
+          feedback: Richtig!
+          text: Der Künstler wird ein Dreieck mit 50 Pixel Seiten zeichnen.
+        - correct: true
+          feedback: 'Falsch. Die Variable `Länge` muss sich in der `Wiederholen`-Schleife`
+            befinden, damit dies möglich ist.
+
+            '
+          text: Der Künstler wird ein 50-seitiges Polygon mit 3 Pixel Seiten zeichnen.
+        - correct: true
+          feedback: 'Falsch. Die Variable `Länge` muss sich in der `drehen`-Schleife`
+            befinden, damit dies möglich ist.
+
+            '
+          text: Der Künstler wird drei offene Seiten mit 50 Grad Wechsel zeichnen.
+        - correct: true
+          feedback: 'Die Variable `Länge` ist als 50 bestimmt und wird im Block `vorwärts
+            bewegen durch` verwendet, damit der Künstler ein Dreieck mit 50 Pixel
+            langen Seiten zeichnet.
+
+            '
+          text: Der Computer wird den Benutzer nach einer Zahl fragen.
+        questions:
+        - text: Wir haben die Variable "länge" auf 50 festgelegt. Was wird passieren,
+            wen du auf "Ausführen" klickst?
       courseF_multi_artist_variables3a_predict1_2018:
         answers:
         - correct: true
@@ -12571,6 +13520,43 @@ de-DE:
 
             '
       courseF_multi_bee_for3_predict12022:
+        answers:
+        - correct: true
+          feedback: 'Falsch. Die "Für"-Schleife erlaubt es der Biene, die richtige
+            Menge Nektar zu sammeln, aber sie ist so bestimmt, dass die Biene nur
+            4 Blüten erreicht.
+
+            '
+          text: 'Die Biene bewegt sich vorwärts und sammelt von jeder Blüte den gesamten
+            Nektar ein. '
+        - correct: true
+          feedback: Richtig!
+          text: Die Biene bewegt sich vorwärts und sammelt - mit Ausnahme der letzten
+            Blüte - von allen Blüten den gesamten Nektar ein.
+        - correct: true
+          feedback: 'Falsch. Die "Für"-Schleife erlaubt es der Biene, die richtige
+            Menge Nektar zu sammeln, aber sie ist so bestimmt, dass die Biene nur
+            4 Blüten erreicht.
+
+            '
+          text: 'Die Biene wird sich vorwärts bewegen und von jeder Blüte eine Einheit
+            Nektar sammeln. '
+        - correct: true
+          feedback: 'Falsch. Die "Für"-Schleife erlaubt es der Biene, die richtige
+            Menge Nektar zu sammeln, aber sie ist so bestimmt, dass die Biene nur
+            4 Blüten erreicht.
+
+            '
+          text: 'Die Biene bewegt sich vorwärts und sammelt eine Einheit Nektar von
+            den Blüten Nummer 1 und 4. '
+        markdown: "Ah! Die Verwendung von \"Für\"-Schleifen macht dieses Rätsel sehr
+          viel einfacher! \n"
+        questions:
+        - text: 'Lese den nachfolgenden Code. Was passiert, wenn du auf "Ausführen"
+            klickst?
+
+            '
+      courseF_multi_bee_for3_predict12022_2023:
         answers:
         - correct: true
           feedback: 'Falsch. Die "Für"-Schleife erlaubt es der Biene, die richtige
@@ -12862,6 +13848,10 @@ de-DE:
         description: Jetzt kannst du das kreieren, was dir Spaß macht! Welche Art
           von Projekt wirst du programmieren?
         display_name: Sprites - Freies Spiel
+      courseF_sprites_freeplay2022_2022_pilot_-2022-2_2023:
+        description: Jetzt kannst du das kreieren, was dir Spaß macht! Welche Art
+          von Projekt wirst du programmieren?
+        display_name: Sprites - Freies Spiel
       courseF_sprites_practice:
         description: Tolle Arbeit bisher! Wähle deine nächste Aktivität. Schließe
           so viele ab, wie du kannst. Übe weiter mit Sprites und Verhaltensweisen!
@@ -12878,6 +13868,10 @@ de-DE:
           | ***Konzept***|*Sprites, Standorte*|*Sprites, Eigenschaften*|*Sprites,
           Standorte, Verhaltensweisen*|*Verhaltensweisen*|\n\n"
       courseF_sprites_practice2022_2022_pilot_-2022-2:
+        description: Tolle Arbeit bisher! Wähle deine nächste Aktivität. Schließe
+          so viele ab, wie du kannst. Übe weiter mit Sprites und Verhaltensweisen!
+        display_name: Sprites-Übungen
+      courseF_sprites_practice2022_2022_pilot_-2022-2_2023:
         description: Tolle Arbeit bisher! Wähle deine nächste Aktivität. Schließe
           so viele ab, wie du kannst. Übe weiter mit Sprites und Verhaltensweisen!
         display_name: Sprites-Übungen
@@ -12925,6 +13919,28 @@ de-DE:
           text: Die Flugzeuge werden abstürzen.
         questions:
         - text: Lies dir den Code durch und mache dann eine Vorhersage.
+      courseF_sprites_predict_multi2022_2022_pilot_-2022-2_2023:
+        answers:
+        - correct: true
+          feedback: Falsch. Diese Sprites haben „Verhaltensweisen“, die so lange weiterlaufen,
+            bis man ihnen sagt, dass sie aufhören sollen.
+          text: Beide Flugzeuge bewegen sich ein Feld entlang des Gitters und halten
+            dann an.
+        - correct: true
+          feedback: Richtig! Diese Verhaltensweisen befehlen den Flugzeugen, dass
+            sie sich in Bewegung setzen und immer weiterfliegen sollen.
+          text: Beide Flugzeuge werden sich in Bewegung setzen und nicht anhalten.
+        - correct: true
+          feedback: Falsch. Jeder Code-Block in Sprite Lab läuft sofort nach dem nächsten
+            ab.
+          text: Ein Flugzeug wird sich zuerst in Bewegung setzen und das andere Flugzeug
+            später.
+        - correct: true
+          feedback: Falsch. Die Flugzeuge sind nicht so positioniert, dass sie sich
+            berühren können.
+          text: Die Flugzeuge werden abstürzen.
+        questions:
+        - text: Lies dir den Code durch und mache dann eine Vorhersage.
       courseF_text_practice:
         description: Tolle Arbeit bis jetzt! Wähle deine nächste Aktivität. Vervollständige
           so viele wie du kannst. Übe weiter mit Text und Eingabeaufforderungen!
@@ -12940,6 +13956,10 @@ de-DE:
           | ***Tippen*** |**Überprüfen**|**Fehlersuche**|**Fehlersuche**|**Frei spielen**|**Frei spielen**
           | ***Konzept****Druckblock, Ereignisse*|*Eingabeaufforderungen, Ereignisse*|*Leerzeichen hinzufügen*|*Variablenbezeichnungen anpassen*|*Titelbildschirmblöcke*|*Farben speichern*|*kein neuer Inhalt*
       courseF_text_practice2022_2022_pilot_-2022-2:
+        description: Tolle Arbeit bis jetzt! Wähle deine nächste Aktivität. Vervollständige
+          so viele wie du kannst. Übe weiter mit Text und Eingabeaufforderungen!
+        display_name: Text und Eingabeaufforderungen üben
+      courseF_text_practice2022_2022_pilot_-2022-2_2023:
         description: Tolle Arbeit bis jetzt! Wähle deine nächste Aktivität. Vervollständige
           so viele wie du kannst. Übe weiter mit Text und Eingabeaufforderungen!
         display_name: Text und Eingabeaufforderungen üben
@@ -12963,7 +13983,48 @@ de-DE:
           text: Nichts wird passieren, weil `count` keine Zahl ist.
         questions:
         - text: 'Mache eine Vorhersage: Was wird der Hase sagen?'
+      courseF_variables2_predict2_multi2022_-2022-2_2023:
+        answers:
+        - correct: true
+          feedback: Richtig! Die Zahl 5 wird in der Variablen gespeichert und dann
+            erneut verwendet, wenn das Sprite spricht.
+          text: Der Hase wird „5" sagen.
+        - correct: true
+          feedback: Falsch. In diesem Programm gibt es keine Eingabe. Die Nummer ist
+            direkt im Code festgelegt.
+          text: Der Hasen-Sprite sagt, welche Zahl auch immer eingegeben wurde.
+        - correct: true
+          feedback: Falsch. `count` ist eine Variable. Wenn dieser Block ausgeführt
+            wird, erhält er die Nummer, die gespeichert ist. Der Hase wird „5" sagen.
+          text: Der Hase wird „zähle“ sagen.
+        - correct: true
+          feedback: Richtig! Die Zahl 5 wird in der Variablen gespeichert und dann
+            erneut verwendet, wenn das Sprite spricht.
+          text: Nichts wird passieren, weil `count` keine Zahl ist.
+        questions:
+        - text: 'Mache eine Vorhersage: Was wird der Hase sagen?'
       courseF_variables2_predict_multi2022_2022_pilot_-2022-2:
+        answers:
+        - correct: true
+          feedback: Falsch. Die Zahl wird in der Variablen gespeichert und verwendet,
+            um Möhren Sprites zu erstellen.
+          text: Das Programm zeigt die eingegebene Zahl an.
+        - correct: true
+          feedback: Falsch. Die Zahl wird in der Variablen gespeichert und verwendet,
+            um Möhren Sprites zu erstellen.
+          text: Der Hasen-Sprite sagt, welche Zahl auch immer eingegeben wurde.
+        - correct: true
+          feedback: Richtig! Die Anzahl der erstellten Sprites ist die in der Variablen
+            gespeicherte Zahl.
+          text: Das Programm wird so viele neue Möhrensprites machen.
+        - correct: true
+          feedback: Falsch. Die Zahl wird in der Variablen gespeichert und verwendet,
+            um Möhren Sprites zu erstellen.
+          text: Nichts wird passieren, weil `count` keine Zahl ist.
+        questions:
+        - text: 'Mach eine Vorhersage: Was passiert, nachdem Du eine Zahl in das Eingabefeld
+            eingegeben hast?'
+      courseF_variables2_predict_multi2022_2022_pilot_-2022-2_2023:
         answers:
         - correct: true
           feedback: Falsch. Die Zahl wird in der Variablen gespeichert und verwendet,
@@ -13022,6 +14083,25 @@ de-DE:
         - text: 'Mit diesem Programm kannst du eine Frage beantworten, indem du auf
             deiner Tastatur tippst. Der `drucken` Block zeigt den Text auf dem Bildschirm.
             Mache eine Vorhersage: Was passiert nach Beantwortung der Frage?'
+      courseF_variables_predict_multi2022_2022_pilot_-2022-2_2023:
+        answers:
+        - correct: true
+          feedback: Falsch. Der Namensblock wird durch das ersetzt, was du eintippst.
+          text: Das Programm wird "Hallo Name!" ausgeben
+        - correct: true
+          feedback: Richtig! Was du eintippst, wird anstelle des Namensblocks verwendet.
+          text: Das Programm wird dich mit dem Namen begrüßen, den du eintippst.
+        - correct: true
+          feedback: Falsch. Der Text wird auf den Bildschirm ausgegeben.
+          text: Das Sprite wird seine Größe ändern.
+        - correct: true
+          feedback: Falsch. Es wird nur eine Frage gestellt, gleich zu Beginn des
+            Programms.
+          text: Der Computer wird eine weitere Frage stellen.
+        questions:
+        - text: 'Mit diesem Programm kannst du eine Frage beantworten, indem du auf
+            deiner Tastatur tippst. Der `drucken` Block zeigt den Text auf dem Bildschirm.
+            Mache eine Vorhersage: Was passiert nach Beantwortung der Frage?'
       courseF_variables_projects:
         description: Du wirst entweder eine Grußkarte, einen Chatbot oder eine Geschichte
           mit Lücken programmieren. Wenn du bereits "Teil 1" deines Projekts fertiggestellt
@@ -13033,6 +14113,11 @@ de-DE:
 
           Die SchülerInnen benötigen möglicherweise klare Anweisungen, um zu verstehen, wie sie sich durch die Auswahlmöglichkeiten navigieren können. Für jedes der ausgewählten Projekte gibt es zwei Levels. Zu Beginn sollten die SchülerInnen eines der Levels wählen, die mit "Teil 1" gekennzeichnet sind. Sobald sie dieses Level abgeschlossen haben, sollten sie hierher zurückkehren und "Teil 2" des *gleichen* Projekts auswählen. Im ersten Level jeder Wahl erhalten die SchülerInnen Rückmeldungen, während sie die grundlegenden Komponenten ihres Projekts zusammenstellen. Das zweite Level ist ein "freies Spiel", bei dem SchülerInnen die Möglichkeit geben haben, Änderungen an ihrem Code vorzunehmen, die ihnen gefallen.
       courseF_variables_projects2022_2022_pilot_-2022-2:
+        description: Du wirst entweder eine Grußkarte, einen Chatbot oder eine Geschichte
+          mit Lücken programmieren. Wenn du bereits "Teil 1" deines Projekts fertiggestellt
+          hast, gehe weiter zu "Teil 2".
+        display_name: Wähle ein Projekt
+      courseF_variables_projects2022_2022_pilot_-2022-2_2023:
         description: Du wirst entweder eine Grußkarte, einen Chatbot oder eine Geschichte
           mit Lücken programmieren. Wenn du bereits "Teil 1" deines Projekts fertiggestellt
           hast, gehe weiter zu "Teil 2".
@@ -13054,6 +14139,12 @@ de-DE:
           um zu entscheiden, was du programmieren möchtest. Drücke auf \"Fertigstellen\",
           wenn du bereit bist, mit der Planung deines eigenen Programms zu beginnen.
         display_name: Erkundung - Beispielprogramme
+      courseF_variables_samples2022_2022_pilot_-2022-2_2023:
+        description: Du wirst entweder eine Grußkarte, einen Chatbot oder eine Blanko-Story
+          programmieren. Bevor du anfängst, sieh dir die Beispielprojekte unten an,
+          um zu entscheiden, was du programmieren möchtest. Drücke auf \"Fertigstellen\",
+          wenn du bereit bist, mit der Planung deines eigenen Programms zu beginnen.
+        display_name: Erkundung - Beispielprogramme
       courseF_variables_stop:
         content1: hier die Beschreibung
         markdown: "# Halt! \n\n## Bist du sicher, dass du bereit bist, weiterzumachen?
@@ -13068,6 +14159,19 @@ de-DE:
           brauchen wirst (und ihre Verhaltensweisen). \n\nWenn du dir nicht sicher
           bist, ob du soweit bist, dass du weitermachen kannst, frag deine/n LehrerIn!"
       courseF_variables_stop2022_2022_pilot_-2022-2:
+        content1: hier die Beschreibung
+        markdown: "# Halt! \n\n## Bist du sicher, dass du bereit bist, weiterzumachen?
+          \n\nIm nächsten Level fängst du an, den Code für dein Projekt zu schreiben.
+          Das funktioniert am besten, wenn du bereits einen Plan hast. \n\nDein fertiger
+          Plan sollte folgendes enthalten: \n\n<img src=\"https://images.code.org/b476ac330f2b66e44e02208fee386a56-image-1614802439867.png\"
+          style=\"float:left; height:70px; padding:10px\"/> \n\n* Die Art des Projekts,
+          das du erstellst. Das kann zum Beispiel eine Grußkarte, ein Chatbot oder
+          eine Geschichte mit Eingabefeldern sein. \n* Eine Liste mit Fragen, die
+          du dem Benutzer stellen wirst. \n* Der andere Text, den du auf dem Bildschirm
+          anzeigen wirst. \n* Eine Beschreibung oder Zeichnung der Sprites, die du
+          brauchen wirst (und ihre Verhaltensweisen). \n\nWenn du dir nicht sicher
+          bist, ob du soweit bist, dass du weitermachen kannst, frag deine/n LehrerIn!"
+      courseF_variables_stop2022_2022_pilot_-2022-2_2023:
         content1: hier die Beschreibung
         markdown: "# Halt! \n\n## Bist du sicher, dass du bereit bist, weiterzumachen?
           \n\nIm nächsten Level fängst du an, den Code für dein Projekt zu schreiben.
@@ -13100,6 +14204,25 @@ de-DE:
         questions:
         - text: Was passiert, wenn du die Schaltfläche "Ausführen" drückst?
       coursee_prediction_artistfunction22022:
+        answers:
+        - correct: true
+          feedback: Falsch. Die Schleife verwendet "Polygon zeichnen" anstelle von
+            "eine Reihe von Polygonen zeichnen".
+          text: Der Künstler wird diese Aufgabe richtig lösen.
+        - correct: true
+          feedback: Richtig!
+          text: Der Künstler wird vier Quadrate in einem Fenstermuster zeichnen.
+        - correct: true
+          feedback: Falsch. Das Programm ruft die Funktion `eine Reihe von Polygonen
+            zeichnen` nicht auf.
+          text: Der Künstler wird nur eine Reihe von Quadraten zeichnen.
+        - correct: true
+          feedback: Falsch. Die Schleife dreht sich zwischen den Aufrufen zu "Polygon
+            zeichnen" um 90 Grad.
+          text: Der Künstler wird vier Quadrate übereinander zeichnen.
+        questions:
+        - text: Was passiert, wenn du die Schaltfläche "Ausführen" drückst?
+      coursee_prediction_artistfunction22022_2023:
         answers:
         - correct: true
           feedback: Falsch. Die Schleife verwendet "Polygon zeichnen" anstelle von
@@ -13194,6 +14317,334 @@ de-DE:
           text: Der Künstler wird vier Quadrate übereinander zeichnen.
         questions:
         - text: Was passiert, wenn du die Schaltfläche "Ausführen" drückst?
+      csc_animal_adaptations_L3_intro:
+        markdown: "#Make dein eigenes Verhalten!\n\n<br>\n\n# #Now du hast die Kontrolle
+          über das Verhalten!\n\n## #Edit existierende Verhaltensweisen, um sie zu
+          modifizieren und zu ändern. \n! [] (https://images.code.org/e2e63b1cd7302b6548591c65ad23a0ee-image-1680019477336.gif)\n\n##
+          #Make dein eigenes neues Verhalten mit beliebigen Aktionen!\n\n! [] (https://images.code.org/5345f53f3b33b2ad2bbf2bc86539cb96-image-1680019210225.gif)\n\n\n"
+      csc_animal_adaptations_choice:
+        description: Wähle aus den folgenden Szenarien und verwende deinen eigenen
+          kreativen Code, um eine neue und einzigartige Tieradaption zu modellieren!
+          Du kannst mehrere Optionen wählen und mehr als eine machen!
+        display_name: Kodiere deine eigene Tieranpassung!
+      csc_animal_adaptations_intro:
+        markdown: "#Survival Behaviors\n\n# #Behaviors in der Natur\nTiere haben <strong>Verhaltensweisen</strong>
+          und Handlungen entwickelt, die ihnen beim Überleben helfen. <br> Zum Beispiel
+          **migrieren** Tiere im Winter und andere versuchen, in Gruppen** zu bleiben.\n\n<img
+          style=\" float: left; width:50%; padding-top:10px\" src=\"https://images.code.org/424ef84f41b7cabdf62e8cc509abe62c-image-1678322413909.jpg\"
+          style= \"width:60%\">\n<img style=\" float: left; width:46%; padding-top:10px\"
+          src=\"https://images.code.org/7c79e255d048e7ccf099eb61976bb90c-image-1678322295452.jpg\"
+          style= \"width:60%\">\n\n<div style=\"float: left\">\n<h2>Verhaltensweisen
+          in der Informatik In der Informatik</h2>\n <strong>Verhalten</strong> ist
+          eine Reihe von Aktionen, die ein Sprite wie eine Animation immer wieder
+          wiederholt. <br>\nDie Aktionen innerhalb des Verhaltens werden so lange
+          fortgesetzt, bis sie zum Beenden aufgefordert werden. \n<br>\n<br>\n\n<img
+          src=\"https://images.code.org/56809209ca823047729cc01a033a7ac0-image-1679937249706.gif\"
+          style=\" float: left; width:70%; padding-top:10px\">\n</div>\n"
+      csc_animal_adaptations_predict:
+        answers:
+        - correct: true
+          feedback: Falsch. Der Sprite wird wachsen.
+          text: Der Sprite wird sich drehen.
+        - correct: true
+          feedback: Richtig!
+          text: Der Sprite wird wachsen.
+        - correct: true
+          feedback: Falsch. Der Sprite wird wachsen.
+          text: Das Sprite wird sich bewegen.
+        - correct: true
+          feedback: Falsch. Der Sprite wird wachsen.
+          text: Das Sprite wird seine Farbe verändern.
+        questions:
+        - text: Klicken Sie auf die Schaltfläche "Bearbeiten", um zu sehen, wie das
+            `Mystery-Verhalten` funktioniert. Studiere den Code im Inneren und mache
+            dann eine Vorhersage.
+      csc_animal_adaptations_shareout:
+        markdown: "# #Share Your Project\n<img src=\"https://images.code.org/c480c5c42d9c02e154943f49bbed87ff-image-1675984438344.13.53
+          PM.png\" style= \"width:60%\">\n<div style= \"width: 60%\"> \n\n**Jetzt,
+          wo du eine Survival-Adaption codiert hast, ist es an der Zeit, sie mit anderen
+          zu teilen! ** Wenn Sie\n\nsich die Projekte Ihrer Klassenkameraden aus Stufe
+          9 ansehen, sollten Sie sich die folgenden Fragen stellen: >1.\n\nHaben Sie
+          dasselbe Umgebungsszenario oder ein anderes ausgewählt? \n>2. Haben sie
+          dieselben Codierungsblöcke verwendet? \n>3. Glauben Sie, dass das Tier die
+          Umweltveränderung überleben würde? Warum oder warum nicht? \n\n</div>\n\n"
+      csc_bookcover_extensions_choice_2023:
+        description: Wählen Sie aus den folgenden Aktivitäten, um sie Ihrem Buchcover
+          hinzuzufügen! Sie können mehrere Optionen auswählen und mehr als eine auswählen!
+        display_name: Erweitern Sie Ihr Buchcover!
+      csc_bookcovers_markdown_lesson_4:
+        markdown: "# #Share Your Book Cover\n<img src=\"https://images.code.org/c480c5c42d9c02e154943f49bbed87ff-image-1675984438344.13.53
+          PM.png\" style= \"width:60%\">\n<div style= \"width: 60%\"> \n\n**Jetzt,
+          da Sie Ihr Buchcover codiert haben, ist es an der Zeit, es mit anderen zu
+          teilen! ** Wenn Sie\n\nsich die Projekte Ihrer Klassenkameraden ansehen,
+          sollten Sie sich die folgenden Fragen stellen: >1.\n\nWelche Sprites und
+          Dialoge hast du auf den Buchumschlägen deiner Klassenkameraden gesehen?\n>2.
+          Was passiert, wenn du auf die Charaktere klickst?\n>2. Inwiefern ähnelten
+          ihre Entscheidungen Ihren? Wie waren sie unterschiedlich?\n>3. Würdest du
+          das Buch anhand seines Einbandes lesen wollen?\n</div>\n\n"
+      csc_bookcovers_planning:
+        markdown: "# #Plan Dein digitales Buchcover\n\n<div>\n<img style=\" float:
+          left; width:25%; padding-top:10px\" src=\"https://images.code.org/08ece3f13c8f0f82343e302fb52dc45c-image-1676499630865.png\"
+          />\n\n<div style=\"float: left; width: 70%; padding-left:20px\">\n<h4>\n<strong>Es
+          ist Zeit, deinen Plan zu erstellen!</strong>\n</h4>\n\n>Du solltest Folgendes
+          angeben:\n> - Den Titel des Buches\n> - Den Autor\n> - Zwei der Hauptfiguren
+          und einen Satz, um sich selbst zu beschreiben \n> - Eine Zusammenfassung
+          des Buches in ein bis zwei Sätzen\n\n**Hier ist eine Planvorlage, die Sie
+          kopieren können, um sie selbst zu verwenden: ** Leitfaden zur Planung von
+          \ <a href=\"https://docs.google.com/document/d/18cVgDdq77dbdk6gmQ1rGjHIr7pQk3I2Wb2WsAEeNH64/template/preview\"
+          target=\"_blank\"> Buchcovern.</a>\n\n</div>\n"
+      csc_codingwithpoetry_markdown_lesson_4:
+        markdown: "# #Share Your Poem App\n<img src=\"https://images.code.org/c480c5c42d9c02e154943f49bbed87ff-image-1675984438344.13.53
+          PM.png\" style= \"width:60%\">\n<div style= \"width: 60%\"> \n\n**Jetzt,
+          wo du dein Gedicht codiert hast, ist es an der Zeit, es mit anderen zu teilen!
+          **\n\nWenn du dir das Projekt deiner Klassenkameraden ansiehst, denke an
+          ein „Leuchten“, ein „Wachsen“ und eine „Frage“, die du deinem Partner schreiben
+          kannst:\n\n- Ein „Glow“ ist etwas, das sie gut gemacht haben\n- Ein „Wachsen“
+          ist etwas, das sie ändern oder verbessern können\n- Eine „Frage“ ist etwas,
+          worüber du mehr wissen möchtest\n</div>\n\n**Bereit anzufangen? ** Verwenden
+          Sie <a href=\"https://docs.google.com/document/d/1b6w_lOnibUHyDLYCP3rAWED5iElGm6LOQAJwG-hlih0/template/preview\"
+          target=\"_blank\">diese Ressource</a> , um Feedback mit Ihrem Partner zu
+          teilen.\n\n"
+      csc_ecosystemes_foodchain_info:
+        markdown: "\n##**Alle Ökosysteme haben eine _fein ausgewogene_ Nahrungskette**\n##
+          #The Nahrungskette der marinen Ökosysteme: >## #1.\n\n\n\n<img src=\"https://images.code.org/2270cbb4656875db210e9871883a7d45-image-1683677265473.jpg\"
+          style= \"width:80%\">\n<div style= \"width: 80%\"> \n\nDie Sonne liefert
+          Energie für die Photosynthese von Algen.\n>## #2. Die Algen werden von Fischen
+          gefressen.\n>## #3. Fische werden von Menschen gefangen und gegessen, die
+          Fischerboote mit Netzen benutzen. \n\n</div>\n\n\n##**Befindet sich zu viel
+          oder zu wenig von einem Organismus in der Nahrungskette, hat dies Auswirkungen
+          auf das gesamte Ökosystem.**\n"
+      csc_ecosystems_choice_freeplay_2023:
+        description: Jede dieser Ökosystemsimulationen muss angepasst werden. Wählen
+          Sie ein Ökosystem aus, führen Sie die Simulation aus, um das Problem zu
+          beobachten, und passen Sie den Code an, um das Problem zu beheben.
+        display_name: Wählen Sie ein Ökosystem!
+      csc_ecosystems_conditionals_overview:
+        markdown: "#Cause & Effect Conditionals \n\n</div>\n\n## Als Nächstes fügen
+          Sie Code hinzu, um zu überprüfen, wie viele Algen sich im Wasser befinden
+          <br>\n<img src=\"https://images.code.org/8be316d4e408466b4300c614712fd652-image-1684798211348.jpg\"
+          \ width=50% style=\"margin-right: 10px; float: right\">\n<br> <br>\n\n-
+          Zunächst überprüft der Computer, ob eine Bedingung wahr oder falsch ist.\n\n-
+          Wenn es wahr ist, werden die Blöcke darin ausgeführt.\n- Wenn es falsch
+          ist, wird es nichts bewirken.\n\n<br>\n<br>\n<br>\n\n## Wenn es zu viele
+          Algen gibt, wird die Koralle krank\n\n<br>\n\n<img src=\"https://images.code.org/4d8aaa9c6562e0ca0b3d92ff7aed1d03-image-1681847951794.png\"
+          \ width=20% style=\"margin-right: 10px; float: left\">\n<img src=\"https://images.code.org/941774921f367566bef36cb712cf2bfb-image-1681840836607.png\"
+          \ width=30% style=\" margin-right: 10px; float: left\">\n\n<br>\n<br>\n<br>\n<br>\n<br>\n<br>\n<br>\n<br>\n\n***\n\n\n\n##
+          Wenn zu wenig Algen vorhanden sind, werden Fische verschwinden\n<img src=\"https://images.code.org/6869f418200edfb88190c0a1e4e5cd10-image-1681838202310.png\"
+          \ width=20% style=\"margin-right: 10px; float: left\">\n\n\n<img src=\"https://images.code.org/233178645539bc7966f55af47865096d-image-1681840833690.png\"
+          \ width=20% style=\" margin-right: 10px; float: left\">\n\n<br>\n<br>\n<br>\n<br>\n<br>\n<br>\n<br>\n<br>\n<br>\n\n\n***\n\n\n\n##
+          Wenn es gerade genug Algen gibt, dann Ökosystem ist gesund\n\n<img src=\"https://images.code.org/8bb9247c35d7d167611b02764beaeff3-image-1681838011797.png\"
+          \ width=20% style=\"margin-right: 30px; float: left\">\n<img src=\"https://images.code.org/b1ed2f5c135f9637fd7a9c5778db2b0c-image-1681840830929.png\"
+          \ width=30% style=\"margin-left: 10px;float: left\">\n<br>\n<br>\n<br>\n<br>\n\n"
+      csc_ecosystems_matching_cfu:
+        answers:
+        - text: "! [] (https://images.code.org/284e3b6e09f5d58052a8840e756644c5-image-1683752491112.png)"
+        - text: "! [] (https://images.code.org/d466f0912cd0cadb3d655263c71c072f-image-1683752857648.jpg)"
+        - text: "! [] (https://images.code.org/de2ab3c63bc2cf7cb319be86d5dcdec0-image-1683752570051.png)"
+        markdown: |+
+          ## Schau dir die drei nachhaltigen Fangmethoden an
+
+          Ziehe den Code auf das passende Bild.
+
+        questions:
+        - text: Erstelle eine Fischereizone für Boote! [] (https://images.code.org/5f5e0640a82242d632db10b872280e18-image-1683753001613.gif)
+        - text: |-
+            Beginne eine Angelsaison und eine Fangverbotsaison
+            ! [] (https://images.code.org/becad47fd19a4d0e938a0cd10c404e41-image-1683838684289.gif)
+        - text: Setze Angelgrenzen! [] (https://images.code.org/f8bbd98ff6199af5d3ad23d64f39629d-image-1683753402925.gif)
+        title: Ordne den Code dem Bild zu
+      csc_ecosystems_matching_conditionals:
+        answers:
+        - text: "! [] (https://images.code.org/db1db479bec9b40c6e0574ade394d32b-image-1680118613718.36.41
+            PM.png)"
+        - text: "! [] (https://images.code.org/7c9171ab2ee2e833e5ff60d5519d8728-image-1680118617438.31.00
+            PM.png)"
+        - text: "! [] (https://images.code.org/412968ba617ef19d2049e0e63d271937-image-1680118620636.30.50
+            PM.png)"
+        markdown: |
+          ## Schauen Sie sich die drei Ökosysteme an.
+
+          Ein Ökosystem ist ausgewogen und die anderen beiden sind auf unterschiedliche Weise unausgewogen. Ziehen Sie den Code auf das passende Bild.
+        questions:
+        - text: Zu wenig Algen lassen die Fische verschwinden.! [] (https://images.code.org/c0a28473307b7e9b0e827532d2a6ddda-image-1680212227032.png)
+        - text: |-
+            Zu viele Algen machen die Korallen krank. <br>
+            ! [] (https://images.code.org/1230fd96832b692b0c8ab88e77957f33-image-1680212254888.png)
+        - text: Genau die richtige Menge an Algen lässt die kranken Korallen heilen
+            und hält auch die Fische gesund.! [] (https://images.code.org/3dd061538a7a73285aa0916fdde34e77-image-1680212284869.png)
+        title: Ordne den Code dem Bild zu
+      csc_ecosystems_matching_events:
+        answers:
+        - text: "! [] (https://images.code.org/bf70d0664e68690f2359a48365e50ccc-image-1680556679495.16.33
+            PM.png)"
+        - text: "! [] (https://images.code.org/fe4d2803162186a8e53ec0027f27a206-image-1680556683660.36.04
+            PM.png)"
+        markdown: |+
+          Schau dir an, was passiert, wenn sich die Sprites in beiden Animationen berühren. Ziehen Sie dann jedes Codebild auf das entsprechende Bild.
+
+
+        questions:
+        - text: Das Boot fängt den Fisch.! [] (https://images.code.org/bcdefefdd1787330e3ad72558b5b492d-image-1680556053866.gif)
+        - text: Die Fische fressen die Algen.! [] (https://images.code.org/73febc58a3d23fbf4c66e693abec9e3d-image-1680556608027.gif)
+        title: Ordne den Code der Animation zu
+      csc_ecosystems_overfishing_solution2_overview:
+        markdown: "> #Sustainable Fishing Practice #2:\n>># #Create a Fishing <img
+          src=\"https://images.code.org/123dd5c82e4c03dcbc32b775fd16ec60-image-1681937158113.png\"
+          \ width=400 style=\"margin-right: 30px; float: left\">\nSeason**Setze Grenzen,
+          wann Menschen Fische fangen dürfen. Wenn keine Fangsaison ist, hat das Ökosystem
+          Zeit, sich zu erholen.** #Save unsere Meere! \n<br>\n\n \n<img src=\"https://images.code.org/f3f55eddff9891464c8fb5a5405c31c3-image-1681781301257.png\"
+          width=250 style=\"margin-left: 30px; margin-bottom: 30px; float: right\">\n<img
+          src=\"https://images.code.org/cbccfc42b7e1fe329ac7c9c37dfcb6b5-image-1681781296669.png\"
+          width=250 style=\"margin-left: 30px; margin-bottom: 30px; float: right\">\n\n</div>\n\n###
+          Überfischung ist ein Problem, das die Ökosysteme der Meeresbewohner und
+          die Menschen, die auf sie angewiesen sind, schädigen kann. Es ist wichtig,
+          nachhaltig zu fischen, um diese Ökosysteme zu schützen und sicherzustellen,
+          dass die Fischpopulationen gesund bleiben.\n\n\n\n<br>\n<br>\n<br>\n"
+      csc_ecosystems_overfishing_solution3_overview:
+        markdown: "> #Sustainable Fishing Practice #3:\n>># #Set Fishing Limits <img
+          src=\"https://images.code.org/58d4ca52deba39a990c3165ba16e284b-image-1681747630352.png\"
+          \ width=300 style=\"margin-right: 30px; float: left\">\n**Wissenschaftler
+          können dabei helfen herauszufinden, wie viele Fische gefangen werden können,
+          ohne den Ozean zu schädigen. Dann werden die Fischer wissen, dass sie nur
+          so viele Fische fangen können.** \n<br>\n<br>\n<br>\n\n#Save unsere Meere!
+          \n<img src=\"https://images.code.org/35e557d27c4bdb5f546da560716dc10b-image-1681756387784.jpg\"
+          width=400 style=\"margin-left: 30px; margin-bottom: 30px; float: right\">\n</div>\n\n###
+          Durch unsere Zusammenarbeit können wir dazu beitragen, dass unsere Ozeane
+          auch für kommende Generationen voller Leben bleiben!\n\n\n\n<br>\n<br>\n<br>\n\n"
+      csc_ecosystems_overfishing_solutions_overview:
+        markdown: "#Save unsere Meere! \n<img src=\"https://images.code.org/d4267a1de975b8ea46468f74187eb95c-image-1681756621010.jpg\"
+          width=400 style=\"margin-left: 30px; margin-bottom: 30px; float: right\">\n</div>\n\n###
+          Im Meer gibt es viele Fische, aber manchmal fangen Menschen zu viele Fische
+          und das kann schlecht für das Ökosystem sein. In den folgenden Levels kodieren
+          Sie **drei verschiedene nachhaltige Fischereipraktiken**, um zum Schutz
+          unserer Meeresökosysteme beizutragen.\n\n<br>\n\n## #To Erfahre mehr über
+          nachhaltige Lösungen für unsere Ozeane: <a href=\"https://www.seafoodwatch.org/seafood-basics/sustainable-solutions/avoid-overfishing\"
+          target=\"_blank\">Klicke hier > #Sustainable Fishing</a>\n<br>\n<br>\n\nPraxis
+          #1:\n>> # #Fishing Zonen <img src=\"https://images.code.org/c33e46309c5335dc557c67c34310e723-image-1681511054034.png\"
+          \ width=300 style=\"margin-right: 30px; float: left\">\n**Fischerboote können
+          nur in ausgewiesenen Gebieten fischen. Einige Gebiete sind für Fischerboote
+          gesperrt, sodass sich das Ökosystem erholen kann.** \n<br>\n<br>\n\n\n"
+      csc_ecosystems_planning:
+        markdown: "#Share Deine Ökosystem-Simulation!\n<img src=\"https://images.code.org/c480c5c42d9c02e154943f49bbed87ff-image-1675984438344.13.53
+          PM.png\" style= \"width:50%\">\n<div style= \"width: 60%\"> \n\n###**Ökologen!
+          Es ist Zeit, deine Forschungsergebnisse mit anderen zu teilen! **\n\n##
+          #Explain die folgenden Beobachtungen, die Sie gemacht haben:\n\n>1. Erläutern
+          Sie die Nahrungskette in Ihrem Ökosystem und wie Sie sie kodiert haben.\n>2.
+          Gab es zu viel oder zu wenig von einem Organismus?\n>3. Erläutern Sie die
+          Änderungen, die Sie an der Simulation vorgenommen haben. \n>4. Was ist Ihnen
+          aufgefallen, nachdem Sie die Werte geändert haben?\n</div>\n\n<div style=\"background-color:
+          #a6e3e8; border-radius: 10px; color: #000000; width: 95%; padding: 0.5px
+          20px 1px 20px;\">\n\n<p style=\"line-height: 1.5; margin-left: 10px; margin-right:
+          10px; margin-top: 20px; margin-bottom: 20px; font-size: 18px; \">\n\n###**Bereit
+          für mehr Codierung? ** \nProbieren Sie den [Express-Kurs] von code.org (https://studio.code.org/s/express-2022)
+          aus, um in Ihrem eigenen Tempo mehr Informatik zu lernen.   \n<br>\n</p></div>\n"
+      csc_mappinglandmarks_markdown_lesson_2:
+        markdown: |+
+          # #Plan Your Landmarks Map
+          <div>
+          <img style=" float: left; width:20%; padding-top:10px" src="https://images.code.org/08ece3f13c8f0f82343e302fb52dc45c-image-1676499630865.png" />
+
+          <div style="float: left; width: 70%; padding-left:20px">
+          <h4>
+          <strong>Es ist an der Zeit, deine eigene Karte mit Sehenswürdigkeiten zu planen.</strong>
+          </h4>
+
+          Sie könnten eine Karte Ihres Klassenzimmers, Ihrer Schule oder Ihrer Stadt erstellen. Vielleicht entscheiden Sie sich dafür, staatliche, regionale oder nationale Sehenswürdigkeiten zu zeigen. Oder Sie können sich dafür entscheiden, eine Karte zu erstellen, die auf einem Gebiet basiert, das Sie im Unterricht studiert haben.
+
+          Denken Sie bei der Planung Ihrer Karte darüber nach, welche Hintergründe, Sprites und Sprache Sie verwenden möchten, um anderen Menschen die von Ihnen ausgewählten Sehenswürdigkeiten näher zu bringen.
+
+          **Benötigen Sie Hilfe beim Einstieg? ** Verwenden Sie <a href="https://docs.google.com/document/d/1t_-cd-f6EhhUbblu8nSGRajStY9FVwLnKn1Bj90GL3Q/template/preview" target="_blank">diese Ressource</a> , um Ihre Arbeit zu planen.
+
+
+      csc_mappinglandmarks_markdown_lesson_4:
+        markdown: "# #Share Your Local Landmarks Map\n\nNachdem Sie Ihre Karte codiert
+          haben, ist es an der Zeit, sie mit anderen zu teilen! Schließe zunächst
+          eine kurze Reflexion über dein Projekt ab: \n\n>1. Erläutern Sie Ihren Lieblingsteil
+          Ihres Projekts.\n>2. Was war ein nützlicher Codeblock in Ihrem Projekt?\n>3.
+          Erläutern Sie einen Fehler oder eine Herausforderung, mit der Sie bei der
+          Erstellung Ihres Projekts konfrontiert waren.\n>4. Wie hast du den Fehler
+          behoben oder die Herausforderung gemeistert?\n>5. Welche Änderungen möchten
+          Sie noch vornehmen, um Ihr Projekt zu verbessern?\n\nWenn Sie Ihren Klassenkameraden
+          Ihre Arbeit vorstellen, sollten Sie unbedingt erklären, wie Ihr Code funktioniert,
+          welche Designentscheidungen Sie getroffen haben und mit welchen Herausforderungen
+          Sie konfrontiert waren.\n\n\n\n"
+      csc_starquilts_markdown_lesson_1:
+        markdown: |+
+          # #Plan Your Star Quilt
+
+          <div>
+          <img style=" float: left; width:25%; padding-top:10px" src="https://images.code.org/d5e1eedfbe978ba6feebd3f89da0a667-image-1679522801245.png" />
+
+          <div style="float: left; width: 70%; padding-left:20px">
+          <h4>
+          <strong>Es ist Zeit, deinen Star-Quilt zu planen.</strong>
+          </h4>
+
+          >Zuerst wählst du vier verschiedene Farben aus und füllst deinen Star Quilt aus. Dann machst du noch ein paar weitere Aktivitäten mit Mustern.
+
+          **Bereit loszulegen? ** Verwenden Sie <a href="https://docs.google.com/document/d/1c__530oWLDH-mX0kSxLMStSz-5Lt3cKUm5K3bTV7Uvo/template/preview" target="_blank">diese Ressource</a>.
+
+
+          </div>
+
+
+      csc_timecapsule_choice_lesson_3:
+        description: Wählen Sie eine der folgenden Aktivitäten aus, um Ihr Gedächtnis
+          aufzufrischen und zu lernen, wie Sie Ihrem Zeitkapsel-Gedicht Code hinzufügen
+          können! Du kannst mehrere Optionen auswählen und mehr als eine machen!
+        display_name: Überprüfe deine Programmierkenntnisse!
+      csc_timecapsule_choice_lesson_3_ -l3:
+        description: Wählen Sie eine der folgenden Aktivitäten aus, um Ihr Gedächtnis
+          aufzufrischen und zu lernen, wie Sie Ihrem Zeitkapsel-Gedicht Code hinzufügen
+          können! Du kannst mehrere Optionen auswählen und mehr als eine machen!
+        display_name: Überprüfe deine Programmierkenntnisse!
+      csc_timecapsule_info_2023:
+        content1: hier die Beschreibung
+        markdown: "# #Time Capsules\n\n<img src=\"https://images.code.org/846b0e2d7a84392a70f432fdce00cd29-image-1676501071993.png\"
+          style= \"float:left; width: 25%; padding-right:30px\"/>\n\n<div style= \"width:
+          70%\"> \n<strong>Eine Zeitkapsel ist wie eine Schatzkiste</strong>, aber
+          anstatt Spielzeug und Süßigkeiten darin aufzubewahren, enthält sie besondere
+          Gegenstände, die die Geschichte erzählen, wie das Leben gerade war. Dann
+          wird sie für viele Jahre an einem sicheren Ort aufbewahrt, zum Beispiel
+          im Boden oder in einem Safe in einer Bibliothek. \n<br>\n<br>\n<strong>Wenn
+          die Zeit reif ist, wird jemand die Kiste öffnen</strong> und all die besonderen
+          Dinge darin sehen, und er wird alles darüber wissen, wie das Leben war,
+          als es begraben wurde. \n<br>\n<br>\n<strong>Ein Gedicht mit digitaler Zeitkapsel
+          </strong>ist ähnlich, aber anstatt Dinge in einer Schachtel aufzubewahren,
+          enthält es Bilder, Videos und Nachrichten, die auf einem Computer oder im
+          Internet gespeichert sind.\n</div>\n\n"
+      csc_timecapsule_markdown_lesson_2:
+        markdown: "# #Plan Your Time Capsule\n\n<div>\n<img style=\" float: left;
+          width:25%; padding-top:10px\" src=\"https://images.code.org/08ece3f13c8f0f82343e302fb52dc45c-image-1676499630865.png\"
+          />\n\n<div style=\"float: left; width: 70%; padding-left:20px\">\n<h4>\n<strong>Es
+          ist Zeit, dein eigenes Zeitkapsel-Gedicht zu planen.</strong>\n</h4>\n\n>Du
+          solltest Folgendes beinhalten:\n> - Was du gerne machst \n> - Was dir wichtig
+          ist\n> - Was gerade in deiner Gemeinde passiert \n> - Ein paar aktuelle
+          Weltereignisse\n\n**Brauchst du Hilfe beim Starten deines Gedichts? ** Benutze
+          <a href=\"https://docs.google.com/document/d/1fahr11zX92NW-rLdyZBqrNK2VqgOGtCACkcT87M_luU/template/preview\"
+          target=\"_blank\">diese Ressource</a>.\n\n**Brauchen Sie nur etwas Inspiration?
+          ** Benutze <a href=\"https://docs.google.com/document/d/1-aPA3uJIKJAuQ_2Gtck1Ma79eCFY88ZC8YzegQIckG4/template/preview\"
+          target=\"_blank\">diese Ressource</a>.\n\n</div>\n"
+      csc_timecapsule_markdown_lesson_2_poetry:
+        markdown: "# #Plan Your Poem\n\n<div>\n<img style=\" float: left; width:25%;
+          padding-top:10px\" src=\"https://images.code.org/08ece3f13c8f0f82343e302fb52dc45c-image-1676499630865.png\"
+          />\n\n<div style=\"float: left; width: 70%; padding-left:20px\">\n<h4>\n<strong>Es
+          ist Zeit, dein eigenes Gedicht zu planen.</strong>\n</h4>\n\n>Du solltest
+          Folgendes einschließen:\n> - Etwas, das du gerne tust.\n> - Jemand, der
+          dir wichtig ist.\n> - Einige deiner Lieblingssachen. \n\n**Bereit, mit der
+          Planung zu beginnen? ** Verwenden Sie <a href=\"https://docs.google.com/document/d/1b6w_lOnibUHyDLYCP3rAWED5iElGm6LOQAJwG-hlih0/template/preview\"
+          target=\"_blank\">diese Ressource</a>.\n\n**Auf der Suche nach einem Thema?
+          ** Benutze <a href=\"https://docs.google.com/document/d/1V-DaWOIUk0xT7NYTzx3AEt4my-jc-Hx4vy21Kl4SPoE/template/preview\"
+          target=\"_blank\">diese Ressource</a>.\n\n</div>\n"
+      csc_timecapsule_markdown_lesson_4:
+        markdown: "# #Share Your Time Capsule\n<img src=\"https://images.code.org/c480c5c42d9c02e154943f49bbed87ff-image-1675984438344.13.53
+          PM.png\" style= \"width:60%\">\n<div style= \"width: 60%\"> \n\n**Jetzt,
+          da du dein Zeitkapsel-Gedicht codiert hast, ist es an der Zeit, es mit anderen
+          zu teilen! ** Wenn Sie\n\nsich die Projekte Ihrer Klassenkameraden ansehen,
+          sollten Sie sich die folgenden Fragen stellen: >1.\n\nWelche Bilder und
+          Geräusche hast du in den Zeitkapseln deiner Klassenkameraden gesehen?\n>2.
+          Wie unterschieden sich ihre Geschichten von deinen?\n>3. Inwiefern ähnelten
+          ihre Geschichten deinen?\n>4. Wie haben Sie sich durch ihre Bilder gefühlt?\n</div>\n\n"
       csd-post-survey-2017-levelgroup-2018-2nd-semester:
         title: 'CS Discoveries: Schülerumfrage am Kursende'
       csd-post-survey-2017-q11_2018:
@@ -16475,6 +17926,12 @@ de-DE:
       csf_be_a_super_digital_citizen2022:
         content1: hier die Beschreibung
         markdown: |-
+          # Super Internet Nutzer sind aufmerksam
+
+          ## Was kann man tun, wenn man im Internet auf Cybermobbing trifft?
+      csf_be_a_super_digital_citizen2022_2023:
+        content1: hier die Beschreibung
+        markdown: |-
           # SUPERINTERNETNUTZER sind aufmerksam
 
           ## Was kann man tun, wenn man im Internet auf Gemeinheiten trifft?
@@ -16494,6 +17951,11 @@ de-DE:
           # Folge der digitalen Spur
 
           ## Welche Informationen dürfen in deinem digitalen Fußabdruck sein?
+      csf_digital_trails2022_2023:
+        markdown: |-
+          # Folge der digitalen Spur
+
+          ## Welche Informationen dürfen in deinem digitalen Fußabdruck sein?
       csf_digital_trails_2021:
         markdown: |-
           # Folge der digitalen Spur
@@ -16508,6 +17970,14 @@ de-DE:
           Jedes Passwort sollte mindestens **acht** Zeichen lang sein. \n* Benutze
           Buchstaben, Ziffern **und Symbole** in deinem Passwort. \n\n![](https://images.code.org/bfa69295fbf33c77ecdeb79b5498d8f7-image-1584751340896.png)"
       csf_password_power-up2022:
+        content1: hier die Beschreibung
+        markdown: "# Nutze starke und sichere Passwörter!\n\n## Wichtige Tipps für
+          gute Passwörter\n\n* Wähle ein Passwort so, dass du es gut im **Gedächtnis**
+          behalten kannst. \n* Deine **Eltern** und nur sie sollten dein Passwort
+          kennen. \n* Nutze in deinem Passwort niemals **private** Informationen.\n*
+          Jedes Passwort sollte mindestens **acht** Zeichen lang sein. \n* Benutze
+          Buchstaben, Ziffern **und Symbole** in deinem Passwort. \n\n![](https://images.code.org/bfa69295fbf33c77ecdeb79b5498d8f7-image-1584751340896.png)"
+      csf_password_power-up2022_2023:
         content1: hier die Beschreibung
         markdown: "# Nutze starke und sichere Passwörter!\n\n## Wichtige Tipps für
           gute Passwörter\n\n* Wähle ein Passwort so, dass du es gut im **Gedächtnis**
@@ -16535,6 +18005,12 @@ de-DE:
           gemein zu dir ist?\n\n* **I**nformiere einen vertrauenswürdigen Erwachsenen.\n*
           **N**icht weiter auf der Seite bleiben\n* **F**inde sichere Seiten - lass
           dir helfen  \n* **O**rdne deine Gedanken - mach eine Pause\n\n![](https://images.code.org/f3e4987a130b27f7b589d7829b753aac-image-1584750971069.png)"
+      csf_putting_a_stop_to_online_meanness2022_2023:
+        content1: hier die Beschreibung
+        markdown: "# STOPPE Gemeinheiten\n\n## Was solltest du tun, wenn jemand online
+          gemein zu dir ist?\n\n* **I**nformiere einen vertrauenswürdigen Erwachsenen.\n*
+          **N**icht weiter auf der Seite bleiben\n* **F**inde sichere Seiten - lass
+          dir helfen  \n* **O**rdne deine Gedanken - mach eine Pause\n\n![](https://images.code.org/f3e4987a130b27f7b589d7829b753aac-image-1584750971069.png)"
       csf_putting_a_stop_to_online_meanness_2021:
         content1: hier die Beschreibung
         markdown: "# STOPPE Gemeinheiten\n\n## Was solltest du tun, wenn jemand online
@@ -16547,6 +18023,11 @@ de-DE:
 
           ## Wie geht man sicher online?
       csf_safety_in_my_online_neighborhood2022:
+        markdown: |-
+          # Meine Online-Nachbarschaft
+
+          ## Wie geht man sicher online?
+      csf_safety_in_my_online_neighborhood2022_2023:
         markdown: |-
           # Meine Online-Nachbarschaft
 
@@ -18117,11 +19598,19 @@ de-DE:
         description: Du hast das Ende von Kurs E erreicht! Wähle ein Projekt zum Weiterarbeiten
           aus.
         display_name: Projekt am Ende des Kurses
+      express_EOC2022_2023:
+        description: Du hast das Ende von Kurs E erreicht! Wähle ein Projekt zum Weiterarbeiten
+          aus.
+        display_name: Projekt am Ende des Kurses
       express_EOC_2021:
         description: Du hast das Ende von Kurs E erreicht! Wähle ein Projekt zum Weiterarbeiten
           aus.
         display_name: Projekt am Ende des Kurses
       express_EOC_examples2022:
+        description: Du bist dabei, dein Abschlussprojekt zu beginnen. Bevor du beginnst,
+          solltest du dir die Beispielprojekte genauer ansehen.
+        display_name: Projektbeispiele
+      express_EOC_examples2022_2023:
         description: Du bist dabei, dein Abschlussprojekt zu beginnen. Bevor du beginnst,
           solltest du dir die Beispielprojekte genauer ansehen.
         display_name: Projektbeispiele
@@ -18168,6 +19657,27 @@ de-DE:
             würde (wenn man die Fehler nicht beachtet), wie viele Schätze würde Laurel
             sammeln?
       grade2_multi_collector_A_predict12022:
+        answers:
+        - correct: true
+          feedback: Falsch! Laurel versucht, Schätze einzusammeln, wo keine sind.
+            Das verursacht einen Fehler.
+          text: Laurel wird 4 Schätze einsammeln.
+        - correct: true
+          feedback: Richtig!
+          text: Laurel wird versuchen, Schätze einzusammeln, wo keine sind, und das
+            verursacht einen Fehler.
+        - correct: true
+          feedback: Falsch! Laurel versucht, Schätze einzusammeln, wo keine sind.
+            Das verursacht einen Fehler.
+          text: Laurel wird alle Schätze einsammeln.
+        - correct: true
+          feedback: Falsch! Laurel versucht, Schätze einzusammeln, wo keine sind.
+            Das verursacht einen Fehler.
+          text: Laurel wird mit diesem Code einen Edelstein sammeln.
+        questions:
+        - text: Sieh dir diesen Code genau an. Was wird deiner Meinung nach passieren,
+            wenn das Programm läuft?
+      grade2_multi_collector_A_predict12022_2023:
         answers:
         - correct: true
           feedback: Falsch! Laurel versucht, Schätze einzusammeln, wo keine sind.

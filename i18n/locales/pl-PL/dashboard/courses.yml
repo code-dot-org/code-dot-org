@@ -205,10 +205,13 @@ pl:
           description_teacher: "## Witamy\n\nWitamy w bezpłatnej, samodzielnej nauce online o Code.org dla nauczycieli, aby przygotować się do nauczania z Code.org! Po ukończeniu tego doskonalenia zawodowego **będziesz mógł rozpocząć nauczanie jednostki Code.org dotyczcej tworzenia AI i uczenia maszynowego** ze swoimi uczniami.\n\n### Wybierz sposób uczenia się, który Ci odpowiada\n\n-   **Podżaj we własnym tempie:** Uczenie się we własnym tempie ma Ci zapewnić panowanie nad własną nauką. Sugerowane czasy zajęć są podane dla każdej lekcji. Zachęcamy jednak do **angażowania się we własnym tempa.**\n\n-   **Wybierz treści:** Treści s zorganizowane z sugerowanym postępem dla nauczycieli nowicjuszy zarówno w Code.org, jak i jednostce AI i Uczenie Maszynowe. Możesz jednak **podżać w kolejności, która najlepiej odpowiada Twoim potrzebom.** Jeśli znasz już platformę Code.org, możesz pominąć Pierwsze kroki z Code.org i przejść od razu do przygotowania się do uczenia AI i uczenie maszynowe. "
         vpl-csp-2023:
           title: Zasady CS Wirtualny kurs warsztatowy PL
+          version_title: '2023'
         vpl-csa-2023:
           title: CSA Wirtualne profesjonalne uczenie się
+          version_title: '2023'
         vpl-csd-2023:
           title: Wirtualne profesjonalne uczenie się CSD
+          version_title: '2023'
     resources:
       curriculum/csd/2017:
         name: Program nauczania

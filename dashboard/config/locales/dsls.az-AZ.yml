@@ -4128,6 +4128,11 @@ az-AZ:
           # Kartlarla  Şərtlər
 
           Kart oyunu oynayın və "Qırmızı kart çəksəm, bir xal alacağam" və "Qara kart çəksəm, bir xal alacaqsınız" kimi qaydalar yaradın.
+      ConditionalsWithCards-Unplugged2022_2023:
+        markdown: |-
+          # Kartlarla  Şərtlər
+
+          Kart oyunu oynayın və "Qırmızı kart çəksəm, bir xal alacağam" və "Qara kart çəksəm, bir xal alacaqsınız" kimi qaydalar yaradın.
       ConditionalsWithCards-Unplugged_2020:
         markdown: |-
           # Kartlarla  Şərtlər
@@ -4142,11 +4147,23 @@ az-AZ:
         description: İndiyə qədər böyük iş! Sizin növbəti sessiya seçin. Mümkün qədər
           çox doldurun. Loop və rəssam ilə təcrübə saxlamağa davam edin!
         display_name: Sənətçi təcrübəsi
+      CourseE_Artist_Practice_2023:
+        description: İndiyə qədər böyük iş! Sizin növbəti sessiya seçin. Mümkün qədər
+          çox doldurun. Loop və rəssam ilə təcrübə saxlamağa davam edin!
+        display_name: Sənətçi təcrübəsi
       CourseE_Lesson_11_Artist_Practice_2022:
         description: İndiyə qədər əla iş! Növbəti fəaliyyətinizi seçin. Bacardığınız
           qədər tamamlayın. Funksiyalar və Rəssamla məşq etməyə davam edin!
         display_name: Sənətçi təcrübəsi
+      CourseE_Lesson_11_Artist_Practice_2023:
+        description: İndiyə qədər əla iş! Növbəti fəaliyyətinizi seçin. Bacardığınız
+          qədər tamamlayın. Funksiyalar və Rəssamla məşq etməyə davam edin!
+        display_name: Sənətçi təcrübəsi
       CourseE_Lesson_7_Artist_Practice_2022:
+        description: İndiyə qədər əla iş! Növbəti fəaliyyətinizi seçin. Bacardığınız
+          qədər tamamlayın. İç-içə döngələr və Rəssamla məşq etməyə davam edin!
+        display_name: Sənətçi təcrübəsi
+      CourseE_Lesson_7_Artist_Practice_2023:
         description: İndiyə qədər əla iş! Növbəti fəaliyyətinizi seçin. Bacardığınız
           qədər tamamlayın. İç-içə döngələr və Rəssamla məşq etməyə davam edin!
         display_name: Sənətçi təcrübəsi
@@ -4156,7 +4173,11 @@ az-AZ:
         content1: Burada təsvir edin
       CourseF_outbreak_story2022_2022_pilot_-2022-2:
         content1: Burada təsvir edin
+      CourseF_outbreak_story2022_2022_pilot_-2022-2_2023:
+        content1: Burada təsvir edin
       CourseF_outbreak_story22022_2022_pilot_-2022-2:
+        content1: Burada təsvir edin
+      CourseF_outbreak_story22022_2022_pilot_-2022-2_2023:
         content1: Burada təsvir edin
       Dance_Party_extras_intro:
         markdown: |
@@ -4232,6 +4253,16 @@ az-AZ:
 
           </div>
       DesigningForAccessibilityMarkdownLevel2022:
+        markdown: |-
+          # Əlçatanlıq üçün dizayn
+
+          *Kompüter elmləri dünyasında ** əlçatanlıq ** əlillər üçün texnologiya yaratmaqdır.
+          * Əlilliyə fiziki, eşitmə, vizual və digərləri daxildir.
+          *Əlillik müxtəlifdir və insanlara ** smartfon tətbiqləri ** kimi texnologiyadan necə istifadə etdikləri də daxil olmaqla müxtəlif yollarla təsir edir.
+          * Əlilliyi olan insanlar üçün əlçatan olan proqramların layihələndirilməsi həmin proqramları hamı üçün daha yaxşı edir!
+
+          ![](https://images.code.org/0c670d0d9078657a870df0ca799492cb-image-1557166420066.png)
+      DesigningForAccessibilityMarkdownLevel2022_2023:
         markdown: |-
           # Əlçatanlıq üçün dizayn
 
@@ -4332,6 +4363,11 @@ az-AZ:
           # Dövr Etmək
 
           Bu dərs sizə rəqs fəaliyyəti vasitəsilə programalaşdırmada dövr etmək konsepsiyasını təqdim edir.
+      GettingLoopy-Unplugged2022_2023:
+        markdown: |-
+          # Dövr Etmək
+
+          Bu dərs sizə rəqs fəaliyyəti vasitəsilə programalaşdırmada dövr etmək konsepsiyasını təqdim edir.
       GettingLoopy-Unplugged_2020:
         markdown: |-
           # Dövr Etmək
@@ -4353,6 +4389,9 @@ az-AZ:
       GraphPaperProgramming-Unplugged2022:
         markdown: Sinif yoldaşlarınızın şəkil çəkmək üçün istifadə edə biləcəyi alqoritmlər
           yazın.
+      GraphPaperProgramming-Unplugged2022_2023:
+        markdown: Sinif yoldaşlarınızın şəkil çəkmək üçün istifadə edə biləcəyi alqoritmlər
+          yazın.
       GraphPaperProgramming-Unplugged_2020:
         markdown: Sinif yoldaşlarınızın şəkil çəkmək üçün istifadə edə biləcəyi alqoritmlər
           yazın.
@@ -4365,6 +4404,11 @@ az-AZ:
 
           Bir xarakteri labirentdən keçmək üçün bir alqoritm yaradın.
       HappyMaps-Unplugged2022:
+        markdown: |-
+          # Xoş Xəritələr
+
+          Bir xarakteri labirentdən keçmək üçün bir alqoritm yaradın.
+      HappyMaps-Unplugged2022_2023:
         markdown: |-
           # Xoş Xəritələr
 
@@ -4606,6 +4650,11 @@ az-AZ:
           # Hərəkət etdirin, hərəkət etdirin
 
           Xəritədən istifadə edin və məqsədə çatmaq üçün əmrlər verin.
+      MoveItMoveIt-Unplugged2022_2023:
+        markdown: |-
+          # Hərəkət etdirin, hərəkət etdirin
+
+          Xəritədən istifadə edin və məqsədə çatmaq üçün əmrlər verin.
       MoveItMoveIt-Unplugged_2020:
         markdown: |-
           # Hərəkət etdirin, hərəkət etdirin
@@ -4792,6 +4841,10 @@ az-AZ:
         markdown: |-
           # Şəxsi Məlumat
           ## What information about you is OK to share online?
+      PrivatePersonalInformation-Unplugged2022_2023:
+        markdown: |-
+          # Şəxsi Məlumat
+          ## What information about you is OK to share online?
       PrivatePersonalInformation-Unplugged_2020:
         markdown: |-
           # Şəxsi Məlumat
@@ -4804,6 +4857,9 @@ az-AZ:
         markdown: Komandalara bölün və şəkillər çəkən proqramlar yazmaq üçün birlikdə
           işləyin.
       RelayProgramming-Unplugged2022:
+        markdown: Komandalara bölün və şəkillər çəkən proqramlar yazmaq üçün birlikdə
+          işləyin.
+      RelayProgramming-Unplugged2022_2023:
         markdown: Komandalara bölün və şəkillər çəkən proqramlar yazmaq üçün birlikdə
           işləyin.
       RelayProgramming-Unplugged_2020:
@@ -4829,6 +4885,11 @@ az-AZ:
 
           Funksiyaların təyin edilməsi və çağırılması haqqında məlumat əldə etmək üçün mahnıda xor anlayışından istifadə edin.
       Songwriting-Unplugged2022:
+        markdown: |
+          # Mahnı yazmaq
+
+          Funksiyaların təyin edilməsi və çağırılması haqqında məlumat əldə etmək üçün mahnıda xor anlayışından istifadə edin.
+      Songwriting-Unplugged2022_2023:
         markdown: |
           # Mahnı yazmaq
 
@@ -4947,6 +5008,12 @@ az-AZ:
         questions:
         - {}
       TheRightAppMarkdownLevel2022:
+        markdown: "# Doğru Tətbiq\n\n*Gündəlik həyatımızda hərkəs kompüterlərdən,
+          xüsusilədə smartfonlardan istifadə edir.\n*Smartfon tətbiqləri insanlara
+          dostları ilə danışmaq, musiqi dinləmək, alış-veriş etmək və ya internetə
+          \n  axtarış etmək kimi işləri görməyə kömək edir.\n*Proqramçıların başqalarının
+          ehtiyaclarını anlaması və tətbiqləri nəzərə alaraq dizayn etməsi vacibdir!\n\n![](https://images.code.org/fb17eeb9238d2f26c6ab40c9841517a7-image-1555611687284.png)"
+      TheRightAppMarkdownLevel2022_2023:
         markdown: "# Doğru Tətbiq\n\n*Gündəlik həyatımızda hərkəs kompüterlərdən,
           xüsusilədə smartfonlardan istifadə edir.\n*Smartfon tətbiqləri insanlara
           dostları ilə danışmaq, musiqi dinləmək, alış-veriş etmək və ya internetə
@@ -5500,10 +5567,16 @@ az-AZ:
       courseAB_EOC2022:
         description: "Siz son dərsə çatmısiz! Yaratmaq üçün bir layihə seçin. \n"
         display_name: Kurs layihələrinin sonu!
+      courseAB_EOC2022_2023:
+        description: "Siz son dərsə çatmısiz! Yaratmaq üçün bir layihə seçin. \n"
+        display_name: Kurs layihələrinin sonu!
       courseAB_EOC_2021:
         description: "Siz son dərsə çatmısiz! Yaratmaq üçün bir layihə seçin. \n"
         display_name: Kurs Layihəsinin Sonu
       courseB_EOC2022:
+        description: "Siz son dərsə çatmısiz! Yaratmaq üçün bir layihə seçin. \n"
+        display_name: Kurs layihələrinin sonu!
+      courseB_EOC2022_2023:
         description: "Siz son dərsə çatmısiz! Yaratmaq üçün bir layihə seçin. \n"
         display_name: Kurs layihələrinin sonu!
       courseB_EOC_2021:
@@ -5522,6 +5595,18 @@ az-AZ:
         questions:
         - text: Aşağıdakı koda diqqətlə baxın. "Başda" düyməsini basanda nə baş verəcək?
       courseC_multi_artist_prog6_predict12022:
+        answers:
+        - feedback: Yanlış. Rəssam kvadrat çəkir.
+          text: Rəssam üç tərəfi bərabər olan bir üçbucaq çəkəcək.
+        - feedback: Yanlış. Rəssam kvadrat çəkir.
+          text: Rəssam tək xətt çəkəcək.
+        - feedback: Düzgün!
+          text: Artist dördbucaqlı çəkəcək.
+        - feedback: Səhvdir. Rəssam kvadrat çəkir.
+          text: Rəssam beşbucaqlı cəkəcək
+        questions:
+        - text: Aşağıdakı koda diqqətlə baxın. "Başda" düyməsini basanda nə baş verəcək?
+      courseC_multi_artist_prog6_predict12022_2023:
         answers:
         - feedback: Yanlış. Rəssam kvadrat çəkir.
           text: Rəssam üç tərəfi bərabər olan bir üçbucaq çəkəcək.
@@ -5598,6 +5683,22 @@ az-AZ:
         - text: Aşağıdakı kodu diqqətlə nəzərdən keçirin. "Çalıştır" düyməsini vurduqdan
             sonra fermer neçə balqabaq yığacaq?
       courseC_multi_harvester_loops11_predict12022:
+        answers:
+        - feedback: Yanlış. Fermer 3 dövrün hər birində 4 balqabaq yığacaq. 4 dəfə
+            3 12-dir!
+          text: '4'
+        - feedback: Düzgün!
+          text: on iki
+        - feedback: Yanlış. Fermer 3 dövrün hər birində 4 balqabaq yığacaq. 4 dəfə
+            3 12-dir!
+          text: on beş
+        - feedback: Yanlış. Fermer 3 dövrün hər birində 4 balqabaq yığacaq. 4 dəfə
+            3 12-dir!
+          text: iyirmi
+        questions:
+        - text: Aşağıdakı kodu diqqətlə nəzərdən keçirin. "Çalıştır" düyməsini vurduqdan
+            sonra fermer neçə balqabaq yığacaq?
+      courseC_multi_harvester_loops11_predict12022_2023:
         answers:
         - feedback: Yanlış. Fermer 3 dövrün hər birində 4 balqabaq yığacaq. 4 dəfə
             3 12-dir!
@@ -5694,6 +5795,17 @@ az-AZ:
         questions:
         - text: Bu kodda səhvləri axtarın. Scrat palıd qozasına çatacaq, yoxsa bir
             problem var?
+      courseC_multi_maze_debugging8_predict12022_2023:
+        answers:
+        - text: Scrat palıd qozasına çatacaq. Kodda heç bir səhv yoxdur.
+        - text: Scrat palıd qozasına çatmayacaq çünki o səhv yola dönür.
+        - text: Scrat palıd qozasına çatmayacaq, çünki kifayət qədər "irəli hərəkət
+            et" blokları yoxdur.
+        - feedback: Scrat palıd qozasına çatmayacaq çünki o səhv yola dönür.
+          text: Scrat birinci blokdan hərəkət etməyəcək.
+        questions:
+        - text: Bu kodda səhvləri axtarın. Scrat palıd qozasına çatacaq, yoxsa bir
+            problem var?
       courseC_multi_maze_debugging8_predict1_2018:
         answers:
         - {}
@@ -5774,6 +5886,19 @@ az-AZ:
         questions:
         - text: 'Aşağıdakı kodu çox diqqətlə oxuyun. "İcra et" düyməsini kliklədikdə
             nə olacaq? '
+      courseC_multi_maze_programming8_predict12022_2023:
+        answers:
+        - feedback: 'Səhv. Bu kod quşu donuza mükəmməl şəkildə çatdırır. '
+          text: Quş donuzdan bir addım geridə qalacaq.
+        - feedback: Düzgün!
+          text: Quş donuza kimi edəcək.
+        - feedback: 'Səhv. Bu kod quşu donuza mükəmməl şəkildə çatdırır. '
+          text: Quş TNT-nin üzərinə uçacaq.
+        - feedback: 'Səhv. Bu kod quşu donuza mükəmməl şəkildə çatdırır. '
+          text: 'Quş divarın içində qaçacaq. '
+        questions:
+        - text: 'Aşağıdakı kodu çox diqqətlə oxuyun. "İcra et" düyməsini kliklədikdə
+            nə olacaq? '
       courseC_multi_maze_programming8_predict1_2018:
         answers:
         - feedback: 'Səhv. Bu kod quşu donuza mükəmməl şəkildə çatdırır. '
@@ -5840,6 +5965,18 @@ az-AZ:
         questions:
         - text: '"İcra Et"-i kliklədikdə sizcə nə baş verəcək?'
       courseC_multi_starWars_predict12022:
+        answers:
+        - feedback: 'Yanlış. Təkrarla bloku BB-8-i 5 dəfə irəli aparacaq. '
+          text: BB-8 hərəkət etməyəcək.
+        - feedback: 'Yanlış. Təkrarla bloku BB-8-i 5 dəfə irəli aparacaq. '
+          text: BB-8 yalnız bir yerə hərəkət edəcək
+        - feedback: Düzgün!
+          text: BB-8 5 dəfə hərəkət edəcək və bütün metal qırıntılarını alacaq
+        - feedback: 'Yanlış. Təkrarla bloku BB-8-i 5 dəfə irəli aparacaq. '
+          text: BB-8 cəmi 3 boşluq hərəkət edəcək.
+        questions:
+        - text: '"İcra Et"-i kliklədikdə sizcə nə baş verəcək?'
+      courseC_multi_starWars_predict12022_2023:
         answers:
         - feedback: 'Yanlış. Təkrarla bloku BB-8-i 5 dəfə irəli aparacaq. '
           text: BB-8 hərəkət etməyəcək.
@@ -5933,6 +6070,22 @@ az-AZ:
         questions:
         - text: 'Aşağıdakı kodu diqqətlə nəzərdən keçir. "İcra et" düyməsini basdıqda
             nə baş verəcək? '
+      courseC_multi_starWars_predict22022_2023:
+        answers:
+        - feedback: Yanlış. İlk döngə, BB-8-in 3 boşluq irəli getməsi lazım olduqda
+            yalnız 2 boşluq irəli getməsinə imkan verir.
+          text: BB-8 ilk dövrədə çox uzaqlara gedəcək.
+        - feedback: Düzgün!
+          text: BB-8 bütün metal qırıntılarını əldə etmək üçün ilk dövrədə kifayət
+            qədər uzaqlaşmayacaq.
+        - feedback: Yanlış. İlk döngə, BB-8-in 3 boşluq irəli getməsi lazım olduqda
+            yalnız 2 boşluq irəli getməsinə imkan verir.
+          text: BB-8 heç bir problem olmadan bütün metal qırıntılarını yığacaq.
+        - feedback: Yanlış. İlk döngə, BB-8-in 3 boşluq irəli getməsi lazım olduqda
+            yalnız 2 boşluq irəli getməsinə imkan verir.
+        questions:
+        - text: 'Aşağıdakı kodu diqqətlə nəzərdən keçir. "İcra et" düyməsini basdıqda
+            nə baş verəcək? '
       courseC_multi_starWars_predict2_2018:
         answers:
         - feedback: Yanlış. İlk döngə, BB-8-in 3 boşluq irəli getməsi lazım olduqda
@@ -6005,6 +6158,9 @@ az-AZ:
       courseD_EOC2022:
         description: Siz D Kursunun sonu dərsinə çatdınız! Yaratmaq üçün layihə seçin.
         display_name: Kurs layihələrinin sonu!
+      courseD_EOC2022_2023:
+        description: Siz D Kursunun sonu dərsinə çatdınız! Yaratmaq üçün layihə seçin.
+        display_name: Kurs layihələrinin sonu!
       courseD_EOC_2020:
         description: Siz D Kursunun sonu dərsinə çatdınız! Yaratmaq üçün layihə seçin.
         display_name: Kurs layihələrinin sonu!
@@ -6012,6 +6168,8 @@ az-AZ:
         description: Siz D Kursunun sonu dərsinə çatdınız! Yaratmaq üçün layihə seçin.
         display_name: Kurs layihələrinin sonu!
       courseD_EOC_examples2022:
+        display_name: Layihə Nümunələri
+      courseD_EOC_examples2022_2023:
         display_name: Layihə Nümunələri
       courseD_EOC_examples_2021:
         display_name: Layihə Nümunələri
@@ -6081,6 +6239,15 @@ az-AZ:
         - text: Yuxarıdakılardan heç biri
         questions:
         - {}
+      courseD_multi_artist_nestedLoops9_predict12022_2023:
+        answers:
+        - feedback: Düzgün!
+          text: 'A '
+        - text: 'B '
+        - text: 'C '
+        - text: Yuxarıdakılardan heç biri
+        questions:
+        - {}
       courseD_multi_artist_nestedLoops9_predict1_2018:
         answers:
         - feedback: Düzgün!
@@ -6127,6 +6294,14 @@ az-AZ:
         questions:
         - {}
       courseD_multi_bee_conditionals1_predict12022:
+        answers:
+        - {}
+        - feedback: Düzgün!
+        - {}
+        - {}
+        questions:
+        - {}
+      courseD_multi_bee_conditionals1_predict12022_2023:
         answers:
         - {}
         - feedback: Düzgün!
@@ -6199,6 +6374,20 @@ az-AZ:
         questions:
         - {}
       courseD_multi_bee_conditionals7_predict22022:
+        answers:
+        - feedback: Düzgün!
+          text: Arı hər çiçəyin nektarını alacaq və hər pətəkdən bal hazırlayacaq.
+        - feedback: Yanlış. "Çiçəklənmə" bloku, arının hər çiçəyə nektar almasına
+            və hər bir pətəkdən bal hazırlamasına imkan verir.
+        - feedback: Yanlış. Yanlış. "Çiçəklənmə" bloku, arının hər çiçəyin yanında
+            nektar almasına və hər bir pətəkdən bal hazırlamasına imkan verir.
+        - feedback: Yanlış. Yanlış. "Çiçəklənmə" bloku, arının hər çiçəyin yanında
+            nektar almasına və hər bir pətəkdən bal hazırlamasına imkan verir.
+        questions:
+        - text: 'Aşağıdakı koda diqqətlə baxın. Sizcə "Çalış" düyməsini basdıqdan
+            sonra nə olacaq? Unutmayın: hər buludun arxasında yalnız * bir * bal pətəyi
+            və ya * bir * çiçək olacaq.'
+      courseD_multi_bee_conditionals7_predict22022_2023:
         answers:
         - feedback: Düzgün!
           text: Arı hər çiçəyin nektarını alacaq və hər pətəkdən bal hazırlayacaq.
@@ -6288,6 +6477,16 @@ az-AZ:
         questions:
         - text: Aşağıdakı yuvalı döngələrə diqqətlə baxın. "Çalış" düyməsini basdıqda
             nə olacaq?
+      courseD_multi_bee_nestedLoops2_predict12022_2023:
+        answers:
+        - text: Arı yalnız bir dəfə irəliləyəcək və nektar əldə edəcək.
+        - text: Arı cəmi 2 vahid nektar alacaq.
+        - feedback: Düzgün!
+          text: Arı bütün nektarı alacaq.
+        - {}
+        questions:
+        - text: Aşağıdakı yuvalı döngələrə diqqətlə baxın. "Çalış" düyməsini basdıqda
+            nə olacaq?
       courseD_multi_bee_nestedLoops2_predict1_2018:
         answers:
         - text: Arı yalnız bir dəfə irəliləyəcək və nektar əldə edəcək.
@@ -6345,6 +6544,15 @@ az-AZ:
         questions:
         - {}
       courseD_multi_bee_nestedLoops9_predict22022:
+        answers:
+        - text: '4'
+        - feedback: Düzgün!
+          text: '8'
+        - text: '10'
+        - text: on iki
+        questions:
+        - {}
+      courseD_multi_bee_nestedLoops9_predict22022_2023:
         answers:
         - text: '4'
         - feedback: Düzgün!
@@ -6443,6 +6651,14 @@ az-AZ:
         - {}
         questions:
         - {}
+      courseD_multi_farmer_condLoops9_predict12022_2023:
+        answers:
+        - {}
+        - {}
+        - feedback: Düzgün!
+        - {}
+        questions:
+        - {}
       courseD_multi_farmer_condLoops9_predict1_2018:
         answers:
         - {}
@@ -6512,6 +6728,14 @@ az-AZ:
         - {}
         questions:
         - {}
+      courseD_multi_farmer_while10_predict22022_2023:
+        answers:
+        - {}
+        - feedback: Düzgün!
+        - {}
+        - {}
+        questions:
+        - {}
       courseD_multi_farmer_while10_predict2_2018:
         answers:
         - {}
@@ -6558,6 +6782,19 @@ az-AZ:
         questions:
         - {}
       courseD_multi_farmer_while4_predict12022:
+        answers:
+        - feedback: Səhv. Fermer bir qalaq olduğu müddətcə kirdən təmizlənəcək, sonra
+            yığın yox olanda dayanacaq
+          text: 'Heç nə baş verməyəcək. '
+        - feedback: Səhv. Fermer bir qalaq olduğu müddətcə kirdən təmizlənəcək, sonra
+            yığın yox olanda dayanacaq
+          text: Fermer heç vaxt çirki təmizləməyi dayandırmayacaq.
+        - feedback: Düzgün!
+        - feedback: Səhv. Fermer bir qalaq olduğu müddətcə kirdən təmizlənəcək, sonra
+            yığın yox olanda dayanacaq
+        questions:
+        - {}
+      courseD_multi_farmer_while4_predict12022_2023:
         answers:
         - feedback: Səhv. Fermer bir qalaq olduğu müddətcə kirdən təmizlənəcək, sonra
             yığın yox olanda dayanacaq
@@ -6641,6 +6878,14 @@ az-AZ:
         - {}
         questions:
         - {}
+      courseD_multi_maze_until10_predict22022_2023:
+        answers:
+        - feedback: Düzgün!
+        - {}
+        - {}
+        - {}
+        questions:
+        - {}
       courseD_multi_maze_until10_predict2_2018:
         answers:
         - feedback: Düzgün!
@@ -6684,6 +6929,15 @@ az-AZ:
         questions:
         - {}
       courseD_multi_maze_until2_predict12022:
+        answers:
+        - text: Quş heç hərəkət etməyəcək.
+        - feedback: Düzgün!
+          text: Quş donuza kimi edəcək.
+        - {}
+        - {}
+        questions:
+        - {}
+      courseD_multi_maze_until2_predict12022_2023:
         answers:
         - text: Quş heç hərəkət etməyəcək.
         - feedback: Düzgün!
@@ -6751,6 +7005,9 @@ az-AZ:
       courseE_EOC2022:
         description: Siz E Kursunun sonuna çatdınız! Yaratmaq üçün layihə seçin.
         display_name: Kurs layihələrinin sonu!
+      courseE_EOC2022_2023:
+        description: Siz E Kursunun sonuna çatdınız! Yaratmaq üçün layihə seçin.
+        display_name: Kurs layihələrinin sonu!
       courseE_EOC_2020:
         description: Siz E Kursunun sonuna çatdınız! Yaratmaq üçün layihə seçin.
         display_name: Kurs layihələrinin sonu!
@@ -6758,6 +7015,9 @@ az-AZ:
         description: Siz E Kursunun sonuna çatdınız! Yaratmaq üçün layihə seçin.
         display_name: Kurs layihələrinin sonu!
       courseE_EOC_examples2022:
+        description: Siz E Kursunun sonuna çatdınız! Yaratmaq üçün layihə seçin.
+        display_name: Kurs layihələrinin sonu!
+      courseE_EOC_examples2022_2023:
         description: Siz E Kursunun sonuna çatdınız! Yaratmaq üçün layihə seçin.
         display_name: Kurs layihələrinin sonu!
       courseE_EOC_examples_2021:
@@ -6804,6 +7064,21 @@ az-AZ:
         questions:
         - text: Aşağıda müəyyən edilmiş funksiyalara baxın. Kombayn nə seçəcək?
       courseE_multi_farmer_functions11_predict2022:
+        answers:
+        - feedback: Səhv. Kombayn yolun sonuna qədər irəli gedir, sonra dönüb kahı
+            götürənə qədər geri çəkilir.
+          text: Kombayn iki balqabaq yığacaq.
+        - feedback: Səhv. Kombayn yolun sonuna qədər irəli gedir, sonra dönüb kahı
+            götürənə qədər geri çəkilir.
+          text: Kombayn bütün balqabaqları yığacaq.
+        - feedback: Düzgün!
+          text: Kombayn kahı yığacaq.
+        - feedback: Səhv. Kombayn yolun sonuna qədər irəli gedir, sonra dönüb kahı
+            götürənə qədər geri çəkilir.
+          text: Kombayn qarğıdalı yığacaq.
+        questions:
+        - text: Aşağıda müəyyən edilmiş funksiyalara baxın. Kombayn nə seçəcək?
+      courseE_multi_farmer_functions11_predict2022_2023:
         answers:
         - feedback: Səhv. Kombayn yolun sonuna qədər irəli gedir, sonra dönüb kahı
             götürənə qədər geri çəkilir.
@@ -6895,6 +7170,14 @@ az-AZ:
         - {}
         questions:
         - {}
+      courseE_prediction_artistFunction12022_2023:
+        answers:
+        - {}
+        - {}
+        - {}
+        - {}
+        questions:
+        - {}
       courseE_prediction_artistFunction1_2018:
         answers:
         - {}
@@ -6959,6 +7242,18 @@ az-AZ:
           text: Çöp otu yanıb sönəcək.
         questions:
         - {}
+      courseE_swim_fish_behavior_predict12022_2023:
+        answers:
+        - feedback: Yanlış. Çöp otu yuvarlanmağa başlayacaq
+          text: 'Heç nə baş verməyəcək. '
+        - feedback: Yanlış. Çöp otu yuvarlanmağa başlayacaq
+          text: Tumbleweed ekranın yuxarı hissəsinə üzəcəkdir
+        - feedback: Düzgün!
+          text: Çöp otu yuvarlanmağa başlayacaq
+        - feedback: Yanlış. Çöp otu yuvarlanmağa başlayacaq
+          text: Çöp otu yanıb sönəcək.
+        questions:
+        - {}
       courseE_swim_fish_behavior_predict1_2021:
         answers:
         - feedback: Yanlış. Çöp otu yuvarlanmağa başlayacaq
@@ -6987,10 +7282,14 @@ az-AZ:
         display_name: Kurs layihələrinin sonu!
       courseF_EOC_examples2022_2022_pilot_-2022-2:
         display_name: Kurs layihələrinin sonu!
+      courseF_EOC_examples2022_2022_pilot_-2022-2_2023:
+        display_name: Kurs layihələrinin sonu!
       courseF_EOC_examples_2021:
         description: Siz F Kursunun sonuna çatdınız! Yaratmaq üçün layihə seçin.
         display_name: Kurs layihələrinin sonu!
       courseF_EOC_samples2022:
+        display_name: Kurs layihələrinin sonu!
+      courseF_EOC_samples2022_2023:
         display_name: Kurs layihələrinin sonu!
       courseF_EOC_samples_2021:
         display_name: Kurs layihələrinin sonu!
@@ -7032,6 +7331,11 @@ az-AZ:
           göstərilən layihələrin nümunələri ilə tanış olun. Öz proqram planlaşdırma
           başlamaq üçün hazır olduğunuzda "Finish" düyməsinə basın.
         display_name: Tədqiqat - Nümunə Proqramlar
+      courseF_collector_samples_2022_pilot_-2022-2_2023:
+        description: Siz kolleksiyası oyun yaratmaq olacaq. Başlamadan əvvəl aşağıda
+          göstərilən layihələrin nümunələri ilə tanış olun. Öz proqram planlaşdırma
+          başlamaq üçün hazır olduğunuzda "Finish" düyməsinə basın.
+        display_name: Tədqiqat - Nümunə Proqramlar
       courseF_events_practice:
         description: İndiyə qədər böyük iş! Sizin növbəti sessiya seçin. Mümkün qədər
           çox doldurun. Hadisələrlə təcrübə etməyə davam edin!
@@ -7047,6 +7351,10 @@ az-AZ:
           | ***Type*** |**Review**|**Debug**|**Debug**|**Debug**|**Optional Content**|**Optional Content**
           | ***Concept***|*events, behaviors*|*events, behaviors*|*events, behaviors*|*events, behaviors*|*when/while events*|*when/while events*|
       courseF_events_practice2022_2022_pilot_-2022-2:
+        description: İndiyə qədər böyük iş! Sizin növbəti sessiya seçin. Mümkün qədər
+          çox doldurun. Hadisələrlə təcrübə etməyə davam edin!
+        display_name: Tədbirlərin keçirilməsi praktikası
+      courseF_events_practice2022_2022_pilot_-2022-2_2023:
         description: İndiyə qədər böyük iş! Sizin növbəti sessiya seçin. Mümkün qədər
           çox doldurun. Hadisələrlə təcrübə etməyə davam edin!
         display_name: Tədbirlərin keçirilməsi praktikası
@@ -7079,6 +7387,20 @@ az-AZ:
           text: Birincisi, sprite fırlanıb və sonra hərəkət edəcək.
         questions:
         - text: Kodu oxuyun, sonra proqnoz verin.
+      courseF_events_predict_multi2022_2022_pilot_-2022-2_2023:
+        answers:
+        - feedback: Səhv. Sprite də şərqə doğru hərəkət edəcək.
+          text: Sprite yalnız düzgün dönüşümlü olacaq.
+        - feedback: Səhv. Sprite fırlanmağı dayandırmadı, belə ki, həm də eyni zamanda
+            bunu edəcək.
+          text: Sprite yalnız şərqə gedəcək.
+        - feedback: Doğru! Hər iki davranış eyni zamanda baş verəcək.
+          text: Sprite dönüşümlü və eyni zamanda hərəkət edəcək.
+        - feedback: Səhv. Sprite Lab-də əlaqəli bloklar hər sonuncudan dərhal sonra
+            baş verir, buna görə də hər iki davranış eyni vaxtda baş verəcəkdir.
+          text: Birincisi, sprite fırlanıb və sonra hərəkət edəcək.
+        questions:
+        - text: Kodu oxuyun, sonra proqnoz verin.
       courseF_external_variableConstant:
         markdown: |-
           <h2>Değişkenler Hakkında Daha Fazlası</h2>
@@ -7092,11 +7414,32 @@ az-AZ:
         description: İndi istədiyiniz hər şeyi etmək üçün öyrəndiklərinizi istifadə
           edə bilərsiniz! Sprites bir çox interaktiv proqram yaradın!
         display_name: Sprites çox-pulsuz oyun
+      courseF_groups_freeplay_2022_pilot_-2022-2_2023:
+        description: İndi istədiyiniz hər şeyi etmək üçün öyrəndiklərinizi istifadə
+          edə bilərsiniz! Sprites bir çox interaktiv proqram yaradın!
+        display_name: Sprites çox-pulsuz oyun
       courseF_groups_practice_2022_pilot_-2022-2:
         description: Bu günə qədər böyük iş! Növbəti dərsinizi seçin. Mümkün qədər
           tamamlayın. Hadisələr və sprites qrupları ilə təcrübə saxlamaq!
         display_name: Sprites Çox Tətbiq Olunur
+      courseF_groups_practice_2022_pilot_-2022-2_2023:
+        description: Bu günə qədər böyük iş! Növbəti dərsinizi seçin. Mümkün qədər
+          tamamlayın. Hadisələr və sprites qrupları ilə təcrübə saxlamaq!
+        display_name: Sprites Çox Tətbiq Olunur
       courseF_groups_predict_multi_2022_pilot_-2022-2:
+        answers:
+        - feedback: Doğru! Basdığınız sprite daha böyük olacaq.
+          text: Basdığınız pəri daha çox olacaq
+        - feedback: Yanlış. Basdığınız sprite daha böyük olacaq.
+          text: Basdığınız sprite daha az olacaq.
+        - feedback: Yanlış. Basdığınız sprite daha böyük olacaq.
+          text: Bütün sprites daha çox olacaq.
+        - feedback: Yanlış. Basdığınız sprite daha böyük olacaq.
+          text: Bütün qrafik-obyekt az olacaq.
+        questions:
+        - text: 'Proqnoz verin: Run düyməsini basdıqdan sonra, spritlərdən birinə
+            basdığınız zaman nə olacaq?'
+      courseF_groups_predict_multi_2022_pilot_-2022-2_2023:
         answers:
         - feedback: Doğru! Basdığınız sprite daha böyük olacaq.
           text: Basdığınız pəri daha çox olacaq
@@ -7126,6 +7469,13 @@ az-AZ:
 
           '
         display_name: Sprite Lab Tətbiqləri
+      courseF_intro_apps2022_2022_pilot_-2022-2_2023:
+        description: 'Bu layihələrin hamısı Sprite Lab ilə yaradılmışdır. Nəyin mümkün
+          olduğunu görmək üçün onları indi sınayın. Bu kursun sonunda siz bu kimi
+          öz layihələrinizi edə biləcəksiniz... və daha çoxunu!
+
+          '
+        display_name: Sprite Lab Tətbiqləri
       courseF_labels_predict_multi:
         answers:
         - {}
@@ -7136,6 +7486,15 @@ az-AZ:
         questions:
         - {}
       courseF_labels_predict_multi2022_2022_pilot_-2022-2:
+        answers:
+        - {}
+        - {}
+        - {}
+        - {}
+        - text: Heçnə çap olunmayacaq.
+        questions:
+        - {}
+      courseF_labels_predict_multi2022_2022_pilot_-2022-2_2023:
         answers:
         - {}
         - {}
@@ -7306,6 +7665,14 @@ az-AZ:
         - text: Kompüter istifadəçidən nömrəni tələb edəcək.
         questions:
         - {}
+      courseF_multi_artist_variables3a_predict12022_2023:
+        answers:
+        - feedback: Düzgün!
+        - {}
+        - {}
+        - text: Kompüter istifadəçidən nömrəni tələb edəcək.
+        questions:
+        - {}
       courseF_multi_artist_variables3a_predict1_2018:
         answers:
         - feedback: Düzgün!
@@ -7378,6 +7745,14 @@ az-AZ:
         questions:
         - {}
       courseF_multi_bee_for3_predict12022:
+        answers:
+        - {}
+        - feedback: Düzgün!
+        - {}
+        - {}
+        questions:
+        - {}
+      courseF_multi_bee_for3_predict12022_2023:
         answers:
         - {}
         - feedback: Düzgün!
@@ -7471,6 +7846,10 @@ az-AZ:
         description: Hələ ki əla iş! Sıradaki fəaliyyətini seç. Bacara bildiyin qədər
           çox tamamla. Sprite-larla və davranışlarla təcrübə aparmağa davam edin.
         display_name: Sprite-lar təcrübəsi
+      courseF_sprites_practice2022_2022_pilot_-2022-2_2023:
+        description: Hələ ki əla iş! Sıradaki fəaliyyətini seç. Bacara bildiyin qədər
+          çox tamamla. Sprite-larla və davranışlarla təcrübə aparmağa davam edin.
+        display_name: Sprite-lar təcrübəsi
       courseF_sprites_predict_multi:
         answers:
         - feedback: Səhv. Bu sprites Onlar dayandırmaq demək qədər fəaliyyət davam
@@ -7487,6 +7866,20 @@ az-AZ:
         questions:
         - text: Kodu oxuyun, sonra proqnoz verin.
       courseF_sprites_predict_multi2022_2022_pilot_-2022-2:
+        answers:
+        - feedback: Səhv. Bu sprites Onlar dayandırmaq demək qədər fəaliyyət davam
+            edən bir "davranış" var.
+          text: Hər iki təyyarə grid boyunca bir yerə hərəkət edəcək və sonra dayandırılacaq.
+        - feedback: Doğru! Bu davranış təyyarələr hərəkət başlamaq və hərəkət davam
+            deyir.
+          text: Hər iki təyyarə hərəkət etməyə başlayacaq və dayanmayacaq.
+        - feedback: Səhv. Sprite Lab-də kodun hər bir bloku növbəti dəfə dərhal başlayır.
+          text: Bir təyyarə birinci, digəri isə daha sonra hərəkət edəcək.
+        - feedback: Yalnış. Təyyarələr bir-birinə toxunacaq vəziyyətdə yerləşdirilməyib.
+          text: Təyyarələr qırılacaq.
+        questions:
+        - text: Kodu oxuyun, sonra proqnoz verin.
+      courseF_sprites_predict_multi2022_2022_pilot_-2022-2_2023:
         answers:
         - feedback: Səhv. Bu sprites Onlar dayandırmaq demək qədər fəaliyyət davam
             edən bir "davranış" var.
@@ -7518,6 +7911,10 @@ az-AZ:
         description: İndiyə qədər böyük iş! Sizin növbəti sessiya seçin. Mümkün qədər
           çox doldurun. Mətn və göstərişlər ilə təcrübə aparmağı davam edin!
         display_name: Mətn və təcrübə göstərişlər
+      courseF_text_practice2022_2022_pilot_-2022-2_2023:
+        description: İndiyə qədər böyük iş! Sizin növbəti sessiya seçin. Mümkün qədər
+          çox doldurun. Mətn və göstərişlər ilə təcrübə aparmağı davam edin!
+        display_name: Mətn və təcrübə göstərişlər
       courseF_variables2_predict2_multi2022_-2022-2:
         answers:
         - {}
@@ -7526,7 +7923,23 @@ az-AZ:
         - {}
         questions:
         - {}
+      courseF_variables2_predict2_multi2022_-2022-2_2023:
+        answers:
+        - {}
+        - {}
+        - {}
+        - {}
+        questions:
+        - {}
       courseF_variables2_predict_multi2022_2022_pilot_-2022-2:
+        answers:
+        - {}
+        - {}
+        - {}
+        - {}
+        questions:
+        - {}
+      courseF_variables2_predict_multi2022_2022_pilot_-2022-2_2023:
         answers:
         - {}
         - {}
@@ -7550,17 +7963,31 @@ az-AZ:
         - text: Kompüter başqa sual soruşacaq.
         questions:
         - {}
+      courseF_variables_predict_multi2022_2022_pilot_-2022-2_2023:
+        answers:
+        - {}
+        - {}
+        - feedback: Yanlış. Mətn ekrana çap olunur.
+        - text: Kompüter başqa sual soruşacaq.
+        questions:
+        - {}
       courseF_variables_projects:
         display_name: Bir layihə seçin
       courseF_variables_projects2022_2022_pilot_-2022-2:
+        display_name: Bir layihə seçin
+      courseF_variables_projects2022_2022_pilot_-2022-2_2023:
         display_name: Bir layihə seçin
       courseF_variables_samples:
         display_name: Tədqiqat - Nümunə Proqramlar
       courseF_variables_samples2022_2022_pilot_-2022-2:
         display_name: Tədqiqat - Nümunə Proqramlar
+      courseF_variables_samples2022_2022_pilot_-2022-2_2023:
+        display_name: Tədqiqat - Nümunə Proqramlar
       courseF_variables_stop:
         content1: Burada təsvir edin
       courseF_variables_stop2022_2022_pilot_-2022-2:
+        content1: Burada təsvir edin
+      courseF_variables_stop2022_2022_pilot_-2022-2_2023:
         content1: Burada təsvir edin
       coursee_prediction_artistfunction2:
         answers:
@@ -7576,6 +8003,19 @@ az-AZ:
         questions:
         - text: '"Çalış" düyməsini basdığınız zaman nə baş verəcək?'
       coursee_prediction_artistfunction22022:
+        answers:
+        - feedback: Səhv. Döngədə "çoxbucaqlıların xəttini çəkmək" əvəzinə "çoxbucaqlı
+            çəkmək" istifadə olunur.
+          text: Rəssam tapmacanı düzgün həll edəcək.
+        - feedback: Düzgün!
+          text: Rəssam pəncərə naxışında dörd kvadrat çəkəcək.
+        - feedback: Səhv. Proqram "çoxbucaqlıların xəttini çək" adlandırmır.
+          text: Rəssam yalnız bir kvadrat xətti çəkəcək.
+        - feedback: Səhv. Döngə "poliqon çəkmək" çağırışları arasında 90 dərəcə çevrilir.
+          text: Rəssam bir-birinin üstünə dörd kvadrat çəkəcək.
+        questions:
+        - text: '"Çalış" düyməsini basdığınız zaman nə baş verəcək?'
+      coursee_prediction_artistfunction22022_2023:
         answers:
         - feedback: Səhv. Döngədə "çoxbucaqlıların xəttini çəkmək" əvəzinə "çoxbucaqlı
             çəkmək" istifadə olunur.
@@ -7641,6 +8081,41 @@ az-AZ:
           text: Rəssam bir-birinin üstünə dörd kvadrat çəkəcək.
         questions:
         - text: '"Çalış" düyməsini basdığınız zaman nə baş verəcək?'
+      csc_animal_adaptations_predict:
+        answers:
+        - {}
+        - feedback: Düzgün!
+        - text: Sprite hərəkət edəcək.
+        - text: Sprite rəngləri dəyişəcək.
+        questions:
+        - {}
+      csc_ecosystems_matching_cfu:
+        answers:
+        - {}
+        - {}
+        - {}
+        questions:
+        - {}
+        - {}
+        - {}
+      csc_ecosystems_matching_conditionals:
+        answers:
+        - {}
+        - {}
+        - {}
+        questions:
+        - {}
+        - {}
+        - {}
+      csc_ecosystems_matching_events:
+        answers:
+        - {}
+        - {}
+        questions:
+        - {}
+        - {}
+      csc_timecapsule_info_2023:
+        content1: Burada təsvir edin
       csd-post-survey-2017-q11_2018:
         answers:
         - {}
@@ -10806,6 +11281,11 @@ az-AZ:
         markdown: |
           # Super Rəqəmsal Vətəndaş
           ## Kiber sataşmasını gördükcə necə ayağa qalxa bilərik?
+      csf_be_a_super_digital_citizen2022_2023:
+        content1: Burada təsvir edin
+        markdown: |
+          # Super Rəqəmsal Vətəndaş
+          ## Kiber sataşmasını gördükcə necə ayağa qalxa bilərik?
       csf_be_a_super_digital_citizen_2021:
         content1: Burada təsvir edin
         markdown: |
@@ -10817,6 +11297,11 @@ az-AZ:
 
           ## What information is OK to have in your digital footprint?
       csf_digital_trails2022:
+        markdown: |-
+          # Rəqəmsal Cığırı izləyin
+
+          ## What information is OK to have in your digital footprint?
+      csf_digital_trails2022_2023:
         markdown: |-
           # Rəqəmsal Cığırı izləyin
 
@@ -10839,6 +11324,18 @@ az-AZ:
           * Ən azı **səkkiz** simvoldan ibarət parollar yaradın.
           * Parolunuzda hərflər, rəqəmlər və **simvollardan** istifadə edin.
       csf_password_power-up2022:
+        content1: Burada təsvir edin
+        markdown: |-
+          # Şifrənizi Gücləndirin
+
+          ## Xatırlamaq üçün Şifrə Məsləhətləri
+
+          * Unudulmaz **ifadə** ilə başlayın.
+          * Şifrənizi yalnız **valideynləriniz** bilməlidir.
+          * Heç vaxt parolunuzda heç bir **şəxsi** şəxsiyyət məlumatından istifadə etməyin.
+          * Ən azı **səkkiz** simvoldan ibarət parollar yaradın.
+          * Parolunuzda hərflər, rəqəmlər və **simvollardan** istifadə edin.
+      csf_password_power-up2022_2023:
         content1: Burada təsvir edin
         markdown: |-
           # Şifrənizi Gücləndirin
@@ -10886,6 +11383,17 @@ az-AZ:
           * **E**tibarlı böyüklərə deyin.
           * **O**K saytlar əvvəlcə.
           * **P**ause və onlayn düşünün.
+      csf_putting_a_stop_to_online_meanness2022_2023:
+        content1: Burada təsvir edin
+        markdown: |
+          # Mənalılığı STOP
+
+          ## İnternetdə kimsə sizin üçün pis davranırsa, nə etməli?
+
+          * **U**zaqlaş.
+          * **E**tibarlı böyüklərə deyin.
+          * **O**K saytlar əvvəlcə.
+          * **P**ause və onlayn düşünün.
       csf_putting_a_stop_to_online_meanness_2021:
         content1: Burada təsvir edin
         markdown: |
@@ -10903,6 +11411,11 @@ az-AZ:
 
           ## How do you go places safely online?
       csf_safety_in_my_online_neighborhood2022:
+        markdown: |-
+          # Onlayn Qonşuluğum
+
+          ## How do you go places safely online?
+      csf_safety_in_my_online_neighborhood2022_2023:
         markdown: |-
           # Onlayn Qonşuluğum
 
@@ -12631,10 +13144,15 @@ az-AZ:
       express_EOC2022:
         description: Siz E Kursunun sonuna çatdınız! Yaratmaq üçün layihə seçin.
         display_name: Kurs layihələrinin sonu!
+      express_EOC2022_2023:
+        description: Siz E Kursunun sonuna çatdınız! Yaratmaq üçün layihə seçin.
+        display_name: Kurs layihələrinin sonu!
       express_EOC_2021:
         description: Siz E Kursunun sonuna çatdınız! Yaratmaq üçün layihə seçin.
         display_name: Kurs layihələrinin sonu!
       express_EOC_examples2022:
+        display_name: Layihə Nümunələri
+      express_EOC_examples2022_2023:
         display_name: Layihə Nümunələri
       express_EOC_examples_2021:
         display_name: Layihə Nümunələri
@@ -12668,6 +13186,20 @@ az-AZ:
         - text: Aşağıdakı koda diqqətlə baxın. Kod sonuna qədər işləyəcəksə (səhvlərə
             məhəl qoymadan) Laurel neçə xəzinə parçası toplayar?
       grade2_multi_collector_A_predict12022:
+        answers:
+        - feedback: Doğru deyil. Laurel xəzinə olmayan yerdən xəzinəni toplamağa çalışır
+            və bu xətaya səbəb olur.
+          text: Laurel bu kodu istifadə edərək 4 parça xəzinə yığacaq.
+        - feedback: Düzgün!
+          text: Laurel xəzinə olmayan yerdə onu axtaracaq və bu xətaya səbəb olacaq.
+        - feedback: Doğru deyil. Laurel xəzinə olmayan yerdən xəzinəni toplamağa çalışır
+            və bu xətaya səbəb olur.
+          text: Laurel bütün xəzinəni toplayacaq.
+        - feedback: Doğru deyil. Laurel xəzinə olmayan yerdən xəzinəni toplamağa çalışır
+            və bu xətaya səbəb olur.
+        questions:
+        - text: Koda diqqətlə bax.Səncə, proqramı işə saldıqda nə baş verəcək ?
+      grade2_multi_collector_A_predict12022_2023:
         answers:
         - feedback: Doğru deyil. Laurel xəzinə olmayan yerdən xəzinəni toplamağa çalışır
             və bu xətaya səbəb olur.

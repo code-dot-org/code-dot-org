@@ -583,6 +583,9 @@
         "CourseD_Dance_2020_01_2021": {
           "dance_callout_01": "Burada dansçı türünü seçin."
         },
+        "CourseD_Dance_2020_01_2023": {
+          "dance_callout_01": "Burada dansçı türünü seçin."
+        },
         "CourseD_Dance_2020_02": {
           "arrow_buttons": "Dansçınızı kontrol etmek için ok düğmelerine basın.",
           "dance_callout_11_a": "Bu bloğu programınıza ekleyin."
@@ -595,6 +598,10 @@
           "arrow_buttons": "Dansçınızı kontrol etmek için ok düğmelerine basın.",
           "dance_callout_11_a": "Bu bloğu programınıza ekleyin."
         },
+        "CourseD_Dance_2020_02_2023": {
+          "arrow_buttons": "Dansçınızı kontrol etmek için ok düğmelerine basın.",
+          "dance_callout_11_a": "Bu bloğu programınıza ekleyin."
+        },
         "CourseD_Dance_2020_04": {
           "dance_callout_02": "Bu bloğu programınıza ekleyin!"
         },
@@ -602,6 +609,9 @@
           "dance_callout_02": "Bu bloğu programınıza ekleyin!"
         },
         "CourseD_Dance_2020_04_2021": {
+          "dance_callout_02": "Bu bloğu programınıza ekleyin!"
+        },
+        "CourseD_Dance_2020_04_2023": {
           "dance_callout_02": "Bu bloğu programınıza ekleyin!"
         },
         "CourseD_Dance_2020_05": {
@@ -613,6 +623,9 @@
         "CourseD_Dance_2020_05_2021": {
           "dance_callout_05": "Programınıza yeni bir etkinlik ekleyin."
         },
+        "CourseD_Dance_2020_05_2023": {
+          "dance_callout_05": "Programınıza yeni bir etkinlik ekleyin."
+        },
         "CourseD_Dance_2020_06": {
           "dance_party_11_5_groups": "Yeni blok!"
         },
@@ -620,6 +633,9 @@
           "dance_party_11_5_groups": "Yeni blok!"
         },
         "CourseD_Dance_2020_06_2021": {
+          "dance_party_11_5_groups": "Yeni blok!"
+        },
+        "CourseD_Dance_2020_06_2023": {
           "dance_party_11_5_groups": "Yeni blok!"
         },
         "CourseD_Dance_2020_07": {
@@ -631,6 +647,9 @@
         "CourseD_Dance_2020_07_2021": {
           "setprop_hint": "Yeni blok!"
         },
+        "CourseD_Dance_2020_07_2023": {
+          "setprop_hint": "Yeni blok!"
+        },
         "CourseD_Dance_2020_09": {
           "new_block_3": "Yeni blok!",
           "new_block_4": "Yeni blok!"
@@ -640,6 +659,10 @@
           "new_block_4": "Yeni blok!"
         },
         "CourseD_Dance_2020_09_2021": {
+          "new_block_3": "Yeni blok!",
+          "new_block_4": "Yeni blok!"
+        },
+        "CourseD_Dance_2020_09_2023": {
           "new_block_3": "Yeni blok!",
           "new_block_4": "Yeni blok!"
         },
@@ -670,10 +693,17 @@
           "minitoolbox": "Bloğu genişletmek için buraya tıklayın.",
           "pointerlocation": "Buraya bir konu bloğu sürükleyin."
         },
+        "CourseF_outbreak2_2023": {
+          "minitoolbox": "Bloğu genişletmek için buraya tıklayın.",
+          "pointerlocation": "Buraya bir konu bloğu sürükleyin."
+        },
         "CourseF_outbreak7": {
           "costumes_callout": "Yeni bir kostüm yapmak için tıklayın"
         },
         "CourseF_outbreak7_-2022-2": {
+          "costumes_tab": "Projene kostüm eklemek için buraya tıkla."
+        },
+        "CourseF_outbreak7_2023": {
           "costumes_tab": "Projene kostüm eklemek için buraya tıkla."
         },
         "Dance_2019_01": {
@@ -730,6 +760,9 @@
         "Fish Tank 3-validated_2021": {
           "spritelab_comment": "Kodun nasıl çalıştığı hakkında kendiniz veya öğretmeniniz için bu bloğu kullanın."
         },
+        "Fish Tank 3-validated_2023": {
+          "spritelab_comment": "Kodun nasıl çalıştığı hakkında kendiniz veya öğretmeniniz için bu bloğu kullanın."
+        },
         "Function intro Ryan": {
           "Function_intro_Ryan_1": "Bu küçük yönerge, bilgisayara BÜYÜK kod öbeğini çalışma alanındaki aynı adla çalıştırmasını söyler."
         },
@@ -743,6 +776,9 @@
           "Function_intro_Ryan_1": "Bu küçük yönerge, bilgisayara BÜYÜK kod öbeğini çalışma alanındaki aynı adla çalıştırmasını söyler."
         },
         "Function intro Ryan_2021": {
+          "Function_intro_Ryan_1": "Bu küçük yönerge, bilgisayara BÜYÜK kod öbeğini çalışma alanındaki aynı adla çalıştırmasını söyler."
+        },
+        "Function intro Ryan_2023": {
           "Function_intro_Ryan_1": "Bu küçük yönerge, bilgisayara BÜYÜK kod öbeğini çalışma alanındaki aynı adla çalıştırmasını söyler."
         },
         "Geometric Sun": {
@@ -791,6 +827,9 @@
         "MC_HOC_2017_03_Cole_2021": {
           "MC_HOC_2017_03_Cole_1": "Bu bir `tekrarla` döngüsü!  Çalışma alanında döngüye tıkla ve tekrar tekrar çalıştırmak istediğin kodu ekle."
         },
+        "MC_HOC_2017_03_Cole_2023": {
+          "MC_HOC_2017_03_Cole_1": "Bu bir `tekrarla` döngüsü!  Çalışma alanında döngüye tıkla ve tekrar tekrar çalıştırmak istediğin kodu ekle."
+        },
         "MC_HOC_2017_04_Cole": {
           "MC_HOC_2017_04_Cole_a": "Ajan suyun üzerinde durabilir ama oyuncu duramaz!"
         },
@@ -804,6 +843,9 @@
           "MC_HOC_2017_04_Cole_a": "Ajan suyun üzerinde durabilir ama oyuncu duramaz!"
         },
         "MC_HOC_2017_04_Cole_2021": {
+          "MC_HOC_2017_04_Cole_a": "Ajan suyun üzerinde durabilir ama oyuncu duramaz!"
+        },
+        "MC_HOC_2017_04_Cole_2023": {
           "MC_HOC_2017_04_Cole_a": "Ajan suyun üzerinde durabilir ama oyuncu duramaz!"
         },
         "MC_HOC_2017_06_Cole": {
@@ -821,6 +863,9 @@
         "MC_HOC_2017_06_Cole_2021": {
           "MC_HOC_2017_06_Cole_1": "Bu blokları atamazsın ama düzenleyebilirsin!"
         },
+        "MC_HOC_2017_06_Cole_2023": {
+          "MC_HOC_2017_06_Cole_1": "Bu blokları atamazsın ama düzenleyebilirsin!"
+        },
         "MC_HOC_2017_Ali": {
           "MC_HOC_2017_08_RY_1": "Ajan lavın üzerinde durabilir ama Steve ve Alex duramaz!  "
         },
@@ -834,6 +879,9 @@
           "MC_HOC_2017_08_RY_1": "Ajan lavın üzerinde durabilir ama Steve ve Alex duramaz!  "
         },
         "MC_HOC_2017_Ali_2021": {
+          "MC_HOC_2017_08_RY_1": "Ajan lavın üzerinde durabilir ama Steve ve Alex duramaz!  "
+        },
+        "MC_HOC_2017_Ali_2023": {
           "MC_HOC_2017_08_RY_1": "Ajan lavın üzerinde durabilir ama Steve ve Alex duramaz!  "
         },
         "NEW Course 4 Artist Functions 3": {
@@ -908,6 +956,9 @@
         "Overworld Chop Trees_2021": {
           "craft_callout_preplaced": "Başlamanız için buraya birkaç blok koyduk"
         },
+        "Overworld Chop Trees_2023": {
+          "craft_callout_preplaced": "Başlamanız için buraya birkaç blok koyduk"
+        },
         "Overworld House Frame Chosen": {
           "craft_callout_preplaced_house": "Bu kod, evinizi inşa etmeye başlayacak. Bakalım bitirebilecek misiniz?"
         },
@@ -921,6 +972,9 @@
           "craft_callout_preplaced_house": "Bu kod, evinizi inşa etmeye başlayacak. Bakalım bitirebilecek misiniz?"
         },
         "Overworld House Frame Chosen_2021": {
+          "craft_callout_preplaced_house": "Bu kod, evinizi inşa etmeye başlayacak. Bakalım bitirebilecek misiniz?"
+        },
+        "Overworld House Frame Chosen_2023": {
           "craft_callout_preplaced_house": "Bu kod, evinizi inşa etmeye başlayacak. Bakalım bitirebilecek misiniz?"
         },
         "Overworld Move to Sheep": {
@@ -943,6 +997,10 @@
           "craft_drag_block_callout": "Bir \"ileri git\" bloğunu sürükleyin ve diğer bloğun altına dayayın",
           "craft_run_button_callout": "Programınızı denemek içi \"Çalıştır\"a basın"
         },
+        "Overworld Move to Sheep_2023": {
+          "craft_drag_block_callout": "Bir \"ileri git\" bloğunu sürükleyin ve diğer bloğun altına dayayın",
+          "craft_run_button_callout": "Programınızı denemek içi \"Çalıştır\"a basın"
+        },
         "Overworld Place Wall": {
           "craft_inside_repeat": "Blokları buraya yerleştirerek eylemleri tekrar edin"
         },
@@ -956,6 +1014,9 @@
           "craft_inside_repeat": "Blokları buraya yerleştirerek eylemleri tekrar edin"
         },
         "Overworld Place Wall_2021": {
+          "craft_inside_repeat": "Blokları buraya yerleştirerek eylemleri tekrar edin"
+        },
+        "Overworld Place Wall_2023": {
           "craft_inside_repeat": "Blokları buraya yerleştirerek eylemleri tekrar edin"
         },
         "Robot Doodle": {
@@ -979,6 +1040,9 @@
         "Underground Avoiding Lava_2021": {
           "craft_callout_moveforward": "Bu kod, lav olup olmadığını kontrol edecek, ileri gitmek için bir komut ekleyebilir misiniz?"
         },
+        "Underground Avoiding Lava_2023": {
+          "craft_callout_moveforward": "Bu kod, lav olup olmadığını kontrol edecek, ileri gitmek için bir komut ekleyebilir misiniz?"
+        },
         "Underground Iron": {
           "craft_what_is_iron": "Bu demiri çıkar!"
         },
@@ -994,6 +1058,9 @@
         "Underground Iron_2021": {
           "craft_what_is_iron": "Bu demiri çıkar!"
         },
+        "Underground Iron_2023": {
+          "craft_what_is_iron": "Bu demiri çıkar!"
+        },
         "Virtual Pet 2_-2022-2": {
           "vp_costumes": "Projene yeni kostümler eklemek için buraya tıkla!"
         },
@@ -1006,10 +1073,16 @@
         "Virtual Pet 2_2021": {
           "vp_costumes": "Projene yeni kostümler eklemek için buraya tıkla!"
         },
+        "Virtual Pet 2_2023": {
+          "vp_costumes": "Projene yeni kostümler eklemek için buraya tıkla!"
+        },
         "Virtual Pet 6_-2022-2": {
           "vp_costumes": "Projene yeni kostümler eklemek için buraya tıkla!"
         },
         "Virtual Pet 6_2021": {
+          "vp_costumes": "Projene yeni kostümler eklemek için buraya tıkla!"
+        },
+        "Virtual Pet 6_2023": {
           "vp_costumes": "Projene yeni kostümler eklemek için buraya tıkla!"
         },
         "behaviors 1": {
@@ -1080,10 +1153,16 @@
         "courseA_EOC_playlab_animals2022": {
           "question_mark": "?"
         },
+        "courseA_EOC_playlab_animals_2023": {
+          "question_mark": "?"
+        },
         "courseA_EOC_playlab_fantasy": {
           "question_mark": "?"
         },
         "courseA_EOC_playlab_fantasy2022": {
+          "question_mark": "?"
+        },
+        "courseA_EOC_playlab_fantasy_2023": {
           "question_mark": "?"
         },
         "courseA_EOC_playlab_people": {
@@ -1092,10 +1171,16 @@
         "courseA_EOC_playlab_people2022": {
           "question_mark": "?"
         },
+        "courseA_EOC_playlab_people_2023": {
+          "question_mark": "?"
+        },
         "courseA_artist_loops4": {
           "courseA_artist_loops4_1": "Bu sayı, bu bulmacada her bloktan kaç tane kullanabileceğinizi söyler."
         },
         "courseA_artist_loops42022": {
+          "courseA_artist_loops4_1": "Bu sayı, bu bulmacada her bloktan kaç tane kullanabileceğinizi söyler."
+        },
+        "courseA_artist_loops42022_2023": {
           "courseA_artist_loops4_1": "Bu sayı, bu bulmacada her bloktan kaç tane kullanabileceğinizi söyler."
         },
         "courseA_artist_loops4_2018": {
@@ -1116,6 +1201,9 @@
         "courseA_artist_loops72022": {
           "courseA_artist_loops7_1": "Bu numara, son yanıtta bu bloğun yalnızca bir kez kullanılabileceği anlamına gelir."
         },
+        "courseA_artist_loops72022_2023": {
+          "courseA_artist_loops7_1": "Bu numara, son yanıtta bu bloğun yalnızca bir kez kullanılabileceği anlamına gelir."
+        },
         "courseA_artist_loops7_2018": {
           "courseA_artist_loops7_1": "Bu numara, son yanıtta bu bloğun yalnızca bir kez kullanılabileceği anlamına gelir."
         },
@@ -1132,6 +1220,9 @@
           "courseA_artist_loops8_1": "Her ihtiyaç duyduğunuzda bir satırın üzerinden yeniden geçebileceğinizi biliyor muydunuz?"
         },
         "courseA_artist_loops82022": {
+          "courseA_artist_loops8_1": "Her ihtiyaç duyduğunuzda bir satırın üzerinden yeniden geçebileceğinizi biliyor muydunuz?"
+        },
+        "courseA_artist_loops82022_2023": {
           "courseA_artist_loops8_1": "Her ihtiyaç duyduğunuzda bir satırın üzerinden yeniden geçebileceğinizi biliyor muydunuz?"
         },
         "courseA_artist_loops8_2018": {
@@ -1161,6 +1252,9 @@
         "courseA_collector_loops1_2021": {
           "courseA_collector_loops1_1": "Hazineyi toplamak için bu bloğu kullanın."
         },
+        "courseA_collector_loops1_2023": {
+          "courseA_collector_loops1_1": "Yeni blokları gördün mü? Merak etme daha sonraki aşamalarda bunları nasıl kullanacağını göstereceğiz."
+        },
         "courseA_collector_loops3": {
           "gradek_adventurer_loops2_1": "Bu sayı, bu bulmacada her bloktan kaç tane kullanabileceğinizi söyler."
         },
@@ -1177,6 +1271,9 @@
           "gradek_adventurer_loops2_1": "Bu sayı, bu bulmacada her bloktan kaç tane kullanabileceğinizi söyler."
         },
         "courseA_collector_loops3_2021": {
+          "gradek_adventurer_loops2_1": "Bu sayı, bu bulmacada her bloktan kaç tane kullanabileceğinizi söyler."
+        },
+        "courseA_collector_loops3_2023": {
           "gradek_adventurer_loops2_1": "Bu sayı, bu bulmacada her bloktan kaç tane kullanabileceğinizi söyler."
         },
         "courseA_collector_preLoops1": {
@@ -1209,6 +1306,9 @@
         "courseA_maze_ramp2_2021": {
           "courseC_maze_programming2_1": "Bu alet kutusudur. Bulmacalarını tamamlamak için bunun içinde fazladan bloklar bulabilirsin."
         },
+        "courseA_maze_ramp2_2023": {
+          "courseC_maze_programming2_1": "Bu alet kutusudur. Bulmacalarını tamamlamak için bunun içinde fazladan bloklar bulabilirsin."
+        },
         "courseA_maze_ramp3a_2018": {
           "courseC_maze_programming2_1": "Bu alet kutusudur. Bulmacalarını tamamlamak için bunun içinde fazladan bloklar bulabilirsin."
         },
@@ -1230,6 +1330,9 @@
         "courseA_maze_seq1_2021": {
           "courseA_maze_seq1_1": "Bir ipucu gerektiğinde ampule tıklayın!"
         },
+        "courseA_maze_seq1_2023": {
+          "courseA_maze_seq1_1": "Bir ipucu gerektiğinde ampule tıklayın!"
+        },
         "courseA_maze_seq2": {
           "courseA_maze_seqA_callout1": "Programda adım adım gitmek için adım düğmesini kullanın. Bu, hatayı bulmanıza yardımcı olacaktır!"
         },
@@ -1240,6 +1343,9 @@
           "courseA_playlab_events4_callout1": "Bu bir belirtme çizgisidir"
         },
         "courseA_playLab_events42022": {
+          "courseA_playlab_events4_callout1": "Bu bir belirtme çizgisidir"
+        },
+        "courseA_playLab_events42022_2023": {
           "courseA_playlab_events4_callout1": "Bu bir belirtme çizgisidir"
         },
         "courseA_playLab_events4_2018": {
@@ -1260,6 +1366,9 @@
         "courseA_playLab_events52022": {
           "courseA_playLab_events5_1": "Olay ok yönünü değiştirmek için buraya tıklayın."
         },
+        "courseA_playLab_events52022_2023": {
+          "courseA_playLab_events5_1": "Olay ok yönünü değiştirmek için buraya tıklayın."
+        },
         "courseA_playLab_events5_2018": {
           "courseA_playLab_events5_1": "Olay ok yönünü değiştirmek için buraya tıklayın."
         },
@@ -1278,6 +1387,9 @@
         "courseA_playLab_events62022": {
           "courseA_playLab_events6_1": "Bu, duyana kadar ne tür bir ses çıkacağını bilmediğiniz durumlarda ''rastgele\" bir ses seçmenize izin verir!"
         },
+        "courseA_playLab_events62022_2023": {
+          "courseA_playLab_events6_1": "Bu, duyana kadar ne tür bir ses çıkacağını bilmediğiniz durumlarda ''rastgele\" bir ses seçmenize izin verir!"
+        },
         "courseA_playLab_events6_2018": {
           "courseA_playLab_events6_1": "Bu, duyana kadar ne tür bir ses çıkacağını bilmediğiniz durumlarda ''rastgele\" bir ses seçmenize izin verir!"
         },
@@ -1293,6 +1405,9 @@
         "courseB_Scrat_ramp12022": {
           "grade2_CaringForNewPet_0_1": "Tüm blokları birleştirdikten sonra, ''Çalıştır'' a bas ve programını başlat."
         },
+        "courseB_Scrat_ramp12022_2023": {
+          "grade2_CaringForNewPet_0_1": "Tüm blokları birleştirdikten sonra, ''Çalıştır'' a bas ve programını başlat."
+        },
         "courseB_Scrat_ramp1_2018": {
           "grade2_CaringForNewPet_0_1": "Tüm blokları birleştirdikten sonra, ''Çalıştır'' a bas ve programını başlat."
         },
@@ -1306,6 +1421,9 @@
           "grade2_CaringForNewPet_0_1": "Tüm blokları birleştirdikten sonra, ''Çalıştır'' a bas ve programını başlat."
         },
         "courseB_Scrat_ramp3a2022": {
+          "courseC_maze_programming2_1": "Bu alet kutusudur. Bulmacalarını tamamlamak için bunun içinde fazladan bloklar bulabilirsin."
+        },
+        "courseB_Scrat_ramp3a2022_2023": {
           "courseC_maze_programming2_1": "Bu alet kutusudur. Bulmacalarını tamamlamak için bunun içinde fazladan bloklar bulabilirsin."
         },
         "courseB_Scrat_ramp3a_2019": {
@@ -1335,6 +1453,9 @@
         "courseB_artist_loops3_2021": {
           "courseB_artist_loops3_1": "Bu bloklardan araç kutusunda yalnızca birer adet var. Onu nasıl kullanacaksın?"
         },
+        "courseB_artist_loops3_2023": {
+          "courseB_artist_loops3_1": "Bu bloklardan alet kutusunda yalnızca bir adet var. Onu nasıl kullanacaksın?"
+        },
         "courseB_artist_loops5": {
           "courseB_artist_loops5_1": "Bu sayı araç kutusunda blok kalmadığını belirtir."
         },
@@ -1356,6 +1477,9 @@
         "courseB_collector_loops1_2021": {
           "courseB_collector_loops1_1": "Hazineyi toplamak için bu bloğu kullanın."
         },
+        "courseB_collector_loops1_2023": {
+          "courseB_collector_loops1_1": "Yeni blokları gördün mü? Merak etme daha sonraki aşamalarda bunları nasıl kullanacağını göstereceğiz."
+        },
         "courseB_maze_seq1": {
           "courseB_maze_seq1": "Bir ipucu gerektiğinde ampule tıklayın!"
         },
@@ -1372,6 +1496,9 @@
           "courseB_maze_seq1": "Bir ipucu gerektiğinde ampule tıklayın!"
         },
         "courseB_maze_seq1_2021": {
+          "courseB_maze_seq1": "Bir ipucu gerektiğinde ampule tıklayın!"
+        },
+        "courseB_maze_seq1_2023": {
           "courseB_maze_seq1": "Bir ipucu gerektiğinde ampule tıklayın!"
         },
         "courseB_maze_seq2": {
@@ -1398,6 +1525,9 @@
         "courseB_playlab_events6_2021": {
           "courseB_playlab_events6_a": "Yönü değiştirmek için yeşil renkli açılır menü ok işaretini kullan."
         },
+        "courseB_playlab_events6_2023": {
+          "courseB_playlab_events6_a": "Yönü değiştirmek için yeşil renkli açılır ok işaretini kullan."
+        },
         "courseC19_playLab_EOC3": {
           "courseE_playLab_scaffold3_1": "Bir sonraki seviyeye geçmek için aktörü bu bayrağa götürün."
         },
@@ -1408,6 +1538,9 @@
           "courseE_playLab_scaffold3_1": "Bir sonraki seviyeye geçmek için aktörü bu bayrağa götürün."
         },
         "courseC19_playLab_EOC3_2021": {
+          "courseE_playLab_scaffold3_1": "Bir sonraki seviyeye geçmek için aktörü bu bayrağa götürün."
+        },
+        "courseC19_playLab_EOC3_2023": {
           "courseE_playLab_scaffold3_1": "Bir sonraki seviyeye geçmek için aktörü bu bayrağa götürün."
         },
         "courseC_PlayLab_events8": {
@@ -1428,6 +1561,9 @@
         "courseC_PlayLab_events8_2021": {
           "courseC_PlayLab_events8_callout1": "Bu bloğu, Waddles ve Chomp temas ettiklerinde kullanın!"
         },
+        "courseC_PlayLab_events8_2023": {
+          "courseC_PlayLab_events8_callout1": "Bu bloğu, Waddles ve Chomp temas ettiklerinde kullanın!"
+        },
         "courseC_PlayLab_events_challenge1": {
           "courseC_PlayLab_events_challenge1_1": "Bu blok aktörleri oyun alanının başka bölümlerine taşımanızı sağlar."
         },
@@ -1446,7 +1582,13 @@
         "courseC_PlayLab_events_challenge1_2021": {
           "courseC_PlayLab_events_challenge1_1": "Bu blok aktörleri oyun alanının başka bölümlerine taşımanızı sağlar."
         },
+        "courseC_PlayLab_events_challenge1_2023": {
+          "courseC_PlayLab_events_challenge1_1": "Bu blok aktörleri oyun alanının başka bölümlerine taşımanızı sağlar."
+        },
         "courseC_PlayLab_events_lesson_extras": {
+          "courseC_PlayLab_events_challenge1_1": "Bu blok aktörleri oyun alanının başka bölümlerine taşımanızı sağlar."
+        },
+        "courseC_PlayLab_events_lesson_extras_2023": {
           "courseC_PlayLab_events_challenge1_1": "Bu blok aktörleri oyun alanının başka bölümlerine taşımanızı sağlar."
         },
         "courseC_artist_loops1a2022": {
@@ -1461,6 +1603,9 @@
         "courseC_artist_loops1a_2021": {
           "jumpto_callout": "Bu blok, bu proje için çok önemlidir. Bunu kullandığınızdan emin olun!"
         },
+        "courseC_artist_loops1a_2023": {
+          "jumpto_callout": "Bu blok, bu proje için çok önemlidir. Bunu kullandığınızdan emin olun!"
+        },
         "courseC_artist_loops1b2022": {
           "sticker2": "Bunu programınızın ortasına ekleyin."
         },
@@ -1471,6 +1616,9 @@
           "sticker2": "Bunu programınızın ortasına ekleyin."
         },
         "courseC_artist_loops1b_2021": {
+          "sticker2": "Bunu programınızın ortasına ekleyin."
+        },
+        "courseC_artist_loops1b_2023": {
           "sticker2": "Bunu programınızın ortasına ekleyin."
         },
         "courseC_artist_loopsPrePre1a": {
@@ -1491,6 +1639,9 @@
         "courseC_artist_prog2_2021": {
           "slider": "Programını burada yavaşlatabilirsin."
         },
+        "courseC_artist_prog2_2023": {
+          "slider": "Programını burada yavaşlatabilirsin."
+        },
         "courseC_collector_prog1": {
           "courseC_collector_prog1_1": "Araç kutusundaki yeni blokları görüyor musunuz? Merak etmeyin, sonraki kademede bunları nasıl kullanacağınızı göstereceğiz."
         },
@@ -1509,6 +1660,9 @@
         "courseC_collector_prog1_2021": {
           "courseC_collector_prog1_1": "Araç kutusunda bazı yeni bloklar görüyor musunuz? Merak etmeyin, bunları nasıl kullanacağınızı başka bir derste göstereceğiz."
         },
+        "courseC_collector_prog1_2023": {
+          "courseC_collector_prog1_1": "Yeni blokları gördün mü? Merak etme daha sonraki aşamalarda bunları nasıl kullanacağını göstereceğiz."
+        },
         "courseC_collector_prog7": {
           "courseC_collector_prog7_1": "İhtiyacınız olursa araç kutusundan daha fazla blok alabilirsiniz!"
         },
@@ -1525,6 +1679,9 @@
           "courseC_collector_prog7_1": "İhtiyacınız olursa araç kutusundan daha fazla blok alabilirsiniz!"
         },
         "courseC_collector_prog7_2021": {
+          "courseC_collector_prog7_1": "İhtiyacınız olursa araç kutusundan daha fazla blok alabilirsiniz!"
+        },
+        "courseC_collector_prog7_2023": {
           "courseC_collector_prog7_1": "İhtiyacınız olursa araç kutusundan daha fazla blok alabilirsiniz!"
         },
         "courseC_harvester_loops1": {
@@ -1545,6 +1702,9 @@
         "courseC_harvester_loops1_2021": {
           "courseC_harvester_loops1_callout1": "Balkabağının üzerindeki dört rakamı, dört adet kabak toplanabileceğini gösterir."
         },
+        "courseC_harvester_loops1_2023": {
+          "courseC_harvester_loops1_callout1": "Balkabağının üzerindeki dört rakamı, dört adet kabak toplanabileceğini gösterir."
+        },
         "courseC_maze_debugging5": {
           "courseC_maze_debugging5_1": "Gri bloklar silinemez!"
         },
@@ -1563,6 +1723,9 @@
         "courseC_maze_debugging5_2021": {
           "courseC_maze_debugging5_1": "Bu bloklar kilitli ve silinemez!"
         },
+        "courseC_maze_debugging5_2023": {
+          "courseC_maze_debugging5_1": "Bu bloklar kilitli ve silinemez!"
+        },
         "courseC_maze_debugging92022": {
           "courseC_maze_debugging9_2019_1": "Araç kutusundan çalışma alanına blokları sürükleyin."
         },
@@ -1573,6 +1736,9 @@
           "courseC_maze_debugging9_2019_1": "Araç kutusundan çalışma alanına blokları sürükleyin."
         },
         "courseC_maze_debugging9_2021": {
+          "courseC_maze_debugging9_2019_1": "Araç kutusundan çalışma alanına blokları sürükleyin."
+        },
+        "courseC_maze_debugging9_2023": {
           "courseC_maze_debugging9_2019_1": "Araç kutusundan çalışma alanına blokları sürükleyin."
         },
         "courseC_maze_debugging9_copy_2020": {
@@ -1596,6 +1762,9 @@
         "courseC_maze_programming1_2021": {
           "grade2_CaringForNewPet_0_1": "Tüm blokları birleştirdikten sonra, ''Çalıştır'' a bas ve programını başlat."
         },
+        "courseC_maze_programming1_2023": {
+          "grade2_CaringForNewPet_0_1": "Tüm blokları birleştirdikten sonra, ''Çalıştır'' a bas ve programını başlat."
+        },
         "courseC_maze_programming2": {
           "courseC_maze_programming2_1": "Bu alet kutusudur. Bulmacalarını tamamlamak için bunun içinde fazladan bloklar bulabilirsin."
         },
@@ -1612,6 +1781,9 @@
           "courseC_maze_programming2_1": "Bu alet kutusudur. Bulmacalarını tamamlamak için bunun içinde fazladan bloklar bulabilirsin."
         },
         "courseC_maze_programming2_2021": {
+          "courseC_maze_programming2_1": "Bu alet kutusudur. Bulmacalarını tamamlamak için bunun içinde fazladan bloklar bulabilirsin."
+        },
+        "courseC_maze_programming2_2023": {
           "courseC_maze_programming2_1": "Bu alet kutusudur. Bulmacalarını tamamlamak için bunun içinde fazladan bloklar bulabilirsin."
         },
         "courseC_maze_programming3": {
@@ -1638,6 +1810,10 @@
           "courseC_maze_programming3_2": "Fazla blokları atmak için blokları araç kutusuna doğru \n sürükleyebilirsin.",
           "courseC_maze_programming3_3": "Bu kareler taştan, atılamazlar."
         },
+        "courseC_maze_programming3_2023": {
+          "courseC_maze_programming3_2": "Fazla blokları atmak için blokları alet kutusuna doğru \n sürükleyebilirsin.",
+          "courseC_maze_programming3_3": "Bu kareler taştan, atılamazlar."
+        },
         "courseC_maze_programming4": {
           "courseC_maze_programming4_1": "Bu senin blok limitin. Elinde kullanabileceğin kaç tane blokun kaldığını söyler."
         },
@@ -1656,6 +1832,9 @@
         "courseC_maze_programming4_2021": {
           "courseC_maze_programming4_1": "Bu senin blok limitin. Elinde kullanabileceğin kaç tane bloğun kaldığını söyler."
         },
+        "courseC_maze_programming4_2023": {
+          "courseC_maze_programming4_1": "Bu senin blok limitin. Elinde kullanabileceğin kaç tane blokun kaldığını söyler."
+        },
         "courseC_maze_programming5": {
           "": "Bu blokların üzerinde sayılar yok. İstediğin kadar kullanabilirsin!"
         },
@@ -1672,6 +1851,9 @@
           "": "Bu blokların üzerinde sayılar yok. İstediğin kadar kullanabilirsin!"
         },
         "courseC_maze_programming5_2021": {
+          "": "Bu blokların üzerinde sayılar yok. İstediğin kadar kullanabilirsin!"
+        },
+        "courseC_maze_programming5_2023": {
           "": "Bu blokların üzerinde sayılar yok. İstediğin kadar kullanabilirsin!"
         },
         "courseC_maze_programming7": {
@@ -1698,6 +1880,10 @@
           "courseC_maze_programming7_1": "Bu sizin ilk meydan okuma bulmacanız! Zor olmaları tasarlanmıştır, birkaç kez denemeniz gerekebilir.",
           "courseC_maze_programming7_2": "Bu bloklar taştan, atılamazlar."
         },
+        "courseC_maze_programming7_2023": {
+          "courseC_maze_programming7_1": "Bu sizin ilk meydan okuma bulmacanız! Zor olmaları tasarlanmıştır, birkaç kez denemeniz gerekebilir.",
+          "courseC_maze_programming7_2": "Bu bloklar taştan, atılamazlar."
+        },
         "courseC_starWars_loops2": {
           "courseC_starWars_loops2": "Bu bulmacada bu bloklardan yalnızca birini alabilirsiniz."
         },
@@ -1714,6 +1900,9 @@
           "courseC_starWars_loops2": "Bu bulmacada bu bloklardan yalnızca birini alabilirsiniz."
         },
         "courseC_starWars_loops2_2021": {
+          "courseC_starWars_loops2": "Bu bulmacada bu bloklardan yalnızca birini alabilirsiniz."
+        },
+        "courseC_starWars_loops2_2023": {
           "courseC_starWars_loops2": "Bu bulmacada bu bloklardan yalnızca birini alabilirsiniz."
         },
         "courseC_starWars_loops2_copy": {
@@ -1743,6 +1932,9 @@
         "courseD_artist_nestedLoops1a_2021": {
           "courseD_artist_nestedLoops1a_1": "Bu bulmacayı doğru bir şekilde çözmek için renkleri kullanmak zorunda değilsiniz. İsterseniz bu \"rastgele renk\" bloğu işinizi kolaylaştıracaktır!"
         },
+        "courseD_artist_nestedLoops1a_2023": {
+          "courseD_artist_nestedLoops1a_1": "Bu bulmacayı doğru bir şekilde çözmek için renkleri kullanmak zorunda değilsiniz. İsterseniz bu \"rastgele renk\" bloğu işinizi kolaylaştıracaktır!"
+        },
         "courseD_artist_ramp11": {
           "courseD_artist_ramp11_1": "Bu sayıyı değiştirebilirsiniz.",
           "courseD_artist_ramp11_2": "Kodun tekrar edilmesini istediğiniz sayıyı girmek için buraya tıklayın."
@@ -1764,6 +1956,9 @@
           "4_5_Bee_Conditionals_2_1": "Unutma, her bulutun arkasında bir çiçek olup olmadığını görmek için kontrol edin. Peteğin içini kontrol etmen gerekmiyor."
         },
         "courseD_bee_conditionals2_2021": {
+          "4_5_Bee_Conditionals_2_1": "Unutma, her bulutun arkasında bir çiçek olup olmadığını görmek için kontrol edin. Peteğin içini kontrol etmen gerekmiyor."
+        },
+        "courseD_bee_conditionals2_2023": {
           "4_5_Bee_Conditionals_2_1": "Unutma, her bulutun arkasında bir çiçek olup olmadığını görmek için kontrol edin. Peteğin içini kontrol etmen gerekmiyor."
         },
         "courseD_bee_conditionals2_copy": {
@@ -1792,6 +1987,9 @@
         "courseD_bee_conditionals_challenge2_2021": {
           "courseD_bee_conditionals_challenge2_1": "Bu döngüyü tüm nektarları (veya balı) bir çiçekten (veya petekten) toplamak için kullanın."
         },
+        "courseD_bee_conditionals_challenge2_2023": {
+          "courseD_bee_conditionals_challenge2_1": "Bu döngüyü tüm nektarları (veya balı) bir çiçekten (veya petekten) toplamak için kullanın."
+        },
         "courseD_bee_debugging_challenge1": {
           "courseD_bee_debugging_challenge1_callout1": "Arıyı geri taşımak için bu komutu kullanın."
         },
@@ -1802,6 +2000,9 @@
           "stepButton": "Kodunuzda her seferinde bir blok ile adım adım ilerlemeyi deneyin."
         },
         "courseD_bee_nestedLoops1a_2021": {
+          "stepButton": "Kodunuzda her seferinde bir blok ile adım adım ilerlemeyi deneyin."
+        },
+        "courseD_bee_nestedLoops1a_2023": {
           "stepButton": "Kodunuzda her seferinde bir blok ile adım adım ilerlemeyi deneyin."
         },
         "courseD_collector_ramp8": {
@@ -1822,6 +2023,9 @@
         "courseD_farmer_while7_2021": {
           "courseD_farmer_while7_2018_PathAhead": "Bu bulmacayı çözmek için 'ileri doğru yol süresinde bloğunu kullanmanız gerekecek."
         },
+        "courseD_farmer_while7_2023": {
+          "courseD_farmer_while7_2018_PathAhead": "Bu bulmacayı çözmek için 'ileri doğru yol süresinde bloğunu kullanmanız gerekecek."
+        },
         "courseD_maze_intro42022": {
           "courseC_maze_programming4_1": "Bu senin blok limitin. Elinde kullanabileceğin kaç tane blokun kaldığını söyler."
         },
@@ -1834,6 +2038,9 @@
         "courseD_maze_intro4_2021": {
           "courseC_maze_programming4_1": "Bu senin blok sınırın. Size bu bloklardan kaç tanesini kullanmak için kaldığınızı söyler."
         },
+        "courseD_maze_intro4_2023": {
+          "courseC_maze_programming4_1": "Bu senin blok limitin. Elinde kullanabileceğin kaç tane blokun kaldığını söyler."
+        },
         "courseD_maze_intro5a2022": {
           "": "Bu blokların üzerinde sayılar yok. İstediğin kadar kullanabilirsin!"
         },
@@ -1844,6 +2051,9 @@
           "": "Bu blokların üzerinde sayılar yok. İstediğin kadar kullanabilirsin!"
         },
         "courseD_maze_intro5a_2021": {
+          "": "Bu blokların üzerinde sayılar yok. İstediğin kadar kullanabilirsin!"
+        },
+        "courseD_maze_intro5a_2023": {
           "": "Bu blokların üzerinde sayılar yok. İstediğin kadar kullanabilirsin!"
         },
         "courseD_maze_ramp1": {
@@ -1864,6 +2074,9 @@
         "courseD_maze_ramp1_2021": {
           "grade2_CaringForNewPet_0_1": "Tüm blokları bağladıktan sonra, programınızı başlatmak için “Çalıştır” a basın."
         },
+        "courseD_maze_ramp1_2023": {
+          "grade2_CaringForNewPet_0_1": "Tüm blokları birleştirdikten sonra, ''Çalıştır'' a bas ve programını başlat."
+        },
         "courseD_maze_ramp2": {
           "courseC_maze_programming2_1": "Bu alet kutusudur. Bulmacalarını tamamlamak için bunun içinde fazladan bloklar bulabilirsin."
         },
@@ -1880,6 +2093,9 @@
           "courseC_maze_programming2_1": "Bu alet kutusudur. Bulmacalarını tamamlamak için bunun içinde fazladan bloklar bulabilirsin."
         },
         "courseD_maze_ramp2_2021": {
+          "courseC_maze_programming2_1": "Bu alet kutusudur. Bulmacalarını tamamlamak için bunun içinde fazladan bloklar bulabilirsin."
+        },
+        "courseD_maze_ramp2_2023": {
           "courseC_maze_programming2_1": "Bu alet kutusudur. Bulmacalarını tamamlamak için bunun içinde fazladan bloklar bulabilirsin."
         },
         "courseD_maze_ramp3": {
@@ -1905,6 +2121,10 @@
         "courseD_maze_ramp3_2021": {
           "courseC_maze_programming3_2": "Fazla blokları atmak için blokları araç kutusuna doğru \n sürükleyebilirsin.",
           "stone_block_2": "Gri bloklar atılamazlar."
+        },
+        "courseD_maze_ramp3_2023": {
+          "courseC_maze_programming3_2": "Fazla blokları atmak için blokları alet kutusuna doğru \n sürükleyebilirsin.",
+          "stone_block_2": "Gri kareler taştan yapılmış ve atılamazlar."
         },
         "courseD_maze_ramp4": {
           "courseC_maze_programming4_1": "Bu senin blok limitin. Elinde kullanabileceğin kaç tane blokun kaldığını söyler."
@@ -1934,6 +2154,9 @@
           "": "Bu blokların üzerinde sayılar yok. İstediğin kadar kullanabilirsin!"
         },
         "courseD_maze_ramp5_2021": {
+          "": "Bu blokların üzerinde sayılar yok. İstediğin kadar kullanabilirsin!"
+        },
+        "courseD_maze_ramp5_2023": {
           "": "Bu blokların üzerinde sayılar yok. İstediğin kadar kullanabilirsin!"
         },
         "courseD_maze_ramp5a": {
@@ -1997,6 +2220,9 @@
         "courseE_aboutme_2_2021": {
           "": "Buraya tıklayın!"
         },
+        "courseE_aboutme_2_2023": {
+          "": "Projene kostüm eklemek için buraya tıkla."
+        },
         "courseE_artist_functions1": {
           "courseD_artist_functions1_1": "İlk kareyi oluşturmaya bu bloğu kullanmakla başlayalım."
         },
@@ -2024,6 +2250,9 @@
         "courseE_artist_functions2_2021": {
           "courseD_artist_functions2_1": "Bu yeşil blok çalıştığında fonksiyondaki tüm kodlar çalışacak. Artist, ilk kareyi çizdikten sonra ne yapmalı?"
         },
+        "courseE_artist_functions2_2023": {
+          "courseD_artist_functions2_1": "Bu yeşil blok çalıştığında fonksiyondaki tüm kodlar çalışacak. Artist, ilk kareyi çizdikten sonra ne yapmalı?"
+        },
         "courseE_artist_functions2_copy": {
           "courseD_artist_functions2_1": "Bu yeşil blok çalıştığında fonksiyondaki tüm kodlar çalışacak. Artist, ilk kareyi çizdikten sonra ne yapmalı?"
         },
@@ -2046,6 +2275,9 @@
           "courseD_artist_functions8_1": "Fonksiyonları oluşturan bloklarınız alet kutusundaki bu etiketin altına taşındı."
         },
         "courseE_artist_functions8a_2021": {
+          "courseD_artist_functions8_1": "Fonksiyonları oluşturan bloklarınız alet kutusundaki bu etiketin altına taşındı."
+        },
+        "courseE_artist_functions8a_2023": {
           "courseD_artist_functions8_1": "Fonksiyonları oluşturan bloklarınız alet kutusundaki bu etiketin altına taşındı."
         },
         "courseE_artist_functions_challenge1": {
@@ -2072,6 +2304,10 @@
           "courseE_artist_functions_challenge1_callout1": "Altına daha fazla kod ekleyerek bu programı sürdürün.",
           "courseE_artist_functions_challenge1_callout2": "Bu tasarımı beğenmediyseniz istediğiniz değişikliği yapın!"
         },
+        "courseE_artist_functions_challenge1_2023": {
+          "courseE_artist_functions_challenge1_callout1": "Altına daha fazla kod ekleyerek bu programı sürdürün.",
+          "courseE_artist_functions_challenge1_callout2": "Bu tasarımı beğenmediyseniz istediğiniz değişikliği yapın!"
+        },
         "courseE_artist_functions_challenge2": {
           "courseE_artist_functions_challenge2_callout1": "Altına daha fazla kod ekleyerek bu programı sürdürün.",
           "courseE_artist_functions_challenge2_callout2": "Bu tasarımı beğenmediyseniz istediğiniz değişikliği yapın!"
@@ -2093,6 +2329,10 @@
           "courseE_artist_functions_challenge2_callout2": "Bu tasarımı beğenmediyseniz istediğiniz değişikliği yapın!"
         },
         "courseE_artist_functions_challenge2_2021": {
+          "courseE_artist_functions_challenge2_callout1": "Altına daha fazla kod ekleyerek bu programı sürdürün.",
+          "courseE_artist_functions_challenge2_callout2": "Bu tasarımı beğenmediyseniz istediğiniz değişikliği yapın!"
+        },
+        "courseE_artist_functions_challenge2_2023": {
           "courseE_artist_functions_challenge2_callout1": "Altına daha fazla kod ekleyerek bu programı sürdürün.",
           "courseE_artist_functions_challenge2_callout2": "Bu tasarımı beğenmediyseniz istediğiniz değişikliği yapın!"
         },
@@ -2125,6 +2365,9 @@
         "courseE_farmer_functions13_2021": {
           "courseE_farmer_functions1a_1": "Bilinmeyen bitki. Programı her çalıştırdığınızda değişir."
         },
+        "courseE_farmer_functions13_2023": {
+          "courseE_farmer_functions1a_1": "Bilinmeyen bitki. Programı her çalıştırdığınızda değişir."
+        },
         "courseE_farmer_functions1_2018": {
           "courseE_farmer_functions1_2": "Araç kutusu bu sefer biraz farklı düzenlendi! Hangi blokların olduğunu görmek için farklı kategorilere tıklayın."
         },
@@ -2135,6 +2378,9 @@
           "courseE_farmer_functions1_2": "Araç kutusu bu sefer biraz farklı düzenlendi! Hangi blokların olduğunu görmek için farklı kategorilere tıklayın."
         },
         "courseE_farmer_functions1_2021": {
+          "courseE_farmer_functions1_2": "Araç kutusu bu sefer biraz farklı düzenlendi! Hangi blokların olduğunu görmek için farklı kategorilere tıklayın."
+        },
+        "courseE_farmer_functions1_2023": {
           "courseE_farmer_functions1_2": "Araç kutusu bu sefer biraz farklı düzenlendi! Hangi blokların olduğunu görmek için farklı kategorilere tıklayın."
         },
         "courseE_farmer_functions1a": {
@@ -2155,6 +2401,9 @@
         "courseE_farmer_functions1a_2021": {
           "courseE_farmer_functions1a_1": "Bilinmeyen bitki. Programı her çalıştırdığınızda değişir."
         },
+        "courseE_farmer_functions1a_2023": {
+          "courseE_farmer_functions1a_1": "Bilinmeyen bitki. Programı her çalıştırdığınızda değişir."
+        },
         "courseE_farmer_functions2b": {
           "courseE_farmer_functions1a_1": "Bilinmeyen bitki. Programı her çalıştırdığınızda değişir."
         },
@@ -2171,6 +2420,9 @@
           "courseE_farmer_functions1a_1": "Bilinmeyen bitki. Programı her çalıştırdığınızda değişir."
         },
         "courseE_farmer_functions2b_2021": {
+          "courseE_farmer_functions1a_1": "Bilinmeyen bitki. Programı her çalıştırdığınızda değişir."
+        },
+        "courseE_farmer_functions2b_2023": {
           "courseE_farmer_functions1a_1": "Bilinmeyen bitki. Programı her çalıştırdığınızda değişir."
         },
         "courseE_playLab_challenge1": {
@@ -2191,6 +2443,10 @@
           "run_button": "Önce Çalıştır düğmesine basın!",
           "visualizationResizeBar": "Oyun alanını yeniden boyutlandırmak için 3 noktayı sürükleyin."
         },
+        "courseF_apps_aquarium_2023": {
+          "run_button": "Önce Çalıştır düğmesine basın!",
+          "visualizationResizeBar": "Oyun alanını yeniden boyutlandırmak için 3 noktayı sürükleyin."
+        },
         "courseF_apps_card": {
           "visualizationResizeBar": "Oyun alanını yeniden boyutlandırmak için 3 noktayı sürükleyin."
         },
@@ -2198,6 +2454,9 @@
           "visualizationResizeBar": "Oyun alanını yeniden boyutlandırmak için 3 noktayı sürükleyin."
         },
         "courseF_apps_card_-2022-2": {
+          "visualizationResizeBar": "Oyun alanını yeniden boyutlandırmak için 3 noktayı sürükleyin."
+        },
+        "courseF_apps_card_2023": {
           "visualizationResizeBar": "Oyun alanını yeniden boyutlandırmak için 3 noktayı sürükleyin."
         },
         "courseF_apps_chatbot": {
@@ -2209,6 +2468,10 @@
           "visualizationResizeBar": "Oyun alanını yeniden boyutlandırmak için 3 noktayı sürükleyin."
         },
         "courseF_apps_chatbot_-2022-2": {
+          "run_button": "Önce Çalıştır düğmesine basın!",
+          "visualizationResizeBar": "Oyun alanını yeniden boyutlandırmak için 3 noktayı sürükleyin."
+        },
+        "courseF_apps_chatbot_2023": {
           "run_button": "Önce Çalıştır düğmesine basın!",
           "visualizationResizeBar": "Oyun alanını yeniden boyutlandırmak için 3 noktayı sürükleyin."
         },
@@ -2224,16 +2487,32 @@
           "run_button": "Önce Çalıştır düğmesine basın!",
           "visualizationResizeBar": "Oyun alanını yeniden boyutlandırmak için 3 noktayı sürükleyin."
         },
+        "courseF_apps_collector_2023": {
+          "run_button": "Önce Çalıştır düğmesine basın!",
+          "visualizationResizeBar": "Oyun alanını yeniden boyutlandırmak için 3 noktayı sürükleyin."
+        },
         "courseF_apps_collector_drag_-2022-2": {
+          "visualizationResizeBar": "Oyun alanını yeniden boyutlandırmak için 3 noktayı sürükleyin."
+        },
+        "courseF_apps_collector_drag_2023": {
           "visualizationResizeBar": "Oyun alanını yeniden boyutlandırmak için 3 noktayı sürükleyin."
         },
         "courseF_apps_collector_drive_-2022-2": {
           "visualizationResizeBar": "Oyun alanını yeniden boyutlandırmak için 3 noktayı sürükleyin."
         },
+        "courseF_apps_collector_drive_2023": {
+          "visualizationResizeBar": "Oyun alanını yeniden boyutlandırmak için 3 noktayı sürükleyin."
+        },
         "courseF_apps_collector_move2_-2022-2": {
           "visualizationResizeBar": "Oyun alanını yeniden boyutlandırmak için 3 noktayı sürükleyin."
         },
+        "courseF_apps_collector_move2_2023": {
+          "visualizationResizeBar": "Oyun alanını yeniden boyutlandırmak için 3 noktayı sürükleyin."
+        },
         "courseF_apps_collector_move_-2022-2": {
+          "visualizationResizeBar": "Oyun alanını yeniden boyutlandırmak için 3 noktayı sürükleyin."
+        },
+        "courseF_apps_collector_move_2023": {
           "visualizationResizeBar": "Oyun alanını yeniden boyutlandırmak için 3 noktayı sürükleyin."
         },
         "courseF_apps_madlib": {
@@ -2245,6 +2524,9 @@
         "courseF_apps_madlib_-2022-2": {
           "visualizationResizeBar": "Oyun alanını yeniden boyutlandırmak için 3 noktayı sürükleyin."
         },
+        "courseF_apps_madlib_2023": {
+          "visualizationResizeBar": "Oyun alanını yeniden boyutlandırmak için 3 noktayı sürükleyin."
+        },
         "courseF_apps_pet": {
           "run_button": "Önce Çalıştır düğmesine basın!",
           "visualizationResizeBar": "Oyun alanını yeniden boyutlandırmak için 3 noktayı sürükleyin."
@@ -2254,6 +2536,10 @@
           "visualizationResizeBar": "Oyun alanını yeniden boyutlandırmak için 3 noktayı sürükleyin."
         },
         "courseF_apps_pet_-2022-2": {
+          "run_button": "Önce Çalıştır düğmesine basın!",
+          "visualizationResizeBar": "Oyun alanını yeniden boyutlandırmak için 3 noktayı sürükleyin."
+        },
+        "courseF_apps_pet_2023": {
           "run_button": "Önce Çalıştır düğmesine basın!",
           "visualizationResizeBar": "Oyun alanını yeniden boyutlandırmak için 3 noktayı sürükleyin."
         },
@@ -2273,6 +2559,9 @@
           "courseF_artist_for1_1": "Kodunuz için yer açmak bakımından, araç kurutusu \"kategori\" modundadır. 'For' döngüleri burada yaşar.\n"
         },
         "courseF_artist_for1_2021": {
+          "courseF_artist_for1_1": "Kodunuz için yer açmak bakımından, araç kurutusu \"kategori\" modundadır. 'For' döngüleri burada yaşar.\n"
+        },
+        "courseF_artist_for1_2023": {
           "courseF_artist_for1_1": "Kodunuz için yer açmak bakımından, araç kurutusu \"kategori\" modundadır. 'For' döngüleri burada yaşar.\n"
         },
         "courseF_artist_fwp1": {
@@ -2344,6 +2633,9 @@
         "courseF_bee_for4_2021": {
           "courseF_bee_for4_1": "Burada 'için' döngüsünü bulacaksınız!"
         },
+        "courseF_bee_for4_2023": {
+          "courseF_bee_for4_1": "Burada 'için' döngüsünü bulacaksınız!"
+        },
         "courseF_bee_for9": {
           "courseF_bee_for9_1": "'Matematik' bloğunu burada bulacaksınız."
         },
@@ -2360,6 +2652,9 @@
           "courseF_bee_for9_1": "'Matematik' bloğunu burada bulacaksınız."
         },
         "courseF_bee_for9_2021": {
+          "courseF_bee_for9_1": "'Matematik' bloğunu burada bulacaksınız."
+        },
+        "courseF_bee_for9_2023": {
           "courseF_bee_for9_1": "'Matematik' bloğunu burada bulacaksınız."
         },
         "courseF_bee_functions2": {
@@ -2402,10 +2697,19 @@
         "courseF_bee_variables_1a_2021": {
           "courseF_bee_functions_1_2018_1": "Değişkenlerini altta bulabilirsin!"
         },
+        "courseF_bee_variables_1a_2023": {
+          "courseF_bee_functions_1_2018_1": "Değişkenlerini altta bulabilirsin!"
+        },
         "courseF_collector_items_-2022-2": {
           "costumes_tab_callout": "Kostümler sekmesi"
         },
+        "courseF_collector_items_2023": {
+          "costumes_tab_callout": "Kostümler sekmesi"
+        },
         "courseF_collector_player_move_-2022-2": {
+          "costumes_tab_callout": "Kostümler sekmesi"
+        },
+        "courseF_collector_player_move_2023": {
           "costumes_tab_callout": "Kostümler sekmesi"
         },
         "courseF_editable_card": {
@@ -2414,10 +2718,16 @@
         "courseF_editable_card_-2022-2": {
           "visualizationResizeBar": "Oyun alanını yeniden boyutlandırmak için 3 noktayı sürükleyin."
         },
+        "courseF_editable_card_2023": {
+          "visualizationResizeBar": "Oyun alanını yeniden boyutlandırmak için 3 noktayı sürükleyin."
+        },
         "courseF_editable_chatbot": {
           "visualizationResizeBar": "Oyun alanını yeniden boyutlandırmak için 3 noktayı sürükleyin."
         },
         "courseF_editable_chatbot_-2022-2": {
+          "visualizationResizeBar": "Oyun alanını yeniden boyutlandırmak için 3 noktayı sürükleyin."
+        },
+        "courseF_editable_chatbot_2023": {
           "visualizationResizeBar": "Oyun alanını yeniden boyutlandırmak için 3 noktayı sürükleyin."
         },
         "courseF_editable_madlib": {
@@ -2426,10 +2736,16 @@
         "courseF_editable_madlib_-2022-2": {
           "visualizationResizeBar": "Oyun alanını yeniden boyutlandırmak için 3 noktayı sürükleyin."
         },
+        "courseF_editable_madlib_2023": {
+          "visualizationResizeBar": "Oyun alanını yeniden boyutlandırmak için 3 noktayı sürükleyin."
+        },
         "courseF_events_choice_penguin": {
           "whenToWhile": "When'i while olarak değiştirmeyi deneyin."
         },
         "courseF_events_choice_penguin_-2022-2": {
+          "whenToWhile": "When'i while olarak değiştirmeyi deneyin."
+        },
+        "courseF_events_choice_penguin_2023": {
           "whenToWhile": "When'i while olarak değiştirmeyi deneyin."
         },
         "courseF_events_conflict": {
@@ -2438,10 +2754,16 @@
         "courseF_events_conflict_-2022-2": {
           "stops_block": "Yeni bloklar buraya!"
         },
+        "courseF_events_conflict_2023": {
+          "stops_block": "Yeni bloklar buraya!"
+        },
         "courseF_events_key": {
           "whenKey": "Burada bulunan yeni olay bloğunu kullan."
         },
         "courseF_events_key_-2022-2": {
+          "whenKey": "Burada bulunan yeni olay bloğunu kullan."
+        },
+        "courseF_events_key_2023": {
           "whenKey": "Burada bulunan yeni olay bloğunu kullan."
         },
         "courseF_events_practice_reorder": {
@@ -2450,10 +2772,16 @@
         "courseF_events_practice_reorder_-2022-2": {
           "stopAllBug": "Bu bloğun sırası yanlış."
         },
+        "courseF_events_practice_reorder_2023": {
+          "stopAllBug": "Bu bloğun sırası yanlış."
+        },
         "courseF_events_predict": {
           "behaviors_edit": "Bu davranışın nasıl çalıştığını görmek için buraya tıklayın."
         },
         "courseF_events_predict_-2022-2": {
+          "behaviors_edit": "Bu davranışın nasıl çalıştığını görmek için buraya tıklayın."
+        },
+        "courseF_events_predict_2023": {
           "behaviors_edit": "Bu davranışın nasıl çalıştığını görmek için buraya tıklayın."
         },
         "courseF_events_time": {
@@ -2462,13 +2790,22 @@
         "courseF_events_time_-2022-2": {
           "events_category": "Olaylar kategorisini açmak için buraya tıklayın."
         },
+        "courseF_events_time_2023": {
+          "events_category": "Olaylar kategorisini açmak için buraya tıklayın."
+        },
         "courseF_groups_size_-2022-2": {
+          "mini-toolbox-blue-button": "Açmak veya kapatmak için mavi düğmeyi tıklayın."
+        },
+        "courseF_groups_size_2023": {
           "mini-toolbox-blue-button": "Açmak veya kapatmak için mavi düğmeyi tıklayın."
         },
         "courseF_label_predict": {
           "variablesPredict": "Aşağıdaki koda dikkatlice bakın."
         },
         "courseF_label_predict_-2022-2": {
+          "variablesPredict": "Aşağıdaki koda dikkatlice bakın."
+        },
+        "courseF_label_predict_2023": {
           "variablesPredict": "Aşağıdaki koda dikkatlice bakın."
         },
         "courseF_playlab_variables1a": {
@@ -2489,10 +2826,16 @@
         "courseF_sprites_behaviors_-2022-2": {
           "behaviors_category": "Davranışlar kategorisini açmak için buraya tıklayın."
         },
+        "courseF_sprites_behaviors_2023": {
+          "behaviors_category": "Davranışlar kategorisini açmak için buraya tıklayın."
+        },
         "courseF_sprites_make": {
           "sprites_category": "Hareketli Nesneler kategorisini açmak için buraya tıklayın."
         },
         "courseF_sprites_make_-2022-2": {
+          "sprites_category": "Hareketli Nesneler kategorisini açmak için buraya tıklayın."
+        },
+        "courseF_sprites_make_2023": {
           "sprites_category": "Hareketli Nesneler kategorisini açmak için buraya tıklayın."
         },
         "courseF_sprites_positioning": {
@@ -2501,10 +2844,16 @@
         "courseF_sprites_positioning_-2022-2": {
           "locations_category": "Konumlar kategorisini açmak için buraya tıklayın."
         },
+        "courseF_sprites_positioning_2023": {
+          "locations_category": "Konumlar kategorisini açmak için buraya tıklayın."
+        },
         "courseF_sprites_properties": {
           "sprites_category2": "Burada yeni blok ara."
         },
         "courseF_sprites_properties_-2022-2": {
+          "sprites_category2": "Burada yeni blok ara."
+        },
+        "courseF_sprites_properties_2023": {
           "sprites_category2": "Burada yeni blok ara."
         },
         "courseF_text_answer": {
@@ -2513,16 +2862,25 @@
         "courseF_text_answer_-2022-2": {
           "answered_block": "Burada yeni blok ara!"
         },
+        "courseF_text_answer_2023": {
+          "answered_block": "Burada yeni blok ara!"
+        },
         "courseF_text_choice_color": {
           "text_color_finish": "Soruyu yanıtladığınızda arka planın rengi değişti mi? Öyleyse, 'Bitir'e basın. Değilse, 'Sıfırla'ya basın, kodunuzu değiştirin, ve yeniden 'Çalıştır'a basın."
         },
         "courseF_text_choice_color_-2022-2": {
           "text_color_finish": "Soruyu yanıtladığınızda arka planın rengi değişti mi? Öyleyse, 'Bitir'e basın. Değilse, 'Sıfırla'ya basın, kodunuzu değiştirin, ve yeniden 'Çalıştır'a basın."
         },
+        "courseF_text_choice_color_2023": {
+          "text_color_finish": "Soruyu yanıtladığınızda arka planın rengi değişti mi? Öyleyse, 'Bitir'e basın. Değilse, 'Sıfırla'ya basın, kodunuzu değiştirin, ve yeniden 'Çalıştır'a basın."
+        },
         "courseF_text_choice_conversation": {
           "text_generic_finish": "Bitirdin mi? Öyleyse, \"Bitir\"e bas. Değilse, \"Sıfırla\"ya bas, kodunu değiştir ve tekrar \"Çalıştır\"a bas."
         },
         "courseF_text_choice_conversation_-2022-2": {
+          "text_generic_finish": "Bitirdin mi? Öyleyse, \"Bitir\"e bas. Değilse, \"Sıfırla\"ya bas, kodunu değiştir ve tekrar \"Çalıştır\"a bas."
+        },
+        "courseF_text_choice_conversation_2023": {
           "text_generic_finish": "Bitirdin mi? Öyleyse, \"Bitir\"e bas. Değilse, \"Sıfırla\"ya bas, kodunu değiştir ve tekrar \"Çalıştır\"a bas."
         },
         "courseF_text_choice_title": {
@@ -2533,16 +2891,26 @@
           "text_answer_finish": "Bir başlık ekranı 3 saniye göründü mü? Öyleyse, 'Bitir'e basın. Değilse, 'Sıfırla'ya basın, kodunuzu değiştirin, ve yeniden 'Çalıştır'a basın.",
           "title_block": "Burada iki yeni blok ara!"
         },
+        "courseF_text_choice_title_2023": {
+          "text_answer_finish": "Bir başlık ekranı 3 saniye göründü mü? Öyleyse, 'Bitir'e basın. Değilse, 'Sıfırla'ya basın, kodunuzu değiştirin, ve yeniden 'Çalıştır'a basın.",
+          "title_block": "Burada iki yeni blok ara!"
+        },
         "courseF_text_concat": {
           "join_blocks": "Burada yeni bloklar ara!"
         },
         "courseF_text_concat_-2022-2": {
           "join_blocks": "Burada yeni bloklar ara!"
         },
+        "courseF_text_concat_2023": {
+          "join_blocks": "Burada yeni bloklar ara!"
+        },
         "courseF_text_events": {
           "events_category": "Olaylar kategorisini açmak için buraya tıklayın."
         },
         "courseF_text_events_-2022-2": {
+          "events_category": "Olaylar kategorisini açmak için buraya tıklayın."
+        },
+        "courseF_text_events_2023": {
           "events_category": "Olaylar kategorisini açmak için buraya tıklayın."
         },
         "courseF_text_print": {
@@ -2553,19 +2921,32 @@
           "print_block": "Yazdır bloğunu burada bul!",
           "text_print_finish": "Mesajın yukarıda yazdırıldı mı? Öyleyse, \"Bitir\"e bas. Değilse, \"Sıfırla\"ya bas, kodunu değiştir ve tekrar \"Çalıştır\"a bas."
         },
+        "courseF_text_print_2023": {
+          "print_block": "Yazdır bloğunu burada bul!",
+          "text_print_finish": "Mesajın yukarıda yazdırıldı mı? Öyleyse, \"Bitir\"e bas. Değilse, \"Sıfırla\"ya bas, kodunu değiştir ve tekrar \"Çalıştır\"a bas."
+        },
         "courseF_text_prompts": {
           "prompt_block": "İstem bloğunu burada bul!"
         },
         "courseF_text_prompts_-2022-2": {
           "prompt_block": "İstem bloğunu burada bul!"
         },
+        "courseF_text_prompts_2023": {
+          "prompt_block": "İstem bloğunu burada bul!"
+        },
         "courseF_variables2_predict_-2022-2": {
+          "variablesPredict": "Aşağıdaki koda dikkatlice bakın."
+        },
+        "courseF_variables2_predict_2023": {
           "variablesPredict": "Aşağıdaki koda dikkatlice bakın."
         },
         "courseF_variables_predict": {
           "variablesPredict": "Aşağıdaki koda dikkatlice bakın."
         },
         "courseF_variables_predict_-2022-2": {
+          "variablesPredict": "Aşağıdaki koda dikkatlice bakın."
+        },
+        "courseF_variables_predict_2023": {
           "variablesPredict": "Aşağıdaki koda dikkatlice bakın."
         },
         "coursea_maze_ramp12022": {
@@ -2583,13 +2964,99 @@
         "coursea_maze_ramp1_2021": {
           "grade2_CaringForNewPet_0_1": "Tüm blokları bir araya getirdikten sonra programınızı başlatmak için \"Çalıştır\"a basın."
         },
+        "coursea_maze_ramp1_2023": {
+          "grade2_CaringForNewPet_0_1": "Tüm blokları birleştirdikten sonra, ''Çalıştır'' a bas ve programını başlat."
+        },
         "coursee_helloworld_events": {
+          "hello_world_click_hint": "Bu olay bloğunu çalışma alanınıza ekleyin."
+        },
+        "coursee_helloworld_events_2023": {
           "hello_world_click_hint": "Bu olay bloğunu çalışma alanınıza ekleyin."
         },
         "coursee_helloworld_freeplay": {
           "costumes_tab": "Projene kostüm eklemek için buraya tıkla."
         },
+        "coursee_helloworld_freeplay_2023": {
+          "costumes_tab": "Projene kostüm eklemek için buraya tıkla."
+        },
         "coursee_helloworld_say": {
+          "hello_world_make_sprite": "Bir hareketli nesne oluşturmak için bu bloğu kullanın.",
+          "hello_world_say": "Hareketli nesnelerin konuşmasını sağlamak için bu bloğu kullanın."
+        },
+        "coursee_helloworld_say_2023": {
+          "hello_world_make_sprite": "Bir hareketli nesne oluşturmak için bu bloğu kullanın.",
+          "hello_world_say": "Hareketli nesnelerin konuşmasını sağlamak için bu bloğu kullanın."
+        },
+        "csc-starquilts-comment_2023": {
+          "New Artist Project_callout1": "Kategorilere ait blokları görmek için tıklayın! Çalışma alanına sürükleyin ve onları programınıza ekleyin",
+          "New Artist Project_callout2": "Programınızı kaydedip çalıştırmak için \"Çalıştır\"a basın",
+          "sign_in_to_save_project": "Projenize daha sonra erişmek ister misiniz? Bu projeyi hesabınıza kaydetmek için kaydolun!"
+        },
+        "csc-starquilts-repeat_2023": {
+          "New Artist Project_callout1": "Kategorilere ait blokları görmek için tıklayın! Çalışma alanına sürükleyin ve onları programınıza ekleyin",
+          "New Artist Project_callout2": "Programınızı kaydedip çalıştırmak için \"Çalıştır\"a basın",
+          "sign_in_to_save_project": "Projenize daha sonra erişmek ister misiniz? Bu projeyi hesabınıza kaydetmek için kaydolun!"
+        },
+        "csc-starquilts-rhombus-freeplay_2023": {
+          "New Artist Project_callout1": "Kategorilere ait blokları görmek için tıklayın! Çalışma alanına sürükleyin ve onları programınıza ekleyin",
+          "New Artist Project_callout2": "Programınızı kaydedip çalıştırmak için \"Çalıştır\"a basın",
+          "sign_in_to_save_project": "Projenize daha sonra erişmek ister misiniz? Bu projeyi hesabınıza kaydetmek için kaydolun!"
+        },
+        "csc-starquilts-row1_2023": {
+          "New Artist Project_callout1": "Kategorilere ait blokları görmek için tıklayın! Çalışma alanına sürükleyin ve onları programınıza ekleyin",
+          "New Artist Project_callout2": "Programınızı kaydedip çalıştırmak için \"Çalıştır\"a basın",
+          "sign_in_to_save_project": "Projenize daha sonra erişmek ister misiniz? Bu projeyi hesabınıza kaydetmek için kaydolun!"
+        },
+        "csc-starquilts-row2_2023": {
+          "New Artist Project_callout1": "Kategorilere ait blokları görmek için tıklayın! Çalışma alanına sürükleyin ve onları programınıza ekleyin",
+          "New Artist Project_callout2": "Programınızı kaydedip çalıştırmak için \"Çalıştır\"a basın",
+          "sign_in_to_save_project": "Projenize daha sonra erişmek ister misiniz? Bu projeyi hesabınıza kaydetmek için kaydolun!"
+        },
+        "csc-starquilts-row3_2023": {
+          "New Artist Project_callout1": "Kategorilere ait blokları görmek için tıklayın! Çalışma alanına sürükleyin ve onları programınıza ekleyin",
+          "New Artist Project_callout2": "Programınızı kaydedip çalıştırmak için \"Çalıştır\"a basın",
+          "sign_in_to_save_project": "Projenize daha sonra erişmek ister misiniz? Bu projeyi hesabınıza kaydetmek için kaydolun!"
+        },
+        "csc-starquilts-row4_2023": {
+          "New Artist Project_callout1": "Kategorilere ait blokları görmek için tıklayın! Çalışma alanına sürükleyin ve onları programınıza ekleyin",
+          "New Artist Project_callout2": "Programınızı kaydedip çalıştırmak için \"Çalıştır\"a basın",
+          "sign_in_to_save_project": "Projenize daha sonra erişmek ister misiniz? Bu projeyi hesabınıza kaydetmek için kaydolun!"
+        },
+        "csc-starquilts-row5_2023": {
+          "New Artist Project_callout1": "Kategorilere ait blokları görmek için tıklayın! Çalışma alanına sürükleyin ve onları programınıza ekleyin",
+          "New Artist Project_callout2": "Programınızı kaydedip çalıştırmak için \"Çalıştır\"a basın",
+          "sign_in_to_save_project": "Projenize daha sonra erişmek ister misiniz? Bu projeyi hesabınıza kaydetmek için kaydolun!"
+        },
+        "csc_animal_adaptations_behaviors_edit2": {
+          "behavior_callout": "Ortadaki yıldız için bu davranış neden işe yaramıyor?",
+          "star2_callout": "Bu kostüm bloğunu çıkarın ve bunun yerine \"bu hareketli nesne\" bloğunu kullanın.",
+          "this_sprite_callout": "Bununla aşağıdaki kostüm bloğunu değiştirin."
+        },
+        "csc_animal_adaptations_behaviors_elephantleader": {
+          "behavior_callout": "Ortadaki yıldız için bu davranış neden işe yaramıyor?",
+          "star2_callout": "Bu kostüm bloğunu çıkarın ve bunun yerine \"bu hareketli nesne\" bloğunu kullanın.",
+          "this_sprite_callout": "Bununla aşağıdaki kostüm bloğunu değiştirin."
+        },
+        "csc_animal_adaptations_behaviors_wolfpack": {
+          "behavior_callout": "Ortadaki yıldız için bu davranış neden işe yaramıyor?",
+          "star2_callout": "Bu kostüm bloğunu çıkarın ve bunun yerine \"bu hareketli nesne\" bloğunu kullanın.",
+          "this_sprite_callout": "Bununla aşağıdaki kostüm bloğunu değiştirin."
+        },
+        "csc_animal_adaptations_bugs2": {
+          "hello_world_behavior_blocks": "Bu bloğu aşağıdaki davranışlardan biriyle kullanın."
+        },
+        "csc_animal_adaptations_make_behavior": {
+          "behaviors_edit": "Kodu bu davranışa ekleyin."
+        },
+        "csc_animal_adaptations_predict_gamelab": {
+          "behaviors_edit": "Bu davranışın nasıl çalıştığını görmek için buraya tıklayın."
+        },
+        "csc_starquilts_freeplay_2023": {
+          "New Artist Project_callout1": "Kategorilere ait blokları görmek için tıklayın! Çalışma alanına sürükleyin ve onları programınıza ekleyin",
+          "New Artist Project_callout2": "Programınızı kaydedip çalıştırmak için \"Çalıştır\"a basın",
+          "sign_in_to_save_project": "Projenize daha sonra erişmek ister misiniz? Bu projeyi hesabınıza kaydetmek için kaydolun!"
+        },
+        "ecosystems_helloworld_say_2023": {
           "hello_world_make_sprite": "Bir hareketli nesne oluşturmak için bu bloğu kullanın.",
           "hello_world_say": "Hareketli nesnelerin konuşmasını sağlamak için bu bloğu kullanın."
         },
@@ -2603,6 +3070,9 @@
           "express_maze_debugging9_2019_1": "Araç kutusundan çalışma alanına blokları sürükleyin."
         },
         "express_maze_debugging9_2021": {
+          "express_maze_debugging9_2019_1": "Araç kutusundan çalışma alanına blokları sürükleyin."
+        },
+        "express_maze_debugging9_2023": {
           "express_maze_debugging9_2019_1": "Araç kutusundan çalışma alanına blokları sürükleyin."
         },
         "frozen circle function with parameter": {
@@ -2693,6 +3163,12 @@
         "helloworld_animals_sounds": {
           "hello_world_new": "Yeni blok!"
         },
+        "helloworld_bugs_behaviors_2023": {
+          "hello_world_behavior_blocks": "Bu bloğu aşağıdaki davranışlardan biriyle kullanın."
+        },
+        "helloworld_bunny_adaptation_2023": {
+          "hw_Run": "Kodu çalıştırmak için buraya tıklayın."
+        },
         "helloworld_emoji_backgrounds": {
           "hw_background_location": "Yeni bir arka plan ayarlamak için bu bloğu kullanın."
         },
@@ -2731,6 +3207,9 @@
         "helloworld_food_backgrounds": {
           "hw_background_location": "Yeni bir arka plan ayarlamak için bu bloğu kullanın."
         },
+        "helloworld_food_backgrounds_2023": {
+          "hw_background_location": "Yeni bir arka plan ayarlamak için bu bloğu kullanın."
+        },
         "helloworld_food_backgrounds_soccer-2022": {
           "hw_background_location": "Yeni bir arka plan ayarlamak için bu bloğu kullanın."
         },
@@ -2738,6 +3217,9 @@
           "hw_background_location": "Yeni bir arka plan ayarlamak için bu bloğu kullanın."
         },
         "helloworld_food_behaviors": {
+          "hello_world_behavior_blocks": "Bu bloğu aşağıdaki davranışlardan biriyle kullanın."
+        },
+        "helloworld_food_behaviors_2023": {
           "hello_world_behavior_blocks": "Bu bloğu aşağıdaki davranışlardan biriyle kullanın."
         },
         "helloworld_food_behaviors_soccer-2022": {
@@ -2749,6 +3231,9 @@
         "helloworld_food_click": {
           "hw_Run": "Kodu çalıştırmak için buraya tıklayın."
         },
+        "helloworld_food_click_2023": {
+          "hw_Run": "Kodu çalıştırmak için buraya tıklayın."
+        },
         "helloworld_food_click_soccer-2022": {
           "hw_Run": "Kodu çalıştırmak için buraya tıklayın."
         },
@@ -2756,6 +3241,9 @@
           "hw_Run": "Önce buraya tıklayın!"
         },
         "helloworld_food_costumes": {
+          "hello_world_new": "Yeni blok!"
+        },
+        "helloworld_food_costumes_2023": {
           "hello_world_new": "Yeni blok!"
         },
         "helloworld_food_costumes_soccer-2022": {
@@ -2785,6 +3273,9 @@
         "helloworld_food_location": {
           "pin": "pin"
         },
+        "helloworld_food_location_2023": {
+          "pin": "pin"
+        },
         "helloworld_food_location_soccer-2022": {
           "pin": "pin"
         },
@@ -2792,6 +3283,9 @@
           "pin": "pin"
         },
         "helloworld_food_multi": {
+          "pin": "pin"
+        },
+        "helloworld_food_multi_2023": {
           "pin": "pin"
         },
         "helloworld_food_multi_soccer-2022": {
@@ -2816,6 +3310,10 @@
           "hello_world_new": "Yeni blok!",
           "hello_world_new_block": "Yeni blok!"
         },
+        "helloworld_food_sizes_2023": {
+          "hello_world_new": "Yeni blok!",
+          "hello_world_new_block": "Yeni blok!"
+        },
         "helloworld_food_sizes_soccer-2022": {
           "hello_world_new": "Yeni blok!",
           "hello_world_new_block": "Yeni blok!"
@@ -2825,6 +3323,9 @@
           "hello_world_new_block": "Yeni blok!"
         },
         "helloworld_food_sounds": {
+          "hello_world_new": "Yeni blok!"
+        },
+        "helloworld_food_sounds_2023": {
           "hello_world_new": "Yeni blok!"
         },
         "helloworld_food_sounds_soccer-2022": {
@@ -2878,11 +3379,22 @@
         "poetry_hoc_addSprites": {
           "poetry_sprite": "Yeni blok!"
         },
+        "poetry_hoc_addSprites_2023": {
+          "poetry_sprite": "Yeni blok!"
+        },
         "poetry_hoc_backgroundEffects": {
           "poetry_background": "Kod bloklarını burada bulun.",
           "run_button": "Animasyonunuzu bu düğmeyle test edin."
         },
+        "poetry_hoc_backgroundEffects_2023": {
+          "poetry_background": "Kod bloklarını burada bulun.",
+          "run_button": "Animasyonunuzu bu düğmeyle test edin."
+        },
         "poetry_hoc_events1": {
+          "poetry_event": "Yeni blok!",
+          "poetry_foreground": "Yeni blok!"
+        },
+        "poetry_hoc_events1_2023": {
           "poetry_event": "Yeni blok!",
           "poetry_foreground": "Yeni blok!"
         },
@@ -2892,7 +3404,15 @@
           "poetry_new_block": "Yeni blok!",
           "poetry_selector": "Herhangi bir şiir seçin veya kendi şiirinizi girin!"
         },
+        "poetry_hoc_freeplay_2023": {
+          "poetry_new_block": "Yeni blok!",
+          "poetry_selector": "Herhangi bir şiir seçin veya kendi şiirinizi girin!"
+        },
         "poetry_hoc_sounds": {
+          "poetry_music": "Yeni blok!",
+          "poetry_sound": "Yeni blok!"
+        },
+        "poetry_hoc_sounds_2023": {
           "poetry_music": "Yeni blok!",
           "poetry_sound": "Yeni blok!"
         },
@@ -2900,7 +3420,15 @@
           "poetry_sprite_begins": "Yeni blok!",
           "poetry_sprite_stops": "Yeni blok!"
         },
+        "poetry_hoc_spriteBehaviors_2023": {
+          "poetry_sprite_begins": "Yeni blok!",
+          "poetry_sprite_stops": "Yeni blok!"
+        },
         "poetry_hoc_spriteSizes": {
+          "poetry_remove_sprite": "Yeni blok!",
+          "poetry_set_sprite": "Yeni blok!"
+        },
+        "poetry_hoc_spriteSizes_2023": {
           "poetry_remove_sprite": "Yeni blok!",
           "poetry_set_sprite": "Yeni blok!"
         }

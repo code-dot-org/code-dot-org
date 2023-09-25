@@ -53,7 +53,7 @@ fa:
       Be a Super Digital Citizen: شهروند فوق دیجیتال باشید
       Begin planning your project: طرح ریزی پروژه خود را آغاز نمایید
       Begin planning your project_2018: طرح ریزی پروژه-2018 خود را آغاز نمایید
-      Binary Bracelets - Unplugged Activity: دستبندهای دوتایی - فعالیت بدون کار با رایانه
+      Binary Bracelets - Unplugged Activity: دستبندهای دودویی - فعالیت بدون کار با کامپوتر
       Binary Number Widget: ویجت عددی دودویی
       Binary Numbers: اعداد دوتایی
       Board Events: رویدادهای بورد
@@ -160,7 +160,7 @@ fa:
       'Exploration: Rikki''s Poster': 'کاوش: پوستر Rikki'
       'Exploration: Sample Apps': 'کاوش: نمونه برنامه کاربردی'
       'Exploration: Sample Programs': 'کاوش: نمونه برنامه'
-      'Exploration: Sample Project': 'کاوش: نمونه پروژه'
+      'Exploration: Sample Project': 'اکتشاف: پروژه نمونه'
       Exploring CS in Entertainment: بررسی cs در تفریح و سرگرمی
       Exploring more CSS: بررسی موارد css بیشتر
       Extra: اضافه
@@ -216,6 +216,7 @@ fa:
       Intro to Sprites: معرفی اسپرایت ها
       Intro to Variables: معرفی متغیرها
       Introducing Sprite Lab: آشنایی با آزمایشگاه اسپرایت
+      Introduction: مقدمه
       Introduction to Arrays: معرفی آرایه‌ها
       Investigate: وارسی
       Isaac's Survey Data: داده های پیمایش Isaac
@@ -262,7 +263,7 @@ fa:
       'Mini-Project: Royal Battle': 'پروژه کوچک: نبرد شاهانه'
       "Mini-Project: Snowflake #1": "پروژه کوچک: : Snowflake #1"
       "Mini-Project: Snowflake #2": "پروژه کوچک: : Snowflake #2"
-      'Mini-Project: Sticker Art': 'پروژه کوچک: هنر برچسب'
+      'Mini-Project: Sticker Art': 'پروژه کوچک: هنر استیکر'
       'Mini-Project: Swimming Fish': 'پروژه کوچک: ماهی شناگر'
       'Mini-Project: Swimming Fish (continued)': 'پروژه کوچک: ماهی شناگر (ادامه)'
       'Mini-Project: User Input Programs': 'پروژه کوچک: برنامه های درونداد کاربر'
@@ -337,8 +338,8 @@ fa:
       Recognizing Fish: ماهی شناسایی
       Recognizing Fish Features: ویژگیهای ماهی شناسایی
       Recognizing Shapes: اشکال شناسایی
-      Reflection: بازتاب
-      Relay Programming - Unplugged Activity: برنامه نویسی بازپخش - فعالیت بدون کار با رایانه
+      Reflection: فکر کنید
+      Relay Programming - Unplugged Activity: برنامه نویسی رله- فعالیت بدون کامپیوتر
       Repeat Blocks: بلوک های تکرار شونده
       Repeat Blocks with BB-8: بلوک های تکرار شونده با BB-8
       Repeat Blocks with the Artist: بلوک های تکرار شونده با Artist
@@ -372,6 +373,7 @@ fa:
       Setting Properties: ویژگیهای تنظیمات
       Setup: تنظیمات
       Shapes and the Draw Loop: شکلها و حلقه کشیدن
+      Share Out: به اشتراک‌ بگذارید
       Share Your App: اشتراک گذاری برنامه خود
       Share Your Pages: اشتراک گذاری صفحات خود
       Share Your Stylesheets: اشتراک گذاری برگه سبک خود
@@ -415,6 +417,7 @@ fa:
       UI Element Properties: ویژگیهای اجزای UI
       Ultimate Shoe Recommender: نسخه نهایی پیشنهاد کفش
       Unit 5 Lesson 1 Overview: نمای کلی درس 1 واحد 5
+      Unplugged Activity: فعالیت کلاسی
       Updating Your Prototype: بروزرسانی نمونه اصلی خود
       Upload Your Images: بارگذاری تصاویر خود
       User Interface: واسطه کاربر
@@ -437,13 +440,13 @@ fa:
       Video - Parameters: فیلم - پارامترها
       Video - The Counter Pattern: فیلم - الگوی شمارشگر
       Video - Variables: فیلم - متغیرها
-      'Video:  Debugging with the Step Button': 'فیلم: اشکال زدایی با دکمه Step'
+      'Video:  Debugging with the Step Button': 'ویدئو: رفع باگ با دکمه استپ'
       'Video:  Minecraft - The Agent': 'فیلم: ماینکرافت - عامل'
       'Video:  Text  and Prompts': 'فیلم: متن و پیامواره ها'
       'Video: "If/Else"': 'فیلم: «اگر/در غیر این صورت»'
       'Video: AI: What is Machine Learning?': 'فیلم: هوش مصنوعی: یادگیری ماشینی چیست؟'
       'Video: Amazon and Data': 'فیلم: آمازون و داده ها'
-      'Video: Artist Intro with JR Hildebrand': 'فیلم: معرفی Artist با JR Hildebrand'
+      'Video: Artist Intro with JR Hildebrand': 'ویدئو: معرفی هنرمند با جی آر هیلدبرند'
       'Video: Artist Intro with JR Hildebrande': 'فیلم: معرفی Artist با JR Hildebrande'
       'Video: Circuits and Logic': 'فیلم: مدارها و منطق'
       'Video: Code Your Own Flappy Game': 'فیلم: کدنویسی بازی فلاپی خود'
@@ -454,7 +457,7 @@ fa:
       'Video: Dance Party Party On!': 'فیلم: Dance Party با Party روشن!'
       'Video: Dance Party Properties': 'فیلم: ویژگی های Dance Party'
       'Video: Dance Party Warm Up': 'فیلم: آمادگی Dance Party'
-      'Video: De-bugging with the Step Button': 'فیلم: اشکال زدایی با دکمه Step'
+      'Video: De-bugging with the Step Button': 'ویدئو: رفع باگ با دکمه استپ (Step)'
       'Video: Debugging': 'فیلم: اشکال زدایی'
       'Video: Debugging with Scrat ': 'فیلم: اشکال زدایی با Scrat '
       'Video: Debugging with the Step Button': 'ویدئو: اشکال زدایی با دکمه استپ (Step)'
@@ -486,8 +489,8 @@ fa:
       'Video: Lots of Sprites': 'فیلم: تعداد زیادی اسپرایت'
       'Video: Managing Disagreement': 'فیلم: اختلاف مدیریت'
       'Video: Maze Intro - Programming with Blocks': 'فیلم: معرفی Maze: برنامه نویسی با بلوک'
-      'Video: Maze Intro - Programming with Blocks ': 'فیلم: معرفی Maze: برنامه نویسی با بلوک '
-      'Video: Maze Intro: Programming with Blocks': 'فیلم: معرفی Maze: برنامه نویسی با بلوک'
+      'Video: Maze Intro - Programming with Blocks ': 'ویدئو: معرفی ماز: برنامه نویسی با بلوک '
+      'Video: Maze Intro: Programming with Blocks': 'ویدئو: معرفی ماز: برنامه نویسی با بلوک‌ها'
       'Video: Measures': 'فیلم: سنجه های'
       'Video: Minecraft - Congratulations': 'فیلم: ماینکرافت - آفرین'
       'Video: Minecraft - Functions': 'فیلم: ماینکرافت - توابع'
