@@ -101,7 +101,7 @@ class ShareAllowedDialog extends React.Component {
     isFacebookAvailable: false,
     replayVideoUnavailable: false,
     hasBeenCopied: false,
-    hasLoadedAccountAndProjectAge: false,
+    isLoadingAccountAndProjectAge: false,
     isAccountOldEnoughToPublish: false,
     isProjectOldEnoughToPublish: false,
   };
@@ -133,7 +133,9 @@ class ShareAllowedDialog extends React.Component {
   }
 
   checkProjectAndAccountAge = () => {
-    if (this.isPublishAllowed()) {
+    if (this.isPublishAllowed() && dashboard.project) {
+      this.setState({isLoadingAccountAndProjectAge: true});
+
       const appType = dashboard.project.getStandaloneApp();
       const channelId = dashboard.project.getCurrentId();
       fetch(`/projects/${appType}/${channelId}/can_publish_age_status`)
@@ -144,7 +146,7 @@ class ShareAllowedDialog extends React.Component {
               data.project_existed_long_enough_to_publish,
             isAccountOldEnoughToPublish:
               data.user_existed_long_enough_to_publish,
-            hasLoadedAccountAndProjectAge: true,
+            isLoadingAccountAndProjectAge: false,
           });
         });
     }
@@ -230,7 +232,7 @@ class ShareAllowedDialog extends React.Component {
     const {
       isAccountOldEnoughToPublish,
       isProjectOldEnoughToPublish,
-      hasLoadedAccountAndProjectAge,
+      isLoadingAccountAndProjectAge,
     } = this.state;
 
     const modalClass = 'modal-content no-modal-icon';
@@ -383,7 +385,9 @@ class ShareAllowedDialog extends React.Component {
                   </Button>
 
                   {showPublishInfo &&
-                    (hasLoadedAccountAndProjectAge ? (
+                    (isLoadingAccountAndProjectAge ? (
+                      <Spinner size="medium" style={{marginRight: 16}} />
+                    ) : (
                       <Button
                         type="button"
                         color={Button.ButtonColor.neutralDark}
@@ -397,8 +401,6 @@ class ShareAllowedDialog extends React.Component {
                       >
                         <span>{i18n.publish()}</span>
                       </Button>
-                    ) : (
-                      <Spinner size="medium" style={{marginRight: 16}} />
                     ))}
                   {this.isPublishAllowed() && isPublished && (
                     <PendingButton
@@ -481,7 +483,7 @@ class ShareAllowedDialog extends React.Component {
                   </div>
                 )}
                 {showPublishInfo &&
-                  hasLoadedAccountAndProjectAge &&
+                  !isLoadingAccountAndProjectAge &&
                   !isAccountOldEnoughToPublish && (
                     <div style={{clear: 'both', marginTop: 10}}>
                       <span
@@ -493,7 +495,7 @@ class ShareAllowedDialog extends React.Component {
                     </div>
                   )}
                 {showPublishInfo &&
-                  hasLoadedAccountAndProjectAge &&
+                  !isLoadingAccountAndProjectAge &&
                   !isProjectOldEnoughToPublish && (
                     <div style={{clear: 'both', marginTop: 10}}>
                       <span
