@@ -28,10 +28,10 @@ def sync_up
       end
     end
 
-    I18n::Metrics.report_success(true, 'sync-up')
+    I18n::Metrics.report_status(true, 'sync-up', 'Sync up completed successfully')
     puts "Sync up completed successfully"
   rescue => exception
-    I18n::Metrics.report_success(false, 'sync-up', 'None', "Sync up failed from the error: #{exception}")
+    I18n::Metrics.report_status(false, 'sync-up', "Sync up failed from the error: #{exception}")
     puts "Sync up failed from the error: #{exception}"
     raise exception
   end

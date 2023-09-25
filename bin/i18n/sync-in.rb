@@ -16,10 +16,10 @@ module I18n
       I18n::Resources::Apps.sync_in
       I18n::Resources::Dashboard.sync_in
       I18n::Resources::Pegasus.sync_in
-      I18n::Metrics.report_success(true, 'sync-in')
+      I18n::Metrics.report_status(true, 'sync-in', 'Sync in completed successfully')
       puts "Sync in completed successfully"
     rescue => exception
-      I18n::Metrics.report_success(false, 'sync-in', 'None', "Sync in failed from the error: #{exception}")
+      I18n::Metrics.report_status(false, 'sync-in', "Sync in failed from the error: #{exception}")
       puts "Sync in failed from the error: #{exception}"
       raise exception
     end

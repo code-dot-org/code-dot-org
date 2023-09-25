@@ -42,9 +42,9 @@ module I18n
     # logging to CloudWatch the Completion Status of a sync process, either success or fail.
     # @param status [Boolean] Whether a step has been successful or not.
     # @param sync_step [String] Step of the sync where the method is used. Options: sync-in, sync-up, sync-down, sync-out.
-    # @option sync_component [String] Specific sync component being logged.
     # @option message [String] Exception message causing the process to fail.
-    def self.report_success(status, sync_step, sync_component = 'None', message = 'None')
+    # # @option sync_component [String] Specific sync component being logged.
+    def self.report_status(status, sync_step, message = 'None', sync_component = 'None')
       status_value = status ? 1 : 0
       log_metric(
         :Status,

@@ -48,10 +48,10 @@ def sync_down
       puts "Files downloaded in #{elapsed}"
     end
 
-    I18n::Metrics.report_success(true, 'sync-down')
+    I18n::Metrics.report_status(true, 'sync-down', 'Sync down completed successfully')
     puts "Sync down completed successfully"
   rescue => exception
-    I18n::Metrics.report_success(false, 'sync-down', 'None', "Sync down failed from the error: #{exception}")
+    I18n::Metrics.report_status(false, 'sync-down', "Sync down failed from the error: #{exception}")
     puts "Sync down failed from the error: #{exception}"
     raise exception
   end
