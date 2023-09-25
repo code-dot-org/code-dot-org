@@ -219,7 +219,7 @@
     "naan_toy": {
       "fields": {
         "cheese": {
-          "id": "Queso"
+          "id": "queso"
         },
         "chicken": {
           "id": "gallina"
@@ -258,7 +258,7 @@
     "poke_toy": {
       "fields": {
         "avocado": {
-          "id": "aguacate"
+          "id": "palta"
         },
         "ginger": {
           "id": "jengibre"
@@ -277,7 +277,7 @@
           "id": "tocino"
         },
         "cheese": {
-          "id": "Queso"
+          "id": "queso"
         },
         "lobster": {
           "id": "langosta"
@@ -286,7 +286,7 @@
           "id": "carne"
         },
         "mushrooms": {
-          "id": "setas"
+          "id": "champiñones"
         },
         "preference": {
           "id": "preferencia"
@@ -302,7 +302,7 @@
           "id": "preferencia"
         },
         "strawberry": {
-          "id": "fresa"
+          "id": "frutilla"
         }
       }
     },
@@ -315,7 +315,7 @@
           "id": "elefante"
         },
         "people": {
-          "id": "personas"
+          "id": "gente"
         },
         "rhino": {
           "id": "rinoceronte"
@@ -329,13 +329,13 @@
     "salad_toy": {
       "fields": {
         "avocado": {
-          "id": "aguacate"
+          "id": "palta"
         },
         "beans": {
-          "id": "alubias"
+          "id": "porotos"
         },
         "cheese": {
-          "id": "Queso"
+          "id": "queso"
         },
         "chicken": {
           "id": "gallina"
@@ -354,10 +354,10 @@
     "salsa_toy": {
       "fields": {
         "avocado": {
-          "id": "aguacate"
+          "id": "palta"
         },
         "beans": {
-          "id": "alubias"
+          "id": "porotos"
         },
         "corn": {
           "id": "maíz"
