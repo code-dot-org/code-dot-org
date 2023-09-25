@@ -47,6 +47,9 @@
         "CourseD_Dance_2020_01_2021": {
           "dance_callout_01": "यहाँ तपाईंले डान्सरको प्रकार छनोट गर्नुहोस् ।"
         },
+        "CourseD_Dance_2020_01_2023": {
+          "dance_callout_01": "यहाँ तपाईंले डान्सरको प्रकार छनोट गर्नुहोस् ।"
+        },
         "CourseD_Dance_2020_02": {
           "arrow_buttons": "तपाईंको डान्सरलाई नियन्त्रण गर्न वाण कि थिच्नुहोस् ।",
           "dance_callout_11_a": "तपाईंको कार्यक्रममा यो खण्ड थप्नुहोस् ।"
@@ -59,6 +62,10 @@
           "arrow_buttons": "तपाईंको डान्सरलाई नियन्त्रण गर्न वाण कि थिच्नुहोस् ।",
           "dance_callout_11_a": "तपाईंको कार्यक्रममा यो खण्ड थप्नुहोस् ।"
         },
+        "CourseD_Dance_2020_02_2023": {
+          "arrow_buttons": "तपाईंको डान्सरलाई नियन्त्रण गर्न वाण कि थिच्नुहोस् ।",
+          "dance_callout_11_a": "तपाईंको कार्यक्रममा यो खण्ड थप्नुहोस् ।"
+        },
         "CourseD_Dance_2020_05": {
           "dance_callout_05": "तपाईंको कार्यक्रममा नयाँ घटना थप्नुहोस् ।"
         },
@@ -66,6 +73,9 @@
           "dance_callout_05": "तपाईंको कार्यक्रममा नयाँ घटना थप्नुहोस् ।"
         },
         "CourseD_Dance_2020_05_2021": {
+          "dance_callout_05": "तपाईंको कार्यक्रममा नयाँ घटना थप्नुहोस् ।"
+        },
+        "CourseD_Dance_2020_05_2023": {
           "dance_callout_05": "तपाईंको कार्यक्रममा नयाँ घटना थप्नुहोस् ।"
         },
         "Dance_2019_01": {
@@ -128,6 +138,9 @@
         "Overworld Chop Trees_2021": {
           "craft_callout_preplaced": "We've put some blocks here to get you started"
         },
+        "Overworld Chop Trees_2023": {
+          "craft_callout_preplaced": "We've put some blocks here to get you started"
+        },
         "Overworld House Frame Chosen": {
           "craft_callout_preplaced_house": "This code will start building your house. Can you finish it?"
         },
@@ -141,6 +154,9 @@
           "craft_callout_preplaced_house": "This code will start building your house. Can you finish it?"
         },
         "Overworld House Frame Chosen_2021": {
+          "craft_callout_preplaced_house": "This code will start building your house. Can you finish it?"
+        },
+        "Overworld House Frame Chosen_2023": {
           "craft_callout_preplaced_house": "This code will start building your house. Can you finish it?"
         },
         "Overworld Move to Sheep": {
@@ -158,6 +174,9 @@
         "Overworld Move to Sheep_2021": {
           "craft_run_button_callout": "Hit \"Run\" to try your program"
         },
+        "Overworld Move to Sheep_2023": {
+          "craft_run_button_callout": "Hit \"Run\" to try your program"
+        },
         "Overworld Place Wall": {
           "craft_inside_repeat": "Repeat actions by placing blocks in here"
         },
@@ -171,6 +190,9 @@
           "craft_inside_repeat": "Repeat actions by placing blocks in here"
         },
         "Overworld Place Wall_2021": {
+          "craft_inside_repeat": "Repeat actions by placing blocks in here"
+        },
+        "Overworld Place Wall_2023": {
           "craft_inside_repeat": "Repeat actions by placing blocks in here"
         },
         "Underground Avoiding Lava": {
@@ -188,6 +210,9 @@
         "Underground Avoiding Lava_2021": {
           "craft_callout_moveforward": "This code will check for lava, can you add a command to move forward?"
         },
+        "Underground Avoiding Lava_2023": {
+          "craft_callout_moveforward": "This code will check for lava, can you add a command to move forward?"
+        },
         "Underground Iron": {
           "craft_what_is_iron": "Mine this iron!"
         },
@@ -201,6 +226,9 @@
           "craft_what_is_iron": "Mine this iron!"
         },
         "Underground Iron_2021": {
+          "craft_what_is_iron": "Mine this iron!"
+        },
+        "Underground Iron_2023": {
           "craft_what_is_iron": "Mine this iron!"
         },
         "frozen circle function with parameter": {
