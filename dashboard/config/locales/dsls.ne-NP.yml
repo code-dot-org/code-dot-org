@@ -2521,6 +2521,14 @@ ne-NP:
         - {}
         questions:
         - {}
+      courseC_multi_artist_prog6_predict12022_2023:
+        answers:
+        - {}
+        - {}
+        - {}
+        - {}
+        questions:
+        - {}
       courseC_multi_artist_prog6_predict1_2018:
         answers:
         - {}
@@ -2562,6 +2570,14 @@ ne-NP:
         questions:
         - {}
       courseC_multi_harvester_loops11_predict12022:
+        answers:
+        - {}
+        - {}
+        - {}
+        - {}
+        questions:
+        - {}
+      courseC_multi_harvester_loops11_predict12022_2023:
         answers:
         - {}
         - {}
@@ -2617,6 +2633,14 @@ ne-NP:
         - {}
         questions:
         - {}
+      courseC_multi_maze_debugging8_predict12022_2023:
+        answers:
+        - {}
+        - {}
+        - {}
+        - {}
+        questions:
+        - {}
       courseC_multi_maze_debugging8_predict1_2018:
         answers:
         - {}
@@ -2658,6 +2682,14 @@ ne-NP:
         questions:
         - {}
       courseC_multi_maze_programming8_predict12022:
+        answers:
+        - {}
+        - {}
+        - {}
+        - {}
+        questions:
+        - {}
+      courseC_multi_maze_programming8_predict12022_2023:
         answers:
         - {}
         - {}
@@ -2713,6 +2745,14 @@ ne-NP:
         - {}
         questions:
         - {}
+      courseC_multi_starWars_predict12022_2023:
+        answers:
+        - {}
+        - {}
+        - {}
+        - {}
+        questions:
+        - {}
       courseC_multi_starWars_predict1_2018:
         answers:
         - {}
@@ -2754,6 +2794,14 @@ ne-NP:
         questions:
         - {}
       courseC_multi_starWars_predict22022:
+        answers:
+        - {}
+        - {}
+        - {}
+        - {}
+        questions:
+        - {}
+      courseC_multi_starWars_predict22022_2023:
         answers:
         - {}
         - {}
@@ -2841,6 +2889,14 @@ ne-NP:
         - {}
         questions:
         - {}
+      courseD_multi_artist_nestedLoops9_predict12022_2023:
+        answers:
+        - text: 'क '
+        - text: 'ख '
+        - text: 'ग '
+        - {}
+        questions:
+        - {}
       courseD_multi_artist_nestedLoops9_predict1_2018:
         answers:
         - text: 'क '
@@ -2882,6 +2938,14 @@ ne-NP:
         questions:
         - {}
       courseD_multi_bee_conditionals1_predict12022:
+        answers:
+        - {}
+        - {}
+        - {}
+        - {}
+        questions:
+        - {}
+      courseD_multi_bee_conditionals1_predict12022_2023:
         answers:
         - {}
         - {}
@@ -2953,6 +3017,14 @@ ne-NP:
         - {}
         questions:
         - {}
+      courseD_multi_bee_conditionals7_predict22022_2023:
+        answers:
+        - {}
+        - {}
+        - {}
+        - {}
+        questions:
+        - {}
       courseD_multi_bee_conditionals7_predict2_2018:
         answers:
         - {}
@@ -3001,6 +3073,14 @@ ne-NP:
         - {}
         questions:
         - {}
+      courseD_multi_bee_nestedLoops2_predict12022_2023:
+        answers:
+        - {}
+        - {}
+        - {}
+        - {}
+        questions:
+        - {}
       courseD_multi_bee_nestedLoops2_predict1_2018:
         answers:
         - {}
@@ -3042,6 +3122,14 @@ ne-NP:
         questions:
         - {}
       courseD_multi_bee_nestedLoops9_predict22022:
+        answers:
+        - {}
+        - {}
+        - {}
+        - {}
+        questions:
+        - {}
+      courseD_multi_bee_nestedLoops9_predict22022_2023:
         answers:
         - {}
         - {}
@@ -3105,6 +3193,14 @@ ne-NP:
         - {}
         questions:
         - {}
+      courseD_multi_farmer_condLoops9_predict12022_2023:
+        answers:
+        - {}
+        - {}
+        - {}
+        - {}
+        questions:
+        - {}
       courseD_multi_farmer_condLoops9_predict1_2018:
         answers:
         - {}
@@ -3161,6 +3257,14 @@ ne-NP:
         - {}
         questions:
         - {}
+      courseD_multi_farmer_while10_predict22022_2023:
+        answers:
+        - {}
+        - {}
+        - {}
+        - {}
+        questions:
+        - {}
       courseD_multi_farmer_while10_predict2_2018:
         answers:
         - {}
@@ -3202,6 +3306,14 @@ ne-NP:
         questions:
         - {}
       courseD_multi_farmer_while4_predict12022:
+        answers:
+        - {}
+        - {}
+        - {}
+        - {}
+        questions:
+        - {}
+      courseD_multi_farmer_while4_predict12022_2023:
         answers:
         - {}
         - {}
@@ -3257,6 +3369,14 @@ ne-NP:
         - {}
         questions:
         - {}
+      courseD_multi_maze_until10_predict22022_2023:
+        answers:
+        - {}
+        - {}
+        - {}
+        - {}
+        questions:
+        - {}
       courseD_multi_maze_until10_predict2_2018:
         answers:
         - {}
@@ -3298,6 +3418,14 @@ ne-NP:
         questions:
         - {}
       courseD_multi_maze_until2_predict12022:
+        answers:
+        - {}
+        - {}
+        - {}
+        - {}
+        questions:
+        - {}
+      courseD_multi_maze_until2_predict12022_2023:
         answers:
         - {}
         - {}
@@ -3377,6 +3505,14 @@ ne-NP:
         - {}
         questions:
         - {}
+      courseE_multi_farmer_functions11_predict2022_2023:
+        answers:
+        - {}
+        - {}
+        - {}
+        - {}
+        questions:
+        - {}
       courseE_multi_farmer_functions11_predict_2018:
         answers:
         - {}
@@ -3418,6 +3554,14 @@ ne-NP:
         questions:
         - {}
       courseE_prediction_artistFunction12022:
+        answers:
+        - {}
+        - {}
+        - {}
+        - {}
+        questions:
+        - {}
+      courseE_prediction_artistFunction12022_2023:
         answers:
         - {}
         - {}
@@ -3481,6 +3625,14 @@ ne-NP:
         - {}
         questions:
         - {}
+      courseE_swim_fish_behavior_predict12022_2023:
+        answers:
+        - {}
+        - {}
+        - {}
+        - {}
+        questions:
+        - {}
       courseE_swim_fish_behavior_predict1_2021:
         answers:
         - {}
@@ -3529,7 +3681,23 @@ ne-NP:
         - {}
         questions:
         - {}
+      courseF_events_predict_multi2022_2022_pilot_-2022-2_2023:
+        answers:
+        - {}
+        - {}
+        - {}
+        - {}
+        questions:
+        - {}
       courseF_groups_predict_multi_2022_pilot_-2022-2:
+        answers:
+        - {}
+        - {}
+        - {}
+        - {}
+        questions:
+        - {}
+      courseF_groups_predict_multi_2022_pilot_-2022-2_2023:
         answers:
         - {}
         - {}
@@ -3547,6 +3715,15 @@ ne-NP:
         questions:
         - {}
       courseF_labels_predict_multi2022_2022_pilot_-2022-2:
+        answers:
+        - {}
+        - {}
+        - {}
+        - {}
+        - {}
+        questions:
+        - {}
+      courseF_labels_predict_multi2022_2022_pilot_-2022-2_2023:
         answers:
         - {}
         - {}
@@ -3604,6 +3781,14 @@ ne-NP:
         questions:
         - {}
       courseF_multi_artist_variables3a_predict12022:
+        answers:
+        - {}
+        - {}
+        - {}
+        - {}
+        questions:
+        - {}
+      courseF_multi_artist_variables3a_predict12022_2023:
         answers:
         - {}
         - {}
@@ -3675,6 +3860,14 @@ ne-NP:
         - {}
         questions:
         - {}
+      courseF_multi_bee_for3_predict12022_2023:
+        answers:
+        - {}
+        - {}
+        - {}
+        - {}
+        questions:
+        - {}
       courseF_multi_bee_for3_predict1_2018:
         answers:
         - {}
@@ -3739,6 +3932,14 @@ ne-NP:
         - {}
         questions:
         - {}
+      courseF_sprites_predict_multi2022_2022_pilot_-2022-2_2023:
+        answers:
+        - {}
+        - {}
+        - {}
+        - {}
+        questions:
+        - {}
       courseF_variables2_predict2_multi2022_-2022-2:
         answers:
         - {}
@@ -3747,7 +3948,23 @@ ne-NP:
         - {}
         questions:
         - {}
+      courseF_variables2_predict2_multi2022_-2022-2_2023:
+        answers:
+        - {}
+        - {}
+        - {}
+        - {}
+        questions:
+        - {}
       courseF_variables2_predict_multi2022_2022_pilot_-2022-2:
+        answers:
+        - {}
+        - {}
+        - {}
+        - {}
+        questions:
+        - {}
+      courseF_variables2_predict_multi2022_2022_pilot_-2022-2_2023:
         answers:
         - {}
         - {}
@@ -3771,6 +3988,14 @@ ne-NP:
         - {}
         questions:
         - {}
+      courseF_variables_predict_multi2022_2022_pilot_-2022-2_2023:
+        answers:
+        - {}
+        - {}
+        - {}
+        - {}
+        questions:
+        - {}
       coursee_prediction_artistfunction2:
         answers:
         - {}
@@ -3780,6 +4005,14 @@ ne-NP:
         questions:
         - {}
       coursee_prediction_artistfunction22022:
+        answers:
+        - {}
+        - {}
+        - {}
+        - {}
+        questions:
+        - {}
+      coursee_prediction_artistfunction22022_2023:
         answers:
         - {}
         - {}
@@ -3818,6 +4051,39 @@ ne-NP:
         - {}
         - {}
         questions:
+        - {}
+      csc_animal_adaptations_predict:
+        answers:
+        - {}
+        - {}
+        - {}
+        - {}
+        questions:
+        - {}
+      csc_ecosystems_matching_cfu:
+        answers:
+        - {}
+        - {}
+        - {}
+        questions:
+        - {}
+        - {}
+        - {}
+      csc_ecosystems_matching_conditionals:
+        answers:
+        - {}
+        - {}
+        - {}
+        questions:
+        - {}
+        - {}
+        - {}
+      csc_ecosystems_matching_events:
+        answers:
+        - {}
+        - {}
+        questions:
+        - {}
         - {}
       csd-post-survey-2017-q11_2018:
         answers:
@@ -8426,6 +8692,14 @@ ne-NP:
         questions:
         - {}
       grade2_multi_collector_A_predict12022:
+        answers:
+        - {}
+        - {}
+        - {}
+        - {}
+        questions:
+        - {}
+      grade2_multi_collector_A_predict12022_2023:
         answers:
         - {}
         - {}

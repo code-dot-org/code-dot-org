@@ -383,6 +383,10 @@ es:
             que expongan los escollos éticos en un área de la Inteligencia Artificial
             (IA) de tu elección. '
           title: Nuestro Código Ético de la Inteligencia Artificial
+        ai-ethics-2023:
+          lessons:
+            lesson-1:
+              name: Nuestro Código Ético de la Inteligencia Artificial
         ai-lab:
           name: ai-lab
           student_description: Usa estos niveles para conocer el Laboratorio de Inteligencia

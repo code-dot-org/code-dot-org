@@ -568,6 +568,11 @@ hu-HU:
           # A nagy esemény
 
           A számítástechnikában az események olyan akciók, amiket a számítógép kijelez. Ebben a leckében a gép mindenre másképp reagál, attól függően, hogy melyik gombot nyomod meg.
+      BigEvent-Unplugged2022_2023:
+        markdown: |
+          # A nagy esemény
+
+          A számítástechnikában az események olyan akciók, amiket a számítógép kijelez. Ebben a leckében a gép mindenre másképp reagál, attól függően, hogy melyik gombot nyomod meg.
       BigEvent-Unplugged_2020:
         markdown: |
           # A nagy esemény
@@ -586,6 +591,13 @@ hu-HU:
 
           ![](https://images.code.org/ed15a484276c0989e4adb5daf480f68a-image-1557870226222.png)
       BinaryBracelets-Unplugged2022:
+        markdown: |
+          # Bináris karkötők
+
+          Készíts egy karkötőt, amely a nevedet jelenti egy olyan rendszerben, amelyet a számítógépek megértenek!
+
+          ![](https://images.code.org/ed15a484276c0989e4adb5daf480f68a-image-1557870226222.png)
+      BinaryBracelets-Unplugged2022_2023:
         markdown: |
           # Bináris karkötők
 
@@ -2872,7 +2884,15 @@ hu-HU:
         description: Nagyszerű munka! Válaszd ki a következő feladatodat! Csinálj
           meg annyit az alábbiak közül, amennyit csak tudsz! Gyakorold tovább a függvényeket
           a Művésszel!
+      CourseE_Lesson_11_Artist_Practice_2023:
+        description: Nagyszerű munka! Válaszd ki a következő feladatodat! Csinálj
+          meg annyit az alábbiak közül, amennyit csak tudsz! Gyakorold tovább a függvényeket
+          a Művésszel!
       CourseE_Lesson_7_Artist_Practice_2022:
+        description: Nagyszerű munka! Válaszd ki a következő feladatodat! Csinálj
+          meg annyit az alábbiak közül, amennyit csak tudsz! Gyakorold tovább a beágyazott
+          ciklusokat a Művésszel!
+      CourseE_Lesson_7_Artist_Practice_2023:
         description: Nagyszerű munka! Válaszd ki a következő feladatodat! Csinálj
           meg annyit az alábbiak közül, amennyit csak tudsz! Gyakorold tovább a beágyazott
           ciklusokat a Művésszel!
@@ -3028,7 +3048,84 @@ hu-HU:
           végeztél, oszd meg a szimulációdat másokkal. Oszd meg azt is, hogy szerinted
           mit tehetünk mások egészségének megőrzése érdekébe, ha egy vírus üti fel
           a fejét a városba. "
+      CourseF_outbreak_story2022_2022_pilot_-2022-2_2023:
+        content1: a leírás itt található
+        markdown: "# Kitörés: Kódold a saját szimulációdat\n\n## Üdvözlünk a Szörnyvárosban!\nSzörnyváros
+          korábban egy boldog és egészséges város volt volt. Szörnyváros szörnyei
+          szerettek vándorolni, felkeresni a barátaikat. \n\n<img src=\"https://images.code.org/3b55881f776348c6eb32379e4cbd34e1-image-1603133896503.png\"
+          style=\"width:8%\"> <img src=\"https://images.code.org/3b55881f776348c6eb32379e4cbd34e1-image-1603133896503.png\"
+          style=\"width:8%\"> <img src=\"https://images.code.org/3b55881f776348c6eb32379e4cbd34e1-image-1603133896503.png\"
+          style=\"width:8%\"> <img src=\"https://images.code.org/3b55881f776348c6eb32379e4cbd34e1-image-1603133896503.png\"
+          style=\"width:8%\"> <img src=\"https://images.code.org/3b55881f776348c6eb32379e4cbd34e1-image-1603133896503.png\"
+          style=\"width:8%\"> <img src=\"https://images.code. org/3b55881f776348c6eb32379e4cbd34e1-image-1603133896503.png\"
+          style=\"width:8%\"> <img src=\"https://images.code.org/3b55881f776348c6eb32379e4cbd34e1-image-1603133896503.png\"
+          style=\"width:8%\"> <img src=\"https://images.code.org/3b55881f776348c6eb32379e4cbd34e1-image-1603133896503.png\"
+          style=\"width:8%\"> <img src=\"https://images. code.org/3b55881f776348c6eb32379e4cbd34e1-image-1603133896503.png\"
+          style=\"width:8%\"> <img src=\"https://images.code.org/3b55881f776348c6eb32379e4cbd34e1-image-1603133896503.png\"
+          style=\"width:8%\"> <img src=\"https://images.code.org/3b55881f776348c6eb32379e4cbd34e1-image-1603133896503.png\"
+          style=\"width:8%\">\n\nEgy nap az egyik szörny rosszul lett. Elkapott egy
+          **vírust**! A vírus egy aprócska bacilus, amely betegséget okozhat. A többi
+          szörny nem aggódott túlságosan. Továbbra is látogatták a barátaikat.\n\n<img
+          src=\"https://images.code.org/3b55881f776348c6eb32379e4cbd34e1-image-1603133896503.png\"
+          style=\"width:8%\"> <img src=\"https://images.code.org/3b55881f776348c6eb32379e4cbd34e1-image-1603133896503.png\"
+          style=\"width:8%\"> <img src=\"https://images.code.org/3b55881f776348c6eb32379e4cbd34e1-image-1603133896503.png\"
+          style=\"width:8%\"> <img src=\"https://images.code.org/3b55881f776348c6eb32379e4cbd34e1-image-1603133896503.png\"
+          style=\"width:8%\"> <img src=\"https://images.code.org/3b55881f776348c6eb32379e4cbd34e1-image-1603133896503.png\"
+          style=\"width:8%\"> <img src=\"https://images.code. org/f30010a430a4189a734467094842b39d-image-1603134238257.png\"
+          style=\"width:8%\"> <img src=\"https://images.code.org/3b55881f776348c6eb32379e4cbd34e1-image-1603133896503.png\"
+          style=\"width:8%\"> <img src=\"https://images.code.org/3b55881f776348c6eb32379e4cbd34e1-image-1603133896503.png\"
+          style=\"width:8%\"> <img src=\"https://images.code.org/3b55881f776348c6eb32379e4cbd34e1-image-1603133896503.png\"
+          style=\"width:8%\"> <img src=\"https://images.code.org/3b55881f776348c6eb32379e4cbd34e1-image-1603133896503.png\"
+          style=\"width:8%\"> <img src=\"https://images.code.org/3b55881f776348c6eb32379e4cbd34e1-image-1603133896503.png\"
+          style=\"width:8%\">\n\nNem sokkal később még két szörnyeteg lett rosszul.
+          Ugyanaz a vírus volt! Úgy tűnik, a vírust a barátjuktól kapták el.\n\n<img
+          src=\"https://images.code.org/3b55881f776348c6eb32379e4cbd34e1-image-1603133896503.png\"
+          style=\"width:8%\"> <img src=\"https://images.code.org/3b55881f776348c6eb32379e4cbd34e1-image-1603133896503.png\"
+          style=\"width:8%\"> <img src=\"https://images.code.org/3b55881f776348c6eb32379e4cbd34e1-image-1603133896503.png\"
+          style=\"width:8%\"> <img src=\"https://images.code.org/3b55881f776348c6eb32379e4cbd34e1-image-1603133896503.png\"
+          style=\"width:8%\"> <img src=\"https://images.code.org/f30010a430a4189a734467094842b39d-image-1603134238257.png\"
+          style=\"width:8%\"> <img src=\"https://images.code. org/f30010a430a4189a734467094842b39d-image-1603134238257.png\"
+          style=\"width:8%\"> <img src=\"https://images.code.org/f30010a430a4189a734467094842b39d-image-1603134238257.png\"
+          style=\"width:8%\"> <img src=\"https://images.code.org/3b55881f776348c6eb32379e4cbd34e1-image-1603133896503.png\"
+          style=\"width:8%\"> <img src=\"https://images.code.org/3b55881f776348c6eb32379e4cbd34e1-image-1603133896503.png\"
+          style=\"width:8%\"> <img src=\"https://images.code.org/3b55881f776348c6eb32379e4cbd34e1-image-1603133896503.png\"
+          style=\"width:8%\"> <img src=\"https://images.code.org/3b55881f776348c6eb32379e4cbd34e1-image-1603133896503.png\"
+          style=\"width:8%\">\n\nA vírus lassan átterjedt más, közelben lévő szörnyekre
+          is. Az egészséges szörnyek aggódni kezdtek, hogy mind megbetegszenek. A
+          beteg szörnyek aggódni kezdtek, hogy ők átadják a vírust a többieknek.\n\n<img
+          src=\"https://images.code.org/3b55881f776348c6eb32379e4cbd34e1-image-1603133896503.png\"
+          style=\"width:8%\"> <img src=\"https://images.code.org/3b55881f776348c6eb32379e4cbd34e1-image-1603133896503.png\"
+          style=\"width:8%\"> <img src=\"https://images.code.org/3b55881f776348c6eb32379e4cbd34e1-image-1603133896503.png\"
+          style=\"width:8%\"> <img src=\"https://images.code.org/f30010a430a4189a734467094842b39d-image-1603134238257.png\"
+          style=\"width:8%\"> <img src=\"https://images.code.org/f30010a430a4189a734467094842b39d-image-1603134238257.png\"
+          style=\"width:8%\"> <img src=\"https://images.code. org/f30010a430a4189a734467094842b39d-image-1603134238257.png\"
+          style=\"width:8%\"> <img src=\"https://images.code.org/f30010a430a4189a734467094842b39d-image-1603134238257.png\"
+          style=\"width:8%\"> <img src=\"https://images.code.org/f30010a430a4189a734467094842b39d-image-1603134238257.png\"
+          style=\"width:8%\"> <img src=\"https://images.code.org/3b55881f776348c6eb32379e4cbd34e1-image-1603133896503.png\"
+          style=\"width:8%\"> <img src=\"https://images.code.org/3b55881f776348c6eb32379e4cbd34e1-image-1603133896503.png\"
+          style=\"width:8%\"> <img src=\"https://images.code.org/3b55881f776348c6eb32379e4cbd34e1-image-1603133896503.png\"
+          style=\"width:8%\">\n\n\n<div style=\"display: inline-block\">\n<img src=\"https://images.code.org/89376b9ebd5fcee77545f13a7a444430-image-1603135356392.png\"
+          style=\"float:right; width:30%\">\n\n## A terjedés megállítása\nSzerencsére
+          a vírus tanulmányozása után a Szörnyváros szomszédai fontos felfedezést
+          tettek. Rájöttek, hogy kevésbé fogják a vírust terjeszteni, ha szájmaszkot
+          viselnek. Az arcmaszkkal a beteg szörnyek kisebb valószínűséggel adták át
+          a vírust az egészséges szörnyeknek.\n\n<img src=\"https://images.code.org/c98f28f9bf6a027143592109d59ee484-image-1603134766360.png\"
+          style=\"width:8%\"> <img src=\"https://images.code.org/bac9dbfaf1815c6627fc24e8e6db396d-image-1603134760456.png\"
+          style=\"width:8%\">\n\n</div>\n\n<img src=\"https://images.code.org/ef7499758496b39bcccc24aabd2af5d7-image-1603137920037.2020-10-19
+          16_04_58.gif\" style=\"float:left; width:25%; padding-right:25px\">\n\n##
+          Mi fog történni ezután?\n\nMa kódot fogsz írni, létrehozod és futtatod a
+          saját **szimulációdat** a Szörnyvárosban kitört vírusjárvánnyal kapcsolatban.
+          \ A szimuláció egy folyamat vagy rendszer számítógépes modellje. Tanulj
+          meg kódolni, és készíts előrejelzést arról, hogy mi fog történni Szörnyváros
+          szomszédaival.\n\n<img src=\"https://images.code.org/fcbfd250d58652bdfd6393ec4f2fe2dd-image-1603134705074.png\"
+          style=\"float:right; width:15%\">\n\n* * Milyen gyorsan fog terjedni a vírus?*\n\n*
+          * Megbetegszik-e mindenki?*\n\n* * Hogyan segítenek az arcmaszkok?*\n\n\nHa
+          végeztél, oszd meg a szimulációdat másokkal. Oszd meg azt is, hogy szerinted
+          mit tehetünk mások egészségének megőrzése érdekébe, ha egy vírus üti fel
+          a fejét a városba. "
       CourseF_outbreak_story22022_2022_pilot_-2022-2:
+        content1: a leírás itt található
+      CourseF_outbreak_story22022_2022_pilot_-2022-2_2023:
         content1: a leírás itt található
       Dance_Party_extras_intro:
         markdown: |
@@ -3218,6 +3315,11 @@ hu-HU:
           # Ismétlődések
 
           Ez a leckbe bemutatja az ismétlődések szerepét a programozásban, méghozzá egy kis tánc segítségével.
+      GettingLoopy-Unplugged2022_2023:
+        markdown: |
+          # Ismétlődések
+
+          Ez a leckbe bemutatja az ismétlődések szerepét a programozásban, méghozzá egy kis tánc segítségével.
       GettingLoopy-Unplugged_2020:
         markdown: |
           # Ismétlődések
@@ -3252,6 +3354,11 @@ hu-HU:
 
           Készíts algoritmust, hogy a karaktert kivezesd az útvesztőből.
       HappyMaps-Unplugged2022:
+        markdown: |
+          # Boldog térképek
+
+          Készíts algoritmust, hogy a karaktert kivezesd az útvesztőből.
+      HappyMaps-Unplugged2022_2023:
         markdown: |
           # Boldog térképek
 
@@ -3609,6 +3716,11 @@ hu-HU:
           # Mozdulj, mozdulj!
 
           Használj térképet, és adj parancsokat, hogy elérd a célt.
+      MoveItMoveIt-Unplugged2022_2023:
+        markdown: |
+          # Mozdulj, mozdulj!
+
+          Használj térképet, és adj parancsokat, hogy elérd a célt.
       MoveItMoveIt-Unplugged_2020:
         markdown: |
           # Mozdulj, mozdulj!
@@ -3641,6 +3753,11 @@ hu-HU:
           # Ciklusos Robot barátaim
 
           Ciklusok használatával rövidítsd le a programodat!
+      MyLoopyRoboticFriends-Unplugged2022_2023:
+        markdown: |
+          # Ciklusos Robot barátaim
+
+          Ciklusok használatával rövidítsd le a programodat!
       MyLoopyRoboticFriends-Unplugged_2020:
         markdown: |
           # Ciklusos Robot barátaim
@@ -3657,6 +3774,11 @@ hu-HU:
 
           Tanulj meg programozni úgy, hogy kódot írsz a barátaidnak!
       MyRoboticFriends-Unplugged2022:
+        markdown: |
+          # Robot barátaim
+
+          Tanulj meg programozni úgy, hogy kódot írsz a barátaidnak!
+      MyRoboticFriends-Unplugged2022_2023:
         markdown: |
           # Robot barátaim
 
@@ -3818,6 +3940,11 @@ hu-HU:
           # A szavak ereje
 
           ## Mit tegyél, ha valaki szemétkedik, vagy bántó kifejezéseket használ az interneten?
+      PowerOfWords-Unplugged2022_2022_pilot_-2022-2_2023:
+        markdown: |
+          # A szavak ereje
+
+          ## Mit tegyél, ha valaki szemétkedik, vagy bántó kifejezéseket használ az interneten?
       PowerOfWords-Unplugged_2020:
         markdown: |
           # A szavak ereje
@@ -3838,6 +3965,10 @@ hu-HU:
       Prepare for your presentation:
         content1: a leírás itt található
       PrivatePersonalInformation-Unplugged2022:
+        markdown: |
+          # Privát és személyes információk
+          ## Milyen információk azok, amik online megosztása rendben van?
+      PrivatePersonalInformation-Unplugged2022_2023:
         markdown: |
           # Privát és személyes információk
           ## Milyen információk azok, amik online megosztása rendben van?
@@ -3912,6 +4043,15 @@ hu-HU:
         questions:
         - {}
       TheRightAppMarkdownLevel2022:
+        markdown: |
+          # A megfelelő alkalmazás
+
+          * Ma már mindenki használ számítógépet, különösen okostelefont.
+          * Az okostelefonos alkalmazások segítenek az embereknek, hogy beszélgessenek a barátokkal, zenét hallgassanak, vásárloljanak, vagy csak egyszerűen böngésszenek az interneten.
+          * Fontos, hogy a programozók megértsék a felhasználók igényeit, és ezeket szem előtt tartva tervezzenek alkalmazásokat!
+
+          ![](https://images.code.org/fb17eeb9238d2f26c6ab40c9841517a7-image-1555611687284.png)
+      TheRightAppMarkdownLevel2022_2023:
         markdown: |
           # A megfelelő alkalmazás
 
@@ -4410,11 +4550,19 @@ hu-HU:
         description: Elértél a tanfolyam utolsó leckéjéhez! Válassz egy projektet,
           amit elkészítesz!
         display_name: Kurzus Projekt vége
+      courseAB_EOC2022_2023:
+        description: Elértél a tanfolyam utolsó leckéjéhez! Válassz egy projektet,
+          amit elkészítesz!
+        display_name: Kurzus Projekt vége
       courseAB_EOC_2021:
         description: Elértél a tanfolyam utolsó leckéjéhez! Válassz egy projektet,
           amit elkészítesz!
         display_name: Kurzus Projekt vége
       courseB_EOC2022:
+        description: Elértél a tanfolyam utolsó leckéjéhez! Válassz egy projektet,
+          amit elkészítesz!
+        display_name: Kurzus Projekt vége
+      courseB_EOC2022_2023:
         description: Elértél a tanfolyam utolsó leckéjéhez! Válassz egy projektet,
           amit elkészítesz!
         display_name: Kurzus Projekt vége
@@ -4438,6 +4586,21 @@ hu-HU:
         - text: Nézd meg figyelmesen az alábbi kódot! Mi történik, ha megnyomod a
             "Futtatás" gombot?
       courseC_multi_artist_prog6_predict12022:
+        answers:
+        - feedback: Hibás! A művés egy négyzetet rajzol.
+          text: A művész olyan háromszöget rajzol, amelyiknek mindhárom oldala egyenlő
+            hosszúságú.
+        - feedback: Hibás! A művés egy négyzetet rajzol.
+          text: A művész egy egyszerű vonalat rajzol.
+        - correct: true
+          feedback: Helyes!
+          text: A művész egy négyzetet fog rajzolni.
+        - feedback: Hibás. A művész egy négyzetet rajzol.
+          text: A művész ötszöget fog rajzolni
+        questions:
+        - text: Nézd meg figyelmesen az alábbi kódot! Mi történik, ha megnyomod a
+            "Futtatás" gombot?
+      courseC_multi_artist_prog6_predict12022_2023:
         answers:
         - feedback: Hibás! A művés egy négyzetet rajzol.
           text: A művész olyan háromszöget rajzol, amelyiknek mindhárom oldala egyenlő
@@ -4529,6 +4692,23 @@ hu-HU:
         - text: Nézd meg közelebbről az alábbi kódot! Mennyi tököt gyűjt a farmer,
             amikor megnyomod a "Futtatás" gombot?
       courseC_multi_harvester_loops11_predict12022:
+        answers:
+        - feedback: Rossz válasz. A gazda 4 tököt gyűjt mindhárom ciklusban. 4-szer
+            3 az 12!
+          text: '4'
+        - correct: true
+          feedback: Helyes!
+          text: '12'
+        - feedback: Rossz válasz. A gazda 4 tököt gyűjt mindhárom ciklusban. 4-szer
+            3 az 12!
+          text: '15'
+        - feedback: Rossz válasz. A gazda 4 tököt gyűjt mindhárom ciklusban. 4-szer
+            3 az 12!
+          text: '20'
+        questions:
+        - text: Nézd meg közelebbről az alábbi kódot! Mennyi tököt gyűjt a farmer,
+            amikor megnyomod a "Futtatás" gombot?
+      courseC_multi_harvester_loops11_predict12022_2023:
         answers:
         - feedback: Rossz válasz. A gazda 4 tököt gyűjt mindhárom ciklusban. 4-szer
             3 az 12!
@@ -4637,6 +4817,24 @@ hu-HU:
         questions:
         - text: Keress hibákat a kódban! Elér a motkány a makkig, vagy van valami
             gond a kóddal?
+      courseC_multi_maze_debugging8_predict12022_2023:
+        answers:
+        - feedback: Rossz válasz. A motkány nem ér el a makkig, mivel rossz irányba
+            fordul.
+          text: A motkány eléri a makkot. Nincsenek hibák a kódban.
+        - correct: true
+          feedback: Helyes! A motkány rossz irányba fordul, és ezért nem jut el a
+            makkig.
+          text: A motkány nem ér el a makkig, mivel rossz irányba fordul.
+        - feedback: Rossz válasz. A motkány nem ér el a makkig, mivel rossz irányba
+            fordul.
+          text: A motkány nem ér el a makkig, mert nincs elég 'előrelépni' blokk a
+            kódban.
+        - feedback: A motkány nem ér el a makkig, mivel rossz irányba fordul.
+          text: A Motkány nem mozdul el az első blokkról.
+        questions:
+        - text: Keress hibákat a kódban! Elér a motkány a makkig, vagy van valami
+            gond a kóddal?
       courseC_multi_maze_debugging8_predict1_2018:
         answers:
         - {}
@@ -4723,6 +4921,20 @@ hu-HU:
         questions:
         - text: Nézd végig a kódot nagyon alaposan! Mi történik, ha megnyomod a "Futtatás"
             gombot?
+      courseC_multi_maze_programming8_predict12022_2023:
+        answers:
+        - feedback: Nem jó! Ez a kód pontosan a malachoz visz.
+          text: 'A madár egy lépéssel a malac előtt megáll. '
+        - correct: true
+          feedback: Helyes!
+          text: A madár eljut a malacig.
+        - feedback: Nem jó! Ez a kód pontosan a malachoz visz.
+          text: A madár beleszalad a TNT-be.
+        - feedback: Nem jó! Ez a kód pontosan a malachoz visz.
+          text: A madár nekifut a falnak.
+        questions:
+        - text: Nézd végig a kódot nagyon alaposan! Mi történik, ha megnyomod a "Futtatás"
+            gombot?
       courseC_multi_maze_programming8_predict1_2018:
         answers:
         - feedback: Nem jó! Ez a kód pontosan a malachoz visz.
@@ -4793,6 +5005,19 @@ hu-HU:
         questions:
         - text: Mit gondolsz, mi történik, ha ráklikkelsz a "Futtatás"-ra?
       courseC_multi_starWars_predict12022:
+        answers:
+        - feedback: Nem jó válasz. Az ismétlés blokk miatt BB-8 előre fog lépni 5-ször.
+          text: BB-8 nem fog megmozdulni.
+        - feedback: Nem jó válasz. Az ismétlés blokk miatt BB-8 előre fog lépni 5-ször.
+          text: BB-8 csak egyet lép előre
+        - correct: true
+          feedback: Helyes!
+          text: BB-8 ötöt lép előre és felszedi az összes fémdarabot
+        - feedback: Nem jó válasz. Az ismétlés blokk miatt BB-8 előre fog lépni 5-ször.
+          text: BB-8 csak hármat lép előre.
+        questions:
+        - text: Mit gondolsz, mi történik, ha ráklikkelsz a "Futtatás"-ra?
+      courseC_multi_starWars_predict12022_2023:
         answers:
         - feedback: Nem jó válasz. Az ismétlés blokk miatt BB-8 előre fog lépni 5-ször.
           text: BB-8 nem fog megmozdulni.
@@ -4891,6 +5116,23 @@ hu-HU:
           text: BB-8 rossz irányba fordul az első ciklus után.
         questions:
         - {}
+      courseC_multi_starWars_predict22022_2023:
+        answers:
+        - feedback: Nem jó a válasz. Az első ciklussal BB-8 csak 2 lépést tesz előre,
+            miközben hármat kellene előre haladnia.
+          text: BB-8 túl messzire megy az első ciklusban.
+        - correct: true
+          feedback: Helyes!
+          text: BB-8 nem lép eleget előre az első ciklusban ahhoz, hogy az összes
+            fémdarabot be tudja gyűjteni.
+        - feedback: Nem jó a válasz. Az első ciklussal BB-8 csak 2 lépést tesz előre,
+            miközben hármat kellene előre haladnia.
+          text: BB-8 gond nélkül összegyűjti az összes fémdarabot.
+        - feedback: Nem jó a válasz. Az első ciklussal BB-8 csak 2 lépést tesz előre,
+            miközben hármat kellene előre haladnia.
+          text: BB-8 rossz irányba fordul az első ciklus után.
+        questions:
+        - {}
       courseC_multi_starWars_predict2_2018:
         answers:
         - feedback: Nem jó a válasz. Az első ciklussal BB-8 csak 2 lépést tesz előre,
@@ -4964,6 +5206,10 @@ hu-HU:
         description: Elértél a D tanfolyam utolsó leckéjéhez! Válassz egy projektet,
           amit elkészítesz.
         display_name: Kurzus Projekt vége
+      courseD_EOC2022_2023:
+        description: Elértél a D tanfolyam utolsó leckéjéhez! Válassz egy projektet,
+          amit elkészítesz.
+        display_name: Kurzus Projekt vége
       courseD_EOC_2020:
         description: Elértél a D tanfolyam utolsó leckéjéhez! Válassz egy projektet,
           amit elkészítesz.
@@ -5032,6 +5278,16 @@ hu-HU:
         - {}
         questions:
         - {}
+      courseD_multi_artist_nestedLoops9_predict12022_2023:
+        answers:
+        - correct: true
+          feedback: Helyes!
+          text: A
+        - text: B
+        - text: C
+        - {}
+        questions:
+        - {}
       courseD_multi_artist_nestedLoops9_predict1_2018:
         answers:
         - correct: true
@@ -5090,6 +5346,20 @@ hu-HU:
         - {}
         questions:
         - {}
+      courseD_multi_bee_conditionals1_predict12022_2023:
+        answers:
+        - {}
+        - correct: true
+          feedback: Helyes!
+        - {}
+        - {}
+        questions:
+        - text: Van egy felhő, amelytől nem látunk jól. A felhő azonnal eltűnik, ha
+            rákattintunk a "Futtatás” gombra. Lehet, hogy virág van a felhő alatt.
+            Ha virágot találunk a felhő helyén, a méhnek egyszer kell összegyűjtenie
+            az összes nektárt. Ha viszont nincs ott virág, a méhnek semmit sem kell
+            tennie. Nézz rá az alábbi kódra! Mit gondolsz, mi fog történni, miután
+            rákattintasz a "Futtatás” gombra?
       courseD_multi_bee_conditionals1_predict1_2018:
         answers:
         - {}
@@ -5173,6 +5443,15 @@ hu-HU:
         - {}
         questions:
         - {}
+      courseD_multi_bee_conditionals7_predict22022_2023:
+        answers:
+        - correct: true
+          feedback: Helyes!
+        - {}
+        - {}
+        - {}
+        questions:
+        - {}
       courseD_multi_bee_conditionals7_predict2_2018:
         answers:
         - correct: true
@@ -5219,6 +5498,15 @@ hu-HU:
         questions:
         - {}
       courseD_multi_bee_nestedLoops2_predict12022:
+        answers:
+        - {}
+        - {}
+        - correct: true
+          feedback: Helyes!
+        - {}
+        questions:
+        - {}
+      courseD_multi_bee_nestedLoops2_predict12022_2023:
         answers:
         - {}
         - {}
@@ -5276,6 +5564,16 @@ hu-HU:
         questions:
         - {}
       courseD_multi_bee_nestedLoops9_predict22022:
+        answers:
+        - text: '4'
+        - correct: true
+          feedback: Helyes!
+          text: '8'
+        - text: '10'
+        - text: '12'
+        questions:
+        - {}
+      courseD_multi_bee_nestedLoops9_predict22022_2023:
         answers:
         - text: '4'
         - correct: true
@@ -5384,6 +5682,15 @@ hu-HU:
         - {}
         questions:
         - {}
+      courseD_multi_farmer_condLoops9_predict12022_2023:
+        answers:
+        - {}
+        - {}
+        - correct: true
+          feedback: Helyes!
+        - {}
+        questions:
+        - {}
       courseD_multi_farmer_condLoops9_predict1_2018:
         answers:
         - {}
@@ -5462,6 +5769,15 @@ hu-HU:
         - {}
         questions:
         - {}
+      courseD_multi_farmer_while10_predict22022_2023:
+        answers:
+        - {}
+        - correct: true
+          feedback: Helyes!
+        - {}
+        - {}
+        questions:
+        - {}
       courseD_multi_farmer_while10_predict2_2018:
         answers:
         - {}
@@ -5508,6 +5824,15 @@ hu-HU:
         questions:
         - {}
       courseD_multi_farmer_while4_predict12022:
+        answers:
+        - {}
+        - {}
+        - correct: true
+          feedback: Helyes!
+        - {}
+        questions:
+        - {}
+      courseD_multi_farmer_while4_predict12022_2023:
         answers:
         - {}
         - {}
@@ -5575,6 +5900,15 @@ hu-HU:
         - {}
         questions:
         - {}
+      courseD_multi_maze_until10_predict22022_2023:
+        answers:
+        - correct: true
+          feedback: Helyes!
+        - {}
+        - {}
+        - {}
+        questions:
+        - {}
       courseD_multi_maze_until10_predict2_2018:
         answers:
         - correct: true
@@ -5622,6 +5956,16 @@ hu-HU:
         questions:
         - {}
       courseD_multi_maze_until2_predict12022:
+        answers:
+        - {}
+        - correct: true
+          feedback: Helyes!
+          text: A madár eljut a malacig.
+        - {}
+        - {}
+        questions:
+        - {}
+      courseD_multi_maze_until2_predict12022_2023:
         answers:
         - {}
         - correct: true
@@ -5708,6 +6052,10 @@ hu-HU:
         description: Elértél az E tanfolyam utolsó leckéjéhez! Válassz egy projektet,
           amit elkészítesz.
         display_name: Kurzus Projekt vége
+      courseE_EOC2022_2023:
+        description: Elértél az E tanfolyam utolsó leckéjéhez! Válassz egy projektet,
+          amit elkészítesz.
+        display_name: Kurzus Projekt vége
       courseE_EOC_2020:
         description: Elértél az E tanfolyam utolsó leckéjéhez! Válassz egy projektet,
           amit elkészítesz.
@@ -5717,6 +6065,10 @@ hu-HU:
           amit elkészítesz.
         display_name: Kurzus Projekt vége
       courseE_EOC_examples2022:
+        description: Elértél az E tanfolyam utolsó leckéjéhez! Válassz egy projektet,
+          amit elkészítesz.
+        display_name: Kurzus Projekt vége
+      courseE_EOC_examples2022_2023:
         description: Elértél az E tanfolyam utolsó leckéjéhez! Válassz egy projektet,
           amit elkészítesz.
         display_name: Kurzus Projekt vége
@@ -5751,6 +6103,15 @@ hu-HU:
         questions:
         - {}
       courseE_multi_farmer_functions11_predict2022:
+        answers:
+        - {}
+        - {}
+        - correct: true
+          feedback: Helyes!
+        - {}
+        questions:
+        - {}
+      courseE_multi_farmer_functions11_predict2022_2023:
         answers:
         - {}
         - {}
@@ -5804,6 +6165,14 @@ hu-HU:
         questions:
         - {}
       courseE_prediction_artistFunction12022:
+        answers:
+        - {}
+        - {}
+        - {}
+        - correct: true
+        questions:
+        - {}
+      courseE_prediction_artistFunction12022_2023:
         answers:
         - {}
         - {}
@@ -5887,6 +6256,18 @@ hu-HU:
           text: Az ördögszekér villogni fog.
         questions:
         - {}
+      courseE_swim_fish_behavior_predict12022_2023:
+        answers:
+        - feedback: Helytelen. Az ördögszekér gördülni kezd.
+        - feedback: Helytelen. Az ördögszekér gördülni kezd.
+          text: Az ördögszekér a képernyő tetején fog lebegni.
+        - correct: true
+          feedback: Helyes!
+          text: Az ördögszekér gördülni kezd.
+        - feedback: Helytelen. Az ördögszekér gördülni kezd.
+          text: Az ördögszekér villogni fog.
+        questions:
+        - {}
       courseE_swim_fish_behavior_predict1_2021:
         answers:
         - feedback: Helytelen. Az ördögszekér gördülni kezd.
@@ -5933,11 +6314,17 @@ hu-HU:
         description: Elértél az F tanfolyam utolsó leckéjéhez! Válassz egy projektet,
           amit felfedezhetsz.
         display_name: Kurzus Projekt vége
+      courseF_EOC_examples2022_2022_pilot_-2022-2_2023:
+        description: Elértél az F tanfolyam utolsó leckéjéhez! Válassz egy projektet,
+          amit felfedezhetsz.
+        display_name: Kurzus Projekt vége
       courseF_EOC_examples_2021:
         description: Elértél az F tanfolyam utolsó leckéjéhez! Válassz egy projektet,
           amit elkészítesz.
         display_name: Kurzus Projekt vége
       courseF_EOC_samples2022:
+        display_name: Kurzus Projekt vége
+      courseF_EOC_samples2022_2023:
         display_name: Kurzus Projekt vége
       courseF_EOC_samples_2021:
         display_name: Kurzus Projekt vége
@@ -5984,9 +6371,33 @@ hu-HU:
         - {}
         questions:
         - {}
+      courseF_events_predict_multi2022_2022_pilot_-2022-2_2023:
+        answers:
+        - {}
+        - {}
+        - correct: true
+        - {}
+        questions:
+        - {}
       courseF_groups_practice_2022_pilot_-2022-2:
         display_name: Gyakorlás rengeteg sprite-tal
+      courseF_groups_practice_2022_pilot_-2022-2_2023:
+        display_name: Gyakorlás rengeteg sprite-tal
       courseF_groups_predict_multi_2022_pilot_-2022-2:
+        answers:
+        - correct: true
+          feedback: Helyes! A sprite, amire rákattintasz, nagyobb lesz.
+          text: A sprite, amire rákattintasz, nagyobb lesz.
+        - feedback: Hibás válasz! A sprite, amire rákattintasz, nagyobb lesz.
+          text: A sprite, amire rákattintasz, kisebb lesz.
+        - feedback: Hibás válasz! A sprite, amire rákattintasz, nagyobb lesz.
+          text: Minden sprite nagyobb lesz.
+        - feedback: Hibás válasz! A sprite, amire rákattintasz, nagyobb lesz.
+          text: Minden sprite kisebb lesz.
+        questions:
+        - text: 'Tippelj: A Futtatás megnyomása után mi történik, ha rákattintasz
+            az egyes sprite-okra?'
+      courseF_groups_predict_multi_2022_pilot_-2022-2_2023:
         answers:
         - correct: true
           feedback: Helyes! A sprite, amire rákattintasz, nagyobb lesz.
@@ -6004,6 +6415,10 @@ hu-HU:
         description: Ezek a projektek a Sprite Lab keretében készültek. Próbáld ki
           őket most, hogy mire használhatók! A tanfolyam végére képes leszel ilyen
           projekteket készíteni, mint ezek... és még sok mást is tudni fogsz!
+      courseF_intro_apps2022_2022_pilot_-2022-2_2023:
+        description: Ezek a projektek a Sprite Lab keretében készültek. Próbáld ki
+          őket most, hogy mire használhatók! A tanfolyam végére képes leszel ilyen
+          projekteket készíteni, mint ezek... és még sok mást is tudni fogsz!
       courseF_labels_predict_multi:
         answers:
         - {}
@@ -6014,6 +6429,15 @@ hu-HU:
         questions:
         - {}
       courseF_labels_predict_multi2022_2022_pilot_-2022-2:
+        answers:
+        - {}
+        - {}
+        - {}
+        - correct: true
+        - {}
+        questions:
+        - {}
+      courseF_labels_predict_multi2022_2022_pilot_-2022-2_2023:
         answers:
         - {}
         - {}
@@ -6077,6 +6501,15 @@ hu-HU:
         questions:
         - {}
       courseF_multi_artist_variables3a_predict12022:
+        answers:
+        - correct: true
+          feedback: Helyes!
+        - {}
+        - {}
+        - {}
+        questions:
+        - {}
+      courseF_multi_artist_variables3a_predict12022_2023:
         answers:
         - correct: true
           feedback: Helyes!
@@ -6149,6 +6582,15 @@ hu-HU:
         questions:
         - {}
       courseF_multi_bee_for3_predict12022:
+        answers:
+        - {}
+        - correct: true
+          feedback: Helyes!
+        - {}
+        - {}
+        questions:
+        - {}
+      courseF_multi_bee_for3_predict12022_2023:
         answers:
         - {}
         - correct: true
@@ -6241,6 +6683,14 @@ hu-HU:
         - {}
         questions:
         - {}
+      courseF_sprites_predict_multi2022_2022_pilot_-2022-2_2023:
+        answers:
+        - {}
+        - correct: true
+        - {}
+        - {}
+        questions:
+        - {}
       courseF_variables2_predict2_multi2022_-2022-2:
         answers:
         - correct: true
@@ -6249,7 +6699,23 @@ hu-HU:
         - {}
         questions:
         - {}
+      courseF_variables2_predict2_multi2022_-2022-2_2023:
+        answers:
+        - correct: true
+        - {}
+        - {}
+        - {}
+        questions:
+        - {}
       courseF_variables2_predict_multi2022_2022_pilot_-2022-2:
+        answers:
+        - {}
+        - {}
+        - correct: true
+        - {}
+        questions:
+        - {}
+      courseF_variables2_predict_multi2022_2022_pilot_-2022-2_2023:
         answers:
         - {}
         - {}
@@ -6273,9 +6739,19 @@ hu-HU:
         - {}
         questions:
         - {}
+      courseF_variables_predict_multi2022_2022_pilot_-2022-2_2023:
+        answers:
+        - {}
+        - correct: true
+        - {}
+        - {}
+        questions:
+        - {}
       courseF_variables_stop:
         content1: a leírás itt található
       courseF_variables_stop2022_2022_pilot_-2022-2:
+        content1: a leírás itt található
+      courseF_variables_stop2022_2022_pilot_-2022-2_2023:
         content1: a leírás itt található
       coursee_prediction_artistfunction2:
         answers:
@@ -6287,6 +6763,15 @@ hu-HU:
         questions:
         - {}
       coursee_prediction_artistfunction22022:
+        answers:
+        - {}
+        - correct: true
+          feedback: Helyes!
+        - {}
+        - {}
+        questions:
+        - {}
+      coursee_prediction_artistfunction22022_2023:
         answers:
         - {}
         - correct: true
@@ -6331,6 +6816,313 @@ hu-HU:
         - {}
         questions:
         - {}
+      csc_animal_adaptations_L3_intro:
+        markdown: "#Make a saját viselkedésed!\n\n<br>\n\n# #Now te irányítod a viselkedést!\n\n##
+          #Edit meglévő viselkedésmódok módosítására és megváltoztatására. \n! []
+          (https://images.code.org/e2e63b1cd7302b6548591c65ad23a0ee-image-1680019477336.gif)\n\n##
+          #Make a saját új viselkedése bármilyen tetszőleges művelettel!\n\n! [] (https://images.code.org/5345f53f3b33b2ad2bbf2bc86539cb96-image-1680019210225.gif)\n\n\n"
+      csc_animal_adaptations_choice:
+        description: Válasszon az alábbi forgatókönyvek közül, és használja saját
+          kreatív kódját egy új és egyedi állati adaptáció modellezéséhez! Több lehetőséget
+          is választhat, és egynél többet is megtehet!
+        display_name: Kódolja saját állati adaptációját!
+      csc_animal_adaptations_intro:
+        markdown: "#Survival Viselkedés\n\n# #Behaviors a természetben\nAz állatok
+          olyan <strong>viselkedést</strong> és cselekvéseket fejlesztettek ki, amelyek
+          segítenek túlélni őket. <br> Például egyes állatok**vándorolnak** télen,
+          mások pedig megpróbálnak** csoportokban** maradni.\n\n<img style=\" float:
+          left; width:50%; padding-top:10px\" src=\"https://images.code.org/424ef84f41b7cabdf62e8cc509abe62c-image-1678322413909.jpg\"
+          style= \"width:60%\">\n<img style=\" float: left; width:46%; padding-top:10px\"
+          src=\"https://images.code.org/7c79e255d048e7ccf099eb61976bb90c-image-1678322295452.jpg\"
+          style= \"width:60%\">\n\n<div style=\"float: left\">\n<h2>Viselkedések a</h2>\nszámítástechnikában
+          A számítástechnikában <strong></strong> a viselkedés olyan cselekvések halmaza,
+          amelyeket a sprite újra és újra megismétli, mint egy animáció. <br>\nA viselkedésen
+          belüli műveletek addig folytatódnak, amíg utasítást nem kapnak a leállításra.
+          \n<br>\n<br>\n\n<img src=\"https://images.code.org/56809209ca823047729cc01a033a7ac0-image-1679937249706.gif\"
+          style=\" float: left; width:70%; padding-top:10px\">\n</div>\n"
+      csc_animal_adaptations_predict:
+        answers:
+        - feedback: Helytelen. A sprite növekedni fog.
+          text: A sprite forog.
+        - correct: true
+          feedback: Helyes!
+          text: A sprite növekedni fog.
+        - feedback: Helytelen. A sprite növekedni fog.
+        - feedback: Helytelen. A sprite növekedni fog.
+        questions:
+        - {}
+      csc_animal_adaptations_shareout:
+        markdown: "# #Share A projekted\n<img src=\"https://images.code.org/c480c5c42d9c02e154943f49bbed87ff-image-1675984438344.13.53
+          PM.png\" style= \"width:60%\">\n<div style= \"width: 60%\"> \n\n**Most,
+          hogy kódolt egy túlélési adaptációt, itt az ideje megosztani! **\n\nAz osztálytársak
+          projektjeinek 9. szintjéről történő megtekintésekor vegye figyelembe a következő
+          kérdéseket: >1.\n\nUgyanazt a környezeti forgatókönyvet választotta, vagy
+          mást? \n>2. Ugyanazokat a kódoló blokkokat használták? \n>3. Gondolod, hogy
+          az állat túlélné a környezet változását? Miért vagy miért nem? \n\n</div>\n\n"
+      csc_bookcover_extensions_choice_2023:
+        description: Válasszon az alábbi tevékenységek közül, hogy felvegye a könyv
+          borítójára! Több lehetőséget is választhat, és egynél többet is megtehet!
+        display_name: Bővítse könyvborítóját!
+      csc_bookcovers_markdown_lesson_4:
+        markdown: "# #Share A\n<img src=\"https://images.code.org/c480c5c42d9c02e154943f49bbed87ff-image-1675984438344.13.53
+          PM.png\" style= \"width:60%\">\n<div style= \"width: 60%\"> \n\nkönyvborító**
+          Most, hogy kódolta a könyv borítóját, itt az ideje megosztani! **\n\nAz
+          osztálytársak projektjeinek megtekintésekor vegye figyelembe a következő
+          kérdéseket: >1.\n\nMilyen fröccsöket és párbeszédet láttál osztálytársaid
+          könyvborítóin?\n>2. Mi történik, ha rákattint a karakterekre?\n>2. Miben
+          hasonlítottak a választásaik a tiédhez? Miben különböztek?\n>3. Szeretné
+          elolvasni a könyvet a borítója alapján?\n</div>\n\n"
+      csc_bookcovers_planning:
+        markdown: "# #Plan A digitális könyvborító Itt az\n\n<div>\n<img style=\"
+          float: left; width:25%; padding-top:10px\" src=\"https://images.code.org/08ece3f13c8f0f82343e302fb52dc45c-image-1676499630865.png\"
+          />\n\n<div style=\"float: left; width: 70%; padding-left:20px\">\n<h4>\n<strong>ideje,
+          hogy elkészítse a tervét!</strong>\n</h4>\n\n>Tartalmaznia kell:\n> - A
+          könyv címe\n> - A szerző\n> - Két főszereplő és egy mondat, hogy leírják
+          magukat \n> - A könyv egy-két mondatos összefoglalása\n\n**Itt van egy tervsablon,
+          amelyet másolhat, hogy saját maga használhassa: **  <a href=\"https://docs.google.com/document/d/18cVgDdq77dbdk6gmQ1rGjHIr7pQk3I2Wb2WsAEeNH64/template/preview\"
+          target=\"_blank\"> Könyvborító tervezési útmutató</a>.\n\n</div>\n"
+      csc_codingwithpoetry_markdown_lesson_4:
+        markdown: "# #Share A verses\n<img src=\"https://images.code.org/c480c5c42d9c02e154943f49bbed87ff-image-1675984438344.13.53
+          PM.png\" style= \"width:60%\">\n<div style= \"width: 60%\"> \n\nalkalmazás**
+          Most, hogy kódolta a versét, itt az ideje megosztani! **\n\nAz osztálytársak
+          projektjének megtekintésével gondoljon egy „ragyogásra”, egy „növekedésre”
+          és egy „kérdésre”, amelyet írhat partnerének:\n\n- A „ragyogás” olyan, amit
+          jól csináltak\n- A „növekedés” valami, amit megváltoztathatnak vagy javíthatnak\n-
+          A „kérdés” olyan dolog, amiről többet szeretne tudni\n</div>\n\n**Készen
+          áll az indulásra? ** Használja <a href=\"https://docs.google.com/document/d/1b6w_lOnibUHyDLYCP3rAWED5iElGm6LOQAJwG-hlih0/template/preview\"
+          target=\"_blank\">ezt az erőforrást</a> , hogy visszajelzést osszon meg
+          partnerével.\n\n"
+      csc_ecosystemes_foodchain_info:
+        markdown: "\n##**Minden ökoszisztéma _finoman kiegyensúlyozott_ élelmiszerlánccal
+          rendelkezik** ## #The tengeri ökoszisztéma tápláléklánc\n: >## #1.\n\n\n\n<img
+          src=\"https://images.code.org/2270cbb4656875db210e9871883a7d45-image-1683677265473.jpg\"
+          style= \"width:80%\">\n<div style= \"width: 80%\"> \n\nA nap energiát biztosít
+          a fotoszintézishez az algákban.\n>## #2. Az algákat a halak fogyasztják.\n>##
+          #3. A halakat az emberek fogják és megeszik, akik hálóval ellátott halászhajókat
+          használnak. \n\n</div>\n\n\n##**Ha túl sok vagy túl kevés egy szervezet
+          van a táplálékláncban, az hatással van az egész ökoszisztémára.**\n"
+      csc_ecosystems_choice_freeplay_2023:
+        description: Ezen ökoszisztéma-szimulációk mindegyikét ki kell igazítani.
+          Válasszon egy ökoszisztémát, futtassa a szimulációt a probléma megfigyeléséhez,
+          és állítsa be a kódot a javításhoz.
+        display_name: Válassz ökoszisztémát!
+      csc_ecosystems_conditionals_overview:
+        markdown: "#Cause & Effect Conditionals \n\n</div>\n\n## Ezután hozzáadja
+          a kódot, hogy ellenőrizze, mennyi alga van a vízben <br>\n<img src=\"https://images.code.org/8be316d4e408466b4300c614712fd652-image-1684798211348.jpg\"
+          \ width=50% style=\"margin-right: 10px; float: right\">\n<br> <br>\n\n-
+          Először a számítógép ellenőrzi, hogy egy feltétel igaz vagy hamis.\n\n-
+          Ha igaz, akkor a blokkokat belül fogja futtatni.\n- Ha hamis, akkor nem
+          fog semmit tenni.\n\n<br>\n<br>\n<br>\n\n## Ha túl sok alga van, akkor a
+          korall megbetegszik\n\n<br>\n\n<img src=\"https://images.code.org/4d8aaa9c6562e0ca0b3d92ff7aed1d03-image-1681847951794.png\"
+          \ width=20% style=\"margin-right: 10px; float: left\">\n<img src=\"https://images.code.org/941774921f367566bef36cb712cf2bfb-image-1681840836607.png\"
+          \ width=30% style=\" margin-right: 10px; float: left\">\n\n<br>\n<br>\n<br>\n<br>\n<br>\n<br>\n<br>\n<br>\n\n***\n\n\n\n##
+          Ha túl kevés az alga, akkor a hal elhagyja\n<img src=\"https://images.code.org/6869f418200edfb88190c0a1e4e5cd10-image-1681838202310.png\"
+          \ width=20% style=\"margin-right: 10px; float: left\">\n\n\n<img src=\"https://images.code.org/233178645539bc7966f55af47865096d-image-1681840833690.png\"
+          \ width=20% style=\" margin-right: 10px; float: left\">\n\n<br>\n<br>\n<br>\n<br>\n<br>\n<br>\n<br>\n<br>\n<br>\n\n\n***\n\n\n\n##
+          Ha éppen elég alga van, akkor a Az ökoszisztéma egészséges\n\n<img src=\"https://images.code.org/8bb9247c35d7d167611b02764beaeff3-image-1681838011797.png\"
+          \ width=20% style=\"margin-right: 30px; float: left\">\n<img src=\"https://images.code.org/b1ed2f5c135f9637fd7a9c5778db2b0c-image-1681840830929.png\"
+          \ width=30% style=\"margin-left: 10px;float: left\">\n<br>\n<br>\n<br>\n<br>\n\n"
+      csc_ecosystems_matching_cfu:
+        answers:
+        - text: "! [] (https://images.code.org/284e3b6e09f5d58052a8840e756644c5-image-1683752491112.png)"
+        - text: "! [] (https://images.code.org/d466f0912cd0cadb3d655263c71c072f-image-1683752857648.jpg)"
+        - text: "! [] (https://images.code.org/de2ab3c63bc2cf7cb319be86d5dcdec0-image-1683752570051.png)"
+        markdown: |+
+          ## Nézze meg a három fenntartható halászati gyakorlatot
+
+          Húzza a kódot a megfelelő képre.
+
+        questions:
+        - text: Hozzon létre egy halászati zónát a hajók számára! [] (https://images.code.org/5f5e0640a82242d632db10b872280e18-image-1683753001613.gif)
+        - text: |-
+            Indítsa el a horgászidényt és a horgászat nélküli szezont
+            ! [] (https://images.code.org/becad47fd19a4d0e938a0cd10c404e41-image-1683838684289.gif)
+        - text: Állítsa be a halászati korlátokat! [] (https://images.code.org/f8bbd98ff6199af5d3ad23d64f39629d-image-1683753402925.gif)
+        title: Illessze a kódot a képhez
+      csc_ecosystems_matching_conditionals:
+        answers:
+        - text: "! [] (https://images.code.org/db1db479bec9b40c6e0574ade394d32b-image-1680118613718.36.41
+            PM.png)"
+        - text: "! [] (https://images.code.org/7c9171ab2ee2e833e5ff60d5519d8728-image-1680118617438.31.00
+            PM.png)"
+        - text: "! [] (https://images.code.org/412968ba617ef19d2049e0e63d271937-image-1680118620636.30.50
+            PM.png)"
+        markdown: |
+          ## Nézze meg a három ökoszisztémát
+
+          Az egyik ökoszisztéma kiegyensúlyozott, a másik kettő pedig különböző módon kiegyensúlyozatlan. Húzza a kódot a megfelelő képre.
+        questions:
+        - text: A túl kevés alga miatt a halak távoznak.! [] (https://images.code.org/c0a28473307b7e9b0e827532d2a6ddda-image-1680212227032.png)
+        - text: |-
+            A túl sok alga megbetegíti a korallt. <br>
+            ! [] (https://images.code.org/1230fd96832b692b0c8ab88e77957f33-image-1680212254888.png)
+        - text: Csak a megfelelő mennyiségű alga lehetővé teszi a beteg korall gyógyulását,
+            és egészségesen tartja a halakat is.! [] (https://images.code.org/3dd061538a7a73285aa0916fdde34e77-image-1680212284869.png)
+        title: Illessze a kódot a képhez
+      csc_ecosystems_matching_events:
+        answers:
+        - text: "! [] (https://images.code.org/bf70d0664e68690f2359a48365e50ccc-image-1680556679495.16.33
+            PM.png)"
+        - text: "! [] (https://images.code.org/fe4d2803162186a8e53ec0027f27a206-image-1680556683660.36.04
+            PM.png)"
+        markdown: |+
+          Nézze meg, mi történik, ha a spritek mindkét animációban érintkeznek. Ezután húzza a kód minden képét a megfelelő képre.
+
+
+        questions:
+        - text: A hajó elkapja a halat.! [] (https://images.code.org/bcdefefdd1787330e3ad72558b5b492d-image-1680556053866.gif)
+        - text: A halak megeszik az algákat. [] (https://images.code.org/73febc58a3d23fbf4c66e693abec9e3d-image-1680556608027.gif)
+        title: Egyeztesse a kódot az animációval
+      csc_ecosystems_overfishing_solution2_overview:
+        markdown: "> #Sustainable halászati gyakorlat #2:\n>>># #Create egy halászati
+          <img src=\"https://images.code.org/123dd5c82e4c03dcbc32b775fd16ec60-image-1681937158113.png\"
+          \ width=400 style=\"margin-right: 30px; float: left\">\nszezon** Határozzon
+          meg korlátokat arra vonatkozóan, hogy az emberek mikor foghatnak halat.
+          Ha nincs horgászidény, az ökoszisztémának ideje felépülni.** #Save \n<br>\n\ntengerünk!
+          \n<img src=\"https://images.code.org/f3f55eddff9891464c8fb5a5405c31c3-image-1681781301257.png\"
+          width=250 style=\"margin-left: 30px; margin-bottom: 30px; float: right\">\n<img
+          src=\"https://images.code.org/cbccfc42b7e1fe329ac7c9c37dfcb6b5-image-1681781296669.png\"
+          width=250 style=\"margin-left: 30px; margin-bottom: 30px; float: right\">\n\n</div>\n\n###
+          A túlhalászás olyan probléma, amely károsíthatja a tengeri élővilág ökoszisztémáit
+          és az azokra támaszkodó embereket. Fontos a fenntartható halászat gyakorlása
+          ezen ökoszisztémák védelme és a halpopulációk egészségének megőrzése érdekében.\n\n\n\n<br>\n<br>\n<br>\n"
+      csc_ecosystems_overfishing_solution3_overview:
+        markdown: "> #Sustainable halászati gyakorlat #3:\n>>># #Set Fishing Limits
+          <img src=\"https://images.code.org/58d4ca52deba39a990c3165ba16e284b-image-1681747630352.png\"
+          \ width=300 style=\"margin-right: 30px; float: left\">\n**A tudósok segíthetnek
+          kitalálni, hogy hány halat lehet kifogni anélkül, hogy kárt okozna az óceánnak.
+          Akkor a halászok tudni fogják, hogy csak ennyi halat fognak.** #Save \n<br>\n<br>\n<br>\n\ntengerünk!
+          \n<img src=\"https://images.code.org/35e557d27c4bdb5f546da560716dc10b-image-1681756387784.jpg\"
+          width=400 style=\"margin-left: 30px; margin-bottom: 30px; float: right\">\n</div>\n\n###
+          Együttműködéssel segíthetünk abban, hogy óceánjaink tele legyenek élettel
+          az elkövetkező generációk számára!\n\n\n\n<br>\n<br>\n<br>\n\n"
+      csc_ecosystems_overfishing_solutions_overview:
+        markdown: "#Save a tengerünk! \n<img src=\"https://images.code.org/d4267a1de975b8ea46468f74187eb95c-image-1681756621010.jpg\"
+          width=400 style=\"margin-left: 30px; margin-bottom: 30px; float: right\">\n</div>\n\n###
+          Az óceánban sok hal van, de néha az emberek túl sok halat fognak, és ez
+          káros lehet az ökoszisztéma számára. A következő szinteken a**három különböző
+          fenntartható halászati gyakorlatot** kódolja, hogy segítsen megvédeni óceáni
+          ökoszisztémáinkat.\n\n<br>\n\n## #To További információ az óceánok fenntartható
+          megoldásairól: <a href=\"https://www.seafoodwatch.org/seafood-basics/sustainable-solutions/avoid-overfishing\"
+          target=\"_blank\">Kattintson ide</a>\n<br>\n<br>\n\n> #Sustainable Halászat
+          Gyakorlat #1:\n>> # #Fishing <img src=\"https://images.code.org/c33e46309c5335dc557c67c34310e723-image-1681511054034.png\"
+          \ width=300 style=\"margin-right: 30px; float: left\">\nZónák**A halászhajók
+          csak a kijelölt területeken halászhatnak. Egyes területek korlátozottak
+          a halászhajók számára, hogy az ökoszisztéma helyreállhasson. \n<br>\n<br>\n\n\n"
+      csc_ecosystems_planning:
+        markdown: "# #Share Az ökoszisztéma szimuláció!\n<img src=\"https://images.code.org/c480c5c42d9c02e154943f49bbed87ff-image-1675984438344.13.53
+          PM.png\" style= \"width:50%\">\n<div style= \"width: 60%\"> \n\n###**Ökológusok!
+          Itt az ideje, hogy megosszák a kutatásaikat! **\n\n## #Explain a következő
+          megfigyeléseket tette:\n\n>1. Magyarázza el az ökoszisztéma táplálékláncát
+          és annak kódolását.\n>2. Túl sok vagy túl kevés volt a szervezet?\n>3. Magyarázza
+          el a szimuláció módosításait. \n>4. Mit vett észre, miután megváltoztatta
+          az értékeket?\n</div>\n\n<div style=\"background-color: #a6e3e8; border-radius:
+          10px; color: #000000; width: 95%; padding: 0.5px 20px 1px 20px;\">\n\n<p
+          style=\"line-height: 1.5; margin-left: 10px; margin-right: 10px; margin-top:
+          20px; margin-bottom: 20px; font-size: 18px; \">\n\n###**Készen áll a további
+          kódolásra? ** \nPróbálja ki a code.org [Expressz tanfolyamát] (https://studio.code.org/s/express-2022),
+          hogy több számítástechnikát tanuljon a saját tempójában.   \n<br>\n</p></div>\n"
+      csc_mappinglandmarks_markdown_lesson_2:
+        markdown: |+
+          # #Plan A tereptárgyak térképe Itt az
+          <div>
+          <img style=" float: left; width:20%; padding-top:10px" src="https://images.code.org/08ece3f13c8f0f82343e302fb52dc45c-image-1676499630865.png" />
+
+          <div style="float: left; width: 70%; padding-left:20px">
+          <h4>
+          <strong>ideje, hogy megtervezze saját tereptárgyak térképét.</strong>
+          </h4>
+
+          Létrehozhat egy térképet az osztályteremből, az iskolából vagy a városból. Lehet, hogy úgy dönt, hogy állami, regionális vagy nemzeti tereptárgyakat tartalmaz. Vagy dönthet úgy, hogy létrehoz egy térképet az osztályban tanult terület alapján.
+
+          A térkép megtervezése során gondoljon azokra a hátterekre, sprite-ekre és beszédre, amelyeket használni szeretne, hogy megtanítsa másoknak a választott tereptárgyakat.
+
+          **Segítségre van szüksége az induláshoz? ** Használja <a href="https://docs.google.com/document/d/1t_-cd-f6EhhUbblu8nSGRajStY9FVwLnKn1Bj90GL3Q/template/preview" target="_blank">ezt az erőforrást</a> a munka megtervezéséhez.
+
+
+      csc_mappinglandmarks_markdown_lesson_4:
+        markdown: "# #Share A helyi tereptárgyak térképe\n\nMost, hogy kódolta a térképet,
+          itt az ideje megosztani! Először fejezzen be egy rövid gondolkodást a projektről:
+          \n\n>1. Magyarázza el a projekt kedvenc részét.\n>2. Mi volt a hasznos kódblokk
+          a projektben?\n>3. Magyarázzon el egy hibát vagy kihívást, amellyel a projekt
+          építése során szembesült.\n>4. Hogyan javította ki a hibát, vagy legyőzte
+          a kihívást?\n>5. Milyen változtatásokat szeretne még végrehajtani a projekt
+          fejlesztése érdekében?\n\nMiközben bemutatja munkáját osztálytársainak,
+          feltétlenül magyarázza el, hogyan működik a kód, milyen tervezési döntéseket
+          hozott, és milyen kihívásokkal szembesült.\n\n\n\n"
+      csc_starquilts_markdown_lesson_1:
+        markdown: |+
+          # #Plan A csillag paplanod
+
+          <div>
+          <img style=" float: left; width:25%; padding-top:10px" src="https://images.code.org/d5e1eedfbe978ba6feebd3f89da0a667-image-1679522801245.png" />
+
+          <div style="float: left; width: 70%; padding-left:20px">
+          <h4>
+          <strong>Ideje megtervezni a csillag paplanját.</strong>
+          </h4>
+
+          > Először négy különböző színt választ ki, és töltse ki a Star Quilt. Ezután még néhány tevékenységet végez mintákkal.
+
+          **Készen áll az indulásra? ** Használja <a href="https://docs.google.com/document/d/1c__530oWLDH-mX0kSxLMStSz-5Lt3cKUm5K3bTV7Uvo/template/preview" target="_blank">ezt az erőforrást</a>.
+
+
+          </div>
+
+
+      csc_timecapsule_choice_lesson_3:
+        description: Válasszon az alábbi tevékenységek közül, hogy frissítse memóriáját
+          arról, hogyan adhat hozzá kódot az időkapszula verséhez! Több lehetőséget
+          is választhat, és egynél többet is megtehet!
+        display_name: Tekintse át kódolási készségeit!
+      csc_timecapsule_choice_lesson_3_ -l3:
+        description: Válasszon az alábbi tevékenységek közül, hogy frissítse memóriáját
+          arról, hogyan adhat hozzá kódot az időkapszula verséhez! Több lehetőséget
+          is választhat, és egynél többet is megtehet!
+        display_name: Tekintse át kódolási készségeit!
+      csc_timecapsule_info_2023:
+        content1: a leírás itt található
+        markdown: "# #Time Kapszulák\n\n<img src=\"https://images.code.org/846b0e2d7a84392a70f432fdce00cd29-image-1676501071993.png\"
+          style= \"float:left; width: 25%; padding-right:30px\"/>\n\n<div style= \"width:
+          70%\"> \n<strong>Az időkapszula olyan, mint egy kincsesdoboz</strong>, de
+          ahelyett, hogy játékokat és édességeket tartana benne, különleges tárgyakat
+          tartalmaz, amelyek elmondják a történetet arról, hogy milyen volt az élet
+          jelenleg. Ezután biztonságos helyre teszik, mint például a földbe temetve
+          vagy egy könyvtár erős dobozában, sok éven át. \n<br>\n<br>\n<strong>Amikor
+          eljön az ideje, valaki kinyitja a dobozt,</strong> és meglátja az összes
+          különleges dolgot, és mindent tudni fog arról, milyen volt az élet, amikor
+          eltemették. \n<br>\n<br>\n<strong>A digitális időkapszula-vers </strong>hasonló,
+          de ahelyett, hogy a dolgokat egy dobozban tartaná, képeket, videókat és
+          üzeneteket tárol, amelyeket számítógépen vagy az interneten tárolnak.\n</div>\n\n"
+      csc_timecapsule_markdown_lesson_2:
+        markdown: "# #Plan Az időkapszula\n\n<div>\n<img style=\" float: left; width:25%;
+          padding-top:10px\" src=\"https://images.code.org/08ece3f13c8f0f82343e302fb52dc45c-image-1676499630865.png\"
+          />\n\n<div style=\"float: left; width: 70%; padding-left:20px\">\n<h4>\n<strong>Ideje
+          megtervezni saját időkapszula versét.</strong>\n</h4>\n\n>Tartalmaznia kell:\n>
+          - Mit szeretsz csinálni \n> - Ami fontos számodra\n> - Mi történik jelenleg
+          a közösségedben \n> - Néhány aktuális világesemény\n\n**Segítségre van szüksége
+          a vers elindításához? ** Használja <a href=\"https://docs.google.com/document/d/1fahr11zX92NW-rLdyZBqrNK2VqgOGtCACkcT87M_luU/template/preview\"
+          target=\"_blank\">ezt az erőforrást</a>.\n\n**Csak inspirációra van szüksége?
+          ** Használja <a href=\"https://docs.google.com/document/d/1-aPA3uJIKJAuQ_2Gtck1Ma79eCFY88ZC8YzegQIckG4/template/preview\"
+          target=\"_blank\">ezt az erőforrást</a>.\n\n</div>\n"
+      csc_timecapsule_markdown_lesson_2_poetry:
+        markdown: "# #Plan A versed\n\n<div>\n<img style=\" float: left; width:25%;
+          padding-top:10px\" src=\"https://images.code.org/08ece3f13c8f0f82343e302fb52dc45c-image-1676499630865.png\"
+          />\n\n<div style=\"float: left; width: 70%; padding-left:20px\">\n<h4>\n<strong>Ideje
+          megtervezni saját versét.</strong>\n</h4>\n\n>Tartalmaznia kell:\n> - Valami,
+          amit szeretsz csinálni.\n> - Valaki fontos neked.\n> - Néhány kedvenc dolgod.
+          \n\n**Készen áll a tervezés megkezdésére? ** Használja <a href=\"https://docs.google.com/document/d/1b6w_lOnibUHyDLYCP3rAWED5iElGm6LOQAJwG-hlih0/template/preview\"
+          target=\"_blank\">ezt az erőforrást</a>.\n\n**Témát keres? ** Használja
+          <a href=\"https://docs.google.com/document/d/1V-DaWOIUk0xT7NYTzx3AEt4my-jc-Hx4vy21Kl4SPoE/template/preview\"
+          target=\"_blank\">ezt az erőforrást</a>.\n\n</div>\n"
+      csc_timecapsule_markdown_lesson_4:
+        markdown: "# #Share Az időkapszulád\n<img src=\"https://images.code.org/c480c5c42d9c02e154943f49bbed87ff-image-1675984438344.13.53
+          PM.png\" style= \"width:60%\">\n<div style= \"width: 60%\"> \n\n**Most,
+          hogy kódoltad az időkapszula versedet, itt az ideje megosztani! **\n\nAz
+          osztálytársak projektjeinek megtekintésekor vegye figyelembe a következő
+          kérdéseket: >1.\n\nMilyen képeket és hangokat láttál osztálytársaid időkapszuláiban?\n>2.
+          Miben különböztek a történeteik a tiédtől?\n>3. Miben hasonlítottak a történeteik
+          a tiédhez?\n>4. Hogyan érezték magukat a képeik?\n</div>\n\n"
       csd-post-survey-2017-q11_2018:
         answers:
         - correct: true
@@ -9477,6 +10269,12 @@ hu-HU:
           # Szuper Digitális Állampolgár
 
           ## Hogyan szólaljunk fel, ha internetes zaklatást tapasztalunk?
+      csf_be_a_super_digital_citizen2022_2023:
+        content1: a leírás itt található
+        markdown: |
+          # Szuper Digitális Állampolgár
+
+          ## Hogyan szólaljunk fel, ha internetes zaklatást tapasztalunk?
       csf_be_a_super_digital_citizen_2021:
         content1: a leírás itt található
         markdown: |
@@ -9491,6 +10289,11 @@ hu-HU:
       csf_digital_trails2022:
         markdown: |-
           # Kövesda digitális nyomot
+
+          ## Milyen információk azok, amiket biztonságosan megoszthatsz, amik részei lehetnek a digitális lábnyomodnak?
+      csf_digital_trails2022_2023:
+        markdown: |-
+          # Kövesd a digitális nyomot
 
           ## Milyen információk azok, amiket biztonságosan megoszthatsz, amik részei lehetnek a digitális lábnyomodnak?
       csf_digital_trails_2021:
@@ -9513,6 +10316,20 @@ hu-HU:
 
           ![](https://images.code.org/bfa69295fbf33c77ecdeb79b5498d8f7-image-1584751340896.png)
       csf_password_power-up2022:
+        content1: a leírás itt található
+        markdown: |
+          #  Javítsd fel a jelszavadat
+
+          ## Tippek, amikkel emlékezni tudsz a jelszavadra
+
+          * Kezdd egy **mondattal**, amire emlékezni fogsz.
+          * Csak a **szüleid** ismerjék a jelszvadat.
+          * Soha ne használj **személyes** adatot a jelszavadban.
+          * Legalább **nyolc** karakterből álló jelszót alkoss.
+          * Használj betűket, számokat és **szimbólumokat** a jelszavadban.
+
+          ![](https://images.code.org/bfa69295fbf33c77ecdeb79b5498d8f7-image-1584751340896.png)
+      csf_password_power-up2022_2023:
         content1: a leírás itt található
         markdown: |
           #  Javítsd fel a jelszavadat
@@ -9566,6 +10383,19 @@ hu-HU:
           * **P**illanatnyi szünet és online gondolkodás.
 
           ![](https://images.code.org/f3e4987a130b27f7b589d7829b753aac-image-1584750971069.png)
+      csf_putting_a_stop_to_online_meanness2022_2023:
+        content1: a leírás itt található
+        markdown: |
+          # STOP szemétkedés
+
+          ## Mit tehetsz, ha valaki az interneten zaklat, szemétkedik veled?
+
+          * **S**arkon fordulni
+          * **T**alálni valakit, akiben megbízol
+          * **O**ldalak rendbetétele
+          * **P**illanatnyi szünet és online gondolkodás.
+
+          ![](https://images.code.org/f3e4987a130b27f7b589d7829b753aac-image-1584750971069.png)
       csf_putting_a_stop_to_online_meanness_2021:
         content1: a leírás itt található
         markdown: |
@@ -9585,6 +10415,11 @@ hu-HU:
 
           ## Hogyan juss el biztonságosan valahová online?
       csf_safety_in_my_online_neighborhood2022:
+        markdown: |-
+          # Az Online Szomszédságom
+
+          ## Hogyan juss el biztonságosan valahová online?
+      csf_safety_in_my_online_neighborhood2022_2023:
         markdown: |-
           # Az Online Szomszédságom
 
@@ -11106,6 +11941,10 @@ hu-HU:
         description: Elértél az E tanfolyam utolsó leckéjéhez! Válassz egy projektet,
           amit elkészítesz.
         display_name: Kurzus Projekt vége
+      express_EOC2022_2023:
+        description: Elértél az E tanfolyam utolsó leckéjéhez! Válassz egy projektet,
+          amit elkészítesz.
+        display_name: Kurzus Projekt vége
       express_EOC_2021:
         description: Elértél az E tanfolyam utolsó leckéjéhez! Válassz egy projektet,
           amit elkészítesz.
@@ -11145,6 +11984,24 @@ hu-HU:
         - text: Nézd meg alaposan ezt a kódot! Ha a kódot lefuttatnánk (figyelmen
             kívül hagyva az esetleges hibákat), hány kincset gyűjtene összesen Laurel?
       grade2_multi_collector_A_predict12022:
+        answers:
+        - feedback: Ne jó! Laurel olyan helyről próbál meg kincset gyűjteni, ahol
+            nincs, és ez hibát okoz.
+          text: Laurel 4 kincset gyűjt be ezzel a kóddal.
+        - correct: true
+          feedback: Helyes!
+          text: Laurel olyan helyen próbál kincset gyűjteni, ahol nincs kincs, és
+            ez hibát okoz.
+        - feedback: Ne jó! Laurel olyan helyről próbál meg kincset gyűjteni, ahol
+            nincs, és ez hibát okoz.
+          text: Laurel összegyűjti az összes kincset.
+        - feedback: Ne jó! Laurel olyan helyről próbál meg kincset gyűjteni, ahol
+            nincs, és ez hibát okoz.
+          text: Laurel 1 kincset gyűjt a kód használatával.
+        questions:
+        - text: Nézd meg ezt a kódot figyelmesen! Mit gondolsz, mi történik, ha lefuttatod
+            a programot?
+      grade2_multi_collector_A_predict12022_2023:
         answers:
         - feedback: Ne jó! Laurel olyan helyről próbál meg kincset gyűjteni, ahol
             nincs, és ez hibát okoz.

@@ -2224,11 +2224,24 @@ ur-PK:
         description: اب تک بہت اچھا کام! اپنی اگلی سرگرمی کا انتخاب کریں۔ آپ کر سکتے
           ہیں کے طور پر کئی کے طور پر مکمل کریں. loops اور آرٹسٹ کے ساتھ مشق رکھیں!
         display_name: آرٹسٹ پریکٹس
+      CourseE_Artist_Practice_2023:
+        description: اب تک بہت اچھا کام! اپنی اگلی سرگرمی کا انتخاب کریں۔ آپ کر سکتے
+          ہیں کے طور پر کئی کے طور پر مکمل کریں. loops اور آرٹسٹ کے ساتھ مشق رکھیں!
+        display_name: آرٹسٹ پریکٹس
       CourseE_Lesson_11_Artist_Practice_2022:
         description: اب تک بہت اچھا کام! اپنی اگلی سرگرمی کا انتخاب کریں۔ آپ کر سکتے
           ہیں کے طور پر کئی کے طور پر مکمل کریں. افعال اور آرٹسٹ کے ساتھ مشق رکھیں!
         display_name: آرٹسٹ پریکٹس
+      CourseE_Lesson_11_Artist_Practice_2023:
+        description: اب تک بہت اچھا کام! اپنی اگلی سرگرمی کا انتخاب کریں۔ آپ کر سکتے
+          ہیں کے طور پر کئی کے طور پر مکمل کریں. افعال اور آرٹسٹ کے ساتھ مشق رکھیں!
+        display_name: آرٹسٹ پریکٹس
       CourseE_Lesson_7_Artist_Practice_2022:
+        description: اب تک بہت اچھا کام! اپنی اگلی سرگرمی کا انتخاب کریں۔ آپ کر سکتے
+          ہیں کے طور پر کئی کے طور پر مکمل کریں. گھوںسلا loops اور آرٹسٹ کے ساتھ مشق
+          رکھیں!
+        display_name: آرٹسٹ پریکٹس
+      CourseE_Lesson_7_Artist_Practice_2023:
         description: اب تک بہت اچھا کام! اپنی اگلی سرگرمی کا انتخاب کریں۔ آپ کر سکتے
           ہیں کے طور پر کئی کے طور پر مکمل کریں. گھوںسلا loops اور آرٹسٹ کے ساتھ مشق
           رکھیں!
@@ -2418,7 +2431,117 @@ ur-PK:
           گے؟*\n\n\nجب اپ آپنا کام ختم کر لیں تو اپنے سیمولیشن کو دوسروں کے ساتھ شریک
           کر لیں. دوسری کے ساتھ اپنا یہ پیغام شریک کریں کہ اگر شہر میں وائرس آ جائے
           تو آپ لوگوں کو کیسے محفوظ رکھیں گے. \n"
+      CourseF_outbreak_story2022_2022_pilot_-2022-2_2023:
+        content1: تفصیل یہاں
+        markdown: "# وباء: اپنا سیمولیشن کوڈ کر لیں\n\n## بھوت شہر مانسٹر ٹاؤن میں
+          خوش آمدید!\nمانسٹر ٹاؤن عمومی طور پر ایک خوشحال اور صحتمند جگہ تھی. اس بھوت
+          شہر میں رہنے والے بھوتوں کو دوستوں کے ساتھ گھومنا پھرنا بہت پسند تھا \n\n<img
+          src=\"https://images.code.org/3b55881f776348c6eb32379e4cbd34e1-image-1603133896503.png\"
+          style=\"width:8%\"> <img src=\"https://images.code.org/3b55881f776348c6eb32379e4cbd34e1-image-1603133896503.png\"
+          style=\"width:8%\"> <img src=\"https://images.code.org/3b55881f776348c6eb32379e4cbd34e1-image-1603133896503.png\"
+          style=\"width:8%\"> <img src=\"https://images.code.org/3b55881f776348c6eb32379e4cbd34e1-image-1603133896503.png\"
+          style=\"width:8%\"> <img src=\"https://images.code.org/3b55881f776348c6eb32379e4cbd34e1-image-1603133896503.png\"
+          style=\"width:8%\"> <img src=\"https://images.code.org/3b55881f776348c6eb32379e4cbd34e1-image-1603133896503.png\"
+          style=\"width:8%\"> <img src=\"https://images.code.org/3b55881f776348c6eb32379e4cbd34e1-image-1603133896503.png\"
+          style=\"width:8%\"> <img src=\"https://images.code.org/3b55881f776348c6eb32379e4cbd34e1-image-1603133896503.png\"
+          style=\"width:8%\"> <img src=\"https://images.code.org/3b55881f776348c6eb32379e4cbd34e1-image-1603133896503.png\"
+          style=\"width:8%\"> <img src=\"https://images.code.org/3b55881f776348c6eb32379e4cbd34e1-image-1603133896503.png\"
+          style=\"width:8%\"> <img src=\"https://images.code.org/3b55881f776348c6eb32379e4cbd34e1-image-1603133896503.png\"
+          style=\"width:8%\">\n\nایک دن ایک بھوت بیمار محسوس کرنے لگا. اس بھوت کو
+          **وائرس** لگ گیا تھا! وائرس ایک بہت چھوٹا جرثومہ ہوتا ہے. دیگر بھوت اس بارے
+          \ میں کچھ خاص پریشان نہیں تھے. وہ اپنے دوستوں کے پاس آتے جاتے رہے.\n\n<img
+          src=\"https://images.code.org/3b55881f776348c6eb32379e4cbd34e1-image-1603133896503.png\"
+          style=\"width:8%\"> <img src=\"https://images.code.org/3b55881f776348c6eb32379e4cbd34e1-image-1603133896503.png\"
+          style=\"width:8%\"> <img src=\"https://images.code.org/3b55881f776348c6eb32379e4cbd34e1-image-1603133896503.png\"
+          style=\"width:8%\"> <img src=\"https://images.code.org/3b55881f776348c6eb32379e4cbd34e1-image-1603133896503.png\"
+          style=\"width:8%\"> <img src=\"https://images.code.org/3b55881f776348c6eb32379e4cbd34e1-image-1603133896503.png\"
+          style=\"width:8%\"> <img src=\"https://images.code.org/f30010a430a4189a734467094842b39d-image-1603134238257.png\"
+          style=\"width:8%\"> <img src=\"https://images.code.org/3b55881f776348c6eb32379e4cbd34e1-image-1603133896503.png\"
+          style=\"width:8%\"> <img src=\"https://images.code.org/3b55881f776348c6eb32379e4cbd34e1-image-1603133896503.png\"
+          style=\"width:8%\"> <img src=\"https://images.code.org/3b55881f776348c6eb32379e4cbd34e1-image-1603133896503.png\"
+          style=\"width:8%\"> <img src=\"https://images.code.org/3b55881f776348c6eb32379e4cbd34e1-image-1603133896503.png\"
+          style=\"width:8%\"> <img src=\"https://images.code.org/3b55881f776348c6eb32379e4cbd34e1-image-1603133896503.png\"
+          style=\"width:8%\">\n\nاس کے بعد جلد ہی دو مزید بھوت بیمار پڑ گئے۔ ان کو
+          بھی وہی وائرس لگ گیا تھا! ایسے لگ رہا تھا ان کو یہ وائرس اپنے بیمار دوست
+          سے لگ گیا تھا.\n\n<img src=\"https://images.code.org/3b55881f776348c6eb32379e4cbd34e1-image-1603133896503.png\"
+          style=\"width:8%\"> <img src=\"https://images.code.org/3b55881f776348c6eb32379e4cbd34e1-image-1603133896503.png\"
+          style=\"width:8%\"> <img src=\"https://images.code.org/3b55881f776348c6eb32379e4cbd34e1-image-1603133896503.png\"
+          style=\"width:8%\"> <img src=\"https://images.code.org/3b55881f776348c6eb32379e4cbd34e1-image-1603133896503.png\"
+          style=\"width:8%\"> <img src=\"https://images.code.org/f30010a430a4189a734467094842b39d-image-1603134238257.png\"
+          style=\"width:8%\"> <img src=\"https://images.code.org/f30010a430a4189a734467094842b39d-image-1603134238257.png\"
+          style=\"width:8%\"> <img src=\"https://images.code.org/f30010a430a4189a734467094842b39d-image-1603134238257.png\"
+          style=\"width:8%\"> <img src=\"https://images.code.org/3b55881f776348c6eb32379e4cbd34e1-image-1603133896503.png\"
+          style=\"width:8%\"> <img src=\"https://images.code.org/3b55881f776348c6eb32379e4cbd34e1-image-1603133896503.png\"
+          style=\"width:8%\"> <img src=\"https://images.code.org/3b55881f776348c6eb32379e4cbd34e1-image-1603133896503.png\"
+          style=\"width:8%\"> <img src=\"https://images.code.org/3b55881f776348c6eb32379e4cbd34e1-image-1603133896503.png\"
+          style=\"width:8%\">\n\nوہ وائرس بتدریج نزدیک میں دوسرے بھوتوں کی جانب پھیلنے
+          لگا. صحتمند بھوت سارے پریشان ہونے لگے کہ وہ خود بھی بیمار ہو جائیں گے. مریض
+          بھوتوں کو یہ پریشانی لاحق ہو گئی کہ ان سے یہ وائرس باقی سب کی جانب پھیل
+          جائے گا.\n\n<img src=\"https://images.code.org/3b55881f776348c6eb32379e4cbd34e1-image-1603133896503.png\"
+          style=\"width:8%\"> <img src=\"https://images.code.org/3b55881f776348c6eb32379e4cbd34e1-image-1603133896503.png\"
+          style=\"width:8%\"> <img src=\"https://images.code.org/3b55881f776348c6eb32379e4cbd34e1-image-1603133896503.png\"
+          style=\"width:8%\"> <img src=\"https://images.code.org/f30010a430a4189a734467094842b39d-image-1603134238257.png\"
+          style=\"width:8%\"> <img src=\"https://images.code.org/f30010a430a4189a734467094842b39d-image-1603134238257.png\"
+          style=\"width:8%\"> <img src=\"https://images.code.org/f30010a430a4189a734467094842b39d-image-1603134238257.png\"
+          style=\"width:8%\"> <img src=\"https://images.code.org/f30010a430a4189a734467094842b39d-image-1603134238257.png\"
+          style=\"width:8%\"> <img src=\"https://images.code.org/f30010a430a4189a734467094842b39d-image-1603134238257.png\"
+          style=\"width:8%\"> <img src=\"https://images.code.org/3b55881f776348c6eb32379e4cbd34e1-image-1603133896503.png\"
+          style=\"width:8%\"> <img src=\"https://images.code.org/3b55881f776348c6eb32379e4cbd34e1-image-1603133896503.png\"
+          style=\"width:8%\"> <img src=\"https://images.code.org/3b55881f776348c6eb32379e4cbd34e1-image-1603133896503.png\"
+          style=\"width:8%\">\n\n\n<div style=\"display: inline-block\">\n<img src=\"https://images.code.org/89376b9ebd5fcee77545f13a7a444430-image-1603135356392.png\"
+          style=\"float:right; width:30%\">\n\n## وائرس کے پھیلاؤ کی روک تھام\nخوش
+          بختانہ، جب وائرس کا مطالعہ کیا گیا تو مانسٹر ٹاؤن کو ایک اہم بات پتہ چلی.
+          انہوں نے دریافت کیا کہ اگر وہ اپنے منہ کے اوپر ماسک پہنیں تو وائرس کے پھیلنے
+          کا امکان کم ہو جاتا ہے. ماسک پہنے رکھنے سے مریض بھوتوں سے صحتمند بھوتوں
+          تک وائرس کے پھیلنے کا امکان کم ہو جاتا تھا.\n\n<img src=\"https://images.code.org/c98f28f9bf6a027143592109d59ee484-image-1603134766360.png\"
+          style=\"width:8%\"> <img src=\"https://images.code.org/bac9dbfaf1815c6627fc24e8e6db396d-image-1603134760456.png\"
+          style=\"width:8%\">\n\n</div>\n\n<img src=\"https://images.code.org/ef7499758496b39bcccc24aabd2af5d7-image-1603137920037.2020-10-19
+          16_04_58.gif\" style=\"float:left; width:25%; padding-right:25px\">\n\n##
+          آگے کیا ہو گا؟\n\nآج کوڈ لکھ کر اپنا **simulation** چلائیں گے کہ مانسٹر
+          ٹاؤن میں پھیلتی وبا کی روک تھام کر سکیں. ایک سیمولیشن کسی پراسس یا سسسٹم
+          کا کمپیوٹر ماڈل ہوتا ہے. کوڈ لکھنا سیکھ لیں اور پیشنگوئی کریں کہ مانسٹر
+          ٹاؤن میں مریضوں        \n       کے پڑوسیوں کے ساتھ کیا ہو گا.\n\n<img src=\"https://images.code.org/fcbfd250d58652bdfd6393ec4f2fe2dd-image-1603134705074.png\"
+          style=\"float:right; width:15%\">\n\n* *وائرس کتنی تیزی سے پھیلے گا؟*\n\n*
+          *کیا ہر کوئی بیمار ہو جائے گا؟*\n\n* *چہرے کے ماسک کیسے مددگار ثابت ہوں
+          گے؟*\n\n\nجب اپ آپنا کام ختم کر لیں تو اپنے سیمولیشن کو دوسروں کے ساتھ شریک
+          کر لیں. دوسری کے ساتھ اپنا یہ پیغام شریک کریں کہ اگر شہر میں وائرس آ جائے
+          تو آپ لوگوں کو کیسے محفوظ رکھیں گے. \n"
       CourseF_outbreak_story22022_2022_pilot_-2022-2:
+        content1: تفصیل یہاں
+        markdown: |-
+          # وباء: ایک سائنسدان کی طرح سوچنا
+
+          <img src="https://images.code.org/89376b9ebd5fcee77545f13a7a444430-image-1603135356392.png" style="float:right; width:30%">
+
+          سیمولیشن ایسی چیزوں کے بارے سیکھنے کا بہترین ذریعہ ہیں جن کا حقیقی دنیا میں مشاہدہ کرنا مشکل ہوتا ہے. یہ سائنسدانوں کے ساتھ مسائل حل کرنے اور نئے خیالات کا محفوظ اور اچھے طریقے سے آزمانے میں مدد کرتے ہیں۔ آپ کا سیمولیشن ایک ذریعہ ہے کہ جس سے مانسٹر ٹاؤن میں وائرس کی وباء کے فرضی پھیلاؤ کا مشاہدہ کیا جا سکتا ہے۔
+
+          ## ری سٹ اور ری پلے!
+          جب آپ نے کوڈ خود بھی لکھا ہو لیکن یہ جاننا ناممکن ہے کہ Run کا بٹن دبانے کے بعد کیا ہوگا. یہ مانسٹر بے ترتیب انداز میں ادھر ادھر گھومتے ہیں، یوں آپ کو پتہ نہیں چلتا کہ وائرس تیز یا سست سرایت کرے گا. آپ جب اپنا کوڈ تبدیل کر لیتے ہیں، اپنا سیمولیشن کئی بار ضرور چلائیں. ہر بار چیزیں ایک ہی جیسی نہیں ہوں گی!
+
+          ## ڈاٹا جمع کرنا
+          سیمولیشن چلاتے ہوئے اپنے مشاہدات کو لکھ کر نوٹ کر لیا کریں. آپ بیمار ہونے والے بھوتوں کا شمار کر سکتے ہیں یا ایک ٹائمر کے ذریعے وقت گن سکتے ہیں کہ حال کس تیزی سے تبدیل ہو رہا ہے. مثلا، اگر کسی بھی مانسٹر نے ماسک نہ پہنا ہو تو سب کے بیمار ہونے میں عموما کتنا عرصہ لگتا ہے؟
+
+          ## پیشنگوئیاں کرنا
+          اگر آپ کو اپنے ماڈل کی سمجھ ہے تو آپ اسے پیشنگوئیاں کرنے کے لئے استعمال کر سکتے ہیں. آپ اپنے سیمولیشن کے run ہونے کا طریقہ کار بھی تبدیل کر سکتے ہیں اور اندازہ لگا سکتے ہیں کہ نتیجہ کیسے مختلف ہو گا. مثلا:
+          * اگر بھوتوں کی تعداد موجودہ شمار سے دوگنی ہوتی تو کیا ہوتا؟
+          * اگر یہ سب بھوت یعنی مانسٹر اپنی موجودہ سے ادھی کم رفتار سے چلتے تو کیا ہوتا؟
+
+          <img src="https://images.code.org/2e83373ffd346ce3f42917a0624d441c-image-1603749526420.png" style="float:right">
+
+          ## کیا مانسٹر ٹاؤن حقیقی دنیا جیسا ہے؟
+          یہ کہ آپ کا ماڈل صرف محدود حد تک حقیقت کے نزدیک ہو سکتا ہے.
+          * وباء کے لئے آپ کا کمپیوٹر سیمولیشن حقیقی دنیا میں وائرس کے وباء سے کتنا مشابہ ہے؟
+          * ان دونوں میں فرق کے نقاط کیا ہیں؟
+          جب آپ اس سرگرمی کو مکمل کر لیں، اپنے استاد یا اپنے فیملی سے ان سوالات کے بارے میں بات چیت کر لیں!
+
+          ## اپنے ماڈل میں آپ اور کیا شامل کر سکتے ہیں؟
+          آپ نے پہلے ہی مانسٹر ٹاؤن میں وباء کے پھیلاؤ کا ماڈل تیار کر لیا ہے. وہ کونسی چیزیں ہیں جو آپ کا ماڈل نہیں کر سکتا یا دکھا سکتا لیکن آپ کی خواہش ہے کہ وہ ویسا کرے یا دکھائے؟ آگے پڑھنے کے لئےcontinue کا بٹن دبائیں اور ماڈل بنانے کے حوالے سے مزید سیکھتے چلے جائیں:
+          * اپنے سیمولیشن میں بھوتوں کی تعداد بڑھا کر
+          * بھوتوں سے وائرس سے ٹھیک ہونے میں مدد کرنے سے
+          * وائرس سے دوچار ہونے کے امکانات، اس سے حفاطت، ویکسین، اور دیگر!
+
+          آپ دیگر لوگوں کے ساتھ اپنا سیمولیشن ماڈل شریک کر سکتے ہیں، یا یہ اپنا یہ پیغام شریک کر سکتے ہیں کہ اگر ہمارے شہر میں وائرس آ جائے تو ہم دوسروں کو صحتمند رکھنے واسطے کیا کر سکتے ہیں۔
+      CourseF_outbreak_story22022_2022_pilot_-2022-2_2023:
         content1: تفصیل یہاں
         markdown: |-
           # وباء: ایک سائنسدان کی طرح سوچنا
@@ -2587,6 +2710,11 @@ ur-PK:
 
           اس سبق میں، آپ خالی جگہ کہانیاں استعمال کرنے اور لکھنے کے لئے سیکھیں گے. یہ کمپیوٹر سائنس سے جوڑتا ہے کہ کس طرح جاننے کے لئے یہ ویڈیو دیکھیں.
       EnvelopeVariables-Unplugged_2021_22022_2022_pilot_-2022-2:
+        markdown: |
+          # خالی خلائی کہانیاں
+
+          اس سبق میں، آپ خالی جگہ کہانیاں استعمال کرنے اور لکھنے کے لئے سیکھیں گے. یہ کمپیوٹر سائنس سے جوڑتا ہے کہ کس طرح جاننے کے لئے یہ ویڈیو دیکھیں.
+      EnvelopeVariables-Unplugged_2021_22022_2022_pilot_-2022-2_2023:
         markdown: |
           # خالی خلائی کہانیاں
 
@@ -4084,11 +4212,17 @@ ur-PK:
       courseAB_EOC2022:
         description: آپ آخری سبق تک پہنچ گئے ہیں! تخلیق کرنے کے لئے ایک منصوبے کا
           انتخاب کریں.
+      courseAB_EOC2022_2023:
+        description: آپ آخری سبق تک پہنچ گئے ہیں! تخلیق کرنے کے لئے ایک منصوبے کا
+          انتخاب کریں.
       courseAB_EOC_2021:
         description: آپ آخری سبق تک پہنچ گئے ہیں! تخلیق کرنے کے لئے ایک منصوبے کا
           انتخاب کریں.
         display_name: کورس پروجیکٹ کا اختتام
       courseB_EOC2022:
+        description: آپ آخری سبق تک پہنچ گئے ہیں! تخلیق کرنے کے لئے ایک منصوبے کا
+          انتخاب کریں.
+      courseB_EOC2022_2023:
         description: آپ آخری سبق تک پہنچ گئے ہیں! تخلیق کرنے کے لئے ایک منصوبے کا
           انتخاب کریں.
       courseB_EOC_2021:
@@ -4105,6 +4239,16 @@ ur-PK:
         questions:
         - {}
       courseC_multi_artist_prog6_predict12022:
+        answers:
+        - {}
+        - {}
+        - correct: true
+          feedback: درست!
+        - feedback: غلط. آرٹسٹ ایک مربع کھینچتا ہے.
+          text: آرٹسٹ ایک پینٹاگون اپنی طرف متوجہ کرے گا
+        questions:
+        - {}
+      courseC_multi_artist_prog6_predict12022_2023:
         answers:
         - {}
         - {}
@@ -4166,6 +4310,16 @@ ur-PK:
         questions:
         - {}
       courseC_multi_harvester_loops11_predict12022:
+        answers:
+        - text: '4'
+        - correct: true
+          feedback: درست!
+          text: '12'
+        - text: '15'
+        - text: '20'
+        questions:
+        - {}
+      courseC_multi_harvester_loops11_predict12022_2023:
         answers:
         - text: '4'
         - correct: true
@@ -4242,6 +4396,17 @@ ur-PK:
         - text: Scrat پہلے بلاک سے منتقل نہیں کرے گا.
         questions:
         - {}
+      courseC_multi_maze_debugging8_predict12022_2023:
+        answers:
+        - feedback: غلط. Scrat acorn تک نہیں پہنچ جائے گا کیونکہ وہ غلط راستہ بدل
+            جاتا ہے.
+        - correct: true
+          feedback: درست! Scrat غلط سمت بدل جاتا ہے اور acorn تک نہیں پہنچ جائے گا.
+        - feedback: غلط. Scrat acorn تک نہیں پہنچ جائے گا کیونکہ وہ غلط راستہ بدل
+            جاتا ہے.
+        - text: Scrat پہلے بلاک سے منتقل نہیں کرے گا.
+        questions:
+        - {}
       courseC_multi_maze_debugging8_predict1_2018:
         answers:
         - {}
@@ -4298,6 +4463,15 @@ ur-PK:
         questions:
         - {}
       courseC_multi_maze_programming8_predict12022:
+        answers:
+        - {}
+        - correct: true
+          feedback: درست!
+        - {}
+        - text: پرندہ دیوار میں چلا جائے گا.
+        questions:
+        - {}
+      courseC_multi_maze_programming8_predict12022_2023:
         answers:
         - {}
         - correct: true
@@ -4365,6 +4539,15 @@ ur-PK:
         - text: بی بی -8 صرف 3 خالی جگہوں کو منتقل کرے گا.
         questions:
         - {}
+      courseC_multi_starWars_predict12022_2023:
+        answers:
+        - {}
+        - {}
+        - correct: true
+          feedback: درست!
+        - text: بی بی -8 صرف 3 خالی جگہوں کو منتقل کرے گا.
+        questions:
+        - {}
       courseC_multi_starWars_predict1_2018:
         answers:
         - {}
@@ -4415,6 +4598,15 @@ ur-PK:
         questions:
         - {}
       courseC_multi_starWars_predict22022:
+        answers:
+        - {}
+        - correct: true
+          feedback: درست!
+        - {}
+        - text: بی بی -8 پہلی لوپ کے بعد غلط سمت بدل جائے گا.
+        questions:
+        - {}
+      courseC_multi_starWars_predict22022_2023:
         answers:
         - {}
         - correct: true
@@ -4476,6 +4668,10 @@ ur-PK:
         description: آپ اپنا حتمی پروجیکٹ شروع کرنے والے ہیں۔ آپ شروع کرنے سے پہلے،
           مثال کے منصوبوں پر دیکھنے میں کچھ وقت دیں۔
         display_name: پروجیکٹ مثالیں
+      courseD_EOC_examples2022_2023:
+        description: آپ اپنا حتمی پروجیکٹ شروع کرنے والے ہیں۔ آپ شروع کرنے سے پہلے،
+          مثال کے منصوبوں پر دیکھنے میں کچھ وقت دیں۔
+        display_name: پروجیکٹ مثالیں
       courseD_EOC_examples_2021:
         description: آپ اپنا حتمی پروجیکٹ شروع کرنے والے ہیں۔ آپ شروع کرنے سے پہلے،
           مثال کے منصوبوں پر دیکھنے میں کچھ وقت دیں۔
@@ -4531,6 +4727,16 @@ ur-PK:
         questions:
         - {}
       courseD_multi_artist_nestedLoops9_predict12022:
+        answers:
+        - correct: true
+          feedback: درست!
+          text: ایے
+        - text: بی
+        - text: سی
+        - text: مندرجہ بالا میں سے کوئی نہیں
+        questions:
+        - {}
+      courseD_multi_artist_nestedLoops9_predict12022_2023:
         answers:
         - correct: true
           feedback: درست!
@@ -4612,6 +4818,19 @@ ur-PK:
         - text: 'شہد کی مکھی بادل تک نہیں پہنچ سکے گی۔ '
         questions:
         - {}
+      courseD_multi_bee_conditionals1_predict12022_2023:
+        answers:
+        - {}
+        - correct: true
+          feedback: درست!
+        - {}
+        - text: 'شہد کی مکھی بادل تک نہیں پہنچ سکے گی۔ '
+        questions:
+        - text: ہمارے نقطہ نظر کو روکنے والا بادل ہے. ایک بار جب ہم “چلائیں” پر کلک
+            کریں تو بادل غائب ہو جائے گا. اس بادل کے نیچے ایک پھول بھی ہو سکتا تھا۔
+            ایک پھول ہے تو، شہد کی مکھی ایک بار امرت جمع کرنے کی ضرورت ہو گی. اگر
+            پھول نہیں ہے تو مکھی کو کچھ نہیں کرنا چاہئے. ذیل میں کوڈ پر ایک اچھی نظر
+            ڈالیں. “چلائیں” پر کلک کرنے کے بعد آپ کیا سوچتے ہیں؟
       courseD_multi_bee_conditionals1_predict1_2018:
         answers:
         - {}
@@ -4698,6 +4917,16 @@ ur-PK:
             کرے گی.
         questions:
         - {}
+      courseD_multi_bee_conditionals7_predict22022_2023:
+        answers:
+        - correct: true
+          feedback: درست!
+        - {}
+        - {}
+        - text: شہد کی مکھی پھولوں اور شہد دونوں سے شہد اور امرت حاصل کرنے کی کوشش
+            کرے گی.
+        questions:
+        - {}
       courseD_multi_bee_conditionals7_predict2_2018:
         answers:
         - correct: true
@@ -4762,6 +4991,15 @@ ur-PK:
         - text: مکھی غلط سمت بدل جائے گی.
         questions:
         - {}
+      courseD_multi_bee_nestedLoops2_predict12022_2023:
+        answers:
+        - {}
+        - {}
+        - correct: true
+          feedback: درست!
+        - text: مکھی غلط سمت بدل جائے گی.
+        questions:
+        - {}
       courseD_multi_bee_nestedLoops2_predict1_2018:
         answers:
         - {}
@@ -4817,6 +5055,16 @@ ur-PK:
         questions:
         - {}
       courseD_multi_bee_nestedLoops9_predict22022:
+        answers:
+        - text: '4'
+        - correct: true
+          feedback: درست!
+          text: '8'
+        - text: '10'
+        - text: '12'
+        questions:
+        - {}
+      courseD_multi_bee_nestedLoops9_predict22022_2023:
         answers:
         - text: '4'
         - correct: true
@@ -4903,6 +5151,15 @@ ur-PK:
         - text: کاٹنے کی مشین صرف قددو منتخب کریں گے.
         questions:
         - {}
+      courseD_multi_farmer_condLoops9_predict12022_2023:
+        answers:
+        - {}
+        - {}
+        - correct: true
+          feedback: درست!
+        - text: کاٹنے کی مشین صرف قددو منتخب کریں گے.
+        questions:
+        - {}
       courseD_multi_farmer_condLoops9_predict1_2018:
         answers:
         - {}
@@ -4979,6 +5236,15 @@ ur-PK:
         - text: یہ کوڈ آخری سوراخ اچھوتا چھوڑ دے گا.
         questions:
         - {}
+      courseD_multi_farmer_while10_predict22022_2023:
+        answers:
+        - {}
+        - correct: true
+          feedback: درست!
+        - {}
+        - text: یہ کوڈ آخری سوراخ اچھوتا چھوڑ دے گا.
+        questions:
+        - {}
       courseD_multi_farmer_while10_predict2_2018:
         answers:
         - {}
@@ -5031,6 +5297,15 @@ ur-PK:
         questions:
         - {}
       courseD_multi_farmer_while4_predict12022:
+        answers:
+        - {}
+        - {}
+        - correct: true
+          feedback: درست!
+        - text: کسان صرف ایک بار گندگی نکال دے گا۔
+        questions:
+        - {}
+      courseD_multi_farmer_while4_predict12022_2023:
         answers:
         - {}
         - {}
@@ -5107,6 +5382,21 @@ ur-PK:
           text: زومبی آگے کے راستے کے اختتام پر پھنس جائے گا.
         questions:
         - {}
+      courseD_multi_maze_until10_predict22022_2023:
+        answers:
+        - correct: true
+          feedback: درست!
+          text: زومبی صحیح راستے کی طرف سے گزر اور ہمیشہ کے لئے آگے پیچھے جا ختم ہو
+            جائے گا.
+        - feedback: غلط. زومبی صحیح راستے کی طرف سے گزر اور ہمیشہ کے لئے آگے پیچھے
+            جا ختم ہو جائے گا.
+        - feedback: غلط. زومبی صحیح راستے کی طرف سے گزر اور ہمیشہ کے لئے آگے پیچھے
+            جا ختم ہو جائے گا.
+        - feedback: اس کوڈ میں، زومبی صحیح راستے کی طرف سے گزر جائے گا اور ہمیشہ کے
+            لئے آگے پیچھے جا ختم ہو جائے گا.
+          text: زومبی آگے کے راستے کے اختتام پر پھنس جائے گا.
+        questions:
+        - {}
       courseD_multi_maze_until10_predict2_2018:
         answers:
         - correct: true
@@ -5163,6 +5453,15 @@ ur-PK:
         questions:
         - {}
       courseD_multi_maze_until2_predict12022:
+        answers:
+        - {}
+        - correct: true
+          feedback: درست!
+        - {}
+        - text: پرندہ غلط طریقے سے بدل جاتا ہے۔
+        questions:
+        - {}
+      courseD_multi_maze_until2_predict12022_2023:
         answers:
         - {}
         - correct: true
@@ -5289,6 +5588,15 @@ ur-PK:
         - {}
         questions:
         - {}
+      courseE_multi_farmer_functions11_predict2022_2023:
+        answers:
+        - {}
+        - {}
+        - correct: true
+          feedback: درست!
+        - {}
+        questions:
+        - {}
       courseE_multi_farmer_functions11_predict_2018:
         answers:
         - {}
@@ -5342,6 +5650,14 @@ ur-PK:
         questions:
         - {}
       courseE_prediction_artistFunction12022:
+        answers:
+        - {}
+        - {}
+        - {}
+        - correct: true
+        questions:
+        - {}
+      courseE_prediction_artistFunction12022_2023:
         answers:
         - {}
         - {}
@@ -5417,6 +5733,18 @@ ur-PK:
           text: tumbleweed پر اور بند جھپکنے گا.
         questions:
         - {}
+      courseE_swim_fish_behavior_predict12022_2023:
+        answers:
+        - feedback: غلط. ٹیمبل ویڈ ٹکرانا شروع ہو جائے گا.
+        - feedback: غلط. ٹیمبل ویڈ ٹکرانا شروع ہو جائے گا.
+          text: tumbleweed سکرین کے سب سے اوپر پر تیرنے گا.
+        - correct: true
+          feedback: درست!
+          text: ٹیمبل ویڈ ٹکرانا شروع ہو جائے گا.
+        - feedback: غلط. ٹیمبل ویڈ ٹکرانا شروع ہو جائے گا.
+          text: tumbleweed پر اور بند جھپکنے گا.
+        questions:
+        - {}
       courseE_swim_fish_behavior_predict1_2021:
         answers:
         - feedback: غلط. ٹیمبل ویڈ ٹکرانا شروع ہو جائے گا.
@@ -5438,11 +5766,17 @@ ur-PK:
       courseF_EOC_examples2022_2022_pilot_-2022-2:
         description: آپ کورس F کے آخر تک پہنچ گئے ہیں! تلاش کرنے کے لئے ایک منصوبے
           کا انتخاب کریں.
+      courseF_EOC_examples2022_2022_pilot_-2022-2_2023:
+        description: آپ کورس F کے آخر تک پہنچ گئے ہیں! تلاش کرنے کے لئے ایک منصوبے
+          کا انتخاب کریں.
       courseF_EOC_examples_2021:
         description: آپ کورس F کے آخر تک پہنچ گئے ہیں! تخلیق کرنے کے لئے ایک منصوبے
           کا انتخاب کریں.
         display_name: کورس پروجیکٹ کا اختتام
       courseF_EOC_samples2022:
+        description: آپ اپنا حتمی پروجیکٹ شروع کرنے والے ہیں۔ آپ شروع کرنے سے پہلے،
+          مثال کے منصوبوں پر دیکھنے میں کچھ وقت دیں۔
+      courseF_EOC_samples2022_2023:
         description: آپ اپنا حتمی پروجیکٹ شروع کرنے والے ہیں۔ آپ شروع کرنے سے پہلے،
           مثال کے منصوبوں پر دیکھنے میں کچھ وقت دیں۔
       courseF_EOC_samples_2021:
@@ -5499,11 +5833,20 @@ ur-PK:
           میں مثال کے منصوبوں کو تلاش کریں. دبائیں\ "ختم\” جب آپ اپنے پروگرام کی منصوبہ
           بندی شروع کرنے کے لئے تیار ہوں.
         display_name: ریسرچ - نمونہ پروگرام
+      courseF_collector_samples_2022_pilot_-2022-2_2023:
+        description: آپ کو ایک کلیکٹر کھیل پیدا کیا جائے گا. شروع کرنے سے پہلے، ذیل
+          میں مثال کے منصوبوں کو تلاش کریں. دبائیں\ "ختم\” جب آپ اپنے پروگرام کی منصوبہ
+          بندی شروع کرنے کے لئے تیار ہوں.
+        display_name: ریسرچ - نمونہ پروگرام
       courseF_events_freeplay:
         description: اب آپ اپنے منصوبے کو بہتر بنانے کے لئے جو کچھ سیکھا ہے وہ استعمال
           کرسکتے ہیں! اپنے پروگرام میں شامل کریں یا کچھ نیا شروع کریں!
         display_name: واقعات - مفت کھیل
       courseF_events_freeplay2022_2022_pilot_-2022-2:
+        description: اب آپ اپنے منصوبے کو بہتر بنانے کے لئے جو کچھ سیکھا ہے وہ استعمال
+          کرسکتے ہیں! اپنے پروگرام میں شامل کریں یا کچھ نیا شروع کریں!
+        display_name: واقعات - مفت کھیل
+      courseF_events_freeplay2022_2022_pilot_-2022-2_2023:
         description: اب آپ اپنے منصوبے کو بہتر بنانے کے لئے جو کچھ سیکھا ہے وہ استعمال
           کرسکتے ہیں! اپنے پروگرام میں شامل کریں یا کچھ نیا شروع کریں!
         display_name: واقعات - مفت کھیل
@@ -5524,6 +5867,10 @@ ur-PK:
 
 
       courseF_events_practice2022_2022_pilot_-2022-2:
+        description: اب تک بہت اچھا کام! اپنی اگلی سرگرمی کا انتخاب کریں۔ آپ کر سکتے
+          ہیں کے طور پر کئی کے طور پر مکمل کریں. واقعات کے ساتھ مشق کرتے رہو!
+        display_name: واقعات پریکٹس
+      courseF_events_practice2022_2022_pilot_-2022-2_2023:
         description: اب تک بہت اچھا کام! اپنی اگلی سرگرمی کا انتخاب کریں۔ آپ کر سکتے
           ہیں کے طور پر کئی کے طور پر مکمل کریں. واقعات کے ساتھ مشق کرتے رہو!
         display_name: واقعات پریکٹس
@@ -5557,7 +5904,26 @@ ur-PK:
           text: سپرائٹ سب سے پہلے گھماؤ اور پھر بعد میں منتقل کرے گا.
         questions:
         - text: کوڈ پڑھیں، پھر پیشن گوئی کریں.
+      courseF_events_predict_multi2022_2022_pilot_-2022-2_2023:
+        answers:
+        - feedback: غلط. سپرائٹ بھی مشرق منتقل ہو جائے گا.
+          text: سپرائٹ صرف حق گھماؤ گا.
+        - feedback: غلط. سپرائٹ کتائی بند نہیں کیا ہے، لہذا یہ دونوں بیک وقت کریں
+            گے.
+          text: سپرائٹ صرف مشرق منتقل ہو جائے گا.
+        - correct: true
+          feedback: درست! دونوں رویوں کو بیک وقت ہو جائے گا.
+          text: سپرائٹ گھماؤ اور ایک ہی وقت میں منتقل ہو جائے گا.
+        - feedback: غلط. سپرائٹ لیب میں، منسلک بلاکس ہر ایک کے بعد فوری طور پر ہو
+            گزشتہ ایک، تو دونوں رویے بیک وقت ہو جائے گا.
+          text: سپرائٹ سب سے پہلے گھماؤ اور پھر بعد میں منتقل کرے گا.
+        questions:
+        - text: کوڈ پڑھیں، پھر پیشن گوئی کریں.
       courseF_groups_freeplay_2022_pilot_-2022-2:
+        description: اب آپ جو کچھ بھی چاہتے ہیں اسے بنانے کے لئے سیکھا ہے استعمال
+          کر سکتے ہیں! بہت سے sprites کے ساتھ ایک انٹرایکٹو پروگرام بنائیں!
+        display_name: بہت سارے سپرائٹس - مفت کھیل
+      courseF_groups_freeplay_2022_pilot_-2022-2_2023:
         description: اب آپ جو کچھ بھی چاہتے ہیں اسے بنانے کے لئے سیکھا ہے استعمال
           کر سکتے ہیں! بہت سے sprites کے ساتھ ایک انٹرایکٹو پروگرام بنائیں!
         display_name: بہت سارے سپرائٹس - مفت کھیل
@@ -5566,7 +5932,26 @@ ur-PK:
           ہیں کے طور پر کئی کے طور پر مکمل کریں. واقعات اور sprites کے گروپوں کے ساتھ
           مشق رکھیں!
         display_name: سپرائٹس پریکٹس کے بہت سے
+      courseF_groups_practice_2022_pilot_-2022-2_2023:
+        description: اب تک بہت اچھا کام! اپنی اگلی سرگرمی کا انتخاب کریں۔ آپ کر سکتے
+          ہیں کے طور پر کئی کے طور پر مکمل کریں. واقعات اور sprites کے گروپوں کے ساتھ
+          مشق رکھیں!
+        display_name: سپرائٹس پریکٹس کے بہت سے
       courseF_groups_predict_multi_2022_pilot_-2022-2:
+        answers:
+        - correct: true
+          feedback: درست! سپرائٹ آپ پر کلک کریں بڑا ہو جائے گا.
+          text: سپرائٹ آپ پر کلک کریں بڑا ہو جائے گا.
+        - feedback: غلط. سپرائٹ آپ پر کلک کریں بڑا ہو جائے گا.
+          text: سپرائٹ آپ پر کلک کریں چھوٹے ہو جائے گا.
+        - feedback: غلط. سپرائٹ آپ پر کلک کریں بڑا ہو جائے گا.
+          text: sprites کے تمام بڑا ہو جائے گا.
+        - feedback: غلط. سپرائٹ آپ پر کلک کریں بڑا ہو جائے گا.
+          text: تمام sprites کے چھوٹے ہو جائے گا.
+        questions:
+        - text: 'ایک پیشن گوئی بنائیں: رن دبانے کے بعد، جب آپ sprites میں سے ایک پر
+            کلک کریں گے تو کیا ہوگا؟'
+      courseF_groups_predict_multi_2022_pilot_-2022-2_2023:
         answers:
         - correct: true
           feedback: درست! سپرائٹ آپ پر کلک کریں بڑا ہو جائے گا.
@@ -5596,6 +5981,11 @@ ur-PK:
           دیکھنے کے لئے اب ان کو باہر کرنے کی کوشش کریں. اس کورس کے اختتام تک، آپ
           ان کی طرح اپنے منصوبوں کو بنانے کے قابل ہو جائیں گے... اور زیادہ!
         display_name: سپرائٹ لیب اطلاقات
+      courseF_intro_apps2022_2022_pilot_-2022-2_2023:
+        description: یہ منصوبے تمام سپرائٹ لیب کے ساتھ بنائے گئے تھے. ممکن ہے کیا
+          دیکھنے کے لئے اب ان کو باہر کرنے کی کوشش کریں. اس کورس کے اختتام تک، آپ
+          ان کی طرح اپنے منصوبوں کو بنانے کے قابل ہو جائیں گے... اور زیادہ!
+        display_name: سپرائٹ لیب اطلاقات
       courseF_labels_predict_multi:
         answers:
         - feedback: غلط. متغیر لیبل مماثل نہیں ہیں.
@@ -5613,6 +6003,22 @@ ur-PK:
         - text: یہ کوڈ واقف نظر آتے ہیں لیکن احتیاط سے اسے پڑھ سکتے ہیں. اگر صارف
             “پیزا” میں ٹائپ کرتا ہے تو کیا پرنٹ کیا جائے گا؟
       courseF_labels_predict_multi2022_2022_pilot_-2022-2:
+        answers:
+        - feedback: غلط. متغیر لیبل مماثل نہیں ہیں.
+          text: "“ایک پیزا صحیح اپ آ رہا ہے!”"
+        - feedback: غلط. ایک متغیر کا لیبل کبھی چھپی ہوئی نہیں ہے.
+          text: "” ایک کھانا بالکل اوپر آ رہا ہے!”"
+        - feedback: غلط. ایک متغیر کا لیبل کبھی چھپی ہوئی نہیں ہے.
+          text: "” ایک کھانا صحیح اوپر آ رہا ہے!”"
+        - correct: true
+          feedback: درست! متغیر لیبل مماثل نہیں ہیں.
+          text: "” ایک بالکل اوپر آ رہا ہے!”"
+        - feedback: غلط. ایونٹ اور پرنٹ بلاک اب بھی کام کرے گا.
+          text: کچھ بھی چھاپا نہیں جائے گا.
+        questions:
+        - text: یہ کوڈ واقف نظر آتے ہیں لیکن احتیاط سے اسے پڑھ سکتے ہیں. اگر صارف
+            “پیزا” میں ٹائپ کرتا ہے تو کیا پرنٹ کیا جائے گا؟
+      courseF_labels_predict_multi2022_2022_pilot_-2022-2_2023:
         answers:
         - feedback: غلط. متغیر لیبل مماثل نہیں ہیں.
           text: "“ایک پیزا صحیح اپ آ رہا ہے!”"
@@ -5683,6 +6089,15 @@ ur-PK:
         questions:
         - {}
       courseF_multi_artist_variables3a_predict12022:
+        answers:
+        - correct: true
+          feedback: درست!
+        - {}
+        - {}
+        - text: کمپیوٹر صارف کو ایک نمبر کے لئے فوری طور پر کرے گا.
+        questions:
+        - {}
+      courseF_multi_artist_variables3a_predict12022_2023:
         answers:
         - correct: true
           feedback: درست!
@@ -5775,6 +6190,16 @@ ur-PK:
             گی۔ '
         questions:
         - {}
+      courseF_multi_bee_for3_predict12022_2023:
+        answers:
+        - {}
+        - correct: true
+          feedback: درست!
+        - {}
+        - text: 'شہد کی مکھی آگے بڑھے گی اور پھول نمبر 1 اور 4 سے ایک امرت جمع کرے
+            گی۔ '
+        questions:
+        - {}
       courseF_multi_bee_for3_predict1_2018:
         answers:
         - {}
@@ -5848,11 +6273,19 @@ ur-PK:
         description: جو کچھ بھی آپ چاہتے ہیں پیدا کرنے کے لئے آپ کی باری ہے! آپ کس
           قسم کا منصوبہ بنا دیں گے؟
         display_name: سپرائٹس - مفت کھیل
+      courseF_sprites_freeplay2022_2022_pilot_-2022-2_2023:
+        description: جو کچھ بھی آپ چاہتے ہیں پیدا کرنے کے لئے آپ کی باری ہے! آپ کس
+          قسم کا منصوبہ بنا دیں گے؟
+        display_name: سپرائٹس - مفت کھیل
       courseF_sprites_practice:
         description: اب تک بہت اچھا کام! اپنی اگلی سرگرمی کا انتخاب کریں۔ آپ کر سکتے
           ہیں کے طور پر کئی کے طور پر مکمل کریں. sprites اور رویے کے ساتھ مشق رکھیں!
         display_name: سپرائٹس پریکٹس
       courseF_sprites_practice2022_2022_pilot_-2022-2:
+        description: اب تک بہت اچھا کام! اپنی اگلی سرگرمی کا انتخاب کریں۔ آپ کر سکتے
+          ہیں کے طور پر کئی کے طور پر مکمل کریں. sprites اور رویے کے ساتھ مشق رکھیں!
+        display_name: سپرائٹس پریکٹس
+      courseF_sprites_practice2022_2022_pilot_-2022-2_2023:
         description: اب تک بہت اچھا کام! اپنی اگلی سرگرمی کا انتخاب کریں۔ آپ کر سکتے
           ہیں کے طور پر کئی کے طور پر مکمل کریں. sprites اور رویے کے ساتھ مشق رکھیں!
         display_name: سپرائٹس پریکٹس
@@ -5890,11 +6323,32 @@ ur-PK:
           text: طیاروں حادثے کرے گا.
         questions:
         - text: کوڈ پڑھیں، پھر پیشن گوئی کریں.
+      courseF_sprites_predict_multi2022_2022_pilot_-2022-2_2023:
+        answers:
+        - feedback: غلط. ان sprites ہے “رویے” جو چلتے رہتے ہیں جب تک کہ وہ روکنے کے
+            لئے کہا جاتا ہے.
+          text: دونوں طیارے گرڈ کے ساتھ ساتھ ایک جگہ منتقل کریں گے، پھر روکیں گے.
+        - correct: true
+          feedback: درست! یہ طرز عمل طیاروں کو بتاتے ہیں کہ چلنا شروع کر دیں اور چلتے
+            رہیں۔
+          text: دونوں طیارے چلنا شروع ہو جائیں گے اور رک نہیں جائیں گے۔
+        - feedback: غلط. سپرائٹ لیب میں کوڈ کے ہر بلاک اگلے کے بعد فوری طور پر چلتا
+            ہے.
+          text: ایک طیارہ پہلے حرکت کرے گا اور دوسرا طیارہ بعد میں حرکت کرے گا۔
+        - feedback: غلط. طیاروں کو اس طرح سے پوزیشن میں نہیں رکھا جاتا ہے جس سے انہیں
+            چھو جائے گا.
+          text: طیاروں حادثے کرے گا.
+        questions:
+        - text: کوڈ پڑھیں، پھر پیشن گوئی کریں.
       courseF_text_practice:
         description: اب تک بہت اچھا کام! اپنی اگلی سرگرمی کا انتخاب کریں۔ آپ کر سکتے
           ہیں کے طور پر کئی کے طور پر مکمل کریں. متن اور اشارے کے ساتھ مشق کرتے رہیں!
         display_name: متن اور اشارے کی مشق
       courseF_text_practice2022_2022_pilot_-2022-2:
+        description: اب تک بہت اچھا کام! اپنی اگلی سرگرمی کا انتخاب کریں۔ آپ کر سکتے
+          ہیں کے طور پر کئی کے طور پر مکمل کریں. متن اور اشارے کے ساتھ مشق کرتے رہیں!
+        display_name: متن اور اشارے کی مشق
+      courseF_text_practice2022_2022_pilot_-2022-2_2023:
         description: اب تک بہت اچھا کام! اپنی اگلی سرگرمی کا انتخاب کریں۔ آپ کر سکتے
           ہیں کے طور پر کئی کے طور پر مکمل کریں. متن اور اشارے کے ساتھ مشق کرتے رہیں!
         display_name: متن اور اشارے کی مشق
@@ -5915,7 +6369,40 @@ ur-PK:
           text: کچھ بھی نہیں ہو گا کیونکہ `گنتی ایک عدد نہیں ہے۔
         questions:
         - text: 'ایک پیشن گوئی کریں: خرگوش کیا کہیں گے؟'
+      courseF_variables2_predict2_multi2022_-2022-2_2023:
+        answers:
+        - correct: true
+          feedback: درست! نمبر 5 متغیر میں محفوظ کیا جاتا ہے اور پھر دوبارہ استعمال
+            کیا جاتا ہے جب سپرائٹ بولتا ہے.
+          text: خرگوش “5" کہیں گے.
+        - feedback: غلط. اس پروگرام میں کوئی فوری طور پر نہیں ہے. نمبر براہ راست کوڈ
+            میں مقرر کیا جاتا ہے.
+          text: خرگوش سپرائٹ جو بھی تعداد ٹائپ کیا جاتا ہے کہیں گے.
+        - feedback: غلط. `گنتی ایک متغیر ہے۔ جب اس بلاک چلتا ہے، یہ ہو جاتا ہے جو
+            کچھ بھی تعداد محفوظ کیا جاتا ہے. خرگوش “5" کہیں گے.
+          text: خرگوش “شمار” کہیں گے.
+        - feedback: غلط. نمبر 5 متغیر میں محفوظ اور استعمال کیا جاتا ہے جب سپرائٹ
+            بولتا ہے.
+          text: کچھ بھی نہیں ہو گا کیونکہ `گنتی ایک عدد نہیں ہے۔
+        questions:
+        - text: 'ایک پیشن گوئی کریں: خرگوش کیا کہیں گے؟'
       courseF_variables2_predict_multi2022_2022_pilot_-2022-2:
+        answers:
+        - feedback: غلط. اس عدد کو متغیر میں محفوظ کیا جاتا ہے اور گاجر سپرائٹ بنانے
+            کے لیے استعمال کیا جاتا ہے۔
+          text: پروگرام جو بھی نمبر ٹائپ کیا جاتا ہے پرنٹ کرے گا.
+        - feedback: غلط. اس عدد کو متغیر میں محفوظ کیا جاتا ہے اور گاجر سپرائٹ بنانے
+            کے لیے استعمال کیا جاتا ہے۔
+          text: خرگوش سپرائٹ جو بھی تعداد ٹائپ کیا جاتا ہے کہیں گے.
+        - correct: true
+          feedback: درست! بنایا sprites کی تعداد متغیر میں محفوظ تعداد ہے.
+          text: پروگرام ہے کہ بہت سے نئے گاجر sprites بنا دے گا.
+        - feedback: غلط. ایک عدد متغیر میں ذخیرہ کیا جاتا ہے اور گاجر سپرائٹ بنانے
+            کے لیے استعمال ہوتا ہے۔
+          text: کچھ بھی نہیں ہو گا کیونکہ `گنتی ایک عدد نہیں ہے۔
+        questions:
+        - text: 'ایک پیشن گوئی کریں: فوری طور پر ایک نمبر ٹائپ کرنے کے بعد کیا ہوگا؟'
+      courseF_variables2_predict_multi2022_2022_pilot_-2022-2_2023:
         answers:
         - feedback: غلط. اس عدد کو متغیر میں محفوظ کیا جاتا ہے اور گاجر سپرائٹ بنانے
             کے لیے استعمال کیا جاتا ہے۔
@@ -5965,6 +6452,23 @@ ur-PK:
         - text: 'یہ پروگرام آپ کو آپ کی بورڈ کے ساتھ ٹائپ کرکے ایک سوال کا جواب دینے
             دیتا ہے. `print` بلاک سکرین پر متن دکھاتا ہے. ایک پیشن گوئی کریں: سوال
             کا جواب دینے کے بعد کیا ہوگا؟'
+      courseF_variables_predict_multi2022_2022_pilot_-2022-2_2023:
+        answers:
+        - feedback: غلط. نام بلاک کو جو کچھ بھی آپ ٹائپ کرتے ہیں اس کے ساتھ تبدیل
+            کیا جائے گا.
+          text: پروگرام پرنٹ کرے گا “ہیلو نام!”
+        - correct: true
+          feedback: درست! آپ جو ٹائپ کرتے ہیں وہ نام کے بلاک کی جگہ استعمال کیا جاتا
+            ہے.
+          text: پروگرام آپ کو اس نام کے ساتھ سلام کرے گا جس میں آپ ٹائپ کرتے ہیں.
+        - feedback: غلط. سکرین پر متن چھاپا جاتا ہے.
+          text: سپرائٹ سائز تبدیل ہو جائے گا.
+        - feedback: غلط. صرف ایک سوال پوچھا جاتا ہے، جب پروگرام شروع ہوتا ہے.
+          text: کمپیوٹر ایک اور سوال پوچھے گا.
+        questions:
+        - text: 'یہ پروگرام آپ کو آپ کی بورڈ کے ساتھ ٹائپ کرکے ایک سوال کا جواب دینے
+            دیتا ہے. `print` بلاک سکرین پر متن دکھاتا ہے. ایک پیشن گوئی کریں: سوال
+            کا جواب دینے کے بعد کیا ہوگا؟'
       courseF_variables_projects:
         description: آپ یا تو ایک تہنیتی کارڈ، چیٹ بٹ، یا خالی جگہ کی کہانی بنائیں
           گے. اگر آپ پہلے ہی اپنے منصوبے کا\ "حصہ 1\” ختم کر چکے ہیں، تو\ "حصہ 2\”
@@ -5976,6 +6480,11 @@ ur-PK:
 
           طالب علموں کو یہ سمجھنے کے لئے واقعی واضح ہدایات کی ضرورت ہوسکتی ہے کہ یہاں انتخاب کیسے کریں. ہر منصوبے کے انتخاب کے لئے، یہاں دو ذیلی سطحیں موجود ہیں. شروع کرنے کے لئے، طالب علموں کو “حصہ 1" کے نشان لگا دیا گیا سطحوں میں سے ایک کو منتخب کرنا چاہئے. ایک بار جب وہ اس سطح کو ختم کرتے ہیں تو انہیں یہاں واپس آنا چاہئے اور* یک* منصوبے کے “حصہ 2" کو منتخب کرنا چاہئے. ہر انتخاب کے لئے پہلی سطح طلباء کو رائے فراہم کرے گی کیونکہ وہ اپنے منصوبے کے بنیادی اجزاء کو ایک دوسرے کے ساتھ رکھتے ہیں. دوسری سطح ایک “مفت کھیل” ہے جس کا مقصد طالب علموں کو ان کے کوڈ میں کوئی تبدیلی کرنے کی اجازت دینا ہے جو وہ پسند کرتے ہیں.
       courseF_variables_projects2022_2022_pilot_-2022-2:
+        description: آپ یا تو ایک تہنیتی کارڈ، چیٹ بٹ، یا خالی جگہ کی کہانی بنائیں
+          گے. اگر آپ پہلے ہی اپنے منصوبے کا\ "حصہ 1\” ختم کر چکے ہیں، تو\ "حصہ 2\”
+          پر جائیں.
+        display_name: ایک پروجیکٹ منتخب کریں
+      courseF_variables_projects2022_2022_pilot_-2022-2_2023:
         description: آپ یا تو ایک تہنیتی کارڈ، چیٹ بٹ، یا خالی جگہ کی کہانی بنائیں
           گے. اگر آپ پہلے ہی اپنے منصوبے کا\ "حصہ 1\” ختم کر چکے ہیں، تو\ "حصہ 2\”
           پر جائیں.
@@ -5997,9 +6506,17 @@ ur-PK:
           کرنے میں دلچسپی رکھتے ہیں. دبائیں\ "ختم\” جب آپ اپنے پروگرام کی منصوبہ بندی
           شروع کرنے کے لئے تیار ہوں.
         display_name: ریسرچ - نمونہ پروگرام
+      courseF_variables_samples2022_2022_pilot_-2022-2_2023:
+        description: آپ یا تو ایک تہنیتی کارڈ، چیٹ بٹ، یا خالی جگہ کی کہانی بنائیں
+          گے. شروع کرنے سے پہلے، ذیل میں مثال کے منصوبوں کو تلاش کریں تاکہ آپ تخلیق
+          کرنے میں دلچسپی رکھتے ہیں. دبائیں\ "ختم\” جب آپ اپنے پروگرام کی منصوبہ بندی
+          شروع کرنے کے لئے تیار ہوں.
+        display_name: ریسرچ - نمونہ پروگرام
       courseF_variables_stop:
         content1: تفصیل یہاں
       courseF_variables_stop2022_2022_pilot_-2022-2:
+        content1: تفصیل یہاں
+      courseF_variables_stop2022_2022_pilot_-2022-2_2023:
         content1: تفصیل یہاں
       coursee_prediction_artistfunction2:
         answers:
@@ -6011,6 +6528,15 @@ ur-PK:
         questions:
         - {}
       coursee_prediction_artistfunction22022:
+        answers:
+        - {}
+        - correct: true
+          feedback: درست!
+        - {}
+        - {}
+        questions:
+        - {}
+      coursee_prediction_artistfunction22022_2023:
         answers:
         - {}
         - correct: true
@@ -6061,6 +6587,318 @@ ur-PK:
           text: آرٹسٹ ایک دوسرے کے اوپر چار چوکوں کو اپنی طرف متوجہ کرے گا.
         questions:
         - text: جب آپ “چلائیں” بٹن دبائیں گے تو کیا ہوگا؟
+      csc_animal_adaptations_L3_intro:
+        markdown: "#Make آپ کے اپنے رویے!\n\n<br>\n\n# #Now آپ رویے کے کنٹرول میں
+          ہیں!\n\n## #Edit ان میں ترمیم کرنے اور تبدیل کرنے کے لئے موجودہ رویے. \n!
+          [] (https://images.code.org/e2e63b1cd7302b6548591c65ad23a0ee-image-1680019477336.gif)\n\n##
+          #Make آپ کے اپنے نئے رویے کو کسی بھی اعمال کے ساتھ جو آپ چاہتے ہیں!\n\n!
+          [] (https://images.code.org/5345f53f3b33b2ad2bbf2bc86539cb96-image-1680019210225.gif)\n\n\n"
+      csc_animal_adaptations_choice:
+        description: ذیل میں منظرنامے میں سے انتخاب کریں اور ایک نیا اور منفرد جانور
+          موافقت ماڈل کرنے کے لئے اپنے تخلیقی کوڈ کا استعمال کریں! آپ ایک سے زیادہ
+          اختیارات منتخب کریں اور ایک سے زیادہ کر سکتے ہیں!
+        display_name: کوڈ آپ کے اپنے جانور موافقت!
+      csc_animal_adaptations_intro:
+        markdown: "#Survival رویے\n\n# #Behaviors فطرت میں\nجانوروں نے ان کو زندہ
+          رہنے میں مدد کرنے کے لئے <strong>رویے</strong> اور اعمال تیار کیے ہیں. <br>
+          مثال کے طور پر، موسم سرما کے دوران کچھ جانور ہجرت کریں** اور دوسروں کو**
+          گروپ** میں رہنے کی کوشش کرتے ہیں.\n\n<img style=\" float: left; width:50%;
+          padding-top:10px\" src=\"https://images.code.org/424ef84f41b7cabdf62e8cc509abe62c-image-1678322413909.jpg\"
+          style= \"width:60%\">\n<img style=\" float: left; width:46%; padding-top:10px\"
+          src=\"https://images.code.org/7c79e255d048e7ccf099eb61976bb90c-image-1678322295452.jpg\"
+          style= \"width:60%\">\n\n<div style=\"float: left\">\n<h2>کمپیوٹر سائنس
+          میں رویے کمپیوٹر سائنس</h2>\nمیں، <strong></strong> رویے ایک سپرائٹ ایک
+          حرکت پذیری کی طرح بار بار بار کہ اعمال کا ایک سیٹ ہیں. <br>\nرویہ کے اندر
+          اعمال کو روکنے کے لئے ہدایت تک جاری ہے. \n<br>\n<br>\n\n<img src=\"https://images.code.org/56809209ca823047729cc01a033a7ac0-image-1679937249706.gif\"
+          style=\" float: left; width:70%; padding-top:10px\">\n</div>\n"
+      csc_animal_adaptations_predict:
+        answers:
+        - feedback: غلط. سپرائٹ بڑھ جائے گا.
+          text: سپرائٹ گھماؤ گا.
+        - correct: true
+          feedback: درست!
+          text: سپرائٹ بڑھ جائے گا.
+        - feedback: غلط. سپرائٹ بڑھ جائے گا.
+        - feedback: غلط. سپرائٹ بڑھ جائے گا.
+        questions:
+        - {}
+      csc_animal_adaptations_shareout:
+        markdown: "# #Share آپ کے\n<img src=\"https://images.code.org/c480c5c42d9c02e154943f49bbed87ff-image-1675984438344.13.53
+          PM.png\" style= \"width:60%\">\n<div style= \"width: 60%\"> \n\nپروجیک**
+          اب آپ نے بقا کی موافقت کو کوڈڈ کیا ہے، اس کا اشتراک کرنے کا وقت ہے! **\n\nجیسا
+          کہ آپ اپنے ہم جماعتوں کے منصوبوں کو سطح 9 سے دیکھتے ہیں، مندرجہ ذیل سوالات
+          پر غور کریں:\n\n> 1. کیا آپ نے ایک ہی ماحول کے منظر نامے یا مختلف لوگوں
+          کا انتخاب کیا ہے؟ \n>2. کیا انہوں نے اسی کوڈنگ بلاکس میں سے کسی کا استعمال
+          کیا تھا؟ \n>3. کیا آپ کو لگتا ہے کہ جانور ماحول کی تبدیلی سے بچیں گے؟ کیوں
+          یا کیوں نہیں؟ \n\n</div>\n\n"
+      csc_bookcover_extensions_choice_2023:
+        description: اپنی کتاب کا احاطہ میں شامل کرنے کے لئے ذیل کی سرگرمیوں میں سے
+          انتخاب کریں! آپ ایک سے زیادہ اختیارات منتخب کریں اور ایک سے زیادہ کر سکتے
+          ہیں!
+        display_name: آپ کی کتاب کا احاطہ بڑھانے!
+      csc_bookcovers_markdown_lesson_4:
+        markdown: "# #Share آپ کی کتاب کا\n<img src=\"https://images.code.org/c480c5c42d9c02e154943f49bbed87ff-image-1675984438344.13.53
+          PM.png\" style= \"width:60%\">\n<div style= \"width: 60%\"> \n\nاحاطہ**اب
+          آپ نے اپنی کتاب کا احاطہ کیا ہے، اس کا اشتراک کرنے کا وقت ہے! **\n\nجیسا
+          کہ آپ اپنے ہم جماعتوں کے منصوبوں کو دیکھتے ہیں، مندرجہ ذیل سوالات پر غور
+          کریں: >1.\n\nکیا sprites اور مکالمے آپ اپنے ہم جماعتوں 'کتاب کا احاطہ کرتا
+          ہے میں دیکھا؟\n>2. جب آپ حروف پر کلک کرتے ہیں تو کیا ہوتا ہے؟\n>2. ان کے
+          انتخاب آپ کی طرح کیسے تھے؟ وہ کیسے مختلف تھے؟\n>3. کیا آپ اس کے احاطہ کی
+          بنیاد پر کتاب پڑھنا چاہتے ہیں؟\n</div>\n\n"
+      csc_bookcovers_planning:
+        markdown: "# #Plan آپ کی ڈیجیٹل کتاب کا احاطہ\n\n<div>\n<img style=\" float:
+          left; width:25%; padding-top:10px\" src=\"https://images.code.org/08ece3f13c8f0f82343e302fb52dc45c-image-1676499630865.png\"
+          />\n\n<div style=\"float: left; width: 70%; padding-left:20px\">\n<h4>\n<strong>یہ
+          آپ کی منصوبہ بندی کرنے کا وقت ہے!</strong>\n</h4>\n\n>آپ کو شامل کرنا چاہئے:\n>
+          - کتاب کا عنوان > - مصنف\n\n> - اہم حروف میں سے دو اور خود کو بیان کرنے
+          کے لئے ایک جملہ \n> - کتاب کا ایک دو جملہ خلاصہ\n\n** یہاں ایک منصوبہ ٹیمپلیٹ
+          ہے جسے آپ اپنے آپ کو استعمال کرنے کے لئے کاپی کرسکتے ہیں: **  <a href=\"https://docs.google.com/document/d/18cVgDdq77dbdk6gmQ1rGjHIr7pQk3I2Wb2WsAEeNH64/template/preview\"
+          target=\"_blank\"> کتاب کا احاطہ منصوبہ بندی گائیڈ</a>.\n\n</div>\n"
+      csc_codingwithpoetry_markdown_lesson_4:
+        markdown: "# #Share آپ کی نظم\n<img src=\"https://images.code.org/c480c5c42d9c02e154943f49bbed87ff-image-1675984438344.13.53
+          PM.png\" style= \"width:60%\">\n<div style= \"width: 60%\"> \n\nاپلی**اب
+          جب آپ نے اپنی نظم کوڈت کی ہے، تو اس کا اشتراک کرنے کا وقت ہے! **\n\nجیسا
+          کہ آپ اپنے ہم جماعتوں کے منصوبے کو “چمک”، “بڑھتے”، اور “سوال” کے بارے میں
+          سوچتے ہیں جو آپ اپنے ساتھی کے لئے لکھ سکتے ہیں:\n\n- ایک “چمک” وہ چیز ہے
+          جو انہوں نے اچھی طرح سے کیا ہے\n- ایک “بڑھتی ہوئی” ایسی چیز ہے جسے وہ تبدیل
+          کرسکتے ہیں یا بہتر بنا سکتے ہیں\n- ایک “سوال” ایسی چیز ہے جس کے بارے میں
+          آپ مزید جاننا چاہتے ہیں\n</div>\n\n**شروع کرنے کے لئے تیار ہیں؟ ** اپنے
+          پارٹنر کے ساتھ تاثرات کا اشتراک</a> کرنے کے لئے <a href=\"https://docs.google.com/document/d/1b6w_lOnibUHyDLYCP3rAWED5iElGm6LOQAJwG-hlih0/template/preview\"
+          target=\"_blank\">اس وسائل کا استعمال کریں.\n\n"
+      csc_ecosystemes_foodchain_info:
+        markdown: "\n##** تمام ماحولیاتی نظام میں _نازک طور پر متوازن فوڈ چین**\n##
+          #The سمندری ماحولیاتی نظام خوراک چین ہے: >## #1.\n\n\n\n<img src=\"https://images.code.org/2270cbb4656875db210e9871883a7d45-image-1683677265473.jpg\"
+          style= \"width:80%\">\n<div style= \"width: 80%\"> \n\nسورج طحالب میں پائے
+          جانے کے لئے ضیائی تالیف کے لئے توانائی فراہم کرتا ہے.\n>##2. طحالب مچھلی
+          کی طرف سے کھایا جاتا ہے.\n>##3. مچھلیوں کو انسانوں کی طرف سے پکڑ کر کھایا
+          جاتا ہے، جو مچھلی پکڑنے والی کشتیوں کو جال کے ساتھ استعمال کرتے ہیں۔ \n\n</div>\n\n\n##**
+          اگر کھانے کی زنجیر میں بہت زیادہ یا بہت کم حیاتیات موجود ہے، تو پورے ماحولیاتی
+          نظام پر اثرات موجود ہیں**\n"
+      csc_ecosystems_choice_freeplay_2023:
+        description: ان ماحولیاتی نظام مجازی میں سے ہر ایک کو ایڈجسٹ کرنے کی ضرورت
+          ہے. ایک ماحولیاتی نظام کا انتخاب کریں، مسئلہ کا مشاہدہ کرنے کے لئے تخروپن
+          چلائیں، اور اسے ٹھیک کرنے کے لئے کوڈ کو ایڈجسٹ کریں.
+        display_name: ایک ماحولیاتی نظام کا انتخاب کریں!
+      csc_ecosystems_conditionals_overview:
+        markdown: "#Cause & اثر کنڈیشنلز \n\n</div>\n\n## اگلا آپ کو پانی میں کتنا
+          طحالب دیکھنے کے لئے چیک کرنے کے لئے کوڈ شامل کریں گے <br>\n<img src=\"https://images.code.org/8be316d4e408466b4300c614712fd652-image-1684798211348.jpg\"
+          \ width=50% style=\"margin-right: 10px; float: right\">\n<br> <br>\n\n-
+          سب سے پہلے، کمپیوٹر یہ دیکھنے کے لئے چیک کرتا ہے کہ کوئی شرط صحیح یا غلط
+          ہے.\n\n- اگر یہ سچ ہے، تو اس کے اندر بلاکس چلا جائے گا.\n- اگر یہ غلط ہے،
+          تو یہ کچھ نہیں کرے گا.\n\n<br>\n<br>\n<br>\n\n## اگر بہت زیادہ طحالب ہے
+          تو پھر مرجان بیمار ہو جاتی ہے\n\n<br>\n\n<img src=\"https://images.code.org/4d8aaa9c6562e0ca0b3d92ff7aed1d03-image-1681847951794.png\"
+          \ width=20% style=\"margin-right: 10px; float: left\">\n<img src=\"https://images.code.org/941774921f367566bef36cb712cf2bfb-image-1681840836607.png\"
+          \ width=30% style=\" margin-right: 10px; float: left\">\n\n<br>\n<br>\n<br>\n<br>\n<br>\n<br>\n<br>\n<br>\n\n***\n\n\n\n##
+          اگر بہت کم طحالب ہے، تو مچھلی چھوڑ جائے گی\n<img src=\"https://images.code.org/6869f418200edfb88190c0a1e4e5cd10-image-1681838202310.png\"
+          \ width=20% style=\"margin-right: 10px; float: left\">\n\n\n<img src=\"https://images.code.org/233178645539bc7966f55af47865096d-image-1681840833690.png\"
+          \ width=20% style=\" margin-right: 10px; float: left\">\n\n<br>\n<br>\n<br>\n<br>\n<br>\n<br>\n<br>\n<br>\n<br>\n\n\n***\n\n\n\n##
+          اگر صرف کافی طحالب ہے، تو ماحولیاتی نظام صحت مند ہے\n\n<img src=\"https://images.code.org/8bb9247c35d7d167611b02764beaeff3-image-1681838011797.png\"
+          \ width=20% style=\"margin-right: 30px; float: left\">\n<img src=\"https://images.code.org/b1ed2f5c135f9637fd7a9c5778db2b0c-image-1681840830929.png\"
+          \ width=30% style=\"margin-left: 10px;float: left\">\n<br>\n<br>\n<br>\n<br>\n\n"
+      csc_ecosystems_matching_cfu:
+        answers:
+        - text: "! [] (https://images.code.org/284e3b6e09f5d58052a8840e756644c5-image-1683752491112.png)"
+        - text: "! [] (https://images.code.org/d466f0912cd0cadb3d655263c71c072f-image-1683752857648.jpg)"
+        - text: "! [] (https://images.code.org/de2ab3c63bc2cf7cb319be86d5dcdec0-image-1683752570051.png)"
+        markdown: |+
+          ## تین پائیدار ماہی گیری کے طریقوں کو دیکھو ملاپ کی تصویر پر کوڈ
+
+          ھیںچیں.
+
+        questions:
+        - text: کشتیوں کے لئے ایک ماہی گیری زون بنائیں! [] (https://images.code.org/5f5e0640a82242d632db10b872280e18-image-1683753001613.gif)
+        - text: |-
+            ایک ماہی گیری کے موسم اور ایک نہیں ماہی گیری کے موسم شروع
+            ! [] (https://images.code.org/becad47fd19a4d0e938a0cd10c404e41-image-1683838684289.gif)
+        - text: ماہی گیری کی حدود مقرر کریں! [] (https://images.code.org/f8bbd98ff6199af5d3ad23d64f39629d-image-1683753402925.gif)
+        title: تصویر کو کوڈ سے ملیں
+      csc_ecosystems_matching_conditionals:
+        answers:
+        - text: "! [] (https://images.code.org/db1db479bec9b40c6e0574ade394d32b-image-1680118613718.36.41
+            PM.png)"
+        - text: "! [] (https://images.code.org/7c9171ab2ee2e833e5ff60d5519d8728-image-1680118617438.31.00
+            PM.png)"
+        - text: "! [] (https://images.code.org/412968ba617ef19d2049e0e63d271937-image-1680118620636.30.50
+            PM.png)"
+        markdown: |
+          ## تین ماحولیاتی نظام کو دیکھو
+
+          ایک ماحولیاتی نظام متوازن ہے اور دوسرے دو مختلف طریقوں سے غیر متوازن ہیں. کوڈ کو ملاپ کی تصویر میں گھسیٹیں.
+        questions:
+        - text: بہت کم طحالب مچھلی چھوڑ دیتا ہے.! [] (https://images.code.org/c0a28473307b7e9b0e827532d2a6ddda-image-1680212227032.png)
+        - text: |-
+            بہت زیادہ طحالب مرجان بیمار بنا دیتا ہے. <br>
+            ! [] (https://images.code.org/1230fd96832b692b0c8ab88e77957f33-image-1680212254888.png)
+        - text: صرف طحالب کی صحیح رقم بیمار مرجان کو شفا دینے کی اجازت دیتا ہے اور
+            مچھلی کو بھی صحت مند رکھتا ہے.! [] (https://images.code.org/3dd061538a7a73285aa0916fdde34e77-image-1680212284869.png)
+        title: تصویر کو کوڈ سے ملیں
+      csc_ecosystems_matching_events:
+        answers:
+        - text: "! [] (https://images.code.org/bf70d0664e68690f2359a48365e50ccc-image-1680556679495.16.33
+            PM.png)"
+        - text: "! [] (https://images.code.org/fe4d2803162186a8e53ec0027f27a206-image-1680556683660.36.04
+            PM.png)"
+        markdown: |+
+          دیکھو کیا ہوتا ہے جب sprites دونوں متحرک تصاویر میں چھو. پھر کوڈ کی ہر تصویر کو اس کے ملاپ کی تصویر میں گھسیٹیں.
+
+
+        questions:
+        - text: کشتی مچھلی پکڑتا ہے.! [] (https://images.code.org/bcdefefdd1787330e3ad72558b5b492d-image-1680556053866.gif)
+        - text: مچھلی طحالب کھاتے ہیں.! [] (https://images.code.org/73febc58a3d23fbf4c66e693abec9e3d-image-1680556608027.gif)
+        title: حرکت پذیری کے لئے کوڈ سے ملنے
+      csc_ecosystems_overfishing_solution2_overview:
+        markdown: "> #Sustainable ماہی گیری پریکٹس #2:\n># #Create ایک ماہی گیری کا
+          <img src=\"https://images.code.org/123dd5c82e4c03dcbc32b775fd16ec60-image-1681937158113.png\"
+          \ width=400 style=\"margin-right: 30px; float: left\">\nموسمی**جب لوگ مچھلی
+          پکڑ سکتے ہیں اس پر حد مقرر کریں. جب یہ ماہی گیری کا موسم نہیں ہے تو ماحولیاتی
+          نظام کو بحال کرنے کا وقت ہے** \n<br>\n\n#Save ہمارے سمندر! \n<img src=\"https://images.code.org/f3f55eddff9891464c8fb5a5405c31c3-image-1681781301257.png\"
+          width=250 style=\"margin-left: 30px; margin-bottom: 30px; float: right\">\n<img
+          src=\"https://images.code.org/cbccfc42b7e1fe329ac7c9c37dfcb6b5-image-1681781296669.png\"
+          width=250 style=\"margin-left: 30px; margin-bottom: 30px; float: right\">\n\n</div>\n\n###
+          اوورفشنگ ایک مسئلہ ہے جو سمندری زندگی کے ماحولیاتی نظام اور ان پر انحصار
+          کرنے والے لوگوں کو نقصان پہنچا سکتا ہے. ان ماحولیاتی نظام کی حفاظت میں مدد
+          کے لیے پائیدار ماہی گیری کی مشق کرنا ضروری ہے اور یہ یقینی بنانا ضروری ہے
+          کہ مچھلی کی آبادیاں صحت مند رہیں.\n\n\n\n<br>\n<br>\n<br>\n"
+      csc_ecosystems_overfishing_solution3_overview:
+        markdown: "> #Sustainable ماہی گیری پریکٹس #3:\n># #Set ماہی گیری کی حدود
+          <img src=\"https://images.code.org/58d4ca52deba39a990c3165ba16e284b-image-1681747630352.png\"
+          \ width=300 style=\"margin-right: 30px; float: left\">\n**سائنسدانوں سمندر
+          کو نقصان پہنچانے کے بغیر پکڑا جا سکتا ہے کہ کتنی مچھلیوں کو پکڑا جا سکتا
+          ہے یہ معلوم کرنے میں مدد کر سکتے ہیں. اس کے بعد ماہی گیروں کو صرف اس مچھلی
+          کو پکڑنے کا پتہ چل جائے گا** \n<br>\n<br>\n<br>\n\n#Save ہمارے سمندر! \n<img
+          src=\"https://images.code.org/35e557d27c4bdb5f546da560716dc10b-image-1681756387784.jpg\"
+          width=400 style=\"margin-left: 30px; margin-bottom: 30px; float: right\">\n</div>\n\n###
+          ایک دوسرے کے ساتھ کام کرنے سے، ہم اپنے سمندروں کو زندگی سے بھرپور رکھنے
+          میں مدد کر سکتے ہیں آنے والی نسلوں کے لئے!\n\n\n\n<br>\n<br>\n<br>\n\n"
+      csc_ecosystems_overfishing_solutions_overview:
+        markdown: "#Save ہمارے سمندر! \n<img src=\"https://images.code.org/d4267a1de975b8ea46468f74187eb95c-image-1681756621010.jpg\"
+          width=400 style=\"margin-left: 30px; margin-bottom: 30px; float: right\">\n</div>\n\n###
+          سمندر میں بہت سی مچھلیاں ہوتی ہیں لیکن بعض اوقات لوگ بہت زیادہ مچھلیاں پکڑتے
+          ہیں اور یہ ماحولیاتی نظام کے لیے خراب ہو سکتی ہے۔ مندرجہ ذیل سطحوں میں آپ
+          ہمارے سمندر کے ماحولیاتی نظام کی حفاظت میں مدد کے لئے** تین مختلف پائیدار
+          ماہی گیری کے طریقوں کو کوڈ کریں گے.\n\n<br>\n\n## #To ہمارے سمندروں کے لئے
+          پائیدار حل کے بارے میں مزید پڑھیں: یہاں <a href=\"https://www.seafoodwatch.org/seafood-basics/sustainable-solutions/avoid-overfishing\"
+          target=\"_blank\">کلک کریں</a>\n<br>\n<br>\n\n> #Sustainable ماہی گیری مشق
+          #1:\n>> # #Fishing <img src=\"https://images.code.org/c33e46309c5335dc557c67c34310e723-image-1681511054034.png\"
+          \ width=300 style=\"margin-right: 30px; float: left\">\nزون**ماہی گیری کشتیاں
+          صرف نامزد علاقوں میں مچھلی کر سکتے ہیں. کچھ علاقے ماہی گیری کشتیوں کے لئے
+          حد سے دور ہیں تاکہ ماحولیاتی نظام کو بحال کیا جا سکے** \n<br>\n<br>\n\n\n"
+      csc_ecosystems_planning:
+        markdown: "# #Share آپ کے ماحولیاتی نظام تخروپن!\n<img src=\"https://images.code.org/c480c5c42d9c02e154943f49bbed87ff-image-1675984438344.13.53
+          PM.png\" style= \"width:50%\">\n<div style= \"width: 60%\"> \n\n###** ماحولیاتی
+          ماہرین! یہ آپ کی تحقیق کا اشتراک کرنے کا وقت ہے! **\n\n## #Explain آپ نے
+          کیے گئے مندرجہ ذیل مشاہدات:\n\n>1. اپنے ماحولیاتی نظام میں کھانے کی چین
+          کی وضاحت کریں اور آپ اسے کیسے کوڈڈ کرتے ہیں.\n>2. کیا ایک حیاتیات میں بہت
+          زیادہ یا بہت کم تھا؟\n>3. تخروپن کرنے کے لئے آپ کی گئی ترمیم کی وضاحت کریں.
+          \n>4. اقدار کو تبدیل کرنے کے بعد آپ نے کیا محسوس کیا؟\n</div>\n\n<div style=\"background-color:
+          #a6e3e8; border-radius: 10px; color: #000000; width: 95%; padding: 0.5px
+          20px 1px 20px;\">\n\n<p style=\"line-height: 1.5; margin-left: 10px; margin-right:
+          10px; margin-top: 20px; margin-bottom: 20px; font-size: 18px; \">\n\n###**
+          مزید کوڈنگ کے لئے تیار ہیں؟ ** code.org کی [ایکسپریس کورس] (https://studio.code.org/s/express-2022)
+          کو \nآزمائیں تاکہ آپ اپنی رفتار سے زیادہ کمپیوٹر سائنس سیکھیں.   \n<br>\n</p></div>\n"
+      csc_mappinglandmarks_markdown_lesson_2:
+        markdown: |+
+          # #Plan آپ کے نشانات کا نقشہ
+          <div>
+          <img style=" float: left; width:20%; padding-top:10px" src="https://images.code.org/08ece3f13c8f0f82343e302fb52dc45c-image-1676499630865.png" />
+
+          <div style="float: left; width: 70%; padding-left:20px">
+          <h4>
+          <strong>یہ وقت ہے کہ آپ کے اپنے نشانات کے نقشے کی منصوبہ بندی کریں.</strong>
+          </h4>
+
+          آپ اپنی کلاس روم، اسکول یا شہر کا نقشہ بنا سکتے ہیں۔ شاید آپ ریاستی، علاقائی، یا قومی نشانات کو نمایاں کرنے کا انتخاب کریں گے. یا آپ کو کلاس میں مطالعہ کیا ہے ایک علاقے کی بنیاد پر ایک نقشہ بنانے کے لئے منتخب کر سکتے ہیں.
+
+          جیسا کہ آپ اپنے نقشے کی منصوبہ بندی کرتے ہیں، پس منظر، sprites، اور تقریر کے بارے میں سوچیں جو آپ دوسرے لوگوں کو آپ کے منتخب کردہ نشانات کے بارے میں سکھانے کے لئے استعمال کرنا چاہتے ہیں.
+
+          ** شروع کرنے میں کچھ مدد کی ضرورت ہے؟ ** اپنے کام کی منصوبہ بندی</a> کے لئے <a href="https://docs.google.com/document/d/1t_-cd-f6EhhUbblu8nSGRajStY9FVwLnKn1Bj90GL3Q/template/preview" target="_blank">اس وسائل کا استعمال کریں.
+
+
+      csc_mappinglandmarks_markdown_lesson_4:
+        markdown: "# #Share آپ کے مقامی نشانات کا نقشہ\n\nاب آپ نے اپنا نقشہ کوڈڈ
+          کیا ہے، اس کا اشتراک کرنے کا وقت ہے! سب سے پہلے آپ کے منصوبے پر ایک مختصر
+          عکاسی مکمل کریں: \n\n>1. آپ کے منصوبے کے اپنے پسندیدہ حصہ کی وضاحت کریں.\n>2.
+          آپ کے منصوبے میں کوڈ کا ایک مفید بلاک کیا تھا؟\n>3. آپ کے منصوبے کی تعمیر
+          کرتے وقت ایک بگ یا چیلنج کی وضاحت کریں.\n>4. آپ کو بگ کو کس طرح ٹھیک کیا
+          یا چیلنج پر قابو پانے کے؟\n>5. آپ اب بھی اپنے منصوبے کو بہتر بنانے کے لئے
+          کیا تبدیلیاں کرنا چاہتے ہیں؟\n\nجیسا کہ آپ اپنے ہم جماعتوں کو اپنے کام کو
+          پیش کرتے ہیں، اس بات کی وضاحت کرنے کے لئے یقینی بنائیں کہ آپ کا کوڈ کس طرح
+          کام کرتا ہے، کیا ڈیزائن کے انتخاب آپ نے بنایا، اور آپ کو سامنا کرنا پڑا
+          چیلنجوں.\n\n\n\n"
+      csc_starquilts_markdown_lesson_1:
+        markdown: |+
+          # #Plan آپ کا سٹار کمائلٹ
+
+          <div>
+          <img style=" float: left; width:25%; padding-top:10px" src="https://images.code.org/d5e1eedfbe978ba6feebd3f89da0a667-image-1679522801245.png" />
+
+          <div style="float: left; width: 70%; padding-left:20px">
+          <h4>
+          <strong>یہ آپ کے اسٹار کی کمبل کی منصوبہ بندی کرنے کا وقت ہے.</strong>
+          </h4>
+
+          >سب سے پہلے آپ کو چار مختلف رنگوں کا انتخاب کریں اور اپنے سٹار Quilt میں بھرنے گا. اس کے بعد آپ پیٹرن کے ساتھ کچھ اور سرگرمیاں کریں گے.
+
+          **شروع کرنے کے لئے تیار ہیں؟ ** <a href="https://docs.google.com/document/d/1c__530oWLDH-mX0kSxLMStSz-5Lt3cKUm5K3bTV7Uvo/template/preview" target="_blank">اس وسائل کا استعمال کریں</a>.
+
+
+          </div>
+
+
+      csc_timecapsule_choice_lesson_3:
+        description: آپ کے وقت کیپسول نظم میں کوڈ شامل کرنے کے بارے میں اپنی میموری
+          کو تازہ کرنے کے لئے ذیل کی سرگرمیوں میں سے منتخب کریں! آپ ایک سے زیادہ اختیارات
+          منتخب کریں اور ایک سے زیادہ کر سکتے ہیں!
+        display_name: آپ کی کوڈنگ کی مہارت کا جائزہ لیں!
+      csc_timecapsule_choice_lesson_3_ -l3:
+        description: آپ کے وقت کیپسول نظم میں کوڈ شامل کرنے کے بارے میں اپنی میموری
+          کو تازہ کرنے کے لئے ذیل کی سرگرمیوں میں سے منتخب کریں! آپ ایک سے زیادہ اختیارات
+          منتخب کریں اور ایک سے زیادہ کر سکتے ہیں!
+        display_name: آپ کی کوڈنگ کی مہارت کا جائزہ لیں!
+      csc_timecapsule_info_2023:
+        content1: تفصیل یہاں
+        markdown: "# #Time کیپسول\n\n<img src=\"https://images.code.org/846b0e2d7a84392a70f432fdce00cd29-image-1676501071993.png\"
+          style= \"float:left; width: 25%; padding-right:30px\"/>\n\n<div style= \"width:
+          70%\"> \n<strong>ایک وقت کیپسول ایک خزانہ باکس کی طرح ہے</strong>، لیکن
+          اس کے بجائے کھلونے اور کینڈی کو اندر رکھنے کے بجائے، یہ خاص اشیاء رکھتا
+          ہے جو اس وقت زندگی کی کہانی بتاتا ہے. پھر اسے کسی محفوظ جگہ پر رکھا جاتا
+          ہے، جیسے زمین میں دفن کیا جاتا ہے یا کسی لائبریری میں مضبوط خانے میں، کئی
+          سالوں تک رکھا جاتا ہے۔ \n<br>\n<br>\n<strong>جب وقت صحیح ہوگا تو کوئی شخص
+          خانہ کھولے گا</strong> اور اندر کی تمام خاص چیزوں کو دیکھے گا، اور وہ سب
+          کو معلوم ہو جائے گا کہ دفن ہونے پر زندگی کیسی تھی۔ \n<br>\n<br>\n<strong>ڈیجیٹل
+          ٹائم کیپسول نظم اسی طرح کی ہوتی </strong>ہے، لیکن ایک باکس کے اندر چیزوں
+          کو رکھنے کی بجائے اس میں تصاویر، ویڈیوز اور پیغامات رکھے جاتے ہیں جو کمپیوٹر
+          یا انٹرنیٹ پر محفوظ ہوتے ہیں۔\n</div>\n\n"
+      csc_timecapsule_markdown_lesson_2:
+        markdown: "# #Plan آپ کا ٹائم کیپسول\n\n<div>\n<img style=\" float: left;
+          width:25%; padding-top:10px\" src=\"https://images.code.org/08ece3f13c8f0f82343e302fb52dc45c-image-1676499630865.png\"
+          />\n\n<div style=\"float: left; width: 70%; padding-left:20px\">\n<h4>\n<strong>یہ
+          آپ کا اپنا وقت کیپسول نظم کی منصوبہ بندی کرنے کا وقت ہے.</strong>\n</h4>\n\n>آپ
+          کو شامل کرنا چاہئے:\n> - آپ کیا کرنا چاہتے ہیں \n> - آپ کے لئے کیا اہم ہے\n>
+          - فی الحال آپ کی کمیونٹی میں کیا ہو رہا ہے \n> - چند موجودہ دنیا کے واقعات\n\n**
+          آپ کی نظم شروع کرنے میں مدد کی ضرورت ہے؟ ** <a href=\"https://docs.google.com/document/d/1fahr11zX92NW-rLdyZBqrNK2VqgOGtCACkcT87M_luU/template/preview\"
+          target=\"_blank\">اس وسائل کا استعمال کریں</a>.\n\n** بس کچھ پریرتا کی ضرورت
+          ہے؟ ** <a href=\"https://docs.google.com/document/d/1-aPA3uJIKJAuQ_2Gtck1Ma79eCFY88ZC8YzegQIckG4/template/preview\"
+          target=\"_blank\">اس وسائل کا استعمال کریں</a>.\n\n</div>\n"
+      csc_timecapsule_markdown_lesson_2_poetry:
+        markdown: "# #Plan آپ کی نظم\n\n<div>\n<img style=\" float: left; width:25%;
+          padding-top:10px\" src=\"https://images.code.org/08ece3f13c8f0f82343e302fb52dc45c-image-1676499630865.png\"
+          />\n\n<div style=\"float: left; width: 70%; padding-left:20px\">\n<h4>\n<strong>یہ
+          آپ کی اپنی نظم کی منصوبہ بندی کرنے کا وقت ہے.</strong>\n</h4>\n\n>آپ کو
+          شامل کرنا چاہئے:\n> - کچھ ایسا کرنا جو آپ سے محبت کرتا ہے.\n> - آپ کے لئے
+          اہم کوئی.\n> - آپ کی پسندیدہ چیزوں میں سے کچھ. \n\n**منصوبہ بندی شروع کرنے
+          کے لئے تیار ہیں؟ ** <a href=\"https://docs.google.com/document/d/1b6w_lOnibUHyDLYCP3rAWED5iElGm6LOQAJwG-hlih0/template/preview\"
+          target=\"_blank\">اس وسائل کا استعمال کریں</a>.\n\n**ایک موضوع کے لئے تلاش
+          کر رہے ہیں؟ ** <a href=\"https://docs.google.com/document/d/1V-DaWOIUk0xT7NYTzx3AEt4my-jc-Hx4vy21Kl4SPoE/template/preview\"
+          target=\"_blank\">اس وسائل کا استعمال کریں</a>.\n\n</div>\n"
+      csc_timecapsule_markdown_lesson_4:
+        markdown: "# #Share آپ کا ٹائم\n<img src=\"https://images.code.org/c480c5c42d9c02e154943f49bbed87ff-image-1675984438344.13.53
+          PM.png\" style= \"width:60%\">\n<div style= \"width: 60%\"> \n\nکیپسول**
+          اب آپ نے اپنا وقت کیپسول نظم کوڈت کیا ہے، اس کا اشتراک کرنے کا وقت ہے! **\n\nجیسا
+          کہ آپ اپنے ہم جماعتوں کے منصوبوں کو دیکھتے ہیں، مندرجہ ذیل سوالات پر غور
+          کریں: > 1.\n\nآپ کے ہم جماعتوں کے ٹائم کیپسول میں کیا تصاویر اور آوازیں
+          دیکھی ہیں؟\n>2. اُن کی کہانیاں آپ سے کیسے مختلف تھیں؟\n>3. ان کی کہانیاں
+          آپ کی طرح کیسی تھیں؟\n>4. ان کی تصاویر نے آپ کو کیسا محسوس کیا؟\n</div>\n\n"
       csd-post-survey-2017-q11_2018:
         answers:
         - correct: true
@@ -9221,6 +10059,8 @@ ur-PK:
         content1: تفصیل یہاں
       csf_be_a_super_digital_citizen2022:
         content1: تفصیل یہاں
+      csf_be_a_super_digital_citizen2022_2023:
+        content1: تفصیل یہاں
       csf_be_a_super_digital_citizen_2021:
         content1: تفصیل یہاں
         markdown: |
@@ -9236,11 +10076,15 @@ ur-PK:
         content1: تفصیل یہاں
       csf_password_power-up2022:
         content1: تفصیل یہاں
+      csf_password_power-up2022_2023:
+        content1: تفصیل یہاں
       csf_password_power-up_2021:
         content1: تفصیل یہاں
       csf_putting_a_stop_to_online_meanness:
         content1: تفصیل یہاں
       csf_putting_a_stop_to_online_meanness2022:
+        content1: تفصیل یہاں
+      csf_putting_a_stop_to_online_meanness2022_2023:
         content1: تفصیل یہاں
       csf_putting_a_stop_to_online_meanness_2021:
         content1: تفصیل یہاں
@@ -10819,6 +11663,10 @@ ur-PK:
         description: آپ اپنا حتمی پروجیکٹ شروع کرنے والے ہیں۔ آپ شروع کرنے سے پہلے،
           مثال کے منصوبوں پر دیکھنے میں کچھ وقت دیں۔
         display_name: پروجیکٹ مثالیں
+      express_EOC_examples2022_2023:
+        description: آپ اپنا حتمی پروجیکٹ شروع کرنے والے ہیں۔ آپ شروع کرنے سے پہلے،
+          مثال کے منصوبوں پر دیکھنے میں کچھ وقت دیں۔
+        display_name: پروجیکٹ مثالیں
       express_EOC_examples_2021:
         description: آپ اپنا حتمی پروجیکٹ شروع کرنے والے ہیں۔ آپ شروع کرنے سے پہلے،
           مثال کے منصوبوں پر دیکھنے میں کچھ وقت دیں۔
@@ -10849,6 +11697,15 @@ ur-PK:
         questions:
         - {}
       grade2_multi_collector_A_predict12022:
+        answers:
+        - {}
+        - correct: true
+          feedback: درست!
+        - {}
+        - text: لورل اس کوڈ کا استعمال کرتے ہوئے خزانہ کا 1 ٹکڑا جمع کرے گا.
+        questions:
+        - {}
+      grade2_multi_collector_A_predict12022_2023:
         answers:
         - {}
         - correct: true

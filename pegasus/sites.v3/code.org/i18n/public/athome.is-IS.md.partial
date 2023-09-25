@@ -38,8 +38,8 @@ theme: responsive
       </a>
     <div class="tutorial-info" style="background-color: #ffffff; border: 1px solid #696969; border-top: none; border-radius: 0 0 15px 15px; padding: 15px 25px 25px 25px">
       <span>
-        <h3 class="tutorial-info-h" style="text-align: left; margin-top:10px; margin-bottom:10px"><strong>Dansflokkur</strong></h3>
-        <div class="smalltext" style="text-align: left; margin-bottom: 10px">Kóðaðu dansflokk til að deila með vinum og vandamönnum. Featuring Beyoncé, Harry Styles, Lizzo, Lil Nas X, Selena Gomez, tónlist frá Disney “Encanto” og fleira!</div>
+        <h3 class="tutorial-info-h" style="text-align: left; margin-top:10px; margin-bottom:10px">Dance Party</h3>
+        <div class="smalltext" style="text-align: left; margin-bottom: 10px">Code a Dance Party til að deila með vinum og fjölskyldu. Featuring Beyoncé, Harry Styles, Lizzo, Lil Nas X, Selena Gomez, tónlist frá Disney “Encanto” og fleira!</div>
         <a class="linktag" id="danceparty" href="/dance" target="_blank"><button>Prófaðu virkni</button></a>
     </span>
   </div>
@@ -53,7 +53,7 @@ theme: responsive
       </a>
     <div class="tutorial-info" style="background-color: #ffffff; border: 1px solid #696969; border-top: none; border-radius: 0 0 15px 15px; padding: 15px 25px 25px 25px">
       <span>
-        <h3 class="tutorial-info-h" style="text-align: left; margin-top:10px; margin-bottom: 10px"><strong>Minecraft Hour of Code</strong></h3>
+        <h3 class="tutorial-info-h" style="text-align: left; margin-top:10px; margin-bottom: 10px">Minecraft Hour of Code</h3>
         <div class="smalltext" style="text-align: left; margin-bottom: 10px">Minecraft er aftur fyrir Hour of Code með glænýja virkni! Ferð í gegnum Minecraft með kóða.</div>
         <br>
         <a class="linktag" id="minecraft" href="/minecraft" target="_blank"><button>Prófaðu virkni</button></a>
@@ -69,8 +69,8 @@ theme: responsive
       </a>
     <div class="tutorial-info" style="background-color: #ffffff; border: 1px solid #696969; border-top: none; border-radius: 0 0 15px 15px; padding: 15px 25px 25px 25px">
       <span>
-        <h3 class="tutorial-info-h" style="text-align: left; margin-top:10px; margin-bottom:10px"><strong>AI fyrir Oceans</strong></h3>
-        <div class="smalltext" style="text-align: left; margin-bottom: 10px">Hjálpaðu A.I. að hreinsa höfin með því að þjálfa það í að greina rusl! Lærðu um þjálfunargögn og hlutdrægni og hvernig AI getur tekið á vandamálum heimsins. Skoða <a class="linktag" id="oceans-lesson" href="https://curriculum.code.org/hoc/plugged/9/" target="_blank">kennslustund áætlun</a>.</div>
+        <h3 class="tutorial-info-h" style="text-align: left; margin-top:10px; margin-bottom:10px">AI fyrir Oceans</h3>
+        <div class="smalltext" style="text-align: left; margin-bottom: 10px">Hjálp AI að hreinsa höfin með því að þjálfa það til að greina rusl! Lærðu um þjálfunargögn og hlutdrægni og hvernig AI getur tekið á vandamálum heimsins. Skoða <a class="linktag" id="oceans-lesson" href="https://curriculum.code.org/hoc/plugged/9/" target="_blank">kennslustund áætlun</a>.</div>
         <a class="linktag" id="aiforoceans" href="https://studio.code.org/s/oceans/lessons/1/levels/1" target="_blank"><button>Prófaðu virkni</button></a>
     </span>
   </div>
@@ -96,7 +96,7 @@ theme: responsive
       </a>
     <div class="tutorial-info" style="background-color: #ffffff; border: 1px solid #696969; border-top: none; border-radius: 0 0 15px 15px; padding: 15px 25px 25px 25px">
       <span>
-        <h3 class="tutorial-info-h" style="text-align: left; margin-top:10px; margin-bottom:10px"><strong>Hvernig tölvur virka</strong></h3>
+        <h3 class="tutorial-info-h" style="text-align: left; margin-top:10px; margin-bottom:10px">Hvernig tölvur vinna</h3>
         <div class="smalltext" style="text-align: left; margin-bottom: 10px">Með kynningu frá Bill Gates útskýrir þessi röð sex stuttra myndbanda hvað gerir tölvu að tölvu og hvernig tölvubrautir virka.</div>
         <a class="linktag" id="howcomputers" href="https://www.youtube.com/watch?v=OAx_6-wdslM&list=PLzdnOPI1iJNcsRwJhvksEo1tJqjIqWbN-" target="_blank"><button>Horfa á vídeó röð</button></a>
     </span>
@@ -111,8 +111,8 @@ theme: responsive
       </a>
     <div class="tutorial-info" style="background-color: #ffffff; border: 1px solid #696969; border-top: none; border-radius: 0 0 15px 15px; padding: 15px 25px 25px 25px">
       <span>
-        <h3 class="tutorial-info-h" style="text-align: left; margin-top:10px; margin-bottom: 10px"><strong>Hvernig internetið virkar</strong></h3>
-        <div class="smalltext" style="text-align: left; margin-bottom: 10px">Í þessari röð af átta stuttum myndböndum lærir þú hvernig internetið var fundið upp, hvað HTML er og hvernig leitarvélar eins og Google virka.</div>
+        <h3 class="tutorial-info-h" style="text-align: left; margin-top:10px; margin-bottom: 10px">Hvernig internetið virkar</h3>
+        <div class="smalltext" style="text-align: left; margin-bottom: 10px">Í þessari röð af átta stuttum myndböndum lærirðu hvernig internetið var fundið upp, hvað HTML er og hvernig leitarvélar eins og Google virka.</div>
         <a class="linktag" id="howinternet" href="https://www.youtube.com/watch?v=Dxcc6ycZ73M&list=PLzdnOPI1iJNfMRZm5DDxco3UdsFegvuB7-" target="_blank"><button>Horfa á vídeó röð</button></a>
     </span>
   </div>
@@ -126,7 +126,7 @@ theme: responsive
       </a>
     <div class="tutorial-info" style="background-color: #ffffff; border: 1px solid #696969; border-top: none; border-radius: 0 0 15px 15px; padding: 15px 25px 25px 25px">
       <span>
-        <h3 class="tutorial-info-h" style="text-align: left; margin-top:10px; margin-bottom: 10px"><strong>Hvernig AI virkar</strong></h3>
+        <h3 class="tutorial-info-h" style="text-align: left; margin-top:10px; margin-bottom: 10px">Hvernig AI virkar</h3>
         <div class="smalltext" style="text-align: left; margin-bottom: 10px">Lærðu um hvernig AI virkar og hvers vegna það skiptir máli með þessari röð stuttra myndbanda. Featuring Microsoft forstjóri Satya Nadella og fjölbreytt kastað af sérfræðingum.</div>
         <a class="linktag" id="ai-videos" href="/ai#ai-videos" target="_blank"><button>Horfa á vídeó röð</button></a>
     </span>
@@ -136,7 +136,7 @@ theme: responsive
 
 <div style="clear: both"></div>
 
-<p>View more videos, including short inspirational videos featuring celebrities like Steph Curry and Shakira, <a class="linktag" id="all-videos" href="https://code.org/educate/resources/videos" target="_blank">here</a>.</p>
+<p>Skoða fleiri myndbönd, þar á meðal stutt innblástur myndbönd lögun orðstír eins Steph Curry og Shakira, hér. <a class="linktag" id="all-videos" href="https://code.org/educate/resources/videos" target="_blank"></a></p>
 <br>
 <p><a href="#top">[Aftur efst]</a></p>
 
@@ -147,7 +147,7 @@ theme: responsive
 <a id="express"></a>
 <h2>Lærðu grundvallaratriðin með sjálf-skref námskeið okkar</h2>
 <h3>Sjálf-skref inngangs námskeið</h3>
-<p>Frábær kostur fyrir nemendur að byrja á eigin spýtur. Þú munt læra grundvallaratriði tölvunarfræði með draga & sleppa blokkum. Búðu til eigin teikningar og leiki. Athugið: Hraðnámskeið eru nú í boði á ensku, hindí, ítölsku og spænsku. For other languages, we recommend our 20-hour <a class="linktag" id="accelerated" href="https://studio.code.org/s/20-hour" target="_blank">Accelerated Course</a>. To see what's available in your language, visit our <a class="linktag" id="course-catalog" href="https://studio.code.org/courses" target="_blank">course catalog</a>.</p>
+<p>Frábær kostur fyrir nemendur að byrja á eigin spýtur. Þú munt læra grundvallaratriði tölvunarfræði með draga & sleppa blokkum. Búðu til eigin teikningar og leiki. Athugið: Hraðnámskeið eru nú í boði á ensku, hindí, ítölsku og spænsku. Fyrir önnur tungumál mælum við með 20 tíma <a class="linktag" id="accelerated" href="https://studio.code.org/s/20-hour" target="_blank">flýtimeðferð okkar.</a> Til að sjá hvað er í boði á þínu tungumáli, heimsækja <a class="linktag" id="course-catalog" href="https://studio.code.org/courses" target="_blank">námskeiðaskrá</a>okkar.</p>
 
 <br>
 
@@ -159,13 +159,13 @@ theme: responsive
 
 <div class="col-50" style="padding-right: 20px; padding-bottom:10px">
 
-<a class="linktag" id="prereader-course" href="https://studio.code.org/s/pre-express-2019" target="_blank"><img src="/images/curriculum/course-tile-pre-reader-express.png" style="width: 100%" alt="Pre-lesandi Express námskeið"></a><br><a class="linktag" id="prereader-course" href="https://studio.code.org/s/pre-express-2019" target="_blank">Express Course for pre-readers</a>
+<a class="linktag" id="prereader-course" href="https://studio.code.org/s/pre-express-2019" target="_blank"><img src="/images/curriculum/course-tile-pre-reader-express.png" style="width: 100%" alt="Pre-lesandi Express námskeið"></a><br><a class="linktag" id="prereader-course" href="https://studio.code.org/s/pre-express-2019" target="_blank">Express námskeið fyrir fyrirfram lesendur</a>
 
 </div>
-<div style="clear: both"></div>
+<div style="clear: both; margin-bottom: 2rem"></div>
 
 <h3>Sjálf-skref kynningar á Game Lab og App Lab</h3>
-<p>Aðlagað frá CS uppgötvunum okkar og CS Principles námskeiðum, þessar stuttu, sjálf-skref einingar eru frábær leið til að læra hugtök sem spanna öll forritunarmál og verkfæri. <i>Requires Code.org account to access</i>.</p>
+<p>Aðlagað frá CS uppgötvunum okkar og CS Principles námskeiðum, þessar stuttu, sjálf-skref einingar eru frábær leið til að læra hugtök sem spanna öll forritunarmál og verkfæri. <i>Krefst Code.org reiknings til að fá aðgang.</i></p>
 
 <br>
 
@@ -176,8 +176,8 @@ theme: responsive
       </a>
     <div class="tutorial-info" style="background-color: #ffffff; border: 1px solid #696969; border-top: none; border-radius: 0 0 15px 15px; padding: 15px 25px 25px 25px">
       <span>
-        <h3 class="tutorial-info-h" style="text-align: left; margin-top:10px; margin-bottom:10px"><strong>Kynning á Game Lab</strong></h3>
-        <div class="smalltext" style="text-align: left; margin-bottom: 10px">Program fjör, gagnvirk list, og leikir í Game Lab. Byrjaðu með einföldum formum og byggðu upp á flóknari sprite-undirstaða fjör og leiki.</div>
+        <h3 class="tutorial-info-h" style="text-align: left; margin-top:10px; margin-bottom:10px">Kynning á Game Lab</h3>
+        <div class="smalltext" style="text-align: left; margin-bottom: 10px">Program hreyfimyndum, gagnvirkri list og leikjum í Game Lab. Byrjaðu með einföldum formum og byggðu upp á flóknari sprite-undirstaða fjör og leiki.</div>
         <a class="linktag" id="gamelab-intro" href="https://studio.code.org/s/csd3-virtual" target="_blank"><button>Prófaðu eininguna</button></a>
     </span>
   </div>
@@ -191,7 +191,7 @@ theme: responsive
       </a>
     <div class="tutorial-info" style="background-color: #ffffff; border: 1px solid #696969; border-top: none; border-radius: 0 0 15px 15px; padding: 15px 25px 25px 25px">
       <span>
-        <h3 class="tutorial-info-h" style="text-align: left; margin-top:10px; margin-bottom: 10px"><strong>Skjaldbaka Forritun í App Lab</strong></h3>
+        <h3 class="tutorial-info-h" style="text-align: left; margin-top:10px; margin-bottom: 10px">Skjaldbaka Forritun í App Lab</h3>
         <div class="smalltext" style="text-align: left; margin-bottom: 10px">Notaðu einfaldar JavaScript skipanir til að teikna form og myndir með því að nota sýndar “skjaldbaka.” Hannaðu og forritaðu þína eigin stafrænu senu!</div>
         <a class="linktag" id="turtle-applab" href="https://studio.code.org/s/csp3-virtual" target="_blank"><button>Prófaðu eininguna</button></a>
     </span>
@@ -206,8 +206,8 @@ theme: responsive
       </a>
     <div class="tutorial-info" style="background-color: #ffffff; border: 1px solid #696969; border-top: none; border-radius: 0 0 15px 15px; padding: 15px 25px 25px 25px">
       <span>
-        <h3 class="tutorial-info-h" style="text-align: left; margin-top:10px; margin-bottom: 10px"><strong>Event-Driven Forritun í App Lab</strong></h3>
-        <div class="smalltext" style="text-align: left; margin-bottom: 10px">Lærðu að hanna forrit sem bregðast við smellum og lyklapressum. Búðu til röð af einföldum forritum (forritum) sem búa á vefnum!</div>
+        <h3 class="tutorial-info-h" style="text-align: left; margin-top:10px; margin-bottom: 10px">Viðburðardrifin forritun í App Lab</h3>
+        <div class="smalltext" style="text-align: left; margin-bottom: 10px">Lærðu að hanna forrit sem svara smellum og lyklapressum. Búðu til röð af einföldum forritum (forritum) sem búa á vefnum!</div>
         <a class="linktag" id="events-applab" href="https://studio.code.org/s/csp5-virtual" target="_blank"><button>Prófaðu eininguna</button></a>
     </span>
   </div>
@@ -230,7 +230,7 @@ theme: responsive
 
 <div class="col-33" style="padding:15px; border-radius:15px; border:10px solid white; background-color:#00adbc">
   <div style="width: 87%; float: left">
-    <a class="linktag" id="applab" href="https://code.org/educate/applab" style="text-decoration:none" target="_blank"><h3 style="color:#ffffff; margin:0; margin-bottom:5px; text-decoration:none"><strong>App Lab</strong></h3></a>
+    <a class="linktag" id="applab" href="https://code.org/educate/applab" style="text-decoration:none" target="_blank"><h3 style="color:#ffffff; margin:0; margin-bottom:5px; text-decoration:none">App Lab</h3></a>
     <p style="color:#ffffff">App Lab er forritunarumhverfi þar sem þú getur búið til einföld forrit. Hannaðu app, kóða með kubbum eða JavaScript til að það virki og deildu síðan forritinu þínu á nokkrum sekúndum.</p>
     <a class="linktag" id="applab" href="https://code.org/educate/applab" target="_blank"><button style="background-color:#e7e8ea; border-color:#e7e8ea; color:#696969">Búðu til forrit</button></a>
   </div>
@@ -239,7 +239,7 @@ theme: responsive
 
 <div class="col-33" style="padding:15px; border-radius:15px; border:10px solid white; background-color:#00adbc">
   <div style="width: 87%; float: left">
-    <a class="linktag" id="gamelab" href="https://code.org/educate/gamelab" style="text-decoration:none" target="_blank"><h3 style="color:#ffffff; margin:0; margin-bottom:5px; text-decoration:none"><strong>Game Lab</strong></h3></a>
+    <a class="linktag" id="gamelab" href="https://code.org/educate/gamelab" style="text-decoration:none" target="_blank"><h3 style="color:#ffffff; margin:0; margin-bottom:5px; text-decoration:none">Leikur Lab</h3></a>
     <p style="color:#ffffff">Game Lab er forritunarumhverfi þar sem þú getur gert einfaldar hreyfimyndir og leiki með hlutum og persónum sem hafa samskipti við hvert annað.</p>
     <br>
     <a class="linktag" id="gamelab" href="https://code.org/educate/gamelab" target="_blank"><button style="background-color:#e7e8ea; border-color:#e7e8ea; color:#696969">Búa til leik</button></a>
@@ -249,7 +249,7 @@ theme: responsive
 
 <div class="col-33" style="padding:15px; border-radius:15px; border:10px solid white; background-color:#00adbc">
   <div style="width: 87%; float: left">
-    <a class="linktag" id="weblab" href="https://code.org/educate/weblab" style="text-decoration:none" target="_blank"><h3 style="color:#ffffff; margin:0; margin-bottom:5px; text-decoration:none"><strong>Web Lab</strong></h3></a>
+    <a class="linktag" id="weblab" href="https://code.org/educate/weblab" style="text-decoration:none" target="_blank"><h3 style="color:#ffffff; margin:0; margin-bottom:5px; text-decoration:none">Vefur Lab</h3></a>
     <p style="color:#ffffff">Web Lab er forritunarumhverfi þar sem þú getur búið til einfaldar vefsíður með HTML og CSS. Hannaðu vefsíður þínar og deildu síðunni þinni á nokkrum sekúndum.</p>
     <br>
     <a class="linktag" id="weblab" href="https://code.org/educate/weblab" target="_blank"><button style="background-color:#e7e8ea; border-color:#e7e8ea; color:#696969">Búðu til vefsíðu</button></a>
@@ -286,16 +286,12 @@ theme: responsive
 
 <h2>Engin tölva heima? Prófaðu CS í símanum þínum með þessum forritum frá samstarfsaðilum okkar</h2>
 
-<div class="col-33" style="padding-right: 30px; padding-bottom:40px">
-  <a class="linktag" id="box-island" href="https://boxisland.io/" target="_blank"><img src="images/tutorials/new/boxisland.jpg" style="width: 100%" alt="Box Island"></a><br><a class="linktag" id="box-island" href="https://boxisland.io/" target="_blank"><h3 style="color:#7665a0"><strong>Box Island</strong></h3></a>Heillandi hreyfanlegur kóðunarleikur sem tekur nemendur í spennandi ævintýri, en kennir grundvallaratriði kóðunar, eins og reiknirit, mynsturgreiningu, raðir, lykkjur og conditionals. <i>(fyrir alla aldurshópa)</i>
+<div class="col-50" style="padding-right: 30px; padding-bottom:40px">
+  <a class="linktag" id="box-island" href="https://boxisland.io/" target="_blank"><img src="images/tutorials/new/boxisland.jpg" style="width: 100%" alt="Box Island"></a><br><a class="linktag" id="box-island" href="https://boxisland.io/" target="_blank"><h3 style="margin-top: 1rem;">Box Island</h3></a>Heillandi hreyfanlegur kóðunarleikur sem tekur nemendur í spennandi ævintýri, en kennir grundvallaratriði kóðunar, eins og reiknirit, mynstur viðurkenningu, raðir, lykkjur og conditionals. <i>(fyrir alla aldurshópa)</i>
 </div>
 
-<div class="col-33" style="padding-right: 30px; padding-bottom:40px">
-  <a class="linktag" id="codespark" href="https://accounts.codespark.com/promo?utm_source=codeorg&utm_medium=referral&utm_campaign=schoolsclosed-parents&utm_content=offer&promoCode=schoolclosed" target="_blank"><img src="/images/tutorials/hoc2018/codespark_create.jpg" style="width: 100%" alt="CodesPark"></a><br><a class="linktag" id="codespark" href="https://accounts.codespark.com/promo?utm_source=codeorg&utm_medium=referral&utm_campaign=schoolsclosed-parents&utm_content=offer&promoCode=schoolclosed" target="_blank"><h3 style="color:#7665a0"><strong>CodeSpark</strong></h3></a>Verðlaun-aðlaðandi nám-til-kóða vettvangur fyrir börn á aldrinum 5-9. Leystu þrautir og búðu til leiki með The Foos meðan þú lærir að kóða. <strong>Athugið: CodeSpark býður upp á ókeypis 3 mánaða prufu. Parent's email address and credit card information are required at signup.</strong> <i>(for pre-readers through Grade 5)</i>
-</div>
-
-<div class="col-33" style="padding-right: 30px; padding-bottom:40px">
-  <a class="linktag" id="grasshopper" href="https://grasshopper.app/" target="_blank"><img src="/images/athome/grasshopper.png" style="width: 100%" alt="Engispretta"></a><br><a class="linktag" id="grasshopper" href="https://grasshopper.app/" target="_blank"><h3 style="color:#7665a0"><strong>Grasshopper</strong></h3></a>Lærðu erfðaskrá með skemmtilegum, skjótum kennslustundum í símanum þínum sem kenna þér að skrifa alvöru JavaScript. Kóði með Google Program. <i>(fyrir grunnskóla og upp)</i>
+<div class="col-50" style="padding-right: 30px; padding-bottom:40px">
+  <a class="linktag" id="codespark" href="https://accounts.codespark.com/promo?utm_source=codeorg&utm_medium=referral&utm_campaign=schoolsclosed-parents&utm_content=offer&promoCode=schoolclosed" target="_blank"><img src="/images/tutorials/hoc2018/codespark_create.jpg" style="width: 100%" alt="CodesPark"></a><br><a class="linktag" id="codespark" href="https://accounts.codespark.com/promo?utm_source=codeorg&utm_medium=referral&utm_campaign=schoolsclosed-parents&utm_content=offer&promoCode=schoolclosed" target="_blank"><h3 style="margin-top: 1rem;">CodeSpark</h3></a>margverðlaunaður nám-til-kóða vettvangur fyrir börn á aldrinum 5-9 ára. Leystu þrautir og búðu til leiki með The Foos meðan þú lærir að kóða. <strong>Athugið: CodeSpark býður upp á ókeypis 3 mánaða prufu. Netfang foreldris og kreditkortaupplýsingar eru nauðsynlegar við skráningu.</strong> <i>(fyrir forlesendur í gegnum 5. bekk)</i>
 </div>
 
 <div style="clear: both; margin-bottom: 15px"></div>
@@ -312,8 +308,8 @@ theme: responsive
       </a>
     <div class="tutorial-info" style="background-color: #ffffff; border: 1px solid black; border-top: none; border-radius: 0 0 15px 15px; padding: 15px 25px 25px 25px">
       <span>
-        <h3 class="tutorial-info-h" style="margin-top:10px"><strong>CodeBytes</strong></h3>
-        <div class="smalltext" style="color: dimgray;">CodeBytes eru auðvelt að melta, 20 mínútna gagnvirk lærdóm blanda tölvunarfræði með raunverulegur-veröld efni. Þjálfa gervigreind til að lesa táknmál, hanna app til góðs, kanna heim Minecraft og fleira!</div>
+        <h3 class="tutorial-info-h" style="margin-top:10px">CodeBytes</h3>
+        <div class="smalltext" style="color: dimgray;">CodeBytes er auðvelt að melta, 20 mínútna gagnvirkar kennslustundir sem blanda tölvunarfræði við raunveruleg efni. Þjálfa gervigreind til að lesa táknmál, hanna app til góðs, kanna heim Minecraft og fleira!</div>
         <br>
         <br>
         <a class="linktag" id="codebytes" href="https://code.org/codebytes" target="_blank"><button>Skoða þætti</button></a>
@@ -329,10 +325,10 @@ theme: responsive
       </a>
     <div class="tutorial-info" style="background-color: #ffffff; border: 1px solid black; border-top: none; border-radius: 0 0 15px 15px; padding: 15px 25px 25px 25px">
       <span>
-        <h3 class="tutorial-info-h" style="margin-top:10px"><strong>Code Break</strong></h3>
-        <div class="smalltext" style="">Halda tölvunarfræði gaman með því að taka Code Break! You can create a cypher with Ashton Kutcher, learn about variables with Yara Shahidi, and even explore how the Internet works with the actual inventor of the Internet, Vint Cerf!</div>
+        <h3 class="tutorial-info-h" style="margin-top:10px">Code Break</h3>
+        <div class="smalltext" style="">Halda tölvunarfræði gaman með því að taka Code Break! Þú getur búið til cypher með Ashton Kutcher, læra um breytur með Yara Shahidi, og jafnvel kanna hvernig internetið virkar með raunverulegum uppfinningamaður á Netinu, Vilt Cerf!</div>
         <br>
-        <a class="linktag" id="codebreak" href="https://code.org/break" target="_blank"><button>Get connected</button></a>
+        <a class="linktag" id="codebreak" href="https://code.org/break" target="_blank"><button>Tengjast</button></a>
     </span>
   </div>
 </div>

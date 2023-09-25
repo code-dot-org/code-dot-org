@@ -483,6 +483,59 @@
         "pre-express-2022/Sequencing with Scrat": {
           "overview": "Ova lekcija će studentima dati ideju o tome šta da očekuju kada se upute prema kompjuterskom laboratoriju. Sve počinje sa kratkom raspravom koji ih upoznaje sa manirima kompjutorskog laboratorija, onda će nastaviti korištenjem računala da završe online zagonetke."
         },
+        "coursea-2023/Learn to Drag and Drop": {
+          "overview": "Ova lekcija će studentima dati ideju o tome šta da očekuju kada se upute prema kompjuterskom laboratoriju. Sve počinje sa kratkom raspravom koji ih upoznaje sa manirima kompjutorskog laboratorija, onda će nastaviti korištenjem računala da završe online zagonetke."
+        },
+        "coursea-2023/Happy Maps": {
+          "name": "Vesele Mape",
+          "overview": "Most od algoritama do programiranja može biti veoma kratak ako učenici razumiju razliku između planiranja redoslijeda i kodiranja tog redosljeda u odgovarajući jezik. Ovako aktivnost će pomoći učenicima da prikupe iskustvo čitanja i pisanja u stenografskom kodu.",
+          "purpose": "Most od algoritama do programiranja može biti veoma kratak ako učenici razumiju razliku između planiranja redoslijeda i kodiranja tog redosljeda u odgovarajući jezik. Ovako aktivnost će pomoći učenicima da prikupe iskustvo čitanja i pisanja u stenografskom kodu."
+        },
+        "coursea-2023/Sequencing with Scrat": {
+          "overview": "Ova lekcija će studentima dati ideju o tome šta da očekuju kada se upute prema kompjuterskom laboratoriju. Sve počinje sa kratkom raspravom koji ih upoznaje sa manirima kompjutorskog laboratorija, onda će nastaviti korištenjem računala da završe online zagonetke."
+        },
+        "courseb-2023/Move It, Move It": {
+          "name": "Pomakni, Pomakni"
+        },
+        "courseb-2023/Sequencing with Angry Birds": {
+          "overview": "Ova lekcija će studentima dati ideju o tome šta da očekuju kada se upute prema kompjuterskom laboratoriju. Sve počinje sa kratkom raspravom koji ih upoznaje sa manirima kompjutorskog laboratorija, onda će nastaviti korištenjem računala da završe online zagonetke."
+        },
+        "courseb-2023/Getting Loopy": {
+          "name": "Zapetljavanje"
+        },
+        "coursec-2023/The Big Event": {
+          "name": "Veliki Događaj"
+        },
+        "coursec-2023/Binary Bracelets": {
+          "name": "Binarne narukvice"
+        },
+        "coursed-2023/Graph Paper Programming": {
+          "name": "Papirno Programiranje Grafikona"
+        },
+        "coursed-2023/Relay Programming": {
+          "name": "Prijenos programiranja"
+        },
+        "coursed-2023/Dance Party": {
+          "name": "Plesna zabava"
+        },
+        "coursed-2023/Conditionals with Cards": {
+          "name": "Uvjeti s Kartama"
+        },
+        "coursee-2023/Songwriting": {
+          "name": "Pisanje pjesama"
+        },
+        "coursef-2023/The Internet": {
+          "name": "Internet"
+        },
+        "express-2023/Dance Party": {
+          "name": "Plesna zabava"
+        },
+        "pre-express-2023/Learn to Drag and Drop": {
+          "overview": "Ova lekcija će studentima dati ideju o tome šta da očekuju kada se upute prema kompjuterskom laboratoriju. Sve počinje sa kratkom raspravom koji ih upoznaje sa manirima kompjutorskog laboratorija, onda će nastaviti korištenjem računala da završe online zagonetke."
+        },
+        "pre-express-2023/Sequencing with Scrat": {
+          "overview": "Ova lekcija će studentima dati ideju o tome šta da očekuju kada se upute prema kompjuterskom laboratoriju. Sve počinje sa kratkom raspravom koji ih upoznaje sa manirima kompjutorskog laboratorija, onda će nastaviti korištenjem računala da završe online zagonetke."
+        },
         "Hour of Code/Hour of Code 2013": {
           "name": "Sat Kodiranja 2013"
         },
