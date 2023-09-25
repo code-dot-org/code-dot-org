@@ -46,7 +46,7 @@
   "dance-unplugged": "ساعت کدنویسی - مجلس رقص - بدون دستگاه",
   "counting-csc": "فعالیت شمارش",
   "explore-data-1": "فعالیت مربوط به داده‌ها",
-  "outbreak-csc": "شیوع",
+  "outbreak-csc": "همه‌گیری",
   "spelling-bee": "فعالیت هجی کردن",
   "poem-art": "هنر شعر",
   "poetry": "ماژول شاعری",
@@ -295,5 +295,6 @@
   "focus-on-creativity": "تمرکز بر خلاقیت (کشفیات علوم کامپیوتر)",
   "vpl-csd-summer-ci": "بررسی دوره آموزشی \"کشفیات علوم کامپیوتر\"",
   "self-paced-pl-csd": "self-paced-pl-csd-2021",
+  "self-paced-pl-csp": "self-paced-pl-csp-2021",
   "self-paced-pl-aiml": "آموزش هوش مصنوعی و یادگیری ماشینی"
 }
