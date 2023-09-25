@@ -26,8 +26,6 @@ module.exports = {
   AUTO_RELOAD: getBoolEnv('AUTORELOAD'),
   // Can be set to build a single app
   APP: getMoocEnv('APP'),
-  // If set, apps tests will show successful tests as they complete.
-  CDO_VERBOSE_TEST_OUTPUT: getBoolEnv('CDO_VERBOSE_TEST_OUTPUT'),
   // If set, will build uncompressed JS
   DEV: !!getMoocEnv('DEV'),
   // enable sourceMaps when building minified js making it easier to debug.
