@@ -31,7 +31,6 @@ class LearningGoalEvaluationsController < ApplicationController
       learning_goal_id: learning_goal_evaluation_params[:learning_goal_id]
     )
     render json: learning_goal_evaluation
-
   end
 
   def get_or_create_evaluation
