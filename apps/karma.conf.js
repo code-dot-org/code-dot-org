@@ -2,7 +2,6 @@ var webpackKarmaConfig = require('./webpackKarma.config');
 var envConstants = require('./envConstants');
 
 var path = require('path');
-var tty = require('tty');
 
 // We run all tests in the UTC timezone so datetimes don't vary by local timezone
 process.env.TZ = 'UTC';
@@ -129,6 +128,15 @@ module.exports = function (config) {
       ...(envConstants.COVERAGE ? ['coverage-istanbul'] : []),
     ],
 
+    specReporter: {
+      // Use the same test pass/fail/skip keywords as our ruby tests
+      prefixes: {
+        success: 'PASS: ',
+        failure: 'FAIL: ',
+        skipped: 'SKIP: ',
+      },
+    },
+
     junitReporter: {
       outputDir: envConstants.CIRCLECI
         ? `${envConstants.CIRCLE_TEST_REPORTS}/apps`
@@ -153,7 +161,7 @@ module.exports = function (config) {
     port: KARMA_CLI_FLAGS.port,
 
     // enable / disable colors in the output (reporters and logs)
-    colors: tty.isatty(process.stdout.fd),
+    colors: true,
 
     // level of logging
     // possible values: config.LOG_DISABLE || config.LOG_ERROR || config.LOG_WARN || config.LOG_INFO || config.LOG_DEBUG
