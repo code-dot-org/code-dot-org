@@ -6,16 +6,15 @@ Blockly is a web-based, graphical programming editor. Users can drag blocks toge
 and a small army of translators.
 
 - [Quick Start](#quick-start)
+- [Running Tests](#running-tests)
 - [Contributing](#contributing)
 
 ## Quick Start
 
-### Installing Apps
-
 ```
 cd apps
 
-# Machine setup (OSX with Homebrew)
+# Machine setup (macOS with Homebrew)
 brew install node
 npm install -g yarn@1.22.5
 
@@ -23,7 +22,10 @@ npm install -g yarn@1.22.5
 yarn
 yarn build
 
-# automatically rebuild every time you make changes to source files
+# Make sure tests pass
+yarn test
+
+# Automatically rebuild every time you make changes to source files
 yarn start
 ```
 
@@ -49,9 +51,7 @@ lrwxr-xr-x  1 laurel  501  12 Apr 27 13:00 dashboard/public/blockly -> apps/buil
 
 If the symlink is in place, then as you rebuild apps, your results should show up in Dashboard. If not, run through step 1 again.
 
-### Building during development
-
-#### Full build
+## Building
 
 To run a full development build (minus localization):
 
@@ -66,103 +66,32 @@ yarn build
 
 See also: [Full build with blockly changes](#full-build-with-blockly-changes)
 
-#### Running tests
+## Testing
+### Running tests
 
 ```
 yarn test
 ```
 
-- Run Drone CI when you create a pull request.
-- Run `yarn build` before testing. If you see errors like `Module not found: Error: Can't resolve '../../../build/` double-check you built.
+- This is run by Drone CI when you create a pull request.
+- Run `yarn build` before testing. If you don't, you'll see errors like `Module not found: Error: Can't resolve '../../../build/`.
 
-Only run unit tests:
-```
-yarn test:unit
-```
-
-Run an individual unit test:
-```
-yarn test:unit --entry=./test/unit/gridUtilsTest.js
-```
-
-Run unit tests in the `applab` folder:
-
-```
-yarn test:unit --entry=./test/unit/applab/
-```
-
-Run unit tests with `TutorialExplorer` in their name:
-```
-yarn test:unit --grep='TutorialExplorer'
-```
-
-Run integration tests with `ec_data_blocks` in their name:
-
-```
-yarn test:integration --grep=ec_data_blocks
-```
-
-Run integration tests for `maze` levels:
-
-```
-yarn test:integration --levelType=maze
-```
-
-Stream pass/fail results inline with stdout/sterr:
-```
-yarn test:unit --verbose
-```
-
-| Command | Description |
+| To Run... | Example Command |
 | --- | --- |
-| Only run unit tests | ```yarn test:unit``` |
+| All tests in parallel | `yarn test` |
+| Unit tests | `yarn test:unit` |
+| Integration tests | `yarn test:integration` |
+| A single unit test file | `yarn test:unit --entry=./test/unit/gridUtilsTest.js` |
+| All unit tests in a folder | `yarn test:unit --entry=./test/unit/applab/` |
+| Unit tests named \*Tutorial\* | `yarn test:unit --grep='Tutorial'` |
+| Integration tests named \*data_blocks\* | `yarn test:integration --grep='data_blocks'` |
+| Integration tests for maze levels | `yarn test:integration --levelType=maze` |
+| **Other useful flags:** | **Example Command** |
+| Stream pass/fail to stdout/stderr | `yarn test:unit --verbose` |
+| Rerun tests when files change | `yarn test:unit --watchTests` |
+| Debug tests in Chrome | `yarn test:unit --browser=Chrome --watchTests` |
 
-```
-
-Run an individual unit test:
-```
-yarn test:unit --entry=./test/unit/gridUtilsTest.js
-```
-
-Run unit tests in the `applab` folder:
-
-```
-yarn test:unit --entry=./test/unit/applab/
-```
-
-Run unit tests with `TutorialExplorer` in their name:
-```
-yarn test:unit --grep='TutorialExplorer'
-```
-
-Run integration tests with `ec_data_blocks` in their name:
-
-```
-yarn test:integration --grep=ec_data_blocks
-```
-
-Run integration tests for `maze` levels:
-
-```
-yarn test:integration --levelType=maze
-```
-
-Stream pass/fail results inline with stdout/sterr:
-```
-yarn test:unit --verbose
-```
-
-##### Rerun Tests Automatically
-
-Rerun tests automatically on every file change:
-
-```
-yarn test:unit --watchTests
-```
-
-This will work on any of the test commands.
-
-##### Debugging Tests
+### Debugging Tests
 
 To debug tests, your best bet is to run them in Chrome:
 
@@ -175,7 +104,7 @@ click on the Debug button to open a new tab where you can then open the
 developer console to see everything that is happening. If you don't see the new
 chrome browser window, it may have opened _behind_ your other windows.
 
-##### Coverage Reports
+### Coverage Reports
 
 Coverage reports can be generated for any collection of tests by specifying the
 `COVERAGE=1` environment variable. Results will be placed in the `coverage`
@@ -192,7 +121,7 @@ different):
 open coverage/PhantomJS\ 2.1.1\ \(Mac\ OS\ X\ 0.0.0\)/index.html
 ```
 
-##### Writing Tests
+### Writing Tests
 
 You can add new test files as /test/unit/\*Tests.js; see
 `/test/unit/feedbackTests.js` as an example of adding a mock Blockly
@@ -224,24 +153,24 @@ fetching files served by the test runner, prefix the file path with
 document.write('<audio src="/base/test/audio/assets/win.mp3"/>');
 ```
 
-#### UI Component Style Guide & Tests
+### UI Component Style Guide & Tests
 
 We use Storybook to generate a UI component style guide that you can use
 to discover what components are available to reuse as you build new
 features. See more in the [apps/.storybook README](./.storybook/README.md).
 
-#### Full build with blockly changes
+### Full build with blockly changes
 
 1. Check out a local copy of [blockly](https://github.com/code-dot-org/blockly/)
 1. Follow the directions in [Building with apps](https://github.com/code-dot-org/blockly#building-with-apps)
 
-#### Analyzing bundle sizes
+### Analyzing bundle sizes
 
 ![code-studio-common bundle](https://user-images.githubusercontent.com/1070243/44691985-abe8dc80-aa15-11e8-95a3-0835ca3529df.png)
 
 Bloated javascript bundles getting you down? Run `yarn build:analyze` to generate an interactive treemap visualization of the contents of all of our bundles. This will automatically open the report in your browser, or you can find the generated html page in the apps build directory at code-dot-org/apps/build/package/js/report.html. This uses [webpack-bundle-analyzer](https://github.com/webpack-contrib/webpack-bundle-analyzer).
 
-### Localization
+## Localization
 
 It's especially important to test your changes with localization when modifying layouts. We support
 right-to-left languages and have some special layout tweaks embedded in the CSS to support that.
@@ -250,18 +179,18 @@ Running a full localization build can take several minutes. Since localization r
 
 Note: Using the live-reload server with localization builds is prone to the `Error: EMFILE, too many open files` problem. See the `ulimit` fix [under the live-reload server heading](#running-with-live-reload-server).
 
-#### Sending new i18n strings to CrowdIn
+### Sending new i18n strings to CrowdIn
 
 To get new strings localized using CrowdIn, we currently run a script in a private repository. Contact a code.org engineer to trigger an update.
 
-### Adding a new npm package
+## Adding a new npm package
 
 To add a new package using npm, e.g., `lodash`, run: `yarn add --dev lodash`
 
 - `--dev` adds the dependency to node's package.json, freezing the current version
 - Because the build process is done in dev mode, include dependencies as devDependencies rather than production dependencies
 
-### Typescript Migration
+## Typescript Migration
 We are trying out Typescript in our repository, and currently have a combination of Typescript and Javascript files. Typescript files can be added anywhere in `/src`, and will
 be linted and built. 
 
