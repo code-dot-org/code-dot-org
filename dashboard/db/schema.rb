@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2023_09_11_173341) do
+ActiveRecord::Schema.define(version: 2023_09_21_172627) do
 
   create_table "activities", id: :integer, charset: "utf8", collation: "utf8_unicode_ci", force: :cascade do |t|
     t.integer "user_id"
@@ -1737,14 +1737,12 @@ ActiveRecord::Schema.define(version: 2023_09_11_173341) do
     t.string "address_line3", limit: 30, comment: "Location address, street 3"
     t.decimal "latitude", precision: 8, scale: 6, comment: "Location latitude"
     t.decimal "longitude", precision: 9, scale: 6, comment: "Location longitude"
-    t.string "state_school_id"
     t.string "school_category"
     t.string "last_known_school_year_open", limit: 9
     t.index ["id"], name: "index_schools_on_id", unique: true
     t.index ["last_known_school_year_open"], name: "index_schools_on_last_known_school_year_open"
     t.index ["name", "city"], name: "index_schools_on_name_and_city", type: :fulltext
     t.index ["school_district_id"], name: "index_schools_on_school_district_id"
-    t.index ["state_school_id"], name: "index_schools_on_state_school_id", unique: true
     t.index ["zip"], name: "index_schools_on_zip"
   end
 
