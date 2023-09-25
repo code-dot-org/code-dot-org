@@ -41,13 +41,13 @@ social:
     %section.banner.homepage
       .wrapper
         - if ["pre-hoc", "soon-hoc", "actual-hoc", "post-hoc"].include?(hoc_mode)
-          %h1=hoc_s(:hoc2022_header)
+          %h1=hoc_s(:hoc2023_header)
           %h2=hoc_s(:hourofcode_homepage_hoc2018_header_line1)
           .ctabuttongroup
             #tryittext.ctatext
               = view :hoc_action_buttons, hoc_mode: hoc_mode
         - else
-          %h1=hoc_s(:hoc2022_header)
+          %h1=hoc_s(:hoc2023_header)
           %h2=hoc_s(:hourofcode_homepage_hoc2018_header_line1)
           .ctabuttongroup
             #tryittext.ctatext
