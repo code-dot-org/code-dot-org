@@ -1046,6 +1046,9 @@ Dashboard::Application.routes.draw do
     resources :code_review_comments, only: [:create, :update, :destroy]
 
     resources :learning_goal_evaluations, only: [:create, :update]
+    resources :learning_goal_ai_evaluations do
+      get :get_evaluation, on: :collection
+    end
 
     get '/backpacks/channel', to: 'backpacks#get_channel'
 
