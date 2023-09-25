@@ -11,6 +11,7 @@ import projects, {
   selectGallery,
   setPersonalProjects,
   setPublicProjects,
+  setCaptchaKey,
 } from '@cdo/apps/templates/projects/projectsRedux';
 import publishDialogReducer from '@cdo/apps/templates/projects/publishDialog/publishDialogRedux';
 import deleteDialogReducer from '@cdo/apps/templates/projects/deleteDialog/deleteProjectDialogRedux';
@@ -38,6 +39,7 @@ $(document).ready(() => {
   store.dispatch(selectGallery(currentTab));
   store.dispatch(setPersonalProjects());
   store.dispatch(setPublicProjects());
+  store.dispatch(setCaptchaKey(projectsData.recaptchaSiteKey));
 
   ReactDOM.render(
     <Provider store={store}>

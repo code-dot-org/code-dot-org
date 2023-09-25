@@ -262,7 +262,7 @@ Nota: no es necesario hacer esto en aplicaciones que se instalan (aplicaciones p
 
 Ejemplo de píxeles de seguimiento para Dance Party:
 
-IMG SRC = <http://code.org/api/hour/begin_dance.png>   
+IMG SRC = http://code.org/api/hour/begin_dance.png [](http://code.org/api/hour/begin_dance.png)   
 
 
 [**Volver al principio**](#top)

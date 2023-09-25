@@ -497,6 +497,11 @@
             "name": "मेरा फंक्शन"
           }
         },
+        "Course E: Artist Project_examples_2023": {
+          "my function": {
+            "name": "मेरा फंक्शन"
+          }
+        },
         "Course E: Frozen Project_examples2022": {
           "LOGIC FLOWER": {
             "name": "तर्क फूल"
@@ -561,6 +566,69 @@
           }
         },
         "Course E: Frozen Project_examples_2021": {
+          "LOGIC FLOWER": {
+            "name": "तर्क फूल"
+          },
+          "LOGIC FLOWERS": {
+            "name": "तर्क फूल"
+          },
+          "LOGIC FLOWERS2": {
+            "name": "तर्क फूल2"
+          },
+          "draw a circle": {
+            "description": "दिए गए अर्धव्यास का चक्कर चित्रित करें",
+            "name": "एक चक्र बनाएं",
+            "parameters": {
+              "radius": "अर्धव्यास"
+            }
+          },
+          "draw a house": {
+            "name": "एक घर खींचे",
+            "parameters": {
+              "length": "लंबाई"
+            }
+          },
+          "draw a pinwheel": {
+            "name": "चकरी चित्रित करें",
+            "parameters": {
+              "length": "लंबाई",
+              "repeat": "दोहराएँ",
+              "sides": "भुजाएं"
+            }
+          },
+          "draw a shape": {
+            "name": "आकृति खींचें",
+            "parameters": {
+              "length": "लंबाई",
+              "sides": "भुजाएं"
+            }
+          },
+          "draw a square": {
+            "name": "एक वर्ग खींचें",
+            "parameters": {
+              "length": "लंबाई",
+              "sides": "भुजाएं"
+            }
+          },
+          "draw a star": {
+            "description": "दिए गए बिंदुओं और दी गई लंबाई की भुजाओं से एक स्टार चित्रित करें",
+            "name": "एक सितारा खींचे",
+            "parameters": {
+              "length": "लंबाई",
+              "points": "अंक"
+            }
+          },
+          "draw a triangle": {
+            "name": "एक त्रिकोण खींचें",
+            "parameters": {
+              "length": "लंबाई"
+            }
+          },
+          "small flower": {
+            "name": "छोटा फूल"
+          }
+        },
+        "Course E: Frozen Project_examples_2023": {
           "LOGIC FLOWER": {
             "name": "तर्क फूल"
           },
@@ -828,6 +896,56 @@
             }
           }
         },
+        "CourseD_EOC_artist_2023": {
+          "draw a circle": {
+            "description": "दिए गए अर्धव्यास का चक्कर चित्रित करें",
+            "name": "एक चक्र बनाएं",
+            "parameters": {
+              "radius": "अर्धव्यास"
+            }
+          },
+          "draw a house": {
+            "name": "एक घर खींचे",
+            "parameters": {
+              "length": "लंबाई"
+            }
+          },
+          "draw a pinwheel": {
+            "name": "चकरी चित्रित करें",
+            "parameters": {
+              "length": "लंबाई",
+              "repeat": "दोहराएँ",
+              "sides": "भुजाएं"
+            }
+          },
+          "draw a shape": {
+            "name": "आकृति खींचें",
+            "parameters": {
+              "length": "लंबाई",
+              "sides": "भुजाएं"
+            }
+          },
+          "draw a square": {
+            "name": "एक वर्ग खींचें",
+            "parameters": {
+              "length": "लंबाई"
+            }
+          },
+          "draw a star": {
+            "description": "दिए गए बिंदुओं और दी गई लंबाई की भुजाओं से एक स्टार चित्रित करें",
+            "name": "एक सितारा खींचे",
+            "parameters": {
+              "length": "लंबाई",
+              "points": "अंक"
+            }
+          },
+          "draw a triangle": {
+            "name": "एक त्रिकोण खींचें",
+            "parameters": {
+              "length": "लंबाई"
+            }
+          }
+        },
         "CourseD_EOC_artist_example2021": {
           "draw a circle": {
             "description": "दिए गए अर्धव्यास का चक्कर चित्रित करें",
@@ -928,6 +1046,56 @@
             }
           }
         },
+        "CourseD_EOC_artist_example2021_2023": {
+          "draw a circle": {
+            "description": "दिए गए अर्धव्यास का चक्कर चित्रित करें",
+            "name": "एक चक्र बनाएं",
+            "parameters": {
+              "radius": "अर्धव्यास"
+            }
+          },
+          "draw a house": {
+            "name": "एक घर खींचे",
+            "parameters": {
+              "length": "लंबाई"
+            }
+          },
+          "draw a pinwheel": {
+            "name": "चकरी चित्रित करें",
+            "parameters": {
+              "length": "लंबाई",
+              "repeat": "दोहराएँ",
+              "sides": "भुजाएं"
+            }
+          },
+          "draw a shape": {
+            "name": "आकृति खींचें",
+            "parameters": {
+              "length": "लंबाई",
+              "sides": "भुजाएं"
+            }
+          },
+          "draw a square": {
+            "name": "एक वर्ग खींचें",
+            "parameters": {
+              "length": "लंबाई"
+            }
+          },
+          "draw a star": {
+            "description": "दिए गए बिंदुओं और दी गई लंबाई की भुजाओं से एक स्टार चित्रित करें",
+            "name": "एक सितारा खींचे",
+            "parameters": {
+              "length": "लंबाई",
+              "points": "अंक"
+            }
+          },
+          "draw a triangle": {
+            "name": "एक त्रिकोण खींचें",
+            "parameters": {
+              "length": "लंबाई"
+            }
+          }
+        },
         "CourseF_app_computer": {
           "reset game": {
             "name": "गेम रीसेट करें"
@@ -939,6 +1107,11 @@
           }
         },
         "CourseF_app_computer_-2022-2": {
+          "reset game": {
+            "name": "गेम रीसेट करें"
+          }
+        },
+        "CourseF_app_computer_2023": {
           "reset game": {
             "name": "गेम रीसेट करें"
           }
@@ -979,6 +1152,11 @@
           }
         },
         "Function intro Ryan_2021": {
+          "build bridge": {
+            "name": "पुल बनाएं"
+          }
+        },
+        "Function intro Ryan_2023": {
           "build bridge": {
             "name": "पुल बनाएं"
           }
@@ -1125,6 +1303,11 @@
             "name": "मार्ग साफ करें"
           }
         },
+        "MC_HOC_2017_07_Cole_2023": {
+          "clear path": {
+            "name": "मार्ग साफ करें"
+          }
+        },
         "MC_HOC_2017_10_RETRY": {
           "fix long path": {
             "name": "लंबे मार्ग को ठीक करें"
@@ -1158,6 +1341,14 @@
           }
         },
         "MC_HOC_2017_10_RETRY_2021": {
+          "fix long path": {
+            "name": "लंबे मार्ग को ठीक करें"
+          },
+          "fix short path": {
+            "name": "छोटे मार्ग को ठीक करें"
+          }
+        },
+        "MC_HOC_2017_10_RETRY_2023": {
           "fix long path": {
             "name": "लंबे मार्ग को ठीक करें"
           },
@@ -1205,6 +1396,14 @@
             "name": "छोटा पुल बनाएं"
           }
         },
+        "MC_HOC_2017_Ali_2023": {
+          "build long bridge": {
+            "name": "लंबा पुल बनाएं"
+          },
+          "build short bridge": {
+            "name": "छोटा पुल बनाएं"
+          }
+        },
         "MC_HOC_2017_FP20x20": {
           "function 1": {
             "name": "फंक्शन 1"
@@ -1238,6 +1437,14 @@
           }
         },
         "MC_HOC_2017_FP20x20_2021": {
+          "function 1": {
+            "name": "फंक्शन 1"
+          },
+          "function 2": {
+            "name": "फंक्शन 2"
+          }
+        },
+        "MC_HOC_2017_FP20x20_2023": {
           "function 1": {
             "name": "फंक्शन 1"
           },
@@ -1831,6 +2038,11 @@
             "name": "संभावी समाधान"
           }
         },
+        "courseB_artist_loops_challenge2_2023": {
+          "potential solution": {
+            "name": "संभावी समाधान"
+          }
+        },
         "courseC_artist_prog3": {
           "draw fire": {
             "name": "आग चित्रित करें"
@@ -1927,6 +2139,11 @@
             "name": "बूस्टर"
           }
         },
+        "courseC_artist_prog4_2023": {
+          "booster": {
+            "name": "बूस्टर"
+          }
+        },
         "courseC_data wizard": {
           "do something": {
             "name": "कुछ कीजिए"
@@ -1943,6 +2160,11 @@
           }
         },
         "courseC_data wizard_2021": {
+          "do something": {
+            "name": "कुछ कीजिए"
+          }
+        },
+        "courseC_data wizard_2023": {
           "do something": {
             "name": "कुछ कीजिए"
           }
@@ -2632,6 +2854,17 @@
             "name": "षट्भुजों की लाइन खींचें"
           }
         },
+        "courseE_artist_functions10_2023": {
+          "do something": {
+            "name": "कुछ कीजिए"
+          },
+          "draw hexagon": {
+            "name": "षट्कोण खींचें"
+          },
+          "draw line of hexagons": {
+            "name": "षट्भुजों की लाइन खींचें"
+          }
+        },
         "courseE_artist_functions1_copy": {
           "draw ear stems": {
             "name": "ईयर स्टेम चित्रित करें"
@@ -2690,6 +2923,14 @@
             "name": "ईयर स्टेम चित्रित करें"
           }
         },
+        "courseE_artist_functions2_2023": {
+          "draw a square": {
+            "name": "एक वर्ग खींचें"
+          },
+          "draw ear stems": {
+            "name": "ईयर स्टेम चित्रित करें"
+          }
+        },
         "courseE_artist_functions2_copy": {
           "draw a square": {
             "name": "एक वर्ग खींचें"
@@ -2727,6 +2968,11 @@
           }
         },
         "courseE_artist_functions3_2021": {
+          "draw a star": {
+            "name": "एक सितारा खींचे"
+          }
+        },
+        "courseE_artist_functions3_2023": {
           "draw a star": {
             "name": "एक सितारा खींचे"
           }
@@ -2776,6 +3022,11 @@
             "name": "एक सितारा खींचे"
           }
         },
+        "courseE_artist_functions5_2023": {
+          "draw a star": {
+            "name": "एक सितारा खींचे"
+          }
+        },
         "courseE_artist_functions5_copy": {
           "draw a star": {
             "name": "एक सितारा खींचे"
@@ -2821,6 +3072,11 @@
           }
         },
         "courseE_artist_functions7_2021": {
+          "draw a window": {
+            "name": "खिड़की चित्रित करें"
+          }
+        },
+        "courseE_artist_functions7_2023": {
           "draw a window": {
             "name": "खिड़की चित्रित करें"
           }
@@ -2906,6 +3162,20 @@
             "name": "क्रमबद्ध किए वर्ग"
           }
         },
+        "courseE_artist_functions8_2023": {
+          "do something": {
+            "name": "कुछ कीजिए"
+          },
+          "draw a line of squares": {
+            "name": "वर्गों की लाइन खींचें"
+          },
+          "draw square": {
+            "name": "वर्ग खींचें"
+          },
+          "staggered squares": {
+            "name": "क्रमबद्ध किए वर्ग"
+          }
+        },
         "courseE_artist_functions8a2022": {
           "do something": {
             "name": "कुछ कीजिए"
@@ -2939,6 +3209,14 @@
           }
         },
         "courseE_artist_functions8a_2021": {
+          "do something": {
+            "name": "कुछ कीजिए"
+          },
+          "draw a square": {
+            "name": "एक वर्ग खींचें"
+          }
+        },
+        "courseE_artist_functions8a_2023": {
           "do something": {
             "name": "कुछ कीजिए"
           },
@@ -2991,6 +3269,17 @@
           }
         },
         "courseE_artist_functions8b_2021": {
+          "do something": {
+            "name": "कुछ कीजिए"
+          },
+          "draw a line of squares": {
+            "name": "वर्गों की लाइन खींचें"
+          },
+          "draw square": {
+            "name": "वर्ग खींचें"
+          }
+        },
+        "courseE_artist_functions8b_2023": {
           "do something": {
             "name": "कुछ कीजिए"
           },
@@ -3071,6 +3360,20 @@
             "name": "क्रमबद्ध किए वर्ग"
           }
         },
+        "courseE_artist_functions8c_2023": {
+          "do something": {
+            "name": "कुछ कीजिए"
+          },
+          "draw a line of squares": {
+            "name": "वर्गों की लाइन खींचें"
+          },
+          "draw square": {
+            "name": "वर्ग खींचें"
+          },
+          "staggered squares": {
+            "name": "क्रमबद्ध किए वर्ग"
+          }
+        },
         "courseE_artist_functions9": {
           "do something": {
             "name": "कुछ कीजिए"
@@ -3127,6 +3430,17 @@
           }
         },
         "courseE_artist_functions9_2021": {
+          "do something": {
+            "name": "कुछ कीजिए"
+          },
+          "draw line of triangles": {
+            "name": "त्रिकोणों की लाइन खींचें"
+          },
+          "draw triangle": {
+            "name": "त्रिकोण चित्रित करें"
+          }
+        },
+        "courseE_artist_functions9_2023": {
           "do something": {
             "name": "कुछ कीजिए"
           },
@@ -3222,6 +3536,23 @@
             "name": "क्रमबद्ध किए वर्ग"
           }
         },
+        "courseE_artist_functionsProj_2023": {
+          "draw a line of squares": {
+            "name": "वर्गों की लाइन खींचें"
+          },
+          "draw hexagon": {
+            "name": "षट्कोण खींचें"
+          },
+          "draw line of hexagons": {
+            "name": "षट्भुजों की लाइन खींचें"
+          },
+          "draw square": {
+            "name": "वर्ग खींचें"
+          },
+          "staggered squares": {
+            "name": "क्रमबद्ध किए वर्ग"
+          }
+        },
         "courseE_artist_functions_challenge1": {
           "do something": {
             "name": "कुछ कीजिए"
@@ -3263,6 +3594,14 @@
           }
         },
         "courseE_artist_functions_challenge1_2021": {
+          "do something": {
+            "name": "कुछ कीजिए"
+          },
+          "my design": {
+            "name": "मेरा डिज़ाइन"
+          }
+        },
+        "courseE_artist_functions_challenge1_2023": {
           "do something": {
             "name": "कुछ कीजिए"
           },
@@ -3318,6 +3657,14 @@
             "name": "मेरा डिज़ाइन"
           }
         },
+        "courseE_artist_functions_challenge2_2023": {
+          "do something": {
+            "name": "कुछ कीजिए"
+          },
+          "my design": {
+            "name": "मेरा डिज़ाइन"
+          }
+        },
         "courseE_artist_functions_predict1": {
           "draw a square": {
             "name": "एक वर्ग खींचें"
@@ -3359,6 +3706,14 @@
           }
         },
         "courseE_artist_functions_predict1_2021": {
+          "draw a square": {
+            "name": "एक वर्ग खींचें"
+          },
+          "draw ear stems": {
+            "name": "ईयर स्टेम चित्रित करें"
+          }
+        },
+        "courseE_artist_functions_predict1_2023": {
           "draw a square": {
             "name": "एक वर्ग खींचें"
           },
@@ -3438,6 +3793,17 @@
           }
         },
         "courseE_artist_functions_predict2_2021": {
+          "do something": {
+            "name": "कुछ कीजिए"
+          },
+          "draw line of polygons": {
+            "name": "बहुभुजों की लाइन खींचें"
+          },
+          "draw polygon": {
+            "name": "बहुभुज चित्रित करें"
+          }
+        },
+        "courseE_artist_functions_predict2_2023": {
           "do something": {
             "name": "कुछ कीजिए"
           },
@@ -3617,6 +3983,20 @@
             "name": "कद्दू वर्ग"
           }
         },
+        "courseE_farmer_functions10a1_2023": {
+          "check square for corn": {
+            "name": "कॉर्न के लिए वर्ग का पता लगाएं"
+          },
+          "get all pumpkins": {
+            "name": "सभी कद्दू प्राप्त करें"
+          },
+          "pick along path": {
+            "name": "मार्ग के साथ-साथ लें"
+          },
+          "pumpkin square": {
+            "name": "कद्दू वर्ग"
+          }
+        },
         "courseE_farmer_functions10b": {
           "navigate": {
             "name": "संचालित करें"
@@ -3718,6 +4098,23 @@
             "name": "कद्दू वर्ग"
           }
         },
+        "courseE_farmer_functions11_predict_2023": {
+          "check square for corn": {
+            "name": "कॉर्न के लिए वर्ग का पता लगाएं"
+          },
+          "get all pumpkins": {
+            "name": "सभी कद्दू प्राप्त करें"
+          },
+          "get produce": {
+            "name": "फसल प्राप्त करें"
+          },
+          "pick along path": {
+            "name": "मार्ग के साथ-साथ लें"
+          },
+          "pumpkin square": {
+            "name": "कद्दू वर्ग"
+          }
+        },
         "courseE_farmer_functions132022": {
           "check for corn": {
             "name": "कॉर्न का पता लगाएं"
@@ -3788,6 +4185,20 @@
             "name": "मार्ग के साथ-साथ लें"
           }
         },
+        "courseE_farmer_functions13_2023": {
+          "check for corn": {
+            "name": "कॉर्न का पता लगाएं"
+          },
+          "corn rectangle": {
+            "name": "कॉर्न आयत"
+          },
+          "lettuce stairs": {
+            "name": "लेट्स सीढ़ियां"
+          },
+          "pick along path": {
+            "name": "मार्ग के साथ-साथ लें"
+          }
+        },
         "courseE_farmer_functions1a2022": {
           "check square for corn": {
             "name": "कॉर्न के लिए वर्ग का पता लगाएं"
@@ -3813,6 +4224,11 @@
             "name": "कॉर्न के लिए वर्ग का पता लगाएं"
           }
         },
+        "courseE_farmer_functions1a_2023": {
+          "check square for corn": {
+            "name": "कॉर्न के लिए वर्ग का पता लगाएं"
+          }
+        },
         "courseE_farmer_functions2b2022": {
           "check square for corn": {
             "name": "कॉर्न के लिए वर्ग का पता लगाएं"
@@ -3834,6 +4250,11 @@
           }
         },
         "courseE_farmer_functions2b_2021": {
+          "check square for corn": {
+            "name": "कॉर्न के लिए वर्ग का पता लगाएं"
+          }
+        },
+        "courseE_farmer_functions2b_2023": {
           "check square for corn": {
             "name": "कॉर्न के लिए वर्ग का पता लगाएं"
           }
@@ -3876,6 +4297,14 @@
           }
         },
         "courseE_farmer_functions2ba_2021": {
+          "check square for corn": {
+            "name": "कॉर्न के लिए वर्ग का पता लगाएं"
+          },
+          "get all pumpkins": {
+            "name": "सभी कद्दू प्राप्त करें"
+          }
+        },
+        "courseE_farmer_functions2ba_2023": {
           "check square for corn": {
             "name": "कॉर्न के लिए वर्ग का पता लगाएं"
           },
@@ -3943,6 +4372,17 @@
             "name": "मार्ग के साथ-साथ लें"
           }
         },
+        "courseE_farmer_functions3c1_2023": {
+          "check square for corn": {
+            "name": "कॉर्न के लिए वर्ग का पता लगाएं"
+          },
+          "get all pumpkins": {
+            "name": "सभी कद्दू प्राप्त करें"
+          },
+          "pick along path": {
+            "name": "मार्ग के साथ-साथ लें"
+          }
+        },
         "courseE_farmer_functions3c2022": {
           "check square for corn": {
             "name": "कॉर्न के लिए वर्ग का पता लगाएं"
@@ -3976,6 +4416,14 @@
           }
         },
         "courseE_farmer_functions3c_2021": {
+          "check square for corn": {
+            "name": "कॉर्न के लिए वर्ग का पता लगाएं"
+          },
+          "get all pumpkins": {
+            "name": "सभी कद्दू प्राप्त करें"
+          }
+        },
+        "courseE_farmer_functions3c_2023": {
           "check square for corn": {
             "name": "कॉर्न के लिए वर्ग का पता लगाएं"
           },
@@ -4023,6 +4471,11 @@
             "name": "बाग वर्ग"
           }
         },
+        "courseE_farmer_functions7a1_2023": {
+          "garden square": {
+            "name": "बाग वर्ग"
+          }
+        },
         "courseE_farmer_functions8a12022": {
           "garden square": {
             "name": "बाग वर्ग"
@@ -4044,6 +4497,11 @@
           }
         },
         "courseE_farmer_functions8a1_2021": {
+          "garden square": {
+            "name": "बाग वर्ग"
+          }
+        },
+        "courseE_farmer_functions8a1_2023": {
           "garden square": {
             "name": "बाग वर्ग"
           }
@@ -4074,6 +4532,11 @@
           }
         },
         "courseE_farmer_functions9a1_2021": {
+          "garden square": {
+            "name": "बाग वर्ग"
+          }
+        },
+        "courseE_farmer_functions9a1_2023": {
           "garden square": {
             "name": "बाग वर्ग"
           }
@@ -4125,6 +4588,11 @@
           }
         },
         "courseF_apps_collector_-2022-2": {
+          "end game": {
+            "name": "गेम खत्म करें"
+          }
+        },
+        "courseF_apps_collector_2023": {
           "end game": {
             "name": "गेम खत्म करें"
           }
@@ -4394,6 +4862,11 @@
           }
         },
         "courseF_bee_for_challenge1_2021": {
+          "move and get nectar with counter": {
+            "name": "मूव करके काउंटर के साथ मधुरस प्राप्त करें"
+          }
+        },
+        "courseF_bee_for_challenge1_2023": {
           "move and get nectar with counter": {
             "name": "मूव करके काउंटर के साथ मधुरस प्राप्त करें"
           }

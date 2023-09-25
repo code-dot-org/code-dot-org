@@ -5206,6 +5206,1081 @@
           "purpose": " W ramach tych zajęć online, uczniowie będą się uczyć, jak korzystać ze zdarzeń w Play Lab. Rozpoczną oni od uczenia rycerza poruszać się, gdy zostanie wciśnięty klawisz ze strzałką, a zakończ umożliwieniem pochwalenia się pozostałymi umiejętnościami, które nabyli w ramach tego kursu, z użyciem sekwencji i pętli, w ramach łamigłówki w czasie zabawy.",
           "student_overview": "Użyj zdarzeń, aby stworzyć historyjkę lub interaktywną grę."
         },
+        "csc-adaptations-2023/Modeling Animal Adaptations (pilot)": {
+          "name": "Adaptacje zwierząt Wprowadzenie",
+          "overview": "W tej lekcji**budowanie umiejętności** uczniowie nauczą się tworzyć i animować duszki oraz wykorzystywać wydarzenia, aby uczynić je interaktywnymi. \n\nUczniowie zakodują oparty na zdarzeniach model przyczynowo-skutkowy w Sprite Lab, aby zademonstrować, w jaki sposób gatunki przetrwają, dostosowując się do swojego środowiska w czasie. Interaktywne modele i symulacje są wykorzystywane w świecie rzeczywistym, aby pomóc inżynierom i naukowcom identyfikować wzorce, zrozumieć naturę, przewidywać przyszłe zmiany i projektować rozwiązania przygotowujące i/lub zwalczające poważne zakłócenia. \n\nStudenci będą badać przykłady ewolucji, adaptacji, migracji, doboru naturalnego i przetrwania w grupach. ",
+          "preparation": "-   Przejrzyj i wypełnij samouczek online samodzielnie.\n-   Określ z wyprzedzeniem, które poziomy mogą być trudniejsze dla uczniów.\n-   Przejrzyj slajdy i zdecyduj o tempie między czasem pracy ucznia a nauczaniem całej grupy.\n-   Rozważ zapoznanie się z zalecanymi czynnościami przygotowawczym przed rozpoczęciem ([link](https://studio.code.org/s/csc-adaptations-2023/lessons/1#activity-3914166)).\n-   Rozważ te powiązane opcje rozszerzeń ([link](https://studio.code.org/s/csc-adaptations-2023/lessons/1#activity-3914168)), aby zbadać po ostatniej lekcji.\n\n##### Opcjonalnie\n\n-   Programowanie w parach - Zdecyduj, czy chcesz, aby uczniowie angażowali się w programowanie par. Obejrzyj ten <a href=\"https://www.youtube.com/watch?v=sxToW3ixrwo\" target=\"_blank\">film</a> i odwiedź tę</a> stronę <a href=\"https://support.code.org/hc/en-us/articles/115002122788-How-does-pair-programming-on-Code-org-work-\" target=\"_blank\">pomocy technicznej, aby uzyskać więcej informacji na temat programowania par.",
+          "purpose": "Ta lekcja zapewnia wciągające i interaktywne doświadczenie edukacyjne, które integruje naukę i technologię. Używając kodu do modelowania związku przyczynowo-skutkowego, uczniowie mogą zbadać, w jaki sposób zwierzęta dostosowują się do swojego środowiska i uzyskać głębsze zrozumienie świata przyrody. Później ten moduł zachęca do kreatywności i wyrażania siebie, umożliwiając uczniom personalizowanie swoich modeli za pomocą własnego unikalnego stylu i pomysłów.",
+          "student_overview": "W tej lekcji będziesz modelować, w jaki sposób zwierzęta dostosowują się do swojego środowiska w czasie. Nauczysz się kodować, w jaki sposób żyrafy mają długie szyje, jak króliczki zmieniły kolor futra, aby lepiej się ukryć, i jak ptaki rozwinęły dzioby o różnych kształtach."
+        },
+        "csc-adaptations-2023/lesson-2": {
+          "name": "Zachowania zwierząt dla przetrwania",
+          "overview": "W tej lekcji CS i zintegrowanej z nauką uczniowie będą wykorzystywać zachowania w informatyce do reprezentowania zachowań przetrwania zwierząt. Kiedy uczniowie używają „zachowań” w Sprite Lab, przekazują swojemu duszkowi zestaw instrukcji do wykonywania w kółko jak animacja. Pierwszy, uczniowie wypróbują różne predefiniowane zachowania, w tym wzorce migracji wielorybów i motyli, tańce ptaków używane do przyciągania partnera, i ryby podróżujące w grupach. Następnie uczniowie będą ćwiczyć modyfikowanie i kodowanie własnych zachowań zwierząt.    ",
+          "preparation": "-   Przejrzyj i wypełnij samouczek online samodzielnie.\n-   Określ z wyprzedzeniem, które poziomy mogą być trudniejsze dla uczniów.\n-   Przejrzyj slajdy i zdecyduj o tempie między czasem pracy ucznia a nauczaniem całej grupy.\n-   Zapewnij materiały do pisania do refleksji rozgrzewki i zwiń bilet wyjścia.\n-   Rozważ te powiązane opcje rozszerzeń ([link](https://studio.code.org/s/csc-adaptations-2023/lessons/2#activity-4165453)), aby zbadać po ostatniej lekcji.",
+          "purpose": "Używając kodowania do modelowania zachowań grup zwierząt, uczniowie mogą badać wzorce i dynamikę zwierząt społecznych w praktyczny i wciągający sposób. Ta lekcja zachęca uczniów do stosowania swoich umiejętności kodowania w znaczącym i odpowiednim kontekście. Uczniowie będą mogli kreatywnie pracować, wybierając tła, duszki i zachowania, umożliwiając im tworzenie unikalnych projektów.",
+          "student_overview": "Dzisiaj poznasz wiele zwierząt i ich (czasem głupie) zachowania. Zwierzęta rozwinęły pewne ruchy i zachowania, aby przetrwać i rozmnażać się. Twój kod będzie kontrolował animacje sprite w przestrzeni gry. "
+        },
+        "csc-adaptations-2023/lesson-3": {
+          "name": "Koduj własną adaptację",
+          "overview": "W tej lekcji CS i zintegrowanej z nauką uczniowie nauczą się edytować zachowania zwierząt w kodzie. Najpierw uczniowie przewidują tajemnicze zachowanie lisa. Następnie na kolejnych poziomach użyją przycisku „edytuj”, aby debugować różne zachowania zwierząt, w tym prędkość, kierunek i styl obrotu. Wreszcie uczniowie wybiorą scenariusz zmiany środowiska i użyją własnego kreatywnego kodu do modelowania nowej i unikalnej adaptacji zwierząt! \n\nPod koniec zajęć uczniowie podzielą się swoimi niestandardowymi projektami z kolegami z klasy. Uczniowie będą mieli okazję zastanowić się, czego nauczyli się o zachowaniach w kodzie i zachowaniach zwierząt w prawdziwym życiu. ",
+          "preparation": "-   Przejrzyj i wypełnij samouczek online samodzielnie.\n-   Określ z wyprzedzeniem, które poziomy mogą być trudniejsze dla uczniów.\n-   Przejrzyj slajdy i zdecyduj o tempie między czasem pracy ucznia a nauczaniem całej grupy.\n-   Rozważ te powiązane opcje rozszerzenia ([link](https://studio.code.org/s/csc-adaptations-2023/lessons/3#activity-4233684)), aby zbadać po tej lekcji.",
+          "purpose": "Uczniowie będą przewidywać tajemnicze zachowania i debugować zachowania zwierząt, które nie działają prawidłowo. Następnie wykorzystają swoje umiejętności, aby zakodować unikalną adaptację zwierząt, której nigdy wcześniej nie widziano, wyobrażając sobie nagłą zmianę środowiska. Dzięki kostiumowi duszka „Prześlij mój własny” i funkcji tła, uczniowie mogą stworzyć środowisko, które jest całkowicie ich własne."
+        },
+        "csc-bookcovers-2023/Learn to Code a Book Cover ": {
+          "name": "Naucz się kodować okładkę książki ",
+          "overview": "W tej zintegrowanej lekcji CS i ELA dla nowych programistów uczniowie nauczą się kodować cyfrową okładkę książki. Najpierw przyjrzą się istniejącym okładom książek i omówią, jakie wybory graficzne zostały dokonane. Następnie uczniowie przyjrzą się przykładowi okładki książki cyfrowej przed utworzeniem kilku własnych. Uczniowie nauczą się wybierać duszki do reprezentowania postaci w książce i wykorzystywać wydarzenia, aby postacie mówiły. ",
+          "preparation": "-   Przejrzyj poziomy i przejrzyj<a href=\"https://docs.google.com/presentation/d/1GTaZX9z0b-dwk6Z48TSwqwhjZ9pO9Onk7w8n9xNt_Zk/template/preview\" target=\"_blank\">slajdy lekcji</a>\n-   Zdecyduj się na tempo między czasem pracy ucznia a nauczaniem całej grupy.\n-   Rozważ zapoznanie się z zalecanymi czynnościami przygotowawczym przed rozpoczęciem ([link](https://studio.code.org/s/csc-bookcovers-2023/lessons/1#activity-4350298)).\n\n##### Opcjonalnie:\n\n-   Przejrzyj ten <a href=\"https://docs.google.com/presentation/d/1RSJhxO9ZMtyLrt160kvAVdyekR4wT2fVSgbrPHR4HS0/template/preview\" target=\"_blank\">pomocny pokaz slajdów.</a> \n-   Zapoznaj się z przewodnikiem tego <a href=\"https://code.org/curriculum/docs/k-5/DebuggingTeacher.pdf\" target=\"_blank\">nauczyciela na temat debugowania,</a>  aby przygotować się na pomoc uczniom w znajdowaniu i naprawianiu błędów w ich kodzie. \n-   Programowanie w parach - Zdecyduj, czy chcesz, aby uczniowie angażowali się w programowanie par. Obejrzyj ten <a href=\"https://www.youtube.com/watch?v=sxToW3ixrwo\" target=\"_blank\">film</a> i odwiedź tę</a> stronę <a href=\"https://support.code.org/hc/en-us/articles/115002122788-How-does-pair-programming-on-Code-org-work-\" target=\"_blank\">pomocy technicznej, aby uzyskać więcej informacji na temat programowania par.\n-   Niestandardowe przesyłanie Sprite - Chociaż zostanie to wprowadzone na późniejszych lekcjach, możesz nauczyć uczniów, jak przesyłać własne kostiumy i tła duszków za pomocą tego filmu. <a href=\"https://youtu.be/CHipUGfL_0M\" target=\"_blank\"></a>",
+          "student_overview": "W tej lekcji dowiesz się, jak zakodować cyfrową okładkę książki. Najpierw wybierzesz tło i znaki. Następnie dowiesz się, jak zaprogramować rozmowy postaci po kliknięciu. Pod koniec lekcji zakodujesz kilka przykładów interaktywnych okładek książek."
+        },
+        "csc-bookcovers-2023/lesson-4": {
+          "name": "Zaprojektuj okładkę swojej interaktywnej książki",
+          "overview": "W tej lekcji**Unplugged** uczniowie zaplanują własną interaktywną okładkę książki. Uczniowie zaczną od burzy mózgów, które im się podobały, i wybiorą jedną, dla której zaprojektują okładkę książki. Uczniowie powinni sobie wyobrazić, że polecają książkę komuś innemu i wzbudzają zainteresowanie jej przeczytaniem. Uczniowie przedstawią dwóch głównych bohaterów i napiszą podsumowanie historii. Następnie otrzymają informację zwrotną od rówieśnika, aby upewnić się, że są gotowi na następną lekcję. W lekcji 3 uczniowie zakodują własną interaktywną okładkę książki cyfrowej.",
+          "preparation": "-   Pomóż każdemu uczniowi wybrać książkę do projektu Book Covers.\n-   Wydrukuj **\\\\ \\* Przewodnik<a href=\"https://docs.google.com/document/d/18cVgDdq77dbdk6gmQ1rGjHIr7pQk3I2Wb2WsAEeNH64/template/preview\t\n    \" target=\"_blank\"></a>planowania** ulotkę dla każdego ucznia\n-   Przegląd**\\\\ \\* Przewodnik<a href=\"https://docs.google.com/document/d/1sinZLdMy8PLHJVKRwGt-mqhcADQtNq0bLYy4oZZwVpQ/template/preview\" target=\"_blank\">planowania - Klucz</a>nauczyciela**.",
+          "purpose": "Celem tej lekcji jest zaangażowanie uczniów czwartej klasy w kreatywne i interaktywne doświadczenie edukacyjne skoncentrowane na projektowaniu własnej interaktywnej okładki książki. Zastanawiając się nad książkami, które im się podobały, uczniowie będą mieli okazję poznać swoje osobiste preferencje dotyczące czytania i wybrać książkę, dla której będą tworzyć urzekającą okładkę. \n\nDzięki temu procesowi będą ćwiczyć podsumowywanie historii i wprowadzanie dwóch głównych bohaterów, doskonaląc ich umiejętność skutecznego komunikowania kluczowych elementów narracji. Ponadto uczniowie zaangażują się w działania z opinią rówieśników, aby udoskonalić swoją pracę przed przejściem do następnej lekcji, gdzie nauczą się kodować własne interaktywne okładki książek cyfrowych. \n\nTa lekcja ma na celu wspieranie kreatywności uczniów, umiejętności opowiadania historii i umiejętności technologicznych, jednocześnie zachęcając do zamiłowania do czytania i dzielenia się zaleceniami dotyczącymi książek."
+        },
+        "csc-bookcovers-2023/Code Your Own Book Cover ": {
+          "name": "Zakoduj swoją interaktywną okładkę książki ",
+          "overview": "W tej lekcji uczniowie wykorzystają umiejętności, których nauczyli się podczas pierwszej lekcji, aby stworzyć interaktywną okładkę książki do wybranej przez siebie książki. Ogrzeją się spiralnie przeglądem niektórych potrzebnych bloków kodowania. Następnie uczniowie zostaną poinstruowani, aby krok po kroku zakodować projekt Sprite Lab, który zawiera tytuł, autor, główne postacie, ustawienie i podsumowanie książki. Następna klasa, uczniowie zaprezentują swoją pracę kolegom z klasy.\n\nPamiętaj, że jest to postęp projektu, co oznacza, że kod studenta będzie podążał za nimi z jednego poziomu na drugi. Zachęcaj uczniów do naciskania „Uruchom” na każdym poziomie, aby zapisać swój kod przed przejściem do następnego poziomu.",
+          "preparation": "-   Graj przez poziomy i przejrzyj <a href=\"https://docs.google.com/document/d/1r7dnygat_SH_us1TWYil-Bx5ulROZ2PDbF-Njcz27RM/template/preview\" target=\"_blank\">slajdy</a>lekcji.\n-   Zdecyduj się na tempo między czasem pracy ucznia a nauczaniem całej grupy.\n-   Pomocne może być stworzenie własnej okładki książki, którą można podzielić się z uczniami.\n-   Upewnij się, że uczniowie mają przewodnik planowania, którego używali do zaplanowania okładki książki cyfrowej w poprzedniej lekcji.\n\n##### Opcjonalnie\n\n-   Zapoznaj się z tym, jak przesyłać niestandardowe kostiumy i tła duszków za pomocą tego filmu. <a href=\"https://youtu.be/CHipUGfL_0M\" target=\"_blank\"></a>",
+          "student_overview": "W tej lekcji, zakodujesz własną cyfrową okładkę książki. Najpierw wybierzesz tło i znaki. Następnie zaprogramujesz postacie, aby się przedstawiły. I zakończysz, dołączając podsumowanie książki po naciśnięciu strzałki w górę. Możesz być bardzo kreatywny, rysując własne duszki, używając niektórych z biblioteki lub nawet przesyłając własne obrazy. \n\nBędziesz postępować zgodnie z planem, który zaprojektowałeś na ostatniej klasie. Postępuj zgodnie ze wskazówkami na każdym poziomie. W tym projekcie Twój kod będzie podążał za Tobą z poziomu na poziom. \nNastępne zajęcia, zaprezentujesz swoją pracę."
+        },
+        "csc-bookcovers-2023/Share Your Book Cover": {
+          "name": "Udostępnij okładkę książki",
+          "overview": "W tej ostatniej lekcji uczniowie podzielą się ze sobą okładkami książek podczas spaceru po galerii, podczas którego odkrywają i testują projekty okładek książek swoich kolegów z klasy. Zostawiają notatki dla każdego kolegi z klasy, wyrażając swoje przemyślenia i opinie za pomocą dostarczonych starterów zdań. Podczas lekcji uczniowie aktywnie uczestniczą w dzieleniu się, obserwowaniu, refleksji i omawianiu okładek książek, sprzyjając głębszemu zrozumieniu wyborów projektowych i ich wpływu na wybór książek. Lekcja kończy się podsumowującą refleksją, biorąc pod uwagę powiedzenie „nie oceniaj książki po okładce” w odniesieniu do interaktywnych okładek książek ich własnych i kolegów z klasy. Dyskutują w małych grupach, a następnie jako klasa, podkreślając rolę okładek książek w przekazywaniu informacji i wyjątkowość poszczególnych projektów.",
+          "preparation": "-   Przejrzyj i wypełnij samouczek online samodzielnie.\n-   Przejrzyj slajdy i zdecyduj o tempie między czasem pracy ucznia a nauczaniem całej grupy.\n-   Udostępniaj przewodniki planowania uczniów z poprzednich lekcji\n-   Rozdaj każdemu uczniowi stos notatek Post It \n-   Rozważ te powiązane opcje rozszerzeń ([link](https://studio.code.org/s/csc-bookcovers-2023/lessons/4#activity-4350299)), aby zbadać po ostatniej lekcji",
+          "student_overview": "W tej ostatniej lekcji, podzielisz się okładką książki z kolegami z klasy. Będziesz miał okazję pochwalić się swoją pracą i przetestować projekty kolegów z klasy. Pod koniec zajęć, będziesz miał dyskusję na temat wyborów, jakich dokonali twoi koledzy z klasy w okładkach książek."
+        },
+        "csc-ecosystems-2023/Overfishing Simulation (pilot)": {
+          "name": "Symulacja przełowienia",
+          "overview": "W tej lekcji**budowaniu umiejętnych** uczniowie zaprogramują model ekosystemu wodnego, a następnie zasymulują sytuację przełowienia. Studenci dowiedzą się, jak zaprogramować oświadczenia warunkowe, aby sprawdzić ilość glonów w wodzie. Jeśli jest za dużo glonów, koral zachoruje. Jeśli jest za mało glonów, ryby nie mają źródła pożywienia i opuszczają obszar. Jeśli jest odpowiednia ilość glonów, chory koral zagoi się, a ryby pozostaną w okolicy. ",
+          "preparation": "-   Przejrzyj poziomy i przejrzyj slajdy <a href=\"https://docs.google.com/presentation/d/1LtXP3ssc5-kOV1DgccN3957oAyF1cf-VaghZJsL7Vtk/template/preview\" target=\"_blank\">lekcji</a> \n-   Zdecyduj się na tempo między czasem pracy ucznia a nauczaniem całej grupy.\n-   Rozważ przypisanie uczniom zalecanego przygotowania \n    ([link](https://studio.code.org/s/csc-ecosystems-2023/lessons/1#activity-4911962))\n-   Rozważ te powiązane opcje rozszerzeń ([link](https://studio.code.org/s/csc-ecosystems-2023/lessons/1#activity-4911963)) do zbadania po ostatniej lekcji.\n\n##### Opcjonalnie:\n\n-   [Optional] Przejrzyj ten <a href=\"https://docs.google.com/presentation/d/1RSJhxO9ZMtyLrt160kvAVdyekR4wT2fVSgbrPHR4HS0/template/preview\" target=\"_blank\">pomocny pokaz slajdów.</a> \n-   [Optional] Zapoznaj się z przewodnikiem tego <a href=\"https://code.org/curriculum/docs/k-5/DebuggingTeacher.pdf\" target=\"_blank\">nauczyciela na temat debugowania,</a>  aby przygotować się na pomoc uczniom w znajdowaniu i naprawianiu błędów w ich kodzie. ",
+          "purpose": "Uczniowie dowiedzą się, że ekosystemy morskie mają wiele organizmów, które oddziałują i utrzymują równowagę. Ta lekcja łączy informatykę z naukami przyrodniczymi, gdy uczniowie tworzą model, który symuluje skutki przełowienia przy użyciu stwierdzeń warunkowych w informatyce, aby pokazać przyczynę i skutek w prawdziwym życiu. "
+        },
+        "csc-ecosystems-2023/Balancing the Ecosystem (pilot)": {
+          "name": "Równoważenie ekosystemu",
+          "overview": "W tej lekcji**budowanie umiejętnych** uczniowie przeczytają, a następnie zaprogramują trzy różne rozwiązania problemu przełowienia.\n\nTa lekcja rozpoczyna się tam, gdzie została przerwana poprzednia lekcja, od modelu niezrównoważonego ekosystemu wodnego. Po pierwsze, uczniowie zmodyfikują zachowanie łodzi, aby mogła poruszać się tylko w określonej „strefie połowowej”. Po drugie, uczniowie zaprogramują nowe wydarzenie, aby określić „sezon wędkarski” i „sezon bez połowów”. Trzeci, uczniowie dowiedzą się, jak używać zmiennej do śledzenia liczby ryb usuniętych przez łódź. Lekcja kończy się poziomem Sprawdź zrozumienie, aby upewnić się, że uczniowie nauczyli się trzech rozwiązań przełowienia.",
+          "preparation": "-   Przeczytaj dostarczony artykuł na temat <a href=\"https://www.seafoodwatch.org/seafood-basics/sustainable-solutions/avoid-overfishing\" target=\"_blank\">zrozumienia przełowienia</a>. Rusztowanie w razie potrzeby, aby zaspokoić potrzeby uczniów. \n-   Przejrzyj poziomy i przejrzyj slajdy <a href=\"https://docs.google.com/presentation/d/1LtXP3ssc5-kOV1DgccN3957oAyF1cf-VaghZJsL7Vtk/template/preview\" target=\"_blank\">lekcji</a> \n-   Zdecyduj się na tempo między czasem pracy ucznia a nauczaniem całej grupy.\n-   Rozważ przypisanie uczniom zalecanego przygotowania [(link)](https://studio.code.org/s/csc-ecosystems-2023/lessons/2#activity-4986903).\n-   Rozważ te powiązane opcje rozszerzeń [(link)](https://studio.code.org/s/csc-ecosystems-2023/lessons/2#activity-4986904).\n\n##### Opcjonalnie:\n\n-   [Optional] Przejrzyj ten <a href=\"https://docs.google.com/presentation/d/1RSJhxO9ZMtyLrt160kvAVdyekR4wT2fVSgbrPHR4HS0/template/preview\" target=\"_blank\">pomocny pokaz slajdów.</a> \n-   [Optional] Zapoznaj się z przewodnikiem tego <a href=\"https://code.org/curriculum/docs/k-5/DebuggingTeacher.pdf\" target=\"_blank\">nauczyciela na temat debugowania,</a>  aby przygotować się na pomoc uczniom w znajdowaniu i naprawianiu błędów w ich kodzie. ",
+          "purpose": "Uczniowie będą nadal uczyć się o zrównoważonych i niezrównoważonych ekosystemach. Korzystając z artykułu naukowego na temat przełowienia jako podstawy, uczniowie rozwiną bogate zrozumienie powiązań między organizmami w ekosystemie. Ostatecznie uczniowie będą mieli możliwość zastosowania tego, czego się nauczyli, modelując lokalny ekosystem. "
+        },
+        "csc-ecosystems-2023/lesson-3": {
+          "name": "Kodowanie mojego ekosystemu",
+          "overview": "W tej lekcji**budowanie umiejętności** uczniowie zbadają kilka różnych symulacji ekosystemów. Uczniowie mogą wybrać ekosystem lasu deszczowego, pustyni, arktyki lub terenów podmokłych. Przyjmą rolę ekologa i zbadają interakcje między roślinami i zwierzętami w łańcuchu pokarmowym każdego ekosystemu. Uczniowie przeczytają instrukcje, aby zrozumieć wyzwanie, przed którym stoi każdy ekosystem. Następnie zmodyfikują odpowiedni kod, aby przywrócić równowagę ekosystemu. ",
+          "preparation": "-   Przejrzyj poziomy i przejrzyj slajdy <a href=\"https://docs.google.com/presentation/d/1LtXP3ssc5-kOV1DgccN3957oAyF1cf-VaghZJsL7Vtk/template/preview\" target=\"_blank\">lekcji</a> \n-   Zdecyduj się na tempo między czasem pracy ucznia a nauczaniem całej grupy.\n-   Wydrukuj notatnik ekologa dla każdego ucznia\n-   Rozważ te [możliwości rozszerzenia](https://studio.code.org/s/csc-ecosystems-2023/lessons/3#activity-4852074) po tej lekcji"
+        },
+        "csc-mappinglandmarks-2023/US Landmarks": {
+          "name": "Wprowadzenie do tworzenia map",
+          "overview": "W tej lekcji**budowanie umiejętnych** uczniowie nauczą się tworzyć i animować duszki na mapie. \n\nTa lekcja służy dwóm głównym celom: (1) przedstawieniu przykładu kodowania interaktywnej mapy oraz (2) zapoznaniu uczniów z kodowaniem w Sprite Lab. Sprite Lab to otwarte środowisko kodowania, które wykorzystuje kod oparty na blokach. Uczniowie nauczą się podstaw Sprite Lab podczas tej lekcji, aby zaplanować i zbudować interaktywną mapę na kolejnych lekcjach. \n\nW tej zintegrowanej lekcji uczniowie uczą się koncepcji nauk społecznych, tworząc mapę z kodem. Na początek uczniowie przeanalizują kilka przykładów map i omówią, jakie cechy składają się na mapę. Na liście, uczniowie omówią rolę twórcy map. \n\n\\_Uwaga: Mapy i obrazy nie będą idealnie pasować we wszystkich przypadkach. Na szczęście istnieje narzędzie Sprite Upload i dostęp do Biblioteki Animacji, z której uczniowie mogą korzystać na poziomach darmowej gry, które pozwalają na dostosowywanie. \\_",
+          "preparation": "-   Przejrzyj i wypełnij samouczek online samodzielnie.\n-   Przejrzyj slajdy i zdecyduj o tempie między czasem pracy ucznia a nauczaniem całej grupy.\n-   Przygotuj karteczki samoprzylepne lub papier do drapania dla każdego ucznia w dyskusji.\n-   Sprawdź swoją technologię i zdecyduj, czy musisz rozwiązać problem z wyprzedzeniem.\n\n##### Opcjonalnie:\n\n-   Przejrzyj ten <a href=\"https://docs.google.com/presentation/d/1RSJhxO9ZMtyLrt160kvAVdyekR4wT2fVSgbrPHR4HS0/template/preview\" target=\"_blank\">pomocny pokaz slajdów.</a> \n-   Zapoznaj się z przewodnikiem tego <a href=\"https://code.org/curriculum/docs/k-5/DebuggingTeacher.pdf\" target=\"_blank\">nauczyciela na temat debugowania,</a>  aby przygotować się na pomoc uczniom w znajdowaniu i naprawianiu błędów w ich kodzie. \n-   Programowanie w parach - Zdecyduj, czy chcesz, aby uczniowie angażowali się w programowanie par. Obejrzyj ten <a href=\"https://www.youtube.com/watch?v=sxToW3ixrwo\" target=\"_blank\">film</a> i odwiedź tę</a> stronę <a href=\"https://support.code.org/hc/en-us/articles/115002122788-How-does-pair-programming-on-Code-org-work-\" target=\"_blank\">pomocy technicznej, aby uzyskać więcej informacji na temat programowania par.\n-   Niestandardowe przesyłanie Sprite - Chociaż zostanie to wprowadzone na późniejszych lekcjach, możesz nauczyć uczniów, jak przesyłać własne kostiumy i tła duszków za pomocą tego filmu. <a href=\"https://youtu.be/CHipUGfL_0M\" target=\"_blank\"></a>",
+          "purpose": "Uczniowie tworzą aplikację przewodnika w interaktywnym doświadczeniu edukacyjnym, które integruje wiele obszarów tematycznych. Łącząc koncepcje informatyki z treściami geograficznymi, lekcja ma na celu pomóc uczniom w głębszym zrozumieniu obu przedmiotów i zobaczeniu ich powiązań. Ta lekcja ma na celu umożliwienie uczniom zastosowania swoich umiejętności kodowania w kontekście rzeczywistym, tworząc aplikację przewodnika, która podkreśla ważne punkty orientacyjne, wydarzenia kulturalne, i miejsca historyczne w określonej lokalizacji geograficznej.",
+          "student_overview": "W tej lekcji, będziesz eksplorować mapy! Mapy pomagają dowiedzieć się, dokąd się udać. Opowiadają także historie o ludziach, którzy tworzą miejsce. \n\nZa pomocą kodu będziesz animować duszki w tle, aby utworzyć interaktywną mapę."
+        },
+        "csc-mappinglandmarks-2023/Local Landmarks - Unplugged Project Planning": {
+          "name": "Planowanie mojej mapy",
+          "overview": "W tej lekcji**odłączony** uczniowie utworzą plan projektu dla swojej aplikacji przewodnika. Tworzenie planu jest ważnym pierwszym krokiem przed rozpoczęciem kodowania. Nauczyciele są zachęcani do dostosowania tego projektu do kontekstu tematów lub standardów, które są obecnie nauczane. Zobacz poniżej sugestie.  \n\n\\*\\*Sugestie: \\*\\*\n\n-   Uczniowie mogą mapować obszar lokalny, taki jak dom, klasa lub szkoła. \n-   Uczniowie mogą stworzyć wycieczkę po stanie, w którym studiują w klasie. \n-   Instruktor może połączyć projekt mapowania z innym obszarem badań lub badań, takim jak starożytne cywilizacje. ",
+          "preparation": "-   Wybierz fokus dla projektów mapowania punktów orientacyjnych uczniów.\n-   Wydrukuj plan <a href=\"https://docs.google.com/document/d/1t_-cd-f6EhhUbblu8nSGRajStY9FVwLnKn1Bj90GL3Q/template/preview\" target=\"_blank\">projektu</a> dla każdego ucznia\n-   Przejrzyj plan <a href=\"https://docs.google.com/document/d/1fD9jkEkts5gtYN76P0I-1FGcEPi1q97Cuk0hBy18KvQ/template/preview\" target=\"_blank\">projektu - Klucz nauczyciela</a>",
+          "purpose": "Celem tej lekcji jest zapewnienie ustrukturyzowanego i przemyślanego podejścia do projektowania i rozwoju aplikacji każdego ucznia. Korzystając z przewodnika po ćwiczeniach do planowania aplikacji, uczniowie mogą odkrywać i organizować swoje pomysły, podejmować świadome decyzje dotyczące informacji, które należy uwzględnić, i przygotować się do fazy kodowania projektu.",
+          "student_overview": "W tej lekcji przygotujesz plan projektu mapowania punktów orientacyjnych. Planowanie tego, co kodujesz przed wskoczeniem, jest zawsze dobrą praktyką. "
+        },
+        "csc-mappinglandmarks-2023/Local Landmarks - Coding Your Project": {
+          "name": "Kodowanie mojej mapy",
+          "overview": "W tej lekcji uczniowie wykorzystują swoje plany projektów z poprzedniej klasy, aby utworzyć interaktywną mapę. Uczniowie mogą znajdować się na różnych etapach swojego planu.\n\nGdy uczniowie przejdą do komputerów, będą podążać za postępem poziomu, który prowadzi ich przez proces ustawiania tła, tworzenia przewodnika, nadawania mu słowa „Witamy”, poruszania się i dodawania co najmniej 2 punktów orientacyjnych, które powodują, że przewodnik mówi coś po dotknięciu. \n\nPamiętaj, że jest to postęp projektu, co oznacza, że kod studenta będzie podążał za nimi z jednego poziomu na drugi. Zachęcaj uczniów do naciskania „Uruchom” na każdym poziomie, aby zapisać swój kod przed przejściem do następnego poziomu.\n\nLekcja kończy się szybkim galerią w ramach przygotowań do następnej lekcji, podczas której uczniowie dzielą się swoimi projektami z klasą. ",
+          "preparation": "-   Przejrzyj i wypełnij samouczek online samodzielnie.\n-   Przygotuj się do powrotu przewodników planowania z poprzedniej lekcji. \n-   Rozważ strategie wsparcia dla uczniów, którzy mogą nie czuć się pewnie lub gotowi do rozpoczęcia kreatywnego projektu. \n-   Rozważ te powiązane opcje rozszerzeń ([link](https://studio.code.org/s/csc-mappinglandmarks-2023/lessons/3#activity-5197066))\n\n##### Opcjonalnie:\n\n-   Koduj własną mapę jako przykład dla uczniów\n-   Przejrzyj ten pomocny pokaz slajdów. <a href=\"https://docs.google.com/presentation/d/1RSJhxO9ZMtyLrt160kvAVdyekR4wT2fVSgbrPHR4HS0/template/preview\" target=\"_blank\"></a> \n-   Zapoznaj się z przewodnikiem tego <a href=\"https://code.org/curriculum/docs/k-5/DebuggingTeacher.pdf\" target=\"_blank\">nauczyciela na temat debugowania,</a>  aby przygotować się na pomoc uczniom w znajdowaniu i naprawianiu błędów w ich kodzie. ",
+          "purpose": "Ta lekcja ma na celu zapewnienie bogatego i angażującego doświadczenia edukacyjnego, które łączy informatykę i geografię oraz pomaga uczniom rozwijać szereg umiejętności i kompetencji, które są istotne w dzisiejszym świecie. Kodując własną aplikację przewodnika, uczniowie mogą odkrywać cechy geograficzne określonej lokalizacji, wydarzenia kulturalne, i miejsca historyczne. Mogą wyrazić swoje zrozumienie i uznanie dla tej lokalizacji za pomocą kodu i technologii. Lekcja podkreśla również znaczenie planowania, rozwiązywania problemów i wyrażania siebie w kodowaniu.",
+          "student_overview": "Teraz nadszedł czas, aby stworzyć mapę z przewodnikiem, który odwiedza każdy punkt orientacyjny. Będziesz postępować zgodnie z planem, który zaprojektowałeś na ostatniej klasie. Postępuj zgodnie ze wskazówkami na każdym poziomie. W tym projekcie Twój kod będzie podążał za Tobą z poziomu na poziom. "
+        },
+        "csc-mappinglandmarks-2023/Project Share Out": {
+          "name": "Mapa Udostępnij",
+          "overview": "To jest ostatnia lekcja w tym module i ma na celu uczczenie całej ciężkiej pracy do tej pory. Uczniowie zakończą osobistą refleksję nad swoim ostatecznym projektem. Następnie cała klasa przedstawi swój projekt swoim rówieśnikom. Zanim rozpoczną się prezentacje, omówisz wskazówki dotyczące skutecznej prezentacji, w tym oczekiwania odbiorców.",
+          "preparation": "-   Wydrukuj **\\\\ \\*<a href=\"https://docs.google.com/document/d/1OxwZCmnJYKVUQIIsXqTkbbivvG_iXHVDL4FgR8j9V4E/template/preview\" target=\"_blank\">Kodowanie interaktywnych map Refleksje i</a>obserwacje** ulotkę dla każdego ucznia.\n-   Rozważ te pokrewne\\*\\*opcje rozszerzeń ([link](https://levelbuilder-studio.code.org/s/csc-mappinglandmarks-2023/lessons/4#activity-4335272)) \\*\\*",
+          "purpose": "Ta lekcja umożliwia uczniom udostępnianie aplikacji przewodnika z rówieśnikami w celu uzyskania opinii. Daje to uczniom możliwość otrzymania konstruktywnej krytyki, refleksji nad swoją pracą i wprowadzania ulepszeń w swoich projektach. Udostępniając swoją aplikację rówieśnikom, uczniowie mogą otrzymywać informacje zwrotne na temat swojej pracy i uczyć się na sukcesach i wyzwaniach swoich kolegów z klasy.",
+          "student_overview": "W tej ostatniej lekcji, będziesz miał okazję zaprezentować swój projekt reszcie klasy! Pierwszy, poświęci trochę czasu na zastanowienie się nad swoją ciężką pracą nad programowaniem cyfrowej mapy punktów orientacyjnych. Następnie omówisz kilka wskazówek dotyczących prezentacji i pochwal się swoją ciężką pracą! "
+        },
+        "csc-starquilts-2023/Native American Star Quilts (beta)": {
+          "name": "Native American Star Quilts",
+          "overview": "W tej lekcji Unplugged, uczniowie zapoznają się z Indian American Star Quilts i ich znaczeniem. Następnie uczniowie wykonają sześcioramienny kształt gwiazdy na papierze. Jednym z głównych celów jest omówienie wzorców w kształcie. Pomysły te będą kluczowe dla późniejszych części działania związanych z kodowaniem online. ",
+          "preparation": "-   Przejrzyj poziomy i przejrzyj slajdy lekcji\n-   Zdecyduj się na tempo między czasem pracy ucznia a nauczaniem całej grupy.\n-   Rozważ te powiązane opcje rozszerzeń (link), aby zbadać po ostatniej lekcji.\n\n##### Opcjonalnie:\n\n-   Przejrzyj ten <a href=\"https://docs.google.com/presentation/d/1RSJhxO9ZMtyLrt160kvAVdyekR4wT2fVSgbrPHR4HS0/template/preview\" target=\"_blank\">pomocny pokaz slajdów.</a> \n-   Zapoznaj się z przewodnikiem tego <a href=\"https://code.org/curriculum/docs/k-5/DebuggingTeacher.pdf\" target=\"_blank\">nauczyciela na temat debugowania,</a>  aby przygotować się na pomoc uczniom w znajdowaniu i naprawianiu błędów w ich kodzie. \n-   Programowanie w parach - Zdecyduj, czy chcesz, aby uczniowie angażowali się w programowanie par. Obejrzyj ten <a href=\"https://www.youtube.com/watch?v=sxToW3ixrwo\" target=\"_blank\">film</a> i odwiedź tę</a> stronę <a href=\"https://support.code.org/hc/en-us/articles/115002122788-How-does-pair-programming-on-Code-org-work-\" target=\"_blank\">pomocy technicznej, aby uzyskać więcej informacji na temat programowania par.",
+          "purpose": "Dziś dowiesz się wszystkiego o Star Quilts. Następnie użyjesz ołówka, papieru i kolorów, aby rozpocząć projektowanie własnego 6-punktowego kształtu gwiazdy. Uważaj na wzory!"
+        },
+        "csc-starquilts-2023/Getting Started with The Artist (beta)": {
+          "name": "Pierwsze kroki z artystą",
+          "overview": "Ta lekcja budowania umiejętności daje uczniom okazję do zapoznania się z narzędziem artysty i zbudowania ważnych umiejętności kodowania. Uczniowie dowiadują się, jak działa narzędzie do tłoczenia, jak obracać o x stopnie pod kątem, i jak używać pętli. Uczniowie stworzą prosty kształt gwiazdy. Pod koniec poziomów uczniowie będą manipulować pomiarami kąta, aby zobaczyć wpływ na liczbę punktów na gwieździe. Komputery pozwalają na dokładność i precyzję w badaniu kształtów i wzorów, ponieważ obrazy są generowane w ciągu kilku sekund, zamiast polegać na ręcznie rysowanych kształtach.",
+          "preparation": "-   Przejrzyj poziomy i przejrzyj slajdy lekcji\n-   Zdecyduj się na tempo między czasem pracy ucznia a nauczaniem całej grupy.\n-   Rozważ zapoznanie się z zalecanymi czynnościami przygotowawczym przed rozpoczęciem ([link](https://studio.code.org/s/csc-starquilts-2023/lessons/2#activity-4365327)).\n\n##### Opcjonalnie:\n\n-   [Optional] Przejrzyj to \\*\\* [przewodnik nauczyciela dotyczący debugowania](https://code.org/curriculum/docs/k-5/DebuggingTeacher.pdf)\\*\\* aby przygotować się do pomocy uczniom w znajdowaniu i naprawianiu błędów w ich kodzie. \n-   [Optional] **Programowanie par** - Zdecyduj, czy chcesz, aby uczniowie angażowali się w programowanie par. Obejrzyj to [video](https://youtu.be/sxToW3ixrwo) i odwiedź tę [Support](https://support.code.org/hc/en-us/articles/115002122788-How-does-pair-programming-on-Code-org-work-) stronę, aby uzyskać więcej informacji.\n-   [Optional] Jeśli twoja klasa ma bloki wzorów, umieść je przy biurkach uczniów.",
+          "purpose": "W tej lekcji zostaniesz przedstawiony artyście. Zaprogramujesz Artystę, aby stworzyć kształt gwiazdy. Ważne będzie, aby zauważyć wzory w kształtach. "
+        },
+        "csc-starquilts-2023/Code Your Star Quilt (beta)": {
+          "name": "Kodowanie kołdry My Star",
+          "overview": "W ostatniej lekcji tego ćwiczenia uczniowie są gotowi do zbudowania własnej kołdry Star Quilt. Uczniowie zbudują jeden punkt gwiazdy, a następnie zapętlą swój kod, aby skończyć z 8-punktową tradycyjną kołdrą Star Quilt. Star Quilts mają być obdarowane, aby uczniowie mogli podzielić się swoim projektem z kimś wyjątkowym.",
+          "preparation": "-   Przejrzyj poziomy i przejrzyj slajdy lekcji\n-   Zdecyduj się na tempo między czasem pracy ucznia a nauczaniem całej grupy.\n-   Rozważ te powiązane opcje rozszerzeń ([link](https://studio.code.org/s/csc-starquilts-2023/lessons/3#activity-4365328)), aby zbadać po ostatniej lekcji.\n\n###### Opcjonalnie:\n\n-   Przejrzyj przewodnik tego <a href=\"https://code.org/curriculum/docs/k-5/DebuggingTeacher.pdf\" target=\"_blank\">nauczyciela dotyczący debugowania, aby przygotować się</a>  do pomocy uczniom w znajdowaniu i naprawianiu błędów w ich kodzie. \n-   Programowanie w parach - Zdecyduj, czy chcesz, aby uczniowie angażowali się w programowanie par. Obejrzyj ten <a href=\"https://www.youtube.com/watch?v=sxToW3ixrwo\" target=\"_blank\">film</a> i odwiedź tę</a> stronę <a href=\"https://support.code.org/hc/en-us/articles/115002122788-How-does-pair-programming-on-Code-org-work-\" target=\"_blank\">pomocy technicznej, aby uzyskać więcej informacji na temat programowania par.",
+          "purpose": "Dzisiaj, zbudujemy kod, aby stworzyć naszą własną kołdrę z gwiazdami. Pamiętaj, że zgodnie z tradycją rdzennych Amerykanów obdarowywanie kołder z gwiazdami na specjalne okazje wyraża miłość, honor, i szacunek dla innych. Cyfrowa kołdra gwiazda to nowoczesna wersja tej tradycji, która pozwala dzielić się swoją miłością i uznaniem z innymi w nowy i kreatywny sposób. Kiedy skończymy, podziel się kołdrą z gwiazdami z kimś, kogo kochasz i doceniasz.",
+          "student_overview": "Dzisiaj, zbudujemy kod, aby stworzyć naszą własną kołdrę z gwiazdami. Pamiętaj, że zgodnie z tradycją rdzennych Amerykanów obdarowywanie kołder z gwiazdami na specjalne okazje wyraża miłość, honor, i szacunek dla innych. Cyfrowa kołdra gwiazda to nowoczesna wersja tej tradycji, która pozwala dzielić się swoją miłością i uznaniem z innymi w nowy i kreatywny sposób. Kiedy skończymy, podziel się kołdrą z gwiazdami z kimś, kogo kochasz i doceniasz."
+        },
+        "csc-timecapsule-2023/Time Capsule Introduction (pilot)": {
+          "name": "Time Capsule Wprowadzenie",
+          "overview": "W lekcji 1 uczniowie wykorzystają informatykę, aby ożywić cyfrową kapsułę czasu! Studenci poznają podstawy Sprite Lab, kodując nastrój i obrazy krótkiego wiersza napisanego o konkretnym, ważnym momencie w czasie. Studenci będą mieli do wyboru różne przykłady wierszy z kapsuły czasu, począwszy od 1905-2023. Uczniowie będą ćwiczyć używanie bloków kodu do ustawiania tła, ustawiania efektów tekstowych, tworzenia duszków z zachowaniami, odtwarzania dźwięków i wyzwalania zdarzeń występujących podczas określonych wierszy tekstu.",
+          "preparation": "-   Graj przez poziomy i przejrzyj slajdy lekcji\n-   Zidentyfikuj poziomy, na których uczniowie będą potrzebować dodatkowego wsparcia\n-   Niektóre poziomy wymagają dźwięku do gry. Wręczaj słuchawki z wyprzedzeniem. \n-   Rozważ zapoznanie się z zalecanymi czynnościami przygotowawczym przed rozpoczęciem ([link](https://studio.code.org/s/csc-timecapsule-2023/lessons/1#activity-4365340)).\n-   Rozważ te powiązane opcje rozszerzeń (link), aby zbadać po ostatniej lekcji.",
+          "purpose": "Ta lekcja zapewnia wciągające i interaktywne doświadczenie edukacyjne, które integruje standardy uczenia się nauk społecznych z celami informatyki. Łącząc te dwa standardy treści, lekcja ma na celu pomóc uczniom w głębszym zrozumieniu obu przedmiotów i zobaczeniu powiązań między nimi.",
+          "student_overview": "W tej lekcji zapoznasz się z różnymi przykładami kapsuł czasu. Twoim zadaniem jest nauczenie się podstaw kodowania w Sprite Lab, abyś mógł ożywić te wiersze kolorem, dźwiękami, animacją i muzyką! Wyobraź sobie, że mówisz komuś za 50 lat o życiu teraz. Być może opowiesz o pierwszych pojazdach elektrycznych lub pierwszej piosence, która osiągnęła miliard wyświetleń na YouTube. Wybierając tła, efekty tekstowe, duszki i dźwięki, możesz dodać szczegóły, które stworzą potężną kapsułę czasu dla kogoś w przyszłości. "
+        },
+        "csc-timecapsule-2023/My Time Capsule Story (pilot)": {
+          "name": "Pisanie mojej kapsuły czasu",
+          "overview": "W tej lekcji uczniowie zaplanują i napiszą własny wiersz o kapsule czasu. Uczniowie zastanowią się nad swoim życiem i osobistymi doświadczeniami, aby wybrać ważny pomysł na krótki wiersz o bieżącym okresie. Uczniowie powinni sobie wyobrazić, o czym ktoś 50 lat w przyszłości chciałby wiedzieć dzisiaj.",
+          "preparation": "-   Przejrzyj slajdy lekcji.\n-   Wydrukuj jedne**Napisz własną ulotkę z wierszem w kapsule czasu** (<a href=\"https://docs.google.com/document/d/1fahr11zX92NW-rLdyZBqrNK2VqgOGtCACkcT87M_luU/template/preview\" target=\"_blank\">Sentence Stems</a> \\\\ | <a href=\"https://docs.google.com/document/d/1-aPA3uJIKJAuQ_2Gtck1Ma79eCFY88ZC8YzegQIckG4/template/preview\t\n    \" target=\"_blank\">Question Grab Bag) dla każdego ucznia.</a>",
+          "purpose": "Dzisiaj napiszesz swój własny wiersz o kapsule czasu. Jak planujesz, pomyśl o tym, czego ktoś w przyszłości chciałby się dowiedzieć o twoim życiu. Wyobraź sobie, że twoje przyszłe wnuki pytają cię, jak to było, gdy byłeś młody. Chcą patrzeć na życie twoimi oczami. W następnej klasie kodujesz swój wiersz o kapsule czasu. Zacznij myśleć o tym, jakie tła, efekty tekstowe, dźwięki, duszki i wydarzenia możesz użyć."
+        },
+        "csc-timecapsule-2023/Coding My Time Capsule (pilot)": {
+          "name": "Kodowanie My Time Capsule",
+          "overview": "W tej lekcji uczniowie rozgrzeją się, czytając przykłady wierszy z kapsułą czasu. Następnie zaczną kodować własne wiersze kapsuły czasu. Uczniowie będą korzystać z funkcji „Enter My Own”, aby wprowadzić ukończone wiersze z ulotki, którą ukończyli w ostatniej klasie. Wreszcie uczniowie będą używać bloków kodu do animowania i ulepszania swoich projektów. Aby to zrobić, dokonają przeglądu umiejętności, których nauczyli się w Lekcji 1.",
+          "preparation": "-   Przejrzyj poziomy i przejrzyj slajdy lekcji\n-   Zidentyfikuj poziomy, na których Twoi uczniowie będą potrzebować dodatkowego wsparcia\n-   Upewnij się, że uczniowie mają ulotkę Write Your Time Capsule Poem z ostatniej klasy.\n-   Wydrukuj jedną listę kontrolną wiersza <a href=\"https://docs.google.com/document/d/1_Hg7hhayhHsTCWDo0uJspseuBbtfTqgx1u9frnmvf1Y/template/preview\" target=\"_blank\">Time Capsule dla każdego ucznia.</a>\n-   Zastanów się nad potrzebą słuchawek, jeśli uczniowie planują dodawać dźwięki do swoich projektów\n-   Stwórz własny wiersz kapsuły czasu jako przykład dla uczniów",
+          "purpose": "Uczniowie będą mogli spersonalizować swoje wiersze, wybierając efekty, które chcą dodać do swoich programów. Będą selekcjonować swoje projekty zgodnie z własnymi zainteresowaniami i osobistymi doświadczeniami.",
+          "student_overview": "Dziś będziesz mógł spersonalizować swój wiersz, wybierając efekty, które chcesz dodać do swojej kapsuły czasu. "
+        },
+        "csc-timecapsule-2023/Sharing My Time Capsule (pilot)": {
+          "name": "Udostępnianie",
+          "overview": "W tej ostatniej lekcji uczniowie będą udostępniać sobie nawzajem swoje aplikacje. Najpierw skopiują i wkleją linki aplikacji do nowej karty. Następnie uczniowie będą chodzić i opowiadać sobie nawzajem historie o kapsułach czasu. Na koniec cała klasa będzie dyskutować na temat znaczenia kuracji i tego, jak zdecydować, jakie elementy zachować w opowiadaniu historii.",
+          "preparation": "-   Poproście uczniów o pociągnięcie materiałów informacyjnych i projektów z poprzedniej klasy\n-   Rozdaj każdemu uczniowi stos notatek Post It (lub notatek samoprzylepnych po  <a href=\"https://docs.google.com/document/d/16OGg95k4WsOrusXBO-jjTBFMstI2Att8j6ggZCgpvls/template/preview\" target=\"_blank\">galerii</a>) \n-   Rozważ te powiązane opcje rozszerzeń ([link](https://studio.code.org/s/csc-timecapsule-2023/lessons/4#activity-4365344)), aby zbadać je po ostatniej lekcji.",
+          "purpose": "Ta lekcja daje uczniom możliwość zaprezentowania swojej nauki i otrzymania informacji zwrotnych od rówieśników. Udostępniając aplikacje kapsuły czasu, uczniowie mogą zobaczyć, jak ich koledzy z klasy podeszli do tego samego zadania i mogą uczyć się na swoich sukcesach i wyzwaniach."
+        },
+        "poetry-2023/Poem Art": {
+          "name": "Animacja wiersza Wprowadzenie",
+          "overview": "W tej zintegrowanej lekcji CS i ELA dla nowych programistów uczniowie animują wiersz z kodem, aby zilustrować nastrój wiersza. Najpierw uczniowie przeczytają i wykryją nastrój słynnego wiersza. Następnie znajdą odpowiednie efekty i obrazy, które pomogą zilustrować nastrój wiersza. Wreszcie uczniowie wykorzystają wydarzenia (kod), aby zilustrować zmianę nastroju lub animować nowe obrazy w wierszu.",
+          "preparation": "-   Przejrzyj poziomy i przejrzyj slajdy lekcji\n-   Zdecyduj się na tempo między czasem pracy ucznia a nauczaniem całej grupy.\n-   Rozważ zapoznanie się z zalecanymi czynnościami przygotowawczym przed rozpoczęciem ([link](https://studio.code.org/s/poetry-2023/lessons/1#activity-4365332)).\n-   Rozważ te powiązane opcje rozszerzeń ([link](https://levelbuilder-studio.code.org/s/poetry-2023/lessons/1#activity-43653330)), aby zbadać po ostatniej lekcji.\n\n##### Opcjonalnie:\n\n-   [Optional] Przejrzyj to \\*\\* [przewodnik nauczyciela dotyczący debugowania](https://code.org/curriculum/docs/k-5/DebuggingTeacher.pdf)\\*\\* aby przygotować się do pomocy uczniom w znajdowaniu i naprawianiu błędów w ich kodzie. \n-   [Optional] **Programowanie par** - Zdecyduj, czy chcesz, aby uczniowie angażowali się w programowanie par. Obejrzyj to [video](https://youtu.be/sxToW3ixrwo) i odwiedź tę [Support](https://support.code.org/hc/en-us/articles/115002122788-How-does-pair-programming-on-Code-org-work-) stronę, aby uzyskać więcej informacji.",
+          "purpose": "Celem tej lekcji jest nauczenie uczniów, jak tworzyć sztukę wiersza za pomocą kodu do ożywiania nastroju wiersza. Zapewnia to wciągające i interaktywne doświadczenie edukacyjne, które integruje sztuki językowe i informatykę. Łącząc analizę poezji z kodowaniem, lekcja ma na celu pomóc uczniom w głębszym zrozumieniu emocjonalnego wpływu języka i wyrażeniu tego wpływu poprzez sztukę wizualną.",
+          "student_overview": "Poezja tworzy sztukę słowami. Użyjesz kodu, aby dodać efekty wizualne i obrazy do animacji wiersza. "
+        },
+        "poetry-2023/Writing My Time Capsule Poem": {
+          "name": "Pisanie mojego wiersza",
+          "overview": "W tej lekcji uczniowie zaplanują i napiszą własny wiersz. Uczniowie zastanowią się nad swoim życiem i osobistymi doświadczeniami, aby wybrać ważny pomysł na krótki wiersz, który mogą animować. W następnej lekcji uczniowie kodują swoje wiersze, dlatego ważne jest, aby przygotowali krótki wiersz.",
+          "preparation": "-   Przejrzyj slajdy lekcji.\n-   Wydrukuj jedne**Napisz własną ulotkę wiersza** (Stematy<a href=\"https://docs.google.com/document/d/1b6w_lOnibUHyDLYCP3rAWED5iElGm6LOQAJwG-hlih0/template/preview\n    \" target=\"_blank\">zdań</a> \\\\ | <a href=\"https://docs.google.com/document/d/1V-DaWOIUk0xT7NYTzx3AEt4my-jc-Hx4vy21Kl4SPoE/template/preview\" target=\"_blank\">Tematy</a>) dla każdego ucznia.\n-   Rozważ te powiązane opcje rozszerzeń ([link](https://studio.code.org/s/poetry-2023/lessons/2#activity-43653340)), aby zbadać po ostatniej lekcji.",
+          "purpose": "Łącząc pisanie poezji z kodowaniem, lekcja ma na celu pomóc uczniom w głębszym zrozumieniu procesu twórczego oraz wyrażeniu swoich pomysłów i emocji zarówno za pomocą języka, jak i technologii. Gdy uczniowie podejmują decyzje dotyczące wyboru słów, zachęca się ich do planowania kreatywnego i znaczącego wykorzystania kodu, aby stworzyć wizualną reprezentację emocjonalnego wpływu ich wiersza. ",
+          "student_overview": "Dzisiaj napiszesz swój własny wiersz. Jak planujesz, zastanów się, jakie tematy są dla Ciebie ważne. Czym chcesz się podzielić z czytelnikami? W następnej klasie kodujesz swój wiersz. Zacznij myśleć o tym, jakie tła, efekty tekstowe, dźwięki, duszki i wydarzenia możesz użyć."
+        },
+        "poetry-2023/Coding My Time Capsule": {
+          "name": "Kodowanie mojego wiersza",
+          "overview": "W tej zintegrowanej lekcji CS i ELA uczniowie będą pracować na swoich komputerach, aby animować swoje wiersze za pomocą kodu. W lekcji 1 uczniowie użyli menu rozwijanego wiersza, aby wybrać wiersz, który chcieli animować. W tej lekcji uczniowie wprowadzą własne wiersze do przestrzeni zabaw, a następnie użyją bloków kodu, aby dodać tła, efekty, dźwięki, i duszki.",
+          "preparation": "-   Graj przez poziomy i przejrzyj slajdy lekcji z wyprzedzeniem, aby przygotować się do sekcji kodowania i dyskusji lekcji.\n-   Upewnij się, że uczniowie mają ulotkę Napisz własny wiersz z ostatniej klasy.\n-   Wydrukuj jeden\\*\\* Lista kontrolna<a href=\"https://docs.google.com/document/d/14M3WIBwJg-YUKVrchzKfunAmQaQhuA7-qxYpS738K_0/template/preview\" target=\"_blank\"></a>wiersza\\*\\* dla każdego ucznia.\n-   Rozważ te powiązane opcje rozszerzeń ([link](https://studio.code.org/s/poetry-2023/lessons/3#activity-4365335)), aby zbadać po ostatniej lekcji.\n\n#### Opcjonalnie\n\n-   Rozważ potrzebę słuchawek, jeśli uczniowie planują dodawać dźwięki do swoich projektów.\n-   Stwórz własną aplikację wierszową jako przykład dla studentów.",
+          "purpose": "Uczniowie będą mogli spersonalizować swoje wiersze, wybierając efekty, które chcą dodać do swoich programów. Będą selekcjonować swoje projekty zgodnie z własnymi zainteresowaniami i osobistymi doświadczeniami.",
+          "student_overview": "Dziś będziesz mógł spersonalizować swój wiersz, wybierając efekty, które chcesz dodać do swojej kapsuły czasu. "
+        },
+        "poetry-2023/Poetry Circle": {
+          "name": "Koło poezji",
+          "overview": "W tej lekcji uczniowie na zmianę będą udostępniać swoją aplikację wierszy swoim rówieśnikom. Uczniowie zaczynają od omówienia znaczenia dawania i uzyskiwania informacji zwrotnych. Następnie, uczniowie przeprowadzają dzielenie się parami poezji, udostępniając swoje aplikacje wierszowe partnerowi oraz przekazując i otrzymując informacje zwrotne. Na koniec cała klasa będzie miała Koło Poezji, po którym odbędzie się dyskusja na temat nastroju i tonu, a także efektów wizualnych wiersza studenckiego wolontariusza.",
+          "preparation": "-   Przygotuj jeden komputer na ucznia.\n-   Przygotuj jedną kopię ulotki**<a href=\"https://docs.google.com/document/d/1kO4SNEIVyM0GrxxJb6NzVYauXXpi6rzQkDIfrzQf1Ls/template/preview\" target=\"_blank\">Udostępnij swoją</a>aplikację** na ucznia.\n-   Upewnij się, że uczniowie mają pod ręką kopię swojego oryginalnego wiersza na tę lekcję.  \n-   Podziel klasę na pary dla aktywności Poezja Pair-Share.\n-   Rozważ te powiązane opcje rozszerzenia ([link](https://studio.code.org/s/poetry-2023/lessons/4#activity-4365336)), aby zbadać po tej lekcji.\n\n##### Opcjonalnie\n\n-   Specjalnie w przypadku nauczania zdalnego: Określ, czy musisz skonfigurować dokument cyfrowy lub udostępnioną przestrzeń online, aby opublikować adres URL aplikacji każdego ucznia (zobacz szablon nauczyciela w „Linki”). ",
+          "purpose": "Dzielenie się projektami wierszy z rówieśnikami jest ważnym aspektem procesu twórczego. Umożliwia uczniom otrzymywanie informacji zwrotnych, współpracę z innymi, refleksję nad własną pracą i świętowanie swoich osiągnięć. Dzieląc się swoją pracą z innymi, uczniowie mogą rozwijać się i doskonalić jako kreatywni myśliciele oraz rozwijać ważne umiejętności komunikacyjne i interpersonalne.",
+          "student_overview": "Udostępnij swoje nowe aplikacje wierszy znajomym! "
+        },
+        "coursea-2023/Safety in My Online Neighborhood": {
+          "name": "Bezpieczeństwo w moim otoczeniu online",
+          "overview": "[![edukacja zdrowego rozsądku](https://curriculum.code.org/static/img/common_sense_education.png)](https://www.commonsense.org)\n\nTa lekcja została pierwotnie stworzona przez Common Sense Education. [dowiedz się więcej.](https://www.commonsense.org/education/digital-citizenship/curriculum)\n\nMoc Internetu pozwala uczniom doświadczyć i odwiedzać miejsca, których mogą nie być w stanie osobiście zobaczyć. Ale, podobnie jak podróżowanie w prawdziwym świecie, ważne jest, aby być bezpiecznym podczas podróży online. Podczas tej wirtualnej podróży, dzieci mogą ćwiczyć pobyt bezpieczny na przygodach online.",
+          "preparation": "-   Przegląd materiałów instruktażowych.\n-   Drukuj materiały materiałowe dla każdego ucznia.\n-   (Opcjonalnie) Wydrukuj plakat do wyświetlania w klasie.",
+          "purpose": "Nauka Common Sense Education stworzyła tę lekcję, aby nauczyć uczniów, jak mogą bezpiecznie przejść do miejsc online.",
+          "student_overview": "Dowiedz się, jak bezpiecznie przechodzić do miejsc w Internecie."
+        },
+        "coursea-2023/Learn to Drag and Drop": {
+          "name": "Nauka metody przeciągać i upuszczać",
+          "overview": "Ta lekcja da uczniom wyobrażenie, czego się spodziewać po wejściu do laboratorium komputerowego. Zaczyna się od krótkiej dyskusji wprowadzającej ich do zachowania się w laboratorium komputerowym, a następnie przechodzą oni do korzystania z komputera, aby ukończyć łamigłówki online.",
+          "preparation": "-   Obejrzyj **\\\\ \\*Jak zrobić sekcję klasy** na Code.org - Teacher Video. Stwórz własną sekcję zajęć na Code.org i upewnij się, że każdy uczeń ma kartę z kodem dostępu.\n    — upewnij się, że uczestnicy kursu będą mogli uzyskać dostęp do Lekcji 2 ze swoich urządzeń. Zastanów się, czy chcesz ukryć przyszłe lekcje, aby uniemożliwić uczniom zbyt szybkie poruszanie się naprzód.\n-   Poproś szkolnego informatyka, aby dodać szybki link do sekcji zajęć do pulpitu komputera.\n    — Przejrzyj witrynę internetową Common Sense Education, aby uzyskać więcej informacji dotyczących bezpieczeństwa online",
+          "purpose": "Głównym celem tej lekcji jest rozwijanie umiejętności uczniów z komputeremi. Przybliżając najbardziej podstawowe funkcje komputera, takie jak klikanie, przeciąganie i upuszczanie, stwarzamy wszystkim uczniom w klasie równe szanse dla przyszłych łamigłówek. Ta lekcja stanowi również doskonałą okazję do wprowadzenia podstawowej terminologii w zakresie sprzętu komputerowego, potencjalnie obejmującego \"myszkę\", \"trackpad\" lub \"ekran dotykowy\" w zależności od Twoich urządzeń.",
+          "student_overview": "Kliknij i przeciągnij, by ukończyć łamigłówki."
+        },
+        "coursea-2023/Happy Maps": {
+          "name": "Szczęśliwe Mapy (Happy Maps)",
+          "overview": "Ta lekcja bez komputerów połączy zespoły nad prostym zadaniem: zdobądź \"flurb\" do owoców. Uczniowie będą ćwiczyć pisanie precyzyjnych instrukcji przekładając instrukcje na podane symbole. Jeśli pojawią się problemy w kodzie, uczniowie powinni również wspólnie pracować nad wykryciem błędów i tworzeniem rozwiązań.",
+          "preparation": "-   Wydrukuj jeden **\\\\ \\*arkusz** i jeden zestaw **\\\\ \\*Manipulacje** na grupę 2-3.\n-   Upewnij się, że każdy student ma Dziennik Reflection.",
+          "purpose": "Przejście od algorytmów do programowania może być szybkie, jeśli uczniowie zrozumieją różnicę między zaplanowaniem sekwencji a zakodowaniem tej sekwencji w odpowiednim języku. Te zajęcia pomogą uczniom zdobyć doświadczenie w czytaniu i pisaniu w skróconego kodu.",
+          "student_overview": "Napisz instrukcje prowadzące Flurba do owocu."
+        },
+        "coursea-2023/Sequencing with Scrat": {
+          "name": "Tworzenie sekwencji ze Scratem",
+          "overview": "Przy pomocy Scrata z franszyzy \"Epoka lodowcowa\" [Ice Age] uczniowie opracują algorytmy sekwencyjne, aby przeprowadzić wiewiórkę z jednej strony labiryntu do żołędzia po drugiej stronie. W tym celu układają bloki kodu w porządku liniowym.",
+          "preparation": "-   Wytnij bloki kierunkowe z **\\\\ \\*Manipulacje** w celu użycia z aktywnością pomostowania Happy Maps.\n-   Upewnij się, że każdy student ma Reflection Journal..",
+          "purpose": "Podczas tej lekcji uczniowie rozwiną umiejętności programowania i debugowania na platformie komputerowej. Blokowy format łamigłówek pomaga im poznać kolejność czynności i pojęcia, nie martwiąc się o doskonalenie składni.",
+          "student_overview": "Zaprogramuj Scrata tak, aby doszedł do żołędzia."
+        },
+        "coursea-2023/Programming with Scrat": {
+          "name": "Programowanie ze Scratem",
+          "overview": "Przy pomocy postaci z gry \"Epoki lodowcotej\" [Ice Age] uczniowie opracują algorytmy sekwencyjne, aby przeprowadzić ptaka z jednej strony labiryntu do świnki po drugiej stronie. W tym celu układają bloki kodu w porządku liniowym, przez co postaci poruszają się prosto, skręcają w lewo lub w prawo.",
+          "preparation": "-   Graj przez zagadki, aby znaleźć potencjalne obszary problemowe dla swojej klasy.\n-   (Opcjonalnie) Wybierz kilka zagadek do zrobienia jako grupa z klasą.\n-   Upewnij się, że każdy student ma dziennik refleksji.",
+          "purpose": "Podczas tej lekcji uczniowie rozwiną umiejętności programowania i debugowania na platformie komputerowej. Blokowy format łamigłówek pomaga im poznać kolejność czynności i pojęcia, nie martwiąc się o doskonalenie składni.",
+          "student_overview": "Napisz programy, aby pomóc Scratowi dojść do żołędzia."
+        },
+        "coursea-2023/Programming with Rey and BB-8": {
+          "name": "Programowanie z Reyem i BB-8",
+          "overview": "Na tej lekcji uczniowie będą używać nowo nabytych umiejętności programowania w bardziej skomplikowane sposoby, aby nawigować po trudnej trasie z BB-8.",
+          "preparation": "-   Zagraj w zagadki odpowiadające tej lekcji, aby znaleźć potencjalne obszary problemowe dla swojej klasy.\n-   Przegląd **\\\\ \\*Podstawy CS Główne wskazówki dotyczące aktywności - Zalecenia lekcyjne**.\n-   Upewnij się, że każdy student ma Dziennik Reflection.",
+          "purpose": "Mając na uwadze transfer wiedzy, ta lekcja daje studentom nowe środowisko do praktykowania umiejętności, które uprawiali. _Star Wars_ fani będą skakać z radości, gdy zobaczą te zagadki. Każda zagadka z tej serii została dodana, aby zapewnić głębsze zrozumienie podstawowych pojęć, które będą używane przez resztę kursu.",
+          "student_overview": "Pomóż BB-8 zebrać złom."
+        },
+        "coursea-2023/Happy Loops": {
+          "name": "Szczęśliwe pętle",
+          "overview": "Te zajęcia są powrotem do Happy Maps. Tym razem uczniowie będą rozwiązywać większe, dłuższe łamigłówki za pomocą swojego kodu, dzięki czemu będą mogli poznać narzędzia strukturalne, które pozwolą im łatwiej napisać dłuższy kod.",
+          "preparation": "-   Wydrukuj **\\\\ \\*arkusz**, aby wyświetlić dla klasy\n-   dla każdej grupy 2-3, wydrukuj jeden z każdego: **\\\\ \\*kawałki gry,\\\\ \\*arkusz XL i\\\\ \\*Manipulacje pakietu**.\n-   Upewnij się, że każdy student ma Dziennik Reflection.",
+          "purpose": "Ta lekcja jest wprowadzeniem do pętli. Pętle pozwalają uczniom uprościć ich kod, grupując polecenia, które muszą być powtarzane. Uczniowie rozwijają umiejętności krytycznego myślenia, zauważając powtarzanie się ruchów swoich kolegów z klasy i określając, ile razy są powtarzane polecenia. Po ponownym obejrzeniu \"Szczęśliwych map\" (Happy Maps) uczniowie będą mogli odnieść stare pojęcia, takie jak ustawianie w kolejności, do nowego pojęcia pętli.",
+          "student_overview": "Pomóż Flurbowi rozwiązać większe problemy używając pętli."
+        },
+        "coursea-2023/Loops with Scrat": {
+          "name": "Pętle ze Scratem",
+          "overview": "Opierając się na koncepcji powtarzania instrukcji z \"Happy Loops\", na tym etapie uczniowie będą używać pętli do bardziej efektywnego zbierania żołędzi na Code.org.",
+          "preparation": "-   Przejrzyj poprzednią niepodłączoną lekcję i rozwiń pytania, aby przypomnieć uczestnikom kursu, dlaczego używane są pętle.\n-   (Opcjonalnie) Wybierz kilka zagadek do zrobienia jako grupa z klasą.\n-   Zbierz zapasy z poprzednich Happy Loops, aby ponownie wykorzystać do rozgrzania\n-   Upewnij się, że każdy uczeń ma Dziennik Reflection.",
+          "purpose": "Podczas tej lekcji uczniowie będą uczyć się więcej o pętlach i sposobach ich implementacji w kodzie Blockly. Korzystanie z pętli jest ważną umiejętnością programowania, ponieważ ręczne powtarzanie poleceń jest żmudne i nieefektywne. Dzięki tym zagadkom Code.org uczniowie nauczą się dodawać instrukcje do istniejących pętli, zbierają powtarzany kod w pętle i rozpoznają wzorce, które należy powtórzyć.",
+          "student_overview": "Pomóż Scratowi objąć więcej terenu używając pętli."
+        },
+        "coursea-2023/Loops with Laurel": {
+          "name": "Pętle z Laurel",
+          "overview": "Na tej lekcji uczniowie kontynuują poznawanie koncepcji pętli. Na poprzedniej lekcji uczniowie zostali wprowadzeni w pętle w formie przechodzenia przez labirynt i zbierania kukurydzy. Tutaj pętli używa się do zbierania skarbu w miejscach otwartych jaskiń.",
+          "preparation": "-   Graj przez zagadki, aby znaleźć potencjalne obszary problemowe dla swojej klasy.\n-   (Opcjonalnie) Wybierz kilka zagadek do zrobienia jako grupa z klasą.\n-   Recenzja \\*\\*\\\\ \\*Zalecenia lekcji CSF\n-   Upewnij się, że każdy uczeń ma dziennik refleksji",
+          "purpose": "Ta lekcja zapewnia uczniom więcej praktyki w zakresie pętli oraz wprowadza nowy blok \"zdobądź skarb'. Blok działa na takiej samej zasadzie jak \"zbierz kukurydzę\" w interfejsie Harvester. Łamigłówki te są bardziej otwarte, dają uczniom więcej elastyczności w celu znalezienia ostatecznych rozwiązań.",
+          "student_overview": "Pomóż poszukiwaczce przygód Laurel zebrać podziemny skarb."
+        },
+        "coursea-2023/Ocean Scene with Loops": {
+          "name": "Scena oceanu z pętlami",
+          "overview": "Wracając do pętli, uczniowie uczą się rysować poprzez powtarzanie w pętli prostych sekwencji instrukcji. W poprzedniej lekcji pętle były użyte do przemierzania labiryntu i zbierania skarbów. Tutaj, pętle tworzą wzorce. Pod koniec tego etapu uczniowie będą mieli możliwość tworzenia własnych obrazów za pomocą pętli.",
+          "preparation": "-   Graj przez zagadki, aby znaleźć potencjalne obszary problemowe dla swojej klasy.\n-   Przejrzyj **\\\\ \\*Zalecenia lekcji CSF**.\n-   Upewnij się, że każdy student ma dziennik refleksji.",
+          "purpose": "Ta lekcja daje inną perspektywę, w jaki sposób pętle mogą tworzyć rzeczy w programowaniu. Studenci mogą również zastanowić się nad nieskutecznością programowania bez pętli tutaj ze względu na to, ile bloków program wymagałby bez pomocy pętli `repeat`.",
+          "student_overview": "Używaj pętli i wzorców, aby ukończyć ilustracje."
+        },
+        "coursea-2023/The Big Event Jr": {
+          "name": "Wielkie Zdarzenie Jr.",
+          "overview": "Zdarzenia są świetnym sposobem na urozmaicenie napisanego wcześniej algorytmu. Czasami chcesz, aby Twój program był w stanie odpowiedzieć na działanie użytkownika w odpowiednim momencie. Właśnie do tego służą zdarzenia.",
+          "preparation": "-   Przygotuj się do projektu **\\\\ \\*The Controller Image**.\n-   Wydrukuj jeden **\\\\ \\*Ocena** na ucznia.\n-   Upewnij się, że każdy student ma dziennik refleksji.",
+          "purpose": "Dzisiaj uczniowie nauczą się odróżniać wydarzenia od działań. Uczniowie zobaczą działania przerwane przez naciśnięcie przycisku na papierowym pilocie. Widząc to wydarzenie, klasa zareaguje unikalną akcją. Zdarzenia są szeroko stosowane w programowaniu i powinny być łatwo rozpoznawalne po tej lekcji.",
+          "student_overview": "Idź i krzycz, gdy Twoi nauczyciele naciskają przyciski na wielkim pilocie."
+        },
+        "coursea-2023/Mini-Project: On the Move with Play Lab": {
+          "name": "Mini-projekt: W ruchu z Play Lab",
+          "overview": "W ramach tych zajęć online uczniowie będą mieli okazję dowiedzieć się, jak korzystać ze zdarzeń w Play Lab i zastosować wszystkie umiejętności programowania, które nabyli, aby utworzyć animowaną grę. Czas na kreatywność i utworzenie historyjki w Play Lab!",
+          "preparation": "-   Graj przez zagadki, aby znaleźć potencjalne obszary problemowe dla swojej klasy.\n-   (Opcjonalnie) Wybierz kilka zagadek do zrobienia jako grupa z klasą.\n-   Przejrzyj **\\\\ \\*Zalecenia lekcji CSF**.\n-   Upewnij się, że każdy student ma dziennik refleksji.",
+          "purpose": "Uczniowie będą dalej rozwijać rozumienie zdarzeń za pomocą Play Lab. Zdarzenia są bardzo powszechnie stosowane w większości programów komputerowych. W tym ćwiczeniu uczniowie będą używać zdarzeń, aby poruszać postacią po ekranie, wydawać odgłosy i zmieniać tło w oparciu o zdarzenia inicjowane przez użytkownika.",
+          "student_overview": "Twórz swoją własną grę lub historyjkę."
+        },
+        "coursea-2023/End of Course Project": {
+          "name": "Koniec projektu kursu",
+          "overview": "Na tej lekcji z **projektem** uczniowie wykorzystują zdobytą wiedzę o sekwencjonowaniu i pętlach w otwartym projekcie z artystą. ",
+          "preparation": "-   Napisz i koduj własną historię dla Artysty z wyprzedzeniem, aby zainspirować studentów!",
+          "purpose": "Ta lekcja daje studentom ostatnią szansę na twórcze wykorzystanie nowych umiejętności informatyki.",
+          "student_overview": "Opowiedz historię z Artystą!"
+        },
+        "courseb-2023/Digital Trails": {
+          "name": "Cyfrowe szlaki",
+          "overview": " [![edukacja zdrowego rozsądku](https://curriculum.code.org/static/img/common_sense_education.png)](https://www.commonsense.org)\n\nTa lekcja została pierwotnie stworzona przez Common Sense Education. [dowiedz się więcej.](https://www.commonsense.org/education/digital-citizenship/curriculum)\n\nCzy to, co robisz online, zawsze pozostaje online? Uczniowie dowiadują się, że informacje, które udostępniają online, pozostawiają cyfrowy ślad lub „ślad”. W zależności od tego, jak sobie z tym poradzą, ten szlak może być duży lub mały, szkodliwy lub pomocny. Studenci porównują różne szlaki i krytycznie zastanawiają się, jakie informacje chcą zostawić.",
+          "preparation": "-   Przegląd materiałów instruktażowych.\n-   Drukuj materiały materiałowe dla każdego ucznia.",
+          "purpose": "Common Sense Education stworzyła tę lekcję, aby uczyć uczniów o „cyfrowych śladach” i jakie informacje są dla nich w porządku, aby mieć we własnym zakresie.",
+          "student_overview": "Dowiedz się o swoim śladzie cyfrowym oraz jak zachowywać bezpieczeństwo przy wchodzeniu na strony internetowe."
+        },
+        "courseb-2023/Move It, Move It": {
+          "name": "Przenieść go, przenieść go",
+          "overview": "Ta lekcja ma na celu przygotowanie mentalne uczniów do ćwiczeń w kodowaniu, na które natką się w trakcie kursu. W niewielkich zespołach uczniowie będą korzystać z fizycznego ćwiczenia do zaprogramowania  swoich kolegów z klasy tak, by przechodzili ostrożnie z miejsca na miejsce, aż do osiągnięcia celu.",
+          "preparation": "-   Obejrzyj **\\\\ \\*Wideo nauczyciela**\n-   Drukuj (lub w inny sposób przygotuj się do wyświetlenia) jeden **\\\\ \\*Klucz odpowiedzi na arkusz**\n-   Drukuj jeden **\\\\ \\*Mapa** i jeden **\\\\ \\*arkusz** dla grupy 2-3 uczniów\n-   Przygotuj puste papiery wypełnić resztę siatki chodzenia (4-7 potrzebne na grupę)",
+          "purpose": "Poprzez wykorzystanie ruchu fizycznego w celu zaprogramowania swoich kolegów z klasy uczniowie będą napotykać na kwestie i emocje podobne do tego, co poczują, gdy zaczną kodowanie na komputerze. Konfrontacja z tymi stresami w otwartym środowisku zabawy pomoże zmniejszyć ich natężenie i pozwoli uczniom ćwiczyć niezbędne umiejętności zanim napotkają problemy samodzielnie.",
+          "student_overview": "Zaprogramuj swoich kolegów z klasy, aby uważnie przechodzili z miejsca na miejsce."
+        },
+        "courseb-2023/Sequencing with Angry Birds": {
+          "name": "Tworzenie sekwencji z Angry Birds",
+          "overview": "Przy pomocy postaci z gry Angry Birds uczniowie opracowują algorytmy sekwencyjne, aby przeprowadzić ptaka z jednej strony labiryntu do świnki po drugiej stronie. W tym celu układają bloki kodu w porządku liniowym.",
+          "preparation": "-   Jeśli uczniowie są zupełnie nowi w przeciąganiu i upuszczaniu, rozważ przypisanie im **\\\\ \\*Przeciągnij i upuść Practice** przed rozpoczęciem tej lekcji.\n-   Obejrzyj **\\\\ \\*Jak zrobić sekcję klasy na Code.org** - Teacher Video, Stwórz własną sekcję klasy na Code.org i upewnij się, że każdy uczeń ma kartę z kodem dostępu.\n-   Poproś szkolnego informatyka, aby dodać szybki link do sekcji zajęć do pulpitu komputera.\n-   Upewnij się, że każdy uczeń ma dziennik.",
+          "purpose": "Podczas tej lekcji uczniowie rozwiną umiejętności programowania i debugowania na platformie komputerowej. Blokowy format łamigłówek pomaga im poznać kolejność czynności i pojęcia, nie martwiąc się o doskonalenie składni.",
+          "student_overview": "Pomóż Czerwonemu Angry Bird iść ścieżką do niegrzecznej świnki."
+        },
+        "courseb-2023/Programming with Angry Birds": {
+          "name": "Programowanie z Angry Birds",
+          "overview": "Przy pomocy postaci z gry \"Epoki lodowcotej\" [Ice Age] uczniowie opracują algorytmy sekwencyjne, aby przeprowadzić ptaka z jednej strony labiryntu do świnki po drugiej stronie. W tym celu układają bloki kodu w porządku liniowym, przez co postaci poruszają się prosto, skręcają w lewo lub w prawo.",
+          "preparation": "-   Graj przez zagadki, aby znaleźć potencjalne obszary problemowe dla swojej klasy.\n-   Zlokalizuj lub przedrukuj materiały eksploatacyjne dla **\\\\ \\*Happy Maps**.\n-   Upewnij się, że każdy student ma Dziennik Reflection.\n-   Wytnij wystarczającą ilość **\\\\ \\*Manipulacje** w każdym kierunku (N, S, E, W), aby dać dwa zestawy każdej parze uczniów (jeśli wybierzesz opcję mostkowania #1).",
+          "purpose": "Podczas tej lekcji uczniowie będą rozwijać umiejętności programowania na platformie komputerowej. Format tych zagadek oparty na blokach pomaga uczniom poznać sekwencję i koncepcje, bez konieczności martwić się o udoskonalanie składni.",
+          "student_overview": "Twórz programy, aby pomóc Angry Bird przejść przez labirynt."
+        },
+        "courseb-2023/Programming with Harvester": {
+          "name": "Programowanie przy pomocy interfejsu Harvester",
+          "overview": "Uczniowie będą stosować poznane koncepcje programowania do środowiska Żniwiarki. Teraz, zamiast samego doprowadzenia postaci do celu uczniowie będą zbierać kukurydzę używając nowego bloku. Uczniowie będą kontynuować rozwijanie sekwencyjnych umiejętności sekwencyjnych i zaczną korzystać z procesu debugowania.",
+          "preparation": "-   Graj przez zagadki, aby znaleźć potencjalne obszary problemowe dla swojej klasy.\n-   Upewnij się, że każdy student ma dziennik refleksji.",
+          "purpose": "Podczas tej lekcji uczniowie będą rozwijać umiejętności debugowania i będą nadal rozwijać swoje umiejętności programistyczne.",
+          "student_overview": "Pomóż żniwiarce zebrać po drodze warzywa."
+        },
+        "courseb-2023/Getting Loopy": {
+          "name": "Poznając pętle",
+          "overview": "W miarę, gdy zaczynamy pisać dłuższe i ciekawsze programy,, nasz kod często zawiera wiele powtórzeń. Na tej lekcji uczniowie nauczą się, jak można używać pętli, aby łatwiej przekazywać instrukcje, które mają mnóstwo powtórzonych wzorców ruchu w tańcu.",
+          "preparation": "-   Przygotuj się do wyświetlenia studentom **\\\\ \\*arkusz**.\n-   Wydrukuj jeden **\\\\ \\*Ocena** na ucznia.\n-   Upewnij się, że każdy uczeń ma dziennik refleksji.",
+          "purpose": "W tym momencie kursu studenci powinni mieć rozwinięty komfort programowania zestawu instrukcji liniowych. Często liniowy zestaw instrukcji zawiera wzorce, które są powtarzane wielokrotnie i ponieważ uczniowie chcą pisać bardziej złożone i interesujące programy, ręcznie powielanie tego kodu staje się uciążliwe i nieefektywne. Aby umożliwić uczniom pisanie bardziej zaawansowanych programów, musimy polegać na strukturach, które wyrwają się z tej pojedynczej listy liniowej. Pętle umożliwiają studentom uporządkowanie kodu w sposób, który się powtarza. W tej lekcji skupimy się na identyfikowaniu wzorców w ruchu fizycznym, zanim przejdziemy z powrotem na komputer, aby szukać wzorców w naszym kodzie.",
+          "student_overview": "Na tej lekcji będziemy mieć potańcówkę używając pętli powtarzania!"
+        },
+        "courseb-2023/Loops with Harvester": {
+          "name": "Pętle z interfejsem Harvester",
+          "overview": "Opierając się na koncepcji powtarzania instrukcji z \"Zapętlania [Getting Loopy]\", na tym etapie uczniowie będą używać pętli, aby bardziej efektywnie zbierać kukurydzę na Code. org.",
+          "preparation": "-   Graj przez zagadki, aby znaleźć potencjalne obszary problemowe dla swojej klasy.\n-   Przegląd **\\\\ \\*Podstawy CS Główne wskazówki dotyczące aktywności - Zalecenia lekcyjne**.\n-   Upewnij się, że każdy student ma dziennik refleksji.\n-   (Opcjonalnie) Wybierz kilka zagadek do zrobienia jako grupa z klasą.\n-   (Opcjonalnie) Jeśli jeszcze tego nie zrobiłeś, wydrukuj i wycinaj bloki z **\\\\ \\*Manipulacje**, aby przygotować się do jednej z czynności pomostowania w tej lekcji.",
+          "purpose": "Podczas tej lekcji uczniowie będą uczyć się więcej o pętlach i sposobach ich implementacji w kodzie Blockly. Korzystanie z pętli jest ważną umiejętnością programowania, ponieważ ręczne powtarzanie poleceń jest żmudne i nieefektywne. Dzięki zagadkom Code.org uczniowie nauczą się dodawać instrukcje do istniejących pętli, zbierać powtarzany kod w pętle i rozpoznawać wzorce, które muszą być zapętane.",
+          "student_overview": "Pomóż żniwiarce zebrać nawet więcej, używając pętli!"
+        },
+        "courseb-2023/Loops with Laurel": {
+          "name": "Pętle z Laurel",
+          "overview": "Na tej lekcji uczniowie będą nadal poznawać koncepcję pętli. Tutaj, poszukiwaczka przygód, Laurel, używa pętli, aby zebrać skarb w miejscach otwartych jaskiń. Wprowadza się nowy blok \"zdobądź skarb\", aby pomóc jej w podróży.",
+          "preparation": "-   Graj przez zagadki, aby znaleźć potencjalne obszary problemowe dla swojej klasy.\n-   (Opcjonalnie) Wybierz kilka zagadek do zrobienia jako grupa z klasą.\n-   Recenzja **\\\\ \\*CS Podstawy główne wskazówki dotyczące aktywności - Zalecenia lekcyjne**\n-   Upewnij się, że każdy uczeń ma dziennik refleksji.",
+          "purpose": "Ta lekcja umożliwia uczniom zdobycie większej praktyki w korzystaniu z pętli i zachęca się ich do wstawiania wielu  bloków wewnątrz \"powtarzaj\", w trakcie próby zdobycia jak największej ilości skarbów.",
+          "student_overview": "Pomóż poszukiwaczce przygód Laurel zebrać skarb w otwartej jaskini."
+        },
+        "courseb-2023/Drawing Gardens with Loops": {
+          "name": "Rysowanie ogrodów z pętlami",
+          "overview": "Wracając do pętli, uczniowie uczą się rysować poprzez powtarzanie w pętli prostych sekwencji instrukcji. W poprzedniej lekcji pętle były użyte do przemierzania labiryntu i zbierania skarbów. Tutaj, uczniowie używają pętli do tworzenia wzorców. Pod koniec tego etapu uczniowie będą mieli możliwość tworzenia własnych obrazów za pomocą pętli.",
+          "preparation": "-   Zagraj w zagadki przed lekcją, aby znaleźć potencjalne obszary problemowe dla swojej klasy.\n-   Przegląd **\\\\ \\*Podstawy CS Główne wskazówki dotyczące aktywności - Zalecenia lekcyjne**.\n-   Upewnij się, że każdy student ma dziennik refleksji.",
+          "purpose": "Ta lekcja dostarcza innego spojrzenia na to, jak pętle mogą być wykorzystane w programowaniu. Uczniowie będą testować ich umiejętności krytycznego myślenia poprzez dokonanie oceny danego kodu i określenie potrzeb, które należy dodać, aby rozwiązać łamigłówkę. Uczniowie mogą również zastanowić się nad nieefektywnością programowania bez pętli z powodu liczby bloków, które program mógłby potrzebować bez użycia pętli \"powtarzaj\".",
+          "student_overview": "Używaj wzorców i pętli, aby ukończyć obrazki."
+        },
+        "courseb-2023/The Right App": {
+          "name": "Odpowiednia aplikacja",
+          "overview": "Na tej lekcji uczniowie będą stwierdzać, że informatyka może pomóc ludziom w prawdziwym życiu.  Najpierw uczniowie wykazują empatię względem kilku fikcyjnych użytkowników smartfona, aby pomóc im znaleźć \"właściwą aplikację\", które stanowi odpowiedź na ich potrzeby. Wówczas uczniowie okazują empatię i kreatywność, aby naszkicować swoją własną aplikacje na smartfona, która stanowi odpowiedź na potrzeby jednego dodatkowego użytkownika.",
+          "preparation": "-   Przeczytaj notatki głośnika w **\\\\ \\*podeck**. \n-   Przygotuj wystarczającą ilość materiałów do szkicowania/rysowania dla wszystkich uczniów.\n-   Upewnij się, że każdy student ma dziennik refleksji.",
+          "purpose": "Obecnie komputery są bardziej dostępne niż kiedykolwiek wcześniej. Ludzie ze wszystkich środowisk korzystają z oprogramowania na wielu różnych urządzeniach, w szczególności smartfonach, do informacji, komunikacji i rozrywki. Ponieważ ludzie mają tak różnorodne doświadczenia i potrzeby, ważne jest, aby początkujący informatycy wczuć się w ludzi i identyfikować rozwiązania z nimi w umyśle. ",
+          "student_overview": "Utwórz szkice swoj własnej aplikacji na smartfona."
+        },
+        "courseb-2023/The Big Event Jr": {
+          "name": "Wielkie Zdarzenie Jr.",
+          "overview": "Zdarzenia są świetnym sposobem na urozmaicenie napisanego wcześniej algorytmu. Czasami chcesz, aby Twój program był w stanie odpowiedzieć na działanie użytkownika w odpowiednim momencie. Właśnie do tego służą zdarzenia.",
+          "preparation": "-   Przygotuj się do projektu **\\\\ \\*Kontroler Image**.\n-   Wydrukuj jeden **\\\\ \\*Ocena** na ucznia.\n-   Upewnij się, że każdy student ma dziennik refleksji.",
+          "purpose": "Dzisiaj uczniowie nauczą się odróżniać wydarzenia od działań. Uczniowie zobaczą działania przerwane przez naciśnięcie przycisku na papierowym pilocie. Widząc to wydarzenie, klasa zareaguje unikalną akcją. Zdarzenia są szeroko stosowane w programowaniu i powinny być łatwo rozpoznawalne po tej lekcji.",
+          "student_overview": "Idź i krzycz, gdy Twój nauczyciel naciska przyciski na wielkim pilocie."
+        },
+        "courseb-2023/Mini-Project: A Royal Battle with Events": {
+          "name": "Mini-projekt: Królewska bitwa z wydarzeniami",
+          "overview": "W ramach tych zajęć online uczniowie będą mieli okazję dowiedzieć się, jak korzystać ze zdarzeń w Play Lab i zastosować wszystkie umiejętności kodowania, które nabyli, aby utworzyć animowaną grę. Czas na kreatywność i utworzenie gry w Play Lab!",
+          "preparation": "-   Graj przez zagadki, aby znaleźć potencjalne obszary problemowe dla swojej klasy.\n-   (Opcjonalnie) Wybierz kilka zagadek do zrobienia jako grupa z klasą.\n-   Przegląd **\\\\ \\*Podstawy CS Główne wskazówki aktywności - Zalecenia lekcyjne**.\n-   Upewnij się, że każdy student ma dziennik refleksji.",
+          "purpose": " W ramach tych zajęć online, uczniowie będą się uczyć, jak korzystać ze zdarzeń w Play Lab. Rozpoczną oni od uczenia rycerza poruszać się, gdy zostanie wciśnięty klawisz ze strzałką, a zakończ umożliwieniem pochwalenia się pozostałymi umiejętnościami, które nabyli w ramach tego kursu, z użyciem sekwencji i pętli, w ramach łamigłówki w czasie zabawy.",
+          "student_overview": "Użyj zdarzeń, aby stworzyć historyjkę lub interaktywną grę."
+        },
+        "courseb-2023/End of Course Project": {
+          "name": "Koniec projektu kursu",
+          "overview": "Na tej lekcji z **projektem** uczniowie wykorzystują zdobytą wiedzę o sekwencjonowaniu i pętlach w otwartym projekcie z artystą. ",
+          "preparation": "-   Koduj własne projekty Play Lab z wyprzedzeniem, aby zainspirować uczniów!",
+          "purpose": "Ta lekcja daje studentom ostatnią szansę na twórcze wykorzystanie nowych umiejętności informatyki.",
+          "student_overview": "Utwórz własną historię lub grę."
+        },
+        "coursec-2023/Putting a STOP to Online Meanness": {
+          "name": "Stawianie STOP świństwom online",
+          "overview": " [![edukacja zdrowego rozsądku](https://curriculum.code.org/static/img/common_sense_education.png)](https://www.commonsense.org)\n\nTa lekcja została pierwotnie stworzona przez Common Sense Education. [dowiedz się więcej.](https://www.commonsense.org/education/digital-citizenship/curriculum)\n\nInternet jest pełen wszelkiego rodzaju ciekawych ludzi, ale czasami niektóre z nich mogą być dla siebie niemiłe. Dzięki tej grze ról, pomóż swoim uczniom zrozumieć, dlaczego często łatwiej jest być wrednym online niż osobiście, i jak radzić sobie z podłość online, gdy ją zobaczą.",
+          "preparation": "-   Przegląd materiałów instruktażowych.\n-   Drukuj materiały materiałowe dla każdego ucznia.\n-   Przynieś wypchane zwierzę lub zabawkę do klasy.",
+          "purpose": "Nauka Common Sense Education stworzyła tę lekcję, aby nauczyć uczniów, co powinni robić, gdy ktoś używa złośliwego lub bolesnego języka w Internecie.",
+          "student_overview": "Na tej lekcji dowiesz się, czym jest złośliwość oraz co robić, jeśli spotka Cię ona w Internecie."
+        },
+        "coursec-2023/My Robotic Friends Jr": {
+          "name": "Moi robotyczni przyjaciele Jr.",
+          "purpose": "Ta lekcja w trybie \"unplugged\" - bez komputera - łączy klasę w zespół prostym zadaniem do wykonania: spraw, by \"robot\" ułożył kubeczki w piramidę według określonego projektu. Te zajęcia kładą podwaliny do programowania, które uczniowie będą realizować w trakcie kursu ucząc się, jak ważne jest zdefiniowanie wyraźnie przekazanego algorytmu.",
+          "student_overview": "Na tej lekcji będziesz udawać, że koledzy z klasy są robotami i zaprogramujesz ich tak, aby budowali wzorce piramid z kubeczków."
+        },
+        "coursec-2023/Programming with Angry Birds": {
+          "name": "Programowanie z Angry Birds",
+          "overview": "Przy pomocy postaci z gry Angry Birds uczniowie opracowują algorytmy sekwencyjne, aby przeprowadzić ptaka z jednej strony labiryntu do świnki po drugiej stronie. W tym celu układają bloki kodu w porządku liniowym, przez co postaci poruszają się prosto, skręcają w lewo lub w prawo.",
+          "purpose": "Podczas tej lekcji uczniowie rozwiną umiejętności programowania i debugowania na platformie komputerowej. Blokowy format łamigłówek pomaga im poznać kolejność czynności i pojęcia, nie martwiąc się o doskonalenie składni.",
+          "student_overview": "Ucz się o sekwencjach i algorytmach z Angry Birds."
+        },
+        "coursec-2023/Debugging in Maze": {
+          "name": "Debugowanie w labiryncie",
+          "overview": "Debugowanie jest  podstawowym elementem nauki programowania. Na tej lekcji uczniowie będą się konfrontować z łamigłówkami, które zostały rozwiązane nieprawidłowo. Będą musiały przejść przez obecny kod, aby zidentyfikować błędy, w tym niewłaściwe pętle, brakujące bloki, zbyteczne bloki oraz zepsute bloki.",
+          "purpose": "Uczniowie w klasie mogą stać się sfrustrowani tą lekcją ze względu na istotę debugowania. Debugowanie to koncepcja, która jest bardzo ważna dla programowania komputerowego. Naukowcy komputerowi muszą być naprawdę dobrzy w obliczu błędów we własnych programach. Debugowanie zmusza uczniów do rozpoznawania problemów i przezwyciężenia ich podczas budowania krytycznego myślenia i umiejętności rozwiązywania problemów.",
+          "student_overview": "Znajdź problemy w łamigłówkach i ćwicz umiejętność debugowania."
+        },
+        "coursec-2023/Collecting Treasure with Laurel": {
+          "name": "Zbieranie skarbów z Laurel",
+          "overview": "W tej serii łamigłówek uczniowie będą kontynuować wzbogacanie swojego zrozumienia algorytmów i debugowania. Przy pomocy notej postaci, poszukiwaczce przygód Laurel, uczniowie będą tworzyć algorytmy sekwencyjne, aby sprawić, by Laurel zbierała skarb w trakcie przechodzenia ścieżki.",
+          "purpose": "Podczas tej lekcji uczniowie będą ćwiczyć swoje umiejętności programowania przy użyciu nowej postaci, Laurel the Adventurer. Kiedy ktoś zaczyna programować, składają instrukcje w określonej kolejności, używając czegoś, co maszyna może odczytać. Dzięki wykorzystaniu programowania studenci będą rozwijać zrozumienie, w jaki sposób komputer porusza się po instrukcjach i porządku. Wykorzystanie nowej postaci z innego celu logicznego pomoże studentom poszerzyć zakres doświadczenia z sekwencjonowaniem i algorytmami programowania.",
+          "student_overview": "Napisz algorytmy aby pomóc poszukiwaczce przygód, Laurek, zebrać mnóstwo klejnotów!"
+        },
+        "coursec-2023/Creating Art with Code": {
+          "name": "Tworzenie grafiki przy pomocy kodu",
+          "overview": "Na tej lekcji uczniowie przejmą sterowania Artystą, aby dokończyć rysunki na ekranie. Ta scena Artysty pozwoli uczniom tworzyć obrazy o coraz wyższym stopniu złożoności, korzystając z nowych bloków takich jak \"idź do przodu o 100 pikseli\" oraz \"skręć w prawo o 90 stopni\".",
+          "preparation": "-   Graj przez zagadki, aby znaleźć potencjalne obszary problemowe dla swojej klasy.\n-   (Opcjonalnie) Uzyskaj kątowniki dla swojej klasy, aby zwizualizować kąty, których muszą użyć, aby ukończyć zagadki.\n-   Wydrukuj jeden **\\\\ \\*Ucznia** dla każdego ucznia.",
+          "purpose": "Bazując na poprzednich doświadczeniach uczniów związanych z tworzeniem sekwencji ta lekcja będzie miała inspirować do większej kreatywności w zakresie kodowania. Jej celem jest ugruntowanie wiedzy w zakresie tworzenia sekwencji poprzez wprowadzenie nowych bloków i celów. W tym przypadku uczniowie uczą się więcej o pikselach i kątach używając nowych bloków, ćwicząc jednocześnie umiejętności tworzenia sekwencji. Uczniowie również będą w stanie wizualizować nowe cele takie jak kodowanie Artysty w celu narysowania kwadratu.",
+          "student_overview": "Twórz piękne obrazki programując Artystę."
+        },
+        "coursec-2023/My Loopy Robotic Friends Jr": {
+          "name": "Moi zapętleni robotyczni przyjaciele Jr.",
+          "overview": "Tworząc wstępną wersję zajęć \"Moi robotyczni przyjaciele\", uczniowie zajmują się większymi i bardziej skomplikowanymi projektami. W celu zaprojektowanie swoich \"robotów\", aby ukończyć większe konstrukcje, uczniowie będą musieli identyfikować wzorce powtórzone w swoich instrukcjach, które można zastąpić pętlą.",
+          "purpose": "Ta lekcja służy za ponowne wprowadzenie pętli, z użyciem teraz znanego zestawu instrukcji programowania \"robota\". Uczniowie rozwijają umiejętności krytycznego myślenia poszukując wzorców powtarzania się ruchów swoich kolegów z klasy i określając sposób uproszczenia tych powtarzanych wzorców stosowania pętli. ",
+          "student_overview": "Na tej lekcji będziesz ponownie programować swoich kolegów z klasy, ale używając pętli będziesz mógł rozwiązywać większe i bardziej złożone problemy."
+        },
+        "coursec-2023/Loops with Rey and BB-8": {
+          "name": "Pętle z Rey i BB-8",
+          "overview": "Opierając się na koncepcji powtarzania instrukcji z \"Zapętlania [Getting Loopy]\", na tym etapie uczniowie będą używać pętli, aby pomóc BB-6 przejść labirynt skuteczniej niż wcześniej.",
+          "purpose": "Podczas tej lekcji uczniowie będą uczyć się więcej o pętlach i sposobach ich implementacji w kodzie Blockly. Korzystanie z pętli jest ważną umiejętnością programowania, ponieważ ręczne powtarzanie poleceń jest żmudne i nieefektywne. Dzięki zagadkom Code.org uczniowie nauczą się dodawać instrukcje do istniejących pętli, zbierać powtarzany kod w pętle i rozpoznawać wzorce, które muszą być zapętane. Należy zauważyć, że uczniowie będą musieli zmierzyć się z zagadkami z wieloma różnymi rozwiązaniami. Spowoduje to otwarcie dyskusji na temat różnych sposobów rozwiązywania zagadek z zaletami i wadami każdego podejścia.",
+          "student_overview": "Pomóż BB-8 przejść przez labirynty używając pętli!"
+        },
+        "coursec-2023/Harvesting Crops with Loops": {
+          "name": "Żniwa z użyciem pętli",
+          "overview": "Uczniowie zapętlają nowe działania, aby pomóc kombajnowi zebrać wiele warzyw rosnących w dużych pęczkach w tej lekcji \\*\\*budowania umiejętnościach.",
+          "purpose": "Podczas tej lekcji uczniowie będą używać pętli do powtarzania czynności, takich jak zbieranie dyń. Pojawią się nowe wzorce, a studenci wykorzystają kreatywność i logiczne myślenie, aby określić, jaki kod należy powtórzyć i ile razy.",
+          "student_overview": "Użyjmy pętli, aby pomóc żniwiarce zebrać trochę warzyw!"
+        },
+        "coursec-2023/Mini-Project: Sticker Art": {
+          "name": "Mini-projekt: Sticker Art",
+          "overview": "Ta lekcja **mini-projektu** opiera się na zrozumieniu pętli z poprzednich lekcji. Uczniowie stworzą unikalną grafikę z Artystą.",
+          "purpose": "W tej serii podkreśla się moc pętli w oparciu o kreatywne i osobiste projekty.\n\nTa progresja, oferowana jako sekwencja wspierana przez projekt, pozwoli uczniom bazować na swojej własnej pracy i tworzyć niesamowite eksponaty.",
+          "student_overview": "Na tej lekcji przekonasz się, że dzięki pętlom łatwiej jest tworzyć jeszcze fajniejsze obrazki z Artystą!"
+        },
+        "coursec-2023/The Big Event": {
+          "name": "Wielkie wydarzenie",
+          "overview": "Uczniowie  wkrótce dowiedzą się, że zdarzenia są świetnym sposobem na urozmaicenie napisanego wcześniej algorytmu. Czasami chcesz, aby Twój program stanowił reakcję na działanie użytkownika dokładnie wtedy, gdy użytkownik tego chce. Dzięki zdarzeniom Twój program staje się ciekawszy i bardziej interaktywny.",
+          "purpose": "Dzisiaj uczniowie nauczą się rozróżniać wydarzenia i działania. Uczniowie zobaczą działania przerwane przez naciśnięcie przycisku na papierowym pilocie. Widząc to wydarzenie, klasa zareaguje unikalną akcją. Zdarzenia są szeroko stosowane w programowaniu i powinny być łatwo rozpoznawalne po tej lekcji.",
+          "student_overview": "Zagraj w grę, aby dowiedzieć się o zdarzeniach. "
+        },
+        "coursec-2023/Build a Flappy Game": {
+          "name": "Zbuduj grę z Flappym",
+          "overview": "Na tym szczególnym etapie, uczniowie muszą zbudować swoją własną grę \"Flappy Bird\" używając procedury obsługi zdarzeń, aby wykrywać kliknięcia myszki oraz kolizje obiektów. Pod koniec poziomu uczniowie będą w stanie nadać grze własny styl poprzez zmianę elementów wizualnych i zasad.",
+          "purpose": "Zdarzenia są bardzo powszechne w programach komputerowych. Podczas tej lekcji uczniowie będą dalej rozwijać swoje rozumienie wydarzeń, tworząc grę _Flappy Bird_. Uczniowie nauczą się, aby ich postać poruszała się po ekranie, hałasować i reagować na przeszkody oparte na wydarzeniach inicjowanych przez użytkownika.",
+          "student_overview": "Buduj własną grę \"Flappy Bird\" tak, jak chcesz, a potem udostępnij go znajomym!"
+        },
+        "coursec-2023/Mini-Project: Chase Game": {
+          "name": "Mini-projekt: Chase Game",
+          "overview": "W ramach tych zajęć online uczniowie będą mieli okazję dowiedzieć się, jak korzystać ze zdarzeń w Play Lab i zastosować wszystkie umiejętności programowania, które nabyli, aby utworzyć animowaną grę. Czas na kreatywność i utworzenie gry w Play Lab!",
+          "purpose": "Uczniowie będą tutaj dalej rozwijać rozumienie zdarzeń za pomocą Play Lab. Uczniowie będą używać zdarzeń, aby sprawiać, by postaci poruszały się po ekranie, wydawały dźwięki i zmieniać tło w zależności od danych wejściowych użytkownika. Na koniec sekwencji łamigłówki, uczniom umożliwi się udostępnienie ich projektów.",
+          "student_overview": "Czas na twórcze działanie lub utworzenie gry w Play Lab!"
+        },
+        "coursec-2023/Picturing Data": {
+          "name": "Zobrazowanie Danych",
+          "overview": "Danych można użyć, aby pomogły uczniom zrozumieć ich świat oraz odpowiedzieć na interesujące pytania. Na tej lekcji uczniowie będą zbierać dane w ramach projektu z Play Lab i przeprowadzać ich wizualizację z użyciem różnego rodzaju wykresów.",
+          "purpose": "Komputery zostały utworzone w celu ułatwienia przetwarzania danych. Na świecie rośnie ilość danych, więc jest to ważne, aby móc je czytać i analizować. Ta lekcja ma na celu upewnienie się, że uczniowie mają podstawowe doświadczenie w gromadzeniu, wizualizowaniu i analizowaniu prostego zestawu danych.",
+          "student_overview": "Danych można użyć, aby pomogły uczniom zrozumieć ich świat oraz odpowiedzieć na interesujące pytania. Na tej lekcji uczniowie będą zbierać dane w ramach projektu z Play Lab i przeprowadzać ich wizualizację z użyciem różnego rodzaju wykresów."
+        },
+        "coursec-2023/Binary Bracelets": {
+          "name": "Binarne bransoletki",
+          "overview": "W świecie komputerów system binarny jest niezwykle ważny. Większość komputerów obecnie przechowywać informacji wszelkiego rodzaju w formie binarnej. Ta lekcja pomaga przedstawić sposób w jaki można przełożyć coś z realnego życia na serię włączeń i wyłączeń.",
+          "purpose": "Podczas tej lekcji uczniowie poznają, w jaki sposób informacje są reprezentowane w taki sposób, aby komputer mógł je interpretować i przechowywać. Podczas nauki binarnej uczniowie będą mieli możliwość pisania kodów i dzielenia się nimi z rówieśnikami jako tajnymi wiadomościami. Może to być związane z tym, jak komputery odczytują program, przetłumaczyć go na binarny, wykorzystać informacje w jakiś sposób, a następnie odpowiedzieć w sposób, w jaki ludzie mogą zrozumieć. Na przykład, gdy wpisujemy zdanie do dokumentu, a następnie wciskamy Zapisz, komputer tłumaczy zdanie na binarne, przechowuje informacje, a następnie publikuje komunikat informujący, że dokument został zapisany.",
+          "student_overview": "Utwórz własną bransoletkę binarną i dowiedz się, w jaki sposób komputery zapamiętują informacje!"
+        },
+        "coursec-2023/End of Course Project": {
+          "name": "Koniec projektu kursu",
+          "overview": "W trakcie tej lekcji podsumowującej uczniowie przechodzą proces projektowania, tworzenia i przedstawiania swoich własnych projektów Play Lab! W celu uzyskania pewności, że proces toczy się gładko, zapewniliśmy strukturę krok-po-kroku do wykorzystania przez uczniów, od planowania na papierze po kodowanie na swojej stronie internetowej. W dodatku podsuwamy pomysły, które mają pomóc nauczycielom w doprowadzeniu do wzorcowego finału!",
+          "preparation": "-   Graj przez zagadki, aby znaleźć potencjalne obszary problemowe dla swojej klasy.\n-   Wydrukuj jeden **\\\\ \\*Przewodnik planowania projektu** dla każdego ucznia (lub pary).\n-   Przejrzyj dokument \\*\\*\\\\ \\*Project Planning Guide (Exemplar) \\*\\*.\n-   (Opcjonalnie) Uzupełnij swój własny przewodnik planowania i koduj swój własny projekt, aby pokazać studentom!",
+          "purpose": "Ta lekcja zapewnia studentom przestrzeń do stworzenia projektu własnego projektu, przy użyciu procesu krok po kroku, który wymaga planowania, ale pozwala również na szeroką kreatywność.",
+          "student_overview": "Przygotuj ręce na ogromne kodowanie! Czas rozpocząć budowanie swojego projektu."
+        },
+        "coursed-2023/Password Power-Up": {
+          "name": "Włączenie na hasło",
+          "overview": " [![edukacja zdrowego rozsądku](https://curriculum.code.org/static/img/common_sense_education.png)](https://www.commonsense.org)\n\nTa lekcja została pierwotnie stworzona przez [common sense education](https://www.commonsense.org/education/digital-citizenship/curriculum).\n\nSilniejsze, bezpieczniejsze hasła online to dobry pomysł dla wszystkich. Ale jak możemy pomóc dzieciom w tworzeniu lepszych haseł i ich zapamiętywaniu? Skorzystaj z wskazówek w tej lekcji, aby pomóc dzieciom tworzyć hasła, które są bezpieczne i niezapomniane.",
+          "preparation": "-   Przegląd materiałów instruktażowych.\n-   Drukuj materiały materiałowe dla każdego ucznia.\n-   Przygotuj papier do pisania lub zeszyty dla studentów.",
+          "purpose": "Nauka Common Sense Education stworzyła tę lekcję, aby nauczyć uczniów, jak mogą bezpiecznie przejść do miejsc online.",
+          "student_overview": "Na tej lekcji dowiesz się jak hasło chroni Twoje informacje oraz jak utworzyć dobre hasło."
+        },
+        "coursed-2023/Graph Paper Programming": {
+          "name": "Programowanie na papierze milimetrowym",
+          "overview": "\"Programując\" się wzajemnie na rysowanie obrazków uczniowie uzyskują możliwość zdobycia doświadczeń w zakresie pewnych kluczowych koncepcji programowania w przyjemny i dostępny sposób. Zajęcia rozpoczną się od polecenia uczniom użycia symboli do wzajemnego poinstruowania się, jak pokolorować kwadraciki na papierze milimetrowym, starając się odtworzyć istniejące rysunki.  Jeśli jest czas, lekcja może się zakończyć prezentacją rysunków, które uczniowie utworzyli samodzielnie.  ",
+          "purpose": "Celem tych zajęć jest zbudowanie umiejętności krytycznego myślenia oraz emocji w trakcie kursu wprowadzając pewne podstawowe pojęcia programowania, które będą używane w trakcie kursu. Poprzez wprowadzanie podstawowych pojęć takich jak tworzenie sekwencji i algorytmów w klasie w ramach zajęć w trybie \"unplugged\" - bez komputera, uczniowie, których komputery onieśmielają, nadal mogą budować podwaliny dla zrozumienia tych tematów. Na tej lekcji uczniowie będą się uczyć opracowywania algorytmów oraz kodowania go w program.",
+          "student_overview": "Na tej lekcji będziesz programować swoich kolegów z klasy tak, by rysowali obrazki!"
+        },
+        "coursed-2023/Introduction to Online Puzzles": {
+          "name": "Wprowadzenie do Puzzli Online",
+          "overview": "W tym zestawie łamigłówek uczniowie rozpoczną od wprowadzanie (lub powtórki, w zależności od doświadczenia Twojej klasy) internetowego obszaru roboczego Code.org. Będą filmy wideo pokazujące podstawową funkcjonalność obszaru roboczego z uwzględnieniem przycisków \"Uruchom\", \"Resetuj\" i \"Krok\". Na tych filmach omówione zostaną następujące kwestie: przeciąganie bloków Blockly, usuwanie bloków Blockly i łączenie bloków Blockly. Później uczniowie będą ćwiczyć swoje umiejętności _tworzenia sekwencji_ i _debugowania_ w labiryncie. Od tego momentu uczniowie będą poznawać nowe rodzaje łamigłówek takie jak Collector, Artist i Harvester, gdy będą się uczyć podstaw _pętli_.",
+          "purpose": "Uznajemy, że w każdej klasie występuje spektrum zrozumienia każdego tematu. Niektórzy uczniowie w Twojej klasie mogą być \"komputerowymi czarodziejami\", natomiast inni nie mają aż tak dużego doświadczenia. W celu stworzenia różnych szans  na polu gry (i nauki), opracowaliśmy \"Etap równania w górę\" [\"Ramp Up Stage\"] na potrzeby Kursu D. Można go użyć albo jako wprowadzenie lub powtórzenie jak korzystać z Code.org oraz podstawowych pojęć informatycznych. Na tym etapie omawia się wszystkie warunki wstępne potrzebne do rozpoczęcia Kursu D.",
+          "student_overview": "Ta lekcja da Ci możliwość ćwiczenia umiejętności, których będziesz potrzebować na tym kursie."
+        },
+        "coursed-2023/Relay Programming": {
+          "name": "Sztafeta programowania",
+          "overview": "Ta lekcja **ustawiania kontekstowego** rozpocznie się krótką lekcją na temat debugowania i wytrwałości, a następnie szybko przejdzie do wyścigu z czasem, gdy uczniowie włamują się do zespołów i pracują razem, aby napisać program po jednej instrukcji na raz.",
+          "purpose": "W informatyce bardzo ważna jest praca zespołowa. Zamiast pracować indywidualnie uczniowie w zespołach piszą i debugują sobie wzajemnie kod. Na tej lekcji uczniowie będą się uczyć, jak współpracować,  by robić to w sposób możliwie najbardziej efektywny. \n\nNa tych zajęciach uczniowie będą mieli również okazję do poznania poczucia pilności wywiązania się z obowiązku, który nauczy uczniów starannego gospodarowania swoim czasem i unikania popełniania pomyłek bez generowania opóźnień. To doświadczenie może być stresujące (zgodnie z oczekiwaniami!). Upewnij się, że przekazano uczniom narzędzia do radzenia sobie z ewentualną frustracją.",
+          "student_overview": "Pamiętaj na początku kursu, gdy tworzysz rysunki z kodem? Na tej lekcji będziesz pracować z zespołem, aby robić coś bardzo podobnego!"
+        },
+        "coursed-2023/Debugging with Laurel": {
+          "name": "Debugowanie z Laurel",
+          "overview": "Na tych zajęciach online uczniowie będą ćwiczyć debugowanie w środowisku \"kolekcjonerka\". Uczniowie będą ćwiczyć czytanie i edytowanie kodu, aby naprawiać łamigłówki przy pomocy prostych algorytmów, pętli i pętli zagnieżdżonych. ",
+          "purpose": "Celem tej lekcji jest nauczenie uczniów, że porażka jest normalna podczas uczenia się nowej umiejętności. Studenci otrzymają wstępnie napisane programy, które NIE działają. Zostaną poproszeni o naprawienie tych programów. Proces ten, zwany debugowania, uczy studentów podstawowych rozwiązywania problemów i krytycznego myślenia umiejętności. Umiejętności te przenoszą się, gdy uczniowie przechodzą do trudniejszych i trudniejszych projektów programowania.",
+          "student_overview": "Czy w trakcie kodowania kiedykolwiek wystąpiły jakieś problemy? Na tej lekcji będziesz się uczyć sekretów debugowania. Debugowanie jest procesem wynajdywania i eliminowania problemów występujących w Twoim kodzie."
+        },
+        "coursed-2023/Events in Bounce": {
+          "name": "Zdarzenia w Bounce",
+          "overview": "Na tych zajęciach internetowych uczniowie będą się uczyć, czym są zdarzenia oraz jak komputery z nich korzystają w programach takich, jak gry wideo. Uczniowie będą pracować nad łamigłówkami sprawiając, że program reaguje na zdarzenia (jak naciskanie klawiszy ze strzałkami). Na końcu łamigłówki uczniowie będą mieli możliwość spersonalizowano grę przy pomocy różnych prędkości i dźwięków.",
+          "purpose": "Zdarzenia są bardzo popularne w programach komputerowych, zwłaszcza w grach wideo. \n\n Na tej lekcji uczniowie będą dalej rozwijać rozumienie zdarzeń tworząc gry sportowe. Uczniowie będą się uczyć sprawiać, by poruszało się ich wiosło zgodnie z poleceniami klawiszy ze strzałkami oraz wydawać odgłosy, gdy obiekty się zderzą. Na sam koniec będą musieli dostosować grę do swoich potrze, aby nadać jej bardziej unikalnego charakteru!",
+          "student_overview": "Czy kiedykolwiek chciałeś grać w szkole w gry wideo? Na tej lekcji będziesz tworzyć swoje własne!"
+        },
+        "coursed-2023/Build a Star Wars Game": {
+          "name": "Zbuduj grę Star Wars",
+          "overview": "Na tej lekcji uczniowie będą ćwiczyć używanie zdarzeń do budowania gry, którą mogą udostępniać online. Z R2-D2 oraz innymi postaciami z Gwiezdnych Wojen w rolach głównych, uczniowie będą przeprowadzani przez zdarzenia, a następnie dostaną czas na utworzenie swojej własnej gry. ",
+          "purpose": "CS Fundamentals nie chodzi tylko o nauczanie informatyki, chodzi o to, aby informatyka była zabawna i ekscytująca. W tym cyklu studenci poznają wydarzenia wykorzystujące popularne postacie z _Star Wars_. Te zagadki zacierają linie między „uczeniem się” a „zabawą”. Ponadto uczniowie nauczą się rozpoznawać regularne praktyki programowania w grach, aby podczas grania w gry w domu, mogli zobaczyć wspólne zasady informatyki są używane.",
+          "student_overview": "Poczuj moc w trakcie budowania swojej własnej gry Star Wars na tej lekcji."
+        },
+        "coursed-2023/Dance Party": {
+          "name": "Potańcówka",
+          "overview": "Na tej lekcji uczniowie będą programować swoją własną interaktywną potańcówkę. Na tych zajęciach potrzebny jest dźwięk, gdyż narzędzie zbudowano tak, aby reagowało na muzykę.",
+          "purpose": "Na tej lekcji zostają wprowadzone podstawowe pojęcia informatyczne związane z programowaniem i programowaniem zdarzeń (za pomocą bloków).",
+          "student_overview": "Czas na świętowanie! Na tej lekcji będziesz programować swoją własną, interaktywną potańcówkę."
+        },
+        "coursed-2023/Loops in Ice Age": {
+          "name": "Pętle w Epoce Lodowcowej",
+          "overview": "W ramach szybkiej aktualizacji (lub wprowadzenia) do używania pętli, na tym etapie uczniowie będą używać bloku \"powtarzaj\", aby w jak najbardziej wydajny sposób doprowadzić Scrata do żołędzia.",
+          "purpose": "Podczas tej lekcji uczniowie będą uczyć się więcej o pętlach i sposobach ich implementacji w kodzie Blockly. Korzystanie z pętli jest ważną umiejętnością programowania, ponieważ ręczne powtarzanie poleceń jest żmudne i nieefektywne. Dzięki tym zagadkom Code.org uczniowie nauczą się dodawać instrukcje do istniejących pętli, zbierają powtarzany kod w pętle i rozpoznają wzorce, które należy powtórzyć.",
+          "student_overview": "Na tej lekcji będziesz używać bloku powtarzania, aby pomóc Scratowi dojść do żołędzia w jak najbardziej wydajny sposób."
+        },
+        "coursed-2023/Drawing Shapes with Loops": {
+          "name": "Rysowanie kształtów przy pomocy pętli",
+          "overview": "Ta lekcja ma na celu budowanie zrozumienia zagadnienia pętli z poprzednich lekcji oraz zapewnienie uczniom szansy wykazania się prawdziwą kreatywnością. Te zajęcia niosą ze sobą podwójną korzyść jako ćwiczenie w debugowaniu na potrzeby dodatkowej praktyki w zakresie rozwiązywania problemów. ",
+          "purpose": "W tej serii podkreśla się moc pętli przy pomocy szeregu łamigłówek, które mają skłonić uczniów do zastanowienia się, dlaczego pętle \"powtórz\" jest lepsza od pisma odręcznego.",
+          "student_overview": "Na tej lekcji przekonasz się, że dzięki pętlom łatwiej jest tworzyć fajne obrazki przy pomocy interfejsu Artist!"
+        },
+        "coursed-2023/Nested Loops in Maze": {
+          "name": "Zagnieżdżone pętle w labiryncie",
+          "overview": "Na tych zajęciach internetowych uczniowie będą mieli możliwość wypchnięcia ich zrozumienia dla pętli na zupełnie nowy poziom. Rozgrywając grę \"Pszczółka i rośliny kontra zombie\" [Bee and Plants vs Zombies], uczniowie będą się uczyć, jak programować pętlę, aby znalazła się z innej pętli. Będą również zachęcani do wymyślenia sposobu, w jaki niewielkie zmiany w pętli będzie wpływać na program, gdy klikają \"Uruchom\".",
+          "purpose": "We wstępie do zagnieżdżonych pętli uczniowie wyjdą poza strefę komfortu, aby stworzyć bardziej wydajne rozwiązania zagadek.  \n\nWe wcześniejszych zagadkach pętle pchnęły uczniów do rozpoznania powtórzeń. Tutaj uczniowie nauczą się rozpoznawać wzorce _within_ powtarzające się wzorce, aby rozwinąć te zagnieżdżone pętle. Ten etap rozpoczyna się od zachęcenia studentów do próby rozwiązania zagadki, w której kod jest irytujący i zbyt skomplikowany, aby napisać długą drogę. Po tym, jak film wprowadza zagnieżdżone pętle, uczestnicy otrzymują przykład i poproszeni o przewidywanie, co się stanie, gdy pętla zostanie umieszczona wewnątrz innej pętli. Postęp ten prowadzi do wielu praktyk dla studentów do krzepnięcia i budować na ich zrozumienie pętli w programowaniu.",
+          "student_overview": "Pętle wewnątrz pętli wewnątrz pętli. Co to znaczy? Na tej lekcji dowiesz się, co się dzieje, gdy utworzysz pętlę zagnieżdżoną."
+        },
+        "coursed-2023/Conditionals with Cards": {
+          "name": "Warunkowe z kartami",
+          "overview": "W tej lekcji **kontekstowego** uczniowie napiszą oświadczenia \\_conditional (if/else), aby określić zasady prostych gier karcianych. ",
+          "purpose": "Jedną z najlepszych części warunkowych nauczania jest to, że uczniowie już rozumieją koncepcję z codziennego życia. \n\nTa lekcja łączy informatykę w rzeczywisty świat poprzez zbudowanie ich zdolności do stwierdzenia, czy warunek jest prawdziwy, czy fałszywy. Studenci nauczą się używać, jeśli oświadczenia do zadeklarowania, kiedy określone polecenie powinno być uruchomione, a także jeśli/else oświadczenia do zadeklarowania, kiedy polecenie powinno zostać uruchomione i co uruchomić w inny sposób. Uczniowie mogą nie rozpoznać słowa warunkowe, ale większość studentów zrozumie ideę użycia „jeśli”, aby upewnić się, że niektóre działania mają miejsce tylko wtedy, gdy ma to miejsce.",
+          "student_overview": "Czas rozegrać grę, w której zbierasz punkty tylko w określonych warunkach!"
+        },
+        "coursed-2023/Looking Ahead with Minecraft": {
+          "name": "Patrząc w przyszłość z Minecraftem",
+          "overview": "Ta lekcja została zasadniczo utworzona na potrzeby Godziny Kodowania [Hour of Code] z zespołem Minecrafta. Uczniowie będą mieli okazję przećwiczyć koncepcje, które poznali do tego momentu, jak również zerknąć na instrukcje warunkowe!",
+          "purpose": "Ten zbiór łamigłówek służy ugruntowaniu i wykorzystywaniu wiedzy o pętlach, a także wprowadzaniu wyrażeń warunkowych. Poprzez połączenie tych dwóch pojęć w parę, uczniowie będą w stanie badać potencjał tworzenia rozrywkowych i innowacyjnych programów w nowym, rodzącym emocje środowisku.",
+          "student_overview": "Unikaj lawy! Teraz zaczniesz uczyć się o instrukcjach warunkowych w świecie gry Minecraft."
+        },
+        "coursed-2023/If/Else with Bee": {
+          "name": "\"jeśli/w przeciwnym razie\" z Pszczółką",
+          "overview": "Do tego momentu uczniowie pisali kod, który realizuje się dokładnie tak samo po każdym uruchomieniu - wiarygodny, ale niezbyt elastyczny. Na tej lekcji Twoja klasa rozpocznie kodować przy pomocy wyrażeń warunkowych, pozwalając im na pisanie kodu, który funkcjonuje inaczej, w zależności od konkretnych warunków, na które napotyka program.",
+          "purpose": "Po wprowadzeniu do warunków warunkowych w „Warunkowe z kartami” uczniowie będą teraz ćwiczyć korzystanie z nich w swoich programach. Bloki „if/else” pozwolą na bardziej elastyczny program. Pszczoła zbierze tylko nektar _if_ jest kwiat lub zrobi miód _if_ jest plaster miodu. ",
+          "student_overview": "Teraz rozumiesz już wyrażenia warunkowe, czas zaprogramować pszczółkę tak, aby użyć jej przy zbieraniu miodu i nektaru."
+        },
+        "coursed-2023/While Loops in Farmer": {
+          "name": "Pętle \"dopóki\" z Rolnikiem",
+          "overview": "W tej lekcji \\*\\*budowania umiejętnościach uczniowie będą pracować nad wypełnieniem dziur i kopaniem brudu w Farmerze, ale nie będą znali wielkości otworów ani wysokości kopców ziemi. Aby rozwiązać te zagadki, uczniowie wykorzystają nowy rodzaj pętli.",
+          "purpose": "Ponieważ uczniowie nadal pogłębiają swoją wiedzę na temat pętli, napotkają problemy, w których polecenie musi zostać powtórzone, ale nie wiadomo, ile razy trzeba je powtórzyć. To jest miejsce, w którym pojawiają się pętle. W dzisiejszej lekcji uczniowie będą rozwijać początkujący rozumienie pętli opartych na warunkach, a także poszerzyć swoją wiedzę na temat pętli w ogóle. ",
+          "student_overview": "Pętle są przydatne do kodowania. Na tej lekcji nauczysz się o nowym rodzaju pętli: pętle \"dopóki\"!"
+        },
+        "coursed-2023/Until Loops in Maze": {
+          "name": "Pętle \"dopóki\" w labiryncie",
+          "overview": "Na tej lekcji uczniowie będą się uczyć o pętlach \"dopóki\". Uczniowie będą budować programy, które sprawiają, że główna postać powtarza czynności \"dopóki\" dojdą do pożądanego punktu zatrzymania.",
+          "purpose": "Ten zbiór łamigłówek służy ugruntowaniu i budowaniu wiedzy o pętlach poprzez dodanie wyrażenia warunkowego \"aż\". Poprzez połączenie tych dwóch pojęć w parę, uczniowie będą w stanie badać potencjał tworzenia skomplikowanych i innowacyjnych programów.",
+          "student_overview": "Możesz robić pewne niesamowite rzeczy, gdy używasz pętli \"dopóki\"."
+        },
+        "coursed-2023/End of Course Project": {
+          "name": "Koniec projektu kursu",
+          "overview": "W trakcie tej lekcji podsumowującej uczniowie przechodzą proces projektowania, tworzenia i przedstawiania swoich własnych projektów!",
+          "preparation": "-   Graj przez zagadki, aby znaleźć potencjalne obszary problemowe dla swojej klasy.\n-   Wydrukuj jeden **\\\\ \\*Przewodnik planowania projektu** dla każdego ucznia (lub pary).\n-   (Opcjonalnie) Uzupełnij swój własny przewodnik planowania i zakoduj swój własny projekt, aby pokazać studentom!",
+          "purpose": "Ta lekcja zapewnia studentom przestrzeń do stworzenia projektu własnego projektu, przy użyciu procesu krok po kroku, który wymaga planowania, ale pozwala również na szeroką kreatywność.",
+          "student_overview": "Przygotuj ręce na ogromne kodowanie! Czas rozpocząć budowanie swojego projektu."
+        },
+        "coursee-2023/Be A Super Digital Citizen": {
+          "name": "Bądź Super Cyfrowym Obywatelem",
+          "overview": " [![Edukacja zdroworozsądku](https://curriculum.code.org/static/img/common_sense_education.png)](https://www.commonsense.org)\n\nTa lekcja została pierwotnie stworzona przez Common Sense Education. [Dowiedz się więcej.](https://www.commonsense.org/education/digital-citizenship/curriculum)\n\nNarzędzia online dają dzieciom siłę, a także wiążą się z dużymi obowiązkami. Ale czy dzieci zawsze wiedzą, co robić, gdy napotykają cyberprzemoc? Pokaż swoim uczniom odpowiednie sposoby podejmowania działań i rozwiązywania konfliktów, od bycia zdenerwowanym po pomaganie innym w potrzebie.",
+          "preparation": "-   Przejrzyj materiały instruktażowe.\n-   Wydrukuj ulotki dla każdego ucznia.\n-   Przygotuj kolorowe kredki lub markery dla uczniów.",
+          "purpose": "Nauka Common Sense Education stworzyła tę lekcję, aby nauczyć uczniów, co powinni robić, gdy ktoś używa złośliwego lub bolesnego języka w Internecie.",
+          "student_overview": "Dowiesz się, jak możesz się przeciwstawiać, gdy jesteś świadkiem cybernękania."
+        },
+        "coursee-2023/Private and Personal Information": {
+          "name": "Informacje prywatne i osobowe",
+          "overview": " [![Edukacja zdroworozsądku](https://curriculum.code.org/static/img/common_sense_education.png)](https://www.commonsense.org)\n\nTa lekcja została pierwotnie stworzona przez Common Sense Education. [Dowiedz się więcej.](https://www.commonsense.org/education/digital-citizenship/curriculum)\n\nW naturze naszych uczniów leży dzielenie się i łączenie z innymi. Ale udostępnianie online wiąże się z pewnym ryzykiem. Jak możemy pomóc dzieciom budować silne, pozytywny, i bezpieczne relacje online? Pomóż uczniom poznać różnicę między tym, co osobiste, a tym, co najlepiej pozostawić prywatne.",
+          "preparation": "-   Przegląd materiałów instruktażowych.\n-   Drukuj materiały materiałowe dla każdego ucznia.",
+          "purpose": "Nauka Common Sense Education stworzyła tę lekcję, aby nauczyć uczniów, jak mogą bezpiecznie przejść do miejsc online.",
+          "student_overview": "Internet niesie rozrywkę i radość, ale ważne jest to, aby przebywając w nim, zachowywać bezpieczeństwo. Ta lekcja jest poświęcona różnicy pomiędzy informacjami, które są bezpieczne do udostępniania online a informacjami, które takie nie są."
+        },
+        "coursee-2023/Swimming Fish with Sprite Lab": {
+          "name": "Pływająca ryba w Sprite Lab",
+          "overview": "Na tej lekcji uczniowie będą się uczyć o dwóch koncepcjach stanowiących serce interfejsu Sprite Lab: duszkach i zachowaniach. Duszki są postaciami na ekranie, które uczniowie mogą przemieszczać, zmieniać lub którymi mogą manipulować. Zachowania są działaniami, które duszki podejmują w trybie ciągłym do momentu ich zatrzymania.",
+          "preparation": "-   Przeglądaj łamigłówki, aby znaleźć potencjalne obszary problemów dla swojej klasy. \n-   Upewnij się, że każdy uczeń ma dzienniczek refleksji.",
+          "purpose": "Ta lekcja ma na celu wprowadzenie uczniów do podstawowego słownictwa programu Sprite Lab i umożliwienie im zastosowania do tego narzędzia pojęć, których nauczyli się w innych środowiskach. Tworząc zbiornik rybny, uczniowie zaczną rozumieć model programowania tego narzędzia i odkrywać sposoby ich wykorzystania do wyrażania siebie.",
+          "student_overview": "Naucz się tworzyć i edytować duszki."
+        },
+        "coursee-2023/Hello World": {
+          "name": "Witaj świecie"
+        },
+        "coursee-2023/Mini-Project: About Me": {
+          "name": "O mnie ze Sprite Lab",
+          "overview": "Uczniowie zastosują swoją wiedzę na temat udostępniania osobistych i prywatnych informacji w Internecie, tworząc interaktywny plakat w tym **mini-projektu**.",
+          "purpose": "Ta lekcja ma na celu uczynienie poprzedniej lekcji na temat danych osobowych i prywatnych osobiście dla uczniów. Mając na uwadze przykłady SAFE (osobiste) i UNSAFE (prywatne), uczniowie ćwiczą bezpieczne wyrażanie siebie w Internecie, używając SpriteLab do tworzenia własnych kostiumów sprite i generowania tekstu.",
+          "student_overview": "Tworząc interaktywny plakat przy pomocy SpriteLab, uczniowie będą stosować zasady udostępniania informacji o charakterze osobistym i prywatnym w Internecie w zakresie, w jakim je rozumieją."
+        },
+        "coursee-2023/Drawing with Loops": {
+          "name": "Rysowanie przy pomocy pętli ",
+          "overview": "Patrz jak twarze uczniów rozpromieniają się na widok utworzonych przez siebie wspaniałych projektów przy użyciu niewielkiej liczby bloków oraz naklejek cyfrowych! Ta lekcja ma na celu budowanie zrozumienia zagadnienia pętli z poprzednich lekcji oraz zapewnienie uczniom szansy wykazania się prawdziwą kreatywnością. Te zajęcia są fantastyczne jeśli chodzi o tworzenie przedmiotów do portfolio lub na wywiadówki.",
+          "preparation": "-   Przeglądaj łamigłówki, aby znaleźć potencjalne obszary problemów dla swojej klasy. \n-   Upewnij się, że każdy uczeń ma dzienniczek refleksji.",
+          "purpose": "Studenci będą ćwiczyć wykorzystując pętle, koncepcję, która będzie ponownie odwiedzana podczas nadchodzących lekcji.",
+          "student_overview": "Na tej lekcji przekonasz się, że dzięki pętlom łatwiej jest tworzyć jeszcze fajniejsze obrazki z Artystą!"
+        },
+        "coursee-2023/Fancy Shapes using Nested Loops": {
+          "name": "Wymyślne kształty z użyciem pętli zagnieżdżonych",
+          "overview": "W tej lekcji \\*\\*umiejętności budowania umiejętnościach uczniowie będą tworzyć skomplikowane projekty za pomocą Artysty. Lekcja kończy się okazją dla uczniów do tworzenia własnych projektów.",
+          "preparation": "-   Zagraj w łamigłówki, aby znaleźć potencjalne obszary problemowe dla swojej klasy.\n-   Upewnij się, że każdy uczeń ma dziennik refleksji.\n-   Zastanów się, czego mogą potrzebować Twoi uczniowie w zakrętach i kątach. ",
+          "purpose": "Na tych zajęciach online uczniowie będą tworzyć w interfejsie Artist, który mogą z dumą udostępniać tym, których kochają. \n\nTe zajęcia mają na celu wykorzystanie pętli zagnieżdżonych jako sposobu zainspirowania uczniów o umysłach artystycznych do patrzenia na kodowanie jak na inną drogę wyrazu własnej kreatywności.  Jest to zestaw łamigłówek zbudowany w celu rozwijania umiejętności krytycznego myślenia, zrozumienia podstaw geometrii oraz kreatywności - wszystkiego w zakresie pętli zagnieżdżonych!",
+          "student_overview": "Więcej pętli zagnieżdżonych! Tym razem będziesz tworzyć pewien NIESAMOWITY obrazek przy pomocy pętli zagnieżdżonych."
+        },
+        "coursee-2023/Mini-Project: Design a Snowflake": {
+          "name": "Mini-projekt: Zaprojektuj płatek śniegu",
+          "overview": "Teraz uczniowie uczą się, jak układać pętle warstwowo, mogą tworzyć tyle pięknych rzeczy. Na tej lekcji uczniowie wykonają serie ćwiczeń, które pomogą im utworzyć obrazki do ich własnego portfolio korzystając ze wspaniałych umiejętności łyżwiarskich Anny i Elsy!",
+          "preparation": "-   Zagraj w łamigłówki, aby znaleźć i potencjalne obszary problemowe dla swojej klasy.\n-   Upewnij się, że każdy uczeń ma dziennik refleksji.",
+          "purpose": "Podczas tej lekcji uczniowie wykorzystają swoje umiejętności za pomocą zagnieżdżonych pętli, aby tworzyć obrazy, które będą podekscytowani udostępnianiem. ",
+          "student_overview": "Anna i Elsa umieją świetnie jeździć na łyżwach, ale potrzebują Twojej pomocy w utworzeniu układów na lodzie. Użyj pętli zagnieżdżonych do utworzenia czegoś niewiarygodnie FAJNEGO."
+        },
+        "coursee-2023/Songwriting": {
+          "name": "Pisanie piosenek",
+          "overview": "Jedną z najwspanialszych struktur w informatyce jest funkcja.  Funkcje (czasami nazywane procedurami) są mini programami, które można wielokrotnie używać wewnątrz większych programów. Ta lekcja pomoże uczniom intuicyjnie zrozumieć, dlaczego połączenie fragmentów kodu w funkcje może być tak dobrą praktyką.",
+          "preparation": "-   (Opcjonalnie) Obejrzyj wideo **\\\\ \\*Lekcja w akcji**.\n-   Wydrukuj kilka**\\\\ \\*arkuszy** dla każdej grupy.\n-   Wydrukuj jedną**\\\\ \\*ocena** dla każdego ucznia.\n-   Bezpieczny dostęp do piosenek i tekstów dla aktywności.\n-   Upewnij się, że każdy uczeń ma dziennik.",
+          "purpose": "Użycie funkcji pomaga w uproszczeniu kodu i rozwijać umiejętność ucznia do porządkowania swojego programu. Uczniowie będą szybko uznać, że pisanie funkcji może uczynić ich programy łatwiejszymi do czytania i łatwiejszymi do debugowania, gdy coś pójdzie nie tak.",
+          "student_overview": "Nawet gwiazdy rocka potrzebują umiejętności programowania. na tej lekcji będziesz się uczyć o funkcjach, korzystając ze słów piosenek."
+        },
+        "coursee-2023/Functions in Minecraft": {
+          "name": "Funkcje w Minecrafcie",
+          "overview": "Uczniowie zaczną rozumieć, jak pomocne mogą być funkcje w tej wesołej i interaktywnej przygodzie Minecraft!",
+          "preparation": "-   Przeglądaj łamigłówki, aby znaleźć potencjalne obszary problemów dla swojej klasy. \n-   Upewnij się, że każdy uczeń ma dzienniczek refleksji.",
+          "purpose": "Uczniowie będą odkrywać uniwersalność programowania poprzez ćwiczenie funkcji w różnych środowiskach. Tutaj uczniowie będą rozpoznawać wzorce do powtórnego użycia  będą w stanie uwzględniać nazwane bloki, aby wywoływać zdefiniowane wcześniej funkcje.",
+          "student_overview": "Czy jesteś w stanie wymyślić, jak używać funkcji, aby uzyskać jak najskuteczniejszy kod?"
+        },
+        "coursee-2023/Functions with Artist": {
+          "name": "Funkcje z Artistą",
+          "overview": "Uczniowie zostaną wprowadzeni w używanie funkcji przy pomocy Artysty. Zostaną utworzone i modyfikowane wspaniałe obrazki. Na potrzeby bardziej skomplikowanych wzorców, uczniowie będą się uczyć o zagnieżdżaniu funkcji poprzez wywoływanie jednej funkcji z wnętrza innej.",
+          "preparation": "-   Przeglądaj łamigłówki, aby znaleźć potencjalne obszary problemów dla swojej klasy. \n-   Upewnij się, że każdy uczeń ma dzienniczek refleksji.",
+          "purpose": "Jednym z najważniejszych elementów tej lekcji jest zapewnienie studentom przestrzeni do stworzenia czegoś, z czego są dumni. Te zagadki rozwijają się do coraz bardziej złożonych obrazów, ale każda nowa zagadka buduje tylko z poprzedniej układanki. Pod koniec tej lekcji uczniowie będą czuć się pewnie i dumni ze swojej ciężkiej pracy.",
+          "student_overview": "Twórz skomplikowane rysunki w  sposób łatwiejszy przy pomocy funkcji!"
+        },
+        "coursee-2023/Conditionals in Minecraft: Voyage Aquatic": {
+          "name": "Wyrażenia warunkowe w Minecrafcie: Wodna podróż",
+          "preparation": "-   Zagraj w zagadki związane z tą lekcją, aby znaleźć potencjalne obszary problemowe dla swojej klasy.\n-   Upewnij się, że każdy uczeń ma dziennik refleksji.",
+          "purpose": "Ten zbiór łamigłówek służy ugruntowaniu i wykorzystywaniu wiedzy o pętlach, a także wprowadzaniu wyrażeń warunkowych. Poprzez połączenie tych dwóch pojęć w parę, uczniowie będą w stanie badać potencjał tworzenia rozrywkowych i innowacyjnych programów w nowym, rodzącym emocje środowisku.",
+          "student_overview": "Tutaj nauczysz się o wyrażeniach warunkowych w świecie gry Minecraft."
+        },
+        "coursee-2023/Conditionals with the Farmer": {
+          "name": "Wyrażenia warunkowe z interfejsem Farmer",
+          "overview": "Ta lekcja wprowadza uczniów w pętle \"dopóki\" i instrukcje \"jeśli/ w przeciwnym razie\". _Pętle \"dopóki\"_ są pętlami, które nieustannie powtarzają komendy, gdy spełniony jest warunek. Pętli \"dopóki\" używa się, gdy programista nie zna dokładnej liczby komend, które trzeba wykonać, ale wie, że warunek musi być spełniony, aby pętla kontynuowała zapętlanie. Instrukcje \"jeśli/ w przeciwnym razie\" zapewniają elastyczność w programowaniu poprzez uruchamianie wszystkich sekcji kodu tylko, jeśli coś jest prawdziwe, w przeciwnym razie uruchamia się coś innego.",
+          "preparation": "-   Przeglądaj łamigłówki, aby znaleźć potencjalne obszary problemów dla swojej klasy. \n-   Upewnij się, że każdy uczeń ma dzienniczek refleksji.",
+          "purpose": "Ta lekcja wprowadza uczniów w pętle while i instrukcje „if/else”.",
+          "student_overview": "Musisz powiedzieć komputerowi, co zrobić w określonych warunkach w ramach tej rozrywkowej i pełnej wyzwań serii."
+        },
+        "coursee-2023/Functions with Harvester": {
+          "name": "Funkcje ze żniwiarką",
+          "overview": "Uczniowie ćwiczyli tworzenie efektownych projektów w interfejsie Artist oraz przechodzenia przez labirynty w interfejsie Bee, ale dzisiaj będą używać funkcji do zbierania plonów w interfejsie Farmer. Na tej lekcji uczniowie będą zmuszeni do używania funkcji na nowe sposoby łącząc je z pętlami \"dopóki\" i wyrażeniami \"jeśli/w przeciwnym razie\".",
+          "preparation": "-   Przeglądaj łamigłówki, aby znaleźć potencjalne obszary problemów dla swojej klasy. \n-   Upewnij się, że każdy uczeń ma dzienniczek refleksji.",
+          "purpose": "Ta lekcja ma na celu dalsze zachęcić uczniów do korzystania z warunków warunkowych z funkcjami. Zagadki te mają na celu zwiększenie umiejętności rozwiązywania problemów i krytycznego myślenia.",
+          "student_overview": "Dzięki funkcjom będziesz oszczędzać mnóstwo pracy w trakcie pomocy udzielanej farmerce przy żniwach."
+        },
+        "coursee-2023/Designing for Accessibility": {
+          "name": "Projektowanie pod kątem dostępności",
+          "overview": "Na tej lekcji uczniowie będą się uczyć o dostępności i wartości empatii za pomocą burzy mózgów i projektowania dostępnych rozwiązań na aplikacje hipotetyczne. ",
+          "preparation": "-   Aby zapoznać się z kontekstem, przeczytaj o **\\\\ \\*typach niepełnosprawności**. \n-   Przeczytaj notatki głośnika w suwaku**\\\\ \\*slajd**.\n-   Przygotuj wystarczającą ilość materiałów do szkicowania/rysunku dla wszystkich uczniów.",
+          "purpose": "Poprzez poznanie dostępności, uczniowie dostrzegają wpływ informatyki poza ich własnym życiem. Dostępność może nie wydawać się istotnym tematem CS, ale tworzenie technologii, która jest dostępna dla niedostatecznie zaawansowanych użytkowników, pomaga ulepszyć technologię również dla wszystkich innych. ",
+          "student_overview": "Dowiedz się o dostępności i wartości empatii dzięki burzy mózgów i projektowaniu dostępnych rozwiązań dla hipotetycznych aplikacji. "
+        },
+        "coursee-2023/Digital Sharing": {
+          "name": "Udostępnianie cyfrowe",
+          "overview": "Ta lekcja „eksploratoryjna” pomaga uczniom zrozumieć wyzwania i korzyści wynikające z poszanowania własności i praw autorskich, szczególnie w środowiskach cyfrowych. ",
+          "preparation": "-   Znajdź filmi**\\\\ \\*Udostępnianie praw autorska** w „Linkach” poniżej\n-   Pobierz i przejrzyj pełny **\\\\ \\*Plan lekcji udostępniania cyfrowego** z Prawa autorskiego\\*\\* i kreatywności\n-   Jako nauczyciel stwórz dzieło sztuki na lekcję (zdjęcie, piosenka, pokaz slajdów itp.) \n-   Upewnij się, że każdy uczeń ma dziennik refleksji.\n-   Będziesz potrzebował tabletu lub smartfona, aby odtworzyć udostępnianie tego elementu",
+          "purpose": "Uczniowie będą wkrótce tworzyć projekty do udostępniania, a większość tych projektów będzie zawierać albo kod lub obraz, który nie został utworzony przez samych uczniów. Ta lekcja ma tutaj pokazać uczniom właściwy sposób do korzystania z treści, która nie jest ich własną treścią.",
+          "student_overview": "Na tej lekcji będziesz się uczyć o wyzwaniach i korzyściach wynikających z własności i praw autorskich."
+        },
+        "coursee-2023/End of Course Project": {
+          "name": "Koniec projektu kursu",
+          "overview": "W ciągu czterech kolejnych lekcji uczniowie będą mieli możliwość wykorzystania swoich umiejętności kodowania w projekcie podsumowującym. Ten projekt pomoże osobom zdobyć doświadczenie w zakresie kodowania i budowania przykładu, który można udostępnić rówieśnikom i kochanym osobom.  Zgodnie z zamierzeniami doświadczenie zdobywane będzie w ramach wielu lekcji lub wielu tygodni, a uczniowie będą spędzać czas poznając zasady prowadzenia burzy mózgów, nauki procesu projektowania, budowania i przedstawiania swojej finałowej pracy. \\\\r\n\\\\r\nNa etapie eksploracji uczniowie będą bawić się zbudowanymi wcześniej przykładami projektów zarówno w Artist, jak i w Sprite Lab celem uzyskania inspiracji. Potem uczniowie będą poznawać proces projektowania i dowiadywać się jak wdrażać go we własnych projektach.  Następnie zostanie im udostępniona przestrzeń do stworzenia własnego projektu w Artist, Sprite Lab lub innym interfejsie, który poznali (najprawdopodobniej będzie to najdłuższy etap projektu) Na koniec uczniowie będą mogli zaprezentować ukończoną pracę rówieśnikom.",
+          "preparation": "-   Poświęć czas na tworzenie własnego projektu zarówno z Artist, jak i Sprite Lab. Zapoznaj się z możliwościami i ograniczeniami każdego narzędzia.\n-   Zmodyfikuj **\\\\ \\*rubric**, aby pasował do celów zajęć i wydrukuj kopię dla każdego ucznia.\n-   Zmodyfikuj arkusz roboczy projektu projektu\\*\\*, aby pasował do swojej klasy i wydrukuj jeden pakiet dla każdego ucznia.",
+          "purpose": "Uczniowie mogą być gotowi, aby skoczyć prosto w budowanie swoich projektów, ale ta lekcja pomoże przekształcić ich pomysły w plany. Ta konstrukcja utrzyma marzycieli na ziemi oraz oświetli ścieżkę tym, którzy czują się pozostawieni w ciemności. Przyznaj uczniom sporą ilość czasu, na zbudowanie i sprawdzenie swoich projektów. Użyta na tej lekcji metoda prób i błędów będzie uczyć rozwiązywania problemów/ zadań i wytrwałości.",
+          "student_overview": "Projekty tak dużych rozmiarów wymagają sporej ilości czasu i planowania. Znajdź dla siebie inspirację, opracuj plan i wyzwól swoją kreatywność!"
+        },
+        "coursef-2023/The Power of Words": {
+          "name": "Moc słów",
+          "overview": " [![edukacja zdrowego rozsądku](https://curriculum.code.org/static/img/common_sense_education.png)](https://www.commonsense.org)\n\nTa lekcja została pierwotnie stworzona przez Common Sense Education. [dowiedz się więcej.](https://www.commonsense.org/education/digital-citizenship/curriculum)\n\nGdy dzieci rosną, będą naturalnie zacząć komunikować się więcej online. Ale niektóre z tego, co widzą, mogą sprawić, że poczują się zranieni, smutni, wściekli, a nawet strachu. Pomóż swoim uczniom budować empatię dla innych i poznaj strategie, które można wykorzystać w obliczu cyberprzemocy.",
+          "preparation": "-   Przegląd materiałów instruktażowych.\n-   Drukuj materiały materiałowe dla każdego ucznia.\n-   Przygotuj długi sznur (lub linę) i papier do klasy.",
+          "purpose": "Nauka Common Sense Education stworzyła tę lekcję, aby nauczyć uczniów, co powinni robić, gdy ktoś używa złośliwego lub bolesnego języka w Internecie.",
+          "student_overview": "Nękanie nigdy nie jest w porządku. Ta lekcja ma Cię nauczyć, co jest w porządku, a co nie, jeśli chodzi o rzeczy, które mówi się w Internecie."
+        },
+        "coursef-2023/Introducing Sprite Lab": {
+          "name": "Wprowadzenie Sprite Lab",
+          "overview": "Podczas tej lekcji **kontekstowego** uczniowie omówią rolę komputerów i technologii w ich życiu, skupiając się na tym, w jaki sposób aplikacje i narzędzia dają użytkownikom możliwość wyboru sposobu korzystania z nich. Uczniowie będą również badać aplikacje podobne do tych, które będą tworzyć później.",
+          "preparation": "-   Określ, jak uczniowie będą logować się do Code.org.\n-   W razie potrzeby utwórz konta Code.org dla studentów.\n-   Przypisz uczniom wprowadzające laboratorium Sprite.\n-   Wydrukuj kopie arkusza **\\\\ \\*Exploring Apps** (lub opublikuj wersję cyfrową w LMS).",
+          "purpose": "Pierwsza lekcja ma na celu wzbudzić zainteresowanie uczniów kursem i połączyć ich osobiste zainteresowania z informatyką.",
+          "student_overview": "Omówisz rolę komputerów i technologii w Twoim życiu, koncentrując się na tym, jak aplikacje i narzędzia dają użytkownikom możliwość wyboru sposobu ich używania. "
+        },
+        "coursef-2023/Making Sprites": {
+          "name": "Tworzenie duszków",
+          "overview": "Podczas tej lekcji uczniowie będą pracować nad serią poziomów programowania na komputerze, kończąc na otwartym zadaniu „swobodnej zabawy”, w którym mogą zbudować, co tylko zechcą. Uczniowie napiszą **programy** i poznają dwa pojęcia leżące u podstaw Sprite Lab: **duszki** i **zachowania**. ",
+          "preparation": "Przejrzyj poziomy i przejrzyj slajdy lekcji **\\\\ \\***.",
+          "purpose": "Ta lekcja ma na celu wprowadzenie studentów do programowania w Sprite Lab. Studenci zaczną rozumieć model programowania tego narzędzia i odkrywać sposoby ich wykorzystania do wyrażania siebie.",
+          "student_overview": "Na tej lekcji będziesz pisał programy i dowiesz się o duszkach i zachowaniach. "
+        },
+        "coursef-2023/Sprites in Action": {
+          "name": "Duszki w akcji",
+          "overview": "Podczas tej lekcji uczniowie będą pracować nad serią poziomów programowania na komputerze, kończąc na otwartym zadaniu „swobodnej zabawy”, w którym mogą zbudować, co tylko zechcą. Będą pisać programy reagujące na czasowe **zdarzenia** i działania użytkownika. ",
+          "preparation": "Graj przez poziomy i przejrzyj slajdy lekcji.",
+          "purpose": "Ta lekcja ma na celu wzmocnienie umiejętności z poprzedniej lekcji i wprowadzenie studentów do programowania z wydarzeniami. Podczas tego kursu wydarzenia będą podstawowym sposobem, w jaki uczniowie zmieniają sposób, w jaki ich programy działają w czasie lub w odpowiedzi na użytkownika.",
+          "student_overview": "Będziesz pracować przez poziomy programowania i zakończyć otwartym zadaniem „swobodnej gry”, w którym możesz zbudować, co tylko zechcesz. "
+        },
+        "coursef-2023/Mini-Project: Virtual Pet": {
+          "name": "Mini-projekt: Wirtualny zwierzak",
+          "overview": "Na tej lekcji uczniowie będą tworzyć interaktywne \"Wirtualne zwierzątko domowe\", które wygląda i zachowuje się tak, jak oni chcą. Uczniowie będą używać narzędzia interfejsu Sprite Lab \"Kostiumy\", aby zindywidualizować wygląd ich zwierzątka. Potem będą używać zdarzeń, zachowań oraz innych koncepcji, które poznali, aby nadać zwierzątku własnego życia!",
+          "preparation": "-   Przeglądaj łamigłówki, aby znaleźć potencjalne obszary problemów dla swojej klasy. \n-   Upewnij się, że każdy uczeń ma dzienniczek refleksji.",
+          "purpose": "Ta lekcja umożliwia uczestnikom kursu stosowanie koncepcji programowania z poprzednich lekcji w innym kontekście twórczym. ",
+          "student_overview": "Na tej lekcji uczniowie będą tworzyć interaktywne \"Wirtualne zwierzątko domowe\", które wygląda i zachowuje się tak, jak oni chcą. Uczniowie będą używać narzędzia interfejsu Sprite Lab \"Kostiumy\", aby zindywidualizować wygląd ich zwierzątka. Potem będą używać zdarzeń, zachowań oraz innych koncepcji, które poznali, aby nadać zwierzątku własnego życia!"
+        },
+        "coursef-2023/Blank Space Stories": {
+          "name": "Historie pustej przestrzeni",
+          "overview": "W tym ćwiczeniu użyjesz historii do wypełnienia (podobnie jak w Mad Libs), aby przygotować się do zrozumienia, w jaki sposób komputery przyjmują i przechowują dane wejściowe od użytkownika, a następnie wykorzystasz je podczas działania programu. ",
+          "preparation": "Zdobądź 6 kopert (odpowiednie również: karty papierowe lub indeksowe, złożone na pół). \n\n-   Oznacz przód każdej koperty dużymi literami: obiekt, płyn, numer, przymiotnik, część ciała, numer\n-   Drukuj kopie ucznia **\\\\ \\*arkusz** (lub opublikuj wersję cyfrową do swojego LMS).",
+          "purpose": "Ta lekcja zawiera wspólny kontekst, który będzie pomocny w zrozumieniu, jak zmienne działają po powrocie do programowania.",
+          "student_overview": "W tym ćwiczeniu użyjesz historii do wypełnienia (podobnie jak w Mad Libs), aby przygotować się do zrozumienia, w jaki sposób komputery przyjmują i przechowują dane wejściowe od użytkownika, a następnie wykorzystasz je podczas działania programu. "
+        },
+        "coursef-2023/Text and Prompts": {
+          "name": "Przechowywanie i przetwarzanie tekstu",
+          "overview": "Uczniowie poćwiczą **zmienne** w Sprite Lab. Będą pracować z danymi wejściowymi użytkownika, aby swoim **zmienny** nadać wartości, a następnie wydrukują te wartości wraz z innym tekstem. ",
+          "preparation": "Graj przez poziomy i przejrzyj slajdy lekcji.",
+          "purpose": "Zmienne zostaną użyte w tym kursie do przechowywania i modyfikowania danych. W tym momencie uczniowie będą po prostu zapisywać i pobierać wartości bez ich zmiany. W kolejnych lekcjach uczniowie będą zapisywać wartości liczbowe i modyfikować je w czasie, aby śledzić takie rzeczy, jak wynik gracza w grze.",
+          "student_overview": "Na tej lekcji będziesz ćwiczyć zmienne w Sprite Lab. "
+        },
+        "coursef-2023/Mini-Project: User Input Programs": {
+          "name": "Mini-projekt: Programy z danymi użytkownika",
+          "overview": "Uczniowie zastosują swoje nowe umiejętności ze zmiennymi w jednym z trzech otwartych **mini-projektów**. Zapoznają się z przykładowymi programami, utworzą plan własnego projektu i zaprogramują go od podstaw. ",
+          "preparation": "-   Wydrukuj poradnik planowania lub rozdaj kopię cyfrową każdemu uczniowi. Przejrzyj go z wyprzedzeniem w przypadku, gdy chcesz wprowadzić jakiekolwiek modyfikacje, aby pasowały do swojej klasy.\n\n-   Przejrzyj opcje na poziomie 3 przed czasem, aby zapoznać się z przepływem, którego uczestnicy będą musieli śledzić.\n\n-   Ta lekcja może rozciągać się na wiele okresów zajęć. Rozważ planowanie implikacji z wyprzedzeniem.",
+          "purpose": "Ta lekcja nie wprowadza nowych umiejętności ani koncepcji, ale daje studentom możliwość twórczego zastosowania tego, czego się uczyli.",
+          "student_overview": "Zastosuj swoje nowe umiejętności ze zmiennymi do jednego z trzech otwartych projektów. "
+        },
+        "coursef-2023/Lots of Sprites": {
+          "name": "Wiele duszków"
+        },
+        "coursef-2023/Counting with Variables": {
+          "name": "Liczenie ze zmiennymi"
+        },
+        "coursef-2023/Mini-Project: Collector Game": {
+          "name": "Mini-projekt: Gra kolekcjonera"
+        },
+        "coursef-2023/Simulating Experiments": {
+          "name": "Symulowanie eksperymentów",
+          "overview": "Dzięki prostej symulacji w Sprite Lab, uczniowie zdobywają doświadczenia w zakresie korzystania z informatyki do zbierania danych, które identyfikują trendy lub wzorce. Po wielokrotnym przeprowadzeniu symulacji, uczniowie będą mieli okazję do sformułowania prognozy, jak zmiana zmiennej w symulacji może wpływać na wynik, a następnie przetestowania tej hipotezy.",
+          "preparation": "-   Określić, czy uczniowie będą uruchamiać symulacje na własnym komputerze, czy też będą uruchamiać je jako całą klasę\n-   w razie potrzeby przygotujcie się do projektu dwóch symulacji w tej lekcji.",
+          "purpose": "Nauki w wielu dyscyplinach wykorzystują informatykę do uruchamiania modeli i symulacji do przeprowadzania eksperymentów, zbierania danych i analizowania tych danych w celu uzyskania szczegółowych informacji. Chociaż symulacja wprowadzona w tej lekcji jest dość uproszczona, może być wykorzystana jako punkt skoku dla studentów, aby rozważyć, jak bardziej wyrafinowane modele obliczeniowe mogą być wykorzystane do testowania hipotez.",
+          "student_overview": "Uruchom symulacje na komputerze i eksperymentuj zmieniając wartości zmiennych."
+        },
+        "coursef-2023/Outbreak": {
+          "name": "Epidemia",
+          "overview": "Na tej lekcji uczniowie utworzą symulator epidemii przy użyciu zdarzeń. Zapoznają się z symulacją, aby zrozumieć, jak szybko wirus może się rozprzestrzeniać i co można zrobić, aby spowolnić zarażanie. ",
+          "preparation": "-   Przeglądaj łamigłówki, aby znaleźć potencjalne obszary problemów dla swojej klasy. \n-   Upewnij się, że każdy uczeń ma dzienniczek refleksji.",
+          "purpose": "Na poprzedniej lekcji uczniowie zebrali i zinterpretowali dane z prostej symulacji. Podczas tej lekcji uczniowie będą postępować zgodnie z instrukcjami, aby zakodować własny model symulacyjny. Wcześniejsza wiedza uczniów na temat epidemii wirusów w rzeczywistej sytuacji zostanie zastosowana do fikcyjnego scenariusza.",
+          "student_overview": "W Mieście Potworów pojawił się wirus! Naucz się tworzyć symulator wirusów i pomóż potworom wrócić do zdrowia. "
+        },
+        "coursef-2023/AI For Oceans": {
+          "name": "AI dla oceanów",
+          "overview": "**Podsumowanie samouczka**: Najpierw uczniowie klasyfikują przedmioty jako \"ryba\" lub \"nie ryba\" próbując usunć śmieci z oceanu. Następnie będą musieli poszerzyć zakres swoich danych treningowych tak, aby uwzględnić stworzenia morskie, które należą do środowiska wodnego. W drugiej części ćwiczenia uczniowie będą wybierać swoje własne etykiety do zastosowania w obrazkach losowo wygenerowanych ryb. Z tych danych treningowych korzysta się na potrzeby modelu uczenia maszynowego, który powinien potem być w stanie oznaczać nowe obrazy we własnym zakresie.\\\\r\n\\\\r\n\\\\r\n**Sprawdzanie poprawności:** W ramach tego samouczka uczniowie nie będą otrzymywali informacji, czy ukończyli poziom poprawnie. Istnieje możliwość szybkiego pominięcia wielu części ćwiczenia. Zachęcaj uczniów do oglądania filmów wideo, czytania instrukcji oraz wypróbowania różnych rzeczy w trakcie. W dowolnym momencie mogą przestawić swoje wnioski Tobie lub komuś z klasy.\\\\r",
+          "purpose": "Ta lekcja ma na celu szybkie wprowadzenie uczniów do uczenia maszynowego, rodzaju sztucznej inteligencji. Studenci zbadają, w jaki sposób dane szkoleniowe są wykorzystywane do umożliwienia klasyfikowania nowych danych modelowi uczenia maszynowego. Studenci powinni mieć pozytywne doświadczenia podczas kursu, a co ważniejsze powinny być motywowane do kontynuowania nauki informatyki. ",
+          "student_overview": "Podsumowanie samouczka: Najpierw uczniowie klasyfikują przedmioty jako \"ryba\" lub \"nie ryba\" próbując zebrać śmieci z oceanu. Następnie będą musieli poszerzyć zakres swoich danych treningowych tak, aby uwzględnić stworzenia morskie, które należą do środowiska wodnego. W drugiej części ćwiczenia uczniowie będą wybierać swoje własne etykiety do zastosowania w obrazkach losowo wygenerowanych ryb. Z tych danych treningowych korzysta się na potrzeby modelu uczenia maszynowego, który powinien potem być w stanie oznaczać nowe obrazy we własnym zakresie."
+        },
+        "coursef-2023/The Internet": {
+          "name": "Internet",
+          "overview": "Mimo tego, że wiele osób korzysta codziennie z Internetu, niewiele spośród nich wie, jak on działa. Na tej lekcji uczniowie będą udawać, że płyną przez Internet, cały czas ucząc się o połączeniach, URL, adresach sieciowych IP i DNS.",
+          "preparation": "-   Obejrzyj **\\\\ \\*Internet** - Film Nauczyciel.\n-   Wydrukuj wystarczającą ilość \\*\\*\\\\ \\*Karty adresowe IP i karty typu dostawy \\*\\* - Manipulacje dla każdej grupy.\n-   Wydrukuj jedną ocenę **\\\\ \\*Internet** - dla każdego ucznia.\n-   Dostęp do Internetu (np. **\\\\ \\*get-site-ip.com**.\n-   Upewnij się, że każdy uczeń ma dziennik refleksji.",
+          "purpose": "Jeśli robiłeś każdą lekcję w tym kursie, to każdy uczeń w klasie użył internetu... ale ile osób wie, jak to działa? Więcej informacji na temat Internetu pomoże uczniom w lepszym zrozumieniu jego niekończących się możliwości.",
+          "student_overview": "Czy kiedykolwiek zastanawiałeś się nad tym, jak informacje podróżują po internecie? To nie magia. Na tej lekcji będziesz się uczyć podstaw zasad funkcjonowania internetu."
+        },
+        "coursef-2023/End of Course Project": {
+          "name": "Koniec projektu kursu",
+          "overview": "W trakcie tej lekcji podsumowującej uczniowie przechodzą proces projektowania, tworzenia i przedstawiania swoich własnych projektów!",
+          "preparation": "\\--   Poświęć czas na przygotowanie swojego własnego projektu zarówno przy pomocy interfejsu Artist i Sprite Lab. Zapoznaj się z możliwościami i ograniczeniami każdego narzędzia. \n\n-   Modyfikuj kategorię, aby wpisywała się w cele Twojej klasy i wydrukuj egzemplarz dla każdego ucznia.\n-   Modyfikuj kartę zaprojektowania projektu, aby wpisywała się w Twoją klasę i wydrukuj jeden pakiet dla każdego ucznia.",
+          "purpose": "Uczniowie mogą być gotowi, aby skoczyć prosto w budowanie swoich projektów, ale ta lekcja pomoże przekształcić ich pomysły w plany. Ta konstrukcja utrzyma marzycieli na ziemi oraz oświetli ścieżkę tym, którzy czują się pozostawieni w ciemności. Przyznaj uczniom sporą ilość czasu, na zbudowanie i sprawdzenie swoich projektów. Użyta na tej lekcji metoda prób i błędów będzie uczyć rozwiązywania problemów/ zadań i wytrwałości.",
+          "student_overview": "Projekty tak dużych rozmiarów wymagają sporej ilości czasu i planowania. Znajdź dla siebie inspirację, opracuj plan i wyzwól swoją kreatywność!"
+        },
+        "express-2023/Programming with Angry Birds": {
+          "name": "Programowanie z Angry Birds",
+          "overview": "Przy pomocy postaci z gry Angry Birds uczniowie opracowują algorytmy sekwencyjne, aby przeprowadzić ptaka z jednej strony labiryntu do świnki po drugiej stronie. W tym celu układają bloki kodu w porządku liniowym.",
+          "preparation": "-   Graj przez zagadki, aby znaleźć potencjalne obszary problemowe dla swojej klasy.\n-   (Opcjonalnie) Wybierz kilka zagadek do zrobienia jako grupa z klasą. \n-   Upewnij się, że każdy uczeń ma dziennik refleksji.",
+          "purpose": "Podczas tej lekcji uczniowie będą rozwijać umiejętności programowania na platformie komputerowej. Format tych zagadek oparty na blokach pomaga uczniom poznać sekwencję i koncepcje, bez konieczności martwić się o udoskonalanie składni.",
+          "student_overview": "Ucz się o sekwencjach i algorytmach z Angry Birds."
+        },
+        "express-2023/Debugging in Maze": {
+          "name": "Debugowanie w labiryncie",
+          "overview": "Debugowanie jest  podstawowym elementem nauki programowania. Na tej lekcji uczniowie będą się konfrontować z łamigłówkami, które zostały rozwiązane nieprawidłowo. Będą musiały przejść przez obecny kod, aby zidentyfikować błędy, w tym niewłaściwe pętle, brakujące bloki, zbyteczne bloki oraz zepsute bloki.",
+          "preparation": "-   Przejrzyj lekcję, aby znaleźć potencjalne obszary problemowe dla swojej klasy.\n-   (Opcjonalnie) Wybierz kilka zagadek do zrobienia jako grupa z klasą. \n-   Upewnij się, że każdy student ma Dziennik Reflection.",
+          "purpose": "Uczniowie w klasie mogą stać się sfrustrowani tą lekcją ze względu na istotę debugowania. Debugowanie to koncepcja, która jest bardzo ważna dla programowania komputerowego. Naukowcy komputerowi muszą być naprawdę dobrzy w znalezieniu błędów we własnych programach. Debugowanie zmusza uczniów do rozpoznawania problemów i przezwyciężenia ich podczas budowania krytycznego myślenia i umiejętności rozwiązywania problemów.",
+          "student_overview": "Znajdź problemy w łamigłówkach i ćwicz umiejętność debugowania."
+        },
+        "express-2023/Collecting Treasure with Laurel": {
+          "name": "Zbieranie skarbów z Laurel",
+          "overview": "W tej serii łamigłówek uczniowie będą kontynuować wzbogacanie swojego zrozumienia algorytmów i debugowania. Przy pomocy notej postaci, poszukiwaczce przygód Laurel, uczniowie będą tworzyć algorytmy sekwencyjne, aby sprawić, by Laurel zbierała skarb w trakcie przechodzenia ścieżki.",
+          "preparation": "-   Graj przez zagadki, aby znaleźć potencjalne obszary problemowe dla swojej klasy.\n-   Upewnij się, że każdy uczeń ma Dziennik Reflection.",
+          "purpose": "Podczas tej lekcji uczniowie będą ćwiczyć swoje umiejętności programowania przy użyciu nowej postaci, _Laurel the Adventurer_. Kiedy ktoś zaczyna programować, składają instrukcje w określonej kolejności, używając czegoś, co maszyna może odczytać. Dzięki wykorzystaniu programowania studenci będą rozwijać zrozumienie, w jaki sposób komputer porusza się po instrukcjach i porządku. Wykorzystanie nowej postaci z innego celu logicznego pomoże studentom poszerzyć zakres doświadczenia z sekwencjonowaniem i algorytmami programowania.",
+          "student_overview": "Napisz algorytmy, które pomogą _Laurel the Adventurer_ zbierać mnóstwo klejnotów!"
+        },
+        "express-2023/Creating Art with Code": {
+          "name": "Tworzenie grafiki przy pomocy kodu",
+          "overview": "Na tej lekcji uczniowie przejmą sterowania Artystą, aby dokończyć rysunki na ekranie. Ta scena Artysty pozwoli uczniom tworzyć obrazy o coraz wyższym stopniu złożoności, korzystając z nowych bloków takich jak \"idź do przodu o 100 pikseli\" oraz \"skręć w prawo o 90 stopni\".",
+          "preparation": "-   Graj przez zagadki, aby znaleźć potencjalne obszary problemowe dla swojej klasy.\n-   (Opcjonalnie) Uzyskaj kątowniki dla swojej klasy, aby zwizualizować kąty, których muszą użyć, aby ukończyć zagadki.\n-   Wydrukuj jeden **\\\\ \\*Ucznia** dla każdego ucznia.",
+          "purpose": "Bazując na poprzednich doświadczeniach uczniów związanych z tworzeniem sekwencji ta lekcja będzie miała inspirować do większej kreatywności w zakresie kodowania. Jej celem jest ugruntowanie wiedzy w zakresie tworzenia sekwencji poprzez wprowadzenie nowych bloków i celów. W tym przypadku uczniowie uczą się więcej o pikselach i kątach używając nowych bloków, ćwicząc jednocześnie umiejętności tworzenia sekwencji. Uczniowie również będą w stanie wizualizować nowe cele takie jak kodowanie Artysty w celu narysowania kwadratu.",
+          "student_overview": "Twórz piękne obrazki programując Artystę."
+        },
+        "express-2023/Swimming Fish in Sprite Lab": {
+          "name": "Pływająca ryba w Sprite Lab",
+          "overview": "Na tej lekcji uczniowie będą się uczyć o dwóch koncepcjach stanowiących serce interfejsu Sprite Lab: duszkach i zachowaniach. Duszki są postaciami na ekranie, które uczniowie mogą przemieszczać, zmieniać lub którymi mogą manipulować. Zachowania są działaniami, które duszki podejmują w trybie ciągłym do momentu ich zatrzymania.",
+          "preparation": "-   Graj przez zagadki, aby znaleźć potencjalne obszary problemowe dla swojej klasy.\n-   Upewnij się, że każdy uczeń ma Dziennik Reflection.",
+          "purpose": "Ta lekcja ma na celu wprowadzenie uczniów do podstawowego słownictwa programu Sprite Lab i umożliwienie im zastosowania do tego narzędzia pojęć, których nauczyli się w innych środowiskach. Tworząc zbiornik rybny, uczniowie zaczną rozumieć model programowania tego narzędzia i odkrywać sposoby ich wykorzystania do wyrażania siebie.",
+          "student_overview": "Naucz się tworzyć i edytować duszki."
+        },
+        "express-2023/Making Sprites": {
+          "name": "Tworzenie duszków",
+          "overview": "Podczas tej lekcji uczniowie będą pracować nad serią poziomów programowania na komputerze, kończąc na otwartym zadaniu „swobodnej zabawy”, w którym mogą zbudować, co tylko zechcą. Uczniowie napiszą **programy** i poznają dwa pojęcia leżące u podstaw Sprite Lab: **duszki** i **zachowania**. ",
+          "preparation": "Przejrzyj poziomy i przejrzyj slajdy lekcji **\\\\ \\***.",
+          "purpose": "Ta lekcja ma na celu wprowadzenie studentów do programowania w Sprite Lab. Studenci zaczną rozumieć model programowania tego narzędzia i odkrywać sposoby ich wykorzystania do wyrażania siebie.",
+          "student_overview": "Na tej lekcji będziesz pisał programy i dowiesz się o duszkach i zachowaniach. "
+        },
+        "express-2023/Sprites in Action": {
+          "name": "Duszki w akcji",
+          "overview": "Podczas tej lekcji uczniowie będą pracować nad serią poziomów programowania na komputerze, kończąc na otwartym zadaniu „swobodnej zabawy”, w którym mogą zbudować, co tylko zechcą. Będą pisać programy reagujące na czasowe **zdarzenia** i działania użytkownika. ",
+          "preparation": "Graj przez poziomy i przejrzyj slajdy lekcji.",
+          "purpose": "Ta lekcja ma na celu wprowadzenie studentów do programowania z wydarzeniami. Podczas tego kursu wydarzenia będą podstawowym sposobem, w jaki uczniowie zmieniają sposób, w jaki ich programy działają w czasie lub w odpowiedzi na użytkownika.",
+          "student_overview": "Będziesz pracować przez poziomy programowania i zakończyć otwartym zadaniem „swobodnej gry”, w którym możesz zbudować, co tylko zechcesz. "
+        },
+        "express-2023/Virtual Pet with Sprite Lab": {
+          "name": "Wirtualny zwierzak z Sprite Lab",
+          "overview": "Na tej lekcji uczniowie będą tworzyć interaktywne \"Wirtualne zwierzątko domowe\", które wygląda i zachowuje się tak, jak oni chcą. Uczniowie będą używać narzędzia interfejsu Sprite Lab \"Kostiumy\", aby zindywidualizować wygląd ich zwierzątka. Potem będą używać zdarzeń, zachowań oraz innych koncepcji, które poznali, aby nadać zwierzątku własnego życia!",
+          "preparation": "-   Graj przez zagadki, aby znaleźć potencjalne obszary problemowe dla swojej klasy.\n-   Upewnij się, że każdy uczeń ma Dziennik Reflection.",
+          "purpose": "Ta lekcja umożliwia uczestnikom kursu stosowanie koncepcji programowania z poprzednich lekcji w innym kontekście twórczym. ",
+          "student_overview": "Na tej lekcji uczniowie będą tworzyć interaktywne \"Wirtualne zwierzątko domowe\", które wygląda i zachowuje się tak, jak oni chcą. Uczniowie będą używać narzędzia interfejsu Sprite Lab \"Kostiumy\", aby zindywidualizować wygląd ich zwierzątka. Potem będą używać zdarzeń, zachowań oraz innych koncepcji, które poznali, aby nadać zwierzątku własnego życia!"
+        },
+        "express-2023/Dance Party": {
+          "name": "Potańcówka",
+          "overview": "Na tej lekcji uczniowie będą programować swoją własną interaktywną potańcówkę. Na tych zajęciach potrzebny jest dźwięk, gdyż narzędzie zbudowano tak, aby reagowało na muzykę.",
+          "preparation": "-   Graj przez zagadki, aby znaleźć potencjalne obszary problemowe dla swojej klasy.\n-   Upewnij się, że każdy uczeń ma Dziennik Reflection.\n-   Rozważ potrzebę słuchawek. Działalność ta opiera się na dźwięku.",
+          "purpose": "Na tej lekcji zostają wprowadzone podstawowe pojęcia informatyczne związane z programowaniem i programowaniem zdarzeń (za pomocą bloków).",
+          "student_overview": "Czas na świętowanie! Na tej lekcji będziesz programować swoją własną, interaktywną potańcówkę."
+        },
+        "express-2023/Loops with Rey and BB-8": {
+          "name": "Pętle z Rey i BB-8",
+          "overview": "Ta lekcja **umiejętności** polega na tym, że uczniowie wykorzystują pętle, aby pomóc _Star Wars_ _BB-8_ efektywniej przemierzać labirynt.",
+          "preparation": "-   Graj przez zagadki, aby ustalić, czy nie będzie żadnych obszarów problemowych dla swojej klasy.\n-   Upewnij się, że każdy uczeń ma Dziennik Reflection.",
+          "purpose": "Podczas tej lekcji uczniowie będą uczyć się o pętlach i sposobach ich implementacji w kodzie Blockly. Korzystanie z pętli jest ważną umiejętnością programowania, ponieważ ręczne powtarzanie poleceń jest żmudne i nieefektywne. Dzięki zagadkom Code.org uczniowie nauczą się dodawać instrukcje do istniejących pętli, zbierać powtarzany kod w pętle i rozpoznawać wzorce, które muszą być zapętane. Należy zauważyć, że uczniowie będą musieli zmierzyć się z zagadkami z wieloma różnymi rozwiązaniami. Spowoduje to otwarcie dyskusji na temat różnych sposobów rozwiązywania zagadek z zaletami i wadami każdego podejścia.",
+          "student_overview": "Pomóż BB-8 przejść przez labirynty używając pętli!"
+        },
+        "express-2023/Mini-Project: Sticker Art": {
+          "name": "Mini-projekt: Sticker Art",
+          "overview": "Patrz jak twarze uczniów rozpromieniają się na widok utworzonych przez siebie wspaniałych projektów przy użyciu niewielkiej liczby bloków oraz naklejek cyfrowych! Ta lekcja ma na celu budowanie zrozumienia zagadnienia pętli z poprzednich lekcji oraz zapewnienie uczniom szansy wykazania się prawdziwą kreatywnością. Te zajęcia są fantastyczne jeśli chodzi o tworzenie przedmiotów do portfolio lub na wywiadówki.",
+          "preparation": "-   Praktyka tworzenia własnego projektu. Zanotuj, jak te poziomy różnią się od wszystkiego, co było wcześniej.\n-   Upewnij się, że każdy uczeń ma Dziennik Reflection.",
+          "purpose": "W tej serii podkreśla się moc pętli w oparciu o kreatywne i osobiste projekty.\n\nTa progresja, oferowana jako sekwencja wspierana przez projekt, pozwoli uczniom bazować na swojej własnej pracy i tworzyć niesamowite eksponaty.",
+          "student_overview": "Na tej lekcji przekonasz się, że dzięki pętlom łatwiej jest tworzyć jeszcze fajniejsze obrazki z Artystą!"
+        },
+        "express-2023/Nested Loops in Maze": {
+          "name": "Zagnieżdżone pętle w labiryncie",
+          "overview": "Na tych zajęciach internetowych uczniowie będą mieli możliwość wypchnięcia ich zrozumienia dla pętli na zupełnie nowy poziom. Rozgrywając grę \"Pszczółka i rośliny kontra zombie\" [Bee and Plants vs Zombies], uczniowie będą się uczyć, jak programować pętlę, aby znalazła się z innej pętli. Będą również zachęcani do wymyślenia sposobu, w jaki niewielkie zmiany w pętli będzie wpływać na program, gdy klikają \"Uruchom\".",
+          "preparation": "-   Graj przez zagadki, aby znaleźć potencjalne obszary problemowe dla swojej klasy.\n-   Upewnij się, że każdy uczeń ma Dziennik Reflection.",
+          "purpose": "We wstępie do zagnieżdżonych pętli uczniowie wyjdą poza strefę komfortu, aby stworzyć bardziej wydajne rozwiązania zagadek.  \n\nWe wcześniejszych zagadkach pętle pchnęły uczniów do rozpoznania powtórzeń. Tutaj uczniowie nauczą się rozpoznawać wzorce _within_ powtarzające się wzorce, aby rozwinąć te zagnieżdżone pętle. Ten etap rozpoczyna się od zachęcenia studentów do próby rozwiązania zagadki, w której kod jest irytujący i skomplikowany, aby napisać długą drogę. Po tym, jak film wprowadza zagnieżdżone pętle, uczestnicy otrzymują przykład i poproszeni o przewidywanie, co się stanie, gdy pętla zostanie umieszczona wewnątrz innej pętli. Postęp ten prowadzi do wielu praktyk dla studentów do krzepnięcia i budować na ich zrozumienie pętli w programowaniu.",
+          "student_overview": "Pętle wewnątrz pętli wewnątrz pętli. Co to znaczy? Na tej lekcji dowiesz się, co się dzieje, gdy utworzysz pętlę zagnieżdżoną."
+        },
+        "express-2023/Snowflakes with Anna and Elsa": {
+          "name": "Płatki śniegu z Anną i Elzą",
+          "overview": "Teraz uczniowie uczą się, jak układać pętle warstwowo, mogą tworzyć tyle pięknych rzeczy. Na tej lekcji uczniowie wykonają serie ćwiczeń, które pomogą im utworzyć obrazki do ich własnego portfolio korzystając ze wspaniałych umiejętności łyżwiarskich Anny i Elsy!",
+          "preparation": "-   Przejrzyj lekcję, aby znaleźć i potencjalne obszary problemowe dla swojej klasy.\n-   Upewnij się, że każdy uczeń ma Dziennik Reflection.",
+          "student_overview": "Anna i Elsa umieją świetnie jeździć na łyżwach, ale potrzebują Twojej pomocy w utworzeniu układów na lodzie. Użyj pętli zagnieżdżonych do utworzenia czegoś niewiarygodnie FAJNEGO."
+        },
+        "express-2023/Looking Ahead with Minecraft": {
+          "name": "Patrząc w przyszłość z Minecraftem",
+          "overview": "Ta lekcja została zasadniczo utworzona na potrzeby Godziny Kodowania [Hour of Code] z zespołem Minecrafta. Uczniowie będą mieli okazję przećwiczyć koncepcje, które poznali do tego momentu, jak również zerknąć na instrukcje warunkowe!",
+          "preparation": "-   Zagraj w zagadki związane z tą lekcją, aby znaleźć potencjalne obszary problemowe dla swojej klasy.\n-   Upewnij się, że każdy uczeń ma Dziennik Reflection.",
+          "purpose": "Ten zbiór łamigłówek służy ugruntowaniu i wykorzystywaniu wiedzy o pętlach, a także wprowadzaniu wyrażeń warunkowych. Poprzez połączenie tych dwóch pojęć w parę, uczniowie będą w stanie badać potencjał tworzenia rozrywkowych i innowacyjnych programów w nowym, rodzącym emocje środowisku.",
+          "student_overview": "Unikaj lawy! Teraz zaczniesz uczyć się o instrukcjach warunkowych w świecie gry Minecraft."
+        },
+        "express-2023/If/Else with Bee": {
+          "name": "\"jeśli/w przeciwnym razie\" z Pszczółką",
+          "overview": "Do tego momentu uczniowie pisali kod, który realizuje się dokładnie tak samo po każdym uruchomieniu - wiarygodny, ale niezbyt elastyczny. Na tej lekcji Twoja klasa rozpocznie kodować przy pomocy wyrażeń warunkowych, pozwalając im na pisanie kodu, który funkcjonuje inaczej, w zależności od konkretnych warunków, na które napotyka program.",
+          "preparation": "-   Graj przez zagadki, aby znaleźć potencjalne obszary problemowe dla swojej klasy.\n-   Upewnij się, że każdy uczeń ma Dziennik Reflection.",
+          "purpose": "Studenci będą ćwiczyć korzystanie z warunków warunkowych w swoich programach. Bloki if/else pozwolą na bardziej elastyczny program. Pszczoła zbierze tylko nektar _if_ jest kwiat lub zrobi miód _if_ jest plaster miodu. ",
+          "student_overview": "Teraz rozumiesz już wyrażenia warunkowe, czas zaprogramować pszczółkę tak, aby użyć jej przy zbieraniu miodu i nektaru."
+        },
+        "express-2023/While Loops in Farmer": {
+          "name": "Pętle \"dopóki\" z Rolnikiem",
+          "overview": "W tej lekcji \\*\\*budowania umiejętnościach uczniowie będą pracować nad wypełnieniem dziur i kopaniem brudu w Farmerze, ale nie będą znali wielkości otworów ani wysokości kopców ziemi. Aby rozwiązać te zagadki, uczniowie wykorzystają nowy rodzaj pętli.",
+          "preparation": "-   Graj przez zagadki, aby znaleźć potencjalne obszary problemowe dla swojej klasy.\n-   Upewnij się, że każdy uczeń ma Dziennik Reflection.",
+          "purpose": "Ponieważ uczniowie nadal pogłębiają swoją wiedzę na temat pętli, napotkają problemy, w których polecenie musi zostać powtórzone, ale nie wiadomo, ile razy trzeba je powtórzyć. To jest miejsce, w którym pojawiają się pętle. W dzisiejszej lekcji uczniowie będą rozwijać początkujący rozumienie pętli opartych na warunkach, a także poszerzyć swoją wiedzę na temat pętli w ogóle. ",
+          "student_overview": "Pętle są przydatne do kodowania. Na tej lekcji nauczysz się o nowym rodzaju pętli: pętle \"dopóki\"!"
+        },
+        "express-2023/Conditionals in Minecraft: Voyage Aquatic": {
+          "name": "Wyrażenia warunkowe w Minecrafcie: Wodna podróż",
+          "overview": "Ta lekcja została zasadniczo utworzona na potrzeby Godziny Kodowania [Hour of Code] z zespołem Minecrafta. Uczniowie będą mieli okazję przećwiczyć koncepcje, które poznali do tego momentu, jak również zerknąć na instrukcje warunkowe!",
+          "preparation": "-   Zagraj w zagadki związane z tą lekcją, aby znaleźć potencjalne obszary problemowe dla swojej klasy.\n-   Upewnij się, że każdy uczeń ma Dziennik Reflection.",
+          "purpose": "Ten zestaw zagadek będzie działać, aby zestalić się i budować na wiedzy o pętlach i warunkach. Dzięki połączeniu tych dwóch koncepcji uczniowie będą mogli odkryć potencjał tworzenia zabawnych i innowacyjnych programów w nowym i ekscytującym środowisku.",
+          "student_overview": "Tutaj nauczysz się o wyrażeniach warunkowych w świecie gry Minecraft."
+        },
+        "express-2023/Until Loops in Maze": {
+          "name": "Pętle \"dopóki\" w labiryncie",
+          "overview": "Na tej lekcji uczniowie będą się uczyć o pętlach \"dopóki\". Uczniowie będą budować programy, które sprawiają, że główna postać powtarza czynności \"dopóki\" dojdą do pożądanego punktu zatrzymania.",
+          "preparation": "-   Graj przez zagadki, aby znaleźć potencjalne obszary problemowe dla swojej klasy.\n-   Upewnij się, że każdy uczeń ma Dziennik Reflection.",
+          "purpose": "Ten zestaw zagadek będzie działać, aby zestalić i budować na wiedzy pętli, dodając aż warunkowe. Dzięki połączeniu tych koncepcji studenci będą mogli odkryć potencjał tworzenia złożonych i innowacyjnych programów.",
+          "student_overview": "Możesz robić pewne niesamowite rzeczy, gdy używasz pętli \"dopóki\"."
+        },
+        "express-2023/Harvesting with Conditionals": {
+          "name": "Żniwa z wyrażeniami warunkowymi",
+          "overview": "Uczniowie będą ćwiczyć pętle \"dopóki\", pętle \"aż do\" oraz instrukcje \"jeśli/ w przeciwnym razie\". We wszystkich tych blokach używa się wyrażeń warunkowych. Ćwicząc wszystkie trzy, uczniowie będą się uczyć pisania złożonych i elastycznych kodów.",
+          "preparation": "-   Przejrzyj lekcję, aby znaleźć potencjalne obszary problemowe dla swojej klasy.\n-   Upewnij się, że każdy uczeń ma Dziennik Reflection.",
+          "purpose": "Ćwiczenie w zakresie używania wyrażeń warunkowych w różnych scenariuszach pomaga w zbudowaniu uczniowi tego, co mogą \"robić\" wyrażenia warunkowe. Na poprzedniej lekcji uczniowie wykorzystywali tylko wyrażeń warunkowych do tego, aby pomóc farmerowi dowiedzieć się, kiedy przeprowadzać żniwa. Tera wyłonią się wzorce i uczniowie będą korzystać z kreatywności i logicznego myślenia, aby określić warunki, w których można realizować i powtarzać kod. ",
+          "student_overview": "Nie jest dokładnie jasne, kiedy należy używać każdego wyrażenia warunkowego. Ta lekcja pomoże Ci uzyskać praktykę w podejmowaniu decyzji, co robić."
+        },
+        "express-2023/Functions in Minecraft": {
+          "name": "Funkcje w Minecrafcie",
+          "overview": "Uczniowie zaczną rozumieć, jak pomocne mogą być funkcje w tej wesołej i interaktywnej przygodzie Minecraft!",
+          "preparation": "-   Graj przez zagadki, aby znaleźć potencjalne obszary problemowe dla swojej klasy.\n-   Upewnij się, że każdy uczeń ma Dziennik Reflection.",
+          "purpose": "Uczniowie będą odkrywać uniwersalność programowania poprzez ćwiczenie funkcji w różnych środowiskach. Tutaj uczniowie będą rozpoznawać wzorce do powtórnego użycia  będą w stanie uwzględniać nazwane bloki, aby wywoływać zdefiniowane wcześniej funkcje.",
+          "student_overview": "Czy jesteś w stanie wymyślić, jak używać funkcji, aby uzyskać jak najskuteczniejszy kod?"
+        },
+        "express-2023/Functions with Harvester": {
+          "name": "Funkcje ze żniwiarką",
+          "overview": "Uczniowie ćwiczyli tworzenie efektownych projektów w interfejsie Artist oraz przechodzenia przez labirynty w interfejsie Bee, ale dzisiaj będą używać funkcji do zbierania plonów w interfejsie Farmer. Na tej lekcji uczniowie będą zmuszeni do używania funkcji na nowe sposoby łącząc je z pętlami \"dopóki\" i wyrażeniami \"jeśli/w przeciwnym razie\".",
+          "preparation": "-   Graj przez zagadki, aby znaleźć potencjalne obszary problemowe dla swojej klasy.\n-   Upewnij się, że kiedykolwiek student ma Reflection Journal.",
+          "purpose": "Ta lekcja ma na celu dalsze zachęcać uczniów do korzystania z funkcji w bardziej kreatywny sposób. Studenci dowiedzą się, że istnieje wiele sposobów podejścia do problemu, ale niektóre są bardziej wydajne niż inne. Te zagadki mają na celu zwiększenie rozwiązywania problemów i umiejętności krytycznego myślenia.",
+          "student_overview": "Dzięki funkcjom będziesz oszczędzać mnóstwo pracy w trakcie pomocy udzielanej farmerce przy żniwach."
+        },
+        "express-2023/Functions with Artist": {
+          "name": "Funkcje z Artistą",
+          "overview": "Uczniowie zostaną wprowadzeni w używanie funkcji przy pomocy Artysty. Zostaną utworzone i modyfikowane wspaniałe obrazki. Na potrzeby bardziej skomplikowanych wzorców, uczniowie będą się uczyć o zagnieżdżaniu funkcji poprzez wywoływanie jednej funkcji z wnętrza innej.",
+          "preparation": "-   Graj przez zagadki, aby znaleźć potencjalne obszary problemowe dla swojej klasy.\n-   Upewnij się, że każdy uczeń ma Dziennik Reflection.",
+          "purpose": "Jednym z najważniejszych elementów tej lekcji jest zapewnienie studentom przestrzeni do stworzenia czegoś, z czego są dumni. Te zagadki rozwijają się do coraz bardziej złożonych obrazów, ale każda nowa zagadka buduje tylko z poprzedniej układanki. Pod koniec tej lekcji uczniowie będą czuć się pewnie i dumni ze swojej ciężkiej pracy.",
+          "student_overview": "Twórz skomplikowane rysunki w  sposób łatwiejszy przy pomocy funkcji!"
+        },
+        "express-2023/Text and Prompts": {
+          "name": "Przechowywanie i przetwarzanie tekstu",
+          "overview": "Uczniowie poćwiczą **zmienne** w Sprite Lab. Będą pracować z danymi wejściowymi użytkownika, aby swoim **zmienny** nadać wartości, a następnie wydrukują te wartości wraz z innym tekstem. ",
+          "preparation": "Graj przez poziomy i przejrzyj slajdy lekcji.",
+          "purpose": "Zmienne zostaną użyte w tym kursie do przechowywania i modyfikowania danych. W tym momencie uczniowie będą po prostu zapisywać i pobierać wartości bez ich zmiany. W kolejnych lekcjach uczniowie będą zapisywać wartości liczbowe i modyfikować je w czasie, aby śledzić takie rzeczy, jak wynik gracza w grze.",
+          "student_overview": "Na tej lekcji będziesz ćwiczyć zmienne w Sprite Lab. "
+        },
+        "express-2023/Counting with Variables": {
+          "name": "Liczenie ze zmiennymi"
+        },
+        "express-2023/Using Variables with the Artist": {
+          "name": "Używanie zmiennych z artystą",
+          "overview": "Na tej lekcji uczniowie będą zgłębiać tworzenie powtarzalnych projektów z użyciem zmiennych w środowisku Artist. Uczniowie dowiedzą się, jak można używać zmiennych, aby ułatwić pisanie kodu i czytanie. Po przejściu łamigłówek w trybie \"z przewodnikiem\" uczniowie zakończą na poziomie czasu na zabawę, aby wykazać się tym, czego się nauczyli i tworzyć własne wzory.",
+          "preparation": "-   Graj przez zagadki, aby znaleźć potencjalne obszary problemowe dla swojej klasy.\n-   Upewnij się, że każdy uczeń ma Dziennik Reflection.",
+          "purpose": "Zmiennych używa się jako symboli zastępczych dla wartości, które mogą nie być znane w momencie, gdy biegnie Twój program lub dla wartości, które mogą ulegać zmianie w trakcie realizacji programu. Mają one znaczenie zasadnicze dla tworzenia kodu dynamicznego, ponieważ pozwalają Twojemu programowi ulegać zmianie i rozrastać się na podstawie dowolnej liczby ewentualnych modyfikacji. Ten etap prowadzi do ugruntowania korzystania ze zmiennych, korzystania z najbardziej podstawowych możliwości ustawiania i korzystania z nich.",
+          "student_overview": "Na tej lekcji będziesz wykonywać rysunki z użyciem zmiennych, które zmieniają się w trakcie uruchomienia kodu."
+        },
+        "express-2023/Variables with the Bee": {
+          "name": "Zmienianie zmiennych z Pszczółką",
+          "overview": "Ta lekcja pomoże przedstawić, jak zmienne mogą sprawiać, by programy skuteczniej działały pozwalając na zmianę wartości w trakcie uruchomionego kodu.",
+          "preparation": "-   Graj przez zagadki, aby znaleźć potencjalne obszary problemowe dla swojej klasy.\n-   Upewnij się, że każdy uczeń ma Dziennik Reflection.",
+          "purpose": "Ta lekcja ilustruje, w jaki sposób kod ze zmieniającymi się wartościami może być pomocny i przygotuje uczniów do zrozumienia, jak praca „dla pętli” w nadchodzących lekcjach.",
+          "student_overview": "Ta pszczółka uwielbia zmienne!"
+        },
+        "express-2023/For Loops with Bee": {
+          "name": "Pętle \"for\" z Pszczółką",
+          "overview": "Z pszczółką w roli głównej na tej lekcji skupimy się na pętlach \"dla\" i użyciu rosnących skokowo zmiennych do rozwiązywania bardziej skomplikowanych łamigłówek. Uczniowie rozpoczną od powtórki poświęconej pętlom z poprzednich lekcji, a następnie przejdą przez wprowadzenie do pętli \"dla\", tak, aby mogli bardziej skutecznie rozwiązywać skomplikowane problemy.",
+          "preparation": "-   Graj przez zagadki, aby znaleźć potencjalne obszary problemowe dla swojej klasy.\n-   Upewnij się, że każdy uczeń ma Dziennik Reflection.",
+          "purpose": "Dzisiejsza koncepcja, dla pętli są bardzo ważnym tematem w informatyce. Nie tylko są szeroko stosowane, ale proces uczenia się pętli zwiększa uczenie się innych ważnych pojęć (takich jak zmienne i parametry). Studenci będą mieli mnóstwo praktyki krytycznie myślenia poprzez problemy poprzez określenie wartości początkowych, końcowych i krokowych dla każdej pętli. Koncepcja ta wykorzystuje również mnóstwo matematyki, więc możesz sparować ją z lekcją matematyki, aby uzyskać jeszcze głębsze doświadczenie w nauce.",
+          "student_overview": "Bzz bzz. W tych łamigłówkach będziesz prowadzić pszczółkę do nektaru i miodu używając pętli \"dla\"!"
+        },
+        "express-2023/For Loops with Artist": {
+          "name": "Pętle \"for\" z Artystą",
+          "overview": "Na tej lekcji uczniowie będą kontynuować ćwiczenie pętli \"dla\", ale tym razem korzystając z interfejsu Artist. Uczniowie będą rozwiązywać łamigłówki łącząc koncepcje zmiennych, pętli oraz pętli \"dla\" tak, aby utworzyć złożone projekty. Na koniec będą mieli okazję tworzyć własną grafikę na poziomie czasu na zabawę.",
+          "preparation": "-   Przejrzyj lekcję, aby znaleźć i potencjalne obszary problemowe dla swojej klasy.\n-   Upewnij się, że każdy uczeń ma Dziennik Reflection.",
+          "purpose": "Kreatywność i krytyczne myślenie łączą się pięknie w tej lekcji. Uczniowie będą kontynuować swoją praktykę dla pętli i zmiennych podczas tworzenia obrazów upuszczających szczęki. Ta lekcja inspiruje kreatywnego umysłu podczas nauczania podstawowych koncepcji informatyki.",
+          "student_overview": "Przygotuj się na stworzenie kolejnego dzieła. Teraz będziesz używać pętli \"dla\", aby tworzyć takie obrazki, na widok których odbiorcom opadnie szczęka."
+        },
+        "express-2023/End of Course Project": {
+          "name": "Koniec projektu kursu",
+          "overview": "W trakcie tej lekcji podsumowującej uczniowie przechodzą proces projektowania, tworzenia i przedstawiania swoich własnych projektów!",
+          "preparation": "-   Spędzaj czas na tworzenie własnego projektu, korzystając z obu narzędzi projektowych dostępnych dla studentów. Zapoznaj się z możliwościami i ograniczeniami każdego narzędzia.\n-   Zmodyfikuj **\\\\ \\*rubryk**, aby dopasować się do celów zajęć i wydrukuj jedną kopię dla każdego ucznia lub grupy.\n-   Zmodyfikuj **\\\\ \\*przewodnik planowania projektu**, aby pasował do swojej klasy i wydrukuj jeden dla każdego ucznia lub grupy.",
+          "purpose": "Ta lekcja zapewnia studentom przestrzeń do stworzenia projektu własnego projektu, przy użyciu procesu krok po kroku, który wymaga planowania, ale pozwala również na szeroką kreatywność.",
+          "student_overview": "Przygotuj ręce na ogromne kodowanie! Czas rozpocząć budowanie swojego projektu."
+        },
+        "pre-express-2023/Learn to Drag and Drop": {
+          "name": "Nauka metody przeciągać i upuszczać",
+          "overview": "Ta lekcja da uczniom wyobrażenie, czego się spodziewać po wejściu do laboratorium komputerowego. Zaczyna się od krótkiej dyskusji wprowadzającej ich do zachowania się w laboratorium komputerowym, a następnie przechodzą oni do korzystania z komputera, aby ukończyć łamigłówki online.",
+          "preparation": "-   Obejrzyj **\\\\ \\*Jak zrobić sekcję klasy na Code.org** - film dla nauczycieli. Stwórz własną sekcję zajęć na Code.org i upewnij się, że każdy uczeń ma kartę ze swoim hasła\\*\\*.\n    — upewnij się, że uczestnicy kursu będą mogli uzyskać dostęp do Lekcji 2 ze swoich urządzeń. Zastanów się, czy chcesz ukryć przyszłe lekcje, aby uniemożliwić uczniom zbyt szybkie poruszanie się naprzód.\n-   Poproś szkolnego informatyka, aby dodać szybki link do sekcji zajęć do pulpitu komputera.\n    — Przejrzyj witrynę internetową Common Sense Education, aby uzyskać więcej informacji dotyczących bezpieczeństwa online",
+          "purpose": "Głównym celem tej lekcji jest rozwijanie umiejętności uczniów z komputeremi. Przybliżając najbardziej podstawowe funkcje komputera, takie jak klikanie, przeciąganie i upuszczanie, stwarzamy wszystkim uczniom w klasie równe szanse dla przyszłych łamigłówek. Ta lekcja stanowi również doskonałą okazję do wprowadzenia podstawowej terminologii w zakresie sprzętu komputerowego, potencjalnie obejmującego \"myszkę\", \"trackpad\" lub \"ekran dotykowy\" w zależności od Twoich urządzeń.",
+          "student_overview": "Kliknij i przeciągnij, by ukończyć łamigłówki."
+        },
+        "pre-express-2023/Sequencing with Scrat": {
+          "name": "Tworzenie sekwencji ze Scratem",
+          "overview": "Przy pomocy Scrata z franszyzy \"Epoka lodowcowa\" [Ice Age] uczniowie opracują algorytmy sekwencyjne, aby przeprowadzić wiewiórkę z jednej strony labiryntu do żołędzia po drugiej stronie. W tym celu układają bloki kodu w porządku liniowym.",
+          "preparation": "-   Upewnij się, że każdy uczeń ma Dziennik Reflection.",
+          "purpose": "Podczas tej lekcji uczniowie rozwiną umiejętności programowania i debugowania na platformie komputerowej. Blokowy format łamigłówek pomaga im poznać kolejność czynności i pojęcia, nie martwiąc się o doskonalenie składni.",
+          "student_overview": "Zaprogramuj Scrata tak, aby doszedł do żołędzia."
+        },
+        "pre-express-2023/Programming with Angry Birds": {
+          "name": "Programowanie z Angry Birds",
+          "overview": "Przy pomocy postaci z gry \"Epoki lodowcotej\" [Ice Age] uczniowie opracują algorytmy sekwencyjne, aby przeprowadzić ptaka z jednej strony labiryntu do świnki po drugiej stronie. W tym celu układają bloki kodu w porządku liniowym, przez co postaci poruszają się prosto, skręcają w lewo lub w prawo.",
+          "preparation": "-   Przejrzyj lekcję, aby znaleźć potencjalne obszary problemowe dla swojej klasy.\n-   (Opcjonalnie) Wybierz kilka zagadek do zrobienia jako grupa z klasą.\n-   Upewnij się, że każdy student ma Dziennik Reflection.",
+          "purpose": "Podczas tej lekcji uczniowie rozwiną umiejętności programowania i debugowania na platformie komputerowej. Blokowy format łamigłówek pomaga im poznać kolejność czynności i pojęcia, nie martwiąc się o doskonalenie składni."
+        },
+        "pre-express-2023/Programming with Rey and BB-8": {
+          "name": "Programowanie z Reyem i BB-8",
+          "overview": "Na tej lekcji uczniowie będą używać nowo nabytych umiejętności programowania w bardziej skomplikowane sposoby, aby nawigować po trudnej trasie z BB-8.",
+          "preparation": "-   Przejrzyj lekcję, aby znaleźć potencjalne obszary problemowe dla swojej klasy.\n-   Upewnij się, że każdy uczeń ma Dziennik Reflection.",
+          "purpose": "Mając na uwadze transfer wiedzy, na tej lekcji daje się uczniom nowego środowiska do ćwiczenia umiejętności, które kultywują. Fani \"Gwiezdnych wojen\" będą skakać z radości, gdy zobaczą te łamigłówki. Każdą łamigłówkę w tej serii dodano, aby zapewnić głębsze zrozumienie podstawowych pojęć, którymi będą się posługiwać przez pozostałą część kursu."
+        },
+        "pre-express-2023/Programming with Harvester": {
+          "name": "Programowanie przy pomocy interfejsu Harvester",
+          "overview": "Uczniowie będą stosować poznane koncepcje programowania do środowiska Żniwiarki. Teraz, zamiast samego doprowadzenia postaci do celu uczniowie będą zbierać kukurydzę używając nowego bloku. Uczniowie będą kontynuować rozwijanie sekwencyjnych umiejętności sekwencyjnych i zaczną korzystać z procesu debugowania.",
+          "preparation": "-   Graj przez zagadki, aby znaleźć potencjalne obszary problemowe dla swojej klasy\n-   Upewnij się, że każdy uczeń ma Dziennik Reflection.",
+          "purpose": "Podczas tej lekcji uczniowie będą rozwijać umiejętności debugowania i będą nadal rozwijać swoje umiejętności programistyczne.",
+          "student_overview": "Pomóż żniwiarce zebrać po drodze warzywa."
+        },
+        "pre-express-2023/Loops with Scrat": {
+          "name": "Pętle ze Scratem",
+          "overview": "W tej lekcji \\*\\*budowania umiejętnościach uczniowie będą ćwiczyć koncepcję pętli w programowaniu łamigłówek, w których celem jest pomoc wiewiórce w dotarciu do żołędzia.",
+          "preparation": "-   (Opcjonalnie) Wybierz kilka zagadek do zrobienia jako grupa z klasą.\n-   Upewnij się, że każdy student ma Dziennik Reflection.",
+          "purpose": "Podczas tej lekcji uczniowie dowiedzą się więcej o pętlach i sposobach ich implementacji w kodzie w Blockly. Używanie _pętli_ jest ważną umiejętnością w programowaniu, ponieważ powtarzanie poleceń bez pętli jest uciążliwe i nieefektywne. Dzięki łamigłówkom Code.org uczniowie nauczą się dodawać instrukcje do istniejących pętli, gromadzić powtarzający się kod w pętlach i rozpoznawać układy instrukcji, które należy powtarzać.",
+          "student_overview": "Pomóż Scratowi objąć więcej terenu używając pętli."
+        },
+        "pre-express-2023/Loops with Laurel": {
+          "name": "Pętle z Laurel",
+          "overview": "Na tej lekcji uczniowie będą nadal poznawać koncepcję pętli. Tutaj, poszukiwaczka przygód, Laurel, używa pętli, aby zebrać skarb w miejscach otwartych jaskiń. Wprowadza się nowy blok \"zdobądź skarb\", aby pomóc jej w podróży.",
+          "preparation": "-   Graj przez zagadki, aby znaleźć potencjalne obszary problemowe dla swojej klasy.\n-   (Opcjonalnie) Wybierz kilka zagadek do zrobienia jako grupa z klasą.\n-   Upewnij się, że każdy student ma Dziennik Reflection.",
+          "purpose": "Ta lekcja umożliwia uczniom zdobycie większej praktyki w korzystaniu z pętli i zachęca się ich do wstawiania wielu  bloków wewnątrz \"powtarzaj\", w trakcie próby zdobycia jak największej ilości skarbów."
+        },
+        "pre-express-2023/Ocean Scene with Loops": {
+          "name": "Scena oceanu z pętlami",
+          "overview": "Wracając do pętli, uczniowie uczą się rysować poprzez powtarzanie w pętli prostych sekwencji instrukcji. W poprzedniej lekcji pętle były użyte do przemierzania labiryntu i zbierania skarbów. Tutaj, pętle tworzą wzorce. Pod koniec tego etapu uczniowie będą mieli możliwość tworzenia własnych obrazów za pomocą pętli.",
+          "preparation": "-   Graj przez zagadki, aby znaleźć potencjalne obszary problemowe dla swojej klasy.\n-   Upewnij się, że każdy student ma Dziennik Reflection.",
+          "purpose": "Ta lekcja dostarcza innego spojrzenia na to, jak pętle mogą być wykorzystane w programowaniu. Uczniowie mogą również zastanowić się nad nieefektywnością programowania bez pętli z powodu liczby bloków, które program mógłby potrzebować bez użycia pętli \"powtarzaj\".",
+          "student_overview": "Używaj pętli i wzorców, aby ukończyć ilustracje."
+        },
+        "pre-express-2023/Drawing Gardens with Loops": {
+          "name": "Rysowanie ogrodów z pętlami",
+          "overview": "Wracając do pętli, uczniowie uczą się rysować poprzez powtarzanie w pętli prostych sekwencji instrukcji. W poprzedniej lekcji pętle były użyte do przemierzania labiryntu i zbierania skarbów. Tutaj, uczniowie używają pętli do tworzenia wzorców. Pod koniec tego etapu uczniowie będą mieli możliwość tworzenia własnych obrazów za pomocą pętli.",
+          "preparation": "-   Przejrzyj lekcję, aby znaleźć potencjalne obszary problemowe dla swojej klasy.\n-   Upewnij się, że każdy student ma dziennik refleksji.",
+          "purpose": "Ta lekcja dostarcza innego spojrzenia na to, jak pętle mogą być wykorzystane w programowaniu. Uczniowie będą testować ich umiejętności krytycznego myślenia poprzez dokonanie oceny danego kodu i określenie potrzeb, które należy dodać, aby rozwiązać łamigłówkę. Uczniowie mogą również zastanowić się nad nieefektywnością programowania bez pętli z powodu liczby bloków, które program mógłby potrzebować bez użycia pętli \"powtarzaj\".",
+          "student_overview": "Używaj wzorców i pętli, aby ukończyć obrazki."
+        },
+        "pre-express-2023/On the Move with Events": {
+          "name": "W drodze ze zdarzeniami",
+          "overview": "W ramach tych zajęć online uczniowie będą mieli okazję dowiedzieć się, jak korzystać ze zdarzeń w Play Lab i zastosować wszystkie umiejętności programowania, które nabyli, aby utworzyć animowaną grę. Czas na kreatywność i utworzenie historyjki w Play Lab!",
+          "preparation": "-   Graj przez zagadki, aby znaleźć potencjalne obszary problemowe dla swojej klasy.\n-   (Opcjonalnie) Wybierz kilka zagadek do zrobienia jako grupa z klasą.\n-   Upewnij się, że każdy student ma Dziennik Refleksji",
+          "purpose": "Uczniowie będą dalej rozwijać rozumienie zdarzeń za pomocą Play Lab. Zdarzenia są bardzo powszechnie stosowane w większości programów komputerowych. W tym ćwiczeniu uczniowie będą używać zdarzeń, aby poruszać postacią po ekranie, wydawać odgłosy i zmieniać tło w oparciu o zdarzenia inicjowane przez użytkownika.",
+          "student_overview": "Twórz swoją własną grę lub historyjkę."
+        },
+        "pre-express-2023/A Royal Battle with Events": {
+          "name": "Królewska bitwa ze zdarzeniami",
+          "overview": "W ramach tych zajęć online uczniowie będą mieli okazję dowiedzieć się, jak korzystać ze zdarzeń w Play Lab i zastosować wszystkie umiejętności kodowania, które nabyli, aby utworzyć animowaną grę. Czas na kreatywność i utworzenie gry w Play Lab!",
+          "preparation": "-   Graj przez zagadki, aby znaleźć potencjalne obszary problemowe dla swojej klasy.\n-   (Opcjonalnie) Wybierz kilka zagadek do zrobienia jako grupa z klasą.\n-   Upewnij się, że każdy uczeń ma dziennik refleksji.",
+          "purpose": " W ramach tych zajęć online, uczniowie będą się uczyć, jak korzystać ze zdarzeń w Play Lab. Rozpoczną oni od uczenia rycerza poruszać się, gdy zostanie wciśnięty klawisz ze strzałką, a zakończ umożliwieniem pochwalenia się pozostałymi umiejętnościami, które nabyli w ramach tego kursu, z użyciem sekwencji i pętli, w ramach łamigłówki w czasie zabawy.",
+          "student_overview": "Użyj zdarzeń, aby stworzyć historyjkę lub interaktywną grę."
+        },
+        "how-ai-works-2023/Introduction to Machine Learning": {
+          "name": "Wprowadzenie do uczenia maszynowego",
+          "overview": "Ta lekcja skupia się wokół [Jak działa AI: Co to jest uczenie maszynowe?](https://youtu.be/KHbwOetbmbs?list=PLzdnOPI1iJNeehd1RXhnVMBFi1WhWLx_Y) wideo z [How AI Works video series](https://www.youtube.com/playlist?list=PLzdnOPI1iJNeehd1RXhnVMBFi1WhWLx_Y). Obejrzyj ten film, zanim zapoznasz się z planem lekcji.\n\nPodczas tej lekcji uczniowie zapoznają się z formą sztucznej inteligencji zwaną uczeniem maszynowym i tym, jak mogą wykorzystać proces rozwiązywania problemów, aby pomóc wyszkolić robota w rozwiązywaniu problemów. Uczestniczą w trzech zajęciach uczenia maszynowego, w których robot - AI Bot - uczy się wykrywania wzorców u ryb.\n\nTa lekcja może być prowadzona samodzielnie lub jako część 7-lekcyjnej sekwencji na temat Jak działa sztuczna inteligencja - [kliknij tutaj, aby wyświetlić wszystkie lekcje w tej sekwencji](https://code.org/ai/how-ai-works).",
+          "student_overview": "Uczniowie zapoznają się z metodą sztucznej inteligencji zwaną uczeniem maszynowym i jak mogą wykorzystać proces rozwiązywania problemów do wytrenowania robota,  by rozwiązywał problemy. Uczestniczą w trzech zajęciach uczenia maszynowego, w których robot - A.I. Bot - uczy się rozpoznawania postaci ryb. Na pierwszym poziomie uczniowie trenuj robota w wykrywaniu „ryba” lub „nie ryba” i odkrywają, że więcej danych prowadzi do większej dokładności. Na drugim poziomie uczniowie trenują A.I. Bot do wykrywania niektórych kolorowych ryb lub ryb o określonych kształtach i odkrywają, że A.I  Bot może opierać swoje decyzje na niezamierzonych czynnikach. Na ostatnim poziomie uczniowie trenują A.I. Bot do wykrywania wyrażeń i odkrywają, że A.I. Bot może używać niepowiązanych cech do podejmowania decyzji w sposób, który nie jest sprawiedliwy. Lekcja kończy się ponownym potwierdzeniem, w jaki sposób proces rozwiązywania problemów jest wykorzystywany w uczeniu maszynowym. "
+        },
+        "how-ai-works-2023/Computer Vision": {
+          "name": "Wizja komputerowa",
+          "overview": "Ta lekcja skupia się wokół [Jak działa AI: Wizja komputerowa](https://youtu.be/2hXG8v8p0KM?list=PLzdnOPI1iJNeehd1RXhnVMBFi1WhWLx_Y) wideo z [How AI Works series video](https://www.youtube.com/playlist?list=PLzdnOPI1iJNeehd1RXhnVMBFi1WhWLx_Y). Obejrzyj ten film, zanim zapoznasz się z planem lekcji.\n\nUczniowie dowiadują się, jak działa wizja komputerowa. Najpierw patrzą na złudzenia optyczne, aby zidentyfikować cechy rysunku, które zauważyły ich oczy. Uczniowie oglądają film wyjaśniający wizję komputerową i sposób, w jaki komputer „widzi”. Projektują algorytm, który wykorzystuje sieć do decydowania, jaką liczbę wyświetla wyświetlacz siedmiosegmentowy. Na koniec uczniowie testują swój algorytm.\n\nTa lekcja może być prowadzona samodzielnie lub jako część 7-lekcyjnej sekwencji na temat Jak działa sztuczna inteligencja - [kliknij tutaj, aby wyświetlić wszystkie lekcje w tej sekwencji](https://code.org/ai/how-ai-works).",
+          "preparation": "-   Drukowanie kopii przewodnika aktywności sieci Computer Vision Network dla każdej grupy\n-   (Opcjonalnie) Drukuj kopie siedmiosegmentowego wyświetlacza manipulacyjnego",
+          "student_overview": "Dowiedz się, jak działa wizja komputerowa, projektując algorytm wykrywania liczb."
+        },
+        "how-ai-works-2023/Neural Networks": {
+          "name": "Sieci neuronowe",
+          "overview": "Ta lekcja skupia się wokół [Jak działa sztuczna inteligencja: sieci neuronowe](https://youtu.be/JrXazCEACVo?list=PLzdnOPI1iJNeehd1RXhnVMBFi1WhWLx_Y) wideo z [Seria filmów How AI Works](https://www.youtube.com/playlist?list=PLzdnOPI1iJNeehd1RXhnVMBFi1WhWLx_Y). Obejrzyj ten film, zanim zapoznasz się z planem lekcji.\n\nStudenci dowiadują się, jak działają sieci neuronowe. Najpierw omawiają przykład doświadczenia, które poleca ci rzeczy. Następnie używają widżetu, który poleca filmy na podstawie jednej osoby. Uczniowie oglądają film wyjaśniający sieci neuronowe. Używają zaktualizowanego widżetu, aby dostosować wagę każdej osoby. Na koniec uczniowie omawiają potrzebę różnorodnych perspektyw podczas tworzenia systemów rekomendacji.\n\nTa lekcja może być prowadzona samodzielnie lub jako część 7-lekcyjnej sekwencji na temat Jak działa sztuczna inteligencja - [kliknij tutaj, aby wyświetlić wszystkie lekcje w tej sekwencji](https://code.org/ai/how-ai-works).",
+          "preparation": "-   Drukowanie kopii zasobu WeTube Content Creators dla każdego ucznia\n-   Drukuj kopie przewodnika po aktywności sieci neuronowej dla każdego ucznia",
+          "student_overview": "Dowiedz się, jak działają sieci neuronowe, dostosowując wagi systemu rekomendacji w celu dostosowania wyjść."
+        },
+        "how-ai-works-2023/Chatbots and Large Language Models (LLMs)": {
+          "name": "Chatboty i modele dużych języków (LLM)",
+          "overview": "Ta lekcja skupia się wokół [Jak działa sztuczna inteligencja: Chatboty i modele dużych języków](https://youtu.be/X-AWdfSFCHQ) wideo z [Seria filmów Jak działa AI].[1]Obejrzyj ten film, zanim zapoznasz się z planem lekcji.\n\nLarge Language Models (LLM) generują nowy tekst. Tekst LLM generuje wygląda tak, jakby człowiek mógł go napisać, ponieważ duże modele językowe są zbudowane w oparciu o duże fragmenty tekstu, takie jak Wikipedia. W tej lekcji uczniowie dowiadują się, czym jest LLM i jak działa, a następnie używają LLM do współtworzenia tekstu z AI. Na koniec klasa podsumowuje dyskusję na temat tego, czy LLM są inteligentne czy kreatywne.\n\nTa lekcja może być prowadzona samodzielnie lub jako część 7-lekcyjnej sekwencji na temat Jak działa sztuczna inteligencja - [kliknij tutaj, aby wyświetlić wszystkie lekcje w tej sekwencji](https://code.org/ai/how-ai-works).",
+          "preparation": "-   Wydrukuj kopie przewodnika po ćwiczeniach dla każdego ucznia",
+          "student_overview": "Czy modele dużych języków (LLM) są inteligentne czy kreatywne? Zdecyduj sam, pracując z nimi, aby coś stworzyć, i dowiedz się więcej o tym, jak działają!"
+        },
+        "how-ai-works-2023/Generative Images": {
+          "name": "Obrazy generatywne",
+          "overview": "Ta lekcja skupia się wokół [Jak działa sztuczna inteligencja: kreatywność i wyobraźnia?](https://www.youtube.com/watch?v=X994dDnmRmY) wideo z [How AI Works video series](https://www.youtube.com/playlist?list=PLzdnOPI1iJNeehd1RXhnVMBFi1WhWLx_Y). Obejrzyj ten film, zanim zapoznasz się z planem lekcji.\n\nModele dyfuzji generują obrazy. Difusion AI konwertuje obraz na szum i szkoli sztuczną inteligencję, aby odwrócić proces. W tej lekcji uczniowie dowiadują się, w jaki sposób sztuczna inteligencja może generować obrazy, a następnie badają widżet AI dyfuzji. Na koniec klasa zakończyła się dyskusją na temat tego, czy te modele są kreatywne.\n\nTa lekcja może być prowadzona samodzielnie lub jako część 7-lekcyjnej sekwencji na temat Jak działa sztuczna inteligencja - [kliknij tutaj, aby wyświetlić wszystkie lekcje w tej sekwencji](https://code.org/ai/how-ai-works).",
+          "preparation": "-   Wydrukuj kopie przewodnika po ćwiczeniach dla każdego ucznia",
+          "student_overview": "Dowiedz się, jak sztuczna inteligencja może generować obrazy, eksplorując widżet sztucznej inteligencji."
+        },
+        "how-ai-works-2023/Algorithmic Bias": {
+          "name": "Algorytmiczne odchylenie",
+          "overview": "Ta lekcja skupia się wokół [Jak działa sztuczna inteligencja: równy dostęp i stronniczość algorytmiczna](https://youtu.be/tJQSyzBUAew?list=PLzdnOPI1iJNeehd1RXhnVMBFi1WhWLx_Y) wideo z [Seria filmów How AI Works].[1]Obejrzyj ten film, zanim zapoznasz się z planem lekcji.\n\nW tej lekcji uczniowie będą ćwiczyć kadrowanie obrazów, aby odkryć stronniczość leżącą u podstaw algorytmu przycinania na Twitterze. Następnie uczniowie przeczytają i obejrzą film o odkryciu tego stronniczego algorytmu. Na koniec uczniowie omówią sposoby rozpoznawania i zmniejszania uprzedzeń wraz z analizą odpowiedzi Twittera na zarzuty stronniczości w ich algorytmie kadrowania.\n\nTa lekcja może być prowadzona samodzielnie lub jako część 7-lekcyjnej sekwencji na temat Jak działa sztuczna inteligencja - [kliknij tutaj, aby wyświetlić wszystkie lekcje w tej sekwencji](https://code.org/ai/how-ai-works).",
+          "preparation": "-   Ukończ ćwiczenie widżetu kadrowania samodzielnie, aby zobaczyć, czego będą doświadczać Twoi uczniowie z widżetem i jakie pytania lub problemy mogą wywołać.\n-   Obejrzyj fragmenty filmu [„Czy automatyzujemy rasizm?”](https://youtu.be/Ok5sKLXqynQ) o których mowa w planie lekcji.\n-   Przeczytaj dwa artykuły z sekcji linków poniżej.",
+          "student_overview": "W tej lekcji będziesz pracować nad kadrowaniem obrazów i omówić wyzwania i uprzedzenia związane z nauczaniem maszyny, jak przycinać obraz."
+        },
+        "how-ai-works-2023/Our AI Code of Ethics": {
+          "name": "Godzina kodowania - Etyka AI",
+          "overview": "Ta lekcja skupia się wokół [Jak działa sztuczna inteligencja: prywatność i przyszłość pracy](https://youtu.be/zNxw5gJtHLc?list=PLzdnOPI1iJNeehd1RXhnVMBFi1WhWLx_Y) wideo z [How AI Works series](https://www.youtube.com/playlist?list=PLzdnOPI1iJNeehd1RXhnVMBFi1WhWLx_Y). Obejrzyj ten film, zanim zapoznasz się z planem lekcji.\n\nW małych grupach uczniowie prowadzą badania przy użyciu artykułów i filmów, które ujawniają etyczne pułapki w wybranym przez siebie obszarze sztucznej inteligencji. Następnie każda grupa opracowuje co najmniej jedną zasadę zorientowaną na rozwiązania, która dotyczy wybranego przez nią obszaru. Zasady te są następnie łączone w ogólnoklasowy zasób „Nasz kodeks etyki AI” (np. prezentacja slajdów, dokument lub strona internetowa) dla twórców sztucznej inteligencji i ustawodawców na całym świecie.\n\nTa lekcja może być prowadzona samodzielnie lub jako część 7-lekcyjnej sekwencji na temat Jak działa sztuczna inteligencja - [kliknij tutaj, aby wyświetlić wszystkie lekcje w tej sekwencji](https://code.org/ai/how-ai-works).",
+          "student_overview": "Wspólnie badaj etykę sztucznej inteligencji i stwórz kodeks postępowania, który można udostępniać."
+        },
+        "how-ai-works-2023/How AI Works In a Day": {
+          "name": "Jak działa sztuczna inteligencja w jeden dzień",
+          "overview": "⚠️ Ta lekcja jest przeznaczona dla sal lekcyjnych, które chcą pokazać całą [Seria filmów How AI Works](https://www.youtube.com/playlist?list=PLzdnOPI1iJNeehd1RXhnVMBFi1WhWLx_Y) w ciągu jednego dnia\\*\\*. Nie jest przeznaczony do nauczania w kolejności z innymi lekcjami w tej jednostce, która wprowadza każdy film jeden dzień na raz.\n\nUczniowie śledzą każdy film, dopasowując słownictwo z filmu, następnie odpowiadając na pytanie refleksyjne dotyczące każdego filmu. Plan lekcji i slajdy są bardzo rzadkie i otwarte, aby umożliwić improwizację i dostosowanie do Twojej klasy.",
+          "preparation": "-   Wydrukuj przewodnik po\n    ćwiczeniach - Wyświetlaj slajdy na projektorze wideo"
+        },
         "Hour of Code/Hour of Code 2013": {
           "name": "Godzina Kodowania 2013"
         },
@@ -5637,6 +6712,9 @@
         },
         "allthethings/lesson-51": {
           "name": "Rubryki AI"
+        },
+        "allthethings/lesson-52": {
+          "name": "Dance Lab2"
         },
         "csd-post-survey/CSD post-course survey": {
           "name": "Ankieta dla uczniów po odbyciu kursu CSD ('18-'19)"

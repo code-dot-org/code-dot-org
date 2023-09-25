@@ -920,6 +920,9 @@
         "CourseD_Dance_2020_01_2021": {
           "dance_callout_01": "向程序里增加这个模块！"
         },
+        "CourseD_Dance_2020_01_2023": {
+          "dance_callout_01": "向程序里增加这个模块！"
+        },
         "CourseD_Dance_2020_02": {
           "arrow_buttons": "按方向按钮控制舞者。",
           "dance_callout_11_a": "将此模块添加到程序中。"
@@ -932,6 +935,10 @@
           "arrow_buttons": "按方向按钮控制舞者。",
           "dance_callout_11_a": "将此模块添加到程序中。"
         },
+        "CourseD_Dance_2020_02_2023": {
+          "arrow_buttons": "按方向按钮控制舞者。",
+          "dance_callout_11_a": "将此模块添加到程序中。"
+        },
         "CourseD_Dance_2020_04": {
           "dance_callout_02": "向程序里增加这个模块！"
         },
@@ -939,6 +946,9 @@
           "dance_callout_02": "向程序里增加这个模块！"
         },
         "CourseD_Dance_2020_04_2021": {
+          "dance_callout_02": "向程序里增加这个模块！"
+        },
+        "CourseD_Dance_2020_04_2023": {
           "dance_callout_02": "向程序里增加这个模块！"
         },
         "CourseD_Dance_2020_05": {
@@ -950,6 +960,9 @@
         "CourseD_Dance_2020_05_2021": {
           "dance_callout_05": "添加新事件到程序中。"
         },
+        "CourseD_Dance_2020_05_2023": {
+          "dance_callout_05": "添加新事件到程序中。"
+        },
         "CourseD_Dance_2020_06": {
           "dance_party_11_5_groups": "新模块！"
         },
@@ -957,6 +970,9 @@
           "dance_party_11_5_groups": "新模块！"
         },
         "CourseD_Dance_2020_06_2021": {
+          "dance_party_11_5_groups": "新模块！"
+        },
+        "CourseD_Dance_2020_06_2023": {
           "dance_party_11_5_groups": "新模块！"
         },
         "CourseD_Dance_2020_07": {
@@ -968,6 +984,9 @@
         "CourseD_Dance_2020_07_2021": {
           "setprop_hint": "新模块！"
         },
+        "CourseD_Dance_2020_07_2023": {
+          "setprop_hint": "新模块！"
+        },
         "CourseD_Dance_2020_09": {
           "new_block_3": "新模块！",
           "new_block_4": "新模块！"
@@ -977,6 +996,10 @@
           "new_block_4": "新模块！"
         },
         "CourseD_Dance_2020_09_2021": {
+          "new_block_3": "新模块！",
+          "new_block_4": "新模块！"
+        },
+        "CourseD_Dance_2020_09_2023": {
           "new_block_3": "新模块！",
           "new_block_4": "新模块！"
         },
@@ -1007,10 +1030,17 @@
           "minitoolbox": "点击这里扩展块。",
           "pointerlocation": "在这里拖动一个主题块。"
         },
+        "CourseF_outbreak2_2023": {
+          "minitoolbox": "点击这里扩展块。",
+          "pointerlocation": "在这里拖动一个主题块。"
+        },
         "CourseF_outbreak7": {
           "costumes_callout": "点击以制作新服装"
         },
         "CourseF_outbreak7_-2022-2": {
+          "costumes_tab": "点击这里为你的项目添加服装。"
+        },
+        "CourseF_outbreak7_2023": {
           "costumes_tab": "点击这里为你的项目添加服装。"
         },
         "Dance_2019_01": {
@@ -1067,6 +1097,9 @@
         "Fish Tank 3-validated_2021": {
           "spritelab_comment": "使用此模块记录你的或老师的代码是如何起作用的。"
         },
+        "Fish Tank 3-validated_2023": {
+          "spritelab_comment": "使用此模块记录你的或老师的代码是如何起作用的。"
+        },
         "Function intro Ryan": {
           "Function_intro_Ryan_1": "这条小小的指令能够让电脑以与工作区中一样的名字来运行一大堆代码。"
         },
@@ -1080,6 +1113,9 @@
           "Function_intro_Ryan_1": "这条小小的指令能够让电脑以与工作区中一样的名字来运行一大堆代码。"
         },
         "Function intro Ryan_2021": {
+          "Function_intro_Ryan_1": "这条小小的指令能够让电脑以与工作区中一样的名字来运行一大堆代码。"
+        },
+        "Function intro Ryan_2023": {
           "Function_intro_Ryan_1": "这条小小的指令能够让电脑以与工作区中一样的名字来运行一大堆代码。"
         },
         "Geometric Sun": {
@@ -1128,6 +1164,9 @@
         "MC_HOC_2017_03_Cole_2021": {
           "MC_HOC_2017_03_Cole_1": "这是一个\"重复\"循环！点击它进入工作区，并为其添加您想要一遍遍运行的代码。"
         },
+        "MC_HOC_2017_03_Cole_2023": {
+          "MC_HOC_2017_03_Cole_1": "这是一个\"重复\"循环！点击它进入工作区，并为其添加您想要一遍遍运行的代码。"
+        },
         "MC_HOC_2017_04_Cole": {
           "MC_HOC_2017_04_Cole_a": "代理人可以在水上悬停，但是玩家不能！"
         },
@@ -1141,6 +1180,9 @@
           "MC_HOC_2017_04_Cole_a": "代理人可以在水上悬停，但是玩家不能！"
         },
         "MC_HOC_2017_04_Cole_2021": {
+          "MC_HOC_2017_04_Cole_a": "代理人可以在水上悬停，但是玩家不能！"
+        },
+        "MC_HOC_2017_04_Cole_2023": {
           "MC_HOC_2017_04_Cole_a": "代理人可以在水上悬停，但是玩家不能！"
         },
         "MC_HOC_2017_06_Cole": {
@@ -1158,6 +1200,9 @@
         "MC_HOC_2017_06_Cole_2021": {
           "MC_HOC_2017_06_Cole_1": "您无法将这些方块扔掉，但是您可以编辑它们！"
         },
+        "MC_HOC_2017_06_Cole_2023": {
+          "MC_HOC_2017_06_Cole_1": "您无法将这些方块扔掉，但是您可以编辑它们！"
+        },
         "MC_HOC_2017_Ali": {
           "MC_HOC_2017_08_RY_1": "代理人可以在岩浆上悬停，但是斯蒂夫和艾利克斯不能！  "
         },
@@ -1171,6 +1216,9 @@
           "MC_HOC_2017_08_RY_1": "代理人可以在岩浆上悬停，但是斯蒂夫和艾利克斯不能！  "
         },
         "MC_HOC_2017_Ali_2021": {
+          "MC_HOC_2017_08_RY_1": "代理人可以在岩浆上悬停，但是斯蒂夫和艾利克斯不能！  "
+        },
+        "MC_HOC_2017_Ali_2023": {
           "MC_HOC_2017_08_RY_1": "代理人可以在岩浆上悬停，但是斯蒂夫和艾利克斯不能！  "
         },
         "NEW Course 4 Artist Functions 3": {
@@ -1245,6 +1293,9 @@
         "Overworld Chop Trees_2021": {
           "craft_callout_preplaced": "我们已将一些方块放在这儿，好方便你开始"
         },
+        "Overworld Chop Trees_2023": {
+          "craft_callout_preplaced": "我们已将一些方块放在这儿，好方便你开始"
+        },
         "Overworld House Frame Chosen": {
           "craft_callout_preplaced_house": "此代码将开始建造你的房子。你能完成吗？"
         },
@@ -1258,6 +1309,9 @@
           "craft_callout_preplaced_house": "此代码将开始建造你的房子。你能完成吗？"
         },
         "Overworld House Frame Chosen_2021": {
+          "craft_callout_preplaced_house": "此代码将开始建造你的房子。你能完成吗？"
+        },
+        "Overworld House Frame Chosen_2023": {
           "craft_callout_preplaced_house": "此代码将开始建造你的房子。你能完成吗？"
         },
         "Overworld Move to Sheep": {
@@ -1280,6 +1334,10 @@
           "craft_drag_block_callout": "拖动一个“向前移动”模块并接到其他模块下方",
           "craft_run_button_callout": "点击“运行”，试试你的程序"
         },
+        "Overworld Move to Sheep_2023": {
+          "craft_drag_block_callout": "拖动一个“向前移动”模块并接到其他模块下方",
+          "craft_run_button_callout": "点击“运行”，试试你的程序"
+        },
         "Overworld Place Wall": {
           "craft_inside_repeat": "将方块放在这里可以重复行动"
         },
@@ -1293,6 +1351,9 @@
           "craft_inside_repeat": "将方块放在这里可以重复行动"
         },
         "Overworld Place Wall_2021": {
+          "craft_inside_repeat": "将方块放在这里可以重复行动"
+        },
+        "Overworld Place Wall_2023": {
           "craft_inside_repeat": "将方块放在这里可以重复行动"
         },
         "Robot Doodle": {
@@ -1316,6 +1377,9 @@
         "Underground Avoiding Lava_2021": {
           "craft_callout_moveforward": "此代码会检查熔岩，你能添加一条向前移动的命令吗？"
         },
+        "Underground Avoiding Lava_2023": {
+          "craft_callout_moveforward": "此代码会检查熔岩，你能添加一条向前移动的命令吗？"
+        },
         "Underground Iron": {
           "craft_what_is_iron": "开采这块铁矿！"
         },
@@ -1331,6 +1395,9 @@
         "Underground Iron_2021": {
           "craft_what_is_iron": "开采这块铁矿！"
         },
+        "Underground Iron_2023": {
+          "craft_what_is_iron": "开采这块铁矿！"
+        },
         "Virtual Pet 2_-2022-2": {
           "vp_costumes": "点击这里为你的项目添加新服装！"
         },
@@ -1343,10 +1410,16 @@
         "Virtual Pet 2_2021": {
           "vp_costumes": "点击这里为你的项目添加新服装！"
         },
+        "Virtual Pet 2_2023": {
+          "vp_costumes": "点击这里为你的项目添加新服装！"
+        },
         "Virtual Pet 6_-2022-2": {
           "vp_costumes": "点击这里为你的项目添加新服装！"
         },
         "Virtual Pet 6_2021": {
+          "vp_costumes": "点击这里为你的项目添加新服装！"
+        },
+        "Virtual Pet 6_2023": {
           "vp_costumes": "点击这里为你的项目添加新服装！"
         },
         "behaviors 1": {
@@ -1417,10 +1490,16 @@
         "courseA_EOC_playlab_animals2022": {
           "question_mark": "?"
         },
+        "courseA_EOC_playlab_animals_2023": {
+          "question_mark": "?"
+        },
         "courseA_EOC_playlab_fantasy": {
           "question_mark": "?"
         },
         "courseA_EOC_playlab_fantasy2022": {
+          "question_mark": "?"
+        },
+        "courseA_EOC_playlab_fantasy_2023": {
           "question_mark": "?"
         },
         "courseA_EOC_playlab_people": {
@@ -1429,10 +1508,16 @@
         "courseA_EOC_playlab_people2022": {
           "question_mark": "?"
         },
+        "courseA_EOC_playlab_people_2023": {
+          "question_mark": "?"
+        },
         "courseA_artist_loops4": {
           "courseA_artist_loops4_1": "这个数字告诉你, 你可以在这个谜题中使用多少块。"
         },
         "courseA_artist_loops42022": {
+          "courseA_artist_loops4_1": "这个数字告诉你, 你可以在这个谜题中使用多少块。"
+        },
+        "courseA_artist_loops42022_2023": {
           "courseA_artist_loops4_1": "这个数字告诉你, 你可以在这个谜题中使用多少块。"
         },
         "courseA_artist_loops4_2018": {
@@ -1453,6 +1538,9 @@
         "courseA_artist_loops72022": {
           "courseA_artist_loops7_1": "这个数字意味着只有一个这样的模块可以在最终的答案中使用。"
         },
+        "courseA_artist_loops72022_2023": {
+          "courseA_artist_loops7_1": "这个数字意味着只有一个这样的模块可以在最终的答案中使用。"
+        },
         "courseA_artist_loops7_2018": {
           "courseA_artist_loops7_1": "这个数字意味着只有一个这样的模块可以在最终的答案中使用。"
         },
@@ -1469,6 +1557,9 @@
           "courseA_artist_loops8_1": "你知道在任何时候，都能往回画线吗？"
         },
         "courseA_artist_loops82022": {
+          "courseA_artist_loops8_1": "你知道在任何时候，都能往回画线吗？"
+        },
+        "courseA_artist_loops82022_2023": {
           "courseA_artist_loops8_1": "你知道在任何时候，都能往回画线吗？"
         },
         "courseA_artist_loops8_2018": {
@@ -1498,6 +1589,9 @@
         "courseA_collector_loops1_2021": {
           "courseA_collector_loops1_1": "你在工具箱中看到了一些新的模块吗？ 别担心, 我们会在以后的阶段告诉你如何使用它们。"
         },
+        "courseA_collector_loops1_2023": {
+          "courseA_collector_loops1_1": "你在工具箱中看到了一些新的模块吗？ 别担心, 我们会在以后的阶段告诉你如何使用它们。"
+        },
         "courseA_collector_loops3": {
           "gradek_adventurer_loops2_1": "这个数字告诉你, 你可以在这个谜题中使用多少块。"
         },
@@ -1514,6 +1608,9 @@
           "gradek_adventurer_loops2_1": "这个数字告诉你, 你可以在这个谜题中使用多少块。"
         },
         "courseA_collector_loops3_2021": {
+          "gradek_adventurer_loops2_1": "这个数字告诉你, 你可以在这个谜题中使用多少块。"
+        },
+        "courseA_collector_loops3_2023": {
           "gradek_adventurer_loops2_1": "这个数字告诉你, 你可以在这个谜题中使用多少块。"
         },
         "courseA_collector_preLoops1": {
@@ -1546,6 +1643,9 @@
         "courseA_maze_ramp2_2021": {
           "courseC_maze_programming2_1": "这是工具箱。在那里你可以找到额外的模块来完成你的关卡。"
         },
+        "courseA_maze_ramp2_2023": {
+          "courseC_maze_programming2_1": "这是工具箱。在那里你可以找到额外的模块来完成你的关卡。"
+        },
         "courseA_maze_ramp3a_2018": {
           "courseC_maze_programming2_1": "这是工具箱。在那里你可以找到额外的模块来完成你的关卡。"
         },
@@ -1567,6 +1667,9 @@
         "courseA_maze_seq1_2021": {
           "courseA_maze_seq1_1": "当您需要提示时点击灯泡!"
         },
+        "courseA_maze_seq1_2023": {
+          "courseA_maze_seq1_1": "当您需要提示时点击灯泡!"
+        },
         "courseA_maze_seq2": {
           "courseA_maze_seqA_callout1": "使用步骤按钮循序渐进地通过程序。这将帮助您找到 bug！"
         },
@@ -1577,6 +1680,9 @@
           "courseA_playlab_events4_callout1": "这是一个标注"
         },
         "courseA_playLab_events42022": {
+          "courseA_playlab_events4_callout1": "这是一个标注"
+        },
+        "courseA_playLab_events42022_2023": {
           "courseA_playlab_events4_callout1": "这是一个标注"
         },
         "courseA_playLab_events4_2018": {
@@ -1597,6 +1703,9 @@
         "courseA_playLab_events52022": {
           "courseA_playLab_events5_1": "单击此处可更改事件箭头的方向。"
         },
+        "courseA_playLab_events52022_2023": {
+          "courseA_playLab_events5_1": "单击此处可更改事件箭头的方向。"
+        },
         "courseA_playLab_events5_2018": {
           "courseA_playLab_events5_1": "单击此处可更改事件箭头的方向。"
         },
@@ -1615,6 +1724,9 @@
         "courseA_playLab_events62022": {
           "courseA_playLab_events6_1": "这让你选择一个 \"随机\" 的声音，这意味着在你听到声音前，不知道你会得到什么!"
         },
+        "courseA_playLab_events62022_2023": {
+          "courseA_playLab_events6_1": "这让你选择一个 \"随机\" 的声音，这意味着在你听到声音前，不知道你会得到什么!"
+        },
         "courseA_playLab_events6_2018": {
           "courseA_playLab_events6_1": "这让你选择一个 \"随机\" 的声音，这意味着在你听到声音前，不知道你会得到什么!"
         },
@@ -1630,6 +1742,9 @@
         "courseB_Scrat_ramp12022": {
           "grade2_CaringForNewPet_0_1": "连接完所有的模块后, 按 \"运行\" 来启动你的程序。"
         },
+        "courseB_Scrat_ramp12022_2023": {
+          "grade2_CaringForNewPet_0_1": "连接完所有的模块后, 按 \"运行\" 来启动你的程序。"
+        },
         "courseB_Scrat_ramp1_2018": {
           "grade2_CaringForNewPet_0_1": "连接完所有的模块后, 按 \"运行\" 来启动你的程序。"
         },
@@ -1643,6 +1758,9 @@
           "grade2_CaringForNewPet_0_1": "连接完所有的模块后, 按 \"运行\" 来启动你的程序。"
         },
         "courseB_Scrat_ramp3a2022": {
+          "courseC_maze_programming2_1": "这是工具箱。在那里你可以找到额外的模块来完成你的关卡。"
+        },
+        "courseB_Scrat_ramp3a2022_2023": {
           "courseC_maze_programming2_1": "这是工具箱。在那里你可以找到额外的模块来完成你的关卡。"
         },
         "courseB_Scrat_ramp3a_2019": {
@@ -1672,6 +1790,9 @@
         "courseB_artist_loops3_2021": {
           "courseB_artist_loops3_1": "工具箱中只有一个这样的模块。你将如何使用它？"
         },
+        "courseB_artist_loops3_2023": {
+          "courseB_artist_loops3_1": "工具箱中只有一个这样的模块。你将如何使用它？"
+        },
         "courseB_artist_loops5": {
           "courseB_artist_loops5_1": "这个数字意味着工具箱中不再有这个块了。"
         },
@@ -1693,6 +1814,9 @@
         "courseB_collector_loops1_2021": {
           "courseB_collector_loops1_1": "你在工具箱中看到了一些新的模块吗？ 别担心, 我们会在以后的阶段告诉你如何使用它们。"
         },
+        "courseB_collector_loops1_2023": {
+          "courseB_collector_loops1_1": "你在工具箱中看到了一些新的模块吗？ 别担心, 我们会在以后的阶段告诉你如何使用它们。"
+        },
         "courseB_maze_seq1": {
           "courseB_maze_seq1": "当您需要提示时点击灯泡!"
         },
@@ -1709,6 +1833,9 @@
           "courseB_maze_seq1": "当您需要提示时点击灯泡!"
         },
         "courseB_maze_seq1_2021": {
+          "courseB_maze_seq1": "当您需要提示时点击灯泡!"
+        },
+        "courseB_maze_seq1_2023": {
           "courseB_maze_seq1": "当您需要提示时点击灯泡!"
         },
         "courseB_maze_seq2": {
@@ -1735,6 +1862,9 @@
         "courseB_playlab_events6_2021": {
           "courseB_playlab_events6_a": "使用绿色下拉箭头可更改方向。"
         },
+        "courseB_playlab_events6_2023": {
+          "courseB_playlab_events6_a": "使用绿色下拉箭头可更改方向。"
+        },
         "courseC19_playLab_EOC3": {
           "courseE_playLab_scaffold3_1": "让演员到这个标志移动到下一层。"
         },
@@ -1745,6 +1875,9 @@
           "courseE_playLab_scaffold3_1": "让演员到这个标志移动到下一层。"
         },
         "courseC19_playLab_EOC3_2021": {
+          "courseE_playLab_scaffold3_1": "让演员到这个标志移动到下一层。"
+        },
+        "courseC19_playLab_EOC3_2023": {
           "courseE_playLab_scaffold3_1": "让演员到这个标志移动到下一层。"
         },
         "courseC_PlayLab_events8": {
@@ -1765,6 +1898,9 @@
         "courseC_PlayLab_events8_2021": {
           "courseC_PlayLab_events8_callout1": "当企鹅和恐龙碰到一起时，使用这个模块！"
         },
+        "courseC_PlayLab_events8_2023": {
+          "courseC_PlayLab_events8_callout1": "当企鹅和恐龙碰到一起时，使用这个模块！"
+        },
         "courseC_PlayLab_events_challenge1": {
           "courseC_PlayLab_events_challenge1_1": "这个模块允许你把演员移动到游戏空间的不同部分。"
         },
@@ -1783,7 +1919,13 @@
         "courseC_PlayLab_events_challenge1_2021": {
           "courseC_PlayLab_events_challenge1_1": "这个模块允许你把演员移动到游戏空间的不同部分。"
         },
+        "courseC_PlayLab_events_challenge1_2023": {
+          "courseC_PlayLab_events_challenge1_1": "这个模块允许你把演员移动到游戏空间的不同部分。"
+        },
         "courseC_PlayLab_events_lesson_extras": {
+          "courseC_PlayLab_events_challenge1_1": "这个模块允许你把演员移动到游戏空间的不同部分。"
+        },
+        "courseC_PlayLab_events_lesson_extras_2023": {
           "courseC_PlayLab_events_challenge1_1": "这个模块允许你把演员移动到游戏空间的不同部分。"
         },
         "courseC_artist_loops1a2022": {
@@ -1798,6 +1940,9 @@
         "courseC_artist_loops1a_2021": {
           "jumpto_callout": "这个模块对这个项目很重要。请确认使用它。"
         },
+        "courseC_artist_loops1a_2023": {
+          "jumpto_callout": "这个模块对这个项目很重要。请确认使用它。"
+        },
         "courseC_artist_loops1b2022": {
           "sticker2": "将这个加到你程序的中部。"
         },
@@ -1808,6 +1953,9 @@
           "sticker2": "将这个加到你程序的中部。"
         },
         "courseC_artist_loops1b_2021": {
+          "sticker2": "将这个加到你程序的中部。"
+        },
+        "courseC_artist_loops1b_2023": {
           "sticker2": "将这个加到你程序的中部。"
         },
         "courseC_artist_loopsPrePre1a": {
@@ -1828,6 +1976,9 @@
         "courseC_artist_prog2_2021": {
           "slider": "你可以在这里放慢你的程序执行过程。"
         },
+        "courseC_artist_prog2_2023": {
+          "slider": "你可以在这里放慢你的程序执行过程。"
+        },
         "courseC_collector_prog1": {
           "courseC_collector_prog1_1": "你在工具箱中看到了一些新的模块吗？ 别担心, 我们会在以后的阶段告诉你如何使用它们。"
         },
@@ -1844,6 +1995,9 @@
           "courseC_collector_prog1_1": "你在工具箱中看到了一些新的模块吗？ 别担心, 我们会在以后的阶段告诉你如何使用它们。"
         },
         "courseC_collector_prog1_2021": {
+          "courseC_collector_prog1_1": "你在工具箱中看到了一些新的模块吗？ 别担心, 我们会在以后的阶段告诉你如何使用它们。"
+        },
+        "courseC_collector_prog1_2023": {
           "courseC_collector_prog1_1": "你在工具箱中看到了一些新的模块吗？ 别担心, 我们会在以后的阶段告诉你如何使用它们。"
         },
         "courseC_collector_prog7": {
@@ -1864,6 +2018,9 @@
         "courseC_collector_prog7_2021": {
           "courseC_collector_prog7_1": "如果你需要的话，可以从工具箱里取更多的模块！"
         },
+        "courseC_collector_prog7_2023": {
+          "courseC_collector_prog7_1": "如果你需要的话，可以从工具箱里取更多的模块！"
+        },
         "courseC_harvester_loops1": {
           "courseC_harvester_loops1_callout1": "南瓜上的数字四告诉你有四个南瓜可供挑选。"
         },
@@ -1880,6 +2037,9 @@
           "courseC_harvester_loops1_callout1": "南瓜上的数字四告诉你有四个南瓜可供挑选。"
         },
         "courseC_harvester_loops1_2021": {
+          "courseC_harvester_loops1_callout1": "南瓜上的数字四告诉你有四个南瓜可供挑选。"
+        },
+        "courseC_harvester_loops1_2023": {
           "courseC_harvester_loops1_callout1": "南瓜上的数字四告诉你有四个南瓜可供挑选。"
         },
         "courseC_maze_debugging5": {
@@ -1900,6 +2060,9 @@
         "courseC_maze_debugging5_2021": {
           "courseC_maze_debugging5_1": "这些块是锁定的, 不能删除!"
         },
+        "courseC_maze_debugging5_2023": {
+          "courseC_maze_debugging5_1": "这些块是锁定的, 不能删除!"
+        },
         "courseC_maze_debugging92022": {
           "courseC_maze_debugging9_2019_1": "模块可以从工具区拖到你的工作区。"
         },
@@ -1910,6 +2073,9 @@
           "courseC_maze_debugging9_2019_1": "模块可以从工具区拖到你的工作区。"
         },
         "courseC_maze_debugging9_2021": {
+          "courseC_maze_debugging9_2019_1": "模块可以从工具区拖到你的工作区。"
+        },
+        "courseC_maze_debugging9_2023": {
           "courseC_maze_debugging9_2019_1": "模块可以从工具区拖到你的工作区。"
         },
         "courseC_maze_debugging9_copy_2020": {
@@ -1933,6 +2099,9 @@
         "courseC_maze_programming1_2021": {
           "grade2_CaringForNewPet_0_1": "连接完所有的模块后, 按 \"运行\" 来启动你的程序。"
         },
+        "courseC_maze_programming1_2023": {
+          "grade2_CaringForNewPet_0_1": "连接完所有的模块后, 按 \"运行\" 来启动你的程序。"
+        },
         "courseC_maze_programming2": {
           "courseC_maze_programming2_1": "这是工具箱。在那里你可以找到额外的模块来完成你的关卡。"
         },
@@ -1949,6 +2118,9 @@
           "courseC_maze_programming2_1": "这是工具箱。在那里你可以找到额外的模块来完成你的关卡。"
         },
         "courseC_maze_programming2_2021": {
+          "courseC_maze_programming2_1": "这是工具箱。在那里你可以找到额外的模块来完成你的关卡。"
+        },
+        "courseC_maze_programming2_2023": {
           "courseC_maze_programming2_1": "这是工具箱。在那里你可以找到额外的模块来完成你的关卡。"
         },
         "courseC_maze_programming3": {
@@ -1975,6 +2147,10 @@
           "courseC_maze_programming3_2": "可以将额外的模块拖动到工具箱中, 以将其丢弃。",
           "courseC_maze_programming3_3": "这些块是石头, 不能扔掉。"
         },
+        "courseC_maze_programming3_2023": {
+          "courseC_maze_programming3_2": "可以将额外的模块拖动到工具箱中, 以将其丢弃。",
+          "courseC_maze_programming3_3": "这些块是石头, 不能扔掉。"
+        },
         "courseC_maze_programming4": {
           "courseC_maze_programming4_1": "这是你的模块限制。 它告诉你还可以使用多少个模块。"
         },
@@ -1993,6 +2169,9 @@
         "courseC_maze_programming4_2021": {
           "courseC_maze_programming4_1": "这是你的模块限制。 它告诉你还可以使用多少个模块。"
         },
+        "courseC_maze_programming4_2023": {
+          "courseC_maze_programming4_1": "这是你的模块限制。 它告诉你还可以使用多少个模块。"
+        },
         "courseC_maze_programming5": {
           "": "这些模块上面没有数字。可以随便使用多少个！"
         },
@@ -2009,6 +2188,9 @@
           "": "这些模块上面没有数字。可以随便使用多少个！"
         },
         "courseC_maze_programming5_2021": {
+          "": "这些模块上面没有数字。可以随便使用多少个！"
+        },
+        "courseC_maze_programming5_2023": {
           "": "这些模块上面没有数字。可以随便使用多少个！"
         },
         "courseC_maze_programming7": {
@@ -2035,6 +2217,10 @@
           "courseC_maze_programming7_1": "这是你的第一个挑战关卡！这些都是很难的，可能需要几次尝试。",
           "courseC_maze_programming7_2": "这些块是石头做的, 不能扔掉。"
         },
+        "courseC_maze_programming7_2023": {
+          "courseC_maze_programming7_1": "这是你的第一个挑战关卡！这些都是很难的，可能需要几次尝试。",
+          "courseC_maze_programming7_2": "这些块是石头做的, 不能扔掉。"
+        },
         "courseC_starWars_loops2": {
           "courseC_starWars_loops2": "在这个关卡中，你只能使用一个这样的模块。"
         },
@@ -2051,6 +2237,9 @@
           "courseC_starWars_loops2": "在这个关卡中，你只能使用一个这样的模块。"
         },
         "courseC_starWars_loops2_2021": {
+          "courseC_starWars_loops2": "在这个关卡中，你只能使用一个这样的模块。"
+        },
+        "courseC_starWars_loops2_2023": {
           "courseC_starWars_loops2": "在这个关卡中，你只能使用一个这样的模块。"
         },
         "courseC_starWars_loops2_copy": {
@@ -2080,6 +2269,9 @@
         "courseD_artist_nestedLoops1a_2021": {
           "courseD_artist_nestedLoops1a_1": "您不必使用颜色来做对这个谜题。如果您愿意的话, ‘随机颜色’模块会容易!"
         },
+        "courseD_artist_nestedLoops1a_2023": {
+          "courseD_artist_nestedLoops1a_1": "您不必使用颜色来做对这个谜题。如果您愿意的话, ‘随机颜色’模块会容易!"
+        },
         "courseD_artist_ramp11": {
           "courseD_artist_ramp11_1": "您可以更改此数字。",
           "courseD_artist_ramp11_2": "单击此处键入重复代码的次数。"
@@ -2101,6 +2293,9 @@
           "4_5_Bee_Conditionals_2_1": "请注意检查是否每一朵云里都有一朵花，但不用检查蜂窝。"
         },
         "courseD_bee_conditionals2_2021": {
+          "4_5_Bee_Conditionals_2_1": "请注意检查是否每一朵云里都有一朵花，但不用检查蜂窝。"
+        },
+        "courseD_bee_conditionals2_2023": {
           "4_5_Bee_Conditionals_2_1": "请注意检查是否每一朵云里都有一朵花，但不用检查蜂窝。"
         },
         "courseD_bee_conditionals2_copy": {
@@ -2129,6 +2324,9 @@
         "courseD_bee_conditionals_challenge2_2021": {
           "courseD_bee_conditionals_challenge2_1": "使用这个循环收集所有的花蜜 (或蜂蜜) 从一朵花 (或蜂窝)。"
         },
+        "courseD_bee_conditionals_challenge2_2023": {
+          "courseD_bee_conditionals_challenge2_1": "使用这个循环收集所有的花蜜 (或蜂蜜) 从一朵花 (或蜂窝)。"
+        },
         "courseD_bee_debugging_challenge1": {
           "courseD_bee_debugging_challenge1_callout1": "使用此命令可将蜜蜂向后移动。"
         },
@@ -2139,6 +2337,9 @@
           "stepButton": "尝试一次一个模块地遍历代码。"
         },
         "courseD_bee_nestedLoops1a_2021": {
+          "stepButton": "尝试一次一个模块地遍历代码。"
+        },
+        "courseD_bee_nestedLoops1a_2023": {
           "stepButton": "尝试一次一个模块地遍历代码。"
         },
         "courseD_collector_ramp8": {
@@ -2159,6 +2360,9 @@
         "courseD_farmer_while7_2021": {
           "courseD_farmer_while7_2018_PathAhead": "要解决这个迷题，会用到`当前面有路时`模块。"
         },
+        "courseD_farmer_while7_2023": {
+          "courseD_farmer_while7_2018_PathAhead": "要解决这个迷题，会用到`当前面有路时`模块。"
+        },
         "courseD_maze_intro42022": {
           "courseC_maze_programming4_1": "这是你的模块限制。 它告诉你还可以使用多少个模块。"
         },
@@ -2171,6 +2375,9 @@
         "courseD_maze_intro4_2021": {
           "courseC_maze_programming4_1": "这是你的模块限制。 它告诉你还可以使用多少个模块。"
         },
+        "courseD_maze_intro4_2023": {
+          "courseC_maze_programming4_1": "这是你的模块限制。 它告诉你还可以使用多少个模块。"
+        },
         "courseD_maze_intro5a2022": {
           "": "这些模块上面没有数字。可以随便使用多少个！"
         },
@@ -2181,6 +2388,9 @@
           "": "这些模块上面没有数字。可以随便使用多少个！"
         },
         "courseD_maze_intro5a_2021": {
+          "": "这些模块上面没有数字。可以随便使用多少个！"
+        },
+        "courseD_maze_intro5a_2023": {
           "": "这些模块上面没有数字。可以随便使用多少个！"
         },
         "courseD_maze_ramp1": {
@@ -2201,6 +2411,9 @@
         "courseD_maze_ramp1_2021": {
           "grade2_CaringForNewPet_0_1": "连接完所有的模块后, 按 \"运行\" 来启动你的程序。"
         },
+        "courseD_maze_ramp1_2023": {
+          "grade2_CaringForNewPet_0_1": "连接完所有的模块后, 按 \"运行\" 来启动你的程序。"
+        },
         "courseD_maze_ramp2": {
           "courseC_maze_programming2_1": "这是工具箱。在那里你可以找到额外的模块来完成你的关卡。"
         },
@@ -2217,6 +2430,9 @@
           "courseC_maze_programming2_1": "这是工具箱。在那里你可以找到额外的模块来完成你的关卡。"
         },
         "courseD_maze_ramp2_2021": {
+          "courseC_maze_programming2_1": "这是工具箱。在那里你可以找到额外的模块来完成你的关卡。"
+        },
+        "courseD_maze_ramp2_2023": {
           "courseC_maze_programming2_1": "这是工具箱。在那里你可以找到额外的模块来完成你的关卡。"
         },
         "courseD_maze_ramp3": {
@@ -2240,6 +2456,10 @@
           "stone_block_2": "灰色的块是石头做的, 不能扔掉。"
         },
         "courseD_maze_ramp3_2021": {
+          "courseC_maze_programming3_2": "可以将额外的模块拖动到工具箱中, 以将其丢弃。",
+          "stone_block_2": "灰色的块是石头做的, 不能扔掉。"
+        },
+        "courseD_maze_ramp3_2023": {
           "courseC_maze_programming3_2": "可以将额外的模块拖动到工具箱中, 以将其丢弃。",
           "stone_block_2": "灰色的块是石头做的, 不能扔掉。"
         },
@@ -2271,6 +2491,9 @@
           "": "这些模块上面没有数字。可以随便使用多少个！"
         },
         "courseD_maze_ramp5_2021": {
+          "": "这些模块上面没有数字。可以随便使用多少个！"
+        },
+        "courseD_maze_ramp5_2023": {
           "": "这些模块上面没有数字。可以随便使用多少个！"
         },
         "courseD_maze_ramp5a": {
@@ -2334,6 +2557,9 @@
         "courseE_aboutme_2_2021": {
           "": "点这里！"
         },
+        "courseE_aboutme_2_2023": {
+          "": "点击这里为你的项目添加服装。"
+        },
         "courseE_artist_functions1": {
           "courseD_artist_functions1_1": "让我们用这个模块来帮助创建第一个正方形。"
         },
@@ -2361,6 +2587,9 @@
         "courseE_artist_functions2_2021": {
           "courseD_artist_functions2_1": "当这些绿色的模块运行时，在函数里的所有代码都会运行。小艺术家在画出第一个正方形后，应该做什么？"
         },
+        "courseE_artist_functions2_2023": {
+          "courseD_artist_functions2_1": "当这些绿色的模块运行时，在函数里的所有代码都会运行。小艺术家在画出第一个正方形后，应该做什么？"
+        },
         "courseE_artist_functions2_copy": {
           "courseD_artist_functions2_1": "当这些绿色的模块运行时，在函数里的所有代码都会运行。小艺术家在画出第一个正方形后，应该做什么？"
         },
@@ -2383,6 +2612,9 @@
           "courseD_artist_functions8_1": "用来创建函数的模块已经移动到了工具箱的这个标签里。"
         },
         "courseE_artist_functions8a_2021": {
+          "courseD_artist_functions8_1": "用来创建函数的模块已经移动到了工具箱的这个标签里。"
+        },
+        "courseE_artist_functions8a_2023": {
           "courseD_artist_functions8_1": "用来创建函数的模块已经移动到了工具箱的这个标签里。"
         },
         "courseE_artist_functions_challenge1": {
@@ -2409,6 +2641,10 @@
           "courseE_artist_functions_challenge1_callout1": "通过在底部添加更多代码来保持这个程序运行。",
           "courseE_artist_functions_challenge1_callout2": "如果你不喜欢这个设计, 把它变成你想要的任何东西!"
         },
+        "courseE_artist_functions_challenge1_2023": {
+          "courseE_artist_functions_challenge1_callout1": "通过在底部添加更多代码来保持这个程序运行。",
+          "courseE_artist_functions_challenge1_callout2": "如果你不喜欢这个设计, 把它变成你想要的任何东西!"
+        },
         "courseE_artist_functions_challenge2": {
           "courseE_artist_functions_challenge2_callout1": "通过在底部添加更多代码来保持这个程序运行。",
           "courseE_artist_functions_challenge2_callout2": "如果你不喜欢这个设计, 把它变成你想要的任何东西!"
@@ -2430,6 +2666,10 @@
           "courseE_artist_functions_challenge2_callout2": "如果你不喜欢这个设计, 把它变成你想要的任何东西!"
         },
         "courseE_artist_functions_challenge2_2021": {
+          "courseE_artist_functions_challenge2_callout1": "通过在底部添加更多代码来保持这个程序运行。",
+          "courseE_artist_functions_challenge2_callout2": "如果你不喜欢这个设计, 把它变成你想要的任何东西!"
+        },
+        "courseE_artist_functions_challenge2_2023": {
           "courseE_artist_functions_challenge2_callout1": "通过在底部添加更多代码来保持这个程序运行。",
           "courseE_artist_functions_challenge2_callout2": "如果你不喜欢这个设计, 把它变成你想要的任何东西!"
         },
@@ -2462,6 +2702,9 @@
         "courseE_farmer_functions13_2021": {
           "courseE_farmer_functions1a_1": "蔬菜类型是未知的。它会在每次运行程序时都改变。"
         },
+        "courseE_farmer_functions13_2023": {
+          "courseE_farmer_functions1a_1": "蔬菜类型是未知的。它会在每次运行程序时都改变。"
+        },
         "courseE_farmer_functions1_2018": {
           "courseE_farmer_functions1_2": "这个工具箱这次排放有点不同！点击不同的类别，看看有哪些模块。"
         },
@@ -2472,6 +2715,9 @@
           "courseE_farmer_functions1_2": "这个工具箱这次排放有点不同！点击不同的类别，看看有哪些模块。"
         },
         "courseE_farmer_functions1_2021": {
+          "courseE_farmer_functions1_2": "这个工具箱这次排放有点不同！点击不同的类别，看看有哪些模块。"
+        },
+        "courseE_farmer_functions1_2023": {
           "courseE_farmer_functions1_2": "这个工具箱这次排放有点不同！点击不同的类别，看看有哪些模块。"
         },
         "courseE_farmer_functions1a": {
@@ -2492,6 +2738,9 @@
         "courseE_farmer_functions1a_2021": {
           "courseE_farmer_functions1a_1": "蔬菜类型是未知的。它会在每次运行程序时都改变。"
         },
+        "courseE_farmer_functions1a_2023": {
+          "courseE_farmer_functions1a_1": "蔬菜类型是未知的。它会在每次运行程序时都改变。"
+        },
         "courseE_farmer_functions2b": {
           "courseE_farmer_functions1a_1": "蔬菜类型是未知的。它会在每次运行程序时都改变。"
         },
@@ -2508,6 +2757,9 @@
           "courseE_farmer_functions1a_1": "蔬菜类型是未知的。它会在每次运行程序时都改变。"
         },
         "courseE_farmer_functions2b_2021": {
+          "courseE_farmer_functions1a_1": "蔬菜类型是未知的。它会在每次运行程序时都改变。"
+        },
+        "courseE_farmer_functions2b_2023": {
           "courseE_farmer_functions1a_1": "蔬菜类型是未知的。它会在每次运行程序时都改变。"
         },
         "courseE_playLab_challenge1": {
@@ -2528,6 +2780,10 @@
           "run_button": "先按运行按钮！",
           "visualizationResizeBar": "拖动3个点以调整运行区域的大小。"
         },
+        "courseF_apps_aquarium_2023": {
+          "run_button": "先按运行按钮！",
+          "visualizationResizeBar": "拖动3个点以调整运行区域的大小。"
+        },
         "courseF_apps_card": {
           "visualizationResizeBar": "拖动3个点以调整运行区域的大小。"
         },
@@ -2535,6 +2791,9 @@
           "visualizationResizeBar": "拖动3个点以调整运行区域的大小。"
         },
         "courseF_apps_card_-2022-2": {
+          "visualizationResizeBar": "拖动3个点以调整运行区域的大小。"
+        },
+        "courseF_apps_card_2023": {
           "visualizationResizeBar": "拖动3个点以调整运行区域的大小。"
         },
         "courseF_apps_chatbot": {
@@ -2546,6 +2805,10 @@
           "visualizationResizeBar": "拖动3个点以调整运行区域的大小。"
         },
         "courseF_apps_chatbot_-2022-2": {
+          "run_button": "先按运行按钮！",
+          "visualizationResizeBar": "拖动3个点以调整运行区域的大小。"
+        },
+        "courseF_apps_chatbot_2023": {
           "run_button": "先按运行按钮！",
           "visualizationResizeBar": "拖动3个点以调整运行区域的大小。"
         },
@@ -2561,16 +2824,32 @@
           "run_button": "先按运行按钮！",
           "visualizationResizeBar": "拖动3个点以调整运行区域的大小。"
         },
+        "courseF_apps_collector_2023": {
+          "run_button": "先按运行按钮！",
+          "visualizationResizeBar": "拖动3个点以调整运行区域的大小。"
+        },
         "courseF_apps_collector_drag_-2022-2": {
+          "visualizationResizeBar": "拖动3个点以调整运行区域的大小。"
+        },
+        "courseF_apps_collector_drag_2023": {
           "visualizationResizeBar": "拖动3个点以调整运行区域的大小。"
         },
         "courseF_apps_collector_drive_-2022-2": {
           "visualizationResizeBar": "拖动3个点以调整运行区域的大小。"
         },
+        "courseF_apps_collector_drive_2023": {
+          "visualizationResizeBar": "拖动3个点以调整运行区域的大小。"
+        },
         "courseF_apps_collector_move2_-2022-2": {
           "visualizationResizeBar": "拖动3个点以调整运行区域的大小。"
         },
+        "courseF_apps_collector_move2_2023": {
+          "visualizationResizeBar": "拖动3个点以调整运行区域的大小。"
+        },
         "courseF_apps_collector_move_-2022-2": {
+          "visualizationResizeBar": "拖动3个点以调整运行区域的大小。"
+        },
+        "courseF_apps_collector_move_2023": {
           "visualizationResizeBar": "拖动3个点以调整运行区域的大小。"
         },
         "courseF_apps_madlib": {
@@ -2582,6 +2861,9 @@
         "courseF_apps_madlib_-2022-2": {
           "visualizationResizeBar": "拖动3个点以调整运行区域的大小。"
         },
+        "courseF_apps_madlib_2023": {
+          "visualizationResizeBar": "拖动3个点以调整运行区域的大小。"
+        },
         "courseF_apps_pet": {
           "run_button": "先按运行按钮！",
           "visualizationResizeBar": "拖动3个点以调整运行区域的大小。"
@@ -2591,6 +2873,10 @@
           "visualizationResizeBar": "拖动3个点以调整运行区域的大小。"
         },
         "courseF_apps_pet_-2022-2": {
+          "run_button": "先按运行按钮！",
+          "visualizationResizeBar": "拖动3个点以调整运行区域的大小。"
+        },
+        "courseF_apps_pet_2023": {
           "run_button": "先按运行按钮！",
           "visualizationResizeBar": "拖动3个点以调整运行区域的大小。"
         },
@@ -2610,6 +2896,9 @@
           "courseF_artist_for1_1": "工具箱是\"分类\"模式，这会给代码留出更多的空间。`计数循环`在这里。"
         },
         "courseF_artist_for1_2021": {
+          "courseF_artist_for1_1": "工具箱是\"分类\"模式，这会给代码留出更多的空间。`计数循环`在这里。"
+        },
+        "courseF_artist_for1_2023": {
           "courseF_artist_for1_1": "工具箱是\"分类\"模式，这会给代码留出更多的空间。`计数循环`在这里。"
         },
         "courseF_artist_fwp1": {
@@ -2681,6 +2970,9 @@
         "courseF_bee_for4_2021": {
           "courseF_bee_for4_1": "你会在这里发现 ' 计数循环 '!"
         },
+        "courseF_bee_for4_2023": {
+          "courseF_bee_for4_1": "你会在这里发现 ' 计数循环 '!"
+        },
         "courseF_bee_for9": {
           "courseF_bee_for9_1": "你会在这里找到`math`（数学）模块。"
         },
@@ -2697,6 +2989,9 @@
           "courseF_bee_for9_1": "你会在这里找到`math`（数学）模块。"
         },
         "courseF_bee_for9_2021": {
+          "courseF_bee_for9_1": "你会在这里找到`math`（数学）模块。"
+        },
+        "courseF_bee_for9_2023": {
           "courseF_bee_for9_1": "你会在这里找到`math`（数学）模块。"
         },
         "courseF_bee_functions2": {
@@ -2739,10 +3034,16 @@
         "courseF_bee_variables_1a_2021": {
           "courseF_bee_functions_1_2018_1": "可以在下面找到你的变量！"
         },
+        "courseF_bee_variables_1a_2023": {
+          "courseF_bee_functions_1_2018_1": "可以在下面找到你的变量！"
+        },
         "courseF_editable_card": {
           "visualizationResizeBar": "拖动3个点以调整运行区域的大小。"
         },
         "courseF_editable_card_-2022-2": {
+          "visualizationResizeBar": "拖动3个点以调整运行区域的大小。"
+        },
+        "courseF_editable_card_2023": {
           "visualizationResizeBar": "拖动3个点以调整运行区域的大小。"
         },
         "courseF_editable_chatbot": {
@@ -2751,10 +3052,16 @@
         "courseF_editable_chatbot_-2022-2": {
           "visualizationResizeBar": "拖动3个点以调整运行区域的大小。"
         },
+        "courseF_editable_chatbot_2023": {
+          "visualizationResizeBar": "拖动3个点以调整运行区域的大小。"
+        },
         "courseF_editable_madlib": {
           "visualizationResizeBar": "拖动3个点以调整运行区域的大小。"
         },
         "courseF_editable_madlib_-2022-2": {
+          "visualizationResizeBar": "拖动3个点以调整运行区域的大小。"
+        },
+        "courseF_editable_madlib_2023": {
           "visualizationResizeBar": "拖动3个点以调整运行区域的大小。"
         },
         "courseF_events_choice_penguin": {
@@ -2763,10 +3070,16 @@
         "courseF_events_choice_penguin_-2022-2": {
           "whenToWhile": "尝试将when改为while。"
         },
+        "courseF_events_choice_penguin_2023": {
+          "whenToWhile": "尝试将when改为while。"
+        },
         "courseF_events_conflict": {
           "stops_block": "此处新模块！"
         },
         "courseF_events_conflict_-2022-2": {
+          "stops_block": "此处新模块！"
+        },
+        "courseF_events_conflict_2023": {
           "stops_block": "此处新模块！"
         },
         "courseF_events_key": {
@@ -2775,10 +3088,16 @@
         "courseF_events_key_-2022-2": {
           "whenKey": "使用在这里找到的新事件模块。"
         },
+        "courseF_events_key_2023": {
+          "whenKey": "使用在这里找到的新事件模块。"
+        },
         "courseF_events_practice_reorder": {
           "stopAllBug": "这段代码的顺序不正确。"
         },
         "courseF_events_practice_reorder_-2022-2": {
+          "stopAllBug": "这段代码的顺序不正确。"
+        },
+        "courseF_events_practice_reorder_2023": {
           "stopAllBug": "这段代码的顺序不正确。"
         },
         "courseF_events_predict": {
@@ -2787,16 +3106,25 @@
         "courseF_events_predict_-2022-2": {
           "behaviors_edit": "点这里发现如何工作。"
         },
+        "courseF_events_predict_2023": {
+          "behaviors_edit": "点这里发现如何工作。"
+        },
         "courseF_events_time": {
           "events_category": "点击这里打开事件类别。"
         },
         "courseF_events_time_-2022-2": {
           "events_category": "点击这里打开事件类别。"
         },
+        "courseF_events_time_2023": {
+          "events_category": "点击这里打开事件类别。"
+        },
         "courseF_label_predict": {
           "variablesPredict": "仔细看下面的代码。"
         },
         "courseF_label_predict_-2022-2": {
+          "variablesPredict": "仔细看下面的代码。"
+        },
+        "courseF_label_predict_2023": {
           "variablesPredict": "仔细看下面的代码。"
         },
         "courseF_playlab_variables1a": {
@@ -2817,10 +3145,16 @@
         "courseF_sprites_behaviors_-2022-2": {
           "behaviors_category": "点击这里打开行为类别。"
         },
+        "courseF_sprites_behaviors_2023": {
+          "behaviors_category": "点击这里打开行为类别。"
+        },
         "courseF_sprites_make": {
           "sprites_category": "点击这里打开精灵图类别。"
         },
         "courseF_sprites_make_-2022-2": {
+          "sprites_category": "点击这里打开精灵图类别。"
+        },
+        "courseF_sprites_make_2023": {
           "sprites_category": "点击这里打开精灵图类别。"
         },
         "courseF_sprites_positioning": {
@@ -2829,10 +3163,16 @@
         "courseF_sprites_positioning_-2022-2": {
           "locations_category": "点击这里打开位置类别。"
         },
+        "courseF_sprites_positioning_2023": {
+          "locations_category": "点击这里打开位置类别。"
+        },
         "courseF_sprites_properties": {
           "sprites_category2": "在这里寻找一个新模块。"
         },
         "courseF_sprites_properties_-2022-2": {
+          "sprites_category2": "在这里寻找一个新模块。"
+        },
+        "courseF_sprites_properties_2023": {
           "sprites_category2": "在这里寻找一个新模块。"
         },
         "courseF_text_answer": {
@@ -2841,16 +3181,25 @@
         "courseF_text_answer_-2022-2": {
           "answered_block": "在这里寻找一个新模块！"
         },
+        "courseF_text_answer_2023": {
+          "answered_block": "在这里寻找一个新模块！"
+        },
         "courseF_text_choice_color": {
           "text_color_finish": "你回答问题时背景颜色改变了吗？如果是，点击“完成”。如果否，点击“重置”，改变你的代码，然后再次点击“运行”。"
         },
         "courseF_text_choice_color_-2022-2": {
           "text_color_finish": "你回答问题时背景颜色改变了吗？如果是，点击“完成”。如果否，点击“重置”，改变你的代码，然后再次点击“运行”。"
         },
+        "courseF_text_choice_color_2023": {
+          "text_color_finish": "你回答问题时背景颜色改变了吗？如果是，点击“完成”。如果否，点击“重置”，改变你的代码，然后再次点击“运行”。"
+        },
         "courseF_text_choice_conversation": {
           "text_generic_finish": "你完成了吗？如果是，点击“完成”。如果否，点击“重置”，改变你的代码，然后再次点击“运行”。"
         },
         "courseF_text_choice_conversation_-2022-2": {
+          "text_generic_finish": "你完成了吗？如果是，点击“完成”。如果否，点击“重置”，改变你的代码，然后再次点击“运行”。"
+        },
+        "courseF_text_choice_conversation_2023": {
           "text_generic_finish": "你完成了吗？如果是，点击“完成”。如果否，点击“重置”，改变你的代码，然后再次点击“运行”。"
         },
         "courseF_text_choice_title": {
@@ -2861,16 +3210,26 @@
           "text_answer_finish": "标题屏幕显示了3秒钟吗？如果是，点击“完成”。如果否，点击“重置”，改变你的代码，然后再次点击“运行”。",
           "title_block": "在这里寻找两个新模块！"
         },
+        "courseF_text_choice_title_2023": {
+          "text_answer_finish": "标题屏幕显示了3秒钟吗？如果是，点击“完成”。如果否，点击“重置”，改变你的代码，然后再次点击“运行”。",
+          "title_block": "在这里寻找两个新模块！"
+        },
         "courseF_text_concat": {
           "join_blocks": "在这里寻找新模块！"
         },
         "courseF_text_concat_-2022-2": {
           "join_blocks": "在这里寻找新模块！"
         },
+        "courseF_text_concat_2023": {
+          "join_blocks": "在这里寻找新模块！"
+        },
         "courseF_text_events": {
           "events_category": "点击这里打开事件类别。"
         },
         "courseF_text_events_-2022-2": {
+          "events_category": "点击这里打开事件类别。"
+        },
+        "courseF_text_events_2023": {
           "events_category": "点击这里打开事件类别。"
         },
         "courseF_text_print": {
@@ -2881,19 +3240,32 @@
           "print_block": "在这里找到打印模块！",
           "text_print_finish": "你的信息打印在上面了吗？如果是，点击“完成”。如果否，点击“重置”，改变你的代码，然后再次点击“运行”。"
         },
+        "courseF_text_print_2023": {
+          "print_block": "在这里找到打印模块！",
+          "text_print_finish": "你的信息打印在上面了吗？如果是，点击“完成”。如果否，点击“重置”，改变你的代码，然后再次点击“运行”。"
+        },
         "courseF_text_prompts": {
           "prompt_block": "在这里找到提示模块！"
         },
         "courseF_text_prompts_-2022-2": {
           "prompt_block": "在这里找到提示模块！"
         },
+        "courseF_text_prompts_2023": {
+          "prompt_block": "在这里找到提示模块！"
+        },
         "courseF_variables2_predict_-2022-2": {
+          "variablesPredict": "仔细看下面的代码。"
+        },
+        "courseF_variables2_predict_2023": {
           "variablesPredict": "仔细看下面的代码。"
         },
         "courseF_variables_predict": {
           "variablesPredict": "仔细看下面的代码。"
         },
         "courseF_variables_predict_-2022-2": {
+          "variablesPredict": "仔细看下面的代码。"
+        },
+        "courseF_variables_predict_2023": {
           "variablesPredict": "仔细看下面的代码。"
         },
         "coursea_maze_ramp12022": {
@@ -2911,13 +3283,99 @@
         "coursea_maze_ramp1_2021": {
           "grade2_CaringForNewPet_0_1": "连接完所有的模块后, 按 \"运行\" 来启动你的程序。"
         },
+        "coursea_maze_ramp1_2023": {
+          "grade2_CaringForNewPet_0_1": "连接完所有的模块后, 按 \"运行\" 来启动你的程序。"
+        },
         "coursee_helloworld_events": {
+          "hello_world_click_hint": "将此事件模块添加到工作区。"
+        },
+        "coursee_helloworld_events_2023": {
           "hello_world_click_hint": "将此事件模块添加到工作区。"
         },
         "coursee_helloworld_freeplay": {
           "costumes_tab": "点击这里为你的项目添加服装。"
         },
+        "coursee_helloworld_freeplay_2023": {
+          "costumes_tab": "点击这里为你的项目添加服装。"
+        },
         "coursee_helloworld_say": {
+          "hello_world_make_sprite": "使用这个模块创建精灵图。",
+          "hello_world_say": "使用这个模块让精灵图说话。"
+        },
+        "coursee_helloworld_say_2023": {
+          "hello_world_make_sprite": "使用这个模块创建精灵图。",
+          "hello_world_say": "使用这个模块让精灵图说话。"
+        },
+        "csc-starquilts-comment_2023": {
+          "New Artist Project_callout1": "点击类别查看工具箱中的模块！将模块拖动到工作区并将其添加到你的程序中。",
+          "New Artist Project_callout2": "点击“运行”来运行并保存程序。",
+          "sign_in_to_save_project": "想要稍后再访问你的项目吗？登录后就能将项目保存到你的账户中！"
+        },
+        "csc-starquilts-repeat_2023": {
+          "New Artist Project_callout1": "点击类别查看工具箱中的模块！将模块拖动到工作区并将其添加到你的程序中。",
+          "New Artist Project_callout2": "点击“运行”来运行并保存程序。",
+          "sign_in_to_save_project": "想要稍后再访问你的项目吗？登录后就能将项目保存到你的账户中！"
+        },
+        "csc-starquilts-rhombus-freeplay_2023": {
+          "New Artist Project_callout1": "点击类别查看工具箱中的模块！将模块拖动到工作区并将其添加到你的程序中。",
+          "New Artist Project_callout2": "点击“运行”来运行并保存程序。",
+          "sign_in_to_save_project": "想要稍后再访问你的项目吗？登录后就能将项目保存到你的账户中！"
+        },
+        "csc-starquilts-row1_2023": {
+          "New Artist Project_callout1": "点击类别查看工具箱中的模块！将模块拖动到工作区并将其添加到你的程序中。",
+          "New Artist Project_callout2": "点击“运行”来运行并保存程序。",
+          "sign_in_to_save_project": "想要稍后再访问你的项目吗？登录后就能将项目保存到你的账户中！"
+        },
+        "csc-starquilts-row2_2023": {
+          "New Artist Project_callout1": "点击类别查看工具箱中的模块！将模块拖动到工作区并将其添加到你的程序中。",
+          "New Artist Project_callout2": "点击“运行”来运行并保存程序。",
+          "sign_in_to_save_project": "想要稍后再访问你的项目吗？登录后就能将项目保存到你的账户中！"
+        },
+        "csc-starquilts-row3_2023": {
+          "New Artist Project_callout1": "点击类别查看工具箱中的模块！将模块拖动到工作区并将其添加到你的程序中。",
+          "New Artist Project_callout2": "点击“运行”来运行并保存程序。",
+          "sign_in_to_save_project": "想要稍后再访问你的项目吗？登录后就能将项目保存到你的账户中！"
+        },
+        "csc-starquilts-row4_2023": {
+          "New Artist Project_callout1": "点击类别查看工具箱中的模块！将模块拖动到工作区并将其添加到你的程序中。",
+          "New Artist Project_callout2": "点击“运行”来运行并保存程序。",
+          "sign_in_to_save_project": "想要稍后再访问你的项目吗？登录后就能将项目保存到你的账户中！"
+        },
+        "csc-starquilts-row5_2023": {
+          "New Artist Project_callout1": "点击类别查看工具箱中的模块！将模块拖动到工作区并将其添加到你的程序中。",
+          "New Artist Project_callout2": "点击“运行”来运行并保存程序。",
+          "sign_in_to_save_project": "想要稍后再访问你的项目吗？登录后就能将项目保存到你的账户中！"
+        },
+        "csc_animal_adaptations_behaviors_edit2": {
+          "behavior_callout": "为什么该行为对中间的星星不生效？",
+          "star2_callout": "用”精灵图“模块替换装饰模块",
+          "this_sprite_callout": "用这个精灵图替换图案模块。"
+        },
+        "csc_animal_adaptations_behaviors_elephantleader": {
+          "behavior_callout": "为什么该行为对中间的星星不生效？",
+          "star2_callout": "用”精灵图“模块替换装饰模块",
+          "this_sprite_callout": "用这个精灵图替换图案模块。"
+        },
+        "csc_animal_adaptations_behaviors_wolfpack": {
+          "behavior_callout": "为什么该行为对中间的星星不生效？",
+          "star2_callout": "用”精灵图“模块替换装饰模块",
+          "this_sprite_callout": "用这个精灵图替换图案模块。"
+        },
+        "csc_animal_adaptations_bugs2": {
+          "hello_world_behavior_blocks": "将此模块与下面的其中一个行为一起使用。"
+        },
+        "csc_animal_adaptations_make_behavior": {
+          "behaviors_edit": "对这个行为进行编码。"
+        },
+        "csc_animal_adaptations_predict_gamelab": {
+          "behaviors_edit": "点这里发现如何工作。"
+        },
+        "csc_starquilts_freeplay_2023": {
+          "New Artist Project_callout1": "点击类别查看工具箱中的模块！将模块拖动到工作区并将其添加到你的程序中。",
+          "New Artist Project_callout2": "点击“运行”来运行并保存程序。",
+          "sign_in_to_save_project": "想要稍后再访问你的项目吗？登录后就能将项目保存到你的账户中！"
+        },
+        "ecosystems_helloworld_say_2023": {
           "hello_world_make_sprite": "使用这个模块创建精灵图。",
           "hello_world_say": "使用这个模块让精灵图说话。"
         },
@@ -2931,6 +3389,9 @@
           "express_maze_debugging9_2019_1": "模块可以从工具区拖到你的工作区。"
         },
         "express_maze_debugging9_2021": {
+          "express_maze_debugging9_2019_1": "模块可以从工具区拖到你的工作区。"
+        },
+        "express_maze_debugging9_2023": {
           "express_maze_debugging9_2019_1": "模块可以从工具区拖到你的工作区。"
         },
         "frozen circle function with parameter": {
@@ -3021,6 +3482,12 @@
         "helloworld_animals_sounds": {
           "hello_world_new": "新模块！"
         },
+        "helloworld_bugs_behaviors_2023": {
+          "hello_world_behavior_blocks": "将此模块与下面的其中一个行为一起使用。"
+        },
+        "helloworld_bunny_adaptation_2023": {
+          "hw_Run": "点击这里运行代码。"
+        },
         "helloworld_emoji_backgrounds": {
           "hw_background_location": "使用这个模块来设置一个新背景。"
         },
@@ -3059,6 +3526,9 @@
         "helloworld_food_backgrounds": {
           "hw_background_location": "使用这个模块来设置一个新背景。"
         },
+        "helloworld_food_backgrounds_2023": {
+          "hw_background_location": "使用这个模块来设置一个新背景。"
+        },
         "helloworld_food_backgrounds_soccer-2022": {
           "hw_background_location": "使用这个模块来设置一个新背景。"
         },
@@ -3066,6 +3536,9 @@
           "hw_background_location": "使用这个模块来设置一个新背景。"
         },
         "helloworld_food_behaviors": {
+          "hello_world_behavior_blocks": "将此模块与下面的其中一个行为一起使用。"
+        },
+        "helloworld_food_behaviors_2023": {
           "hello_world_behavior_blocks": "将此模块与下面的其中一个行为一起使用。"
         },
         "helloworld_food_behaviors_soccer-2022": {
@@ -3077,6 +3550,9 @@
         "helloworld_food_click": {
           "hw_Run": "点击这里运行代码。"
         },
+        "helloworld_food_click_2023": {
+          "hw_Run": "点击这里运行代码。"
+        },
         "helloworld_food_click_soccer-2022": {
           "hw_Run": "点击这里运行代码。"
         },
@@ -3084,6 +3560,9 @@
           "hw_Run": "请先点击这里！"
         },
         "helloworld_food_costumes": {
+          "hello_world_new": "新模块！"
+        },
+        "helloworld_food_costumes_2023": {
           "hello_world_new": "新模块！"
         },
         "helloworld_food_costumes_soccer-2022": {
@@ -3113,6 +3592,9 @@
         "helloworld_food_location": {
           "pin": "针脚"
         },
+        "helloworld_food_location_2023": {
+          "pin": "针脚"
+        },
         "helloworld_food_location_soccer-2022": {
           "pin": "针脚"
         },
@@ -3120,6 +3602,9 @@
           "pin": "针脚"
         },
         "helloworld_food_multi": {
+          "pin": "针脚"
+        },
+        "helloworld_food_multi_2023": {
           "pin": "针脚"
         },
         "helloworld_food_multi_soccer-2022": {
@@ -3144,6 +3629,10 @@
           "hello_world_new": "新模块！",
           "hello_world_new_block": "新模块！"
         },
+        "helloworld_food_sizes_2023": {
+          "hello_world_new": "新模块！",
+          "hello_world_new_block": "新模块！"
+        },
         "helloworld_food_sizes_soccer-2022": {
           "hello_world_new": "新模块！",
           "hello_world_new_block": "新模块！"
@@ -3153,6 +3642,9 @@
           "hello_world_new_block": "新模块！"
         },
         "helloworld_food_sounds": {
+          "hello_world_new": "新模块！"
+        },
+        "helloworld_food_sounds_2023": {
           "hello_world_new": "新模块！"
         },
         "helloworld_food_sounds_soccer-2022": {
@@ -3206,11 +3698,22 @@
         "poetry_hoc_addSprites": {
           "poetry_sprite": "新模块！"
         },
+        "poetry_hoc_addSprites_2023": {
+          "poetry_sprite": "新模块！"
+        },
         "poetry_hoc_backgroundEffects": {
           "poetry_background": "在这里寻找代码模块。",
           "run_button": "用这个按钮测试动画。"
         },
+        "poetry_hoc_backgroundEffects_2023": {
+          "poetry_background": "在这里寻找代码模块。",
+          "run_button": "用这个按钮测试动画。"
+        },
         "poetry_hoc_events1": {
+          "poetry_event": "新模块！",
+          "poetry_foreground": "新模块！"
+        },
+        "poetry_hoc_events1_2023": {
           "poetry_event": "新模块！",
           "poetry_foreground": "新模块！"
         },
@@ -3220,7 +3723,15 @@
           "poetry_new_block": "新模块！",
           "poetry_selector": "选择任何诗歌，或输入你自己的！"
         },
+        "poetry_hoc_freeplay_2023": {
+          "poetry_new_block": "新模块！",
+          "poetry_selector": "选择任何诗歌，或输入你自己的！"
+        },
         "poetry_hoc_sounds": {
+          "poetry_music": "新模块！",
+          "poetry_sound": "新模块！"
+        },
+        "poetry_hoc_sounds_2023": {
           "poetry_music": "新模块！",
           "poetry_sound": "新模块！"
         },
@@ -3228,7 +3739,15 @@
           "poetry_sprite_begins": "新模块！",
           "poetry_sprite_stops": "新模块！"
         },
+        "poetry_hoc_spriteBehaviors_2023": {
+          "poetry_sprite_begins": "新模块！",
+          "poetry_sprite_stops": "新模块！"
+        },
         "poetry_hoc_spriteSizes": {
+          "poetry_remove_sprite": "新模块！",
+          "poetry_set_sprite": "新模块！"
+        },
+        "poetry_hoc_spriteSizes_2023": {
           "poetry_remove_sprite": "新模块！",
           "poetry_set_sprite": "新模块！"
         }
