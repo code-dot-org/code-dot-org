@@ -35,7 +35,7 @@ export default function ManageStudentFamilyNameCell({
         <div>
           <span data-for={tooltipId} data-tip>
             <input
-              id="uitest-family-name"
+              name="uitest-family-name"
               style={styles.inputBox}
               // Because familyName is optional, allow empty string
               value={editedValue || ''}
