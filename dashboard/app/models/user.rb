@@ -187,7 +187,9 @@ class User < ApplicationRecord
     TYPE_STUDENT = 'student'.freeze,
     TYPE_TEACHER = 'teacher'.freeze
   ].freeze
-  validates_inclusion_of :user_type, in: USER_TYPE_OPTIONS
+
+  validates_presence_of :user_type
+  validates_inclusion_of :user_type, in: USER_TYPE_OPTIONS, if: :user_type?
 
   belongs_to :studio_person, optional: true
   has_many :hint_view_requests

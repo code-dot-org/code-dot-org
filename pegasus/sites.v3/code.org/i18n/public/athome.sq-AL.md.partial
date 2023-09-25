@@ -27,7 +27,7 @@ theme: responsive
 
 <a id="hoc"></a>
 <h2>Provoni një orë kodimi me këto udhëzime hyrëse argëtuese</h2>
-<p>Try a <a class="linktag" id="hoc-overview" href="/hourofcode/overview" target="_blank">one-hour tutorial</a> featuring popular games and movies like Minecraft, Frozen, and Star Wars. Shumë mësime janë strukturuar si lojëra, të dizajnuara për të mësuar konceptet themelore të shkencave kompjuterike në mënyra argëtuese dhe tërheq</p>
+<p>Provoni një tutorial <a class="linktag" id="hoc-overview" href="/hourofcode/overview" target="_blank">një orë që</a> përmban lojëra dhe filma të njohur si Minecraft, Frozen dhe Star Wars. Shumë mësime janë strukturuar si lojëra, të dizajnuara për të mësuar konceptet themelore të shkencave kompjuterike në mënyra argëtuese dhe tërheq</p>
 
 <br>
 
@@ -38,8 +38,8 @@ theme: responsive
       </a>
     <div class="tutorial-info" style="background-color: #ffffff; border: 1px solid #696969; border-top: none; border-radius: 0 0 15px 15px; padding: 15px 25px 25px 25px">
       <span>
-        <h3 class="tutorial-info-h" style="text-align: left; margin-top:10px; margin-bottom:10px"><strong>Partia e Vallëzimit</strong></h3>
-        <div class="smalltext" style="text-align: left; margin-bottom: 10px">Kodi një Parti Vallëzimi për ta ndarë me miqtë dhe familjen. Featuring Beyoncé, Harry Styles, Lizzo, Lil Nas X, Selena Gomez, muzikë nga Disney “Encanto”, dhe më shumë!</div>
+        <h3 class="tutorial-info-h" style="text-align: left; margin-top:10px; margin-bottom:10px"></h3>
+        <div class="smalltext" style="text-align: left; margin-bottom: 10px">Kodi i Partisë së Vallëzimit një Parti Vallëzimi për ta ndarë me miqtë dhe familjen. Featuring Beyoncé, Harry Styles, Lizzo, Lil Nas X, Selena Gomez, muzikë nga Disney “Encanto”, dhe më shumë!</div>
         <a class="linktag" id="danceparty" href="/dance" target="_blank"><button>Provoni aktivitetin</button></a>
     </span>
   </div>
@@ -53,7 +53,7 @@ theme: responsive
       </a>
     <div class="tutorial-info" style="background-color: #ffffff; border: 1px solid #696969; border-top: none; border-radius: 0 0 15px 15px; padding: 15px 25px 25px 25px">
       <span>
-        <h3 class="tutorial-info-h" style="text-align: left; margin-top:10px; margin-bottom: 10px"><strong>Minecraft Hour of Code</strong></h3>
+        <h3 class="tutorial-info-h" style="text-align: left; margin-top:10px; margin-bottom: 10px">Minecraft Hour of Code</h3>
         <div class="smalltext" style="text-align: left; margin-bottom: 10px">Minecraft është kthyer për Orën e Kodimit me një aktivitet krejt të ri! Udhëtoni përmes Minecraft me kod.</div>
         <br>
         <a class="linktag" id="minecraft" href="/minecraft" target="_blank"><button>Provoni aktivitetin</button></a>
@@ -69,7 +69,7 @@ theme: responsive
       </a>
     <div class="tutorial-info" style="background-color: #ffffff; border: 1px solid #696969; border-top: none; border-radius: 0 0 15px 15px; padding: 15px 25px 25px 25px">
       <span>
-        <h3 class="tutorial-info-h" style="text-align: left; margin-top:10px; margin-bottom:10px"><strong>AI për Oqeanet</strong></h3>
+        <h3 class="tutorial-info-h" style="text-align: left; margin-top:10px; margin-bottom:10px">AI për Oqeanet</h3>
         <div class="smalltext" style="text-align: left; margin-bottom: 10px">Ndihmoni A.I. të pastrojë oqeanet duke e trajnuar atë për të zbuluar plehrat! Mësoni rreth të dhënave dhe paragjykimit të trajnimit dhe se si AI mund të adresojë problemet botërore. Shiko <a class="linktag" id="oceans-lesson" href="https://curriculum.code.org/hoc/plugged/9/" target="_blank">plan mësimi</a>.</div>
         <a class="linktag" id="aiforoceans" href="https://studio.code.org/s/oceans/lessons/1/levels/1" target="_blank"><button>Provoni aktivitetin</button></a>
     </span>
@@ -96,8 +96,8 @@ theme: responsive
       </a>
     <div class="tutorial-info" style="background-color: #ffffff; border: 1px solid #696969; border-top: none; border-radius: 0 0 15px 15px; padding: 15px 25px 25px 25px">
       <span>
-        <h3 class="tutorial-info-h" style="text-align: left; margin-top:10px; margin-bottom:10px"><strong>Si funksionojnë kompjuterët</strong></h3>
-        <div class="smalltext" style="text-align: left; margin-bottom: 10px">Me një hyrje nga Bill Gates, kjo seri prej gjashtë videosh të shkurtra shpjegon se çfarë e bën një kompjuter një kompjuter dhe si funksionojnë qarqet kompjuterike.</div>
+        <h3 class="tutorial-info-h" style="text-align: left; margin-top:10px; margin-bottom:10px">Si funksionojnë kompjuterët</h3>
+        <div class="smalltext" style="text-align: left; margin-bottom: 10px">Me një prezantim nga Bill Gates, kjo seri prej gjashtë videosh të shkurtra shpjegon se çfarë e bën një kompjuter një kompjuter dhe si funksionojnë qarqet kompjuterike.</div>
         <a class="linktag" id="howcomputers" href="https://www.youtube.com/watch?v=OAx_6-wdslM&list=PLzdnOPI1iJNcsRwJhvksEo1tJqjIqWbN-" target="_blank"><button>Shikoni serinë e videove</button></a>
     </span>
   </div>
@@ -111,7 +111,7 @@ theme: responsive
       </a>
     <div class="tutorial-info" style="background-color: #ffffff; border: 1px solid #696969; border-top: none; border-radius: 0 0 15px 15px; padding: 15px 25px 25px 25px">
       <span>
-        <h3 class="tutorial-info-h" style="text-align: left; margin-top:10px; margin-bottom: 10px"><strong>Si funksionon interneti</strong></h3>
+        <h3 class="tutorial-info-h" style="text-align: left; margin-top:10px; margin-bottom: 10px">Si funksionon interneti</h3>
         <div class="smalltext" style="text-align: left; margin-bottom: 10px">Në këtë seri prej tetë videosh të shkurtra, do të mësosh se si u shpik interneti, çfarë është HTML dhe si funksionojnë motorët e kërkimit si Google.</div>
         <a class="linktag" id="howinternet" href="https://www.youtube.com/watch?v=Dxcc6ycZ73M&list=PLzdnOPI1iJNfMRZm5DDxco3UdsFegvuB7-" target="_blank"><button>Shikoni serinë e videove</button></a>
     </span>
@@ -126,7 +126,7 @@ theme: responsive
       </a>
     <div class="tutorial-info" style="background-color: #ffffff; border: 1px solid #696969; border-top: none; border-radius: 0 0 15px 15px; padding: 15px 25px 25px 25px">
       <span>
-        <h3 class="tutorial-info-h" style="text-align: left; margin-top:10px; margin-bottom: 10px"><strong>Si funksionon AI</strong></h3>
+        <h3 class="tutorial-info-h" style="text-align: left; margin-top:10px; margin-bottom: 10px">Si funksionon AI</h3>
         <div class="smalltext" style="text-align: left; margin-bottom: 10px">Mësoni se si funksionon AI dhe pse ka rëndësi me këtë seri videosh të shkurtra. Duke shfaqur CEO të Microsoft Satya Nadella dhe një kast të larmishëm ekspertësh.</div>
         <a class="linktag" id="ai-videos" href="/ai#ai-videos" target="_blank"><button>Shikoni serinë e videove</button></a>
     </span>
@@ -136,7 +136,7 @@ theme: responsive
 
 <div style="clear: both"></div>
 
-<p>View more videos, including short inspirational videos featuring celebrities like Steph Curry and Shakira, <a class="linktag" id="all-videos" href="https://code.org/educate/resources/videos" target="_blank">here</a>.</p>
+<p>Shikoni më shumë video, duke përfshirë video të shkurtra frymëzuese që shfaqin të famshëm si Steph Curry dhe Shakira, këtu. <a class="linktag" id="all-videos" href="https://code.org/educate/resources/videos" target="_blank"></a></p>
 <br>
 <p><a href="#top">[Kthehu në krye]</a></p>
 
@@ -147,7 +147,7 @@ theme: responsive
 <a id="express"></a>
 <h2>Mësoni bazat me kurset tona të vetë-ritmit</h2>
 <h3>Kurse hyrëse të vetë-ritmit</h3>
-<p>Një mundësi e shkëlqyeshme për studentët që fillojnë vetë. Ju do të mësoni bazat e shkencës kompjuterike me blloqe drag & drop. Krijo vizatimet dhe lojërat tuaja. Shënim: Kurset Express janë aktualisht në dispozicion në anglisht, hindi, italisht dhe spanjisht. For other languages, we recommend our 20-hour <a class="linktag" id="accelerated" href="https://studio.code.org/s/20-hour" target="_blank">Accelerated Course</a>. Për të parë se çfarë është në dispozicion në gjuhën tuaj, vizitoni katalogun tonë të kurseve <a class="linktag" id="course-catalog" href="https://studio.code.org/courses" target="_blank"></a>.</p>
+<p>Një mundësi e shkëlqyeshme për studentët që fillojnë vetë. Ju do të mësoni bazat e shkencës kompjuterike me blloqe drag & drop. Krijo vizatimet dhe lojërat tuaja. Shënim: Kurset Express janë aktualisht në dispozicion në anglisht, hindi, italisht dhe spanjisht. Për gjuhë të tjera, ne rekomandojmë kursin tonë të <a class="linktag" id="accelerated" href="https://studio.code.org/s/20-hour" target="_blank">përshpejtuar 20-orësh.</a> Për të parë se çfarë është në dispozicion në gjuhën tuaj, vizitoni katalogun tonë të kurseve <a class="linktag" id="course-catalog" href="https://studio.code.org/courses" target="_blank"></a>.</p>
 
 <br>
 
@@ -159,13 +159,13 @@ theme: responsive
 
 <div class="col-50" style="padding-right: 20px; padding-bottom:10px">
 
-<a class="linktag" id="prereader-course" href="https://studio.code.org/s/pre-express-2019" target="_blank"><img src="/images/curriculum/course-tile-pre-reader-express.png" style="width: 100%" alt="Kursi Express i lexuesit paraprak"></a><br><a class="linktag" id="prereader-course" href="https://studio.code.org/s/pre-express-2019" target="_blank">Express Course for pre-readers</a>
+<a class="linktag" id="prereader-course" href="https://studio.code.org/s/pre-express-2019" target="_blank"><img src="/images/curriculum/course-tile-pre-reader-express.png" style="width: 100%" alt="Kursi Express i lexuesit paraprak"></a><br><a class="linktag" id="prereader-course" href="https://studio.code.org/s/pre-express-2019" target="_blank">Kurs Express për para-lexuesit</a>
 
 </div>
-<div style="clear: both"></div>
+<div style="clear: both; margin-bottom: 2rem"></div>
 
 <h3>Prezantimet e vetë-ritmit në Game Lab dhe App Lab</h3>
-<p>Përshtatur nga kurset tona CS Discoveries dhe CS Parimet, këto module të shkurtra dhe të vetë-ritmit janë një mënyrë e shkëlqyeshme për të mësuar koncepte që përfshijnë të gjitha gjuhët dhe mjetet e programimit. <i>Requires Code.org account to access</i>.</p>
+<p>Përshtatur nga kurset tona CS Discoveries dhe CS Parimet, këto module të shkurtra dhe të vetë-ritmit janë një mënyrë e shkëlqyeshme për të mësuar koncepte që përfshijnë të gjitha gjuhët dhe mjetet e programimit. <i>Kërkon llogarinë Code.org për të hyrë</i>.</p>
 
 <br>
 
@@ -176,8 +176,8 @@ theme: responsive
       </a>
     <div class="tutorial-info" style="background-color: #ffffff; border: 1px solid #696969; border-top: none; border-radius: 0 0 15px 15px; padding: 15px 25px 25px 25px">
       <span>
-        <h3 class="tutorial-info-h" style="text-align: left; margin-top:10px; margin-bottom:10px"><strong>Hyrje në Game Lab</strong></h3>
-        <div class="smalltext" style="text-align: left; margin-bottom: 10px">Animacione të programit, art interaktiv dhe lojëra në Game Lab. Filloni me forma të thjeshta dhe ndërtoni deri në animacione dhe lojëra më të sofistikuara të bazuara në sprite.</div>
+        <h3 class="tutorial-info-h" style="text-align: left; margin-top:10px; margin-bottom:10px">Hyrje në animacionet e</h3>
+        <div class="smalltext" style="text-align: left; margin-bottom: 10px">Programit Game Lab, art interaktiv dhe lojëra në Game Lab. Filloni me forma të thjeshta dhe ndërtoni deri në animacione dhe lojëra më të sofistikuara të bazuara në sprite.</div>
         <a class="linktag" id="gamelab-intro" href="https://studio.code.org/s/csd3-virtual" target="_blank"><button>Provoni modulin</button></a>
     </span>
   </div>
@@ -191,7 +191,7 @@ theme: responsive
       </a>
     <div class="tutorial-info" style="background-color: #ffffff; border: 1px solid #696969; border-top: none; border-radius: 0 0 15px 15px; padding: 15px 25px 25px 25px">
       <span>
-        <h3 class="tutorial-info-h" style="text-align: left; margin-top:10px; margin-bottom: 10px"><strong>Programimi i Breshkave në App Lab</strong></h3>
+        <h3 class="tutorial-info-h" style="text-align: left; margin-top:10px; margin-bottom: 10px">Programimi i Breshkave në App Lab</h3>
         <div class="smalltext" style="text-align: left; margin-bottom: 10px">Përdorni komanda të thjeshta JavaScript për të vizatuar forma dhe imazhe duke përdorur një “breshkë” virtuale. Dizajnoni dhe programoni skenën tuaj dixhitale!</div>
         <a class="linktag" id="turtle-applab" href="https://studio.code.org/s/csp3-virtual" target="_blank"><button>Provoni modulin</button></a>
     </span>
@@ -206,7 +206,7 @@ theme: responsive
       </a>
     <div class="tutorial-info" style="background-color: #ffffff; border: 1px solid #696969; border-top: none; border-radius: 0 0 15px 15px; padding: 15px 25px 25px 25px">
       <span>
-        <h3 class="tutorial-info-h" style="text-align: left; margin-top:10px; margin-bottom: 10px"><strong>Programimi i drejtuar nga ngjarjet në App Lab</strong></h3>
+        <h3 class="tutorial-info-h" style="text-align: left; margin-top:10px; margin-bottom: 10px">Programimi i drejtuar nga ngjarjet në App Lab</h3>
         <div class="smalltext" style="text-align: left; margin-bottom: 10px">Mësoni të dizajnoni aplikacione që i përgjigjen klikimeve dhe shtypjeve të tasteve. Krijoni një seri aplikacionesh (aplikacionesh) të thjeshta që jetojnë në internet!</div>
         <a class="linktag" id="events-applab" href="https://studio.code.org/s/csp5-virtual" target="_blank"><button>Provoni modulin</button></a>
     </span>
@@ -230,7 +230,7 @@ theme: responsive
 
 <div class="col-33" style="padding:15px; border-radius:15px; border:10px solid white; background-color:#00adbc">
   <div style="width: 87%; float: left">
-    <a class="linktag" id="applab" href="https://code.org/educate/applab" style="text-decoration:none" target="_blank"><h3 style="color:#ffffff; margin:0; margin-bottom:5px; text-decoration:none"><strong>App Lab</strong></h3></a>
+    <a class="linktag" id="applab" href="https://code.org/educate/applab" style="text-decoration:none" target="_blank"><h3 style="color:#ffffff; margin:0; margin-bottom:5px; text-decoration:none">Laboratori i aplikacionit</h3></a>
     <p style="color:#ffffff">App Lab është një mjedis programimi ku mund të bëni aplikacione të thjeshta. Dizajnoni një aplikacion, kod me blloqe ose JavaScript për ta bërë atë të funksionojë, pastaj ndani aplikacionin tuaj në sekonda.</p>
     <a class="linktag" id="applab" href="https://code.org/educate/applab" target="_blank"><button style="background-color:#e7e8ea; border-color:#e7e8ea; color:#696969">Ndërtoni një aplikacion</button></a>
   </div>
@@ -239,7 +239,7 @@ theme: responsive
 
 <div class="col-33" style="padding:15px; border-radius:15px; border:10px solid white; background-color:#00adbc">
   <div style="width: 87%; float: left">
-    <a class="linktag" id="gamelab" href="https://code.org/educate/gamelab" style="text-decoration:none" target="_blank"><h3 style="color:#ffffff; margin:0; margin-bottom:5px; text-decoration:none"><strong>Laboratori i Lojërave</strong></h3></a>
+    <a class="linktag" id="gamelab" href="https://code.org/educate/gamelab" style="text-decoration:none" target="_blank"><h3 style="color:#ffffff; margin:0; margin-bottom:5px; text-decoration:none">Lojë Lab</h3></a>
     <p style="color:#ffffff">Game Lab është një mjedis programimi ku mund të bëni animacione dhe lojëra të thjeshta me objekte dhe karaktere që ndërveprojnë me njëri-tjetrin.</p>
     <br>
     <a class="linktag" id="gamelab" href="https://code.org/educate/gamelab" target="_blank"><button style="background-color:#e7e8ea; border-color:#e7e8ea; color:#696969">Krijo një lojë</button></a>
@@ -249,7 +249,7 @@ theme: responsive
 
 <div class="col-33" style="padding:15px; border-radius:15px; border:10px solid white; background-color:#00adbc">
   <div style="width: 87%; float: left">
-    <a class="linktag" id="weblab" href="https://code.org/educate/weblab" style="text-decoration:none" target="_blank"><h3 style="color:#ffffff; margin:0; margin-bottom:5px; text-decoration:none"><strong>Laborator Uebi</strong></h3></a>
+    <a class="linktag" id="weblab" href="https://code.org/educate/weblab" style="text-decoration:none" target="_blank"><h3 style="color:#ffffff; margin:0; margin-bottom:5px; text-decoration:none">Web Lab</h3></a>
     <p style="color:#ffffff">Web Lab është një mjedis programimi ku mund të bëni faqe të thjeshta në internet duke përdorur HTML dhe CSS. Dizajnoni faqet tuaja të internetit dhe ndani faqen tuaj në sekonda.</p>
     <br>
     <a class="linktag" id="weblab" href="https://code.org/educate/weblab" target="_blank"><button style="background-color:#e7e8ea; border-color:#e7e8ea; color:#696969">Bëni një faqe në internet</button></a>
@@ -286,16 +286,12 @@ theme: responsive
 
 <h2>Nuk ka kompjuter në shtëpi? Provoni CS në telefonin tuaj me këto aplikacione nga partnerët tanë</h2>
 
-<div class="col-33" style="padding-right: 30px; padding-bottom:40px">
-  <a class="linktag" id="box-island" href="https://boxisland.io/" target="_blank"><img src="images/tutorials/new/boxisland.jpg" style="width: 100%" alt="Ishulli Box"></a><br><a class="linktag" id="box-island" href="https://boxisland.io/" target="_blank"><h3 style="color:#7665a0"><strong>Box Island</strong></h3></a>Një lojë simpatike kodimi celular që i çon nxënësit në një aventurë emocionuese, ndërsa mëson bazat e kodimit, si algoritmet, njohja e modelit, sekuenca, sythe dhe kushtëzime. <i>(për të gjitha moshat)</i>
+<div class="col-50" style="padding-right: 30px; padding-bottom:40px">
+  <a class="linktag" id="box-island" href="https://boxisland.io/" target="_blank"><img src="images/tutorials/new/boxisland.jpg" style="width: 100%" alt="Ishulli Box"></a><br><a class="linktag" id="box-island" href="https://boxisland.io/" target="_blank"><h3 style="margin-top: 1rem;">Box Island</h3></a>Një lojë simpatike e kodimit celular që i çon nxënësit në një aventurë emocionuese, ndërsa mëson bazat e kodimit, si algoritmet, njohja e modelit, sekuencat, sythet dhe kushtëzimet. <i>(për të gjitha moshat)</i>
 </div>
 
-<div class="col-33" style="padding-right: 30px; padding-bottom:40px">
-  <a class="linktag" id="codespark" href="https://accounts.codespark.com/promo?utm_source=codeorg&utm_medium=referral&utm_campaign=schoolsclosed-parents&utm_content=offer&promoCode=schoolclosed" target="_blank"><img src="/images/tutorials/hoc2018/codespark_create.jpg" style="width: 100%" alt="Kodi Park"></a><br><a class="linktag" id="codespark" href="https://accounts.codespark.com/promo?utm_source=codeorg&utm_medium=referral&utm_campaign=schoolsclosed-parents&utm_content=offer&promoCode=schoolclosed" target="_blank"><h3 style="color:#7665a0"><strong>CodePark</strong></h3></a>Platforma mësuar-to-kod fituese e çmimeve për fëmijët e moshës 5-9 vjeç. Zgjidhni enigma dhe krijoni lojëra me The Foos ndërsa mësoni të kodojnë. <strong>Shënim: CodeshPark po ofron një provë falas 3-mujore. Parent's email address and credit card information are required at signup.</strong> <i>(for pre-readers through Grade 5)</i>
-</div>
-
-<div class="col-33" style="padding-right: 30px; padding-bottom:40px">
-  <a class="linktag" id="grasshopper" href="https://grasshopper.app/" target="_blank"><img src="/images/athome/grasshopper.png" style="width: 100%" alt="Karkalec"></a><br><a class="linktag" id="grasshopper" href="https://grasshopper.app/" target="_blank"><h3 style="color:#7665a0"><strong>Grasshopper</strong></h3></a>Mësoni kodimin me argëtim, mësime të shpejta në telefonin tuaj që ju mësojnë të shkruani JavaScript të vërtetë. Një kod me Google Program. <i>(për shkollën e mesme dhe lart)</i>
+<div class="col-50" style="padding-right: 30px; padding-bottom:40px">
+  <a class="linktag" id="codespark" href="https://accounts.codespark.com/promo?utm_source=codeorg&utm_medium=referral&utm_campaign=schoolsclosed-parents&utm_content=offer&promoCode=schoolclosed" target="_blank"><img src="/images/tutorials/hoc2018/codespark_create.jpg" style="width: 100%" alt="Kodi Park"></a><br><a class="linktag" id="codespark" href="https://accounts.codespark.com/promo?utm_source=codeorg&utm_medium=referral&utm_campaign=schoolsclosed-parents&utm_content=offer&promoCode=schoolclosed" target="_blank"><h3 style="margin-top: 1rem;">Platforma e mësimit në kod</h3></a>fituese e çmimit CodePark për fëmijët e moshës 5-9 vjeç. Zgjidhni enigma dhe krijoni lojëra me The Foos ndërsa mësoni të kodojnë. <strong>Shënim: CodeshPark po ofron një provë falas 3-mujore. Adresa e emailit të prindërve dhe informacioni i kartës së kreditit kërkohen në regjistrim.</strong> <i>(për para-lexuesit përmes klasës 5)</i>
 </div>
 
 <div style="clear: both; margin-bottom: 15px"></div>
@@ -312,11 +308,11 @@ theme: responsive
       </a>
     <div class="tutorial-info" style="background-color: #ffffff; border: 1px solid black; border-top: none; border-radius: 0 0 15px 15px; padding: 15px 25px 25px 25px">
       <span>
-        <h3 class="tutorial-info-h" style="margin-top:10px"><strong>CodeBytes</strong></h3>
-        <div class="smalltext" style="color: dimgray;">CodeBytes janë lehtë-to-tretet, 20 minuta mësime interaktive përzierjen e shkencave kompjuterike me tema të botës reale. Train an AI to read sign language, design an app for good, explore the world of Minecraft, and more!</div>
+        <h3 class="tutorial-info-h" style="margin-top:10px">CodeBytes</h3>
+        <div class="smalltext" style="color: dimgray;">CodeBytes janë lehtë-to-tretet, 20 minuta mësime interaktive përzierjen e shkencave kompjuterike me tema të botës reale. Trajnoni një AI për të lexuar gjuhën e shenjave, për të hartuar një aplikacion për të mirë, për të eksploruar botën e Minecraft dhe më shumë!</div>
         <br>
         <br>
-        <a class="linktag" id="codebytes" href="https://code.org/codebytes" target="_blank"><button>View episodes</button></a>
+        <a class="linktag" id="codebytes" href="https://code.org/codebytes" target="_blank"><button>Shikoni episodet</button></a>
     </span>
   </div>
 </div>
@@ -329,7 +325,7 @@ theme: responsive
       </a>
     <div class="tutorial-info" style="background-color: #ffffff; border: 1px solid black; border-top: none; border-radius: 0 0 15px 15px; padding: 15px 25px 25px 25px">
       <span>
-        <h3 class="tutorial-info-h" style="margin-top:10px"><strong>Code Break</strong></h3>
+        <h3 class="tutorial-info-h" style="margin-top:10px">Kodi Break</h3>
         <div class="smalltext" style="">Mbani argëtim shkenca kompjuterike duke marrë një kod pushim! Ju mund të krijoni një shifër me Ashton Kutcher, të mësoni rreth variablave me Yara Shahidi dhe madje të eksploroni se si funksionon interneti me shpikësin aktual të internetit, Vint Cerf!</div>
         <br>
         <a class="linktag" id="codebreak" href="https://code.org/break" target="_blank"><button>Lidhuni</button></a>
