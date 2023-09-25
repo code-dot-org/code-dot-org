@@ -16,7 +16,6 @@
 #  address_line3               :string(30)
 #  latitude                    :decimal(8, 6)
 #  longitude                   :decimal(9, 6)
-#  state_school_id             :string(255)
 #  school_category             :string(255)
 #  last_known_school_year_open :string(9)
 #
@@ -26,7 +25,6 @@
 #  index_schools_on_last_known_school_year_open  (last_known_school_year_open)
 #  index_schools_on_name_and_city                (name,city)
 #  index_schools_on_school_district_id           (school_district_id)
-#  index_schools_on_state_school_id              (state_school_id) UNIQUE
 #  index_schools_on_zip                          (zip)
 #
 
