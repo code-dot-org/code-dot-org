@@ -54,3 +54,5 @@ video_player: true
 %script{:src=>'/js/jquery.carouFredSel-6.2.1-packed.js'}
 %script{:src=>'/js/jquery.touchSwipe.min.js'}
 %script{:src=>'/js/page/video_page.js'}
+
+= view :analytics_event_log_helper, event_name: AnalyticsConstants::VIDEO_LIBRARY_PAGE_VISIT_EVENT
