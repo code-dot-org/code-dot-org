@@ -126,6 +126,12 @@ cn:
   grade_level_label_elementary: 小学
   grade_level_label_middle: 初中
   grade_level_label_high: 高中
+  curricula_title_elementary: 小学课程
+  curricula_desc_elementary: 浏览有趣的免费课程和活动，邀请您与小学生一起探索计算机科学。
+  curricula_title_middle: 中学课程
+  curricula_desc_middle: 浏览引人入胜的课程，使您和您的中学生能够一起探索计算机科学。
+  curricula_title_high: 高中课程
+  curricula_desc_high: 浏览引人入胜的课程和活动，邀请您和您的高中生深入研究计算机科学。
   students_label: 学生
   teachers_label: 教师
   teacher_label_csf: 计算机科学基础教师
@@ -135,6 +141,7 @@ cn:
   teacher_label_csa: AP® Computer Science A Teacher
   required_materials: 所需材料：
   optional_materials: 可选材料：
+  call_to_action_explore_roles: 探索空缺职位
   call_to_action_learn_more: 了解更多
   call_to_action_watch_now: 立即观看
   call_to_action_try_activity: 尝试活动
@@ -152,6 +159,15 @@ cn:
   call_to_action_explore_choice_level: 浏览示例选择级别
   call_to_action_explore_collection: 浏览系列
   call_to_action_explore_unplugged_lesson: 浏览线下课程
+  call_to_action_explore_csf: 探索 CS 基础知识
+  call_to_action_explore_csd: 探索 CS 发现
+  call_to_action_explore_csp: 探索 CS 原则
+  call_to_action_explore_csc: 探索 CS 连接
+  call_to_action_explore_csa: 探索 AP® 计算机科学 A
+  call_to_action_explore_csa_short: 探索 AP® CSA
+  call_to_action_explore_maker: 浏览创客课程
+  call_to_action_explore_hoc: 探索编程一小时教程
+  call_to_action_explore_hoc_short: 探索《编程一小时》
   call_to_action_try_app_lab: 尝试应用实验室
   call_to_action_view_lesson_plan: 查看教学计划
   call_to_action_self_paced_pl: 开始自定进度的专业学习
@@ -175,6 +191,7 @@ cn:
   call_to_action_resources_tools: 尝试编程工具
   call_to_action_sign_up_free: 免费注册
   call_to_action_explore_ai_resources: 探索AI资源
+  call_to_action_explore_ai_curricula: 探索 AI 课程
   call_to_action_explore_curriculum_catalog: 探索课程目录
   call_to_action_see_full_curriculum_catalog: 查看完整课程目录
   call_to_action_find_self_paced_modules: 查找自定进度模块
@@ -196,6 +213,7 @@ cn:
   call_to_action_notify_available: 有货时通知我
   call_to_action_register_early_access: 注册抢先体验
   call_to_action_open_positions: 查看未平仓头寸
+  call_to_action_get_guide: 获取指南
   aria_label_call_to_action_afe: 了解有关亚马逊未来工程师的更多信息
   aria_label_call_to_action_teaching_csf: 启动 “计算机科学基础知识教学” 专业学习计划
   aria_label_call_to_action_teaching_csd: 启动 “计算机科学发现” 教学专业学习计划
@@ -268,8 +286,11 @@ cn:
   curriculum_name_csp: 计算机科学原理
   curriculum_name_csc: 计算机科学联系
   curriculum_name_csa: 计算机科学A
+  curriculum_name_csa_ai: 软件工程与计算机视觉
   curriculum_name_csc_02: 任何计算机科学联系模块
   curriculum_name_ai: "  AI 和机器学习"
+  curriculum_name_artificial_intelligence: 人工智能 (AI)
+  curriculum_name_maker: 制作者
   curriculum_name_maker_cp: 使用设备创建应用程序（电路游乐场）
   curriculum_name_maker_microbit: '使用设备创建应用程序 (micro: bit)'
   curriculum_name_creating_apps_with_devices: 使用设备创建应用程序
@@ -280,6 +301,7 @@ cn:
   curriculum_name_interactive_animations_games: 互动动画和游戏
   curriculum_name_design_process: 设计流程
   curriculum_name_data_society: 数据和社会
+  curriculum_desc_csf: 一套免费的初级课程，向学生介绍计算机科学的基本概念。
   curriculum_desc_csf_express: 学习创建计算机程序，培养解决问题的能力，并努力应对有趣的挑战！制作游戏和创意项目，与朋友、家人和老师分享。
   curriculum_desc_csf_express_pre_reader: 通过解谜和创建动画场景，学习拖放式模块编程的基础知识。制作艺术品和简单的游戏，与朋友、家人和老师分享。
   curriculum_desc_csf_course_a: 使用循环和事件等命令进行编程。教导学生与他人合作，研究不同的问题解决技巧，坚持不懈地面对挑战性任务，学习互联网安全知识。
@@ -294,6 +316,15 @@ cn:
   curriculum_desc_design_process: 重点考虑计算的社会影响。通过设计挑战，学生可以同情他人的需求并开发解决方案。
   curriculum_desc_data_society: 强调数据在解决问题中的作用以及计算机在此过程中的帮助。涵盖表征系统和相关挑战。了解数据收集如何帮助解决问题。
   curriculum_desc_creating_apps_with_devices: 探索物理设备在计算中的作用。开发利用硬件输入和输出的程序。这个单元有一个针对micro:bit和电路游乐场的版本。
+  curriculum_desc_csa: 在这个 AP® Computer Science A (AP® CSA) 的免费课程中，向学生介绍软件工程和面向对象的设计，同时学习
+    Java 编程语言。
+  curriculum_desc_maker: 创客教育将STEM（科学、技术、工程、数学）更进一步，将动手体验和协作带入课堂，帮助教授问题解决和批判性思维。
+  curriculum_desc_maker_short: 创客教育邀请亲身体验和协作进入课堂，以帮助教授解决问题和批判性思维。
+  curriculum_desc_csd: 灵活的课程，允许每个单元单独授课或组合教学。向学生介绍如何构建网站、应用程序、动画、游戏和物理计算系统。
+  curriculum_desc_csp: AP® CSP 认可的免费高中入门课程，向学生介绍计算机科学的基本概念。
+  curriculum_desc_csa_ai_long: '这个分为两章的 AP 后 CSA 模块为高中生提供了使用专业软件开发工具（包括 GitHub 和 GitHub
+    Copilot）的实践经验，并向他们传授了开发计算机视觉程序的现实技能。 '
+  curriculum_desc_csa_ai_short: 这个 post-AP® CSA 模块为高中生提供了使用专业软件开发工具的实践经验。
   collection_hardware: 聚焦硬件
   collection_hardware_desc: 使学生能够使用数据和物理设备来解决问题。
   collection_design_purpose: 专注于有目的的设计
@@ -319,6 +350,7 @@ cn:
   module_label_professional_learning: 专业学习：
   module_label_languages: 支持语言：
   module_label_accessibility_features: 辅助功能：
+  module_label_accessibility_features_full: 无障碍功能：
   module_label_educator_tool: 教育工作者工具
   module_label_educator_course: 教育工作者课程
   module_label_student_tool: 学生工具
@@ -326,6 +358,7 @@ cn:
   module_label_student_content_resources: 内容和资源
   module_label_new: 全新
   module_label_coming_soon: 即将上线
+  module_label_available_now: 现已上市
   module_label_video_series: 视频系列
   module_label_self_paced: 自定进度模块
   module_ages_5_10: 5-10
@@ -336,6 +369,8 @@ cn:
   module_grade_2_5: 2-5
   module_grade_3_5: 3-5
   module_grade_3_8: 3-8
+  module_grade_k_12: K-12
+  module_grade_3_12: 3-12
   module_grade_6_12: 6-12
   module_grade_6_10: 6-10
   module_grade_9_12: 9-12
@@ -350,11 +385,14 @@ cn:
   module_grade_9_12_teachers: 9-12年级教师
   module_level_beginner: 初学者
   module_level_intermediate: 中级
+  module_level_advanced: 高级
   module_duration_45_mins: 45 分钟
+  module_duration_2_weeks: 2 个星期
   module_duration_1_hr: 1 个小时
   module_duration_2_hrs: 2 个小时
   module_duration_3_hrs: 3 个小时
   module_duration_5_hrs: 5 个小时
+  module_duration_5_hrs_plus: 5 小时以上
   module_duration_8_hrs: 8 个小时
   module_duration_20_hrs: 20 个小时
   module_duration_35_hrs: 35 个小时
@@ -366,6 +404,7 @@ cn:
   module_duration_school_year: 学年
   module_duration_month_quarter: 月或季度
   module_duration_month_semester_year: 月、学期或年
+  module_duration_varies: 各不相同
   module_prerequisites_none: 没有
   module_prerequisites_maker_cp: 进入赛道游乐场
   module_prerequisites_maker_microbit: '访问 micro: bit'
@@ -418,6 +457,8 @@ cn:
   heading_java_lab: Java实验室
   heading_objects_first: 对象优先
   heading_these_lessons_will: 这些课程将：
+  heading_explore_curriculum_catalog: 在课程目录中浏览我们的所有课程
+  heading_csa_ai: 想在 AP® 考试结束后做什么？
   professional_learning_section_desc: 在准备教学时获得所需的支持。老师们喜欢它，超过90％的老师将其评为有史以来最好的职业发展！
   professional_learning_section_desc_short: 在准备教学时获得所需的支持。
   professional_learning_section_desc_self_paced: 及时的支持，让你可以根据自己的日程安排自信地准备教学。
@@ -432,6 +473,13 @@ cn:
   no_devices_section_desc: 计算机科学教育并不一定要在屏幕前进行，设备访问不应该成为学习计算机科学概念的障碍。
   support_and_questions_section_subhead: 还有问题吗？找我们！我们随时提供帮助。
   support_and_questions_section_desc: 我们的支持团队随时为你解答关于开始使用Code.org进行教学的任何问题。你还可以在我们的教师论坛上向其他老师询问他们的经验。
+  subscribe_form_section_title: 订阅最新消息
+  subscribe_form_section_desc_csa: 注册即可每月接收有关 Code.org 的 AP® Computer Science A 的电子邮件，并将有用的提醒、提示和更新直接发送到您的收件箱。
+  subscribe_form_section_desc_csc: 注册即可每月接收有关 Code.org 计算机科学连接的电子邮件，并将有用的提醒、提示和更新直接发送到您的收件箱。
+  subscribe_form_section_desc_csd: 注册即可每月收到有关 Code.org 计算机科学发现的电子邮件，并将有用的提醒、提示和更新直接发送到您的收件箱。
+  subscribe_form_section_desc_csf: 注册即可每月收到有关 Code.org 计算机科学基础知识的电子邮件，并将有用的提醒、提示和更新直接发送到您的收件箱。
+  subscribe_form_section_desc_csp: 注册即可每月收到有关 Code.org 计算机科学原理的电子邮件，并将有用的提醒、提示和更新直接发送到您的收件箱。
+  subscribe_form_section_unsubscribe: 您可以随时取消订阅。
   blockchain_hero_heading: 区块链是如何运作的
   blockchain_hero_desc: 通过我们的新视频系列 “区块链的工作原理” 和随附的课程，深入了解区块链的世界！
   blockchain_intro_heading: 看看区块链是如何运作的
@@ -503,6 +551,8 @@ cn:
   ai_curriculum_title_04: 人工智能的工作原理
   ai_curriculum_desc_04: 这些课程是对 AI 如何运作视频系列的补充。每节课都与该系列的单个视频配对，深入了解视频中介绍的概念。
   ai_curriculum_btn_aria_label_04: 探索 AI 的工作原理课程
+  ai_curriculum_grades_05: 年级等级：9-12
+  ai_curriculum_btn_aria_label_05: 探索软件工程与计算机视觉模块
   ai_carousel_heading: 老师们对使用 Code.org 的人工智能的评价：
   ai_carousel_quote_01: 这节课还让我的学生有机会看到分类系统中有观点要素。后来，当我们开始看到偏见如何最终出现在人工智能中时，我得以将它们拉回来，提醒他们，用于训练模型的数据是基于选择的。
   ai_carousel_quote_02: 我的学生了解到，当涉及到他们几乎每天都在经历的技术进步时，他们不必只是消费者。他们实际上可以成为创作者！
@@ -566,6 +616,9 @@ cn:
   ai_pl_101_video_title_5: 将 AI 带入课堂
   ai_pl_101_video_desc_5: 本课程侧重于人工智能教学、评估和利用 AI 教育工具，以及利用 AI 进行学生评估。它融合了理论、实践示例和资源，旨在使教育工作者能够驾驭人工智能领域并增强学生的学习体验。
   ai_pl_101_video_desc_6: 详细了解推动人工智能重大变革的新技术，包括两个关于大型语言模型（如ChatGPT）和生成式人工智能的新视频。直接从专家那里听听这些新技术的工作原理：OpenAI首席技术官米拉·穆拉蒂和RunwayML首席执行官克里斯托瓦尔·瓦伦苏埃拉。
+  ai_pl_101_llm_slides_title: 面向教育工作者的大型语言模型提示
+  ai_pl_101_llm_slides_desc: 从初学者到高级，可以从 ChatGPT 等 LLM 那里获得最佳输出的工具。包括为那些只想尽情发挥潜力的人提供的入门提示，以及为那些希望最大限度地发挥潜力的人提供的高级工具。
+  ai_pl_101_resources_3: 人工智能提示改变学生的学习
   how_ai_works_hero_heading: 人工智能的工作原理
   how_ai_works_hero_desc: 通过我们的视频系列和随附的课程 “人工智能如何运作”，深入了解人工智能的世界！
   how_ai_works_intro_desc: 这一系列短视频和随附的课堂课程将向您和您的学生介绍人工智能的工作原理及其重要性。您可以根据主题选择单独的课程，在一堂课中探索整个系列主题，或者教授所有
@@ -737,12 +790,11 @@ cn:
   teach_page_quote: 当你使用Code.org的课程时，一切都为你准备好了。 里面有你需要问学生的问题。它拥有你需要教授的课程，它会给你如何去做的指导。因此，如果你没有任何计算机科学的经验，它可以帮助你。如果你以前有计算机科学的教学经验，它会给你教授学生的新方法。
   teach_page_free_curriculum_heading: 引人入胜的免费课程
   teach_page_free_curriculum_desc: 我们希望你把计算机科学带到你的学校而不用担心费用。这就是为什么我们承诺我们的课程永久免费！
-  teach_page_free_curriculum_list_heading_01: 面向各个年级的迷人课程
   teach_page_free_curriculum_list_desc_01: 免费、灵活而有趣的课程，超过67种语言。
-  teach_page_free_curriculum_list_heading_02: 适应性强的创新课程
   teach_page_free_curriculum_list_desc_02: Code.org提供从全年课程到单一单元活动的各种内容。此外，我们每年会更新课程以支持最佳实践和重点领域，还会创建新课程来教授当前的热门主题。
-  teach_page_free_curriculum_list_heading_03: 关联国家标准的结构化课程
   teach_page_free_curriculum_list_desc_03: 每个课程与至少一套国家标准关联，包括CSTA、下一代科学标准和共同核心。
+  teach_page_free_curriculum_list_desc_04: 超过 67 种语言版本
+  teach_page_free_curriculum_list_desc_05: 符合至少一套国家标准（包括 CSTA、NGSS 和 Common Core）
   teach_page_free_curriculum_heading_02: 探索面向不同年级的课程：
   teach_page_resources_heading: 在全程支持你的资源
   teach_page_resources_desc: 注册Code.org账户可以获取材料，帮助你自信地教授计算机科学。Code.org拥有丰富的资源，旨在支持教育工作者，甚至是没有计算机科学教学经验的人。点击选项卡以了解关于资源的更多信息。
@@ -783,8 +835,7 @@ cn:
     Animation
   csp_page_curriculum_glance_devices: Laptop, Chromebook
   csp_page_curriculum_glance_tools: 应用实验室
-  csp_page_curriculum_glance_professional_learning: Facilitator-led Workshops, Self-paced
-    Modules
+  csp_page_curriculum_glance_professional_learning: 主持人主导的研讨会，自定进度的模块
   csp_page_curriculum_glance_professional_languages: 英文
   csp_page_curriculum_glance_professional_accessibility_features: Text-to-speech,
     Closed captioning, Immersive reader
@@ -904,8 +955,7 @@ cn:
   csd_page_curriculum_glance_topics: 人工智能、数据、网页设计、物理计算、应用程序设计、游戏和动画、艺术和设计、编程
   csd_page_curriculum_glance_devices: Laptop, Chromebook
   csd_page_curriculum_glance_tools: 应用实验室，游戏实验室，人工智能实验室，网络实验室
-  csd_page_curriculum_glance_professional_learning: Facilitator-led Workshops, Self-paced
-    Modules
+  csd_page_curriculum_glance_professional_learning: 主持人主导的研讨会，自定进度的模块
   csd_page_curriculum_glance_professional_languages: 英文
   csd_page_curriculum_glance_professional_accessibility_features: Text-to-speech,
     Closed captioning, Immersive reader
@@ -976,8 +1026,7 @@ cn:
   csf_page_curriculum_glance_topics: 编程、互联网、游戏和动画、艺术和设计、应用程序设计
   csf_page_curriculum_glance_devices: 笔记本电脑、Chromebook、平板电脑
   csf_page_curriculum_glance_tools: 精灵图实验室，游戏实验室
-  csf_page_curriculum_glance_professional_learning: Facilitator-led Workshops, Self-paced
-    Modules
+  csf_page_curriculum_glance_professional_learning: 主持人主导的研讨会，自定进度的模块
   csf_page_curriculum_glance_languages: 阿拉伯语、印尼语、加泰罗尼亚语、简体中文、繁体中文、捷克语、法语、德语、印地语、意大利语、日语、韩语、卡纳达语、马来语、马拉地语、蒙古语、波兰语、巴西葡萄牙语、罗马尼亚语、俄语、斯洛伐克语、他加禄语、泰米尔语、泰语、土耳其语、乌克兰语、拉美西班牙语、乌尔都语、西班牙西班牙语、乌兹别克语、越南语
   csf_page_curriculum_glance_accessibility_features: Text-to-speech, Closed captioning,
     Immersive reader
@@ -1425,6 +1474,10 @@ cn:
   signup_email_preference_opt_in: 我们能向您推送 Code.org 课程更新、本地机遇或者其他计算机科学的新闻吗？
   signup_email_preference_privacy: "（请参阅我们的隐私政策）"
   signup_email_preference_yes: 是的
+  signup_email_preference_yes_elementary: 是-向我发送有关小学资源的最新信息
+  signup_email_preference_yes_middle: 是-向我发送有关中学资源的最新信息
+  signup_email_preference_yes_high: 是-向我发送有关高中资源的最新信息
+  signup_email_preference_yes_general: 是-向我发送一般更新
   signup_email_preference_no: 不是
   signup_email_preference_error: 电子邮件首选项为必填项
   signup_multiple_event_warning: 如果你要主办多次活动，请为每个活动提交一个单独的名字或者邮件。我们按照每个名字或邮件来计算数量。
@@ -8275,12 +8328,8 @@ cn:
   tutorial_googlesuperhero_longdescription: 将生活或社区中的日常英雄编程为超级英雄，让他们飞越建筑物、旋转、与搭档合作，并通过触摸游戏中的物体来得分。在
     Code Your Hero 中，使用 CS First 和 Scratch 炫耀你的英雄的特殊力量和你自己的创造力。
   tutorial_googlename _longdescription: 选择一个名字，使用代码让单词的字母变为现实。选择昵称、宠物的名字、动物、运动、地点或爱好。
-  tutorial_carnegiezillah_longdescription: Zillah City is thriving, and music is in
-    the air. Rumor has it, the famed Gargantua bot is online and sending the last
-    Toxibots to trash the city block by block…. Grab your cobot hoverboard and get
-    ready to groove, move, and finish off what you started! Players program their
-    cobot hoverbots to change lanes, avoid obstacles, and take out many Toxibots in
-    this rhythm-styled game.
+  tutorial_carnegiezillah_longdescription: Zillah City 蓬勃发展，空气中弥漫着音乐。有传言说，著名的 Gargantua
+    机器人已上线，正在派出最后一批毒素机器人逐个街区丢掉城市。…拿起你的协作机器人悬浮滑板，准备好进行节奏、移动，完成你开始的事情！在这款节奏风格的游戏中，玩家对协作机器人悬浮机器人进行编程，以改变车道，避开障碍物并消灭许多毒性机器人。
   tutorial_nasachspacejam_longdescription: 创造一个真正摇摆不定的太阳系！在这个自学活动中学习音乐、天文学和编程（无需编程经验）。对行星进行编程以制作音乐，创建自己的音乐太阳系，并配有宽敞的旋律。
   tutorial_hatchxrsolar_longdescription: '使用基于方块的编程概念探索恒星并建造自己的太阳系。学习 3D 空间的基础知识，潜入你的想象力，在不到一个小时的时间内建造一个你梦想中的宇宙。猜猜怎么样，你可以使用
     HatchXR 应用程序在任何 iOS 设备上在 AR 中运行你的项目。别忘了使用 #hatchxr #HourOfCode 与我们分享你的作品'
@@ -8878,6 +8927,184 @@ cn:
   engineering_faq_answer_5_c_2: 当工程师为问题而苦苦挣扎时，我们会介入并提供帮助。我们的原则之一是，我们对问题持严谨态度，但要善待彼此。我们定期晋升工程师，但我们不会仅仅为了支持某人的晋升道路而开出过度设计的解决方案。相反，我们投资于拥有充足的专业发展预算并有机会获得其他学习机会的工程师。
   engineering_faq_answer_5_d_1: 我们努力工作，但我们设定了明确的界限。
   engineering_faq_answer_5_d_2: 在我们为世界各地的学生提供支持的同时，我们也要求自己对工作和家庭生活之间的明确界限负责。我们享受星期三不开会，包括我们的PTO（总共5周，其中包括年底全组织关闭2周的办公室，又名寒假），夏季的星期五（也就是夏季星期五）半个工作日，以及其他丰厚的福利。
+  careers_hero_title: 职业生涯
+  careers_hero_description: Code.org 是一家非营利组织，致力于扩大学校对计算机科学的普及。我们特别注重提高年轻女性和代表性不足的学生的参与度。
+  careers_hero_description_under: 帮助我们改变世界，一次只有一个学生！
+  careers_vision_title: 我们的愿景
+  careers_vision_decsription: 我们的愿景是，每所学校的每个学生都应该有机会学习计算机科学，将其作为K-12核心教育的一部分。
+  careers_vision_description_under: 快来加入我们的团队，帮助实现这一愿景吧！
+  careers_values_title: 我们的核心价值观
+  careers_values_first_column_text_1: 我们相信计算机科学是所有学生的基础
+  careers_values_first_column_text_2: 我们致力于实现公平、准入和机会
+  careers_values_first_column_text_3: 我们相信合作教育社区的力量
+  careers_values_second_column_text_1: 我们对反馈反应敏捷且反应迅速
+  careers_values_second_column_text_2: 我们以诚信和透明的方式行事
+  careers_values_second_column_text_3: 我们认为，要产生广泛的影响力，就需要大胆思考和整体行动
+  careers_approach_section_title: 我们的统一方法
+  careers_approach_section_description: Code.org之所以能够在K-12计算机科学运动中发挥全球作用，是因为我们在不同且经常存在分歧的利益相关者之间采用统一的方法。在两极分化加剧的时期，增加学生机会的想法团结了来自各个政治派别的人们。Code.org
+    的团队成员、学生、教师和支持者的观点各不相同，欢迎他们加入我们的使命。
+  careers_aproach_section_description_link: 阅读有关 Code.org 统一方法的更多信息。
+  careers_approach_section_button: 探索空缺职位
+  careers_principle_section_title: 我们的文化原则
+  careers_principle_title_1: 我们的学生和老师是我们的北极星
+  careers_principle_description_1: 我们用天赋、时间和精力将计算机科学带给最需要的人。这就是使我们团结在一起的原因。这是我们最重要的原则。
+  careers_principle_title_2: 我们对问题很严格，彼此很友善
+  careers_principle_description_2: 我们一直专注于将计算机科学带给全球学生和教师的挑战。我们认识到，我们每个人都用我们最好的意图来支持我们的使命，并在我们犯错时给予恩典。
+  careers_principle_title_3: 寻求解决方案，而不是共识
+  careers_principle_description_3: 我们自己做决定，无论是朝着我们所寻求的结果迈出小步还是大跃进。所有者要求并倾听，但不会因为反馈而陷入瘫痪。即使我们不同意，我们也接受并支持业主的决定。
+  careers_principle_title_4: 采用创始人的心态
+  careers_principle_description_4: 我们痴迷于结果，并将行动重点放在推动结果上。我们深入研究细节并努力工作。我们诚实，倾向于敏捷性，并不断评估自己是否步入正轨；我们不怕转向。改变世界需要它。
+  careers_principle_title_5: 倡导创新
+  careers_principle_description_5: 我们从大处着眼，勇于冒险，不怕失败。如果我们看到实现目标的更好方法，我们就会去做，并鼓励其他人也这样做。增量解决方案无助于改变世界。
+  careers_principle_title_6: 以事实为依据
+  careers_principle_description_6: 我们使用数据来了解我们的业务，确定预期的结果并指导决策。我们通过意识到我们并不总是拥有采取行动所需的数据来平衡这一点。
+  careers_principle_title_7: 成长心态为我们提供动力
+  careers_principle_description_7: 我们怀着好奇心对待每一个挑战。我们诚挚而坦率地提供反馈；我们公开接受反馈。我们从错误中吸取教训，并寻找方法来扩大我们工作的覆盖面和影响力。
+  careers_balance_section_title: 我们的工作与生活平衡
+  careers_balance_section_description: 我们关心员工，并致力于在工作和工作之外为每个人提供支持。我们知道每个人都有不同的需求，这就是为什么我们提供全面的福利计划，以确保您（和您的家人）得到照顾。
+  careers_balance_first_column_text_1: 为您和您的家人带来健康益处
+  careers_balance_first_column_text_2: 丰厚的带薪休假和休假计划
+  careers_balance_second_column_text_1: 灵活、支持性的工作环境
+  careers_balance_second_column_text_2: 成长和专业学习机会
+  careers_openroles_section_title: 空缺职位
+  careers_openroles_section_description: Code.org 总部设在西雅图，但我们的许多团队成员都是远程的。欢迎并鼓励远程候选人申请。
+  careers_more_info_text: 有关 Code.org 的更多信息，请查看我们的 [常见问题] (%{support_url}) 或了解 [参与我们使命的其他方式]
+    (%{help_url})。
+  careers_approach_section_title2: 我们的多元化方针
+  careers_approach_section_description_1: 在 Code.org，我们拥抱不同的视角、想法和背景。我们致力于为所有员工和应聘者提供平等的机会。我们不会基于种族、宗教、肤色、国籍、性别、性取向、年龄、婚姻状况、退伍军人身份或残疾（心理和身体）状况进行歧视。
+  careers_approach_section_description_2: 我们将确保为残疾人提供合理的便利，使他们能够参与求职或面试过程，履行基本的工作职能，并获得其他就业福利和特权。如果您有与残疾相关的个人需求，请联系
+    accommodations@code.org。
+  csa_ai_page_hero_title: 软件工程与计算机视觉
+  csa_ai_page_hero_description: '这个分为两章的 AP 后 CSA 模块为高中生提供了使用专业软件开发工具（包括 GitHub 和
+    GitHub Copilot）的实践经验，并向他们传授了开发计算机视觉程序的现实技能。 '
+  csa_ai_page_video_section_title: 超越 Code.org 编程环境的世界
+  csa_ai_page_video_section_li_1: 了解人工智能及其应用
+  csa_ai_page_video_section_li_2: 使用专业软件开发工具的实践经验
+  csa_ai_page_video_section_li_3: 学习行业标准实践
+  csa_ai_page_video_section_li_4: 培养批判性思维
+  csa_ai_page_programming_tools: '编程工具：Github、Github Copilot、vsCode、TensorF '
+  csa_ai_page_professional_learning: 没有
+  csa_ai_page_curriculum_topics: 主题：编程、数据、艺术与设计、游戏和动画
+  csa_ai_page_curriculum_accessibility_features: 详情请参阅常见问题解答部分
+  csa_ai_page_curriculum_languages_support: 英文
+  csa_ai_page_article_title_1: 使用 Copilot 进行构建
+  csa_ai_page_article_description_1: 学生将学习如何使用 GitHub Copilot 作为配对程序员来解释现有代码、查找和修复错误以及生成新问题的解决方案。
+  csa_ai_page_article_link_1: 了解有关 Copilot 的更多信息
+  csa_ai_page_article_title_2: 构建你自己的 AI 模型
+  csa_ai_page_article_description_2: 学生使用 Teachable Machine 训练自己的 AI 模型，以识别网络摄像头中的图像和手势，并考虑计算机视觉如何影响用户与应用程序的交互方式。
+  csa_ai_page_article_link_2: 探索教学计划
+  csa_ai_page_article_title_3: 探索计算机视觉
+  csa_ai_page_article_description_3: 学生将他们使用 Teachable Machine 创建的人工智能模型实现到 Java 应用程序中，使用
+    GitHub Copilot 帮助他们修改应用程序的现有版本以使用不同的输入。
+  csa_ai_page_article_link_3: 看一个例子
+  csa_ai_page_learn_more_section_title: 了解有关人工智能的更多信息
+  csa_ai_page_learn_more_title: 探索面向教师的 AI 101
+  csa_ai_page_learn_more_description: 通过我们面向教师的全面在线学习系列，探索人工智能 (AI) 的开创性世界及其在教育领域的变革潜力。
+  csa_ai_page_learn_more_link: 观看 AI 101 教师版系列
+  csa_ai_page_faq_question_01: 这个模块的先决条件是什么？
+  csa_ai_page_faq_answer_01_01: 在深入学习本模块之前，学生应具备 Java 的入门级知识。具体而言，他们应该掌握：
+  csa_ai_page_faq_answer_01_list_01: "**课堂和对象：** 学生应熟悉定义和使用课程，以及创建和操作对象。"
+  csa_ai_page_faq_answer_01_list_02: "**写作和调用方法：** 学生应该能够在课堂中定义方法，理解方法参数和返回类型，以及从对象或其他方法中调用方法。"
+  csa_ai_page_faq_answer_01_list_03: "**一维数组和数组列表：** 他们应该精通声明、初始化和操作一维数组和 ArrayList，包括遍历它们。"
+  csa_ai_page_faq_answer_01_list_04: "**选择和迭代：** 条件语句和循环的坚实基础至关重要。"
+  csa_ai_page_faq_question_01_02: 理想情况下，已经完成 AP 计算机科学 A 或深度和严谨程度相似的课程的学生将为本模块做好充分的准备。
+  csa_ai_page_faq_question_02: 如何安装此模块所需的软件？
+  csa_ai_page_faq_answer_02_01: 该模块之所以独特，是因为它涉及使用第三方软件，而不是 Code.org 实验室和工具。[在此处阅读有关安装软件的更多信息]
+    (%{accessibility_url})。
+  csa_ai_page_faq_question_03: 在教授本模块的同时，如何满足无障碍需求？
+  csa_ai_page_faq_answer_03_01: 满足无障碍需求对于包容性学习环境至关重要。[在此处阅读有关本模块所用软件中无障碍功能的更多信息] (%{install_url})。
+  csa_ai_page_faq_question_04: 如何在 Chromebook 上使用 VS Code？
+  csa_ai_page_faq_answer_04: 在 Chromebook 上使用 VS Code 变得更加简单，尤其是能够在较新的 Chromebook
+    机型上运行 Linux 应用程序的情况下。[在此处阅读有关在 Chromebook 上设置 VS Code 的更多信息] ()%{chromebook_url}。
+  csa_ai_page_faq_question_05: 我怎样才能获得这个模块的专业发展？
+  csa_ai_page_faq_answer_05: 本课程目前没有具体的专业发展。如果你想了解如何在课堂上使用人工智能，你可以 [探索面向教师的 AI 101]
+    (%{ai_101_url})。
+  csa_ai_page_faq_question_06: 本模块的推荐教学时间是什么时候？
+  csa_ai_page_faq_answer_06_01: 软件工程与计算机视觉模块的结构经过深思熟虑，可在简洁的时间范围内提供全面的学习。整个模块的设计跨越**2周的教学**。大多数课程均为**45分钟**量身定制，而学生深入动手实践
+    Java 项目开发的课程则设计为**90分钟**。这种延长的时间可确保学生在工作时有充足的机会进行理解、实施和故障排除。
+  csa_ai_page_faq_answer_06_02: 该模块的结构中还内置了有意的灵活性。根据课堂动态、学生参与度以及你想探索每个主题的深度，你可以调整持续时间。例如，如果你想更深入地了解
+    GitHub Copilot 和 ChatGPT 等大型语言模型和工具的工作原理，那么设计为 45 分钟的 Copilot 入门课程可以扩展到 90 分钟。
+  csa_ai_page_faq_question_07: How can I access answer keys?
+  csa_ai_page_faq_answer_07: 使用经批准的教师帐户，您可以在在线课程和活动中显示的蓝色 “仅限教师” 面板中找到答案键。如果您需要经批准的教师帐户，则可以通过
+    [此表格]（）申请访问受保护的教师专用材料（答案键等）。%{form_url}请记住，验证您的账户可能需要 3-5 个工作日。
+  csa_ai_page_faq_question_08: 这个模块是否符合标准？
+  csa_ai_page_faq_answer_08: 是的，软件工程与计算机视觉课程与 [CSTA K-12 标准] (%{csta_k12_url}) 和 [K-12
+    指南] 的人工智能 () 对应。%{k12_url}
+  csa_ai_page_faq_question_09: 教授这个模块要花多少钱？
+  csa_ai_page_faq_answer_09_01: 我们的课程和平台 [免费] (%{no_cost_url}) 可供任何人、任何地方教学！
+  csa_ai_page_faq_answer_09_02: 此外，本模块中使用的软件和工具是免费的。GitHub Copilot 免费提供经过验证的 [teachers](%{teachers_url})
+    和 [students](%{students_url})。
+  csa_ai_page_faq_question_10: 如果软件安装不起作用该怎么办？
+  csa_ai_page_faq_answer_10: 在软件安装过程中遇到问题可能很常见，但是您可以按照一些系统的步骤进行故障排除和解决。[在此处查看一些故障排除提示]
+    (%{troubleshooting_url})。
+  csa_ai_page_faq_question_11: How was the curriculum developed?
+  csa_ai_page_faq_answer_11_01: 我们的软件工程和计算机视觉课程在设计时充分考虑了我们的课程价值观。以下目标指导了本课程的创建：
+  csa_ai_page_faq_answer_11_list_01: "**目标 1：** 使用 AI 工具生成、调试和编辑代码。"
+  csa_ai_page_faq_answer_11_list_02: "**目标 2：** 从 Java 实验室过渡到实际工具。"
+  csa_ai_page_faq_answer_11_list_03: "**目标 3：** 加深对如何训练人工智能模型并将其整合到项目中的理解。"
+  csa_ai_page_faq_answer_11_02: 有关指导我们工作的价值观的更多信息，请参阅我们的 [课程价值观] (%{curriculum_values_url})。
+  video_library_page_main_title: 教育短片
+  video_library_page_hero_description: Code.org 不断增长的教育视频库可供世界各地的教育工作者在网上或课堂上重复使用。我们的目标是在我们自己的课程范围之外扩大我们的努力。
+  video_library_page_title_ai_works: 人工智能的工作原理
+  video_library_page_description_ai_works: 这一系列短视频将向您介绍人工智能的工作原理及其重要性。了解神经网络或人工智能是如何学习的，并深入研究算法偏见和人工智能决策伦理等问题。
+  video_library_page_title_computers_work: 计算机的工作原理
+  video_library_page_description_computers_work: 解释是什么使计算机成为计算机，如何用 1 和 0 表示数字信息，计算机电路如何操作数字信息，以及中央处理器
+    (CPU) 和操作系统如何控制计算机的输入、输出、内存和硬件。
+  video_library_page_title_internet_works: 互联网的工作原理
+  video_library_page_description_internet_works: TCP/IP的发明者文特·瑟夫、Tumblr的创始人大卫·卡普解释HTTP和HTML，谷歌的《安全公主》解释SSL和网络安全，以及来自微软、Spotify和赛门铁克的工程师。该系列短片解释了互联网的工作原理。
+  video_library_page_title_not_hacked: 如何不被黑客攻击
+  video_library_page_description_not_hacked: 互联网是开放的，因此除非受到保护，否则上面发生的一切都可以看见。在现代国家，人们比任何其他犯罪都更担心被黑客入侵。为什么？因为犯罪分子、恐怖分子甚至国家行为者都会定期对互联网上的每台计算机或手机进行漏洞测试。如果你不小心，有人可能会入侵你的设备或账户，甚至窃取你的身份或金钱。
+  video_library_page_title_blockchain: 区块链是如何运作的
+  video_library_page_description_blockchain: 该系列与Coinbase合作制作，以行业专家为特色，旨在通过探索区块链是什么、其工作原理及其潜在的社会影响（包括好与坏）来揭开这项技术的神秘面纱。
+  video_library_page_title_careers: CS 职业生涯
+  video_library_page_description_careers: 计算机科学和技术领域的职业可能既有趣又有收获。但是，在这些领域工作的人到底在做什么？由于工作岗位和公司种类繁多，这个问题不只有一个答案。观看下面的视频，认识一些以创造性方式解决重大问题的人。
+  video_library_page_title_inspirational: 励志的
+  video_library_page_description_inspirational: 计算机科学将在我们的世界中发生什么变化？所有东西？这是给谁的？大家！观看这些视频，激励和激励你。
+  video_library_page_footer_description: 想找别的东西吗？我们的Youtube频道上有许多精彩的视频可供观看。
+  video_library_page_footer_cta: 在 YouTube 上浏览所有 Code.org 视频
+  video_library_page_computer_work_video_title_1: 介绍计算机的工作原理
+  video_library_page_computer_work_video_title_2: 二进制和数据
+  video_library_page_computer_work_video_title_3: CPU、内存、输入和输出
+  video_library_page_computer_work_video_title_4: 是什么造就了一台电脑，一台电脑？
+  video_library_page_computer_work_video_title_5: 电路逻辑
+  video_library_page_computer_work_video_title_6: 硬件和软件
+  video_library_page_internet_work_video_title_1: 什么是互联网？
+  video_library_page_internet_work_video_title_2: 互联网：IP 地址和 DNS
+  video_library_page_internet_work_video_title_3: 互联网：HTTP 和 HTML
+  video_library_page_internet_work_video_title_4: 互联网：网络安全与犯罪
+  video_library_page_internet_work_video_title_5: 互联网：电线、电缆和无线上网
+  video_library_page_internet_work_video_title_6: 互联网：数据包、路由和可靠性
+  video_library_page_internet_work_video_title_7: 互联网：加密和公钥
+  video_library_page_internet_work_video_title_8: 互联网：搜索的工作原理
+  video_library_page_cs_video_title_1: 我叫杰罗姆我是 Meow Wolf 的设计技术专家
+  video_library_page_cs_video_title_2: 我叫 Nikesha 我是 NASA 的航空航天工程师
+  video_library_page_cs_video_title_3: 我叫 Brina 我是 Instagram 的软件工程师
+  video_library_page_cs_video_title_4: 我叫 Kinsley 我是 Facebook 的软件工程师
+  video_library_page_cs_video_title_5: 我叫 Polina 我是电子艺界的数据科学家
+  video_library_page_cs_video_title_6: 我叫 Danelle 我是 MBARI 的软件工程师
+  video_library_page_cs_video_title_7: 我叫克里斯托弗我是 Tanium 的安全分析师
+  video_library_page_cs_video_title_8: 我叫费德里科，是微软的技术项目经理
+  video_library_page_cs_video_title_9: 我叫苔丝我是谷歌的软件工程师
+  video_library_page_inspirational_video_title_1: 改变计算机科学的面貌（3 分钟）
+  video_library_page_inspirational_video_title_2: 努力奋斗。任何人都可以学习。（1 分钟）
+  video_library_page_inspirational_video_title_3: 激励一个女孩（2 分钟）
+  video_library_page_inspirational_video_title_4: 大部分学校没有教的内容（5分钟）
+  video_library_page_inspirational_video_title_5: 编程一小时到了-任何人都可以学习（2 分钟）
+  video_library_page_inspirational_video_title_6: 我叫 Aracely（3 分钟）
+  video_library_page_inspirational_video_title_7: Steph Curry 的《编程一小时》（2 分钟）
+  video_library_page_inspirational_video_title_8: 计算机科学正在改变一切（5 分钟）
+  video_library_page_inspirational_video_title_9: 计算机科学简介（1 分钟）
+  video_library_page_inspirational_video_title_10: 奥巴马总统谈计算机科学（1 分钟）
+  video_library_page_inspirational_video_title_11: 任何人都可以学习 (1分钟)
+  video_library_page_inspirational_video_title_12: Lo Que Falta En Nuestras Escuelas
+    (2 分钟)
+  video_library_page_not_hacked_video_title_1: 如何不被黑客攻击：简介
+  video_library_page_not_hacked_video_title_2: 如何不被黑客攻击：密码
+  video_library_page_not_hacked_video_title_3: 如何不被黑客攻击：身份验证和设备锁
+  video_library_page_not_hacked_video_title_4: 如何不被黑客攻击：网络钓鱼
+  video_library_page_not_hacked_video_title_5: 如何不被黑客入侵：网站和 Wifi
+  video_library_page_not_hacked_video_title_6: 如何不被黑客攻击：消息和下载
+  video_library_page_not_hacked_video_title_7: 如何不被黑客攻击：安装更新
   language_code:
     ar: 阿拉伯语
     az: 阿塞拜疆人

@@ -108,19 +108,19 @@ nn:
     datavitskap kan ha i å skapa ei meir rettferdig verd.
   oceans_landing_videos: Videoer om AI og maskinlæring
   oceans_behind_the_scenes: 'AI for hav: Bak kulissene'
-  oceans_behind_the_scenes_1: Levels 2-4 use a pretrained model provided by the <a
-    href="https://www.tensorflow.org/" >TensorFlow</a> <a href="https://github.com/tensorflow/models/blob/master/research/slim/nets/mobilenet_v1.md">
-    MobileNet </a> project. A MobileNet model is a <a href="https://developers.google.com/machine-learning/practica/image-classification/convolutional-neural-networks">convolutional
-    neural network</a> that has been trained on <a href="http://www.image-net.org/">ImageNet</a>,
-    a dataset of over 14 million images hand-annotated with words such as "balloon"
-    or "strawberry". In order to customize this model with the labeled training data
-    the student generates in this activity, we use a technique called <a href="https://en.wikipedia.org/wiki/Transfer_learning">Transfer
-    Learning</a>. Each image in the training dataset is fed to MobileNet, as pixels,
-    to obtain a list of annotations that are most likely to apply to it. Then, for
-    a new image, we feed it to MobileNet and compare its resulting list of annotations
-    to those from the training dataset. We classify the new image with the same label
-    (such as "fish" or "not fish") as the images from the training set with the most
-    similar results.
+  oceans_behind_the_scenes_1: Nivåene 2-4 bruker en forhåndstrent modell levert av
+    <a href="https://www.tensorflow.org/" >TensorFlow</a> <a href="https://github.com/tensorflow/models/blob/master/research/slim/nets/mobilenet_v1.md">
+    MobileNet-prosjektet. </a> En MobileNet-modell er et <a href="https://developers.google.com/machine-learning/practica/image-classification/convolutional-neural-networks">konvolusjonelt
+    nevralt nettverk</a> som har blitt trent på <a href="http://www.image-net.org/">ImageNet</a>,
+    et datasett med over 14 millioner bilder håndkommentert med ord som «ballong»
+    eller «jordbær». For å tilpasse denne modellen med de merkede treningsdataene
+    eleven genererer i denne aktiviteten, bruker vi en teknikk som heter <a href="https://en.wikipedia.org/wiki/Transfer_learning">Transfer
+    Learning</a>. Hvert bilde i treningsdatasettet blir matet til MobileNet, som piksler,
+    for å få en liste over merknader som mest sannsynlig vil gjelde for det. Deretter,
+    for et nytt bilde, mater vi det til MobileNet og sammenligner den resulterende
+    listen over merknader med de fra treningsdatasettet. Vi klassifiserer det nye
+    bildet med samme etikett (for eksempel «fisk» eller «ikke fisk») som bildene fra
+    treningssettet med de mest like resultatene.
   oceans_behind_the_scenes_1_markdown: Nivåer 2-4 bruker en forhåndstrent modell levert
     av [TensorFlow](https://www.tensorflow.org/) [MobileNet](https://github.com/tensorflow/models/blob/master/research/slim/nets/mobilenet_v1.md)
     prosjektet. En MobileNet-modell er et [konvolusjonelt nevralt nettverk] (https://developers.google.com/machine-learning/practica/image-classification/convolutional-neural-networks)
@@ -184,6 +184,15 @@ nn:
   grade_level_label_elementary: Barneskole
   grade_level_label_middle: Ungdomsskolen
   grade_level_label_high: Videregående skole
+  curricula_title_elementary: Læreplaner for barneskole
+  curricula_desc_elementary: Bla gjennom moroa, gratis kurs og aktiviteter som inviterer
+    deg til å utforske informatikk med grunnskoleelevene dine.
+  curricula_title_middle: Læreplaner for ungdomsskolen
+  curricula_desc_middle: Bla gjennom de engasjerende tilbudene som gjør det mulig
+    for deg og ungdomsskoleelevene dine å utforske informatikk sammen.
+  curricula_title_high: Læreplaner for videregående skole
+  curricula_desc_high: Bla gjennom de overbevisende kursene og aktivitetene som inviterer
+    deg og dine videregående studenter til å grave dypere inn i informatikk.
   students_label: Elevar
   teachers_label: Lærarar
   teacher_label_csf: CS Fundamentals Lærer
@@ -193,6 +202,7 @@ nn:
   teacher_label_csa: AP® Computer Science A Teacher
   required_materials: 'Nødvendige materialer:'
   optional_materials: 'Valgfrie materialer:'
+  call_to_action_explore_roles: Utforsk åpne roller
   call_to_action_learn_more: Les meir
   call_to_action_watch_now: Se nå
   call_to_action_try_activity: Prøv aktivitet
@@ -210,6 +220,15 @@ nn:
   call_to_action_explore_choice_level: Utforsk eksempel valgnivå
   call_to_action_explore_collection: Utforsk samlingen
   call_to_action_explore_unplugged_lesson: Utforsk unplugged leksjoner
+  call_to_action_explore_csf: Utforsk CS Fundamentals
+  call_to_action_explore_csd: Utforsk CS Discoveries
+  call_to_action_explore_csp: Utforsk CS Principles
+  call_to_action_explore_csc: Utforsk CS Connections
+  call_to_action_explore_csa: Utforsk AP® Computer Science A
+  call_to_action_explore_csa_short: Utforsk AP® CSA
+  call_to_action_explore_maker: Utforsk Maker læreplaner
+  call_to_action_explore_hoc: Utforsk Hour of Code tutorials
+  call_to_action_explore_hoc_short: Utforsk Kodetimen
   call_to_action_try_app_lab: Prøv App Lab
   call_to_action_view_lesson_plan: Se leksjonsplan
   call_to_action_self_paced_pl: Start profesjonell læring i eget tempo
@@ -233,6 +252,7 @@ nn:
   call_to_action_resources_tools: Prøv programmeringsverktøy
   call_to_action_sign_up_free: Registrer deg gratis
   call_to_action_explore_ai_resources: Utforsk AI-ressurser
+  call_to_action_explore_ai_curricula: Utforsk AI-læreplaner
   call_to_action_explore_curriculum_catalog: Utforsk Curriculum Catalog
   call_to_action_see_full_curriculum_catalog: Se hele læreplankatalogen
   call_to_action_find_self_paced_modules: Finn moduler i eget tempo
@@ -254,6 +274,7 @@ nn:
   call_to_action_notify_available: Gi meg beskjed når tilgjengelig
   call_to_action_register_early_access: Registrer deg for tidlig tilgang
   call_to_action_open_positions: Vis åpne stillinger
+  call_to_action_get_guide: Få guiden
   aria_label_call_to_action_afe: Lær mer om Amazon Future Engineer
   aria_label_call_to_action_teaching_csf: Start Teaching Computer Science Fundamentals
     profesjonelle læringsprogram
@@ -351,8 +372,11 @@ nn:
   curriculum_name_csp: Datavitenskapelige prinsipper
   curriculum_name_csc: Datavitenskapelige tilkoblinger
   curriculum_name_csa: AP® informatikk A
+  curriculum_name_csa_ai: Programvareutvikling og datasyn
   curriculum_name_csc_02: Enhver CS-tilkoblingsmodul
   curriculum_name_ai: AI og maskinlæring
+  curriculum_name_artificial_intelligence: Kunstig intelligens (AI)
+  curriculum_name_maker: Skaper
   curriculum_name_maker_cp: Opprette apper med enheter (Circuit Playground)
   curriculum_name_maker_microbit: Opprette apper med enheter (micro:bit)
   curriculum_name_creating_apps_with_devices: Opprette apper med enheter
@@ -363,6 +387,8 @@ nn:
   curriculum_name_interactive_animations_games: Interaktive animasjoner og spill
   curriculum_name_design_process: Designprosessen
   curriculum_name_data_society: Data og samfunn
+  curriculum_desc_csf: Gratis sett med elementære læreplaner som introduserer studentene
+    til de grunnleggende konseptene innen informatikk.
   curriculum_desc_csf_express: Lær å lage dataprogrammer, utvikle problemløsende ferdigheter,
     og jobbe gjennom morsomme utfordringer! Lag spill og kreative prosjekter for å
     dele med venner, familie og lærere.
@@ -404,6 +430,25 @@ nn:
   curriculum_desc_creating_apps_with_devices: Utforsk rollen til fysiske enheter i
     databehandling. Utvikle programmer som bruker maskinvareinnganger og -utganger.
     Det er en versjon av denne enheten for både micro:bit og Circuit Playground.
+  curriculum_desc_csa: Introduser studentene til programvareteknikk og objektorientert
+    design mens de lærer Java-programmeringsspråket i denne gratis læreplanen for
+    AP® Computer Science A (AP® CSA).
+  curriculum_desc_maker: Makerutdanning tar STEM (Science, Technology, Engineering,
+    Mathematics) et skritt videre ved å invitere praktisk erfaring og samarbeid inn
+    i klasserommet for å hjelpe deg med å lære problemløsning og kritisk tenkning.
+  curriculum_desc_maker_short: Makerutdanning inviterer praktisk erfaring og samarbeid
+    inn i klasserommet for å hjelpe deg med å lære problemløsning og kritisk tenkning.
+  curriculum_desc_csd: Fleksibelt kurs, slik at hver enhet kan undervises alene eller
+    kombinert. Introduserer elevene til å bygge nettsteder, apper, animasjoner, spill
+    og fysiske datasystemer.
+  curriculum_desc_csp: Gratis, AP® CSP godkjent introduksjonskurs på videregående
+    skole som introduserer studentene til de grunnleggende konseptene innen informatikk.
+  curriculum_desc_csa_ai_long: 'Denne to-kapittels post-AP CSA-modulen tilbyr videregående
+    studenter praktisk erfaring med profesjonelle programvareutviklingsverktøy, inkludert
+    GitHub og GitHub Copilot, og gir dem de virkelige ferdighetene til å utvikle et
+    datasynsprogram. '
+  curriculum_desc_csa_ai_short: Denne PoST-AP® CSA-modulen tilbyr videregående studenter
+    praktisk erfaring med profesjonelle programvareutviklingsverktøy.
   collection_hardware: Fokus på maskinvare
   collection_hardware_desc: Styrker elevene til å bruke data og fysiske enheter for
     å løse problemer.
@@ -434,6 +479,7 @@ nn:
   module_label_professional_learning: 'Profesjonell læring:'
   module_label_languages: 'Språk som støttes:'
   module_label_accessibility_features: 'Tilgjengelighet:'
+  module_label_accessibility_features_full: 'Tilgjengelighetsfunksjoner:'
   module_label_educator_tool: Pedagog-verktøy
   module_label_educator_course: Lærer kurs
   module_label_student_tool: Studentverktøy
@@ -441,6 +487,7 @@ nn:
   module_label_student_content_resources: Innhold og ressurser
   module_label_new: Ny
   module_label_coming_soon: Kommer snart
+  module_label_available_now: Tilgjengelig nå
   module_label_video_series: Video-serien
   module_label_self_paced: Modul i eget tempo
   module_ages_5_10: 5-10
@@ -451,6 +498,8 @@ nn:
   module_grade_2_5: 2-5
   module_grade_3_5: 3-5
   module_grade_3_8: 3-8
+  module_grade_k_12: K-12
+  module_grade_3_12: 3-12
   module_grade_6_12: 6-12
   module_grade_6_10: 6-10
   module_grade_9_12: 9-12
@@ -465,11 +514,14 @@ nn:
   module_grade_9_12_teachers: 9-12 Lærere
   module_level_beginner: Nybegynner
   module_level_intermediate: Mellomliggende
+  module_level_advanced: Avansert
   module_duration_45_mins: 45 minutter
+  module_duration_2_weeks: 2 uker
   module_duration_1_hr: 1 time
   module_duration_2_hrs: 2 timer
   module_duration_3_hrs: 3 timer
   module_duration_5_hrs: 5 timer
+  module_duration_5_hrs_plus: 5+ timer
   module_duration_8_hrs: 8 timer
   module_duration_20_hrs: 20 timer
   module_duration_35_hrs: 35 timer
@@ -481,6 +533,7 @@ nn:
   module_duration_school_year: Skoleåret
   module_duration_month_quarter: Måned eller kvartal
   module_duration_month_semester_year: Måned, semester eller år
+  module_duration_varies: Varierer
   module_prerequisites_none: Ingen
   module_prerequisites_maker_cp: Tilgang til en Circuit Playground
   module_prerequisites_maker_microbit: Tilgang til micro:bit
@@ -545,6 +598,8 @@ nn:
   heading_java_lab: Java Lab
   heading_objects_first: Objekter først
   heading_these_lessons_will: 'Disse leksjonene vil:'
+  heading_explore_curriculum_catalog: Utforsk alle kursene våre i læreplankatalogen
+  heading_csa_ai: Leter du etter ting å gjøre etter AP® eksamen?
   professional_learning_section_desc: Få den støtten du trenger når du forbereder
     deg på å undervise. Lærere elsker det, med over 90% som rangerer det som den beste
     profesjonelle utviklingen noensinne!
@@ -576,6 +631,23 @@ nn:
   support_and_questions_section_desc: Vårt supportteam er her for å svare på spørsmål
     du måtte ha om å begynne å undervise med Code.org. Du kan også spørre andre lærere
     om deres erfaring på lærerforumene våre.
+  subscribe_form_section_title: Abonner på oppdateringer
+  subscribe_form_section_desc_csa: Registrer deg for å motta månedlige e-poster om
+    Code.orgs AP® Computer Science A og få nyttige påminnelser, tips og oppdateringer
+    sendt rett til innboksen din.
+  subscribe_form_section_desc_csc: Registrer deg for å motta månedlige e-poster om
+    Code.orgs Computer Science Connections og få nyttige påminnelser, tips og oppdateringer
+    sendt rett til innboksen din.
+  subscribe_form_section_desc_csd: Registrer deg for å motta månedlige e-poster om
+    Code.orgs Computer Science Discoveries og få nyttige påminnelser, tips og oppdateringer
+    sendt rett til innboksen din.
+  subscribe_form_section_desc_csf: Registrer deg for å motta månedlige e-poster om
+    Code.orgs Computer Science Fundamentals og få nyttige påminnelser, tips og oppdateringer
+    sendt rett til innboksen din.
+  subscribe_form_section_desc_csp: Registrer deg for å motta månedlige e-poster om
+    Code.orgs datavitenskapsprinsipper og få nyttige påminnelser, tips og oppdateringer
+    sendt rett til innboksen din.
+  subscribe_form_section_unsubscribe: Du kan når som helst avslutte abonnementet.
   blockchain_hero_heading: Hvordan Blockchain fungerer
   blockchain_hero_desc: Dykk ned i blockchain-verdenen med «How Blockchain Works»,
     vår nye videoserie og tilhørende leksjoner!
@@ -676,6 +748,8 @@ nn:
     leksjon er parret med en enkelt video fra serien, og dykker dypere inn i konseptene
     introdusert i videoene.
   ai_curriculum_btn_aria_label_04: Utforsk hvordan AI fungerer leksjoner
+  ai_curriculum_grades_05: 'Karakternivåer: 9-12'
+  ai_curriculum_btn_aria_label_05: Utforsk Software Engineering & Computer Vision-modulen
   ai_carousel_heading: 'Hva lærere sier om AI med Code.org:'
   ai_carousel_quote_01: Denne leksjonen ga også elevene mine muligheten til å se at
     det er et element av mening i klassifiseringssystemer. Senere, da vi begynte å
@@ -796,6 +870,11 @@ nn:
     i AI, med to nye videoer på store språkmodeller (som ChatGPT) og Generative AI.
     Hør hvordan disse nye teknologiene fungerer direkte fra ekspertene: Mira Murati,
     CTO for OpenAI, og Cristóbal Valenzuela, administrerende direktør i RunWayml.'
+  ai_pl_101_llm_slides_title: Prompts for store språkmodeller for lærere
+  ai_pl_101_llm_slides_desc: Verktøy for å få best mulig utdata fra LLMS som ChatGPT,
+    fra nybegynner til avansert. Inkluderer startmeldinger for de som bare dypper
+    tærne i, samt avanserte verktøy for de som ønsker å maksimere potensialet.
+  ai_pl_101_resources_3: AI-spørsmål for å transformere studenters læring
   how_ai_works_hero_heading: Hvordan AI fungerer
   how_ai_works_hero_desc: Dykk ned i AI-verdenen med «How AI Works», vår videoserie
     og tilhørende leksjoner!
@@ -1114,19 +1193,18 @@ nn:
   teach_page_free_curriculum_desc: Vi vil at du skal ta med informatikk til skolen
     din uten å bekymre deg for kostnadene. Derfor har vi forpliktet oss til at pensumtilbudene
     våre er gratis for alltid!
-  teach_page_free_curriculum_list_heading_01: Engasjerende læreplan for hvert klassetrinn
   teach_page_free_curriculum_list_desc_01: Gratis, fleksibel, og morsom læreplan med
     tilbud på over 67 språk.
-  teach_page_free_curriculum_list_heading_02: Tilpasningsdyktig, innovativ læreplan
   teach_page_free_curriculum_list_desc_02: Code.org tilbyr alt fra helårs læreplaner
     til enkeltenhetsaktiviteter. I tillegg oppdaterer vi læreplanene våre årlig for
     å støtte beste praksis og fokusområder, og lage nye tilbud som lærer aktuelle
     etterspurte emner.
-  teach_page_free_curriculum_list_heading_03: Strukturert læreplan kartlagt til nasjonale
-    standarder
   teach_page_free_curriculum_list_desc_03: Hver læreplan er kartlagt til minst ett
     sett med nasjonale standarder, inkludert CSTA, Next Generation Science Standards
     og Common Core.
+  teach_page_free_curriculum_list_desc_04: Tilbud på over 67 språk
+  teach_page_free_curriculum_list_desc_05: Kartlagt til minst ett sett med nasjonale
+    standarder (inkludert CSTA, NGSS og Common Core)
   teach_page_free_curriculum_heading_02: 'Utforsk våre pensumtilbud for forskjellige
     klassetrinn:'
   teach_page_resources_heading: Ressurser som støtter deg hvert steg på veien
@@ -1185,8 +1263,8 @@ nn:
     Animation
   csp_page_curriculum_glance_devices: Laptop, Chromebook
   csp_page_curriculum_glance_tools: App Lab
-  csp_page_curriculum_glance_professional_learning: Facilitator-led Workshops, Self-paced
-    Modules
+  csp_page_curriculum_glance_professional_learning: Fasilitator-ledede workshops,
+    Moduler i eget tempo
   csp_page_curriculum_glance_professional_languages: Norsk Nynorsk
   csp_page_curriculum_glance_professional_accessibility_features: Text-to-speech,
     Closed captioning, Immersive reader
@@ -1312,8 +1390,8 @@ nn:
     databehandling, Appdesign, Spill og animasjoner, Kunst og design, Programmering
   csd_page_curriculum_glance_devices: Laptop, Chromebook
   csd_page_curriculum_glance_tools: App Lab, Spilllab, AI Lab, Web Lab
-  csd_page_curriculum_glance_professional_learning: Facilitator-led Workshops, Self-paced
-    Modules
+  csd_page_curriculum_glance_professional_learning: Fasilitator-ledede workshops,
+    Moduler i eget tempo
   csd_page_curriculum_glance_professional_languages: Norsk Nynorsk
   csd_page_curriculum_glance_professional_accessibility_features: Text-to-speech,
     Closed captioning, Immersive reader
@@ -1379,10 +1457,10 @@ nn:
     aktiviteter er tilgjengelige hvis du ikke har tilgang til disse forsyningene.
   csd_page_faq_answer_04_06: Opprette apper med enheter (alternativ A og alternativ
     B)
-  csd_page_faq_answer_04_07: 'Option A: Classroom set of Circuit Playgrounds. Check
-    out [code.org/maker/circuitplayground](%{url}) for more details.'
-  csd_page_faq_answer_04_08: 'Option B: Classroom set of micro:bit devices. Check
-    out [code.org/maker/microbit](%{url}) for more details.'
+  csd_page_faq_answer_04_07: 'Alternativ A: Klasseromssett med Circuit Playgrounds.
+    Sjekk ut [code.org/maker/circuitplayground] () for mer informasjon.%{url}'
+  csd_page_faq_answer_04_08: 'Alternativ B: Klasseromssett med micro:bit-enheter.
+    Sjekk ut [code.org/maker/microbit] () for mer informasjon.%{url}'
   csd_page_faq_answer_04_09: Produsentrekvisita, for eksempel tomme silkebokser eller
     pappruller eller skrapepapir
   csd_page_faq_answer_04_10: "*Merk: Enheten Opprette apper med enheter har to implementeringsalternativer
@@ -1453,8 +1531,8 @@ nn:
     Kunst og design, App Design
   csf_page_curriculum_glance_devices: Bærbar PC, Chromebook, nettbrett
   csf_page_curriculum_glance_tools: Sprite Lab, Play Lab
-  csf_page_curriculum_glance_professional_learning: Facilitator-led Workshops, Self-paced
-    Modules
+  csf_page_curriculum_glance_professional_learning: Fasilitator-ledede workshops,
+    Moduler i eget tempo
   csf_page_curriculum_glance_languages: Arabisk, Bahasa indonesisk, katalansk, kinesisk
     forenklet, kinesisk tradisjonell, tsjekkisk, fransk, tysk, hindi, italiensk, japansk,
     koreansk, kannada, malayisk, marathi, mongolsk, polsk, portugisisk-BR, rumensk,
@@ -1508,19 +1586,20 @@ nn:
     ditt. Våre regionale partnere tilbyr høykvalitets en-dags Code.org-workshops for
     individuelle lærere eller for skoleomfattende PD. [Registrer deg for et faglig
     utviklingsverksted nær deg] (%{sign_up_url})!
-  csf_page_faq_answer_04_02: Join over 100,000 teachers who have participated in our
-    workshops. The majority of our workshop attendees say, 'It's the best professional
-    development I've ever attended.' In fact, [90% of attendees would recommend our
-    program to other teachers](%{rec_url})!
+  csf_page_faq_answer_04_02: 'Bli med over 100 000 lærere som har deltatt i våre workshops.
+    Flertallet av deltakerne på workshopen sier: ''Det er den beste faglige utviklingen
+    jeg noensinne har deltatt på. '' Faktisk, [90% av deltakerne vil anbefale programmet
+    vårt til andre lærere] ()!%{rec_url}'
   csf_page_faq_question_05: Hva er den anbefalte timingen for undervisning i CS Fundamentals?
   csf_page_faq_answer_05: Hvert CSF-kurs inkluderer 13-17 leksjoner designet for 45-minutters
     perioder. Vi anbefaler alle elever å gå fra leksjon til leksjon i et tempo satt
     av læreren. Det er mange lærerledede prosjektnivåer designet for å oppleves unisont
     mens ferdighetsbyggende leksjoner kan fullføres av elevene i sitt eget tempo.
   csf_page_faq_question_06: Hvilke materialer trenger jeg for CS Fundamentals?
-  csf_page_faq_answer_06: Many lessons have handouts that guide students through activities.
-    These resources can be printed or assigned digitally. Some lessons call for typical
-    classroom supplies and manipulatives. [Visit the CSF Syllabus to learn more](%{syllabus_url}).
+  csf_page_faq_answer_06: Mange leksjoner har utdelinger som veileder elevene gjennom
+    aktiviteter. Disse ressursene kan skrives ut eller tildeles digitalt. Noen leksjoner
+    krever typiske klasseromsforsyninger og manipulativer. [Besøk CSF-pensum for å
+    lære mer] ().%{syllabus_url}
   csa_page_top_desc: Introduce students to software engineering and object-oriented
     design while they learn the Java programming language in this free curriculum
     for [AP® Computer Science A (AP® CSA)](%{csa_url}).
@@ -2005,6 +2084,12 @@ nn:
     Code.org-kurs, lokale moglegheiter eller andre nyheiter om datavitskap?
   signup_email_preference_privacy: "(Sjå våre retningslinjer for personvern)"
   signup_email_preference_yes: Ja
+  signup_email_preference_yes_elementary: Ja - Send meg oppdateringer om grunnskolens
+    ressurser
+  signup_email_preference_yes_middle: Ja - Send meg oppdateringer om Middle School
+    Resources
+  signup_email_preference_yes_high: Ja - Send meg oppdateringer om High School Resources
+  signup_email_preference_yes_general: Ja - Send meg generelle oppdateringer
   signup_email_preference_no: Nei
   signup_email_preference_error: Epost er påkrevd
   signup_multiple_event_warning: Hvis du held flere arrangementer, gjer vel å registrere
@@ -2147,22 +2232,23 @@ nn:
     den du ynskjer, og velgje ein &mdash; me gjer resten. Me har også val for alle
     aldre og erfaringsnivå, frå barnehagen og opp. Start hendingsplanleggjinga ved
     å lese vår <a href='/how-to'>veiledning</a>.
-  hoc_faq_host_a_markdown: Of course. Hour of Code activities are self-guided. All
-    you have to do is [try our current tutorials](%{codeorg_url}/learn), pick the
-    tutorial you want, and pick an hour — we take care of the rest. We also have options
-    for every age and experience-level, from kindergarten and up. Start planning your
-    event by reading our [how to guide](%{howto}).
+  hoc_faq_host_a_markdown: Selvfølgelig. Hour of Code-aktiviteter er selvstyrte. Alt
+    du trenger å gjøre er [prøv våre nåværende opplæringsprogrammer] (%{codeorg_url}/lær),
+    velg opplæringen du ønsker, og velg en time - vi tar oss av resten. Vi har også
+    muligheter for alle aldre og erfaringsnivåer, fra barnehage og oppover. Begynn
+    å planlegge arrangementet ditt ved å lese vår [hvordan veilede] (%{howto}).
   hoc_faq_devices_q: Kva slags datamaskiner/einingar bør eg bruke for elevane mine?
   hoc_faq_devices_a: Code.org sine rettleiingar fungerer på alle einingar og nettlesarar.
     Du finn meir informasjon om tekniske behov <a href='%{codeorg_url}/educate/it'>her</a>.
     Tekniske behov for opplæring utanfor Code.org finn du <a href='%{codeorg_url}/learn'>%{partner_url}/learn</a>
     i skildringa av kvar enkelt rettleiing. Ikkje gløym at vi også tilbyr <a href='%{unplugged_url}'>opplegg
     utan datamaskiner</a> dersom skulen ikkje kan tilrettelegge med utstyr!
-  hoc_faq_devices_a_markdown: Code.org tutorials work on all devices and browsers.
-    You can see more information about Code.org's tutorial tech needs [here](%{codeorg_url}/educate/it).
-    Tech needs for non-Code.org tutorials can be found on [%{partner_url}/learn](%{codeorg_url}/learn)
-    in the tutorial specific description. Don't forget we also offer [unplugged activities](%{unplugged_url})
-    if your school can't accommodate the tutorials!
+  hoc_faq_devices_a_markdown: Code.org tutorials fungerer på alle enheter og nettlesere.
+    Du kan se mer informasjon om Code.orgs opplæringstekniske behov [here](%{codeorg_url}/educate/it).
+    Tekniske behov for ikke-Code.org-opplæringsprogrammer finner du på [%{partner_url}/learn]
+    (%{codeorg_url}/learn) i den veiledningsspesifikke beskrivelsen. Ikke glem at
+    vi også tilbyr [unplugged activities] (%{unplugged_url}) hvis skolen din ikke
+    har plass til opplæringsprogrammene!
   hoc_faq_need_computers_q: Treng eg datamaskiner til kvar deltakar?
   hoc_faq_need_computers_a: Nei. Vi har Kodetime-rettleiingar som fungerar på PC,
     smarttelefonar, nettbrett og nokre som ikkje treng datamaskiner i det heile teke.
@@ -2176,13 +2262,13 @@ nn:
     straum.</b> VI har også <a href='%{unplugged_url}'>rettleiingar som ikkje krev
     datamaskiner</a> i det heile teke.</ul>
   hoc_faq_need_computers_a_markdown: |-
-    No. We have Hour of Code tutorials that work on PCs, smartphones, tablets, and some that require no computer at all! You can join wherever you are, with whatever you have.
+    Nei. Vi har Hour of Code-opplæringsprogrammer som fungerer på PC-er, smarttelefoner, nettbrett, og noen som ikke krever noen datamaskin i det hele tatt! Du kan bli med uansett hvor du er, med det du har.
 
-    _Here are a few options:_
+    _Her er noen alternativer:_
 
-    - **Work in pairs.** [Research shows](%{pair_programming_research}) students learn best with [pair programming](%{pair_programming_video}), sharing a computer and working together. Encourage your students to double up.
-    - **Use a projected screen.** If you have a projector and screen for a Web-connected computer, your entire group can do an Hour of Code together. Watch video portions together and take turns solving puzzles or answering questions.
-    - **Go unplugged.** We offer [tutorials that require no computer](%{unplugged_url}) at all.
+    - **Arbeid par.** [Forskning viser] (%{pair_programming_research}) elevene lærer best med [parprogrammering] (%{pair_programming_video}), deling av datamaskin og samarbeid. Oppfordre elevene dine til å doble opp.
+    - **Bruk en projisert skjerm.** Hvis du har en projektor og skjerm for en Internett-tilkoblet datamaskin, kan hele gruppen gjøre en Kodetime sammen. Se videodeler sammen og bytt på å løse gåter eller svare på spørsmål.
+    - **Gå frakoblet. ** Vi tilbyr [opplæringsprogrammer som ikke krever datamaskin] () i det hele tatt.%{unplugged_url}
   hoc_faq_international_q: Eg er i <country>. Korleis kan eg delta internasjonalt?
   hoc_faq_international_a: Kven som helst kan organisere eit Kodetime-arrangement,
     kor som helst i verda. I fjor deltok elevar over heile verda saman i Kodetimen.
@@ -2218,23 +2304,25 @@ nn:
     for å starte, til dømes oppgåva med Angry Birds eller med Anna og Elsa frå Frost.
     Ein elev i vidaregåande skule bør klare desse på 30 minutt og kan gå vidare til
     ei meir avansert oppgåve i JavaScript, frå for eksempel Khan Academy eller CodeHS.
-  hoc_faq_high_school_a_markdown: Our Star Wars and Minecraft tutorials are great
-    for high schoolers, especially the Star Wars JavaScript version and the free play
-    level on both tutorials. Alternately, we recommend trying one of the beginner
-    tutorials on [%{partner_url}/learn](%{codeorg_url}/learn) to start, such as the
-    tutorial with Angry Birds or with Anna and Elsa. A high school student should
-    be able to finish one of these in 30 minutes and can then try a more advanced
-    tutorial in JavaScript, such as Khan Academy or CodeHS.
+  hoc_faq_high_school_a_markdown: Våre Star Wars- og Minecraft-opplæringsprogrammer
+    er flotte for videregående skoleelever, spesielt Star Wars JavaScript-versjonen
+    og gratisspillnivået på begge opplæringsprogrammene. Alternativt anbefaler vi
+    å prøve en av nybegynnerveiledningene på [%{partner_url}/learn] (%{codeorg_url}/learn)
+    for å starte, for eksempel opplæringen med Angry Birds eller med Anna og Elsa.
+    En videregående student skal kunne fullføre en av disse på 30 minutter og kan
+    deretter prøve en mer avansert opplæring i JavaScript, for eksempel Khan Academy
+    eller CodeHS.
   hoc_faq_scratch_q: Eg skal bruke Scratch i Kodetimen, men kva om elevane har iPads
     i staden for laptops?
   hoc_faq_scratch_a: Scratch køyrer ikkje på nettbrett. Om elvane er unge, kan dei
     bruke appen ScratchJR for iPad (for dei som kan lese). Om du ser på oppgåvene
     på<a href='%{codeorg_url}/learn'>%{partner_url}/learn</a> kan du finne andre oppgåver
     som passar for iPad - frå Code.org, Tynker, Lightbot eller CodeSpark.
-  hoc_faq_scratch_a_markdown: Scratch doesn't run on tablets. If your students are
-    young, they can use the ScratchJR iPad app (for early-readers). If you look at
-    the tutorials on [%{partner_url}/learn](%{codeorg_url}/learn), you can find other
-    tutorials that work on iPads - from Code.org, Tynker, Lightbot, or CodeSpark.
+  hoc_faq_scratch_a_markdown: Scratch kjører ikke på nettbrett. Hvis elevene dine
+    er unge, kan de bruke ScratchJr iPad-appen (for tidlige lesere). Hvis du ser på
+    veiledningene på [%{partner_url}/learn] (%{codeorg_url}/learn), kan du finne andre
+    opplæringsprogrammer som fungerer på iPads - fra Code.org, Tynker, Lightbot eller
+    CodeSpark.
   hoc_faq_count_hoc_q: Hvordan tel de kodetimar?
   hoc_faq_map_q: Kvifor ser eg ikkje min prikk på kartet?
   hoc_faq_map_a: Vi er veldig lei oss for at du ikkje ser arrangementet ditt på kartet
@@ -2310,10 +2398,10 @@ nn:
     der du kan skrive ut kursbevis for heile klassa på førehand. Du kan også skrive
     ut <a href='%{codeorg_url}/certificates?course=mc'> spesielle kursbevis</a> for
     elevar på Minecraft-opplæringa.
-  hoc_faq_certificates_a_markdown: Go to our [certificates page](%{codeorg_url}/certificates)
-    where you can print certificates for your entire class ahead of time. You can
-    also print out [special certificates](%{codeorg_url}/certificates?course=mc) for
-    students doing the Minecraft tutorial.
+  hoc_faq_certificates_a_markdown: Gå til vår [sertifikatside] (%{codeorg_url}/sertifikater)
+    hvor du kan skrive ut sertifikater for hele klassen din på forhånd. Du kan også
+    skrive ut [spesielle sertifikater] (%{codeorg_url}/sertifikater? kurs = mc) for
+    studenter som gjør Minecraft-opplæringen.
   hoc_faq_logo_q: Er der avgrensningar på korleis eg kan nytte Kodtimen sitt namn
     og logo?
   hoc_faq_logo_a: Kodetimen er eit varemerke. Vi ønskjer ikkje å hindre bruken av
@@ -2474,8 +2562,8 @@ nn:
   learn_banner_beyond_markdown: Vil du fortsette å lære? [Gå utover en time] (%{url})
   learn_banner_teachers: Lærarar:<a id='teacher_banner_host'>Vær vert for ein time</a>eller<a
     id='teacher_banner_howto'>les slik-gjer-du-guiden</a>
-  learn_banner_teachers_markdown: 'Teachers: [Host an hour](%{host_url}) or [read
-    the How-To Guide](%{howto_url})'
+  learn_banner_teachers_markdown: 'Lærere: [Vert en time] (%{host_url}) eller [les
+    veiledningen] ()%{howto_url}'
   tutorial_dance2019_name: Dansefest 2019
   tutorial_danceparty_name: Dansefest
   tutorial_chibitronics_name: 'Chibitronics: Opplyst historie'
@@ -5291,11 +5379,11 @@ nn:
     eventyr gjennom denne Minecraft-verda.
   tutorial_minecraft-2016_longdescription: Bygg eit Minecraft-spel. Lag dine eigne
     versjonar av kylling, sau, creepers, zombies og meir.
-  tutorial_thinkersmith-es_longdescription: Mediante el uso de un "Vocabulario Robot"
-    predefinido, los estudiantes descubrir&aacute;n como guiarse de modo tal de llevar
-    a cabo tareas espec&iacute;ficas sin ser estas discutidas previamente. Este segmento
-    ense&ntilde;a a los estudiantes la conexi&oacute;n entre s&iacute;mbolos y acciones
-    as&iacute; como la valiosa habilidad de depuraci&oacute;n.
+  tutorial_thinkersmith-es_longdescription: Mediante el uso de un «Vocabulario Robot»
+    forhåndsdefinert, los estudiantes descubrir&aacute;n como guiarse de modo tal
+    de llevar a cabo tareas espec ficas sin ser estas discutidas previamente.&iacute;Este
+    segmento ense&ntilde;a los estudiantes la conexi&oacute;n entre s&iacute;mbolos
+    y acciones som como la valiosa habilidad de depuraci n.&iacute;&oacute;
   tutorial_pixie_longdescription: Rettleiing av Kodetimen med Pixie
   tutorial_play_longdescription: Lag ei fortelling eller eit spel med Spel-lab! Få
     dyr, piratar, zombiar, ninja og mange fleire figurar til å flytte på seg, lage
@@ -12263,12 +12351,12 @@ nn:
   tutorial_googlename _longdescription: Velg et navn og få bokstavene i ordet til
     liv ved hjelp av kode. Velg et kallenavn, et kjæledyrs navn, et dyr, en sport,
     et sted eller en hobby.
-  tutorial_carnegiezillah_longdescription: Zillah City is thriving, and music is in
-    the air. Rumor has it, the famed Gargantua bot is online and sending the last
-    Toxibots to trash the city block by block…. Grab your cobot hoverboard and get
-    ready to groove, move, and finish off what you started! Players program their
-    cobot hoverbots to change lanes, avoid obstacles, and take out many Toxibots in
-    this rhythm-styled game.
+  tutorial_carnegiezillah_longdescription: Zillah City blomstrer, og musikk er i luften.
+    Ryktene sier det, den berømte Gargantua-boten er online og sender de siste Toxibots
+    for å kaste byen blokk for blokk.…Ta tak i cobot-hoverboardet ditt og gjør deg
+    klar til å spore, flytte og avslutte det du startet! Spillere programmerer cobot-svevebotene
+    sine for å bytte kjørefelt, unngå hindringer, og ta ut mange Toxibots i dette
+    rytmestilte spillet.
   tutorial_nasachspacejam_longdescription: Lag et solsystem som virkelig rocker! Lær
     om musikk, astronomi og koding i denne selvstyrte aktiviteten (ingen kodingserfaring
     kreves). Programmer planeter for å lage musikk, lage ditt eget musikalske solsystem,
@@ -13077,6 +13165,325 @@ nn:
     onsdager, tar vår PTO (5 uker totalt, som inkluderer en orgomfattende 2-ukers
     kontorstenging på slutten av året aka Winter Break), halv arbeidsdag på fredager
     om sommeren aka sommerfredager, og andre sjenerøse fordeler.
+  careers_hero_title: Karriere
+  careers_hero_description: Code.org er en ideell organisasjon dedikert til å utvide
+    tilgangen til informatikk i skolene. Vi er spesielt fokusert på økt deltakelse
+    blant unge kvinner og underrepresenterte studenter.
+  careers_hero_description_under: Hjelp oss å forandre verden, en student om gangen!
+  careers_vision_title: Vår visjon
+  careers_vision_decsription: Vår visjon er at hver elev på hver skole skal ha muligheten
+    til å lære informatikk som en del av sin kjerne K-12-utdanning.
+  careers_vision_description_under: Kom og bli med på teamet vårt for å bidra til
+    å gjøre denne visjonen til virkelighet!
+  careers_values_title: Våre kjerneverdier
+  careers_values_first_column_text_1: Vi tror informatikk er grunnleggende for alle
+    studenter
+  careers_values_first_column_text_2: Vi er forpliktet til egenkapital, tilgang og
+    mulighet
+  careers_values_first_column_text_3: Vi tror på kraften i et samarbeidende utdanningssamfunn
+  careers_values_second_column_text_1: Vi er smidige og lydhøre for tilbakemeldinger
+  careers_values_second_column_text_2: Vi handler med integritet og åpenhet
+  careers_values_second_column_text_3: Vi tror bred innvirkning krever å tenke stort
+    og handle helhetlig
+  careers_approach_section_title: Vår samlende tilnærming
+  careers_approach_section_description: Code.orgs globale rolle i K-12 informatikkbevegelsen
+    er bare mulig fordi vi bruker en samlende tilnærming på tvers av forskjellige
+    og ofte delte interessenter. I en tid med økende polarisering forener ideen om
+    økende mulighet for studenter mennesker fra hele det politiske spekteret. Code.orgs
+    teammedlemmer, studenter, lærere og støttespillere har forskjellige og divergerende
+    synspunkter, og de er alle velkomne i vårt oppdrag.
+  careers_aproach_section_description_link: Les mer om Code.orgs tilnærming til enhet.
+  careers_approach_section_button: Utforsk åpne roller
+  careers_principle_section_title: Våre kulturelle prinsipper
+  careers_principle_title_1: Våre elever og lærere er vår North Star
+  careers_principle_description_1: Vi bruker gavene våre, tid, og energi til å bringe
+    informatikk til de som trenger det mest. Det er dette som forener oss. Dette er
+    vårt viktigste prinsipp.
+  careers_principle_title_2: Vi er harde på problemer og snille mot hverandre
+  careers_principle_description_2: Vi holder fokus på utfordringen med å bringe informatikk
+    til studenter og lærere globalt. Vi erkjenner at hver enkelt av oss bringer det
+    beste av våre intensjoner om å støtte vårt oppdrag og gi nåde når vi gjør feil.
+  careers_principle_title_3: Søk løsninger, ikke konsensus
+  careers_principle_description_3: Vi eier beslutninger, enten vi tar små skritt eller
+    store sprang mot resultatene vi søker. Eiere ber om og lytter til, men er ikke
+    lammet av tilbakemelding. Vi aksepterer og støtter eiernes beslutninger, selv
+    om vi er uenige.
+  careers_principle_title_4: Vedta en grunnleggerens mentalitet
+  careers_principle_description_4: Vi er besatt av utfall og fokuserer våre handlinger
+    på å drive dem. Vi dykker ned i detaljene og jobber hardt. Vi er ærlige, lener
+    oss inn i smidighet, og vurderer kontinuerlig om vi er på sporet; vi er ikke redde
+    for å svinge. Å forandre verden krever det.
+  careers_principle_title_5: Champion innovasjon
+  careers_principle_description_5: Vi tenker stort, tar risiko og er ikke redd for
+    å mislykkes. Hvis vi ser en bedre måte å oppnå våre mål på, gjør vi det og oppfordrer
+    andre til å gjøre det også. Inkrementelle løsninger vil ikke bidra til å forandre
+    verden.
+  careers_principle_title_6: Anker beslutninger i fakta
+  careers_principle_description_6: Vi bruker data for å forstå vår virksomhet, etablere
+    ønskede resultater, og veilede beslutningstaking. Vi balanserer dette ved å erkjenne
+    at vi ikke alltid vil ha dataene vi trenger for å handle.
+  careers_principle_title_7: En vekst -tankegang gir oss drivstoff
+  careers_principle_description_7: Vi nærmer oss hver utfordring med nysgjerrighet.
+    Vi gir tilbakemelding vennlig og ærlig; vi mottar tilbakemelding åpent. Vi lærer
+    av våre feil og ser etter måter å øke rekkevidden og effekten av arbeidet vårt.
+  careers_balance_section_title: Vår balanse mellom arbeid og privatliv
+  careers_balance_section_description: Vi bryr oss om våre ansatte og er dedikert
+    til å støtte alle både på jobb og utenfor jobben. Vi vet at alle har forskjellige
+    behov, og derfor tilbyr vi en helhetlig fordelspakke som vil sikre at du (og din
+    familie) blir ivaretatt.
+  careers_balance_first_column_text_1: Helsemessige fordeler for deg og din familie
+  careers_balance_first_column_text_2: Sjenerøs betalt fri og la planer
+  careers_balance_second_column_text_1: Fleksibelt, støttende arbeidsmiljø
+  careers_balance_second_column_text_2: Vekst og faglige læringsmuligheter
+  careers_openroles_section_title: Åpne roller
+  careers_openroles_section_description: Code.org er basert i Seattle, men mange av
+    teammedlemmene våre er fjerntliggende. Eksterne kandidater er velkomne og oppfordres
+    til å søke.
+  careers_more_info_text: For mer informasjon om Code.org, sjekk ut vår [Ofte stilte
+    spørsmål] (%{support_url}) eller lær om [andre måter å bli involvert i oppdraget
+    vårt] ()%{help_url}.
+  careers_approach_section_title2: Vår tilnærming til mangfold
+  careers_approach_section_description_1: Vi omfavner ulike perspektiver, ideer og
+    bakgrunner på Code.org. Vi er forpliktet til å gi like muligheter til alle ansatte
+    og søkere. Vi diskriminerer ikke på grunnlag av rase, religion, farge, nasjonal
+    opprinnelse, kjønn, seksuell legning, alder, sivilstatus, veteranstatus eller
+    funksjonshemming (mental og fysisk) status.
+  careers_approach_section_description_2: Vi vil sørge for at personer med nedsatt
+    funksjonsevne får rimelig innkvartering for å delta i jobbsøknaden eller intervjuprosessen,
+    for å utføre viktige jobbfunksjoner, og å motta andre fordeler og privilegier
+    ved ansettelse. Hvis du har individuelle behov knyttet til en funksjonshemming,
+    kan du kontakte accommodations@code.org.
+  csa_ai_page_hero_title: Programvareutvikling og datasyn
+  csa_ai_page_hero_description: 'Denne to-kapittels post-AP CSA-modulen tilbyr videregående
+    studenter praktisk erfaring med profesjonelle programvareutviklingsverktøy, inkludert
+    GitHub og GitHub Copilot, og gir dem de virkelige ferdighetene til å utvikle et
+    datasynsprogram. '
+  csa_ai_page_video_section_title: Gå utover verden av Code.org programmeringsmiljøer
+  csa_ai_page_video_section_li_1: Lær om AI og dens applikasjoner
+  csa_ai_page_video_section_li_2: Praktisk erfaring med profesjonelle programvareutviklingsverktøy
+  csa_ai_page_video_section_li_3: Lær bransjestandard praksis
+  csa_ai_page_video_section_li_4: Dyrk kritisk tenkning
+  csa_ai_page_programming_tools: 'Programmeringsverktøy: Github, Github Copilot, VSCode,
+    TensorFlow '
+  csa_ai_page_professional_learning: Ingen
+  csa_ai_page_curriculum_topics: 'Emner: Programmering, Data, Kunst og Design, Spill
+    og animasjon'
+  csa_ai_page_curriculum_accessibility_features: Se FAQ-delen for detaljer
+  csa_ai_page_curriculum_languages_support: Norsk Nynorsk
+  csa_ai_page_article_title_1: Bygg med Copilot
+  csa_ai_page_article_description_1: Studentene lærer å bruke GitHub Copilot som parprogrammerer
+    for å forklare eksisterende kode, finne og fikse feil, og generere løsninger på
+    nye problemer.
+  csa_ai_page_article_link_1: Finn ut mer om Copilot
+  csa_ai_page_article_title_2: Bygg din egen AI-modell
+  csa_ai_page_article_description_2: Studentene trener sine egne AI-modeller ved hjelp
+    av Teachable Machine for å gjenkjenne bilder og bevegelser fra et webkamera og
+    vurdere hvordan datasyn påvirker måten brukerne samhandler med apper.
+  csa_ai_page_article_link_2: Utforsk leksjonsplanen
+  csa_ai_page_article_title_3: Utforsk datasyn
+  csa_ai_page_article_description_3: Studentene implementerer AI-modellene de opprettet
+    med Teachable Machine i en Java-app, ved hjelp av GitHub Copilot for å hjelpe
+    dem med å endre eksisterende versjoner av apper for å fungere med de forskjellige
+    inngangene.
+  csa_ai_page_article_link_3: Se et eksempel
+  csa_ai_page_learn_more_section_title: Lær mer om kunstig intelligens
+  csa_ai_page_learn_more_title: Utforsk AI 101 for lærere
+  csa_ai_page_learn_more_description: Oppdag den banebrytende verdenen av kunstig
+    intelligens (AI) og dens transformative potensial i utdanning med vår omfattende
+    online læringsserie for lærere.
+  csa_ai_page_learn_more_link: Se AI 101 for Teachers-serien
+  csa_ai_page_faq_question_01: Hva er forutsetningene for denne modulen?
+  csa_ai_page_faq_answer_01_01: 'Før du dykker inn i denne modulen, skal studentene
+    ha kunnskap om Java på inngangsnivå. Spesifikt bør de forstå:'
+  csa_ai_page_faq_answer_01_list_01: "**Klasser og objekter: ** Studentene skal være
+    kjent med å definere og bruke klasser, samt lage og manipulere objekter."
+  csa_ai_page_faq_answer_01_list_02: "** Skrive- og kallemetoder: ** Studentene skal
+    kunne definere metoder i en klasse, forstå metodeparametere og returtyper, og
+    kallemetoder fra objekter eller andre metoder."
+  csa_ai_page_faq_answer_01_list_03: "**1D Arrays and ArrayLists: ** De bør være dyktige
+    i å erklære, initialisere og manipulere endimensjonale matriser og arrayLists,
+    inkludert iterering gjennom dem."
+  csa_ai_page_faq_answer_01_list_04: "**Utvalg og iterasjon: ** Et solid fundament
+    i betingede utsagn og løkker er avgjørende."
+  csa_ai_page_faq_question_01_02: Ideelt sett vil studenter som har fullført AP Computer
+    Science A eller et kurs med lignende dybde og strenghet være godt forberedt på
+    denne modulen.
+  csa_ai_page_faq_question_02: Hvordan installerer jeg programvaren som kreves for
+    denne modulen?
+  csa_ai_page_faq_answer_02_01: Denne modulen er unik fordi den innebærer bruk av
+    tredjeparts programvare i stedet for Code.org laboratorier og verktøy. [Les mer
+    om installering av programvaren her] (%{accessibility_url}).
+  csa_ai_page_faq_question_03: Hvordan kan jeg støtte tilgjengelighetsbehov mens jeg
+    underviser i denne modulen?
+  csa_ai_page_faq_answer_03_01: Å imøtekomme tilgjengelighetsbehov er avgjørende for
+    et inkluderende læringsmiljø. [Les mer om tilgjengelighetsfunksjoner i programvaren
+    som brukes i denne modulen her] ()%{install_url}.
+  csa_ai_page_faq_question_04: Hvordan bruker jeg VS-kode på Chromebooks?
+  csa_ai_page_faq_answer_04: Å bruke VS-kode på en Chromebook har blitt enklere, spesielt
+    med muligheten til å kjøre Linux-apper på nyere Chromebook-modeller. [Les mer
+    om å sette opp VS-kode på Chromebook her] ()%{chromebook_url}.
+  csa_ai_page_faq_question_05: Hvordan kan jeg få faglig utvikling for denne modulen?
+  csa_ai_page_faq_answer_05: Det er foreløpig ikke spesifikk faglig utvikling for
+    dette kurset. Hvis du ønsker å forstå hvordan du nærmer deg kunstig intelligens
+    i klasserommet ditt, kan du [utforske AI 101 for lærere] (%{ai_101_url}).
+  csa_ai_page_faq_question_06: Hva er den anbefalte timingen for å undervise i denne
+    modulen?
+  csa_ai_page_faq_answer_06_01: Software Engineering & Computer Vision-modulen er
+    omtenksomt strukturert for å gi omfattende læring i en kortfattet tidsramme. Hele
+    modulen er designet for å strekke seg over **2 ukers instruksjon**. De fleste
+    leksjonene er skreddersydd for **45 minutter**, mens leksjoner der elevene fordyper
+    seg i praktisk Java-prosjektutvikling er designet for **90 minutter**. Denne utvidede
+    tiden sikrer at studentene har god mulighet til å forstå, implementere, og feilsøke
+    mens de jobber.
+  csa_ai_page_faq_answer_06_02: Det er også tilsiktet fleksibilitet innebygd i modulens
+    struktur. Avhengig av klasseromsdynamikken, studentengasjementet og dybden du
+    vil utforske hvert emne til, kan du justere varigheten. For eksempel kan Intro
+    to Copilot-leksjonen, designet som en 45 minutters leksjon, utvides til 90 minutter
+    hvis du ønsker å dykke dypere inn i hvordan store språkmodeller og verktøy som
+    GitHub Copilot og ChatGPT fungerer.
+  csa_ai_page_faq_question_07: How can I access answer keys?
+  csa_ai_page_faq_answer_07: Med en godkjent lærerkonto kan du finne svarnøkler i
+    et blått «Bare lærer» -panel som vises i online leksjoner og aktiviteter. Hvis
+    du trenger en godkjent lærerkonto, kan du søke om tilgang til beskyttet lærermateriale
+    (svarnøkler osv.) gjennom [dette skjemaet] ().%{form_url}Vær oppmerksom på at
+    det kan ta 3-5 virkedager å bekrefte kontoen din.
+  csa_ai_page_faq_question_08: Er denne modulen kartlagt til standarder?
+  csa_ai_page_faq_answer_08: Ja, Software Engineering & Computer Vision læreplanen
+    er kartlagt til [CSTA K-12 Standards] (%{csta_k12_url}) og AI for [K-12 Retningslinjer]
+    ().%{k12_url}
+  csa_ai_page_faq_question_09: Hvor mye koster det å lære denne modulen?
+  csa_ai_page_faq_answer_09_01: Vår læreplan og plattform er tilgjengelig på [ingen
+    kostnad] (%{no_cost_url}) for alle, hvor som helst, å undervise!
+  csa_ai_page_faq_answer_09_02: I tillegg er programvaren og verktøyene som brukes
+    i denne modulen gratis. GitHub Copilot er gratis for verifisering () og [teachers]()%{teachers_url}.
+    [students]%{students_url}
+  csa_ai_page_faq_question_10: Hva gjør jeg hvis programvareinstallasjonen ikke fungerer?
+  csa_ai_page_faq_answer_10: Å møte problemer under programvareinstallasjon kan være
+    vanlig, men det er systematiske trinn du kan følge for å feilsøke og løse dem.
+    [Sjekk ut noen feilsøkingstips her] (%{troubleshooting_url}).
+  csa_ai_page_faq_question_11: How was the curriculum developed?
+  csa_ai_page_faq_answer_11_01: 'Vår Software Engineering & Computer Vision læreplan
+    ble designet med tanke på våre læreplanverdier. Følgende mål ledet opprettelsen
+    av denne læreplanen:'
+  csa_ai_page_faq_answer_11_list_01: "**Mål 1: ** Bruk AI-verktøy til å generere,
+    feilsøke og redigere kode."
+  csa_ai_page_faq_answer_11_list_02: "**Mål 2: ** Overgang fra Java Lab til virkelige
+    verktøy."
+  csa_ai_page_faq_answer_11_list_03: "**Mål 3: ** Utdype forståelsen av hvordan AI-modeller
+    trenes og integreres i programmer."
+  csa_ai_page_faq_answer_11_02: For mer informasjon om verdiene som ledet arbeidet
+    vårt, vennligst se vår [læreplanverdier] ().%{curriculum_values_url}
+  video_library_page_main_title: Pedagogiske korte videoer
+  video_library_page_hero_description: Code.orgs voksende bibliotek med pedagogiske
+    videoer er tilgjengelig for gjenbruk av lærere over hele verden, online eller
+    i klasserom. Målet vårt er å forsterke vår innsats utenfor vår egen læreplans
+    rekkevidde.
+  video_library_page_title_ai_works: Hvordan AI fungerer
+  video_library_page_description_ai_works: Denne serien med korte videoer vil introdusere
+    deg for hvordan kunstig intelligens fungerer og hvorfor det betyr noe. Lær om
+    nevrale nettverk, eller hvordan AI lærer, og fordype deg i spørsmål som algoritmisk
+    skjevhet og etikken i AI-beslutningstaking.
+  video_library_page_title_computers_work: Hvordan datamaskiner fungerer
+  video_library_page_description_computers_work: Forklarer hva som gjør en datamaskin
+    til en datamaskin, hvordan digital informasjon er representert i 1s og 0s, hvordan
+    datakretser fungerer for å manipulere digital informasjon, og hvordan en sentral
+    prosesseringsenhet (CPU) og operativsystem styrer inngangene, utgangene, minnet
+    og maskinvaren til en datamaskin.
+  video_library_page_title_internet_works: Hvordan Internett fungerer
+  video_library_page_description_internet_works: Med Vint Cerf, oppfinneren av TCP/IP,
+    David Karp grunnleggeren av Tumblr for å forklare HTTP og HTML, Googles Security
+    Princess for å forklare SSL og cybersikkerhet, og ingeniører fra Microsoft, Spotify
+    og Symantec. Denne serien med korte videoer som forklarer hvordan Internett fungerer.
+  video_library_page_title_not_hacked: Hvordan ikke bli hacket
+  video_library_page_description_not_hacked: Internett er åpent, så alt som skjer
+    på det kan sees med mindre det er beskyttet. I moderne land er folk mer bekymret
+    for å bli hacket enn for noen annen forbrytelse. Hvorfor? Fordi hver datamaskin
+    eller telefon på Internett regelmessig blir testet for sårbarheter av kriminelle,
+    terrorister eller til og med statlige aktører. Hvis du ikke er forsiktig, kan
+    noen hacke enheten eller kontoene dine, og til og med stjele identiteten din eller
+    pengene dine.
+  video_library_page_title_blockchain: Hvordan Blockchain fungerer
+  video_library_page_description_blockchain: Laget i samarbeid med Coinbase, har denne
+    serien bransjeeksperter og har som mål å avmystifisere denne teknologien ved å
+    utforske hva blockchain er, hvordan den fungerer og dens potensielle samfunnsmessige
+    implikasjoner - både gode og dårlige.
+  video_library_page_title_careers: Karriere i CS
+  video_library_page_description_careers: Karriere innen informatikk og teknologi
+    kan være morsomme og givende. Men hva gjør en person som jobber i disse feltene
+    egentlig? Med et stort utvalg av jobber og selskaper, det er ikke bare ett svar
+    på dette spørsmålet. Se videoene nedenfor for å møte noen av menneskene som takler
+    store problemer på kreative måter.
+  video_library_page_title_inspirational: Inspirerende
+  video_library_page_description_inspirational: Hva vil informatikk endre seg i vår
+    verden? Alt? Hvem er det for? Alle sammen! Se disse videoene for å inspirere og
+    motivere deg.
+  video_library_page_footer_description: Leter du etter noe annet? Vi har så mange
+    flotte videoer tilgjengelig på Youtube-kanalen vår.
+  video_library_page_footer_cta: Utforsk alle Code.org-videoer på YouTube
+  video_library_page_computer_work_video_title_1: Vi presenterer hvordan datamaskiner
+    fungerer
+  video_library_page_computer_work_video_title_2: Binær og data
+  video_library_page_computer_work_video_title_3: CPU, minne, inngang og utgang
+  video_library_page_computer_work_video_title_4: Hva gjør en datamaskin, en datamaskin?
+  video_library_page_computer_work_video_title_5: Kretser Logikk
+  video_library_page_computer_work_video_title_6: Maskinvare og programvare
+  video_library_page_internet_work_video_title_1: Hva er internett?
+  video_library_page_internet_work_video_title_2: 'INTERNETT: IP-adresser og DNS'
+  video_library_page_internet_work_video_title_3: 'INTERNETT: HTTP og HTML'
+  video_library_page_internet_work_video_title_4: 'INTERNETT: Cybersikkerhet og kriminalitet'
+  video_library_page_internet_work_video_title_5: 'INTERNETT: Ledninger, kabler og
+    Wifi'
+  video_library_page_internet_work_video_title_6: 'INTERNETT: Pakker, ruting og pålitelighet'
+  video_library_page_internet_work_video_title_7: 'INTERNETT: Kryptering og offentlige
+    nøkler'
+  video_library_page_internet_work_video_title_8: 'INTERNETT: Hvordan søk fungerer'
+  video_library_page_cs_video_title_1: Jeg heter Jerome og er designteknolog ved Meow
+    Wolf
+  video_library_page_cs_video_title_2: Jeg heter Nikesha og er luftfartsingeniør ved
+    NASA
+  video_library_page_cs_video_title_3: Mitt navn er Brina og jeg er programvareingeniør
+    på Instagram
+  video_library_page_cs_video_title_4: Mitt navn er Kinsley og jeg er programvareingeniør
+    på Facebook
+  video_library_page_cs_video_title_5: Jeg heter Polina og er dataforsker ved Electronic
+    Arts
+  video_library_page_cs_video_title_6: Mitt navn er Danelle og jeg er programvareingeniør
+    ved MBARI
+  video_library_page_cs_video_title_7: Mitt navn er Christopher og jeg er sikkerhetsanalytiker
+    hos Tanium
+  video_library_page_cs_video_title_8: Mitt navn er Federico og jeg er teknisk programleder
+    hos Microsoft
+  video_library_page_cs_video_title_9: Mitt navn er Tess og jeg er programvareingeniør
+    hos Google
+  video_library_page_inspirational_video_title_1: Endre ansiktet til informatikk (3
+    min)
+  video_library_page_inspirational_video_title_2: Skyv deg selv. Hvem som helst kan
+    lære. (1 min)
+  video_library_page_inspirational_video_title_3: Inspirer en jente (2 min)
+  video_library_page_inspirational_video_title_4: Kva dei fleste skulane ikkje underviser
+    (5 min)
+  video_library_page_inspirational_video_title_5: Kodetimen er her - Alle kan lære
+    (2 min)
+  video_library_page_inspirational_video_title_6: Mitt navn er Aracely (3 min)
+  video_library_page_inspirational_video_title_7: Kodetime med Steph Curry (2 min)
+  video_library_page_inspirational_video_title_8: Datavitenskap endrer alt (5 min)
+  video_library_page_inspirational_video_title_9: Intro for informatikk (1 min)
+  video_library_page_inspirational_video_title_10: President Obama om informatikk
+    (1 min)
+  video_library_page_inspirational_video_title_11: Alle kan lære (1 min)
+  video_library_page_inspirational_video_title_12: Lo Que Falta En Nuestras Escuelas
+    (2 min)
+  video_library_page_not_hacked_video_title_1: 'Hvordan ikke bli hacket: Introduksjon'
+  video_library_page_not_hacked_video_title_2: 'Hvordan ikke bli hacket: Passord'
+  video_library_page_not_hacked_video_title_3: 'Hvordan ikke bli hacket: Autentisering
+    og enhetslåser'
+  video_library_page_not_hacked_video_title_4: 'Hvordan ikke bli hacket: Phishing'
+  video_library_page_not_hacked_video_title_5: 'Hvordan ikke bli hacket: Nettsteder
+    og Wifi'
+  video_library_page_not_hacked_video_title_6: 'Hvordan ikke bli hacket: Meldinger
+    og nedlastinger'
+  video_library_page_not_hacked_video_title_7: 'Hvordan ikke bli hacket: Installer
+    oppdateringer'
   language_code:
     ar: Arabisk
     az: aserbajdsjanske
