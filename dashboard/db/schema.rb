@@ -622,7 +622,7 @@ ActiveRecord::Schema.define(version: 2023_09_11_173341) do
     t.index ["user_id"], name: "index_hint_view_requests_on_user_id"
   end
 
-  create_table "learning_goal_ai_evaluatons", charset: "utf8", collation: "utf8_unicode_ci", force: :cascade do |t|
+  create_table "learning_goal_ai_evaluations", charset: "utf8", collation: "utf8_unicode_ci", force: :cascade do |t|
     t.integer "user_id"
     t.integer "learning_goal_id"
     t.integer "project_id"
@@ -630,8 +630,8 @@ ActiveRecord::Schema.define(version: 2023_09_11_173341) do
     t.integer "understanding"
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
-    t.index ["learning_goal_id"], name: "index_learning_goal_ai_evaluatons_on_learning_goal_id"
-    t.index ["user_id"], name: "index_learning_goal_ai_evaluatons_on_user_id"
+    t.index ["learning_goal_id"], name: "index_learning_goal_ai_evaluations_on_learning_goal_id"
+    t.index ["user_id"], name: "index_learning_goal_ai_evaluations_on_user_id"
   end
 
   create_table "learning_goal_evaluations", charset: "utf8", collation: "utf8_unicode_ci", force: :cascade do |t|

@@ -1,6 +1,6 @@
 # == Schema Information
 #
-# Table name: learning_goal_ai_evaluatons
+# Table name: learning_goal_ai_evaluations
 #
 #  id               :bigint           not null, primary key
 #  user_id          :integer
@@ -13,8 +13,8 @@
 #
 # Indexes
 #
-#  index_learning_goal_ai_evaluatons_on_learning_goal_id  (learning_goal_id)
-#  index_learning_goal_ai_evaluatons_on_user_id           (user_id)
+#  index_learning_goal_ai_evaluations_on_learning_goal_id  (learning_goal_id)
+#  index_learning_goal_ai_evaluations_on_user_id           (user_id)
 #
-class LearningGoalAiEvaluaton < ApplicationRecord
+class LearningGoalAiEvaluation < ApplicationRecord
 end
