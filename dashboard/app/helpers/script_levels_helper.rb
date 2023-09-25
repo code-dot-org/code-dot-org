@@ -13,12 +13,12 @@ module ScriptLevelsHelper
         enabled_for_lesson = script_level.script.lesson_extras_available &&
           !script_level.end_of_script?
         enabled_for_user = current_user&.section_for_script(script_level.script) &&
-            current_user.section_for_script(script_level.script).lesson_extras
+          current_user.section_for_script(script_level.script).lesson_extras
         enabled_for_teacher = current_user.try(:teacher?) &&
-            current_user.sections.where(
-              script_id: script_level.script_id,
-              lesson_extras: true
-            ).any?
+          current_user.sections.where(
+            script_id: script_level.script_id,
+            lesson_extras: true
+          ).any?
         if enabled_for_lesson && (enabled_for_user || enabled_for_teacher)
           response[:redirect] = script_lesson_extras_path(
             script_id: script_level.script.name,

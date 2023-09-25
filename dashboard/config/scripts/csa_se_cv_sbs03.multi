@@ -1,6 +1,6 @@
 name 'CSA-SE-CV-SBS03'
 
-question 'I have encountered AI-generated examples in class and found the experience beneficial.'
+question 'I have encountered AI-generated examples in class and found the experience beneficial to my learning of CS.'
 
 right 'Strongly Agree'
 right 'Agree'

@@ -21,7 +21,7 @@ class LevelTest < ActiveSupport::TestCase
   # TYPES_WITH_IDEAL_LEVEL_SOURCE.include or TYPES_WITHOUT_IDEAL_LEVEL_SOURCE.include.
   def raise_unless_specifies_ideal_level_source(level_class)
     unless (Level::TYPES_WITH_IDEAL_LEVEL_SOURCE.include? level_class.to_s) ||
-      (Level::TYPES_WITHOUT_IDEAL_LEVEL_SOURCE.include? level_class.to_s)
+        (Level::TYPES_WITHOUT_IDEAL_LEVEL_SOURCE.include? level_class.to_s)
       raise "#{level_class} does not specify if it has ideal level sources"
     end
     level_class.descendants.each do |descendant|
@@ -280,7 +280,7 @@ class LevelTest < ActiveSupport::TestCase
   end
 
   test 'update custom level from file' do
-    LevelLoader.import_levels 'config/scripts/levels/K-1 Bee 2.level'
+    LevelLoader.import_levels 'config/levels/custom/maze/K-1 Bee 2.level'
     level = Level.find_by_name('K-1 Bee 2')
     assert_equal 'bee', level.skin
     assert_equal '[[0,0,0,0,0,0,0,0],[0,0,0,0,0,0,0,0],[0,0,0,0,0,0,0,0],[0,0,0,0,0,0,0,0],[0,0,0,1,0,-1,0,0],[0,0,0,0,0,0,0,0],[0,0,0,0,0,0,0,0],[0,0,0,0,0,0,0,0]]',
@@ -290,7 +290,7 @@ class LevelTest < ActiveSupport::TestCase
   test 'creating custom level from file sets level_concept_difficulty' do
     Level.find_by_name('K-1 Bee 2')&.destroy
     assert_nil Level.find_by_name('K-1 Bee 2')
-    LevelLoader.import_levels 'config/scripts/levels/K-1 Bee 2.level'
+    LevelLoader.import_levels 'config/levels/custom/maze/K-1 Bee 2.level'
     level = Level.find_by_name('K-1 Bee 2')
     refute_nil level
 

@@ -18,9 +18,14 @@
       =link_to('facilitator landing page', 'https://code.org/educate/facilitator-landing/CSD') + '.'
     - elsif @workshop.course == 'Computer Science A'
       =link_to('facilitator landing page', 'https://code.org/educate/facilitator-landing/CSA') + '.'
+    - elsif @workshop.course == 'CS Fundamentals'
+      =link_to('facilitator landing page', 'https://code.org/educate/facilitator-landing/CSF') + '.'
   %li
     Have quick questions about resources, agendas, or participant requests? Post them in the facilitator
-    =link_to('Slack', 'https://codefacilitators6-12.slack.com/messages')
+    - if @workshop.course == 'CS Fundamentals'
+      =link_to('Slack', 'https://csffacilitators.slack.com/messages')
+    - else
+      =link_to('Slack', 'https://codefacilitators6-12.slack.com/messages')
     channel!
   %li
     Want to share useful resources or engage in longer discussions with the facilitator community? Use the
