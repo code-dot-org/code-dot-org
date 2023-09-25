@@ -44,8 +44,6 @@ class LearningGoalEvaluationsController < ApplicationController
       teacher_id: current_user.id,
       learning_goal_id: learning_goal_evaluation_params[:learning_goal_id]
     )
-
-    learning_goal_evaluation.save!
     render json: learning_goal_evaluation
   end
 

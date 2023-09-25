@@ -35,9 +35,9 @@ export default function EvidenceLevels({
               value={evidenceLevel.id}
               size="s"
               onChange={() => {
-                radioButtonCallback(evidenceLevel.id);
+                radioButtonCallback(evidenceLevel.understanding);
               }}
-              checked={understanding === evidenceLevel.id}
+              checked={understanding === evidenceLevel.understanding}
             />
             <BodyThreeText
               className={classNames(style.evidenceLevelDescriptionIndented)}
