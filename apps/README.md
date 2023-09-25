@@ -113,6 +113,45 @@ Stream pass/fail results inline with stdout/sterr:
 yarn test:unit --verbose
 ```
 
+| Command | Description |
+| --- | --- |
+| Only run unit tests | ```yarn test:unit``` |
+
+```
+
+Run an individual unit test:
+```
+yarn test:unit --entry=./test/unit/gridUtilsTest.js
+```
+
+Run unit tests in the `applab` folder:
+
+```
+yarn test:unit --entry=./test/unit/applab/
+```
+
+Run unit tests with `TutorialExplorer` in their name:
+```
+yarn test:unit --grep='TutorialExplorer'
+```
+
+Run integration tests with `ec_data_blocks` in their name:
+
+```
+yarn test:integration --grep=ec_data_blocks
+```
+
+Run integration tests for `maze` levels:
+
+```
+yarn test:integration --levelType=maze
+```
+
+Stream pass/fail results inline with stdout/sterr:
+```
+yarn test:unit --verbose
+```
+
 ##### Rerun Tests Automatically
 
 Rerun tests automatically on every file change:
