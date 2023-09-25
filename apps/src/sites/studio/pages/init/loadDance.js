@@ -9,8 +9,9 @@ export default function loadDancelab(options) {
   options.maxVisualizationWidth = MAX_GAME_WIDTH;
   options.minVisualizationWidth = MIN_GAME_WIDTH;
   const dance = new Dance();
-
+  console.log('loadDance - injectStudioApp');
   dance.injectStudioApp(studioApp());
+  console.log('loadDance - appMain(dance...)');
   appMain(dance, {custom: {}}, options);
 
   return dance;

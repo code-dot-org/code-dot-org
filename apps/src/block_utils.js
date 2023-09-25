@@ -10,6 +10,9 @@ const DEFAULT_COLOR = [184, 1.0, 0.74];
  * @param {string} blocks The xml of the blocks to go in the toolbox
  */
 exports.createToolbox = function (blocks) {
+  console.log('blocks', blocks);
+  console.log('createToolbox');
+  console.log(`<xml id="toolbox" style="display: none;"> ${blocks} </xml>`);
   return '<xml id="toolbox" style="display: none;">' + blocks + '</xml>';
 };
 
@@ -1010,10 +1013,10 @@ exports.createJsWrapperBlockCreator = function (
     if (eventLoopBlock && args.filter(arg => arg.statement).length === 0) {
       // If the eventloop block doesn't explicitly list its statement inputs,
       // just tack one onto the end
-      args.push({
-        name: 'DO',
-        statement: true,
-      });
+      // args.push({
+      //   name: 'DO',
+      //   statement: true,
+      // });
     }
     const inputs = [...args];
     if (methodCall && !thisObject) {
@@ -1201,6 +1204,7 @@ exports.installCustomBlocks = function ({
   blockDefinitions,
   customInputTypes,
 }) {
+  console.log('inside installCustomBlocks');
   const createJsWrapperBlock = exports.createJsWrapperBlockCreator(
     blockly,
     [
@@ -1212,13 +1216,21 @@ exports.installCustomBlocks = function ({
     blockly.BlockValueType.SPRITE,
     customInputTypes
   );
+  console.log('createJsWrapperBlock', createJsWrapperBlock);
 
   const blocksByCategory = {};
   blockDefinitions.forEach(({name, pool, category, config, helperCode}) => {
+    console.log('name', name);
+    console.log('pool', pool);
+    console.log('category', category);
+    console.log('config', config);
+    console.log('helperCode', helperCode);
     const blockName = createJsWrapperBlock(config, helperCode, pool);
+    console.log('blockName', blockName);
     if (!blocksByCategory[category]) {
       blocksByCategory[category] = [];
     }
+    console.log('blocksByCategory', blocksByCategory);
     blocksByCategory[category].push(blockName);
     if (name && blockName !== name) {
       console.error(

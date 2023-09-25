@@ -46,6 +46,7 @@ export default class MusicBlocklyWorkspace {
     this.container = container;
 
     const toolboxBlocks = getToolbox(toolbox);
+    console.log('toolboxBlocks', toolboxBlocks);
 
     this.workspace = Blockly.inject(container, {
       toolbox: toolboxBlocks,

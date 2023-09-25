@@ -182,6 +182,7 @@ module LevelsHelper
 
   # Options hash for all level types
   def app_options
+    puts "app_options"
     # Unsafe to generate these twice, so use the cached version if it exists.
     return @app_options unless @app_options.nil?
 
@@ -315,6 +316,11 @@ module LevelsHelper
       end
     end
 
+    puts "level.uses_lab2"
+    puts "#{@level.uses_lab2?}"
+    puts "level.is_a? Blockly"
+    puts "#{@level.is_a? Blockly}"
+
     @app_options =
       if @level.uses_lab2?
         {app: 'lab2', channel: view_options[:channel], projectType: @level.project_type}
@@ -401,7 +407,8 @@ module LevelsHelper
       @app_options[:displayTheme] = current_user.display_theme
       @app_options[:userSharingDisabled] = current_user.sharing_disabled?
     end
-
+    puts "#{@app_options[:app]}"
+    puts "#{@app_options[:projectType]}"
     @app_options
   end
 
@@ -601,6 +608,7 @@ module LevelsHelper
 
   # Options hash for Blockly
   def blockly_options
+    puts "blockly_options"
     l = @level
     raise ArgumentError.new("#{l} is not a Blockly object") unless l.is_a? Blockly
     # Level-dependent options

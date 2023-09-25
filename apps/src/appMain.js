@@ -71,11 +71,14 @@ export default function (app, levels, options) {
   options.skin = skinsModule.load(studioApp().assetUrl, options.skinId);
 
   if (studioApp().isUsingBlockly()) {
+    console.log('inside appMain - isUsingBlockly');
+    console.log('options', options);
     var blockInstallOptions = {
       skin: options.skin,
       isK1: options.level && options.level.isK1,
       level: options.level,
     };
+    console.log('blockInstallOptions', blockInstallOptions);
 
     if (options.level && options.level.edit_blocks) {
       wrapNumberValidatorsForLevelBuilder();
@@ -85,13 +88,16 @@ export default function (app, levels, options) {
     options.blocksModule.install(Blockly, blockInstallOptions);
 
     if (level) {
+      console.log('!level.customBlocks', !level.customBlocks);
       const levelCustomBlocksConfig = !level.customBlocks
         ? []
         : JSON.parse(level.customBlocks).map(blockConfig => ({
             config: blockConfig,
             category: 'Custom',
           }));
+      console.log('levelCustomBlocksConfig', levelCustomBlocksConfig);
       const sharedBlocksConfig = level.sharedBlocks || [];
+      console.log('sharedBlocksConfig', sharedBlocksConfig);
       const customBlocksConfig = [
         ...sharedBlocksConfig,
         ...levelCustomBlocksConfig,

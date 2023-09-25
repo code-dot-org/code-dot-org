@@ -13,6 +13,7 @@
     "helper_libraries": [
       "DanceLab"
     ],
+    "uses_preview": "true",
     "hide_animation_mode": true,
     "show_type_hints": true,
     "encrypted": "false",

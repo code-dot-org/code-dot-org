@@ -199,14 +199,18 @@ class ScriptLevelsController < ApplicationController
   # long amount of time, including by the CDN, and does not vary per user.
   def level_properties
     authorize! :read, ScriptLevel
-
+    puts "inside scripts_level_controller.rb level_properties"
     @script = ScriptLevelsController.get_script(request)
     @script_level = ScriptLevelsController.get_script_level(@script, params)
     raise ActiveRecord::RecordNotFound unless @script_level
 
     @level = @script_level.level
-
-    render json: @level.summarize_for_lab2_properties
+    blockly_options = @level.localized_blockly_level_options(@script).dup
+    #puts "blockly_options: #{blockly_options}"
+    #puts "blockly_options[\"sharedBlocks\"]: #{blockly_options["sharedBlocks"]}"
+    level_properties = @level.summarize_for_lab2_properties
+    level_properties[:sharedBlocks] = blockly_options["sharedBlocks"]
+    render json: level_properties
   end
 
   # Get a list of hidden lessons for the current users section

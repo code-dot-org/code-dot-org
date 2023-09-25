@@ -1217,6 +1217,7 @@ StudioApp.prototype.inject = function (div, options) {
   } else if (experiments.isEnabled('geras')) {
     options.renderer = Renderers.GERAS;
   }
+  console.log('Studio app - Blockly.inject');
   Blockly.inject(div, utils.extend(defaults, options), Sounds.getSingleton());
 };
 
@@ -2815,6 +2816,7 @@ StudioApp.prototype.openFunctionDefinition_ = function (config) {
  * @param {AppOptionsConfig} config
  */
 StudioApp.prototype.handleUsingBlockly_ = function (config) {
+  console.log('handleUsingBlockly_');
   // Allow empty blocks if editing blocks.
   if (config.level.edit_blocks) {
     this.checkForEmptyBlocks_ = false;
@@ -2906,6 +2908,7 @@ StudioApp.prototype.handleUsingBlockly_ = function (config) {
       options[prop] = config[prop];
     }
   });
+  console.log('studioapp - this.inject(div,options');
   this.inject(div, options);
   this.onResize();
   this.setupChangeHandlers();
@@ -2913,6 +2916,7 @@ StudioApp.prototype.handleUsingBlockly_ = function (config) {
   if (config.afterInject) {
     config.afterInject();
   }
+  console.log('setStartBlocks_');
   this.setStartBlocks_(config, true);
 
   if (userAgentParser.isMobile() && userAgentParser.isSafari()) {

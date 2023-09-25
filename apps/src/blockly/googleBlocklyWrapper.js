@@ -654,6 +654,7 @@ function initializeBlocklyWrapper(blocklyInstance) {
 
     // Shrink container to make room for the workspace header
     if (!opt_options.isBlockEditMode) {
+      console.log('container', container);
       container.style.height = `calc(100% - ${styleConstants['workspace-headers-height']}px)`;
     }
     blocklyWrapper.isStartMode = !!opt_options.editBlocks;

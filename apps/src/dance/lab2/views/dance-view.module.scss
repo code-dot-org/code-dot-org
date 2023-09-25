@@ -1,6 +1,11 @@
 @import 'color.scss';
 @import './constants.scss';
 
+// Constants
+$timeline-area-height: 200px;
+$default-border-radius: 0;
+$default-spacing: 2px;
+
 .danceLab {
   height: 100%;
   display: flex;
@@ -37,4 +42,6 @@
 
 .workspaceArea {
   flex: 1;
+  height: 100%;
+  width: 100%;
 }

@@ -282,6 +282,7 @@ class Blockly < Level
   end
 
   def blockly_app_options(game, skin_id)
+    puts "inside blockly_app_options in blockly.rb"
     options = Rails.cache.fetch("#{cache_key}/blockly_app_options/v2") do
       app_options = {}
 
@@ -297,6 +298,7 @@ class Blockly < Level
         }
       )
     end
+    puts "blockly options: #{options.keys}"
     options.freeze
   end
 
@@ -308,6 +310,7 @@ class Blockly < Level
   end
 
   def localized_blockly_level_options(script)
+    puts "inside localized_blockly_level_options in blockly.rb"
     options = Rails.cache.fetch("#{cache_key}/#{script.try(:cache_key)}/#{I18n.locale}/localized_blockly_level_options", force: !Unit.should_cache?) do
       level_options = blockly_level_options.dup
 
@@ -317,6 +320,7 @@ class Blockly < Level
       set_unless_nil(level_options, 'authoredHints', localized_authored_hints)
 
       if should_localize?
+        puts "inside blockly.rb - should_localize? is true"
         set_unless_nil(level_options, 'sharedBlocks', localized_shared_blocks(level_options['sharedBlocks']))
         set_unless_nil(level_options, 'sharedFunctions', localized_shared_functions(level_options['sharedFunctions']))
 
@@ -360,6 +364,7 @@ class Blockly < Level
 
   # Return a Blockly-formatted 'appOptions' hash derived from the level contents
   def blockly_level_options
+    puts "inside blockly_level_options in blockly.rb"
     options = Rails.cache.fetch("#{cache_key}/blockly_level_options/v2") do
       level_prop = {}
 
@@ -388,6 +393,8 @@ class Blockly < Level
       # Set some specific values
 
       if is_a? Blockly
+        puts "is a blockly"
+        puts "inside blockly.rb"
         level_prop['startBlocks'] = try(:project_template_level).try(:start_blocks) || start_blocks
         level_prop['toolbox'] =
           try(:project_template_level).try(:toolbox_blocks) ||

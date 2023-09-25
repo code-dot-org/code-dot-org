@@ -13,6 +13,8 @@ import Lab2MetricsReporter from '@cdo/apps/lab2/Lab2MetricsReporter';
 import {LabState} from '@cdo/apps/lab2/lab2Redux';
 import {DanceLevelProperties, DanceProjectSources} from '../../types';
 import {registerReducers} from '@cdo/apps/redux';
+import DanceBlocklyWorkspace from '../blockly/DanceBlocklyWorkspace';
+
 const commonI18n = require('@cdo/locale');
 
 const DANCE_VISUALIZATION_ID = 'dance-visualization';
@@ -52,6 +54,12 @@ const DanceView: React.FunctionComponent = () => {
     state => state.lab.levelProperties?.freePlay || false
   );
   const isRunning = useTypedSelector(state => state.dance.isRunning);
+  const levelProperties = useTypedSelector(state => state.lab.levelProperties);
+  console.log('levelProperties in danceview', levelProperties);
+  const skin = levelProperties?.skin || undefined;
+  const isK1 = levelProperties?.isK1 || undefined;
+  const sharedBlocks = levelProperties?.sharedBlocks || undefined;
+  console.log('sharedBlocks in DanceView', sharedBlocks);
 
   const onAuthError = (songId: string) => {
     Lab2MetricsReporter.logWarning({
@@ -59,6 +67,25 @@ const DanceView: React.FunctionComponent = () => {
       songId,
     });
   };
+  // Initialize Blockly.
+  useEffect(() => {
+    // loadLevel
+    const blockInstallOptions = {
+      skin,
+      isK1,
+      level: levelProperties,
+    };
+    console.log('blockInstallOptions', blockInstallOptions);
+    const danceBlocklyWorkspace = new DanceBlocklyWorkspace(
+      blockInstallOptions,
+      levelProperties
+    );
+    const blocklyContainer = document.getElementById(BLOCKLY_DIV_ID);
+    console.log('blocklyContainer', blocklyContainer);
+    danceBlocklyWorkspace.init(blocklyContainer);
+  });
+
+  // If level data or initial sources change, loadlevel
 
   // Initialize song manifest and load initial song when level loads.
   useEffect(() => {

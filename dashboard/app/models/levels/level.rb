@@ -786,11 +786,13 @@ class Level < ApplicationRecord
   # the level, which usually include levelData.  If this level is a
   # StandaloneVideo then we put its properties into levelData.
   def summarize_for_lab2_properties
+    puts "lab2 summary"
     video = specified_autoplay_video&.summarize(false)&.camelize_keys
     properties_camelized = properties.camelize_keys
     properties_camelized[:levelData] = video if video
     properties_camelized[:type] = type
     properties_camelized[:appName] = game&.app
+    #puts "#{properties_camelized}"
     properties_camelized
   end
 

@@ -1,4 +1,4 @@
-import {LevelProperties, ProjectSources} from '../lab2/types';
+import {LevelProperties, ProjectSources, ProjectLevelData} from '../lab2/types';
 
 export type SongData = {
   [key: string]: {
@@ -13,6 +13,13 @@ export interface DanceProjectSources extends ProjectSources {
 }
 
 export interface DanceLevelProperties extends LevelProperties {
+  customBlocks?: string;
   defaultSong?: string;
+  edit_blocks?: string;
+  hideCustomBlocks?: boolean;
+  isK1?: boolean;
+  sharedBlocks: any[];
+  skin: string;
+  toolbox?: string;
   useRestrictedSongs?: boolean;
 }

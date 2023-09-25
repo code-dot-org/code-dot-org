@@ -1,11 +1,12 @@
 <Dancelab>
   <config><![CDATA[{
+  "published": true,
   "game_id": 63,
-  "created_at": "2023-09-05T19:46:08.000Z",
+  "created_at": "2023-09-08T19:25:19.000Z",
   "level_num": "custom",
   "user_id": 182,
   "properties": {
-    "skin": "gamelab",
+    "skin": "dance",
     "helper_libraries": [
       "DanceLab"
     ],
@@ -35,14 +36,24 @@
     "hide_custom_blocks": "true",
     "use_default_sprites": "false",
     "validation_code": "//after 1 measure, make sure there is a sprite. if not, fail immediately\r\nif (nativeAPI.getTime(\"measures\") > 1) {\r\n  if (sprites.length === 0) {\r\n    nativeAPI.fail(\"danceFeedbackNeedNewDancer\");\r\n  }\r\n}\r\n\r\nif (nativeAPI.getTime(\"measures\") > 2) {\r\n  nativeAPI.pass();\r\n}",
-    "default_song": "hammer",
+    "default_song": "introtoshamstep_47SOUL",
     "long_instructions": "Let's get this moose dancing! Click the `\"dancer1\" do \"Floss\" forever` block onto the \"at 4 measures\" block to make him start flossing at the second measure.",
     "uses_lab2": true,
-    "preload_asset_list": null
+    "preload_asset_list": null,
+    "encrypted": "false",
+    "encrypted_examples": [
+
+    ],
+    "block_pools": [
+      "Dancelab"
+    ],
+    "validation_enabled": "false",
+    "hide_pause_button": "false"
   },
-  "published": true,
   "notes": "",
-  "audit_log": "[{\"changed_at\":\"2023-09-05T12:46:08.190-07:00\",\"changed\":[\"cloned from \\\"allthethings HOC Dance 1\\\"\"],\"cloned_from\":\"allthethings HOC Dance 1\"}]"
+  "audit_log": "[{\"changed_at\":\"2023-09-05T12:46:08.190-07:00\",\"changed\":[\"cloned from \\\"allthethings HOC Dance 1\\\"\"],\"cloned_from\":\"allthethings HOC Dance 1\"},{\"changed_at\":\"2023-09-22 21:59:46 +0000\",\"changed\":[\"start_blocks\",\"toolbox_blocks\",\"skin\",\"default_song\",\"preload_asset_list\",\"contained_level_names\"],\"changed_by_id\":1,\"changed_by_email\":\"alice+levelbuilder@code.org\"}]",
+  "level_concept_difficulty": {
+  }
 }]]></config>
   <blocks>
     <start_blocks>

@@ -5,6 +5,7 @@
     "helper_libraries": [
       "DanceLab"
     ],
+    "uses_preview": "true",
     "hide_animation_mode": "true",
     "show_type_hints": "true",
     "use_modal_function_editor": "true",
