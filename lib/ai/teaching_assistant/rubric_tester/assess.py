@@ -22,10 +22,6 @@ from rubric_tester import (
 )
 
 def grade(code, prompt, rubric, api_key='', llm_model='gpt-4', num_responses=1, temperature=0.2, num_passing_grades=2):
-  llm_model = 'gpt-4'
-  num_responses = 1
-  temperature = 0.2
-  num_passing_grades = 2
   OPENAI_API_KEY = api_key
 
   # Set the key
