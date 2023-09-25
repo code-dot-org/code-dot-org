@@ -938,7 +938,7 @@
             "ui_controls": {
               "expressions": {
                 "button": {
-                  "content": "Crea un pulsante a schermo che mostri il _testo_ fornito e riferito dal dato _id_ alla posizione predefinita (0,0).\n\nMolte app utilizzano pulsanti per consentire all'utente di avviare qualche azione dell'app. Dev'essere creato un gestore di eventi per ogni tipo di interazione dell'utente, con il pulsante che utilizza [`onEvent()`(#fff176)](/docs/applab/onEvent/) e l'_id_.",
+                  "content": "Crea un pulsante a schermo che mostri il _testo_ fornito e riferito dal dato _id_ alla posizione predefinita (0,0).\n\nMolte app utilizzano pulsanti per consentire all'utente di avviare qualche azione dell'app. Dev'essere creato un gestore di eventi per ogni tipo di interazione dell'utente, con il pulsante che utilizza [`onEvent()`](/docs/applab/onEvent/) e l'_id_.",
                   "examples": {
                     "Example: Click Me Button": {
                       "name": "Esempio: Pulsante Cliccami"
@@ -962,7 +962,7 @@
                   },
                   "return_value": "Nessun valore restituito. Modifica soltanto la schermata.",
                   "short_description": "Crea un pulsante sullo schermo che mostra il testo fornito e a cui fa riferimento l'id dato nella posizione predefinita (0,0).",
-                  "tips": "-   Se è presente un altro elemento dell'UI alla posizione (0,0), il pulsante è posizionato alla posizione disponibile successiva, a destra o sotto.\n-   Esistono varie funzioni di modifica dell'elemento dell'UI disponibili: [`setText()`(#fff176)](/docs/applab/setText/), [`showElement()`(#fff176)](/docs/applab/showElement/), [`hideElement()`(#fff176)](/docs/applab/hideElement/), [`deleteElement()`(#fff176)](/docs/applab/deleteElement/), [`setPosition()`(#fff176)](/docs/applab/setPosition/), [`setSize()`(#fff176)](/docs/applab/setSize/). \n-   Esistono varie funzioni di richiesta degli elementi dell'UI disponibili: [`getText()`(#fff176)](/docs/applab/getText/), [`getXPosition()`(#fff176)](/docs/applab/getXPosition/), [`getYPosition()`(#fff176)](/docs/applab/getYPosition/).\n-   I pulsanti possono anche essere creati e inizializzati in Modalità Design."
+                  "tips": "-   Se è presente un altro elemento dell'UI alla posizione (0,0), il pulsante è posizionato alla posizione disponibile successiva, a destra o sotto.\n-   Esistono varie funzioni di modifica dell'elemento dell'UI disponibili: [`setText()`](/docs/applab/setText/), [`showElement()`](/docs/applab/showElement/), [`hideElement()`](/docs/applab/hideElement/), [`deleteElement()`](/docs/applab/deleteElement/), [`setPosition()`](/docs/applab/setPosition/), [`setSize()`](/docs/applab/setSize/). \n-   Esistono varie funzioni di richiesta degli elementi dell'UI disponibili: [`getText()`](/docs/applab/getText/), [`getXPosition()`](/docs/applab/getXPosition/), [`getYPosition()`](/docs/applab/getYPosition/).\n-   I pulsanti possono anche essere creati e inizializzati in Modalità Design."
                 },
                 "checkbox": {
                   "content": "Crea una casella di controllo sulla schermata con il valore booleano iniziale _spuntato_ e riferito dal dato _id_ alla posizione predefinita (0,0).\n\nAlcune app richiedono che l'utente spunti una casella se acconsentono a qualcosa, come un'affermazione sulla privacy di un'app.",
