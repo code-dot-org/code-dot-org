@@ -700,6 +700,80 @@
         "express-2022/Snowflakes with Anna and Elsa": {
           "purpose": "V tej seriji bodo učenci vadili gnezdene zanke, medtem ko bodo ustvarjali slike, ki jih bodo navdušeno delili.\n\nZačenši s peščico navodil se bodo učenci sami odločali, ko bodo ustvarjali modele za ponavljanje. Obračali jih bodo na različne načine in končali z umetnino, ki bo zares edinstvena. "
         },
+        "coursea-2023/Happy Maps": {
+          "name": "Veseli zemljevidi"
+        },
+        "courseb-2023/Move It, Move It": {
+          "name": "Premakni se, premakni"
+        },
+        "coursec-2023/My Robotic Friends Jr": {
+          "name": "Moji robotski prijatelji Jr.",
+          "overview": "V učni uri \"postavljanja konteksta\" bodo učenci uporabljali nabor simbolov za izdelavo robota, ki bo zlagal lončke v različne vzorce. Učenci se bodo izmenjevali v vlogi robota, ki se bo odzval zgolj na algoritem, ki ga bodo določili sovrstniki.",
+          "preparation": "– Pripravi kup 20 papirnatih lončkov za vsako skupino 2–3 učencev.\n– Prikažite simbole iz **\\*Preglednice simbolov**, iz katere bodo učenci črpali med uro.\n– (Opcijsko) Natisnite eno \\*_\\\\_Idejo postavitve lončkov\\* za vsako skupino."
+        },
+        "coursec-2023/Programming with Angry Birds": {
+          "preparation": "-   Igrajte skozi uganke, da bi našli morebitna problematična področja za vaš razred.\n-   (Neobvezno) Izberite nekaj nalog, ki jih želite narediti kot skupina s svojim razredom. "
+        },
+        "coursec-2023/Debugging in Maze": {
+          "name": "Odpravljanje napak v labirintu"
+        },
+        "coursec-2023/Collecting Treasure with Laurel": {
+          "name": "Zbiranje zaklada z Laurel",
+          "student_overview": "Napišite algoritme, ki pomagajo Laurel zbrati veliko draguljev!"
+        },
+        "coursec-2023/Creating Art with Code": {
+          "name": "Ustvarjanje umetnosti s kodo"
+        },
+        "coursec-2023/Loops with Rey and BB-8": {
+          "name": "Zanke z Rey in BB-8",
+          "student_overview": "Pomagaj BB-8 skozi labirinte z uporabo zank! "
+        },
+        "coursec-2023/Harvesting Crops with Loops": {
+          "name": "Obiranje pridelkov z zankami",
+          "student_overview": "Uporabimo zanke, da zberemo nekaj zelenjave!"
+        },
+        "coursec-2023/The Big Event": {
+          "name": "Veliki dogodek",
+          "student_overview": "Igrajte zabavno igro, če želite izvedeti več o dogodkih. "
+        },
+        "coursec-2023/Build a Flappy Game": {
+          "name": "Zgradite igro Flappy"
+        },
+        "coursec-2023/Mini-Project: Chase Game": {
+          "name": "Mini-projekt: Igra lovljenja",
+          "student_overview": "Čas je, da postanete ustvarjalni in naredite igro v Play Lab!"
+        },
+        "coursed-2023/Graph Paper Programming": {
+          "name": "Obarvajmo kvadratke"
+        },
+        "coursed-2023/Relay Programming": {
+          "name": "Relejsko programiranje"
+        },
+        "coursed-2023/Conditionals with Cards": {
+          "name": "Pogojniki s kartami"
+        },
+        "coursee-2023/Songwriting": {
+          "name": "Napiši pesem"
+        },
+        "coursef-2023/The Internet": {
+          "name": "Internet"
+        },
+        "express-2023/Debugging in Maze": {
+          "name": "Odpravljanje napak v labirintu"
+        },
+        "express-2023/Collecting Treasure with Laurel": {
+          "name": "Zbiranje zaklada z Laurel"
+        },
+        "express-2023/Creating Art with Code": {
+          "name": "Ustvarjanje umetnosti s kodo"
+        },
+        "express-2023/Loops with Rey and BB-8": {
+          "name": "Zanke z Rey in BB-8",
+          "student_overview": "Pomagaj BB-8 skozi labirinte z uporabo zank! "
+        },
+        "express-2023/Snowflakes with Anna and Elsa": {
+          "purpose": "V tej seriji bodo učenci vadili gnezdene zanke, medtem ko bodo ustvarjali slike, ki jih bodo navdušeno delili.\n\nZačenši s peščico navodil se bodo učenci sami odločali, ko bodo ustvarjali modele za ponavljanje. Obračali jih bodo na različne načine in končali z umetnino, ki bo zares edinstvena. "
+        },
         "Hour of Code/Hour of Code 2013": {
           "name": "Hour of Code 2013"
         },

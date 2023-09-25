@@ -1,5 +1,21 @@
 {
+  "danceFeedbackDidntPress": "هنگام اجرای رقص، حتماً کلیدهای پیکان را فشار دهید.",
+  "danceFeedbackKeyEvent": "در حال اجرای رقص، از اتصال کد به بلوک <xml></block><block type=\"Dancelab_whenKey\"><title name=\"KEY\">\"بالا\"</title></block></xml> و فشردن کلید اطمینان حاصل نمایید.",
+  "danceFeedbackNeedBackup": "باید با بلوک <xml><block type=\"Dancelab_makeNewDanceSpriteGroup\"><title name=\"N\">10</title><title name=\"COSTUME\">»تک‌شاخ»</title><title name=\"LAYOUT\">»دایره»</title></block></xml> گروهی از رقصندگان پشتیبان ایجاد کنید.",
+  "danceFeedbackNeedDifferentDance": "باید از رقص متفاوتی استفاده کنید.",
+  "danceFeedbackNeedEveryTwoMeasures": "مطمئن شوید که از بلوک «هر ۲ گام» استفاده می‌کنید",
+  "danceFeedbackNeedLead": "همچنین باید یک رقصنده اصلی با بلوک <xml><block type=\"Dancelab_makeAnonymousDanceSprite\"><title name=\"COSTUME\">???</title><title name=\"LOCATION\">'{'x: 200, y: 200'}'</title></block></xml> ایجاد کنید.",
+  "danceFeedbackNeedMakeANewDancer": "از بلوک «ساخت جدید» برای ایجاد رقصنده دوم استفاده کنید.",
   "danceFeedbackNeedNewDancer": "شما به ساختن یک رقصنده نیاز دارید.",
+  "danceFeedbackNeedTwoDancers": "باید دو رقصنده ایجاد کنید.",
+  "danceFeedbackNoBackground": "شما به اضافه کردن پشت زمینه نیاز دارید.",
   "danceFeedbackNoDancers": "شما هیچ رقصنده ای ندارید.",
-  "danceFeedbackNoBackground": "شما به اضافه کردن پشت زمینه نیاز دارید."
+  "danceFeedbackOnlyOneDancerMoved": "فقط یکی از رقصندگان حرکت کرد.",
+  "danceFeedbackPressedKey": "شما کلیدی را فشار دادید، اما رقصنده پاسخی نداد.",
+  "danceFeedbackSetSize": "پس از شروع موسیقی، باید اندازه حداقل یک رقصنده را تغییر دهید.",
+  "danceFeedbackStartNewMove": "رقصنده شما بعد از گام چهارم حرکت جدیدی انجام نمی‌داد.",
+  "danceFeedbackTooManyDancers": "مراقب باشید! اگر  بلوک «ایجاد جدید» را در «هر 2 گام» قرار دهید، رقصندگان زیادی ایجاد خواهید کرد.",
+  "danceFeedbackUseSetSize": "از بلوک «set backup_dancer2 size» برای کوچک‌تر کردن آن رقصنده استفاده کنید.",
+  "danceFeedbackUseSetTint": "از بلوک «تنظیم رنگ» برای تغییر رنگ رقصنده استفاده کنید.",
+  "danceFeedbackUseStartMapping": "سعی کنید بلوک <xml><block type=\"Dancelab_startMapping\"><title name=\"SPRITE\">اسب_شاخدار_راست</title><title name=\"PROPERTY\">\"مقیاس\"</title><title name=\"RANGE\">\"باس\"</title></block></xml> را به برنامه اضافه کنید."
 }

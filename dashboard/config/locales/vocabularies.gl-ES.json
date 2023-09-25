@@ -110,6 +110,69 @@
         "define/express/2022": {
           "word": "Definir"
         },
+        "code/csc-adaptations/2023": {
+          "word": "Código"
+        },
+        "code/csc-ecosystems/2023": {
+          "word": "Código"
+        },
+        "conditionals/csc-ecosystems/2023": {
+          "word": "Condicionais"
+        },
+        "variable/csc-ecosystems/2023": {
+          "word": "Variábel"
+        },
+        "code/csc-mappinglandmarks/2023": {
+          "word": "Código"
+        },
+        "artist/csc-starquilts/2023": {
+          "word": "Artista"
+        },
+        "comments/csc-starquilts/2023": {
+          "word": "Comentarios"
+        },
+        "code/poetry/2023": {
+          "word": "Código"
+        },
+        "binary/coursec/2023": {
+          "word": "Binario"
+        },
+        "conditionals/coursed/2023": {
+          "word": "Condicionais"
+        },
+        "function/coursee/2023": {
+          "word": "Función"
+        },
+        "conditionals/coursee/2023": {
+          "word": "Condicionais"
+        },
+        "copyright/coursee/2023": {
+          "word": "Dereitos de Autor"
+        },
+        "define/coursee/2023": {
+          "word": "Definir"
+        },
+        "variable/coursef/2023": {
+          "word": "Variábel"
+        },
+        "internet/coursef/2023": {
+          "word": "Internet"
+        },
+        "define/coursef/2023": {
+          "word": "Definir"
+        },
+        "conditionals/express/2023": {
+          "word": "Condicionais"
+        },
+        "function/express/2023": {
+          "word": "Función"
+        },
+        "variable/express/2023": {
+          "word": "Variábel"
+        },
+        "define/express/2023": {
+          "word": "Definir"
+        },
         "conditionals/aquatic/unversioned": {
           "word": "Condicionais"
         },

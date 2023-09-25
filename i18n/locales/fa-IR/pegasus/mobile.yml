@@ -195,6 +195,7 @@
   studiobar_elementary_title: "دوره‌های مقدماتی"
   studiobar_elementary_body: "سه درس جدید ما برای کلاس K&#8209;پنجمی ها"
   studiobar_dance_title: "جشن و رقص"
+  studiobar_dance_body: "ایجاد و به اشتراک گذاری حزب رقص خود"
   studiobar_hoc_title: "ساعتی با کدنویسی"
   studiobar_hoc_body: "یادگیری  کدنویسی با پرندگان عصبانی"
   studiobar_flappy_title: "کدنویسی Flappy"
@@ -1148,6 +1149,8 @@
   hoc2018_dance_teacher_resources_tile2_button: "فعالیت کلاسی"
   hoc2018_dance_amazon_about_future_engineer_button: "بیشتر بیاموزید"
   page_not_found_title: "صفحه پیدا نشد"
+  homepage_slot_text_title_at_home: "در خانه یاد بگیرید"
+  homepage_slot_text_blurb_at_home: "این منابع کار را آسان می کند"
   hoc2022_mc_mee_title: "فرار از عمارت ماینکرافت"
   hoc2022_mc_mee_description: 'از عمارت رازآلود تا زمان طلوع آفتاب فرار کنید و یک میلیون زمرد دریافت کنید! آموزش جدید Hour of Code ماینکرافت حالا در نسخه آموزشی تحت ویندوز، مک، کروم‌بوک، آیپد و موبایل موجود است. با منابع مربیان، آموزشها و ویدئوها کار را شروع کنید. '
   hoc2022_mc_mee_timecraft_description: "در این درس رایگان کدنویسی نسخه آموزشی Minecraft برای نجات آینده با ماشین زمان سفر کنید."

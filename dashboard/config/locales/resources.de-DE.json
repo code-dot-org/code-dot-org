@@ -5602,6 +5602,2173 @@
           "url": "https://www.youtube.com/watch?v=rgbZAWnOWOo",
           "type": "Video"
         },
+        "cs_connections_landing_page/csc-adaptations/2023": {
+          "name": "Landingpage für CS Connections",
+          "url": "https://code.org/educate/csc",
+          "type": "Ressource"
+        },
+        "csc_extended_connections_book_list/csc-adaptations/2023": {
+          "name": "CSC Extended Connections-Buchliste",
+          "url": "https://docs.google.com/document/d/14azofBAy5Riq109ruUPi8BbZRvJ1KIthqA3mH7t428Y/template/preview",
+          "type": "Ressource"
+        },
+        "helpful_hints_for_teachers_and_learners/csc-adaptations/2023": {
+          "name": "Hilfreiche Hinweise für Lehrer und Lernende",
+          "url": "https://docs.google.com/presentation/d/1RSJhxO9ZMtyLrt160kvAVdyekR4wT2fVSgbrPHR4HS0/template/preview"
+        },
+        "resource_list_for_all_lessons/csc-adaptations/2023": {
+          "name": "Ressourcenliste für alle Lektionen",
+          "url": "/s/csc-adaptations-2023/ressourcen",
+          "type": "Ressource"
+        },
+        "standards_in_modeling_animal_adaptations/csc-adaptations/2023": {
+          "name": "Standards für die Modellierung von Tieranpassungen ",
+          "url": "/s/csc-adaptations-2023/standards",
+          "type": "Ressource"
+        },
+        "vocabulary_in_modeling_animal_adaptations/csc-adaptations/2023": {
+          "name": "Wortschatz bei der Modellierung von Tieranpassungen ",
+          "url": "/s/csc-adaptations-2023/vocab",
+          "type": "Ressource"
+        },
+        "ecosystems/csc-adaptations/2023": {
+          "url": "https://docs.google.com/presentation/d/1J9yCLR8vBYHgKxuuKymGNWU_KFCGGGUpzTmpl_dvl7A/template/preview",
+          "type": "Folien"
+        },
+        "helpful_hints_1/csc-adaptations/2023": {
+          "name": "Hilfreiche Hinweise",
+          "url": "https://docs.google.com/presentation/d/1RSJhxO9ZMtyLrt160kvAVdyekR4wT2fVSgbrPHR4HS0/template/preview",
+          "type": "Folien"
+        },
+        "helpful_hints/csc-adaptations/2023": {
+          "name": "Hilfreiche Hinweise",
+          "url": "https://docs.google.com/presentation/d/1RSJhxO9ZMtyLrt160kvAVdyekR4wT2fVSgbrPHR4HS0/template/preview",
+          "type": "Folien"
+        },
+        "helpful_hints_2/csc-adaptations/2023": {
+          "name": "Hilfreiche Hinweise",
+          "url": "https://docs.google.com/presentation/d/1RSJhxO9ZMtyLrt160kvAVdyekR4wT2fVSgbrPHR4HS0/template/preview",
+          "type": "Folien"
+        },
+        "cs_connections_landing_page/csc-bookcovers/2023": {
+          "name": "Landingpage für CS Connections",
+          "url": "https://code.org/educate/csc",
+          "type": "Ressource"
+        },
+        "helpful_hints_for_teachers_and_learners/csc-bookcovers/2023": {
+          "name": "Hilfreiche Hinweise für Lehrer und Lernende",
+          "url": "https://docs.google.com/presentation/d/1RSJhxO9ZMtyLrt160kvAVdyekR4wT2fVSgbrPHR4HS0/template/preview",
+          "type": "Ressource"
+        },
+        "resource_list_for_all_lessons/csc-bookcovers/2023": {
+          "name": "Ressourcenliste für alle Lektionen",
+          "url": "/s/csc-bookcovers-2023/resources",
+          "type": "Ressource"
+        },
+        "standards_in_coding_a_book_cover/csc-bookcovers/2023": {
+          "name": "Standards für die Codierung eines Buchumschlags",
+          "url": "/s/csc-bookcovers-2023/standards",
+          "type": "Ressource"
+        },
+        "vocabulary_in_coding_a_book_cover/csc-bookcovers/2023": {
+          "name": "Wortschatz beim Codieren eines Buchumschlags",
+          "url": "/s/csc-bookcovers-2023/vocab",
+          "type": "Ressource"
+        },
+        "book_cover/csc-bookcovers/2023": {
+          "name": "Einband des Buches",
+          "url": "https://docs.google.com/presentation/d/1GTaZX9z0b-dwk6Z48TSwqwhjZ9pO9Onk7w8n9xNt_Zk/template/preview",
+          "type": "Folien"
+        },
+        "book_guide/csc-bookcovers/2023": {
+          "name": "Ratgeber buchen",
+          "url": "https://docs.google.com/document/d/1HRSqSLhdRt7O7yv2LN3Y9jOHykw2BvNrtZJRAi11U9k/template/preview",
+          "type": "Ressource"
+        },
+        "helpful_hints/csc-bookcovers/2023": {
+          "name": "Hilfreiche Hinweise",
+          "url": "https://docs.google.com/presentation/d/1RSJhxO9ZMtyLrt160kvAVdyekR4wT2fVSgbrPHR4HS0/template/preview",
+          "type": "Folien"
+        },
+        "create_your_own_book_cover/csc-bookcovers/2023": {
+          "name": "Leitfaden zur Planung",
+          "url": "https://docs.google.com/document/d/18cVgDdq77dbdk6gmQ1rGjHIr7pQk3I2Wb2WsAEeNH64/template/preview",
+          "type": "Handout"
+        },
+        "create_your_own_book_cover_key_/csc-bookcovers/2023": {
+          "name": "Planungshandbuch [Key] Wonder",
+          "url": "https://docs.google.com/document/d/1sinZLdMy8PLHJVKRwGt-mqhcADQtNq0bLYy4oZZwVpQ/template/preview",
+          "type": "Antwortschlüssel"
+        },
+        "book_cover_rubric/csc-bookcovers/2023": {
+          "name": "Rubrik Buchcover",
+          "url": "https://docs.google.com/document/d/11hnQkEHwwOD6Bo2_oKiE-CxyU5hXJNlMgV30cjaKVYQ/template/preview",
+          "type": "Bewertungsleitfaden"
+        },
+        "planning_your_own_book_cover_-_answer_key/csc-bookcovers/2023": {
+          "name": "Planungshandbuch [Key] Esperanza Rising",
+          "url": "https://drive.google.com/file/d/1dpyir8Sh4EgrBT0C1i9M_O8lQkw7rREw/view?usp=sharing",
+          "type": "Antwortschlüssel"
+        },
+        "book_cover_1/csc-bookcovers/2023": {
+          "name": "Einband des Buches",
+          "url": "https://docs.google.com/document/d/11hnQkEHwwOD6Bo2_oKiE-CxyU5hXJNlMgV30cjaKVYQ/template/preview",
+          "type": "Bewertungsleitfaden"
+        },
+        "helpful_hints_2/csc-bookcovers/2023": {
+          "name": "Hilfreiche Hinweise",
+          "url": "https://docs.google.com/presentation/d/19XIgtzM0JxyhjSd90aW9doyrMrgzdhO_nxWQa9Wqv8I/template/preview",
+          "type": "Folien"
+        },
+        "planning_guide/csc-bookcovers/2023": {
+          "name": "Leitfaden zur Planung",
+          "url": "https://docs.google.com/document/d/18cVgDdq77dbdk6gmQ1rGjHIr7pQk3I2Wb2WsAEeNH64/template/preview",
+          "type": "Handout"
+        },
+        "planning_guide_key_esperanza_rising/csc-bookcovers/2023": {
+          "name": "Planungshandbuch [Key] Esperanza Rising",
+          "url": "https://drive.google.com/file/d/1dpyir8Sh4EgrBT0C1i9M_O8lQkw7rREw/view",
+          "type": "Antwortschlüssel"
+        },
+        "_optional_gallery_walk_sticky_notes/csc-bookcovers/2023": {
+          "name": "[Optional] Gallery Walk Haftnotizen",
+          "url": "https://docs.google.com/document/d/1nG1d6-dVkodEuFod_7DqzKHWjp9wWZs60n_zYfxUCtU/template/preview",
+          "type": "Ressource"
+        },
+        "helpful_hints_1/csc-bookcovers/2023": {
+          "name": "Hilfreiche Hinweise",
+          "url": "https://docs.google.com/presentation/d/1RSJhxO9ZMtyLrt160kvAVdyekR4wT2fVSgbrPHR4HS0/template/preview",
+          "type": "Folien"
+        },
+        "cs_connections_landing_page/csc-ecosystems/2023": {
+          "name": "Landingpage für CS Connections",
+          "url": "https://code.org/educate/csc",
+          "type": "Ressource"
+        },
+        "csc_extended_connections_book_list/csc-ecosystems/2023": {
+          "name": "CSC Extended Connections-Buchliste",
+          "url": "https://docs.google.com/document/d/14azofBAy5Riq109ruUPi8BbZRvJ1KIthqA3mH7t428Y/template/preview",
+          "type": "Ressource"
+        },
+        "helpful_hints_for_teachers_and_learners/csc-ecosystems/2023": {
+          "name": "Hilfreiche Hinweise für Lehrer und Lernende\t",
+          "url": "https://docs.google.com/presentation/d/1RSJhxO9ZMtyLrt160kvAVdyekR4wT2fVSgbrPHR4HS0/template/preview",
+          "type": "Ressource"
+        },
+        "resource_list_for_all_lessons/csc-ecosystems/2023": {
+          "name": "Ressourcenliste für alle Lektionen"
+        },
+        "standards_in_simulating_a_marine_ecosystem/csc-ecosystems/2023": {
+          "name": "Standards für die Simulation eines marinen Ökosystems ",
+          "type": "Ressource"
+        },
+        "vocabulary_in_simulating_a_marine_ecosystem/csc-ecosystems/2023": {
+          "name": "Wortschatz zur Simulation eines marinen Ökosystems",
+          "type": "Ressource"
+        },
+        "ecosystems/csc-ecosystems/2023": {
+          "name": "Simulation eines Meeresökosystems",
+          "url": "https://docs.google.com/presentation/d/1LtXP3ssc5-kOV1DgccN3957oAyF1cf-VaghZJsL7Vtk/template/preview",
+          "type": "Folien"
+        },
+        "understanding_overfishing_article/csc-ecosystems/2023": {
+          "name": "Artikel „Überfischung verstehen“",
+          "url": "https://www.seafoodwatch.org/seafood-basics/sustainable-solutions/avoid-overfishing",
+          "type": "Ressource"
+        },
+        "ecologist_s_notebook/csc-ecosystems/2023": {
+          "name": "Notizbuch des Ökologen",
+          "url": "https://docs.google.com/document/d/1_xi5PFs5TJyO3-8Hz7ftZxCNRPpd5yQBCwhm8IuysY8/template/preview"
+        },
+        "cs_connections_landing_page/csc-mappinglandmarks/2023": {
+          "name": "Landingpage für CS Connections",
+          "url": "https://code.org/educate/csc",
+          "type": "Ressource"
+        },
+        "csc_extended_connections_book_list/csc-mappinglandmarks/2023": {
+          "name": "CSC Extended Connections-Buchliste",
+          "url": "https://docs.google.com/document/d/14azofBAy5Riq109ruUPi8BbZRvJ1KIthqA3mH7t428Y/template/preview",
+          "type": "Ressource"
+        },
+        "helpful_hints_for_teachers_and_learners/csc-mappinglandmarks/2023": {
+          "name": "Hilfreiche Hinweise für Lehrer und Lernende\t",
+          "url": "https://docs.google.com/presentation/d/1RSJhxO9ZMtyLrt160kvAVdyekR4wT2fVSgbrPHR4HS0/template/preview",
+          "type": "Ressource"
+        },
+        "resource_list_for_all_lessons/csc-mappinglandmarks/2023": {
+          "name": "Ressourcenliste für alle Lektionen",
+          "url": "/s/csc-mappinglandmarks-2023/resources"
+        },
+        "standards_in_mapping_landmarks/csc-mappinglandmarks/2023": {
+          "name": "Standards für die Codierung interaktiver Karten",
+          "url": "/s/csc-mappinglandmarks-2023/standards",
+          "type": "Ressource"
+        },
+        "vocabulary_in_coding/csc-mappinglandmarks/2023": {
+          "name": "Wortschatz beim Codieren interaktiver Karten",
+          "url": "/s/csc-mappinglandmarks-2023/vocab"
+        },
+        "lesson_slides/csc-mappinglandmarks/2023": {
+          "url": "https://docs.google.com/presentation/d/19XIgtzM0JxyhjSd90aW9doyrMrgzdhO_nxWQa9Wqv8I/template/preview",
+          "type": "Folien"
+        },
+        "helpful_hints/csc-mappinglandmarks/2023": {
+          "name": "Hilfreiche Hinweise",
+          "url": "https://docs.google.com/presentation/d/1RSJhxO9ZMtyLrt160kvAVdyekR4wT2fVSgbrPHR4HS0/template/preview",
+          "type": "Folien"
+        },
+        "list_of_books_about_maps/csc-mappinglandmarks/2023": {
+          "name": "Liste von Büchern über Landkarten",
+          "url": "https://docs.google.com/document/d/1HlYgC_KFNHZKsPFJIY5E_TyMWVMhZbKnq88bn7GLuaE/template/preview",
+          "type": "Ressource"
+        },
+        "activity_guide_planning/csc-mappinglandmarks/2023": {
+          "name": "Plan des Projekts [Key]",
+          "url": "https://docs.google.com/document/d/1fD9jkEkts5gtYN76P0I-1FGcEPi1q97Cuk0hBy18KvQ/template/preview",
+          "type": "Antwortschlüssel"
+        },
+        "activity_guide_planning_1/csc-mappinglandmarks/2023": {
+          "name": "Plan des Projekts",
+          "url": "https://docs.google.com/document/d/1t_-cd-f6EhhUbblu8nSGRajStY9FVwLnKn1Bj90GL3Q/template/preview"
+        },
+        "interactive_map_rubric/csc-mappinglandmarks/2023": {
+          "name": "Rubrik „Codieren interaktiver Karten“",
+          "url": "https://docs.google.com/document/d/1Be6zwvr-gEbmHpkxg4vnyt-evuvuLAlB1Pl8oFA64nw/template/preview",
+          "type": "Bewertungsleitfaden"
+        },
+        "local_landmarks_map_reflection_observation/csc-mappinglandmarks/2023": {
+          "name": "Karte mit lokalen Sehenswürdigkeiten, Spiegelung und Beobachtung",
+          "url": "https://docs.google.com/document/d/1OxwZCmnJYKVUQIIsXqTkbbivvG_iXHVDL4FgR8j9V4E/template/preview"
+        },
+        "books_about_maps_list/csc-mappinglandmarks/2023": {
+          "name": "Bücher über Maps List",
+          "url": "https://docs.google.com/document/d/1HlYgC_KFNHZKsPFJIY5E_TyMWVMhZbKnq88bn7GLuaE/template/preview",
+          "type": "Ressource"
+        },
+        "cs_connections_landing_page/csc-starquilts/2023": {
+          "name": "Landingpage für CS Connections",
+          "url": "https://code.org/educate/csc",
+          "type": "Ressource"
+        },
+        "csc_extended_connections_book_list/csc-starquilts/2023": {
+          "name": "CSC Extended Connections-Buchliste",
+          "url": "https://docs.google.com/document/d/14azofBAy5Riq109ruUPi8BbZRvJ1KIthqA3mH7t428Y/template/preview",
+          "type": "Ressource"
+        },
+        "helpful_hints_for_teachers_and_learners/csc-starquilts/2023": {
+          "name": "Hilfreiche Hinweise für Lehrer und Lernende",
+          "url": "https://docs.google.com/presentation/d/1RSJhxO9ZMtyLrt160kvAVdyekR4wT2fVSgbrPHR4HS0/template/preview",
+          "type": "Ressource"
+        },
+        "resource_list_for_all_lessons/csc-starquilts/2023": {
+          "name": "Ressourcenliste für alle Lektionen",
+          "url": "/s/csc-starquilts-2023/ressourcen",
+          "type": "Ressource"
+        },
+        "standards_in_coding_a_star_quilt/csc-starquilts/2023": {
+          "name": "Standards beim Codieren eines Star Quilts",
+          "url": "/s/csc-starquilts-2023/standards",
+          "type": "Ressource"
+        },
+        "vocabulary_in_coding_geometric_star_quilts/csc-starquilts/2023": {
+          "name": "Wortschatz beim Codieren von geometrischen Sternquilts",
+          "url": "/s/csc-starquilts-2023/vocab",
+          "type": "Ressource"
+        },
+        "star_quilt_article/csc-starquilts/2023": {
+          "name": "Star Quilt Artikel",
+          "url": "https://drive.google.com/file/d/1MAcBYUArtNihyt5ZZlwFOraFLhRxZm7G/view",
+          "type": "Ressource"
+        },
+        "star_quilts/csc-starquilts/2023": {
+          "name": "Programmierung eines geometrischen Sternenquilts",
+          "url": "https://docs.google.com/presentation/d/10F-FnjuE2fM9g1MEmBm5MXJAvhKWCNjX5tAeH9YbggM/template/preview",
+          "type": "Folien"
+        },
+        "star_quilts_1/csc-starquilts/2023": {
+          "name": "Steppdecke War Bonnet Star",
+          "url": "https://youtu.be/Q210ko41yqo?t=90",
+          "type": "Video"
+        },
+        "star_quilts_worksheet/csc-starquilts/2023": {
+          "name": "Arbeitsblatt Star Quilts",
+          "url": "https://docs.google.com/document/d/1vwfjAQ-OErpFcvzDTQuhimhMWjFhiPrtKTUHoEJLufM/template/preview",
+          "type": "Handout"
+        },
+        "virtual_pattern_blocks_optional_/csc-starquilts/2023": {
+          "name": "Virtuelle Musterblöcke (optional)",
+          "url": "https://mathigon.org/polypad#polygons",
+          "type": "Ressource"
+        },
+        "helpful_hints/csc-starquilts/2023": {
+          "name": "Hilfreiche Hinweise",
+          "url": "https://docs.google.com/presentation/d/1RSJhxO9ZMtyLrt160kvAVdyekR4wT2fVSgbrPHR4HS0/template/preview",
+          "type": "Folien"
+        },
+        "helpful_hints_1/csc-starquilts/2023": {
+          "name": "Hilfreiche Hinweise",
+          "url": "https://docs.google.com/presentation/d/1RSJhxO9ZMtyLrt160kvAVdyekR4wT2fVSgbrPHR4HS0/template/preview",
+          "type": "Folien"
+        },
+        "virtual_pattern_blocks/csc-starquilts/2023": {
+          "name": "Virtuelle Musterblöcke",
+          "url": "https://www.didax.com/apps/pattern-blocks/",
+          "type": "Ressource"
+        },
+        "helpful_hints_2/csc-starquilts/2023": {
+          "name": "Hilfreiche Hinweise",
+          "url": "https://docs.google.com/presentation/d/1RSJhxO9ZMtyLrt160kvAVdyekR4wT2fVSgbrPHR4HS0/template/preview",
+          "type": "Folien"
+        },
+        "all_resources/csc-timecapsule/2023": {
+          "name": "Ressourcenliste für alle Lektionen",
+          "url": "/s/csc-timecapsule-2023/resources",
+          "type": "Ressource"
+        },
+        "all_standards/csc-timecapsule/2023": {
+          "name": "Standards für die Codierung einer Zeitkapsel",
+          "url": "/s/csc-timecapsule-2023/standards"
+        },
+        "all_vocab/csc-timecapsule/2023": {
+          "name": "Wortschatz beim Codieren einer Zeitkapsel",
+          "url": "/s/csc-timecapsule-2023/vocab"
+        },
+        "cs_connections_landing_page/csc-timecapsule/2023": {
+          "name": "Landingpage für CS Connections",
+          "url": "https://code.org/educate/csc",
+          "type": "Ressource"
+        },
+        "csc_extended_connections_book_list/csc-timecapsule/2023": {
+          "name": "CSC Extended Connections-Buchliste",
+          "url": "https://docs.google.com/document/d/14azofBAy5Riq109ruUPi8BbZRvJ1KIthqA3mH7t428Y/template/preview",
+          "type": "Ressource"
+        },
+        "helpful_hints_for_teachers_and_learners/csc-timecapsule/2023": {
+          "name": "Hilfreiche Hinweise für Lehrer und Lernende",
+          "url": "https://docs.google.com/presentation/d/1RSJhxO9ZMtyLrt160kvAVdyekR4wT2fVSgbrPHR4HS0/template/preview",
+          "type": "Ressource"
+        },
+        "poem_art_1_-_introduction/csc-timecapsule/2023": {
+          "name": "Poem Art 1 - Einführung ",
+          "url": "https://www.youtube.com/watch?v=uvwUWTTjIXo&list=PLzdnOPI1iJNejQxcqExd1cWJnPEBPGCqf&index=2",
+          "type": "Video"
+        },
+        "poem_art_2_-_events/csc-timecapsule/2023": {
+          "name": "Gedichtkunst/Poesie - Ereignisse",
+          "url": "https://www.youtube.com/watch?v=XGwYYUEb6jQ&list=PLzdnOPI1iJNejQxcqExd1cWJnPEBPGCqf&index=3",
+          "type": "Video"
+        },
+        "poem_art_3_-_imagery/csc-timecapsule/2023": {
+          "name": "Gedichtkunst/Poesie - Bildliche Sprache",
+          "url": "https://www.youtube.com/watch?v=doy1aIuV-5U&list=PLzdnOPI1iJNejQxcqExd1cWJnPEBPGCqf&index=4",
+          "type": "Video"
+        },
+        "poem_art_4_-_celebration/csc-timecapsule/2023": {
+          "name": "Gedicht Art 4 - Feier ",
+          "url": "https://www.youtube.com/watch?v=Q-76vz8i8mo&list=PLzdnOPI1iJNejQxcqExd1cWJnPEBPGCqf&index=5",
+          "type": "Video"
+        },
+        "time_capsule/csc-timecapsule/2023": {
+          "name": "Programmieren einer Zeitkapsel",
+          "url": "https://docs.google.com/presentation/d/1jgZ_PS7uDb2KuvUNPNpW_PqSxsvfVKap4f8RscZPwVY/template/preview",
+          "type": "Folien"
+        },
+        "helpful_hints/csc-timecapsule/2023": {
+          "name": "Hilfreiche Hinweise",
+          "url": "https://docs.google.com/presentation/d/1RSJhxO9ZMtyLrt160kvAVdyekR4wT2fVSgbrPHR4HS0/template/preview",
+          "type": "Folien"
+        },
+        "time_capsule_rubric/csc-timecapsule/2023": {
+          "name": "Zeitkapselrubrik",
+          "url": "https://docs.google.com/document/d/1oE_z84x5GRJ34fRDLCc-YfKJQIQab90pLjozaGQKaJ0/template/preview",
+          "type": "Bewertungsleitfaden"
+        },
+        "write_your_own_time_capsule_story/csc-timecapsule/2023": {
+          "name": "Schreiben Sie Ihr eigenes Zeitkapsel-Gedicht - Sentence Stems",
+          "url": "https://docs.google.com/document/d/1fahr11zX92NW-rLdyZBqrNK2VqgOGtCACkcT87M_luU/template/preview",
+          "type": "Handout"
+        },
+        "write_your_own_time_capsule_poem_-_question_grab_bag/csc-timecapsule/2023": {
+          "name": "Write Your Own Time Capsule Poem — Question Grab Bag",
+          "url": "https://docs.google.com/document/d/1-aPA3uJIKJAuQ_2Gtck1Ma79eCFY88ZC8YzegQIckG4/template/preview",
+          "type": "Handout"
+        },
+        "poem_art_celebration_video_optional_/csc-timecapsule/2023": {
+          "name": "Video zur Feier der Poemkunst (optional)",
+          "url": "https://www.youtube.com/watch?v=Q-76vz8i8mo",
+          "type": "Video"
+        },
+        "poem_art_events_video_optional_/csc-timecapsule/2023": {
+          "name": "Video zu Gedichtkunstveranstaltungen (optional)",
+          "url": "https://youtu.be/XGwYYUEb6jQ",
+          "type": "Video"
+        },
+        "poem_art_video_optional_/csc-timecapsule/2023": {
+          "name": "Gedichtkunstvideo (optional)",
+          "url": "https://www.youtube.com/watch?v=uvwUWTTjIXo",
+          "type": "Video"
+        },
+        "time_capsule_checklist/csc-timecapsule/2023": {
+          "name": "Time Capsule-Checkliste",
+          "url": "https://docs.google.com/document/d/1_Hg7hhayhHsTCWDo0uJspseuBbtfTqgx1u9frnmvf1Y/template/preview",
+          "type": "Handout"
+        },
+        "enter_your_own_poem/csc-timecapsule/2023": {
+          "name": "Gib dein eigenes Gedicht ein",
+          "url": "https://www.youtube.com/watch?v=oKPgbzdpTSA",
+          "type": "Video"
+        },
+        "_optional_gallery_walk_sticky_notes/csc-timecapsule/2023": {
+          "name": "[Optional] Gallery Walk Haftnotizen",
+          "url": "https://docs.google.com/document/d/16OGg95k4WsOrusXBO-jjTBFMstI2Att8j6ggZCgpvls/template/preview",
+          "type": "Ressource"
+        },
+        "_optional_student_url_sharing_document/csc-timecapsule/2023": {
+          "name": "[Optional] Dokument zum Teilen von URLs durch Schüler",
+          "url": "https://docs.google.com/document/d/1X048JMSRltc-VHfDDWr7NvE5NMNp4lDSsczQXVUbM-A/template/preview",
+          "type": "Ressource"
+        },
+        "all_standards/poetry/2023": {
+          "name": "Standards beim Programmieren mit Poesie ",
+          "url": "https://studio.code.org/s/poetry-2023/standards"
+        },
+        "coding_with_poetry_vocabulary/poetry/2023": {
+          "name": "Wortschatz beim Programmieren mit Poesie ",
+          "url": "https://studio.code.org/s/poetry-2023/vocab"
+        },
+        "cs_connections_landing_page/poetry/2023": {
+          "name": "Landingpage für CS Connections",
+          "url": "https://code.org/educate/csc",
+          "type": "Ressource"
+        },
+        "csc_extended_connections_book_list/poetry/2023": {
+          "name": "CSC Extended Connections-Buchliste",
+          "url": "https://docs.google.com/document/d/14azofBAy5Riq109ruUPi8BbZRvJ1KIthqA3mH7t428Y/template/preview",
+          "type": "Ressource"
+        },
+        "helpful_hints_for_teachers_and_learners/poetry/2023": {
+          "name": "Hilfreiche Hinweise für Lehrende und Lernende",
+          "url": "https://docs.google.com/presentation/d/1RSJhxO9ZMtyLrt160kvAVdyekR4wT2fVSgbrPHR4HS0/template/preview",
+          "type": "Ressource"
+        },
+        "resource_list_for_all_lessons/poetry/2023": {
+          "name": "Ressourcenliste für alle Lektionen",
+          "url": "https://studio.code.org/s/poetry-2023/resources"
+        },
+        "coding_with_poetry_lesson_1/poetry/2023": {
+          "name": "Code ist Poesie",
+          "url": "https://docs.google.com/presentation/d/1k0VP9so-gmAHq9mSOTxiZ98pX7gNfN6TutBeoDa3pxY/template/preview",
+          "type": "Folien"
+        },
+        "poem_art_1_-_introduction/poetry/2023": {
+          "name": "Poem Art 1 - Einführung ",
+          "url": "https://www.youtube.com/watch?v=uvwUWTTjIXo&list=PLzdnOPI1iJNejQxcqExd1cWJnPEBPGCqf&index=2",
+          "type": "Video"
+        },
+        "poem_art_2_-_events/poetry/2023": {
+          "name": "Gedichtkunst/Poesie - Ereignisse",
+          "url": "https://www.youtube.com/watch?v=XGwYYUEb6jQ&list=PLzdnOPI1iJNejQxcqExd1cWJnPEBPGCqf&index=3",
+          "type": "Video"
+        },
+        "poem_art_3_-_imagery/poetry/2023": {
+          "name": "Gedichtkunst/Poesie - Bildliche Sprache",
+          "url": "https://www.youtube.com/watch?v=doy1aIuV-5U&list=PLzdnOPI1iJNejQxcqExd1cWJnPEBPGCqf&index=4",
+          "type": "Video"
+        },
+        "poem_art_4_-_celebration/poetry/2023": {
+          "name": "Gedicht Art 4 - Feier ",
+          "url": "https://www.youtube.com/watch?v=Q-76vz8i8mo&list=PLzdnOPI1iJNejQxcqExd1cWJnPEBPGCqf&index=5",
+          "type": "Video"
+        },
+        "helpful_hints_1/poetry/2023": {
+          "name": "Hilfreiche Hinweise",
+          "url": "https://docs.google.com/presentation/d/1RSJhxO9ZMtyLrt160kvAVdyekR4wT2fVSgbrPHR4HS0/template/preview",
+          "type": "Folien"
+        },
+        "helpful_hints/poetry/2023": {
+          "name": "Hilfreiche Hinweise",
+          "url": "https://docs.google.com/presentation/d/1RSJhxO9ZMtyLrt160kvAVdyekR4wT2fVSgbrPHR4HS0/template/preview",
+          "type": "Folien"
+        },
+        "write_your_own_poem/poetry/2023": {
+          "name": "Schreib dein eigenes Gedicht - Sentence Stems",
+          "url": "https://docs.google.com/document/d/1b6w_lOnibUHyDLYCP3rAWED5iElGm6LOQAJwG-hlih0/template/preview",
+          "type": "Handout"
+        },
+        "coding_with_poetry_rubric/poetry/2023": {
+          "name": "Rubrik Programmieren mit Poesie",
+          "url": "https://docs.google.com/document/d/13CJlIIV2CFu9D6-oxAm99PZ6EqNnDUZwFZCEW9fSMaE/template/preview",
+          "type": "Bewertungsleitfaden"
+        },
+        "write_your_own_poem_-_topics/poetry/2023": {
+          "name": "Schreib dein eigenes Gedicht - Themen",
+          "url": "https://docs.google.com/document/d/1V-DaWOIUk0xT7NYTzx3AEt4my-jc-Hx4vy21Kl4SPoE/template/preview",
+          "type": "Handout"
+        },
+        "enter_your_own_poem/poetry/2023": {
+          "name": "Gib dein eigenes Gedicht ein",
+          "url": "https://www.youtube.com/watch?v=oKPgbzdpTSA",
+          "type": "Video"
+        },
+        "poem_art_celebration_video_optional_/poetry/2023": {
+          "name": "Video zur Feier der Poemkunst (optional)",
+          "url": "https://www.youtube.com/watch?v=Q-76vz8i8mo",
+          "type": "Video"
+        },
+        "poem_art_events_video_optional_/poetry/2023": {
+          "name": "Video zu Gedichtkunstveranstaltungen (optional)",
+          "url": "https://youtu.be/XGwYYUEb6jQ",
+          "type": "Video"
+        },
+        "poem_art_video_optional_/poetry/2023": {
+          "name": "Gedichtkunstvideo (optional)",
+          "url": "https://www.youtube.com/watch?v=uvwUWTTjIXo",
+          "type": "Video"
+        },
+        "time_capsule_checklist/poetry/2023": {
+          "name": "Codieren Sie Ihre Gedichtcheckliste",
+          "url": "https://docs.google.com/document/d/14M3WIBwJg-YUKVrchzKfunAmQaQhuA7-qxYpS738K_0/template/preview",
+          "type": "Handout"
+        },
+        "_optional_student_url_sharing_document/poetry/2023": {
+          "name": "[Optional] Dokument zum Teilen von URLs durch Schüler",
+          "url": "https://docs.google.com/document/d/1DNcBWminB8MmyLQC4fIWrLZ8uI9HR7d4W3HuuclIpB0/template/preview",
+          "type": "Ressource"
+        },
+        "share_your_app_/poetry/2023": {
+          "name": "Teile deine App!",
+          "url": "https://docs.google.com/document/d/1kO4SNEIVyM0GrxxJb6NzVYauXXpi6rzQkDIfrzQf1Ls/template/preview",
+          "type": "Handout"
+        },
+        "poem_app_example/poetry/2023": {
+          "name": "Beispiel für eine Poem-App",
+          "url": "https://studio.code.org/projects/poetry_hoc/j3TXDXNhz0XEsH4Xjk_rT9buBHYCplirIKtY_Pg_bYo",
+          "type": "Ressource"
+        },
+        "all_resources/coursea/2023": {
+          "url": "/s/coursea-2023/ressourcen"
+        },
+        "all_standards/coursea/2023": {
+          "url": "/s/coursea-2023/standards"
+        },
+        "all_vocabulary/coursea/2023": {
+          "url": "/s/coursea-2023/vocab"
+        },
+        "common_core_and_ngss_guidance/coursea/2023": {
+          "name": "Standards- und NGSS-Leitfaden",
+          "url": "https://docs.google.com/document/d/1SqD3MaRbGIONGs5bcL1YhHUFK92ZXFIufypr6UC8XYA/preview#heading=h.vq4s1h2aaxxy",
+          "type": "Ressource"
+        },
+        "cross-curricular_extension_activities/coursea/2023": {
+          "name": "Fächerübergreifende Erweiterungsaktivitäten",
+          "url": "https://docs.google.com/document/d/1MRlHy_3VgLXKZwjeB0VmI8HWuPvupZODsslPnA7KYAY/preview",
+          "type": "Ressource"
+        },
+        "debugging_guide/coursea/2023": {
+          "name": "Fehlerbehungsleitfaden",
+          "url": "https://docs.google.com/document/d/1_UFVNtS0_f7aH79WtSEAR0niLy-KPwX1xNiXllOBviE/preview",
+          "type": "Ressource"
+        },
+        "implementation_guide/coursea/2023": {
+          "name": "Einführungsleitfaden",
+          "url": "https://docs.google.com/document/d/1I04szlSMuDlFLH_pidEC-huk_-t6ig09pBSyMv1Z3pw/preview",
+          "type": "Ressource"
+        },
+        "lesson_type_guide/coursea/2023": {
+          "name": "Stundentypen-Leitfaden",
+          "url": "https://docs.google.com/document/d/1Z28A1yF6BZu3lIlVvvHo5UqBpyuc1hX8YVjIt3fwmY4/view",
+          "type": "Ressource"
+        },
+        "teacher_forum/coursea/2023": {
+          "name": "Lehrer Forum",
+          "url": "https://forum.code.org/c/csf/",
+          "type": "Ressource"
+        },
+        "csf_course_syllabus/coursea/2023": {
+          "name": "CSF-Kursplan",
+          "url": "https://docs.google.com/document/d/1mGTa71uFIOvLuwcbo_7XIutZIuJKGlbl0KlRqgibs2U/edit?usp=drive_link",
+          "type": "Ressource"
+        },
+        "teaching_and_learning_strategies/coursea/2023": {
+          "name": "Lehr- und Lernstrategien",
+          "url": "https://docs.google.com/document/d/1khllUBI1xpSrUmwWwa2J35GaKVV8bb3bQb_5Vc_ty54/preview",
+          "type": "Ressource"
+        },
+        "values_and_philosophy_1/coursea/2023": {
+          "name": "Werte und Philosophie",
+          "url": "https://docs.google.com/document/d/1_56iN0iyFzPSsuj5-W7-SI6E7A8z9BTpL3qu4fDMkKk/preview",
+          "type": "Ressource"
+        },
+        "safety_in_my_online_neighborhood_lesson_slides/coursea/2023": {
+          "name": "Sicherheit in meiner Online-Nachbarschaft: Lektionsfolien",
+          "url": "https://docs.google.com/presentation/d/1VFaxU6S0hsDgyCtaPhVFf9xpign__BXdvT0ypQq1gBs/edit"
+        },
+        "safety_in_my_online_neighborhood_my_online_neighborhood/coursea/2023": {
+          "name": "Sicherheit in meiner Online-Nachbarschaft: Meine Online-Nachbarschaft",
+          "url": "https://www.commonsense.org/education/videos/my-online-neighborhood",
+          "type": "Video zur Lektion"
+        },
+        "safety_in_my_online_neighborhood_pause_and_think_moment/coursea/2023": {
+          "name": "Sicherheit in meiner Online-Nachbarschaft: Moment des Innehaltens und Nachdenkens",
+          "url": "https://docs.google.com/document/d/1o95Q7OD2oF5e-lWxj31kKopfhQVYWDUmw6uDdm1RIIU/",
+          "type": "Handout für Studenten"
+        },
+        "safety_in_my_online_neighborhood_safety_it_rules_/coursea/2023": {
+          "name": "Sicherheit in meiner Online-Nachbarschaft: Sicherheit geht vor!",
+          "url": "https://docs.google.com/document/d/1_fc870l0ndjhUMazjwLSaJOx9lIMsvbd3BYYEtLykIY/edit",
+          "type": "Gedicht-Poster"
+        },
+        "csf_course_a_lesson_slides/coursea/2023": {
+          "type": "Folien"
+        },
+        "20_20_20_rule/coursea/2023": {
+          "name": "20/20/20-Regel",
+          "url": "http://www.anthro.com/blog/2013/10/how-to-prevent-eye-strain-with-the-20-20-20-rule#.WOU39BLyu35",
+          "type": "Ressource"
+        },
+        "getting_started_-_creating_a_class_section/coursea/2023": {
+          "name": "Erste Schritte - Erstellen eines Klassenabschnitts",
+          "url": "https://www.youtube.com/watch?v=ebQY8fb2OV4",
+          "type": "Video"
+        },
+        "pair_programming/coursea/2023": {
+          "name": "Paarprogrammierung",
+          "url": "https://www.youtube.com/watch?v=vgkahOzFH2Q",
+          "type": "Studenten-Video"
+        },
+        "wiggles-go_noodle/coursea/2023": {
+          "name": "Wiggles-Go-Nudel",
+          "url": "https://app.gonoodle.com/channels/brainercise-with-mr-catman/shoulder-rock-n-roll",
+          "type": "Video"
+        },
+        "feeling_faces_-_emotion_image/coursea/2023": {
+          "name": "Gefühlsgesichter - Gefühlsbild",
+          "url": "https://docs.google.com/document/d/1qdt7Y-wVkqFas_TkNO4iITz2K-LEmEVWDWLM50NNAOs/view",
+          "type": "Ressource"
+        },
+        "happy_map_cards/coursea/2023": {
+          "name": "Happy Map Karten",
+          "url": "https://docs.google.com/document/d/15uNhf_dISlr0ZT5j3sBu-z3I7v_v5Av9H5jsdLXhE8c/edit",
+          "type": "Arbeitsblatt"
+        },
+        "happy_map_cards_1/coursea/2023": {
+          "name": "Happy Map Karten",
+          "url": "https://docs.google.com/document/d/1faZj8Szk1st2pMg2f_2S0jXgoGXgbfqOFxbJ6f3LnH0/edit",
+          "type": "Arbeitsblatt Antwortschlüssel"
+        },
+        "happy_map_game_pieces/coursea/2023": {
+          "name": "Fröhliche Karten - Spielfiguren",
+          "url": "https://docs.google.com/document/d/19dHJCfmQNs3meKN3sTL91qsfmHYjZCYfbFq91J4fj3k/edit",
+          "type": "Manipulatoren"
+        },
+        "happy_maps/coursea/2023": {
+          "name": "Glücklich Karten",
+          "url": "https://youtu.be/hrnhiKAQ1_k",
+          "type": "Unplugged-Video"
+        },
+        "unplugged_blockly_blocks_grades_k-1_/coursea/2023": {
+          "name": "Blockly Blocks ohne Computer (Klasse 1)",
+          "url": "https://docs.google.com/presentation/d/1PoSQZUCUj6yw6g1yZImaHu5Gn4Gdok0iDmrrmXInavQ/edit",
+          "type": "Manipulatoren"
+        },
+        "wiggles_-_gonoodle/coursea/2023": {
+          "name": "Wiggles - GoNoodle",
+          "url": "https://app.gonoodle.com/channels/brainercise-with-mr-catman/shoulder-rock-n-roll",
+          "type": "Video"
+        },
+        "debugging_with_the_step_button/coursea/2023": {
+          "name": "Debuggen mit der Schritttaste",
+          "url": "https://videos.code.org/csf/debugging-k1-blocks.mp4",
+          "type": "Video"
+        },
+        "feeling_faces_emotion_image/coursea/2023": {
+          "name": "Gefühlsgesichter – Gefühlsbild",
+          "url": "https://docs.google.com/document/d/1qdt7Y-wVkqFas_TkNO4iITz2K-LEmEVWDWLM50NNAOs/edit",
+          "type": "Ressource"
+        },
+        "feeling_faces_-_emotion_image_1/coursea/2023": {
+          "name": "Gefühlsgesichter - Gefühlsbild",
+          "url": "https://docs.google.com/document/d/1qdt7Y-wVkqFas_TkNO4iITz2K-LEmEVWDWLM50NNAOs/edit",
+          "type": "Ressource"
+        },
+        "happy_map_cards_xl/coursea/2023": {
+          "name": "Happy Map Karten XL",
+          "url": "https://docs.google.com/document/d/1ohSi_DzymdRdN66NVMAI-KI6LuaB3srbUMnpG74aPM8/edit",
+          "type": "Arbeitsblatt"
+        },
+        "happy_map_game_pieces_bonus_pack/coursea/2023": {
+          "name": "Happy Map Spielfiguren Bonus Pack",
+          "url": "https://docs.google.com/document/d/14qEVzSR7pr0slqkRn2WM8XxVyeDhdmfhtsmTrERCTNs/edit",
+          "type": "Manipulatoren"
+        },
+        "feeling_faces/coursea/2023": {
+          "name": "Gefühlsgesichter",
+          "url": "https://docs.google.com/document/d/1qdt7Y-wVkqFas_TkNO4iITz2K-LEmEVWDWLM50NNAOs/",
+          "type": "Emotionale Bilder"
+        },
+        "pair-programming/coursea/2023": {
+          "name": "Paar-Programmierung",
+          "url": "https://www.youtube.com/watch?v=vgkahOzFH2Q",
+          "type": "Video"
+        },
+        "csf_lesson_recommendations/coursea/2023": {
+          "name": "CSF-Lehr-Empfehlungen",
+          "url": "https://docs.google.com/document/d/1N3aiitOxz_cut1AQn90g1nYJouKT5dC_4m1M0KFNzP8/edit?usp=sharing",
+          "type": "Ressource"
+        },
+        "pause_and_think_online/coursea/2023": {
+          "name": "Online innehalten und nachdenken",
+          "url": "https://www.youtube.com/watch?v=rgbZAWnOWOo",
+          "type": "Video"
+        },
+        "the_big_event/coursea/2023": {
+          "name": "Der große Event",
+          "url": "https://youtu.be/u0WV9shCoak",
+          "type": "Unplugged-Video"
+        },
+        "the_big_event_1/coursea/2023": {
+          "name": "Der große Event",
+          "url": "https://docs.google.com/document/d/1lzVlB8JzpMLLGVumwVL8ybsBX42eFCSSucrZ19-N9Tw/edit",
+          "type": "Prüfung"
+        },
+        "the_big_event_2/coursea/2023": {
+          "name": "Der große Event",
+          "url": "https://docs.google.com/document/d/1VU2rC918ZY6DM2hunN6FsiDUW6Q1vEqyiJAPWQ6aoX8/edit",
+          "type": "Bewertung Antwortschlüssel"
+        },
+        "the_big_event_courses_a_b_/coursea/2023": {
+          "name": "Das große Ereignis (Kurse A, B)",
+          "url": "https://docs.google.com/document/d/1A9yAObCTJwHsIKtaBZY8KaGwgbxbfolpbIpeJfZRgvs/edit",
+          "type": "Controller Bild"
+        },
+        "cs_fundamentals_main_activity_tips/coursea/2023": {
+          "name": "CS-Grundlagen Haupttätigkeit Tipps",
+          "url": "https://docs.google.com/document/d/1N3aiitOxz_cut1AQn90g1nYJouKT5dC_4m1M0KFNzP8/edit?usp=sharing"
+        },
+        "artist_project_planning_guide/coursea/2023": {
+          "name": "Leitfaden zur Planung von Künstlerprojekten",
+          "url": "https://docs.google.com/document/d/16jZwjsALk--UIsqN0i35odey5dei1-uHGCTl8x23B2M/template/preview",
+          "type": "Handout"
+        },
+        "artist_project_planning_guide_1/coursea/2023": {
+          "name": "Leitfaden zur Planung von Künstlerprojekten",
+          "url": "https://docs.google.com/document/d/13AiHjPrDE3DFnwH3qKnty6M3PbHsZcd-0YoZz4ZmC3E/template/preview",
+          "type": "Antwortschlüssel"
+        },
+        "all_resources/courseb/2023": {
+          "url": "/s/courseb-2023/ressourcen"
+        },
+        "all_standards/courseb/2023": {
+          "url": "/s/courseb-2023/standards"
+        },
+        "all_vocabulary/courseb/2023": {
+          "url": "/s/courseb-2023/vocab"
+        },
+        "common_core_and_ngss_guidance/courseb/2023": {
+          "name": "Standards- und NGSS-Leitfaden",
+          "url": "https://docs.google.com/document/d/1SqD3MaRbGIONGs5bcL1YhHUFK92ZXFIufypr6UC8XYA/preview#heading=h.rar8dpsqsjqe",
+          "type": "Ressource"
+        },
+        "cross-curricular_extension_activities/courseb/2023": {
+          "name": "Fächerübergreifende Erweiterungsaktivitäten",
+          "url": "https://docs.google.com/document/d/1MRlHy_3VgLXKZwjeB0VmI8HWuPvupZODsslPnA7KYAY/preview",
+          "type": "Ressource"
+        },
+        "debugging_guide/courseb/2023": {
+          "name": "Fehlerbehungsleitfaden",
+          "url": "https://docs.google.com/document/d/1_UFVNtS0_f7aH79WtSEAR0niLy-KPwX1xNiXllOBviE/preview",
+          "type": "Ressource"
+        },
+        "implementation_guide/courseb/2023": {
+          "name": "Einführungsleitfaden",
+          "url": "https://docs.google.com/document/d/1I04szlSMuDlFLH_pidEC-huk_-t6ig09pBSyMv1Z3pw/preview",
+          "type": "Ressource"
+        },
+        "lesson_type_guide/courseb/2023": {
+          "name": "Stundentypen-Leitfaden",
+          "url": "https://docs.google.com/document/d/1Z28A1yF6BZu3lIlVvvHo5UqBpyuc1hX8YVjIt3fwmY4/view",
+          "type": "Ressource"
+        },
+        "teacher_forum/courseb/2023": {
+          "name": "Lehrer Forum",
+          "url": "https://forum.code.org/c/csf/",
+          "type": "Ressource"
+        },
+        "csf_course_syllabus/courseb/2023": {
+          "name": "CSF-Kursplan",
+          "url": "https://docs.google.com/document/d/1mGTa71uFIOvLuwcbo_7XIutZIuJKGlbl0KlRqgibs2U/edit?usp=drive_link",
+          "type": "Ressource"
+        },
+        "teaching_and_learning_strategies/courseb/2023": {
+          "name": "Lehr- und Lernstrategien",
+          "url": "https://docs.google.com/document/d/1khllUBI1xpSrUmwWwa2J35GaKVV8bb3bQb_5Vc_ty54/preview",
+          "type": "Ressource"
+        },
+        "values_and_philosophy_1/courseb/2023": {
+          "name": "Werte und Philosophie",
+          "url": "https://docs.google.com/document/d/1_56iN0iyFzPSsuj5-W7-SI6E7A8z9BTpL3qu4fDMkKk/preview"
+        },
+        "digital_trails_animal_tracks/courseb/2023": {
+          "name": "Digitale Spuren: Tierspuren",
+          "url": "https://docs.google.com/document/d/1WLUpUXDh1503PwlnJ06DqWr6KaiX7E8KOpDJjrCkLzM/",
+          "type": "Handout für Studenten"
+        },
+        "digital_trails_digital_trail_squares/courseb/2023": {
+          "name": "Digitale Spuren: Digitale Spurenquadrate",
+          "url": "https://docs.google.com/document/d/1Ild_AQ98V1kXXvc-ncnC1cTNnIQrZUG_QS-ZiEi4EY8/edit",
+          "type": "Handout für Studenten"
+        },
+        "digital_trails_follow_the_digital_trail/courseb/2023": {
+          "name": "Digitale Trails: Folgen Sie der digitalen Spur",
+          "url": "https://www.commonsense.org/education/videos/follow-the-digital-trail",
+          "type": "Video zur Lektion"
+        },
+        "digital_trails_lesson_slides/courseb/2023": {
+          "name": "Digitale Trails: Unterrichtsfolien",
+          "url": "https://docs.google.com/presentation/d/1jNMWXhnNjlqK44LQ_bpAtmDmdHPeYqJeVBwegi5BnM4/edit"
+        },
+        "csf_course_b_lesson_slides/courseb/2023": {
+          "type": "Folien"
+        },
+        "feeling_faces_emotion_image/courseb/2023": {
+          "name": "Gefühlsgesichter – Gefühlsbild",
+          "url": "https://docs.google.com/document/d/1qdt7Y-wVkqFas_TkNO4iITz2K-LEmEVWDWLM50NNAOs/edit",
+          "type": "Ressource"
+        },
+        "move_it_move_it/courseb/2023": {
+          "name": "Bewegung, Bewegung",
+          "url": "https://docs.google.com/document/d/1xavPzpNq1GO7zzOzreES0Kl8FPcbjILFzfmORUqttcg/edit",
+          "type": "Aktivitätenkarte"
+        },
+        "move_it_move_it_1/courseb/2023": {
+          "name": "Bewegung, Bewegung",
+          "url": "https://docs.google.com/document/d/1eOrX6kpPKLzUD3GpvGy9XxupnMZJrtaeh2bfe0zOz64/edit",
+          "type": "Arbeitsblatt"
+        },
+        "move_it_move_it_2/courseb/2023": {
+          "name": "Bewegung, Bewegung",
+          "url": "https://docs.google.com/document/d/1bdGOgeZ9Z4MS_yxBLt-Mit2Rhr4rCNWL7HC-i1Qmpi4/edit",
+          "type": "Arbeitsblatt Antwortschlüssel"
+        },
+        "move_it_move_it_3/courseb/2023": {
+          "name": "Achtung, fertig, LOS",
+          "url": "http://youtu.be/aV4rqNUG-Jw?list=PL2DhNKNdmOtqBgWyF5kmy2oPh0U-Zfv2G",
+          "type": "Video für Lehrkräfte"
+        },
+        "20_20_20_rule/courseb/2023": {
+          "name": "20/20/20-Regel",
+          "url": "http://www.anthro.com/blog/2013/10/how-to-prevent-eye-strain-with-the-20-20-20-rule#.WOU39BLyu35",
+          "type": "Ressource"
+        },
+        "drag_and_drop_practice/courseb/2023": {
+          "name": "Ziehen und Ablegen üben",
+          "url": "https://studio.code.org/s/jigsaw"
+        },
+        "feeling_faces/courseb/2023": {
+          "name": "Gefühlsgesichter",
+          "url": "https://docs.google.com/document/d/1qdt7Y-wVkqFas_TkNO4iITz2K-LEmEVWDWLM50NNAOs/",
+          "type": "Emotionale Bilder"
+        },
+        "how_to_make_a_class_section_on_code_org/courseb/2023": {
+          "name": "Erstellen eines Klassenabschnitt auf Code.org"
+        },
+        "pair_programming/courseb/2023": {
+          "name": "Paarprogrammierung",
+          "url": "https://www.youtube.com/watch?v=vgkahOzFH2Q",
+          "type": "Studenten-Video"
+        },
+        "unplugged_blockly_blocks_grades_k-1_/courseb/2023": {
+          "name": "Blockly Blocks ohne Computer (Klasse 1)",
+          "url": "https://docs.google.com/presentation/d/1PoSQZUCUj6yw6g1yZImaHu5Gn4Gdok0iDmrrmXInavQ/edit",
+          "type": "Manipulatoren"
+        },
+        "wiggles_-_gonoodle/courseb/2023": {
+          "name": "Wiggles - GoNoodle",
+          "url": "https://app.gonoodle.com/channels/brainercise-with-mr-catman/shoulder-rock-n-roll",
+          "type": "Video"
+        },
+        "compass_rose/courseb/2023": {
+          "name": "Kompassrose",
+          "url": "https://docs.google.com/document/d/1ah3Alc68karxsADBVpCQkzlFAmqO6aTO9QUpZiIQ7BE/edit",
+          "type": "Handout"
+        },
+        "feeling_faces_-_emotion_image/courseb/2023": {
+          "name": "Gefühlsgesichter - Gefühlsbild",
+          "url": "https://docs.google.com/document/d/1qdt7Y-wVkqFas_TkNO4iITz2K-LEmEVWDWLM50NNAOs/edit",
+          "type": "Ressource"
+        },
+        "happy_map_game_pieces/courseb/2023": {
+          "name": "Fröhliche Karten - Spielfiguren",
+          "url": "https://docs.google.com/document/d/19dHJCfmQNs3meKN3sTL91qsfmHYjZCYfbFq91J4fj3k/edit",
+          "type": "Manipulatoren"
+        },
+        "stevie_and_the_big_project/courseb/2023": {
+          "name": "Stevie und das große Projekt",
+          "url": "https://drive.google.com/file/d/0B-uvt08wYSQqTUFzaGxKSk45QkU/view",
+          "type": "Ressource"
+        },
+        "unspotted_bugs/courseb/2023": {
+          "name": "Unentdeckte Bugs",
+          "url": "https://youtu.be/rah3DYlp5nQ",
+          "type": "Video"
+        },
+        "getting_loopy/courseb/2023": {
+          "name": "Schöne Schleifen",
+          "url": "https://youtu.be/JoKTqHCni0M",
+          "type": "Unplugged-Video"
+        },
+        "getting_loopy_1/courseb/2023": {
+          "name": "Schöne Schleifen",
+          "url": "https://docs.google.com/document/d/1SwYDo6fwkEZRRGogPozWBXCLLncddDS5dLNFgRDe6VQ/edit",
+          "type": "Arbeitsblatt"
+        },
+        "getting_loopy_2/courseb/2023": {
+          "name": "Schöne Schleifen",
+          "url": "https://docs.google.com/document/d/1MG-vF7zU-abEPZ60bVcK4RhwZ4vfuknBfUkm-4tvoX8/edit",
+          "type": "Prüfung"
+        },
+        "getting_loopy_3/courseb/2023": {
+          "name": "Schöne Schleifen",
+          "url": "https://docs.google.com/document/d/15YLSUX5TT6P9nRKW4tA0f9weEe0Qs4wV5Ylu08wzXFs/edit",
+          "type": "Bewertung Antwortschlüssel"
+        },
+        "cs_fundamentals_main_activity_tips/courseb/2023": {
+          "name": "CS-Grundlagen Haupttätigkeit Tipps",
+          "url": "https://docs.google.com/document/d/1N3aiitOxz_cut1AQn90g1nYJouKT5dC_4m1M0KFNzP8/edit?usp=sharing",
+          "type": "Empfehlungen für den Unterricht"
+        },
+        "pause_and_think_online/courseb/2023": {
+          "name": "Online innehalten und nachdenken",
+          "url": "https://www.youtube.com/watch?v=rgbZAWnOWOo",
+          "type": "Video"
+        },
+        "the_right_app_scenarios/courseb/2023": {
+          "name": "Die richtigen App-Szenarien",
+          "url": "https://docs.google.com/presentation/d/1WzO71WwSTbn2XhkWjG3tvD7vnQbsCSb58rhSBpurQjw/edit#slide=id.g45fb8e6318_0_0"
+        },
+        "the_big_event/courseb/2023": {
+          "name": "Der große Event",
+          "url": "https://www.youtube.com/watch?v=XoApWo-IrI4"
+        },
+        "the_big_event_1/courseb/2023": {
+          "name": "Der große Event",
+          "url": "https://docs.google.com/document/d/1lzVlB8JzpMLLGVumwVL8ybsBX42eFCSSucrZ19-N9Tw/edit",
+          "type": "Prüfung"
+        },
+        "the_big_event_2/courseb/2023": {
+          "name": "Der große Event",
+          "url": "https://docs.google.com/document/d/1VU2rC918ZY6DM2hunN6FsiDUW6Q1vEqyiJAPWQ6aoX8/edit",
+          "type": "Bewertung Antwortschlüssel"
+        },
+        "the_big_event_courses_a_b_/courseb/2023": {
+          "name": "Das große Ereignis (Kurse A, B)",
+          "url": "https://docs.google.com/document/d/1A9yAObCTJwHsIKtaBZY8KaGwgbxbfolpbIpeJfZRgvs/edit",
+          "type": "Controller Bild"
+        },
+        "play_lab_project_planning_guide/courseb/2023": {
+          "name": "Play Lab Projektplanungsleitfaden",
+          "url": "https://docs.google.com/document/d/1XiBMkmdQtaCYcaQsGnoY32tGimfiGgBEwenuAadEqT8/template/preview",
+          "type": "Handout"
+        },
+        "play_lab_project_planning_guide_1/courseb/2023": {
+          "name": "Play Lab Projektplanungsleitfaden",
+          "url": "https://docs.google.com/document/d/1CK-fZ7le7tv6mIR9hZ8MHmaSSkI2uFfyH3W_DFfew2c/template/preview",
+          "type": "Antwortschlüssel"
+        },
+        "all_resources/coursec/2023": {
+          "url": "/s/coursec-2023/ressourcen"
+        },
+        "all_standards/coursec/2023": {
+          "url": "/s/coursec-2023/standards"
+        },
+        "all_vocabulary/coursec/2023": {
+          "url": "/s/coursec-2023/vocab"
+        },
+        "common_core_and_ngss_guidance/coursec/2023": {
+          "name": "Standards- und NGSS-Leitfaden",
+          "url": "https://docs.google.com/document/d/1SqD3MaRbGIONGs5bcL1YhHUFK92ZXFIufypr6UC8XYA/preview#heading=h.a5iytir4b96q",
+          "type": "Ressource"
+        },
+        "cross-curricular_extension_activities/coursec/2023": {
+          "name": "Fächerübergreifende Erweiterungsaktivitäten",
+          "url": "https://docs.google.com/document/d/1MRlHy_3VgLXKZwjeB0VmI8HWuPvupZODsslPnA7KYAY/preview",
+          "type": "Ressource"
+        },
+        "debugging_guide_1/coursec/2023": {
+          "name": "Fehlerbehungsleitfaden",
+          "url": "https://docs.google.com/document/d/1_UFVNtS0_f7aH79WtSEAR0niLy-KPwX1xNiXllOBviE/preview",
+          "type": "Ressource"
+        },
+        "extension_lessons_with_the_micro_bit/coursec/2023": {
+          "type": "Ressource"
+        },
+        "implementation_guide/coursec/2023": {
+          "name": "Einführungsleitfaden",
+          "url": "https://docs.google.com/document/d/1I04szlSMuDlFLH_pidEC-huk_-t6ig09pBSyMv1Z3pw/preview",
+          "type": "Ressource"
+        },
+        "lesson_type_guide/coursec/2023": {
+          "name": "Stundentypen-Leitfaden",
+          "url": "https://docs.google.com/document/d/1Z28A1yF6BZu3lIlVvvHo5UqBpyuc1hX8YVjIt3fwmY4/view",
+          "type": "Ressource"
+        },
+        "teacher_forum/coursec/2023": {
+          "name": "Lehrer Forum",
+          "url": "https://forum.code.org/c/csf/",
+          "type": "Ressource"
+        },
+        "csf_course_syllabus/coursec/2023": {
+          "name": "CSF-Kursplan",
+          "url": "https://docs.google.com/document/d/1mGTa71uFIOvLuwcbo_7XIutZIuJKGlbl0KlRqgibs2U/edit?usp=drive_link",
+          "type": "Ressource"
+        },
+        "teaching_and_learning_strategies/coursec/2023": {
+          "name": "Lehr- und Lernstrategien",
+          "url": "https://docs.google.com/document/d/1khllUBI1xpSrUmwWwa2J35GaKVV8bb3bQb_5Vc_ty54/preview",
+          "type": "Ressource"
+        },
+        "values_and_philosophy/coursec/2023": {
+          "name": "Werte und Philosophie",
+          "url": "https://docs.google.com/document/d/1_56iN0iyFzPSsuj5-W7-SI6E7A8z9BTpL3qu4fDMkKk/preview",
+          "type": "Ressource"
+        },
+        "putting_a_stop_to_online_meanness_lesson_slides/coursec/2023": {
+          "name": "Der Online-Frechheit ein STOPP setzen: Lektionsfolien",
+          "url": "https://docs.google.com/presentation/d/1IXZ_WSxUuenF42ZzWk5pXTD8-Yy8P4nV2ihHd5-FotY/edit"
+        },
+        "putting_a_stop_to_online_meanness_stop_online_meanness/coursec/2023": {
+          "name": "STOPP der Online-Feindseligkeit: STOPP Online Fiesheiten",
+          "url": "https://docs.google.com/document/d/1gXXWbEocNfvw4fWdo7nQJ0r2FjoNeyElr8IcANUqLlo/edit?usp=sharing",
+          "type": "Handout für Studenten"
+        },
+        "csf_-_course_c_-_slides_2022-2023/coursec/2023": {
+          "type": "Folien"
+        },
+        "my_robotic_friends/coursec/2023": {
+          "name": "Meine Roboterfreunde",
+          "url": "https://docs.google.com/document/d/1jGz8znfkzhgZ3RNd7Kg1AnDZ2LZ7vjf7VujzPz_84b4/edit",
+          "type": "Abstand zwischen den Schalen"
+        },
+        "my_robotic_friends_1/coursec/2023": {
+          "name": "Meine Roboterfreunde",
+          "url": "https://docs.google.com/document/d/1D8W0FETv5OBGj-Fl8gJGHruSvbAhoEtCs6SZxSkKOSc/edit",
+          "type": "Symbol-Schlüssel"
+        },
+        "my_robotic_friends_2/coursec/2023": {
+          "name": "Meine Roboterfreunde",
+          "url": "https://youtu.be/xaW3PAzHxCU",
+          "type": "Unplugged-Video"
+        },
+        "my_robotic_friends_3/coursec/2023": {
+          "name": "Meine Roboterfreunde",
+          "url": "https://docs.google.com/document/d/1cq6CvIuCrpS9MfRySO1070uXZ238OuXcqou1mfjV7BM/edit",
+          "type": "Ideen zum Stapeln von Tassen"
+        },
+        "my_robotic_friends_4/coursec/2023": {
+          "name": "Meine Roboterfreunde",
+          "url": "https://docs.google.com/document/d/1go_BJorY8OzmqWyB5z8_FY7bbPCWg1ZBxfjewU0nMmA/edit",
+          "type": "Papier Trapez Vorlage"
+        },
+        "maze_bridging_page/coursec/2023": {
+          "name": "Labyrinth Überbrückung Seite",
+          "url": "https://drive.google.com/file/d/19Ul9ruPQ6bHr3sfqnacMMmCGOekTXPYS/view"
+        },
+        "unplugged_maze_blocks/coursec/2023": {
+          "name": "Unplugged Labyrinth-Blöcke",
+          "url": "https://docs.google.com/presentation/d/1k_7SSLsm-E4aisa9-LmbsCVzH6J-8yGD9T2LwPb2v48/edit",
+          "type": "Manipulatoren"
+        },
+        "cs_fundamentals_main_activity_tips/coursec/2023": {
+          "name": "CS-Grundlagen Haupttätigkeit Tipps",
+          "url": "https://docs.google.com/document/d/1N3aiitOxz_cut1AQn90g1nYJouKT5dC_4m1M0KFNzP8/edit?usp=sharing",
+          "type": "Empfehlungen für den Unterricht"
+        },
+        "debugging_guide/coursec/2023": {
+          "name": "Fehlerbehungsleitfaden",
+          "url": "https://docs.google.com/document/d/1z2FgBWwUq6vxwWbnbiQC0EaEKxwgAqBdtTZzVi98xHA",
+          "type": "Ressource"
+        },
+        "pair_programming/coursec/2023": {
+          "name": "Paarprogrammierung",
+          "url": "https://www.youtube.com/watch?v=vgkahOzFH2Q",
+          "type": "Video"
+        },
+        "unplugged_blocks_courses_c-f_/coursec/2023": {
+          "name": "Unplugged-Blöcke (Kurse C-F)",
+          "url": "https://docs.google.com/document/d/1cRPELQ28TZMJhc68-eYP1D26Uqzcyfx4RDYuThZJGLo/edit",
+          "type": "Manipulatoren"
+        },
+        "artist_introduction/coursec/2023": {
+          "name": "Einführung in Artist",
+          "url": "https://www.youtube.com/watch?v=MUavAHn-QUg",
+          "type": "Studenten-Video"
+        },
+        "turns_angles/coursec/2023": {
+          "name": "Turns & Angles (Kurven und Winkel)",
+          "url": "https://www.youtube.com/watch?v=sPKXZBL_Yvs",
+          "type": "Studenten-Video"
+        },
+        "turns_angles_1/coursec/2023": {
+          "name": "Turns & Angles (Kurven und Winkel)",
+          "url": "https://docs.google.com/document/d/1JDeb07W7myaLu7Wjd-fPM8whSaO8aw37m9SJ_7B4Su4/edit",
+          "type": "Handout für Studenten"
+        },
+        "the_big_event/coursec/2023": {
+          "name": "Der große Event",
+          "url": "https://youtu.be/u0WV9shCoak",
+          "type": "Unplugged-Video"
+        },
+        "the_big_event_1/coursec/2023": {
+          "name": "Der große Event",
+          "url": "https://docs.google.com/document/d/1lzVlB8JzpMLLGVumwVL8ybsBX42eFCSSucrZ19-N9Tw/edit",
+          "type": "Prüfung"
+        },
+        "the_big_event_2/coursec/2023": {
+          "name": "Der große Event",
+          "url": "https://docs.google.com/document/d/1VU2rC918ZY6DM2hunN6FsiDUW6Q1vEqyiJAPWQ6aoX8/edit",
+          "type": "Bewertung Antwortschlüssel"
+        },
+        "the_big_event_course_c_/coursec/2023": {
+          "name": "Das große Ereignis (Kurs C)",
+          "url": "https://docs.google.com/document/d/1WlrJ6FKqrcvuyDWADnJiGpOo7rfolKcT5QH4W4uEptQ/edit",
+          "type": "Ereignis-Controller"
+        },
+        "open-ended_programming_levels/coursec/2023": {
+          "name": "Open-ended Programming Levels",
+          "type": "Antwortschlüssel"
+        },
+        "pause_and_think_online/coursec/2023": {
+          "name": "Online innehalten und nachdenken",
+          "url": "https://www.youtube.com/watch?v=rgbZAWnOWOo",
+          "type": "Video"
+        },
+        "sample_level_solutions/coursec/2023": {
+          "name": "Offene Programmierungsebenen",
+          "url": "https://docs.google.com/document/d/1cJ_FIgqGEt1OikBc53bEJGhFFOLrppJ2pRWAw-bmV0k/view",
+          "type": "Antwortschlüssel"
+        },
+        "open-ended_programming_levels_1/coursec/2023": {
+          "name": "Open-ended Programming Levels",
+          "url": "https://docs.google.com/document/d/14WiSwDT88XDVVoUn5tuFDI0muLj4FUYN_NqcOCXIAp4/view",
+          "type": "Antwortschlüssel"
+        },
+        "graphing_data_from_play_lab/coursec/2023": {
+          "name": "Daten aus dem Play Lab grafisch darstellen",
+          "url": "https://docs.google.com/document/d/177NVkzjc--XVvd5jssO5TZolUTzz9SD5pAw1DazflQ8/edit#heading=h.v577cjs0yrx5",
+          "type": "Arbeitsblatt"
+        },
+        "binary_bracelets/coursec/2023": {
+          "name": "Binäre Armbänder",
+          "url": "https://youtu.be/3S2YfoO4_CM",
+          "type": "Unplugged-Video"
+        },
+        "binary_bracelets_1/coursec/2023": {
+          "name": "Binäre Armbänder",
+          "url": "https://www.youtube.com/watch?v=fDLkBqZpxWQ",
+          "type": "Lektion in Aktion Video"
+        },
+        "binary_bracelets_2/coursec/2023": {
+          "name": "Binäre Armbänder",
+          "url": "https://docs.google.com/document/d/1YV1Oer_1DMzilyHriimgPVZnaC6JUjU5YDE8Ui065hE/edit",
+          "type": "Arbeitsblatt"
+        },
+        "binary_bracelets_3/coursec/2023": {
+          "name": "Binäre Armbänder",
+          "url": "https://docs.google.com/document/d/14Huy1clX_WgDnQQFugnF5fwoF6POWRZ-8skc1Eyr4bU/edit",
+          "type": "Prüfung"
+        },
+        "binary_bracelets_4/coursec/2023": {
+          "name": "Binäre Armbänder",
+          "url": "https://docs.google.com/document/d/1EaTbrdNbGpY_mI-FfV0GZ2uHSfcQIGuAkXqd1qFkUbE/edit",
+          "type": "Bewertung Antwortschlüssel"
+        },
+        "bits_versus_bytes/coursec/2023": {
+          "name": "Bits vs. Bytes",
+          "url": "https://www.youtube.com/watch?v=35vkaO_SgzI&feature=youtu.be",
+          "type": "Studenten-Video"
+        },
+        "play_lab_project_planning_guide/coursec/2023": {
+          "name": "Play Lab Projektplanungsleitfaden",
+          "url": "https://docs.google.com/document/d/1qT5Zz1Pec5wuvLSTRfSMJSW5r1LjmWKqoK75Lz1ZYTs/edit",
+          "type": "Arbeitsblatt"
+        },
+        "play_lab_project_planning_guide_exemplar_/coursec/2023": {
+          "name": "Play Lab Projektplanungsleitfaden (Beispiel)",
+          "url": "https://docs.google.com/document/d/1CKzMi1JfhUpwfu8JMllUvKwlgJZaw7RQ6pLp6fu0H_I/edit?usp=sharing",
+          "type": "Lektion Ressource"
+        },
+        "all_resources/coursed/2023": {
+          "url": "/s/coursed-2023/ressourcen"
+        },
+        "all_standards/coursed/2023": {
+          "url": "/s/coursed-2023/standards"
+        },
+        "all_vocabulary/coursed/2023": {
+          "url": "/s/coursed-2023/vokabular"
+        },
+        "common_core_and_ngss_guidance/coursed/2023": {
+          "name": "Standards- und NGSS-Leitfaden",
+          "url": "https://docs.google.com/document/d/1SqD3MaRbGIONGs5bcL1YhHUFK92ZXFIufypr6UC8XYA/preview#heading=h.sw3rfp1nfbrp",
+          "type": "Ressource"
+        },
+        "cross-curricular_extension_activities/coursed/2023": {
+          "name": "Fächerübergreifende Erweiterungsaktivitäten",
+          "url": "https://docs.google.com/document/d/1MRlHy_3VgLXKZwjeB0VmI8HWuPvupZODsslPnA7KYAY/preview",
+          "type": "Ressource"
+        },
+        "debugging_guide/coursed/2023": {
+          "name": "Fehlerbehungsleitfaden",
+          "url": "https://docs.google.com/document/d/1_UFVNtS0_f7aH79WtSEAR0niLy-KPwX1xNiXllOBviE/preview",
+          "type": "Ressource"
+        },
+        "extension_lessons_with_the_micro_bit/coursed/2023": {
+          "type": "Ressource"
+        },
+        "implementation_guide/coursed/2023": {
+          "name": "Einführungsleitfaden",
+          "url": "https://docs.google.com/document/d/1I04szlSMuDlFLH_pidEC-huk_-t6ig09pBSyMv1Z3pw/preview",
+          "type": "Ressource"
+        },
+        "lesson_type_guide/coursed/2023": {
+          "name": "Stundentypen-Leitfaden",
+          "url": "https://docs.google.com/document/d/1Z28A1yF6BZu3lIlVvvHo5UqBpyuc1hX8YVjIt3fwmY4/view",
+          "type": "Ressource"
+        },
+        "teacher_forum/coursed/2023": {
+          "name": "Lehrer Forum",
+          "url": "https://forum.code.org/c/csf/",
+          "type": "Ressource"
+        },
+        "csf_course_syllabus/coursed/2023": {
+          "name": "CSF-Kursplan",
+          "url": "https://docs.google.com/document/d/1mGTa71uFIOvLuwcbo_7XIutZIuJKGlbl0KlRqgibs2U/edit?usp=drive_link",
+          "type": "Ressource"
+        },
+        "teaching_and_learning_strategies/coursed/2023": {
+          "name": "Lehr- und Lernstrategien",
+          "url": "https://docs.google.com/document/d/1khllUBI1xpSrUmwWwa2J35GaKVV8bb3bQb_5Vc_ty54/preview",
+          "type": "Ressource"
+        },
+        "values_and_philosophy/coursed/2023": {
+          "name": "Werte und Philosophie",
+          "url": "https://docs.google.com/document/d/1_56iN0iyFzPSsuj5-W7-SI6E7A8z9BTpL3qu4fDMkKk/preview",
+          "type": "Ressource"
+        },
+        "password_power-up_if_then_scenarios/coursed/2023": {
+          "name": "Passwort Power-Up: Wenn...dann...Szenarien",
+          "url": "https://docs.google.com/document/d/1JeZtFU6hMFTYITAAPaA_CRmOVknvkcKZQszL6u7DRG4/edit",
+          "type": "Handout"
+        },
+        "password_power-up_if_then_scenarios_1/coursed/2023": {
+          "name": "Passwort Power-Up: Wenn...dann...Szenarien",
+          "url": "https://docs.google.com/document/d/1yrL1rD9eCSEYAvsM8XiL5g-uKpqizYwAk73_6ddZOAQ/edit",
+          "type": "Antwortschlüssel"
+        },
+        "password_power-up_lesson_quiz/coursed/2023": {
+          "name": "Passwort Power-Up: Lektions-Quiz",
+          "url": "https://docs.google.com/forms/d/1OBS37DZUmIxM4ZciCD6qWFMam3_u8djgZNJd9IOK6Zs/copy",
+          "type": "Ressource"
+        },
+        "password_power-up_lesson_quiz_1/coursed/2023": {
+          "name": "Passwort Power-Up: Lektions-Quiz",
+          "url": "https://www.commonsense.org/education/digital-citizenship/quiz/password-power-up-lesson-quiz",
+          "type": "Antwortschlüssel"
+        },
+        "password_power-up_lesson_slides/coursed/2023": {
+          "name": "Passwort Power-Up: Lektionsfolien",
+          "url": "https://docs.google.com/presentation/d/1Pspz89jagbsbDvxndX0ULUKA9PikWMR3zpTSn8Cdjec/edit",
+          "type": "Folien"
+        },
+        "password_power-up_power-up_your_password/coursed/2023": {
+          "name": "Passwort Power-Up: Ihr Passwort einschalten",
+          "url": "https://docs.google.com/document/d/1ihf7K4Kjupe3C0wrzzgUa-a9paNserfCfMAS2oj7178/edit",
+          "type": "Handout"
+        },
+        "password_power-up_power-up_your_password_1/coursed/2023": {
+          "name": "Passwort Power-Up: Ihr Passwort einschalten",
+          "url": "https://docs.google.com/document/d/1xxq5HBQZ5HQy6u5O5823HTjerEuxiOc9ueCiDEyUQo8/edit",
+          "type": "Antwortschlüssel"
+        },
+        "csf_-_course_d_-_slides_2022-2023/coursed/2023": {
+          "type": "Folien"
+        },
+        "graph_paper_programming/coursed/2023": {
+          "name": "Programmieren auf Millimeterpapier",
+          "url": "https://docs.google.com/document/d/1GTB6aTZoQWvkMvx2SWhKerhL8DhevgWlsaetmm5Vpfs/edit?usp=sharing",
+          "type": "Arbeitsblatt Aktivität"
+        },
+        "graph_paper_programming_1/coursed/2023": {
+          "name": "Programmieren auf Millimeterpapier",
+          "url": "https://youtu.be/Y_paSrH2ffw",
+          "type": "Unplugged-Video"
+        },
+        "graph_paper_programming_2/coursed/2023": {
+          "name": "Programmieren auf Millimeterpapier",
+          "url": "https://www.youtube.com/watch?v=vBUtejDNvrs",
+          "type": "Lektion in Aktion Video"
+        },
+        "graph_paper_programming_3/coursed/2023": {
+          "name": "Programmieren auf Millimeterpapier",
+          "url": "https://docs.google.com/document/d/1Nt1vX-8Q-xy7tNyTRElaDFvdVXfpC5e28NbrPreVfPQ/edit",
+          "type": "Arbeitsblatt Antwortschlüssel"
+        },
+        "graph_paper_programming_4/coursed/2023": {
+          "name": "Programmieren auf Millimeterpapier",
+          "url": "https://docs.google.com/document/d/1uXNP-9nYnLOeAkh_E8UFzl9Rrpy0rwjVAQVamgdd6XQ/edit",
+          "type": "Prüfung"
+        },
+        "graph_paper_programming_5/coursed/2023": {
+          "name": "Programmieren auf Millimeterpapier",
+          "url": "https://docs.google.com/document/d/1GXFjDtRjaK8mTnFGb33kT-u72_rXfUh_TyfP7N7Pen4/edit",
+          "type": "Bewertung Antwortschlüssel"
+        },
+        "pair_programming/coursed/2023": {
+          "name": "Paarprogrammierung",
+          "url": "https://www.youtube.com/watch?v=vgkahOzFH2Q",
+          "type": "Studenten-Video"
+        },
+        "relay_programming/coursed/2023": {
+          "name": "Relais-Programmierung",
+          "url": "https://docs.google.com/document/d/1nneTPNTpboCBMYCr2qpK8DcHSZD6lDi0ovkqkdRDeSc/edit",
+          "type": "Arbeitsblatt Antwortschlüssel"
+        },
+        "relay_programming_1/coursed/2023": {
+          "name": "Relais-Programmierung",
+          "url": "https://docs.google.com/document/d/1az8K9tDW0XcU2mvQ_1D7CXpZbq7aq5T-x0RiemGlv5s/edit",
+          "type": "Arbeitsblatt"
+        },
+        "relay_programming_2/coursed/2023": {
+          "name": "Relais-Programmierung",
+          "url": "https://docs.google.com/document/d/1UyiAK9sxuMP3AWjbP0TlsMahNa98LxJwyGWKhcdYpig/edit",
+          "type": "Lehrer-Debugging-Bild"
+        },
+        "relay_programming_3/coursed/2023": {
+          "name": "Relais-Programmierung",
+          "url": "https://youtu.be/l5MKkXbzOsk",
+          "type": "Unplugged-Video"
+        },
+        "relay_programming_4/coursed/2023": {
+          "name": "Relais-Programmierung",
+          "url": "https://youtu.be/ZULpfAVJOBo",
+          "type": "Video für Lehrkräfte"
+        },
+        "relay_programming_5/coursed/2023": {
+          "name": "Relais-Programmierung",
+          "url": "https://docs.google.com/document/d/1O7nVu6CYhQ_5rWXdAGWEh-e79jZvR__D9xrqSg8Q05o/edit",
+          "type": "Aktivitäten-Paket"
+        },
+        "unplugged_blocks_courses_c-f_/coursed/2023": {
+          "name": "Unplugged-Blöcke (Kurse C-F)",
+          "url": "https://docs.google.com/document/d/1cRPELQ28TZMJhc68-eYP1D26Uqzcyfx4RDYuThZJGLo/edit",
+          "type": "Manipulatoren"
+        },
+        "open-ended_programming_levels/coursed/2023": {
+          "name": "Open-ended Programming Levels",
+          "url": "https://docs.google.com/document/d/1Pr3XEM5J4oogmwFCGyvolp5XQzVaUFkGCkSMs9d55dQ/view",
+          "type": "Antwortschlüssel"
+        },
+        "pause_and_think_online/coursed/2023": {
+          "name": "Online innehalten und nachdenken",
+          "url": "https://www.youtube.com/watch?v=rgbZAWnOWOo",
+          "type": "Video"
+        },
+        "open-ended_programming_levels_1/coursed/2023": {
+          "name": "Open-ended Programming Levels",
+          "type": "Antwortschlüssel"
+        },
+        "sample_level_solutions/coursed/2023": {
+          "name": "Offene Programmierungsebenen",
+          "url": "https://docs.google.com/document/d/14qVMrzEOkq7m0gRjtYI8Erb1nGbx_XCz4TSm_d_xCls/view",
+          "type": "Antwortschlüssel"
+        },
+        "dance_party_project_guide/coursed/2023": {
+          "name": "Tanzparty-Projektleitfaden",
+          "url": "https://docs.google.com/document/d/1F9dc129iWUWHmkU7fL23PQqxEK-wYstblbs-XitZ9FM/edit",
+          "type": "Arbeitsblatt"
+        },
+        "dance_party_unplugged/coursed/2023": {
+          "name": "Tanzparty: Unplugged",
+          "type": "Ressource"
+        },
+        "open-ended_programming_levels_2/coursed/2023": {
+          "name": "Open-ended Programming Levels",
+          "url": "https://docs.google.com/document/d/1f2ayrjpWKVWqydZWZFTtXbDWZDdKcNIg4kGaOLB2o3U/view",
+          "type": "Antwortschlüssel"
+        },
+        "spotify_playlist_all_ages_/coursed/2023": {
+          "name": "Spotify Playliste (jedes Alter)",
+          "url": "https://open.spotify.com/playlist/2MiLztu5QGQERdEsZed81b?si=6cF0s1ETQf2vN_ea8B4fIw"
+        },
+        "feeling_faces/coursed/2023": {
+          "name": "Gefühlsgesichter",
+          "url": "https://docs.google.com/document/d/1qdt7Y-wVkqFas_TkNO4iITz2K-LEmEVWDWLM50NNAOs/",
+          "type": "Emotionale Bilder"
+        },
+        "conditionals_with_cards/coursed/2023": {
+          "name": "Bedingungen mit Karten",
+          "url": "https://youtu.be/UymN4lTL50s",
+          "type": "Unplugged-Video"
+        },
+        "conditionals_with_cards_1/coursed/2023": {
+          "name": "Bedingungen mit Karten",
+          "url": "https://www.youtube.com/watch?v=2m2Rn9VxHfU",
+          "type": "Lektion in Aktion Video"
+        },
+        "conditionals_with_cards_2/coursed/2023": {
+          "name": "Bedingungen mit Karten",
+          "url": "https://docs.google.com/document/d/1LAJIGKZkVE8Hx68qJZxOUyQ0iw1jhgIWSMGh_fv5zN0/edit",
+          "type": "Prüfung"
+        },
+        "conditionals_with_cards_3/coursed/2023": {
+          "name": "Bedingungen mit Karten",
+          "url": "https://youtu.be/TbUaEnAYPjI",
+          "type": "Video zur Bewertung"
+        },
+        "conditionals_with_cards_4/coursed/2023": {
+          "name": "Bedingungen mit Karten",
+          "url": "https://docs.google.com/document/d/1SsfkUoEg316vjBSxrRNLN4q4V2-yYW8HAK4m9snLtac/edit",
+          "type": "Bewertung Antwortschlüssel"
+        },
+        "conditionals_with_cards_sample_program/coursed/2023": {
+          "name": "Konditionale mit Karten Beispielprogramm",
+          "url": "https://docs.google.com/document/d/151s4_0NuDhuzprjPGlDubPZodeJQCEJElsvdkSSqzPM/edit",
+          "type": "Leitfaden zur Vorbereitung von Lehrern"
+        },
+        "csf_course_d_end_of_course_project_planning_guide/coursed/2023": {
+          "name": "GFK-Kurs D Projektplanungsleitfaden für den Abschluss des Kurses",
+          "url": "https://docs.google.com/document/d/1REjnJsmhZTmUsH5ulglEse4wpmF41zOk08ctqLShUgI/edit?usp=sharing",
+          "type": "Projektleitfaden"
+        },
+        "all_resources/coursee/2023": {
+          "url": "/s/coursee-2023/ressourcen"
+        },
+        "all_standards/coursee/2023": {
+          "url": "/s/coursee-2023/standards"
+        },
+        "all_vocabulary/coursee/2023": {
+          "url": "/s/coursee-2023/vokabular"
+        },
+        "common_core_and_ngss_guidance/coursee/2023": {
+          "name": "Standards- und NGSS-Leitfaden",
+          "url": "https://docs.google.com/document/d/1SqD3MaRbGIONGs5bcL1YhHUFK92ZXFIufypr6UC8XYA/preview#heading=h.iamt4mqlkyt7",
+          "type": "Ressource"
+        },
+        "cross-curricular_extension_activities/coursee/2023": {
+          "name": "Fächerübergreifende Erweiterungsaktivitäten",
+          "url": "https://docs.google.com/document/d/1MRlHy_3VgLXKZwjeB0VmI8HWuPvupZODsslPnA7KYAY/preview",
+          "type": "Ressource"
+        },
+        "debugging_guide/coursee/2023": {
+          "name": "Fehlerbehungsleitfaden",
+          "url": "https://docs.google.com/document/d/1_UFVNtS0_f7aH79WtSEAR0niLy-KPwX1xNiXllOBviE/preview",
+          "type": "Ressource"
+        },
+        "extension_lessons_with_the_micro_bit/coursee/2023": {
+          "type": "Ressource"
+        },
+        "implementation_guide/coursee/2023": {
+          "name": "Einführungsleitfaden",
+          "url": "https://docs.google.com/document/d/1I04szlSMuDlFLH_pidEC-huk_-t6ig09pBSyMv1Z3pw/preview",
+          "type": "Ressource"
+        },
+        "lesson_type_guide/coursee/2023": {
+          "name": "Stundentypen-Leitfaden",
+          "url": "https://docs.google.com/document/d/1Z28A1yF6BZu3lIlVvvHo5UqBpyuc1hX8YVjIt3fwmY4/view",
+          "type": "Ressource"
+        },
+        "sprite_lab_documentation/coursee/2023": {
+          "name": "Sprite Lab Dokumentation",
+          "url": "https://studio.code.org/docs/spritelab/",
+          "type": "Ressource"
+        },
+        "teacher_forum/coursee/2023": {
+          "name": "Lehrer Forum",
+          "url": "https://forum.code.org/c/csf/",
+          "type": "Ressource"
+        },
+        "csf_course_syllabus/coursee/2023": {
+          "name": "CSF-Kursplan",
+          "url": "https://docs.google.com/document/d/1mGTa71uFIOvLuwcbo_7XIutZIuJKGlbl0KlRqgibs2U/edit?usp=drive_link",
+          "type": "Ressource"
+        },
+        "teaching_and_learning_strategies/coursee/2023": {
+          "name": "Lehr- und Lernstrategien",
+          "url": "https://docs.google.com/document/d/1khllUBI1xpSrUmwWwa2J35GaKVV8bb3bQb_5Vc_ty54/preview"
+        },
+        "values_and_philosophy/coursee/2023": {
+          "name": "Werte und Philosophie",
+          "url": "https://docs.google.com/document/d/1_56iN0iyFzPSsuj5-W7-SI6E7A8z9BTpL3qu4fDMkKk/preview",
+          "type": "Ressource"
+        },
+        "be_a_super_digital_citizen_lesson_slides/coursee/2023": {
+          "name": "Sei ein digitaler Super-Bürger: Lektionsfolien",
+          "url": "https://docs.google.com/presentation/d/1RSug3cMAa8L0oSCC2H7__NnAayjLdktVPWl_H5vArHM/edit"
+        },
+        "be_a_super_digital_citizen_super_digital_citizen/coursee/2023": {
+          "name": "Seien Sie ein Super Digital Citizen: Super-Digitaler-Bürger",
+          "url": "https://www.commonsense.org/education/videos/super-digital-citizen"
+        },
+        "private_and_personal_information_exit_ticket/coursee/2023": {
+          "name": "Private und persönliche Informationen: Exit Ticket",
+          "url": "https://docs.google.com/document/d/1xK_CFNeB3lQ_kJIQAl3Y0sowSyqMy8ac5P3MhCjfkgA/edit",
+          "type": "Handout für Studenten"
+        },
+        "private_and_personal_information_lesson_quiz/coursee/2023": {
+          "name": "Private und persönliche Informationen: Lektionsquiz",
+          "url": "https://docs.google.com/forms/d/1iXNQu1c_I19GGasTbz95xGmIBLz3YokGSErREzTukpQ/copy",
+          "type": "Formular"
+        },
+        "private_and_personal_information_lesson_quiz_1/coursee/2023": {
+          "name": "Private und persönliche Informationen: Lektionsquiz",
+          "url": "https://www.commonsense.org/education/digital-citizenship/quiz/private-and-personal-information-lesson-quiz",
+          "type": "Antwortschlüssel"
+        },
+        "private_and_personal_information_lesson_slides/coursee/2023": {
+          "name": "Private und persönliche Informationen: Lektionsfolien",
+          "url": "https://docs.google.com/presentation/d/1g7JUvuosvwU2f5qixuTJg5sjZ0TAW2iN3oapWlSNqhM/edit"
+        },
+        "private_and_personal_information_private_and_personal_information/coursee/2023": {
+          "name": "Private und persönliche Informationen: Private und persönliche Informationen",
+          "url": "https://www.commonsense.org/education/videos/private-and-personal-information",
+          "type": "Studenten-Video"
+        },
+        "csf_-_course_e_-_slides_2022-2023/coursee/2023": {
+          "type": "Folien"
+        },
+        "swimming_fish_teacher_sandbox/coursee/2023": {
+          "name": "Schwimmender Fisch Lehrer Sandkasten",
+          "url": "https://studio.code.org/levels/18623",
+          "type": "Ebene der Programmierung"
+        },
+        "about_me_planning_guide/coursee/2023": {
+          "name": "Über mich Planungsleitfaden",
+          "url": "https://docs.google.com/document/d/1EQvXTvg4ujk4Xkn2noldwgzUXbR7M3dsAOkJyo4KO3o/template/preview",
+          "type": "Handout"
+        },
+        "pause_and_think_online/coursee/2023": {
+          "name": "Online innehalten und nachdenken",
+          "url": "https://youtu.be/X_duZ-1LApg",
+          "type": "Video"
+        },
+        "turns_angles/coursee/2023": {
+          "name": "Turns & Angles (Kurven und Winkel)",
+          "url": "https://docs.google.com/document/d/1JDeb07W7myaLu7Wjd-fPM8whSaO8aw37m9SJ_7B4Su4/edit",
+          "type": "Handout für Studenten"
+        },
+        "turns_angles_1/coursee/2023": {
+          "name": "Turns & Angles (Kurven und Winkel)",
+          "url": "https://www.youtube.com/watch?v=sPKXZBL_Yvs",
+          "type": "Studenten-Video"
+        },
+        "functions_unplugged_songwriting/coursee/2023": {
+          "name": "Funktionen Unplugged: Songwriting",
+          "url": "https://www.youtube.com/watch?v=QuIMLel1mmw",
+          "type": "Lektion in Aktion Video"
+        },
+        "functions_unplugged_songwriting_1/coursee/2023": {
+          "name": "Funktionen Unplugged: Songwriting",
+          "url": "https://docs.google.com/document/d/130ah2vRMrvuEj6Y-t1ThAHrHSVvLMnd94Qv9TLgZPMM/edit",
+          "type": "Arbeitsblatt"
+        },
+        "functions_unplugged_songwriting_2/coursee/2023": {
+          "name": "Funktionen Unplugged: Songwriting",
+          "url": "https://docs.google.com/document/d/1rtEJBrVNR2R09wAETeJTJLm6QENJGDujJ0HJc1mZBSA/edit",
+          "type": "Prüfung"
+        },
+        "functions_unplugged_songwriting_3/coursee/2023": {
+          "name": "Funktionen Unplugged: Songwriting",
+          "url": "https://docs.google.com/document/d/1L9YwWrsDBbTOZEVFCBhDxIIrYjkzZY3o1ZARKqa6lxw/edit",
+          "type": "Bewertung Antwortschlüssel"
+        },
+        "songwriting_with_functions/coursee/2023": {
+          "name": "Songwriting mit Funktionen",
+          "url": "https://youtu.be/5iDCKkI6y2Y",
+          "type": "Unplugged-Video"
+        },
+        "unplugged_blocks_courses_c-f_/coursee/2023": {
+          "name": "Unplugged-Blöcke (Kurse C-F)",
+          "url": "https://docs.google.com/document/d/1cRPELQ28TZMJhc68-eYP1D26Uqzcyfx4RDYuThZJGLo/edit",
+          "type": "Manipulatoren"
+        },
+        "types_of_disabilities/coursee/2023": {
+          "name": "Arten von Behinderungen",
+          "url": "https://www.w3.org/WAI/people-use-web/abilities-barriers/",
+          "type": "Ressource"
+        },
+        "digital_sharing_ethics_video_/coursee/2023": {
+          "name": "Ethik des digitalen Teilens (Video)",
+          "url": "https://www.youtube.com/watch?v=o_oDsBeBxko",
+          "type": "Video"
+        },
+        "digital_sharing_lesson_plan/coursee/2023": {
+          "name": "Lektionsplan zur digitalen Freigabe",
+          "url": "https://docs.google.com/document/d/1YZCCjahQ9_3jYaCeZU4J4-Y_e7_6xP_XMJ7bNw1au1w/edit?usp=sharing",
+          "type": "Ressource"
+        },
+        "cs_fundamentals_final_project/coursee/2023": {
+          "name": "Grundlagen der Informatik - das Abschlussprojekt",
+          "type": "Bewertungsleitfaden"
+        },
+        "end_of_course_project_guide/coursee/2023": {
+          "name": "Leitfaden für das Projekt am Ende des Kurses"
+        },
+        "all_resources/coursef/2023": {
+          "url": "/s/coursef-2023/ressourcen"
+        },
+        "all_standards/coursef/2023": {
+          "url": "/s/coursef-2023/standards"
+        },
+        "all_vocabulary/coursef/2023": {
+          "url": "/s/coursef-2023/vokabular"
+        },
+        "common_core_and_ngss_guidance/coursef/2023": {
+          "name": "Standards- und NGSS-Leitfaden",
+          "url": "https://docs.google.com/document/d/1SqD3MaRbGIONGs5bcL1YhHUFK92ZXFIufypr6UC8XYA/preview#heading=h.8jtw7rltkhe3"
+        },
+        "cross-curricular_extension_activities/coursef/2023": {
+          "name": "Fächerübergreifende Erweiterungsaktivitäten",
+          "url": "https://docs.google.com/document/d/1MRlHy_3VgLXKZwjeB0VmI8HWuPvupZODsslPnA7KYAY/preview"
+        },
+        "debugging_guide/coursef/2023": {
+          "name": "Fehlerbehungsleitfaden",
+          "url": "https://docs.google.com/document/d/1_UFVNtS0_f7aH79WtSEAR0niLy-KPwX1xNiXllOBviE/preview"
+        },
+        "implementation_guide/coursef/2023": {
+          "name": "Einführungsleitfaden",
+          "url": "https://docs.google.com/document/d/1I04szlSMuDlFLH_pidEC-huk_-t6ig09pBSyMv1Z3pw/preview"
+        },
+        "lesson_type_guide/coursef/2023": {
+          "name": "Stundentypen-Leitfaden"
+        },
+        "sprite_lab_documentation_1/coursef/2023": {
+          "name": "Sprite Lab Dokumentation",
+          "url": "https://studio.code.org/docs/spritelab/"
+        },
+        "teacher_forum/coursef/2023": {
+          "name": "Lehrer Forum",
+          "url": "https://forum.code.org/c/csf/"
+        },
+        "csf_course_syllabus/coursef/2023": {
+          "name": "CSF-Kursplan",
+          "url": "https://docs.google.com/document/d/1mGTa71uFIOvLuwcbo_7XIutZIuJKGlbl0KlRqgibs2U/edit?usp=drive_link",
+          "type": "Ressource"
+        },
+        "teaching_and_learning_strategies/coursef/2023": {
+          "name": "Lehr- und Lernstrategien",
+          "url": "https://docs.google.com/document/d/1khllUBI1xpSrUmwWwa2J35GaKVV8bb3bQb_5Vc_ty54/preview"
+        },
+        "values_and_philosophy/coursef/2023": {
+          "name": "Werte und Philosophie",
+          "url": "https://docs.google.com/document/d/1_56iN0iyFzPSsuj5-W7-SI6E7A8z9BTpL3qu4fDMkKk/preview",
+          "type": "Ressource"
+        },
+        "the_power_of_words_lesson_quiz/coursef/2023": {
+          "name": "Die Macht der Worte: Unterrichtsquiz",
+          "url": "https://docs.google.com/forms/d/1OKy2U3F37NSgCBUez9XMi0UJtlHKPXIe_rxy0l_KEOg/copy",
+          "type": "Ressource"
+        },
+        "the_power_of_words_lesson_quiz_1/coursef/2023": {
+          "name": "Die Macht der Worte: Unterrichtsquiz",
+          "url": "https://www.commonsense.org/education/digital-citizenship/quiz/the-power-of-words-lesson-quiz",
+          "type": "Antwortschlüssel"
+        },
+        "the_power_of_words_lesson_slides/coursef/2023": {
+          "name": "Die Macht der Worte: Unterrichtsfolien",
+          "url": "https://docs.google.com/presentation/d/1kUVxRuQ_CUDpeSm3Sqg4yyueITjc3qQMUpSTi0WP4so/edit",
+          "type": "Folien"
+        },
+        "the_power_of_words_the_power_of_words/coursef/2023": {
+          "name": "Die Macht der Worte: Die Macht der Worte\t",
+          "url": "https://www.commonsense.org/education/videos/the-power-of-words",
+          "type": "Video"
+        },
+        "the_power_of_words_words_can_hurt/coursef/2023": {
+          "name": "Die Macht der Worte: Worte können verletzen",
+          "url": "https://docs.google.com/document/d/1gJcgF03GdltY81jfccsl-tOpgwxMfHI5S1KvzhEhyIw/edit",
+          "type": "Handout"
+        },
+        "csf_-_course_f_-_slides_2022-2023/coursef/2023": {
+          "type": "Folien"
+        },
+        "exploring_apps/coursef/2023": {
+          "name": "Apps erforschen",
+          "url": "https://docs.google.com/document/d/1CMFO9cWrBa0E97raNZnEXHC5e2WHrprMokSW5jmJzDs/template/preview",
+          "type": "Ressource"
+        },
+        "exploring_apps_1/coursef/2023": {
+          "name": "Apps erforschen",
+          "url": "https://docs.google.com/document/d/1Vjn1DhjZm17C-Hde97yDHyeFxMzdPlR6Q-rESZgHw2s/template/preview",
+          "type": "Antwortschlüssel"
+        },
+        "introducing_sprite_lab/coursef/2023": {
+          "name": "Einführung Sprite Lab",
+          "url": "https://youtu.be/yd-9xZ275dM",
+          "type": "Video"
+        },
+        "making_sprites/coursef/2023": {
+          "name": "Sprites rogrammieren",
+          "url": "https://docs.google.com/presentation/d/1u8gueXrKIKoYNgTxbr3bIvmbVlCsJcVT7qcDeqsOh1U/template/preview",
+          "type": "Folien"
+        },
+        "sprite_lab_documentation/coursef/2023": {
+          "name": "Sprite Lab Dokumentation",
+          "url": "https://studio.code.org/docs/spritelab/",
+          "type": "Ressource"
+        },
+        "blank_space_stories/coursef/2023": {
+          "name": "Geschichten aus dem leeren Weltraum",
+          "url": "https://docs.google.com/document/d/1fJNyI0WQTi-Q-XMZDn9sIgD_o6KjGHwZesQRa93ko5E/template/preview"
+        },
+        "blank_space_stories_1/coursef/2023": {
+          "name": "Geschichten aus dem leeren Weltraum",
+          "url": "https://docs.google.com/document/d/1mXI-U7ve1JjDchlyhjD53pkdSXKqeMemb7upFGareV4/template/preview",
+          "type": "Antwortschlüssel"
+        },
+        "mini_project_user_input_programs/coursef/2023": {
+          "name": "Miniprojekt: Programme zur Benutzereingabe",
+          "url": "https://docs.google.com/presentation/d/1AGDl6WPPsPId6J3GXjySlvFJMaLDnt0P9Tu6ujjZeG0/edit#slide=id.gc6acec9c41_0_68",
+          "type": "Folien"
+        },
+        "mini_project_user_input_programs_1/coursef/2023": {
+          "name": "Miniprojekt: Programme zur Benutzereingabe",
+          "url": "https://docs.google.com/document/d/1nDzSayssOEjdUhPgyhPtCOLrfMYIgLAmWeQTLYnBReM/template/preview",
+          "type": "Antwortschlüssel"
+        },
+        "teacher_sandbox_level/coursef/2023": {
+          "name": "Sandbox-Level für Lehrer",
+          "url": "https://studio.code.org/levels/27300",
+          "type": "Ressource"
+        },
+        "user_input_programs/coursef/2023": {
+          "name": "Benutzereingabeprogramme",
+          "url": "https://docs.google.com/document/d/1FZAVAVabeADxUlDZACeZojuPK1gBN7g0_UfYfvxzah4/template/preview"
+        },
+        "running_simulations/coursef/2023": {
+          "name": "Ausführen von Simulationen",
+          "url": "https://docs.google.com/document/d/1sgUd9UcthM3M-A1EKX1m3AwsgLrivx0jF0i-e_79kk8/edit",
+          "type": "Arbeitsblatt"
+        },
+        "ai_impact_on_society/coursef/2023": {
+          "name": "AI: Auswirkungen auf die Gesellschaft",
+          "url": "https://youtu.be/ng4c1g3COfs",
+          "type": "Video"
+        },
+        "ai_machine_learning/coursef/2023": {
+          "name": "Maschinelles Lernen (AI)",
+          "url": "https://www.youtube.com/watch?v=OeU5m6vRyCk",
+          "type": "Video"
+        },
+        "ai_training_data_bias/coursef/2023": {
+          "name": "AI: Trainingdaten & Voreingenommenheit",
+          "url": "https://youtu.be/x2mRoFNm22g",
+          "type": "Video"
+        },
+        "get-site-ip-com/coursef/2023": {
+          "name": "get-site-ip-com",
+          "url": "http://get-site-ip.com/",
+          "type": "Ressource"
+        },
+        "internet/coursef/2023": {
+          "name": "Internet",
+          "url": "https://docs.google.com/document/d/1xqKUsyGloccd5_qulTARCzw5zLpEF3jSFrvDfLYrqAs/edit",
+          "type": "Prüfung"
+        },
+        "internet_1/coursef/2023": {
+          "name": "Internet",
+          "url": "https://docs.google.com/document/d/1uUY1zm6d7LZySpXzW9CFZaI8tcY4fzw_-w3Z2WbKVwI/edit",
+          "type": "Bewertung Antwortschlüssel"
+        },
+        "ip_address_cards_and_delivery_type_cards/coursef/2023": {
+          "name": "IP-Adresskarten und Zustellungstypkarten",
+          "url": "https://docs.google.com/document/d/1wnDD_Jm7JOApWQ5aPOcZVag4_h7lhBpl-QbCFIZAz6o/edit",
+          "type": "Manipulatoren"
+        },
+        "the_internet/coursef/2023": {
+          "name": "das Internet",
+          "url": "https://youtu.be/mFOUbqYv1Sc",
+          "type": "Unplugged-Video"
+        },
+        "cs_fundamentals_final_project/coursef/2023": {
+          "name": "Grundlagen der Informatik - das Abschlussprojekt",
+          "type": "Bewertungsleitfaden"
+        },
+        "end_of_course_project_guide/coursef/2023": {
+          "name": "Leitfaden für das Projekt am Ende des Kurses"
+        },
+        "debugging_guide/express/2023": {
+          "name": "Fehlerbehungsleitfaden",
+          "url": "https://docs.google.com/document/d/1z2FgBWwUq6vxwWbnbiQC0EaEKxwgAqBdtTZzVi98xHA/preview"
+        },
+        "teacher_forum/express/2023": {
+          "name": "Lehrer Forum",
+          "url": "https://forum.code.org/c/csf/",
+          "type": "Ressource"
+        },
+        "unplugged_maze_blocks/express/2023": {
+          "name": "Unplugged Labyrinth-Blöcke",
+          "url": "https://docs.google.com/presentation/d/1k_7SSLsm-E4aisa9-LmbsCVzH6J-8yGD9T2LwPb2v48/edit",
+          "type": "Ressource"
+        },
+        "csf_-_express_course_-_slides/express/2023": {
+          "name": "CSF Express-Kursfolien ",
+          "url": "https://docs.google.com/presentation/d/1IVGGGdxNfOAyVa2NgPIraL0F910e2WkLDhVkozNV-3g/template/preview",
+          "type": "Folien"
+        },
+        "pair_programming/express/2023": {
+          "name": "Paarprogrammierung",
+          "url": "https://www.youtube.com/watch?v=vgkahOzFH2Q",
+          "type": "Video"
+        },
+        "unplugged_blocks_courses_c-f_/express/2023": {
+          "name": "Unplugged-Blöcke (Kurse C-F)",
+          "url": "https://docs.google.com/document/d/1cRPELQ28TZMJhc68-eYP1D26Uqzcyfx4RDYuThZJGLo/edit"
+        },
+        "artist_introduction/express/2023": {
+          "name": "Einführung in Artist",
+          "url": "https://www.youtube.com/watch?v=MUavAHn-QUg",
+          "type": "Video"
+        },
+        "turns_angles/express/2023": {
+          "name": "Turns & Angles (Kurven und Winkel)",
+          "url": "https://www.youtube.com/watch?v=sPKXZBL_Yvs",
+          "type": "Video"
+        },
+        "turns_angles_1/express/2023": {
+          "name": "Turns & Angles (Kurven und Winkel)",
+          "url": "https://docs.google.com/document/d/1JDeb07W7myaLu7Wjd-fPM8whSaO8aw37m9SJ_7B4Su4/edit",
+          "type": "Handout"
+        },
+        "sprite_lab_documentation/express/2023": {
+          "name": "Sprite Lab Dokumentation",
+          "url": "https://studio.code.org/docs/spritelab/",
+          "type": "Ressource"
+        },
+        "swimming_fish_teacher_sandbox/express/2023": {
+          "name": "Schwimmender Fisch Lehrer Sandkasten",
+          "url": "https://studio.code.org/levels/18623"
+        },
+        "sprites_in_action/express/2023": {
+          "name": "Sprites in Aktion",
+          "url": "https://docs.google.com/presentation/d/1JdBmPn9XHWiXhGALqwxoR1g6R5TwFaQhVRmq22XLdYY/template/preview",
+          "type": "Folien"
+        },
+        "pause_and_think_online/express/2023": {
+          "name": "Online innehalten und nachdenken",
+          "url": "https://www.youtube.com/watch?v=rgbZAWnOWOo",
+          "type": "Video"
+        },
+        "dance_party_project_guide/express/2023": {
+          "name": "Tanzparty-Projektleitfaden",
+          "url": "https://docs.google.com/document/d/1F9dc129iWUWHmkU7fL23PQqxEK-wYstblbs-XitZ9FM/edit",
+          "type": "Arbeitsblatt"
+        },
+        "open-ended_programming_levels/express/2023": {
+          "name": "Open-ended Programming Levels",
+          "url": "https://docs.google.com/document/d/1f2ayrjpWKVWqydZWZFTtXbDWZDdKcNIg4kGaOLB2o3U/view",
+          "type": "Antwortschlüssel"
+        },
+        "spotify_playlist_all_ages_/express/2023": {
+          "name": "Spotify Playliste (jedes Alter)",
+          "url": "https://open.spotify.com/playlist/2MiLztu5QGQERdEsZed81b?si=6cF0s1ETQf2vN_ea8B4fIw"
+        },
+        "pair_programming_video/express/2023": {
+          "name": "Video zur Paarprogrammierung",
+          "url": "https://www.youtube.com/watch?v=vgkahOzFH2Q",
+          "type": "Video"
+        },
+        "unplugged_blocks_courses_c-f__1/express/2023": {
+          "name": "Unplugged-Blöcke (Kurse C-F)",
+          "url": "https://docs.google.com/document/d/1cRPELQ28TZMJhc68-eYP1D26Uqzcyfx4RDYuThZJGLo/edit"
+        },
+        "text_and_prompts/express/2023": {
+          "name": "Text und Eingabeaufforderungen",
+          "url": "https://docs.google.com/presentation/d/1ImZg6MHmaj5ouvrYdgsungbeLXRDAu106-NXOroJg14/template/preview",
+          "type": "Folien"
+        },
+        "variables/express/2023": {
+          "name": "Variablen",
+          "url": "https://youtu.be/DI7DprN4FtE",
+          "type": "Studenten-Video"
+        },
+        "cs_fundamentals_final_project/express/2023": {
+          "name": "Grundlagen der Informatik - das Abschlussprojekt",
+          "url": "https://docs.google.com/document/d/1QVcQX7czu6T2OL7742hRu-gXB_Fat_Q4bHM6zgb7bq0/",
+          "type": "Bewertungsleitfaden"
+        },
+        "csf_express_end_of_course_project_planning_guide/express/2023": {
+          "name": "CSF-Express-Projektplanungsleitfaden für den Abschluss des Kurses",
+          "url": "https://docs.google.com/document/d/1k_TQ5juruh79PiqGE4t1j9X3siaBRNFaKxODsytTj64/edit?usp=sharing",
+          "type": "Projektleitfaden"
+        },
+        "debugging_guide/pre-express/2023": {
+          "name": "Fehlerbehungsleitfaden",
+          "url": "https://docs.google.com/document/d/1z2FgBWwUq6vxwWbnbiQC0EaEKxwgAqBdtTZzVi98xHA/preview"
+        },
+        "teacher_forum/pre-express/2023": {
+          "name": "Lehrer Forum",
+          "url": "https://forum.code.org/c/csf/",
+          "type": "Ressource"
+        },
+        "20_20_20_rule/pre-express/2023": {
+          "name": "20/20/20-Regel",
+          "url": "http://www.anthro.com/blog/2013/10/how-to-prevent-eye-strain-with-the-20-20-20-rule#.WOU39BLyu35",
+          "type": "Video"
+        },
+        "feeling_faces/pre-express/2023": {
+          "name": "Gefühlsgesichter",
+          "url": "https://docs.google.com/document/d/1qdt7Y-wVkqFas_TkNO4iITz2K-LEmEVWDWLM50NNAOs/",
+          "type": "Emotionale Bilder"
+        },
+        "how_to_make_a_class_section_on_code_org/pre-express/2023": {
+          "name": "Erstellen eines Klassenabschnitt auf Code.org",
+          "url": "https://www.youtube.com/watch?v=ebQY8fb2OV4",
+          "type": "Video für Lehrkräfte"
+        },
+        "pair_programming/pre-express/2023": {
+          "name": "Paarprogrammierung",
+          "url": "https://www.youtube.com/watch?v=vgkahOzFH2Q",
+          "type": "Studenten-Video"
+        },
+        "wiggles_-_go_noodle/pre-express/2023": {
+          "name": "Wiggles - Go Noodle",
+          "url": "https://app.gonoodle.com/channels/brainercise-with-mr-catman/shoulder-rock-n-roll",
+          "type": "Video"
+        },
+        "csf_pre-reader_express_course_slides/pre-express/2023": {
+          "name": "CSF Pre-Reader Express-Kursfolien",
+          "url": "https://docs.google.com/presentation/d/1L1YJDVSUet42tTJaTvsEF1AujZ8n3YTZM6lOY6am07g/template/preview",
+          "type": "Folien"
+        },
+        "pause_and_think_online/pre-express/2023": {
+          "name": "Online innehalten und nachdenken",
+          "url": "https://www.youtube.com/watch?v=rgbZAWnOWOo",
+          "type": "Video"
+        },
+        "classifying_fish/how-ai-works/2023": {
+          "url": "https://docs.google.com/document/d/1gQWtamQ3YBk-gJnmw_z3QWNLfzdrPyaUjS4ZbtfAvEs/view"
+        },
+        "how_ai_works_-_training_data_and_bias/how-ai-works/2023": {
+          "name": "So funktioniert KI — Trainingsdaten und Vorurteile",
+          "url": "https://youtu.be/x2mRoFNm22g",
+          "type": "Video"
+        },
+        "how_ai_works_-_what_is_machine_learning_/how-ai-works/2023": {
+          "name": "Wie funktioniert KI — Was ist maschinelles Lernen?",
+          "url": "https://www.youtube.com/watch?v=OeU5m6vRyCk",
+          "type": "Video"
+        },
+        "introduction_to_machine_learning/how-ai-works/2023": {
+          "url": "https://docs.google.com/presentation/d/1Vj24zhtV4La9t-MRONHhg2L4ZPYYiGW9eXUBN5lM9LQ/template/preview",
+          "type": "Folien"
+        },
+        "_example_computer_vision_network/how-ai-works/2023": {
+          "name": "[Example] Computer-Vision-Netzwerk",
+          "url": "https://docs.google.com/presentation/d/1zJzbHDel0uQ62usH8g_qBp5KIFMN08tEps5lXSAb3Ag/edit?usp=sharing"
+        },
+        "computer_vision/how-ai-works/2023": {
+          "name": "Computer Vision",
+          "url": "https://docs.google.com/presentation/d/1yWJnyVWPq2ut0GmUc0Z41SHxh1_w2B90qis-mo3d2OY/template/preview",
+          "type": "Folien"
+        },
+        "computer_vision_network/how-ai-works/2023": {
+          "name": "Computer-Vision-Netzwerk",
+          "url": "https://docs.google.com/document/d/1C7ob1lB-zKi0DSC3do9ZVFfXkHlC2xnSDI2yPFAqEY4/edit"
+        },
+        "how_ai_works_how_computer_vision_works/how-ai-works/2023": {
+          "name": "So funktioniert KI: So funktioniert Computer Vision",
+          "url": "https://youtu.be/2hXG8v8p0KM",
+          "type": "Video"
+        },
+        "seven_segment_display_manipulative/how-ai-works/2023": {
+          "name": "Manipulatives Display mit sieben Segmenten",
+          "url": "https://docs.google.com/document/d/17QzrodDqCjF2pjZvyo4coWYQbaZxuRwDrPEe20H-yBM/edit"
+        },
+        "what_a_neural_network_sees/how-ai-works/2023": {
+          "name": "Was ein neuronales Netzwerk sieht",
+          "url": "https://www.youtube.com/watch?v=Gu0MkmynWkw",
+          "type": "Video"
+        },
+        "how_ai_works_how_neural_networks_work/how-ai-works/2023": {
+          "name": "So funktioniert KI: So funktionieren neuronale Netzwerke",
+          "url": "https://youtu.be/JrXazCEACVo",
+          "type": "Video"
+        },
+        "neural_networks/how-ai-works/2023": {
+          "name": "Neuronale Netze",
+          "url": "https://docs.google.com/document/d/1HA_zYssm4-s24-8on8BeL5DbzSfi7G7q-4LlywNBoCw/edit?usp=sharing"
+        },
+        "neural_networks_1/how-ai-works/2023": {
+          "name": "Neuronale Netze",
+          "url": "https://docs.google.com/presentation/d/1lj6Z3egPkfv7jKtTVNmhCSY9RKHkcw5LV7Oq_ryqDVs/template/preview",
+          "type": "Folien"
+        },
+        "wetube_content_creators/how-ai-works/2023": {
+          "name": "Ersteller von WeTube-Inhalten",
+          "url": "https://docs.google.com/document/d/1z7ZO-9zKlmn3brqH7euWVMSOuzVTQOdWDgkGGukRkvc/edit?usp=sharing",
+          "type": "Ressource"
+        },
+        "eliza_activity_guide/how-ai-works/2023": {
+          "name": "(Optional) Eliza Activity Guide",
+          "url": "https://docs.google.com/document/d/1IIca15ohoVq2lTLNUAOqQMUT7YgsTLp8yIPfmEnLmXo/edit#heading=h.17wewdcvexo6"
+        },
+        "generative_llm/how-ai-works/2023": {
+          "name": "Generatives LLM",
+          "url": "https://docs.google.com/presentation/d/10d_TM6rucYyt8DAuPVoAZ9mgt9v-zzRWcM2A7geDIp0/template/preview",
+          "type": "Folien"
+        },
+        "how_ai_works_chatbots_and_large_language_models_part_1_/how-ai-works/2023": {
+          "name": "So funktioniert KI: Chatbots und große Sprachmodelle (Teil 1)",
+          "url": "https://www.youtube.com/watch?v=kWougDgtE3E",
+          "type": "Video"
+        },
+        "how_ai_works_chatbots_and_large_language_models_part_2_/how-ai-works/2023": {
+          "name": "So funktioniert KI: Chatbots und große Sprachmodelle (Teil 2)",
+          "url": "https://www.youtube.com/watch?v=7Jn9UrnMWK8",
+          "type": "Video"
+        },
+        "llm_vocab_and_video_guide_answer_key/how-ai-works/2023": {
+          "name": "[Key] Wortschatz und Videoanleitung",
+          "url": "https://docs.google.com/document/d/1kSVppQd3WBVwvejrJ4ffgCNJEkYbhDzQs88tbQ3rfD0/edit",
+          "type": "Antwortschlüssel"
+        },
+        "video_and_vocabulary_guide/how-ai-works/2023": {
+          "name": "Video- und Vokabelführer",
+          "url": "https://docs.google.com/document/d/1zPGOdJ1rcdF7e7CzGXHb4JaWYFMEPX9aeZf4DtbQhNI/edit#heading=h.l82l1gv9gtj4"
+        },
+        "written_voice_simulator_activity_guide_exemplar/how-ai-works/2023": {
+          "name": "[Exemplar] Schriftlicher Sprachsimulator-Aktivitätsleitfaden",
+          "url": "https://docs.google.com/document/d/1nZhObuoPc5781ygHgA8P_a0aHItrKkW4mqqJ73XP8Hw/"
+        },
+        "written_voice_simulator_guide/how-ai-works/2023": {
+          "name": "Schriftlicher Leitfaden für Sprachsimulatoren",
+          "url": "https://docs.google.com/document/d/1pebKlY2-pFCw-Zo_nI8cLXYT_eyfn3AKzkwvEmkjo2c/edit#heading=h.sa1769guz3cn"
+        },
+        "written_voice_simulator_user_guide/how-ai-works/2023": {
+          "name": "Schriftliches Voice Simulator-Benutzerhandbuch",
+          "url": "https://docs.google.com/presentation/d/1N3l7kEskuT5MFjarekKlJVoz3Gl-z53kjCuQ6bz94m4/edit",
+          "type": "Ressource"
+        },
+        "_optional_gan_game_activity_guide/how-ai-works/2023": {
+          "name": "(Optional) Leitfaden für GAN-Spielaktivitäten",
+          "url": "https://docs.google.com/document/d/1XJ16vDcCDz1_cI8T9d554n_cxqEPT2EVCNh6ZLe1OwI/edit"
+        },
+        "generative_images/how-ai-works/2023": {
+          "name": "Generative Bilder",
+          "url": "https://docs.google.com/presentation/d/1de7JbrVRXFg-eLUFCWUFTN5q7DAbpYzxU_oi6Ur37oM/template/preview",
+          "type": "Folien"
+        },
+        "generative_images_activity_guide/how-ai-works/2023": {
+          "name": "[Key] Leitfaden für Aktivitäten zu generativen Bildern",
+          "url": "https://docs.google.com/document/d/1f9K9TA6gjNM5SYZB-yCovGA-agtWJdl-ATbUg9c4K_s/edit",
+          "type": "Antwortschlüssel"
+        },
+        "how_ai_works_creativity_and_imagination/how-ai-works/2023": {
+          "name": "So funktioniert KI: Kreativität und Vorstellungskraft",
+          "url": "https://www.youtube.com/watch?v=X994dDnmRmY",
+          "type": "Video"
+        },
+        "noisy_image_activity_exemplar/how-ai-works/2023": {
+          "name": "[Exemplar] Aktivität bei verrauschten Bildern",
+          "url": "https://docs.google.com/document/d/1TkzwTBscbPo7fZl-21ggTqSECFdQ35dxoBrBSdX-0yw/"
+        },
+        "noisy_image_widget_activity_guide/how-ai-works/2023": {
+          "name": "Aktivitätsleitfaden für das Noisy Image Widget",
+          "url": "https://docs.google.com/document/d/1rxB-NpxulH6SUyweHwGTxatqYAQc5Qt8ZQN9Dkgi6sE/"
+        },
+        "user_guide_noise_image_widget/how-ai-works/2023": {
+          "name": "Benutzerhandbuch: Noise Image Widget",
+          "url": "https://docs.google.com/presentation/d/1l3Ide0B-4k_IEhWYiCVz6OnyAL4fCmg-ROqogyqnVCo/view",
+          "type": "Ressource"
+        },
+        "video_and_vocabulary_guide_1/how-ai-works/2023": {
+          "name": "Video- und Vokabelführer",
+          "url": "https://docs.google.com/document/d/1GtTFgGzPcoyokR3KsJ43ZjvgJnwUCWdZXvtrXoa78rQ/edit?usp=sharing"
+        },
+        "algorithmic_bias/how-ai-works/2023": {
+          "name": "Algorithmische Voreingenommenheit",
+          "url": "https://docs.google.com/presentation/d/1N_sFSTNrP2jpnQPdIAaIDPhQYroSiV5EYxSP3dZ-bHc/template/preview",
+          "type": "Folien"
+        },
+        "how_ai_works_-_societal_impact/how-ai-works/2023": {
+          "name": "So funktioniert KI — gesellschaftliche Auswirkungen",
+          "url": "https://youtu.be/tJQSyzBUAew",
+          "type": "Video"
+        },
+        "sharing_learnings_about_our_image_cropping_algorithm_twitter_/how-ai-works/2023": {
+          "name": "Teilen von Erkenntnissen über unseren Algorithmus zum Zuschneiden von Bildern (Twitter)",
+          "url": "https://blog.twitter.com/engineering/en_us/topics/insights/2021/sharing-learnings-about-our-image-cropping-algorithm",
+          "type": "Ressource"
+        },
+        "twitter_says_its_image-cropping_algorithm_was_biased_so_it_s_ditching_it_cnn_/how-ai-works/2023": {
+          "name": "Laut Twitter war sein Algorithmus zum Zuschneiden von Bildern voreingenommen, also gibt es ihn auf (CNN)",
+          "url": "https://www.cnn.com/2021/05/19/tech/twitter-image-cropping-algorithm-bias/index.html",
+          "type": "Ressource"
+        },
+        "ai_code_of_ethics/how-ai-works/2023": {
+          "url": "https://docs.google.com/presentation/d/18r16dGGz9ZYwG-lSdC7s35-J4yrbc_glpubFZqYsuBg/template/preview",
+          "type": "Folien"
+        },
+        "ai_ethics_research_areas/how-ai-works/2023": {
+          "url": "https://docs.google.com/document/d/1wfEQVKhZGmlybOevVoWFfpyqpHjTXTvj0ZZWf-8wme0/edit?usp=sharing"
+        },
+        "ai_ethics_research_reflection/how-ai-works/2023": {
+          "url": "https://docs.google.com/document/d/1KKCTMHVmaUA6B8wBnzT-nHzYCQ6seJD8z-o22dYBkd8/edit?usp=sharing"
+        },
+        "how_ai_works_-_privacy_and_future_of_work/how-ai-works/2023": {
+          "name": "So funktioniert KI — Datenschutz und Zukunft der Arbeit",
+          "url": "https://youtu.be/zNxw5gJtHLc",
+          "type": "Video"
+        },
+        "our_ai_code_of_ethics_template_/how-ai-works/2023": {
+          "type": "Folien"
+        },
+        "does_ai_have_creativity_and_imagination_/how-ai-works/2023": {
+          "url": "https://www.youtube.com/watch?v=X994dDnmRmY",
+          "type": "Video"
+        },
+        "how_ai_works/how-ai-works/2023": {
+          "name": "So funktioniert KI",
+          "url": "https://docs.google.com/presentation/d/1Ca1i3-7p6sjC16TuEVF5chfC6Fw3ecM12inLOFXEKQg/template/preview",
+          "type": "Folien"
+        },
+        "how_ai_works_ethics_ai_equal_access_and_algorithmic_bias/how-ai-works/2023": {
+          "name": "So funktioniert KI: Ethik und KI: Gleichberechtigter Zugang und algorithmische Voreingenommenheit",
+          "url": "https://youtu.be/tJQSyzBUAew",
+          "type": "Video"
+        },
+        "how_ai_works_ethics_ai_privacy_the_future_of_work/how-ai-works/2023": {
+          "name": "So funktioniert KI: Ethik und KI: Datenschutz und die Zukunft der Arbeit",
+          "url": "https://youtu.be/zNxw5gJtHLc",
+          "type": "Video"
+        },
+        "how_ai_works_introduction/how-ai-works/2023": {
+          "name": "So funktioniert KI: Einführung",
+          "url": "https://youtu.be/Ok-xpKjKp2g",
+          "type": "Video"
+        },
+        "how_ai_works_training_data_and_bias/how-ai-works/2023": {
+          "name": "So funktioniert KI: Trainingsdaten und Vorurteile",
+          "url": "https://youtu.be/x2mRoFNm22g",
+          "type": "Video"
+        },
+        "how_ai_works_what_is_machine_learning_/how-ai-works/2023": {
+          "name": "So funktioniert KI: Was ist maschinelles Lernen?",
+          "url": "https://youtu.be/KHbwOetbmbs",
+          "type": "Video"
+        },
+        "how_chatbots_and_large_language_models_work/how-ai-works/2023": {
+          "url": "https://www.youtube.com/watch?v=X-AWdfSFCHQ",
+          "type": "Video"
+        },
+        "vocabulary_matching/how-ai-works/2023": {
+          "name": "Wortschatzabgleich",
+          "url": "https://docs.google.com/document/d/1Tbz8ULln11yU1hpD73OzgRUnujWjdpdOi8fKQsOAiIk/edit"
+        },
+        "_key_vocabulary_matching/how-ai-works/2023": {
+          "name": "[Key] Wortschatzabgleich",
+          "url": "https://drive.google.com/file/d/1cF8MsKO_lCLziA5FisbcQc2-529j1HXZ/view",
+          "type": "Antwortschlüssel"
+        },
         "csf-artist-intro-video/artist/unversioned": {
           "name": "Einführung in Artist",
           "url": "https://www.youtube.com/watch?v=MUavAHn-QUg",

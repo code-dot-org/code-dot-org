@@ -167,6 +167,93 @@
         "debugging/pre-express/2022": {
           "word": "Odpravljanje napak"
         },
+        "code/csc-adaptations/2023": {
+          "word": "Koda"
+        },
+        "code/csc-ecosystems/2023": {
+          "word": "Koda"
+        },
+        "conditionals/csc-ecosystems/2023": {
+          "word": "Pogoji"
+        },
+        "variable/csc-ecosystems/2023": {
+          "word": "Spremenljivka"
+        },
+        "code/csc-mappinglandmarks/2023": {
+          "word": "Koda"
+        },
+        "artist/csc-starquilts/2023": {
+          "word": "Umetnik"
+        },
+        "comments/csc-starquilts/2023": {
+          "word": "Komentarji"
+        },
+        "code/poetry/2023": {
+          "word": "Koda"
+        },
+        "debugging/coursea/2023": {
+          "word": "Odpravljanje napak"
+        },
+        "debugging/courseb/2023": {
+          "word": "Odpravljanje napak"
+        },
+        "debugging/coursec/2023": {
+          "word": "Odpravljanje napak"
+        },
+        "persistence/coursec/2023": {
+          "definition": "Ne obupajte."
+        },
+        "binary/coursec/2023": {
+          "word": "Binarno"
+        },
+        "debugging/coursed/2023": {
+          "word": "Odpravljanje napak"
+        },
+        "conditionals/coursed/2023": {
+          "word": "Pogoji"
+        },
+        "function/coursee/2023": {
+          "word": "Funkcija"
+        },
+        "conditionals/coursee/2023": {
+          "word": "Pogoji"
+        },
+        "copyright/coursee/2023": {
+          "word": "Avtorska pravice"
+        },
+        "define/coursee/2023": {
+          "word": "Definiraj"
+        },
+        "variable/coursef/2023": {
+          "word": "Spremenljivka"
+        },
+        "input/coursef/2023": {
+          "word": "Vnos"
+        },
+        "internet/coursef/2023": {
+          "word": "Internet"
+        },
+        "define/coursef/2023": {
+          "word": "Definiraj"
+        },
+        "debugging/express/2023": {
+          "word": "Odpravljanje napak"
+        },
+        "conditionals/express/2023": {
+          "word": "Pogoji"
+        },
+        "function/express/2023": {
+          "word": "Funkcija"
+        },
+        "variable/express/2023": {
+          "word": "Spremenljivka"
+        },
+        "define/express/2023": {
+          "word": "Definiraj"
+        },
+        "debugging/pre-express/2023": {
+          "word": "Odpravljanje napak"
+        },
         "conditionals/aquatic/unversioned": {
           "word": "Pogoji"
         },

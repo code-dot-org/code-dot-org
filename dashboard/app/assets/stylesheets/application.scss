@@ -1903,12 +1903,38 @@ a.download-video {
 }
 
 #signup, #school-info-modal {
+  $signup-info-background: #f7f7f7;
+  $signup-info-border-color: #e5e5e5;
+
   display: flex;
   flex-wrap: wrap;
 
   .header {
     display: flex;
     flex-wrap: wrap;
+  }
+
+  #sign_up_errors {
+    background-color: $signup-info-background;
+    border: 1px solid $red;
+    flex-wrap: wrap;
+    width: 100%;
+    h4 {
+      margin: 0;
+    }
+  }
+
+  .padded-container {
+    padding: 20px;
+    display: flex;
+    flex-wrap: wrap;
+    .row {
+      flex-grow: 1;
+    }
+
+    .parent-email-field-input {
+      flex-grow: 1;
+    }
   }
 
   .oauth-links {
@@ -1991,21 +2017,18 @@ a.download-video {
   }
 
   .signup, .finish-signup {
-    $school-info-background: #f7f7f7;
-    $school-info-border-color: #e5e5e5;
-
     .section-container {
       padding: 10px;
       flex-grow: 1;
-      background-color: $school-info-background;
-      border: 1px solid $school-info-border-color;
+      background-color: $signup-info-background;
+      border: 1px solid $signup-info-border-color;
 
       h5 {
         font-weight: bold;
       }
 
       hr {
-        border: 1px solid $school-info-border-color;
+        border: 1px solid $signup-info-border-color;
       }
     }
 
@@ -2105,8 +2128,8 @@ a.download-video {
     }
 
     #parent-email-section {
-      background-color: $school-info-background;
-      border: 1px solid $school-info-border-color;
+      background-color: $signup-info-background;
+      border: 1px solid $signup-info-border-color;
       flex-wrap: wrap;
     }
 
@@ -2120,19 +2143,6 @@ a.download-video {
 
     #signup-select-user-type-label {
       width: 220px;
-    }
-
-    .padded-container {
-      padding: 20px;
-      display: flex;
-      flex-wrap: wrap;
-      .row {
-        flex-grow: 1;
-      }
-
-      .parent-email-field-input {
-        flex-grow: 1;
-      }
     }
 
     .parent-email-section-header {

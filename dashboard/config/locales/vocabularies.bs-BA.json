@@ -170,6 +170,93 @@
         "debugging/pre-express/2022": {
           "word": "Otklanjanje pogrešaka"
         },
+        "code/csc-adaptations/2023": {
+          "word": "Kôd"
+        },
+        "code/csc-ecosystems/2023": {
+          "word": "Kôd"
+        },
+        "conditionals/csc-ecosystems/2023": {
+          "word": "Uvjeti"
+        },
+        "variable/csc-ecosystems/2023": {
+          "word": "Varijabla"
+        },
+        "code/csc-mappinglandmarks/2023": {
+          "word": "Kôd"
+        },
+        "artist/csc-starquilts/2023": {
+          "word": "Umjetnik"
+        },
+        "code/poetry/2023": {
+          "word": "Kôd"
+        },
+        "debugging/coursea/2023": {
+          "word": "Otklanjanje pogrešaka"
+        },
+        "drop/coursea/2023": {
+          "word": "Spuštanje"
+        },
+        "debugging/courseb/2023": {
+          "word": "Otklanjanje pogrešaka"
+        },
+        "drop/courseb/2023": {
+          "word": "Spuštanje"
+        },
+        "debugging/coursec/2023": {
+          "word": "Otklanjanje pogrešaka"
+        },
+        "binary/coursec/2023": {
+          "word": "Binarno"
+        },
+        "debugging/coursed/2023": {
+          "word": "Otklanjanje pogrešaka"
+        },
+        "conditionals/coursed/2023": {
+          "word": "Uvjeti"
+        },
+        "function/coursee/2023": {
+          "word": "Funkcija"
+        },
+        "conditionals/coursee/2023": {
+          "word": "Uvjeti"
+        },
+        "copyright/coursee/2023": {
+          "word": "Autorska prava"
+        },
+        "define/coursee/2023": {
+          "word": "Definiši"
+        },
+        "variable/coursef/2023": {
+          "word": "Varijabla"
+        },
+        "internet/coursef/2023": {
+          "word": "Internet"
+        },
+        "define/coursef/2023": {
+          "word": "Definiši"
+        },
+        "debugging/express/2023": {
+          "word": "Otklanjanje pogrešaka"
+        },
+        "conditionals/express/2023": {
+          "word": "Uvjeti"
+        },
+        "function/express/2023": {
+          "word": "Funkcija"
+        },
+        "variable/express/2023": {
+          "word": "Varijabla"
+        },
+        "define/express/2023": {
+          "word": "Definiši"
+        },
+        "drop/pre-express/2023": {
+          "word": "Spuštanje"
+        },
+        "debugging/pre-express/2023": {
+          "word": "Otklanjanje pogrešaka"
+        },
         "conditionals/aquatic/unversioned": {
           "word": "Uvjeti"
         },

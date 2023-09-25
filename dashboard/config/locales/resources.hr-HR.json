@@ -641,6 +641,232 @@
         "pair_programming/pre-express/2022": {
           "name": "Programiranje u paru"
         },
+        "poem_art_1_-_introduction/csc-timecapsule/2023": {
+          "url": "https://www.youtube.com/watch?v=uvwUWTTjIXo&list=PLzdnOPI1iJNejQxcqExd1cWJnPEBPGCqf&index=2"
+        },
+        "poem_art_2_-_events/csc-timecapsule/2023": {
+          "name": "Pjesnička umjetnost 2 - Događaji",
+          "url": "https://www.youtube.com/watch?v=XGwYYUEb6jQ&list=PLzdnOPI1iJNejQxcqExd1cWJnPEBPGCqf&index=3"
+        },
+        "poem_art_3_-_imagery/csc-timecapsule/2023": {
+          "name": "Pjesnička umjetnost 3 - Slike",
+          "url": "https://www.youtube.com/watch?v=doy1aIuV-5U&list=PLzdnOPI1iJNejQxcqExd1cWJnPEBPGCqf&index=4"
+        },
+        "poem_art_4_-_celebration/csc-timecapsule/2023": {
+          "url": "https://www.youtube.com/watch?v=Q-76vz8i8mo&list=PLzdnOPI1iJNejQxcqExd1cWJnPEBPGCqf&index=5"
+        },
+        "poem_art_1_-_introduction/poetry/2023": {
+          "url": "https://www.youtube.com/watch?v=uvwUWTTjIXo&list=PLzdnOPI1iJNejQxcqExd1cWJnPEBPGCqf&index=2"
+        },
+        "poem_art_2_-_events/poetry/2023": {
+          "name": "Pjesnička umjetnost 2 - Događaji",
+          "url": "https://www.youtube.com/watch?v=XGwYYUEb6jQ&list=PLzdnOPI1iJNejQxcqExd1cWJnPEBPGCqf&index=3"
+        },
+        "poem_art_3_-_imagery/poetry/2023": {
+          "name": "Pjesnička umjetnost 3 - Slike",
+          "url": "https://www.youtube.com/watch?v=doy1aIuV-5U&list=PLzdnOPI1iJNejQxcqExd1cWJnPEBPGCqf&index=4"
+        },
+        "poem_art_4_-_celebration/poetry/2023": {
+          "url": "https://www.youtube.com/watch?v=Q-76vz8i8mo&list=PLzdnOPI1iJNejQxcqExd1cWJnPEBPGCqf&index=5"
+        },
+        "implementation_guide/coursea/2023": {
+          "name": "Vodič za implementaciju"
+        },
+        "pair_programming/coursea/2023": {
+          "name": "Programiranje u paru"
+        },
+        "happy_maps/coursea/2023": {
+          "name": "Vesele karte"
+        },
+        "the_big_event/coursea/2023": {
+          "name": "Veliki događaj"
+        },
+        "the_big_event_1/coursea/2023": {
+          "name": "Veliki događaj"
+        },
+        "the_big_event_2/coursea/2023": {
+          "name": "Veliki događaj"
+        },
+        "implementation_guide/courseb/2023": {
+          "name": "Vodič za implementaciju"
+        },
+        "move_it_move_it/courseb/2023": {
+          "name": "Pomakni, pomakni"
+        },
+        "move_it_move_it_1/courseb/2023": {
+          "name": "Pomakni, pomakni"
+        },
+        "move_it_move_it_2/courseb/2023": {
+          "name": "Pomakni, pomakni"
+        },
+        "move_it_move_it_3/courseb/2023": {
+          "name": "Pomakni, pomakni"
+        },
+        "pair_programming/courseb/2023": {
+          "name": "Programiranje u paru"
+        },
+        "getting_loopy/courseb/2023": {
+          "name": "Zapetljancije"
+        },
+        "getting_loopy_1/courseb/2023": {
+          "name": "Zapetljancije"
+        },
+        "getting_loopy_2/courseb/2023": {
+          "name": "Zapetljancije"
+        },
+        "getting_loopy_3/courseb/2023": {
+          "name": "Zapetljancije"
+        },
+        "the_big_event/courseb/2023": {
+          "name": "Veliki događaj"
+        },
+        "the_big_event_1/courseb/2023": {
+          "name": "Veliki događaj"
+        },
+        "the_big_event_2/courseb/2023": {
+          "name": "Veliki događaj"
+        },
+        "implementation_guide/coursec/2023": {
+          "name": "Vodič za implementaciju"
+        },
+        "my_robotic_friends/coursec/2023": {
+          "name": "Moji robotski prijatelji"
+        },
+        "my_robotic_friends_1/coursec/2023": {
+          "name": "Moji robotski prijatelji"
+        },
+        "my_robotic_friends_2/coursec/2023": {
+          "name": "Moji robotski prijatelji"
+        },
+        "my_robotic_friends_3/coursec/2023": {
+          "name": "Moji robotski prijatelji"
+        },
+        "my_robotic_friends_4/coursec/2023": {
+          "name": "Moji robotski prijatelji"
+        },
+        "pair_programming/coursec/2023": {
+          "name": "Programiranje u paru"
+        },
+        "the_big_event/coursec/2023": {
+          "name": "Veliki događaj"
+        },
+        "the_big_event_1/coursec/2023": {
+          "name": "Veliki događaj"
+        },
+        "the_big_event_2/coursec/2023": {
+          "name": "Veliki događaj"
+        },
+        "binary_bracelets/coursec/2023": {
+          "name": "Binarne narukvice"
+        },
+        "binary_bracelets_1/coursec/2023": {
+          "name": "Binarne narukvice"
+        },
+        "binary_bracelets_2/coursec/2023": {
+          "name": "Binarne narukvice"
+        },
+        "binary_bracelets_3/coursec/2023": {
+          "name": "Binarne narukvice"
+        },
+        "binary_bracelets_4/coursec/2023": {
+          "name": "Binarne narukvice"
+        },
+        "implementation_guide/coursed/2023": {
+          "name": "Vodič za implementaciju"
+        },
+        "graph_paper_programming/coursed/2023": {
+          "name": "Grafičko programiranje"
+        },
+        "graph_paper_programming_1/coursed/2023": {
+          "name": "Grafičko programiranje"
+        },
+        "graph_paper_programming_2/coursed/2023": {
+          "name": "Grafičko programiranje"
+        },
+        "graph_paper_programming_3/coursed/2023": {
+          "name": "Grafičko programiranje"
+        },
+        "graph_paper_programming_4/coursed/2023": {
+          "name": "Grafičko programiranje"
+        },
+        "graph_paper_programming_5/coursed/2023": {
+          "name": "Grafičko programiranje"
+        },
+        "pair_programming/coursed/2023": {
+          "name": "Programiranje u paru"
+        },
+        "relay_programming/coursed/2023": {
+          "name": "Odnosno programiranje"
+        },
+        "relay_programming_1/coursed/2023": {
+          "name": "Odnosno programiranje"
+        },
+        "relay_programming_2/coursed/2023": {
+          "name": "Odnosno programiranje"
+        },
+        "relay_programming_3/coursed/2023": {
+          "name": "Odnosno programiranje"
+        },
+        "relay_programming_4/coursed/2023": {
+          "name": "Odnosno programiranje"
+        },
+        "relay_programming_5/coursed/2023": {
+          "name": "Odnosno programiranje"
+        },
+        "conditionals_with_cards/coursed/2023": {
+          "name": "Uvjeti s kartama"
+        },
+        "conditionals_with_cards_1/coursed/2023": {
+          "name": "Uvjeti s kartama"
+        },
+        "conditionals_with_cards_2/coursed/2023": {
+          "name": "Uvjeti s kartama"
+        },
+        "conditionals_with_cards_3/coursed/2023": {
+          "name": "Uvjeti s kartama"
+        },
+        "conditionals_with_cards_4/coursed/2023": {
+          "name": "Uvjeti s kartama"
+        },
+        "implementation_guide/coursee/2023": {
+          "name": "Vodič za implementaciju"
+        },
+        "sprite_lab_documentation/coursee/2023": {
+          "name": "Dokumentacija za Lab likova"
+        },
+        "implementation_guide/coursef/2023": {
+          "name": "Vodič za implementaciju"
+        },
+        "sprite_lab_documentation_1/coursef/2023": {
+          "name": "Dokumentacija za Lab likova"
+        },
+        "sprite_lab_documentation/coursef/2023": {
+          "name": "Dokumentacija za Lab likova"
+        },
+        "ai_machine_learning/coursef/2023": {
+          "name": "AI: Strojno učenje"
+        },
+        "internet/coursef/2023": {
+          "name": "Internet"
+        },
+        "internet_1/coursef/2023": {
+          "name": "Internet"
+        },
+        "the_internet/coursef/2023": {
+          "name": "Internet"
+        },
+        "pair_programming/express/2023": {
+          "name": "Programiranje u paru"
+        },
+        "sprite_lab_documentation/express/2023": {
+          "name": "Dokumentacija za Lab likova"
+        },
+        "variables/express/2023": {
+          "name": "Varijable"
+        },
+        "pair_programming/pre-express/2023": {
+          "name": "Programiranje u paru"
+        },
         "ai-ml/oceans/unversioned": {
           "name": "AI: Strojno učenje"
         },

@@ -2122,7 +2122,114 @@ da-DK:
           du er færdig, skal du dele din simulering med andre. Del din besked om,
           hvad du tror, vi kan gøre for at hjælpe med at holde andre raske, når en
           virus kommer til byen. \n"
+      CourseF_outbreak_story2022_2022_pilot_-2022-2_2023:
+        content1: Beskrivelse her
+        markdown: "# Udbrud: Kod din egen simulation\n\n## Velkommen til Monster by!\nMonster
+          by var normalt et lykkeligt og sundt sted. Monstre i Monster byen elskede
+          at vandre rundt for at besøge deres venner. \n\n<img src=\"https://images.code.org/3b55881f776348c6eb32379e4cbd34e1-image-1603133896503.png\"
+          style=\"width:8%\"> <img src=\"https://images.code.org/3b55881f776348c6eb32379e4cbd34e1-image-1603133896503.png\"
+          style=\"width:8%\"> <img src=\"https://images.code.org/3b55881f776348c6eb32379e4cbd34e1-image-1603133896503.png\"
+          style=\"width:8%\"> <img src=\"https://images.code.org/3b55881f776348c6eb32379e4cbd34e1-image-1603133896503.png\"
+          style=\"width:8%\"> <img src=\"https://images.code.org/3b55881f776348c6eb32379e4cbd34e1-image-1603133896503.png\"
+          style=\"width:8%\"> <img src=\"https://images.code.org/3b55881f776348c6eb32379e4cbd34e1-image-1603133896503.png\"
+          style=\"width:8%\"> <img src=\"https://images.code.org/3b55881f776348c6eb32379e4cbd34e1-image-1603133896503.png\"
+          style=\"width:8%\"> <img src=\"https://images.code.org/3b55881f776348c6eb32379e4cbd34e1-image-1603133896503.png\"
+          style=\"width:8%\"> <img src=\"https://images.code.org/3b55881f776348c6eb32379e4cbd34e1-image-1603133896503.png\"
+          style=\"width:8%\"> <img src=\"https://images.code.org/3b55881f776348c6eb32379e4cbd34e1-image-1603133896503.png\"
+          style=\"width:8%\"> <img src=\"https://images.code.org/3b55881f776348c6eb32379e4cbd34e1-image-1603133896503.png\"
+          style=\"width:8%\">\n\nEn dag begyndte en af monstrene at blive syg. Monsteret
+          havde fanget en **virus**! En virus er en lille kim, der kan gøre dig syg.
+          De andre monstre var ikke så bekymrede. De blev ved med at besøge deres
+          venner.\n\n<img src=\"https://images.code.org/3b55881f776348c6eb32379e4cbd34e1-image-1603133896503.png\"
+          style=\"width:8%\"> <img src=\"https://images.code.org/3b55881f776348c6eb32379e4cbd34e1-image-1603133896503.png\"
+          style=\"width:8%\"> <img src=\"https://images.code.org/3b55881f776348c6eb32379e4cbd34e1-image-1603133896503.png\"
+          style=\"width:8%\"> <img src=\"https://images.code.org/3b55881f776348c6eb32379e4cbd34e1-image-1603133896503.png\"
+          style=\"width:8%\"> <img src=\"https://images.code.org/3b55881f776348c6eb32379e4cbd34e1-image-1603133896503.png\"
+          style=\"width:8%\"> <img src=\"https://images.code.org/f30010a430a4189a734467094842b39d-image-1603134238257.png\"
+          style=\"width:8%\"> <img src=\"https://images.code.org/3b55881f776348c6eb32379e4cbd34e1-image-1603133896503.png\"
+          style=\"width:8%\"> <img src=\"https://images.code.org/3b55881f776348c6eb32379e4cbd34e1-image-1603133896503.png\"
+          style=\"width:8%\"> <img src=\"https://images.code.org/3b55881f776348c6eb32379e4cbd34e1-image-1603133896503.png\"
+          style=\"width:8%\"> <img src=\"https://images.code.org/3b55881f776348c6eb32379e4cbd34e1-image-1603133896503.png\"
+          style=\"width:8%\"> <img src=\"https://images.code.org/3b55881f776348c6eb32379e4cbd34e1-image-1603133896503.png\"
+          style=\"width:8%\">\n\nKort efter blev yderligere to monstre syge. Det var
+          den samme virus! Det ser ud til, at de fik virussen fra deres ven.\n\n<img
+          src=\"https://images.code.org/3b55881f776348c6eb32379e4cbd34e1-image-1603133896503.png\"
+          style=\"width:8%\"> <img src=\"https://images.code.org/3b55881f776348c6eb32379e4cbd34e1-image-1603133896503.png\"
+          style=\"width:8%\"> <img src=\"https://images.code.org/3b55881f776348c6eb32379e4cbd34e1-image-1603133896503.png\"
+          style=\"width:8%\"> <img src=\"https://images.code.org/3b55881f776348c6eb32379e4cbd34e1-image-1603133896503.png\"
+          style=\"width:8%\"> <img src=\"https://images.code.org/f30010a430a4189a734467094842b39d-image-1603134238257.png\"
+          style=\"width:8%\"> <img src=\"https://images.code.org/f30010a430a4189a734467094842b39d-image-1603134238257.png\"
+          style=\"width:8%\"> <img src=\"https://images.code.org/f30010a430a4189a734467094842b39d-image-1603134238257.png\"
+          style=\"width:8%\"> <img src=\"https://images.code.org/3b55881f776348c6eb32379e4cbd34e1-image-1603133896503.png\"
+          style=\"width:8%\"> <img src=\"https://images.code.org/3b55881f776348c6eb32379e4cbd34e1-image-1603133896503.png\"
+          style=\"width:8%\"> <img src=\"https://images.code.org/3b55881f776348c6eb32379e4cbd34e1-image-1603133896503.png\"
+          style=\"width:8%\"> <img src=\"https://images.code.org/3b55881f776348c6eb32379e4cbd34e1-image-1603133896503.png\"
+          style=\"width:8%\">\n\nVirussen spredte sig langsomt til andre monstre,
+          der var i nærheden. De sunde monstre begyndte at bekymre sig om, at de alle
+          skulle blive syge. De syge monstre begyndte at bekymre sig om, at de ville
+          give virussen til alle andre.\n\n<img src=\"https://images.code.org/3b55881f776348c6eb32379e4cbd34e1-image-1603133896503.png\"
+          style=\"width:8%\"> <img src=\"https://images.code.org/3b55881f776348c6eb32379e4cbd34e1-image-1603133896503.png\"
+          style=\"width:8%\"> <img src=\"https://images.code.org/3b55881f776348c6eb32379e4cbd34e1-image-1603133896503.png\"
+          style=\"width:8%\"> <img src=\"https://images.code.org/f30010a430a4189a734467094842b39d-image-1603134238257.png\"
+          style=\"width:8%\"> <img src=\"https://images.code.org/f30010a430a4189a734467094842b39d-image-1603134238257.png\"
+          style=\"width:8%\"> <img src=\"https://images.code.org/f30010a430a4189a734467094842b39d-image-1603134238257.png\"
+          style=\"width:8%\"> <img src=\"https://images.code.org/f30010a430a4189a734467094842b39d-image-1603134238257.png\"
+          style=\"width:8%\"> <img src=\"https://images.code.org/f30010a430a4189a734467094842b39d-image-1603134238257.png\"
+          style=\"width:8%\"> <img src=\"https://images.code.org/3b55881f776348c6eb32379e4cbd34e1-image-1603133896503.png\"
+          style=\"width:8%\"> <img src=\"https://images.code.org/3b55881f776348c6eb32379e4cbd34e1-image-1603133896503.png\"
+          style=\"width:8%\"> <img src=\"https://images.code.org/3b55881f776348c6eb32379e4cbd34e1-image-1603133896503.png\"
+          style=\"width:8%\">\n\n\n<div style=\"display: inline-block\">\n<img src=\"https://images.code.org/89376b9ebd5fcee77545f13a7a444430-image-1603135356392.png\"
+          style=\"float:right; width:30%\">\n\n## Stop spredningen\nHeldigvis, efter
+          at have studeret virussen, gjorde naboerne til Monster byen en vigtig opdagelse.
+          De indså, at de var mindre tilbøjelige til at sprede virussen, hvis de bar
+          masker over munden. Med ansigtsmasker på var syge monstre mindre tilbøjelige
+          til at give virussen til sunde monstre.\n\n<img src=\"https://images.code.org/c98f28f9bf6a027143592109d59ee484-image-1603134766360.png\"
+          style=\"width:8%\"> <img src=\"https://images.code.org/bac9dbfaf1815c6627fc24e8e6db396d-image-1603134760456.png\"
+          style=\"width:8%\">\n\n</div>\n\n<img src=\"https://images.code.org/ef7499758496b39bcccc24aabd2af5d7-image-1603137920037.2020-10-19
+          16_04_58.gif\" style=\"float:left; width:25%; padding-right:25px\">\n\n##
+          Hvad sker der derefter?\n\nI dag skal du skrive koder for at oprette og
+          køre din egen ** simulering ** af virusudbruddet i Monster by. En simulering
+          er en computermodel af en proces eller et system. Lær at kode og forudsige,
+          hvad der vil ske med naboerne til Monster by.\n\n<img src=\"https://images.code.org/fcbfd250d58652bdfd6393ec4f2fe2dd-image-1603134705074.png\"
+          style=\"float:right; width:15%\">\n\n* * Hvor hurtigt spredes virussen?
+          *\n\n* * Bliver alle syge? *\n\n* * Hvordan vil ansigtsmasker hjælpe? *\n\n\nNår
+          du er færdig, skal du dele din simulering med andre. Del din besked om,
+          hvad du tror, vi kan gøre for at hjælpe med at holde andre raske, når en
+          virus kommer til byen. \n"
       CourseF_outbreak_story22022_2022_pilot_-2022-2:
+        content1: Beskrivelse her
+        markdown: "# Udbrud: tænker som en videnskabsmand\n\n<img src=\"https://images.code.org/89376b9ebd5fcee77545f13a7a444430-image-1603135356392.png\"
+          style=\"float:right; width:30%\">\n\nSimuleringer er en fantastisk måde
+          at lære ting, der kan være svære at observere i den virkelige verden. De
+          hjælper forskere med at løse problemer og teste nye ideer sikkert og effektivt.
+          Din simulering er en måde at vise, hvordan et virusudbrud i Monster byen
+          kan se ud.\n\n## Nulstil og afspil igen!\nSelv når du selv skriver koden,
+          er det umuligt at vide nøjagtigt, hvad der vil ske, når du trykker på kør.
+          Monstrene vandrer tilfældigt, så du ved ikke, om virussen spredes hurtigt
+          eller langsomt. Når du ændrer din kode, skal du sørge for at køre din simulering
+          mere end en gang. Ting sker ikke på samme måde to gange!\n\n## Indsamling
+          af data\nPrøv at skrive dine observationer ned, mens du kører din simulering.
+          Du kan tælle antallet af monstre, der bliver syge, eller bruge en timer
+          til at se, hvor hurtigt ting sker. For eksempel, hvor lang tid tager det
+          normalt for alle monstre at blive syge, hvis ingen har masker? \n\n## Forudsigelser\nHvis
+          du forstår din model, kan du bruge den til at forudsige. Du kan endda ændre,
+          hvordan din simulering kører, og gætte, hvad der vil ske anderledes. For
+          eksempel:\n* Hvad ville der ske, hvis der var dobbelt så mange monstre?\n*
+          Hvad ville der ske, hvis monstrene bevægede sig med halv hastighed?\n\n<img
+          src=\"https://images.code.org/2e83373ffd346ce3f42917a0624d441c-image-1603749526420.png\"
+          style=\"float:right\">\n\n## Er Monster by som den virkelige verden?\nDer
+          er en grænse for, hvor realistisk enhver model kan være. \n* Hvad har din
+          udbrudssimulation til fælles med virusudbrud i den virkelige verden?\n*
+          Hvad er forskellene?\nNår du er færdig med denne aktivitet, skal du diskutere
+          disse spørgsmål med lærere eller din familie!\n\n## Hvad mere kan vi modellere?\nDu
+          har allerede oprettet en arbejdsmodel af udbruddet i Monster byen. Hvad
+          er de ting, din simulering ikke kan gøre eller vise, som du ønsker, at den
+          kunne? Tryk på Fortsæt for at fortsætte og lære at modellere endnu mere:\n*
+          Forøge antallet af monstre i simuleringen\n* Hjælp monstre med at komme
+          sig efter virussen\n* Sandsynlighed, immunitet, vacciner og meget mere!\n\nDu
+          kan også dele din simuleringsmodel med andre eller dele en besked om, hvad
+          du tror, vi kan gøre for at holde andre raske, når en virus kommer til byen.\n"
+      CourseF_outbreak_story22022_2022_pilot_-2022-2_2023:
         content1: Beskrivelse her
         markdown: "# Udbrud: tænker som en videnskabsmand\n\n<img src=\"https://images.code.org/89376b9ebd5fcee77545f13a7a444430-image-1603135356392.png\"
           style=\"float:right; width:30%\">\n\nSimuleringer er en fantastisk måde
@@ -3005,6 +3112,14 @@ da-DK:
         - {}
         questions:
         - {}
+      courseC_multi_artist_prog6_predict12022_2023:
+        answers:
+        - {}
+        - {}
+        - correct: true
+        - {}
+        questions:
+        - {}
       courseC_multi_artist_prog6_predict1_2018:
         answers:
         - {}
@@ -3047,6 +3162,15 @@ da-DK:
         questions:
         - {}
       courseC_multi_harvester_loops11_predict12022:
+        answers:
+        - text: '4'
+        - correct: true
+          text: '12'
+        - text: '15'
+        - text: '20'
+        questions:
+        - {}
+      courseC_multi_harvester_loops11_predict12022_2023:
         answers:
         - text: '4'
         - correct: true
@@ -3107,6 +3231,14 @@ da-DK:
         - {}
         questions:
         - {}
+      courseC_multi_maze_debugging8_predict12022_2023:
+        answers:
+        - {}
+        - correct: true
+        - {}
+        - {}
+        questions:
+        - {}
       courseC_multi_maze_debugging8_predict1_2018:
         answers:
         - {}
@@ -3148,6 +3280,14 @@ da-DK:
         questions:
         - {}
       courseC_multi_maze_programming8_predict12022:
+        answers:
+        - {}
+        - correct: true
+        - {}
+        - {}
+        questions:
+        - {}
+      courseC_multi_maze_programming8_predict12022_2023:
         answers:
         - {}
         - correct: true
@@ -3203,6 +3343,14 @@ da-DK:
         - {}
         questions:
         - {}
+      courseC_multi_starWars_predict12022_2023:
+        answers:
+        - {}
+        - {}
+        - correct: true
+        - {}
+        questions:
+        - {}
       courseC_multi_starWars_predict1_2018:
         answers:
         - {}
@@ -3251,6 +3399,14 @@ da-DK:
         - {}
         questions:
         - {}
+      courseC_multi_starWars_predict22022_2023:
+        answers:
+        - {}
+        - correct: true
+        - {}
+        - {}
+        questions:
+        - {}
       courseC_multi_starWars_predict2_2018:
         answers:
         - {}
@@ -3284,6 +3440,9 @@ da-DK:
         questions:
         - {}
       courseD_EOC2022:
+        description: Du er kommet til den sidste lektion i Kursus D!. Vælg et projekt
+          at starte med.
+      courseD_EOC2022_2023:
         description: Du er kommet til den sidste lektion i Kursus D!. Vælg et projekt
           at starte med.
       courseD_EOC_2020:
@@ -3346,6 +3505,15 @@ da-DK:
         - {}
         questions:
         - {}
+      courseD_multi_artist_nestedLoops9_predict12022_2023:
+        answers:
+        - correct: true
+          text: A
+        - text: B
+        - text: C
+        - {}
+        questions:
+        - {}
       courseD_multi_artist_nestedLoops9_predict1_2018:
         answers:
         - correct: true
@@ -3391,6 +3559,14 @@ da-DK:
         questions:
         - {}
       courseD_multi_bee_conditionals1_predict12022:
+        answers:
+        - {}
+        - correct: true
+        - {}
+        - {}
+        questions:
+        - {}
+      courseD_multi_bee_conditionals1_predict12022_2023:
         answers:
         - {}
         - correct: true
@@ -3462,6 +3638,14 @@ da-DK:
         - {}
         questions:
         - {}
+      courseD_multi_bee_conditionals7_predict22022_2023:
+        answers:
+        - correct: true
+        - {}
+        - {}
+        - {}
+        questions:
+        - {}
       courseD_multi_bee_conditionals7_predict2_2018:
         answers:
         - correct: true
@@ -3503,6 +3687,14 @@ da-DK:
         questions:
         - {}
       courseD_multi_bee_nestedLoops2_predict12022:
+        answers:
+        - {}
+        - {}
+        - correct: true
+        - {}
+        questions:
+        - {}
+      courseD_multi_bee_nestedLoops2_predict12022_2023:
         answers:
         - {}
         - {}
@@ -3552,6 +3744,15 @@ da-DK:
         questions:
         - {}
       courseD_multi_bee_nestedLoops9_predict22022:
+        answers:
+        - text: '4'
+        - correct: true
+          text: '8'
+        - text: '10'
+        - text: '12'
+        questions:
+        - {}
+      courseD_multi_bee_nestedLoops9_predict22022_2023:
         answers:
         - text: '4'
         - correct: true
@@ -3620,6 +3821,14 @@ da-DK:
         - {}
         questions:
         - {}
+      courseD_multi_farmer_condLoops9_predict12022_2023:
+        answers:
+        - {}
+        - {}
+        - correct: true
+        - {}
+        questions:
+        - {}
       courseD_multi_farmer_condLoops9_predict1_2018:
         answers:
         - {}
@@ -3676,6 +3885,14 @@ da-DK:
         - {}
         questions:
         - {}
+      courseD_multi_farmer_while10_predict22022_2023:
+        answers:
+        - {}
+        - correct: true
+        - {}
+        - {}
+        questions:
+        - {}
       courseD_multi_farmer_while10_predict2_2018:
         answers:
         - {}
@@ -3717,6 +3934,14 @@ da-DK:
         questions:
         - {}
       courseD_multi_farmer_while4_predict12022:
+        answers:
+        - {}
+        - {}
+        - correct: true
+        - {}
+        questions:
+        - {}
+      courseD_multi_farmer_while4_predict12022_2023:
         answers:
         - {}
         - {}
@@ -3772,6 +3997,14 @@ da-DK:
         - {}
         questions:
         - {}
+      courseD_multi_maze_until10_predict22022_2023:
+        answers:
+        - correct: true
+        - {}
+        - {}
+        - {}
+        questions:
+        - {}
       courseD_multi_maze_until10_predict2_2018:
         answers:
         - correct: true
@@ -3813,6 +4046,14 @@ da-DK:
         questions:
         - {}
       courseD_multi_maze_until2_predict12022:
+        answers:
+        - {}
+        - correct: true
+        - {}
+        - {}
+        questions:
+        - {}
+      courseD_multi_maze_until2_predict12022_2023:
         answers:
         - {}
         - correct: true
@@ -3892,6 +4133,14 @@ da-DK:
         - {}
         questions:
         - {}
+      courseE_multi_farmer_functions11_predict2022_2023:
+        answers:
+        - {}
+        - {}
+        - correct: true
+        - {}
+        questions:
+        - {}
       courseE_multi_farmer_functions11_predict_2018:
         answers:
         - {}
@@ -3933,6 +4182,14 @@ da-DK:
         questions:
         - {}
       courseE_prediction_artistFunction12022:
+        answers:
+        - {}
+        - {}
+        - {}
+        - correct: true
+        questions:
+        - {}
+      courseE_prediction_artistFunction12022_2023:
         answers:
         - {}
         - {}
@@ -3996,6 +4253,14 @@ da-DK:
         - {}
         questions:
         - {}
+      courseE_swim_fish_behavior_predict12022_2023:
+        answers:
+        - {}
+        - {}
+        - correct: true
+        - {}
+        questions:
+        - {}
       courseE_swim_fish_behavior_predict1_2021:
         answers:
         - {}
@@ -4044,7 +4309,23 @@ da-DK:
         - {}
         questions:
         - {}
+      courseF_events_predict_multi2022_2022_pilot_-2022-2_2023:
+        answers:
+        - {}
+        - {}
+        - correct: true
+        - {}
+        questions:
+        - {}
       courseF_groups_predict_multi_2022_pilot_-2022-2:
+        answers:
+        - correct: true
+        - {}
+        - {}
+        - {}
+        questions:
+        - {}
+      courseF_groups_predict_multi_2022_pilot_-2022-2_2023:
         answers:
         - correct: true
         - {}
@@ -4062,6 +4343,15 @@ da-DK:
         questions:
         - {}
       courseF_labels_predict_multi2022_2022_pilot_-2022-2:
+        answers:
+        - {}
+        - {}
+        - {}
+        - correct: true
+        - {}
+        questions:
+        - {}
+      courseF_labels_predict_multi2022_2022_pilot_-2022-2_2023:
         answers:
         - {}
         - {}
@@ -4119,6 +4409,14 @@ da-DK:
         questions:
         - {}
       courseF_multi_artist_variables3a_predict12022:
+        answers:
+        - correct: true
+        - {}
+        - {}
+        - {}
+        questions:
+        - {}
+      courseF_multi_artist_variables3a_predict12022_2023:
         answers:
         - correct: true
         - {}
@@ -4190,6 +4488,14 @@ da-DK:
         - {}
         questions:
         - {}
+      courseF_multi_bee_for3_predict12022_2023:
+        answers:
+        - {}
+        - correct: true
+        - {}
+        - {}
+        questions:
+        - {}
       courseF_multi_bee_for3_predict1_2018:
         answers:
         - {}
@@ -4254,6 +4560,14 @@ da-DK:
         - {}
         questions:
         - {}
+      courseF_sprites_predict_multi2022_2022_pilot_-2022-2_2023:
+        answers:
+        - {}
+        - correct: true
+        - {}
+        - {}
+        questions:
+        - {}
       courseF_variables2_predict2_multi2022_-2022-2:
         answers:
         - correct: true
@@ -4262,7 +4576,23 @@ da-DK:
         - {}
         questions:
         - {}
+      courseF_variables2_predict2_multi2022_-2022-2_2023:
+        answers:
+        - correct: true
+        - {}
+        - {}
+        - {}
+        questions:
+        - {}
       courseF_variables2_predict_multi2022_2022_pilot_-2022-2:
+        answers:
+        - {}
+        - {}
+        - correct: true
+        - {}
+        questions:
+        - {}
+      courseF_variables2_predict_multi2022_2022_pilot_-2022-2_2023:
         answers:
         - {}
         - {}
@@ -4286,9 +4616,19 @@ da-DK:
         - {}
         questions:
         - {}
+      courseF_variables_predict_multi2022_2022_pilot_-2022-2_2023:
+        answers:
+        - {}
+        - correct: true
+        - {}
+        - {}
+        questions:
+        - {}
       courseF_variables_stop:
         content1: Beskrivelse her
       courseF_variables_stop2022_2022_pilot_-2022-2:
+        content1: Beskrivelse her
+      courseF_variables_stop2022_2022_pilot_-2022-2_2023:
         content1: Beskrivelse her
       coursee_prediction_artistfunction2:
         answers:
@@ -4299,6 +4639,14 @@ da-DK:
         questions:
         - {}
       coursee_prediction_artistfunction22022:
+        answers:
+        - {}
+        - correct: true
+        - {}
+        - {}
+        questions:
+        - {}
+      coursee_prediction_artistfunction22022_2023:
         answers:
         - {}
         - correct: true
@@ -4338,6 +4686,41 @@ da-DK:
         - {}
         questions:
         - {}
+      csc_animal_adaptations_predict:
+        answers:
+        - {}
+        - correct: true
+        - {}
+        - {}
+        questions:
+        - {}
+      csc_ecosystems_matching_cfu:
+        answers:
+        - {}
+        - {}
+        - {}
+        questions:
+        - {}
+        - {}
+        - {}
+      csc_ecosystems_matching_conditionals:
+        answers:
+        - {}
+        - {}
+        - {}
+        questions:
+        - {}
+        - {}
+        - {}
+      csc_ecosystems_matching_events:
+        answers:
+        - {}
+        - {}
+        questions:
+        - {}
+        - {}
+      csc_timecapsule_info_2023:
+        content1: Beskrivelse her
       csd-post-survey-2017-q11_2018:
         answers:
         - correct: true
@@ -7474,17 +7857,23 @@ da-DK:
         content1: Beskrivelse her
       csf_be_a_super_digital_citizen2022:
         content1: Beskrivelse her
+      csf_be_a_super_digital_citizen2022_2023:
+        content1: Beskrivelse her
       csf_be_a_super_digital_citizen_2021:
         content1: Beskrivelse her
       csf_password_power-up:
         content1: Beskrivelse her
       csf_password_power-up2022:
         content1: Beskrivelse her
+      csf_password_power-up2022_2023:
+        content1: Beskrivelse her
       csf_password_power-up_2021:
         content1: Beskrivelse her
       csf_putting_a_stop_to_online_meanness:
         content1: Beskrivelse her
       csf_putting_a_stop_to_online_meanness2022:
+        content1: Beskrivelse her
+      csf_putting_a_stop_to_online_meanness2022_2023:
         content1: Beskrivelse her
       csf_putting_a_stop_to_online_meanness_2021:
         content1: Beskrivelse her
@@ -9021,6 +9410,14 @@ da-DK:
         questions:
         - {}
       grade2_multi_collector_A_predict12022:
+        answers:
+        - {}
+        - correct: true
+        - {}
+        - {}
+        questions:
+        - {}
+      grade2_multi_collector_A_predict12022_2023:
         answers:
         - {}
         - correct: true

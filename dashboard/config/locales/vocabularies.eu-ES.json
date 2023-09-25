@@ -185,6 +185,102 @@
         "debugging/pre-express/2022": {
           "word": "Arazketa"
         },
+        "code/csc-adaptations/2023": {
+          "word": "Kodea"
+        },
+        "code/csc-ecosystems/2023": {
+          "word": "Kodea"
+        },
+        "conditionals/csc-ecosystems/2023": {
+          "word": "Baldintzak"
+        },
+        "variable/csc-ecosystems/2023": {
+          "word": "Aldagaia"
+        },
+        "code/csc-mappinglandmarks/2023": {
+          "word": "Kodea"
+        },
+        "artist/csc-starquilts/2023": {
+          "word": "Artista"
+        },
+        "comments/csc-starquilts/2023": {
+          "word": "Iruzkinak"
+        },
+        "code/poetry/2023": {
+          "word": "Kodea"
+        },
+        "debugging/coursea/2023": {
+          "word": "Arazketa"
+        },
+        "drop/coursea/2023": {
+          "word": "Bota"
+        },
+        "debugging/courseb/2023": {
+          "word": "Arazketa"
+        },
+        "drop/courseb/2023": {
+          "word": "Bota"
+        },
+        "debugging/coursec/2023": {
+          "word": "Arazketa"
+        },
+        "data/coursec/2023": {
+          "word": "Datu"
+        },
+        "binary/coursec/2023": {
+          "word": "Bitarra"
+        },
+        "debugging/coursed/2023": {
+          "word": "Arazketa"
+        },
+        "conditionals/coursed/2023": {
+          "word": "Baldintzak"
+        },
+        "function/coursee/2023": {
+          "word": "Funtzioa"
+        },
+        "conditionals/coursee/2023": {
+          "word": "Baldintzak"
+        },
+        "copyright/coursee/2023": {
+          "word": "Egile-eskubideak"
+        },
+        "define/coursee/2023": {
+          "word": "Zehaztu"
+        },
+        "variable/coursef/2023": {
+          "word": "Aldagaia"
+        },
+        "input/coursef/2023": {
+          "word": "Sarrera"
+        },
+        "internet/coursef/2023": {
+          "word": "Internet"
+        },
+        "define/coursef/2023": {
+          "word": "Zehaztu"
+        },
+        "debugging/express/2023": {
+          "word": "Arazketa"
+        },
+        "conditionals/express/2023": {
+          "word": "Baldintzak"
+        },
+        "function/express/2023": {
+          "word": "Funtzioa"
+        },
+        "variable/express/2023": {
+          "word": "Aldagaia"
+        },
+        "define/express/2023": {
+          "word": "Zehaztu"
+        },
+        "drop/pre-express/2023": {
+          "word": "Bota"
+        },
+        "debugging/pre-express/2023": {
+          "word": "Arazketa"
+        },
         "conditionals/aquatic/unversioned": {
           "word": "Baldintzak"
         },

@@ -446,6 +446,132 @@
         "variables/express/2022": {
           "name": "চলকগুলো"
         },
+        "implementation_guide/coursea/2023": {
+          "name": "বাস্তবায়নের নির্দেশ"
+        },
+        "happy_maps/coursea/2023": {
+          "name": "আনন্দের মানচিত্র"
+        },
+        "the_big_event/coursea/2023": {
+          "name": "বড় ঘটনা"
+        },
+        "the_big_event_1/coursea/2023": {
+          "name": "বড় ঘটনা"
+        },
+        "the_big_event_2/coursea/2023": {
+          "name": "বড় ঘটনা"
+        },
+        "implementation_guide/courseb/2023": {
+          "name": "বাস্তবায়নের নির্দেশ"
+        },
+        "the_big_event/courseb/2023": {
+          "name": "বড় ঘটনা"
+        },
+        "the_big_event_1/courseb/2023": {
+          "name": "বড় ঘটনা"
+        },
+        "the_big_event_2/courseb/2023": {
+          "name": "বড় ঘটনা"
+        },
+        "implementation_guide/coursec/2023": {
+          "name": "বাস্তবায়নের নির্দেশ"
+        },
+        "my_robotic_friends/coursec/2023": {
+          "name": "আমার রোবোটিক্স বন্ধুরা"
+        },
+        "my_robotic_friends_1/coursec/2023": {
+          "name": "আমার রোবোটিক্স বন্ধুরা"
+        },
+        "my_robotic_friends_2/coursec/2023": {
+          "name": "আমার রোবোটিক্স বন্ধুরা"
+        },
+        "my_robotic_friends_3/coursec/2023": {
+          "name": "আমার রোবোটিক্স বন্ধুরা"
+        },
+        "my_robotic_friends_4/coursec/2023": {
+          "name": "আমার রোবোটিক্স বন্ধুরা"
+        },
+        "the_big_event/coursec/2023": {
+          "name": "বড় ঘটনা"
+        },
+        "the_big_event_1/coursec/2023": {
+          "name": "বড় ঘটনা"
+        },
+        "the_big_event_2/coursec/2023": {
+          "name": "বড় ঘটনা"
+        },
+        "implementation_guide/coursed/2023": {
+          "name": "বাস্তবায়নের নির্দেশ"
+        },
+        "graph_paper_programming/coursed/2023": {
+          "name": "ছক-কাগজে প্রোগ্রামিং"
+        },
+        "graph_paper_programming_1/coursed/2023": {
+          "name": "ছক-কাগজে প্রোগ্রামিং"
+        },
+        "graph_paper_programming_2/coursed/2023": {
+          "name": "ছক-কাগজে প্রোগ্রামিং"
+        },
+        "graph_paper_programming_3/coursed/2023": {
+          "name": "ছক-কাগজে প্রোগ্রামিং"
+        },
+        "graph_paper_programming_4/coursed/2023": {
+          "name": "ছক-কাগজে প্রোগ্রামিং"
+        },
+        "graph_paper_programming_5/coursed/2023": {
+          "name": "ছক-কাগজে প্রোগ্রামিং"
+        },
+        "relay_programming/coursed/2023": {
+          "name": "রিলে-স্যুইচ প্রোগ্রামিং"
+        },
+        "relay_programming_1/coursed/2023": {
+          "name": "রিলে-স্যুইচ প্রোগ্রামিং"
+        },
+        "relay_programming_2/coursed/2023": {
+          "name": "রিলে-স্যুইচ প্রোগ্রামিং"
+        },
+        "relay_programming_3/coursed/2023": {
+          "name": "রিলে-স্যুইচ প্রোগ্রামিং"
+        },
+        "relay_programming_4/coursed/2023": {
+          "name": "রিলে-স্যুইচ প্রোগ্রামিং"
+        },
+        "relay_programming_5/coursed/2023": {
+          "name": "রিলে-স্যুইচ প্রোগ্রামিং"
+        },
+        "conditionals_with_cards/coursed/2023": {
+          "name": "কার্ড সঙ্গে শর্ত"
+        },
+        "conditionals_with_cards_1/coursed/2023": {
+          "name": "কার্ড সঙ্গে শর্ত"
+        },
+        "conditionals_with_cards_2/coursed/2023": {
+          "name": "কার্ড সঙ্গে শর্ত"
+        },
+        "conditionals_with_cards_3/coursed/2023": {
+          "name": "কার্ড সঙ্গে শর্ত"
+        },
+        "conditionals_with_cards_4/coursed/2023": {
+          "name": "কার্ড সঙ্গে শর্ত"
+        },
+        "implementation_guide/coursee/2023": {
+          "name": "বাস্তবায়নের নির্দেশ"
+        },
+        "implementation_guide/coursef/2023": {
+          "name": "বাস্তবায়নের নির্দেশ"
+        },
+        "internet/coursef/2023": {
+          "name": "ইন্টারনেট"
+        },
+        "internet_1/coursef/2023": {
+          "name": "ইন্টারনেট"
+        },
+        "the_internet/coursef/2023": {
+          "name": "ইন্টারনেট"
+        },
+        "variables/express/2023": {
+          "name": "চলকগুলো"
+        },
         "list_of_poems_1/poem-art/unversioned": {
           "name": "",
           "url": "",
