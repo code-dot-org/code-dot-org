@@ -6,7 +6,7 @@ Blockly is a web-based, graphical programming editor. Users can drag blocks toge
 and a small army of translators.
 
 - [Quick Start](#quick-start)
-- [Running Tests](#running-tests)
+- [Running Tests](#testing)
 - [Contributing](#contributing)
 
 ## Quick Start
@@ -67,14 +67,6 @@ yarn build
 See also: [Full build with blockly changes](#full-build-with-blockly-changes)
 
 ## Testing
-### Running tests
-
-```
-yarn test
-```
-
-- This is run by Drone CI when you create a pull request.
-- Run `yarn build` before testing. If you don't, you'll see errors like `Module not found: Error: Can't resolve '../../../build/`.
 
 | To Run... | Example Command |
 | --- | --- |
@@ -90,6 +82,12 @@ yarn test
 | Stream pass/fail to stdout/stderr | `yarn test:unit --verbose` |
 | Rerun tests when files change | `yarn test:unit --watchTests` |
 | Debug tests in Chrome | `yarn test:unit --browser=Chrome --watchTests` |
+
+#### Testing Notes
+
+- `yarn test` is run by Drone CI when you create a pull request.
+- You'll need to run `yarn build` at least once before running tests. If you don't, you'll see errors like `Module not found: Error: Can't resolve '../../../build/`.
+- You probably don't need to keep running `yarn build` while fixing tests, `yarn test --watchTests` will watch and rebuild most test/ and src/ files for you.
 
 ### Debugging Tests
 
