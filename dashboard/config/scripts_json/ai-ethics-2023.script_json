@@ -12,7 +12,7 @@
     },
     "new_name": null,
     "family_name": "ai-ethics",
-    "serialized_at": "2023-09-15 23:22:32 UTC",
+    "serialized_at": "2023-09-22 23:20:01 UTC",
     "published_state": "in_development",
     "instruction_type": "teacher_led",
     "instructor_audience": "teacher",
@@ -218,18 +218,8 @@
       }
     },
     {
-      "key": "cf27b526-62a8-441d-babe-832a7d7387ed",
-      "position": 3,
-      "properties": {
-      },
-      "seeding_key": {
-        "activity_section.key": "cf27b526-62a8-441d-babe-832a7d7387ed",
-        "lesson_activity.key": "691fbd8a-5729-420b-9593-74e1ccb13e2a"
-      }
-    },
-    {
       "key": "24da4d9a-3535-4e33-9cc7-dd723720e098",
-      "position": 4,
+      "position": 3,
       "properties": {
         "description": "<i class=\"fa fa-comments\" aria-hidden=\"true\"></i> **Prompt:** The Internet has been one of the greatest technological innovations in the last century. What are ways it has been helpful towards society? What are ways it has been harmful?",
         "tips": [
@@ -246,7 +236,7 @@
     },
     {
       "key": "3b890a2d-9635-4ae1-ba6f-9f2bc9e3db77",
-      "position": 5,
+      "position": 4,
       "properties": {
       },
       "seeding_key": {
@@ -256,7 +246,7 @@
     },
     {
       "key": "8beb2941-dd64-44f4-9e99-6149c445067a",
-      "position": 6,
+      "position": 5,
       "properties": {
         "description": "<i class=\"fa fa-lightbulb-o\" aria-hidden=\"true\"></i> **Discussion Goal:** Have students brainstorm individually, then share with a neighbor before regrouping. Call on students to share, keeping track of responses on the T-chart. \n\nStudents should be able to pull from news sources or lived experiences to populate the chart. If students struggle generating ideas, continue to the next slide which includes a few examples."
       },
@@ -267,7 +257,7 @@
     },
     {
       "key": "6be8b1be-05b2-4d26-aa0d-188288039047",
-      "position": 7,
+      "position": 6,
       "properties": {
       },
       "seeding_key": {
@@ -277,7 +267,7 @@
     },
     {
       "key": "85de25c7-c750-4c07-99e4-680d10487b72",
-      "position": 8,
+      "position": 7,
       "properties": {
         "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Display:** Show the slide with various news articles about the impact of the Internet on society. If you changed the prompt to a different technology, also update these slides."
       },
@@ -288,7 +278,7 @@
     },
     {
       "key": "d9416ebe-bfb8-4825-99dd-66db01e3c2e3",
-      "position": 9,
+      "position": 8,
       "properties": {
       },
       "seeding_key": {
@@ -298,7 +288,7 @@
     },
     {
       "key": "e180c1b6-6c75-4901-bd35-4b38c3ccf685",
-      "position": 10,
+      "position": 9,
       "properties": {
         "description": "Even though the Internet is a grand technological innovation, its legacy is complicated - in some cases, it's been incredibly helpful and beneficial to society. And in others, it's been harmful and detrimental to society. Technology can have a wide-range of impacts, sometimes beyond what was intended. Today, we're going to example another piece of technology and explore the impacts its having on society: Artificial Intelligence.",
         "remarks": true
@@ -425,7 +415,6 @@
       "key": "0e3ac94e-a466-40cc-b43b-1f3052a498d5",
       "position": 11,
       "properties": {
-        "description": "**Groups**: Place students in groups of three or four.",
         "duration": "15",
         "name": "Student Research & Reflection"
       },
@@ -448,7 +437,7 @@
       "key": "00f0ba89-cddd-45a1-9669-a2cd4b0b684f",
       "position": 13,
       "properties": {
-        "description": "<i class=\"fa fa-file-text-o\" aria-hidden=\"true\"></i> **Distribute:** **Distribute:** Digitally share the [r ai_research_areas/ai-ethics/2023]. This activity guide is designed to be used digitally so students can click the links and explore the online resources.\n\n\n"
+        "description": "<i class=\"fa fa-file-text-o\" aria-hidden=\"true\"></i> **Distribute:** Digitally share the [r ai_research_areas/ai-ethics/2023]. This activity guide is designed to be used digitally so students can click the links and explore the online resources.\n\n\n"
       },
       "seeding_key": {
         "activity_section.key": "00f0ba89-cddd-45a1-9669-a2cd4b0b684f",
@@ -459,7 +448,13 @@
       "key": "a45155ff-19af-43ac-bf11-6ca4001816f4",
       "position": 14,
       "properties": {
-        "description": "<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Read over the introduction on the activity guide. Have groups choose an area of specialization, encouraging groups to pick different topics if possible. Students should skim 2-3 articles on their topic."
+        "description": "<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Read over the introduction on the activity guide. Have students choose an area of specialization.",
+        "tips": [
+          {
+            "type": "teachingTip",
+            "markdown": "**Groups:** You could decide to have students work in groups for their research, with all students in the same group researching the same topic but reading different articles. This allows students to see a broader picture of the impact of their technology, especially when filling in the Research Reflection handout later."
+          }
+        ]
       },
       "seeding_key": {
         "activity_section.key": "a45155ff-19af-43ac-bf11-6ca4001816f4",
@@ -481,7 +476,7 @@
       "key": "a7d5069b-aa1c-4efa-a8d8-b58bd43a6c7b",
       "position": 16,
       "properties": {
-        "description": "<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Have students research their area with fellow group members, answering questions on the handout along the way. Have students only consider the front page of the reflection for now. Students can skim the longer articles for key ideas, take notes, pose additional questions, and use a search engine to investigate further if time permits."
+        "description": "<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Have students research their area with fellow group members, answering questions on the handout along the way. Make sure students only answer questions on the front of their reflection guide for now. \n\nEncourage students to look over 3-4 articles from their list, making sure at least one article comes from the \"Societal Impact\" section and at least one article comes from the \"Ethical Considerations\" section. Students can also do their own research, for example: looking up the \"Spotlight Person\" listed in each section. \n\nStudents can skim the longer articles for key ideas, take notes, pose additional questions, and use a search engine to investigate further if time permits."
       },
       "seeding_key": {
         "activity_section.key": "a7d5069b-aa1c-4efa-a8d8-b58bd43a6c7b",
@@ -1751,7 +1746,7 @@
     },
     {
       "name": "Research Reflection Guide",
-      "url": "https://docs.google.com/document/d/1FfAtafc2GTtWbLy7HM5NbUNYjoQwavLjTyZoXHdgQvY/edit",
+      "url": "https://docs.google.com/document/d/1YYw8n8HPq3WDx7l7ZfyDeAoMkUCSEIFZb1670RzwKZE/edit",
       "key": "research_reflection_guide",
       "properties": {
         "audience": "Student",
