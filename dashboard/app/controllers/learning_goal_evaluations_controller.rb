@@ -39,7 +39,7 @@ class LearningGoalEvaluationsController < ApplicationController
   end
 
   def get_or_create_evaluation
-    learning_goal_evaluation = LearningGoalEvaluation.find_or_create_by(
+    learning_goal_evaluation = LearningGoalEvaluation.find_or_create_by!(
       user_id: learning_goal_evaluation_params[:user_id],
       teacher_id: current_user.id,
       learning_goal_id: learning_goal_evaluation_params[:learning_goal_id]
