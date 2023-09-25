@@ -48,7 +48,7 @@ class RubricsControllerTest < ActionController::TestCase
     sign_in teacher
     post :submit_evaluations, params: {id: rubric.id, student_id: student.id}
     assert_response :success
-    assert_equal 2, LearningGoalEvaluation.where(user: student, teacher: teacher).where.not(submitted_at: nil).count
+    assert_equal 2, LearningGoalTeacherEvaluation.where(user: student, teacher: teacher).where.not(submitted_at: nil).count
   end
 
   test 'can only submit evaluations with same teacher_id as current_user' do
@@ -63,7 +63,7 @@ class RubricsControllerTest < ActionController::TestCase
     post :submit_evaluations, params: {id: rubric.id, student_id: student.id}
 
     assert_response :success
-    refute_nil LearningGoalEvaluation.find_by(user: student, teacher: teacher).submitted_at
-    assert_nil LearningGoalEvaluation.find_by(user: student, teacher: another_teacher).submitted_at
+    refute_nil LearningGoalTeacherEvaluation.find_by(user: student, teacher: teacher).submitted_at
+    assert_nil LearningGoalTeacherEvaluation.find_by(user: student, teacher: another_teacher).submitted_at
   end
 end

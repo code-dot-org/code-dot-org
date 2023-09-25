@@ -1813,7 +1813,7 @@ FactoryBot.define do
       after(:create) do |learning_goal, evaluator|
         evaluator.num_evaluations.times do
           create(
-            :learning_goal_evaluation,
+            :learning_goal_teacher_evaluation,
             learning_goal: learning_goal,
             teacher: evaluator.teacher,
             user: evaluator.student
