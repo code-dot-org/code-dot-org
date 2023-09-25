@@ -10,11 +10,19 @@
           "No": "Níl",
           "Yes": "Tá"
         },
+        "CSD U1 IO Pet Chooser 2_2023": {
+          "No": "Níl",
+          "Yes": "Tá"
+        },
         "CSD U1 IO Pet Chooser_2021": {
           "No": "Níl",
           "Yes": "Tá"
         },
         "CSD U1 IO Pet Chooser_2022": {
+          "No": "Níl",
+          "Yes": "Tá"
+        },
+        "CSD U1 IO Pet Chooser_2023": {
           "No": "Níl",
           "Yes": "Tá"
         },
@@ -25,6 +33,12 @@
           "text": "téacs"
         },
         "CSD U1 IO Story_2022": {
+          "City": "Cathair",
+          "Color": "Dath",
+          "Name": "Ainm",
+          "text": "téacs"
+        },
+        "CSD U1 IO Story_2023": {
           "City": "Cathair",
           "Color": "Dath",
           "Name": "Ainm",
@@ -74,12 +88,39 @@
           "8": "8",
           "9": "9"
         },
+        "CSD U1 processing bday_2023": {
+          "1": "1",
+          "10": "10",
+          "11": "11",
+          "12": "12",
+          "13": "13",
+          "14": "14",
+          "15": "15",
+          "16": "16",
+          "17": "17",
+          "18": "18",
+          "19": "19",
+          "2": "2",
+          "20": "20",
+          "3": "3",
+          "4": "4",
+          "5": "5",
+          "6": "6",
+          "7": "7",
+          "8": "8",
+          "9": "9"
+        },
         "CSD U1 processing fastest_2021": {
           "0": "0",
           "k": "k",
           "s": "s"
         },
         "CSD U1 processing fastest_2022": {
+          "0": "0",
+          "k": "k",
+          "s": "s"
+        },
+        "CSD U1 processing fastest_2023": {
           "0": "0",
           "k": "k",
           "s": "s"
@@ -130,16 +171,47 @@
           "9": "9",
           "text": "téacs"
         },
+        "CSD U1 processing guess_2023": {
+          "1": "1",
+          "10": "10",
+          "11": "11",
+          "12": "12",
+          "13": "13",
+          "14": "14",
+          "15": "15",
+          "16": "16",
+          "17": "17",
+          "18": "18",
+          "19": "19",
+          "2": "2",
+          "20": "20",
+          "3": "3",
+          "4": "4",
+          "5": "5",
+          "6": "6",
+          "7": "7",
+          "8": "8",
+          "9": "9",
+          "text": "téacs"
+        },
         "CSD U1 processing live_2021": {
           "bear": "béar"
         },
         "CSD U1 processing live_2022": {
           "bear": "béar"
         },
+        "CSD U1 processing live_2023": {
+          "cat": "cat",
+          "chicken": "sicín",
+          "dog": "madra"
+        },
         "CSD U1 processing npark_2021": {
           "Sorry!": "Mo leithscéal!"
         },
         "CSD U1 processing npark_2022": {
+          "Sorry!": "Mo leithscéal!"
+        },
+        "CSD U1 processing npark_2023": {
           "Sorry!": "Mo leithscéal!"
         },
         "CSD U1 processing writers_2021": {
@@ -186,10 +258,35 @@
           "8": "8",
           "9": "9"
         },
+        "CSD U1 processing writers_2023": {
+          "1": "1",
+          "10": "10",
+          "11": "11",
+          "12": "12",
+          "13": "13",
+          "14": "14",
+          "15": "15",
+          "16": "16",
+          "17": "17",
+          "18": "18",
+          "19": "19",
+          "2": "2",
+          "20": "20",
+          "3": "3",
+          "4": "4",
+          "5": "5",
+          "6": "6",
+          "7": "7",
+          "8": "8",
+          "9": "9"
+        },
         "CSD U1 storage friends_2021": {
           "Back": "Ar ais"
         },
         "CSD U1 storage friends_2022": {
+          "Back": "Ar ais"
+        },
+        "CSD U1 storage friends_2023": {
           "Back": "Ar ais"
         },
         "CSD U1 storage movies_2021": {
@@ -204,11 +301,21 @@
           "Yes": "Tá",
           "text": "téacs"
         },
+        "CSD U1 storage movies_2023": {
+          "No": "Níl",
+          "Star Wars": "Star Wars",
+          "Yes": "Tá",
+          "text": "téacs"
+        },
         "CSD U1 storage outfit_2021": {
           "black": "dubh",
           "green": "uaine"
         },
         "CSD U1 storage outfit_2022": {
+          "black": "dubh",
+          "green": "uaine"
+        },
+        "CSD U1 storage outfit_2023": {
           "black": "dubh",
           "green": "uaine"
         },
@@ -247,58 +354,154 @@
           "4": "4",
           "5": "5"
         },
+        "CSD U6 - Accelerometer - PB_2023": {
+          "0": "0"
+        },
         "CSD U6 - Accelerometer - PB_2222": {
           "0": "0"
+        },
+        "CSD U6 - Accelerometer - PB_mb2022": {
+          "0": "0"
+        },
+        "CSD U6 - Accelerometer - PD_2023": {
+          "You did it!": "Maith thú!"
         },
         "CSD U6 - Accelerometer - PD_2222": {
           "You did it!": "Maith thú!"
         },
+        "CSD U6 - Accelerometer - PF_2023": {
+          "0": "0"
+        },
         "CSD U6 - Accelerometer - PF_2222": {
           "0": "0"
         },
+        "CSD U6 - Accelerometer - PF_mb2022": {
+          "0": "0"
+        },
+        "CSD U6 - Accelerometer - SB2_mb2022": {
+          "Success!": "D'éirigh leis!"
+        },
+        "CSD U6 - Board Inputs - P_2023": {
+          "Success!": "D'éirigh leis!"
+        },
+        "CSD U6 - Board Inputs - PracC_mb2022": {
+          "Success!": "D'éirigh leis!"
+        },
+        "CSD U6 - Board Inputs - SB1_2023": {
+          "Success!": "D'éirigh leis!"
+        },
         "CSD U6 - Board Inputs - SB1_2222": {
+          "Success!": "D'éirigh leis!"
+        },
+        "CSD U6 - Board Inputs - SB1_mb2022": {
+          "Success!": "D'éirigh leis!"
+        },
+        "CSD U6 - Board Inputs - SB2_2023": {
           "Success!": "D'éirigh leis!"
         },
         "CSD U6 - Board Inputs - SB2_2222": {
           "Success!": "D'éirigh leis!"
         },
+        "CSD U6 - Board Inputs - SB2_mb2022": {
+          "Success!": "D'éirigh leis!"
+        },
+        "CSD U6 - Board Inputs - SB3_2023": {
+          "Success!": "D'éirigh leis!"
+        },
         "CSD U6 - Board Inputs - SB3_2222": {
           "Success!": "D'éirigh leis!"
+        },
+        "CSD U6 - Board Outputs - A_2023": {
+          "Happy": "Sona Sásta"
         },
         "CSD U6 - Board Outputs - A_2222": {
           "Happy": "Sona Sásta"
         },
+        "CSD U6 - Board Outputs - A_mb2022": {
+          "Age": "Aois",
+          "Happy": "Sona Sásta",
+          "Name": "Ainm"
+        },
+        "CSD U6 - Board Outputs - ChalC_mb2022": {
+          "No": "Níl",
+          "Yes": "Tá"
+        },
+        "CSD U6 - Board Outputs - P_2023": {
+          "Success!": "D'éirigh leis!"
+        },
         "CSD U6 - Board Outputs - P_2222": {
+          "Success!": "D'éirigh leis!"
+        },
+        "CSD U6 - Board Outputs - PracD_mb2022": {
+          "1": "1",
+          "2": "2",
+          "3": "3"
+        },
+        "CSD U6 - Board Outputs - SB1_2023": {
           "Success!": "D'éirigh leis!"
         },
         "CSD U6 - Board Outputs - SB1_2222": {
           "Success!": "D'éirigh leis!"
         },
+        "CSD U6 - Board Outputs - SB2_2023": {
+          "Success!": "D'éirigh leis!"
+        },
         "CSD U6 - Board Outputs - SB2_2222": {
           "Success!": "D'éirigh leis!"
+        },
+        "CSD U6 - Board Outputs - SB4_2023": {
+          "Fish": "Iasc"
         },
         "CSD U6 - Board Outputs - SB4_2222": {
           "Fish": "Iasc"
         },
+        "CSD U6 - Board Outputs - Setup_2023": {
+          "Success!": "D'éirigh leis!"
+        },
         "CSD U6 - Board Outputs - Setup_2222": {
+          "Success!": "D'éirigh leis!"
+        },
+        "CSD U6 - Board Outputs - Setup_mb2022": {
+          "Success!": "D'éirigh leis!"
+        },
+        "CSD U6 - Color LEDs - PracA_2023": {
           "Success!": "D'éirigh leis!"
         },
         "CSD U6 - Color LEDs - PracA_2222": {
           "Success!": "D'éirigh leis!"
         },
+        "CSD U6 - Color LEDs - SB2_2023": {
+          "Success!": "D'éirigh leis!"
+        },
         "CSD U6 - Color LEDs - SB2_2222": {
+          "Success!": "D'éirigh leis!"
+        },
+        "CSD U6 - Color LEDs - SB3_2023": {
           "Success!": "D'éirigh leis!"
         },
         "CSD U6 - Color LEDs - SB3_2222": {
           "Success!": "D'éirigh leis!"
         },
+        "CSD U6 - Color LEDs - SB4_2023": {
+          "Medium": "Meánleibhéal"
+        },
         "CSD U6 - Color LEDs - SB4_2222": {
           "Medium": "Meánleibhéal"
+        },
+        "CSD U6 - Combine Inputs - A_2023": {
+          "green": "uaine",
+          "left": "ar chlé",
+          "red": "dearg",
+          "right": "ar dheis"
         },
         "CSD U6 - Combine Inputs - A_2222": {
           "green": "uaine",
           "left": "ar chlé",
           "red": "dearg",
+          "right": "ar dheis"
+        },
+        "CSD U6 - Combine Inputs - A_mb2022": {
+          "left": "ar chlé",
           "right": "ar dheis"
         },
         "CSD U6 - Combine Inputs - CA_2022": {
@@ -308,20 +511,52 @@
           "short": "tamall gairid",
           "slow": "mall"
         },
+        "CSD U6 - Combine Inputs - CA_2023": {
+          "fast": "sciobtha",
+          "long": "tamall fada",
+          "on": "ann",
+          "short": "tamall gairid",
+          "slow": "mall"
+        },
+        "CSD U6 - Combine Inputs - ChalG_2023": {
+          "Blue": "Gorm",
+          "Green": "Uaine",
+          "Red": "Dearg"
+        },
         "CSD U6 - Combine Inputs - ChalG_2222": {
           "Blue": "Gorm",
           "Green": "Uaine",
           "Red": "Dearg"
         },
+        "CSD U6 - Combine Inputs - PracA_2023": {
+          "left": "ar chlé",
+          "right": "ar dheis"
+        },
         "CSD U6 - Combine Inputs - PracA_2222": {
           "left": "ar chlé",
           "right": "ar dheis"
+        },
+        "CSD U6 - Combine Inputs - PracC_2023": {
+          "blue": "gorm",
+          "green": "uaine"
         },
         "CSD U6 - Combine Inputs - PracC_2222": {
           "blue": "gorm",
           "green": "uaine"
         },
+        "CSD U6 - Combine Inputs - SB1_mb2022": {
+          "bottom row": "ina líne ag an mbun",
+          "top row": "ina líne ag an mbarr"
+        },
+        "CSD U6 - Combine Inputs - SB2_2023": {
+          "long": "tamall fada",
+          "short": "tamall gairid"
+        },
         "CSD U6 - Combine Inputs - SB2_2222": {
+          "long": "tamall fada",
+          "short": "tamall gairid"
+        },
+        "CSD U6 - Combine Inputs - SB3_2023": {
           "long": "tamall fada",
           "short": "tamall gairid"
         },
@@ -329,18 +564,47 @@
           "long": "tamall fada",
           "short": "tamall gairid"
         },
+        "CSD U6 - Combine Inputs - SB4_2023": {
+          "long": "tamall fada",
+          "short": "tamall gairid"
+        },
         "CSD U6 - Combine Inputs - SB4_2222": {
           "long": "tamall fada",
           "short": "tamall gairid"
+        },
+        "CSD U6 - Functions - P2C_2023": {
+          "Blue": "Gorm",
+          "Red": "Dearg"
         },
         "CSD U6 - Functions - P2C_2222": {
           "Blue": "Gorm",
           "Red": "Dearg"
         },
+        "CSD U6 - Functions - P2C_mb2022": {
+          "Blue": "Gorm",
+          "Red": "Dearg"
+        },
+        "CSD U6 - Functions - P_2023": {
+          "0": "0"
+        },
         "CSD U6 - Functions - P_2222": {
           "0": "0"
         },
+        "CSD U6 - Functions - P_mb2022": {
+          "0": "0"
+        },
+        "CSD U6 - Functions - SB7_2023": {
+          "0": "0"
+        },
         "CSD U6 - Functions - SB7_2222": {
+          "0": "0"
+        },
+        "CSD U6 - Functions - SB7_mb2022": {
+          "0": "0"
+        },
+        "CSD U6 - If Variables - ChalD_2023": {
+          "+": "+",
+          "-": "-",
           "0": "0"
         },
         "CSD U6 - If Variables - ChalD_2222": {
@@ -348,16 +612,54 @@
           "-": "-",
           "0": "0"
         },
+        "CSD U6 - If Variables - ChalD_mb2022": {
+          "+": "+",
+          "-": "-",
+          "0": "0"
+        },
+        "CSD U6 - If Variables - SB3_2023": {
+          "Name": "Ainm"
+        },
         "CSD U6 - If Variables - SB3_2222": {
           "Name": "Ainm"
+        },
+        "CSD U6 - If Variables - SB3_mb2022": {
+          "Name": "Ainm"
+        },
+        "CSD U6 - If Variables - SB4_2023": {
+          "0": "0"
         },
         "CSD U6 - If Variables - SB4_2222": {
           "0": "0"
         },
+        "CSD U6 - If Variables - SB4_mb2022": {
+          "0": "0"
+        },
+        "CSD U6 - Music - A_2023": {
+          "Happy": "Sona Sásta"
+        },
         "CSD U6 - Music - A_2222": {
           "Happy": "Sona Sásta"
         },
+        "CSD U6 - Music - ChalD_2023": {
+          "A": "A",
+          "B": "B",
+          "C": "C",
+          "D": "D",
+          "E": "O",
+          "F": "F",
+          "G": "G"
+        },
         "CSD U6 - Music - ChalD_2222": {
+          "A": "A",
+          "B": "B",
+          "C": "C",
+          "D": "D",
+          "E": "O",
+          "F": "F",
+          "G": "G"
+        },
+        "CSD U6 - Music - Piano_2023": {
           "A": "A",
           "B": "B",
           "C": "C",
@@ -375,7 +677,25 @@
           "F": "F",
           "G": "G"
         },
+        "CSD U6 - Music - SB1_2023": {
+          "A": "A",
+          "B": "B",
+          "C": "C",
+          "D": "D",
+          "E": "O",
+          "F": "F",
+          "G": "G"
+        },
         "CSD U6 - Music - SB1_2222": {
+          "A": "A",
+          "B": "B",
+          "C": "C",
+          "D": "D",
+          "E": "O",
+          "F": "F",
+          "G": "G"
+        },
+        "CSD U6 - Music - SB2.5_2023": {
           "A": "A",
           "B": "B",
           "C": "C",
@@ -393,6 +713,15 @@
           "F": "F",
           "G": "G"
         },
+        "CSD U6 - Music - SB3_2023": {
+          "A": "A",
+          "B": "B",
+          "C": "C",
+          "D": "D",
+          "E": "O",
+          "F": "F",
+          "G": "G"
+        },
         "CSD U6 - Music - SB3_2222": {
           "A": "A",
           "B": "B",
@@ -402,69 +731,198 @@
           "F": "F",
           "G": "G"
         },
+        "CSD U6 - Music - SB4_2023": {
+          "Success!": "D'éirigh leis!"
+        },
         "CSD U6 - Music - SB4_2222": {
           "Success!": "D'éirigh leis!"
+        },
+        "CSD U6 - Physical Input - A_2023": {
+          "1": "1",
+          "2": "2"
         },
         "CSD U6 - Physical Input - A_2222": {
           "1": "1",
           "2": "2"
         },
+        "CSD U6 - Physical Input - A_mb2022": {
+          "1": "1",
+          "2": "2"
+        },
+        "CSD U6 - Physical Input - ChalA_2023": {
+          "Success!": "D'éirigh leis!"
+        },
         "CSD U6 - Physical Input - ChalA_2222": {
+          "Success!": "D'éirigh leis!"
+        },
+        "CSD U6 - Physical Input - ChalA_mb2022": {
+          "Success!": "D'éirigh leis!"
+        },
+        "CSD U6 - Physical Input - ChalB_2023": {
           "Success!": "D'éirigh leis!"
         },
         "CSD U6 - Physical Input - ChalB_2222": {
           "Success!": "D'éirigh leis!"
         },
+        "CSD U6 - Physical Input - ChalB_mb2022": {
+          "Success!": "D'éirigh leis!"
+        },
+        "CSD U6 - Physical Input - ChalC_2023": {
+          "Success!": "D'éirigh leis!"
+        },
         "CSD U6 - Physical Input - ChalC_2222": {
           "Success!": "D'éirigh leis!"
+        },
+        "CSD U6 - Physical Input - ChalC_mb2022": {
+          "Success!": "D'éirigh leis!"
+        },
+        "CSD U6 - Physical Input - PA_2023": {
+          "0": "0",
+          "Score": "Scór"
         },
         "CSD U6 - Physical Input - PA_2222": {
           "0": "0",
           "Score": "Scór"
         },
+        "CSD U6 - Physical Input - PA_mb2022": {
+          "0": "0",
+          "Score": "Scór"
+        },
+        "CSD U6 - Physical Input - PC_2023": {
+          "Success!": "D'éirigh leis!"
+        },
         "CSD U6 - Physical Input - PC_2222": {
+          "Success!": "D'éirigh leis!"
+        },
+        "CSD U6 - Physical Input - PD_2023": {
           "Success!": "D'éirigh leis!"
         },
         "CSD U6 - Physical Input - PD_2222": {
           "Success!": "D'éirigh leis!"
         },
+        "CSD U6 - Physical Input - PD_mb2022": {
+          "Success!": "D'éirigh leis!"
+        },
+        "CSD U6 - Physical Input - SB1_2023": {
+          "Success!": "D'éirigh leis!"
+        },
         "CSD U6 - Physical Input - SB1_2222": {
+          "Success!": "D'éirigh leis!"
+        },
+        "CSD U6 - Physical Input - SB1_mb2022": {
+          "Success!": "D'éirigh leis!"
+        },
+        "CSD U6 - Physical Output - ChalA_2023": {
           "Success!": "D'éirigh leis!"
         },
         "CSD U6 - Physical Output - ChalA_2222": {
           "Success!": "D'éirigh leis!"
         },
+        "CSD U6 - Physical Output - ChalA_mb2022": {
+          "Success!": "D'éirigh leis!"
+        },
+        "CSD U6 - Physical Output - ChalB_2023": {
+          "Success!": "D'éirigh leis!"
+        },
         "CSD U6 - Physical Output - ChalB_2222": {
+          "Success!": "D'éirigh leis!"
+        },
+        "CSD U6 - Physical Output - ChalB_mb2022": {
+          "Success!": "D'éirigh leis!"
+        },
+        "CSD U6 - Physical Output - ChalC_2023": {
           "Success!": "D'éirigh leis!"
         },
         "CSD U6 - Physical Output - ChalC_2222": {
           "Success!": "D'éirigh leis!"
         },
+        "CSD U6 - Physical Output - ChalC_mb2022": {
+          "Success!": "D'éirigh leis!"
+        },
+        "CSD U6 - Physical Output - PB_2023": {
+          "Success!": "D'éirigh leis!"
+        },
         "CSD U6 - Physical Output - PB_2222": {
+          "Success!": "D'éirigh leis!"
+        },
+        "CSD U6 - Physical Output - PB_mb2022": {
+          "Success!": "D'éirigh leis!"
+        },
+        "CSD U6 - Physical Output - PC_2023": {
           "Success!": "D'éirigh leis!"
         },
         "CSD U6 - Physical Output - PC_2222": {
           "Success!": "D'éirigh leis!"
         },
+        "CSD U6 - Physical Output - PC_mb2022": {
+          "Success!": "D'éirigh leis!"
+        },
+        "CSD U6 - Physical Output - P_2023": {
+          "Success!": "D'éirigh leis!"
+        },
         "CSD U6 - Physical Output - P_2222": {
+          "Success!": "D'éirigh leis!"
+        },
+        "CSD U6 - Physical Output - P_mb2022": {
+          "Success!": "D'éirigh leis!"
+        },
+        "CSD U6 - Physical Output - SB1_2023": {
           "Success!": "D'éirigh leis!"
         },
         "CSD U6 - Physical Output - SB1_2222": {
           "Success!": "D'éirigh leis!"
         },
+        "CSD U6 - Physical Output - SB1_mb2022": {
+          "Success!": "D'éirigh leis!"
+        },
+        "CSD U6 - Physical Output - SB2.2_2023": {
+          "Success!": "D'éirigh leis!"
+        },
         "CSD U6 - Physical Output - SB2.2_2222": {
+          "Success!": "D'éirigh leis!"
+        },
+        "CSD U6 - Physical Output - SB2.2_mb2022": {
+          "Success!": "D'éirigh leis!"
+        },
+        "CSD U6 - Physical Output - SB2_2023": {
           "Success!": "D'éirigh leis!"
         },
         "CSD U6 - Physical Output - SB2_2222": {
           "Success!": "D'éirigh leis!"
         },
+        "CSD U6 - Physical Output - SB2_mb2022": {
+          "Success!": "D'éirigh leis!"
+        },
+        "CSD U6 - Screen Inputs - A_2023": {
+          "Name:": "Ainm:"
+        },
         "CSD U6 - Screen Inputs - A_2222": {
           "Name:": "Ainm:"
+        },
+        "CSD U6 - Screen Inputs - A_mb2022": {
+          "Name:": "Ainm:"
+        },
+        "CSD U6 - Screen Inputs - ChalB_2023": {
+          "Blue": "Gorm",
+          "Green": "Uaine",
+          "Red": "Dearg"
         },
         "CSD U6 - Screen Inputs - ChalB_2222": {
           "Blue": "Gorm",
           "Green": "Uaine",
           "Red": "Dearg"
+        },
+        "CSD U6 - Screen Inputs - ChalB_mb2022": {
+          "Blue": "Gorm",
+          "Green": "Uaine",
+          "Red": "Dearg"
+        },
+        "CSD U6 - Screen Inputs - P_2023": {
+          "Blue": "Gorm",
+          "Green": "Uaine",
+          "Name:": "Ainm:",
+          "Red": "Dearg",
+          "Save": "Sábháil"
         },
         "CSD U6 - Screen Inputs - P_2222": {
           "Blue": "Gorm",
@@ -473,20 +931,63 @@
           "Red": "Dearg",
           "Save": "Sábháil"
         },
+        "CSD U6 - Screen Inputs - P_mb2022": {
+          "Blue": "Gorm",
+          "Green": "Uaine",
+          "Name:": "Ainm:",
+          "Red": "Dearg",
+          "Save": "Sábháil"
+        },
+        "CSD U6 - Screen Inputs - PracD_2023": {
+          "0": "0"
+        },
         "CSD U6 - Screen Inputs - PracD_2222": {
+          "0": "0"
+        },
+        "CSD U6 - Screen Inputs - PracD_mb2022": {
           "0": "0"
         },
         "CSD U6 - Screen Inputs - SB2.1_2022": {
           "black": "dubh"
         },
+        "CSD U6 - Screen Inputs - SB2.1_2023": {
+          "black": "dubh"
+        },
+        "CSD U6 - Screen Inputs - SB2.1_mb2022": {
+          "black": "dubh"
+        },
         "CSD U6 - Screen Inputs - SB2.2_2022": {
           "black": "dubh"
+        },
+        "CSD U6 - Screen Inputs - SB2.2_2023": {
+          "black": "dubh"
+        },
+        "CSD U6 - Screen Inputs - SB2.2_mb2022": {
+          "black": "dubh"
+        },
+        "CSD U6 - Screen Outputs - ChalB_2023": {
+          "Happy": "Sona Sásta"
         },
         "CSD U6 - Screen Outputs - ChalB_2222": {
           "Happy": "Sona Sásta"
         },
+        "CSD U6 - Screen Outputs - ChalB_mb2022": {
+          "Happy": "Sona Sásta"
+        },
+        "CSD U6 - Screen Outputs - P_2023": {
+          "title": "teideal"
+        },
         "CSD U6 - Screen Outputs - P_2222": {
           "title": "teideal"
+        },
+        "CSD U6 - Screen Outputs - P_mb2022": {
+          "title": "teideal"
+        },
+        "CSD U6 - Screen Outputs - PracA_2023": {
+          "Blue": "Gorm",
+          "Green": "Uaine",
+          "Red": "Dearg",
+          "White": "Den chine geal"
         },
         "CSD U6 - Screen Outputs - PracA_2222": {
           "Blue": "Gorm",
@@ -494,26 +995,72 @@
           "Red": "Dearg",
           "White": "Den chine geal"
         },
+        "CSD U6 - Screen Outputs - PracA_mb2022": {
+          "Blue": "Gorm",
+          "Green": "Uaine",
+          "Red": "Dearg",
+          "White": "Den chine geal"
+        },
+        "CSD U6 - Screen Outputs - PracB_2023": {
+          "down": "síos",
+          "left": "ar chlé",
+          "right": "ar dheis",
+          "up": "suas"
+        },
         "CSD U6 - Screen Outputs - PracB_2222": {
           "down": "síos",
           "left": "ar chlé",
           "right": "ar dheis",
           "up": "suas"
         },
+        "CSD U6 - Screen Outputs - PracB_mb2022": {
+          "down": "síos",
+          "left": "ar chlé",
+          "right": "ar dheis",
+          "up": "suas"
+        },
+        "CSD U6 - Screen Outputs - SB1.1_2023": {
+          "name": "ainm"
+        },
         "CSD U6 - Screen Outputs - SB1.1_2222": {
           "name": "ainm"
         },
+        "CSD U6 - Screen Outputs - SB1.1_mb2022": {
+          "name": "ainm"
+        },
+        "CSD U6 - Sensors - A_2023": {
+          "0": "0"
+        },
         "CSD U6 - Sensors - A_2222": {
           "0": "0"
+        },
+        "CSD U6 - Sensors - A_mb2022": {
+          "0": "0"
+        },
+        "CSD U6 - Sensors - PC_2023": {
+          "off": "as",
+          "on": "ann"
         },
         "CSD U6 - Sensors - PC_2222": {
           "off": "as",
           "on": "ann"
         },
+        "CSD U6 - Sensors - P_2023": {
+          "text": "téacs"
+        },
         "CSD U6 - Sensors - P_2222": {
           "text": "téacs"
         },
+        "CSD U6 - Sensors - P_mb2022": {
+          "text": "téacs"
+        },
+        "CSD U6 - Sensors - SB2_2023": {
+          "Update": "Nuashonraigh"
+        },
         "CSD U6 - Sensors - SB2_2222": {
+          "Update": "Nuashonraigh"
+        },
+        "CSD U6 - Sensors - SB2_mb2022": {
           "Update": "Nuashonraigh"
         },
         "CSD U6 Driver pt 2": {
@@ -1019,7 +1566,13 @@
         "CSDU6 Circuit Playground Test_2021": {
           "Success!": "D'éirigh leis!"
         },
+        "CSDU6 Circuit Playground Test_2023": {
+          "Success!": "D'éirigh leis!"
+        },
         "CSDU6 Circuit Playground Test_2222": {
+          "Success!": "D'éirigh leis!"
+        },
+        "CSDU6 Circuit Playground Test_mb2022": {
           "Success!": "D'éirigh leis!"
         },
         "CSDU6 circuit playground piano": {
@@ -1094,6 +1647,12 @@
           "F": "F",
           "G": "G"
         },
+        "LLM - Written Voice Simulator_ai23": {
+          "Back": "Ar ais"
+        },
+        "U9L5 Cropping Widget_ai2023": {
+          "Reset": "Tosaigh arís"
+        },
         "allthethings design mode elements": {
           "text": "téacs"
         },
@@ -1112,11 +1671,18 @@
         "csd u5 recommender sample_2022": {
           "Start": "Tosaigh"
         },
+        "csd u5 recommender sample_2023": {
+          "Start": "Tosaigh"
+        },
         "csd-apps for good-2": {
           "Home": "Baile",
           "Next": "Ar Aghaidh"
         },
         "csd-apps for good-2_2022": {
+          "Home": "Baile",
+          "Next": "Ar Aghaidh"
+        },
+        "csd-apps for good-2_2023": {
           "Home": "Baile",
           "Next": "Ar Aghaidh"
         },
@@ -1132,11 +1698,21 @@
           "3": "3",
           "4": "4"
         },
+        "csd-apps for good-3_2023": {
+          "1": "1",
+          "2": "2",
+          "3": "3",
+          "4": "4"
+        },
         "csd-explore ui-2": {
           "Home": "Baile",
           "Next": "Ar Aghaidh"
         },
         "csd-explore ui-2_2022": {
+          "Home": "Baile",
+          "Next": "Ar Aghaidh"
+        },
+        "csd-explore ui-2_2023": {
           "Home": "Baile",
           "Next": "Ar Aghaidh"
         },
@@ -1184,10 +1760,35 @@
           "8": "8",
           "9": "9"
         },
+        "csd-explore ui-3_2023": {
+          "1": "1",
+          "10": "10",
+          "11": "11",
+          "12": "12",
+          "13": "13",
+          "14": "14",
+          "15": "15",
+          "16": "16",
+          "17": "17",
+          "18": "18",
+          "19": "19",
+          "2": "2",
+          "20": "20",
+          "3": "3",
+          "4": "4",
+          "5": "5",
+          "6": "6",
+          "7": "7",
+          "8": "8",
+          "9": "9"
+        },
         "csd-explore ui-4": {
           "Sorry!": "Mo leithscéal!"
         },
         "csd-explore ui-4_2022": {
+          "Sorry!": "Mo leithscéal!"
+        },
+        "csd-explore ui-4_2023": {
           "Sorry!": "Mo leithscéal!"
         },
         "csd-explore ui-5": {
@@ -1234,10 +1835,35 @@
           "8": "8",
           "9": "9"
         },
+        "csd-explore ui-5_2023": {
+          "1": "1",
+          "10": "10",
+          "11": "11",
+          "12": "12",
+          "13": "13",
+          "14": "14",
+          "15": "15",
+          "16": "16",
+          "17": "17",
+          "18": "18",
+          "19": "19",
+          "2": "2",
+          "20": "20",
+          "3": "3",
+          "4": "4",
+          "5": "5",
+          "6": "6",
+          "7": "7",
+          "8": "8",
+          "9": "9"
+        },
         "csd-explore ui-6": {
           "Next": "Ar Aghaidh"
         },
         "csd-explore ui-6_2022": {
+          "Next": "Ar Aghaidh"
+        },
+        "csd-explore ui-6_2023": {
           "Next": "Ar Aghaidh"
         },
         "ml-L2 supervised - green glass door-2021": {
@@ -1248,10 +1874,17 @@
           "Accepted": "Glactha",
           "Rejected": "Diúltaithe"
         },
+        "ml-L2 supervised - green glass door_2023": {
+          "Accepted": "Glactha",
+          "Rejected": "Diúltaithe"
+        },
         "ml-L2 unsupervised - 1-2021": {
           "Next": "Ar Aghaidh"
         },
         "ml-L2 unsupervised - 1_2022": {
+          "Next": "Ar Aghaidh"
+        },
+        "ml-L2 unsupervised - 1_2023": {
           "Next": "Ar Aghaidh"
         },
         "ml-customize-raspado-2021": {
@@ -1259,6 +1892,10 @@
           "yes": "tá"
         },
         "ml-customize-raspado_2022": {
+          "no": "níl",
+          "yes": "tá"
+        },
+        "ml-customize-raspado_2023": {
           "no": "níl",
           "yes": "tá"
         },
@@ -1270,10 +1907,17 @@
           "Continue": "Ar aghaidh",
           "Loading...": "Á lódáil..."
         },
+        "ml-intro ai lab- fruit veggie widget_2023": {
+          "Continue": "Ar aghaidh",
+          "Loading...": "Á lódáil..."
+        },
         "ml-intro app lab-book recommender demo-2021": {
           "Silly": "Pleidhciúil"
         },
         "ml-intro app lab-book recommender demo_2022": {
+          "Silly": "Pleidhciúil"
+        },
+        "ml-intro app lab-book recommender demo_2023": {
           "Silly": "Pleidhciúil"
         },
         "ml-model card-medical app v2 2021-2": {
@@ -1288,10 +1932,19 @@
           "no": "níl",
           "yes": "tá"
         },
+        "ml-model card-medical app v2 2021-2_2023": {
+          "A": "A",
+          "W": "I",
+          "no": "níl",
+          "yes": "tá"
+        },
         "ml-model cards-book recommender model card": {
           "Silly": "Pleidhciúil"
         },
         "ml-model cards-book recommender model card_2022": {
+          "Silly": "Pleidhciúil"
+        },
+        "ml-model cards-book recommender model card_2023": {
           "Silly": "Pleidhciúil"
         },
         "ml-models in applab-choice if quotes": {
@@ -1304,12 +1957,22 @@
           "2": "2",
           "3": "3"
         },
+        "ml-models in applab-choice if quotes_2023": {
+          "1": "1",
+          "2": "2",
+          "3": "3"
+        },
         "ml-models in applab-choice if wrong place": {
           "1": "1",
           "2": "2",
           "3": "3"
         },
         "ml-models in applab-choice if wrong place_2022": {
+          "1": "1",
+          "2": "2",
+          "3": "3"
+        },
+        "ml-models in applab-choice if wrong place_2023": {
           "1": "1",
           "2": "2",
           "3": "3"
@@ -1326,12 +1989,23 @@
           "3": "3",
           "Back": "Ar ais"
         },
+        "ml-models in applab-choice intended warnings_2023": {
+          "1": "1",
+          "2": "2",
+          "3": "3",
+          "Back": "Ar ais"
+        },
         "ml-models in applab-choice predict typos": {
           "1": "1",
           "2": "2",
           "3": "3"
         },
         "ml-models in applab-choice predict typos_2022": {
+          "1": "1",
+          "2": "2",
+          "3": "3"
+        },
+        "ml-models in applab-choice predict typos_2023": {
           "1": "1",
           "2": "2",
           "3": "3"
@@ -1346,11 +2020,20 @@
           "No": "Níl",
           "Yes": "Tá"
         },
+        "ml-models in applab-zoo assessment_2023": {
+          "B": "B",
+          "No": "Níl",
+          "Yes": "Tá"
+        },
         "ml-models in applab-zoo model embed": {
           "No": "Níl",
           "Yes": "Tá"
         },
         "ml-models in applab-zoo model embed_2022": {
+          "No": "Níl",
+          "Yes": "Tá"
+        },
+        "ml-models in applab-zoo model embed_2023": {
           "No": "Níl",
           "Yes": "Tá"
         },
@@ -1360,6 +2043,9 @@
         "ml-models-shoes decision tree_2022": {
           "Sports": "Spórt"
         },
+        "ml-models-shoes decision tree_2023": {
+          "Sports": "Spórt"
+        },
         "ml-use model card-example3A-2021": {
           "cloudy": "scamallach",
           "night": "oíche",
@@ -1367,6 +2053,12 @@
           "snow": "sneachta"
         },
         "ml-use model card-example3A_2022": {
+          "cloudy": "scamallach",
+          "night": "oíche",
+          "rain": "báisteach",
+          "snow": "sneachta"
+        },
+        "ml-use model card-example3A_2023": {
           "cloudy": "scamallach",
           "night": "oíche",
           "rain": "báisteach",
