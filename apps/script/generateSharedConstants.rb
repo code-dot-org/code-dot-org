@@ -92,6 +92,7 @@ def main
     RESTRICTED_PUBLISH_PROJECT_TYPES
     RUBRIC_UNDERSTANDING_LEVELS
     EMAIL_LINKS
+    CHILD_ACCOUNT_COMPLIANCE_STATES
   )
 
   generate_shared_js_file(shared_content, "#{REPO_DIR}/apps/src/util/sharedConstants.js")

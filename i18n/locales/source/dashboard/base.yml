@@ -66,6 +66,7 @@ en:
         gender: 'Gender'
         edit_header: 'Edit Account Details'
         finish_sign_up_header: 'Finish creating your account'
+        finish_sign_up_header_error: 'Please correct the following errors:'
         finish_sign_up_subheader: 'Fill out the following information to finish creating a Code.org account for <strong>%{email}</strong>.'
         finish_sign_up_subheader_markdown: 'Fill out the following information to finish creating a Code.org account for **%{email}**.'
         finish_sign_up_subheader_provider: 'Fill out the following information to finish creating a Code.org account with <strong>%{provider}</strong> for <strong>%{email}</strong>.'
@@ -73,6 +74,7 @@ en:
         reset_password_token: "The reset password link you have followed"
         error:
           future: can't be in the future
+        user_type: 'Account Type'
         us_state: 'State'
 
   beta: "beta"
