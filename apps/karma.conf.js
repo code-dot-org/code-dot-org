@@ -3,7 +3,6 @@ var webpackKarmaConfig = require('./webpackKarma.config');
 var envConstants = require('./envConstants');
 
 var path = require('path');
-var tty = require('tty');
 
 // We run all tests in the UTC timezone so datetimes don't vary by local timezone
 process.env.TZ = 'UTC';
@@ -17,15 +16,16 @@ process.env.BABEL_ENV = 'test';
 // Args are automatically available to tests: ./test/util/KARMA_CLI_FLAGS.js
 // Args are automatically passed on by grunt: e.g. `grunt karma --myarg=value`
 const karmaCliFlags = (config = {}) => ({
-  browser: config.browser || 'ChromeHeadless', // --browser
+  browser: config.browser || 'ChromeHeadless', // --browser=Chrome open in Chrome
   entry: config.entry
     ? './' + path.relative('./test/unit', config.entry)
-    : undefined, // --entry
-  grep: config.grep, // --grep
-  levelType: config.levelType, // --levelType
+    : undefined, // --entry=./test/unit/filename.js run the tests in filename.js
+  grep: config.grep, // --grep='clientApi' run tests whose name matches 'clientApi'
+  levelType: config.levelType, // --levelType=[maze|turtle|gamelab|etc...] run integrations tests for the given level
   port: config.port || 9876, // --port
-  testType: config.testType, // --testType
-  watchTests: config.watchTests, // --watchTests
+  testType: config.testType, // --testType=[unit|integration|storybook]
+  verbose: config.verbose, // --verbose streams test pass/fails as they happen
+  watchTests: config.watchTests, // --watchTests reruns tests on file changes
 });
 
 module.exports = function (config) {
@@ -124,9 +124,8 @@ module.exports = function (config) {
     },
 
     // test results reporter to use
-    // possible values: 'dots', 'progress'
-    // available reporters: https://npmjs.org/browse/keyword/karma-reporter
     reporters: [
+      //'spec',
       'mocha',
       ...(envConstants.DRONE ? ['junit', 'coverage-istanbul'] : []),
       ...(envConstants.COVERAGE ? ['coverage-istanbul'] : []),
@@ -146,7 +145,7 @@ module.exports = function (config) {
     },
 
     mochaReporter: {
-      output: envConstants.CDO_VERBOSE_TEST_OUTPUT ? 'full' : 'minimal',
+      output: KARMA_CLI_FLAGS.verbose ? 'autowatch' : 'minimal',
       showDiff: true,
     },
 
@@ -156,7 +155,7 @@ module.exports = function (config) {
     port: KARMA_CLI_FLAGS.port,
 
     // enable / disable colors in the output (reporters and logs)
-    colors: tty.isatty(process.stdout.fd),
+    colors: true,
 
     // level of logging
     // possible values: config.LOG_DISABLE || config.LOG_ERROR || config.LOG_WARN || config.LOG_INFO || config.LOG_DEBUG
