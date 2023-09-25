@@ -54,7 +54,7 @@ interface DanceAiProps {
   onClose: () => void;
 }
 
-const DanceAi: React.FunctionComponent<DanceAiProps> = ({onClose}) => {
+const DanceAiModal: React.FunctionComponent<DanceAiProps> = ({onClose}) => {
   const dispatch = useAppDispatch();
 
   const SLOT_COUNT = 3;
@@ -199,14 +199,14 @@ const DanceAi: React.FunctionComponent<DanceAiProps> = ({onClose}) => {
                   className={classNames('fa-pulse', 'fa-3x')}
                 />
                 <div className={moduleStyles.generatingMessageText}>
-                  Processing request
+                  Processing inputs...
                 </div>
               </div>
             )}
             {responseParams !== '' && (
               <div className={moduleStyles.generatingMessage}>
                 <div className={moduleStyles.generatingMessageText}>
-                  Processed request
+                  Ready to generate output!
                 </div>
               </div>
             )}
@@ -269,4 +269,4 @@ const DanceAi: React.FunctionComponent<DanceAiProps> = ({onClose}) => {
   );
 };
 
-export default DanceAi;
+export default DanceAiModal;

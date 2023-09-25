@@ -12,7 +12,7 @@ import {connect} from 'react-redux';
 import i18n from '@cdo/locale';
 import AgeDialog from '../templates/AgeDialog';
 import {getFilteredSongKeys, getFilterStatus} from '@cdo/apps/dance/songs';
-import DanceAi from './DanceAi';
+import DanceAiModal from './DanceAiModal';
 
 export const SongSelector = Radium(
   class extends React.Component {
@@ -139,7 +139,9 @@ class DanceVisualizationColumn extends React.Component {
           </GameButtons>
           <BelowVisualization />
           {this.props.showingAi && (
-            <DanceAi onClose={() => getStore().dispatch(setShowingAi(false))} />
+            <DanceAiModal
+              onClose={() => getStore().dispatch(setShowingAi(false))}
+            />
           )}
         </div>
       </div>
