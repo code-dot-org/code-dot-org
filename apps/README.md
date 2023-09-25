@@ -68,6 +68,8 @@ See also: [Full build with blockly changes](#full-build-with-blockly-changes)
 
 ## Testing
 
+Apps tests are run in a browser using [Karma](https://karma-runner.github.io/). By default they run inside a [headless chrome browser](https://developer.chrome.com/blog/headless-karma-mocha-chai/) but they can also be run in the browser of your choice. See below for information on [writing new tests](#writing-tests).
+
 | To Run... | Example Command |
 | --- | --- |
 | All tests in parallel | `yarn test` |
@@ -82,6 +84,7 @@ See also: [Full build with blockly changes](#full-build-with-blockly-changes)
 | Stream pass/fail to stdout/stderr | `yarn test:unit --verbose` |
 | Rerun tests when files change | `yarn test:unit --watchTests` |
 | Debug tests in Chrome | `yarn test:unit --browser=Chrome --watchTests` |
+| Directly invoke Karma (same flags) | `npx karma --testType=unit --browser=Chrome` |
 
 #### Testing Notes
 
