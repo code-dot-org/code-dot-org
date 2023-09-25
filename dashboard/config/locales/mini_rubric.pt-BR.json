@@ -2,11 +2,106 @@
   "pt-BR": {
     "data": {
       "mini_rubric": {
+        "CSD U2 HTML Adding Paragraphs pt 2_2019": {
+          "rubric_key_concept": "Use HTML para criar uma página da web que inclua cabeçalhos hierárquicos, parágrafos, listas e imagens; entenda a necessidade por precisão ao usar linguagens de computação e use a sintaxe apropriada.\n",
+          "rubric_performance_level_1": "Todos os textos estão contidos em tags de parágrafo. Há pelo menos dois parágrafos criados com o uso adequado das tags de parágrafo.",
+          "rubric_performance_level_2": "Pelo menos algum texto foi separado em um parágrafo por meio do uso adequado de tags de parágrafo.",
+          "rubric_performance_level_3": "Há pelo menos uma tag de parágrafo no texto, mas ela pode não ser ter sido corretamente (por exemplo, falta de tag de fechamento, parágrafos criados fora do elemento do corpo).",
+          "rubric_performance_level_4": "Não há tags de parágrafo no texto."
+        },
+        "CSD U2 HTML Adding Paragraphs pt 2_2021": {
+          "rubric_key_concept": "Use HTML para criar uma página da web que inclua cabeçalhos hierárquicos, parágrafos, listas e imagens; entenda a necessidade por precisão ao usar linguagens de computação e use a sintaxe apropriada.\n",
+          "rubric_performance_level_1": "Todos os textos estão contidos em tags de parágrafo. Há pelo menos dois parágrafos criados com o uso adequado das tags de parágrafo.",
+          "rubric_performance_level_2": "Pelo menos algum texto foi separado em um parágrafo por meio do uso adequado de tags de parágrafo.",
+          "rubric_performance_level_3": "Há pelo menos uma tag de parágrafo no texto, mas ela pode não ser ter sido corretamente (por exemplo, falta de tag de fechamento, parágrafos criados fora do elemento do corpo).",
+          "rubric_performance_level_4": "Não há tags de parágrafo no texto."
+        },
+        "CSD U2 HTML Adding Paragraphs pt 2_2022": {
+          "rubric_key_concept": "Use HTML para criar uma página da web que inclua cabeçalhos hierárquicos, parágrafos, listas e imagens; entenda a necessidade por precisão ao usar linguagens de computação e use a sintaxe apropriada.\n",
+          "rubric_performance_level_1": "Todos os textos estão contidos em tags de parágrafo. Há pelo menos dois parágrafos criados com o uso adequado das tags de parágrafo.",
+          "rubric_performance_level_2": "Pelo menos algum texto foi separado em um parágrafo por meio do uso adequado de tags de parágrafo.",
+          "rubric_performance_level_3": "Há pelo menos uma tag de parágrafo no texto, mas ela pode não ser ter sido corretamente (por exemplo, falta de tag de fechamento, parágrafos criados fora do elemento do corpo).",
+          "rubric_performance_level_4": "Não há tags de parágrafo no texto."
+        },
+        "CSD U2 Heading Test_2018": {
+          "rubric_key_concept": "Use HTML para criar uma página da web que inclua cabeçalhos hierárquicos, parágrafos, listas e imagens.\n\nEntenda a necessidade por precisão ao usar linguagens de computação e use a sintaxe apropriada.\n",
+          "rubric_performance_level_1": "Todo o conteúdo está contido em tags, usa tags de parágrafos e cabeçalhos de vários tamanhos de forma logicamente consistente.",
+          "rubric_performance_level_3": "A maior parte do conteúdo está contida em tags. Pelo menos uma tag de cabeçalho é usada.",
+          "rubric_performance_level_4": "Pouco ou nenhum conteúdo está contido nas tags."
+        },
+        "CSD U2 Heading Test_2019": {
+          "rubric_key_concept": "Use HTML para criar uma página da web que inclua cabeçalhos hierárquicos, parágrafos, listas e imagens.\n\nEntenda a necessidade por precisão ao usar linguagens de computação e use a sintaxe apropriada.\n",
+          "rubric_performance_level_1": "Todo o conteúdo está contido em tags, usa tags de parágrafos e cabeçalhos de vários tamanhos de forma logicamente consistente.",
+          "rubric_performance_level_2": "Todo o conteúdo está contido em tags, usa tags de parágrafo e de cabeçalho de forma razoável.",
+          "rubric_performance_level_3": "A maior parte do conteúdo está contida em tags. Pelo menos uma tag de cabeçalho é usada.",
+          "rubric_performance_level_4": "Pouco ou nenhum conteúdo está contido nas tags."
+        },
+        "CSD U2 Heading Test_2021": {
+          "rubric_key_concept": "Use HTML para criar uma página da web que inclua cabeçalhos hierárquicos, parágrafos, listas e imagens.\n\nEntenda a necessidade por precisão ao usar linguagens de computação e use a sintaxe apropriada.\n",
+          "rubric_performance_level_1": "Todo o conteúdo está contido em tags, usa tags de parágrafos e cabeçalhos de vários tamanhos de forma logicamente consistente.",
+          "rubric_performance_level_2": "Todo o conteúdo está contido em tags, usa tags de parágrafo e de cabeçalho de forma razoável.",
+          "rubric_performance_level_3": "A maior parte do conteúdo está contida em tags. Pelo menos uma tag de cabeçalho é usada.",
+          "rubric_performance_level_4": "Pouco ou nenhum conteúdo está contido nas tags."
+        },
+        "CSD U2 Heading Test_2022": {
+          "rubric_key_concept": "Use HTML para criar uma página da web que inclua cabeçalhos hierárquicos, parágrafos, listas e imagens.\n\nEntenda a necessidade por precisão ao usar linguagens de computação e use a sintaxe apropriada.\n",
+          "rubric_performance_level_1": "Todo o conteúdo está contido em tags, usa tags de parágrafos e cabeçalhos de vários tamanhos de forma logicamente consistente.",
+          "rubric_performance_level_2": "Todo o conteúdo está contido em tags, usa tags de parágrafo e de cabeçalho de forma razoável.",
+          "rubric_performance_level_3": "A maior parte do conteúdo está contida em tags. Pelo menos uma tag de cabeçalho é usada.",
+          "rubric_performance_level_4": "Pouco ou nenhum conteúdo está contido nas tags."
+        },
+        "CSD U2 Heading Test_2023": {
+          "rubric_key_concept": "Use HTML para criar uma página da web que inclua cabeçalhos hierárquicos, parágrafos, listas e imagens.\n\nEntenda a necessidade por precisão ao usar linguagens de computação e use a sintaxe apropriada.\n",
+          "rubric_performance_level_3": "A maior parte do conteúdo está contida em tags. Pelo menos uma tag de cabeçalho é usada.",
+          "rubric_performance_level_4": "Pouco ou nenhum conteúdo está contido nas tags."
+        },
+        "CSD U2 Image Tag 2_2019": {
+          "rubric_performance_level_4": "A tag `img` não é usada ou não é um endereço de origem fornecido para a imagem."
+        },
         "CSD U2 Image assessment_2021": {
-          "rubric_key_concept": "Estruture o conteúdo em uma página web usando HTML (Adicionar uma imagem a uma página web). Dê devidamente os créditos a outras pessoas quando utilizar o trabalho delas."
+          "rubric_key_concept": "Estruture o conteúdo em uma página da web usando HTML (Adicionar uma imagem a uma página da Web). Atribua devidamente o crédito a outras pessoas ao usar seu trabalho.",
+          "rubric_performance_level_1": "A imagem é exibida corretamente e um atributo `alt` fornece uma descrição de teste razoável da imagem. Nenhum código desnecessário está incluído na tag `img`. Há uma atribuição precisa e a imagem é nomeada adequadamente.",
+          "rubric_performance_level_2": "A imagem é exibida corretamente e está sendo usada de acordo com a descrição da licença de direitos autorais.",
+          "rubric_performance_level_3": "A tag `img` é usada e um endereço de origem para a imagem é fornecido, mas pode haver pequenos erros de sintaxe ou erros ortográficos que impedem que a imagem seja exibida corretamente. A imagem pode não estar disponível para uso legal na página da web.",
+          "rubric_performance_level_4": "A tag `img` não é usada ou não é um endereço de origem fornecido para a imagem."
         },
         "CSD U2 Image assessment_2022": {
-          "rubric_key_concept": "Estruture o conteúdo em uma página web usando HTML (Adicionar uma imagem a uma página web). Dê devidamente os créditos a outras pessoas quando utilizar o trabalho delas."
+          "rubric_key_concept": "Estruture o conteúdo em uma página da web usando HTML (Adicionar uma imagem a uma página da Web). Atribua devidamente o crédito a outras pessoas ao usar seu trabalho.",
+          "rubric_performance_level_2": "A imagem é exibida corretamente e está sendo usada de acordo com a descrição da licença de direitos autorais.",
+          "rubric_performance_level_3": "A tag `img` é usada e um endereço de origem para a imagem é fornecido, mas pode haver pequenos erros de sintaxe ou erros ortográficos que impedem que a imagem seja exibida corretamente. A imagem pode não estar disponível para uso legal na página da web."
+        },
+        "CSD U2 Image assessment_2023": {
+          "rubric_key_concept": "Estruture o conteúdo em uma página da web usando HTML (Adicionar uma imagem a uma página da Web). Atribua devidamente o crédito a outras pessoas ao usar seu trabalho.",
+          "rubric_performance_level_2": "A imagem é exibida corretamente e está sendo usada de acordo com a descrição da licença de direitos autorais.",
+          "rubric_performance_level_3": "A tag `img` é usada e um endereço de origem para a imagem é fornecido, mas pode haver pequenos erros de sintaxe ou erros ortográficos que impedem que a imagem seja exibida corretamente. A imagem pode não estar disponível para uso legal na página da web."
+        },
+        "CSD U2 add style_2019": {
+          "rubric_key_concept": "Crie regras que afetem grupos inteiros de elementos; aplique formatação em uma página da web usando CSS.",
+          "rubric_performance_level_1": "O plano de fundo, as imagens e o texto foram todos estilizados conforme descrito nas instruções. Não há erros de sintaxe ou código extra (que não funciona) na folha de estilo.",
+          "rubric_performance_level_2": "O plano de fundo, as imagens e o texto foram todos estilizados conforme descrito nas instruções, mas pode haver erros mínimos ou códigos não funcionais na folha de estilo.",
+          "rubric_performance_level_3": "Conjuntos de regras foram criados na folha de estilo para estilizar o plano de fundo, as imagens e o texto, mas há erros graves que impedem que o código funcione corretamente.",
+          "rubric_performance_level_4": "Não há conjuntos de regras na folha de estilo, ou os conjuntos de regras não têm os seletores necessários para estilizar o plano de fundo ou as imagens nas páginas."
+        },
+        "CSD U2 add style_2021": {
+          "rubric_key_concept": "Crie regras que afetem grupos inteiros de elementos; aplique formatação em uma página da web usando CSS.",
+          "rubric_performance_level_1": "O plano de fundo, as imagens e o texto foram todos estilizados conforme descrito nas instruções. Não há erros de sintaxe ou código extra (que não funciona) na folha de estilo.",
+          "rubric_performance_level_2": "O plano de fundo, as imagens e o texto foram todos estilizados conforme descrito nas instruções, mas pode haver erros mínimos ou códigos não funcionais na folha de estilo.",
+          "rubric_performance_level_3": "Conjuntos de regras foram criados na folha de estilo para estilizar o plano de fundo, as imagens e o texto, mas há erros graves que impedem que o código funcione corretamente.",
+          "rubric_performance_level_4": "Não há conjuntos de regras na folha de estilo, ou os conjuntos de regras não têm os seletores necessários para estilizar o plano de fundo ou as imagens nas páginas."
+        },
+        "CSD U2 add style_2022": {
+          "rubric_key_concept": "Crie regras que afetem grupos inteiros de elementos; aplique formatação em uma página da web usando CSS.",
+          "rubric_performance_level_1": "O plano de fundo, as imagens e o texto foram todos estilizados conforme descrito nas instruções. Não há erros de sintaxe ou código extra (que não funciona) na folha de estilo.",
+          "rubric_performance_level_2": "O plano de fundo, as imagens e o texto foram todos estilizados conforme descrito nas instruções, mas pode haver erros mínimos ou códigos não funcionais na folha de estilo.",
+          "rubric_performance_level_3": "Conjuntos de regras foram criados na folha de estilo para estilizar o plano de fundo, as imagens e o texto, mas há erros graves que impedem que o código funcione corretamente.",
+          "rubric_performance_level_4": "Não há conjuntos de regras na folha de estilo, ou os conjuntos de regras não têm os seletores necessários para estilizar o plano de fundo ou as imagens nas páginas."
+        },
+        "CSD U2 add style_2023": {
+          "rubric_key_concept": "Crie regras que afetem grupos inteiros de elementos; aplique formatação em uma página da web usando CSS.",
+          "rubric_performance_level_1": "O plano de fundo, as imagens e o texto foram todos estilizados conforme descrito nas instruções. Não há erros de sintaxe ou código extra (que não funciona) na folha de estilo.",
+          "rubric_performance_level_2": "O plano de fundo, as imagens e o texto foram todos estilizados conforme descrito nas instruções, mas pode haver erros mínimos ou códigos não funcionais na folha de estilo.",
+          "rubric_performance_level_3": "Conjuntos de regras foram criados na folha de estilo para estilizar o plano de fundo, as imagens e o texto, mas há erros graves que impedem que o código funcione corretamente.",
+          "rubric_performance_level_4": "Não há conjuntos de regras na folha de estilo, ou os conjuntos de regras não têm os seletores necessários para estilizar o plano de fundo ou as imagens nas páginas."
         },
         "CSD U2 adding pages_2021": {
           "rubric_performance_level_2": "Há pelo menos um link funcionando de uma página HTML para outra\n",
@@ -15,6 +110,60 @@
         "CSD U2 adding pages_2022": {
           "rubric_performance_level_2": "Há pelo menos um link funcionando de uma página HTML para outra\n",
           "rubric_performance_level_4": "Nenhuma nova página foi criada e não há links\n"
+        },
+        "CSD U2 adding pages_2023": {
+          "rubric_performance_level_2": "Há pelo menos um link funcionando de uma página HTML para outra\n",
+          "rubric_performance_level_4": "Nenhuma nova página foi criada e não há links\n"
+        },
+        "CSD U2 classes haikus_2021": {
+          "rubric_key_concept": "Crie classes que possam ser referenciadas e afetadas como um grupo.",
+          "rubric_performance_level_1": "A classe e o conjunto de regras são criados corretamente, todos os elementos do haicai escolhido estão incluídos e há pelo menos três regras no conjunto de regras.",
+          "rubric_performance_level_2": "Uma classe e um conjunto de regras são criados e a maioria dos elementos na seção de haicai escolhida do site é afetada por essa classe, mas pode haver alguns pequenos erros em algumas partes do texto ou pode haver menos de três regras no conjunto de regras.",
+          "rubric_performance_level_3": "E a classe e o conjunto de regras são criados, e pelo menos alguns elementos do site estão nessa classe, mas pode haver erros graves que impedem que o texto seja estilizado."
+        },
+        "CSD U2 classes haikus_2022": {
+          "rubric_key_concept": "Crie classes que possam ser referenciadas e afetadas como um grupo.",
+          "rubric_performance_level_1": "A classe e o conjunto de regras são criados corretamente, todos os elementos do haicai escolhido estão incluídos e há pelo menos três regras no conjunto de regras.",
+          "rubric_performance_level_2": "Uma classe e um conjunto de regras são criados e a maioria dos elementos na seção de haicai escolhida do site é afetada por essa classe, mas pode haver alguns pequenos erros em algumas partes do texto ou pode haver menos de três regras no conjunto de regras."
+        },
+        "CSD U2 classes haikus_2023": {
+          "rubric_key_concept": "Crie classes que possam ser referenciadas e afetadas como um grupo.",
+          "rubric_performance_level_2": "Uma classe e um conjunto de regras são criados e a maioria dos elementos na seção de haicai escolhida do site é afetada por essa classe, mas pode haver alguns pequenos erros em algumas partes do texto ou pode haver menos de três regras no conjunto de regras."
+        },
+        "CSD U2 classes summer_2019": {
+          "rubric_key_concept": "Crie classes que possam ser referenciadas e afetadas como um grupo."
+        },
+        "CSD U2 text style h3_2019": {
+          "rubric_key_concept": "Aplique formatação em uma página da web usando CSS",
+          "rubric_performance_level_1": "Os cabeçalhos `h3` são de uma nova cor (não preto). Não há código extra na folha de estilo e não há erros de sintaxe no código.",
+          "rubric_performance_level_2": "Os cabeçalhos `h3` são de uma nova cor (não preto).",
+          "rubric_performance_level_3": "Os cabeçalhos `h3` têm um conjunto de regras especial na folha de estilo e a propriedade color é usada, mas há erros suficientes para que o texto não mude de cor.",
+          "rubric_performance_level_4": "Não há um conjunto de regras especial para cabeçalhos `h3` ou a propriedade de cor não é usada no conjunto de regras."
+        },
+        "CSD U2 text style h3_2021": {
+          "rubric_key_concept": "Aplique formatação em uma página da web usando CSS",
+          "rubric_performance_level_1": "Os cabeçalhos `h3` são de uma nova cor (não preto). Não há código extra na folha de estilo e não há erros de sintaxe no código.",
+          "rubric_performance_level_2": "Os cabeçalhos `h3` são de uma nova cor (não preto).",
+          "rubric_performance_level_3": "Os cabeçalhos `h3` têm um conjunto de regras especial na folha de estilo e a propriedade color é usada, mas há erros suficientes para que o texto não mude de cor.",
+          "rubric_performance_level_4": "Não há um conjunto de regras especial para cabeçalhos `h3` ou a propriedade de cor não é usada no conjunto de regras."
+        },
+        "CSD U2 text style h3_2022": {
+          "rubric_key_concept": "Aplique formatação em uma página da web usando CSS",
+          "rubric_performance_level_1": "Os cabeçalhos `h3` são de uma nova cor (não preto). Não há código extra na folha de estilo e não há erros de sintaxe no código.",
+          "rubric_performance_level_2": "Os cabeçalhos `h3` são de uma nova cor (não preto).",
+          "rubric_performance_level_3": "Os cabeçalhos `h3` têm um conjunto de regras especial na folha de estilo e a propriedade color é usada, mas há erros suficientes para que o texto não mude de cor.",
+          "rubric_performance_level_4": "Não há um conjunto de regras especial para cabeçalhos `h3` ou a propriedade de cor não é usada no conjunto de regras."
+        },
+        "CSD U2 text style h3_2023": {
+          "rubric_key_concept": "Aplique formatação em uma página da web usando CSS",
+          "rubric_performance_level_1": "Os cabeçalhos `h3` são de uma nova cor (não preto). Não há código extra na folha de estilo e não há erros de sintaxe no código.",
+          "rubric_performance_level_2": "Os cabeçalhos `h3` são de uma nova cor (não preto).",
+          "rubric_performance_level_3": "Os cabeçalhos `h3` têm um conjunto de regras especial na folha de estilo e a propriedade color é usada, mas há erros suficientes para que o texto não mude de cor.",
+          "rubric_performance_level_4": "Não há um conjunto de regras especial para cabeçalhos `h3` ou a propriedade de cor não é usada no conjunto de regras."
+        },
+        "CSD U2L2 - PracC_2023": {
+          "rubric_performance_level_3": "Há pelo menos uma tag de parágrafo no texto, mas ela pode não ser ter sido corretamente (por exemplo, falta de tag de fechamento, parágrafos criados fora do elemento do corpo).",
+          "rubric_performance_level_4": "Não há tags de parágrafo no texto."
         },
         "CSD U4 - Design Mode Project_2019": {
           "rubric_key_concept": "Crie um protótipo digital para a tela de um aplicativo.",
@@ -37,26 +186,54 @@
           "rubric_performance_level_3": "Alguns elementos do protótipo em papel foram recriados no protótipo digital, mas há inconsistências suficientes para afetar a funcionalidade do protótipo.",
           "rubric_performance_level_4": "Não há elementos no protótipo digital ou os elementos não são consistentes com o protótipo em papel."
         },
+        "CSD U4 - Design Mode Project_2023": {
+          "rubric_key_concept": "Crie um protótipo digital para a tela de um aplicativo.",
+          "rubric_performance_level_1": "O protótipo digital é uma boa recriação do protótipo em papel, com apenas pequenas inconsistências.",
+          "rubric_performance_level_2": "A maioria dos elementos do protótipo em papel foi recriada no protótipo digital, mas pode haver algumas inconsistências com o layout, o tamanho ou alguns pequenos elementos ausentes. As inconsistências não afetariam a funcionalidade do protótipo.",
+          "rubric_performance_level_3": "Alguns elementos do protótipo em papel foram recriados no protótipo digital, mas há inconsistências suficientes para afetar a funcionalidade do protótipo.",
+          "rubric_performance_level_4": "Não há elementos no protótipo digital ou os elementos não são consistentes com o protótipo em papel."
+        },
+        "CSD U6 - Board Inputs - A_2023": {
+          "rubric_performance_level_4": "O aplicativo não foi atualizado para corresponder à descrição"
+        },
         "CSD U6 - Board Inputs - A_2222": {
+          "rubric_performance_level_4": "O aplicativo não foi atualizado para corresponder à descrição"
+        },
+        "CSD U6 - Board Inputs - PracB_mb2022": {
+          "rubric_performance_level_4": "O aplicativo não foi atualizado para corresponder à descrição"
+        },
+        "CSD U6 - Screen Outputs - ChalB_2023": {
+          "rubric_key_concept": "Atualize as propriedades e o texto dos elementos de design usando o código",
           "rubric_performance_level_4": "O aplicativo não foi atualizado para corresponder à descrição"
         },
         "CSD U6 - Screen Outputs - ChalB_2222": {
           "rubric_key_concept": "Atualize as propriedades e o texto dos elementos de design usando o código",
           "rubric_performance_level_4": "O aplicativo não foi atualizado para corresponder à descrição"
         },
+        "CSD U6 - Screen Outputs - ChalB_mb2022": {
+          "rubric_key_concept": "Atualize as propriedades e o texto dos elementos de design usando o código",
+          "rubric_performance_level_4": "O aplicativo não foi atualizado para corresponder à descrição"
+        },
         "CSD Web CSS Assessment_2021": {
-          "rubric_key_concept": "Crie uma folha de estilo e adicione seu link no HTML. A folha de estilo inclui uma regra que altera o elemento de parágrafo de uma página Web.",
+          "rubric_key_concept": "Crie uma folha de estilo e adicione seu link no HTML. A folha de estilo inclui uma regra que altera o elemento de parágrafo de uma página web",
           "rubric_performance_level_1": "Os parágrafos têm uma nova cor e tamanho, e não há erros ou inconsistências no código HTML ou CSS.",
           "rubric_performance_level_2": "Os parágrafos têm uma nova cor ou tamanho.",
-          "rubric_performance_level_3": "Os parágrafos possuem um conjunto de regras especial na folha de estilo e a propriedade cor ou tamanho está sendo usada, mas há erros suficientes para que o texto não mude de cor ou tamanho. Há um código HTML que tenta vincular a folha de estilo à página Web.",
-          "rubric_performance_level_4": "Não foi encontrado um conjunto de regras especial para parágrafos, ou as propriedades de cor ou tamanho não estão sendo usadas no conjunto de regras. O código que vincula a folha de estilo à página da Web não está presente."
+          "rubric_performance_level_3": "Os parágrafos possuem um conjunto de regras especial na folha de estilo e a propriedade cor ou tamanho está sendo usada, mas há erros suficientes para que o texto não mude de cor ou tamanho. Há um código HTML que tenta vincular a folha de estilo à página web.",
+          "rubric_performance_level_4": "Não há um conjunto de regras especial para parágrafos ou as propriedades de cor ou tamanho não são usadas no conjunto de regras. Não há código para vincular a folha de estilo à página da web."
         },
         "CSD Web CSS Assessment_2022": {
-          "rubric_key_concept": "Crie uma folha de estilo e adicione seu link no HTML. A folha de estilo inclui uma regra que altera o elemento de parágrafo de uma página Web.",
+          "rubric_key_concept": "Crie uma folha de estilo e adicione seu link no HTML. A folha de estilo inclui uma regra que altera o elemento de parágrafo de uma página web",
           "rubric_performance_level_1": "Os parágrafos têm uma nova cor e tamanho, e não há erros ou inconsistências no código HTML ou CSS.",
           "rubric_performance_level_2": "Os parágrafos têm uma nova cor ou tamanho.",
-          "rubric_performance_level_3": "Os parágrafos possuem um conjunto de regras especial na folha de estilo e a propriedade cor ou tamanho está sendo usada, mas há erros suficientes para que o texto não mude de cor ou tamanho. Há um código HTML que tenta vincular a folha de estilo à página Web.",
-          "rubric_performance_level_4": "Não foi encontrado um conjunto de regras especial para parágrafos, ou as propriedades de cor ou tamanho não estão sendo usadas no conjunto de regras. O código que vincula a folha de estilo à página da Web não está presente."
+          "rubric_performance_level_3": "Os parágrafos possuem um conjunto de regras especial na folha de estilo e a propriedade cor ou tamanho está sendo usada, mas há erros suficientes para que o texto não mude de cor ou tamanho. Há um código HTML que tenta vincular a folha de estilo à página web.",
+          "rubric_performance_level_4": "Não há um conjunto de regras especial para parágrafos ou as propriedades de cor ou tamanho não são usadas no conjunto de regras. Não há código para vincular a folha de estilo à página da web."
+        },
+        "CSD Web CSS Assessment_2023": {
+          "rubric_key_concept": "Crie uma folha de estilo e adicione seu link no HTML. A folha de estilo inclui uma regra que altera o elemento de parágrafo de uma página web",
+          "rubric_performance_level_1": "Os parágrafos têm uma nova cor e tamanho, e não há erros ou inconsistências no código HTML ou CSS.",
+          "rubric_performance_level_2": "Os parágrafos têm uma nova cor ou tamanho.",
+          "rubric_performance_level_3": "Os parágrafos possuem um conjunto de regras especial na folha de estilo e a propriedade cor ou tamanho está sendo usada, mas há erros suficientes para que o texto não mude de cor ou tamanho. Há um código HTML que tenta vincular a folha de estilo à página web.",
+          "rubric_performance_level_4": "Não há um conjunto de regras especial para parágrafos ou as propriedades de cor ou tamanho não são usadas no conjunto de regras. Não há código para vincular a folha de estilo à página da web."
         },
         "CSDU4 Project Events_2019": {
           "rubric_performance_level_1": "Todas as telas de cada membro da equipe estão incluídas no projeto, e cada botão é vinculado à tela apropriada.",
@@ -71,6 +248,12 @@
           "rubric_performance_level_4": "Nenhum botão vincula a outras telas do projeto."
         },
         "CSDU4 Project Events_2022": {
+          "rubric_performance_level_1": "Todas as telas de cada membro da equipe estão incluídas no projeto, e cada botão é vinculado à tela apropriada.",
+          "rubric_performance_level_2": "Todas as telas de cada membro da equipe estão incluídas no projeto, e a maioria dos botões está vinculada à tela apropriada, mas pode haver pequenos erros que impedem que todos os botões funcionem.",
+          "rubric_performance_level_3": "Telas de vários membros da equipe foram incorporadas ao projeto e pelo menos um botão está vinculado a outra tela.",
+          "rubric_performance_level_4": "Nenhum botão vincula a outras telas do projeto."
+        },
+        "CSDU4 Project Events_2023": {
           "rubric_performance_level_1": "Todas as telas de cada membro da equipe estão incluídas no projeto, e cada botão é vinculado à tela apropriada.",
           "rubric_performance_level_2": "Todas as telas de cada membro da equipe estão incluídas no projeto, e a maioria dos botões está vinculada à tela apropriada, mas pode haver pequenos erros que impedem que todos os botões funcionem.",
           "rubric_performance_level_3": "Telas de vários membros da equipe foram incorporadas ao projeto e pelo menos um botão está vinculado a outra tela.",
@@ -97,6 +280,13 @@
           "rubric_performance_level_3": "Alguns dos elementos fornecidos estão incluídos na tela, incluindo pelo menos um elemento de texto e um botão que não estavam no projeto inicial.",
           "rubric_performance_level_4": "Muito poucos dos elementos fornecidos estão incluídos na tela."
         },
+        "U4 Model Design 7_2023": {
+          "rubric_key_concept": "Selecione o elemento de entrada apropriado para um determinado tipo de informação.",
+          "rubric_performance_level_1": "Todos os elementos fornecidos estão incluídos na tela e suas propriedades foram definidas de forma que a tela pareça muito semelhante à imagem de exemplo.",
+          "rubric_performance_level_2": "Quase todos os elementos fornecidos estão incluídos na tela, incluindo pelo menos um elemento de texto, botão, entrada de texto, imagem e caixa de seleção que não estavam no projeto inicial.",
+          "rubric_performance_level_3": "Alguns dos elementos fornecidos estão incluídos na tela, incluindo pelo menos um elemento de texto e um botão que não estavam no projeto inicial.",
+          "rubric_performance_level_4": "Muito poucos dos elementos fornecidos estão incluídos na tela."
+        },
         "U4 Model Program 5_2019": {
           "rubric_performance_level_1": "Cada botão é vinculado à tela correta no protótipo.",
           "rubric_performance_level_2": "Vários botões no protótipo são vinculados à tela apropriada.",
@@ -110,6 +300,12 @@
           "rubric_performance_level_4": "Não há eventos no protótipo."
         },
         "U4 Model Program 5_2022": {
+          "rubric_performance_level_1": "Cada botão é vinculado à tela correta no protótipo.",
+          "rubric_performance_level_2": "Vários botões no protótipo são vinculados à tela apropriada.",
+          "rubric_performance_level_3": "Há pelo menos um evento no protótipo que pode ser acionado para produzir algum tipo de resposta.",
+          "rubric_performance_level_4": "Não há eventos no protótipo."
+        },
+        "U4 Model Program 5_2023": {
           "rubric_performance_level_1": "Cada botão é vinculado à tela correta no protótipo.",
           "rubric_performance_level_2": "Vários botões no protótipo são vinculados à tela apropriada.",
           "rubric_performance_level_3": "Há pelo menos um evento no protótipo que pode ser acionado para produzir algum tipo de resposta.",
