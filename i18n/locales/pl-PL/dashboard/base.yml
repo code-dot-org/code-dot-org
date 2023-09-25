@@ -1157,7 +1157,9 @@ pl:
         mongolia: 'Mongolia'
         new_zealand: 'Nowa Zelandia'
         paraguay: 'Paragwaj'
+        philippines: 'Filipiny'
         portugal: 'Portugalia'
+        puerto_rico: 'Portoryko'
         slovakia: 'Słowacja'
         south_korea: 'Korea Południowa'
         spain: 'Hiszpania'
@@ -1255,6 +1257,7 @@ pl:
       workshops_k5: 'Warsztaty dla uczniów w klasach K-5'
       summer_workshops_612: 'Warsztaty Letnie dla uczniów w klasach 6-12'
       virtual_academic_year_workshops_612: 'Wirtualne Warsztaty Roku Akademickiego dla uczniów w klasach 6-12'
+      unsupported: 'Nieobsługiwany'
   cookie_banner:
     message: 'Kontynuując przeglądanie naszej strony lub klikając "Zgadzam się", zgadzasz się na przechowywanie plików cookie na Twoim komputerze lub urządzeniu.'
     more_information: "Zapoznaj się z polityką prywatności Code.org."

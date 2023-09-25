@@ -1393,7 +1393,7 @@
                   },
                   "return_value": "Brak wartości zwracanej. Tylko przesuwa rysunek żółwia.",
                   "short_description": "Ustawia kolor pióra używanego przez żółwia do rysowania linii i kropek.",
-                  "tips": "-   [`penUp()`(#4dd0e1)](/docs/applab/penUp/) powoduje, że linia nie zostanie narysowana.\n-   Polecenia [`show()`(#4dd0e1)](/docs/applab/show/) i [`hide()`(#4dd0e1)](/docs/applab/hide/) nie wpływają na polecenia rysowania, kontrolują tylko, czy ikona żółwia jest wyświetlana, czy nie.\n-   Przypomnij sobie lekcje z Rozdziału 1 na temat wartości kolorów hex i rgb i zobacz [HTML named colors](https://developer.mozilla.org/en-US/docs/Web/CSS/color_value#Color_keywords), aby uzyskać pełną listę wszystkich dostępnych kolorów.\n-   Aby losować wybór kolorów, użyj [`PenRGB(r,g,b)`(#4dd0e1)](/docs/applab/penRGB/) , który przyjmuje parametry liczbowe zamiast ciągu znaków."
+                  "tips": "-   [`penUp()`](/docs/applab/penUp/) powoduje, że linia nie zostanie narysowana.\n-   Polecenia [`show()`](/docs/applab/show/) i [`hide()`](/docs/applab/hide/) nie wpływają na polecenia rysowania, kontrolują tylko, czy ikona żółwia jest wyświetlana, czy nie.\n-   Przypomnij sobie lekcje z Rozdziału 1 na temat wartości kolorów hex i rgb i zobacz [HTML named colors](https://developer.mozilla.org/en-US/docs/Web/CSS/color_value#Color_keywords), aby uzyskać pełną listę wszystkich dostępnych kolorów.\n-   Aby losować wybór kolorów, użyj [`PenRGB(r,g,b)`](/docs/applab/penRGB/) , który przyjmuje parametry liczbowe zamiast ciągu znaków."
                 },
                 "penDown": {
                   "return_value": "Brak wartości zwracanej. Tylko przesuwa rysunek żółwia.",
@@ -1479,7 +1479,7 @@
             "ui_controls": {
               "expressions": {
                 "button": {
-                  "content": "Tworzy na ekranie przycisk wyświetlający podany _text_ i do którego odwołuje się dane _id_ na domyślnej pozycji (0,0).\n\nWiele aplikacji używa przycisków, aby pozwolić użytkownikowi zainicjować niektóre działania aplikacji. Kontroler zdarzeń musi zostać stworzony na każdy rodzaj interakcji użytkownika z przyciskiem używając [`onEvent()`(#fff176)](/docs/applab/onEvent/) oraz _id_.",
+                  "content": "Tworzy na ekranie przycisk wyświetlający podany _text_ i do którego odwołuje się dane _id_ na domyślnej pozycji (0,0).\n\nWiele aplikacji używa przycisków, aby pozwolić użytkownikowi zainicjować niektóre działania aplikacji. Kontroler zdarzeń musi zostać stworzony na każdy rodzaj interakcji użytkownika z przyciskiem używając [`onEvent()`](/docs/applab/onEvent/) oraz _id_.",
                   "examples": {
                     "Example: Simple Turtle Control 1": {
                       "description": "Przesuń żółwia do przodu za każdym wciśnięciem przycisku.",
@@ -1627,7 +1627,7 @@
                   },
                   "return_value": "Łańcuch zawierający zawartość elementu ekranu.",
                   "short_description": "Pobiera tekst z określonego elementu ekranu.",
-                  "tips": "-   [`getText ()`(#fff176)](/docs/applab/getText/) może również odczytać tekst na [`button ()`(#fff176)](/docs/applab/button/) lub [`textLabel ()`(#fff176)](/docs/applab/textLabel/)."
+                  "tips": "-   [`getText ()`](/docs/applab/getText/) może również odczytać tekst na [`button ()`](/docs/applab/button/) lub [`textLabel ()`](/docs/applab/textLabel/)."
                 },
                 "getXPosition": {
                   "examples": {
@@ -2468,7 +2468,7 @@
                   },
                   "return_value": "Logiczna prawda lub fałsz.",
                   "short_description": "Zwraca true, jeśli kamera jest aktywna, w przeciwnym razie zwraca false.",
-                  "tips": "-   Kamera jest automatycznie włączana na początku każdej pętli [`draw ()`(#fff176)](/docs/gamelab/draw/). "
+                  "tips": "-   Kamera jest automatycznie włączana na początku każdej pętli [`draw ()`](/docs/gamelab/draw/). "
                 },
                 "camera.mouseX": {
                   "return_value": "Współrzędna x myszy przetłumaczona na widok kamery.",
@@ -2485,7 +2485,7 @@
                     }
                   },
                   "short_description": "Dezaktywuje kamerę. ",
-                  "tips": "-   Kamera jest automatycznie włączana na początku każdej pętli [`draw ()`(#fff176)](/docs/gamelab/draw/). "
+                  "tips": "-   Kamera jest automatycznie włączana na początku każdej pętli [`draw ()`](/docs/gamelab/draw/). "
                 },
                 "camera.on": {
                   "examples": {
@@ -2497,7 +2497,7 @@
                       "name": "Podążaj za obcym"
                     }
                   },
-                  "tips": "-   Kamera jest automatycznie włączana na początku każdej pętli [`draw ()`(#fff176)](/docs/gamelab/draw/). "
+                  "tips": "-   Kamera jest automatycznie włączana na początku każdej pętli [`draw ()`](/docs/gamelab/draw/). "
                 },
                 "camera.x": {
                   "examples": {
@@ -2512,7 +2512,7 @@
                   },
                   "return_value": "Współrzędna x środka kamery.",
                   "short_description": "Położenie x kamery.",
-                  "tips": "-   Obszar wyświetlania to 400 pikseli x 400 pikseli, a lewy górny róg to (0,0).\n-   Aby uzyskać dostęp lub zaktualizować właściwości kamery, należy użyć notacji kropkowej (kamera, po której następuje kropka, z etykietą właściwości).\n-   Wszelkie zmiany właściwości kamery będą widoczne dopiero po wywołaniu [`drawSprites ()`(#fff176)](/docs/gamelab/drawSprites/) ."
+                  "tips": "-   Obszar wyświetlania to 400 pikseli x 400 pikseli, a lewy górny róg to (0,0).\n-   Aby uzyskać dostęp lub zaktualizować właściwości kamery, należy użyć notacji kropkowej (kamera, po której następuje kropka, z etykietą właściwości).\n-   Wszelkie zmiany właściwości kamery będą widoczne dopiero po wywołaniu [`drawSprites ()`](/docs/gamelab/drawSprites/) ."
                 },
                 "camera.y": {
                   "examples": {
@@ -2527,7 +2527,7 @@
                   },
                   "return_value": "Współrzędna y środka kamery.",
                   "short_description": "Pozycja y kamery.",
-                  "tips": "-   Obszar wyświetlania to 400 pikseli x 400 pikseli, a lewy górny róg to (0,0).\n-   Aby uzyskać dostęp lub zaktualizować właściwości kamery, należy użyć notacji kropkowej (kamera, po której następuje kropka, z etykietą właściwości).\n-   Wszelkie zmiany właściwości kamery będą widoczne dopiero po wywołaniu [`drawSprites ()`(#fff176)](/docs/gamelab/drawSprites/) ."
+                  "tips": "-   Obszar wyświetlania to 400 pikseli x 400 pikseli, a lewy górny róg to (0,0).\n-   Aby uzyskać dostęp lub zaktualizować właściwości kamery, należy użyć notacji kropkowej (kamera, po której następuje kropka, z etykietą właściwości).\n-   Wszelkie zmiany właściwości kamery będą widoczne dopiero po wywołaniu [`drawSprites ()`](/docs/gamelab/drawSprites/) ."
                 },
                 "camera.zoom": {
                   "examples": {
@@ -2538,7 +2538,7 @@
                   },
                   "return_value": "Współczynnik powiększenia aparatu.",
                   "short_description": "Współczynnik powiększenia aparatu.",
-                  "tips": "-   Obszar wyświetlania to 400 pikseli x 400 pikseli, a lewy górny róg to (0,0).\n-   Aby uzyskać dostęp lub zaktualizować właściwości kamery, należy użyć notacji kropkowej (kamera, po której następuje kropka, z etykietą właściwości).\n-   Wszelkie zmiany właściwości kamery będą widoczne dopiero po wywołaniu [`drawSprites ()`(#fff176)](/docs/gamelab/drawSprites/) ."
+                  "tips": "-   Obszar wyświetlania to 400 pikseli x 400 pikseli, a lewy górny róg to (0,0).\n-   Aby uzyskać dostęp lub zaktualizować właściwości kamery, należy użyć notacji kropkowej (kamera, po której następuje kropka, z etykietą właściwości).\n-   Wszelkie zmiany właściwości kamery będą widoczne dopiero po wywołaniu [`drawSprites ()`](/docs/gamelab/drawSprites/) ."
                 },
                 "comment_GameLab": {
                   "examples": {
