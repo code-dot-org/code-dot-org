@@ -10,11 +10,19 @@
           "No": "No",
           "Yes": "Yes"
         },
+        "CSD U1 IO Pet Chooser 2_2023": {
+          "No": "No",
+          "Yes": "Yes"
+        },
         "CSD U1 IO Pet Chooser_2021": {
           "No": "No",
           "Yes": "Yes"
         },
         "CSD U1 IO Pet Chooser_2022": {
+          "No": "No",
+          "Yes": "Yes"
+        },
+        "CSD U1 IO Pet Chooser_2023": {
           "No": "No",
           "Yes": "Yes"
         },
@@ -30,11 +38,23 @@
           "Name": "Name",
           "text": "text"
         },
+        "CSD U1 IO Story_2023": {
+          "City": "city",
+          "Color": "Color",
+          "Name": "Name",
+          "text": "text"
+        },
         "CSD U1 processing guess_2021": {
           "text": "text"
         },
         "CSD U1 processing guess_2022": {
           "text": "text"
+        },
+        "CSD U1 processing guess_2023": {
+          "text": "text"
+        },
+        "CSD U1 processing live_2023": {
+          "chicken": "chicken"
         },
         "CSD U1 storage movies_2021": {
           "No": "No",
@@ -42,6 +62,11 @@
           "text": "text"
         },
         "CSD U1 storage movies_2022": {
+          "No": "No",
+          "Yes": "Yes",
+          "text": "text"
+        },
+        "CSD U1 storage movies_2023": {
           "No": "No",
           "Yes": "Yes",
           "text": "text"
@@ -54,25 +79,80 @@
           "black": "black",
           "green": "green"
         },
+        "CSD U1 storage outfit_2023": {
+          "black": "black",
+          "green": "green"
+        },
+        "CSD U6 - Board Outputs - A_mb2022": {
+          "Age": "Age",
+          "Name": "Name"
+        },
+        "CSD U6 - Board Outputs - ChalC_mb2022": {
+          "No": "No",
+          "Yes": "Yes"
+        },
+        "CSD U6 - Color LEDs - SB4_2023": {
+          "Medium": "Medium"
+        },
         "CSD U6 - Color LEDs - SB4_2222": {
           "Medium": "Medium"
+        },
+        "CSD U6 - Combine Inputs - A_2023": {
+          "green": "green",
+          "red": "red"
         },
         "CSD U6 - Combine Inputs - A_2222": {
           "green": "green",
           "red": "red"
         },
+        "CSD U6 - Combine Inputs - PracC_2023": {
+          "blue": "blue",
+          "green": "green"
+        },
         "CSD U6 - Combine Inputs - PracC_2222": {
           "blue": "blue",
           "green": "green"
+        },
+        "CSD U6 - If Variables - ChalD_2023": {
+          "+": "+",
+          "-": "-"
         },
         "CSD U6 - If Variables - ChalD_2222": {
           "+": "+",
           "-": "-"
         },
+        "CSD U6 - If Variables - ChalD_mb2022": {
+          "+": "+",
+          "-": "-"
+        },
+        "CSD U6 - If Variables - SB3_2023": {
+          "Name": "Name"
+        },
         "CSD U6 - If Variables - SB3_2222": {
           "Name": "Name"
         },
+        "CSD U6 - If Variables - SB3_mb2022": {
+          "Name": "Name"
+        },
+        "CSD U6 - Music - ChalD_2023": {
+          "A": "A",
+          "B": "B",
+          "C": "C",
+          "D": "D",
+          "E": "E",
+          "F": "F",
+          "G": "G"
+        },
         "CSD U6 - Music - ChalD_2222": {
+          "A": "A",
+          "B": "B",
+          "C": "C",
+          "D": "D",
+          "E": "E",
+          "F": "F",
+          "G": "G"
+        },
+        "CSD U6 - Music - Piano_2023": {
           "A": "A",
           "B": "B",
           "C": "C",
@@ -90,6 +170,15 @@
           "F": "F",
           "G": "G"
         },
+        "CSD U6 - Music - SB1_2023": {
+          "A": "A",
+          "B": "B",
+          "C": "C",
+          "D": "D",
+          "E": "E",
+          "F": "F",
+          "G": "G"
+        },
         "CSD U6 - Music - SB1_2222": {
           "A": "A",
           "B": "B",
@@ -99,7 +188,25 @@
           "F": "F",
           "G": "G"
         },
+        "CSD U6 - Music - SB2.5_2023": {
+          "A": "A",
+          "B": "B",
+          "C": "C",
+          "D": "D",
+          "E": "E",
+          "F": "F",
+          "G": "G"
+        },
         "CSD U6 - Music - SB2.5_2222": {
+          "A": "A",
+          "B": "B",
+          "C": "C",
+          "D": "D",
+          "E": "E",
+          "F": "F",
+          "G": "G"
+        },
+        "CSD U6 - Music - SB3_2023": {
           "A": "A",
           "B": "B",
           "C": "C",
@@ -120,10 +227,28 @@
         "CSD U6 - Screen Inputs - SB2.1_2022": {
           "black": "black"
         },
+        "CSD U6 - Screen Inputs - SB2.1_2023": {
+          "black": "black"
+        },
+        "CSD U6 - Screen Inputs - SB2.1_mb2022": {
+          "black": "black"
+        },
         "CSD U6 - Screen Inputs - SB2.2_2022": {
           "black": "black"
         },
+        "CSD U6 - Screen Inputs - SB2.2_2023": {
+          "black": "black"
+        },
+        "CSD U6 - Screen Inputs - SB2.2_mb2022": {
+          "black": "black"
+        },
+        "CSD U6 - Sensors - P_2023": {
+          "text": "text"
+        },
         "CSD U6 - Sensors - P_2222": {
+          "text": "text"
+        },
+        "CSD U6 - Sensors - P_mb2022": {
           "text": "text"
         },
         "CSD U6 array piano": {
@@ -318,6 +443,9 @@
           "F": "F",
           "G": "G"
         },
+        "U9L5 Cropping Widget_ai2023": {
+          "Reset": "Reset"
+        },
         "allthethings design mode elements": {
           "text": "text"
         },
@@ -329,10 +457,17 @@
           "no": "no",
           "yes": "yes"
         },
+        "ml-customize-raspado_2023": {
+          "no": "no",
+          "yes": "yes"
+        },
         "ml-intro ai lab- fruit veggie widget": {
           "Continue": "Continue"
         },
         "ml-intro ai lab- fruit veggie widget_2022": {
+          "Continue": "Continue"
+        },
+        "ml-intro ai lab- fruit veggie widget_2023": {
           "Continue": "Continue"
         },
         "ml-model card-medical app v2 2021-2": {
@@ -342,6 +477,12 @@
           "yes": "yes"
         },
         "ml-model card-medical app v2 2021-2_2022": {
+          "A": "A",
+          "W": "W",
+          "no": "no",
+          "yes": "yes"
+        },
+        "ml-model card-medical app v2 2021-2_2023": {
           "A": "A",
           "W": "W",
           "no": "no",
@@ -357,6 +498,11 @@
           "No": "No",
           "Yes": "Yes"
         },
+        "ml-models in applab-zoo assessment_2023": {
+          "B": "B",
+          "No": "No",
+          "Yes": "Yes"
+        },
         "ml-models in applab-zoo model embed": {
           "No": "No",
           "Yes": "Yes"
@@ -365,11 +511,19 @@
           "No": "No",
           "Yes": "Yes"
         },
+        "ml-models in applab-zoo model embed_2023": {
+          "No": "No",
+          "Yes": "Yes"
+        },
         "ml-use model card-example3A-2021": {
           "cloudy": "cloudy",
           "night": "night"
         },
         "ml-use model card-example3A_2022": {
+          "cloudy": "cloudy",
+          "night": "night"
+        },
+        "ml-use model card-example3A_2023": {
           "cloudy": "cloudy",
           "night": "night"
         }
