@@ -1,9 +1,8 @@
-import {navigateToHref} from '@cdo/apps/utils';
+import {navigateToHref, reload} from '@cdo/apps/utils';
 import {snakeCase, isNumber} from 'lodash';
 
 export const RUBRIC_PATH = '/rubrics';
 export const SAVING_TEXT = 'Saving...';
-export const SAVE_COMPLETED_TEXT = 'Save complete!';
 
 export async function saveRubricToTable(
   setSaveNotificationText,
@@ -42,10 +41,7 @@ export async function saveRubricToTable(
     if (!rubric) {
       navigateToHref(data.redirectUrl);
     } else {
-      setSaveNotificationText(SAVE_COMPLETED_TEXT);
-      setTimeout(() => {
-        setSaveNotificationText('');
-      }, 8500);
+      reload();
     }
   } catch (err) {
     console.error('Error saving rubric:' + err);

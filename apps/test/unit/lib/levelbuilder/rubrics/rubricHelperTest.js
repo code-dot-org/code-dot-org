@@ -1,10 +1,11 @@
 import {
   saveRubricToTable,
   SAVING_TEXT,
-  SAVE_COMPLETED_TEXT,
   RUBRIC_PATH,
 } from '@cdo/apps/lib/levelbuilder/rubrics/rubricHelper';
+import {expect} from '../../../../util/reconfiguredChai';
 import {RubricUnderstandingLevels} from '@cdo/apps/util/sharedConstants';
+import * as utils from '@cdo/apps/utils';
 import sinon from 'sinon';
 
 describe('rubricHelperTest.js', () => {
@@ -60,7 +61,14 @@ describe('rubricHelperTest.js', () => {
     ],
   };
 
-  it('shows notification of updated rubric', async () => {
+  beforeEach(() => {
+    sinon.stub(utils, 'reload');
+  });
+  afterEach(() => {
+    sinon.restore();
+  });
+
+  it('shows notification of saving updates to an exisiting rubric and reloads', async () => {
     const setSaveNotificationText = sinon.stub();
     const mockFetch = sinon.stub(global, 'fetch');
     mockFetch.returns(
@@ -84,11 +92,8 @@ describe('rubricHelperTest.js', () => {
       setSaveNotificationText.getCall(0),
       SAVING_TEXT
     );
-    sinon.assert.calledWithExactly(
-      setSaveNotificationText.getCall(1),
-      SAVE_COMPLETED_TEXT
-    );
-    sinon.restore();
+    expect(utils.reload).to.have.been.calledOnce;
+    utils.reload.restore();
   });
 
   it('redirects when creating a new rubric', async () => {
