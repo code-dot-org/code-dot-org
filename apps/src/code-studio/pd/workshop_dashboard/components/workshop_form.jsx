@@ -125,6 +125,7 @@ export class WorkshopForm extends React.Component {
       funding_type: null,
       course: '',
       subject: '',
+      unit: '',
       fee: null,
       notes: '',
       sessions: [placeholderSession],
@@ -151,6 +152,7 @@ export class WorkshopForm extends React.Component {
           'funding_type',
           'course',
           'subject',
+          'unit',
           'fee',
           'notes',
           'regional_partner_id',
@@ -815,6 +817,10 @@ export class WorkshopForm extends React.Component {
     }
   };
 
+  handleUnitChange = event => {
+    this.handleFieldChange(event);
+  };
+
   handleCustomizeFeeChange = event => {
     const customizeFee = event.target.value === 'yes';
     const fee = customizeFee ? '' : null;
@@ -835,6 +841,7 @@ export class WorkshopForm extends React.Component {
       funding_type: this.state.funding_type,
       course: this.state.course,
       subject: this.state.subject,
+      unit: this.state.unit,
       fee: this.state.fee ? this.state.fee : null,
       notes: this.state.notes,
       virtual: this.state.virtual,
@@ -889,6 +896,10 @@ export class WorkshopForm extends React.Component {
 
   shouldShowFacilitators() {
     return !['Counselor', 'Admin'].includes(this.state.course);
+  }
+
+  shouldRenderUnits() {
+    return this.state.subject === 'Custom Workshop';
   }
 
   renderFormButtons() {
@@ -1088,6 +1099,30 @@ export class WorkshopForm extends React.Component {
                   validation={validation}
                   onChange={this.handleSubjectChange}
                 />
+              )}
+            </Col>
+            <Col sm={2}>
+              {this.shouldRenderUnits() && (
+                <FormGroup validationState={validation.style.unit}>
+                  <ControlLabel>Unit</ControlLabel>
+                  <FormControl
+                    componentClass="select"
+                    value={this.state.unit || ''}
+                    id="unit"
+                    name="unit"
+                    onChange={this.handleUnitChange}
+                    style={this.getInputStyle()}
+                    disabled={this.props.readOnly}
+                  >
+                    {this.state.unit ? null : <option />}
+                    {Subjects[this.state.course].map((unit, i) => (
+                      <option key={i} value={unit}>
+                        {unit}
+                      </option>
+                    ))}
+                  </FormControl>
+                  <HelpBlock>{validation.help.unit}</HelpBlock>
+                </FormGroup>
               )}
             </Col>
           </Row>
