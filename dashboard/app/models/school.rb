@@ -41,8 +41,6 @@ class School < ApplicationRecord
   has_many :school_info
   has_many :census_summaries, class_name: 'Census::CensusSummary'
 
-  validates :state_school_id, allow_blank: true, format: {with: /\A[A-Z]{2}-.+-.+\z/, message: "must be {State Code}-{State District Id}-{State School Id}"}
-
   # Gets the full address of the school.
   # @return [String] The full address.
   def full_address
@@ -126,10 +124,6 @@ class School < ApplicationRecord
     stub_school_data ? 'test/fixtures/schools.tsv' : 'config/schools.tsv'
   end
 
-  def self.construct_state_school_id(state_code, district_id, school_id)
-    "#{state_code}-#{district_id}-#{school_id}"
-  end
-
   # @param unsanitized [String, nil] the unsanitized string
   # @returns [String, nil] the sanitized version of the string, with equal signs and double
   #   quotations removed. Returns nil on nil input, or if value is a dash (signifies missing in NCES data).
@@ -157,13 +151,6 @@ class School < ApplicationRecord
   def self.seed_from_s3
     # NCES school data has been built up in the DB over time by pulling in different
     # data files. This seeding recreates the order in which they were incorporated.
-    # NOTE: we are intentionally not populating the state_school_id based on the
-    # 2014-2015 preliminary or 2013-2014 public/charter data sets. Those files
-    # contain duplicate entries where some schools appear to be listed more than
-    # once but with different NCES ids. Since state_school_id needs to be unique
-    # the seeding would fail if we tried to set the state ids from those files.
-    # The 2014-2015 public/charter data does not have this issue so we do load the
-    # state_school_ids from there.
     School.transaction do
       CDO.log.info "Seeding 2014-2015 PRELIMINARY public and charter school data."
       # Originally from https://nces.ed.gov/ccd/Data/zip/Sch14pre_txt.zip
@@ -223,8 +210,7 @@ class School < ApplicationRecord
             latitude:           row['LATITUDE14'].to_f,
             longitude:          row['LONGITUDE14'].to_f,
             school_type:        'private',
-            school_district_id: nil,
-            state_school_id:    nil,
+            school_district_id: nil
           }
         end
       end
@@ -245,8 +231,7 @@ class School < ApplicationRecord
             latitude:           nil,
             longitude:          nil,
             school_type:        row['CHARTER_TEXT'][0, 1] == 'Y' ? 'charter' : 'public',
-            school_district_id: row['LEAID'].to_i,
-            state_school_id:    construct_state_school_id(row['LSTATE'].to_s.upcase, row['ST_LEAID'], row['ST_SCHID']),
+            school_district_id: row['LEAID'].to_i
           }
         end
       end
@@ -279,8 +264,7 @@ class School < ApplicationRecord
             latitude:           row['latitude16'].to_f,
             longitude:          row['longitude16'].to_f,
             school_type:        'private',
-            school_district_id: nil,
-            state_school_id:    nil,
+            school_district_id: nil
           }
         end
       end
@@ -303,12 +287,7 @@ class School < ApplicationRecord
             latitude:           nil,
             longitude:          nil,
             school_type:        row['CHARTER_TEXT'][0, 1] == 'Y' ? 'charter' : 'public',
-            school_district_id: row['LEAID'].to_i,
-            # in the 2017-2018 data, the field ST_SCHID already
-            # combines fields that were previously combined in
-            # the construct_state_school_id method
-            # they look like this: AL-101-0200
-            state_school_id:    row['ST_SCHID'],
+            school_district_id: row['LEAID'].to_i
           }
         end
       end
@@ -331,7 +310,6 @@ class School < ApplicationRecord
             zip:                          row['LZIP'],
             school_type:                  row['CHARTER_TEXT'][0, 1] == 'Y' ? 'charter' : 'public',
             school_district_id:           row['LEAID'].to_i,
-            state_school_id:              row['ST_SCHID'],
             # New addition for this iteration -- a "school category",
             # which is Regular, Special Education, Alternative, or Career and Technical
             school_category:              row['SCH_TYPE_TEXT'],
@@ -371,7 +349,6 @@ class School < ApplicationRecord
             longitude:                    row['Longitude [Public School] 2019-20'].to_f,
             school_type:                  CHARTER_SCHOOL_MAP[row['Charter School [Public School] 2019-20'].to_s] || 'public',
             school_district_id:           row['Agency ID - NCES Assigned [Public School] Latest available year'].to_i,
-            state_school_id:              row['State School ID [Public School] 2019-20'],
             school_category:              SCHOOL_CATEGORY_MAP[row['School Type [Public School] 2019-20']].presence,
             last_known_school_year_open:  OPEN_SCHOOL_STATUSES.include?(row['Updated Status [Public School] 2019-20']) ? '2019-2020' : nil
           }
@@ -396,7 +373,6 @@ class School < ApplicationRecord
             longitude:                    row['Longitude [Public School] 2020-21'].to_f,
             school_type:                  CHARTER_SCHOOL_MAP[row['Charter School [Public School] 2020-21'].to_s] || 'public',
             school_district_id:           row['Agency ID - NCES Assigned [Public School] Latest available year'].to_i,
-            state_school_id:              row['State School ID [Public School] 2020-21'],
             school_category:              SCHOOL_CATEGORY_MAP[row['School Type [Public School] 2020-21']].presence,
             last_known_school_year_open:  OPEN_SCHOOL_STATUSES.include?(row['Updated Status [Public School] 2020-21']) ? '2020-2021' : nil
           }
@@ -418,8 +394,7 @@ class School < ApplicationRecord
             latitude:                     nil,
             longitude:                    nil,
             school_type:                  'private',
-            school_district_id:           nil,
-            state_school_id:              nil
+            school_district_id:           nil
           }
         end
       end
@@ -453,7 +428,6 @@ class School < ApplicationRecord
             longitude:                    row['Longitude [Public School] 2021-22'].to_f,
             school_type:                  CHARTER_SCHOOL_MAP[row['Charter School [Public School] 2021-22'].to_s] || 'public',
             school_district_id:           row['Agency ID - NCES Assigned [Public School] Latest available year'].to_i,
-            state_school_id:              row['State School ID [Public School] 2021-22'],
             school_category:              SCHOOL_CATEGORY_MAP[row['School Type [Public School] 2021-22']].presence,
             last_known_school_year_open:  OPEN_SCHOOL_STATUSES.include?(row['Updated Status [Public School] 2021-22']) ? '2021-2022' : nil
           }
@@ -497,10 +471,7 @@ class School < ApplicationRecord
             School.new(csv_entry).save!
             new_schools << csv_entry
           rescue ActiveRecord::RecordNotUnique
-            # NCES ID and state school ID are required to be unique,
-            # so this error would occur if two rows with different NCES IDs
-            # had the same state school ID.
-            CDO.log.info "Record with NCES ID #{csv_entry[:id]} and state school ID #{csv_entry[:state_school_id]} not unique, not added"
+            CDO.log.info "Record with NCES ID #{csv_entry[:id]} not unique, not added"
             duplicate_schools << csv_entry
           end
         elsif !db_entry.nil? && update_existing
@@ -523,7 +494,7 @@ class School < ApplicationRecord
             begin
               db_entry.update!(csv_entry)
             rescue ActiveRecord::RecordNotUnique
-              CDO.log.info "Record with NCES ID #{csv_entry[:id]} and state school ID #{csv_entry[:state_school_id]} not unique, not added"
+              CDO.log.info "Record with NCES ID #{csv_entry[:id]} not unique, not added"
               duplicate_schools << csv_entry
             end
           else
@@ -592,7 +563,7 @@ class School < ApplicationRecord
   # @param options [Hash] The CSV file parsing options.
   # @return [String] The CSV file name.
   def self.write_to_csv(filename, options = CSV_IMPORT_OPTIONS)
-    cols = %w(id name address_line1 address_line2 address_line3 city state zip latitude longitude school_type school_district_id state_school_id)
+    cols = %w(id name address_line1 address_line2 address_line3 city state zip latitude longitude school_type school_district_id)
     CSV.open(filename, 'w', options) do |csv|
       csv << cols
       rows = block_given? ? yield : order(:id)
