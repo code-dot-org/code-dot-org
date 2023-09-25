@@ -1,5 +1,11 @@
-import {createAsyncThunk, createSlice, PayloadAction} from '@reduxjs/toolkit';
-import {SongData} from './types';
+import {
+  AnyAction,
+  createAsyncThunk,
+  createSlice,
+  PayloadAction,
+  ThunkDispatch,
+} from '@reduxjs/toolkit';
+import {SongData, SongMetadata} from './types';
 import {queryParams} from '../code-studio/utils';
 import {fetchSignedCookies} from '../utils';
 import {
@@ -8,6 +14,7 @@ import {
   parseSongOptions,
   loadSong,
   unloadSong,
+  loadSongMetadata,
 } from './songs';
 
 export interface DanceState {
@@ -16,6 +23,7 @@ export interface DanceState {
   runIsStarting: boolean;
   // Fields below are used only by Lab2 Dance
   isRunning: boolean;
+  currentSongMetadata: SongMetadata | undefined;
 }
 
 const initialState: DanceState = {
@@ -23,6 +31,7 @@ const initialState: DanceState = {
   songData: {},
   runIsStarting: false,
   isRunning: false,
+  currentSongMetadata: undefined,
 };
 
 // THUNKS
@@ -67,9 +76,7 @@ export const initSongs = createAsyncThunk(
       }
     });
 
-    if (onSongSelected) {
-      onSongSelected(selectedSong);
-    }
+    await handleSongSelection(dispatch, selectedSong, onSongSelected);
   }
 );
 
@@ -108,11 +115,24 @@ export const setSong = createAsyncThunk(
       }
     });
 
-    if (onSongSelected) {
-      onSongSelected(songId);
-    }
+    await handleSongSelection(dispatch, songId, onSongSelected);
   }
 );
+
+async function handleSongSelection(
+  dispatch: ThunkDispatch<unknown, unknown, AnyAction>,
+  songId: string,
+  onSongSelected?: (songId: string) => void
+) {
+  // Temporary branching to support both legacy Dance which manages the current song's
+  // manifest within Dance.js, and Lab2 Dance which reads the current song's manifest from Redux.
+  if (onSongSelected) {
+    onSongSelected(songId);
+  } else {
+    const metadata = await loadSongMetadata(songId);
+    dispatch(setCurrentSongMetadata(metadata));
+  }
+}
 
 const danceSlice = createSlice({
   name: 'dance',
@@ -127,9 +147,16 @@ const danceSlice = createSlice({
     setRunIsStarting: (state, action: PayloadAction<boolean>) => {
       state.runIsStarting = action.payload;
     },
+    setCurrentSongMetadata: (state, action: PayloadAction<SongMetadata>) => {
+      state.currentSongMetadata = action.payload;
+    },
   },
 });
 
-export const {setSongData, setSelectedSong, setRunIsStarting} =
-  danceSlice.actions;
+export const {
+  setSongData,
+  setSelectedSong,
+  setRunIsStarting,
+  setCurrentSongMetadata,
+} = danceSlice.actions;
 export const reducers = {dance: danceSlice.reducer};
