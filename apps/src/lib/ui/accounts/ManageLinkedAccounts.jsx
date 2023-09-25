@@ -27,6 +27,12 @@ const DISCONNECT_DISABLED_STATUS = {
   NO_LOGIN_OPTIONS: 'noLoginOptions',
 };
 
+const PERSONAL_LOGIN_TYPES = [
+  OAuthProviders.google,
+  OAuthProviders.microsoft,
+  OAuthProviders.facebook,
+];
+
 class ManageLinkedAccounts extends React.Component {
   static propTypes = {
     // Provided by redux
@@ -34,6 +40,7 @@ class ManageLinkedAccounts extends React.Component {
     userHasPassword: PropTypes.bool.isRequired,
     isGoogleClassroomStudent: PropTypes.bool.isRequired,
     isCleverStudent: PropTypes.bool.isRequired,
+    personalAccountLinkingEnabled: PropTypes.bool.isRequired,
   };
 
   cannotDisconnectGoogle = authOption => {
@@ -158,6 +165,9 @@ class ManageLinkedAccounts extends React.Component {
                     option.id ? this.disconnectDisabledStatus(option) : null
                   }
                   error={option.error}
+                  personalAccountLinkingEnabled={
+                    this.props.personalAccountLinkingEnabled
+                  }
                 />
               );
             })}
@@ -175,6 +185,8 @@ export default connect(state => ({
   userHasPassword: state.manageLinkedAccounts.userHasPassword,
   isGoogleClassroomStudent: state.manageLinkedAccounts.isGoogleClassroomStudent,
   isCleverStudent: state.manageLinkedAccounts.isCleverStudent,
+  personalAccountLinkingEnabled:
+    state.manageLinkedAccounts.personalAccountLinkingEnabled,
 }))(ManageLinkedAccounts);
 
 class OauthConnection extends React.Component {
@@ -185,6 +197,7 @@ class OauthConnection extends React.Component {
     email: PropTypes.string,
     disconnectDisabledStatus: PropTypes.string,
     error: PropTypes.string,
+    personalAccountLinkingEnabled: PropTypes.bool.isRequired,
   };
 
   getDisconnectDisabledTooltip = () => {
@@ -196,6 +209,13 @@ class OauthConnection extends React.Component {
       default:
         return null;
     }
+  };
+
+  shouldDisableConnectButton = () => {
+    return (
+      PERSONAL_LOGIN_TYPES.includes(this.props.credentialType) &&
+      !this.props.personalAccountLinkingEnabled
+    );
   };
 
   render() {
@@ -254,7 +274,10 @@ class OauthConnection extends React.Component {
                 type="submit"
                 style={styles.button}
                 text={buttonText}
-                disabled={!!disconnectDisabledMessage}
+                disabled={
+                  !!disconnectDisabledMessage ||
+                  (!isConnected && this.shouldDisableConnectButton())
+                }
               />
               <RailsAuthenticityToken />
             </form>
