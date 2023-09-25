@@ -108,6 +108,11 @@ Run integration tests for `maze` levels:
 yarn test:integration --levelType=maze
 ```
 
+Stream pass/fail results inline with stdout/sterr:
+```
+yarn test:unit --verbose
+```
+
 ##### Rerun Tests Automatically
 
 Rerun tests automatically on every file change:
