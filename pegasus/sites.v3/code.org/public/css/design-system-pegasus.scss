@@ -35,6 +35,12 @@ section.bg-primary-light {
   }
 }
 
+// Hide random whitespace at the bottom
+//  of the page from legacy code
+.container_responsive_full_width > .desktop-feature {
+  display: none;
+}
+
 // Show elements based on screen size
 .show-desktop {
   display: block;
@@ -87,6 +93,8 @@ i.fa-fw {
   &.align-items-start { align-items: flex-start; }
   &.wrap { flex-wrap: wrap; }
   &.wrap-reverse { flex-wrap: wrap-reverse; }
+  &.gap-1 { gap: 1rem }
+  &.gap-2 { gap: 2rem }
 }
 
 // Grid container
@@ -214,6 +222,13 @@ a.link-button {
       gap: 0 .75rem;
     }
   }
+}
+
+// Button wrapper for side-by-side buttons
+.button-wrapper {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1rem;
 }
 
 // Basic hero banner
@@ -723,6 +738,41 @@ form {
       width: 100%;
       text-align: center;
     }
+  }
+}
+
+// Editorial cards
+// See code.org/teach and code.org/help for examples
+.editorial-cards-wrapper {
+  display: grid;
+  margin-top: 4rem;
+  gap: 2.5rem;
+
+  @media screen and (min-width: $width-sm) {
+    grid-template-columns: repeat(3, 1fr);
+  }
+
+  .flex-container {
+    gap: 1.5rem;
+    flex-direction: column;
+
+    &.self-paced-english {
+      gap: 1.3rem;
+
+      @media screen and (max-width: $width-md) {
+        gap: 0;
+      }
+    }
+  }
+
+  img {
+    width: 12rem;
+    height: 12rem;
+    border-radius: 50%;
+  }
+
+  p {
+    @include body-three;
   }
 }
 
