@@ -12,7 +12,6 @@ export default function AiAssessment({
   aiUnderstandingLevel,
   aiConfidence,
 }) {
-  // TO DO: pass through props from parent to child component below
   return (
     <div>
       <Heading6>{i18n.aiAssessment()}</Heading6>

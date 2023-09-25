@@ -68,6 +68,7 @@ export default function LearningGoal({
         </div>
       </summary>
       <div className={style.learningGoalExpanded}>
+        {/*TODO: Pass through data to child component*/}
         {aiEnabled && (
           <AiAssessment
             isAiAssessed={learningGoal.aiEnabled}

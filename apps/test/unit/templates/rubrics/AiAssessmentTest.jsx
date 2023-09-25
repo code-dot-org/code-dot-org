@@ -11,7 +11,7 @@ describe('AiAssessment', () => {
     aiConfidence: 70,
   };
 
-  it('renders AiAssessmentBox', () => {
+  it('renders AiAssessmentBox if it is assessessed by AI', () => {
     const wrapper = shallow(<AiAssessment {...props} />);
     expect(wrapper.find('AiAssessmentBox')).to.have.lengthOf(1);
     expect(wrapper.find('AiAssessmentBox').props().isAiAssessed).to.equal(
