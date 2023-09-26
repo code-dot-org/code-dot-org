@@ -5263,6 +5263,10 @@
           "purpose": "Dans cette activité en ligne, les élèves apprendront à utiliser les événements dans le Labo Jeux. Ils commenceront par apprendre au chevalier à se déplacer lorsqu'une touche fléchée est enfoncée, et termineront avec la possibilité de mettre en valeur le reste des compétences qu'ils ont acquises, tout au long de ce cours, y compris le séquencement et les boucles, dans le cadre du casse-tête en jeu libre de la fin. ",
           "student_overview": "Utilise des événements pour créer une histoire ou un jeu interactif."
         },
+        "ai-ethics-2023/lesson-1": {
+          "name": "Notre code d'éthique en matière d'IA",
+          "student_overview": "Faites des recherches collaboratives sur l'éthique de l'IA et créez un code de conduite partageable."
+        },
         "csc-adaptations-2023/Modeling Animal Adaptations (pilot)": {
           "name": "Introduction aux adaptations animales",
           "overview": "Dans cette leçon de **renforcement des compétences**, les élèves apprendront à créer et à animer des sprites et à utiliser des événements pour les rendre interactifs. \n\nLes élèves coderont un modèle de cause à effet basé sur des événements dans Sprite Lab pour démontrer comment les espèces survivent en s'adaptant à leur environnement au fil du temps. Des modèles interactifs et des simulations sont utilisés dans le monde réel pour aider les ingénieurs et les scientifiques à identifier des modèles, à comprendre la nature, à faire des prédictions sur les changements futurs et à concevoir des solutions pour se préparer aux perturbations majeures et/ou les combattre. \n\nLes élèves exploreront des exemples d'évolution, d'adaptation, de migration, de sélection naturelle et de survie en groupe. ",
@@ -5423,6 +5427,357 @@
           "preparation": "-   Préparez un ordinateur par étudiant.\n-   Préparez une copie du document **<a href=\"https://docs.google.com/document/d/1kO4SNEIVyM0GrxxJb6NzVYauXXpi6rzQkDIfrzQf1Ls/template/preview\" target=\"_blank\">Partagez votre</a>application** par étudiant.\n-   Assurez-vous que les élèves ont une copie de leur poème original à portée de main pour cette leçon.  \n-   Divisez la classe en paires pour l'activité Poetry Pair-Share.\n-   Examinez ces options d'extension connexes ([link](https://studio.code.org/s/poetry-2023/lessons/4#activity-4365336)) à explorer après cette leçon.\n\n##### Facultatif\n\n, en particulier pour l'enseignement à distance : déterminez si vous devez configurer un document numérique ou un espace en ligne partagé pour publier l'URL de l'application de chaque élève (voir le modèle destiné aux enseignants dans « Liens »). ",
           "purpose": "Le partage de leurs projets d'art poétique avec leurs pairs est un aspect important du processus de création. Il permet aux étudiants de recevoir des commentaires, de collaborer avec d'autres, de réfléchir à leur propre travail et de célébrer leurs réalisations. En partageant leur travail avec les autres, les élèves peuvent grandir et s'améliorer en tant que penseurs créatifs et développer d'importantes compétences en communication et en relations interpersonnelles.",
           "student_overview": "Partagez vos nouvelles applications de poèmes avec vos amis ! "
+        },
+        "csd1-2023/Intro to Problem Solving": {
+          "name": "Introduction à la Résolution de Problèmes",
+          "preparation": "**Pour chaque groupe**\n\n-   2 feuilles de papier d'aluminium de 5 à 5 pouces de longueur chacune\n-   1 récipient pouvant contenir 3 à 5 pouces d'eau \n-   Plusieurs serviettes en papier ou chiffons qui peuvent être placés sous le récipient \n-   15 pièces de monnaie\n-   Un exemplaire du guide d'activité\n\n\\*\\*Pour l'enseignant\n\n-   1 récipient pouvant contenir de 5 à 10 cm d'eau \n-   50 pièces de monnaie \n-   Des serviettes en papier ou des chiffons supplémentaires \n-   Consultez le forum [ » Salle des profs « ](https://forum.code.org/t/resource-hub-problem-solving-and-computing-chapter-1-lessons-1-3/36188) pour les enseignants vérifiés afin de trouver des stratégies ou des ressources supplémentaires partagées par d'autres enseignants.\n-   Si vous enseignez à distance, pensez à consulter notre [Modifications de la leçon virtuelle](https://docs.google.com/document/d/1420LdkGrISwhKjHu7i4XCbi60ahmCRnQoYf1_JosdgA/preview)."
+        },
+        "csd1-2023/The Problem Solving Process": {
+          "name": "Le Processus de Résolution de Problèmes",
+          "preparation": "Pour chaque élève \n\n-   Imprimez une copie du Guide d'activité\n\nPour la classe\n\n-   Papier pour affiches\n-   Marqueurs/crayons de couleur\n\nPour l'enseignant\n\n-   Consultez le forum [ » Salle des profs « ](https://forum.code.org/t/resource-hub-problem-solving-and-computing-chapter-1-lessons-1-3/36188) pour les enseignants vérifiés afin de trouver des stratégies ou des ressources supplémentaires partagées par d'autres enseignants.\n-   Si vous enseignez virtuellement, pensez à consulter nos [Modifications de la leçon virtuelle](https://docs.google.com/document/d/1420LdkGrISwhKjHu7i4XCbi60ahmCRnQoYf1_JosdgA/preview)."
+        },
+        "csd1-2023/Exploring Problem Solving": {
+          "name": "Explorer la Résolution de Problèmes",
+          "preparation": "-   Imprimez le guide d'activité pour chaque élève\n-   Papier à gratter pour le problème de la fête d'anniversaire.\n-   Affiche pour noter les stratégies de définition des problèmes lors de la discussion de clôture.\n-   Consultez le forum [ » Salle des profs « ](https://forum.code.org/t/resource-hub-problem-solving-and-computing-chapter-1-lessons-1-3/36188) pour les enseignants vérifiés afin de trouver des stratégies ou des ressources supplémentaires partagées par d'autres enseignants.\n-   Si vous enseignez de manière virtuelle, pensez à consulter nos [Modifications de la leçon virtuelle](https://docs.google.com/document/d/1420LdkGrISwhKjHu7i4XCbi60ahmCRnQoYf1_JosdgA/preview)."
+        },
+        "csd1-2023/What is a Computer?": {
+          "name": "Qu'est ce qu'un Ordinateur ?",
+          "preparation": "**Pour chaque groupe** \n\n-   Imprimez des copies du guide d'activité. Notez qu'il y a deux séries d'images, mais que chaque groupe n'a besoin que d'une seule série.\n-   Ciseaux (si vous n'avez pas le temps de découper les images avant le cours) \n-   Papier pour affiches\n-   Marqueurs ou crayons de couleur \n-   Colle ou ruban adhésif pour fixer les images \n\n\\*\\*Pour l'enseignant\n\n-   Consultez le forum [ » Salle des profs « ](https://forum.code.org/t/resource-hub-problem-solving-and-computing-chapter-2-lessons-4-8/36189) pour les enseignants vérifiés afin de trouver des stratégies ou des ressources supplémentaires partagées par d'autres enseignants.\n-   Si vous enseignez de manière virtuelle, pensez à consulter nos [Modifications de la leçon virtuelle](https://docs.google.com/document/d/1420LdkGrISwhKjHu7i4XCbi60ahmCRnQoYf1_JosdgA/preview)."
+        },
+        "csd1-2023/Input and Output": {
+          "name": "Entrée et Sortie",
+          "preparation": "-   Préparez des copies du guide d'activité\n-   Consultez le forum [\"Salle de profs\"](https://forum.code.org/t/resource-hub-problem-solving-and-computing-chapter-2-lessons-4-8/36189) pour les enseignants vérifiés afin de trouver des stratégies ou des ressources supplémentaires partagées par d'autres enseignants.\n-   Si vous enseignez de manière virtuelle, pensez à consulter nos [Modifications de la leçon virtuelle](https://docs.google.com/document/d/1420LdkGrISwhKjHu7i4XCbi60ahmCRnQoYf1_JosdgA/preview)."
+        },
+        "csd1-2023/Processing": {
+          "name": "Le Traitement"
+        },
+        "csd1-2023/Storage": {
+          "name": "Le Stockage",
+          "preparation": "-   Imprimez une copie du guide d'activité pour chaque élève.\n-   Consultez le forum [ » Salle des profs « ](https://forum.code.org/t/resource-hub-problem-solving-and-computing-chapter-2-lessons-4-8/36189) pour les enseignants vérifiés afin de trouver des stratégies ou des ressources supplémentaires partagées par d'autres enseignants.\n-   Si vous enseignez de manière virtuelle, pensez à consulter nos [Modifications de la leçon virtuelle](https://docs.google.com/document/d/1420LdkGrISwhKjHu7i4XCbi60ahmCRnQoYf1_JosdgA/preview)."
+        },
+        "csd1-2023/Project - Propose an App": {
+          "name": "Projet - Propose une Application",
+          "preparation": "-   Imprimez une copie de [r apps_and_problem_solving/csd/2023] pour chaque paire d'élèves.\n-   Papier pour affiches, stylos, marqueurs et autres matériels pour la réalisation des affiches.\n-   Consultez le forum [ » Salle des profs « ](https://forum.code.org/t/project-hub-propose-an-app-problem-solving-and-computing-lesson-8/36201) pour les enseignants vérifiés afin de trouver des stratégies ou des ressources supplémentaires partagées par d'autres enseignants.\n-   Si vous enseignez de manière virtuelle, pensez à consulter notre [Modifications de la leçon virtuelle](https://docs.google.com/document/d/1420LdkGrISwhKjHu7i4XCbi60ahmCRnQoYf1_JosdgA/preview)."
+        },
+        "csd1-2023/Intro to Problem Solving - Newspaper Table (Alternate Lesson 1)": {
+          "name": "Introduction à la résolution de problèmes - Table à journaux (Alternative à la leçon 1)",
+          "preparation": "**Pour chaque groupe**\n\n-   2 journaux complets pour chaque groupe d'élèves\n-   1 rouleau de ruban adhésif pour chaque groupe d'élèves\n-   Un exemplaire du guide d'activité\n\n**Pour l'enseignant**\n\n-   10 à 20 livres de poids similaire.\n-   Consultez le forum [ » Salle des profs « ](https://forum.code.org/t/resource-hub-problem-solving-and-computing-chapter-1-lessons-1-3/36188) pour les enseignants vérifiés afin de trouver des stratégies ou des ressources supplémentaires partagées par d'autres enseignants.\n-   Si vous enseignez de manière virtuelle, pensez à consulter nos [Modifications de la leçon virtuelle](https://docs.google.com/document/d/1420LdkGrISwhKjHu7i4XCbi60ahmCRnQoYf1_JosdgA/preview)."
+        },
+        "csd1-2023/Intro to Problem Solving - Spaghetti Bridge (Alternate Lesson 1)": {
+          "name": "Introduction à la résolution de problèmes - Pont de spaghetti (Alternative à la leçon 1)",
+          "preparation": "**Pour chaque groupe**\n\n-   1 lb de nouilles spaghetti sèches (environ 1 boîte)\n-   1 pistolet à colle\n-   Un exemplaire du guide d'activité\n\n**Pour l'enseignant**\n\n-   10 à 20 livres de taille et de poids similaires\n-   Consultez le forum [ » Salle des profs « ](https://forum.code.org/t/resource-hub-problem-solving-and-computing-chapter-1-lessons-1-3/36188) pour les enseignants vérifiés afin de trouver des stratégies ou des ressources supplémentaires partagées par d'autres enseignants.\n-   Si vous enseignez de manière virtuelle, pensez à consulter nos [Modifications de la leçon virtuelle](https://docs.google.com/document/d/1420LdkGrISwhKjHu7i4XCbi60ahmCRnQoYf1_JosdgA/preview)."
+        },
+        "csd1-2023/Intro to Problem Solving - Paper Tower (Alternate Lesson 1)": {
+          "name": "Introduction à la résolution de problèmes - Tour de papier (Alternative à la leçon 1)",
+          "preparation": "**Pour chaque groupe**\n\n-   20 feuilles de papier, 8,5 x 11 pouces\n-   Espace pour construire leur tour\n-   Un exemplaire du guide d'activité\n\n**Pour l'enseignant**\n\n-   Papier supplémentaire \n-   Chronomètre\n-   Règle\n-   Consultez le forum [ » Salle des profs « ](https://forum.code.org/t/resource-hub-problem-solving-and-computing-chapter-1-lessons-1-3/36188) pour les enseignants vérifiés afin de trouver des stratégies ou des ressources supplémentaires partagées par d'autres enseignants.\n-   Si vous enseignez de manière virtuelle, pensez à consulter nos [Modifications de la leçon virtuelle](https://docs.google.com/document/d/1420LdkGrISwhKjHu7i4XCbi60ahmCRnQoYf1_JosdgA/preview)."
+        },
+        "csd1-2023/Exploring Problem Solving - Animals Theme (Alternate Lesson 3)": {
+          "name": "Explorer la résolution de problèmes - Thème des animaux (Alternative à la leçon 3)",
+          "preparation": "-   Imprimez le guide d'activité pour chaque élève\n-   Préparez des tangrams pour les élèves, ou imprimez une feuille de tangram et prenez des ciseaux pour chaque groupe.\n-   Affiche pour noter les stratégies de définition des problèmes lors de la discussion de clôture.\n-   Consultez le forum [ » Salle des profs « ](https://forum.code.org/t/resource-hub-problem-solving-and-computing-chapter-1-lessons-1-3/36188) pour les enseignants vérifiés afin de trouver des stratégies ou des ressources supplémentaires partagées par d'autres enseignants.\n-   Si vous enseignez de manière virtuelle, pensez à consulter nos [Modifications de la leçon virtuelle](https://docs.google.com/document/d/1420LdkGrISwhKjHu7i4XCbi60ahmCRnQoYf1_JosdgA/preview)."
+        },
+        "csd1-2023/Exploring Problem Solving - Games Theme (Alternate Lesson 3)": {
+          "name": "Explorer la résolution de problèmes - Thème des jeux (Alternative à la leçon 3)",
+          "preparation": "-   Imprimez le guide d'activité pour chaque élève\n-   Papier à gratter pour le problème de la course à relais entre partenaires.\n-   Affiche pour noter les stratégies de définition des problèmes lors de la discussion de clôture.\n-   Consultez le forum [ » Salle des profs « ](https://forum.code.org/t/resource-hub-problem-solving-and-computing-chapter-1-lessons-1-3/36188) pour les enseignants vérifiés afin de trouver des stratégies ou des ressources supplémentaires partagées par d'autres enseignants.\n-   Si vous enseignez de manière virtuelle, pensez à consulter nos [Modifications de la leçon virtuelle](https://docs.google.com/document/d/1420LdkGrISwhKjHu7i4XCbi60ahmCRnQoYf1_JosdgA/preview)."
+        },
+        "csd2-2023/Exploring Web Pages": {
+          "name": "Explorer des Pages Web",
+          "preparation": "-   Imprimez une copie du guide d'activité pour chaque élève.\n-   Consultez le forum [ » Salle des profs « ](https://forum.code.org/t/resource-hub-web-development-chapter-1-lessons-1-13/36190) pour les enseignants vérifiés afin de trouver des stratégies ou des ressources supplémentaires partagées par d'autres enseignants.\n-   Si vous enseignez de manière virtuelle, pensez à consulter nos [Modifications de leçons virtuelles](https://docs.google.com/document/d/15Gkj12vQaZmbJMZbfKk7Ec3krr1aOJeG16zy3wZ83jQ/preview)."
+        },
+        "csd2-2023/Intro to HTML": {
+          "name": "Initiation au HTML",
+          "preparation": "-   Regardez les niveaux de Code Studio\n-   Consultez le forum [ » Salle des profs « ](https://forum.code.org/t/resource-hub-web-development-chapter-1-lessons-1-13/36190) pour les enseignants vérifiés afin de trouver des stratégies ou des ressources supplémentaires partagées par d'autres enseignants.\n-   Si vous enseignez de manière virtuelle, pensez à consulter nos [Modifications de leçons virtuelles](https://docs.google.com/document/d/15Gkj12vQaZmbJMZbfKk7Ec3krr1aOJeG16zy3wZ83jQ/preview)."
+        },
+        "csd2-2023/Headings": {
+          "preparation": "-   Préparez les journaux des élèves pour les rendre.\n-   Si vous souhaitez utiliser un tableau d'ancrage, préparez du papier d'affiche pour le faire avec toute la classe.\n-   Consultez le forum [ » Salle des profs « ](https://forum.code.org/t/resource-hub-web-development-chapter-1-lessons-1-13/36190) pour les enseignants vérifiés afin de trouver des stratégies ou des ressources supplémentaires partagées par d'autres enseignants.\n-   Si vous enseignez virtuellement, pensez à consulter notre [Modifications de la leçon virtuelle](https://docs.google.com/document/d/15Gkj12vQaZmbJMZbfKk7Ec3krr1aOJeG16zy3wZ83jQ/preview)."
+        },
+        "csd2-2023/Mini-Project: HTML Web Page": {
+          "name": "Mini-projet : Page web HTML",
+          "preparation": "-   Imprimez une copie du guide du projet pour chaque élève.\n-   Consultez le forum [ » Salle des profs « ](https://forum.code.org/t/project-hub-html-web-page-web-development-lesson-4/36202) pour les enseignants vérifiés afin de trouver des stratégies ou des ressources supplémentaires partagées par d'autres enseignants.\n-   Si vous enseignez de manière virtuelle, pensez à consulter nos [Modifications de leçons virtuelles](https://docs.google.com/document/d/15Gkj12vQaZmbJMZbfKk7Ec3krr1aOJeG16zy3wZ83jQ/preview)."
+        },
+        "csd2-2023/Digital Footprint": {
+          "name": "L'Empreinte Numérique",
+          "preparation": "-   Imprimez des copies de « Social Sleuth » pour chaque élève (ou une pour chaque groupe si vous regroupez les élèves).\n-   Consultez le forum [ » Salle des profs « ](https://forum.code.org/t/resource-hub-web-development-chapter-1-lessons-1-13/36190) pour les enseignants vérifiés afin de trouver des stratégies ou des ressources supplémentaires partagées par d'autres enseignants.\n-   Si vous enseignez de manière virtuelle, pensez à consulter nos [Modifications de leçons virtuelles](https://docs.google.com/document/d/15Gkj12vQaZmbJMZbfKk7Ec3krr1aOJeG16zy3wZ83jQ/preview).",
+          "student_overview": "**Question du jour : Comment pouvez-vous vous assurer que vos informations privées restent privées ?**\n\nDans cette leçon, vous allez réfléchir aux informations personnelles que vous choisissez de partager numériquement sur divers sites web, applications et médias sociaux. "
+        },
+        "csd2-2023/Styling Text with CSS": {
+          "name": "Styliser le texte avec CSS",
+          "preparation": "-   Créez une nouvelle affiche intitulée **Propriétés CSS** si vos élèves n'ont pas l'intention de suivre les nouvelles propriétés CSS dans leurs journaux.\n-   Consultez le forum [ » Salle des profs « ](https://forum.code.org/t/resource-hub-web-development-chapter-1-lessons-1-13/36190) pour les enseignants vérifiés afin de trouver des stratégies ou des ressources supplémentaires partagées par d'autres enseignants.\n-   Si vous enseignez de manière virtuelle, pensez à consulter notre [Modifications de la leçon virtuelle](https://docs.google.com/document/d/15Gkj12vQaZmbJMZbfKk7Ec3krr1aOJeG16zy3wZ83jQ/preview)."
+        },
+        "csd2-2023/Mini-Project: Your Personal Style": {
+          "name": "Mini-projet : Votre style personnel",
+          "preparation": "-   Imprimez une copie du guide du projet pour chaque élève.\n-   Consultez le forum [ » Salle des profs « ](https://forum.code.org/t/project-hub-your-personal-style-web-development-lesson-7/36203) pour les enseignants vérifiés afin de trouver des stratégies ou des ressources supplémentaires partagées par d'autres enseignants.\n-   Si vous enseignez de manière virtuelle, pensez à consulter nos [Modifications de leçons virtuelles](https://docs.google.com/document/d/15Gkj12vQaZmbJMZbfKk7Ec3krr1aOJeG16zy3wZ83jQ/preview)."
+        },
+        "csd2-2023/Intellectual Property": {
+          "name": "Propriété intellectuelle",
+          "preparation": "-   Aperçu de Creative Commons - Vidéo. Vous devrez peut-être la télécharger avant le cours si YouTube est bloqué.\n-   Consultez le forum [ » Salle des profs « ](https://forum.code.org/t/resource-hub-web-development-chapter-1-lessons-1-13/36190) pour les enseignants vérifiés afin de trouver des stratégies ou des ressources supplémentaires partagées par d'autres enseignants.\n-   Si vous enseignez de manière virtuelle, pensez à consulter notre [Modifications de la leçon virtuelle](https://docs.google.com/document/d/15Gkj12vQaZmbJMZbfKk7Ec3krr1aOJeG16zy3wZ83jQ/preview)."
+        },
+        "csd2-2023/Websites for Expression": {
+          "name": "Sites web pour s'exprimer",
+          "preparation": "-   Préparez des journaux ou, éventuellement, imprimez des copies du guide d'activités.\n-   Consultez le forum [ » Salle des profs « ](https://forum.code.org/t/resource-hub-web-development-chapter-1-lessons-1-13/36190) pour les enseignants vérifiés afin de trouver des stratégies ou des ressources supplémentaires partagées par d'autres enseignants.\n-   Si vous enseignez de manière virtuelle, pensez à consulter nos [Modifications de leçons virtuelles](https://docs.google.com/document/d/15Gkj12vQaZmbJMZbfKk7Ec3krr1aOJeG16zy3wZ83jQ/preview)."
+        },
+        "csd2-2023/Styling Elements with CSS": {
+          "name": "Styliser des Éléments avec CSS"
+        },
+        "csd2-2023/Your Web Page - Prepare": {
+          "name": "Votre site web - Préparer",
+          "preparation": "-   Imprimez une copie du guide d'activité pour chaque élève.\n-   Consultez le forum [ » Salle des profs « ](https://forum.code.org/t/resource-hub-web-development-chapter-1-lessons-1-13/36190) pour les enseignants vérifiés afin de trouver des stratégies ou des ressources supplémentaires partagées par d'autres enseignants.\n-   Si vous enseignez de manière virtuelle, pensez à consulter nos [Modifications de leçons virtuelles](https://docs.google.com/document/d/15Gkj12vQaZmbJMZbfKk7Ec3krr1aOJeG16zy3wZ83jQ/preview)."
+        },
+        "csd2-2023/Project - Personal Web Page": {
+          "name": "Projet - Page web personnelle",
+          "preparation": "-   Assurez-vous que les élèves ont accès au guide de projet de la dernière leçon.\n-   Imprimez des copies des documents de réflexion et de rétroaction par les pairs.\n-   Consultez le forum [ » Salle des profs « ](https://forum.code.org/t/project-hub-personal-web-page-web-development-lesson-13/36204) pour les enseignants vérifiés afin de trouver des stratégies ou des ressources supplémentaires partagées par d'autres enseignants.\n-   Si vous enseignez virtuellement, pensez à consulter notre [Modifications de la leçon virtuelle](https://docs.google.com/document/d/15Gkj12vQaZmbJMZbfKk7Ec3krr1aOJeG16zy3wZ83jQ/preview)."
+        },
+        "csd2-2023/Team Problem Solving": {
+          "name": "La Résolution De Problèmes en Équipe"
+        },
+        "csd2-2023/Sources and Research": {
+          "name": "Les Sources et la Recherche",
+          "preparation": "-   Imprimez une copie du guide d'activité de la chasse au trésor sur Internet pour chaque paire d'élèves, ou préparez-vous à projeter les questions à la classe.\n-   Créez une affiche vierge intitulée **Check-list de fiabilité** et placez-la au mur.\n-   Consultez le forum [ » Salle des profs « ](https://forum.code.org/t/resource-hub-web-development-chapter-2-lessons-14-20/36191) pour les enseignants vérifiés afin de trouver des stratégies ou des ressources supplémentaires partagées par d'autres enseignants.\n-   Si vous enseignez virtuellement, pensez à consulter notre [Modifications de la leçon virtuelle](https://docs.google.com/document/d/15Gkj12vQaZmbJMZbfKk7Ec3krr1aOJeG16zy3wZ83jQ/preview)."
+        },
+        "csd2-2023/CSS Classes": {
+          "name": "Les classes CSS"
+        },
+        "csd2-2023/Linking Pages": {
+          "name": "Relier des Pages",
+          "preparation": "-   Assurez-vous que les élèves ont accès à leurs plans de site web de la leçon précédente.\n-   Consultez le forum [ » Salle des profs « ](https://forum.code.org/t/resource-hub-web-development-chapter-2-lessons-14-20/36191) pour les enseignants vérifiés afin de trouver des stratégies ou des ressources supplémentaires partagées par d'autres enseignants.\n-   Si vous enseignez de manière virtuelle, pensez à consulter nos [Modifications de leçons virtuelles](https://docs.google.com/document/d/15Gkj12vQaZmbJMZbfKk7Ec3krr1aOJeG16zy3wZ83jQ/preview)."
+        },
+        "csd2-2023/Project - Website for a Purpose": {
+          "name": "Projet - Site Web avec un But"
+        },
+        "csd2-2023/Peer Review and Final Touches": {
+          "name": "L'Examen par les Pairs et la Touche Finale",
+          "preparation": "-   Imprimez une copie du guide d'évaluation par les pairs pour chaque élève.\n-   Si vous enseignez de manière virtuelle, pensez à consulter nos [Modifications de la leçon virtuelle](https://docs.google.com/document/d/15Gkj12vQaZmbJMZbfKk7Ec3krr1aOJeG16zy3wZ83jQ/preview)."
+        },
+        "csd3-2023/Plotting Shapes": {
+          "name": "Tracer Des Formes"
+        },
+        "csd3-2023/Drawing in Game Lab": {
+          "name": "Dessiner dans le Labo des Jeux",
+          "preparation": "-   Préparez un projecteur ou un autre moyen de montrer les vidéos si vous souhaitez les regarder en classe.\n-   Consultez le forum [ » Salle des profs « ](https://forum.code.org/t/resource-hub-interactive-animations-and-games-chapter-1-lessons-1-17/36192) pour les enseignants vérifiés afin de trouver des stratégies ou des ressources supplémentaires partagées par d'autres enseignants.\n-   Si vous enseignez de manière virtuelle, pensez à consulter nos [Modifications de la leçon virtuelle](https://docs.google.com/document/d/16yHyWom69h5OFd-4yYiuwSq9MOdan9sv3Q0R0tzmtD8/preview)."
+        },
+        "csd3-2023/Shapes and Parameters": {
+          "name": "Formes et paramètres",
+          "preparation": "-   Révisez la séquence de niveaux dans Code Studio\n-   Consultez le forum [ » Salle des profs « ](https://forum.code.org/t/resource-hub-interactive-animations-and-games-chapter-1-lessons-1-17/36192) pour les enseignants vérifiés afin de trouver des stratégies ou des ressources supplémentaires partagées par d'autres enseignants.\n-   Si vous enseignez de manière virtuelle, pensez à consulter nos [Modifications de la leçon virtuelle](https://docs.google.com/document/d/16yHyWom69h5OFd-4yYiuwSq9MOdan9sv3Q0R0tzmtD8/preview)."
+        },
+        "csd3-2023/Variables": {
+          "name": "Variables",
+          "preparation": "-   Examiner la progression des niveaux dans Code Studio\n-   Consultez le forum [ » Salle des profs « ](https://forum.code.org/t/resource-hub-interactive-animations-and-games-chapter-1-lessons-1-17/36192) pour les enseignants vérifiés afin de trouver des stratégies ou des ressources supplémentaires partagées par d'autres enseignants.\n-   Si vous enseignez de manière virtuelle, pensez à consulter nos [Modifications de la leçon virtuelle](https://docs.google.com/document/d/16yHyWom69h5OFd-4yYiuwSq9MOdan9sv3Q0R0tzmtD8/preview)."
+        },
+        "csd3-2023/Random Numbers": {
+          "name": "Nombres aléatoires",
+          "preparation": "-   Examiner la progression des niveaux dans Code Studio\n-   Consultez le forum [ » Salle des profs « ](https://forum.code.org/t/resource-hub-interactive-animations-and-games-chapter-1-lessons-1-17/36192) pour les enseignants vérifiés afin de trouver des stratégies ou des ressources supplémentaires partagées par d'autres enseignants.\n-   Si vous enseignez de manière virtuelle, pensez à consulter nos [Modifications de la leçon virtuelle](https://docs.google.com/document/d/16yHyWom69h5OFd-4yYiuwSq9MOdan9sv3Q0R0tzmtD8/preview)."
+        },
+        "csd3-2023/Sprites": {
+          "name": "Sprites"
+        },
+        "csd3-2023/Sprite Properties": {
+          "name": "Propriétés du sprite"
+        },
+        "csd3-2023/Text": {
+          "name": "Texte"
+        },
+        "csd3-2023/The Draw Loop": {
+          "name": "La Boucle Dessiner",
+          "preparation": "-   Imprimer et assembler le matériel de manipulation\n-   Préparez la vidéo\n-   Consultez le forum [ » Salle des profs « ](https://forum.code.org/t/resource-hub-interactive-animations-and-games-chapter-1-lessons-1-17/36192) pour les enseignants vérifiés afin de trouver des stratégies ou des ressources supplémentaires partagées par d'autres enseignants.\n-   Si vous enseignez de manière virtuelle, pensez à consulter nos [Modifications de la leçon virtuelle](https://docs.google.com/document/d/16yHyWom69h5OFd-4yYiuwSq9MOdan9sv3Q0R0tzmtD8/preview)."
+        },
+        "csd3-2023/Sprite Movement": {
+          "name": "Le Déplacement du Lutin"
+        },
+        "csd3-2023/Conditionals": {
+          "name": "Instructions conditionnelles"
+        },
+        "csd3-2023/Keyboard Input": {
+          "name": "Entrée Au Clavier"
+        },
+        "csd3-2023/Project - Interactive Card": {
+          "name": "Projet - Carte Interactive",
+          "preparation": "-   Imprimez une copie du guide du projet pour chaque élève.\n-   Consultez le forum [ » Salle des profs « ](https://forum.code.org/t/project-hub-interactive-card-interactive-animations-and-games-lesson-17/36208) pour les enseignants vérifiés afin de trouver des stratégies ou des ressources supplémentaires partagées par d'autres enseignants.\n-   Si vous enseignez de manière virtuelle, pensez à consulter nos [Modifications de la leçon virtuelle](https://docs.google.com/document/d/16yHyWom69h5OFd-4yYiuwSq9MOdan9sv3Q0R0tzmtD8/preview)."
+        },
+        "csd3-2023/Velocity": {
+          "name": "Vitesse"
+        },
+        "csd3-2023/Collision Detection": {
+          "name": "Détection de collision",
+          "preparation": "-   Imprimez des copies du guide d'activité de façon à ce que chaque paire d'élèves ait une partie A et une partie B.\n-   Consultez le forum [ » Salle des profs « ](https://forum.code.org/t/resource-hub-interactive-animations-and-games-chapter-2-lessons-18-27/36193) pour les enseignants vérifiés afin de trouver des stratégies ou des ressources supplémentaires partagées par d'autres enseignants.\n-   Si vous enseignez de manière virtuelle, pensez à consulter nos [Modifications de la leçon virtuelle](https://docs.google.com/document/d/16yHyWom69h5OFd-4yYiuwSq9MOdan9sv3Q0R0tzmtD8/preview)."
+        },
+        "csd3-2023/Complex Sprite Movement": {
+          "name": "Déplacement Complexe du Lutin"
+        },
+        "csd3-2023/Collisions": {
+          "name": "Collisions"
+        },
+        "csd3-2023/Functions": {
+          "name": "Fonctions"
+        },
+        "csd3-2023/The Game Design Process": {
+          "name": "Le Processus de Conception d'un Jeu",
+          "preparation": "-   Imprimez des copies du guide du projet si vous comptez remettre des copies physiques aux élèves.  Veuillez noter que ce guide de projet est intentionnellement rempli. (Voir les notes dans le plan de leçon).\n-   Consultez le forum [ » Salle des profs « ](https://forum.code.org/t/resource-hub-interactive-animations-and-games-chapter-2-lessons-18-27/36193) pour les enseignants vérifiés afin de trouver des stratégies ou des ressources supplémentaires partagées par d'autres enseignants.\n-   Si vous enseignez de manière virtuelle, pensez à consulter notre [Modifications de la leçon virtuelle](https://docs.google.com/document/d/16yHyWom69h5OFd-4yYiuwSq9MOdan9sv3Q0R0tzmtD8/preview)."
+        },
+        "csd3-2023/Using the Game Design Process": {
+          "name": "Utiliser le Processus de Conception d'un Jeu",
+          "preparation": "-   Imprimez une copie du guide de projet pour chaque élève ou paire d'élèves.\n-   Consultez le forum [ » Salle des profs « ](https://forum.code.org/t/resource-hub-interactive-animations-and-games-chapter-2-lessons-18-27/36193) pour les enseignants vérifiés afin de trouver des stratégies ou des ressources supplémentaires partagées par d'autres enseignants.\n-   Si vous enseignez de manière virtuelle, pensez à consulter nos [Modifications de la leçon virtuelle](https://docs.google.com/document/d/16yHyWom69h5OFd-4yYiuwSq9MOdan9sv3Q0R0tzmtD8/preview)."
+        },
+        "csd3-2023/Project - Design a Game": {
+          "name": "Projet - Concevoir un Jeu",
+          "preparation": "-   Imprimez des copies du guide du projet, une pour chaque élève ou paire d'élèves.\n-   Imprimez des copies de la grille d'évaluation, une pour chaque élève ou paire d'élèves.\n-   Imprimez des copies du guide d'évaluation par les pairs, une pour chaque élève ou paire d'élèves.\n-   Examinez les exemples de jeux dans Code Studio\n-   Consultez le forum [ » Salle des profs « ](https://forum.code.org/t/project-hub-design-a-game-interactive-animations-and-games-lesson-27/36211) pour les enseignants vérifiés afin de trouver des stratégies ou des ressources supplémentaires partagées par d'autres enseignants.\n-   Si vous enseignez de manière virtuelle, pensez à consulter nos [Modifications de la leçon virtuelle](https://docs.google.com/document/d/16yHyWom69h5OFd-4yYiuwSq9MOdan9sv3Q0R0tzmtD8/preview)."
+        },
+        "csd4-2023/Designing With Empathy": {
+          "preparation": "-   Imprimez une copie du guide d'activité pour chaque élève (ou préparez-vous à distribuer le document sous forme numérique).\n-   Consultez le forum [ » Salle des profs « ](https://forum.code.org/t/resource-hub-the-design-process-chapter-1-lessons-1-8/36194) pour les enseignants vérifiés afin de trouver des stratégies ou des ressources supplémentaires partagées par d'autres enseignants.\n-   Si vous enseignez de manière virtuelle, pensez à consulter nos [Modifications de la leçon virtuelle](https://docs.google.com/document/d/1T7aTDpaXW8K8pOeLiz53WP-zGxFY3Q1o_CsaiXRiXpo/preview)."
+        },
+        "csd4-2023/Understanding Your User": {
+          "name": "Comprendre Votre Utilisateur",
+          "preparation": "-   Imprimez suffisamment de profils d'utilisateurs pour tous les élèves, en veillant à ce qu'ils soient aussi variés que possible.\n-   Imprimez un guide d'activité pour chaque utilisateur\n-   Préparer des questions pour l'exercice d'échauffement\n-   Identifiez les quatre coins de la salle : A, B, C et D.\n-   Disposez la salle en groupes de 4 tables, et placez un numéro sur chaque groupe de tables (1, 2, 3,...)\n-   Consultez le forum [ » Salle des profs « ](https://forum.code.org/t/resource-hub-the-design-process-chapter-1-lessons-1-8/36194) pour les enseignants vérifiés afin de trouver des stratégies ou des ressources supplémentaires partagées par d'autres enseignants.\n-   Si vous enseignez de manière virtuelle, pensez à consulter nos [Modifications de la leçon virtuelle](https://docs.google.com/document/d/1T7aTDpaXW8K8pOeLiz53WP-zGxFY3Q1o_CsaiXRiXpo/preview)."
+        },
+        "csd4-2023/User Centered Design - Define and Prepare": {
+          "name": "Conception centrée sur l'utilisateur - Définir et Préparer",
+          "preparation": "-   Assurez-vous de disposer de suffisamment de notes autocollantes, de stylos et de grandes feuilles de papier pour que les élèves puissent travailler.\n-   Constituez des groupes de 3 élèves chacun, de préférence.\n-   Consultez le forum [ » Salle des profs « ](https://forum.code.org/t/resource-hub-the-design-process-chapter-1-lessons-1-8/36194) pour les enseignants vérifiés afin de trouver des stratégies ou des ressources supplémentaires partagées par d'autres enseignants.\n-   Si vous enseignez de manière virtuelle, pensez à consulter nos [Modifications de la leçon virtuelle](https://docs.google.com/document/d/1T7aTDpaXW8K8pOeLiz53WP-zGxFY3Q1o_CsaiXRiXpo/preview)."
+        },
+        "csd4-2023/User Centered Design - Try and Reflect": {
+          "name": "Conception centrée sur l'utilisateur - Essayez et réfléchissez",
+          "preparation": "-   Remettez aux élèves le guide d'activité de la veille.\n-   Faites des copies du guide d'activité «  Essayer et Réfléchir «  - une pour chaque groupe.\n-   Consultez le forum [ » Salle des profs « ](https://forum.code.org/t/resource-hub-the-design-process-chapter-1-lessons-1-8/36194) pour les enseignants vérifiés afin de trouver des stratégies ou des ressources supplémentaires partagées par d'autres enseignants.\n-   Si vous enseignez de manière virtuelle, pensez à consulter nos [Modifications de la leçon virtuelle](https://docs.google.com/document/d/1T7aTDpaXW8K8pOeLiz53WP-zGxFY3Q1o_CsaiXRiXpo/preview)."
+        },
+        "csd4-2023/User Interfaces": {
+          "name": "Les Interfaces Utilisateurs",
+          "preparation": "-   Imprimez une copie du guide d'activité sur les écrans de l'interface utilisateur pour chaque paire d'élèves.\n-   Imprimez un exemplaire du guide d'activité Expérience utilisateur (ordinateur) pour chaque paire d'élèves.\n-   Imprimez une copie du guide d'activité sur l'expérience utilisateur (utilisateur) pour chaque paire d'élèves.\n-   Découpez les écrans d'interface utilisateur ou fournissez des ciseaux aux élèves pour qu'ils le fassent eux-mêmes.\n-   Consultez le forum [ » Salle des profs « ](https://forum.code.org/t/resource-hub-the-design-process-chapter-1-lessons-1-8/36194) pour les enseignants vérifiés afin de trouver des stratégies ou des ressources supplémentaires partagées par d'autres enseignants.\n-   Si vous enseignez de manière virtuelle, pensez à consulter nos [Modifications de la leçon virtuelle](https://docs.google.com/document/d/1T7aTDpaXW8K8pOeLiz53WP-zGxFY3Q1o_CsaiXRiXpo/preview)."
+        },
+        "csd4-2023/Feedback and Testing": {
+          "name": "Commentaires et Tests",
+          "preparation": "-   Imprimez une copie de la ressource Écrans d'interface utilisateur pour chaque groupe ou préparez-vous à afficher les écrans devant la classe.\n-   Imprimez une copie de la ressource Rétroaction du prototype pour chaque groupe. Si possible, découpez-la en bandes à l'avance.\n-   Imprimez une copie de la ressource Améliorer un écran pour chaque groupe. Si possible, imprimez sur une seule face pour que les élèves puissent se partager le guide d'activité.\n-   Crayons de couleur ou marqueurs pour les prototypes en papier.\n-   Consultez le forum [ » Salle des profs « ](https://forum.code.org/t/resource-hub-the-design-process-chapter-1-lessons-1-8/36194) pour les enseignants vérifiés afin de trouver des stratégies ou des ressources supplémentaires partagées par d'autres enseignants.\n-   Si vous enseignez de manière virtuelle, pensez à consulter nos [Modifications de la leçon virtuelle](https://docs.google.com/document/d/1T7aTDpaXW8K8pOeLiz53WP-zGxFY3Q1o_CsaiXRiXpo/preview)."
+        },
+        "csd4-2023/Identifying User Needs": {
+          "name": "Identifier les Besoins des Utilisateurs",
+          "preparation": "-   Imprimez une copie du guide d'activité de l'entretien avec l'utilisateur pour chaque élève.\n-   Imprimez une copie des exemples d'entretiens avec les utilisateurs pour chaque groupe.\n-   Rassemblez du papier pour affiche et du matériel de remue-méninges (stylos, notes autocollantes, etc.).\n-   Consultez le forum [ » Salle des profs « ](https://forum.code.org/t/resource-hub-the-design-process-chapter-1-lessons-1-8/36194) pour les enseignants vérifiés afin de trouver des stratégies ou des ressources supplémentaires partagées par d'autres enseignants.\n-   Si vous enseignez de manière virtuelle, pensez à consulter nos [Modifications de la leçon virtuelle](https://docs.google.com/document/d/1T7aTDpaXW8K8pOeLiz53WP-zGxFY3Q1o_CsaiXRiXpo/preview)."
+        },
+        "csd4-2023/Project - Paper Prototype": {
+          "name": "Projet - Prototype Papier",
+          "preparation": "-   Imprimez une copie du guide du projet pour chaque élève.\n-   Imprimez une copie de la grille d'évaluation pour chaque élève.\n-   6 cartes de notes pour chaque élève\n-   Matériel de dessin (crayons de couleur, marqueurs, règles, etc.)\n-   Du papier pour poster pour chaque élève\n-   Consultez le forum [ » Salle des profs « ](https://forum.code.org/t/project-hub-paper-prototype-the-design-process-lesson-8/36212) pour les enseignants vérifiés afin de trouver des stratégies ou des ressources supplémentaires partagées par d'autres enseignants.\n-   Si vous enseignez de manière virtuelle, pensez à consulter nos [Modifications de la leçon virtuelle](https://docs.google.com/document/d/1T7aTDpaXW8K8pOeLiz53WP-zGxFY3Q1o_CsaiXRiXpo/preview)."
+        },
+        "csd4-2023/Designing Apps for Good": {
+          "name": "Concevoir des Applications pour de Bon",
+          "preparation": "-   Formez des équipes de 3-4 personnes, idéalement en fonction d'un intérêt similaire pour un sujet d'application.\n-   Imprimez un exemplaire du guide d'activité par équipe\n-   Choisissez 1 à 3 applications parmi les exemples d'applications à partager avec la classe.\n-   Disposez les sièges de la classe pour les équipes présélectionnées de 3-4 élèves.\n-   Distribuez des notes autocollantes pour chaque équipe\n-   Consultez le forum [ » Salle des profs « ](https://forum.code.org/t/resource-hub-the-design-process-chapter-2-lessons-9-21/36195) pour les enseignants vérifiés afin de trouver des stratégies ou des ressources supplémentaires partagées par d'autres enseignants.\n-   Si vous enseignez de manière virtuelle, pensez à consulter nos [Modifications de la leçon virtuelle](https://docs.google.com/document/d/1T7aTDpaXW8K8pOeLiz53WP-zGxFY3Q1o_CsaiXRiXpo/preview)."
+        },
+        "csd4-2023/Market Research": {
+          "name": "Étude de Marché",
+          "preparation": "-   Disposez les sièges de la classe pour des équipes de 4-5 élèves.\n-   Imprimez un exemplaire du guide d'activité par équipe\n-   Consultez le forum [ » Salle des profs « ](https://forum.code.org/t/resource-hub-the-design-process-chapter-2-lessons-9-21/36195) pour les enseignants vérifiés afin de trouver des stratégies ou des ressources supplémentaires partagées par d'autres enseignants.\n-   Si vous enseignez de manière virtuelle, pensez à consulter nos [Modifications de la leçon virtuelle](https://docs.google.com/document/d/1T7aTDpaXW8K8pOeLiz53WP-zGxFY3Q1o_CsaiXRiXpo/preview)."
+        },
+        "csd4-2023/Exploring UI Elements": {
+          "preparation": "-   Imprimez une copie du guide d'activité pour chaque équipe.\n-   (Facultatif) Prévisualisez la Leçon 14 - Mode Design dans AppLab pour aider à répondre aux questions des élèves sur les éléments de l'interface utilisateur dans AppLab.\n-   Consultez le forum [ » Salle des profs « ](https://forum.code.org/t/resource-hub-the-design-process-chapter-2-lessons-9-21/36195) pour les enseignants vérifiés afin de trouver des stratégies ou des ressources supplémentaires partagées par d'autres enseignants.\n-   Si vous enseignez de manière virtuelle, pensez à consulter nos [Modifications de la leçon virtuelle](https://docs.google.com/document/d/1T7aTDpaXW8K8pOeLiz53WP-zGxFY3Q1o_CsaiXRiXpo/preview)."
+        },
+        "csd4-2023/Build a Paper Prototype": {
+          "preparation": "-   Préparez des fiches 3x5 (ou des copies du modèle de prototype), des notes autocollantes, des stylos et crayons de couleur, des ciseaux pour chaque équipe.\n-   Imprimez une copie du guide d'activité pour chaque équipe.\n-   Consultez le forum [ » Salle des profs « ](https://forum.code.org/t/resource-hub-the-design-process-chapter-2-lessons-9-21/36195) pour les enseignants vérifiés afin de trouver des stratégies ou des ressources supplémentaires partagées par d'autres enseignants.\n-   Si vous enseignez de manière virtuelle, pensez à consulter nos [Modifications de la leçon virtuelle](https://docs.google.com/document/d/1T7aTDpaXW8K8pOeLiz53WP-zGxFY3Q1o_CsaiXRiXpo/preview)."
+        },
+        "csd4-2023/Prototype Testing": {
+          "name": "Les Essais de Prototype",
+          "preparation": "-   Préparez d'autres personnes pour tester les prototypes papier de chaque équipe, ou prévoyez suffisamment de temps pour que les équipes puissent tester leurs prototypes respectifs.\n-   Imprimez une copie du guide d'activité Test du prototype papier pour chaque équipe.\n-   Imprimez une copie du guide d'activité Cas de test utilisateur pour chaque équipe.\n-   Consultez le forum [ » Salle des profs « ](https://forum.code.org/t/resource-hub-the-design-process-chapter-2-lessons-9-21/36195) pour les enseignants vérifiés afin de trouver des stratégies ou des ressources supplémentaires partagées par d'autres enseignants.\n-   Si vous enseignez de manière virtuelle, pensez à consulter nos [Modifications de la leçon virtuelle](https://docs.google.com/document/d/1T7aTDpaXW8K8pOeLiz53WP-zGxFY3Q1o_CsaiXRiXpo/preview)."
+        },
+        "csd4-2023/Design Mode in App Lab": {
+          "preparation": "-   Imprimez une copie du guide d'activité sur la propriété de l'écran pour chaque groupe.\n-   Imprimez un exemplaire du guide d'activité sur la conception d'écran pour chaque élève.\n-   (Facultatif) Imprimez un exemplaire du guide d'activité Conception d'écran modèle pour chaque groupe.\n-   Consultez le forum [ » Salle des profs « ](https://forum.code.org/t/resource-hub-the-design-process-chapter-2-lessons-9-21/36195) pour les enseignants vérifiés afin de trouver des stratégies ou des ressources supplémentaires partagées par d'autres enseignants.\n-   Si vous enseignez de manière virtuelle, pensez à consulter nos [Modifications de la leçon virtuelle](https://docs.google.com/document/d/1T7aTDpaXW8K8pOeLiz53WP-zGxFY3Q1o_CsaiXRiXpo/preview)."
+        },
+        "csd4-2023/Build a Digital Prototype": {
+          "preparation": "-   Disposez d'exemplaires supplémentaires du Guide d'activité de conception d'écran pour les élèves.\n-   Consultez le forum [ » Salle des profs « ](https://forum.code.org/t/resource-hub-the-design-process-chapter-2-lessons-9-21/36195) pour les enseignants vérifiés afin de trouver des stratégies ou des ressources supplémentaires partagées par d'autres enseignants.\n-   Si vous enseignez de manière virtuelle, pensez à consulter nos [Modifications de la leçon virtuelle](https://docs.google.com/document/d/1T7aTDpaXW8K8pOeLiz53WP-zGxFY3Q1o_CsaiXRiXpo/preview)."
+        },
+        "csd4-2023/Testing the App": {
+          "name": "Tester l'Application",
+          "preparation": "-   Imprimez un exemplaire du guide d'activité pour chaque élève.\n-   Si possible, demandez à des utilisateurs externes de tester les applications des équipes avant le jour du test.\n-   Consultez le forum [ » Salle des profs « ](https://forum.code.org/t/resource-hub-the-design-process-chapter-2-lessons-9-21/36195) pour les enseignants vérifiés afin de trouver des stratégies ou des ressources supplémentaires partagées par d'autres enseignants.\n-   Si vous enseignez de manière virtuelle, pensez à consulter nos [Modifications de la leçon virtuelle](https://docs.google.com/document/d/1T7aTDpaXW8K8pOeLiz53WP-zGxFY3Q1o_CsaiXRiXpo/preview)."
+        },
+        "csd4-2023/Bugs and Features": {
+          "preparation": "-   Imprimez une copie du guide d'activité pour chaque équipe.\n-   Préparez des notes autocollantes pour chaque équipe\n-   (Facultatif) Préparez du papier pour affiche ou un grand tableau blanc pour chaque équipe.\n-   Consultez le forum [ » Salle des profs « ](https://forum.code.org/t/resource-hub-the-design-process-chapter-2-lessons-9-21/36195) pour les enseignants vérifiés afin de trouver des stratégies ou des ressources supplémentaires partagées par d'autres enseignants.\n-   Si vous enseignez de manière virtuelle, pensez à consulter nos [Modifications de la leçon virtuelle](https://docs.google.com/document/d/1T7aTDpaXW8K8pOeLiz53WP-zGxFY3Q1o_CsaiXRiXpo/preview)."
+        },
+        "csd4-2023/Updating Your Prototype": {
+          "preparation": "-   Imprimez une copie du guide d'activité pour chaque équipe.\n-   (Facultatif) Préparez du papier pour affiche ou un grand tableau blanc pour chaque équipe.\n-   Consultez le forum [ » Salle des profs « ](https://forum.code.org/t/resource-hub-the-design-process-chapter-2-lessons-9-21/36195) pour les enseignants vérifiés afin de trouver des stratégies ou des ressources supplémentaires partagées par d'autres enseignants.\n-   Si vous enseignez de manière virtuelle, pensez à consulter nos [Modifications de la leçon virtuelle](https://docs.google.com/document/d/1T7aTDpaXW8K8pOeLiz53WP-zGxFY3Q1o_CsaiXRiXpo/preview)."
+        },
+        "csd4-2023/Project - App Presentation": {
+          "name": "Projet - Présentation de l'Application",
+          "preparation": "-   Déterminez le temps dont dispose chaque groupe pour faire sa présentation. En général, cela représente 8 à 10 minutes par équipe, mais n'oubliez pas de laisser du temps pour la transition entre les équipes.\n-   Créez une copie des diapositives du modèle de présentation pour chaque équipe.\n-   Imprimez une copie de la grille d'évaluation pour chaque équipe. \n-   Consultez le forum [ » Salle des profs « ](https://forum.code.org/t/project-hub-app-presentation-the-design-process-lesson-21/36213) pour les enseignants vérifiés afin de trouver des stratégies ou des ressources supplémentaires partagées par d'autres enseignants.\n-   Si vous enseignez de manière virtuelle, pensez à consulter nos [Modifications de la leçon virtuelle](https://docs.google.com/document/d/1T7aTDpaXW8K8pOeLiz53WP-zGxFY3Q1o_CsaiXRiXpo/preview)."
+        },
+        "csd5-2023/Representation Matters": {
+          "name": "Questions de Représentation"
+        },
+        "csd5-2023/Patterns and Representation": {
+          "name": "Modèles et Représentation"
+        },
+        "csd5-2023/ASCII and Binary Representation": {
+          "name": "La Représentation ASCII et binaire"
+        },
+        "csd5-2023/Representing Images": {
+          "name": "Représenter des Images"
+        },
+        "csd5-2023/Representing Numbers": {
+          "name": "Représenter les Nombres"
+        },
+        "csd5-2023/Combining Representations": {
+          "name": "Combiner des Représentations"
+        },
+        "csd5-2023/Keeping Data Secret": {
+          "name": "Garder les Données Secrètes"
+        },
+        "csd5-2023/Project - Create a Representation": {
+          "name": "Projet - Créer une Représentation"
+        },
+        "csd5-2023/Structuring Data": {
+          "name": "Structurer les Données"
+        },
+        "csd5-2023/Interpreting Data": {
+          "name": "Interpréter les Données"
+        },
+        "csd5-2023/Making Decisions with Data": {
+          "name": "Prendre des Décisions avec des Données"
+        },
+        "csd5-2023/Automating Data Decisions": {
+          "name": "Automatiser les Décisions Relatives Aux Données"
+        },
+        "csd5-2023/Problem Solving with Big Data": {
+          "name": "Résolution de Problèmes avec les Mégadonnées"
+        },
+        "csd6a-2023/Intro to App Lab": {
+          "name": "Introduction au Labo des Applis"
+        },
+        "csd6a-2023/The Circuit Playground": {
+          "name": "Le Circuit Playground"
+        },
+        "csd6a-2023/Board Events": {
+          "name": "Évènements en provenance du circuit"
+        },
+        "csd6a-2023/Color LEDs": {
+          "name": "Couleurs des LED"
+        },
+        "csd6a-2023/Accelerometer": {
+          "name": "Accéléromètre"
+        },
+        "csd6a-2023/Making Music": {
+          "name": "Créer de la Musique"
+        },
+        "csd6a-2023/Functions": {
+          "name": "Fonctions"
+        },
+        "csd6a-2023/Project - Prototype an Innovation": {
+          "overview": "Pour le projet final de ce cours, les élèves forment des groupes pour développer et tester un prototype innovant basé sur le Circuit Playground. En utilisant les entrées et les sorties disponibles sur le circuit, les groupes vont créer des programmes qui permettent des interactions intéressantes et uniques avec l'utilisateur. "
+        },
+        "csd6b-2023/Intro to App Lab": {
+          "name": "Introduction au Labo des Applis"
+        },
+        "csd6b-2023/Board Events": {
+          "name": "Évènements en provenance du circuit"
+        },
+        "csd6b-2023/Accelerometer": {
+          "name": "Accéléromètre"
+        },
+        "csd6b-2023/Functions": {
+          "name": "Fonctions"
+        },
+        "csd7-2023/Intro to App Lab": {
+          "name": "Introduction au Labo des Applis"
+        },
+        "csd7-2023/Introduction to AI Lab": {
+          "name": "Présentation d'AI Lab"
+        },
+        "csd7-2023/Numerical Models": {
+          "overview": "Dans cette leçon, les élèves participent à une activité « déconnectée » simulant une épidémie de zombies. Ils doivent prédire quelles parties de la ville auront le moins de zombies en exploitant les données d’une ville voisine. À l’aide des degrés de similitude et des moyennes, ils pourront faire des prévisions sur le nombre de zombies à un endroit particulier. Ensuite, les ils devront comparer leurs prévisions aux chiffres réels afin d’observer et de définir ensemble comment évolue le niveau de précision entre données numériques et données catégorielles.\n\n\\*\\*La question du jour : \\*\\* Comment les ordinateurs apprennent-ils à faire des prévisions avec des données numériques ?"
+        },
+        "csd7-2023/Numerical Data in AI Lab": {
+          "name": "Données numériques dans un laboratoire d'IA"
+        },
+        "csd7-2023/Survey Planning": {
+          "name": "Concevoir la Collecte de Données"
         },
         "coursea-2023/Safety in My Online Neighborhood": {
           "name": "La Sécurité dans Mon Quarter en Ligne ",
