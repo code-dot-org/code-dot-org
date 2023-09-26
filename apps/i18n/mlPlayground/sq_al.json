@@ -126,6 +126,7 @@
     "basketball_shots": {
       "card": {
         "context": {
+          "potentialMisuses": "[empty string]",
           "potentialUses": "Parashikoni nëse një goditje me 3 pikë është bërë ose humbur."
         },
         "description": "Ky grup të dhënash përmban çdo përpjekje me 3 pikë të realizuar gjatë turneut NCAA 2017. Me këto të dhëna është e mundur të parashikohet nëse gjuajtja është bërë apo është humbur."
@@ -165,6 +166,7 @@
     "bike_sharing": {
       "card": {
         "context": {
+          "potentialMisuses": "[empty string]",
           "potentialUses": "Parashikoni sa biçikleta do të merren me qira në bazë të kushteve të motit ose periudhës së vitit."
         },
         "description": "Të dhënat ditore të qirasë nga Uashingtoni, D.C. ' S Sistemi Capital Bikeshare nga 2011 dhe 2012, së bashku me të dhënat e motit për ato ditë."
@@ -939,6 +941,7 @@
     "insurance_cost": {
       "card": {
         "context": {
+          "potentialMisuses": "[empty string]",
           "potentialUses": "Mund të përdoret për të parashikuar nëse dikush është duhanpirës bazuar në informacione të tjera të sigurimit"
         },
         "description": "Kostot e sigurimit së bashku me faktorë si numri i fëmijëve, vendndodhja, statusi i duhanpirësit/jo-duhanpirësit, mosha, gjinia, BMI."
