@@ -458,6 +458,36 @@
         "coursef-2022/The Internet": {
           "name": "Internet"
         },
+        "coursea-2023/Happy Maps": {
+          "name": "Mapa Zoriontsuak"
+        },
+        "courseb-2023/Move It, Move It": {
+          "name": "Mugi ezazu, mugi ezazu!"
+        },
+        "courseb-2023/Getting Loopy": {
+          "name": "Iteratzen"
+        },
+        "coursec-2023/The Big Event": {
+          "name": "Gertaera Handia"
+        },
+        "coursec-2023/Binary Bracelets": {
+          "name": "Eskumuturreko bitarrak"
+        },
+        "coursed-2023/Graph Paper Programming": {
+          "name": "Paper grafiko programazioa"
+        },
+        "coursed-2023/Relay Programming": {
+          "name": "Txandaka programatzen"
+        },
+        "coursed-2023/Conditionals with Cards": {
+          "name": "Baldintzak Txartelekin"
+        },
+        "coursee-2023/Songwriting": {
+          "name": "Musika idazten"
+        },
+        "coursef-2023/The Internet": {
+          "name": "Internet"
+        },
         "Hour of Code/Hour of Code 2013": {
           "name": "Kodearen ordua 2013"
         },

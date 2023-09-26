@@ -458,6 +458,11 @@ ca-ES:
           # El gran esdeveniment
 
           En informàtica, els esdeveniments són accions de les quals l'ordinador va fent seguiment. En aquesta lliçó, reaccionaràs d'una manera diferent, segons quin botó es premi.
+      BigEvent-Unplugged2022_2023:
+        markdown: |-
+          # El gran esdeveniment
+
+          En informàtica, els esdeveniments són accions de les quals l'ordinador va fent seguiment. En aquesta lliçó, reaccionaràs d'una manera diferent, segons quin botó es premi.
       BigEvent-Unplugged_2020:
         markdown: |-
           # El gran esdeveniment
@@ -476,6 +481,13 @@ ca-ES:
 
           ![](https://images.code.org/ed15a484276c0989e4adb5daf480f68a-image-1557870226222.png)
       BinaryBracelets-Unplugged2022:
+        markdown: |-
+          # Polseres binàries
+
+          Fes una polsera que representi el teu nom en un sistema que entenguin els ordinadors!
+
+          ![](https://images.code.org/ed15a484276c0989e4adb5daf480f68a-image-1557870226222.png)
+      BinaryBracelets-Unplugged2022_2023:
         markdown: |-
           # Polseres binàries
 
@@ -2054,6 +2066,11 @@ ca-ES:
           # Condicionals amb cartes
 
           Juga a un joc de cartes i inventa't normes com "si trec una carta vermella, guanyo un punt" i "si en trec una de negra, el punt el guanyes tu".
+      ConditionalsWithCards-Unplugged2022_2023:
+        markdown: |-
+          # Condicionals amb cartes
+
+          Juga a un joc de cartes i inventa't normes com "si trec una carta vermella, guanyo un punt" i "si en trec una de negra, el punt el guanyes tu".
       ConditionalsWithCards-Unplugged_2020:
         markdown: |-
           # Condicionals amb cartes
@@ -2068,9 +2085,17 @@ ca-ES:
         description: Ho estàs fent molt bé! Ara, tria l'activitat següent. Fes-ne
           tantes com puguis. Segueix practicant amb bucles i l'Artista!
         display_name: Pràctica amb l'Artista
+      CourseE_Artist_Practice_2023:
+        description: Ho estàs fent molt bé! Ara, tria l'activitat següent. Fes-ne
+          tantes com puguis. Segueix practicant amb bucles i l'Artista!
+        display_name: Pràctica amb l'Artista
       CourseE_Lesson_11_Artist_Practice_2022:
         display_name: Pràctica amb l'Artista
+      CourseE_Lesson_11_Artist_Practice_2023:
+        display_name: Pràctica amb l'Artista
       CourseE_Lesson_7_Artist_Practice_2022:
+        display_name: Pràctica amb l'Artista
+      CourseE_Lesson_7_Artist_Practice_2023:
         display_name: Pràctica amb l'Artista
       CourseF_outbreak_story:
         content1: Descripció aquí
@@ -2259,7 +2284,118 @@ ca-ES:
           *Tothom es posarà malalt?* \n\n* *Ajudaran les mascaretes?*\n\n\nQuan acabis,
           comparteix la teva simulació. Comparteix el teu missatge sobre què creus
           que podem fer per ajudar els altres a mantenir la salut quan arriba un virus."
+      CourseF_outbreak_story2022_2022_pilot_-2022-2_2023:
+        content1: Descripció aquí
+        markdown: "# Brot: Programa la teva simulació\n\n## Benvinguts a la Ciutat
+          dels Monstres!\nLa Ciutat dels Monstres sempre ha estat un lloc alegre i
+          segur. Als monstres de la Ciutat dels Monstres els agradava molt deambular
+          d’aquí cap allà i anar a veure els seus amics.\n\n<img src=\"https://images.code.org/3b55881f776348c6eb32379e4cbd34e1-image-1603133896503.png\"
+          style=\"width:8%\"> <img src=\"https://images.code.org/3b55881f776348c6eb32379e4cbd34e1-image-1603133896503.png\"
+          style=\"width:8%\"> <img src=\"https://images.code.org/3b55881f776348c6eb32379e4cbd34e1-image-1603133896503.png\"
+          style=\"width:8%\"> <img src=\"https://images.code.org/3b55881f776348c6eb32379e4cbd34e1-image-1603133896503.png\"
+          style=\"width:8%\"> <img src=\"https://images.code.org/3b55881f776348c6eb32379e4cbd34e1-image-1603133896503.png\"
+          style=\"width:8%\"> <img src=\"https://images.code.org/3b55881f776348c6eb32379e4cbd34e1-image-1603133896503.png\"
+          style=\"width:8%\"> <img src=\"https://images.code.org/3b55881f776348c6eb32379e4cbd34e1-image-1603133896503.png\"
+          style=\"width:8%\"> <img src=\"https://images.code.org/3b55881f776348c6eb32379e4cbd34e1-image-1603133896503.png\"
+          style=\"width:8%\"> <img src=\"https://images.code.org/3b55881f776348c6eb32379e4cbd34e1-image-1603133896503.png\"
+          style=\"width:8%\"> <img src=\"https://images.code.org/3b55881f776348c6eb32379e4cbd34e1-image-1603133896503.png\"
+          style=\"width:8%\"> <img src=\"https://images.code.org/3b55881f776348c6eb32379e4cbd34e1-image-1603133896503.png\"
+          style=\"width:8%\">\n\nUn dia, un dels monstres es va començar a trobar
+          malament. Havia agafat un **virus**! Un virus és un germen diminut que pot
+          fer que et posis malalt. Els altres monstres no es van preocupar gaire,
+          i van seguir anant a veure els amics.\n\n<img src=\"https://images.code.org/3b55881f776348c6eb32379e4cbd34e1-image-1603133896503.png\"
+          style=\"width:8%\"> <img src=\"https://images.code.org/3b55881f776348c6eb32379e4cbd34e1-image-1603133896503.png\"
+          style=\"width:8%\"> <img src=\"https://images.code.org/3b55881f776348c6eb32379e4cbd34e1-image-1603133896503.png\"
+          style=\"width:8%\"> <img src=\"https://images.code.org/3b55881f776348c6eb32379e4cbd34e1-image-1603133896503.png\"
+          style=\"width:8%\"> <img src=\"https://images.code.org/3b55881f776348c6eb32379e4cbd34e1-image-1603133896503.png\"
+          style=\"width:8%\"> <img src=\"https://images.code.org/f30010a430a4189a734467094842b39d-image-1603134238257.png\"
+          style=\"width:8%\"> <img src=\"https://images.code.org/3b55881f776348c6eb32379e4cbd34e1-image-1603133896503.png\"
+          style=\"width:8%\"> <img src=\"https://images.code.org/3b55881f776348c6eb32379e4cbd34e1-image-1603133896503.png\"
+          style=\"width:8%\"> <img src=\"https://images.code.org/3b55881f776348c6eb32379e4cbd34e1-image-1603133896503.png\"
+          style=\"width:8%\"> <img src=\"https://images.code.org/3b55881f776348c6eb32379e4cbd34e1-image-1603133896503.png\"
+          style=\"width:8%\"> <img src=\"https://images.code.org/3b55881f776348c6eb32379e4cbd34e1-image-1603133896503.png\"
+          style=\"width:8%\">\n\nUns dies més tard, dos monstres més es van posar
+          malalts. Tenien el mateix virus! Sembla ser que el van agafar del seu amic.\n\n<img
+          src=\"https://images.code.org/3b55881f776348c6eb32379e4cbd34e1-image-1603133896503.png\"
+          style=\"width:8%\"> <img src=\"https://images.code.org/3b55881f776348c6eb32379e4cbd34e1-image-1603133896503.png\"
+          style=\"width:8%\"> <img src=\"https://images.code.org/3b55881f776348c6eb32379e4cbd34e1-image-1603133896503.png\"
+          style=\"width:8%\"> <img src=\"https://images.code.org/3b55881f776348c6eb32379e4cbd34e1-image-1603133896503.png\"
+          style=\"width:8%\"> <img src=\"https://images.code.org/f30010a430a4189a734467094842b39d-image-1603134238257.png\"
+          style=\"width:8%\"> <img src=\"https://images.code.org/f30010a430a4189a734467094842b39d-image-1603134238257.png\"
+          style=\"width:8%\"> <img src=\"https://images.code.org/f30010a430a4189a734467094842b39d-image-1603134238257.png\"
+          style=\"width:8%\"> <img src=\"https://images.code.org/3b55881f776348c6eb32379e4cbd34e1-image-1603133896503.png\"
+          style=\"width:8%\"> <img src=\"https://images.code.org/3b55881f776348c6eb32379e4cbd34e1-image-1603133896503.png\"
+          style=\"width:8%\"> <img src=\"https://images.code.org/3b55881f776348c6eb32379e4cbd34e1-image-1603133896503.png\"
+          style=\"width:8%\"> <img src=\"https://images.code.org/3b55881f776348c6eb32379e4cbd34e1-image-1603133896503.png\"
+          style=\"width:8%\">\n\nA poc a poc, el virus es va anar escampant cap als
+          altres monstres que vivien a prop. Els monstres sans es van començar a preocupar
+          per si tothom es posava malalt. Els monstres malalts es van començar a preocupar
+          per si contagiaven els altres del virus.\n\n<img src=\"https://images.code.org/3b55881f776348c6eb32379e4cbd34e1-image-1603133896503.png\"
+          style=\"width:8%\"> <img src=\"https://images.code.org/3b55881f776348c6eb32379e4cbd34e1-image-1603133896503.png\"
+          style=\"width:8%\"> <img src=\"https://images.code.org/3b55881f776348c6eb32379e4cbd34e1-image-1603133896503.png\"
+          style=\"width:8%\"> <img src=\"https://images.code.org/f30010a430a4189a734467094842b39d-image-1603134238257.png\"
+          style=\"width:8%\"> <img src=\"https://images.code.org/f30010a430a4189a734467094842b39d-image-1603134238257.png\"
+          style=\"width:8%\"> <img src=\"https://images.code.org/f30010a430a4189a734467094842b39d-image-1603134238257.png\"
+          style=\"width:8%\"> <img src=\"https://images.code.org/f30010a430a4189a734467094842b39d-image-1603134238257.png\"
+          style=\"width:8%\"> <img src=\"https://images.code.org/f30010a430a4189a734467094842b39d-image-1603134238257.png\"
+          style=\"width:8%\"> <img src=\"https://images.code.org/3b55881f776348c6eb32379e4cbd34e1-image-1603133896503.png\"
+          style=\"width:8%\"> <img src=\"https://images.code.org/3b55881f776348c6eb32379e4cbd34e1-image-1603133896503.png\"
+          style=\"width:8%\"> <img src=\"https://images.code.org/3b55881f776348c6eb32379e4cbd34e1-image-1603133896503.png\"
+          style=\"width:8%\">\n\n\n<div style=\"display: inline-block\">\n<img src=\"https://images.code.org/89376b9ebd5fcee77545f13a7a444430-image-1603135356392.png\"
+          style=\"float:right; width:30%\">\n\n## Frenem els contagis\nPer sort, després
+          d’analitzar el virus, els veïns de la Ciutat dels Monstres van fer un descobriment
+          molt important. Es van adonar que era menys probable que agafessin el virus
+          si es tapaven la boca amb una mascareta. Amb las mascaretes posades, era
+          menys probable que els monstres malalts contagiessin els monstres sans.\n\n<img
+          src=\"https://images.code.org/c98f28f9bf6a027143592109d59ee484-image-1603134766360.png\"
+          style=\"width:8%\"> <img src=\"https://images.code.org/bac9dbfaf1815c6627fc24e8e6db396d-image-1603134760456.png\"
+          style=\"width:8%\">\n\n</div>\n\n<img src=\"https://images.code.org/ef7499758496b39bcccc24aabd2af5d7-image-1603137920037.2020-10-19
+          16_04_58.gif\" style=\"float:left; width:25%; padding-right:25px\">\n\n##
+          I què passarà ara?\n\nAvui escriuràs codi per crear i executar la vostra
+          pròpia **simulació** del brot víric de la Ciutat dels Monstres. Una simulació
+          és un model informàtic d’un procés o un sistema. Aprèn a programar-ne una
+          i fes prediccions sobre què els passarà als veïns de la Ciutat dels Monstres.\n\n<img
+          src=\"https://images.code.org/fcbfd250d58652bdfd6393ec4f2fe2dd-image-1603134705074.png\"
+          style=\"float:right; width:15%\">\n\n* *Com de ràpid s’escamparà el virus?*\n\n*
+          *Tothom es posarà malalt?* \n\n* *Ajudaran les mascaretes?*\n\n\nQuan acabis,
+          comparteix la teva simulació. Comparteix el teu missatge sobre què creus
+          que podem fer per ajudar els altres a mantenir la salut quan arriba un virus."
       CourseF_outbreak_story22022_2022_pilot_-2022-2:
+        content1: Descripció aquí
+        markdown: |-
+          # Brot: Pensa com un científic
+
+          <img src="https://images.code.org/89376b9ebd5fcee77545f13a7a444430-image-1603135356392.png" style="float:right; width:30%">
+
+          Les simulacions ens permeten aprendre coses que poden ser difícils d’observar en el món real. Ajuden els científics a resoldre problemes i posar a prova idees noves d’una manera segura i efectiva. Aquesta simulació és una manera de mostrar quin aspecte podria tenir un brot víric a la Ciutat dels Monstres.
+
+          ## Torna a començar i juga-hi un altre cop!
+          Fins i tot quan tu mateix has escrit el codi, és impossible saber què passarà exactament quan facis clic a Executar. Els monstres deambulen aleatòriament, de manera que no sabem si el virus s’escamparà ràpida o lentament. Facis els canvis que facis al teu codi, assegura’t d’executar la simulació més d’una vegada. Res no passarà igual dues vegades!
+
+          ## Recopilació de dades
+          Prova de prendre nota de les teves observacions mentre executes la simulació. Pots comptar quants monstres es posen malalts o fer servir un cronòmetre per veure a quina velocitat passen les coses. Per exemple, quanta estona passa normalment fins que tots els monstres es posin malalts si cap porta mascareta?
+
+          ## Fer prediccions
+          Si entens bé el teu model, el podràs utilitzar per fer prediccions. Fins i tot podràs canviar com s’executa la simulació i esbrinar què funcionarà diferent. Per exemple:
+          * Què passaria si hi hagués el doble de monstres?
+          * Què passaria si els monstres es moguessin a la meitat de velocitat?
+
+          <img src="https://images.code.org/2e83373ffd346ce3f42917a0624d441c-image-1603749526420.png" style="float:right">
+
+          ## La Ciutat dels Monstres és com el món real?
+          Sempre hi ha un límit de com de realistes poden ser els models.
+          * Què té en comú la teva simulació d’un brot amb els brots vírics del món real?
+          * En què es diferencien?
+          Quan acabis l’activitat, comenta aquestes qüestions amb els teus professor o familiars!
+
+          ## Sobre què més es poden fer models?
+          Ara ja has crear un model d’un brot víric a la Ciutat dels Monstres. Quines coses no pot fer o mostrar la teva simulació que t’agradaria que pogués fer? Fes clic a continuar per seguir avançant i aprendre a fer un model més complet:
+          * Augmentar el nombre de monstres de la simulació
+          * Ajudar els monstres a recuperar-se del virus
+          * Probabilitat, immunitat, vacunes i molt més!
+
+          També pots compartir el teu model de simulació amb qui vulguis, o compartir un missatge sobre què creus que podem fer per ajudar els altres a mantenir-se sans quan arriba un virus.
+      CourseF_outbreak_story22022_2022_pilot_-2022-2_2023:
         content1: Descripció aquí
         markdown: |-
           # Brot: Pensa com un científic
@@ -2348,6 +2484,16 @@ ca-ES:
           * Dissenyar aplicacions de manera que siguin accessibles per les persones amb discapacitats també fa que les aplicacions siguin millors per tothom en general!
 
           ![](https://images.code.org/0c670d0d9078657a870df0ca799492cb-image-1557166420066.png)
+      DesigningForAccessibilityMarkdownLevel2022_2023:
+        markdown: |-
+          # Dissenyar per garantir l'accessibilitat
+
+          * En el món de la informàtica, **l’accessibilitat** té a veure amb crear tecnologia per persones que tenen discapacitats.
+          * Les discapacitats inclouen problemes físics, d’oïda, de vista, i de molts altres tipus.
+          * Hi ha molts tipus de discapacitats, i afecten les persones de maneres diferents. Això inclou també com cadascú fa servir la tecnologia, com ara les **aplicacions de mòbil*.
+          * Dissenyar aplicacions de manera que siguin accessibles per les persones amb discapacitats també fa que les aplicacions siguin millors per tothom en general!
+
+          ![](https://images.code.org/0c670d0d9078657a870df0ca799492cb-image-1557166420066.png)
       DesigningForAccessibilityMarkdownLevel_2019:
         markdown: |-
           # Dissenyar per garantir l'accessibilitat
@@ -2388,6 +2534,11 @@ ca-ES:
           # Compartir continguts digitals
 
           En aquesta lliçó reflexionaràs sobre els problemes i beneficis de respectar la propietat intel·lectual i els drets d'autor, especialment en entorns digitals.
+      DigitalSharing-Unplugged2022_2023:
+        markdown: |-
+          # Compartir continguts digitals
+
+          En aquesta lliçó reflexionaràs sobre els problemes i beneficis de respectar la propietat intel·lectual i els drets d'autor, especialment en entorns digitals.
       DigitalSharing-Unplugged_2020:
         markdown: |-
           # Compartir continguts digitals
@@ -2404,6 +2555,11 @@ ca-ES:
 
           En aquesta lliçó, aprendràs a fer servir i a escriure històries d'espais buits. Mira aquest vídeo per aprendre quina relació tenen amb la informàtica.
       EnvelopeVariables-Unplugged_2021_22022_2022_pilot_-2022-2:
+        markdown: |-
+          # Històries d'espais buits
+
+          En aquesta lliçó, aprendràs a fer servir i a escriure històries d'espais buits. Mira aquest vídeo per aprendre quina relació tenen amb la informàtica.
+      EnvelopeVariables-Unplugged_2021_22022_2022_pilot_-2022-2_2023:
         markdown: |-
           # Històries d'espais buits
 
@@ -2436,6 +2592,11 @@ ca-ES:
           # Fent bucles
 
           Aquesta lliçó introdueix el concepte de programació dels bucles per mitjà d'una activitat de ball.
+      GettingLoopy-Unplugged2022_2023:
+        markdown: |-
+          # Fent bucles
+
+          Aquesta lliçó introdueix el concepte de programació dels bucles per mitjà d'una activitat de ball.
       GettingLoopy-Unplugged_2020:
         markdown: |-
           # Fent bucles
@@ -2456,6 +2617,11 @@ ca-ES:
           # Programació amb paper quadriculat
 
           Escriu algorismes perquè els teus companys els segueixin per fer dibuixos.
+      GraphPaperProgramming-Unplugged2022_2023:
+        markdown: |-
+          # Programació amb paper quadriculat
+
+          Escriu algorismes perquè els teus companys els segueixin per fer dibuixos.
       GraphPaperProgramming-Unplugged_2020:
         markdown: |-
           # Programació amb paper quadriculat
@@ -2472,6 +2638,11 @@ ca-ES:
 
           Crea un algorisme per moure un personatge per un laberint.
       HappyMaps-Unplugged2022:
+        markdown: |-
+          # Mapes alegres
+
+          Crea un algorisme per moure un personatge per un laberint.
+      HappyMaps-Unplugged2022_2023:
         markdown: |-
           # Mapes alegres
 
@@ -2498,6 +2669,11 @@ ca-ES:
 
           Construeix el teu propi internet a la classe amb trossos de paper.
       Internet-Unplugged2022_2022_pilot_-2022-2:
+        markdown: |-
+          # Internet
+
+          Construeix el teu propi internet a la classe amb trossos de paper.
+      Internet-Unplugged2022_2022_pilot_-2022-2_2023:
         markdown: |-
           # Internet
 
@@ -2718,6 +2894,12 @@ ca-ES:
 
 
           Fes servir un mapa i dona ordres per arribar a l'objectiu.
+      MoveItMoveIt-Unplugged2022_2023:
+        markdown: |-
+          # A moure's!
+
+
+          Fes servir un mapa i dona ordres per arribar a l'objectiu.
       MoveItMoveIt-Unplugged_2020:
         markdown: |-
           # A moure's!
@@ -2752,6 +2934,11 @@ ca-ES:
           # Els meus amics robòtics amb bucles
 
           Fes servir bucles per escurçar els teus programes!
+      MyLoopyRoboticFriends-Unplugged2022_2023:
+        markdown: |-
+          # Els meus amics robòtics amb bucles
+
+          Fes servir bucles per escurçar els teus programes!
       MyLoopyRoboticFriends-Unplugged_2020:
         markdown: |-
           # Els meus amics robòtics amb bucles
@@ -2768,6 +2955,11 @@ ca-ES:
 
           Aprèn a programar escrivint codi per als teus amics!
       MyRoboticFriends-Unplugged2022:
+        markdown: |
+          # Els meus amics robòtics
+
+          Aprèn a programar escrivint codi per als teus amics!
+      MyRoboticFriends-Unplugged2022_2023:
         markdown: |
           # Els meus amics robòtics
 
@@ -3093,6 +3285,11 @@ ca-ES:
           # El poder de les paraules
 
           ## Què has de fer quan algú fa servir paraules cruels o un llenguatge ofensiu a internet?
+      PowerOfWords-Unplugged2022_2022_pilot_-2022-2_2023:
+        markdown: |-
+          # El poder de les paraules
+
+          ## Què has de fer quan algú fa servir paraules cruels o un llenguatge ofensiu a internet?
       PowerOfWords-Unplugged_2020:
         markdown: |-
           # El poder de les paraules
@@ -3106,6 +3303,11 @@ ca-ES:
       Prepare for your presentation:
         content1: Descripció aquí
       PrivatePersonalInformation-Unplugged2022:
+        markdown: |
+          # Informació privada i personal
+
+          ## Quina informació sobre tu pots compartir a internet?
+      PrivatePersonalInformation-Unplugged2022_2023:
         markdown: |
           # Informació privada i personal
 
@@ -3126,6 +3328,11 @@ ca-ES:
 
           Feu equips i col·laboreu per escriure programes i fer dibuixos.
       RelayProgramming-Unplugged2022:
+        markdown: |-
+          # Programació amb relleus
+
+          Feu equips i col·laboreu per escriure programes i fer dibuixos.
+      RelayProgramming-Unplugged2022_2023:
         markdown: |-
           # Programació amb relleus
 
@@ -3151,6 +3358,11 @@ ca-ES:
 
           Fes servir el concepte de la tornada d'una cançó per aprendre a definir i cridar funcions.
       Songwriting-Unplugged2022:
+        markdown: |-
+          # Composició de cançons
+
+          Fes servir el concepte de la tornada d'una cançó per aprendre a definir i cridar funcions.
+      Songwriting-Unplugged2022_2023:
         markdown: |-
           # Composició de cançons
 
@@ -3218,6 +3430,12 @@ ca-ES:
         questions:
         - {}
       TheRightAppMarkdownLevel2022:
+        markdown: "# L'aplicació correcta\n\n* Avui dia, tothom fa sevir ordinadors,
+          i especialment telèfons intel·ligents. \n* Les aplicacions per a mòbil ens
+          ajuden a fer coses com ara parlar amb els amics, escoltar música, comprar
+          o navegar per internet.\n* És important que els programadors entenguin les
+          necessitats dels usuaris i les tinguin presents quan dissenyen les aplicacions.\n\n![](https://images.code.org/fb17eeb9238d2f26c6ab40c9841517a7-image-1555611687284.png)"
+      TheRightAppMarkdownLevel2022_2023:
         markdown: "# L'aplicació correcta\n\n* Avui dia, tothom fa sevir ordinadors,
           i especialment telèfons intel·ligents. \n* Les aplicacions per a mòbil ens
           ajuden a fer coses com ara parlar amb els amics, escoltar música, comprar
@@ -3637,10 +3855,16 @@ ca-ES:
       courseAB_EOC2022:
         description: Has arribat a la darrera lliçó! Tria quin projecte vols crear.
         display_name: Projecte de final de curs
+      courseAB_EOC2022_2023:
+        description: Has arribat a la darrera lliçó! Tria quin projecte vols crear.
+        display_name: Projecte de final de curs
       courseAB_EOC_2021:
         description: Has arribat a la darrera lliçó! Tria quin projecte vols crear.
         display_name: Projecte de final de curs
       courseB_EOC2022:
+        description: Has arribat a la darrera lliçó! Tria quin projecte vols crear.
+        display_name: Projecte de final de curs
+      courseB_EOC2022_2023:
         description: Has arribat a la darrera lliçó! Tria quin projecte vols crear.
         display_name: Projecte de final de curs
       courseB_EOC_2021:
@@ -3659,6 +3883,20 @@ ca-ES:
         - text: Fixa't bé en el codi que hi ha a continuació. Què passarà quan facis
             clic a "Executar"?
       courseC_multi_artist_prog6_predict12022:
+        answers:
+        - feedback: Incorrecte. L'artista dibuixa un quadrat.
+          text: L'artista dibuixarà un triangle amb tres costats iguals.
+        - feedback: Incorrecte. L'artista dibuixa un quadrat.
+          text: L'artista traçarà una sola línia.
+        - correct: true
+          feedback: Correcte!
+          text: L'artista dibuixarà un quadrat.
+        - feedback: Incorrecte. L'artista dibuixa un quadrat.
+          text: L'artista dibuixarà un pentàgon.
+        questions:
+        - text: Fixa't bé en el codi que hi ha a continuació. Què passarà quan facis
+            clic a "Executar"?
+      courseC_multi_artist_prog6_predict12022_2023:
         answers:
         - feedback: Incorrecte. L'artista dibuixa un quadrat.
           text: L'artista dibuixarà un triangle amb tres costats iguals.
@@ -3757,6 +3995,23 @@ ca-ES:
         questions:
         - text: Fixa't bé en el codi que hi ha a continuació. Quantes carabasses collirà
             l'agricultora quan facis clic a "Executar"?
+      courseC_multi_harvester_loops11_predict12022_2023:
+        answers:
+        - feedback: Incorrecte. L'agricultora collirà 4 carabasses en cadascun dels
+            3 bucles.  4 vegades 3 fan 12!
+          text: '4'
+        - correct: true
+          feedback: Correcte!
+          text: '12'
+        - feedback: Incorrecte. L'agricultora collirà 4 carabasses en cadascun dels
+            3 bucles.  4 vegades 3 fan 12!
+          text: '15'
+        - feedback: Incorrecte. L'agricultora collirà 4 carabasses en cadascun dels
+            3 bucles.  4 vegades 3 fan 12!
+          text: '20'
+        questions:
+        - text: Fixa't bé en el codi que hi ha a continuació. Quantes carabasses collirà
+            l'agricultora quan facis clic a "Executar"?
       courseC_multi_harvester_loops11_predict1_2018:
         answers:
         - feedback: Incorrecte. L'agricultora collirà 4 carabasses en cadascun dels
@@ -3829,6 +4084,17 @@ ca-ES:
         questions:
         - {}
       courseC_multi_maze_debugging8_predict12022:
+        answers:
+        - text: L'Scrat arribarà a la gla. Aquest codi no conté errors.
+        - correct: true
+          text: L'Scrat no arribarà a la gla perquè girarà en la direcció equivocada.
+        - text: L'Scrat no arribarà a la gla perquè no hi ha suficients blocs d'"avançar".
+        - feedback: L'Scrat no arribarà a la gla perquè girarà en la direcció equivocada.
+          text: L'Scrat no es mourà del primer bloc.
+        questions:
+        - text: Busca els errors d'aquest codi. L'Scrat aconseguirà arribar a la gla,
+            o hi ha algun problema?
+      courseC_multi_maze_debugging8_predict12022_2023:
         answers:
         - text: L'Scrat arribarà a la gla. Aquest codi no conté errors.
         - correct: true
@@ -3921,6 +4187,20 @@ ca-ES:
         questions:
         - text: Llegeix el codi que hi ha a continuació amb molta atenció. Què passarà
             quan facis clic a "Executar"?
+      courseC_multi_maze_programming8_predict12022_2023:
+        answers:
+        - feedback: Incorrecte. Aquest codi porta perfectament l'ocell fins al porquet.
+          text: L'ocell es quedarà a un pas d'arribar al porquet.
+        - correct: true
+          feedback: Correcte!
+          text: L'ocell arribarà fins al porquet.
+        - feedback: Incorrecte. Aquest codi porta perfectament l'ocell fins al porquet.
+          text: L'ocell toparà amb el TNT.
+        - feedback: Incorrecte. Aquest codi porta perfectament l'ocell fins al porquet.
+          text: L'ocell toparà amb la paret.
+        questions:
+        - text: Llegeix el codi que hi ha a continuació amb molta atenció. Què passarà
+            quan facis clic a "Executar"?
       courseC_multi_maze_programming8_predict1_2018:
         answers:
         - feedback: Incorrecte. Aquest codi porta perfectament l'ocell fins al porquet.
@@ -3987,6 +4267,19 @@ ca-ES:
         questions:
         - text: Què creus que passarà quan facis clic a "Executar"?
       courseC_multi_starWars_predict12022:
+        answers:
+        - feedback: Incorrecte. El bloc de repetició farà que el BB-8 avanci 5 vegades.
+          text: El BB-8 no es mourà.
+        - feedback: Incorrecte. El bloc de repetició farà que el BB-8 avanci 5 vegades.
+          text: El BB-8 es mourà només un espai.
+        - correct: true
+          feedback: Correcte!
+          text: El BB-8 es mourà 5 vegades i recollirà tota la ferralla.
+        - feedback: Incorrecte. El bloc de repetició farà que el BB-8 avanci 5 vegades.
+          text: El BB-8 es mourà només 3 espais.
+        questions:
+        - text: Què creus que passarà quan facis clic a "Executar"?
+      courseC_multi_starWars_predict12022_2023:
         answers:
         - feedback: Incorrecte. El bloc de repetició farà que el BB-8 avanci 5 vegades.
           text: El BB-8 no es mourà.
@@ -4082,6 +4375,24 @@ ca-ES:
         questions:
         - text: Fixa't bé en el codi que hi ha a continuació. Què passarà quan facis
             clic a "Executar"?
+      courseC_multi_starWars_predict22022_2023:
+        answers:
+        - feedback: Incorrecte. El primer bucle només fa que el BB-8 avanci 2 espais,
+            però en realitat ha d'avançar 3 espais.
+          text: El BB-8 anirà massa lluny en el primer bucle.
+        - correct: true
+          feedback: Correcte!
+          text: El BB-8 no avançarà tant caldria per arribar a tota la ferralla en
+            el primer bucle.
+        - feedback: Incorrecte. El primer bucle només fa que el BB-8 avanci 2 espais,
+            però en realitat ha d'avançar 3 espais.
+          text: El BB-8 recollirà tota la ferralla sense cap problema.
+        - feedback: Incorrecte. El primer bucle només fa que el BB-8 avanci 2 espais,
+            però en realitat ha d'avançar 3 espais.
+          text: El BB-8 girarà en la direcció equivocada després del primer bucle.
+        questions:
+        - text: Fixa't bé en el codi que hi ha a continuació. Què passarà quan facis
+            clic a "Executar"?
       courseC_multi_starWars_predict2_2018:
         answers:
         - feedback: Incorrecte. El primer bucle només fa que el BB-8 avanci 2 espais,
@@ -4152,6 +4463,10 @@ ca-ES:
         description: Has arribat a l'última lliçó del Curs D! Tria el projecte que
           vols crear.
         display_name: Projecte de final de curs
+      courseD_EOC2022_2023:
+        description: Has arribat a l'última lliçó del Curs D! Tria el projecte que
+          vols crear.
+        display_name: Projecte de final de curs
       courseD_EOC_2020:
         description: Has arribat a l'última lliçó del Curs D! Tria el projecte que
           vols crear.
@@ -4161,6 +4476,10 @@ ca-ES:
           vols crear.
         display_name: Projecte de final de curs
       courseD_EOC_examples2022:
+        description: Estàs a punt de començar el projecte final. Abans de posar-t'hi,
+          dona un cop d'ull als projectes d'exemple.
+        display_name: Projectes d'exemple
+      courseD_EOC_examples2022_2023:
         description: Estàs a punt de començar el projecte final. Abans de posar-t'hi,
           dona un cop d'ull als projectes d'exemple.
         display_name: Projectes d'exemple
@@ -4230,6 +4549,29 @@ ca-ES:
         - text: Fixa't bé en el codi següent. Quin dibuix farà aquest programa quan
             facis clic a "Executar"?
       courseD_multi_artist_nestedLoops9_predict12022:
+        answers:
+        - correct: true
+          feedback: Correcte!
+          text: A
+        - feedback: Incorrecte. El bucle interior fa un pentàgon i el bucle exterior
+            el repeteix 4 vegades en cercle.
+          text: B
+        - feedback: Incorrecte. El bucle interior fa un pentàgon i el bucle exterior
+            el repeteix 4 vegades en cercle.
+          text: C
+        - feedback: Incorrecte. El bucle interior fa un pentàgon i el bucle exterior
+            el repeteix 4 vegades en cercle.
+          text: Cap de les anteriors
+        markdown: |
+          <table>
+          <tr><td>A</td><td><img src="https://images.code.org/cfc3f8206438a60afe3be9afe7fc0a22-image-1489118742610.10.15.png" width="100px" style="mix-blend-mode: multiply;"/></td><td>&nbsp;&nbsp;&nbsp;&nbsp;</td><td>B</td><td><img src="https://images.code.org/975b027684d2f5411b960bf82987663e-image-1489119999013.11.13.png" width="100px" style="mix-blend-mode: multiply;"/></td><td>&nbsp;&nbsp;&nbsp;&nbsp;</td><td>C</td><td><img src="https://images.code.org/635ac54ed7cb2e2d24eb341b3ec4eecb-image-1489120024059.12.00.png" width="80px" style="mix-blend-mode: multiply; clip: rect(0px,0px,0px,40px);"/></td></tr>
+          </table>
+
+          <br/><br/>
+        questions:
+        - text: Fixa't bé en el codi següent. Quin dibuix farà aquest programa quan
+            facis clic a "Executar"?
+      courseD_multi_artist_nestedLoops9_predict12022_2023:
         answers:
         - correct: true
           feedback: Correcte!
@@ -4378,6 +4720,28 @@ ca-ES:
             núvol. Si hi ha una flor, l'abella haurà de recollir nèctar una vegada.
             Si no hi ha cap flor, l'abella no haurà de fer res. Fixa't bé en el codi
             que hi ha a continuació. Què creus que passarà un cop facis clic a "Executar"?
+      courseD_multi_bee_conditionals1_predict12022_2023:
+        answers:
+        - feedback: Incorrecte. El bloc "if a la flor" s'assegura que l'abella només
+            intentarà recollir el nèctar si hi ha una flor sota el núvol.
+          text: 'L''abella mourà el núvol i intentarà recollir el nèctar, passi el
+            que passi. '
+        - correct: true
+          feedback: Correcte!
+          text: L'abella es mourà cap al núvol i només intentarà recollir nèctar si
+            hi ha una flor a sota.
+        - feedback: Incorrecte. El bloc "if a la flor" s'assegura que l'abella només
+            intentarà recollir el nèctar si hi ha una flor sota el núvol.
+          text: 'L''abella es mourà cap al núvol i no farà res, passi el que passi. '
+        - feedback: Incorrecte. El bloc "if a la flor" s'assegura que l'abella només
+            intentarà recollir el nèctar si hi ha una flor sota el núvol.
+          text: 'L''abella no arribarà al núvol. '
+        questions:
+        - text: Hi ha un núvol que bloqueja la nostra vista. El núvol desapareixerà
+            una vegada que fem clic a “Executar”. Podria haver-hi una flor sota aquest
+            núvol. Si hi ha una flor, l'abella haurà de recollir nèctar una vegada.
+            Si no hi ha una flor, l'abella no ha de fer res. Mireu bé el codi següent.
+            Què creus que passarà després de fer clic a “Executar”?
       courseD_multi_bee_conditionals1_predict1_2018:
         answers:
         - feedback: Incorrecte. El bloc "if a la flor" s'assegura que l'abella només
@@ -4521,6 +4885,24 @@ ca-ES:
         - text: 'Fixa''t bé en el codi que hi ha a continuació. Què creus que passarà
             un cop facis clic a "Executar"? Recorda: només hi haurà *un* rusc o *una*
             flor sota cada núvol.'
+      courseD_multi_bee_conditionals7_predict22022_2023:
+        answers:
+        - correct: true
+          feedback: Correcte!
+          text: L'abella recollirà npectar a cada flor i farà mel a cada rusc.
+        - feedback: Incorrecte. El bloc "if a la flor" fa que l'abella reculli nèctar
+            a cada flor i faci mel a cada rusc.
+          text: L'abella intentarà recollir nèctar a les flors i al rusc.
+        - feedback: Incorrecte. El bloc "if a la flor" fa que l'abella reculli nèctar
+            a cada flor i faci mel a cada rusc.
+          text: L'abella intentarà recollir mel a les flors i al rusc.
+        - feedback: Incorrecte. El bloc "if a la flor" fa que l'abella reculli nèctar
+            a cada flor i faci mel a cada rusc.
+          text: L'abella intentarà recollir mel i nèctar a les flors i al rusc.
+        questions:
+        - text: 'Fixa''t bé en el codi que hi ha a continuació. Què creus que passarà
+            un cop facis clic a "Executar"? Recorda: només hi haurà *un* rusc o *una*
+            flor sota cada núvol.'
       courseD_multi_bee_conditionals7_predict2_2018:
         answers:
         - correct: true
@@ -4596,6 +4978,23 @@ ca-ES:
         - text: Fixa't bé en els bucles imbricats que hi ha a continuació. Què passarà
             quan facis clic a "Exectuar"?
       courseD_multi_bee_nestedLoops2_predict12022:
+        answers:
+        - feedback: Incorrecte.  L'abella enllaça l'acció en bucle d'avançar i recollir
+            nèctar, i aconsegueix resoldre el trencaclosques.
+          text: L'abella avançarà i recollirà nèctar només una vegada.
+        - feedback: Incorrecte.  L'abella enllaça l'acció en bucle d'avançar i recollir
+            nèctar, i aconsegueix resoldre el trencaclosques.
+          text: L'abella només recollirà dos unitats de nèctar.
+        - correct: true
+          feedback: Correcte!
+          text: L'abella recollirà tot el nèctar.
+        - feedback: Incorrecte.  L'abella enllaça l'acció en bucle d'avançar i recollir
+            nèctar, i aconsegueix resoldre el trencaclosques.
+          text: L'abella girarà en la direcció equivocada.
+        questions:
+        - text: Fixa't bé en els bucles imbricats que hi ha a continuació. Què passarà
+            quan facis clic a "Exectuar"?
+      courseD_multi_bee_nestedLoops2_predict12022_2023:
         answers:
         - feedback: Incorrecte.  L'abella enllaça l'acció en bucle d'avançar i recollir
             nèctar, i aconsegueix resoldre el trencaclosques.
@@ -4692,6 +5091,26 @@ ca-ES:
         - text: Fixa't bé en el codi que hi ha a continuació. Quanta mel farà l'abella
             quan facis clic a "Executar"?
       courseD_multi_bee_nestedLoops9_predict22022:
+        answers:
+        - feedback: Incorrecte. L'abella recull 2 trossos de nèctar en un bucle d'avançar,
+            i després 2 més en un bucle d'anar cap avall. Tot això és a dins d'un
+            altre bucle que es repeteix dues vegades. 4 vegades 2 fa 8!
+          text: '4'
+        - correct: true
+          feedback: Correcte!
+          text: '8'
+        - feedback: Incorrecte. L'abella recull 2 trossos de nèctar en un bucle d'avançar,
+            i després 2 més en un bucle d'anar cap avall. Tot això és a dins d'un
+            altre bucle que es repeteix dues vegades. 4 vegades 2 fa 8!
+          text: '10'
+        - feedback: Incorrecte. L'abella recull 2 trossos de nèctar en un bucle d'avançar,
+            i després 2 més en un bucle d'anar cap avall. Tot això és a dins d'un
+            altre bucle que es repeteix dues vegades. 4 vegades 2 fa 8!
+          text: '12'
+        questions:
+        - text: Fixa't bé en el codi que hi ha a continuació. Quanta mel farà l'abella
+            quan facis clic a "Executar"?
+      courseD_multi_bee_nestedLoops9_predict22022_2023:
         answers:
         - feedback: Incorrecte. L'abella recull 2 trossos de nèctar en un bucle d'avançar,
             i després 2 més en un bucle d'anar cap avall. Tot això és a dins d'un
@@ -4825,6 +5244,27 @@ ca-ES:
         questions:
         - text: Fixa't bé en el codi que hi ha a continuació. Què passarà un cop facis
             clic a "Executar"?
+      courseD_multi_farmer_condLoops9_predict12022_2023:
+        answers:
+        - feedback: Incorrecte. Aquí no hi ha cap codi per collir la carabassa.
+          text: L'agricultora collirà totes les verdures.
+        - feedback: Incorrecte. El codi farà que l'agricultora segueixi un patró d'escala
+            sense parar i que culli tot el blat o l'enciam que trobi pel camí. No
+            collirà la carabassa.
+          text: L'agricultora no collirà cap verdura amb el camí que està seguint.
+        - correct: true
+          feedback: Correcte!
+          text: L'agricultora collirà totes les verdures, excepte la carabassa.
+        - feedback: Incorrecte. El codi farà que l'agricultora segueixi un patró d'escala
+            sense parar i que culli tot el blat o l'enciam que trobi pel camí. No
+            collirà la carabassa.
+          text: L'agricultora només collirà la carabassa.
+        markdown: |-
+          Els brots d'aquest trencaclosques seran o bé blat o bé enciam.
+          <br/>
+        questions:
+        - text: Fixa't bé en el codi que hi ha a continuació. Què passarà un cop facis
+            clic a "Executar"?
       courseD_multi_farmer_condLoops9_predict1_2018:
         answers:
         - feedback: Incorrecte. Aquí no hi ha cap codi per collir la carabassa.
@@ -4938,6 +5378,21 @@ ca-ES:
         questions:
         - text: Fixa't bé en el codi que hi ha a continuació. Què quedarà al final
             d'aquest trencaclosques?
+      courseD_multi_farmer_while10_predict22022_2023:
+        answers:
+        - feedback: Incorrecte. No hi ha codi per eliminar terra de la pila.
+          text: Res. Aquest codi només anivellarà el terra.
+        - correct: true
+          feedback: Correcte!
+          text: Aquest codi deixarà la pila tal com estava.
+        - feedback: Incorrecte. El bucle "while" pot gestionar bucles de totes les
+            mides, però no hi ha codi per eliminar terra de la pila.
+          text: Aquest codi deixarà els forats exactament tal com estaven.
+        - feedback: Incorrecte. No hi ha codi per eliminar terra de la pila.
+          text: Aquest codi deixarà l'últim forat tal com estava.
+        questions:
+        - text: Fixa't bé en el codi que hi ha a continuació. Què quedarà al final
+            d'aquest trencaclosques?
       courseD_multi_farmer_while10_predict2_2018:
         answers:
         - feedback: Incorrecte. No hi ha codi per eliminar terra de la pila.
@@ -5011,6 +5466,23 @@ ca-ES:
         - text: Fixa't bé en el codi que hi ha a continuació. Què passarà quan facis
             clic a "Executar"?
       courseD_multi_farmer_while4_predict12022:
+        answers:
+        - feedback: Incorrecte. La pagesa treurà terra mentre hi hagi una pila, i
+            s'aturarà quan la pila hagi desaparegut.
+          text: No passarà res.
+        - feedback: Incorrecte. La pagesa treurà terra mentre hi hagi una pila, i
+            s'aturarà quan la pila hagi desaparegut.
+          text: La pagesa no pararà mai de treure terra.
+        - correct: true
+          feedback: Correcte!
+          text: La pagesa treurà terra mentre hi hagi una pila, i s'aturarà quan desaparegui.
+        - feedback: Incorrecte. La pagesa treurà terra mentre hi hagi una pila, i
+            s'aturarà quan la pila hagi desaparegut.
+          text: La pagesa treurà terra només una vegada.
+        questions:
+        - text: Fixa't bé en el codi que hi ha a continuació. Què passarà quan facis
+            clic a "Executar"?
+      courseD_multi_farmer_while4_predict12022_2023:
         answers:
         - feedback: Incorrecte. La pagesa treurà terra mentre hi hagi una pila, i
             s'aturarà quan la pila hagi desaparegut.
@@ -5101,6 +5573,17 @@ ca-ES:
         - text: Fixa't bé en el codi que hi ha a continuació. Què passarà un cop facis
             clic a "Executar"?
       courseD_multi_maze_until10_predict22022:
+        answers:
+        - correct: true
+          feedback: Correcte!
+        - text: El zombi arribarà al gira-sol.
+        - text: El zombi girarà a la dreta al primer camí i acabarà caminant en cercles
+            sense parar.
+        - text: El zombi es quedarà encallat al final del camí que va tot recte.
+        questions:
+        - text: Fixa't bé en el codi que hi ha a continuació. Què passarà un cop facis
+            clic a "Executar"?
+      courseD_multi_maze_until10_predict22022_2023:
         answers:
         - correct: true
           feedback: Correcte!
@@ -5221,6 +5704,25 @@ ca-ES:
         questions:
         - text: Fixa't bé en el codi que hi ha a continuació. Què creus que passarà
             quan facis clic a "Executar"?
+      courseD_multi_maze_until2_predict12022_2023:
+        answers:
+        - feedback: Incorrecte. El codi farà que l'ocell avanci mentre hi hagi un
+            camí, i que després giri a l'esquerra. Ho farà sense parar fins que arribi
+            al porquet!
+          text: L'ocell no es mourà ni un mil·límetre.
+        - correct: true
+          feedback: Correcte!
+          text: L'ocell arribarà fins al porquet.
+        - feedback: Incorrecte. El codi fa que l'ocell avanci mentre hi hagi un camí
+            segur, i que després giri a l'esquerra. Ho farà sense parar fins que arribi
+            al porquet!
+          text: L'ocell avançarà i toparà amb el TNT.
+        - feedback: El codi farà que l'ocell avanci mentre hi hagi un camí, i que
+            després giri a l'esquerra. Ho farà sense parar fins que arribi al porquet!
+          text: L'ocell gira en la direcció equivocada.
+        questions:
+        - text: Fixa't bé en el codi que hi ha a continuació. Què creus que passarà
+            quan facis clic a "Executar"?
       courseD_multi_maze_until2_predict1_2018:
         answers:
         - feedback: Incorrecte. El codi farà que l'ocell avanci mentre hi hagi un
@@ -5306,6 +5808,9 @@ ca-ES:
       courseE_EOC2022:
         description: Has arribat al final del Curs E! Tria el projecte que vols crear.
         display_name: Projecte de final de curs
+      courseE_EOC2022_2023:
+        description: Has arribat al final del Curs E! Tria el projecte que vols crear.
+        display_name: Projecte de final de curs
       courseE_EOC_2020:
         description: Has arribat al final del Curs E! Tria el projecte que vols crear.
         display_name: Projecte de final de curs
@@ -5313,6 +5818,9 @@ ca-ES:
         description: Has arribat al final del Curs E! Tria el projecte que vols crear.
         display_name: Projecte de final de curs
       courseE_EOC_examples2022:
+        description: Has arribat al final del Curs E! Tria el projecte que vols crear.
+        display_name: Projecte de final de curs
+      courseE_EOC_examples2022_2023:
         description: Has arribat al final del Curs E! Tria el projecte que vols crear.
         display_name: Projecte de final de curs
       courseE_EOC_examples_2021:
@@ -5354,6 +5862,22 @@ ca-ES:
         questions:
         - text: Fixa't en les funcions definides a continuació. Què collirà l'agricultora?
       courseE_multi_farmer_functions11_predict2022:
+        answers:
+        - feedback: Incorrecte. L'agricultora avança fins al final del camí, llavors
+            es gira i torna enrere fins que cull l'enciam.
+          text: L'agricultora collirà dues carabasses.
+        - feedback: Incorrecte. L'agricultora avança fins al final del camí, llavors
+            es gira i torna enrere fins que cull l'enciam.
+          text: L'agricultora collirà totes les carabasses.
+        - correct: true
+          feedback: Correcte!
+          text: L'agricultora collirà l'enciam.
+        - feedback: Incorrecte. L'agricultora avança fins al final del camí, llavors
+            es gira i torna enrere fins que cull l'enciam.
+          text: L'agricultora collirà el blat.
+        questions:
+        - text: Fixa't en les funcions definides a continuació. Què collirà l'agricultora?
+      courseE_multi_farmer_functions11_predict2022_2023:
         answers:
         - feedback: Incorrecte. L'agricultora avança fins al final del camí, llavors
             es gira i torna enrere fins que cull l'enciam.
@@ -5449,6 +5973,21 @@ ca-ES:
         questions:
         - text: Què passarà quan facis clic a "Executar"?
       courseE_prediction_artistFunction12022:
+        answers:
+        - feedback: Incorrecte. En el programa hi ha dues crides a la funció.
+          text: Res. En el programa no hi ha cap crida a la funció.
+        - feedback: Incorrecte. En el programa hi ha dues crides a la funció.
+          text: L'artista dibuixarà un sol quadrat.
+        - feedback: Incorrecte. La longitud de cada costat del quadrat és de només
+            100 píxels, però l'artista salta 175 píxels entre les funcions.
+          text: L'artista dibuixarà dos quadrats superposats.
+        - correct: true
+          feedback: Correcte! En el programa, hi ha dues crides a la funció, amb un
+            salt entre l'una i l'altra.
+          text: L'artista dibuixarà dos quadrats separats per un petit espai.
+        questions:
+        - text: Què passarà quan facis clic a "Executar"?
+      courseE_prediction_artistFunction12022_2023:
         answers:
         - feedback: Incorrecte. En el programa hi ha dues crides a la funció.
           text: Res. En el programa no hi ha cap crida a la funció.
@@ -5567,6 +6106,20 @@ ca-ES:
         questions:
         - text: Fixa't bé en el codi que hi ha a continuació. Què passarà quan facis
             clic a "Executar"?
+      courseE_swim_fish_behavior_predict12022_2023:
+        answers:
+        - feedback: Incorrecte. La planta començarà a rodolar.
+          text: No passarà res.
+        - feedback: Incorrecte. La planta començarà a rodolar.
+          text: La planta flotarà cap a la part superior de la pantalla.
+        - correct: true
+          feedback: Correcte!
+          text: La planta començarà a rodolar.
+        - feedback: Incorrecte. La planta començarà a rodolar.
+          text: La planta parpellejarà, il·luminant-se i apagant-se.
+        questions:
+        - text: Fixa't bé en el codi que hi ha a continuació. Què passarà quan facis
+            clic a "Executar"?
       courseE_swim_fish_behavior_predict1_2021:
         answers:
         - feedback: Incorrecte. La planta començarà a rodolar.
@@ -5593,10 +6146,16 @@ ca-ES:
         display_name: Projecte de final de curs
       courseF_EOC_examples2022_2022_pilot_-2022-2:
         display_name: Projecte de final de curs
+      courseF_EOC_examples2022_2022_pilot_-2022-2_2023:
+        display_name: Projecte de final de curs
       courseF_EOC_examples_2021:
         description: Has arribat al final del Curs F! Tria el projecte que vols crear.
         display_name: Projecte de final de curs
       courseF_EOC_samples2022:
+        description: Estàs a punt de començar el projecte final. Abans de posar-t'hi,
+          dona un cop d'ull als projectes d'exemple.
+        display_name: Projecte de final de curs
+      courseF_EOC_samples2022_2023:
         description: Estàs a punt de començar el projecte final. Abans de posar-t'hi,
           dona un cop d'ull als projectes d'exemple.
         display_name: Projecte de final de curs
@@ -5649,12 +6208,19 @@ ca-ES:
         - {}
       courseF_collector_samples_2022_pilot_-2022-2:
         display_name: Exploració - Programes d'exemple
+      courseF_collector_samples_2022_pilot_-2022-2_2023:
+        display_name: Exploració - Programes d'exemple
       courseF_events_freeplay:
         description: Ara pots aplicar tot el que has après per fer que el teu projecte
           sigui encara millor! Afegeix més coses al teu programa o comença'n un de
           nou!
         display_name: Esdeveniments - Joc lliure
       courseF_events_freeplay2022_2022_pilot_-2022-2:
+        description: Ara pots aplicar tot el que has après per fer que el teu projecte
+          sigui encara millor! Afegeix més coses al teu programa o comença'n un de
+          nou!
+        display_name: Esdeveniments - Joc lliure
+      courseF_events_freeplay2022_2022_pilot_-2022-2_2023:
         description: Ara pots aplicar tot el que has après per fer que el teu projecte
           sigui encara millor! Afegeix més coses al teu programa o comença'n un de
           nou!
@@ -5674,6 +6240,10 @@ ca-ES:
           | ***Type*** |**Review**|**Debug**|**Debug**|**Debug**|**Optional Content**|**Optional Content**
           | ***Concept***|*events, behaviors*|*events, behaviors*|*events, behaviors*|*events, behaviors*|*when/while events*|*when/while events*|
       courseF_events_practice2022_2022_pilot_-2022-2:
+        description: Ho estàs fent molt bé! Ara, tria l'activitat següent. Fes-ne
+          tantes com puguis. Segueix practicant amb els esdeveniments!
+        display_name: Pràctica amb esdeveniments
+      courseF_events_practice2022_2022_pilot_-2022-2_2023:
         description: Ho estàs fent molt bé! Ara, tria l'activitat següent. Fes-ne
           tantes com puguis. Segueix practicant amb els esdeveniments!
         display_name: Pràctica amb esdeveniments
@@ -5709,7 +6279,31 @@ ca-ES:
           text: L'sprite voltejarà primer, i després es mourà.
         questions:
         - text: Llegeix el codi i fes una predicció.
+      courseF_events_predict_multi2022_2022_pilot_-2022-2_2023:
+        answers:
+        - feedback: Incorrecte. L'sprite també anirà cap a l'est.
+          text: L'sprite només voltejarà cap a la dreta.
+        - feedback: Incorrecte. L'sprite no ha deixat de voltejar, així que farà totes
+            dues coses alhora.
+          text: L'sprite només anirà cap a l'est.
+        - correct: true
+          feedback: Correcte! Tots dos comportaments es produiran simultàniament.
+          text: L'sprite voltejarà i es mourà alhora.
+        - feedback: Incorrecte. Al Laboratori d'Sprites, els blocs que estan connectats
+            se succeeixen immediatament l'un darrere l'altre, així que tots dos comportaments
+            es produiran simultàniament.
+          text: L'sprite voltejarà primer, i després es mourà.
+        questions:
+        - text: Llegeix el codi i fes una predicció.
       courseF_groups_predict_multi_2022_pilot_-2022-2:
+        answers:
+        - correct: true
+        - {}
+        - {}
+        - {}
+        questions:
+        - {}
+      courseF_groups_predict_multi_2022_pilot_-2022-2_2023:
         answers:
         - correct: true
         - {}
@@ -5730,6 +6324,8 @@ ca-ES:
           En aquest cas, les diferents opcions porten els alumnes a aplicacions d’exemple que poden explorar. Aquesta activitat està pensada per combinar-se amb la fitxa Explorem Aplicacions, la qual es troba a la [guia de la lliçó](.././).
       courseF_intro_apps2022_2022_pilot_-2022-2:
         display_name: Aplicacions del Laboratori d'Sprites
+      courseF_intro_apps2022_2022_pilot_-2022-2_2023:
+        display_name: Aplicacions del Laboratori d'Sprites
       courseF_labels_predict_multi:
         answers:
         - feedback: Incorrecte. Les etiquetes de les variables no coincideixen.
@@ -5747,6 +6343,22 @@ ca-ES:
         - text: Aquest codi potser et sona, però llegeix-lo detingudament. Què s'escriurà
             si l'usuari introdueix "pizza"?
       courseF_labels_predict_multi2022_2022_pilot_-2022-2:
+        answers:
+        - feedback: Incorrecte. Les etiquetes de les variables no coincideixen.
+          text: '"Una pizza en marxa!"'
+        - feedback: Incorrecte. Les etiquetes de les variables mai no apareixen impreses.
+          text: '"Un àpat en marxa!"'
+        - feedback: Incorrecte. Les etiquetes de les variables mai no apareixen impreses.
+          text: '"Un menjar en marxa!"'
+        - correct: true
+          feedback: Correcte! Les etiquetes de les variables no coincideixen.
+          text: '"Un  en marxa!"'
+        - feedback: Incorrecte. L'esdeveniment i el bloc d'escriure seguiran funcionant.
+          text: No s'escriurà res.
+        questions:
+        - text: Aquest codi potser et sona, però llegeix-lo detingudament. Què s'escriurà
+            si l'usuari introdueix "pizza"?
+      courseF_labels_predict_multi2022_2022_pilot_-2022-2_2023:
         answers:
         - feedback: Incorrecte. Les etiquetes de les variables no coincideixen.
           text: '"Una pizza en marxa!"'
@@ -5825,6 +6437,24 @@ ca-ES:
         - text: Hem establert la variable "longitud" a 50. Què passarà quan facis
             clic a "Exectuar"?
       courseF_multi_artist_variables3a_predict12022:
+        answers:
+        - correct: true
+          feedback: Correcte!
+          text: L'artista dibuixarà un triangle amb costats de 50 píxels.
+        - feedback: Incorrecte. Perquè passi això, la variable "longitud" hauria d'estar
+            en el bucle de repetició.
+          text: L'artista dibuixarà un polígon de 50 costats amb costats de 3 píxels.
+        - feedback: Incorrecte. Perquè això passi, s'hauria de fer servir la variable
+            "longitud" al bloc "gir".
+          text: L'artista dibuixarà tres costats oberts amb girs de 50°.
+        - feedback: La variable "longitud" s'ha establert a 50 i s'està fent servir
+            al bloc "avançar", de manera que l'artista dibuixarà un triangle amb costats
+            de 50 píxels.
+          text: L'ordinador demanarà a l'usuari que introdueixi un número.
+        questions:
+        - text: Hem establert la variable "longitud" a 50. Què passarà quan facis
+            clic a "Exectuar"?
+      courseF_multi_artist_variables3a_predict12022_2023:
         answers:
         - correct: true
           feedback: Correcte!
@@ -5975,6 +6605,26 @@ ca-ES:
         questions:
         - text: Llegeix el codi que hi ha a continuació. Què passarà quan facis clic
             a "Executar"?
+      courseF_multi_bee_for3_predict12022_2023:
+        answers:
+        - feedback: Incorrecte. El bucle "for" farà que l'abella reculli la quantitat
+            correcta de nèctar, però només està establert perquè arribi a 4 flors.
+          text: L'abella avançarà i recollirà tot el nèctar de totes les flors.
+        - correct: true
+          feedback: Correcte!
+          text: L'abella avançarà i recollirà tot el nèctar de totes les flors, menys
+            una.
+        - feedback: Incorrecte. El bucle "for" farà que l'abella reculli la quantitat
+            correcta de nèctar, però només està establert perquè arribi a 4 flors.
+          text: L'abella avançarà i recollirà un nèctar de cada flor.
+        - feedback: Incorrecte. El bucle "for" farà que l'abella reculli la quantitat
+            correcta de nèctar, però només està establert perquè arribi a 4 flors.
+          text: L'abella avançarà i recollirà un nèctar de les flors número 1 i 4.
+        markdown: Que bé! Amb els bucles "for", resoldre aquest trencaclosques és
+          molt més fàcil!
+        questions:
+        - text: Llegeix el codi que hi ha a continuació. Què passarà quan facis clic
+            a "Executar"?
       courseF_multi_bee_for3_predict1_2018:
         answers:
         - feedback: Incorrecte. El bucle "for" farà que l'abella reculli la quantitat
@@ -6071,6 +6721,9 @@ ca-ES:
       courseF_sprites_freeplay2022_2022_pilot_-2022-2:
         description: Ara et toca a tu fer el que vulguis! Quin tipus de projecte faràs?
         display_name: Sprites - Joc lliure
+      courseF_sprites_freeplay2022_2022_pilot_-2022-2_2023:
+        description: Ara et toca a tu fer el que vulguis! Quin tipus de projecte faràs?
+        display_name: Sprites - Joc lliure
       courseF_sprites_practice:
         description: Ho estàs fent molt bé! Ara, tria l'activitat següent. Fes-ne
           tantes com puguis. Segueix practicant amb els sprites i els comportaments!
@@ -6085,6 +6738,10 @@ ca-ES:
           |-|-|-|-|-| | ***Type*** |**Review**|**Review**|**Review**|**Review**|
           | ***Concept***|*sprites, locations*|*sprites, properties*|*sprites, locations, behaviors*|*behaviors*|
       courseF_sprites_practice2022_2022_pilot_-2022-2:
+        description: Ho estàs fent molt bé! Ara, tria l'activitat següent. Fes-ne
+          tantes com puguis. Segueix practicant amb els sprites i els comportaments!
+        display_name: Pràctica amb sprites
+      courseF_sprites_practice2022_2022_pilot_-2022-2_2023:
         description: Ho estàs fent molt bé! Ara, tria l'activitat següent. Fes-ne
           tantes com puguis. Segueix practicant amb els sprites i els comportaments!
         display_name: Pràctica amb sprites
@@ -6124,6 +6781,24 @@ ca-ES:
           text: Els avions xocaran l'un amb l'altre.
         questions:
         - text: Llegeix el codi i fes una predicció.
+      courseF_sprites_predict_multi2022_2022_pilot_-2022-2_2023:
+        answers:
+        - feedback: Incorrecte. Aquests sprites tenen “comportaments” que no pararan
+            de funcionar fins que no se'ls digui que s'aturin.
+          text: Tots dos avions es mouran un espai al llarg de la quadrícula, i llavors
+            s'aturaran.
+        - correct: true
+          feedback: Correcte! Aquests comportaments diuen als avions que comencin
+            a moure's i no s'aturin.
+          text: Tots dos avions començaran a moure's i no s'aturaran.
+        - feedback: Incorrecte. Els blocs del Laboratori d'Sprites s'executen l'un
+            darrere de l'altre.
+          text: Un avió es mourà primer, i l'altre ho farà després.
+        - feedback: Incorrecte. Els avions no estan col·locats de manera que s'arribin
+            a tocar.
+          text: Els avions xocaran l'un amb l'altre.
+        questions:
+        - text: Llegeix el codi i fes una predicció.
       courseF_text_practice:
         description: Ho estàs fent molt bé! Ara, tria l'activitat següent. Fes-ne
           tantes com puguis. Segueix practicant amb text i preguntes!
@@ -6142,6 +6817,10 @@ ca-ES:
         description: Ho estàs fent molt bé! Ara, tria l'activitat següent. Fes-ne
           tantes com puguis. Segueix practicant amb text i preguntes!
         display_name: Pràctica amb text i preguntes
+      courseF_text_practice2022_2022_pilot_-2022-2_2023:
+        description: Ho estàs fent molt bé! Ara, tria l'activitat següent. Fes-ne
+          tantes com puguis. Segueix practicant amb text i preguntes!
+        display_name: Pràctica amb text i preguntes
       courseF_variables2_predict2_multi2022_-2022-2:
         answers:
         - correct: true
@@ -6150,7 +6829,23 @@ ca-ES:
         - {}
         questions:
         - {}
+      courseF_variables2_predict2_multi2022_-2022-2_2023:
+        answers:
+        - correct: true
+        - {}
+        - {}
+        - {}
+        questions:
+        - {}
       courseF_variables2_predict_multi2022_2022_pilot_-2022-2:
+        answers:
+        - {}
+        - {}
+        - correct: true
+        - {}
+        questions:
+        - {}
+      courseF_variables2_predict_multi2022_2022_pilot_-2022-2_2023:
         answers:
         - {}
         - {}
@@ -6190,6 +6885,22 @@ ca-ES:
         - text: 'Aquest programa et permet contestar una pregunta escrivint al teclat.
             El bloc "imprimir" mostra el text a la pantalla. Fes una predicció: què
             passarà un cop hagis respost a la pregunta?'
+      courseF_variables_predict_multi2022_2022_pilot_-2022-2_2023:
+        answers:
+        - feedback: Incorrecte. El bloc de nom serà substituït per la paraula que
+            introdueixis.
+          text: El programa imprimirà _"Hola, nom!"_
+        - correct: true
+          feedback: Correcte! El que introdueixis substituirà el bloc de nom.
+          text: El programa et saludarà amb el nom que has introduït.
+        - feedback: Incorreccte. Apareix text imprès a la pantalla.
+          text: La mida de l'sprite canviarà.
+        - feedback: Incorrecte. Només es fa una pregunta, just quan comença el programa.
+          text: L'ordinador farà una altra pregunta.
+        questions:
+        - text: 'Aquest programa et permet contestar una pregunta escrivint al teclat.
+            El bloc "imprimir" mostra el text a la pantalla. Fes una predicció: què
+            passarà un cop hagis respost a la pregunta?'
       courseF_variables_projects:
         description: Crearàs o bé una targeta de felicitació, o bé un xat bot, o bé
           una història d'espais buits. Si ja has acabat la \"Part 1"\ del teu projecte,
@@ -6201,6 +6912,11 @@ ca-ES:
 
            És possible que hagueu de donar instruccions molt clares per tal que els alumnes entenguin com seleccionar les opcions disponibles. Cadascuna de les opcions dels projectes inclou dos subnivells. Primer, han de triar un dels nivells de la “Part 1”. Un cop fet aquest nivell, han de tornar enrere i seleccionar la “Part 2” del mateix projecte. El primer nivell de cada opció donarà informació als alumnes a mesura que defineixin els elements bàsics del projecte. La segona part és de joc lliure i està pensada per deixar que facin els canvis que vulguin al seu codi.
       courseF_variables_projects2022_2022_pilot_-2022-2:
+        description: Crearàs o bé una targeta de felicitació, o bé un xat bot, o bé
+          una història d'espais buits. Si ja has acabat la \"Part 1"\ del teu projecte,
+          passa a la \"Part 2"\.
+        display_name: Escull un projecte
+      courseF_variables_projects2022_2022_pilot_-2022-2_2023:
         description: Crearàs o bé una targeta de felicitació, o bé un xat bot, o bé
           una història d'espais buits. Si ja has acabat la \"Part 1"\ del teu projecte,
           passa a la \"Part 2"\.
@@ -6218,6 +6934,13 @@ ca-ES:
 
           Els alumnes hauran de fixar-se bé en aquests projectes abans de decidir quin en volen fer. Podeu veure'ls tots junts o demanar-los que els descobreixin per tots sols.
       courseF_variables_samples2022_2022_pilot_-2022-2:
+        description: Crearàs o bé una targeta de felicitació, o un xat bot, o una
+          història d'espais buits. Abans de començar, fes una ullada als projectes
+          d'exemple que trobaràs a continuació per veure què t'interessa fer. Fes
+          clic a \"Acabar\" quan estiguis preparat per començar a planificar el teu
+          propi programa.
+        display_name: Exploració - Programes d'exemple
+      courseF_variables_samples2022_2022_pilot_-2022-2_2023:
         description: Crearàs o bé una targeta de felicitació, o un xat bot, o una
           història d'espais buits. Abans de començar, fes una ullada als projectes
           d'exemple que trobaràs a continuació per veure què t'interessa fer. Fes
@@ -6260,6 +6983,24 @@ ca-ES:
           * La llista de preguntes que faràs a l’usuari.
           * Qualsevol altre text que mostraràs en pantalla.
           * Una descripció o dibuix dels sprites que necessitaràs (i dels seus comportaments).
+      courseF_variables_stop2022_2022_pilot_-2022-2_2023:
+        content1: Descripció aquí
+        markdown: |-
+          # Ep!
+
+          ## Estàs segur que ho tens tot llest per avançar?
+
+
+          Al nivell següent començaràs a escriure el codi del teu projecte, i sempre és millor fer-ho quan ens planifiquem bé.
+
+          La teva planificació hauria d’incloure:
+
+          <img src="https://images.code.org/b476ac330f2b66e44e02208fee386a56-image-1614802439867.png" style="float:left; height:70px; padding:10px"/>
+
+          * El tipus de projecte que estàs desenvolupant. Per exemple, una targeta de felicitació, un xat bot, o una història d’espais buits.
+          * La llista de preguntes que faràs a l’usuari.
+          * Qualsevol altre text que mostraràs en pantalla.
+          * Una descripció o dibuix dels sprites que necessitaràs (i dels seus comportaments).
       coursee_prediction_artistfunction2:
         answers:
         - feedback: Incorrecte. El bucle fa servir "dibuixar polígon" en lloc de "dibuixar
@@ -6275,6 +7016,20 @@ ca-ES:
         questions:
         - text: Què passarà quan facis clic al botó "Executar"?
       coursee_prediction_artistfunction22022:
+        answers:
+        - feedback: Incorrecte. El bucle fa servir "dibuixar polígon" en lloc de "dibuixar
+            línia de polígons".
+          text: L'artista resoldrà el trencaclosques correctament.
+        - correct: true
+          feedback: Correcte!
+          text: L'artista dibuixarà quatre quadrats en un patró de finestra.
+        - feedback: Incorrecte. El programa no crida "dibuixar línia de polígons".
+          text: L'artista dibuixarà només una línia de quadrats.
+        - feedback: Incorrecte. El bucle gira 90° entre crides per "dibuixar polígon".
+          text: L'artista dibuixarà quatre quadrats, l'un sobre l'altre.
+        questions:
+        - text: Què passarà quan facis clic al botó "Executar"?
+      coursee_prediction_artistfunction22022_2023:
         answers:
         - feedback: Incorrecte. El bucle fa servir "dibuixar polígon" en lloc de "dibuixar
             línia de polígons".
@@ -6344,6 +7099,323 @@ ca-ES:
           text: L'artista dibuixarà quatre quadrats, l'un sobre l'altre.
         questions:
         - text: Què passarà quan facis clic al botó "Executar"?
+      csc_animal_adaptations_L3_intro:
+        markdown: "#Make el teu propi comportament!\n\n<br>\n\n# #Now tens el control
+          de les conductes!\n\n## #Edit comportaments existents per modificar-los
+          i canviar-los. \n! [] (https://images.code.org/e2e63b1cd7302b6548591c65ad23a0ee-image-1680019477336.gif)\n\n##
+          #Make el teu propi nou comportament amb les accions que t'agradaria!\n\n!
+          [] (https://images.code.org/5345f53f3b33b2ad2bbf2bc86539cb96-image-1680019210225.gif)\n\n\n"
+      csc_animal_adaptations_choice:
+        description: Trieu entre els escenaris següents i utilitzeu el vostre propi
+          codi creatiu per modelar una adaptació animal nova i única. Podeu triar
+          diverses opcions i fer més d'una!
+        display_name: Codifica la teva pròpia adaptació animal!
+      csc_animal_adaptations_intro:
+        markdown: "#Survival Comportaments\n\n# #Behaviors a la natura\nEls animals
+          han desenvolupat <strong>comportaments</strong> i accions per ajudar-los
+          a sobreviure. <br> Per exemple, alguns animals**migren durant l'hivern i
+          altres intenten romandre en grups**.\n\n<img style=\" float: left; width:50%;
+          padding-top:10px\" src=\"https://images.code.org/424ef84f41b7cabdf62e8cc509abe62c-image-1678322413909.jpg\"
+          style= \"width:60%\">\n<img style=\" float: left; width:46%; padding-top:10px\"
+          src=\"https://images.code.org/7c79e255d048e7ccf099eb61976bb90c-image-1678322295452.jpg\"
+          style= \"width:60%\">\n\n<div style=\"float: left\">\n<h2>Comportaments
+          en ciències de la computació</h2>\nEn ciències de la computació, <strong></strong>
+          Els comportaments són un conjunt d'accions que un sprite repeteix una i
+          altra vegada com una animació. <br>\nLes accions dins del comportament continuen
+          fins que se li indiqui que s'aturi. \n<br>\n<br>\n\n<img src=\"https://images.code.org/56809209ca823047729cc01a033a7ac0-image-1679937249706.gif\"
+          style=\" float: left; width:70%; padding-top:10px\">\n</div>\n"
+      csc_animal_adaptations_predict:
+        answers:
+        - feedback: Incorrecte. El sprite creixerà.
+          text: El sprite girarà.
+        - correct: true
+          feedback: Correcte!
+          text: El sprite creixerà.
+        - feedback: Incorrecte. El sprite creixerà.
+        - feedback: Incorrecte. El sprite creixerà.
+        questions:
+        - {}
+      csc_animal_adaptations_shareout:
+        markdown: "# #Share El teu\n<img src=\"https://images.code.org/c480c5c42d9c02e154943f49bbed87ff-image-1675984438344.13.53
+          PM.png\" style= \"width:60%\">\n<div style= \"width: 60%\"> \n\nProjecte**Ara
+          que has codificat una adaptació de supervivència, és hora de compartir-la!
+          ** A\n\nmesura que visualitzeu els projectes dels vostres companys de classe
+          des del nivell 9, tingueu en compte les següents preguntes:\n\n>1. Heu triat
+          el mateix escenari d'entorn o diferents? \n>2. Van utilitzar algun dels
+          mateixos blocs de codificació? \n> 3. Creus que l'animal sobreviuria al
+          canvi d'ambient? Per què o per què no? \n\n</div>\n\n"
+      csc_bookcover_extensions_choice_2023:
+        description: Tria entre les activitats següents per afegir a la portada del
+          llibre! Podeu triar diverses opcions i fer més d'una!
+        display_name: Amplieu la coberta del llibre!
+      csc_bookcovers_markdown_lesson_4:
+        markdown: "# #Share La portada del llibre\n<img src=\"https://images.code.org/c480c5c42d9c02e154943f49bbed87ff-image-1675984438344.13.53
+          PM.png\" style= \"width:60%\">\n<div style= \"width: 60%\"> \n\n**Ara que
+          heu codificat la portada del llibre, és hora de compartir-la! ** A\n\nmesura
+          que visualitzeu els projectes dels vostres companys de classe tingueu en
+          compte les següents preguntes:\n\n>1. Quins sprites i diàlegs heu vist a
+          les portades dels llibres dels vostres companys de classe?\n>2. Què passa
+          quan fas clic sobre els caràcters?\n>2. Com eren les seves opcions similars
+          a les vostres? En què eren diferents?\n> 3. Voleu llegir el llibre basat
+          en la seva portada?\n</div>\n\n"
+      csc_bookcovers_planning:
+        markdown: "# #Plan La vostra portada del llibre digital\n\n<div>\n<img style=\"
+          float: left; width:25%; padding-top:10px\" src=\"https://images.code.org/08ece3f13c8f0f82343e302fb52dc45c-image-1676499630865.png\"
+          />\n\n<div style=\"float: left; width: 70%; padding-left:20px\">\n<h4>\n<strong>És
+          hora de fer el vostre pla!</strong>\n</h4>\n\n>Hauries d'incloure:\n> -
+          El títol del llibre\n> - L'autor\n> - Dos dels personatges principals i
+          una frase per descriure's \n> - Un resum d'una sola frase del llibre\n\n**Aquí
+          teniu una plantilla de pla que podeu copiar per utilitzar-la: ** Guia</a>de
+          planificació de la coberta  <a href=\"https://docs.google.com/document/d/18cVgDdq77dbdk6gmQ1rGjHIr7pQk3I2Wb2WsAEeNH64/template/preview\"
+          target=\"_blank\"> del llibre.\n\n</div>\n"
+      csc_codingwithpoetry_markdown_lesson_4:
+        markdown: "# #Share El teu Poema App\n<img src=\"https://images.code.org/c480c5c42d9c02e154943f49bbed87ff-image-1675984438344.13.53
+          PM.png\" style= \"width:60%\">\n<div style= \"width: 60%\"> \n\n**Ara que
+          has codificat el teu poema, és hora de compartir-lo! ** A\n\nmesura que
+          visualitzeu el projecte dels vostres companys de classe penseu en un “resplendor”,
+          un “créixer” i una “pregunta” que podeu escriure per a la vostra parella:\n\n-
+          Un “resplendor” és una cosa que han fet bé\n- Un “créixer” és una cosa que
+          poden canviar o millorar\n- Una “pregunta” és una cosa que voleu saber més\n</div>\n\n**
+          Preparat per començar? ** Utilitzeu <a href=\"https://docs.google.com/document/d/1b6w_lOnibUHyDLYCP3rAWED5iElGm6LOQAJwG-hlih0/template/preview\"
+          target=\"_blank\">aquest recurs</a> per compartir comentaris amb la vostra
+          parella.\n\n"
+      csc_ecosystemes_foodchain_info:
+        markdown: "\n##**Tots els ecosistemes tenen una cadena alimentària_delicadament
+          equilibrada** ## #The cadena alimentària de l'ecosistema marí:\n>## #1.\n\n\n\n<img
+          src=\"https://images.code.org/2270cbb4656875db210e9871883a7d45-image-1683677265473.jpg\"
+          style= \"width:80%\">\n<div style= \"width: 80%\"> \n\nEl sol proporciona
+          energia perquè la fotosíntesi es produeixi en les algues.\n>## #2. Les algues
+          són menjades pels peixos.\n>## #3. Els peixos són capturats i menjats pels
+          humans, que utilitzen vaixells de pesca amb xarxes. \n\n</div>\n\n\n##**Si
+          hi ha massa o massa poc d'un organisme a la cadena alimentària, hi ha efectes
+          sobre tot l'ecosistema.**\n"
+      csc_ecosystems_choice_freeplay_2023:
+        description: Cadascuna d'aquestes simulacions d'ecosistemes ha de ser ajustada.
+          Trieu un ecosistema, executeu la simulació per observar el problema i ajusteu
+          el codi per solucionar-lo.
+        display_name: Tria un ecosistema!
+      csc_ecosystems_conditionals_overview:
+        markdown: "#Cause & Efecte condicionals \n\n</div>\n\n## A continuació afegiràs
+          codi per comprovar per veure quanta alga hi ha a l'aigua <br>\n<img src=\"https://images.code.org/8be316d4e408466b4300c614712fd652-image-1684798211348.jpg\"
+          \ width=50% style=\"margin-right: 10px; float: right\">\n<br> <br>\n\n-
+          En primer lloc, l'ordinador comprova per veure si una condició és certa
+          o falsa.\n\n- Si és cert, llavors s'executarà els blocs a l'interior.\n-
+          Si és fals, llavors no farà res.\n\n<br>\n<br>\n<br>\n\n## Si hi ha massa
+          algues, el corall es posa malalt\n\n<br>\n\n<img src=\"https://images.code.org/4d8aaa9c6562e0ca0b3d92ff7aed1d03-image-1681847951794.png\"
+          \ width=20% style=\"margin-right: 10px; float: left\">\n<img src=\"https://images.code.org/941774921f367566bef36cb712cf2bfb-image-1681840836607.png\"
+          \ width=30% style=\" margin-right: 10px; float: left\">\n\n<br>\n<br>\n<br>\n<br>\n<br>\n<br>\n<br>\n<br>\n\n***\n\n\n\n##
+          Si hi ha massa poca alga, els peixos marxaran\n<img src=\"https://images.code.org/6869f418200edfb88190c0a1e4e5cd10-image-1681838202310.png\"
+          \ width=20% style=\"margin-right: 10px; float: left\">\n\n\n<img src=\"https://images.code.org/233178645539bc7966f55af47865096d-image-1681840833690.png\"
+          \ width=20% style=\" margin-right: 10px; float: left\">\n\n<br>\n<br>\n<br>\n<br>\n<br>\n<br>\n<br>\n<br>\n<br>\n\n\n***\n\n\n\n##
+          Si només hi ha prou algues, llavors el l'ecosistema és saludable\n\n<img
+          src=\"https://images.code.org/8bb9247c35d7d167611b02764beaeff3-image-1681838011797.png\"
+          \ width=20% style=\"margin-right: 30px; float: left\">\n<img src=\"https://images.code.org/b1ed2f5c135f9637fd7a9c5778db2b0c-image-1681840830929.png\"
+          \ width=30% style=\"margin-left: 10px;float: left\">\n<br>\n<br>\n<br>\n<br>\n\n"
+      csc_ecosystems_matching_cfu:
+        answers:
+        - text: "! [] (https://images.code.org/284e3b6e09f5d58052a8840e756644c5-image-1683752491112.png)"
+        - text: "! [] (https://images.code.org/d466f0912cd0cadb3d655263c71c072f-image-1683752857648.jpg)"
+        - text: "! [] (https://images.code.org/de2ab3c63bc2cf7cb319be86d5dcdec0-image-1683752570051.png)"
+        markdown: |+
+          ## Mira les tres pràctiques de pesca sostenible
+
+          Arrossegueu el codi a la imatge que coincideixi.
+
+        questions:
+        - text: Crear una zona de pesca per a embarcacions! [] (https://images.code.org/5f5e0640a82242d632db10b872280e18-image-1683753001613.gif)
+        - text: |-
+            Comença una temporada de pesca i una temporada sense pesca
+            ! [] (https://images.code.org/becad47fd19a4d0e938a0cd10c404e41-image-1683838684289.gif)
+        - text: Establir límits de pesca! [] (https://images.code.org/f8bbd98ff6199af5d3ad23d64f39629d-image-1683753402925.gif)
+        title: Coincidir el codi amb la imatge
+      csc_ecosystems_matching_conditionals:
+        answers:
+        - text: "! [] (https://images.code.org/db1db479bec9b40c6e0574ade394d32b-image-1680118613718.36.41
+            PM.png)"
+        - text: "! [] (https://images.code.org/7c9171ab2ee2e833e5ff60d5519d8728-image-1680118617438.31.00
+            PM.png)"
+        - text: "! [] (https://images.code.org/412968ba617ef19d2049e0e63d271937-image-1680118620636.30.50
+            PM.png)"
+        markdown: |
+          ## Mira els tres ecosistemes
+
+          Un ecosistema està equilibrat i els altres dos estan desequilibrats de diferents maneres. Arrossegueu el codi a la imatge coincident.
+        questions:
+        - text: Massa poca alga fa que els peixos marxin.! [] (https://images.code.org/c0a28473307b7e9b0e827532d2a6ddda-image-1680212227032.png)
+        - text: |-
+            Massa algues fa que el corall estigui malalt. <br>
+            ! [] (https://images.code.org/1230fd96832b692b0c8ab88e77957f33-image-1680212254888.png)
+        - text: Només la quantitat adequada d'algues permet que el corall malalt curi
+            i manté els peixos sans també.! [] (https://images.code.org/3dd061538a7a73285aa0916fdde34e77-image-1680212284869.png)
+        title: Coincidir el codi amb la imatge
+      csc_ecosystems_matching_events:
+        answers:
+        - text: "! [] (https://images.code.org/bf70d0664e68690f2359a48365e50ccc-image-1680556679495.16.33
+            PM.png)"
+        - text: "! [] (https://images.code.org/fe4d2803162186a8e53ec0027f27a206-image-1680556683660.36.04
+            PM.png)"
+        markdown: |+
+          Mireu què passa quan es toquen els sprites en les dues animacions. A continuació, arrossegueu cada imatge de codi a la seva imatge coincident.
+
+
+        questions:
+        - text: El vaixell captura el peix.! [] (https://images.code.org/bcdefefdd1787330e3ad72558b5b492d-image-1680556053866.gif)
+        - text: Els peixos mengen les algues.! [] (https://images.code.org/73febc58a3d23fbf4c66e693abec9e3d-image-1680556608027.gif)
+        title: Coincidir amb el codi a l'animació
+      csc_ecosystems_overfishing_solution2_overview:
+        markdown: "> #Sustainable Pràctica de pesca #2:\n>># #Create una temporada
+          de <img src=\"https://images.code.org/123dd5c82e4c03dcbc32b775fd16ec60-image-1681937158113.png\"
+          \ width=400 style=\"margin-right: 30px; float: left\">\npesca**Establir
+          límits sobre quan les persones poden capturar peixos. Quan no és temporada
+          de pesca l'ecosistema té temps per recuperar.** \n<br>\n\n#Save els nostres
+          mars! \n<img src=\"https://images.code.org/f3f55eddff9891464c8fb5a5405c31c3-image-1681781301257.png\"
+          width=250 style=\"margin-left: 30px; margin-bottom: 30px; float: right\">\n<img
+          src=\"https://images.code.org/cbccfc42b7e1fe329ac7c9c37dfcb6b5-image-1681781296669.png\"
+          width=250 style=\"margin-left: 30px; margin-bottom: 30px; float: right\">\n\n</div>\n\n###
+          La sobrepesca és un problema que pot perjudicar els ecosistemes de vida
+          marina i les persones que confien en ells. És important practicar una pesca
+          sostenible per ajudar a protegir aquests ecosistemes i garantir que les
+          poblacions de peixos es mantinguin saludables.\n\n\n\n<br>\n<br>\n<br>\n"
+      csc_ecosystems_overfishing_solution3_overview:
+        markdown: "> #Sustainable Pràctica de pesca #3:\n>># #Set Límits de <img src=\"https://images.code.org/58d4ca52deba39a990c3165ba16e284b-image-1681747630352.png\"
+          \ width=300 style=\"margin-right: 30px; float: left\">\npesca**Els científics
+          poden ajudar a esbrinar quants peixos poden ser capturats sense causar dany
+          a l'oceà. Llavors els pescadors sabran només capturar que molts peixos.**
+          \n<br>\n<br>\n<br>\n\n#Save els nostres mars! \n<img src=\"https://images.code.org/35e557d27c4bdb5f546da560716dc10b-image-1681756387784.jpg\"
+          width=400 style=\"margin-left: 30px; margin-bottom: 30px; float: right\">\n</div>\n\n###
+          Treballant junts, podem ajudar a mantenir els nostres oceans plens de vida
+          durant les properes generacions!\n\n\n\n<br>\n<br>\n<br>\n\n"
+      csc_ecosystems_overfishing_solutions_overview:
+        markdown: "#Save els nostres mars! \n<img src=\"https://images.code.org/d4267a1de975b8ea46468f74187eb95c-image-1681756621010.jpg\"
+          width=400 style=\"margin-left: 30px; margin-bottom: 30px; float: right\">\n</div>\n\n###
+          L'oceà té molts peixos, però de vegades la gent captura massa peixos i pot
+          ser dolent per a l'ecosistema. En els següents nivells codificarà**tres
+          pràctiques diferents de pesca sostenible** per ajudar a protegir els nostres
+          ecosistemes oceànics.\n\n<br>\n\n## #To llegir més sobre solucions sostenibles
+          per als nostres oceans: <a href=\"https://www.seafoodwatch.org/seafood-basics/sustainable-solutions/avoid-overfishing\"
+          target=\"_blank\">Feu clic aquí</a>\n<br>\n<br>\n\n> #Sustainable Pesca
+          Pràctica #1:\n>> # #Fishing <img src=\"https://images.code.org/c33e46309c5335dc557c67c34310e723-image-1681511054034.png\"
+          \ width=300 style=\"margin-right: 30px; float: left\">\nZones**Els vaixells
+          de pesca només poden pescar en zones designades. Algunes zones estan fora
+          de límit per als vaixells de pesca perquè l'ecosistema es pugui recuperar.**
+          \n<br>\n<br>\n\n\n"
+      csc_ecosystems_planning:
+        markdown: "# #Share La teva simulació d'ecosistemes!\n<img src=\"https://images.code.org/c480c5c42d9c02e154943f49bbed87ff-image-1675984438344.13.53
+          PM.png\" style= \"width:50%\">\n<div style= \"width: 60%\"> \n\n###**Ecologistes!
+          És hora de compartir la vostra investigació! **\n\n## #Explain les següents
+          observacions que heu fet:\n\n>1. Explica la cadena alimentària del teu ecosistema
+          i com l'has codificat.\n> 2. Hi havia massa o massa poc d'un organisme?\n>
+          3. Expliqueu les modificacions que heu fet a la simulació. \n> 4. Què heu
+          notat després de canviar els valors?\n</div>\n\n<div style=\"background-color:
+          #a6e3e8; border-radius: 10px; color: #000000; width: 95%; padding: 0.5px
+          20px 1px 20px;\">\n\n<p style=\"line-height: 1.5; margin-left: 10px; margin-right:
+          10px; margin-top: 20px; margin-bottom: 20px; font-size: 18px; \">\n\n###**Preparat
+          per a més codificació? ** \nProveu el [Curs Express] de code.org (https://studio.code.org/s/express-2022)
+          per aprendre més informàtica al vostre ritme.   \n<br>\n</p></div>\n"
+      csc_mappinglandmarks_markdown_lesson_2:
+        markdown: |+
+          # #Plan El teu mapa de punts d'interès
+          <div>
+          <img style=" float: left; width:20%; padding-top:10px" src="https://images.code.org/08ece3f13c8f0f82343e302fb52dc45c-image-1676499630865.png" />
+
+          <div style="float: left; width: 70%; padding-left:20px">
+          <h4>
+          <strong>És hora de planificar el teu propi mapa de punts de referència.</strong>
+          </h4>
+
+          Podeu crear un mapa de la vostra aula, escola o ciutat. Potser opteu per presentar punts de referència estatals, regionals o nacionals. O pots optar per crear un mapa en funció d'una zona que hagis estudiat a classe.
+
+          A mesura que planifiqueu el vostre mapa, penseu en els fons, els sprites i la parla que voleu utilitzar per ensenyar a altres persones els punts de referència que heu triat.
+
+          ** Necessiteu ajuda per començar? ** Utilitzeu <a href="https://docs.google.com/document/d/1t_-cd-f6EhhUbblu8nSGRajStY9FVwLnKn1Bj90GL3Q/template/preview" target="_blank">aquest recurs</a> per planificar el vostre treball.
+
+
+      csc_mappinglandmarks_markdown_lesson_4:
+        markdown: "# #Share El vostre mapa de referència local\n\nAra que heu codificat
+          el vostre mapa, és hora de compartir-lo! Primer completa una petita reflexió
+          sobre el teu projecte: \n\n>1. Explica la teva part preferida del teu projecte.\n>2.
+          Què va ser un bloc de codi útil en el seu projecte?\n> 3. Expliqueu un error
+          o repte que heu afrontat a l'hora de construir el vostre projecte.\n> 4.
+          Com heu solucionat l'error o heu superat el repte?\n> 5. Quins canvis t'agradaria
+          fer per millorar el teu projecte?\n\nA mesura que presenteu el vostre treball
+          als vostres companys de classe, assegureu-vos d'explicar com funciona el
+          vostre codi, quines opcions de disseny heu fet i els reptes que heu afrontat.\n\n\n\n"
+      csc_starquilts_markdown_lesson_1:
+        markdown: |+
+          # #Plan El teu estel Quilt
+
+          <div>
+          <img style=" float: left; width:25%; padding-top:10px" src="https://images.code.org/d5e1eedfbe978ba6feebd3f89da0a667-image-1679522801245.png" />
+
+          <div style="float: left; width: 70%; padding-left:20px">
+          <h4>
+          <strong>És hora de planificar el teu edredó estrella.</strong>
+          </h4>
+
+          > Primer seleccionareu quatre colors diferents i omplireu el vostre estel Quilt. A continuació, faràs algunes activitats més amb patrons.
+
+          ** Preparat per començar? ** Utilitzeu <a href="https://docs.google.com/document/d/1c__530oWLDH-mX0kSxLMStSz-5Lt3cKUm5K3bTV7Uvo/template/preview" target="_blank">aquest recurs</a>.
+
+
+          </div>
+
+
+      csc_timecapsule_choice_lesson_3:
+        description: Trieu entre les activitats següents per refrescar la memòria
+          sobre com afegir codi al seu poema càpsula de temps! Podeu triar diverses
+          opcions i fer més d'una!
+        display_name: Reviseu les vostres habilitats de codificació!
+      csc_timecapsule_choice_lesson_3_ -l3:
+        description: Trieu entre les activitats següents per refrescar la memòria
+          sobre com afegir codi al seu poema càpsula de temps! Podeu triar diverses
+          opcions i fer més d'una!
+        display_name: Reviseu les vostres habilitats de codificació!
+      csc_timecapsule_info_2023:
+        content1: Descripció aquí
+        markdown: "# #Time Càpsules\n\n<img src=\"https://images.code.org/846b0e2d7a84392a70f432fdce00cd29-image-1676501071993.png\"
+          style= \"float:left; width: 25%; padding-right:30px\"/>\n\n<div style= \"width:
+          70%\"> \n<strong>Una càpsula del temps és com una caixa de tresors</strong>,
+          però en lloc de guardar joguines i caramels a l'interior, conté elements
+          especials que expliquen la història de com era la vida ara mateix. Després,
+          es posa en un lloc segur, com enterrat a terra o en una caixa forta d'una
+          biblioteca, durant molts anys. \n<br>\n<br>\n<strong>Quan arribi el moment,
+          algú obrirà la caixa</strong> i veurà totes les coses especials posades
+          dins, i sabrà tot sobre com era la vida quan va ser enterrada. \n<br>\n<br>\n<strong>Un
+          poema de la càpsula del temps digital </strong>és similar, però en lloc
+          de guardar les coses dins d'una caixa, conté imatges, vídeos i missatges
+          que s'emmagatzemen en un ordinador o a Internet.\n</div>\n\n"
+      csc_timecapsule_markdown_lesson_2:
+        markdown: "# #Plan La teva càpsula del temps\n\n<div>\n<img style=\" float:
+          left; width:25%; padding-top:10px\" src=\"https://images.code.org/08ece3f13c8f0f82343e302fb52dc45c-image-1676499630865.png\"
+          />\n\n<div style=\"float: left; width: 70%; padding-left:20px\">\n<h4>\n<strong>És
+          hora de planificar el teu propi poema de la càpsula del temps.</strong>\n</h4>\n\n>Hauries
+          d'incloure:\n> - Què t'agrada fer \n> - Què és important per a tu\n> - Què
+          passa actualment a la teva comunitat \n> - Uns quants esdeveniments mundials
+          actuals\n\n** Necessites ajuda per començar el teu poema? ** Utilitzeu <a
+          href=\"https://docs.google.com/document/d/1fahr11zX92NW-rLdyZBqrNK2VqgOGtCACkcT87M_luU/template/preview\"
+          target=\"_blank\">aquest recurs</a>.\n\n** Només necessites una mica d'inspiració?
+          ** Utilitzeu <a href=\"https://docs.google.com/document/d/1-aPA3uJIKJAuQ_2Gtck1Ma79eCFY88ZC8YzegQIckG4/template/preview\"
+          target=\"_blank\">aquest recurs</a>.\n\n</div>\n"
+      csc_timecapsule_markdown_lesson_2_poetry:
+        markdown: "# #Plan El teu poema\n\n<div>\n<img style=\" float: left; width:25%;
+          padding-top:10px\" src=\"https://images.code.org/08ece3f13c8f0f82343e302fb52dc45c-image-1676499630865.png\"
+          />\n\n<div style=\"float: left; width: 70%; padding-left:20px\">\n<h4>\n<strong>És
+          hora de planificar el teu propi poema.</strong>\n</h4>\n\n>Hauries d'incloure:\n>
+          - Alguna cosa que t'encanta fer.\n> - Algú important per a tu.\n> - Algunes
+          de les teves coses preferides. \n\n** Preparat per començar a planificar?
+          ** Utilitzeu <a href=\"https://docs.google.com/document/d/1b6w_lOnibUHyDLYCP3rAWED5iElGm6LOQAJwG-hlih0/template/preview\"
+          target=\"_blank\">aquest recurs</a>.\n\n** Busques un tema? ** Utilitzeu
+          <a href=\"https://docs.google.com/document/d/1V-DaWOIUk0xT7NYTzx3AEt4my-jc-Hx4vy21Kl4SPoE/template/preview\"
+          target=\"_blank\">aquest recurs</a>.\n\n</div>\n"
+      csc_timecapsule_markdown_lesson_4:
+        markdown: "# #Share La teva càpsula del\n<img src=\"https://images.code.org/c480c5c42d9c02e154943f49bbed87ff-image-1675984438344.13.53
+          PM.png\" style= \"width:60%\">\n<div style= \"width: 60%\"> \n\ntemps**Ara
+          que has codificat el teu poema de la càpsula del temps, és hora de compartir-lo!
+          ** A\n\nmesura que visualitzeu els projectes dels vostres companys de classe
+          tingueu en compte les següents preguntes:\n\n>1. Quines imatges i sons vas
+          veure a les càpsules del temps dels teus companys de classe?\n>2. En què
+          es diferenciaven les seves històries de les teves?\n> 3. Com eren les seves
+          històries similars a les teves?\n> 4. Com et van fer sentir les seves imatges?\n</div>\n\n"
       csd-post-survey-2017-q11_2018:
         answers:
         - correct: true
@@ -9488,6 +10560,12 @@ ca-ES:
           # Un ciutadà digital de primera
 
           ## Com ens podem convertir en defensors si veiem situacions de ciberassetjament?
+      csf_be_a_super_digital_citizen2022_2023:
+        content1: Descripció aquí
+        markdown: |-
+          # Un ciutadà digital de primera
+
+          ## Com ens podem convertir en defensors si veiem situacions de ciberassetjament?
       csf_be_a_super_digital_citizen_2021:
         content1: Descripció aquí
         markdown: |-
@@ -9500,6 +10578,11 @@ ca-ES:
 
           ## Quina informació és segura de tenir a la petjada digital?
       csf_digital_trails2022:
+        markdown: |-
+          # Segueix el rastre digital
+
+          ## Quina informació és segura de tenir a la petjada digital?
+      csf_digital_trails2022_2023:
         markdown: |-
           # Segueix el rastre digital
 
@@ -9524,6 +10607,20 @@ ca-ES:
 
           ![](https://images.code.org/bfa69295fbf33c77ecdeb79b5498d8f7-image-1584751340896.png)
       csf_password_power-up2022:
+        content1: Descripció aquí
+        markdown: |-
+          #  Reforça la teva contrasenya
+
+          ## Consells per crear una contrasenya
+
+          * Comença amb una **frase** fàcil de recordar.
+          * Els teus **pares** són els únics que han de saber la teva contrasenya.
+          * Mai hi incloguis cap informació **privada** relacionada amb la teva identitat.
+          * Crea contrasenyes que tinguin **vuit** caràcters com a mínim.
+          * Fes servir lletres, números i **símbols**.
+
+          ![](https://images.code.org/bfa69295fbf33c77ecdeb79b5498d8f7-image-1584751340896.png)
+      csf_password_power-up2022_2023:
         content1: Descripció aquí
         markdown: |-
           #  Reforça la teva contrasenya
@@ -9577,6 +10674,19 @@ ca-ES:
           * **P**arar-nos a pensar sobre la situació.
 
           ![](https://images.code.org/f3e4987a130b27f7b589d7829b753aac-image-1584750971069.png)
+      csf_putting_a_stop_to_online_meanness2022_2023:
+        content1: Descripció aquí
+        markdown: |-
+          # Aturem la crueltat
+
+          ## Què hem de fer si algú ens tracta de manera cruel a internet?
+
+          * **S**ortir de la situació.
+          * **T**riar un adult que ens pugui ajudar.
+          * **O**K: si ens donen permís, podem seguir a la pàgina web.
+          * **P**arar-nos a pensar sobre la situació.
+
+          ![](https://images.code.org/f3e4987a130b27f7b589d7829b753aac-image-1584750971069.png)
       csf_putting_a_stop_to_online_meanness_2021:
         content1: Descripció aquí
         markdown: |-
@@ -9596,6 +10706,11 @@ ca-ES:
 
           ## Com naveguem per internet de manera segura?
       csf_safety_in_my_online_neighborhood2022:
+        markdown: |-
+          # El meu barri d'internet
+
+          ## Com naveguem per internet de manera segura?
+      csf_safety_in_my_online_neighborhood2022_2023:
         markdown: |-
           # El meu barri d'internet
 
@@ -11116,10 +12231,17 @@ ca-ES:
       express_EOC2022:
         description: Has arribat al final del Curs E! Tria el projecte que vols crear.
         display_name: Projecte de final de curs
+      express_EOC2022_2023:
+        description: Has arribat al final del Curs E! Tria el projecte que vols crear.
+        display_name: Projecte de final de curs
       express_EOC_2021:
         description: Has arribat al final del Curs E! Tria el projecte que vols crear.
         display_name: Projecte de final de curs
       express_EOC_examples2022:
+        description: Estàs a punt de començar el projecte final. Abans de posar-t'hi,
+          dona un cop d'ull als projectes d'exemple.
+        display_name: Projectes d'exemple
+      express_EOC_examples2022_2023:
         description: Estàs a punt de començar el projecte final. Abans de posar-t'hi,
           dona un cop d'ull als projectes d'exemple.
         display_name: Projectes d'exemple
@@ -11159,6 +12281,24 @@ ca-ES:
         questions:
         - {}
       grade2_multi_collector_A_predict12022:
+        answers:
+        - feedback: Incorrecte.  La Laurel intenta agafar un tresor on no n'hi ha
+            cap i això provoca un error.
+          text: Amb aquest codi, la Laurel agafarà 4 tresors.
+        - correct: true
+          feedback: Correcte!
+          text: La Laurel intentarà agafar un tresor on no n'hi ha cap i això provocarà
+            un error.
+        - feedback: Incorrecte.  La Laurel intenta agafar un tresor on no n'hi ha
+            cap i això provoca un error.
+          text: La Laurel agafarà tots els tresors.
+        - feedback: Incorrecte.  La Laurel intenta agafar un tresor on no n'hi ha
+            cap i això provoca un error.
+          text: Amb aquest codi, la Laurel agafarà 1 tresor.
+        questions:
+        - text: Fixa't bé en aquest codi. Què creus que passarà quan s'executi el
+            programa?
+      grade2_multi_collector_A_predict12022_2023:
         answers:
         - feedback: Incorrecte.  La Laurel intenta agafar un tresor on no n'hi ha
             cap i això provoca un error.

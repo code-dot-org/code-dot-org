@@ -276,6 +276,9 @@
         "CourseD_Dance_2020_04_2021": {
           "dance_callout_02": "Dodajte ovaj blok u svoj program!"
         },
+        "CourseD_Dance_2020_04_2023": {
+          "dance_callout_02": "Dodajte ovaj blok u svoj program!"
+        },
         "CourseD_Dance_2020_06": {
           "dance_party_11_5_groups": "Novi blok!"
         },
@@ -283,6 +286,9 @@
           "dance_party_11_5_groups": "Novi blok!"
         },
         "CourseD_Dance_2020_06_2021": {
+          "dance_party_11_5_groups": "Novi blok!"
+        },
+        "CourseD_Dance_2020_06_2023": {
           "dance_party_11_5_groups": "Novi blok!"
         },
         "CourseD_Dance_2020_07": {
@@ -294,6 +300,9 @@
         "CourseD_Dance_2020_07_2021": {
           "setprop_hint": "Novi blok!"
         },
+        "CourseD_Dance_2020_07_2023": {
+          "setprop_hint": "Novi blok!"
+        },
         "CourseD_Dance_2020_09": {
           "new_block_3": "Novi blok!",
           "new_block_4": "Novi blok!"
@@ -303,6 +312,10 @@
           "new_block_4": "Novi blok!"
         },
         "CourseD_Dance_2020_09_2021": {
+          "new_block_3": "Novi blok!",
+          "new_block_4": "Novi blok!"
+        },
+        "CourseD_Dance_2020_09_2023": {
           "new_block_3": "Novi blok!",
           "new_block_4": "Novi blok!"
         },
@@ -404,6 +417,9 @@
         "Overworld Chop Trees_2021": {
           "craft_callout_preplaced": "Ovdje smo stavili neke blokove za tvoj lakši početak"
         },
+        "Overworld Chop Trees_2023": {
+          "craft_callout_preplaced": "Ovdje smo stavili neke blokove za tvoj lakši početak"
+        },
         "Overworld House Frame Chosen": {
           "craft_callout_preplaced_house": "Ovaj kod će početi graditi tvoju kuću. Možeš li ga završiti?"
         },
@@ -417,6 +433,9 @@
           "craft_callout_preplaced_house": "Ovaj kod će početi graditi tvoju kuću. Možeš li ga završiti?"
         },
         "Overworld House Frame Chosen_2021": {
+          "craft_callout_preplaced_house": "Ovaj kod će početi graditi tvoju kuću. Možeš li ga završiti?"
+        },
+        "Overworld House Frame Chosen_2023": {
           "craft_callout_preplaced_house": "Ovaj kod će početi graditi tvoju kuću. Možeš li ga završiti?"
         },
         "Overworld Move to Sheep": {
@@ -434,6 +453,9 @@
         "Overworld Move to Sheep_2021": {
           "craft_run_button_callout": "Klikni na \"Pokreni\" da isprobaš svoj program"
         },
+        "Overworld Move to Sheep_2023": {
+          "craft_run_button_callout": "Klikni na \"Pokreni\" da isprobaš svoj program"
+        },
         "Overworld Place Wall": {
           "craft_inside_repeat": "Ponavljaj radnje postavljanjem blokova ovdje"
         },
@@ -447,6 +469,9 @@
           "craft_inside_repeat": "Ponavljaj radnje postavljanjem blokova ovdje"
         },
         "Overworld Place Wall_2021": {
+          "craft_inside_repeat": "Ponavljaj radnje postavljanjem blokova ovdje"
+        },
+        "Overworld Place Wall_2023": {
           "craft_inside_repeat": "Ponavljaj radnje postavljanjem blokova ovdje"
         },
         "Underground Avoiding Lava": {
@@ -464,6 +489,9 @@
         "Underground Avoiding Lava_2021": {
           "craft_callout_moveforward": "Ovaj kod će provjeriti postojanje lave. Možeš li dodati komandu za pokretanje naprijed?"
         },
+        "Underground Avoiding Lava_2023": {
+          "craft_callout_moveforward": "Ovaj kod će provjeriti postojanje lave. Možeš li dodati komandu za pokretanje naprijed?"
+        },
         "Underground Iron": {
           "craft_what_is_iron": "Iskopaj ovo željezo!"
         },
@@ -477,6 +505,9 @@
           "craft_what_is_iron": "Iskopaj ovo željezo!"
         },
         "Underground Iron_2021": {
+          "craft_what_is_iron": "Iskopaj ovo željezo!"
+        },
+        "Underground Iron_2023": {
           "craft_what_is_iron": "Iskopaj ovo željezo!"
         },
         "course3_artist_functions_challenge1": {
@@ -525,6 +556,9 @@
         "courseD_maze_ramp3_2021": {
           "stone_block_2": "Sivi blokovi su napravljeni od kamena i ne mogu se baciti."
         },
+        "courseD_maze_ramp3_2023": {
+          "stone_block_2": "Sivi blokovi su napravljeni od kamena i ne mogu se baciti."
+        },
         "courseD_video_nestedLoopsArtist": {
           "courseE_artist_ramp8_1": "Ovaj broj možete promijeniti.",
           "courseE_artist_ramp8_2": "Kliknite ovdje za upis broja ponavljanja vašeg koda."
@@ -547,6 +581,9 @@
         "courseE_artist_functions_challenge1_2021": {
           "courseE_artist_functions_challenge1_callout2": "Ako ti se ne sviđa ovaj dizajn, promijeni ga u šta želiš!"
         },
+        "courseE_artist_functions_challenge1_2023": {
+          "courseE_artist_functions_challenge1_callout2": "Ako ti se ne sviđa ovaj dizajn, promijeni ga u šta želiš!"
+        },
         "courseE_artist_functions_challenge2": {
           "courseE_artist_functions_challenge2_callout2": "Ako ti se ne sviđa ovaj dizajn, promijeni ga u šta želiš!"
         },
@@ -563,6 +600,9 @@
           "courseE_artist_functions_challenge2_callout2": "Ako ti se ne sviđa ovaj dizajn, promijeni ga u šta želiš!"
         },
         "courseE_artist_functions_challenge2_2021": {
+          "courseE_artist_functions_challenge2_callout2": "Ako ti se ne sviđa ovaj dizajn, promijeni ga u šta želiš!"
+        },
+        "courseE_artist_functions_challenge2_2023": {
           "courseE_artist_functions_challenge2_callout2": "Ako ti se ne sviđa ovaj dizajn, promijeni ga u šta želiš!"
         },
         "courseE_artist_ramp8": {
@@ -589,6 +629,9 @@
           "courseF_bee_for4_1": "Ovdje ćeš naći `for`petlju!"
         },
         "courseF_bee_for4_2021": {
+          "courseF_bee_for4_1": "Ovdje ćeš naći `for`petlju!"
+        },
+        "courseF_bee_for4_2023": {
           "courseF_bee_for4_1": "Ovdje ćeš naći `for`petlju!"
         },
         "courseF_bee_fwp_challenge2": {
@@ -657,6 +700,9 @@
         "helloworld_food_costumes": {
           "hello_world_new": "Novi blok!"
         },
+        "helloworld_food_costumes_2023": {
+          "hello_world_new": "Novi blok!"
+        },
         "helloworld_food_costumes_soccer-2022": {
           "hello_world_new": "Novi blok!"
         },
@@ -664,6 +710,10 @@
           "hello_world_new": "Novi blok!"
         },
         "helloworld_food_sizes": {
+          "hello_world_new": "Novi blok!",
+          "hello_world_new_block": "Novi blok!"
+        },
+        "helloworld_food_sizes_2023": {
           "hello_world_new": "Novi blok!",
           "hello_world_new_block": "Novi blok!"
         },
@@ -676,6 +726,9 @@
           "hello_world_new_block": "Novi blok!"
         },
         "helloworld_food_sounds": {
+          "hello_world_new": "Novi blok!"
+        },
+        "helloworld_food_sounds_2023": {
           "hello_world_new": "Novi blok!"
         },
         "helloworld_food_sounds_soccer-2022": {
@@ -697,7 +750,14 @@
         "poetry_hoc_addSprites": {
           "poetry_sprite": "Novi blok!"
         },
+        "poetry_hoc_addSprites_2023": {
+          "poetry_sprite": "Novi blok!"
+        },
         "poetry_hoc_events1": {
+          "poetry_event": "Novi blok!",
+          "poetry_foreground": "Novi blok!"
+        },
+        "poetry_hoc_events1_2023": {
           "poetry_event": "Novi blok!",
           "poetry_foreground": "Novi blok!"
         },
@@ -706,7 +766,14 @@
           "poetry_multiple_sprites": "Novi blok!",
           "poetry_new_block": "Novi blok!"
         },
+        "poetry_hoc_freeplay_2023": {
+          "poetry_new_block": "Novi blok!"
+        },
         "poetry_hoc_sounds": {
+          "poetry_music": "Novi blok!",
+          "poetry_sound": "Novi blok!"
+        },
+        "poetry_hoc_sounds_2023": {
           "poetry_music": "Novi blok!",
           "poetry_sound": "Novi blok!"
         },
@@ -714,7 +781,15 @@
           "poetry_sprite_begins": "Novi blok!",
           "poetry_sprite_stops": "Novi blok!"
         },
+        "poetry_hoc_spriteBehaviors_2023": {
+          "poetry_sprite_begins": "Novi blok!",
+          "poetry_sprite_stops": "Novi blok!"
+        },
         "poetry_hoc_spriteSizes": {
+          "poetry_remove_sprite": "Novi blok!",
+          "poetry_set_sprite": "Novi blok!"
+        },
+        "poetry_hoc_spriteSizes_2023": {
           "poetry_remove_sprite": "Novi blok!",
           "poetry_set_sprite": "Novi blok!"
         }

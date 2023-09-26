@@ -70,6 +70,10 @@ ms:
         ai-ethics-2021:
           description_audience: Gred 6-12
           title: Kod Etika AI kami
+        ai-ethics-2023:
+          lessons:
+            lesson-1:
+              name: Kod Etika AI kami
         ai-temp:
           title: Cara AI Berfungsi
         aiml-2021:

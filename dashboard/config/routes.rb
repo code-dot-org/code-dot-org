@@ -201,6 +201,7 @@ Dashboard::Application.routes.draw do
       get '/lockout', to: 'sessions#lockout'
       get '/users/existing_account', to: 'registrations#existing_account'
       post '/users/auth/maker_google_oauth2', to: 'omniauth_callbacks#maker_google_oauth2'
+      get '/users/edit', to: 'registrations#edit'
     end
     devise_for :users, controllers: {
       omniauth_callbacks: 'omniauth_callbacks',
@@ -1045,7 +1046,13 @@ Dashboard::Application.routes.draw do
 
     resources :code_review_comments, only: [:create, :update, :destroy]
 
-    resources :learning_goal_evaluations, only: [:create, :update]
+    resources :learning_goal_evaluations, only: [:create, :update] do
+      collection do
+        get :get_evaluation
+        post :get_or_create_evaluation
+      end
+    end
+
     resources :learning_goal_ai_evaluations do
       get :get_evaluation, on: :collection
     end

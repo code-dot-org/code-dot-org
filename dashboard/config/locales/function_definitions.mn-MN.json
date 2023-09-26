@@ -634,6 +634,11 @@
             "name": "миний функц"
           }
         },
+        "Course E: Artist Project_examples_2023": {
+          "my function": {
+            "name": "миний функц"
+          }
+        },
         "Course E: Frozen Project_examples2022": {
           "draw a circle": {
             "name": "тойрог зурах"
@@ -678,6 +683,49 @@
           }
         },
         "Course E: Frozen Project_examples_2021": {
+          "draw a circle": {
+            "name": "тойрог зурах"
+          },
+          "draw a house": {
+            "name": "байшин зурах",
+            "parameters": {
+              "length": "урт"
+            }
+          },
+          "draw a pinwheel": {
+            "name": "хавчаар зурах",
+            "parameters": {
+              "length": "урт",
+              "repeat": "давтах"
+            }
+          },
+          "draw a shape": {
+            "name": "дүрс зурах",
+            "parameters": {
+              "length": "урт"
+            }
+          },
+          "draw a square": {
+            "name": "квадрат зурах",
+            "parameters": {
+              "length": "урт"
+            }
+          },
+          "draw a star": {
+            "name": "од зурах",
+            "parameters": {
+              "length": "урт",
+              "points": "цэгүүд"
+            }
+          },
+          "draw a triangle": {
+            "name": "гурвалжин зурах",
+            "parameters": {
+              "length": "урт"
+            }
+          }
+        },
+        "Course E: Frozen Project_examples_2023": {
           "draw a circle": {
             "name": "тойрог зурах"
           },
@@ -897,6 +945,49 @@
             }
           }
         },
+        "CourseD_EOC_artist_2023": {
+          "draw a circle": {
+            "name": "тойрог зурах"
+          },
+          "draw a house": {
+            "name": "байшин зурах",
+            "parameters": {
+              "length": "урт"
+            }
+          },
+          "draw a pinwheel": {
+            "name": "хавчаар зурах",
+            "parameters": {
+              "length": "урт",
+              "repeat": "давтах"
+            }
+          },
+          "draw a shape": {
+            "name": "дүрс зурах",
+            "parameters": {
+              "length": "урт"
+            }
+          },
+          "draw a square": {
+            "name": "квадрат зурах",
+            "parameters": {
+              "length": "урт"
+            }
+          },
+          "draw a star": {
+            "name": "од зурах",
+            "parameters": {
+              "length": "урт",
+              "points": "цэгүүд"
+            }
+          },
+          "draw a triangle": {
+            "name": "гурвалжин зурах",
+            "parameters": {
+              "length": "урт"
+            }
+          }
+        },
         "CourseD_EOC_artist_example2021": {
           "draw a circle": {
             "name": "тойрог зурах"
@@ -941,6 +1032,49 @@
           }
         },
         "CourseD_EOC_artist_example20212022": {
+          "draw a circle": {
+            "name": "тойрог зурах"
+          },
+          "draw a house": {
+            "name": "байшин зурах",
+            "parameters": {
+              "length": "урт"
+            }
+          },
+          "draw a pinwheel": {
+            "name": "хавчаар зурах",
+            "parameters": {
+              "length": "урт",
+              "repeat": "давтах"
+            }
+          },
+          "draw a shape": {
+            "name": "дүрс зурах",
+            "parameters": {
+              "length": "урт"
+            }
+          },
+          "draw a square": {
+            "name": "квадрат зурах",
+            "parameters": {
+              "length": "урт"
+            }
+          },
+          "draw a star": {
+            "name": "од зурах",
+            "parameters": {
+              "length": "урт",
+              "points": "цэгүүд"
+            }
+          },
+          "draw a triangle": {
+            "name": "гурвалжин зурах",
+            "parameters": {
+              "length": "урт"
+            }
+          }
+        },
+        "CourseD_EOC_artist_example2021_2023": {
           "draw a circle": {
             "name": "тойрог зурах"
           },
@@ -1689,6 +1823,11 @@
             "name": "боломжит шийдэл"
           }
         },
+        "courseB_artist_loops_challenge2_2023": {
+          "potential solution": {
+            "name": "боломжит шийдэл"
+          }
+        },
         "courseC_artist_prog3": {
           "draw fire": {
             "name": "гал зурах"
@@ -1785,6 +1924,11 @@
             "name": "өргөгч"
           }
         },
+        "courseC_artist_prog4_2023": {
+          "booster": {
+            "name": "өргөгч"
+          }
+        },
         "courseC_data wizard": {
           "do something": {
             "name": "ямар нэг юм хийх"
@@ -1801,6 +1945,11 @@
           }
         },
         "courseC_data wizard_2021": {
+          "do something": {
+            "name": "ямар нэг юм хийх"
+          }
+        },
+        "courseC_data wizard_2023": {
           "do something": {
             "name": "ямар нэг юм хийх"
           }
@@ -2490,6 +2639,17 @@
             "name": "зургаан өнцөгтийн шугамыг зурах"
           }
         },
+        "courseE_artist_functions10_2023": {
+          "do something": {
+            "name": "ямар нэг юм хийх"
+          },
+          "draw hexagon": {
+            "name": "зургаан өнцөгт зурах"
+          },
+          "draw line of hexagons": {
+            "name": "зургаан өнцөгтийн шугамыг зурах"
+          }
+        },
         "courseE_artist_functions1_copy": {
           "draw ear stems": {
             "name": "чихний ишийг зур"
@@ -2548,6 +2708,14 @@
             "name": "чихний ишийг зур"
           }
         },
+        "courseE_artist_functions2_2023": {
+          "draw a square": {
+            "name": "квадрат зурах"
+          },
+          "draw ear stems": {
+            "name": "чихний ишийг зур"
+          }
+        },
         "courseE_artist_functions2_copy": {
           "draw a square": {
             "name": "квадрат зурах"
@@ -2585,6 +2753,11 @@
           }
         },
         "courseE_artist_functions3_2021": {
+          "draw a star": {
+            "name": "од зурах"
+          }
+        },
+        "courseE_artist_functions3_2023": {
           "draw a star": {
             "name": "од зурах"
           }
@@ -2634,6 +2807,11 @@
             "name": "од зурах"
           }
         },
+        "courseE_artist_functions5_2023": {
+          "draw a star": {
+            "name": "од зурах"
+          }
+        },
         "courseE_artist_functions5_copy": {
           "draw a star": {
             "name": "од зурах"
@@ -2679,6 +2857,11 @@
           }
         },
         "courseE_artist_functions7_2021": {
+          "draw a window": {
+            "name": "цонх зурах"
+          }
+        },
+        "courseE_artist_functions7_2023": {
           "draw a window": {
             "name": "цонх зурах"
           }
@@ -2749,6 +2932,17 @@
             "name": "квадрат -г зураарай"
           }
         },
+        "courseE_artist_functions8_2023": {
+          "do something": {
+            "name": "ямар нэг юм хийх"
+          },
+          "draw a line of squares": {
+            "name": "квадратуудын шугамын зураарай"
+          },
+          "draw square": {
+            "name": "квадрат -г зураарай"
+          }
+        },
         "courseE_artist_functions8a2022": {
           "do something": {
             "name": "ямар нэг юм хийх"
@@ -2782,6 +2976,14 @@
           }
         },
         "courseE_artist_functions8a_2021": {
+          "do something": {
+            "name": "ямар нэг юм хийх"
+          },
+          "draw a square": {
+            "name": "квадрат зурах"
+          }
+        },
+        "courseE_artist_functions8a_2023": {
           "do something": {
             "name": "ямар нэг юм хийх"
           },
@@ -2844,6 +3046,17 @@
             "name": "квадрат -г зураарай"
           }
         },
+        "courseE_artist_functions8b_2023": {
+          "do something": {
+            "name": "ямар нэг юм хийх"
+          },
+          "draw a line of squares": {
+            "name": "квадратуудын шугамын зураарай"
+          },
+          "draw square": {
+            "name": "квадрат -г зураарай"
+          }
+        },
         "courseE_artist_functions8c2022": {
           "do something": {
             "name": "ямар нэг юм хийх"
@@ -2889,6 +3102,17 @@
           }
         },
         "courseE_artist_functions8c_2021": {
+          "do something": {
+            "name": "ямар нэг юм хийх"
+          },
+          "draw a line of squares": {
+            "name": "квадратуудын шугамын зураарай"
+          },
+          "draw square": {
+            "name": "квадрат -г зураарай"
+          }
+        },
+        "courseE_artist_functions8c_2023": {
           "do something": {
             "name": "ямар нэг юм хийх"
           },
@@ -2955,6 +3179,17 @@
           }
         },
         "courseE_artist_functions9_2021": {
+          "do something": {
+            "name": "ямар нэг юм хийх"
+          },
+          "draw line of triangles": {
+            "name": "гурвалжны шугамыг зур"
+          },
+          "draw triangle": {
+            "name": "гурвалжин зурах"
+          }
+        },
+        "courseE_artist_functions9_2023": {
           "do something": {
             "name": "ямар нэг юм хийх"
           },
@@ -3035,6 +3270,20 @@
             "name": "квадрат -г зураарай"
           }
         },
+        "courseE_artist_functionsProj_2023": {
+          "draw a line of squares": {
+            "name": "квадратуудын шугамын зураарай"
+          },
+          "draw hexagon": {
+            "name": "зургаан өнцөгт зурах"
+          },
+          "draw line of hexagons": {
+            "name": "зургаан өнцөгтийн шугамыг зурах"
+          },
+          "draw square": {
+            "name": "квадрат -г зураарай"
+          }
+        },
         "courseE_artist_functions_challenge1": {
           "do something": {
             "name": "ямар нэг юм хийх"
@@ -3076,6 +3325,14 @@
           }
         },
         "courseE_artist_functions_challenge1_2021": {
+          "do something": {
+            "name": "ямар нэг юм хийх"
+          },
+          "my design": {
+            "name": "миний загвар"
+          }
+        },
+        "courseE_artist_functions_challenge1_2023": {
           "do something": {
             "name": "ямар нэг юм хийх"
           },
@@ -3131,6 +3388,14 @@
             "name": "миний загвар"
           }
         },
+        "courseE_artist_functions_challenge2_2023": {
+          "do something": {
+            "name": "ямар нэг юм хийх"
+          },
+          "my design": {
+            "name": "миний загвар"
+          }
+        },
         "courseE_artist_functions_predict1": {
           "draw a square": {
             "name": "квадрат зурах"
@@ -3172,6 +3437,14 @@
           }
         },
         "courseE_artist_functions_predict1_2021": {
+          "draw a square": {
+            "name": "квадрат зурах"
+          },
+          "draw ear stems": {
+            "name": "чихний ишийг зур"
+          }
+        },
+        "courseE_artist_functions_predict1_2023": {
           "draw a square": {
             "name": "квадрат зурах"
           },
@@ -3251,6 +3524,17 @@
           }
         },
         "courseE_artist_functions_predict2_2021": {
+          "do something": {
+            "name": "ямар нэг юм хийх"
+          },
+          "draw line of polygons": {
+            "name": "олон өнцөгтийн шугамыг зурах"
+          },
+          "draw polygon": {
+            "name": "олон өнцөгт зурах"
+          }
+        },
+        "courseE_artist_functions_predict2_2023": {
           "do something": {
             "name": "ямар нэг юм хийх"
           },
@@ -3453,6 +3737,11 @@
           }
         },
         "courseF_apps_collector_-2022-2": {
+          "end game": {
+            "name": "тоглоомыг дуусгах"
+          }
+        },
+        "courseF_apps_collector_2023": {
           "end game": {
             "name": "тоглоомыг дуусгах"
           }
@@ -3706,6 +3995,11 @@
           }
         },
         "courseF_bee_for_challenge1_2021": {
+          "move and get nectar with counter": {
+            "name": "тоологчийн хамт шүүс цуглуулж, хөдлөөрэй"
+          }
+        },
+        "courseF_bee_for_challenge1_2023": {
           "move and get nectar with counter": {
             "name": "тоологчийн хамт шүүс цуглуулж, хөдлөөрэй"
           }

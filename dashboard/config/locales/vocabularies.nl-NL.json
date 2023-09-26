@@ -330,6 +330,192 @@
         "programming/pre-express/2022": {
           "word": "Programmeren"
         },
+        "code/csc-adaptations/2023": {
+          "word": "Code"
+        },
+        "behavior/csc-adaptations/2023": {
+          "word": "Gedrag"
+        },
+        "program/csc-bookcovers/2023": {
+          "word": "Programma",
+          "definition": "Een reeks stappen die zijn gecodeerd tot iets dat door een machine kan worden uitgevoerd."
+        },
+        "code/csc-ecosystems/2023": {
+          "word": "Code"
+        },
+        "conditionals/csc-ecosystems/2023": {
+          "word": "Voorwaardelijke instructies"
+        },
+        "variable/csc-ecosystems/2023": {
+          "word": "Variabele"
+        },
+        "code/csc-mappinglandmarks/2023": {
+          "word": "Code",
+          "definition": "(v) instructies voor een computer schrijven."
+        },
+        "artist/csc-starquilts/2023": {
+          "word": "Kunstenaar"
+        },
+        "comments/csc-starquilts/2023": {
+          "word": "Opmerkingen"
+        },
+        "mood/csc-timecapsule/2023": {
+          "word": "Stemming"
+        },
+        "code/poetry/2023": {
+          "word": "Code",
+          "definition": "(v) instructies voor een computer schrijven."
+        },
+        "line/poetry/2023": {
+          "word": "Regel"
+        },
+        "mood/poetry/2023": {
+          "word": "Stemming"
+        },
+        "program/poetry/2023": {
+          "word": "Programma",
+          "definition": "Een reeks stappen die zijn gecodeerd tot iets dat door een machine kan worden uitgevoerd."
+        },
+        "debugging/coursea/2023": {
+          "word": "Debugging",
+          "definition": "Problemen in een algoritme of programma opsporen en oplossen."
+        },
+        "program/coursea/2023": {
+          "word": "Programma"
+        },
+        "drop/coursea/2023": {
+          "word": "Naar de grond"
+        },
+        "programming/coursea/2023": {
+          "word": "Programmeren"
+        },
+        "debugging/courseb/2023": {
+          "word": "Debugging",
+          "definition": "Problemen in een algoritme of programma opsporen en oplossen."
+        },
+        "drop/courseb/2023": {
+          "word": "Naar de grond"
+        },
+        "program/courseb/2023": {
+          "word": "Programma"
+        },
+        "programming/courseb/2023": {
+          "word": "Programmeren"
+        },
+        "debugging/coursec/2023": {
+          "word": "Debugging",
+          "definition": "Problemen in een algoritme of programma opsporen en oplossen."
+        },
+        "program/coursec/2023": {
+          "word": "Programma"
+        },
+        "programming/coursec/2023": {
+          "word": "Programmeren"
+        },
+        "data/coursec/2023": {
+          "word": "Data"
+        },
+        "binary/coursec/2023": {
+          "word": "Binaire"
+        },
+        "program/coursed/2023": {
+          "word": "Programma"
+        },
+        "debugging/coursed/2023": {
+          "word": "Debugging",
+          "definition": "Problemen in een algoritme of programma opsporen en oplossen."
+        },
+        "programming/coursed/2023": {
+          "word": "Programmeren"
+        },
+        "code/coursed/2023": {
+          "word": "Code",
+          "definition": "(v) om code te schrijven of om instructies voor een computer te schrijven."
+        },
+        "conditionals/coursed/2023": {
+          "word": "Voorwaardelijke instructies"
+        },
+        "behavior/coursee/2023": {
+          "word": "Gedrag"
+        },
+        "function/coursee/2023": {
+          "word": "Functie"
+        },
+        "conditionals/coursee/2023": {
+          "word": "Voorwaardelijke instructies"
+        },
+        "copyright/coursee/2023": {
+          "word": "Copyright"
+        },
+        "define/coursee/2023": {
+          "word": "Definiëren"
+        },
+        "behavior/coursef/2023": {
+          "word": "Gedrag"
+        },
+        "program/coursef/2023": {
+          "word": "Programma"
+        },
+        "variable/coursef/2023": {
+          "word": "Variabele"
+        },
+        "input/coursef/2023": {
+          "word": "Invoer"
+        },
+        "internet/coursef/2023": {
+          "word": "Internet"
+        },
+        "packets/coursef/2023": {
+          "word": "Paketten"
+        },
+        "define/coursef/2023": {
+          "word": "Definiëren"
+        },
+        "debugging/express/2023": {
+          "word": "Debugging",
+          "definition": "Problemen in een algoritme of programma opsporen en oplossen."
+        },
+        "program/express/2023": {
+          "word": "Programma"
+        },
+        "programming/express/2023": {
+          "word": "Programmeren"
+        },
+        "behavior/express/2023": {
+          "word": "Gedrag"
+        },
+        "code/express/2023": {
+          "word": "Code"
+        },
+        "conditionals/express/2023": {
+          "word": "Voorwaardelijke instructies"
+        },
+        "function/express/2023": {
+          "word": "Functie",
+          "definition": "Een stukje code dat je gemakkelijk steeds opnieuw kunt oproepen."
+        },
+        "variable/express/2023": {
+          "word": "Variabele"
+        },
+        "define/express/2023": {
+          "word": "Definiëren"
+        },
+        "drop/pre-express/2023": {
+          "word": "Naar de grond"
+        },
+        "debugging/pre-express/2023": {
+          "word": "Debugging",
+          "definition": "Problemen in een algoritme of programma opsporen en oplossen."
+        },
+        "program/pre-express/2023": {
+          "word": "Programma"
+        },
+        "programming/pre-express/2023": {
+          "word": "Programmeren"
+        },
+        "network/how-ai-works/2023": {
+          "word": "Netwerk"
+        },
         "code/aquatic/unversioned": {
           "word": "Code",
           "definition": "(v) om code te schrijven of om instructies voor een computer te schrijven."

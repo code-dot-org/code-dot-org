@@ -550,6 +550,472 @@
           "word": "Esemény",
           "definition": "Olyan művelet, amely valaminek a bekövetkezését okozza."
         },
+        "adaptation/csc-adaptations/2023": {
+          "word": "Alkalmazkodás",
+          "definition": "Változás egy szervezetben a környezet jobb túlélése érdekében"
+        },
+        "code/csc-adaptations/2023": {
+          "word": "Kód",
+          "definition": "(v) Útmutató írása számítógéphez"
+        },
+        "event/csc-adaptations/2023": {
+          "word": "Esemény",
+          "definition": "Olyan cselekvés, amely valami történését okozza"
+        },
+        "evolution/csc-adaptations/2023": {
+          "word": "evolúció",
+          "definition": "Egy faj jellemzőinek változása több generáción keresztül"
+        },
+        "migration/csc-adaptations/2023": {
+          "word": "Migráció",
+          "definition": "Az állat távolsági mozgása jobb környezet keresését teszi lehetővé"
+        },
+        "camouflage/csc-adaptations/2023": {
+          "word": "álcázás",
+          "definition": "Védelmi mechanizmus, amelyet az élőlények használnak megjelenésük leplezésére és a környezetükbe való beleolvadásra"
+        },
+        "behavior/csc-adaptations/2023": {
+          "word": "Viselkedés",
+          "definition": "Olyan műveletek halmaza, amelyeket egy sprite újra és újra végrehajthat. "
+        },
+        "code_v_/csc-bookcovers/2023": {
+          "word": "Kód (v)",
+          "definition": "hogy írjon utasításokat egy számítógéphez."
+        },
+        "event/csc-bookcovers/2023": {
+          "word": "Esemény",
+          "definition": "Olyan művelet, amely valaminek a bekövetkezését okozza."
+        },
+        "program/csc-bookcovers/2023": {
+          "word": "Program",
+          "definition": "Lépések sorozata, amelyeket valami olyasmivé kódoltak, ami egy gép által lefuttatható."
+        },
+        "background/csc-bookcovers/2023": {
+          "word": "Háttér",
+          "definition": "A képernyőn megjelenő fő dolgok vagy emberek mögötti látvány."
+        },
+        "character/csc-bookcovers/2023": {
+          "word": "Karakter",
+          "definition": "Egy személy, állat, lény, valami teremtménye egy történetben."
+        },
+        "setting/csc-bookcovers/2023": {
+          "word": "Beállítás",
+          "definition": "A történet ideje és helye (vagy mikor és hol)."
+        },
+        "summary/csc-bookcovers/2023": {
+          "word": "Összefoglaló",
+          "definition": "A szöveg legfontosabb részeinek elmondása saját szavaival, sokkal rövidebb módon"
+        },
+        "code/csc-ecosystems/2023": {
+          "word": "Kód",
+          "definition": "(v) Útmutató írása számítógéphez"
+        },
+        "condition/csc-ecosystems/2023": {
+          "definition": "Valami, amit egy program ellenőriz, hogy igaz-e, mielőtt engedélyezne egy műveletet"
+        },
+        "conditionals/csc-ecosystems/2023": {
+          "word": "Feltételek",
+          "definition": "Nyilatkozatok, amelyek csak bizonyos feltételek mellett futnak"
+        },
+        "ecosystem/csc-ecosystems/2023": {
+          "word": "Ökoszisztéma",
+          "definition": "A kölcsönhatásban lévő szervezetek és környezetük biológiai közössége"
+        },
+        "event/csc-ecosystems/2023": {
+          "word": "Esemény",
+          "definition": "Olyan cselekvés, amely valami történését okozza"
+        },
+        "overfishing/csc-ecosystems/2023": {
+          "word": "Túlhalászás",
+          "definition": "A halak gyorsabb eltávolítása, mint amennyit reprodukálni tudnak"
+        },
+        "simulation/csc-ecosystems/2023": {
+          "word": "Szimuláció",
+          "definition": "Számítógépes modell tanulmányozás céljából."
+        },
+        "debug/csc-ecosystems/2023": {
+          "word": "Hibakeresés",
+          "definition": "Hibák vagy problémák keresése és javítása a kódban."
+        },
+        "variable/csc-ecosystems/2023": {
+          "word": "Változó",
+          "definition": "Egy tároló, amely képes tárolni egy értéket. "
+        },
+        "ecologist/csc-ecosystems/2023": {
+          "word": "Ökológus",
+          "definition": "Egy tudós, aki azt vizsgálja, hogy az állatok és növények hogyan hatnak a környezetükre."
+        },
+        "energy/csc-ecosystems/2023": {
+          "word": "Energia",
+          "definition": "Áthelyezve az élőlények között az élelmiszerhálózatokban a termelőktől a fogyasztókig. Az energiát az élőlények összetett feladatok elvégzésére használják fel."
+        },
+        "food_chain/csc-ecosystems/2023": {
+          "word": "Élelmiszerlánc ",
+          "definition": "Az élőlények egy csoportja, amelyek az általuk fogyasztott ételek sorrendjében kapcsolódnak, a termelőktől a fogyasztókig, és a zsákmánytól a ragadozókig."
+        },
+        "code/csc-mappinglandmarks/2023": {
+          "word": "Kód",
+          "definition": "(v) instrukciók írása számítógéphez."
+        },
+        "event/csc-mappinglandmarks/2023": {
+          "word": "Esemény",
+          "definition": "Olyan művelet, amely valaminek a bekövetkezését okozza."
+        },
+        "landmark/csc-mappinglandmarks/2023": {
+          "word": "Nevezetesség",
+          "definition": "A mérföldkő olyan tárgy (természetes vagy ember alkotta), amelynek jelentősége van, vagy könnyen felismerhetővé teszi a helyet."
+        },
+        "sprite/csc-mappinglandmarks/2023": {
+          "definition": "Kép vagy karakter a programban."
+        },
+        "map/csc-mappinglandmarks/2023": {
+          "word": "Térkép",
+          "definition": "A szárazföldi vagy tengeri terület ábrázolása, amely fizikai adottságokkal, városokkal, utakkal stb."
+        },
+        "pattern/csc-starquilts/2023": {
+          "word": "Minta",
+          "definition": "Valami, ami rendszeresen és ismételten történik vagy jelenik meg"
+        },
+        "rhombus/csc-starquilts/2023": {
+          "word": "Rombusz",
+          "definition": "Négy egyenlő oldalú sokszög, az ellentétes oldalak párhuzamosak, az ellentétes szögek egyenlőek"
+        },
+        "star_quilt/csc-starquilts/2023": {
+          "word": "Csillag paplan",
+          "definition": "Hagyományos és értékes ajándék az alföldi indiánok körében"
+        },
+        "artist/csc-starquilts/2023": {
+          "word": "Művész",
+          "definition": "Írhat kódot, hogy szinte bármit rajzoljon"
+        },
+        "loop/csc-starquilts/2023": {
+          "definition": "Ismétlődő kódsor"
+        },
+        "point/csc-starquilts/2023": {
+          "word": "Pont",
+          "definition": "A csillag alakjának egyik része"
+        },
+        "row/csc-starquilts/2023": {
+          "word": "Sor",
+          "definition": "Ebben az esetben a rombuszok rendezett sora"
+        },
+        "concentric/csc-starquilts/2023": {
+          "word": "Koncentrikus",
+          "definition": "Objektumok vagy alakzatok, amelyek azonos középponttal rendelkeznek"
+        },
+        "comments/csc-starquilts/2023": {
+          "word": "Megjegyzések",
+          "definition": "Megjegyzések magadnak, amelyek elmagyarázzák a kód egy részét. Nem változtatják meg a programot, de segítenek a kód rendben tartásában."
+        },
+        "event/csc-timecapsule/2023": {
+          "word": "Esemény",
+          "definition": "Olyan művelet, amely valaminek a bekövetkezését okozza."
+        },
+        "imagery/csc-timecapsule/2023": {
+          "word": "Képek",
+          "definition": "Egy vers vagy történet által készített mentális képek"
+        },
+        "mood/csc-timecapsule/2023": {
+          "word": "Hangulat",
+          "definition": "Egy érzés, légkör vagy érzelem kifejezése a művészetben vagy az írásban."
+        },
+        "sprite/csc-timecapsule/2023": {
+          "definition": "Kép vagy karakter a programban"
+        },
+        "time_capsule/csc-timecapsule/2023": {
+          "definition": "Olyan hely, ahol emlékeket és mindennapi tárgyakat tárolhat, amelyek egy napot képviselnek egy adott időszakban élő személy életében. "
+        },
+        "code/poetry/2023": {
+          "word": "Kód",
+          "definition": "(v) instrukciók írása számítógéphez."
+        },
+        "event/poetry/2023": {
+          "word": "Esemény",
+          "definition": "Olyan művelet, amely valaminek a bekövetkezését okozza."
+        },
+        "line/poetry/2023": {
+          "word": "Sor",
+          "definition": "(költészet) - egy sorban elrendezett vers felosztása, amely a jobb oldali margón végződik."
+        },
+        "mood/poetry/2023": {
+          "word": "Hangulat",
+          "definition": "Egy érzés, légkör vagy érzelem kifejezése a művészetben vagy az írásban."
+        },
+        "program/poetry/2023": {
+          "word": "Program",
+          "definition": "Lépések sorozata, amelyeket valami olyasmivé kódoltak, ami egy gép által lefuttatható."
+        },
+        "poem/poetry/2023": {
+          "word": "Vers",
+          "definition": "Írássorok, amelyek szavakkal képeket, érzéseket és ötleteket hoznak létre az olvasó fejében."
+        },
+        "constructive_feedback/poetry/2023": {
+          "word": "Konstruktív visszajelzés",
+          "definition": "Tiszteletteljes megjegyzések, amelyek segítenek valakinek javítani a munkáját"
+        },
+        "poetry_circle/poetry/2023": {
+          "definition": "Biztonságos és kreatív tér új versek kipróbálására és konstruktív visszajelzések megszerzésére másoktól"
+        },
+        "algorithm/coursea/2023": {
+          "definition": "A feladat befejezéséhez szükséges lépések listája. "
+        },
+        "debugging/coursea/2023": {
+          "word": "Hibakeresés"
+        },
+        "program/coursea/2023": {
+          "word": "Program",
+          "definition": "Olyan algoritmus, amelyet gépen végrehajtható formában kódoltak."
+        },
+        "drag/coursea/2023": {
+          "word": "Mozgatás",
+          "definition": "Kattints az egérgombbal, és tartsd lenyomva, miközben az egérmutatót egy új helyre viszed"
+        },
+        "drop/coursea/2023": {
+          "word": "Spárga",
+          "definition": "Engedd el az egérgombot a húzott elem \"elengedéséhez”"
+        },
+        "bug/coursea/2023": {
+          "word": "Hiba",
+          "definition": "Egy program azon része, amely nem működik megfelelően."
+        },
+        "programming/coursea/2023": {
+          "word": "Programozás",
+          "definition": "A program létrehozásának művészete."
+        },
+        "event/coursea/2023": {
+          "word": "Esemény",
+          "definition": "Olyan művelet, amely valaminek a bekövetkezését okozza."
+        },
+        "algorithm/courseb/2023": {
+          "definition": "A feladat befejezéséhez szükséges lépések listája. "
+        },
+        "bug/courseb/2023": {
+          "word": "Hiba",
+          "definition": "Egy program azon része, amely nem működik megfelelően."
+        },
+        "debugging/courseb/2023": {
+          "word": "Hibakeresés"
+        },
+        "drag/courseb/2023": {
+          "word": "Mozgatás",
+          "definition": "Kattints az egérgombbal, és tartsd lenyomva, miközben az egérmutatót egy új helyre viszed"
+        },
+        "drop/courseb/2023": {
+          "word": "Spárga",
+          "definition": "Engedd el az egérgombot a húzott elem \"elengedéséhez”"
+        },
+        "program/courseb/2023": {
+          "word": "Program",
+          "definition": "Olyan algoritmus, amelyet gépen végrehajtható formában kódoltak."
+        },
+        "programming/courseb/2023": {
+          "word": "Programozás",
+          "definition": "A program létrehozásának művészete."
+        },
+        "persistence/courseb/2023": {
+          "word": "Kitartás"
+        },
+        "event/courseb/2023": {
+          "word": "Esemény",
+          "definition": "Olyan művelet, amely valaminek a bekövetkezését okozza."
+        },
+        "algorithm/coursec/2023": {
+          "definition": "A feladat befejezéséhez szükséges lépések listája. "
+        },
+        "bug/coursec/2023": {
+          "word": "Hiba",
+          "definition": "Egy program azon része, amely nem működik megfelelően."
+        },
+        "debugging/coursec/2023": {
+          "word": "Hibakeresés"
+        },
+        "program/coursec/2023": {
+          "word": "Program",
+          "definition": "Olyan algoritmus, amelyet gépen végrehajtható formában kódoltak."
+        },
+        "persistence/coursec/2023": {
+          "word": "Kitartás"
+        },
+        "programming/coursec/2023": {
+          "word": "Programozás",
+          "definition": "A program létrehozásának művészete."
+        },
+        "event/coursec/2023": {
+          "word": "Esemény",
+          "definition": "Olyan művelet, amely valaminek a bekövetkezését okozza."
+        },
+        "data/coursec/2023": {
+          "word": "Adat"
+        },
+        "binary/coursec/2023": {
+          "word": "Bináris"
+        },
+        "algorithm/coursed/2023": {
+          "definition": "A feladat befejezéséhez szükséges lépések listája. "
+        },
+        "program/coursed/2023": {
+          "word": "Program",
+          "definition": "Olyan algoritmus, amelyet gépen végrehajtható formában kódoltak."
+        },
+        "bug/coursed/2023": {
+          "word": "Hiba",
+          "definition": "Egy program azon része, amely nem működik megfelelően."
+        },
+        "debugging/coursed/2023": {
+          "word": "Hibakeresés"
+        },
+        "programming/coursed/2023": {
+          "word": "Programozás",
+          "definition": "A program létrehozásának művészete."
+        },
+        "persistence/coursed/2023": {
+          "word": "Kitartás"
+        },
+        "event/coursed/2023": {
+          "word": "Esemény",
+          "definition": "Olyan művelet, amely valaminek a bekövetkezését okozza."
+        },
+        "code/coursed/2023": {
+          "definition": "kódot írni, illetve utasításokat írni a számítógépnek."
+        },
+        "conditionals/coursed/2023": {
+          "word": "Feltételek"
+        },
+        "behavior/coursee/2023": {
+          "word": "Viselkedés"
+        },
+        "function/coursee/2023": {
+          "word": "Függvény"
+        },
+        "conditionals/coursee/2023": {
+          "word": "Feltételek"
+        },
+        "copyright/coursee/2023": {
+          "word": "Szerzői jog"
+        },
+        "define/coursee/2023": {
+          "word": "Meghatározás"
+        },
+        "behavior/coursef/2023": {
+          "word": "Viselkedés"
+        },
+        "program/coursef/2023": {
+          "word": "Program",
+          "definition": "Olyan algoritmus, amelyet gépen végrehajtható formában kódoltak."
+        },
+        "event/coursef/2023": {
+          "word": "Esemény",
+          "definition": "Olyan művelet, amely valaminek a bekövetkezését okozza."
+        },
+        "variable/coursef/2023": {
+          "word": "Változó"
+        },
+        "input/coursef/2023": {
+          "word": "Bemenet"
+        },
+        "models_and_simulations/coursef/2023": {
+          "word": "Modellek és szimulációk",
+          "definition": "olyan program, amelynek célja egy való világbeli esemény vizsgálata utánozva vagy lemásolva annak fő tulajdonságait, így meg lehet takarítani egy, a valós életben történő kísérletezés költségeit, a ráfordítandó időt és meg lehet előzni az esetleges veszélyeket."
+        },
+        "internet/coursef/2023": {
+          "word": "Internet"
+        },
+        "define/coursef/2023": {
+          "word": "Meghatározás"
+        },
+        "algorithm/express/2023": {
+          "definition": "A feladat befejezéséhez szükséges lépések listája. "
+        },
+        "bug/express/2023": {
+          "word": "Hiba",
+          "definition": "Egy program azon része, amely nem működik megfelelően."
+        },
+        "debugging/express/2023": {
+          "word": "Hibakeresés"
+        },
+        "program/express/2023": {
+          "word": "Program",
+          "definition": "Olyan algoritmus, amelyet gépen végrehajtható formában kódoltak."
+        },
+        "programming/express/2023": {
+          "word": "Programozás",
+          "definition": "A program létrehozásának művészete."
+        },
+        "behavior/express/2023": {
+          "word": "Viselkedés"
+        },
+        "event/express/2023": {
+          "word": "Esemény",
+          "definition": "Olyan művelet, amely valaminek a bekövetkezését okozza."
+        },
+        "conditionals/express/2023": {
+          "word": "Feltételek"
+        },
+        "function/express/2023": {
+          "word": "Függvény"
+        },
+        "variable/express/2023": {
+          "word": "Változó"
+        },
+        "define/express/2023": {
+          "word": "Meghatározás"
+        },
+        "drag/pre-express/2023": {
+          "word": "Mozgatás",
+          "definition": "Kattints az egérgombbal, és tartsd lenyomva, miközben az egérmutatót egy új helyre viszed"
+        },
+        "drop/pre-express/2023": {
+          "word": "Spárga",
+          "definition": "Engedd el az egérgombot a húzott elem \"elengedéséhez”"
+        },
+        "algorithm/pre-express/2023": {
+          "definition": "A feladat befejezéséhez szükséges lépések listája. "
+        },
+        "bug/pre-express/2023": {
+          "word": "Hiba",
+          "definition": "Egy program azon része, amely nem működik megfelelően."
+        },
+        "debugging/pre-express/2023": {
+          "word": "Hibakeresés"
+        },
+        "program/pre-express/2023": {
+          "word": "Program",
+          "definition": "Olyan algoritmus, amelyet gépen végrehajtható formában kódoltak."
+        },
+        "programming/pre-express/2023": {
+          "word": "Programozás",
+          "definition": "A program létrehozásának művészete."
+        },
+        "persistence/pre-express/2023": {
+          "word": "Kitartás"
+        },
+        "event/pre-express/2023": {
+          "word": "Esemény",
+          "definition": "Olyan művelet, amely valaminek a bekövetkezését okozza."
+        },
+        "algorithm/how-ai-works/2023": {
+          "definition": "egy sor lépés a probléma megoldására vagy a döntés meghozatalára"
+        },
+        "network/how-ai-works/2023": {
+          "word": "Hálózat",
+          "definition": "Összekapcsolt elemek gyűjteménye. Ezeknek a kapcsolatoknak a követése ábrázolhatja az algoritmus lépéseit, mint egy folyamatábra."
+        },
+        "large_language_model_llm_/how-ai-works/2023": {
+          "word": "Nagy nyelvi modell (LLM)",
+          "definition": "az AI általános célú formája, amelyet nagyon-nagyon nagy ismeretekre képeznek"
+        },
+        "diffusion_ai/how-ai-works/2023": {
+          "word": "Diffúziós AI",
+          "definition": "kép konvertálása zajra, és AI képzése a folyamat megfordítására"
+        },
+        "gan_generative_adversarial_network_/how-ai-works/2023": {
+          "word": "GAN (Generatív kontradiktórius hálózat)",
+          "definition": "két versengő AI modell felhasználásának módja valami előállítására"
+        },
+        "artificial_intelligence/how-ai-works/2023": {
+          "word": "Mesterséges intelligencia",
+          "definition": "a gépek tanulási és problémamegoldási képessége."
+        },
         "code/aquatic/unversioned": {
           "definition": "kódot írni, illetve utasításokat írni a számítógépnek."
         },

@@ -1943,7 +1943,11 @@ nn-NO:
         content1: forklaring her
       CourseF_outbreak_story2022_2022_pilot_-2022-2:
         content1: forklaring her
+      CourseF_outbreak_story2022_2022_pilot_-2022-2_2023:
+        content1: forklaring her
       CourseF_outbreak_story22022_2022_pilot_-2022-2:
+        content1: forklaring her
+      CourseF_outbreak_story22022_2022_pilot_-2022-2_2023:
         content1: forklaring her
       Dance_Party_extras_intro:
         markdown: "# Dans vidare!\n\nFor del 2 skal du lage eit eige prosjekt. Det
@@ -2926,6 +2930,14 @@ nn-NO:
         - {}
         questions:
         - {}
+      courseC_multi_artist_prog6_predict12022_2023:
+        answers:
+        - {}
+        - {}
+        - correct: true
+        - {}
+        questions:
+        - {}
       courseC_multi_artist_prog6_predict1_2018:
         answers:
         - {}
@@ -2968,6 +2980,15 @@ nn-NO:
         questions:
         - {}
       courseC_multi_harvester_loops11_predict12022:
+        answers:
+        - text: '4'
+        - correct: true
+          text: '12'
+        - text: '15'
+        - text: '20'
+        questions:
+        - {}
+      courseC_multi_harvester_loops11_predict12022_2023:
         answers:
         - text: '4'
         - correct: true
@@ -3028,6 +3049,14 @@ nn-NO:
         - {}
         questions:
         - {}
+      courseC_multi_maze_debugging8_predict12022_2023:
+        answers:
+        - {}
+        - correct: true
+        - {}
+        - {}
+        questions:
+        - {}
       courseC_multi_maze_debugging8_predict1_2018:
         answers:
         - {}
@@ -3069,6 +3098,14 @@ nn-NO:
         questions:
         - {}
       courseC_multi_maze_programming8_predict12022:
+        answers:
+        - {}
+        - correct: true
+        - {}
+        - {}
+        questions:
+        - {}
+      courseC_multi_maze_programming8_predict12022_2023:
         answers:
         - {}
         - correct: true
@@ -3124,6 +3161,14 @@ nn-NO:
         - {}
         questions:
         - {}
+      courseC_multi_starWars_predict12022_2023:
+        answers:
+        - {}
+        - {}
+        - correct: true
+        - {}
+        questions:
+        - {}
       courseC_multi_starWars_predict1_2018:
         answers:
         - {}
@@ -3165,6 +3210,14 @@ nn-NO:
         questions:
         - {}
       courseC_multi_starWars_predict22022:
+        answers:
+        - {}
+        - correct: true
+        - {}
+        - {}
+        questions:
+        - {}
+      courseC_multi_starWars_predict22022_2023:
         answers:
         - {}
         - correct: true
@@ -3258,6 +3311,15 @@ nn-NO:
         - {}
         questions:
         - {}
+      courseD_multi_artist_nestedLoops9_predict12022_2023:
+        answers:
+        - correct: true
+          text: A
+        - text: B
+        - text: C
+        - {}
+        questions:
+        - {}
       courseD_multi_artist_nestedLoops9_predict1_2018:
         answers:
         - correct: true
@@ -3303,6 +3365,14 @@ nn-NO:
         questions:
         - {}
       courseD_multi_bee_conditionals1_predict12022:
+        answers:
+        - {}
+        - correct: true
+        - {}
+        - {}
+        questions:
+        - {}
+      courseD_multi_bee_conditionals1_predict12022_2023:
         answers:
         - {}
         - correct: true
@@ -3374,6 +3444,14 @@ nn-NO:
         - {}
         questions:
         - {}
+      courseD_multi_bee_conditionals7_predict22022_2023:
+        answers:
+        - correct: true
+        - {}
+        - {}
+        - {}
+        questions:
+        - {}
       courseD_multi_bee_conditionals7_predict2_2018:
         answers:
         - correct: true
@@ -3415,6 +3493,14 @@ nn-NO:
         questions:
         - {}
       courseD_multi_bee_nestedLoops2_predict12022:
+        answers:
+        - {}
+        - {}
+        - correct: true
+        - {}
+        questions:
+        - {}
+      courseD_multi_bee_nestedLoops2_predict12022_2023:
         answers:
         - {}
         - {}
@@ -3464,6 +3550,15 @@ nn-NO:
         questions:
         - {}
       courseD_multi_bee_nestedLoops9_predict22022:
+        answers:
+        - text: '4'
+        - correct: true
+          text: '8'
+        - text: '10'
+        - text: '12'
+        questions:
+        - {}
+      courseD_multi_bee_nestedLoops9_predict22022_2023:
         answers:
         - text: '4'
         - correct: true
@@ -3532,6 +3627,14 @@ nn-NO:
         - {}
         questions:
         - {}
+      courseD_multi_farmer_condLoops9_predict12022_2023:
+        answers:
+        - {}
+        - {}
+        - correct: true
+        - {}
+        questions:
+        - {}
       courseD_multi_farmer_condLoops9_predict1_2018:
         answers:
         - {}
@@ -3588,6 +3691,14 @@ nn-NO:
         - {}
         questions:
         - {}
+      courseD_multi_farmer_while10_predict22022_2023:
+        answers:
+        - {}
+        - correct: true
+        - {}
+        - {}
+        questions:
+        - {}
       courseD_multi_farmer_while10_predict2_2018:
         answers:
         - {}
@@ -3629,6 +3740,14 @@ nn-NO:
         questions:
         - {}
       courseD_multi_farmer_while4_predict12022:
+        answers:
+        - {}
+        - {}
+        - correct: true
+        - {}
+        questions:
+        - {}
+      courseD_multi_farmer_while4_predict12022_2023:
         answers:
         - {}
         - {}
@@ -3684,6 +3803,14 @@ nn-NO:
         - {}
         questions:
         - {}
+      courseD_multi_maze_until10_predict22022_2023:
+        answers:
+        - correct: true
+        - {}
+        - {}
+        - {}
+        questions:
+        - {}
       courseD_multi_maze_until10_predict2_2018:
         answers:
         - correct: true
@@ -3725,6 +3852,14 @@ nn-NO:
         questions:
         - {}
       courseD_multi_maze_until2_predict12022:
+        answers:
+        - {}
+        - correct: true
+        - {}
+        - {}
+        questions:
+        - {}
+      courseD_multi_maze_until2_predict12022_2023:
         answers:
         - {}
         - correct: true
@@ -3804,6 +3939,14 @@ nn-NO:
         - {}
         questions:
         - {}
+      courseE_multi_farmer_functions11_predict2022_2023:
+        answers:
+        - {}
+        - {}
+        - correct: true
+        - {}
+        questions:
+        - {}
       courseE_multi_farmer_functions11_predict_2018:
         answers:
         - {}
@@ -3845,6 +3988,14 @@ nn-NO:
         questions:
         - {}
       courseE_prediction_artistFunction12022:
+        answers:
+        - {}
+        - {}
+        - {}
+        - correct: true
+        questions:
+        - {}
+      courseE_prediction_artistFunction12022_2023:
         answers:
         - {}
         - {}
@@ -3908,6 +4059,14 @@ nn-NO:
         - {}
         questions:
         - {}
+      courseE_swim_fish_behavior_predict12022_2023:
+        answers:
+        - {}
+        - {}
+        - correct: true
+        - {}
+        questions:
+        - {}
       courseE_swim_fish_behavior_predict1_2021:
         answers:
         - {}
@@ -3956,7 +4115,23 @@ nn-NO:
         - {}
         questions:
         - {}
+      courseF_events_predict_multi2022_2022_pilot_-2022-2_2023:
+        answers:
+        - {}
+        - {}
+        - correct: true
+        - {}
+        questions:
+        - {}
       courseF_groups_predict_multi_2022_pilot_-2022-2:
+        answers:
+        - correct: true
+        - {}
+        - {}
+        - {}
+        questions:
+        - {}
+      courseF_groups_predict_multi_2022_pilot_-2022-2_2023:
         answers:
         - correct: true
         - {}
@@ -3974,6 +4149,15 @@ nn-NO:
         questions:
         - {}
       courseF_labels_predict_multi2022_2022_pilot_-2022-2:
+        answers:
+        - {}
+        - {}
+        - {}
+        - correct: true
+        - {}
+        questions:
+        - {}
+      courseF_labels_predict_multi2022_2022_pilot_-2022-2_2023:
         answers:
         - {}
         - {}
@@ -4031,6 +4215,14 @@ nn-NO:
         questions:
         - {}
       courseF_multi_artist_variables3a_predict12022:
+        answers:
+        - correct: true
+        - {}
+        - {}
+        - {}
+        questions:
+        - {}
+      courseF_multi_artist_variables3a_predict12022_2023:
         answers:
         - correct: true
         - {}
@@ -4102,6 +4294,14 @@ nn-NO:
         - {}
         questions:
         - {}
+      courseF_multi_bee_for3_predict12022_2023:
+        answers:
+        - {}
+        - correct: true
+        - {}
+        - {}
+        questions:
+        - {}
       courseF_multi_bee_for3_predict1_2018:
         answers:
         - {}
@@ -4166,6 +4366,14 @@ nn-NO:
         - {}
         questions:
         - {}
+      courseF_sprites_predict_multi2022_2022_pilot_-2022-2_2023:
+        answers:
+        - {}
+        - correct: true
+        - {}
+        - {}
+        questions:
+        - {}
       courseF_variables2_predict2_multi2022_-2022-2:
         answers:
         - correct: true
@@ -4174,7 +4382,23 @@ nn-NO:
         - {}
         questions:
         - {}
+      courseF_variables2_predict2_multi2022_-2022-2_2023:
+        answers:
+        - correct: true
+        - {}
+        - {}
+        - {}
+        questions:
+        - {}
       courseF_variables2_predict_multi2022_2022_pilot_-2022-2:
+        answers:
+        - {}
+        - {}
+        - correct: true
+        - {}
+        questions:
+        - {}
+      courseF_variables2_predict_multi2022_2022_pilot_-2022-2_2023:
         answers:
         - {}
         - {}
@@ -4198,9 +4422,19 @@ nn-NO:
         - {}
         questions:
         - {}
+      courseF_variables_predict_multi2022_2022_pilot_-2022-2_2023:
+        answers:
+        - {}
+        - correct: true
+        - {}
+        - {}
+        questions:
+        - {}
       courseF_variables_stop:
         content1: forklaring her
       courseF_variables_stop2022_2022_pilot_-2022-2:
+        content1: forklaring her
+      courseF_variables_stop2022_2022_pilot_-2022-2_2023:
         content1: forklaring her
       coursee_prediction_artistfunction2:
         answers:
@@ -4211,6 +4445,14 @@ nn-NO:
         questions:
         - {}
       coursee_prediction_artistfunction22022:
+        answers:
+        - {}
+        - correct: true
+        - {}
+        - {}
+        questions:
+        - {}
+      coursee_prediction_artistfunction22022_2023:
         answers:
         - {}
         - correct: true
@@ -4250,6 +4492,41 @@ nn-NO:
         - {}
         questions:
         - {}
+      csc_animal_adaptations_predict:
+        answers:
+        - {}
+        - correct: true
+        - {}
+        - {}
+        questions:
+        - {}
+      csc_ecosystems_matching_cfu:
+        answers:
+        - {}
+        - {}
+        - {}
+        questions:
+        - {}
+        - {}
+        - {}
+      csc_ecosystems_matching_conditionals:
+        answers:
+        - {}
+        - {}
+        - {}
+        questions:
+        - {}
+        - {}
+        - {}
+      csc_ecosystems_matching_events:
+        answers:
+        - {}
+        - {}
+        questions:
+        - {}
+        - {}
+      csc_timecapsule_info_2023:
+        content1: forklaring her
       csd-post-survey-2017-levelgroup-2018-2nd-semester:
         title: CS Funns Slutt på Kursets Elevundersøkelse
       csd-post-survey-2017-q11_2018:
@@ -7400,17 +7677,23 @@ nn-NO:
         content1: forklaring her
       csf_be_a_super_digital_citizen2022:
         content1: forklaring her
+      csf_be_a_super_digital_citizen2022_2023:
+        content1: forklaring her
       csf_be_a_super_digital_citizen_2021:
         content1: forklaring her
       csf_password_power-up:
         content1: forklaring her
       csf_password_power-up2022:
         content1: forklaring her
+      csf_password_power-up2022_2023:
+        content1: forklaring her
       csf_password_power-up_2021:
         content1: forklaring her
       csf_putting_a_stop_to_online_meanness:
         content1: forklaring her
       csf_putting_a_stop_to_online_meanness2022:
+        content1: forklaring her
+      csf_putting_a_stop_to_online_meanness2022_2023:
         content1: forklaring her
       csf_putting_a_stop_to_online_meanness_2021:
         content1: forklaring her
@@ -8952,6 +9235,14 @@ nn-NO:
         questions:
         - {}
       grade2_multi_collector_A_predict12022:
+        answers:
+        - {}
+        - correct: true
+        - {}
+        - {}
+        questions:
+        - {}
+      grade2_multi_collector_A_predict12022_2023:
         answers:
         - {}
         - correct: true

@@ -1371,6 +1371,89 @@
         "Final Room Escape App": {
           "CODE": "代码"
         },
+        "GAN Guess Widget_ai23": {
+          "Click on the buttons below to build a guess for what follows the rule": "点击下面的按钮，猜测遵循规则的内容",
+          "Computer's Guess FOLLOWS Rule": "电脑猜测遵循规则",
+          "Computer's Guess does NOT follow the Rule": "计算机猜测不符合规则",
+          "Computer's Guess:": "电脑猜测：",
+          "Current Guess": "当前猜测",
+          "Previous Guesses": "之前的猜测",
+          "Submit Guess": "提交猜测"
+        },
+        "LLM - Eliza_ai23": {
+          "Talk to Eliza by entering text in the prompt box. When you are finished, type quit in the prompt.": "在提示框中输入文字，与 Eliza 交谈。完成后，在提示符中键入 quit。"
+        },
+        "LLM - Written Voice Simulator_ai23": {
+          "BTS: \"Dynamite\"": "防弹少年团：“炸药”",
+          "Back": "返回",
+          "Change Voice": "更改声音",
+          "Choose a voice to model": "选择要建模的声音",
+          "Choose the Save file you want to load from the dropdown below": "从下面的下拉列表中选择要加载的保存文件",
+          "Copy / Paste or type the words you want to create a model based on below": "复制/粘贴或键入要根据以下内容创建模型的单词",
+          "Create my own!": "自己创作！",
+          "Delete Text": "删除文本",
+          "Dr Seuss: Green Eggs and Ham": "苏斯博士：绿蛋和火腿",
+          "Generate!": "生成！",
+          "Give the voice a name": "给声音起个名字",
+          "Give your save file a name": "给你保存的文件起个名字",
+          "Load Save": "加载保存",
+          "Load this story": "加载这个故事",
+          "Maya Angelou: \"Caged Bird\"": "Maya Angelou：“笼中鸟”",
+          "Model This Voice!": "为这个声音建模！",
+          "Modeling Voice": "建模声音",
+          "Pharell: \"Happy\"": "法瑞尔：“快乐”",
+          "Sandra Cisneros: \"Abuelito Who\"": "桑德拉·西斯内罗斯：“Abuelito Who”",
+          "Save Text": "保存文本",
+          "Save!": "保存！"
+        },
+        "Neural Networks - Perceptron - Beta_ai23": {
+          "Choose one of the content creators below to generate recommendations for you. Clicking their name will show more information about them.Once you've selected someone, click the \"Show Recommendations\" button to see what your video feed!See Recommendations! ➡️Your RecommendationsThese are the videos you've been recommended based on who you selected in the last screen.Only 3 videos are shown at a time - use the Scroll buttons to see more. Use the buttons on the left to filter by certain categories.Example!Example!Example!⬆️ Scroll Up ⬆️⬇️ Scroll Down ⬇️⬅️ Select New Person": "选择以下内容创作者之一，为您生成推荐。点击他们的名字将显示有关他们的更多信息。选择某人后，单击 “显示推荐” 按钮以查看您的视频源！查看推荐！➡️ 你的推荐这些是根据你在上一个屏幕中选择的人选推荐的视频。一次只能显示 3 个视频——使用滚动按钮查看更多。使用左侧的按钮按特定类别进行筛选。示例！示例！示例！⬆️ 向上滚动 ⬆️⬇️ 向下滚动 ⬇️⬅️ 选择新人",
+          "Example!": "示例！",
+          "Let's Get Started! ➡️": "让我们开始吧！➡️",
+          "Once you've selected someone, click the \"Show Recommendations\" button to see what your video feed!": "选择某人后，点击 “显示推荐” 按钮即可查看您的视频源！",
+          "Only 3 videos are shown at a time - use the Scroll buttons to see more. ": "一次只能显示 3 个视频——使用滚动按钮查看更多视频。 ",
+          "See Recommendations! ➡️": "查看推荐！➡️",
+          "Select at least one person to use for recommendations to continue!": "请至少选择一个人作为推荐对象，然后继续！",
+          "Simply pick which content creators you want to follow and then see your video recommendations!": "只需选择您想关注的内容创作者，然后查看您的视频推荐即可！",
+          "These are the videos you've been recommended based on who you selected in the last screen.Only 3 videos are shown at a time - use the Scroll buttons to see more. Use the buttons on the left to filter by certain categories.Example!Example!Example!⬆️ Scroll Up ⬆️⬇️ Scroll Down ⬇️⬅️ Select New Person": "这些是根据你在上一个屏幕中选择的用户推荐的视频。一次只能显示 3 个视频——使用滚动按钮查看更多。使用左侧的按钮按特定类别进行筛选。示例！示例！示例！⬆️ 向上滚动 ⬆️⬇️ 向下滚动 ⬇️⬅️ 选择新人",
+          "Use the buttons on the left to filter by certain categories.": "使用左侧的按钮按特定类别进行筛选。",
+          "We've gathered all your favorite personalities to make videos that match your interests AND to help curate your video feed.": "我们收集了所有你最喜欢的个性来制作符合你兴趣的视频，并帮助你策划视频源。",
+          "WeTube is a new media website for all your favorite content creators. We've gathered all your favorite personalities to make videos that match your interests AND to help curate your video feed.Simply pick which content creators you want to follow and then see your video recommendations!Let's Get Started! ➡️Select at least one person to use for recommendations to continue!Choose one of the content creators below to generate recommendations for you. Clicking their name will show more information about them.Once you've selected someone, click the \"Show Recommendations\" button to see what your video feed!See Recommendations! ➡️Your RecommendationsThese are the videos you've been recommended based on who you selected in the last screen.Only 3 videos are shown at a time - use the Scroll buttons to see more. Use the buttons on the left to filter by certain categories.Example!Example!Example!⬆️ Scroll Up ⬆️⬇️ Scroll Down ⬇️⬅️ Select New Person": "WeTube 是一个面向所有你最喜欢的内容创作者的新媒体网站。我们收集了你最喜欢的所有人物来制作符合你兴趣的视频，并帮助你整理视频源。只需选择你想关注的内容创作者，然后查看你的视频推荐即可！让我们开始吧！➡️ 请至少选择一个人作为推荐对象，然后继续！选择以下内容创作者之一，为您生成推荐。点击他们的名字将显示有关他们的更多信息。选择某人后，单击 “显示推荐” 按钮以查看您的视频源！查看推荐！➡️ 你的推荐这些是根据你在上一个屏幕中选择的人选推荐的视频。一次只能显示 3 个视频——使用滚动按钮查看更多。使用左侧的按钮按特定类别进行筛选。示例！示例！示例！⬆️ 向上滚动 ⬆️⬇️ 向下滚动 ⬇️⬅️ 选择新人",
+          "Your Recommendations": "你的建议",
+          "⬅️ Select New Person": "⬅️ 选择 “新人”",
+          "⬆️ Scroll Up ⬆️": "⬆️ 向上滚动 ⬆️",
+          "⬇️ Scroll Down ⬇️": "⬇️ 向下滚动 ⬇️"
+        },
+        "Neural Networks - Perceptron - Full_ai23": {
+          "0 means their opinion isn't included in your recommendations at all": "0 表示他们的意见根本没有包含在你的推荐中",
+          "10 means they have a huge influence on the recommendations you receive": "10 表示他们会对你收到的推荐产生巨大影响",
+          "Choose one of the content creators below, then use the slider to adjust how much you want them to influence your recommendations!0 means their opinion isn't included in your recommendations at all10 means they have a huge influence on the recommendations you receivefeatureLabelSee Recommendations! ➡️featureValueYour RecommendationsThese are the videos you've been recommended based on how you adjusted the weights on the last screen. Only 3 videos are shown at a time - use the Scroll buttons to see more. Use the buttons on the left to filter by certain videosExample!Example!Example!⬆️ Scroll Up ⬆️⬇️ Scroll Down ⬇️⬅️ Select New Weights": "在下面选择一位内容创作者，然后使用滑块调整你希望他们对你的推荐产生多大的影响！0 表示他们的意见根本不包含在你的推荐中 10 表示他们会对你收到的推荐产生巨大影响 FeatureLabelSee 推荐！➡️ FeatureValueYour 的推荐这些视频是根据你在最后一个屏幕上调整权重的方式推荐的。一次只能显示 3 个视频——使用滚动按钮查看更多视频。使用左侧的按钮按某些 VideoExample 进行筛选！示例！示例！⬆️ 向上滚动 ⬆️⬇️ 向下滚动 ⬇️⬅️ 选择新的权重",
+          "Example!": "示例！",
+          "Let's Get Started! ➡️": "让我们开始吧！➡️",
+          "Only 3 videos are shown at a time - use the Scroll buttons to see more. ": "一次只能显示 3 个视频——使用滚动按钮查看更多视频。 ",
+          "See Recommendations! ➡️": "查看推荐！➡️",
+          "Select at least one person to use for recommendations to continue!": "请至少选择一个人作为推荐对象，然后继续！",
+          "Simply pick which content creators you want to follow to see your recommendations!": "只需选择您想关注的内容创作者即可查看您的推荐！",
+          "These are the videos you've been recommended based on how you adjusted the weights on the last screen. Only 3 videos are shown at a time - use the Scroll buttons to see more. Use the buttons on the left to filter by certain videosExample!Example!Example!⬆️ Scroll Up ⬆️⬇️ Scroll Down ⬇️⬅️ Select New Weights": "这些视频是根据你在最后一个屏幕上调整权重的方式推荐的。一次只能显示 3 个视频——使用滚动按钮查看更多视频。使用左侧的按钮按某些 VideoExample 进行筛选！示例！示例！⬆️ 向上滚动 ⬆️⬇️ 向下滚动 ⬇️⬅️ 选择新的权重",
+          "Use the buttons on the left to filter by certain videos": "使用左侧的按钮按某些视频进行筛选",
+          "We've gathered all your favorite personalities to make videos that match your interests.": "我们收集了所有你最喜欢的个性来制作符合你兴趣的视频。",
+          "WeTube Video Recommendations": "WeTube 视频推荐",
+          "WeTube is a new media website for all your favorite content creators. We've gathered all your favorite personalities to make videos that match your interests.Simply pick which content creators you want to follow to see your recommendations!Let's Get Started! ➡️Select at least one person to use for recommendations to continue!Choose one of the content creators below, then use the slider to adjust how much you want them to influence your recommendations!0 means their opinion isn't included in your recommendations at all10 means they have a huge influence on the recommendations you receivefeatureLabelSee Recommendations! ➡️featureValueYour RecommendationsThese are the videos you've been recommended based on how you adjusted the weights on the last screen. Only 3 videos are shown at a time - use the Scroll buttons to see more. Use the buttons on the left to filter by certain videosExample!Example!Example!⬆️ Scroll Up ⬆️⬇️ Scroll Down ⬇️⬅️ Select New Weights": "WeTube 是一个面向所有你最喜欢的内容创作者的新媒体网站。我们收集了所有你最喜欢的个性来制作符合你兴趣的视频。只需选择你想关注的内容创作者即可查看你的推荐！让我们开始吧！➡️ 请至少选择一个人作为推荐对象，然后继续！在下面选择一位内容创作者，然后使用滑块调整你希望他们对你的推荐产生多大的影响！0 表示他们的意见根本不包含在你的推荐中 10 表示他们会对你收到的推荐产生巨大影响 FeatureLabelSee 推荐！➡️ FeatureValueYour 的推荐这些视频是根据你在最后一个屏幕上调整权重的方式推荐的。一次只能显示 3 个视频——使用滚动按钮查看更多视频。使用左侧的按钮按某些 VideoExample 进行筛选！示例！示例！⬆️ 向上滚动 ⬆️⬇️ 向下滚动 ⬇️⬅️ 选择新的权重",
+          "Your Recommendations": "你的建议",
+          "featureLabel": "FeatureLabel",
+          "featureValue": "功能值",
+          "⬅️ Select New Weights": "⬅️ 选择新权重",
+          "⬆️ Scroll Up ⬆️": "⬆️ 向上滚动 ⬆️",
+          "⬇️ Scroll Down ⬇️": "⬇️ 向下滚动 ⬇️"
+        },
+        "Noisy Image Widget_ai23": {
+          "0%": "0%",
+          "Be patient! Noisy image loading!": "耐心点！加载图像时噪音很大！",
+          "Move the slider to add more or less generations of noise to the image": "移动滑块可向图像添加或多或少的噪点",
+          "New Image": "新图片",
+          "Noise Generations:": "噪音产生：",
+          "Noise Generations: ": "噪音产生： "
+        },
         "Room Escape Workshop - 1": {
           "CODE": "代码"
         },
@@ -1400,6 +1483,11 @@
         },
         "Room Escape Workshop - 9-2": {
           "CODE": "代码"
+        },
+        "U9L5 Cropping Widget_ai2023": {
+          "Crop": "作物",
+          "Image Select": "图片选择",
+          "Reset": "重置"
         },
         "allthethings design mode elements": {
           "text": "文本"

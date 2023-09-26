@@ -275,6 +275,9 @@
         "CourseD_Dance_2020_01_2021": {
           "dance_callout_01": "Chọn loại vũ công ở đây."
         },
+        "CourseD_Dance_2020_01_2023": {
+          "dance_callout_01": "Chọn loại vũ công ở đây."
+        },
         "CourseD_Dance_2020_02": {
           "arrow_buttons": "Nhấn các nút mũi tên để điều khiển vũ công của bạn.",
           "dance_callout_11_a": "Thêm khối này vào chương trình của bạn."
@@ -287,6 +290,10 @@
           "arrow_buttons": "Nhấn các nút mũi tên để điều khiển vũ công của bạn.",
           "dance_callout_11_a": "Thêm khối này vào chương trình của bạn."
         },
+        "CourseD_Dance_2020_02_2023": {
+          "arrow_buttons": "Nhấn các nút mũi tên để điều khiển vũ công của bạn.",
+          "dance_callout_11_a": "Thêm khối này vào chương trình của bạn."
+        },
         "CourseD_Dance_2020_04": {
           "dance_callout_02": "Thêm khối này vào chương trình của bạn!"
         },
@@ -294,6 +301,9 @@
           "dance_callout_02": "Thêm khối này vào chương trình của bạn!"
         },
         "CourseD_Dance_2020_04_2021": {
+          "dance_callout_02": "Thêm khối này vào chương trình của bạn!"
+        },
+        "CourseD_Dance_2020_04_2023": {
           "dance_callout_02": "Thêm khối này vào chương trình của bạn!"
         },
         "CourseD_Dance_2020_05": {
@@ -305,6 +315,9 @@
         "CourseD_Dance_2020_05_2021": {
           "dance_callout_05": "Thêm một sự kiện mới vào chương trình của bạn."
         },
+        "CourseD_Dance_2020_05_2023": {
+          "dance_callout_05": "Thêm một sự kiện mới vào chương trình của bạn."
+        },
         "CourseD_Dance_2020_06": {
           "dance_party_11_5_groups": "Khối mới!"
         },
@@ -312,6 +325,9 @@
           "dance_party_11_5_groups": "Khối mới!"
         },
         "CourseD_Dance_2020_06_2021": {
+          "dance_party_11_5_groups": "Khối mới!"
+        },
+        "CourseD_Dance_2020_06_2023": {
           "dance_party_11_5_groups": "Khối mới!"
         },
         "CourseD_Dance_2020_07": {
@@ -323,6 +339,9 @@
         "CourseD_Dance_2020_07_2021": {
           "setprop_hint": "Khối mới!"
         },
+        "CourseD_Dance_2020_07_2023": {
+          "setprop_hint": "Khối mới!"
+        },
         "CourseD_Dance_2020_09": {
           "new_block_3": "Khối mới!",
           "new_block_4": "Khối mới!"
@@ -332,6 +351,10 @@
           "new_block_4": "Khối mới!"
         },
         "CourseD_Dance_2020_09_2021": {
+          "new_block_3": "Khối mới!",
+          "new_block_4": "Khối mới!"
+        },
+        "CourseD_Dance_2020_09_2023": {
           "new_block_3": "Khối mới!",
           "new_block_4": "Khối mới!"
         },
@@ -362,10 +385,17 @@
           "minitoolbox": "Nhấn vào đây để mở rộng khối.",
           "pointerlocation": "Kéo khối nội dung vào đây."
         },
+        "CourseF_outbreak2_2023": {
+          "minitoolbox": "Nhấn vào đây để mở rộng khối.",
+          "pointerlocation": "Kéo khối nội dung vào đây."
+        },
         "CourseF_outbreak7": {
           "costumes_callout": "Nhấn để tạo trang phục mới"
         },
         "CourseF_outbreak7_-2022-2": {
+          "costumes_tab": "Nhấp chuột vào đây để thêm trang phục vào dự án."
+        },
+        "CourseF_outbreak7_2023": {
           "costumes_tab": "Nhấp chuột vào đây để thêm trang phục vào dự án."
         },
         "Dance_2019_01": {
@@ -422,6 +452,9 @@
         "Fish Tank 3-validated_2021": {
           "spritelab_comment": "Hãy dùng khối này để ghi lại lưu ý cho chính bạn hoặc cho giáo viên của bạn về cách hoạt động của mã lệnh."
         },
+        "Fish Tank 3-validated_2023": {
+          "spritelab_comment": "Hãy dùng khối này để ghi lại lưu ý cho chính bạn hoặc cho giáo viên của bạn về cách hoạt động của mã lệnh."
+        },
         "Function intro Ryan": {
           "Function_intro_Ryan_1": "Hướng dẫn nhỏ này yêu cầu máy tính chạy một tập hợp mã lệnh LỚN có cùng tên trong không gian làm việc."
         },
@@ -435,6 +468,9 @@
           "Function_intro_Ryan_1": "Hướng dẫn nhỏ này yêu cầu máy tính chạy một tập hợp mã lệnh LỚN có cùng tên trong không gian làm việc."
         },
         "Function intro Ryan_2021": {
+          "Function_intro_Ryan_1": "Hướng dẫn nhỏ này yêu cầu máy tính chạy một tập hợp mã lệnh LỚN có cùng tên trong không gian làm việc."
+        },
+        "Function intro Ryan_2023": {
           "Function_intro_Ryan_1": "Hướng dẫn nhỏ này yêu cầu máy tính chạy một tập hợp mã lệnh LỚN có cùng tên trong không gian làm việc."
         },
         "Geometric Sun": {
@@ -477,6 +513,9 @@
         "MC_HOC_2017_03_Cole_2021": {
           "MC_HOC_2017_03_Cole_1": "Đây là vòng lặp 'lặp lại'!  Đưa nó vào khu vực làm việc và thêm mã lệnh mà bạn muốn thực hiện nhiều lần."
         },
+        "MC_HOC_2017_03_Cole_2023": {
+          "MC_HOC_2017_03_Cole_1": "Đây là vòng lặp 'lặp lại'!  Đưa nó vào khu vực làm việc và thêm mã lệnh mà bạn muốn thực hiện nhiều lần."
+        },
         "MC_HOC_2017_04_Cole": {
           "MC_HOC_2017_04_Cole_a": "Đặc vụ có thể đi trên dung nham, nhưng Steve và Alex thì không thể!"
         },
@@ -490,6 +529,9 @@
           "MC_HOC_2017_04_Cole_a": "Đặc vụ có thể đi trên dung nham, nhưng Steve và Alex thì không thể!"
         },
         "MC_HOC_2017_04_Cole_2021": {
+          "MC_HOC_2017_04_Cole_a": "Đặc vụ có thể đi trên dung nham, nhưng Steve và Alex thì không thể!"
+        },
+        "MC_HOC_2017_04_Cole_2023": {
           "MC_HOC_2017_04_Cole_a": "Đặc vụ có thể đi trên dung nham, nhưng Steve và Alex thì không thể!"
         },
         "MC_HOC_2017_06_Cole": {
@@ -507,6 +549,9 @@
         "MC_HOC_2017_06_Cole_2021": {
           "MC_HOC_2017_06_Cole_1": "Bạn không thể ném các khối lệnh đi, nhưng bạn có thể chỉnh sửa chúng!"
         },
+        "MC_HOC_2017_06_Cole_2023": {
+          "MC_HOC_2017_06_Cole_1": "Bạn không thể ném các khối lệnh đi, nhưng bạn có thể chỉnh sửa chúng!"
+        },
         "MC_HOC_2017_Ali": {
           "MC_HOC_2017_08_RY_1": "Đặc vụ có thể đi trên dung nham, nhưng Steve và Alex thì không thể!"
         },
@@ -520,6 +565,9 @@
           "MC_HOC_2017_08_RY_1": "Đặc vụ có thể đi trên dung nham, nhưng Steve và Alex thì không thể!"
         },
         "MC_HOC_2017_Ali_2021": {
+          "MC_HOC_2017_08_RY_1": "Đặc vụ có thể đi trên dung nham, nhưng Steve và Alex thì không thể!"
+        },
+        "MC_HOC_2017_Ali_2023": {
           "MC_HOC_2017_08_RY_1": "Đặc vụ có thể đi trên dung nham, nhưng Steve và Alex thì không thể!"
         },
         "NEW Course 4 Artist Functions 7": {
@@ -580,6 +628,9 @@
         "Overworld Chop Trees_2021": {
           "craft_callout_preplaced": "Chúng tôi đã đặt một số khối gỗ ở đây để giúp bạn bắt đầu"
         },
+        "Overworld Chop Trees_2023": {
+          "craft_callout_preplaced": "Chúng tôi đã đặt một số khối gỗ ở đây để giúp bạn bắt đầu"
+        },
         "Overworld House Frame Chosen": {
           "craft_callout_preplaced_house": "Mã này sẽ bắt đầu xây dựng ngôi nhà của bạn. Bạn có hoàn thành được không?"
         },
@@ -593,6 +644,9 @@
           "craft_callout_preplaced_house": "Mã này sẽ bắt đầu xây dựng ngôi nhà của bạn. Bạn có hoàn thành được không?"
         },
         "Overworld House Frame Chosen_2021": {
+          "craft_callout_preplaced_house": "Mã này sẽ bắt đầu xây dựng ngôi nhà của bạn. Bạn có hoàn thành được không?"
+        },
+        "Overworld House Frame Chosen_2023": {
           "craft_callout_preplaced_house": "Mã này sẽ bắt đầu xây dựng ngôi nhà của bạn. Bạn có hoàn thành được không?"
         },
         "Overworld Move to Sheep": {
@@ -615,6 +669,10 @@
           "craft_drag_block_callout": "Kéo một khối “move forward” (tiến lên) và gắn bên dưới khối kia",
           "craft_run_button_callout": "Nhấn \"Run\" để thử chương trình của bạn"
         },
+        "Overworld Move to Sheep_2023": {
+          "craft_drag_block_callout": "Kéo một khối “move forward” (tiến lên) và gắn bên dưới khối kia",
+          "craft_run_button_callout": "Nhấn \"Run\" để thử chương trình của bạn"
+        },
         "Overworld Place Wall": {
           "craft_inside_repeat": "Lặp lại các hành động bằng cách đặt các khối gỗ vào đây"
         },
@@ -628,6 +686,9 @@
           "craft_inside_repeat": "Lặp lại các hành động bằng cách đặt các khối gỗ vào đây"
         },
         "Overworld Place Wall_2021": {
+          "craft_inside_repeat": "Lặp lại các hành động bằng cách đặt các khối gỗ vào đây"
+        },
+        "Overworld Place Wall_2023": {
           "craft_inside_repeat": "Lặp lại các hành động bằng cách đặt các khối gỗ vào đây"
         },
         "Underground Avoiding Lava": {
@@ -645,6 +706,9 @@
         "Underground Avoiding Lava_2021": {
           "craft_callout_moveforward": "Mã này sẽ kiểm tra xem có dung nham hay không, bạn có thể thêm một lệnh để di chuyển về phía trước không?"
         },
+        "Underground Avoiding Lava_2023": {
+          "craft_callout_moveforward": "Mã này sẽ kiểm tra xem có dung nham hay không, bạn có thể thêm một lệnh để di chuyển về phía trước không?"
+        },
         "Underground Iron": {
           "craft_what_is_iron": "Hãy đào khối sắt này!"
         },
@@ -660,6 +724,9 @@
         "Underground Iron_2021": {
           "craft_what_is_iron": "Hãy đào khối sắt này!"
         },
+        "Underground Iron_2023": {
+          "craft_what_is_iron": "Hãy đào khối sắt này!"
+        },
         "Virtual Pet 2_-2022-2": {
           "vp_costumes": "Hãy nhấp chuột vào đây để thêm trang phục mới vào dự án của bạn!"
         },
@@ -672,10 +739,16 @@
         "Virtual Pet 2_2021": {
           "vp_costumes": "Hãy nhấp chuột vào đây để thêm trang phục mới vào dự án của bạn!"
         },
+        "Virtual Pet 2_2023": {
+          "vp_costumes": "Hãy nhấp chuột vào đây để thêm trang phục mới vào dự án của bạn!"
+        },
         "Virtual Pet 6_-2022-2": {
           "vp_costumes": "Hãy nhấp chuột vào đây để thêm trang phục mới vào dự án của bạn!"
         },
         "Virtual Pet 6_2021": {
+          "vp_costumes": "Hãy nhấp chuột vào đây để thêm trang phục mới vào dự án của bạn!"
+        },
+        "Virtual Pet 6_2023": {
           "vp_costumes": "Hãy nhấp chuột vào đây để thêm trang phục mới vào dự án của bạn!"
         },
         "behaviors 1": {
@@ -714,10 +787,16 @@
         "courseA_EOC_playlab_animals2022": {
           "question_mark": "?"
         },
+        "courseA_EOC_playlab_animals_2023": {
+          "question_mark": "?"
+        },
         "courseA_EOC_playlab_fantasy": {
           "question_mark": "?"
         },
         "courseA_EOC_playlab_fantasy2022": {
+          "question_mark": "?"
+        },
+        "courseA_EOC_playlab_fantasy_2023": {
           "question_mark": "?"
         },
         "courseA_EOC_playlab_people": {
@@ -726,10 +805,16 @@
         "courseA_EOC_playlab_people2022": {
           "question_mark": "?"
         },
+        "courseA_EOC_playlab_people_2023": {
+          "question_mark": "?"
+        },
         "courseA_artist_loops4": {
           "courseA_artist_loops4_1": "Con số này cho bạn biết có bao nhiêu khối bạn có thể sử dụng trong câu đố này."
         },
         "courseA_artist_loops42022": {
+          "courseA_artist_loops4_1": "Con số này cho bạn biết có bao nhiêu khối bạn có thể sử dụng trong câu đố này."
+        },
+        "courseA_artist_loops42022_2023": {
           "courseA_artist_loops4_1": "Con số này cho bạn biết có bao nhiêu khối bạn có thể sử dụng trong câu đố này."
         },
         "courseA_artist_loops4_2018": {
@@ -750,6 +835,9 @@
         "courseA_artist_loops72022": {
           "courseA_artist_loops7_1": "Con số này có nghĩa là chỉ được dùng một khối loại này trong câu trả lời cuối cùng."
         },
+        "courseA_artist_loops72022_2023": {
+          "courseA_artist_loops7_1": "Con số này có nghĩa là chỉ được dùng một khối loại này trong câu trả lời cuối cùng."
+        },
         "courseA_artist_loops7_2018": {
           "courseA_artist_loops7_1": "Con số này có nghĩa là chỉ được dùng một khối loại này trong câu trả lời cuối cùng."
         },
@@ -766,6 +854,9 @@
           "courseA_artist_loops8_1": "Bạn có biết rằng bạn có thể vẽ lại đè lên một đường bất cứ khi nào bạn cần không?"
         },
         "courseA_artist_loops82022": {
+          "courseA_artist_loops8_1": "Bạn có biết rằng bạn có thể vẽ lại đè lên một đường bất cứ khi nào bạn cần không?"
+        },
+        "courseA_artist_loops82022_2023": {
           "courseA_artist_loops8_1": "Bạn có biết rằng bạn có thể vẽ lại đè lên một đường bất cứ khi nào bạn cần không?"
         },
         "courseA_artist_loops8_2018": {
@@ -792,6 +883,9 @@
         "courseA_collector_loops1_2021": {
           "courseA_collector_loops1_1": "Hãy dùng khối này để lấy báu vật."
         },
+        "courseA_collector_loops1_2023": {
+          "courseA_collector_loops1_1": "Hãy dùng khối này để lấy báu vật."
+        },
         "courseA_collector_loops3": {
           "gradek_adventurer_loops2_1": "Con số này cho bạn biết có bao nhiêu khối bạn có thể sử dụng trong câu đố này."
         },
@@ -810,6 +904,9 @@
         "courseA_collector_loops3_2021": {
           "gradek_adventurer_loops2_1": "Con số này cho bạn biết có bao nhiêu khối bạn có thể sử dụng trong câu đố này."
         },
+        "courseA_collector_loops3_2023": {
+          "gradek_adventurer_loops2_1": "Con số này cho bạn biết có bao nhiêu khối bạn có thể sử dụng trong câu đố này."
+        },
         "courseA_maze_ramp22022": {
           "courseC_maze_programming2_1": "Đây là hộp công cụ chứa các khối dùng để viết chương trình."
         },
@@ -820,6 +917,9 @@
           "courseC_maze_programming2_1": "Đây là hộp công cụ chứa các khối dùng để viết chương trình."
         },
         "courseA_maze_ramp2_2021": {
+          "courseC_maze_programming2_1": "Đây là hộp công cụ chứa các khối dùng để viết chương trình."
+        },
+        "courseA_maze_ramp2_2023": {
           "courseC_maze_programming2_1": "Đây là hộp công cụ chứa các khối dùng để viết chương trình."
         },
         "courseA_maze_ramp3a_2018": {
@@ -843,10 +943,16 @@
         "courseA_maze_seq1_2021": {
           "courseA_maze_seq1_1": "Hãy nhấp chuột vào bóng đèn khi bạn cần gợi ý nhé!"
         },
+        "courseA_maze_seq1_2023": {
+          "courseA_maze_seq1_1": "Hãy nhấp chuột vào bóng đèn khi bạn cần gợi ý nhé!"
+        },
         "courseA_playLab_events4": {
           "courseA_playlab_events4_callout1": "Đây là chú thích"
         },
         "courseA_playLab_events42022": {
+          "courseA_playlab_events4_callout1": "Đây là chú thích"
+        },
+        "courseA_playLab_events42022_2023": {
           "courseA_playlab_events4_callout1": "Đây là chú thích"
         },
         "courseA_playLab_events4_2018": {
@@ -867,6 +973,9 @@
         "courseA_playLab_events52022": {
           "courseA_playLab_events5_1": "Nhấp chuột vào đây để thay đổi hướng của mũi tên sự kiện."
         },
+        "courseA_playLab_events52022_2023": {
+          "courseA_playLab_events5_1": "Nhấp chuột vào đây để thay đổi hướng của mũi tên sự kiện."
+        },
         "courseA_playLab_events5_2018": {
           "courseA_playLab_events5_1": "Nhấp chuột vào đây để thay đổi hướng của mũi tên sự kiện."
         },
@@ -885,6 +994,9 @@
         "courseA_playLab_events62022": {
           "courseA_playLab_events6_1": "Cho phép bạn chọn một âm thanh ngẫu nhiên."
         },
+        "courseA_playLab_events62022_2023": {
+          "courseA_playLab_events6_1": "Cho phép bạn chọn một âm thanh ngẫu nhiên."
+        },
         "courseA_playLab_events6_2018": {
           "courseA_playLab_events6_1": "Cho phép bạn chọn một âm thanh ngẫu nhiên."
         },
@@ -900,6 +1012,9 @@
         "courseB_Scrat_ramp12022": {
           "grade2_CaringForNewPet_0_1": "Sau khi đã ghép các khối vào với nhau, ấn \"Chạy\" để bắt đầu chương trình."
         },
+        "courseB_Scrat_ramp12022_2023": {
+          "grade2_CaringForNewPet_0_1": "Sau khi đã ghép các khối vào với nhau, ấn \"Chạy\" để bắt đầu chương trình."
+        },
         "courseB_Scrat_ramp1_2018": {
           "grade2_CaringForNewPet_0_1": "Sau khi đã ghép các khối vào với nhau, ấn \"Chạy\" để bắt đầu chương trình."
         },
@@ -913,6 +1028,9 @@
           "grade2_CaringForNewPet_0_1": "Sau khi đã ghép các khối vào với nhau, ấn \"Chạy\" để bắt đầu chương trình."
         },
         "courseB_Scrat_ramp3a2022": {
+          "courseC_maze_programming2_1": "Đây là hộp công cụ chứa các khối dùng để viết chương trình."
+        },
+        "courseB_Scrat_ramp3a2022_2023": {
           "courseC_maze_programming2_1": "Đây là hộp công cụ chứa các khối dùng để viết chương trình."
         },
         "courseB_Scrat_ramp3a_2019": {
@@ -942,6 +1060,9 @@
         "courseB_artist_loops3_2021": {
           "courseB_artist_loops3_1": "Trong hộp công cụ chỉ có một khối như vậy. Bạn sẽ dùng khối đó như thế nào?"
         },
+        "courseB_artist_loops3_2023": {
+          "courseB_artist_loops3_1": "Trong hộp công cụ chỉ có một khối như vậy. Bạn sẽ dùng khối đó như thế nào?"
+        },
         "courseB_collector_loops12022": {
           "courseB_collector_loops1_1": "Hãy dùng khối này để lấy báu vật."
         },
@@ -955,6 +1076,9 @@
           "courseB_collector_loops1_1": "Hãy dùng khối này để lấy báu vật."
         },
         "courseB_collector_loops1_2021": {
+          "courseB_collector_loops1_1": "Hãy dùng khối này để lấy báu vật."
+        },
+        "courseB_collector_loops1_2023": {
           "courseB_collector_loops1_1": "Hãy dùng khối này để lấy báu vật."
         },
         "courseB_maze_seq1": {
@@ -975,6 +1099,9 @@
         "courseB_maze_seq1_2021": {
           "courseB_maze_seq1": "जेव्हा तुम्हाला हिंटची गरज असेल तेव्हा लाईटबल्बला क्लिक करा!  "
         },
+        "courseB_maze_seq1_2023": {
+          "courseB_maze_seq1": "Hãy nhấp chuột vào bóng đèn khi bạn cần gợi ý nhé!"
+        },
         "courseB_playlab_events6": {
           "courseB_playlab_events6_a": "Hãy dùng mũi tên thả xuống màu xanh lá để đổi hướng."
         },
@@ -993,6 +1120,9 @@
         "courseB_playlab_events6_2021": {
           "courseB_playlab_events6_a": "Hãy dùng mũi tên thả xuống màu xanh lá để đổi hướng."
         },
+        "courseB_playlab_events6_2023": {
+          "courseB_playlab_events6_a": "Hãy dùng mũi tên thả xuống màu xanh lá để đổi hướng."
+        },
         "courseC19_playLab_EOC3": {
           "courseE_playLab_scaffold3_1": "Hãy đưa diễn viên đến vị trí lá cờ này để chuyển sang cấp độ tiếp theo."
         },
@@ -1003,6 +1133,9 @@
           "courseE_playLab_scaffold3_1": "Hãy đưa diễn viên đến vị trí lá cờ này để chuyển sang cấp độ tiếp theo."
         },
         "courseC19_playLab_EOC3_2021": {
+          "courseE_playLab_scaffold3_1": "Hãy đưa diễn viên đến vị trí lá cờ này để chuyển sang cấp độ tiếp theo."
+        },
+        "courseC19_playLab_EOC3_2023": {
           "courseE_playLab_scaffold3_1": "Hãy đưa diễn viên đến vị trí lá cờ này để chuyển sang cấp độ tiếp theo."
         },
         "courseC_PlayLab_events8": {
@@ -1023,6 +1156,9 @@
         "courseC_PlayLab_events8_2021": {
           "courseC_PlayLab_events8_callout1": "Hãy dùng khối này khi Waddles và Chomp chạm vào nhau!"
         },
+        "courseC_PlayLab_events8_2023": {
+          "courseC_PlayLab_events8_callout1": "Hãy dùng khối này khi Waddles và Chomp chạm vào nhau!"
+        },
         "courseC_PlayLab_events_challenge1": {
           "courseC_PlayLab_events_challenge1_1": "Khối này giúp bạn di chuyển các diễn viên đến các vị trí khác nhau trong không gian chơi."
         },
@@ -1041,7 +1177,13 @@
         "courseC_PlayLab_events_challenge1_2021": {
           "courseC_PlayLab_events_challenge1_1": "Khối này giúp bạn di chuyển các diễn viên đến các vị trí khác nhau trong không gian chơi."
         },
+        "courseC_PlayLab_events_challenge1_2023": {
+          "courseC_PlayLab_events_challenge1_1": "Khối này giúp bạn di chuyển các diễn viên đến các vị trí khác nhau trong không gian chơi."
+        },
         "courseC_PlayLab_events_lesson_extras": {
+          "courseC_PlayLab_events_challenge1_1": "Khối này giúp bạn di chuyển các diễn viên đến các vị trí khác nhau trong không gian chơi."
+        },
+        "courseC_PlayLab_events_lesson_extras_2023": {
           "courseC_PlayLab_events_challenge1_1": "Khối này giúp bạn di chuyển các diễn viên đến các vị trí khác nhau trong không gian chơi."
         },
         "courseC_artist_loops1a2022": {
@@ -1056,6 +1198,9 @@
         "courseC_artist_loops1a_2021": {
           "jumpto_callout": "Khối này rất quan trọng đối với dự án này. Nhớ sử dụng nhé!"
         },
+        "courseC_artist_loops1a_2023": {
+          "jumpto_callout": "Khối này rất quan trọng đối với dự án này. Nhớ sử dụng nhé!"
+        },
         "courseC_artist_loops1b2022": {
           "sticker2": "Thêm khối này vào giữa chương trình của bạn."
         },
@@ -1068,10 +1213,16 @@
         "courseC_artist_loops1b_2021": {
           "sticker2": "Thêm khối này vào giữa chương trình của bạn."
         },
+        "courseC_artist_loops1b_2023": {
+          "sticker2": "Thêm khối này vào giữa chương trình của bạn."
+        },
         "courseC_artist_prog22022": {
           "slider": "Ở đây, bạn có thể cho chương trình chậm đi."
         },
         "courseC_artist_prog2_2021": {
+          "slider": "Ở đây, bạn có thể cho chương trình chậm đi."
+        },
+        "courseC_artist_prog2_2023": {
           "slider": "Ở đây, bạn có thể cho chương trình chậm đi."
         },
         "courseC_collector_prog12022": {
@@ -1087,6 +1238,9 @@
           "courseC_collector_prog1_1": "Bạn có thấy một số khối mới trong hộp công cụ không? Đừng lo lắng, chúng tôi sẽ hướng dẫn bạn cách sử dụng các khối này trong một bài học khác."
         },
         "courseC_collector_prog1_2021": {
+          "courseC_collector_prog1_1": "Bạn có thấy một số khối mới trong hộp công cụ không? Đừng lo lắng, chúng tôi sẽ hướng dẫn bạn cách sử dụng các khối này trong một bài học khác."
+        },
+        "courseC_collector_prog1_2023": {
           "courseC_collector_prog1_1": "Bạn có thấy một số khối mới trong hộp công cụ không? Đừng lo lắng, chúng tôi sẽ hướng dẫn bạn cách sử dụng các khối này trong một bài học khác."
         },
         "courseC_collector_prog7": {
@@ -1107,6 +1261,9 @@
         "courseC_collector_prog7_2021": {
           "courseC_collector_prog7_1": "Bạn có thể lấy thêm khối từ hộp công cụ nếu cần đấy!"
         },
+        "courseC_collector_prog7_2023": {
+          "courseC_collector_prog7_1": "Bạn có thể lấy thêm khối từ hộp công cụ nếu cần đấy!"
+        },
         "courseC_harvester_loops1": {
           "courseC_harvester_loops1_callout1": "Số bốn trên bí ngô cho bạn biết rằng có bốn bí ngô ở đó để nhặt."
         },
@@ -1125,6 +1282,9 @@
         "courseC_harvester_loops1_2021": {
           "courseC_harvester_loops1_callout1": "Số bốn trên bí ngô cho bạn biết rằng có bốn bí ngô ở đó để nhặt."
         },
+        "courseC_harvester_loops1_2023": {
+          "courseC_harvester_loops1_callout1": "Số bốn trên bí ngô cho bạn biết rằng có bốn bí ngô ở đó để nhặt."
+        },
         "courseC_maze_debugging52022": {
           "courseC_maze_debugging5_1": "Các khối này đã bị khóa và không thể xóa được!"
         },
@@ -1137,6 +1297,9 @@
         "courseC_maze_debugging5_2021": {
           "courseC_maze_debugging5_1": "Các khối này đã bị khóa và không thể xóa được!"
         },
+        "courseC_maze_debugging5_2023": {
+          "courseC_maze_debugging5_1": "Các khối này đã bị khóa và không thể xóa được!"
+        },
         "courseC_maze_debugging92022": {
           "courseC_maze_debugging9_2019_1": "Kéo các khối từ hộp công cụ vào không gian làm việc của bạn."
         },
@@ -1147,6 +1310,9 @@
           "courseC_maze_debugging9_2019_1": "Kéo các khối từ hộp công cụ vào không gian làm việc của bạn."
         },
         "courseC_maze_debugging9_2021": {
+          "courseC_maze_debugging9_2019_1": "Kéo các khối từ hộp công cụ vào không gian làm việc của bạn."
+        },
+        "courseC_maze_debugging9_2023": {
           "courseC_maze_debugging9_2019_1": "Kéo các khối từ hộp công cụ vào không gian làm việc của bạn."
         },
         "courseC_maze_debugging9_copy_2020": {
@@ -1170,6 +1336,9 @@
         "courseC_maze_programming1_2021": {
           "grade2_CaringForNewPet_0_1": "Sau khi đã ghép các khối vào với nhau, ấn \"Chạy\" để bắt đầu chương trình."
         },
+        "courseC_maze_programming1_2023": {
+          "grade2_CaringForNewPet_0_1": "Sau khi đã ghép các khối vào với nhau, ấn \"Chạy\" để bắt đầu chương trình."
+        },
         "courseC_maze_programming2": {
           "courseC_maze_programming2_1": "Đây là hộp công cụ chứa các khối dùng để viết chương trình."
         },
@@ -1186,6 +1355,9 @@
           "courseC_maze_programming2_1": "Đây là hộp công cụ chứa các khối dùng để viết chương trình."
         },
         "courseC_maze_programming2_2021": {
+          "courseC_maze_programming2_1": "Đây là hộp công cụ chứa các khối dùng để viết chương trình."
+        },
+        "courseC_maze_programming2_2023": {
           "courseC_maze_programming2_1": "Đây là hộp công cụ chứa các khối dùng để viết chương trình."
         },
         "courseC_maze_programming3": {
@@ -1212,6 +1384,10 @@
           "courseC_maze_programming3_2": "Bạn có thể kéo các khối bị dưa vào hộp công cụ để bỏ đi.",
           "courseC_maze_programming3_3": "Những khối này là đá và không thể bỏ đi."
         },
+        "courseC_maze_programming3_2023": {
+          "courseC_maze_programming3_2": "Bạn có thể kéo các khối bị dưa vào hộp công cụ để bỏ đi.",
+          "courseC_maze_programming3_3": "Những khối này là đá và không thể bỏ đi."
+        },
         "courseC_maze_programming4": {
           "courseC_maze_programming4_1": "Đây là giới hạn số lượng khối. Con số này cho bạn biết bạn còn lại bao nhiêu khối trong số những khối này để dùng."
         },
@@ -1230,6 +1406,9 @@
         "courseC_maze_programming4_2021": {
           "courseC_maze_programming4_1": "Đây là giới hạn số lượng khối. Con số này cho bạn biết bạn còn lại bao nhiêu khối trong số những khối này để dùng."
         },
+        "courseC_maze_programming4_2023": {
+          "courseC_maze_programming4_1": "Đây là giới hạn số lượng khối. Con số này cho bạn biết bạn còn lại bao nhiêu khối trong số những khối này để dùng."
+        },
         "courseC_maze_programming5": {
           "": "Các khối này không có số phía trên. Bạn có thể sử dụng bao nhiêu khối tùy thích đấy!"
         },
@@ -1246,6 +1425,9 @@
           "": "Các khối này không có số phía trên. Bạn có thể sử dụng bao nhiêu khối tùy thích đấy!"
         },
         "courseC_maze_programming5_2021": {
+          "": "Các khối này không có số phía trên. Bạn có thể sử dụng bao nhiêu khối tùy thích đấy!"
+        },
+        "courseC_maze_programming5_2023": {
           "": "Các khối này không có số phía trên. Bạn có thể sử dụng bao nhiêu khối tùy thích đấy!"
         },
         "courseC_maze_programming7": {
@@ -1272,6 +1454,10 @@
           "courseC_maze_programming7_1": "Đây là bài tập thử thách đầu tiên của bạn! Những bài tập này tương đối khó và có thể phải thử vài lần.",
           "courseC_maze_programming7_2": "Những khối này làm bằng đá và không thể bỏ đi."
         },
+        "courseC_maze_programming7_2023": {
+          "courseC_maze_programming7_1": "Đây là bài tập thử thách đầu tiên của bạn! Những bài tập này tương đối khó và có thể phải thử vài lần.",
+          "courseC_maze_programming7_2": "Những khối này làm bằng đá và không thể bỏ đi."
+        },
         "courseC_starWars_loops2": {
           "courseC_starWars_loops2": "Trong bài tập này, bạn chỉ có sẵn một trong những khối sau."
         },
@@ -1288,6 +1474,9 @@
           "courseC_starWars_loops2": "Trong bài tập này, bạn chỉ có sẵn một trong những khối sau."
         },
         "courseC_starWars_loops2_2021": {
+          "courseC_starWars_loops2": "Trong bài tập này, bạn chỉ có sẵn một trong những khối sau."
+        },
+        "courseC_starWars_loops2_2023": {
           "courseC_starWars_loops2": "Trong bài tập này, bạn chỉ có sẵn một trong những khối sau."
         },
         "courseC_starWars_loops2_copy": {
@@ -1314,6 +1503,9 @@
         "courseD_artist_nestedLoops1a_2021": {
           "courseD_artist_nestedLoops1a_1": "Bạn không cần dùng màu sắc để làm đúng bài tập này. Nếu muốn, khối `random color` (màu ngẫu nhiên) này sẽ dễ hơn nhiều đấy!"
         },
+        "courseD_artist_nestedLoops1a_2023": {
+          "courseD_artist_nestedLoops1a_1": "Bạn không cần dùng màu sắc để làm đúng bài tập này. Nếu muốn, khối `random color` (màu ngẫu nhiên) này sẽ dễ hơn nhiều đấy!"
+        },
         "courseD_bee_conditionals2": {
           "4_5_Bee_Conditionals_2_1": "Đừng quên kiểm tra TẤT CẢ đám mây xem có HOA hay không. Bạn không cần kiểm tra tổ ong đâu nhé."
         },
@@ -1330,6 +1522,9 @@
           "4_5_Bee_Conditionals_2_1": "Đừng quên kiểm tra TẤT CẢ đám mây xem có HOA hay không. Bạn không cần kiểm tra tổ ong đâu nhé."
         },
         "courseD_bee_conditionals2_2021": {
+          "4_5_Bee_Conditionals_2_1": "Đừng quên kiểm tra TẤT CẢ đám mây xem có HOA hay không. Bạn không cần kiểm tra tổ ong đâu nhé."
+        },
+        "courseD_bee_conditionals2_2023": {
           "4_5_Bee_Conditionals_2_1": "Đừng quên kiểm tra TẤT CẢ đám mây xem có HOA hay không. Bạn không cần kiểm tra tổ ong đâu nhé."
         },
         "courseD_bee_conditionals2_copy": {
@@ -1356,10 +1551,16 @@
         "courseD_bee_conditionals_challenge2_2021": {
           "courseD_bee_conditionals_challenge2_1": "Hãy dùng vòng lặp này để lấy tất cả mật hoa (hoặc mật ong) từ một bông hoa (hoặc tổ ong)."
         },
+        "courseD_bee_conditionals_challenge2_2023": {
+          "courseD_bee_conditionals_challenge2_1": "Hãy dùng vòng lặp này để lấy tất cả mật hoa (hoặc mật ong) từ một bông hoa (hoặc tổ ong)."
+        },
         "courseD_bee_nestedLoops1a2022": {
           "stepButton": "Hãy thử xem qua từng khối trong mã lệnh của bạn."
         },
         "courseD_bee_nestedLoops1a_2021": {
+          "stepButton": "Hãy thử xem qua từng khối trong mã lệnh của bạn."
+        },
+        "courseD_bee_nestedLoops1a_2023": {
           "stepButton": "Hãy thử xem qua từng khối trong mã lệnh của bạn."
         },
         "courseD_farmer_while72022": {
@@ -1377,6 +1578,9 @@
         "courseD_farmer_while7_2021": {
           "courseD_farmer_while7_2018_PathAhead": "Bạn cần dùng khối `while path ahead` (khi có đường phía trước) để giải bài tập này."
         },
+        "courseD_farmer_while7_2023": {
+          "courseD_farmer_while7_2018_PathAhead": "Bạn cần dùng khối `while path ahead` (khi có đường phía trước) để giải bài tập này."
+        },
         "courseD_maze_intro42022": {
           "courseC_maze_programming4_1": "Đây là giới hạn số lượng khối. Con số này cho bạn biết bạn còn lại bao nhiêu khối trong số những khối này để dùng."
         },
@@ -1389,6 +1593,9 @@
         "courseD_maze_intro4_2021": {
           "courseC_maze_programming4_1": "Đây là giới hạn số lượng khối. Con số này cho bạn biết bạn còn lại bao nhiêu khối trong số những khối này để dùng."
         },
+        "courseD_maze_intro4_2023": {
+          "courseC_maze_programming4_1": "Đây là giới hạn số lượng khối. Con số này cho bạn biết bạn còn lại bao nhiêu khối trong số những khối này để dùng."
+        },
         "courseD_maze_intro5a2022": {
           "": "Các khối này không có số phía trên. Bạn có thể sử dụng bao nhiêu khối tùy thích đấy!"
         },
@@ -1399,6 +1606,9 @@
           "": "Các khối này không có số phía trên. Bạn có thể sử dụng bao nhiêu khối tùy thích đấy!"
         },
         "courseD_maze_intro5a_2021": {
+          "": "Các khối này không có số phía trên. Bạn có thể sử dụng bao nhiêu khối tùy thích đấy!"
+        },
+        "courseD_maze_intro5a_2023": {
           "": "Các khối này không có số phía trên. Bạn có thể sử dụng bao nhiêu khối tùy thích đấy!"
         },
         "courseD_maze_ramp1": {
@@ -1419,6 +1629,9 @@
         "courseD_maze_ramp1_2021": {
           "grade2_CaringForNewPet_0_1": "Sau khi đã ghép các khối vào với nhau, ấn \"Chạy\" để bắt đầu chương trình."
         },
+        "courseD_maze_ramp1_2023": {
+          "grade2_CaringForNewPet_0_1": "Sau khi đã ghép các khối vào với nhau, ấn \"Chạy\" để bắt đầu chương trình."
+        },
         "courseD_maze_ramp2": {
           "courseC_maze_programming2_1": "Đây là hộp công cụ chứa các khối dùng để viết chương trình."
         },
@@ -1435,6 +1648,9 @@
           "courseC_maze_programming2_1": "Đây là hộp công cụ chứa các khối dùng để viết chương trình."
         },
         "courseD_maze_ramp2_2021": {
+          "courseC_maze_programming2_1": "Đây là hộp công cụ chứa các khối dùng để viết chương trình."
+        },
+        "courseD_maze_ramp2_2023": {
           "courseC_maze_programming2_1": "Đây là hộp công cụ chứa các khối dùng để viết chương trình."
         },
         "courseD_maze_ramp3": {
@@ -1456,6 +1672,10 @@
           "stone_block_2": "Khối xám không thể bỏ."
         },
         "courseD_maze_ramp3_2021": {
+          "courseC_maze_programming3_2": "Bạn có thể kéo các khối bị dưa vào hộp công cụ để bỏ đi.",
+          "stone_block_2": "Khối xám không thể bỏ."
+        },
+        "courseD_maze_ramp3_2023": {
           "courseC_maze_programming3_2": "Bạn có thể kéo các khối bị dưa vào hộp công cụ để bỏ đi.",
           "stone_block_2": "Khối xám không thể bỏ."
         },
@@ -1487,6 +1707,9 @@
           "": "Các khối này không có số phía trên. Bạn có thể sử dụng bao nhiêu khối tùy thích đấy!"
         },
         "courseD_maze_ramp5_2021": {
+          "": "Các khối này không có số phía trên. Bạn có thể sử dụng bao nhiêu khối tùy thích đấy!"
+        },
+        "courseD_maze_ramp5_2023": {
           "": "Các khối này không có số phía trên. Bạn có thể sử dụng bao nhiêu khối tùy thích đấy!"
         },
         "courseD_maze_ramp5a": {
@@ -1531,6 +1754,9 @@
         "courseE_aboutme_2_2021": {
           "": "Nhấp chuột vào đây!"
         },
+        "courseE_aboutme_2_2023": {
+          "": "Nhấp chuột vào đây để thêm trang phục vào dự án."
+        },
         "courseE_artist_functions2": {
           "courseD_artist_functions2_1": "Khi khối màu xanh lục này chạy, tất cả mã lệnh trong hàm sẽ chạy. Họa sĩ phải làm gì sau khi vẽ hình vuông đầu tiên?"
         },
@@ -1547,6 +1773,9 @@
           "courseD_artist_functions2_1": "Khi khối màu xanh lục này chạy, tất cả mã lệnh trong hàm sẽ chạy. Họa sĩ phải làm gì sau khi vẽ hình vuông đầu tiên?"
         },
         "courseE_artist_functions2_2021": {
+          "courseD_artist_functions2_1": "Khi khối màu xanh lục này chạy, tất cả mã lệnh trong hàm sẽ chạy. Họa sĩ phải làm gì sau khi vẽ hình vuông đầu tiên?"
+        },
+        "courseE_artist_functions2_2023": {
           "courseD_artist_functions2_1": "Khi khối màu xanh lục này chạy, tất cả mã lệnh trong hàm sẽ chạy. Họa sĩ phải làm gì sau khi vẽ hình vuông đầu tiên?"
         },
         "courseE_artist_functions2_copy": {
@@ -1573,6 +1802,9 @@
         "courseE_artist_functions8a_2021": {
           "courseD_artist_functions8_1": "Các khối để tạo hàm đã được chuyển vào nhãn này trong hộp công cụ."
         },
+        "courseE_artist_functions8a_2023": {
+          "courseD_artist_functions8_1": "Các khối để tạo hàm đã được chuyển vào nhãn này trong hộp công cụ."
+        },
         "courseE_artist_functions_challenge1": {
           "courseE_artist_functions_challenge1_callout1": "Hãy cho chương trình này tiếp tục chạy bằng cách thêm nhiều mã lệnh vào phía dưới.",
           "courseE_artist_functions_challenge1_callout2": "Nếu bạn không thích thiết kế này, hãy thay đổi thành bất cứ hình gì bạn muốn!"
@@ -1594,6 +1826,10 @@
           "courseE_artist_functions_challenge1_callout2": "Nếu bạn không thích thiết kế này, hãy thay đổi thành bất cứ hình gì bạn muốn!"
         },
         "courseE_artist_functions_challenge1_2021": {
+          "courseE_artist_functions_challenge1_callout1": "Hãy cho chương trình này tiếp tục chạy bằng cách thêm nhiều mã lệnh vào phía dưới.",
+          "courseE_artist_functions_challenge1_callout2": "Nếu bạn không thích thiết kế này, hãy thay đổi thành bất cứ hình gì bạn muốn!"
+        },
+        "courseE_artist_functions_challenge1_2023": {
           "courseE_artist_functions_challenge1_callout1": "Hãy cho chương trình này tiếp tục chạy bằng cách thêm nhiều mã lệnh vào phía dưới.",
           "courseE_artist_functions_challenge1_callout2": "Nếu bạn không thích thiết kế này, hãy thay đổi thành bất cứ hình gì bạn muốn!"
         },
@@ -1621,6 +1857,10 @@
           "courseE_artist_functions_challenge2_callout1": "Hãy cho chương trình này tiếp tục chạy bằng cách thêm nhiều mã lệnh vào phía dưới.",
           "courseE_artist_functions_challenge2_callout2": "Nếu bạn không thích thiết kế này, hãy thay đổi thành bất cứ hình gì bạn muốn!"
         },
+        "courseE_artist_functions_challenge2_2023": {
+          "courseE_artist_functions_challenge2_callout1": "Hãy cho chương trình này tiếp tục chạy bằng cách thêm nhiều mã lệnh vào phía dưới.",
+          "courseE_artist_functions_challenge2_callout2": "Nếu bạn không thích thiết kế này, hãy thay đổi thành bất cứ hình gì bạn muốn!"
+        },
         "courseE_farmer_functions1": {
           "courseE_farmer_functions1_2": "Hộp công cụ lần này có cấu trúc hơi khác một chút! Hãy nhấp chuột vào các danh mục khác nhau để xem bạn có những khối nào."
         },
@@ -1642,6 +1882,9 @@
         "courseE_farmer_functions13_2021": {
           "courseE_farmer_functions1a_1": "Không ai biết loại rau ở đây là gì. Loại rau sẽ thay đổi mỗi khi bạn chạy chương trình."
         },
+        "courseE_farmer_functions13_2023": {
+          "courseE_farmer_functions1a_1": "Không ai biết loại rau ở đây là gì. Loại rau sẽ thay đổi mỗi khi bạn chạy chương trình."
+        },
         "courseE_farmer_functions1_2018": {
           "courseE_farmer_functions1_2": "Hộp công cụ lần này có cấu trúc hơi khác một chút! Hãy nhấp chuột vào các danh mục khác nhau để xem bạn có những khối nào."
         },
@@ -1652,6 +1895,9 @@
           "courseE_farmer_functions1_2": "Hộp công cụ lần này có cấu trúc hơi khác một chút! Hãy nhấp chuột vào các danh mục khác nhau để xem bạn có những khối nào."
         },
         "courseE_farmer_functions1_2021": {
+          "courseE_farmer_functions1_2": "Hộp công cụ lần này có cấu trúc hơi khác một chút! Hãy nhấp chuột vào các danh mục khác nhau để xem bạn có những khối nào."
+        },
+        "courseE_farmer_functions1_2023": {
           "courseE_farmer_functions1_2": "Hộp công cụ lần này có cấu trúc hơi khác một chút! Hãy nhấp chuột vào các danh mục khác nhau để xem bạn có những khối nào."
         },
         "courseE_farmer_functions1a": {
@@ -1672,6 +1918,9 @@
         "courseE_farmer_functions1a_2021": {
           "courseE_farmer_functions1a_1": "Không ai biết loại rau ở đây là gì. Loại rau sẽ thay đổi mỗi khi bạn chạy chương trình."
         },
+        "courseE_farmer_functions1a_2023": {
+          "courseE_farmer_functions1a_1": "Không ai biết loại rau ở đây là gì. Loại rau sẽ thay đổi mỗi khi bạn chạy chương trình."
+        },
         "courseE_farmer_functions2b": {
           "courseE_farmer_functions1a_1": "Không ai biết loại rau ở đây là gì. Loại rau sẽ thay đổi mỗi khi bạn chạy chương trình."
         },
@@ -1688,6 +1937,9 @@
           "courseE_farmer_functions1a_1": "Không ai biết loại rau ở đây là gì. Loại rau sẽ thay đổi mỗi khi bạn chạy chương trình."
         },
         "courseE_farmer_functions2b_2021": {
+          "courseE_farmer_functions1a_1": "Không ai biết loại rau ở đây là gì. Loại rau sẽ thay đổi mỗi khi bạn chạy chương trình."
+        },
+        "courseE_farmer_functions2b_2023": {
           "courseE_farmer_functions1a_1": "Không ai biết loại rau ở đây là gì. Loại rau sẽ thay đổi mỗi khi bạn chạy chương trình."
         },
         "courseE_playLab_challenge1": {
@@ -1708,6 +1960,10 @@
           "run_button": "Trước tiên, hãy nhấn nút Chạy!",
           "visualizationResizeBar": "Kéo 3 dấu chấm để thay đổi kích thước khu vực chơi."
         },
+        "courseF_apps_aquarium_2023": {
+          "run_button": "Trước tiên, hãy nhấn nút Chạy!",
+          "visualizationResizeBar": "Kéo 3 dấu chấm để thay đổi kích thước khu vực chơi."
+        },
         "courseF_apps_card": {
           "visualizationResizeBar": "Kéo 3 dấu chấm để thay đổi kích thước khu vực chơi."
         },
@@ -1715,6 +1971,9 @@
           "visualizationResizeBar": "Kéo 3 dấu chấm để thay đổi kích thước khu vực chơi."
         },
         "courseF_apps_card_-2022-2": {
+          "visualizationResizeBar": "Kéo 3 dấu chấm để thay đổi kích thước khu vực chơi."
+        },
+        "courseF_apps_card_2023": {
           "visualizationResizeBar": "Kéo 3 dấu chấm để thay đổi kích thước khu vực chơi."
         },
         "courseF_apps_chatbot": {
@@ -1726,6 +1985,10 @@
           "visualizationResizeBar": "Kéo 3 dấu chấm để thay đổi kích thước khu vực chơi."
         },
         "courseF_apps_chatbot_-2022-2": {
+          "run_button": "Trước tiên, hãy nhấn nút Chạy!",
+          "visualizationResizeBar": "Kéo 3 dấu chấm để thay đổi kích thước khu vực chơi."
+        },
+        "courseF_apps_chatbot_2023": {
           "run_button": "Trước tiên, hãy nhấn nút Chạy!",
           "visualizationResizeBar": "Kéo 3 dấu chấm để thay đổi kích thước khu vực chơi."
         },
@@ -1741,16 +2004,32 @@
           "run_button": "Trước tiên, hãy nhấn nút Chạy!",
           "visualizationResizeBar": "Kéo 3 dấu chấm để thay đổi kích thước khu vực chơi."
         },
+        "courseF_apps_collector_2023": {
+          "run_button": "Trước tiên, hãy nhấn nút Chạy!",
+          "visualizationResizeBar": "Kéo 3 dấu chấm để thay đổi kích thước khu vực chơi."
+        },
         "courseF_apps_collector_drag_-2022-2": {
+          "visualizationResizeBar": "Kéo 3 dấu chấm để thay đổi kích thước khu vực chơi."
+        },
+        "courseF_apps_collector_drag_2023": {
           "visualizationResizeBar": "Kéo 3 dấu chấm để thay đổi kích thước khu vực chơi."
         },
         "courseF_apps_collector_drive_-2022-2": {
           "visualizationResizeBar": "Kéo 3 dấu chấm để thay đổi kích thước khu vực chơi."
         },
+        "courseF_apps_collector_drive_2023": {
+          "visualizationResizeBar": "Kéo 3 dấu chấm để thay đổi kích thước khu vực chơi."
+        },
         "courseF_apps_collector_move2_-2022-2": {
           "visualizationResizeBar": "Kéo 3 dấu chấm để thay đổi kích thước khu vực chơi."
         },
+        "courseF_apps_collector_move2_2023": {
+          "visualizationResizeBar": "Kéo 3 dấu chấm để thay đổi kích thước khu vực chơi."
+        },
         "courseF_apps_collector_move_-2022-2": {
+          "visualizationResizeBar": "Kéo 3 dấu chấm để thay đổi kích thước khu vực chơi."
+        },
+        "courseF_apps_collector_move_2023": {
           "visualizationResizeBar": "Kéo 3 dấu chấm để thay đổi kích thước khu vực chơi."
         },
         "courseF_apps_madlib": {
@@ -1762,6 +2041,9 @@
         "courseF_apps_madlib_-2022-2": {
           "visualizationResizeBar": "Kéo 3 dấu chấm để thay đổi kích thước khu vực chơi."
         },
+        "courseF_apps_madlib_2023": {
+          "visualizationResizeBar": "Kéo 3 dấu chấm để thay đổi kích thước khu vực chơi."
+        },
         "courseF_apps_pet": {
           "run_button": "Trước tiên, hãy nhấn nút Chạy!",
           "visualizationResizeBar": "Kéo 3 dấu chấm để thay đổi kích thước khu vực chơi."
@@ -1771,6 +2053,10 @@
           "visualizationResizeBar": "Kéo 3 dấu chấm để thay đổi kích thước khu vực chơi."
         },
         "courseF_apps_pet_-2022-2": {
+          "run_button": "Trước tiên, hãy nhấn nút Chạy!",
+          "visualizationResizeBar": "Kéo 3 dấu chấm để thay đổi kích thước khu vực chơi."
+        },
+        "courseF_apps_pet_2023": {
           "run_button": "Trước tiên, hãy nhấn nút Chạy!",
           "visualizationResizeBar": "Kéo 3 dấu chấm để thay đổi kích thước khu vực chơi."
         },
@@ -1792,6 +2078,9 @@
         "courseF_artist_for1_2021": {
           "courseF_artist_for1_1": "Hộp công cụ ở chế độ “danh mục” để tạo thêm chỗ cho mã lệnh. Vòng lặp `for` (với) có ở đây."
         },
+        "courseF_artist_for1_2023": {
+          "courseF_artist_for1_1": "Hộp công cụ ở chế độ “danh mục” để tạo thêm chỗ cho mã lệnh. Vòng lặp `for` (với) có ở đây."
+        },
         "courseF_bee_for4": {
           "courseF_bee_for4_1": "Bạn sẽ tìm thấy vòng lặp `for` (với) ở đây!"
         },
@@ -1808,6 +2097,9 @@
           "courseF_bee_for4_1": "Bạn sẽ tìm thấy vòng lặp `for` (với) ở đây!"
         },
         "courseF_bee_for4_2021": {
+          "courseF_bee_for4_1": "Bạn sẽ tìm thấy vòng lặp `for` (với) ở đây!"
+        },
+        "courseF_bee_for4_2023": {
           "courseF_bee_for4_1": "Bạn sẽ tìm thấy vòng lặp `for` (với) ở đây!"
         },
         "courseF_bee_for9": {
@@ -1828,6 +2120,9 @@
         "courseF_bee_for9_2021": {
           "courseF_bee_for9_1": "Bạn sẽ thấy khối `math` (tính toán) tại đây."
         },
+        "courseF_bee_for9_2023": {
+          "courseF_bee_for9_1": "Bạn sẽ thấy khối `math` (tính toán) tại đây."
+        },
         "courseF_bee_variables_1_2018": {
           "courseF_bee_functions_1_2018_1": "Bạn có thể tìm thấy các biến của mình dưới đây!"
         },
@@ -1843,10 +2138,16 @@
         "courseF_bee_variables_1a_2021": {
           "courseF_bee_functions_1_2018_1": "Bạn có thể tìm thấy các biến của mình dưới đây!"
         },
+        "courseF_bee_variables_1a_2023": {
+          "courseF_bee_functions_1_2018_1": "Bạn có thể tìm thấy các biến của mình dưới đây!"
+        },
         "courseF_editable_card": {
           "visualizationResizeBar": "Kéo 3 dấu chấm để thay đổi kích thước khu vực chơi."
         },
         "courseF_editable_card_-2022-2": {
+          "visualizationResizeBar": "Kéo 3 dấu chấm để thay đổi kích thước khu vực chơi."
+        },
+        "courseF_editable_card_2023": {
           "visualizationResizeBar": "Kéo 3 dấu chấm để thay đổi kích thước khu vực chơi."
         },
         "courseF_editable_chatbot": {
@@ -1855,10 +2156,16 @@
         "courseF_editable_chatbot_-2022-2": {
           "visualizationResizeBar": "Kéo 3 dấu chấm để thay đổi kích thước khu vực chơi."
         },
+        "courseF_editable_chatbot_2023": {
+          "visualizationResizeBar": "Kéo 3 dấu chấm để thay đổi kích thước khu vực chơi."
+        },
         "courseF_editable_madlib": {
           "visualizationResizeBar": "Kéo 3 dấu chấm để thay đổi kích thước khu vực chơi."
         },
         "courseF_editable_madlib_-2022-2": {
+          "visualizationResizeBar": "Kéo 3 dấu chấm để thay đổi kích thước khu vực chơi."
+        },
+        "courseF_editable_madlib_2023": {
           "visualizationResizeBar": "Kéo 3 dấu chấm để thay đổi kích thước khu vực chơi."
         },
         "courseF_events_choice_penguin": {
@@ -1867,10 +2174,16 @@
         "courseF_events_choice_penguin_-2022-2": {
           "whenToWhile": "Hãy thử thay đổi từ when thành while."
         },
+        "courseF_events_choice_penguin_2023": {
+          "whenToWhile": "Hãy thử thay đổi từ when thành while."
+        },
         "courseF_events_conflict": {
           "stops_block": "Các khối mới ở đây!"
         },
         "courseF_events_conflict_-2022-2": {
+          "stops_block": "Các khối mới ở đây!"
+        },
+        "courseF_events_conflict_2023": {
           "stops_block": "Các khối mới ở đây!"
         },
         "courseF_events_key": {
@@ -1879,10 +2192,16 @@
         "courseF_events_key_-2022-2": {
           "whenKey": "Sử dụng khối sự kiện mới có ở đây."
         },
+        "courseF_events_key_2023": {
+          "whenKey": "Sử dụng khối sự kiện mới có ở đây."
+        },
         "courseF_events_practice_reorder": {
           "stopAllBug": "Khối này không đúng thứ tự."
         },
         "courseF_events_practice_reorder_-2022-2": {
+          "stopAllBug": "Khối này không đúng thứ tự."
+        },
+        "courseF_events_practice_reorder_2023": {
           "stopAllBug": "Khối này không đúng thứ tự."
         },
         "courseF_events_predict": {
@@ -1891,10 +2210,16 @@
         "courseF_events_predict_-2022-2": {
           "behaviors_edit": "Nhấp chuột vào đây để xem cách hoạt động của hành vi này."
         },
+        "courseF_events_predict_2023": {
+          "behaviors_edit": "Nhấp chuột vào đây để xem cách hoạt động của hành vi này."
+        },
         "courseF_events_time": {
           "events_category": "Nhấp chuột vào đây để mở danh mục Sự kiện."
         },
         "courseF_events_time_-2022-2": {
+          "events_category": "Nhấp chuột vào đây để mở danh mục Sự kiện."
+        },
+        "courseF_events_time_2023": {
           "events_category": "Nhấp chuột vào đây để mở danh mục Sự kiện."
         },
         "courseF_label_predict": {
@@ -1903,10 +2228,16 @@
         "courseF_label_predict_-2022-2": {
           "variablesPredict": "Hãy xem kỹ mã lệnh dưới đây."
         },
+        "courseF_label_predict_2023": {
+          "variablesPredict": "Hãy xem kỹ mã lệnh dưới đây."
+        },
         "courseF_sprites_behaviors": {
           "behaviors_category": "Nhấp chuột vào đây để mở danh mục Hành vi."
         },
         "courseF_sprites_behaviors_-2022-2": {
+          "behaviors_category": "Nhấp chuột vào đây để mở danh mục Hành vi."
+        },
+        "courseF_sprites_behaviors_2023": {
           "behaviors_category": "Nhấp chuột vào đây để mở danh mục Hành vi."
         },
         "courseF_sprites_make": {
@@ -1915,10 +2246,16 @@
         "courseF_sprites_make_-2022-2": {
           "sprites_category": "Nhấp chuột vào đây để mở danh mục Nhân vật."
         },
+        "courseF_sprites_make_2023": {
+          "sprites_category": "Nhấp chuột vào đây để mở danh mục Nhân vật."
+        },
         "courseF_sprites_positioning": {
           "locations_category": "Nhấp chuột vào đây để mở danh mục Vị trí."
         },
         "courseF_sprites_positioning_-2022-2": {
+          "locations_category": "Nhấp chuột vào đây để mở danh mục Vị trí."
+        },
+        "courseF_sprites_positioning_2023": {
           "locations_category": "Nhấp chuột vào đây để mở danh mục Vị trí."
         },
         "courseF_sprites_properties": {
@@ -1927,10 +2264,16 @@
         "courseF_sprites_properties_-2022-2": {
           "sprites_category2": "Hãy tìm khối mới ở đây."
         },
+        "courseF_sprites_properties_2023": {
+          "sprites_category2": "Hãy tìm khối mới ở đây."
+        },
         "courseF_text_answer": {
           "answered_block": "Tìm khối mới ở đây!"
         },
         "courseF_text_answer_-2022-2": {
+          "answered_block": "Tìm khối mới ở đây!"
+        },
+        "courseF_text_answer_2023": {
           "answered_block": "Tìm khối mới ở đây!"
         },
         "courseF_text_choice_color": {
@@ -1939,10 +2282,16 @@
         "courseF_text_choice_color_-2022-2": {
           "text_color_finish": "Nền có đổi màu khi bạn trả lời câu hỏi không? Nếu có, hãy nhấn ‘Finish’ (Kết thúc). Nếu không, hãy nhấn ‘Reset’ (Đặt lại), thay đổi mã lệnh của bạn và nhấn lại nút ‘Run’ (Chạy)."
         },
+        "courseF_text_choice_color_2023": {
+          "text_color_finish": "Nền có đổi màu khi bạn trả lời câu hỏi không? Nếu có, hãy nhấn ‘Finish’ (Kết thúc). Nếu không, hãy nhấn ‘Reset’ (Đặt lại), thay đổi mã lệnh của bạn và nhấn lại nút ‘Run’ (Chạy)."
+        },
         "courseF_text_choice_conversation": {
           "text_generic_finish": "Bạn đã hoàn thành chưa chưa? Nếu rồi, hãy nhấn ‘Finish’ (Kết thúc). Nếu chưa, hãy nhấn ‘Reset’ (Đặt lại), thay đổi mã lệnh của bạn và nhấn lại nút ‘Run’ (Chạy)."
         },
         "courseF_text_choice_conversation_-2022-2": {
+          "text_generic_finish": "Bạn đã hoàn thành chưa chưa? Nếu rồi, hãy nhấn ‘Finish’ (Kết thúc). Nếu chưa, hãy nhấn ‘Reset’ (Đặt lại), thay đổi mã lệnh của bạn và nhấn lại nút ‘Run’ (Chạy)."
+        },
+        "courseF_text_choice_conversation_2023": {
           "text_generic_finish": "Bạn đã hoàn thành chưa chưa? Nếu rồi, hãy nhấn ‘Finish’ (Kết thúc). Nếu chưa, hãy nhấn ‘Reset’ (Đặt lại), thay đổi mã lệnh của bạn và nhấn lại nút ‘Run’ (Chạy)."
         },
         "courseF_text_choice_title": {
@@ -1953,16 +2302,26 @@
           "text_answer_finish": "Màn hình tiêu đề có hiện trong 3 giây không? Nếu có, hãy nhấn ‘Finish’ (Kết thúc). Nếu không, hãy nhấn ‘Reset’ (Đặt lại), thay đổi mã lệnh của bạn và nhấn lại nút ‘Run’ (Chạy).",
           "title_block": "Hãy tìm hai khối mới ở đây!"
         },
+        "courseF_text_choice_title_2023": {
+          "text_answer_finish": "Màn hình tiêu đề có hiện trong 3 giây không? Nếu có, hãy nhấn ‘Finish’ (Kết thúc). Nếu không, hãy nhấn ‘Reset’ (Đặt lại), thay đổi mã lệnh của bạn và nhấn lại nút ‘Run’ (Chạy).",
+          "title_block": "Hãy tìm hai khối mới ở đây!"
+        },
         "courseF_text_concat": {
           "join_blocks": "Hãy tìm khối mới ở đây!"
         },
         "courseF_text_concat_-2022-2": {
           "join_blocks": "Hãy tìm khối mới ở đây!"
         },
+        "courseF_text_concat_2023": {
+          "join_blocks": "Hãy tìm khối mới ở đây!"
+        },
         "courseF_text_events": {
           "events_category": "Nhấp chuột vào đây để mở danh mục Sự kiện."
         },
         "courseF_text_events_-2022-2": {
+          "events_category": "Nhấp chuột vào đây để mở danh mục Sự kiện."
+        },
+        "courseF_text_events_2023": {
           "events_category": "Nhấp chuột vào đây để mở danh mục Sự kiện."
         },
         "courseF_text_print": {
@@ -1973,19 +2332,32 @@
           "print_block": "Hãy tìm khối hiện ở đây!",
           "text_print_finish": "Nội dung của bạn đã xuất hiện ở trên chưa? Nếu rồi, hãy nhấn ‘Finish’ (Kết thúc). Nếu không, hãy nhấn ‘Reset’ (Đặt lại), thay đổi mã lệnh của bạn và nhấn lại nút ‘Run’ (Chạy)."
         },
+        "courseF_text_print_2023": {
+          "print_block": "Hãy tìm khối hiện ở đây!",
+          "text_print_finish": "Nội dung của bạn đã xuất hiện ở trên chưa? Nếu rồi, hãy nhấn ‘Finish’ (Kết thúc). Nếu không, hãy nhấn ‘Reset’ (Đặt lại), thay đổi mã lệnh của bạn và nhấn lại nút ‘Run’ (Chạy)."
+        },
         "courseF_text_prompts": {
           "prompt_block": "Hãy tìm khối nhắc ở đây!"
         },
         "courseF_text_prompts_-2022-2": {
           "prompt_block": "Hãy tìm khối nhắc ở đây!"
         },
+        "courseF_text_prompts_2023": {
+          "prompt_block": "Hãy tìm khối nhắc ở đây!"
+        },
         "courseF_variables2_predict_-2022-2": {
+          "variablesPredict": "Hãy xem kỹ mã lệnh dưới đây."
+        },
+        "courseF_variables2_predict_2023": {
           "variablesPredict": "Hãy xem kỹ mã lệnh dưới đây."
         },
         "courseF_variables_predict": {
           "variablesPredict": "Hãy xem kỹ mã lệnh dưới đây."
         },
         "courseF_variables_predict_-2022-2": {
+          "variablesPredict": "Hãy xem kỹ mã lệnh dưới đây."
+        },
+        "courseF_variables_predict_2023": {
           "variablesPredict": "Hãy xem kỹ mã lệnh dưới đây."
         },
         "coursea_maze_ramp12022": {
@@ -2003,13 +2375,72 @@
         "coursea_maze_ramp1_2021": {
           "grade2_CaringForNewPet_0_1": "Sau khi gắn tất cả các khối lại với nhau, hãy nhấn “Run” (chạy) để bắt đầu chương trình."
         },
+        "coursea_maze_ramp1_2023": {
+          "grade2_CaringForNewPet_0_1": "Sau khi gắn tất cả các khối lại với nhau, hãy nhấn “Run” (chạy) để bắt đầu chương trình."
+        },
         "coursee_helloworld_events": {
+          "hello_world_click_hint": "Thêm khối sự kiện này vào không gian làm việc."
+        },
+        "coursee_helloworld_events_2023": {
           "hello_world_click_hint": "Thêm khối sự kiện này vào không gian làm việc."
         },
         "coursee_helloworld_freeplay": {
           "costumes_tab": "Nhấp chuột vào đây để thêm trang phục vào dự án."
         },
+        "coursee_helloworld_freeplay_2023": {
+          "costumes_tab": "Nhấp chuột vào đây để thêm trang phục vào dự án."
+        },
         "coursee_helloworld_say": {
+          "hello_world_make_sprite": "Dùng khối này để tạo nhân vật.",
+          "hello_world_say": "Dùng khối này để cho nhân vật nói chuyện."
+        },
+        "coursee_helloworld_say_2023": {
+          "hello_world_make_sprite": "Dùng khối này để tạo nhân vật.",
+          "hello_world_say": "Dùng khối này để cho nhân vật nói chuyện."
+        },
+        "csc-starquilts-comment_2023": {
+          "New Artist Project_callout2": "Nhấn \"Chạy\" để lưu và chạy chương trình của bạn",
+          "sign_in_to_save_project": "Muốn truy cập vào sự án của bạn lần sau? Hãy đăng nhập để lưu dự án này vào tài khoản của bạn!"
+        },
+        "csc-starquilts-repeat_2023": {
+          "New Artist Project_callout2": "Nhấn \"Chạy\" để lưu và chạy chương trình của bạn",
+          "sign_in_to_save_project": "Muốn truy cập vào sự án của bạn lần sau? Hãy đăng nhập để lưu dự án này vào tài khoản của bạn!"
+        },
+        "csc-starquilts-rhombus-freeplay_2023": {
+          "New Artist Project_callout2": "Nhấn \"Chạy\" để lưu và chạy chương trình của bạn",
+          "sign_in_to_save_project": "Muốn truy cập vào sự án của bạn lần sau? Hãy đăng nhập để lưu dự án này vào tài khoản của bạn!"
+        },
+        "csc-starquilts-row1_2023": {
+          "New Artist Project_callout2": "Nhấn \"Chạy\" để lưu và chạy chương trình của bạn",
+          "sign_in_to_save_project": "Muốn truy cập vào sự án của bạn lần sau? Hãy đăng nhập để lưu dự án này vào tài khoản của bạn!"
+        },
+        "csc-starquilts-row2_2023": {
+          "New Artist Project_callout2": "Nhấn \"Chạy\" để lưu và chạy chương trình của bạn",
+          "sign_in_to_save_project": "Muốn truy cập vào sự án của bạn lần sau? Hãy đăng nhập để lưu dự án này vào tài khoản của bạn!"
+        },
+        "csc-starquilts-row3_2023": {
+          "New Artist Project_callout2": "Nhấn \"Chạy\" để lưu và chạy chương trình của bạn",
+          "sign_in_to_save_project": "Muốn truy cập vào sự án của bạn lần sau? Hãy đăng nhập để lưu dự án này vào tài khoản của bạn!"
+        },
+        "csc-starquilts-row4_2023": {
+          "New Artist Project_callout2": "Nhấn \"Chạy\" để lưu và chạy chương trình của bạn",
+          "sign_in_to_save_project": "Muốn truy cập vào sự án của bạn lần sau? Hãy đăng nhập để lưu dự án này vào tài khoản của bạn!"
+        },
+        "csc-starquilts-row5_2023": {
+          "New Artist Project_callout2": "Nhấn \"Chạy\" để lưu và chạy chương trình của bạn",
+          "sign_in_to_save_project": "Muốn truy cập vào sự án của bạn lần sau? Hãy đăng nhập để lưu dự án này vào tài khoản của bạn!"
+        },
+        "csc_animal_adaptations_bugs2": {
+          "hello_world_behavior_blocks": "Dùng khối này với một trong các hành vi dưới đây."
+        },
+        "csc_animal_adaptations_predict_gamelab": {
+          "behaviors_edit": "Nhấp chuột vào đây để xem cách hoạt động của hành vi này."
+        },
+        "csc_starquilts_freeplay_2023": {
+          "New Artist Project_callout2": "Nhấn \"Chạy\" để lưu và chạy chương trình của bạn",
+          "sign_in_to_save_project": "Muốn truy cập vào sự án của bạn lần sau? Hãy đăng nhập để lưu dự án này vào tài khoản của bạn!"
+        },
+        "ecosystems_helloworld_say_2023": {
           "hello_world_make_sprite": "Dùng khối này để tạo nhân vật.",
           "hello_world_say": "Dùng khối này để cho nhân vật nói chuyện."
         },
@@ -2023,6 +2454,9 @@
           "express_maze_debugging9_2019_1": "Kéo các khối từ hộp công cụ vào không gian làm việc của bạn."
         },
         "express_maze_debugging9_2021": {
+          "express_maze_debugging9_2019_1": "Kéo các khối từ hộp công cụ vào không gian làm việc của bạn."
+        },
+        "express_maze_debugging9_2023": {
           "express_maze_debugging9_2019_1": "Kéo các khối từ hộp công cụ vào không gian làm việc của bạn."
         },
         "frozen circle function with parameter": {
@@ -2101,6 +2535,12 @@
         "helloworld_animals_sounds": {
           "hello_world_new": "Khối mới!"
         },
+        "helloworld_bugs_behaviors_2023": {
+          "hello_world_behavior_blocks": "Dùng khối này với một trong các hành vi dưới đây."
+        },
+        "helloworld_bunny_adaptation_2023": {
+          "hw_Run": "Nhấp chuột vào đây để chạy mã lệnh."
+        },
         "helloworld_emoji_backgrounds": {
           "hw_background_location": "Dùng khối này để đặt hình nền mới."
         },
@@ -2139,6 +2579,9 @@
         "helloworld_food_backgrounds": {
           "hw_background_location": "Dùng khối này để đặt hình nền mới."
         },
+        "helloworld_food_backgrounds_2023": {
+          "hw_background_location": "Dùng khối này để đặt hình nền mới."
+        },
         "helloworld_food_backgrounds_soccer-2022": {
           "hw_background_location": "Dùng khối này để đặt hình nền mới."
         },
@@ -2146,6 +2589,9 @@
           "hw_background_location": "Dùng khối này để đặt hình nền mới."
         },
         "helloworld_food_behaviors": {
+          "hello_world_behavior_blocks": "Dùng khối này với một trong các hành vi dưới đây."
+        },
+        "helloworld_food_behaviors_2023": {
           "hello_world_behavior_blocks": "Dùng khối này với một trong các hành vi dưới đây."
         },
         "helloworld_food_behaviors_soccer-2022": {
@@ -2157,6 +2603,9 @@
         "helloworld_food_click": {
           "hw_Run": "Nhấp chuột vào đây để chạy mã lệnh."
         },
+        "helloworld_food_click_2023": {
+          "hw_Run": "Nhấp chuột vào đây để chạy mã lệnh."
+        },
         "helloworld_food_click_soccer-2022": {
           "hw_Run": "Nhấp chuột vào đây để chạy mã lệnh."
         },
@@ -2164,6 +2613,9 @@
           "hw_Run": "Bấm vào đây trước!"
         },
         "helloworld_food_costumes": {
+          "hello_world_new": "Khối mới!"
+        },
+        "helloworld_food_costumes_2023": {
           "hello_world_new": "Khối mới!"
         },
         "helloworld_food_costumes_soccer-2022": {
@@ -2193,6 +2645,9 @@
         "helloworld_food_location": {
           "pin": "ghim"
         },
+        "helloworld_food_location_2023": {
+          "pin": "ghim"
+        },
         "helloworld_food_location_soccer-2022": {
           "pin": "ghim"
         },
@@ -2200,6 +2655,9 @@
           "pin": "ghim"
         },
         "helloworld_food_multi": {
+          "pin": "ghim"
+        },
+        "helloworld_food_multi_2023": {
           "pin": "ghim"
         },
         "helloworld_food_multi_soccer-2022": {
@@ -2224,6 +2682,10 @@
           "hello_world_new": "Khối mới!",
           "hello_world_new_block": "Khối mới!"
         },
+        "helloworld_food_sizes_2023": {
+          "hello_world_new": "Khối mới!",
+          "hello_world_new_block": "Khối mới!"
+        },
         "helloworld_food_sizes_soccer-2022": {
           "hello_world_new": "Khối mới!",
           "hello_world_new_block": "Khối mới!"
@@ -2233,6 +2695,9 @@
           "hello_world_new_block": "Khối mới!"
         },
         "helloworld_food_sounds": {
+          "hello_world_new": "Khối mới!"
+        },
+        "helloworld_food_sounds_2023": {
           "hello_world_new": "Khối mới!"
         },
         "helloworld_food_sounds_soccer-2022": {
@@ -2286,11 +2751,22 @@
         "poetry_hoc_addSprites": {
           "poetry_sprite": "Khối mới!"
         },
+        "poetry_hoc_addSprites_2023": {
+          "poetry_sprite": "Khối mới!"
+        },
         "poetry_hoc_backgroundEffects": {
           "poetry_background": "Tìm khối mã lệnh ở đây.",
           "run_button": "Kiểm tra hình chuyển động bằng nút này."
         },
+        "poetry_hoc_backgroundEffects_2023": {
+          "poetry_background": "Tìm khối mã lệnh ở đây.",
+          "run_button": "Kiểm tra hình chuyển động bằng nút này."
+        },
         "poetry_hoc_events1": {
+          "poetry_event": "Khối mới!",
+          "poetry_foreground": "Khối mới!"
+        },
+        "poetry_hoc_events1_2023": {
           "poetry_event": "Khối mới!",
           "poetry_foreground": "Khối mới!"
         },
@@ -2300,7 +2776,15 @@
           "poetry_new_block": "Khối mới!",
           "poetry_selector": "Chọn bài thơ bất kỳ hoặc tự nhập bài thơ của bạn!"
         },
+        "poetry_hoc_freeplay_2023": {
+          "poetry_new_block": "Khối mới!",
+          "poetry_selector": "Chọn bài thơ bất kỳ hoặc tự nhập bài thơ của bạn!"
+        },
         "poetry_hoc_sounds": {
+          "poetry_music": "Khối mới!",
+          "poetry_sound": "Khối mới!"
+        },
+        "poetry_hoc_sounds_2023": {
           "poetry_music": "Khối mới!",
           "poetry_sound": "Khối mới!"
         },
@@ -2308,7 +2792,15 @@
           "poetry_sprite_begins": "Khối mới!",
           "poetry_sprite_stops": "Khối mới!"
         },
+        "poetry_hoc_spriteBehaviors_2023": {
+          "poetry_sprite_begins": "Khối mới!",
+          "poetry_sprite_stops": "Khối mới!"
+        },
         "poetry_hoc_spriteSizes": {
+          "poetry_remove_sprite": "Khối mới!",
+          "poetry_set_sprite": "Khối mới!"
+        },
+        "poetry_hoc_spriteSizes_2023": {
           "poetry_remove_sprite": "Khối mới!",
           "poetry_set_sprite": "Khối mới!"
         }

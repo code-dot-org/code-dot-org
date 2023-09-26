@@ -30,6 +30,15 @@
         "courseB_artist_loops_challenge1_2021": {
           "courseB_artist_loops_challenge1_c": "Morat ćeš se `pomaknuti` ili `preskočiti` preko nekoliko istih redaka dvaput."
         },
+        "courseB_artist_loops_challenge1_2023": {
+          "courseB_artist_loops_challenge1_c": "Morat ćeš se `pomaknuti` ili `preskočiti` preko nekoliko istih redaka dvaput."
+        },
+        "csc_bookcovers_project_character1": {
+          "hint1": "Da bi promijenili lokaciju spritea, klikni pribadaču na bloku lokacije, a zatim klikni kamo želiš da ide.\n\n![](https://images.code.org/e3267d2b50f754befc63744be14287ac-image-1633360873408.gif)"
+        },
+        "ecosystems_helloworld_say_2023": {
+          "change_location": "Da bi promijenili lokaciju spritea, klikni pribadaču na bloku lokacije, a zatim klikni kamo želiš da ide.\n\n![](https://images.code.org/e3267d2b50f754befc63744be14287ac-image-1633360873408.gif)"
+        },
         "helloworld_animals_click": {
           "hw_click_sprites": "Kliknite na spriteove dok je program pokrenut."
         },
@@ -51,6 +60,9 @@
         "helloworld_food_click": {
           "hw_click_sprites": "Kliknite na spriteove dok je program pokrenut."
         },
+        "helloworld_food_click_2023": {
+          "hw_click_sprites": "Kliknite na spriteove dok je program pokrenut."
+        },
         "helloworld_food_click_soccer-2022": {
           "hw_click_sprites": "Kliknite na spriteove dok je program pokrenut."
         },
@@ -60,6 +72,9 @@
         "helloworld_food_location": {
           "location_pin_hint": "Da bi promijenili lokaciju spritea, klikni pribadaču na bloku lokacije, a zatim klikni kamo želiš da ide.\n\n![](https://images.code.org/e3267d2b50f754befc63744be14287ac-image-1633360873408.gif)"
         },
+        "helloworld_food_location_2023": {
+          "location_pin_hint": "Da bi promijenili lokaciju spritea, klikni pribadaču na bloku lokacije, a zatim klikni kamo želiš da ide.\n\n![](https://images.code.org/e3267d2b50f754befc63744be14287ac-image-1633360873408.gif)"
+        },
         "helloworld_food_location_soccer-2022": {
           "location_pin_hint": "Da bi promijenili lokaciju spritea, klikni pribadaču na bloku lokacije, a zatim klikni kamo želiš da ide.\n\n![](https://images.code.org/e3267d2b50f754befc63744be14287ac-image-1633360873408.gif)"
         },
@@ -67,6 +82,9 @@
           "location_pin_hint": "Da bi promijenili lokaciju spritea, klikni pribadaču na bloku lokacije, a zatim klikni kamo želiš da ide.\n\n![](https://images.code.org/e3267d2b50f754befc63744be14287ac-image-1633360873408.gif)"
         },
         "helloworld_food_multi": {
+          "storyboard_costume": "Provjerite odgovaraju li kostimi za svaki sprite.\n<xml><block type=\"gamelab_spriteSay\">\n      <title name=\"SPEECH\">Hello, broccoli!</title>\n      <value name=\"SPRITE\">\n        <block type=\"gamelab_allSpritesWithAnimation\">\n          <title name=\"ANIMATION\">\"face_carrot_1\"</title>\n        </block>\n      </value>\n    </block></xml>"
+        },
+        "helloworld_food_multi_2023": {
           "storyboard_costume": "Provjerite odgovaraju li kostimi za svaki sprite.\n<xml><block type=\"gamelab_spriteSay\">\n      <title name=\"SPEECH\">Hello, broccoli!</title>\n      <value name=\"SPRITE\">\n        <block type=\"gamelab_allSpritesWithAnimation\">\n          <title name=\"ANIMATION\">\"face_carrot_1\"</title>\n        </block>\n      </value>\n    </block></xml>"
         },
         "helloworld_food_multi_soccer-2022": {
