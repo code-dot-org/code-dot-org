@@ -163,6 +163,6 @@ export const {
   setSelectedSong,
   setRunIsStarting,
   setCurrentSongMetadata,
-  setShowingAi
+  setShowingAi,
 } = danceSlice.actions;
 export const reducers = {dance: danceSlice.reducer};
