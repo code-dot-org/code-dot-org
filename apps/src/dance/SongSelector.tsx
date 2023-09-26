@@ -1,8 +1,9 @@
 import React, {Component, ChangeEvent} from 'react';
 import {getFilteredSongKeys} from '@cdo/apps/dance/songs';
-import {i18n} from '@cdo/apps/types/locale';
 
 import styles from './SongSelector.module.scss';
+
+const i18n = require('@cdo/locale');
 
 interface SongData {
   title: string;
