@@ -91,6 +91,7 @@ Dance.prototype.init = function (config) {
   }
 
   this.level = config.level;
+  this.usesPreview = !!config.level.usesPreview;
   this.skin = config.skin;
   this.share = config.share;
   this.studioAppInitPromise = new Promise(resolve => {
@@ -116,6 +117,28 @@ Dance.prototype.init = function (config) {
     config.valueTypeTabShapeMap = {[Blockly.BlockValueType.SPRITE]: 'angle'};
 
     this.studioApp_.init(config);
+    this.currentCode = this.studioApp_.getCode();
+    if (this.usesPreview) {
+      this.studioApp_.addChangeHandler(e => {
+        // We want to check if the workspace code changed only when a block has been moved or
+        // if a block has changed.
+        // A move event is fired when a block is dragged and then dropped.
+        if (
+          e.type !== Blockly.Events.BLOCK_MOVE &&
+          e.type !== Blockly.Events.BLOCK_CHANGE
+        ) {
+          return;
+        }
+
+        const newCode = Blockly.getWorkspaceCode();
+        // Only execute preview if the student code has changed and we are not running the program.
+        if (newCode !== this.currentCode && !this.studioApp_.isRunning()) {
+          this.currentCode = newCode;
+          this.preview();
+        }
+      });
+    }
+
     this.studioAppInitPromiseResolve();
 
     const finishButton = document.getElementById('finishButton');
@@ -419,6 +442,37 @@ Dance.prototype.reset = function () {
     getStore().dispatch(showArrowButtons());
     $('#soft-buttons').addClass('soft-buttons-' + softButtonCount);
   }
+  if (this.usesPreview) {
+    this.preview();
+  }
+};
+
+/**
+ * This function is called when `this.usesPreview` is set to true - only blocks
+ * included in the `setup` block are drawn in the visulization column.
+ * Unlike `execute`, `draw` is called only once (not in a loop) so that a static
+ * image is displayed and sound is NOT played.
+ */
+Dance.prototype.preview = async function () {
+  this.nativeAPI.reset();
+  const api = new DanceAPI(this.nativeAPI);
+  const studentCode = this.studioApp_.getCode();
+  const code = danceCode + studentCode;
+
+  const event = {
+    runUserSetup: {code: 'runUserSetup();'},
+  };
+
+  this.hooks = CustomMarshalingInterpreter.evalWithEvents(
+    api,
+    event,
+    code
+  ).hooks;
+
+  const charactersReferenced = this.computeCharactersReferenced(studentCode);
+  await this.nativeAPI.ensureSpritesAreLoaded(charactersReferenced);
+  this.hooks.find(v => v.name === 'runUserSetup').func();
+  this.nativeAPI.p5_.draw();
 };
 
 Dance.prototype.onPuzzleComplete = function (result, message) {
@@ -478,6 +532,9 @@ Dance.prototype.onReportComplete = function (response) {
  * Click the run button.  Start the program.
  */
 Dance.prototype.runButtonClick = async function () {
+  if (this.usesPreview) {
+    this.nativeAPI.reset();
+  }
   var clickToRunImage = document.getElementById('danceClickToRun');
   if (clickToRunImage) {
     clickToRunImage.style.display = 'none';

@@ -688,9 +688,7 @@ module LevelsHelper
       callback: @callback,
       sublevelCallback: @sublevel_callback,
     }
-    dev_with_credentials = rack_env?(:development) && !!CDO.cloudfront_key_pair_id
-    use_restricted_songs = CDO.cdn_enabled || dev_with_credentials || (rack_env?(:test) && ENV['CI'])
-    app_options[:useRestrictedSongs] = use_restricted_songs if @game == Game.dance
+    app_options[:useRestrictedSongs] = @game.use_restricted_songs?
     app_options[:isStartMode] = @is_start_mode || false
 
     if params[:blocks]

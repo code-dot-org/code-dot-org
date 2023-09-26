@@ -1,5 +1,3 @@
-/* eslint-disable import/no-commonjs */
-
 // This is the webpack entry point for all our karma tests, see: karma.conf.js
 //
 // Invocations of `karma start` run this file, which uses KARMA_CLI_FLAGS
@@ -22,7 +20,7 @@ const testType = testType =>
 // `npx karma start --testType=unit`
 if (testType('unit')) {
   describe('unit tests', function () {
-    const testsContext = require.context('./unit', true, /\.[j|t]sx?$/);
+    const testsContext = require.context('./unit', true, /\.[j|t]sx?$/); // eslint-disable-line import/no-commonjs
     let tests = testsContext.keys();
 
     // Invoked by `karma start --entry=./test/unit/gridUtilsTest.js`
@@ -49,7 +47,7 @@ if (testType('unit')) {
 // `npx karma start --testType=integration`
 if (testType('integration')) {
   describe('integration tests', function () {
-    var testsContext = require.context('./integration', false, /Tests?\.js$/);
+    var testsContext = require.context('./integration', false, /Tests?\.js$/); // eslint-disable-line import/no-commonjs
 
     throwOnConsoleErrorsEverywhere();
 
@@ -66,7 +64,7 @@ if (testType('integration')) {
 // `npx karma start --testType=storybook`
 if (testType('storybook')) {
   describe('storybook tests', function () {
-    require('./storybook/renderStoriesTest');
+    require('./storybook/renderStoriesTest'); // eslint-disable-line import/no-commonjs
   });
 }
 

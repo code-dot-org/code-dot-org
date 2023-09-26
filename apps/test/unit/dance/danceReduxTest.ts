@@ -17,7 +17,7 @@ import * as utils from '@cdo/apps/utils';
 import {assert} from 'chai';
 import Sinon from 'sinon';
 import {AppDispatch} from '@cdo/apps/util/reduxHooks';
-import {SongData} from '@cdo/apps/dance/types';
+import {SongData, SongMetadata} from '@cdo/apps/dance/types';
 import {StubFunction} from 'test/types/types';
 
 describe('danceRedux', function () {
@@ -57,6 +57,7 @@ describe('danceRedux', function () {
       defaultSong: string,
       selectedSong: string,
       songData: SongData,
+      songMetadata: SongMetadata,
       queryParams: StubFunction<typeof codeStudioUtils.queryParams>,
       parseSongOptions: StubFunction<typeof songs.parseSongOptions>,
       getSelectedSong: StubFunction<typeof songs.getSelectedSong>,
@@ -64,6 +65,7 @@ describe('danceRedux', function () {
       loadSong: StubFunction<typeof songs.loadSong>,
       unloadSong: StubFunction<typeof songs.unloadSong>,
       fetchSignedCookies: StubFunction<typeof utils.fetchSignedCookies>,
+      loadSongMetadata: StubFunction<typeof songs.loadSongMetadata>,
       onSongSelected: StubFunction<(songId: string) => void>,
       onAuthError: StubFunction<() => void>,
       userManifest: string,
@@ -77,6 +79,16 @@ describe('danceRedux', function () {
       defaultSong = 'default';
       selectedSong = 'selected';
       songData = {};
+      songMetadata = {
+        analysis: [],
+        artist: 'test',
+        bpm: '120',
+        delay: '0',
+        duration: 1,
+        file: 'test',
+        title: 'test',
+        peaks: {},
+      };
 
       parseSongOptions = Sinon.stub(songs, 'parseSongOptions');
       getSelectedSong = Sinon.stub(songs, 'getSelectedSong');
@@ -87,6 +99,7 @@ describe('danceRedux', function () {
       onSongSelected = Sinon.stub();
       queryParams = Sinon.stub(codeStudioUtils, 'queryParams');
       onAuthError = Sinon.stub<[], void>();
+      loadSongMetadata = Sinon.stub(songs, 'loadSongMetadata');
 
       userManifest = 'user-manifest';
       queryParams.returns(userManifest);
@@ -96,6 +109,7 @@ describe('danceRedux', function () {
 
       parseSongOptions.returns(songData);
       getSelectedSong.returns(selectedSong);
+      loadSongMetadata.returns(new Promise(resolve => resolve(songMetadata)));
     });
 
     afterEach(() => {
@@ -158,6 +172,27 @@ describe('danceRedux', function () {
         onAuthError.reset();
         errorCallback(500);
         assert.isFalse(onAuthError.called);
+      });
+
+      it('sets song metadata if no songSelected callback is supplied', async () => {
+        await dispatch(
+          initSongs({
+            useRestrictedSongs,
+            selectSongOptions: {
+              isProjectLevel,
+              freePlay,
+              defaultSong,
+              selectedSong,
+            },
+            onAuthError,
+          })
+        );
+
+        assert.isTrue(loadSongMetadata.calledWithExactly(selectedSong));
+        assert.deepEqual(
+          store.getState().dance.currentSongMetadata,
+          songMetadata
+        );
       });
     });
 
@@ -226,6 +261,23 @@ describe('danceRedux', function () {
         onAuthError.reset();
         secondCallback(500);
         assert.isFalse(onAuthError.called);
+      });
+
+      it('sets song metadata if no songSelected callback is supplied', async () => {
+        dispatch(setSelectedSong(lastSongId));
+        dispatch(setSongData(songData));
+        await dispatch(
+          setSong({
+            songId,
+            onAuthError,
+          })
+        );
+
+        assert.isTrue(loadSongMetadata.calledWithExactly(songId));
+        assert.deepEqual(
+          store.getState().dance.currentSongMetadata,
+          songMetadata
+        );
       });
     });
   });
