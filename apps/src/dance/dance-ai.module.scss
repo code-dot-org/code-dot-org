@@ -56,20 +56,25 @@
     .inputsArea {
       position: absolute;
       width: calc(100% - 170px);
-      height: 134px;
-      top: 128px;
+      height: 190px;
+      top: 72px;
       left: 170px;
 
       .itemContainer {
         background-color: $neutral_dark10;
         border-radius: 4px;
         padding: 12px;
-        height: 110px;
+        height: 166px;
         animation: appear1 2s;
 
         .item {
+          background-size: contain;
+          background-repeat: no-repeat;
+          background-position: center;
           width: 40px;
-          padding: 8px;
+          height: 40px;
+          margin: 8px;
+          float: left;
           cursor: pointer;
         }
       }
@@ -120,8 +125,13 @@
             position: absolute;
             top: 0;
             left: 0;
+            background-size: contain;
+            background-repeat: no-repeat;
+            background-position: center;
             width: 40px;
-            padding: 8px;
+            height: 40px;
+            margin: 8px;
+            pointer-events: all;
           }
         }
       }
