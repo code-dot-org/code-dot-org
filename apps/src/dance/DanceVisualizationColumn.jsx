@@ -1,6 +1,6 @@
 import React from 'react';
 import {getStore} from '../redux';
-import {setShowingAi} from './danceRedux';
+import {setCurrentAiModalField} from './danceRedux';
 import GameButtons from '../templates/GameButtons';
 import ArrowButtons from '../templates/ArrowButtons';
 import BelowVisualization from '../templates/BelowVisualization';
@@ -70,7 +70,7 @@ class DanceVisualizationColumn extends React.Component {
     songData: PropTypes.objectOf(PropTypes.object).isRequired,
     userType: PropTypes.string.isRequired,
     under13: PropTypes.bool.isRequired,
-    showingAi: PropTypes.object,
+    currentAiModalField: PropTypes.object,
   };
 
   state = {
@@ -132,9 +132,9 @@ class DanceVisualizationColumn extends React.Component {
             <ArrowButtons />
           </GameButtons>
           <BelowVisualization />
-          {this.props.showingAi && (
+          {this.props.currentAiModalField && (
             <DanceAiModal
-              onClose={() => getStore().dispatch(setShowingAi(false))}
+              onClose={() => getStore().dispatch(setCurrentAiModalField(false))}
             />
           )}
         </div>
@@ -177,5 +177,5 @@ export default connect(state => ({
   under13: state.currentUser.under13,
   levelIsRunning: state.runState.isRunning,
   levelRunIsStarting: state.dance.runIsStarting,
-  showingAi: state.dance.showingAi,
+  currentAiModalField: state.dance.currentAiModalField,
 }))(DanceVisualizationColumn);
