@@ -401,6 +401,33 @@
         "coursef-2022/The Internet": {
           "name": "Internet"
         },
+        "csd1-2023/What is a Computer?": {
+          "name": "Što je računalo?"
+        },
+        "csd3-2023/Variables": {
+          "name": "Varijable"
+        },
+        "csd3-2023/Sprites": {
+          "name": "Likovi"
+        },
+        "csd3-2023/Text": {
+          "name": "tekst"
+        },
+        "csd3-2023/Conditionals": {
+          "name": "Uvjeti"
+        },
+        "csd3-2023/Functions": {
+          "name": "Funkcije"
+        },
+        "csd6a-2023/Functions": {
+          "name": "Funkcije"
+        },
+        "csd6b-2023/Functions": {
+          "name": "Funkcije"
+        },
+        "csd7-2023/Introduction to AI Lab": {
+          "name": "Uvod u AI laboratorij"
+        },
         "coursea-2023/Happy Maps": {
           "name": "Vesele karte"
         },
