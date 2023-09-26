@@ -110,7 +110,7 @@ class Grade:
 
         for row in tsv_data:
             if row["Grade"] not in VALID_GRADES:
-                raise InvalidResponseError(f"invalid grade value: {row['Grade']}")
+                raise InvalidResponseError(f"invalid grade value: {repr(row['Grade'])}")
 
     def get_consensus_response(self, choices, student_id):
         from collections import Counter
