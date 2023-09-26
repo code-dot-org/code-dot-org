@@ -2631,6 +2631,13 @@
         "pause_and_think_online/pre-express/2022": {
           "type": "Videó"
         },
+        "ethics_and_ai_privacy_the_future_of_work/ai-ethics/2023": {
+          "type": "Videó"
+        },
+        "how_ai_works_large_language_models/ai-ethics/2023": {
+          "url": "https://www.youtube.com/watch?v=X-AWdfSFCHQ",
+          "type": "Videó"
+        },
         "cs_connections_landing_page/csc-adaptations/2023": {
           "name": "CS kapcsolatok céloldala",
           "url": "https://code.org/educate/csc"
@@ -3079,6 +3086,544 @@
         "poem_app_example/poetry/2023": {
           "name": "Példa verses alkalmazásra",
           "url": "https://studio.code.org/projects/poetry_hoc/j3TXDXNhz0XEsH4Xjk_rT9buBHYCplirIKtY_Pg_bYo"
+        },
+        "teacher_forum/csd/2023": {
+          "name": "Tanári fórum"
+        },
+        "the_problem_solving_process_2/csd/2023": {
+          "name": "A probléma-megoldási folyamat"
+        },
+        "intro_to_problem_solving/csd/2023": {
+          "name": "Bevezetés a problémamegoldásba"
+        },
+        "problem_solving_process_1/csd/2023": {
+          "type": "Videó"
+        },
+        "the_problem_solving_process/csd/2023": {
+          "type": "Videó"
+        },
+        "the_problem_solving_process_1/csd/2023": {
+          "name": "A probléma-megoldási folyamat"
+        },
+        "the_problem_solving_process_5/csd/2023": {
+          "name": "A probléma-megoldási folyamat"
+        },
+        "exploring_problem_solving/csd/2023": {
+          "name": "A Problémamegoldás Felfedezése"
+        },
+        "what_is_a_computer/csd/2023": {
+          "type": "Videó"
+        },
+        "what_is_a_computer_/csd/2023": {
+          "name": "Mi az a számítógép?"
+        },
+        "input_and_output/csd/2023": {
+          "name": "Bemenet és Kimenet"
+        },
+        "input_and_output_1/csd/2023": {
+          "name": "Bemenet és Kimenet"
+        },
+        "input_and_output_2/csd/2023": {
+          "name": "Bemenet és Kimenet"
+        },
+        "what_do_computers_do/csd/2023": {
+          "type": "Videó"
+        },
+        "apps_and_problem_solving/csd/2023": {
+          "name": "Appok és Problémamegoldás"
+        },
+        "apps_and_problem_solving_1/csd/2023": {
+          "name": "Appok és Problémamegoldás",
+          "type": "Társ értékelése"
+        },
+        "apps_and_problem_solving_2/csd/2023": {
+          "name": "Appok és Problémamegoldás",
+          "type": "Rubrika"
+        },
+        "computer_science_practices/csd/2023": {
+          "type": "Tükrözés"
+        },
+        "project_-_propose_an_app/csd/2023": {
+          "name": "Projekt - Javasolj egy Alkalmazást"
+        },
+        "html_tags/csd/2023": {
+          "name": "HTML-címkék"
+        },
+        "intro_to_html/csd/2023": {
+          "name": "Bevezetés a HTML-be"
+        },
+        "intro_to_web_lab_part_2/csd/2023": {
+          "type": "Videó"
+        },
+        "pair_programming/csd/2023": {
+          "name": "Páros programozás",
+          "type": "Videó"
+        },
+        "video_intro_to_web_lab_part_1/csd/2023": {
+          "type": "Videó"
+        },
+        "formatting_html/csd/2023": {
+          "name": "HTML formázás"
+        },
+        "headings_and_paragraphs/csd/2023": {
+          "name": "Címsorok és bekezdések"
+        },
+        "lists/csd/2023": {
+          "name": "Listák"
+        },
+        "video_debugging/csd/2023": {
+          "name": "Videó: Hibaelhárítás",
+          "type": "Videó"
+        },
+        "video_pair_programming/csd/2023": {
+          "name": "Videó: Páros programozás",
+          "type": "Videó"
+        },
+        "html_web_page/csd/2023": {
+          "type": "Rubrika"
+        },
+        "html_web_page_1/csd/2023": {
+          "type": "Társ értékelése"
+        },
+        "html_web_page_2/csd/2023": {
+          "type": "Projektútmutató"
+        },
+        "digital_footprint/csd/2023": {
+          "name": "Digitális Lábnyom"
+        },
+        "social_sleuth/csd/2023": {
+          "name": "Közösségi nyomozó"
+        },
+        "social_sleuth_1/csd/2023": {
+          "name": "Közösségi nyomozó"
+        },
+        "intro_to_css_-_part_1/csd/2023": {
+          "type": "Videó"
+        },
+        "intro_to_css_-_part_2/csd/2023": {
+          "type": "Videó"
+        },
+        "styling_text_with_css/csd/2023": {
+          "name": "Szöveg Stilizálása CSS-ben"
+        },
+        "your_personal_style/csd/2023": {
+          "type": "Rubrika"
+        },
+        "your_personal_style_1/csd/2023": {
+          "type": "Társ értékelése"
+        },
+        "your_personal_style_2/csd/2023": {
+          "type": "Projektútmutató"
+        },
+        "creative_commons_overview/csd/2023": {
+          "type": "Videó"
+        },
+        "creative_commons_search/csd/2023": {
+          "name": "Creative Commons keresés"
+        },
+        "images_in_html/csd/2023": {
+          "name": "Képek HTML-ben"
+        },
+        "styling_elements_with_css/csd/2023": {
+          "name": "Elemek stilizálása CSS-el"
+        },
+        "personal_web_page_-_prepare/csd/2023": {
+          "type": "Projektútmutató"
+        },
+        "personal_web_page/csd/2023": {
+          "type": "Társ értékelése"
+        },
+        "personal_web_page_-_reflect/csd/2023": {
+          "type": "Projektútmutató"
+        },
+        "personal_web_page_1/csd/2023": {
+          "type": "Rubrika"
+        },
+        "publishing_your_website/csd/2023": {
+          "name": "Webhelyének közzététele",
+          "type": "Videó"
+        },
+        "video_managing_disagreement/csd/2023": {
+          "name": "Videó: Nézeteltérés kezelése",
+          "type": "Videó"
+        },
+        "video_teamwork/csd/2023": {
+          "name": "Videó: Csoportmunka",
+          "type": "Videó"
+        },
+        "video_how_search_works/csd/2023": {
+          "type": "Videó"
+        },
+        "css_classes/csd/2023": {
+          "name": "CSS osztályok"
+        },
+        "plan_a_multi-page_website/csd/2023": {
+          "type": "Projektútmutató"
+        },
+        "website_for_a_purpose/csd/2023": {
+          "type": "Rubrika"
+        },
+        "hyperlinks/csd/2023": {
+          "name": "Hiperhivatkozások"
+        },
+        "linking_pages/csd/2023": {
+          "name": "Oldalak összekapcsolása"
+        },
+        "website_for_a_purpose_-_reflect/csd/2023": {
+          "type": "Projektútmutató"
+        },
+        "website_for_a_purpose_1/csd/2023": {
+          "type": "Társ értékelése"
+        },
+        "drawing_shapes/csd/2023": {
+          "name": "Síkidomok rajzolása"
+        },
+        "drawing_in_game_lab_-_part_1/csd/2023": {
+          "type": "Videó"
+        },
+        "drawing_in_game_lab_-_part_2/csd/2023": {
+          "type": "Videó"
+        },
+        "drawing_shapes_1/csd/2023": {
+          "name": "Síkidomok rajzolása"
+        },
+        "introduction_to_variables/csd/2023": {
+          "type": "Videó"
+        },
+        "variables/csd/2023": {
+          "name": "változók"
+        },
+        "variables_1/csd/2023": {
+          "name": "változók",
+          "type": "Videó"
+        },
+        "variables_2/csd/2023": {
+          "name": "változók"
+        },
+        "random_numbers/csd/2023": {
+          "name": "Véletlen számok"
+        },
+        "random_numbers_1/csd/2023": {
+          "name": "Véletlen számok"
+        },
+        "robot_faces/csd/2023": {
+          "type": "Rubrika"
+        },
+        "introduction_to_sprites/csd/2023": {
+          "type": "Videó"
+        },
+        "sprites/csd/2023": {
+          "name": "sprite-ok"
+        },
+        "sprites_1/csd/2023": {
+          "name": "sprite-ok"
+        },
+        "the_animation_tab/csd/2023": {
+          "type": "Videó"
+        },
+        "sprite_properties/csd/2023": {
+          "name": "Sprite tulajdonságok"
+        },
+        "sprite_properties_1/csd/2023": {
+          "name": "Sprite tulajdonságok"
+        },
+        "sprite_properties_needs_updating_/csd/2023": {
+          "name": "Sprite tulajdonságok",
+          "type": "Videó"
+        },
+        "text/csd/2023": {
+          "name": "szöveg"
+        },
+        "captioned_scenes/csd/2023": {
+          "type": "Rubrika"
+        },
+        "flipbook_example_-_by_marnic_bos/csd/2023": {
+          "type": "Videó"
+        },
+        "introduction_to_the_draw_loop/csd/2023": {
+          "type": "Videó"
+        },
+        "sprite_movement/csd/2023": {
+          "type": "Videó"
+        },
+        "animated_scene/csd/2023": {
+          "type": "Rubrika"
+        },
+        "boolean_expressions/csd/2023": {
+          "name": "Logikai kifejezések",
+          "type": "Videó"
+        },
+        "conditional_statements/csd/2023": {
+          "type": "Videó"
+        },
+        "conditionals/csd/2023": {
+          "name": "Feltételek"
+        },
+        "if_statements/csd/2023": {
+          "name": "Ha nyilatkozatok"
+        },
+        "keyboard_input/csd/2023": {
+          "name": "Billentyűzetbemenet"
+        },
+        "if-else_statements/csd/2023": {
+          "name": "Ha-egyébként nyilatkozatok"
+        },
+        "if_else_statements/csd/2023": {
+          "type": "Videó"
+        },
+        "interactive_card_3/csd/2023": {
+          "type": "Rubrika"
+        },
+        "velocity/csd/2023": {
+          "name": "Sebesség",
+          "type": "Videó"
+        },
+        "velocity_1/csd/2023": {
+          "name": "Sebesség"
+        },
+        "velocity_2/csd/2023": {
+          "name": "Sebesség"
+        },
+        "side_scroller/csd/2023": {
+          "name": "Oldalsó görgető",
+          "type": "Rubrika"
+        },
+        "side_scroller_1/csd/2023": {
+          "name": "Oldalsó görgető"
+        },
+        "velocity_and_the_counter_pattern/csd/2023": {
+          "name": "Sebesség és ellentétes mód"
+        },
+        "collisions/csd/2023": {
+          "name": "Ütközések"
+        },
+        "flyer_game/csd/2023": {
+          "name": "Repülős játék",
+          "type": "Rubrika"
+        },
+        "flyer_game_1/csd/2023": {
+          "name": "Repülős játék"
+        },
+        "functions/csd/2023": {
+          "name": "Függvények",
+          "type": "Videó"
+        },
+        "functions_1/csd/2023": {
+          "name": "Függvények"
+        },
+        "functions_2/csd/2023": {
+          "name": "Függvények"
+        },
+        "make_your_own_game_3/csd/2023": {
+          "type": "Rubrika"
+        },
+        "the_design_thinking_process/csd/2023": {
+          "type": "Videó"
+        },
+        "paper_prototypes/csd/2023": {
+          "type": "Rubrika"
+        },
+        "design_mode/csd/2023": {
+          "name": "Tervező mód"
+        },
+        "what_s_for_lunch_testing/csd/2023": {
+          "type": "Videó"
+        },
+        "intro_to_design_mode/csd/2023": {
+          "name": "Bevezető a Tervező módhoz",
+          "type": "Videó"
+        },
+        "events_in_app_lab/csd/2023": {
+          "type": "Videó"
+        },
+        "events_in_app_lab_1/csd/2023": {
+          "type": "Videó"
+        },
+        "app_presentation/csd/2023": {
+          "type": "Rubrika"
+        },
+        "representing_information/csd/2023": {
+          "name": "Az információ ábrázolása"
+        },
+        "representing_images/csd/2023": {
+          "name": "Képek ábrázolása"
+        },
+        "binary_and_data/csd/2023": {
+          "type": "Videó"
+        },
+        "combining_representations/csd/2023": {
+          "name": "Ábrázolások kombinálása"
+        },
+        "keeping_data_secret/csd/2023": {
+          "name": "Adatok titokban tartása"
+        },
+        "create_a_representation_2/csd/2023": {
+          "type": "Rubrika"
+        },
+        "amazon_and_data/csd/2023": {
+          "type": "Videó"
+        },
+        "netflix_and_data/csd/2023": {
+          "type": "Videó"
+        },
+        "waze_and_data/csd/2023": {
+          "type": "Videó"
+        },
+        "video_impact_on_society/csd/2023": {
+          "name": "Videó: Hatás a társadalomra",
+          "type": "Videó"
+        },
+        "video_machine_learning/csd/2023": {
+          "name": "Videó: Gépi tanulás",
+          "type": "Videó"
+        },
+        "video_training_data_and_bias/csd/2023": {
+          "name": "Videó: Képzési adatok és torzítások",
+          "type": "Videó"
+        },
+        "make_a_recommendation/csd/2023": {
+          "type": "Társ értékelése"
+        },
+        "make_a_recommendation_1/csd/2023": {
+          "type": "Rubrika"
+        },
+        "make_a_recommendation_2/csd/2023": {
+          "type": "Projektútmutató"
+        },
+        "circuits_and_logic/csd/2023": {
+          "type": "Videó"
+        },
+        "board_events/csd/2023": {
+          "name": "Táblás események"
+        },
+        "board_events_1/csd/2023": {
+          "name": "Táblás események"
+        },
+        "the_counter_pattern/csd/2023": {
+          "type": "Videó"
+        },
+        "if_statements_1/csd/2023": {
+          "name": "Ha nyilatkozatok",
+          "type": "Videó"
+        },
+        "rubric_-_field_collector_app/csd/2023": {
+          "type": "Rubrika"
+        },
+        "color_leds/csd/2023": {
+          "name": "Színes LED-ek"
+        },
+        "input_output_devices/csd/2023": {
+          "type": "Videó"
+        },
+        "rubric_-_human_device_interaction/csd/2023": {
+          "type": "Rubrika"
+        },
+        "analog_sensors/csd/2023": {
+          "name": "Analóg szenzorok"
+        },
+        "accelerometer_events/csd/2023": {
+          "name": "Gyorsulást mérő események"
+        },
+        "introduction_to_arrays/csd/2023": {
+          "type": "Videó"
+        },
+        "making_music/csd/2023": {
+          "name": "Zene Készítése"
+        },
+        "playing_notes/csd/2023": {
+          "name": "Hangjegyek lejátszása"
+        },
+        "functions_with_parameters/csd/2023": {
+          "name": "Paraméteres függvények",
+          "type": "Videó"
+        },
+        "student_rubric_-_interactive_art/csd/2023": {
+          "type": "Rubrika"
+        },
+        "circuits_and_leds/csd/2023": {
+          "name": "Áramkörök és LED-ek"
+        },
+        "prototype_an_innovation/csd/2023": {
+          "type": "Rubrika"
+        },
+        "teacher_forum_1/csd/2023": {
+          "name": "Tanári fórum"
+        },
+        "board_events_2/csd/2023": {
+          "name": "Táblás események"
+        },
+        "board_events_3/csd/2023": {
+          "name": "Táblás események"
+        },
+        "the_counter_pattern_2/csd/2023": {
+          "type": "Videó"
+        },
+        "rubric_-_field_collector_app_1/csd/2023": {
+          "type": "Rubrika"
+        },
+        "rubric_-_human_device_interaction_1/csd/2023": {
+          "type": "Rubrika"
+        },
+        "accelerometer_events_1/csd/2023": {
+          "name": "Gyorsulást mérő események"
+        },
+        "functions_3/csd/2023": {
+          "name": "Függvények"
+        },
+        "student_rubric_-_interactive_pet/csd/2023": {
+          "type": "Rubrika"
+        },
+        "prototype_an_innovation_2/csd/2023": {
+          "type": "Rubrika"
+        },
+        "the_problem_solving_process_4/csd/2023": {
+          "name": "A probléma-megoldási folyamat"
+        },
+        "ai_what_is_machine_learning_/csd/2023": {
+          "type": "Videó"
+        },
+        "seeing_ai/csd/2023": {
+          "name": "Látva AI",
+          "type": "Videó"
+        },
+        "finding_patterns_in_data/csd/2023": {
+          "type": "Videó"
+        },
+        "introduction_to_ai_lab_1/csd/2023": {
+          "type": "Videó"
+        },
+        "training_and_testing_in_ai_lab/csd/2023": {
+          "type": "Videó"
+        },
+        "ai_training_data_bias/csd/2023": {
+          "type": "Videó"
+        },
+        "model_cards_in_ai_lab/csd/2023": {
+          "type": "Videó"
+        },
+        "if-statements_in_app_lab/csd/2023": {
+          "type": "Videó"
+        },
+        "numerical_data_in_ai_lab_2/csd/2023": {
+          "type": "Videó"
+        },
+        "ethics_ai_equal_access_and_algorithmic_bias/csd/2023": {
+          "type": "Videó"
+        },
+        "create_an_ml_app/csd/2023": {
+          "type": "Rubrika"
+        },
+        "creating_a_survey_in_google_forms/csd/2023": {
+          "type": "Videó"
+        },
+        "cleaning_survey_data/csd/2023": {
+          "type": "Videó"
+        },
+        "view_and_download_survey_data/csd/2023": {
+          "type": "Videó"
+        },
+        "design_an_ai_app_1/csd/2023": {
+          "type": "Rubrika"
         },
         "all_resources/coursea/2023": {
           "url": "/s/coursea-2023/források"
