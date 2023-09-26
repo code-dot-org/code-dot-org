@@ -42,11 +42,6 @@
     height: 100%;
     position: relative;
 
-    .item {
-      width: 40px;
-      padding: 8px;
-    }
-
     .textArea {
       position: absolute;
       width: 100%;
@@ -70,6 +65,12 @@
         padding: 12px;
         height: 110px;
         animation: appear1 2s;
+
+        .item {
+          width: 40px;
+          padding: 8px;
+          cursor: pointer;
+        }
       }
     }
 
@@ -118,6 +119,8 @@
             position: absolute;
             top: 0;
             left: 0;
+            width: 40px;
+            padding: 8px;
           }
         }
       }
