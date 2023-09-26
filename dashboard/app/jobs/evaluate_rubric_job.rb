@@ -24,7 +24,8 @@ class EvaluateRubricJob < ApplicationJob
     assess_py = PyCall.import_module("assess")
 
     lesson_s3_name = 'CSD-2022-U3-L17'
-    code = read_user_code(user, script_level)
+    channel_id = get_channel_id(user, script_level)
+    code = read_user_code(channel_id)
     prompt = read_file_from_s3(lesson_s3_name, 'system_prompt.txt')
     rubric = read_file_from_s3(lesson_s3_name, 'standard_rubric.csv')
     api_key = ENV['OPENAI_API_KEY']
@@ -55,7 +56,7 @@ class EvaluateRubricJob < ApplicationJob
     end
   end
 
-  private def read_user_code(user, script_level)
+  private def get_channel_id(user, script_level)
     # get the user's storage id from the database
     user_storage_id = storage_id_for_user_id(user.id)
 
@@ -65,8 +66,10 @@ class EvaluateRubricJob < ApplicationJob
       user_storage_id,
       script_level.script_id
     )
-    channel_id = channel_token.channel
+    channel_token.channel
+  end
 
+  private def read_user_code(channel_id)
     # fetch the user's code from S3
     source_data = SourceBucket.new.get(channel_id, "main.json")
     JSON.parse(source_data[:body].string)['source']
