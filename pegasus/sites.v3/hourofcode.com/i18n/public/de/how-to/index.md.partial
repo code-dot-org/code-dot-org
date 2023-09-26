@@ -27,7 +27,7 @@ Mit Hour of Code können Lernende einfach und unterhaltsam an die Informatik her
 
 <a id="how-to-video"></a>
 
-## Sehen Sie sich die Videoanleitung zur Hour of Code an <iframe width="500" height="255" src="//www.youtube.com/embed/SrnvvWDm73k" frameborder="0" allowfullscreen></iframe> 
+## Sehen Sie sich die Videoanleitung zur Hour of Code an <iframe width="500" height="255" src="https://www.youtube-nocookie.com/embed/SrnvvWDm73k" frameborder="0" allowfullscreen></iframe> 
 
 * * *
 
@@ -113,7 +113,7 @@ Es ist kein Problem, wenn Sie und Ihre SchülerInnen bisher überhaupt nichts mi
 
 Erklären Sie den SchülerInnen, wie sie ihre Aktivität finden 
 
-- Write the tutorial link on a whiteboard. Find the link listed on the [information for your selected tutorial]({{ urls/learn }}).
+- Schreiben Sie den Link zum Tutorial auf ein Whiteboard. Suchen Sie den Link, der in den [Informationen für Ihr ausgewähltes Tutorial]({{ urls/learn }})aufgeführt ist.
 
 Wenn Ihren SchülerInnen etwas schwerfällt, können Sie sagen: 
 
@@ -153,6 +153,6 @@ Was mache ich, wenn ein Schüler/eine Schülerin früher fertig ist?
 
 ### Was kommt nach der Hour of Code?
 
-Computer science doesn’t have to end with the Hour of Code! [Learn how](/beyond) to bring CS to your school and students.
+Informatik muss nicht mit der Hour of Code enden! [Erfahren Sie](/beyond) , wie Sie Informatik an Ihre Schule und Ihre Schüler bringen können.
 
 {{ signup_button }}

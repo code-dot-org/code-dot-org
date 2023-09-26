@@ -25,7 +25,7 @@ title: अवर ऑफ कोड मार्गदर्शन कसे क�
 
 <a id="how-to-video"></a>
 
-## 1. अवर ऑफ कोड कसा करावा याचा व्हिडीओ पहा <iframe width="500" height="255" src="//www.youtube.com/embed/SrnvvWDm73k" frameborder="0" allowfullscreen></iframe> 
+## 1. अवर ऑफ कोड कसा करावा याचा व्हिडीओ पहा <iframe width="500" height="255" src="https://www.youtube-nocookie.com/embed/SrnvvWDm73k" frameborder="0" allowfullscreen></iframe> 
 
 * * *
 

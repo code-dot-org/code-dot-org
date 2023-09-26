@@ -293,6 +293,10 @@ fr:
   call_to_action_register_early_access: Inscrivez-vous pour un accès anticipé
   call_to_action_open_positions: Afficher les postes vacants
   call_to_action_get_guide: Téléchargez le guide
+  call_to_action_donate_to_cdo: Faire un don à Code.org
+  call_to_action_start_fundraiser: Lancer une collecte de fonds
+  call_to_action_view_donation_policy: Voir la politique de dons
+  call_to_action_view_donate_bitpay: Faites un don avec BitPay
   aria_label_call_to_action_afe: En savoir plus sur Amazon Future Engineer
   aria_label_call_to_action_teaching_csf: Lancez le programme d'apprentissage professionnel
     Teaching Computer Science Fundamentals
@@ -403,6 +407,7 @@ fr:
   curriculum_name_csp: Principes de l'informatique
   curriculum_name_csc: Connexions en l'Informatique
   curriculum_name_csa: Sciences informatiques A
+  curriculum_name_csa_ai: Pseudoloc-Šôƒţŵàŕé Éñĝîñééŕîñĝ ⅋ Çôɱþûţéŕ Ṽîšîôñ
   curriculum_name_csc_02: Tout module du programme de connexion en informatique
   curriculum_name_ai: L’IA et l'apprentissage automatique
   curriculum_name_artificial_intelligence: Intelligence artificielle (IA)
@@ -487,6 +492,12 @@ fr:
     d'animations, de jeux et de systèmes informatiques physiques.
   curriculum_desc_csp: Cours d'introduction au lycée gratuit, approuvé par AP® CSP,
     qui initie les étudiants aux concepts fondamentaux de l'informatique.
+  curriculum_desc_csa_ai_long: 'Ce module post-AP CSA en deux chapitres offre aux
+    lycéens une expérience pratique des outils de développement logiciel professionnels,
+    notamment GitHub et GitHub Copilot, et leur donne les compétences pratiques nécessaires
+    pour développer un programme de vision par ordinateur. '
+  curriculum_desc_csa_ai_short: Ce module post-AP® CSA offre aux lycéens une expérience
+    pratique des outils de développement logiciel professionnels.
   collection_hardware: Concentrez-vous sur le matériel
   collection_hardware_desc: Permet aux étudiants d'utiliser des données et des appareils
     physiques pour résoudre des problèmes.
@@ -563,6 +574,7 @@ fr:
   module_duration_2_hrs: 2 heures
   module_duration_3_hrs: 3 heures
   module_duration_5_hrs: 5 heures
+  module_duration_5_hrs_plus: Plus de 5 heures
   module_duration_8_hrs: 8 heures
   module_duration_20_hrs: 20 heures
   module_duration_35_hrs: 35 heures
@@ -645,6 +657,7 @@ fr:
   heading_these_lessons_will: 'Ces leçons permettront de :'
   heading_explore_curriculum_catalog: Découvrez tous nos cours dans le catalogue des
     programmes
+  heading_csa_ai: Vous recherchez des choses à faire après l'examen AP® ?
   professional_learning_section_desc: Obtenez le soutien dont vous avez besoin pour
     vous préparer à enseigner. Les enseignants l'adorent, plus de 90 % d'entre eux
     le considèrent comme le meilleur développement professionnel de tous les temps !
@@ -679,6 +692,23 @@ fr:
     à toutes vos questions concernant le démarrage de l'enseignement avec Code.org.
     Vous pouvez également demander à d'autres enseignants de partager leur expérience
     sur nos forums d'enseignants.
+  subscribe_form_section_title: Abonnez-vous aux mises à jour
+  subscribe_form_section_desc_csa: Inscrivez-vous pour recevoir des e-mails mensuels
+    sur AP® Computer Science A de Code.org et recevoir des rappels, des conseils et
+    des mises à jour utiles directement dans votre boîte de réception.
+  subscribe_form_section_desc_csc: Inscrivez-vous pour recevoir des e-mails mensuels
+    sur les connexions informatiques de Code.org et recevoir des rappels, des conseils
+    et des mises à jour utiles directement dans votre boîte de réception.
+  subscribe_form_section_desc_csd: Inscrivez-vous pour recevoir des courriels mensuels
+    sur les découvertes informatiques de Code.org et recevoir des rappels, des conseils
+    et des mises à jour utiles directement dans votre boîte de réception.
+  subscribe_form_section_desc_csf: Inscrivez-vous pour recevoir des courriels mensuels
+    sur les principes fondamentaux de l'informatique de Code.org et recevoir des rappels,
+    des conseils et des mises à jour utiles directement dans votre boîte de réception.
+  subscribe_form_section_desc_csp: Inscrivez-vous pour recevoir des e-mails mensuels
+    sur les principes informatiques de Code.org et recevoir des rappels, des conseils
+    et des mises à jour utiles directement dans votre boîte de réception.
+  subscribe_form_section_unsubscribe: Vous pouvez vous désinscrire à tout moment.
   blockchain_hero_heading: Comment fonctionne la blockchain
   blockchain_hero_desc: Plongez dans le monde de la blockchain avec « Comment fonctionne
     la blockchain », notre nouvelle série de vidéos et les leçons qui l'accompagnent !
@@ -785,6 +815,9 @@ fr:
     leçon est associée à une seule vidéo de la série, qui permet d'approfondir les
     concepts présentés dans les vidéos.
   ai_curriculum_btn_aria_label_04: Découvrez les leçons sur le fonctionnement de l'IA
+  ai_curriculum_grades_05: 'Niveaux scolaires : 9-12'
+  ai_curriculum_btn_aria_label_05: Explorez le module Génie logiciel et vision par
+    ordinateur
   ai_carousel_heading: 'Ce que les enseignants disent à propos de l''IA avec Code.org :'
   ai_carousel_quote_01: Cette leçon a également permis à mes élèves de constater qu'il
     existe un élément d'opinion dans les systèmes de classification. Plus tard, lorsque
@@ -927,6 +960,7 @@ fr:
     à partir de LLM tels que ChatGPT, du débutant au confirmé. Comprend des instructions
     de démarrage pour ceux qui ne font que s'y plonger, ainsi que des outils avancés
     pour ceux qui cherchent à maximiser leur potentiel.
+  ai_pl_101_resources_3: L'IA invite à transformer l'apprentissage des élèves
   how_ai_works_hero_heading: Comment fonctionne l'IA
   how_ai_works_hero_desc: Plongez dans le monde de l'IA avec « Comment fonctionne
     l'IA », notre série de vidéos et les leçons qui l'accompagnent !
@@ -1369,8 +1403,8 @@ fr:
     Animation
   csp_page_curriculum_glance_devices: Laptop, Chromebook
   csp_page_curriculum_glance_tools: Laboratoire d'applications
-  csp_page_curriculum_glance_professional_learning: Facilitator-led Workshops, Self-paced
-    Modules
+  csp_page_curriculum_glance_professional_learning: Ateliers dirigés par un animateur,
+    modules à suivre à votre rythme
   csp_page_curriculum_glance_professional_languages: Anglais
   csp_page_curriculum_glance_professional_accessibility_features: Text-to-speech,
     Closed captioning, Immersive reader
@@ -1499,8 +1533,8 @@ fr:
   csd_page_curriculum_glance_devices: Laptop, Chromebook
   csd_page_curriculum_glance_tools: Laboratoire d'applications, Laboratoire de jeux,
     Laboratoire d'IA, Laboratoire Web
-  csd_page_curriculum_glance_professional_learning: Facilitator-led Workshops, Self-paced
-    Modules
+  csd_page_curriculum_glance_professional_learning: Ateliers dirigés par un animateur,
+    modules à suivre à votre rythme
   csd_page_curriculum_glance_professional_languages: Anglais
   csd_page_curriculum_glance_professional_accessibility_features: Text-to-speech,
     Closed captioning, Immersive reader
@@ -1657,8 +1691,8 @@ fr:
     et design, Conception d'applications
   csf_page_curriculum_glance_devices: Ordinateur portable, Chromebook, tablette
   csf_page_curriculum_glance_tools: Sprite Lab, Play Lab
-  csf_page_curriculum_glance_professional_learning: Facilitator-led Workshops, Self-paced
-    Modules
+  csf_page_curriculum_glance_professional_learning: Ateliers dirigés par un animateur,
+    modules à suivre à votre rythme
   csf_page_curriculum_glance_languages: arabe, bahasa indonésien, catalan, chinois
     simplifié, chinois traditionnel, tchèque, français, allemand, hindi, italien,
     japonais, coréen, kannada, malais, marathi, mongol, polonais, portugais-BR, roumain,
@@ -1809,6 +1843,41 @@ fr:
   csa_page_faq_answer_08_02: For more information about the values that guided our
     work, please see our [curriculum values](%{curriculum_values_url}) and our [professional
     learning values](%{pl_values_url}).
+  donate_page_top_heading: Participez au financement de notre mission
+  donate_page_top_desc: Chaque don contribue à la mission de Code.org d'élargir l'accès
+    à l'enseignement de l'informatique. Nous vous proposons plusieurs façons de faire
+    un don et de faire une différence.
+  donate_page_fundraise_title: Collectez des fonds pour Code.org
+  donate_page_fundraise_desc: Aidez à collecter des fonds pour Code.org ! Chaque élève
+    de chaque école devrait avoir la possibilité d'apprendre l'informatique.
+  donate_page_other_ways_title: Autres façons de donner
+  donate_page_other_ways_desc: Explorez les différentes méthodes de contribution et
+    trouvez l'option qui vous convient le mieux. Chaque geste, petit ou grand, fait
+    avancer notre mission.
+  donate_page_501c3: Code.org est enregistré en tant qu'organisation publique à but
+    non lucratif 501 (c) (3). Les contributions à Code.org sont déductibles des impôts
+    dans la mesure permise par la loi. Le numéro d'identification fiscale de Code.org
+    est le 46-0858543.
+  donate_page_donation_policy_title: Comprendre notre politique en matière de dons
+  donate_page_donation_policy_desc: Découvrez comment nous gérons et répartissons
+    vos contributions.
+  donate_tabs_tab_label_daf_direct: DAF Direct
+  donate_tabs_tab_label_amazon: Amazon
+  donate_tabs_tab_label_bitpay: BitPay
+  donate_tabs_tab_label_employee_match: Employee Match
+  donate_tabs_daf_direct_title: Faites un don via DAF Direct
+  donate_tabs_daf_direct_desc: Faites un don par le biais de votre fonds conseillé
+    par un donateur auprès de Fidelity Charitable, Schwab Charitable ou BNY Mellon
+    et faites votre recommandation de subvention à Code.org via le formulaire en ligne
+    de DAF Direct.
+  donate_tabs_amazon_title: Faites un don via Amazon
+  donate_tabs_amazon_desc: Faites un don directement en utilisant votre compte Amazon.
+    En quelques clics, contribuez facilement à la mission de Code.org et contribuez
+    à l'avenir de l'enseignement de l'informatique.
+  donate_tabs_bitpay_title: Faites un don avec Crypto via BitPay
+  donate_tabs_bitpay_desc: Profitez de l'avenir des dons grâce aux cryptomonnaies.
+    Grâce à BitPay, votre monnaie numérique peut directement soutenir les efforts
+    de Code.org pour développer l'enseignement de l'informatique.
   hoc_live: Lévènement "Une heure de code" en direct
   hoc_live_sign_up_title: S'inscrire à "Une heure de Code" en direct
   hoc_live_learn_title: Apprenez avec L'Heure du code en direct

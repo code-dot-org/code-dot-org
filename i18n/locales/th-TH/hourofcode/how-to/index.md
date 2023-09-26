@@ -25,7 +25,7 @@ title: วิธีแนะนำการใช้งาน Hour of Code
 
 <a id="how-to-video"></a>
 
-## 1. ดูวิดีโอการใช้งาน Hour of Code <iframe width="500" height="255" src="//www.youtube.com/embed/SrnvvWDm73k" frameborder="0" allowfullscreen></iframe> 
+## 1. ดูวิดีโอการใช้งาน Hour of Code <iframe width="500" height="255" src="https://www.youtube-nocookie.com/embed/SrnvvWDm73k" frameborder="0" allowfullscreen></iframe> 
 
 * * *
 
@@ -111,7 +111,7 @@ Invite a [local volunteer]({{ urls/volunteer_local }}) to inspire your students 
 
 ให้นักเรียนไปสู่กิจกรรม
 
-- Write the tutorial link on a whiteboard. Find the link listed on the [information for your selected tutorial]({{ urls/learn }}).
+- เขียนลิงก์การกวดวิชาบนไวท์บอร์ดค้นหาลิงก์ที่แสดงไว้ใน [ข้อมูลสำหรับการสอน]({{ urls/learn }})ที่คุณเลือก
 
 เมื่อนักเรียนของคุณพบปัญหา มันโอเคที่จะตอบว่า:
 
@@ -151,6 +151,6 @@ Invite a [local volunteer]({{ urls/volunteer_local }}) to inspire your students 
 
 ### จะทำอะไรต่อหลังจาก Hour of Code?
 
-Computer science doesn’t have to end with the Hour of Code! [Learn how](/beyond) to bring CS to your school and students.
+วิทยาการคอมพิวเตอร์ไม่จำเป็นต้องจบลงด้วย Hour of Code! [เรียนรู้](/beyond) วิธีนำ CS มาสู่โรงเรียนและนักเรียนของคุณ
 
 {{ signup_button }}

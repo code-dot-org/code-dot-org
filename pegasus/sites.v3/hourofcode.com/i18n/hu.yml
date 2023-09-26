@@ -290,6 +290,10 @@ hu:
   call_to_action_register_early_access: Regisztráljon a korai hozzáféréshez
   call_to_action_open_positions: Nyitott pozíciók megtekintése
   call_to_action_get_guide: Szerezd meg az útmutatót
+  call_to_action_donate_to_cdo: Adomány a Code.org számára
+  call_to_action_start_fundraiser: Indítson adománygyűjtést
+  call_to_action_view_donation_policy: Adományozási irányelvek megtekintése
+  call_to_action_view_donate_bitpay: Adományozzon a BitPay segítségével
   aria_label_call_to_action_afe: Tudjon meg többet az Amazon Future Engineer-ről
   aria_label_call_to_action_teaching_csf: Indítsa el a Számítástudomány alapjainak
     oktatása szakmai tanulási programot
@@ -395,6 +399,7 @@ hu:
   curriculum_name_csp: Számítástechnika alapelvei
   curriculum_name_csc: Számítástechnikai kapcsolatok
   curriculum_name_csa: AP® Számítástechnika A
+  curriculum_name_csa_ai: Szoftverfejlesztés és számítógépes látás
   curriculum_name_csc_02: Bármely CS csatlakozási modul
   curriculum_name_ai: MI és gépi tanulás
   curriculum_name_artificial_intelligence: Mesterséges intelligencia (AI)
@@ -476,6 +481,12 @@ hu:
     animációk, játékok és fizikai számítástechnikai rendszerek építésében.
   curriculum_desc_csp: Ingyenes, AP® CSP által jóváhagyott, középiskolai bevezető
     tanfolyam, amely bemutatja a diákokat a számítástechnika alapfogalmainak.
+  curriculum_desc_csa_ai_long: 'Ez a két fejezetből álló Post-AP CSA modul gyakorlati
+    tapasztalatokat kínál a középiskolásoknak a professzionális szoftverfejlesztő
+    eszközökkel kapcsolatban, beleértve a GitHub és a GitHub Copilot, és átveszi őket
+    a valós készségekkel egy számítógépes látásprogram kidolgozásához. '
+  curriculum_desc_csa_ai_short: Ez a Post-AP® CSA modul a középiskolásoknak gyakorlati
+    tapasztalatokat kínál professzionális szoftverfejlesztő eszközökkel.
   collection_hardware: Fókuszban a hardver
   collection_hardware_desc: Felhatalmazza a tanulókat arra, hogy adatokat és fizikai
     eszközöket használjanak a problémák megoldására.
@@ -551,6 +562,7 @@ hu:
   module_duration_2_hrs: 2 óra
   module_duration_3_hrs: 3 óra
   module_duration_5_hrs: 5 óra
+  module_duration_5_hrs_plus: 5+ óra
   module_duration_8_hrs: 8 óra
   module_duration_20_hrs: 20 óra
   module_duration_35_hrs: 35 óra
@@ -633,6 +645,7 @@ hu:
   heading_these_lessons_will: 'Ezek a leckék:'
   heading_explore_curriculum_catalog: Fedezze fel az összes tanfolyamunkat a tantervi
     katalógusban
+  heading_csa_ai: Tennivalókat keres az AP® vizsga után?
   professional_learning_section_desc: Szerezd meg a szükséges támogatást, amikor felkészülsz
     a tanításra. A tanárok imádják, több mint 90% -uk rangsorolja a valaha volt legjobb
     szakmai fejlődést!
@@ -665,6 +678,23 @@ hu:
   support_and_questions_section_desc: Támogató csapatunk itt van, hogy megválaszolja
     a Code.org segítségével történő tanítás megkezdésével kapcsolatos kérdéseit. Tanári
     fórumainkon más tanárokat is megkérdezhet tapasztalataikról.
+  subscribe_form_section_title: Feliratkozás a frissítésekre
+  subscribe_form_section_desc_csa: Iratkozzon fel, hogy havi e-maileket kapjon a Code.org
+    AP® Computer Science A-ról, és hasznos emlékeztetőket, tippeket és frissítéseket
+    kaphat közvetlenül a postaládájába.
+  subscribe_form_section_desc_csc: Iratkozzon fel, hogy havi e-maileket kapjon a Code.org
+    Computer Science Connections szolgáltatásairól, és hasznos emlékeztetőket, tippeket
+    és frissítéseket kaphat közvetlenül a postaládájába.
+  subscribe_form_section_desc_csd: Iratkozzon fel, hogy havi e-maileket kapjon a Code.org
+    Computer Science felfedezéseiről, és hasznos emlékeztetőket, tippeket és frissítéseket
+    kaphat közvetlenül a postaládájába.
+  subscribe_form_section_desc_csf: Iratkozzon fel, hogy havi e-maileket kapjon a Code.org
+    Computer Science Fundamentals programjáról, és hasznos emlékeztetőket, tippeket
+    és frissítéseket kapjon közvetlenül a postaládájába.
+  subscribe_form_section_desc_csp: Iratkozzon fel, hogy havi e-maileket kapjon a Code.org
+    számítástechnikai alapelveiről, és hasznos emlékeztetőket, tippeket és frissítéseket
+    kapjon közvetlenül a postaládájába.
+  subscribe_form_section_unsubscribe: Bármikor leiratkozhat.
   blockchain_hero_heading: Hogyan működik a Blockchain
   blockchain_hero_desc: Merüljön el a blokklánc világában a „How Blockchain Works”,
     új videósorozatunk és a kísérő leckék segítségével!
@@ -770,6 +800,9 @@ hu:
     Minden lecke a sorozat egyetlen videójával párosul, mélyebben belemerülve a videókban
     bemutatott fogalmakba.
   ai_curriculum_btn_aria_label_04: Fedezze fel, hogyan működik az AI leckéi
+  ai_curriculum_grades_05: 'Fokozat szintek: 9-12'
+  ai_curriculum_btn_aria_label_05: Fedezze fel a Software Engineering & Computer Vision
+    modult
   ai_carousel_heading: 'Amit a tanárok mondanak az AI-ról a Code.org segítségével:'
   ai_carousel_quote_01: Ez a lecke lehetőséget adott hallgatóimnak is, hogy lássák,
     van-e véleményelem az osztályozási rendszerekben. Később, amikor elkezdtük látni,
@@ -900,6 +933,7 @@ hu:
     LLM-ekből, mint a ChatGPT, kezdőtől haladóig. Tartalmazza az indító utasításokat
     azok számára, akik csak belemerítik a lábujjaikat, valamint fejlett eszközöket
     azok számára, akik maximalizálni akarják potenciáljukat.
+  ai_pl_101_resources_3: AI felszólítások a hallgatói tanulás átalakításához
   how_ai_works_hero_heading: Hogyan működik az AI
   how_ai_works_hero_desc: Merüljön el az AI világában a „Hogyan működik az AI” című
     videósorozatunkkal és a kísérő leckékkel!
@@ -1307,8 +1341,8 @@ hu:
     Animation
   csp_page_curriculum_glance_devices: Laptop, Chromebook
   csp_page_curriculum_glance_tools: App Lab
-  csp_page_curriculum_glance_professional_learning: Facilitator-led Workshops, Self-paced
-    Modules
+  csp_page_curriculum_glance_professional_learning: Facilitátor által vezetett műhelyek,
+    saját tempójú modulok
   csp_page_curriculum_glance_professional_languages: Magyar
   csp_page_curriculum_glance_professional_accessibility_features: Text-to-speech,
     Closed captioning, Immersive reader
@@ -1435,8 +1469,8 @@ hu:
     Programozás
   csd_page_curriculum_glance_devices: Laptop, Chromebook
   csd_page_curriculum_glance_tools: App Lab, Game Lab, AI Lab, Web Lab
-  csd_page_curriculum_glance_professional_learning: Facilitator-led Workshops, Self-paced
-    Modules
+  csd_page_curriculum_glance_professional_learning: Facilitátor által vezetett műhelyek,
+    saját tempójú modulok
   csd_page_curriculum_glance_professional_languages: Magyar
   csd_page_curriculum_glance_professional_accessibility_features: Text-to-speech,
     Closed captioning, Immersive reader
@@ -1583,8 +1617,8 @@ hu:
     és design, App Design
   csf_page_curriculum_glance_devices: Laptop, Chromebook, Tablet
   csf_page_curriculum_glance_tools: Sprite Lab, Play Lab
-  csf_page_curriculum_glance_professional_learning: Facilitator-led Workshops, Self-paced
-    Modules
+  csf_page_curriculum_glance_professional_learning: Facilitátor által vezetett műhelyek,
+    saját tempójú modulok
   csf_page_curriculum_glance_languages: Arab, Spanyol indonéz, katalán, egyszerűsített
     kínai, hagyományos kínai, cseh, francia, német, hindi, olasz, japán, koreai, kannada,
     maláj, marathi, mongol, lengyel, portugál-BR, román, orosz, szlovák, tagalog,
@@ -1726,6 +1760,40 @@ hu:
   csa_page_faq_answer_08_02: For more information about the values that guided our
     work, please see our [curriculum values](%{curriculum_values_url}) and our [professional
     learning values](%{pl_values_url}).
+  donate_page_top_heading: Segítsen finanszírozni küldetésünket
+  donate_page_top_desc: Minden adomány táplálja a Code.org küldetését, hogy bővítse
+    a hozzáférést a számítástechnikai oktatáshoz. Számos lehetőséget kínálunk az adományozásra
+    és a változásra.
+  donate_page_fundraise_title: Adománygyűjtés a Code.org számára
+  donate_page_fundraise_desc: Segítsen pénzt gyűjteni a Code.org számára! Minden iskola
+    minden tanulójának lehetőséget kell biztosítani a számítástechnika elsajátítására.
+  donate_page_other_ways_title: Egyéb módja annak, hogy adjon
+  donate_page_other_ways_desc: Fedezze fel a hozzájárulás különféle módszereit, és
+    keresse meg az Önnek legmegfelelőbb lehetőséget. Minden gesztus, legyen az kicsi
+    vagy nagy, előremozdítja küldetésünket.
+  donate_page_501c3: A Code.org nyilvános 501 (c) (3) nonprofit szervezetként van
+    bejegyezve. A Code.org hozzájárulásai a törvény által megengedett mértékben levonhatók
+    az adóból. A Code.org adóazonosító száma 46-0858543.
+  donate_page_donation_policy_title: Adományozási politikánk megértése
+  donate_page_donation_policy_desc: Tudjon meg többet arról, hogyan kezeljük és osztjuk
+    el hozzájárulásait.
+  donate_tabs_tab_label_daf_direct: DAF Direct
+  donate_tabs_tab_label_amazon: Amazonas
+  donate_tabs_tab_label_bitpay: BitPay
+  donate_tabs_tab_label_employee_match: Munkavállalói mérkőzés
+  donate_tabs_daf_direct_title: Adományozás a DAF Direct segítségével
+  donate_tabs_daf_direct_desc: Adományozzon az adományozó által ajánlott alapon keresztül
+    a Fidelity Charitable, a Schwab Charitable vagy a BNY Mellon segítségével, és
+    tegye meg támogatási ajánlását a Code.org számára a DAF Direct online űrlapján
+    keresztül.
+  donate_tabs_amazon_title: Adományozzon az Amazonon keresztül
+  donate_tabs_amazon_desc: Adományozzon közvetlenül az Amazon-fiókjával. Néhány kattintással
+    zökkenőmentesen hozzájárulhat a Code.org küldetéséhez, és felhatalmazza a számítástechnikai
+    oktatás jövőjét.
+  donate_tabs_bitpay_title: Adományozzon Crypto-val a BitPay-en keresztül
+  donate_tabs_bitpay_desc: Ölelje át az adakozás jövőjét a kriptovalutával. A BitPay
+    segítségével digitális pénzneme közvetlenül támogathatja a Code.org törekvéseit
+    a számítástechnikai oktatás bővítésében.
   hoc_live: Élő kódolás órája
   hoc_live_sign_up_title: Iratkozzon fel a Hour of Code Live szolgáltatásra
   hoc_live_learn_title: Tanulj a Hour of Code Live segítségével

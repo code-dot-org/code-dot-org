@@ -282,6 +282,10 @@ kn:
   call_to_action_register_early_access: ಆರಂಭಿಕ ಪ್ರವೇಶಕ್ಕಾಗಿ ನೋಂದಾಯಿಸಿ
   call_to_action_open_positions: ತೆರೆದ ಸ್ಥಾನಗಳನ್ನು ವೀಕ್ಷಿಸಿ
   call_to_action_get_guide: ಮಾರ್ಗದರ್ಶಿ ಪಡೆಯಿರಿ
+  call_to_action_donate_to_cdo: Code.org ಗೆ ದಾನ ಮಾಡಿ
+  call_to_action_start_fundraiser: ನಿಧಿಸಂಗ್ರಹವನ್ನು ಪ್ರಾರಂಭಿಸಿ
+  call_to_action_view_donation_policy: ದೇಣಿಗೆ ನೀತಿಯನ್ನು ವೀಕ್ಷಿಸಿ
+  call_to_action_view_donate_bitpay: ಬಿಟ್ಪೇ ಜೊತೆ ದಾನ ಮಾಡಿ
   aria_label_call_to_action_afe: ಅಮೆಜಾನ್ ಫ್ಯೂಚರ್ ಎಂಜಿನಿಯರ್ ಬಗ್ಗೆ ಇನ್ನಷ್ಟು ತಿಳಿಯಿರಿ
   aria_label_call_to_action_teaching_csf: ಬೋಧನಾ ಕಂಪ್ಯೂಟರ್ ಸೈನ್ಸ್ ಫಂಡಮೆಂಟಲ್ಸ್ ವೃತ್ತಿಪರ
     ಕಲಿಕಾ ಕಾರ್ಯಕ್ರಮವನ್ನು ಪ್ರಾರಂಭಿಸಿ
@@ -388,6 +392,7 @@ kn:
   curriculum_name_csp: ಗಣಕ ಯಂತ್ರ ವಿಜ್ಞಾನ ತತ್ವಗಳು
   curriculum_name_csc: ಕಂಪ್ಯೂಟರ್ ಸೈನ್ಸ್ ಕನೆಕ್ಷನ್‌ಗಳು
   curriculum_name_csa: ಕಂಪ್ಯೂಟರ್ ಸೈನ್ಸ್‌ A
+  curriculum_name_csa_ai: ಸಾಫ್ಟ್ವೇರ್ ಎಂಜಿನಿಯರಿಂಗ್ & ಕಂಪ್ಯೂಟರ್ ವಿಷನ್
   curriculum_name_csc_02: ಯಾವುದೇ CS ಕನೆಕ್ಷನ್‌ಗಳ ಮಾಡ್ಯೂಲ್
   curriculum_name_ai: ಎಐ ಮತ್ತು ಯಂತ್ರ ಕಲಿಕೆ
   curriculum_name_artificial_intelligence: ಕೃತಕ ಬುದ್ಧಿಮತ್ತೆ (ಎಐ)
@@ -468,6 +473,12 @@ kn:
     ಕಂಪ್ಯೂಟಿಂಗ್ ವ್ಯವಸ್ಥೆಗಳನ್ನು ನಿರ್ಮಿಸಲು ವಿದ್ಯಾರ್ಥಿಗಳನ್ನು ಪರಿಚಯಿಸುತ್ತದೆ.
   curriculum_desc_csp: ಉಚಿತ, ಎಪಿ® ಸಿಎಸ್ಪಿ ಅನುಮೋದನೆ, ಕಂಪ್ಯೂಟರ್ ವಿಜ್ಞಾನದ ಅಡಿಪಾಯದ ಪರಿಕಲ್ಪನೆಗಳಿಗೆ
     ವಿದ್ಯಾರ್ಥಿಗಳನ್ನು ಪರಿಚಯಿಸುವ ಪ್ರೌಢಶಾಲಾ ಪರಿಚಯಾತ್ಮಕ ಕೋರ್ಸ್.
+  curriculum_desc_csa_ai_long: 'ಈ ಎರಡು-ಅಧ್ಯಾಯದ ನಂತರದ ಎಪಿ ಸಿಎಸ್ಎ ಮಾಡ್ಯೂಲ್ ಪ್ರೌ school
+    ಶಾಲಾ ವಿದ್ಯಾರ್ಥಿಗಳಿಗೆ ವೃತ್ತಿಪರ ಸಾಫ್ಟ್ವೇರ್ ಅಭಿವೃದ್ಧಿ ಸಾಧನಗಳೊಂದಿಗೆ ಅನುಭವವನ್ನು ನೀಡುತ್ತದೆ,
+    ಇದರಲ್ಲಿ ಗಿಟ್ಹಬ್ ಮತ್ತು ಗಿಟ್ಹಬ್ ಕೊಪೈಲಟ್, ಮತ್ತು ಕಂಪ್ಯೂಟರ್ ವಿಷನ್ ಪ್ರೋಗ್ರಾಂ ಅನ್ನು ಅಭಿವೃದ್ಧಿಪಡಿಸಲು
+    ನೈಜ-ಪ್ರಪಂಚದ ಕೌಶಲ್ಯಗಳನ್ನು ನೀಡುತ್ತದೆ. '
+  curriculum_desc_csa_ai_short: ಈ ಪೋಸ್ಟ್-ಎಪಿ® ಸಿಎಸ್ಎ ಮಾಡ್ಯೂಲ್ ಪ್ರೌ school ಶಾಲಾ ವಿದ್ಯಾರ್ಥಿಗಳಿಗೆ
+    ವೃತ್ತಿಪರ ಸಾಫ್ಟ್ವೇರ್ ಅಭಿವೃದ್ಧಿ ಸಾಧನಗಳೊಂದಿಗೆ ಅನುಭವವನ್ನು ನೀಡುತ್ತದೆ.
   collection_hardware: ಹಾರ್ಡ್‌ವೇರ್‌ನ ಮೇಲೆ ಗಮನ ಹರಿಸಿ
   collection_hardware_desc: ಸಮಸ್ಯೆಗಳನ್ನು ಪರಿಹರಿಸಲು ಡೇಟಾ ಮತ್ತು ಭೌತಿಕ ಸಾಧನಗಳನ್ನು ಬಳಸಲು
     ವಿದ್ಯಾರ್ಥಿಗಳಿಗೆ ಅಧಿಕಾರ ನೀಡುತ್ತದೆ.
@@ -542,6 +553,7 @@ kn:
   module_duration_2_hrs: 2 ಗಂಟೆಗಳ
   module_duration_3_hrs: 3 ಗಂಟೆಗಳ
   module_duration_5_hrs: 5 ಗಂಟೆಗಳ
+  module_duration_5_hrs_plus: 5+ ಗಂಟೆಗಳು
   module_duration_8_hrs: 8 ಗಂಟೆಗಳ
   module_duration_20_hrs: 20 ಗಂಟೆಗಳ
   module_duration_35_hrs: 35 ಗಂಟೆಗಳ
@@ -622,6 +634,7 @@ kn:
   heading_these_lessons_will: 'ಈ ಪಾಠಗಳನ್ನು ತಿನ್ನುವೆ:'
   heading_explore_curriculum_catalog: ಪಠ್ಯಕ್ರಮ ಕ್ಯಾಟಲಾಗ್ನಲ್ಲಿ ನಮ್ಮ ಎಲ್ಲಾ ಕೋರ್ಸ್ಗಳನ್ನು
     ಅನ್ವೇಷಿಸಿ
+  heading_csa_ai: ಎಪಿ® ಪರೀಕ್ಷೆಯಲ್ಲಿ ನಂತರ ಮಾಡಲು ವಿಷಯಗಳನ್ನು ಹುಡುಕುತ್ತಿರುವಿರಾ?
   professional_learning_section_desc: ನೀವು ಕಲಿಸಲು ತಯಾರಿ ನಡೆಸುವಾಗ ನಿಮಗೆ ಅಗತ್ಯವಿರುವ
     ಬೆಂಬಲವನ್ನು ಪಡೆಯಿರಿ. ಶಿಕ್ಷಕರು ಇದನ್ನು ಪ್ರೀತಿಸುತ್ತಾರೆ, 90% ಕ್ಕಿಂತ ಹೆಚ್ಚು ಶ್ರೇಯಾಂಕದೊಂದಿಗೆ
     ಇದು ಅತ್ಯುತ್ತಮ ವೃತ್ತಿಪರ ಅಭಿವೃದ್ಧಿಯಾಗಿದೆ!
@@ -653,6 +666,23 @@ kn:
   support_and_questions_section_desc: Code.org ನೊಂದಿಗೆ ಬೋಧನೆಯನ್ನು ಪ್ರಾರಂಭಿಸುವ ಬಗ್ಗೆ
     ನೀವು ಹೊಂದಿರುವ ಯಾವುದೇ ಪ್ರಶ್ನೆಗಳಿಗೆ ಉತ್ತರಿಸಲು ನಮ್ಮ ಬೆಂಬಲ ತಂಡ ಇಲ್ಲಿದೆ. ನಮ್ಮ ಶಿಕ್ಷಕ
     ವೇದಿಕೆಗಳಲ್ಲಿ ಅವರ ಅನುಭವದ ಬಗ್ಗೆ ಇತರ ಶಿಕ್ಷಕರನ್ನು ಸಹ ನೀವು ಕೇಳಬಹುದು.
+  subscribe_form_section_title: ನವೀಕರಣಗಳಿಗಾಗಿ ಚಂದಾದಾರರಾಗಿ
+  subscribe_form_section_desc_csa: Code.org ನ AP® ಕಂಪ್ಯೂಟರ್ ಸೈನ್ಸ್ A ಕುರಿತು ಮಾಸಿಕ
+    ಇಮೇಲ್ಗಳನ್ನು ಸ್ವೀಕರಿಸಲು ಸೈನ್ ಅಪ್ ಮಾಡಿ ಮತ್ತು ಸಹಾಯಕವಾದ ಜ್ಞಾಪನೆಗಳು, ಸಲಹೆಗಳು ಮತ್ತು
+    ನವೀಕರಣಗಳನ್ನು ನಿಮ್ಮ ಇನ್ಬಾಕ್ಸ್ಗೆ ಕಳುಹಿಸಲಾಗಿದೆ.
+  subscribe_form_section_desc_csc: Code.org ನ ಕಂಪ್ಯೂಟರ್ ಸೈನ್ಸ್ ಸಂಪರ್ಕಗಳ ಕುರಿತು ಮಾಸಿಕ
+    ಇಮೇಲ್ಗಳನ್ನು ಸ್ವೀಕರಿಸಲು ಸೈನ್ ಅಪ್ ಮಾಡಿ ಮತ್ತು ಸಹಾಯಕವಾದ ಜ್ಞಾಪನೆಗಳು, ಸಲಹೆಗಳು ಮತ್ತು
+    ನವೀಕರಣಗಳನ್ನು ನಿಮ್ಮ ಇನ್ಬಾಕ್ಸ್ಗೆ ಕಳುಹಿಸಿ.
+  subscribe_form_section_desc_csd: Code.org ನ ಕಂಪ್ಯೂಟರ್ ಸೈನ್ಸ್ ಡಿಸ್ಕವರೀಸ್ ಕುರಿತು ಮಾಸಿಕ
+    ಇಮೇಲ್ಗಳನ್ನು ಸ್ವೀಕರಿಸಲು ಸೈನ್ ಅಪ್ ಮಾಡಿ ಮತ್ತು ಸಹಾಯಕವಾದ ಜ್ಞಾಪನೆಗಳು, ಸಲಹೆಗಳು ಮತ್ತು
+    ನವೀಕರಣಗಳನ್ನು ನಿಮ್ಮ ಇನ್ಬಾಕ್ಸ್ಗೆ ಕಳುಹಿಸಲಾಗಿದೆ.
+  subscribe_form_section_desc_csf: Code.org ನ ಕಂಪ್ಯೂಟರ್ ಸೈನ್ಸ್ ಫಂಡಮೆಂಟಲ್ಗಳ ಕುರಿತು
+    ಮಾಸಿಕ ಇಮೇಲ್ಗಳನ್ನು ಸ್ವೀಕರಿಸಲು ಸೈನ್ ಅಪ್ ಮಾಡಿ ಮತ್ತು ಸಹಾಯಕವಾದ ಜ್ಞಾಪನೆಗಳು, ಸಲಹೆಗಳು
+    ಮತ್ತು ನವೀಕರಣಗಳನ್ನು ನಿಮ್ಮ ಇನ್ಬಾಕ್ಸ್ಗೆ ಕಳುಹಿಸಲಾಗಿದೆ.
+  subscribe_form_section_desc_csp: Code.org ನ ಕಂಪ್ಯೂಟರ್ ಸೈನ್ಸ್ ಪ್ರಿನ್ಸಿಪಲ್ಸ್ ಕುರಿತು
+    ಮಾಸಿಕ ಇಮೇಲ್ಗಳನ್ನು ಸ್ವೀಕರಿಸಲು ಸೈನ್ ಅಪ್ ಮಾಡಿ ಮತ್ತು ಸಹಾಯಕವಾದ ಜ್ಞಾಪನೆಗಳು, ಸಲಹೆಗಳು
+    ಮತ್ತು ನವೀಕರಣಗಳನ್ನು ನಿಮ್ಮ ಇನ್ಬಾಕ್ಸ್ಗೆ ಕಳುಹಿಸಲಾಗಿದೆ.
+  subscribe_form_section_unsubscribe: ನೀವು ಯಾವುದೇ ಸಮಯದಲ್ಲಿ ಅನ್ಸಬ್ಸ್ಕ್ರೈಬ್ ಮಾಡಬಹುದು.
   blockchain_hero_heading: ಬ್ಲಾಕ್ಚೇನ್ ಹೇಗೆ ಕಾರ್ಯನಿರ್ವಹಿಸುತ್ತದೆ
   blockchain_hero_desc: "“ಬ್ಲಾಕ್ಚೇನ್ ಹೇಗೆ ಕಾರ್ಯನಿರ್ವಹಿಸುತ್ತದೆ,” ನಮ್ಮ ಹೊಸ ವೀಡಿಯೊ ಸರಣಿ
     ಮತ್ತು ಅದರ ಜೊತೆಗಿನ ಪಾಠಗಳೊಂದಿಗೆ ಬ್ಲಾಕ್ಚೈನ್ ಜಗತ್ತಿನಲ್ಲಿ ಧುಮುಕುವುದಿಲ್ಲ!"
@@ -756,6 +786,9 @@ kn:
     ಪಾಠವನ್ನು ಸರಣಿಯ ಒಂದೇ ವೀಡಿಯೊದೊಂದಿಗೆ ಜೋಡಿಸಲಾಗಿದೆ, ವೀಡಿಯೊಗಳಲ್ಲಿ ಪರಿಚಯಿಸಲಾದ ಪರಿಕಲ್ಪನೆಗಳಿಗೆ
     ಆಳವಾಗಿ ಡೈವಿಂಗ್ ಮಾಡಲಾಗುತ್ತದೆ.
   ai_curriculum_btn_aria_label_04: AI ಪಾಠಗಳನ್ನು ಹೇಗೆ ಕೆಲಸ ಮಾಡುತ್ತದೆ ಎಂಬುದನ್ನು ಅನ್ವೇಷಿಸಿ
+  ai_curriculum_grades_05: 'ಗ್ರೇಡ್ ಮಟ್ಟಗಳು: 9-12'
+  ai_curriculum_btn_aria_label_05: ಸಾಫ್ಟ್ವೇರ್ ಎಂಜಿನಿಯರಿಂಗ್ ಮತ್ತು ಕಂಪ್ಯೂಟರ್ ವಿಷನ್ ಮಾಡ್ಯೂಲ್
+    ಅನ್ನು ಅನ್ವೇಷಿಸಿ
   ai_carousel_heading: 'Code.org ನೊಂದಿಗೆ AI ಬಗ್ಗೆ ಶಿಕ್ಷಕರು ಏನು ಹೇಳುತ್ತಾರೆ:'
   ai_carousel_quote_01: ವರ್ಗೀಕರಣ ವ್ಯವಸ್ಥೆಗಳಲ್ಲಿ ಅಭಿಪ್ರಾಯದ ಅಂಶವಿದೆ ಎಂದು ನೋಡಲು ಈ ಪಾಠವು
     ನನ್ನ ವಿದ್ಯಾರ್ಥಿಗಳಿಗೆ ಅವಕಾಶವನ್ನು ನೀಡಿತು. ನಂತರ, ಎಐನಲ್ಲಿ ಪಕ್ಷಪಾತವು ಹೇಗೆ ಕೊನೆಗೊಳ್ಳುತ್ತದೆ
@@ -880,6 +913,7 @@ kn:
   ai_pl_101_llm_slides_desc: ಚಾಟ್ಜಿಪಿಟಿಯಂತಹ ಎಲ್ಎಲ್ಎಂಗಳಿಂದ, ಹರಿಕಾರರಿಂದ ಸುಧಾರಿತ ವರೆಗೆ
     ಉತ್ತಮ ಔಟ್ಪುಟ್ ಪಡೆಯುವ ಸಾಧನಗಳು. ತಮ್ಮ ಕಾಲ್ಬೆರಳುಗಳನ್ನು ಮುಳುಗಿಸುವವರಿಗೆ ಸ್ಟಾರ್ಟರ್ ಪ್ರಾಂಪ್ಟ್ಗಳನ್ನು
     ಒಳಗೊಂಡಿದೆ, ಜೊತೆಗೆ ಅವರ ಸಾಮರ್ಥ್ಯವನ್ನು ಹೆಚ್ಚಿಸಲು ಬಯಸುವವರಿಗೆ ಸುಧಾರಿತ ಸಾಧನಗಳನ್ನು ಒಳಗೊಂಡಿದೆ.
+  ai_pl_101_resources_3: ವಿದ್ಯಾರ್ಥಿ ಕಲಿಕೆಯನ್ನು ಪರಿವರ್ತಿಸಲು AI ಅಪೇಕ್ಷಿಸುತ್ತದೆ
   how_ai_works_hero_heading: AI ಹೇಗೆ ಕಾರ್ಯನಿರ್ವಹಿಸುತ್ತದೆ
   how_ai_works_hero_desc: "“ಹೌ ಎಐ ವರ್ಕ್ಸ್,” ನಮ್ಮ ವೀಡಿಯೊ ಸರಣಿ ಮತ್ತು ಅದರ ಜೊತೆಗಿನ ಪಾಠಗಳೊಂದಿಗೆ
     AI ಜಗತ್ತಿನಲ್ಲಿ ಧುಮುಕುವುದಿಲ್ಲ!"
@@ -1292,8 +1326,8 @@ kn:
     Animation
   csp_page_curriculum_glance_devices: Laptop, Chromebook
   csp_page_curriculum_glance_tools: ಅಪ್ಲಿಕೇಶನ್ ಲ್ಯಾಬ್
-  csp_page_curriculum_glance_professional_learning: Facilitator-led Workshops, Self-paced
-    Modules
+  csp_page_curriculum_glance_professional_learning: ಫೆಸಿಲಿಟೇಟರ್-ನೇತೃತ್ವದ ಕಾರ್ಯಾಗಾರಗಳು,
+    ಸ್ವಯಂ-ಗತಿಯ ಮಾಡ್ಯೂಲ್ಗಳು
   csp_page_curriculum_glance_professional_languages: ಆಂಗ್ಲ
   csp_page_curriculum_glance_professional_accessibility_features: Text-to-speech,
     Closed captioning, Immersive reader
@@ -1421,8 +1455,8 @@ kn:
   csd_page_curriculum_glance_devices: Laptop, Chromebook
   csd_page_curriculum_glance_tools: ಅಪ್ಲಿಕೇಶನ್ ಲ್ಯಾಬ್, ಗೇಮ್ ಲ್ಯಾಬ್, ಎಐ ಲ್ಯಾಬ್, ವೆಬ್
     ಲ್ಯಾಬ್
-  csd_page_curriculum_glance_professional_learning: Facilitator-led Workshops, Self-paced
-    Modules
+  csd_page_curriculum_glance_professional_learning: ಫೆಸಿಲಿಟೇಟರ್-ನೇತೃತ್ವದ ಕಾರ್ಯಾಗಾರಗಳು,
+    ಸ್ವಯಂ-ಗತಿಯ ಮಾಡ್ಯೂಲ್ಗಳು
   csd_page_curriculum_glance_professional_languages: ಆಂಗ್ಲ
   csd_page_curriculum_glance_professional_accessibility_features: Text-to-speech,
     Closed captioning, Immersive reader
@@ -1570,8 +1604,8 @@ kn:
     ಕಲೆ ಮತ್ತು ವಿನ್ಯಾಸ, ಅಪ್ಲಿಕೇಶನ್ ವಿನ್ಯಾಸ
   csf_page_curriculum_glance_devices: ಲ್ಯಾಪ್ಟಾಪ್, Chromebook, ಟ್ಯಾಬ್ಲೆಟ್
   csf_page_curriculum_glance_tools: ಸ್ಪ್ರೈಟ್ ಲ್ಯಾಬ್, ಪ್ಲೇ ಲ್ಯಾಬ್
-  csf_page_curriculum_glance_professional_learning: Facilitator-led Workshops, Self-paced
-    Modules
+  csf_page_curriculum_glance_professional_learning: ಫೆಸಿಲಿಟೇಟರ್-ನೇತೃತ್ವದ ಕಾರ್ಯಾಗಾರಗಳು,
+    ಸ್ವಯಂ-ಗತಿಯ ಮಾಡ್ಯೂಲ್ಗಳು
   csf_page_curriculum_glance_languages: ಅರೇಬಿಕ್, ಇಂಡೋನೇಶಿಯನ್, Catalán, Chinese
     Simplified, ಚೀನೀ ಸಾಂಪ್ರದಾಯಿಕ, ಜೆಕ್, ಫ್ರೆಂಚ್, ಜರ್ಮನ್, ಹಿಂದಿ, ಇಟಾಲಿಯನ್, ಜಪಾನಿನ,
     ಕೊರಿಯನ್, ಕನ್ನಡ, ಮಲಯ, ಮರಾಠಿ, ಮಂಗೋಲಿಯನ್, ಹೊಳಪು ಕೊಡು, ಪೋರ್ಚುಗೀಸ್-ಬಿಆರ್, ರೊಮೇನಿಯನ್,
@@ -1712,6 +1746,39 @@ kn:
   csa_page_faq_answer_08_02: For more information about the values that guided our
     work, please see our [curriculum values](%{curriculum_values_url}) and our [professional
     learning values](%{pl_values_url}).
+  donate_page_top_heading: ನಮ್ಮ ಧ್ಯೇಯಕ್ಕೆ ಧನಸಹಾಯ ಮಾಡಲು ಸಹಾಯ ಮಾಡಿ
+  donate_page_top_desc: ಪ್ರತಿ ದೇಣಿಗೆಯು ಕಂಪ್ಯೂಟರ್ ವಿಜ್ಞಾನ ಶಿಕ್ಷಣಕ್ಕೆ ಪ್ರವೇಶವನ್ನು ವಿಸ್ತರಿಸುವ
+    Code.org ನ ಧ್ಯೇಯವನ್ನು ಇಂಧನಗೊಳಿಸುತ್ತದೆ. ನೀವು ದಾನ ಮಾಡಲು ಮತ್ತು ವ್ಯತ್ಯಾಸವನ್ನು ಮಾಡಲು
+    ನಾವು ಹಲವಾರು ಮಾರ್ಗಗಳನ್ನು ನೀಡುತ್ತೇವೆ.
+  donate_page_fundraise_title: Code.org ಗಾಗಿ ನಿಧಿಸಂಗ್ರಹಣೆ
+  donate_page_fundraise_desc: Code.org ಗಾಗಿ ಹಣವನ್ನು ಸಂಗ್ರಹಿಸಲು ಸಹಾಯ ಮಾಡಿ! ಪ್ರತಿ ಶಾಲೆಯಲ್ಲಿ
+    ಪ್ರತಿಯೊಬ್ಬ ವಿದ್ಯಾರ್ಥಿಯೂ ಕಂಪ್ಯೂಟರ್ ವಿಜ್ಞಾನವನ್ನು ಕಲಿಯುವ ಅವಕಾಶವನ್ನು ಹೊಂದಿರಬೇಕು.
+  donate_page_other_ways_title: ನೀಡಲು ಇತರ ಮಾರ್ಗಗಳು
+  donate_page_other_ways_desc: ಕೊಡುಗೆ ನೀಡಲು ವೈವಿಧ್ಯಮಯ ವಿಧಾನಗಳನ್ನು ಅನ್ವೇಷಿಸಿ ಮತ್ತು
+    ನಿಮಗೆ ಸೂಕ್ತವಾದ ಆಯ್ಕೆಯನ್ನು ಕಂಡುಕೊಳ್ಳಿ. ಪ್ರತಿ ಗೆಸ್ಚರ್, ದೊಡ್ಡ ಅಥವಾ ಸಣ್ಣ, ನಮ್ಮ ಧ್ಯೇಯವನ್ನು
+    ಮುಂದಕ್ಕೆ ಮುಂದೂಡುತ್ತದೆ.
+  donate_page_501c3: Code.org ಅನ್ನು ಸಾರ್ವಜನಿಕ 501 (c) (3) ಲಾಭೋದ್ದೇಶವಿಲ್ಲದ ಸಂಸ್ಥೆಯಾಗಿ
+    ನೋಂದಾಯಿಸಲಾಗಿದೆ. Code.org ಗೆ ಕೊಡುಗೆಗಳು ಕಾನೂನಿನಿಂದ ಅನುಮತಿಸಲಾದ ಮಟ್ಟಿಗೆ ತೆರಿಗೆ-ಕಡಿತಗೊಳಿಸಬಹುದಾಗಿದೆ.
+    ಕೋಡ್. ಆರ್ಗ್ನ ತೆರಿಗೆ ಗುರುತಿನ ಸಂಖ್ಯೆ 46-0858543.
+  donate_page_donation_policy_title: ನಮ್ಮ ದೇಣಿಗೆ ನೀತಿಯನ್ನು ಅರ್ಥಮಾಡಿಕೊಳ್ಳುವುದು
+  donate_page_donation_policy_desc: ನಿಮ್ಮ ಕೊಡುಗೆಗಳನ್ನು ನಾವು ಹೇಗೆ ನಿರ್ವಹಿಸುತ್ತೇವೆ ಮತ್ತು
+    ನಿಯೋಜಿಸುತ್ತೇವೆ ಎಂಬುದರ ಕುರಿತು ತಿಳಿಯಿರಿ.
+  donate_tabs_tab_label_daf_direct: ಡಿಎಎಫ್ ಡೈರೆಕ್ಟ್
+  donate_tabs_tab_label_amazon: ಅಮೆಜಾನ್
+  donate_tabs_tab_label_bitpay: ಬಿಟ್ಪೇ
+  donate_tabs_tab_label_employee_match: ನೌಕರರ ಪಂದ್ಯ
+  donate_tabs_daf_direct_title: ಡಿಎಎಫ್ ಡೈರೆಕ್ಟ್ ಮೂಲಕ ದಾನ ಮಾಡಿ
+  donate_tabs_daf_direct_desc: ಫಿಡೆಲಿಟಿ ಚಾರಿಟಬಲ್, ಶ್ವಾಬ್ ಚಾರಿಟಬಲ್ ಅಥವಾ ಬಿಎನ್ವೈ ಮೆಲ್ಲನ್ನೊಂದಿಗೆ
+    ನಿಮ್ಮ ದಾನಿ-ಸಲಹೆ ನಿಧಿಯ ಮೂಲಕ ದಾನ ಮಾಡಿ ಮತ್ತು DAF ಡೈರೆಕ್ಟ್ ಆನ್ಲೈನ್ ಫಾರ್ಮ್ ಮೂಲಕ Code.org
+    ಗೆ ನಿಮ್ಮ ಅನುದಾನದ ಶಿಫಾರಸನ್ನು ಮಾಡಿ.
+  donate_tabs_amazon_title: ಅಮೆಜಾನ್ ಮೂಲಕ ದಾನ
+  donate_tabs_amazon_desc: ನಿಮ್ಮ ಅಮೆಜಾನ್ ಖಾತೆಯನ್ನು ಬಳಸಿಕೊಂಡು ನೇರವಾಗಿ ದಾನ ಮಾಡಿ. ಕೆಲವೇ
+    ಕ್ಲಿಕ್ಗಳೊಂದಿಗೆ, Code.org ನ ಧ್ಯೇಯಕ್ಕೆ ಮನಬಂದಂತೆ ಕೊಡುಗೆ ನೀಡಿ ಮತ್ತು ಕಂಪ್ಯೂಟರ್ ವಿಜ್ಞಾನ
+    ಶಿಕ್ಷಣದ ಭವಿಷ್ಯವನ್ನು ಸಶಕ್ತಗೊಳಿಸಿ.
+  donate_tabs_bitpay_title: ಬಿಟ್ಪೇ ಮೂಲಕ ಕ್ರಿಪ್ಟೋನೊಂದಿಗೆ ದಾನ ಮಾಡಿ
+  donate_tabs_bitpay_desc: ಕ್ರಿಪ್ಟೋಕರೆನ್ಸಿಯೊಂದಿಗೆ ನೀಡುವ ಭವಿಷ್ಯವನ್ನು ಸ್ವೀಕರಿಸಿ. BitPay
+    ಮೂಲಕ, ನಿಮ್ಮ ಡಿಜಿಟಲ್ ಕರೆನ್ಸಿ ನೇರವಾಗಿ ಕಂಪ್ಯೂಟರ್ ವಿಜ್ಞಾನ ಶಿಕ್ಷಣವನ್ನು ವಿಸ್ತರಿಸುವಲ್ಲಿ
+    Code.org ನ ಪ್ರಯತ್ನಗಳನ್ನು ಬೆಂಬಲಿಸುತ್ತದೆ.
   hoc_live: ಅವರ್ ಆಫ್ ಕೋಡ್ ಲೈವ್
   hoc_live_sign_up_title: ಅವರ್ ಕೋಡ್ ಲೈವ್ಗಾಗಿ ಸೈನ್ ಅಪ್ ಮಾಡಿ
   hoc_live_learn_title: ಅವರ್ ಆಫ್ ಕೋಡ್ ಲೈವ್ನೊಂದಿಗೆ ಕಲಿಯಿರಿ
