@@ -2,9 +2,6 @@ import {getStore} from '../redux';
 import {setShowingAi} from './danceRedux';
 import i18n from '@cdo/locale';
 import CdoFieldDanceAi from './cdoFieldDanceAi';
-import {text} from '../eval/api';
-import GoogleBlockly from 'blockly/core';
-import color from '@cdo/apps/util/color';
 
 // This color palette is limited to colors which have different hues, therefore
 // it should not contain different shades of the same color such as
