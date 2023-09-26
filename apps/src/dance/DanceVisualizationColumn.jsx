@@ -94,12 +94,6 @@ class DanceVisualizationColumn extends React.Component {
     const enableSongSelection =
       !this.props.levelIsRunning && !this.props.levelRunIsStarting;
 
-    /*if (this.props.showingAi) {
-      //this.props.showingAi.size_.width = 100;
-      this.props.showingAi.setValue(JSON.stringify({text: 'hello'}));
-      //this.props.showingAi.renderContent();
-    }*/
-
     return (
       <div>
         {!this.props.isShareView && (
