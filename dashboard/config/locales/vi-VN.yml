@@ -10,6 +10,7 @@ vi:
         error:
           future: không thể trong tương lai
         finish_sign_up_header: Hoàn thành tạo tài khoản
+        finish_sign_up_header_error: 'Hãy sửa các lỗi sau đây:'
         finish_sign_up_subheader: Điền thông tin sau để hoàn thành tạo tài khoản Code.org
           cho <strong>%{email}</strong>.
         finish_sign_up_subheader_markdown: Điền thông tin sau để hoàn thành tạo tài
@@ -31,6 +32,7 @@ vi:
           có địa chỉ email)](%{url})
         reset_password_token: Liên kết đặt lại mật khẩu bạn đã theo dõi
         us_state: Quốc gia
+        user_type: Kiểu tài khoản
         username: tài khoản
         verified_teacher: Giáo viên đã xác minh
     errors:
