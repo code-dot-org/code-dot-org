@@ -1,6 +1,15 @@
 @import 'color.scss';
 
-// Fade in for 1 second after a 1 second delay.
+@keyframes appear {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+// Fade in for 1 seconds after a 1 second delay.
 @keyframes appear1 {
   0% {
     opacity: 0;
@@ -13,158 +22,172 @@
   }
 }
 
-// Fade in for 1 second after a 3 second delay
-@keyframes appear2 {
+
+@keyframes center-to-left {
   0% {
-    opacity: 0;
-  }
-  75% {
-    opacity: 0;
+    left: 50%;
   }
   100% {
-    opacity: 1;
+    left: 5%;
   }
-}
-
-// Fade in for 1 second after a 5 second delay
-@keyframes appear3 {
-  0% {
-    opacity: 0;
-  }
-  83% {
-    opacity: 0;
-  }
-  100% {
-    opacity: 1;
-  }
-}
-
-.appear1 {
-  animation: appear1 2s;
-}
-
-.appear2 {
-  animation: appear2 4s;
-}
-
-.appear3 {
-  animation: appear3 6s;
 }
 
 .dialog {
   max-width: initial !important;
   width: 800px !important;
-  height: 350px;
-  display: flex;
-  flex-direction: column;
+  height: 380px;
 
-  .content {
-    font-family: monospace;
-    margin: 20px;
-    background-color: #eaeaea;
-    padding: 15px;
-    border-radius: 5px;
-    overflow: hidden;
-  }
-
-  .body {
-    flex: 1;
-    align-items: center;
-    justify-content: center;
-    display: flex;
-    font-size: 18px;
-  }
-
-  .itemContainer {
-    background-color: $neutral_dark10;
-    border-radius: 4px;
-    padding: 12px;
-    height: 110px;
-  }
-
-  .item {
-    width: 40px;
-    padding: 8px;
-  }
-
-  .prompt {
-    margin-left: 140px;
-    display: flex;
-    align-items: center;
-    font-size: 18px;
-    margin-bottom: 14px;
-  }
-
-  .arrowUp {
-    position: absolute;
-    margin-left: 18px;
-    width: 0;
-    height: 0;
-    border-left: 10px solid transparent;
-    border-right: 10px solid transparent;
-    border-bottom: 14px solid $neutral_dark10;
-  }
-
-  .inputContainer {
+  .innerArea {
+    width: 100%;
+    height: 100%;
     position: relative;
-    margin: 0 4px;
 
-    .inputBackground {
-      background-color: $neutral_dark10;
-      border-radius: 4px;
-      width: 56px;
-      height: 56px;
+    .item {
+      width: 40px;
+      padding: 8px;
     }
 
-    .inputItem {
+    .textArea {
       position: absolute;
-      top: 0;
+      width: 100%;
+      height: 20px;
+      top: 10px;
       left: 0;
+      text-align: center;
+      font-size: 24px;
     }
-  }
 
-  .botContainer {
-    margin-top: 30px;
-    flex: 0 0 140px;
+    .inputsArea {
+      position: absolute;
+      width: calc(100% - 170px);
+      height: 134px;
+      top: 128px;
+      left: 170px;
 
-    .bot {
-      width: 110px;
+      .itemContainer {
+        background-color: $neutral_dark10;
+        border-radius: 4px;
+        padding: 12px;
+        height: 110px;
+        animation: appear1 2s;
+      }
     }
-  }
 
-  .generatingMessage {
-    text-align: center;
+    .promptArea {
+      position: absolute;
+      width: 100%;
+      height: 70px;
+      top: 260px;
+      left: 0;
+      pointer-events: none;
 
-    &Text {
-      margin-top: 20px;
+      .prompt {
+        margin-left: 140px;
+        display: flex;
+        align-items: center;
+        font-size: 18px;
+        margin-top: 14px;
+
+        .inputContainer {
+          position: relative;
+          margin: 0 4px;
+
+          .arrowDown {
+            position: absolute;
+            top: -14px;
+            margin-left: 18px;
+            width: 0;
+            height: 0;
+            border-left: 10px solid transparent;
+            border-right: 10px solid transparent;
+            border-top: 14px solid $neutral_dark10;
+
+            &FirstAppear {
+              animation: appear1 2s;
+            }
+          }
+
+          .inputBackground {
+            background-color: $neutral_dark10;
+            border-radius: 4px;
+            width: 56px;
+            height: 56px;
+          }
+
+          .inputItem {
+            position: absolute;
+            top: 0;
+            left: 0;
+          }
+        }
+      }
     }
-  }
 
-  .resultsContainer {
-    display: flex;
-    flex: 1;
-  }
+    .botArea {
+      position: absolute;
+      width: 100%;
+      height: 200px;
+      top: 60px;
+      left: 0;
+      pointer-events: none;
 
-  .output {
-    float: left;
-    margin-left: 20px;
-    margin-top: 15px;
-  }
+      .botContainer {
+        flex: 0 0 140px;
 
-  .pre {
-    white-space: pre-wrap;
-    word-break: initial;
-  }
+        .bot {
+          width: 110px;
+          position: absolute;
+          transform: translateX(-50px);
 
-  .code {
-    font-size: 14px;
-  }
+          &AppearCentered {
+            left: 50%;
+            animation: appear 2s;
+          }
 
-  .buttonContainer {
-    height: 44px;
-    margin-top: auto;
-    display: flex;
-    align-items: flex-end;
-    flex-direction: column;
+          &CenterToLeft {
+            animation: center-to-left 1.75s;
+            left: 5%;
+          }
+        }
+      }
+
+      .spinner {
+        position: absolute;
+        top: 60px;
+        left: calc(50% + 100px);
+      }
+    }
+
+    .outputsArea {
+      position: absolute;
+      width: calc(100% - 120px);
+      margin-left: 120px;
+      height: 270px;
+      top: 60px;
+      left: 0;
+      pointer-events: none;
+
+      .pre {
+        white-space: pre-wrap;
+        word-break: initial;
+        font-size: 14px;
+      }
+    }
+
+    .buttonsArea {
+      height: 44px;
+      margin-top: auto;
+      display: flex;
+      align-items: flex-end;
+      flex-direction: column;
+      position: absolute;
+      bottom: 0;
+      left: 0;
+      width: 100%;
+
+      .button {
+        font-size: 16px;
+      }
+    }
   }
 }
