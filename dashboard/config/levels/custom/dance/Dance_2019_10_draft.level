@@ -1,6 +1,5 @@
 <Dancelab>
   <config><![CDATA[{
-  "published": true,
   "game_id": 63,
   "created_at": "2023-09-20T16:54:11.000Z",
   "level_num": "custom",
@@ -55,31 +54,28 @@
     "tts_long_instructions_override": "Get your groove on! Create a dance of your own to share with your friends.",
     "validation_enabled": "false",
     "hide_pause_button": "false",
-    "preload_asset_list": null,
-    "encrypted_examples": [
-
-    ]
+    "preload_asset_list": null
   },
+  "published": true,
   "notes": "",
-  "audit_log": "[{\"changed_at\":\"2023-09-20T16:54:11.200+00:00\",\"changed\":[\"cloned from \\\"Dance_2019_10\\\"\"],\"cloned_from\":\"Dance_2019_10\"},{\"changed_at\":\"2023-09-20 17:25:00 +0000\",\"changed\":[\"start_blocks\",\"toolbox_blocks\",\"preload_asset_list\"],\"changed_by_id\":1196,\"changed_by_email\":\"amy.woodman@code.org\"},{\"changed_at\":\"2023-09-20 17:50:34 +0000\",\"changed\":[\"start_blocks\",\"toolbox_blocks\",\"never_autoplay_video\",\"preload_asset_list\",\"encrypted_examples\"],\"changed_by_id\":16899,\"changed_by_email\":\"emma.wingreen+teacher@code.org\"},{\"changed_at\":\"2023-09-21 15:22:28 +0000\",\"changed\":[\"start_blocks\",\"toolbox_blocks\",\"video_key\",\"preload_asset_list\",\"encrypted_examples\"],\"changed_by_id\":16899,\"changed_by_email\":\"emma.wingreen+teacher@code.org\"}]",
+  "audit_log": "[{\"changed_at\":\"2023-09-20T16:54:11.200+00:00\",\"changed\":[\"cloned from \\\"Dance_2019_10\\\"\"],\"cloned_from\":\"Dance_2019_10\"},{\"changed_at\":\"2023-09-20 17:25:00 +0000\",\"changed\":[\"start_blocks\",\"toolbox_blocks\",\"preload_asset_list\"],\"changed_by_id\":1196,\"changed_by_email\":\"amy.woodman@code.org\"},{\"changed_at\":\"2023-09-20 17:50:34 +0000\",\"changed\":[\"start_blocks\",\"toolbox_blocks\",\"never_autoplay_video\",\"preload_asset_list\",\"encrypted_examples\"],\"changed_by_id\":16899,\"changed_by_email\":\"emma.wingreen+teacher@code.org\"},{\"changed_at\":\"2023-09-21 15:22:28 +0000\",\"changed\":[\"start_blocks\",\"toolbox_blocks\",\"video_key\",\"preload_asset_list\",\"encrypted_examples\"],\"changed_by_id\":16899,\"changed_by_email\":\"emma.wingreen+teacher@code.org\"},{\"changed_at\":\"2023-09-25 18:58:21 +0000\",\"changed\":[\"start_blocks\"],\"changed_by_id\":16899,\"changed_by_email\":\"emma.wingreen+teacher@code.org\"},{\"changed_at\":\"2023-09-25 18:59:10 +0000\",\"changed\":[\"start_blocks\"],\"changed_by_id\":16899,\"changed_by_email\":\"emma.wingreen+teacher@code.org\"},{\"changed_at\":\"2023-09-25 19:26:03 +0000\",\"changed\":[\"start_blocks\"],\"changed_by_id\":16899,\"changed_by_email\":\"emma.wingreen+teacher@code.org\"}]",
   "level_concept_difficulty": {
   }
 }]]></config>
   <blocks>
     <start_blocks>
-      <xml>
-        <block type="Dancelab_whenSetup" deletable="false" movable="false">
+      <xml xmlns="https://developers.google.com/blockly/xml">
+        <block type="Dancelab_whenSetup" id="{vM#jv*-}QGNwT5jw~Y+" deletable="false" movable="false" x="16" y="16">
           <statement name="DO">
-            <block type="Dancelab_setBackgroundEffectWithPalette">
-              <field name="PALETTE">"electronic"</field>
-              <field name="EFFECT">"rand"</field>
+            <block type="Dancelab_ai" id="34A,eBSE~a99,SZAsxH4">
+              <field name="VALUE"/>
               <next>
-                <block type="Dancelab_makeNewDanceSpriteGroup">
+                <block type="Dancelab_makeNewDanceSpriteGroup" id="SZMJgn/]Vm39Di=pg/#g">
                   <field name="N">12</field>
                   <field name="COSTUME">"ALIEN"</field>
                   <field name="LAYOUT">"circle"</field>
                   <next>
-                    <block type="Dancelab_makeAnonymousDanceSprite">
+                    <block type="Dancelab_makeAnonymousDanceSprite" id="u~]%U!9yFH_0s=3ZoRls">
                       <field name="COSTUME">"MOOSE"</field>
                       <field name="LOCATION">{x: 200, y: 200}</field>
                     </block>
