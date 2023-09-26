@@ -5446,14 +5446,6 @@ columns:
     collation:
     comment: Location longitude
   - !ruby/object:ActiveRecord::ConnectionAdapters::MySQL::Column
-    name: state_school_id
-    sql_type_metadata: *3
-    'null': true
-    default:
-    default_function:
-    collation: utf8_unicode_ci
-    comment:
-  - !ruby/object:ActiveRecord::ConnectionAdapters::MySQL::Column
     name: school_category
     sql_type_metadata: *3
     'null': true
@@ -11386,19 +11378,6 @@ indexes:
     comment:
   - !ruby/object:ActiveRecord::ConnectionAdapters::IndexDefinition
     table: schools
-    name: index_schools_on_state_school_id
-    unique: true
-    columns:
-    - state_school_id
-    lengths: {}
-    orders: {}
-    opclasses: {}
-    where:
-    type:
-    using: :btree
-    comment:
-  - !ruby/object:ActiveRecord::ConnectionAdapters::IndexDefinition
-    table: schools
     name: index_schools_on_school_district_id
     unique: false
     columns:
@@ -12637,7 +12616,7 @@ indexes:
     type: :fulltext
     using:
     comment:
-version: 20230911173341
+version: 20230921172627
 database_version: !ruby/object:ActiveRecord::ConnectionAdapters::AbstractAdapter::Version
   version:
   - 5
