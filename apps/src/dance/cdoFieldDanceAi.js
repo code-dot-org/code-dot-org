@@ -2,7 +2,7 @@ import GoogleBlockly from 'blockly/core';
 import experiments from '@cdo/apps/util/experiments';
 import color from '@cdo/apps/util/color';
 import {getStore} from '../redux';
-import {setShowingAi} from './danceRedux';
+import {setCurrentAiModalField} from './danceRedux';
 
 const FIELD_WIDTH = 32;
 const FIELD_HEIGHT = 18;
@@ -62,7 +62,7 @@ class CdoFieldDanceAi extends GoogleBlockly.Field {
   }
 
   showEditor_() {
-    getStore().dispatch(setShowingAi(this));
+    getStore().dispatch(setCurrentAiModalField(this));
   }
 
   renderContent() {

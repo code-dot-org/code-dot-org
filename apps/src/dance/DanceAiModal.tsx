@@ -6,7 +6,7 @@ import HttpClient from '@cdo/apps/util/HttpClient';
 import {CHAT_COMPLETION_URL} from '@cdo/apps/aichat/constants';
 import {useSelector} from 'react-redux';
 import {useAppDispatch} from '@cdo/apps/util/reduxHooks';
-import {setShowingAi, DanceState} from './danceRedux';
+import {setCurrentAiModalField, DanceState} from './danceRedux';
 import {StrongText, Heading5} from '@cdo/apps/componentLibrary/typography';
 import classNames from 'classnames';
 import FontAwesome from '@cdo/apps/templates/FontAwesome';
@@ -80,8 +80,8 @@ const DanceAiModal: React.FunctionComponent<DanceAiProps> = ({onClose}) => {
   const [responseExplanation, setResponseExplanation] = useState<string>('');
   const [typingDone, setTypingDone] = useState<boolean>(false);
 
-  const showingAi = useSelector(
-    (state: {dance: DanceState}) => state.dance.showingAi
+  const currentAiModalField = useSelector(
+    (state: {dance: DanceState}) => state.dance.currentAiModalField
   );
 
   const getImageUrl = (id: string) => {
@@ -132,7 +132,7 @@ const DanceAiModal: React.FunctionComponent<DanceAiProps> = ({onClose}) => {
 
     const params = JSON.parse(response);
 
-    showingAi?.setValue(response);
+    currentAiModalField?.setValue(response);
 
     const picked = (({
       backgroundEffect,
@@ -148,7 +148,7 @@ const DanceAiModal: React.FunctionComponent<DanceAiProps> = ({onClose}) => {
   };
 
   const handleDoneClick = () => {
-    dispatch(setShowingAi(undefined));
+    dispatch(setCurrentAiModalField(undefined));
   };
 
   return (
