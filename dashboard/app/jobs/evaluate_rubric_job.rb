@@ -23,10 +23,10 @@ class EvaluateRubricJob < ApplicationJob
 
     assess_py = PyCall.import_module("assess")
 
-    lesson = 'CSD-2022-U3-L17'
+    lesson_s3_name = 'CSD-2022-U3-L17'
     code = read_user_code(user, script_level)
-    prompt = read_file_from_s3(lesson, 'system_prompt.txt')
-    rubric = read_file_from_s3(lesson, 'standard_rubric.csv')
+    prompt = read_file_from_s3(lesson_s3_name, 'system_prompt.txt')
+    rubric = read_file_from_s3(lesson_s3_name, 'standard_rubric.csv')
     api_key = ENV['OPENAI_API_KEY']
 
     # Get JSON encoded grade
