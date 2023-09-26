@@ -84,7 +84,7 @@ Apps tests are run in a browser using [Karma](https://karma-runner.github.io/). 
 | Stream pass/fail to stdout/stderr | `yarn test:unit --verbose` |
 | Rerun tests when files change | `yarn test:unit --watchTests` |
 | Debug tests in Chrome | `yarn test:unit --browser=Chrome --watchTests` |
-| Directly invoke Karma (same flags) | `npx karma --testType=unit --browser=Chrome` |
+| Directly invoke Karma (same flags) | `npx karma start --testType=unit --browser=Chrome` |
 
 #### Testing Notes
 
