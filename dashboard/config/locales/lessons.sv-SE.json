@@ -558,6 +558,50 @@
           "name": "Dansparty",
           "purpose": "Denna lektion introducerar kärn CS-koncept av kodning och eventprogrammering (med hjälp av block)."
         },
+        "coursea-2023/Happy Maps": {
+          "name": "Glada kartor"
+        },
+        "courseb-2023/Move It, Move It": {
+          "name": "Flytta det, flytta den"
+        },
+        "courseb-2023/Getting Loopy": {
+          "name": "Att bli snurrig"
+        },
+        "courseb-2023/The Right App": {
+          "name": "Den rätta appen"
+        },
+        "coursec-2023/The Big Event": {
+          "name": "Den stora händelsen"
+        },
+        "coursec-2023/Binary Bracelets": {
+          "name": "Binära armband"
+        },
+        "coursed-2023/Graph Paper Programming": {
+          "name": "Kalkyleringsprogrammering"
+        },
+        "coursed-2023/Relay Programming": {
+          "name": "Stafettprogrammering"
+        },
+        "coursed-2023/Dance Party": {
+          "name": "Dansparty",
+          "purpose": "Denna lektion introducerar kärn CS-koncept av kodning och eventprogrammering (med hjälp av block)."
+        },
+        "coursed-2023/Conditionals with Cards": {
+          "name": "Villkorssatser med kort"
+        },
+        "coursee-2023/Songwriting": {
+          "name": "Låtskrivande"
+        },
+        "coursef-2023/Outbreak": {
+          "name": "Utbrott"
+        },
+        "coursef-2023/The Internet": {
+          "name": "Internet"
+        },
+        "express-2023/Dance Party": {
+          "name": "Dansparty",
+          "purpose": "Denna lektion introducerar kärn CS-koncept av kodning och eventprogrammering (med hjälp av block)."
+        },
         "Hour of Code/Hour of Code 2013": {
           "name": "Timme av Kod 2013"
         },

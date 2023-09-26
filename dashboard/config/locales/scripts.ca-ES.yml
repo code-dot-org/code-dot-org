@@ -369,6 +369,10 @@ ca:
             que exposin trampes ètiques en una àrea d''Intel·ligència Artificial (IA)
             que trieu. '
           title: El nostre Codi Ètic d'IA
+        ai-ethics-2023:
+          lessons:
+            lesson-1:
+              name: El nostre Codi Ètic d'IA
         ai-lab:
           student_description: Utilitzeu aquests nivells per explorar AI Lab i utilitzar-los
             en altres lliçons o activitats. Haureu de crear un compte de Code.org

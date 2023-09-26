@@ -2341,6 +2341,417 @@
         "pre-express-2022/A Royal Battle with Events": {
           "student_overview": "Bir hekayə yaratmaq və ya interaktiv bir oyun qurmaq üçün hadisələrdən istifadə edin."
         },
+        "coursea-2023/Safety in My Online Neighborhood": {
+          "name": "onlayn qonşuluğumdakı təhlükəsizlik",
+          "overview": "[![sağlam düşüncə təhsili](https://curriculum.code.org/static/img/common_sense_education.png)](https://www.commonsense.org)\n\nBu dərs Sağlam Düşüncə Təhsili tərəfindən yaradılmışdır. [Daha çox məlumat.](https://www.commonsense.org/education/digital-citizenship/curriculum)\n\nİnternetin gücü şagirdlərə şəxsən görə bilmədikləri yerləri yaşamağa və ziyarət etməyə imkan verir. Lakin, gerçək dünyada səyahət etdiyiniz kimi, onlayn səyahət edərkən də təhlükəsiz olmağınız vacibdir. Bu virtual ekskursiyada uşaqlar onlayn macəralarda təhlükəsiz olmağı praktika edə bilərlər.",
+          "preparation": "-   Təlimat materiallarını nəzərdən keçirin.\n-   Hər bir tələbə üçün vərəqələri çap edin.\n-   (İstəyə görə) Sinifdəki ekran üçün şeir afişası çap edin.",
+          "purpose": "Sağlam Fikirli Təhsil  bu dərsi şagirdlərə yerlərə onlayn olaraq təhlükəsiz şəkildə necə gedə biləcəklərini öyrənmək üçün yaradıb.",
+          "student_overview": "Onlayn olaraq yerlərə necə təhlükəsiz getməyi öyrənin."
+        },
+        "coursea-2023/Learn to Drag and Drop": {
+          "name": "Dartıb buraxmağı oyrən ",
+          "purpose": "Bu dərsin əsas məqsədi tələbələrin kompüterlə təcrübələrini formalaşdırmaqdır. Klikləmək, sürükləmək və atmaq kimi ən əsas kompüter funksiyalarını əhatə etməklə biz gələcək bulmacalar üçün sinifdə daha bərabər oyun sahəsi yaradırıq. Bu dərs həmçinin cihazlarınızdan asılı olaraq \"siçan\", \"trackpad\" və ya \"toxunma ekranı\" daxil olmaqla, əsas kompüter avadanlıqları terminologiyasını təqdim etmək üçün əla fürsət təqdim edir.",
+          "student_overview": "Məsələni bitirmək üçün seçin və sürüşdürün."
+        },
+        "coursea-2023/Happy Maps": {
+          "name": "Şən xəritələr"
+        },
+        "coursea-2023/Sequencing with Scrat": {
+          "preparation": "-   Şanslı Kartlar məşqində istifadə etmək üçün tutacaqlardan istiqamətləndirici blokları kəsin.\n-   Hər bir şagirdin əks etdirmə jurnalı olduğundan əmin olun.",
+          "purpose": "Bu dərsdə tələbələr kompüter platformasında proqramlaşdırma və sazlama bacarıqlarını inkişaf etdirəcəklər. Bu tapmacaların blok əsaslı formatı tələbələrə sintaksisi təkmilləşdirməkdən narahat olmadan ardıcıllıq və anlayışlar haqqında məlumat əldə etməyə kömək edir."
+        },
+        "coursea-2023/Programming with Scrat": {
+          "purpose": "Bu dərsdə tələbələr kompüter platformasında proqramlaşdırma və sazlama bacarıqlarını inkişaf etdirəcəklər. Bu tapmacaların blok əsaslı formatı tələbələrə sintaksisi təkmilləşdirməkdən narahat olmadan ardıcıllıq və anlayışlar haqqında məlumat əldə etməyə kömək edir."
+        },
+        "coursea-2023/Programming with Rey and BB-8": {
+          "name": "Rey və BB-8 ilə proqramlaşdırma"
+        },
+        "coursea-2023/Happy Loops": {
+          "purpose": "Bu dərs dövrlərə giriş rolunu oynayır. Dövrlər şagirdlərin təkrarlanması lazım olan əmrləri qruplaşdıraraq kodlarını sadələşdirməsinə imkan verir. Şagirdlər sinif yoldaşlarının hərəkətlərindəki təkrarı qeyd edərək əmrlərin neçə dəfə təkrarlanacağını təyin edərək kritik düşünmə qabiliyyətlərini inkişaf etdirəcəklər. \"Xoşbəxt Xəritələr\"ə yenidən baxmaqla şagirdlər sıralamaq kimi köhnə anlayışları yeni təkrar dövrlər konsepsiyası ilə əlaqələndirmə şansı əldə edəcəklər."
+        },
+        "coursea-2023/Loops with Scrat": {
+          "purpose": "Bu dərsdə tələbələr looplar və onların blok kodunda necə həyata keçiriləcəyi haqqında daha çox öyrənəcəklər. Döngələrdən istifadə mühüm proqramlaşdırma bacarığıdır, çünki əmrləri əl ilə təkrarlamaq yorucu və səmərəsizdir. Bu Code.org tapmacaları ilə tələbələr mövcud döngələrə təlimatlar əlavə etməyi, təkrarlanan kodu döngələrə yığmağı və təkrarlanması lazım olan nümunələri tanımağı öyrənəcəklər."
+        },
+        "coursea-2023/Loops with Laurel": {
+          "preparation": "-   Sinifiniz üçün potensial problem sahələri tapmaq üçün bulmacalar vasitəsilə oynayın.\n-   (İstəyə görə) Sinifinizlə qrup şəklində etmək üçün bir neçə tapmaca seçin.\n-   Nəzərdən keçirin **\\*CS Fundamentals Əsas Fəaliyyət Məsləhətləri - Dərs Tövsiyələri**\n-   Hər bir şagirdin əks etdirmə jurnalı olduğundan əmin olun",
+          "purpose": "Bu dərs tələbələrə ilgəklərlə daha çox məşq edir və “xəzinə əldə et” adlı yeni blok təqdim edir. Blok, Harvester-də 'qarğıdalı yığmaq' kimi işləyir. Bu bulmacalar daha açıqdır və tələbələrə yekun həllər üçün daha çox çeviklik verir."
+        },
+        "coursea-2023/Ocean Scene with Loops": {
+          "preparation": "Sinifiniz üçün potensial problem sahələrini tapmaq üçün dərsdən əvvəl bulmacalar üzərində oynayın.\n\n-   Nəzərdən keçirin CS Fundamentals Əsas Fəaliyyət Məsləhətləri - Dərs Tövsiyələri.\n-   Hər bir şagirdin əks etdirmə jurnalı olduğundan əmin olun.",
+          "purpose": "Bu dərs proqramlaşdırmada döngələrin necə şeylər yarada biləcəyinə dair fərqli bir perspektiv təqdim edir. Tələbələr, həmçinin `təkrar` döngələrinin köməyi olmadan proqramın nə qədər blok tələb edəcəyinə görə burada döngələrsiz proqramlaşdırmanın səmərəsizliyi haqqında düşünə bilərlər.",
+          "student_overview": "Şəkilləri bitirmək üçün döngələr və modellərdən istifadə edin."
+        },
+        "coursea-2023/The Big Event Jr": {
+          "purpose": "Bu gün tələbələr hadisələri hərəkətlərdən ayırmağı öyrənəcəklər. Tələbələr kağız pultunda \"düyməni\" basmaqla fəaliyyətlərin dayandırıldığını görəcəklər. Bu hadisəni görəndə sinif unikal bir hərəkətlə reaksiya verəcəkdir. Hadisələr proqramlaşdırmada geniş istifadə olunur və bu dərsdən sonra asanlıqla tanınmalıdır"
+        },
+        "coursea-2023/Mini-Project: On the Move with Play Lab": {
+          "student_overview": "Öz oyun və ya hekayənizi yaradın."
+        },
+        "coursea-2023/End of Course Project": {
+          "name": "Kurs layihələrinin sonu!"
+        },
+        "courseb-2023/Digital Trails": {
+          "overview": "![sağlam düşüncə təhsili](https://curriculum.code.org/static/img/common_sense_education.png)][0]\n\nBu dərs ilk olaraq Common Sense Education tərəfindən yaradılmışdır. [Ətraflı məlumat.](https://www.commonsense.org/education/digital-citizenship/curriculum)\n\nOnlayn etdiyiniz işlər həmişə onlayn qalırmı? Tələbələr onlayn paylaşdıqları məlumatın rəqəmsal iz və ya “iz” buraxdığını öyrənirlər. Onu necə idarə etmələrindən asılı olaraq, bu iz böyük və ya kiçik, zərərli və ya faydalı ola bilər. Şagirdlər müxtəlif yolları müqayisə edir və hansı növ məlumatı geridə qoymaq istədikləri barədə tənqidi düşünürlər.",
+          "preparation": "-   Tədris materiallarını nəzərdən keçirin.\n-   Hər bir tələbə üçün paylama materiallarını çap edin.",
+          "purpose": "Common Sense-in Rəqəmsal Vətəndaşlıq Kurikulumu uşaqlar, media və texnologiya ilə bağlı ən son araşdırmalara əsaslanan altı əsas mövzuya müraciət edir. Bu dərs Digital Footprint & Identity mövzusuna yönəlib. Tələbələr onlayn paylaşımın faydalarını və risklərini nəzərdən keçirir və rəqəmsal şəxsiyyətin insanın özünə, nüfuzuna və münasibətlərinə necə təsir göstərə biləcəyini araşdırırlar."
+        },
+        "courseb-2023/Move It, Move It": {
+          "name": "Hərəkət et",
+          "preparation": "-   **\\*Müəllim videosuna** baxın\n-   Bir **\\*İş vərəqi Cavab Açarını** çap edin (və ya başqa cür göstərməyə hazır olun)\n-   2-3 tələbədən ibarət qrup üçün bir **\\*Xəritə Fəaliyyəti** və bir **\\*İş vərəqi** çap edin\n-   Gəzinti şəbəkəsinin qalan hissəsini doldurmaq üçün boş sənədlər hazırlayın (hər qrupa 4-7 lazımdır)",
+          "purpose": "Sinif yoldaşlarını proqramlaşdırmaq üçün fiziki hərəkətlərdən istifadə etməklə, tələbələr kompüterdə kodlaşdırmağa başlayanda hiss edəcəkləri problem və emosiyalarla qarşılaşacaqlar. Oynaq və açıq mühitdə bu stresslərlə qarşılaşmaq intensivliyi azaltmağa kömək edəcək və tələbələrə öz başlarına problemlərlə üzləşməzdən əvvəl lazımi bacarıqları tətbiq etməyə imkan verəcək."
+        },
+        "courseb-2023/Sequencing with Angry Birds": {
+          "name": "Angry Birds ilə sıralama",
+          "preparation": "-   Tələbələriniz sürükləyib atmaqda yenidirlərsə, bu dərsə başlamazdan əvvəl onlara **\\*Drag and Drop Practice** təyin etməyi düşünün.\n-   Code.org saytında **\\*Sinif Bölməsini Necə Yaratmaq olar**-a baxın - Müəllim Videosu, Code.org saytında öz sinif bölmənizi yaradın və hər bir tələbənin üzərində parolu olan kartın olduğundan əmin olun.\n-   Məktəbin İT mütəxəssisindən kompüter masasına sinif bölməniz üçün sürətli keçid əlavə edin.\n-   Hər bir tələbənin jurnalı olduğundan əmin olun.",
+          "purpose": "Bu dərsdə tələbələr kompüter platformasında proqramlaşdırma və sazlama bacarıqlarını inkişaf etdirəcəklər. Bu tapmacaların blok əsaslı formatı tələbələrə sintaksisi təkmilləşdirməkdən narahat olmadan ardıcıllıq və anlayışlar haqqında məlumat əldə etməyə kömək edir."
+        },
+        "courseb-2023/Programming with Angry Birds": {
+          "name": "Əsəbi quşlarla proqramlaşdırma",
+          "preparation": "-   Sinifiniz üçün potensial problem sahələri tapmaq üçün bulmacalar vasitəsilə oynayın.\n-   **\\*Happy Maps** üçün təchizatları tapın və ya yenidən çap edin.\n-   Hər bir tələbənin Reflection Jurnalı olduğundan əmin olun.\n-   Hər bir istiqamətin (N, S, E, W) kifayət qədər **\\*Manipulyativləri** kəsin ki, hər bir cüt tələbəyə iki dəst verin (əgər siz körpü seçimi №1-i seçsəniz).",
+          "purpose": "Bu dərsdə tələbələr kompüter platformasında proqramlaşdırma bacarıqlarını inkişaf etdirəcəklər. Bu tapmacaların blok əsaslı formatı tələbələrə sintaksisi təkmilləşdirməkdən narahat olmadan ardıcıllıq və anlayışlar haqqında məlumat əldə etməyə kömək edir.",
+          "student_overview": "_Angry Bird_'ə  labirintdən keçməyə kömək edəcək proqramlar yaradın."
+        },
+        "courseb-2023/Programming with Harvester": {
+          "name": "Taxılbiçən ilə proqramlaşdırma"
+        },
+        "courseb-2023/Getting Loopy": {
+          "name": "Loopy əldə etmək"
+        },
+        "courseb-2023/Loops with Laurel": {
+          "preparation": "-   Sinifiniz üçün potensial problem sahələri tapmaq üçün bulmacalar vasitəsilə oynayın.\n-   (İstəyə görə) Sinifinizlə qrup şəklində etmək üçün bir neçə tapmaca seçin.\n-   Nəzərdən keçirin **\\*CS Fundamentals Əsas Fəaliyyət Məsləhətləri - Dərs Tövsiyələri**\n-   Hər bir şagirdin əks etdirmə jurnalı olduğundan əmin olun",
+          "purpose": "Bu dərs tələbələrə ilgəklərlə daha çox məşq edir və mümkün qədər çox xəzinə toplamağa çalışarkən onları “təkrar”ın içərisinə bir neçə blok qoymağa təşviq edir."
+        },
+        "courseb-2023/Drawing Gardens with Loops": {
+          "preparation": "Sinifiniz üçün potensial problem sahələrini tapmaq üçün dərsdən əvvəl bulmacalar üzərində oynayın.\n\n-   Nəzərdən keçirin **\\*CS Fundamentals Əsas Fəaliyyət Məsləhətləri - Dərs Tövsiyələri**.\n-   Hər bir şagirdin əks etdirmə jurnalı olduğundan əmin olun.",
+          "purpose": "Bu dərs loopların proqramlaşdırmada necə şeylər yarada biləcəyinə dair fərqli bir perspektiv təqdim edir. Şagirdlər verilən kodu qiymətləndirmək və tapmacanı həll etmək üçün nə əlavə etmək lazım olduğunu müəyyən etməklə öz tənqidi düşünmə bacarıqlarını sınayacaqlar. Tələbələr, həmçinin `təkrar` döngələrinin köməyi olmadan proqramın nə qədər blok tələb edəcəyinə görə burada döngələrsiz proqramlaşdırmanın səmərəsizliyi haqqında düşünə bilərlər."
+        },
+        "courseb-2023/The Right App": {
+          "preparation": "-   **\\*slayd göyərtəsində** spiker qeydlərini oxuyun.\n-   Bütün tələbələr üçün kifayət qədər eskiz/rəsm ləvazimatları hazırlayın.\n-   Hər bir şagirdin əks etdirmə jurnalı olduğundan əmin olun",
+          "purpose": "Bu gün hesablama hər zamankindən daha əlçatandır. Həyatın bütün təbəqələrindən olan insanlar məlumat, ünsiyyət və əyləncə üçün bir çox müxtəlif cihazlarda, xüsusən də smartfonlarda proqram təminatından istifadə edirlər. İnsanların bu qədər müxtəlif təcrübələri və ehtiyacları olduğundan, yeni başlayan kompüter alimlərinin insanlarla empatiya qurması və onlarla birlikdə həll yollarını müəyyən etməsi vacibdir"
+        },
+        "courseb-2023/The Big Event Jr": {
+          "preparation": "-   **\\*Controller Image** layihəsini hazırlamağa hazır olun.\n-   Hər tələbəyə bir **\\*Qiymətləndirmə** çap edin.\n-   Hər bir şagirdin əks etdirmə jurnalı olduğundan əmin olun",
+          "purpose": "Bu gün tələbələr hadisələri hərəkətlərdən ayırmağı öyrənəcəklər. Tələbələr kağız pultunda \"düyməni\" basmaqla fəaliyyətlərin dayandırıldığını görəcəklər. Bu hadisəni görəndə sinif unikal bir hərəkətlə reaksiya verəcəkdir. Hadisələr proqramlaşdırmada geniş istifadə olunur və bu dərsdən sonra asanlıqla tanınmalıdır"
+        },
+        "courseb-2023/Mini-Project: A Royal Battle with Events": {
+          "student_overview": "Bir hekayə yaratmaq və ya interaktiv bir oyun qurmaq üçün hadisələrdən istifadə edin."
+        },
+        "courseb-2023/End of Course Project": {
+          "name": "Kurs layihələrinin sonu!"
+        },
+        "coursec-2023/Putting a STOP to Online Meanness": {
+          "overview": "[![sağlam düşüncə təhsili](https://curriculum.code.org/static/img/common_sense_education.png)](https://www.commonsense.org)\n\nBu dərs ilk olaraq Common Sense Education tərəfindən yaradılmışdır. [Ətraflı məlumat.](https://www.commonsense.org/education/digital-citizenship/curriculum)\n\nİnternet hər cür maraqlı insanlarla doludur, lakin bəzən onlardan bəziləri bir-birinə qarşı pis ola bilər. Bu rol oyunu ilə tələbələrinizə nə üçün onlayn olaraq pis davranmağın şəxsən danışmaqdan daha asan olduğunu və bunu görəndə onlayn alçaqlıqla necə məşğul olmağı başa düşməyə kömək edin.",
+          "preparation": "-   Tədris materiallarını nəzərdən keçirin.\n-   Hər bir tələbə üçün paylama materiallarını çap edin.\n-   Sinfə doldurulmuş heyvan və ya oyuncaq gətirin."
+        },
+        "coursec-2023/My Robotic Friends Jr": {
+          "purpose": "Bu kəsilmiş dərs sinfi komanda şəklində bir araya gətirərək sadə bir tapşırığı yerinə yetirir: stəkanları xüsusi dizaynda yığmaq üçün \"robot\" əldə edin. Bu fəaliyyət tələbələrin aydın şəkildə ifadə olunmuş alqoritmin müəyyənləşdirilməsinin vacibliyini öyrəndikləri üçün kurs boyu edəcəkləri proqramlaşdırma üçün zəmin yaradır."
+        },
+        "coursec-2023/Programming with Angry Birds": {
+          "name": "Əsəbi quşlarla proqramlaşdırma",
+          "purpose": "Bu dərsdə tələbələr kompüter platformasında proqramlaşdırma və sazlama bacarıqlarını inkişaf etdirəcəklər. Bu tapmacaların blok əsaslı formatı tələbələrə sintaksisi təkmilləşdirməkdən narahat olmadan ardıcıllıq və anlayışlar haqqında məlumat əldə etməyə kömək edir."
+        },
+        "coursec-2023/Collecting Treasure with Laurel": {
+          "name": "Laurel ilə xəzinə toplama"
+        },
+        "coursec-2023/Loops with Rey and BB-8": {
+          "purpose": "Bu dərsdə tələbələr döngələr və onları Blockly kodunda necə həyata keçirməyi öyrənəcəklər. Döngələrdən istifadə proqramlaşdırmada mühüm bacarıqdır, çünki əmrləri əl ilə təkrarlamaq yorucu və səmərəsizdir. Code.org tapmacaları ilə tələbələr mövcud döngələrə təlimatlar əlavə etməyi, təkrarlanan kodu döngələrə toplamağı və ilmələnməsi lazım olan nümunələri tanımağı öyrənəcəklər. Qeyd etmək lazımdır ki, tələbələr çoxlu müxtəlif həlləri olan tapmacalarla qarşılaşacaqlar. Bu, hər bir yanaşmanın üstünlükləri və mənfi cəhətləri ilə tapmacaları həll etməyin müxtəlif yolları haqqında müzakirələr açacaq."
+        },
+        "coursec-2023/Harvesting Crops with Loops": {
+          "purpose": "Bu dərsdə tələbələr balqabaq yığımı kimi hərəkətləri təkrarlamaq üçün ilmələrdən istifadə edəcəklər. Yeni nümunələr ortaya çıxacaq və tələbələr hansı kodun və neçə dəfə təkrarlanmalı olduğunu müəyyən etmək üçün yaradıcılıq və məntiqi təfəkkürdən istifadə edəcəklər."
+        },
+        "coursec-2023/Mini-Project: Sticker Art": {
+          "name": "Mini-Layihə: Etiket İncəsənət",
+          "overview": "Bu **mini-layihə** dərsi əvvəlki dərslərdən döngələrin başa düşülməsinə əsaslanır. Şagirdlər Rəssamla unikal sənət əsərləri yaradacaqlar",
+          "purpose": "Bu seriya yaradıcı və şəxsi dizaynlarla ilgəklərin gücünü vurğulayır.\n\nLayihə tərəfindən dəstəklənən ardıcıllıq kimi təklif olunan bu irəliləyiş tələbələrə öz işləri üzərində qurmağa və heyrətamiz artefaktlar yaratmağa imkan verəcək."
+        },
+        "coursec-2023/The Big Event": {
+          "name": "Böyük hadisə",
+          "purpose": "Bu gün tələbələr hadisələri və hərəkətləri ayırd etməyi öyrənəcəklər. Tələbələr kağız pultunda \"düyməni\" basmaqla fəaliyyətlərin dayandırıldığını görəcəklər. Bu hadisəni görəndə sinif unikal bir hərəkətlə reaksiya verəcəkdir. Hadisələr proqramlaşdırmada geniş istifadə olunur və bu dərsdən sonra asanlıqla tanınmalıdır."
+        },
+        "coursec-2023/Picturing Data": {
+          "name": "Şəkil Məlumatları"
+        },
+        "coursec-2023/Binary Bracelets": {
+          "name": "ikili bilərziklər"
+        },
+        "coursec-2023/End of Course Project": {
+          "name": "Kurs layihələrinin sonu!",
+          "preparation": "-   Sinifiniz üçün potensial problem sahələri tapmaq üçün bulmacalar vasitəsilə oynayın.\n-   Hər bir tələbə (və ya cüt) üçün bir **\\*Layihə Planlaşdırma Bələdçisi** çap edin.\n-   **\\*Layihə Planlaşdırma Bələdçisi (Nümunəvi)** sənədini nəzərdən keçirin.\n-   (Könüllü) Öz planlaşdırma bələdçisini tamamlayın və tələbələrə göstərmək üçün öz layihənizi kodlayın!",
+          "purpose": "Bu dərs planlaşdırma tələb edən, həm də geniş yaradıcılığa imkan verən addım-addım prosesdən istifadə edərək, tələbələrə öz dizaynlarının layihəsini yaratmaq üçün yer verir."
+        },
+        "coursed-2023/Password Power-Up": {
+          "name": "Şifrə Gücləndirilməsi",
+          "overview": "[![sağlam düşüncə təhsili](https://curriculum.code.org/static/img/common_sense_education.png)](https://www.commonsense.org)\n\nBu dərs ilk olaraq [Common Sense Education](https://www.commonsense.org/education/digital-citizenship/curriculum) tərəfindən yaradılmışdır.\n\nDaha güclü, daha təhlükəsiz onlayn parollar hər kəs üçün yaxşı fikirdir. Bəs biz uşaqlara daha yaxşı parollar yaratmağa və onları yadda saxlamağa necə kömək edə bilərik? Uşaqlara həm təhlükəsiz, həm də yaddaqalan parollar yaratmağa kömək etmək üçün bu dərsdəki məsləhətlərdən istifadə edin.",
+          "preparation": "-   Tədris materiallarını nəzərdən keçirin.\n-   Hər bir tələbə üçün paylama materiallarını çap edin.\n-   Şagirdlər üçün kağız vəsait və ya dəftər hazırlayın.",
+          "purpose": "Sağlam Fikirli Təhsil  bu dərsi şagirdlərə yerlərə onlayn olaraq təhlükəsiz şəkildə necə gedə biləcəklərini öyrənmək üçün yaradıb.",
+          "student_overview": "Bu kursda, şifrələrin sizin məlumatlarınızı necə qoruduğunu və necə yaxşı şifrə yaradmağı öyrənəcəksiniz."
+        },
+        "coursed-2023/Graph Paper Programming": {
+          "name": "Millimetrlik kağızda proqramlaşdırma",
+          "overview": "Bu **kontekst-yaradan** dərsdə şagirdlər simvollardan istifadə edərək bir birlərinə grafik vərəqdə damalar rəngləməyi təlim edirlər. Bir birlərini rəsim cəkməyə \"programlaşdirmaqla\" şagirdlər programlaşdirmanın bəzi əsas mövzularını əyləncəli və əlcatan bir yolla təcrübə edirlər.",
+          "purpose": "Bu fəaliyyətin məqsədi kurs boyu istifadə olunacaq bəzi fundamental proqramlaşdırma anlayışlarını təqdim etməklə yanaşı, tənqidi düşünmə bacarıqları və kurs üçün həyəcan yaratmaqdır. Bağlanmamış fəaliyyətdə ardıcıllıq və alqoritmlər kimi əsas anlayışları sinifə təqdim etməklə, kompüterlərdən qorxan tələbələr hələ də bu mövzularda anlayışın təməlini qura bilərlər. Bu dərsdə tələbələr alqoritmin işlənməsi və onu proqrama kodlaşdırmağı öyrənəcəklər.",
+          "student_overview": "Bu dərsdə sinif yoldasınızı rəsm cəkmək ücün programlaşdıracaqsınız."
+        },
+        "coursed-2023/Introduction to Online Puzzles": {
+          "purpose": "Biz başa düşürük ki, hər bir sinifdə hər bir mövzu üçün bir anlayış spektri var. Sinifinizdəki bəzi tələbələr kompüter sehrbazları ola bilər, digərləri isə ümumiyyətlə çox təcrübəyə malik deyillər. Bərabər oyun (və öyrənmə) sahəsi yaratmaq üçün biz D Kursu üçün bu \"Yüksək Mərhələ\"ni hazırlamışıq. Bu, ya giriş, ya da Code.org və əsas informatika anlayışlarından necə istifadə olunacağına dair icmal kimi istifadə edilə bilər. Bu mərhələ D kursuna başlamaq üçün lazım olan bütün ilkin şərtləri əhatə edir."
+        },
+        "coursed-2023/Relay Programming": {
+          "name": "Estafet proqramlaşdırması"
+        },
+        "coursed-2023/Build a Star Wars Game": {
+          "name": "Ulduz Müharibələri oyunu düzəldin",
+          "purpose": "CS Fundamentals sadəcə olaraq kompüter elmini öyrətmək deyil, kompüter elmini əyləncəli və həyəcanlı etməkdir. Bu seriyada tələbələr _Ulduz Döyüşləri_ filmindəki məşhur personajlardan istifadə edərək hadisələr haqqında öyrənəcəklər. Bu tapmacalar \"öyrənmək\" və \"əyləncə\" arasındakı sərhədləri qarışdırır. Həmçinin, tələbələr oyunlarda müntəzəm proqramlaşdırma təcrübələrini tanımağı öyrənəcəklər ki, evdə oyun oynayarkən ümumi kompüter elmi prinsiplərinin istifadə olunduğunu görə bilsinlər."
+        },
+        "coursed-2023/Dance Party": {
+          "name": "Rəqs şənliyi",
+          "purpose": "Bu dərs kodlaşdırma və hadisə proqramlaşdırmasının (bloklardan istifadə etməklə) əsas CS konsepsiyalarını təqdim edir."
+        },
+        "coursed-2023/Loops in Ice Age": {
+          "name": "Buz Dövründə Dövrlər",
+          "purpose": "Bu dərsdə tələbələr looplar və onların blok kodunda necə həyata keçiriləcəyi haqqında daha çox öyrənəcəklər. Döngələrdən istifadə mühüm proqramlaşdırma bacarığıdır, çünki əmrləri əl ilə təkrarlamaq yorucu və səmərəsizdir. Bu Code.org tapmacaları ilə tələbələr mövcud döngələrə təlimatlar əlavə etməyi, təkrarlanan kodu döngələrə yığmağı və təkrarlanması lazım olan nümunələri tanımağı öyrənəcəklər."
+        },
+        "coursed-2023/Nested Loops in Maze": {
+          "purpose": "İç-içə döngələrə bu girişdə tələbələr bulmacalar üçün daha səmərəli həllər yaratmaq üçün rahatlıq zonasından kənara çıxacaqlar.\n\nƏvvəlki tapmacalarda ilmələr tələbələri təkrarı tanımağa sövq edirdi. Burada tələbələr bu iç-içə döngələri inkişaf etdirmək üçün təkrarlanan nümunələr daxilində nümunələri tanımağı öyrənəcəklər. Bu mərhələ tələbələri kodun qıcıqlandıran və uzun yolu yazmaq üçün çox mürəkkəb olduğu tapmacanı həll etməyə təşviq etməklə başlayır. Videoda iç-içə döngələr təqdim edildikdən sonra tələbələrə nümunə göstərilir və başqa bir döngənin içərisinə döngə qoyulduqda nə baş verəcəyini proqnozlaşdırmaq xahiş olunur. Bu irəliləyiş tələbələrin proqramlaşdırmada dönmə anlayışlarını möhkəmləndirmək və qurmaq üçün çoxlu təcrübəyə gətirib çıxarır."
+        },
+        "coursed-2023/Conditionals with Cards": {
+          "name": "Kartlarla şərtlər"
+        },
+        "coursed-2023/While Loops in Farmer": {
+          "purpose": "Şagirdləriniz döngələr haqqında biliklərini dərinləşdirməyə davam etdikcə, onlar bir əmrin təkrarlanması lazım olduğu problemlərlə qarşılaşacaqlar, lakin onun neçə dəfə təkrarlanması lazım olduğu bilinmir. Bu, halqaların daxil olduğu yerdir. Bugünkü dərsdə tələbələr şərtə əsaslanan ilgəklər haqqında başlanğıc anlayışını inkişaf etdirəcək və həmçinin ümumi olaraq ilmələr haqqında biliklərini genişləndirəcəklər."
+        },
+        "coursed-2023/Until Loops in Maze": {
+          "purpose": "Bu tapmacalar dəsti 'qədər' şərtini əlavə etməklə ilgəklər haqqında bilikləri möhkəmləndirmək və üzərində qurmaq üçün işləyəcək. Bu anlayışları birləşdirməklə tələbələr mürəkkəb və innovativ proqramlar yaratmaq potensialını araşdıra biləcəklər."
+        },
+        "coursed-2023/End of Course Project": {
+          "name": "Kurs layihələrinin sonu!",
+          "preparation": "-   Sinifiniz üçün potensial problem sahələri tapmaq üçün bulmacalar vasitəsilə oynayın.\n-   Hər bir tələbə (və ya cüt) üçün bir **\\*Layihə Planlaşdırma Bələdçisi** çap edin.\n-   (Könüllü) Öz planlaşdırma bələdçisini tamamlayın və tələbələrə göstərmək üçün öz layihənizi kodlayın!",
+          "purpose": "Bu dərs planlaşdırma tələb edən, həm də geniş yaradıcılığa imkan verən addım-addım prosesdən istifadə edərək, tələbələrə öz dizaynlarının layihəsini yaratmaq üçün yer verir."
+        },
+        "coursee-2023/Be A Super Digital Citizen": {
+          "name": "Super bir rəqəmsal vətəndaş olun",
+          "overview": "[![sağlam düşüncə təhsili](https://curriculum.code.org/static/img/common_sense_education.png)](https://www.commonsense.org)\n\nBu dərs ilk olaraq Common Sense Education tərəfindən yaradılmışdır. [Ətraflı məlumat.](https://www.commonsense.org/education/digital-citizenship/curriculum)\n\nOnlayn alətlər uşaqlar üçün güc verir və onlar həm də böyük məsuliyyətlər daşıyır. Bəs uşaqlar həmişə kiber zorakılıqla qarşılaşdıqda nə etməli olduqlarını bilirlərmi? Tələbələrə hərəkətə keçmək və münaqişələri həll etmək üçün uyğun yollar göstərin."
+        },
+        "coursee-2023/Private and Personal Information": {
+          "name": "Özəl və şəxsi informasiya",
+          "preparation": "-   Tədris materiallarını nəzərdən keçirin.\n-   Hər bir tələbə üçün paylama materiallarını çap edin.",
+          "purpose": "Sağlam Fikirli Təhsil  bu dərsi şagirdlərə yerlərə onlayn olaraq təhlükəsiz şəkildə necə gedə biləcəklərini öyrənmək üçün yaradıb."
+        },
+        "coursee-2023/Swimming Fish with Sprite Lab": {
+          "name": "Sprite Laboratoriyası ilə Üzgüçülük Balığı",
+          "preparation": "-   Sinifiniz üçün potensial problem sahələri tapmaq üçün bulmacalar vasitəsilə oynayın.\n-   Hər bir şagirdin əks etdirmə jurnalı olduğundan əmin olun.",
+          "purpose": "Bu dərs tələbələri Sprite Lab-ın əsas lüğəti ilə tanış etmək və onlara digər mühitlərdə öyrəndikləri anlayışları bu alətə tətbiq etmək üçün nəzərdə tutulub. Balıq çəni yaratmaqla tələbələr bu alətin proqramlaşdırma modeli haqqında anlayış formalaşdırmağa başlayacaq və özlərini ifadə etmək üçün ondan istifadə yollarını araşdıracaqlar.",
+          "student_overview": "Sprite yaratmağı və redaktə etməyi öyrənin."
+        },
+        "coursee-2023/Hello World": {
+          "name": "Salam Dünya"
+        },
+        "coursee-2023/Mini-Project: About Me": {
+          "name": "Mini-Layihə: Mənim Haqqımda"
+        },
+        "coursee-2023/Drawing with Loops": {
+          "preparation": "-   Sinifiniz üçün potensial problem sahələri tapmaq üçün bulmacalar vasitəsilə oynayın.\n-   Hər bir şagirdin əks etdirmə jurnalı olduğundan əmin olun."
+        },
+        "coursee-2023/Songwriting": {
+          "name": "Mahnı yazma"
+        },
+        "coursee-2023/Functions in Minecraft": {
+          "preparation": "-   Sinifiniz üçün potensial problem sahələri tapmaq üçün bulmacalar vasitəsilə oynayın.\n-   Hər bir şagirdin əks etdirmə jurnalı olduğundan əmin olun."
+        },
+        "coursee-2023/Functions with Artist": {
+          "preparation": "-   Sinifiniz üçün potensial problem sahələri tapmaq üçün bulmacalar vasitəsilə oynayın.\n-   Hər bir şagirdin əks etdirmə jurnalı olduğundan əmin olun."
+        },
+        "coursee-2023/Conditionals with the Farmer": {
+          "preparation": "-   Sinifiniz üçün potensial problem sahələri tapmaq üçün bulmacalar vasitəsilə oynayın.\n-   Hər bir şagirdin əks etdirmə jurnalı olduğundan əmin olun."
+        },
+        "coursee-2023/Functions with Harvester": {
+          "preparation": "-   Sinifiniz üçün potensial problem sahələri tapmaq üçün bulmacalar vasitəsilə oynayın.\n-   Hər bir şagirdin əks etdirmə jurnalı olduğundan əmin olun."
+        },
+        "coursee-2023/Designing for Accessibility": {
+          "name": "Əlçatanlıq üçün dizayn"
+        },
+        "coursee-2023/Digital Sharing": {
+          "name": "Rəqəmsal paylaşım"
+        },
+        "coursee-2023/End of Course Project": {
+          "name": "Kurs layihələrinin sonu!"
+        },
+        "coursef-2023/The Power of Words": {
+          "name": "Sözlərin Gücü"
+        },
+        "coursef-2023/Introducing Sprite Lab": {
+          "name": "Sprite Laboratoriyasını təqdim edirik",
+          "overview": "Bu **kontekst-xassə** dərsində tələbələr, tətbiqetmələrin və vasitələrin istifadəçilərə bunlardan necə istifadə etmə seçimləri verdiyinə diqqət yetirərək kompüterlərin və texnologiyaların həyatındakı rolunu müzakirə edəcəklər. Tələbələr, daha sonra özləri yaratacaqlarına oxşar tətbiqləri araşdıracaqlar.",
+          "preparation": "-   Tələbələrin Code.org saytına necə daxil olacağını müəyyənləşdirin.\n-   Lazım gələrsə, tələbələr üçün Code.org hesabları yaradın.\n-   Tələbələrə Sprite Laboratoriyasını təqdim edin.\n-   **\\*Exploring Apps** iş vərəqinin surətlərini çap edin (və ya rəqəmsal versiyanı LMS-də yerləşdirin).",
+          "purpose": "İlk dərs tələbələri kursa həvəsləndirmək və öz şəxsi maraqlarını informatika ilə əlaqələndirməkdən ibarətdir.",
+          "student_overview": "Proqramların və vasitələrin istifadəçilərə onlardan necə istifadə etmələri ilə bağlı seçimlər verdiyinə diqqət yetirərək kompüterlər və texnologiyanın həyatınızdakı rolunu müzakirə edəcəksiniz."
+        },
+        "coursef-2023/Making Sprites": {
+          "name": "Spraytlar düzəltmək",
+          "preparation": "Səviyyələr arasında oynayın və **\\*dərs slaydlarını** nəzərdən keçirin.",
+          "purpose": "Bu dərs tələbələri Sprite Lab-da proqramlaşdırma ilə tanış etmək üçün nəzərdə tutulmuşdur. Tələbələr bu alətin proqramlaşdırma modeli haqqında anlayış formalaşdırmağa başlayacaq və özlərini ifadə etmək üçün ondan istifadə edə biləcəkləri yolları araşdıracaqlar.",
+          "student_overview": "Bu dərsdə siz proqramlar yazacaq və spritlər və davranışlar haqqında öyrənəcəksiniz."
+        },
+        "coursef-2023/Sprites in Action": {
+          "name": "Spritelar Hərəkətdə",
+          "preparation": "Səviyyələr arasında oynayın və dərs slaydlarını nəzərdən keçirin."
+        },
+        "coursef-2023/Mini-Project: Virtual Pet": {
+          "name": "Mini-Layihə: Virtual Ev Heyvanı",
+          "preparation": "-   Sinifiniz üçün potensial problem sahələri tapmaq üçün bulmacalar vasitəsilə oynayın.\n-   Hər bir şagirdin əks etdirmə jurnalı olduğundan əmin olun.",
+          "purpose": "Bu dərs tələbələrə əvvəlki dərslərdən proqramlaşdırma anlayışlarını başqa yaradıcı kontekstdə tətbiq etməyə imkan verir."
+        },
+        "coursef-2023/Blank Space Stories": {
+          "purpose": "Bu dərs tələbələr proqramlaşdırmaya qayıtdıqda dəyişənlərin necə işlədiyini başa düşmək üçün faydalı olacaq ümumi kontekst təqdim edir."
+        },
+        "coursef-2023/Text and Prompts": {
+          "preparation": "Səviyyələr arasında oynayın və dərs slaydlarını nəzərdən keçirin."
+        },
+        "coursef-2023/Mini-Project: User Input Programs": {
+          "purpose": "Bu dərs yeni bacarıq və ya anlayışlar təqdim etmir, əksinə tələbələrə öyrəndiklərini yaradıcı şəkildə tətbiq etmək imkanı verir.",
+          "student_overview": "Dəyişənlərlə yeni bacarıqlarınızı üç açıq layihədən birinə tətbiq edin."
+        },
+        "coursef-2023/Outbreak": {
+          "preparation": "-   Sinifiniz üçün potensial problem sahələri tapmaq üçün bulmacalar vasitəsilə oynayın.\n-   Hər bir şagirdin əks etdirmə jurnalı olduğundan əmin olun.",
+          "purpose": "Əvvəlki dərsdə tələbələr sadə simulyasiyadan məlumatları topladılar və şərh etdilər. Bu dərsdə tələbələr öz simulyasiya modellərini kodlaşdırmaq üçün təlimatlara əməl edəcəklər. Şagirdlərin real dünyada virusun yayılması ilə bağlı əvvəlki bilikləri uydurma ssenariyə tətbiq olunacaq."
+        },
+        "coursef-2023/The Internet": {
+          "name": "İnternet"
+        },
+        "coursef-2023/End of Course Project": {
+          "name": "Kurs layihələrinin sonu!"
+        },
+        "express-2023/Programming with Angry Birds": {
+          "name": "Əsəbi quşlarla proqramlaşdırma",
+          "overview": "Bu **bacarıq inkişaf etdirmə** dərsində tələbələr quşu labirentin bir tərəfindən digər tərəfdəki donuza daşımaq üçün ardıcıl alqoritmlər hazırlayacaqlar. Bunun üçün onlar kod bloklarını xətti ardıcıllıqla bir yerə yığaraq, onları düz hərəkət etdirəcək, sola və ya sağa döndərəcəklə",
+          "preparation": "-   Sinifiniz üçün potensial problem sahələri tapmaq üçün bulmacalar vasitəsilə oynayın.\n-   (İstəyə görə) Sinifinizlə qrup şəklində etmək üçün bir neçə tapmaca seçin.\n-   Hər bir şagirdin əks etdirmə jurnalı olduğundan əmin olun",
+          "purpose": "Bu dərsdə tələbələr kompüter platformasında proqramlaşdırma bacarıqlarını inkişaf etdirəcəklər. Bu tapmacaların blok əsaslı formatı tələbələrə sintaksisi təkmilləşdirməkdən narahat olmadan ardıcıllıq və anlayışlar haqqında məlumat əldə etməyə kömək edir."
+        },
+        "express-2023/Debugging in Maze": {
+          "preparation": "-   Sinifiniz üçün potensial problem sahələrini tapmaq üçün dərsdə oynayın.\n-   (İstəyə görə) Sinifinizlə qrup şəklində etmək üçün bir neçə tapmaca seçin.\n-   Hər bir tələbənin Reflection Jurnalı olduğundan əmin olun.",
+          "purpose": "Sinifinizdəki tələbələr sazlamanın mahiyyətinə görə bu dərsdən məyus ola bilərlər. Sazlama kompüter proqramlaşdırması üçün çox vacib olan bir anlayışdır. Kompüter alimləri öz proqramlarında səhvləri tapmaqda çox yaxşı olmalıdırlar. Sazlama tələbələri problemləri tanımağa və tənqidi düşünmə və problem həll etmə bacarıqlarını inkişaf etdirərkən onların öhdəsindən gəlməyə məcbur edir."
+        },
+        "express-2023/Collecting Treasure with Laurel": {
+          "name": "Laurel ilə xəzinə toplama",
+          "preparation": "-   Sinifiniz üçün potensial problem sahələri tapmaq üçün bulmacalar vasitəsilə oynayın.\n-   Hər bir tələbənin Reflection Jurnalı olduğundan əmin olun.",
+          "purpose": "Bu dərsdə tələbələr _Macəraçı Laurel_ adlı yeni personajdan istifadə edərək proqramlaşdırma bacarıqlarını məşq edəcəklər. Kimsə proqramlaşdırmağa başlayanda, maşının oxuya biləcəyi bir şeydən istifadə edərək, təlimatları müəyyən bir ardıcıllıqla birləşdirir. Proqramlaşdırmadan istifadə etməklə, tələbələr kompüterin təlimatları və sifarişləri necə idarə etdiyini başa düşəcəklər. Fərqli tapmaca məqsədi ilə yeni xarakterdən istifadə tələbələrə proqramlaşdırmada ardıcıllıq və alqoritmlərlə bağlı təcrübələrini genişləndirməyə kömək edəcək.",
+          "student_overview": "\\_Macəraçı Laurel-ə çoxlu qiymətli daşlar toplamağa kömək etmək üçün alqoritmlər yazın!"
+        },
+        "express-2023/Swimming Fish in Sprite Lab": {
+          "overview": "Şagirdlər bu **bacarıq inkişaf etdirmə dərsində** sadə animasiyalı sualtı səhnəni proqramlaşdıracaqla",
+          "preparation": "-   Sinifiniz üçün potensial problem sahələri tapmaq üçün bulmacalar vasitəsilə oynayın.\n-   Hər bir tələbənin Reflection Jurnalı olduğundan əmin olun.",
+          "purpose": "Bu dərs tələbələri Sprite Lab-ın əsas lüğəti ilə tanış etmək və onlara digər mühitlərdə öyrəndikləri anlayışları bu alətə tətbiq etmək üçün nəzərdə tutulub. Balıq çəni yaratmaqla tələbələr bu alətin proqramlaşdırma modeli haqqında anlayış formalaşdırmağa başlayacaq və özlərini ifadə etmək üçün ondan istifadə yollarını araşdıracaqlar.",
+          "student_overview": "Sprite yaratmağı və redaktə etməyi öyrənin."
+        },
+        "express-2023/Making Sprites": {
+          "name": "Spraytlar düzəltmək",
+          "preparation": "Səviyyələr arasında oynayın və **\\*dərs slaydlarını** nəzərdən keçirin.",
+          "purpose": "Bu dərs tələbələri Sprite Lab-da proqramlaşdırma ilə tanış etmək üçün nəzərdə tutulmuşdur. Tələbələr bu alətin proqramlaşdırma modeli haqqında anlayış formalaşdırmağa başlayacaq və özlərini ifadə etmək üçün ondan istifadə edə biləcəkləri yolları araşdıracaqlar.",
+          "student_overview": "Bu dərsdə siz proqramlar yazacaq və spritlər və davranışlar haqqında öyrənəcəksiniz."
+        },
+        "express-2023/Sprites in Action": {
+          "name": "Spritelar Hərəkətdə",
+          "preparation": "Səviyyələr arasında oynayın və dərs slaydlarını nəzərdən keçirin.",
+          "purpose": "Bu dərs tələbələri hadisələrlə proqramlaşdırma ilə tanış etmək üçün nəzərdə tutulmuşdur. Bu kurs boyu hadisələr tələbələrin proqramlarının zamanla və ya istifadəçiyə cavab olaraq necə işlədiyini dəyişməsinin əsas yolu olacaq."
+        },
+        "express-2023/Virtual Pet with Sprite Lab": {
+          "preparation": "-   Sinifiniz üçün potensial problem sahələri tapmaq üçün bulmacalar vasitəsilə oynayın.\n-   Hər bir tələbənin Reflection Jurnalı olduğundan əmin olun.",
+          "purpose": "Bu dərs tələbələrə əvvəlki dərslərdən proqramlaşdırma anlayışlarını başqa yaradıcı kontekstdə tətbiq etməyə imkan verir."
+        },
+        "express-2023/Dance Party": {
+          "name": "Rəqs şənliyi",
+          "preparation": "-   Sinifiniz üçün potensial problem sahələri tapmaq üçün bulmacalar vasitəsilə oynayın.\n-   Hər bir tələbənin Reflection Jurnalı olduğundan əmin olun.\n-   Qulaqlıqlara ehtiyacı nəzərə alın. Bu fəaliyyət səsə əsaslanır.",
+          "purpose": "Bu dərs kodlaşdırma və hadisə proqramlaşdırmasının (bloklardan istifadə etməklə) əsas CS konsepsiyalarını təqdim edir."
+        },
+        "express-2023/Loops with Rey and BB-8": {
+          "purpose": "Bu dərsdə tələbələr döngələr və onları Blockly kodunda necə həyata keçirməyi öyrənəcəklər. Döngələrdən istifadə proqramlaşdırmada mühüm bacarıqdır, çünki əmrləri əl ilə təkrarlamaq yorucu və səmərəsizdir. Code.org tapmacaları ilə tələbələr mövcud döngələrə təlimatlar əlavə etməyi, təkrarlanan kodu döngələrə toplamağı və ilmələnməsi lazım olan nümunələri tanımağı öyrənəcəklər. Qeyd etmək lazımdır ki, tələbələr çoxlu müxtəlif həlləri olan tapmacalarla qarşılaşacaqlar. Bu, hər bir yanaşmanın üstünlükləri və mənfi cəhətləri ilə tapmacaları həll etməyin müxtəlif yolları haqqında müzakirələr açacaq."
+        },
+        "express-2023/Mini-Project: Sticker Art": {
+          "name": "Mini-Layihə: Etiket İncəsənət",
+          "overview": "Bu **mini-layihə** dərsi əvvəlki dərslərdən döngələrin başa düşülməsinə əsaslanır. Şagirdlər Rəssamla unikal sənət əsərləri yaradacaqlar",
+          "preparation": "-   Öz dizaynınızı yaratmağa məşq edin. Bu səviyyələrin əvvəlki hər şeydən nə ilə fərqləndiyini qeyd edin.\n-   Hər bir şagirdin əks etdirmə jurnalı olduğundan əmin olun",
+          "purpose": "Bu seriya yaradıcı və şəxsi dizaynlarla ilgəklərin gücünü vurğulayır.\n\nLayihə tərəfindən dəstəklənən ardıcıllıq kimi təklif olunan bu irəliləyiş tələbələrə öz işləri üzərində qurmağa və heyrətamiz artefaktlar yaratmağa imkan verəcək."
+        },
+        "express-2023/Nested Loops in Maze": {
+          "preparation": "-   Sinifiniz üçün potensial problem sahələri tapmaq üçün bulmacalar vasitəsilə oynayın.\n-   Hər bir tələbənin Reflection Jurnalı olduğundan əmin olun.",
+          "purpose": "İç-içə döngələrə bu girişdə tələbələr bulmacalar üçün daha səmərəli həllər yaratmaq üçün rahatlıq zonasından kənara çıxacaqlar.\n\nƏvvəlki tapmacalarda ilmələr tələbələri təkrarı tanımağa sövq edirdi. Burada tələbələr bu iç-içə döngələri inkişaf etdirmək üçün təkrarlanan nümunələr daxilində nümunələri tanımağı öyrənəcəklər. Bu mərhələ tələbələri kodun qıcıqlandıran və uzun yolu yazmaq üçün mürəkkəb olduğu tapmacanı həll etməyə təşviq etməklə başlayır. Videoda iç-içə döngələr təqdim edildikdən sonra tələbələrə nümunə göstərilir və başqa bir döngənin içərisinə döngə qoyulduqda nə baş verəcəyini proqnozlaşdırmaq xahiş olunur. Bu irəliləyiş tələbələrin proqramlaşdırmada dönmə anlayışlarını möhkəmləndirmək və qurmaq üçün çoxlu təcrübəyə gətirib çıxarır.",
+          "student_overview": "Döngələr içərisində döngələr ilgəklər içərisindədir. Bu nə deməkdir? Bu dərs sizə iç-içə döngə yaratdığınız zaman nə baş verdiyini öyrədəcək."
+        },
+        "express-2023/Snowflakes with Anna and Elsa": {
+          "preparation": "-   Sinifiniz üçün potensial problem sahələrini tapmaq üçün dərsdə oynayın.\n-   Hər bir tələbənin Reflection Jurnalı olduğundan əmin olun."
+        },
+        "express-2023/If/Else with Bee": {
+          "preparation": "-   Sinifiniz üçün potensial problem sahələri tapmaq üçün bulmacalar vasitəsilə oynayın.\n-   Hər bir tələbənin Reflection Jurnalı olduğundan əmin olun."
+        },
+        "express-2023/While Loops in Farmer": {
+          "preparation": "-   Sinifiniz üçün potensial problem sahələri tapmaq üçün bulmacalar vasitəsilə oynayın.\n-   Hər bir tələbənin Reflection Jurnalı olduğundan əmin olun.",
+          "purpose": "Şagirdləriniz döngələr haqqında biliklərini dərinləşdirməyə davam etdikcə, onlar bir əmrin təkrarlanması lazım olduğu problemlərlə qarşılaşacaqlar, lakin onun neçə dəfə təkrarlanması lazım olduğu bilinmir. Bu, halqaların daxil olduğu yerdir. Bugünkü dərsdə tələbələr şərtə əsaslanan ilgəklər haqqında başlanğıc anlayışını inkişaf etdirəcək və həmçinin ümumi olaraq ilmələr haqqında biliklərini genişləndirəcəklər."
+        },
+        "express-2023/Until Loops in Maze": {
+          "preparation": "-   Sinifiniz üçün potensial problem sahələri tapmaq üçün bulmacalar vasitəsilə oynayın.\n-   Hər bir tələbənin Reflection Jurnalı olduğundan əmin olun."
+        },
+        "express-2023/Functions in Minecraft": {
+          "preparation": "-   Sinifiniz üçün potensial problem sahələri tapmaq üçün bulmacalar vasitəsilə oynayın.\n-   Hər bir tələbənin Reflection Jurnalı olduğundan əmin olun."
+        },
+        "express-2023/Functions with Artist": {
+          "preparation": "-   Sinifiniz üçün potensial problem sahələri tapmaq üçün bulmacalar vasitəsilə oynayın.\n-   Hər bir tələbənin Reflection Jurnalı olduğundan əmin olun."
+        },
+        "express-2023/Text and Prompts": {
+          "preparation": "Səviyyələr arasında oynayın və dərs slaydlarını nəzərdən keçirin."
+        },
+        "express-2023/Using Variables with the Artist": {
+          "preparation": "-   Sinifiniz üçün potensial problem sahələri tapmaq üçün bulmacalar vasitəsilə oynayın.\n-   Hər bir tələbənin Reflection Jurnalı olduğundan əmin olun."
+        },
+        "express-2023/Variables with the Bee": {
+          "preparation": "-   Sinifiniz üçün potensial problem sahələri tapmaq üçün bulmacalar vasitəsilə oynayın.\n-   Hər bir tələbənin Reflection Jurnalı olduğundan əmin olun."
+        },
+        "express-2023/For Loops with Bee": {
+          "preparation": "-   Sinifiniz üçün potensial problem sahələri tapmaq üçün bulmacalar vasitəsilə oynayın.\n-   Hər bir tələbənin Reflection Jurnalı olduğundan əmin olun."
+        },
+        "express-2023/For Loops with Artist": {
+          "preparation": "-   Sinifiniz üçün potensial problem sahələrini tapmaq üçün dərsdə oynayın.\n-   Hər bir tələbənin Reflection Jurnalı olduğundan əmin olun."
+        },
+        "express-2023/End of Course Project": {
+          "name": "Kurs layihələrinin sonu!",
+          "purpose": "Bu dərs planlaşdırma tələb edən, həm də geniş yaradıcılığa imkan verən addım-addım prosesdən istifadə edərək, tələbələrə öz dizaynlarının layihəsini yaratmaq üçün yer verir."
+        },
+        "pre-express-2023/Learn to Drag and Drop": {
+          "name": "Dartıb buraxmağı oyrən ",
+          "preparation": "-   Code.org saytında **\\*Sinif Bölməsini Necə Yaratmaq olar** - Müəllim videosuna baxın. Code.org saytında öz sinif bölmənizi yaradın və əmin olun ki, hər bir tələbənin üzərində **parol** olan kartı var.\n-   Tələbələrin öz cihazlarından Dərs 2-yə daxil ola biləcəklərinə əmin olun. Şagirdlərin çox sürətlə irəliləməsinin qarşısını almaq üçün gələcək dərsləri gizlətmək istəmədiyinizi düşünün.\n-   Məktəbin İT mütəxəssisindən kompüter masasına sinif bölməniz üçün sürətli keçid əlavə edin.\n-   Daha çox onlayn təhlükəsizlik məzmunu üçün Common Sense Education veb-saytını nəzərdən keçirin.",
+          "purpose": "Bu dərsin əsas məqsədi tələbələrin kompüterlə təcrübələrini formalaşdırmaqdır. Klikləmək, sürükləmək və atmaq kimi ən əsas kompüter funksiyalarını əhatə etməklə biz gələcək bulmacalar üçün sinifdə daha bərabər oyun sahəsi yaradırıq. Bu dərs həmçinin cihazlarınızdan asılı olaraq \"siçan\", \"trackpad\" və ya \"toxunma ekranı\" daxil olmaqla, əsas kompüter avadanlıqları terminologiyasını təqdim etmək üçün əla fürsət təqdim edir.",
+          "student_overview": "Məsələni bitirmək üçün seçin və sürüşdürün."
+        },
+        "pre-express-2023/Sequencing with Scrat": {
+          "purpose": "Bu dərsdə tələbələr kompüter platformasında proqramlaşdırma və sazlama bacarıqlarını inkişaf etdirəcəklər. Bu tapmacaların blok əsaslı formatı tələbələrə sintaksisi təkmilləşdirməkdən narahat olmadan ardıcıllıq və anlayışlar haqqında məlumat əldə etməyə kömək edir."
+        },
+        "pre-express-2023/Programming with Angry Birds": {
+          "name": "Əsəbi quşlarla proqramlaşdırma",
+          "purpose": "Bu dərsdə tələbələr kompüter platformasında proqramlaşdırma və sazlama bacarıqlarını inkişaf etdirəcəklər. Bu tapmacaların blok əsaslı formatı tələbələrə sintaksisi təkmilləşdirməkdən narahat olmadan ardıcıllıq və anlayışlar haqqında məlumat əldə etməyə kömək edir."
+        },
+        "pre-express-2023/Programming with Rey and BB-8": {
+          "name": "Rey və BB-8 ilə proqramlaşdırma",
+          "purpose": "Biliklərin ötürülməsini nəzərə alaraq, bu dərs tələbələrə inkişaf etdirdikləri bacarıqları tətbiq etmək üçün yeni mühit verir. Ulduz Döyüşləri pərəstişkarları bu tapmacaları görəndə sevincdən atlayacaqlar. Bu seriyanın hər bir tapmacası kursun qalan hissəsində istifadə edəcəkləri əsas anlayışları daha dərindən başa düşmək üçün əlavə edilmişdir."
+        },
+        "pre-express-2023/Programming with Harvester": {
+          "name": "Taxılbiçən ilə proqramlaşdırma"
+        },
+        "pre-express-2023/Loops with Scrat": {
+          "purpose": "Bu dərsdə tələbələr döngələr və onları Blockly kodunda necə həyata keçirməyi öyrənəcəklər. _loops_ istifadə etmək proqramlaşdırmada mühüm bacarıqdır, çünki əmrləri əl ilə təkrarlamaq yorucu və səmərəsizdir. Bu Code.org tapmacaları ilə tələbələr mövcud döngələrə təlimatlar əlavə etməyi, təkrarlanan kodu döngələrə toplamağı və təkrarlanması lazım olan nümunələri tanımağı öyrənəcəklər."
+        },
+        "pre-express-2023/Loops with Laurel": {
+          "purpose": "Bu dərs tələbələrə ilgəklərlə daha çox məşq edir və mümkün qədər çox xəzinə toplamağa çalışarkən onları “təkrar”ın içərisinə bir neçə blok qoymağa təşviq edir."
+        },
+        "pre-express-2023/Ocean Scene with Loops": {
+          "student_overview": "Şəkilləri bitirmək üçün döngələr və modellərdən istifadə edin."
+        },
+        "pre-express-2023/Drawing Gardens with Loops": {
+          "purpose": "Bu dərs loopların proqramlaşdırmada necə şeylər yarada biləcəyinə dair fərqli bir perspektiv təqdim edir. Şagirdlər verilən kodu qiymətləndirmək və tapmacanı həll etmək üçün nə əlavə etmək lazım olduğunu müəyyən etməklə öz tənqidi düşünmə bacarıqlarını sınayacaqlar. Tələbələr, həmçinin `təkrar` döngələrinin köməyi olmadan proqramın nə qədər blok tələb edəcəyinə görə burada döngələrsiz proqramlaşdırmanın səmərəsizliyi haqqında düşünə bilərlər."
+        },
+        "pre-express-2023/On the Move with Events": {
+          "student_overview": "Öz oyun və ya hekayənizi yaradın."
+        },
+        "pre-express-2023/A Royal Battle with Events": {
+          "student_overview": "Bir hekayə yaratmaq və ya interaktiv bir oyun qurmaq üçün hadisələrdən istifadə edin."
+        },
         "Hour of Code/Hour of Code 2013": {
           "name": "Kod Saatı 2013"
         },

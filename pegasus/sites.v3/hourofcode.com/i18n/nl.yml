@@ -190,6 +190,15 @@ nl:
   grade_level_label_elementary: Basisschool
   grade_level_label_middle: Middelbare school
   grade_level_label_high: Middelbare school
+  curricula_title_elementary: Curricula voor basisscholen
+  curricula_desc_elementary: Bekijk de leuke, gratis cursussen en activiteiten die
+    je uitnodigen om met je basisschoolleerlingen kennis te maken met informatica.
+  curricula_title_middle: Curricula voor middelbare scholen
+  curricula_desc_middle: Bekijk het boeiende aanbod waarmee jij en je middelbare scholieren
+    samen informatica kunnen ontdekken.
+  curricula_title_high: Curricula voor middelbare scholen
+  curricula_desc_high: Bekijk de boeiende cursussen en activiteiten die jou en je
+    middelbare scholieren uitnodigen om dieper in de informatica te duiken.
   students_label: Leerlingen
   teachers_label: Leraren
   teacher_label_csf: Docent CS Fundamentals
@@ -199,6 +208,7 @@ nl:
   teacher_label_csa: AP® Computer Science A Teacher
   required_materials: 'Benodigde materialen:'
   optional_materials: 'Optionele materialen:'
+  call_to_action_explore_roles: Ontdek openstaande rollen
   call_to_action_learn_more: Meer informatie
   call_to_action_watch_now: Nu kijken
   call_to_action_try_activity: Activiteit proberen
@@ -216,6 +226,15 @@ nl:
   call_to_action_explore_choice_level: Bekijk het voorbeeldkeuzeniveau
   call_to_action_explore_collection: Ontdek de collectie
   call_to_action_explore_unplugged_lesson: Ontdek lessen zonder aansluiting
+  call_to_action_explore_csf: Ontdek CS Fundamentals
+  call_to_action_explore_csd: Ontdek CS Discoveries
+  call_to_action_explore_csp: Ontdek de CS-principes
+  call_to_action_explore_csc: Ontdek CS-verbindingen
+  call_to_action_explore_csa: Ontdek AP® Computer Science A
+  call_to_action_explore_csa_short: Ontdek AP® CSA
+  call_to_action_explore_maker: Bekijk de curricula van Maker
+  call_to_action_explore_hoc: Bekijk de handleidingen van Hour of Code
+  call_to_action_explore_hoc_short: Ontdek Hour of Code
   call_to_action_try_app_lab: Probeer App Lab
   call_to_action_view_lesson_plan: Bekijk het lesplan
   call_to_action_self_paced_pl: Begin met professioneel leren in je eigen tempo
@@ -239,6 +258,7 @@ nl:
   call_to_action_resources_tools: Programmeertools uitproberen
   call_to_action_sign_up_free: Meld je gratis aan
   call_to_action_explore_ai_resources: AI-bronnen verkennen
+  call_to_action_explore_ai_curricula: AI-curricula verkennen
   call_to_action_explore_curriculum_catalog: Bekijk de curriculacatalogus
   call_to_action_see_full_curriculum_catalog: Bekijk de volledige studiocatalogus
   call_to_action_find_self_paced_modules: Vind modules die je in je eigen tempo kunt
@@ -261,6 +281,7 @@ nl:
   call_to_action_notify_available: Laat het me weten als het beschikbaar is
   call_to_action_register_early_access: Registreer voor vroege toegang
   call_to_action_open_positions: Bekijk openstaande vacatures
+  call_to_action_get_guide: Verkrijg de gids
   aria_label_call_to_action_afe: Meer informatie over Amazon Future Engineer
   aria_label_call_to_action_teaching_csf: Start het professionele leerprogramma Teaching
     Computer Science Fundamentals
@@ -366,6 +387,8 @@ nl:
   curriculum_name_csa: AP® Informatica A
   curriculum_name_csc_02: Elke CS-verbindingsmodule
   curriculum_name_ai: "  AI en machine learning  "
+  curriculum_name_artificial_intelligence: Kunstmatige intelligentie (AI)
+  curriculum_name_maker: Maker
   curriculum_name_maker_cp: Apps maken met apparaten (Circuit Playground)
   curriculum_name_maker_microbit: Apps maken met apparaten (micro:bit)
   curriculum_name_creating_apps_with_devices: Apps maken met apparaten
@@ -376,6 +399,8 @@ nl:
   curriculum_name_interactive_animations_games: Interactieve animaties en games
   curriculum_name_design_process: Het ontwerpproces
   curriculum_name_data_society: Data en maatschappij
+  curriculum_desc_csf: Gratis set elementaire curricula die studenten kennis laat
+    maken met de basisconcepten van de informatica.
   curriculum_desc_csf_express: Leer computerprogramma's te maken, probleemoplossende
     vaardigheden te ontwikkelen en leuke uitdagingen aan te gaan! Maak games en creatieve
     projecten om te delen met vrienden, familie en docenten.
@@ -424,6 +449,19 @@ nl:
     in computergebruik. Ontwikkel programma's die hardware-ingangen en -uitgangen
     gebruiken. Er is een versie van dit toestel voor zowel de micro:bit als de Circuit
     Playground.
+  curriculum_desc_csa: Laat studenten kennismaken met software-engineering en objectgeoriënteerd
+    ontwerp terwijl ze de programmeertaal Java leren in dit gratis curriculum voor
+    AP® Computer Science A (AP® CSA).
+  curriculum_desc_maker: Maakonderwijs brengt STEM (Science, Technology, Engineering,
+    Mathematics) een stap verder door praktijkervaring en samenwerking in de klas
+    uit te nodigen om les te geven in probleemoplossing en kritisch denken.
+  curriculum_desc_maker_short: Makerseducatie nodigt uit tot praktijkervaring en samenwerking
+    in de klas om te helpen bij het aanleren van probleemoplossing en kritisch denken.
+  curriculum_desc_csd: Flexibele cursus, waarbij elke unit afzonderlijk of gecombineerd
+    kan worden gegeven. Laat leerlingen kennismaken met het bouwen van websites, apps,
+    animaties, games en fysieke computersystemen.
+  curriculum_desc_csp: Gratis, door AP® CSP goedgekeurde introductiecursus op de middelbare
+    school die studenten kennis laat maken met de basisconcepten van de informatica.
   collection_hardware: Focus op hardware
   collection_hardware_desc: Stelt leerlingen in staat om data en fysieke apparaten
     te gebruiken om problemen op te lossen.
@@ -457,6 +495,7 @@ nl:
   module_label_professional_learning: 'Professioneel leren:'
   module_label_languages: 'Ondersteunde talen:'
   module_label_accessibility_features: 'Toegankelijkheid:'
+  module_label_accessibility_features_full: 'Toegankelijkheidsfuncties:'
   module_label_educator_tool: Hulpmiddel voor docenten
   module_label_educator_course: Cursus voor docenten
   module_label_student_tool: Hulpmiddel voor studenten
@@ -464,6 +503,7 @@ nl:
   module_label_student_content_resources: Inhoud en bronnen
   module_label_new: Nieuw
   module_label_coming_soon: Binnenkort beschikbaar
+  module_label_available_now: Nu beschikbaar
   module_label_video_series: Videoserie
   module_label_self_paced: Module in eigen tempo
   module_ages_5_10: 5-10
@@ -474,6 +514,8 @@ nl:
   module_grade_2_5: 2-5
   module_grade_3_5: 3-5
   module_grade_3_8: 3-8
+  module_grade_k_12: K-12
+  module_grade_3_12: 3-12
   module_grade_6_12: 6-12
   module_grade_6_10: 6-10
   module_grade_9_12: 9-12
@@ -488,7 +530,9 @@ nl:
   module_grade_9_12_teachers: 9-12 leraren
   module_level_beginner: Beginner
   module_level_intermediate: Intermediair
+  module_level_advanced: Geavanceerd
   module_duration_45_mins: 45 minuten
+  module_duration_2_weeks: 2 weken
   module_duration_1_hr: 1 uur
   module_duration_2_hrs: 2 uur
   module_duration_3_hrs: 3 uur
@@ -504,6 +548,7 @@ nl:
   module_duration_school_year: Schooljaar
   module_duration_month_quarter: Maand of kwartaal
   module_duration_month_semester_year: Maand, semester of jaar
+  module_duration_varies: Varieert
   module_prerequisites_none: Geen
   module_prerequisites_maker_cp: Toegang tot een circuitspeeltuin
   module_prerequisites_maker_microbit: Toegang tot een micro:bit
@@ -570,6 +615,7 @@ nl:
   heading_java_lab: Javalab
   heading_objects_first: Objecten eerst
   heading_these_lessons_will: 'Deze lessen zullen:'
+  heading_explore_curriculum_catalog: Bekijk al onze cursussen in de Curriculumcatalogus
   professional_learning_section_desc: Krijg de ondersteuning die je nodig hebt terwijl
     je je voorbereidt om les te geven. Leraren vinden het geweldig, meer dan 90% vindt
     het de beste professionele ontwikkeling ooit!
@@ -833,6 +879,11 @@ nl:
     ChatGPT) en Generative AI. Luister rechtstreeks van de experts hoe deze nieuwe
     technologieën werken: Mira Murati, CTO van OpenAI, en Cristóbal Valenzuela, CEO
     van RunwayML.'
+  ai_pl_101_llm_slides_title: Aanwijzingen voor grote taalmodellen voor docenten
+  ai_pl_101_llm_slides_desc: Tools om de best mogelijke output te krijgen van LLM's
+    zoals ChatGPT, van beginner tot gevorderd. Bevat starterprompts voor degenen die
+    net hun tenen erin hebben gestoken, evenals geavanceerde tools voor diegenen die
+    hun potentieel willen maximaliseren.
   how_ai_works_hero_heading: Hoe AI werkt
   how_ai_works_hero_desc: Duik in de wereld van AI met „How AI Works”, onze videoserie
     en bijbehorende lessen!
@@ -1173,19 +1224,18 @@ nl:
   teach_page_free_curriculum_desc: We willen dat je informatica naar je school brengt
     zonder je zorgen te hoeven maken over de kosten. Daarom hebben we ervoor gezorgd
     dat ons leerplanaanbod voor altijd gratis is!
-  teach_page_free_curriculum_list_heading_01: Boeiend curriculum voor elk leerjaar
   teach_page_free_curriculum_list_desc_01: Gratis, flexibel en leuk curriculum met
     aanbiedingen in meer dan 67 talen.
-  teach_page_free_curriculum_list_heading_02: Aanpasbaar, innovatief curriculum
   teach_page_free_curriculum_list_desc_02: Code.org biedt alles, van curricula voor
     het hele jaar tot activiteiten per eenheid. Bovendien updaten we onze curricula
     jaarlijks om de beste praktijken en aandachtsgebieden te ondersteunen en nieuwe
     aanbiedingen te creëren waarin actuele, veelgevraagde onderwerpen worden behandeld.
-  teach_page_free_curriculum_list_heading_03: Gestructureerd curriculum afgestemd
-    op nationale normen
   teach_page_free_curriculum_list_desc_03: Elk curriculum is gekoppeld aan ten minste
     één set nationale normen, waaronder CSTA, Next Generation Science Standards en
     Common Core.
+  teach_page_free_curriculum_list_desc_04: Aanbod in meer dan 67 talen
+  teach_page_free_curriculum_list_desc_05: Toegewezen aan ten minste één set nationale
+    normen (waaronder CSTA, NGSS en Common Core)
   teach_page_free_curriculum_heading_02: 'Bekijk ons leerplanaanbod voor verschillende
     leerjaren:'
   teach_page_resources_heading: Hulpbronnen die u bij elke stap ondersteunen
@@ -1447,10 +1497,10 @@ nl:
     dat centen kunnen worden vervangen door een ander soort gewicht van dezelfde grootte).
     Alternatieve activiteiten zijn beschikbaar als je geen toegang hebt tot deze benodigdheden.
   csd_page_faq_answer_04_06: Apps maken met apparaten (optie A en optie B)
-  csd_page_faq_answer_04_07: 'Option A: Classroom set of Circuit Playgrounds. Check
-    out [code.org/maker/circuitplayground](%{url}) for more details.'
-  csd_page_faq_answer_04_08: 'Option B: Classroom set of micro:bit devices. Check
-    out [code.org/maker/microbit](%{url}) for more details.'
+  csd_page_faq_answer_04_07: 'Optie A: Classroomset Circuit Playgrounds. Bekijk [code.org/maker/circuitplayground]
+    () voor meer informatie.%{url}'
+  csd_page_faq_answer_04_08: 'Optie B: Classroom-set micro:bit-apparaten. Bekijk [code.org/maker/microbit]
+    () voor meer informatie.%{url}'
   csd_page_faq_answer_04_09: Benodigdheden voor de maker, zoals lege tissuedozen of
     kartonnen rollen of kraspapier
   csd_page_faq_answer_04_10: "*Opmerking: de unit Creating Apps with Devices heeft
@@ -1596,9 +1646,10 @@ nl:
     voor het opbouwen van vaardigheden door studenten in hun eigen tempo kunnen worden
     voltooid.
   csf_page_faq_question_06: Welke materialen heb ik nodig voor CS Fundamentals?
-  csf_page_faq_answer_06: Many lessons have handouts that guide students through activities.
-    These resources can be printed or assigned digitally. Some lessons call for typical
-    classroom supplies and manipulatives. [Visit the CSF Syllabus to learn more](%{syllabus_url}).
+  csf_page_faq_answer_06: Veel lessen bevatten handouts die leerlingen bij de activiteiten
+    begeleiden. Deze bronnen kunnen worden afgedrukt of digitaal worden toegewezen.
+    Sommige lessen vragen om typische schoolbenodigdheden en manipulaties. [Bezoek
+    de CSF-syllabus voor meer informatie] ().%{syllabus_url}
   csa_page_top_desc: Introduce students to software engineering and object-oriented
     design while they learn the Java programming language in this free curriculum
     for [AP® Computer Science A (AP® CSA)](%{csa_url}).
@@ -1748,8 +1799,8 @@ nl:
   ai_activity_zooniverse: Zooniverse - Snapshot Mountain Zebra
   ai_activity_zooniverse_desc: Help de bedreigde Cape Mountain Zebra te beschermen
     door de verschillende dieren op de afbeeldingen te identificeren.
-  codeorg_homepage_hoc2018_curriculum: Go further with <a href="%{studio_url}/courses"
-    class="hoc2018-curriculum-link">Code.org courses</a>
+  codeorg_homepage_hoc2018_curriculum: Ga verder met cursussen van <a href="%{studio_url}/courses"
+    class="hoc2018-curriculum-link">Code.org</a>
   codeorg_homepage_hoc2018_dance_heading: Maak je eigen <span class="highlight-word">Dance&nbsp;Party</span>
   codeorg_homepage_hoc2018_header_line1: The Hour of Code komt eraan...
   codeorg_homepage_hoc2018_header_line2_desktop: Wat ga jij maken <span class="hoc2018-highlight-word">?</span>
@@ -1774,7 +1825,7 @@ nl:
   hoc2018_tutorial_mchoc_description: Gebruik blokken code om Alex of Steve op avontuur
     te sturen door deze Minecraft wereld.
   codeorg_homepage_hoc2019_dance_heading: Probeer de nieuwe <span class="highlight-word">Dance&nbsp;Party!</span>
-  codeorg_homepage_hoc2019_dance_heading_markdown: Code a **Dance&nbsp;Party!**
+  codeorg_homepage_hoc2019_dance_heading_markdown: Codeer een&nbsp;**Dansfeest! **
   codeorg_homepage_special2020_body1: Ondersteuning voor ouders en leerkrachten die
     te maken hebben met schoolsluitingen.
   codeorg_homepage_special2020_body2: Bekijk onze voorgestelde leermiddelen.
@@ -2089,6 +2140,12 @@ nl:
     Code.org-cursussen, lokale mogelijkheden of ander informatica-nieuws?
   signup_email_preference_privacy: "(Zie ons privacybeleid)"
   signup_email_preference_yes: Ja
+  signup_email_preference_yes_elementary: Ja - Stuur me updates over basisschoolbronnen
+  signup_email_preference_yes_middle: Ja - Stuur me updates over bronnen voor middelbare
+    scholen
+  signup_email_preference_yes_high: Ja - Stuur me updates over bronnen voor middelbare
+    scholen
+  signup_email_preference_yes_general: Ja, stuur me algemene updates
   signup_email_preference_no: Nee
   signup_email_preference_error: E-mailvoorkeur is vereist
   signup_multiple_event_warning: Als u meerdere evenementen host, geef de evenementen
@@ -5582,11 +5639,11 @@ nl:
     te sturen door deze Minecraft wereld.
   tutorial_minecraft-2016_longdescription: Bouw een Minecraft spel. Maak je eigen
     versies van kippen, schapen, Creepers, zombies en andere.
-  tutorial_thinkersmith-es_longdescription: Mediante el uso de un "Vocabulario Robot"
+  tutorial_thinkersmith-es_longdescription: Mediante el uso de un „Vocabulario Robot”
     predefinido, los estudiantes descubrir&aacute;n como guiarse de modo tal de llevar
-    a cabo tareas espec&iacute;ficas sin ser estas discutidas previamente. Este segmento
-    ense&ntilde;a a los estudiantes la conexi&oacute;n entre s&iacute;mbolos y acciones
-    as&iacute; como la valiosa habilidad de depuraci&oacute;n.
+    a cabo tareas espec ficas sin ser estas discutidas previamente.&iacute;Este segmento
+    ense&ntilde;a la los estudiantes la conexi&oacute;n entre s&iacute;mbolos y acciones
+    as como la valiosa habilidad de depuraci n.&iacute;&oacute;
   tutorial_pixie_longdescription: Hour of Code-tutorial met Pixie
   tutorial_play_longdescription: Bedenk een verhaal of maak een spel met Play Lab!
     Maak dieren, piraten, zombies, ninjas, en veel meer personages bewegen, geluiden
@@ -12665,12 +12722,12 @@ nl:
   tutorial_googlename _longdescription: Kies een naam en breng de letters van het
     woord tot leven met behulp van code. Kies een bijnaam, de naam van een huisdier,
     een dier, een sport, een plaats of een hobby.
-  tutorial_carnegiezillah_longdescription: Zillah City is thriving, and music is in
-    the air. Rumor has it, the famed Gargantua bot is online and sending the last
-    Toxibots to trash the city block by block…. Grab your cobot hoverboard and get
-    ready to groove, move, and finish off what you started! Players program their
-    cobot hoverbots to change lanes, avoid obstacles, and take out many Toxibots in
-    this rhythm-styled game.
+  tutorial_carnegiezillah_longdescription: Zillah City bloeit en er hangt muziek in
+    de lucht. Het gerucht gaat dat de beroemde Gargantua-bot online is en de laatste
+    Toxibots stuurt om de stad blok voor blok te vernielen.…Pak je cobot-hoverboard
+    en maak je klaar om te groven, te bewegen en af te maken waar je aan begonnen
+    bent! Spelers programmeren hun cobot-hoverbots om van rijstrook te wisselen, obstakels
+    te vermijden en veel Toxibots uit te schakelen in dit ritmische spel.
   tutorial_nasachspacejam_longdescription: Creëer een zonnestelsel dat echt rockt!
     Leer meer over muziek, astronomie en coderen in deze zelfgeleide activiteit (geen
     ervaring met coderen vereist). Programmeer planeten om muziek te maken, creëer
@@ -13480,6 +13537,351 @@ nl:
     totaal 5 weken, inclusief een kantoorsluiting van 2 weken aan het einde van het
     jaar, oftewel Winter Break), een halve werkdag op vrijdag in de zomer, oftewel
     zomervrijdagen, en andere genereuze voordelen.
+  careers_hero_title: Carrières
+  careers_hero_description: Code.org is een non-profitorganisatie die zich inzet voor
+    het uitbreiden van de toegang tot informatica op scholen. We zijn vooral gericht
+    op het vergroten van de participatie van jonge vrouwen en ondervertegenwoordigde
+    studenten.
+  careers_hero_description_under: Help ons de wereld te veranderen, student voor student!
+  careers_vision_title: Onze visie
+  careers_vision_decsription: Onze visie is dat elke student op elke school de kans
+    moet hebben om informatica te leren als onderdeel van hun basisonderwijs in het
+    K-12.
+  careers_vision_description_under: Kom ons team versterken om deze visie te helpen
+    realiseren!
+  careers_values_title: Onze kernwaarden
+  careers_values_first_column_text_1: Wij geloven dat informatica fundamenteel is
+    voor alle studenten
+  careers_values_first_column_text_2: We zijn toegewijd aan gelijkheid, toegang en
+    kansen
+  careers_values_first_column_text_3: Wij geloven in de kracht van een collaboratieve
+    onderwijsgemeenschap
+  careers_values_second_column_text_1: We zijn flexibel en reageren op feedback
+  careers_values_second_column_text_2: We handelen integer en transparant
+  careers_values_second_column_text_3: Wij geloven dat brede impact vereist dat je
+    groot denkt en holistisch handelt
+  careers_approach_section_title: Onze verbindende aanpak
+  careers_approach_section_description: De wereldwijde rol van Code.org in de computerwetenschappelijke
+    beweging van het K-12 jaar is alleen mogelijk omdat we een verenigende aanpak
+    hanteren voor diverse en vaak verdeelde belanghebbenden. In een tijd van toenemende
+    polarisatie verenigt het idee om de kansen voor studenten te vergroten mensen
+    uit het hele politieke spectrum. De teamleden, studenten, docenten en supporters
+    van Code.org hebben uiteenlopende en uiteenlopende standpunten, en ze zijn allemaal
+    welkom in onze missie.
+  careers_aproach_section_description_link: Lees meer over Code.org's benadering van
+    eenheid.
+  careers_approach_section_button: Ontdek openstaande rollen
+  careers_principle_section_title: Onze culturele principes
+  careers_principle_title_1: Onze leerlingen en docenten zijn onze North Star
+  careers_principle_description_1: We gebruiken onze gaven, tijd en energie om computerwetenschap
+    beschikbaar te maken voor degenen die dit het meest nodig hebben. Dit is wat ons
+    verenigt. Dit is ons belangrijkste principe.
+  careers_principle_title_2: We zijn hard met problemen bezig en aardig voor elkaar
+  careers_principle_description_2: We blijven gefocust op de uitdaging om computerwetenschap
+    wereldwijd beschikbaar te maken voor studenten en docenten. We erkennen dat ieder
+    van ons de beste bedoelingen heeft om onze missie te ondersteunen en genade te
+    geven als we fouten maken.
+  careers_principle_title_3: Zoek naar oplossingen, niet naar consensus
+  careers_principle_description_3: We nemen zelf beslissingen, of we nu kleine stappen
+    nemen of grote sprongen maken in de richting van de resultaten die we nastreven.
+    Eigenaren vragen en luisteren naar, maar laten zich niet verlammen door feedback.
+    We aanvaarden en steunen de beslissingen van eigenaren, zelfs als we het daar
+    niet mee eens zijn.
+  careers_principle_title_4: Neem de mentaliteit van een oprichter aan
+  careers_principle_description_4: We zijn geobsedeerd door resultaten en richten
+    onze acties op het stimuleren ervan. We duiken in de details en werken hard. We
+    zijn eerlijk, streven naar flexibiliteit en beoordelen voortdurend of we op schema
+    zitten; we zijn niet bang om te veranderen. Het veranderen van de wereld vereist
+    dat.
+  careers_principle_title_5: Voorvechter van innovatie
+  careers_principle_description_5: We denken groot, nemen risico's en zijn niet bang
+    om te falen. Als we een betere manier zien om onze doelen te bereiken, doen we
+    dat en moedigen we anderen aan om dat ook te doen. Incrementele oplossingen helpen
+    niet om de wereld te veranderen.
+  careers_principle_title_6: Beslissingen in feiten verankeren
+  careers_principle_description_6: We gebruiken gegevens om ons bedrijf te begrijpen,
+    de gewenste resultaten vast te stellen en de besluitvorming te begeleiden. We
+    brengen dit in evenwicht door te erkennen dat we niet altijd over de gegevens
+    beschikken die we nodig hebben om te kunnen handelen.
+  careers_principle_title_7: Een groeimindset voedt ons
+  careers_principle_description_7: We benaderen elke uitdaging met nieuwsgierigheid.
+    We geven vriendelijk en openhartig feedback; we ontvangen feedback openlijk. We
+    leren van onze fouten en zoeken naar manieren om het bereik en de impact van ons
+    werk te vergroten.
+  careers_balance_section_title: Onze balans tussen werk en privéleven
+  careers_balance_section_description: We geven om onze medewerkers en zetten ons
+    in om iedereen te ondersteunen, zowel op het werk als daarbuiten. We weten dat
+    iedereen verschillende behoeften heeft, daarom bieden we een holistisch arbeidsvoorwaardenpakket
+    dat ervoor zorgt dat er voor u (en uw gezin) wordt gezorgd.
+  careers_balance_first_column_text_1: Gezondheidsvoordelen voor jou en je familie
+  careers_balance_first_column_text_2: Royale regelingen voor betaald verlof en verlof
+  careers_balance_second_column_text_1: Flexibele, ondersteunende werkomgeving
+  careers_balance_second_column_text_2: Groei- en professionele leermogelijkheden
+  careers_openroles_section_title: Rollen openen
+  careers_openroles_section_description: Code.org is gevestigd in Seattle, maar veel
+    van onze teamleden zijn afgelegen. Kandidaten op afstand zijn welkom en worden
+    aangemoedigd om te solliciteren.
+  careers_more_info_text: Voor meer informatie over Code.org, bekijk onze [Veelgestelde
+    vragen] (%{support_url}) of lees meer over [andere manieren om betrokken te raken
+    bij onze missie] (%{help_url}).
+  careers_approach_section_title2: Onze benadering van diversiteit
+  careers_approach_section_description_1: Bij Code.org omarmen we verschillende perspectieven,
+    ideeën en achtergronden. We zetten ons in om alle werknemers en sollicitanten
+    gelijke kansen te bieden. We discrimineren niet op basis van ras, religie, huidskleur,
+    nationale afkomst, geslacht, seksuele geaardheid, leeftijd, burgerlijke staat,
+    veteranenstatus of handicap (mentale en fysieke) status.
+  careers_approach_section_description_2: We zullen ervoor zorgen dat personen met
+    een handicap redelijke aanpassingen krijgen om deel te nemen aan het sollicitatie-
+    of sollicitatieproces, om essentiële functies uit te voeren en om andere arbeidsvoorwaarden
+    en voorrechten te ontvangen. Als je individuele behoeften hebt met betrekking
+    tot een handicap, neem dan contact op met accommodations@code.org.
+  csa_ai_page_hero_title: Software-engineering en computervisie
+  csa_ai_page_hero_description: 'Deze post-AP CSA-module van twee hoofdstukken biedt
+    middelbare scholieren praktische ervaring met professionele softwareontwikkelingstools,
+    waaronder GitHub en GitHub Copilot, en geeft hen de praktische vaardigheden om
+    een computervisieprogramma te ontwikkelen. '
+  csa_ai_page_video_section_title: Stap verder dan de wereld van de programmeeromgevingen
+    van Code.org
+  csa_ai_page_video_section_li_1: Meer informatie over AI en de toepassingen ervan
+  csa_ai_page_video_section_li_2: Praktische ervaring met professionele tools voor
+    softwareontwikkeling
+  csa_ai_page_video_section_li_3: Leer praktijken die voldoen aan industriestandaarden
+  csa_ai_page_video_section_li_4: Stimuleer kritisch denken
+  csa_ai_page_programming_tools: 'Programmeerhulpmiddelen: Github, Github Copilot,
+    VSCode, SensorFlow '
+  csa_ai_page_professional_learning: Geen
+  csa_ai_page_curriculum_topics: 'Onderwerpen: Programmeren, Data, Kunst en Design,
+    Games en Animatie'
+  csa_ai_page_curriculum_accessibility_features: Zie de sectie Veelgestelde vragen
+    voor meer informatie
+  csa_ai_page_curriculum_languages_support: Nederlands
+  csa_ai_page_article_title_1: Bouw met Copilot
+  csa_ai_page_article_description_1: Studenten leren hoe ze GitHub Copilot kunnen
+    gebruiken als een paarprogrammeur om bestaande code uit te leggen, fouten te vinden
+    en op te lossen en oplossingen voor nieuwe problemen te genereren.
+  csa_ai_page_article_link_1: Meer informatie over Copilot
+  csa_ai_page_article_title_2: Bouw je eigen AI-model
+  csa_ai_page_article_description_2: Leerlingen trainen hun eigen AI-modellen met
+    behulp van Teachable Machine om beelden en gebaren van een webcam te herkennen
+    en na te gaan welke invloed computervisie heeft op de manier waarop gebruikers
+    met apps omgaan.
+  csa_ai_page_article_link_2: Ontdek het lesplan
+  csa_ai_page_article_title_3: Ontdek computervisie
+  csa_ai_page_article_description_3: Studenten implementeren de AI-modellen die ze
+    met Teachable Machine hebben gemaakt in een Java-app, waarbij ze GitHub Copilot
+    gebruiken om bestaande versies van apps aan te passen zodat ze met de verschillende
+    ingangen werken.
+  csa_ai_page_article_link_3: Bekijk een voorbeeld
+  csa_ai_page_learn_more_section_title: Meer informatie over kunstmatige intelligentie
+  csa_ai_page_learn_more_title: Ontdek AI 101 voor leerkrachten
+  csa_ai_page_learn_more_description: Ontdek de baanbrekende wereld van kunstmatige
+    intelligentie (AI) en het transformatieve potentieel ervan in het onderwijs met
+    onze uitgebreide online leerserie voor leerkrachten.
+  csa_ai_page_learn_more_link: Bekijk de serie AI 101 for Teachers
+  csa_ai_page_faq_question_01: Wat zijn de vereisten voor deze module?
+  csa_ai_page_faq_answer_01_01: 'Alvorens in deze module te duiken, moeten studenten
+    beschikken over een basiskennis van Java. In het bijzonder zouden ze inzicht moeten
+    hebben in:'
+  csa_ai_page_faq_answer_01_list_01: "**Klassen en objecten: ** Leerlingen moeten
+    vertrouwd zijn met het definiëren en gebruiken van klassen, en met het maken en
+    manipuleren van objecten."
+  csa_ai_page_faq_answer_01_list_02: "**Schrijf- en aanroepmethoden: ** Leerlingen
+    moeten in staat zijn om methoden binnen een klas te definiëren, methodeparameters
+    en retourtypen te begrijpen, en methoden van objecten of andere methoden aan te
+    roepen."
+  csa_ai_page_faq_answer_01_list_03: "**1D Arrays en ArrayLists: ** Ze moeten bedreven
+    zijn in het declareren, initialiseren en manipuleren van eendimensionale matrices
+    en ArrayLists, inclusief het herhalen ervan."
+  csa_ai_page_faq_answer_01_list_04: "**Selectie en iteratie: ** Een solide basis
+    voor voorwaardelijke uitspraken en loops is cruciaal."
+  csa_ai_page_faq_question_01_02: Idealiter zouden studenten die AP Computer Science
+    A of een cursus van vergelijkbare diepgang en nauwkeurigheid hebben afgerond,
+    goed voorbereid zijn op deze module.
+  csa_ai_page_faq_question_02: Hoe installeer ik de software die nodig is voor deze
+    module?
+  csa_ai_page_faq_answer_02_01: Deze module is uniek omdat er software van derden
+    wordt gebruikt in plaats van laboratoria en tools van Code.org. [Lees hier meer
+    over het installeren van de software] (%{accessibility_url}).
+  csa_ai_page_faq_question_03: Hoe kan ik de toegankelijkheidsbehoeften ondersteunen
+    tijdens het geven van deze module?
+  csa_ai_page_faq_answer_03_01: Inspelen op toegankelijkheidsbehoeften is cruciaal
+    voor een inclusieve leeromgeving. [Lees hier meer over toegankelijkheidsfuncties
+    in de software die in deze module wordt gebruikt] (%{install_url}).
+  csa_ai_page_faq_question_04: Hoe gebruik ik VS Code op Chromebooks?
+  csa_ai_page_faq_answer_04: Het gebruik van VS Code op een Chromebook is eenvoudiger
+    geworden, vooral met de mogelijkheid om Linux-apps uit te voeren op nieuwere Chromebook-modellen.
+    [Lees hier meer over het instellen van VS Code op Chromebooks] (%{chromebook_url}).
+  csa_ai_page_faq_question_05: Hoe kan ik professionele ontwikkeling krijgen voor
+    deze module?
+  csa_ai_page_faq_answer_05: Er is momenteel geen specifieke professionele ontwikkeling
+    voor deze cursus. Als je wilt begrijpen hoe je kunstmatige intelligentie in je
+    klas kunt benaderen, kun je [bekijk AI 101 for Teachers] (%{ai_101_url}).
+  csa_ai_page_faq_question_06: Wat is de aanbevolen timing voor het geven van deze
+    module?
+  csa_ai_page_faq_answer_06_01: De module Software Engineering & Computer Vision is
+    zorgvuldig gestructureerd om uitgebreide leermogelijkheden te bieden in een beknopt
+    tijdsbestek. De volledige module is ontworpen voor een instructieduur van **2
+    weken**. De meeste lessen zijn op maat gemaakt voor **45 minuten**, terwijl lessen
+    waarin studenten zich verdiepen in praktische Java-projectontwikkeling bedoeld
+    zijn voor **90 minuten**. Deze langere tijd zorgt ervoor dat studenten voldoende
+    gelegenheid hebben om ze te begrijpen, te implementeren en problemen op te lossen
+    terwijl ze aan het werk zijn.
+  csa_ai_page_faq_answer_06_02: Er is ook opzettelijke flexibiliteit ingebouwd in
+    de structuur van de module. Afhankelijk van de dynamiek in de klas, de betrokkenheid
+    van studenten en de diepgang waarin je elk onderwerp wilt verkennen, kun je de
+    duur aanpassen. De Intro to Copilot-les, ontworpen als een les van 45 minuten,
+    kan bijvoorbeeld worden uitgebreid tot 90 minuten als je dieper wilt ingaan op
+    hoe grote taalmodellen en tools zoals GitHub Copilot en ChatGPT werken.
+  csa_ai_page_faq_question_07: How can I access answer keys?
+  csa_ai_page_faq_answer_07: Met een goedgekeurd lerarenaccount vind je antwoordsleutels
+    in een blauw paneel „Alleen voor docenten” dat wordt weergegeven in de online
+    lessen en activiteiten. Als je een goedgekeurd lerarenaccount nodig hebt, kun
+    je via [dit formulier] () toegang aanvragen tot beschermd materiaal dat alleen
+    toegankelijk is voor docenten (antwoordsleutels, enz.).%{form_url}Houd er rekening
+    mee dat het 3-5 werkdagen kan duren om je account te verifiëren.
+  csa_ai_page_faq_question_08: Is deze module gekoppeld aan standaarden?
+  csa_ai_page_faq_answer_08: Ja, het curriculum Software Engineering & Computer Vision
+    is afgestemd op de [CSTA K-12 Standards] (%{csta_k12_url}) en de AI voor [K-12
+    Guidelines] ().%{k12_url}
+  csa_ai_page_faq_question_09: Hoeveel kost het om deze module te geven?
+  csa_ai_page_faq_answer_09_01: Ons curriculum en platform zijn [gratis] (%{no_cost_url})
+    beschikbaar voor iedereen, waar dan ook, om les te geven!
+  csa_ai_page_faq_answer_09_02: Bovendien zijn de software en tools die in deze module
+    worden gebruikt gratis. GitHub Copilot is gratis voor verified [teachers](%{teachers_url})
+    en [students]().%{students_url}
+  csa_ai_page_faq_question_10: Wat moet ik doen als de installatie van de software
+    niet werkt?
+  csa_ai_page_faq_answer_10: Problemen tijdens de installatie van de software komen
+    vaak voor, maar er zijn systematische stappen die u kunt volgen om problemen op
+    te lossen en op te lossen. [Bekijk hier enkele tips voor het oplossen van problemen]
+    (%{troubleshooting_url}).
+  csa_ai_page_faq_question_11: How was the curriculum developed?
+  csa_ai_page_faq_answer_11_01: 'Ons curriculum Software Engineering & Computer Vision
+    is ontworpen met onze leerplanwaarden in het achterhoofd. De volgende doelstellingen
+    hebben geleid tot de totstandkoming van dit curriculum:'
+  csa_ai_page_faq_answer_11_list_01: "**Doel 1: ** AI-tools gebruiken om code te genereren,
+    te debuggen en te bewerken."
+  csa_ai_page_faq_answer_11_list_02: "**Doel 2: ** Overgang van Java Lab naar tools
+    uit de echte wereld."
+  csa_ai_page_faq_answer_11_list_03: "**Doel 3: ** Een beter begrip krijgen van hoe
+    AI-modellen worden getraind en geïntegreerd in programma's."
+  csa_ai_page_faq_answer_11_02: Voor meer informatie over de waarden die ons werk
+    hebben geleid, zie onze [leerplanwaarden] (%{curriculum_values_url}).
+  video_library_page_main_title: Educatieve korte video's
+  video_library_page_hero_description: De groeiende bibliotheek van educatieve video's
+    van Code.org is beschikbaar voor hergebruik door docenten wereldwijd, online of
+    in klaslokalen. Ons doel is om onze inspanningen te vergroten buiten het bereik
+    van ons eigen curriculum.
+  video_library_page_title_ai_works: Hoe AI werkt
+  video_library_page_description_ai_works: Deze serie korte video's laat je kennismaken
+    met hoe kunstmatige intelligentie werkt en waarom het belangrijk is. Kom meer
+    te weten over neurale netwerken, of hoe AI leert, en verdiep je in zaken als algoritmische
+    vooringenomenheid en de ethiek van AI-besluitvorming.
+  video_library_page_title_computers_work: Hoe computers werken
+  video_library_page_description_computers_work: Legt uit wat een computer tot een
+    computer maakt, hoe digitale informatie wordt weergegeven in enen en nullen, hoe
+    computercircuits werken om digitale informatie te manipuleren, en hoe een centrale
+    verwerkingseenheid (CPU) en besturingssysteem de in- en uitgangen, het geheugen
+    en de hardware van een computer aansturen.
+  video_library_page_title_internet_works: Hoe Werkt het Internet
+  video_library_page_description_internet_works: Met Vint Cerf, de uitvinder van TCP/IP,
+    David Karp, de oprichter van Tumblr, om uitleg te geven over HTTP en HTML, Google's
+    Security Princess om SSL en cyberbeveiliging uit te leggen, en ingenieurs van
+    Microsoft, Spotify en Symantec. In deze serie korte video's wordt uitgelegd hoe
+    het internet werkt.
+  video_library_page_title_not_hacked: Hoe je niet gehackt wordt
+  video_library_page_description_not_hacked: Het internet is open, dus alles wat erop
+    gebeurt, is zichtbaar, tenzij het beveiligd is. In moderne landen maken mensen
+    zich meer zorgen om gehackt te worden dan over welke andere misdaad dan ook. Waarom
+    Omdat elke computer of telefoon op het internet regelmatig wordt getest op kwetsbaarheden
+    door criminelen, terroristen of zelfs staatsactoren. Als je niet oppast, kan iemand
+    je apparaat of accounts hacken en zelfs je identiteit of je geld stelen.
+  video_library_page_title_blockchain: Hoe Blockchain werkt
+  video_library_page_description_blockchain: Deze serie, gemaakt in samenwerking met
+    Coinbase, bevat experts uit de sector en heeft tot doel deze technologie te demystificeren
+    door te onderzoeken wat blockchain is, hoe het werkt en wat de mogelijke maatschappelijke
+    implicaties zijn — zowel goed als slecht.
+  video_library_page_title_careers: Carrières in CS
+  video_library_page_description_careers: Een loopbaan in de informatica en technologie
+    kan leuk en lonend zijn. Maar wat doet iemand die in deze vakgebieden werkt eigenlijk?
+    Met een grote verscheidenheid aan banen en bedrijven is er niet slechts één antwoord
+    op deze vraag. Bekijk de onderstaande video's om kennis te maken met mensen die
+    grote problemen op creatieve manieren aanpakken.
+  video_library_page_title_inspirational: Inspirerend
+  video_library_page_description_inspirational: Wat gaat de informatica in onze wereld
+    veranderen? Alles? Voor wie is het? Iedereen! Bekijk deze video's om je te inspireren
+    en te motiveren.
+  video_library_page_footer_description: Op zoek naar iets anders? We hebben zoveel
+    geweldige video's beschikbaar op ons YouTube-kanaal.
+  video_library_page_footer_cta: Bekijk alle Code.org-video's op YouTube
+  video_library_page_computer_work_video_title_1: Introductie van hoe computers werken
+  video_library_page_computer_work_video_title_2: Binair en gegevens
+  video_library_page_computer_work_video_title_3: CPU, geheugen, invoer en uitvoer
+  video_library_page_computer_work_video_title_4: Wat maakt een computer tot een computer?
+  video_library_page_computer_work_video_title_5: Logica van circuits
+  video_library_page_computer_work_video_title_6: Hardware en software
+  video_library_page_internet_work_video_title_1: Wat is het internet?
+  video_library_page_internet_work_video_title_2: 'HET INTERNET: IP-adressen en DNS'
+  video_library_page_internet_work_video_title_3: 'HET INTERNET: HTTP en HTML'
+  video_library_page_internet_work_video_title_4: 'HET INTERNET: Cyberbeveiliging
+    en criminaliteit'
+  video_library_page_internet_work_video_title_5: 'HET INTERNET: kabels, kabels en
+    wifi'
+  video_library_page_internet_work_video_title_6: 'HET INTERNET: pakketten, routering
+    en betrouwbaarheid'
+  video_library_page_internet_work_video_title_7: 'HET INTERNET: Encryptie en openbare
+    sleutels'
+  video_library_page_internet_work_video_title_8: 'HET INTERNET: Hoe de zoekfunctie
+    werkt'
+  video_library_page_cs_video_title_1: Mijn naam is Jerome en ik ben ontwerptechnoloog
+    bij Meow Wolf
+  video_library_page_cs_video_title_2: Mijn naam is Nikesha en ik ben ruimtevaartingenieur
+    bij NASA
+  video_library_page_cs_video_title_3: Mijn naam is Brina en ik ben Software Engineer
+    bij Instagram
+  video_library_page_cs_video_title_4: Mijn naam is Kinsley en ik ben Software Engineer
+    bij Facebook
+  video_library_page_cs_video_title_5: Mijn naam is Polina en ik ben datawetenschapper
+    bij Electronic Arts
+  video_library_page_cs_video_title_6: Mijn naam is Danelle en ik ben Software Engineer
+    bij MBARI
+  video_library_page_cs_video_title_7: Mijn naam is Christopher en ik ben beveiligingsanalist
+    bij Tanium
+  video_library_page_cs_video_title_8: Mijn naam is Federico en ik ben technisch programmamanager
+    bij Microsoft
+  video_library_page_cs_video_title_9: Mijn naam is Tess en ik ben Software Engineer
+    bij Google
+  video_library_page_inspirational_video_title_1: Verander het gezicht van de informatica
+    (3 min)
+  video_library_page_inspirational_video_title_2: Duw jezelf. Iedereen kan leren.
+    (1 min)
+  video_library_page_inspirational_video_title_3: Een meisje inspireren (2 min)
+  video_library_page_inspirational_video_title_4: Wat Je Op De Meeste Scholen Niet
+    Leert (5 min)
+  video_library_page_inspirational_video_title_5: Hour of Code is aangebroken - Iedereen
+    kan leren (2 min)
+  video_library_page_inspirational_video_title_6: Mijn naam is Aracely (3 min)
+  video_library_page_inspirational_video_title_7: Uur of Code met Steph Curry (2 min)
+  video_library_page_inspirational_video_title_8: Computerwetenschap verandert alles
+    (5 min)
+  video_library_page_inspirational_video_title_9: Inleiding op het gebied van informatica
+    (1 min)
+  video_library_page_inspirational_video_title_10: President Obama over informatica
+    (1 min)
+  video_library_page_inspirational_video_title_11: Iederen Kan Het Leren (1 min)
+  video_library_page_inspirational_video_title_12: Lo Que Falta En Nuestras Escuelas
+    (2 min)
+  video_library_page_not_hacked_video_title_1: 'Hoe je niet gehackt wordt: introductie'
+  video_library_page_not_hacked_video_title_2: 'Hoe u niet gehackt wordt: wachtwoorden'
+  video_library_page_not_hacked_video_title_3: 'Hoe u niet gehackt wordt: authenticatie
+    en apparaatvergrendelingen'
+  video_library_page_not_hacked_video_title_4: 'Hoe je niet gehackt wordt: phishing'
+  video_library_page_not_hacked_video_title_5: 'Hoe je niet gehackt wordt: websites
+    en wifi'
+  video_library_page_not_hacked_video_title_6: 'Hoe u niet gehackt wordt: berichten
+    en downloads'
+  video_library_page_not_hacked_video_title_7: 'Hoe u niet gehackt wordt: updates
+    installeren'
   language_code:
     ar: Arabisch
     az: Azerbeidzjaans
