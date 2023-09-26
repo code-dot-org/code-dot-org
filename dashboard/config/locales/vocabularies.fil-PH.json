@@ -1174,6 +1174,9 @@
           "word": "Event",
           "definition": "Isang aksyon na sanhi na nagaganap ang isang bagay."
         },
+        "artificial_intelligence/ai-ethics/2023": {
+          "word": "Artificial Intelligence"
+        },
         "code/csc-adaptations/2023": {
           "word": "Code"
         },
@@ -1264,6 +1267,64 @@
         "program/poetry/2023": {
           "word": "Program",
           "definition": "Serye ng mga hakbang na naka-code sa isang bagay na maaaring patakbuhin ng makina."
+        },
+        "computer/csd/2023": {
+          "word": "Computer"
+        },
+        "input/csd/2023": {
+          "word": "Input"
+        },
+        "processing/csd/2023": {
+          "word": "Pagproseso"
+        },
+        "digital_footprint/csd/2023": {
+          "word": "Digital na Bakas"
+        },
+        "copyright/csd/2023": {
+          "word": "Karapatang-ari",
+          "definition": "ang eksklusibong legal na karapatan na mag-print, mag-publish, magtanghal, magpepelikula, o magrekord ng materyal na pampanitikan, masining, o musikal, at pahintulutan ang iba na gawin ang pareho"
+        },
+        "bug/csd/2023": {
+          "word": "Bug",
+          "definition": "Bahagi ng program na hindi gumagana ng tama."
+        },
+        "debugging/csd/2023": {
+          "word": "Pagdedebug",
+          "definition": "Paghahanap at pag-aayos ng mga problema sa algorithm o program."
+        },
+        "program/csd/2023": {
+          "word": "Program",
+          "definition": "Isang algorithm na na-code papunta sa isang bagay na maaaring patakbuhin ng isang machine."
+        },
+        "variable/csd/2023": {
+          "word": "Variable",
+          "definition": "Isang label sa piraso ng impormasyong ginagamit sa program."
+        },
+        "sprite/csd/2023": {
+          "word": "Sprite"
+        },
+        "condition/csd/2023": {
+          "word": "Condition"
+        },
+        "conditionals/csd/2023": {
+          "word": "Mga conditional"
+        },
+        "abstraction/csd/2023": {
+          "word": "Abstraction"
+        },
+        "function/csd/2023": {
+          "word": "Function"
+        },
+        "user/csd/2023": {
+          "word": "User",
+          "definition": "Isang taong gumagamit ng isang bagay, kabilang ang software at hardware."
+        },
+        "user_interface/csd/2023": {
+          "word": "Interface ng User"
+        },
+        "machine_learning/csd/2023": {
+          "word": "Pag-Aaral Ng Makina",
+          "definition": "Paano nakikilala ng mga computer ang mga pattern at gumagawa ng mga desisyon nang hindi tahasang nakaprograma"
         },
         "algorithm/coursea/2023": {
           "word": "Algorithm",
