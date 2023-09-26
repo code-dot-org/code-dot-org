@@ -170,6 +170,7 @@
       PermissionsBoundary: !ImportValue IAM-DevPermissions
   ReportingDBProxy:
     Type: AWS::RDS::DBProxy
+    DependsOn: [ReaderSQLUser]
     Properties:
       DBProxyName: !Sub "${AWS::StackName}-reporting"
       EngineFamily: MYSQL
@@ -250,6 +251,22 @@
         - ALTER ROUTINE
         - EVENT
         - TRIGGER
+  ReaderSQLUser:
+    Type: 'Custom::SQLUser'
+<%  unless rack_env?(:production)%>
+    # Wait until DB Instances have completed provisioning before using the admin SQL user to provision an application
+    # SQL user.
+    DependsOn: [<%=DB_INSTANCE_RANGE.map {|i| "Aurora#{i}"}.join(',')%>]
+<%  end -%>
+    Properties:
+      ServiceToken: !GetAtt SQLUserLambda.Arn
+      DBServerHost: !GetAtt AuroraCluster.Endpoint.Address
+      # Credentials for SQL admin user that will create/update/delete this SQL user resource.
+      DBCredentialAdminSecret: !Ref DatabaseSecretAdmin
+      # Credentials (username and password) for the SQL User this Resource is provisioning.
+      DBCredentialSecret: !Ref DatabaseSecretReader
+      Privileges:
+        - SELECT
 
 # We don't provision these in production via CloudFormation ... yet!
 <%  unless rack_env?(:production)%>
@@ -292,6 +309,7 @@
 
   DBProxy:
     Type: AWS::RDS::DBProxy
+    DependsOn: [WriterSQLUser, ReaderSQLUser]
     Properties:
       DBProxyName: !Ref AWS::StackName
       EngineFamily: MYSQL
