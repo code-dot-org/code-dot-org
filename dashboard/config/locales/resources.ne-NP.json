@@ -620,6 +620,63 @@
         "pair_programming/pre-express/2022": {
           "name": "Pair Programming"
         },
+        "apps_and_problem_solving_1/csd/2023": {
+          "type": "Peer Review"
+        },
+        "pair_programming/csd/2023": {
+          "name": "Pair Programming"
+        },
+        "lists/csd/2023": {
+          "name": "Lists"
+        },
+        "html_web_page_1/csd/2023": {
+          "type": "Peer Review"
+        },
+        "your_personal_style_1/csd/2023": {
+          "type": "Peer Review"
+        },
+        "personal_web_page/csd/2023": {
+          "type": "Peer Review"
+        },
+        "website_for_a_purpose_1/csd/2023": {
+          "type": "Peer Review"
+        },
+        "variables/csd/2023": {
+          "name": "Variables"
+        },
+        "variables_1/csd/2023": {
+          "name": "Variables"
+        },
+        "variables_2/csd/2023": {
+          "name": "Variables"
+        },
+        "text/csd/2023": {
+          "name": "Text"
+        },
+        "conditionals/csd/2023": {
+          "name": "Conditionals"
+        },
+        "functions/csd/2023": {
+          "name": "Functions"
+        },
+        "functions_1/csd/2023": {
+          "name": "Functions"
+        },
+        "functions_2/csd/2023": {
+          "name": "Functions"
+        },
+        "video_machine_learning/csd/2023": {
+          "name": "भिडियोः Machine Learning"
+        },
+        "make_a_recommendation/csd/2023": {
+          "type": "Peer Review"
+        },
+        "functions_with_parameters/csd/2023": {
+          "name": "Functions with Parameters"
+        },
+        "functions_3/csd/2023": {
+          "name": "Functions"
+        },
         "implementation_guide/coursea/2023": {
           "name": "Implementation Guide"
         },
