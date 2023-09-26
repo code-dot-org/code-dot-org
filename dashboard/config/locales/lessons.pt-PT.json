@@ -4786,6 +4786,9 @@
           "purpose": "Nesta atividade on-line, os estudantes irão aprender a usar eventos no Play Lab. Eles começarão treinando o cavaleiro para se mover quando uma tecla de direção for pressionada, depois concluir com a oportunidade de demonstrar as outras habilidades aprendidas durante este curso, inclusive sequências e laços, como parte de seu quebra-cabeça livre.",
           "student_overview": "Use eventos para criar uma história ou criar um jogo interativo."
         },
+        "ai-ethics-2023/lesson-1": {
+          "student_overview": "Pesquise de forma colaborativa sobre a ética da IA e crie um código de conduta compartilhável."
+        },
         "csc-adaptations-2023/Modeling Animal Adaptations (pilot)": {
           "name": "Introdução às adaptações animais",
           "overview": "Nesta aula de **desenvolvimento de habilidades**, os alunos aprenderão a criar e animar sprites e a usar eventos para torná-los interativos. \n\nOs alunos codificarão um modelo de causa e efeito baseado em eventos no Sprite Lab para demonstrar como as espécies sobrevivem adaptando-se a seus ambientes ao longo do tempo. Modelos e simulações interativos são usados no mundo real para ajudar engenheiros e cientistas a identificar padrões, entender a natureza, fazer previsões sobre mudanças futuras e projetar soluções para se preparar e/ou combater grandes interrupções. \n\nOs alunos explorarão exemplos de evolução, adaptação, migração, seleção natural e sobrevivência em grupos. ",
@@ -4943,6 +4946,246 @@
           "preparation": "-   Prepare um computador por aluno.\n-   Prepare uma cópia do folheto **<a href=\"https://docs.google.com/document/d/1kO4SNEIVyM0GrxxJb6NzVYauXXpi6rzQkDIfrzQf1Ls/template/preview\" target=\"_blank\">Compartilhe seu</a>aplicativo** por aluno.\n-   Certifique-se de que os alunos tenham uma cópia do poema original à mão para esta lição.  \n-   Divida a turma em duplas para a atividade Poetry Pair-Share.\n-   Considere essas opções de extensão relacionadas ([link](https://studio.code.org/s/poetry-2023/lessons/4#activity-4365336)) a serem exploradas após esta lição.\n\n##### Opcional\n\n-   Especialmente para ensino remoto: determine se você precisa configurar um documento digital ou um espaço on-line compartilhado para publicar a URL do aplicativo de cada aluno (consulte o modelo do professor em “Links”). ",
           "purpose": "Compartilhar seus projetos de arte poética com colegas é um aspecto importante do processo criativo. Ele permite que os alunos recebam feedback, colaborem com outras pessoas, reflitam sobre seu próprio trabalho e celebrem suas realizações. Ao compartilhar seu trabalho com outras pessoas, os alunos podem crescer e melhorar como pensadores criativos e desenvolver importantes habilidades interpessoais e de comunicação.",
           "student_overview": "Compartilhe seus novos aplicativos de poemas com seus amigos! "
+        },
+        "csd1-2023/Intro to Problem Solving": {
+          "name": "Introdução a Resolução de problemas"
+        },
+        "csd1-2023/The Problem Solving Process": {
+          "name": "O Processo de Resolução de Problemas"
+        },
+        "csd1-2023/Exploring Problem Solving": {
+          "name": "Explorando a solução de problemas"
+        },
+        "csd1-2023/What is a Computer?": {
+          "name": "O que é um computador?"
+        },
+        "csd1-2023/Input and Output": {
+          "name": "Entrada e saída"
+        },
+        "csd1-2023/Processing": {
+          "name": "Processando"
+        },
+        "csd1-2023/Storage": {
+          "name": "Armazenamento"
+        },
+        "csd1-2023/Project - Propose an App": {
+          "name": "Projeto - Propor um Aplicativo"
+        },
+        "csd2-2023/Exploring Web Pages": {
+          "name": "Explorando páginas da Web"
+        },
+        "csd2-2023/Intro to HTML": {
+          "name": "Introdução a HTML"
+        },
+        "csd2-2023/Digital Footprint": {
+          "name": "Pegada Digital"
+        },
+        "csd2-2023/Styling Text with CSS": {
+          "name": "Estilo de texto com CSS"
+        },
+        "csd2-2023/Intellectual Property": {
+          "name": "Propriedade intelectual"
+        },
+        "csd2-2023/Styling Elements with CSS": {
+          "name": "Estilizando elementos com CSS"
+        },
+        "csd2-2023/Team Problem Solving": {
+          "name": "Solução de problemas da equipe"
+        },
+        "csd2-2023/Sources and Research": {
+          "name": "Fontes e Pesquisa"
+        },
+        "csd2-2023/CSS Classes": {
+          "name": "Classes CSS"
+        },
+        "csd2-2023/Linking Pages": {
+          "name": "Vinculando páginas"
+        },
+        "csd2-2023/Project - Website for a Purpose": {
+          "name": "Projeto - Site para uma finalidade"
+        },
+        "csd2-2023/Peer Review and Final Touches": {
+          "name": "Revisão por pares e retoques finais"
+        },
+        "csd3-2023/Plotting Shapes": {
+          "name": "Formas de plotagem"
+        },
+        "csd3-2023/Drawing in Game Lab": {
+          "name": "Desenhando no Laboratório de Jogos"
+        },
+        "csd3-2023/Shapes and Parameters": {
+          "name": "Formas e Parâmetros"
+        },
+        "csd3-2023/Variables": {
+          "name": "Variáveis"
+        },
+        "csd3-2023/Random Numbers": {
+          "name": "Números Aleatórios"
+        },
+        "csd3-2023/Sprites": {
+          "name": "Sprite"
+        },
+        "csd3-2023/Sprite Properties": {
+          "name": "Propriedades do Sprite"
+        },
+        "csd3-2023/Text": {
+          "name": "Texto"
+        },
+        "csd3-2023/The Draw Loop": {
+          "name": "O laço de desenho"
+        },
+        "csd3-2023/Sprite Movement": {
+          "name": "Movimento sprite"
+        },
+        "csd3-2023/Conditionals": {
+          "name": "Condicionais"
+        },
+        "csd3-2023/Keyboard Input": {
+          "name": "Entrada do teclado"
+        },
+        "csd3-2023/Project - Interactive Card": {
+          "name": "Projeto - Cartão Interativo"
+        },
+        "csd3-2023/Velocity": {
+          "name": "Velocidade"
+        },
+        "csd3-2023/Collision Detection": {
+          "name": "Detecção de Colisão"
+        },
+        "csd3-2023/Complex Sprite Movement": {
+          "name": "Movimento complexo de Sprite"
+        },
+        "csd3-2023/Collisions": {
+          "name": "Colisões"
+        },
+        "csd3-2023/Functions": {
+          "name": "Funções"
+        },
+        "csd3-2023/The Game Design Process": {
+          "name": "O processo de design de jogos"
+        },
+        "csd3-2023/Using the Game Design Process": {
+          "name": "Usando o processo de design de jogos"
+        },
+        "csd3-2023/Project - Design a Game": {
+          "name": "Projeto - Projetar um Jogo"
+        },
+        "csd4-2023/Understanding Your User": {
+          "name": "Entendendo seu usuário"
+        },
+        "csd4-2023/User Interfaces": {
+          "name": "Interfaces de Usuário"
+        },
+        "csd4-2023/Feedback and Testing": {
+          "name": "Teste e Feedback"
+        },
+        "csd4-2023/Identifying User Needs": {
+          "name": "Identificando Necessidades do Usuário"
+        },
+        "csd4-2023/Project - Paper Prototype": {
+          "name": "Projeto - Protótipo de Papel"
+        },
+        "csd4-2023/Designing Apps for Good": {
+          "name": "Criando aplicativos para o bem"
+        },
+        "csd4-2023/Market Research": {
+          "name": "Pesquisa de mercado"
+        },
+        "csd4-2023/Prototype Testing": {
+          "name": "Protótipo de Teste"
+        },
+        "csd4-2023/Testing the App": {
+          "name": "Testando o aplicativo"
+        },
+        "csd4-2023/Project - App Presentation": {
+          "name": "Projeto - Apresentação do App"
+        },
+        "csd5-2023/Representation Matters": {
+          "name": "Representação Importa"
+        },
+        "csd5-2023/Patterns and Representation": {
+          "name": "Padrões e Representações"
+        },
+        "csd5-2023/ASCII and Binary Representation": {
+          "name": "ASCII e Representações Binárias"
+        },
+        "csd5-2023/Representing Images": {
+          "name": "Representando Imagens"
+        },
+        "csd5-2023/Representing Numbers": {
+          "name": "Representando Números"
+        },
+        "csd5-2023/Combining Representations": {
+          "name": "Combinando Representações"
+        },
+        "csd5-2023/Keeping Data Secret": {
+          "name": "Mantendo o segredo dos dados"
+        },
+        "csd5-2023/Project - Create a Representation": {
+          "name": "Projeto - Criando uma Representação"
+        },
+        "csd5-2023/Structuring Data": {
+          "name": "Estruturação de dados"
+        },
+        "csd5-2023/Interpreting Data": {
+          "name": "Interpretando Dados"
+        },
+        "csd5-2023/Making Decisions with Data": {
+          "name": "Tomando Decisões com Dados"
+        },
+        "csd5-2023/Automating Data Decisions": {
+          "name": "Automatizando decisões de dados"
+        },
+        "csd5-2023/Problem Solving with Big Data": {
+          "name": "Solução de Problemas com Big Data"
+        },
+        "csd6a-2023/Intro to App Lab": {
+          "name": "Introdução Laboratório de Aplicativos"
+        },
+        "csd6a-2023/The Circuit Playground": {
+          "name": "O parque de diversões do circuito"
+        },
+        "csd6a-2023/Board Events": {
+          "name": "Eventos de borda"
+        },
+        "csd6a-2023/Color LEDs": {
+          "name": "LEDs Coloridos"
+        },
+        "csd6a-2023/Accelerometer": {
+          "name": "Acelerômetro"
+        },
+        "csd6a-2023/Making Music": {
+          "name": "Fazendo Música"
+        },
+        "csd6a-2023/Functions": {
+          "name": "Funções"
+        },
+        "csd6a-2023/Project - Prototype an Innovation": {
+          "overview": "Neste projeto final do curso, os alunos se unem para desenvolver e testar um protótipo para um dispositivo de computação inovador baseado no parque de diversões do circuito. Usando as entradas e saídas disponíveis no quadro, os grupos criarão programas que permitem interações interessantes e exclusivas do usuário. "
+        },
+        "csd6b-2023/Intro to App Lab": {
+          "name": "Introdução Laboratório de Aplicativos"
+        },
+        "csd6b-2023/Board Events": {
+          "name": "Eventos de borda"
+        },
+        "csd6b-2023/Accelerometer": {
+          "name": "Acelerômetro"
+        },
+        "csd6b-2023/Functions": {
+          "name": "Funções"
+        },
+        "csd7-2023/Intro to App Lab": {
+          "name": "Introdução Laboratório de Aplicativos"
+        },
+        "csd7-2023/Introduction to AI Lab": {
+          "name": "Introdução ao AI Lab"
+        },
+        "csd7-2023/Numerical Data in AI Lab": {
+          "name": "Dados numéricos no AI Lab"
+        },
+        "csd7-2023/Survey Planning": {
+          "name": "Projetando a coleta de dados"
         },
         "coursea-2023/Safety in My Online Neighborhood": {
           "overview": "[![Educação de senso comum](https://curriculum.code.org/static/img/common_sense_education.png)](https://www.commonsense.org)\n\nEsta lição foi originalmente criada pela Common Sense Education. [Saiba mais.](https://www.commonsense.org/education/digital-citizenship/curriculum)\n\nO poder da internet permite que os alunos experimentem e visitem lugares que talvez não consigam ver pessoalmente. Mas, assim como viajar pelo mundo real, é importante estar seguro ao viajar online. Nesta viagem de campo virtual, as crianças podem praticar a segurança em aventuras online.",
