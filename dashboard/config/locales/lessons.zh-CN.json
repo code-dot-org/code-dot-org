@@ -5002,6 +5002,10 @@
           "purpose": "在本线上活动中，学生们将学习如何使用《游戏实验室》中的事件。他们将首先在按下箭头键时训练骑士移动，然后最后展示他们在本课程中学习的其它技能，包括序列和循环（作为最终自由游戏习题的一部分）。",
           "student_overview": "用事件来创作故事或交互的游戏。"
         },
+        "ai-ethics-2023/lesson-1": {
+          "name": "我们的 AI 道德守则",
+          "student_overview": "合作研究人工智能伦理，制定可共享的行为准则。"
+        },
         "csc-adaptations-2023/Modeling Animal Adaptations (pilot)": {
           "name": "动物适应简介",
           "overview": "在这节**技能培养**课程中，学生将学习如何创建精灵和制作动画，并使用事件使它们具有互动性。 \n\n学生将在Sprite Lab中编写一个基于事件的因果模型，以演示物种如何随着时间的推移适应环境而生存。现实世界中使用交互式模型和模拟来帮助工程师和科学家识别模式，了解自然，预测未来的变化，并设计解决方案，为重大干扰做好准备和/或对抗。 \n\n学生将分组探索进化、适应、迁移、自然选择和生存的例子。 ",
@@ -5162,6 +5166,276 @@
           "preparation": "\\-为每位学生准备一台电脑。\n\\-为每位学生准备一份**<a href=\"https://docs.google.com/document/d/1kO4SNEIVyM0GrxxJb6NzVYauXXpi6rzQkDIfrzQf1Ls/template/preview\" target=\"_blank\">共享您的应用程序</a>**讲义的副本。\n\\-确保学生在本课中随身携带原创诗歌的副本。\\\n-将全班分成两对，进行 Poetry Pair-Share 活动。\n\\-在本课结束后，请考虑这些相关的扩展选项 ([link](https://studio.code.org/s/poetry-2023/lessons/4#activity-4365336)) 进行探索。\n\n##### 可选\n\n\\-特别适用于远程教学：确定是需要设置数字文档还是共享在线空间来发布每个学生的应用程序 URL（请参阅 “链接” 中的教师模板）。 ",
           "purpose": "与同龄人分享他们的诗歌艺术项目是创作过程的重要方面。它允许学生接收反馈、与他人合作、反思自己的工作并庆祝自己的成就。通过与他人分享他们的工作，学生可以成长和进步成为创造性思想家，培养重要的沟通和人际交往能力。",
           "student_overview": "与朋友分享你的新诗歌应用程序！ "
+        },
+        "csd1-2023/Intro to Problem Solving": {
+          "name": "解决问题入门"
+        },
+        "csd1-2023/The Problem Solving Process": {
+          "name": "解决问题的过程"
+        },
+        "csd1-2023/Exploring Problem Solving": {
+          "name": "探索解决问题"
+        },
+        "csd1-2023/What is a Computer?": {
+          "name": "什么是计算机？"
+        },
+        "csd1-2023/Input and Output": {
+          "name": "输入和输出"
+        },
+        "csd1-2023/Processing": {
+          "name": "正在处理中"
+        },
+        "csd1-2023/Storage": {
+          "name": "存储"
+        },
+        "csd1-2023/Project - Propose an App": {
+          "name": "项目- 提议一个应用程序"
+        },
+        "csd2-2023/Exploring Web Pages": {
+          "name": "探索网页"
+        },
+        "csd2-2023/Intro to HTML": {
+          "name": "HTML介绍"
+        },
+        "csd2-2023/Mini-Project: HTML Web Page": {
+          "name": "迷你项目：HTML网站"
+        },
+        "csd2-2023/Digital Footprint": {
+          "name": "数字足迹"
+        },
+        "csd2-2023/Styling Text with CSS": {
+          "name": "使用 CSS 设置文本样式"
+        },
+        "csd2-2023/Mini-Project: Your Personal Style": {
+          "name": "迷你项目：你的风格"
+        },
+        "csd2-2023/Intellectual Property": {
+          "name": "知识产权"
+        },
+        "csd2-2023/Using Images": {
+          "name": "使用图画"
+        },
+        "csd2-2023/Styling Elements with CSS": {
+          "name": "使用 CSS 设置元素的样式"
+        },
+        "csd2-2023/Your Web Page - Prepare": {
+          "name": "你的网站：准备"
+        },
+        "csd2-2023/Project - Personal Web Page": {
+          "name": "项目：个人网站"
+        },
+        "csd2-2023/Websites for a Purpose": {
+          "name": "有功能的网站"
+        },
+        "csd2-2023/Team Problem Solving": {
+          "name": "团队解决问题"
+        },
+        "csd2-2023/Sources and Research": {
+          "name": "来源和研究"
+        },
+        "csd2-2023/CSS Classes": {
+          "name": "CSS 类"
+        },
+        "csd2-2023/Linking Pages": {
+          "name": "链接页面"
+        },
+        "csd2-2023/Project - Website for a Purpose": {
+          "name": "项目 - 为某个目的的网站"
+        },
+        "csd2-2023/Peer Review and Final Touches": {
+          "name": "同伴评审和最后润色"
+        },
+        "csd3-2023/Plotting Shapes": {
+          "name": "绘制形状"
+        },
+        "csd3-2023/Drawing in Game Lab": {
+          "name": "在游戏实验室绘画"
+        },
+        "csd3-2023/Shapes and Parameters": {
+          "name": "形状和参数"
+        },
+        "csd3-2023/Variables": {
+          "name": "变量"
+        },
+        "csd3-2023/Random Numbers": {
+          "name": "随机数"
+        },
+        "csd3-2023/Sprites": {
+          "name": "精灵图"
+        },
+        "csd3-2023/Sprite Properties": {
+          "name": "精灵图属性"
+        },
+        "csd3-2023/Text": {
+          "name": "文本"
+        },
+        "csd3-2023/The Draw Loop": {
+          "name": "绘制循环"
+        },
+        "csd3-2023/Sprite Movement": {
+          "name": "精灵图移动"
+        },
+        "csd3-2023/Conditionals": {
+          "name": "条件语句"
+        },
+        "csd3-2023/Keyboard Input": {
+          "name": "键盘输入"
+        },
+        "csd3-2023/Mouse Input": {
+          "name": "鼠标输入"
+        },
+        "csd3-2023/Project - Interactive Card": {
+          "name": "项目 - 互动卡"
+        },
+        "csd3-2023/Velocity": {
+          "name": "矢量"
+        },
+        "csd3-2023/Collision Detection": {
+          "name": "碰撞检测"
+        },
+        "csd3-2023/Complex Sprite Movement": {
+          "name": "复杂的精灵图动作"
+        },
+        "csd3-2023/Collisions": {
+          "name": "碰撞"
+        },
+        "csd3-2023/Functions": {
+          "name": "函数"
+        },
+        "csd3-2023/The Game Design Process": {
+          "name": "游戏设计过程"
+        },
+        "csd3-2023/Using the Game Design Process": {
+          "name": "使用游戏设计过程"
+        },
+        "csd3-2023/Project - Design a Game": {
+          "name": "项目 - 设计一个游戏"
+        },
+        "csd4-2023/Understanding Your User": {
+          "name": "了解您的用户"
+        },
+        "csd4-2023/User Interfaces": {
+          "name": "用户界面"
+        },
+        "csd4-2023/Feedback and Testing": {
+          "name": "反馈和测试"
+        },
+        "csd4-2023/Identifying User Needs": {
+          "name": "识别用户需求"
+        },
+        "csd4-2023/Project - Paper Prototype": {
+          "name": "项目 - 纸张原型"
+        },
+        "csd4-2023/Designing Apps for Good": {
+          "name": "设计好的应用程序"
+        },
+        "csd4-2023/Market Research": {
+          "name": "市场研究"
+        },
+        "csd4-2023/Prototype Testing": {
+          "name": "原型测试"
+        },
+        "csd4-2023/Testing the App": {
+          "name": "测试应用程序"
+        },
+        "csd4-2023/Updating Your Prototype": {
+          "name": "更新您的原型"
+        },
+        "csd4-2023/Project - App Presentation": {
+          "name": "项目 - 应用程序演示"
+        },
+        "csd5-2023/Representation Matters": {
+          "name": "表示事项"
+        },
+        "csd5-2023/Patterns and Representation": {
+          "name": "模式和表示法"
+        },
+        "csd5-2023/ASCII and Binary Representation": {
+          "name": "ASCII 和二进制表示形式"
+        },
+        "csd5-2023/Representing Images": {
+          "name": "表示图像"
+        },
+        "csd5-2023/Representing Numbers": {
+          "name": "表示数字"
+        },
+        "csd5-2023/Combining Representations": {
+          "name": "组合表示"
+        },
+        "csd5-2023/Keeping Data Secret": {
+          "name": "数据保密"
+        },
+        "csd5-2023/Project - Create a Representation": {
+          "name": "项目-创建表示"
+        },
+        "csd5-2023/Structuring Data": {
+          "name": "构造数据"
+        },
+        "csd5-2023/Interpreting Data": {
+          "name": "表达数据"
+        },
+        "csd5-2023/Making Decisions with Data": {
+          "name": "依靠数据做决定"
+        },
+        "csd5-2023/Automating Data Decisions": {
+          "name": "自动化数据决策"
+        },
+        "csd5-2023/Problem Solving with Big Data": {
+          "name": "用大数据解决问题"
+        },
+        "csd6a-2023/Intro to App Lab": {
+          "name": "应用程序实验室简介"
+        },
+        "csd6a-2023/The Circuit Playground": {
+          "name": "电路游乐场"
+        },
+        "csd6a-2023/Board Events": {
+          "name": "主板事件"
+        },
+        "csd6a-2023/Color LEDs": {
+          "name": "彩色LED"
+        },
+        "csd6a-2023/Accelerometer": {
+          "name": "加速传感器"
+        },
+        "csd6a-2023/Making Music": {
+          "name": "制作音乐"
+        },
+        "csd6a-2023/Functions": {
+          "name": "函数"
+        },
+        "csd6a-2023/Project - Prototype an Innovation": {
+          "overview": "在这个课程的最后一个项目中, 学生组队来开发并测试一个基于电路游戏板的创新计算设备的原型。通过使用主板上提供的输入和输出, 学生组将创建允许有趣和独特的用户交互的程序。 "
+        },
+        "csd6b-2023/Intro to App Lab": {
+          "name": "应用程序实验室简介"
+        },
+        "csd6b-2023/Board Events": {
+          "name": "主板事件"
+        },
+        "csd6b-2023/Accelerometer": {
+          "name": "加速传感器"
+        },
+        "csd6b-2023/Functions": {
+          "name": "函数"
+        },
+        "csd7-2023/Intro to App Lab": {
+          "name": "应用程序实验室简介"
+        },
+        "csd7-2023/Introduction to Machine Learning": {
+          "name": "机器学习的简介"
+        },
+        "csd7-2023/Introduction to AI Lab": {
+          "name": "人工智能实验室的介绍"
+        },
+        "csd7-2023/Numerical Models": {
+          "overview": "在本课中，学生参与一个线下活动，模拟僵尸疫情爆发。学生必须利用邻近城镇的数据来预测城镇的哪一部分拥有最少的僵尸。学生们将使用相似度和平均值来预测某一特定地点的僵尸数量。然后，学生得到拯救，并将他们的预测与实际数字进行比较，以讨论数字数据与分类数据的准确性有何不同。\n\n**今日问题。**计算机如何学习用数字数据进行预测？"
+        },
+        "csd7-2023/Numerical Data in AI Lab": {
+          "name": "人工智能实验室中的数值数据"
+        },
+        "csd7-2023/Survey Planning": {
+          "name": "设计数据收集"
         },
         "coursea-2023/Safety in My Online Neighborhood": {
           "name": "我的在线社区的安全",
