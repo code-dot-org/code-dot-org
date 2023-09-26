@@ -1,5 +1,3 @@
-import {getStore} from '../redux';
-import {setShowingAi} from './danceRedux';
 import i18n from '@cdo/locale';
 import CdoFieldDanceAi from './cdoFieldDanceAi';
 
@@ -91,33 +89,10 @@ const customInputTypes = {
   },
   danceAi: {
     addInput(blockly, block, inputConfig, currentInputRow) {
-      const newField = new CdoFieldDanceAi({
-        value: 'hi',
-        /*setValue: currentValue => {
-          newField.setValue(value);
-        },*/
-      });
-      //newField.setSourceBlock(block);
-      //newField.init();
-
-      //const newField = new blockly.FieldTextInput('');
-      //newField.setSourceBlock(block);
-      //newField.init();
-      /*
-      newField.backgroundElement = GoogleBlockly.utils.dom.createSvgElement(
-        'g',
-        {
-          transform: 'translate(1,1)',
-        },
-        newField.fieldGroup_
-      );*/
-
-      //const newField = new CdoFieldDanceAi();
+      const newField = new CdoFieldDanceAi();
       currentInputRow
         .appendField(inputConfig.label)
         .appendField(newField, 'VALUE');
-      newField.showEditor_ = () => getStore().dispatch(setShowingAi(newField));
-      //newField.render_ = danceAiRender.bind(newField);
     },
     generateCode(block, arg) {
       return block.getFieldValue(arg.name);
