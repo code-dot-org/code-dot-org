@@ -1,5 +1,3 @@
-import React from 'react';
-import ReactDOM from 'react-dom';
 import GoogleBlockly from 'blockly/core';
 import experiments from '@cdo/apps/util/experiments';
 import color from '@cdo/apps/util/color';
@@ -27,7 +25,7 @@ class CdoFieldDanceAi extends GoogleBlockly.Field {
   }
 
   static fromJson(options) {
-    return new FieldPattern(options);
+    return new CdoFieldDanceAi(options);
   }
 
   initView() {
@@ -63,21 +61,6 @@ class CdoFieldDanceAi extends GoogleBlockly.Field {
 
   showEditor_() {
     super.showEditor_();
-
-    /*
-    const editor = this.dropdownCreate_();
-    Blockly.DropDownDiv.getContentDiv().appendChild(editor);
-
-    Blockly.DropDownDiv.setColour(
-      this.sourceBlock_.style.colourPrimary,
-      this.sourceBlock_.style.colourTertiary
-    );
-
-    Blockly.DropDownDiv.showPositionedByField(
-      this,
-      this.dropdownDispose_.bind(this)
-    );
-    */
   }
 
   renderContent() {
@@ -94,46 +77,6 @@ class CdoFieldDanceAi extends GoogleBlockly.Field {
     Blockly.WidgetDiv.hide();
     Blockly.DropDownDiv.hideWithoutAnimation();
   }
-
-  /*
-  render_() {
-    if (this.backgroundElement) {
-      this.backgroundElement.innerHTML = '';
-    }
-
-    GoogleBlockly.utils.dom.createSvgElement(
-      'rect',
-      {
-        fill: color.neutral_dark,
-        x: 1,
-        y: 1,
-        width: FIELD_WIDTH,
-        height: FIELD_HEIGHT,
-        rx: 3,
-      },
-      this.backgroundElement
-    );
-
-    const graphNotes = [];
-
-    graphNotes.forEach(graphNote => {
-      GoogleBlockly.utils.dom.createSvgElement(
-        'rect',
-        {
-          fill: color.neutral_light,
-          x: graphNote.x,
-          y: graphNote.y,
-          width: graphNote.width,
-          height: graphNote.height,
-          rx: 2,
-        },
-        this.backgroundElement
-      );
-    });
-
-    this.renderContent();
-  }
-  */
 
   render_() {
     const FIELD_HEIGHT = 20;
@@ -170,12 +113,6 @@ class CdoFieldDanceAi extends GoogleBlockly.Field {
       constants.FIELD_TEXT_FONTFAMILY
     );
 
-    //const textWidth = 100;
-
-    // The full width comprises:
-    // 5px left margin, 15px image, 4px gap, text width, 5px right margin.
-    //this.currentFieldWidth = 5 + 15 + 4 + textWidth + 5;
-
     // Create the background rectangle and attach it to the background
     // parent.
     GoogleBlockly.utils.dom.createSvgElement(
@@ -190,24 +127,6 @@ class CdoFieldDanceAi extends GoogleBlockly.Field {
       },
       this.backgroundElement
     );
-
-    /*
-    // Add an image for the sound type.
-    const soundType = this.options
-      .getLibrary()
-      .getSoundForId(this.getValue()).type;
-
-    GoogleBlockly.utils.dom.createSvgElement(
-      'image',
-      {
-        x: 6,
-        y: 3,
-        width: 15,
-        href: `/blockly/media/music/icon-${soundType}.png`,
-      },
-      this.backgroundElement
-    );
-    */
 
     // Now attach the text element to the background parent.  It will
     // render on top of the background rectangle.
