@@ -183,7 +183,6 @@ describe('RubricsContainerTest', () => {
     expect(saveButton.props().disabled).to.be.false;
     saveButton.simulate('click');
     sinon.assert.calledWith(mockSave);
-
     sinon.restore();
   });
 });
