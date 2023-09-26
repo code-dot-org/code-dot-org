@@ -70,13 +70,20 @@ export function stringIsXml(str) {
   }
 }
 
+export const BLOCK_TYPES = {
+  behaviorDefinition: 'behavior_definition',
+  procedureDefinition: 'procedures_defnoreturn',
+  whenRun: 'when_run',
+  whenSetup: 'Dancelab_whenSetup',
+};
+
 // A list of block types that are procedure definitions. These are sorted
 // first when loading blocks so that we can set up the procedure map
 // correctly while using the shareable procedure blocks plugin.
 export const PROCEDURE_DEFINITION_TYPES = [
-  'behavior_definition',
-  'procedures_defnoreturn',
+  BLOCK_TYPES.behaviorDefinition,
+  BLOCK_TYPES.procedureDefinition,
 ];
 
 // A list of block types associated with the Run button.
-export const SETUP_TYPES = ['when_run', 'Dancelab_whenSetup'];
+export const SETUP_TYPES = [BLOCK_TYPES.whenRun, BLOCK_TYPES.whenSetup];
