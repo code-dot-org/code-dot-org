@@ -7,6 +7,13 @@ PyCall.sys.path.append(path)
 class EvaluateRubricJob < ApplicationJob
   queue_as :default
 
+  rescue_from(StandardError) do |exception|
+    if rack_env?(:development)
+      puts "EvaluateRubricJob Error: #{exception.full_message}"
+    end
+    raise
+  end
+
   def perform(user_id:, script_level_id:)
     puts "Evaluating rubric for user #{user_id} on script level #{script_level_id}"
     user = User.find(user_id)
