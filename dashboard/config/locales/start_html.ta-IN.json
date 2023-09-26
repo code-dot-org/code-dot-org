@@ -12,12 +12,22 @@
           "Yes": "ஆம்",
           "cute": "அழகு"
         },
+        "CSD U1 IO Pet Chooser 2_2023": {
+          "No": "இல்லை",
+          "Yes": "ஆம்",
+          "cute": "அழகு"
+        },
         "CSD U1 IO Pet Chooser_2021": {
           "No": "இல்லை",
           "Yes": "ஆம்",
           "cute": "அழகு"
         },
         "CSD U1 IO Pet Chooser_2022": {
+          "No": "இல்லை",
+          "Yes": "ஆம்",
+          "cute": "அழகு"
+        },
+        "CSD U1 IO Pet Chooser_2023": {
           "No": "இல்லை",
           "Yes": "ஆம்",
           "cute": "அழகு"
@@ -30,6 +40,13 @@
           "text": "உரை"
         },
         "CSD U1 IO Story_2022": {
+          "City": "நகரம்",
+          "Color": "நிறம்",
+          "Food": "உணவு",
+          "Name": "பெயர்",
+          "text": "உரை"
+        },
+        "CSD U1 IO Story_2023": {
           "City": "நகரம்",
           "Color": "நிறம்",
           "Food": "உணவு",
@@ -80,12 +97,39 @@
           "8": "8",
           "9": "9"
         },
+        "CSD U1 processing bday_2023": {
+          "1": "1",
+          "10": "10",
+          "11": "11",
+          "12": "12",
+          "13": "13",
+          "14": "14",
+          "15": "15",
+          "16": "16",
+          "17": "17",
+          "18": "18",
+          "19": "19",
+          "2": "2",
+          "20": "20",
+          "3": "3",
+          "4": "4",
+          "5": "5",
+          "6": "6",
+          "7": "7",
+          "8": "8",
+          "9": "9"
+        },
         "CSD U1 processing fastest_2021": {
           "0": "0",
           "k": "k",
           "s": "s"
         },
         "CSD U1 processing fastest_2022": {
+          "0": "0",
+          "k": "k",
+          "s": "s"
+        },
+        "CSD U1 processing fastest_2023": {
           "0": "0",
           "k": "k",
           "s": "s"
@@ -138,6 +182,30 @@
           "?": "?",
           "text": "உரை"
         },
+        "CSD U1 processing guess_2023": {
+          "1": "1",
+          "10": "10",
+          "11": "11",
+          "12": "12",
+          "13": "13",
+          "14": "14",
+          "15": "15",
+          "16": "16",
+          "17": "17",
+          "18": "18",
+          "19": "19",
+          "2": "2",
+          "20": "20",
+          "3": "3",
+          "4": "4",
+          "5": "5",
+          "6": "6",
+          "7": "7",
+          "8": "8",
+          "9": "9",
+          "?": "?",
+          "text": "உரை"
+        },
         "CSD U1 processing live_2021": {
           "bear": "கரடி",
           "rat": "எலி",
@@ -148,11 +216,22 @@
           "rat": "எலி",
           "walking": "நடை பயிற்சி"
         },
+        "CSD U1 processing live_2023": {
+          "cat": "பூனை",
+          "chicken": "கோழி",
+          "dog": "நாய்",
+          "horse": "குதிரை",
+          "walking": "நடை பயிற்சி"
+        },
         "CSD U1 processing npark_2021": {
           "Correct!": "சரி!",
           "Sorry!": "மன்னிக்கவும்!"
         },
         "CSD U1 processing npark_2022": {
+          "Correct!": "சரி!",
+          "Sorry!": "மன்னிக்கவும்!"
+        },
+        "CSD U1 processing npark_2023": {
           "Correct!": "சரி!",
           "Sorry!": "மன்னிக்கவும்!"
         },
@@ -200,10 +279,35 @@
           "8": "8",
           "9": "9"
         },
+        "CSD U1 processing writers_2023": {
+          "1": "1",
+          "10": "10",
+          "11": "11",
+          "12": "12",
+          "13": "13",
+          "14": "14",
+          "15": "15",
+          "16": "16",
+          "17": "17",
+          "18": "18",
+          "19": "19",
+          "2": "2",
+          "20": "20",
+          "3": "3",
+          "4": "4",
+          "5": "5",
+          "6": "6",
+          "7": "7",
+          "8": "8",
+          "9": "9"
+        },
         "CSD U1 storage friends_2021": {
           "Back": "பின் செல்லவும்"
         },
         "CSD U1 storage friends_2022": {
+          "Back": "பின் செல்லவும்"
+        },
+        "CSD U1 storage friends_2023": {
           "Back": "பின் செல்லவும்"
         },
         "CSD U1 storage movies_2021": {
@@ -218,6 +322,12 @@
           "Yes": "ஆம்",
           "text": "உரை"
         },
+        "CSD U1 storage movies_2023": {
+          "No": "இல்லை",
+          "Star Wars": "ஸ்டார் வார்ஸ் ",
+          "Yes": "ஆம்",
+          "text": "உரை"
+        },
         "CSD U1 storage outfit_2021": {
           "Clear": "நீக்கு",
           "black": "கறுப்பு",
@@ -227,6 +337,14 @@
           "white": "வெள்ளை"
         },
         "CSD U1 storage outfit_2022": {
+          "Clear": "நீக்கு",
+          "black": "கறுப்பு",
+          "green": "பச்சை",
+          "pink": "இளஞ்சிவப்பு",
+          "purple": "ஊதா",
+          "white": "வெள்ளை"
+        },
+        "CSD U1 storage outfit_2023": {
           "Clear": "நீக்கு",
           "black": "கறுப்பு",
           "green": "பச்சை",
@@ -269,41 +387,121 @@
           "4": "4",
           "5": "5"
         },
+        "CSD U6 - Accelerometer - PB_2023": {
+          "0": "0"
+        },
         "CSD U6 - Accelerometer - PB_2222": {
           "0": "0"
+        },
+        "CSD U6 - Accelerometer - PB_mb2022": {
+          "0": "0"
+        },
+        "CSD U6 - Accelerometer - PD_2023": {
+          "You did it!": "நீ செய்தாய்!"
         },
         "CSD U6 - Accelerometer - PD_2222": {
           "You did it!": "நீ செய்தாய்!"
         },
+        "CSD U6 - Accelerometer - PF_2023": {
+          "0": "0"
+        },
         "CSD U6 - Accelerometer - PF_2222": {
           "0": "0"
         },
+        "CSD U6 - Accelerometer - PF_mb2022": {
+          "0": "0"
+        },
+        "CSD U6 - Accelerometer - SB2_mb2022": {
+          "Success!": "வெற்றி!"
+        },
+        "CSD U6 - Board Inputs - P_2023": {
+          "Success!": "வெற்றி!"
+        },
+        "CSD U6 - Board Inputs - PracC_mb2022": {
+          "Success!": "வெற்றி!"
+        },
+        "CSD U6 - Board Inputs - SB1_2023": {
+          "Success!": "வெற்றி!"
+        },
         "CSD U6 - Board Inputs - SB1_2222": {
+          "Success!": "வெற்றி!"
+        },
+        "CSD U6 - Board Inputs - SB1_mb2022": {
+          "Success!": "வெற்றி!"
+        },
+        "CSD U6 - Board Inputs - SB2_2023": {
           "Success!": "வெற்றி!"
         },
         "CSD U6 - Board Inputs - SB2_2222": {
           "Success!": "வெற்றி!"
         },
+        "CSD U6 - Board Inputs - SB2_mb2022": {
+          "Success!": "வெற்றி!"
+        },
+        "CSD U6 - Board Inputs - SB3_2023": {
+          "Success!": "வெற்றி!"
+        },
         "CSD U6 - Board Inputs - SB3_2222": {
           "Success!": "வெற்றி!"
+        },
+        "CSD U6 - Board Outputs - A_2023": {
+          "Happy": "மகிழ்ச்சி"
         },
         "CSD U6 - Board Outputs - A_2222": {
           "Happy": "மகிழ்ச்சி"
         },
+        "CSD U6 - Board Outputs - A_mb2022": {
+          "Age": "வயது",
+          "Happy": "மகிழ்ச்சி",
+          "Name": "பெயர்"
+        },
+        "CSD U6 - Board Outputs - ChalC_mb2022": {
+          "No": "இல்லை",
+          "Yes": "ஆம்"
+        },
+        "CSD U6 - Board Outputs - P_2023": {
+          "Success!": "வெற்றி!"
+        },
         "CSD U6 - Board Outputs - P_2222": {
+          "Success!": "வெற்றி!"
+        },
+        "CSD U6 - Board Outputs - PracD_mb2022": {
+          "1": "1",
+          "2": "2",
+          "3": "3"
+        },
+        "CSD U6 - Board Outputs - SB1_2023": {
           "Success!": "வெற்றி!"
         },
         "CSD U6 - Board Outputs - SB1_2222": {
           "Success!": "வெற்றி!"
         },
+        "CSD U6 - Board Outputs - SB2_2023": {
+          "Success!": "வெற்றி!"
+        },
         "CSD U6 - Board Outputs - SB2_2222": {
           "Success!": "வெற்றி!"
+        },
+        "CSD U6 - Board Outputs - SB4_2023": {
+          "Fish": "மீன்"
         },
         "CSD U6 - Board Outputs - SB4_2222": {
           "Fish": "மீன்"
         },
+        "CSD U6 - Board Outputs - Setup_2023": {
+          "Success!": "வெற்றி!"
+        },
         "CSD U6 - Board Outputs - Setup_2222": {
           "Success!": "வெற்றி!"
+        },
+        "CSD U6 - Board Outputs - Setup_mb2022": {
+          "Success!": "வெற்றி!"
+        },
+        "CSD U6 - Color LEDs - ChalD_2023": {
+          "East": "கிழக்கு ",
+          "North": "வடக்கு ",
+          "South": "தெற்கு ",
+          "West": "மேற்கு "
         },
         "CSD U6 - Color LEDs - ChalD_2222": {
           "East": "கிழக்கு ",
@@ -311,17 +509,37 @@
           "South": "தெற்கு ",
           "West": "மேற்கு "
         },
+        "CSD U6 - Color LEDs - PracA_2023": {
+          "Success!": "வெற்றி!"
+        },
         "CSD U6 - Color LEDs - PracA_2222": {
+          "Success!": "வெற்றி!"
+        },
+        "CSD U6 - Color LEDs - SB2_2023": {
           "Success!": "வெற்றி!"
         },
         "CSD U6 - Color LEDs - SB2_2222": {
           "Success!": "வெற்றி!"
         },
+        "CSD U6 - Color LEDs - SB3_2023": {
+          "Success!": "வெற்றி!"
+        },
         "CSD U6 - Color LEDs - SB3_2222": {
           "Success!": "வெற்றி!"
         },
+        "CSD U6 - Color LEDs - SB4_2023": {
+          "Medium": "நடுத்தர"
+        },
         "CSD U6 - Color LEDs - SB4_2222": {
           "Medium": "நடுத்தர"
+        },
+        "CSD U6 - Combine Inputs - A_2023": {
+          "green": "பச்சை",
+          "left": "இடது",
+          "purple": "ஊதா",
+          "red": "சிவப்பு",
+          "right": "வலது",
+          "yellow": "மஞ்சள்"
         },
         "CSD U6 - Combine Inputs - A_2222": {
           "green": "பச்சை",
@@ -331,6 +549,10 @@
           "right": "வலது",
           "yellow": "மஞ்சள்"
         },
+        "CSD U6 - Combine Inputs - A_mb2022": {
+          "left": "இடது",
+          "right": "வலது"
+        },
         "CSD U6 - Combine Inputs - CA_2022": {
           "fast": "வேகமாக",
           "high": "உயரமான",
@@ -339,14 +561,37 @@
           "short": "குறுகியது",
           "slow": "வேகக் குறைவு"
         },
+        "CSD U6 - Combine Inputs - CA_2023": {
+          "fast": "வேகமாக",
+          "high": "உயரமான",
+          "long": "நீளம்",
+          "low": "குறைவு",
+          "short": "குறுகியது",
+          "slow": "வேகக் குறைவு"
+        },
+        "CSD U6 - Combine Inputs - ChalG_2023": {
+          "Blue": "நீலம்",
+          "Green": "பச்சை",
+          "Red": "சிவப்பு"
+        },
         "CSD U6 - Combine Inputs - ChalG_2222": {
           "Blue": "நீலம்",
           "Green": "பச்சை",
           "Red": "சிவப்பு"
         },
+        "CSD U6 - Combine Inputs - PracA_2023": {
+          "left": "இடது",
+          "right": "வலது"
+        },
         "CSD U6 - Combine Inputs - PracA_2222": {
           "left": "இடது",
           "right": "வலது"
+        },
+        "CSD U6 - Combine Inputs - PracC_2023": {
+          "blue": "நீலம்",
+          "green": "பச்சை",
+          "orange": "ஆரஞ்",
+          "yellow": "மஞ்சள்"
         },
         "CSD U6 - Combine Inputs - PracC_2222": {
           "blue": "நீலம்",
@@ -354,12 +599,26 @@
           "orange": "ஆரஞ்",
           "yellow": "மஞ்சள்"
         },
+        "CSD U6 - Combine Inputs - PracD_2023": {
+          "Test": "தேர்வு",
+          "quiet": "அமைதி"
+        },
         "CSD U6 - Combine Inputs - PracD_2222": {
           "Test": "தேர்வு",
           "quiet": "அமைதி"
         },
+        "CSD U6 - Combine Inputs - SB2_2023": {
+          "long": "நீளம்",
+          "short": "குறுகியது"
+        },
         "CSD U6 - Combine Inputs - SB2_2222": {
           "long": "நீளம்",
+          "short": "குறுகியது"
+        },
+        "CSD U6 - Combine Inputs - SB3_2023": {
+          "high": "உயரமான",
+          "long": "நீளம்",
+          "low": "குறைவு",
           "short": "குறுகியது"
         },
         "CSD U6 - Combine Inputs - SB3_2222": {
@@ -368,18 +627,53 @@
           "low": "குறைவு",
           "short": "குறுகியது"
         },
+        "CSD U6 - Combine Inputs - SB4_2023": {
+          "long": "நீளம்",
+          "short": "குறுகியது"
+        },
         "CSD U6 - Combine Inputs - SB4_2222": {
           "long": "நீளம்",
           "short": "குறுகியது"
+        },
+        "CSD U6 - Combine Inputs - SB4v2_mb2022": {
+          "Row": "ரோ"
+        },
+        "CSD U6 - Combine Inputs - SB5v2_mb2022": {
+          "Row": "ரோ"
+        },
+        "CSD U6 - Functions - P2C_2023": {
+          "Blue": "நீலம்",
+          "Red": "சிவப்பு"
         },
         "CSD U6 - Functions - P2C_2222": {
           "Blue": "நீலம்",
           "Red": "சிவப்பு"
         },
+        "CSD U6 - Functions - P2C_mb2022": {
+          "Blue": "நீலம்",
+          "Red": "சிவப்பு"
+        },
+        "CSD U6 - Functions - P_2023": {
+          "0": "0"
+        },
         "CSD U6 - Functions - P_2222": {
           "0": "0"
         },
+        "CSD U6 - Functions - P_mb2022": {
+          "0": "0"
+        },
+        "CSD U6 - Functions - SB7_2023": {
+          "0": "0"
+        },
         "CSD U6 - Functions - SB7_2222": {
+          "0": "0"
+        },
+        "CSD U6 - Functions - SB7_mb2022": {
+          "0": "0"
+        },
+        "CSD U6 - If Variables - ChalD_2023": {
+          "+": "+",
+          "-": "-",
           "0": "0"
         },
         "CSD U6 - If Variables - ChalD_2222": {
@@ -387,14 +681,43 @@
           "-": "-",
           "0": "0"
         },
+        "CSD U6 - If Variables - ChalD_mb2022": {
+          "+": "+",
+          "-": "-",
+          "0": "0"
+        },
+        "CSD U6 - If Variables - SB3_2023": {
+          "Name": "பெயர்"
+        },
         "CSD U6 - If Variables - SB3_2222": {
           "Name": "பெயர்"
+        },
+        "CSD U6 - If Variables - SB3_mb2022": {
+          "Name": "பெயர்"
+        },
+        "CSD U6 - If Variables - SB4_2023": {
+          "0": "0"
         },
         "CSD U6 - If Variables - SB4_2222": {
           "0": "0"
         },
+        "CSD U6 - If Variables - SB4_mb2022": {
+          "0": "0"
+        },
+        "CSD U6 - Music - A_2023": {
+          "Happy": "மகிழ்ச்சி"
+        },
         "CSD U6 - Music - A_2222": {
           "Happy": "மகிழ்ச்சி"
+        },
+        "CSD U6 - Music - ChalD_2023": {
+          "A": "அ",
+          "B": "ஆ",
+          "C": "இ",
+          "D": "ஈ",
+          "E": "கிழக்கு",
+          "F": "உ",
+          "G": "ஊ"
         },
         "CSD U6 - Music - ChalD_2222": {
           "A": "அ",
@@ -404,6 +727,16 @@
           "E": "கிழக்கு",
           "F": "உ",
           "G": "ஊ"
+        },
+        "CSD U6 - Music - Piano_2023": {
+          "A": "அ",
+          "B": "ஆ",
+          "C": "இ",
+          "D": "ஈ",
+          "E": "கிழக்கு",
+          "F": "உ",
+          "G": "ஊ",
+          "Note:": "குறிப்பு:"
         },
         "CSD U6 - Music - Piano_2222": {
           "A": "அ",
@@ -415,7 +748,25 @@
           "G": "ஊ",
           "Note:": "குறிப்பு:"
         },
+        "CSD U6 - Music - SB1_2023": {
+          "A": "அ",
+          "B": "ஆ",
+          "C": "இ",
+          "D": "ஈ",
+          "E": "கிழக்கு",
+          "F": "உ",
+          "G": "ஊ"
+        },
         "CSD U6 - Music - SB1_2222": {
+          "A": "அ",
+          "B": "ஆ",
+          "C": "இ",
+          "D": "ஈ",
+          "E": "கிழக்கு",
+          "F": "உ",
+          "G": "ஊ"
+        },
+        "CSD U6 - Music - SB2.5_2023": {
           "A": "அ",
           "B": "ஆ",
           "C": "இ",
@@ -433,6 +784,15 @@
           "F": "உ",
           "G": "ஊ"
         },
+        "CSD U6 - Music - SB3_2023": {
+          "A": "அ",
+          "B": "ஆ",
+          "C": "இ",
+          "D": "ஈ",
+          "E": "கிழக்கு",
+          "F": "உ",
+          "G": "ஊ"
+        },
         "CSD U6 - Music - SB3_2222": {
           "A": "அ",
           "B": "ஆ",
@@ -442,69 +802,198 @@
           "F": "உ",
           "G": "ஊ"
         },
+        "CSD U6 - Music - SB4_2023": {
+          "Success!": "வெற்றி!"
+        },
         "CSD U6 - Music - SB4_2222": {
           "Success!": "வெற்றி!"
+        },
+        "CSD U6 - Physical Input - A_2023": {
+          "1": "1",
+          "2": "2"
         },
         "CSD U6 - Physical Input - A_2222": {
           "1": "1",
           "2": "2"
         },
+        "CSD U6 - Physical Input - A_mb2022": {
+          "1": "1",
+          "2": "2"
+        },
+        "CSD U6 - Physical Input - ChalA_2023": {
+          "Success!": "வெற்றி!"
+        },
         "CSD U6 - Physical Input - ChalA_2222": {
+          "Success!": "வெற்றி!"
+        },
+        "CSD U6 - Physical Input - ChalA_mb2022": {
+          "Success!": "வெற்றி!"
+        },
+        "CSD U6 - Physical Input - ChalB_2023": {
           "Success!": "வெற்றி!"
         },
         "CSD U6 - Physical Input - ChalB_2222": {
           "Success!": "வெற்றி!"
         },
+        "CSD U6 - Physical Input - ChalB_mb2022": {
+          "Success!": "வெற்றி!"
+        },
+        "CSD U6 - Physical Input - ChalC_2023": {
+          "Success!": "வெற்றி!"
+        },
         "CSD U6 - Physical Input - ChalC_2222": {
           "Success!": "வெற்றி!"
+        },
+        "CSD U6 - Physical Input - ChalC_mb2022": {
+          "Success!": "வெற்றி!"
+        },
+        "CSD U6 - Physical Input - PA_2023": {
+          "0": "0",
+          "Score": "ஸ்கோர்"
         },
         "CSD U6 - Physical Input - PA_2222": {
           "0": "0",
           "Score": "ஸ்கோர்"
         },
+        "CSD U6 - Physical Input - PA_mb2022": {
+          "0": "0",
+          "Score": "ஸ்கோர்"
+        },
+        "CSD U6 - Physical Input - PC_2023": {
+          "Success!": "வெற்றி!"
+        },
         "CSD U6 - Physical Input - PC_2222": {
+          "Success!": "வெற்றி!"
+        },
+        "CSD U6 - Physical Input - PD_2023": {
           "Success!": "வெற்றி!"
         },
         "CSD U6 - Physical Input - PD_2222": {
           "Success!": "வெற்றி!"
         },
+        "CSD U6 - Physical Input - PD_mb2022": {
+          "Success!": "வெற்றி!"
+        },
+        "CSD U6 - Physical Input - SB1_2023": {
+          "Success!": "வெற்றி!"
+        },
         "CSD U6 - Physical Input - SB1_2222": {
+          "Success!": "வெற்றி!"
+        },
+        "CSD U6 - Physical Input - SB1_mb2022": {
+          "Success!": "வெற்றி!"
+        },
+        "CSD U6 - Physical Output - ChalA_2023": {
           "Success!": "வெற்றி!"
         },
         "CSD U6 - Physical Output - ChalA_2222": {
           "Success!": "வெற்றி!"
         },
+        "CSD U6 - Physical Output - ChalA_mb2022": {
+          "Success!": "வெற்றி!"
+        },
+        "CSD U6 - Physical Output - ChalB_2023": {
+          "Success!": "வெற்றி!"
+        },
         "CSD U6 - Physical Output - ChalB_2222": {
+          "Success!": "வெற்றி!"
+        },
+        "CSD U6 - Physical Output - ChalB_mb2022": {
+          "Success!": "வெற்றி!"
+        },
+        "CSD U6 - Physical Output - ChalC_2023": {
           "Success!": "வெற்றி!"
         },
         "CSD U6 - Physical Output - ChalC_2222": {
           "Success!": "வெற்றி!"
         },
+        "CSD U6 - Physical Output - ChalC_mb2022": {
+          "Success!": "வெற்றி!"
+        },
+        "CSD U6 - Physical Output - PB_2023": {
+          "Success!": "வெற்றி!"
+        },
         "CSD U6 - Physical Output - PB_2222": {
+          "Success!": "வெற்றி!"
+        },
+        "CSD U6 - Physical Output - PB_mb2022": {
+          "Success!": "வெற்றி!"
+        },
+        "CSD U6 - Physical Output - PC_2023": {
           "Success!": "வெற்றி!"
         },
         "CSD U6 - Physical Output - PC_2222": {
           "Success!": "வெற்றி!"
         },
+        "CSD U6 - Physical Output - PC_mb2022": {
+          "Success!": "வெற்றி!"
+        },
+        "CSD U6 - Physical Output - P_2023": {
+          "Success!": "வெற்றி!"
+        },
         "CSD U6 - Physical Output - P_2222": {
+          "Success!": "வெற்றி!"
+        },
+        "CSD U6 - Physical Output - P_mb2022": {
+          "Success!": "வெற்றி!"
+        },
+        "CSD U6 - Physical Output - SB1_2023": {
           "Success!": "வெற்றி!"
         },
         "CSD U6 - Physical Output - SB1_2222": {
           "Success!": "வெற்றி!"
         },
+        "CSD U6 - Physical Output - SB1_mb2022": {
+          "Success!": "வெற்றி!"
+        },
+        "CSD U6 - Physical Output - SB2.2_2023": {
+          "Success!": "வெற்றி!"
+        },
         "CSD U6 - Physical Output - SB2.2_2222": {
+          "Success!": "வெற்றி!"
+        },
+        "CSD U6 - Physical Output - SB2.2_mb2022": {
+          "Success!": "வெற்றி!"
+        },
+        "CSD U6 - Physical Output - SB2_2023": {
           "Success!": "வெற்றி!"
         },
         "CSD U6 - Physical Output - SB2_2222": {
           "Success!": "வெற்றி!"
         },
+        "CSD U6 - Physical Output - SB2_mb2022": {
+          "Success!": "வெற்றி!"
+        },
+        "CSD U6 - Screen Inputs - A_2023": {
+          "Name:": "பெயர்:"
+        },
         "CSD U6 - Screen Inputs - A_2222": {
           "Name:": "பெயர்:"
+        },
+        "CSD U6 - Screen Inputs - A_mb2022": {
+          "Name:": "பெயர்:"
+        },
+        "CSD U6 - Screen Inputs - ChalB_2023": {
+          "Blue": "நீலம்",
+          "Green": "பச்சை",
+          "Red": "சிவப்பு"
         },
         "CSD U6 - Screen Inputs - ChalB_2222": {
           "Blue": "நீலம்",
           "Green": "பச்சை",
           "Red": "சிவப்பு"
+        },
+        "CSD U6 - Screen Inputs - ChalB_mb2022": {
+          "Blue": "நீலம்",
+          "Green": "பச்சை",
+          "Red": "சிவப்பு"
+        },
+        "CSD U6 - Screen Inputs - P_2023": {
+          "Blue": "நீலம்",
+          "Green": "பச்சை",
+          "Name:": "பெயர்:",
+          "Red": "சிவப்பு",
+          "Save": "சேமி"
         },
         "CSD U6 - Screen Inputs - P_2222": {
           "Blue": "நீலம்",
@@ -513,10 +1002,31 @@
           "Red": "சிவப்பு",
           "Save": "சேமி"
         },
+        "CSD U6 - Screen Inputs - P_mb2022": {
+          "Blue": "நீலம்",
+          "Green": "பச்சை",
+          "Name:": "பெயர்:",
+          "Red": "சிவப்பு",
+          "Save": "சேமி"
+        },
+        "CSD U6 - Screen Inputs - PracD_2023": {
+          "0": "0"
+        },
         "CSD U6 - Screen Inputs - PracD_2222": {
           "0": "0"
         },
+        "CSD U6 - Screen Inputs - PracD_mb2022": {
+          "0": "0"
+        },
         "CSD U6 - Screen Inputs - SB2.1_2022": {
+          "black": "கறுப்பு",
+          "white": "வெள்ளை"
+        },
+        "CSD U6 - Screen Inputs - SB2.1_2023": {
+          "black": "கறுப்பு",
+          "white": "வெள்ளை"
+        },
+        "CSD U6 - Screen Inputs - SB2.1_mb2022": {
           "black": "கறுப்பு",
           "white": "வெள்ளை"
         },
@@ -524,12 +1034,40 @@
           "black": "கறுப்பு",
           "white": "வெள்ளை"
         },
+        "CSD U6 - Screen Inputs - SB2.2_2023": {
+          "black": "கறுப்பு",
+          "white": "வெள்ளை"
+        },
+        "CSD U6 - Screen Inputs - SB2.2_mb2022": {
+          "black": "கறுப்பு",
+          "white": "வெள்ளை"
+        },
+        "CSD U6 - Screen Outputs - ChalB_2023": {
+          "?": "?",
+          "Happy": "மகிழ்ச்சி"
+        },
         "CSD U6 - Screen Outputs - ChalB_2222": {
           "?": "?",
           "Happy": "மகிழ்ச்சி"
         },
+        "CSD U6 - Screen Outputs - ChalB_mb2022": {
+          "?": "?",
+          "Happy": "மகிழ்ச்சி"
+        },
+        "CSD U6 - Screen Outputs - P_2023": {
+          "title": "தலைப்பு"
+        },
         "CSD U6 - Screen Outputs - P_2222": {
           "title": "தலைப்பு"
+        },
+        "CSD U6 - Screen Outputs - P_mb2022": {
+          "title": "தலைப்பு"
+        },
+        "CSD U6 - Screen Outputs - PracA_2023": {
+          "Blue": "நீலம்",
+          "Green": "பச்சை",
+          "Red": "சிவப்பு",
+          "White": "வெள்ளை"
         },
         "CSD U6 - Screen Outputs - PracA_2222": {
           "Blue": "நீலம்",
@@ -537,37 +1075,103 @@
           "Red": "சிவப்பு",
           "White": "வெள்ளை"
         },
+        "CSD U6 - Screen Outputs - PracA_mb2022": {
+          "Blue": "நீலம்",
+          "Green": "பச்சை",
+          "Red": "சிவப்பு",
+          "White": "வெள்ளை"
+        },
+        "CSD U6 - Screen Outputs - PracB_2023": {
+          "down": "கீழே",
+          "left": "இடது",
+          "right": "வலது",
+          "up": "மேலே"
+        },
         "CSD U6 - Screen Outputs - PracB_2222": {
           "down": "கீழே",
           "left": "இடது",
           "right": "வலது",
           "up": "மேலே"
         },
+        "CSD U6 - Screen Outputs - PracB_mb2022": {
+          "down": "கீழே",
+          "left": "இடது",
+          "right": "வலது",
+          "up": "மேலே"
+        },
+        "CSD U6 - Screen Outputs - SB1.1_2023": {
+          "name": "பெயர்"
+        },
         "CSD U6 - Screen Outputs - SB1.1_2222": {
           "name": "பெயர்"
         },
+        "CSD U6 - Screen Outputs - SB1.1_mb2022": {
+          "name": "பெயர்"
+        },
+        "CSD U6 - Sensors - A_2023": {
+          "0": "0"
+        },
         "CSD U6 - Sensors - A_2222": {
           "0": "0"
+        },
+        "CSD U6 - Sensors - A_mb2022": {
+          "0": "0"
+        },
+        "CSD U6 - Sensors - P_2023": {
+          "high": "உயரமான",
+          "low": "குறைவு",
+          "text": "உரை"
         },
         "CSD U6 - Sensors - P_2222": {
           "high": "உயரமான",
           "low": "குறைவு",
           "text": "உரை"
         },
+        "CSD U6 - Sensors - P_mb2022": {
+          "high": "உயரமான",
+          "low": "குறைவு",
+          "text": "உரை"
+        },
+        "CSD U6 - Sensors - SB1_2023": {
+          "value": "மதிப்பு"
+        },
         "CSD U6 - Sensors - SB1_2222": {
+          "value": "மதிப்பு"
+        },
+        "CSD U6 - Sensors - SB2_2023": {
+          "Update": "புதுப்பிக்கவும்",
           "value": "மதிப்பு"
         },
         "CSD U6 - Sensors - SB2_2222": {
           "Update": "புதுப்பிக்கவும்",
           "value": "மதிப்பு"
         },
+        "CSD U6 - Sensors - SB2_mb2022": {
+          "Update": "புதுப்பிக்கவும்",
+          "value": "மதிப்பு"
+        },
+        "CSD U6 - Sensors - SB3_2023": {
+          "value": "மதிப்பு"
+        },
         "CSD U6 - Sensors - SB3_2222": {
+          "value": "மதிப்பு"
+        },
+        "CSD U6 - Sensors - SB3_mb2022": {
+          "value": "மதிப்பு"
+        },
+        "CSD U6 - Sensors - SB4.1_2023": {
           "value": "மதிப்பு"
         },
         "CSD U6 - Sensors - SB4.1_2222": {
           "value": "மதிப்பு"
         },
+        "CSD U6 - Sensors - SB4_2023": {
+          "value": "மதிப்பு"
+        },
         "CSD U6 - Sensors - SB4_2222": {
+          "value": "மதிப்பு"
+        },
+        "CSD U6 - Sensors - SB4_mb2022": {
           "value": "மதிப்பு"
         },
         "CSD U6 Driver pt 2": {
@@ -1145,7 +1749,13 @@
         "CSDU6 Circuit Playground Test_2021": {
           "Success!": "வெற்றி!"
         },
+        "CSDU6 Circuit Playground Test_2023": {
+          "Success!": "வெற்றி!"
+        },
         "CSDU6 Circuit Playground Test_2222": {
+          "Success!": "வெற்றி!"
+        },
+        "CSDU6 Circuit Playground Test_mb2022": {
           "Success!": "வெற்றி!"
         },
         "CSDU6 circuit playground piano": {
@@ -1326,11 +1936,18 @@
         "csd u5 recommender sample_2022": {
           "Start": "தொடங்குக"
         },
+        "csd u5 recommender sample_2023": {
+          "Start": "தொடங்குக"
+        },
         "csd-apps for good-2": {
           "Home": "வீடு",
           "Next": "அடுத்து"
         },
         "csd-apps for good-2_2022": {
+          "Home": "வீடு",
+          "Next": "அடுத்து"
+        },
+        "csd-apps for good-2_2023": {
           "Home": "வீடு",
           "Next": "அடுத்து"
         },
@@ -1346,11 +1963,21 @@
           "3": "3",
           "4": "4"
         },
+        "csd-apps for good-3_2023": {
+          "1": "1",
+          "2": "2",
+          "3": "3",
+          "4": "4"
+        },
         "csd-explore ui-2": {
           "Home": "வீடு",
           "Next": "அடுத்து"
         },
         "csd-explore ui-2_2022": {
+          "Home": "வீடு",
+          "Next": "அடுத்து"
+        },
+        "csd-explore ui-2_2023": {
           "Home": "வீடு",
           "Next": "அடுத்து"
         },
@@ -1398,11 +2025,37 @@
           "8": "8",
           "9": "9"
         },
+        "csd-explore ui-3_2023": {
+          "1": "1",
+          "10": "10",
+          "11": "11",
+          "12": "12",
+          "13": "13",
+          "14": "14",
+          "15": "15",
+          "16": "16",
+          "17": "17",
+          "18": "18",
+          "19": "19",
+          "2": "2",
+          "20": "20",
+          "3": "3",
+          "4": "4",
+          "5": "5",
+          "6": "6",
+          "7": "7",
+          "8": "8",
+          "9": "9"
+        },
         "csd-explore ui-4": {
           "Correct!": "சரி!",
           "Sorry!": "மன்னிக்கவும்!"
         },
         "csd-explore ui-4_2022": {
+          "Correct!": "சரி!",
+          "Sorry!": "மன்னிக்கவும்!"
+        },
+        "csd-explore ui-4_2023": {
           "Correct!": "சரி!",
           "Sorry!": "மன்னிக்கவும்!"
         },
@@ -1450,10 +2103,35 @@
           "8": "8",
           "9": "9"
         },
+        "csd-explore ui-5_2023": {
+          "1": "1",
+          "10": "10",
+          "11": "11",
+          "12": "12",
+          "13": "13",
+          "14": "14",
+          "15": "15",
+          "16": "16",
+          "17": "17",
+          "18": "18",
+          "19": "19",
+          "2": "2",
+          "20": "20",
+          "3": "3",
+          "4": "4",
+          "5": "5",
+          "6": "6",
+          "7": "7",
+          "8": "8",
+          "9": "9"
+        },
         "csd-explore ui-6": {
           "Next": "அடுத்து"
         },
         "csd-explore ui-6_2022": {
+          "Next": "அடுத்து"
+        },
+        "csd-explore ui-6_2023": {
           "Next": "அடுத்து"
         },
         "ml-L2 supervised - green glass door-2021": {
@@ -1466,10 +2144,18 @@
           "Green Glass Door": "பச்சை கண்ணாடி கதவு",
           "Rejected": "நிராகரிக்கப்பட்டது"
         },
+        "ml-L2 supervised - green glass door_2023": {
+          "Accepted": "ஏற்றுக் கொள்ளப்பட்டது",
+          "Green Glass Door": "பச்சை கண்ணாடி கதவு",
+          "Rejected": "நிராகரிக்கப்பட்டது"
+        },
         "ml-L2 unsupervised - 1-2021": {
           "Next": "அடுத்து"
         },
         "ml-L2 unsupervised - 1_2022": {
+          "Next": "அடுத்து"
+        },
+        "ml-L2 unsupervised - 1_2023": {
           "Next": "அடுத்து"
         },
         "ml-customize-raspado-2021": {
@@ -1484,6 +2170,12 @@
           "no": "இல்லை",
           "yes": "ஆம்"
         },
+        "ml-customize-raspado_2023": {
+          "Predict": "கணிக்கவும்",
+          "Raspado Recommender": "ராஸ்பாடோ பரிந்துரையாளர்",
+          "no": "இல்லை",
+          "yes": "ஆம்"
+        },
         "ml-intro ai lab- fruit veggie widget": {
           "Continue": "தொடர்க",
           "Loading...": "ஏற்றுகிறது ..."
@@ -1492,11 +2184,19 @@
           "Continue": "தொடர்க",
           "Loading...": "ஏற்றுகிறது ..."
         },
+        "ml-intro ai lab- fruit veggie widget_2023": {
+          "Continue": "தொடர்க",
+          "Loading...": "ஏற்றுகிறது ..."
+        },
         "ml-intro app lab-book recommender demo-2021": {
           "Predict": "கணிக்கவும்",
           "Silly": "அற்பமானது"
         },
         "ml-intro app lab-book recommender demo_2022": {
+          "Predict": "கணிக்கவும்",
+          "Silly": "அற்பமானது"
+        },
+        "ml-intro app lab-book recommender demo_2023": {
           "Predict": "கணிக்கவும்",
           "Silly": "அற்பமானது"
         },
@@ -1514,11 +2214,22 @@
           "no": "இல்லை",
           "yes": "ஆம்"
         },
+        "ml-model card-medical app v2 2021-2_2023": {
+          "A": "அ",
+          "W": "மேற்கு",
+          "head": "தலை",
+          "no": "இல்லை",
+          "yes": "ஆம்"
+        },
         "ml-model cards-book recommender model card": {
           "Predict": "கணிக்கவும்",
           "Silly": "அற்பமானது"
         },
         "ml-model cards-book recommender model card_2022": {
+          "Predict": "கணிக்கவும்",
+          "Silly": "அற்பமானது"
+        },
+        "ml-model cards-book recommender model card_2023": {
           "Predict": "கணிக்கவும்",
           "Silly": "அற்பமானது"
         },
@@ -1534,6 +2245,12 @@
           "3": "3",
           "Predict": "கணிக்கவும்"
         },
+        "ml-models in applab-choice if quotes_2023": {
+          "1": "1",
+          "2": "2",
+          "3": "3",
+          "Predict": "கணிக்கவும்"
+        },
         "ml-models in applab-choice if wrong place": {
           "1": "1",
           "2": "2",
@@ -1541,6 +2258,12 @@
           "Predict": "கணிக்கவும்"
         },
         "ml-models in applab-choice if wrong place_2022": {
+          "1": "1",
+          "2": "2",
+          "3": "3",
+          "Predict": "கணிக்கவும்"
+        },
+        "ml-models in applab-choice if wrong place_2023": {
           "1": "1",
           "2": "2",
           "3": "3",
@@ -1560,6 +2283,13 @@
           "Back": "பின் செல்லவும்",
           "Predict": "கணிக்கவும்"
         },
+        "ml-models in applab-choice intended warnings_2023": {
+          "1": "1",
+          "2": "2",
+          "3": "3",
+          "Back": "பின் செல்லவும்",
+          "Predict": "கணிக்கவும்"
+        },
         "ml-models in applab-choice predict typos": {
           "1": "1",
           "2": "2",
@@ -1567,6 +2297,12 @@
           "Predict": "கணிக்கவும்"
         },
         "ml-models in applab-choice predict typos_2022": {
+          "1": "1",
+          "2": "2",
+          "3": "3",
+          "Predict": "கணிக்கவும்"
+        },
+        "ml-models in applab-choice predict typos_2023": {
           "1": "1",
           "2": "2",
           "3": "3",
@@ -1584,12 +2320,23 @@
           "Predict": "கணிக்கவும்",
           "Yes": "ஆம்"
         },
+        "ml-models in applab-zoo assessment_2023": {
+          "B": "ஆ",
+          "No": "இல்லை",
+          "Predict": "கணிக்கவும்",
+          "Yes": "ஆம்"
+        },
         "ml-models in applab-zoo model embed": {
           "No": "இல்லை",
           "Predict": "கணிக்கவும்",
           "Yes": "ஆம்"
         },
         "ml-models in applab-zoo model embed_2022": {
+          "No": "இல்லை",
+          "Predict": "கணிக்கவும்",
+          "Yes": "ஆம்"
+        },
+        "ml-models in applab-zoo model embed_2023": {
           "No": "இல்லை",
           "Predict": "கணிக்கவும்",
           "Yes": "ஆம்"
@@ -1602,16 +2349,26 @@
           "Improved Shoe Recommender": "மேம்படுத்தப்பட்ட ஷூ பரிந்துரையாளர்",
           "Sports": "விளையாட்டு"
         },
+        "ml-models-shoes decision tree_2023": {
+          "Improved Shoe Recommender": "மேம்படுத்தப்பட்ட ஷூ பரிந்துரையாளர்",
+          "Sports": "விளையாட்டு"
+        },
         "ml-models-shoes points-2021": {
           "Ultimate Shoe Recommender": "அல்டிமேட் ஷூ பரிந்துரையாளர்"
         },
         "ml-models-shoes points_2022": {
           "Ultimate Shoe Recommender": "அல்டிமேட் ஷூ பரிந்துரையாளர்"
         },
+        "ml-models-shoes points_2023": {
+          "Ultimate Shoe Recommender": "அல்டிமேட் ஷூ பரிந்துரையாளர்"
+        },
         "ml-models-shoes random-2021": {
           "Shoe Recommender": "காலணி பரிந்துரையாளர்\n"
         },
         "ml-models-shoes random_2022": {
+          "Shoe Recommender": "காலணி பரிந்துரையாளர்\n"
+        },
+        "ml-models-shoes random_2023": {
           "Shoe Recommender": "காலணி பரிந்துரையாளர்\n"
         },
         "ml-use model card-example3A-2021": {
@@ -1624,6 +2381,15 @@
           "snow": "பனி கட்டி"
         },
         "ml-use model card-example3A_2022": {
+          "Driver Alert System": "டிரைவர் எச்சரிக்கை அமைப்பு",
+          "Predict": "கணிக்கவும்",
+          "cloudy": "மேகமூட்டம்",
+          "dusk": "அந்தி",
+          "night": "இரவு",
+          "rain": "மழை",
+          "snow": "பனி கட்டி"
+        },
+        "ml-use model card-example3A_2023": {
           "Driver Alert System": "டிரைவர் எச்சரிக்கை அமைப்பு",
           "Predict": "கணிக்கவும்",
           "cloudy": "மேகமூட்டம்",
