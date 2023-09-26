@@ -101,6 +101,10 @@ const DanceAiModal: React.FunctionComponent<DanceAiProps> = ({onClose}) => {
     });
   };
 
+  const getItemName = (id: string) => {
+    return inputLibrary.items.find((item: Item) => item.id === id)?.name;
+  };
+
   const handleItemClick = (id: string) => {
     if (currentInputSlot < SLOT_COUNT) {
       setInputs([...inputs, id]);
@@ -179,14 +183,15 @@ const DanceAiModal: React.FunctionComponent<DanceAiProps> = ({onClose}) => {
               {getAllItems(currentInputSlot).map(
                 (item: ReturnedItem, index: number) => {
                   return (
-                    <img
+                    <div
                       tabIndex={
                         index === 0 && currentInputSlot === 0 ? 0 : undefined
                       }
                       key={item.id}
                       onClick={() => handleItemClick(item.id)}
-                      src={item.url}
+                      style={{backgroundImage: `url(${item.url})`}}
                       className={moduleStyles.item}
+                      title={item.name}
                     />
                   );
                 }
@@ -195,7 +200,13 @@ const DanceAiModal: React.FunctionComponent<DanceAiProps> = ({onClose}) => {
           )}
         </div>
 
-        <div id="prompt-area" className={moduleStyles.promptArea}>
+        <div
+          id="prompt-area"
+          className={moduleStyles.promptArea}
+          style={{
+            zIndex: mode === 'selectInputs' || mode === 'generating' ? 1 : 0,
+          }}
+        >
           {(mode === 'selectInputs' ||
             (mode === 'generating' && responseParams === '')) && (
             <div className={moduleStyles.prompt}>
@@ -217,9 +228,12 @@ const DanceAiModal: React.FunctionComponent<DanceAiProps> = ({onClose}) => {
                     <div className={moduleStyles.inputBackground}>&nbsp;</div>
 
                     {inputs[index] && (
-                      <img
-                        src={getImageUrl(inputs[index])}
+                      <div
+                        style={{
+                          backgroundImage: `url(${getImageUrl(inputs[index])}`,
+                        }}
                         className={moduleStyles.inputItem}
+                        title={getItemName(inputs[index])}
                       />
                     )}
                   </div>
