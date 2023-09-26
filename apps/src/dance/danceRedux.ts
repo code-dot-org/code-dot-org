@@ -21,7 +21,7 @@ export interface DanceState {
   selectedSong: string;
   songData: SongData;
   runIsStarting: boolean;
-  showingAi: object | undefined;
+  showingAi: {setValue: (value: string) => void} | undefined;
   // Fields below are used only by Lab2 Dance
   isRunning: boolean;
   currentSongMetadata: SongMetadata | undefined;
@@ -152,7 +152,10 @@ const danceSlice = createSlice({
     setCurrentSongMetadata: (state, action: PayloadAction<SongMetadata>) => {
       state.currentSongMetadata = action.payload;
     },
-    setShowingAi: (state, action: PayloadAction<object | undefined>) => {
+    setShowingAi: (
+      state,
+      action: PayloadAction<{setValue: (value: string) => void} | undefined>
+    ) => {
       state.showingAi = action.payload;
     },
   },
