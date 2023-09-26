@@ -59,6 +59,10 @@ class SiteTest < Minitest::Test
     ::NewRelic::Agent.expects(:set_transaction_name).with('/')
     assert_equal 200, get('/').status
 
+    # Ensure that code.org/learn redirects to hourofcode.com/learn.
+    ::NewRelic::Agent.expects(:set_transaction_name).with('/learn')
+    assert_equal 301, get('/learn').status
+
     # Ensure dynamic splat info is removed from the transaction name.
     # Splat paths can include session IDs, usernames, etc that don't collapse into a single transaction.
     ::NewRelic::Agent.expects(:set_transaction_name).with('/donate')
