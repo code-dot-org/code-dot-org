@@ -1,6 +1,9 @@
 require 'json'
 require 'cdo/pycall'
 
+path = File.expand_path('../../../../lib/ai/teaching_assistant/rubric_tester', __FILE__)
+PyCall.sys.path.append(path)
+
 class EvaluateRubricJob < ApplicationJob
   queue_as :default
 
@@ -11,8 +14,6 @@ class EvaluateRubricJob < ApplicationJob
 
     raise 'OPENAI_API_KEY required' unless ENV['OPENAI_API_KEY']
 
-    path = File.expand_path('../../../../lib/ai/teaching_assistant/rubric_tester', __FILE__)
-    PyCall.sys.path.append(path)
     assess_py = PyCall.import_module("assess")
 
     lesson = 'CSD-2022-U3-L17'
@@ -40,10 +41,9 @@ class EvaluateRubricJob < ApplicationJob
       puts
       concepts = JSON.parse(grade)
       concepts.each do |concept|
-        puts "- #{concept['Key Concept']}"
-        puts "  Grade: #{concept['Grade']}"
-        puts "  Reason: #{concept['Reason']}"
-        puts "  Observations: #{concept['Observations']}"
+        puts "Learning Goal: #{concept['Key Concept']}"
+        puts "AI Evaluation: #{concept['Grade']}"
+        puts
       end
     end
   end
@@ -67,7 +67,7 @@ class EvaluateRubricJob < ApplicationJob
 
   private def read_file_from_s3(lesson_name, key_suffix)
     bucket = 'cdo-ai'
-    key = "teaching_assistant/lessons/CSD-2022-U3-L17/#{key_suffix}"
+    key = "teaching_assistant/lessons/#{lesson_name}/#{key_suffix}"
     AWS::S3.create_client.get_object(bucket: bucket, key: key)[:body].read
   end
 end
