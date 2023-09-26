@@ -104,7 +104,7 @@ if node['cdo-secrets']["build_apps"] ||
   include_recipe 'cdo-nodejs'
   include_recipe 'cdo-apps::google_chrome'
   include_recipe 'cdo-apps::generate_pdf'
-  apt_package 'parallel' # Used by test-low-memory.sh to run apps tests in parallel
+  apt_package 'parallel' # Used by apps/run-tests-in-parallel.sh
 end
 
 # Workaround for lack of zoneinfo in docker: https://forums.docker.com/t/synchronize-timezone-from-host-to-container/39116/3
