@@ -566,6 +566,189 @@
         "pair_programming/pre-express/2022": {
           "name": "Զույգ Ծրագրավորում"
         },
+        "implementation_guide/coursea/2023": {
+          "name": "Implementation Guide"
+        },
+        "pair_programming/coursea/2023": {
+          "name": "Զույգ Ծրագրավորում"
+        },
+        "happy_maps/coursea/2023": {
+          "name": "Ուրախ Քարտեզներ"
+        },
+        "the_big_event/coursea/2023": {
+          "name": "The Big Event"
+        },
+        "the_big_event_1/coursea/2023": {
+          "name": "The Big Event"
+        },
+        "the_big_event_2/coursea/2023": {
+          "name": "The Big Event"
+        },
+        "implementation_guide/courseb/2023": {
+          "name": "Implementation Guide"
+        },
+        "move_it_move_it/courseb/2023": {
+          "name": "Տեղափոխել այն, տեղափոխել այն"
+        },
+        "move_it_move_it_1/courseb/2023": {
+          "name": "Տեղափոխել այն, տեղափոխել այն"
+        },
+        "move_it_move_it_2/courseb/2023": {
+          "name": "Տեղափոխել այն, տեղափոխել այն"
+        },
+        "move_it_move_it_3/courseb/2023": {
+          "name": "Տեղափոխիր առարկան"
+        },
+        "pair_programming/courseb/2023": {
+          "name": "Զույգ Ծրագրավորում"
+        },
+        "getting_loopy/courseb/2023": {
+          "name": "Getting Loopy"
+        },
+        "getting_loopy_1/courseb/2023": {
+          "name": "Getting Loopy"
+        },
+        "getting_loopy_2/courseb/2023": {
+          "name": "Getting Loopy"
+        },
+        "getting_loopy_3/courseb/2023": {
+          "name": "Getting Loopy"
+        },
+        "the_big_event/courseb/2023": {
+          "name": "The Big Event"
+        },
+        "the_big_event_1/courseb/2023": {
+          "name": "The Big Event"
+        },
+        "the_big_event_2/courseb/2023": {
+          "name": "The Big Event"
+        },
+        "implementation_guide/coursec/2023": {
+          "name": "Implementation Guide"
+        },
+        "my_robotic_friends/coursec/2023": {
+          "name": "My Robotic Friends"
+        },
+        "my_robotic_friends_1/coursec/2023": {
+          "name": "My Robotic Friends"
+        },
+        "my_robotic_friends_2/coursec/2023": {
+          "name": "My Robotic Friends"
+        },
+        "my_robotic_friends_3/coursec/2023": {
+          "name": "My Robotic Friends"
+        },
+        "my_robotic_friends_4/coursec/2023": {
+          "name": "My Robotic Friends"
+        },
+        "pair_programming/coursec/2023": {
+          "name": "Զույգ Ծրագրավորում"
+        },
+        "the_big_event/coursec/2023": {
+          "name": "The Big Event"
+        },
+        "the_big_event_1/coursec/2023": {
+          "name": "The Big Event"
+        },
+        "the_big_event_2/coursec/2023": {
+          "name": "The Big Event"
+        },
+        "binary_bracelets/coursec/2023": {
+          "name": "Binary Bracelets"
+        },
+        "binary_bracelets_1/coursec/2023": {
+          "name": "Binary Bracelets"
+        },
+        "binary_bracelets_2/coursec/2023": {
+          "name": "Binary Bracelets"
+        },
+        "binary_bracelets_3/coursec/2023": {
+          "name": "Binary Bracelets"
+        },
+        "binary_bracelets_4/coursec/2023": {
+          "name": "Binary Bracelets"
+        },
+        "implementation_guide/coursed/2023": {
+          "name": "Implementation Guide"
+        },
+        "graph_paper_programming/coursed/2023": {
+          "name": "Գրաֆիկի Թուղթ Ծրագրավորում"
+        },
+        "graph_paper_programming_1/coursed/2023": {
+          "name": "Գրաֆիկի Թուղթ Ծրագրավորում"
+        },
+        "graph_paper_programming_2/coursed/2023": {
+          "name": "Գրաֆիկի Թուղթ Ծրագրավորում"
+        },
+        "graph_paper_programming_3/coursed/2023": {
+          "name": "Գրաֆիկի Թուղթ Ծրագրավորում"
+        },
+        "graph_paper_programming_4/coursed/2023": {
+          "name": "Գրաֆիկի Թուղթ Ծրագրավորում"
+        },
+        "graph_paper_programming_5/coursed/2023": {
+          "name": "Գրաֆիկի Թուղթ Ծրագրավորում"
+        },
+        "pair_programming/coursed/2023": {
+          "name": "Զույգ Ծրագրավորում"
+        },
+        "relay_programming/coursed/2023": {
+          "name": "Relay programming"
+        },
+        "relay_programming_1/coursed/2023": {
+          "name": "Relay programming"
+        },
+        "relay_programming_2/coursed/2023": {
+          "name": "Relay programming"
+        },
+        "relay_programming_3/coursed/2023": {
+          "name": "Relay programming"
+        },
+        "relay_programming_4/coursed/2023": {
+          "name": "Relay programming"
+        },
+        "relay_programming_5/coursed/2023": {
+          "name": "Relay programming"
+        },
+        "conditionals_with_cards/coursed/2023": {
+          "name": "Conditionals with Cards"
+        },
+        "conditionals_with_cards_1/coursed/2023": {
+          "name": "Conditionals with Cards"
+        },
+        "conditionals_with_cards_2/coursed/2023": {
+          "name": "Conditionals with Cards"
+        },
+        "conditionals_with_cards_3/coursed/2023": {
+          "name": "Conditionals with Cards"
+        },
+        "conditionals_with_cards_4/coursed/2023": {
+          "name": "Conditionals with Cards"
+        },
+        "implementation_guide/coursee/2023": {
+          "name": "Implementation Guide"
+        },
+        "implementation_guide/coursef/2023": {
+          "name": "Implementation Guide"
+        },
+        "internet/coursef/2023": {
+          "name": "Internet"
+        },
+        "internet_1/coursef/2023": {
+          "name": "Internet"
+        },
+        "the_internet/coursef/2023": {
+          "name": "Համացանց"
+        },
+        "pair_programming/express/2023": {
+          "name": "Զույգ Ծրագրավորում"
+        },
+        "variables/express/2023": {
+          "name": "փոփոխականների"
+        },
+        "pair_programming/pre-express/2023": {
+          "name": "Զույգ Ծրագրավորում"
+        },
         "list_of_poems_1/poem-art/unversioned": {
           "name": "",
           "url": "",

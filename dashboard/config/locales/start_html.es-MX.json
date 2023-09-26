@@ -3705,6 +3705,89 @@
         "Final Room Escape App": {
           "CODE": "CÓDIGO"
         },
+        "GAN Guess Widget_ai23": {
+          "Click on the buttons below to build a guess for what follows the rule": "Haga clic en los botones de abajo para construir una conjetura de lo que sigue la regla",
+          "Computer's Guess FOLLOWS Rule": "La adivinación de la computadora sigue la regla",
+          "Computer's Guess does NOT follow the Rule": "Comput's Guess NO sigue la Regla",
+          "Computer's Guess:": "Adivina de la computadora:",
+          "Current Guess": "Guess Actual",
+          "Previous Guesses": "Previous conjeturas",
+          "Submit Guess": "Enviar Guess"
+        },
+        "LLM - Eliza_ai23": {
+          "Talk to Eliza by entering text in the prompt box. When you are finished, type quit in the prompt.": "Hable con Eliza ingresando texto en el cuadro de aviso. Cuando haya terminado, escriba quit en el prompt."
+        },
+        "LLM - Written Voice Simulator_ai23": {
+          "BTS: \"Dynamite\"": "BTS: “Dinamita”",
+          "Back": "Volver",
+          "Change Voice": "Cambiar Voz",
+          "Choose a voice to model": "Elige una voz para modelar",
+          "Choose the Save file you want to load from the dropdown below": "Elija el archivo Guardar que desea cargar en el menú desplegable a continuación",
+          "Copy / Paste or type the words you want to create a model based on below": "Copia/Pega o escribe las palabras en las que quieres crear un modelo basado a continuación",
+          "Create my own!": "¡Crea el mío!",
+          "Delete Text": "Eliminar texto",
+          "Dr Seuss: Green Eggs and Ham": "Dr Seuss: Huevos Verdes y Jamón",
+          "Generate!": "¡Generar!",
+          "Give the voice a name": "Dar un nombre a la voz",
+          "Give your save file a name": "Dale un nombre a tu archivo guardado",
+          "Load Save": "Ahorro de carga",
+          "Load this story": "Cargar esta historia",
+          "Maya Angelou: \"Caged Bird\"": "Maya Angelou: “Pájaro Enjaulado”",
+          "Model This Voice!": "¡Modela This Voice!",
+          "Modeling Voice": "Modelado de Voz",
+          "Pharell: \"Happy\"": "Pharell: “Feliz”",
+          "Sandra Cisneros: \"Abuelito Who\"": "Sandra Cisneros: “Abuelito Quién”",
+          "Save Text": "Guardar texto",
+          "Save!": "¡Ahorra!"
+        },
+        "Neural Networks - Perceptron - Beta_ai23": {
+          "Choose one of the content creators below to generate recommendations for you. Clicking their name will show more information about them.Once you've selected someone, click the \"Show Recommendations\" button to see what your video feed!See Recommendations! ➡️Your RecommendationsThese are the videos you've been recommended based on who you selected in the last screen.Only 3 videos are shown at a time - use the Scroll buttons to see more. Use the buttons on the left to filter by certain categories.Example!Example!Example!⬆️ Scroll Up ⬆️⬇️ Scroll Down ⬇️⬅️ Select New Person": "Elige uno de los creadores de contenido a continuación para generar recomendaciones para ti. Al hacer clic en su nombre se mostrará más información sobre ellos.Una vez que haya seleccionado a alguien, haga clic en el botón “Mostrar recomendaciones” para ver cuál es su feed de video! ¡Ver recomendaciones! ➡️ Tus recomendacionesEstos son los videos que te han recomendado en función de quién seleccionaste en la última pantalla.Solo se muestran 3 videos a la vez - usa los botones de desplazamiento para ver más. Usa los botones de la izquierda para filtrar por ciertas categorías.Ejemplo! ¡Ejemplo! ¡Ejemplo! ⬆️ Desplazarse hacia arriba ⬆️⬇️ Desplazarse hacia abajo ⬇️⬅️ Seleccionar nueva persona",
+          "Example!": "¡Ejemplo!",
+          "Let's Get Started! ➡️": "¡Empecemos! ➡️",
+          "Once you've selected someone, click the \"Show Recommendations\" button to see what your video feed!": "Una vez que hayas seleccionado a alguien, haz clic en el botón “Mostrar recomendaciones” para ver cuál es tu feed de video.",
+          "Only 3 videos are shown at a time - use the Scroll buttons to see more. ": "Solo se muestran 3 videos a la vez - usa los botones de desplazamiento para ver más. ",
+          "See Recommendations! ➡️": "¡Ver recomendaciones! ➡️",
+          "Select at least one person to use for recommendations to continue!": "¡Seleccione al menos una persona para usar para recomendaciones para continuar!",
+          "Simply pick which content creators you want to follow and then see your video recommendations!": "¡Simplemente elige a qué creadores de contenido quieres seguir y luego ver tus recomendaciones de video!",
+          "These are the videos you've been recommended based on who you selected in the last screen.Only 3 videos are shown at a time - use the Scroll buttons to see more. Use the buttons on the left to filter by certain categories.Example!Example!Example!⬆️ Scroll Up ⬆️⬇️ Scroll Down ⬇️⬅️ Select New Person": "Estos son los videos que te han recomendado en función de quién seleccionaste en la última pantalla.Solo se muestran 3 videos a la vez - usa los botones Desplazar para ver más. Usa los botones de la izquierda para filtrar por ciertas categorías.Ejemplo! ¡Ejemplo! ¡Ejemplo! ⬆️ Desplazarse hacia arriba ⬆️⬇️ Desplazarse hacia abajo ⬇️⬅️ Seleccionar nueva persona",
+          "Use the buttons on the left to filter by certain categories.": "Usa los botones de la izquierda para filtrar por ciertas categorías.",
+          "We've gathered all your favorite personalities to make videos that match your interests AND to help curate your video feed.": "Hemos reunido todas tus personalidades favoritas para hacer videos que coincidan con tus intereses Y para ayudar a curar tu feed de videos.",
+          "WeTube is a new media website for all your favorite content creators. We've gathered all your favorite personalities to make videos that match your interests AND to help curate your video feed.Simply pick which content creators you want to follow and then see your video recommendations!Let's Get Started! ➡️Select at least one person to use for recommendations to continue!Choose one of the content creators below to generate recommendations for you. Clicking their name will show more information about them.Once you've selected someone, click the \"Show Recommendations\" button to see what your video feed!See Recommendations! ➡️Your RecommendationsThese are the videos you've been recommended based on who you selected in the last screen.Only 3 videos are shown at a time - use the Scroll buttons to see more. Use the buttons on the left to filter by certain categories.Example!Example!Example!⬆️ Scroll Up ⬆️⬇️ Scroll Down ⬇️⬅️ Select New Person": "WetUBE es un nuevo sitio web de medios para todos tus creadores de contenido favoritos. Hemos reunido todas tus personalidades favoritas para hacer videos que coincidan con tus intereses Y para ayudar a seleccionar tus videos. ¡Simplemente elige a qué creadores de contenido quieres seguir y luego ver tus recomendaciones de video! ¡Empecemos! ➡️ ¡Selecciona al menos una persona a usar para recomendaciones para continuar! Elige uno de los creadores de contenido a continuación para generar recomendaciones para ti. Al hacer clic en su nombre se mostrará más información sobre ellos.Una vez que haya seleccionado a alguien, haga clic en el botón “Mostrar recomendaciones” para ver cuál es su feed de video! ¡Ver recomendaciones! ➡️ Tus recomendacionesEstos son los videos que te han recomendado en función de quién seleccionaste en la última pantalla.Solo se muestran 3 videos a la vez - usa los botones de desplazamiento para ver más. Usa los botones de la izquierda para filtrar por ciertas categorías.Ejemplo! ¡Ejemplo! ¡Ejemplo! ⬆️ Desplazarse hacia arriba ⬆️⬇️ Desplazarse hacia abajo ⬇️⬅️ Seleccionar nueva persona",
+          "Your Recommendations": "Tus recomendaciones",
+          "⬅️ Select New Person": "⬅️ Seleccionar nueva persona",
+          "⬆️ Scroll Up ⬆️": "⬆️ Desplazarse hacia arriba ⬆️",
+          "⬇️ Scroll Down ⬇️": "⬇️ Desplazarse hacia abajo ⬇️"
+        },
+        "Neural Networks - Perceptron - Full_ai23": {
+          "0 means their opinion isn't included in your recommendations at all": "0 significa que su opinión no está incluida en tus recomendaciones en absoluto",
+          "10 means they have a huge influence on the recommendations you receive": "10 significa que tienen una gran influencia en las recomendaciones que recibes",
+          "Choose one of the content creators below, then use the slider to adjust how much you want them to influence your recommendations!0 means their opinion isn't included in your recommendations at all10 means they have a huge influence on the recommendations you receivefeatureLabelSee Recommendations! ➡️featureValueYour RecommendationsThese are the videos you've been recommended based on how you adjusted the weights on the last screen. Only 3 videos are shown at a time - use the Scroll buttons to see more. Use the buttons on the left to filter by certain videosExample!Example!Example!⬆️ Scroll Up ⬆️⬇️ Scroll Down ⬇️⬅️ Select New Weights": "Elige uno de los creadores de contenido a continuación, ¡luego usa el control deslizante para ajustar cuánto quieres que influyan en tus recomendaciones! 0 significa que su opinión no está incluida en tus recomendaciones en absoluto 10 significa que tienen una gran influencia en las recomendaciones que recibaFeaturelabelVer recomendaciones! ➡️ FeatureValueTus recomendacionesEstos son los videos que te han recomendado en función de cómo ajustaste los pesos en la última pantalla. Solo se muestran 3 videos a la vez - usa los botones de desplazamiento para ver más. Usa los botones de la izquierda para filtrar por ciertos videosexample! ¡Ejemplo! ¡Ejemplo! ⬆️ Desplazarse hacia arriba ⬆️⬇️ Desplazarse hacia abajo ⬇️⬅️ Seleccionar nuevos pesos",
+          "Example!": "¡Ejemplo!",
+          "Let's Get Started! ➡️": "¡Empecemos! ➡️",
+          "Only 3 videos are shown at a time - use the Scroll buttons to see more. ": "Solo se muestran 3 videos a la vez - usa los botones de desplazamiento para ver más. ",
+          "See Recommendations! ➡️": "¡Ver recomendaciones! ➡️",
+          "Select at least one person to use for recommendations to continue!": "¡Seleccione al menos una persona para usar para recomendaciones para continuar!",
+          "Simply pick which content creators you want to follow to see your recommendations!": "¡Simplemente elige a qué creadores de contenido quieres seguir para ver tus recomendaciones!",
+          "These are the videos you've been recommended based on how you adjusted the weights on the last screen. Only 3 videos are shown at a time - use the Scroll buttons to see more. Use the buttons on the left to filter by certain videosExample!Example!Example!⬆️ Scroll Up ⬆️⬇️ Scroll Down ⬇️⬅️ Select New Weights": "Estos son los videos que te han recomendado en función de cómo ajustaste los pesos en la última pantalla. Solo se muestran 3 videos a la vez - usa los botones de desplazamiento para ver más. Usa los botones de la izquierda para filtrar por ciertos videosexample! ¡Ejemplo! ¡Ejemplo! ⬆️ Desplazarse hacia arriba ⬆️⬇️ Desplazarse hacia abajo ⬇️⬅️ Seleccionar nuevos pesos",
+          "Use the buttons on the left to filter by certain videos": "Usa los botones de la izquierda para filtrar por ciertos videos",
+          "We've gathered all your favorite personalities to make videos that match your interests.": "Hemos reunido todas tus personalidades favoritas para hacer videos que coincidan con tus intereses.",
+          "WeTube Video Recommendations": "Recomendaciones de video de WetUBE",
+          "WeTube is a new media website for all your favorite content creators. We've gathered all your favorite personalities to make videos that match your interests.Simply pick which content creators you want to follow to see your recommendations!Let's Get Started! ➡️Select at least one person to use for recommendations to continue!Choose one of the content creators below, then use the slider to adjust how much you want them to influence your recommendations!0 means their opinion isn't included in your recommendations at all10 means they have a huge influence on the recommendations you receivefeatureLabelSee Recommendations! ➡️featureValueYour RecommendationsThese are the videos you've been recommended based on how you adjusted the weights on the last screen. Only 3 videos are shown at a time - use the Scroll buttons to see more. Use the buttons on the left to filter by certain videosExample!Example!Example!⬆️ Scroll Up ⬆️⬇️ Scroll Down ⬇️⬅️ Select New Weights": "WetUBE es un nuevo sitio web de medios para todos tus creadores de contenido favoritos. Hemos reunido todas tus personalidades favoritas para hacer videos que coincidan con tus intereses. ¡Simplemente elige a qué creadores de contenido quieres seguir para ver tus recomendaciones! ¡Empecemos! ➡️ ¡Selecciona al menos una persona a usar para recomendaciones para continuar! Elige uno de los creadores de contenido a continuación, ¡luego usa el control deslizante para ajustar cuánto quieres que influyan en tus recomendaciones! 0 significa que su opinión no está incluida en tus recomendaciones en absoluto 10 significa que tienen una gran influencia en las recomendaciones que recibaFeaturelabelVer recomendaciones! ➡️ FeatureValueTus recomendacionesEstos son los videos que te han recomendado en función de cómo ajustaste los pesos en la última pantalla. Solo se muestran 3 videos a la vez - usa los botones de desplazamiento para ver más. Usa los botones de la izquierda para filtrar por ciertos videosexample! ¡Ejemplo! ¡Ejemplo! ⬆️ Desplazarse hacia arriba ⬆️⬇️ Desplazarse hacia abajo ⬇️⬅️ Seleccionar nuevos pesos",
+          "Your Recommendations": "Tus recomendaciones",
+          "featureLabel": "Featurelabel",
+          "featureValue": "FeatureValue",
+          "⬅️ Select New Weights": "⬅️ Seleccionar nuevos pesos",
+          "⬆️ Scroll Up ⬆️": "⬆️ Desplazarse hacia arriba ⬆️",
+          "⬇️ Scroll Down ⬇️": "⬇️ Desplazarse hacia abajo ⬇️"
+        },
+        "Noisy Image Widget_ai23": {
+          "0%": "0%",
+          "Be patient! Noisy image loading!": "¡Sé paciente! ¡Carga de imagen ruidosa!",
+          "Move the slider to add more or less generations of noise to the image": "Mueve el control deslizante para agregar más o menos generaciones de ruido a la imagen",
+          "New Image": "Nueva imagen",
+          "Noise Generations:": "Generaciones de ruido:",
+          "Noise Generations: ": "Generaciones de ruido: "
+        },
         "Room Escape Workshop - 1": {
           "CODE": "CÓDIGO"
         },
@@ -3734,6 +3817,11 @@
         },
         "Room Escape Workshop - 9-2": {
           "CODE": "CÓDIGO"
+        },
+        "U9L5 Cropping Widget_ai2023": {
+          "Crop": "Cultivo",
+          "Image Select": "Seleccionar imagen",
+          "Reset": "Reiniciar"
         },
         "allthethings design mode elements": {
           "Button": "Botón",

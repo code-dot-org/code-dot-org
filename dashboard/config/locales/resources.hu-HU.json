@@ -2631,6 +2631,1259 @@
         "pause_and_think_online/pre-express/2022": {
           "type": "Videó"
         },
+        "cs_connections_landing_page/csc-adaptations/2023": {
+          "name": "CS kapcsolatok céloldala",
+          "url": "https://code.org/educate/csc"
+        },
+        "csc_extended_connections_book_list/csc-adaptations/2023": {
+          "name": "CSC kiterjesztett kapcsolatok könyvlista",
+          "url": "https://docs.google.com/document/d/14azofBAy5Riq109ruUPi8BbZRvJ1KIthqA3mH7t428Y/template/preview"
+        },
+        "helpful_hints_for_teachers_and_learners/csc-adaptations/2023": {
+          "name": "Hasznos tanácsok tanároknak és tanulóknak",
+          "url": "https://docs.google.com/presentation/d/1RSJhxO9ZMtyLrt160kvAVdyekR4wT2fVSgbrPHR4HS0/template/preview"
+        },
+        "resource_list_for_all_lessons/csc-adaptations/2023": {
+          "name": "Forráslista az összes leckéhez",
+          "url": "/s/csc-adaptációs-2023/erőforrások"
+        },
+        "standards_in_modeling_animal_adaptations/csc-adaptations/2023": {
+          "name": "Szabványok az állatok adaptációinak modellezésében ",
+          "url": "/s/csc-adaptációs-2023/szabványok"
+        },
+        "vocabulary_in_modeling_animal_adaptations/csc-adaptations/2023": {
+          "name": "Szókincs az állati adaptációk modellezésében ",
+          "url": "/s/csc-adaptations-2023/vocab"
+        },
+        "ecosystems/csc-adaptations/2023": {
+          "url": "https://docs.google.com/presentation/d/1J9yCLR8vBYHgKxuuKymGNWU_KFCGGGUpzTmpl_dvl7A/template/preview"
+        },
+        "helpful_hints_1/csc-adaptations/2023": {
+          "name": "Hasznos tippek",
+          "url": "https://docs.google.com/presentation/d/1RSJhxO9ZMtyLrt160kvAVdyekR4wT2fVSgbrPHR4HS0/template/preview"
+        },
+        "helpful_hints/csc-adaptations/2023": {
+          "name": "Hasznos tippek",
+          "url": "https://docs.google.com/presentation/d/1RSJhxO9ZMtyLrt160kvAVdyekR4wT2fVSgbrPHR4HS0/template/preview"
+        },
+        "helpful_hints_2/csc-adaptations/2023": {
+          "name": "Hasznos tippek",
+          "url": "https://docs.google.com/presentation/d/1RSJhxO9ZMtyLrt160kvAVdyekR4wT2fVSgbrPHR4HS0/template/preview"
+        },
+        "cs_connections_landing_page/csc-bookcovers/2023": {
+          "name": "CS kapcsolatok céloldala",
+          "url": "https://code.org/educate/csc"
+        },
+        "helpful_hints_for_teachers_and_learners/csc-bookcovers/2023": {
+          "name": "Hasznos tanácsok tanároknak és tanulóknak",
+          "url": "https://docs.google.com/presentation/d/1RSJhxO9ZMtyLrt160kvAVdyekR4wT2fVSgbrPHR4HS0/template/preview"
+        },
+        "resource_list_for_all_lessons/csc-bookcovers/2023": {
+          "name": "Forráslista az összes leckéhez",
+          "url": "/s/csc-bookcovers-2023/források"
+        },
+        "standards_in_coding_a_book_cover/csc-bookcovers/2023": {
+          "name": "Szabványok a könyvborító kódolásában",
+          "url": "/s/csc-bookcovers-2023/szabványok"
+        },
+        "vocabulary_in_coding_a_book_cover/csc-bookcovers/2023": {
+          "name": "Szókincs a könyvborító kódolásában",
+          "url": "/s/csc-bookcovers-2023/vocab"
+        },
+        "book_cover/csc-bookcovers/2023": {
+          "name": "Könyv borító",
+          "url": "https://docs.google.com/presentation/d/1GTaZX9z0b-dwk6Z48TSwqwhjZ9pO9Onk7w8n9xNt_Zk/template/preview"
+        },
+        "book_guide/csc-bookcovers/2023": {
+          "name": "Könyv útmutató",
+          "url": "https://docs.google.com/document/d/1HRSqSLhdRt7O7yv2LN3Y9jOHykw2BvNrtZJRAi11U9k/template/preview"
+        },
+        "helpful_hints/csc-bookcovers/2023": {
+          "name": "Hasznos tippek",
+          "url": "https://docs.google.com/presentation/d/1RSJhxO9ZMtyLrt160kvAVdyekR4wT2fVSgbrPHR4HS0/template/preview"
+        },
+        "create_your_own_book_cover/csc-bookcovers/2023": {
+          "name": "Tervezési útmutató",
+          "url": "https://docs.google.com/document/d/18cVgDdq77dbdk6gmQ1rGjHIr7pQk3I2Wb2WsAEeNH64/template/preview"
+        },
+        "create_your_own_book_cover_key_/csc-bookcovers/2023": {
+          "name": "Tervezési útmutató [Key] Wonder",
+          "url": "https://docs.google.com/document/d/1sinZLdMy8PLHJVKRwGt-mqhcADQtNq0bLYy4oZZwVpQ/template/preview"
+        },
+        "book_cover_rubric/csc-bookcovers/2023": {
+          "name": "Könyv borító rubrika",
+          "url": "https://docs.google.com/document/d/11hnQkEHwwOD6Bo2_oKiE-CxyU5hXJNlMgV30cjaKVYQ/template/preview",
+          "type": "Rubrika"
+        },
+        "planning_your_own_book_cover_-_answer_key/csc-bookcovers/2023": {
+          "name": "Tervezési útmutató [Key] Esperanza Rising",
+          "url": "https://drive.google.com/file/d/1dpyir8Sh4EgrBT0C1i9M_O8lQkw7rREw/view?usp=sharing"
+        },
+        "book_cover_1/csc-bookcovers/2023": {
+          "name": "Könyv borító",
+          "url": "https://docs.google.com/document/d/11hnQkEHwwOD6Bo2_oKiE-CxyU5hXJNlMgV30cjaKVYQ/template/preview",
+          "type": "Rubrika"
+        },
+        "helpful_hints_2/csc-bookcovers/2023": {
+          "name": "Hasznos tippek",
+          "url": "https://docs.google.com/presentation/d/19XIgtzM0JxyhjSd90aW9doyrMrgzdhO_nxWQa9Wqv8I/template/preview"
+        },
+        "planning_guide/csc-bookcovers/2023": {
+          "name": "Tervezési útmutató",
+          "url": "https://docs.google.com/document/d/18cVgDdq77dbdk6gmQ1rGjHIr7pQk3I2Wb2WsAEeNH64/template/preview"
+        },
+        "planning_guide_key_esperanza_rising/csc-bookcovers/2023": {
+          "name": "Tervezési útmutató [Key] Esperanza Rising",
+          "url": "https://drive.google.com/file/d/1dpyir8Sh4EgrBT0C1i9M_O8lQkw7rREw/view"
+        },
+        "_optional_gallery_walk_sticky_notes/csc-bookcovers/2023": {
+          "name": "[Optional] Galéria Walk Sticky Notes",
+          "url": "https://docs.google.com/document/d/1nG1d6-dVkodEuFod_7DqzKHWjp9wWZs60n_zYfxUCtU/template/preview"
+        },
+        "helpful_hints_1/csc-bookcovers/2023": {
+          "name": "Hasznos tippek",
+          "url": "https://docs.google.com/presentation/d/1RSJhxO9ZMtyLrt160kvAVdyekR4wT2fVSgbrPHR4HS0/template/preview"
+        },
+        "cs_connections_landing_page/csc-ecosystems/2023": {
+          "name": "CS kapcsolatok céloldala",
+          "url": "https://code.org/educate/csc"
+        },
+        "csc_extended_connections_book_list/csc-ecosystems/2023": {
+          "name": "CSC kiterjesztett kapcsolatok könyvlista",
+          "url": "https://docs.google.com/document/d/14azofBAy5Riq109ruUPi8BbZRvJ1KIthqA3mH7t428Y/template/preview"
+        },
+        "helpful_hints_for_teachers_and_learners/csc-ecosystems/2023": {
+          "name": "Hasznos tanácsok tanároknak és tanulóknak\t",
+          "url": "https://docs.google.com/presentation/d/1RSJhxO9ZMtyLrt160kvAVdyekR4wT2fVSgbrPHR4HS0/template/preview"
+        },
+        "resource_list_for_all_lessons/csc-ecosystems/2023": {
+          "name": "Forráslista az összes leckéhez"
+        },
+        "standards_in_simulating_a_marine_ecosystem/csc-ecosystems/2023": {
+          "name": "Szabványok a tengeri ökoszisztéma szimulációjában "
+        },
+        "vocabulary_in_simulating_a_marine_ecosystem/csc-ecosystems/2023": {
+          "name": "Szókincs a tengeri ökoszisztéma szimulációjában"
+        },
+        "ecosystems/csc-ecosystems/2023": {
+          "url": "https://docs.google.com/presentation/d/1LtXP3ssc5-kOV1DgccN3957oAyF1cf-VaghZJsL7Vtk/template/preview"
+        },
+        "understanding_overfishing_article/csc-ecosystems/2023": {
+          "name": "A túlhalászás cikk megértése",
+          "url": "https://www.seafoodwatch.org/seafood-basics/sustainable-solutions/avoid-overfishing"
+        },
+        "ecologist_s_notebook/csc-ecosystems/2023": {
+          "name": "Ökológus jegyzetfüzete",
+          "url": "https://docs.google.com/document/d/1_xi5PFs5TJyO3-8Hz7ftZxCNRPpd5yQBCwhm8IuysY8/template/preview"
+        },
+        "cs_connections_landing_page/csc-mappinglandmarks/2023": {
+          "name": "CS kapcsolatok céloldala",
+          "url": "https://code.org/educate/csc"
+        },
+        "csc_extended_connections_book_list/csc-mappinglandmarks/2023": {
+          "name": "CSC kiterjesztett kapcsolatok könyvlista",
+          "url": "https://docs.google.com/document/d/14azofBAy5Riq109ruUPi8BbZRvJ1KIthqA3mH7t428Y/template/preview"
+        },
+        "helpful_hints_for_teachers_and_learners/csc-mappinglandmarks/2023": {
+          "name": "Hasznos tanácsok tanároknak és tanulóknak\t",
+          "url": "https://docs.google.com/presentation/d/1RSJhxO9ZMtyLrt160kvAVdyekR4wT2fVSgbrPHR4HS0/template/preview"
+        },
+        "resource_list_for_all_lessons/csc-mappinglandmarks/2023": {
+          "name": "Forráslista az összes leckéhez",
+          "url": "/s/csc-mappinglandmarks-2023/források"
+        },
+        "standards_in_mapping_landmarks/csc-mappinglandmarks/2023": {
+          "name": "Szabványok az interaktív térképek kódolásában",
+          "url": "/s/csc-mappinglandmarks-2023/szabványok"
+        },
+        "vocabulary_in_coding/csc-mappinglandmarks/2023": {
+          "name": "Szókincs az interaktív térképek kódolásában",
+          "url": "/s/csc-mappinglandmarks-2023/vocab"
+        },
+        "lesson_slides/csc-mappinglandmarks/2023": {
+          "url": "https://docs.google.com/presentation/d/19XIgtzM0JxyhjSd90aW9doyrMrgzdhO_nxWQa9Wqv8I/template/preview"
+        },
+        "helpful_hints/csc-mappinglandmarks/2023": {
+          "name": "Hasznos tippek",
+          "url": "https://docs.google.com/presentation/d/1RSJhxO9ZMtyLrt160kvAVdyekR4wT2fVSgbrPHR4HS0/template/preview"
+        },
+        "list_of_books_about_maps/csc-mappinglandmarks/2023": {
+          "name": "Könyvek listája a térképekről",
+          "url": "https://docs.google.com/document/d/1HlYgC_KFNHZKsPFJIY5E_TyMWVMhZbKnq88bn7GLuaE/template/preview"
+        },
+        "activity_guide_planning/csc-mappinglandmarks/2023": {
+          "name": "Projekt terv [Key]",
+          "url": "https://docs.google.com/document/d/1fD9jkEkts5gtYN76P0I-1FGcEPi1q97Cuk0hBy18KvQ/template/preview"
+        },
+        "activity_guide_planning_1/csc-mappinglandmarks/2023": {
+          "name": "Projekt terv",
+          "url": "https://docs.google.com/document/d/1t_-cd-f6EhhUbblu8nSGRajStY9FVwLnKn1Bj90GL3Q/template/preview"
+        },
+        "interactive_map_rubric/csc-mappinglandmarks/2023": {
+          "name": "Interaktív térképek kódolása",
+          "url": "https://docs.google.com/document/d/1Be6zwvr-gEbmHpkxg4vnyt-evuvuLAlB1Pl8oFA64nw/template/preview",
+          "type": "Rubrika"
+        },
+        "local_landmarks_map_reflection_observation/csc-mappinglandmarks/2023": {
+          "name": "Helyi nevezetességek Térkép Reflection & Observation",
+          "url": "https://docs.google.com/document/d/1OxwZCmnJYKVUQIIsXqTkbbivvG_iXHVDL4FgR8j9V4E/template/preview"
+        },
+        "books_about_maps_list/csc-mappinglandmarks/2023": {
+          "name": "Könyvek a Térképek listájáról",
+          "url": "https://docs.google.com/document/d/1HlYgC_KFNHZKsPFJIY5E_TyMWVMhZbKnq88bn7GLuaE/template/preview"
+        },
+        "cs_connections_landing_page/csc-starquilts/2023": {
+          "name": "CS kapcsolatok céloldala",
+          "url": "https://code.org/educate/csc"
+        },
+        "csc_extended_connections_book_list/csc-starquilts/2023": {
+          "name": "CSC kiterjesztett kapcsolatok könyvlista",
+          "url": "https://docs.google.com/document/d/14azofBAy5Riq109ruUPi8BbZRvJ1KIthqA3mH7t428Y/template/preview"
+        },
+        "helpful_hints_for_teachers_and_learners/csc-starquilts/2023": {
+          "name": "Hasznos tanácsok tanároknak és tanulóknak",
+          "url": "https://docs.google.com/presentation/d/1RSJhxO9ZMtyLrt160kvAVdyekR4wT2fVSgbrPHR4HS0/template/preview"
+        },
+        "resource_list_for_all_lessons/csc-starquilts/2023": {
+          "name": "Forráslista az összes leckéhez",
+          "url": "/s/csc-starquilts-2023/források"
+        },
+        "standards_in_coding_a_star_quilt/csc-starquilts/2023": {
+          "name": "Szabványok a csillagpaplan kódolásában",
+          "url": "/s/csc-starquilts-2023/szabványok"
+        },
+        "vocabulary_in_coding_geometric_star_quilts/csc-starquilts/2023": {
+          "name": "Szókincs a geometriai csillag paplanok kódolásában",
+          "url": "/s/csc-starquilts-2023/vocab"
+        },
+        "star_quilt_article/csc-starquilts/2023": {
+          "name": "Star Quilt cikk",
+          "url": "https://drive.google.com/file/d/1MAcBYUArtNihyt5ZZlwFOraFLhRxZm7G/view"
+        },
+        "star_quilts/csc-starquilts/2023": {
+          "url": "https://docs.google.com/presentation/d/10F-FnjuE2fM9g1MEmBm5MXJAvhKWCNjX5tAeH9YbggM/template/preview"
+        },
+        "star_quilts_1/csc-starquilts/2023": {
+          "name": "Háborús motorháztető csillag paplan",
+          "url": "https://youtu.be/Q210ko41yqo?t=90",
+          "type": "Videó"
+        },
+        "star_quilts_worksheet/csc-starquilts/2023": {
+          "name": "Csillag paplanok munkalap",
+          "url": "https://docs.google.com/document/d/1vwfjAQ-OErpFcvzDTQuhimhMWjFhiPrtKTUHoEJLufM/template/preview"
+        },
+        "virtual_pattern_blocks_optional_/csc-starquilts/2023": {
+          "name": "Virtuális minta blokkok (opcionális)",
+          "url": "https://mathigon.org/polypad#polygons"
+        },
+        "helpful_hints/csc-starquilts/2023": {
+          "name": "Hasznos tippek",
+          "url": "https://docs.google.com/presentation/d/1RSJhxO9ZMtyLrt160kvAVdyekR4wT2fVSgbrPHR4HS0/template/preview"
+        },
+        "helpful_hints_1/csc-starquilts/2023": {
+          "name": "Hasznos tippek",
+          "url": "https://docs.google.com/presentation/d/1RSJhxO9ZMtyLrt160kvAVdyekR4wT2fVSgbrPHR4HS0/template/preview"
+        },
+        "virtual_pattern_blocks/csc-starquilts/2023": {
+          "name": "Virtuális minta blokkok",
+          "url": "https://www.didax.com/apps/pattern-blocks/"
+        },
+        "helpful_hints_2/csc-starquilts/2023": {
+          "name": "Hasznos tippek",
+          "url": "https://docs.google.com/presentation/d/1RSJhxO9ZMtyLrt160kvAVdyekR4wT2fVSgbrPHR4HS0/template/preview"
+        },
+        "all_resources/csc-timecapsule/2023": {
+          "name": "Forráslista az összes leckéhez",
+          "url": "/s/csc-timecapsule-2023/források"
+        },
+        "all_standards/csc-timecapsule/2023": {
+          "name": "Szabványok az időkapszula kódolásában",
+          "url": "/s/csc-timecapsule-2023/szabványok"
+        },
+        "all_vocab/csc-timecapsule/2023": {
+          "name": "Szókincs az időkapszula kódolásában",
+          "url": "/s/csc-timecapsule-2023/vocab"
+        },
+        "cs_connections_landing_page/csc-timecapsule/2023": {
+          "name": "CS kapcsolatok céloldala",
+          "url": "https://code.org/educate/csc"
+        },
+        "csc_extended_connections_book_list/csc-timecapsule/2023": {
+          "name": "CSC kiterjesztett kapcsolatok könyvlista",
+          "url": "https://docs.google.com/document/d/14azofBAy5Riq109ruUPi8BbZRvJ1KIthqA3mH7t428Y/template/preview"
+        },
+        "helpful_hints_for_teachers_and_learners/csc-timecapsule/2023": {
+          "name": "Hasznos tanácsok tanároknak és tanulóknak",
+          "url": "https://docs.google.com/presentation/d/1RSJhxO9ZMtyLrt160kvAVdyekR4wT2fVSgbrPHR4HS0/template/preview"
+        },
+        "poem_art_1_-_introduction/csc-timecapsule/2023": {
+          "name": "Vers Art 1 - Bevezetés ",
+          "url": "https://www.youtube.com/watch?v=uvwUWTTjIXo&list=PLzdnOPI1iJNejQxcqExd1cWJnPEBPGCqf&index=2",
+          "type": "Videó"
+        },
+        "poem_art_2_-_events/csc-timecapsule/2023": {
+          "type": "Videó"
+        },
+        "poem_art_3_-_imagery/csc-timecapsule/2023": {
+          "type": "Videó"
+        },
+        "poem_art_4_-_celebration/csc-timecapsule/2023": {
+          "name": "Vers Art 4 - Ünneplés ",
+          "type": "Videó"
+        },
+        "time_capsule/csc-timecapsule/2023": {
+          "url": "https://docs.google.com/presentation/d/1jgZ_PS7uDb2KuvUNPNpW_PqSxsvfVKap4f8RscZPwVY/template/preview"
+        },
+        "helpful_hints/csc-timecapsule/2023": {
+          "name": "Hasznos tippek",
+          "url": "https://docs.google.com/presentation/d/1RSJhxO9ZMtyLrt160kvAVdyekR4wT2fVSgbrPHR4HS0/template/preview"
+        },
+        "time_capsule_rubric/csc-timecapsule/2023": {
+          "name": "Time Capsule Rovatcím",
+          "url": "https://docs.google.com/document/d/1oE_z84x5GRJ34fRDLCc-YfKJQIQab90pLjozaGQKaJ0/template/preview",
+          "type": "Rubrika"
+        },
+        "write_your_own_time_capsule_story/csc-timecapsule/2023": {
+          "name": "Írja meg saját időkapszula-versét - mondatszárak",
+          "url": "https://docs.google.com/document/d/1fahr11zX92NW-rLdyZBqrNK2VqgOGtCACkcT87M_luU/template/preview"
+        },
+        "write_your_own_time_capsule_poem_-_question_grab_bag/csc-timecapsule/2023": {
+          "name": "Írja meg saját időkapszula-versét - kérdés megragad táska",
+          "url": "https://docs.google.com/document/d/1-aPA3uJIKJAuQ_2Gtck1Ma79eCFY88ZC8YzegQIckG4/template/preview"
+        },
+        "poem_art_celebration_video_optional_/csc-timecapsule/2023": {
+          "name": "Versművészeti ünnepi videó (opcionális)",
+          "url": "https://www.youtube.com/watch?v=Q-76vz8i8mo",
+          "type": "Videó"
+        },
+        "poem_art_events_video_optional_/csc-timecapsule/2023": {
+          "name": "Versművészeti események videó (opcionális)",
+          "url": "https://youtu.be/XGwYYUEb6jQ",
+          "type": "Videó"
+        },
+        "poem_art_video_optional_/csc-timecapsule/2023": {
+          "name": "Versművészeti videó (opcionális)",
+          "url": "https://www.youtube.com/watch?v=uvwUWTTjIXo",
+          "type": "Videó"
+        },
+        "time_capsule_checklist/csc-timecapsule/2023": {
+          "name": "Time Capsule ellenőrzőlista",
+          "url": "https://docs.google.com/document/d/1_Hg7hhayhHsTCWDo0uJspseuBbtfTqgx1u9frnmvf1Y/template/preview"
+        },
+        "enter_your_own_poem/csc-timecapsule/2023": {
+          "url": "https://www.youtube.com/watch?v=oKPgbzdpTSA",
+          "type": "Videó"
+        },
+        "_optional_gallery_walk_sticky_notes/csc-timecapsule/2023": {
+          "name": "[Optional] Galéria Walk Sticky Notes",
+          "url": "https://docs.google.com/document/d/16OGg95k4WsOrusXBO-jjTBFMstI2Att8j6ggZCgpvls/template/preview"
+        },
+        "_optional_student_url_sharing_document/csc-timecapsule/2023": {
+          "name": "[Optional] Diák URL-megosztási dokumentum",
+          "url": "https://docs.google.com/document/d/1X048JMSRltc-VHfDDWr7NvE5NMNp4lDSsczQXVUbM-A/template/preview"
+        },
+        "all_standards/poetry/2023": {
+          "name": "Szabványok a költészettel való kódolásban ",
+          "url": "https://studio.code.org/s/poetry-2023/standards"
+        },
+        "coding_with_poetry_vocabulary/poetry/2023": {
+          "name": "Szókincs a költészettel való kódolásban ",
+          "url": "https://studio.code.org/s/poetry-2023/vocab"
+        },
+        "cs_connections_landing_page/poetry/2023": {
+          "name": "CS kapcsolatok céloldala",
+          "url": "https://code.org/educate/csc"
+        },
+        "csc_extended_connections_book_list/poetry/2023": {
+          "name": "CSC kiterjesztett kapcsolatok könyvlista",
+          "url": "https://docs.google.com/document/d/14azofBAy5Riq109ruUPi8BbZRvJ1KIthqA3mH7t428Y/template/preview"
+        },
+        "helpful_hints_for_teachers_and_learners/poetry/2023": {
+          "name": "Hasznos tanácsok tanároknak és tanulóknak",
+          "url": "https://docs.google.com/presentation/d/1RSJhxO9ZMtyLrt160kvAVdyekR4wT2fVSgbrPHR4HS0/template/preview"
+        },
+        "resource_list_for_all_lessons/poetry/2023": {
+          "name": "Forráslista az összes leckéhez",
+          "url": "https://studio.code.org/s/poetry-2023/resources"
+        },
+        "coding_with_poetry_lesson_1/poetry/2023": {
+          "url": "https://docs.google.com/presentation/d/1k0VP9so-gmAHq9mSOTxiZ98pX7gNfN6TutBeoDa3pxY/template/preview"
+        },
+        "poem_art_1_-_introduction/poetry/2023": {
+          "name": "Vers Art 1 - Bevezetés ",
+          "url": "https://www.youtube.com/watch?v=uvwUWTTjIXo&list=PLzdnOPI1iJNejQxcqExd1cWJnPEBPGCqf&index=2",
+          "type": "Videó"
+        },
+        "poem_art_2_-_events/poetry/2023": {
+          "type": "Videó"
+        },
+        "poem_art_3_-_imagery/poetry/2023": {
+          "type": "Videó"
+        },
+        "poem_art_4_-_celebration/poetry/2023": {
+          "name": "Vers Art 4 - Ünneplés ",
+          "type": "Videó"
+        },
+        "helpful_hints_1/poetry/2023": {
+          "name": "Hasznos tippek",
+          "url": "https://docs.google.com/presentation/d/1RSJhxO9ZMtyLrt160kvAVdyekR4wT2fVSgbrPHR4HS0/template/preview"
+        },
+        "helpful_hints/poetry/2023": {
+          "name": "Hasznos tippek",
+          "url": "https://docs.google.com/presentation/d/1RSJhxO9ZMtyLrt160kvAVdyekR4wT2fVSgbrPHR4HS0/template/preview"
+        },
+        "write_your_own_poem/poetry/2023": {
+          "name": "Írja meg saját versét - mondatszárak",
+          "url": "https://docs.google.com/document/d/1b6w_lOnibUHyDLYCP3rAWED5iElGm6LOQAJwG-hlih0/template/preview"
+        },
+        "coding_with_poetry_rubric/poetry/2023": {
+          "name": "Kódolás a költészet rubrikájával",
+          "url": "https://docs.google.com/document/d/13CJlIIV2CFu9D6-oxAm99PZ6EqNnDUZwFZCEW9fSMaE/template/preview",
+          "type": "Rubrika"
+        },
+        "write_your_own_poem_-_topics/poetry/2023": {
+          "name": "Írja meg saját versét - Témák",
+          "url": "https://docs.google.com/document/d/1V-DaWOIUk0xT7NYTzx3AEt4my-jc-Hx4vy21Kl4SPoE/template/preview"
+        },
+        "enter_your_own_poem/poetry/2023": {
+          "url": "https://www.youtube.com/watch?v=oKPgbzdpTSA",
+          "type": "Videó"
+        },
+        "poem_art_celebration_video_optional_/poetry/2023": {
+          "name": "Versművészeti ünnepi videó (opcionális)",
+          "url": "https://www.youtube.com/watch?v=Q-76vz8i8mo",
+          "type": "Videó"
+        },
+        "poem_art_events_video_optional_/poetry/2023": {
+          "name": "Versművészeti események videó (opcionális)",
+          "url": "https://youtu.be/XGwYYUEb6jQ",
+          "type": "Videó"
+        },
+        "poem_art_video_optional_/poetry/2023": {
+          "name": "Versművészeti videó (opcionális)",
+          "url": "https://www.youtube.com/watch?v=uvwUWTTjIXo",
+          "type": "Videó"
+        },
+        "time_capsule_checklist/poetry/2023": {
+          "name": "Kódolja a vers ellenőrzőlistáját",
+          "url": "https://docs.google.com/document/d/14M3WIBwJg-YUKVrchzKfunAmQaQhuA7-qxYpS738K_0/template/preview"
+        },
+        "_optional_student_url_sharing_document/poetry/2023": {
+          "name": "[Optional] Diák URL-megosztási dokumentum",
+          "url": "https://docs.google.com/document/d/1DNcBWminB8MmyLQC4fIWrLZ8uI9HR7d4W3HuuclIpB0/template/preview"
+        },
+        "share_your_app_/poetry/2023": {
+          "name": "Ossza meg alkalmazását!",
+          "url": "https://docs.google.com/document/d/1kO4SNEIVyM0GrxxJb6NzVYauXXpi6rzQkDIfrzQf1Ls/template/preview"
+        },
+        "poem_app_example/poetry/2023": {
+          "name": "Példa verses alkalmazásra",
+          "url": "https://studio.code.org/projects/poetry_hoc/j3TXDXNhz0XEsH4Xjk_rT9buBHYCplirIKtY_Pg_bYo"
+        },
+        "all_resources/coursea/2023": {
+          "url": "/s/coursea-2023/források"
+        },
+        "all_standards/coursea/2023": {
+          "url": "/s/coursea-2023/szabványok"
+        },
+        "all_vocabulary/coursea/2023": {
+          "url": "/s/coursea-2023/vocab"
+        },
+        "implementation_guide/coursea/2023": {
+          "name": "Bevezetési Útmutató"
+        },
+        "teacher_forum/coursea/2023": {
+          "name": "Tanári fórum"
+        },
+        "csf_course_syllabus/coursea/2023": {
+          "name": "CSF tanfolyam tanterv",
+          "url": "https://docs.google.com/document/d/1mGTa71uFIOvLuwcbo_7XIutZIuJKGlbl0KlRqgibs2U/edit?usp=drive_link"
+        },
+        "teaching_and_learning_strategies/coursea/2023": {
+          "name": "Tanítási és tanulási stratégiák",
+          "url": "https://docs.google.com/document/d/1khllUBI1xpSrUmwWwa2J35GaKVV8bb3bQb_5Vc_ty54/preview"
+        },
+        "values_and_philosophy_1/coursea/2023": {
+          "name": "Értékek és filozófia",
+          "url": "https://docs.google.com/document/d/1_56iN0iyFzPSsuj5-W7-SI6E7A8z9BTpL3qu4fDMkKk/preview"
+        },
+        "20_20_20_rule/coursea/2023": {
+          "url": "http://www.anthro.com/blog/2013/10/how-to-prevent-eye-strain-with-the-20-20-20-rule#.WOU39BLyu35"
+        },
+        "getting_started_-_creating_a_class_section/coursea/2023": {
+          "url": "https://www.youtube.com/watch?v=4Wugxc80fNU",
+          "type": "Videó"
+        },
+        "pair_programming/coursea/2023": {
+          "name": "Páros programozás",
+          "url": "https://www.youtube.com/watch?v=vgkahOzFH2Q"
+        },
+        "wiggles-go_noodle/coursea/2023": {
+          "url": "https://app.gonoodle.com/channels/brainercise-with-mr-catman/shoulder-rock-n-roll",
+          "type": "Videó"
+        },
+        "feeling_faces_-_emotion_image/coursea/2023": {
+          "name": "Érzelem az arcokon - érzelmek képei"
+        },
+        "happy_map_game_pieces/coursea/2023": {
+          "name": "Boldog Térkép Játék Darabok",
+          "url": "https://docs.google.com/document/d/19dHJCfmQNs3meKN3sTL91qsfmHYjZCYfbFq91J4fj3k/edit"
+        },
+        "happy_maps/coursea/2023": {
+          "name": "Vidám térképek"
+        },
+        "unplugged_blockly_blocks_grades_k-1_/coursea/2023": {
+          "url": "https://docs.google.com/presentation/d/1PoSQZUCUj6yw6g1yZImaHu5Gn4Gdok0iDmrrmXInavQ/edit"
+        },
+        "wiggles_-_gonoodle/coursea/2023": {
+          "url": "https://app.gonoodle.com/channels/brainercise-with-mr-catman/shoulder-rock-n-roll",
+          "type": "Videó"
+        },
+        "debugging_with_the_step_button/coursea/2023": {
+          "type": "Videó"
+        },
+        "feeling_faces_emotion_image/coursea/2023": {
+          "name": "Érzelem az arcokon - képek",
+          "url": "https://docs.google.com/document/d/1qdt7Y-wVkqFas_TkNO4iITz2K-LEmEVWDWLM50NNAOs/edit"
+        },
+        "feeling_faces_-_emotion_image_1/coursea/2023": {
+          "name": "Érzelem az arcokon - érzelmek képei",
+          "url": "https://docs.google.com/document/d/1qdt7Y-wVkqFas_TkNO4iITz2K-LEmEVWDWLM50NNAOs/edit"
+        },
+        "feeling_faces/coursea/2023": {
+          "url": "https://docs.google.com/document/d/1qdt7Y-wVkqFas_TkNO4iITz2K-LEmEVWDWLM50NNAOs/"
+        },
+        "pair-programming/coursea/2023": {
+          "url": "https://www.youtube.com/watch?v=vgkahOzFH2Q",
+          "type": "Videó"
+        },
+        "csf_lesson_recommendations/coursea/2023": {
+          "url": "https://docs.google.com/document/d/1N3aiitOxz_cut1AQn90g1nYJouKT5dC_4m1M0KFNzP8/edit?usp=sharing"
+        },
+        "pause_and_think_online/coursea/2023": {
+          "type": "Videó"
+        },
+        "the_big_event/coursea/2023": {
+          "name": "A nagy esemény"
+        },
+        "the_big_event_1/coursea/2023": {
+          "name": "A nagy esemény",
+          "url": "https://docs.google.com/document/d/1lzVlB8JzpMLLGVumwVL8ybsBX42eFCSSucrZ19-N9Tw/edit",
+          "type": "Értékelés"
+        },
+        "the_big_event_2/coursea/2023": {
+          "name": "A nagy esemény",
+          "url": "https://docs.google.com/document/d/1VU2rC918ZY6DM2hunN6FsiDUW6Q1vEqyiJAPWQ6aoX8/edit"
+        },
+        "the_big_event_courses_a_b_/coursea/2023": {
+          "name": "A nagy esemény (A, B tanfolyamok)",
+          "url": "https://docs.google.com/document/d/1A9yAObCTJwHsIKtaBZY8KaGwgbxbfolpbIpeJfZRgvs/edit"
+        },
+        "cs_fundamentals_main_activity_tips/coursea/2023": {
+          "url": "https://docs.google.com/document/d/1N3aiitOxz_cut1AQn90g1nYJouKT5dC_4m1M0KFNzP8/edit?usp=sharing"
+        },
+        "all_resources/courseb/2023": {
+          "url": "/s/courseb-2023/források"
+        },
+        "all_standards/courseb/2023": {
+          "url": "/s/courseb-2023/szabványok"
+        },
+        "all_vocabulary/courseb/2023": {
+          "url": "/s/courseb-2023/vocab"
+        },
+        "common_core_and_ngss_guidance/courseb/2023": {
+          "url": "https://docs.google.com/document/d/1SqD3MaRbGIONGs5bcL1YhHUFK92ZXFIufypr6UC8XYA/preview#heading=h.rar8dpsqsjqe"
+        },
+        "implementation_guide/courseb/2023": {
+          "name": "Bevezetési Útmutató"
+        },
+        "teacher_forum/courseb/2023": {
+          "name": "Tanári fórum"
+        },
+        "csf_course_syllabus/courseb/2023": {
+          "name": "CSF tanfolyam tanterv",
+          "url": "https://docs.google.com/document/d/1mGTa71uFIOvLuwcbo_7XIutZIuJKGlbl0KlRqgibs2U/edit?usp=drive_link"
+        },
+        "teaching_and_learning_strategies/courseb/2023": {
+          "name": "Tanítási és tanulási stratégiák",
+          "url": "https://docs.google.com/document/d/1khllUBI1xpSrUmwWwa2J35GaKVV8bb3bQb_5Vc_ty54/preview"
+        },
+        "values_and_philosophy_1/courseb/2023": {
+          "name": "Értékek és filozófia",
+          "url": "https://docs.google.com/document/d/1_56iN0iyFzPSsuj5-W7-SI6E7A8z9BTpL3qu4fDMkKk/preview"
+        },
+        "digital_trails_animal_tracks/courseb/2023": {
+          "name": "Digitális nyomvonalak: Állati pályák",
+          "url": "https://docs.google.com/document/d/1WLUpUXDh1503PwlnJ06DqWr6KaiX7E8KOpDJjrCkLzM/"
+        },
+        "digital_trails_digital_trail_squares/courseb/2023": {
+          "name": "Digitális nyomvonalak: Digitális nyomvonalak négyzetei",
+          "url": "https://docs.google.com/document/d/1Ild_AQ98V1kXXvc-ncnC1cTNnIQrZUG_QS-ZiEi4EY8/edit"
+        },
+        "digital_trails_follow_the_digital_trail/courseb/2023": {
+          "name": "Digitális nyomvonalak: Kövesse a digitális nyomvonalat",
+          "url": "https://www.commonsense.org/education/videos/follow-the-digital-trail"
+        },
+        "digital_trails_lesson_slides/courseb/2023": {
+          "name": "Digitális nyomvonalak: Diák a leckékhez",
+          "url": "https://docs.google.com/presentation/d/1jNMWXhnNjlqK44LQ_bpAtmDmdHPeYqJeVBwegi5BnM4/edit"
+        },
+        "feeling_faces_emotion_image/courseb/2023": {
+          "name": "Érzelem az arcokon - képek",
+          "url": "https://docs.google.com/document/d/1qdt7Y-wVkqFas_TkNO4iITz2K-LEmEVWDWLM50NNAOs/edit"
+        },
+        "move_it_move_it/courseb/2023": {
+          "name": "Gyerünk, gyerünk!",
+          "url": "https://docs.google.com/document/d/1xavPzpNq1GO7zzOzreES0Kl8FPcbjILFzfmORUqttcg/edit",
+          "type": "Térkép tevékenység"
+        },
+        "move_it_move_it_1/courseb/2023": {
+          "name": "Gyerünk, gyerünk!",
+          "url": "https://docs.google.com/document/d/1eOrX6kpPKLzUD3GpvGy9XxupnMZJrtaeh2bfe0zOz64/edit"
+        },
+        "move_it_move_it_2/courseb/2023": {
+          "name": "Gyerünk, gyerünk!",
+          "url": "https://docs.google.com/document/d/1bdGOgeZ9Z4MS_yxBLt-Mit2Rhr4rCNWL7HC-i1Qmpi4/edit"
+        },
+        "move_it_move_it_3/courseb/2023": {
+          "name": "Gyerünk, gyerünk!",
+          "url": "http://youtu.be/aV4rqNUG-Jw?list=PL2DhNKNdmOtqBgWyF5kmy2oPh0U-Zfv2G"
+        },
+        "20_20_20_rule/courseb/2023": {
+          "url": "http://www.anthro.com/blog/2013/10/how-to-prevent-eye-strain-with-the-20-20-20-rule#.WOU39BLyu35"
+        },
+        "drag_and_drop_practice/courseb/2023": {
+          "url": "https://studio.code.org/s/jigsaw"
+        },
+        "feeling_faces/courseb/2023": {
+          "url": "https://docs.google.com/document/d/1qdt7Y-wVkqFas_TkNO4iITz2K-LEmEVWDWLM50NNAOs/"
+        },
+        "pair_programming/courseb/2023": {
+          "name": "Páros programozás",
+          "url": "https://www.youtube.com/watch?v=vgkahOzFH2Q"
+        },
+        "unplugged_blockly_blocks_grades_k-1_/courseb/2023": {
+          "url": "https://docs.google.com/presentation/d/1PoSQZUCUj6yw6g1yZImaHu5Gn4Gdok0iDmrrmXInavQ/edit"
+        },
+        "wiggles_-_gonoodle/courseb/2023": {
+          "url": "https://app.gonoodle.com/channels/brainercise-with-mr-catman/shoulder-rock-n-roll",
+          "type": "Videó"
+        },
+        "compass_rose/courseb/2023": {
+          "url": "https://docs.google.com/document/d/1ah3Alc68karxsADBVpCQkzlFAmqO6aTO9QUpZiIQ7BE/edit"
+        },
+        "feeling_faces_-_emotion_image/courseb/2023": {
+          "name": "Érzelem az arcokon - érzelmek képei",
+          "url": "https://docs.google.com/document/d/1qdt7Y-wVkqFas_TkNO4iITz2K-LEmEVWDWLM50NNAOs/edit"
+        },
+        "happy_map_game_pieces/courseb/2023": {
+          "name": "Boldog Térkép Játék Darabok",
+          "url": "https://docs.google.com/document/d/19dHJCfmQNs3meKN3sTL91qsfmHYjZCYfbFq91J4fj3k/edit"
+        },
+        "stevie_and_the_big_project/courseb/2023": {
+          "url": "https://drive.google.com/file/d/0B-uvt08wYSQqTUFzaGxKSk45QkU/view"
+        },
+        "unspotted_bugs/courseb/2023": {
+          "url": "https://youtu.be/rah3DYlp5nQ",
+          "type": "Videó"
+        },
+        "getting_loopy/courseb/2023": {
+          "name": "Ciklikusság",
+          "url": "https://youtu.be/JoKTqHCni0M"
+        },
+        "getting_loopy_1/courseb/2023": {
+          "name": "Ciklikusság",
+          "url": "https://docs.google.com/document/d/1SwYDo6fwkEZRRGogPozWBXCLLncddDS5dLNFgRDe6VQ/edit"
+        },
+        "getting_loopy_2/courseb/2023": {
+          "name": "Ciklikusság",
+          "url": "https://docs.google.com/document/d/1MG-vF7zU-abEPZ60bVcK4RhwZ4vfuknBfUkm-4tvoX8/edit",
+          "type": "Értékelés"
+        },
+        "getting_loopy_3/courseb/2023": {
+          "name": "Ciklikusság",
+          "url": "https://docs.google.com/document/d/15YLSUX5TT6P9nRKW4tA0f9weEe0Qs4wV5Ylu08wzXFs/edit"
+        },
+        "cs_fundamentals_main_activity_tips/courseb/2023": {
+          "url": "https://docs.google.com/document/d/1N3aiitOxz_cut1AQn90g1nYJouKT5dC_4m1M0KFNzP8/edit?usp=sharing"
+        },
+        "pause_and_think_online/courseb/2023": {
+          "type": "Videó"
+        },
+        "the_right_app_scenarios/courseb/2023": {
+          "url": "https://docs.google.com/presentation/d/1WzO71WwSTbn2XhkWjG3tvD7vnQbsCSb58rhSBpurQjw/edit#slide=id.g45fb8e6318_0_0"
+        },
+        "the_big_event/courseb/2023": {
+          "name": "A nagy esemény",
+          "url": "https://www.youtube.com/watch?v=XoApWo-IrI4"
+        },
+        "the_big_event_1/courseb/2023": {
+          "name": "A nagy esemény",
+          "url": "https://docs.google.com/document/d/1lzVlB8JzpMLLGVumwVL8ybsBX42eFCSSucrZ19-N9Tw/edit",
+          "type": "Értékelés"
+        },
+        "the_big_event_2/courseb/2023": {
+          "name": "A nagy esemény",
+          "url": "https://docs.google.com/document/d/1VU2rC918ZY6DM2hunN6FsiDUW6Q1vEqyiJAPWQ6aoX8/edit"
+        },
+        "the_big_event_courses_a_b_/courseb/2023": {
+          "name": "A nagy esemény (A, B tanfolyamok)",
+          "url": "https://docs.google.com/document/d/1A9yAObCTJwHsIKtaBZY8KaGwgbxbfolpbIpeJfZRgvs/edit"
+        },
+        "play_lab_project_planning_guide/courseb/2023": {
+          "url": "https://docs.google.com/document/d/1XiBMkmdQtaCYcaQsGnoY32tGimfiGgBEwenuAadEqT8/template/preview"
+        },
+        "play_lab_project_planning_guide_1/courseb/2023": {
+          "url": "https://docs.google.com/document/d/1CK-fZ7le7tv6mIR9hZ8MHmaSSkI2uFfyH3W_DFfew2c/template/preview"
+        },
+        "all_resources/coursec/2023": {
+          "url": "/s/coursec-2023/források"
+        },
+        "all_standards/coursec/2023": {
+          "url": "/s/tanfolyam-2023/szabványok"
+        },
+        "all_vocabulary/coursec/2023": {
+          "url": "/s/kurzus-2023/vocab"
+        },
+        "implementation_guide/coursec/2023": {
+          "name": "Bevezetési Útmutató"
+        },
+        "teacher_forum/coursec/2023": {
+          "name": "Tanári fórum"
+        },
+        "csf_course_syllabus/coursec/2023": {
+          "name": "CSF tanfolyam tanterv",
+          "url": "https://docs.google.com/document/d/1mGTa71uFIOvLuwcbo_7XIutZIuJKGlbl0KlRqgibs2U/edit?usp=drive_link"
+        },
+        "teaching_and_learning_strategies/coursec/2023": {
+          "name": "Tanítási és tanulási stratégiák",
+          "url": "https://docs.google.com/document/d/1khllUBI1xpSrUmwWwa2J35GaKVV8bb3bQb_5Vc_ty54/preview"
+        },
+        "values_and_philosophy/coursec/2023": {
+          "name": "Értékek és filozófia",
+          "url": "https://docs.google.com/document/d/1_56iN0iyFzPSsuj5-W7-SI6E7A8z9BTpL3qu4fDMkKk/preview"
+        },
+        "my_robotic_friends/coursec/2023": {
+          "name": "A robot barátaim"
+        },
+        "my_robotic_friends_1/coursec/2023": {
+          "name": "A robot barátaim"
+        },
+        "my_robotic_friends_2/coursec/2023": {
+          "name": "A robot barátaim"
+        },
+        "my_robotic_friends_3/coursec/2023": {
+          "name": "A robot barátaim"
+        },
+        "my_robotic_friends_4/coursec/2023": {
+          "name": "A robot barátaim"
+        },
+        "cs_fundamentals_main_activity_tips/coursec/2023": {
+          "url": "https://docs.google.com/document/d/1N3aiitOxz_cut1AQn90g1nYJouKT5dC_4m1M0KFNzP8/edit?usp=sharing"
+        },
+        "pair_programming/coursec/2023": {
+          "name": "Páros programozás",
+          "url": "https://www.youtube.com/watch?v=vgkahOzFH2Q",
+          "type": "Videó"
+        },
+        "the_big_event/coursec/2023": {
+          "name": "A nagy esemény"
+        },
+        "the_big_event_1/coursec/2023": {
+          "name": "A nagy esemény",
+          "url": "https://docs.google.com/document/d/1lzVlB8JzpMLLGVumwVL8ybsBX42eFCSSucrZ19-N9Tw/edit",
+          "type": "Értékelés"
+        },
+        "the_big_event_2/coursec/2023": {
+          "name": "A nagy esemény",
+          "url": "https://docs.google.com/document/d/1VU2rC918ZY6DM2hunN6FsiDUW6Q1vEqyiJAPWQ6aoX8/edit"
+        },
+        "pause_and_think_online/coursec/2023": {
+          "type": "Videó"
+        },
+        "binary_bracelets/coursec/2023": {
+          "name": "Bináris karkötők"
+        },
+        "binary_bracelets_1/coursec/2023": {
+          "name": "Bináris karkötők"
+        },
+        "binary_bracelets_2/coursec/2023": {
+          "name": "Bináris karkötők"
+        },
+        "binary_bracelets_3/coursec/2023": {
+          "name": "Bináris karkötők",
+          "type": "Értékelés"
+        },
+        "binary_bracelets_4/coursec/2023": {
+          "name": "Bináris karkötők"
+        },
+        "all_resources/coursed/2023": {
+          "url": "/s/tanfolyam-2023/források"
+        },
+        "all_standards/coursed/2023": {
+          "url": "/s/tanfolyamos-2023/szabványok"
+        },
+        "all_vocabulary/coursed/2023": {
+          "url": "/s/tanfolyam-2023/vocab"
+        },
+        "implementation_guide/coursed/2023": {
+          "name": "Bevezetési Útmutató"
+        },
+        "teacher_forum/coursed/2023": {
+          "name": "Tanári fórum"
+        },
+        "csf_course_syllabus/coursed/2023": {
+          "name": "CSF tanfolyam tanterv",
+          "url": "https://docs.google.com/document/d/1mGTa71uFIOvLuwcbo_7XIutZIuJKGlbl0KlRqgibs2U/edit?usp=drive_link"
+        },
+        "teaching_and_learning_strategies/coursed/2023": {
+          "name": "Tanítási és tanulási stratégiák",
+          "url": "https://docs.google.com/document/d/1khllUBI1xpSrUmwWwa2J35GaKVV8bb3bQb_5Vc_ty54/preview"
+        },
+        "values_and_philosophy/coursed/2023": {
+          "name": "Értékek és filozófia",
+          "url": "https://docs.google.com/document/d/1_56iN0iyFzPSsuj5-W7-SI6E7A8z9BTpL3qu4fDMkKk/preview"
+        },
+        "graph_paper_programming/coursed/2023": {
+          "name": "Grafikus programozás"
+        },
+        "graph_paper_programming_1/coursed/2023": {
+          "name": "Grafikus programozás"
+        },
+        "graph_paper_programming_2/coursed/2023": {
+          "name": "Grafikus programozás"
+        },
+        "graph_paper_programming_3/coursed/2023": {
+          "name": "Grafikus programozás"
+        },
+        "graph_paper_programming_4/coursed/2023": {
+          "name": "Grafikus programozás",
+          "type": "Értékelés"
+        },
+        "graph_paper_programming_5/coursed/2023": {
+          "name": "Grafikus programozás"
+        },
+        "pair_programming/coursed/2023": {
+          "name": "Páros programozás",
+          "url": "https://www.youtube.com/watch?v=vgkahOzFH2Q"
+        },
+        "relay_programming/coursed/2023": {
+          "name": "Váltó programozás"
+        },
+        "relay_programming_1/coursed/2023": {
+          "name": "Váltó programozás"
+        },
+        "relay_programming_2/coursed/2023": {
+          "name": "Váltó programozás"
+        },
+        "relay_programming_3/coursed/2023": {
+          "name": "Váltó programozás"
+        },
+        "relay_programming_4/coursed/2023": {
+          "name": "Váltó programozás"
+        },
+        "relay_programming_5/coursed/2023": {
+          "name": "Váltó programozás"
+        },
+        "pause_and_think_online/coursed/2023": {
+          "type": "Videó"
+        },
+        "spotify_playlist_all_ages_/coursed/2023": {
+          "name": "Spotify lejátszólista (minden korosztálynak)"
+        },
+        "feeling_faces/coursed/2023": {
+          "url": "https://docs.google.com/document/d/1qdt7Y-wVkqFas_TkNO4iITz2K-LEmEVWDWLM50NNAOs/"
+        },
+        "conditionals_with_cards/coursed/2023": {
+          "name": "Feltételek kártyákkal"
+        },
+        "conditionals_with_cards_1/coursed/2023": {
+          "name": "Feltételek kártyákkal"
+        },
+        "conditionals_with_cards_2/coursed/2023": {
+          "name": "Feltételek kártyákkal",
+          "type": "Értékelés"
+        },
+        "conditionals_with_cards_3/coursed/2023": {
+          "name": "Feltételek kártyákkal"
+        },
+        "conditionals_with_cards_4/coursed/2023": {
+          "name": "Feltételek kártyákkal"
+        },
+        "csf_course_d_end_of_course_project_planning_guide/coursed/2023": {
+          "type": "Projektútmutató"
+        },
+        "all_resources/coursee/2023": {
+          "url": "/s/coursee-2023/források"
+        },
+        "all_standards/coursee/2023": {
+          "url": "/s/tanfolyam-2023/szabványok"
+        },
+        "all_vocabulary/coursee/2023": {
+          "url": "/s/coursee-2023/vocab"
+        },
+        "implementation_guide/coursee/2023": {
+          "name": "Bevezetési Útmutató"
+        },
+        "sprite_lab_documentation/coursee/2023": {
+          "name": "Sprite Lab dokumentációja"
+        },
+        "teacher_forum/coursee/2023": {
+          "name": "Tanári fórum"
+        },
+        "csf_course_syllabus/coursee/2023": {
+          "name": "CSF tanfolyam tanterv",
+          "url": "https://docs.google.com/document/d/1mGTa71uFIOvLuwcbo_7XIutZIuJKGlbl0KlRqgibs2U/edit?usp=drive_link"
+        },
+        "teaching_and_learning_strategies/coursee/2023": {
+          "name": "Tanítási és tanulási stratégiák",
+          "url": "https://docs.google.com/document/d/1khllUBI1xpSrUmwWwa2J35GaKVV8bb3bQb_5Vc_ty54/preview"
+        },
+        "values_and_philosophy/coursee/2023": {
+          "name": "Értékek és filozófia",
+          "url": "https://docs.google.com/document/d/1_56iN0iyFzPSsuj5-W7-SI6E7A8z9BTpL3qu4fDMkKk/preview"
+        },
+        "pause_and_think_online/coursee/2023": {
+          "type": "Videó"
+        },
+        "functions_unplugged_songwriting_2/coursee/2023": {
+          "type": "Értékelés"
+        },
+        "digital_sharing_ethics_video_/coursee/2023": {
+          "type": "Videó"
+        },
+        "cs_fundamentals_final_project/coursee/2023": {
+          "type": "Rubrika"
+        },
+        "all_resources/coursef/2023": {
+          "url": "/s/coursef-2023/források"
+        },
+        "all_standards/coursef/2023": {
+          "url": "/s/coursef-2023/szabványok"
+        },
+        "all_vocabulary/coursef/2023": {
+          "url": "/s/coursef-2023/vocab"
+        },
+        "implementation_guide/coursef/2023": {
+          "name": "Bevezetési Útmutató"
+        },
+        "sprite_lab_documentation_1/coursef/2023": {
+          "name": "Sprite Lab dokumentációja"
+        },
+        "teacher_forum/coursef/2023": {
+          "name": "Tanári fórum"
+        },
+        "csf_course_syllabus/coursef/2023": {
+          "name": "CSF tanfolyam tanterv",
+          "url": "https://docs.google.com/document/d/1mGTa71uFIOvLuwcbo_7XIutZIuJKGlbl0KlRqgibs2U/edit?usp=drive_link"
+        },
+        "teaching_and_learning_strategies/coursef/2023": {
+          "name": "Tanítási és tanulási stratégiák",
+          "url": "https://docs.google.com/document/d/1khllUBI1xpSrUmwWwa2J35GaKVV8bb3bQb_5Vc_ty54/preview"
+        },
+        "values_and_philosophy/coursef/2023": {
+          "name": "Értékek és filozófia",
+          "url": "https://docs.google.com/document/d/1_56iN0iyFzPSsuj5-W7-SI6E7A8z9BTpL3qu4fDMkKk/preview"
+        },
+        "the_power_of_words_the_power_of_words/coursef/2023": {
+          "type": "Videó"
+        },
+        "introducing_sprite_lab/coursef/2023": {
+          "type": "Videó"
+        },
+        "sprite_lab_documentation/coursef/2023": {
+          "name": "Sprite Lab dokumentációja"
+        },
+        "ai_impact_on_society/coursef/2023": {
+          "type": "Videó"
+        },
+        "ai_machine_learning/coursef/2023": {
+          "type": "Videó"
+        },
+        "ai_training_data_bias/coursef/2023": {
+          "type": "Videó"
+        },
+        "internet/coursef/2023": {
+          "name": "Internet",
+          "type": "Értékelés"
+        },
+        "internet_1/coursef/2023": {
+          "name": "Internet"
+        },
+        "the_internet/coursef/2023": {
+          "name": "Az internet"
+        },
+        "cs_fundamentals_final_project/coursef/2023": {
+          "type": "Rubrika"
+        },
+        "teacher_forum/express/2023": {
+          "name": "Tanári fórum"
+        },
+        "csf_-_express_course_-_slides/express/2023": {
+          "name": "CSF Express tanfolyam diák ",
+          "url": "https://docs.google.com/presentation/d/1IVGGGdxNfOAyVa2NgPIraL0F910e2WkLDhVkozNV-3g/template/preview"
+        },
+        "pair_programming/express/2023": {
+          "name": "Páros programozás",
+          "url": "https://www.youtube.com/watch?v=vgkahOzFH2Q",
+          "type": "Videó"
+        },
+        "artist_introduction/express/2023": {
+          "type": "Videó"
+        },
+        "turns_angles/express/2023": {
+          "type": "Videó"
+        },
+        "sprite_lab_documentation/express/2023": {
+          "name": "Sprite Lab dokumentációja"
+        },
+        "pause_and_think_online/express/2023": {
+          "type": "Videó"
+        },
+        "spotify_playlist_all_ages_/express/2023": {
+          "name": "Spotify lejátszólista (minden korosztálynak)"
+        },
+        "pair_programming_video/express/2023": {
+          "url": "https://www.youtube.com/watch?v=vgkahOzFH2Q",
+          "type": "Videó"
+        },
+        "variables/express/2023": {
+          "name": "változók"
+        },
+        "cs_fundamentals_final_project/express/2023": {
+          "type": "Rubrika"
+        },
+        "csf_express_end_of_course_project_planning_guide/express/2023": {
+          "type": "Projektútmutató"
+        },
+        "teacher_forum/pre-express/2023": {
+          "name": "Tanári fórum"
+        },
+        "20_20_20_rule/pre-express/2023": {
+          "url": "http://www.anthro.com/blog/2013/10/how-to-prevent-eye-strain-with-the-20-20-20-rule#.WOU39BLyu35",
+          "type": "Videó"
+        },
+        "feeling_faces/pre-express/2023": {
+          "url": "https://docs.google.com/document/d/1qdt7Y-wVkqFas_TkNO4iITz2K-LEmEVWDWLM50NNAOs/"
+        },
+        "pair_programming/pre-express/2023": {
+          "name": "Páros programozás",
+          "url": "https://www.youtube.com/watch?v=vgkahOzFH2Q"
+        },
+        "wiggles_-_go_noodle/pre-express/2023": {
+          "url": "https://app.gonoodle.com/channels/brainercise-with-mr-catman/shoulder-rock-n-roll",
+          "type": "Videó"
+        },
+        "csf_pre-reader_express_course_slides/pre-express/2023": {
+          "name": "CSF Pre-Reader Express tanfolyam diák",
+          "url": "https://docs.google.com/presentation/d/1L1YJDVSUet42tTJaTvsEF1AujZ8n3YTZM6lOY6am07g/template/preview"
+        },
+        "pause_and_think_online/pre-express/2023": {
+          "type": "Videó"
+        },
+        "classifying_fish/how-ai-works/2023": {
+          "url": "https://docs.google.com/document/d/1gQWtamQ3YBk-gJnmw_z3QWNLfzdrPyaUjS4ZbtfAvEs/view"
+        },
+        "how_ai_works_-_training_data_and_bias/how-ai-works/2023": {
+          "name": "Hogyan működik az AI - Képzési adatok és elfogultság",
+          "type": "Videó"
+        },
+        "how_ai_works_-_what_is_machine_learning_/how-ai-works/2023": {
+          "name": "Hogyan működik az AI - Mi a gépi tanulás?",
+          "type": "Videó"
+        },
+        "introduction_to_machine_learning/how-ai-works/2023": {
+          "url": "https://docs.google.com/presentation/d/1Vj24zhtV4La9t-MRONHhg2L4ZPYYiGW9eXUBN5lM9LQ/template/preview"
+        },
+        "_example_computer_vision_network/how-ai-works/2023": {
+          "name": "[Example] Számítógépes Vision Hálózat",
+          "url": "https://docs.google.com/presentation/d/1zJzbHDel0uQ62usH8g_qBp5KIFMN08tEps5lXSAb3Ag/edit?usp=sharing"
+        },
+        "computer_vision/how-ai-works/2023": {
+          "name": "Számítógépes látás",
+          "url": "https://docs.google.com/presentation/d/1yWJnyVWPq2ut0GmUc0Z41SHxh1_w2B90qis-mo3d2OY/template/preview"
+        },
+        "computer_vision_network/how-ai-works/2023": {
+          "name": "Számítógépes Vision Hálózat",
+          "url": "https://docs.google.com/document/d/1C7ob1lB-zKi0DSC3do9ZVFfXkHlC2xnSDI2yPFAqEY4/edit"
+        },
+        "how_ai_works_how_computer_vision_works/how-ai-works/2023": {
+          "name": "Hogyan működik az AI: Hogyan működik a számítógépes látás",
+          "url": "https://youtu.be/2hXG8v8p0KM",
+          "type": "Videó"
+        },
+        "seven_segment_display_manipulative/how-ai-works/2023": {
+          "name": "Hét szegmens kijelző manipulatív",
+          "url": "https://docs.google.com/document/d/17QzrodDqCjF2pjZvyo4coWYQbaZxuRwDrPEe20H-yBM/edit"
+        },
+        "what_a_neural_network_sees/how-ai-works/2023": {
+          "name": "Mit lát egy neurális hálózat",
+          "url": "https://www.youtube.com/watch?v=Gu0MkmynWkw",
+          "type": "Videó"
+        },
+        "how_ai_works_how_neural_networks_work/how-ai-works/2023": {
+          "name": "Hogyan működik az AI: Hogyan működnek a neurális hálózatok",
+          "url": "https://youtu.be/JrXazCEACVo",
+          "type": "Videó"
+        },
+        "neural_networks/how-ai-works/2023": {
+          "name": "Neurális hálózatok",
+          "url": "https://docs.google.com/document/d/1HA_zYssm4-s24-8on8BeL5DbzSfi7G7q-4LlywNBoCw/edit?usp=sharing"
+        },
+        "neural_networks_1/how-ai-works/2023": {
+          "name": "Neurális hálózatok",
+          "url": "https://docs.google.com/presentation/d/1lj6Z3egPkfv7jKtTVNmhCSY9RKHkcw5LV7Oq_ryqDVs/template/preview"
+        },
+        "wetube_content_creators/how-ai-works/2023": {
+          "name": "WeTube Tartalomkészítők",
+          "url": "https://docs.google.com/document/d/1z7ZO-9zKlmn3brqH7euWVMSOuzVTQOdWDgkGGukRkvc/edit?usp=sharing"
+        },
+        "eliza_activity_guide/how-ai-works/2023": {
+          "name": "(Választható) Eliza tevékenységi útmutató",
+          "url": "https://docs.google.com/document/d/1IIca15ohoVq2lTLNUAOqQMUT7YgsTLp8yIPfmEnLmXo/edit#heading=h.17wewdcvexo6"
+        },
+        "generative_llm/how-ai-works/2023": {
+          "name": "Generatív LLM",
+          "url": "https://docs.google.com/presentation/d/10d_TM6rucYyt8DAuPVoAZ9mgt9v-zzRWcM2A7geDIp0/template/preview"
+        },
+        "how_ai_works_chatbots_and_large_language_models_part_1_/how-ai-works/2023": {
+          "name": "Hogyan működik az AI: Chatbotok és nagy nyelvi modellek (1. rész)",
+          "url": "https://www.youtube.com/watch?v=kWougDgtE3E",
+          "type": "Videó"
+        },
+        "how_ai_works_chatbots_and_large_language_models_part_2_/how-ai-works/2023": {
+          "name": "Hogyan működik az AI: Chatbotok és nagy nyelvi modellek (Rész 2)",
+          "url": "https://www.youtube.com/watch?v=7Jn9UrnMWK8",
+          "type": "Videó"
+        },
+        "llm_vocab_and_video_guide_answer_key/how-ai-works/2023": {
+          "name": "[Key] Vocab és videó útmutató",
+          "url": "https://docs.google.com/document/d/1kSVppQd3WBVwvejrJ4ffgCNJEkYbhDzQs88tbQ3rfD0/edit"
+        },
+        "video_and_vocabulary_guide/how-ai-works/2023": {
+          "name": "Videó és szókincs útmutató",
+          "url": "https://docs.google.com/document/d/1zPGOdJ1rcdF7e7CzGXHb4JaWYFMEPX9aeZf4DtbQhNI/edit#heading=h.l82l1gv9gtj4"
+        },
+        "written_voice_simulator_activity_guide_exemplar/how-ai-works/2023": {
+          "name": "[Exemplar] Írásbeli hangszimulátor tevékenységi útmutató",
+          "url": "https://docs.google.com/document/d/1nZhObuoPc5781ygHgA8P_a0aHItrKkW4mqqJ73XP8Hw/"
+        },
+        "written_voice_simulator_guide/how-ai-works/2023": {
+          "name": "Írásbeli hangszimulátor útmutató",
+          "url": "https://docs.google.com/document/d/1pebKlY2-pFCw-Zo_nI8cLXYT_eyfn3AKzkwvEmkjo2c/edit#heading=h.sa1769guz3cn"
+        },
+        "written_voice_simulator_user_guide/how-ai-works/2023": {
+          "name": "Writes Voice Simulator felhasználói kézikönyv",
+          "url": "https://docs.google.com/presentation/d/1N3l7kEskuT5MFjarekKlJVoz3Gl-z53kjCuQ6bz94m4/edit"
+        },
+        "_optional_gan_game_activity_guide/how-ai-works/2023": {
+          "name": "(Opcionális) GAN Game Activity Guide",
+          "url": "https://docs.google.com/document/d/1XJ16vDcCDz1_cI8T9d554n_cxqEPT2EVCNh6ZLe1OwI/edit"
+        },
+        "generative_images/how-ai-works/2023": {
+          "name": "Generatív képek",
+          "url": "https://docs.google.com/presentation/d/1de7JbrVRXFg-eLUFCWUFTN5q7DAbpYzxU_oi6Ur37oM/template/preview"
+        },
+        "generative_images_activity_guide/how-ai-works/2023": {
+          "name": "[Key] Generatív képek tevékenységi útmutatója",
+          "url": "https://docs.google.com/document/d/1f9K9TA6gjNM5SYZB-yCovGA-agtWJdl-ATbUg9c4K_s/edit"
+        },
+        "how_ai_works_creativity_and_imagination/how-ai-works/2023": {
+          "name": "Hogyan működik az AI: kreativitás és képzelet",
+          "url": "https://www.youtube.com/watch?v=X994dDnmRmY",
+          "type": "Videó"
+        },
+        "noisy_image_activity_exemplar/how-ai-works/2023": {
+          "name": "[Exemplar] Zajos képtevékenység",
+          "url": "https://docs.google.com/document/d/1TkzwTBscbPo7fZl-21ggTqSECFdQ35dxoBrBSdX-0yw/"
+        },
+        "noisy_image_widget_activity_guide/how-ai-works/2023": {
+          "name": "Zajos kép widget tevékenységi útmutató",
+          "url": "https://docs.google.com/document/d/1rxB-NpxulH6SUyweHwGTxatqYAQc5Qt8ZQN9Dkgi6sE/"
+        },
+        "user_guide_noise_image_widget/how-ai-works/2023": {
+          "name": "Felhasználói útmutató: Noise Image Widget",
+          "url": "https://docs.google.com/presentation/d/1l3Ide0B-4k_IEhWYiCVz6OnyAL4fCmg-ROqogyqnVCo/view"
+        },
+        "video_and_vocabulary_guide_1/how-ai-works/2023": {
+          "name": "Videó és szókincs útmutató",
+          "url": "https://docs.google.com/document/d/1GtTFgGzPcoyokR3KsJ43ZjvgJnwUCWdZXvtrXoa78rQ/edit?usp=sharing"
+        },
+        "algorithmic_bias/how-ai-works/2023": {
+          "name": "Algoritmikus torzítás",
+          "url": "https://docs.google.com/presentation/d/1N_sFSTNrP2jpnQPdIAaIDPhQYroSiV5EYxSP3dZ-bHc/template/preview"
+        },
+        "how_ai_works_-_societal_impact/how-ai-works/2023": {
+          "name": "Hogyan működik az AI - Társadalmi hatás",
+          "url": "https://youtu.be/tJQSyzBUAew",
+          "type": "Videó"
+        },
+        "sharing_learnings_about_our_image_cropping_algorithm_twitter_/how-ai-works/2023": {
+          "name": "Tanulságok megosztása a képkivágási algoritmusunkról (Twitter)",
+          "url": "https://blog.twitter.com/engineering/en_us/topics/insights/2021/sharing-learnings-about-our-image-cropping-algorithm"
+        },
+        "twitter_says_its_image-cropping_algorithm_was_biased_so_it_s_ditching_it_cnn_/how-ai-works/2023": {
+          "name": "A Twitter szerint a képkivágási algoritmusa elfogult volt, ezért elárasztja (CNN)",
+          "url": "https://www.cnn.com/2021/05/19/tech/twitter-image-cropping-algorithm-bias/index.html"
+        },
+        "ai_code_of_ethics/how-ai-works/2023": {
+          "url": "https://docs.google.com/presentation/d/18r16dGGz9ZYwG-lSdC7s35-J4yrbc_glpubFZqYsuBg/template/preview"
+        },
+        "ai_ethics_research_areas/how-ai-works/2023": {
+          "url": "https://docs.google.com/document/d/1wfEQVKhZGmlybOevVoWFfpyqpHjTXTvj0ZZWf-8wme0/edit?usp=sharing"
+        },
+        "ai_ethics_research_reflection/how-ai-works/2023": {
+          "url": "https://docs.google.com/document/d/1KKCTMHVmaUA6B8wBnzT-nHzYCQ6seJD8z-o22dYBkd8/edit?usp=sharing"
+        },
+        "how_ai_works_-_privacy_and_future_of_work/how-ai-works/2023": {
+          "name": "Hogyan működik az AI - Adatvédelem és a munka jövője",
+          "url": "https://youtu.be/zNxw5gJtHLc",
+          "type": "Videó"
+        },
+        "does_ai_have_creativity_and_imagination_/how-ai-works/2023": {
+          "url": "https://www.youtube.com/watch?v=X994dDnmRmY",
+          "type": "Videó"
+        },
+        "how_ai_works/how-ai-works/2023": {
+          "name": "Hogyan működik az MI?",
+          "url": "https://docs.google.com/presentation/d/1Ca1i3-7p6sjC16TuEVF5chfC6Fw3ecM12inLOFXEKQg/template/preview"
+        },
+        "how_ai_works_ethics_ai_equal_access_and_algorithmic_bias/how-ai-works/2023": {
+          "name": "Hogyan működik az AI: Etika és AI: Egyenlő hozzáférés és algoritmikus torzítás",
+          "url": "https://youtu.be/tJQSyzBUAew",
+          "type": "Videó"
+        },
+        "how_ai_works_ethics_ai_privacy_the_future_of_work/how-ai-works/2023": {
+          "name": "Hogyan működik az AI: Etika és AI: Adatvédelem és a munka jövője",
+          "url": "https://youtu.be/zNxw5gJtHLc",
+          "type": "Videó"
+        },
+        "how_ai_works_introduction/how-ai-works/2023": {
+          "name": "Hogyan működik az AI: Bevezetés",
+          "url": "https://youtu.be/Ok-xpKjKp2g",
+          "type": "Videó"
+        },
+        "how_ai_works_training_data_and_bias/how-ai-works/2023": {
+          "name": "Hogyan működik az AI: Képzési adatok és elfogultság",
+          "type": "Videó"
+        },
+        "how_ai_works_what_is_machine_learning_/how-ai-works/2023": {
+          "name": "Hogyan működik az AI: Mi a gépi tanulás?",
+          "url": "https://youtu.be/KHbwOetbmbs",
+          "type": "Videó"
+        },
+        "how_chatbots_and_large_language_models_work/how-ai-works/2023": {
+          "url": "https://www.youtube.com/watch?v=X-AWdfSFCHQ",
+          "type": "Videó"
+        },
+        "vocabulary_matching/how-ai-works/2023": {
+          "name": "Szókincs egyeztetés",
+          "url": "https://docs.google.com/document/d/1Tbz8ULln11yU1hpD73OzgRUnujWjdpdOi8fKQsOAiIk/edit"
+        },
+        "_key_vocabulary_matching/how-ai-works/2023": {
+          "name": "[Key] Szókincs egyeztetés",
+          "url": "https://drive.google.com/file/d/1cF8MsKO_lCLziA5FisbcQc2-529j1HXZ/view"
+        },
         "dance-party-playlist/dance-2019/unversioned": {
           "name": "Spotify lejátszólista (minden korosztálynak)"
         },

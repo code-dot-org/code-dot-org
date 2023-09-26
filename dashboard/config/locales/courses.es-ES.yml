@@ -593,6 +593,9 @@ es:
           title: virtual-pl-csd-verano-2023
         vpl-csa-2023:
           title: Aprendizaje Profesional Virtual de CSA
+          version_title: '2023'
+        vpl-csd-2023:
+          version_title: '2023'
         vpl-csd-ayw-pilot-2022:
           title: Descubrimientos de Informática - Talleres virtuales del Año Académico
         vpl-csd-summer-ci-2023:
@@ -615,6 +618,8 @@ es:
         vpl-csd-summer-pilot-ci-2022:
           title: vpl-csd-verano-piloto-ci
           version_title: 21-22
+        vpl-csp-2023:
+          version_title: '2023'
     resources:
       all_code/csd/2021:
         name: Todos los Códigos

@@ -50,6 +50,9 @@
         "CourseD_Dance_2020_01_2021": {
           "dance_callout_01": "Tria el tipus de ballarí aquí."
         },
+        "CourseD_Dance_2020_01_2023": {
+          "dance_callout_01": "Tria el tipus de ballarí aquí."
+        },
         "CourseD_Dance_2020_02": {
           "arrow_buttons": "Prem les fletxes per controlar el teu ballarí.",
           "dance_callout_11_a": "Afegeix aquest bloc al teu programa."
@@ -62,6 +65,10 @@
           "arrow_buttons": "Prem les fletxes per controlar el teu ballarí.",
           "dance_callout_11_a": "Afegeix aquest bloc al teu programa."
         },
+        "CourseD_Dance_2020_02_2023": {
+          "arrow_buttons": "Prem les fletxes per controlar el teu ballarí.",
+          "dance_callout_11_a": "Afegeix aquest bloc al teu programa."
+        },
         "CourseD_Dance_2020_04": {
           "dance_callout_02": "Afegir aquest bloc al teu programa!"
         },
@@ -69,6 +76,9 @@
           "dance_callout_02": "Afegir aquest bloc al teu programa!"
         },
         "CourseD_Dance_2020_04_2021": {
+          "dance_callout_02": "Afegir aquest bloc al teu programa!"
+        },
+        "CourseD_Dance_2020_04_2023": {
           "dance_callout_02": "Afegir aquest bloc al teu programa!"
         },
         "CourseD_Dance_2020_05": {
@@ -80,6 +90,9 @@
         "CourseD_Dance_2020_05_2021": {
           "dance_callout_05": "Afegeix un esdeveniment nou al teu programa."
         },
+        "CourseD_Dance_2020_05_2023": {
+          "dance_callout_05": "Afegeix un esdeveniment nou al teu programa."
+        },
         "CourseD_Dance_2020_06": {
           "dance_party_11_5_groups": "Nou bloc!"
         },
@@ -87,6 +100,9 @@
           "dance_party_11_5_groups": "Nou bloc!"
         },
         "CourseD_Dance_2020_06_2021": {
+          "dance_party_11_5_groups": "Nou bloc!"
+        },
+        "CourseD_Dance_2020_06_2023": {
           "dance_party_11_5_groups": "Nou bloc!"
         },
         "CourseD_Dance_2020_07": {
@@ -98,6 +114,9 @@
         "CourseD_Dance_2020_07_2021": {
           "setprop_hint": "Nou bloc!"
         },
+        "CourseD_Dance_2020_07_2023": {
+          "setprop_hint": "Nou bloc!"
+        },
         "CourseD_Dance_2020_09": {
           "new_block_3": "Nou bloc!",
           "new_block_4": "Nou bloc!"
@@ -107,6 +126,10 @@
           "new_block_4": "Nou bloc!"
         },
         "CourseD_Dance_2020_09_2021": {
+          "new_block_3": "Nou bloc!",
+          "new_block_4": "Nou bloc!"
+        },
+        "CourseD_Dance_2020_09_2023": {
           "new_block_3": "Nou bloc!",
           "new_block_4": "Nou bloc!"
         },
@@ -137,10 +160,17 @@
           "minitoolbox": "Fes clic aquí per expandir el bloc.",
           "pointerlocation": "Arrossega un bloc de \"subjecte\" aquí."
         },
+        "CourseF_outbreak2_2023": {
+          "minitoolbox": "Fes clic aquí per expandir el bloc.",
+          "pointerlocation": "Arrossega un bloc de \"subjecte\" aquí."
+        },
         "CourseF_outbreak7": {
           "costumes_callout": "Fes clic per fer un vestit nou"
         },
         "CourseF_outbreak7_-2022-2": {
+          "costumes_tab": "Feu clic aquí per afegir disfresses al vostre projecte."
+        },
+        "CourseF_outbreak7_2023": {
           "costumes_tab": "Feu clic aquí per afegir disfresses al vostre projecte."
         },
         "Dance_2019_01": {
@@ -197,6 +227,9 @@
         "Fish Tank 3-validated_2021": {
           "spritelab_comment": "Fes sevir aquest bloc per deixar comentaris, per tu mateix o pel teu professor, sobre com funciona el teu codi."
         },
+        "Fish Tank 3-validated_2023": {
+          "spritelab_comment": "Fes sevir aquest bloc per deixar comentaris, per tu mateix o pel teu professor, sobre com funciona el teu codi."
+        },
         "Function intro Ryan": {
           "Function_intro_Ryan_1": "Aquesta instrucció tan petita li diu a l'ordinador que executi un tros de codi ben GRAN del mateix nom que hi ha a l'espai de treball."
         },
@@ -210,6 +243,9 @@
           "Function_intro_Ryan_1": "Aquesta instrucció tan petita li diu a l'ordinador que executi un tros de codi ben GRAN del mateix nom que hi ha a l'espai de treball."
         },
         "Function intro Ryan_2021": {
+          "Function_intro_Ryan_1": "Aquesta instrucció tan petita li diu a l'ordinador que executi un tros de codi ben GRAN del mateix nom que hi ha a l'espai de treball."
+        },
+        "Function intro Ryan_2023": {
           "Function_intro_Ryan_1": "Aquesta instrucció tan petita li diu a l'ordinador que executi un tros de codi ben GRAN del mateix nom que hi ha a l'espai de treball."
         },
         "Infinity_move_collide": {
@@ -246,6 +282,9 @@
         "MC_HOC_2017_03_Cole_2021": {
           "MC_HOC_2017_03_Cole_1": "Aquest és un bucle de \"repetir\"!  Fes clic a l'espai de treball i afegeix el codi que vulguis que es repeteixi una vegada i una altra."
         },
+        "MC_HOC_2017_03_Cole_2023": {
+          "MC_HOC_2017_03_Cole_1": "Aquest és un bucle de \"repetir\"!  Fes clic a l'espai de treball i afegeix el codi que vulguis que es repeteixi una vegada i una altra."
+        },
         "MC_HOC_2017_04_Cole": {
           "MC_HOC_2017_04_Cole_a": "L'Agent pot levitar sobre l'aigua, però el jugador no!"
         },
@@ -259,6 +298,9 @@
           "MC_HOC_2017_04_Cole_a": "L'Agent pot levitar sobre l'aigua, però el jugador no!"
         },
         "MC_HOC_2017_04_Cole_2021": {
+          "MC_HOC_2017_04_Cole_a": "L'Agent pot levitar sobre l'aigua, però el jugador no!"
+        },
+        "MC_HOC_2017_04_Cole_2023": {
           "MC_HOC_2017_04_Cole_a": "L'Agent pot levitar sobre l'aigua, però el jugador no!"
         },
         "MC_HOC_2017_06_Cole": {
@@ -276,6 +318,9 @@
         "MC_HOC_2017_06_Cole_2021": {
           "MC_HOC_2017_06_Cole_1": "Aquests blocs no els pots llençar, però sí que els pots editar!"
         },
+        "MC_HOC_2017_06_Cole_2023": {
+          "MC_HOC_2017_06_Cole_1": "Aquests blocs no els pots llençar, però sí que els pots editar!"
+        },
         "MC_HOC_2017_Ali": {
           "MC_HOC_2017_08_RY_1": "L'Agent pot levitar sobre la lava, però l'Steve i l'Alex no!  "
         },
@@ -289,6 +334,9 @@
           "MC_HOC_2017_08_RY_1": "L'Agent pot levitar sobre la lava, però l'Steve i l'Alex no!  "
         },
         "MC_HOC_2017_Ali_2021": {
+          "MC_HOC_2017_08_RY_1": "L'Agent pot levitar sobre la lava, però l'Steve i l'Alex no!  "
+        },
+        "MC_HOC_2017_Ali_2023": {
           "MC_HOC_2017_08_RY_1": "L'Agent pot levitar sobre la lava, però l'Steve i l'Alex no!  "
         },
         "NEW Course 4 Artist Functions 7": {
@@ -340,6 +388,9 @@
         "Overworld Chop Trees_2021": {
           "craft_callout_preplaced": "Hem posat alguns blocs aquí per a que puguis començar"
         },
+        "Overworld Chop Trees_2023": {
+          "craft_callout_preplaced": "Hem posat alguns blocs aquí per a que puguis començar"
+        },
         "Overworld House Frame Chosen": {
           "craft_callout_preplaced_house": "Aquest codi començarà a construir la teva casa. Pots acabar-lo?"
         },
@@ -353,6 +404,9 @@
           "craft_callout_preplaced_house": "Aquest codi començarà a construir la teva casa. Pots acabar-lo?"
         },
         "Overworld House Frame Chosen_2021": {
+          "craft_callout_preplaced_house": "Aquest codi començarà a construir la teva casa. Pots acabar-lo?"
+        },
+        "Overworld House Frame Chosen_2023": {
           "craft_callout_preplaced_house": "Aquest codi començarà a construir la teva casa. Pots acabar-lo?"
         },
         "Overworld Move to Sheep": {
@@ -375,6 +429,10 @@
           "craft_drag_block_callout": "Arrossega un bloc \"avançar\" i enganxa'l a sota de l'altre bloc.",
           "craft_run_button_callout": "Fes clic a \"Executar\" per provar el teu programa"
         },
+        "Overworld Move to Sheep_2023": {
+          "craft_drag_block_callout": "Arrossega un bloc \"avançar\" i enganxa'l a sota de l'altre bloc.",
+          "craft_run_button_callout": "Fes clic a \"Executar\" per provar el teu programa"
+        },
         "Overworld Place Wall": {
           "craft_inside_repeat": "Repeteix accions posant blocs d'aquí"
         },
@@ -388,6 +446,9 @@
           "craft_inside_repeat": "Repeteix accions posant blocs d'aquí"
         },
         "Overworld Place Wall_2021": {
+          "craft_inside_repeat": "Repeteix accions posant blocs d'aquí"
+        },
+        "Overworld Place Wall_2023": {
           "craft_inside_repeat": "Repeteix accions posant blocs d'aquí"
         },
         "Underground Avoiding Lava": {
@@ -405,6 +466,9 @@
         "Underground Avoiding Lava_2021": {
           "craft_callout_moveforward": "Aquest codi buscarà lava, pots afegir una ordre per a seguir endavant?"
         },
+        "Underground Avoiding Lava_2023": {
+          "craft_callout_moveforward": "Aquest codi buscarà lava, pots afegir una ordre per a seguir endavant?"
+        },
         "Underground Iron": {
           "craft_what_is_iron": "Excava el ferro!"
         },
@@ -420,6 +484,9 @@
         "Underground Iron_2021": {
           "craft_what_is_iron": "Excava el ferro!"
         },
+        "Underground Iron_2023": {
+          "craft_what_is_iron": "Excava el ferro!"
+        },
         "Virtual Pet 2_-2022-2": {
           "vp_costumes": "Fes clic aquí per afegir vestits nous al teu projecte!"
         },
@@ -432,10 +499,16 @@
         "Virtual Pet 2_2021": {
           "vp_costumes": "Fes clic aquí per afegir vestits nous al teu projecte!"
         },
+        "Virtual Pet 2_2023": {
+          "vp_costumes": "Fes clic aquí per afegir vestits nous al teu projecte!"
+        },
         "Virtual Pet 6_-2022-2": {
           "vp_costumes": "Fes clic aquí per afegir vestits nous al teu projecte!"
         },
         "Virtual Pet 6_2021": {
+          "vp_costumes": "Fes clic aquí per afegir vestits nous al teu projecte!"
+        },
+        "Virtual Pet 6_2023": {
           "vp_costumes": "Fes clic aquí per afegir vestits nous al teu projecte!"
         },
         "behaviors 1": {
@@ -474,10 +547,16 @@
         "courseA_EOC_playlab_animals2022": {
           "question_mark": "?"
         },
+        "courseA_EOC_playlab_animals_2023": {
+          "question_mark": "?"
+        },
         "courseA_EOC_playlab_fantasy": {
           "question_mark": "?"
         },
         "courseA_EOC_playlab_fantasy2022": {
+          "question_mark": "?"
+        },
+        "courseA_EOC_playlab_fantasy_2023": {
           "question_mark": "?"
         },
         "courseA_EOC_playlab_people": {
@@ -486,10 +565,16 @@
         "courseA_EOC_playlab_people2022": {
           "question_mark": "?"
         },
+        "courseA_EOC_playlab_people_2023": {
+          "question_mark": "?"
+        },
         "courseA_artist_loops4": {
           "courseA_artist_loops4_1": "Aquest número t'indica quants d'aquests blocs pots fer servir en aquest trencaclosques."
         },
         "courseA_artist_loops42022": {
+          "courseA_artist_loops4_1": "Aquest número t'indica quants d'aquests blocs pots fer servir en aquest trencaclosques."
+        },
+        "courseA_artist_loops42022_2023": {
           "courseA_artist_loops4_1": "Aquest número t'indica quants d'aquests blocs pots fer servir en aquest trencaclosques."
         },
         "courseA_artist_loops4_2018": {
@@ -510,6 +595,9 @@
         "courseA_artist_loops72022": {
           "courseA_artist_loops7_1": "Aquest número significa que només pots utilitzar un bloc d'aquest tipus a la resposta final."
         },
+        "courseA_artist_loops72022_2023": {
+          "courseA_artist_loops7_1": "Aquest número significa que només pots utilitzar un bloc d'aquest tipus a la resposta final."
+        },
         "courseA_artist_loops7_2018": {
           "courseA_artist_loops7_1": "Aquest número significa que només pots utilitzar un bloc d'aquest tipus a la resposta final."
         },
@@ -526,6 +614,9 @@
           "courseA_artist_loops8_1": "Sabies que pots tornar a dibuixar per sobre d'una línia si et fa falta?"
         },
         "courseA_artist_loops82022": {
+          "courseA_artist_loops8_1": "Sabies que pots tornar a dibuixar per sobre d'una línia si et fa falta?"
+        },
+        "courseA_artist_loops82022_2023": {
           "courseA_artist_loops8_1": "Sabies que pots tornar a dibuixar per sobre d'una línia si et fa falta?"
         },
         "courseA_artist_loops8_2018": {
@@ -552,6 +643,9 @@
         "courseA_collector_loops1_2021": {
           "courseA_collector_loops1_1": "Fes servir aquest bloc per agafar el tresor."
         },
+        "courseA_collector_loops1_2023": {
+          "courseA_collector_loops1_1": "Fes servir aquest bloc per agafar el tresor."
+        },
         "courseA_collector_loops3": {
           "gradek_adventurer_loops2_1": "Aquest número t'indica quants d'aquests blocs pots fer servir en aquest trencaclosques."
         },
@@ -570,6 +664,9 @@
         "courseA_collector_loops3_2021": {
           "gradek_adventurer_loops2_1": "Aquest número t'indica quants d'aquests blocs pots fer servir en aquest trencaclosques."
         },
+        "courseA_collector_loops3_2023": {
+          "gradek_adventurer_loops2_1": "Aquest número t'indica quants d'aquests blocs pots fer servir en aquest trencaclosques."
+        },
         "courseA_maze_ramp22022": {
           "courseC_maze_programming2_1": "Aquesta és la caixa d'eines. Aquí hi trobaràs blocs addicionals per completar els trencaclosques."
         },
@@ -580,6 +677,9 @@
           "courseC_maze_programming2_1": "Aquesta és la caixa d'eines. Aquí hi trobaràs blocs addicionals per completar els trencaclosques."
         },
         "courseA_maze_ramp2_2021": {
+          "courseC_maze_programming2_1": "Aquesta és la caixa d'eines. Aquí hi trobaràs blocs addicionals per completar els trencaclosques."
+        },
+        "courseA_maze_ramp2_2023": {
           "courseC_maze_programming2_1": "Aquesta és la caixa d'eines. Aquí hi trobaràs blocs addicionals per completar els trencaclosques."
         },
         "courseA_maze_ramp3a_2018": {
@@ -603,10 +703,16 @@
         "courseA_maze_seq1_2021": {
           "courseA_maze_seq1_1": "Fes clic en la bombeta quan necessitis una pista!"
         },
+        "courseA_maze_seq1_2023": {
+          "courseA_maze_seq1_1": "Fes clic en la bombeta quan necessitis una pista!"
+        },
         "courseA_playLab_events4": {
           "courseA_playlab_events4_callout1": "Això és una trucada"
         },
         "courseA_playLab_events42022": {
+          "courseA_playlab_events4_callout1": "Això és una trucada"
+        },
+        "courseA_playLab_events42022_2023": {
           "courseA_playlab_events4_callout1": "Això és una trucada"
         },
         "courseA_playLab_events4_2018": {
@@ -627,6 +733,9 @@
         "courseA_playLab_events52022": {
           "courseA_playLab_events5_1": "Fes clic aquí per canviar la direcció de la fletxa de l'esdeveniment."
         },
+        "courseA_playLab_events52022_2023": {
+          "courseA_playLab_events5_1": "Fes clic aquí per canviar la direcció de la fletxa de l'esdeveniment."
+        },
         "courseA_playLab_events5_2018": {
           "courseA_playLab_events5_1": "Fes clic aquí per canviar la direcció de la fletxa de l'esdeveniment."
         },
@@ -645,6 +754,9 @@
         "courseA_playLab_events62022": {
           "courseA_playLab_events6_1": "Amb això pots triar un so \"aleatori\", és a dir, que no sabràs què sentiràs fins que soni!"
         },
+        "courseA_playLab_events62022_2023": {
+          "courseA_playLab_events6_1": "Amb això pots triar un so \"aleatori\", és a dir, que no sabràs què sentiràs fins que soni!"
+        },
         "courseA_playLab_events6_2018": {
           "courseA_playLab_events6_1": "Amb això pots triar un so \"aleatori\", és a dir, que no sabràs què sentiràs fins que soni!"
         },
@@ -660,6 +772,9 @@
         "courseB_Scrat_ramp12022": {
           "grade2_CaringForNewPet_0_1": "Després de connectar tots els blocs, prem \"Executar\" per iniciar el programa."
         },
+        "courseB_Scrat_ramp12022_2023": {
+          "grade2_CaringForNewPet_0_1": "Després de connectar tots els blocs, prem \"Executar\" per iniciar el programa."
+        },
         "courseB_Scrat_ramp1_2018": {
           "grade2_CaringForNewPet_0_1": "Després de connectar tots els blocs, prem \"Executar\" per iniciar el programa."
         },
@@ -673,6 +788,9 @@
           "grade2_CaringForNewPet_0_1": "Després de connectar tots els blocs, prem \"Executar\" per iniciar el programa."
         },
         "courseB_Scrat_ramp3a2022": {
+          "courseC_maze_programming2_1": "Aquesta és la caixa d'eines. Aquí hi trobaràs blocs addicionals per completar els trencaclosques."
+        },
+        "courseB_Scrat_ramp3a2022_2023": {
           "courseC_maze_programming2_1": "Aquesta és la caixa d'eines. Aquí hi trobaràs blocs addicionals per completar els trencaclosques."
         },
         "courseB_Scrat_ramp3a_2019": {
@@ -702,6 +820,9 @@
         "courseB_artist_loops3_2021": {
           "courseB_artist_loops3_1": "Només tens un d'aquests blocs a la caixa d'eines. Com el vols fer servir?"
         },
+        "courseB_artist_loops3_2023": {
+          "courseB_artist_loops3_1": "Només tens un d'aquests blocs a la caixa d'eines. Com el vols fer servir?"
+        },
         "courseB_collector_loops12022": {
           "courseB_collector_loops1_1": "Fes servir aquest bloc per agafar el tresor."
         },
@@ -715,6 +836,9 @@
           "courseB_collector_loops1_1": "Fes servir aquest bloc per agafar el tresor."
         },
         "courseB_collector_loops1_2021": {
+          "courseB_collector_loops1_1": "Fes servir aquest bloc per agafar el tresor."
+        },
+        "courseB_collector_loops1_2023": {
           "courseB_collector_loops1_1": "Fes servir aquest bloc per agafar el tresor."
         },
         "courseB_maze_seq1": {
@@ -735,6 +859,9 @@
         "courseB_maze_seq1_2021": {
           "courseB_maze_seq1": "Fes clic en la bombeta quan necessitis una pista!"
         },
+        "courseB_maze_seq1_2023": {
+          "courseB_maze_seq1": "Fes clic en la bombeta quan necessitis una pista!"
+        },
         "courseB_playlab_events6": {
           "courseB_playlab_events6_a": "Fes servir la fletxa desplegable verda per canviar les direccions."
         },
@@ -753,6 +880,9 @@
         "courseB_playlab_events6_2021": {
           "courseB_playlab_events6_a": "Fes servir la fletxa desplegable verda per canviar les direccions."
         },
+        "courseB_playlab_events6_2023": {
+          "courseB_playlab_events6_a": "Fes servir la fletxa desplegable verda per canviar les direccions."
+        },
         "courseC19_playLab_EOC3": {
           "courseE_playLab_scaffold3_1": "Porta l'actor fins a aquesta banderola per passar al nivell següent."
         },
@@ -763,6 +893,9 @@
           "courseE_playLab_scaffold3_1": "Porta l'actor fins a aquesta banderola per passar al nivell següent."
         },
         "courseC19_playLab_EOC3_2021": {
+          "courseE_playLab_scaffold3_1": "Porta l'actor fins a aquesta banderola per passar al nivell següent."
+        },
+        "courseC19_playLab_EOC3_2023": {
           "courseE_playLab_scaffold3_1": "Porta l'actor fins a aquesta banderola per passar al nivell següent."
         },
         "courseC_PlayLab_events8": {
@@ -783,6 +916,9 @@
         "courseC_PlayLab_events8_2021": {
           "courseC_PlayLab_events8_callout1": "Fes servir aquest bloc per quan el pingüí Waddles i el dinosaure Chomp es toquin!"
         },
+        "courseC_PlayLab_events8_2023": {
+          "courseC_PlayLab_events8_callout1": "Fes servir aquest bloc per quan el pingüí Waddles i el dinosaure Chomp es toquin!"
+        },
         "courseC_PlayLab_events_challenge1": {
           "courseC_PlayLab_events_challenge1_1": "Amb aquest bloc podràs moure els actors cap a diferents punts de l'espai de joc."
         },
@@ -801,7 +937,13 @@
         "courseC_PlayLab_events_challenge1_2021": {
           "courseC_PlayLab_events_challenge1_1": "Amb aquest bloc podràs moure els actors cap a diferents punts de l'espai de joc."
         },
+        "courseC_PlayLab_events_challenge1_2023": {
+          "courseC_PlayLab_events_challenge1_1": "Amb aquest bloc podràs moure els actors cap a diferents punts de l'espai de joc."
+        },
         "courseC_PlayLab_events_lesson_extras": {
+          "courseC_PlayLab_events_challenge1_1": "Amb aquest bloc podràs moure els actors cap a diferents punts de l'espai de joc."
+        },
+        "courseC_PlayLab_events_lesson_extras_2023": {
           "courseC_PlayLab_events_challenge1_1": "Amb aquest bloc podràs moure els actors cap a diferents punts de l'espai de joc."
         },
         "courseC_artist_loops1a2022": {
@@ -816,6 +958,9 @@
         "courseC_artist_loops1a_2021": {
           "jumpto_callout": "Aquest bloc és molt important en aquest projecte. No t'oblidis de fer-lo servir!"
         },
+        "courseC_artist_loops1a_2023": {
+          "jumpto_callout": "Aquest bloc és molt important en aquest projecte. No t'oblidis de fer-lo servir!"
+        },
         "courseC_artist_loops1b2022": {
           "sticker2": "Afegeix això al mig del teu programa."
         },
@@ -828,10 +973,16 @@
         "courseC_artist_loops1b_2021": {
           "sticker2": "Afegeix això al mig del teu programa."
         },
+        "courseC_artist_loops1b_2023": {
+          "sticker2": "Afegeix això al mig del teu programa."
+        },
         "courseC_artist_prog22022": {
           "slider": "Aquí pots fer que el teu programa vagi més lent."
         },
         "courseC_artist_prog2_2021": {
+          "slider": "Aquí pots fer que el teu programa vagi més lent."
+        },
+        "courseC_artist_prog2_2023": {
           "slider": "Aquí pots fer que el teu programa vagi més lent."
         },
         "courseC_collector_prog12022": {
@@ -847,6 +998,9 @@
           "courseC_collector_prog1_1": "Veus algun bloc nou a la caixa d'eines?  No pateixis, en una altra lliçó t'explicarem com funcionen."
         },
         "courseC_collector_prog1_2021": {
+          "courseC_collector_prog1_1": "Veus algun bloc nou a la caixa d'eines?  No pateixis, en una altra lliçó t'explicarem com funcionen."
+        },
+        "courseC_collector_prog1_2023": {
           "courseC_collector_prog1_1": "Veus algun bloc nou a la caixa d'eines?  No pateixis, en una altra lliçó t'explicarem com funcionen."
         },
         "courseC_collector_prog7": {
@@ -867,6 +1021,9 @@
         "courseC_collector_prog7_2021": {
           "courseC_collector_prog7_1": "Si et fa falta, pots treure més blocs de la caixa d'eines!"
         },
+        "courseC_collector_prog7_2023": {
+          "courseC_collector_prog7_1": "Si et fa falta, pots treure més blocs de la caixa d'eines!"
+        },
         "courseC_harvester_loops1": {
           "courseC_harvester_loops1_callout1": "El número quatre que apareix sobre la carabassa indica que hi ha quatre carabasses per collir."
         },
@@ -885,6 +1042,9 @@
         "courseC_harvester_loops1_2021": {
           "courseC_harvester_loops1_callout1": "El número quatre que apareix sobre la carabassa indica que hi ha quatre carabasses per collir."
         },
+        "courseC_harvester_loops1_2023": {
+          "courseC_harvester_loops1_callout1": "El número quatre que apareix sobre la carabassa indica que hi ha quatre carabasses per collir."
+        },
         "courseC_maze_debugging52022": {
           "courseC_maze_debugging5_1": "Aquest blocs estan bloquejats, no els pots eliminar!"
         },
@@ -897,6 +1057,9 @@
         "courseC_maze_debugging5_2021": {
           "courseC_maze_debugging5_1": "Aquest blocs estan bloquejats, no els pots eliminar!"
         },
+        "courseC_maze_debugging5_2023": {
+          "courseC_maze_debugging5_1": "Aquest blocs estan bloquejats, no els pots eliminar!"
+        },
         "courseC_maze_debugging92022": {
           "courseC_maze_debugging9_2019_1": "Arrossega els blocs per treure'ls de la caixa d'eines i portar-los a l'espai de treball."
         },
@@ -907,6 +1070,9 @@
           "courseC_maze_debugging9_2019_1": "Arrossega els blocs per treure'ls de la caixa d'eines i portar-los a l'espai de treball."
         },
         "courseC_maze_debugging9_2021": {
+          "courseC_maze_debugging9_2019_1": "Arrossega els blocs per treure'ls de la caixa d'eines i portar-los a l'espai de treball."
+        },
+        "courseC_maze_debugging9_2023": {
           "courseC_maze_debugging9_2019_1": "Arrossega els blocs per treure'ls de la caixa d'eines i portar-los a l'espai de treball."
         },
         "courseC_maze_debugging9_copy_2020": {
@@ -930,6 +1096,9 @@
         "courseC_maze_programming1_2021": {
           "grade2_CaringForNewPet_0_1": "Després de connectar tots els blocs, prem \"Executar\" per iniciar el programa."
         },
+        "courseC_maze_programming1_2023": {
+          "grade2_CaringForNewPet_0_1": "Després de connectar tots els blocs, prem \"Executar\" per iniciar el programa."
+        },
         "courseC_maze_programming2": {
           "courseC_maze_programming2_1": "Aquesta és la caixa d'eines. Aquí hi trobaràs blocs addicionals per completar els trencaclosques."
         },
@@ -946,6 +1115,9 @@
           "courseC_maze_programming2_1": "Aquesta és la caixa d'eines. Aquí hi trobaràs blocs addicionals per completar els trencaclosques."
         },
         "courseC_maze_programming2_2021": {
+          "courseC_maze_programming2_1": "Aquesta és la caixa d'eines. Aquí hi trobaràs blocs addicionals per completar els trencaclosques."
+        },
+        "courseC_maze_programming2_2023": {
           "courseC_maze_programming2_1": "Aquesta és la caixa d'eines. Aquí hi trobaràs blocs addicionals per completar els trencaclosques."
         },
         "courseC_maze_programming3": {
@@ -972,6 +1144,10 @@
           "courseC_maze_programming3_2": "Pots arrossegar els blocs addicionals a la caixa d'eines per desfer-te'n.",
           "courseC_maze_programming3_3": "Aquests blocs són de pedra i no es poden eliminar."
         },
+        "courseC_maze_programming3_2023": {
+          "courseC_maze_programming3_2": "Pots arrossegar els blocs addicionals a la caixa d'eines per desfer-te'n.",
+          "courseC_maze_programming3_3": "Aquests blocs són de pedra i no es poden eliminar."
+        },
         "courseC_maze_programming4": {
           "courseC_maze_programming4_1": "Aquest es el límit de blocs que tens. Indica quants d'aquests blocs encara pots fer servir."
         },
@@ -990,6 +1166,9 @@
         "courseC_maze_programming4_2021": {
           "courseC_maze_programming4_1": "Aquest es el límit de blocs que tens. Indica quants d'aquests blocs encara pots fer servir."
         },
+        "courseC_maze_programming4_2023": {
+          "courseC_maze_programming4_1": "Aquest es el límit de blocs que tens. Indica quants d'aquests blocs encara pots fer servir."
+        },
         "courseC_maze_programming5": {
           "": "Aquests blocs no tenen números. En pots fer servir tants com vulguis!"
         },
@@ -1006,6 +1185,9 @@
           "": "Aquests blocs no tenen números. En pots fer servir tants com vulguis!"
         },
         "courseC_maze_programming5_2021": {
+          "": "Aquests blocs no tenen números. En pots fer servir tants com vulguis!"
+        },
+        "courseC_maze_programming5_2023": {
           "": "Aquests blocs no tenen números. En pots fer servir tants com vulguis!"
         },
         "courseC_maze_programming7": {
@@ -1032,6 +1214,10 @@
           "courseC_maze_programming7_1": "Has arribat al teu primer repte de trencaclosques! Són força difícils, i potser et faran falta diversos intents.",
           "courseC_maze_programming7_2": "Aquests blocs són de pedra i no es poden eliminar."
         },
+        "courseC_maze_programming7_2023": {
+          "courseC_maze_programming7_1": "Has arribat al teu primer repte de trencaclosques! Són força difícils, i potser et faran falta diversos intents.",
+          "courseC_maze_programming7_2": "Aquests blocs són de pedra i no es poden eliminar."
+        },
         "courseC_starWars_loops2": {
           "courseC_starWars_loops2": "En aquest trencaclosques, només tens un d'aquests blocs."
         },
@@ -1048,6 +1234,9 @@
           "courseC_starWars_loops2": "En aquest trencaclosques, només tens un d'aquests blocs."
         },
         "courseC_starWars_loops2_2021": {
+          "courseC_starWars_loops2": "En aquest trencaclosques, només tens un d'aquests blocs."
+        },
+        "courseC_starWars_loops2_2023": {
           "courseC_starWars_loops2": "En aquest trencaclosques, només tens un d'aquests blocs."
         },
         "courseC_starWars_loops2_copy": {
@@ -1074,6 +1263,9 @@
         "courseD_artist_nestedLoops1a_2021": {
           "courseD_artist_nestedLoops1a_1": "No cal que facis servir colors per acabar aquest trencaclosques. Però si vols, aquest bloc de \"color aleatori\" t'ho posarà molt fàcil!"
         },
+        "courseD_artist_nestedLoops1a_2023": {
+          "courseD_artist_nestedLoops1a_1": "No cal que facis servir colors per acabar aquest trencaclosques. Però si vols, aquest bloc de \"color aleatori\" t'ho posarà molt fàcil!"
+        },
         "courseD_bee_conditionals2": {
           "4_5_Bee_Conditionals_2_1": "Recroda comprovar si CADA núvol té una FLOR. No cal que busquis ruscs!"
         },
@@ -1090,6 +1282,9 @@
           "4_5_Bee_Conditionals_2_1": "Recroda comprovar si CADA núvol té una FLOR. No cal que busquis ruscs!"
         },
         "courseD_bee_conditionals2_2021": {
+          "4_5_Bee_Conditionals_2_1": "Recroda comprovar si CADA núvol té una FLOR. No cal que busquis ruscs!"
+        },
+        "courseD_bee_conditionals2_2023": {
           "4_5_Bee_Conditionals_2_1": "Recroda comprovar si CADA núvol té una FLOR. No cal que busquis ruscs!"
         },
         "courseD_bee_conditionals2_copy": {
@@ -1116,10 +1311,16 @@
         "courseD_bee_conditionals_challenge2_2021": {
           "courseD_bee_conditionals_challenge2_1": "Fes servir aquest bucle per recollir tot el nèctar (o mel) d'una flor (o d'un rusc)."
         },
+        "courseD_bee_conditionals_challenge2_2023": {
+          "courseD_bee_conditionals_challenge2_1": "Fes servir aquest bucle per recollir tot el nèctar (o mel) d'una flor (o d'un rusc)."
+        },
         "courseD_bee_nestedLoops1a2022": {
           "stepButton": "Repassa el codi bloc per bloc."
         },
         "courseD_bee_nestedLoops1a_2021": {
+          "stepButton": "Repassa el codi bloc per bloc."
+        },
+        "courseD_bee_nestedLoops1a_2023": {
           "stepButton": "Repassa el codi bloc per bloc."
         },
         "courseD_farmer_while72022": {
@@ -1137,6 +1338,9 @@
         "courseD_farmer_while7_2021": {
           "courseD_farmer_while7_2018_PathAhead": "Hauràs de fer servir el bloc \"while camí davant\" per resoldre aquest trencaclosques."
         },
+        "courseD_farmer_while7_2023": {
+          "courseD_farmer_while7_2018_PathAhead": "Hauràs de fer servir el bloc \"while camí davant\" per resoldre aquest trencaclosques."
+        },
         "courseD_maze_intro42022": {
           "courseC_maze_programming4_1": "Aquest es el límit de blocs que tens. Indica quants d'aquests blocs encara pots fer servir."
         },
@@ -1149,6 +1353,9 @@
         "courseD_maze_intro4_2021": {
           "courseC_maze_programming4_1": "Aquest es el límit de blocs que tens. Indica quants d'aquests blocs encara pots fer servir."
         },
+        "courseD_maze_intro4_2023": {
+          "courseC_maze_programming4_1": "Aquest es el límit de blocs que tens. Indica quants d'aquests blocs encara pots fer servir."
+        },
         "courseD_maze_intro5a2022": {
           "": "Aquests blocs no tenen números. En pots fer servir tants com vulguis!"
         },
@@ -1159,6 +1366,9 @@
           "": "Aquests blocs no tenen números. En pots fer servir tants com vulguis!"
         },
         "courseD_maze_intro5a_2021": {
+          "": "Aquests blocs no tenen números. En pots fer servir tants com vulguis!"
+        },
+        "courseD_maze_intro5a_2023": {
           "": "Aquests blocs no tenen números. En pots fer servir tants com vulguis!"
         },
         "courseD_maze_ramp1": {
@@ -1179,6 +1389,9 @@
         "courseD_maze_ramp1_2021": {
           "grade2_CaringForNewPet_0_1": "Després de connectar tots els blocs, prem \"Executar\" per iniciar el programa."
         },
+        "courseD_maze_ramp1_2023": {
+          "grade2_CaringForNewPet_0_1": "Després de connectar tots els blocs, prem \"Executar\" per iniciar el programa."
+        },
         "courseD_maze_ramp2": {
           "courseC_maze_programming2_1": "Aquesta és la caixa d'eines. Aquí hi trobaràs blocs addicionals per completar els trencaclosques."
         },
@@ -1195,6 +1408,9 @@
           "courseC_maze_programming2_1": "Aquesta és la caixa d'eines. Aquí hi trobaràs blocs addicionals per completar els trencaclosques."
         },
         "courseD_maze_ramp2_2021": {
+          "courseC_maze_programming2_1": "Aquesta és la caixa d'eines. Aquí hi trobaràs blocs addicionals per completar els trencaclosques."
+        },
+        "courseD_maze_ramp2_2023": {
           "courseC_maze_programming2_1": "Aquesta és la caixa d'eines. Aquí hi trobaràs blocs addicionals per completar els trencaclosques."
         },
         "courseD_maze_ramp3": {
@@ -1216,6 +1432,10 @@
           "stone_block_2": "Els blocs grisos no es poden eliminar."
         },
         "courseD_maze_ramp3_2021": {
+          "courseC_maze_programming3_2": "Pots arrossegar els blocs addicionals a la caixa d'eines per desfer-te'n.",
+          "stone_block_2": "Els blocs grisos no es poden eliminar."
+        },
+        "courseD_maze_ramp3_2023": {
           "courseC_maze_programming3_2": "Pots arrossegar els blocs addicionals a la caixa d'eines per desfer-te'n.",
           "stone_block_2": "Els blocs grisos no es poden eliminar."
         },
@@ -1247,6 +1467,9 @@
           "": "Aquests blocs no tenen números. En pots fer servir tants com vulguis!"
         },
         "courseD_maze_ramp5_2021": {
+          "": "Aquests blocs no tenen números. En pots fer servir tants com vulguis!"
+        },
+        "courseD_maze_ramp5_2023": {
           "": "Aquests blocs no tenen números. En pots fer servir tants com vulguis!"
         },
         "courseD_maze_ramp5a": {
@@ -1291,6 +1514,9 @@
         "courseE_aboutme_2_2021": {
           "": "Fes clic aquí!"
         },
+        "courseE_aboutme_2_2023": {
+          "": "Feu clic aquí per afegir disfresses al vostre projecte."
+        },
         "courseE_artist_functions2": {
           "courseD_artist_functions2_1": "Quan s'executi aquest bloc verd, s'executarà tot el codi de la funció. Què hauria de fer l'artista després de dibuixar el primer quadrat?"
         },
@@ -1307,6 +1533,9 @@
           "courseD_artist_functions2_1": "Quan s'executi aquest bloc verd, s'executarà tot el codi de la funció. Què hauria de fer l'artista després de dibuixar el primer quadrat?"
         },
         "courseE_artist_functions2_2021": {
+          "courseD_artist_functions2_1": "Quan s'executi aquest bloc verd, s'executarà tot el codi de la funció. Què hauria de fer l'artista després de dibuixar el primer quadrat?"
+        },
+        "courseE_artist_functions2_2023": {
           "courseD_artist_functions2_1": "Quan s'executi aquest bloc verd, s'executarà tot el codi de la funció. Què hauria de fer l'artista després de dibuixar el primer quadrat?"
         },
         "courseE_artist_functions2_copy": {
@@ -1333,6 +1562,9 @@
         "courseE_artist_functions8a_2021": {
           "courseD_artist_functions8_1": "T'hem deixat els blocs per crear funcions sota aquesta etiqueta a la caixa d'eines."
         },
+        "courseE_artist_functions8a_2023": {
+          "courseD_artist_functions8_1": "T'hem deixat els blocs per crear funcions sota aquesta etiqueta a la caixa d'eines."
+        },
         "courseE_artist_functions_challenge1": {
           "courseE_artist_functions_challenge1_callout1": "Allarga el programa afegint-hi més codi a la part inferior.",
           "courseE_artist_functions_challenge1_callout2": "Si no t'agrada aquest disseny, canvia'l tant com vulguis!"
@@ -1354,6 +1586,10 @@
           "courseE_artist_functions_challenge1_callout2": "Si no t'agrada aquest disseny, canvia'l tant com vulguis!"
         },
         "courseE_artist_functions_challenge1_2021": {
+          "courseE_artist_functions_challenge1_callout1": "Allarga el programa afegint-hi més codi a la part inferior.",
+          "courseE_artist_functions_challenge1_callout2": "Si no t'agrada aquest disseny, canvia'l tant com vulguis!"
+        },
+        "courseE_artist_functions_challenge1_2023": {
           "courseE_artist_functions_challenge1_callout1": "Allarga el programa afegint-hi més codi a la part inferior.",
           "courseE_artist_functions_challenge1_callout2": "Si no t'agrada aquest disseny, canvia'l tant com vulguis!"
         },
@@ -1381,6 +1617,10 @@
           "courseE_artist_functions_challenge2_callout1": "Allarga el programa afegint-hi més codi a la part inferior.",
           "courseE_artist_functions_challenge2_callout2": "Si no t'agrada aquest disseny, canvia'l tant com vulguis!"
         },
+        "courseE_artist_functions_challenge2_2023": {
+          "courseE_artist_functions_challenge2_callout1": "Allarga el programa afegint-hi més codi a la part inferior.",
+          "courseE_artist_functions_challenge2_callout2": "Si no t'agrada aquest disseny, canvia'l tant com vulguis!"
+        },
         "courseE_farmer_functions1": {
           "courseE_farmer_functions1_2": "Aquesta vegada, la caixa d'eines està organitzada d'una altra manera! Fes clic a les diferents categories per veure quins blocs tens."
         },
@@ -1402,6 +1642,9 @@
         "courseE_farmer_functions13_2021": {
           "courseE_farmer_functions1a_1": "Aquesta verdura és una incògnita.  Canvia cada cop que executes el programa."
         },
+        "courseE_farmer_functions13_2023": {
+          "courseE_farmer_functions1a_1": "Aquesta verdura és una incògnita.  Canvia cada cop que executes el programa."
+        },
         "courseE_farmer_functions1_2018": {
           "courseE_farmer_functions1_2": "Aquesta vegada, la caixa d'eines està organitzada d'una altra manera! Fes clic a les diferents categories per veure quins blocs tens."
         },
@@ -1412,6 +1655,9 @@
           "courseE_farmer_functions1_2": "Aquesta vegada, la caixa d'eines està organitzada d'una altra manera! Fes clic a les diferents categories per veure quins blocs tens."
         },
         "courseE_farmer_functions1_2021": {
+          "courseE_farmer_functions1_2": "Aquesta vegada, la caixa d'eines està organitzada d'una altra manera! Fes clic a les diferents categories per veure quins blocs tens."
+        },
+        "courseE_farmer_functions1_2023": {
           "courseE_farmer_functions1_2": "Aquesta vegada, la caixa d'eines està organitzada d'una altra manera! Fes clic a les diferents categories per veure quins blocs tens."
         },
         "courseE_farmer_functions1a": {
@@ -1432,6 +1678,9 @@
         "courseE_farmer_functions1a_2021": {
           "courseE_farmer_functions1a_1": "Aquesta verdura és una incògnita.  Canvia cada cop que executes el programa."
         },
+        "courseE_farmer_functions1a_2023": {
+          "courseE_farmer_functions1a_1": "Aquesta verdura és una incògnita.  Canvia cada cop que executes el programa."
+        },
         "courseE_farmer_functions2b": {
           "courseE_farmer_functions1a_1": "Aquesta verdura és una incògnita.  Canvia cada cop que executes el programa."
         },
@@ -1448,6 +1697,9 @@
           "courseE_farmer_functions1a_1": "Aquesta verdura és una incògnita.  Canvia cada cop que executes el programa."
         },
         "courseE_farmer_functions2b_2021": {
+          "courseE_farmer_functions1a_1": "Aquesta verdura és una incògnita.  Canvia cada cop que executes el programa."
+        },
+        "courseE_farmer_functions2b_2023": {
           "courseE_farmer_functions1a_1": "Aquesta verdura és una incògnita.  Canvia cada cop que executes el programa."
         },
         "courseE_playLab_challenge1": {
@@ -1468,6 +1720,10 @@
           "run_button": "Primer, prem el botó d'Executar!",
           "visualizationResizeBar": "Arrossega els 3 punts per canviar la mida de l'àrea de joc."
         },
+        "courseF_apps_aquarium_2023": {
+          "run_button": "Primer, prem el botó d'Executar!",
+          "visualizationResizeBar": "Arrossega els 3 punts per canviar la mida de l'àrea de joc."
+        },
         "courseF_apps_card": {
           "visualizationResizeBar": "Arrossega els 3 punts per canviar la mida de l'àrea de joc."
         },
@@ -1475,6 +1731,9 @@
           "visualizationResizeBar": "Arrossega els 3 punts per canviar la mida de l'àrea de joc."
         },
         "courseF_apps_card_-2022-2": {
+          "visualizationResizeBar": "Arrossega els 3 punts per canviar la mida de l'àrea de joc."
+        },
+        "courseF_apps_card_2023": {
           "visualizationResizeBar": "Arrossega els 3 punts per canviar la mida de l'àrea de joc."
         },
         "courseF_apps_chatbot": {
@@ -1486,6 +1745,10 @@
           "visualizationResizeBar": "Arrossega els 3 punts per canviar la mida de l'àrea de joc."
         },
         "courseF_apps_chatbot_-2022-2": {
+          "run_button": "Primer, prem el botó d'Executar!",
+          "visualizationResizeBar": "Arrossega els 3 punts per canviar la mida de l'àrea de joc."
+        },
+        "courseF_apps_chatbot_2023": {
           "run_button": "Primer, prem el botó d'Executar!",
           "visualizationResizeBar": "Arrossega els 3 punts per canviar la mida de l'àrea de joc."
         },
@@ -1501,16 +1764,32 @@
           "run_button": "Primer, prem el botó d'Executar!",
           "visualizationResizeBar": "Arrossega els 3 punts per canviar la mida de l'àrea de joc."
         },
+        "courseF_apps_collector_2023": {
+          "run_button": "Primer, prem el botó d'Executar!",
+          "visualizationResizeBar": "Arrossega els 3 punts per canviar la mida de l'àrea de joc."
+        },
         "courseF_apps_collector_drag_-2022-2": {
+          "visualizationResizeBar": "Arrossega els 3 punts per canviar la mida de l'àrea de joc."
+        },
+        "courseF_apps_collector_drag_2023": {
           "visualizationResizeBar": "Arrossega els 3 punts per canviar la mida de l'àrea de joc."
         },
         "courseF_apps_collector_drive_-2022-2": {
           "visualizationResizeBar": "Arrossega els 3 punts per canviar la mida de l'àrea de joc."
         },
+        "courseF_apps_collector_drive_2023": {
+          "visualizationResizeBar": "Arrossega els 3 punts per canviar la mida de l'àrea de joc."
+        },
         "courseF_apps_collector_move2_-2022-2": {
           "visualizationResizeBar": "Arrossega els 3 punts per canviar la mida de l'àrea de joc."
         },
+        "courseF_apps_collector_move2_2023": {
+          "visualizationResizeBar": "Arrossega els 3 punts per canviar la mida de l'àrea de joc."
+        },
         "courseF_apps_collector_move_-2022-2": {
+          "visualizationResizeBar": "Arrossega els 3 punts per canviar la mida de l'àrea de joc."
+        },
+        "courseF_apps_collector_move_2023": {
           "visualizationResizeBar": "Arrossega els 3 punts per canviar la mida de l'àrea de joc."
         },
         "courseF_apps_madlib": {
@@ -1522,6 +1801,9 @@
         "courseF_apps_madlib_-2022-2": {
           "visualizationResizeBar": "Arrossega els 3 punts per canviar la mida de l'àrea de joc."
         },
+        "courseF_apps_madlib_2023": {
+          "visualizationResizeBar": "Arrossega els 3 punts per canviar la mida de l'àrea de joc."
+        },
         "courseF_apps_pet": {
           "run_button": "Primer, prem el botó d'Executar!",
           "visualizationResizeBar": "Arrossega els 3 punts per canviar la mida de l'àrea de joc."
@@ -1531,6 +1813,10 @@
           "visualizationResizeBar": "Arrossega els 3 punts per canviar la mida de l'àrea de joc."
         },
         "courseF_apps_pet_-2022-2": {
+          "run_button": "Primer, prem el botó d'Executar!",
+          "visualizationResizeBar": "Arrossega els 3 punts per canviar la mida de l'àrea de joc."
+        },
+        "courseF_apps_pet_2023": {
           "run_button": "Primer, prem el botó d'Executar!",
           "visualizationResizeBar": "Arrossega els 3 punts per canviar la mida de l'àrea de joc."
         },
@@ -1552,6 +1838,9 @@
         "courseF_artist_for1_2021": {
           "courseF_artist_for1_1": "La caixa d'eines està en mode \"categoria\" per fer espai pel codi.  Els bucles \"for\" es troben aquí."
         },
+        "courseF_artist_for1_2023": {
+          "courseF_artist_for1_1": "La caixa d'eines està en mode \"categoria\" per fer espai pel codi.  Els bucles \"for\" es troben aquí."
+        },
         "courseF_bee_for4": {
           "courseF_bee_for4_1": "Aquí trobaràs el bucle \"for\"!"
         },
@@ -1568,6 +1857,9 @@
           "courseF_bee_for4_1": "Aquí trobaràs el bucle \"for\"!"
         },
         "courseF_bee_for4_2021": {
+          "courseF_bee_for4_1": "Aquí trobaràs el bucle \"for\"!"
+        },
+        "courseF_bee_for4_2023": {
           "courseF_bee_for4_1": "Aquí trobaràs el bucle \"for\"!"
         },
         "courseF_bee_for9": {
@@ -1588,6 +1880,9 @@
         "courseF_bee_for9_2021": {
           "courseF_bee_for9_1": "Aquí trobaràs el bloc \"matemàtiques\"."
         },
+        "courseF_bee_for9_2023": {
+          "courseF_bee_for9_1": "Aquí trobaràs el bloc \"matemàtiques\"."
+        },
         "courseF_bee_variables_1_2018": {
           "courseF_bee_functions_1_2018_1": "Aquí trobaràs totes les teves variables!"
         },
@@ -1603,10 +1898,16 @@
         "courseF_bee_variables_1a_2021": {
           "courseF_bee_functions_1_2018_1": "Aquí trobaràs totes les teves variables!"
         },
+        "courseF_bee_variables_1a_2023": {
+          "courseF_bee_functions_1_2018_1": "Aquí trobaràs totes les teves variables!"
+        },
         "courseF_editable_card": {
           "visualizationResizeBar": "Arrossega els 3 punts per canviar la mida de l'àrea de joc."
         },
         "courseF_editable_card_-2022-2": {
+          "visualizationResizeBar": "Arrossega els 3 punts per canviar la mida de l'àrea de joc."
+        },
+        "courseF_editable_card_2023": {
           "visualizationResizeBar": "Arrossega els 3 punts per canviar la mida de l'àrea de joc."
         },
         "courseF_editable_chatbot": {
@@ -1615,10 +1916,16 @@
         "courseF_editable_chatbot_-2022-2": {
           "visualizationResizeBar": "Arrossega els 3 punts per canviar la mida de l'àrea de joc."
         },
+        "courseF_editable_chatbot_2023": {
+          "visualizationResizeBar": "Arrossega els 3 punts per canviar la mida de l'àrea de joc."
+        },
         "courseF_editable_madlib": {
           "visualizationResizeBar": "Arrossega els 3 punts per canviar la mida de l'àrea de joc."
         },
         "courseF_editable_madlib_-2022-2": {
+          "visualizationResizeBar": "Arrossega els 3 punts per canviar la mida de l'àrea de joc."
+        },
+        "courseF_editable_madlib_2023": {
           "visualizationResizeBar": "Arrossega els 3 punts per canviar la mida de l'àrea de joc."
         },
         "courseF_events_choice_penguin": {
@@ -1627,10 +1934,16 @@
         "courseF_events_choice_penguin_-2022-2": {
           "whenToWhile": "Prova de canviar de \"quan\" a \"mentre\"."
         },
+        "courseF_events_choice_penguin_2023": {
+          "whenToWhile": "Prova de canviar de \"quan\" a \"mentre\"."
+        },
         "courseF_events_conflict": {
           "stops_block": "Aquí hi ha blocs nous!"
         },
         "courseF_events_conflict_-2022-2": {
+          "stops_block": "Aquí hi ha blocs nous!"
+        },
+        "courseF_events_conflict_2023": {
           "stops_block": "Aquí hi ha blocs nous!"
         },
         "courseF_events_key": {
@@ -1639,10 +1952,16 @@
         "courseF_events_key_-2022-2": {
           "whenKey": "Fes servir el bloc d'esdeveniments nou que hi ha aquí."
         },
+        "courseF_events_key_2023": {
+          "whenKey": "Fes servir el bloc d'esdeveniments nou que hi ha aquí."
+        },
         "courseF_events_practice_reorder": {
           "stopAllBug": "Aquest bloc està en l'ordre equivocat."
         },
         "courseF_events_practice_reorder_-2022-2": {
+          "stopAllBug": "Aquest bloc està en l'ordre equivocat."
+        },
+        "courseF_events_practice_reorder_2023": {
           "stopAllBug": "Aquest bloc està en l'ordre equivocat."
         },
         "courseF_events_predict": {
@@ -1651,10 +1970,16 @@
         "courseF_events_predict_-2022-2": {
           "behaviors_edit": "Fes clic aquí per veure com funciona aquest comportament."
         },
+        "courseF_events_predict_2023": {
+          "behaviors_edit": "Fes clic aquí per veure com funciona aquest comportament."
+        },
         "courseF_events_time": {
           "events_category": "Fes clic aquí per obrir la categoria Esdeveniments."
         },
         "courseF_events_time_-2022-2": {
+          "events_category": "Fes clic aquí per obrir la categoria Esdeveniments."
+        },
+        "courseF_events_time_2023": {
           "events_category": "Fes clic aquí per obrir la categoria Esdeveniments."
         },
         "courseF_label_predict": {
@@ -1663,10 +1988,16 @@
         "courseF_label_predict_-2022-2": {
           "variablesPredict": "Fixa't bé en el codi que hi ha a partir d'aquí."
         },
+        "courseF_label_predict_2023": {
+          "variablesPredict": "Fixa't bé en el codi que hi ha a partir d'aquí."
+        },
         "courseF_sprites_behaviors": {
           "behaviors_category": "Fes clic aquí per obrir la cateogria Comportaments."
         },
         "courseF_sprites_behaviors_-2022-2": {
+          "behaviors_category": "Fes clic aquí per obrir la cateogria Comportaments."
+        },
+        "courseF_sprites_behaviors_2023": {
           "behaviors_category": "Fes clic aquí per obrir la cateogria Comportaments."
         },
         "courseF_sprites_make": {
@@ -1675,10 +2006,16 @@
         "courseF_sprites_make_-2022-2": {
           "sprites_category": "Fes clic aquí per obrir la cateogria Sprites."
         },
+        "courseF_sprites_make_2023": {
+          "sprites_category": "Fes clic aquí per obrir la cateogria Sprites."
+        },
         "courseF_sprites_positioning": {
           "locations_category": "Fes clic aquí per obrir la cateogria Ubicacions."
         },
         "courseF_sprites_positioning_-2022-2": {
+          "locations_category": "Fes clic aquí per obrir la cateogria Ubicacions."
+        },
+        "courseF_sprites_positioning_2023": {
           "locations_category": "Fes clic aquí per obrir la cateogria Ubicacions."
         },
         "courseF_sprites_properties": {
@@ -1687,10 +2024,16 @@
         "courseF_sprites_properties_-2022-2": {
           "sprites_category2": "Busca un bloc nou aquí."
         },
+        "courseF_sprites_properties_2023": {
+          "sprites_category2": "Busca un bloc nou aquí."
+        },
         "courseF_text_answer": {
           "answered_block": "Busca un bloc nou aquí!"
         },
         "courseF_text_answer_-2022-2": {
+          "answered_block": "Busca un bloc nou aquí!"
+        },
+        "courseF_text_answer_2023": {
           "answered_block": "Busca un bloc nou aquí!"
         },
         "courseF_text_choice_color": {
@@ -1699,10 +2042,16 @@
         "courseF_text_choice_color_-2022-2": {
           "text_color_finish": "El fons ha canviat de color quan has respost la pregunta? Si és així, fes clic a \"Acabar\". Si no, fes clic a \"Reiniciar\", canvia el codi i torna a fer clic a \"Executar\"."
         },
+        "courseF_text_choice_color_2023": {
+          "text_color_finish": "El fons ha canviat de color quan has respost la pregunta? Si és així, fes clic a \"Acabar\". Si no, fes clic a \"Reiniciar\", canvia el codi i torna a fer clic a \"Executar\"."
+        },
         "courseF_text_choice_conversation": {
           "text_generic_finish": "Has acabat? Si és així, fes clic a \"Executar\". Si no, fes clic a \"Reiniciar\", canvia el codi i torna a \"Executar\"."
         },
         "courseF_text_choice_conversation_-2022-2": {
+          "text_generic_finish": "Has acabat? Si és així, fes clic a \"Executar\". Si no, fes clic a \"Reiniciar\", canvia el codi i torna a \"Executar\"."
+        },
+        "courseF_text_choice_conversation_2023": {
           "text_generic_finish": "Has acabat? Si és així, fes clic a \"Executar\". Si no, fes clic a \"Reiniciar\", canvia el codi i torna a \"Executar\"."
         },
         "courseF_text_choice_title": {
@@ -1713,16 +2062,26 @@
           "text_answer_finish": "Ha aparegut una pantalla de títol durant 3 segons? Si és així, fes clic a \"Executar\". Si no, fes clic a \"Reiniciar\", canvia el codi i torna a \"Executar\".",
           "title_block": "Busca dos blocs nous aquí!"
         },
+        "courseF_text_choice_title_2023": {
+          "text_answer_finish": "Ha aparegut una pantalla de títol durant 3 segons? Si és així, fes clic a \"Executar\". Si no, fes clic a \"Reiniciar\", canvia el codi i torna a \"Executar\".",
+          "title_block": "Busca dos blocs nous aquí!"
+        },
         "courseF_text_concat": {
           "join_blocks": "Busca blocs nous aquí!"
         },
         "courseF_text_concat_-2022-2": {
           "join_blocks": "Busca blocs nous aquí!"
         },
+        "courseF_text_concat_2023": {
+          "join_blocks": "Busca blocs nous aquí!"
+        },
         "courseF_text_events": {
           "events_category": "Fes clic aquí per obrir la categoria Esdeveniments."
         },
         "courseF_text_events_-2022-2": {
+          "events_category": "Fes clic aquí per obrir la categoria Esdeveniments."
+        },
+        "courseF_text_events_2023": {
           "events_category": "Fes clic aquí per obrir la categoria Esdeveniments."
         },
         "courseF_text_print": {
@@ -1733,19 +2092,32 @@
           "print_block": "Aquí trobaràs el bloc d'escriure text!",
           "text_print_finish": "El teu missatge ha aparegut imprès a dalt? Si és així, fes clic a \"Acabar\". Si no, fes clic a \"Reiniciar\", canvia el codi i torna a \"Executar\"."
         },
+        "courseF_text_print_2023": {
+          "print_block": "Aquí trobaràs el bloc d'escriure text!",
+          "text_print_finish": "El teu missatge ha aparegut imprès a dalt? Si és així, fes clic a \"Acabar\". Si no, fes clic a \"Reiniciar\", canvia el codi i torna a \"Executar\"."
+        },
         "courseF_text_prompts": {
           "prompt_block": "Aquí trobaràs el bloc de preguntar!"
         },
         "courseF_text_prompts_-2022-2": {
           "prompt_block": "Aquí trobaràs el bloc de preguntar!"
         },
+        "courseF_text_prompts_2023": {
+          "prompt_block": "Aquí trobaràs el bloc de preguntar!"
+        },
         "courseF_variables2_predict_-2022-2": {
+          "variablesPredict": "Fixa't bé en el codi que hi ha a partir d'aquí."
+        },
+        "courseF_variables2_predict_2023": {
           "variablesPredict": "Fixa't bé en el codi que hi ha a partir d'aquí."
         },
         "courseF_variables_predict": {
           "variablesPredict": "Fixa't bé en el codi que hi ha a partir d'aquí."
         },
         "courseF_variables_predict_-2022-2": {
+          "variablesPredict": "Fixa't bé en el codi que hi ha a partir d'aquí."
+        },
+        "courseF_variables_predict_2023": {
           "variablesPredict": "Fixa't bé en el codi que hi ha a partir d'aquí."
         },
         "coursea_maze_ramp12022": {
@@ -1763,13 +2135,36 @@
         "coursea_maze_ramp1_2021": {
           "grade2_CaringForNewPet_0_1": "Després d'enganxar tots els blocs, prem \"Executar\" per iniciar el programa."
         },
+        "coursea_maze_ramp1_2023": {
+          "grade2_CaringForNewPet_0_1": "Després d'enganxar tots els blocs, prem \"Executar\" per iniciar el programa."
+        },
         "coursee_helloworld_events": {
+          "hello_world_click_hint": "Afegiu aquest bloc d'esdeveniments al vostre espai de treball."
+        },
+        "coursee_helloworld_events_2023": {
           "hello_world_click_hint": "Afegiu aquest bloc d'esdeveniments al vostre espai de treball."
         },
         "coursee_helloworld_freeplay": {
           "costumes_tab": "Feu clic aquí per afegir disfresses al vostre projecte."
         },
+        "coursee_helloworld_freeplay_2023": {
+          "costumes_tab": "Feu clic aquí per afegir disfresses al vostre projecte."
+        },
         "coursee_helloworld_say": {
+          "hello_world_make_sprite": "Utilitzeu aquest bloc per crear un sprite.",
+          "hello_world_say": "Utilitzeu aquest bloc per fer que els sprites parlin."
+        },
+        "coursee_helloworld_say_2023": {
+          "hello_world_make_sprite": "Utilitzeu aquest bloc per crear un sprite.",
+          "hello_world_say": "Utilitzeu aquest bloc per fer que els sprites parlin."
+        },
+        "csc_animal_adaptations_bugs2": {
+          "hello_world_behavior_blocks": "Utilitzeu aquest bloc amb un dels comportaments següents."
+        },
+        "csc_animal_adaptations_predict_gamelab": {
+          "behaviors_edit": "Fes clic aquí per veure com funciona aquest comportament."
+        },
+        "ecosystems_helloworld_say_2023": {
           "hello_world_make_sprite": "Utilitzeu aquest bloc per crear un sprite.",
           "hello_world_say": "Utilitzeu aquest bloc per fer que els sprites parlin."
         },
@@ -1783,6 +2178,9 @@
           "express_maze_debugging9_2019_1": "Arrossega els blocs per treure'ls de la caixa d'eines i portar-los a l'espai de treball."
         },
         "express_maze_debugging9_2021": {
+          "express_maze_debugging9_2019_1": "Arrossega els blocs per treure'ls de la caixa d'eines i portar-los a l'espai de treball."
+        },
+        "express_maze_debugging9_2023": {
           "express_maze_debugging9_2019_1": "Arrossega els blocs per treure'ls de la caixa d'eines i portar-los a l'espai de treball."
         },
         "frozen circle function with parameter": {
@@ -1861,6 +2259,12 @@
         "helloworld_animals_sounds": {
           "hello_world_new": "Nou bloc!"
         },
+        "helloworld_bugs_behaviors_2023": {
+          "hello_world_behavior_blocks": "Utilitzeu aquest bloc amb un dels comportaments següents."
+        },
+        "helloworld_bunny_adaptation_2023": {
+          "hw_Run": "Feu clic aquí per executar el codi."
+        },
         "helloworld_emoji_backgrounds": {
           "hw_background_location": "Utilitzeu aquest bloc per establir un nou fons."
         },
@@ -1899,6 +2303,9 @@
         "helloworld_food_backgrounds": {
           "hw_background_location": "Utilitzeu aquest bloc per establir un nou fons."
         },
+        "helloworld_food_backgrounds_2023": {
+          "hw_background_location": "Utilitzeu aquest bloc per establir un nou fons."
+        },
         "helloworld_food_backgrounds_soccer-2022": {
           "hw_background_location": "Utilitzeu aquest bloc per establir un nou fons."
         },
@@ -1906,6 +2313,9 @@
           "hw_background_location": "Utilitzeu aquest bloc per establir un nou fons."
         },
         "helloworld_food_behaviors": {
+          "hello_world_behavior_blocks": "Utilitzeu aquest bloc amb un dels comportaments següents."
+        },
+        "helloworld_food_behaviors_2023": {
           "hello_world_behavior_blocks": "Utilitzeu aquest bloc amb un dels comportaments següents."
         },
         "helloworld_food_behaviors_soccer-2022": {
@@ -1917,6 +2327,9 @@
         "helloworld_food_click": {
           "hw_Run": "Feu clic aquí per executar el codi."
         },
+        "helloworld_food_click_2023": {
+          "hw_Run": "Feu clic aquí per executar el codi."
+        },
         "helloworld_food_click_soccer-2022": {
           "hw_Run": "Feu clic aquí per executar el codi."
         },
@@ -1924,6 +2337,9 @@
           "hw_Run": "Feu clic aquí primer!"
         },
         "helloworld_food_costumes": {
+          "hello_world_new": "Nou bloc!"
+        },
+        "helloworld_food_costumes_2023": {
           "hello_world_new": "Nou bloc!"
         },
         "helloworld_food_costumes_soccer-2022": {
@@ -1953,6 +2369,9 @@
         "helloworld_food_location": {
           "pin": "passador"
         },
+        "helloworld_food_location_2023": {
+          "pin": "passador"
+        },
         "helloworld_food_location_soccer-2022": {
           "pin": "passador"
         },
@@ -1960,6 +2379,9 @@
           "pin": "passador"
         },
         "helloworld_food_multi": {
+          "pin": "passador"
+        },
+        "helloworld_food_multi_2023": {
           "pin": "passador"
         },
         "helloworld_food_multi_soccer-2022": {
@@ -1984,6 +2406,10 @@
           "hello_world_new": "Nou bloc!",
           "hello_world_new_block": "Nou bloc!"
         },
+        "helloworld_food_sizes_2023": {
+          "hello_world_new": "Nou bloc!",
+          "hello_world_new_block": "Nou bloc!"
+        },
         "helloworld_food_sizes_soccer-2022": {
           "hello_world_new": "Nou bloc!",
           "hello_world_new_block": "Nou bloc!"
@@ -1993,6 +2419,9 @@
           "hello_world_new_block": "Nou bloc!"
         },
         "helloworld_food_sounds": {
+          "hello_world_new": "Nou bloc!"
+        },
+        "helloworld_food_sounds_2023": {
           "hello_world_new": "Nou bloc!"
         },
         "helloworld_food_sounds_soccer-2022": {
@@ -2039,10 +2468,20 @@
         "poetry_hoc_addSprites": {
           "poetry_sprite": "Nou bloc!"
         },
+        "poetry_hoc_addSprites_2023": {
+          "poetry_sprite": "Nou bloc!"
+        },
         "poetry_hoc_backgroundEffects": {
           "run_button": "Prova la teva animació amb aquest botó. "
         },
+        "poetry_hoc_backgroundEffects_2023": {
+          "run_button": "Prova la teva animació amb aquest botó. "
+        },
         "poetry_hoc_events1": {
+          "poetry_event": "Nou bloc!",
+          "poetry_foreground": "Nou bloc!"
+        },
+        "poetry_hoc_events1_2023": {
           "poetry_event": "Nou bloc!",
           "poetry_foreground": "Nou bloc!"
         },
@@ -2051,7 +2490,14 @@
           "poetry_multiple_sprites": "Nou bloc!",
           "poetry_new_block": "Nou bloc!"
         },
+        "poetry_hoc_freeplay_2023": {
+          "poetry_new_block": "Nou bloc!"
+        },
         "poetry_hoc_sounds": {
+          "poetry_music": "Nou bloc!",
+          "poetry_sound": "Nou bloc!"
+        },
+        "poetry_hoc_sounds_2023": {
           "poetry_music": "Nou bloc!",
           "poetry_sound": "Nou bloc!"
         },
@@ -2059,7 +2505,15 @@
           "poetry_sprite_begins": "Nou bloc!",
           "poetry_sprite_stops": "Nou bloc!"
         },
+        "poetry_hoc_spriteBehaviors_2023": {
+          "poetry_sprite_begins": "Nou bloc!",
+          "poetry_sprite_stops": "Nou bloc!"
+        },
         "poetry_hoc_spriteSizes": {
+          "poetry_remove_sprite": "Nou bloc!",
+          "poetry_set_sprite": "Nou bloc!"
+        },
+        "poetry_hoc_spriteSizes_2023": {
           "poetry_remove_sprite": "Nou bloc!",
           "poetry_set_sprite": "Nou bloc!"
         }
