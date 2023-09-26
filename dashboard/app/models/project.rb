@@ -55,11 +55,13 @@ class Project < ApplicationRecord
   end
 
   def apply_project_age_publish_limits?
-    # Two cases where we override and always allow publishing:
+    # Three cases where we override and always allow publishing:
     # 1) project was created via free play levels on Hour of Code tutorials
-    # 2) user is in a section
+    # 2) user teaches a section with followers added within the past year
+    # 3) user is in a section, and was added within past year
     return false if channel_token&.script&.hoc?
-    return false if owner&.followeds&.any? {|follower| follower.created_at > Time.now - 1.year}
+    return false if owner&.followers&.any? {|follower| follower.created_at > Time.now - 1.year}
+    return false if owner&.followeds&.any? {|followed| followed.created_at > Time.now - 1.year}
     true
   end
 

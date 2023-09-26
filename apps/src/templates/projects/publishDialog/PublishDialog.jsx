@@ -11,7 +11,7 @@ import {RestrictedPublishProjectTypes} from '@cdo/apps/util/sharedConstants';
 import color from '@cdo/apps/util/color';
 
 const PUBLISH_FAILED_RESPONSE_MESSAGES = {
-  teacherRestricted: 'Teacher disabled sharing for project owner',
+  sharingDisabled: 'Sharing disabled for user account',
   projectInRestrictedShareMode: 'Project in restricted share mode',
   userTooNew: 'User too new to publish channel',
   projectTooNew: 'Project too new to publish channel',
@@ -80,7 +80,7 @@ class PublishDialog extends Component {
       return i18n.publishFailedRestrictedShare();
     } else if (
       publishFailedStatus === 403 &&
-      publishFailedReason === PUBLISH_FAILED_RESPONSE_MESSAGES.teacherRestricted
+      publishFailedReason === PUBLISH_FAILED_RESPONSE_MESSAGES.sharingDisabled
     ) {
       return i18n.publishFailedForbidden();
     } else if (

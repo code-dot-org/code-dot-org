@@ -39,4 +39,16 @@ class ProjectTest < ActiveSupport::TestCase
     project = create :project, owner: follower.student_user
     assert project.apply_project_age_publish_limits?
   end
+
+  test "Publish age limits do not apply to teachers with students added to their sections within last year" do
+    teacher = create :teacher
+    create :follower, user: teacher
+    project = create :project, owner: teacher
+    refute project.apply_project_age_publish_limits?
+
+    teacher = create :teacher
+    create :follower, created_at: Time.now - 2.years, user: teacher
+    project = create :project, owner: teacher
+    assert project.apply_project_age_publish_limits?
+  end
 end
