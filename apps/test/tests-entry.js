@@ -17,19 +17,20 @@ enzyme.configure({adapter: new Adapter()});
 const testType = testType =>
   !KARMA_CLI_FLAGS.testType || KARMA_CLI_FLAGS.testType === testType;
 
+// Use `karma start --testType=unit --entry=./test/unit/gridUtilsTest.js` to run the tests
+// in one file, or all the tests in a directory
+const selectTestsToRun = context =>
+  KARMA_CLI_FLAGS.entry
+    ? context.keys().filter(path => path.startsWith(KARMA_CLI_FLAGS.entry))
+    : context.keys();
+
+const runTests = context => selectTestsToRun(context).forEach(context);
+
 // `npx karma start --testType=unit`
 if (testType('unit')) {
   describe('unit tests', function () {
-    const testsContext = require.context('./unit', true, /\.[j|t]sx?$/);
-    let tests = testsContext.keys();
-
-    // Invoked by `karma start --entry=./test/unit/gridUtilsTest.js`
-    // Specifies a specific test file or test directory to run.
-    if (KARMA_CLI_FLAGS.entry) {
-      tests = tests.filter(path => path.startsWith(KARMA_CLI_FLAGS.entry));
-    }
-
     throwOnConsoleErrorsEverywhere();
+    clearTimeoutsBetweenTests();
 
     // TODO: re-enable throwOnConsoleWarningsEverywhere() once redux/react-redux
     // and react-inspector have been upgraded and the react warnings are fixed.
@@ -39,25 +40,21 @@ if (testType('unit')) {
     //
     // throwOnConsoleWarningsEverywhere();
 
-    clearTimeoutsBetweenTests();
-    tests.forEach(testsContext);
+    runTests(require.context('./unit', true, /\.[j|t]sx?$/));
   });
 }
 
 // `npx karma start --testType=integration`
 if (testType('integration')) {
   describe('integration tests', function () {
-    var testsContext = require.context('./integration', false, /Tests?\.js$/);
-
     throwOnConsoleErrorsEverywhere();
+    clearTimeoutsBetweenTests();
+    stubFirehose();
 
     // TODO: re-enable after fixing react warnings, see TODO above in unit tests
     // throwOnConsoleWarningsEverywhere();
 
-    clearTimeoutsBetweenTests();
-    stubFirehose();
-
-    testsContext.keys().forEach(testsContext);
+    runTests(require.context('./integration', false, /Tests?\.js$/));
   });
 }
 
@@ -68,7 +65,8 @@ if (testType('storybook')) {
   });
 }
 
-// Use to run a karma webpack of tests-entry.js, without running any tests.
+// `npx karma start --testType=dontTestJustWebpack`
+// karma-webpacks tests-entry.js without running any tests.
 if (KARMA_CLI_FLAGS.testType === 'dontTestJustWebpack') {
   describe('dontTestJustWebpack', () =>
     it('webpacks tests-entry.js without running any tests', () => true));
