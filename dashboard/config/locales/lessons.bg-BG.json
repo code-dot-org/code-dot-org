@@ -2021,6 +2021,85 @@
         "pre-express-2022/Loops with Scrat": {
           "name": "Цикли със Скрат"
         },
+        "csd1-2023/Intro to Problem Solving": {
+          "name": "Въведение в Решаването на Проблеми",
+          "preparation": "**За всяка група**\n\n-   2 листа алуминиево фолио, 5х5 инча всяко\n-   1 контейнер, който може да задържи 3-5 инча вода \n-   Няколко хартиени кърпи или парцали, които могат да бъдат поставени под контейнера \n-   15 стотинки\n-   Едн копие на ръководството на дейността\n\n**За учителя**\n\n-   1 контейнер, който може да задържи 3-5 инча вода \n-   50 стотинки \n-   Допълнителни кърпи или парцали \n-   Проверете форума [\"Учителски салон\"](https://forum.code.org/t/resource-hub-problem-solving-and-computing-chapter-1-lessons-1-3/36188) за проверени учители, за да намерите допълнителни стратегии или ресурси, споделени от колеги учители.\n-   Ако преподавате виртуално, разгледайте нашите [Virtual Lesson Modifications](https://docs.google.com/document/d/1420LdkGrISwhKjHu7i4XCbi60ahmCRnQoYf1_JosdgA/preview)."
+        },
+        "csd1-2023/The Problem Solving Process": {
+          "name": "Процеса за Решаване на Проблеми"
+        },
+        "csd1-2023/Exploring Problem Solving": {
+          "name": "Изследване на Решаването на Проблеми"
+        },
+        "csd1-2023/What is a Computer?": {
+          "name": "Какво е Компютър?"
+        },
+        "csd1-2023/Storage": {
+          "name": "Съхранение"
+        },
+        "csd1-2023/Project - Propose an App": {
+          "name": "Проект - Предложете Приложение"
+        },
+        "csd3-2023/Variables": {
+          "name": "Променливи"
+        },
+        "csd3-2023/Sprites": {
+          "name": "Спрайт"
+        },
+        "csd3-2023/Sprite Properties": {
+          "name": "Свойства на Спрайта"
+        },
+        "csd3-2023/Text": {
+          "name": "Текст"
+        },
+        "csd3-2023/Conditionals": {
+          "name": "Условия"
+        },
+        "csd3-2023/Keyboard Input": {
+          "name": "Въвеждане от Клавиатурата"
+        },
+        "csd3-2023/Velocity": {
+          "name": "Скорост"
+        },
+        "csd3-2023/Collisions": {
+          "name": "Сблъсъци"
+        },
+        "csd3-2023/Functions": {
+          "name": "Функции"
+        },
+        "csd5-2023/Patterns and Representation": {
+          "name": "Модели и Представяне"
+        },
+        "csd5-2023/ASCII and Binary Representation": {
+          "name": "ASCII и Двоично Представяне"
+        },
+        "csd5-2023/Representing Images": {
+          "name": "Представяне на Изображения"
+        },
+        "csd5-2023/Combining Representations": {
+          "name": "Комбиниране на Представяния"
+        },
+        "csd5-2023/Keeping Data Secret": {
+          "name": "Пазене на Тайни Данни"
+        },
+        "csd5-2023/Project - Create a Representation": {
+          "name": "Проект - Създайте Представяне"
+        },
+        "csd5-2023/Problem Solving with Big Data": {
+          "name": "Решаване ма Проблеми с Големи Данни"
+        },
+        "csd6a-2023/Color LEDs": {
+          "name": "Цветни LEDs"
+        },
+        "csd6a-2023/Functions": {
+          "name": "Функции"
+        },
+        "csd6b-2023/Functions": {
+          "name": "Функции"
+        },
+        "csd7-2023/Introduction to AI Lab": {
+          "name": "Въведение в AI Lab"
+        },
         "coursea-2023/Learn to Drag and Drop": {
           "name": "Научете се да Плъзгате и Пускате"
         },
