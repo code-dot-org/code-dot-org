@@ -6,7 +6,7 @@ import HttpClient from '@cdo/apps/util/HttpClient';
 import {CHAT_COMPLETION_URL} from '@cdo/apps/aichat/constants';
 import {useSelector} from 'react-redux';
 import {useAppDispatch} from '@cdo/apps/util/reduxHooks';
-import {setShowingAi} from './danceRedux';
+import {setShowingAi, DanceState} from './danceRedux';
 import {StrongText, Heading5} from '@cdo/apps/componentLibrary/typography';
 import classNames from 'classnames';
 import FontAwesome from '@cdo/apps/templates/FontAwesome';
@@ -80,7 +80,9 @@ const DanceAiModal: React.FunctionComponent<DanceAiProps> = ({onClose}) => {
   const [responseExplanation, setResponseExplanation] = useState<string>('');
   const [typingDone, setTypingDone] = useState<boolean>(false);
 
-  const showingAi = useSelector((state: {dance: any}) => state.dance.showingAi);
+  const showingAi = useSelector(
+    (state: {dance: DanceState}) => state.dance.showingAi
+  );
 
   const getImageUrl = (id: string) => {
     return `/blockly/media/dance/ai/${id}.png`;
@@ -130,7 +132,7 @@ const DanceAiModal: React.FunctionComponent<DanceAiProps> = ({onClose}) => {
 
     const params = JSON.parse(response);
 
-    showingAi.setValue(response);
+    showingAi?.setValue(response);
 
     const picked = (({
       backgroundEffect,
