@@ -99,6 +99,9 @@
         "CourseD_Dance_2020_01_2021": {
           "dance_callout_01": "Alege tipul de dansator aici."
         },
+        "CourseD_Dance_2020_01_2023": {
+          "dance_callout_01": "Alege tipul de dansator aici."
+        },
         "CourseD_Dance_2020_02": {
           "arrow_buttons": "Apasă butoanele săgeată pentru a-l controla pe dansator.",
           "dance_callout_11_a": "Adaugă acest bloc la programul tău."
@@ -111,6 +114,10 @@
           "arrow_buttons": "Apasă butoanele săgeată pentru a-l controla pe dansator.",
           "dance_callout_11_a": "Adaugă acest bloc la programul tău."
         },
+        "CourseD_Dance_2020_02_2023": {
+          "arrow_buttons": "Apasă butoanele săgeată pentru a-l controla pe dansator.",
+          "dance_callout_11_a": "Adaugă acest bloc la programul tău."
+        },
         "CourseD_Dance_2020_04": {
           "dance_callout_02": "Adaugă acest bloc la programul tău!"
         },
@@ -118,6 +125,9 @@
           "dance_callout_02": "Adaugă acest bloc la programul tău!"
         },
         "CourseD_Dance_2020_04_2021": {
+          "dance_callout_02": "Adaugă acest bloc la programul tău!"
+        },
+        "CourseD_Dance_2020_04_2023": {
           "dance_callout_02": "Adaugă acest bloc la programul tău!"
         },
         "CourseD_Dance_2020_05": {
@@ -129,6 +139,9 @@
         "CourseD_Dance_2020_05_2021": {
           "dance_callout_05": "Adaugă un nou eveniment în programul tău."
         },
+        "CourseD_Dance_2020_05_2023": {
+          "dance_callout_05": "Adaugă un nou eveniment în programul tău."
+        },
         "CourseD_Dance_2020_06": {
           "dance_party_11_5_groups": "Bloc nou!"
         },
@@ -136,6 +149,9 @@
           "dance_party_11_5_groups": "Bloc nou!"
         },
         "CourseD_Dance_2020_06_2021": {
+          "dance_party_11_5_groups": "Bloc nou!"
+        },
+        "CourseD_Dance_2020_06_2023": {
           "dance_party_11_5_groups": "Bloc nou!"
         },
         "CourseD_Dance_2020_07": {
@@ -147,6 +163,9 @@
         "CourseD_Dance_2020_07_2021": {
           "setprop_hint": "Bloc nou!"
         },
+        "CourseD_Dance_2020_07_2023": {
+          "setprop_hint": "Bloc nou!"
+        },
         "CourseD_Dance_2020_09": {
           "new_block_3": "Bloc nou!",
           "new_block_4": "Bloc nou!"
@@ -156,6 +175,10 @@
           "new_block_4": "Bloc nou!"
         },
         "CourseD_Dance_2020_09_2021": {
+          "new_block_3": "Bloc nou!",
+          "new_block_4": "Bloc nou!"
+        },
+        "CourseD_Dance_2020_09_2023": {
           "new_block_3": "Bloc nou!",
           "new_block_4": "Bloc nou!"
         },
@@ -186,10 +209,17 @@
           "minitoolbox": "Apasă aici pentru a expanda blocul.",
           "pointerlocation": "Trage aici un bloc de subiect."
         },
+        "CourseF_outbreak2_2023": {
+          "minitoolbox": "Apasă aici pentru a expanda blocul.",
+          "pointerlocation": "Trage aici un bloc de subiect."
+        },
         "CourseF_outbreak7": {
           "costumes_callout": "Fă clic pentru a face un nou costum"
         },
         "CourseF_outbreak7_-2022-2": {
+          "costumes_tab": "Apasă aici pentru a adăuga costume la proiectul tău."
+        },
+        "CourseF_outbreak7_2023": {
           "costumes_tab": "Apasă aici pentru a adăuga costume la proiectul tău."
         },
         "Dance_2019_01": {
@@ -246,6 +276,9 @@
         "Fish Tank 3-validated_2021": {
           "spritelab_comment": "Folosiți acest bloc pentru a vă lăsa vouă sau profesorului note despre cum funcționează codul vostru."
         },
+        "Fish Tank 3-validated_2023": {
+          "spritelab_comment": "Folosiți acest bloc pentru a vă lăsa vouă sau profesorului note despre cum funcționează codul vostru."
+        },
         "Function intro Ryan": {
           "Function_intro_Ryan_1": "Această mică instrucțiune spune computerului să ruleze MAREA bucată de cod cu același nume în spațiul de lucru."
         },
@@ -259,6 +292,9 @@
           "Function_intro_Ryan_1": "Această mică instrucțiune spune computerului să ruleze MAREA bucată de cod cu același nume în spațiul de lucru."
         },
         "Function intro Ryan_2021": {
+          "Function_intro_Ryan_1": "Această mică instrucțiune spune computerului să ruleze MAREA bucată de cod cu același nume în spațiul de lucru."
+        },
+        "Function intro Ryan_2023": {
           "Function_intro_Ryan_1": "Această mică instrucțiune spune computerului să ruleze MAREA bucată de cod cu același nume în spațiul de lucru."
         },
         "Infinity_move_collide": {
@@ -295,6 +331,9 @@
         "MC_HOC_2017_03_Cole_2021": {
           "MC_HOC_2017_03_Cole_1": "Aceasta este o buclă `repetă`! Fă clic pe ea în spațiul de lucru și adaugă codul pe care doreștă să îl rulezi iar și iar."
         },
+        "MC_HOC_2017_03_Cole_2023": {
+          "MC_HOC_2017_03_Cole_1": "Aceasta este o buclă `repetă`! Fă clic pe ea în spațiul de lucru și adaugă codul pe care doreștă să îl rulezi iar și iar."
+        },
         "MC_HOC_2017_04_Cole": {
           "MC_HOC_2017_04_Cole_a": "Agentul poate pluti peste apă, dar jucătorul nu!"
         },
@@ -308,6 +347,9 @@
           "MC_HOC_2017_04_Cole_a": "Agentul poate pluti peste apă, dar jucătorul nu!"
         },
         "MC_HOC_2017_04_Cole_2021": {
+          "MC_HOC_2017_04_Cole_a": "Agentul poate pluti peste apă, dar jucătorul nu!"
+        },
+        "MC_HOC_2017_04_Cole_2023": {
           "MC_HOC_2017_04_Cole_a": "Agentul poate pluti peste apă, dar jucătorul nu!"
         },
         "MC_HOC_2017_06_Cole": {
@@ -325,6 +367,9 @@
         "MC_HOC_2017_06_Cole_2021": {
           "MC_HOC_2017_06_Cole_1": "Nu poți arunca aceste blocuri, dar le poți edita!"
         },
+        "MC_HOC_2017_06_Cole_2023": {
+          "MC_HOC_2017_06_Cole_1": "Nu poți arunca aceste blocuri, dar le poți edita!"
+        },
         "MC_HOC_2017_Ali": {
           "MC_HOC_2017_08_RY_1": "Agentul poate pluti peste lavă, dar Steve și Alex nu pot!"
         },
@@ -338,6 +383,9 @@
           "MC_HOC_2017_08_RY_1": "Agentul poate pluti peste lavă, dar Steve și Alex nu pot!"
         },
         "MC_HOC_2017_Ali_2021": {
+          "MC_HOC_2017_08_RY_1": "Agentul poate pluti peste lavă, dar Steve și Alex nu pot!"
+        },
+        "MC_HOC_2017_Ali_2023": {
           "MC_HOC_2017_08_RY_1": "Agentul poate pluti peste lavă, dar Steve și Alex nu pot!"
         },
         "NEW Course 4 Artist Functions 3": {
@@ -404,6 +452,9 @@
         "Overworld Chop Trees_2021": {
           "craft_callout_preplaced": "Am pus cateva blocuri aici pentru a incepe"
         },
+        "Overworld Chop Trees_2023": {
+          "craft_callout_preplaced": "Am pus cateva blocuri aici pentru a incepe"
+        },
         "Overworld House Frame Chosen": {
           "craft_callout_preplaced_house": "Acest cod va incepe sa construiasca casa ta. Il poti termina?"
         },
@@ -417,6 +468,9 @@
           "craft_callout_preplaced_house": "Acest cod va incepe sa construiasca casa ta. Il poti termina?"
         },
         "Overworld House Frame Chosen_2021": {
+          "craft_callout_preplaced_house": "Acest cod va incepe sa construiasca casa ta. Il poti termina?"
+        },
+        "Overworld House Frame Chosen_2023": {
           "craft_callout_preplaced_house": "Acest cod va incepe sa construiasca casa ta. Il poti termina?"
         },
         "Overworld Move to Sheep": {
@@ -439,6 +493,10 @@
           "craft_drag_block_callout": "Trage un bloc `mișcă înainte` și conectează-l sub celălalt bloc",
           "craft_run_button_callout": "Apasă \"Run\" pentru a încerca programul tău"
         },
+        "Overworld Move to Sheep_2023": {
+          "craft_drag_block_callout": "Trage un bloc `mișcă înainte` și conectează-l sub celălalt bloc",
+          "craft_run_button_callout": "Apasă \"Run\" pentru a încerca programul tău"
+        },
         "Overworld Place Wall": {
           "craft_inside_repeat": "Repetati actiunile prin plasarea blocurilor aici"
         },
@@ -452,6 +510,9 @@
           "craft_inside_repeat": "Repetati actiunile prin plasarea blocurilor aici"
         },
         "Overworld Place Wall_2021": {
+          "craft_inside_repeat": "Repetati actiunile prin plasarea blocurilor aici"
+        },
+        "Overworld Place Wall_2023": {
           "craft_inside_repeat": "Repetati actiunile prin plasarea blocurilor aici"
         },
         "Underground Avoiding Lava": {
@@ -469,6 +530,9 @@
         "Underground Avoiding Lava_2021": {
           "craft_callout_moveforward": "Acest cod va cauta lava, poti adauga o comanda pentru a inainta?"
         },
+        "Underground Avoiding Lava_2023": {
+          "craft_callout_moveforward": "Acest cod va cauta lava, poti adauga o comanda pentru a inainta?"
+        },
         "Underground Iron": {
           "craft_what_is_iron": "Extrage acest fier!"
         },
@@ -484,6 +548,9 @@
         "Underground Iron_2021": {
           "craft_what_is_iron": "Extrage acest fier!"
         },
+        "Underground Iron_2023": {
+          "craft_what_is_iron": "Extrage acest fier!"
+        },
         "Virtual Pet 2_-2022-2": {
           "vp_costumes": "Faceți clic aici pentru a adăuga noi costume la proiect!"
         },
@@ -496,10 +563,16 @@
         "Virtual Pet 2_2021": {
           "vp_costumes": "Faceți clic aici pentru a adăuga noi costume la proiect!"
         },
+        "Virtual Pet 2_2023": {
+          "vp_costumes": "Faceți clic aici pentru a adăuga noi costume la proiect!"
+        },
         "Virtual Pet 6_-2022-2": {
           "vp_costumes": "Faceți clic aici pentru a adăuga noi costume la proiect!"
         },
         "Virtual Pet 6_2021": {
+          "vp_costumes": "Faceți clic aici pentru a adăuga noi costume la proiect!"
+        },
+        "Virtual Pet 6_2023": {
           "vp_costumes": "Faceți clic aici pentru a adăuga noi costume la proiect!"
         },
         "behaviors 1": {
@@ -535,16 +608,25 @@
         "courseA_EOC_playlab_animals2022": {
           "question_mark": "?"
         },
+        "courseA_EOC_playlab_animals_2023": {
+          "question_mark": "?"
+        },
         "courseA_EOC_playlab_fantasy": {
           "question_mark": "?"
         },
         "courseA_EOC_playlab_fantasy2022": {
           "question_mark": "?"
         },
+        "courseA_EOC_playlab_fantasy_2023": {
+          "question_mark": "?"
+        },
         "courseA_EOC_playlab_people": {
           "question_mark": "?"
         },
         "courseA_EOC_playlab_people2022": {
+          "question_mark": "?"
+        },
+        "courseA_EOC_playlab_people_2023": {
           "question_mark": "?"
         },
         "courseA_artist_loops4_2021": {
@@ -554,6 +636,9 @@
           "courseA_artist_loops7_1": "Acest număr înseamnă că în răspunsul final se poate utiliza doar un singur bloc de acest tip."
         },
         "courseA_artist_loops72022": {
+          "courseA_artist_loops7_1": "Acest număr înseamnă că în răspunsul final se poate utiliza doar un singur bloc de acest tip."
+        },
+        "courseA_artist_loops72022_2023": {
           "courseA_artist_loops7_1": "Acest număr înseamnă că în răspunsul final se poate utiliza doar un singur bloc de acest tip."
         },
         "courseA_artist_loops7_2018": {
@@ -572,6 +657,9 @@
           "courseA_artist_loops8_1": "Știați că desena peste o linie deja desenată ori de câte ori aveți nevoie să faceți aceasta?"
         },
         "courseA_artist_loops82022": {
+          "courseA_artist_loops8_1": "Știați că desena peste o linie deja desenată ori de câte ori aveți nevoie să faceți aceasta?"
+        },
+        "courseA_artist_loops82022_2023": {
           "courseA_artist_loops8_1": "Știați că desena peste o linie deja desenată ori de câte ori aveți nevoie să faceți aceasta?"
         },
         "courseA_artist_loops8_2018": {
@@ -607,6 +695,9 @@
         "courseA_maze_ramp2_2021": {
           "courseC_maze_programming2_1": "Aceasta este cutia de instrumente. Aici veți găsi blocuri suplimentare pentru a rezolva puzzle-urile."
         },
+        "courseA_maze_ramp2_2023": {
+          "courseC_maze_programming2_1": "Aceasta este cutia de instrumente. Aici veți găsi blocuri suplimentare pentru a rezolva puzzle-urile."
+        },
         "courseA_maze_ramp3a_2018": {
           "courseC_maze_programming2_1": "Aceasta este cutia de instrumente. Aici veți găsi blocuri suplimentare pentru a rezolva puzzle-urile."
         },
@@ -617,6 +708,9 @@
           "courseA_playlab_events4_callout1": "Aceasta este o explicație"
         },
         "courseA_playLab_events42022": {
+          "courseA_playlab_events4_callout1": "Aceasta este o explicație"
+        },
+        "courseA_playLab_events42022_2023": {
           "courseA_playlab_events4_callout1": "Aceasta este o explicație"
         },
         "courseA_playLab_events4_2018": {
@@ -637,6 +731,9 @@
         "courseA_playLab_events52022": {
           "courseA_playLab_events5_1": "Faceți clic aici pentru a schimba direcția săgeții evenimentului."
         },
+        "courseA_playLab_events52022_2023": {
+          "courseA_playLab_events5_1": "Faceți clic aici pentru a schimba direcția săgeții evenimentului."
+        },
         "courseA_playLab_events5_2018": {
           "courseA_playLab_events5_1": "Faceți clic aici pentru a schimba direcția săgeții evenimentului."
         },
@@ -655,6 +752,9 @@
         "courseA_playLab_events62022": {
           "courseA_playLab_events6_1": "Cu acesta puteți alege un sunet „aleatoriu”, ceea ce înseamnă că nu știți despre ce sunet este vorba până când îl veți auzi!"
         },
+        "courseA_playLab_events62022_2023": {
+          "courseA_playLab_events6_1": "Cu acesta puteți alege un sunet „aleatoriu”, ceea ce înseamnă că nu știți despre ce sunet este vorba până când îl veți auzi!"
+        },
         "courseA_playLab_events6_2018": {
           "courseA_playLab_events6_1": "Cu acesta puteți alege un sunet „aleatoriu”, ceea ce înseamnă că nu știți despre ce sunet este vorba până când îl veți auzi!"
         },
@@ -671,6 +771,9 @@
           "grade2_CaringForNewPet_0_1": "După conectarea tuturor blocurilor, apăsați „Alerga” pentru a porni programul."
         },
         "courseB_Scrat_ramp3a2022": {
+          "courseC_maze_programming2_1": "Aceasta este cutia de instrumente. Aici veți găsi blocuri suplimentare pentru a rezolva puzzle-urile."
+        },
+        "courseB_Scrat_ramp3a2022_2023": {
           "courseC_maze_programming2_1": "Aceasta este cutia de instrumente. Aici veți găsi blocuri suplimentare pentru a rezolva puzzle-urile."
         },
         "courseB_Scrat_ramp3a_2019": {
@@ -700,6 +803,9 @@
         "courseB_artist_loops3_2021": {
           "courseB_artist_loops3_1": "Există doar un singur bloc de acest fel în cutia de instrumente. Cum îl veți folosi?"
         },
+        "courseB_artist_loops3_2023": {
+          "courseB_artist_loops3_1": "Există doar un singur bloc de acest fel în cutia de instrumente. Cum îl veți folosi?"
+        },
         "courseB_collector_loops1_2021": {
           "courseB_collector_loops1_1": "Utilizați acest bloc pentru a colecta comoara."
         },
@@ -724,6 +830,9 @@
         "courseB_playlab_events6_2021": {
           "courseB_playlab_events6_a": "Folosiți săgeata verde pentru a schimba direcția."
         },
+        "courseB_playlab_events6_2023": {
+          "courseB_playlab_events6_a": "Folosiți săgeata verde pentru a schimba direcția."
+        },
         "courseC19_playLab_EOC3": {
           "courseE_playLab_scaffold3_1": "Duceți actorul la steag pentru a trece la nivelul următor."
         },
@@ -734,6 +843,9 @@
           "courseE_playLab_scaffold3_1": "Duceți actorul la steag pentru a trece la nivelul următor."
         },
         "courseC19_playLab_EOC3_2021": {
+          "courseE_playLab_scaffold3_1": "Duceți actorul la steag pentru a trece la nivelul următor."
+        },
+        "courseC19_playLab_EOC3_2023": {
           "courseE_playLab_scaffold3_1": "Duceți actorul la steag pentru a trece la nivelul următor."
         },
         "courseC_PlayLab_events8": {
@@ -754,6 +866,9 @@
         "courseC_PlayLab_events8_2021": {
           "courseC_PlayLab_events8_callout1": "Folosiți acest bloc când Waddles și Chomp se ating!"
         },
+        "courseC_PlayLab_events8_2023": {
+          "courseC_PlayLab_events8_callout1": "Folosiți acest bloc când Waddles și Chomp se ating!"
+        },
         "courseC_PlayLab_events_challenge1": {
           "courseC_PlayLab_events_challenge1_1": "Cu acest bloc puteți deplasa actorii în diferite părți ale spațiului de joc."
         },
@@ -772,7 +887,13 @@
         "courseC_PlayLab_events_challenge1_2021": {
           "courseC_PlayLab_events_challenge1_1": "Cu acest bloc puteți deplasa actorii în diferite părți ale spațiului de joc."
         },
+        "courseC_PlayLab_events_challenge1_2023": {
+          "courseC_PlayLab_events_challenge1_1": "Cu acest bloc puteți deplasa actorii în diferite părți ale spațiului de joc."
+        },
         "courseC_PlayLab_events_lesson_extras": {
+          "courseC_PlayLab_events_challenge1_1": "Cu acest bloc puteți deplasa actorii în diferite părți ale spațiului de joc."
+        },
+        "courseC_PlayLab_events_lesson_extras_2023": {
           "courseC_PlayLab_events_challenge1_1": "Cu acest bloc puteți deplasa actorii în diferite părți ale spațiului de joc."
         },
         "courseC_artist_loops1a2022": {
@@ -787,6 +908,9 @@
         "courseC_artist_loops1a_2021": {
           "jumpto_callout": "Acest bloc este foarte important pentru acest proiect. Nu uitați să îl folosiți!"
         },
+        "courseC_artist_loops1a_2023": {
+          "jumpto_callout": "Acest bloc este foarte important pentru acest proiect. Nu uitați să îl folosiți!"
+        },
         "courseC_artist_loops1b2022": {
           "sticker2": "Adăugați-l în mijlocul programului vostru."
         },
@@ -799,10 +923,16 @@
         "courseC_artist_loops1b_2021": {
           "sticker2": "Adăugați-l în mijlocul programului vostru."
         },
+        "courseC_artist_loops1b_2023": {
+          "sticker2": "Adăugați-l în mijlocul programului vostru."
+        },
         "courseC_artist_prog22022": {
           "slider": "Puteți încetini programul aici."
         },
         "courseC_artist_prog2_2021": {
+          "slider": "Puteți încetini programul aici."
+        },
+        "courseC_artist_prog2_2023": {
           "slider": "Puteți încetini programul aici."
         },
         "courseC_collector_prog12022": {
@@ -818,6 +948,9 @@
           "courseC_collector_prog1_1": "Vedeți blocuri noi în cutia de instrumente? Nu vă faceți griji, vă vom arăta cum să le folosiți într-o altă lecție."
         },
         "courseC_collector_prog1_2021": {
+          "courseC_collector_prog1_1": "Vedeți blocuri noi în cutia de instrumente? Nu vă faceți griji, vă vom arăta cum să le folosiți într-o altă lecție."
+        },
+        "courseC_collector_prog1_2023": {
           "courseC_collector_prog1_1": "Vedeți blocuri noi în cutia de instrumente? Nu vă faceți griji, vă vom arăta cum să le folosiți într-o altă lecție."
         },
         "courseC_collector_prog7": {
@@ -838,6 +971,9 @@
         "courseC_collector_prog7_2021": {
           "courseC_collector_prog7_1": "Puteți lua mai multe blocuri din cutia de instrumente dacă aveți nevoie de ele!"
         },
+        "courseC_collector_prog7_2023": {
+          "courseC_collector_prog7_1": "Puteți lua mai multe blocuri din cutia de instrumente dacă aveți nevoie de ele!"
+        },
         "courseC_harvester_loops1_2021": {
           "courseC_harvester_loops1_callout1": "Numărul patru de pe dovleac vă spune că există patru dovleci disponibile pentru a alege."
         },
@@ -853,6 +989,9 @@
         "courseC_maze_debugging5_2021": {
           "courseC_maze_debugging5_1": "Aceste blocuri sunt blocate și nu pot fi șterse!"
         },
+        "courseC_maze_debugging5_2023": {
+          "courseC_maze_debugging5_1": "Aceste blocuri sunt blocate și nu pot fi șterse!"
+        },
         "courseC_maze_debugging92022": {
           "courseC_maze_debugging9_2019_1": "Trageți blocurile din cutia de instrumente în spațiul de lucru."
         },
@@ -863,6 +1002,9 @@
           "courseC_maze_debugging9_2019_1": "Trageți blocurile din cutia de instrumente în spațiul de lucru."
         },
         "courseC_maze_debugging9_2021": {
+          "courseC_maze_debugging9_2019_1": "Trageți blocurile din cutia de instrumente în spațiul de lucru."
+        },
+        "courseC_maze_debugging9_2023": {
           "courseC_maze_debugging9_2019_1": "Trageți blocurile din cutia de instrumente în spațiul de lucru."
         },
         "courseC_maze_debugging9_copy_2020": {
@@ -889,6 +1031,9 @@
         "courseC_maze_programming2_2021": {
           "courseC_maze_programming2_1": "Aceasta este cutia de instrumente. Aici veți găsi blocuri suplimentare pentru a rezolva puzzle-urile."
         },
+        "courseC_maze_programming2_2023": {
+          "courseC_maze_programming2_1": "Aceasta este cutia de instrumente. Aici veți găsi blocuri suplimentare pentru a rezolva puzzle-urile."
+        },
         "courseC_maze_programming3": {
           "courseC_maze_programming3_2": "Puteți trage blocuri suplimentare în cutia de instrumente pentru a le arunca.",
           "courseC_maze_programming3_3": "Aceste blocuri sunt din piatră și nu pot fi aruncate."
@@ -913,6 +1058,10 @@
           "courseC_maze_programming3_2": "Puteți trage blocuri suplimentare în cutia de instrumente pentru a le arunca.",
           "courseC_maze_programming3_3": "Aceste blocuri sunt din piatră și nu pot fi aruncate."
         },
+        "courseC_maze_programming3_2023": {
+          "courseC_maze_programming3_2": "Puteți trage blocuri suplimentare în cutia de instrumente pentru a le arunca.",
+          "courseC_maze_programming3_3": "Aceste blocuri sunt din piatră și nu pot fi aruncate."
+        },
         "courseC_maze_programming4": {
           "courseC_maze_programming4_1": "Aceasta este limita pentru blocuri. Cu ajutorul acesteia puteți afla câte blocuri mai aveți pe care le puteți folosi."
         },
@@ -931,6 +1080,9 @@
         "courseC_maze_programming4_2021": {
           "courseC_maze_programming4_1": "Aceasta este limita pentru blocuri. Cu ajutorul acesteia puteți afla câte blocuri mai aveți pe care le puteți folosi."
         },
+        "courseC_maze_programming4_2023": {
+          "courseC_maze_programming4_1": "Aceasta este limita pentru blocuri. Cu ajutorul acesteia puteți afla câte blocuri mai aveți pe care le puteți folosi."
+        },
         "courseC_maze_programming5": {
           "": "Aceste blocuri nu au numere. Puteți folosi câte doriți!"
         },
@@ -947,6 +1099,9 @@
           "": "Aceste blocuri nu au numere. Puteți folosi câte doriți!"
         },
         "courseC_maze_programming5_2021": {
+          "": "Aceste blocuri nu au numere. Puteți folosi câte doriți!"
+        },
+        "courseC_maze_programming5_2023": {
           "": "Aceste blocuri nu au numere. Puteți folosi câte doriți!"
         },
         "courseC_maze_programming7": {
@@ -973,6 +1128,10 @@
           "courseC_maze_programming7_1": "Acesta este primul vostru puzzle de tip provocare! Acestea sunt dificile, este posibil să fie nevoie de mai multe încercări pentru a-l rezolva.",
           "courseC_maze_programming7_2": "Aceste blocuri sunt din piatră și nu pot fi aruncate."
         },
+        "courseC_maze_programming7_2023": {
+          "courseC_maze_programming7_1": "Acesta este primul vostru puzzle de tip provocare! Acestea sunt dificile, este posibil să fie nevoie de mai multe încercări pentru a-l rezolva.",
+          "courseC_maze_programming7_2": "Aceste blocuri sunt din piatră și nu pot fi aruncate."
+        },
         "courseC_starWars_loops2": {
           "courseC_starWars_loops2": "Pentru acest puzzle aveți la dispoziție doar unul dintre aceste blocuri."
         },
@@ -989,6 +1148,9 @@
           "courseC_starWars_loops2": "Pentru acest puzzle aveți la dispoziție doar unul dintre aceste blocuri."
         },
         "courseC_starWars_loops2_2021": {
+          "courseC_starWars_loops2": "Pentru acest puzzle aveți la dispoziție doar unul dintre aceste blocuri."
+        },
+        "courseC_starWars_loops2_2023": {
           "courseC_starWars_loops2": "Pentru acest puzzle aveți la dispoziție doar unul dintre aceste blocuri."
         },
         "courseC_starWars_loops2_copy": {
@@ -1015,6 +1177,9 @@
         "courseD_artist_nestedLoops1a_2021": {
           "courseD_artist_nestedLoops1a_1": "Nu trebuie să folosiți culori pentru a rezolva acest puzzle. Dacă vreți, folosiți blocul `random color` (culoarea aleatorie), acesta vă va ușura munca!"
         },
+        "courseD_artist_nestedLoops1a_2023": {
+          "courseD_artist_nestedLoops1a_1": "Nu trebuie să folosiți culori pentru a rezolva acest puzzle. Dacă vreți, folosiți blocul `random color` (culoarea aleatorie), acesta vă va ușura munca!"
+        },
         "courseD_bee_conditionals2": {
           "4_5_Bee_Conditionals_2_1": "Rețineți, trebuie să verificați dacă FIECARE nor are o FLOARE. Nu trebuie să verificați dacă există faguri de miere."
         },
@@ -1033,6 +1198,9 @@
         "courseD_bee_conditionals2_2021": {
           "4_5_Bee_Conditionals_2_1": "Rețineți, trebuie să verificați dacă FIECARE nor are o FLOARE. Nu trebuie să verificați dacă există faguri de miere."
         },
+        "courseD_bee_conditionals2_2023": {
+          "4_5_Bee_Conditionals_2_1": "Rețineți, trebuie să verificați dacă FIECARE nor are o FLOARE. Nu trebuie să verificați dacă există faguri de miere."
+        },
         "courseD_bee_conditionals2_copy": {
           "4_5_Bee_Conditionals_2_1": "Rețineți, trebuie să verificați dacă FIECARE nor are o FLOARE. Nu trebuie să verificați dacă există faguri de miere."
         },
@@ -1046,6 +1214,9 @@
           "stepButton": "Încercați să parcurgeți codul pe rând, bloc cu bloc."
         },
         "courseD_bee_nestedLoops1a_2021": {
+          "stepButton": "Încercați să parcurgeți codul pe rând, bloc cu bloc."
+        },
+        "courseD_bee_nestedLoops1a_2023": {
           "stepButton": "Încercați să parcurgeți codul pe rând, bloc cu bloc."
         },
         "courseD_farmer_while72022": {
@@ -1063,6 +1234,9 @@
         "courseD_farmer_while7_2021": {
           "courseD_farmer_while7_2018_PathAhead": "Va trebui să folosiți blocul `while path ahead` pentru a rezolva acest puzzle."
         },
+        "courseD_farmer_while7_2023": {
+          "courseD_farmer_while7_2018_PathAhead": "Va trebui să folosiți blocul `while path ahead` pentru a rezolva acest puzzle."
+        },
         "courseD_maze_intro42022": {
           "courseC_maze_programming4_1": "Aceasta este limita pentru blocuri. Cu ajutorul acesteia puteți afla câte blocuri mai aveți pe care le puteți folosi."
         },
@@ -1075,6 +1249,9 @@
         "courseD_maze_intro4_2021": {
           "courseC_maze_programming4_1": "Aceasta este limita pentru blocuri. Cu ajutorul acesteia puteți afla câte blocuri mai aveți pe care le puteți folosi."
         },
+        "courseD_maze_intro4_2023": {
+          "courseC_maze_programming4_1": "Aceasta este limita pentru blocuri. Cu ajutorul acesteia puteți afla câte blocuri mai aveți pe care le puteți folosi."
+        },
         "courseD_maze_intro5a2022": {
           "": "Aceste blocuri nu au numere. Puteți folosi câte doriți!"
         },
@@ -1085,6 +1262,9 @@
           "": "Aceste blocuri nu au numere. Puteți folosi câte doriți!"
         },
         "courseD_maze_intro5a_2021": {
+          "": "Aceste blocuri nu au numere. Puteți folosi câte doriți!"
+        },
+        "courseD_maze_intro5a_2023": {
           "": "Aceste blocuri nu au numere. Puteți folosi câte doriți!"
         },
         "courseD_maze_ramp1_2021": {
@@ -1108,6 +1288,9 @@
         "courseD_maze_ramp2_2021": {
           "courseC_maze_programming2_1": "Aceasta este cutia de instrumente. Aici veți găsi blocuri suplimentare pentru a rezolva puzzle-urile."
         },
+        "courseD_maze_ramp2_2023": {
+          "courseC_maze_programming2_1": "Aceasta este cutia de instrumente. Aici veți găsi blocuri suplimentare pentru a rezolva puzzle-urile."
+        },
         "courseD_maze_ramp3": {
           "courseC_maze_programming3_2": "Puteți trage blocuri suplimentare în cutia de instrumente pentru a le arunca."
         },
@@ -1127,6 +1310,10 @@
           "stone_block_2": "Blocurile gri nu pot fi aruncate."
         },
         "courseD_maze_ramp3_2021": {
+          "courseC_maze_programming3_2": "Puteți trage blocuri suplimentare în cutia de instrumente pentru a le arunca.",
+          "stone_block_2": "Blocurile gri nu pot fi aruncate."
+        },
+        "courseD_maze_ramp3_2023": {
           "courseC_maze_programming3_2": "Puteți trage blocuri suplimentare în cutia de instrumente pentru a le arunca.",
           "stone_block_2": "Blocurile gri nu pot fi aruncate."
         },
@@ -1158,6 +1345,9 @@
           "": "Aceste blocuri nu au numere. Puteți folosi câte doriți!"
         },
         "courseD_maze_ramp5_2021": {
+          "": "Aceste blocuri nu au numere. Puteți folosi câte doriți!"
+        },
+        "courseD_maze_ramp5_2023": {
           "": "Aceste blocuri nu au numere. Puteți folosi câte doriți!"
         },
         "courseD_maze_ramp5a": {
@@ -1199,6 +1389,9 @@
         "courseE_aboutme_2_2021": {
           "": "Faceți clic aici!"
         },
+        "courseE_aboutme_2_2023": {
+          "": "Apasă aici pentru a adăuga costume la proiectul tău."
+        },
         "courseE_artist_functions2": {
           "courseD_artist_functions2_1": "Când blocul de culoare verde este rulat, tot codul din funcție va fi rulat. Ce ar trebui să facă artistul după ce a desenat primul pătrat?"
         },
@@ -1215,6 +1408,9 @@
           "courseD_artist_functions2_1": "Când blocul de culoare verde este rulat, tot codul din funcție va fi rulat. Ce ar trebui să facă artistul după ce a desenat primul pătrat?"
         },
         "courseE_artist_functions2_2021": {
+          "courseD_artist_functions2_1": "Când blocul de culoare verde este rulat, tot codul din funcție va fi rulat. Ce ar trebui să facă artistul după ce a desenat primul pătrat?"
+        },
+        "courseE_artist_functions2_2023": {
           "courseD_artist_functions2_1": "Când blocul de culoare verde este rulat, tot codul din funcție va fi rulat. Ce ar trebui să facă artistul după ce a desenat primul pătrat?"
         },
         "courseE_artist_functions2_copy": {
@@ -1241,6 +1437,9 @@
         "courseE_artist_functions8a_2021": {
           "courseD_artist_functions8_1": "Blocurile voastre pentru crearea funcțiilor au fost mutate în cutia de instrumente cu această etichetă."
         },
+        "courseE_artist_functions8a_2023": {
+          "courseD_artist_functions8_1": "Blocurile voastre pentru crearea funcțiilor au fost mutate în cutia de instrumente cu această etichetă."
+        },
         "courseE_artist_functions_challenge1": {
           "courseE_artist_functions_challenge1_callout1": "Puteți, de asemenea, să folosiți `jump to` (salt la) în alte poziții sau să modificați întregul design așa cum vă doriți!",
           "courseE_artist_functions_challenge1_callout2": "Dacă nu vă place acest design, schimbați-l cu orice doriți!"
@@ -1262,6 +1461,10 @@
           "courseE_artist_functions_challenge1_callout2": "Dacă nu vă place acest design, schimbați-l cu orice doriți!"
         },
         "courseE_artist_functions_challenge1_2021": {
+          "courseE_artist_functions_challenge1_callout1": "Puteți, de asemenea, să folosiți `jump to` (salt la) în alte poziții sau să modificați întregul design așa cum vă doriți!",
+          "courseE_artist_functions_challenge1_callout2": "Dacă nu vă place acest design, schimbați-l cu orice doriți!"
+        },
+        "courseE_artist_functions_challenge1_2023": {
           "courseE_artist_functions_challenge1_callout1": "Puteți, de asemenea, să folosiți `jump to` (salt la) în alte poziții sau să modificați întregul design așa cum vă doriți!",
           "courseE_artist_functions_challenge1_callout2": "Dacă nu vă place acest design, schimbați-l cu orice doriți!"
         },
@@ -1289,6 +1492,10 @@
           "courseE_artist_functions_challenge2_callout1": "Continuați acest program adăugând mai multe coduri în partea de jos.",
           "courseE_artist_functions_challenge2_callout2": "Dacă nu vă place acest design, schimbați-l cu orice doriți!"
         },
+        "courseE_artist_functions_challenge2_2023": {
+          "courseE_artist_functions_challenge2_callout1": "Puteți, de asemenea, să folosiți `jump to` (salt la) în alte poziții sau să modificați întregul design așa cum vă doriți!",
+          "courseE_artist_functions_challenge2_callout2": "Dacă nu vă place acest design, schimbați-l cu orice doriți!"
+        },
         "courseE_farmer_functions1": {
           "courseE_farmer_functions1_2": "Cutia de instrumente este organizată puțin diferit de data aceasta! Faceți clic pe categorii pentru a vedea ce blocuri aveți la dispoziție."
         },
@@ -1310,6 +1517,9 @@
         "courseE_farmer_functions13_2021": {
           "courseE_farmer_functions1a_1": "Această legumă este necunoscută. Se schimbă de fiecare dată când rulați programul."
         },
+        "courseE_farmer_functions13_2023": {
+          "courseE_farmer_functions1a_1": "Această legumă este necunoscută. Se schimbă de fiecare dată când rulați programul."
+        },
         "courseE_farmer_functions1_2018": {
           "courseE_farmer_functions1_2": "Cutia de instrumente este organizată puțin diferit de data aceasta! Faceți clic pe categorii pentru a vedea ce blocuri aveți la dispoziție."
         },
@@ -1320,6 +1530,9 @@
           "courseE_farmer_functions1_2": "Cutia de instrumente este organizată puțin diferit de data aceasta! Faceți clic pe categorii pentru a vedea ce blocuri aveți la dispoziție."
         },
         "courseE_farmer_functions1_2021": {
+          "courseE_farmer_functions1_2": "Cutia de instrumente este organizată puțin diferit de data aceasta! Faceți clic pe categorii pentru a vedea ce blocuri aveți la dispoziție."
+        },
+        "courseE_farmer_functions1_2023": {
           "courseE_farmer_functions1_2": "Cutia de instrumente este organizată puțin diferit de data aceasta! Faceți clic pe categorii pentru a vedea ce blocuri aveți la dispoziție."
         },
         "courseE_farmer_functions1a": {
@@ -1340,6 +1553,9 @@
         "courseE_farmer_functions1a_2021": {
           "courseE_farmer_functions1a_1": "Această legumă este necunoscută. Se schimbă de fiecare dată când rulați programul."
         },
+        "courseE_farmer_functions1a_2023": {
+          "courseE_farmer_functions1a_1": "Această legumă este necunoscută. Se schimbă de fiecare dată când rulați programul."
+        },
         "courseE_farmer_functions2b": {
           "courseE_farmer_functions1a_1": "Această legumă este necunoscută. Se schimbă de fiecare dată când rulați programul."
         },
@@ -1356,6 +1572,9 @@
           "courseE_farmer_functions1a_1": "Această legumă este necunoscută. Se schimbă de fiecare dată când rulați programul."
         },
         "courseE_farmer_functions2b_2021": {
+          "courseE_farmer_functions1a_1": "Această legumă este necunoscută. Se schimbă de fiecare dată când rulați programul."
+        },
+        "courseE_farmer_functions2b_2023": {
           "courseE_farmer_functions1a_1": "Această legumă este necunoscută. Se schimbă de fiecare dată când rulați programul."
         },
         "courseE_playLab_challenge1": {
@@ -1376,6 +1595,10 @@
           "run_button": "Apăsați mai întâi butonul Rulează!",
           "visualizationResizeBar": "Trageți cele 3 puncte pentru a redimensiona zona de joc."
         },
+        "courseF_apps_aquarium_2023": {
+          "run_button": "Apăsați mai întâi butonul Rulează!",
+          "visualizationResizeBar": "Trageți cele 3 puncte pentru a redimensiona zona de joc."
+        },
         "courseF_apps_card": {
           "visualizationResizeBar": "Trageți cele 3 puncte pentru a redimensiona zona de joc."
         },
@@ -1383,6 +1606,9 @@
           "visualizationResizeBar": "Trageți cele 3 puncte pentru a redimensiona zona de joc."
         },
         "courseF_apps_card_-2022-2": {
+          "visualizationResizeBar": "Trageți cele 3 puncte pentru a redimensiona zona de joc."
+        },
+        "courseF_apps_card_2023": {
           "visualizationResizeBar": "Trageți cele 3 puncte pentru a redimensiona zona de joc."
         },
         "courseF_apps_chatbot": {
@@ -1394,6 +1620,10 @@
           "visualizationResizeBar": "Trageți cele 3 puncte pentru a redimensiona zona de joc."
         },
         "courseF_apps_chatbot_-2022-2": {
+          "run_button": "Apăsați mai întâi butonul Rulează!",
+          "visualizationResizeBar": "Trageți cele 3 puncte pentru a redimensiona zona de joc."
+        },
+        "courseF_apps_chatbot_2023": {
           "run_button": "Apăsați mai întâi butonul Rulează!",
           "visualizationResizeBar": "Trageți cele 3 puncte pentru a redimensiona zona de joc."
         },
@@ -1409,16 +1639,32 @@
           "run_button": "Apăsați mai întâi butonul Rulează!",
           "visualizationResizeBar": "Trageți cele 3 puncte pentru a redimensiona zona de joc."
         },
+        "courseF_apps_collector_2023": {
+          "run_button": "Apăsați mai întâi butonul Rulează!",
+          "visualizationResizeBar": "Trageți cele 3 puncte pentru a redimensiona zona de joc."
+        },
         "courseF_apps_collector_drag_-2022-2": {
+          "visualizationResizeBar": "Trageți cele 3 puncte pentru a redimensiona zona de joc."
+        },
+        "courseF_apps_collector_drag_2023": {
           "visualizationResizeBar": "Trageți cele 3 puncte pentru a redimensiona zona de joc."
         },
         "courseF_apps_collector_drive_-2022-2": {
           "visualizationResizeBar": "Trageți cele 3 puncte pentru a redimensiona zona de joc."
         },
+        "courseF_apps_collector_drive_2023": {
+          "visualizationResizeBar": "Trageți cele 3 puncte pentru a redimensiona zona de joc."
+        },
         "courseF_apps_collector_move2_-2022-2": {
           "visualizationResizeBar": "Trageți cele 3 puncte pentru a redimensiona zona de joc."
         },
+        "courseF_apps_collector_move2_2023": {
+          "visualizationResizeBar": "Trageți cele 3 puncte pentru a redimensiona zona de joc."
+        },
         "courseF_apps_collector_move_-2022-2": {
+          "visualizationResizeBar": "Trageți cele 3 puncte pentru a redimensiona zona de joc."
+        },
+        "courseF_apps_collector_move_2023": {
           "visualizationResizeBar": "Trageți cele 3 puncte pentru a redimensiona zona de joc."
         },
         "courseF_apps_madlib": {
@@ -1430,6 +1676,9 @@
         "courseF_apps_madlib_-2022-2": {
           "visualizationResizeBar": "Trageți cele 3 puncte pentru a redimensiona zona de joc."
         },
+        "courseF_apps_madlib_2023": {
+          "visualizationResizeBar": "Trageți cele 3 puncte pentru a redimensiona zona de joc."
+        },
         "courseF_apps_pet": {
           "run_button": "Apăsați mai întâi butonul Rulează!",
           "visualizationResizeBar": "Trageți cele 3 puncte pentru a redimensiona zona de joc."
@@ -1439,6 +1688,10 @@
           "visualizationResizeBar": "Trageți cele 3 puncte pentru a redimensiona zona de joc."
         },
         "courseF_apps_pet_-2022-2": {
+          "run_button": "Apăsați mai întâi butonul Rulează!",
+          "visualizationResizeBar": "Trageți cele 3 puncte pentru a redimensiona zona de joc."
+        },
+        "courseF_apps_pet_2023": {
           "run_button": "Apăsați mai întâi butonul Rulează!",
           "visualizationResizeBar": "Trageți cele 3 puncte pentru a redimensiona zona de joc."
         },
@@ -1460,6 +1713,9 @@
         "courseF_artist_for1_2021": {
           "courseF_artist_for1_1": "Cutia de instrumente este în modul „categorie” pentru a face mai mult loc pentru codul vosru. Buclele `for` se află aici."
         },
+        "courseF_artist_for1_2023": {
+          "courseF_artist_for1_1": "Cutia de instrumente este în modul „categorie” pentru a face mai mult loc pentru codul vosru. Buclele `for` se află aici."
+        },
         "courseF_bee_for4": {
           "courseF_bee_for4_1": "Veți găsi bucla `for` aici!"
         },
@@ -1476,6 +1732,9 @@
           "courseF_bee_for4_1": "Veți găsi bucla `for` aici!"
         },
         "courseF_bee_for4_2021": {
+          "courseF_bee_for4_1": "Veți găsi bucla `for` aici!"
+        },
+        "courseF_bee_for4_2023": {
           "courseF_bee_for4_1": "Veți găsi bucla `for` aici!"
         },
         "courseF_bee_for9": {
@@ -1496,6 +1755,9 @@
         "courseF_bee_for9_2021": {
           "courseF_bee_for9_1": "Veți găsi bucla `math` aici."
         },
+        "courseF_bee_for9_2023": {
+          "courseF_bee_for9_1": "Veți găsi bucla `math` aici."
+        },
         "courseF_bee_variables_1_2018": {
           "courseF_bee_functions_1_2018_1": "Puteți găsi toate variabilele aici!"
         },
@@ -1511,10 +1773,16 @@
         "courseF_bee_variables_1a_2021": {
           "courseF_bee_functions_1_2018_1": "Puteți găsi toate variabilele aici!"
         },
+        "courseF_bee_variables_1a_2023": {
+          "courseF_bee_functions_1_2018_1": "Puteți găsi toate variabilele aici!"
+        },
         "courseF_editable_card": {
           "visualizationResizeBar": "Trageți cele 3 puncte pentru a redimensiona zona de joc."
         },
         "courseF_editable_card_-2022-2": {
+          "visualizationResizeBar": "Trageți cele 3 puncte pentru a redimensiona zona de joc."
+        },
+        "courseF_editable_card_2023": {
           "visualizationResizeBar": "Trageți cele 3 puncte pentru a redimensiona zona de joc."
         },
         "courseF_editable_chatbot": {
@@ -1523,10 +1791,16 @@
         "courseF_editable_chatbot_-2022-2": {
           "visualizationResizeBar": "Trageți cele 3 puncte pentru a redimensiona zona de joc."
         },
+        "courseF_editable_chatbot_2023": {
+          "visualizationResizeBar": "Trageți cele 3 puncte pentru a redimensiona zona de joc."
+        },
         "courseF_editable_madlib": {
           "visualizationResizeBar": "Trageți cele 3 puncte pentru a redimensiona zona de joc."
         },
         "courseF_editable_madlib_-2022-2": {
+          "visualizationResizeBar": "Trageți cele 3 puncte pentru a redimensiona zona de joc."
+        },
+        "courseF_editable_madlib_2023": {
           "visualizationResizeBar": "Trageți cele 3 puncte pentru a redimensiona zona de joc."
         },
         "courseF_events_choice_penguin": {
@@ -1535,10 +1809,16 @@
         "courseF_events_choice_penguin_-2022-2": {
           "whenToWhile": "Încercați să schimbați when (când) cu while (în timp ce)."
         },
+        "courseF_events_choice_penguin_2023": {
+          "whenToWhile": "Încercați să schimbați when (când) cu while (în timp ce)."
+        },
         "courseF_events_conflict": {
           "stops_block": "Noi blocuri aici!"
         },
         "courseF_events_conflict_-2022-2": {
+          "stops_block": "Noi blocuri aici!"
+        },
+        "courseF_events_conflict_2023": {
           "stops_block": "Noi blocuri aici!"
         },
         "courseF_events_key": {
@@ -1547,10 +1827,16 @@
         "courseF_events_key_-2022-2": {
           "whenKey": "Utilizați noul bloc de evenimente găsit aici."
         },
+        "courseF_events_key_2023": {
+          "whenKey": "Utilizați noul bloc de evenimente găsit aici."
+        },
         "courseF_events_practice_reorder": {
           "stopAllBug": "Acest bloc nu este în ordinea corectă."
         },
         "courseF_events_practice_reorder_-2022-2": {
+          "stopAllBug": "Acest bloc nu este în ordinea corectă."
+        },
+        "courseF_events_practice_reorder_2023": {
           "stopAllBug": "Acest bloc nu este în ordinea corectă."
         },
         "courseF_events_predict": {
@@ -1559,10 +1845,16 @@
         "courseF_events_predict_-2022-2": {
           "behaviors_edit": "Faceți clic aici pentru a vedea cum funcționează acest comportament."
         },
+        "courseF_events_predict_2023": {
+          "behaviors_edit": "Faceți clic aici pentru a vedea cum funcționează acest comportament."
+        },
         "courseF_events_time": {
           "events_category": "Faceți clic aici pentru a deschide categoria Evenimente."
         },
         "courseF_events_time_-2022-2": {
+          "events_category": "Faceți clic aici pentru a deschide categoria Evenimente."
+        },
+        "courseF_events_time_2023": {
           "events_category": "Faceți clic aici pentru a deschide categoria Evenimente."
         },
         "courseF_label_predict": {
@@ -1571,10 +1863,16 @@
         "courseF_label_predict_-2022-2": {
           "variablesPredict": "Uitați-vă cu atenție la codul care urmează."
         },
+        "courseF_label_predict_2023": {
+          "variablesPredict": "Uitați-vă cu atenție la codul care urmează."
+        },
         "courseF_sprites_behaviors": {
           "behaviors_category": "Faceți clic aici pentru a deschide categoria Comportamente."
         },
         "courseF_sprites_behaviors_-2022-2": {
+          "behaviors_category": "Faceți clic aici pentru a deschide categoria Comportamente."
+        },
+        "courseF_sprites_behaviors_2023": {
           "behaviors_category": "Faceți clic aici pentru a deschide categoria Comportamente."
         },
         "courseF_sprites_make": {
@@ -1583,10 +1881,16 @@
         "courseF_sprites_make_-2022-2": {
           "sprites_category": "Faceți clic aici pentru a deschide categoria Sprite-uri."
         },
+        "courseF_sprites_make_2023": {
+          "sprites_category": "Faceți clic aici pentru a deschide categoria Sprite-uri."
+        },
         "courseF_sprites_positioning": {
           "locations_category": "Faceți clic aici pentru a deschide categoria Locuri."
         },
         "courseF_sprites_positioning_-2022-2": {
+          "locations_category": "Faceți clic aici pentru a deschide categoria Locuri."
+        },
+        "courseF_sprites_positioning_2023": {
           "locations_category": "Faceți clic aici pentru a deschide categoria Locuri."
         },
         "courseF_sprites_properties": {
@@ -1595,10 +1899,16 @@
         "courseF_sprites_properties_-2022-2": {
           "sprites_category2": "Căutați un nou bloc aici."
         },
+        "courseF_sprites_properties_2023": {
+          "sprites_category2": "Căutați un nou bloc aici."
+        },
         "courseF_text_answer": {
           "answered_block": "Căutați un nou bloc aici!"
         },
         "courseF_text_answer_-2022-2": {
+          "answered_block": "Căutați un nou bloc aici!"
+        },
+        "courseF_text_answer_2023": {
           "answered_block": "Căutați un nou bloc aici!"
         },
         "courseF_text_choice_color": {
@@ -1607,10 +1917,16 @@
         "courseF_text_choice_color_-2022-2": {
           "text_color_finish": "S-a schimbat fundalul când ați răspuns la întrebare? Dacă da, apăsați pe „Terminare”. Dacă nu, apăsați pe „Resetare”, schimbați codul, apoi apăsați din nou pe „Rulează”."
         },
+        "courseF_text_choice_color_2023": {
+          "text_color_finish": "S-a schimbat fundalul când ați răspuns la întrebare? Dacă da, apăsați pe „Terminare”. Dacă nu, apăsați pe „Resetare”, schimbați codul, apoi apăsați din nou pe „Rulează”."
+        },
         "courseF_text_choice_conversation": {
           "text_generic_finish": "Ați terminat? Dacă da, apăsați pe „Terminare”. Dacă nu, apăsați pe „Resetare”, schimbați codul, apoi apăsați din nou pe „Rulează”."
         },
         "courseF_text_choice_conversation_-2022-2": {
+          "text_generic_finish": "Ați terminat? Dacă da, apăsați pe „Terminare”. Dacă nu, apăsați pe „Resetare”, schimbați codul, apoi apăsați din nou pe „Rulează”."
+        },
+        "courseF_text_choice_conversation_2023": {
           "text_generic_finish": "Ați terminat? Dacă da, apăsați pe „Terminare”. Dacă nu, apăsați pe „Resetare”, schimbați codul, apoi apăsați din nou pe „Rulează”."
         },
         "courseF_text_choice_title": {
@@ -1621,16 +1937,26 @@
           "text_answer_finish": "S-a afișat ecranul cu titlu timp de 3 secunde? Dacă da, apăsați pe „Terminare”. Dacă nu, apăsați pe „Resetare”, schimbați codul, apoi apăsați din nou pe „Rulează”.",
           "title_block": "Căutați două noi blocuri aici!"
         },
+        "courseF_text_choice_title_2023": {
+          "text_answer_finish": "S-a afișat ecranul cu titlu timp de 3 secunde? Dacă da, apăsați pe „Terminare”. Dacă nu, apăsați pe „Resetare”, schimbați codul, apoi apăsați din nou pe „Rulează”.",
+          "title_block": "Căutați două noi blocuri aici!"
+        },
         "courseF_text_concat": {
           "join_blocks": "Căutați noi blocuri aici!"
         },
         "courseF_text_concat_-2022-2": {
           "join_blocks": "Căutați noi blocuri aici!"
         },
+        "courseF_text_concat_2023": {
+          "join_blocks": "Căutați noi blocuri aici!"
+        },
         "courseF_text_events": {
           "events_category": "Faceți clic aici pentru a deschide categoria Evenimente."
         },
         "courseF_text_events_-2022-2": {
+          "events_category": "Faceți clic aici pentru a deschide categoria Evenimente."
+        },
+        "courseF_text_events_2023": {
           "events_category": "Faceți clic aici pentru a deschide categoria Evenimente."
         },
         "courseF_text_print": {
@@ -1641,13 +1967,23 @@
           "print_block": "Găsiți blocul imprimare aici!",
           "text_print_finish": "S-a imprimat mesajul mai sus? Dacă da, apăsați pe „Terminare”. Dacă nu, apăsați pe „Resetare”, schimbați codul, apoi apăsați din nou pe „Rulează”."
         },
+        "courseF_text_print_2023": {
+          "print_block": "Găsiți blocul imprimare aici!",
+          "text_print_finish": "S-a imprimat mesajul mai sus? Dacă da, apăsați pe „Terminare”. Dacă nu, apăsați pe „Resetare”, schimbați codul, apoi apăsați din nou pe „Rulează”."
+        },
         "courseF_text_prompts": {
           "prompt_block": "Găsiți blocul cu promptul aici!"
         },
         "courseF_text_prompts_-2022-2": {
           "prompt_block": "Găsiți blocul cu promptul aici!"
         },
+        "courseF_text_prompts_2023": {
+          "prompt_block": "Găsiți blocul cu promptul aici!"
+        },
         "courseF_variables2_predict_-2022-2": {
+          "variablesPredict": "Uitați-vă cu atenție la codul care urmează."
+        },
+        "courseF_variables2_predict_2023": {
           "variablesPredict": "Uitați-vă cu atenție la codul care urmează."
         },
         "courseF_variables_predict": {
@@ -1656,16 +1992,84 @@
         "courseF_variables_predict_-2022-2": {
           "variablesPredict": "Uitați-vă cu atenție la codul care urmează."
         },
+        "courseF_variables_predict_2023": {
+          "variablesPredict": "Uitați-vă cu atenție la codul care urmează."
+        },
         "coursea_maze_ramp1_2021": {
           "grade2_CaringForNewPet_0_1": "După ce ați rupt toate blocurile împreună, apăsați „Alerga” pentru a porni programul."
         },
         "coursee_helloworld_events": {
           "hello_world_click_hint": "Adaugă acest bloc eveniment la spațiul tău de lucru."
         },
+        "coursee_helloworld_events_2023": {
+          "hello_world_click_hint": "Adaugă acest bloc eveniment la spațiul tău de lucru."
+        },
         "coursee_helloworld_freeplay": {
           "costumes_tab": "Apasă aici pentru a adăuga costume la proiectul tău."
         },
+        "coursee_helloworld_freeplay_2023": {
+          "costumes_tab": "Apasă aici pentru a adăuga costume la proiectul tău."
+        },
         "coursee_helloworld_say": {
+          "hello_world_make_sprite": "Utilizează acest bloc pentru a creea un spirit.",
+          "hello_world_say": "Utilizează acest bloc pentru a face spiritul să vorbească."
+        },
+        "coursee_helloworld_say_2023": {
+          "hello_world_make_sprite": "Utilizează acest bloc pentru a creea un spirit.",
+          "hello_world_say": "Utilizează acest bloc pentru a face spiritul să vorbească."
+        },
+        "csc-starquilts-comment_2023": {
+          "New Artist Project_callout1": "Faceți clic pe categorii pentru a vedea blocurile din caseta dvs. de instrumente! Trageți blocurile în spațiul de lucru pentru a le adăuga la programul dvs.",
+          "New Artist Project_callout2": "Apasă \"Rulează\" pentru a executa programul tău",
+          "sign_in_to_save_project": "Doriți să accesați proiectul mai târziu? Conectați-vă pentru a salva acest proiect în contul dvs.!"
+        },
+        "csc-starquilts-repeat_2023": {
+          "New Artist Project_callout1": "Faceți clic pe categorii pentru a vedea blocurile din caseta dvs. de instrumente! Trageți blocurile în spațiul de lucru pentru a le adăuga la programul dvs.",
+          "New Artist Project_callout2": "Apasă \"Rulează\" pentru a executa programul tău",
+          "sign_in_to_save_project": "Doriți să accesați proiectul mai târziu? Conectați-vă pentru a salva acest proiect în contul dvs.!"
+        },
+        "csc-starquilts-rhombus-freeplay_2023": {
+          "New Artist Project_callout1": "Faceți clic pe categorii pentru a vedea blocurile din caseta dvs. de instrumente! Trageți blocurile în spațiul de lucru pentru a le adăuga la programul dvs.",
+          "New Artist Project_callout2": "Apasă \"Rulează\" pentru a executa programul tău",
+          "sign_in_to_save_project": "Doriți să accesați proiectul mai târziu? Conectați-vă pentru a salva acest proiect în contul dvs.!"
+        },
+        "csc-starquilts-row1_2023": {
+          "New Artist Project_callout1": "Faceți clic pe categorii pentru a vedea blocurile din caseta dvs. de instrumente! Trageți blocurile în spațiul de lucru pentru a le adăuga la programul dvs.",
+          "New Artist Project_callout2": "Apasă \"Rulează\" pentru a executa programul tău",
+          "sign_in_to_save_project": "Doriți să accesați proiectul mai târziu? Conectați-vă pentru a salva acest proiect în contul dvs.!"
+        },
+        "csc-starquilts-row2_2023": {
+          "New Artist Project_callout1": "Faceți clic pe categorii pentru a vedea blocurile din caseta dvs. de instrumente! Trageți blocurile în spațiul de lucru pentru a le adăuga la programul dvs.",
+          "New Artist Project_callout2": "Apasă \"Rulează\" pentru a executa programul tău",
+          "sign_in_to_save_project": "Doriți să accesați proiectul mai târziu? Conectați-vă pentru a salva acest proiect în contul dvs.!"
+        },
+        "csc-starquilts-row3_2023": {
+          "New Artist Project_callout1": "Faceți clic pe categorii pentru a vedea blocurile din caseta dvs. de instrumente! Trageți blocurile în spațiul de lucru pentru a le adăuga la programul dvs.",
+          "New Artist Project_callout2": "Apasă \"Rulează\" pentru a executa programul tău",
+          "sign_in_to_save_project": "Doriți să accesați proiectul mai târziu? Conectați-vă pentru a salva acest proiect în contul dvs.!"
+        },
+        "csc-starquilts-row4_2023": {
+          "New Artist Project_callout1": "Faceți clic pe categorii pentru a vedea blocurile din caseta dvs. de instrumente! Trageți blocurile în spațiul de lucru pentru a le adăuga la programul dvs.",
+          "New Artist Project_callout2": "Apasă \"Rulează\" pentru a executa programul tău",
+          "sign_in_to_save_project": "Doriți să accesați proiectul mai târziu? Conectați-vă pentru a salva acest proiect în contul dvs.!"
+        },
+        "csc-starquilts-row5_2023": {
+          "New Artist Project_callout1": "Faceți clic pe categorii pentru a vedea blocurile din caseta dvs. de instrumente! Trageți blocurile în spațiul de lucru pentru a le adăuga la programul dvs.",
+          "New Artist Project_callout2": "Apasă \"Rulează\" pentru a executa programul tău",
+          "sign_in_to_save_project": "Doriți să accesați proiectul mai târziu? Conectați-vă pentru a salva acest proiect în contul dvs.!"
+        },
+        "csc_animal_adaptations_bugs2": {
+          "hello_world_behavior_blocks": "Utilizează acest bloc cu unul dintre comportamentele de mai jos."
+        },
+        "csc_animal_adaptations_predict_gamelab": {
+          "behaviors_edit": "Faceți clic aici pentru a vedea cum funcționează acest comportament."
+        },
+        "csc_starquilts_freeplay_2023": {
+          "New Artist Project_callout1": "Faceți clic pe categorii pentru a vedea blocurile din caseta dvs. de instrumente! Trageți blocurile în spațiul de lucru pentru a le adăuga la programul dvs.",
+          "New Artist Project_callout2": "Apasă \"Rulează\" pentru a executa programul tău",
+          "sign_in_to_save_project": "Doriți să accesați proiectul mai târziu? Conectați-vă pentru a salva acest proiect în contul dvs.!"
+        },
+        "ecosystems_helloworld_say_2023": {
           "hello_world_make_sprite": "Utilizează acest bloc pentru a creea un spirit.",
           "hello_world_say": "Utilizează acest bloc pentru a face spiritul să vorbească."
         },
@@ -1679,6 +2083,9 @@
           "express_maze_debugging9_2019_1": "Trageți blocurile din cutia de instrumente în spațiul de lucru."
         },
         "express_maze_debugging9_2021": {
+          "express_maze_debugging9_2019_1": "Trageți blocurile din cutia de instrumente în spațiul de lucru."
+        },
+        "express_maze_debugging9_2023": {
           "express_maze_debugging9_2019_1": "Trageți blocurile din cutia de instrumente în spațiul de lucru."
         },
         "frozen circle function with parameter": {
@@ -1757,6 +2164,12 @@
         "helloworld_animals_sounds": {
           "hello_world_new": "Bloc nou!"
         },
+        "helloworld_bugs_behaviors_2023": {
+          "hello_world_behavior_blocks": "Utilizează acest bloc cu unul dintre comportamentele de mai jos."
+        },
+        "helloworld_bunny_adaptation_2023": {
+          "hw_Run": "Fă clic aici ca să rulezi codul."
+        },
         "helloworld_emoji_backgrounds": {
           "hw_background_location": "Utilizează acest bloc pentru a stabili un nou fundal."
         },
@@ -1795,6 +2208,9 @@
         "helloworld_food_backgrounds": {
           "hw_background_location": "Utilizează acest bloc pentru a stabili un nou fundal."
         },
+        "helloworld_food_backgrounds_2023": {
+          "hw_background_location": "Utilizează acest bloc pentru a stabili un nou fundal."
+        },
         "helloworld_food_backgrounds_soccer-2022": {
           "hw_background_location": "Utilizează acest bloc pentru a stabili un nou fundal."
         },
@@ -1802,6 +2218,9 @@
           "hw_background_location": "Utilizează acest bloc pentru a stabili un nou fundal."
         },
         "helloworld_food_behaviors": {
+          "hello_world_behavior_blocks": "Utilizează acest bloc cu unul dintre comportamentele de mai jos."
+        },
+        "helloworld_food_behaviors_2023": {
           "hello_world_behavior_blocks": "Utilizează acest bloc cu unul dintre comportamentele de mai jos."
         },
         "helloworld_food_behaviors_soccer-2022": {
@@ -1813,6 +2232,9 @@
         "helloworld_food_click": {
           "hw_Run": "Fă clic aici ca să rulezi codul."
         },
+        "helloworld_food_click_2023": {
+          "hw_Run": "Fă clic aici ca să rulezi codul."
+        },
         "helloworld_food_click_soccer-2022": {
           "hw_Run": "Fă clic aici ca să rulezi codul."
         },
@@ -1820,6 +2242,9 @@
           "hw_Run": "Faceți clic mai întâi aici!"
         },
         "helloworld_food_costumes": {
+          "hello_world_new": "Bloc nou!"
+        },
+        "helloworld_food_costumes_2023": {
           "hello_world_new": "Bloc nou!"
         },
         "helloworld_food_costumes_soccer-2022": {
@@ -1849,6 +2274,9 @@
         "helloworld_food_location": {
           "pin": "pin"
         },
+        "helloworld_food_location_2023": {
+          "pin": "pin"
+        },
         "helloworld_food_location_soccer-2022": {
           "pin": "pin"
         },
@@ -1856,6 +2284,9 @@
           "pin": "pin"
         },
         "helloworld_food_multi": {
+          "pin": "pin"
+        },
+        "helloworld_food_multi_2023": {
           "pin": "pin"
         },
         "helloworld_food_multi_soccer-2022": {
@@ -1880,6 +2311,10 @@
           "hello_world_new": "Bloc nou!",
           "hello_world_new_block": "Bloc nou!"
         },
+        "helloworld_food_sizes_2023": {
+          "hello_world_new": "Bloc nou!",
+          "hello_world_new_block": "Bloc nou!"
+        },
         "helloworld_food_sizes_soccer-2022": {
           "hello_world_new": "Bloc nou!",
           "hello_world_new_block": "Bloc nou!"
@@ -1889,6 +2324,9 @@
           "hello_world_new_block": "Bloc nou!"
         },
         "helloworld_food_sounds": {
+          "hello_world_new": "Bloc nou!"
+        },
+        "helloworld_food_sounds_2023": {
           "hello_world_new": "Bloc nou!"
         },
         "helloworld_food_sounds_soccer-2022": {
@@ -1942,11 +2380,22 @@
         "poetry_hoc_addSprites": {
           "poetry_sprite": "Bloc nou!"
         },
+        "poetry_hoc_addSprites_2023": {
+          "poetry_sprite": "Bloc nou!"
+        },
         "poetry_hoc_backgroundEffects": {
           "poetry_background": "Găsește blocurile de cod aici.",
           "run_button": "Testează animația ta cu acest buton."
         },
+        "poetry_hoc_backgroundEffects_2023": {
+          "poetry_background": "Găsește blocurile de cod aici.",
+          "run_button": "Testează animația ta cu acest buton."
+        },
         "poetry_hoc_events1": {
+          "poetry_event": "Bloc nou!",
+          "poetry_foreground": "Bloc nou!"
+        },
+        "poetry_hoc_events1_2023": {
           "poetry_event": "Bloc nou!",
           "poetry_foreground": "Bloc nou!"
         },
@@ -1956,7 +2405,15 @@
           "poetry_new_block": "Bloc nou!",
           "poetry_selector": "Selectează orice poem, sau introdu propriul tău poem!"
         },
+        "poetry_hoc_freeplay_2023": {
+          "poetry_new_block": "Bloc nou!",
+          "poetry_selector": "Selectează orice poem, sau introdu propriul tău poem!"
+        },
         "poetry_hoc_sounds": {
+          "poetry_music": "Bloc nou!",
+          "poetry_sound": "Bloc nou!"
+        },
+        "poetry_hoc_sounds_2023": {
           "poetry_music": "Bloc nou!",
           "poetry_sound": "Bloc nou!"
         },
@@ -1964,7 +2421,15 @@
           "poetry_sprite_begins": "Bloc nou!",
           "poetry_sprite_stops": "Bloc nou!"
         },
+        "poetry_hoc_spriteBehaviors_2023": {
+          "poetry_sprite_begins": "Bloc nou!",
+          "poetry_sprite_stops": "Bloc nou!"
+        },
         "poetry_hoc_spriteSizes": {
+          "poetry_remove_sprite": "Bloc nou!",
+          "poetry_set_sprite": "Bloc nou!"
+        },
+        "poetry_hoc_spriteSizes_2023": {
           "poetry_remove_sprite": "Bloc nou!",
           "poetry_set_sprite": "Bloc nou!"
         }

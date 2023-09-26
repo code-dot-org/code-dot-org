@@ -129,6 +129,7 @@ export default function RubricContainer({
               canProvideFeedback={canProvideFeedback}
               reportingData={reportingData}
               studentName={studentLevelInfo.name}
+              studentLevelInfo={studentLevelInfo}
             />
           ))}
         </div>

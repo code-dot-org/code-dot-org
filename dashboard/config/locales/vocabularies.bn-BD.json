@@ -146,6 +146,84 @@
         "programming/pre-express/2022": {
           "word": "প্রোগ্রামিং"
         },
+        "code/csc-adaptations/2023": {
+          "word": "কোড"
+        },
+        "code/csc-ecosystems/2023": {
+          "word": "কোড"
+        },
+        "conditionals/csc-ecosystems/2023": {
+          "word": "শর্তযুক্ত"
+        },
+        "variable/csc-ecosystems/2023": {
+          "word": "চলক"
+        },
+        "code/csc-mappinglandmarks/2023": {
+          "word": "কোড"
+        },
+        "artist/csc-starquilts/2023": {
+          "word": "শিল্পী"
+        },
+        "code/poetry/2023": {
+          "word": "কোড"
+        },
+        "programming/coursea/2023": {
+          "word": "প্রোগ্রামিং"
+        },
+        "programming/courseb/2023": {
+          "word": "প্রোগ্রামিং"
+        },
+        "programming/coursec/2023": {
+          "word": "প্রোগ্রামিং"
+        },
+        "binary/coursec/2023": {
+          "word": "দ্বি-আঙ্কিক"
+        },
+        "programming/coursed/2023": {
+          "word": "প্রোগ্রামিং"
+        },
+        "conditionals/coursed/2023": {
+          "word": "শর্তযুক্ত"
+        },
+        "function/coursee/2023": {
+          "word": "ফাংশন"
+        },
+        "conditionals/coursee/2023": {
+          "word": "শর্তযুক্ত"
+        },
+        "copyright/coursee/2023": {
+          "word": "কপিরাইট"
+        },
+        "define/coursee/2023": {
+          "word": "নির্ধারণ করুন"
+        },
+        "variable/coursef/2023": {
+          "word": "চলক"
+        },
+        "internet/coursef/2023": {
+          "word": "ইন্টারনেট"
+        },
+        "define/coursef/2023": {
+          "word": "নির্ধারণ করুন"
+        },
+        "programming/express/2023": {
+          "word": "প্রোগ্রামিং"
+        },
+        "conditionals/express/2023": {
+          "word": "শর্তযুক্ত"
+        },
+        "function/express/2023": {
+          "word": "ফাংশন"
+        },
+        "variable/express/2023": {
+          "word": "চলক"
+        },
+        "define/express/2023": {
+          "word": "নির্ধারণ করুন"
+        },
+        "programming/pre-express/2023": {
+          "word": "প্রোগ্রামিং"
+        },
         "conditionals/aquatic/unversioned": {
           "word": "শর্তযুক্ত"
         },

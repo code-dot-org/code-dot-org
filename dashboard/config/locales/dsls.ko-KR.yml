@@ -530,6 +530,11 @@ ko-KR:
           # 빅 이벤트
 
           컴퓨터 과학에서 이벤트는 컴퓨터가 수행하는 동작입니다. 이 레슨에서 여러분이 어느 버튼을 누르냐에 따라 다르게 반응할 것입니다.
+      BigEvent-Unplugged2022_2023:
+        markdown: |
+          # 빅 이벤트
+
+          컴퓨터 과학에서 이벤트는 컴퓨터가 모니터링하는 동작입니다. 이 레슨에서 여러분은 어느 버튼을 누르냐에 따라 다르게 반응할 것입니다.
       BigEvent-Unplugged_2020:
         markdown: |
           # 빅 이벤트
@@ -548,6 +553,13 @@ ko-KR:
 
           ![](https://images.code.org/ed15a484276c0989e4adb5daf480f68a-image-1557870226222.png)
       BinaryBracelets-Unplugged2022:
+        markdown: |
+          # 바이너리 팔찌
+
+          컴퓨터가 이해하는 방식으로 이름을 나타내는 팔찌를 만드세요!
+
+          ![](https://images.code.org/ed15a484276c0989e4adb5daf480f68a-image-1557870226222.png)
+      BinaryBracelets-Unplugged2022_2023:
         markdown: |
           # 바이너리 팔찌
 
@@ -2657,6 +2669,9 @@ ko-KR:
       ConditionalsWithCards-Unplugged2022:
         markdown: "# 카드 조건문\n\n카드 게임을 하고 \"빨간 카드를 뽑으면 내가 1 포인트를 얻기\"와 \"검정색 카드를 뽑으면
           상대방이 1 포인트 얻기\"등과 같은 규칙을 만드세요. "
+      ConditionalsWithCards-Unplugged2022_2023:
+        markdown: "# 카드 조건문\n\n카드 게임을 하고 \"빨간 카드를 뽑으면 내가 1 포인트를 얻기\"와 \"검정색 카드를 뽑으면
+          상대방이 1 포인트 얻기\"등과 같은 규칙을 만드세요. "
       ConditionalsWithCards-Unplugged_2020:
         markdown: "# 카드 조건문\n\n카드 게임을 하고 \"빨간 카드를 뽑으면 내가 1 포인트를 얻기\"와 \"검정색 카드를 뽑으면
           상대방이 1 포인트 얻기\"등과 같은 규칙을 만드세요. "
@@ -2666,9 +2681,16 @@ ko-KR:
       CourseE_Artist_Practice_2022:
         description: 지금까지 아주 잘하고 있어요! 다음 액티비티를 선택하세요. 가능한 많이 완료하세요. 루프와 아티스트로 계속 연습하세요!
         display_name: 아티스트 연습
+      CourseE_Artist_Practice_2023:
+        description: 지금까지 아주 잘하고 있어요! 다음 액티비티를 선택하세요. 가능한 많이 완료하세요. 루프와 아티스트로 계속 연습하세요!
+        display_name: 아티스트 연습
       CourseE_Lesson_11_Artist_Practice_2022:
         display_name: 아티스트 연습
+      CourseE_Lesson_11_Artist_Practice_2023:
+        display_name: 아티스트 연습
       CourseE_Lesson_7_Artist_Practice_2022:
+        display_name: 아티스트 연습
+      CourseE_Lesson_7_Artist_Practice_2023:
         display_name: 아티스트 연습
       CourseF_outbreak_story:
         content1: 설명 입력
@@ -2818,7 +2840,91 @@ ko-KR:
           style=\"float:right; width:15%\">\n\n* *바이러스는 얼마나 빨리 전파될까요?*\n\n* *모두가 아프게
           될까요?*\n\n* *마스크는 얼마나 도움이 될까요?*\n\n\n다 작성하면, 시뮬레이션을 다른 사람들과 공유해보세요. 내 생각에
           대한 메시지를 공유하면 바이러스가 닥쳤을 때 다른 사람들이 건강하게 지내는 데 도움을 줄 수 있습니다. \n"
+      CourseF_outbreak_story2022_2022_pilot_-2022-2_2023:
+        content1: 설명 입력
+        markdown: "# 바이러스 전염: 자신의 시뮬레이션을 코딩하세요\n\n## 몬스터 타운에 오신 것을 환영합니다!\n몬스터 타운은
+          보통 행복하고 건강한 곳입니다. 몬스터 타운의 몬스터는 방황하며 친구들을 만나길 좋아합니다.\n\n<img src=\"https://images.code.org/3b55881f776348c6eb32379e4cbd34e1-image-1603133896503.png\"
+          style=\"width:8%\"> <img src=\"https://images.code.org/3b55881f776348c6eb32379e4cbd34e1-image-1603133896503.png\"
+          style=\"width:8%\"> <img src=\"https://images.code.org/3b55881f776348c6eb32379e4cbd34e1-image-1603133896503.png\"
+          style=\"width:8%\"> <img src=\"https://images.code.org/3b55881f776348c6eb32379e4cbd34e1-image-1603133896503.png\"
+          style=\"width:8%\"> <img src=\"https://images.code.org/3b55881f776348c6eb32379e4cbd34e1-image-1603133896503.png\"
+          style=\"width:8%\"> <img src=\"https://images.code.org/3b55881f776348c6eb32379e4cbd34e1-image-1603133896503.png\"
+          style=\"width:8%\"> <img src=\"https://images.code.org/3b55881f776348c6eb32379e4cbd34e1-image-1603133896503.png\"
+          style=\"width:8%\"> <img src=\"https://images.code.org/3b55881f776348c6eb32379e4cbd34e1-image-1603133896503.png\"
+          style=\"width:8%\"> <img src=\"https://images.code.org/3b55881f776348c6eb32379e4cbd34e1-image-1603133896503.png\"
+          style=\"width:8%\"> <img src=\"https://images.code.org/3b55881f776348c6eb32379e4cbd34e1-image-1603133896503.png\"
+          style=\"width:8%\"> <img src=\"https://images.code.org/3b55881f776348c6eb32379e4cbd34e1-image-1603133896503.png\"
+          style=\"width:8%\">\n\n하루는 몬스터 중의 하나가 아프기 시작합니다. 몬스터가 **바이러스**에 걸렸습니다! 바이러스는
+          아프게 만들 수 있는 아주 작은 병균입니다. 다른 몬스터들은 별로 신경쓰지 않습니다. 친구들을 계속 만나고 있습니다.\n\n<img
+          src=\"https://images.code.org/3b55881f776348c6eb32379e4cbd34e1-image-1603133896503.png\"
+          style=\"width:8%\"> <img src=\"https://images.code.org/3b55881f776348c6eb32379e4cbd34e1-image-1603133896503.png\"
+          style=\"width:8%\"> <img src=\"https://images.code.org/3b55881f776348c6eb32379e4cbd34e1-image-1603133896503.png\"
+          style=\"width:8%\"> <img src=\"https://images.code.org/3b55881f776348c6eb32379e4cbd34e1-image-1603133896503.png\"
+          style=\"width:8%\"> <img src=\"https://images.code.org/3b55881f776348c6eb32379e4cbd34e1-image-1603133896503.png\"
+          style=\"width:8%\"> <img src=\"https://images.code.org/f30010a430a4189a734467094842b39d-image-1603134238257.png\"
+          style=\"width:8%\"> <img src=\"https://images.code.org/3b55881f776348c6eb32379e4cbd34e1-image-1603133896503.png\"
+          style=\"width:8%\"> <img src=\"https://images.code.org/3b55881f776348c6eb32379e4cbd34e1-image-1603133896503.png\"
+          style=\"width:8%\"> <img src=\"https://images.code.org/3b55881f776348c6eb32379e4cbd34e1-image-1603133896503.png\"
+          style=\"width:8%\"> <img src=\"https://images.code.org/3b55881f776348c6eb32379e4cbd34e1-image-1603133896503.png\"
+          style=\"width:8%\"> <img src=\"https://images.code.org/3b55881f776348c6eb32379e4cbd34e1-image-1603133896503.png\"
+          style=\"width:8%\">\n\n곧 두 몬스터가 아프기 시작합니다. 똑같은 바이러스때문입니다! 친구로부터 바이러스가 옮은
+          것 같습니다.\n\n<img src=\"https://images.code.org/3b55881f776348c6eb32379e4cbd34e1-image-1603133896503.png\"
+          style=\"width:8%\"> <img src=\"https://images.code.org/3b55881f776348c6eb32379e4cbd34e1-image-1603133896503.png\"
+          style=\"width:8%\"> <img src=\"https://images.code.org/3b55881f776348c6eb32379e4cbd34e1-image-1603133896503.png\"
+          style=\"width:8%\"> <img src=\"https://images.code.org/3b55881f776348c6eb32379e4cbd34e1-image-1603133896503.png\"
+          style=\"width:8%\"> <img src=\"https://images.code.org/f30010a430a4189a734467094842b39d-image-1603134238257.png\"
+          style=\"width:8%\"> <img src=\"https://images.code.org/f30010a430a4189a734467094842b39d-image-1603134238257.png\"
+          style=\"width:8%\"> <img src=\"https://images.code.org/f30010a430a4189a734467094842b39d-image-1603134238257.png\"
+          style=\"width:8%\"> <img src=\"https://images.code.org/3b55881f776348c6eb32379e4cbd34e1-image-1603133896503.png\"
+          style=\"width:8%\"> <img src=\"https://images.code.org/3b55881f776348c6eb32379e4cbd34e1-image-1603133896503.png\"
+          style=\"width:8%\"> <img src=\"https://images.code.org/3b55881f776348c6eb32379e4cbd34e1-image-1603133896503.png\"
+          style=\"width:8%\"> <img src=\"https://images.code.org/3b55881f776348c6eb32379e4cbd34e1-image-1603133896503.png\"
+          style=\"width:8%\">\n\n바이러스는 근처에 있는 몬스터들에게 천천히 전파됩니다. 건강한 몬스터들은 모두가 병에 걸릴까봐
+          걱정하기 시작합니다. 아픈 몬스터들은 다른 몬스터들에게 바이러스를 옮길까봐 걱정하기 시작합니다.\n\n<img src=\"https://images.code.org/3b55881f776348c6eb32379e4cbd34e1-image-1603133896503.png\"
+          style=\"width:8%\"> <img src=\"https://images.code.org/3b55881f776348c6eb32379e4cbd34e1-image-1603133896503.png\"
+          style=\"width:8%\"> <img src=\"https://images.code.org/3b55881f776348c6eb32379e4cbd34e1-image-1603133896503.png\"
+          style=\"width:8%\"> <img src=\"https://images.code.org/f30010a430a4189a734467094842b39d-image-1603134238257.png\"
+          style=\"width:8%\"> <img src=\"https://images.code.org/f30010a430a4189a734467094842b39d-image-1603134238257.png\"
+          style=\"width:8%\"> <img src=\"https://images.code.org/f30010a430a4189a734467094842b39d-image-1603134238257.png\"
+          style=\"width:8%\"> <img src=\"https://images.code.org/f30010a430a4189a734467094842b39d-image-1603134238257.png\"
+          style=\"width:8%\"> <img src=\"https://images.code.org/f30010a430a4189a734467094842b39d-image-1603134238257.png\"
+          style=\"width:8%\"> <img src=\"https://images.code.org/3b55881f776348c6eb32379e4cbd34e1-image-1603133896503.png\"
+          style=\"width:8%\"> <img src=\"https://images.code.org/3b55881f776348c6eb32379e4cbd34e1-image-1603133896503.png\"
+          style=\"width:8%\"> <img src=\"https://images.code.org/3b55881f776348c6eb32379e4cbd34e1-image-1603133896503.png\"
+          style=\"width:8%\">\n\n\n<div style=\"display: inline-block\">\n<img src=\"https://images.code.org/89376b9ebd5fcee77545f13a7a444430-image-1603135356392.png\"
+          style=\"float:right; width:30%\">\n\n## 전파 차단\n다행히도, 바이러스에 대해 연구한 결과, 몬스터
+          타운의 이웃이 중요한 발견을 합니다. 마스크를 착용할 경우 바이러스가 전파될 가능성이 낮은 것을 깨달았습니다. 아픈 몬스터가 마스크를
+          착용하면 건강한 몬스터에게 바이러스를 옮길 가능성이 줄어들었습니다.\n\n<img src=\"https://images.code.org/c98f28f9bf6a027143592109d59ee484-image-1603134766360.png\"
+          style=\"width:8%\"> <img src=\"https://images.code.org/bac9dbfaf1815c6627fc24e8e6db396d-image-1603134760456.png\"
+          style=\"width:8%\">\n\n</div>\n\n<img src=\"https://images.code.org/ef7499758496b39bcccc24aabd2af5d7-image-1603137920037.2020-10-19
+          16_04_58.gif\" style=\"float:left; width:25%; padding-right:25px\">\n\n##
+          다음은 어떤 일이 일어나나요?\n\n오늘 여러분은 몬스터 타운의 바이러스 창궐이라는 **시뮬레이션**을 만들고 실행하는 코드를 작성할
+          것입니다. 시뮬레이션은 프로세스 또는 시스템의 컴퓨터 모델입니다. 코드를 배워서 몬스터 타운의 이웃에 어떠한 일이 일어날지 예측해
+          보세요.\n\n<img src=\"https://images.code.org/fcbfd250d58652bdfd6393ec4f2fe2dd-image-1603134705074.png\"
+          style=\"float:right; width:15%\">\n\n* *바이러스는 얼마나 빨리 전파될까요?*\n\n* *모두가 아프게
+          될까요?*\n\n* *마스크는 얼마나 도움이 될까요?*\n\n\n다 작성하면, 시뮬레이션을 다른 사람들과 공유해보세요. 내 생각에
+          대한 메시지를 공유하면 바이러스가 닥쳤을 때 다른 사람들이 건강하게 지내는 데 도움을 줄 수 있습니다. \n"
       CourseF_outbreak_story22022_2022_pilot_-2022-2:
+        content1: 설명 입력
+        markdown: "# 발생: 과학자처럼 생각하기\n\n<img src=\"https://images.code.org/89376b9ebd5fcee77545f13a7a444430-image-1603135356392.png\"
+          style=\"float:right; width:30%\">\n\n시뮬레이션은 실제 세상에서 관찰하기 어려운 일을 학습하기에 좋은
+          방식입니다. 과학자들이 문제를 풀고 새로운 아이디어를 안전하고 효율적으로 테스트하는데 도움을 줍니다. 여러분의 시뮬레이션은 몬스터
+          타운에서 바이러스가 발생할 때 어떤 상황이 될지 보여줄 것입니다.\n\n## 재설정 및 재생!\n심지어 코드를 직접 작성했더라도,
+          실행을 누르면 무슨 일이 일어날지 정확히 알기 불가능합니다. 몬스터들이 무작위로 떠돌아 다니고 있고 그래서 바이러스가 빠르게 또는
+          느리게 확산될지 모릅니다. 코드를 변경할 때마다 시뮬레이션을 1회 이상 실행하도록 하세요. 무슨 일이든 똑같은 방식으로 두 번 일어나지
+          않습니다!\n\n## 데이터 수집\n시뮬레이션을 실행할 때 관찰내용을 적어 놓으세요. 병에 걸린 몬스터의 수를 세거나 또는 타이머를
+          사용하여 얼마나 빠른 속도로 일이 벌어지는지 볼 수 있습니다. 예를 들어, 마스크를 하지 않았을 때 모든 몬스터가 병에 걸리는데
+          얼마나 걸립니까? \n\n## 예측하기\n모델을 이해하면, 그것으로 예측을 할 수 있습니다. 심지어 시뮬레이션 실행방식을 변경하여
+          다르게 무슨 일이 일어나는지 추측할 수 있습니다. 예:\n* 몬스터 수가 두 배이면 어떻게 될까요?\n* 몬스터의 이동 속도가 반으로
+          감소하면 어떻게 될까요?\n\n<img src=\"https://images.code.org/2e83373ffd346ce3f42917a0624d441c-image-1603749526420.png\"
+          style=\"float:right\">\n\n## 몬스터 타운이 실제 세상과 같나요?\n모델이 현실성을 갖는데는 한계가 있습니다.\n*
+          질병 발생 시뮬레이션이 실제 세상 바이러스 발생과 어떤 공통점을 갖습니까?\n* 차이점은 무엇입니까?\n이 활동을 마치면 이러한
+          질문을 교사 또는 가족들과 토론하세요!\n\n## 그 밖에 무엇을 모델로 만들 수 있습니까?\n이미 몬스터 타운에서 질병이 발생한
+          경우를 모델로 만들었습니다. 원했지만 시뮬레이션으로 할 수 없었거나 또는 보여주지 못했던 것은 무엇입니까? 계속하고 심지어 더 많은
+          모델에 관해 배우려면 계속을 누르세요:\n* 시뮬레이션에서 몬스터 수 증가\n* 바이러스에서 회복되게 몬스터를 도움\n* 확률,
+          면역, 백신, 등!\n\n또한 시뮬레이션 모델을 다른 이들과 공유하거나 또는 바이러스가 타운으로 확산될 때 서로를 지키기 위해 우리가
+          할 수 있는 일이 무엇인지에 관한 메시지를 공유할 수 있습니다.\n"
+      CourseF_outbreak_story22022_2022_pilot_-2022-2_2023:
         content1: 설명 입력
         markdown: "# 발생: 과학자처럼 생각하기\n\n<img src=\"https://images.code.org/89376b9ebd5fcee77545f13a7a444430-image-1603135356392.png\"
           style=\"float:right; width:30%\">\n\n시뮬레이션은 실제 세상에서 관찰하기 어려운 일을 학습하기에 좋은
@@ -2892,6 +2998,16 @@ ko-KR:
           * 장애인을 위해 접근가능한 앱을 설계하는 것은 그러한 앱을 다른 모든 이들에게도 역시 더 낫게 만듭니다!
 
           ![](https://images.code.org/0c670d0d9078657a870df0ca799492cb-image-1557166420066.png)
+      DesigningForAccessibilityMarkdownLevel2022_2023:
+        markdown: |
+          # 접근가능성을 위한 설계
+
+          * 컴퓨터 과학 세계에서, **접근가능성**은 장애인을 위한 기술 창조에 관한 것입니다.
+          * 장애에는 신체적, 청각적, 시각적, 기타 많은 장애가 포함됩니다.
+          * 장애는 다양하고  **스마트폰 앱**과 같은 기술 사용방식을 포함하여 사람에게 많은 방식으로 영향을 미칩니다.
+          * 장애인을 위해 접근가능한 앱을 설계하는 것은 그러한 앱을 다른 모든 이들에게도 역시 더 낫게 만듭니다!
+
+          ![](https://images.code.org/0c670d0d9078657a870df0ca799492cb-image-1557166420066.png)
       DesigningForAccessibilityMarkdownLevel_2019:
         markdown: |
           # 접근가능성을 위한 설계
@@ -2942,6 +3058,11 @@ ko-KR:
           # 디지털 공유
 
           이 레슨에서는 특히 디지털 환경에서 소유권과 저작권을 존중하는 것의 도전과 이점에 대해 생각해 볼 것입니다.
+      DigitalSharing-Unplugged2022_2023:
+        markdown: |
+          # 디지털 공유
+
+          이 레슨에서는 특히 디지털 환경에서 소유권과 저작권을 존중하는 것의 도전과 이점에 대해 생각해 볼 것입니다.
       DigitalSharing-Unplugged_2020:
         markdown: |
           # 디지털 공유
@@ -2964,6 +3085,11 @@ ko-KR:
 
           이 레슨에서는 빈칸 채우기 이야기를 사용 및 작성하는 법을 배울 것입니다. 이 동영상을 시청하며 이것이 컴퓨터 과학과 어떻게 연결되는지 배우세요.
       EnvelopeVariables-Unplugged_2021_22022_2022_pilot_-2022-2:
+        markdown: |
+          # 빈칸 채우기 이야기
+
+          이 레슨에서는 빈칸 채우기 이야기를 사용 및 작성하는 법을 배울 것입니다. 이 동영상을 시청하며 이것이 컴퓨터 과학과 어떻게 연결되는지 배우세요.
+      EnvelopeVariables-Unplugged_2021_22022_2022_pilot_-2022-2_2023:
         markdown: |
           # 빈칸 채우기 이야기
 
@@ -2996,6 +3122,11 @@ ko-KR:
           # 게팅 루피 (Getting Loopy)
 
           이 레슨은 댄스 활동을 통해 루프의 프로그래밍 개념을 소개합니다.
+      GettingLoopy-Unplugged2022_2023:
+        markdown: |
+          # 게팅 루피 (Getting Loopy)
+
+          이 레슨은 댄스 활동을 통해 루프의 프로그래밍 개념을 소개합니다.
       GettingLoopy-Unplugged_2020:
         markdown: |
           # 게팅 루피 (Getting Loopy)
@@ -3019,6 +3150,11 @@ ko-KR:
 
           그림을 그리기 위해 학급원이 사용할 수 있는 알고리즘을 작성하세요.
       GraphPaperProgramming-Unplugged2022:
+        markdown: |
+          # 모눈종이 프로그래밍
+
+          그림을 그리기 위해 학급원이 사용할 수 있는 알고리즘을 작성하세요.
+      GraphPaperProgramming-Unplugged2022_2023:
         markdown: |
           # 모눈종이 프로그래밍
 
@@ -3053,6 +3189,11 @@ ko-KR:
 
           캐릭터를 미로 여기저기로 움직이게 만드는 알고리즘을 만드세요.
       HappyMaps-Unplugged2022:
+        markdown: |
+          # 해피 맵
+
+          캐릭터를 미로 여기저기로 움직이게 만드는 알고리즘을 만드세요.
+      HappyMaps-Unplugged2022_2023:
         markdown: |
           # 해피 맵
 
@@ -3139,6 +3280,11 @@ ko-KR:
 
           단지 종이 조각을 사용하여 교실에 인터넷을 구축하세요.
       Internet-Unplugged2022_2022_pilot_-2022-2:
+        markdown: |
+          # 인터넷
+
+          단지 종이 조각을 사용하여 교실에 인터넷을 구축하세요.
+      Internet-Unplugged2022_2022_pilot_-2022-2_2023:
         markdown: |
           # 인터넷
 
@@ -3362,6 +3508,11 @@ ko-KR:
           # 이동, 이동
 
           지도를 사용하고 코멘트를 제공해 목표에 도달합니다.
+      MoveItMoveIt-Unplugged2022_2023:
+        markdown: |
+          # 이동, 이동
+
+          지도를 사용하고 코멘트를 제공해 목표에 도달합니다.
       MoveItMoveIt-Unplugged_2020:
         markdown: |
           # 이동, 이동
@@ -3394,6 +3545,11 @@ ko-KR:
           # 내 루피 로봇 친구
 
           루프를 사용하여 프로그램을 더 짧게 만드세요!
+      MyLoopyRoboticFriends-Unplugged2022_2023:
+        markdown: |
+          # 내 루피 로봇 친구
+
+          루프를 사용하여 프로그램을 더 짧게 만드세요!
       MyLoopyRoboticFriends-Unplugged_2020:
         markdown: |
           # 내 루피 로봇 친구
@@ -3413,6 +3569,8 @@ ko-KR:
 
           Learn to program by writing code for your friends!
           내 친구 로봇을 위해 코드를 작성하며 프로그램을 배워보세요!
+      MyRoboticFriends-Unplugged2022_2023:
+        markdown: "# 내 로봇 친구 \n\n친구를 위해 코딩을 작성하며 프로그램을 배워 보세요!"
       MyRoboticFriends-Unplugged_2020:
         markdown: "# 내 로봇 친구 \n\n친구를 위해 코딩을 작성하며 프로그램을 배워 보세요!"
       MyRoboticFriends-Unplugged_2021:
@@ -4519,6 +4677,11 @@ ko-KR:
           # 말의 힘
 
           ## 누군가 인터넷 상에서 무례하거나 또는 감정을 상하게 하는 언어를 사용할 때 어떻게 해야 합니까?
+      PowerOfWords-Unplugged2022_2022_pilot_-2022-2_2023:
+        markdown: |
+          # 말의 힘
+
+          ## 누군가 인터넷 상에서 무례하거나 또는 감정을 상하게 하는 언어를 사용할 때 어떻게 해야 합니까?
       PowerOfWords-Unplugged_2020:
         markdown: |
           # 말의 힘
@@ -4559,6 +4722,11 @@ ko-KR:
           # 사적 정보와 개인 정보
 
           ## 어떤 정보가 온라인 상으로 공유해도 되는 정보입니까?
+      PrivatePersonalInformation-Unplugged2022_2023:
+        markdown: |
+          # 사적 정보와 개인 정보
+
+          ## 어떤 정보가 온라인 상으로 공유해도 되는 정보입니까?
       PrivatePersonalInformation-Unplugged_2020:
         markdown: |
           # 사적 정보와 개인 정보
@@ -4575,6 +4743,11 @@ ko-KR:
 
           팀으로 나누고 그림을 그리는 프로그램을 함께 작성하세요.
       RelayProgramming-Unplugged2022:
+        markdown: |
+          # 릴레이 프로그래밍
+
+          팀으로 나누고 그림을 그리는 프로그램을 함께 작성하세요.
+      RelayProgramming-Unplugged2022_2023:
         markdown: |
           # 릴레이 프로그래밍
 
@@ -4615,6 +4788,11 @@ ko-KR:
 
           학생들은 노래 내 코러스의 개념을 사용하여 함수를 정의하고 호출하는 것에 대해 배웁니다.
       Songwriting-Unplugged2022:
+        markdown: |-
+          # 작사
+
+          학생들은 노래 내 코러스의 개념을 사용하여 함수를 정의하고 호출하는 것에 대해 배웁니다.
+      Songwriting-Unplugged2022_2023:
         markdown: |-
           # 작사
 
@@ -4711,6 +4889,15 @@ ko-KR:
         questions:
         - {}
       TheRightAppMarkdownLevel2022:
+        markdown: |-
+          # 올바른 앱
+
+          * 오늘날 누구나 컴퓨터, 특히 스마트폰을 사용합니다.
+          * 스마트폰 앱은 친구와 말하기 또는 음악 감상, 쇼핑, 그저 웹 탐구 등과 같은 일을 하는데 도움을 줍니다.
+          * 프로그래머가 타인의 필요를 이해하고 그것을 염두해 두고 설계를 하는 것이 중요합니다!
+
+          ![](https://images.code.org/fb17eeb9238d2f26c6ab40c9841517a7-image-1555611687284.png)
+      TheRightAppMarkdownLevel2022_2023:
         markdown: |-
           # 올바른 앱
 
@@ -5217,10 +5404,16 @@ ko-KR:
       courseAB_EOC2022:
         description: 마지막 레슨에 도달했습니다! 만들 프로젝트를 선택하세요.
         display_name: 종합 프로젝트
+      courseAB_EOC2022_2023:
+        description: 마지막 레슨에 도달했습니다! 만들 프로젝트를 선택하세요.
+        display_name: 과정말 프로젝트
       courseAB_EOC_2021:
         description: 마지막 레슨에 도달했습니다! 만들 프로젝트를 선택하세요.
         display_name: 과정말 프로젝트
       courseB_EOC2022:
+        description: 마지막 레슨에 도달했습니다! 만들 프로젝트를 선택하세요.
+        display_name: 과정말 프로젝트
+      courseB_EOC2022_2023:
         description: 마지막 레슨에 도달했습니다! 만들 프로젝트를 선택하세요.
         display_name: 과정말 프로젝트
       courseB_EOC_2021:
@@ -5240,6 +5433,19 @@ ko-KR:
         questions:
         - text: 아래 코드를 주의 깊게 보세요. "실행"을 클릭하면 무슨 일이 벌어집니까?
       courseC_multi_artist_prog6_predict12022:
+        answers:
+        - feedback: 틀렸습니다. 아티스트는 사각형을 그립니다.
+          text: 아티스트는 똑같은 길이의 변 세 개로 삼각형을 그릴 것입니다.
+        - feedback: 틀렸습니다. 아티스트는 사각형을 그립니다.
+          text: 아티스트는 단일 선을 그릴 것입니다.
+        - correct: true
+          feedback: 맞습니다!
+          text: 아티스트가 정사각형을 그릴 것입니다.
+        - feedback: 틀렸습니다. 아티스트는 사각형을 그립니다.
+          text: 아티스트는 오각형을 그릴 것입니다.
+        questions:
+        - text: 아래 코드를 주의 깊게 보세요. "실행"을 클릭하면 무슨 일이 벌어집니까?
+      courseC_multi_artist_prog6_predict12022_2023:
         answers:
         - feedback: 틀렸습니다. 아티스트는 사각형을 그립니다.
           text: 아티스트는 똑같은 길이의 변 세 개로 삼각형을 그릴 것입니다.
@@ -5330,6 +5536,19 @@ ko-KR:
           text: '20'
         questions:
         - text: 아래 코드를 주의 깊게 보세요. "실행"을 클릭한 후 농부는 몇 개의 호박을 모으게 됩니까?
+      courseC_multi_harvester_loops11_predict12022_2023:
+        answers:
+        - feedback: 틀렸습니다. 농부는 3개 루프 각각에서 4개의 호박을 모을 것입니다. 4 곱하기 3은 12입니다!
+          text: '4'
+        - correct: true
+          feedback: 맞습니다!
+          text: '12'
+        - feedback: 틀렸습니다. 농부는 3개 루프 각각에서 4개의 호박을 모을 것입니다. 4 곱하기 3은 12입니다!
+          text: '15'
+        - feedback: 틀렸습니다. 농부는 3개 루프 각각에서 4개의 호박을 모을 것입니다. 4 곱하기 3은 12입니다!
+          text: '20'
+        questions:
+        - text: 아래 코드를 주의 깊게 보세요. "실행"을 클릭한 후 농부는 몇 개의 호박을 모으게 됩니까?
       courseC_multi_harvester_loops11_predict1_2018:
         answers:
         - feedback: 틀렸습니다. 농부는 3개 루프 각각에서 4개의 호박을 모을 것입니다. 4 곱하기 3은 12입니다!
@@ -5396,6 +5615,22 @@ ko-KR:
         questions:
         - text: 아래 코드를 자세히 보세요. 이 프로그램을 실패하게 만들 첫 번째 버그는 무엇입니까?
       courseC_multi_maze_debugging8_predict12022:
+        answers:
+        - feedback: |-
+            Incorrect. Scrat will not reach the acorn because he turns the wrong way.
+            틀렸어요. 스크랫은 잘못된 길로 회전했기 때문에 도토리에 닿지 못할거예요.
+          text: 스크랫은 도토리에 도달할 것입니다. 코드에는 버그가 없습니다.
+        - correct: true
+          text: 스크랫은 잘못된 방향으로 회전하기 때문에 도토리에 도달하지 않을 것입니다.
+        - feedback: |-
+            Incorrect. Scrat will not reach the acorn because he turns the wrong way.
+            틀렸어요. 스크랫은 잘못된 길로 회전했기 때문에 도토리에 닿지 못할거예요.
+          text: 스크랫은 `앞으로 이동` 블록이 충분하지 않기 때문에 도토리에 도달하지 않을 것입니다.
+        - feedback: 스크랫은 잘못된 방향으로 회전하기 때문에 도토리에 도달하지 않을 것입니다.
+          text: 스크랫은 첫 번째 블록에서 이동하지 않을 것입니다.
+        questions:
+        - text: 이 코드에서 버그를 찾으세요. 스크랫이 도토리에 도달할까요 또는 문제가 있습니까?
+      courseC_multi_maze_debugging8_predict12022_2023:
         answers:
         - feedback: |-
             Incorrect. Scrat will not reach the acorn because he turns the wrong way.
@@ -5499,6 +5734,19 @@ ko-KR:
           text: 새는 벽에 충돌할 것입니다.
         questions:
         - text: 아래 코드를 매우 주의 깊게 읽으세요. "실행"을 클릭하면 무슨 일이 벌어집니까?
+      courseC_multi_maze_programming8_predict12022_2023:
+        answers:
+        - feedback: 틀렸습니다. 이 코드는 새를 돼지에게 다 가게 해줍니다.
+          text: 새는 결국 돼지에게서 한 단계 덜 가게 될 것입니다.
+        - correct: true
+          feedback: 맞습니다!
+          text: 새는 돼지에게 갈 것입니다.
+        - feedback: 틀렸습니다. 이 코드는 새를 돼지에게 다 가게 해줍니다.
+          text: 새는 TNT와 충돌하게 될 것입니다.
+        - feedback: 틀렸습니다. 이 코드는 새를 돼지에게 다 가게 해줍니다.
+          text: 새는 벽에 충돌할 것입니다.
+        questions:
+        - text: 아래 코드를 매우 주의 깊게 읽으세요. "실행"을 클릭하면 무슨 일이 벌어집니까?
       courseC_multi_maze_programming8_predict1_2018:
         answers:
         - feedback: 틀렸습니다. 이 코드는 새를 돼지에게 다 가게 해줍니다.
@@ -5565,6 +5813,19 @@ ko-KR:
         questions:
         - text: '"실행"을 클릭하면 무슨 일이 일어날거라고 생각하세요?'
       courseC_multi_starWars_predict12022:
+        answers:
+        - feedback: 틀렸습니다. 반복 블록은 BB-8을 앞으로 다섯 차례 이동하게 만들 것입니다.
+          text: BB-8은 움직이지 않을 것입니다.
+        - feedback: 틀렸습니다. 반복 블록은 BB-8을 앞으로 다섯 차례 이동하게 만들 것입니다.
+          text: BB-8은 스페이스 한 개 만큼 만 이동합니다.
+        - correct: true
+          feedback: 맞습니다!
+          text: BB-8은 5번 이동하고 고철 모두를 얻을 것입니다.
+        - feedback: 틀렸습니다. 반복 블록은 BB-8을 앞으로 다섯 차례 이동하게 만들 것입니다.
+          text: BB-8은 스페이스 세 개 공란만 이동합니다.
+        questions:
+        - text: '"실행"을 클릭하면 무슨 일이 일어날거라고 생각하세요?'
+      courseC_multi_starWars_predict12022_2023:
         answers:
         - feedback: 틀렸습니다. 반복 블록은 BB-8을 앞으로 다섯 차례 이동하게 만들 것입니다.
           text: BB-8은 움직이지 않을 것입니다.
@@ -5655,6 +5916,19 @@ ko-KR:
           text: BB-8는 첫 번째 루프 후 잘못된 방향으로 회전할 것입니다.
         questions:
         - text: 아래 코드를 주의 깊게 보세요. "실행"을 클릭하면 무슨 일이 벌어집니까?
+      courseC_multi_starWars_predict22022_2023:
+        answers:
+        - feedback: 틀렸습니다. 첫 번째 루프는 BB-8이 3개 스페이스 앞으로 이동해야 할 때 2개 스페이스 앞으로만 이동하게 합니다.
+          text: BB-8은 첫 번째 루프로는 너무 멀리 갈 것입니다.
+        - correct: true
+          feedback: 맞습니다!
+          text: BB-8은 고철 모두를 얻기 위해 첫 번째 루프 안에서 충분히 멀리 이동하지 않을 것입니다.
+        - feedback: 틀렸습니다. 첫 번째 루프는 BB-8이 3개 스페이스 앞으로 이동해야 할 때 2개 스페이스 앞으로만 이동하게 합니다.
+          text: BB-8은 문제 없이 고철 모두를 모을 것입니다.
+        - feedback: 틀렸습니다. 첫 번째 루프는 BB-8이 3개 스페이스 앞으로 이동해야 할 때 2개 스페이스 앞으로만 이동하게 합니다.
+          text: BB-8는 첫 번째 루프 후 잘못된 방향으로 회전할 것입니다.
+        questions:
+        - text: 아래 코드를 주의 깊게 보세요. "실행"을 클릭하면 무슨 일이 벌어집니까?
       courseC_multi_starWars_predict2_2018:
         answers:
         - feedback: 틀렸습니다. 첫 번째 루프는 BB-8이 3개 스페이스 앞으로 이동해야 할 때 2개 스페이스 앞으로만 이동하게 합니다.
@@ -5710,6 +5984,9 @@ ko-KR:
       courseD_EOC2022:
         description: 과정 D의 마지막에 도달했습니다! 만들 프로젝트를 선택하세요.
         display_name: 과정말 프로젝트
+      courseD_EOC2022_2023:
+        description: 과정 D의 마지막에 도달했습니다! 만들 프로젝트를 선택하세요.
+        display_name: 과정말 프로젝트
       courseD_EOC_2020:
         description: 과정 D의 마지막에 도달했습니다! 만들 프로젝트를 선택하세요.
         display_name: 과정말 프로젝트
@@ -5717,6 +5994,9 @@ ko-KR:
         description: 과정 D의 마지막에 도달했습니다! 만들 프로젝트를 선택하세요.
         display_name: 과정말 프로젝트
       courseD_EOC_examples2022:
+        description: 최종 프로젝트를 시작하려고 합니다. 시작하기 전에, 잠시 시간을 내어 예시 프로젝트를 살펴보십시오.
+        display_name: 프로젝트 예
+      courseD_EOC_examples2022_2023:
         description: 최종 프로젝트를 시작하려고 합니다. 시작하기 전에, 잠시 시간을 내어 예시 프로젝트를 살펴보십시오.
         display_name: 프로젝트 예
       courseD_EOC_examples_2021:
@@ -5910,6 +6190,26 @@ ko-KR:
 
         questions:
         - text: 아래 코드를 잘 보세요. "실행"을 클릭하면 이 프로그램은 어떤 그림을 만들까요?
+      courseD_multi_artist_nestedLoops9_predict12022_2023:
+        answers:
+        - correct: true
+          feedback: 맞습니다!
+          text: A
+        - feedback: 틀렸습니다. 내부 루프는 오각형을 만들고 외부 루프는 이것을 원 안에서 4번 반복합니다.
+          text: B
+        - feedback: 틀렸습니다. 내부 루프는 오각형을 만들고 외부 루프는 이것을 원 안에서 4번 반복합니다.
+          text: C
+        - feedback: 틀렸습니다. 내부 루프는 오각형을 만들고 외부 루프는 이것을 원 안에서 4번 반복합니다.
+          text: 해당 사항 없음
+        markdown: |+
+          <table>
+          <tr><td>A</td><td><img src="https://images.code.org/cfc3f8206438a60afe3be9afe7fc0a22-image-1489118742610.10.15.png" width="100px" style="mix-blend-mode: multiply;"/></td><td>&nbsp;&nbsp;&nbsp;&nbsp;</td><td>B</td><td><img src="https://images.code.org/975b027684d2f5411b960bf82987663e-image-1489119999013.11.13.png" width="100px" style="mix-blend-mode: multiply;"/></td><td>&nbsp;&nbsp;&nbsp;&nbsp;</td><td>C</td><td><img src="https://images.code.org/635ac54ed7cb2e2d24eb341b3ec4eecb-image-1489120024059.12.00.png" width="80px" style="mix-blend-mode: multiply; clip: rect(0px,0px,0px,40px);"/></td></tr>
+          </table>
+
+          <br/><br/>
+
+        questions:
+        - text: 아래 코드를 잘 보세요. "실행"을 클릭하면 이 프로그램은 어떤 그림을 만들까요?
       courseD_multi_artist_nestedLoops9_predict1_2018:
         answers:
         - correct: true
@@ -6018,6 +6318,21 @@ ko-KR:
         questions:
         - text: 구름이 시야를 가리고 있습니다. 이 구름 아래에 꽃이 있을 수 있습니다. 꽃이 있으면, 벌은 과즙을 한 번 모아야 합니다.
             꽃이 없으면 벌은 아무 것도 하지 않아야 합니다. 아래 코드를 잘 보세요. "실행"을 클릭한 후 어떤 일이 벌어질 거라 생각하세요?
+      courseD_multi_bee_conditionals1_predict12022_2023:
+        answers:
+        - feedback: 틀렸습니다. '만약 꽃에서' 블록은 꽃이 구름 아래에 있을 때만 벌이 과즙을 얻으려 할 것이라고 가정합니다.
+          text: '벌이 구름으로 이동하여 무엇이든 상관 없이 과즙을 얻으려 할 것입니다. '
+        - correct: true
+          feedback: 맞습니다!
+          text: 벌은 구름으로 이동하여 그 아래 꽃이 있을 때만 과즙을 얻으려 할 것입니다.
+        - feedback: 틀렸습니다. '만약 꽃에서' 블록은 꽃이 구름 아래에 있으면 벌이 과즙을 얻으려 할 것이라고 가정합니다.
+          text: '벌은 구름으로 이동하고 무엇이든 상관 없이 아무 것도 하지 않을 것입니다. '
+        - feedback: 틀렸습니다. '만약 꽃에서' 블록은 꽃이 구름 아래에 있을 때만 벌이 과즙을 얻으려 할 것이라고 가정합니다.
+          text: 벌은 구름에 도달하지 못할 것입니다.
+        questions:
+        - text: 구름이 시야를 가리고 있습니다.“실행”을 클릭하면 클라우드가 사라집니다.이 구름 밑에 꽃이 있을 수도 있어요.꽃이 있다면
+            벌은 꿀을 한 번 모아야 합니다.꽃이 없으면 벌은 아무것도 하지 말아야 합니다.아래 코드를 잘 살펴보세요.“실행”을 클릭하면
+            어떻게 될 것 같나요?
       courseD_multi_bee_conditionals1_predict1_2018:
         answers:
         - feedback: 틀렸습니다. '만약 꽃에서' 블록은 꽃이 구름 아래에 있을 때만 벌이 과즙을 얻으려 할 것이라고 가정합니다.
@@ -6130,6 +6445,20 @@ ko-KR:
         questions:
         - text: '아래 코드를 주의 깊게 보세요. "실행"을 클릭하면 무슨 일이 벌어지리라 생각하세요? 기억하세요:  *한*개의 벌집에는
             벌만 있거나 또는 각 구름 뒤에는 *한*송이 꽃만 있습니다.'
+      courseD_multi_bee_conditionals7_predict22022_2023:
+        answers:
+        - correct: true
+          feedback: 맞습니다!
+          text: 벌은 꽃에서 과즙을 얻고 벌집에서 꿀을 만들 것입니다.
+        - feedback: 틀렸습니다. `만약 꽃에서` 블록은 벌에게 꽃에서 과즙을 얻고 각 벌집에서 꿀을 만들게  합니다.
+          text: 벌은 꽃과 벌집 모두에서 과즙을 얻으려 할 것입니다.
+        - feedback: 틀렸습니다. 틀렸습니다. `만약 꽃에서` 블록은 벌에게 각 꽃에서 과즙을 얻고 각 벌집에서 꿀을 만들게 합니다..
+          text: 벌은 꽃과 벌집 모두에서 꿀을 얻으려 할 것입니다.
+        - feedback: 틀렸습니다. 틀렸습니다. `만약 꽃에서` 블록은 벌에게 각 꽃에서 과즙을 얻고 각 벌집에서 꿀을 만들게 합니다..
+          text: 벌은 꽃과 벌집 모두에서 꿀과 과즙을 얻으려 할 것입니다.
+        questions:
+        - text: '아래 코드를 주의 깊게 보세요. "실행"을 클릭하면 무슨 일이 벌어지리라 생각하세요? 기억하세요:  *한*개의 벌집에는
+            벌만 있거나 또는 각 구름 뒤에는 *한*송이 꽃만 있습니다.'
       courseD_multi_bee_conditionals7_predict2_2018:
         answers:
         - correct: true
@@ -6212,6 +6541,19 @@ ko-KR:
           text: 벌이 잘못된 방향으로 회전할 것입니다.
         questions:
         - text: 아래 중첩 루프를 주의 깊게 보세요. "실행"을 클릭하면 무슨 일이 벌어집니까?
+      courseD_multi_bee_nestedLoops2_predict12022_2023:
+        answers:
+        - feedback: 틀렸습니다. 벌은 앞으로 이동과 과즙 모으기라는 반복된 동작을 반복하여 퍼즐을 풉니다.
+          text: 벌이 앞으로 이동하여 오직 한 번 만 과즙을 얻을 것입니다.
+        - feedback: 틀렸습니다. 벌은 앞으로 이동과 과즙 모으기라는 반복된 동작을 반복하여 퍼즐을 풉니다.
+          text: 벌은 단지 2 유닛의 과즙을 얻을 것입니다.
+        - correct: true
+          feedback: 맞습니다!
+          text: 벌은 모든 과즙을 얻을 것입니다.
+        - feedback: 틀렸습니다. 벌은 앞으로 이동과 과즙 모으기라는 반복된 동작을 반복하여 퍼즐을 풉니다.
+          text: 벌이 잘못된 방향으로 회전할 것입니다.
+        questions:
+        - text: 아래 중첩 루프를 주의 깊게 보세요. "실행"을 클릭하면 무슨 일이 벌어집니까?
       courseD_multi_bee_nestedLoops2_predict1_2018:
         answers:
         - feedback: 틀렸습니다. 벌은 앞으로 이동과 과즙 모으기라는 반복된 동작을 반복하여 퍼즐을 풉니다.
@@ -6281,6 +6623,22 @@ ko-KR:
         questions:
         - text: 아래 코드를 주의 깊게 보세요. "실행"을 클릭하면 벌은 얼마나 많은 꿀을 만들 수 있습니까?
       courseD_multi_bee_nestedLoops9_predict22022:
+        answers:
+        - feedback: 틀렸습니다. 벌은 앞으로 이동 루프에서 2개의 과즙을 모으고 그 다음, 아래로 루프에서 2개 과즙을 모읍니다.
+            이 모두는 2회 일어나는 또 다른 루프의 내부에 있습니다. 4 곱하기 2는 8입니다!
+          text: '4'
+        - correct: true
+          feedback: 맞습니다!
+          text: '8'
+        - feedback: 틀렸습니다. 벌은 앞으로 이동 루프에서 2개의 과즙을 모으고 그 다음, 아래로 루프에서 2개 과즙을 모읍니다.
+            이 모두는 2회 일어나는 또 다른 루프의 내부에 있습니다. 4 곱하기 2는 8입니다!
+          text: '10'
+        - feedback: 틀렸습니다. 벌은 앞으로 이동 루프에서 2개의 과즙을 모으고 그 다음, 아래로 루프에서 2개 과즙을 모읍니다.
+            이 모두는 2회 일어나는 또 다른 루프의 내부에 있습니다. 4 곱하기 2는 8입니다!
+          text: '12'
+        questions:
+        - text: 아래 코드를 주의 깊게 보세요. "실행"을 클릭하면 벌은 얼마나 많은 꿀을 만들 수 있습니까?
+      courseD_multi_bee_nestedLoops9_predict22022_2023:
         answers:
         - feedback: 틀렸습니다. 벌은 앞으로 이동 루프에서 2개의 과즙을 모으고 그 다음, 아래로 루프에서 2개 과즙을 모읍니다.
             이 모두는 2회 일어나는 또 다른 루프의 내부에 있습니다. 4 곱하기 2는 8입니다!
@@ -6393,6 +6751,24 @@ ko-KR:
         questions:
         - text: 아래 코드를 자세히 보세요. "실행"을 클릭한 후 무슨 일이 벌어질까요?
       courseD_multi_farmer_condLoops9_predict12022:
+        answers:
+        - feedback: 틀렸습니다. 호박을 따기 위한 코드는 여기에 없습니다.
+          text: 수확인은 모든 작물을 모을 것입니다.
+        - feedback: 틀렸습니다. 코드에서는 수확인이 계단 패턴을 반복해서 만들어 발견만 하면 많은 옥수수 또는 상추를 딸 것입니다.
+            그녀는 호박은 따지 않을 것입니다.
+          text: 수확인은 그녀가 택한 경로에서는 어떤 작물도 따지 못할 것입니다.
+        - correct: true
+          feedback: 맞습니다!
+          text: 수확인은 호박을 제외한 모든 작물을 딸 것입니다.
+        - feedback: 틀렸습니다. 코드에서는 수확인이 계단 패턴을 반복해서 만들어 발견만 하면 많은 옥수수 또는 상추를 딸 것입니다.
+            그녀는 호박은 따지 않을 것입니다.
+          text: 수확인은 호박 만을 딸 것입니다.
+        markdown: |
+          이 퍼즐에서 새싹은 옥수수 또는 상추가 될 것입니다.
+          <br/>
+        questions:
+        - text: 아래 코드를 자세히 보세요. "실행"을 클릭한 후 무슨 일이 벌어질까요?
+      courseD_multi_farmer_condLoops9_predict12022_2023:
         answers:
         - feedback: 틀렸습니다. 호박을 따기 위한 코드는 여기에 없습니다.
           text: 수확인은 모든 작물을 모을 것입니다.
@@ -6523,6 +6899,19 @@ ko-KR:
           text: 이 코드는 마지막 구멍을 건드리지 않고 남겨둘 것입니다.
         questions:
         - text: 아래 코드를 잘 보세요. 이 퍼즐을 끝에 무엇이 남아 있을까요?
+      courseD_multi_farmer_while10_predict22022_2023:
+        answers:
+        - feedback: 틀렸습니다. 흙더미에서 흙을 제거하기 위한 코드는 없습니다.
+          text: 아무 일도 벌어지지 않습니다. 이 코드는 단지 평지만을 남길 거예요.
+        - correct: true
+          feedback: 맞습니다!
+          text: 이 코드는 흙더미를 전혀 건드리지 않고 그대로 남겨둘 거예요.
+        - feedback: 틀렸습니다. `while` 루프가 어떤 크기의 루프든 취급할 것이지만 흙더미에서 흙을 제거하기 위한 코드는 없습니다.
+          text: 이 코드는 구멍을 전혀 건드리지 않고 그대로 남겨둘 거예요.
+        - feedback: 틀렸습니다. 흙더미에서 흙을 제거하기 위한 코드는 없습니다.
+          text: 이 코드는 마지막 구멍을 건드리지 않고 남겨둘 것입니다.
+        questions:
+        - text: 아래 코드를 잘 보세요. 이 퍼즐을 끝에 무엇이 남아 있을까요?
       courseD_multi_farmer_while10_predict2_2018:
         answers:
         - feedback: 틀렸습니다. 흙더미에서 흙을 제거하기 위한 코드는 없습니다.
@@ -6589,6 +6978,19 @@ ko-KR:
         questions:
         - text: 아래 코드를 자세히 보세요. "실행"을 클릭하면 무슨 일이 벌어질까요?
       courseD_multi_farmer_while4_predict12022:
+        answers:
+        - feedback: 틀렸습니다. 농부는 흙더미가 있는 한 흙을 제거하고 흙더미가 없어지면 멈출 것입니다.
+          text: 아무 일도 일어나지 않을 거예요.
+        - feedback: 틀렸습니다. 농부는 흙더미가 있는 한 흙을 제거하고 흙더미가 없어지면 멈출 것입니다.
+          text: '농부는 절대 흙 제거하는 일을 중단하지 않을 거예요. '
+        - correct: true
+          feedback: 맞습니다!
+          text: 농부는 흙더미가 있는 한 흙을 제거하고 흙더미가 없어지면 멈출 것입니다.
+        - feedback: 틀렸습니다. 농부는 흙더미가 있는 한 흙을 제거하고 흙더미가 없어지면 멈출 것입니다.
+          text: 농부는 단지 한 번만 흙을 제거할 것입니다.
+        questions:
+        - text: 아래 코드를 자세히 보세요. "실행"을 클릭하면 무슨 일이 벌어질까요?
+      courseD_multi_farmer_while4_predict12022_2023:
         answers:
         - feedback: 틀렸습니다. 농부는 흙더미가 있는 한 흙을 제거하고 흙더미가 없어지면 멈출 것입니다.
           text: 아무 일도 일어나지 않을 거예요.
@@ -6677,6 +7079,15 @@ ko-KR:
         - text: 좀비는 앞으로 가는 경로의 끝에서 갇히게 될 것입니다.
         questions:
         - text: 아래 코드를 주의 깊게 보세요. "실행"을 클릭하면 무슨 일이 벌어집니까?
+      courseD_multi_maze_until10_predict22022_2023:
+        answers:
+        - correct: true
+          feedback: 맞습니다!
+        - text: 좀비는 해바라기로 갈 것입니다.
+        - text: 좀비가 첫 번째 경로에서 우회전하여 영원히 빙빙 돌 것입니다.
+        - text: 좀비는 앞으로 가는 경로의 끝에서 갇히게 될 것입니다.
+        questions:
+        - text: 아래 코드를 주의 깊게 보세요. "실행"을 클릭하면 무슨 일이 벌어집니까?
       courseD_multi_maze_until10_predict2_2018:
         answers:
         - correct: true
@@ -6746,6 +7157,22 @@ ko-KR:
         questions:
         - text: 아래 코드를 자세히 보세요. "실행"을 클릭하면 무슨 일이 벌어질거라 생각하세요?
       courseD_multi_maze_until2_predict12022:
+        answers:
+        - feedback: 틀렸습니다. 코드는 경로가 있는 동안 새를 앞으로 이동하게 하고 그 다음, 좌회전하게 만듭니다. 돼지에 다다를
+            때까지 계속합니다!
+          text: 새는 전혀 움직이지 않을 것입니다.
+        - correct: true
+          feedback: 맞습니다!
+          text: 새는 돼지에게 갈 것입니다.
+        - feedback: 틀렸습니다. 코드는 안전한 경로가 있는 동안 새를 앞으로 이동하게 하고 그 다음, 좌회전하게 만듭니다. 돼지에
+            다다를 때까지 계속합니다!
+          text: 새는 앞으로 이동하여 TNT를 만나게 될 것입니다.
+        - feedback: 코드는 경로가 있는 동안 새를 앞으로 이동하게 하고 그 다음, 좌회전하게 만듭니다. 돼지에 다다를 때까지 계속
+            합니다!
+          text: 새가 잘못된 방식으로 회전합니다.
+        questions:
+        - text: 아래 코드를 자세히 보세요. "실행"을 클릭하면 무슨 일이 벌어질거라 생각하세요?
+      courseD_multi_maze_until2_predict12022_2023:
         answers:
         - feedback: 틀렸습니다. 코드는 경로가 있는 동안 새를 앞으로 이동하게 하고 그 다음, 좌회전하게 만듭니다. 돼지에 다다를
             때까지 계속합니다!
@@ -6844,6 +7271,9 @@ ko-KR:
       courseE_EOC2022:
         description: 과정 E의 마지막에 도달했습니다! 만들 프로젝트를 선택하세요.
         display_name: 과정말 프로젝트
+      courseE_EOC2022_2023:
+        description: 과정 E의 마지막에 도달했습니다! 만들 프로젝트를 선택하세요.
+        display_name: 과정말 프로젝트
       courseE_EOC_2020:
         description: 과정 E의 마지막에 도달했습니다! 만들 프로젝트를 선택하세요.
         display_name: 과정말 프로젝트
@@ -6851,6 +7281,9 @@ ko-KR:
         description: 과정 E의 마지막에 도달했습니다! 만들 프로젝트를 선택하세요.
         display_name: 과정말 프로젝트
       courseE_EOC_examples2022:
+        description: 과정 E의 마지막에 도달했습니다! 만들 프로젝트를 선택하세요.
+        display_name: 과정말 프로젝트
+      courseE_EOC_examples2022_2023:
         description: 과정 E의 마지막에 도달했습니다! 만들 프로젝트를 선택하세요.
         display_name: 과정말 프로젝트
       courseE_EOC_examples_2021:
@@ -6897,6 +7330,19 @@ ko-KR:
         questions:
         - text: 아래 정의된 함수를 보세요. 수확인은 무엇을 딸까요?
       courseE_multi_farmer_functions11_predict2022:
+        answers:
+        - feedback: 틀렸습니다. 수확인은 경로 끝까지 앞으로 가고 그 다음, 뒤돌아 상추를 딸 때까지 뒤로 이동합니다.
+          text: 수확인은 두 개의 호박을 딸 것입니다.
+        - feedback: 틀렸습니다. 수확인은 경로 끝까지 앞으로 가고 그 다음, 뒤돌아 상추를 딸 때까지 뒤로 이동합니다.
+          text: 수확인은 호박을 모두 딸 거예요.
+        - correct: true
+          feedback: 맞습니다!
+          text: 수확인은 상추를 딸 거예요.
+        - feedback: 틀렸습니다. 수확인은 경로 끝까지 앞으로 가고 그 다음, 뒤돌아 상추를 딸 때까지 뒤로 이동합니다.
+          text: 수확인은 옥수수를 딸 거예요.
+        questions:
+        - text: 아래 정의된 함수를 보세요. 수확인은 무엇을 딸까요?
+      courseE_multi_farmer_functions11_predict2022_2023:
         answers:
         - feedback: 틀렸습니다. 수확인은 경로 끝까지 앞으로 가고 그 다음, 뒤돌아 상추를 딸 때까지 뒤로 이동합니다.
           text: 수확인은 두 개의 호박을 딸 것입니다.
@@ -6975,6 +7421,19 @@ ko-KR:
         questions:
         - text: '"실행"을 누르면 무슨 일이 일어납니까?'
       courseE_prediction_artistFunction12022:
+        answers:
+        - feedback: 틀렸습니다. 함수는 프록그램에서 사실 상 두 번 호출되었습니다.
+          text: 없습니다. 함수는 프록그램에서 호출되지 않습니다.
+        - feedback: 틀렸습니다. 함수는 프록그램에서 사실 상 두 번 호출되었습니다.
+          text: 아티스트는 한 개의 사각형을 그릴 것입니다.
+        - feedback: 틀렸습니다. 사각형의 각 변의 길이는 단지 100 픽셀이지만 아티스트는 함수 사이에서 175 픽셀 점프합니다.
+          text: 아티스트는 겹쳐지는 두 개의 사각형을 그릴 것입니다.
+        - correct: true
+          feedback: 맛습니다. 함수는 프록그램에서 두 번 호출되었고 그 사이에 점프가 한번 있었습니다.
+          text: 아티스트는 두 개의 사각형 그 사이에 작은 간격을 두고 그릴 것입니다.
+        questions:
+        - text: '"실행"을 누르면 무슨 일이 일어납니까?'
+      courseE_prediction_artistFunction12022_2023:
         answers:
         - feedback: 틀렸습니다. 함수는 프록그램에서 사실 상 두 번 호출되었습니다.
           text: 없습니다. 함수는 프록그램에서 호출되지 않습니다.
@@ -7101,6 +7560,19 @@ ko-KR:
           text: 회전초는 깜박거릴 것입니다.
         questions:
         - text: 아래 코드를 자세히 보세요. "실행"을 클릭하면 무슨 일이 벌어질까요?
+      courseE_swim_fish_behavior_predict12022_2023:
+        answers:
+        - feedback: 틀렸습니다. 회전초는 굴러가기 시작할 것입니다
+          text: 아무 일도 일어나지 않을 거예요.
+        - feedback: 틀렸습니다. 회전초는 굴러가기 시작할 것입니다
+          text: 회전초는 화면 상단으로 떠올라갈 것입니다
+        - correct: true
+          feedback: 맞습니다!
+          text: 회전초는 굴러가기 시작할 것입니다
+        - feedback: 틀렸습니다. 회전초는 굴러가기 시작할 것입니다
+          text: 회전초는 깜박거릴 것입니다.
+        questions:
+        - text: 아래 코드를 자세히 보세요. "실행"을 클릭하면 무슨 일이 벌어질까요?
       courseE_swim_fish_behavior_predict1_2021:
         answers:
         - feedback: 틀렸습니다. 회전초는 굴러가기 시작할 것입니다
@@ -7126,10 +7598,15 @@ ko-KR:
         display_name: 과정말 프로젝트
       courseF_EOC_examples2022_2022_pilot_-2022-2:
         display_name: 과정말 프로젝트
+      courseF_EOC_examples2022_2022_pilot_-2022-2_2023:
+        display_name: 과정말 프로젝트
       courseF_EOC_examples_2021:
         description: 과정 F의 마지막에 도달했습니다! 만들 프로젝트를 선택하세요.
         display_name: 과정말 프로젝트
       courseF_EOC_samples2022:
+        description: 최종 프로젝트를 시작하려고 합니다. 시작하기 전에, 잠시 시간을 내어 예시 프로젝트를 살펴보십시오.
+        display_name: 과정말 프로젝트
+      courseF_EOC_samples2022_2023:
         description: 최종 프로젝트를 시작하려고 합니다. 시작하기 전에, 잠시 시간을 내어 예시 프로젝트를 살펴보십시오.
         display_name: 과정말 프로젝트
       courseF_EOC_samples_2021:
@@ -7194,11 +7671,17 @@ ko-KR:
         title: 벌 변수 복수
       courseF_collector_samples_2022_pilot_-2022-2:
         display_name: 탐구 - 샘플 프로그램
+      courseF_collector_samples_2022_pilot_-2022-2_2023:
+        display_name: 탐구 - 샘플 프로그램
       courseF_events_freeplay:
         description: 이제 배운 내용을 사용하여 프로젝트를 더 낫게 만들 수 있습니다! 계속해서 프로그램에 추가하거나 또는 뭔가 새로운
           것을 시작하세요!
         display_name: 이벤트 - 프리 플레이
       courseF_events_freeplay2022_2022_pilot_-2022-2:
+        description: 이제 배운 내용을 사용하여 프로젝트를 더 낫게 만들 수 있습니다! 계속해서 프로그램에 추가하거나 또는 뭔가 새로운
+          것을 시작하세요!
+        display_name: 이벤트 - 프리 플레이
+      courseF_events_freeplay2022_2022_pilot_-2022-2_2023:
         description: 이제 배운 내용을 사용하여 프로젝트를 더 낫게 만들 수 있습니다! 계속해서 프로그램에 추가하거나 또는 뭔가 새로운
           것을 시작하세요!
         display_name: 이벤트 - 프리 플레이
@@ -7220,6 +7703,9 @@ ko-KR:
       courseF_events_practice2022_2022_pilot_-2022-2:
         description: 지금까지 아주 잘하고 있어요! 다음 액티비티를 선택하세요. 가능한 많이 완료하세요. 이벤트로 계속 연습하세요!
         display_name: 이벤트 연습
+      courseF_events_practice2022_2022_pilot_-2022-2_2023:
+        description: 지금까지 아주 잘하고 있어요! 다음 액티비티를 선택하세요. 가능한 많이 완료하세요. 이벤트로 계속 연습하세요!
+        display_name: 이벤트 연습
       courseF_events_predict_multi:
         answers:
         - feedback: 틀렸습니다. 스프라이트는 동쪽으로도 이동할 것입니다.
@@ -7234,6 +7720,19 @@ ko-KR:
         questions:
         - text: 코드를 읽고 그 다음 예측하세요.
       courseF_events_predict_multi2022_2022_pilot_-2022-2:
+        answers:
+        - feedback: 틀렸습니다. 스프라이트는 동쪽으로도 이동할 것입니다.
+          text: 스프라이트는 오른쪽으로 회전만 할 것입니다.
+        - feedback: 틀렸습니다. 스프라이트는 회전을 멈추지 않고 그래서 두 가지를 동시에 할 것입니다.
+          text: 스프라이트는 동쪽으로 이동만 할 것입니다.
+        - correct: true
+          feedback: 맞았습니다! 두 행동이 동시에 일어날 것입니다.
+          text: 스프라이트는 동시에 회전하고 이동할 것입니다.
+        - feedback: 틀렸습니다. 스프라이트 랩에서는 연결된 블록이 마지막 것 바로 뒤에 일어나므로 두 가지 행동이 동시에 일어날 것입니다.
+          text: 스프라이트는 먼저 회전하고 그 다음 나중에 이동할 것입니다.
+        questions:
+        - text: 코드를 읽고 그 다음 예측하세요.
+      courseF_events_predict_multi2022_2022_pilot_-2022-2_2023:
         answers:
         - feedback: 틀렸습니다. 스프라이트는 동쪽으로도 이동할 것입니다.
           text: 스프라이트는 오른쪽으로 회전만 할 것입니다.
@@ -7278,6 +7777,14 @@ ko-KR:
         - {}
         questions:
         - {}
+      courseF_groups_predict_multi_2022_pilot_-2022-2_2023:
+        answers:
+        - correct: true
+        - {}
+        - {}
+        - {}
+        questions:
+        - {}
       courseF_intro_apps:
         description: CS 기초에 오신 걸 환영합니다! 다음의 프로젝트는 모두 스프라이트 랩으로 만든 것입니다. 지금 사용해 보고
           무엇이 가능한 지 보세요. 이 과정이 끝날 때쯤, 여러분은 이러한 것과 같은 프로젝트와... 그 이상을 만들 수 있을 것입니다!
@@ -7288,6 +7795,8 @@ ko-KR:
 
           여기서의 선택에 따라 학생은 그들이 탐구하게 될 샘플 앱으로 가게 됩니다. 이 활동은 [레슨 플랜](.././)에 있는 앱 탐구 워크시트에 맞게 편성하였습니다.
       courseF_intro_apps2022_2022_pilot_-2022-2:
+        display_name: 스프라이트 랩 앱
+      courseF_intro_apps2022_2022_pilot_-2022-2_2023:
         display_name: 스프라이트 랩 앱
       courseF_labels_predict_multi:
         answers:
@@ -7305,6 +7814,21 @@ ko-KR:
         questions:
         - text: 이 코드는 익숙하게 보이지만 주의깊게 읽으세요. 사용자가 "피자"로 타이핑하면 무엇이 인쇄되어 나올까요?
       courseF_labels_predict_multi2022_2022_pilot_-2022-2:
+        answers:
+        - feedback: 틀렸습니다. 변수 라벨이 일치하지 않습니다.
+          text: '"피자가 곧 나올거예요!"'
+        - feedback: 틀렸습니다. 변수의 라벨은 인쇄되지 않습니다.
+          text: '"식사가 곧 나올거예요!"'
+        - feedback: 틀렸습니다. 변수의 라벨은 인쇄되지 않습니다.
+          text: '"사료가 곧 나올거예요!"'
+        - correct: true
+          feedback: 맞았습니다. 변수 라벨이 일치하지 않습니다.
+          text: '"사료가 곧 나올거예요!"'
+        - feedback: 틀렸습니다. 이벤트와 인쇄 블록이 여전히 작동할 것입니다.
+          text: 아무 것도 인쇄되지 않을 것입니다.
+        questions:
+        - text: 이 코드는 익숙하게 보이지만 주의깊게 읽으세요. 사용자가 "피자"로 타이핑하면 무엇이 인쇄되어 나올까요?
+      courseF_labels_predict_multi2022_2022_pilot_-2022-2_2023:
         answers:
         - feedback: 틀렸습니다. 변수 라벨이 일치하지 않습니다.
           text: '"피자가 곧 나올거예요!"'
@@ -7637,6 +8161,20 @@ ko-KR:
           text: 컴퓨터는 사용자에게 숫자를 요청할 것입니다.
         questions:
         - text: 변수 "길이"를 50에 설정했습니다. "실행"을 클릭하면 무슨 일이 벌어질까요?
+      courseF_multi_artist_variables3a_predict12022_2023:
+        answers:
+        - correct: true
+          feedback: 맞습니다!
+          text: 아티스트는 50 픽셀 변을 갖는 삼각형을 그릴 것입니다.
+        - feedback: 틀렸습니다. `길이` 변수는 그것을 일어나게 하기 위해 `반복` 루프 안에 있어야 합니다.
+          text: 아티스트는  3 픽셀 변을 갖는 50개 변 다각형을 그릴 것입니다.
+        - feedback: 틀렸습니다. `길이` 변수는 그것을 일어나게 하기 위해 `회전` 블록 안에서 사용해야 합니다.
+          text: 아티스트는 50도 회전을 갖는 세 개의 열린 변을 그릴 것입니다.
+        - feedback: "`길이` 변수는 50에 설정하고 `앞으로 이동` 블록 안에서 사용될 것이며 그래서 아티스트는 50 픽셀 변을
+            가진 삼각형을 그릴 것입니다."
+          text: 컴퓨터는 사용자에게 숫자를 요청할 것입니다.
+        questions:
+        - text: 변수 "길이"를 50에 설정했습니다. "실행"을 클릭하면 무슨 일이 벌어질까요?
       courseF_multi_artist_variables3a_predict1_2018:
         answers:
         - correct: true
@@ -7743,6 +8281,23 @@ ko-KR:
         questions:
         - text: 아래 코드를 읽으세요. "실행"을 클릭하면 무슨 일이 벌어집니까?
       courseF_multi_bee_for3_predict12022:
+        answers:
+        - feedback: 틀렸습니다. `For` 루프는 벌에게 맞는 양의 과즙을 모으게 하지만, 단지 4개 꽃에만 도달하게 설정합니다.
+          text: '벌은 앞으로 이동하여 꽃에서 과즙 모두를 모을 거예요. '
+        - correct: true
+          feedback: 맞습니다!
+          text: '벌은 앞으로 이동하고 한 개를 제외하고 모든 꽃에서 과즙 모두를 모을 거예요. '
+        - feedback: 틀렸습니다. `For` 루프는 벌에게 맞는 양의 과즙을 모으게 하지만, 단지 4개 꽃에만 도달하게 설정합니다.
+          text: '벌은 앞으로 이동하여 각 꽃에서 한 개의 과즙을 모을 거예요. '
+        - feedback: 틀렸습니다. `For` 루프는 벌에게 맞는 양의 과즙을 모으게 하지만, 단지 4개 꽃에만 도달하게 설정합니다.
+          text: '벌은 앞으로 이동하여 꽃 번호 1과 4에서 한 개의 과즙을 모을 거예요. '
+        markdown: |+
+          아! `for` 루프를 사용하면 이 퍼즐이 훨씬 더 숴어 집니다!
+
+
+        questions:
+        - text: 아래 코드를 읽으세요. "실행"을 클릭하면 무슨 일이 벌어집니까?
+      courseF_multi_bee_for3_predict12022_2023:
         answers:
         - feedback: 틀렸습니다. `For` 루프는 벌에게 맞는 양의 과즙을 모으게 하지만, 단지 4개 꽃에만 도달하게 설정합니다.
           text: '벌은 앞으로 이동하여 꽃에서 과즙 모두를 모을 거예요. '
@@ -7888,6 +8443,9 @@ ko-KR:
       courseF_sprites_freeplay2022_2022_pilot_-2022-2:
         description: 이제 여러분이 원하는 무엇이든 만들 차례입니다! 어떤 종류의 프로젝트를 만들거예요?
         display_name: 스프라이트- 프리 플레이
+      courseF_sprites_freeplay2022_2022_pilot_-2022-2_2023:
+        description: 이제 여러분이 원하는 무엇이든 만들 차례입니다! 어떤 종류의 프로젝트를 만들거예요?
+        display_name: 스프라이트- 프리 플레이
       courseF_sprites_practice:
         description: 지금까지 아주 잘하고 있어요! 다음 활동을 선택하세요. 가능한 많이 완료하세요. 스프라이트와 행동으로 계속 연습하세요!
         display_name: 스프라이트 연습
@@ -7906,6 +8464,9 @@ ko-KR:
       courseF_sprites_practice2022_2022_pilot_-2022-2:
         description: 지금까지 아주 잘하고 있어요! 다음 활동을 선택하세요. 가능한 많이 완료하세요. 스프라이트와 행동으로 계속 연습하세요!
         display_name: 스프라이트 연습
+      courseF_sprites_practice2022_2022_pilot_-2022-2_2023:
+        description: 지금까지 아주 잘하고 있어요! 다음 활동을 선택하세요. 가능한 많이 완료하세요. 스프라이트와 행동으로 계속 연습하세요!
+        display_name: 스프라이트 연습
       courseF_sprites_predict_multi:
         answers:
         - feedback: 틀렸습니다. 스프라이트는 멈추라는 말을 들을 때까지 계속 실행하는 "행동"을 갖습니다.
@@ -7920,6 +8481,19 @@ ko-KR:
         questions:
         - text: 코드를 읽고 그 다음 예측하세요.
       courseF_sprites_predict_multi2022_2022_pilot_-2022-2:
+        answers:
+        - feedback: 틀렸습니다. 스프라이트는 멈추라는 말을 들을 때까지 계속 실행하는 "행동"을 갖습니다.
+          text: 두 비행기 모두가 그리드를 따라 한칸 이동하고 그 다음 멈출 것입니다.
+        - correct: true
+          feedback: 맞았습니다! 그러한 행동은 비행기에게 이동하기 시작하고 계속 이동하라고 말합니다.
+          text: 두 비행기 모두 이동하기 시작하고 멈추지 않을 것입니다.
+        - feedback: 틀렸습니다. 스프라이트 랩 내 코드의 각 블럭은 다음 것 후에 순간적으로 가동합니다.
+          text: 한 비행기가 먼저 이동하고 다른 비행기가 나중에 이동할 것입니다.
+        - feedback: 틀렸습니다. 비행기는 서로 닿게 되는 위치에 놓이지 않습니다.
+          text: 비행기가 서로 충돌할 것입니다.
+        questions:
+        - text: 코드를 읽고 그 다음 예측하세요.
+      courseF_sprites_predict_multi2022_2022_pilot_-2022-2_2023:
         answers:
         - feedback: 틀렸습니다. 스프라이트는 멈추라는 말을 들을 때까지 계속 실행하는 "행동"을 갖습니다.
           text: 두 비행기 모두가 그리드를 따라 한칸 이동하고 그 다음 멈출 것입니다.
@@ -7952,6 +8526,10 @@ ko-KR:
         description: 지금까지 아주 잘하고 있어요! 다음 액티비티를 선택하세요. 가능한 많이 완료하세요. 텍스트와 프롬프트로 계속
           연습하세요!
         display_name: 텍스트와 프롬프트 연습
+      courseF_text_practice2022_2022_pilot_-2022-2_2023:
+        description: 지금까지 아주 잘하고 있어요! 다음 액티비티를 선택하세요. 가능한 많이 완료하세요. 텍스트와 프롬프트로 계속
+          연습하세요!
+        display_name: 텍스트와 프롬프트 연습
       courseF_variables2_predict2_multi2022_-2022-2:
         answers:
         - correct: true
@@ -7960,7 +8538,23 @@ ko-KR:
         - {}
         questions:
         - {}
+      courseF_variables2_predict2_multi2022_-2022-2_2023:
+        answers:
+        - correct: true
+        - {}
+        - {}
+        - {}
+        questions:
+        - {}
       courseF_variables2_predict_multi2022_2022_pilot_-2022-2:
+        answers:
+        - {}
+        - {}
+        - correct: true
+        - {}
+        questions:
+        - {}
+      courseF_variables2_predict_multi2022_2022_pilot_-2022-2_2023:
         answers:
         - {}
         - {}
@@ -7996,6 +8590,20 @@ ko-KR:
         questions:
         - text: '이 프로그램은 키보드로 타이핑하여 질문에 대답하게 합니다. `인쇄` 블록은 화면 상에서 텍스트를 보여줍니다. 예측하기:
             질문에 대답하면 어떻게 될까요? '
+      courseF_variables_predict_multi2022_2022_pilot_-2022-2_2023:
+        answers:
+        - feedback: 틀렸습니다. 이름 블록은 사용자가 입력하는 내용으로 교체될 것입니다.
+          text: 프로그램은 "~님 안녕하세요!"라고 프린트할 것입니다.
+        - correct: true
+          feedback: 맞았습니다! 사용자가 입력한 이름이 이름 블록 대신에 사용됩니다.
+          text: 프로그램은 사용자가 입력한 이름으로 인사할 것입니다.
+        - feedback: 틀렸습니다. 텍스트는 화면에 인쇄됩니다.
+          text: 스프라이트 크기가 변할 것입니다.
+        - feedback: 틀렸습니다. 프로그램이 시작하자마자 질문 하나만 물어봅니다.
+          text: 컴퓨터는 또 다른 질문을 물어 볼 것입니다.
+        questions:
+        - text: '이 프로그램은 키보드로 타이핑하여 질문에 대답하게 합니다. `인쇄` 블록은 화면 상에서 텍스트를 보여줍니다. 예측하기:
+            질문에 대답하면 어떻게 될까요? '
       courseF_variables_projects:
         description: 축하 카드 또는 채봇, 빈칸 채우기 이야기 중 하나를 만들 것입니다. 이미 프로젝트의 \"제 1부\"를 마쳤으면
           \"제 2부\"로 가십시오.
@@ -8008,6 +8616,10 @@ ko-KR:
           따라, 각 선택을 위한 첫 번째 레벨은 그들에게 피드백을 제공합니다. 두 번째 레벨은 \"프리 플레이\"로 학생들에게 그들의 코드를
           원하는 대로 변경하도록 허용합니다. \n"
       courseF_variables_projects2022_2022_pilot_-2022-2:
+        description: 축하 카드 또는 채봇, 빈칸 채우기 이야기 중 하나를 만들 것입니다. 이미 프로젝트의 \"제 1부\"를 마쳤으면
+          \"제 2부\"로 가십시오.
+        display_name: 프로젝트 선택
+      courseF_variables_projects2022_2022_pilot_-2022-2_2023:
         description: 축하 카드 또는 채봇, 빈칸 채우기 이야기 중 하나를 만들 것입니다. 이미 프로젝트의 \"제 1부\"를 마쳤으면
           \"제 2부\"로 가십시오.
         display_name: 프로젝트 선택
@@ -8024,6 +8636,10 @@ ko-KR:
         description: 축하 카드 또는 채봇, 빈칸 채우기 이야기 중 하나를 만들게 될 것입니다. 시작하기 전, 아래 예제 프로젝트를
           살펴보고 자신이 어떤 것을 만드는데 관심 있는지 알아 보세요. 프로그램 계획을 시작할 준비가 되었으면 \"마침\"을 누르세요.
         display_name: 탐구 - 샘플 프로그램
+      courseF_variables_samples2022_2022_pilot_-2022-2_2023:
+        description: 축하 카드 또는 채봇, 빈칸 채우기 이야기 중 하나를 만들게 될 것입니다. 시작하기 전, 아래 예제 프로젝트를
+          살펴보고 자신이 어떤 것을 만드는데 관심 있는지 알아 보세요. 프로그램 계획을 시작할 준비가 되었으면 \"마침\"을 누르세요.
+        display_name: 탐구 - 샘플 프로그램
       courseF_variables_stop:
         content1: 설명 입력
         markdown: "# 정지!\n\n## 다음으로 넘어갈 준비가 됐습니까? \n\n\n다음 레벨에서는 프로젝트를 위한 코드를 쓰기 시작할
@@ -8033,6 +8649,14 @@ ko-KR:
           들어, 축하 카드, 채봇 또는 빈칸 채우기 이야기.\n* 사용자에게 물을 질문 목록\n* 화면에 표시할 다른 텍스트\n* 필요한
           스프라이트(와 그들의 행동) 설명 또는 그림\n\n다음으로 넘어갈 준비가 되었는지 확실하지 않으면, 교사와 함께 확인해 보세요!\n"
       courseF_variables_stop2022_2022_pilot_-2022-2:
+        content1: 설명 입력
+        markdown: "# 정지!\n\n## 다음으로 넘어갈 준비가 됐습니까? \n\n\n다음 레벨에서는 프로젝트를 위한 코드를 쓰기 시작할
+          것입니다. 이미 계획이 세워져 있으면 이 작업은 최고로 잘 될 것입니다.\n\n완성된 계획에는 다음이 포함되어야 합니다:\n\n<img
+          src=\"https://images.code.org/b476ac330f2b66e44e02208fee386a56-image-1614802439867.png\"
+          style=\"float:left; height:70px; padding:10px\"/>\n\n* 제작할 프로젝트의 유형. 예를
+          들어, 축하 카드, 채봇 또는 빈칸 채우기 이야기.\n* 사용자에게 물을 질문 목록\n* 화면에 표시할 다른 텍스트\n* 필요한
+          스프라이트(와 그들의 행동) 설명 또는 그림\n\n다음으로 넘어갈 준비가 되었는지 확실하지 않으면, 교사와 함께 확인해 보세요!\n"
+      courseF_variables_stop2022_2022_pilot_-2022-2_2023:
         content1: 설명 입력
         markdown: "# 정지!\n\n## 다음으로 넘어갈 준비가 됐습니까? \n\n\n다음 레벨에서는 프로젝트를 위한 코드를 쓰기 시작할
           것입니다. 이미 계획이 세워져 있으면 이 작업은 최고로 잘 될 것입니다.\n\n완성된 계획에는 다음이 포함되어야 합니다:\n\n<img
@@ -8054,6 +8678,19 @@ ko-KR:
         questions:
         - text: '"실행" 버튼을 누르면 무슨 일이 일어납니까?'
       coursee_prediction_artistfunction22022:
+        answers:
+        - feedback: 틀렸습니다. 루프는 "다각형 선 그리기" 대신 "다각형 그리기"를 사용합니다.
+          text: 아티스트는 퍼즐을 맞게 풀 것입니다.
+        - correct: true
+          feedback: 맞습니다!
+          text: 아티스트는 네 개의 사각형을 창문 패턴으로 그릴 것입니다.
+        - feedback: 틀렸습니다. 프로그램은 "다각형 선 그리기"를 호출하지 않습니다.
+          text: 아티스트는 사각형의 한 라인만 그릴 것입니다.
+        - feedback: 틀렸습니다. 루프는 "다각형 그리기"를 위해 호출과 호출 사이에 90도 회전을 합니다.
+          text: 아티스트는 네 개의 사각형을 서로 위에 그릴 것입니다.
+        questions:
+        - text: '"실행" 버튼을 누르면 무슨 일이 일어납니까?'
+      coursee_prediction_artistfunction22022_2023:
         answers:
         - feedback: 틀렸습니다. 루프는 "다각형 선 그리기" 대신 "다각형 그리기"를 사용합니다.
           text: 아티스트는 퍼즐을 맞게 풀 것입니다.
@@ -8118,6 +8755,263 @@ ko-KR:
           text: 아티스트는 네 개의 사각형을 서로 위에 그릴 것입니다.
         questions:
         - text: '"실행" 버튼을 누르면 무슨 일이 일어납니까?'
+      csc_animal_adaptations_L3_intro:
+        markdown: "#Make 당신만의 행동!\n\n<br>\n\n# #Now 당신이 행동을 통제할 수 있어요!\n\n## #Edit
+          기존 동작을 수정하고 변경할 수 있습니다. \n![] (https://images.code.org/e2e63b1cd7302b6548591c65ad23a0ee-image-1680019477336.gif)\n\n##
+          #Make 원하는 액션을 마음껏 펼칠 수 있는 나만의 새로운 행동!\n\n![] (https://images.code.org/5345f53f3b33b2ad2bbf2bc86539cb96-image-1680019210225.gif)\n\n\n"
+      csc_animal_adaptations_choice:
+        description: 아래 시나리오 중에서 선택하고 자신만의 창의적인 코드를 사용하여 새롭고 독특한 동물 적응을 모델링하세요!여러
+          옵션을 골라 하나 이상 할 수 있어요!
+        display_name: 나만의 동물 적응을 코딩하세요!
+      csc_animal_adaptations_intro:
+        markdown: "#Survival 행동\n\n# #Behaviors 자연에서\n동물은 생존에 도움이 되는 <strong></strong>
+          행동과 행동을 발달시켰습니다. <br> 예를 들어, 겨울에 **이주**하는 동물도 있고, **집단**에 머물려고 하는 동물도 있습니다.\n\n<img
+          style=\" float: left; width:50%; padding-top:10px\" src=\"https://images.code.org/424ef84f41b7cabdf62e8cc509abe62c-image-1678322413909.jpg\"
+          style= \"width:60%\">\n<img style=\" float: left; width:46%; padding-top:10px\"
+          src=\"https://images.code.org/7c79e255d048e7ccf099eb61976bb90c-image-1678322295452.jpg\"
+          style= \"width:60%\">\n\n<div style=\"float: left\">\n<h2>컴퓨터 과학에서의 행동 컴퓨터
+          과학에서는</h2>\n <strong>행동은</strong> 스프라이트가 애니메이션처럼 반복해서 반복하는 일련의 동작입니다. <br>\n비헤이비어
+          내의 액션은 중지하라는 지시가 있을 때까지 계속됩니다. \n<br>\n<br>\n\n<img src=\"https://images.code.org/56809209ca823047729cc01a033a7ac0-image-1679937249706.gif\"
+          style=\" float: left; width:70%; padding-top:10px\">\n</div>\n"
+      csc_animal_adaptations_predict:
+        answers:
+        - feedback: 올바르지 않습니다.스프라이트가 커질 거예요.
+          text: 스프라이트가 회전합니다.
+        - correct: true
+          feedback: 맞습니다!
+          text: 스프라이트가 커질 것입니다.
+        - feedback: 올바르지 않습니다.스프라이트가 커질 거예요.
+          text: 스프라이트가 이동할 것입니다.
+        - feedback: 올바르지 않습니다.스프라이트가 커질 거예요.
+          text: 스프라이트 색상이 변할 것입니다.
+        questions:
+        - text: '"편집" 버튼을 눌러 `미스터리 행동`이 어떻게 전개되는지 보세요. 안에 코드를 공부하고 그 다음, 예측을 하세요.'
+      csc_animal_adaptations_shareout:
+        markdown: "# #Share 나만의 프로젝트\n<img src=\"https://images.code.org/c480c5c42d9c02e154943f49bbed87ff-image-1675984438344.13.53
+          PM.png\" style= \"width:60%\">\n<div style= \"width: 60%\"> \n\n**이제 서바이벌
+          각색을 코딩했으니 공유할 차례입니다!**\n\n레벨 9부터 반 친구들의 프로젝트를 볼 때 다음 질문을 생각해 보세요. >1.\n\n같은
+          환경 시나리오를 선택했나요, 아니면 다른 시나리오를 선택했나요? \n>2.동일한 코딩 블록을 사용했나요? \n>3.동물이 환경 변화에서
+          살아남을 수 있을 거라고 생각하세요?왜 아니면 안 되죠? \n\n</div>\n\n"
+      csc_bookcover_extensions_choice_2023:
+        description: 아래 활동 중에서 선택하여 책 표지에 추가하세요!여러 옵션을 골라 하나 이상 할 수 있어요!
+        display_name: 책 표지를 확장하세요!
+      csc_bookcovers_markdown_lesson_4:
+        markdown: "# #Share 책 표지\n<img src=\"https://images.code.org/c480c5c42d9c02e154943f49bbed87ff-image-1675984438344.13.53
+          PM.png\" style= \"width:60%\">\n<div style= \"width: 60%\"> \n\n**이제 책 표지를
+          코딩했으니 공유할 차례입니다!**\n\n반 친구들의 프로젝트를 보면서 다음 질문을 생각해 보세요. >1.\n\n반 친구들의 책 표지에서
+          어떤 스프라이트와 대화를 보았나요?\n>2.캐릭터를 클릭하면 어떻게 되나요?\n>2.그들의 선택이 당신의 선택과 어떻게 비슷했나요?둘은
+          어떻게 달랐나요?\n>3.표지를 바탕으로 책을 읽고 싶으신가요?\n</div>\n\n"
+      csc_bookcovers_planning:
+        markdown: "# #Plan 디지털 북 커버\n\n<div>\n<img style=\" float: left; width:25%;
+          padding-top:10px\" src=\"https://images.code.org/08ece3f13c8f0f82343e302fb52dc45c-image-1676499630865.png\"
+          />\n\n<div style=\"float: left; width: 70%; padding-left:20px\">\n<h4>\n<strong>이제
+          계획을 세울 시간입니다!</strong>\n</h4>\n\n>다음을 포함해야 합니다.\n> - 책 제목\n> - 저자\n> - 주인공
+          두 명과 자신을 설명하는 한 문장 \n> - 책에 대한 한두 문장 요약\n\n**다음은 복사하여 직접 사용할 수 있는 계획 템플릿입니다.**
+          \ <a href=\"https://docs.google.com/document/d/18cVgDdq77dbdk6gmQ1rGjHIr7pQk3I2Wb2WsAEeNH64/template/preview\"
+          target=\"_blank\"> 책 표지 계획 가이드.</a>\n\n</div>\n"
+      csc_codingwithpoetry_markdown_lesson_4:
+        markdown: "# #Share 나만의 시\n<img src=\"https://images.code.org/c480c5c42d9c02e154943f49bbed87ff-image-1675984438344.13.53
+          PM.png\" style= \"width:60%\">\n<div style= \"width: 60%\"> \n\n앱**이제 시를
+          코딩했으니 공유할 차례입니다!**\n\n반 친구들의 프로젝트를 보면서 “빛나는”, “성장”, 파트너를 위해 쓸 수 있는 “질문”에
+          대해 생각해 보세요.\n\n- “빛나는 것”은 그들이 잘한 것입니다.\n- “성장”은 아이들이 바꾸거나 개선할 수 있는 것입니다.\n-
+          “질문”은 여러분이 더 알고 싶은 것입니다.\n</div>\n\n**시작할 준비가 되셨나요?** <a href=\"https://docs.google.com/document/d/1b6w_lOnibUHyDLYCP3rAWED5iElGm6LOQAJwG-hlih0/template/preview\"
+          target=\"_blank\">이 리소스를</a> 사용하여 파트너와 피드백을 공유하세요.\n\n"
+      csc_ecosystemes_foodchain_info:
+        markdown: "\n##**모든 생태계는 _정교하게 균형잡힌_ 먹이 사슬을 가지고 있습니다** ## #The 해양 생태계 먹이 사슬\n:
+          >## #1.\n\n\n\n<img src=\"https://images.code.org/2270cbb4656875db210e9871883a7d45-image-1683677265473.jpg\"
+          style= \"width:80%\">\n<div style= \"width: 80%\"> \n\n태양은 조류에서 광합성이 일어나도록
+          에너지를 공급합니다.\n>## #2.해조류는 물고기가 잡아먹습니다.\n>## #3.물고기는 그물이 달린 어선을 이용하는 사람이 잡아서
+          먹습니다. \n\n</div>\n\n\n##**먹이 사슬에 한 가지 생물이 너무 많거나 너무 적으면 생태계 전체에 영향을 미치게
+          됩니다.**\n"
+      csc_ecosystems_choice_freeplay_2023:
+        description: 이러한 생태계 시뮬레이션을 각각 조정해야 합니다.생태계를 선택하고 시뮬레이션을 실행하여 문제를 관찰하고 코드를
+          조정하여 문제를 해결하십시오.
+        display_name: 생태계를 선택하세요!
+      csc_ecosystems_conditionals_overview:
+        markdown: "#Cause 및 효과 \n\n</div>\n\n조건문 ## 다음으로 물 속에 얼마나 많은 조류가 있는지 확인하는
+          코드를 추가합니다. <br>\n<img src=\"https://images.code.org/8be316d4e408466b4300c614712fd652-image-1684798211348.jpg\"
+          \ width=50% style=\"margin-right: 10px; float: right\">\n<br> <br>\n\n-
+          먼저 컴퓨터가 조건이 참인지 거짓인지 확인합니다.\n\n- 사실이면 내부 블록을 실행합니다.\n- 거짓이면 아무 일도 하지 않습니다.\n\n<br>\n<br>\n<br>\n\n##
+          해조류가 너무 많으면 산호가 아프게 됩니다.\n\n<br>\n\n<img src=\"https://images.code.org/4d8aaa9c6562e0ca0b3d92ff7aed1d03-image-1681847951794.png\"
+          \ width=20% style=\"margin-right: 10px; float: left\">\n<img src=\"https://images.code.org/941774921f367566bef36cb712cf2bfb-image-1681840836607.png\"
+          \ width=30% style=\" margin-right: 10px; float: left\">\n\n<br>\n<br>\n<br>\n<br>\n<br>\n<br>\n<br>\n<br>\n\n***\n\n\n\n##
+          해조류가 너무 적으면 물고기가 떠납니다\n<img src=\"https://images.code.org/6869f418200edfb88190c0a1e4e5cd10-image-1681838202310.png\"
+          \ width=20% style=\"margin-right: 10px; float: left\">\n\n\n<img src=\"https://images.code.org/233178645539bc7966f55af47865096d-image-1681840833690.png\"
+          \ width=20% style=\" margin-right: 10px; float: left\">\n\n<br>\n<br>\n<br>\n<br>\n<br>\n<br>\n<br>\n<br>\n<br>\n\n\n***\n\n\n\n##
+          해조류가 충분하다면생태계는 건강하다\n\n<img src=\"https://images.code.org/8bb9247c35d7d167611b02764beaeff3-image-1681838011797.png\"
+          \ width=20% style=\"margin-right: 30px; float: left\">\n<img src=\"https://images.code.org/b1ed2f5c135f9637fd7a9c5778db2b0c-image-1681840830929.png\"
+          \ width=30% style=\"margin-left: 10px;float: left\">\n<br>\n<br>\n<br>\n<br>\n\n"
+      csc_ecosystems_matching_cfu:
+        answers:
+        - text: "![] (https://images.code.org/284e3b6e09f5d58052a8840e756644c5-image-1683752491112.png)"
+        - text: "![] (https://images.code.org/d466f0912cd0cadb3d655263c71c072f-image-1683752857648.jpg)"
+        - text: "![] (https://images.code.org/de2ab3c63bc2cf7cb319be86d5dcdec0-image-1683752570051.png)"
+        markdown: |+
+          ## 세 가지 지속 가능한 어업 관행 살펴보기 코드를 일치하는 이미지로
+
+          드래그하세요.
+
+        questions:
+        - text: 보트 낚시 구역을 만드세요![] (https://images.code.org/5f5e0640a82242d632db10b872280e18-image-1683753001613.gif)
+        - text: |-
+            낚시 시즌과 낚시 금지 시즌을
+            시작하세요![] (https://images.code.org/becad47fd19a4d0e938a0cd10c404e41-image-1683838684289.gif)
+        - text: 낚시 제한을 설정하세요![] (https://images.code.org/f8bbd98ff6199af5d3ad23d64f39629d-image-1683753402925.gif)
+        title: 코드를 이미지와 일치시키세요
+      csc_ecosystems_matching_conditionals:
+        answers:
+        - text: "![] (https://images.code.org/db1db479bec9b40c6e0574ade394d32b-image-1680118613718.36.41
+            PM.png)"
+        - text: "![] (https://images.code.org/7c9171ab2ee2e833e5ff60d5519d8728-image-1680118617438.31.00
+            PM.png)"
+        - text: "![] (https://images.code.org/412968ba617ef19d2049e0e63d271937-image-1680118620636.30.50
+            PM.png)"
+        markdown: |
+          ## 세 가지 생태계를 살펴보세요.
+
+          한 생태계는 균형을 이루고 다른 두 생태계는 서로 다른 방식으로 불균형을 이루고 있습니다.코드를 일치하는 이미지로 드래그하세요.
+        questions:
+        - text: 조류가 너무 적으면 물고기가 떠납니다.![] (https://images.code.org/c0a28473307b7e9b0e827532d2a6ddda-image-1680212227032.png)
+        - text: |-
+            해조류가 너무 많으면 산호가 아플 수 있습니다. <br>
+            ![] (https://images.code.org/1230fd96832b692b0c8ab88e77957f33-image-1680212254888.png)
+        - text: 적절한 양의 해조류는 병든 산호를 치유하고 물고기도 건강하게 유지합니다.![] (https://images.code.org/3dd061538a7a73285aa0916fdde34e77-image-1680212284869.png)
+        title: 코드를 이미지와 일치시키세요
+      csc_ecosystems_matching_events:
+        answers:
+        - text: "![] (https://images.code.org/bf70d0664e68690f2359a48365e50ccc-image-1680556679495.16.33
+            PM.png)"
+        - text: "![] (https://images.code.org/fe4d2803162186a8e53ec0027f27a206-image-1680556683660.36.04
+            PM.png)"
+        markdown: |+
+          스프라이트가 두 애니메이션에 닿았을 때 어떤 일이 일어나는지 보세요.그런 다음 각 코드 그림을 일치하는 이미지로 드래그하십시오.
+
+
+        questions:
+        - text: 보트가 물고기를 잡습니다.![] (https://images.code.org/bcdefefdd1787330e3ad72558b5b492d-image-1680556053866.gif)
+        - text: 물고기는 해조류를 먹습니다.![] (https://images.code.org/73febc58a3d23fbf4c66e693abec9e3d-image-1680556608027.gif)
+        title: 코드를 애니메이션과 일치시키세요
+      csc_ecosystems_overfishing_solution2_overview:
+        markdown: "> #Sustainable 낚시 연습 #2:\n>># #Create 낚시 <img src=\"https://images.code.org/123dd5c82e4c03dcbc32b775fd16ec60-image-1681937158113.png\"
+          \ width=400 style=\"margin-right: 30px; float: left\">\n시즌**사람들이 물고기를 잡을
+          수 있는 시간을 제한하세요.낚시 시즌이 아닐 때는 생태계가 \n<br>\n\n회복될 시간이 있습니다.** #Save 우리 바다!
+          \n<img src=\"https://images.code.org/f3f55eddff9891464c8fb5a5405c31c3-image-1681781301257.png\"
+          width=250 style=\"margin-left: 30px; margin-bottom: 30px; float: right\">\n<img
+          src=\"https://images.code.org/cbccfc42b7e1fe329ac7c9c37dfcb6b5-image-1681781296669.png\"
+          width=250 style=\"margin-left: 30px; margin-bottom: 30px; float: right\">\n\n</div>\n\n###
+          남획은 해양 생물 생태계와 이를 이용하는 사람들에게 해를 끼칠 수 있는 문제입니다.이러한 생태계를 보호하고 어류 개체수가 건강하게
+          유지되도록 하려면 지속 가능한 어업을 실천하는 것이 중요합니다.\n\n\n\n<br>\n<br>\n<br>\n"
+      csc_ecosystems_overfishing_solution3_overview:
+        markdown: "> #Sustainable 낚시 관행 #3:\n>># #Set 낚시 제한 <img src=\"https://images.code.org/58d4ca52deba39a990c3165ba16e284b-image-1681747630352.png\"
+          \ width=300 style=\"margin-right: 30px; float: left\">\n**과학자들은 바다에 해를 끼치지
+          않고 얼마나 많은 물고기를 잡을 수 있는지 알아내는 데 도움을 줄 수 있습니다.그러면 어부들은 그 많은 물고기만 잡을 수 있다는
+          것을 알게 될 것입니다.** #Save 우리 바다! \n<br>\n<br>\n<br>\n\n \n<img src=\"https://images.code.org/35e557d27c4bdb5f546da560716dc10b-image-1681756387784.jpg\"
+          width=400 style=\"margin-left: 30px; margin-bottom: 30px; float: right\">\n</div>\n\n###
+          우리는 힘을 합쳐 다음 세대를 위해 바다에 생명이 넘칠 수 있도록 도울 수 있습니다!\n\n\n\n<br>\n<br>\n<br>\n\n"
+      csc_ecosystems_overfishing_solutions_overview:
+        markdown: "#Save 우리의 바다! \n<img src=\"https://images.code.org/d4267a1de975b8ea46468f74187eb95c-image-1681756621010.jpg\"
+          width=400 style=\"margin-left: 30px; margin-bottom: 30px; float: right\">\n</div>\n\n###
+          바다에는 물고기가 많지만 때로는 사람들이 너무 많은 물고기를 잡아서 생태계에 해로울 수 있습니다.다음 레벨에서는 해양 생태계를 보호하는
+          데 도움이 되는 **세 가지 지속 가능한 어업 관행**을 코딩하게 됩니다.\n\n<br>\n\n## #To 해양을 위한 지속 가능한
+          솔루션에 대해 자세히 알아보기: 여기를 클릭하십시오 > #Sustainable 낚시 <a href=\"https://www.seafoodwatch.org/seafood-basics/sustainable-solutions/avoid-overfishing\"
+          target=\"_blank\"></a>\n<br>\n<br>\n\n연습 #1:\n>> # #Fishing <img src=\"https://images.code.org/c33e46309c5335dc557c67c34310e723-image-1681511054034.png\"
+          \ width=300 style=\"margin-right: 30px; float: left\">\n구역**어선은 지정된 구역에서만
+          낚시를 할 수 있습니다.생태계가 회복될 수 있도록 일부 지역에서는 어선의 출입이 금지됩니다.** \n<br>\n<br>\n\n\n"
+      csc_ecosystems_planning:
+        markdown: "# #Share 나만의 생태계 시뮬레이션!\n<img src=\"https://images.code.org/c480c5c42d9c02e154943f49bbed87ff-image-1675984438344.13.53
+          PM.png\" style= \"width:50%\">\n<div style= \"width: 60%\"> \n\n###**생태학자!이제
+          여러분의 연구를 공유할 시간입니다!**\n\n## #Explain 당신이 관찰한 내용은 다음과 같습니다:\n\n>1.생태계의 먹이
+          사슬을 설명하고 어떻게 코딩했는지 설명해 주세요.\n>2.유기체가 너무 많거나 너무 적었나요?\n>3.시뮬레이션에 적용한 수정 사항을
+          설명하십시오. \n>4.값을 변경한 후 어떤 점을 발견하셨나요?\n</div>\n\n<div style=\"background-color:
+          #a6e3e8; border-radius: 10px; color: #000000; width: 95%; padding: 0.5px
+          20px 1px 20px;\">\n\n<p style=\"line-height: 1.5; margin-left: 10px; margin-right:
+          10px; margin-top: 20px; margin-bottom: 20px; font-size: 18px; \">\n\n###**코딩을
+          더 할 준비가 되셨나요?** code.org의 [익스프레스 코스] (https://studio.code.org/s/express-2022)
+          를 통해 자신의 속도에 맞춰 더 많은 컴퓨터 과학을 \n배워보세요.   \n<br>\n</p></div>\n"
+      csc_mappinglandmarks_markdown_lesson_2:
+        markdown: |+
+          # #Plan 나만의 랜드마크 지도 이제 나만의 랜드마크 지도를 계획할
+          <div>
+          <img style=" float: left; width:20%; padding-top:10px" src="https://images.code.org/08ece3f13c8f0f82343e302fb52dc45c-image-1676499630865.png" />
+
+          <div style="float: left; width: 70%; padding-left:20px">
+          <h4>
+          <strong>차례입니다.</strong>
+          </h4>
+
+          교실, 학교 또는 도시의 지도를 만들 수도 있습니다.주, 지역 또는 국가 랜드마크를 표시할 수도 있습니다.또는 수업에서 공부한 지역을 기반으로 지도를 만들 수도 있습니다.
+
+          지도를 계획할 때는 선택한 랜드마크에 대해 다른 사람들에게 가르치는 데 사용할 배경, 스프라이트, 음성을 생각해 보세요.
+
+          **시작하는 데 도움이 필요하세요?** <a href="https://docs.google.com/document/d/1t_-cd-f6EhhUbblu8nSGRajStY9FVwLnKn1Bj90GL3Q/template/preview" target="_blank">이 리소스를</a> 사용하여 작업을 계획하세요.
+
+
+      csc_mappinglandmarks_markdown_lesson_4:
+        markdown: "# #Share 지역 명소 지도\n\n이제 지도를 코딩했으니 공유할 차례입니다!먼저 프로젝트에 대해 간단히 생각해
+          보세요: \n\n>1.프로젝트에서 가장 좋아하는 부분을 설명해 주세요.\n>2.프로젝트에서 유용한 코드 블록은 무엇이었나요?\n>3.프로젝트를
+          빌드할 때 직면한 버그나 문제를 한 가지 설명해 주세요.\n>4.어떻게 버그를 수정하거나 문제를 극복했나요?\n>5.프로젝트를 개선하기
+          위해 여전히 변경하고 싶은 부분은 무엇입니까?\n\n반 친구들에게 작업을 발표할 때는 코드가 어떻게 작동하는지, 어떤 디자인을 선택했는지,
+          어떤 어려움을 겪었는지 설명해 주세요.\n\n\n\n"
+      csc_starquilts_markdown_lesson_1:
+        markdown: |+
+          # #Plan 나만의 스타 퀼트 이제 스타 퀼트를 계획할
+
+          <div>
+          <img style=" float: left; width:25%; padding-top:10px" src="https://images.code.org/d5e1eedfbe978ba6feebd3f89da0a667-image-1679522801245.png" />
+
+          <div style="float: left; width: 70%; padding-left:20px">
+          <h4>
+          <strong>차례입니다.</strong>
+          </h4>
+
+          >먼저 네 가지 색상을 선택하고 스타 퀼트를 채웁니다.그런 다음 패턴을 사용하여 몇 가지 활동을 더 해보겠습니다.
+
+          **시작할 준비가 되셨나요?** <a href="https://docs.google.com/document/d/1c__530oWLDH-mX0kSxLMStSz-5Lt3cKUm5K3bTV7Uvo/template/preview" target="_blank">이 리소스를</a>사용하세요.
+
+
+          </div>
+
+
+      csc_timecapsule_choice_lesson_3:
+        description: 아래 활동 중에서 선택하여 타임캡슐 시에 코드를 추가하는 방법에 대한 기억을 되살려보세요!여러 옵션을 골라 하나
+          이상 할 수 있어요!
+        display_name: 코딩 기술을 검토하세요!
+      csc_timecapsule_choice_lesson_3_ -l3:
+        description: 아래 활동 중에서 선택하여 타임캡슐 시에 코드를 추가하는 방법에 대한 기억을 되살려보세요!여러 옵션을 골라 하나
+          이상 할 수 있어요!
+        display_name: 코딩 기술을 검토하세요!
+      csc_timecapsule_info_2023:
+        content1: 설명 입력
+        markdown: "# #Time Capsules\n\n<img src=\"https://images.code.org/846b0e2d7a84392a70f432fdce00cd29-image-1676501071993.png\"
+          style= \"float:left; width: 25%; padding-right:30px\"/>\n\n<div style= \"width:
+          70%\"> \n<strong>타임캡슐은 마치 보물상자와 같지만</strong>, 안에 장난감과 사탕을 담는 대신 당시의 삶이 어땠는지
+          알려주는 특별한 물건들이 들어 있습니다.그런 다음 땅속에 묻히거나 도서관의 튼튼한 상자에 넣어 두는 등 안전한 장소에 여러 해 동안
+          보관합니다. \n<br>\n<br>\n<strong>때가 되면 누군가는 상자를 열어 안에 들어 있는 특별한 물건들을 볼</strong>
+          것이고, 그것이 묻혔을 당시의 삶이 어땠는지 모두 알게 될 것입니다. \n<br>\n<br>\n<strong>디지털 타임캡슐 시는
+          이와 비슷하지만 상자 안에 물건을 </strong>담는 대신 컴퓨터나 인터넷에 저장된 사진, 동영상, 메시지를 담고 있습니다.\n</div>\n\n"
+      csc_timecapsule_markdown_lesson_2:
+        markdown: "# #Plan 나만의 타임캡슐\n\n<div>\n<img style=\" float: left; width:25%;
+          padding-top:10px\" src=\"https://images.code.org/08ece3f13c8f0f82343e302fb52dc45c-image-1676499630865.png\"
+          />\n\n<div style=\"float: left; width: 70%; padding-left:20px\">\n<h4>\n<strong>이제
+          나만의 타임캡슐 시를 계획할 차례입니다.</strong>\n</h4>\n\n>포함해야 할 내용은 다음과 같습니다.\n> - 하고
+          싶은 일 \n> - 본인에게 중요한 사항\n> - 커뮤니티에서 현재 일어나고 있는 일 \n> - 최근 세계 이벤트 몇 가지\n\n**시를
+          시작하는 데 도움이 필요하세요?** <a href=\"https://docs.google.com/document/d/1fahr11zX92NW-rLdyZBqrNK2VqgOGtCACkcT87M_luU/template/preview\"
+          target=\"_blank\">이 자료를 사용하세요.</a>\n\n**영감이 필요하세요?** <a href=\"https://docs.google.com/document/d/1-aPA3uJIKJAuQ_2Gtck1Ma79eCFY88ZC8YzegQIckG4/template/preview\"
+          target=\"_blank\">이 리소스를</a>활용하세요.\n\n</div>\n"
+      csc_timecapsule_markdown_lesson_2_poetry:
+        markdown: "# #Plan 나만의 시 이제 나만의 시를 구상할\n\n<div>\n<img style=\" float: left;
+          width:25%; padding-top:10px\" src=\"https://images.code.org/08ece3f13c8f0f82343e302fb52dc45c-image-1676499630865.png\"
+          />\n\n<div style=\"float: left; width: 70%; padding-left:20px\">\n<h4>\n<strong>때입니다.</strong>\n</h4>\n\n>>다음을
+          포함해야 합니다.\n> - 좋아하는 일을 하세요.\n> - 당신에게 중요한 사람이에요.\n> - 좋아하는 것들 몇 가지. \n\n**계획을
+          시작할 준비가 되셨나요?** <a href=\"https://docs.google.com/document/d/1b6w_lOnibUHyDLYCP3rAWED5iElGm6LOQAJwG-hlih0/template/preview\"
+          target=\"_blank\">이 리소스를</a>사용하세요.\n\n**주제를 찾고 계신가요?** <a href=\"https://docs.google.com/document/d/1V-DaWOIUk0xT7NYTzx3AEt4my-jc-Hx4vy21Kl4SPoE/template/preview\"
+          target=\"_blank\">이 리소스를</a>사용하세요.\n\n</div>\n"
+      csc_timecapsule_markdown_lesson_4:
+        markdown: "# #Share 나만의\n<img src=\"https://images.code.org/c480c5c42d9c02e154943f49bbed87ff-image-1675984438344.13.53
+          PM.png\" style= \"width:60%\">\n<div style= \"width: 60%\"> \n\n타임캡슐**타임캡슐
+          시를 코딩했으니 이제 공유할 차례입니다!**\n\n반 친구들의 프로젝트를 보면서 다음 질문을 생각해 보세요. >1.\n\n반 친구들의
+          타임캡슐에서 어떤 이미지와 사운드를 보았나요?\n>2.그들의 이야기는 당신의 이야기와 어떻게 달랐나요?\n>3.그들의 이야기는 당신의
+          이야기와 어떻게 비슷했나요?\n>4.그들의 이미지가 당신을 어떻게 느끼게 했나요?\n</div>\n\n"
       csd-post-survey-2017-q11_2018:
         answers:
         - correct: true
@@ -11280,6 +12174,12 @@ ko-KR:
           # 슈퍼 디지털 시민
 
           ## 사이버 폭력을 목격했을 때 어떻게 하면 외면하지 않고 나서서 행동하는 사람이 될 수 있을까요?
+      csf_be_a_super_digital_citizen2022_2023:
+        content1: 설명 입력
+        markdown: |
+          # 슈퍼 디지털 시민
+
+          ## 사이버 폭력을 목격했을 때 어떻게 하면 외면하지 않고 나서서 행동하는 사람이 될 수 있을까요?
       csf_be_a_super_digital_citizen_2021:
         content1: 설명 입력
         markdown: |
@@ -11292,6 +12192,11 @@ ko-KR:
 
           ## 어떤 정보가 디지털 흔적으로 남아도 되는 정보입니까?
       csf_digital_trails2022:
+        markdown: |
+          # 디지털 트레일 팔로우
+
+          ## 어떤 정보가 디지털 흔적으로 남아도 되는 정보입니까?
+      csf_digital_trails2022_2023:
         markdown: |
           # 디지털 트레일 팔로우
 
@@ -11316,6 +12221,20 @@ ko-KR:
 
           ![](https://images.code.org/bfa69295fbf33c77ecdeb79b5498d8f7-image-1584751340896.png)
       csf_password_power-up2022:
+        content1: 설명 입력
+        markdown: |
+          #  비밀번호 강화
+
+          ## 기억할 비밀번호 팁
+
+          * 기억에 남는 **구절**로 시작합니다.
+          * **부모**만 여러분의 비밀번호를 알아야 합니다.
+          * 비밀번호에 **개인** 신원 정보는 사용하지 마십시오.
+          * 적어도 **여덞**개 문자로 비밀번호를 만듭니다.
+          * 비밀번호에 문자와 숫자, **기호**를 사용하세요.
+
+          ![](https://images.code.org/bfa69295fbf33c77ecdeb79b5498d8f7-image-1584751340896.png)
+      csf_password_power-up2022_2023:
         content1: 설명 입력
         markdown: |
           #  비밀번호 강화
@@ -11369,6 +12288,19 @@ ko-KR:
           * **잠시 멈추고**온라인에 대해 생각합니다.
 
           ![](https://images.code.org/f3e4987a130b27f7b589d7829b753aac-image-1584750971069.png)
+      csf_putting_a_stop_to_online_meanness2022_2023:
+        content1: 설명 입력
+        markdown: |
+          # 비열한 행동 멈춤
+
+          ## 누군가 온라인 상에서 여러분에게 비열하게 굴면 어떻게 해야 할까요?
+
+          * **벗어**납니다.
+          * **믿을 수  있는 성인**에게 말합니다.
+          * **괜찮은**사이트가 먼저입니다.
+          * **잠시 멈추고**온라인에 대해 생각합니다.
+
+          ![](https://images.code.org/f3e4987a130b27f7b589d7829b753aac-image-1584750971069.png)
       csf_putting_a_stop_to_online_meanness_2021:
         content1: 설명 입력
         markdown: |
@@ -11388,6 +12320,11 @@ ko-KR:
 
           ## 온라인에서 안전한 장소를 가는 방법은 무엇일까?
       csf_safety_in_my_online_neighborhood2022:
+        markdown: |-
+          # 나의 온라인 마을
+
+          ## 온라인에서 안전한 장소를 가는 방법은 무엇일까?
+      csf_safety_in_my_online_neighborhood2022_2023:
         markdown: |-
           # 나의 온라인 마을
 
@@ -12908,10 +13845,16 @@ ko-KR:
       express_EOC2022:
         description: 과정 E의 마지막에 도달했습니다! 만들 프로젝트를 선택하세요.
         display_name: 과정말 프로젝트
+      express_EOC2022_2023:
+        description: 과정 E의 마지막에 도달했습니다! 만들 프로젝트를 선택하세요.
+        display_name: 과정말 프로젝트
       express_EOC_2021:
         description: 과정 E의 마지막에 도달했습니다! 만들 프로젝트를 선택하세요.
         display_name: 과정말 프로젝트
       express_EOC_examples2022:
+        description: 최종 프로젝트를 시작하려고 합니다. 시작하기 전에, 잠시 시간을 내어 예시 프로젝트를 살펴보십시오.
+        display_name: 프로젝트 예
+      express_EOC_examples2022_2023:
         description: 최종 프로젝트를 시작하려고 합니다. 시작하기 전에, 잠시 시간을 내어 예시 프로젝트를 살펴보십시오.
         display_name: 프로젝트 예
       express_EOC_examples_2021:
@@ -12947,6 +13890,19 @@ ko-KR:
         questions:
         - text: 아래 코드를 자세히 보세요. 코드가 끝까지 실행되면 (오류를 무시하고) 라우렐은 몇 개의 보물을 얻을 수 있을까요?
       grade2_multi_collector_A_predict12022:
+        answers:
+        - feedback: 틀렸습니다. 라우렐은 보물이 없는 곳에서 보물을 수집하려 하고 그 때문에 오류가 발생합니다.
+          text: 라우렐은 이 코드를 사용하여 4개의 보물을 모을 거예요.
+        - correct: true
+          feedback: 맞습니다!
+          text: 라우렐은 보물이 없는 곳에서 보물을 모으려 하고 그 때문에 오류가 발생합니다.
+        - feedback: 틀렸습니다. 라우렐은 보물이 없는 곳에서 보물을 수집하려 하고 그 때문에 오류가 발생합니다.
+          text: 라우렐은 보물 모두를 모을 것입니다.
+        - feedback: 틀렸습니다. 라우렐은 보물이 없는 곳에서 보물을 수집하려 하고 그 때문에 오류가 발생합니다.
+          text: 라우렐은 이 코드를 사용하여 1개의 보물을 모을 거예요.
+        questions:
+        - text: 이 코드는 주의 깊게 보세요. 프로그램이 "실행"되면 무슨 일이 벌어질거라 생각하세요?
+      grade2_multi_collector_A_predict12022_2023:
         answers:
         - feedback: 틀렸습니다. 라우렐은 보물이 없는 곳에서 보물을 수집하려 하고 그 때문에 오류가 발생합니다.
           text: 라우렐은 이 코드를 사용하여 4개의 보물을 모을 거예요.

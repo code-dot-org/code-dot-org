@@ -2,6 +2,28 @@
 sk:
   data:
     blocks:
+      AmysBlocks_addTarget:
+        options:
+          OPT:
+            '"follows"': nasleduje
+            '"avoids"': vyhne sa
+      AmysBlocks_goldilocks:
+        text: |-
+          ak {CONDITION}{SPRITE}
+          {STATEMENT}
+        options:
+          CONDITION:
+            '"too much"': príliš veľa
+            '"just right"': akurát
+            '"too little"': príliš málo
+      AmysBlocks_goldilocksElse:
+        text: |2-
+           ak príliš veľa {SPRITE}
+          {STATEMENT}inak ak akurát
+          {STATEMENT3}inak ak príliš málo
+          {STATEMENT2}
+      AmysBlocks_makeNumSprites:
+        text: vytvor {NUM} nových {ANIMATION_NAME} postáv {LOCATION}
       AmysBlocks_setPromptWithChoices:
         text: vyzvi užívateľa {QUESTION} pre premennú {VAR} s možnosťami {A}{B}{C}
       AmysBlocks_spriteSayVar:
@@ -16,6 +38,7 @@ sk:
             '1.00': stredný
             '2.00': Veľké
       BadGuys_setSize_dropdown:
+        text: nastav veľkosť {SPRITE} na {SIZE}
         options:
           SIZE:
             '0.50': veľmi malé
@@ -1088,6 +1111,8 @@ sk:
         text: nasledujúce ciele
       gamelab_getAllSprites:
         text: všetky postavy
+      gamelab_getCostume:
+        text: postavy s kostýmom {SPRITE}
       gamelab_getProp:
         text: "{SPRITE} {PROPERTY}"
         options:
@@ -1266,6 +1291,8 @@ sk:
             '"right"': pravý stĺpec
       gamelab_makeNumSprites:
         text: vytvor {NUM} nových {ANIMATION_NAME} postáv
+      gamelab_makeNumSpritesNear:
+        text: vytvor {NUM} nových {ANIMATION_NAME} postáv pri {LOCATION}
       gamelab_makeProjectile:
         text: |-
           vytvoriť projektil
@@ -1277,6 +1304,7 @@ sk:
             '180': vľavo
             '270': hore
       gamelab_makeSpritesWithSize:
+        text: vytvor {NUM} nových {SIZE} {COSTUME} postáv
         options:
           SIZE:
             '30': Malé
@@ -1490,6 +1518,7 @@ sk:
             '"width"': šírka
             '"height"': výška
       gamelab_setSpeed_dropdown:
+        text: nastav rýchlosť {SPRITE} na {SIZE}
         options:
           SIZE:
             '3': pomaly
@@ -1514,7 +1543,17 @@ sk:
       gamelab_spriteSay:
         text: "{SPRITE} povedz {SPEECH}"
       gamelab_spriteSayTime:
-        text: "{SPRITE}hovoriť{TEXT1}{NUM}sekundy"
+        text: "{SPRITE}povedz{TEXT1}{NUM}sekunda/y"
+      gamelab_spriteThink:
+        text: "{SPRITE} pomyslí si {SPEECH}"
+      gamelab_spriteThinkTime:
+        text: "{SPRITE}pomyslí si {TEXT1}počas{NUM}sekúnd"
+      gamelab_spriteThink_fables2:
+        text: "{SPRITE} pomyslí si {THOUGHT}"
+      gamelab_spriteThink_fables3:
+        text: "{SPRITE} pomyslí si {THOUGHT}"
+      gamelab_spriteThink_fables4:
+        text: "{SPRITE} pomyslí si {THOUGHT}"
       gamelab_startAvoiding:
         text: "{SPRITE} začne sa vyhýbať {TARGET}"
       gamelab_startFollowing:
@@ -1618,6 +1657,10 @@ sk:
         text: y súradnica {SPRITE}
       KatiesBlocks_glideTo:
         text: "{SPRITE} kĺzať sa do {LOCATION}"
+      KatiesBlocks_makeNumSpritesNear:
+        text: vytvor {NUM} nových {ANIMATION_NAME} postáv pri {LOCATION}
+      KatiesBlocks_spriteBirdSay:
+        text: "{SPRITE} povie {SPEECH}"
       KatiesBlocks_tumbling:
         text: kotúľanie
       Mikelab_addBehaviorSimple:
@@ -2282,8 +2325,14 @@ sk:
             new Behavior(wobbling, []): kolísanie
             new Behavior(wandering, []): túlať sa
             new Behavior(patrolling, []): hliadkovať
+      adaptations_makeNumSpritesNear:
+        text: vytvor {NUM} nových {ANIMATION_NAME} postáv pri {LOCATION}
+      adaptations_spriteBirdSay:
+        text: "{SPRITE} povie {SPEECH}"
       adaptations_startFollowing:
         text: "{SPRITE} začne nasledovať {TARGET}"
+      adaptations_toggleBehaviorSimple:
+        text: postava {SPRITE} {TOGGLE} {BEHAVIOR}
       binary_drawBin:
         text: kresliť dvojmo {BIN}
       binary_drawBinScreen:
@@ -2426,6 +2475,19 @@ sk:
           DIR:
             right: vpravo ↻
             left: vľavo ↺
+      ecosystems_catchMe:
+        text: chyť {THIS}
+      ecosystems_eat:
+        text: zjedz {THIS}
+      ecosystems_goldilocks:
+        text: |-
+          ak {CONDITION}{SPRITE}
+          {STATEMENT}
+        options:
+          CONDITION:
+            '"too much"': príliš veľa
+            '"just right"': akurát
+            '"too little"': príliš málo
       ecosystems_int10:
         options:
           VALUE:
@@ -2439,6 +2501,23 @@ sk:
             '8': '8'
             '9': '9'
             '10': '10'
+      ecosystems_makeNumSpritesAtLocation:
+        text: vytvor {NUM} nových {ANIMATION_NAME} postáv umiestnených {LOCATION_GENERATOR}
+      ecosystems_makeNumSpritesWithinRange:
+        text: vytvor {NUM} nových {ANIMATION_NAME} postáv umiestnených {RANGE}
+        options:
+          RANGE:
+            "{x1:0, x2:400, y1:200, y2:400}": Hore
+            "{x1:0, x2:400, y1:150, y2:250}": Stred
+            "{x1:0, x2:400, y1:0, y2:200}": Dole
+      ecosystems_randomLocationWithinRange:
+        text: x min{X1}x max{X2}y min{Y1}y max{Y2}
+      ecosystems_randomLocationWithinSelectedRange:
+        text: "{RANGE}"
+        options:
+          RANGE:
+            "{x1:0, x2:400, y1:200, y2:400}": Hore
+            "{x1:0, x2:400, y1:0, y2:200}": Dole
       storylab_printText:
         text: tlačiť {TEXT}
       storylab_setForegroundEffect2:

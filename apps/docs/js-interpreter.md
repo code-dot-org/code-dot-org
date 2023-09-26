@@ -107,7 +107,7 @@ extra work to setup your development environment. Assuming you already have the
 1. Run the rest of the apps tests to make sure nothing else broke:
 
    ```bash
-   ./test-low-memory.sh
+   yarn test
    ```
    
 ### Step 2: Test the upgrade against the official ECMAScript test suite:

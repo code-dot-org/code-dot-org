@@ -188,6 +188,102 @@
         "programming/pre-express/2022": {
           "word": "Бағдарламалау"
         },
+        "code/csc-adaptations/2023": {
+          "word": "Код"
+        },
+        "code/csc-ecosystems/2023": {
+          "word": "Код"
+        },
+        "conditionals/csc-ecosystems/2023": {
+          "word": "Шарттар"
+        },
+        "variable/csc-ecosystems/2023": {
+          "word": "Айнымалы"
+        },
+        "code/csc-mappinglandmarks/2023": {
+          "word": "Код"
+        },
+        "artist/csc-starquilts/2023": {
+          "word": "Кейіпкер"
+        },
+        "code/poetry/2023": {
+          "word": "Код"
+        },
+        "debugging/coursea/2023": {
+          "word": "Бағдарламаны дұрыстау"
+        },
+        "programming/coursea/2023": {
+          "word": "Бағдарламалау"
+        },
+        "debugging/courseb/2023": {
+          "word": "Бағдарламаны дұрыстау"
+        },
+        "programming/courseb/2023": {
+          "word": "Бағдарламалау"
+        },
+        "debugging/coursec/2023": {
+          "word": "Бағдарламаны дұрыстау"
+        },
+        "programming/coursec/2023": {
+          "word": "Бағдарламалау"
+        },
+        "binary/coursec/2023": {
+          "word": "Бинарлы"
+        },
+        "debugging/coursed/2023": {
+          "word": "Бағдарламаны дұрыстау"
+        },
+        "programming/coursed/2023": {
+          "word": "Бағдарламалау"
+        },
+        "conditionals/coursed/2023": {
+          "word": "Шарттар"
+        },
+        "function/coursee/2023": {
+          "word": "Функция"
+        },
+        "conditionals/coursee/2023": {
+          "word": "Шарттар"
+        },
+        "copyright/coursee/2023": {
+          "word": "Авторлық құқық"
+        },
+        "define/coursee/2023": {
+          "word": "Анықта"
+        },
+        "variable/coursef/2023": {
+          "word": "Айнымалы"
+        },
+        "internet/coursef/2023": {
+          "word": "Ғаламтор"
+        },
+        "define/coursef/2023": {
+          "word": "Анықта"
+        },
+        "debugging/express/2023": {
+          "word": "Бағдарламаны дұрыстау"
+        },
+        "programming/express/2023": {
+          "word": "Бағдарламалау"
+        },
+        "conditionals/express/2023": {
+          "word": "Шарттар"
+        },
+        "function/express/2023": {
+          "word": "Функция"
+        },
+        "variable/express/2023": {
+          "word": "Айнымалы"
+        },
+        "define/express/2023": {
+          "word": "Анықта"
+        },
+        "debugging/pre-express/2023": {
+          "word": "Бағдарламаны дұрыстау"
+        },
+        "programming/pre-express/2023": {
+          "word": "Бағдарламалау"
+        },
         "conditionals/aquatic/unversioned": {
           "word": "Шарттар"
         },

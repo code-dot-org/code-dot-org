@@ -115,6 +115,27 @@
 
   in_partnership_with: "In partnership with"
 
+  shop_code_dot_org_heading: "Shop Code.org"
+  shop_code_dot_org_desc: "Support our work and wear the movement with pride. Our hats have been worn by President Obama and celebrities too."
+
+  spread_the_word_heading: "Spread the word"
+  spread_the_word_desc: "Amplify our impact by sharing Code.org with your network. From social media to email updates, discover how you can help us reach more educators, students, and advocates."
+
+  follow_us_heading: "Follow us on social media"
+  follow_us_desc: "Stay up to date with us on social media and share our posts with your network to stay informed and help drive awareness."
+  facebook: "Facebook"
+  twitter: "Twitter"
+  linked_in: "LinkedIn"
+  instagram: "Instagram"
+  tik_tok: "TikTok"
+
+  subscribe_to_emails_heading: "Subscribe to emails"
+  subscribe_to_emails_desc: "Read about what's happening at Code.org and in computer science education through quarterly updates via our mailing list."
+  subscribe_to_emails_intl: "Subscribe to international updates"
+
+  promote_code_dot_org_heading: "Promote Code.org"
+  promote_code_dot_org_desc: "Promote computer science in your area with the help of stats, quotes, and videos."
+
   afe_partnership_logo_alt: "Amazon Future Engineer logo"
   afe_partnership_thanks_desc: "Amazon Future Engineer is a comprehensive childhood-to-career program to inspire, educate, and train low-income and other disadvantaged children and young people to pursue careers in computer science. [Learn about our partnership](%{afe_url})."
 
@@ -130,6 +151,13 @@
   curricula_title_high: "High School Curricula"
   curricula_desc_high: "Browse the compelling courses and activities that invite you and your high school students to dig deeper into computer science."
 
+  for_administrators_heading: "For administrators"
+  for_administrators_desc: "Join the thousands of schools who have already incorporated computer science into their curriculum."
+  for_parents_heading: "For parents"
+  for_parents_desc: "You can help encourage your student's school to offer or expand computer science education."
+  for_educators_heading: "For educators"
+  for_educators_desc: "Start teaching today — no computer science experience necessary — with our professional learning workshops."
+
   students_label: "Students"
   teachers_label: "Teachers"
 
@@ -142,7 +170,6 @@
   required_materials: "Required Materials:"
   optional_materials: "Optional Materials:"
 
-  call_to_action_explore_roles: "Explore open roles"
   call_to_action_learn_more: 'Learn more'
   call_to_action_watch_now: 'Watch now'
   call_to_action_try_activity: 'Try activity'
@@ -215,7 +242,20 @@
   call_to_action_notify_available: "Notify me when available"
   call_to_action_register_early_access: "Register for early access"
   call_to_action_open_positions: "View open positions"
+  call_to_action_explore_roles: "Explore open roles"
   call_to_action_get_guide: "Get the guide"
+  call_to_action_donate_to_cdo: "Donate to Code.org"
+  call_to_action_start_fundraiser: "Start a fundraiser"
+  call_to_action_view_donation_policy: "View donation policy"
+  call_to_action_view_donate_bitpay: "Donate with BitPay"
+  call_to_action_make_a_donation: "Make a donation"
+  call_to_action_other_ways_to_give: "Other ways to give"
+  call_to_action_become_partner_usa: "Become a United States partner"
+  call_to_action_become_partner_intl: "Become an international partner"
+  call_to_action_become_a_volunteer: "Become a volunteer"
+  call_to_action_start_translating: "Start translating"
+  call_to_action_learn_about_advocacy: "Learn about our advocacy"
+  call_to_action_visit_store: "Visit the store"
 
   aria_label_call_to_action_afe: "Learn more about Amazon Future Engineer"
   aria_label_call_to_action_teaching_csf: "Start the Teaching Computer Science Fundamentals professional learning program"
@@ -465,6 +505,7 @@
   heading_these_lessons_will: "These lessons will:"
   heading_explore_curriculum_catalog: "Explore all of our courses in the Curriculum Catalog"
   heading_csa_ai: "Looking for things to do after the AP® exam?"
+  heading_bring_cs_to_students: "Bring computer science to students"
 
   professional_learning_section_desc: "Get the support you need as you prepare to teach. Teachers love it, with over 90% ranking it the best professional development ever!"
   professional_learning_section_desc_short: "Get the support you need as you prepare to teach."
@@ -479,6 +520,14 @@
 
   support_and_questions_section_subhead: "Still have questions? Reach out to us! We are here to help."
   support_and_questions_section_desc: "Our support team is here to answer any questions you may have about starting teaching with Code.org. You can also ask other teachers about their experience on our teacher forums."
+
+  subscribe_form_section_title: "Subscribe for updates"
+  subscribe_form_section_desc_csa: "Sign up to receive monthly emails about Code.org's AP® Computer Science A and get helpful reminders, tips, and updates sent right to your inbox."
+  subscribe_form_section_desc_csc: "Sign up to receive monthly emails about Code.org's Computer Science Connections and get helpful reminders, tips, and updates sent right to your inbox."
+  subscribe_form_section_desc_csd: "Sign up to receive monthly emails about Code.org's Computer Science Discoveries and get helpful reminders, tips, and updates sent right to your inbox."
+  subscribe_form_section_desc_csf: "Sign up to receive monthly emails about Code.org's Computer Science Fundamentals and get helpful reminders, tips, and updates sent right to your inbox."
+  subscribe_form_section_desc_csp: "Sign up to receive monthly emails about Code.org's Computer Science Principles and get helpful reminders, tips, and updates sent right to your inbox."
+  subscribe_form_section_unsubscribe: "You can unsubscribe at any time."
 
   blockchain_hero_heading: 'How Blockchain Works'
   blockchain_hero_desc: 'Dive into the world of blockchain with "How Blockchain Works," our new video series and accompanying lessons!'
@@ -614,12 +663,16 @@
   ai_pl_101_video_title_3: "Transforming Learning with AI"
   ai_pl_101_video_desc_3: "Explore the intersection of AI and education. This session explores how AI can be combined with pedagogy to enhance student learning. It is a must-attend for educators seeking to leverage AI to transform their teaching practices to enrich their students’ learning experiences."
   ai_pl_101_video_title_4: "Ensuring a Responsible Approach to AI"
-  ai_pl_101_video_desc_4: "Explore the ethical considerations and best practices for incorporating artificial intelligence in educational environments. This session will provide concrete strategies, resources, and real-world examples, all aimed at understanding the potential biases of AI, and the ethical considerations that come with it."
+  ai_pl_101_video_desc_4: "Explore the ethical considerations and best practices for incorporating artificial intelligence in educational environments. This session provides concrete strategies, resources, and real-world examples, all aimed at understanding the potential biases of AI, and the ethical considerations that come with it."
   ai_pl_101_video_title_5: "Bringing AI to the Classroom"
   ai_pl_101_video_desc_5: "This session focuses on teaching about AI, evaluating and utilizing AI educational tools, and leveraging AI for student assessment. With a rich blend of theory, practical examples, and resources, it aims to empower educators to navigate the AI landscape and enhance student learning experiences."
+  ai_pl_101_resources_5: "Guide to Ensuring a Responsible Approach to AI"
   ai_pl_101_video_desc_6: "Learn more about the new technology driving the large changes in AI, featuring two new videos on Large Language Models (like ChatGPT) and Generative AI. Hear how these new technologies work directly from the experts: Mira Murati, CTO of OpenAI, and Cristóbal Valenzuela, CEO of RunwayML."
   ai_pl_101_llm_slides_title: "Large Language Model Prompts for Educators"
   ai_pl_101_llm_slides_desc: "Tools for getting the best possible output from LLMs like ChatGPT, from beginner to advanced. Includes starter prompts for those just dipping their toes in, as well as advanced tools for those looking to maximize their potential."
+  ai_pl_101_resources_3: "AI Prompts for Transforming Student Learning"
+  ai_pl_101_resources_section_title: "More ways to learn about AI"
+  ai_pl_101_resources_guide: "Companion guide:"
 
   how_ai_works_hero_heading: "How AI Works"
   how_ai_works_hero_desc: "Dive into the world of AI with \"How AI Works,\" our video series and accompanying lessons!"
@@ -1016,6 +1069,39 @@
   csa_page_faq_answer_08_list_03: "Goal 3: Design Relevant, Engaging Activities"
   csa_page_faq_answer_08_list_04: "Goal 4: Incorporate Best Practices from the Field"
   csa_page_faq_answer_08_02: "For more information about the values that guided our work, please see our [curriculum values](%{curriculum_values_url}) and our [professional learning values](%{pl_values_url})."
+
+  donate_page_top_heading: "Help fund our mission"
+  donate_page_top_desc: "Every donation fuels Code.org's mission to expand access to computer science education. We offer several ways for you to donate and make a difference."
+  donate_page_fundraise_title: "Fundraise for Code.org"
+  donate_page_fundraise_desc: "Help raise money for Code.org! Every student in every school should have the opportunity to learn computer science."
+  donate_page_other_ways_title: "Other ways to give"
+  donate_page_other_ways_desc: "Explore diverse methods to contribute, and find the option that suits you best. Every gesture, big or small, propels our mission forward."
+  donate_page_501c3: "Code.org is registered as a public 501(c)(3) nonprofit organization. Contributions to Code.org are tax-deductible to the extent permitted by law. Code.org's tax identification number is 46-0858543."
+  donate_page_donation_policy_title: "Understanding our Donation Policy"
+  donate_page_donation_policy_desc: "Learn about how we handle and allocate your contributions."
+  donate_tabs_tab_label_daf_direct: "DAF Direct"
+  donate_tabs_tab_label_amazon: "Amazon"
+  donate_tabs_tab_label_bitpay: "BitPay"
+  donate_tabs_tab_label_employee_match: "Employee Match"
+  donate_tabs_daf_direct_title: "Donate via DAF Direct"
+  donate_tabs_daf_direct_desc: "Donate through your donor-advised fund with Fidelity Charitable, Schwab Charitable, or BNY Mellon and make your grant recommendation to Code.org through the DAF Direct online form."
+  donate_tabs_amazon_title: "Donate via Amazon"
+  donate_tabs_amazon_desc: "Donate directly using your Amazon account. With just a few clicks, seamlessly contribute to Code.org's mission and empower the future of computer science education."
+  donate_tabs_bitpay_title: "Donate with Crypto via BitPay"
+  donate_tabs_bitpay_desc: "Embrace the future of giving with cryptocurrency. Through BitPay, your digital currency can directly support Code.org's endeavors in expanding computer science education."
+
+  help_page_top_heading: "How you can help"
+  help_page_top_desc: "Support our mission to make computer science accessible for every child, everywhere. Your efforts help us inspire future innovators and bridge the tech education gap."
+  help_page_top_subhead: "Make a donation to Code.org"
+  help_page_top_desc_02: "We're working to give every student the opportunity to learn computer science — both online AND in schools, where we establish permanent courses and train teachers. For every dollar you donate, one child is introduced to computer science."
+  help_page_partners_heading: "Become a partner"
+  help_page_partners_desc: "Code.org works with other nonprofit organizations as partners to help spread computer science in a local, sustainable fashion. Learn more about our program."
+  help_page_volunteer_heading: "Volunteer in a classroom"
+  help_page_volunteer_desc: "Volunteer to teach the Hour of Code or be a guest speaker in a local classroom. Sign up to hear about opportunities near you."
+  help_page_translate_heading: "Help us translate"
+  help_page_translate_desc: "Volunteers have translated our tutorials in over 45 languages. Help us continue to expand our tutorials for students around the world!"
+  help_page_speak_for_cs_heading: "Speak up for computer science education"
+  help_page_speak_for_cs_desc: "Learn more about Code.org's advocacy work across the U.S. and the ten policies we recommend states adopt to make computer science foundational for all students. Plus, find out how you can drive change in your state."
 
   hoc_live: 'Hour of Code Live'
   hoc_live_sign_up_title: 'Sign up for Hour of Code Live'
