@@ -111,19 +111,20 @@ kk:
     рөлін түсінуге көмектесетін ресурстар.
   oceans_landing_videos: AI және машиналық оқыту туралы бейнелер
   oceans_behind_the_scenes: 'Мұхиттарға арналған AI: сахна артында'
-  oceans_behind_the_scenes_1: Levels 2-4 use a pretrained model provided by the <a
-    href="https://www.tensorflow.org/" >TensorFlow</a> <a href="https://github.com/tensorflow/models/blob/master/research/slim/nets/mobilenet_v1.md">
-    MobileNet </a> project. A MobileNet model is a <a href="https://developers.google.com/machine-learning/practica/image-classification/convolutional-neural-networks">convolutional
-    neural network</a> that has been trained on <a href="http://www.image-net.org/">ImageNet</a>,
-    a dataset of over 14 million images hand-annotated with words such as "balloon"
-    or "strawberry". In order to customize this model with the labeled training data
-    the student generates in this activity, we use a technique called <a href="https://en.wikipedia.org/wiki/Transfer_learning">Transfer
-    Learning</a>. Each image in the training dataset is fed to MobileNet, as pixels,
-    to obtain a list of annotations that are most likely to apply to it. Then, for
-    a new image, we feed it to MobileNet and compare its resulting list of annotations
-    to those from the training dataset. We classify the new image with the same label
-    (such as "fish" or "not fish") as the images from the training set with the most
-    similar results.
+  oceans_behind_the_scenes_1: 2-4 деңгейлерде <a href="https://www.tensorflow.org/"
+    >TensorFlow</a> <a href="https://github.com/tensorflow/models/blob/master/research/slim/nets/mobilenet_v1.md">
+    MobileNet жобасы ұсынған алдын ала дайындалған модель қолданылады. </a> MobileNet
+    моделі - бұл “шар” немесе “құлпынай” сияқты сөздермен қолмен <a href="http://www.image-net.org/">аннотацияланған
+    14 миллионнан астам суреттерден тұратын</a>ImageNet-те дайындалған <a href="https://developers.google.com/machine-learning/practica/image-classification/convolutional-neural-networks">конвульциялық
+    нейрондық желі</a> . Бұл модельді студент осы әрекетте жасайтын таңбаланған оқу
+    деректерімен теңшеу үшін біз <a href="https://en.wikipedia.org/wiki/Transfer_learning">Transfer
+    Learning деп аталатын әдісті қолданамыз.</a>Оқу деректер жиынтығындағы әрбір сурет
+    MobileNet-ге пиксель ретінде беріледі, оған қолданылатын аннотациялар тізімін
+    алу үшін беріледі. Содан кейін, жаңа кескін үшін біз оны MobileNet-ге береміз
+    және оның нәтижесінде алынған аннотациялар тізімін оқу деректер жиынтығындағылармен
+    салыстырамыз. Біз жаңа суретті бірдей жапсырмамен (мысалы, “балық” немесе “балық
+    емес”) ең ұқсас нәтижелері бар жаттығулар жиынтығынан алынған суреттер ретінде
+    жіктейміз.
   oceans_behind_the_scenes_1_markdown: 2-4 деңгейлерде [TensorFlow](https://www.tensorflow.org/)
     [MobileNet](https://github.com/tensorflow/models/blob/master/research/slim/nets/mobilenet_v1.md)
     жобасы ұсынған алдын ала дайындалған модель қолданылады. MobileNet моделі - бұл
@@ -189,6 +190,15 @@ kk:
   grade_level_label_elementary: Бастауыш мектеп
   grade_level_label_middle: Орта мектеп
   grade_level_label_high: Орта мектеп
+  curricula_title_elementary: Бастауыш мектептің оқу бағдарламалары
+  curricula_desc_elementary: Сізді бастауыш сынып оқушыларымен информатиканы зерттеуге
+    шақыратын көңілді, тегін курстар мен әрекеттерді шолыңыз.
+  curricula_title_middle: Орта мектептің оқу бағдарламалары
+  curricula_desc_middle: Сізге және сіздің орта мектеп оқушыларына информатиканы бірге
+    зерттеуге мүмкіндік беретін қызықты ұсыныстарды шолыңыз.
+  curricula_title_high: Орта мектептің оқу бағдарламалары
+  curricula_desc_high: Сізді және сіздің жоғары сынып оқушыларыңызды информатиканы
+    тереңірек зерттеуге шақыратын тартымды курстар мен әрекеттерді шолыңыз.
   students_label: Оқушылар
   teachers_label: Мұғалімдер
   teacher_label_csf: CS негіздері мұғалімі
@@ -198,6 +208,7 @@ kk:
   teacher_label_csa: AP® Computer Science A Teacher
   required_materials: 'Қажетті материалдар:'
   optional_materials: 'Қосымша материалдар:'
+  call_to_action_explore_roles: Ашық рөлдерді зерттеңіз
   call_to_action_learn_more: Көбірек біліңіз
   call_to_action_watch_now: Қазір қараңыз
   call_to_action_try_activity: Әрекетті байқап көріңіз
@@ -215,6 +226,15 @@ kk:
   call_to_action_explore_choice_level: Мысалды таңдау деңгейін зерттеңіз
   call_to_action_explore_collection: Коллекцияны зерттеңіз
   call_to_action_explore_unplugged_lesson: Ажыратылған сабақтарды зерттеңіз
+  call_to_action_explore_csf: CS негіздерін зерттеңіз
+  call_to_action_explore_csd: CS ашылуларын зерттеңіз
+  call_to_action_explore_csp: CS принциптерін зерттеңіз
+  call_to_action_explore_csc: CS қосылымдарын зерттеңіз
+  call_to_action_explore_csa: AP® компьютерлік ғылымды зерттеңіз A
+  call_to_action_explore_csa_short: AP® CSA зерттеңіз
+  call_to_action_explore_maker: Maker оқу бағдарламаларын зерттеңіз
+  call_to_action_explore_hoc: Кодтың сағаттық оқулықтарын зерттеңіз
+  call_to_action_explore_hoc_short: Кодтың сағатын зерттеңіз
   call_to_action_try_app_lab: Қолданба зертханасын қолданып көріңіз
   call_to_action_view_lesson_plan: Сабақ жоспарын қарау
   call_to_action_self_paced_pl: Өздігінен кәсіби оқытуды бастаңыз
@@ -238,6 +258,7 @@ kk:
   call_to_action_resources_tools: Бағдарламалау құралдарын қолданып көріңіз
   call_to_action_sign_up_free: Тегін тіркеліңіз
   call_to_action_explore_ai_resources: AI ресурстарын зерттеңіз
+  call_to_action_explore_ai_curricula: AI оқу бағдарламаларын зерттеңіз
   call_to_action_explore_curriculum_catalog: Оқу жоспарының каталогын зерттеңіз
   call_to_action_see_full_curriculum_catalog: Толық оқу жоспарының каталогын қараңыз
   call_to_action_find_self_paced_modules: Өздігінен жүретін модульдерді табыңыз
@@ -259,6 +280,7 @@ kk:
   call_to_action_notify_available: Қол жетімді болған кезде маған хабарлаңыз
   call_to_action_register_early_access: Ерте қол жеткізу үшін тіркеліңіз
   call_to_action_open_positions: Ашық позицияларды қарау
+  call_to_action_get_guide: Нұсқаулықты алыңыз
   aria_label_call_to_action_afe: Amazon болашақ инженері туралы көбірек біліңіз
   aria_label_call_to_action_teaching_csf: Информатика негіздерін оқытудың кәсіби бағдарламасын
     бастаңыз
@@ -364,6 +386,8 @@ kk:
   curriculum_name_csa: AP® Информатика A
   curriculum_name_csc_02: Кез келген CS қосылымдар модулі
   curriculum_name_ai: AI және машиналық оқыту
+  curriculum_name_artificial_intelligence: Жасанды интеллект (AI)
+  curriculum_name_maker: Жаратушы
   curriculum_name_maker_cp: Құрылғылармен бағдарламаларды құру (Circuit Playground)
   curriculum_name_maker_microbit: Құрылғылармен қолданбалар құру (micro:bit)
   curriculum_name_creating_apps_with_devices: Құрылғылармен қолданбалар жасау
@@ -374,6 +398,8 @@ kk:
   curriculum_name_interactive_animations_games: Интерактивті анимациялар мен ойындар
   curriculum_name_design_process: Дизайн процесі
   curriculum_name_data_society: Деректер және қоғам
+  curriculum_desc_csf: Оқушыларды информатиканың негізгі ұғымдарымен таныстыратын
+    бастауыш оқу бағдарламаларының тегін жиынтығы.
   curriculum_desc_csf_express: Компьютерлік бағдарламаларды құруды, проблемаларды
     шешу дағдыларын дамытуды және қызықты қиындықтарды жеңуді үйреніңіз! Достарыңызбен,
     отбасыңызбен және мұғалімдермен бөлісу үшін ойындар мен шығармашылық жобалар жасаңыз.
@@ -421,6 +447,19 @@ kk:
   curriculum_desc_creating_apps_with_devices: Есептеудегі физикалық құрылғылардың
     рөлін зерттеңіз. Аппараттық кірістер мен шығыстарды пайдаланатын бағдарламаларды
     әзірлеу. Бұл құрылғының микро:bit және Circuit Playground үшін де нұсқасы бар.
+  curriculum_desc_csa: AP® Computer Science A (AP® CSA) үшін осы тегін оқу бағдарламасында
+    Java бағдарламалау тілін үйрену кезінде студенттерді бағдарламалық жасақтама инженериясы
+    мен объектіге бағытталған дизайнмен таныстырыңыз.
+  curriculum_desc_maker: Maker education STEM (Ғылым, Технология, Инженерия, Математика)
+    проблемаларды шешуге және сыни ойлауды үйретуге көмектесу үшін сыныпқа практикалық
+    тәжірибе мен ынтымақтастықты шақыру арқылы бір қадам алға жылжытады.
+  curriculum_desc_maker_short: Maker education проблемаларды шешуге және сыни ойлауды
+    үйретуге көмектесу үшін сыныпқа практикалық тәжірибе мен ынтымақтастықты шақырады.
+  curriculum_desc_csd: Икемді курс, әр бөлімді жалғыз немесе біріктіруге мүмкіндік
+    береді. Студенттерді веб-сайттарды, қолданбаларды, анимацияларды, ойындарды және
+    физикалық есептеу жүйелерін құрумен таныстырады.
+  curriculum_desc_csp: Тегін, AP® CSP студенттерді информатиканың негізгі ұғымдарымен
+    таныстыратын орта мектептің кіріспе курсын мақұлдады.
   collection_hardware: Аппараттық құралдарға назар аударыңыз
   collection_hardware_desc: Оқушыларға есептерді шешу үшін деректер мен физикалық
     құрылғыларды пайдалануға мүмкіндік береді.
@@ -456,6 +495,7 @@ kk:
   module_label_professional_learning: 'Кәсіби оқыту:'
   module_label_languages: 'Қолдау көрсетілетін тілдер:'
   module_label_accessibility_features: 'Қол жетімділік:'
+  module_label_accessibility_features_full: 'Қол жетімділік ерекшеліктері:'
   module_label_educator_tool: Тәрбиеші құралы
   module_label_educator_course: Оқытушы курсы
   module_label_student_tool: Студенттік құрал
@@ -463,6 +503,7 @@ kk:
   module_label_student_content_resources: Мазмұн және ресурстар
   module_label_new: Жаңа
   module_label_coming_soon: Жақында келеді
+  module_label_available_now: Қазір қол жетімді
   module_label_video_series: Видео сериясы
   module_label_self_paced: Өздігінен жүретін модуль
   module_ages_5_10: 5-10
@@ -473,6 +514,8 @@ kk:
   module_grade_2_5: 2-5
   module_grade_3_5: 3-5
   module_grade_3_8: 3-8
+  module_grade_k_12: К-12
+  module_grade_3_12: 3-12
   module_grade_6_12: 6-12
   module_grade_6_10: 6-10
   module_grade_9_12: 9-12
@@ -487,7 +530,9 @@ kk:
   module_grade_9_12_teachers: 9-12 Мұғалімдер
   module_level_beginner: Жаңадан бастаушы
   module_level_intermediate: Аралық
+  module_level_advanced: Жетілдірілген
   module_duration_45_mins: 45 минут
+  module_duration_2_weeks: 2 апта
   module_duration_1_hr: 1 сағат
   module_duration_2_hrs: 2 сағат
   module_duration_3_hrs: 3 сағат
@@ -503,6 +548,7 @@ kk:
   module_duration_school_year: Оқу жылы
   module_duration_month_quarter: Ай немесе тоқсан
   module_duration_month_semester_year: Ай, семестр немесе жыл
+  module_duration_varies: Әр түрлі
   module_prerequisites_none: Ешқайсысы
   module_prerequisites_maker_cp: Схемалық ойын алаңына кіру
   module_prerequisites_maker_microbit: 'Микробқа қол жетімділік: бит'
@@ -570,6 +616,8 @@ kk:
   heading_java_lab: Ява зертханасы
   heading_objects_first: Алдымен нысандар
   heading_these_lessons_will: 'Бұл сабақтар:'
+  heading_explore_curriculum_catalog: Оқу жоспарлары каталогындағы барлық курстарымызды
+    зерттеңіз
   professional_learning_section_desc: Оқуға дайындалу кезінде сізге қажет қолдауды
     алыңыз. Мұғалімдер оны жақсы көреді, 90% -дан астамы оны ең жақсы кәсіби даму
     деп бағалайды!
@@ -828,6 +876,11 @@ kk:
     жаңа технология туралы көбірек біліңіз. Бұл жаңа технологиялардың тікелей сарапшылардан
     қалай жұмыс істейтінін тыңдаңыз: Мира Мурати, OpenAI компаниясының CTO және RunwayML
     бас директоры Кристобал Валенсуэла.'
+  ai_pl_101_llm_slides_title: Тәрбиешілерге арналған үлкен тілдік модель
+  ai_pl_101_llm_slides_desc: ChatGPT сияқты LLM-лерден бастаушыдан бастап жетілдірілгендерге
+    дейін ең жақсы өнімді алуға арналған құралдар. Саусақтарын жай ғана батырып жатқандарға
+    арналған стартер нұсқауларын, сондай-ақ әлеуетін барынша арттырғысы келетіндерге
+    арналған жетілдірілген құралдарды қамтиды.
   how_ai_works_hero_heading: AI қалай жұмыс істейді
   how_ai_works_hero_desc: "“AI қалай жұмыс істейді”, біздің бейне сериямыз және ілеспе
     сабақтармен AI әлеміне еніңіз!"
@@ -1166,20 +1219,18 @@ kk:
   teach_page_free_curriculum_desc: Біз сіздің мектебіңізге информатика пәнін шығындарға
     алаңдамай әкелгеніңізді қалаймыз. Сондықтан біз оқу жоспарларымызды мәңгілікке
     ақысыз етуге міндеттедік!
-  teach_page_free_curriculum_list_heading_01: Әр сынып деңгейіне арналған қызықты
-    оқу бағдарламасы
   teach_page_free_curriculum_list_desc_01: 67 -ден астам тілде ұсыныстары бар ақысыз,
     икемді және көңілді оқу бағдарламасы.
-  teach_page_free_curriculum_list_heading_02: Бейімделетін, инновациялық оқу бағдарламасы
   teach_page_free_curriculum_list_desc_02: Code.org толық жылдық оқу жоспарларынан
     бастап бір бөлімге дейін барлығын ұсынады. Сонымен қатар, біз озық тәжірибелер
     мен назар аударатын салаларды қолдау үшін жыл сайын оқу бағдарламаларымызды жаңартып
     отырамыз және қазіргі сұранысқа ие тақырыптарды үйрететін жаңа ұсыныстар жасаймыз.
-  teach_page_free_curriculum_list_heading_03: Ұлттық стандарттарға сәйкес құрылымдалған
-    оқу жоспары
   teach_page_free_curriculum_list_desc_03: Әрбір оқу жоспары CSTA, Next Generation
     Science Standards және Common Core қоса алғанда, кем дегенде бір ұлттық стандарттар
     жиынтығымен салыстырылады.
+  teach_page_free_curriculum_list_desc_04: 67-ден астам тілдегі ұсыныстар
+  teach_page_free_curriculum_list_desc_05: Кем дегенде бір ұлттық стандарттар жиынтығымен
+    салыстырылған (CSTA, NGSS және Common Core қоса алғанда)
   teach_page_free_curriculum_heading_02: 'Әр түрлі сынып деңгейлеріне арналған оқу
     жоспарларымызды зерттеңіз:'
   teach_page_resources_heading: Сізге әр қадамда қолдау көрсететін ресурстар
@@ -1439,10 +1490,10 @@ kk:
     бірдей мөлшердегі басқа салмақпен ауыстыруға болатындығын ескеріңіз). Егер сізде
     бұл жабдықтарға қол жетімділік болмаса, балама әрекеттер қол жетімді.
   csd_page_faq_answer_04_06: Құрылғылармен қолданбалар жасау (А нұсқасы және В нұсқасы)
-  csd_page_faq_answer_04_07: 'Option A: Classroom set of Circuit Playgrounds. Check
-    out [code.org/maker/circuitplayground](%{url}) for more details.'
-  csd_page_faq_answer_04_08: 'Option B: Classroom set of micro:bit devices. Check
-    out [code.org/maker/microbit](%{url}) for more details.'
+  csd_page_faq_answer_04_07: 'А нұсқасы: Сынып бөлмесінің ойын алаңдарының жиынтығы.
+    Қосымша мәліметтер алу үшін [code.org/maker/circuitplayground] () бөлімін қараңыз.%{url}'
+  csd_page_faq_answer_04_08: 'В нұсқасы: Микрофон: биттік құрылғылардың сынып жиынтығы.
+    Қосымша мәліметтер алу үшін [code.org/maker/microbit] () бөлімін қараңыз.%{url}'
   csd_page_faq_answer_04_09: Бос мата қораптары немесе картон орамдары немесе сызаттар
     қағазы сияқты Maker Жабдықтар
   csd_page_faq_answer_04_10: "*Ескерту: Құрылғылармен қолданбаларды жасау блогында
@@ -1569,19 +1620,20 @@ kk:
     мұғалімдерге қосылыңыз. Біздің аймақтық серіктестер жеке мұғалімдерге немесе мектептегі
     ПД үшін жоғары сапалы, бір күндік Code.org семинарларын ұсынады. [Сізге жақын
     жерде біліктілікті арттыру семинарына жазылыңыз] (%{sign_up_url})!
-  csf_page_faq_answer_04_02: Join over 100,000 teachers who have participated in our
-    workshops. The majority of our workshop attendees say, 'It's the best professional
-    development I've ever attended.' In fact, [90% of attendees would recommend our
-    program to other teachers](%{rec_url})!
+  csf_page_faq_answer_04_02: 'Біздің семинарларға қатысқан 100 000-нан астам мұғалімдерге
+    қосылыңыз. Біздің семинарға қатысушылардың көпшілігі: “Бұл мен қатысқан ең жақсы
+    кәсіби даму” дейді. Шын мәнінде, [қатысушылардың 90% -ы біздің бағдарламамызды
+    басқа мұғалімдерге ұсынар еді] ()!%{rec_url}'
   csf_page_faq_question_05: CS негіздерін оқытудың ұсынылатын уақыты қандай?
   csf_page_faq_answer_05: Әрбір CSF курсы 13-17 минуттық кезеңге арналған 45 сабақты
     қамтиды. Біз барлық студенттерге сабақтан сабаққа мұғалім белгілеген қарқынмен
     көшуді ұсынамыз. Мұғалімдер басқаратын көптеген жоба деңгейлері бар, ал дағдыларды
     қалыптастыру сабақтарын студенттер өз қарқынымен аяқтай алады.
   csf_page_faq_question_06: CS негіздері үшін маған қандай материалдар қажет?
-  csf_page_faq_answer_06: Many lessons have handouts that guide students through activities.
-    These resources can be printed or assigned digitally. Some lessons call for typical
-    classroom supplies and manipulatives. [Visit the CSF Syllabus to learn more](%{syllabus_url}).
+  csf_page_faq_answer_06: Көптеген сабақтарда оқушыларды іс -әрекеттер арқылы бағыттайтын
+    үлестірмелі материалдар бар. Бұл ресурстарды басып шығаруға немесе сандық түрде
+    тағайындауға болады. Кейбір сабақтар әдеттегі сыныптағы керек-жарақтар мен манипуляцияларды
+    талап етеді. [Қосымша ақпарат алу үшін CSF Syllabus сайтына кіріңіз] ().%{syllabus_url}
   csa_page_top_desc: Introduce students to software engineering and object-oriented
     design while they learn the Java programming language in this free curriculum
     for [AP® Computer Science A (AP® CSA)](%{csa_url}).
@@ -1731,8 +1783,8 @@ kk:
   ai_activity_zooniverse: Зоониверс - Зебра тауының суреті
   ai_activity_zooniverse_desc: Суреттердегі әртүрлі жануарларды анықтау арқылы жойылып
     кету қаупі төнген Кейп тауы Зебраны қорғауға көмектесіңіз.
-  codeorg_homepage_hoc2018_curriculum: Go further with <a href="%{studio_url}/courses"
-    class="hoc2018-curriculum-link">Code.org courses</a>
+  codeorg_homepage_hoc2018_curriculum: <a href="%{studio_url}/courses" class="hoc2018-curriculum-link">Code.org
+    курстарымен әрі қарай жүріңіз</a>
   codeorg_homepage_hoc2018_dance_heading: Өзіңізді жасаңыз <span class="highlight-word">Би&nbsp;Тарап</span>
   codeorg_homepage_hoc2018_header_line1: Код сағаты келе жатыр...
   codeorg_homepage_hoc2018_header_line2_desktop: Сіз <span class="hoc2018-highlight-word">не
@@ -2030,10 +2082,10 @@ kk:
   hoc_homepage_organized_by: Код сағаты [Code.org](%{codeorg_url}) арқылы ұйымдастырылады.
   signup_closed: Код сағатына тіркелу енді жабық. Келесі код сағатына жазылу үшін
     қазан айында қайта тексеріңіз.
-  signup_registration_not_required: You don't need to register to participate! The
-    Hour of Code activities are available year-round. <a href='%{hoc_activities_url}'>Try
-    an activity</a> or read our <a href='%{howto_guide_url}'>How-to guide</a> to plan
-    an event for your class.
+  signup_registration_not_required: Қатысу үшін тіркелудің қажеті жоқ! “Кодекс сағаты”
+    іс-шаралары жыл бойы қол жетімді. <a href='%{hoc_activities_url}'>Әрекетті қолданып
+    көріңіз</a> немесе сыныбыңызға арналған <a href='%{howto_guide_url}'>іс-шараны
+    жоспарлау үшін “Қалай істеу</a> керек” нұсқаулығын оқыңыз.
   signup_registration_not_required_markdown: Қатысу үшін тіркелудің қажеті жоқ! “Кодекс
     сағаты” іс-шаралары жыл бойы қол жетімді. [Әрекетті қолданып көріңіз] (%{hoc_activities_url})
     немесе біздің оқыңыз [Қалай істеу керек нұсқаулық] (%{howto_guide_url}) сыныбыңызға
@@ -2074,6 +2126,13 @@ kk:
     жібере аламыз ба?
   signup_email_preference_privacy: "(Құпиялылық саясатымызды қараңыз)"
   signup_email_preference_yes: Иә
+  signup_email_preference_yes_elementary: Иә - Маған бастауыш мектеп ресурстары туралы
+    жаңартуларды жіберіңіз
+  signup_email_preference_yes_middle: Ия - Орта мектеп ресурстары туралы жаңартуларды
+    жіберіңіз
+  signup_email_preference_yes_high: Иә - Маған орта мектеп ресурстары туралы жаңартуларды
+    жіберіңіз
+  signup_email_preference_yes_general: Ия - маған жалпы жаңартуларды жіберіңіз
   signup_email_preference_no: Жоқ
   signup_email_preference_error: Электрондық поштаны таңдау қажет
   signup_multiple_event_warning: Бірнеше іс-шара ұйымдастырып жатсаңыз, әрқайсысының
@@ -2250,13 +2309,13 @@ kk:
     Жұпта жұмыс істеңіз. </b> Көптеген зерттеулер оқушылардың бір компьютерді бөліп, <a href='http://www.ncwit.org/resources/pair-programming-box-power-collaborative-learning'> бірге жұмыс жасағанда </a> нəтіжелері жақсы болатындығын дəлелдеуде. Бірге жұмыс істегенді мадақтаңыз. <li><b>
     Проектірді қолданыңыз.</b>Проектор мен экран болса, интернет жүйесіне жақсы қосылатын болса, бүкіл сынып кодтаумен айналыса алады. Бейне-роликті бірге көріп, тапсырмаларды кезек-кезек орындаңыз. <li><b>Жүйеге қосылмай жұмыс істеңіз. </b> Сабақты өткізу нұсқауларында тіпті компьютерсіз жүргізілетін сабақ бар. </ul>
   hoc_faq_need_computers_a_markdown: |-
-    No. We have Hour of Code tutorials that work on PCs, smartphones, tablets, and some that require no computer at all! You can join wherever you are, with whatever you have.
+    Жоқ. Бізде компьютерлерде, смартфондарда, планшеттерде жұмыс істейтін және кейбіреулерінде компьютерді қажет етпейтін сағаттық код оқулықтары бар! Сіз қай жерде болсаңыз да, сізде бар нәрсемен қосыла аласыз.
 
-    _Here are a few options:_
+    _Міне, бірнеше опциялар:_
 
-    - **Work in pairs.** [Research shows](%{pair_programming_research}) students learn best with [pair programming](%{pair_programming_video}), sharing a computer and working together. Encourage your students to double up.
-    - **Use a projected screen.** If you have a projector and screen for a Web-connected computer, your entire group can do an Hour of Code together. Watch video portions together and take turns solving puzzles or answering questions.
-    - **Go unplugged.** We offer [tutorials that require no computer](%{unplugged_url}) at all.
+    - **Жұппен жұмыс.** [Зерттеулер көрсеткендей] (%{pair_programming_research}) оқушылар [жұптық бағдарламалау] (%{pair_programming_video}) көмегімен жақсы үйренеді, компьютермен бөліседі және бірге жұмыс істейді. Студенттеріңізді екі есе көбейтуге шақырыңыз.
+    - **Жобаланған экранды қолданыңыз.** Егер сізде Web-қосылған компьютерге арналған проектор мен экран болса, сіздің бүкіл тобыңыз бір сағаттық кодты бірге жасай алады. Бейне бөліктерін бірге көріңіз және кезек-кезек жұмбақтарды шешіңіз немесе сұрақтарға жауап беріңіз.
+    - **Электр желіден ажыратылған.** Біз [компьютерді қажет етпейтін оқулықтарды] () мүлдем ұсынамыз.%{unplugged_url}
   hoc_faq_international_q: Мен <country>-дамын. Басқа мемлекеттен қалай қатысуға болады?
   hoc_faq_international_a: Кодтау сағатын әркім ұйымдастыра алады. Өткен жылы оқушылар
     Кодтау сағатына қатысу үшін әлемдік деңгейде жиналды. <a href='/promote'>Мына
@@ -2561,8 +2620,8 @@ kk:
   learn_banner_teachers: 'Мұғалімдер: <a id=''teacher_banner_host''>Кодтау сағатын
     жүргізіңіз</a> немесе <a id=''teacher_banner_howto''>қалай өткізу нұсқаулығын
     оқыңыз</a>'
-  learn_banner_teachers_markdown: 'Teachers: [Host an hour](%{host_url}) or [read
-    the How-To Guide](%{howto_url})'
+  learn_banner_teachers_markdown: 'Мұғалімдер: [Сағатты өткізіңіз] (%{host_url}) немесе
+    [Қалай істеу керек нұсқаулықты оқыңыз] ()%{howto_url}'
   tutorial_dance2019_name: Би кеші
   tutorial_danceparty_name: Би кеші
   tutorial_chibitronics_name: 'Чибитроника: жарықтандырылған оқиға'
@@ -5481,11 +5540,11 @@ kk:
     көмектесу үшін код блоктарын қолданыңыз.
   tutorial_minecraft-2016_longdescription: Minecraft ойыны жаса! Тауық, қой, Криперс,
     зомбилер және одан да көп өз нұсқаларды құрастыр.
-  tutorial_thinkersmith-es_longdescription: Mediante el uso de un "Vocabulario Robot"
-    predefinido, los estudiantes descubrir&aacute;n como guiarse de modo tal de llevar
-    a cabo tareas espec&iacute;ficas sin ser estas discutidas previamente. Este segmento
-    ense&ntilde;a a los estudiantes la conexi&oacute;n entre s&iacute;mbolos y acciones
-    as&iacute; como la valiosa habilidad de depuraci&oacute;n.
+  tutorial_thinkersmith-es_longdescription: Алдын ала анықталған “Сөздік робот” медиантурасын
+    қолдануда, оның ішінде эстудианттар, сонымен қатар, бұрын осы уақытқа дейін дискутидтерге
+    арналған espec Cabo Tareas&aacute;Cabo Trae Ficas-ты қалай қолдануға болады.&iacute;Бұл
+    сегмент&ntilde;- бұл көптеген адамдар мен аппетиттер сияқты көптеген адамдар мен&oacute;&iacute;аппаттардың
+    пайда болуы.&iacute;&oacute;
   tutorial_pixie_longdescription: Пиксимен бірге Кодтау Сағаты сабағы
   tutorial_play_longdescription: Ертегі жаса немесе ойын лабораториясымен ойын құрастыр!
     Жануарларды, қарақшыларды, зомбилерді, ниндзяларды, және басқа да көптеген қозғалатын
@@ -12571,12 +12630,12 @@ kk:
   tutorial_googlename _longdescription: Атын таңдап, код арқылы сөздің әріптерін өмірге
     келтіріңіз. Лақап атын, үй жануарларының атын, жануарды, спортты, орынды немесе
     хоббиді таңдаңыз.
-  tutorial_carnegiezillah_longdescription: Zillah City is thriving, and music is in
-    the air. Rumor has it, the famed Gargantua bot is online and sending the last
-    Toxibots to trash the city block by block…. Grab your cobot hoverboard and get
-    ready to groove, move, and finish off what you started! Players program their
-    cobot hoverbots to change lanes, avoid obstacles, and take out many Toxibots in
-    this rhythm-styled game.
+  tutorial_carnegiezillah_longdescription: Зилла қаласы өркендеп келеді, музыка ауада.
+    Сыбыс бар, әйгілі Gargantua боты желіде және соңғы Toxibots қалалық блокты блокпен
+    қоқысқа тастау үшін жібереді.…Кобот hoverboard алыңыз және ойыққа, жылжытуға және
+    бастаған ісіңізді аяқтауға дайын болыңыз! Ойыншылар өздерінің кобот ховерботтарын
+    жолдарды өзгертуге, кедергілерден аулақ болуға және осы ырғақты ойында көптеген
+    Toxibots шығаруға бағдарламалайды.
   tutorial_nasachspacejam_longdescription: Шынымен жартасатын күн жүйесін жасаңыз!
     Бұл өзін-өзі басқаратын әрекетте музыка, астрономия және кодтау туралы біліңіз
     (кодтау тәжірибесі қажет емес). Ғарыштық әуендермен толықтырылған өзіңіздің музыкалық
@@ -13406,6 +13465,338 @@ kk:
     кеңсенің жабылуын қамтитын қысқы демалыс), жазғы жұмадағы жарты жұмыс күнін, яғни
     жазғы жұманы және басқа да жомарт артықшылықтарды қабылдай отырып, сәрсенбіде
     жоқ кездесулерді ұнатамыз.
+  careers_hero_title: Мансап
+  careers_hero_description: Code.org - бұл мектептердегі информатикаға қол жетімділікті
+    кеңейтуге арналған коммерциялық емес ұйым. Біз әсіресе жас әйелдер мен аз қамтылған
+    студенттер арасында қатысуды арттыруға баса назар аударамыз.
+  careers_hero_description_under: Әлемді өзгертуге көмектесіңіз, бір уақытта бір студент!
+  careers_vision_title: Біздің көзқарасымыз
+  careers_vision_decsription: Біздің көзқарасымыз бойынша, әр мектептегі әрбір оқушының
+    K-12 білімінің бір бөлігі ретінде информатиканы үйренуге мүмкіндігі болуы керек.
+  careers_vision_description_under: Бұл көзқарасты шындыққа айналдыруға көмектесу
+    үшін біздің командаға қосылыңыз!
+  careers_values_title: Біздің негізгі құндылықтарымыз
+  careers_values_first_column_text_1: Біз информатика барлық студенттер үшін негіз
+    болып табылады деп санаймыз
+  careers_values_first_column_text_2: Біз меншікті капиталға, қол жетімділікке және
+    мүмкіндікке ұмтыламыз
+  careers_values_first_column_text_3: Біз бірлескен білім беру қоғамдастығының күшіне
+    сенеміз
+  careers_values_second_column_text_1: Біз кері байланысқа епті және жауап береміз
+  careers_values_second_column_text_2: Біз адалдық пен ашықтықпен әрекет етеміз
+  careers_values_second_column_text_3: Біздің ойымызша, кең әсер үлкен ойлауды және
+    біртұтас әрекет етуді қажет етеді
+  careers_approach_section_title: Біздің біріктіруші тәсіліміз
+  careers_approach_section_description: Code.org сайтының K-12 информатика қозғалысындағы
+    жаһандық рөлі біз әр түрлі және жиі бөлінетін мүдделі тараптарда біріктіруші тәсілді
+    қолданғандықтан ғана мүмкін болады. Поляризация күшейген кезде студенттерге мүмкіндіктерді
+    арттыру идеясы саяси спектрдің түкпір-түкпіріндегі адамдарды біріктіреді. Code.org
+    командасының мүшелері, студенттері, мұғалімдері мен жақтастары әр түрлі және әр
+    түрлі көзқарастарға ие және олардың барлығы біздің миссиямызға қош келдіңіздер.
+  careers_aproach_section_description_link: Code.org бірлікке деген көзқарасы туралы
+    толығырақ оқыңыз.
+  careers_approach_section_button: Ашық рөлдерді зерттеңіз
+  careers_principle_section_title: Біздің мәдени принциптеріміз
+  careers_principle_title_1: Біздің студенттер мен оқытушылар - біздің Солтүстік жұлдызымыз
+  careers_principle_description_1: Біз сыйлықтарымызды, уақытымыз бен энергиямызды
+    информатиканы ең мұқтаж адамдарға жеткізу үшін пайдаланамыз. Бұл бізді біріктіреді.
+    Бұл біздің ең маңызды қағидатымыз.
+  careers_principle_title_2: Біз проблемалар мен бір-бірімізге мейірімдіміз
+  careers_principle_description_2: Біз информатиканы бүкіл әлем бойынша студенттер
+    мен мұғалімдерге жеткізу міндетіне назар аударамыз. Біз әрқайсымыз өз миссиямызды
+    қолдауға және қателіктер жіберген кезде рақым беруге ниетіміздің ең жақсысын әкелетінімізді
+    мойындаймыз.
+  careers_principle_title_3: Консенсус емес, шешімдерді іздеңіз
+  careers_principle_description_3: Біз іздейтін нәтижелерге кішігірім қадамдар жасау
+    немесе үлкен секіру болсын, шешімдеріміз бар. Иелері сұрайды және тыңдайды, бірақ
+    кері байланыс арқылы параличке ұшырамайды. Біз келіспесек те, иелердің шешімдерін
+    қабылдаймыз және қолдаймыз.
+  careers_principle_title_4: Құрылтайшының менталитетін қабылдаңыз
+  careers_principle_description_4: Біз нәтижелерге назар аударамыз және өз әрекеттерімізді
+    оларды басқаруға бағыттаймыз. Біз егжей-тегжейлерге сүңгіп, көп жұмыс жасаймыз.
+    Біз адалмыз, ептілікке сүйенеміз және жолда екенімізді үнемі бағалаймыз; біз бұрылудан
+    қорықпаймыз. Әлемді өзгерту оны талап етеді.
+  careers_principle_title_5: Чемпион инновациясы
+  careers_principle_description_5: Біз үлкен деп ойлаймыз, тәуекелге барамыз және
+    сәтсіздікке ұшыраудан қорықпаймыз. Егер біз өз мақсаттарымызға жетудің жақсы әдісін
+    көретін болсақ, біз мұны жасаймыз және басқаларды да солай етуге шақырамыз. Қосымша
+    шешімдер әлемді өзгертуге көмектеспейді.
+  careers_principle_title_6: Фактілердегі анкерлік шешімдер
+  careers_principle_description_6: Біз деректерді өз бизнесімізді түсіну, қажетті
+    нәтижелерді анықтау және шешім қабылдауға бағыттау үшін пайдаланамыз. Біз мұны
+    әрекет ету үшін әрқашан қажет деректер бола бермейтінін мойындау арқылы теңестіреміз.
+  careers_principle_title_7: Өсу ойы бізді күшейтеді
+  careers_principle_description_7: Біз әр қиындыққа қызығушылықпен қараймыз. Біз кері
+    байланысты мейірімділікпен және ашық түрде береміз, кері байланысты ашық түрде
+    аламыз. Біз қателіктерімізден сабақ аламыз және жұмысымыздың қолжетімділігі мен
+    әсерін арттыру жолдарын іздейміз.
+  careers_balance_section_title: Біздің жұмысымыз бен өміріміздің тепе-теңдігі
+  careers_balance_section_description: Біз өз қызметкерлерімізге қамқорлық жасаймыз
+    және жұмыста да, жұмыстан тыс уақытта да барлығына қолдау көрсетуге тырысамыз.
+    Біз әркімнің әр түрлі қажеттіліктері бар екенін білеміз, сондықтан біз сізге (және
+    сіздің отбасыңызға) қамқорлық жасауды қамтамасыз ететін тұтас жеңілдіктер пакетін
+    ұсынамыз.
+  careers_balance_first_column_text_1: Сізге және сіздің отбасыңызға денсаулыққа пайдасы
+  careers_balance_first_column_text_2: Жомарт ақылы демалыс және демалыс жоспарлары
+  careers_balance_second_column_text_1: Икемді, қолдау көрсететін жұмыс ортасы
+  careers_balance_second_column_text_2: Өсу және кәсіби оқыту мүмкіндіктері
+  careers_openroles_section_title: Рөлдерді ашу
+  careers_openroles_section_description: Code.org Сиэтлде орналасқан, бірақ біздің
+    команданың көптеген мүшелері қашықта орналасқан. Қашықтағы үміткерлер қабылданады
+    және өтініш беруге шақырылады.
+  careers_more_info_text: Code.org туралы қосымша ақпарат алу үшін біздің [Жиі қойылатын
+    сұрақтар] (%{support_url}) қараңыз немесе [біздің миссиямызға қатысудың басқа
+    жолдары] (%{help_url}) туралы біліңіз.
+  careers_approach_section_title2: Біздің әртүрлілікке деген көзқарасымыз
+  careers_approach_section_description_1: Біз Code.org сайтында әр түрлі көзқарастарды,
+    идеяларды және фонды қабылдаймыз. Біз барлық қызметкерлер мен өтініш берушілерге
+    тең мүмкіндік беруге міндеттіміз. Біз нәсіліне, дініне, түсіне, ұлттық шығу тегіне,
+    жынысына, жыныстық бағдарына, жасына, отбасылық жағдайына, ардагер мәртебесіне
+    немесе мүгедектік (психикалық және физикалық) жағдайына байланысты кемсітпейміз.
+  careers_approach_section_description_2: Біз мүгедектігі бар адамдарға жұмысқа орналасу
+    немесе әңгімелесу процесіне қатысу, маңызды жұмыс функцияларын орындау және жұмысқа
+    орналасудың басқа да артықшылықтары мен артықшылықтарын алу үшін ақылға қонымды
+    тұрғын үй берілуін қамтамасыз етеміз. Егер сізде мүгедектікке байланысты жеке
+    қажеттіліктер болса, accommodations@code.org мекен-жайына хабарласыңыз.
+  csa_ai_page_hero_title: Бағдарламалық жасақтама және компьютерлік көру
+  csa_ai_page_hero_description: 'Бұл екі тараудан кейінгі APP CSA модулі жоғары сынып
+    оқушыларына GitHub және GitHub Copilot қоса алғанда, бағдарламалық жасақтаманы
+    әзірлеудің кәсіби құралдарымен практикалық тәжірибе ұсынады және оларға компьютерлік
+    көру бағдарламасын әзірлеу үшін нақты әлемдік дағдыларды береді. '
+  csa_ai_page_video_section_title: Code.org бағдарламалау орталары әлемінен тыс қадам
+  csa_ai_page_video_section_li_1: AI және оның қосымшалары туралы біліңіз
+  csa_ai_page_video_section_li_2: Бағдарламалық жасақтаманы әзірлеудің кәсіби құралдарымен
+    практикалық тәжірибе
+  csa_ai_page_video_section_li_3: Салалық стандартты тәжірибелерді үйреніңіз
+  csa_ai_page_video_section_li_4: Сыни тұрғыдан ойлауды дамыту
+  csa_ai_page_programming_tools: 'Бағдарламалау құралдары: Github, Github Copilot,
+    VSCode, TensorFlow '
+  csa_ai_page_professional_learning: Ешқайсысы
+  csa_ai_page_curriculum_topics: 'Тақырыптар: Бағдарламалау, Деректер, Өнер және дизайн,
+    Ойындар және анимация'
+  csa_ai_page_curriculum_accessibility_features: Толық ақпарат алу үшін Жиі қойылатын
+    сұрақтар бөлімін қараңыз
+  csa_ai_page_curriculum_languages_support: Ағылшын тілі
+  csa_ai_page_article_title_1: Copilot көмегімен құрастырыңыз
+  csa_ai_page_article_description_1: Студенттер бар кодты түсіндіру, қателерді табу
+    және түзету және жаңа мәселелердің шешімдерін жасау үшін GitHub Copilot жұптық
+    бағдарламашы ретінде пайдалануды үйренеді.
+  csa_ai_page_article_link_1: Copilot туралы көбірек біліңіз
+  csa_ai_page_article_title_2: Өзіңіздің AI моделіңізді жасаңыз
+  csa_ai_page_article_description_2: Студенттер веб-камераны құрайтын кескіндер мен
+    қимылдарды тану және компьютерлік көру пайдаланушылардың қолданбалармен өзара
+    әрекеттесуіне қалай әсер ететінін қарастыру үшін Teachable Machine көмегімен өздерінің
+    AI модельдерін үйретеді.
+  csa_ai_page_article_link_2: Сабақ жоспарын зерттеңіз
+  csa_ai_page_article_title_3: Компьютердің көру қабілетін зерттеңіз
+  csa_ai_page_article_description_3: Студенттер Teachable Machine көмегімен жасаған
+    AI модельдерін Java қосымшасына енгізеді, GitHub Copilot көмегімен бар нұсқаларын
+    өзгертуге көмектеседі apps әр түрлі кірістермен жұмыс істеу үшін.
+  csa_ai_page_article_link_3: Мысалды қараңыз
+  csa_ai_page_learn_more_section_title: Жасанды интеллект туралы көбірек біліңіз
+  csa_ai_page_learn_more_title: Мұғалімдерге арналған AI 101 зерттеңіз
+  csa_ai_page_learn_more_description: Жасанды интеллект (AI) жаңашыл әлемін және оның
+    білім берудегі трансформациялық әлеуетін мұғалімдерге арналған жан-жақты онлайн
+    оқыту сериясымен ашыңыз.
+  csa_ai_page_learn_more_link: Мұғалімдерге арналған AI 101 сериясын қараңыз
+  csa_ai_page_faq_question_01: Бұл модульдің алғышарттары қандай?
+  csa_ai_page_faq_answer_01_01: 'Бұл модульге кіріспес бұрын студенттер Java туралы
+    бастапқы деңгейдегі білімге ие болуы керек. Атап айтқанда, олар мыналарды түсінуі
+    керек:'
+  csa_ai_page_faq_answer_01_list_01: "**Сыныптар мен объектілер: ** Оқушылар сабақтарды
+    анықтау мен қолданумен, сондай -ақ объектілерді құру мен басқарумен таныс болуы
+    керек."
+  csa_ai_page_faq_answer_01_list_02: "**Жазу және қоңырау шалу әдістері: ** Оқушылар
+    сыныптағы әдістерді анықтай білуі керек, әдіс параметрлері мен қайтару түрлерін
+    түсінуі және объектілерден немесе басқа әдістерден әдістерді шақыруы керек."
+  csa_ai_page_faq_answer_01_list_03: "**1D массивтері мен ArrayLists: ** Олар бір
+    өлшемді массивтер мен ArrayLists-ті декларациялауда, инициализациялауда және манипуляциялауда,
+    соның ішінде олар арқылы қайталауда шебер болуы керек."
+  csa_ai_page_faq_answer_01_list_04: "**Таңдау және итерация: ** Шартты мәлімдемелер
+    мен ілмектердегі берік негіз өте маңызды."
+  csa_ai_page_faq_question_01_02: Ең дұрысы, AP Computer Science A немесе ұқсас тереңдік
+    пен қатаңдық курсын аяқтаған студенттер бұл модульге жақсы дайындалған болар еді.
+  csa_ai_page_faq_question_02: Осы модульге қажетті бағдарламалық жасақтаманы қалай
+    орнатуға болады?
+  csa_ai_page_faq_answer_02_01: Бұл модуль бірегей, себебі ол Code.org зертханалары
+    мен құралдарынан гөрі үшінші тарап бағдарламалық жасақтамасын пайдалануды қамтиды.
+    [Бағдарламалық жасақтаманы орнату туралы толығырақ мына жерден оқыңыз] (%{accessibility_url}).
+  csa_ai_page_faq_question_03: Осы модульді оқыту кезінде қол жетімділік қажеттіліктерін
+    қалай қолдауға болады?
+  csa_ai_page_faq_answer_03_01: Қол жетімділік қажеттіліктерін қанағаттандыру инклюзивті
+    оқыту ортасы үшін өте маңызды. [Осы модульде қолданылатын бағдарламалық жасақтамадағы
+    қол жетімділік мүмкіндіктері туралы толығырақ мына жерден оқыңыз] (%{install_url}).
+  csa_ai_page_faq_question_04: Chromebook құрылғыларда VS кодын қалай қолдануға болады?
+  csa_ai_page_faq_answer_04: Chromebook құрылғысында VS кодын пайдалану оңайырақ болды,
+    әсіресе Linux бағдарламасын іске қосу мүмкіндігімен apps жаңа Chromebook үлгілерінде.
+    [Chromebook құрылғыларда VS кодын орнату туралы толығырақ мына жерден оқыңыз]
+    ()%{chromebook_url}.
+  csa_ai_page_faq_question_05: Осы модуль үшін кәсіби дамуды қалай алуға болады?
+  csa_ai_page_faq_answer_05: Қазіргі уақытта бұл курс үшін арнайы кәсіби даму жоқ.
+    Егер сіз сыныпта жасанды интеллектке қалай жақындау керектігін түсінгіңіз келсе,
+    сіз [мұғалімдерге арналған AI 101 зерттей аласыз] (%{ai_101_url}).
+  csa_ai_page_faq_question_06: Бұл модульді оқытудың ұсынылатын уақыты қандай?
+  csa_ai_page_faq_answer_06_01: Бағдарламалық жасақтама инженериясы және компьютерлік
+    көру модулі қысқа мерзімде жан-жақты оқытуды қамтамасыз ету үшін ойластырылған
+    құрылымдалған. Бүкіл модуль **2 апталық нұсқаулыққа арналған**. Сабақтардың көпшілігі**45
+    минутқа** бейімделген, ал студенттер Java жобаларын практикалық әзірлеуді үйренетін
+    сабақтар**90 минут** арналған. Бұл ұзақ уақыт студенттерге жұмыс кезінде ақаулықтарды
+    түсінуге, жүзеге асыруға және жоюға кең мүмкіндік береді.
+  csa_ai_page_faq_answer_06_02: Модульдің құрылымына әдейі икемділік енгізілген. Сыныптың
+    динамикасына, оқушылардың қатысуына және әр тақырыпты зерттегіңіз келетін тереңдікке
+    байланысты ұзақтығын реттеуге болады. Мысалы, 45 минуттық сабақ ретінде жасалған
+    Intro to Copilot сабағы, егер сіз GitHub Copilot және ChatGPT сияқты үлкен тілдік
+    модельдер мен құралдардың қаншалықты жұмыс істейтініне тереңірек үңілгіңіз келсе,
+    90 минутқа дейін кеңейтілуі мүмкін.
+  csa_ai_page_faq_question_07: How can I access answer keys?
+  csa_ai_page_faq_answer_07: Бекітілген мұғалім тіркелгісімен сіз жауап кілттерін
+    көк түсте таба аласыз “Мұғалім” Интернеттегі сабақтар мен іс-шараларда көрсетілген
+    тек панель. Егер сізге бекітілген мұғалім тіркелгісі қажет болса, [осы пішін]
+    () арқылы қорғалған мұғалімдерге арналған материалдарға (жауап кілттері және т.б.)
+    қол жеткізуге өтініш бере аласыз.%{form_url}Есептік жазбаңызды тексеру үшін 3-5
+    жұмыс күні қажет болуы мүмкін екенін есте сақтаңыз.
+  csa_ai_page_faq_question_08: Бұл модуль стандарттарға сәйкес келе ме?
+  csa_ai_page_faq_answer_08: Иә, Бағдарламалық жасақтама инженериясы және компьютерлік
+    көру оқу бағдарламасы [CSTA K-12 стандарттары] (%{csta_k12_url}) және AI [K-12
+    нұсқаулары] () үшін салыстырылады.%{k12_url}
+  csa_ai_page_faq_question_09: Бұл модульді оқыту қанша тұрады?
+  csa_ai_page_faq_answer_09_01: Біздің оқу жоспарымыз бен платформамыз кез келген
+    адамға, кез келген жерде, үйрету үшін [ақысыз] (%{no_cost_url}) қол жетімді!
+  csa_ai_page_faq_answer_09_02: Сонымен қатар, осы модульде қолданылатын бағдарламалық
+    жасақтама мен құралдар ақысыз. GitHub Copilot тексерілген [teachers](%{teachers_url})
+    және () үшін тегін. [students]%{students_url}
+  csa_ai_page_faq_question_10: Бағдарламалық жасақтаманы орнату жұмыс істемесе не
+    істеймін?
+  csa_ai_page_faq_answer_10: Бағдарламалық жасақтаманы орнату кезінде мәселелерге
+    тап болу жиі кездеседі, бірақ ақаулықтарды жою және шешу үшін жүйелі қадамдарды
+    орындауға болады. [Ақаулықтарды жою бойынша кейбір кеңестерді мына жерден қараңыз]
+    ().%{troubleshooting_url}
+  csa_ai_page_faq_question_11: How was the curriculum developed?
+  csa_ai_page_faq_answer_11_01: 'Біздің бағдарламалық жасақтама инженериясы және компьютерлік
+    көру оқу бағдарламасы біздің оқу жоспарымыздың құндылықтарын ескере отырып жасалған.
+    Осы оқу бағдарламасын құруда келесі мақсаттар басшылыққа алынды:'
+  csa_ai_page_faq_answer_11_list_01: "**1-мақсат: ** Кодты жасау, күйін келтіру және
+    өңдеу үшін AI құралдарын пайдаланыңыз."
+  csa_ai_page_faq_answer_11_list_02: "**2-мақсат: ** Java зертханасынан нақты әлемдік
+    құралдарға көшу."
+  csa_ai_page_faq_answer_11_list_03: "**3-мақсат: ** AI модельдерінің бағдарламаларға
+    қалай оқытылатыны және біріктірілетіні туралы түсінікті тереңдету."
+  csa_ai_page_faq_answer_11_02: Біздің жұмысымызды басшылыққа алған құндылықтар туралы
+    қосымша ақпарат алу үшін [оқу бағдарламасының құндылықтары] (%{curriculum_values_url})
+    бөлімін қараңыз.
+  video_library_page_main_title: Оқу қысқа бейнелер
+  video_library_page_hero_description: Code.org өсіп келе жатқан білім беру бейнелерінің
+    кітапханасын бүкіл әлем бойынша, онлайн режимінде немесе сыныптарда тәрбиешілер
+    қайта пайдалануға болады. Біздің мақсатымыз - күш -жігерімізді өз оқу бағдарламамызға
+    жетпейтін күшейту.
+  video_library_page_title_ai_works: AI қалай жұмыс істейді
+  video_library_page_description_ai_works: Бұл қысқа бейнелер сериясы сізді жасанды
+    интеллект қалай жұмыс істейтіні және оның неліктен маңызды екендігі туралы таныстырады.
+    Нейрондық желілер туралы немесе AI қалай үйренетіні туралы біліңіз және алгоритмдік
+    қиғаштық пен AI шешім қабылдау этикасы сияқты мәселелерді біліңіз.
+  video_library_page_title_computers_work: Компьютерлер қалай жұмыс істейді
+  video_library_page_description_computers_work: Компьютерді компьютерге айналдыратын
+    нәрсені, цифрлық ақпараттың 1 және 0-де қалай ұсынылатынын, компьютерлік схемалар
+    цифрлық ақпаратты басқару үшін қалай жұмыс істейтінін және орталық өңдеу блогы
+    (CPU) мен операциялық жүйенің кірістерді, шығыстарды, жадты және аппараттық құралдарды
+    қалай басқаратынын түсіндіреді. компьютер.
+  video_library_page_title_internet_works: Интернет қалай жұмыс істейді
+  video_library_page_description_internet_works: Vint Cerf, TCP/IP өнертапқышы, HTTP
+    және HTML-ді түсіндіру үшін Tumblr негізін қалаушы Дэвид Карп, SSL және киберқауіпсіздікті
+    түсіндіру үшін Google-дің қауіпсіздік ханшайымы және Microsoft, Spotify және Symantec
+    инженерлері. Интернеттің қалай жұмыс істейтінін түсіндіретін қысқа бейнелер сериясы.
+  video_library_page_title_not_hacked: Қалай бұзбауға болады
+  video_library_page_description_not_hacked: Интернет ашық, сондықтан онда болып жатқанның
+    бәрі қорғалмаса, оны көруге болады. Қазіргі елдерде адамдар кез-келген басқа қылмысқа
+    қарағанда бұзылу туралы көбірек алаңдайды. Неге? Себебі Интернеттегі әрбір компьютер
+    немесе телефон қылмыскерлердің, террористердің немесе тіпті мемлекеттік актерлердің
+    осалдықтары үшін үнемі тексеріліп отырады. Егер абай болмасаңыз, біреу сіздің
+    құрылғыңызды немесе есептік жазбаңызды бұзып, тіпті сіздің жеке басыңызды немесе
+    ақшаңызды ұрлауы мүмкін.
+  video_library_page_title_blockchain: Блокчейн қалай жұмыс істейді
+  video_library_page_description_blockchain: Coinbase-пен серіктестікте жасалған бұл
+    серияда сала сарапшылары бар және блокчейннің не екенін, оның қалай жұмыс істейтінін
+    және оның ықтимал әлеуметтік салдарын - жақсы да, жаманды да зерттеу арқылы осы
+    технологияны демистификациялауға бағытталған.
+  video_library_page_title_careers: CS-дегі мансап
+  video_library_page_description_careers: Информатика мен технологиядағы мансап көңілді
+    және пайдалы болуы мүмкін. Бірақ осы салаларда жұмыс істейтін адам шынымен не
+    істейді? Жұмыс орындары мен компаниялардың алуан түрлілігімен бұл сұраққа бір
+    ғана жауап жоқ. Үлкен мәселелерді шығармашылық жолмен шешетін кейбір адамдармен
+    кездесу үшін төмендегі бейнелерді қараңыз.
+  video_library_page_title_inspirational: Шабыттандыратын
+  video_library_page_description_inspirational: Біздің әлемде информатика не өзгереді?
+    Бәрі? Бұл кім үшін? Барлығы! Сізді шабыттандыру және ынталандыру үшін осы бейнелерді
+    қараңыз.
+  video_library_page_footer_description: Басқа нәрсе іздеп жүрсіз бе? Біздің Youtube
+    каналымызда көптеген керемет бейнелер бар.
+  video_library_page_footer_cta: YouTube сайтындағы барлық Code.org бейнелерін зерттеңіз
+  video_library_page_computer_work_video_title_1: Компьютерлердің қалай жұмыс жасайтынын
+    таныстыру
+  video_library_page_computer_work_video_title_2: Екілік және деректер
+  video_library_page_computer_work_video_title_3: Процессор, жад, кіріс және шығыс
+  video_library_page_computer_work_video_title_4: Компьютерді, компьютерді не жасайды?
+  video_library_page_computer_work_video_title_5: Логикалық тізбектер
+  video_library_page_computer_work_video_title_6: Аппараттық және бағдарламалық қамтамасыз
+    ету
+  video_library_page_internet_work_video_title_1: Интернет дегеніміз не?
+  video_library_page_internet_work_video_title_2: 'Интернет: IP мекенжайлары және
+    DNS'
+  video_library_page_internet_work_video_title_3: 'Интернет: HTTP және HTML'
+  video_library_page_internet_work_video_title_4: 'ИНТЕРНЕТ: Киберқауіпсіздік және
+    қылмыс'
+  video_library_page_internet_work_video_title_5: 'Интернет: сымдар, кабельдер және
+    Wifi'
+  video_library_page_internet_work_video_title_6: 'ИНТЕРНЕТ: пакеттер, маршруттау
+    және сенімділік'
+  video_library_page_internet_work_video_title_7: 'ИНТЕРНЕТ: Шифрлау және ашық кілттер'
+  video_library_page_internet_work_video_title_8: 'ИНТЕРНЕТ: Іздеу қалай жұмыс істейді'
+  video_library_page_cs_video_title_1: Менің атым Джером, мен Meow Wolf дизайнерлік
+    технологымын
+  video_library_page_cs_video_title_2: Менің атым Никеша, мен NASA-да аэроғарыш инженерімін
+  video_library_page_cs_video_title_3: Менің атым Брина, мен Инстаграмдағы бағдарламалық
+    жасақтама инженерімін
+  video_library_page_cs_video_title_4: Менің атым Кинсли, мен Facebook-те бағдарламалық
+    жасақтама инженерімін
+  video_library_page_cs_video_title_5: Менің атым Полина, мен Electronic Arts деректер
+    ғалымымын
+  video_library_page_cs_video_title_6: Менің атым Данель, мен MBARI-де бағдарламалық
+    жасақтама инженерімін
+  video_library_page_cs_video_title_7: Менің атым Кристофер, мен Tanium компаниясының
+    қауіпсіздік талдаушымын
+  video_library_page_cs_video_title_8: Менің атым Федерико және мен Microsoft корпорациясының
+    техникалық бағдарлама менеджерімін
+  video_library_page_cs_video_title_9: Менің атым Тесс және мен Google-де бағдарламалық
+    жасақтама инженерімін
+  video_library_page_inspirational_video_title_1: Информатиканың бетін өзгерту (3
+    мин)
+  video_library_page_inspirational_video_title_2: Өзіңізді итеріңіз. Кез келген адам
+    үйрене алады. (1 мин)
+  video_library_page_inspirational_video_title_3: Қызды шабыттандырыңыз (2 мин)
+  video_library_page_inspirational_video_title_4: Мектептің көбісі үйретпейтіні (5
+    мин)
+  video_library_page_inspirational_video_title_5: Код сағаты осында - кез келген адам
+    біле алады (2 мин)
+  video_library_page_inspirational_video_title_6: Менің атым Аракели (3 мин)
+  video_library_page_inspirational_video_title_7: Стеф Карримен код сағаты (2 мин)
+  video_library_page_inspirational_video_title_8: Информатика бәрін өзгертеді (5 мин)
+  video_library_page_inspirational_video_title_9: Информатикаға кіріспе (1 мин)
+  video_library_page_inspirational_video_title_10: Президент Обама информатика бойынша
+    (1 мин)
+  video_library_page_inspirational_video_title_11: Әркім үйрене алады(1 мин)
+  video_library_page_inspirational_video_title_12: Lo Que Falta және Nuestras Escuelas
+    (2 мин)
+  video_library_page_not_hacked_video_title_1: 'Қалай бұзылмауға болады: кіріспе'
+  video_library_page_not_hacked_video_title_2: 'Қалай бұзбауға болады: парольдер'
+  video_library_page_not_hacked_video_title_3: 'Қалай бұзылмауға болады: аутентификация
+    және құрылғы құлыптары'
+  video_library_page_not_hacked_video_title_4: 'Қалай бұзбауға болады: фишинг'
+  video_library_page_not_hacked_video_title_5: 'Қалай бұзылмауға болады: веб-сайттар
+    мен Wifi'
+  video_library_page_not_hacked_video_title_6: 'Қалай бұзбауға болады: хабар алмасу
+    және жүктеу'
+  video_library_page_not_hacked_video_title_7: 'Қалай бұзбауға болады: Жаңартуларды
+    орнатыңыз'
   language_code:
     ar: Арабша
     az: Әзірбайжандық

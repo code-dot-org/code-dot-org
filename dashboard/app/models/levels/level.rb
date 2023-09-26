@@ -791,6 +791,7 @@ class Level < ApplicationRecord
     properties_camelized[:levelData] = video if video
     properties_camelized[:type] = type
     properties_camelized[:appName] = game&.app
+    properties_camelized[:useRestrictedSongs] = game.use_restricted_songs?
     properties_camelized
   end
 

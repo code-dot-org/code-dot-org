@@ -87,10 +87,16 @@ bg:
           version_title: "'22 - '23"
         self-paced-pl-physical-computing-2023:
           version_title: "'23 - '24"
+        vpl-csa-2023:
+          version_title: '2023'
+        vpl-csd-2023:
+          version_title: '2023'
         vpl-csd-summer-ci-2023:
           version_title: "'23-'24"
         vpl-csd-summer-pilot-ci-2022:
           version_title: "'21-'22"
+        vpl-csp-2023:
+          version_title: '2023'
     resources:
       all_code_2/csd/2023:
         url: "/courses/csd-2023/code"

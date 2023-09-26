@@ -141,3 +141,17 @@
 #clearboth + .desktop-feature {
   display: none;
 }
+
+.additional-resources {
+
+  & > .content-wrapper:last-child {
+    h3 {
+      margin-top: -2rem;
+
+      @media screen and (max-width: $width-md) {
+        margin-top: 0;
+      }
+    }
+  }
+
+}
