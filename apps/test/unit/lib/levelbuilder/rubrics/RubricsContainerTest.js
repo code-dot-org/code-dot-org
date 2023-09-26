@@ -11,13 +11,18 @@ import sinon from 'sinon';
 describe('RubricsContainerTest', () => {
   const defaultProps = {
     levels: [
-      {id: 1, name: 'level 1'},
-      {id: 2, name: 'level 2'},
-      {id: 3, name: 'level 3'},
+      {id: 1, name: 'level 1', properties: {submittable: 'false'}},
+      {id: 2, name: 'level 2', properties: {submittable: 'true'}},
+      {id: 3, name: 'level 3', properties: {submittable: 'true'}},
     ],
     unitName: 'sample unit',
     lessonNumber: 0,
+    hasSubmittableLevels: true,
   };
+
+  const numberOfSubmittableLevels = defaultProps.levels
+    .filter(level => level.properties.submittable === 'true')
+    .length();
 
   const rubricInfo = {
     learningGoals: [
@@ -86,7 +91,7 @@ describe('RubricsContainerTest', () => {
     const wrapper = mount(<RubricsContainer {...defaultProps} />);
     expect(wrapper.find('Heading1').text()).to.equal('Create your rubric');
     expect(wrapper.find('select#rubric_level_id option')).to.have.length(
-      defaultProps.levels.length
+      numberOfSubmittableLevels
     );
     expect(wrapper.find(LearningGoalItem)).to.have.length(1);
     expect(wrapper.find('Button[text="Save your rubric"]')).to.have.length(1);
@@ -96,9 +101,7 @@ describe('RubricsContainerTest', () => {
     const props = {...defaultProps, rubric: rubricInfo};
     const wrapper = mount(<RubricsContainer {...props} />);
     expect(wrapper.find('Heading1').text()).to.equal('Modify your rubric');
-    expect(wrapper.find('select#rubric_level_id option')).to.have.length(
-      props.levels.length
-    );
+    expect(wrapper.find('select#rubric_level_id option')).to.have.length(2);
     expect(wrapper.find(LearningGoalItem)).to.have.length(
       rubricInfo.learningGoals.length
     );

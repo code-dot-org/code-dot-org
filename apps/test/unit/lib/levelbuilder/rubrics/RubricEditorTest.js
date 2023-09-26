@@ -14,16 +14,16 @@ describe('RubricEditorTest ', () => {
     {id: 2, learningGoal: 'Goal 2', aiEnabled: false},
     {id: 3, learningGoal: 'Goal 3', aiEnabled: true},
   ];
+  const defaultProps = {
+    learningGoalList: sampleLearningGoalList,
+    addNewConcept: addNewConceptSpy,
+    deleteItem: () => {},
+    updateLearningGoal: () => {},
+    disabled: false,
+  };
 
   beforeEach(() => {
-    wrapper = shallow(
-      <RubricEditor
-        learningGoalList={sampleLearningGoalList}
-        addNewConcept={addNewConceptSpy}
-        deleteItem={() => {}}
-        updateLearningGoal={() => {}}
-      />
-    );
+    wrapper = shallow(<RubricEditor {...defaultProps} />);
   });
 
   it('renders correct number of LearningGoalItem components', () => {
@@ -32,12 +32,23 @@ describe('RubricEditorTest ', () => {
     );
   });
 
-  it('renders the "Add new Key Concept" button and it can be clicked', () => {
+  it('renders the "Add new Key Concept" button and it can be clicked when submittable levels are available', () => {
     const addButton = wrapper
       .find(Button)
       .findWhere(n => n.props().text === 'Add new Key Concept');
     expect(addButton).to.have.length(1);
     addButton.simulate('click');
     expect(addNewConceptSpy).to.have.been.calledOnce;
+  });
+
+  it('renders the "Add new Key Concept" button with alternative text when disabled', () => {
+    const wrapper = shallow(<RubricEditor {...defaultProps} disabled={true} />);
+    const addButton = wrapper
+      .find(Button)
+      .findWhere(
+        n => n.props().text === 'Create a submittable level to create a rubric'
+      );
+    expect(addButton).to.have.length(1);
+    expect(addButton.props().disabled).to.be.true;
   });
 });

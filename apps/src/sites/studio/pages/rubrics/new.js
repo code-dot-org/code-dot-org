@@ -7,6 +7,9 @@ $(document).ready(() => {
   const lessonData = getScriptData('lessonData');
   const {unitName, lessonNumber, levels} = lessonData;
   const lessonId = lessonData.id;
+  const hasSubmittableLevels =
+    levels.filter(level => level.properties.submittable === 'true').length !==
+    0;
 
   ReactDOM.render(
     <RubricsContainer
@@ -14,6 +17,7 @@ $(document).ready(() => {
       lessonNumber={lessonNumber}
       levels={levels}
       lessonId={lessonId}
+      hasSubmittableLevels={hasSubmittableLevels}
     />,
     document.getElementById('form')
   );
