@@ -5,56 +5,10 @@ import BelowVisualization from '../templates/BelowVisualization';
 import {MAX_GAME_WIDTH, GAME_HEIGHT} from './constants';
 import ProtectedVisualizationDiv from '../templates/ProtectedVisualizationDiv';
 import PropTypes from 'prop-types';
-import Radium from 'radium'; // eslint-disable-line no-restricted-imports
 import {connect} from 'react-redux';
-import i18n from '@cdo/locale';
 import AgeDialog from '../templates/AgeDialog';
-import {getFilteredSongKeys, getFilterStatus} from '@cdo/apps/dance/songs';
-
-export const SongSelector = Radium(
-  class extends React.Component {
-    static propTypes = {
-      enableSongSelection: PropTypes.bool,
-      setSong: PropTypes.func.isRequired,
-      selectedSong: PropTypes.string,
-      songData: PropTypes.objectOf(PropTypes.object).isRequired,
-      filterOn: PropTypes.bool.isRequired,
-    };
-
-    changeSong = event => {
-      const songId = event.target.value;
-      this.props.setSong(songId);
-    };
-
-    render() {
-      const {selectedSong, songData, enableSongSelection, filterOn} =
-        this.props;
-
-      const songKeys = getFilteredSongKeys(songData, filterOn);
-
-      return (
-        <div id="song-selector-wrapper">
-          <label>
-            <b>{i18n.selectSong()}</b>
-          </label>
-          <select
-            id="song_selector"
-            style={styles.selectStyle}
-            onChange={this.changeSong}
-            value={selectedSong}
-            disabled={!enableSongSelection}
-          >
-            {songKeys.map((option, i) => (
-              <option key={i} value={option}>
-                {songData[option].title}
-              </option>
-            ))}
-          </select>
-        </div>
-      );
-    }
-  }
-);
+import {getFilterStatus} from '@cdo/apps/dance/songs';
+import SongSelector from './SongSelector';
 
 class DanceVisualizationColumn extends React.Component {
   static propTypes = {
