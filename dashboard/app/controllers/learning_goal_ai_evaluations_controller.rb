@@ -1,10 +1,10 @@
 class LearningGoalAiEvaluationsController < ApplicationController
   def get_evaluation
-    student = User.find(params[:user_id])
+    student = User.find(learning_goal_ai_evaluation_params[:user_id])
     return head :not_found unless student
     return head :forbidden unless can?(:manage, student)
 
-    learning_goal = LearningGoal.find(params[:learning_goal_id])
+    learning_goal = LearningGoal.find(learning_goal_ai_evaluation_params[:learning_goal_id])
     return head :not_found unless learning_goal
 
     evaluation = LearningGoalAiEvaluation.find_by(
