@@ -51,7 +51,13 @@ You can find the values for these settings in your saucelabs account settings (`
 
 If you want to run tests on Sauce Labs against localhost you need to set up your tunnel:
 
-1. Login to Sauce Labs and download the [tunnel](https://app.saucelabs.com/tunnels).
+##### Setup on a Mac
+
+1. Install `sc` using homebrew: `brew install --cask sauce-connect`
+2. Start the tunnel via: `sc --user <saucelabs-username> --api-key <saucelabs-api-key>`
+##### Setup on Linux, Windows, or Ad-Hoc
+
+1. Login to Sauce Labs and download the [tunnel](https://app.saucelabs.com/tunnels)
    - If you work on a Linux EC2 instance:
      - Download the Linux version (will end in .tar.gz)
      - Secure copy this file into your dev environment with something like `scp sc-4.7.1-linux.tar.gz ubuntu@[ip_address]:/ec2-user/environment/code-dot-org`
@@ -61,6 +67,10 @@ If you want to run tests on Sauce Labs against localhost you need to set up your
    - The configuration of the `--tunnel-name` flag (formerly [`--tunnel-id`](https://docs.saucelabs.com/dev/cli/saucectl/run/#--tunnel-name)) depends on your environment:
      - If you do *not* work on an EC2 instance, the `--tunnel-name` flag (included in the command given by Sauce Labs), can be removed. If you leave it in, you'll also need to set the `tunnelIdentifier` option in the `sauce_capabilities` config. See [Using Sauce Connect Tunnel Identifiers](https://wiki.saucelabs.com/display/DOCS/Using+Sauce+Connect+Tunnel+Identifiers#UsingSauceConnectTunnelIdentifiers-TheBasicsofUsingTunnelIdentifiers) for more details.
      - If you *do* work on an EC2 instance, the `--tunnel-name` flag is required to launch the tunnel.
+
+
+##### Now run your UI tests via saucelabs
+
 3. (Re)start your dashboard-server `./bin/dashboard-server`.
 4. In a new terminal window, navigate back into `dashboard/test/ui` and run your ui tests `./runner.rb -d localhost-studio.code.org:3000 <whatever other arguments you want>`
 
