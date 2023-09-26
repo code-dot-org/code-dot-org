@@ -128,7 +128,6 @@ export default function RubricContainer({
               teacherHasEnabledAi={teacherHasEnabledAi}
               canProvideFeedback={canProvideFeedback}
               reportingData={reportingData}
-              studentName={studentLevelInfo.name}
               studentLevelInfo={studentLevelInfo}
             />
           ))}

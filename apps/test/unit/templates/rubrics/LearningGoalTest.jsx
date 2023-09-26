@@ -7,6 +7,8 @@ import {EVENTS} from '@cdo/apps/lib/util/AnalyticsConstants';
 import LearningGoal from '@cdo/apps/templates/rubrics/LearningGoal';
 
 describe('LearningGoal', () => {
+  const studentLevelInfo = {name: 'Grace Hopper', timeSpent: 706};
+
   it('renders EvidenceLevels', () => {
     const wrapper = shallow(
       <LearningGoal
@@ -34,11 +36,13 @@ describe('LearningGoal', () => {
           aiEnabled: true,
         }}
         teacherHasEnabledAi={true}
-        studentName={'Frank'}
+        studentLevelInfo={studentLevelInfo}
       />
     );
     expect(wrapper.find('AiAssessment')).to.have.lengthOf(1);
-    expect(wrapper.find('AiAssessment').props().studentName).to.equal('Frank');
+    expect(wrapper.find('AiAssessment').props().studentName).to.equal(
+      studentLevelInfo.name
+    );
     expect(wrapper.find('AiAssessment').props().isAiAssessed).to.equal(true);
   });
 
@@ -51,7 +55,7 @@ describe('LearningGoal', () => {
           aiEnabled: true,
         }}
         teacherHasEnabledAi={false}
-        studentName={'Frank'}
+        studentLevelInfo={studentLevelInfo}
       />
     );
     expect(wrapper.find('AiAssessment')).to.have.lengthOf(0);
