@@ -23,7 +23,7 @@
     "use_modal_function_editor": "false",
     "hide_share_and_remix": "false",
     "disable_if_else_editing": "false",
-    "free_play": "true",
+    "free_play": "false",
     "validation_enabled": "false",
     "submittable": "false",
     "show_debug_watch": "false",
