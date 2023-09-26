@@ -50,6 +50,17 @@ const doAi = async (input: string) => {
   }
 };
 
+interface Item {
+  id: string;
+  name: string;
+}
+
+interface ReturnedItem {
+  id: string;
+  name: string;
+  url: string;
+}
+
 interface DanceAiProps {
   onClose: () => void;
 }
@@ -81,7 +92,7 @@ const DanceAiModal: React.FunctionComponent<DanceAiProps> = ({onClose}) => {
     }
 
     return inputLibrary.options[slotIndex].map((option: string) => {
-      const item = inputLibrary.items.find((item: any) => item.id === option);
+      const item = inputLibrary.items.find((item: Item) => item.id === option);
       return {
         id: item.id,
         name: item.name,
@@ -103,7 +114,7 @@ const DanceAiModal: React.FunctionComponent<DanceAiProps> = ({onClose}) => {
 
   const handleGenerateClick = () => {
     const inputNames = inputs.map(
-      input => inputLibrary.items.find((item: any) => item.id === input).name
+      input => inputLibrary.items.find((item: Item) => item.id === input).name
     );
     const request = `${promptString} ${inputNames.join(', ')}.`;
     startAi(request);
@@ -165,19 +176,21 @@ const DanceAiModal: React.FunctionComponent<DanceAiProps> = ({onClose}) => {
         >
           {mode === 'selectInputs' && currentInputSlot < SLOT_COUNT && (
             <div className={moduleStyles.itemContainer}>
-              {getAllItems(currentInputSlot).map((item: any, index: number) => {
-                return (
-                  <img
-                    tabIndex={
-                      index === 0 && currentInputSlot === 0 ? 0 : undefined
-                    }
-                    key={item.id}
-                    onClick={() => handleItemClick(item.id)}
-                    src={item.url}
-                    className={moduleStyles.item}
-                  />
-                );
-              })}
+              {getAllItems(currentInputSlot).map(
+                (item: ReturnedItem, index: number) => {
+                  return (
+                    <img
+                      tabIndex={
+                        index === 0 && currentInputSlot === 0 ? 0 : undefined
+                      }
+                      key={item.id}
+                      onClick={() => handleItemClick(item.id)}
+                      src={item.url}
+                      className={moduleStyles.item}
+                    />
+                  );
+                }
+              )}
             </div>
           )}
         </div>
