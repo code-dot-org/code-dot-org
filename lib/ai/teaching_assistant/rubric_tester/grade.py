@@ -80,7 +80,6 @@ class Grade:
         if not response_text:
             print(f"{student_id} {choice_text} Invalid response: empty response")
             return None
-        print(response_text.strip())
         tsv_data = self.parse_tsv(response_text.strip())
         try:
             self.validate_server_response(tsv_data, rubric)
