@@ -154,7 +154,11 @@ const DanceAiModal: React.FunctionComponent<DanceAiProps> = ({onClose}) => {
           </StrongText>
         </div>
 
-        <div id="inputs-area" className={moduleStyles.inputsArea}>
+        <div
+          id="inputs-area"
+          className={moduleStyles.inputsArea}
+          style={{zIndex: mode === 'selectInputs' ? 1 : 0}}
+        >
           {mode === 'selectInputs' && currentInputSlot < SLOT_COUNT && (
             <div className={moduleStyles.itemContainer}>
               {getAllItems(currentInputSlot).map((item: any, index: number) => {
@@ -239,7 +243,11 @@ const DanceAiModal: React.FunctionComponent<DanceAiProps> = ({onClose}) => {
           )}
         </div>
 
-        <div id="outputs-area" className={moduleStyles.outputsArea}>
+        <div
+          id="outputs-area"
+          className={moduleStyles.outputsArea}
+          style={{zIndex: mode === 'results' ? 1 : 0}}
+        >
           {mode === 'results' && (
             <Typist
               startDelay={1500}

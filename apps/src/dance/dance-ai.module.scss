@@ -41,6 +41,7 @@
     width: 100%;
     height: 100%;
     position: relative;
+    user-select: none;
 
     .textArea {
       position: absolute;
@@ -168,7 +169,6 @@
       height: 270px;
       top: 60px;
       left: 0;
-      pointer-events: none;
 
       .pre {
         white-space: pre-wrap;
