@@ -31,6 +31,8 @@ const doAi = async (input: string) => {
     },
   ];
 
+  console.log('do AI:', input);
+
   const response = await HttpClient.post(
     CHAT_COMPLETION_URL,
     JSON.stringify({messages}),
@@ -100,7 +102,10 @@ const DanceAiModal: React.FunctionComponent<DanceAiProps> = ({onClose}) => {
   };
 
   const handleGenerateClick = () => {
-    const request = promptString + inputs.join(', ');
+    const inputNames = inputs.map(
+      input => inputLibrary.items.find((item: any) => item.id === input).name
+    );
+    const request = `${promptString} ${inputNames.join(', ')}.`;
     startAi(request);
     setMode('generating');
   };
@@ -109,7 +114,6 @@ const DanceAiModal: React.FunctionComponent<DanceAiProps> = ({onClose}) => {
     const response = await doAi(value);
 
     const params = JSON.parse(response);
-    console.log('handle AI:', params);
 
     showingAi.setValue(response);
 
