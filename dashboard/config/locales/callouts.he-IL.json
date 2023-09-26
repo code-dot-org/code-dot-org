@@ -17,7 +17,19 @@
         "AppLab Intro 7 - Change Screen Color": {
           "applab_hoc_finish": "האם המסך שלכם הפך ירוק? אם כן, לחצו על 'סיים'. אם לא, לחצו על 'אפס', שנו את הקוד שלכם, ולחצו שוב 'הרץ'."
         },
+        "AppLab Intro 7 - Change Screen Color_2023": {
+          "applab_hoc_finish": "האם המסך שלכם הפך ירוק? אם כן, לחצו על 'סיים'. אם לא, לחצו על 'אפס', שנו את הקוד שלכם, ולחצו שוב 'הרץ'."
+        },
+        "AppLab Intro 7 - Change Screen Color_mb2022": {
+          "applab_hoc_finish": "האם המסך שלכם הפך ירוק? אם כן, לחצו על 'סיים'. אם לא, לחצו על 'אפס', שנו את הקוד שלכם, ולחצו שוב 'הרץ'."
+        },
         "AppLab Intro 7 - thisOrThatAddButton": {
+          "AppLabHoCFinal11": "אתם עכשיו במצב עיצוב."
+        },
+        "AppLab Intro 7 - thisOrThatAddButton_2023": {
+          "AppLabHoCFinal11": "אתם עכשיו במצב עיצוב."
+        },
+        "AppLab Intro 7 - thisOrThatAddButton_mb2022": {
           "AppLabHoCFinal11": "אתם עכשיו במצב עיצוב."
         },
         "CSD U3 Draw Loop Plugged wiggle sprite y_2018": {
@@ -31,6 +43,29 @@
         },
         "CSD U3 Draw Loop Plugged wiggle sprite y_2022": {
           "": " "
+        },
+        "CSD U3 Draw Loop Plugged wiggle sprite y_2023": {
+          "": " "
+        },
+        "CSD U3 L7 review arc_2023": {
+          "CSD_U3_rect_c1": "הנה הקוד",
+          "CSD_U3_rect_c2": "גררו את הבלוק הזה לתוך איזור הקוד."
+        },
+        "CSD U3 L7 review line_2023": {
+          "CSD_U3_rect_c1": "הנה הקוד",
+          "CSD_U3_rect_c2": "גררו את הבלוק הזה לתוך איזור הקוד."
+        },
+        "CSD U3 L7 review point_2023": {
+          "CSD_U3_rect_c1": "הנה הקוד",
+          "CSD_U3_rect_c2": "גררו את הבלוק הזה לתוך איזור הקוד."
+        },
+        "CSD U3 L7 review shapes_2023": {
+          "CSD_U3_rect_c1": "הנה הקוד",
+          "CSD_U3_rect_c2": "גררו את הבלוק הזה לתוך איזור הקוד."
+        },
+        "CSD U3 L7 shapes review polygon_2023": {
+          "CSD_U3_rect_c1": "הנה הקוד",
+          "CSD_U3_rect_c2": "גררו את הבלוק הזה לתוך איזור הקוד."
         },
         "CSD U3 Variables Predict Where X": {
           "CSD_U3_variables": "שנו את המספר כאן"
@@ -48,6 +83,9 @@
           "grid": "לחצו כאן על מנת להציג את הרשת."
         },
         "CSD U3 Variables Predict Where XY_2022": {
+          "grid": "לחצו כאן על מנת להציג את הרשת."
+        },
+        "CSD U3 Variables Predict Where XY_2023": {
           "grid": "לחצו כאן על מנת להציג את הרשת."
         },
         "CSD U3 Variables Predict Where X_2018": {
@@ -82,11 +120,19 @@
           "CSD_U3_rect_c1": "הנה הקוד",
           "CSD_U3_rect_c2": "גררו את הבלוק הזה לתוך איזור הקוד."
         },
+        "CSD U3 debug_2023": {
+          "CSD_U3_rect_c1": "הנה הקוד",
+          "CSD_U3_rect_c2": "גררו את הבלוק הזה לתוך איזור הקוד."
+        },
         "CSD U3 drawing challenge 2_2021": {
           "CSD_U3_rect_c1": "הנה הקוד",
           "CSD_U3_rect_c2": "גררו את הבלוק הזה לתוך איזור הקוד."
         },
         "CSD U3 drawing challenge 2_2022": {
+          "CSD_U3_rect_c1": "הנה הקוד",
+          "CSD_U3_rect_c2": "גררו את הבלוק הזה לתוך איזור הקוד."
+        },
+        "CSD U3 drawing challenge 2_2023": {
           "CSD_U3_rect_c1": "הנה הקוד",
           "CSD_U3_rect_c2": "גררו את הבלוק הזה לתוך איזור הקוד."
         },
@@ -98,11 +144,19 @@
           "CSD_U3_rect_c1": "הנה הקוד",
           "CSD_U3_rect_c2": "גררו את הבלוק הזה לתוך איזור הקוד."
         },
+        "CSD U3 drawing challenge 3_2023": {
+          "CSD_U3_rect_c1": "הנה הקוד",
+          "CSD_U3_rect_c2": "גררו את הבלוק הזה לתוך איזור הקוד."
+        },
         "CSD U3 drawing practice 1_2021": {
           "CSD_U3_rect_c1": "הנה הקוד",
           "CSD_U3_rect_c2": "גררו את הבלוק הזה לתוך איזור הקוד."
         },
         "CSD U3 drawing practice 1_2022": {
+          "CSD_U3_rect_c1": "הנה הקוד",
+          "CSD_U3_rect_c2": "גררו את הבלוק הזה לתוך איזור הקוד."
+        },
+        "CSD U3 drawing practice 1_2023": {
           "CSD_U3_rect_c1": "הנה הקוד",
           "CSD_U3_rect_c2": "גררו את הבלוק הזה לתוך איזור הקוד."
         },
@@ -114,11 +168,19 @@
           "CSD_U3_rect_c1": "הנה הקוד",
           "CSD_U3_rect_c2": "גררו את הבלוק הזה לתוך איזור הקוד."
         },
+        "CSD U3 drawing practice 2_2023": {
+          "CSD_U3_rect_c1": "הנה הקוד",
+          "CSD_U3_rect_c2": "גררו את הבלוק הזה לתוך איזור הקוד."
+        },
         "CSD U3 drawing practice 3_2021": {
           "CSD_U3_rect_c1": "הנה הקוד",
           "CSD_U3_rect_c2": "גררו את הבלוק הזה לתוך איזור הקוד."
         },
         "CSD U3 drawing practice 3_2022": {
+          "CSD_U3_rect_c1": "הנה הקוד",
+          "CSD_U3_rect_c2": "גררו את הבלוק הזה לתוך איזור הקוד."
+        },
+        "CSD U3 drawing practice 3_2023": {
           "CSD_U3_rect_c1": "הנה הקוד",
           "CSD_U3_rect_c2": "גררו את הבלוק הזה לתוך איזור הקוד."
         },
@@ -162,6 +224,10 @@
           "CSD_U3_rect_c1": "הנה הקוד",
           "CSD_U3_rect_c2": "גררו את הבלוק הזה לתוך איזור הקוד."
         },
+        "CSD U3 fill_2023": {
+          "CSD_U3_rect_c1": "הנה הקוד",
+          "CSD_U3_rect_c2": "גררו את הבלוק הזה לתוך איזור הקוד."
+        },
         "CSD U3 properties depth_2021": {
           "CSD_U3_rect_c1": "הנה הקוד",
           "CSD_U3_rect_c2": "גררו את הבלוק הזה לתוך איזור הקוד."
@@ -170,11 +236,19 @@
           "CSD_U3_rect_c1": "הנה הקוד",
           "CSD_U3_rect_c2": "גררו את הבלוק הזה לתוך איזור הקוד."
         },
+        "CSD U3 properties depth_2023": {
+          "CSD_U3_rect_c1": "הנה הקוד",
+          "CSD_U3_rect_c2": "גררו את הבלוק הזה לתוך איזור הקוד."
+        },
         "CSD U3 properties tint_2021": {
           "CSD_U3_rect_c1": "הנה הקוד",
           "CSD_U3_rect_c2": "גררו את הבלוק הזה לתוך איזור הקוד."
         },
         "CSD U3 properties tint_2022": {
+          "CSD_U3_rect_c1": "הנה הקוד",
+          "CSD_U3_rect_c2": "גררו את הבלוק הזה לתוך איזור הקוד."
+        },
+        "CSD U3 properties tint_2023": {
           "CSD_U3_rect_c1": "הנה הקוד",
           "CSD_U3_rect_c2": "גררו את הבלוק הזה לתוך איזור הקוד."
         },
@@ -193,6 +267,9 @@
         },
         "CSD U3 rect_2022": {
           "CSD_U3_rect_c1": "הנה הקוד"
+        },
+        "CSD U3 rect_2023": {
+          "": " "
         },
         "CSD U3 sequence": {
           "CSD_U3_rect_c1": "הנה הקוד",
@@ -222,11 +299,19 @@
           "CSD_U3_rect_c1": "הנה הקוד",
           "CSD_U3_rect_c2": "גררו את הבלוק הזה לתוך איזור הקוד."
         },
+        "CSD U3 shapes arc_2023": {
+          "CSD_U3_rect_c1": "הנה הקוד",
+          "CSD_U3_rect_c2": "גררו את הבלוק הזה לתוך איזור הקוד."
+        },
         "CSD U3 shapes behind_2021": {
           "CSD_U3_rect_c1": "הנה הקוד",
           "CSD_U3_rect_c2": "גררו את הבלוק הזה לתוך איזור הקוד."
         },
         "CSD U3 shapes behind_2022": {
+          "CSD_U3_rect_c1": "הנה הקוד",
+          "CSD_U3_rect_c2": "גררו את הבלוק הזה לתוך איזור הקוד."
+        },
+        "CSD U3 shapes behind_2023": {
           "CSD_U3_rect_c1": "הנה הקוד",
           "CSD_U3_rect_c2": "גררו את הבלוק הזה לתוך איזור הקוד."
         },
@@ -238,11 +323,19 @@
           "CSD_U3_rect_c1": "הנה הקוד",
           "CSD_U3_rect_c2": "גררו את הבלוק הזה לתוך איזור הקוד."
         },
+        "CSD U3 shapes line_2023": {
+          "CSD_U3_rect_c1": "הנה הקוד",
+          "CSD_U3_rect_c2": "גררו את הבלוק הזה לתוך איזור הקוד."
+        },
         "CSD U3 shapes missing_2021": {
           "CSD_U3_rect_c1": "הנה הקוד",
           "CSD_U3_rect_c2": "גררו את הבלוק הזה לתוך איזור הקוד."
         },
         "CSD U3 shapes missing_2022": {
+          "CSD_U3_rect_c1": "הנה הקוד",
+          "CSD_U3_rect_c2": "גררו את הבלוק הזה לתוך איזור הקוד."
+        },
+        "CSD U3 shapes missing_2023": {
           "CSD_U3_rect_c1": "הנה הקוד",
           "CSD_U3_rect_c2": "גררו את הבלוק הזה לתוך איזור הקוד."
         },
@@ -254,11 +347,19 @@
           "CSD_U3_rect_c1": "הנה הקוד",
           "CSD_U3_rect_c2": "גררו את הבלוק הזה לתוך איזור הקוד."
         },
+        "CSD U3 shapes polygon_2023": {
+          "CSD_U3_rect_c1": "הנה הקוד",
+          "CSD_U3_rect_c2": "גררו את הבלוק הזה לתוך איזור הקוד."
+        },
         "CSD U3 shapes scene_2021": {
           "CSD_U3_rect_c1": "הנה הקוד",
           "CSD_U3_rect_c2": "גררו את הבלוק הזה לתוך איזור הקוד."
         },
         "CSD U3 shapes scene_2022": {
+          "CSD_U3_rect_c1": "הנה הקוד",
+          "CSD_U3_rect_c2": "גררו את הבלוק הזה לתוך איזור הקוד."
+        },
+        "CSD U3 shapes scene_2023": {
           "CSD_U3_rect_c1": "הנה הקוד",
           "CSD_U3_rect_c2": "גררו את הבלוק הזה לתוך איזור הקוד."
         },
@@ -269,6 +370,19 @@
         "CSD U3 shapes_2022": {
           "CSD_U3_rect_c1": "הנה הקוד",
           "CSD_U3_rect_c2": "גררו את הבלוק הזה לתוך איזור הקוד."
+        },
+        "CSD U3 shapes_2023": {
+          "CSD_U3_rect_c1": "הנה הקוד",
+          "CSD_U3_rect_c2": "גררו את הבלוק הזה לתוך איזור הקוד."
+        },
+        "CSD U3L16 Prac D_2023": {
+          "CSD U3L16.7 - start": "הוסיפו את הקוד שלכם כאן"
+        },
+        "CSD U3L3 rect_2023": {
+          "CSD_U3_rect_c1": "הנה הקוד"
+        },
+        "CSD U6 - Color LEDs - SB4_2023": {
+          "CSDU6L10_rainbow": "הוסיפו את הקוד שלכם כאן"
         },
         "CSD U6 - Color LEDs - SB4_2222": {
           "CSDU6L10_rainbow": "הוסיפו את הקוד שלכם כאן"
@@ -313,6 +427,9 @@
           "CSD_U3_variables": "שנו את המספר כאן"
         },
         "CSD web text explore_2022": {
+          "CSD_U3_variables": "שנו את המספר כאן"
+        },
+        "CSD web text explore_2023": {
           "CSD_U3_variables": "שנו את המספר כאן"
         },
         "Course 4 Bee 1": {
