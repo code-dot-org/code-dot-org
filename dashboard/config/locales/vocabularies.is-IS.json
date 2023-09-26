@@ -329,6 +329,180 @@
         "programming/pre-express/2022": {
           "word": "Forritun"
         },
+        "code/csc-adaptations/2023": {
+          "word": "Kóði"
+        },
+        "sprite/csc-bookcovers/2023": {
+          "word": "Kviki"
+        },
+        "code/csc-ecosystems/2023": {
+          "word": "Kóði"
+        },
+        "conditionals/csc-ecosystems/2023": {
+          "word": "Skilyrði"
+        },
+        "variable/csc-ecosystems/2023": {
+          "word": "Breyta"
+        },
+        "code/csc-mappinglandmarks/2023": {
+          "word": "Kóði"
+        },
+        "sprite/csc-mappinglandmarks/2023": {
+          "word": "Kviki"
+        },
+        "artist/csc-starquilts/2023": {
+          "word": "Listamaður"
+        },
+        "comments/csc-starquilts/2023": {
+          "word": "Athugasemdir"
+        },
+        "sprite/csc-timecapsule/2023": {
+          "word": "Kviki"
+        },
+        "code/poetry/2023": {
+          "word": "Kóði"
+        },
+        "algorithm/coursea/2023": {
+          "word": "Algrím"
+        },
+        "debugging/coursea/2023": {
+          "word": "Villuleit"
+        },
+        "drop/coursea/2023": {
+          "word": "Droppa"
+        },
+        "programming/coursea/2023": {
+          "word": "Forritun"
+        },
+        "algorithm/courseb/2023": {
+          "word": "Algrím"
+        },
+        "debugging/courseb/2023": {
+          "word": "Villuleit"
+        },
+        "drop/courseb/2023": {
+          "word": "Droppa"
+        },
+        "programming/courseb/2023": {
+          "word": "Forritun"
+        },
+        "algorithm/coursec/2023": {
+          "word": "Algrím"
+        },
+        "debugging/coursec/2023": {
+          "word": "Villuleit"
+        },
+        "sequencing/coursec/2023": {
+          "word": "Skipanaröð"
+        },
+        "programming/coursec/2023": {
+          "word": "Forritun"
+        },
+        "data/coursec/2023": {
+          "word": "Gögn"
+        },
+        "binary/coursec/2023": {
+          "word": "Tvíundir"
+        },
+        "algorithm/coursed/2023": {
+          "word": "Algrím"
+        },
+        "debugging/coursed/2023": {
+          "word": "Villuleit"
+        },
+        "programming/coursed/2023": {
+          "word": "Forritun"
+        },
+        "conditionals/coursed/2023": {
+          "word": "Skilyrði"
+        },
+        "sprite/coursee/2023": {
+          "word": "Kviki"
+        },
+        "function/coursee/2023": {
+          "word": "Aðgerð"
+        },
+        "conditionals/coursee/2023": {
+          "word": "Skilyrði"
+        },
+        "copyright/coursee/2023": {
+          "word": "Höfundarréttur"
+        },
+        "define/coursee/2023": {
+          "word": "Skilgreina"
+        },
+        "sprite/coursef/2023": {
+          "word": "Kviki"
+        },
+        "user/coursef/2023": {
+          "word": "Notandi"
+        },
+        "algorithm/coursef/2023": {
+          "word": "Algrím"
+        },
+        "variable/coursef/2023": {
+          "word": "Breyta"
+        },
+        "input/coursef/2023": {
+          "word": "Inntak"
+        },
+        "machine_learning/coursef/2023": {
+          "word": "Vélarnám"
+        },
+        "internet/coursef/2023": {
+          "word": "Internet"
+        },
+        "define/coursef/2023": {
+          "word": "Skilgreina"
+        },
+        "algorithm/express/2023": {
+          "word": "Algrím"
+        },
+        "debugging/express/2023": {
+          "word": "Villuleit"
+        },
+        "sequencing/express/2023": {
+          "word": "Skipanaröð"
+        },
+        "programming/express/2023": {
+          "word": "Forritun"
+        },
+        "sprite/express/2023": {
+          "word": "Kviki"
+        },
+        "conditionals/express/2023": {
+          "word": "Skilyrði"
+        },
+        "function/express/2023": {
+          "word": "Aðgerð"
+        },
+        "variable/express/2023": {
+          "word": "Breyta"
+        },
+        "define/express/2023": {
+          "word": "Skilgreina"
+        },
+        "drop/pre-express/2023": {
+          "word": "Droppa"
+        },
+        "algorithm/pre-express/2023": {
+          "word": "Algrím"
+        },
+        "debugging/pre-express/2023": {
+          "word": "Villuleit"
+        },
+        "programming/pre-express/2023": {
+          "word": "Forritun"
+        },
+        "machine_learning/how-ai-works/2023": {
+          "word": "Vélarnám"
+        },
+        "algorithm/how-ai-works/2023": {
+          "word": "Algrím"
+        },
+        "network/how-ai-works/2023": {
+          "word": "Netkerfi"
+        },
         "conditionals/aquatic/unversioned": {
           "word": "Skilyrði"
         },

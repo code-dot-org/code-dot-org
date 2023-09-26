@@ -566,6 +566,189 @@
         "pair_programming/pre-express/2022": {
           "name": "Жұптасып Бағдарламалау"
         },
+        "implementation_guide/coursea/2023": {
+          "name": "Іске асыру туралы нұсқаулық"
+        },
+        "pair_programming/coursea/2023": {
+          "name": "Жұптасып Бағдарламалау"
+        },
+        "happy_maps/coursea/2023": {
+          "name": "Көңілді Карталар"
+        },
+        "the_big_event/coursea/2023": {
+          "name": "Үлкен Оқиға"
+        },
+        "the_big_event_1/coursea/2023": {
+          "name": "Үлкен Оқиға"
+        },
+        "the_big_event_2/coursea/2023": {
+          "name": "Үлкен Оқиға"
+        },
+        "implementation_guide/courseb/2023": {
+          "name": "Іске асыру туралы нұсқаулық"
+        },
+        "move_it_move_it/courseb/2023": {
+          "name": "Қозғал, Қозғал"
+        },
+        "move_it_move_it_1/courseb/2023": {
+          "name": "Қозғал, Қозғал"
+        },
+        "move_it_move_it_2/courseb/2023": {
+          "name": "Қозғал, Қозғал"
+        },
+        "move_it_move_it_3/courseb/2023": {
+          "name": "Қозғал, Қозғал"
+        },
+        "pair_programming/courseb/2023": {
+          "name": "Жұптасып Бағдарламалау"
+        },
+        "getting_loopy/courseb/2023": {
+          "name": "Ілмектерді үйрену"
+        },
+        "getting_loopy_1/courseb/2023": {
+          "name": "Ілмектерді үйрену"
+        },
+        "getting_loopy_2/courseb/2023": {
+          "name": "Ілмектерді үйрену"
+        },
+        "getting_loopy_3/courseb/2023": {
+          "name": "Ілмектерді үйрену"
+        },
+        "the_big_event/courseb/2023": {
+          "name": "Үлкен Оқиға"
+        },
+        "the_big_event_1/courseb/2023": {
+          "name": "Үлкен Оқиға"
+        },
+        "the_big_event_2/courseb/2023": {
+          "name": "Үлкен Оқиға"
+        },
+        "implementation_guide/coursec/2023": {
+          "name": "Іске асыру туралы нұсқаулық"
+        },
+        "my_robotic_friends/coursec/2023": {
+          "name": "Менің Достарым Роботтар"
+        },
+        "my_robotic_friends_1/coursec/2023": {
+          "name": "Менің Достарым Роботтар"
+        },
+        "my_robotic_friends_2/coursec/2023": {
+          "name": "Менің Достарым Роботтар"
+        },
+        "my_robotic_friends_3/coursec/2023": {
+          "name": "Менің Достарым Роботтар"
+        },
+        "my_robotic_friends_4/coursec/2023": {
+          "name": "Менің Достарым Роботтар"
+        },
+        "pair_programming/coursec/2023": {
+          "name": "Жұптасып Бағдарламалау"
+        },
+        "the_big_event/coursec/2023": {
+          "name": "Үлкен Оқиға"
+        },
+        "the_big_event_1/coursec/2023": {
+          "name": "Үлкен Оқиға"
+        },
+        "the_big_event_2/coursec/2023": {
+          "name": "Үлкен Оқиға"
+        },
+        "binary_bracelets/coursec/2023": {
+          "name": "Екілік Білезіктер"
+        },
+        "binary_bracelets_1/coursec/2023": {
+          "name": "Екілік Білезіктер"
+        },
+        "binary_bracelets_2/coursec/2023": {
+          "name": "Екілік Білезіктер"
+        },
+        "binary_bracelets_3/coursec/2023": {
+          "name": "Екілік Білезіктер"
+        },
+        "binary_bracelets_4/coursec/2023": {
+          "name": "Екілік Білезіктер"
+        },
+        "implementation_guide/coursed/2023": {
+          "name": "Іске асыру туралы нұсқаулық"
+        },
+        "graph_paper_programming/coursed/2023": {
+          "name": "Миллиметрлік Бағдарламалау"
+        },
+        "graph_paper_programming_1/coursed/2023": {
+          "name": "Миллиметрлік Бағдарламалау"
+        },
+        "graph_paper_programming_2/coursed/2023": {
+          "name": "Миллиметрлік Бағдарламалау"
+        },
+        "graph_paper_programming_3/coursed/2023": {
+          "name": "Миллиметрлік Бағдарламалау"
+        },
+        "graph_paper_programming_4/coursed/2023": {
+          "name": "Миллиметрлік Бағдарламалау"
+        },
+        "graph_paper_programming_5/coursed/2023": {
+          "name": "Миллиметрлік Бағдарламалау"
+        },
+        "pair_programming/coursed/2023": {
+          "name": "Жұптасып Бағдарламалау"
+        },
+        "relay_programming/coursed/2023": {
+          "name": "Релелік Бағдарламалау"
+        },
+        "relay_programming_1/coursed/2023": {
+          "name": "Релелік Бағдарламалау"
+        },
+        "relay_programming_2/coursed/2023": {
+          "name": "Релелік Бағдарламалау"
+        },
+        "relay_programming_3/coursed/2023": {
+          "name": "Релелік Бағдарламалау"
+        },
+        "relay_programming_4/coursed/2023": {
+          "name": "Релелік Бағдарламалау"
+        },
+        "relay_programming_5/coursed/2023": {
+          "name": "Релелік Бағдарламалау"
+        },
+        "conditionals_with_cards/coursed/2023": {
+          "name": "Картаға қатысты шартты белгілер"
+        },
+        "conditionals_with_cards_1/coursed/2023": {
+          "name": "Картаға қатысты шартты белгілер"
+        },
+        "conditionals_with_cards_2/coursed/2023": {
+          "name": "Картаға қатысты шартты белгілер"
+        },
+        "conditionals_with_cards_3/coursed/2023": {
+          "name": "Картаға қатысты шартты белгілер"
+        },
+        "conditionals_with_cards_4/coursed/2023": {
+          "name": "Картаға қатысты шартты белгілер"
+        },
+        "implementation_guide/coursee/2023": {
+          "name": "Іске асыру туралы нұсқаулық"
+        },
+        "implementation_guide/coursef/2023": {
+          "name": "Іске асыру туралы нұсқаулық"
+        },
+        "internet/coursef/2023": {
+          "name": "Ғаламтор"
+        },
+        "internet_1/coursef/2023": {
+          "name": "Ғаламтор"
+        },
+        "the_internet/coursef/2023": {
+          "name": "Ғаламтор"
+        },
+        "pair_programming/express/2023": {
+          "name": "Жұптасып Бағдарламалау"
+        },
+        "variables/express/2023": {
+          "name": "Айнымалылар"
+        },
+        "pair_programming/pre-express/2023": {
+          "name": "Жұптасып Бағдарламалау"
+        },
         "list_of_poems_1/poem-art/unversioned": {
           "name": "",
           "url": "",

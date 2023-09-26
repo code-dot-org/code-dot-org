@@ -11,7 +11,7 @@ import i18n from '@cdo/locale';
 import AgeDialog from '../templates/AgeDialog';
 import {getFilteredSongKeys, getFilterStatus} from '@cdo/apps/dance/songs';
 
-const SongSelector = Radium(
+export const SongSelector = Radium(
   class extends React.Component {
     static propTypes = {
       enableSongSelection: PropTypes.bool,

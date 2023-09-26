@@ -94,6 +94,10 @@ fil:
         ai-ethics-2021:
           description_audience: Baitang 6-12
           title: Ang aming Kodigo ng Etika sa AI.
+        ai-ethics-2023:
+          lessons:
+            lesson-1:
+              name: Ang aming Kodigo ng Etika sa AI.
         ai-temp:
           title: Paano Gumagana ang AI
         aiml-2021:
