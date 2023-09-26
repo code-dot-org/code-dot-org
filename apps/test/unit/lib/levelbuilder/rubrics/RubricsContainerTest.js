@@ -20,9 +20,9 @@ describe('RubricsContainerTest', () => {
     hasSubmittableLevels: true,
   };
 
-  const numberOfSubmittableLevels = defaultProps.levels
-    .filter(level => level.properties.submittable === 'true')
-    .length();
+  const numberOfSubmittableLevels = defaultProps.levels.filter(
+    level => level.properties.submittable === 'true'
+  ).length;
 
   const rubricInfo = {
     learningGoals: [
