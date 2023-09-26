@@ -238,6 +238,11 @@
             "name": "என் செயல்பாடு "
           }
         },
+        "Course E: Artist Project_examples_2023": {
+          "my function": {
+            "name": "என்னுடைய ஃபங்ஷன்"
+          }
+        },
         "Course E: Frozen Project_examples2022": {
           "LOGIC FLOWER": {
             "name": "லாஜிக் மலர் "
@@ -352,6 +357,69 @@
             "parameters": {
               "length": "நீளம்",
               "points": "புள்ளிகள் "
+            }
+          },
+          "draw a triangle": {
+            "name": "ஒரு முக்கோணத்தை வரையவும்",
+            "parameters": {
+              "length": "நீளம்"
+            }
+          },
+          "small flower": {
+            "name": "சிறிய மலர் "
+          }
+        },
+        "Course E: Frozen Project_examples_2023": {
+          "LOGIC FLOWER": {
+            "name": "லாஜிக் மலர் "
+          },
+          "LOGIC FLOWERS": {
+            "name": "லாஜிக் மலர் "
+          },
+          "LOGIC FLOWERS2": {
+            "name": "லாஜிக் மலர்கள்2 "
+          },
+          "draw a circle": {
+            "description": "கொடுக்கப்பட்ட ஆரம் கொண்ட ஒரு வட்டத்தை வரையவும் ",
+            "name": "ஒரு வட்டத்தை வரையவும்",
+            "parameters": {
+              "radius": "ஆரம் "
+            }
+          },
+          "draw a house": {
+            "name": "ஒரு வீட்டை வரையவும்",
+            "parameters": {
+              "length": "நீளம்"
+            }
+          },
+          "draw a pinwheel": {
+            "name": "ஒரு பின்வீல் வரையவும் ",
+            "parameters": {
+              "length": "நீளம்",
+              "repeat": "மறுபடி",
+              "sides": "பக்கங்களிலும் "
+            }
+          },
+          "draw a shape": {
+            "name": "ஒரு வடிவத்தை வரையவும் ",
+            "parameters": {
+              "length": "நீளம்",
+              "sides": "பக்கங்களிலும் "
+            }
+          },
+          "draw a square": {
+            "name": "ஒரு சதுரத்தை வரையவும்",
+            "parameters": {
+              "length": "நீளம்",
+              "sides": "பக்கங்களிலும் "
+            }
+          },
+          "draw a star": {
+            "description": "கொடுக்கப்பட்ட புள்ளிகள் மற்றும் கொடுக்கப்பட்ட நீளத்தின் பக்கங்களைக் கொண்ட ஒரு நட்சத்திரத்தை வரையவும்",
+            "name": "நட்சத்திரம் வரைக",
+            "parameters": {
+              "length": "நீளம்",
+              "points": "புள்ளிகள்"
             }
           },
           "draw a triangle": {
@@ -569,6 +637,56 @@
             }
           }
         },
+        "CourseD_EOC_artist_2023": {
+          "draw a circle": {
+            "description": "கொடுக்கப்பட்ட ஆரம் கொண்ட ஒரு வட்டத்தை வரையவும் ",
+            "name": "ஒரு வட்டத்தை வரையவும்",
+            "parameters": {
+              "radius": "ஆரம் "
+            }
+          },
+          "draw a house": {
+            "name": "ஒரு வீட்டை வரையவும்",
+            "parameters": {
+              "length": "நீளம்"
+            }
+          },
+          "draw a pinwheel": {
+            "name": "ஒரு பின்வீல் வரையவும் ",
+            "parameters": {
+              "length": "நீளம்",
+              "repeat": "மறுபடி",
+              "sides": "பக்கங்களிலும் "
+            }
+          },
+          "draw a shape": {
+            "name": "ஒரு வடிவத்தை வரையவும் ",
+            "parameters": {
+              "length": "நீளம்",
+              "sides": "பக்கங்களிலும் "
+            }
+          },
+          "draw a square": {
+            "name": "ஒரு சதுரத்தை வரையவும்",
+            "parameters": {
+              "length": "நீளம்"
+            }
+          },
+          "draw a star": {
+            "description": "கொடுக்கப்பட்ட புள்ளிகள் மற்றும் கொடுக்கப்பட்ட நீளத்தின் பக்கங்களைக் கொண்ட ஒரு நட்சத்திரத்தை வரையவும்",
+            "name": "நட்சத்திரம் வரைக",
+            "parameters": {
+              "length": "நீளம்",
+              "points": "புள்ளிகள்"
+            }
+          },
+          "draw a triangle": {
+            "name": "ஒரு முக்கோணத்தை வரையவும்",
+            "parameters": {
+              "length": "நீளம்"
+            }
+          }
+        },
         "CourseD_EOC_artist_example2021": {
           "draw a circle": {
             "description": "கொடுக்கப்பட்ட ஆரம் கொண்ட ஒரு வட்டத்தை வரையவும் ",
@@ -669,6 +787,56 @@
             }
           }
         },
+        "CourseD_EOC_artist_example2021_2023": {
+          "draw a circle": {
+            "description": "கொடுக்கப்பட்ட ஆரம் கொண்ட ஒரு வட்டத்தை வரையவும் ",
+            "name": "ஒரு வட்டத்தை வரையவும்",
+            "parameters": {
+              "radius": "ஆரம் "
+            }
+          },
+          "draw a house": {
+            "name": "ஒரு வீட்டை வரையவும்",
+            "parameters": {
+              "length": "நீளம்"
+            }
+          },
+          "draw a pinwheel": {
+            "name": "ஒரு பின்வீல் வரையவும் ",
+            "parameters": {
+              "length": "நீளம்",
+              "repeat": "மறுபடி",
+              "sides": "பக்கங்களிலும் "
+            }
+          },
+          "draw a shape": {
+            "name": "ஒரு வடிவத்தை வரையவும் ",
+            "parameters": {
+              "length": "நீளம்",
+              "sides": "பக்கங்களிலும் "
+            }
+          },
+          "draw a square": {
+            "name": "ஒரு சதுரத்தை வரையவும்",
+            "parameters": {
+              "length": "நீளம்"
+            }
+          },
+          "draw a star": {
+            "description": "கொடுக்கப்பட்ட புள்ளிகள் மற்றும் கொடுக்கப்பட்ட நீளத்தின் பக்கங்களைக் கொண்ட ஒரு நட்சத்திரத்தை வரையவும்",
+            "name": "நட்சத்திரம் வரைக",
+            "parameters": {
+              "length": "நீளம்",
+              "points": "புள்ளிகள்"
+            }
+          },
+          "draw a triangle": {
+            "name": "ஒரு முக்கோணத்தை வரையவும்",
+            "parameters": {
+              "length": "நீளம்"
+            }
+          }
+        },
         "CourseF_app_computer": {
           "reset game": {
             "name": "விளையாட்டு மீட்டமை "
@@ -680,6 +848,11 @@
           }
         },
         "CourseF_app_computer_-2022-2": {
+          "reset game": {
+            "name": "விளையாட்டு மீட்டமை "
+          }
+        },
+        "CourseF_app_computer_2023": {
           "reset game": {
             "name": "விளையாட்டு மீட்டமை "
           }
@@ -717,6 +890,11 @@
           }
         },
         "Function intro Ryan_2021": {
+          "build bridge": {
+            "name": "பாலம் கட்ட"
+          }
+        },
+        "Function intro Ryan_2023": {
           "build bridge": {
             "name": "பாலம் கட்ட"
           }
@@ -814,6 +992,11 @@
             "name": "தெளிவான பாதை"
           }
         },
+        "MC_HOC_2017_07_Cole_2023": {
+          "clear path": {
+            "name": "தெளிவான பாதை"
+          }
+        },
         "MC_HOC_2017_10_RETRY": {
           "fix long path": {
             "name": "நீண்ட பாதையை சரிசெய்யவும்"
@@ -847,6 +1030,14 @@
           }
         },
         "MC_HOC_2017_10_RETRY_2021": {
+          "fix long path": {
+            "name": "நீண்ட பாதையை சரிசெய்யவும்"
+          },
+          "fix short path": {
+            "name": "குறுகிய பாதையை சரிசெய்யவும்"
+          }
+        },
+        "MC_HOC_2017_10_RETRY_2023": {
           "fix long path": {
             "name": "நீண்ட பாதையை சரிசெய்யவும்"
           },
@@ -894,6 +1085,14 @@
             "name": "குறுகிய பாலம் கட்ட"
           }
         },
+        "MC_HOC_2017_Ali_2023": {
+          "build long bridge": {
+            "name": "நீண்ட பாலம் கட்ட"
+          },
+          "build short bridge": {
+            "name": "குறுகிய பாலம் கட்ட"
+          }
+        },
         "MC_HOC_2017_FP20x20": {
           "function 1": {
             "name": "ஃபங்ஷன் 1"
@@ -932,6 +1131,14 @@
           },
           "function 2": {
             "name": "செயல்பாடு 2 "
+          }
+        },
+        "MC_HOC_2017_FP20x20_2023": {
+          "function 1": {
+            "name": "ஃபங்ஷன் 1"
+          },
+          "function 2": {
+            "name": "ஃபங்ஷன் 2"
           }
         },
         "NEW Course 4 Artist Functions 11": {
@@ -1389,6 +1596,11 @@
             "name": "சாத்தியமான தீர்வு"
           }
         },
+        "courseB_artist_loops_challenge2_2023": {
+          "potential solution": {
+            "name": "சாத்தியமான தீர்வு"
+          }
+        },
         "courseC_artist_prog3": {
           "draw fire": {
             "name": "தீ வரைய"
@@ -1485,6 +1697,11 @@
             "name": "ஊக்குவிப்பவர் "
           }
         },
+        "courseC_artist_prog4_2023": {
+          "booster": {
+            "name": "ஊக்குவிப்பவர் "
+          }
+        },
         "courseC_data wizard": {
           "do something": {
             "name": "ஏதேனும் இயக்கு"
@@ -1501,6 +1718,11 @@
           }
         },
         "courseC_data wizard_2021": {
+          "do something": {
+            "name": "ஏதேனும் இயக்கு"
+          }
+        },
+        "courseC_data wizard_2023": {
           "do something": {
             "name": "ஏதேனும் இயக்கு"
           }
@@ -1615,6 +1837,17 @@
             "name": "அறுகோணங்களின் கோட்டை வரையவும்"
           }
         },
+        "courseE_artist_functions10_2023": {
+          "do something": {
+            "name": "ஏதேனும் இயக்கு"
+          },
+          "draw hexagon": {
+            "name": "அறுகோணத்தை வரையவும்"
+          },
+          "draw line of hexagons": {
+            "name": "அறுகோணங்களின் கோட்டை வரையவும்"
+          }
+        },
         "courseE_artist_functions1_copy": {
           "draw ear stems": {
             "name": "காது தண்டுகளை வரையவும்"
@@ -1673,6 +1906,14 @@
             "name": "காது தண்டுகளை வரையவும்"
           }
         },
+        "courseE_artist_functions2_2023": {
+          "draw a square": {
+            "name": "ஒரு சதுரத்தை வரையவும்"
+          },
+          "draw ear stems": {
+            "name": "காது தண்டுகளை வரையவும்"
+          }
+        },
         "courseE_artist_functions2_copy": {
           "draw a square": {
             "name": "ஒரு சதுரத்தை வரையவும்"
@@ -1710,6 +1951,11 @@
           }
         },
         "courseE_artist_functions3_2021": {
+          "draw a star": {
+            "name": "நட்சத்திரம் வரைக"
+          }
+        },
+        "courseE_artist_functions3_2023": {
           "draw a star": {
             "name": "நட்சத்திரம் வரைக"
           }
@@ -1759,6 +2005,11 @@
             "name": "நட்சத்திரம் வரைக"
           }
         },
+        "courseE_artist_functions5_2023": {
+          "draw a star": {
+            "name": "நட்சத்திரம் வரைக"
+          }
+        },
         "courseE_artist_functions5_copy": {
           "draw a star": {
             "name": "நட்சத்திரம் வரைக"
@@ -1804,6 +2055,11 @@
           }
         },
         "courseE_artist_functions7_2021": {
+          "draw a window": {
+            "name": "ஒரு சாளரத்தை வரையவும்"
+          }
+        },
+        "courseE_artist_functions7_2023": {
           "draw a window": {
             "name": "ஒரு சாளரத்தை வரையவும்"
           }
@@ -1889,6 +2145,20 @@
             "name": "தடுமாறிய சதுரங்கள்"
           }
         },
+        "courseE_artist_functions8_2023": {
+          "do something": {
+            "name": "ஏதேனும் இயக்கு"
+          },
+          "draw a line of squares": {
+            "name": "சதுரங்களின் கோட்டை வரையவும்"
+          },
+          "draw square": {
+            "name": "சதுரத்தை வரையவும்"
+          },
+          "staggered squares": {
+            "name": "தடுமாறிய சதுரங்கள் "
+          }
+        },
         "courseE_artist_functions8a2022": {
           "do something": {
             "name": "ஏதேனும் இயக்கு"
@@ -1922,6 +2192,14 @@
           }
         },
         "courseE_artist_functions8a_2021": {
+          "do something": {
+            "name": "ஏதேனும் இயக்கு"
+          },
+          "draw a square": {
+            "name": "ஒரு சதுரத்தை வரையவும்"
+          }
+        },
+        "courseE_artist_functions8a_2023": {
           "do something": {
             "name": "ஏதேனும் இயக்கு"
           },
@@ -1974,6 +2252,17 @@
           }
         },
         "courseE_artist_functions8b_2021": {
+          "do something": {
+            "name": "ஏதேனும் இயக்கு"
+          },
+          "draw a line of squares": {
+            "name": "சதுரங்களின் கோட்டை வரையவும்"
+          },
+          "draw square": {
+            "name": "சதுரத்தை வரையவும்"
+          }
+        },
+        "courseE_artist_functions8b_2023": {
           "do something": {
             "name": "ஏதேனும் இயக்கு"
           },
@@ -2054,6 +2343,20 @@
             "name": "தடுமாறிய சதுரங்கள் "
           }
         },
+        "courseE_artist_functions8c_2023": {
+          "do something": {
+            "name": "ஏதேனும் இயக்கு"
+          },
+          "draw a line of squares": {
+            "name": "சதுரங்களின் கோட்டை வரையவும்"
+          },
+          "draw square": {
+            "name": "சதுரத்தை வரையவும்"
+          },
+          "staggered squares": {
+            "name": "தடுமாறிய சதுரங்கள் "
+          }
+        },
         "courseE_artist_functions9": {
           "do something": {
             "name": "ஏதேனும் இயக்கு"
@@ -2110,6 +2413,17 @@
           }
         },
         "courseE_artist_functions9_2021": {
+          "do something": {
+            "name": "ஏதேனும் இயக்கு"
+          },
+          "draw line of triangles": {
+            "name": "முக்கோணக் கோட்டை வரையவும் "
+          },
+          "draw triangle": {
+            "name": "முக்கோணம் வரையவும் "
+          }
+        },
+        "courseE_artist_functions9_2023": {
           "do something": {
             "name": "ஏதேனும் இயக்கு"
           },
@@ -2205,6 +2519,23 @@
             "name": "தடுமாறிய சதுரங்கள் "
           }
         },
+        "courseE_artist_functionsProj_2023": {
+          "draw a line of squares": {
+            "name": "சதுரங்களின் கோட்டை வரையவும்"
+          },
+          "draw hexagon": {
+            "name": "அறுகோணத்தை வரையவும்"
+          },
+          "draw line of hexagons": {
+            "name": "அறுகோணங்களின் கோட்டை வரையவும்"
+          },
+          "draw square": {
+            "name": "சதுரத்தை வரையவும்"
+          },
+          "staggered squares": {
+            "name": "தடுமாறிய சதுரங்கள் "
+          }
+        },
         "courseE_artist_functions_challenge1": {
           "do something": {
             "name": "ஏதேனும் இயக்கு"
@@ -2246,6 +2577,14 @@
           }
         },
         "courseE_artist_functions_challenge1_2021": {
+          "do something": {
+            "name": "ஏதேனும் இயக்கு"
+          },
+          "my design": {
+            "name": "என் வடிவமைப்பு "
+          }
+        },
+        "courseE_artist_functions_challenge1_2023": {
           "do something": {
             "name": "ஏதேனும் இயக்கு"
           },
@@ -2301,6 +2640,14 @@
             "name": "என் வடிவமைப்பு "
           }
         },
+        "courseE_artist_functions_challenge2_2023": {
+          "do something": {
+            "name": "ஏதேனும் இயக்கு"
+          },
+          "my design": {
+            "name": "என் வடிவமைப்பு "
+          }
+        },
         "courseE_artist_functions_predict1": {
           "draw a square": {
             "name": "ஒரு சதுரத்தை வரையவும்"
@@ -2342,6 +2689,14 @@
           }
         },
         "courseE_artist_functions_predict1_2021": {
+          "draw a square": {
+            "name": "ஒரு சதுரத்தை வரையவும்"
+          },
+          "draw ear stems": {
+            "name": "காது தண்டுகளை வரையவும்"
+          }
+        },
+        "courseE_artist_functions_predict1_2023": {
           "draw a square": {
             "name": "ஒரு சதுரத்தை வரையவும்"
           },
@@ -2421,6 +2776,17 @@
           }
         },
         "courseE_artist_functions_predict2_2021": {
+          "do something": {
+            "name": "ஏதேனும் இயக்கு"
+          },
+          "draw line of polygons": {
+            "name": "பலகோணங்களின் கோட்டை வரையவும்"
+          },
+          "draw polygon": {
+            "name": "பலகோணம் வரையவும்"
+          }
+        },
+        "courseE_artist_functions_predict2_2023": {
           "do something": {
             "name": "ஏதேனும் இயக்கு"
           },
@@ -2531,6 +2897,20 @@
             "name": "பூசணி சதுரம் "
           }
         },
+        "courseE_farmer_functions10a1_2023": {
+          "check square for corn": {
+            "name": "சோளத்திற்கான சதுரத்தை சரிபார்க்கவும் "
+          },
+          "get all pumpkins": {
+            "name": "அனைத்து பூசணிக்காயையும் பெறுங்கள் "
+          },
+          "pick along path": {
+            "name": "பாதையில் உள்ளதை எடு "
+          },
+          "pumpkin square": {
+            "name": "பூசணி சதுரம் "
+          }
+        },
         "courseE_farmer_functions11_predict2022": {
           "check square for corn": {
             "name": "சோளத்திற்கான சதுரத்தை சரிபார்க்கவும் "
@@ -2600,6 +2980,23 @@
           }
         },
         "courseE_farmer_functions11_predict_2021": {
+          "check square for corn": {
+            "name": "சோளத்திற்கான சதுரத்தை சரிபார்க்கவும் "
+          },
+          "get all pumpkins": {
+            "name": "அனைத்து பூசணிக்காயையும் பெறுங்கள் "
+          },
+          "get produce": {
+            "name": "உற்பத்தி கிடைக்கும்"
+          },
+          "pick along path": {
+            "name": "பாதையில் உள்ளதை எடு "
+          },
+          "pumpkin square": {
+            "name": "பூசணி சதுரம் "
+          }
+        },
+        "courseE_farmer_functions11_predict_2023": {
           "check square for corn": {
             "name": "சோளத்திற்கான சதுரத்தை சரிபார்க்கவும் "
           },
@@ -2686,6 +3083,20 @@
             "name": "பாதையில் உள்ளதை எடு "
           }
         },
+        "courseE_farmer_functions13_2023": {
+          "check for corn": {
+            "name": "சோளத்தை சரிபார்க்கவும் "
+          },
+          "corn rectangle": {
+            "name": "சோள செவ்வகம் "
+          },
+          "lettuce stairs": {
+            "name": "கீரை படிக்கட்டுகள் "
+          },
+          "pick along path": {
+            "name": "பாதையில் உள்ளதை எடு "
+          }
+        },
         "courseE_farmer_functions1a2022": {
           "check square for corn": {
             "name": "சோளத்திற்கான சதுரத்தை சரிபார்க்கவும் "
@@ -2711,6 +3122,11 @@
             "name": "சோளத்திற்கான சதுரத்தை சரிபார்க்கவும் "
           }
         },
+        "courseE_farmer_functions1a_2023": {
+          "check square for corn": {
+            "name": "சோளத்திற்கான சதுரத்தை சரிபார்க்கவும் "
+          }
+        },
         "courseE_farmer_functions2b2022": {
           "check square for corn": {
             "name": "சோளத்திற்கான சதுரத்தை சரிபார்க்கவும் "
@@ -2732,6 +3148,11 @@
           }
         },
         "courseE_farmer_functions2b_2021": {
+          "check square for corn": {
+            "name": "சோளத்திற்கான சதுரத்தை சரிபார்க்கவும் "
+          }
+        },
+        "courseE_farmer_functions2b_2023": {
           "check square for corn": {
             "name": "சோளத்திற்கான சதுரத்தை சரிபார்க்கவும் "
           }
@@ -2769,6 +3190,14 @@
           }
         },
         "courseE_farmer_functions2ba_2021": {
+          "check square for corn": {
+            "name": "சோளத்திற்கான சதுரத்தை சரிபார்க்கவும் "
+          },
+          "get all pumpkins": {
+            "name": "அனைத்து பூசணிக்காயையும் பெறுங்கள் "
+          }
+        },
+        "courseE_farmer_functions2ba_2023": {
           "check square for corn": {
             "name": "சோளத்திற்கான சதுரத்தை சரிபார்க்கவும் "
           },
@@ -2831,6 +3260,17 @@
             "name": "பாதையில் உள்ளதை எடு "
           }
         },
+        "courseE_farmer_functions3c1_2023": {
+          "check square for corn": {
+            "name": "சோளத்திற்கான சதுரத்தை சரிபார்க்கவும் "
+          },
+          "get all pumpkins": {
+            "name": "அனைத்து பூசணிக்காயையும் பெறுங்கள் "
+          },
+          "pick along path": {
+            "name": "பாதையில் உள்ளதை எடு "
+          }
+        },
         "courseE_farmer_functions3c2022": {
           "check square for corn": {
             "name": "சோளத்திற்கான சதுரத்தை சரிபார்க்கவும் "
@@ -2871,6 +3311,14 @@
             "name": "அனைத்து பூசணிக்காயையும் பெறுங்கள் "
           }
         },
+        "courseE_farmer_functions3c_2023": {
+          "check square for corn": {
+            "name": "சோளத்திற்கான சதுரத்தை சரிபார்க்கவும் "
+          },
+          "get all pumpkins": {
+            "name": "அனைத்து பூசணிக்காயையும் பெறுங்கள் "
+          }
+        },
         "courseE_farmer_functions7a12022": {
           "garden square": {
             "name": "தோட்ட சதுரம் "
@@ -2892,6 +3340,11 @@
           }
         },
         "courseE_farmer_functions7a1_2021": {
+          "garden square": {
+            "name": "தோட்ட சதுரம் "
+          }
+        },
+        "courseE_farmer_functions7a1_2023": {
           "garden square": {
             "name": "தோட்ட சதுரம் "
           }
@@ -2921,6 +3374,11 @@
             "name": "தோட்ட சதுரம் "
           }
         },
+        "courseE_farmer_functions8a1_2023": {
+          "garden square": {
+            "name": "தோட்ட சதுரம் "
+          }
+        },
         "courseE_farmer_functions9a12022": {
           "garden square": {
             "name": "தோட்ட சதுரம் "
@@ -2944,6 +3402,11 @@
         "courseE_farmer_functions9a1_2021": {
           "garden square": {
             "name": "தோட்ட சதுரம்"
+          }
+        },
+        "courseE_farmer_functions9a1_2023": {
+          "garden square": {
+            "name": "தோட்ட சதுரம் "
           }
         },
         "courseE_playLab_scaffold1": {
@@ -2977,6 +3440,11 @@
           }
         },
         "courseF_apps_collector_-2022-2": {
+          "end game": {
+            "name": "விளையாட்டை முடிவுசெய்"
+          }
+        },
+        "courseF_apps_collector_2023": {
           "end game": {
             "name": "விளையாட்டை முடிவுசெய்"
           }
@@ -3214,6 +3682,11 @@
           }
         },
         "courseF_bee_for_challenge1_2021": {
+          "move and get nectar with counter": {
+            "name": "நகர்ந்து, கவுண்டருடன் அமிர்தத்தைப் பெறுங்கள் "
+          }
+        },
+        "courseF_bee_for_challenge1_2023": {
           "move and get nectar with counter": {
             "name": "நகர்ந்து, கவுண்டருடன் அமிர்தத்தைப் பெறுங்கள் "
           }

@@ -1161,6 +1161,764 @@
           "word": "事件",
           "definition": "导致某些事情发生的操作。"
         },
+        "adaptation/csc-adaptations/2023": {
+          "word": "适应",
+          "definition": "改变生物体以更好地在环境中生存"
+        },
+        "code/csc-adaptations/2023": {
+          "word": "代码",
+          "definition": "(v) 为计算机编写指令"
+        },
+        "event/csc-adaptations/2023": {
+          "word": "事件",
+          "definition": "导致某件事发生的动作"
+        },
+        "evolution/csc-adaptations/2023": {
+          "word": "进化",
+          "definition": "物种特征在几代人中的变化"
+        },
+        "migration/csc-adaptations/2023": {
+          "word": "迁移",
+          "definition": "动物的长距离移动可以让他们寻求更好的环境"
+        },
+        "camouflage/csc-adaptations/2023": {
+          "word": "伪装",
+          "definition": "一种防御机制，生物用来掩盖自己的外表并与环境融为一体"
+        },
+        "behavior/csc-adaptations/2023": {
+          "word": "行为",
+          "definition": "你想让精灵一遍又一遍地执行的一组动作。 "
+        },
+        "code_v_/csc-bookcovers/2023": {
+          "word": "代码 (v)",
+          "definition": "为计算机编写指令。"
+        },
+        "event/csc-bookcovers/2023": {
+          "word": "事件",
+          "definition": "导致某些事情发生的操作。"
+        },
+        "program/csc-bookcovers/2023": {
+          "word": "程序",
+          "definition": "一系列已编码的步骤，可在设备上运行。"
+        },
+        "prompt/csc-bookcovers/2023": {
+          "word": "提示符",
+          "definition": "计算机屏幕上等待用户输入的消息。"
+        },
+        "sprite/csc-bookcovers/2023": {
+          "word": "精灵",
+          "definition": "屏幕上一种具有位置、大小和外观的图形。"
+        },
+        "background/csc-bookcovers/2023": {
+          "word": "背景",
+          "definition": "屏幕上主要事物或人物背后的视觉效果。"
+        },
+        "character/csc-bookcovers/2023": {
+          "word": "人物",
+          "definition": "一个人、动物、存在、故事中的生物。"
+        },
+        "setting/csc-bookcovers/2023": {
+          "word": "设定",
+          "definition": "故事的时间和地点（或时间和地点）。"
+        },
+        "summary/csc-bookcovers/2023": {
+          "word": "摘要",
+          "definition": "用你自己的话说，用更短的方式讲述文本中最重要的部分"
+        },
+        "code/csc-ecosystems/2023": {
+          "word": "代码",
+          "definition": "(v) 为计算机编写指令"
+        },
+        "condition/csc-ecosystems/2023": {
+          "word": "条件",
+          "definition": "在允许操作之前，程序会检查它是否属实"
+        },
+        "conditionals/csc-ecosystems/2023": {
+          "word": "条件语句",
+          "definition": "仅在特定条件下运行的语句"
+        },
+        "ecosystem/csc-ecosystems/2023": {
+          "word": "生态系统",
+          "definition": "由相互作用的生物体及其环境组成的生物群落"
+        },
+        "event/csc-ecosystems/2023": {
+          "word": "事件",
+          "definition": "导致某件事发生的动作"
+        },
+        "overfishing/csc-ecosystems/2023": {
+          "word": "过度捕捞",
+          "definition": "去除鱼类的速度比它们繁殖的速度快"
+        },
+        "simulation/csc-ecosystems/2023": {
+          "word": "模拟",
+          "definition": "用于研究目的的计算机模型。"
+        },
+        "debug/csc-ecosystems/2023": {
+          "word": "调试",
+          "definition": "查找和修复代码中的错误或问题。"
+        },
+        "variable/csc-ecosystems/2023": {
+          "word": "变量",
+          "definition": "可以存储值的容器。 "
+        },
+        "ecologist/csc-ecosystems/2023": {
+          "word": "生态学家",
+          "definition": "研究动植物如何与环境相互作用的科学家。"
+        },
+        "energy/csc-ecosystems/2023": {
+          "word": "能源",
+          "definition": "在食物网中的生物之间从生产者转移到消费者。生物利用这种能量来执行复杂的任务。"
+        },
+        "food_chain/csc-ecosystems/2023": {
+          "word": "食物链 ",
+          "definition": "一组生物按照它们所吃食物的顺序联系在一起，从生产者到消费者，从猎物到捕食者。"
+        },
+        "code/csc-mappinglandmarks/2023": {
+          "word": "代码",
+          "definition": "（动词）为计算机编写指令。"
+        },
+        "event/csc-mappinglandmarks/2023": {
+          "word": "事件",
+          "definition": "导致某些事情发生的操作。"
+        },
+        "landmark/csc-mappinglandmarks/2023": {
+          "word": "地标",
+          "definition": "地标是具有重要意义或使某个地方易于识别的物体（自然或人造）。"
+        },
+        "sprite/csc-mappinglandmarks/2023": {
+          "word": "精灵",
+          "definition": "程序中的图像或角色。"
+        },
+        "map/csc-mappinglandmarks/2023": {
+          "word": "地图",
+          "definition": "表示陆地或海洋区域，显示物理特征、城市、道路等。"
+        },
+        "pattern/csc-starquilts/2023": {
+          "word": "图案",
+          "definition": "以规律和重复的方式发生或出现的东西"
+        },
+        "rhombus/csc-starquilts/2023": {
+          "word": "菱形",
+          "definition": "四条边相等、对边平行、相反角度相等的多边形"
+        },
+        "star_quilt/csc-starquilts/2023": {
+          "word": "星星被子",
+          "definition": "来自大平原的美洲原住民的传统和珍贵礼物"
+        },
+        "artist/csc-starquilts/2023": {
+          "word": "小艺术家",
+          "definition": "你可以写代码让他画几乎任何东西"
+        },
+        "loop/csc-starquilts/2023": {
+          "word": "循环",
+          "definition": "重复的代码序列"
+        },
+        "point/csc-starquilts/2023": {
+          "word": "积分",
+          "definition": "星形的一部分"
+        },
+        "row/csc-starquilts/2023": {
+          "word": "行",
+          "definition": "在本例中，一条有序的菱形线"
+        },
+        "concentric/csc-starquilts/2023": {
+          "word": "同心",
+          "definition": "位于同一中心的对象或形状"
+        },
+        "comments/csc-starquilts/2023": {
+          "word": "评论",
+          "definition": "给自己的笔记，解释一段代码。它们不会更改程序，但有助于保持代码井然有序。"
+        },
+        "event/csc-timecapsule/2023": {
+          "word": "事件",
+          "definition": "导致某些事情发生的操作。"
+        },
+        "imagery/csc-timecapsule/2023": {
+          "word": "影像",
+          "definition": "诗歌或故事产生的心理画面"
+        },
+        "mood/csc-timecapsule/2023": {
+          "word": "意境",
+          "definition": "在艺术或写作中对感觉、氛围或情感的表达。"
+        },
+        "sprite/csc-timecapsule/2023": {
+          "word": "精灵",
+          "definition": "程序中的图像或角色"
+        },
+        "time_capsule/csc-timecapsule/2023": {
+          "definition": "一个存放记忆和日常物品的地方，这些回忆和日常物品代表了生活在特定时期的人的生活中的一天。 "
+        },
+        "code/poetry/2023": {
+          "word": "代码",
+          "definition": "（动词）为计算机编写指令。"
+        },
+        "event/poetry/2023": {
+          "word": "事件",
+          "definition": "导致某些事情发生的操作。"
+        },
+        "line/poetry/2023": {
+          "word": "诗歌行",
+          "definition": "（诗歌）-一首诗的细分，排成一排，以右边缘结尾。"
+        },
+        "mood/poetry/2023": {
+          "word": "意境",
+          "definition": "在艺术或写作中对感觉、氛围或情感的表达。"
+        },
+        "program/poetry/2023": {
+          "word": "程序",
+          "definition": "一系列已编码的步骤，可在设备上运行。"
+        },
+        "poem/poetry/2023": {
+          "word": "诗",
+          "definition": "使用文字在读者脑海中创造画面、感受和想法的写作台词。"
+        },
+        "constructive_feedback/poetry/2023": {
+          "word": "建设性反馈",
+          "definition": "尊重他人的评论可以帮助他人改进工作"
+        },
+        "poetry_circle/poetry/2023": {
+          "word": "诗歌圈",
+          "definition": "一个安全而富有创造力的空间，可以测试新诗并从他人那里获得建设性反馈"
+        },
+        "algorithm/coursea/2023": {
+          "word": "算法",
+          "definition": "完成某项任务的一系列步骤。 "
+        },
+        "debugging/coursea/2023": {
+          "word": "调试",
+          "definition": "在算法或程序中发现并解决问题。"
+        },
+        "program/coursea/2023": {
+          "word": "程序",
+          "definition": "编码为可以由计算机运行的算法。"
+        },
+        "click/coursea/2023": {
+          "word": "点击",
+          "definition": "按下鼠标按钮"
+        },
+        "double_click/coursea/2023": {
+          "word": "双击",
+          "definition": "快速按下鼠标按钮"
+        },
+        "drag/coursea/2023": {
+          "word": "拖",
+          "definition": "在将鼠标指针移动到新位置时，点击并按住鼠标按钮"
+        },
+        "drop/coursea/2023": {
+          "word": "丢掉",
+          "definition": "释放鼠标按钮，“放开”正在拖动的项目"
+        },
+        "bug/coursea/2023": {
+          "word": "Bug/错误",
+          "definition": "程序中不能正常工作的部分。"
+        },
+        "programming/coursea/2023": {
+          "word": "编程",
+          "definition": "创建程序的技术。"
+        },
+        "loop/coursea/2023": {
+          "word": "循环",
+          "definition": "反复做某事的动作。"
+        },
+        "repeat/coursea/2023": {
+          "word": "重复",
+          "definition": "再次做某事。"
+        },
+        "event/coursea/2023": {
+          "word": "事件",
+          "definition": "导致某些事情发生的操作。"
+        },
+        "algorithm/courseb/2023": {
+          "word": "算法",
+          "definition": "完成某项任务的一系列步骤。 "
+        },
+        "bug/courseb/2023": {
+          "word": "Bug/错误",
+          "definition": "程序中不能正常工作的部分。"
+        },
+        "debugging/courseb/2023": {
+          "word": "调试",
+          "definition": "在算法或程序中发现并解决问题。"
+        },
+        "click/courseb/2023": {
+          "word": "点击",
+          "definition": "按下鼠标按钮"
+        },
+        "double_click/courseb/2023": {
+          "word": "双击",
+          "definition": "快速按下鼠标按钮"
+        },
+        "drag/courseb/2023": {
+          "word": "拖",
+          "definition": "在将鼠标指针移动到新位置时，点击并按住鼠标按钮"
+        },
+        "drop/courseb/2023": {
+          "word": "丢掉",
+          "definition": "释放鼠标按钮，“放开”正在拖动的项目"
+        },
+        "program/courseb/2023": {
+          "word": "程序",
+          "definition": "编码为可以由计算机运行的算法。"
+        },
+        "programming/courseb/2023": {
+          "word": "编程",
+          "definition": "创建程序的技术。"
+        },
+        "persistence/courseb/2023": {
+          "word": "坚持",
+          "definition": "即使非常困难，也一次又一次的尝试。"
+        },
+        "loop/courseb/2023": {
+          "word": "循环",
+          "definition": "反复做某事的动作。"
+        },
+        "repeat/courseb/2023": {
+          "word": "重复",
+          "definition": "再次做某事。"
+        },
+        "event/courseb/2023": {
+          "word": "事件",
+          "definition": "导致某些事情发生的操作。"
+        },
+        "algorithm/coursec/2023": {
+          "word": "算法",
+          "definition": "完成某项任务的一系列步骤。 "
+        },
+        "bug/coursec/2023": {
+          "word": "Bug/错误",
+          "definition": "程序中不能正常工作的部分。"
+        },
+        "debugging/coursec/2023": {
+          "word": "调试",
+          "definition": "在算法或程序中发现并解决问题。"
+        },
+        "program/coursec/2023": {
+          "word": "程序",
+          "definition": "编码为可以由计算机运行的算法。"
+        },
+        "sequencing/coursec/2023": {
+          "word": "序列",
+          "definition": "把命令按正确的顺序排列以便计算机可以读取命令。"
+        },
+        "persistence/coursec/2023": {
+          "word": "坚持"
+        },
+        "programming/coursec/2023": {
+          "word": "编程",
+          "definition": "创建程序的技术。"
+        },
+        "loop/coursec/2023": {
+          "word": "循环",
+          "definition": "反复做某事的动作。"
+        },
+        "repeat/coursec/2023": {
+          "word": "重复",
+          "definition": "再次做某事。"
+        },
+        "event/coursec/2023": {
+          "word": "事件",
+          "definition": "导致某些事情发生的操作。"
+        },
+        "data/coursec/2023": {
+          "word": "数据"
+        },
+        "binary/coursec/2023": {
+          "word": "二进制",
+          "definition": "一种只使用两个选项来表示信息的方法。"
+        },
+        "algorithm/coursed/2023": {
+          "word": "算法",
+          "definition": "完成某项任务的一系列步骤。 "
+        },
+        "program/coursed/2023": {
+          "word": "程序",
+          "definition": "编码为可以由计算机运行的算法。"
+        },
+        "bug/coursed/2023": {
+          "word": "Bug/错误",
+          "definition": "程序中不能正常工作的部分。"
+        },
+        "debugging/coursed/2023": {
+          "word": "调试",
+          "definition": "在算法或程序中发现并解决问题。"
+        },
+        "loop/coursed/2023": {
+          "word": "循环",
+          "definition": "反复做某事的动作。"
+        },
+        "programming/coursed/2023": {
+          "word": "编程",
+          "definition": "创建程序的技术。"
+        },
+        "frustrated/coursed/2023": {
+          "word": "受挫",
+          "definition": "因为不按你的套路出牌而感到烦恼或生气。"
+        },
+        "persistence/coursed/2023": {
+          "word": "坚持",
+          "definition": "即使非常困难，也一次又一次的尝试。"
+        },
+        "event/coursed/2023": {
+          "word": "事件",
+          "definition": "导致某些事情发生的操作。"
+        },
+        "code/coursed/2023": {
+          "word": "代码",
+          "definition": "(v) 编写代码或编写计算机指令。"
+        },
+        "repeat/coursed/2023": {
+          "word": "重复",
+          "definition": "再次做某事。"
+        },
+        "command/coursed/2023": {
+          "word": "指令",
+          "definition": "计算机指令许多命令组合在一起构成算法和计算机程序。 "
+        },
+        "conditionals/coursed/2023": {
+          "word": "条件语句",
+          "definition": "仅在特定条件下运行的语句。"
+        },
+        "pseudocode/coursed/2023": {
+          "word": "伪代码",
+          "definition": "算法中步骤的简单语言描述"
+        },
+        "condition/coursed/2023": {
+          "word": "条件",
+          "definition": "程序检查是否为真以决定是否允许某项行动的东西。"
+        },
+        "while_loop/coursed/2023": {
+          "word": "While循环",
+          "definition": "当条件为真时继续重复的循环。"
+        },
+        "until/coursed/2023": {
+          "word": "直到",
+          "definition": "一个告诉你做某件事直到某件事为真的命令。"
+        },
+        "behavior/coursee/2023": {
+          "word": "行为",
+          "definition": "精灵图在被告知停止前持续执行的动作。"
+        },
+        "sprite/coursee/2023": {
+          "word": "精灵",
+          "definition": "屏幕上一种具有位置、大小和外观的图形。"
+        },
+        "loop/coursee/2023": {
+          "word": "循环",
+          "definition": "反复做某事的动作。"
+        },
+        "repeat/coursee/2023": {
+          "word": "重复",
+          "definition": "再次做某事。"
+        },
+        "function/coursee/2023": {
+          "word": "函数"
+        },
+        "condition/coursee/2023": {
+          "word": "条件"
+        },
+        "conditionals/coursee/2023": {
+          "word": "条件语句",
+          "definition": "仅在特定条件下运行的语句。"
+        },
+        "while_loop/coursee/2023": {
+          "word": "While循环",
+          "definition": "当条件为真时继续重复的循环。"
+        },
+        "copyright/coursee/2023": {
+          "word": "版权",
+          "definition": "版权：印刷、出版、表演、拍摄或记录文学、艺术或音乐材料并授权他人这样做的独家法律权利"
+        },
+        "define/coursee/2023": {
+          "word": "定义",
+          "definition": "找出你要解决的问题的详情"
+        },
+        "prepare/coursee/2023": {
+          "word": "准备",
+          "definition": "研究、计划和获取你将要做的活动的材料"
+        },
+        "reflect/coursee/2023": {
+          "word": "反思",
+          "definition": "仔细回想，以期在将来改善结果"
+        },
+        "try/coursee/2023": {
+          "word": "尝试",
+          "definition": "试图做某事"
+        },
+        "sprite/coursef/2023": {
+          "word": "精灵",
+          "definition": "屏幕上一种具有位置、大小和外观的图形。"
+        },
+        "user/coursef/2023": {
+          "word": "用户",
+          "definition": "使用某物（包括软件和硬件）的人。"
+        },
+        "algorithm/coursef/2023": {
+          "word": "算法",
+          "definition": "完成任务的步骤列表。"
+        },
+        "behavior/coursef/2023": {
+          "word": "行为"
+        },
+        "program/coursef/2023": {
+          "word": "程序",
+          "definition": "编码为可以由计算机运行的算法。"
+        },
+        "event/coursef/2023": {
+          "word": "事件",
+          "definition": "导致某些事情发生的操作。"
+        },
+        "variable/coursef/2023": {
+          "word": "变量",
+          "definition": "程序中使用的一段信息的标签。"
+        },
+        "prompt/coursef/2023": {
+          "word": "提示符",
+          "definition": "计算机屏幕上等待用户输入的消息。"
+        },
+        "input/coursef/2023": {
+          "word": "输入",
+          "definition": "计算机从用户那里得到的信息。"
+        },
+        "models_and_simulations/coursef/2023": {
+          "word": "模型和模拟",
+          "definition": "复制或模仿现实世界事件的关键特征以研究其行为的程序，无需在现实生活中进行实验的成本、时间或危险。"
+        },
+        "machine_learning/coursef/2023": {
+          "word": "机器学习",
+          "definition": "计算机如何在没有明确编程的情况下识别模式并做出决策"
+        },
+        "dns/coursef/2023": {
+          "word": "DNS",
+          "definition": "域名系统的缩写，这个系统将域名（如example.com网站）转译为IP地址（如93.184.216.34）"
+        },
+        "dsl_cable/coursef/2023": {
+          "word": "DSL/电缆",
+          "definition": "用电话或电视电缆发送信息的一种方法。"
+        },
+        "fiber_optic_cable/coursef/2023": {
+          "word": "光纤电缆",
+          "definition": "利用光来传输信息的连接"
+        },
+        "internet/coursef/2023": {
+          "word": "互联网",
+          "definition": "相互连接的一组计算机和服务器。"
+        },
+        "ip_address/coursef/2023": {
+          "word": "IP地址",
+          "definition": "分配给连接到互联网的任何项目的编号。"
+        },
+        "packets/coursef/2023": {
+          "word": "数据包",
+          "definition": "从较大的信息块中精心构建的小块信息。"
+        },
+        "servers/coursef/2023": {
+          "word": "服务器",
+          "definition": "只为向他人提供东西而存在的计算机。"
+        },
+        "url/coursef/2023": {
+          "word": "URL",
+          "definition": "用来调用网页的易记地址（比如www.code.org网站）。"
+        },
+        "wi_fi/coursef/2023": {
+          "word": "WiFi",
+          "definition": "用无线电波发送信息的无线方法。"
+        },
+        "define/coursef/2023": {
+          "word": "定义",
+          "definition": "找出你要解决的问题的详情"
+        },
+        "prepare/coursef/2023": {
+          "word": "准备",
+          "definition": "研究、计划和获取你将要做的活动的材料"
+        },
+        "reflect/coursef/2023": {
+          "word": "反思",
+          "definition": "仔细回想，以期在将来改善结果"
+        },
+        "try/coursef/2023": {
+          "word": "尝试",
+          "definition": "试图做某事"
+        },
+        "algorithm/express/2023": {
+          "word": "算法",
+          "definition": "完成某项任务的一系列步骤。 "
+        },
+        "bug/express/2023": {
+          "word": "Bug/错误",
+          "definition": "程序中不能正常工作的部分。"
+        },
+        "debugging/express/2023": {
+          "word": "调试",
+          "definition": "在算法或程序中发现并解决问题。"
+        },
+        "sequencing/express/2023": {
+          "word": "序列",
+          "definition": "把命令按正确的顺序排列以便计算机可以读取命令。"
+        },
+        "program/express/2023": {
+          "word": "程序",
+          "definition": "编码为可以由计算机运行的算法。"
+        },
+        "programming/express/2023": {
+          "word": "编程",
+          "definition": "创建程序的技术。"
+        },
+        "behavior/express/2023": {
+          "word": "行为",
+          "definition": "精灵图在被告知停止前持续执行的动作。"
+        },
+        "sprite/express/2023": {
+          "word": "精灵",
+          "definition": "屏幕上一种具有位置、大小和外观的图形。"
+        },
+        "event/express/2023": {
+          "word": "事件",
+          "definition": "导致某些事情发生的操作。"
+        },
+        "code/express/2023": {
+          "word": "代码",
+          "definition": "编写代码或编写计算机指令。"
+        },
+        "loop/express/2023": {
+          "word": "循环",
+          "definition": "反复做某事的动作。"
+        },
+        "repeat/express/2023": {
+          "word": "重复",
+          "definition": "再次做某事。"
+        },
+        "command/express/2023": {
+          "word": "指令",
+          "definition": "计算机指令许多命令组合在一起构成算法和计算机程序。 "
+        },
+        "condition/express/2023": {
+          "word": "条件",
+          "definition": "程序检查是否为真以决定是否允许某项行动的东西。"
+        },
+        "conditionals/express/2023": {
+          "word": "条件语句",
+          "definition": "仅在特定条件下运行的语句。"
+        },
+        "while_loop/express/2023": {
+          "word": "While循环",
+          "definition": "当条件为真时继续重复的循环。"
+        },
+        "until/express/2023": {
+          "word": "直到",
+          "definition": "一个告诉你做某件事直到某件事为真的命令。"
+        },
+        "function/express/2023": {
+          "word": "函数",
+          "definition": "一段可以很容易地反复调用的代码。"
+        },
+        "prompt/express/2023": {
+          "word": "提示符",
+          "definition": "计算机屏幕上等待用户输入的消息。"
+        },
+        "variable/express/2023": {
+          "word": "变量",
+          "definition": "程序中使用的一段信息的标签。"
+        },
+        "for_loop/express/2023": {
+          "word": "For循环",
+          "definition": "具有预定开始、结束和增量（步长间隔）的循环。"
+        },
+        "define/express/2023": {
+          "word": "定义",
+          "definition": "找出你要解决的问题的详情"
+        },
+        "prepare/express/2023": {
+          "word": "准备",
+          "definition": "研究、计划和获取你将要做的活动的材料"
+        },
+        "reflect/express/2023": {
+          "word": "反思",
+          "definition": "仔细回想，以期在将来改善结果"
+        },
+        "try/express/2023": {
+          "word": "尝试",
+          "definition": "试图做某事"
+        },
+        "click/pre-express/2023": {
+          "word": "点击",
+          "definition": "按下鼠标按钮"
+        },
+        "double_click/pre-express/2023": {
+          "word": "双击",
+          "definition": "快速按下鼠标按钮"
+        },
+        "drag/pre-express/2023": {
+          "word": "拖",
+          "definition": "在将鼠标指针移动到新位置时，点击并按住鼠标按钮"
+        },
+        "drop/pre-express/2023": {
+          "word": "丢掉",
+          "definition": "释放鼠标按钮，“放开”正在拖动的项目"
+        },
+        "algorithm/pre-express/2023": {
+          "word": "算法",
+          "definition": "完成某项任务的一系列步骤。 "
+        },
+        "bug/pre-express/2023": {
+          "word": "Bug/错误",
+          "definition": "程序中不能正常工作的部分。"
+        },
+        "debugging/pre-express/2023": {
+          "word": "调试",
+          "definition": "在算法或程序中发现并解决问题。"
+        },
+        "program/pre-express/2023": {
+          "word": "程序",
+          "definition": "编码为可以由计算机运行的算法。"
+        },
+        "programming/pre-express/2023": {
+          "word": "编程",
+          "definition": "创建程序的技术。"
+        },
+        "persistence/pre-express/2023": {
+          "word": "坚持",
+          "definition": "即使非常困难，也一次又一次的尝试。"
+        },
+        "loop/pre-express/2023": {
+          "word": "循环",
+          "definition": "反复做某事的动作。"
+        },
+        "repeat/pre-express/2023": {
+          "word": "重复",
+          "definition": "再次做某事。"
+        },
+        "event/pre-express/2023": {
+          "word": "事件",
+          "definition": "导致某些事情发生的操作。"
+        },
+        "machine_learning/how-ai-works/2023": {
+          "word": "机器学习",
+          "definition": "计算机如何在没有明确编程的情况下识别模式并做出决策"
+        },
+        "algorithm/how-ai-works/2023": {
+          "word": "算法",
+          "definition": "解决问题或做出决定的一系列步骤"
+        },
+        "network/how-ai-works/2023": {
+          "word": "网络",
+          "definition": "连接在一起的物品的集合。遵循这些连接可以表示算法中的步骤，例如流程图。"
+        },
+        "large_language_model_llm_/how-ai-works/2023": {
+          "word": "大型语言模型 (LLM)",
+          "definition": "一种通用的人工智能形式，是在非常非常庞大的知识体系上训练的"
+        },
+        "diffusion_ai/how-ai-works/2023": {
+          "word": "扩散人工智能",
+          "definition": "将图像转换为噪点，并训练 AI 来逆转这一过程"
+        },
+        "gan_generative_adversarial_network_/how-ai-works/2023": {
+          "word": "GAN（生成对抗网络）",
+          "definition": "一种使用两个相互竞争的人工智能模型生成东西的方法"
+        },
+        "artificial_intelligence/how-ai-works/2023": {
+          "word": "人工智能",
+          "definition": "机器学习和解决问题的能力。"
+        },
         "code/aquatic/unversioned": {
           "word": "代码",
           "definition": "(v) 编写代码或编写计算机指令。"

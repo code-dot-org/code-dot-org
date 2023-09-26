@@ -13,6 +13,7 @@ class LevelsHelperTest < ActionView::TestCase
 
   setup do
     @level = create(:maze)
+    @game = Game.custom_maze
 
     def request
       OpenStruct.new(

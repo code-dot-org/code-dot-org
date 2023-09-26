@@ -622,7 +622,7 @@
         },
         "what-is-a-computer-1-2-3/csd/2021": {
           "name": "Що таке комп’ютер",
-          "url": "https://youtu.be/rRSD128KWIM",
+          "url": "https://youtu.be/ZP1YC7xeYZ8",
           "type": "Відео"
         },
         "what-is-a-computer-version-b/csd/2021": {
@@ -657,7 +657,7 @@
         },
         "what-do-computers-do/csd/2021": {
           "name": "Що роблять комп’ютери",
-          "url": "https://www.youtube.com/watch?v=92TaQRBwPSs",
+          "url": "https://www.youtube.com/watch?v=sxjqgVgD-64",
           "type": "Відео"
         },
         "storage-1/csd/2021": {
@@ -2885,7 +2885,7 @@
         },
         "safety-in-my-online-neighborhood-pause-and-think-moment/coursea/2021": {
           "name": "Безпека у моєму інтернет-районі: Зупинись і поміркуй",
-          "url": "https://docs.google.com/document/d/1o95Q7OD2oF5e-lWxj31kKopfhQVYWDUmw6uDdm1RIIU/",
+          "url": "https://docs.google.com/document/d/1-0hiaMNrtj4yTLZO3zVhZkYUU0832O81LtCfZQQfsic/",
           "type": "Роздатковий матеріал"
         },
         "safety-in-my-online-neighborhood-safety-it-rules/coursea/2021": {
@@ -2899,7 +2899,7 @@
           "type": "Ресурс"
         },
         "how_to_make_a_class_section_on_code_org/coursea/2021": {
-          "name": "Початок роботи - Створення груп та класів",
+          "name": "Початок роботи - Створення груп та класів <https://docs.google.com/document/d/1fQ9WcoAacoVFANI5JM3gXCE-6AMjl947fLaVr4gqZ4Y/edit?usp=sharing>",
           "url": "https://www.youtube.com/watch?v=4Wugxc80fNU",
           "type": "Відео"
         },
@@ -3277,7 +3277,7 @@
         },
         "unplugged-video-big-event/courseb/2021": {
           "name": "Велика подія",
-          "url": "https://www.youtube.com/watch?v=XoApWo-IrI4",
+          "url": "https://www.youtube.com/watch?v=SUH-sB4u-oo",
           "type": "Відео"
         },
         "play_lab_project_planning_guide/courseb/2021": {
@@ -3411,6 +3411,7 @@
         },
         "csf-artist-intro-video/coursec/2021": {
           "name": "Знайомство з Художником",
+          "url": "https://www.youtube.com/watch?v=3wk1cbL79yU",
           "type": "Відео для учнів"
         },
         "csf-turns-angles-doc/coursec/2021": {
@@ -4237,6 +4238,7 @@
         },
         "artist_introduction/express/2021": {
           "name": "Знайомство з Художником",
+          "url": "https://www.youtube.com/watch?v=3wk1cbL79yU",
           "type": "Відео"
         },
         "turns_angles/express/2021": {
@@ -4458,7 +4460,7 @@
         },
         "what_is_a_computer/csd/2022": {
           "name": "Що таке комп’ютер",
-          "url": "https://youtu.be/rRSD128KWIM",
+          "url": "https://youtu.be/ZP1YC7xeYZ8",
           "type": "Відео"
         },
         "what_is_a_computer_/csd/2022": {
@@ -4520,7 +4522,7 @@
         },
         "what_do_computers_do/csd/2022": {
           "name": "Що роблять комп’ютери",
-          "url": "https://www.youtube.com/watch?v=92TaQRBwPSs",
+          "url": "https://www.youtube.com/watch?v=sxjqgVgD-64",
           "type": "Відео"
         },
         "apps_with_storage_2/csd/2022": {
@@ -7072,7 +7074,7 @@
           "type": "Ресурс"
         },
         "getting_started_-_creating_a_class_section/coursea/2022": {
-          "name": "Початок роботи - Створення груп та класів",
+          "name": "Початок роботи - Створення груп та класів <https://docs.google.com/document/d/1fQ9WcoAacoVFANI5JM3gXCE-6AMjl947fLaVr4gqZ4Y/edit?usp=sharing>",
           "url": "https://www.youtube.com/watch?v=4Wugxc80fNU",
           "type": "Відео"
         },
@@ -7428,7 +7430,7 @@
         },
         "the_big_event/courseb/2022": {
           "name": "Велика подія",
-          "url": "https://www.youtube.com/watch?v=XoApWo-IrI4"
+          "url": "https://www.youtube.com/watch?v=SUH-sB4u-oo"
         },
         "the_big_event_1/courseb/2022": {
           "name": "Велика подія",
@@ -7573,6 +7575,7 @@
         },
         "artist_introduction/coursec/2022": {
           "name": "Знайомство з Художником",
+          "url": "https://www.youtube.com/watch?v=3wk1cbL79yU",
           "type": "Відео для учнів"
         },
         "turns_angles/coursec/2022": {
@@ -8283,6 +8286,7 @@
         },
         "artist_introduction/express/2022": {
           "name": "Знайомство з Художником",
+          "url": "https://www.youtube.com/watch?v=3wk1cbL79yU",
           "type": "Відео"
         },
         "turns_angles/express/2022": {
@@ -8403,8 +8407,2234 @@
           "url": "https://www.youtube.com/watch?v=rgbZAWnOWOo",
           "type": "Відео"
         },
+        "cs_connections_landing_page/csc-adaptations/2023": {
+          "name": "Цільова сторінка підключення CS",
+          "url": "https://code.org/educate/csc",
+          "type": "Ресурс"
+        },
+        "csc_extended_connections_book_list/csc-adaptations/2023": {
+          "name": "Список книг розширених підключень CSC",
+          "url": "https://docs.google.com/document/d/14azofBAy5Riq109ruUPi8BbZRvJ1KIthqA3mH7t428Y/template/preview",
+          "type": "Ресурс"
+        },
+        "helpful_hints_for_teachers_and_learners/csc-adaptations/2023": {
+          "name": "Корисні поради для вчителів та учнів",
+          "url": "https://docs.google.com/presentation/d/1RSJhxO9ZMtyLrt160kvAVdyekR4wT2fVSgbrPHR4HS0/template/preview"
+        },
+        "resource_list_for_all_lessons/csc-adaptations/2023": {
+          "name": "Список ресурсів для всіх уроків",
+          "url": "/s/csc-адаптації-2023/ресурси",
+          "type": "Ресурс"
+        },
+        "standards_in_modeling_animal_adaptations/csc-adaptations/2023": {
+          "name": "Стандарти моделювання адаптацій тварин ",
+          "url": "/s/csc-адаптації-2023/стандарти",
+          "type": "Ресурс"
+        },
+        "vocabulary_in_modeling_animal_adaptations/csc-adaptations/2023": {
+          "name": "Лексика в моделюванні адаптацій тварин ",
+          "url": "/s/csc-адаптації-2023/слокаб",
+          "type": "Ресурс"
+        },
+        "ecosystems/csc-adaptations/2023": {
+          "url": "https://docs.google.com/presentation/d/1J9yCLR8vBYHgKxuuKymGNWU_KFCGGGUpzTmpl_dvl7A/template/preview",
+          "type": "Слайди"
+        },
+        "helpful_hints_1/csc-adaptations/2023": {
+          "name": "Корисні підказки",
+          "url": "https://docs.google.com/presentation/d/1RSJhxO9ZMtyLrt160kvAVdyekR4wT2fVSgbrPHR4HS0/template/preview",
+          "type": "Слайди"
+        },
+        "helpful_hints/csc-adaptations/2023": {
+          "name": "Корисні підказки",
+          "url": "https://docs.google.com/presentation/d/1RSJhxO9ZMtyLrt160kvAVdyekR4wT2fVSgbrPHR4HS0/template/preview",
+          "type": "Слайди"
+        },
+        "helpful_hints_2/csc-adaptations/2023": {
+          "name": "Корисні підказки",
+          "url": "https://docs.google.com/presentation/d/1RSJhxO9ZMtyLrt160kvAVdyekR4wT2fVSgbrPHR4HS0/template/preview",
+          "type": "Слайди"
+        },
+        "cs_connections_landing_page/csc-bookcovers/2023": {
+          "name": "Цільова сторінка підключення CS",
+          "url": "https://code.org/educate/csc",
+          "type": "Ресурс"
+        },
+        "helpful_hints_for_teachers_and_learners/csc-bookcovers/2023": {
+          "name": "Корисні поради для вчителів та учнів",
+          "url": "https://docs.google.com/presentation/d/1RSJhxO9ZMtyLrt160kvAVdyekR4wT2fVSgbrPHR4HS0/template/preview",
+          "type": "Ресурс"
+        },
+        "resource_list_for_all_lessons/csc-bookcovers/2023": {
+          "name": "Список ресурсів для всіх уроків",
+          "url": "/s/csc - книга-2023/ресурси",
+          "type": "Ресурс"
+        },
+        "standards_in_coding_a_book_cover/csc-bookcovers/2023": {
+          "name": "Стандарти кодування обкладинки книги",
+          "url": "/s/csc-книга-2023/стандарти",
+          "type": "Ресурс"
+        },
+        "vocabulary_in_coding_a_book_cover/csc-bookcovers/2023": {
+          "name": "Лексика в кодуванні обкладинки книги",
+          "url": "/s/csc-обКЛАДИНКА КНИГ-2023/слокаб",
+          "type": "Ресурс"
+        },
+        "book_cover/csc-bookcovers/2023": {
+          "name": "Обкладинка книги",
+          "url": "https://docs.google.com/presentation/d/1GTaZX9z0b-dwk6Z48TSwqwhjZ9pO9Onk7w8n9xNt_Zk/template/preview",
+          "type": "Слайди"
+        },
+        "book_guide/csc-bookcovers/2023": {
+          "name": "Книжковий довідник",
+          "url": "https://docs.google.com/document/d/1HRSqSLhdRt7O7yv2LN3Y9jOHykw2BvNrtZJRAi11U9k/template/preview",
+          "type": "Ресурс"
+        },
+        "helpful_hints/csc-bookcovers/2023": {
+          "name": "Корисні підказки",
+          "url": "https://docs.google.com/presentation/d/1RSJhxO9ZMtyLrt160kvAVdyekR4wT2fVSgbrPHR4HS0/template/preview",
+          "type": "Слайди"
+        },
+        "create_your_own_book_cover/csc-bookcovers/2023": {
+          "name": "Посібник з планування",
+          "url": "https://docs.google.com/document/d/18cVgDdq77dbdk6gmQ1rGjHIr7pQk3I2Wb2WsAEeNH64/template/preview",
+          "type": "Роздатковий матеріал"
+        },
+        "create_your_own_book_cover_key_/csc-bookcovers/2023": {
+          "name": "Керівництво з планування [Key] Wonder",
+          "url": "https://docs.google.com/document/d/1sinZLdMy8PLHJVKRwGt-mqhcADQtNq0bLYy4oZZwVpQ/template/preview",
+          "type": "Відповіді"
+        },
+        "book_cover_rubric/csc-bookcovers/2023": {
+          "name": "Рубрика обкладинки книги",
+          "url": "https://docs.google.com/document/d/11hnQkEHwwOD6Bo2_oKiE-CxyU5hXJNlMgV30cjaKVYQ/template/preview",
+          "type": "Рубрика"
+        },
+        "planning_your_own_book_cover_-_answer_key/csc-bookcovers/2023": {
+          "name": "Посібник з планування [Key] Esperanza Rising",
+          "url": "https://drive.google.com/file/d/1dpyir8Sh4EgrBT0C1i9M_O8lQkw7rREw/view?usp=sharing",
+          "type": "Відповіді"
+        },
+        "book_cover_1/csc-bookcovers/2023": {
+          "name": "Обкладинка книги",
+          "url": "https://docs.google.com/document/d/11hnQkEHwwOD6Bo2_oKiE-CxyU5hXJNlMgV30cjaKVYQ/template/preview",
+          "type": "Рубрика"
+        },
+        "helpful_hints_2/csc-bookcovers/2023": {
+          "name": "Корисні підказки",
+          "url": "https://docs.google.com/presentation/d/19XIgtzM0JxyhjSd90aW9doyrMrgzdhO_nxWQa9Wqv8I/template/preview",
+          "type": "Слайди"
+        },
+        "planning_guide/csc-bookcovers/2023": {
+          "name": "Посібник з планування",
+          "url": "https://docs.google.com/document/d/18cVgDdq77dbdk6gmQ1rGjHIr7pQk3I2Wb2WsAEeNH64/template/preview",
+          "type": "Роздатковий матеріал"
+        },
+        "planning_guide_key_esperanza_rising/csc-bookcovers/2023": {
+          "name": "Посібник з планування [Key] Esperanza Rising",
+          "url": "https://drive.google.com/file/d/1dpyir8Sh4EgrBT0C1i9M_O8lQkw7rREw/view",
+          "type": "Відповіді"
+        },
+        "_optional_gallery_walk_sticky_notes/csc-bookcovers/2023": {
+          "name": "[Optional] Галерея Прогулянка Липкі нотатки",
+          "url": "https://docs.google.com/document/d/1nG1d6-dVkodEuFod_7DqzKHWjp9wWZs60n_zYfxUCtU/template/preview",
+          "type": "Ресурс"
+        },
+        "helpful_hints_1/csc-bookcovers/2023": {
+          "name": "Корисні підказки",
+          "url": "https://docs.google.com/presentation/d/1RSJhxO9ZMtyLrt160kvAVdyekR4wT2fVSgbrPHR4HS0/template/preview",
+          "type": "Слайди"
+        },
+        "cs_connections_landing_page/csc-ecosystems/2023": {
+          "name": "Цільова сторінка підключення CS",
+          "url": "https://code.org/educate/csc",
+          "type": "Ресурс"
+        },
+        "csc_extended_connections_book_list/csc-ecosystems/2023": {
+          "name": "Список книг розширених підключень CSC",
+          "url": "https://docs.google.com/document/d/14azofBAy5Riq109ruUPi8BbZRvJ1KIthqA3mH7t428Y/template/preview",
+          "type": "Ресурс"
+        },
+        "helpful_hints_for_teachers_and_learners/csc-ecosystems/2023": {
+          "name": "Корисні поради для вчителів та учнів\t",
+          "url": "https://docs.google.com/presentation/d/1RSJhxO9ZMtyLrt160kvAVdyekR4wT2fVSgbrPHR4HS0/template/preview",
+          "type": "Ресурс"
+        },
+        "resource_list_for_all_lessons/csc-ecosystems/2023": {
+          "name": "Список ресурсів для всіх уроків"
+        },
+        "standards_in_simulating_a_marine_ecosystem/csc-ecosystems/2023": {
+          "name": "Стандарти моделювання морської екосистеми ",
+          "type": "Ресурс"
+        },
+        "vocabulary_in_simulating_a_marine_ecosystem/csc-ecosystems/2023": {
+          "name": "Лексика в моделюванні морської екосистеми",
+          "type": "Ресурс"
+        },
+        "ecosystems/csc-ecosystems/2023": {
+          "name": "Імітація морської екосистеми",
+          "url": "https://docs.google.com/presentation/d/1LtXP3ssc5-kOV1DgccN3957oAyF1cf-VaghZJsL7Vtk/template/preview",
+          "type": "Слайди"
+        },
+        "understanding_overfishing_article/csc-ecosystems/2023": {
+          "name": "Розуміння статті про надмірний вилов",
+          "url": "https://www.seafoodwatch.org/seafood-basics/sustainable-solutions/avoid-overfishing",
+          "type": "Ресурс"
+        },
+        "ecologist_s_notebook/csc-ecosystems/2023": {
+          "name": "Блокнот еколога",
+          "url": "https://docs.google.com/document/d/1_xi5PFs5TJyO3-8Hz7ftZxCNRPpd5yQBCwhm8IuysY8/template/preview",
+          "type": "Інструкція до вправи"
+        },
+        "cs_connections_landing_page/csc-mappinglandmarks/2023": {
+          "name": "Цільова сторінка підключення CS",
+          "url": "https://code.org/educate/csc",
+          "type": "Ресурс"
+        },
+        "csc_extended_connections_book_list/csc-mappinglandmarks/2023": {
+          "name": "Список книг розширених підключень CSC",
+          "url": "https://docs.google.com/document/d/14azofBAy5Riq109ruUPi8BbZRvJ1KIthqA3mH7t428Y/template/preview",
+          "type": "Ресурс"
+        },
+        "helpful_hints_for_teachers_and_learners/csc-mappinglandmarks/2023": {
+          "name": "Корисні поради для вчителів та учнів\t",
+          "url": "https://docs.google.com/presentation/d/1RSJhxO9ZMtyLrt160kvAVdyekR4wT2fVSgbrPHR4HS0/template/preview",
+          "type": "Ресурс"
+        },
+        "resource_list_for_all_lessons/csc-mappinglandmarks/2023": {
+          "name": "Список ресурсів для всіх уроків",
+          "url": "/s/csc-орієнтири відображення-2023/ресурси"
+        },
+        "standards_in_mapping_landmarks/csc-mappinglandmarks/2023": {
+          "name": "Стандарти кодування інтерактивних карт",
+          "url": "/s/csc-орієнтири відображення-2023/стандарти",
+          "type": "Ресурс"
+        },
+        "vocabulary_in_coding/csc-mappinglandmarks/2023": {
+          "name": "Лексика в кодуванні інтерактивних карт",
+          "url": "/s/csc-орієнтири відображення-2023/vocab"
+        },
+        "lesson_slides/csc-mappinglandmarks/2023": {
+          "url": "https://docs.google.com/presentation/d/19XIgtzM0JxyhjSd90aW9doyrMrgzdhO_nxWQa9Wqv8I/template/preview",
+          "type": "Слайди"
+        },
+        "helpful_hints/csc-mappinglandmarks/2023": {
+          "name": "Корисні підказки",
+          "url": "https://docs.google.com/presentation/d/1RSJhxO9ZMtyLrt160kvAVdyekR4wT2fVSgbrPHR4HS0/template/preview",
+          "type": "Слайди"
+        },
+        "list_of_books_about_maps/csc-mappinglandmarks/2023": {
+          "name": "Список книг про карти",
+          "url": "https://docs.google.com/document/d/1HlYgC_KFNHZKsPFJIY5E_TyMWVMhZbKnq88bn7GLuaE/template/preview",
+          "type": "Ресурс"
+        },
+        "activity_guide_planning/csc-mappinglandmarks/2023": {
+          "name": "План проекту [Key]",
+          "url": "https://docs.google.com/document/d/1fD9jkEkts5gtYN76P0I-1FGcEPi1q97Cuk0hBy18KvQ/template/preview",
+          "type": "Відповіді"
+        },
+        "activity_guide_planning_1/csc-mappinglandmarks/2023": {
+          "name": "План проекту",
+          "url": "https://docs.google.com/document/d/1t_-cd-f6EhhUbblu8nSGRajStY9FVwLnKn1Bj90GL3Q/template/preview",
+          "type": "Інструкція до вправи"
+        },
+        "interactive_map_rubric/csc-mappinglandmarks/2023": {
+          "name": "Кодування Інтерактивних карт Рубрика",
+          "url": "https://docs.google.com/document/d/1Be6zwvr-gEbmHpkxg4vnyt-evuvuLAlB1Pl8oFA64nw/template/preview",
+          "type": "Рубрика"
+        },
+        "local_landmarks_map_reflection_observation/csc-mappinglandmarks/2023": {
+          "name": "Місцеві пам'ятки Карта відображення та спостереження",
+          "url": "https://docs.google.com/document/d/1OxwZCmnJYKVUQIIsXqTkbbivvG_iXHVDL4FgR8j9V4E/template/preview",
+          "type": "Інструкція до вправи"
+        },
+        "books_about_maps_list/csc-mappinglandmarks/2023": {
+          "name": "Список книг про карти",
+          "url": "https://docs.google.com/document/d/1HlYgC_KFNHZKsPFJIY5E_TyMWVMhZbKnq88bn7GLuaE/template/preview",
+          "type": "Ресурс"
+        },
+        "cs_connections_landing_page/csc-starquilts/2023": {
+          "name": "Цільова сторінка підключення CS",
+          "url": "https://code.org/educate/csc",
+          "type": "Ресурс"
+        },
+        "csc_extended_connections_book_list/csc-starquilts/2023": {
+          "name": "Список книг розширених підключень CSC",
+          "url": "https://docs.google.com/document/d/14azofBAy5Riq109ruUPi8BbZRvJ1KIthqA3mH7t428Y/template/preview",
+          "type": "Ресурс"
+        },
+        "helpful_hints_for_teachers_and_learners/csc-starquilts/2023": {
+          "name": "Корисні поради для вчителів та учнів",
+          "url": "https://docs.google.com/presentation/d/1RSJhxO9ZMtyLrt160kvAVdyekR4wT2fVSgbrPHR4HS0/template/preview",
+          "type": "Ресурс"
+        },
+        "resource_list_for_all_lessons/csc-starquilts/2023": {
+          "name": "Список ресурсів для всіх уроків",
+          "url": "/s/csc-Starquilts-2023/ресурси",
+          "type": "Ресурс"
+        },
+        "standards_in_coding_a_star_quilt/csc-starquilts/2023": {
+          "name": "Стандарти кодування зіркової ковдри",
+          "url": "/s/csc-Starquilts-2023/стандарти",
+          "type": "Ресурс"
+        },
+        "vocabulary_in_coding_geometric_star_quilts/csc-starquilts/2023": {
+          "name": "Лексика в кодуванні геометричних зіркових ковдр",
+          "url": "/s/csc-Starquilts-2023/вокаб",
+          "type": "Ресурс"
+        },
+        "star_quilt_article/csc-starquilts/2023": {
+          "name": "Стаття «Зіркова ковдра»",
+          "url": "https://drive.google.com/file/d/1MAcBYUArtNihyt5ZZlwFOraFLhRxZm7G/view",
+          "type": "Ресурс"
+        },
+        "star_quilts/csc-starquilts/2023": {
+          "name": "Кодуємо геометричний зірковий узор",
+          "url": "https://docs.google.com/presentation/d/10F-FnjuE2fM9g1MEmBm5MXJAvhKWCNjX5tAeH9YbggM/template/preview",
+          "type": "Слайди"
+        },
+        "star_quilts_1/csc-starquilts/2023": {
+          "name": "Зіркова ковдра War Капота",
+          "url": "https://youtu.be/Q210ko41yqo?t=90",
+          "type": "Відео"
+        },
+        "star_quilts_worksheet/csc-starquilts/2023": {
+          "name": "Робочий аркуш Star Quilts",
+          "url": "https://docs.google.com/document/d/1vwfjAQ-OErpFcvzDTQuhimhMWjFhiPrtKTUHoEJLufM/template/preview",
+          "type": "Роздатковий матеріал"
+        },
+        "virtual_pattern_blocks_optional_/csc-starquilts/2023": {
+          "name": "Блоки віртуальних шаблонів (необов'язково)",
+          "url": "https://mathigon.org/polypad#polygons",
+          "type": "Ресурс"
+        },
+        "helpful_hints/csc-starquilts/2023": {
+          "name": "Корисні підказки",
+          "url": "https://docs.google.com/presentation/d/1RSJhxO9ZMtyLrt160kvAVdyekR4wT2fVSgbrPHR4HS0/template/preview",
+          "type": "Слайди"
+        },
+        "helpful_hints_1/csc-starquilts/2023": {
+          "name": "Корисні підказки",
+          "url": "https://docs.google.com/presentation/d/1RSJhxO9ZMtyLrt160kvAVdyekR4wT2fVSgbrPHR4HS0/template/preview",
+          "type": "Слайди"
+        },
+        "virtual_pattern_blocks/csc-starquilts/2023": {
+          "name": "Блоки віртуальних шаблонів",
+          "url": "https://www.didax.com/apps/pattern-blocks/",
+          "type": "Ресурс"
+        },
+        "helpful_hints_2/csc-starquilts/2023": {
+          "name": "Корисні підказки",
+          "url": "https://docs.google.com/presentation/d/1RSJhxO9ZMtyLrt160kvAVdyekR4wT2fVSgbrPHR4HS0/template/preview",
+          "type": "Слайди"
+        },
+        "all_resources/csc-timecapsule/2023": {
+          "name": "Список ресурсів для всіх уроків",
+          "url": "/s/csc-часова капсула-2023/ресурси",
+          "type": "Ресурс"
+        },
+        "all_standards/csc-timecapsule/2023": {
+          "name": "Стандарти кодування капсули часу",
+          "url": "/s/csc-часова капсула-2023/стандарти"
+        },
+        "all_vocab/csc-timecapsule/2023": {
+          "name": "Лексика в кодуванні капсули часу",
+          "url": "/s/csc-часова капсула-2023/слокаб"
+        },
+        "cs_connections_landing_page/csc-timecapsule/2023": {
+          "name": "Цільова сторінка підключення CS",
+          "url": "https://code.org/educate/csc",
+          "type": "Ресурс"
+        },
+        "csc_extended_connections_book_list/csc-timecapsule/2023": {
+          "name": "Список книг розширених підключень CSC",
+          "url": "https://docs.google.com/document/d/14azofBAy5Riq109ruUPi8BbZRvJ1KIthqA3mH7t428Y/template/preview",
+          "type": "Ресурс"
+        },
+        "helpful_hints_for_teachers_and_learners/csc-timecapsule/2023": {
+          "name": "Корисні поради для вчителів та учнів",
+          "url": "https://docs.google.com/presentation/d/1RSJhxO9ZMtyLrt160kvAVdyekR4wT2fVSgbrPHR4HS0/template/preview",
+          "type": "Ресурс"
+        },
+        "poem_art_1_-_introduction/csc-timecapsule/2023": {
+          "name": "Вірш Мистецтво 1 - Вступ ",
+          "type": "Відео"
+        },
+        "poem_art_2_-_events/csc-timecapsule/2023": {
+          "name": "Поетичне мистецтво 2 - Події",
+          "type": "Відео"
+        },
+        "poem_art_3_-_imagery/csc-timecapsule/2023": {
+          "name": "Поетичне мистецтво 3 - Зображення",
+          "type": "Відео"
+        },
+        "poem_art_4_-_celebration/csc-timecapsule/2023": {
+          "name": "Вірш Мистецтво 4 - Святкування ",
+          "type": "Відео"
+        },
+        "time_capsule/csc-timecapsule/2023": {
+          "name": "Пишемо код для капсули часу",
+          "url": "https://docs.google.com/presentation/d/1jgZ_PS7uDb2KuvUNPNpW_PqSxsvfVKap4f8RscZPwVY/template/preview",
+          "type": "Слайди"
+        },
+        "helpful_hints/csc-timecapsule/2023": {
+          "name": "Корисні підказки",
+          "url": "https://docs.google.com/presentation/d/1RSJhxO9ZMtyLrt160kvAVdyekR4wT2fVSgbrPHR4HS0/template/preview",
+          "type": "Слайди"
+        },
+        "time_capsule_rubric/csc-timecapsule/2023": {
+          "name": "Капсула часу Рубрика",
+          "url": "https://docs.google.com/document/d/1oE_z84x5GRJ34fRDLCc-YfKJQIQab90pLjozaGQKaJ0/template/preview",
+          "type": "Рубрика"
+        },
+        "write_your_own_time_capsule_story/csc-timecapsule/2023": {
+          "name": "Напишіть свій власний вірш у капсулі часу - стебла речень",
+          "url": "https://docs.google.com/document/d/1fahr11zX92NW-rLdyZBqrNK2VqgOGtCACkcT87M_luU/template/preview",
+          "type": "Роздатковий матеріал"
+        },
+        "write_your_own_time_capsule_poem_-_question_grab_bag/csc-timecapsule/2023": {
+          "name": "Напишіть свій власний вірш капсули часу - сумка для запитань",
+          "url": "https://docs.google.com/document/d/1-aPA3uJIKJAuQ_2Gtck1Ma79eCFY88ZC8YzegQIckG4/template/preview",
+          "type": "Роздатковий матеріал"
+        },
+        "poem_art_celebration_video_optional_/csc-timecapsule/2023": {
+          "name": "Відеоролик святкування віршового мистецтва (необов'язково)",
+          "url": "https://www.youtube.com/watch?v=Q-76vz8i8mo",
+          "type": "Відео"
+        },
+        "poem_art_events_video_optional_/csc-timecapsule/2023": {
+          "name": "Відеоролик подій у стилі поеми (необов'язково)",
+          "url": "https://youtu.be/XGwYYUEb6jQ",
+          "type": "Відео"
+        },
+        "poem_art_video_optional_/csc-timecapsule/2023": {
+          "name": "Відеоролик з поеми (необов'язково)",
+          "url": "https://www.youtube.com/watch?v=uvwUWTTjIXo",
+          "type": "Відео"
+        },
+        "time_capsule_checklist/csc-timecapsule/2023": {
+          "name": "Контрольний список капсул часу",
+          "url": "https://docs.google.com/document/d/1_Hg7hhayhHsTCWDo0uJspseuBbtfTqgx1u9frnmvf1Y/template/preview",
+          "type": "Роздатковий матеріал"
+        },
+        "enter_your_own_poem/csc-timecapsule/2023": {
+          "url": "https://www.youtube.com/watch?v=oKPgbzdpTSA",
+          "type": "Відео"
+        },
+        "_optional_gallery_walk_sticky_notes/csc-timecapsule/2023": {
+          "name": "[Optional] Галерея Прогулянка Липкі нотатки",
+          "url": "https://docs.google.com/document/d/16OGg95k4WsOrusXBO-jjTBFMstI2Att8j6ggZCgpvls/template/preview",
+          "type": "Ресурс"
+        },
+        "_optional_student_url_sharing_document/csc-timecapsule/2023": {
+          "name": "[Optional] Документ для спільного використання URL-адреси студентів",
+          "url": "https://docs.google.com/document/d/1X048JMSRltc-VHfDDWr7NvE5NMNp4lDSsczQXVUbM-A/template/preview",
+          "type": "Ресурс"
+        },
+        "all_standards/poetry/2023": {
+          "name": "Стандарти в кодуванні поезією ",
+          "url": "https://studio.code.org/s/poetry-2023/standards"
+        },
+        "coding_with_poetry_vocabulary/poetry/2023": {
+          "name": "Лексика в кодуванні поезією ",
+          "url": "https://studio.code.org/s/poetry-2023/vocab"
+        },
+        "cs_connections_landing_page/poetry/2023": {
+          "name": "Цільова сторінка підключення CS",
+          "url": "https://code.org/educate/csc",
+          "type": "Ресурс"
+        },
+        "csc_extended_connections_book_list/poetry/2023": {
+          "name": "Список книг розширених підключень CSC",
+          "url": "https://docs.google.com/document/d/14azofBAy5Riq109ruUPi8BbZRvJ1KIthqA3mH7t428Y/template/preview",
+          "type": "Ресурс"
+        },
+        "helpful_hints_for_teachers_and_learners/poetry/2023": {
+          "name": "Корисні поради для вчителів та учнів",
+          "url": "https://docs.google.com/presentation/d/1RSJhxO9ZMtyLrt160kvAVdyekR4wT2fVSgbrPHR4HS0/template/preview",
+          "type": "Ресурс"
+        },
+        "resource_list_for_all_lessons/poetry/2023": {
+          "name": "Список ресурсів для всіх уроків",
+          "url": "https://studio.code.org/s/poetry-2023/resources"
+        },
+        "coding_with_poetry_lesson_1/poetry/2023": {
+          "name": "Кодування поезії",
+          "url": "https://docs.google.com/presentation/d/1k0VP9so-gmAHq9mSOTxiZ98pX7gNfN6TutBeoDa3pxY/template/preview",
+          "type": "Слайди"
+        },
+        "poem_art_1_-_introduction/poetry/2023": {
+          "name": "Вірш Мистецтво 1 - Вступ ",
+          "type": "Відео"
+        },
+        "poem_art_2_-_events/poetry/2023": {
+          "name": "Поетичне мистецтво 2 - Події",
+          "type": "Відео"
+        },
+        "poem_art_3_-_imagery/poetry/2023": {
+          "name": "Поетичне мистецтво 3 - Зображення",
+          "type": "Відео"
+        },
+        "poem_art_4_-_celebration/poetry/2023": {
+          "name": "Вірш Мистецтво 4 - Святкування ",
+          "type": "Відео"
+        },
+        "helpful_hints_1/poetry/2023": {
+          "name": "Корисні підказки",
+          "url": "https://docs.google.com/presentation/d/1RSJhxO9ZMtyLrt160kvAVdyekR4wT2fVSgbrPHR4HS0/template/preview",
+          "type": "Слайди"
+        },
+        "helpful_hints/poetry/2023": {
+          "name": "Корисні підказки",
+          "url": "https://docs.google.com/presentation/d/1RSJhxO9ZMtyLrt160kvAVdyekR4wT2fVSgbrPHR4HS0/template/preview",
+          "type": "Слайди"
+        },
+        "write_your_own_poem/poetry/2023": {
+          "name": "Напишіть свій власний вірш - стебла речень",
+          "url": "https://docs.google.com/document/d/1b6w_lOnibUHyDLYCP3rAWED5iElGm6LOQAJwG-hlih0/template/preview",
+          "type": "Роздатковий матеріал"
+        },
+        "coding_with_poetry_rubric/poetry/2023": {
+          "name": "Кодування поезією Рубрика",
+          "url": "https://docs.google.com/document/d/13CJlIIV2CFu9D6-oxAm99PZ6EqNnDUZwFZCEW9fSMaE/template/preview",
+          "type": "Рубрика"
+        },
+        "write_your_own_poem_-_topics/poetry/2023": {
+          "name": "Напишіть власний вірш - Теми",
+          "url": "https://docs.google.com/document/d/1V-DaWOIUk0xT7NYTzx3AEt4my-jc-Hx4vy21Kl4SPoE/template/preview",
+          "type": "Роздатковий матеріал"
+        },
+        "enter_your_own_poem/poetry/2023": {
+          "url": "https://www.youtube.com/watch?v=oKPgbzdpTSA",
+          "type": "Відео"
+        },
+        "poem_art_celebration_video_optional_/poetry/2023": {
+          "name": "Відеоролик святкування віршового мистецтва (необов'язково)",
+          "url": "https://www.youtube.com/watch?v=Q-76vz8i8mo",
+          "type": "Відео"
+        },
+        "poem_art_events_video_optional_/poetry/2023": {
+          "name": "Відеоролик подій у стилі поеми (необов'язково)",
+          "url": "https://youtu.be/XGwYYUEb6jQ",
+          "type": "Відео"
+        },
+        "poem_art_video_optional_/poetry/2023": {
+          "name": "Відеоролик з поеми (необов'язково)",
+          "url": "https://www.youtube.com/watch?v=uvwUWTTjIXo",
+          "type": "Відео"
+        },
+        "time_capsule_checklist/poetry/2023": {
+          "name": "Кодуйте контрольний список віршів",
+          "url": "https://docs.google.com/document/d/14M3WIBwJg-YUKVrchzKfunAmQaQhuA7-qxYpS738K_0/template/preview",
+          "type": "Роздатковий матеріал"
+        },
+        "_optional_student_url_sharing_document/poetry/2023": {
+          "name": "[Optional] Документ для спільного використання URL-адреси студентів",
+          "url": "https://docs.google.com/document/d/1DNcBWminB8MmyLQC4fIWrLZ8uI9HR7d4W3HuuclIpB0/template/preview",
+          "type": "Ресурс"
+        },
+        "share_your_app_/poetry/2023": {
+          "name": "Поділіться своїм додатком!",
+          "url": "https://docs.google.com/document/d/1kO4SNEIVyM0GrxxJb6NzVYauXXpi6rzQkDIfrzQf1Ls/template/preview",
+          "type": "Роздатковий матеріал"
+        },
+        "poem_app_example/poetry/2023": {
+          "name": "Приклад програми Poem",
+          "url": "https://studio.code.org/projects/poetry_hoc/j3TXDXNhz0XEsH4Xjk_rT9buBHYCplirIKtY_Pg_bYo",
+          "type": "Ресурс"
+        },
+        "all_resources/coursea/2023": {
+          "name": "Всі ресурси",
+          "url": "/с/курс/2023/ресурси"
+        },
+        "all_standards/coursea/2023": {
+          "name": "Всі стандарти",
+          "url": "/с/курс/2023/стандарти"
+        },
+        "all_vocabulary/coursea/2023": {
+          "name": "Всі терміни",
+          "url": "/с/курс/2023/вокаб"
+        },
+        "common_core_and_ngss_guidance/coursea/2023": {
+          "name": "Керівництво по стандартах Common Core і NGSS",
+          "url": "https://docs.google.com/document/d/1SqD3MaRbGIONGs5bcL1YhHUFK92ZXFIufypr6UC8XYA/preview#heading=h.vq4s1h2aaxxy",
+          "type": "Ресурс"
+        },
+        "cross-curricular_extension_activities/coursea/2023": {
+          "name": "Міжпредметні додаткові діяльності",
+          "url": "https://docs.google.com/document/d/1MRlHy_3VgLXKZwjeB0VmI8HWuPvupZODsslPnA7KYAY/preview",
+          "type": "Ресурс"
+        },
+        "debugging_guide/coursea/2023": {
+          "name": "Путівник з налагодження",
+          "url": "https://docs.google.com/document/d/1_UFVNtS0_f7aH79WtSEAR0niLy-KPwX1xNiXllOBviE/preview",
+          "type": "Ресурс"
+        },
+        "implementation_guide/coursea/2023": {
+          "name": "Практика впровадження",
+          "url": "https://docs.google.com/document/d/1I04szlSMuDlFLH_pidEC-huk_-t6ig09pBSyMv1Z3pw/preview",
+          "type": "Ресурс"
+        },
+        "lesson_type_guide/coursea/2023": {
+          "name": "Керівництво з типів уроків",
+          "url": "https://docs.google.com/document/d/1Z28A1yF6BZu3lIlVvvHo5UqBpyuc1hX8YVjIt3fwmY4/view",
+          "type": "Ресурс"
+        },
+        "teacher_forum/coursea/2023": {
+          "name": "Форум вчителів",
+          "url": "https://forum.code.org/c/csf/",
+          "type": "Ресурс"
+        },
+        "csf_course_syllabus/coursea/2023": {
+          "name": "Програма курсу CSF",
+          "url": "https://docs.google.com/document/d/1mGTa71uFIOvLuwcbo_7XIutZIuJKGlbl0KlRqgibs2U/edit?usp=drive_link",
+          "type": "Ресурс"
+        },
+        "teaching_and_learning_strategies/coursea/2023": {
+          "name": "Стратегії викладання та навчання",
+          "url": "https://docs.google.com/document/d/1khllUBI1xpSrUmwWwa2J35GaKVV8bb3bQb_5Vc_ty54/preview",
+          "type": "Ресурс"
+        },
+        "values_and_philosophy_1/coursea/2023": {
+          "name": "Цінності та філософія",
+          "url": "https://docs.google.com/document/d/1_56iN0iyFzPSsuj5-W7-SI6E7A8z9BTpL3qu4fDMkKk/preview",
+          "type": "Ресурс"
+        },
+        "safety_in_my_online_neighborhood_lesson_slides/coursea/2023": {
+          "name": "Безпека у моєму інтернет-районі: Слайди до уроку",
+          "url": "https://docs.google.com/presentation/d/12PEsRb4LtQz_E-BJSmZNd9xnmdmIIiuQjqomcq3MPkQ/edit",
+          "type": "Набір слайдів"
+        },
+        "safety_in_my_online_neighborhood_my_online_neighborhood/coursea/2023": {
+          "name": "Безпека у моєму інтернет-районі: Моє Інтернет-сусідство",
+          "url": "https://www.commonsense.org/education/videos/my-online-neighborhood",
+          "type": "Відео уроку"
+        },
+        "safety_in_my_online_neighborhood_pause_and_think_moment/coursea/2023": {
+          "name": "Безпека у моєму інтернет-районі: Зупинись і поміркуй",
+          "url": "https://docs.google.com/document/d/1-0hiaMNrtj4yTLZO3zVhZkYUU0832O81LtCfZQQfsic/",
+          "type": "Роздатковий матеріал"
+        },
+        "safety_in_my_online_neighborhood_safety_it_rules_/coursea/2023": {
+          "name": "Безпека у моєму інтернет-районі: Безпека рулить!",
+          "url": "https://docs.google.com/document/d/1muGZviAlpkdMaMp6JBQBKUI9EAsna2pqB1lEGFNEkMk/edit",
+          "type": "Віршований плакат"
+        },
+        "csf_course_a_lesson_slides/coursea/2023": {
+          "type": "Слайди"
+        },
+        "20_20_20_rule/coursea/2023": {
+          "name": "Правило 20/20/20",
+          "url": "http://www.anthro.com/blog/2013/10/how-to-prevent-eye-strain-with-the-20-20-20-rule#.WOU39BLyu35",
+          "type": "Ресурс"
+        },
+        "getting_started_-_creating_a_class_section/coursea/2023": {
+          "name": "Початок роботи - Створення груп та класів <https://docs.google.com/document/d/1fQ9WcoAacoVFANI5JM3gXCE-6AMjl947fLaVr4gqZ4Y/edit?usp=sharing>",
+          "url": "https://www.youtube.com/watch?v=4Wugxc80fNU",
+          "type": "Відео"
+        },
+        "pair_programming/coursea/2023": {
+          "name": "Парне програмування",
+          "url": "https://www.youtube.com/watch?v=vgkahOzFH2Q",
+          "type": "Відео для учнів"
+        },
+        "wiggles-go_noodle/coursea/2023": {
+          "name": "Руханки - Go Noodle",
+          "url": "https://app.gonoodle.com/channels/brainercise-with-mr-catman/shoulder-rock-n-roll",
+          "type": "Відео"
+        },
+        "feeling_faces_-_emotion_image/coursea/2023": {
+          "name": "Смайлики - Зображення емоцій",
+          "url": "https://docs.google.com/document/d/1p2uDTrPZPsxsbsePZe9OfPlIuMwybNjcnZ4tYoOEqL8/view",
+          "type": "Ресурс"
+        },
+        "happy_map_cards/coursea/2023": {
+          "name": "Картки \"Веселі карти\"",
+          "url": "https://docs.google.com/document/d/1w_ELNtarUiQIwWTESwAmyoY8GaZnKkz4ICYY3JnNCrA/edit",
+          "type": "Робочий аркуш"
+        },
+        "happy_map_cards_1/coursea/2023": {
+          "name": "Картки \"Веселі карти\"",
+          "url": "https://docs.google.com/document/d/1manAl2rY0CwQbs3G13weCnXsAw31rsg4lykht2-w80M/edit",
+          "type": "Відповіді до робочого аркуша"
+        },
+        "happy_map_game_pieces/coursea/2023": {
+          "name": "Ігрові елементи \"Веселі карти\"",
+          "url": "https://docs.google.com/document/d/1sJCUJPCJRQKm5JXUj6G-Q3jBPE9R41wap-DRmUhf_Vw/edit",
+          "type": "Друковані матеріали"
+        },
+        "happy_maps/coursea/2023": {
+          "name": "Веселі карти",
+          "url": "https://youtu.be/hrnhiKAQ1_k",
+          "type": "Відео про безмашинну вправу"
+        },
+        "unplugged_blockly_blocks_grades_k-1_/coursea/2023": {
+          "name": "Безмашинні блоки Blockly (Класи K-1)",
+          "url": "https://docs.google.com/presentation/d/1PoSQZUCUj6yw6g1yZImaHu5Gn4Gdok0iDmrrmXInavQ/edit",
+          "type": "Друковані матеріали"
+        },
+        "wiggles_-_gonoodle/coursea/2023": {
+          "name": "Руханки - Go Noodle",
+          "url": "https://app.gonoodle.com/channels/brainercise-with-mr-catman/shoulder-rock-n-roll",
+          "type": "Відео"
+        },
+        "debugging_with_the_step_button/coursea/2023": {
+          "name": "Налагодження за допомогою кнопки \"Крок\"",
+          "url": "https://videos.code.org/csf/debugging-k1-blocks.mp4",
+          "type": "Відео"
+        },
+        "feeling_faces_emotion_image/coursea/2023": {
+          "name": "Зображення смайликів",
+          "url": "https://docs.google.com/document/d/1p2uDTrPZPsxsbsePZe9OfPlIuMwybNjcnZ4tYoOEqL8/edit",
+          "type": "Ресурс"
+        },
+        "feeling_faces_-_emotion_image_1/coursea/2023": {
+          "name": "Смайлики - Зображення емоцій",
+          "url": "https://docs.google.com/document/d/1p2uDTrPZPsxsbsePZe9OfPlIuMwybNjcnZ4tYoOEqL8/edit",
+          "type": "Ресурс"
+        },
+        "happy_map_cards_xl/coursea/2023": {
+          "name": "Картки \"Веселі карти\" XL",
+          "url": "https://docs.google.com/document/d/1UgTmr43HMoWCaR9lOCmxDeZQKyros3fkIg3TFOCrX8Q/edit",
+          "type": "Робочий аркуш"
+        },
+        "happy_map_game_pieces_bonus_pack/coursea/2023": {
+          "name": "Додатковий набір ігрових елементів \"Веселі карти\"",
+          "url": "https://docs.google.com/document/d/1IAwcSmNY3ovp2VxCJop0We0va8Xef2ND9_OvHxm9fZ8/edit",
+          "type": "Друковані матеріали"
+        },
+        "feeling_faces/coursea/2023": {
+          "name": "Смайлики",
+          "url": "https://docs.google.com/document/d/1p2uDTrPZPsxsbsePZe9OfPlIuMwybNjcnZ4tYoOEqL8/edit",
+          "type": "Зображення емоцій"
+        },
+        "pair-programming/coursea/2023": {
+          "name": "Парне програмування",
+          "url": "https://www.youtube.com/watch?v=vgkahOzFH2Q",
+          "type": "Відео"
+        },
+        "csf_lesson_recommendations/coursea/2023": {
+          "name": "Рекомендації щодо уроків \"Основи інформатики\"",
+          "url": "https://docs.google.com/document/d/1GtNBRkP1mXsBLInqybo9mYnGUi45PSEomhSxc8fLooE/edit?usp=sharing",
+          "type": "Ресурс"
+        },
+        "pause_and_think_online/coursea/2023": {
+          "name": "Зупинись і подумай онлайн",
+          "url": "https://www.youtube.com/watch?v=rgbZAWnOWOo",
+          "type": "Відео"
+        },
+        "the_big_event/coursea/2023": {
+          "name": "Велика подія",
+          "url": "https://youtu.be/u0WV9shCoak",
+          "type": "Відео про безмашинну вправу"
+        },
+        "the_big_event_1/coursea/2023": {
+          "name": "Велика подія",
+          "url": "https://docs.google.com/document/d/1ID2F-VhIOiy0YOeewTpq60NcSAbDgPH9j28UYvfLw2o/edit",
+          "type": "Оцінювання"
+        },
+        "the_big_event_2/coursea/2023": {
+          "name": "Велика подія",
+          "url": "https://docs.google.com/document/d/1snz3vN1488ll0290RWMiIfpZmoBlyohe5c4BeLahbes/edit",
+          "type": "Відповіді до аркуша оцінювання"
+        },
+        "the_big_event_courses_a_b_/coursea/2023": {
+          "name": "Велика подія  (Курси A, B)",
+          "url": "https://docs.google.com/document/d/1dUgrJoPBjgIN_CZmiTN1dwwkmoQxUbHutL3Nppx8l6A/edit",
+          "type": "Зображення \"Пульт керування\""
+        },
+        "cs_fundamentals_main_activity_tips/coursea/2023": {
+          "name": "Методичні рекомендації щодо основної вправи",
+          "url": "https://docs.google.com/document/d/1GtNBRkP1mXsBLInqybo9mYnGUi45PSEomhSxc8fLooE/edit?usp=sharing"
+        },
+        "artist_project_planning_guide/coursea/2023": {
+          "name": "План проєкту з Художником",
+          "url": "https://docs.google.com/document/d/1j4m3VDvrkaRqQ3cFqnqSI7wTFfymunDbkjN7pm7Pt14/template/preview",
+          "type": "Роздатковий матеріал"
+        },
+        "artist_project_planning_guide_1/coursea/2023": {
+          "name": "План проєкту з Художником",
+          "url": "https://docs.google.com/document/d/1Z1M9KLiLuX4pqcb9xpzpmafbmuLOjgtsZGZLQzMXtt4/template/preview",
+          "type": "Відповіді"
+        },
+        "all_resources/courseb/2023": {
+          "name": "Всі ресурси",
+          "url": "/s/курсів-2023/Ресурси"
+        },
+        "all_standards/courseb/2023": {
+          "name": "Всі стандарти",
+          "url": "/с/курс/2023/стандарти"
+        },
+        "all_vocabulary/courseb/2023": {
+          "name": "Всі терміни",
+          "url": "/с/курс/2023/вокал"
+        },
+        "common_core_and_ngss_guidance/courseb/2023": {
+          "name": "Керівництво по стандартах Common Core і NGSS",
+          "url": "https://docs.google.com/document/d/1SqD3MaRbGIONGs5bcL1YhHUFK92ZXFIufypr6UC8XYA/preview#heading=h.rar8dpsqsjqe",
+          "type": "Ресурс"
+        },
+        "cross-curricular_extension_activities/courseb/2023": {
+          "name": "Міжпредметні додаткові діяльності",
+          "url": "https://docs.google.com/document/d/1MRlHy_3VgLXKZwjeB0VmI8HWuPvupZODsslPnA7KYAY/preview",
+          "type": "Ресурс"
+        },
+        "debugging_guide/courseb/2023": {
+          "name": "Путівник з налагодження",
+          "url": "https://docs.google.com/document/d/1_UFVNtS0_f7aH79WtSEAR0niLy-KPwX1xNiXllOBviE/preview",
+          "type": "Ресурс"
+        },
+        "implementation_guide/courseb/2023": {
+          "name": "Практика впровадження",
+          "url": "https://docs.google.com/document/d/1I04szlSMuDlFLH_pidEC-huk_-t6ig09pBSyMv1Z3pw/preview",
+          "type": "Ресурс"
+        },
+        "lesson_type_guide/courseb/2023": {
+          "name": "Керівництво з типів уроків",
+          "url": "https://docs.google.com/document/d/1Z28A1yF6BZu3lIlVvvHo5UqBpyuc1hX8YVjIt3fwmY4/view",
+          "type": "Ресурс"
+        },
+        "teacher_forum/courseb/2023": {
+          "name": "Форум вчителів",
+          "url": "https://forum.code.org/c/csf/",
+          "type": "Ресурс"
+        },
+        "csf_course_syllabus/courseb/2023": {
+          "name": "Програма курсу CSF",
+          "url": "https://docs.google.com/document/d/1mGTa71uFIOvLuwcbo_7XIutZIuJKGlbl0KlRqgibs2U/edit?usp=drive_link",
+          "type": "Ресурс"
+        },
+        "teaching_and_learning_strategies/courseb/2023": {
+          "name": "Стратегії викладання та навчання",
+          "url": "https://docs.google.com/document/d/1khllUBI1xpSrUmwWwa2J35GaKVV8bb3bQb_5Vc_ty54/preview",
+          "type": "Ресурс"
+        },
+        "values_and_philosophy_1/courseb/2023": {
+          "name": "Цінності та філософія",
+          "url": "https://docs.google.com/document/d/1_56iN0iyFzPSsuj5-W7-SI6E7A8z9BTpL3qu4fDMkKk/preview"
+        },
+        "digital_trails_animal_tracks/courseb/2023": {
+          "name": "Цифрові сліди: Сліди звірят",
+          "url": "https://docs.google.com/document/d/1aCVylLUDjuvxg3qhUA_g2_J89wtXG8Z5WBdFvr09p2I/",
+          "type": "Роздатковий матеріал"
+        },
+        "digital_trails_digital_trail_squares/courseb/2023": {
+          "name": "Цифрові сліди: клітинки цифрових слідів",
+          "url": "https://docs.google.com/document/d/1-cXCS0ju8JKVBG5gukpuDjURFkWtnnl6EJImAqQxAdo/edit",
+          "type": "Роздатковий матеріал"
+        },
+        "digital_trails_follow_the_digital_trail/courseb/2023": {
+          "name": "Цифрові сліди: Відстежуємо цифровий слід",
+          "url": "https://www.commonsense.org/education/videos/follow-the-digital-trail",
+          "type": "Відео уроку"
+        },
+        "digital_trails_lesson_slides/courseb/2023": {
+          "name": "Цифрові сліди: Слайди для уроку",
+          "url": "https://docs.google.com/presentation/d/1q_ujXpFBY06ufa_GnX6490uGlnGhRyaRgu3w-W4tdNc/edit",
+          "type": "Набір слайдів"
+        },
+        "csf_course_b_lesson_slides/courseb/2023": {
+          "type": "Слайди"
+        },
+        "feeling_faces_emotion_image/courseb/2023": {
+          "name": "Зображення смайликів",
+          "url": "https://docs.google.com/document/d/1p2uDTrPZPsxsbsePZe9OfPlIuMwybNjcnZ4tYoOEqL8/edit",
+          "type": "Ресурс"
+        },
+        "move_it_move_it/courseb/2023": {
+          "name": "Рухайся, рухайся",
+          "url": "https://docs.google.com/document/d/1A1VXa5TFrT5ttk48iS_dXVJRjeTO24Cp_dNoyG8Q82M/edit",
+          "type": "Вправа з картами"
+        },
+        "move_it_move_it_1/courseb/2023": {
+          "name": "Рухайся, рухайся",
+          "url": "https://docs.google.com/document/d/1pr3urf0yto_Is7TqytaJRzSmqqkWlVToH9oAMw0Ibt4/edit",
+          "type": "Робочий аркуш"
+        },
+        "move_it_move_it_2/courseb/2023": {
+          "name": "Рухайся, рухайся",
+          "url": "https://docs.google.com/document/d/13ChsQCyLxrzvVmNaP6G4B_2CNB393sTqpLljn1FHPBg/edit",
+          "type": "Відповіді до робочого аркуша"
+        },
+        "move_it_move_it_3/courseb/2023": {
+          "name": "Рухайся, рухайся",
+          "url": "http://youtu.be/aV4rqNUG-Jw?list=PL2DhNKNdmOtqBgWyF5kmy2oPh0U-Zfv2G",
+          "type": "Відео для вчителя"
+        },
+        "20_20_20_rule/courseb/2023": {
+          "name": "Правило 20/20/20",
+          "url": "http://www.anthro.com/blog/2013/10/how-to-prevent-eye-strain-with-the-20-20-20-rule#.WOU39BLyu35",
+          "type": "Ресурс"
+        },
+        "drag_and_drop_practice/courseb/2023": {
+          "name": "Практика перетягування",
+          "url": "https://studio.code.org/s/jigsaw"
+        },
+        "feeling_faces/courseb/2023": {
+          "name": "Смайлики",
+          "url": "https://docs.google.com/document/d/1p2uDTrPZPsxsbsePZe9OfPlIuMwybNjcnZ4tYoOEqL8/edit",
+          "type": "Зображення емоцій"
+        },
+        "how_to_make_a_class_section_on_code_org/courseb/2023": {
+          "name": "Як створити групу класу на Code.org",
+          "url": "https://youtu.be/4Wugxc80fNU"
+        },
+        "pair_programming/courseb/2023": {
+          "name": "Парне програмування",
+          "url": "https://www.youtube.com/watch?v=vgkahOzFH2Q",
+          "type": "Відео для учнів"
+        },
+        "unplugged_blockly_blocks_grades_k-1_/courseb/2023": {
+          "name": "Безмашинні блоки Blockly (Класи K-1)",
+          "url": "https://docs.google.com/presentation/d/1PoSQZUCUj6yw6g1yZImaHu5Gn4Gdok0iDmrrmXInavQ/edit",
+          "type": "Друковані матеріали"
+        },
+        "wiggles_-_gonoodle/courseb/2023": {
+          "name": "Руханки - Go Noodle",
+          "url": "https://app.gonoodle.com/channels/brainercise-with-mr-catman/shoulder-rock-n-roll",
+          "type": "Відео"
+        },
+        "compass_rose/courseb/2023": {
+          "name": "Компас",
+          "url": "https://docs.google.com/document/d/1_dkJCkf-55i79ogWy4erJ4HNeTWXz-hQ9JqyA9mvtt8/edit",
+          "type": "Роздатковий матеріал"
+        },
+        "feeling_faces_-_emotion_image/courseb/2023": {
+          "name": "Смайлики - Зображення емоцій",
+          "url": "https://docs.google.com/document/d/1p2uDTrPZPsxsbsePZe9OfPlIuMwybNjcnZ4tYoOEqL8/edit",
+          "type": "Ресурс"
+        },
+        "happy_map_game_pieces/courseb/2023": {
+          "name": "Ігрові елементи \"Веселі карти\"",
+          "url": "https://docs.google.com/document/d/1sJCUJPCJRQKm5JXUj6G-Q3jBPE9R41wap-DRmUhf_Vw/edit",
+          "type": "Друковані матеріали"
+        },
+        "stevie_and_the_big_project/courseb/2023": {
+          "name": "Стів і Великий проект",
+          "url": "https://drive.google.com/file/d/0B-uvt08wYSQqTUFzaGxKSk45QkU/view",
+          "type": "Ресурс"
+        },
+        "unspotted_bugs/courseb/2023": {
+          "name": "Баги",
+          "url": "https://youtu.be/rah3DYlp5nQ",
+          "type": "Відео"
+        },
+        "getting_loopy/courseb/2023": {
+          "name": "Зациклюємось",
+          "url": "https://youtu.be/JoKTqHCni0M",
+          "type": "Відео про безмашинну вправу"
+        },
+        "getting_loopy_1/courseb/2023": {
+          "name": "Зациклюємось",
+          "url": "https://docs.google.com/document/d/14trIXJFLEsH6eX4POC-shNC08Tnx-tQkVsvpEAlzGRc/edit",
+          "type": "Робочий аркуш"
+        },
+        "getting_loopy_2/courseb/2023": {
+          "name": "Зациклюємось",
+          "url": "https://docs.google.com/document/d/16GX6QH5TZcCj-GUHQirLGLAuoYUKcLpaEB_MP2vD0VQ/edit",
+          "type": "Оцінювання"
+        },
+        "getting_loopy_3/courseb/2023": {
+          "name": "Зациклюємось",
+          "url": "https://docs.google.com/document/d/1mgj0T6ivQPt13-aoOH-o8bMyFFwqqP5ZCa6mWVdk51E/edit",
+          "type": "Відповіді до аркуша оцінювання"
+        },
+        "cs_fundamentals_main_activity_tips/courseb/2023": {
+          "name": "Методичні рекомендації щодо основної вправи",
+          "url": "https://docs.google.com/document/d/1GtNBRkP1mXsBLInqybo9mYnGUi45PSEomhSxc8fLooE/edit?usp=sharing",
+          "type": "Рекомендації щодо уроку"
+        },
+        "pause_and_think_online/courseb/2023": {
+          "name": "Зупинись і подумай онлайн",
+          "url": "https://www.youtube.com/watch?v=rgbZAWnOWOo",
+          "type": "Відео"
+        },
+        "the_right_app_scenarios/courseb/2023": {
+          "name": "Сценарії \"Ідеальний застосунок\"",
+          "url": "https://docs.google.com/presentation/d/1wWqt0pWEdIBTNVxJ3uGbqAKr0cR15snJUtxs_fLllho/edit#slide=id.g45fb8e6318_0_0",
+          "type": "Набір слайдів"
+        },
+        "the_big_event/courseb/2023": {
+          "name": "Велика подія",
+          "url": "https://www.youtube.com/watch?v=SUH-sB4u-oo"
+        },
+        "the_big_event_1/courseb/2023": {
+          "name": "Велика подія",
+          "url": "https://docs.google.com/document/d/1ID2F-VhIOiy0YOeewTpq60NcSAbDgPH9j28UYvfLw2o/edit",
+          "type": "Оцінювання"
+        },
+        "the_big_event_2/courseb/2023": {
+          "name": "Велика подія",
+          "url": "https://docs.google.com/document/d/1snz3vN1488ll0290RWMiIfpZmoBlyohe5c4BeLahbes/edit",
+          "type": "Відповіді до аркуша оцінювання"
+        },
+        "the_big_event_courses_a_b_/courseb/2023": {
+          "name": "Велика подія  (Курси A, B)",
+          "url": "https://docs.google.com/document/d/1dUgrJoPBjgIN_CZmiTN1dwwkmoQxUbHutL3Nppx8l6A/edit",
+          "type": "Зображення \"Пульт керування\""
+        },
+        "play_lab_project_planning_guide/courseb/2023": {
+          "name": "План проєкту в Ігровій студії",
+          "url": "https://docs.google.com/document/d/1w3lryp97htn9ac28F42Hoi3G0rdZx8gd0lvWQ_aZndQ/template/preview",
+          "type": "Роздатковий матеріал"
+        },
+        "play_lab_project_planning_guide_1/courseb/2023": {
+          "name": "План проєкту в Ігровій студії",
+          "url": "https://docs.google.com/document/d/10q7gSfNW-xDzvESbjkbpnkEQQWwakVQ00_cZbrRhiXM/template/preview",
+          "type": "Відповіді"
+        },
+        "all_resources/coursec/2023": {
+          "name": "Всі ресурси",
+          "url": "/с/курс-2023/ресурси"
+        },
+        "all_standards/coursec/2023": {
+          "name": "Всі стандарти",
+          "url": "/с/курс-2023/стандарти"
+        },
+        "all_vocabulary/coursec/2023": {
+          "name": "Всі терміни",
+          "url": "/с/курс-2023/слокаб"
+        },
+        "common_core_and_ngss_guidance/coursec/2023": {
+          "name": "Керівництво по стандартах Common Core і NGSS",
+          "url": "https://docs.google.com/document/d/1SqD3MaRbGIONGs5bcL1YhHUFK92ZXFIufypr6UC8XYA/preview#heading=h.a5iytir4b96q",
+          "type": "Ресурс"
+        },
+        "cross-curricular_extension_activities/coursec/2023": {
+          "name": "Міжпредметні додаткові діяльності",
+          "url": "https://docs.google.com/document/d/1MRlHy_3VgLXKZwjeB0VmI8HWuPvupZODsslPnA7KYAY/preview",
+          "type": "Ресурс"
+        },
+        "debugging_guide_1/coursec/2023": {
+          "name": "Путівник з налагодження",
+          "url": "https://docs.google.com/document/d/1_UFVNtS0_f7aH79WtSEAR0niLy-KPwX1xNiXllOBviE/preview",
+          "type": "Ресурс"
+        },
+        "extension_lessons_with_the_micro_bit/coursec/2023": {
+          "type": "Ресурс"
+        },
+        "implementation_guide/coursec/2023": {
+          "name": "Практика впровадження",
+          "url": "https://docs.google.com/document/d/1I04szlSMuDlFLH_pidEC-huk_-t6ig09pBSyMv1Z3pw/preview",
+          "type": "Ресурс"
+        },
+        "lesson_type_guide/coursec/2023": {
+          "name": "Керівництво з типів уроків",
+          "url": "https://docs.google.com/document/d/1Z28A1yF6BZu3lIlVvvHo5UqBpyuc1hX8YVjIt3fwmY4/view",
+          "type": "Ресурс"
+        },
+        "teacher_forum/coursec/2023": {
+          "name": "Форум вчителів",
+          "url": "https://forum.code.org/c/csf/",
+          "type": "Ресурс"
+        },
+        "csf_course_syllabus/coursec/2023": {
+          "name": "Програма курсу CSF",
+          "url": "https://docs.google.com/document/d/1mGTa71uFIOvLuwcbo_7XIutZIuJKGlbl0KlRqgibs2U/edit?usp=drive_link",
+          "type": "Ресурс"
+        },
+        "teaching_and_learning_strategies/coursec/2023": {
+          "name": "Стратегії викладання та навчання",
+          "url": "https://docs.google.com/document/d/1khllUBI1xpSrUmwWwa2J35GaKVV8bb3bQb_5Vc_ty54/preview",
+          "type": "Ресурс"
+        },
+        "values_and_philosophy/coursec/2023": {
+          "name": "Цінності та філософія",
+          "url": "https://docs.google.com/document/d/1_56iN0iyFzPSsuj5-W7-SI6E7A8z9BTpL3qu4fDMkKk/preview",
+          "type": "Ресурс"
+        },
+        "putting_a_stop_to_online_meanness_lesson_slides/coursec/2023": {
+          "name": "Зупиняємо образи в мережі: STOP жорстокість в інтернеті: слайди для уроку",
+          "url": "https://docs.google.com/presentation/d/1AucG8pTXbSBTbmZN8IJhX7CKgOLoUPjxnUyohMXyokI/edit",
+          "type": "Набір слайдів"
+        },
+        "putting_a_stop_to_online_meanness_stop_online_meanness/coursec/2023": {
+          "name": "Зупиняємо образи в мережі: STOP жорстокість в інтернеті",
+          "url": "https://docs.google.com/document/d/1CcB2u1NJY-P1SP6OJ1EPp3yfAtPC8Wgy_Uwb1gGgjx8/edit?usp=sharing",
+          "type": "Роздатковий матеріал"
+        },
+        "csf_-_course_c_-_slides_2022-2023/coursec/2023": {
+          "name": "CSF - Курс C - Слайди 2022-2023 рр.",
+          "type": "Слайди"
+        },
+        "my_robotic_friends/coursec/2023": {
+          "name": "Мої друзі-роботи",
+          "url": "https://docs.google.com/document/d/1iEqKjkf0UvUiPlijGnOYvjxNWct_I9wWIi8N5cno6Dg/edit",
+          "type": "Розташування стаканчиків"
+        },
+        "my_robotic_friends_1/coursec/2023": {
+          "name": "Мої друзі-роботи",
+          "url": "https://docs.google.com/document/d/1M2lixPQaW9PJVczNZGsG7mFjtcu0mN5dHasZSTvvMLQ/edit",
+          "type": "Легенда символів"
+        },
+        "my_robotic_friends_2/coursec/2023": {
+          "name": "Мої друзі-роботи",
+          "url": "https://youtu.be/xaW3PAzHxCU",
+          "type": "Відео про безмашинну вправу"
+        },
+        "my_robotic_friends_3/coursec/2023": {
+          "name": "Мої друзі-роботи",
+          "url": "https://docs.google.com/document/d/1Tr_d6Ex9A1No1FC82vNGyP71SDxkm0q280iS3CTSAUU/edit",
+          "type": "Ідеї фігур зі стаканчиків"
+        },
+        "my_robotic_friends_4/coursec/2023": {
+          "name": "Мої друзі-роботи",
+          "url": "https://docs.google.com/document/d/1cC1t7mlkxEni1aA4uuU0SNhOaWbCB6CGbSFgans9yRo/edit",
+          "type": "Шаблон паперової трапеції"
+        },
+        "maze_bridging_page/coursec/2023": {
+          "name": "Аркуш переходу до Лабіринту",
+          "url": "https://drive.google.com/file/d/19Ul9ruPQ6bHr3sfqnacMMmCGOekTXPYS/view"
+        },
+        "unplugged_maze_blocks/coursec/2023": {
+          "name": "Безмашинні блоки для Лабіринту",
+          "url": "https://docs.google.com/presentation/d/1k_7SSLsm-E4aisa9-LmbsCVzH6J-8yGD9T2LwPb2v48/edit",
+          "type": "Друковані матеріали"
+        },
+        "cs_fundamentals_main_activity_tips/coursec/2023": {
+          "name": "Методичні рекомендації щодо основної вправи",
+          "url": "https://docs.google.com/document/d/1GtNBRkP1mXsBLInqybo9mYnGUi45PSEomhSxc8fLooE/edit?usp=sharing",
+          "type": "Рекомендації щодо уроку"
+        },
+        "debugging_guide/coursec/2023": {
+          "name": "Путівник з налагодження",
+          "url": "https://docs.google.com/document/d/1IeRgQ3-s7vETC8sLKgY5Ry4f0BQLTEggJHut19oHcsk/",
+          "type": "Ресурс"
+        },
+        "pair_programming/coursec/2023": {
+          "name": "Парне програмування",
+          "url": "https://www.youtube.com/watch?v=vgkahOzFH2Q",
+          "type": "Відео"
+        },
+        "unplugged_blocks_courses_c-f_/coursec/2023": {
+          "name": " Безмашинні блоки (Курси C-F)",
+          "url": "https://docs.google.com/document/d/1cRPELQ28TZMJhc68-eYP1D26Uqzcyfx4RDYuThZJGLo/edit",
+          "type": "Друковані матеріали"
+        },
+        "artist_introduction/coursec/2023": {
+          "name": "Знайомство з Художником",
+          "url": "https://www.youtube.com/watch?v=3wk1cbL79yU",
+          "type": "Відео для учнів"
+        },
+        "turns_angles/coursec/2023": {
+          "name": "Повороти і кути",
+          "type": "Відео для учнів"
+        },
+        "turns_angles_1/coursec/2023": {
+          "name": "Повороти і кути",
+          "url": "https://docs.google.com/document/d/1pF_iUqf-I0envRfNXwK2EQz7Xodb34kbppmgyg6ywRQ/edit",
+          "type": "Роздатковий матеріал"
+        },
+        "the_big_event/coursec/2023": {
+          "name": "Велика подія",
+          "url": "https://youtu.be/u0WV9shCoak",
+          "type": "Відео про безмашинну вправу"
+        },
+        "the_big_event_1/coursec/2023": {
+          "name": "Велика подія",
+          "url": "https://docs.google.com/document/d/1ID2F-VhIOiy0YOeewTpq60NcSAbDgPH9j28UYvfLw2o/edit",
+          "type": "Оцінювання"
+        },
+        "the_big_event_2/coursec/2023": {
+          "name": "Велика подія",
+          "url": "https://docs.google.com/document/d/1snz3vN1488ll0290RWMiIfpZmoBlyohe5c4BeLahbes/edit",
+          "type": "Відповіді до аркуша оцінювання"
+        },
+        "the_big_event_course_c_/coursec/2023": {
+          "name": "Велика подія  (Курс C)",
+          "url": "https://docs.google.com/document/d/1FPiVD_swfzHbgQ1SmS__-j4k7Qt5tpUo0uhhi5OQJRo/edit",
+          "type": "Пульт керування подіями"
+        },
+        "open-ended_programming_levels/coursec/2023": {
+          "name": "Рівні програмування з відкритою кінцівкою",
+          "type": "Відповіді"
+        },
+        "pause_and_think_online/coursec/2023": {
+          "name": "Зупинись і подумай онлайн",
+          "url": "https://www.youtube.com/watch?v=rgbZAWnOWOo",
+          "type": "Відео"
+        },
+        "sample_level_solutions/coursec/2023": {
+          "name": "Розв'язки рівнів-зразків",
+          "url": "https://docs.google.com/document/d/1cJ_FIgqGEt1OikBc53bEJGhFFOLrppJ2pRWAw-bmV0k/template/preview",
+          "type": "Відповіді"
+        },
+        "open-ended_programming_levels_1/coursec/2023": {
+          "name": "Рівні програмування з відкритою кінцівкою",
+          "url": "https://docs.google.com/document/d/14WiSwDT88XDVVoUn5tuFDI0muLj4FUYN_NqcOCXIAp4/view",
+          "type": "Відповіді"
+        },
+        "graphing_data_from_play_lab/coursec/2023": {
+          "name": "Візуалізація даних з Ігрової студії",
+          "url": "https://docs.google.com/document/d/1M_8g2CDGo8QrsAu_MEEBKP6Mwytjxg3HJ6eKtaFGYOs/edit?usp=sharing",
+          "type": "Робочий аркуш"
+        },
+        "binary_bracelets/coursec/2023": {
+          "name": "Двійкові браслети",
+          "url": "https://youtu.be/3S2YfoO4_CM",
+          "type": "Відео про безмашинну вправу"
+        },
+        "binary_bracelets_1/coursec/2023": {
+          "name": "Двійкові браслети",
+          "url": "https://www.youtube.com/watch?v=fDLkBqZpxWQ",
+          "type": "Відео \"Урок на практиці\""
+        },
+        "binary_bracelets_2/coursec/2023": {
+          "name": "Двійкові браслети",
+          "url": "https://docs.google.com/document/d/11NBPUZiE0VegmhhGQv4YPy7j4DKq4HDocuSf82DyN0U/edit",
+          "type": "Робочий аркуш"
+        },
+        "binary_bracelets_3/coursec/2023": {
+          "name": "Двійкові браслети",
+          "url": "https://docs.google.com/document/d/1inIhg9NfMPSjuy1bnzdKZjPVeoCUUd8drtNfUG3Lxsg/edit",
+          "type": "Оцінювання"
+        },
+        "binary_bracelets_4/coursec/2023": {
+          "name": "Двійкові браслети",
+          "url": "https://docs.google.com/document/d/1vfUPhCq2a8hwnSLF_E3mO8Ozd49CDj0owCjo8ye0OZI/edit",
+          "type": "Відповіді до аркуша оцінювання"
+        },
+        "bits_versus_bytes/coursec/2023": {
+          "name": "Біти проти байтів",
+          "url": "https://www.youtube.com/watch?v=35vkaO_SgzI&feature=youtu.be",
+          "type": "Відео для учнів"
+        },
+        "play_lab_project_planning_guide/coursec/2023": {
+          "name": "План проєкту в Ігровій студії",
+          "url": "https://docs.google.com/document/d/1wdUd0RViocsMvDqdjb5WQME2e9Hr7PwMeM1vNzSovio/edit",
+          "type": "Робочий аркуш"
+        },
+        "play_lab_project_planning_guide_exemplar_/coursec/2023": {
+          "name": "План проєкту в Ігровій студії (Приклад заповнення)",
+          "url": "https://docs.google.com/document/d/1QpMMZTGReEzocnTcez15WMvDHHG7taLdPxKXCsIjFuc/edit",
+          "type": "Ресурси для уроку"
+        },
+        "all_resources/coursed/2023": {
+          "name": "Всі ресурси",
+          "url": "/с/курс/2023/ресурси"
+        },
+        "all_standards/coursed/2023": {
+          "name": "Всі стандарти",
+          "url": "/с/курсі-2023/стандарти"
+        },
+        "all_vocabulary/coursed/2023": {
+          "name": "Всі терміни",
+          "url": "/с/курсі-2023/слокаб"
+        },
+        "common_core_and_ngss_guidance/coursed/2023": {
+          "name": "Керівництво по стандартах Common Core і NGSS",
+          "url": "https://docs.google.com/document/d/1SqD3MaRbGIONGs5bcL1YhHUFK92ZXFIufypr6UC8XYA/preview#heading=h.sw3rfp1nfbrp",
+          "type": "Ресурс"
+        },
+        "cross-curricular_extension_activities/coursed/2023": {
+          "name": "Міжпредметні додаткові діяльності",
+          "url": "https://docs.google.com/document/d/1MRlHy_3VgLXKZwjeB0VmI8HWuPvupZODsslPnA7KYAY/preview",
+          "type": "Ресурс"
+        },
+        "debugging_guide/coursed/2023": {
+          "name": "Путівник з налагодження",
+          "url": "https://docs.google.com/document/d/1_UFVNtS0_f7aH79WtSEAR0niLy-KPwX1xNiXllOBviE/preview",
+          "type": "Ресурс"
+        },
+        "extension_lessons_with_the_micro_bit/coursed/2023": {
+          "type": "Ресурс"
+        },
+        "implementation_guide/coursed/2023": {
+          "name": "Практика впровадження",
+          "url": "https://docs.google.com/document/d/1I04szlSMuDlFLH_pidEC-huk_-t6ig09pBSyMv1Z3pw/preview",
+          "type": "Ресурс"
+        },
+        "lesson_type_guide/coursed/2023": {
+          "name": "Керівництво з типів уроків",
+          "url": "https://docs.google.com/document/d/1Z28A1yF6BZu3lIlVvvHo5UqBpyuc1hX8YVjIt3fwmY4/view",
+          "type": "Ресурс"
+        },
+        "teacher_forum/coursed/2023": {
+          "name": "Форум вчителів",
+          "url": "https://forum.code.org/c/csf/",
+          "type": "Ресурс"
+        },
+        "csf_course_syllabus/coursed/2023": {
+          "name": "Програма курсу CSF",
+          "url": "https://docs.google.com/document/d/1mGTa71uFIOvLuwcbo_7XIutZIuJKGlbl0KlRqgibs2U/edit?usp=drive_link",
+          "type": "Ресурс"
+        },
+        "teaching_and_learning_strategies/coursed/2023": {
+          "name": "Стратегії викладання та навчання",
+          "url": "https://docs.google.com/document/d/1khllUBI1xpSrUmwWwa2J35GaKVV8bb3bQb_5Vc_ty54/preview",
+          "type": "Ресурс"
+        },
+        "values_and_philosophy/coursed/2023": {
+          "name": "Цінності та філософія",
+          "url": "https://docs.google.com/document/d/1_56iN0iyFzPSsuj5-W7-SI6E7A8z9BTpL3qu4fDMkKk/preview",
+          "type": "Ресурс"
+        },
+        "password_power-up_if_then_scenarios/coursed/2023": {
+          "name": "Посилення пароля: Сценарії \"Якщо ...то...\"",
+          "url": "https://docs.google.com/document/d/1HkIS6wL4JvgVYWMke6exuLN7S7lulZ60NfMxTu3D5OY/edit",
+          "type": "Роздатковий матеріал"
+        },
+        "password_power-up_if_then_scenarios_1/coursed/2023": {
+          "name": "Посилення пароля: Сценарії \"Якщо ...то...\"",
+          "url": "https://docs.google.com/document/d/1946nWIHU9u-Ke5v7GOoMer3IjXCpFZ8ZGCA5TjzCcPk/edit",
+          "type": "Відповіді"
+        },
+        "password_power-up_lesson_quiz/coursed/2023": {
+          "name": "Посилення пароля: тестування",
+          "url": "https://docs.google.com/forms/d/1OBS37DZUmIxM4ZciCD6qWFMam3_u8djgZNJd9IOK6Zs/copy",
+          "type": "Ресурс"
+        },
+        "password_power-up_lesson_quiz_1/coursed/2023": {
+          "name": "Посилення пароля: тестування",
+          "url": "https://www.commonsense.org/education/digital-citizenship/quiz/password-power-up-lesson-quiz",
+          "type": "Відповіді"
+        },
+        "password_power-up_lesson_slides/coursed/2023": {
+          "name": "Посилення пароля: слайди до уроку",
+          "url": "https://docs.google.com/presentation/d/1b19MEJxL5MRVftQeP_vHb0Lma-aoSyKHnVHeKbM3yFg/edit",
+          "type": "Слайди"
+        },
+        "password_power-up_power-up_your_password/coursed/2023": {
+          "name": "Посилення пароля:  забезпечуємо надійність свого пароля",
+          "url": "https://docs.google.com/document/d/1DhBdomAcOBqV0PR4dWhR0Fsgh3fF5-chZp1ywHIRlC0/edit",
+          "type": "Роздатковий матеріал"
+        },
+        "password_power-up_power-up_your_password_1/coursed/2023": {
+          "name": "Посилення пароля:  забезпечуємо надійність свого пароля",
+          "url": "https://docs.google.com/document/d/1lmUMRTT8KPKFAF1ZMMuVyHMN54wCtCoLoo_kVyQr-zE/edit",
+          "type": "Відповіді"
+        },
+        "csf_-_course_d_-_slides_2022-2023/coursed/2023": {
+          "type": "Слайди"
+        },
+        "graph_paper_programming/coursed/2023": {
+          "name": "Програмування по клітинках",
+          "url": "https://docs.google.com/document/d/1Na3F0DH8YKgBd_h-Zu8g1swOShCUHeWdhlvMcgQTOp0/edit?usp=sharing",
+          "type": "Робочий аркуш вправи"
+        },
+        "graph_paper_programming_1/coursed/2023": {
+          "name": "Програмування по клітинках",
+          "url": "https://youtu.be/Y_paSrH2ffw",
+          "type": "Відео про безмашинну вправу"
+        },
+        "graph_paper_programming_2/coursed/2023": {
+          "name": "Програмування по клітинках",
+          "url": "https://www.youtube.com/watch?v=vBUtejDNvrs",
+          "type": "Відео \"Урок на практиці\""
+        },
+        "graph_paper_programming_3/coursed/2023": {
+          "name": "Програмування по клітинках",
+          "url": "https://docs.google.com/document/d/19utmvO_olTvYo1oAiKZqozlSbint96QoFkOUipxXSh8/edit",
+          "type": "Відповіді до робочого аркуша"
+        },
+        "graph_paper_programming_4/coursed/2023": {
+          "name": "Програмування по клітинках",
+          "url": "https://docs.google.com/document/d/1n4UiXr-2BbGbpc_8KDxTZTvv3TiO59KCqvrvirFqRM8/edit",
+          "type": "Оцінювання"
+        },
+        "graph_paper_programming_5/coursed/2023": {
+          "name": "Програмування по клітинках",
+          "url": "https://docs.google.com/document/d/1gHXgCJc7W0-Ch76HNnvm_OK1xm0zkrgdqxTEH6palNY/edit",
+          "type": "Відповіді до аркуша оцінювання"
+        },
+        "pair_programming/coursed/2023": {
+          "name": "Парне програмування",
+          "url": "https://www.youtube.com/watch?v=vgkahOzFH2Q",
+          "type": "Відео для учнів"
+        },
+        "relay_programming/coursed/2023": {
+          "name": "Естафетне програмування",
+          "url": "https://docs.google.com/document/d/1nneTPNTpboCBMYCr2qpK8DcHSZD6lDi0ovkqkdRDeSc/edit",
+          "type": "Відповіді до робочого аркуша"
+        },
+        "relay_programming_1/coursed/2023": {
+          "name": "Естафетне програмування",
+          "url": "https://docs.google.com/document/d/1az8K9tDW0XcU2mvQ_1D7CXpZbq7aq5T-x0RiemGlv5s/edit",
+          "type": "Робочий аркуш"
+        },
+        "relay_programming_2/coursed/2023": {
+          "name": "Естафетне програмування",
+          "url": "https://docs.google.com/document/d/1UyiAK9sxuMP3AWjbP0TlsMahNa98LxJwyGWKhcdYpig/edit",
+          "type": "Зображення \"Налагодження вчителем\""
+        },
+        "relay_programming_3/coursed/2023": {
+          "name": "Естафетне програмування",
+          "url": "https://youtu.be/l5MKkXbzOsk",
+          "type": "Відео про безмашинну вправу"
+        },
+        "relay_programming_4/coursed/2023": {
+          "name": "Естафетне програмування",
+          "url": "https://youtu.be/ZULpfAVJOBo",
+          "type": "Відео для вчителя"
+        },
+        "relay_programming_5/coursed/2023": {
+          "name": "Естафетне програмування",
+          "url": "https://docs.google.com/document/d/1O7nVu6CYhQ_5rWXdAGWEh-e79jZvR__D9xrqSg8Q05o/edit",
+          "type": "Пакет для вправи"
+        },
+        "unplugged_blocks_courses_c-f_/coursed/2023": {
+          "name": " Безмашинні блоки (Курси C-F)",
+          "url": "https://docs.google.com/document/d/1cRPELQ28TZMJhc68-eYP1D26Uqzcyfx4RDYuThZJGLo/edit",
+          "type": "Друковані матеріали"
+        },
+        "open-ended_programming_levels/coursed/2023": {
+          "name": "Рівні програмування з відкритою кінцівкою",
+          "url": "https://docs.google.com/document/d/1Pr3XEM5J4oogmwFCGyvolp5XQzVaUFkGCkSMs9d55dQ/view",
+          "type": "Відповіді"
+        },
+        "pause_and_think_online/coursed/2023": {
+          "name": "Зупинись і подумай онлайн",
+          "url": "https://www.youtube.com/watch?v=rgbZAWnOWOo",
+          "type": "Відео"
+        },
+        "open-ended_programming_levels_1/coursed/2023": {
+          "name": "Рівні програмування з відкритою кінцівкою",
+          "type": "Відповіді"
+        },
+        "sample_level_solutions/coursed/2023": {
+          "name": "Розв'язки рівнів-зразків",
+          "url": "https://docs.google.com/document/d/1XNOBi1OrHlRQbQCiaCV9MPHeAQhQDDr34wjlAd3qatw/template/preview",
+          "type": "Відповіді"
+        },
+        "dance_party_project_guide/coursed/2023": {
+          "name": "План проєкту \"Танцювальна вечірка\"",
+          "url": "https://docs.google.com/document/d/1Cep4K9CwUM4HfsqFXHM7eR3ZHQfMBgX6S5HHN66Qu64/edit",
+          "type": "Робочий аркуш"
+        },
+        "dance_party_unplugged/coursed/2023": {
+          "name": "Танцювальна вечірка: безмашинне завдання",
+          "type": "Ресурс"
+        },
+        "open-ended_programming_levels_2/coursed/2023": {
+          "name": "Рівні програмування з відкритою кінцівкою",
+          "url": "https://docs.google.com/document/d/1f2ayrjpWKVWqydZWZFTtXbDWZDdKcNIg4kGaOLB2o3U/view",
+          "type": "Відповіді"
+        },
+        "spotify_playlist_all_ages_/coursed/2023": {
+          "name": "Плейлист Spotify (для всіх вікових категорій)"
+        },
+        "feeling_faces/coursed/2023": {
+          "name": "Смайлики",
+          "url": "https://docs.google.com/document/d/1p2uDTrPZPsxsbsePZe9OfPlIuMwybNjcnZ4tYoOEqL8/edit",
+          "type": "Зображення емоцій"
+        },
+        "conditionals_with_cards/coursed/2023": {
+          "name": "Умови з картами",
+          "url": "https://youtu.be/UymN4lTL50s",
+          "type": "Відео про безмашинну вправу"
+        },
+        "conditionals_with_cards_1/coursed/2023": {
+          "name": "Умови з картами",
+          "url": "https://www.youtube.com/watch?v=2m2Rn9VxHfU",
+          "type": "Відео \"Урок на практиці\""
+        },
+        "conditionals_with_cards_2/coursed/2023": {
+          "name": "Умови з картами",
+          "url": "https://docs.google.com/document/d/1eAhLqOTVV9MMweEuzHpH7H5w0x1iG3h5810KBeO5700/edit",
+          "type": "Оцінювання"
+        },
+        "conditionals_with_cards_3/coursed/2023": {
+          "name": "Умови з картами",
+          "url": "https://youtu.be/TbUaEnAYPjI",
+          "type": "Відео \"Оцінювання\""
+        },
+        "conditionals_with_cards_4/coursed/2023": {
+          "name": "Умови з картами",
+          "url": "https://docs.google.com/document/d/1DJQGozo5bzffhuGi_liIaG6oKryDsVykdjmMDOxwnz0/edit",
+          "type": "Відповіді до аркуша оцінювання"
+        },
+        "conditionals_with_cards_sample_program/coursed/2023": {
+          "name": "Приклад програми \"Умови з картами\" ",
+          "url": "https://docs.google.com/document/d/1tzw8v0NTfLDdWAkq06hyOJeRYBjHkpSZ1SCmrE79osM/edit",
+          "type": "Посібник для підготовки вчителя"
+        },
+        "csf_course_d_end_of_course_project_planning_guide/coursed/2023": {
+          "name": "План підсумкового проєкту \"Основи інформатики - Курс D\"",
+          "url": "https://docs.google.com/document/d/1WvcJ4Rg_T9NoA_CZqOYsznG7hTWkYnzV1WXcme7hsgk/edit?usp=sharing",
+          "type": "План проєкту"
+        },
+        "all_resources/coursee/2023": {
+          "name": "Всі ресурси",
+          "url": "/с/курс-2023/ресурси"
+        },
+        "all_standards/coursee/2023": {
+          "name": "Всі стандарти",
+          "url": "/с/курс-2023/стандарти"
+        },
+        "all_vocabulary/coursee/2023": {
+          "name": "Всі терміни",
+          "url": "/с/курс-2023/вокаб"
+        },
+        "common_core_and_ngss_guidance/coursee/2023": {
+          "name": "Керівництво по стандартах Common Core і NGSS",
+          "url": "https://docs.google.com/document/d/1SqD3MaRbGIONGs5bcL1YhHUFK92ZXFIufypr6UC8XYA/preview#heading=h.iamt4mqlkyt7",
+          "type": "Ресурс"
+        },
+        "cross-curricular_extension_activities/coursee/2023": {
+          "name": "Міжпредметні додаткові діяльності",
+          "url": "https://docs.google.com/document/d/1MRlHy_3VgLXKZwjeB0VmI8HWuPvupZODsslPnA7KYAY/preview",
+          "type": "Ресурс"
+        },
+        "debugging_guide/coursee/2023": {
+          "name": "Путівник з налагодження",
+          "url": "https://docs.google.com/document/d/1_UFVNtS0_f7aH79WtSEAR0niLy-KPwX1xNiXllOBviE/preview",
+          "type": "Ресурс"
+        },
+        "extension_lessons_with_the_micro_bit/coursee/2023": {
+          "type": "Ресурс"
+        },
+        "implementation_guide/coursee/2023": {
+          "name": "Практика впровадження",
+          "url": "https://docs.google.com/document/d/1I04szlSMuDlFLH_pidEC-huk_-t6ig09pBSyMv1Z3pw/preview",
+          "type": "Ресурс"
+        },
+        "lesson_type_guide/coursee/2023": {
+          "name": "Керівництво з типів уроків",
+          "url": "https://docs.google.com/document/d/1Z28A1yF6BZu3lIlVvvHo5UqBpyuc1hX8YVjIt3fwmY4/view",
+          "type": "Ресурс"
+        },
+        "sprite_lab_documentation/coursee/2023": {
+          "name": "Документація Спрайт Лабораторії",
+          "url": "https://studio.code.org/docs/spritelab/",
+          "type": "Ресурс"
+        },
+        "teacher_forum/coursee/2023": {
+          "name": "Форум вчителів",
+          "url": "https://forum.code.org/c/csf/",
+          "type": "Ресурс"
+        },
+        "csf_course_syllabus/coursee/2023": {
+          "name": "Програма курсу CSF",
+          "url": "https://docs.google.com/document/d/1mGTa71uFIOvLuwcbo_7XIutZIuJKGlbl0KlRqgibs2U/edit?usp=drive_link",
+          "type": "Ресурс"
+        },
+        "teaching_and_learning_strategies/coursee/2023": {
+          "name": "Стратегії викладання та навчання",
+          "url": "https://docs.google.com/document/d/1khllUBI1xpSrUmwWwa2J35GaKVV8bb3bQb_5Vc_ty54/preview"
+        },
+        "values_and_philosophy/coursee/2023": {
+          "name": "Цінності та філософія",
+          "url": "https://docs.google.com/document/d/1_56iN0iyFzPSsuj5-W7-SI6E7A8z9BTpL3qu4fDMkKk/preview",
+          "type": "Ресурс"
+        },
+        "be_a_super_digital_citizen_lesson_slides/coursee/2023": {
+          "name": "Стань суперцифровим громадянином: Слайди до уроку",
+          "url": "https://docs.google.com/presentation/d/142G9Y1tG1-eboN4Iyg5iMEjD1DTTXjhlHQCVkC4UqmM/edit"
+        },
+        "be_a_super_digital_citizen_super_digital_citizen/coursee/2023": {
+          "name": "Стань суперцифровим громадянином: Супер цифровий громадянин",
+          "url": "https://www.commonsense.org/education/videos/super-digital-citizen"
+        },
+        "private_and_personal_information_exit_ticket/coursee/2023": {
+          "name": "Приватна та особиста інформація: Вихідний квиток",
+          "url": "https://docs.google.com/document/d/1c4A68WVNJW11szyV07UjBQbq22Eb_yszRBGzjQEp3Ok/edit",
+          "type": "Роздатковий матеріал"
+        },
+        "private_and_personal_information_lesson_quiz/coursee/2023": {
+          "name": "Приватна та особиста інформація: Вікторина",
+          "url": "https://docs.google.com/forms/d/1iXNQu1c_I19GGasTbz95xGmIBLz3YokGSErREzTukpQ/copy",
+          "type": "Форма"
+        },
+        "private_and_personal_information_lesson_quiz_1/coursee/2023": {
+          "name": "Приватна та особиста інформація: Вікторина",
+          "url": "https://www.commonsense.org/education/digital-citizenship/quiz/private-and-personal-information-lesson-quiz",
+          "type": "Відповіді"
+        },
+        "private_and_personal_information_lesson_slides/coursee/2023": {
+          "name": "Приватна та особиста інформація: Слайди уроку",
+          "url": "https://docs.google.com/presentation/d/1qmC8zb_VEUFDQvxFmqsSj8PBCQyaDsOI3HMxiDM0wz4/edit",
+          "type": "Набір слайдів"
+        },
+        "private_and_personal_information_private_and_personal_information/coursee/2023": {
+          "name": "Приватна та особиста інформація: Приватна та особиста інформація",
+          "url": "https://www.commonsense.org/education/videos/private-and-personal-information",
+          "type": "Відео для учнів"
+        },
+        "csf_-_course_e_-_slides_2022-2023/coursee/2023": {
+          "type": "Слайди"
+        },
+        "swimming_fish_teacher_sandbox/coursee/2023": {
+          "name": "Демонстраційний рівень \"Плаваюча рибка\"",
+          "url": "https://studio.code.org/levels/18623",
+          "type": "Рівень програмування"
+        },
+        "about_me_planning_guide/coursee/2023": {
+          "name": "Посібник з планування \"Про мене\"",
+          "url": "https://docs.google.com/document/d/1ixiK2srfq-PWsHVbgD7KYomZndOzYetgwcZ401oWdWk/template/preview",
+          "type": "Роздатковий матеріал"
+        },
+        "pause_and_think_online/coursee/2023": {
+          "name": "Зупинись і подумай онлайн",
+          "url": "https://youtu.be/X_duZ-1LApg",
+          "type": "Відео"
+        },
+        "turns_angles/coursee/2023": {
+          "name": "Повороти і кути",
+          "url": "https://docs.google.com/document/d/1pF_iUqf-I0envRfNXwK2EQz7Xodb34kbppmgyg6ywRQ/edit",
+          "type": "Роздатковий матеріал"
+        },
+        "turns_angles_1/coursee/2023": {
+          "name": "Повороти і кути",
+          "type": "Відео для учнів"
+        },
+        "functions_unplugged_songwriting/coursee/2023": {
+          "name": "Безмашинні функції: Написання пісень",
+          "url": "https://www.youtube.com/watch?v=QuIMLel1mmw",
+          "type": "Відео \"Урок на практиці\""
+        },
+        "functions_unplugged_songwriting_1/coursee/2023": {
+          "name": "Безмашинні функції: Написання пісень",
+          "url": "https://docs.google.com/document/d/1v-ZdZcYDvpqtQxNYlnvf7T5-r6OLJLSMnJgywy1nC1k/edit",
+          "type": "Робочий аркуш"
+        },
+        "functions_unplugged_songwriting_2/coursee/2023": {
+          "name": "Безмашинні функції: Написання пісень",
+          "url": "https://docs.google.com/document/d/1mIu9guugQSR6RvwTJ_uh8w1bjFZVsJ-4QaUOTtEX_GE/edit",
+          "type": "Оцінювання"
+        },
+        "functions_unplugged_songwriting_3/coursee/2023": {
+          "name": "Безмашинні функції: Написання пісень",
+          "url": "https://docs.google.com/document/d/1byJvcCErS9eUgGeKfFVEwJcmkoa3AnPX8MmoPlPzoxk/edit",
+          "type": "Відповіді до аркуша оцінювання"
+        },
+        "songwriting_with_functions/coursee/2023": {
+          "name": "Написання пісень з функціями",
+          "url": "https://youtu.be/5iDCKkI6y2Y",
+          "type": "Відео про безмашинну вправу"
+        },
+        "unplugged_blocks_courses_c-f_/coursee/2023": {
+          "name": " Безмашинні блоки (Курси C-F)",
+          "url": "https://docs.google.com/document/d/1cRPELQ28TZMJhc68-eYP1D26Uqzcyfx4RDYuThZJGLo/edit",
+          "type": "Друковані матеріали"
+        },
+        "types_of_disabilities/coursee/2023": {
+          "name": "Типи порушень здоров'я",
+          "url": "https://www.w3.org/WAI/people-use-web/abilities-barriers/",
+          "type": "Ресурс"
+        },
+        "digital_sharing_ethics_video_/coursee/2023": {
+          "name": "Етика цифрового обміну (відео)",
+          "url": "https://www.youtube.com/watch?v=o_oDsBeBxko",
+          "type": "Відео"
+        },
+        "digital_sharing_lesson_plan/coursee/2023": {
+          "name": "План уроку з Обміну та поширення онлайн",
+          "url": "https://docs.google.com/document/d/1PJ4Ir3JsrQZUNPGtGJZPISAGJydXCbTX9A_PNEtmw0s/edit?usp=sharing",
+          "type": "Ресурс"
+        },
+        "cs_fundamentals_final_project/coursee/2023": {
+          "name": "Підсумковий проєкт з основ інформатики",
+          "type": "Рубрика"
+        },
+        "end_of_course_project_guide/coursee/2023": {
+          "name": "План підсумкового проєкту курсу",
+          "type": "Інструкція до вправи"
+        },
+        "all_resources/coursef/2023": {
+          "name": "Всі ресурси",
+          "url": "/с/курс/2023/ресурси"
+        },
+        "all_standards/coursef/2023": {
+          "name": "Всі стандарти",
+          "url": "/с/курс/2023/стандарти"
+        },
+        "all_vocabulary/coursef/2023": {
+          "name": "Всі терміни",
+          "url": "/с/курс/2023/вокаб"
+        },
+        "common_core_and_ngss_guidance/coursef/2023": {
+          "name": "Керівництво по стандартах Common Core і NGSS",
+          "url": "https://docs.google.com/document/d/1SqD3MaRbGIONGs5bcL1YhHUFK92ZXFIufypr6UC8XYA/preview#heading=h.8jtw7rltkhe3"
+        },
+        "cross-curricular_extension_activities/coursef/2023": {
+          "name": "Міжпредметні додаткові діяльності",
+          "url": "https://docs.google.com/document/d/1MRlHy_3VgLXKZwjeB0VmI8HWuPvupZODsslPnA7KYAY/preview"
+        },
+        "debugging_guide/coursef/2023": {
+          "name": "Путівник з налагодження",
+          "url": "https://docs.google.com/document/d/1_UFVNtS0_f7aH79WtSEAR0niLy-KPwX1xNiXllOBviE/preview"
+        },
+        "implementation_guide/coursef/2023": {
+          "name": "Практика впровадження",
+          "url": "https://docs.google.com/document/d/1I04szlSMuDlFLH_pidEC-huk_-t6ig09pBSyMv1Z3pw/preview"
+        },
+        "lesson_type_guide/coursef/2023": {
+          "name": "Керівництво з типів уроків"
+        },
+        "sprite_lab_documentation_1/coursef/2023": {
+          "name": "Документація Спрайт Лабораторії",
+          "url": "https://studio.code.org/docs/spritelab/"
+        },
+        "teacher_forum/coursef/2023": {
+          "name": "Форум вчителів",
+          "url": "https://forum.code.org/c/csf/"
+        },
+        "csf_course_syllabus/coursef/2023": {
+          "name": "Програма курсу CSF",
+          "url": "https://docs.google.com/document/d/1mGTa71uFIOvLuwcbo_7XIutZIuJKGlbl0KlRqgibs2U/edit?usp=drive_link",
+          "type": "Ресурс"
+        },
+        "teaching_and_learning_strategies/coursef/2023": {
+          "name": "Стратегії викладання та навчання",
+          "url": "https://docs.google.com/document/d/1khllUBI1xpSrUmwWwa2J35GaKVV8bb3bQb_5Vc_ty54/preview"
+        },
+        "values_and_philosophy/coursef/2023": {
+          "name": "Цінності та філософія",
+          "url": "https://docs.google.com/document/d/1_56iN0iyFzPSsuj5-W7-SI6E7A8z9BTpL3qu4fDMkKk/preview",
+          "type": "Ресурс"
+        },
+        "the_power_of_words_lesson_quiz/coursef/2023": {
+          "name": "Сила слова: Урок-вікторина",
+          "url": "https://docs.google.com/forms/d/1OKy2U3F37NSgCBUez9XMi0UJtlHKPXIe_rxy0l_KEOg/edit",
+          "type": "Ресурс"
+        },
+        "the_power_of_words_lesson_quiz_1/coursef/2023": {
+          "name": "Сила слова: Урок-вікторина",
+          "url": "https://www.commonsense.org/education/digital-citizenship/quiz/the-power-of-words-lesson-quiz",
+          "type": "Відповіді"
+        },
+        "the_power_of_words_lesson_slides/coursef/2023": {
+          "name": "Сила слова: Слайди уроку",
+          "url": "https://docs.google.com/presentation/d/1Y09jm89Oz9tvZHu3KzE0sEwwvWdpaUDj0cZxAW7bKAA/edit",
+          "type": "Слайди"
+        },
+        "the_power_of_words_the_power_of_words/coursef/2023": {
+          "name": "Сила слова: Сила слова\t",
+          "url": "https://www.commonsense.org/education/videos/the-power-of-words",
+          "type": "Відео"
+        },
+        "the_power_of_words_words_can_hurt/coursef/2023": {
+          "name": "Сила слова: Слова можуть образити",
+          "url": "https://docs.google.com/document/d/1qn2mt4s1iYxeWmQIq_JagIQEudjcbkoCUIbf8DVjUjI/edit",
+          "type": "Роздатковий матеріал"
+        },
+        "csf_-_course_f_-_slides_2022-2023/coursef/2023": {
+          "type": "Слайди"
+        },
+        "exploring_apps/coursef/2023": {
+          "name": "Вивчаємо застосунки",
+          "url": "https://docs.google.com/document/d/1Kp8dLxcUzveKIxFtLzJfKdiyzPiUYV3B_E-fUOy7GiY/template/preview",
+          "type": "Ресурс"
+        },
+        "exploring_apps_1/coursef/2023": {
+          "name": "Вивчаємо застосунки",
+          "url": "https://docs.google.com/document/d/14vrc6T7dYse2Xsbq6-7uE3oIZuPKLtL95NRHN5RDwmY/template/preview",
+          "type": "Відповіді"
+        },
+        "introducing_sprite_lab/coursef/2023": {
+          "name": "Представляємо Спрайт Лабораторію",
+          "url": "https://youtu.be/yd-9xZ275dM",
+          "type": "Відео"
+        },
+        "making_sprites/coursef/2023": {
+          "name": "Створення спрайтів",
+          "url": "https://docs.google.com/presentation/d/1TO02i83zMWB9Gmb0GTOLbEgUeXJ_ShpQN6XgEMBwkUw/template/preview",
+          "type": "Слайди"
+        },
+        "sprite_lab_documentation/coursef/2023": {
+          "name": "Документація Спрайт Лабораторії",
+          "url": "https://studio.code.org/docs/spritelab/",
+          "type": "Ресурс"
+        },
+        "blank_space_stories/coursef/2023": {
+          "name": "Історії з порожніми конвертами",
+          "url": "https://docs.google.com/document/d/1rtAvanpTYEmO7QSWBqHShgwqUFEXXqddUkNQaFEUeHo/template/preview",
+          "type": "Інструкція до вправи"
+        },
+        "blank_space_stories_1/coursef/2023": {
+          "name": "Історії з порожніми конвертами",
+          "url": "https://docs.google.com/document/d/18QOM_3fR_5kqDR_SZjUtdGhmK9gJFdFq5RUBRlUr6yQ/template/preview",
+          "type": "Відповіді"
+        },
+        "mini_project_user_input_programs/coursef/2023": {
+          "name": "Міні-проєкт: Програми з введенням даних користувачем",
+          "url": "https://docs.google.com/presentation/d/1oq-UqJ7Cdaah_UxPGUy04OPbKzeZGGPDSlKaXaxax-I/edit#slide=id.gc6acec9c41_0_68",
+          "type": "Слайди"
+        },
+        "mini_project_user_input_programs_1/coursef/2023": {
+          "name": "Міні-проєкт: Програми з введенням даних користувачем",
+          "url": "https://docs.google.com/document/d/1XCb-Z_7rN_hutTayWr06eH1oCBNEwj_xnCriRIYeo6s/template/preview",
+          "type": "Відповіді"
+        },
+        "teacher_sandbox_level/coursef/2023": {
+          "name": "Демонстраційний рівень для вчителя",
+          "url": "https://studio.code.org/levels/27300",
+          "type": "Ресурс"
+        },
+        "user_input_programs/coursef/2023": {
+          "name": "Програми з введенням даних користувачем",
+          "url": "https://docs.google.com/document/d/1YpVgGcos_aA1BPu4IOc0i14eOi10YbB2jKePIzHIMDw/template/preview",
+          "type": "Інструкція до вправи"
+        },
+        "running_simulations/coursef/2023": {
+          "name": "Запуск моделей",
+          "url": "https://docs.google.com/document/d/1hWTLjY5jmn4aqQgQWna8lt3CNJHd1xYLQXmO8tXZPQs/edit",
+          "type": "Робочий аркуш"
+        },
+        "ai_impact_on_society/coursef/2023": {
+          "name": "ШІ: Вплив на суспільство",
+          "type": "Відео"
+        },
+        "ai_machine_learning/coursef/2023": {
+          "name": "ШІ: Машинне навчання",
+          "type": "Відео"
+        },
+        "ai_training_data_bias/coursef/2023": {
+          "name": "ШІ: Навчальні дані та упередженість",
+          "type": "Відео"
+        },
+        "get-site-ip-com/coursef/2023": {
+          "name": "get-site-ip-com",
+          "url": "http://get-site-ip.com/",
+          "type": "Ресурс"
+        },
+        "internet/coursef/2023": {
+          "name": "Інтернет",
+          "url": "https://docs.google.com/document/d/1XM_knT3E0Yeannh4f5cD9Qfh0PkWG2RqB2W2yFWZMGs/edit",
+          "type": "Оцінювання"
+        },
+        "internet_1/coursef/2023": {
+          "name": "Інтернет",
+          "url": "https://docs.google.com/document/d/1PZwk6dBYyH6_n1pv0ElPftD_Hb1K1Vrqz9z_Zv_OCLA/edit",
+          "type": "Відповіді до аркуша оцінювання"
+        },
+        "ip_address_cards_and_delivery_type_cards/coursef/2023": {
+          "name": "Картки IP-адреси та картки типу доставки",
+          "url": "https://docs.google.com/document/d/1YbZ8Mv5R7ajVIVJpHygLiOjH_Q8GVDGudQ5ecbA6kn4/edit",
+          "type": "Друковані матеріали"
+        },
+        "the_internet/coursef/2023": {
+          "name": "Інтернет",
+          "url": "https://youtu.be/mFOUbqYv1Sc",
+          "type": "Відео про безмашинну вправу"
+        },
+        "cs_fundamentals_final_project/coursef/2023": {
+          "name": "Підсумковий проєкт з основ інформатики",
+          "type": "Рубрика"
+        },
+        "end_of_course_project_guide/coursef/2023": {
+          "name": "План підсумкового проєкту курсу",
+          "type": "Інструкція до вправи"
+        },
+        "all_resources/express/2023": {
+          "name": "Всі ресурси"
+        },
+        "all_standards/express/2023": {
+          "name": "Всі стандарти"
+        },
+        "all_vocabulary/express/2023": {
+          "name": "Всі терміни"
+        },
+        "debugging_guide/express/2023": {
+          "name": "Путівник з налагодження",
+          "url": "https://docs.google.com/document/d/1IeRgQ3-s7vETC8sLKgY5Ry4f0BQLTEggJHut19oHcsk/preview"
+        },
+        "teacher_forum/express/2023": {
+          "name": "Форум вчителів",
+          "url": "https://forum.code.org/c/csf/",
+          "type": "Ресурс"
+        },
+        "unplugged_maze_blocks/express/2023": {
+          "name": "Безмашинні блоки для Лабіринту",
+          "url": "https://docs.google.com/presentation/d/1k_7SSLsm-E4aisa9-LmbsCVzH6J-8yGD9T2LwPb2v48/edit",
+          "type": "Ресурс"
+        },
+        "csf_-_express_course_-_slides/express/2023": {
+          "name": "Слайди курсів CSF Express ",
+          "url": "https://docs.google.com/presentation/d/1IVGGGdxNfOAyVa2NgPIraL0F910e2WkLDhVkozNV-3g/template/preview",
+          "type": "Слайди"
+        },
+        "pair_programming/express/2023": {
+          "name": "Парне програмування",
+          "url": "https://www.youtube.com/watch?v=vgkahOzFH2Q",
+          "type": "Відео"
+        },
+        "unplugged_blocks_courses_c-f_/express/2023": {
+          "name": "Безмашинні блоки (Курси C-F)",
+          "url": "https://docs.google.com/document/d/1cRPELQ28TZMJhc68-eYP1D26Uqzcyfx4RDYuThZJGLo/edit"
+        },
+        "artist_introduction/express/2023": {
+          "name": "Знайомство з Художником",
+          "url": "https://www.youtube.com/watch?v=3wk1cbL79yU",
+          "type": "Відео"
+        },
+        "turns_angles/express/2023": {
+          "name": "Повороти і кути",
+          "type": "Відео"
+        },
+        "turns_angles_1/express/2023": {
+          "name": "Повороти і кути",
+          "url": "https://docs.google.com/document/d/1pF_iUqf-I0envRfNXwK2EQz7Xodb34kbppmgyg6ywRQ/edit",
+          "type": "Роздатковий матеріал"
+        },
+        "sprite_lab_documentation/express/2023": {
+          "name": "Документація Спрайт Лабораторії",
+          "url": "https://studio.code.org/docs/spritelab/",
+          "type": "Ресурс"
+        },
+        "swimming_fish_teacher_sandbox/express/2023": {
+          "name": "Демонстраційний рівень \"Плаваюча рибка\"",
+          "url": "https://studio.code.org/levels/18623"
+        },
+        "sprites_in_action/express/2023": {
+          "name": "Спрайти в роботі",
+          "url": "https://docs.google.com/presentation/d/1XnPZJbMMh4LfEg5TKNZLHjqu_uhhnNrO3t5-7BOhux4/template/preview",
+          "type": "Слайди"
+        },
+        "pause_and_think_online/express/2023": {
+          "name": "Зупинись і подумай онлайн",
+          "url": "https://www.youtube.com/watch?v=rgbZAWnOWOo",
+          "type": "Відео"
+        },
+        "dance_party_project_guide/express/2023": {
+          "name": "План проєкту \"Танцювальна вечірка\"",
+          "url": "https://docs.google.com/document/d/1Cep4K9CwUM4HfsqFXHM7eR3ZHQfMBgX6S5HHN66Qu64/edit",
+          "type": "Робочий аркуш"
+        },
+        "open-ended_programming_levels/express/2023": {
+          "name": "Рівні програмування з відкритою кінцівкою",
+          "url": "https://docs.google.com/document/d/1f2ayrjpWKVWqydZWZFTtXbDWZDdKcNIg4kGaOLB2o3U/view",
+          "type": "Відповіді"
+        },
+        "spotify_playlist_all_ages_/express/2023": {
+          "name": "Плейлист Spotify (для всіх вікових категорій)"
+        },
+        "pair_programming_video/express/2023": {
+          "name": "Відео з парного програмування",
+          "url": "https://www.youtube.com/watch?v=vgkahOzFH2Q",
+          "type": "Відео"
+        },
+        "unplugged_blocks_courses_c-f__1/express/2023": {
+          "name": " Безмашинні блоки (Курси C-F)",
+          "url": "https://docs.google.com/document/d/1cRPELQ28TZMJhc68-eYP1D26Uqzcyfx4RDYuThZJGLo/edit"
+        },
+        "text_and_prompts/express/2023": {
+          "name": "Текст та текстові поля",
+          "url": "https://docs.google.com/presentation/d/1zHz6nwwjlxeNObDmOmzvMmhvcXYCESL-Xr9EF8Ow19E/template/preview",
+          "type": "Слайди"
+        },
+        "variables/express/2023": {
+          "name": "Змінні",
+          "url": "https://youtu.be/DI7DprN4FtE",
+          "type": "Відео для учнів"
+        },
+        "cs_fundamentals_final_project/express/2023": {
+          "name": "Підсумковий проєкт з основ інформатики",
+          "url": "https://docs.google.com/document/d/1uSNdZUk_Et6lba8P-P6-jxOY9qSwoV2gP_cI1BQXzf8/",
+          "type": "Рубрика"
+        },
+        "csf_express_end_of_course_project_planning_guide/express/2023": {
+          "name": "План підсумкового проєкту \"CSF Express\"",
+          "url": "https://docs.google.com/document/d/18kieMCg0WpQmo3EpKcTGh71CNo-xuPOJCPEr-XRKSVI/edit?usp=sharing",
+          "type": "План проєкту"
+        },
+        "all_resources/pre-express/2023": {
+          "name": "Всі ресурси"
+        },
+        "all_standards/pre-express/2023": {
+          "name": "Всі стандарти"
+        },
+        "all_vocabulary/pre-express/2023": {
+          "name": "Всі терміни"
+        },
+        "debugging_guide/pre-express/2023": {
+          "name": "Путівник з налагодження",
+          "url": "https://docs.google.com/document/d/1IeRgQ3-s7vETC8sLKgY5Ry4f0BQLTEggJHut19oHcsk/preview"
+        },
+        "teacher_forum/pre-express/2023": {
+          "name": "Форум вчителів",
+          "url": "https://forum.code.org/c/csf/",
+          "type": "Ресурс"
+        },
+        "20_20_20_rule/pre-express/2023": {
+          "name": "Правило 20/20/20",
+          "url": "http://www.anthro.com/blog/2013/10/how-to-prevent-eye-strain-with-the-20-20-20-rule#.WOU39BLyu35",
+          "type": "Відео"
+        },
+        "feeling_faces/pre-express/2023": {
+          "name": "Смайлики",
+          "url": "https://docs.google.com/document/d/1p2uDTrPZPsxsbsePZe9OfPlIuMwybNjcnZ4tYoOEqL8/edit",
+          "type": "Зображення емоцій"
+        },
+        "how_to_make_a_class_section_on_code_org/pre-express/2023": {
+          "name": "Як створити групу класу на Code.org",
+          "url": "https://www.youtube.com/watch?v=ebQY8fb2OV4",
+          "type": "Відео для вчителя"
+        },
+        "pair_programming/pre-express/2023": {
+          "name": "Парне програмування",
+          "url": "https://www.youtube.com/watch?v=vgkahOzFH2Q",
+          "type": "Відео для учнів"
+        },
+        "wiggles_-_go_noodle/pre-express/2023": {
+          "name": "Руханки - Go Noodle",
+          "url": "https://app.gonoodle.com/channels/brainercise-with-mr-catman/shoulder-rock-n-roll",
+          "type": "Відео"
+        },
+        "csf_pre-reader_express_course_slides/pre-express/2023": {
+          "name": "Слайди експрес-курсу CSF Pre-Reader",
+          "url": "https://docs.google.com/presentation/d/1L1YJDVSUet42tTJaTvsEF1AujZ8n3YTZM6lOY6am07g/template/preview",
+          "type": "Слайди"
+        },
+        "pause_and_think_online/pre-express/2023": {
+          "name": "Зупинись і подумай онлайн",
+          "url": "https://www.youtube.com/watch?v=rgbZAWnOWOo",
+          "type": "Відео"
+        },
+        "all_resources/how-ai-works/2023": {
+          "name": "Всі ресурси"
+        },
+        "all_standards/how-ai-works/2023": {
+          "name": "Всі стандарти"
+        },
+        "all_vocabulary/how-ai-works/2023": {
+          "name": "Всі терміни"
+        },
+        "classifying_fish/how-ai-works/2023": {
+          "name": "Класифікування риб",
+          "url": "https://docs.google.com/document/d/1gQWtamQ3YBk-gJnmw_z3QWNLfzdrPyaUjS4ZbtfAvEs/view",
+          "type": "Інструкція до вправи"
+        },
+        "how_ai_works_-_training_data_and_bias/how-ai-works/2023": {
+          "name": "Як працює AI - навчальні дані та упередженість",
+          "type": "Відео"
+        },
+        "how_ai_works_-_what_is_machine_learning_/how-ai-works/2023": {
+          "name": "Як працює AI - що таке машинне навчання?",
+          "type": "Відео"
+        },
+        "introduction_to_machine_learning/how-ai-works/2023": {
+          "name": "Вступ до машинного навчання",
+          "url": "https://docs.google.com/presentation/d/1Vj24zhtV4La9t-MRONHhg2L4ZPYYiGW9eXUBN5lM9LQ/template/preview",
+          "type": "Слайди"
+        },
+        "_example_computer_vision_network/how-ai-works/2023": {
+          "name": "[Example] Мережа комп'ютерного зору",
+          "url": "https://docs.google.com/presentation/d/1zJzbHDel0uQ62usH8g_qBp5KIFMN08tEps5lXSAb3Ag/edit?usp=sharing",
+          "type": "Зразок"
+        },
+        "computer_vision/how-ai-works/2023": {
+          "name": "Комп'ютерний зір",
+          "url": "https://docs.google.com/presentation/d/1yWJnyVWPq2ut0GmUc0Z41SHxh1_w2B90qis-mo3d2OY/template/preview",
+          "type": "Слайди"
+        },
+        "computer_vision_network/how-ai-works/2023": {
+          "name": "Мережа комп'ютерного зору",
+          "url": "https://docs.google.com/document/d/1C7ob1lB-zKi0DSC3do9ZVFfXkHlC2xnSDI2yPFAqEY4/edit",
+          "type": "Інструкція до вправи"
+        },
+        "how_ai_works_how_computer_vision_works/how-ai-works/2023": {
+          "name": "Як працює AI: як працює комп'ютерний зір",
+          "url": "https://youtu.be/2hXG8v8p0KM",
+          "type": "Відео"
+        },
+        "seven_segment_display_manipulative/how-ai-works/2023": {
+          "name": "Семисегментний маніпулятивний дисплей",
+          "url": "https://docs.google.com/document/d/17QzrodDqCjF2pjZvyo4coWYQbaZxuRwDrPEe20H-yBM/edit",
+          "type": "Інструкція до вправи"
+        },
+        "what_a_neural_network_sees/how-ai-works/2023": {
+          "name": "Що бачить нейронна мережа",
+          "url": "https://www.youtube.com/watch?v=Gu0MkmynWkw",
+          "type": "Відео"
+        },
+        "how_ai_works_how_neural_networks_work/how-ai-works/2023": {
+          "name": "Як працює AI: як працюють нейронні мережі",
+          "url": "https://youtu.be/JrXazCEACVo",
+          "type": "Відео"
+        },
+        "neural_networks/how-ai-works/2023": {
+          "name": "Нейронні мережі",
+          "url": "https://docs.google.com/document/d/1HA_zYssm4-s24-8on8BeL5DbzSfi7G7q-4LlywNBoCw/edit?usp=sharing",
+          "type": "Інструкція до вправи"
+        },
+        "neural_networks_1/how-ai-works/2023": {
+          "name": "Нейронні мережі",
+          "url": "https://docs.google.com/presentation/d/1lj6Z3egPkfv7jKtTVNmhCSY9RKHkcw5LV7Oq_ryqDVs/template/preview",
+          "type": "Слайди"
+        },
+        "wetube_content_creators/how-ai-works/2023": {
+          "name": "Творці контенту WeTube",
+          "url": "https://docs.google.com/document/d/1z7ZO-9zKlmn3brqH7euWVMSOuzVTQOdWDgkGGukRkvc/edit?usp=sharing",
+          "type": "Ресурс"
+        },
+        "eliza_activity_guide/how-ai-works/2023": {
+          "name": "(Необов'язково) Посібник із діяльності Eliza",
+          "url": "https://docs.google.com/document/d/1IIca15ohoVq2lTLNUAOqQMUT7YgsTLp8yIPfmEnLmXo/edit#heading=h.17wewdcvexo6",
+          "type": "Інструкція до вправи"
+        },
+        "generative_llm/how-ai-works/2023": {
+          "name": "Генеративний LLM",
+          "url": "https://docs.google.com/presentation/d/10d_TM6rucYyt8DAuPVoAZ9mgt9v-zzRWcM2A7geDIp0/template/preview",
+          "type": "Слайди"
+        },
+        "how_ai_works_chatbots_and_large_language_models_part_1_/how-ai-works/2023": {
+          "name": "Як працює AI: чат-боти та великі мовні моделі (частина 1)",
+          "url": "https://www.youtube.com/watch?v=kWougDgtE3E",
+          "type": "Відео"
+        },
+        "how_ai_works_chatbots_and_large_language_models_part_2_/how-ai-works/2023": {
+          "name": "Як працює AI: чат-боти та великі мовні моделі (частина 2)",
+          "url": "https://www.youtube.com/watch?v=7Jn9UrnMWK8",
+          "type": "Відео"
+        },
+        "llm_vocab_and_video_guide_answer_key/how-ai-works/2023": {
+          "name": "[Key] Вокаб та відео-посібник",
+          "url": "https://docs.google.com/document/d/1kSVppQd3WBVwvejrJ4ffgCNJEkYbhDzQs88tbQ3rfD0/edit",
+          "type": "Відповіді"
+        },
+        "video_and_vocabulary_guide/how-ai-works/2023": {
+          "name": "Відео та словниковий посібник",
+          "url": "https://docs.google.com/document/d/1zPGOdJ1rcdF7e7CzGXHb4JaWYFMEPX9aeZf4DtbQhNI/edit#heading=h.l82l1gv9gtj4",
+          "type": "Інструкція до вправи"
+        },
+        "written_voice_simulator_activity_guide_exemplar/how-ai-works/2023": {
+          "name": "[Exemplar] Письмовий посібник із діяльності симулятора голосу",
+          "url": "https://docs.google.com/document/d/1nZhObuoPc5781ygHgA8P_a0aHItrKkW4mqqJ73XP8Hw/",
+          "type": "Зразок"
+        },
+        "written_voice_simulator_guide/how-ai-works/2023": {
+          "name": "Письмовий посібник із симулятора голосу",
+          "url": "https://docs.google.com/document/d/1pebKlY2-pFCw-Zo_nI8cLXYT_eyfn3AKzkwvEmkjo2c/edit#heading=h.sa1769guz3cn",
+          "type": "Інструкція до вправи"
+        },
+        "written_voice_simulator_user_guide/how-ai-works/2023": {
+          "name": "Письмовий голосовий симулятор Посібник користувача",
+          "url": "https://docs.google.com/presentation/d/1N3l7kEskuT5MFjarekKlJVoz3Gl-z53kjCuQ6bz94m4/edit",
+          "type": "Ресурс"
+        },
+        "_optional_gan_game_activity_guide/how-ai-works/2023": {
+          "name": "(Необов'язково) Посібник із ігрової діяльності GAN",
+          "url": "https://docs.google.com/document/d/1XJ16vDcCDz1_cI8T9d554n_cxqEPT2EVCNh6ZLe1OwI/edit",
+          "type": "Інструкція до вправи"
+        },
+        "generative_images/how-ai-works/2023": {
+          "name": "Генеративні зображення",
+          "url": "https://docs.google.com/presentation/d/1de7JbrVRXFg-eLUFCWUFTN5q7DAbpYzxU_oi6Ur37oM/template/preview",
+          "type": "Слайди"
+        },
+        "generative_images_activity_guide/how-ai-works/2023": {
+          "name": "[Key] Посібник із активності генеративних зображень",
+          "url": "https://docs.google.com/document/d/1f9K9TA6gjNM5SYZB-yCovGA-agtWJdl-ATbUg9c4K_s/edit",
+          "type": "Відповіді"
+        },
+        "how_ai_works_creativity_and_imagination/how-ai-works/2023": {
+          "name": "Як працює AI: творчість та уява",
+          "url": "https://www.youtube.com/watch?v=X994dDnmRmY",
+          "type": "Відео"
+        },
+        "noisy_image_activity_exemplar/how-ai-works/2023": {
+          "name": "[Exemplar] Активність шумного зображення",
+          "url": "https://docs.google.com/document/d/1TkzwTBscbPo7fZl-21ggTqSECFdQ35dxoBrBSdX-0yw/",
+          "type": "Зразок"
+        },
+        "noisy_image_widget_activity_guide/how-ai-works/2023": {
+          "name": "Посібник з активності віджетів шумного зображення",
+          "url": "https://docs.google.com/document/d/1rxB-NpxulH6SUyweHwGTxatqYAQc5Qt8ZQN9Dkgi6sE/",
+          "type": "Інструкція до вправи"
+        },
+        "user_guide_noise_image_widget/how-ai-works/2023": {
+          "name": "Посібник користувача: Віджет зображення шуму",
+          "url": "https://docs.google.com/presentation/d/1l3Ide0B-4k_IEhWYiCVz6OnyAL4fCmg-ROqogyqnVCo/view",
+          "type": "Ресурс"
+        },
+        "video_and_vocabulary_guide_1/how-ai-works/2023": {
+          "name": "Відео та словниковий посібник",
+          "url": "https://docs.google.com/document/d/1GtTFgGzPcoyokR3KsJ43ZjvgJnwUCWdZXvtrXoa78rQ/edit?usp=sharing",
+          "type": "Інструкція до вправи"
+        },
+        "algorithmic_bias/how-ai-works/2023": {
+          "name": "Алгоритмічний упередження",
+          "url": "https://docs.google.com/presentation/d/1N_sFSTNrP2jpnQPdIAaIDPhQYroSiV5EYxSP3dZ-bHc/template/preview",
+          "type": "Слайди"
+        },
+        "how_ai_works_-_societal_impact/how-ai-works/2023": {
+          "name": "Як працює AI - вплив на суспільство",
+          "url": "https://youtu.be/tJQSyzBUAew",
+          "type": "Відео"
+        },
+        "sharing_learnings_about_our_image_cropping_algorithm_twitter_/how-ai-works/2023": {
+          "name": "Поділитися інформацією про наш алгоритм обрізання зображень (Twitter)",
+          "url": "https://blog.twitter.com/engineering/en_us/topics/insights/2021/sharing-learnings-about-our-image-cropping-algorithm",
+          "type": "Ресурс"
+        },
+        "twitter_says_its_image-cropping_algorithm_was_biased_so_it_s_ditching_it_cnn_/how-ai-works/2023": {
+          "name": "Twitter каже, що його алгоритм обрізки зображень був упередженим, тому він відмовляється від нього (CNN)",
+          "url": "https://www.cnn.com/2021/05/19/tech/twitter-image-cropping-algorithm-bias/index.html",
+          "type": "Ресурс"
+        },
+        "ai_code_of_ethics/how-ai-works/2023": {
+          "name": "Етичний кодекс ШІ",
+          "url": "https://docs.google.com/presentation/d/18r16dGGz9ZYwG-lSdC7s35-J4yrbc_glpubFZqYsuBg/template/preview",
+          "type": "Слайди"
+        },
+        "ai_ethics_research_areas/how-ai-works/2023": {
+          "name": "Сфери дослідження етики ШІ",
+          "url": "https://docs.google.com/document/d/1wfEQVKhZGmlybOevVoWFfpyqpHjTXTvj0ZZWf-8wme0/edit?usp=sharing"
+        },
+        "ai_ethics_research_reflection/how-ai-works/2023": {
+          "name": "Рефлексія досліджень з етики ШІ",
+          "url": "https://docs.google.com/document/d/1KKCTMHVmaUA6B8wBnzT-nHzYCQ6seJD8z-o22dYBkd8/edit?usp=sharing"
+        },
+        "how_ai_works_-_privacy_and_future_of_work/how-ai-works/2023": {
+          "name": "Як працює AI - конфіденційність та майбутнє роботи",
+          "url": "https://youtu.be/zNxw5gJtHLc",
+          "type": "Відео"
+        },
+        "our_ai_code_of_ethics_template_/how-ai-works/2023": {
+          "name": "Наш етичний кодекс ШІ [Шаблон]",
+          "url": "https://docs.google.com/presentation/d/1SJEXpTCKwf5fbDy5GuDjDGAsuUrkI9QfxKF-1pMSndg/edit?usp=sharing",
+          "type": "Слайди"
+        },
+        "does_ai_have_creativity_and_imagination_/how-ai-works/2023": {
+          "url": "https://www.youtube.com/watch?v=X994dDnmRmY",
+          "type": "Відео"
+        },
+        "how_ai_works/how-ai-works/2023": {
+          "url": "https://docs.google.com/presentation/d/1Ca1i3-7p6sjC16TuEVF5chfC6Fw3ecM12inLOFXEKQg/template/preview",
+          "type": "Слайди"
+        },
+        "how_ai_works_ethics_ai_equal_access_and_algorithmic_bias/how-ai-works/2023": {
+          "name": "Як працює AI: Етика та штучний інтелект: рівний доступ та алгоритмічна упередженість",
+          "url": "https://youtu.be/tJQSyzBUAew",
+          "type": "Відео"
+        },
+        "how_ai_works_ethics_ai_privacy_the_future_of_work/how-ai-works/2023": {
+          "name": "Як працює AI: Етика та штучний інтелект: конфіденційність та майбутнє роботи",
+          "url": "https://youtu.be/zNxw5gJtHLc",
+          "type": "Відео"
+        },
+        "how_ai_works_introduction/how-ai-works/2023": {
+          "name": "Як працює AI: Вступ",
+          "url": "https://youtu.be/Ok-xpKjKp2g",
+          "type": "Відео"
+        },
+        "how_ai_works_training_data_and_bias/how-ai-works/2023": {
+          "name": "Як працює штучний інтелект: навчальні дані та упередженість",
+          "type": "Відео"
+        },
+        "how_ai_works_what_is_machine_learning_/how-ai-works/2023": {
+          "name": "Як працює AI: що таке машинне навчання?",
+          "url": "https://youtu.be/KHbwOetbmbs",
+          "type": "Відео"
+        },
+        "how_chatbots_and_large_language_models_work/how-ai-works/2023": {
+          "url": "https://www.youtube.com/watch?v=X-AWdfSFCHQ",
+          "type": "Відео"
+        },
+        "vocabulary_matching/how-ai-works/2023": {
+          "name": "Відповідність словникового запасу",
+          "url": "https://docs.google.com/document/d/1Tbz8ULln11yU1hpD73OzgRUnujWjdpdOi8fKQsOAiIk/edit",
+          "type": "Інструкція до вправи"
+        },
+        "_key_vocabulary_matching/how-ai-works/2023": {
+          "name": "[Key] Відповідність словникового запасу",
+          "url": "https://drive.google.com/file/d/1cF8MsKO_lCLziA5FisbcQc2-529j1HXZ/view",
+          "type": "Відповіді"
+        },
         "csf-artist-intro-video/artist/unversioned": {
           "name": "Знайомство з Художником",
+          "url": "https://www.youtube.com/watch?v=3wk1cbL79yU",
           "type": "Відео для учнів"
         },
         "csf-turns-angles-doc/artist/unversioned": {

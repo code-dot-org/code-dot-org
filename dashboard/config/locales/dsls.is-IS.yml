@@ -560,6 +560,11 @@ is-IS:
           # Ógleymanlegt atvik
 
           Í tölvunarfræði eru atvik aðgerðir sem tölvan vaktar. Í þessari kennslustund á að bregðast mismunandi við eftir því á hvaða hnapp er ýtt.
+      BigEvent-Unplugged2022_2023:
+        markdown: |
+          # Ógleymanlegt atvik
+
+          Í tölvunarfræði eru atvik aðgerðir sem tölvan vaktar. Í þessari kennslustund á að bregðast mismunandi við eftir því á hvaða hnapp er ýtt.
       BigEvent-Unplugged_2020:
         markdown: |
           # Ógleymanlegt atvik
@@ -578,6 +583,13 @@ is-IS:
 
           ![](https://images.code.org/ed15a484276c0989e4adb5daf480f68a-image-1557870226222.png)
       BinaryBracelets-Unplugged2022:
+        markdown: |
+          # Tvíundararmbönd
+
+          Búðu til armband sem táknar nafn þitt í kerfi sem tölvan skilur.
+
+          ![](https://images.code.org/ed15a484276c0989e4adb5daf480f68a-image-1557870226222.png)
+      BinaryBracelets-Unplugged2022_2023:
         markdown: |
           # Tvíundararmbönd
 
@@ -2394,6 +2406,11 @@ is-IS:
           # Skilyrði með spilum
 
           Spilið á spil og búið til reglur eins og "Ef ég dreg rautt spil, þá fæ ég stig" og "Ef ég dreg svart spil, þá færð þú stig."
+      ConditionalsWithCards-Unplugged2022_2023:
+        markdown: |
+          # Skilyrði með spilum
+
+          Spilið á spil og búið til reglur eins og "Ef ég dreg rautt spil, þá fæ ég stig" og "Ef ég dreg svart spil, þá færð þú stig."
       ConditionalsWithCards-Unplugged_2020:
         markdown: |
           # Skilyrði með spilum
@@ -2407,7 +2424,13 @@ is-IS:
       CourseE_Lesson_11_Artist_Practice_2022:
         description: Frábær vinna hingað til! Veldu næsta verkefni þitt. Ljúktu eins
           mörgum og þú getur. Haltu áfram að æfa með föllum og listamanninum!
+      CourseE_Lesson_11_Artist_Practice_2023:
+        description: Frábær vinna hingað til! Veldu næsta verkefni þitt. Ljúktu eins
+          mörgum og þú getur. Haltu áfram að æfa með föllum og listamanninum!
       CourseE_Lesson_7_Artist_Practice_2022:
+        description: Frábær vinna hingað til! Veldu næsta verkefni þitt. Ljúktu eins
+          mörgum og þú getur. Haltu áfram að æfa með innri lykkjum og listamanninum!
+      CourseE_Lesson_7_Artist_Practice_2023:
         description: Frábær vinna hingað til! Veldu næsta verkefni þitt. Ljúktu eins
           mörgum og þú getur. Haltu áfram að æfa með innri lykkjum og listamanninum!
       CourseF_outbreak_story:
@@ -2416,7 +2439,11 @@ is-IS:
         content1: lýsing hér
       CourseF_outbreak_story2022_2022_pilot_-2022-2:
         content1: lýsing hér
+      CourseF_outbreak_story2022_2022_pilot_-2022-2_2023:
+        content1: lýsing hér
       CourseF_outbreak_story22022_2022_pilot_-2022-2:
+        content1: lýsing hér
+      CourseF_outbreak_story22022_2022_pilot_-2022-2_2023:
         content1: lýsing hér
       Crowdsourcing-Unplugged:
         markdown: |
@@ -2595,6 +2622,16 @@ is-IS:
           * Ef öpp eru hönnuð þannig að þau séu aðgengileg fólki með fatlanir þá gerir það öppin betri fyrir alla aðra um leið!
 
           ![](https://images.code.org/0c670d0d9078657a870df0ca799492cb-image-1557166420066.png)
+      DesigningForAccessibilityMarkdownLevel2022_2023:
+        markdown: |
+          # Hannað með tilliti til aðgengis
+
+          * Í heimi tölvunarfræðinnar, snýst **aðgengi** um að búa til tæknilausnir fyrir fólk með fötlun.
+          * Undir fötlun flokkast m.a. skerðing á hreyfigetu, heyrn og sjón.
+          * Tegundir fötlunar eru margvíslegar og hafa mismunandi afleiðingar fyrir fólk, þar á meðal hvernig það notar tækni eins og **öpp fyrir snjallsíma**.
+          * Ef öpp eru hönnuð þannig að þau séu aðgengileg fólki með fatlanir þá gerir það öppin betri fyrir alla aðra um leið!
+
+          ![](https://images.code.org/0c670d0d9078657a870df0ca799492cb-image-1557166420066.png)
       DesigningForAccessibilityMarkdownLevel_2019:
         markdown: |
           # Hannað með tilliti til aðgengis
@@ -2641,6 +2678,11 @@ is-IS:
 
           Í þessari kennslustund munum við íhuga þær áskoranir og þann ávinning sem hlýst af að virða eignarhald og höfundarrétt, sérstaklega í stafrænu umhverfi.
       DigitalSharing-Unplugged2022:
+        markdown: |
+          # Stafræn deiling
+
+          Í þessari kennslustund munum við íhuga þær áskoranir og þann ávinning sem hlýst af að virða eignarhald og höfundarrétt, sérstaklega í stafrænu umhverfi.
+      DigitalSharing-Unplugged2022_2023:
         markdown: |
           # Stafræn deiling
 
@@ -2693,6 +2735,11 @@ is-IS:
           # Snú, snú
 
           Þessi kennslustund kynnir forritunarhugtakið lykkju með dansverkefni.
+      GettingLoopy-Unplugged2022_2023:
+        markdown: |
+          # Snú, snú
+
+          Þessi kennslustund kynnir forritunarhugtakið lykkju með dansverkefni.
       GettingLoopy-Unplugged_2020:
         markdown: |
           # Snú, snú
@@ -2712,6 +2759,11 @@ is-IS:
 
           Skrifaðu algrím sem bekkjarfélagarnir geta notað til að teikna myndir.
       GraphPaperProgramming-Unplugged2022:
+        markdown: |
+          # Forritað með rúðublöðum
+
+          Skrifaðu algrím sem bekkjarfélagarnir geta notað til að teikna myndir.
+      GraphPaperProgramming-Unplugged2022_2023:
         markdown: |
           # Forritað með rúðublöðum
 
@@ -2750,6 +2802,11 @@ is-IS:
           # Krúttleg kort
 
           Búðu til algrím sem færir veru í gegnum völundarhús.
+      HappyMaps-Unplugged2022_2023:
+        markdown: |
+          # Krúttleg kort
+
+          Búðu til algrím sem færir veru í gegnum völundarhús.
       HappyMaps-Unplugged_2020:
         markdown: |
           # Krúttleg kort
@@ -2772,6 +2829,11 @@ is-IS:
 
           Búðu til þitt eigið Internet í skólastofunni með þvi að nota bara pappírsblöð.
       Internet-Unplugged2022_2022_pilot_-2022-2:
+        markdown: |
+          # Internetið
+
+          Búðu til þitt eigið Internet í skólastofunni með þvi að nota bara pappírsblöð.
+      Internet-Unplugged2022_2022_pilot_-2022-2_2023:
         markdown: |
           # Internetið
 
@@ -3024,6 +3086,11 @@ is-IS:
           # Dilla, dilla
 
           Notaðu kort og gefðu skipanir til að ná markinu.
+      MoveItMoveIt-Unplugged2022_2023:
+        markdown: |
+          # Dilla, dilla
+
+          Notaðu kort og gefðu skipanir til að ná markinu.
       MoveItMoveIt-Unplugged_2020:
         markdown: |
           # Dilla, dilla
@@ -3056,6 +3123,11 @@ is-IS:
           # Vinir mínir HRINGluð vélmenni
 
           Gerðu forritin þín styttri með því að nota lykkjur!
+      MyLoopyRoboticFriends-Unplugged2022_2023:
+        markdown: |
+          # Vinir mínir HRINGluð vélmenni
+
+          Gerðu forritin þín styttri með því að nota lykkjur!
       MyLoopyRoboticFriends-Unplugged_2020:
         markdown: |
           # Vinir mínir HRINGluð vélmenni
@@ -3072,6 +3144,11 @@ is-IS:
 
           Lærðu að forrita með því að skrifa kóða fyrir vini þína!
       MyRoboticFriends-Unplugged2022:
+        markdown: |
+          # Vinir mínir Vélmennin
+
+          Lærðu að forrita með því að skrifa kóða fyrir vini þína!
+      MyRoboticFriends-Unplugged2022_2023:
         markdown: |
           # Vinir mínir Vélmennin
 
@@ -3400,6 +3477,11 @@ is-IS:
           # Afl orðanna
 
           ## Hvað ættir þú að gera þegar einhver notar ljót eða meiðandi orð á netinu?
+      PowerOfWords-Unplugged2022_2022_pilot_-2022-2_2023:
+        markdown: |-
+          # Afl orðanna
+
+          ## Hvað ættir þú að gera þegar einhver notar ljót eða meiðandi orð á netinu?
       PowerOfWords-Unplugged_2020:
         markdown: |-
           # Afl orðanna
@@ -3440,6 +3522,11 @@ is-IS:
           # Persónulegar einkaupplýsingar
 
           ## Hvaða upplýsingum um þig er í lagi að deila á netinu?
+      PrivatePersonalInformation-Unplugged2022_2023:
+        markdown: |-
+          # Persónulegar einkaupplýsingar
+
+          ## Hvaða upplýsingum um þig er í lagi að deila á netinu?
       PrivatePersonalInformation-Unplugged_2020:
         markdown: |-
           # Persónulegar einkaupplýsingar
@@ -3456,6 +3543,11 @@ is-IS:
 
           Skiptið í lið og vinnið saman að því að skrifa forrit sem teikna myndir.
       RelayProgramming-Unplugged2022:
+        markdown: |
+          # Boðhlaupsforritun
+
+          Skiptið í lið og vinnið saman að því að skrifa forrit sem teikna myndir.
+      RelayProgramming-Unplugged2022_2023:
         markdown: |
           # Boðhlaupsforritun
 
@@ -3496,6 +3588,11 @@ is-IS:
 
           Nemendur nota hugmyndina um viðlag í söng til að læra um skilgreiningu og notkun falla.
       Songwriting-Unplugged2022:
+        markdown: |
+          # Sönglagagerð
+
+          Nemendur nota hugmyndina um viðlag í söng til að læra um skilgreiningu og notkun falla.
+      Songwriting-Unplugged2022_2023:
         markdown: |
           # Sönglagagerð
 
@@ -3606,6 +3703,11 @@ is-IS:
         questions:
         - {}
       TheRightAppMarkdownLevel2022:
+        markdown: "# Rétta appið\n\n* Allir nota tölvur í dag, sérstaklega snjallsíma.
+          \n* Öpp fyrir snjallsíma hjálpa fólki að gera ýmislegt svo sem tala við
+          vini, hlusta á tónlist, versla eða bara flakka á netinu.\n* Það er mikilvægt
+          fyrir forritara að skilja þarfir annarra og hanna öpp með fólk í huga!\n\n![](https://images.code.org/fb17eeb9238d2f26c6ab40c9841517a7-image-1555611687284.png)\n"
+      TheRightAppMarkdownLevel2022_2023:
         markdown: "# Rétta appið\n\n* Allir nota tölvur í dag, sérstaklega snjallsíma.
           \n* Öpp fyrir snjallsíma hjálpa fólki að gera ýmislegt svo sem tala við
           vini, hlusta á tónlist, versla eða bara flakka á netinu.\n* Það er mikilvægt
@@ -4068,10 +4170,18 @@ is-IS:
         description: Þú ert nú í síðustu æfingunni! Veldu verkefni sem þú vilt búa
           til.
         display_name: Lokaverkefni námskeiðs
+      courseAB_EOC2022_2023:
+        description: Þú ert nú í síðustu æfingunni! Veldu verkefni sem þú vilt búa
+          til.
+        display_name: Lokaverkefni námskeiðs
       courseAB_EOC_2021:
         description: Þú ert nú í síðustu æfingunni! Veldu verkefni til að skapa.
         display_name: Lokaverkefni námskeiðs
       courseB_EOC2022:
+        description: Þú ert nú í síðustu æfingunni! Veldu verkefni sem þú vilt búa
+          til.
+        display_name: Lokaverkefni námskeiðs
+      courseB_EOC2022_2023:
         description: Þú ert nú í síðustu æfingunni! Veldu verkefni sem þú vilt búa
           til.
         display_name: Lokaverkefni námskeiðs
@@ -4094,6 +4204,20 @@ is-IS:
         - text: Skoðaðu kóðann fyrir neðan vandlega. Hvað mun gerast þegar þú smellir
             á "Keyra"?
       courseC_multi_artist_prog6_predict12022:
+        answers:
+        - feedback: Ekki rétt. Listamaðurinn teiknar ferning.
+          text: Listamaðurinn mun teikna þríhyrning með þrjár jafnlangar hliðar.
+        - feedback: Ekki rétt. Listamaðurinn teiknar ferning.
+          text: Listamaðurinn mun teikna eina beina línu.
+        - correct: true
+          feedback: Rétt!
+          text: Listamaðurinn mun teikna ferning.
+        - feedback: Ekki rétt. Listamaðurinn teiknar ferning.
+          text: Listamaðurinn mun teikna fimmhyrning
+        questions:
+        - text: Skoðaðu kóðann fyrir neðan vandlega. Hvað mun gerast þegar þú smellir
+            á "Keyra"?
+      courseC_multi_artist_prog6_predict12022_2023:
         answers:
         - feedback: Ekki rétt. Listamaðurinn teiknar ferning.
           text: Listamaðurinn mun teikna þríhyrning með þrjár jafnlangar hliðar.
@@ -4181,6 +4305,23 @@ is-IS:
         - text: Skoðaðu kóðann hér fyrir neðan vandlega. Hve mörgum graskerum mun
             bóndinn safna þegar þú smellir á "Keyra"?
       courseC_multi_harvester_loops11_predict12022:
+        answers:
+        - feedback: Ekki rétt. Bóndinn mun safna 4 graskerum í hverri af lykkjunum
+            þremur. 4 sinnum 3 er 12!
+          text: '4'
+        - correct: true
+          feedback: Rétt!
+          text: '12'
+        - feedback: Ekki rétt. Bóndinn mun safna 4 graskerum í hverri af lykkjunum
+            þremur. 4 sinnum 3 er 12!
+          text: '15'
+        - feedback: Ekki rétt. Bóndinn mun safna 4 graskerum í hverri af lykkjunum
+            þremur. 4 sinnum 3 er 12!
+          text: '20'
+        questions:
+        - text: Skoðaðu kóðann hér fyrir neðan vandlega. Hve mörgum graskerum mun
+            bóndinn safna þegar þú smellir á "Keyra"?
+      courseC_multi_harvester_loops11_predict12022_2023:
         answers:
         - feedback: Ekki rétt. Bóndinn mun safna 4 graskerum í hverri af lykkjunum
             þremur. 4 sinnum 3 er 12!
@@ -4291,6 +4432,17 @@ is-IS:
           text: Scrat mun ekki færast frá fyrsta kubbnum.
         questions:
         - text: Leitaðu að villum í þessum kóða. Mun Scrat ná akarninu eða er vandamál?
+      courseC_multi_maze_debugging8_predict12022_2023:
+        answers:
+        - text: Scrat mun ná akarninu. Það eru engar villur í leiknum.
+        - correct: true
+          text: Scrat mun ekki ná akarninu því hann snýr í ranga átt.
+        - text: Scrat mun ekki ná akarninu vegna þess að það eru ekki nógu margir
+            `fara áfram` kubbar.
+        - feedback: Scrat mun ekki ná akarninu því hann snýr í ranga átt.
+          text: Scrat mun ekki færast frá fyrsta kubbnum.
+        questions:
+        - text: Leitaðu að villum í þessum kóða. Mun Scrat ná akarninu eða er vandamál?
       courseC_multi_maze_debugging8_predict1_2018:
         answers:
         - feedback: Ekki rétt. Skrat fer í ranga átt eftir síðasta snúninginn.
@@ -4387,6 +4539,20 @@ is-IS:
         questions:
         - text: Lestu kóðann hér fyrir neðan vandlega. Hvað mun gerast þegar þú smellir
             á "Keyra"?
+      courseC_multi_maze_programming8_predict12022_2023:
+        answers:
+        - feedback: Ekki rétt. Þessi kóði kemur fuglinum fullkomlega til svínsins.
+          text: Fuglinn mun enda einum reit frá svíninu.
+        - correct: true
+          feedback: Rétt!
+          text: Fuglinn mun komast til svínsins.
+        - feedback: Ekki rétt. Þessi kóði kemur fuglinum fullkomlega til svínsins.
+          text: Fuglinn mun rekast á TNT sprengju.
+        - feedback: Ekki rétt. Þessi kóði kemur fuglinum fullkomlega til svínsins.
+          text: Fuglinn mun rekast á vegginn.
+        questions:
+        - text: Lestu kóðann hér fyrir neðan vandlega. Hvað mun gerast þegar þú smellir
+            á "Keyra"?
       courseC_multi_maze_programming8_predict1_2018:
         answers:
         - feedback: Ekki rétt. Þessi kóði kemur fuglinum fullkomlega til svínsins.
@@ -4459,6 +4625,22 @@ is-IS:
         questions:
         - text: Hvað heldur þú að muni gerast þegar þú smellir á "Keyra"?
       courseC_multi_starWars_predict12022:
+        answers:
+        - feedback: Ekki rétt. "Endurtaka" kubburinn mun láta BB-8 færast áfram 5
+            sinnum.
+          text: BB-8 mun ekki hreyfast.
+        - feedback: Ekki rétt. "Endurtaka" kubburinn mun láta BB-8 færast áfram 5
+            sinnum.
+          text: BB-8 mun færast um aðeins eitt bil
+        - correct: true
+          feedback: Rétt!
+          text: BB-8 mun færast 5 sinnum og ná öllum málminum
+        - feedback: Ekki rétt. "Endurtaka" kubburinn mun láta BB-8 færast áfram 5
+            sinnum.
+          text: BB-8 mun færast um aðeins 3 bil.
+        questions:
+        - text: Hvað heldur þú að muni gerast þegar þú smellir á "Keyra"?
+      courseC_multi_starWars_predict12022_2023:
         answers:
         - feedback: Ekki rétt. "Endurtaka" kubburinn mun láta BB-8 færast áfram 5
             sinnum.
@@ -4571,6 +4753,24 @@ is-IS:
         questions:
         - text: Skoðaðu kóðann fyrir neðan vandlega. Hvað mun gerast þegar þú smellir
             á "Keyra"?
+      courseC_multi_starWars_predict22022_2023:
+        answers:
+        - feedback: Ekki rétt. Fyrsta lykkjan færir BB-8 áfram um 2 bil, en hann þyrfti
+            að færast áfram um 3 bil.
+          text: BB-8 mun færast of langt í fyrstu lykkjunni.
+        - correct: true
+          feedback: Rétt!
+          text: BB-8 mun ekki færast nógu langt í fyrstu lykkjunni til að hann nái
+            öllum málminum.
+        - feedback: Ekki rétt. Fyrsta lykkjan færir BB-8 áfram um 2 bil, en hann þyrfti
+            að færast áfram um 3 bil.
+          text: BB-8 mun safna öllum málminum án nokkurra vandræða.
+        - feedback: Ekki rétt. Fyrsta lykkjan færir BB-8 áfram um 2 bil, en hann þyrfti
+            að færast áfram um 3 bil.
+          text: BB-8 mun snúast í ranga átt eftir fyrstu lykkjuna.
+        questions:
+        - text: Skoðaðu kóðann fyrir neðan vandlega. Hvað mun gerast þegar þú smellir
+            á "Keyra"?
       courseC_multi_starWars_predict2_2018:
         answers:
         - feedback: Ekki rétt. Fyrsta lykkjan færir BB-8 áfram um 2 bil, en hann þyrfti
@@ -4647,6 +4847,10 @@ is-IS:
         description: Þú ert nú í síðustu kennslustundinni í námskeiði D! Veldu verkefni
           til að skapa.
         display_name: Lokaverkefni námskeiðs
+      courseD_EOC2022_2023:
+        description: Þú ert nú í síðustu kennslustundinni í námskeiði D! Veldu verkefni
+          til að skapa.
+        display_name: Lokaverkefni námskeiðs
       courseD_EOC_2020:
         description: Þú ert nú í síðustu kennslustundinni í námskeiði D! Veldu verkefni
           til að skapa.
@@ -4656,6 +4860,8 @@ is-IS:
           til að skapa.
         display_name: Lokaverkefni námskeiðs
       courseD_EOC_examples2022:
+        display_name: Verkefnadæmi
+      courseD_EOC_examples2022_2023:
         display_name: Verkefnadæmi
       courseD_EOC_examples_2021:
         description: Þú ert að fara að byrja á lokaverkefninu. Áður en þú byrjar er
@@ -4735,6 +4941,23 @@ is-IS:
         - text: Skoðaðu kóðann hér fyrir neðan vandlega.  Hvaða mynd mun hann búa
             til eftir að smellt er á "Keyra"?
       courseD_multi_artist_nestedLoops9_predict12022:
+        answers:
+        - correct: true
+          feedback: Rétt!
+          text: A
+        - feedback: Ekki rétt. Innri lykkjan býr til fimmhyrning og ytri lykkjan endurtekur
+            það fjórum sinnum og myndar hring.
+          text: B
+        - feedback: Ekki rétt. Innri lykkjan býr til fimmhyrning og ytri lykkjan endurtekur
+            það fjórum sinnum og myndar hring.
+          text: C
+        - feedback: Ekki rétt. Innri lykkjan býr til fimmhyrning og ytri lykkjan endurtekur
+            það fjórum sinnum og myndar hring.
+          text: Ekkert af þessu
+        questions:
+        - text: Skoðaðu kóðann hér fyrir neðan vandlega.  Hvaða mynd mun hann búa
+            til eftir að smellt er á "Keyra"?
+      courseD_multi_artist_nestedLoops9_predict12022_2023:
         answers:
         - correct: true
           feedback: Rétt!
@@ -4868,6 +5091,24 @@ is-IS:
             það er blóm, verður býflugan að safna blómasafa einu sinni. Ef það er
             ekki blóm á býflugan að gera ekkert. Skoðaðu kóðann hér fyrir neðan vandlega.
             Hvað heldur þú að muni gerast eftir að þú smellir á "Keyra"?
+      courseD_multi_bee_conditionals1_predict12022_2023:
+        answers:
+        - feedback: Ekki rétt. Kubburinn `ef á blómi` tryggir að býflugan mun aðeins
+            reyna að ná blómasafa ef það er blóm undir skýinu.
+          text: 'Býflugan mun alltaf færast að skýinu og reyna að ná blómasafa. '
+        - correct: true
+          feedback: Rétt!
+          text: Býflugan mun færast á skýið en aðeins reyna að ná blómasafa ef það
+            er blóm undir skýinu.
+        - feedback: Ekki rétt. Kubburinn `ef á blómi` tryggir að býflugan mun aðeins
+            reyna að ná blómasafa ef það er blóm undir skýinu.
+          text: 'Býflugan mun færast að skýinu og síðan gera ekki neitt, alveg sama
+            hvað. '
+        - feedback: Ekki rétt. Kubburinn `ef á blómi` tryggir að býflugan mun aðeins
+            reyna að ná blómasafa ef það er blóm undir skýinu.
+          text: 'Býflugan mun ekki ná til skýsins. '
+        questions:
+        - {}
       courseD_multi_bee_conditionals1_predict1_2018:
         answers:
         - feedback: Ekki rétt. Kubburinn `ef á blómi` tryggir að býflugan mun aðeins
@@ -5025,6 +5266,18 @@ is-IS:
         - text: 'Skoðaðu kóðann hér fyrir neðan vandlega.  Hvað heldur þú að muni
             gerast eftir að þú smellir á "Keyra"? Mundu: það er aldrei meira en *ein*
             býkúpa eða *eitt* blóm undir hverju skýi.'
+      courseD_multi_bee_conditionals7_predict22022_2023:
+        answers:
+        - correct: true
+          feedback: Rétt!
+        - text: Býflugan mun reyna að ná blómasafa bæði á blómum og í býkúpum.
+        - text: Býflugan mun reyna að búa til hunang bæði á blómum og í býkúpum.
+        - text: Býflugan mun reyna að ná blómasafa og búa til hunang bæði á blómum
+            og í býkúpum.
+        questions:
+        - text: 'Skoðaðu kóðann hér fyrir neðan vandlega.  Hvað heldur þú að muni
+            gerast eftir að þú smellir á "Keyra"? Mundu: það er aldrei meira en *ein*
+            býkúpa eða *eitt* blóm undir hverju skýi.'
       courseD_multi_bee_conditionals7_predict2_2018:
         answers:
         - correct: true
@@ -5096,6 +5349,23 @@ is-IS:
         - text: Skoðaðu földuðu lykkjurnar hér fyrir neðan vandlega. Hvað mun gerast
             þegar þú smellir á "Keyra"?
       courseD_multi_bee_nestedLoops2_predict12022:
+        answers:
+        - feedback: Ekki rétt. Býflugan endurtekur aðgerðina í lykkjunni sem er að
+            færast áfram og safna blómasafa, og þannig er þrautin leyst.
+          text: Býflugan mun færast áfram og sækja blómasafa bara einu sinni.
+        - feedback: Ekki rétt. Býflugan endurtekur aðgerðina í lykkjunni sem er að
+            færast áfram og safna blómasafa, og þannig er þrautin leyst.
+          text: Býflugan mun aðeins ná 2 af blómasafa.
+        - correct: true
+          feedback: Rétt!
+          text: Býflugan mun ná öllum blómasafanum.
+        - feedback: Ekki rétt. Býflugan endurtekur aðgerðina í lykkjunni sem er að
+            færast áfram og safna blómasafa, og þannig er þrautin leyst.
+          text: Býflugan mun snúa í ranga átt.
+        questions:
+        - text: Skoðaðu földuðu lykkjurnar hér fyrir neðan vandlega. Hvað mun gerast
+            þegar þú smellir á "Keyra"?
+      courseD_multi_bee_nestedLoops2_predict12022_2023:
         answers:
         - feedback: Ekki rétt. Býflugan endurtekur aðgerðina í lykkjunni sem er að
             færast áfram og safna blómasafa, og þannig er þrautin leyst.
@@ -5201,6 +5471,26 @@ is-IS:
         - text: Skoðaðu kóðann hér fyrir neðan vandlega. Hve mikið hunang mun býflugan
             búa til þegar þú smellir á "Keyra"?
       courseD_multi_bee_nestedLoops9_predict22022:
+        answers:
+        - feedback: Ekki rétt. Býflugan safnar 2 af blómasafa í lykkju þar sem hún
+            færist áfram, og síðan 2 af blómasafa í lykkju niður á við. Þetta er allt
+            innan í annarri lykkju sem er endurtekin. 4 sinnum 2 er 8!
+          text: '4'
+        - correct: true
+          feedback: Rétt!
+          text: '8'
+        - feedback: Ekki rétt. Býflugan safnar 2 af blómasafa í lykkju þar sem hún
+            færist áfram, og síðan 2 af blómasafa í lykkju niður á við. Þetta er allt
+            innan í annarri lykkju sem er endurtekin. 4 sinnum 2 er 8!
+          text: '10'
+        - feedback: Ekki rétt. Býflugan safnar 2 af blómasafa í lykkju þar sem hún
+            færist áfram, og síðan 2 af blómasafa í lykkju niður á við. Þetta er allt
+            innan í annarri lykkju sem er endurtekin. 4 sinnum 2 er 8!
+          text: '12'
+        questions:
+        - text: Skoðaðu kóðann hér fyrir neðan vandlega. Hve mikið hunang mun býflugan
+            búa til þegar þú smellir á "Keyra"?
+      courseD_multi_bee_nestedLoops9_predict22022_2023:
         answers:
         - feedback: Ekki rétt. Býflugan safnar 2 af blómasafa í lykkju þar sem hún
             færist áfram, og síðan 2 af blómasafa í lykkju niður á við. Þetta er allt
@@ -5350,6 +5640,21 @@ is-IS:
         questions:
         - text: Skoðaðu kóðann fyrir neðan vandlega. Hvað mun gerast eftir að þú smellir
             á "Keyra"?
+      courseD_multi_farmer_condLoops9_predict12022_2023:
+        answers:
+        - feedback: Ekki rétt. Hér er enginn kóði til að hirða graskerið.
+          text: Hirðirinn mun hirða alla uppskeruna.
+        - feedback: Ekki rétt. Kóðinn mun láta hirðinn hreyfa sig í tröppumynstri
+            og tína allan maís og kál sem hann finnur. En ekki graskerið.
+          text: Hirðirinn mun ekki hirða neina uppskeru á þeirri slóð sem hún fer.
+        - correct: true
+          feedback: Rétt!
+          text: Hirðirinn mun hirða alla uppskeruna, nema graskerið.
+        - feedback: Ekki rétt. Kóðinn mun láta hirðinn hreyfa sig í tröppumynstri
+            og tína allan maís og kál sem hann finnur. En ekki graskerið.
+        questions:
+        - text: Skoðaðu kóðann fyrir neðan vandlega. Hvað mun gerast eftir að þú smellir
+            á "Keyra"?
       courseD_multi_farmer_condLoops9_predict1_2018:
         answers:
         - feedback: Ekki rétt. Hér er enginn kóði til að hirða graskerið.
@@ -5459,6 +5764,20 @@ is-IS:
           text: Þessi kóði mun skilja eftir síðustu holuna ósnerta.
         questions:
         - text: Skoðaðu kóðann fyrir neðan vel. Hvað verður eftir í lok þrautarinnar?
+      courseD_multi_farmer_while10_predict22022_2023:
+        answers:
+        - feedback: Ekki rétt. Það er enginn kóði sem fjarlægir mold úr haugnum.
+          text: Ekkert. Þessi kóði mun skilja eftir slétt yfirborð.
+        - correct: true
+          feedback: Rétt!
+          text: Þessi kóði mun skilja hauginn eftir óhreyfðan.
+        - feedback: Ekki rétt. `Meðan` lykkjan ræður við ótakmarkaðar endurtekningar,
+            en það er engin kóði sem fjarlægir mold úr haugnum.
+          text: Þessi kóði mun skilja holurnar eftir óhreyfðar.
+        - feedback: Ekki rétt. Það er enginn kóði sem fjarlægir mold úr haugnum.
+          text: Þessi kóði mun skilja eftir síðustu holuna ósnerta.
+        questions:
+        - text: Skoðaðu kóðann fyrir neðan vel. Hvað verður eftir í lok þrautarinnar?
       courseD_multi_farmer_while10_predict2_2018:
         answers:
         - feedback: Ekki rétt. Það er enginn kóði sem fjarlægir mold úr haugnum.
@@ -5537,6 +5856,24 @@ is-IS:
         - text: Skoðaðu kóðann fyrir neðan vandlega. Hvað mun gerast þegar þú smellir
             á "Keyra"?
       courseD_multi_farmer_while4_predict12022:
+        answers:
+        - feedback: Ekki rétt. Bóndinn mun fjarlægja mold á meðan það er haugur, og
+            hætta þegar haugurinn er horfinn
+          text: Ekkert mun gerast.
+        - feedback: Ekki rétt. Bóndinn mun fjarlægja mold á meðan það er haugur, og
+            hætta þegar haugurinn er horfinn
+          text: Bóndinn mun aldrei hætta að fjarlægja mold.
+        - correct: true
+          feedback: Rétt!
+          text: Bóndinn mun fjarlægja mold á meðan það er haugur, og hætta þegar haugurinn
+            er horfinn.
+        - feedback: Ekki rétt. Bóndinn mun fjarlægja mold á meðan það er haugur, og
+            hætta þegar haugurinn er horfinn
+          text: Bóndinn mun fjarlægja mold aðeins einu sinni.
+        questions:
+        - text: Skoðaðu kóðann fyrir neðan vandlega. Hvað mun gerast þegar þú smellir
+            á "Keyra"?
+      courseD_multi_farmer_while4_predict12022_2023:
         answers:
         - feedback: Ekki rétt. Bóndinn mun fjarlægja mold á meðan það er haugur, og
             hætta þegar haugurinn er horfinn
@@ -5657,6 +5994,17 @@ is-IS:
         questions:
         - text: Skoðaðu kóðann fyrir neðan vandlega. Hvað mun gerast þegar þú smellir
             á "Keyra"?
+      courseD_multi_maze_until10_predict22022_2023:
+        answers:
+        - correct: true
+          feedback: Rétt!
+        - text: Uppvakningurinn mun ná til sólblómsins.
+        - text: Uppvakningurinn mun snúa til hægri á fyrstu slóðinni og fara svo í
+            endalausa hringi.
+        - text: Uppvakningurinn mun festast við endann á slóðinni áfram.
+        questions:
+        - text: Skoðaðu kóðann fyrir neðan vandlega. Hvað mun gerast þegar þú smellir
+            á "Keyra"?
       courseD_multi_maze_until10_predict2_2018:
         answers:
         - correct: true
@@ -5752,6 +6100,24 @@ is-IS:
         - text: Skoðaðu kóðann hér fyrir neðan vandlega. Hvað heldur þú að muni gerast
             þegar smellt er á "Keyra"?
       courseD_multi_maze_until2_predict12022:
+        answers:
+        - feedback: Ekki rétt. Kóðinn lætur fuglinn hreyfast áfram á meðan það er
+            slóð og síðan snúa til vinstri. Hann gerir þetta þar til hann nær svíninu!
+          text: Fuglinn mun ekki hreyfast.
+        - correct: true
+          feedback: Rétt!
+          text: Fuglinn mun komast til svínsins.
+        - feedback: Ekki rétt. Kóðinn lætur fuglinn hreyfast áfram á meðan það er
+            örugg slóð og síðan snúa til vinstri. Hann gerir þetta þar til hann nær
+            svíninu!
+          text: Fuglinn mun færast áfram og rekast á TNT sprengjuna.
+        - feedback: Kóðinn lætur fuglinn hreyfast áfram á meðan það er slóð og síðan
+            snúa til vinstri. Hann gerir þetta þar til hann nær svíninu!
+          text: Fuglinn snýr í ranga átt.
+        questions:
+        - text: Skoðaðu kóðann hér fyrir neðan vandlega. Hvað heldur þú að muni gerast
+            þegar smellt er á "Keyra"?
+      courseD_multi_maze_until2_predict12022_2023:
         answers:
         - feedback: Ekki rétt. Kóðinn lætur fuglinn hreyfast áfram á meðan það er
             slóð og síðan snúa til vinstri. Hann gerir þetta þar til hann nær svíninu!
@@ -5883,6 +6249,10 @@ is-IS:
         description: Þú ert nú í síðustu kennslustundinni í námskeiði E! Veldu verkefni
           til að skapa.
         display_name: Lokaverkefni námskeiðs
+      courseE_EOC2022_2023:
+        description: Þú ert nú í síðustu kennslustundinni í námskeiði E! Veldu verkefni
+          til að skapa.
+        display_name: Lokaverkefni námskeiðs
       courseE_EOC_2020:
         description: Þú ert nú í síðustu kennslustundinni í námskeiði E! Veldu verkefni
           til að skapa.
@@ -5892,6 +6262,10 @@ is-IS:
           til að skapa.
         display_name: Lokaverkefni námskeiðs
       courseE_EOC_examples2022:
+        description: Þú ert nú í síðustu kennslustundinni í námskeiði E! Veldu verkefni
+          til að skapa.
+        display_name: Lokaverkefni námskeiðs
+      courseE_EOC_examples2022_2023:
         description: Þú ert nú í síðustu kennslustundinni í námskeiði E! Veldu verkefni
           til að skapa.
         display_name: Lokaverkefni námskeiðs
@@ -5948,6 +6322,23 @@ is-IS:
         - text: Skoðaðu föllin sem eru skilgreind hér fyrir neðan. Hvað mun hirðirinn
             tína?
       courseE_multi_farmer_functions11_predict2022:
+        answers:
+        - feedback: Ekki rétt. Hirðirinn fer áfram út á enda slóðarinnar og snýr síðan
+            við og fer til baka þar til hann tínir kálið.
+          text: Hirðirinn mun tína tvö grasker.
+        - feedback: Ekki rétt. Hirðirinn fer áfram út á enda slóðarinnar og snýr síðan
+            við og fer til baka þar til hann tínir kálið.
+          text: Hirðirinn mun tína öll graskerin.
+        - correct: true
+          feedback: Rétt!
+          text: Hirðirinn mun tína kálið.
+        - feedback: Ekki rétt. Hirðirinn fer áfram út á enda slóðarinnar og snýr síðan
+            við og fer til baka þar til hann tínir kálið.
+          text: Hirðirinn mun hirða maísinn.
+        questions:
+        - text: Skoðaðu föllin sem eru skilgreind hér fyrir neðan. Hvað mun hirðirinn
+            tína?
+      courseE_multi_farmer_functions11_predict2022_2023:
         answers:
         - feedback: Ekki rétt. Hirðirinn fer áfram út á enda slóðarinnar og snýr síðan
             við og fer til baka þar til hann tínir kálið.
@@ -6047,6 +6438,20 @@ is-IS:
         questions:
         - text: Hvað mun gerast þegar þú smellir á "Keyra"?
       courseE_prediction_artistFunction12022:
+        answers:
+        - feedback: Ekki rétt. Forritið kallar reyndar tvisvar á fallið.
+          text: Ekkert. Forritið kallar aldrei á fallið.
+        - feedback: Ekki rétt. Forritið kallar reyndar tvisvar á fallið.
+          text: Listamaðurinn mun teikna einn ferning.
+        - feedback: Ekki rétt. Lengd hverrar hliðar á ferningnum er aðeins 100 dílar,
+            en listamaðurinn hoppar um 175 díla á milli fallanna.
+          text: Listamaðurinn mun teikna tvo ferninga sem skarast.
+        - correct: true
+          feedback: Rétt! Forritið kallar tvisvar á fallið með hopp á milli.
+          text: Listamaðurinn mun teikna tvo ferninga með smá-bil á milli.
+        questions:
+        - text: Hvað mun gerast þegar þú smellir á "Keyra"?
+      courseE_prediction_artistFunction12022_2023:
         answers:
         - feedback: Ekki rétt. Forritið kallar reyndar tvisvar á fallið.
           text: Ekkert. Forritið kallar aldrei á fallið.
@@ -6196,6 +6601,16 @@ is-IS:
         questions:
         - text: Skoðaðu kóðann fyrir neðan vandlega. Hvað mun gerast þegar þú smellir
             á "Keyra"?
+      courseE_swim_fish_behavior_predict12022_2023:
+        answers:
+        - text: Ekkert mun gerast.
+        - {}
+        - correct: true
+          feedback: Rétt!
+        - {}
+        questions:
+        - text: Skoðaðu kóðann fyrir neðan vandlega. Hvað mun gerast þegar þú smellir
+            á "Keyra"?
       courseE_swim_fish_behavior_predict1_2021:
         answers:
         - text: Ekkert mun gerast.
@@ -6237,11 +6652,15 @@ is-IS:
         display_name: Lokaverkefni námskeiðs
       courseF_EOC_examples2022_2022_pilot_-2022-2:
         display_name: Lokaverkefni námskeiðs
+      courseF_EOC_examples2022_2022_pilot_-2022-2_2023:
+        display_name: Lokaverkefni námskeiðs
       courseF_EOC_examples_2021:
         description: Þú ert nú í síðustu kennslustundinni í námskeiði F! Veldu verkefni
           til að skapa.
         display_name: Lokaverkefni námskeiðs
       courseF_EOC_samples2022:
+        display_name: Lokaverkefni námskeiðs
+      courseF_EOC_samples2022_2023:
         display_name: Lokaverkefni námskeiðs
       courseF_EOC_samples_2021:
         description: Þú ert að fara að byrja á lokaverkefninu. Áður en þú byrjar er
@@ -6320,6 +6739,14 @@ is-IS:
         - {}
         questions:
         - {}
+      courseF_events_predict_multi2022_2022_pilot_-2022-2_2023:
+        answers:
+        - {}
+        - {}
+        - correct: true
+        - {}
+        questions:
+        - {}
       courseF_external_variableConstant_2018:
         markdown: "<h2>Meira um breytur</h2>\n\n\n<img src=\"https://images.code.org/082c757f5c939bd353eacda9589ca54f-image-1477349401281.35.08.png\"
           style=\"padding-left: 30px; width:300px; float:right;\"/>\n<h3>Þú varst
@@ -6352,6 +6779,14 @@ is-IS:
         - {}
         questions:
         - {}
+      courseF_groups_predict_multi_2022_pilot_-2022-2_2023:
+        answers:
+        - correct: true
+        - {}
+        - {}
+        - {}
+        questions:
+        - {}
       courseF_labels_predict_multi:
         answers:
         - {}
@@ -6362,6 +6797,15 @@ is-IS:
         questions:
         - {}
       courseF_labels_predict_multi2022_2022_pilot_-2022-2:
+        answers:
+        - {}
+        - {}
+        - {}
+        - correct: true
+        - {}
+        questions:
+        - {}
+      courseF_labels_predict_multi2022_2022_pilot_-2022-2_2023:
         answers:
         - {}
         - {}
@@ -6731,6 +7175,22 @@ is-IS:
         questions:
         - text: Við höfum stillt breytuna `lengd` á 50. Hvað mun gerast þegar þú smellir
             á "Keyra"?
+      courseF_multi_artist_variables3a_predict12022_2023:
+        answers:
+        - correct: true
+          feedback: Rétt!
+          text: Listamaðurinn mun teikna þríhyrning með 50 díla hliðar.
+        - feedback: Ekki rétt. Breytan `lengd` þyrfti að vera í `endurtaka` lykkjunni
+            til að það mundi gerast.
+          text: Listamaðurinn mun teikna 50-hliða marghyrning með 3 díla langar hliðar.
+        - feedback: Ekki rétt. Breytan `lengd` þyrfti að vera í `snúa` kubbnum til
+            að það mundi gerast.
+          text: Listamaðurinn mun teikna þrjár opnar hliðar með 50 gráðu snúningum.
+        - feedback: Breytan `lengd` er stillt á 50 og er notuð í `færa áfram um` kubbnum,
+            þannig að listamaðurinn mun teikna þríhyrning með 50 díla hliðar.
+        questions:
+        - text: Við höfum stillt breytuna `lengd` á 50. Hvað mun gerast þegar þú smellir
+            á "Keyra"?
       courseF_multi_artist_variables3a_predict1_2018:
         answers:
         - correct: true
@@ -6856,6 +7316,23 @@ is-IS:
         - text: Skoðaðu kóðann fyrir neðan vandlega. Hvað mun gerast þegar þú smellir
             á "Keyra"?
       courseF_multi_bee_for3_predict12022:
+        answers:
+        - feedback: Ekki rétt. `Frá` lykkjan lætur býfluguna safna réttu magni af
+            blómasafa, en hún er stillt þannig að hún nær aðeins til 4 blóma.
+          text: 'Býflugan mun fara áfram og safna öllum blómasafanum úr hverju blómi. '
+        - correct: true
+          feedback: Rétt!
+          text: Býflugan mun fara áfram og safna öllum blómasafanum úr öllum blómunum,
+            nema einu.
+        - feedback: Ekki rétt. `Frá` lykkjan lætur býfluguna safna réttu magni af
+            blómasafa, en hún er stillt þannig að hún nær aðeins til 4 blóma.
+          text: 'Býflugan mun fara áfram og safna einum af blómasafa úr hverju blómi. '
+        - feedback: Ekki rétt. `Frá` lykkjan lætur býfluguna safna réttu magni af
+            blómasafa, en hún er stillt þannig að hún nær aðeins til 4 blóma.
+        questions:
+        - text: Skoðaðu kóðann fyrir neðan vandlega. Hvað mun gerast þegar þú smellir
+            á "Keyra"?
+      courseF_multi_bee_for3_predict12022_2023:
         answers:
         - feedback: Ekki rétt. `Frá` lykkjan lætur býfluguna safna réttu magni af
             blómasafa, en hún er stillt þannig að hún nær aðeins til 4 blóma.
@@ -7038,6 +7515,14 @@ is-IS:
         - {}
         questions:
         - {}
+      courseF_sprites_predict_multi2022_2022_pilot_-2022-2_2023:
+        answers:
+        - {}
+        - correct: true
+        - {}
+        - {}
+        questions:
+        - {}
       courseF_variables2_predict2_multi2022_-2022-2:
         answers:
         - correct: true
@@ -7046,7 +7531,23 @@ is-IS:
         - {}
         questions:
         - {}
+      courseF_variables2_predict2_multi2022_-2022-2_2023:
+        answers:
+        - correct: true
+        - {}
+        - {}
+        - {}
+        questions:
+        - {}
       courseF_variables2_predict_multi2022_2022_pilot_-2022-2:
+        answers:
+        - {}
+        - {}
+        - correct: true
+        - {}
+        questions:
+        - {}
+      courseF_variables2_predict_multi2022_2022_pilot_-2022-2_2023:
         answers:
         - {}
         - {}
@@ -7070,9 +7571,19 @@ is-IS:
         - {}
         questions:
         - {}
+      courseF_variables_predict_multi2022_2022_pilot_-2022-2_2023:
+        answers:
+        - {}
+        - correct: true
+        - {}
+        - {}
+        questions:
+        - {}
       courseF_variables_stop:
         content1: lýsing hér
       courseF_variables_stop2022_2022_pilot_-2022-2:
+        content1: lýsing hér
+      courseF_variables_stop2022_2022_pilot_-2022-2_2023:
         content1: lýsing hér
       coursee_prediction_artistfunction2:
         answers:
@@ -7090,6 +7601,21 @@ is-IS:
         questions:
         - text: Hvað gerist þegar þú smellir á "Keyra" hnappinn?
       coursee_prediction_artistfunction22022:
+        answers:
+        - feedback: Ekki rétt. Lykkjan notar "teikna marghyrning" í stað "teikna röð
+            marghyrninga".
+          text: Listamaðurinn mun leysa þrautina rétt.
+        - correct: true
+          feedback: Rétt!
+          text: Listamaðurinn mun teikna fjóra ferninga sem mynda glugga.
+        - feedback: Ekki rétt. Forritið kallar aldrei á fallið "teikna röð marghyrninga".
+          text: Listamaðurinn mun aðeins teikna eina röð af ferningum.
+        - feedback: Ekki rétt. Lykkjan er með 90 gráðu snúning á milli þess kallað
+            er á "teikna marghyrning".
+          text: Listamaðurinn mun teikna fjóra ferninga hvern ofan á annan.
+        questions:
+        - text: Hvað gerist þegar þú smellir á "Keyra" hnappinn?
+      coursee_prediction_artistfunction22022_2023:
         answers:
         - feedback: Ekki rétt. Lykkjan notar "teikna marghyrning" í stað "teikna röð
             marghyrninga".
@@ -7164,6 +7690,43 @@ is-IS:
           text: Listamaðurinn mun teikna fjóra ferninga hvern ofan á annan.
         questions:
         - text: Hvað gerist þegar þú smellir á "Keyra" hnappinn?
+      csc_animal_adaptations_predict:
+        answers:
+        - {}
+        - correct: true
+          feedback: Rétt!
+        - text: Veran mun hreyfast.
+        - text: Veran mun skipta um lit.
+        questions:
+        - text: Smelltu á "breyta" hnappinn til að sjá hvaða hegðun er í `mystery
+            behavior`. Skoðaðu kóðann og spáðu svo hvað muni gerast.
+      csc_ecosystems_matching_cfu:
+        answers:
+        - {}
+        - {}
+        - {}
+        questions:
+        - {}
+        - {}
+        - {}
+      csc_ecosystems_matching_conditionals:
+        answers:
+        - {}
+        - {}
+        - {}
+        questions:
+        - {}
+        - {}
+        - {}
+      csc_ecosystems_matching_events:
+        answers:
+        - {}
+        - {}
+        questions:
+        - {}
+        - {}
+      csc_timecapsule_info_2023:
+        content1: lýsing hér
       csd-post-survey-2017-q11_2018:
         answers:
         - correct: true
@@ -10318,6 +10881,12 @@ is-IS:
           # Ofurborgarar netsins
 
           ## Hvernig getum við sýnt kjark þegar við verðum vör við einelti á netinu?
+      csf_be_a_super_digital_citizen2022_2023:
+        content1: lýsing hér
+        markdown: |-
+          # Ofurborgarar netsins
+
+          ## Hvernig getum við sýnt kjark þegar við verðum vör við einelti á netinu?
       csf_be_a_super_digital_citizen_2021:
         content1: lýsing hér
         markdown: |-
@@ -10330,6 +10899,11 @@ is-IS:
 
           ## Hvaða upplýsingar er í lagi að hafa í stafræna fótsporinu sínu?
       csf_digital_trails2022:
+        markdown: |-
+          # Stafræna fótsporið
+
+          ## Hvaða upplýsingar er í lagi að hafa í stafræna fótsporinu sínu?
+      csf_digital_trails2022_2023:
         markdown: |-
           # Stafræna fótsporið
 
@@ -10354,6 +10928,20 @@ is-IS:
 
           ![](https://images.code.org/bfa69295fbf33c77ecdeb79b5498d8f7-image-1584751340896.png)
       csf_password_power-up2022:
+        content1: lýsing hér
+        markdown: |-
+          # Notaðu öflug aðgangsorð
+
+          ## Ábendingar um góð aðgangsorð
+
+          * Byrjaðu á **orði eða orðum** sem er gott að muna
+          * Aðeins **foreldrar** þínir ættu að fá að vita aðgangsorðið
+          * Aldrei nota **persónulegar upplýsingar** í aðgangsorði
+          * Hafði ekki færri en **átta** stafi eða tákn
+          * Notaðu bókstafi, tölustafi og **tákn** í aðgangsorðinu
+
+          ![](https://images.code.org/bfa69295fbf33c77ecdeb79b5498d8f7-image-1584751340896.png)
+      csf_password_power-up2022_2023:
         content1: lýsing hér
         markdown: |-
           # Notaðu öflug aðgangsorð
@@ -10409,6 +10997,20 @@ is-IS:
           * **S**egðu STOPP
 
           ![](https://images.code.org/f3e4987a130b27f7b589d7829b753aac-image-1584750971069.png)
+      csf_putting_a_stop_to_online_meanness2022_2023:
+        content1: lýsing hér
+        markdown: |-
+          # Segjum STANS við stríðni
+
+          ## Hvað ættir þu að gera ef einhver kemur illa fram við þig á netinu?
+
+          * **S**lökktu á sambandinu
+          * **T**alaðu við fullorðinn sem þú treystir
+          * **A**thugaðu netstaði áður en þú notar þá
+          * **N**otaðu skynsemina á netinu
+          * **S**egðu STOPP
+
+          ![](https://images.code.org/f3e4987a130b27f7b589d7829b753aac-image-1584750971069.png)
       csf_putting_a_stop_to_online_meanness_2021:
         content1: lýsing hér
         markdown: |-
@@ -10429,6 +11031,11 @@ is-IS:
 
           ## Hvernig getur þú ferðast örugglega á netinu?
       csf_safety_in_my_online_neighborhood2022:
+        markdown: |-
+          # Nágrennið mitt á netinu
+
+          ## Hvernig getur þú ferðast örugglega á netinu?
+      csf_safety_in_my_online_neighborhood2022_2023:
         markdown: |-
           # Nágrennið mitt á netinu
 
@@ -11950,11 +12557,17 @@ is-IS:
         description: Þú ert nú í síðustu kennslustundinni í námskeiði E! Veldu verkefni
           til að skapa.
         display_name: Lokaverkefni námskeiðs
+      express_EOC2022_2023:
+        description: Þú ert nú í síðustu kennslustundinni í námskeiði E! Veldu verkefni
+          til að skapa.
+        display_name: Lokaverkefni námskeiðs
       express_EOC_2021:
         description: Þú ert nú í síðustu kennslustundinni í námskeiði E! Veldu verkefni
           til að skapa.
         display_name: Lokaverkefni námskeiðs
       express_EOC_examples2022:
+        display_name: Verkefnadæmi
+      express_EOC_examples2022_2023:
         display_name: Verkefnadæmi
       express_EOC_examples_2021:
         display_name: Verkefnadæmi
@@ -11993,6 +12606,24 @@ is-IS:
         - text: Skoðaðu kóðann hér fyrir neðan vandlega. Ef kóðinn mundi keyra alveg
             til enda (og við hunsum villur) hve mörgum fjársjóðum mundi Lára þá safna?
       grade2_multi_collector_A_predict12022:
+        answers:
+        - feedback: Ekki rétt. Lára mun reyna að safna fjársjóði þar sem enginn er
+            og það veldur villu.
+          text: Lára mun safna 4 fjársjóðum með þessum kóða.
+        - correct: true
+          feedback: Rétt!
+          text: Lára mun reyna að safna fjársjóði þar sem enginn er og það veldur
+            villu.
+        - feedback: Ekki rétt. Lára mun reyna að safna fjársjóði þar sem enginn er
+            og það veldur villu.
+          text: Lára mun safna öllum fjársjóðunum.
+        - feedback: Ekki rétt. Lára mun reyna að safna fjársjóði þar sem enginn er
+            og það veldur villu.
+          text: Lára mun safna 1 fjársjóði með þessum kóða.
+        questions:
+        - text: Skoðaðu þennan kóða vandlega. Hvað heldur þú að muni gerast þegar
+            forritið keyrir?
+      grade2_multi_collector_A_predict12022_2023:
         answers:
         - feedback: Ekki rétt. Lára mun reyna að safna fjársjóði þar sem enginn er
             og það veldur villu.

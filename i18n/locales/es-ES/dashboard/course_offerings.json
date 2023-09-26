@@ -333,7 +333,6 @@
   "contagion-guided-practice-1": "contagio-práctica-guiada-1",
   "csa5-exemplars": "csa5-ejemplos",
   "dance-extras-gallery": "galería-extras-baile",
-  "self-paced-pl-csd6-2021": "autodidáctico-pl-csd6-2021",
   "cspunit4": "cspunidad4",
   "allthesurveys": "todas las encuestas",
   "cs-discoveries-facilitator-in-training": "facilitadores-de-descubrimientos-cs-en-formación",
@@ -385,6 +384,8 @@
   "virtual-pl-csd-summer": "virtual-pl-csd-verano-2023",
   "pl-csd-summer": "Taller de verano - Descubrimientos de Informática ",
   "self-paced-pl-csd": "autodidáctico-pl-csd-2021",
+  "self-paced-pl-microbit": "Enseñando a crear aplicaciones con dispositivos (micro:bit)",
+  "self-paced-pl-csp": "autodidáctico-pl-csp-2021",
   "self-paced-pl-aiml": "autodidáctico-pl-csd5",
   "how-ai-works": "Cómo funciona la Inteligencia Artificial"
 }

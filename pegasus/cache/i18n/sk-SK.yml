@@ -11,6 +11,11 @@ sk-SK:
     možnostiach výučby vo Vašom okolí alebo iných novinkách v informatike? (približne
     raz za mesiac)
   ai_activity: Aktivita
+  ai_aiedu_intro_description: Úvod do AI je bezplatný, inovatívny a kultúrne relevantný
+    učebný plán, v ktorom študenti rozvíjajú koncepčné znalosti o tom, čo je AI a
+    ako sa používa v reálnom svete.
+  ai_cognimates_description: Vzdelávacia platforma AI na vytváranie hier, programovanie
+    robotov a školenie.
   ai_description: Popis
   ai_for_oceans: AI pomáha oceánom
   ai_for_oceans_lesson_plan: učebný plán
@@ -38,6 +43,7 @@ sk-SK:
   allcancode_shortdescription: Hra, v ktorej sprevádzaš Marca použitím vizuálneho
     programovacieho jazyka.
   anybody_can_learn: Učiť sa môže každý
+  app_lab_documentation: Dokumentácia aplikácie Lab
   app_lab_tutorials: App Lab Návody
   appinventor_beyond_gradelevel: Druhý stupeň a starší
   appinventor_beyond_longdescription: Pomocou zábavných a rýchlych video návodov vytvoríš
@@ -996,6 +1002,7 @@ sk-SK:
   header_educate_middle: 2. stupeň ZŠ
   header_educate_overview: Prehľad školiteľov
   header_educate_partner: Staňte sa naším partnerom
+  header_educate_requirements: Technické požiadavky
   header_educate_tools: Nástroje a videá
   header_help_support: 'Pomoc a podpora '
   header_help_us: Pomôžte nám
