@@ -92,7 +92,7 @@
   background-color: $brand_secondary_default;
   border-color: $brand_secondary_default;
   color: $neutral_white;
-  font-family: $gotham-bold;
+  @include main-font-semi-bold;
 }
 
 #terms-modal .disabled-button {
@@ -120,7 +120,7 @@
 }
 #race-modal .dismiss-link {
   font-size: 14px;
-  font-family: $gotham-regular;
+  @include main-font-regular;
   line-height: 20px;
 }
 #school-info-modal .disabled,

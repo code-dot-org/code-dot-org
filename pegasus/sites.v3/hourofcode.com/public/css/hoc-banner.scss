@@ -95,7 +95,7 @@ section.banner {
   a {
     color: $darkest_gray;
     text-decoration: underline;
-    font-family: $gotham-bold;
+    @include main-font-semi-bold;
 
     &.ctabuttonatag {
       text-decoration: none;

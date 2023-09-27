@@ -17,9 +17,19 @@ $metropolis-font: 'Metropolis', sans-serif;
 
 $main-font: $metropolis-font;
 
+$thin-font-weight: 100;
+$extra-light-font-weight: 200;
+$light-font-weight: 300;
+$regular-font-weight: 400;
+$medium-font-weight: 500;
+$semi-bold-font-weight: 600;
+$bold-font-weight: 700;
+$extra-bold-font-weight: 800;
+$black-font-weight: 900;
+
 @mixin main-font-thin {
   font-family: $main-font;
-  font-weight: 100;
+  font-weight: $thin-font-weight;
   font-style: normal;
 }
 
@@ -30,7 +40,7 @@ $main-font: $metropolis-font;
 
 @mixin main-font-extra-light {
   font-family: $main-font;
-  font-weight: 200;
+  font-weight: $extra-light-font-weight;
   font-style: normal;
 }
 
@@ -41,7 +51,7 @@ $main-font: $metropolis-font;
 
 @mixin main-font-light {
   font-family: $main-font;
-  font-weight: 300;
+  font-weight: $light-font-weight;
   font-style: normal;
 }
 
@@ -52,7 +62,7 @@ $main-font: $metropolis-font;
 
 @mixin main-font-regular {
   font-family: $main-font;
-  font-weight: 400;
+  font-weight: $regular-font-weight;
   font-style: normal;
 }
 
@@ -63,7 +73,7 @@ $main-font: $metropolis-font;
 
 @mixin main-font-medium {
   font-family: $main-font;
-  font-weight: 500;
+  font-weight: $medium-font-weight;
   font-style: normal;
 }
 
@@ -74,7 +84,7 @@ $main-font: $metropolis-font;
 
 @mixin main-font-semi-bold {
   font-family: $main-font;
-  font-weight: 600;
+  font-weight: $semi-bold-font-weight;
   font-style: normal;
 }
 
@@ -85,7 +95,7 @@ $main-font: $metropolis-font;
 
 @mixin main-font-bold {
   font-family: $main-font;
-  font-weight: 700;
+  font-weight: $bold-font-weight;
   font-style: normal;
 }
 
@@ -96,7 +106,7 @@ $main-font: $metropolis-font;
 
 @mixin main-font-extra-bold {
   font-family: $main-font;
-  font-weight: 800;
+  font-weight: $extra-bold-font-weight;
   font-style: normal;
 }
 
@@ -107,7 +117,7 @@ $main-font: $metropolis-font;
 
 @mixin main-font-black {
   font-family: $main-font;
-  font-weight: 900;
+  font-weight: $black-font-weight;
   font-style: normal;
 }
 
