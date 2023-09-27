@@ -1209,6 +1209,9 @@
           "word": "Zdarzenie",
           "definition": "Działanie, które powoduje, że coś się dzieje."
         },
+        "artificial_intelligence/ai-ethics/2023": {
+          "word": "Sztuczna inteligencja"
+        },
         "adaptation/csc-adaptations/2023": {
           "word": "adaptacja",
           "definition": "Zmiana w organizmie, aby lepiej przetrwać jego środowisko"
@@ -1427,6 +1430,82 @@
         "poetry_circle/poetry/2023": {
           "word": "Koło poezji",
           "definition": "Bezpieczna i kreatywna przestrzeń do testowania nowych wierszy i uzyskiwania konstruktywnych informacji zwrotnych od innych"
+        },
+        "computer/csd/2023": {
+          "word": "Komputer"
+        },
+        "input/csd/2023": {
+          "word": "Wejście"
+        },
+        "processing/csd/2023": {
+          "word": "Przetwarzanie"
+        },
+        "html/csd/2023": {
+          "word": "HTML"
+        },
+        "digital_footprint/csd/2023": {
+          "word": "Cyfrowy ślad"
+        },
+        "css/csd/2023": {
+          "word": "CSS"
+        },
+        "copyright/csd/2023": {
+          "word": "Prawa autorskie",
+          "definition": "wyłączne prawo do drukowania, publikowania, wykonywania, filmowania lub zapisywania materiału literackiego, artystycznego lub muzycznego oraz do nadawania innym uprawnień, by też mogli to robić"
+        },
+        "bug/csd/2023": {
+          "word": "Błąd",
+          "definition": "Część programu, która nie działa poprawnie."
+        },
+        "debugging/csd/2023": {
+          "word": "Debugowanie",
+          "definition": "Wynajdywanie i naprawianie problemów w algorytmie lub programie."
+        },
+        "program/csd/2023": {
+          "word": "Program",
+          "definition": "Algorytm zakodowany w takiej postaci, że może być uruchomiony na komputerze."
+        },
+        "parameter/csd/2023": {
+          "word": "Parametr"
+        },
+        "variable/csd/2023": {
+          "word": "Zmienna",
+          "definition": "Etykieta informacji użyta w programie."
+        },
+        "sprite/csd/2023": {
+          "word": "Duszek"
+        },
+        "property/csd/2023": {
+          "word": "Właściwość"
+        },
+        "condition/csd/2023": {
+          "word": "Warunek"
+        },
+        "conditionals/csd/2023": {
+          "word": "Zdania z warunkami"
+        },
+        "abstraction/csd/2023": {
+          "word": "Abstrakcja"
+        },
+        "function/csd/2023": {
+          "word": "Funkcja"
+        },
+        "empathy/csd/2023": {
+          "word": "Empatia"
+        },
+        "user/csd/2023": {
+          "word": "Użytkownik",
+          "definition": "Ktoś, kto używa obiektu, w tym oprogramowania i sprzętu."
+        },
+        "user_interface/csd/2023": {
+          "word": "Interfejs użytkownika"
+        },
+        "machine_learning/csd/2023": {
+          "word": "Uczenie maszynowe",
+          "definition": "Jak komputery rozpoznają wzorce i podejmują decyzje bez programowania explicite"
+        },
+        "ethics/csd/2023": {
+          "word": "Etyka"
         },
         "algorithm/coursea/2023": {
           "word": "Algorytm",

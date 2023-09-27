@@ -230,6 +230,27 @@
         "code/poetry/2023": {
           "word": "Kood"
         },
+        "input/csd/2023": {
+          "word": "Sisend"
+        },
+        "copyright/csd/2023": {
+          "word": "Autoriõigus"
+        },
+        "debugging/csd/2023": {
+          "word": "Debugimine"
+        },
+        "variable/csd/2023": {
+          "word": "Muutuja"
+        },
+        "conditionals/csd/2023": {
+          "word": "Tingimuslaused"
+        },
+        "abstraction/csd/2023": {
+          "word": "Abstraktsus"
+        },
+        "function/csd/2023": {
+          "word": "Funktsioon"
+        },
         "debugging/coursea/2023": {
           "word": "Debugimine"
         },

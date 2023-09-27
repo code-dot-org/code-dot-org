@@ -1410,6 +1410,9 @@
           "word": "Udalosť",
           "definition": "Akcia, ktorá spôsobí, že sa niečo stane."
         },
+        "artificial_intelligence/ai-ethics/2023": {
+          "word": "Umelá inteligencia"
+        },
         "adaptation/csc-adaptations/2023": {
           "word": "Adaptácia",
           "definition": "Zmena organizmu, aby lepšie prežila svoje prostredie"
@@ -1627,6 +1630,188 @@
         },
         "poetry_circle/poetry/2023": {
           "definition": "Bezpečný a kreatívny priestor na testovanie nových básní a získanie konštruktívnej spätnej väzby od ostatných"
+        },
+        "computer/csd/2023": {
+          "word": "Počítač",
+          "definition": "Stroj, ktorý pracuje s informáciami"
+        },
+        "input/csd/2023": {
+          "word": "Vstup",
+          "definition": "informácie, ktoré počítače získavajú od používateľov, zariadení alebo iných počítačov"
+        },
+        "output/csd/2023": {
+          "word": "Výstup",
+          "definition": "informácie, ktoré počítače poskytujú používateľom, zariadeniam alebo iným počítačom"
+        },
+        "processing/csd/2023": {
+          "word": "Spracúvanie",
+          "definition": "Myšlienková práca, v rámci ktorej počítače premieňajú vstup na výstup."
+        },
+        "storage/csd/2023": {
+          "word": "pamäť",
+          "definition": "schopnosť ukladať informácie na neskoršie použitie"
+        },
+        "html/csd/2023": {
+          "word": "HTML",
+          "definition": "Hypertextový značkovací jazyk, ktorý sa používa na vytváranie webových stránok"
+        },
+        "html_element/csd/2023": {
+          "word": "HTML prvok",
+          "definition": "časť webovej stránky, ktorá je označená otváracou značkou a často uzatvorená ukončovacou značkou"
+        },
+        "html_tag/csd/2023": {
+          "word": "HTML značka",
+          "definition": "špeciálny súbor znakov, ktorý označuje začiatok a koniec HTML prvku, ako aj jeho typ"
+        },
+        "website_content/csd/2023": {
+          "word": "Obsah webu",
+          "definition": "text a obrázky na webe"
+        },
+        "website_structure/csd/2023": {
+          "word": "Štruktúra webu",
+          "definition": "spôsob, ako je obsah webu usporiadaný"
+        },
+        "heading/csd/2023": {
+          "word": "Nadpis",
+          "definition": "Názov alebo zhrnutie dokumentu alebo jeho sekcie"
+        },
+        "digital_footprint/csd/2023": {
+          "word": "Digitálna stopa",
+          "definition": "Informácie o jednotlivcovi, ktoré sa dajú zozbierať naprieč celým internetom."
+        },
+        "css/csd/2023": {
+          "word": "CSS",
+          "definition": "Kaskádové štýly – jazyk, ktorý opisuje, aký štýl by mali HTML prvky mať"
+        },
+        "css_selector/csd/2023": {
+          "word": "CSS selektor",
+          "definition": "časť CSS kódu, ktorá určuje, na ktorý HTML prvok sa má daný štýl použiť"
+        },
+        "copyright/csd/2023": {
+          "word": "Autorské práva",
+          "definition": "výhradné zákonné právo tlačiť, publikovať, prezentovať, filmovať alebo nahrávať literárne, umelecké alebo hudobné materiály a dávať iným ľuďom súhlas na vykonávanie týchto aktivít"
+        },
+        "relevant/csd/2023": {
+          "word": "Relevantné",
+          "definition": "úzko súvisiace s témou"
+        },
+        "search_engine/csd/2023": {
+          "word": "Vyhľadávač",
+          "definition": " Program, ktorý vyhľadáva položky na internete."
+        },
+        "trustworthy/csd/2023": {
+          "word": "Dôveryhodný",
+          "definition": "Spoľahlivý, úprimný a pravdovravný"
+        },
+        "css_class/csd/2023": {
+          "word": "CSS trieda",
+          "definition": "Identifikátor, ktorý umožňuje priradiť rovnaký štýl viacerým prvkom v HTML dokumente"
+        },
+        "bug/csd/2023": {
+          "word": "Chyba",
+          "definition": "Časť programu, ktorá nefunguje správne."
+        },
+        "debugging/csd/2023": {
+          "word": "Ladenie",
+          "definition": "Hľadanie a odstraňovanie chýb v algoritme alebo programe."
+        },
+        "program/csd/2023": {
+          "word": "Program",
+          "definition": "Algoritmus, ktorý je naprogramovaný v niečom, čo dokáže stroj spustiť."
+        },
+        "parameter/csd/2023": {
+          "word": "Parameter"
+        },
+        "variable/csd/2023": {
+          "word": "Premenná",
+          "definition": "Označenie pre nejaké informácie, ktoré sa využívajú v programe."
+        },
+        "sprite/csd/2023": {
+          "word": "Sprajt",
+          "definition": "Postava na obrazovke s vlastnosťami, ktoré opisujú jej polohu, pohyb a vzhľad."
+        },
+        "dot_notation/csd/2023": {
+          "word": "Zápis s bodkou",
+          "definition": "spôsob, akým sa vlastnosti sprajtov používajú v Game Labe, teda spojenie názvu sprajtu a vlastnosti bodkou."
+        },
+        "property/csd/2023": {
+          "word": "Vlastnosť",
+          "definition": "Označenie charakteristiky sprajtu, napríklad jeho umiestnenia a vzhľadu"
+        },
+        "boolean_expression/csd/2023": {
+          "word": "Logický výraz",
+          "definition": "v programovaní je to výraz, ktorý sa vyhodnotí ako true (pravda) alebo false (nepravda). "
+        },
+        "condition/csd/2023": {
+          "word": "Podmienka",
+          "definition": "Niečo, čo program pred rozhodnutím o vykonaní akcie skontroluje, či je to pravda."
+        },
+        "conditionals/csd/2023": {
+          "word": "Podmienené príkazy",
+          "definition": "Príkazy, ktoré sa spustia len vtedy, keď sú splnené určité podmienky."
+        },
+        "abstraction/csd/2023": {
+          "word": "Abstrakcia",
+          "definition": "zjednodušené vyjadrenie niečoho zložitejšieho. Abstrakcie vám umožňujú skryť detaily, aby ste zvládli zložitosť, sústredili sa na dôležité koncepty a uvažovali o problémoch na vyššej úrovni."
+        },
+        "function/csd/2023": {
+          "word": "Funkcia",
+          "definition": "Pomenovaná časť programových pokynov."
+        },
+        "user/csd/2023": {
+          "word": "Používateľ",
+          "definition": "Niekto, kto používa objekt vrátane softvéru a hardvéru."
+        },
+        "user_interface/csd/2023": {
+          "word": "Užívateľské prostredie"
+        },
+        "machine_learning/csd/2023": {
+          "word": "Strojové učenie",
+          "definition": "Ako počítače rozpoznávajú vzory a rozhodujú sa bez toho, aby boli výslovne naprogramované"
+        },
+        "features/csd/2023": {
+          "word": "Vlastnosti",
+          "definition": "vstupy, ktoré model používa na rozhodovanie"
+        },
+        "label/csd/2023": {
+          "word": "Označenie",
+          "definition": "výstup, ktorý sa snažíte pomocou modelu vybrať alebo predpovedať"
+        },
+        "model/csd/2023": {
+          "word": "Model",
+          "definition": "počítačový program navrhnutý tak, aby prijímal rozhodnutia"
+        },
+        "supervised_learning/csd/2023": {
+          "word": "Učenie pod dohľadom",
+          "definition": "keď človek trénuje model, aby sa učil pomocou príkladov"
+        },
+        "training/csd/2023": {
+          "word": "Trénovanie",
+          "definition": "poskytovanie príkladov modelu, aby sa mohol učiť"
+        },
+        "unsupervised_learning/csd/2023": {
+          "word": "Učenie bez dohľadu",
+          "definition": "hľadanie vzorov v údajoch, ktoré nemajú žiadne označenia"
+        },
+        "categorical_data/csd/2023": {
+          "word": "Kategorické údaje",
+          "definition": "údaje, ktoré možno zadeliť do skupín"
+        },
+        "classification/csd/2023": {
+          "word": "Klasifikácia",
+          "definition": "predpovedanie kategórie na základe iných vlastností"
+        },
+        "bias/csd/2023": {
+          "word": "Skreslenie",
+          "definition": "Keď sa pri rozhodovaní uprednostňujú niektoré veci a iné sa znevýhodňujú alebo vylučujú"
+        },
+        "numerical_data/csd/2023": {
+          "word": "Číselné údaje",
+          "definition": "údaje, ktoré sa dajú spočítať alebo zmerať"
+        },
+        "ethics/csd/2023": {
+          "word": "Etika",
+          "definition": "zásady dobrého správania."
         },
         "algorithm/coursea/2023": {
           "word": "Algoritmus",

@@ -14,7 +14,19 @@
         "AppLab Intro 7 - Change Screen Color": {
           "applab_hoc_finish": "Změnila se barva obrazovky na zelenou? Pokud ano, stiskni 'Dokončit'. Pokud ne, stiskni 'Reset',  uprav svůj kód a znovu stiskni 'Spustit'."
         },
+        "AppLab Intro 7 - Change Screen Color_2023": {
+          "applab_hoc_finish": "Změnila se barva obrazovky na zelenou? Pokud ano, stiskni 'Dokončit'. Pokud ne, stiskni 'Reset',  uprav svůj kód a znovu stiskni 'Spustit'."
+        },
+        "AppLab Intro 7 - Change Screen Color_mb2022": {
+          "applab_hoc_finish": "Změnila se barva obrazovky na zelenou? Pokud ano, stiskni 'Dokončit'. Pokud ne, stiskni 'Reset',  uprav svůj kód a znovu stiskni 'Spustit'."
+        },
         "AppLab Intro 7 - thisOrThatAddButton": {
+          "AppLabHoCFinal11": "Teď jsi v dizajnovém módu."
+        },
+        "AppLab Intro 7 - thisOrThatAddButton_2023": {
+          "AppLabHoCFinal11": "Teď jsi v dizajnovém módu."
+        },
+        "AppLab Intro 7 - thisOrThatAddButton_mb2022": {
           "AppLabHoCFinal11": "Teď jsi v dizajnovém módu."
         },
         "CSD U3 Variables Predict Where XY": {
@@ -30,6 +42,9 @@
           "grid": "K zobrazení mřížky klikněte zde."
         },
         "CSD U3 Variables Predict Where XY_2022": {
+          "grid": "K zobrazení mřížky klikněte zde."
+        },
+        "CSD U3 Variables Predict Where XY_2023": {
           "grid": "K zobrazení mřížky klikněte zde."
         },
         "Course 4 Artist 4": {

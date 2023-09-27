@@ -10,6 +10,7 @@ ar:
         error:
           future: لا يمكن أن يكون في المستقبل
         finish_sign_up_header: إكمال إنشاء حسابك
+        finish_sign_up_header_error: 'الرجاء تصحيح الأخطاء التالية:'
         finish_sign_up_subheader: املأ المعلومات التالية لإكمال إنشاء حساب على Code.org
           لـ <strong>%{email}</strong>.
         finish_sign_up_subheader_markdown: املأ المعلومات التالية لإكمال إنشاء حساب
@@ -31,6 +32,7 @@ ar:
           عنوان بريد إلكتروني)](%{url})
         reset_password_token: رابط إعادة تعيين كلمة المرور الذي اتبعته
         us_state: الولاية
+        user_type: نوع الحساب
         username: اسم المستخدم
         verified_teacher: مدرس تم التحقق منه
     errors:

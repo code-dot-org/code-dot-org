@@ -245,6 +245,9 @@
         "debugging/pre-express/2022": {
           "word": "Алдааг засах"
         },
+        "artificial_intelligence/ai-ethics/2023": {
+          "word": "Хиймэл оюун ухаан"
+        },
         "adaptation/csc-adaptations/2023": {
           "word": "Дасан зохицох",
           "definition": "Организмын өөрчлөлт нь хүрээлэн буй орчиндоо илүү сайн амьдрах"
@@ -419,6 +422,36 @@
         },
         "poetry_circle/poetry/2023": {
           "definition": "Шинэ шүлэг туршиж үзэх, бусдаас бүтээлч санал авах аюулгүй, бүтээлч орон зай"
+        },
+        "input/csd/2023": {
+          "word": "Оролт"
+        },
+        "processing/csd/2023": {
+          "word": "Боловсруулалт"
+        },
+        "digital_footprint/csd/2023": {
+          "word": "Дижитал ул мөр"
+        },
+        "copyright/csd/2023": {
+          "word": "Зохиогчийн эрх"
+        },
+        "debugging/csd/2023": {
+          "word": "Алдааг засах"
+        },
+        "variable/csd/2023": {
+          "word": "Хувьсагч"
+        },
+        "conditionals/csd/2023": {
+          "word": "Нөхцлүүд"
+        },
+        "abstraction/csd/2023": {
+          "word": "Хийсвэрлэл"
+        },
+        "function/csd/2023": {
+          "word": "Функц"
+        },
+        "machine_learning/csd/2023": {
+          "word": "Машины сургалт"
         },
         "debugging/coursea/2023": {
           "word": "Алдааг засах"

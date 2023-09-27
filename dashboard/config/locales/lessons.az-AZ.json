@@ -2341,6 +2341,194 @@
         "pre-express-2022/A Royal Battle with Events": {
           "student_overview": "Bir hekayə yaratmaq və ya interaktiv bir oyun qurmaq üçün hadisələrdən istifadə edin."
         },
+        "csd1-2023/Intro to Problem Solving": {
+          "name": "Problem Həllinə giriş",
+          "preparation": "**Hər qrup üçün**\n\n-   Hər birinin uzunluğu 5x5 düym olan 2 vərəq alüminium folqa\n-   3-5 düym su saxlaya bilən 1 konteyner\n-   Konteynerin altına qoyula bilən bir neçə kağız dəsmal və ya cır-cındır\n-   15 qəpik\n-   Fəaliyyət təlimatının bir nüsxəsi\n\n**Müəllim üçün**\n\n-   3-5 düym su saxlaya bilən 1 konteyner\n-   50 qəpik\n-   Əlavə kağız dəsmal və ya cır-cındır\n-   Təsdiqlənmiş müəllimlər üçün [\"Teacher's Lounge\"]forumunu yoxlayın, əlavə strategiyaları və ya müəllim yoldaşları tərəfindən paylaşılan resursları tapın\n-   Əgər virtual olaraq dərs deyirsinizsə, [Virtual Lesson Modifications] yoxlamağı düşünün."
+        },
+        "csd1-2023/The Problem Solving Process": {
+          "name": "Məsələnin həlli prosesi",
+          "preparation": "Hər bir tələbə üçün\n\n-   Fəaliyyət təlimatının surətini çap edin\n\nSinif üçün\n\n-   Poster kağızı\n-   Markerlər/rəngli qələmlər\n\nMüəllim üçün\n\n-   Təsdiqlənmiş müəllimlər üçün [\"Teacher's Lounge\"](https://forum.code.org/t/resource-hub-problem-solving-and-computing-chapter-1-lessons-1-3/36188) forumunu yoxlayın, əlavə strategiyaları və ya müəllim yoldaşları tərəfindən paylaşılan resursları tapın\n-   Əgər virtual dərs deyirsinizsə, [Virtual Lesson Modifications](https://docs.google.com/document/d/1420LdkGrISwhKjHu7i4XCbi60ahmCRnQoYf1_JosdgA/preview)-ni yoxlayın."
+        },
+        "csd1-2023/Exploring Problem Solving": {
+          "name": "Problemin həllini araşdırmaq",
+          "preparation": "-   Hər bir tələbə üçün fəaliyyət təlimatını çap edin\n-   Birthday Party problemi üçün cızıq kağız\n-   Müzakirənin yekununda problemlərin müəyyənləşdirilməsi strategiyalarını qeyd etmək üçün poster\n-   Təsdiqlənmiş müəllimlər üçün [\"Teacher's Lounge\"](https://forum.code.org/t/resource-hub-problem-solving-and-computing-chapter-1-lessons-1-3/36188) forumunu yoxlayın, əlavə strategiyaları və ya müəllim yoldaşları tərəfindən paylaşılan resursları tapın\n-   Əgər virtual dərs deyirsinizsə, [Virtual Lesson Modifications](https://docs.google.com/document/d/1420LdkGrISwhKjHu7i4XCbi60ahmCRnQoYf1_JosdgA/preview)-ni yoxlayın."
+        },
+        "csd1-2023/What is a Computer?": {
+          "name": "Kompüter nədir?",
+          "preparation": "**Hər qrup üçün**\n\n-   Fəaliyyət təlimatının nüsxələrini çap edin. Qeyd edək ki, iki şəkil dəsti var, lakin hər qrupa yalnız bir dəst lazımdır.\n-   Qayçı (dərsdən əvvəl şəkilləri kəsməyə vaxtınız yoxdursa)\n-   Poster kağızı\n-   Markerlər və ya rəngli karandaşlar\n-   Şəkillər əlavə etmək üçün yapışqan və ya lent\n\n**Müəllim üçün**\n\n-   Təsdiqlənmiş müəllimlər üçün [\"Teacher's Lounge\"](https://forum.code.org/t/resource-hub-problem-solving-and-computing-chapter-2-lessons-4-8/36189) forumunu yoxlayın, əlavə strategiyaları və ya müəllim yoldaşları tərəfindən paylaşılan resursları tapın\n-   Əgər virtual dərs deyirsinizsə, [Virtual Lesson Modifications](https://docs.google.com/document/d/1420LdkGrISwhKjHu7i4XCbi60ahmCRnQoYf1_JosdgA/preview)-ni yoxlayın."
+        },
+        "csd1-2023/Input and Output": {
+          "preparation": "Hər bir tələbə üçün- Fəaliyyət təlimatının surətini çap edinSinif üçün- Poster kağızı\n\n-   Markerlər/rəngli qələmlərMüəllim üçün\n-   Təsdiqlənmiş müəllimlər üçün [\"Teacher's Lounge\"](https://forum.code.org/t/resource-hub-problem-solving-and-computing-chapter-2-lessons-4-8/36189) forumunu yoxlayın, əlavə strategiyaları və ya müəllim yoldaşları tərəfindən paylaşılan resursları tapın\n-   Əgər virtual dərs deyirsinizsə, [Virtual Lesson Modifications](https://docs.google.com/document/d/1420LdkGrISwhKjHu7i4XCbi60ahmCRnQoYf1_JosdgA/preview)-ni yoxlayın."
+        },
+        "csd1-2023/Storage": {
+          "name": "Yaddaş",
+          "preparation": "Hər bir tələbə üçün- Fəaliyyət təlimatının surətini çap edinSinif üçün- Poster kağızı\n\n-   Markerlər/rəngli qələmlərMüəllim üçün\n-   Təsdiqlənmiş müəllimlər üçün [\"Teacher's Lounge\"](https://forum.code.org/t/resource-hub-problem-solving-and-computing-chapter-2-lessons-4-8/36189) forumunu yoxlayın, əlavə strategiyaları və ya müəllim yoldaşları tərəfindən paylaşılan resursları tapın\n-   Əgər virtual dərs deyirsinizsə, [Virtual Lesson Modifications](https://docs.google.com/document/d/1420LdkGrISwhKjHu7i4XCbi60ahmCRnQoYf1_JosdgA/preview)-ni yoxlayın."
+        },
+        "csd2-2023/Intro to HTML": {
+          "name": "HTML-ə giriş"
+        },
+        "csd2-2023/Websites for a Purpose": {
+          "name": "Məqsəd üçün veb saytlar"
+        },
+        "csd2-2023/CSS Classes": {
+          "name": "CSS dərsləri"
+        },
+        "csd3-2023/Drawing in Game Lab": {
+          "name": "Oyun laboratoriyasında rəsm"
+        },
+        "csd3-2023/Shapes and Parameters": {
+          "name": "Forma və parametrlər"
+        },
+        "csd3-2023/Variables": {
+          "name": "dəyişənlər"
+        },
+        "csd3-2023/Random Numbers": {
+          "name": "Təsadufi rəqəmlər"
+        },
+        "csd3-2023/Sprites": {
+          "name": "Spraytlar"
+        },
+        "csd3-2023/Sprite Properties": {
+          "name": "Sprite Xüsusiyyətləri"
+        },
+        "csd3-2023/Text": {
+          "name": "mətn"
+        },
+        "csd3-2023/The Draw Loop": {
+          "name": "Bərabərlik Döngüsü"
+        },
+        "csd3-2023/Sprite Movement": {
+          "name": "Sprayt Hərəkəti"
+        },
+        "csd3-2023/Conditionals": {
+          "name": "Şərti ifadələr"
+        },
+        "csd3-2023/Keyboard Input": {
+          "name": "Klaviatura Girişi"
+        },
+        "csd3-2023/Velocity": {
+          "name": "Sürət"
+        },
+        "csd3-2023/Collision Detection": {
+          "name": "Toqquşmanın Aşkarlanması"
+        },
+        "csd3-2023/Complex Sprite Movement": {
+          "name": "Kompleks Sprite Hərəkatı"
+        },
+        "csd3-2023/Collisions": {
+          "name": "Toqquşmalar"
+        },
+        "csd3-2023/Functions": {
+          "name": "Funksiyalar"
+        },
+        "csd3-2023/The Game Design Process": {
+          "name": "Oyun Dizayn Prosesi"
+        },
+        "csd3-2023/Using the Game Design Process": {
+          "name": "Oyun Dizayn Prosesindən istifadə"
+        },
+        "csd3-2023/Project - Design a Game": {
+          "name": "Layihə - Oyun dizayn edin"
+        },
+        "csd4-2023/Understanding Your User": {
+          "name": "İstifadəçinizi Anlamaq"
+        },
+        "csd4-2023/User Interfaces": {
+          "name": "İstifadəçi Araüzü"
+        },
+        "csd4-2023/Feedback and Testing": {
+          "name": "Əks-əlaqə və Sınaq"
+        },
+        "csd4-2023/Designing Apps for Good": {
+          "name": "Əmtəə üçün proqramların dizaynı"
+        },
+        "csd4-2023/Market Research": {
+          "name": "Bazar Araşdırması"
+        },
+        "csd4-2023/Prototype Testing": {
+          "name": "İlk Nümunə Testi"
+        },
+        "csd4-2023/Testing the App": {
+          "name": "Tətbiqi yoxlamaq"
+        },
+        "csd4-2023/Project - App Presentation": {
+          "name": "Layihə - Proqram Təqdimatı"
+        },
+        "csd5-2023/Representing Images": {
+          "name": "Şəkilləri təmsil edir"
+        },
+        "csd5-2023/Combining Representations": {
+          "name": "Nümayəndəlikləri birləşdirən"
+        },
+        "csd5-2023/Keeping Data Secret": {
+          "name": "Məlumatlar Gizli Saxlanır"
+        },
+        "csd5-2023/Making Decisions with Data": {
+          "name": "Data ilə bağlı qərar vermək"
+        },
+        "csd6a-2023/Intro to App Lab": {
+          "name": "Proqram laboratoriyasına giriş"
+        },
+        "csd6a-2023/Board Events": {
+          "name": "İdarə Heyətinin Tədbirləri"
+        },
+        "csd6a-2023/Mini-Project: Field Collector App": {
+          "name": "Mini-layihə: sahə tapan proqram"
+        },
+        "csd6a-2023/Color LEDs": {
+          "name": "Rəngli LEDlər"
+        },
+        "csd6a-2023/Getting Screen Inputs": {
+          "name": "Ekran girişlərini əldə edərkən"
+        },
+        "csd6a-2023/Making Music": {
+          "name": "Musiqi bəstələmək"
+        },
+        "csd6a-2023/Functions": {
+          "name": "Funksiyalar"
+        },
+        "csd6a-2023/Mini-Project: Interactive Art": {
+          "name": "Mini-layihə: İnteraktiv İncəsənət"
+        },
+        "csd6a-2023/Physical Outputs and LEDs": {
+          "name": "Fiziki Çıxışlar və LEDlər"
+        },
+        "csd6a-2023/Physical Inputs and Buttons": {
+          "name": "Fiziki Girişlər və Düymələr"
+        },
+        "csd6b-2023/Intro to App Lab": {
+          "name": "Proqram laboratoriyasına giriş"
+        },
+        "csd6b-2023/Board Events": {
+          "name": "İdarə Heyətinin Tədbirləri"
+        },
+        "csd6b-2023/Mini-Project: Field Collector App": {
+          "name": "Mini-layihə: sahə tapan proqram"
+        },
+        "csd6b-2023/Getting Screen Inputs": {
+          "name": "Ekran girişlərini əldə edərkən"
+        },
+        "csd6b-2023/Functions": {
+          "name": "Funksiyalar"
+        },
+        "csd6b-2023/Physical Outputs and LEDs": {
+          "name": "Fiziki Çıxışlar və LEDlər"
+        },
+        "csd6b-2023/Physical Inputs and Buttons": {
+          "name": "Fiziki Girişlər və Düymələr"
+        },
+        "csd7-2023/Intro to App Lab": {
+          "name": "Proqram laboratoriyasına giriş"
+        },
+        "csd7-2023/Introduction to AI Lab": {
+          "name": "Süni intellekt laboratoriyasına giriş"
+        },
+        "csd7-2023/Numerical Data in AI Lab": {
+          "name": "AI laboratoriyasında rəqəmsal məlumatlar"
+        },
+        "csd7-2023/Survey Planning": {
+          "name": "Sorğunun Planlaşdırılması"
+        },
         "coursea-2023/Safety in My Online Neighborhood": {
           "name": "onlayn qonşuluğumdakı təhlükəsizlik",
           "overview": "[![sağlam düşüncə təhsili](https://curriculum.code.org/static/img/common_sense_education.png)](https://www.commonsense.org)\n\nBu dərs Sağlam Düşüncə Təhsili tərəfindən yaradılmışdır. [Daha çox məlumat.](https://www.commonsense.org/education/digital-citizenship/curriculum)\n\nİnternetin gücü şagirdlərə şəxsən görə bilmədikləri yerləri yaşamağa və ziyarət etməyə imkan verir. Lakin, gerçək dünyada səyahət etdiyiniz kimi, onlayn səyahət edərkən də təhlükəsiz olmağınız vacibdir. Bu virtual ekskursiyada uşaqlar onlayn macəralarda təhlükəsiz olmağı praktika edə bilərlər.",

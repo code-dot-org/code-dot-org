@@ -282,6 +282,10 @@ mt:
   call_to_action_register_early_access: Reġistru għal aċċess bikri
   call_to_action_open_positions: Ara l-pożizzjonijiet miftuħa
   call_to_action_get_guide: Ikseb il-gwida
+  call_to_action_donate_to_cdo: Iddonaw lil Code.org
+  call_to_action_start_fundraiser: Ibda ġbir ta 'fondi
+  call_to_action_view_donation_policy: Ara l-politika tad-donazzjoni
+  call_to_action_view_donate_bitpay: Agħti donazzjoni ma 'BitPay
   aria_label_call_to_action_afe: Tgħallem aktar dwar Amazon Future Engineer
   aria_label_call_to_action_teaching_csf: Ibda l-programm ta 'tagħlim professjonali
     tal-Fundamentali tax-Xjenza tal-Kompjuter tat-Tagħlim
@@ -390,6 +394,7 @@ mt:
   curriculum_name_csp: Prinċipji tax-Xjenza tal-Kompjuter
   curriculum_name_csc: Konnessjonijiet tax-Xjenza tal-Kompjuter
   curriculum_name_csa: AP® Xjenza tal-Kompjuter A
+  curriculum_name_csa_ai: Inġinerija tas-Softwer u Viżjoni tal-Kompjuter
   curriculum_name_csc_02: Kwalunkwe Modulu tal-Konnessjonijiet CS
   curriculum_name_ai: AI & Tagħlim bil-Magni
   curriculum_name_artificial_intelligence: Intelliġenza Artifiċjali (AI)
@@ -466,6 +471,12 @@ mt:
     logħob, u sistemi ta 'kompjuters fiżiċi.
   curriculum_desc_csp: Ħieles, AP® CSP approvat, kors introduttorju tal-iskola għolja
     li jintroduċi lill-istudenti għall-kunċetti fundamentali tax-xjenza tal-kompjuter.
+  curriculum_desc_csa_ai_long: 'Dan il-modulu CSA ta ''wara l-AP b''żewġ kapitoli
+    joffri lill-istudenti tal-iskola sekondarja esperjenza prattika b''għodod ta''
+    żvilupp ta ''softwer professjonali, inklużi GitHub u GitHub Copilot, u jagħtihom
+    il-ħiliet tad-dinja reali biex jiżviluppaw programm ta'' viżjoni tal-kompjuter. '
+  curriculum_desc_csa_ai_short: Dan il-modulu CSA post-AP® joffri lill-istudenti tal-iskola
+    sekondarja esperjenza prattika b'għodod professjonali għall-iżvilupp tas-softwer.
   collection_hardware: Iffoka fuq il-Ħardwer
   collection_hardware_desc: Jagħti s-setgħa lill-istudenti biex jużaw dejta u apparat
     fiżiku biex isolvu l-problemi.
@@ -540,6 +551,7 @@ mt:
   module_duration_2_hrs: Sagħtejn
   module_duration_3_hrs: 3 sigħat
   module_duration_5_hrs: 5 sigħat
+  module_duration_5_hrs_plus: 5+ sigħat
   module_duration_8_hrs: 8 sigħat
   module_duration_20_hrs: 20 siegħa
   module_duration_35_hrs: 35 siegħa
@@ -620,6 +632,7 @@ mt:
   heading_these_lessons_will: 'Dawn il-lezzjonijiet se:'
   heading_explore_curriculum_catalog: Esplora l-korsijiet kollha tagħna fil-Katalgu
     tal-Kurrikulu
+  heading_csa_ai: Qed tfittex affarijiet x'tagħmel wara l-eżami AP®?
   professional_learning_section_desc: Ikseb l-appoġġ li għandek bżonn hekk kif tipprepara
     biex tgħallem. L-għalliema jħobbuha, b'aktar minn 90% jikklassifikawha l-aħjar
     żvilupp professjonali li qatt kien hemm!
@@ -653,6 +666,23 @@ mt:
     kwalunkwe mistoqsija li jista' jkollok dwar kif tibda t-tagħlim ma 'Code.org.
     Tista' wkoll tistaqsi lil għalliema oħra dwar l-esperjenza tagħhom fil-fora tal-għalliema
     tagħna.
+  subscribe_form_section_title: Abbona għall-aġġornamenti
+  subscribe_form_section_desc_csa: Irreġistra biex tirċievi emails ta 'kull xahar
+    dwar AP® Computer Science A ta' Code.org u tikseb tfakkiriet utli, pariri, u aġġornamenti
+    mibgħuta dritt għall-inbox tiegħek.
+  subscribe_form_section_desc_csc: Sign up biex jirċievu emails kull xahar dwar Konnessjonijiet
+    Code.org tal Computer Science u jiksbu tfakkiriet utli, tips, u aġġornamenti mibgħuta
+    dritt lill inbox tieghek.
+  subscribe_form_section_desc_csd: Irreġistra biex tirċievi emails ta 'kull xahar
+    dwar Skoperti tax-Xjenza tal-Kompjuter ta' Code.org u tikseb tfakkiriet utli,
+    pariri, u aġġornamenti mibgħuta dritt għall-inbox tiegħek.
+  subscribe_form_section_desc_csf: Sign up biex jirċievu emails kull xahar dwar Code.org
+    tal Computer Science Fundamentals u jiksbu tfakkiriet utli, tips, u aġġornamenti
+    mibgħuta dritt lill inbox tieghek.
+  subscribe_form_section_desc_csp: Irreġistra biex tirċievi emails ta 'kull xahar
+    dwar il-Prinċipji tax-Xjenza tal-Kompjuter ta' Code.org u tikseb tfakkiriet utli,
+    pariri, u aġġornamenti mibgħuta dritt għall-inbox tiegħek.
+  subscribe_form_section_unsubscribe: Tista 'tħassar l-abbonament fi kwalunkwe ħin.
   blockchain_hero_heading: Kif taħdem Blockchain
   blockchain_hero_desc: Adsa fis-dinja ta 'blockchain ma “Kif Blockchain Xogħlijiet,”
     serje video ġdida tagħna u l-lezzjonijiet li jakkumpanjaw!
@@ -759,6 +789,9 @@ mt:
     Kif Taħdem l-AI. Kull lezzjoni hija mqabbda ma 'vidjow wieħed mis-serje, u tiddivesi
     aktar fil-fond fil-kunċetti introdotti fil-vidjows.
   ai_curriculum_btn_aria_label_04: Esplora Kif Taħdem il-lezzjonijiet tal-AI
+  ai_curriculum_grades_05: 'Livelli ta ''Grad: 9-12'
+  ai_curriculum_btn_aria_label_05: Esplora l-modulu tal-Inġinerija tas-Softwer u l-Viżjoni
+    tal-Kompjuter
   ai_carousel_heading: 'Dak li jgħidu l-għalliema dwar l-AI ma ''Code.org:'
   ai_carousel_quote_01: Din il-lezzjoni tat ukoll l-opportunità lill-istudenti tiegħi
     biex jaraw li hemm element ta 'opinjoni fis-sistemi ta' klassifikazzjoni. Aktar
@@ -892,6 +925,7 @@ mt:
     LLMs bħal ChatGPT, minn Bidu għal avvanzat. Jinkludi l-istarter iqajjem għal dawk
     li għadhom qed jgħaddsu s-sieq tagħhom, kif ukoll għodod avvanzati għal dawk li
     qed ifittxu li jimmassimizzaw il-potenzjal tagħhom.
+  ai_pl_101_resources_3: Iqajjem AI għat-Trasformazzjoni tat-Tagħlim tal-Istudenti
   how_ai_works_hero_heading: Kif Taħdem AI
   how_ai_works_hero_desc: Għaddas fid-dinja tal-AI b '"Kif Taħdem l-AI,” is-serje
     tal-vidjow tagħna u l-lezzjonijiet li jakkumpanjawhom!
@@ -1307,8 +1341,8 @@ mt:
     Animation
   csp_page_curriculum_glance_devices: Laptop, Chromebook
   csp_page_curriculum_glance_tools: App Lab
-  csp_page_curriculum_glance_professional_learning: Facilitator-led Workshops, Self-paced
-    Modules
+  csp_page_curriculum_glance_professional_learning: Workshops immexxija mill-faċilitatur,
+    Moduli b'ritmu personali
   csp_page_curriculum_glance_professional_languages: Malti
   csp_page_curriculum_glance_professional_accessibility_features: Text-to-speech,
     Closed captioning, Immersive reader
@@ -1435,8 +1469,8 @@ mt:
     Computing Fiżiku, Disinn tal-App, Logħob u Animazzjonijiet, Arti u Disinn, Programmazzjoni
   csd_page_curriculum_glance_devices: Laptop, Chromebook
   csd_page_curriculum_glance_tools: App Lab, Lab tal-Logħob, Lab AI, Web Lab
-  csd_page_curriculum_glance_professional_learning: Facilitator-led Workshops, Self-paced
-    Modules
+  csd_page_curriculum_glance_professional_learning: Workshops immexxija mill-faċilitatur,
+    Moduli b'ritmu personali
   csd_page_curriculum_glance_professional_languages: Malti
   csd_page_curriculum_glance_professional_accessibility_features: Text-to-speech,
     Closed captioning, Immersive reader
@@ -1587,8 +1621,8 @@ mt:
     Arti u Disinn, Disinn tal-App
   csf_page_curriculum_glance_devices: Laptop, Chromebook, Pillola
   csf_page_curriculum_glance_tools: Sprite Lab, Play Lab
-  csf_page_curriculum_glance_professional_learning: Facilitator-led Workshops, Self-paced
-    Modules
+  csf_page_curriculum_glance_professional_learning: Workshops immexxija mill-faċilitatur,
+    Moduli b'ritmu personali
   csf_page_curriculum_glance_languages: Għarbi, Bahasa Indoneżjan, Katalan, Ċiniż
     Simplifikat, Ċiniż Tradizzjonali, Ċek, Franċiż, Ġermaniż, Ħindi, Taljan, Ġappuniż,
     Korean, Kannada, Malajan, Marati, Mongoljan, Pollakk, Portugiż-BR, Rumen, Russu,
@@ -1732,6 +1766,40 @@ mt:
   csa_page_faq_answer_08_02: For more information about the values that guided our
     work, please see our [curriculum values](%{curriculum_values_url}) and our [professional
     learning values](%{pl_values_url}).
+  donate_page_top_heading: Għin biex tiffinanzja l-missjoni tagħna
+  donate_page_top_desc: Kull donazzjoni fjuwils missjoni Code.org li jespandu l-aċċess
+    għall-edukazzjoni xjenza tal-kompjuter. Noffru diversi modi għalik biex jiddonaw
+    u jagħmlu differenza.
+  donate_page_fundraise_title: Ġbir ta 'fondi għal Code.org
+  donate_page_fundraise_desc: Għin biex tiġbor flus għal Code.org! Kull student f'kull
+    skola għandu jkollu l-opportunità li jitgħallem ix-xjenza tal-kompjuter.
+  donate_page_other_ways_title: Modi oħra biex tagħti
+  donate_page_other_ways_desc: Esplora metodi diversi biex tikkontribwixxi, u sib
+    l-għażla li taqbel l-aħjar għalik. Kull ġest, kbir jew żgħir, jimbotta l-missjoni
+    tagħna 'l quddiem.
+  donate_page_501c3: Code.org huwa rreġistrat bħala pubbliku 501 (c) (3) organizzazzjoni
+    bla skop ta 'profitt. Kontribuzzjonijiet għal Code.org huma deduċibbli mit-taxxa
+    sal-limitu permess mil-liġi. In-numru ta 'identifikazzjoni tat-taxxa Code.org
+    huwa 46-0858543.
+  donate_page_donation_policy_title: Nifhmu l-Politika tad-Donazzjoni tagħna
+  donate_page_donation_policy_desc: Tgħallem dwar kif nittrattaw u nallokaw il-kontribuzzjonijiet
+    tiegħek.
+  donate_tabs_tab_label_daf_direct: DAF Dirett
+  donate_tabs_tab_label_amazon: Amazon
+  donate_tabs_tab_label_bitpay: BitPay
+  donate_tabs_tab_label_employee_match: Match tal-Impjegat
+  donate_tabs_daf_direct_title: Iddonaw permezz ta 'DAF Direct
+  donate_tabs_daf_direct_desc: Iddonaw permezz tal-fond avżat mid-donatur tiegħek
+    b'Fidelity Charitable, Schwab Charitable, jew BNY Mellon u agħmel ir-rakkomandazzjoni
+    tal-għotja tiegħek lil Code.org permezz tal-formola onlajn DAF Direct.
+  donate_tabs_amazon_title: Iddonaw permezz tal-Amazon
+  donate_tabs_amazon_desc: Iddonaw direttament billi tuża l-kont tal-Amazon tiegħek.
+    Biss bi ftit klikks, bla xkiel jikkontribwixxu għall-missjoni Code.org u jagħtu
+    s-setgħa lill-futur tal-edukazzjoni xjenza tal-kompjuter.
+  donate_tabs_bitpay_title: Agħti donazzjoni ma 'Crypto permezz ta' BitPay
+  donate_tabs_bitpay_desc: Iħaddnu l-futur li tagħti bil-kripto-munita. Permezz BitPay,
+    munita diġitali tiegħek tista 'tappoġġja direttament isforzi Code.org fl-espansjoni
+    edukazzjoni xjenza tal-kompjuter.
   hoc_live: Siegħa tal-Kodiċi Live
   hoc_live_sign_up_title: Sign up għall Hour ta 'Kodiċi Live
   hoc_live_learn_title: Tgħallem bis-Siegħa tal-Kodiċi Live

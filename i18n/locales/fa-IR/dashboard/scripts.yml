@@ -817,8 +817,12 @@ fa:
             required:
               display_name: مرور کلی
         dance-2019:
-          title: جشن و رقص
+          title: مهمانی رقص
           description_short: یک Dance Party را کدنویسی کرده و با دوستان خود به اشتراک بگذارید. دوره‌ای با همراهی Beyoncé, Harry Styles, Lizzo, Lil Nas X, Selena Gomez همراه با موسیقی فیلم انکانتو کمپانی دیزنی و کلی چیز دیگه!
+        k5-onlinepd-2019:
+          lesson_groups:
+            k5_getting_started:
+              display_name: شروع کنید
         csp4-preview:
           lesson_groups:
             csp_variables:
@@ -1017,6 +1021,10 @@ fa:
           student_description: علوم کامپیوتر را با امتحان کردن دروس زیر با سرعت خودتان بیاموزید! یاد بگیرید که برنامه‌های کامپیوتری بسازید، مهارت‌های حل مسئله را پرورش دهید و چالش‌های سرگرم‌کننده‌ای را پشت سر بگذارید! بازی‌ها و پروژه‌های خلاقانه‌ای بسازید تا با دوستان، خانواده و معلمان به اشتراک بگذارید.
         csp5-virtual:
           title: برنامه‌نویسی رویدادمحور در آزمایشگاه برنامه
+        k5-onlinepd-2020:
+          lesson_groups:
+            k5_getting_started_1:
+              display_name: شروع کنید
         csd3-virtual:
           title: مقدمه‌ خودآموز آزمایشگاه بازی
         outbreak:
@@ -1240,7 +1248,7 @@ fa:
         aiml-2021:
           title: ماژول هوش مصنوعی و یادگیری ماشینی
         outbreak-module:
-          title: شیوع
+          title: همه‌گیری
         csa-videos:
           lesson_groups:
             lessonGroup-3:
@@ -1279,6 +1287,8 @@ fa:
               display_name: پروژه
         hello-world-animals:
           title: 'سلام دنیا: حیوانات'
+        hello-world-batman:
+          title: سلام دنیا!
         dance-unplugged:
           title: ساعت کدنویسی - مجلس رقص - بدون دستگاه
         poem-art:
@@ -1286,7 +1296,7 @@ fa:
         spelling-bee:
           title: زنبور عسل هجی کن
         outbreak-csc:
-          title: شیوع
+          title: همه‌گیری
         csd-post-survey-2021:
           title: پرسشنامه پسادوره یافته های cs
         ai-ethics-2021:
@@ -1460,6 +1470,10 @@ fa:
               display_name: رویدادها
           description: علوم کامپیوتر را با امتحان کردن دروس زیر با سرعت خودتان بیاموزید! یاد بگیرید که برنامه‌های کامپیوتری بسازید، مهارت‌های حل مسئله را پرورش دهید و چالش‌های سرگرم‌کننده‌ای را پشت سر بگذارید! بازی‌ها و پروژه‌های خلاقانه‌ای بسازید تا با دوستان، خانواده و معلمان به اشتراک بگذارید.
           student_description: علوم کامپیوتر را با امتحان کردن دروس زیر با سرعت خودتان بیاموزید! یاد بگیرید که برنامه‌های کامپیوتری بسازید، مهارت‌های حل مسئله را پرورش دهید و چالش‌های سرگرم‌کننده‌ای را پشت سر بگذارید! بازی‌ها و پروژه‌های خلاقانه‌ای بسازید تا با دوستان، خانواده و معلمان به اشتراک بگذارید.
+        cs4all-invasive-species:
+          lessons:
+            lesson-21:
+              name: شروع کنید
         coursef-2022-pilot:
           lesson_groups:
             lessonGroup-7:
@@ -1473,6 +1487,8 @@ fa:
             end_of_course_project:
               display_name: پروژه پایان دوره
           title: دوره F ‏(2022)
+        hello-world-csc:
+          title: سلام دنیا!
         csd-playground:
           name: csd-playground
           lessons:

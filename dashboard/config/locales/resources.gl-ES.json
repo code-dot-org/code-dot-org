@@ -1198,6 +1198,12 @@
         "pause_and_think_online/pre-express/2022": {
           "type": "Vídeo"
         },
+        "ethics_and_ai_privacy_the_future_of_work/ai-ethics/2023": {
+          "type": "Vídeo"
+        },
+        "how_ai_works_large_language_models/ai-ethics/2023": {
+          "type": "Vídeo"
+        },
         "star_quilts_1/csc-starquilts/2023": {
           "type": "Vídeo"
         },
@@ -1247,6 +1253,229 @@
           "type": "Vídeo"
         },
         "poem_art_video_optional_/poetry/2023": {
+          "type": "Vídeo"
+        },
+        "problem_solving_process_1/csd/2023": {
+          "type": "Vídeo"
+        },
+        "the_problem_solving_process/csd/2023": {
+          "type": "Vídeo"
+        },
+        "what_is_a_computer/csd/2023": {
+          "type": "Vídeo"
+        },
+        "what_do_computers_do/csd/2023": {
+          "type": "Vídeo"
+        },
+        "html_tags/csd/2023": {
+          "name": "Etiquetas HTML"
+        },
+        "intro_to_web_lab_part_2/csd/2023": {
+          "type": "Vídeo"
+        },
+        "pair_programming/csd/2023": {
+          "name": "Programación por parellas",
+          "type": "Vídeo"
+        },
+        "video_intro_to_web_lab_part_1/csd/2023": {
+          "type": "Vídeo"
+        },
+        "headings_and_paragraphs/csd/2023": {
+          "name": "Cabeceiras e parágrafos"
+        },
+        "lists/csd/2023": {
+          "name": "Listas"
+        },
+        "video_debugging/csd/2023": {
+          "type": "Vídeo"
+        },
+        "video_pair_programming/csd/2023": {
+          "type": "Vídeo"
+        },
+        "intro_to_css_-_part_1/csd/2023": {
+          "type": "Vídeo"
+        },
+        "intro_to_css_-_part_2/csd/2023": {
+          "type": "Vídeo"
+        },
+        "creative_commons_overview/csd/2023": {
+          "type": "Vídeo"
+        },
+        "publishing_your_website/csd/2023": {
+          "type": "Vídeo"
+        },
+        "video_managing_disagreement/csd/2023": {
+          "type": "Vídeo"
+        },
+        "video_teamwork/csd/2023": {
+          "type": "Vídeo"
+        },
+        "video_how_search_works/csd/2023": {
+          "type": "Vídeo"
+        },
+        "drawing_in_game_lab_-_part_1/csd/2023": {
+          "type": "Vídeo"
+        },
+        "drawing_in_game_lab_-_part_2/csd/2023": {
+          "type": "Vídeo"
+        },
+        "introduction_to_variables/csd/2023": {
+          "type": "Vídeo"
+        },
+        "variables/csd/2023": {
+          "name": "Variables"
+        },
+        "variables_1/csd/2023": {
+          "name": "Variables",
+          "type": "Vídeo"
+        },
+        "variables_2/csd/2023": {
+          "name": "Variables"
+        },
+        "introduction_to_sprites/csd/2023": {
+          "type": "Vídeo"
+        },
+        "the_animation_tab/csd/2023": {
+          "type": "Vídeo"
+        },
+        "sprite_properties_needs_updating_/csd/2023": {
+          "type": "Vídeo"
+        },
+        "text/csd/2023": {
+          "name": "Texto"
+        },
+        "flipbook_example_-_by_marnic_bos/csd/2023": {
+          "type": "Vídeo"
+        },
+        "introduction_to_the_draw_loop/csd/2023": {
+          "type": "Vídeo"
+        },
+        "sprite_movement/csd/2023": {
+          "type": "Vídeo"
+        },
+        "boolean_expressions/csd/2023": {
+          "type": "Vídeo"
+        },
+        "conditional_statements/csd/2023": {
+          "type": "Vídeo"
+        },
+        "conditionals/csd/2023": {
+          "name": "Condicionais"
+        },
+        "if_else_statements/csd/2023": {
+          "type": "Vídeo"
+        },
+        "velocity/csd/2023": {
+          "type": "Vídeo"
+        },
+        "functions/csd/2023": {
+          "name": "Funcións",
+          "type": "Vídeo"
+        },
+        "functions_1/csd/2023": {
+          "name": "Funcións"
+        },
+        "functions_2/csd/2023": {
+          "name": "Funcións"
+        },
+        "the_design_thinking_process/csd/2023": {
+          "type": "Vídeo"
+        },
+        "what_s_for_lunch_testing/csd/2023": {
+          "type": "Vídeo"
+        },
+        "intro_to_design_mode/csd/2023": {
+          "type": "Vídeo"
+        },
+        "events_in_app_lab/csd/2023": {
+          "type": "Vídeo"
+        },
+        "events_in_app_lab_1/csd/2023": {
+          "type": "Vídeo"
+        },
+        "binary_and_data/csd/2023": {
+          "type": "Vídeo"
+        },
+        "amazon_and_data/csd/2023": {
+          "type": "Vídeo"
+        },
+        "netflix_and_data/csd/2023": {
+          "type": "Vídeo"
+        },
+        "waze_and_data/csd/2023": {
+          "type": "Vídeo"
+        },
+        "video_impact_on_society/csd/2023": {
+          "type": "Vídeo"
+        },
+        "video_machine_learning/csd/2023": {
+          "type": "Vídeo"
+        },
+        "video_training_data_and_bias/csd/2023": {
+          "type": "Vídeo"
+        },
+        "circuits_and_logic/csd/2023": {
+          "type": "Vídeo"
+        },
+        "the_counter_pattern/csd/2023": {
+          "type": "Vídeo"
+        },
+        "if_statements_1/csd/2023": {
+          "type": "Vídeo"
+        },
+        "input_output_devices/csd/2023": {
+          "type": "Vídeo"
+        },
+        "introduction_to_arrays/csd/2023": {
+          "type": "Vídeo"
+        },
+        "functions_with_parameters/csd/2023": {
+          "name": "Funcións con parámetros",
+          "type": "Vídeo"
+        },
+        "the_counter_pattern_2/csd/2023": {
+          "type": "Vídeo"
+        },
+        "functions_3/csd/2023": {
+          "name": "Funcións"
+        },
+        "ai_what_is_machine_learning_/csd/2023": {
+          "type": "Vídeo"
+        },
+        "seeing_ai/csd/2023": {
+          "type": "Vídeo"
+        },
+        "finding_patterns_in_data/csd/2023": {
+          "type": "Vídeo"
+        },
+        "introduction_to_ai_lab_1/csd/2023": {
+          "type": "Vídeo"
+        },
+        "training_and_testing_in_ai_lab/csd/2023": {
+          "type": "Vídeo"
+        },
+        "ai_training_data_bias/csd/2023": {
+          "type": "Vídeo"
+        },
+        "model_cards_in_ai_lab/csd/2023": {
+          "type": "Vídeo"
+        },
+        "if-statements_in_app_lab/csd/2023": {
+          "type": "Vídeo"
+        },
+        "numerical_data_in_ai_lab_2/csd/2023": {
+          "type": "Vídeo"
+        },
+        "ethics_ai_equal_access_and_algorithmic_bias/csd/2023": {
+          "type": "Vídeo"
+        },
+        "creating_a_survey_in_google_forms/csd/2023": {
+          "type": "Vídeo"
+        },
+        "cleaning_survey_data/csd/2023": {
+          "type": "Vídeo"
+        },
+        "view_and_download_survey_data/csd/2023": {
           "type": "Vídeo"
         },
         "implementation_guide/coursea/2023": {

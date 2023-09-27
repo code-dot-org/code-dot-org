@@ -280,6 +280,10 @@ ca:
   call_to_action_register_early_access: Registrar-se per a l'accés anticipat
   call_to_action_open_positions: Veure posicions obertes
   call_to_action_get_guide: Aconsegueix la guia
+  call_to_action_donate_to_cdo: Fes una donació a Code.org
+  call_to_action_start_fundraiser: Iniciar una recaptació de fons
+  call_to_action_view_donation_policy: Veure política de donacions
+  call_to_action_view_donate_bitpay: Fes una donació amb BitPay
   aria_label_call_to_action_afe: Sabeu més sobre Amazon Future Engineer
   aria_label_call_to_action_teaching_csf: 'Comença el programa d''aprenentatge professional
     d''''Ensenyament de Fonaments de Ciències Informàtiques '
@@ -389,6 +393,7 @@ ca:
   curriculum_name_csp: Principis de la Informàtica
   curriculum_name_csc: Connexions Informàtiques
   curriculum_name_csa: Ciències Informàtiques A
+  curriculum_name_csa_ai: Enginyeria del Programari i Visió per Computador
   curriculum_name_csc_02: Qualsevol Mòdul de Connexió CS
   curriculum_name_ai: AI i aprenentatge automàtic
   curriculum_name_artificial_intelligence: Intel·ligència Artificial (IA)
@@ -469,6 +474,13 @@ ca:
     jocs i sistemes de computació física.
   curriculum_desc_csp: Gratuït, aprovat per AP® CSP, curs d'introducció a l'escola
     secundària que introdueix els estudiants en els conceptes fundacionals de la informàtica.
+  curriculum_desc_csa_ai_long: 'Aquest mòdul CSA post-AP de dos capítols ofereix als
+    estudiants de secundària experiència pràctica amb eines professionals de desenvolupament
+    de programari, incloent GitHub i GitHub Copilot, i els imparteix amb les habilitats
+    del món real per desenvolupar un programa de visió per computador. '
+  curriculum_desc_csa_ai_short: Aquest mòdul Post-AP® CSA ofereix als estudiants de
+    secundària experiència pràctica amb eines professionals de desenvolupament de
+    programari.
   collection_hardware: Centrar-se en el maquinari
   collection_hardware_desc: Capta els estudiants a utilitzar dades i dispositius físics
     per resoldre problemes.
@@ -543,6 +555,7 @@ ca:
   module_duration_2_hrs: 2 hores
   module_duration_3_hrs: 3 hores
   module_duration_5_hrs: 5 hores
+  module_duration_5_hrs_plus: 5+ hores
   module_duration_8_hrs: 8 hores
   module_duration_20_hrs: 20 hores
   module_duration_35_hrs: 35 hores
@@ -625,6 +638,7 @@ ca:
   heading_objects_first: Objectes primer
   heading_these_lessons_will: 'Aquestes lliçons seran:'
   heading_explore_curriculum_catalog: Explora tots els nostres cursos al Catàleg Curricular
+  heading_csa_ai: Busques coses a fer després de l'examen AP®?
   professional_learning_section_desc: Obteniu el suport que necessiteu mentre us prepareu
     per ensenyar. Als professors els encanta, amb més del 90% que el classifica el
     millor desenvolupament professional de la història!
@@ -657,6 +671,23 @@ ca:
     a qualsevol pregunta que pugueu tenir sobre començar a ensenyar amb Code.org.
     També podeu preguntar a altres professors sobre la seva experiència en els nostres
     fòrums de professors.
+  subscribe_form_section_title: Subscriu-te per actualitzacions
+  subscribe_form_section_desc_csa: Registreu-vos per rebre correus electrònics mensuals
+    sobre AP® Computer Science A de Code.org i obteniu recordatoris útils, consells
+    i actualitzacions enviades directament a la safata d'entrada.
+  subscribe_form_section_desc_csc: Registreu-vos per rebre correus electrònics mensuals
+    sobre les connexions informàtiques de Code.org i obteniu recordatoris útils, consells
+    i actualitzacions enviades a la vostra safata d'entrada.
+  subscribe_form_section_desc_csd: Registreu-vos per rebre correus electrònics mensuals
+    sobre els descobriments de ciències de la computació de Code.org i obteniu recordatoris
+    útils, consells i actualitzacions enviats directament a la safata d'entrada.
+  subscribe_form_section_desc_csf: Registreu-vos per rebre correus electrònics mensuals
+    sobre els fonaments de ciències de la computació de Code.org i obteniu recordatoris
+    útils, consells i actualitzacions enviats directament a la safata d'entrada.
+  subscribe_form_section_desc_csp: Registreu-vos per rebre correus electrònics mensuals
+    sobre els principis de Ciències de la Computació de Code.org i obteniu recordatoris
+    útils, consells i actualitzacions enviades directament a la safata d'entrada.
+  subscribe_form_section_unsubscribe: Pots donar-te de baixa en qualsevol moment.
   blockchain_hero_heading: Com funciona la Cadena de blocs
   blockchain_hero_desc: Submergeix-te en el món de la cadena de blocs amb "Com funciona
     la Cadena de blocs", la nostra nova sèrie de vídeos i les lliçons que l'acompanyen!
@@ -762,6 +793,9 @@ ca:
     Cada lliçó es combina amb un sol vídeo de la sèrie, aprofundint en els conceptes
     introduïts en els vídeos.
   ai_curriculum_btn_aria_label_04: Explora Com funciona la IA lliçons
+  ai_curriculum_grades_05: 'Nivells de grau: 9-12'
+  ai_curriculum_btn_aria_label_05: Explora el mòdul d'Enginyeria del Programari i
+    Visió per Computador
   ai_carousel_heading: 'Què diuen els professors sobre IA amb Code.org:'
   ai_carousel_quote_01: Aquesta lliçó també va donar als meus estudiants l'oportunitat
     de veure que hi ha un element d'opinió en els sistemes de classificació. Més tard,
@@ -898,6 +932,7 @@ ca:
     com ChatGPT, des de principiant fins avançat. Inclou indicacions d'arrencada per
     a aquells que acaben de submergir els dits dels peus, així com eines avançades
     per a aquells que busquen maximitzar el seu potencial.
+  ai_pl_101_resources_3: AI demana per transformar l'aprenentatge dels estudiants
   how_ai_works_hero_heading: Com funciona la IA
   how_ai_works_hero_desc: Submergeix-te en el món de la IA amb “How AI Works”, la
     nostra sèrie de vídeos i lliçons d'acompanyament!
@@ -1316,8 +1351,8 @@ ca:
     Animation
   csp_page_curriculum_glance_devices: Laptop, Chromebook
   csp_page_curriculum_glance_tools: App Lab
-  csp_page_curriculum_glance_professional_learning: Facilitator-led Workshops, Self-paced
-    Modules
+  csp_page_curriculum_glance_professional_learning: Tallers dirigits per facilitadors,
+    mòduls auto-ritme
   csp_page_curriculum_glance_professional_languages: Català
   csp_page_curriculum_glance_professional_accessibility_features: Text-to-speech,
     Closed captioning, Immersive reader
@@ -1445,8 +1480,8 @@ ca:
   csd_page_curriculum_glance_devices: Laptop, Chromebook
   csd_page_curriculum_glance_tools: Laboratori d'aplicacions, Laboratori de jocs,
     AI Lab, Laboratori web
-  csd_page_curriculum_glance_professional_learning: Facilitator-led Workshops, Self-paced
-    Modules
+  csd_page_curriculum_glance_professional_learning: Tallers dirigits per facilitadors,
+    mòduls auto-ritme
   csd_page_curriculum_glance_professional_languages: Català
   csd_page_curriculum_glance_professional_accessibility_features: Text-to-speech,
     Closed captioning, Immersive reader
@@ -1598,8 +1633,8 @@ ca:
     Disseny, Disseny d'Apps
   csf_page_curriculum_glance_devices: portàtil, Chromebook, tauleta
   csf_page_curriculum_glance_tools: Sprite Lab, Play Lab
-  csf_page_curriculum_glance_professional_learning: Facilitator-led Workshops, Self-paced
-    Modules
+  csf_page_curriculum_glance_professional_learning: Tallers dirigits per facilitadors,
+    mòduls auto-ritme
   csf_page_curriculum_glance_languages: àrab, indonesi, català, xinès simplificat,
     xinès tradicional, txec, francès, alemany, hindi, italià, japonès, coreà, kannada,
     malai, marathi, mongol, polonès, portuguès-br, romanès, rus, eslovac, tagalog,
@@ -1741,6 +1776,38 @@ ca:
   csa_page_faq_answer_08_02: For more information about the values that guided our
     work, please see our [curriculum values](%{curriculum_values_url}) and our [professional
     learning values](%{pl_values_url}).
+  donate_page_top_heading: Ajudeu a finançar la nostra missió
+  donate_page_top_desc: Cada donació alimenta la missió de Code.org d'ampliar l'accés
+    a l'educació en ciències de la computació. T'oferim diverses maneres de fer donacions
+    i marcar la diferència.
+  donate_page_fundraise_title: Fundraise per Code.org
+  donate_page_fundraise_desc: Ajuda a recaptar diners per Code.org! Tots els estudiants
+    de totes les escoles han de tenir l'oportunitat d'aprendre ciències de la computació.
+  donate_page_other_ways_title: Altres formes de donar
+  donate_page_other_ways_desc: Explora diversos mètodes per contribuir, i troba l'opció
+    que més et convingui. Cada gest, gran o petit, impulsa la nostra missió cap endavant.
+  donate_page_501c3: Code.org està registrat com una organització pública 501 (c)
+    (3) sense ànim de lucre. Les contribucions a Code.org són fiscalment deduïbles
+    en la mesura permesa per la llei. El número d'identificació fiscal de Code.org
+    és 46-0858543.
+  donate_page_donation_policy_title: Comprendre la nostra política de donacions
+  donate_page_donation_policy_desc: Coneix com gestionem i destinem les teves aportacions.
+  donate_tabs_tab_label_daf_direct: DAF Directe
+  donate_tabs_tab_label_amazon: Amazon
+  donate_tabs_tab_label_bitpay: BitPay
+  donate_tabs_tab_label_employee_match: Partit de l'empleat
+  donate_tabs_daf_direct_title: Donar a través de DAF Direct
+  donate_tabs_daf_direct_desc: Fes una donació a través del teu fons aconsellat per
+    donants amb Fidelity Charitable, Schwab Charitable o BNY Mellon i fes la teva
+    recomanació de subvenció a Code.org a través del formulari en línia DAF Direct.
+  donate_tabs_amazon_title: Fes una donació a través d'Amazon
+  donate_tabs_amazon_desc: Fes una donació directament amb el teu compte d'Amazon.
+    Amb només uns pocs clics, contribuir perfectament a la missió de Code.org i potenciar
+    el futur de l'educació en ciències de la computació.
+  donate_tabs_bitpay_title: Fes una donació amb Crypto a través de BitPay
+  donate_tabs_bitpay_desc: Abraçar el futur de donar amb moneda digital. A través
+    de BitPay, la seva moneda digital pot donar suport directament als esforços de
+    Code.org en l'expansió de l'educació en ciències de la computació.
   hoc_live: Hora de Codi en viu
   hoc_live_sign_up_title: Registra't per Hora de Codi en viu
   hoc_live_learn_title: Aprèn amb Hour of Code Live

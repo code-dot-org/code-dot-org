@@ -25,7 +25,7 @@ Ang pagsubok ng Hour of Code ay isang madali at nakakatuwang paraan upang ipakil
 
 <a id="how-to-video"></a>
 
-## 1. Panoorin ang video na kung-paano ng Hour of Code <iframe width="500" height="255" src="//www.youtube.com/embed/SrnvvWDm73k" frameborder="0" allowfullscreen></iframe> 
+## 1. Panoorin ang video na kung-paano ng Hour of Code <iframe width="500" height="255" src="https://www.youtube-nocookie.com/embed/SrnvvWDm73k" frameborder="0" allowfullscreen></iframe> 
 
 * * *
 

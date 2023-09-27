@@ -12,12 +12,22 @@
           "Yes": "ಹೌದು",
           "cute": "ಕ್ಯೂಟ್"
         },
+        "CSD U1 IO Pet Chooser 2_2023": {
+          "No": "ಇಲ್ಲ",
+          "Yes": "ಹೌದು",
+          "cute": "ಕ್ಯೂಟ್"
+        },
         "CSD U1 IO Pet Chooser_2021": {
           "No": "ಇಲ್ಲ",
           "Yes": "ಹೌದು",
           "cute": "ಕ್ಯೂಟ್"
         },
         "CSD U1 IO Pet Chooser_2022": {
+          "No": "ಇಲ್ಲ",
+          "Yes": "ಹೌದು",
+          "cute": "ಕ್ಯೂಟ್"
+        },
+        "CSD U1 IO Pet Chooser_2023": {
           "No": "ಇಲ್ಲ",
           "Yes": "ಹೌದು",
           "cute": "ಕ್ಯೂಟ್"
@@ -36,10 +46,20 @@
           "Name": "ಹೆಸರು",
           "text": "ಪಠ್ಯ"
         },
+        "CSD U1 IO Story_2023": {
+          "City": "ನಗರ",
+          "Color": "ಬಣ್ಣ",
+          "Food": "ಆಹಾರ",
+          "Name": "ಹೆಸರು",
+          "text": "ಪಠ್ಯ"
+        },
         "CSD U1 processing bday_2021": {
           "1": "1"
         },
         "CSD U1 processing bday_2022": {
+          "1": "1"
+        },
+        "CSD U1 processing bday_2023": {
           "1": "1"
         },
         "CSD U1 processing guess_2021": {
@@ -48,6 +68,11 @@
           "text": "ಪಠ್ಯ"
         },
         "CSD U1 processing guess_2022": {
+          "1": "1",
+          "?": "?",
+          "text": "ಪಠ್ಯ"
+        },
+        "CSD U1 processing guess_2023": {
           "1": "1",
           "?": "?",
           "text": "ಪಠ್ಯ"
@@ -62,11 +87,22 @@
           "rat": "ಇಲಿ",
           "walking": "ವಾಕಿಂಗ್"
         },
+        "CSD U1 processing live_2023": {
+          "cat": "ಬೆಕ್ಕು",
+          "chicken": "ಚಿಕನ್",
+          "dog": "ನಾಯಿ",
+          "horse": "ಕುದುರೆ",
+          "walking": "ವಾಕಿಂಗ್"
+        },
         "CSD U1 processing npark_2021": {
           "Correct!": "ಸರಿಯಾಗಿದೆ!",
           "Sorry!": "ಕ್ಷಮಿಸಿ!"
         },
         "CSD U1 processing npark_2022": {
+          "Correct!": "ಸರಿಯಾಗಿದೆ!",
+          "Sorry!": "ಕ್ಷಮಿಸಿ!"
+        },
+        "CSD U1 processing npark_2023": {
           "Correct!": "ಸರಿಯಾಗಿದೆ!",
           "Sorry!": "ಕ್ಷಮಿಸಿ!"
         },
@@ -76,10 +112,16 @@
         "CSD U1 processing writers_2022": {
           "1": "1"
         },
+        "CSD U1 processing writers_2023": {
+          "1": "1"
+        },
         "CSD U1 storage friends_2021": {
           "Back": "ಹಿಂದೆ"
         },
         "CSD U1 storage friends_2022": {
+          "Back": "ಹಿಂದೆ"
+        },
+        "CSD U1 storage friends_2023": {
           "Back": "ಹಿಂದೆ"
         },
         "CSD U1 storage movies_2021": {
@@ -94,6 +136,12 @@
           "Yes": "ಹೌದು",
           "text": "ಪಠ್ಯ"
         },
+        "CSD U1 storage movies_2023": {
+          "No": "ಇಲ್ಲ",
+          "Star Wars": "ಸ್ಟಾರ್‌ ವಾರ್ಸ್‌",
+          "Yes": "ಹೌದು",
+          "text": "ಪಠ್ಯ"
+        },
         "CSD U1 storage outfit_2021": {
           "Clear": "ತೆರವುಗೊಳಿಸಿ",
           "black": "ಕಪ್ಪು",
@@ -103,6 +151,14 @@
           "white": "ಬಿಳಿ"
         },
         "CSD U1 storage outfit_2022": {
+          "Clear": "ತೆರವುಗೊಳಿಸಿ",
+          "black": "ಕಪ್ಪು",
+          "green": "ಹಸಿರು",
+          "pink": "ಗುಲಾಬಿ",
+          "purple": "ನೇರಳೆ",
+          "white": "ಬಿಳಿ"
+        },
+        "CSD U1 storage outfit_2023": {
           "Clear": "ತೆರವುಗೊಳಿಸಿ",
           "black": "ಕಪ್ಪು",
           "green": "ಹಸಿರು",
@@ -125,35 +181,101 @@
         "CSD U2 RGB intro_2022": {
           "1": "1"
         },
+        "CSD U6 - Accelerometer - PD_2023": {
+          "You did it!": "ನೀವು ಮಾಡಿದಿರಿ!"
+        },
         "CSD U6 - Accelerometer - PD_2222": {
           "You did it!": "ನೀವು ಮಾಡಿದಿರಿ!"
         },
+        "CSD U6 - Accelerometer - SB2_mb2022": {
+          "Success!": "ಯಶಸ್ವಿಯಾಗಿದೆ!"
+        },
+        "CSD U6 - Board Inputs - P_2023": {
+          "Success!": "ಯಶಸ್ವಿಯಾಗಿದೆ!"
+        },
+        "CSD U6 - Board Inputs - PracC_mb2022": {
+          "Success!": "ಯಶಸ್ವಿಯಾಗಿದೆ!"
+        },
+        "CSD U6 - Board Inputs - SB1_2023": {
+          "Success!": "ಯಶಸ್ವಿಯಾಗಿದೆ!"
+        },
         "CSD U6 - Board Inputs - SB1_2222": {
+          "Success!": "ಯಶಸ್ವಿಯಾಗಿದೆ!"
+        },
+        "CSD U6 - Board Inputs - SB1_mb2022": {
+          "Success!": "ಯಶಸ್ವಿಯಾಗಿದೆ!"
+        },
+        "CSD U6 - Board Inputs - SB2_2023": {
           "Success!": "ಯಶಸ್ವಿಯಾಗಿದೆ!"
         },
         "CSD U6 - Board Inputs - SB2_2222": {
           "Success!": "ಯಶಸ್ವಿಯಾಗಿದೆ!"
         },
+        "CSD U6 - Board Inputs - SB2_mb2022": {
+          "Success!": "ಯಶಸ್ವಿಯಾಗಿದೆ!"
+        },
+        "CSD U6 - Board Inputs - SB3_2023": {
+          "Success!": "ಯಶಸ್ವಿಯಾಗಿದೆ!"
+        },
         "CSD U6 - Board Inputs - SB3_2222": {
           "Success!": "ಯಶಸ್ವಿಯಾಗಿದೆ!"
+        },
+        "CSD U6 - Board Outputs - A_2023": {
+          "Happy": "ಖುಷಿ"
         },
         "CSD U6 - Board Outputs - A_2222": {
           "Happy": "ಖುಷಿ"
         },
+        "CSD U6 - Board Outputs - A_mb2022": {
+          "Age": "ವಯಸ್ಸು",
+          "Happy": "ಖುಷಿ",
+          "Name": "ಹೆಸರು"
+        },
+        "CSD U6 - Board Outputs - ChalC_mb2022": {
+          "No": "ಇಲ್ಲ",
+          "Yes": "ಹೌದು"
+        },
+        "CSD U6 - Board Outputs - P_2023": {
+          "Success!": "ಯಶಸ್ವಿಯಾಗಿದೆ!"
+        },
         "CSD U6 - Board Outputs - P_2222": {
+          "Success!": "ಯಶಸ್ವಿಯಾಗಿದೆ!"
+        },
+        "CSD U6 - Board Outputs - PracD_mb2022": {
+          "1": "1"
+        },
+        "CSD U6 - Board Outputs - SB1_2023": {
           "Success!": "ಯಶಸ್ವಿಯಾಗಿದೆ!"
         },
         "CSD U6 - Board Outputs - SB1_2222": {
           "Success!": "ಯಶಸ್ವಿಯಾಗಿದೆ!"
         },
+        "CSD U6 - Board Outputs - SB2_2023": {
+          "Success!": "ಯಶಸ್ವಿಯಾಗಿದೆ!"
+        },
         "CSD U6 - Board Outputs - SB2_2222": {
           "Success!": "ಯಶಸ್ವಿಯಾಗಿದೆ!"
+        },
+        "CSD U6 - Board Outputs - SB4_2023": {
+          "Fish": "ಮೀನು"
         },
         "CSD U6 - Board Outputs - SB4_2222": {
           "Fish": "ಮೀನು"
         },
+        "CSD U6 - Board Outputs - Setup_2023": {
+          "Success!": "ಯಶಸ್ವಿಯಾಗಿದೆ!"
+        },
         "CSD U6 - Board Outputs - Setup_2222": {
           "Success!": "ಯಶಸ್ವಿಯಾಗಿದೆ!"
+        },
+        "CSD U6 - Board Outputs - Setup_mb2022": {
+          "Success!": "ಯಶಸ್ವಿಯಾಗಿದೆ!"
+        },
+        "CSD U6 - Color LEDs - ChalD_2023": {
+          "East": "ಪೂರ್ವ",
+          "North": "ಉತ್ತರ",
+          "South": "ದಕ್ಷಿಣ",
+          "West": "ಪಶ್ಚಿಮ"
         },
         "CSD U6 - Color LEDs - ChalD_2222": {
           "East": "ಪೂರ್ವ",
@@ -161,17 +283,37 @@
           "South": "ದಕ್ಷಿಣ",
           "West": "ಪಶ್ಚಿಮ"
         },
+        "CSD U6 - Color LEDs - PracA_2023": {
+          "Success!": "ಯಶಸ್ವಿಯಾಗಿದೆ!"
+        },
         "CSD U6 - Color LEDs - PracA_2222": {
+          "Success!": "ಯಶಸ್ವಿಯಾಗಿದೆ!"
+        },
+        "CSD U6 - Color LEDs - SB2_2023": {
           "Success!": "ಯಶಸ್ವಿಯಾಗಿದೆ!"
         },
         "CSD U6 - Color LEDs - SB2_2222": {
           "Success!": "ಯಶಸ್ವಿಯಾಗಿದೆ!"
         },
+        "CSD U6 - Color LEDs - SB3_2023": {
+          "Success!": "ಯಶಸ್ವಿಯಾಗಿದೆ!"
+        },
         "CSD U6 - Color LEDs - SB3_2222": {
           "Success!": "ಯಶಸ್ವಿಯಾಗಿದೆ!"
         },
+        "CSD U6 - Color LEDs - SB4_2023": {
+          "Medium": "ಮಧ್ಯಮ"
+        },
         "CSD U6 - Color LEDs - SB4_2222": {
           "Medium": "ಮಧ್ಯಮ"
+        },
+        "CSD U6 - Combine Inputs - A_2023": {
+          "green": "ಹಸಿರು",
+          "left": "ಎಡಕ್ಕೆ",
+          "purple": "ನೇರಳೆ",
+          "red": "ಕೆಂಪು",
+          "right": "ಬಲಕ್ಕೆ",
+          "yellow": "ಹಳದಿ"
         },
         "CSD U6 - Combine Inputs - A_2222": {
           "green": "ಹಸಿರು",
@@ -181,6 +323,10 @@
           "right": "ಬಲಕ್ಕೆ",
           "yellow": "ಹಳದಿ"
         },
+        "CSD U6 - Combine Inputs - A_mb2022": {
+          "left": "ಎಡಕ್ಕೆ",
+          "right": "ಬಲಕ್ಕೆ"
+        },
         "CSD U6 - Combine Inputs - CA_2022": {
           "fast": "ತ್ವರಿತ",
           "high": "ಅಧಿಕ",
@@ -188,9 +334,26 @@
           "low": "ಕಡಿಮೆ",
           "short": "ಸಣ್ಣ"
         },
+        "CSD U6 - Combine Inputs - CA_2023": {
+          "fast": "ತ್ವರಿತ",
+          "high": "ಅಧಿಕ",
+          "long": "ದೀರ್ಘ",
+          "low": "ಕಡಿಮೆ",
+          "short": "ಸಣ್ಣ"
+        },
+        "CSD U6 - Combine Inputs - PracA_2023": {
+          "left": "ಎಡಕ್ಕೆ",
+          "right": "ಬಲಕ್ಕೆ"
+        },
         "CSD U6 - Combine Inputs - PracA_2222": {
           "left": "ಎಡಕ್ಕೆ",
           "right": "ಬಲಕ್ಕೆ"
+        },
+        "CSD U6 - Combine Inputs - PracC_2023": {
+          "blue": "ನೀಲಿ",
+          "green": "ಹಸಿರು",
+          "orange": "ಕಿತ್ತಳೆ",
+          "yellow": "ಹಳದಿ"
         },
         "CSD U6 - Combine Inputs - PracC_2222": {
           "blue": "ನೀಲಿ",
@@ -198,12 +361,26 @@
           "orange": "ಕಿತ್ತಳೆ",
           "yellow": "ಹಳದಿ"
         },
+        "CSD U6 - Combine Inputs - PracD_2023": {
+          "Test": "ಟೆಸ್ಟ್‌",
+          "quiet": "ಕ್ವೈಟ್"
+        },
         "CSD U6 - Combine Inputs - PracD_2222": {
           "Test": "ಟೆಸ್ಟ್‌",
           "quiet": "ಕ್ವೈಟ್"
         },
+        "CSD U6 - Combine Inputs - SB2_2023": {
+          "long": "ದೀರ್ಘ",
+          "short": "ಸಣ್ಣ"
+        },
         "CSD U6 - Combine Inputs - SB2_2222": {
           "long": "ದೀರ್ಘ",
+          "short": "ಸಣ್ಣ"
+        },
+        "CSD U6 - Combine Inputs - SB3_2023": {
+          "high": "ಅಧಿಕ",
+          "long": "ದೀರ್ಘ",
+          "low": "ಕಡಿಮೆ",
           "short": "ಸಣ್ಣ"
         },
         "CSD U6 - Combine Inputs - SB3_2222": {
@@ -212,19 +389,55 @@
           "low": "ಕಡಿಮೆ",
           "short": "ಸಣ್ಣ"
         },
+        "CSD U6 - Combine Inputs - SB4_2023": {
+          "long": "ದೀರ್ಘ",
+          "short": "ಸಣ್ಣ"
+        },
         "CSD U6 - Combine Inputs - SB4_2222": {
           "long": "ದೀರ್ಘ",
           "short": "ಸಣ್ಣ"
+        },
+        "CSD U6 - Combine Inputs - SB4v2_mb2022": {
+          "Row": "ಸಾಲು"
+        },
+        "CSD U6 - Combine Inputs - SB5v2_mb2022": {
+          "Row": "ಸಾಲು"
+        },
+        "CSD U6 - If Variables - ChalD_2023": {
+          "+": "+",
+          "-": "-"
         },
         "CSD U6 - If Variables - ChalD_2222": {
           "+": "+",
           "-": "-"
         },
+        "CSD U6 - If Variables - ChalD_mb2022": {
+          "+": "+",
+          "-": "-"
+        },
+        "CSD U6 - If Variables - SB3_2023": {
+          "Name": "ಹೆಸರು"
+        },
         "CSD U6 - If Variables - SB3_2222": {
           "Name": "ಹೆಸರು"
         },
+        "CSD U6 - If Variables - SB3_mb2022": {
+          "Name": "ಹೆಸರು"
+        },
+        "CSD U6 - Music - A_2023": {
+          "Happy": "ಖುಷಿ"
+        },
         "CSD U6 - Music - A_2222": {
           "Happy": "ಖುಷಿ"
+        },
+        "CSD U6 - Music - ChalD_2023": {
+          "A": "A",
+          "B": "B",
+          "C": "c",
+          "D": "D",
+          "E": "ಪೂ",
+          "F": "F",
+          "G": "G"
         },
         "CSD U6 - Music - ChalD_2222": {
           "A": "A",
@@ -234,6 +447,16 @@
           "E": "ಪೂ",
           "F": "F",
           "G": "G"
+        },
+        "CSD U6 - Music - Piano_2023": {
+          "A": "A",
+          "B": "B",
+          "C": "c",
+          "D": "D",
+          "E": "ಪೂ",
+          "F": "F",
+          "G": "G",
+          "Note:": "ಸೂಚನೆ:"
         },
         "CSD U6 - Music - Piano_2222": {
           "A": "A",
@@ -245,7 +468,25 @@
           "G": "G",
           "Note:": "ಸೂಚನೆ:"
         },
+        "CSD U6 - Music - SB1_2023": {
+          "A": "A",
+          "B": "B",
+          "C": "c",
+          "D": "D",
+          "E": "ಪೂ",
+          "F": "F",
+          "G": "G"
+        },
         "CSD U6 - Music - SB1_2222": {
+          "A": "A",
+          "B": "B",
+          "C": "c",
+          "D": "D",
+          "E": "ಪೂ",
+          "F": "F",
+          "G": "G"
+        },
+        "CSD U6 - Music - SB2.5_2023": {
           "A": "A",
           "B": "B",
           "C": "c",
@@ -263,6 +504,15 @@
           "F": "F",
           "G": "G"
         },
+        "CSD U6 - Music - SB3_2023": {
+          "A": "A",
+          "B": "B",
+          "C": "c",
+          "D": "D",
+          "E": "ಪೂ",
+          "F": "F",
+          "G": "G"
+        },
         "CSD U6 - Music - SB3_2222": {
           "A": "A",
           "B": "B",
@@ -272,64 +522,180 @@
           "F": "F",
           "G": "G"
         },
+        "CSD U6 - Music - SB4_2023": {
+          "Success!": "ಯಶಸ್ವಿಯಾಗಿದೆ!"
+        },
         "CSD U6 - Music - SB4_2222": {
           "Success!": "ಯಶಸ್ವಿಯಾಗಿದೆ!"
+        },
+        "CSD U6 - Physical Input - A_2023": {
+          "1": "1"
         },
         "CSD U6 - Physical Input - A_2222": {
           "1": "1"
         },
+        "CSD U6 - Physical Input - A_mb2022": {
+          "1": "1"
+        },
+        "CSD U6 - Physical Input - ChalA_2023": {
+          "Success!": "ಯಶಸ್ವಿಯಾಗಿದೆ!"
+        },
         "CSD U6 - Physical Input - ChalA_2222": {
+          "Success!": "ಯಶಸ್ವಿಯಾಗಿದೆ!"
+        },
+        "CSD U6 - Physical Input - ChalA_mb2022": {
+          "Success!": "ಯಶಸ್ವಿಯಾಗಿದೆ!"
+        },
+        "CSD U6 - Physical Input - ChalB_2023": {
           "Success!": "ಯಶಸ್ವಿಯಾಗಿದೆ!"
         },
         "CSD U6 - Physical Input - ChalB_2222": {
           "Success!": "ಯಶಸ್ವಿಯಾಗಿದೆ!"
         },
+        "CSD U6 - Physical Input - ChalB_mb2022": {
+          "Success!": "ಯಶಸ್ವಿಯಾಗಿದೆ!"
+        },
+        "CSD U6 - Physical Input - ChalC_2023": {
+          "Success!": "ಯಶಸ್ವಿಯಾಗಿದೆ!"
+        },
         "CSD U6 - Physical Input - ChalC_2222": {
           "Success!": "ಯಶಸ್ವಿಯಾಗಿದೆ!"
+        },
+        "CSD U6 - Physical Input - ChalC_mb2022": {
+          "Success!": "ಯಶಸ್ವಿಯಾಗಿದೆ!"
+        },
+        "CSD U6 - Physical Input - PA_2023": {
+          "Score": "ಸ್ಕೋರ್"
         },
         "CSD U6 - Physical Input - PA_2222": {
           "Score": "ಸ್ಕೋರ್"
         },
+        "CSD U6 - Physical Input - PA_mb2022": {
+          "Score": "ಸ್ಕೋರ್"
+        },
+        "CSD U6 - Physical Input - PC_2023": {
+          "Success!": "ಯಶಸ್ವಿಯಾಗಿದೆ!"
+        },
         "CSD U6 - Physical Input - PC_2222": {
+          "Success!": "ಯಶಸ್ವಿಯಾಗಿದೆ!"
+        },
+        "CSD U6 - Physical Input - PD_2023": {
           "Success!": "ಯಶಸ್ವಿಯಾಗಿದೆ!"
         },
         "CSD U6 - Physical Input - PD_2222": {
           "Success!": "ಯಶಸ್ವಿಯಾಗಿದೆ!"
         },
+        "CSD U6 - Physical Input - PD_mb2022": {
+          "Success!": "ಯಶಸ್ವಿಯಾಗಿದೆ!"
+        },
+        "CSD U6 - Physical Input - SB1_2023": {
+          "Success!": "ಯಶಸ್ವಿಯಾಗಿದೆ!"
+        },
         "CSD U6 - Physical Input - SB1_2222": {
+          "Success!": "ಯಶಸ್ವಿಯಾಗಿದೆ!"
+        },
+        "CSD U6 - Physical Input - SB1_mb2022": {
+          "Success!": "ಯಶಸ್ವಿಯಾಗಿದೆ!"
+        },
+        "CSD U6 - Physical Output - ChalA_2023": {
           "Success!": "ಯಶಸ್ವಿಯಾಗಿದೆ!"
         },
         "CSD U6 - Physical Output - ChalA_2222": {
           "Success!": "ಯಶಸ್ವಿಯಾಗಿದೆ!"
         },
+        "CSD U6 - Physical Output - ChalA_mb2022": {
+          "Success!": "ಯಶಸ್ವಿಯಾಗಿದೆ!"
+        },
+        "CSD U6 - Physical Output - ChalB_2023": {
+          "Success!": "ಯಶಸ್ವಿಯಾಗಿದೆ!"
+        },
         "CSD U6 - Physical Output - ChalB_2222": {
+          "Success!": "ಯಶಸ್ವಿಯಾಗಿದೆ!"
+        },
+        "CSD U6 - Physical Output - ChalB_mb2022": {
+          "Success!": "ಯಶಸ್ವಿಯಾಗಿದೆ!"
+        },
+        "CSD U6 - Physical Output - ChalC_2023": {
           "Success!": "ಯಶಸ್ವಿಯಾಗಿದೆ!"
         },
         "CSD U6 - Physical Output - ChalC_2222": {
           "Success!": "ಯಶಸ್ವಿಯಾಗಿದೆ!"
         },
+        "CSD U6 - Physical Output - ChalC_mb2022": {
+          "Success!": "ಯಶಸ್ವಿಯಾಗಿದೆ!"
+        },
+        "CSD U6 - Physical Output - PB_2023": {
+          "Success!": "ಯಶಸ್ವಿಯಾಗಿದೆ!"
+        },
         "CSD U6 - Physical Output - PB_2222": {
+          "Success!": "ಯಶಸ್ವಿಯಾಗಿದೆ!"
+        },
+        "CSD U6 - Physical Output - PB_mb2022": {
+          "Success!": "ಯಶಸ್ವಿಯಾಗಿದೆ!"
+        },
+        "CSD U6 - Physical Output - PC_2023": {
           "Success!": "ಯಶಸ್ವಿಯಾಗಿದೆ!"
         },
         "CSD U6 - Physical Output - PC_2222": {
           "Success!": "ಯಶಸ್ವಿಯಾಗಿದೆ!"
         },
+        "CSD U6 - Physical Output - PC_mb2022": {
+          "Success!": "ಯಶಸ್ವಿಯಾಗಿದೆ!"
+        },
+        "CSD U6 - Physical Output - P_2023": {
+          "Success!": "ಯಶಸ್ವಿಯಾಗಿದೆ!"
+        },
         "CSD U6 - Physical Output - P_2222": {
+          "Success!": "ಯಶಸ್ವಿಯಾಗಿದೆ!"
+        },
+        "CSD U6 - Physical Output - P_mb2022": {
+          "Success!": "ಯಶಸ್ವಿಯಾಗಿದೆ!"
+        },
+        "CSD U6 - Physical Output - SB1_2023": {
           "Success!": "ಯಶಸ್ವಿಯಾಗಿದೆ!"
         },
         "CSD U6 - Physical Output - SB1_2222": {
           "Success!": "ಯಶಸ್ವಿಯಾಗಿದೆ!"
         },
+        "CSD U6 - Physical Output - SB1_mb2022": {
+          "Success!": "ಯಶಸ್ವಿಯಾಗಿದೆ!"
+        },
+        "CSD U6 - Physical Output - SB2.2_2023": {
+          "Success!": "ಯಶಸ್ವಿಯಾಗಿದೆ!"
+        },
         "CSD U6 - Physical Output - SB2.2_2222": {
+          "Success!": "ಯಶಸ್ವಿಯಾಗಿದೆ!"
+        },
+        "CSD U6 - Physical Output - SB2.2_mb2022": {
+          "Success!": "ಯಶಸ್ವಿಯಾಗಿದೆ!"
+        },
+        "CSD U6 - Physical Output - SB2_2023": {
           "Success!": "ಯಶಸ್ವಿಯಾಗಿದೆ!"
         },
         "CSD U6 - Physical Output - SB2_2222": {
           "Success!": "ಯಶಸ್ವಿಯಾಗಿದೆ!"
         },
+        "CSD U6 - Physical Output - SB2_mb2022": {
+          "Success!": "ಯಶಸ್ವಿಯಾಗಿದೆ!"
+        },
+        "CSD U6 - Screen Inputs - A_2023": {
+          "Name:": "ಹೆಸರು:"
+        },
         "CSD U6 - Screen Inputs - A_2222": {
           "Name:": "ಹೆಸರು:"
         },
+        "CSD U6 - Screen Inputs - A_mb2022": {
+          "Name:": "ಹೆಸರು:"
+        },
+        "CSD U6 - Screen Inputs - P_2023": {
+          "Name:": "ಹೆಸರು:",
+          "Save": "ಉಳಿಸಿ"
+        },
         "CSD U6 - Screen Inputs - P_2222": {
+          "Name:": "ಹೆಸರು:",
+          "Save": "ಉಳಿಸಿ"
+        },
+        "CSD U6 - Screen Inputs - P_mb2022": {
           "Name:": "ಹೆಸರು:",
           "Save": "ಉಳಿಸಿ"
         },
@@ -337,19 +703,61 @@
           "black": "ಕಪ್ಪು",
           "white": "ಬಿಳಿ"
         },
+        "CSD U6 - Screen Inputs - SB2.1_2023": {
+          "black": "ಕಪ್ಪು",
+          "white": "ಬಿಳಿ"
+        },
+        "CSD U6 - Screen Inputs - SB2.1_mb2022": {
+          "black": "ಕಪ್ಪು",
+          "white": "ಬಿಳಿ"
+        },
         "CSD U6 - Screen Inputs - SB2.2_2022": {
           "black": "ಕಪ್ಪು",
           "white": "ಬಿಳಿ"
+        },
+        "CSD U6 - Screen Inputs - SB2.2_2023": {
+          "black": "ಕಪ್ಪು",
+          "white": "ಬಿಳಿ"
+        },
+        "CSD U6 - Screen Inputs - SB2.2_mb2022": {
+          "black": "ಕಪ್ಪು",
+          "white": "ಬಿಳಿ"
+        },
+        "CSD U6 - Screen Outputs - ChalB_2023": {
+          "?": "?",
+          "Happy": "ಖುಷಿ"
         },
         "CSD U6 - Screen Outputs - ChalB_2222": {
           "?": "?",
           "Happy": "ಖುಷಿ"
         },
+        "CSD U6 - Screen Outputs - ChalB_mb2022": {
+          "?": "?",
+          "Happy": "ಖುಷಿ"
+        },
+        "CSD U6 - Screen Outputs - P_2023": {
+          "title": "ಶೀರ್ಷಿಕೆ"
+        },
         "CSD U6 - Screen Outputs - P_2222": {
           "title": "ಶೀರ್ಷಿಕೆ"
         },
+        "CSD U6 - Screen Outputs - P_mb2022": {
+          "title": "ಶೀರ್ಷಿಕೆ"
+        },
+        "CSD U6 - Screen Outputs - PracA_2023": {
+          "White": "ಬಿಳಿ"
+        },
         "CSD U6 - Screen Outputs - PracA_2222": {
           "White": "ಬಿಳಿ"
+        },
+        "CSD U6 - Screen Outputs - PracA_mb2022": {
+          "White": "ಬಿಳಿ"
+        },
+        "CSD U6 - Screen Outputs - PracB_2023": {
+          "down": "ಕೆಳಕ್ಕೆ",
+          "left": "ಎಡಕ್ಕೆ",
+          "right": "ಬಲಕ್ಕೆ",
+          "up": "ಮೇಲಕ್ಕೆ"
         },
         "CSD U6 - Screen Outputs - PracB_2222": {
           "down": "ಕೆಳಕ್ಕೆ",
@@ -357,28 +765,76 @@
           "right": "ಬಲಕ್ಕೆ",
           "up": "ಮೇಲಕ್ಕೆ"
         },
+        "CSD U6 - Screen Outputs - PracB_mb2022": {
+          "down": "ಕೆಳಕ್ಕೆ",
+          "left": "ಎಡಕ್ಕೆ",
+          "right": "ಬಲಕ್ಕೆ",
+          "up": "ಮೇಲಕ್ಕೆ"
+        },
+        "CSD U6 - Screen Outputs - SB1.1_2023": {
+          "name": "ಹೆಸರು"
+        },
         "CSD U6 - Screen Outputs - SB1.1_2222": {
           "name": "ಹೆಸರು"
+        },
+        "CSD U6 - Screen Outputs - SB1.1_mb2022": {
+          "name": "ಹೆಸರು"
+        },
+        "CSD U6 - Sensors - P_2023": {
+          "high": "ಅಧಿಕ",
+          "low": "ಕಡಿಮೆ",
+          "text": "ಪಠ್ಯ"
         },
         "CSD U6 - Sensors - P_2222": {
           "high": "ಅಧಿಕ",
           "low": "ಕಡಿಮೆ",
           "text": "ಪಠ್ಯ"
         },
+        "CSD U6 - Sensors - P_mb2022": {
+          "high": "ಅಧಿಕ",
+          "low": "ಕಡಿಮೆ",
+          "text": "ಪಠ್ಯ"
+        },
+        "CSD U6 - Sensors - SB1_2023": {
+          "value": "ಮೌಲ್ಯ"
+        },
         "CSD U6 - Sensors - SB1_2222": {
+          "value": "ಮೌಲ್ಯ"
+        },
+        "CSD U6 - Sensors - SB2_2023": {
+          "Update": "ನವೀಕರಿಸಿ",
           "value": "ಮೌಲ್ಯ"
         },
         "CSD U6 - Sensors - SB2_2222": {
           "Update": "ನವೀಕರಿಸಿ",
           "value": "ಮೌಲ್ಯ"
         },
+        "CSD U6 - Sensors - SB2_mb2022": {
+          "Update": "ನವೀಕರಿಸಿ",
+          "value": "ಮೌಲ್ಯ"
+        },
+        "CSD U6 - Sensors - SB3_2023": {
+          "value": "ಮೌಲ್ಯ"
+        },
         "CSD U6 - Sensors - SB3_2222": {
+          "value": "ಮೌಲ್ಯ"
+        },
+        "CSD U6 - Sensors - SB3_mb2022": {
+          "value": "ಮೌಲ್ಯ"
+        },
+        "CSD U6 - Sensors - SB4.1_2023": {
           "value": "ಮೌಲ್ಯ"
         },
         "CSD U6 - Sensors - SB4.1_2222": {
           "value": "ಮೌಲ್ಯ"
         },
+        "CSD U6 - Sensors - SB4_2023": {
+          "value": "ಮೌಲ್ಯ"
+        },
         "CSD U6 - Sensors - SB4_2222": {
+          "value": "ಮೌಲ್ಯ"
+        },
+        "CSD U6 - Sensors - SB4_mb2022": {
           "value": "ಮೌಲ್ಯ"
         },
         "CSD U6 Driver pt 2": {
@@ -868,7 +1324,13 @@
         "CSDU6 Circuit Playground Test_2021": {
           "Success!": "ಯಶಸ್ವಿಯಾಗಿದೆ!"
         },
+        "CSDU6 Circuit Playground Test_2023": {
+          "Success!": "ಯಶಸ್ವಿಯಾಗಿದೆ!"
+        },
         "CSDU6 Circuit Playground Test_2222": {
+          "Success!": "ಯಶಸ್ವಿಯಾಗಿದೆ!"
+        },
+        "CSDU6 Circuit Playground Test_mb2022": {
           "Success!": "ಯಶಸ್ವಿಯಾಗಿದೆ!"
         },
         "CSDU6 circuit playground piano": {
@@ -1046,16 +1508,25 @@
         "csd u5 recommender sample_2022": {
           "Start": "ಪ್ರಾರಂಭಿಸಿ"
         },
+        "csd u5 recommender sample_2023": {
+          "Start": "ಪ್ರಾರಂಭಿಸಿ"
+        },
         "csd-apps for good-3": {
           "1": "1"
         },
         "csd-apps for good-3_2022": {
           "1": "1"
         },
+        "csd-apps for good-3_2023": {
+          "1": "1"
+        },
         "csd-explore ui-3": {
           "1": "1"
         },
         "csd-explore ui-3_2022": {
+          "1": "1"
+        },
+        "csd-explore ui-3_2023": {
           "1": "1"
         },
         "csd-explore ui-4": {
@@ -1066,10 +1537,17 @@
           "Correct!": "ಸರಿಯಾಗಿದೆ!",
           "Sorry!": "ಕ್ಷಮಿಸಿ!"
         },
+        "csd-explore ui-4_2023": {
+          "Correct!": "ಸರಿಯಾಗಿದೆ!",
+          "Sorry!": "ಕ್ಷಮಿಸಿ!"
+        },
         "csd-explore ui-5": {
           "1": "1"
         },
         "csd-explore ui-5_2022": {
+          "1": "1"
+        },
+        "csd-explore ui-5_2023": {
           "1": "1"
         },
         "ml-L2 supervised - green glass door-2021": {
@@ -1077,6 +1555,10 @@
           "Rejected": "ತಿರಸ್ಕರಿಸಲಾಗಿದೆ"
         },
         "ml-L2 supervised - green glass door_2022": {
+          "Accepted": "ಸ್ವೀಕರಿಸಲಾಗಿದೆ",
+          "Rejected": "ತಿರಸ್ಕರಿಸಲಾಗಿದೆ"
+        },
+        "ml-L2 supervised - green glass door_2023": {
           "Accepted": "ಸ್ವೀಕರಿಸಲಾಗಿದೆ",
           "Rejected": "ತಿರಸ್ಕರಿಸಲಾಗಿದೆ"
         },
@@ -1088,10 +1570,17 @@
           "Continue": "ಮುಂದುವರೆಯಿರಿ",
           "Loading...": "ಲೋಡ್ ಮಾಡಲಾಗುತ್ತಿದೆ..."
         },
+        "ml-intro ai lab- fruit veggie widget_2023": {
+          "Continue": "ಮುಂದುವರೆಯಿರಿ",
+          "Loading...": "ಲೋಡ್ ಮಾಡಲಾಗುತ್ತಿದೆ..."
+        },
         "ml-intro app lab-book recommender demo-2021": {
           "Silly": "ಕ್ಷುಲ್ಲಕ"
         },
         "ml-intro app lab-book recommender demo_2022": {
+          "Silly": "ಕ್ಷುಲ್ಲಕ"
+        },
+        "ml-intro app lab-book recommender demo_2023": {
           "Silly": "ಕ್ಷುಲ್ಲಕ"
         },
         "ml-model card-medical app v2 2021-2": {
@@ -1104,10 +1593,18 @@
           "W": "ದ",
           "head": "ತಲೆ"
         },
+        "ml-model card-medical app v2 2021-2_2023": {
+          "A": "A",
+          "W": "ದ",
+          "head": "ತಲೆ"
+        },
         "ml-model cards-book recommender model card": {
           "Silly": "ಕ್ಷುಲ್ಲಕ"
         },
         "ml-model cards-book recommender model card_2022": {
+          "Silly": "ಕ್ಷುಲ್ಲಕ"
+        },
+        "ml-model cards-book recommender model card_2023": {
           "Silly": "ಕ್ಷುಲ್ಲಕ"
         },
         "ml-models in applab-choice if quotes": {
@@ -1116,10 +1613,16 @@
         "ml-models in applab-choice if quotes_2022": {
           "1": "1"
         },
+        "ml-models in applab-choice if quotes_2023": {
+          "1": "1"
+        },
         "ml-models in applab-choice if wrong place": {
           "1": "1"
         },
         "ml-models in applab-choice if wrong place_2022": {
+          "1": "1"
+        },
+        "ml-models in applab-choice if wrong place_2023": {
           "1": "1"
         },
         "ml-models in applab-choice intended warnings": {
@@ -1130,10 +1633,17 @@
           "1": "1",
           "Back": "ಹಿಂದೆ"
         },
+        "ml-models in applab-choice intended warnings_2023": {
+          "1": "1",
+          "Back": "ಹಿಂದೆ"
+        },
         "ml-models in applab-choice predict typos": {
           "1": "1"
         },
         "ml-models in applab-choice predict typos_2022": {
+          "1": "1"
+        },
+        "ml-models in applab-choice predict typos_2023": {
           "1": "1"
         },
         "ml-models in applab-zoo assessment": {
@@ -1146,6 +1656,11 @@
           "No": "ಇಲ್ಲ",
           "Yes": "ಹೌದು"
         },
+        "ml-models in applab-zoo assessment_2023": {
+          "B": "B",
+          "No": "ಇಲ್ಲ",
+          "Yes": "ಹೌದು"
+        },
         "ml-models in applab-zoo model embed": {
           "No": "ಇಲ್ಲ",
           "Yes": "ಹೌದು"
@@ -1154,10 +1669,17 @@
           "No": "ಇಲ್ಲ",
           "Yes": "ಹೌದು"
         },
+        "ml-models in applab-zoo model embed_2023": {
+          "No": "ಇಲ್ಲ",
+          "Yes": "ಹೌದು"
+        },
         "ml-models-shoes decision tree-2021": {
           "Sports": "ಸ್ಪೋರ್ಟ್ಸ್"
         },
         "ml-models-shoes decision tree_2022": {
+          "Sports": "ಸ್ಪೋರ್ಟ್ಸ್"
+        },
+        "ml-models-shoes decision tree_2023": {
           "Sports": "ಸ್ಪೋರ್ಟ್ಸ್"
         },
         "ml-use model card-example3A-2021": {
@@ -1168,6 +1690,13 @@
           "snow": "ಮಂಜು"
         },
         "ml-use model card-example3A_2022": {
+          "cloudy": "ಕ್ಲೌಡ್‌",
+          "dusk": "ಮುಸ್ಸಂಜೆ",
+          "night": "ರಾತ್ರಿ",
+          "rain": "ಮಳೆ",
+          "snow": "ಮಂಜು"
+        },
+        "ml-use model card-example3A_2023": {
           "cloudy": "ಕ್ಲೌಡ್‌",
           "dusk": "ಮುಸ್ಸಂಜೆ",
           "night": "ರಾತ್ರಿ",
