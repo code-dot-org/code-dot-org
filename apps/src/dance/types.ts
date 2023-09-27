@@ -35,3 +35,14 @@ export interface DanceLevelProperties extends LevelProperties {
   defaultSong?: string;
   useRestrictedSongs?: boolean;
 }
+
+export type AiModalItem = {
+  id: string;
+  name: string;
+};
+
+export type AiModalReturnedItem = {
+  id: string;
+  name: string;
+  url: string;
+};

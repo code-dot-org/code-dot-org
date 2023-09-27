@@ -10,6 +10,7 @@ import {setCurrentAiModalField, DanceState} from './danceRedux';
 import {StrongText, Heading5} from '@cdo/apps/componentLibrary/typography';
 import classNames from 'classnames';
 import FontAwesome from '@cdo/apps/templates/FontAwesome';
+import {AiModalItem, AiModalReturnedItem} from './types';
 const Typist = require('react-typist').default;
 
 const aiBotBorder = require('@cdo/static/dance/ai-bot-border.png');
@@ -50,17 +51,6 @@ const doAi = async (input: string) => {
   }
 };
 
-interface Item {
-  id: string;
-  name: string;
-}
-
-interface ReturnedItem {
-  id: string;
-  name: string;
-  url: string;
-}
-
 interface DanceAiProps {
   onClose: () => void;
 }
@@ -94,7 +84,9 @@ const DanceAiModal: React.FunctionComponent<DanceAiProps> = ({onClose}) => {
     }
 
     return inputLibrary.options[slotIndex].map((option: string) => {
-      const item = inputLibrary.items.find((item: Item) => item.id === option);
+      const item = inputLibrary.items.find(
+        (item: AiModalItem) => item.id === option
+      );
       return {
         id: item.id,
         name: item.name,
@@ -104,7 +96,9 @@ const DanceAiModal: React.FunctionComponent<DanceAiProps> = ({onClose}) => {
   };
 
   const getItemName = (id: string) => {
-    return inputLibrary.items.find((item: Item) => item.id === id)?.name;
+    return inputLibrary.items.find(
+      (item: AiModalReturnedItem) => item.id === id
+    )?.name;
   };
 
   const handleItemClick = (id: string) => {
@@ -120,7 +114,8 @@ const DanceAiModal: React.FunctionComponent<DanceAiProps> = ({onClose}) => {
 
   const handleGenerateClick = () => {
     const inputNames = inputs.map(
-      input => inputLibrary.items.find((item: Item) => item.id === input).name
+      input =>
+        inputLibrary.items.find((item: AiModalItem) => item.id === input).name
     );
     const request = `${promptString} ${inputNames.join(', ')}.`;
     startAi(request);
@@ -183,7 +178,7 @@ const DanceAiModal: React.FunctionComponent<DanceAiProps> = ({onClose}) => {
           {mode === 'selectInputs' && currentInputSlot < SLOT_COUNT && (
             <div className={moduleStyles.itemContainer}>
               {getAllItems(currentInputSlot).map(
-                (item: ReturnedItem, index: number) => {
+                (item: AiModalReturnedItem, index: number) => {
                   return (
                     <div
                       tabIndex={
