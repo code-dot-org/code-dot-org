@@ -51,4 +51,10 @@ class ProjectTest < ActiveSupport::TestCase
     project = create :project, owner: teacher
     assert project.apply_project_age_publish_limits?
   end
+
+  test "Publish age limits do not apply to admins with project validator permissions" do
+    project_validator = create :project_validator
+    project = create :project, owner: project_validator
+    refute project.apply_project_age_publish_limits?
+  end
 end
