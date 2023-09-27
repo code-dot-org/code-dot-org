@@ -983,6 +983,7 @@ fa-IR:
   homepage_signpetition_dropdown: درخواست ما را امضا کنید  &#x25BE;
   homepage_signpetition_dropdown_text: موافقم
   homepage_slot_text_blurb_advocates: از کار ما حمایت کنید
+  homepage_slot_text_blurb_at_home: این منابع کار را آسان می کند
   homepage_slot_text_blurb_educators: به دانش آموزانتان درس بدهید
   homepage_slot_text_blurb_hoc: هرکسی می تواند بیاموزد. امروز شروع کنید
   homepage_slot_text_blurb_students: تمام آموزش های ما را کشف کنید
@@ -1008,6 +1009,7 @@ fa-IR:
   homepage_slot_text_shop: فروشگاه
   homepage_slot_text_studio: تمام آموزش های ما
   homepage_slot_text_title_advocates: مدافعان
+  homepage_slot_text_title_at_home: در خانه یاد بگیرید
   homepage_slot_text_title_educators: آموزگاران
   homepage_slot_text_title_hoc: ساعت کد نویسی
   homepage_slot_text_title_students: دانش آموزان
@@ -1400,6 +1402,7 @@ fa-IR:
     الزيت، كلاس پنجمي'
   students_and_lines: "%{students} دانش آموز ساعت کد را انجام داده اند و %{lines}
     خط کد نوشته شده است."
+  studiobar_dance_body: ایجاد و به اشتراک گذاری حزب رقص خود
   studiobar_dance_title: جشن و رقص
   studiobar_donate_body: با هر دلاری که کمک می کنید یک کودک یاد می گیرد
   studiobar_donate_title: کمک مالی بدهید
