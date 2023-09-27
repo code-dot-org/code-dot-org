@@ -1,5 +1,6 @@
 require 'test_helper'
 require 'date'
+require 'jwt'
 
 class LtiAccessTokenTest < ActiveSupport::TestCase
   include LtiAccessToken
@@ -11,6 +12,12 @@ class LtiAccessTokenTest < ActiveSupport::TestCase
       exp: 1.hour.from_now.to_i,
     }
     @fake_access_token_response = OpenStruct.new({body: JSON.generate(fake_response_hash)})
+    jwk = JWT::JWK.new(OpenSSL::PKey::RSA.new(2048), {use: 'sig', alg: 'RS256', kid: 'test-kid'})
+    @fake_private_key_obj = {
+      kid: jwk[:kid],
+      private_key: jwk.signing_key.to_s,
+    }
+    CDO.stubs(:jwk_private_key_data).returns(@fake_private_key_obj)
   end
 
   test 'get_access_token calls the access_token_url from the LTI integration' do
