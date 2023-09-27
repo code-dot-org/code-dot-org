@@ -9,7 +9,7 @@ var dom = require('../dom');
 import DanceVisualizationColumn from './DanceVisualizationColumn';
 import Sounds from '../Sounds';
 import {TestResults} from '../constants';
-import {DancelabReservedWords} from './constants';
+import {ASSET_BASE, DancelabReservedWords} from './constants';
 import DanceParty from '@code-dot-org/dance-party/src/p5.dance';
 import DanceAPI from '@code-dot-org/dance-party/src/api';
 import ResourceLoader from '@code-dot-org/dance-party/src/ResourceLoader';
@@ -31,6 +31,7 @@ import {showArrowButtons} from '@cdo/apps/templates/arrowDisplayRedux';
 import danceCode from '@code-dot-org/dance-party/src/p5.dance.interpreted.js';
 import HttpClient from '@cdo/apps/util/HttpClient';
 import {CHAT_COMPLETION_URL} from '@cdo/apps/aichat/constants';
+import {computeCharactersReferenced} from './utils';
 
 const ButtonState = {
   UP: 0,
@@ -368,7 +369,7 @@ Dance.prototype.afterInject_ = function () {
         // student code can't change. This way, we can start fetching assets while
         // waiting for the user to press the Run button.
         await this.studioAppInitPromise;
-        const charactersReferenced = this.computeCharactersReferenced(
+        const charactersReferenced = computeCharactersReferenced(
           this.studioApp_.getCode()
         );
         await nativeAPI.ensureSpritesAreLoaded(charactersReferenced);
@@ -390,9 +391,7 @@ Dance.prototype.afterInject_ = function () {
     container: 'divDance',
     i18n: danceMsg,
     doAi: this.doAi.bind(this),
-    resourceLoader: new ResourceLoader(
-      'https://curriculum.code.org/images/sprites/dance_20191106/'
-    ),
+    resourceLoader: new ResourceLoader(ASSET_BASE),
   });
 
   // Expose an interface for testing
@@ -653,23 +652,7 @@ Dance.prototype.initInterpreter = function () {
     code
   ).hooks;
 
-  return this.computeCharactersReferenced(studentCode);
-};
-
-Dance.prototype.computeCharactersReferenced = function (studentCode) {
-  // Process studentCode to determine which characters are referenced and create
-  // charactersReferencedSet with the results:
-  const charactersReferencedSet = new Set();
-  const charactersRegExp = new RegExp(
-    /^.*make(Anonymous|New)DanceSprite(?:Group)?\([^"]*"([^"]*)[^\r\n]*/,
-    'gm'
-  );
-  let match;
-  while ((match = charactersRegExp.exec(studentCode))) {
-    const characterName = match[2];
-    charactersReferencedSet.add(characterName);
-  }
-  return Array.from(charactersReferencedSet);
+  return computeCharactersReferenced(studentCode);
 };
 
 Dance.prototype.shouldShowSharing = function () {
