@@ -336,12 +336,6 @@ Dashboard::Application.routes.draw do
       end
     end
 
-    resources :rubrics, only: [:create, :edit, :new, :update] do
-      member do
-        post 'submit_evaluations'
-      end
-    end
-
     resources :course_offerings, only: [:edit, :update], param: 'key' do
       collection do
         get 'quick_assign_course_offerings'
@@ -1046,15 +1040,18 @@ Dashboard::Application.routes.draw do
 
     resources :code_review_comments, only: [:create, :update, :destroy]
 
+    resources :rubrics, only: [:create, :edit, :new, :update] do
+      member do
+        get 'get_ai_evaluations'
+        post 'submit_evaluations'
+      end
+    end
+
     resources :learning_goal_evaluations, only: [:create, :update] do
       collection do
         get :get_evaluation
         post :get_or_create_evaluation
       end
-    end
-
-    resources :learning_goal_ai_evaluations do
-      get :get_evaluation, on: :collection
     end
 
     get '/backpacks/channel', to: 'backpacks#get_channel'

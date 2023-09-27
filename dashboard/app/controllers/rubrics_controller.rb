@@ -1,8 +1,8 @@
 class RubricsController < ApplicationController
   include Rails.application.routes.url_helpers
 
-  before_action :require_levelbuilder_mode_or_test_env, except: [:submit_evaluations]
-  load_and_authorize_resource except: [:submit_evaluations]
+  before_action :require_levelbuilder_mode_or_test_env, except: [:submit_evaluations, :get_ai_evaluations]
+  load_and_authorize_resource except: [:submit_evaluations, :get_ai_evaluations]
 
   # GET /rubrics/:rubric_id/edit
   def edit
@@ -53,6 +53,20 @@ class RubricsController < ApplicationController
     else
       return head :bad_request
     end
+  end
+
+  # GET /rubrics/:id/get_ai_evaluations
+  def get_ai_evaluations
+    return head :forbidden unless current_user&.teacher?
+
+    permitted_params = params.transform_keys(&:underscore).permit(:id, :student_id)
+    student = User.find(permitted_params[:student_id])
+    return head :not_found unless student
+    return head :forbidden unless can?(:manage, student)
+
+    learning_goals = LearningGoal.where(rubric_id: permitted_params[:id])
+    learning_goal_ai_evaluations = LearningGoalAiEvaluation.where(user_id: permitted_params[:student_id], learning_goal_id: learning_goals.pluck(:id))
+    render json: learning_goal_ai_evaluations.map(&:summarize_for_instructor)
   end
 
   private
