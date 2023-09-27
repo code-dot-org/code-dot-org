@@ -13,16 +13,16 @@ import {saveRubricToTable, SAVING_TEXT, styles} from './rubricHelper';
 export default function RubricsContainer({
   unitName,
   lessonNumber,
-  levels,
+  submittableLevels,
   rubric,
   lessonId,
-  hasSubmittableLevels,
 }) {
   const [learningGoalList, setLearningGoalList] = useState(
     !!rubric ? rubric.learningGoals : initialLearningGoal
   );
 
   const [saveNotificationText, setSaveNotificationText] = useState('');
+  const hasSubmittableLevels = submittableLevels.length > 0;
 
   const generateLearningGoalKey = () => {
     let learningGoalNumber = learningGoalList.length + 1;
@@ -132,7 +132,9 @@ export default function RubricsContainer({
   };
 
   // TODO-AITT-168: Check that there is at least one submittable programming level here
-  const initialLevelForAssessment = !!rubric ? rubric.levelId : levels[0].id;
+  const initialLevelForAssessment = !!rubric
+    ? rubric.levelId
+    : submittableLevels[0].id;
   const [selectedLevelForAssessment, setSelectedLevelForAssessment] = useState(
     initialLevelForAssessment
   );
@@ -150,13 +152,11 @@ export default function RubricsContainer({
   };
 
   function renderOptions() {
-    const selectOptions = levels
-      .filter(level => level.properties.submittable === 'true')
-      .map(level => (
-        <option key={level.id} value={level.id}>
-          {level.name}
-        </option>
-      ));
+    const selectOptions = submittableLevels.map(level => (
+      <option key={level.id} value={level.id}>
+        {level.name}
+      </option>
+    ));
     return selectOptions;
   }
 
@@ -190,7 +190,6 @@ export default function RubricsContainer({
             addNewConcept={addNewConceptHandler}
             deleteItem={deleteLearningGoal}
             updateLearningGoal={updateLearningGoal}
-            disabled={!hasSubmittableLevels}
           />
           <div style={styles.bottomRow}>
             <Button
@@ -225,16 +224,14 @@ export default function RubricsContainer({
 RubricsContainer.propTypes = {
   unitName: PropTypes.string,
   lessonNumber: PropTypes.number,
-  levels: PropTypes.arrayOf(
+  submittableLevels: PropTypes.arrayOf(
     PropTypes.shape({
       id: PropTypes.number,
       name: PropTypes.string,
-      properties: PropTypes.object,
     })
   ),
   rubric: PropTypes.object,
   lessonId: PropTypes.number,
-  hasSubmittableLevels: PropTypes.bool,
 };
 
 const initialLearningGoal = [

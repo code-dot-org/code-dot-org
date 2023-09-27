@@ -10,19 +10,14 @@ import sinon from 'sinon';
 
 describe('RubricsContainerTest', () => {
   const defaultProps = {
-    levels: [
-      {id: 1, name: 'level 1', properties: {submittable: 'false'}},
-      {id: 2, name: 'level 2', properties: {submittable: 'true'}},
-      {id: 3, name: 'level 3', properties: {submittable: 'true'}},
+    submittableLevels: [
+      {id: 1, name: 'level 1'},
+      {id: 2, name: 'level 2'},
+      {id: 3, name: 'level 3'},
     ],
     unitName: 'sample unit',
     lessonNumber: 0,
-    hasSubmittableLevels: true,
   };
-
-  const numberOfSubmittableLevels = defaultProps.levels.filter(
-    level => level.properties.submittable === 'true'
-  ).length;
 
   const rubricInfo = {
     learningGoals: [
@@ -91,7 +86,7 @@ describe('RubricsContainerTest', () => {
     const wrapper = mount(<RubricsContainer {...defaultProps} />);
     expect(wrapper.find('Heading1').text()).to.equal('Create your rubric');
     expect(wrapper.find('select#rubric_level_id option')).to.have.length(
-      numberOfSubmittableLevels
+      defaultProps.submittableLevels.length
     );
     expect(wrapper.find(LearningGoalItem)).to.have.length(1);
     expect(wrapper.find('Button[text="Save your rubric"]')).to.have.length(1);
@@ -101,7 +96,9 @@ describe('RubricsContainerTest', () => {
     const props = {...defaultProps, rubric: rubricInfo};
     const wrapper = mount(<RubricsContainer {...props} />);
     expect(wrapper.find('Heading1').text()).to.equal('Modify your rubric');
-    expect(wrapper.find('select#rubric_level_id option')).to.have.length(2);
+    expect(wrapper.find('select#rubric_level_id option')).to.have.length(
+      defaultProps.submittableLevels.length
+    );
     expect(wrapper.find(LearningGoalItem)).to.have.length(
       rubricInfo.learningGoals.length
     );
@@ -124,11 +121,15 @@ describe('RubricsContainerTest', () => {
     const wrapper = shallow(<RubricsContainer {...defaultProps} />);
     let dropdown = wrapper.find('select#rubric_level_id');
     const dropdownValue = dropdown.prop('value');
-    expect(dropdownValue).to.equal(defaultProps.levels[0].id);
+    expect(dropdownValue).to.equal(defaultProps.submittableLevels[0].id);
 
-    dropdown.simulate('change', {target: {value: defaultProps.levels[1].id}});
+    dropdown.simulate('change', {
+      target: {value: defaultProps.submittableLevels[1].id},
+    });
     dropdown = wrapper.find('select#rubric_level_id');
-    expect(dropdown.prop('value')).to.equal(defaultProps.levels[1].id);
+    expect(dropdown.prop('value')).to.equal(
+      defaultProps.submittableLevels[1].id
+    );
   });
 
   it('changes the saveNotificationText and disables the save Button when saving rubric', async () => {

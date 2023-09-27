@@ -19,7 +19,6 @@ describe('RubricEditorTest ', () => {
     addNewConcept: addNewConceptSpy,
     deleteItem: () => {},
     updateLearningGoal: () => {},
-    disabled: false,
   };
 
   beforeEach(() => {
@@ -39,16 +38,5 @@ describe('RubricEditorTest ', () => {
     expect(addButton).to.have.length(1);
     addButton.simulate('click');
     expect(addNewConceptSpy).to.have.been.calledOnce;
-  });
-
-  it('renders the "Add new Key Concept" button with alternative text when disabled', () => {
-    const wrapper = shallow(<RubricEditor {...defaultProps} disabled={true} />);
-    const addButton = wrapper
-      .find(Button)
-      .findWhere(
-        n => n.props().text === 'Create a submittable level to create a rubric'
-      );
-    expect(addButton).to.have.length(1);
-    expect(addButton.props().disabled).to.be.true;
   });
 });

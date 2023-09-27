@@ -8,7 +8,6 @@ export default function RubricEditor({
   deleteLearningGoal,
   learningGoalList,
   updateLearningGoal,
-  disabled,
 }) {
   const renderLearningGoalItems = learningGoalList.map(goal => {
     if (!goal._destroy) {
@@ -28,17 +27,12 @@ export default function RubricEditor({
       {renderLearningGoalItems}
       <Button
         color={Button.ButtonColor.gray}
-        text={
-          disabled
-            ? 'Create a submittable level to create a rubric'
-            : 'Add new Key Concept'
-        }
+        text={'Add new Key Concept'}
         onClick={addNewConcept}
         size={Button.ButtonSize.narrow}
         icon="plus-circle"
         iconClassName="fa fa-plus-circle"
         id="ui-test-add-new-concept-button"
-        disabled={disabled}
       />
     </div>
   );
@@ -49,5 +43,4 @@ RubricEditor.propTypes = {
   deleteLearningGoal: PropTypes.func,
   addNewConcept: PropTypes.func,
   updateLearningGoal: PropTypes.func,
-  disabled: PropTypes.bool,
 };
