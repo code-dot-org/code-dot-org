@@ -15,3 +15,18 @@ export function computeCharactersReferenced(studentCode: string): string[] {
   }
   return Array.from(charactersReferencedSet);
 }
+
+// Generate the validation callback from stringified validation code.
+// TODO: We're allowing the return type to be a generic 'Function' since the Dance Party
+// repo currently doesn't export types. If/when types are available, we can narrow the
+// return type.
+// eslint-disable-next-line @typescript-eslint/ban-types
+export function getValidationCallback(validationCode: string): Function {
+  return new Function(
+    'World',
+    'nativeAPI',
+    'sprites',
+    'events',
+    validationCode
+  );
+}
