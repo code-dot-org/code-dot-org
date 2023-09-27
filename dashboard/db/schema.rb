@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2023_09_27_153604) do
+ActiveRecord::Schema.define(version: 2023_09_27_182433) do
 
   create_table "activities", id: :integer, charset: "utf8", collation: "utf8_unicode_ci", force: :cascade do |t|
     t.integer "user_id"
@@ -459,6 +459,21 @@ ActiveRecord::Schema.define(version: 2023_09_27_153604) do
     t.datetime "updated_at", precision: 6, null: false
     t.index ["key"], name: "index_data_docs_on_key", unique: true
     t.index ["name"], name: "index_data_docs_on_name"
+  end
+
+  create_table "delayed_jobs", charset: "utf8", collation: "utf8_unicode_ci", force: :cascade do |t|
+    t.integer "priority", default: 0, null: false
+    t.integer "attempts", default: 0, null: false
+    t.text "handler", null: false
+    t.text "last_error"
+    t.datetime "run_at"
+    t.datetime "locked_at"
+    t.datetime "failed_at"
+    t.string "locked_by"
+    t.string "queue"
+    t.datetime "created_at", precision: 6
+    t.datetime "updated_at", precision: 6
+    t.index ["priority", "run_at"], name: "delayed_jobs_priority"
   end
 
   create_table "donor_schools", id: :integer, charset: "utf8", collation: "utf8_unicode_ci", force: :cascade do |t|
