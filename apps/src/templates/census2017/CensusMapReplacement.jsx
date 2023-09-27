@@ -44,7 +44,7 @@ class CensusMapInfoWindow extends Component {
         censusMessage = 'We have conflicting data for this school.';
         color = 'yellow';
         break;
-      default:
+      default: // "Unknown" or blank
         censusMessage = 'We need data for this school.';
         missingCensusData = true;
         color = 'white';
@@ -234,9 +234,10 @@ export default class CensusMapReplacement extends Component {
           'circle-stroke-color': '#000000',
         },
         filter: [
-          'any',
+          'all',
           ['!=', 'teaches_cs', 'YES'],
           ['!=', 'teaches_cs', 'HISTORICAL_YES'],
+          ['!=', 'teaches_cs', 'EXCLUDED'],
         ],
       });
       _this.map.addLayer({
