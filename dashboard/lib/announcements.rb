@@ -2,7 +2,7 @@ class Announcements
   @@announcements_data = nil
   @@loaded = false
   @@load_error = false
-  @@json_path = pegasus_dir 'sites.v3/code.org/announcements.json'
+  @@json_path = dashboard_dir 'config/homepage/announcements.json'
 
   # enables unit tests
   def self.set_file_path(path)
