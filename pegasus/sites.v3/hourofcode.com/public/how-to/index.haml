@@ -1,0 +1,57 @@
+---
+title: Hour of Code How-to Guide
+layout: wide_index
+theme: full_width
+---
+
+%link{href: "/css/generated/hoc-banner.css", rel: "stylesheet", type: "text/css"}
+%link{href: "/css/generated/page/how-to.css", rel: "stylesheet", type: "text/css"}
+
+#fullwidth
+  = view :header
+
+  %section.banner
+    .wrapper
+      %h1
+        =hoc_s(:hoc_how_to_top_heading)
+      %p.body-one
+        =hoc_s(:hoc_how_to_top_desc)
+      .flex-container
+        %p.heading-sm
+          =hoc_s(:hoc_how_to_top_view_guide)
+        %select#audience{name: "audience"}
+          %option{value: "educators"} Educators
+          %option{value: "companies"} Companies
+          %option{value: "districts"} Districts
+          %option{value: "school-assemblies"} School Assemblies
+
+%section.no-padding-bottom
+  .wrapper.centered
+    %h2
+      =hoc_s(:hoc_how_to_plan_heading)
+    %p.body-two{style: "max-width: 750px; margin: 0 auto"}
+      =hoc_s(:hoc_how_to_plan_desc)
+    %hr{style: "margin-top: 4rem"}
+
+%section
+  .wrapper
+    CONTENT HERE
+
+%section.bg-neutral-light
+  .wrapper
+    %h2.centered
+      =hoc_s(:heading_faq)
+    %details
+      %summary=hoc_s(:csa_page_faq_question_01)
+      %p=hoc_s(:csa_page_faq_answer_01)
+    %details
+      %summary=hoc_s(:csa_page_faq_question_01)
+      %p=hoc_s(:csa_page_faq_answer_01)
+    %details
+      %summary=hoc_s(:csa_page_faq_question_01)
+      %p=hoc_s(:csa_page_faq_answer_01)
+
+%section
+  .wrapper
+    %h2.centered
+      =hoc_s(:heading_additional_resources)

@@ -40,6 +40,13 @@
   africa_campaign_date_year: "2023"
   africa_campaign_date_full_year: "September 5, 2023 - December 17, 2023"
 
+
+  hoc_how_to_top_heading: "Your guide to Hour of Code"
+  hoc_how_to_top_desc: "Tailored how-to guides for the best Hour of Code experience."
+  hoc_how_to_top_view_guide: "View guide for"
+  hoc_how_to_plan_heading: "How to plan your Hour of Code"
+  hoc_how_to_plan_desc: "The Hour of Code is a one-hour introduction to computer science designed to demystify \"code\", show that anybody can learn the basics, and to broaden participation in the field of computer science. You can help raise awareness of the computer science movement and volunteer to inspire more students to try computer science, particularly young women."
+
   hoc2022_header: 'Explore, Play, Create!'
   social_hoc2022_explore_play_create: 'Use computer science to explore, play, and create!'
   codeorg_homepage_hoc2022_body: 'Explore the universe, score a goal, bust a move — there are so many ways to try computer science.'
