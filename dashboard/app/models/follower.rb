@@ -64,6 +64,9 @@ class Follower < ApplicationRecord
 
   after_destroy :remove_family_name, if: proc {DCDO.get('family-name-features', false)}
   def remove_family_name
+    # Ignore a deleted student
+    return unless student_user
+
     # If the student is in zero sections, and has a family name set,
     # remove the family name.
     if student_user.family_name && student_user.sections_as_student.empty?
