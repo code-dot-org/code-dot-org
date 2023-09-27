@@ -956,5 +956,7 @@ export function isProductionEnvironment() {
  * @returns {Promise<Response>}
  */
 export function fetchSignedCookies() {
-  return fetch('/dashboardapi/sign_cookies', {credentials: 'same-origin'});
+  return fetch(`/dashboardapi/sign_cookies?bust=${performance.now()}`, {
+    credentials: 'same-origin',
+  });
 }
