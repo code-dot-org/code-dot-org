@@ -22,7 +22,7 @@ export interface DanceState {
   selectedSong: string;
   songData: SongData;
   runIsStarting: boolean;
-  currentAiModalField?: GoogleBlockly.Field; //{setValue: (value: string) => void} | undefined;
+  currentAiModalField?: GoogleBlockly.Field;
   // Fields below are used only by Lab2 Dance
   isRunning: boolean;
   currentSongMetadata: SongMetadata | undefined;
