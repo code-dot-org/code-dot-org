@@ -2,7 +2,7 @@
 
 All notable changes to this project will be documented in this file.
 
-## [0.3.3]()
+## [0.3.3](https://github.com/code-dot-org/code-dot-org/pull/53962)
 * update indeterminate state
 * add stories for supernova
 
