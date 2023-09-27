@@ -13,7 +13,6 @@ export default function AiAssessmentBox({
   aiUnderstandingLevel,
   aiConfidence,
 }) {
-  // TO DO: Create color constants in the css file
   const boxColor = () => {
     if (isAiAssessed) {
       return aiUnderstandingLevel >= RubricUnderstandingLevels.CONVINCING

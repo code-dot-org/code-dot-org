@@ -195,8 +195,11 @@ p.aiTokenText {
   color: $product_affirmative_default;
 }
 
-.learningGoalExpanded {
+.expandedBorder {
   border-top: 1px solid $neutral_dark40;
+}
+
+.learningGoalExpanded {
   padding: 1.25rem 1rem;
 
   display: flex;
@@ -277,6 +280,10 @@ p.errorMessage {
   color: gray;
 }
 
+.openedAiAssessment {
+  padding: 1.25rem 1rem 0 1rem;
+}
+
 .aiAssessmentBlock {
   align-items: flex-start;
   display: flex;
@@ -286,14 +293,11 @@ p.errorMessage {
 
 .greenAiAssessment {
   align-items: left;
-  background-color: rgba(226 241 226);
-  border: 1px solid;
-  border-color: rgba(62 163 62);
+  border: 1px solid $product_affirmative_default;
+  background-color: $light_affirmative_100;
   border-radius: 4px;
   display: flex;
-  flex: 1;
   flex-grow: 1;
-  gap: 16px;
   overflow: hidden;
   padding: 8px;
   position: relative;
@@ -301,14 +305,11 @@ p.errorMessage {
 
 .redAiAssessment {
   align-items: left;
-  background-color: rgba(251 224 221);
-  border: 1px solid;
-  border-color: rgba(229 49 26);
+  border: 1px solid $product_negative_default;
+  background-color: $product_negative_light;
   border-radius: 4px;
   display: flex;
-  flex: 1;
   flex-grow: 1;
-  gap: 16px;
   overflow: hidden;
   padding: 8px;
   position: relative;
@@ -316,14 +317,11 @@ p.errorMessage {
 
 .noAiAssessment {
   align-items: left;
-  background-color: rgba(234 235 235);
-  border: 1px solid;
-  border-color: rgba(148 151 155);
+  background-color: $lightest_gray;
+  border: 1px solid $light_gray;
   border-radius: 4px;
   display: flex;
-  flex: 1;
   flex-grow: 1;
-  gap: 16px;
   overflow: hidden;
   padding: 8px;
   position: relative;

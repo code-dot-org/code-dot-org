@@ -159,56 +159,60 @@ export default function LearningGoal({
           )}
         </div>
       </summary>
-      <div className={style.learningGoalExpanded}>
-        {/*TODO: Pass through data to child component*/}
-        {aiEnabled && !!studentLevelInfo && (
-          <AiAssessment
-            isAiAssessed={learningGoal.aiEnabled}
-            studentName={studentLevelInfo.name}
-            aiConfidence={50}
-            aiUnderstandingLevel={3}
-          />
-        )}
-        <EvidenceLevels
-          learningGoalKey={learningGoal.key}
-          evidenceLevels={learningGoal.evidenceLevels}
-          canProvideFeedback={canProvideFeedback}
-          understanding={understandingLevel.current}
-          radioButtonCallback={radioButtonCallback}
-        />
-        {learningGoal.tips && (
-          <div>
-            <Heading6>{i18n.tipsForEvaluation()}</Heading6>
-            <div className={style.learningGoalTips}>
-              <SafeMarkdown markdown={learningGoal.tips} />
-            </div>
+      {/*TODO: Pass through data to child component*/}
+      <div className={style.expandedBorder}>
+        {teacherHasEnabledAi && !!studentLevelInfo && (
+          <div className={style.openedAiAssessment}>
+            <AiAssessment
+              isAiAssessed={learningGoal.aiEnabled}
+              studentName={studentLevelInfo.name}
+              aiConfidence={50}
+              aiUnderstandingLevel={1}
+            />
           </div>
         )}
-        <div className={style.feedbackArea}>
-          <label className={style.evidenceLevelLabel}>
-            <span>{i18n.feedback()}</span>
-            <textarea
-              className={style.inputTextbox}
-              name="teacherFeedback"
-              value={displayFeedback}
-              onChange={handleFeedbackChange}
-              disabled={!studentLevelInfo}
-            />
-          </label>
-          {isAutosaving ? (
-            <span className={style.autosaveMessage}>{i18n.saving()}</span>
-          ) : (
-            autosaved && (
+        <div className={style.learningGoalExpanded}>
+          <EvidenceLevels
+            learningGoalKey={learningGoal.key}
+            evidenceLevels={learningGoal.evidenceLevels}
+            canProvideFeedback={canProvideFeedback}
+            understanding={understandingLevel.current}
+            radioButtonCallback={radioButtonCallback}
+          />
+          {learningGoal.tips && (
+            <div>
+              <Heading6>{i18n.tipsForEvaluation()}</Heading6>
+              <div className={style.learningGoalTips}>
+                <SafeMarkdown markdown={learningGoal.tips} />
+              </div>
+            </div>
+          )}
+          <div className={style.feedbackArea}>
+            <label className={style.evidenceLevelLabel}>
+              <span>{i18n.feedback()}</span>
+              <textarea
+                className={style.inputTextbox}
+                name="teacherFeedback"
+                value={displayFeedback}
+                onChange={handleFeedbackChange}
+                disabled={!studentLevelInfo}
+              />
+            </label>
+            {isAutosaving ? (
+              <span className={style.autosaveMessage}>{i18n.saving()}</span>
+            ) : (
+              autosaved && (
+                <span className={style.autosaveMessage}>
+                  <FontAwesome icon="circle-check" /> {i18n.savedToGallery()}
+                </span>
+              )
+            )}
+            {errorAutosaving && (
               <span className={style.autosaveMessage}>
-                <FontAwesome icon="circle-check" /> {i18n.savedToGallery()}
+                {i18n.feedbackSaveError()}
               </span>
-            )
-          )}
-          {errorAutosaving && (
-            <span className={style.autosaveMessage}>
-              {i18n.feedbackSaveError()}
-            </span>
-          )}
+            )}
+          </div>
         </div>
       </div>
     </details>
