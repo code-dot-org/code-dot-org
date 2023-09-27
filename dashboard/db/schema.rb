@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2023_10_12_201537) do
+ActiveRecord::Schema.define(version: 2023_09_27_160812) do
 
   create_table "activities", id: :integer, charset: "utf8", collation: "utf8_unicode_ci", force: :cascade do |t|
     t.integer "user_id"
@@ -1837,19 +1837,19 @@ ActiveRecord::Schema.define(version: 2023_10_12_201537) do
     t.index ["stage_id"], name: "index_section_hidden_stages_on_stage_id"
   end
 
-  create_table "section_instructors", charset: "utf8", collation: "utf8_unicode_ci", force: :cascade do |t|
-    t.integer "instructor_id", null: false
+  create_table "section_teachers", charset: "utf8", collation: "utf8_unicode_ci", force: :cascade do |t|
+    t.integer "teacher_id", null: false
     t.integer "section_id", null: false
     t.integer "invited_by_id"
     t.datetime "deleted_at"
     t.integer "status", null: false
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
-    t.index ["deleted_at"], name: "index_section_instructors_on_deleted_at"
-    t.index ["instructor_id", "section_id"], name: "index_section_instructors_on_instructor_id_and_section_id", unique: true
-    t.index ["instructor_id"], name: "index_section_instructors_on_instructor_id"
-    t.index ["invited_by_id"], name: "index_section_instructors_on_invited_by_id"
-    t.index ["section_id"], name: "index_section_instructors_on_section_id"
+    t.index ["deleted_at"], name: "index_section_teachers_on_deleted_at"
+    t.index ["invited_by_id"], name: "index_section_teachers_on_invited_by_id"
+    t.index ["section_id"], name: "index_section_teachers_on_section_id"
+    t.index ["teacher_id", "section_id"], name: "index_section_teachers_on_teacher_id_and_section_id", unique: true
+    t.index ["teacher_id"], name: "index_section_teachers_on_teacher_id"
   end
 
   create_table "sections", id: :integer, charset: "utf8", collation: "utf8_unicode_ci", force: :cascade do |t|
@@ -2320,8 +2320,8 @@ ActiveRecord::Schema.define(version: 2023_10_12_201537) do
   add_foreign_key "school_infos", "schools"
   add_foreign_key "school_stats_by_years", "schools"
   add_foreign_key "schools", "school_districts"
-  add_foreign_key "section_instructors", "users", column: "instructor_id"
-  add_foreign_key "section_instructors", "users", column: "invited_by_id"
+  add_foreign_key "section_teachers", "users", column: "invited_by_id"
+  add_foreign_key "section_teachers", "users", column: "teacher_id"
   add_foreign_key "survey_results", "users"
   add_foreign_key "user_geos", "users"
   add_foreign_key "user_proficiencies", "users"
