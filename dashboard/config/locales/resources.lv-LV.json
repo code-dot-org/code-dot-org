@@ -1197,6 +1197,12 @@
         "pause_and_think_online/pre-express/2022": {
           "type": "Video"
         },
+        "ethics_and_ai_privacy_the_future_of_work/ai-ethics/2023": {
+          "type": "Video"
+        },
+        "how_ai_works_large_language_models/ai-ethics/2023": {
+          "type": "Video"
+        },
         "star_quilts_1/csc-starquilts/2023": {
           "type": "Video"
         },
@@ -1246,6 +1252,230 @@
           "type": "Video"
         },
         "poem_art_video_optional_/poetry/2023": {
+          "type": "Video"
+        },
+        "problem_solving_process_1/csd/2023": {
+          "type": "Video"
+        },
+        "the_problem_solving_process/csd/2023": {
+          "type": "Video"
+        },
+        "what_is_a_computer/csd/2023": {
+          "type": "Video"
+        },
+        "what_do_computers_do/csd/2023": {
+          "type": "Video"
+        },
+        "intro_to_web_lab_part_2/csd/2023": {
+          "type": "Video"
+        },
+        "pair_programming/csd/2023": {
+          "name": "Pāru Programmēšana",
+          "type": "Video"
+        },
+        "video_intro_to_web_lab_part_1/csd/2023": {
+          "type": "Video"
+        },
+        "lists/csd/2023": {
+          "name": "Saraksti"
+        },
+        "video_debugging/csd/2023": {
+          "type": "Video"
+        },
+        "video_pair_programming/csd/2023": {
+          "type": "Video"
+        },
+        "intro_to_css_-_part_1/csd/2023": {
+          "type": "Video"
+        },
+        "intro_to_css_-_part_2/csd/2023": {
+          "type": "Video"
+        },
+        "creative_commons_overview/csd/2023": {
+          "type": "Video"
+        },
+        "publishing_your_website/csd/2023": {
+          "type": "Video"
+        },
+        "video_managing_disagreement/csd/2023": {
+          "type": "Video"
+        },
+        "video_teamwork/csd/2023": {
+          "type": "Video"
+        },
+        "video_how_search_works/csd/2023": {
+          "type": "Video"
+        },
+        "drawing_in_game_lab_-_part_1/csd/2023": {
+          "type": "Video"
+        },
+        "drawing_in_game_lab_-_part_2/csd/2023": {
+          "type": "Video"
+        },
+        "introduction_to_variables/csd/2023": {
+          "type": "Video"
+        },
+        "variables/csd/2023": {
+          "name": "Mainīgie"
+        },
+        "variables_1/csd/2023": {
+          "name": "Mainīgie",
+          "type": "Video"
+        },
+        "variables_2/csd/2023": {
+          "name": "Mainīgie"
+        },
+        "introduction_to_sprites/csd/2023": {
+          "type": "Video"
+        },
+        "the_animation_tab/csd/2023": {
+          "type": "Video"
+        },
+        "sprite_properties_needs_updating_/csd/2023": {
+          "type": "Video"
+        },
+        "text/csd/2023": {
+          "name": "Teksts"
+        },
+        "flipbook_example_-_by_marnic_bos/csd/2023": {
+          "type": "Video"
+        },
+        "introduction_to_the_draw_loop/csd/2023": {
+          "type": "Video"
+        },
+        "sprite_movement/csd/2023": {
+          "type": "Video"
+        },
+        "boolean_expressions/csd/2023": {
+          "type": "Video"
+        },
+        "conditional_statements/csd/2023": {
+          "type": "Video"
+        },
+        "conditionals/csd/2023": {
+          "name": "Sazarojumi"
+        },
+        "if_else_statements/csd/2023": {
+          "type": "Video"
+        },
+        "velocity/csd/2023": {
+          "name": "Ātrums",
+          "type": "Video"
+        },
+        "velocity_1/csd/2023": {
+          "name": "Ātrums"
+        },
+        "velocity_2/csd/2023": {
+          "name": "Ātrums"
+        },
+        "functions/csd/2023": {
+          "name": "Funkcijas",
+          "type": "Video"
+        },
+        "functions_1/csd/2023": {
+          "name": "Funkcijas"
+        },
+        "functions_2/csd/2023": {
+          "name": "Funkcijas"
+        },
+        "the_design_thinking_process/csd/2023": {
+          "type": "Video"
+        },
+        "what_s_for_lunch_testing/csd/2023": {
+          "type": "Video"
+        },
+        "intro_to_design_mode/csd/2023": {
+          "type": "Video"
+        },
+        "events_in_app_lab/csd/2023": {
+          "type": "Video"
+        },
+        "events_in_app_lab_1/csd/2023": {
+          "type": "Video"
+        },
+        "binary_and_data/csd/2023": {
+          "type": "Video"
+        },
+        "amazon_and_data/csd/2023": {
+          "type": "Video"
+        },
+        "netflix_and_data/csd/2023": {
+          "type": "Video"
+        },
+        "waze_and_data/csd/2023": {
+          "type": "Video"
+        },
+        "video_impact_on_society/csd/2023": {
+          "type": "Video"
+        },
+        "video_machine_learning/csd/2023": {
+          "type": "Video"
+        },
+        "video_training_data_and_bias/csd/2023": {
+          "type": "Video"
+        },
+        "circuits_and_logic/csd/2023": {
+          "type": "Video"
+        },
+        "the_counter_pattern/csd/2023": {
+          "type": "Video"
+        },
+        "if_statements_1/csd/2023": {
+          "type": "Video"
+        },
+        "input_output_devices/csd/2023": {
+          "type": "Video"
+        },
+        "introduction_to_arrays/csd/2023": {
+          "type": "Video"
+        },
+        "functions_with_parameters/csd/2023": {
+          "name": "Funkcijas ar parametriem",
+          "type": "Video"
+        },
+        "the_counter_pattern_2/csd/2023": {
+          "type": "Video"
+        },
+        "functions_3/csd/2023": {
+          "name": "Funkcijas"
+        },
+        "ai_what_is_machine_learning_/csd/2023": {
+          "type": "Video"
+        },
+        "seeing_ai/csd/2023": {
+          "type": "Video"
+        },
+        "finding_patterns_in_data/csd/2023": {
+          "type": "Video"
+        },
+        "introduction_to_ai_lab_1/csd/2023": {
+          "type": "Video"
+        },
+        "training_and_testing_in_ai_lab/csd/2023": {
+          "type": "Video"
+        },
+        "ai_training_data_bias/csd/2023": {
+          "type": "Video"
+        },
+        "model_cards_in_ai_lab/csd/2023": {
+          "type": "Video"
+        },
+        "if-statements_in_app_lab/csd/2023": {
+          "type": "Video"
+        },
+        "numerical_data_in_ai_lab_2/csd/2023": {
+          "type": "Video"
+        },
+        "ethics_ai_equal_access_and_algorithmic_bias/csd/2023": {
+          "type": "Video"
+        },
+        "creating_a_survey_in_google_forms/csd/2023": {
+          "type": "Video"
+        },
+        "cleaning_survey_data/csd/2023": {
+          "type": "Video"
+        },
+        "view_and_download_survey_data/csd/2023": {
           "type": "Video"
         },
         "implementation_guide/coursea/2023": {

@@ -131,6 +131,21 @@
         "code/poetry/2023": {
           "word": "Kodavimas"
         },
+        "copyright/csd/2023": {
+          "word": "Autorinės teisės"
+        },
+        "variable/csd/2023": {
+          "word": "Kintamasis"
+        },
+        "conditionals/csd/2023": {
+          "word": "Sąlyginiai sakiniai"
+        },
+        "abstraction/csd/2023": {
+          "word": "Komandos su parametrais"
+        },
+        "function/csd/2023": {
+          "word": "Komanda"
+        },
         "binary/coursec/2023": {
           "word": "Dvejetainis"
         },

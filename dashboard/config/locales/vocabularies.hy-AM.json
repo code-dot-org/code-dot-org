@@ -209,6 +209,24 @@
         "code/poetry/2023": {
           "word": "Կոդ"
         },
+        "copyright/csd/2023": {
+          "word": "հեղինակային իրավունք"
+        },
+        "debugging/csd/2023": {
+          "word": "Debugging"
+        },
+        "variable/csd/2023": {
+          "word": "Փոփոխական"
+        },
+        "conditionals/csd/2023": {
+          "word": "conditionals"
+        },
+        "abstraction/csd/2023": {
+          "word": "աբստրակցիա"
+        },
+        "function/csd/2023": {
+          "word": "Ֆունկցիա"
+        },
         "debugging/coursea/2023": {
           "word": "Debugging"
         },

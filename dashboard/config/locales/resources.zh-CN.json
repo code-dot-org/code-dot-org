@@ -5654,6 +5654,37 @@
           "url": "https://www.youtube.com/watch?v=rgbZAWnOWOo",
           "type": "视频"
         },
+        "_template_ai_code_of_ethics/ai-ethics/2023": {
+          "type": "幻灯片"
+        },
+        "ai_code_of_ethics/ai-ethics/2023": {
+          "type": "幻灯片"
+        },
+        "ethics_and_ai_privacy_the_future_of_work/ai-ethics/2023": {
+          "type": "视频"
+        },
+        "character_card_individual_docs_/ai-ethics/2023": {
+          "type": "资源"
+        },
+        "character_cards/ai-ethics/2023": {
+          "type": "资源"
+        },
+        "generative_ai_activity_instructions/ai-ethics/2023": {
+          "type": "资源"
+        },
+        "generative_ai_news_articles/ai-ethics/2023": {
+          "type": "资源"
+        },
+        "group_scenarios/ai-ethics/2023": {
+          "type": "资源"
+        },
+        "how_ai_works_large_language_models/ai-ethics/2023": {
+          "url": "https://www.youtube.com/watch?v=X-AWdfSFCHQ",
+          "type": "视频"
+        },
+        "societal_impact_of_generative_ai/ai-ethics/2023": {
+          "type": "幻灯片"
+        },
         "cs_connections_landing_page/csc-adaptations/2023": {
           "name": "CS 连接登录页面",
           "url": "https://code.org/educate/csc",
@@ -6195,6 +6226,1411 @@
         "poem_app_example/poetry/2023": {
           "name": "Poem 应用程序示例",
           "url": "https://studio.code.org/projects/poetry_hoc/j3TXDXNhz0XEsH4Xjk_rT9buBHYCplirIKtY_Pg_bYo",
+          "type": "资源"
+        },
+        "teacher_forum/csd/2023": {
+          "name": "教师论坛"
+        },
+        "the_problem_solving_process_2/csd/2023": {
+          "name": "解决问题的过程"
+        },
+        "intro_to_problem_solving/csd/2023": {
+          "name": "解决问题入门",
+          "type": "幻灯片"
+        },
+        "problem_solving_process/csd/2023": {
+          "name": "解决问题的过程"
+        },
+        "problem_solving_process_1/csd/2023": {
+          "name": "解决问题的过程",
+          "type": "视频"
+        },
+        "problem_solving_process_2/csd/2023": {
+          "name": "解决问题的过程"
+        },
+        "the_problem_solving_process/csd/2023": {
+          "type": "视频"
+        },
+        "the_problem_solving_process_1/csd/2023": {
+          "name": "解决问题的过程",
+          "type": "幻灯片"
+        },
+        "the_problem_solving_process_5/csd/2023": {
+          "name": "解决问题的过程"
+        },
+        "exploring_problem_solving/csd/2023": {
+          "name": "探索解决问题",
+          "type": "幻灯片"
+        },
+        "solving_problems/csd/2023": {
+          "type": "答案要点"
+        },
+        "what_is_a_computer/csd/2023": {
+          "type": "视频"
+        },
+        "what_is_a_computer_/csd/2023": {
+          "name": "什么是计算机？"
+        },
+        "what_is_a_computer_1/csd/2023": {
+          "type": "幻灯片"
+        },
+        "input_and_output/csd/2023": {
+          "name": "输入和输出"
+        },
+        "input_and_output_1/csd/2023": {
+          "name": "输入和输出"
+        },
+        "input_and_output_2/csd/2023": {
+          "name": "输入和输出",
+          "type": "幻灯片"
+        },
+        "apps_with_processing_2/csd/2023": {
+          "type": "幻灯片"
+        },
+        "apps_with_storage_2/csd/2023": {
+          "type": "幻灯片"
+        },
+        "what_do_computers_do/csd/2023": {
+          "type": "视频"
+        },
+        "apps_and_problem_solving/csd/2023": {
+          "name": "应用程序和问题解决"
+        },
+        "apps_and_problem_solving_-_student_checklist/csd/2023": {
+          "type": "资源"
+        },
+        "apps_and_problem_solving_1/csd/2023": {
+          "name": "应用程序和问题解决",
+          "type": "互相检查"
+        },
+        "apps_and_problem_solving_2/csd/2023": {
+          "name": "应用程序和问题解决",
+          "type": "评分准则"
+        },
+        "computer_science_practices/csd/2023": {
+          "type": "反射"
+        },
+        "project_-_propose_an_app/csd/2023": {
+          "name": "项目- 提议一个应用程序",
+          "type": "幻灯片"
+        },
+        "intro_to_problem_solving_newspapers_/csd/2023": {
+          "type": "幻灯片"
+        },
+        "intro_to_problem_solving_spaghetti_/csd/2023": {
+          "type": "幻灯片"
+        },
+        "intro_to_problem_solving_paper_towels_/csd/2023": {
+          "type": "幻灯片"
+        },
+        "exploring_problem_solving_animals_/csd/2023": {
+          "type": "幻灯片"
+        },
+        "tangrams/csd/2023": {
+          "type": "资源"
+        },
+        "exploring_problem_solving_games_/csd/2023": {
+          "type": "幻灯片"
+        },
+        "_key_warm_up_word_search/csd/2023": {
+          "type": "答案要点"
+        },
+        "_key_web_design_for_users/csd/2023": {
+          "type": "答案要点"
+        },
+        "exploring_web_pages_2/csd/2023": {
+          "name": "探索网页",
+          "type": "幻灯片"
+        },
+        "problem_solving_and_design/csd/2023": {
+          "type": "资源"
+        },
+        "web_design_template/csd/2023": {
+          "type": "资源"
+        },
+        "html_tags/csd/2023": {
+          "name": "HTML 标签",
+          "type": "资源"
+        },
+        "intro_to_html/csd/2023": {
+          "name": "HTML介绍",
+          "type": "幻灯片"
+        },
+        "intro_to_web_lab_part_2/csd/2023": {
+          "type": "视频"
+        },
+        "pair_programming/csd/2023": {
+          "name": "结对编程",
+          "type": "视频"
+        },
+        "video_intro_to_web_lab_part_1/csd/2023": {
+          "type": "视频"
+        },
+        "formatting_html/csd/2023": {
+          "name": "格式化 HTML",
+          "type": "资源"
+        },
+        "headings/csd/2023": {
+          "type": "幻灯片"
+        },
+        "headings_and_paragraphs/csd/2023": {
+          "name": "标题和段落",
+          "type": "资源"
+        },
+        "lists/csd/2023": {
+          "name": "列表",
+          "type": "资源"
+        },
+        "video_debugging/csd/2023": {
+          "name": "视频：调试",
+          "type": "视频"
+        },
+        "video_pair_programming/csd/2023": {
+          "name": "视频：结对编程",
+          "type": "视频"
+        },
+        "html_web_page/csd/2023": {
+          "type": "评分准则"
+        },
+        "html_web_page_1/csd/2023": {
+          "type": "互相检查"
+        },
+        "html_web_page_2/csd/2023": {
+          "type": "项目指引"
+        },
+        "mini-project_html_web_page/csd/2023": {
+          "name": "迷你项目：HTML网站",
+          "type": "幻灯片"
+        },
+        "problem_solving_process_with_programming/csd/2023": {
+          "name": "编程问题解决过程",
+          "type": "资源"
+        },
+        "digital_footprint/csd/2023": {
+          "name": "数字足迹",
+          "type": "幻灯片"
+        },
+        "social_sleuth/csd/2023": {
+          "name": "社交侦探"
+        },
+        "social_sleuth_1/csd/2023": {
+          "name": "社交侦探"
+        },
+        "intro_to_css_-_part_1/csd/2023": {
+          "name": "CSS介绍 -第 1 部分",
+          "type": "视频"
+        },
+        "intro_to_css_-_part_2/csd/2023": {
+          "name": "CSS介绍 -第 2 部分",
+          "type": "视频"
+        },
+        "style_sheets/csd/2023": {
+          "type": "资源"
+        },
+        "styling_text_with_css/csd/2023": {
+          "name": "使用 CSS 设置文本样式",
+          "type": "幻灯片"
+        },
+        "text_properties/csd/2023": {
+          "type": "资源"
+        },
+        "mini-project_your_personal_style/csd/2023": {
+          "name": "迷你项目：你的风格",
+          "type": "幻灯片"
+        },
+        "your_personal_style/csd/2023": {
+          "type": "评分准则"
+        },
+        "your_personal_style_1/csd/2023": {
+          "type": "互相检查"
+        },
+        "your_personal_style_2/csd/2023": {
+          "type": "项目指引"
+        },
+        "creative_commons_overview/csd/2023": {
+          "type": "视频"
+        },
+        "intellectual_property/csd/2023": {
+          "name": "知识产权",
+          "type": "幻灯片"
+        },
+        "creative_commons_search/csd/2023": {
+          "name": "知识共享检索",
+          "type": "资源"
+        },
+        "images_in_html/csd/2023": {
+          "name": "HTML 中的图像",
+          "type": "资源"
+        },
+        "using_images/csd/2023": {
+          "name": "使用图画",
+          "type": "幻灯片"
+        },
+        "websites_for_expression/csd/2023": {
+          "type": "幻灯片"
+        },
+        "layout_properties/csd/2023": {
+          "name": "布局属性"
+        },
+        "styling_elements_with_css/csd/2023": {
+          "name": "使用 CSS 设置元素的样式",
+          "type": "幻灯片"
+        },
+        "personal_web_page_-_prepare/csd/2023": {
+          "type": "项目指引"
+        },
+        "your_web_page_prepare/csd/2023": {
+          "type": "幻灯片"
+        },
+        "personal_web_page/csd/2023": {
+          "type": "互相检查"
+        },
+        "personal_web_page_-_reflect/csd/2023": {
+          "type": "项目指引"
+        },
+        "personal_web_page_-_student_checklist/csd/2023": {
+          "type": "资源"
+        },
+        "personal_web_page_1/csd/2023": {
+          "type": "评分准则"
+        },
+        "project_-_personal_web_page/csd/2023": {
+          "name": "项目：个人网站",
+          "type": "幻灯片"
+        },
+        "publishing_your_website/csd/2023": {
+          "name": "发布您的网站",
+          "type": "视频"
+        },
+        "websites_for_a_purpose/csd/2023": {
+          "name": "有功能的网站"
+        },
+        "websites_for_a_purpose_1/csd/2023": {
+          "name": "有功能的网站"
+        },
+        "websites_for_a_purpose_2/csd/2023": {
+          "name": "有功能的网站",
+          "type": "幻灯片"
+        },
+        "team_problem_solving/csd/2023": {
+          "name": "团队解决问题",
+          "type": "幻灯片"
+        },
+        "video_managing_disagreement/csd/2023": {
+          "name": "视频：管理分歧",
+          "type": "视频"
+        },
+        "video_teamwork/csd/2023": {
+          "name": "视频：团队合作",
+          "type": "视频"
+        },
+        "sources_and_research/csd/2023": {
+          "name": "来源和研究",
+          "type": "幻灯片"
+        },
+        "video_how_search_works/csd/2023": {
+          "name": "搜索是怎样完成的",
+          "type": "视频"
+        },
+        "classes/csd/2023": {
+          "name": "班级",
+          "type": "资源"
+        },
+        "css_classes/csd/2023": {
+          "name": "CSS 类",
+          "type": "幻灯片"
+        },
+        "plan_a_multi-page_website/csd/2023": {
+          "type": "项目指引"
+        },
+        "planning_a_multi-page_site/csd/2023": {
+          "type": "幻灯片"
+        },
+        "website_for_a_purpose/csd/2023": {
+          "type": "评分准则"
+        },
+        "hyperlinks/csd/2023": {
+          "name": "超链接",
+          "type": "资源"
+        },
+        "linking_pages/csd/2023": {
+          "name": "链接页面",
+          "type": "幻灯片"
+        },
+        "project_-_website_for_a_purpose/csd/2023": {
+          "name": "项目 - 为某个目的的网站",
+          "type": "幻灯片"
+        },
+        "peer_review_and_final_touches/csd/2023": {
+          "name": "同伴评审和最后润色",
+          "type": "幻灯片"
+        },
+        "website_for_a_purpose_-_reflect/csd/2023": {
+          "type": "项目指引"
+        },
+        "website_for_a_purpose_1/csd/2023": {
+          "type": "互相检查"
+        },
+        "_warm_up_word_search_key_/csd/2023": {
+          "type": "答案要点"
+        },
+        "programming_for_a_purpose/csd/2023": {
+          "type": "幻灯片"
+        },
+        "animation_and_game_design_template/csd/2023": {
+          "type": "资源"
+        },
+        "drawing_shapes/csd/2023": {
+          "name": "绘制形状"
+        },
+        "plotting_shapes/csd/2023": {
+          "name": "绘制形状",
+          "type": "幻灯片"
+        },
+        "drawing_in_game_lab/csd/2023": {
+          "name": "在游戏实验室绘画",
+          "type": "幻灯片"
+        },
+        "drawing_in_game_lab_-_part_1/csd/2023": {
+          "type": "视频"
+        },
+        "drawing_in_game_lab_-_part_2/csd/2023": {
+          "type": "视频"
+        },
+        "drawing_shapes_1/csd/2023": {
+          "name": "绘制形状",
+          "type": "资源"
+        },
+        "shapes_and_parameters/csd/2023": {
+          "name": "形状和参数",
+          "type": "资源"
+        },
+        "shapes_and_parameters_1/csd/2023": {
+          "name": "形状和参数",
+          "type": "幻灯片"
+        },
+        "introduction_to_variables/csd/2023": {
+          "name": "变量简介",
+          "type": "视频"
+        },
+        "naming_variables/csd/2023": {
+          "name": "命名变量",
+          "type": "资源"
+        },
+        "variables/csd/2023": {
+          "name": "变量",
+          "type": "资源"
+        },
+        "variables_1/csd/2023": {
+          "name": "变量",
+          "type": "视频"
+        },
+        "variables_2/csd/2023": {
+          "name": "变量",
+          "type": "幻灯片"
+        },
+        "random_numbers/csd/2023": {
+          "name": "随机数",
+          "type": "资源"
+        },
+        "random_numbers_1/csd/2023": {
+          "name": "随机数",
+          "type": "幻灯片"
+        },
+        "mini-project_-_robot_faces/csd/2023": {
+          "type": "幻灯片"
+        },
+        "problem_solving_with_programming/csd/2023": {
+          "type": "资源"
+        },
+        "robot_faces/csd/2023": {
+          "type": "评分准则"
+        },
+        "animation_tab/csd/2023": {
+          "type": "资源"
+        },
+        "introduction_to_sprites/csd/2023": {
+          "name": "精灵图简介",
+          "type": "视频"
+        },
+        "sprites/csd/2023": {
+          "name": "精灵图",
+          "type": "资源"
+        },
+        "sprites_1/csd/2023": {
+          "name": "精灵图",
+          "type": "幻灯片"
+        },
+        "the_animation_tab/csd/2023": {
+          "name": "动画标签页",
+          "type": "视频"
+        },
+        "sprite_properties/csd/2023": {
+          "name": "精灵图属性",
+          "type": "资源"
+        },
+        "sprite_properties_1/csd/2023": {
+          "name": "精灵图属性",
+          "type": "幻灯片"
+        },
+        "sprite_properties_needs_updating_/csd/2023": {
+          "name": "精灵图属性",
+          "type": "视频"
+        },
+        "text/csd/2023": {
+          "name": "文本",
+          "type": "幻灯片"
+        },
+        "captioned_scenes/csd/2023": {
+          "type": "评分准则"
+        },
+        "mini-project_-_captioned_scenes/csd/2023": {
+          "type": "幻灯片"
+        },
+        "flipbook_example_-_by_marnic_bos/csd/2023": {
+          "type": "视频"
+        },
+        "introduction_to_the_draw_loop/csd/2023": {
+          "type": "视频"
+        },
+        "the_draw_loop/csd/2023": {
+          "name": "绘制循环",
+          "type": "资源"
+        },
+        "the_draw_loop_1/csd/2023": {
+          "name": "绘制循环",
+          "type": "幻灯片"
+        },
+        "sprite_movement/csd/2023": {
+          "name": "精灵图移动",
+          "type": "视频"
+        },
+        "sprite_movement_1/csd/2023": {
+          "name": "精灵图移动",
+          "type": "幻灯片"
+        },
+        "animated_scene/csd/2023": {
+          "type": "评分准则"
+        },
+        "mini-project_-_animation/csd/2023": {
+          "type": "幻灯片"
+        },
+        "boolean_expressions/csd/2023": {
+          "name": "布尔表达式",
+          "type": "视频"
+        },
+        "booleans_and_comparison_operators/csd/2023": {
+          "name": "布尔值和比较运算符",
+          "type": "资源"
+        },
+        "conditional_statements/csd/2023": {
+          "name": "条件表达式",
+          "type": "视频"
+        },
+        "conditionals/csd/2023": {
+          "name": "条件语句",
+          "type": "幻灯片"
+        },
+        "if_statements/csd/2023": {
+          "name": "If 语句",
+          "type": "资源"
+        },
+        "keyboard_input/csd/2023": {
+          "name": "键盘输入",
+          "type": "幻灯片"
+        },
+        "if-else_statements/csd/2023": {
+          "name": "If-else 语句",
+          "type": "资源"
+        },
+        "if_else_statements/csd/2023": {
+          "name": "如果/否则 语句",
+          "type": "视频"
+        },
+        "mouse_input/csd/2023": {
+          "name": "鼠标输入",
+          "type": "幻灯片"
+        },
+        "extra_code_in_challenge_levels/csd/2023": {
+          "type": "资源"
+        },
+        "interactive_card_-_student_checklist/csd/2023": {
+          "type": "资源"
+        },
+        "interactive_card_3/csd/2023": {
+          "name": "互动卡",
+          "type": "评分准则"
+        },
+        "project_-_interactive_card/csd/2023": {
+          "name": "项目 - 互动卡",
+          "type": "幻灯片"
+        },
+        "velocity/csd/2023": {
+          "name": "矢量",
+          "type": "视频"
+        },
+        "velocity_1/csd/2023": {
+          "name": "矢量",
+          "type": "资源"
+        },
+        "velocity_2/csd/2023": {
+          "name": "矢量",
+          "type": "幻灯片"
+        },
+        "collision_detection/csd/2023": {
+          "name": "碰撞检测"
+        },
+        "collision_detection_1/csd/2023": {
+          "name": "碰撞检测",
+          "type": "资源"
+        },
+        "collision_detection_2/csd/2023": {
+          "name": "碰撞检测",
+          "type": "幻灯片"
+        },
+        "mini-project_-_side_scroller/csd/2023": {
+          "type": "幻灯片"
+        },
+        "side_scroller/csd/2023": {
+          "name": "侧边滚动栏",
+          "type": "评分准则"
+        },
+        "side_scroller_1/csd/2023": {
+          "name": "侧边滚动栏"
+        },
+        "complex_sprite_movement/csd/2023": {
+          "name": "复杂的精灵图动作",
+          "type": "幻灯片"
+        },
+        "velocity_and_the_counter_pattern/csd/2023": {
+          "name": "速度和计数模式",
+          "type": "资源"
+        },
+        "collisions/csd/2023": {
+          "name": "碰撞",
+          "type": "幻灯片"
+        },
+        "flyer_game/csd/2023": {
+          "name": "飞行者游戏",
+          "type": "评分准则"
+        },
+        "flyer_game_1/csd/2023": {
+          "name": "飞行者游戏"
+        },
+        "mini-project_-_flyer_game/csd/2023": {
+          "type": "幻灯片"
+        },
+        "functions/csd/2023": {
+          "name": "函数",
+          "type": "视频"
+        },
+        "functions_1/csd/2023": {
+          "name": "函数",
+          "type": "资源"
+        },
+        "functions_2/csd/2023": {
+          "name": "函数",
+          "type": "幻灯片"
+        },
+        "the_game_design_process/csd/2023": {
+          "name": "游戏设计过程",
+          "type": "幻灯片"
+        },
+        "using_the_game_design_process/csd/2023": {
+          "name": "使用游戏设计过程",
+          "type": "幻灯片"
+        },
+        "make_your_own_game_-_student_checklist/csd/2023": {
+          "type": "资源"
+        },
+        "make_your_own_game_3/csd/2023": {
+          "type": "评分准则"
+        },
+        "project_-_design_a_game/csd/2023": {
+          "name": "项目 - 设计一个游戏",
+          "type": "幻灯片"
+        },
+        "designing_with_empathy_2/csd/2023": {
+          "type": "幻灯片"
+        },
+        "understanding_your_user/csd/2023": {
+          "name": "了解您的用户",
+          "type": "幻灯片"
+        },
+        "the_design_thinking_process/csd/2023": {
+          "type": "视频"
+        },
+        "user_centered_design_-_define_and_prepare/csd/2023": {
+          "type": "幻灯片"
+        },
+        "user_centered_design_-_try_and_reflect/csd/2023": {
+          "type": "幻灯片"
+        },
+        "user_interface_screens/csd/2023": {
+          "type": "资源"
+        },
+        "user_interfaces/csd/2023": {
+          "name": "用户界面",
+          "type": "幻灯片"
+        },
+        "feedback_and_testing/csd/2023": {
+          "name": "反馈和测试",
+          "type": "幻灯片"
+        },
+        "prototype_feedback/csd/2023": {
+          "type": "资源"
+        },
+        "example_user_interviews/csd/2023": {
+          "type": "资源"
+        },
+        "identifying_user_needs/csd/2023": {
+          "name": "识别用户需求",
+          "type": "幻灯片"
+        },
+        "paper_prototypes/csd/2023": {
+          "name": "纸面原型",
+          "type": "评分准则"
+        },
+        "project_-_paper_prototype/csd/2023": {
+          "name": "项目 - 纸张原型",
+          "type": "幻灯片"
+        },
+        "designing_apps_for_good/csd/2023": {
+          "name": "设计好的应用程序",
+          "type": "幻灯片"
+        },
+        "market_research/csd/2023": {
+          "name": "市场研究"
+        },
+        "market_research_-_research_areas/csd/2023": {
+          "type": "资源"
+        },
+        "market_research_1/csd/2023": {
+          "name": "市场研究"
+        },
+        "market_research_2/csd/2023": {
+          "name": "市场研究",
+          "type": "幻灯片"
+        },
+        "exploring_ui_elements/csd/2023": {
+          "type": "幻灯片"
+        },
+        "build_a_paper_prototype/csd/2023": {
+          "type": "幻灯片"
+        },
+        "design_mode/csd/2023": {
+          "name": "设计模式",
+          "type": "资源"
+        },
+        "design_mode_elements/csd/2023": {
+          "name": "设计模式元素",
+          "type": "资源"
+        },
+        "prototype_testing/csd/2023": {
+          "name": "原型测试",
+          "type": "幻灯片"
+        },
+        "what_s_for_lunch_testing/csd/2023": {
+          "type": "视频"
+        },
+        "design_mode_in_app_lab/csd/2023": {
+          "type": "幻灯片"
+        },
+        "intro_to_design_mode/csd/2023": {
+          "name": "设计模式简介",
+          "type": "视频"
+        },
+        "model_screen_design/csd/2023": {
+          "type": "资源"
+        },
+        "build_a_digital_prototype/csd/2023": {
+          "type": "幻灯片"
+        },
+        "events_in_app_lab/csd/2023": {
+          "type": "视频"
+        },
+        "events_in_app_lab_1/csd/2023": {
+          "type": "视频"
+        },
+        "events_in_app_lab_2/csd/2023": {
+          "type": "幻灯片"
+        },
+        "changing_screens/csd/2023": {
+          "name": "更改屏幕",
+          "type": "资源"
+        },
+        "importing_screens/csd/2023": {
+          "name": "导入屏幕",
+          "type": "资源"
+        },
+        "linking_prototype_screens/csd/2023": {
+          "type": "幻灯片"
+        },
+        "multi-screen_apps/csd/2023": {
+          "name": "多屏幕应用程序",
+          "type": "资源"
+        },
+        "responding_to_user_input/csd/2023": {
+          "name": "响应用户输入",
+          "type": "资源"
+        },
+        "testing_the_app/csd/2023": {
+          "name": "测试应用程序",
+          "type": "幻灯片"
+        },
+        "bugs_and_features_2/csd/2023": {
+          "type": "幻灯片"
+        },
+        "updating_your_prototype/csd/2023": {
+          "name": "更新您的原型"
+        },
+        "updating_your_prototype_1/csd/2023": {
+          "name": "更新您的原型",
+          "type": "幻灯片"
+        },
+        "app_presentation/csd/2023": {
+          "name": "应用程序演示",
+          "type": "评分准则"
+        },
+        "app_presentation_1/csd/2023": {
+          "name": "应用程序演示"
+        },
+        "project_-_app_presentation/csd/2023": {
+          "name": "项目 - 应用程序演示",
+          "type": "幻灯片"
+        },
+        "meals_data/csd/2023": {
+          "type": "资源"
+        },
+        "representation_matters/csd/2023": {
+          "name": "表示事项"
+        },
+        "representation_matters_1/csd/2023": {
+          "name": "表示事项"
+        },
+        "representation_matters_2/csd/2023": {
+          "name": "表示事项",
+          "type": "幻灯片"
+        },
+        "patterns_and_representation/csd/2023": {
+          "name": "模式和表示法",
+          "type": "幻灯片"
+        },
+        "representing_information/csd/2023": {
+          "name": "代表信息"
+        },
+        "ascii_and_binary_representation/csd/2023": {
+          "name": "ASCII 和二进制表示形式",
+          "type": "幻灯片"
+        },
+        "ascii_challenges_1/csd/2023": {
+          "type": "答案要点"
+        },
+        "ascii_text/csd/2023": {
+          "type": "资源"
+        },
+        "representing_images/csd/2023": {
+          "name": "表示图像",
+          "type": "幻灯片"
+        },
+        "binary_and_data/csd/2023": {
+          "name": "二进制和数据",
+          "type": "视频"
+        },
+        "representing_numbers/csd/2023": {
+          "name": "表示数字"
+        },
+        "representing_numbers_1/csd/2023": {
+          "name": "表示数字",
+          "type": "幻灯片"
+        },
+        "combining_representations/csd/2023": {
+          "name": "组合表示",
+          "type": "幻灯片"
+        },
+        "keeping_data_secret/csd/2023": {
+          "name": "数据保密",
+          "type": "幻灯片"
+        },
+        "medical_records_1/csd/2023": {
+          "type": "答案要点"
+        },
+        "create_a_representation_2/csd/2023": {
+          "type": "评分准则"
+        },
+        "create_a_representation_3/csd/2023": {
+          "type": "幻灯片"
+        },
+        "problem_solving_with_data_2/csd/2023": {
+          "type": "幻灯片"
+        },
+        "structuring_data/csd/2023": {
+          "name": "构造数据"
+        },
+        "structuring_data_1/csd/2023": {
+          "name": "构造数据",
+          "type": "幻灯片"
+        },
+        "interpreting_data/csd/2023": {
+          "name": "表达数据"
+        },
+        "interpreting_data_1/csd/2023": {
+          "name": "表达数据"
+        },
+        "interpreting_data_2/csd/2023": {
+          "name": "表达数据",
+          "type": "资源"
+        },
+        "interpreting_data_3/csd/2023": {
+          "name": "表达数据",
+          "type": "幻灯片"
+        },
+        "making_decisions_with_data_1/csd/2023": {
+          "name": "依靠数据做决定"
+        },
+        "making_decisions_with_data_2/csd/2023": {
+          "name": "依靠数据做决定",
+          "type": "幻灯片"
+        },
+        "problem_solving_process_with_data/csd/2023": {
+          "type": "资源"
+        },
+        "automating_data_decisions/csd/2023": {
+          "name": "自动化数据决策"
+        },
+        "automating_data_decisions_1/csd/2023": {
+          "name": "自动化数据决策",
+          "type": "资源"
+        },
+        "automating_data_decisions_2/csd/2023": {
+          "name": "自动化数据决策"
+        },
+        "automating_data_decisions_3/csd/2023": {
+          "name": "自动化数据决策",
+          "type": "幻灯片"
+        },
+        "amazon_and_data/csd/2023": {
+          "type": "视频"
+        },
+        "data_in_the_real_world/csd/2023": {
+          "name": "在现实世界里的数据"
+        },
+        "data_in_the_real_world_1/csd/2023": {
+          "name": "在现实世界里的数据"
+        },
+        "netflix_and_data/csd/2023": {
+          "type": "视频"
+        },
+        "problem_solving_with_big_data/csd/2023": {
+          "name": "用大数据解决问题",
+          "type": "幻灯片"
+        },
+        "waze_and_data/csd/2023": {
+          "type": "视频"
+        },
+        "data_and_machine_learning/csd/2023": {
+          "type": "幻灯片"
+        },
+        "video_impact_on_society/csd/2023": {
+          "name": "视频：对社会的影响",
+          "type": "视频"
+        },
+        "video_machine_learning/csd/2023": {
+          "name": "视频：机器学习",
+          "url": "https://www.youtube.com/watch?v=OeU5m6vRyCk",
+          "type": "视频"
+        },
+        "video_training_data_and_bias/csd/2023": {
+          "name": "视频：训练数据和偏差",
+          "type": "视频"
+        },
+        "make_a_recommendation/csd/2023": {
+          "type": "互相检查"
+        },
+        "make_a_recommendation_1/csd/2023": {
+          "type": "评分准则"
+        },
+        "make_a_recommendation_2/csd/2023": {
+          "type": "项目指引"
+        },
+        "project_-_make_a_recommendation/csd/2023": {
+          "type": "幻灯片"
+        },
+        "physical_design_template/csd/2023": {
+          "type": "资源"
+        },
+        "physical_designs_1/csd/2023": {
+          "type": "幻灯片"
+        },
+        "circuit_playground/csd/2023": {
+          "type": "资源"
+        },
+        "circuits_and_logic/csd/2023": {
+          "name": "电路和逻辑",
+          "type": "视频"
+        },
+        "physical_output/csd/2023": {
+          "type": "资源"
+        },
+        "the_circuit_playground/csd/2023": {
+          "name": "电路游乐场",
+          "type": "幻灯片"
+        },
+        "designing_screens_with_code/csd/2023": {
+          "name": "使用代码设计屏幕",
+          "type": "资源"
+        },
+        "updating_screen_elements/csd/2023": {
+          "type": "幻灯片"
+        },
+        "board_events/csd/2023": {
+          "name": "主板事件",
+          "type": "资源"
+        },
+        "board_events_1/csd/2023": {
+          "name": "主板事件",
+          "type": "幻灯片"
+        },
+        "physical_input/csd/2023": {
+          "name": "物理输入",
+          "type": "资源"
+        },
+        "the_counter_pattern/csd/2023": {
+          "name": "计数器模式",
+          "type": "视频"
+        },
+        "if_statements_1/csd/2023": {
+          "name": "If 语句",
+          "type": "视频"
+        },
+        "the_counter_pattern_1/csd/2023": {
+          "name": "计数器模式",
+          "type": "资源"
+        },
+        "variables_and_if_statements/csd/2023": {
+          "type": "幻灯片"
+        },
+        "mini-project_field_collector_app/csd/2023": {
+          "type": "幻灯片"
+        },
+        "rubric_-_field_collector_app/csd/2023": {
+          "type": "评分准则"
+        },
+        "color_leds/csd/2023": {
+          "name": "彩色LED",
+          "type": "幻灯片"
+        },
+        "color_lights/csd/2023": {
+          "type": "资源"
+        },
+        "getting_screen_inputs/csd/2023": {
+          "type": "幻灯片"
+        },
+        "taking_input_with_getproperty/csd/2023": {
+          "type": "资源"
+        },
+        "combining_inputs_and_outputs/csd/2023": {
+          "type": "幻灯片"
+        },
+        "input_output_devices/csd/2023": {
+          "type": "视频"
+        },
+        "peer_review_-_human_device_interaction/csd/2023": {
+          "type": "资源"
+        },
+        "project_human_device_interaction/csd/2023": {
+          "type": "幻灯片"
+        },
+        "rubric_-_human_device_interaction/csd/2023": {
+          "type": "评分准则"
+        },
+        "analog_sensors/csd/2023": {
+          "name": "模拟传感器",
+          "type": "资源"
+        },
+        "board_sensors/csd/2023": {
+          "type": "幻灯片"
+        },
+        "changing_sensor_scale/csd/2023": {
+          "name": "改变传感器的级别",
+          "type": "资源"
+        },
+        "date_and_change_events/csd/2023": {
+          "type": "资源"
+        },
+        "accelerometer/csd/2023": {
+          "name": "加速传感器",
+          "type": "幻灯片"
+        },
+        "accelerometer_events/csd/2023": {
+          "name": "加速传感器事件",
+          "type": "资源"
+        },
+        "the_accelerometer/csd/2023": {
+          "name": "加速传感器",
+          "type": "资源"
+        },
+        "arrays/csd/2023": {
+          "name": "数组",
+          "type": "资源"
+        },
+        "introduction_to_arrays/csd/2023": {
+          "name": "数组的简介",
+          "type": "视频"
+        },
+        "making_music/csd/2023": {
+          "name": "制作音乐",
+          "type": "幻灯片"
+        },
+        "modifying_arrays/csd/2023": {
+          "name": "修改数组",
+          "type": "资源"
+        },
+        "playing_notes/csd/2023": {
+          "name": "角色备注",
+          "type": "资源"
+        },
+        "producing_output/csd/2023": {
+          "type": "资源"
+        },
+        "functions_with_parameters/csd/2023": {
+          "name": "有参数的函数",
+          "type": "视频"
+        },
+        "mini-project_interactive_art/csd/2023": {
+          "type": "幻灯片"
+        },
+        "student_example_projects/csd/2023": {
+          "type": "资源"
+        },
+        "student_rubric_-_interactive_art/csd/2023": {
+          "type": "评分准则"
+        },
+        "circuits_and_leds/csd/2023": {
+          "name": "电路和 LED",
+          "type": "资源"
+        },
+        "physical_outputs_and_leds/csd/2023": {
+          "type": "幻灯片"
+        },
+        "circuits_and_buttons/csd/2023": {
+          "type": "资源"
+        },
+        "physical_inputs_and_buttons/csd/2023": {
+          "type": "幻灯片"
+        },
+        "project_prototype_an_innovation/csd/2023": {
+          "name": "项目：创新原型",
+          "type": "幻灯片"
+        },
+        "prototype_an_innovation/csd/2023": {
+          "type": "评分准则"
+        },
+        "teacher_forum_1/csd/2023": {
+          "name": "教师论坛"
+        },
+        "physical_designs_2/csd/2023": {
+          "type": "幻灯片"
+        },
+        "introducing_the_micro_bit/csd/2023": {
+          "type": "幻灯片"
+        },
+        "led_planning_sheet/csd/2023": {
+          "type": "资源"
+        },
+        "the_micro_bit_led_display/csd/2023": {
+          "type": "资源"
+        },
+        "the_micro_bit_overview/csd/2023": {
+          "type": "资源"
+        },
+        "updating_screen_elements_1/csd/2023": {
+          "type": "幻灯片"
+        },
+        "board_events_2/csd/2023": {
+          "name": "主板事件",
+          "type": "幻灯片"
+        },
+        "board_events_3/csd/2023": {
+          "name": "主板事件",
+          "type": "资源"
+        },
+        "micro_bit_inputs/csd/2023": {
+          "type": "资源"
+        },
+        "the_counter_pattern_2/csd/2023": {
+          "name": "计数器模式",
+          "type": "视频"
+        },
+        "variables_and_if_statements_1/csd/2023": {
+          "type": "幻灯片"
+        },
+        "mini-project_field_collector_app_1/csd/2023": {
+          "type": "幻灯片"
+        },
+        "rubric_-_field_collector_app_1/csd/2023": {
+          "type": "评分准则"
+        },
+        "getting_screen_inputs_1/csd/2023": {
+          "type": "幻灯片"
+        },
+        "combining_inputs_and_outputs_1/csd/2023": {
+          "type": "幻灯片"
+        },
+        "peer_review_-_human_device_interaction_1/csd/2023": {
+          "type": "资源"
+        },
+        "project_human_device_interaction_1/csd/2023": {
+          "type": "幻灯片"
+        },
+        "rubric_-_human_device_interaction_1/csd/2023": {
+          "type": "评分准则"
+        },
+        "board_sensors_1/csd/2023": {
+          "type": "幻灯片"
+        },
+        "data_change_events/csd/2023": {
+          "type": "资源"
+        },
+        "setting_sensor_scale/csd/2023": {
+          "type": "资源"
+        },
+        "the_micro_bit_sensors/csd/2023": {
+          "type": "资源"
+        },
+        "accelerometer_1/csd/2023": {
+          "name": "加速传感器",
+          "type": "幻灯片"
+        },
+        "accelerometer_events_1/csd/2023": {
+          "name": "加速传感器事件",
+          "type": "资源"
+        },
+        "the_micro_bit_accelerometer/csd/2023": {
+          "type": "资源"
+        },
+        "functions_3/csd/2023": {
+          "name": "函数",
+          "type": "幻灯片"
+        },
+        "mini-project_interactive_pet/csd/2023": {
+          "type": "幻灯片"
+        },
+        "student_rubric_-_interactive_pet/csd/2023": {
+          "type": "评分准则"
+        },
+        "external_leds_on_a_micro_bit/csd/2023": {
+          "type": "资源"
+        },
+        "physical_outputs_and_leds_1/csd/2023": {
+          "type": "幻灯片"
+        },
+        "external_buttons_on_a_micro_bit/csd/2023": {
+          "type": "资源"
+        },
+        "physical_inputs_and_buttons_1/csd/2023": {
+          "type": "幻灯片"
+        },
+        "project_prototype_an_innovation_1/csd/2023": {
+          "name": "项目：创新原型",
+          "type": "幻灯片"
+        },
+        "prototype_an_innovation_2/csd/2023": {
+          "type": "评分准则"
+        },
+        "the_problem_solving_process_4/csd/2023": {
+          "name": "解决问题的过程"
+        },
+        "ai_what_is_machine_learning_/csd/2023": {
+          "url": "https://www.youtube.com/watch?v=OeU5m6vRyCk",
+          "type": "视频"
+        },
+        "introduction_to_machine_learning/csd/2023": {
+          "name": "机器学习的简介",
+          "type": "幻灯片"
+        },
+        "types_of_machine_learning/csd/2023": {
+          "type": "幻灯片"
+        },
+        "types_of_machine_learning_2/csd/2023": {
+          "type": "答案要点"
+        },
+        "innovations_in_ai/csd/2023": {
+          "type": "幻灯片"
+        },
+        "innovations_in_ai_research_areas_-_student_resource/csd/2023": {
+          "type": "资源"
+        },
+        "seeing_ai/csd/2023": {
+          "name": "看见 AI",
+          "type": "视频"
+        },
+        "_key_patterns_in_data/csd/2023": {
+          "type": "答案要点"
+        },
+        "finding_patterns_in_data/csd/2023": {
+          "type": "视频"
+        },
+        "patterns_in_data/csd/2023": {
+          "type": "幻灯片"
+        },
+        "shoe_survey/csd/2023": {
+          "type": "资源"
+        },
+        "_key_classification_models/csd/2023": {
+          "type": "答案要点"
+        },
+        "classification_models_1/csd/2023": {
+          "type": "幻灯片"
+        },
+        "fruit_veggie_cards/csd/2023": {
+          "type": "资源"
+        },
+        "_key_training_a_model_in_ai_lab/csd/2023": {
+          "type": "答案要点"
+        },
+        "accuracy_in_ai_lab/csd/2023": {
+          "type": "资源"
+        },
+        "introduction_to_ai_lab/csd/2023": {
+          "name": "人工智能实验室的介绍",
+          "type": "幻灯片"
+        },
+        "introduction_to_ai_lab_1/csd/2023": {
+          "name": "人工智能实验室的介绍",
+          "type": "视频"
+        },
+        "selecting_features/csd/2023": {
+          "type": "资源"
+        },
+        "training_and_testing_in_ai_lab/csd/2023": {
+          "name": "人工智能实验室中的训练和测试",
+          "type": "视频"
+        },
+        "using_data_with_categorical_features/csd/2023": {
+          "type": "资源"
+        },
+        "importing_a_model_in_app_lab/csd/2023": {
+          "type": "资源"
+        },
+        "importing_models_in_app_lab/csd/2023": {
+          "type": "幻灯片"
+        },
+        "ai_training_data_bias/csd/2023": {
+          "name": "人工智能：训练数据与偏差",
+          "url": "https://youtu.be/x2mRoFNm22g",
+          "type": "视频"
+        },
+        "model_cards/csd/2023": {
+          "type": "幻灯片"
+        },
+        "_key_zoo_models/csd/2023": {
+          "type": "答案要点"
+        },
+        "model_cards_in_ai_lab/csd/2023": {
+          "name": "人工智能实验室中的模型卡",
+          "type": "视频"
+        },
+        "saving_models_in_ai_lab/csd/2023": {
+          "type": "幻灯片"
+        },
+        "selecting_a_label/csd/2023": {
+          "type": "资源"
+        },
+        "if-statements_in_app_lab/csd/2023": {
+          "type": "视频"
+        },
+        "model_cards_in_app_lab/csd/2023": {
+          "type": "幻灯片"
+        },
+        "printable_model_cards/csd/2023": {
+          "type": "资源"
+        },
+        "_key_numerical_accuracy/csd/2023": {
+          "type": "答案要点"
+        },
+        "_key_zombie_prediction/csd/2023": {
+          "type": "答案要点"
+        },
+        "numerical_models/csd/2023": {
+          "type": "幻灯片"
+        },
+        "_key_-_numerical_data_in_ai_lab/csd/2023": {
+          "type": "答案要点"
+        },
+        "numerical_data_in_ai_lab/csd/2023": {
+          "name": "人工智能实验室中的数值数据",
+          "type": "幻灯片"
+        },
+        "numerical_data_in_ai_lab_1/csd/2023": {
+          "name": "人工智能实验室中的数值数据"
+        },
+        "numerical_data_in_ai_lab_2/csd/2023": {
+          "name": "人工智能实验室中的数值数据",
+          "type": "视频"
+        },
+        "using_data_with_numerical_features/csd/2023": {
+          "type": "资源"
+        },
+        "customizing_apps/csd/2023": {
+          "type": "幻灯片"
+        },
+        "ai_code_of_ethics/csd/2023": {
+          "type": "幻灯片"
+        },
+        "ethics_ai_equal_access_and_algorithmic_bias/csd/2023": {
+          "type": "视频"
+        },
+        "our_ai_code_of_ethics_template_/csd/2023": {
+          "type": "幻灯片"
+        },
+        "create_an_ml_app/csd/2023": {
+          "type": "评分准则"
+        },
+        "make_a_machine_learning_app/csd/2023": {
+          "type": "幻灯片"
+        },
+        "issue_statements/csd/2023": {
+          "type": "幻灯片"
+        },
+        "creating_a_survey/csd/2023": {
+          "type": "资源"
+        },
+        "creating_a_survey_in_google_forms/csd/2023": {
+          "type": "视频"
+        },
+        "survey_planning/csd/2023": {
+          "name": "设计数据收集",
+          "type": "幻灯片"
+        },
+        "cleaning_survey_data/csd/2023": {
+          "type": "视频"
+        },
+        "survey_data_in_ai_lab/csd/2023": {
+          "type": "幻灯片"
+        },
+        "view_and_download_survey_data/csd/2023": {
+          "type": "视频"
+        },
+        "troubleshooting_models/csd/2023": {
+          "type": "幻灯片"
+        },
+        "creating_an_app/csd/2023": {
+          "type": "幻灯片"
+        },
+        "_template_5_why_s/csd/2023": {
+          "type": "资源"
+        },
+        "design_an_ai_app/csd/2023": {
+          "type": "幻灯片"
+        },
+        "design_an_ai_app_1/csd/2023": {
+          "type": "评分准则"
+        },
+        "model_card_-_digital_template/csd/2023": {
+          "type": "资源"
+        },
+        "model_card_-_printable_template/csd/2023": {
           "type": "资源"
         },
         "all_resources/coursea/2023": {

@@ -233,6 +233,30 @@
         "code/poetry/2023": {
           "word": "Koodi"
         },
+        "input/csd/2023": {
+          "word": "Syöte"
+        },
+        "copyright/csd/2023": {
+          "word": "Copyright"
+        },
+        "debugging/csd/2023": {
+          "word": "Virheen etsintä"
+        },
+        "variable/csd/2023": {
+          "word": "Muuttuja"
+        },
+        "condition/csd/2023": {
+          "word": "Ehtolause"
+        },
+        "conditionals/csd/2023": {
+          "word": "Ehtolausekkeet"
+        },
+        "abstraction/csd/2023": {
+          "word": "Abstraktio"
+        },
+        "function/csd/2023": {
+          "word": "Funktio"
+        },
         "debugging/coursea/2023": {
           "word": "Virheen etsintä"
         },

@@ -2,6 +2,12 @@
   "lv-LV": {
     "data": {
       "callouts": {
+        "CSD U3L16 Prac D_2023": {
+          "CSD U3L16.7 - start": "Pievieno savu kodu šeit"
+        },
+        "CSD U6 - Color LEDs - SB4_2023": {
+          "CSDU6L10_rainbow": "Pievieno savu kodu šeit"
+        },
         "CSD U6 - Color LEDs - SB4_2222": {
           "CSDU6L10_rainbow": "Pievieno savu kodu šeit"
         },
