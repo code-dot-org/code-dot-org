@@ -247,6 +247,7 @@ class TopInstructions extends Component {
           .done((data, textStatus, request) => {
             this.setState({
               latestFeedback: request.status === 204 ? null : data,
+              teacherCanLeaveFeedback: true,
               token: request.getResponseHeader('csrf-token'),
             });
           })
@@ -610,6 +611,7 @@ class TopInstructions extends Component {
       miniRubric,
       tabSelected,
       fetchingData,
+      teacherCanLeaveFeedback,
       token,
     } = this.state;
 
@@ -650,7 +652,7 @@ class TopInstructions extends Component {
     const displayFeedbackTab =
       !taRubric &&
       (!!miniRubric ||
-        teacherViewingStudentWork ||
+        (teacherViewingStudentWork && teacherCanLeaveFeedback) ||
         (this.isViewingAsStudent && !!latestFeedback));
 
     const displayTaRubricTab =
@@ -748,6 +750,7 @@ class TopInstructions extends Component {
                 serverScriptId={this.props.serverScriptId}
                 serverLevelId={this.props.serverLevelId}
                 teacher={user}
+                allowUnverified={isCSF}
               />
             )}
             {tabSelected === TabType.DOCUMENTATION && (
