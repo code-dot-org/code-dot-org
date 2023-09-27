@@ -5,11 +5,16 @@ import CloseOnEscape from '@cdo/apps/templates/CloseOnEscape';
 import style from './accessible-dialogue.module.scss';
 import classnames from 'classnames';
 
-const AccessibleDialog = ({onClose, children, className}) => (
+const AccessibleDialog = ({
+  onClose,
+  children,
+  className,
+  initialFocus = true,
+}) => (
   <>
     <div className={style.modalBackdrop} />
     <CloseOnEscape handleClose={onClose}>
-      <FocusTrap>
+      <FocusTrap focusTrapOptions={{initialFocus: initialFocus}}>
         <div
           aria-modal
           className={classnames(style.modal, className)}
@@ -26,6 +31,7 @@ AccessibleDialog.propTypes = {
   onClose: PropTypes.func.isRequired,
   children: PropTypes.node,
   className: PropTypes.string,
+  initialFocus: PropTypes.bool,
 };
 
 export default AccessibleDialog;
