@@ -4,14 +4,16 @@
     "wrapup_video_id": null,
     "login_required": false,
     "properties": {
+      "curriculum_umbrella": "HOC",
       "is_course": true,
       "is_migrated": true,
+      "pilot_experiment": "hoc-ai-dance-party",
       "version_year": "unversioned"
     },
     "new_name": null,
     "family_name": "draft-hoc-dp",
-    "serialized_at": "2023-09-21 20:45:55 UTC",
-    "published_state": "in_development",
+    "serialized_at": "2023-09-26 23:46:01 UTC",
+    "published_state": "pilot",
     "instruction_type": "teacher_led",
     "instructor_audience": "teacher",
     "participant_audience": "student",
@@ -35,7 +37,7 @@
   "lessons": [
     {
       "key": "Dance Party",
-      "name": "Dance Party (Draft)",
+      "name": "Dance Party (Pilot)",
       "absolute_position": 1,
       "lockable": false,
       "has_lesson_plan": true,
@@ -245,7 +247,6 @@
       "key": "95c47909-ad65-4fc7-b450-d450261df116",
       "position": 1,
       "properties": {
-        "description": "#### Level 1\n\n* Drag the red `make a new` block from the toolbox on the left to the workspace on the right. Connect it inside the `setup` block.\n* You have now written your first program. Make sure to press Run to see what happens. You should hear music and see a character start to move in the display area.",
         "name": "Level by Level",
         "progression_name": "Intro Video"
       },
@@ -255,24 +256,26 @@
       }
     },
     {
-      "key": "a379aa81-2a22-41e6-ac6f-93192722d9c1",
+      "key": "16f40078-ca24-4ec8-bf05-03a7ce4403e0",
       "position": 2,
       "properties": {
-        "progression_name": "AI Generate block"
+        "description": "#### Level 2 \n\n* This level will explain how AI learns.",
+        "progression_name": "Training the AI"
       },
       "seeding_key": {
-        "activity_section.key": "a379aa81-2a22-41e6-ac6f-93192722d9c1",
+        "activity_section.key": "16f40078-ca24-4ec8-bf05-03a7ce4403e0",
         "lesson_activity.key": "4560d10d-c269-47d5-9e63-24287d44f326"
       }
     },
     {
-      "key": "16f40078-ca24-4ec8-bf05-03a7ce4403e0",
+      "key": "a379aa81-2a22-41e6-ac6f-93192722d9c1",
       "position": 3,
       "properties": {
-        "progression_name": "Choose a song"
+        "description": "#### Level 3\n\n* This level will introduce you to a new block where you will code a stage with the help of AI.\n\n* Drag the new block into the setup. Choose 3 emojis to match the vibe of the song and click \"Generate\" to see what stage AI comes up with.\n\n* Regenerate the stage until you have one you like. Then click \"Use\" to add it to your program.",
+        "progression_name": "AI Generate block"
       },
       "seeding_key": {
-        "activity_section.key": "16f40078-ca24-4ec8-bf05-03a7ce4403e0",
+        "activity_section.key": "a379aa81-2a22-41e6-ac6f-93192722d9c1",
         "lesson_activity.key": "4560d10d-c269-47d5-9e63-24287d44f326"
       }
     },
@@ -291,6 +294,7 @@
       "key": "93141767-e0d6-463a-8b8c-84513d6639ee",
       "position": 5,
       "properties": {
+        "description": "#### Level 4\n\n* Choose a song from the dropdown menu.\n* Drag the red `make a new` block from the toolbox on the left to the workspace on the right. Connect it inside the `setup` block.\n* You have now written your first program. Make sure to press Run to see what happens. You should hear music and see a character start to move in the display area.",
         "progression_name": "Code a dancer"
       },
       "seeding_key": {
@@ -302,7 +306,7 @@
       "key": "1302482b-b219-4aa1-9b7e-fdfa7bc9ef01",
       "position": 6,
       "properties": {
-        "description": "#### Level 2\n\n* Levels 2-3 are about making the dance interactive. \n* The green blocks are event blocks. These blocks start a new sequence of code and do not need to be connected inside the `setup` block. \n* Connecting the purple block under the green event block allows you to make the character perform a dance by pressing the orange arrow buttons or keys on your keyboard.\n* Make sure to press the arrow buttons after pressing Run or the dancer(s) won’t move.\n",
+        "description": "#### Level 5\n\n* Levels 5-7 are about making the dance interactive. \n* The green blocks are event blocks. These blocks start a new sequence of code and do not need to be connected inside the `setup` block. \n* Connecting the purple block under the green event block allows you to make the character perform a dance by pressing the orange arrow buttons or keys on your keyboard.\n* Make sure to press the arrow buttons after pressing Run or the dancer(s) won’t move.\n",
         "progression_name": "Choose a dance move"
       },
       "seeding_key": {
@@ -314,7 +318,7 @@
       "key": "b78748ed-14c0-48e6-a059-226b968b80bc",
       "position": 7,
       "properties": {
-        "description": "#### Level 3\n\n* Make sure to bring out a second purple `do once` block. You should have a `bears do once` block and a `cats do once` block in your workspace. Both should be connected to a green `when pressed` event block.\n* Make sure to press the arrow buttons after pressing Run or the dancers won’t move.\n",
+        "description": "#### Level 6\n\n* Level 6 is about creating groups of dancers quickly.\n* Use the new block provided in the toolbox to create a set of smaller dancers.\n*You should also use the normal `make a new` block to create a larger “lead” dancer.\n* Many students will be familiar with the idea that you can make something seem to be further away by drawing it in a smaller scale. In the next level you’ll be able to fine tune this effect.\n",
         "progression_name": "Code backup dancers"
       },
       "seeding_key": {
@@ -326,6 +330,7 @@
       "key": "9b7a6f86-d001-4ce4-8b75-4a2442731e94",
       "position": 8,
       "properties": {
+        "description": "#### Level 7\n\n* Level 7 is about giving the group of dancers a cohesive dance move.\n* Students can set all dancers of a certain costume to perform the same dance move using one block of code.",
         "progression_name": "Choose backup dancer moves"
       },
       "seeding_key": {
@@ -337,7 +342,6 @@
       "key": "ffcc0d2c-f91b-4619-a17d-4f191e9b9abf",
       "position": 9,
       "properties": {
-        "description": "#### Level 4\n\n* Levels 4-5 are about synchronizing the dance to the music. \n* The `after measures` event blocks also start a new sequence of code and should not be connected inside the `setup` block.\n* Connecting the purple `do forever` block under the green `after measures` event block should make the character perform a dance move after the number of measures you indicate.\n* The `do forever` block works differently from the `do once` blocks seen in the previous levels.",
         "progression_name": "Video: Using Events with Measures"
       },
       "seeding_key": {
@@ -349,7 +353,8 @@
       "key": "970eb21c-0313-475f-8820-0d5e48340710",
       "position": 10,
       "properties": {
-        "progression_name": "Code Measures events"
+        "description": "#### Level 9\n\n##### After X measures\n* Levels 9 is about synchronizing the dance to the music. \n* The `after measures` event blocks also start a new sequence of code and should not be connected inside the `setup` block.\n* Connecting the purple `do forever` block under the green `after measures` event block should make the character perform a dance move after the number of measures you indicate.\n* The `do forever` block works differently from the `do once` blocks seen in the previous levels.\n\n\n##### Key Pressed\n* Make sure to bring out a second purple `do once` block. You should have a `bears do once` block and a `cats do once` block in your workspace. Both should be connected to a green `when pressed` event block.\n* Make sure to press the arrow buttons after pressing Run or the dancers won’t move.",
+        "progression_name": "Key Press events"
       },
       "seeding_key": {
         "activity_section.key": "970eb21c-0313-475f-8820-0d5e48340710",
@@ -357,41 +362,8 @@
       }
     },
     {
-      "key": "9d6f542b-00c4-430d-8380-5f6e93238370",
-      "position": 11,
-      "properties": {
-        "description": "#### Level 5\n\n* Make sure to bring out a second green event block.  You should have a `after 4 measures` block and a `after 6 measures` block in your workspace. Both should have purple block connected underneath."
-      },
-      "seeding_key": {
-        "activity_section.key": "9d6f542b-00c4-430d-8380-5f6e93238370",
-        "lesson_activity.key": "4560d10d-c269-47d5-9e63-24287d44f326"
-      }
-    },
-    {
-      "key": "06548c58-1a66-4a8a-b03f-2bcf895652ca",
-      "position": 12,
-      "properties": {
-        "description": "#### Level 6\n\n* Level 6 is about creating groups of dancers quickly.\n* Use the new block provided in the toolbox to create a set of smaller dancers.\n*You should also use the normal `make a new` block to create a larger “lead” dancer.\n* Many students will be familiar with the idea that you can make something seem to be further away by drawing it in a smaller scale. In the next level you’ll be able to fine tune this effect."
-      },
-      "seeding_key": {
-        "activity_section.key": "06548c58-1a66-4a8a-b03f-2bcf895652ca",
-        "lesson_activity.key": "4560d10d-c269-47d5-9e63-24287d44f326"
-      }
-    },
-    {
-      "key": "1f1f69cb-8f6c-4115-8bb1-4d8b18840083",
-      "position": 13,
-      "properties": {
-        "description": "#### Level 7\n\n* Levels 7-9 are about adjusting the properties (e.g. size, color) of the dancers.\n* It is important to make sure that the teal `set` block is placed somewhere in the program *after* the dancers have been created. To solve this puzzle, place a `set size` block anywhere in your program and use it to change the size of some of your dancers. \n* Dancers created as a group have a default size of 30. Other dancers have a default size of 100."
-      },
-      "seeding_key": {
-        "activity_section.key": "1f1f69cb-8f6c-4115-8bb1-4d8b18840083",
-        "lesson_activity.key": "4560d10d-c269-47d5-9e63-24287d44f326"
-      }
-    },
-    {
       "key": "205205ea-fd10-43f9-84b1-f5503b73a788",
-      "position": 14,
+      "position": 11,
       "properties": {
         "tips": [
           {
@@ -406,30 +378,8 @@
       }
     },
     {
-      "key": "f4a226c5-1d3e-4d97-9686-068086199692",
-      "position": 15,
-      "properties": {
-        "description": "#### Level 8\n\n* As with the previous level, make sure to only use the `set tint to (color)` block *after* you have made the dancers in your program. For example, placing it as the first step in the `setup` area of your program will have no effect."
-      },
-      "seeding_key": {
-        "activity_section.key": "f4a226c5-1d3e-4d97-9686-068086199692",
-        "lesson_activity.key": "4560d10d-c269-47d5-9e63-24287d44f326"
-      }
-    },
-    {
-      "key": "074e9956-b756-4c0e-a208-152e61575c5a",
-      "position": 16,
-      "properties": {
-        "description": "#### Level 9\n\n* With the right code, you should see the dancer cycle through different colors, sizes, or dance moves.\n* Make sure there is a teal `change`, a teal `randomize` block, or a purple `do forever` block connected inside the `every 2 measures` block. \n* Make sure `do forever` blocks are set to either (Next), (Previous), or (Random). Otherwise, the dancer will just perform the set move repeatedly.\n* Note that the **code students write in this level is not checked for correctness**. This means they will always pass the level, even if they do not change the program. Students should feel free to experiment with their code in ways that are interesting to them. The students must click the “Finish” button to move on.\n* Making new dancers inside the `every 2 measures` block will cause your program to create multiple identical dancers at the same location(s) and may lead to unintended consequences!\n"
-      },
-      "seeding_key": {
-        "activity_section.key": "074e9956-b756-4c0e-a208-152e61575c5a",
-        "lesson_activity.key": "4560d10d-c269-47d5-9e63-24287d44f326"
-      }
-    },
-    {
       "key": "642d0c35-1d26-4561-a3f4-bcfb0405b83b",
-      "position": 17,
+      "position": 12,
       "properties": {
         "description": "#### Level 10\n\n* This last level is very open-ended. The tutorial itself is designed to give students ample time to keep working on their own dance.\n* **Encourage Sharing:** If students have cell phones with a data plan they can quickly text a link to their projects to their own phone or a friend's. If your school policy allows it, encourage them to do so here.\n* **Encourage Creativity:** Creativity is important throughout this lesson, but this is true here more than anywhere else! ",
         "progression_name": "Free Play"
@@ -505,6 +455,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "dance_party_ai_prototype"
+        ],
         "progression": "Intro Video"
       },
       "bonus": false,
@@ -527,6 +480,31 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "progression": "Training the AI"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "Dance_2019_01_draft_markdown"
+        ],
+        "lesson.key": "Dance Party",
+        "lesson_group.key": "",
+        "script.name": "draft-hoc-dp",
+        "activity_section.key": "16f40078-ca24-4ec8-bf05-03a7ce4403e0"
+      },
+      "level_keys": [
+        "Dance_2019_01_draft_markdown"
+      ]
+    },
+    {
+      "chapter": 3,
+      "position": 3,
+      "activity_section_position": 1,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "Dance_2019_generate_block_draft"
+        ],
         "progression": "AI Generate block"
       },
       "bonus": false,
@@ -544,55 +522,14 @@
       ]
     },
     {
-      "chapter": 3,
-      "position": 3,
-      "activity_section_position": 1,
-      "assessment": false,
-      "properties": {
-        "progression": "Choose a song"
-      },
-      "bonus": false,
-      "seeding_key": {
-        "script_level.level_keys": [
-          "Dance_2019_setup_draft"
-        ],
-        "lesson.key": "Dance Party",
-        "lesson_group.key": "",
-        "script.name": "draft-hoc-dp",
-        "activity_section.key": "16f40078-ca24-4ec8-bf05-03a7ce4403e0"
-      },
-      "level_keys": [
-        "Dance_2019_setup_draft"
-      ]
-    },
-    {
       "chapter": 4,
       "position": 4,
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
-        "progression": "Choose emojis for song"
-      },
-      "bonus": false,
-      "seeding_key": {
-        "script_level.level_keys": [
-          "Dance_2019_generate_block_choose_song"
+        "level_keys": [
+          "Dance_2019_01_draft"
         ],
-        "lesson.key": "Dance Party",
-        "lesson_group.key": "",
-        "script.name": "draft-hoc-dp",
-        "activity_section.key": "c85694f6-57c1-4870-87b8-faca71b41928"
-      },
-      "level_keys": [
-        "Dance_2019_generate_block_choose_song"
-      ]
-    },
-    {
-      "chapter": 5,
-      "position": 5,
-      "activity_section_position": 1,
-      "assessment": false,
-      "properties": {
         "progression": "Code a dancer"
       },
       "bonus": false,
@@ -610,11 +547,14 @@
       ]
     },
     {
-      "chapter": 6,
-      "position": 6,
+      "chapter": 5,
+      "position": 5,
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "Dance_2019_02_draft"
+        ],
         "progression": "Choose a dance move"
       },
       "bonus": false,
@@ -632,11 +572,14 @@
       ]
     },
     {
-      "chapter": 7,
-      "position": 7,
+      "chapter": 6,
+      "position": 6,
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "Dance_2019_06_draft"
+        ],
         "progression": "Code backup dancers"
       },
       "bonus": false,
@@ -654,11 +597,14 @@
       ]
     },
     {
-      "chapter": 8,
-      "position": 8,
+      "chapter": 7,
+      "position": 7,
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "Dance_2019_06_draft_backup_dance_moves"
+        ],
         "progression": "Choose backup dancer moves"
       },
       "bonus": false,
@@ -676,11 +622,14 @@
       ]
     },
     {
-      "chapter": 9,
-      "position": 9,
+      "chapter": 8,
+      "position": 8,
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "dance_party_ai_prototype_video_measures"
+        ],
         "progression": "Video: Using Events with Measures"
       },
       "bonus": false,
@@ -698,12 +647,15 @@
       ]
     },
     {
-      "chapter": 10,
-      "position": 10,
+      "chapter": 9,
+      "position": 9,
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
-        "progression": "Code Measures events"
+        "level_keys": [
+          "Dance_2019_04_draft"
+        ],
+        "progression": "Key Press events"
       },
       "bonus": false,
       "seeding_key": {
@@ -720,11 +672,14 @@
       ]
     },
     {
-      "chapter": 11,
-      "position": 11,
+      "chapter": 10,
+      "position": 10,
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "Dance_2019_10_draft"
+        ],
         "progression": "Free Play"
       },
       "bonus": false,
@@ -757,21 +712,9 @@
     },
     {
       "seeding_key": {
-        "level.key": "Dance_2019_generate_block_draft",
+        "level.key": "Dance_2019_01_draft_markdown",
         "script_level.level_keys": [
-          "Dance_2019_generate_block_draft"
-        ],
-        "lesson.key": "Dance Party",
-        "lesson_group.key": "",
-        "script.name": "draft-hoc-dp",
-        "activity_section.key": "a379aa81-2a22-41e6-ac6f-93192722d9c1"
-      }
-    },
-    {
-      "seeding_key": {
-        "level.key": "Dance_2019_setup_draft",
-        "script_level.level_keys": [
-          "Dance_2019_setup_draft"
+          "Dance_2019_01_draft_markdown"
         ],
         "lesson.key": "Dance Party",
         "lesson_group.key": "",
@@ -781,14 +724,14 @@
     },
     {
       "seeding_key": {
-        "level.key": "Dance_2019_generate_block_choose_song",
+        "level.key": "Dance_2019_generate_block_draft",
         "script_level.level_keys": [
-          "Dance_2019_generate_block_choose_song"
+          "Dance_2019_generate_block_draft"
         ],
         "lesson.key": "Dance Party",
         "lesson_group.key": "",
         "script.name": "draft-hoc-dp",
-        "activity_section.key": "c85694f6-57c1-4870-87b8-faca71b41928"
+        "activity_section.key": "a379aa81-2a22-41e6-ac6f-93192722d9c1"
       }
     },
     {
