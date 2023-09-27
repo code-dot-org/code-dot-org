@@ -624,4 +624,6 @@ module SharedConstants
       PERMISSION_GRANTED: 'g'
     }
   ).freeze
+
+  CURRENT_CENSUS_SCHOOL_YEAR = 2023
 end

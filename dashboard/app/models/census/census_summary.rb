@@ -28,4 +28,28 @@ class Census::CensusSummary < ApplicationRecord
     HISTORICAL_MAYBE: "HM",
   }.freeze
   enum teaches_cs: TEACHES
+
+  def self.summarize_census_data
+    latest_year = Census::CensusSubmission.maximum(:school_year)
+    school_years = (2016..latest_year)
+
+    ActiveRecord::Base.transaction do
+      School.eager_load(school_info: :census_submissions).
+        eager_load(:school_stats_by_year).
+        find_each do |school|
+        summarize_school_data(
+          {
+            school: school,
+            school_years: school_years,
+          }
+        ).each do |summary|
+          if block_given?
+            yield summary
+          else
+            summary.save!
+          end
+        end
+      end
+    end
+  end
 end

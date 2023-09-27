@@ -102,6 +102,7 @@
       cronjob at:'*/30 * * * *', do:dashboard_dir('bin', 'sync_jotforms')
       cronjob at:'0 6 * * *', do:deploy_dir('bin', 'cron', 'process_foorm_data')
       cronjob at:'25 7 * * *', do:deploy_dir('bin', 'cron', 'update_hoc_map')
+      cronjob at:'49 5 * * *', do:deploy_dir('bin', 'cron', 'update_census_mapbox')
       cronjob at:'*/10 * * * *', do:deploy_dir('bin', 'cron', 'delete_twilio_data')
       cronjob at:'* * * * *', do:deploy_dir('bin', 'cron', 'confirm_usage')
       cronjob at:'0 */2 * * *', do:deploy_dir('bin', 'cron', 'teacher_applications_to_gdrive')

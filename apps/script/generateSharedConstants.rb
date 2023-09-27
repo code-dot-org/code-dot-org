@@ -93,6 +93,7 @@ def main
     RUBRIC_UNDERSTANDING_LEVELS
     EMAIL_LINKS
     CHILD_ACCOUNT_COMPLIANCE_STATES
+    CURRENT_CENSUS_SCHOOL_YEAR
   )
 
   generate_shared_js_file(shared_content, "#{REPO_DIR}/apps/src/util/sharedConstants.js")
