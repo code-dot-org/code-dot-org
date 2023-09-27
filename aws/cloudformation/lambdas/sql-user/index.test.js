@@ -5,7 +5,7 @@ const mysql = require("mysql");
 const { SecretsManagerClient } = require("@aws-sdk/client-secrets-manager");
 
 const { handler } = require("./index.js");
-const response = require("./cfn-response");
+const response = require("cfn-response-promise");
 
 const expect = chai.expect;
 chai.use(sinonChai);
