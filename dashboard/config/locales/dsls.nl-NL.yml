@@ -2274,7 +2274,119 @@ nl-NL:
           u simulatie met anderen als u klaar bent. Deel uw boodschap over hoe we
           anderen in goede gezondheid kunnen houden als een virus een stad bezoekt.
           \n"
+      CourseF_outbreak_story2022_2022_pilot_-2022-2_2023:
+        content1: beschrijving hier
+        markdown: "# Uitbraak: programmeer uw eigen simulatie\n\n## Welkom bij Monster
+          Town!\nMonster Town was altijd een gelukkig en gezond stadje. De monsters
+          van Monster Town vonden het leuk om rond te zwerven en hun vrienden te bezoeken.
+          \n\n<img src=\"https://images.code.org/3b55881f776348c6eb32379e4cbd34e1-image-1603133896503.png\"
+          style=\"width:8%\"> <img src=\"https://images.code.org/3b55881f776348c6eb32379e4cbd34e1-image-1603133896503.png\"
+          style=\"width:8%\"> <img src=\"https://images.code.org/3b55881f776348c6eb32379e4cbd34e1-image-1603133896503.png\"
+          style=\"width:8%\"> <img src=\"https://images.code.org/3b55881f776348c6eb32379e4cbd34e1-image-1603133896503.png\"
+          style=\"width:8%\"> <img src=\"https://images.code.org/3b55881f776348c6eb32379e4cbd34e1-image-1603133896503.png\"
+          style=\"width:8%\"> <img src=\"https://images.code.org/3b55881f776348c6eb32379e4cbd34e1-image-1603133896503.png\"
+          style=\"width:8%\"> <img src=\"https://images.code.org/3b55881f776348c6eb32379e4cbd34e1-image-1603133896503.png\"
+          style=\"width:8%\"> <img src=\"https://images.code.org/3b55881f776348c6eb32379e4cbd34e1-image-1603133896503.png\"
+          style=\"width:8%\"> <img src=\"https://images.code.org/3b55881f776348c6eb32379e4cbd34e1-image-1603133896503.png\"
+          style=\"width:8%\"> <img src=\"https://images.code.org/3b55881f776348c6eb32379e4cbd34e1-image-1603133896503.png\"
+          style=\"width:8%\"> <img src=\"https://images.code.org/3b55881f776348c6eb32379e4cbd34e1-image-1603133896503.png\"
+          style=\"width:8%\">\n\nOp een dag begon een van de monsters zich ziek te
+          voelen. Het monster had een **virus** opgelopen! Een virus is een kleine
+          ziektekiem dat je ziek kan maken. De andere monsters maakten zich geen zorgen
+          en bleven hun vrienden bezoeken.\n\n<img src=\"https://images.code.org/3b55881f776348c6eb32379e4cbd34e1-image-1603133896503.png\"
+          style=\"width:8%\"> <img src=\"https://images.code.org/3b55881f776348c6eb32379e4cbd34e1-image-1603133896503.png\"
+          style=\"width:8%\"> <img src=\"https://images.code.org/3b55881f776348c6eb32379e4cbd34e1-image-1603133896503.png\"
+          style=\"width:8%\"> <img src=\"https://images.code.org/3b55881f776348c6eb32379e4cbd34e1-image-1603133896503.png\"
+          style=\"width:8%\"> <img src=\"https://images.code.org/3b55881f776348c6eb32379e4cbd34e1-image-1603133896503.png\"
+          style=\"width:8%\"> <img src=\"https://images.code.org/f30010a430a4189a734467094842b39d-image-1603134238257.png\"
+          style=\"width:8%\"> <img src=\"https://images.code.org/3b55881f776348c6eb32379e4cbd34e1-image-1603133896503.png\"
+          style=\"width:8%\"> <img src=\"https://images.code.org/3b55881f776348c6eb32379e4cbd34e1-image-1603133896503.png\"
+          style=\"width:8%\"> <img src=\"https://images.code.org/3b55881f776348c6eb32379e4cbd34e1-image-1603133896503.png\"
+          style=\"width:8%\"> <img src=\"https://images.code.org/3b55881f776348c6eb32379e4cbd34e1-image-1603133896503.png\"
+          style=\"width:8%\"> <img src=\"https://images.code.org/3b55881f776348c6eb32379e4cbd34e1-image-1603133896503.png\"
+          style=\"width:8%\">\n\nNiet lang daarna werden nog twee monsters ziek. Het
+          was hetzelfde virus!. Het leek erop dat ze het virus van hun vriend hadden
+          gekregen.\n\n<img src=\"https://images.code.org/3b55881f776348c6eb32379e4cbd34e1-image-1603133896503.png\"
+          style=\"width:8%\"> <img src=\"https://images.code.org/3b55881f776348c6eb32379e4cbd34e1-image-1603133896503.png\"
+          style=\"width:8%\"> <img src=\"https://images.code.org/3b55881f776348c6eb32379e4cbd34e1-image-1603133896503.png\"
+          style=\"width:8%\"> <img src=\"https://images.code.org/3b55881f776348c6eb32379e4cbd34e1-image-1603133896503.png\"
+          style=\"width:8%\"> <img src=\"https://images.code.org/f30010a430a4189a734467094842b39d-image-1603134238257.png\"
+          style=\"width:8%\"> <img src=\"https://images.code.org/f30010a430a4189a734467094842b39d-image-1603134238257.png\"
+          style=\"width:8%\"> <img src=\"https://images.code.org/f30010a430a4189a734467094842b39d-image-1603134238257.png\"
+          style=\"width:8%\"> <img src=\"https://images.code.org/3b55881f776348c6eb32379e4cbd34e1-image-1603133896503.png\"
+          style=\"width:8%\"> <img src=\"https://images.code.org/3b55881f776348c6eb32379e4cbd34e1-image-1603133896503.png\"
+          style=\"width:8%\"> <img src=\"https://images.code.org/3b55881f776348c6eb32379e4cbd34e1-image-1603133896503.png\"
+          style=\"width:8%\"> <img src=\"https://images.code.org/3b55881f776348c6eb32379e4cbd34e1-image-1603133896503.png\"
+          style=\"width:8%\">\n\nLangzaam verspreide het virus zich over de andere
+          monsters in de nabijheid. De gezonde monsters begonnen zich zorgen te maken
+          dat ze allemaal ziek zouden worden. De zieke monsters begonnen zich zorgen
+          te maken dat ze het virus aan iedereen zouden doorgeven.\n\n<img src=\"https://images.code.org/3b55881f776348c6eb32379e4cbd34e1-image-1603133896503.png\"
+          style=\"width:8%\"> <img src=\"https://images.code.org/3b55881f776348c6eb32379e4cbd34e1-image-1603133896503.png\"
+          style=\"width:8%\"> <img src=\"https://images.code.org/3b55881f776348c6eb32379e4cbd34e1-image-1603133896503.png\"
+          style=\"width:8%\"> <img src=\"https://images.code.org/f30010a430a4189a734467094842b39d-image-1603134238257.png\"
+          style=\"width:8%\"> <img src=\"https://images.code.org/f30010a430a4189a734467094842b39d-image-1603134238257.png\"
+          style=\"width:8%\"> <img src=\"https://images.code.org/f30010a430a4189a734467094842b39d-image-1603134238257.png\"
+          style=\"width:8%\"> <img src=\"https://images.code.org/f30010a430a4189a734467094842b39d-image-1603134238257.png\"
+          style=\"width:8%\"> <img src=\"https://images.code.org/f30010a430a4189a734467094842b39d-image-1603134238257.png\"
+          style=\"width:8%\"> <img src=\"https://images.code.org/3b55881f776348c6eb32379e4cbd34e1-image-1603133896503.png\"
+          style=\"width:8%\"> <img src=\"https://images.code.org/3b55881f776348c6eb32379e4cbd34e1-image-1603133896503.png\"
+          style=\"width:8%\"> <img src=\"https://images.code.org/3b55881f776348c6eb32379e4cbd34e1-image-1603133896503.png\"
+          style=\"width:8%\">\n\n\n<div style=\"display: inline-block\">\n<img src=\"https://images.code.org/89376b9ebd5fcee77545f13a7a444430-image-1603135356392.png\"
+          style=\"float:right; width:30%\">\n\n## De verspreiding stooppen.\nNa het
+          onderzoeken van het virus deden de bewoners van de omliggende stadjes van
+          Monster Town gelukkig een belangrijke ontdekking. Ze kwamen erachter dat
+          het virus minder werd verspreidt als ze mondkapjes droegen, en dankzij mondkapjes
+          konden zieke monster het virus niet zo gauw meer doorgeven aan gezonde monsters.\n\n<img
+          src=\"https://images.code.org/c98f28f9bf6a027143592109d59ee484-image-1603134766360.png\"
+          style=\"width:8%\"> <img src=\"https://images.code.org/bac9dbfaf1815c6627fc24e8e6db396d-image-1603134760456.png\"
+          style=\"width:8%\">\n\n</div>\n\n<img src=\"https://images.code.org/ef7499758496b39bcccc24aabd2af5d7-image-1603137920037.2020-10-19
+          16_04_58.gif\" style=\"float:left; width:25%; padding-right:25px\">\n\n##
+          Wat zal er nu gebeuren?\n\nVandaag gaat u een programma schrijven om je
+          eigen **simulatie** van de virusuitbraak in Monster Town te programmeren
+          en uit te voeren. Een simulatie is een computermodel van een proces of systeem.
+          Leer te programmeren en maak voorspellingen over wat er zal gebeuren met
+          de naburige stadjes van Monster Town.\n\n<img src=\"https://images.code.org/fcbfd250d58652bdfd6393ec4f2fe2dd-image-1603134705074.png\"
+          style=\"float:right; width:15%\">\n\n* *Hoe snel zal het virus zich verspreiden?*\n\n*
+          *Zal iedereen ziek worden?*\n\n* *Hoe kunnen mondkapjes helpen?*\n\n\nDeel
+          u simulatie met anderen als u klaar bent. Deel uw boodschap over hoe we
+          anderen in goede gezondheid kunnen houden als een virus een stad bezoekt.
+          \n"
       CourseF_outbreak_story22022_2022_pilot_-2022-2:
+        content1: beschrijving hier
+        markdown: "# Uitbraak: denken als een wetenschapper\n\n<img src=\"https://images.code.org/89376b9ebd5fcee77545f13a7a444430-image-1603135356392.png\"
+          style=\"float:right; width:30%\">\n\nSimulaties zijn een goede manier om
+          dingen te leren die moeilijk waar te nemen zijn in de echte wereld. Ze helpen
+          wetenschapers bij het oplossen van problemen en het veilig en efficient
+          testen van nieuwe ideeën. Uw simulatie is een manier om te demonstreren
+          hoe een virusuitbraak in Monster Town eruit kan zien.\n\n## Resetten en
+          opnieuw spelen!\nZelfs als u het programma zelf schrijft, is het onmogelijk
+          om precies te weten wat er gaat gebeuren als u op uitvoeren drukt. De monster
+          zwerven willekeurig rond, en dus weet u niet of het virus snel of langzaam
+          zal verspreiden. Als u wijzigingen aanbrengt in uw programma, voer dan uw
+          simulatie meerdere keren uit. Niets zal twee keer precies hetzelfde gebeuren.\n\n##
+          Data verzamelen\nMaak notities tijdens het uitvoeren van uw simulatie. U
+          kunt het aantal monster dat ziek wordt tellen of een timer gebruiken om
+          te zien hoe snel de dingen veranderen. Hoe lang duurt het bijvoorbeeld dat
+          alle monsters ziek worden als geen van hen een mondkapje draagt? \n\n##
+          Voorspellingen doen\nAls u uw model goed begrijpt, dan kunt u het gebruiken
+          om voorspellingen te doen. U kunt zelfs het uitvoeren van uw simulatie veranderenen
+          en raden welke gebeurtenissen anders zullen verlopen. Bijvoorbeeld:\n* Wat
+          gebeurt er als er twee keer zoveel monsters zijn?\n* Wat gebeurt er als
+          de monster op slechts halve snelheid liepen?\n\n<img src=\"https://images.code.org/2e83373ffd346ce3f42917a0624d441c-image-1603749526420.png\"
+          style=\"float:right\">\n\n## Is Monster Town net als de echte wereld?\nElk
+          model heeft een grens wat betreft het realisme. \n* Wat heeft uw uitbraaksimulatie
+          gemeen met virusuitbraken in de echte wereld?\n* Wat zijn de verschillen?\nWanneer
+          u deze activiteit hebt afgerond, den kunt u deze vragen bespreken met uw
+          leraren of uw gezin.\n\n## Waar kunnen we nog meer een model van maken?\nU
+          hebt reeds een werkend model gemaakt van de uitbraak in Monster Town. Wat
+          kan uw simulatie niet doen of laten zien dat u wenste dat het kon? Druk
+          op Doorgaan om verder te gaan en maak beter kennis met het model:\n* Het
+          aantal monsters in de simulatie te laten toenemen\n* Monsters helpen met
+          genezen van het virus\n* Waarschijnlijkheid, immuniteit, vaccins en meer.\n\nTevens
+          kunt u uw simulatiemodel delen met anderen, of een boodschap delen over
+          wat u denkt dat wij kunnen doen om anderen in goede gezondheid te houden
+          als een virus het stadje bezoekt. \n"
+      CourseF_outbreak_story22022_2022_pilot_-2022-2_2023:
         content1: beschrijving hier
         markdown: "# Uitbraak: denken als een wetenschapper\n\n<img src=\"https://images.code.org/89376b9ebd5fcee77545f13a7a444430-image-1603135356392.png\"
           style=\"float:right; width:30%\">\n\nSimulaties zijn een goede manier om
@@ -3479,6 +3591,18 @@ nl-NL:
         questions:
         - text: Kijk eens goed naar onderstaande code. Wat zal er gebeuren als je
             op `start` klikt?
+      courseC_multi_artist_prog6_predict12022_2023:
+        answers:
+        - feedback: Fout. De artiest tekent een vierkant.
+          text: De artiest zal een driehoek tekenen met drie gelijke zijden.
+        - feedback: Fout. De artiest tekent een vierkant.
+          text: De artiest zal een enkele lijn tekenen.
+        - correct: true
+          feedback: Juist!
+        - {}
+        questions:
+        - text: Kijk eens goed naar onderstaande code. Wat zal er gebeuren als je
+            op `start` klikt?
       courseC_multi_artist_prog6_predict1_2018:
         answers:
         - feedback: Fout. De artiest tekent een vierkant.
@@ -3548,6 +3672,23 @@ nl-NL:
         - text: Kijk eens goed naar onderstaande code. Hoeveel pompoenen zal de boer
             verzamelen als je op `start` klikt?
       courseC_multi_harvester_loops11_predict12022:
+        answers:
+        - feedback: Fout.  De boer zal in elk van de 3 lussen 4 pompoenen verzamelen.  3
+            maal 4 is 12!
+          text: '4'
+        - correct: true
+          feedback: Juist!
+          text: '12'
+        - feedback: Fout.  De boer zal in elk van de 3 lussen 4 pompoenen verzamelen.  3
+            maal 4 is 12!
+          text: '15'
+        - feedback: Fout.  De boer zal in elk van de 3 lussen 4 pompoenen verzamelen.  3
+            maal 4 is 12!
+          text: '20'
+        questions:
+        - text: Kijk eens goed naar onderstaande code. Hoeveel pompoenen zal de boer
+            verzamelen als je op `start` klikt?
+      courseC_multi_harvester_loops11_predict12022_2023:
         answers:
         - feedback: Fout.  De boer zal in elk van de 3 lussen 4 pompoenen verzamelen.  3
             maal 4 is 12!
@@ -3656,6 +3797,14 @@ nl-NL:
         - {}
         questions:
         - {}
+      courseC_multi_maze_debugging8_predict12022_2023:
+        answers:
+        - {}
+        - correct: true
+        - {}
+        - {}
+        questions:
+        - {}
       courseC_multi_maze_debugging8_predict1_2018:
         answers:
         - feedback: Fout. Scrat gaat de verkeerde kant op na zijn laatste draai.
@@ -3719,6 +3868,19 @@ nl-NL:
         - text: Lees onderstaande code zorgvuldig door. Wat zal er gebeuren als je
             op `Start` drukt?
       courseC_multi_maze_programming8_predict12022:
+        answers:
+        - feedback: Fout. Dit programma brengt de angry bird precies bij het biggetje.
+          text: De angry bird eindigt een stap voordat hij het biggetje zou bereiken.
+        - correct: true
+          feedback: Juist!
+          text: De angry bird zal het biggetje bereiken.
+        - feedback: Fout. Dit programma brengt de angry bird precies bij het biggetje.
+          text: De vogel zal tegen de TNT aan lopen.
+        - feedback: Fout. Dit programma brengt de angry bird precies bij het biggetje.
+        questions:
+        - text: Lees onderstaande code zorgvuldig door. Wat zal er gebeuren als je
+            op `Start` drukt?
+      courseC_multi_maze_programming8_predict12022_2023:
         answers:
         - feedback: Fout. Dit programma brengt de angry bird precies bij het biggetje.
           text: De angry bird eindigt een stap voordat hij het biggetje zou bereiken.
@@ -3817,6 +3979,21 @@ nl-NL:
             zal bewegen.
         questions:
         - text: Wat zal er gebeuren als je op `Start` drukt?
+      courseC_multi_starWars_predict12022_2023:
+        answers:
+        - feedback: Fout. Het `herhaal`-blok zorgt er voor dat BB-8 5 keer vooruit
+            zal bewegen.
+          text: BB-8 zal niet bewegen.
+        - feedback: Fout. Het `herhaal`-blok zorgt er voor dat BB-8 5 keer vooruit
+            zal bewegen.
+          text: BB-8 zal maar een plek vooruit bewegen.
+        - correct: true
+          feedback: Juist!
+          text: BB-8 zal 5 keer vooruit bewegen en alle schroot verzamelen.
+        - feedback: Fout. Het `herhaal`-blok zorgt er voor dat BB-8 5 keer vooruit
+            zal bewegen.
+        questions:
+        - text: Wat zal er gebeuren als je op `Start` drukt?
       courseC_multi_starWars_predict1_2018:
         answers:
         - feedback: Fout. Het `herhaal`-blok zorgt er voor dat BB-8 5 keer vooruit
@@ -3899,6 +4076,23 @@ nl-NL:
         - text: Kijk eens goed naar onderstaande code. Wat zal er gebeuren als je
             op `start` klikt?
       courseC_multi_starWars_predict22022:
+        answers:
+        - feedback: Fout. De eerste lus laat BB-8 maar 2 plekken vooruit bewegen,
+            terwijl hij eigenlijk 3 plekken vooruit moet.
+          text: BB-8 zal in de eerste lus te ver bewegen.
+        - correct: true
+          feedback: Juist!
+          text: BB-8 zal in de eerste lus niet ver genoeg bewegen om alle schroot
+            te pakken te krijgen.
+        - feedback: Fout. De eerste lus laat BB-8 maar 2 plekken vooruit bewegen,
+            terwijl hij eigenlijk 3 plekken vooruit moet.
+          text: BB-8 zal probleemloos alle schroot verzamelen.
+        - feedback: Fout. De eerste lus laat BB-8 maar 2 plekken vooruit bewegen,
+            terwijl hij eigenlijk 3 plekken vooruit moet.
+        questions:
+        - text: Kijk eens goed naar onderstaande code. Wat zal er gebeuren als je
+            op `start` klikt?
+      courseC_multi_starWars_predict22022_2023:
         answers:
         - feedback: Fout. De eerste lus laat BB-8 maar 2 plekken vooruit bewegen,
             terwijl hij eigenlijk 3 plekken vooruit moet.
@@ -4075,6 +4269,22 @@ nl-NL:
         questions:
         - text: Kijk eens goed naar de code hieronder. Welke tekening zal dit programma
             maken als je op "Start" drukt?
+      courseD_multi_artist_nestedLoops9_predict12022_2023:
+        answers:
+        - correct: true
+          feedback: Juist!
+          text: A
+        - feedback: Fout. De binnenste lus tekent een vijfhoek, en de buitenste lus
+            herhaalt dit 4 keer in een cirkel.
+          text: B
+        - feedback: Fout. De binnenste lus tekent een vijfhoek, en de buitenste lus
+            herhaalt dit 4 keer in een cirkel.
+          text: C
+        - feedback: Fout. De binnenste lus tekent een vijfhoek, en de buitenste lus
+            herhaalt dit 4 keer in een cirkel.
+        questions:
+        - text: Kijk eens goed naar de code hieronder. Welke tekening zal dit programma
+            maken als je op "Start" drukt?
       courseD_multi_artist_nestedLoops9_predict1_2018:
         answers:
         - correct: true
@@ -4183,6 +4393,23 @@ nl-NL:
             kunnen staan. Als er een staat, moet de bij er nectar uit halen. Maar
             als er geen bloem is mag de bij niets doen.  Kijk eens goed naar onderstaande
             code. Wat denk je dat er zal gebeuren als je op "Start" drukt?
+      courseD_multi_bee_conditionals1_predict12022_2023:
+        answers:
+        - feedback: Fout. Het `als op de bloem`-blok zorgt er voor dat de bij alleen
+            zal proberen nectar te halen, als er een bloem onder de wolk staat.
+          text: De bij zal naar de wolk vliegen, en hoe dan ook proberen om nectar
+            te halen.
+        - correct: true
+          feedback: Juist!
+          text: De bij zal naar de wolk vliegen, en alleen maar nectar halen als er
+            een bloem onder staat.
+        - feedback: Fout. Het `als op de bloem`-blok zorgt er voor dat de bij zal
+            proberen nectar te halen, als er een bloem onder de wolk staat.
+          text: De bij zal naar de wolk vliegen en verder hoe dan ook niets doen.
+        - feedback: Fout. Het `als op de bloem`-blok zorgt er voor dat de bij alleen
+            zal proberen nectar te halen, als er een bloem onder de wolk staat.
+        questions:
+        - {}
       courseD_multi_bee_conditionals1_predict1_2018:
         answers:
         - feedback: Fout. Het `als op de bloem`-blok zorgt er voor dat de bij alleen
@@ -4339,6 +4566,17 @@ nl-NL:
         - {}
         questions:
         - {}
+      courseD_multi_bee_conditionals7_predict22022_2023:
+        answers:
+        - correct: true
+          feedback: Juist!
+        - text: De bij zal zowel bij bloemen als bij honingraten proberen om nectar
+            te halen.
+        - text: De bij zal zowel bij bloemen als bij honingraten proberen om honing
+            te maken.
+        - {}
+        questions:
+        - {}
       courseD_multi_bee_conditionals7_predict2_2018:
         answers:
         - correct: true
@@ -4410,6 +4648,22 @@ nl-NL:
         - text: Kijk eens goed naar onderstaande geneste lussen. Wat zal er gebeuren
             als je op `start` klikt?
       courseD_multi_bee_nestedLoops2_predict12022:
+        answers:
+        - feedback: Fout.  De bij zal de geluste actie van vooruit bewegen en nectar
+            verzamelen herhalen, en zo de puzzle oplossen.
+          text: De bij zal vooruit gaan en maar een keer nectar halen.
+        - feedback: Fout.  De bij zal de geluste actie van vooruit bewegen en nectar
+            verzamelen herhalen, en zo de puzzle oplossen.
+          text: De bij zal slechts 2 eenheden nectar krijgen.
+        - correct: true
+          feedback: Juist!
+          text: De bij zal alle nectar krijgen.
+        - feedback: Fout.  De bij zal de geluste actie van vooruit bewegen en nectar
+            verzamelen herhalen, en zo de puzzle oplossen.
+        questions:
+        - text: Kijk eens goed naar onderstaande geneste lussen. Wat zal er gebeuren
+            als je op `start` klikt?
+      courseD_multi_bee_nestedLoops2_predict12022_2023:
         answers:
         - feedback: Fout.  De bij zal de geluste actie van vooruit bewegen en nectar
             verzamelen herhalen, en zo de puzzle oplossen.
@@ -4515,6 +4769,29 @@ nl-NL:
         - text: Kijk eens goed naar onderstaande code. Hoeveel honing zal de bij maken
             als je op `start` klikt?
       courseD_multi_bee_nestedLoops9_predict22022:
+        answers:
+        - feedback: Fout. De bij verzamelt in een lus 2 nectar terwijl hij vooruit
+            beweegt, en daarna 2 nectar terwijl hij naar beneden beweegt. Dit alles
+            gebeurt binnen een andere lus, die 2 keer uitgevoerd wordt. 2 maal 4 is
+            8!
+          text: '4'
+        - correct: true
+          feedback: Juist!
+          text: '8'
+        - feedback: Fout. De bij verzamelt in een lus 2 nectar terwijl hij vooruit
+            beweegt, en daarna 2 nectar terwijl hij naar beneden beweegt. Dit alles
+            gebeurt binnen een andere lus, die 2 keer uitgevoerd wordt. 2 maal 4 is
+            8!
+          text: '10'
+        - feedback: Fout. De bij verzamelt in een lus 2 nectar terwijl hij vooruit
+            beweegt, en daarna 2 nectar terwijl hij naar beneden beweegt. Dit alles
+            gebeurt binnen een andere lus, die 2 keer uitgevoerd wordt. 2 maal 4 is
+            8!
+          text: '12'
+        questions:
+        - text: Kijk eens goed naar onderstaande code. Hoeveel honing zal de bij maken
+            als je op `start` klikt?
+      courseD_multi_bee_nestedLoops9_predict22022_2023:
         answers:
         - feedback: Fout. De bij verzamelt in een lus 2 nectar terwijl hij vooruit
             beweegt, en daarna 2 nectar terwijl hij naar beneden beweegt. Dit alles
@@ -4674,6 +4951,16 @@ nl-NL:
         questions:
         - text: Kijk eens goed naar onderstaande code. Wat zal er gebeuren als je
             op `start` klikt?
+      courseD_multi_farmer_condLoops9_predict12022_2023:
+        answers:
+        - text: De oogster zal alle oogst verzamelen.
+        - {}
+        - correct: true
+          feedback: Juist!
+        - {}
+        questions:
+        - text: Kijk eens goed naar onderstaande code. Wat zal er gebeuren als je
+            op `start` klikt?
       courseD_multi_farmer_condLoops9_predict1_2018:
         answers:
         - text: De oogster zal alle oogst verzamelen.
@@ -4755,6 +5042,22 @@ nl-NL:
         - text: Kijk eens goed naar onderstaande code. Wat zal er overblijven nadat
             je dat programma uitvoert?
       courseD_multi_farmer_while10_predict22022:
+        answers:
+        - feedback: Fout. Deze code bevat geen instructies om zand uit een hoop te
+            verwijderen.
+          text: Niets. Het programma zal alleen platgemaakte grond grond achterlaten
+        - correct: true
+          feedback: Juist!
+          text: Deze code zal de hoop zand laten staan.
+        - feedback: Fout. De `herhaal`-lus zal gaten van elke grootte opvullen, maar
+            er staat geen instructie in om zand van een hoop te verwijderen.
+          text: Deze code zal de gaten niet vullen.
+        - feedback: Fout. Deze code bevat geen instructies om zand uit een hoop te
+            verwijderen.
+        questions:
+        - text: Kijk eens goed naar onderstaande code. Wat zal er overblijven nadat
+            je dat programma uitvoert?
+      courseD_multi_farmer_while10_predict22022_2023:
         answers:
         - feedback: Fout. Deze code bevat geen instructies om zand uit een hoop te
             verwijderen.
@@ -4872,6 +5175,23 @@ nl-NL:
         questions:
         - text: Kijk eens goed naar onderstaande code. Wat zal er gebeuren als je
             op `start` klikt?
+      courseD_multi_farmer_while4_predict12022_2023:
+        answers:
+        - feedback: Fout. De boer zal zand verwijderen zolang er een stapel ligt,
+            en stoppen zodra de stapel weg is
+          text: Er zal niets gebeuren.
+        - feedback: Fout. De boer zal zand verwijderen zolang er een stapel ligt,
+            en stoppen zodra de stapel weg is
+          text: De boer zal nooit stoppen met zand verwijderen.
+        - correct: true
+          feedback: Juist!
+          text: De boer zal zand verwijderen zolang er een stapel ligt, en stoppen
+            zodra de stapel weg is.
+        - feedback: Fout. De boer zal zand verwijderen zolang er een stapel ligt,
+            en stoppen zodra de stapel weg is
+        questions:
+        - text: Kijk eens goed naar onderstaande code. Wat zal er gebeuren als je
+            op `start` klikt?
       courseD_multi_farmer_while4_predict1_2018:
         answers:
         - feedback: Fout. De boer zal zand verwijderen zolang er een stapel ligt,
@@ -4973,6 +5293,17 @@ nl-NL:
         questions:
         - text: Kijk eens goed naar onderstaande code. Wat zal er gebeuren als je
             op `start` klikt?
+      courseD_multi_maze_until10_predict22022_2023:
+        answers:
+        - correct: true
+          feedback: Juist!
+        - text: De zombie zal de zonnebloem bereiken.
+        - text: De zombie zal bij de eerste kruising rechtsaf slaan, en alsmaar in
+            een kringetje blijven rondlopen.
+        - {}
+        questions:
+        - text: Kijk eens goed naar onderstaande code. Wat zal er gebeuren als je
+            op `start` klikt?
       courseD_multi_maze_until10_predict2_2018:
         answers:
         - correct: true
@@ -5038,6 +5369,25 @@ nl-NL:
         - text: Kijk eens goed naar de code hieronder. Wat zal er gebeuren als je
             op `Start` drukt?
       courseD_multi_maze_until2_predict12022:
+        answers:
+        - feedback: Fout. De code zal de angry bird net zolang vooruit laten bewegen
+            zolang er een pad is, en dan linksaf slaan. En dat doet ie net zolang
+            totdat ie bij het varken is!
+          text: De angry bird zal helemaal niet bewegen.
+        - correct: true
+          feedback: Juist!
+          text: De angry bird zal het biggetje bereiken.
+        - feedback: Fout. De code zal de vogel net zolang vooruit laten bewegen zolang
+            er een veilig pad is, en dan linksaf slaan. En dat doet ie net zolang
+            totdat ie bij het varken is!
+          text: De angry bird zal vooruit bewegen en tegen de TNT aan botsen.
+        - feedback: De code zal de vogel net zolang vooruit laten bewegen zolang er
+            een pad is, en dan linksaf slaan. En dat doet ie net zolang totdat ie
+            bij het varken is!
+        questions:
+        - text: Kijk eens goed naar de code hieronder. Wat zal er gebeuren als je
+            op `Start` drukt?
+      courseD_multi_maze_until2_predict12022_2023:
         answers:
         - feedback: Fout. De code zal de angry bird net zolang vooruit laten bewegen
             zolang er een pad is, en dan linksaf slaan. En dat doet ie net zolang
@@ -5200,6 +5550,16 @@ nl-NL:
         - text: De oogster zal de mais plukken.
         questions:
         - text: Kijk naar de functies hieronder. Wat zal de oogster plukken?
+      courseE_multi_farmer_functions11_predict2022_2023:
+        answers:
+        - text: De oogster zal twee pompoenen plukken.
+        - text: De oogster zal alle pompoenen plukken.
+        - correct: true
+          feedback: Juist!
+          text: De oogster zal de sla plukken
+        - text: De oogster zal de mais plukken.
+        questions:
+        - text: Kijk naar de functies hieronder. Wat zal de oogster plukken?
       courseE_multi_farmer_functions11_predict_2018:
         answers:
         - text: De oogster zal twee pompoenen plukken.
@@ -5256,6 +5616,21 @@ nl-NL:
         questions:
         - text: Wat zal er gebeuren als je op 'Start' drukt?
       courseE_prediction_artistFunction12022:
+        answers:
+        - feedback: Fout. De functie wordt wel degelijk aangeroepen in het programma.
+          text: Niets. De functie wordt niet aangeroepen in het programma.
+        - feedback: Fout. De functie wordt wel degelijk aangeroepen in het programma.
+          text: De artiest zal een enkel vierkant tekenen.
+        - feedback: Fout. De zijde van elk vierkant is maar 100 pixels lang, maar
+            de artiest maakt een sprong van 175 pixels tussen de functie-aanroepen.
+          text: De artiest zal twee vierkanten tekenen die over elkaar heen vallen.
+        - correct: true
+          feedback: Goed! De functie wordt twee keer aangeropen in het programma,
+            met een sprong er tussen in.
+          text: De artiest zal twee vierkanten tekenen met wat lege ruimte er tussen.
+        questions:
+        - text: Wat zal er gebeuren als je op 'Start' drukt?
+      courseE_prediction_artistFunction12022_2023:
         answers:
         - feedback: Fout. De functie wordt wel degelijk aangeroepen in het programma.
           text: Niets. De functie wordt niet aangeroepen in het programma.
@@ -5370,6 +5745,16 @@ nl-NL:
         questions:
         - text: Kijk eens goed naar onderstaande code. Wat zal er gebeuren als je
             op `start` klikt?
+      courseE_swim_fish_behavior_predict12022_2023:
+        answers:
+        - text: Er zal niets gebeuren.
+        - {}
+        - correct: true
+          feedback: Juist!
+        - {}
+        questions:
+        - text: Kijk eens goed naar onderstaande code. Wat zal er gebeuren als je
+            op `start` klikt?
       courseE_swim_fish_behavior_predict1_2021:
         answers:
         - text: Er zal niets gebeuren.
@@ -5423,7 +5808,23 @@ nl-NL:
         - {}
         questions:
         - {}
+      courseF_events_predict_multi2022_2022_pilot_-2022-2_2023:
+        answers:
+        - {}
+        - {}
+        - correct: true
+        - {}
+        questions:
+        - {}
       courseF_groups_predict_multi_2022_pilot_-2022-2:
+        answers:
+        - correct: true
+        - {}
+        - {}
+        - {}
+        questions:
+        - {}
+      courseF_groups_predict_multi_2022_pilot_-2022-2_2023:
         answers:
         - correct: true
         - {}
@@ -5441,6 +5842,15 @@ nl-NL:
         questions:
         - {}
       courseF_labels_predict_multi2022_2022_pilot_-2022-2:
+        answers:
+        - {}
+        - {}
+        - {}
+        - correct: true
+        - {}
+        questions:
+        - {}
+      courseF_labels_predict_multi2022_2022_pilot_-2022-2_2023:
         answers:
         - {}
         - {}
@@ -5504,6 +5914,15 @@ nl-NL:
         questions:
         - {}
       courseF_multi_artist_variables3a_predict12022:
+        answers:
+        - correct: true
+          feedback: Juist!
+        - {}
+        - {}
+        - {}
+        questions:
+        - {}
+      courseF_multi_artist_variables3a_predict12022_2023:
         answers:
         - correct: true
           feedback: Juist!
@@ -5595,6 +6014,15 @@ nl-NL:
         - {}
         questions:
         - {}
+      courseF_multi_bee_for3_predict12022_2023:
+        answers:
+        - {}
+        - correct: true
+          feedback: Juist!
+        - {}
+        - {}
+        questions:
+        - {}
       courseF_multi_bee_for3_predict1_2018:
         answers:
         - {}
@@ -5663,6 +6091,14 @@ nl-NL:
         - {}
         questions:
         - {}
+      courseF_sprites_predict_multi2022_2022_pilot_-2022-2_2023:
+        answers:
+        - {}
+        - correct: true
+        - {}
+        - {}
+        questions:
+        - {}
       courseF_variables2_predict2_multi2022_-2022-2:
         answers:
         - correct: true
@@ -5671,7 +6107,23 @@ nl-NL:
         - {}
         questions:
         - {}
+      courseF_variables2_predict2_multi2022_-2022-2_2023:
+        answers:
+        - correct: true
+        - {}
+        - {}
+        - {}
+        questions:
+        - {}
       courseF_variables2_predict_multi2022_2022_pilot_-2022-2:
+        answers:
+        - {}
+        - {}
+        - correct: true
+        - {}
+        questions:
+        - {}
+      courseF_variables2_predict_multi2022_2022_pilot_-2022-2_2023:
         answers:
         - {}
         - {}
@@ -5695,9 +6147,19 @@ nl-NL:
         - {}
         questions:
         - {}
+      courseF_variables_predict_multi2022_2022_pilot_-2022-2_2023:
+        answers:
+        - {}
+        - correct: true
+        - {}
+        - {}
+        questions:
+        - {}
       courseF_variables_stop:
         content1: beschrijving hier
       courseF_variables_stop2022_2022_pilot_-2022-2:
+        content1: beschrijving hier
+      courseF_variables_stop2022_2022_pilot_-2022-2_2023:
         content1: beschrijving hier
       coursee_prediction_artistfunction2:
         answers:
@@ -5716,6 +6178,22 @@ nl-NL:
         questions:
         - text: Wat gebeurt er als je op `Start` drukt?
       coursee_prediction_artistfunction22022:
+        answers:
+        - feedback: Fout. De lus gebruikt `teken ene veelhoek` in plaats van `teken
+            een rij veelhoeken`.
+          text: De artiest zal deze functie correct oplossen.
+        - correct: true
+          feedback: Juist!
+          text: De artiest zal vier vierkanten tekenen in een venster-patroon.
+        - feedback: Fout. Het programma roept de `teken een rij veelhoeken`-functie
+            niet aan.
+          text: De artiest zal slechts een rij vierkanten tekenen.
+        - feedback: Fout. De lus draait 90 graden tussen de aanroepen van `teken een
+            veelhoek`.
+          text: De artiest zal vier vierkanten boven op elkaar tekenen.
+        questions:
+        - text: Wat gebeurt er als je op `Start` drukt?
+      coursee_prediction_artistfunction22022_2023:
         answers:
         - feedback: Fout. De lus gebruikt `teken ene veelhoek` in plaats van `teken
             een rij veelhoeken`.
@@ -5795,6 +6273,42 @@ nl-NL:
           text: De artiest zal vier vierkanten boven op elkaar tekenen.
         questions:
         - text: Wat gebeurt er als je op `Start` drukt?
+      csc_animal_adaptations_predict:
+        answers:
+        - {}
+        - correct: true
+          feedback: Juist!
+        - {}
+        - {}
+        questions:
+        - {}
+      csc_ecosystems_matching_cfu:
+        answers:
+        - {}
+        - {}
+        - {}
+        questions:
+        - {}
+        - {}
+        - {}
+      csc_ecosystems_matching_conditionals:
+        answers:
+        - {}
+        - {}
+        - {}
+        questions:
+        - {}
+        - {}
+        - {}
+      csc_ecosystems_matching_events:
+        answers:
+        - {}
+        - {}
+        questions:
+        - {}
+        - {}
+      csc_timecapsule_info_2023:
+        content1: beschrijving hier
       csd-post-survey-2017-q11_2018:
         answers:
         - correct: true
@@ -8931,6 +9445,8 @@ nl-NL:
         content1: beschrijving hier
       csf_be_a_super_digital_citizen2022:
         content1: beschrijving hier
+      csf_be_a_super_digital_citizen2022_2023:
+        content1: beschrijving hier
       csf_be_a_super_digital_citizen_2021:
         content1: beschrijving hier
       csf_digital_trails:
@@ -8939,6 +9455,11 @@ nl-NL:
 
           ## Welke informatie is OKE om in je digitale voetafdruk te hebben?
       csf_digital_trails2022:
+        markdown: |-
+          # Volg het digitale pad
+
+          ## Welke informatie is OKE om in je digitale voetafdruk te hebben?
+      csf_digital_trails2022_2023:
         markdown: |-
           # Volg het digitale pad
 
@@ -8952,11 +9473,15 @@ nl-NL:
         content1: beschrijving hier
       csf_password_power-up2022:
         content1: beschrijving hier
+      csf_password_power-up2022_2023:
+        content1: beschrijving hier
       csf_password_power-up_2021:
         content1: beschrijving hier
       csf_putting_a_stop_to_online_meanness:
         content1: beschrijving hier
       csf_putting_a_stop_to_online_meanness2022:
+        content1: beschrijving hier
+      csf_putting_a_stop_to_online_meanness2022_2023:
         content1: beschrijving hier
       csf_putting_a_stop_to_online_meanness_2021:
         content1: beschrijving hier
@@ -8966,6 +9491,11 @@ nl-NL:
 
           ## Hoe beweeg je veilig online?
       csf_safety_in_my_online_neighborhood2022:
+        markdown: |
+          # Mijn Online Woonwijk
+
+          ## Hoe beweeg je veilig online?
+      csf_safety_in_my_online_neighborhood2022_2023:
         markdown: |
           # Mijn Online Woonwijk
 
@@ -10518,6 +11048,22 @@ nl-NL:
         - text: Kijk eens goed naar onderstaand programma. Als je dit programma draait,
             hoeveel schatten zal Laurel dan verzamelen?
       grade2_multi_collector_A_predict12022:
+        answers:
+        - feedback: Fout. Laurel probeert een schat te verzamelen op een plek waar
+            niets ligt, en dat veroorzaakt een fout.
+          text: Laurel zal met dit programma vier schatten verzamelen.
+        - correct: true
+          feedback: Juist!
+          text: " Laurel zal proberen een schat te verzamelen op een plek waar niets
+            ligt, en dat veroorzaakt een fout."
+        - feedback: Fout. Laurel probeert een schat te verzamelen op een plek waar
+            niets ligt, en dat veroorzaakt een fout.
+          text: Laurel zal alle schatten verzamelen.
+        - feedback: Fout. Laurel probeert een schat te verzamelen op een plek waar
+            niets ligt, en dat veroorzaakt een fout.
+        questions:
+        - {}
+      grade2_multi_collector_A_predict12022_2023:
         answers:
         - feedback: Fout. Laurel probeert een schat te verzamelen op een plek waar
             niets ligt, en dat veroorzaakt een fout.

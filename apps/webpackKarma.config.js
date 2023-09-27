@@ -2,11 +2,7 @@ const webpack = require('webpack');
 const path = require('path');
 
 const envConstants = require('./envConstants');
-const {
-  devtool,
-  localeDoNotImport,
-  WEBPACK_BASE_CONFIG,
-} = require('./webpack.config');
+const {localeDoNotImport, WEBPACK_BASE_CONFIG} = require('./webpack.config');
 
 // alias '@cdo/applab/locale' => 'test/util/applab/locale-do-not-import.js'
 const localeDoNotImportTest = cdo => localeDoNotImport(cdo, 'test/util');
@@ -15,7 +11,14 @@ const localeDoNotImportTest = cdo => localeDoNotImport(cdo, 'test/util');
 const karmaConfig = {
   ...WEBPACK_BASE_CONFIG,
   ...{
-    devtool: devtool(),
+    output: {
+      path: path.resolve(__dirname, 'build/karma/'),
+      publicPath: '/webpack_output/',
+    },
+    mode: 'development',
+    // karma-sourcemap-loader only supports inline-source-map and source-map
+    devtool: 'source-map',
+    stats: 'minimal',
     resolve: {
       ...WEBPACK_BASE_CONFIG.resolve,
       ...{
@@ -58,11 +61,9 @@ const karmaConfig = {
       new webpack.DefinePlugin({
         IN_UNIT_TEST: JSON.stringify(true),
         IN_STORYBOOK: JSON.stringify(false),
-        'process.env.mocha_entry': JSON.stringify(process.env.mocha_entry),
         'process.env.NODE_ENV': JSON.stringify(
           envConstants.NODE_ENV || 'development'
         ),
-        LEVEL_TYPE: JSON.stringify(envConstants.LEVEL_TYPE),
         PISKEL_DEVELOPMENT_MODE: JSON.stringify(false),
       }),
     ],

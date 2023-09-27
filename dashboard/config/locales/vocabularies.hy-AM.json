@@ -188,6 +188,102 @@
         "programming/pre-express/2022": {
           "word": "Programming"
         },
+        "code/csc-adaptations/2023": {
+          "word": "Կոդ"
+        },
+        "code/csc-ecosystems/2023": {
+          "word": "Կոդ"
+        },
+        "conditionals/csc-ecosystems/2023": {
+          "word": "conditionals"
+        },
+        "variable/csc-ecosystems/2023": {
+          "word": "Փոփոխական"
+        },
+        "code/csc-mappinglandmarks/2023": {
+          "word": "Կոդ"
+        },
+        "artist/csc-starquilts/2023": {
+          "word": "Արտիստ"
+        },
+        "code/poetry/2023": {
+          "word": "Կոդ"
+        },
+        "debugging/coursea/2023": {
+          "word": "Debugging"
+        },
+        "programming/coursea/2023": {
+          "word": "Programming"
+        },
+        "debugging/courseb/2023": {
+          "word": "Debugging"
+        },
+        "programming/courseb/2023": {
+          "word": "Programming"
+        },
+        "debugging/coursec/2023": {
+          "word": "Debugging"
+        },
+        "programming/coursec/2023": {
+          "word": "Programming"
+        },
+        "binary/coursec/2023": {
+          "word": "երկուական"
+        },
+        "debugging/coursed/2023": {
+          "word": "Debugging"
+        },
+        "programming/coursed/2023": {
+          "word": "Programming"
+        },
+        "conditionals/coursed/2023": {
+          "word": "conditionals"
+        },
+        "function/coursee/2023": {
+          "word": "Ֆունկցիա"
+        },
+        "conditionals/coursee/2023": {
+          "word": "conditionals"
+        },
+        "copyright/coursee/2023": {
+          "word": "հեղինակային իրավունք"
+        },
+        "define/coursee/2023": {
+          "word": "Սահմանել"
+        },
+        "variable/coursef/2023": {
+          "word": "Փոփոխական"
+        },
+        "internet/coursef/2023": {
+          "word": "Internet"
+        },
+        "define/coursef/2023": {
+          "word": "Սահմանել"
+        },
+        "debugging/express/2023": {
+          "word": "Debugging"
+        },
+        "programming/express/2023": {
+          "word": "Programming"
+        },
+        "conditionals/express/2023": {
+          "word": "conditionals"
+        },
+        "function/express/2023": {
+          "word": "Ֆունկցիա"
+        },
+        "variable/express/2023": {
+          "word": "Փոփոխական"
+        },
+        "define/express/2023": {
+          "word": "Սահմանել"
+        },
+        "debugging/pre-express/2023": {
+          "word": "Debugging"
+        },
+        "programming/pre-express/2023": {
+          "word": "Programming"
+        },
         "conditionals/aquatic/unversioned": {
           "word": "conditionals"
         },

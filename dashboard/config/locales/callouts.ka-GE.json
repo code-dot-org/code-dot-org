@@ -337,6 +337,9 @@
         "CourseF_outbreak7_-2022-2": {
           "costumes_tab": "დააწკაპუნეთ აქ, რომ დაამატოთ კოსტიუმები თქვენს პროექტში."
         },
+        "CourseF_outbreak7_2023": {
+          "costumes_tab": "დააწკაპუნეთ აქ, რომ დაამატოთ კოსტიუმები თქვენს პროექტში."
+        },
         "Function intro Ryan": {
           "Function_intro_Ryan_1": "ეს პატარა ინსტრუქცია ეუბნება კომპიუტერს გაუშვას დიდი კოდი, რომელსაც იგივე სახელი უწერია სამუშაო სივრცეში."
         },
@@ -350,6 +353,9 @@
           "Function_intro_Ryan_1": "ეს პატარა ინსტრუქცია ეუბნება კომპიუტერს გაუშვას დიდი კოდი, რომელსაც იგივე სახელი უწერია სამუშაო სივრცეში."
         },
         "Function intro Ryan_2021": {
+          "Function_intro_Ryan_1": "ეს პატარა ინსტრუქცია ეუბნება კომპიუტერს გაუშვას დიდი კოდი, რომელსაც იგივე სახელი უწერია სამუშაო სივრცეში."
+        },
+        "Function intro Ryan_2023": {
           "Function_intro_Ryan_1": "ეს პატარა ინსტრუქცია ეუბნება კომპიუტერს გაუშვას დიდი კოდი, რომელსაც იგივე სახელი უწერია სამუშაო სივრცეში."
         },
         "Geometric Sun": {
@@ -392,6 +398,9 @@
         "MC_HOC_2017_03_Cole_2021": {
           "MC_HOC_2017_03_Cole_1": "ეს არის `გამეორების` ციკლი! სამუშაო სივრცეში გადაიტანეთ ის და დაუმატეთ კოდი რომელიც გინდათ ისევ და ისევ გაუშვათ."
         },
+        "MC_HOC_2017_03_Cole_2023": {
+          "MC_HOC_2017_03_Cole_1": "ეს არის `გამეორების` ციკლი! სამუშაო სივრცეში გადაიტანეთ ის და დაუმატეთ კოდი რომელიც გინდათ ისევ და ისევ გაუშვათ."
+        },
         "MC_HOC_2017_04_Cole": {
           "MC_HOC_2017_04_Cole_a": "აგენტს შეუძლია წყლის ზედაპირზე იფრინოს, მაგრამ მოთამაშეს ეს არ შეუძლია!"
         },
@@ -405,6 +414,9 @@
           "MC_HOC_2017_04_Cole_a": "აგენტს შეუძლია წყლის ზედაპირზე იფრინოს, მაგრამ მოთამაშეს ეს არ შეუძლია!"
         },
         "MC_HOC_2017_04_Cole_2021": {
+          "MC_HOC_2017_04_Cole_a": "აგენტს შეუძლია წყლის ზედაპირზე იფრინოს, მაგრამ მოთამაშეს ეს არ შეუძლია!"
+        },
+        "MC_HOC_2017_04_Cole_2023": {
           "MC_HOC_2017_04_Cole_a": "აგენტს შეუძლია წყლის ზედაპირზე იფრინოს, მაგრამ მოთამაშეს ეს არ შეუძლია!"
         },
         "MC_HOC_2017_06_Cole": {
@@ -422,6 +434,9 @@
         "MC_HOC_2017_06_Cole_2021": {
           "MC_HOC_2017_06_Cole_1": "ამ ბლოკებს ვერ წაშლით, მაგრამ შეგიძლიათ მათი შეცვლა!"
         },
+        "MC_HOC_2017_06_Cole_2023": {
+          "MC_HOC_2017_06_Cole_1": "ამ ბლოკებს ვერ წაშლით, მაგრამ შეგიძლიათ მათი შეცვლა!"
+        },
         "MC_HOC_2017_Ali": {
           "MC_HOC_2017_08_RY_1": "აგენტს შეუძლია ლავის ზედაპირზე იფრინოს, მაგრამ სტივს და ალექსს ეს არ შეუძლიათ!  "
         },
@@ -435,6 +450,9 @@
           "MC_HOC_2017_08_RY_1": "აგენტს შეუძლია ლავის ზედაპირზე იფრინოს, მაგრამ სტივს და ალექსს ეს არ შეუძლიათ!  "
         },
         "MC_HOC_2017_Ali_2021": {
+          "MC_HOC_2017_08_RY_1": "აგენტს შეუძლია ლავის ზედაპირზე იფრინოს, მაგრამ სტივს და ალექსს ეს არ შეუძლიათ!  "
+        },
+        "MC_HOC_2017_Ali_2023": {
           "MC_HOC_2017_08_RY_1": "აგენტს შეუძლია ლავის ზედაპირზე იფრინოს, მაგრამ სტივს და ალექსს ეს არ შეუძლიათ!  "
         },
         "NEW Course 4 Artist Functions 3": {
@@ -486,6 +504,9 @@
         "Overworld Chop Trees_2021": {
           "craft_callout_preplaced": "რამდენიმე ბლოკი უკვე მზად არის"
         },
+        "Overworld Chop Trees_2023": {
+          "craft_callout_preplaced": "რამდენიმე ბლოკი უკვე მზად არის"
+        },
         "Overworld House Frame Chosen": {
           "craft_callout_preplaced_house": "ეს კოდი თქვენი სახლის მშნებლობას დაიწყებს. შეგიძლიათ დაასრულოთ?"
         },
@@ -499,6 +520,9 @@
           "craft_callout_preplaced_house": "ეს კოდი თქვენი სახლის მშნებლობას დაიწყებს. შეგიძლიათ დაასრულოთ?"
         },
         "Overworld House Frame Chosen_2021": {
+          "craft_callout_preplaced_house": "ეს კოდი თქვენი სახლის მშნებლობას დაიწყებს. შეგიძლიათ დაასრულოთ?"
+        },
+        "Overworld House Frame Chosen_2023": {
           "craft_callout_preplaced_house": "ეს კოდი თქვენი სახლის მშნებლობას დაიწყებს. შეგიძლიათ დაასრულოთ?"
         },
         "Overworld Move to Sheep": {
@@ -521,6 +545,10 @@
           "craft_drag_block_callout": "გადმოათრიეთ \"წინ გადაადგილების\" ბლოკი და განათავსეთ ის მეორე ბლოკის ქვემოთ",
           "craft_run_button_callout": "დააჭირეთ „გაშვებას,“ რომ გატესტოთ თქვენი პროგრამა"
         },
+        "Overworld Move to Sheep_2023": {
+          "craft_drag_block_callout": "გადმოათრიეთ \"წინ გადაადგილების\" ბლოკი და განათავსეთ ის მეორე ბლოკის ქვემოთ",
+          "craft_run_button_callout": "დააჭირეთ „გაშვებას,“ რომ გატესტოთ თქვენი პროგრამა"
+        },
         "Overworld Place Wall": {
           "craft_inside_repeat": "გაიმეორეთ მოქმედებები ბლოკების აქ მოთავსებით"
         },
@@ -534,6 +562,9 @@
           "craft_inside_repeat": "გაიმეორეთ მოქმედებები ბლოკების აქ მოთავსებით"
         },
         "Overworld Place Wall_2021": {
+          "craft_inside_repeat": "გაიმეორეთ მოქმედებები ბლოკების აქ მოთავსებით"
+        },
+        "Overworld Place Wall_2023": {
           "craft_inside_repeat": "გაიმეორეთ მოქმედებები ბლოკების აქ მოთავსებით"
         },
         "Underground Avoiding Lava": {
@@ -551,6 +582,9 @@
         "Underground Avoiding Lava_2021": {
           "craft_callout_moveforward": "ეს კოდი ამოწმებს, არის თუ არა ლავა. შეგიძლიათ დაუმატოთ წინ გადაადგილების ბრძანება?"
         },
+        "Underground Avoiding Lava_2023": {
+          "craft_callout_moveforward": "ეს კოდი ამოწმებს, არის თუ არა ლავა. შეგიძლიათ დაუმატოთ წინ გადაადგილების ბრძანება?"
+        },
         "Underground Iron": {
           "craft_what_is_iron": "მოიპოვეთ ეს რკინა!"
         },
@@ -564,6 +598,9 @@
           "craft_what_is_iron": "მოიპოვეთ ეს რკინა!"
         },
         "Underground Iron_2021": {
+          "craft_what_is_iron": "მოიპოვეთ ეს რკინა!"
+        },
+        "Underground Iron_2023": {
           "craft_what_is_iron": "მოიპოვეთ ეს რკინა!"
         },
         "course2_bee_conditionals_challenge2": {
@@ -600,6 +637,9 @@
         "courseA_artist_loops42022": {
           "courseA_artist_loops4_1": "ეს რიცხვი გეუბნებათ თუ რამდენი ასეთი ბლოკის გამოყენება შეგიძლიათ ამ თავსატეხში."
         },
+        "courseA_artist_loops42022_2023": {
+          "courseA_artist_loops4_1": "ეს რიცხვი გეუბნებათ თუ რამდენი ასეთი ბლოკის გამოყენება შეგიძლიათ ამ თავსატეხში."
+        },
         "courseA_artist_loops4_2018": {
           "courseA_artist_loops4_1": "ეს რიცხვი გეუბნებათ თუ რამდენი ასეთი ბლოკის გამოყენება შეგიძლიათ ამ თავსატეხში."
         },
@@ -616,6 +656,9 @@
           "courseA_artist_loops7_1": "ეს რიცხვი იმას ნიშნავს, თუ რამდენი ამ ტიპის ბლოკის გამოყენებაა შესაძლებელი საბოლოო პასუხისთვის."
         },
         "courseA_artist_loops72022": {
+          "courseA_artist_loops7_1": "ეს რიცხვი იმას ნიშნავს, თუ რამდენი ამ ტიპის ბლოკის გამოყენებაა შესაძლებელი საბოლოო პასუხისთვის."
+        },
+        "courseA_artist_loops72022_2023": {
           "courseA_artist_loops7_1": "ეს რიცხვი იმას ნიშნავს, თუ რამდენი ამ ტიპის ბლოკის გამოყენებაა შესაძლებელი საბოლოო პასუხისთვის."
         },
         "courseA_artist_loops7_2018": {
@@ -645,6 +688,9 @@
         "courseA_collector_loops1_2021": {
           "courseA_collector_loops1_1": "ხედავთ რამდენიმე ახალ ბლოკს ინსტრუმენტების პანელში? არ იღელვოთ, ჩვენ მოგვიანებით განახებთ თუ როგორ უნდა გამოიყენოთ ისინი."
         },
+        "courseA_collector_loops1_2023": {
+          "courseA_collector_loops1_1": "ხედავთ რამდენიმე ახალ ბლოკს ინსტრუმენტების პანელში? არ იღელვოთ, ჩვენ მოგვიანებით განახებთ თუ როგორ უნდა გამოიყენოთ ისინი."
+        },
         "courseA_collector_loops3": {
           "gradek_adventurer_loops2_1": "ეს რიცხვი გეუბნებათ თუ რამდენი ასეთი ბლოკის გამოყენება შეგიძლიათ ამ თავსატეხში."
         },
@@ -661,6 +707,9 @@
           "gradek_adventurer_loops2_1": "ეს რიცხვი გეუბნებათ თუ რამდენი ასეთი ბლოკის გამოყენება შეგიძლიათ ამ თავსატეხში."
         },
         "courseA_collector_loops3_2021": {
+          "gradek_adventurer_loops2_1": "ეს რიცხვი გეუბნებათ თუ რამდენი ასეთი ბლოკის გამოყენება შეგიძლიათ ამ თავსატეხში."
+        },
+        "courseA_collector_loops3_2023": {
           "gradek_adventurer_loops2_1": "ეს რიცხვი გეუბნებათ თუ რამდენი ასეთი ბლოკის გამოყენება შეგიძლიათ ამ თავსატეხში."
         },
         "courseA_collector_preLoops2": {
@@ -696,6 +745,9 @@
         "courseA_maze_seq1_2021": {
           "courseA_maze_seq1_1": "მინიშნების მისაღებად დააწკაპუნეთ ნათურაზე!"
         },
+        "courseA_maze_seq1_2023": {
+          "courseA_maze_seq1_1": "მინიშნების მისაღებად დააწკაპუნეთ ნათურაზე!"
+        },
         "courseA_maze_seq2": {
           "courseA_maze_seqA_callout1": "გამოიყენეთ ბიჭის ღილაკს, რათა ნაბიჯ-ნაბიჯ გაიაროთ მთელი პროგრამა. ეს დაგეხმარებათ შეცდომის პოვნაში!"
         },
@@ -703,6 +755,9 @@
           "courseA_playlab_events4_callout1": "ეს ტექსტური ბუშტია"
         },
         "courseA_playLab_events42022": {
+          "courseA_playlab_events4_callout1": "ეს ტექსტური ბუშტია"
+        },
+        "courseA_playLab_events42022_2023": {
           "courseA_playlab_events4_callout1": "ეს ტექსტური ბუშტია"
         },
         "courseA_playLab_events4_2018": {
@@ -721,6 +776,9 @@
           "courseA_playLab_events5_1": "დააწკაპუნეთ აქ, რათა შეცვალოთ მოვლენის ისრის მიმართულება."
         },
         "courseA_playLab_events52022": {
+          "courseA_playLab_events5_1": "დააწკაპუნეთ აქ, რათა შეცვალოთ მოვლენის ისრის მიმართულება."
+        },
+        "courseA_playLab_events52022_2023": {
           "courseA_playLab_events5_1": "დააწკაპუნეთ აქ, რათა შეცვალოთ მოვლენის ისრის მიმართულება."
         },
         "courseA_playLab_events5_2018": {
@@ -756,6 +814,9 @@
         "courseB_collector_loops1_2021": {
           "courseB_collector_loops1_1": "ხედავთ რამდენიმე ახალ ბლოკს ინსტრუმენტების პანელში? არ იღელვოთ, ჩვენ მოგვიანებით განახებთ თუ როგორ უნდა გამოიყენოთ ისინი."
         },
+        "courseB_collector_loops1_2023": {
+          "courseB_collector_loops1_1": "ხედავთ რამდენიმე ახალ ბლოკს ინსტრუმენტების პანელში? არ იღელვოთ, ჩვენ მოგვიანებით განახებთ თუ როგორ უნდა გამოიყენოთ ისინი."
+        },
         "courseB_maze_seq1": {
           "courseB_maze_seq1": "მინიშნების მისაღებად დააწკაპუნეთ ნათურაზე!"
         },
@@ -772,6 +833,9 @@
           "courseB_maze_seq1": "მინიშნების მისაღებად დააწკაპუნეთ ნათურაზე!"
         },
         "courseB_maze_seq1_2021": {
+          "courseB_maze_seq1": "მინიშნების მისაღებად დააწკაპუნეთ ნათურაზე!"
+        },
+        "courseB_maze_seq1_2023": {
           "courseB_maze_seq1": "მინიშნების მისაღებად დააწკაპუნეთ ნათურაზე!"
         },
         "courseB_maze_seq2": {
@@ -798,6 +862,9 @@
         "courseB_playlab_events6_2021": {
           "courseB_playlab_events6_a": "გამოიყენეთ მწვანე ჩამოსაშლელი სიის ისარი, რათა შეცვალოთ მიმართულებები."
         },
+        "courseB_playlab_events6_2023": {
+          "courseB_playlab_events6_a": "გამოიყენეთ მწვანე ჩამოსაშლელი სიის ისარი, რათა შეცვალოთ მიმართულებები."
+        },
         "courseC19_playLab_EOC3": {
           "courseE_playLab_scaffold3_1": "მიიყვანეთ მსახიობი დროშასთან, რათა გადახვიდეთ შემდეგ დონეზე."
         },
@@ -808,6 +875,9 @@
           "courseE_playLab_scaffold3_1": "მიიყვანეთ მსახიობი დროშასთან, რათა გადახვიდეთ შემდეგ დონეზე."
         },
         "courseC19_playLab_EOC3_2021": {
+          "courseE_playLab_scaffold3_1": "მიიყვანეთ მსახიობი დროშასთან, რათა გადახვიდეთ შემდეგ დონეზე."
+        },
+        "courseC19_playLab_EOC3_2023": {
           "courseE_playLab_scaffold3_1": "მიიყვანეთ მსახიობი დროშასთან, რათა გადახვიდეთ შემდეგ დონეზე."
         },
         "courseC_PlayLab_events_challenge1": {
@@ -828,7 +898,13 @@
         "courseC_PlayLab_events_challenge1_2021": {
           "courseC_PlayLab_events_challenge1_1": "ეს ბლოკი გაძლევთ საშუალებას გადაადგილოთ მსახიობები სათამაშო სივრცის სხვადასხვა ადგილას."
         },
+        "courseC_PlayLab_events_challenge1_2023": {
+          "courseC_PlayLab_events_challenge1_1": "ეს ბლოკი გაძლევთ საშუალებას გადაადგილოთ მსახიობები სათამაშო სივრცის სხვადასხვა ადგილას."
+        },
         "courseC_PlayLab_events_lesson_extras": {
+          "courseC_PlayLab_events_challenge1_1": "ეს ბლოკი გაძლევთ საშუალებას გადაადგილოთ მსახიობები სათამაშო სივრცის სხვადასხვა ადგილას."
+        },
+        "courseC_PlayLab_events_lesson_extras_2023": {
           "courseC_PlayLab_events_challenge1_1": "ეს ბლოკი გაძლევთ საშუალებას გადაადგილოთ მსახიობები სათამაშო სივრცის სხვადასხვა ადგილას."
         },
         "courseC_artist_loopsPrePre1a": {
@@ -861,6 +937,9 @@
         "courseC_collector_prog1_2021": {
           "courseC_collector_prog1_1": "ხედავთ რამდენიმე ახალ ბლოკს ინსტრუმენტების პანელში? არ იღელვოთ, ჩვენ მოგვიანებით განახებთ თუ როგორ უნდა გამოიყენოთ ისინი."
         },
+        "courseC_collector_prog1_2023": {
+          "courseC_collector_prog1_1": "ხედავთ რამდენიმე ახალ ბლოკს ინსტრუმენტების პანელში? არ იღელვოთ, ჩვენ მოგვიანებით განახებთ თუ როგორ უნდა გამოიყენოთ ისინი."
+        },
         "courseC_harvester_loops1": {
           "courseC_harvester_loops1_callout1": "გოგრაზე განთავსებული რიცხვი ოთხი გეუბნებათ იმას, რომ ოთხი გოგრის შეგროვება შეგიძლიათ."
         },
@@ -877,6 +956,9 @@
           "courseC_harvester_loops1_callout1": "გოგრაზე განთავსებული რიცხვი ოთხი გეუბნებათ იმას, რომ ოთხი გოგრის შეგროვება შეგიძლიათ."
         },
         "courseC_harvester_loops1_2021": {
+          "courseC_harvester_loops1_callout1": "გოგრაზე განთავსებული რიცხვი ოთხი გეუბნებათ იმას, რომ ოთხი გოგრის შეგროვება შეგიძლიათ."
+        },
+        "courseC_harvester_loops1_2023": {
           "courseC_harvester_loops1_callout1": "გოგრაზე განთავსებული რიცხვი ოთხი გეუბნებათ იმას, რომ ოთხი გოგრის შეგროვება შეგიძლიათ."
         },
         "courseC_maze_debugging5": {
@@ -897,6 +979,9 @@
         "courseC_maze_debugging5_2021": {
           "courseC_maze_debugging5_1": "ეს ბლოკები ფიქსირებულია და მათი წაშლა შეუძლებელია!"
         },
+        "courseC_maze_debugging5_2023": {
+          "courseC_maze_debugging5_1": "ეს ბლოკები ფიქსირებულია და მათი წაშლა შეუძლებელია!"
+        },
         "courseC_maze_programming7": {
           "courseC_maze_programming7_2": "ნაცრისფერი ბლოკები ქვისგანაა დამზადებული და მათი გადაგდება შეუძლებელია."
         },
@@ -915,6 +1000,9 @@
         "courseC_maze_programming7_2021": {
           "courseC_maze_programming7_2": "ნაცრისფერი ბლოკები ქვისგანაა დამზადებული და მათი გადაგდება შეუძლებელია."
         },
+        "courseC_maze_programming7_2023": {
+          "courseC_maze_programming7_2": "ნაცრისფერი ბლოკები ქვისგანაა დამზადებული და მათი გადაგდება შეუძლებელია."
+        },
         "courseC_starWars_loops2": {
           "courseC_starWars_loops2": "ასეთი ბლოკი მხოლოდ ერთი გაქვთ ამ თავსატეხში."
         },
@@ -931,6 +1019,9 @@
           "courseC_starWars_loops2": "ასეთი ბლოკი მხოლოდ ერთი გაქვთ ამ თავსატეხში."
         },
         "courseC_starWars_loops2_2021": {
+          "courseC_starWars_loops2": "ასეთი ბლოკი მხოლოდ ერთი გაქვთ ამ თავსატეხში."
+        },
+        "courseC_starWars_loops2_2023": {
           "courseC_starWars_loops2": "ასეთი ბლოკი მხოლოდ ერთი გაქვთ ამ თავსატეხში."
         },
         "courseC_starWars_loops2_copy": {
@@ -960,6 +1051,9 @@
         "courseD_artist_nestedLoops1a_2021": {
           "courseD_artist_nestedLoops1a_1": "თავსტეხის ამოსახსნელად თქვენ არ გიწევთ ფერების გამოყენება. თუკი ამის გაკეთება გსურთ, თქვენ შეგიძლიათ გამოიყენოთ `შემთხვევითი ფერები`, რაც საქმეს საგრძნობლად გაგიმარტივებთ!"
         },
+        "courseD_artist_nestedLoops1a_2023": {
+          "courseD_artist_nestedLoops1a_1": "თავსტეხის ამოსახსნელად თქვენ არ გიწევთ ფერების გამოყენება. თუკი ამის გაკეთება გსურთ, თქვენ შეგიძლიათ გამოიყენოთ `შემთხვევითი ფერები`, რაც საქმეს საგრძნობლად გაგიმარტივებთ!"
+        },
         "courseD_artist_ramp11": {
           "courseD_artist_ramp11_1": "თქვენ ამ რიცხვის შეცვლა შეგიძლიათ.",
           "courseD_artist_ramp11_2": "დააწკაპუნეთ, რათა შეიყვანოთ რიცხვი, რათა განსაზღვროთ თუ რამდენჯერ გსურთ კოდის გამეორება."
@@ -980,6 +1074,9 @@
           "4_5_Bee_Conditionals_2_1": "არ დაგავიწყდეთ იმის შემოწმება, აქვს თუ არა ყოველ ღრუბელს ყვავილი. თქვენ არ გიწევთ ფიჭების არსებობის შემოწმება."
         },
         "courseD_bee_conditionals2_2021": {
+          "4_5_Bee_Conditionals_2_1": "არ დაგავიწყდეთ იმის შემოწმება, აქვს თუ არა ყოველ ღრუბელს ყვავილი. თქვენ არ გიწევთ ფიჭების არსებობის შემოწმება."
+        },
+        "courseD_bee_conditionals2_2023": {
           "4_5_Bee_Conditionals_2_1": "არ დაგავიწყდეთ იმის შემოწმება, აქვს თუ არა ყოველ ღრუბელს ყვავილი. თქვენ არ გიწევთ ფიჭების არსებობის შემოწმება."
         },
         "courseD_bee_conditionals2_copy": {
@@ -1004,6 +1101,9 @@
           "courseD_bee_conditionals_challenge2_1": "გამოიყენეთ ეს ციკლი, რათა შეაგროვოთ მთელი ნექტარი (ან თაფლი) ყვავილიდან (ან ფიჭიდან)."
         },
         "courseD_bee_conditionals_challenge2_2021": {
+          "courseD_bee_conditionals_challenge2_1": "გამოიყენეთ ეს ციკლი, რათა შეაგროვოთ მთელი ნექტარი (ან თაფლი) ყვავილიდან (ან ფიჭიდან)."
+        },
+        "courseD_bee_conditionals_challenge2_2023": {
           "courseD_bee_conditionals_challenge2_1": "გამოიყენეთ ეს ციკლი, რათა შეაგროვოთ მთელი ნექტარი (ან თაფლი) ყვავილიდან (ან ფიჭიდან)."
         },
         "courseD_bee_debugging_challenge1": {
@@ -1031,6 +1131,9 @@
         "courseE_aboutme_22022": {
           "": "დააწკაპუნეთ აქ, რომ დაამატოთ კოსტიუმები თქვენს პროექტში."
         },
+        "courseE_aboutme_2_2023": {
+          "": "დააწკაპუნეთ აქ, რომ დაამატოთ კოსტიუმები თქვენს პროექტში."
+        },
         "courseE_artist_functions_challenge1": {
           "courseE_artist_functions_challenge1_callout1": "დაამატეთ მეტი კოდი პროგრამის ქვემოთ, რათა განაგრძოთ მისი შესრულება.",
           "courseE_artist_functions_challenge1_callout2": "თუ არ მოგწონთ ეს დიზაინი, შეცვლალეთ ის ნებისმიერ მნიშვნელობაზე!"
@@ -1052,6 +1155,10 @@
           "courseE_artist_functions_challenge1_callout2": "თუ არ მოგწონთ ეს დიზაინი, შეცვლალეთ ის ნებისმიერ მნიშვნელობაზე!"
         },
         "courseE_artist_functions_challenge1_2021": {
+          "courseE_artist_functions_challenge1_callout1": "დაამატეთ მეტი კოდი პროგრამის ქვემოთ, რათა განაგრძოთ მისი შესრულება.",
+          "courseE_artist_functions_challenge1_callout2": "თუ არ მოგწონთ ეს დიზაინი, შეცვლალეთ ის ნებისმიერ მნიშვნელობაზე!"
+        },
+        "courseE_artist_functions_challenge1_2023": {
           "courseE_artist_functions_challenge1_callout1": "დაამატეთ მეტი კოდი პროგრამის ქვემოთ, რათა განაგრძოთ მისი შესრულება.",
           "courseE_artist_functions_challenge1_callout2": "თუ არ მოგწონთ ეს დიზაინი, შეცვლალეთ ის ნებისმიერ მნიშვნელობაზე!"
         },
@@ -1079,6 +1186,10 @@
           "courseE_artist_functions_challenge2_callout1": "დაამატეთ მეტი კოდი პროგრამის ქვემოთ, რათა განაგრძოთ მისი შესრულება.",
           "courseE_artist_functions_challenge2_callout2": "თუ არ მოგწონთ ეს დიზაინი, შეცვლალეთ ის ნებისმიერ მნიშვნელობაზე!"
         },
+        "courseE_artist_functions_challenge2_2023": {
+          "courseE_artist_functions_challenge2_callout1": "დაამატეთ მეტი კოდი პროგრამის ქვემოთ, რათა განაგრძოთ მისი შესრულება.",
+          "courseE_artist_functions_challenge2_callout2": "თუ არ მოგწონთ ეს დიზაინი, შეცვლალეთ ის ნებისმიერ მნიშვნელობაზე!"
+        },
         "courseE_artist_ramp8": {
           "courseE_artist_ramp8_1": "თქვენ ამ რიცხვის შეცვლა შეგიძლიათ.",
           "courseE_artist_ramp8_2": "დააწკაპუნეთ, რათა შეიყვანოთ რიცხვი, რათა განსაზღვროთ თუ რამდენჯერ გსურთ კოდის გამეორება."
@@ -1103,6 +1214,9 @@
           "courseE_farmer_functions1_2": "ამჯერად ინსტრუმენტების პანელი ოდნავ განსხვავებულადაა ორგანიზებული. დააწკაპუნეთ განსხვავებულ კატეგორიებს, რათა ნახოთ, რომელი ბლოკები გაქვთ."
         },
         "courseE_farmer_functions1_2021": {
+          "courseE_farmer_functions1_2": "ამჯერად ინსტრუმენტების პანელი ოდნავ განსხვავებულადაა ორგანიზებული. დააწკაპუნეთ განსხვავებულ კატეგორიებს, რათა ნახოთ, რომელი ბლოკები გაქვთ."
+        },
+        "courseE_farmer_functions1_2023": {
           "courseE_farmer_functions1_2": "ამჯერად ინსტრუმენტების პანელი ოდნავ განსხვავებულადაა ორგანიზებული. დააწკაპუნეთ განსხვავებულ კატეგორიებს, რათა ნახოთ, რომელი ბლოკები გაქვთ."
         },
         "courseE_playLab_challenge1": {
@@ -1139,10 +1253,27 @@
         "coursee_helloworld_events": {
           "hello_world_click_hint": "სანიშნეს ეს ღონისძიება ბლოკი თქვენი სამუშაო გარემოს."
         },
+        "coursee_helloworld_events_2023": {
+          "hello_world_click_hint": "სანიშნეს ეს ღონისძიება ბლოკი თქვენი სამუშაო გარემოს."
+        },
         "coursee_helloworld_freeplay": {
           "costumes_tab": "დააწკაპუნეთ აქ, რომ დაამატოთ კოსტიუმები თქვენს პროექტში."
         },
+        "coursee_helloworld_freeplay_2023": {
+          "costumes_tab": "დააწკაპუნეთ აქ, რომ დაამატოთ კოსტიუმები თქვენს პროექტში."
+        },
         "coursee_helloworld_say": {
+          "hello_world_make_sprite": "გამოიყენეთ ეს ბლოკი, რათა შეიქმნას Sprite.",
+          "hello_world_say": "გამოიყენეთ ეს ბლოკი, რათა sprites საუბარი."
+        },
+        "coursee_helloworld_say_2023": {
+          "hello_world_make_sprite": "გამოიყენეთ ეს ბლოკი, რათა შეიქმნას Sprite.",
+          "hello_world_say": "გამოიყენეთ ეს ბლოკი, რათა sprites საუბარი."
+        },
+        "csc_animal_adaptations_bugs2": {
+          "hello_world_behavior_blocks": "გამოიყენეთ ეს ბლოკი ქვემოთ მოყვანილი ქცევებით."
+        },
+        "ecosystems_helloworld_say_2023": {
           "hello_world_make_sprite": "გამოიყენეთ ეს ბლოკი, რათა შეიქმნას Sprite.",
           "hello_world_say": "გამოიყენეთ ეს ბლოკი, რათა sprites საუბარი."
         },
@@ -1215,6 +1346,12 @@
         "helloworld_animals_sizes": {
           "hello_world_new_block": "ახალი ბლოკი!!!!"
         },
+        "helloworld_bugs_behaviors_2023": {
+          "hello_world_behavior_blocks": "გამოიყენეთ ეს ბლოკი ქვემოთ მოყვანილი ქცევებით."
+        },
+        "helloworld_bunny_adaptation_2023": {
+          "hw_Run": "დააწკაპუნეთ აქ კოდის გასაშვებად."
+        },
         "helloworld_emoji_backgrounds": {
           "hw_background_location": "გამოიყენეთ ეს ბლოკი ახალი ფონის შესაქმნელად."
         },
@@ -1243,6 +1380,9 @@
         "helloworld_food_backgrounds": {
           "hw_background_location": "გამოიყენეთ ეს ბლოკი ახალი ფონის შესაქმნელად."
         },
+        "helloworld_food_backgrounds_2023": {
+          "hw_background_location": "გამოიყენეთ ეს ბლოკი ახალი ფონის შესაქმნელად."
+        },
         "helloworld_food_backgrounds_soccer-2022": {
           "hw_background_location": "გამოიყენეთ ეს ბლოკი ახალი ფონის შესაქმნელად."
         },
@@ -1252,6 +1392,9 @@
         "helloworld_food_behaviors": {
           "hello_world_behavior_blocks": "გამოიყენეთ ეს ბლოკი ქვემოთ მოყვანილი ქცევებით."
         },
+        "helloworld_food_behaviors_2023": {
+          "hello_world_behavior_blocks": "გამოიყენეთ ეს ბლოკი ქვემოთ მოყვანილი ქცევებით."
+        },
         "helloworld_food_behaviors_soccer-2022": {
           "hello_world_behavior_blocks": "გამოიყენეთ ეს ბლოკი ქვემოთ მოყვანილი ქცევებით."
         },
@@ -1259,6 +1402,9 @@
           "hello_world_behavior_blocks": "გამოიყენეთ ეს ბლოკი ქვემოთ მოყვანილი ქცევებით."
         },
         "helloworld_food_click": {
+          "hw_Run": "დააწკაპუნეთ აქ კოდის გასაშვებად."
+        },
+        "helloworld_food_click_2023": {
           "hw_Run": "დააწკაპუნეთ აქ კოდის გასაშვებად."
         },
         "helloworld_food_click_soccer-2022": {
@@ -1288,6 +1434,9 @@
         "helloworld_food_location": {
           "pin": "pin"
         },
+        "helloworld_food_location_2023": {
+          "pin": "pin"
+        },
         "helloworld_food_location_soccer-2022": {
           "pin": "pin"
         },
@@ -1295,6 +1444,9 @@
           "pin": "pin"
         },
         "helloworld_food_multi": {
+          "pin": "pin"
+        },
+        "helloworld_food_multi_2023": {
           "pin": "pin"
         },
         "helloworld_food_multi_soccer-2022": {

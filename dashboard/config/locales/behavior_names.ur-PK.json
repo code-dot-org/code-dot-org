@@ -51,6 +51,9 @@
           "wandering2": "گھومنے والا 2",
           "wobbling": "جھڑکنا"
         },
+        "CourseE_Project_SpriteLab_cupcake_examples_2023": {
+          "moving with arrow keys": "تیر یعنی arrow کے بٹنوں کے ساتھ حرکت"
+        },
         "CourseE_Project_SpriteLab_examples2022": {
           "moving with arrow keys": "تیر یعنی arrow کے بٹنوں کے ساتھ حرکت"
         },
@@ -86,6 +89,9 @@
           "wandering2": "گھومنے والا 2",
           "wobbling": "جھڑکنا"
         },
+        "CourseE_Project_SpriteLab_examples_2023": {
+          "moving with arrow keys": "تیر یعنی arrow کے بٹنوں کے ساتھ حرکت"
+        },
         "CourseF_Project_SpriteLab_examples_2021": {
           "driving with arrow keys": "تیر چابیاں کے ساتھ ڈرائیونگ",
           "fluttering": "پھڑپھڑا",
@@ -112,16 +118,25 @@
         "CourseF_outbreak1_-2022-2": {
           "recovering": "ریکور کرتے ہوئے"
         },
+        "CourseF_outbreak1_2023": {
+          "recovering": "ریکور کرتے ہوئے"
+        },
         "CourseF_outbreak2": {
           "recovering": "ریکور کرتے ہوئے"
         },
         "CourseF_outbreak2_-2022-2": {
           "recovering": "ریکور کرتے ہوئے"
         },
+        "CourseF_outbreak2_2023": {
+          "recovering": "ریکور کرتے ہوئے"
+        },
         "CourseF_outbreak3": {
           "recovering": "ریکور کرتے ہوئے"
         },
         "CourseF_outbreak3_-2022-2": {
+          "recovering": "ریکور کرتے ہوئے"
+        },
+        "CourseF_outbreak3_2023": {
           "recovering": "ریکور کرتے ہوئے"
         },
         "CourseF_outbreak4": {
@@ -132,16 +147,26 @@
           "moving with arrow keys": "تیر یعنی arrow کے بٹنوں کے ساتھ حرکت",
           "recovering": "ریکور کرتے ہوئے"
         },
+        "CourseF_outbreak4_2023": {
+          "moving with arrow keys": "تیر یعنی arrow کے بٹنوں کے ساتھ حرکت",
+          "recovering": "ریکور کرتے ہوئے"
+        },
         "CourseF_outbreak5": {
           "recovering": "ریکور کرتے ہوئے"
         },
         "CourseF_outbreak5_-2022-2": {
           "recovering": "ریکور کرتے ہوئے"
         },
+        "CourseF_outbreak5_2023": {
+          "recovering": "ریکور کرتے ہوئے"
+        },
         "CourseF_outbreak6": {
           "recovering": "ریکور کرتے ہوئے"
         },
         "CourseF_outbreak6_-2022-2": {
+          "recovering": "ریکور کرتے ہوئے"
+        },
+        "CourseF_outbreak6_2023": {
           "recovering": "ریکور کرتے ہوئے"
         },
         "CourseF_outbreak7": {
@@ -154,12 +179,22 @@
           "moving with arrow keys": "تیر یعنی arrow کے بٹنوں کے ساتھ حرکت",
           "recovering": "ریکور کرتے ہوئے"
         },
+        "CourseF_outbreak7_2023": {
+          "moving left and right": "دائیں اور بائیں حرکت کرنا",
+          "moving with arrow keys": "تیر یعنی arrow کے بٹنوں کے ساتھ حرکت",
+          "recovering": "ریکور کرتے ہوئے"
+        },
         "CourseF_outbreak8": {
           "moving left and right": "دائیں اور بائیں حرکت کرنا",
           "moving with arrow keys": "تیر یعنی arrow کے بٹنوں کے ساتھ حرکت",
           "recovering": "ریکور کرتے ہوئے"
         },
         "CourseF_outbreak8_-2022-2": {
+          "moving left and right": "دائیں اور بائیں حرکت کرنا",
+          "moving with arrow keys": "تیر یعنی arrow کے بٹنوں کے ساتھ حرکت",
+          "recovering": "ریکور کرتے ہوئے"
+        },
+        "CourseF_outbreak8_2023": {
           "moving left and right": "دائیں اور بائیں حرکت کرنا",
           "moving with arrow keys": "تیر یعنی arrow کے بٹنوں کے ساتھ حرکت",
           "recovering": "ریکور کرتے ہوئے"
@@ -334,6 +369,9 @@
           "wandering": "آوارہ",
           "wobbling": "جھڑکنا"
         },
+        "Virtual Pet 1_2023": {
+          "moving with arrow keys": "تیر یعنی arrow کے بٹنوں کے ساتھ حرکت"
+        },
         "Virtual Pet 2_2021": {
           "growing": "بڑھتی ہوئی",
           "jittering": "جڑنا",
@@ -487,6 +525,11 @@
           "moving with arrow keys": "تیر یعنی arrow کے بٹنوں کے ساتھ حرکت",
           "moving with arrow keys2": "تیر کی چابیاں کے ساتھ حرکت 2"
         },
+        "courseF_apps_aquarium_2023": {
+          "driving with arrow keys2": "تیر چابیاں کے ساتھ ڈرائیونگ",
+          "moving with arrow keys": "تیر یعنی arrow کے بٹنوں کے ساتھ حرکت",
+          "moving with arrow keys2": "تیر کی چابیاں کے ساتھ حرکت 2"
+        },
         "courseF_apps_card": {
           "blocking movement": "تحریک کو مسدود کرنا",
           "driving with arrow keys": "تیر چابیاں کے ساتھ ڈرائیونگ",
@@ -509,6 +552,10 @@
           "moving with arrow keys": "تیر یعنی arrow کے بٹنوں کے ساتھ حرکت"
         },
         "courseF_apps_card_-2022-2": {
+          "blocking movement": "تحریک کو مسدود کرنا",
+          "moving with arrow keys": "تیر یعنی arrow کے بٹنوں کے ساتھ حرکت"
+        },
+        "courseF_apps_card_2023": {
           "blocking movement": "تحریک کو مسدود کرنا",
           "moving with arrow keys": "تیر یعنی arrow کے بٹنوں کے ساتھ حرکت"
         },
@@ -550,6 +597,12 @@
           "moving with arrow keys2": "تیر کی چابیاں کے ساتھ حرکت 2"
         },
         "courseF_apps_chatbot_-2022-2": {
+          "blocking movement": "تحریک کو مسدود کرنا",
+          "driving with arrow keys2": "تیر چابیاں کے ساتھ ڈرائیونگ",
+          "moving with arrow keys": "تیر یعنی arrow کے بٹنوں کے ساتھ حرکت",
+          "moving with arrow keys2": "تیر کی چابیاں کے ساتھ حرکت 2"
+        },
+        "courseF_apps_chatbot_2023": {
           "blocking movement": "تحریک کو مسدود کرنا",
           "driving with arrow keys2": "تیر چابیاں کے ساتھ ڈرائیونگ",
           "moving with arrow keys": "تیر یعنی arrow کے بٹنوں کے ساتھ حرکت",
@@ -598,6 +651,12 @@
           "moving with arrow keys": "تیر یعنی arrow کے بٹنوں کے ساتھ حرکت",
           "moving with arrow keys2": "تیر کی چابیاں کے ساتھ حرکت 2"
         },
+        "courseF_apps_collector_2023": {
+          "driving with arrow keys2": "تیر چابیاں کے ساتھ ڈرائیونگ",
+          "flying west and looping": "مغرب کی پرواز اور لوپنگ",
+          "moving with arrow keys": "تیر یعنی arrow کے بٹنوں کے ساتھ حرکت",
+          "moving with arrow keys2": "تیر کی چابیاں کے ساتھ حرکت 2"
+        },
         "courseF_apps_madlib": {
           "fluttering": "پھڑپھڑا",
           "growing": "بڑھتی ہوئی",
@@ -621,6 +680,9 @@
           "moving with arrow keys": "تیر یعنی arrow کے بٹنوں کے ساتھ حرکت"
         },
         "courseF_apps_madlib_-2022-2": {
+          "moving with arrow keys": "تیر یعنی arrow کے بٹنوں کے ساتھ حرکت"
+        },
+        "courseF_apps_madlib_2023": {
           "moving with arrow keys": "تیر یعنی arrow کے بٹنوں کے ساتھ حرکت"
         },
         "courseF_apps_pet": {
@@ -649,6 +711,9 @@
         "courseF_apps_pet_-2022-2": {
           "moving with arrow keys": "تیر یعنی arrow کے بٹنوں کے ساتھ حرکت"
         },
+        "courseF_apps_pet_2023": {
+          "moving with arrow keys": "تیر یعنی arrow کے بٹنوں کے ساتھ حرکت"
+        },
         "courseF_editable_card": {
           "blocking movement": "تحریک کو مسدود کرنا",
           "driving with arrow keys": "تیر چابیاں کے ساتھ ڈرائیونگ",
@@ -667,6 +732,10 @@
           "wandering": "آوارہ"
         },
         "courseF_editable_card_-2022-2": {
+          "blocking movement": "تحریک کو مسدود کرنا",
+          "moving with arrow keys": "تیر یعنی arrow کے بٹنوں کے ساتھ حرکت"
+        },
+        "courseF_editable_card_2023": {
           "blocking movement": "تحریک کو مسدود کرنا",
           "moving with arrow keys": "تیر یعنی arrow کے بٹنوں کے ساتھ حرکت"
         },
@@ -691,6 +760,10 @@
           "blocking movement": "تحریک کو مسدود کرنا",
           "moving with arrow keys": "تیر یعنی arrow کے بٹنوں کے ساتھ حرکت"
         },
+        "courseF_editable_chatbot_2023": {
+          "blocking movement": "تحریک کو مسدود کرنا",
+          "moving with arrow keys": "تیر یعنی arrow کے بٹنوں کے ساتھ حرکت"
+        },
         "courseF_editable_madlib": {
           "fluttering": "پھڑپھڑا",
           "growing": "بڑھتی ہوئی",
@@ -711,6 +784,9 @@
           "wobbling": "جھڑکنا"
         },
         "courseF_editable_madlib_-2022-2": {
+          "moving with arrow keys": "تیر یعنی arrow کے بٹنوں کے ساتھ حرکت"
+        },
+        "courseF_editable_madlib_2023": {
           "moving with arrow keys": "تیر یعنی arrow کے بٹنوں کے ساتھ حرکت"
         },
         "courseF_events_choice_conflict": {
@@ -749,7 +825,13 @@
         "courseF_events_choice_conflict2_-2022-2": {
           "moving forward": "آگے بڑھنا"
         },
+        "courseF_events_choice_conflict2_2023": {
+          "moving forward": "آگے بڑھنا"
+        },
         "courseF_events_choice_conflict_-2022-2": {
+          "moving forward": "آگے بڑھنا"
+        },
+        "courseF_events_choice_conflict_2023": {
           "moving forward": "آگے بڑھنا"
         },
         "courseF_events_choice_penguin": {
@@ -773,6 +855,9 @@
         "courseF_events_choice_penguin_-2022-2": {
           "moving forward": "آگے بڑھنا"
         },
+        "courseF_events_choice_penguin_2023": {
+          "moving forward": "آگے بڑھنا"
+        },
         "courseF_events_choice_pufferfish": {
           "fluttering": "پھڑپھڑا",
           "growing": "بڑھتی ہوئی",
@@ -794,6 +879,9 @@
         "courseF_events_choice_pufferfish_-2022-2": {
           "moving forward": "آگے بڑھنا"
         },
+        "courseF_events_choice_pufferfish_2023": {
+          "moving forward": "آگے بڑھنا"
+        },
         "courseF_events_conflict": {
           "fluttering": "پھڑپھڑا",
           "growing": "بڑھتی ہوئی",
@@ -812,6 +900,9 @@
           "wandering": "آوارہ"
         },
         "courseF_events_conflict_-2022-2": {
+          "moving forward": "آگے بڑھنا"
+        },
+        "courseF_events_conflict_2023": {
           "moving forward": "آگے بڑھنا"
         },
         "courseF_events_freeplay_air": {
@@ -931,6 +1022,9 @@
         "courseF_events_key_-2022-2": {
           "moving forward": "آگے بڑھنا"
         },
+        "courseF_events_key_2023": {
+          "moving forward": "آگے بڑھنا"
+        },
         "courseF_events_practice_reorder": {
           "driving with arrow keys": "تیر چابیاں کے ساتھ ڈرائیونگ",
           "fluttering": "پھڑپھڑا",
@@ -952,6 +1046,10 @@
           "wobbling": "جھڑکنا"
         },
         "courseF_events_practice_reorder_-2022-2": {
+          "moving forward": "آگے بڑھنا",
+          "moving with arrow keys": "تیر یعنی arrow کے بٹنوں کے ساتھ حرکت"
+        },
+        "courseF_events_practice_reorder_2023": {
           "moving forward": "آگے بڑھنا",
           "moving with arrow keys": "تیر یعنی arrow کے بٹنوں کے ساتھ حرکت"
         },
@@ -992,6 +1090,9 @@
         "courseF_events_review_-2022-2": {
           "moving forward": "آگے بڑھنا"
         },
+        "courseF_events_review_2023": {
+          "moving forward": "آگے بڑھنا"
+        },
         "courseF_events_ship": {
           "fluttering": "پھڑپھڑا",
           "growing": "بڑھتی ہوئی",
@@ -1011,6 +1112,9 @@
           "wobbling": "جھڑکنا"
         },
         "courseF_events_ship_-2022-2": {
+          "moving forward": "آگے بڑھنا"
+        },
+        "courseF_events_ship_2023": {
           "moving forward": "آگے بڑھنا"
         },
         "courseF_events_stops": {
@@ -1049,6 +1153,9 @@
           "wobbling": "جھڑکنا"
         },
         "courseF_events_time_-2022-2": {
+          "moving forward": "آگے بڑھنا"
+        },
+        "courseF_events_time_2023": {
           "moving forward": "آگے بڑھنا"
         },
         "courseF_label_predict": {
@@ -1330,6 +1437,9 @@
         "courseF_text_answer_-2022-2": {
           "moving forward": "آگے بڑھنا"
         },
+        "courseF_text_answer_2023": {
+          "moving forward": "آگے بڑھنا"
+        },
         "courseF_text_choice_color": {
           "fluttering": "پھڑپھڑا",
           "growing": "بڑھتی ہوئی",
@@ -1348,6 +1458,9 @@
           "wandering": "آوارہ"
         },
         "courseF_text_choice_color_-2022-2": {
+          "moving forward": "آگے بڑھنا"
+        },
+        "courseF_text_choice_color_2023": {
           "moving forward": "آگے بڑھنا"
         },
         "courseF_text_choice_conversation": {
@@ -1373,6 +1486,9 @@
         "courseF_text_choice_conversation_-2022-2": {
           "moving with arrow keys": "تیر یعنی arrow کے بٹنوں کے ساتھ حرکت"
         },
+        "courseF_text_choice_conversation_2023": {
+          "moving with arrow keys": "تیر یعنی arrow کے بٹنوں کے ساتھ حرکت"
+        },
         "courseF_text_choice_events": {
           "driving with arrow keys": "تیر چابیاں کے ساتھ ڈرائیونگ",
           "fluttering": "پھڑپھڑا",
@@ -1394,6 +1510,9 @@
           "wobbling": "جھڑکنا"
         },
         "courseF_text_choice_events_-2022-2": {
+          "moving with arrow keys": "تیر یعنی arrow کے بٹنوں کے ساتھ حرکت"
+        },
+        "courseF_text_choice_events_2023": {
           "moving with arrow keys": "تیر یعنی arrow کے بٹنوں کے ساتھ حرکت"
         },
         "courseF_text_choice_freeplay": {
@@ -1419,6 +1538,9 @@
         "courseF_text_choice_freeplay_-2022-2": {
           "moving with arrow keys": "تیر یعنی arrow کے بٹنوں کے ساتھ حرکت"
         },
+        "courseF_text_choice_freeplay_2023": {
+          "moving with arrow keys": "تیر یعنی arrow کے بٹنوں کے ساتھ حرکت"
+        },
         "courseF_text_choice_interview": {
           "driving with arrow keys": "تیر چابیاں کے ساتھ ڈرائیونگ",
           "fluttering": "پھڑپھڑا",
@@ -1440,6 +1562,9 @@
           "wobbling": "جھڑکنا"
         },
         "courseF_text_choice_interview_-2022-2": {
+          "moving with arrow keys": "تیر یعنی arrow کے بٹنوں کے ساتھ حرکت"
+        },
+        "courseF_text_choice_interview_2023": {
           "moving with arrow keys": "تیر یعنی arrow کے بٹنوں کے ساتھ حرکت"
         },
         "courseF_text_choice_multiprompt": {
@@ -1465,6 +1590,9 @@
         "courseF_text_choice_multiprompt_-2022-2": {
           "moving with arrow keys": "تیر یعنی arrow کے بٹنوں کے ساتھ حرکت"
         },
+        "courseF_text_choice_multiprompt_2023": {
+          "moving with arrow keys": "تیر یعنی arrow کے بٹنوں کے ساتھ حرکت"
+        },
         "courseF_text_choice_title": {
           "fluttering": "پھڑپھڑا",
           "growing": "بڑھتی ہوئی",
@@ -1483,6 +1611,9 @@
           "wandering": "آوارہ"
         },
         "courseF_text_choice_title_-2022-2": {
+          "moving forward": "آگے بڑھنا"
+        },
+        "courseF_text_choice_title_2023": {
           "moving forward": "آگے بڑھنا"
         },
         "courseF_text_concat": {
@@ -1505,6 +1636,9 @@
         "courseF_text_concat_-2022-2": {
           "moving forward": "آگے بڑھنا"
         },
+        "courseF_text_concat_2023": {
+          "moving forward": "آگے بڑھنا"
+        },
         "courseF_text_events": {
           "fluttering": "پھڑپھڑا",
           "growing": "بڑھتی ہوئی",
@@ -1523,6 +1657,9 @@
           "wandering": "آوارہ"
         },
         "courseF_text_events_-2022-2": {
+          "moving forward": "آگے بڑھنا"
+        },
+        "courseF_text_events_2023": {
           "moving forward": "آگے بڑھنا"
         },
         "courseF_text_print": {
@@ -1545,6 +1682,9 @@
         "courseF_text_print_-2022-2": {
           "moving forward": "آگے بڑھنا"
         },
+        "courseF_text_print_2023": {
+          "moving forward": "آگے بڑھنا"
+        },
         "courseF_text_prompts": {
           "fluttering": "پھڑپھڑا",
           "growing": "بڑھتی ہوئی",
@@ -1565,6 +1705,9 @@
         "courseF_text_prompts_-2022-2": {
           "moving forward": "آگے بڑھنا"
         },
+        "courseF_text_prompts_2023": {
+          "moving forward": "آگے بڑھنا"
+        },
         "courseF_text_review": {
           "fluttering": "پھڑپھڑا",
           "growing": "بڑھتی ہوئی",
@@ -1583,6 +1726,9 @@
           "wandering": "آوارہ"
         },
         "courseF_text_review_-2022-2": {
+          "moving forward": "آگے بڑھنا"
+        },
+        "courseF_text_review_2023": {
           "moving forward": "آگے بڑھنا"
         },
         "courseF_variables_card": {
@@ -1607,6 +1753,9 @@
         "courseF_variables_card_-2022-2": {
           "moving with arrow keys": "تیر یعنی arrow کے بٹنوں کے ساتھ حرکت"
         },
+        "courseF_variables_card_2023": {
+          "moving with arrow keys": "تیر یعنی arrow کے بٹنوں کے ساتھ حرکت"
+        },
         "courseF_variables_card_finish": {
           "fluttering": "پھڑپھڑا",
           "growing": "بڑھتی ہوئی",
@@ -1627,6 +1776,9 @@
           "wobbling": "جھڑکنا"
         },
         "courseF_variables_card_finish_-2022-2": {
+          "moving with arrow keys": "تیر یعنی arrow کے بٹنوں کے ساتھ حرکت"
+        },
+        "courseF_variables_card_finish_2023": {
           "moving with arrow keys": "تیر یعنی arrow کے بٹنوں کے ساتھ حرکت"
         },
         "courseF_variables_chatbot": {
@@ -1651,6 +1803,9 @@
         "courseF_variables_chatbot_-2022-2": {
           "moving with arrow keys": "تیر یعنی arrow کے بٹنوں کے ساتھ حرکت"
         },
+        "courseF_variables_chatbot_2023": {
+          "moving with arrow keys": "تیر یعنی arrow کے بٹنوں کے ساتھ حرکت"
+        },
         "courseF_variables_chatbot_finish": {
           "fluttering": "پھڑپھڑا",
           "growing": "بڑھتی ہوئی",
@@ -1671,6 +1826,9 @@
           "wobbling": "جھڑکنا"
         },
         "courseF_variables_chatbot_finish_-2022-2": {
+          "moving with arrow keys": "تیر یعنی arrow کے بٹنوں کے ساتھ حرکت"
+        },
+        "courseF_variables_chatbot_finish_2023": {
           "moving with arrow keys": "تیر یعنی arrow کے بٹنوں کے ساتھ حرکت"
         },
         "courseF_variables_madlib": {
@@ -1695,6 +1853,9 @@
         "courseF_variables_madlib_-2022-2": {
           "moving with arrow keys": "تیر یعنی arrow کے بٹنوں کے ساتھ حرکت"
         },
+        "courseF_variables_madlib_2023": {
+          "moving with arrow keys": "تیر یعنی arrow کے بٹنوں کے ساتھ حرکت"
+        },
         "courseF_variables_madlib_finish": {
           "fluttering": "پھڑپھڑا",
           "growing": "بڑھتی ہوئی",
@@ -1717,6 +1878,9 @@
         "courseF_variables_madlib_finish_-2022-2": {
           "moving with arrow keys": "تیر یعنی arrow کے بٹنوں کے ساتھ حرکت"
         },
+        "courseF_variables_madlib_finish_2023": {
+          "moving with arrow keys": "تیر یعنی arrow کے بٹنوں کے ساتھ حرکت"
+        },
         "courseF_variables_predict": {
           "growing": "بڑھتی ہوئی",
           "jittering": "جڑنا",
@@ -1735,6 +1899,74 @@
         },
         "coursee_helloworld_events": {
           "moving forward": "آگے بڑھنا"
+        },
+        "coursee_helloworld_events_2023": {
+          "moving forward": "آگے بڑھنا"
+        },
+        "csc_animal_adaptaions_fishschool": {
+          "moving north and looping": "شمال کی طرف بڑھنا اور لوپ کرنا",
+          "moving south and looping": "جنوب کی طرف بڑھنا اور لوپ کرنا",
+          "moving with arrow keys": "تیر یعنی arrow کے بٹنوں کے ساتھ حرکت"
+        },
+        "csc_animal_adaptations_birds": {
+          "moving north and looping": "شمال کی طرف بڑھنا اور لوپ کرنا",
+          "moving south and looping": "جنوب کی طرف بڑھنا اور لوپ کرنا",
+          "moving with arrow keys": "تیر یعنی arrow کے بٹنوں کے ساتھ حرکت"
+        },
+        "csc_animal_adaptations_bugs": {
+          "moving north and looping": "شمال کی طرف بڑھنا اور لوپ کرنا",
+          "moving south and looping": "جنوب کی طرف بڑھنا اور لوپ کرنا",
+          "moving with arrow keys": "تیر یعنی arrow کے بٹنوں کے ساتھ حرکت"
+        },
+        "csc_animal_adaptations_butterfly": {
+          "moving north and looping": "شمال کی طرف بڑھنا اور لوپ کرنا",
+          "moving south and looping": "جنوب کی طرف بڑھنا اور لوپ کرنا",
+          "moving with arrow keys": "تیر یعنی arrow کے بٹنوں کے ساتھ حرکت"
+        },
+        "csc_animal_adaptations_choice2": {
+          "moving north and looping": "شمال کی طرف بڑھنا اور لوپ کرنا",
+          "moving south and looping": "جنوب کی طرف بڑھنا اور لوپ کرنا",
+          "moving with arrow keys": "تیر یعنی arrow کے بٹنوں کے ساتھ حرکت"
+        },
+        "csc_animal_adaptations_choice3": {
+          "moving north and looping": "شمال کی طرف بڑھنا اور لوپ کرنا",
+          "moving south and looping": "جنوب کی طرف بڑھنا اور لوپ کرنا",
+          "moving with arrow keys": "تیر یعنی arrow کے بٹنوں کے ساتھ حرکت"
+        },
+        "csc_animal_adaptations_fish": {
+          "moving north and looping": "شمال کی طرف بڑھنا اور لوپ کرنا",
+          "moving south and looping": "جنوب کی طرف بڑھنا اور لوپ کرنا",
+          "moving with arrow keys": "تیر یعنی arrow کے بٹنوں کے ساتھ حرکت"
+        },
+        "csc_animal_adaptations_groups": {
+          "moving north and looping": "شمال کی طرف بڑھنا اور لوپ کرنا",
+          "moving south and looping": "جنوب کی طرف بڑھنا اور لوپ کرنا",
+          "moving with arrow keys": "تیر یعنی arrow کے بٹنوں کے ساتھ حرکت"
+        },
+        "csc_animal_adaptations_migration": {
+          "moving north and looping": "شمال کی طرف بڑھنا اور لوپ کرنا",
+          "moving south and looping": "جنوب کی طرف بڑھنا اور لوپ کرنا",
+          "moving with arrow keys": "تیر یعنی arrow کے بٹنوں کے ساتھ حرکت"
+        },
+        "csc_animal_adaptations_speed": {
+          "moving north and looping": "شمال کی طرف بڑھنا اور لوپ کرنا",
+          "moving south and looping": "جنوب کی طرف بڑھنا اور لوپ کرنا",
+          "moving with arrow keys": "تیر یعنی arrow کے بٹنوں کے ساتھ حرکت"
+        },
+        "csc_ecosystems_giraffe_evo_2023": {
+          "moving north and looping": "شمال کی طرف بڑھنا اور لوپ کرنا",
+          "moving south and looping": "جنوب کی طرف بڑھنا اور لوپ کرنا",
+          "moving with arrow keys": "تیر یعنی arrow کے بٹنوں کے ساتھ حرکت"
+        },
+        "csc_ecosystems_whale_explain_2023": {
+          "moving north and looping": "شمال کی طرف بڑھنا اور لوپ کرنا",
+          "moving south and looping": "جنوب کی طرف بڑھنا اور لوپ کرنا",
+          "moving with arrow keys": "تیر یعنی arrow کے بٹنوں کے ساتھ حرکت"
+        },
+        "csc_ecosystems_whale_movement_2023": {
+          "moving north and looping": "شمال کی طرف بڑھنا اور لوپ کرنا",
+          "moving south and looping": "جنوب کی طرف بڑھنا اور لوپ کرنا",
+          "moving with arrow keys": "تیر یعنی arrow کے بٹنوں کے ساتھ حرکت"
         },
         "helloworld_animals_backgrounds": {
           "moving north and looping": "شمال کی طرف بڑھنا اور لوپ کرنا",
@@ -1777,6 +2009,11 @@
           "moving south and looping": "جنوب کی طرف بڑھنا اور لوپ کرنا",
           "moving with arrow keys": "تیر یعنی arrow کے بٹنوں کے ساتھ حرکت"
         },
+        "helloworld_food_backgrounds_2023": {
+          "moving north and looping": "شمال کی طرف بڑھنا اور لوپ کرنا",
+          "moving south and looping": "جنوب کی طرف بڑھنا اور لوپ کرنا",
+          "moving with arrow keys": "تیر یعنی arrow کے بٹنوں کے ساتھ حرکت"
+        },
         "helloworld_food_backgrounds_soccer-2022": {
           "moving north and looping": "شمال کی طرف بڑھنا اور لوپ کرنا",
           "moving south and looping": "جنوب کی طرف بڑھنا اور لوپ کرنا",
@@ -1792,10 +2029,20 @@
           "moving south and looping": "جنوب کی طرف بڑھنا اور لوپ کرنا",
           "moving with arrow keys": "تیر یعنی arrow کے بٹنوں کے ساتھ حرکت"
         },
+        "helloworld_food_behaviors_2023": {
+          "moving north and looping": "شمال کی طرف بڑھنا اور لوپ کرنا",
+          "moving south and looping": "جنوب کی طرف بڑھنا اور لوپ کرنا",
+          "moving with arrow keys": "تیر یعنی arrow کے بٹنوں کے ساتھ حرکت"
+        },
         "helloworld_food_events": {
           "moving forward": "آگے بڑھنا"
         },
         "helloworld_food_sounds": {
+          "moving north and looping": "شمال کی طرف بڑھنا اور لوپ کرنا",
+          "moving south and looping": "جنوب کی طرف بڑھنا اور لوپ کرنا",
+          "moving with arrow keys": "تیر یعنی arrow کے بٹنوں کے ساتھ حرکت"
+        },
+        "helloworld_food_sounds_2023": {
           "moving north and looping": "شمال کی طرف بڑھنا اور لوپ کرنا",
           "moving south and looping": "جنوب کی طرف بڑھنا اور لوپ کرنا",
           "moving with arrow keys": "تیر یعنی arrow کے بٹنوں کے ساتھ حرکت"
@@ -1912,6 +2159,9 @@
           "swimming left and right": "سوئمنگ بائیں اور دائیں",
           "wandering": "آوارہ",
           "wobbling": "جھڑکنا"
+        },
+        "simcustom_2023": {
+          "moving with arrow keys": "تیر یعنی arrow کے بٹنوں کے ساتھ حرکت"
         }
       }
     }

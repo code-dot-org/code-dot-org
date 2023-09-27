@@ -216,6 +216,10 @@
   call_to_action_register_early_access: "Register for early access"
   call_to_action_open_positions: "View open positions"
   call_to_action_get_guide: "Get the guide"
+  call_to_action_donate_to_cdo: "Donate to Code.org"
+  call_to_action_start_fundraiser: "Start a fundraiser"
+  call_to_action_view_donation_policy: "View donation policy"
+  call_to_action_view_donate_bitpay: "Donate with BitPay"
 
   aria_label_call_to_action_afe: "Learn more about Amazon Future Engineer"
   aria_label_call_to_action_teaching_csf: "Start the Teaching Computer Science Fundamentals professional learning program"
@@ -1025,6 +1029,26 @@
   csa_page_faq_answer_08_list_03: "Goal 3: Design Relevant, Engaging Activities"
   csa_page_faq_answer_08_list_04: "Goal 4: Incorporate Best Practices from the Field"
   csa_page_faq_answer_08_02: "For more information about the values that guided our work, please see our [curriculum values](%{curriculum_values_url}) and our [professional learning values](%{pl_values_url})."
+
+  donate_page_top_heading: "Help fund our mission"
+  donate_page_top_desc: "Every donation fuels Code.org's mission to expand access to computer science education. We offer several ways for you to donate and make a difference."
+  donate_page_fundraise_title: "Fundraise for Code.org"
+  donate_page_fundraise_desc: "Help raise money for Code.org! Every student in every school should have the opportunity to learn computer science."
+  donate_page_other_ways_title: "Other ways to give"
+  donate_page_other_ways_desc: "Explore diverse methods to contribute, and find the option that suits you best. Every gesture, big or small, propels our mission forward."
+  donate_page_501c3: "Code.org is registered as a public 501(c)(3) nonprofit organization. Contributions to Code.org are tax-deductible to the extent permitted by law. Code.org's tax identification number is 46-0858543."
+  donate_page_donation_policy_title: "Understanding our Donation Policy"
+  donate_page_donation_policy_desc: "Learn about how we handle and allocate your contributions."
+  donate_tabs_tab_label_daf_direct: "DAF Direct"
+  donate_tabs_tab_label_amazon: "Amazon"
+  donate_tabs_tab_label_bitpay: "BitPay"
+  donate_tabs_tab_label_employee_match: "Employee Match"
+  donate_tabs_daf_direct_title: "Donate via DAF Direct"
+  donate_tabs_daf_direct_desc: "Donate through your donor-advised fund with Fidelity Charitable, Schwab Charitable, or BNY Mellon and make your grant recommendation to Code.org through the DAF Direct online form."
+  donate_tabs_amazon_title: "Donate via Amazon"
+  donate_tabs_amazon_desc: "Donate directly using your Amazon account. With just a few clicks, seamlessly contribute to Code.org's mission and empower the future of computer science education."
+  donate_tabs_bitpay_title: "Donate with Crypto via BitPay"
+  donate_tabs_bitpay_desc: "Embrace the future of giving with cryptocurrency. Through BitPay, your digital currency can directly support Code.org's endeavors in expanding computer science education."
 
   hoc_live: 'Hour of Code Live'
   hoc_live_sign_up_title: 'Sign up for Hour of Code Live'

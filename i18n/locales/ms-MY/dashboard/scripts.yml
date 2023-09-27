@@ -2892,3 +2892,7 @@ ms:
           description_short: Pelajari semua konsep dalam Asas Sains Komputer dan cipta seni, cerita atau permainan anda sendiri.
         how-ai-works-2023:
           title: Cara AI Berfungsi
+        ai-ethics-2023:
+          lessons:
+            lesson-1:
+              name: Kod Etika AI kami

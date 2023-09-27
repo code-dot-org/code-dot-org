@@ -50,18 +50,19 @@ Worth noting:
   
 
 ### Apps Tests
-`npm test` will lint all of the apps code and run unit and integration tests. Run this from the `apps` directory. You can expect a full test run to take about 4-8 minutes.
+
+`yarn test` will lint all of the apps code and run unit and integration tests. Run this from the `apps/` directory. You can expect a full test run to take about 4-8 minutes.
 
 It's also possible to run a subset of tests:
 
-* `npm run lint`
-* `npm run test:unit`
-* `npm run test:integration`
-* `npm run test:entry -- --entry=./test/unit/gridUtilsTest.js`
+* `yarn lint`
+* `yarn test:unit`
+* `yarn test:integration`
+* `yarn test:unit --entry=./test/unit/gridUtilsTest.js`
 
-To debug tests in Chrome, prepend `BROWSER=Chrome WATCH=1` to any test command.
+To debug tests in Chrome, append `--browser=Chrome --watchTests` to any test command.
 
-See [the apps readme](./apps/README.md) for more details.
+For more details, see [apps/README.md](./apps/README.md#running-tests).
 
 ### Dashboard Tests
 

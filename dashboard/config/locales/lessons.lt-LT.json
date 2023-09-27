@@ -377,6 +377,36 @@
         "coursef-2022/The Internet": {
           "name": "Internetas"
         },
+        "coursea-2023/Happy Maps": {
+          "name": "Laimingieji žemėlapiai"
+        },
+        "courseb-2023/Move It, Move It": {
+          "name": "Judėk, judėk"
+        },
+        "courseb-2023/Getting Loopy": {
+          "name": "Kartojimo supratimas"
+        },
+        "coursec-2023/The Big Event": {
+          "name": "Didelis įvykis"
+        },
+        "coursec-2023/Binary Bracelets": {
+          "name": "Dvejetainės apyrankės"
+        },
+        "coursed-2023/Graph Paper Programming": {
+          "name": "Programavimas ant languoto popieriaus"
+        },
+        "coursed-2023/Relay Programming": {
+          "name": "Programavimas komandoje"
+        },
+        "coursed-2023/Conditionals with Cards": {
+          "name": "Sąlyginiai sakiniai su kortomis"
+        },
+        "coursee-2023/Songwriting": {
+          "name": "Dainų rašymas"
+        },
+        "coursef-2023/The Internet": {
+          "name": "Internetas"
+        },
         "Hour of Code/Hour of Code 2013": {
           "name": "Programavimo valanda 2013"
         },

@@ -89,6 +89,10 @@ ro:
         ai-ethics-2021:
           description_audience: Clasele 6-12
           title: Codul nostru de Etică IA
+        ai-ethics-2023:
+          lessons:
+            lesson-1:
+              name: Codul nostru de Etică IA
         aiml-2021:
           lesson_groups:
             lessonGroup-4:

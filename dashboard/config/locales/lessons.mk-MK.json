@@ -362,6 +362,45 @@
         "pre-express-2022/Sequencing with Scrat": {
           "name": "Секвенционирање со Scrat"
         },
+        "coursea-2023/Sequencing with Scrat": {
+          "name": "Секвенционирање со Scrat"
+        },
+        "coursea-2023/The Big Event Jr": {
+          "name": "Големиот настан Џуниор"
+        },
+        "courseb-2023/Digital Trails": {
+          "name": "Дигитални патеки"
+        },
+        "courseb-2023/The Right App": {
+          "name": "Вистинската апликација"
+        },
+        "courseb-2023/The Big Event Jr": {
+          "name": "Големиот настан Џуниор"
+        },
+        "coursec-2023/My Robotic Friends Jr": {
+          "name": "Моите роботски пријатели Џуниор"
+        },
+        "coursec-2023/My Loopy Robotic Friends Jr": {
+          "name": "Мој Loopy роботски пријатели Џуниор."
+        },
+        "coursee-2023/Fancy Shapes using Nested Loops": {
+          "name": "Фенси форми користејќи вгнездени јамки"
+        },
+        "coursef-2023/The Power of Words": {
+          "name": "Моќта на зборовите"
+        },
+        "coursef-2023/Simulating Experiments": {
+          "name": "Симулирање експерименти"
+        },
+        "express-2023/Swimming Fish in Sprite Lab": {
+          "name": "Пливачка риба во Sprite Lab"
+        },
+        "express-2023/For Loops with Bee": {
+          "name": "За петелки со пчела"
+        },
+        "pre-express-2023/Sequencing with Scrat": {
+          "name": "Секвенционирање со Scrat"
+        },
         "outbreak/Outbreak": {
           "overview": "",
           "preparation": "",
