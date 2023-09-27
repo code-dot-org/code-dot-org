@@ -51,7 +51,7 @@ module I18n
       def google_drive
         return @google_drive if defined? @google_drive
 
-        @google_drive = CDO.gdrive_export_secret && Google::Drive.new(service_account_key: CDO.gdrive_export_secret)
+        @google_drive = CDO.gdrive_export_secret && Google::Drive.new
       end
 
       def update_worksheet_data(key, file_name, translation)
