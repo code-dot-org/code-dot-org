@@ -15,7 +15,7 @@ class LearningGoalAiEvaluationsControllerTest < ActionController::TestCase
     }
 
     assert_response :success
-    assert_equal ai_evaluation.id, json_response['id']
+    assert_equal ai_evaluation.understanding, json_response['understanding']
   end
 
   test "cannot get evaluation for student if not teacher of student" do

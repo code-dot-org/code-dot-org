@@ -19,4 +19,11 @@
 class LearningGoalAiEvaluation < ApplicationRecord
   belongs_to :learning_goal
   belongs_to :user
+
+  def summarize_for_instructor
+    {
+      id: id,
+      understanding: understanding,
+    }
+  end
 end

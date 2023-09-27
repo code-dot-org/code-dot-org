@@ -11,7 +11,7 @@ class LearningGoalAiEvaluationsController < ApplicationController
     )
 
     return head :not_found unless evaluation
-    render json: evaluation
+    render json: evaluation.summarize_for_instructor
   end
 
   private
