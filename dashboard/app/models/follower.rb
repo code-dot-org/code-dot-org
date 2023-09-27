@@ -66,7 +66,7 @@ class Follower < ApplicationRecord
   def remove_family_name
     # If the student is in zero sections, and has a family name set,
     # remove the family name.
-    if student_user.family_name && student_user.sections_as_student.empty?
+    if student_user&.family_name && student_user&.sections_as_student&.empty?
       # can't remove keys from properties directly, so just set it to nil.
       student_user.family_name = nil
       student_user.save!
