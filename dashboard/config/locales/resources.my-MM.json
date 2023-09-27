@@ -990,6 +990,12 @@
         "pause_and_think_online/pre-express/2022": {
           "type": "ဗီဒီယို"
         },
+        "ethics_and_ai_privacy_the_future_of_work/ai-ethics/2023": {
+          "type": "ဗီဒီယို"
+        },
+        "how_ai_works_large_language_models/ai-ethics/2023": {
+          "type": "ဗီဒီယို"
+        },
         "star_quilts_1/csc-starquilts/2023": {
           "type": "ဗီဒီယို"
         },
@@ -1039,6 +1045,214 @@
           "type": "ဗီဒီယို"
         },
         "poem_art_video_optional_/poetry/2023": {
+          "type": "ဗီဒီယို"
+        },
+        "teacher_forum/csd/2023": {
+          "name": "ဆရာဖိုရမ်"
+        },
+        "problem_solving_process_1/csd/2023": {
+          "type": "ဗီဒီယို"
+        },
+        "the_problem_solving_process/csd/2023": {
+          "type": "ဗီဒီယို"
+        },
+        "what_is_a_computer/csd/2023": {
+          "type": "ဗီဒီယို"
+        },
+        "what_do_computers_do/csd/2023": {
+          "type": "ဗီဒီယို"
+        },
+        "intro_to_web_lab_part_2/csd/2023": {
+          "type": "ဗီဒီယို"
+        },
+        "pair_programming/csd/2023": {
+          "type": "ဗီဒီယို"
+        },
+        "video_intro_to_web_lab_part_1/csd/2023": {
+          "type": "ဗီဒီယို"
+        },
+        "lists/csd/2023": {
+          "name": "စာရင်းများ"
+        },
+        "video_debugging/csd/2023": {
+          "type": "ဗီဒီယို"
+        },
+        "video_pair_programming/csd/2023": {
+          "type": "ဗီဒီယို"
+        },
+        "intro_to_css_-_part_1/csd/2023": {
+          "type": "ဗီဒီယို"
+        },
+        "intro_to_css_-_part_2/csd/2023": {
+          "type": "ဗီဒီယို"
+        },
+        "creative_commons_overview/csd/2023": {
+          "type": "ဗီဒီယို"
+        },
+        "publishing_your_website/csd/2023": {
+          "type": "ဗီဒီယို"
+        },
+        "video_managing_disagreement/csd/2023": {
+          "type": "ဗီဒီယို"
+        },
+        "video_teamwork/csd/2023": {
+          "type": "ဗီဒီယို"
+        },
+        "video_how_search_works/csd/2023": {
+          "type": "ဗီဒီယို"
+        },
+        "drawing_in_game_lab_-_part_1/csd/2023": {
+          "type": "ဗီဒီယို"
+        },
+        "drawing_in_game_lab_-_part_2/csd/2023": {
+          "type": "ဗီဒီယို"
+        },
+        "introduction_to_variables/csd/2023": {
+          "type": "ဗီဒီယို"
+        },
+        "variables/csd/2023": {
+          "name": "Variables"
+        },
+        "variables_1/csd/2023": {
+          "name": "Variables",
+          "type": "ဗီဒီယို"
+        },
+        "variables_2/csd/2023": {
+          "name": "Variables"
+        },
+        "introduction_to_sprites/csd/2023": {
+          "type": "ဗီဒီယို"
+        },
+        "the_animation_tab/csd/2023": {
+          "type": "ဗီဒီယို"
+        },
+        "sprite_properties_needs_updating_/csd/2023": {
+          "type": "ဗီဒီယို"
+        },
+        "text/csd/2023": {
+          "name": "စာ"
+        },
+        "flipbook_example_-_by_marnic_bos/csd/2023": {
+          "type": "ဗီဒီယို"
+        },
+        "introduction_to_the_draw_loop/csd/2023": {
+          "type": "ဗီဒီယို"
+        },
+        "sprite_movement/csd/2023": {
+          "type": "ဗီဒီယို"
+        },
+        "boolean_expressions/csd/2023": {
+          "type": "ဗီဒီယို"
+        },
+        "conditional_statements/csd/2023": {
+          "type": "ဗီဒီယို"
+        },
+        "if_else_statements/csd/2023": {
+          "type": "ဗီဒီယို"
+        },
+        "velocity/csd/2023": {
+          "type": "ဗီဒီယို"
+        },
+        "functions/csd/2023": {
+          "type": "ဗီဒီယို"
+        },
+        "the_design_thinking_process/csd/2023": {
+          "type": "ဗီဒီယို"
+        },
+        "what_s_for_lunch_testing/csd/2023": {
+          "type": "ဗီဒီယို"
+        },
+        "intro_to_design_mode/csd/2023": {
+          "type": "ဗီဒီယို"
+        },
+        "events_in_app_lab/csd/2023": {
+          "type": "ဗီဒီယို"
+        },
+        "events_in_app_lab_1/csd/2023": {
+          "type": "ဗီဒီယို"
+        },
+        "binary_and_data/csd/2023": {
+          "type": "ဗီဒီယို"
+        },
+        "amazon_and_data/csd/2023": {
+          "type": "ဗီဒီယို"
+        },
+        "netflix_and_data/csd/2023": {
+          "type": "ဗီဒီယို"
+        },
+        "waze_and_data/csd/2023": {
+          "type": "ဗီဒီယို"
+        },
+        "video_impact_on_society/csd/2023": {
+          "type": "ဗီဒီယို"
+        },
+        "video_machine_learning/csd/2023": {
+          "type": "ဗီဒီယို"
+        },
+        "video_training_data_and_bias/csd/2023": {
+          "type": "ဗီဒီယို"
+        },
+        "circuits_and_logic/csd/2023": {
+          "type": "ဗီဒီယို"
+        },
+        "the_counter_pattern/csd/2023": {
+          "type": "ဗီဒီယို"
+        },
+        "if_statements_1/csd/2023": {
+          "type": "ဗီဒီယို"
+        },
+        "input_output_devices/csd/2023": {
+          "type": "ဗီဒီယို"
+        },
+        "introduction_to_arrays/csd/2023": {
+          "type": "ဗီဒီယို"
+        },
+        "functions_with_parameters/csd/2023": {
+          "type": "ဗီဒီယို"
+        },
+        "teacher_forum_1/csd/2023": {
+          "name": "ဆရာဖိုရမ်"
+        },
+        "the_counter_pattern_2/csd/2023": {
+          "type": "ဗီဒီယို"
+        },
+        "ai_what_is_machine_learning_/csd/2023": {
+          "type": "ဗီဒီယို"
+        },
+        "seeing_ai/csd/2023": {
+          "type": "ဗီဒီယို"
+        },
+        "finding_patterns_in_data/csd/2023": {
+          "type": "ဗီဒီယို"
+        },
+        "introduction_to_ai_lab_1/csd/2023": {
+          "type": "ဗီဒီယို"
+        },
+        "training_and_testing_in_ai_lab/csd/2023": {
+          "type": "ဗီဒီယို"
+        },
+        "ai_training_data_bias/csd/2023": {
+          "type": "ဗီဒီယို"
+        },
+        "model_cards_in_ai_lab/csd/2023": {
+          "type": "ဗီဒီယို"
+        },
+        "if-statements_in_app_lab/csd/2023": {
+          "type": "ဗီဒီယို"
+        },
+        "numerical_data_in_ai_lab_2/csd/2023": {
+          "type": "ဗီဒီယို"
+        },
+        "ethics_ai_equal_access_and_algorithmic_bias/csd/2023": {
+          "type": "ဗီဒီယို"
+        },
+        "creating_a_survey_in_google_forms/csd/2023": {
+          "type": "ဗီဒီယို"
+        },
+        "cleaning_survey_data/csd/2023": {
+          "type": "ဗီဒီယို"
+        },
+        "view_and_download_survey_data/csd/2023": {
           "type": "ဗီဒီယို"
         },
         "teacher_forum/coursea/2023": {

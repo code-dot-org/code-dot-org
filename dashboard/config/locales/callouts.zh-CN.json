@@ -17,7 +17,19 @@
         "AppLab Intro 7 - Change Screen Color": {
           "applab_hoc_finish": "屏幕变绿了吗？如果是这样, 请按 \"完成\"。如果不是, 请点击 \"重置\", 更改您的代码, 然后再次点击 \"运行\"。"
         },
+        "AppLab Intro 7 - Change Screen Color_2023": {
+          "applab_hoc_finish": "屏幕变绿了吗？如果是这样, 请按 \"完成\"。如果不是, 请点击 \"重置\", 更改您的代码, 然后再次点击 \"运行\"。"
+        },
+        "AppLab Intro 7 - Change Screen Color_mb2022": {
+          "applab_hoc_finish": "屏幕变绿了吗？如果是这样, 请按 \"完成\"。如果不是, 请点击 \"重置\", 更改您的代码, 然后再次点击 \"运行\"。"
+        },
         "AppLab Intro 7 - thisOrThatAddButton": {
+          "AppLabHoCFinal11": "你现在正处于设计模式中。"
+        },
+        "AppLab Intro 7 - thisOrThatAddButton_2023": {
+          "AppLabHoCFinal11": "你现在正处于设计模式中。"
+        },
+        "AppLab Intro 7 - thisOrThatAddButton_mb2022": {
           "AppLabHoCFinal11": "你现在正处于设计模式中。"
         },
         "CSD U3 - conditionals - transition": {
@@ -50,6 +62,32 @@
         "CSD U3 Boolean Predict_2022": {
           "": "程序会在这里打印结果"
         },
+        "CSD U3 Boolean Predict_2023": {
+          "": "程序会在这里打印结果"
+        },
+        "CSD U3 L18 Predict_2023": {
+          "CSD_U3_L11_S4_C1": "在这里添加模块."
+        },
+        "CSD U3 L7 review arc_2023": {
+          "CSD_U3_rect_c1": "这是代码",
+          "CSD_U3_rect_c2": "拖动此模块放到代码区域。"
+        },
+        "CSD U3 L7 review line_2023": {
+          "CSD_U3_rect_c1": "这是代码",
+          "CSD_U3_rect_c2": "拖动此模块放到代码区域。"
+        },
+        "CSD U3 L7 review point_2023": {
+          "CSD_U3_rect_c1": "这是代码",
+          "CSD_U3_rect_c2": "拖动此模块放到代码区域。"
+        },
+        "CSD U3 L7 review shapes_2023": {
+          "CSD_U3_rect_c1": "这是代码",
+          "CSD_U3_rect_c2": "拖动此模块放到代码区域。"
+        },
+        "CSD U3 L7 shapes review polygon_2023": {
+          "CSD_U3_rect_c1": "这是代码",
+          "CSD_U3_rect_c2": "拖动此模块放到代码区域。"
+        },
         "CSD U3 Sprites anitab 1": {
           "": "点击打开动画标签页"
         },
@@ -63,6 +101,9 @@
           "anicallout": "点击打开动画标签页"
         },
         "CSD U3 Sprites anitab 1_2022": {
+          "anicallout": "点击打开动画标签页"
+        },
+        "CSD U3 Sprites anitab 1_2023": {
           "anicallout": "点击打开动画标签页"
         },
         "CSD U3 Sprites intro sprites": {
@@ -80,6 +121,9 @@
         "CSD U3 Sprites intro sprites_2022": {
           "": "用这个模块来创建精灵图"
         },
+        "CSD U3 Sprites intro sprites_2023": {
+          "": "用这个模块来创建精灵图"
+        },
         "CSD U3 Sprites text": {
           "": "使用此模块在屏幕上放置文本"
         },
@@ -95,6 +139,9 @@
         "CSD U3 Sprites text_2022": {
           "": "使用此模块在屏幕上放置文本"
         },
+        "CSD U3 Sprites text_2023": {
+          "": "使用此模块在屏幕上放置文本"
+        },
         "CSD U3 UP_ARROW": {
           "": "添加如果语句，并将移动的代码放在里面"
         },
@@ -108,6 +155,9 @@
           "": "添加如果语句，并将移动的代码放在里面"
         },
         "CSD U3 UP_ARROW_2022": {
+          "": "添加如果语句，并将移动的代码放在里面"
+        },
+        "CSD U3 UP_ARROW_2023": {
           "": "添加如果语句，并将移动的代码放在里面"
         },
         "CSD U3 Variables Predict Where X": {
@@ -126,6 +176,9 @@
           "grid": "点击这里显示网格。"
         },
         "CSD U3 Variables Predict Where XY_2022": {
+          "grid": "点击这里显示网格。"
+        },
+        "CSD U3 Variables Predict Where XY_2023": {
           "grid": "点击这里显示网格。"
         },
         "CSD U3 Variables Predict Where X_2018": {
@@ -155,6 +208,9 @@
         "CSD U3 abstraction accelerateX_2022": {
           "CSD_U3_L11_S6_C1": "在此处添加代码."
         },
+        "CSD U3 abstraction accelerateX_2023": {
+          "CSD_U3_L11_S6_C1": "在此处添加代码."
+        },
         "CSD U3 abstraction accelerateY": {
           "CSD_U3_L11_S7_C1": "在此处添加代码."
         },
@@ -168,6 +224,9 @@
           "CSD_U3_L11_S7_C1": "在此处添加代码."
         },
         "CSD U3 abstraction accelerateY_2022": {
+          "CSD_U3_L11_S7_C1": "在此处添加代码."
+        },
+        "CSD U3 abstraction accelerateY_2023": {
           "CSD_U3_L11_S7_C1": "在此处添加代码."
         },
         "CSD U3 abstraction jump": {
@@ -190,6 +249,10 @@
           "CSD_U3_L11_S17_C1": "看看这个如果语句",
           "CSD_U3_L11_S17_C2": "让青蛙落回这里"
         },
+        "CSD U3 abstraction jump_2023": {
+          "CSD_U3_L11_S17_C1": "看看这个如果语句",
+          "CSD_U3_L11_S17_C2": "让青蛙落回这里"
+        },
         "CSD U3 abstraction jumping": {
           "CSD_U3_L13_S8_C1": "在这里设置速度"
         },
@@ -205,6 +268,9 @@
         "CSD U3 abstraction jumping_2022": {
           "CSD_U3_L13_S8_C1": "在这里设置速度"
         },
+        "CSD U3 abstraction jumping_2023": {
+          "CSD_U3_L13_S8_C1": "在这里设置速度"
+        },
         "CSD U3 abstraction looping": {
           "CSD_U3_L11_S17_C1": "看看这个如果语句"
         },
@@ -218,6 +284,9 @@
           "CSD_U3_L11_S17_C1": "看看这个如果语句"
         },
         "CSD U3 abstraction looping_2022": {
+          "CSD_U3_L11_S17_C1": "看看这个如果语句"
+        },
+        "CSD U3 abstraction looping_2023": {
           "CSD_U3_L11_S17_C1": "看看这个如果语句"
         },
         "CSD U3 abstraction rotation": {
@@ -238,6 +307,9 @@
         "CSD U3 abstraction rotation control_2022": {
           "CSD_U3_L11_S5_C1": "看看代码。"
         },
+        "CSD U3 abstraction rotation control_2023": {
+          "CSD_U3_L11_S5_C1": "看看代码。"
+        },
         "CSD U3 abstraction rotation_2018": {
           "CSD_U3_L11_S4_C1": "在这里使用 rotationSpeed 模块"
         },
@@ -248,6 +320,9 @@
           "CSD_U3_L11_S4_C1": "在这里使用 rotationSpeed 模块"
         },
         "CSD U3 abstraction rotation_2022": {
+          "CSD_U3_L11_S4_C1": "在这里使用 rotationSpeed 模块"
+        },
+        "CSD U3 abstraction rotation_2023": {
           "CSD_U3_L11_S4_C1": "在这里使用 rotationSpeed 模块"
         },
         "CSD U3 abstraction tumbleweed": {
@@ -263,6 +338,9 @@
           "CSD_U3_L11_S17_C1": "看看这个如果语句"
         },
         "CSD U3 abstraction tumbleweed_2022": {
+          "CSD_U3_L11_S17_C1": "看看这个如果语句"
+        },
+        "CSD U3 abstraction tumbleweed_2023": {
           "CSD_U3_L11_S17_C1": "看看这个如果语句"
         },
         "CSD U3 abstraction velocityX": {
@@ -283,6 +361,9 @@
         "CSD U3 abstraction velocityX control_2022": {
           "CSD_U3_L11_S5_C1": "看看代码。"
         },
+        "CSD U3 abstraction velocityX control_2023": {
+          "CSD_U3_L11_S5_C1": "看看代码。"
+        },
         "CSD U3 abstraction velocityX if-statements": {
           "CSD_U3_L11_S5_C1": "看看代码。"
         },
@@ -298,6 +379,9 @@
         "CSD U3 abstraction velocityX if-statements_2022": {
           "CSD_U3_L11_S5_C1": "看看代码。"
         },
+        "CSD U3 abstraction velocityX if-statements_2023": {
+          "CSD_U3_L11_S5_C1": "看看代码。"
+        },
         "CSD U3 abstraction velocityX_2018": {
           "CSD_U3_L11_S4_C1": "在这里添加模块."
         },
@@ -308,6 +392,9 @@
           "CSD_U3_L11_S4_C1": "在这里添加模块."
         },
         "CSD U3 abstraction velocityX_2022": {
+          "CSD_U3_L11_S4_C1": "在这里添加模块."
+        },
+        "CSD U3 abstraction velocityX_2023": {
           "CSD_U3_L11_S4_C1": "在这里添加模块."
         },
         "CSD U3 abstraction velocityY": {
@@ -328,6 +415,9 @@
         "CSD U3 abstraction velocityY control_2022": {
           "CSD_U3_L11_S5_C1": "看看代码。"
         },
+        "CSD U3 abstraction velocityY control_2023": {
+          "CSD_U3_L11_S5_C1": "看看代码。"
+        },
         "CSD U3 abstraction velocityY_2018": {
           "CSD_U3_L11_S5_C1": "在这里添加模块."
         },
@@ -338,6 +428,9 @@
           "CSD_U3_L11_S5_C1": "在这里添加模块."
         },
         "CSD U3 abstraction velocityY_2022": {
+          "CSD_U3_L11_S5_C1": "在这里添加模块."
+        },
+        "CSD U3 abstraction velocityY_2023": {
           "CSD_U3_L11_S5_C1": "在这里添加模块."
         },
         "CSD U3 collisions isTouching intro": {
@@ -353,6 +446,9 @@
           "CSD_U3_L12_S2_C1": "在这里添加模块."
         },
         "CSD U3 collisions isTouching intro_2022": {
+          "CSD_U3_L12_S2_C1": "在这里添加模块."
+        },
+        "CSD U3 collisions isTouching intro_2023": {
           "CSD_U3_L12_S2_C1": "在这里添加模块."
         },
         "CSD U3 collisions scoreboard": {
@@ -382,6 +478,9 @@
         "CSD U3 collisions try blocks_2022": {
           "CSD_U3_L13_S6_C1": "改变模块"
         },
+        "CSD U3 collisions try blocks_2023": {
+          "CSD_U3_L13_S6_C1": "改变模块"
+        },
         "CSD U3 collisions types": {
           "CSD_U3_L13_S6_C1": "在此处添加代码."
         },
@@ -391,16 +490,25 @@
         "CSD U3 collisions types2_2022": {
           "CSD_U3_L13_S6_C1": "在此处添加代码."
         },
+        "CSD U3 collisions types2_2023": {
+          "CSD_U3_L13_S6_C1": "在此处添加代码."
+        },
         "CSD U3 collisions types3_2021": {
           "CSD_U3_L13_S6_C1": "在此处添加代码."
         },
         "CSD U3 collisions types3_2022": {
           "CSD_U3_L13_S6_C1": "在此处添加代码."
         },
+        "CSD U3 collisions types3_2023": {
+          "CSD_U3_L13_S6_C1": "在此处添加代码."
+        },
         "CSD U3 collisions types4_2021": {
           "CSD_U3_L13_S6_C1": "在此处添加代码."
         },
         "CSD U3 collisions types4_2022": {
+          "CSD_U3_L13_S6_C1": "在此处添加代码."
+        },
+        "CSD U3 collisions types4_2023": {
           "CSD_U3_L13_S6_C1": "在此处添加代码."
         },
         "CSD U3 collisions types_2018": {
@@ -413,6 +521,9 @@
           "CSD_U3_L13_S6_C1": "在此处添加代码."
         },
         "CSD U3 collisions types_2022": {
+          "CSD_U3_L13_S6_C1": "在此处添加代码."
+        },
+        "CSD U3 collisions types_2023": {
           "CSD_U3_L13_S6_C1": "在此处添加代码."
         },
         "CSD U3 debug": {
@@ -435,11 +546,19 @@
           "CSD_U3_rect_c1": "这是代码",
           "CSD_U3_rect_c2": "拖动此模块放到代码区域。"
         },
+        "CSD U3 debug_2023": {
+          "CSD_U3_rect_c1": "这是代码",
+          "CSD_U3_rect_c2": "拖动此模块放到代码区域。"
+        },
         "CSD U3 drawing challenge 2_2021": {
           "CSD_U3_rect_c1": "这是代码",
           "CSD_U3_rect_c2": "拖动此模块放到代码区域。"
         },
         "CSD U3 drawing challenge 2_2022": {
+          "CSD_U3_rect_c1": "这是代码",
+          "CSD_U3_rect_c2": "拖动此模块放到代码区域。"
+        },
+        "CSD U3 drawing challenge 2_2023": {
           "CSD_U3_rect_c1": "这是代码",
           "CSD_U3_rect_c2": "拖动此模块放到代码区域。"
         },
@@ -451,11 +570,19 @@
           "CSD_U3_rect_c1": "这是代码",
           "CSD_U3_rect_c2": "拖动此模块放到代码区域。"
         },
+        "CSD U3 drawing challenge 3_2023": {
+          "CSD_U3_rect_c1": "这是代码",
+          "CSD_U3_rect_c2": "拖动此模块放到代码区域。"
+        },
         "CSD U3 drawing practice 1_2021": {
           "CSD_U3_rect_c1": "这是代码",
           "CSD_U3_rect_c2": "拖动此模块放到代码区域。"
         },
         "CSD U3 drawing practice 1_2022": {
+          "CSD_U3_rect_c1": "这是代码",
+          "CSD_U3_rect_c2": "拖动此模块放到代码区域。"
+        },
+        "CSD U3 drawing practice 1_2023": {
           "CSD_U3_rect_c1": "这是代码",
           "CSD_U3_rect_c2": "拖动此模块放到代码区域。"
         },
@@ -467,11 +594,19 @@
           "CSD_U3_rect_c1": "这是代码",
           "CSD_U3_rect_c2": "拖动此模块放到代码区域。"
         },
+        "CSD U3 drawing practice 2_2023": {
+          "CSD_U3_rect_c1": "这是代码",
+          "CSD_U3_rect_c2": "拖动此模块放到代码区域。"
+        },
         "CSD U3 drawing practice 3_2021": {
           "CSD_U3_rect_c1": "这是代码",
           "CSD_U3_rect_c2": "拖动此模块放到代码区域。"
         },
         "CSD U3 drawing practice 3_2022": {
+          "CSD_U3_rect_c1": "这是代码",
+          "CSD_U3_rect_c2": "拖动此模块放到代码区域。"
+        },
+        "CSD U3 drawing practice 3_2023": {
           "CSD_U3_rect_c1": "这是代码",
           "CSD_U3_rect_c2": "拖动此模块放到代码区域。"
         },
@@ -515,6 +650,10 @@
           "CSD_U3_rect_c1": "这是代码",
           "CSD_U3_rect_c2": "拖动此模块放到代码区域。"
         },
+        "CSD U3 fill_2023": {
+          "CSD_U3_rect_c1": "这是代码",
+          "CSD_U3_rect_c2": "拖动此模块放到代码区域。"
+        },
         "CSD U3 game backgrounds": {
           "CSD_U3_L18_S4_C2": "函数区域",
           "CSD_U3_S18_L4_C1": "这个模块用来调用函数。"
@@ -532,6 +671,10 @@
           "CSD_U3_S18_L4_C1": "这个模块用来调用函数。"
         },
         "CSD U3 game backgrounds_2022": {
+          "CSD_U3_L18_S4_C2": "函数区域",
+          "CSD_U3_S18_L4_C1": "这个模块用来调用函数。"
+        },
+        "CSD U3 game backgrounds_2023": {
           "CSD_U3_L18_S4_C2": "函数区域",
           "CSD_U3_S18_L4_C1": "这个模块用来调用函数。"
         },
@@ -555,6 +698,10 @@
           "CSD_U3_L18_S3_C2": "变量区域",
           "CSD_U3_S18_L3_C1": "这个模块用来创建新变量。"
         },
+        "CSD U3 game variables_2023": {
+          "CSD_U3_L18_S3_C2": "变量区域",
+          "CSD_U3_S18_L3_C1": "这个模块用来创建新变量。"
+        },
         "CSD U3 keydown conditional": {
           "": "将模块加到下面的如果语句里"
         },
@@ -568,6 +715,9 @@
           "": "将模块加到下面的如果语句里"
         },
         "CSD U3 keydown conditional_2022": {
+          "": "将模块加到下面的如果语句里"
+        },
+        "CSD U3 keydown conditional_2023": {
           "": "将模块加到下面的如果语句里"
         },
         "CSD U3 platform background1": {
@@ -595,6 +745,11 @@
           "CSD_U3_L16_S3_C2": "这是调用函数的代码",
           "CSD_U3_L16_S3_C3": "改动这个函数。"
         },
+        "CSD U3 platform background1_2023": {
+          "CSD_U3_L16_S3_C1": "此函数会画出背景",
+          "CSD_U3_L16_S3_C2": "这是调用函数的代码",
+          "CSD_U3_L16_S3_C3": "改动这个函数。"
+        },
         "CSD U3 platform platform1": {
           "CSD_U3_S17_L8_C1": "此模块用来创建新的精灵图。"
         },
@@ -608,6 +763,9 @@
           "CSD_U3_S17_L8_C1": "此模块用来创建新的精灵图。"
         },
         "CSD U3 platform platform1_2022": {
+          "CSD_U3_S17_L8_C1": "此模块用来创建新的精灵图。"
+        },
+        "CSD U3 platform platform1_2023": {
           "CSD_U3_S17_L8_C1": "此模块用来创建新的精灵图。"
         },
         "CSD U3 platform scoreboard": {
@@ -625,6 +783,9 @@
         "CSD U3 platform scoreboard_2022": {
           "CSD_U3_L17_S7_C1": "分数显示在这里。"
         },
+        "CSD U3 platform scoreboard_2023": {
+          "CSD_U3_L17_S7_C1": "分数显示在这里。"
+        },
         "CSD U3 platform variable1": {
           "callout": "这个模块用来创建变量。"
         },
@@ -640,6 +801,9 @@
         "CSD U3 platform variable1_2022": {
           "callout": "这个模块用来创建变量。"
         },
+        "CSD U3 platform variable1_2023": {
+          "callout": "这个模块用来创建变量。"
+        },
         "CSD U3 properties depth_2021": {
           "CSD_U3_rect_c1": "这是代码",
           "CSD_U3_rect_c2": "拖动此模块放到代码区域。"
@@ -648,11 +812,19 @@
           "CSD_U3_rect_c1": "这是代码",
           "CSD_U3_rect_c2": "拖动此模块放到代码区域。"
         },
+        "CSD U3 properties depth_2023": {
+          "CSD_U3_rect_c1": "这是代码",
+          "CSD_U3_rect_c2": "拖动此模块放到代码区域。"
+        },
         "CSD U3 properties tint_2021": {
           "CSD_U3_rect_c1": "这是代码",
           "CSD_U3_rect_c2": "拖动此模块放到代码区域。"
         },
         "CSD U3 properties tint_2022": {
+          "CSD_U3_rect_c1": "这是代码",
+          "CSD_U3_rect_c2": "拖动此模块放到代码区域。"
+        },
+        "CSD U3 properties tint_2023": {
           "CSD_U3_rect_c1": "这是代码",
           "CSD_U3_rect_c2": "拖动此模块放到代码区域。"
         },
@@ -700,11 +872,19 @@
           "CSD_U3_rect_c1": "这是代码",
           "CSD_U3_rect_c2": "拖动此模块放到代码区域。"
         },
+        "CSD U3 shapes arc_2023": {
+          "CSD_U3_rect_c1": "这是代码",
+          "CSD_U3_rect_c2": "拖动此模块放到代码区域。"
+        },
         "CSD U3 shapes behind_2021": {
           "CSD_U3_rect_c1": "这是代码",
           "CSD_U3_rect_c2": "拖动此模块放到代码区域。"
         },
         "CSD U3 shapes behind_2022": {
+          "CSD_U3_rect_c1": "这是代码",
+          "CSD_U3_rect_c2": "拖动此模块放到代码区域。"
+        },
+        "CSD U3 shapes behind_2023": {
           "CSD_U3_rect_c1": "这是代码",
           "CSD_U3_rect_c2": "拖动此模块放到代码区域。"
         },
@@ -716,11 +896,19 @@
           "CSD_U3_rect_c1": "这是代码",
           "CSD_U3_rect_c2": "拖动此模块放到代码区域。"
         },
+        "CSD U3 shapes line_2023": {
+          "CSD_U3_rect_c1": "这是代码",
+          "CSD_U3_rect_c2": "拖动此模块放到代码区域。"
+        },
         "CSD U3 shapes missing_2021": {
           "CSD_U3_rect_c1": "这是代码",
           "CSD_U3_rect_c2": "拖动此模块放到代码区域。"
         },
         "CSD U3 shapes missing_2022": {
+          "CSD_U3_rect_c1": "这是代码",
+          "CSD_U3_rect_c2": "拖动此模块放到代码区域。"
+        },
+        "CSD U3 shapes missing_2023": {
           "CSD_U3_rect_c1": "这是代码",
           "CSD_U3_rect_c2": "拖动此模块放到代码区域。"
         },
@@ -732,11 +920,19 @@
           "CSD_U3_rect_c1": "这是代码",
           "CSD_U3_rect_c2": "拖动此模块放到代码区域。"
         },
+        "CSD U3 shapes polygon_2023": {
+          "CSD_U3_rect_c1": "这是代码",
+          "CSD_U3_rect_c2": "拖动此模块放到代码区域。"
+        },
         "CSD U3 shapes scene_2021": {
           "CSD_U3_rect_c1": "这是代码",
           "CSD_U3_rect_c2": "拖动此模块放到代码区域。"
         },
         "CSD U3 shapes scene_2022": {
+          "CSD_U3_rect_c1": "这是代码",
+          "CSD_U3_rect_c2": "拖动此模块放到代码区域。"
+        },
+        "CSD U3 shapes scene_2023": {
           "CSD_U3_rect_c1": "这是代码",
           "CSD_U3_rect_c2": "拖动此模块放到代码区域。"
         },
@@ -747,6 +943,19 @@
         "CSD U3 shapes_2022": {
           "CSD_U3_rect_c1": "这是代码",
           "CSD_U3_rect_c2": "拖动此模块放到代码区域。"
+        },
+        "CSD U3 shapes_2023": {
+          "CSD_U3_rect_c1": "这是代码",
+          "CSD_U3_rect_c2": "拖动此模块放到代码区域。"
+        },
+        "CSD U3L16 Prac D_2023": {
+          "CSD U3L16.7 - start": "在此处添加代码"
+        },
+        "CSD U3L3 rect_2023": {
+          "CSD_U3_rect_c1": "这是代码"
+        },
+        "CSD U6 - Color LEDs - SB4_2023": {
+          "CSDU6L10_rainbow": "在此处添加代码"
         },
         "CSD U6 - Color LEDs - SB4_2222": {
           "CSDU6L10_rainbow": "在此处添加代码"
@@ -829,10 +1038,16 @@
         "CSD games sidescroll background_2022": {
           "CSD_U3_L11_S17_C1": "看看这个如果语句"
         },
+        "CSD games sidescroll background_2023": {
+          "CSD_U3_L11_S17_C1": "看看这个如果语句"
+        },
         "CSD games velocity bee_2021": {
           "CSD_U3_L11_S5_C1": "看看代码。"
         },
         "CSD games velocity bee_2022": {
+          "CSD_U3_L11_S5_C1": "看看代码。"
+        },
+        "CSD games velocity bee_2023": {
           "CSD_U3_L11_S5_C1": "看看代码。"
         },
         "CSD web text explore_2021": {
@@ -841,10 +1056,16 @@
         "CSD web text explore_2022": {
           "CSD_U3_variables": "改动这里的数字"
         },
+        "CSD web text explore_2023": {
+          "CSD_U3_variables": "改动这里的数字"
+        },
         "CSD web text size_2021": {
           "": "使用此模块在屏幕上放置文本"
         },
         "CSD web text size_2022": {
+          "": "使用此模块在屏幕上放置文本"
+        },
+        "CSD web text size_2023": {
           "": "使用此模块在屏幕上放置文本"
         },
         "CSDU4 - Design Mode - 3": {

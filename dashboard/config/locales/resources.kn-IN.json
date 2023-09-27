@@ -5020,6 +5020,37 @@
           "url": "https://www.youtube.com/watch?v=rgbZAWnOWOo",
           "type": "ವೀಡಿಯೊ"
         },
+        "_template_ai_code_of_ethics/ai-ethics/2023": {
+          "type": "ಸ್ಲೈಡ್ಗಳು"
+        },
+        "ai_code_of_ethics/ai-ethics/2023": {
+          "type": "ಸ್ಲೈಡ್ಗಳು"
+        },
+        "ethics_and_ai_privacy_the_future_of_work/ai-ethics/2023": {
+          "type": "ವೀಡಿಯೊ"
+        },
+        "character_card_individual_docs_/ai-ethics/2023": {
+          "type": "ಸಂಪನ್ಮೂಲ"
+        },
+        "character_cards/ai-ethics/2023": {
+          "type": "ಸಂಪನ್ಮೂಲ"
+        },
+        "generative_ai_activity_instructions/ai-ethics/2023": {
+          "type": "ಸಂಪನ್ಮೂಲ"
+        },
+        "generative_ai_news_articles/ai-ethics/2023": {
+          "type": "ಸಂಪನ್ಮೂಲ"
+        },
+        "group_scenarios/ai-ethics/2023": {
+          "type": "ಸಂಪನ್ಮೂಲ"
+        },
+        "how_ai_works_large_language_models/ai-ethics/2023": {
+          "url": "https://www.youtube.com/watch?v=X-AWdfSFCHQ",
+          "type": "ವೀಡಿಯೊ"
+        },
+        "societal_impact_of_generative_ai/ai-ethics/2023": {
+          "type": "ಸ್ಲೈಡ್ಗಳು"
+        },
         "cs_connections_landing_page/csc-adaptations/2023": {
           "name": "ಸಿಎಸ್ ಸಂಪರ್ಕಗಳು ಲ್ಯಾಂಡಿಂಗ್ ಪುಟ",
           "url": "https://code.org/educate/csc",
@@ -5561,6 +5592,1170 @@
         "poem_app_example/poetry/2023": {
           "name": "ಕವಿತೆ ಅಪ್ಲಿಕೇಶನ್ ಉದಾಹರಣೆ",
           "url": "https://studio.code.org/projects/poetry_hoc/j3TXDXNhz0XEsH4Xjk_rT9buBHYCplirIKtY_Pg_bYo",
+          "type": "ಸಂಪನ್ಮೂಲ"
+        },
+        "teacher_forum/csd/2023": {
+          "name": "ಶಿಕ್ಷಕರ ವೇದಿಕೆ"
+        },
+        "the_problem_solving_process_2/csd/2023": {
+          "name": "ಸಮಸ್ಯೆ ಪರಿಹರಿಸುವ ಪ್ರಕ್ರಿಯೆ"
+        },
+        "intro_to_problem_solving/csd/2023": {
+          "type": "ಸ್ಲೈಡ್ಗಳು"
+        },
+        "problem_solving_process_1/csd/2023": {
+          "type": "ವೀಡಿಯೊ"
+        },
+        "the_problem_solving_process/csd/2023": {
+          "type": "ವೀಡಿಯೊ"
+        },
+        "the_problem_solving_process_1/csd/2023": {
+          "name": "ಸಮಸ್ಯೆ ಪರಿಹರಿಸುವ ಪ್ರಕ್ರಿಯೆ",
+          "type": "ಸ್ಲೈಡ್ಗಳು"
+        },
+        "the_problem_solving_process_5/csd/2023": {
+          "name": "ಸಮಸ್ಯೆ ಪರಿಹರಿಸುವ ಪ್ರಕ್ರಿಯೆ"
+        },
+        "exploring_problem_solving/csd/2023": {
+          "type": "ಸ್ಲೈಡ್ಗಳು"
+        },
+        "solving_problems/csd/2023": {
+          "type": "ಉತ್ತರ ಕೀ"
+        },
+        "what_is_a_computer/csd/2023": {
+          "type": "ವೀಡಿಯೊ"
+        },
+        "what_is_a_computer_/csd/2023": {
+          "name": "ಕಂಪ್ಯೂಟರ್ ಎಂದರೇನು?"
+        },
+        "what_is_a_computer_1/csd/2023": {
+          "type": "ಸ್ಲೈಡ್ಗಳು"
+        },
+        "input_and_output_2/csd/2023": {
+          "type": "ಸ್ಲೈಡ್ಗಳು"
+        },
+        "apps_with_processing_2/csd/2023": {
+          "type": "ಸ್ಲೈಡ್ಗಳು"
+        },
+        "apps_with_storage_2/csd/2023": {
+          "type": "ಸ್ಲೈಡ್ಗಳು"
+        },
+        "what_do_computers_do/csd/2023": {
+          "type": "ವೀಡಿಯೊ"
+        },
+        "apps_and_problem_solving_-_student_checklist/csd/2023": {
+          "type": "ಸಂಪನ್ಮೂಲ"
+        },
+        "apps_and_problem_solving_1/csd/2023": {
+          "type": "ಪೀರ್ ವಿಮರ್ಶೆ"
+        },
+        "apps_and_problem_solving_2/csd/2023": {
+          "type": "ರೂಬ್ರಿಕ್"
+        },
+        "project_-_propose_an_app/csd/2023": {
+          "type": "ಸ್ಲೈಡ್ಗಳು"
+        },
+        "intro_to_problem_solving_newspapers_/csd/2023": {
+          "type": "ಸ್ಲೈಡ್ಗಳು"
+        },
+        "intro_to_problem_solving_spaghetti_/csd/2023": {
+          "type": "ಸ್ಲೈಡ್ಗಳು"
+        },
+        "intro_to_problem_solving_paper_towels_/csd/2023": {
+          "type": "ಸ್ಲೈಡ್ಗಳು"
+        },
+        "exploring_problem_solving_animals_/csd/2023": {
+          "type": "ಸ್ಲೈಡ್ಗಳು"
+        },
+        "tangrams/csd/2023": {
+          "type": "ಸಂಪನ್ಮೂಲ"
+        },
+        "exploring_problem_solving_games_/csd/2023": {
+          "type": "ಸ್ಲೈಡ್ಗಳು"
+        },
+        "_key_warm_up_word_search/csd/2023": {
+          "type": "ಉತ್ತರ ಕೀ"
+        },
+        "_key_web_design_for_users/csd/2023": {
+          "type": "ಉತ್ತರ ಕೀ"
+        },
+        "exploring_web_pages_2/csd/2023": {
+          "type": "ಸ್ಲೈಡ್ಗಳು"
+        },
+        "problem_solving_and_design/csd/2023": {
+          "type": "ಸಂಪನ್ಮೂಲ"
+        },
+        "web_design_template/csd/2023": {
+          "type": "ಸಂಪನ್ಮೂಲ"
+        },
+        "html_tags/csd/2023": {
+          "type": "ಸಂಪನ್ಮೂಲ"
+        },
+        "intro_to_html/csd/2023": {
+          "type": "ಸ್ಲೈಡ್ಗಳು"
+        },
+        "intro_to_web_lab_part_2/csd/2023": {
+          "type": "ವೀಡಿಯೊ"
+        },
+        "pair_programming/csd/2023": {
+          "name": "ಜೋಡಿ ಪ್ರೋಗ್ರಾಮಿಂಗ್",
+          "type": "ವೀಡಿಯೊ"
+        },
+        "video_intro_to_web_lab_part_1/csd/2023": {
+          "type": "ವೀಡಿಯೊ"
+        },
+        "formatting_html/csd/2023": {
+          "type": "ಸಂಪನ್ಮೂಲ"
+        },
+        "headings/csd/2023": {
+          "type": "ಸ್ಲೈಡ್ಗಳು"
+        },
+        "headings_and_paragraphs/csd/2023": {
+          "type": "ಸಂಪನ್ಮೂಲ"
+        },
+        "lists/csd/2023": {
+          "name": "ಪಟ್ಟಿಗಳು",
+          "type": "ಸಂಪನ್ಮೂಲ"
+        },
+        "video_debugging/csd/2023": {
+          "type": "ವೀಡಿಯೊ"
+        },
+        "video_pair_programming/csd/2023": {
+          "type": "ವೀಡಿಯೊ"
+        },
+        "html_web_page/csd/2023": {
+          "type": "ರೂಬ್ರಿಕ್"
+        },
+        "html_web_page_1/csd/2023": {
+          "type": "ಪೀರ್ ವಿಮರ್ಶೆ"
+        },
+        "mini-project_html_web_page/csd/2023": {
+          "type": "ಸ್ಲೈಡ್ಗಳು"
+        },
+        "problem_solving_process_with_programming/csd/2023": {
+          "type": "ಸಂಪನ್ಮೂಲ"
+        },
+        "digital_footprint/csd/2023": {
+          "type": "ಸ್ಲೈಡ್ಗಳು"
+        },
+        "intro_to_css_-_part_1/csd/2023": {
+          "name": "ಸಿಎಸ್ಗೆ ಪರಿಚಯ - ಭಾಗ 1",
+          "type": "ವೀಡಿಯೊ"
+        },
+        "intro_to_css_-_part_2/csd/2023": {
+          "name": "ಸಿಎಸ್ಗೆ ಪರಿಚಯ - ಭಾಗ 2",
+          "type": "ವೀಡಿಯೊ"
+        },
+        "style_sheets/csd/2023": {
+          "type": "ಸಂಪನ್ಮೂಲ"
+        },
+        "styling_text_with_css/csd/2023": {
+          "type": "ಸ್ಲೈಡ್ಗಳು"
+        },
+        "text_properties/csd/2023": {
+          "type": "ಸಂಪನ್ಮೂಲ"
+        },
+        "mini-project_your_personal_style/csd/2023": {
+          "type": "ಸ್ಲೈಡ್ಗಳು"
+        },
+        "your_personal_style/csd/2023": {
+          "type": "ರೂಬ್ರಿಕ್"
+        },
+        "your_personal_style_1/csd/2023": {
+          "type": "ಪೀರ್ ವಿಮರ್ಶೆ"
+        },
+        "creative_commons_overview/csd/2023": {
+          "type": "ವೀಡಿಯೊ"
+        },
+        "intellectual_property/csd/2023": {
+          "type": "ಸ್ಲೈಡ್ಗಳು"
+        },
+        "creative_commons_search/csd/2023": {
+          "type": "ಸಂಪನ್ಮೂಲ"
+        },
+        "images_in_html/csd/2023": {
+          "type": "ಸಂಪನ್ಮೂಲ"
+        },
+        "using_images/csd/2023": {
+          "type": "ಸ್ಲೈಡ್ಗಳು"
+        },
+        "websites_for_expression/csd/2023": {
+          "type": "ಸ್ಲೈಡ್ಗಳು"
+        },
+        "styling_elements_with_css/csd/2023": {
+          "type": "ಸ್ಲೈಡ್ಗಳು"
+        },
+        "your_web_page_prepare/csd/2023": {
+          "type": "ಸ್ಲೈಡ್ಗಳು"
+        },
+        "personal_web_page/csd/2023": {
+          "type": "ಪೀರ್ ವಿಮರ್ಶೆ"
+        },
+        "personal_web_page_-_student_checklist/csd/2023": {
+          "type": "ಸಂಪನ್ಮೂಲ"
+        },
+        "personal_web_page_1/csd/2023": {
+          "type": "ರೂಬ್ರಿಕ್"
+        },
+        "project_-_personal_web_page/csd/2023": {
+          "type": "ಸ್ಲೈಡ್ಗಳು"
+        },
+        "publishing_your_website/csd/2023": {
+          "type": "ವೀಡಿಯೊ"
+        },
+        "websites_for_a_purpose_2/csd/2023": {
+          "type": "ಸ್ಲೈಡ್ಗಳು"
+        },
+        "team_problem_solving/csd/2023": {
+          "type": "ಸ್ಲೈಡ್ಗಳು"
+        },
+        "video_managing_disagreement/csd/2023": {
+          "type": "ವೀಡಿಯೊ"
+        },
+        "video_teamwork/csd/2023": {
+          "type": "ವೀಡಿಯೊ"
+        },
+        "sources_and_research/csd/2023": {
+          "type": "ಸ್ಲೈಡ್ಗಳು"
+        },
+        "video_how_search_works/csd/2023": {
+          "name": "ಹುಡುಕಾಟ ಹೇಗೆ ಕಾರ್ಯನಿರ್ವಹಿಸುತ್ತದೆ",
+          "type": "ವೀಡಿಯೊ"
+        },
+        "classes/csd/2023": {
+          "type": "ಸಂಪನ್ಮೂಲ"
+        },
+        "css_classes/csd/2023": {
+          "type": "ಸ್ಲೈಡ್ಗಳು"
+        },
+        "planning_a_multi-page_site/csd/2023": {
+          "type": "ಸ್ಲೈಡ್ಗಳು"
+        },
+        "website_for_a_purpose/csd/2023": {
+          "type": "ರೂಬ್ರಿಕ್"
+        },
+        "hyperlinks/csd/2023": {
+          "type": "ಸಂಪನ್ಮೂಲ"
+        },
+        "linking_pages/csd/2023": {
+          "type": "ಸ್ಲೈಡ್ಗಳು"
+        },
+        "project_-_website_for_a_purpose/csd/2023": {
+          "type": "ಸ್ಲೈಡ್ಗಳು"
+        },
+        "peer_review_and_final_touches/csd/2023": {
+          "type": "ಸ್ಲೈಡ್ಗಳು"
+        },
+        "website_for_a_purpose_1/csd/2023": {
+          "type": "ಪೀರ್ ವಿಮರ್ಶೆ"
+        },
+        "_warm_up_word_search_key_/csd/2023": {
+          "type": "ಉತ್ತರ ಕೀ"
+        },
+        "programming_for_a_purpose/csd/2023": {
+          "type": "ಸ್ಲೈಡ್ಗಳು"
+        },
+        "animation_and_game_design_template/csd/2023": {
+          "type": "ಸಂಪನ್ಮೂಲ"
+        },
+        "plotting_shapes/csd/2023": {
+          "type": "ಸ್ಲೈಡ್ಗಳು"
+        },
+        "drawing_in_game_lab/csd/2023": {
+          "type": "ಸ್ಲೈಡ್ಗಳು"
+        },
+        "drawing_in_game_lab_-_part_1/csd/2023": {
+          "type": "ವೀಡಿಯೊ"
+        },
+        "drawing_in_game_lab_-_part_2/csd/2023": {
+          "type": "ವೀಡಿಯೊ"
+        },
+        "drawing_shapes_1/csd/2023": {
+          "type": "ಸಂಪನ್ಮೂಲ"
+        },
+        "shapes_and_parameters/csd/2023": {
+          "type": "ಸಂಪನ್ಮೂಲ"
+        },
+        "shapes_and_parameters_1/csd/2023": {
+          "type": "ಸ್ಲೈಡ್ಗಳು"
+        },
+        "introduction_to_variables/csd/2023": {
+          "type": "ವೀಡಿಯೊ"
+        },
+        "naming_variables/csd/2023": {
+          "type": "ಸಂಪನ್ಮೂಲ"
+        },
+        "variables/csd/2023": {
+          "name": "ವೇರಿಯಬಲ್‌ಗಳು",
+          "type": "ಸಂಪನ್ಮೂಲ"
+        },
+        "variables_1/csd/2023": {
+          "name": "ವೇರಿಯಬಲ್‌ಗಳು",
+          "type": "ವೀಡಿಯೊ"
+        },
+        "variables_2/csd/2023": {
+          "name": "ವೇರಿಯಬಲ್‌ಗಳು",
+          "type": "ಸ್ಲೈಡ್ಗಳು"
+        },
+        "random_numbers/csd/2023": {
+          "type": "ಸಂಪನ್ಮೂಲ"
+        },
+        "random_numbers_1/csd/2023": {
+          "type": "ಸ್ಲೈಡ್ಗಳು"
+        },
+        "mini-project_-_robot_faces/csd/2023": {
+          "type": "ಸ್ಲೈಡ್ಗಳು"
+        },
+        "problem_solving_with_programming/csd/2023": {
+          "type": "ಸಂಪನ್ಮೂಲ"
+        },
+        "robot_faces/csd/2023": {
+          "type": "ರೂಬ್ರಿಕ್"
+        },
+        "animation_tab/csd/2023": {
+          "type": "ಸಂಪನ್ಮೂಲ"
+        },
+        "introduction_to_sprites/csd/2023": {
+          "type": "ವೀಡಿಯೊ"
+        },
+        "sprites/csd/2023": {
+          "type": "ಸಂಪನ್ಮೂಲ"
+        },
+        "sprites_1/csd/2023": {
+          "type": "ಸ್ಲೈಡ್ಗಳು"
+        },
+        "the_animation_tab/csd/2023": {
+          "name": "ಅನಿಮೇಷನ್ ಟ್ಯಾಬ್",
+          "type": "ವೀಡಿಯೊ"
+        },
+        "sprite_properties/csd/2023": {
+          "name": "ಸ್ಪ್ರೈಟ್ಸ್‌ ಪ್ರಾಪರ್ಟಿಗಳು",
+          "type": "ಸಂಪನ್ಮೂಲ"
+        },
+        "sprite_properties_1/csd/2023": {
+          "name": "ಸ್ಪ್ರೈಟ್ಸ್‌ ಪ್ರಾಪರ್ಟಿಗಳು",
+          "type": "ಸ್ಲೈಡ್ಗಳು"
+        },
+        "sprite_properties_needs_updating_/csd/2023": {
+          "name": "ಸ್ಪ್ರೈಟ್ಸ್‌ ಪ್ರಾಪರ್ಟಿಗಳು",
+          "type": "ವೀಡಿಯೊ"
+        },
+        "text/csd/2023": {
+          "name": "ಪಠ್ಯ",
+          "type": "ಸ್ಲೈಡ್ಗಳು"
+        },
+        "captioned_scenes/csd/2023": {
+          "type": "ರೂಬ್ರಿಕ್"
+        },
+        "mini-project_-_captioned_scenes/csd/2023": {
+          "type": "ಸ್ಲೈಡ್ಗಳು"
+        },
+        "flipbook_example_-_by_marnic_bos/csd/2023": {
+          "type": "ವೀಡಿಯೊ"
+        },
+        "introduction_to_the_draw_loop/csd/2023": {
+          "type": "ವೀಡಿಯೊ"
+        },
+        "the_draw_loop/csd/2023": {
+          "type": "ಸಂಪನ್ಮೂಲ"
+        },
+        "the_draw_loop_1/csd/2023": {
+          "type": "ಸ್ಲೈಡ್ಗಳು"
+        },
+        "sprite_movement/csd/2023": {
+          "type": "ವೀಡಿಯೊ"
+        },
+        "sprite_movement_1/csd/2023": {
+          "type": "ಸ್ಲೈಡ್ಗಳು"
+        },
+        "animated_scene/csd/2023": {
+          "type": "ರೂಬ್ರಿಕ್"
+        },
+        "mini-project_-_animation/csd/2023": {
+          "type": "ಸ್ಲೈಡ್ಗಳು"
+        },
+        "boolean_expressions/csd/2023": {
+          "name": "ಬೂಲಿಯನ್ ಅಭಿವ್ಯಕ್ತಿಗಳು",
+          "type": "ವೀಡಿಯೊ"
+        },
+        "booleans_and_comparison_operators/csd/2023": {
+          "type": "ಸಂಪನ್ಮೂಲ"
+        },
+        "conditional_statements/csd/2023": {
+          "name": "ಷರತ್ತುಬದ್ಧ ಹೇಳಿಕೆಗಳು",
+          "type": "ವೀಡಿಯೊ"
+        },
+        "conditionals/csd/2023": {
+          "name": "ಕಂಡೀಷನಲ್ಸ್‌",
+          "type": "ಸ್ಲೈಡ್ಗಳು"
+        },
+        "if_statements/csd/2023": {
+          "type": "ಸಂಪನ್ಮೂಲ"
+        },
+        "keyboard_input/csd/2023": {
+          "type": "ಸ್ಲೈಡ್ಗಳು"
+        },
+        "if-else_statements/csd/2023": {
+          "type": "ಸಂಪನ್ಮೂಲ"
+        },
+        "if_else_statements/csd/2023": {
+          "name": "/ಬೇರೆ ಹೇಳಿಕೆಗಳು",
+          "type": "ವೀಡಿಯೊ"
+        },
+        "mouse_input/csd/2023": {
+          "type": "ಸ್ಲೈಡ್ಗಳು"
+        },
+        "extra_code_in_challenge_levels/csd/2023": {
+          "type": "ಸಂಪನ್ಮೂಲ"
+        },
+        "interactive_card_-_student_checklist/csd/2023": {
+          "type": "ಸಂಪನ್ಮೂಲ"
+        },
+        "interactive_card_3/csd/2023": {
+          "type": "ರೂಬ್ರಿಕ್"
+        },
+        "project_-_interactive_card/csd/2023": {
+          "type": "ಸ್ಲೈಡ್ಗಳು"
+        },
+        "velocity/csd/2023": {
+          "name": "ವೇಗ",
+          "type": "ವೀಡಿಯೊ"
+        },
+        "velocity_1/csd/2023": {
+          "name": "ವೇಗ",
+          "type": "ಸಂಪನ್ಮೂಲ"
+        },
+        "velocity_2/csd/2023": {
+          "name": "ವೇಗ",
+          "type": "ಸ್ಲೈಡ್ಗಳು"
+        },
+        "collision_detection_1/csd/2023": {
+          "type": "ಸಂಪನ್ಮೂಲ"
+        },
+        "collision_detection_2/csd/2023": {
+          "type": "ಸ್ಲೈಡ್ಗಳು"
+        },
+        "mini-project_-_side_scroller/csd/2023": {
+          "type": "ಸ್ಲೈಡ್ಗಳು"
+        },
+        "side_scroller/csd/2023": {
+          "type": "ರೂಬ್ರಿಕ್"
+        },
+        "complex_sprite_movement/csd/2023": {
+          "type": "ಸ್ಲೈಡ್ಗಳು"
+        },
+        "velocity_and_the_counter_pattern/csd/2023": {
+          "type": "ಸಂಪನ್ಮೂಲ"
+        },
+        "collisions/csd/2023": {
+          "name": "ಡಿಕ್ಕಿಗಳು",
+          "type": "ಸ್ಲೈಡ್ಗಳು"
+        },
+        "flyer_game/csd/2023": {
+          "type": "ರೂಬ್ರಿಕ್"
+        },
+        "mini-project_-_flyer_game/csd/2023": {
+          "type": "ಸ್ಲೈಡ್ಗಳು"
+        },
+        "functions/csd/2023": {
+          "name": "ಕಾರ್ಯಗಳು",
+          "type": "ವೀಡಿಯೊ"
+        },
+        "functions_1/csd/2023": {
+          "name": "ಕಾರ್ಯಗಳು",
+          "type": "ಸಂಪನ್ಮೂಲ"
+        },
+        "functions_2/csd/2023": {
+          "name": "ಕಾರ್ಯಗಳು",
+          "type": "ಸ್ಲೈಡ್ಗಳು"
+        },
+        "the_game_design_process/csd/2023": {
+          "type": "ಸ್ಲೈಡ್ಗಳು"
+        },
+        "using_the_game_design_process/csd/2023": {
+          "type": "ಸ್ಲೈಡ್ಗಳು"
+        },
+        "make_your_own_game_-_student_checklist/csd/2023": {
+          "type": "ಸಂಪನ್ಮೂಲ"
+        },
+        "make_your_own_game_3/csd/2023": {
+          "type": "ರೂಬ್ರಿಕ್"
+        },
+        "project_-_design_a_game/csd/2023": {
+          "type": "ಸ್ಲೈಡ್ಗಳು"
+        },
+        "designing_with_empathy_2/csd/2023": {
+          "type": "ಸ್ಲೈಡ್ಗಳು"
+        },
+        "understanding_your_user/csd/2023": {
+          "type": "ಸ್ಲೈಡ್ಗಳು"
+        },
+        "the_design_thinking_process/csd/2023": {
+          "type": "ವೀಡಿಯೊ"
+        },
+        "user_centered_design_-_define_and_prepare/csd/2023": {
+          "type": "ಸ್ಲೈಡ್ಗಳು"
+        },
+        "user_centered_design_-_try_and_reflect/csd/2023": {
+          "type": "ಸ್ಲೈಡ್ಗಳು"
+        },
+        "user_interface_screens/csd/2023": {
+          "type": "ಸಂಪನ್ಮೂಲ"
+        },
+        "user_interfaces/csd/2023": {
+          "type": "ಸ್ಲೈಡ್ಗಳು"
+        },
+        "feedback_and_testing/csd/2023": {
+          "type": "ಸ್ಲೈಡ್ಗಳು"
+        },
+        "prototype_feedback/csd/2023": {
+          "type": "ಸಂಪನ್ಮೂಲ"
+        },
+        "example_user_interviews/csd/2023": {
+          "type": "ಸಂಪನ್ಮೂಲ"
+        },
+        "identifying_user_needs/csd/2023": {
+          "type": "ಸ್ಲೈಡ್ಗಳು"
+        },
+        "paper_prototypes/csd/2023": {
+          "type": "ರೂಬ್ರಿಕ್"
+        },
+        "project_-_paper_prototype/csd/2023": {
+          "type": "ಸ್ಲೈಡ್ಗಳು"
+        },
+        "designing_apps_for_good/csd/2023": {
+          "type": "ಸ್ಲೈಡ್ಗಳು"
+        },
+        "market_research_-_research_areas/csd/2023": {
+          "type": "ಸಂಪನ್ಮೂಲ"
+        },
+        "market_research_2/csd/2023": {
+          "type": "ಸ್ಲೈಡ್ಗಳು"
+        },
+        "exploring_ui_elements/csd/2023": {
+          "type": "ಸ್ಲೈಡ್ಗಳು"
+        },
+        "build_a_paper_prototype/csd/2023": {
+          "type": "ಸ್ಲೈಡ್ಗಳು"
+        },
+        "design_mode/csd/2023": {
+          "type": "ಸಂಪನ್ಮೂಲ"
+        },
+        "design_mode_elements/csd/2023": {
+          "type": "ಸಂಪನ್ಮೂಲ"
+        },
+        "prototype_testing/csd/2023": {
+          "type": "ಸ್ಲೈಡ್ಗಳು"
+        },
+        "what_s_for_lunch_testing/csd/2023": {
+          "type": "ವೀಡಿಯೊ"
+        },
+        "design_mode_in_app_lab/csd/2023": {
+          "type": "ಸ್ಲೈಡ್ಗಳು"
+        },
+        "intro_to_design_mode/csd/2023": {
+          "type": "ವೀಡಿಯೊ"
+        },
+        "model_screen_design/csd/2023": {
+          "type": "ಸಂಪನ್ಮೂಲ"
+        },
+        "build_a_digital_prototype/csd/2023": {
+          "type": "ಸ್ಲೈಡ್ಗಳು"
+        },
+        "events_in_app_lab/csd/2023": {
+          "type": "ವೀಡಿಯೊ"
+        },
+        "events_in_app_lab_1/csd/2023": {
+          "type": "ವೀಡಿಯೊ"
+        },
+        "events_in_app_lab_2/csd/2023": {
+          "type": "ಸ್ಲೈಡ್ಗಳು"
+        },
+        "changing_screens/csd/2023": {
+          "type": "ಸಂಪನ್ಮೂಲ"
+        },
+        "importing_screens/csd/2023": {
+          "type": "ಸಂಪನ್ಮೂಲ"
+        },
+        "linking_prototype_screens/csd/2023": {
+          "type": "ಸ್ಲೈಡ್ಗಳು"
+        },
+        "multi-screen_apps/csd/2023": {
+          "type": "ಸಂಪನ್ಮೂಲ"
+        },
+        "responding_to_user_input/csd/2023": {
+          "type": "ಸಂಪನ್ಮೂಲ"
+        },
+        "testing_the_app/csd/2023": {
+          "type": "ಸ್ಲೈಡ್ಗಳು"
+        },
+        "bugs_and_features_2/csd/2023": {
+          "type": "ಸ್ಲೈಡ್ಗಳು"
+        },
+        "updating_your_prototype_1/csd/2023": {
+          "type": "ಸ್ಲೈಡ್ಗಳು"
+        },
+        "app_presentation/csd/2023": {
+          "type": "ರೂಬ್ರಿಕ್"
+        },
+        "project_-_app_presentation/csd/2023": {
+          "type": "ಸ್ಲೈಡ್ಗಳು"
+        },
+        "meals_data/csd/2023": {
+          "type": "ಸಂಪನ್ಮೂಲ"
+        },
+        "representation_matters_2/csd/2023": {
+          "type": "ಸ್ಲೈಡ್ಗಳು"
+        },
+        "patterns_and_representation/csd/2023": {
+          "type": "ಸ್ಲೈಡ್ಗಳು"
+        },
+        "ascii_and_binary_representation/csd/2023": {
+          "type": "ಸ್ಲೈಡ್ಗಳು"
+        },
+        "ascii_challenges_1/csd/2023": {
+          "type": "ಉತ್ತರ ಕೀ"
+        },
+        "ascii_text/csd/2023": {
+          "type": "ಸಂಪನ್ಮೂಲ"
+        },
+        "representing_images/csd/2023": {
+          "type": "ಸ್ಲೈಡ್ಗಳು"
+        },
+        "binary_and_data/csd/2023": {
+          "type": "ವೀಡಿಯೊ"
+        },
+        "representing_numbers_1/csd/2023": {
+          "type": "ಸ್ಲೈಡ್ಗಳು"
+        },
+        "combining_representations/csd/2023": {
+          "name": "ಪ್ರಾತಿನಿಧ್ಯಗಳನ್ನು ಸಂಯೋಜಿಸುವುದು",
+          "type": "ಸ್ಲೈಡ್ಗಳು"
+        },
+        "keeping_data_secret/csd/2023": {
+          "type": "ಸ್ಲೈಡ್ಗಳು"
+        },
+        "medical_records_1/csd/2023": {
+          "type": "ಉತ್ತರ ಕೀ"
+        },
+        "create_a_representation_2/csd/2023": {
+          "type": "ರೂಬ್ರಿಕ್"
+        },
+        "create_a_representation_3/csd/2023": {
+          "type": "ಸ್ಲೈಡ್ಗಳು"
+        },
+        "problem_solving_with_data_2/csd/2023": {
+          "type": "ಸ್ಲೈಡ್ಗಳು"
+        },
+        "structuring_data_1/csd/2023": {
+          "type": "ಸ್ಲೈಡ್ಗಳು"
+        },
+        "interpreting_data_2/csd/2023": {
+          "type": "ಸಂಪನ್ಮೂಲ"
+        },
+        "interpreting_data_3/csd/2023": {
+          "type": "ಸ್ಲೈಡ್ಗಳು"
+        },
+        "making_decisions_with_data_2/csd/2023": {
+          "type": "ಸ್ಲೈಡ್ಗಳು"
+        },
+        "problem_solving_process_with_data/csd/2023": {
+          "type": "ಸಂಪನ್ಮೂಲ"
+        },
+        "automating_data_decisions_1/csd/2023": {
+          "type": "ಸಂಪನ್ಮೂಲ"
+        },
+        "automating_data_decisions_3/csd/2023": {
+          "type": "ಸ್ಲೈಡ್ಗಳು"
+        },
+        "amazon_and_data/csd/2023": {
+          "type": "ವೀಡಿಯೊ"
+        },
+        "netflix_and_data/csd/2023": {
+          "type": "ವೀಡಿಯೊ"
+        },
+        "problem_solving_with_big_data/csd/2023": {
+          "type": "ಸ್ಲೈಡ್ಗಳು"
+        },
+        "waze_and_data/csd/2023": {
+          "type": "ವೀಡಿಯೊ"
+        },
+        "data_and_machine_learning/csd/2023": {
+          "type": "ಸ್ಲೈಡ್ಗಳು"
+        },
+        "video_impact_on_society/csd/2023": {
+          "type": "ವೀಡಿಯೊ"
+        },
+        "video_machine_learning/csd/2023": {
+          "name": "ವೀಡಿಯೋ: ಮಶಿನ್ ಲರ್ನಿಂಗ್",
+          "url": "https://www.youtube.com/watch?v=OeU5m6vRyCk",
+          "type": "ವೀಡಿಯೊ"
+        },
+        "video_training_data_and_bias/csd/2023": {
+          "type": "ವೀಡಿಯೊ"
+        },
+        "make_a_recommendation/csd/2023": {
+          "type": "ಪೀರ್ ವಿಮರ್ಶೆ"
+        },
+        "make_a_recommendation_1/csd/2023": {
+          "type": "ರೂಬ್ರಿಕ್"
+        },
+        "project_-_make_a_recommendation/csd/2023": {
+          "type": "ಸ್ಲೈಡ್ಗಳು"
+        },
+        "physical_design_template/csd/2023": {
+          "type": "ಸಂಪನ್ಮೂಲ"
+        },
+        "physical_designs_1/csd/2023": {
+          "type": "ಸ್ಲೈಡ್ಗಳು"
+        },
+        "circuit_playground/csd/2023": {
+          "type": "ಸಂಪನ್ಮೂಲ"
+        },
+        "circuits_and_logic/csd/2023": {
+          "type": "ವೀಡಿಯೊ"
+        },
+        "physical_output/csd/2023": {
+          "type": "ಸಂಪನ್ಮೂಲ"
+        },
+        "the_circuit_playground/csd/2023": {
+          "type": "ಸ್ಲೈಡ್ಗಳು"
+        },
+        "designing_screens_with_code/csd/2023": {
+          "type": "ಸಂಪನ್ಮೂಲ"
+        },
+        "updating_screen_elements/csd/2023": {
+          "type": "ಸ್ಲೈಡ್ಗಳು"
+        },
+        "board_events/csd/2023": {
+          "name": "ಬೋರ್ಡ್ ಈವೆಂಟ್‌ಗಳು",
+          "type": "ಸಂಪನ್ಮೂಲ"
+        },
+        "board_events_1/csd/2023": {
+          "name": "ಬೋರ್ಡ್ ಈವೆಂಟ್‌ಗಳು",
+          "type": "ಸ್ಲೈಡ್ಗಳು"
+        },
+        "physical_input/csd/2023": {
+          "type": "ಸಂಪನ್ಮೂಲ"
+        },
+        "the_counter_pattern/csd/2023": {
+          "type": "ವೀಡಿಯೊ"
+        },
+        "if_statements_1/csd/2023": {
+          "type": "ವೀಡಿಯೊ"
+        },
+        "the_counter_pattern_1/csd/2023": {
+          "type": "ಸಂಪನ್ಮೂಲ"
+        },
+        "variables_and_if_statements/csd/2023": {
+          "type": "ಸ್ಲೈಡ್ಗಳು"
+        },
+        "mini-project_field_collector_app/csd/2023": {
+          "type": "ಸ್ಲೈಡ್ಗಳು"
+        },
+        "rubric_-_field_collector_app/csd/2023": {
+          "type": "ರೂಬ್ರಿಕ್"
+        },
+        "color_leds/csd/2023": {
+          "name": "ಕಲರ್‌ LED ಗಳು",
+          "type": "ಸ್ಲೈಡ್ಗಳು"
+        },
+        "color_lights/csd/2023": {
+          "type": "ಸಂಪನ್ಮೂಲ"
+        },
+        "getting_screen_inputs/csd/2023": {
+          "type": "ಸ್ಲೈಡ್ಗಳು"
+        },
+        "taking_input_with_getproperty/csd/2023": {
+          "type": "ಸಂಪನ್ಮೂಲ"
+        },
+        "combining_inputs_and_outputs/csd/2023": {
+          "type": "ಸ್ಲೈಡ್ಗಳು"
+        },
+        "input_output_devices/csd/2023": {
+          "type": "ವೀಡಿಯೊ"
+        },
+        "peer_review_-_human_device_interaction/csd/2023": {
+          "type": "ಸಂಪನ್ಮೂಲ"
+        },
+        "project_human_device_interaction/csd/2023": {
+          "type": "ಸ್ಲೈಡ್ಗಳು"
+        },
+        "rubric_-_human_device_interaction/csd/2023": {
+          "type": "ರೂಬ್ರಿಕ್"
+        },
+        "analog_sensors/csd/2023": {
+          "type": "ಸಂಪನ್ಮೂಲ"
+        },
+        "board_sensors/csd/2023": {
+          "type": "ಸ್ಲೈಡ್ಗಳು"
+        },
+        "changing_sensor_scale/csd/2023": {
+          "type": "ಸಂಪನ್ಮೂಲ"
+        },
+        "date_and_change_events/csd/2023": {
+          "type": "ಸಂಪನ್ಮೂಲ"
+        },
+        "accelerometer/csd/2023": {
+          "type": "ಸ್ಲೈಡ್ಗಳು"
+        },
+        "accelerometer_events/csd/2023": {
+          "name": "ಅಕ್ಸೆಲೆರೊಮೀಟರ್ ಕ್ರಿಯೆಗಳು",
+          "type": "ಸಂಪನ್ಮೂಲ"
+        },
+        "the_accelerometer/csd/2023": {
+          "type": "ಸಂಪನ್ಮೂಲ"
+        },
+        "arrays/csd/2023": {
+          "type": "ಸಂಪನ್ಮೂಲ"
+        },
+        "introduction_to_arrays/csd/2023": {
+          "name": "ಅರೇಗಳ ಪರಿಚಯ",
+          "type": "ವೀಡಿಯೊ"
+        },
+        "making_music/csd/2023": {
+          "type": "ಸ್ಲೈಡ್ಗಳು"
+        },
+        "modifying_arrays/csd/2023": {
+          "type": "ಸಂಪನ್ಮೂಲ"
+        },
+        "playing_notes/csd/2023": {
+          "type": "ಸಂಪನ್ಮೂಲ"
+        },
+        "producing_output/csd/2023": {
+          "type": "ಸಂಪನ್ಮೂಲ"
+        },
+        "functions_with_parameters/csd/2023": {
+          "name": "ನಿಯತಾಂಕಗಳೊಂದಿಗೆ ಕಾರ್ಯಗಳು",
+          "type": "ವೀಡಿಯೊ"
+        },
+        "mini-project_interactive_art/csd/2023": {
+          "type": "ಸ್ಲೈಡ್ಗಳು"
+        },
+        "student_example_projects/csd/2023": {
+          "type": "ಸಂಪನ್ಮೂಲ"
+        },
+        "student_rubric_-_interactive_art/csd/2023": {
+          "type": "ರೂಬ್ರಿಕ್"
+        },
+        "circuits_and_leds/csd/2023": {
+          "type": "ಸಂಪನ್ಮೂಲ"
+        },
+        "physical_outputs_and_leds/csd/2023": {
+          "type": "ಸ್ಲೈಡ್ಗಳು"
+        },
+        "circuits_and_buttons/csd/2023": {
+          "type": "ಸಂಪನ್ಮೂಲ"
+        },
+        "physical_inputs_and_buttons/csd/2023": {
+          "type": "ಸ್ಲೈಡ್ಗಳು"
+        },
+        "project_prototype_an_innovation/csd/2023": {
+          "type": "ಸ್ಲೈಡ್ಗಳು"
+        },
+        "prototype_an_innovation/csd/2023": {
+          "type": "ರೂಬ್ರಿಕ್"
+        },
+        "teacher_forum_1/csd/2023": {
+          "name": "ಶಿಕ್ಷಕರ ವೇದಿಕೆ"
+        },
+        "physical_designs_2/csd/2023": {
+          "type": "ಸ್ಲೈಡ್ಗಳು"
+        },
+        "introducing_the_micro_bit/csd/2023": {
+          "type": "ಸ್ಲೈಡ್ಗಳು"
+        },
+        "led_planning_sheet/csd/2023": {
+          "type": "ಸಂಪನ್ಮೂಲ"
+        },
+        "the_micro_bit_led_display/csd/2023": {
+          "type": "ಸಂಪನ್ಮೂಲ"
+        },
+        "the_micro_bit_overview/csd/2023": {
+          "type": "ಸಂಪನ್ಮೂಲ"
+        },
+        "updating_screen_elements_1/csd/2023": {
+          "type": "ಸ್ಲೈಡ್ಗಳು"
+        },
+        "board_events_2/csd/2023": {
+          "name": "ಬೋರ್ಡ್ ಈವೆಂಟ್‌ಗಳು",
+          "type": "ಸ್ಲೈಡ್ಗಳು"
+        },
+        "board_events_3/csd/2023": {
+          "name": "ಬೋರ್ಡ್ ಈವೆಂಟ್‌ಗಳು",
+          "type": "ಸಂಪನ್ಮೂಲ"
+        },
+        "micro_bit_inputs/csd/2023": {
+          "type": "ಸಂಪನ್ಮೂಲ"
+        },
+        "the_counter_pattern_2/csd/2023": {
+          "type": "ವೀಡಿಯೊ"
+        },
+        "variables_and_if_statements_1/csd/2023": {
+          "type": "ಸ್ಲೈಡ್ಗಳು"
+        },
+        "mini-project_field_collector_app_1/csd/2023": {
+          "type": "ಸ್ಲೈಡ್ಗಳು"
+        },
+        "rubric_-_field_collector_app_1/csd/2023": {
+          "type": "ರೂಬ್ರಿಕ್"
+        },
+        "getting_screen_inputs_1/csd/2023": {
+          "type": "ಸ್ಲೈಡ್ಗಳು"
+        },
+        "combining_inputs_and_outputs_1/csd/2023": {
+          "type": "ಸ್ಲೈಡ್ಗಳು"
+        },
+        "peer_review_-_human_device_interaction_1/csd/2023": {
+          "type": "ಸಂಪನ್ಮೂಲ"
+        },
+        "project_human_device_interaction_1/csd/2023": {
+          "type": "ಸ್ಲೈಡ್ಗಳು"
+        },
+        "rubric_-_human_device_interaction_1/csd/2023": {
+          "type": "ರೂಬ್ರಿಕ್"
+        },
+        "board_sensors_1/csd/2023": {
+          "type": "ಸ್ಲೈಡ್ಗಳು"
+        },
+        "data_change_events/csd/2023": {
+          "type": "ಸಂಪನ್ಮೂಲ"
+        },
+        "setting_sensor_scale/csd/2023": {
+          "type": "ಸಂಪನ್ಮೂಲ"
+        },
+        "the_micro_bit_sensors/csd/2023": {
+          "type": "ಸಂಪನ್ಮೂಲ"
+        },
+        "accelerometer_1/csd/2023": {
+          "type": "ಸ್ಲೈಡ್ಗಳು"
+        },
+        "accelerometer_events_1/csd/2023": {
+          "name": "ಅಕ್ಸೆಲೆರೊಮೀಟರ್ ಕ್ರಿಯೆಗಳು",
+          "type": "ಸಂಪನ್ಮೂಲ"
+        },
+        "the_micro_bit_accelerometer/csd/2023": {
+          "type": "ಸಂಪನ್ಮೂಲ"
+        },
+        "functions_3/csd/2023": {
+          "name": "ಕಾರ್ಯಗಳು",
+          "type": "ಸ್ಲೈಡ್ಗಳು"
+        },
+        "mini-project_interactive_pet/csd/2023": {
+          "type": "ಸ್ಲೈಡ್ಗಳು"
+        },
+        "student_rubric_-_interactive_pet/csd/2023": {
+          "type": "ರೂಬ್ರಿಕ್"
+        },
+        "external_leds_on_a_micro_bit/csd/2023": {
+          "type": "ಸಂಪನ್ಮೂಲ"
+        },
+        "physical_outputs_and_leds_1/csd/2023": {
+          "type": "ಸ್ಲೈಡ್ಗಳು"
+        },
+        "external_buttons_on_a_micro_bit/csd/2023": {
+          "type": "ಸಂಪನ್ಮೂಲ"
+        },
+        "physical_inputs_and_buttons_1/csd/2023": {
+          "type": "ಸ್ಲೈಡ್ಗಳು"
+        },
+        "project_prototype_an_innovation_1/csd/2023": {
+          "type": "ಸ್ಲೈಡ್ಗಳು"
+        },
+        "prototype_an_innovation_2/csd/2023": {
+          "type": "ರೂಬ್ರಿಕ್"
+        },
+        "the_problem_solving_process_4/csd/2023": {
+          "name": "ಸಮಸ್ಯೆ ಪರಿಹರಿಸುವ ಪ್ರಕ್ರಿಯೆ"
+        },
+        "ai_what_is_machine_learning_/csd/2023": {
+          "url": "https://www.youtube.com/watch?v=OeU5m6vRyCk",
+          "type": "ವೀಡಿಯೊ"
+        },
+        "introduction_to_machine_learning/csd/2023": {
+          "type": "ಸ್ಲೈಡ್ಗಳು"
+        },
+        "types_of_machine_learning/csd/2023": {
+          "type": "ಸ್ಲೈಡ್ಗಳು"
+        },
+        "types_of_machine_learning_2/csd/2023": {
+          "type": "ಉತ್ತರ ಕೀ"
+        },
+        "innovations_in_ai/csd/2023": {
+          "type": "ಸ್ಲೈಡ್ಗಳು"
+        },
+        "innovations_in_ai_research_areas_-_student_resource/csd/2023": {
+          "type": "ಸಂಪನ್ಮೂಲ"
+        },
+        "seeing_ai/csd/2023": {
+          "name": "ಎಐ ನೋಡುವುದು",
+          "type": "ವೀಡಿಯೊ"
+        },
+        "_key_patterns_in_data/csd/2023": {
+          "type": "ಉತ್ತರ ಕೀ"
+        },
+        "finding_patterns_in_data/csd/2023": {
+          "type": "ವೀಡಿಯೊ"
+        },
+        "patterns_in_data/csd/2023": {
+          "type": "ಸ್ಲೈಡ್ಗಳು"
+        },
+        "shoe_survey/csd/2023": {
+          "type": "ಸಂಪನ್ಮೂಲ"
+        },
+        "_key_classification_models/csd/2023": {
+          "type": "ಉತ್ತರ ಕೀ"
+        },
+        "classification_models_1/csd/2023": {
+          "type": "ಸ್ಲೈಡ್ಗಳು"
+        },
+        "fruit_veggie_cards/csd/2023": {
+          "type": "ಸಂಪನ್ಮೂಲ"
+        },
+        "_key_training_a_model_in_ai_lab/csd/2023": {
+          "type": "ಉತ್ತರ ಕೀ"
+        },
+        "accuracy_in_ai_lab/csd/2023": {
+          "type": "ಸಂಪನ್ಮೂಲ"
+        },
+        "introduction_to_ai_lab/csd/2023": {
+          "name": "AI ಲ್ಯಾಬ್ ಪರಿಚಯ",
+          "type": "ಸ್ಲೈಡ್ಗಳು"
+        },
+        "introduction_to_ai_lab_1/csd/2023": {
+          "name": "AI ಲ್ಯಾಬ್ ಪರಿಚಯ",
+          "type": "ವೀಡಿಯೊ"
+        },
+        "selecting_features/csd/2023": {
+          "type": "ಸಂಪನ್ಮೂಲ"
+        },
+        "training_and_testing_in_ai_lab/csd/2023": {
+          "name": "ಎಐ ಲ್ಯಾಬ್ನಲ್ಲಿ ತರಬೇತಿ ಮತ್ತು ಪರೀಕ್ಷೆ",
+          "type": "ವೀಡಿಯೊ"
+        },
+        "using_data_with_categorical_features/csd/2023": {
+          "type": "ಸಂಪನ್ಮೂಲ"
+        },
+        "importing_a_model_in_app_lab/csd/2023": {
+          "type": "ಸಂಪನ್ಮೂಲ"
+        },
+        "importing_models_in_app_lab/csd/2023": {
+          "type": "ಸ್ಲೈಡ್ಗಳು"
+        },
+        "ai_training_data_bias/csd/2023": {
+          "name": "ಎಐ: ಟ್ರೇನಿಂಗ್ ಡೇಟಾ ಮತ್ತು ತಾರತಮ್ಯ",
+          "url": "https://youtu.be/x2mRoFNm22g",
+          "type": "ವೀಡಿಯೊ"
+        },
+        "model_cards/csd/2023": {
+          "type": "ಸ್ಲೈಡ್ಗಳು"
+        },
+        "_key_zoo_models/csd/2023": {
+          "type": "ಉತ್ತರ ಕೀ"
+        },
+        "model_cards_in_ai_lab/csd/2023": {
+          "name": "AI ಲ್ಯಾಬ್ನಲ್ಲಿ ಮಾದರಿ ಕಾರ್ಡ್ಗಳು",
+          "type": "ವೀಡಿಯೊ"
+        },
+        "saving_models_in_ai_lab/csd/2023": {
+          "type": "ಸ್ಲೈಡ್ಗಳು"
+        },
+        "selecting_a_label/csd/2023": {
+          "type": "ಸಂಪನ್ಮೂಲ"
+        },
+        "if-statements_in_app_lab/csd/2023": {
+          "type": "ವೀಡಿಯೊ"
+        },
+        "model_cards_in_app_lab/csd/2023": {
+          "type": "ಸ್ಲೈಡ್ಗಳು"
+        },
+        "printable_model_cards/csd/2023": {
+          "type": "ಸಂಪನ್ಮೂಲ"
+        },
+        "_key_numerical_accuracy/csd/2023": {
+          "type": "ಉತ್ತರ ಕೀ"
+        },
+        "_key_zombie_prediction/csd/2023": {
+          "type": "ಉತ್ತರ ಕೀ"
+        },
+        "numerical_models/csd/2023": {
+          "type": "ಸ್ಲೈಡ್ಗಳು"
+        },
+        "_key_-_numerical_data_in_ai_lab/csd/2023": {
+          "type": "ಉತ್ತರ ಕೀ"
+        },
+        "numerical_data_in_ai_lab/csd/2023": {
+          "name": "ಎಐ ಲ್ಯಾಬ್ನಲ್ಲಿ ಸಂಖ್ಯಾತ್ಮಕ ಡೇಟಾ",
+          "type": "ಸ್ಲೈಡ್ಗಳು"
+        },
+        "numerical_data_in_ai_lab_1/csd/2023": {
+          "name": "ಎಐ ಲ್ಯಾಬ್ನಲ್ಲಿ ಸಂಖ್ಯಾತ್ಮಕ ಡೇಟಾ"
+        },
+        "numerical_data_in_ai_lab_2/csd/2023": {
+          "name": "ಎಐ ಲ್ಯಾಬ್ನಲ್ಲಿ ಸಂಖ್ಯಾತ್ಮಕ ಡೇಟಾ",
+          "type": "ವೀಡಿಯೊ"
+        },
+        "using_data_with_numerical_features/csd/2023": {
+          "type": "ಸಂಪನ್ಮೂಲ"
+        },
+        "customizing_apps/csd/2023": {
+          "type": "ಸ್ಲೈಡ್ಗಳು"
+        },
+        "ai_code_of_ethics/csd/2023": {
+          "type": "ಸ್ಲೈಡ್ಗಳು"
+        },
+        "ethics_ai_equal_access_and_algorithmic_bias/csd/2023": {
+          "type": "ವೀಡಿಯೊ"
+        },
+        "our_ai_code_of_ethics_template_/csd/2023": {
+          "type": "ಸ್ಲೈಡ್ಗಳು"
+        },
+        "create_an_ml_app/csd/2023": {
+          "type": "ರೂಬ್ರಿಕ್"
+        },
+        "make_a_machine_learning_app/csd/2023": {
+          "type": "ಸ್ಲೈಡ್ಗಳು"
+        },
+        "issue_statements/csd/2023": {
+          "type": "ಸ್ಲೈಡ್ಗಳು"
+        },
+        "creating_a_survey/csd/2023": {
+          "type": "ಸಂಪನ್ಮೂಲ"
+        },
+        "creating_a_survey_in_google_forms/csd/2023": {
+          "type": "ವೀಡಿಯೊ"
+        },
+        "survey_planning/csd/2023": {
+          "type": "ಸ್ಲೈಡ್ಗಳು"
+        },
+        "cleaning_survey_data/csd/2023": {
+          "type": "ವೀಡಿಯೊ"
+        },
+        "survey_data_in_ai_lab/csd/2023": {
+          "type": "ಸ್ಲೈಡ್ಗಳು"
+        },
+        "view_and_download_survey_data/csd/2023": {
+          "type": "ವೀಡಿಯೊ"
+        },
+        "troubleshooting_models/csd/2023": {
+          "type": "ಸ್ಲೈಡ್ಗಳು"
+        },
+        "creating_an_app/csd/2023": {
+          "type": "ಸ್ಲೈಡ್ಗಳು"
+        },
+        "_template_5_why_s/csd/2023": {
+          "type": "ಸಂಪನ್ಮೂಲ"
+        },
+        "design_an_ai_app/csd/2023": {
+          "type": "ಸ್ಲೈಡ್ಗಳು"
+        },
+        "design_an_ai_app_1/csd/2023": {
+          "type": "ರೂಬ್ರಿಕ್"
+        },
+        "model_card_-_digital_template/csd/2023": {
+          "type": "ಸಂಪನ್ಮೂಲ"
+        },
+        "model_card_-_printable_template/csd/2023": {
           "type": "ಸಂಪನ್ಮೂಲ"
         },
         "all_resources/coursea/2023": {

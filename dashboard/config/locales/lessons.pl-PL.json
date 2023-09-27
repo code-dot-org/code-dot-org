@@ -5206,6 +5206,13 @@
           "purpose": " W ramach tych zajęć online, uczniowie będą się uczyć, jak korzystać ze zdarzeń w Play Lab. Rozpoczną oni od uczenia rycerza poruszać się, gdy zostanie wciśnięty klawisz ze strzałką, a zakończ umożliwieniem pochwalenia się pozostałymi umiejętnościami, które nabyli w ramach tego kursu, z użyciem sekwencji i pętli, w ramach łamigłówki w czasie zabawy.",
           "student_overview": "Użyj zdarzeń, aby stworzyć historyjkę lub interaktywną grę."
         },
+        "ai-ethics-2023/lesson-1": {
+          "name": "Godzina kodowania - Etyka AI",
+          "student_overview": "Wspólnie badaj etykę sztucznej inteligencji i stwórz kodeks postępowania, który można udostępniać."
+        },
+        "ai-ethics-2023/lesson-2": {
+          "name": "Społeczne oddziaływanie generatywnej sztucznej inteligencji"
+        },
         "csc-adaptations-2023/Modeling Animal Adaptations (pilot)": {
           "name": "Adaptacje zwierząt Wprowadzenie",
           "overview": "W tej lekcji**budowanie umiejętności** uczniowie nauczą się tworzyć i animować duszki oraz wykorzystywać wydarzenia, aby uczynić je interaktywnymi. \n\nUczniowie zakodują oparty na zdarzeniach model przyczynowo-skutkowy w Sprite Lab, aby zademonstrować, w jaki sposób gatunki przetrwają, dostosowując się do swojego środowiska w czasie. Interaktywne modele i symulacje są wykorzystywane w świecie rzeczywistym, aby pomóc inżynierom i naukowcom identyfikować wzorce, zrozumieć naturę, przewidywać przyszłe zmiany i projektować rozwiązania przygotowujące i/lub zwalczające poważne zakłócenia. \n\nStudenci będą badać przykłady ewolucji, adaptacji, migracji, doboru naturalnego i przetrwania w grupach. ",
@@ -5367,6 +5374,331 @@
           "preparation": "-   Przygotuj jeden komputer na ucznia.\n-   Przygotuj jedną kopię ulotki**<a href=\"https://docs.google.com/document/d/1kO4SNEIVyM0GrxxJb6NzVYauXXpi6rzQkDIfrzQf1Ls/template/preview\" target=\"_blank\">Udostępnij swoją</a>aplikację** na ucznia.\n-   Upewnij się, że uczniowie mają pod ręką kopię swojego oryginalnego wiersza na tę lekcję.  \n-   Podziel klasę na pary dla aktywności Poezja Pair-Share.\n-   Rozważ te powiązane opcje rozszerzenia ([link](https://studio.code.org/s/poetry-2023/lessons/4#activity-4365336)), aby zbadać po tej lekcji.\n\n##### Opcjonalnie\n\n-   Specjalnie w przypadku nauczania zdalnego: Określ, czy musisz skonfigurować dokument cyfrowy lub udostępnioną przestrzeń online, aby opublikować adres URL aplikacji każdego ucznia (zobacz szablon nauczyciela w „Linki”). ",
           "purpose": "Dzielenie się projektami wierszy z rówieśnikami jest ważnym aspektem procesu twórczego. Umożliwia uczniom otrzymywanie informacji zwrotnych, współpracę z innymi, refleksję nad własną pracą i świętowanie swoich osiągnięć. Dzieląc się swoją pracą z innymi, uczniowie mogą rozwijać się i doskonalić jako kreatywni myśliciele oraz rozwijać ważne umiejętności komunikacyjne i interpersonalne.",
           "student_overview": "Udostępnij swoje nowe aplikacje wierszy znajomym! "
+        },
+        "csd1-2023/Intro to Problem Solving": {
+          "name": "Wprowadzenie do rozwiązywania problemów"
+        },
+        "csd1-2023/The Problem Solving Process": {
+          "name": "Proces rozwiązywania problemów"
+        },
+        "csd1-2023/Exploring Problem Solving": {
+          "name": "Zgłębianie rozwiązywania problemów"
+        },
+        "csd1-2023/What is a Computer?": {
+          "name": "Czym jest komputer?"
+        },
+        "csd1-2023/Input and Output": {
+          "name": "Wejście i Wyjście"
+        },
+        "csd1-2023/Processing": {
+          "name": "Przetwarzanie"
+        },
+        "csd1-2023/Storage": {
+          "name": "Pamięć"
+        },
+        "csd1-2023/Project - Propose an App": {
+          "name": "Projekt - Zaproponuj aplikację"
+        },
+        "csd1-2023/Intro to Problem Solving - Newspaper Table (Alternate Lesson 1)": {
+          "name": "Wprowadzenie do rozwiązywania problemów - Stolik prasowy (Alternatywna lekcja 1)"
+        },
+        "csd1-2023/Intro to Problem Solving - Spaghetti Bridge (Alternate Lesson 1)": {
+          "name": "Wprowadzenie do rozwiązywania problemów - Spaghetti Most (Alternatywna lekcja 1)"
+        },
+        "csd1-2023/Intro to Problem Solving - Paper Tower (Alternate Lesson 1)": {
+          "name": "Wprowadzenie do rozwiązywania problemów - Papierowa wieża (Alternatywna lekcja 1)"
+        },
+        "csd1-2023/Exploring Problem Solving - Animals Theme (Alternate Lesson 3)": {
+          "name": "Wprowadzenie do rozwiązywania problemów - Motywy zwierząt (Alternatywna lekcja 3)"
+        },
+        "csd1-2023/Exploring Problem Solving - Games Theme (Alternate Lesson 3)": {
+          "name": "Wprowadzenie do rozwiązywania problemów - Motywy gier (Alternatywna lekcja 3)"
+        },
+        "csd2-2023/Exploring Web Pages": {
+          "name": "Badanie stron internetowych"
+        },
+        "csd2-2023/Intro to HTML": {
+          "name": "Wprowadzenie do HTML"
+        },
+        "csd2-2023/Mini-Project: HTML Web Page": {
+          "name": "Mini-Projekt: strona internetowa HTML"
+        },
+        "csd2-2023/Digital Footprint": {
+          "name": "Cyfrowy ślad"
+        },
+        "csd2-2023/Styling Text with CSS": {
+          "name": "Ustalanie stylu tekstu przy użyciu CSS"
+        },
+        "csd2-2023/Mini-Project: Your Personal Style": {
+          "name": "Mini-Projekt: Twój osobisty styl"
+        },
+        "csd2-2023/Intellectual Property": {
+          "name": "Własność intelektualna"
+        },
+        "csd2-2023/Using Images": {
+          "name": "Korzystając z obrazów"
+        },
+        "csd2-2023/Styling Elements with CSS": {
+          "name": "Stylizowanie elementów przy pomocy CSS"
+        },
+        "csd2-2023/Your Web Page - Prepare": {
+          "name": "Twoja strona internetowa - Przygotuj"
+        },
+        "csd2-2023/Project - Personal Web Page": {
+          "name": "Projekt - osobista strona internetowa"
+        },
+        "csd2-2023/Websites for a Purpose": {
+          "name": "Strony internetowe dla określonego celu"
+        },
+        "csd2-2023/Team Problem Solving": {
+          "name": "Zespołowe rozwiązywanie problemów"
+        },
+        "csd2-2023/Sources and Research": {
+          "name": "Źródła i badanie"
+        },
+        "csd2-2023/CSS Classes": {
+          "name": "Klasy CSS"
+        },
+        "csd2-2023/Linking Pages": {
+          "name": "Łączenie stron "
+        },
+        "csd2-2023/Project - Website for a Purpose": {
+          "name": "Projekt - Strona internetowa do określonego celu"
+        },
+        "csd2-2023/Peer Review and Final Touches": {
+          "name": "Weryfikacja krzyżowa i ostatnie wykończenia"
+        },
+        "csd3-2023/Plotting Shapes": {
+          "name": "Rysowanie kształtów"
+        },
+        "csd3-2023/Drawing in Game Lab": {
+          "name": "Rysowanie w laboratorium gier"
+        },
+        "csd3-2023/Variables": {
+          "name": "Zmienne"
+        },
+        "csd3-2023/Random Numbers": {
+          "name": "Losowe liczby"
+        },
+        "csd3-2023/Sprites": {
+          "name": "Duszki"
+        },
+        "csd3-2023/Sprite Properties": {
+          "name": "Właściwości duszka"
+        },
+        "csd3-2023/Text": {
+          "name": "Tekst"
+        },
+        "csd3-2023/Sprite Movement": {
+          "name": "Ruch duszka"
+        },
+        "csd3-2023/Conditionals": {
+          "name": "Zdania z warunkami"
+        },
+        "csd3-2023/Keyboard Input": {
+          "name": "Wejście z klawiatury"
+        },
+        "csd3-2023/Mouse Input": {
+          "name": "Użycie myszy"
+        },
+        "csd3-2023/Project - Interactive Card": {
+          "name": "Projekt - Interaktywna karta"
+        },
+        "csd3-2023/Velocity": {
+          "name": "Prędkość"
+        },
+        "csd3-2023/Collision Detection": {
+          "name": "Wykrywanie kolizji"
+        },
+        "csd3-2023/Complex Sprite Movement": {
+          "name": "Złożony ruch duszka"
+        },
+        "csd3-2023/Collisions": {
+          "name": "Kolizje"
+        },
+        "csd3-2023/Functions": {
+          "name": "Funkcje"
+        },
+        "csd3-2023/The Game Design Process": {
+          "name": "Proces projektowania gier"
+        },
+        "csd3-2023/Using the Game Design Process": {
+          "name": "Używanie procesu projektowania gier"
+        },
+        "csd3-2023/Project - Design a Game": {
+          "name": "Projekt - Zaprojektuj grę"
+        },
+        "csd4-2023/Designing With Empathy": {
+          "name": "Projektowanie z empatią"
+        },
+        "csd4-2023/Understanding Your User": {
+          "name": "Zrozumienie twojego użytkownika"
+        },
+        "csd4-2023/User Interfaces": {
+          "name": "Interfejsy użytkownika"
+        },
+        "csd4-2023/Feedback and Testing": {
+          "name": "Informacje zwrotne i testowanie"
+        },
+        "csd4-2023/Identifying User Needs": {
+          "name": "Identyfikowanie potrzeb użytkownika"
+        },
+        "csd4-2023/Project - Paper Prototype": {
+          "name": "Projekt - Prototyp papierowy"
+        },
+        "csd4-2023/Designing Apps for Good": {
+          "name": "Projektowanie aplikacji na dobre"
+        },
+        "csd4-2023/Market Research": {
+          "name": "Badania rynku"
+        },
+        "csd4-2023/Exploring UI Elements": {
+          "name": "Odkrywanie elementów interfejsu użytkownika (UI)"
+        },
+        "csd4-2023/Prototype Testing": {
+          "name": "Testowanie prototypu"
+        },
+        "csd4-2023/Build a Digital Prototype": {
+          "name": "Zbuduj cyfrowy prototyp"
+        },
+        "csd4-2023/Events in App Lab": {
+          "name": "Zdarzenia w AppLab"
+        },
+        "csd4-2023/Testing the App": {
+          "name": "Testowanie aplikacji"
+        },
+        "csd4-2023/Bugs and Features": {
+          "name": "Błędy i właściwości"
+        },
+        "csd4-2023/Updating Your Prototype": {
+          "name": "Aktualizacja Twojego prototypu"
+        },
+        "csd4-2023/Project - App Presentation": {
+          "name": "Projekt - Prezentacja aplikacji"
+        },
+        "csd5-2023/Representation Matters": {
+          "name": "Reprezentacja ma znaczenie"
+        },
+        "csd5-2023/Patterns and Representation": {
+          "name": "Wzorce i reprezentacje"
+        },
+        "csd5-2023/ASCII and Binary Representation": {
+          "name": "ASCII i reprezentacja binarna"
+        },
+        "csd5-2023/Representing Images": {
+          "name": "Reprezentowanie obrazów"
+        },
+        "csd5-2023/Representing Numbers": {
+          "name": "Reprezentacja liczb"
+        },
+        "csd5-2023/Combining Representations": {
+          "name": "Łączenie reprezentacji"
+        },
+        "csd5-2023/Keeping Data Secret": {
+          "name": "Zachowywanie danych w tajemnicy"
+        },
+        "csd5-2023/Project - Create a Representation": {
+          "name": "Projekt - Twórz reprezentację"
+        },
+        "csd5-2023/Structuring Data": {
+          "name": "Strukturyzacja danych"
+        },
+        "csd5-2023/Interpreting Data": {
+          "name": "Interpretacja danych"
+        },
+        "csd5-2023/Making Decisions with Data": {
+          "name": "Podejmowanie decyzji na podstawie danych"
+        },
+        "csd5-2023/Automating Data Decisions": {
+          "name": "Automatyzacja decyzji dotyczących danych"
+        },
+        "csd5-2023/Problem Solving with Big Data": {
+          "name": "Rozwiązywanie problemów z giga danymi"
+        },
+        "csd5-2023/Data and Machine Learning": {
+          "name": "Dane i uczenie maszynowe"
+        },
+        "csd5-2023/Project - Make a Recommendation": {
+          "name": "Projekt - zarekomenduj"
+        },
+        "csd6a-2023/Intro to App Lab": {
+          "name": "Wprowadzenie do App Lab"
+        },
+        "csd6a-2023/The Circuit Playground": {
+          "name": "Circuit Playground"
+        },
+        "csd6a-2023/Board Events": {
+          "name": "Zdarzenia na tablicy"
+        },
+        "csd6a-2023/Color LEDs": {
+          "name": "Kolorowe LED"
+        },
+        "csd6a-2023/Accelerometer": {
+          "name": "Akcelerometr"
+        },
+        "csd6a-2023/Making Music": {
+          "name": "Tworzenie muzyki"
+        },
+        "csd6a-2023/Functions": {
+          "name": "Funkcje"
+        },
+        "csd6a-2023/Project - Prototype an Innovation": {
+          "overview": "W tym projekcie końcowym uczniowie dzielą się na zespoły, aby opracować i przetestować prototyp innowacyjnego urządzenia informatycznego w oparciu o Circuit Playground. Używając danych wejściowych i wyników wyjściowych dostępnych na tablicy grupy będą tworzyć programy, które umożliwią ciekawe i niepowtarzalne interakcje z użytkownikiem."
+        },
+        "csd6b-2023/Intro to App Lab": {
+          "name": "Wprowadzenie do App Lab"
+        },
+        "csd6b-2023/Board Events": {
+          "name": "Zdarzenia na tablicy"
+        },
+        "csd6b-2023/Accelerometer": {
+          "name": "Akcelerometr"
+        },
+        "csd6b-2023/Functions": {
+          "name": "Funkcje"
+        },
+        "csd7-2023/Intro to App Lab": {
+          "name": "Wprowadzenie do App Lab"
+        },
+        "csd7-2023/Introduction to Machine Learning": {
+          "name": "Wprowadzenie do uczenia maszynowego",
+          "overview": "Uczniowie zapoznają się z metodą sztucznej inteligencji zwaną uczeniem maszynowym i jak mogą wykorzystać proces rozwiązywania problemów do wytrenowania robota,  by rozwiązywał problemy. Uczestniczą w trzech zajęciach uczenia maszynowego, w których robot - A.I. Bot - uczy się rozpoznawania postaci ryb. Na pierwszym poziomie uczniowie trenuj robota w wykrywaniu „ryba” lub „nie ryba” i odkrywają, że więcej danych prowadzi do większej dokładności. Na drugim poziomie uczniowie trenują A.I. Bot do wykrywania niektórych kolorowych ryb lub ryb o określonych kształtach i odkrywają, że A.I  Bot może opierać swoje decyzje na niezamierzonych czynnikach. Na ostatnim poziomie uczniowie trenują A.I. Bot do wykrywania wyrażeń i odkrywają, że A.I. Bot może używać niepowiązanych cech do podejmowania decyzji w sposób, który nie jest sprawiedliwy. Lekcja kończy się ponownym potwierdzeniem, w jaki sposób proces rozwiązywania problemów jest wykorzystywany w uczeniu maszynowym. \n\n**Pytanie dnia:** Jak możemy wykorzystać proces rozwiązywania problemów do rozwiązania problemu związanego z uczeniem maszynowym? ",
+          "student_overview": "Uczniowie zapoznają się z metodą sztucznej inteligencji zwaną uczeniem maszynowym i jak mogą wykorzystać proces rozwiązywania problemów do wytrenowania robota,  by rozwiązywał problemy. Uczestniczą w trzech zajęciach uczenia maszynowego, w których robot - A.I. Bot - uczy się rozpoznawania postaci ryb. Na pierwszym poziomie uczniowie trenuj robota w wykrywaniu „ryba” lub „nie ryba” i odkrywają, że więcej danych prowadzi do większej dokładności. Na drugim poziomie uczniowie trenują A.I. Bot do wykrywania niektórych kolorowych ryb lub ryb o określonych kształtach i odkrywają, że A.I  Bot może opierać swoje decyzje na niezamierzonych czynnikach. Na ostatnim poziomie uczniowie trenują A.I. Bot do wykrywania wyrażeń i odkrywają, że A.I. Bot może używać niepowiązanych cech do podejmowania decyzji w sposób, który nie jest sprawiedliwy. Lekcja kończy się ponownym potwierdzeniem, w jaki sposób proces rozwiązywania problemów jest wykorzystywany w uczeniu maszynowym. "
+        },
+        "csd7-2023/Innovations in AI": {
+          "name": "Innowacje w AI"
+        },
+        "csd7-2023/Classification Models": {
+          "student_overview": "**Pytanie dnia:** Jak komputery uczą się klasyfikować dane?"
+        },
+        "csd7-2023/Introduction to AI Lab": {
+          "name": "Wprowadzenie do AI Lab"
+        },
+        "csd7-2023/Numerical Models": {
+          "name": "KNN bez komputera",
+          "overview": "Na tej lekcji uczniowie wcielają się w rolę współczesnego starszego ucznia szkoły podstawowej przeżywającego bezprecedensową pandemię. Pewnego dnia przyznano im odpowiedzialność za dostarczenie formuły szczepionki do laboratorium gdzieś w ich okolicy. Aby to zrobić, muszą użyć inteligentnego osobistego asystenta (IPA) o nazwie „Tom”, aby przewidzieć najbezpieczniejszą drogę do laboratorium, co będzie wymagało przeszkolenia Toma za pomocą algorytmu regresji. \\\\r\n\\\\r\n**Pytanie dnia:** Jak komputery uczą się przewidywać z pomoc danych liczbowych? ",
+          "student_overview": "Na tej lekcji uczniowie wcielają się w rolę współczesnego starszego ucznia szkoły podstawowej przeżywającego bezprecedensową pandemię. Pewnego dnia przyznano im odpowiedzialność za dostarczenie formuły szczepionki do laboratorium gdzieś w ich okolicy. Aby to zrobić, muszą użyć inteligentnego osobistego asystenta (IPA) o nazwie „Tom”, aby przewidzieć najbezpieczniejszą drogę do laboratorium, co będzie wymagało przeszkolenia Toma za pomocą algorytmu regresji. "
+        },
+        "csd7-2023/Numerical Data in AI Lab": {
+          "name": "Dane numeryczne w laboratorium AI"
+        },
+        "csd7-2023/AI Code of Ethics": {
+          "name": "Kodeks etyczny AI "
+        },
+        "csd7-2023/Issue Statements": {
+          "name": "Zaplanuj aplikację uczenia maszynowego"
+        },
+        "csd7-2023/Survey Planning": {
+          "name": "Projektowanie zbierania danych"
+        },
+        "csd7-2023/Survey Data in AI Lab": {
+          "name": "Model treningowy na podstawie dobrych danych "
+        },
+        "csd7-2023/Troubleshooting Models": {
+          "name": "Model treningowy na podstawie złych danych "
+        },
+        "csd7-2023/Creating an App": {
+          "name": "Utwórz aplikację"
         },
         "coursea-2023/Safety in My Online Neighborhood": {
           "name": "Bezpieczeństwo w moim otoczeniu online",

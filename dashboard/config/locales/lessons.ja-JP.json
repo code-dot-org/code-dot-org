@@ -5032,6 +5032,10 @@
           "purpose": "このオンライン アクティビティでは、生徒は「プレイ ラボ」でイベントを使用する方法を学びます。矢印キーが押されたら騎士が動くように訓練することから始め、最終的にはじゆうあそびパズルの一部として、シーケンスやループなど、このコースを通して学んだ残りのスキルを紹介する機会を設けています。",
           "student_overview": "イベントを使って、ストーリーを作成したり、インタラクティブゲームを作成したりしましょう。"
         },
+        "ai-ethics-2023/lesson-1": {
+          "name": "当社のAI倫理規定",
+          "student_overview": "AI の倫理について共同研究し、共有可能な行動規範を作成します。"
+        },
         "csc-adaptations-2023/Modeling Animal Adaptations (pilot)": {
           "name": "動物適応入門",
           "overview": "この**スキル構築**レッスンでは、生徒はスプライトを作成してアニメーション化し、イベントを使用してスプライトをインタラクティブにする方法を学びます。 \n\n学生は Sprite Lab でイベントベースの因果関係のモデルをコーディングし、種が時間の経過とともに環境に適応することでどのように生き残るかを実演します。インタラクティブなモデルとシミュレーションは、エンジニアや科学者がパターンを特定し、自然を理解し、将来の変化を予測し、大きな混乱に備えて対処するためのソリューションを設計するのに役立つ、現実世界で使用されます。 \n\n学生は、進化、適応、移動、自然淘汰や生存の例をグループで探ります。 ",
@@ -5189,6 +5193,279 @@
           "preparation": "\\-学生1人につき1台のコンピューターを用意してください。\n\\-学生1人につき**<a href=\"https://docs.google.com/document/d/1kO4SNEIVyM0GrxxJb6NzVYauXXpi6rzQkDIfrzQf1Ls/template/preview\" target=\"_blank\">Share Your</a>App**配布資料を1部用意してください。\n\\-このレッスンでは、生徒がオリジナルの詩のコピーを手元に用意しておいてください。\\\n-ポエトリー・ペアシェア・アクティビティでは、クラスをペアに分けます。\n\\-このレッスンの後に、関連する拡張オプション ([link](https://studio.code.org/s/poetry-2023/lessons/4#activity-4365336)) を検討してみてください。\n\n#### オプション\n\n\\-特にリモートティーチングの場合:各生徒のアプリ URL を投稿するために、デジタルドキュメントまたは共有オンラインスペースを設定する必要があるかを判断してください（「リンク」の教師用テンプレートを参照）。 ",
           "purpose": "ポエムアートプロジェクトを仲間と共有することは、創作プロセスの重要な側面です。これにより、学生はフィードバックを受け取ったり、他の人と協力したり、自分の作品を振り返ったり、自分の成果を祝ったりすることができます。自分の作品を他の人と分かち合うことで、学生は創造的な思想家として成長し、向上し、重要なコミュニケーション能力や対人関係のスキルを身につけることができます。",
           "student_overview": "新しい詩アプリを友達と共有しましょう！ "
+        },
+        "csd1-2023/Intro to Problem Solving": {
+          "name": "問題解決入門"
+        },
+        "csd1-2023/The Problem Solving Process": {
+          "name": "The Problem Solving Process"
+        },
+        "csd1-2023/Exploring Problem Solving": {
+          "name": "問題解決の探求"
+        },
+        "csd1-2023/What is a Computer?": {
+          "name": "コンピューターとは"
+        },
+        "csd1-2023/Input and Output": {
+          "name": "入出力"
+        },
+        "csd1-2023/Processing": {
+          "name": "処理"
+        },
+        "csd1-2023/Storage": {
+          "name": "ストレージ"
+        },
+        "csd1-2023/Project - Propose an App": {
+          "name": "プロジェクト - アプリの提案"
+        },
+        "csd1-2023/Intro to Problem Solving - Newspaper Table (Alternate Lesson 1)": {
+          "name": "問題解決入門 - 新聞の表 (代替レッスン1)"
+        },
+        "csd1-2023/Intro to Problem Solving - Spaghetti Bridge (Alternate Lesson 1)": {
+          "name": "問題解決入門 - スパゲッティ ブリッジ (代替レッスン1)"
+        },
+        "csd1-2023/Intro to Problem Solving - Paper Tower (Alternate Lesson 1)": {
+          "name": "問題解決入門 - ペーパータワー (代替レッスン1)"
+        },
+        "csd1-2023/Exploring Problem Solving - Animals Theme (Alternate Lesson 3)": {
+          "name": "問題解決の探索 - 動物のテーマ (代替レッスン3)"
+        },
+        "csd1-2023/Exploring Problem Solving - Games Theme (Alternate Lesson 3)": {
+          "name": "問題解決の探索 - ゲームのテーマ (代替レッスン3)"
+        },
+        "csd2-2023/Exploring Web Pages": {
+          "name": "ウェブページの探索"
+        },
+        "csd2-2023/Intro to HTML": {
+          "name": "HTML入門"
+        },
+        "csd2-2023/Mini-Project: HTML Web Page": {
+          "name": "ミニプロジェクト: HTML ウェブページ"
+        },
+        "csd2-2023/Digital Footprint": {
+          "name": "デジタルフットプリント"
+        },
+        "csd2-2023/Styling Text with CSS": {
+          "name": "CSSを使用したテキストのスタイル設定"
+        },
+        "csd2-2023/Mini-Project: Your Personal Style": {
+          "name": "ミニプロジェクト: 個人的なスタイル"
+        },
+        "csd2-2023/Intellectual Property": {
+          "name": "知的財産"
+        },
+        "csd2-2023/Using Images": {
+          "name": "画像の使用"
+        },
+        "csd2-2023/Websites for Expression": {
+          "name": "表現のためのウェブサイト"
+        },
+        "csd2-2023/Styling Elements with CSS": {
+          "name": "CSSを使用した要素のスタイル設定"
+        },
+        "csd2-2023/Your Web Page - Prepare": {
+          "name": "ウェブページ - 準備"
+        },
+        "csd2-2023/Project - Personal Web Page": {
+          "name": "プロジェクト - 個人ウェブページ"
+        },
+        "csd2-2023/Websites for a Purpose": {
+          "name": "ある目的のためのウェブサイト"
+        },
+        "csd2-2023/Team Problem Solving": {
+          "name": "チームの問題解決"
+        },
+        "csd2-2023/Sources and Research": {
+          "name": "出典と調査"
+        },
+        "csd2-2023/Linking Pages": {
+          "name": "ページのリンク"
+        },
+        "csd2-2023/Project - Website for a Purpose": {
+          "name": "プロジェクト - ある目的のためのウェブサイト"
+        },
+        "csd2-2023/Peer Review and Final Touches": {
+          "name": "ピアレビューと最後の仕上げ"
+        },
+        "csd3-2023/Plotting Shapes": {
+          "name": "形状のプロット"
+        },
+        "csd3-2023/Drawing in Game Lab": {
+          "name": "ゲームラボでの描画"
+        },
+        "csd3-2023/Variables": {
+          "name": "変数（へんすう）"
+        },
+        "csd3-2023/Sprites": {
+          "name": "スプライト"
+        },
+        "csd3-2023/Sprite Properties": {
+          "name": "スプライトのプロパティ"
+        },
+        "csd3-2023/Text": {
+          "name": "テキスト"
+        },
+        "csd3-2023/Sprite Movement": {
+          "name": "スプライトの動き"
+        },
+        "csd3-2023/Mini-Project - Animation": {
+          "name": "ミニプロジェクト- アニメーション"
+        },
+        "csd3-2023/Conditionals": {
+          "name": "条件"
+        },
+        "csd3-2023/Keyboard Input": {
+          "name": "キーボード入力"
+        },
+        "csd3-2023/Mouse Input": {
+          "name": "マウスの入力"
+        },
+        "csd3-2023/Project - Interactive Card": {
+          "name": "プロジェクト - インタラクティブカード"
+        },
+        "csd3-2023/Velocity": {
+          "name": "速度"
+        },
+        "csd3-2023/Mini-Project - Side Scroller": {
+          "name": "ミニプロジェクト- サイドスクローラー"
+        },
+        "csd3-2023/Complex Sprite Movement": {
+          "name": "複雑なスプライトの動き"
+        },
+        "csd3-2023/Collisions": {
+          "name": "衝突"
+        },
+        "csd3-2023/Mini-Project - Flyer Game": {
+          "name": "ミニプロジェクト- フライヤーゲーム"
+        },
+        "csd3-2023/Functions": {
+          "name": "関数(かんすう) "
+        },
+        "csd3-2023/The Game Design Process": {
+          "name": "ゲームデザインプロセス"
+        },
+        "csd3-2023/Using the Game Design Process": {
+          "name": "ゲームデザインプロセスの使用"
+        },
+        "csd3-2023/Project - Design a Game": {
+          "name": "プロジェクト - ゲームの設計"
+        },
+        "csd4-2023/Understanding Your User": {
+          "name": "ユーザーを理解する"
+        },
+        "csd4-2023/User Interfaces": {
+          "name": "ユーザーインターフェイス"
+        },
+        "csd4-2023/Feedback and Testing": {
+          "name": "フィードバックとテスト"
+        },
+        "csd4-2023/Identifying User Needs": {
+          "name": "ユーザーのニーズの特定"
+        },
+        "csd4-2023/Project - Paper Prototype": {
+          "name": "プロジェクト - 紙のプロトタイプ"
+        },
+        "csd4-2023/Designing Apps for Good": {
+          "name": "優れたアプリの設計"
+        },
+        "csd4-2023/Market Research": {
+          "name": "市場調査"
+        },
+        "csd4-2023/Prototype Testing": {
+          "name": " プロトタイプテスト"
+        },
+        "csd4-2023/Testing the App": {
+          "name": "アプリのテスト"
+        },
+        "csd4-2023/Project - App Presentation": {
+          "name": "プロジェクト - アプリのプレゼンテーション"
+        },
+        "csd5-2023/Representation Matters": {
+          "name": "表現が重要"
+        },
+        "csd5-2023/Patterns and Representation": {
+          "name": "パターンと表現"
+        },
+        "csd5-2023/ASCII and Binary Representation": {
+          "name": "ASCIIとバイナリ表現"
+        },
+        "csd5-2023/Representing Images": {
+          "name": "画像の表現"
+        },
+        "csd5-2023/Representing Numbers": {
+          "name": "数値の表現"
+        },
+        "csd5-2023/Combining Representations": {
+          "name": "表現を組み合わせる"
+        },
+        "csd5-2023/Keeping Data Secret": {
+          "name": "データの秘密を守る"
+        },
+        "csd5-2023/Project - Create a Representation": {
+          "name": "プロジェクト - 表現を作成する"
+        },
+        "csd5-2023/Structuring Data": {
+          "name": "データの構造化"
+        },
+        "csd5-2023/Interpreting Data": {
+          "name": "データの解釈"
+        },
+        "csd5-2023/Making Decisions with Data": {
+          "name": "データを使った決定"
+        },
+        "csd5-2023/Automating Data Decisions": {
+          "name": "データ決定の自動化"
+        },
+        "csd5-2023/Problem Solving with Big Data": {
+          "name": "ビッグデータによる問題解決"
+        },
+        "csd5-2023/Project - Make a Recommendation": {
+          "name": "プロジェクト - 推奨事項の作成"
+        },
+        "csd6a-2023/Intro to App Lab": {
+          "name": "アプリラボの紹介"
+        },
+        "csd6a-2023/The Circuit Playground": {
+          "name": "サーキット プレイグラウンド"
+        },
+        "csd6a-2023/Board Events": {
+          "name": "ボードイベント"
+        },
+        "csd6a-2023/Color LEDs": {
+          "name": "カラーLED"
+        },
+        "csd6a-2023/Accelerometer": {
+          "name": "加速度計"
+        },
+        "csd6a-2023/Functions": {
+          "name": "関数(かんすう) "
+        },
+        "csd6a-2023/Project - Prototype an Innovation": {
+          "overview": "コースのこの最終プロジェクトでは、生徒チームが、サーキット プレイグラウンドに基づく革新的なコンピューティングデバイスのプロトタイプを開発およびテストします。ボードで利用できる入力と出力を使って、グループは興味深いユニークなユーザーインタラクションを可能にするプログラムを作成します。"
+        },
+        "csd6b-2023/Intro to App Lab": {
+          "name": "アプリラボの紹介"
+        },
+        "csd6b-2023/Board Events": {
+          "name": "ボードイベント"
+        },
+        "csd6b-2023/Accelerometer": {
+          "name": "加速度計"
+        },
+        "csd6b-2023/Functions": {
+          "name": "関数(かんすう) "
+        },
+        "csd7-2023/Intro to App Lab": {
+          "name": "アプリラボの紹介"
+        },
+        "csd7-2023/Introduction to AI Lab": {
+          "name": "AI ラボの紹介"
+        },
+        "csd7-2023/Numerical Data in AI Lab": {
+          "name": "AI ラボの数値データ"
+        },
+        "csd7-2023/Survey Planning": {
+          "name": "データ収集の設計"
         },
         "coursea-2023/Safety in My Online Neighborhood": {
           "name": "オンラインネイバーフッドの安全",

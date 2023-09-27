@@ -284,6 +284,10 @@ az:
   call_to_action_register_early_access: Erkən giriş üçün qeydiyyatdan keçin
   call_to_action_open_positions: Açıq mövqelərə baxın
   call_to_action_get_guide: Bələdçi alın
+  call_to_action_donate_to_cdo: Code.org saytına ianə edin
+  call_to_action_start_fundraiser: Bir fandreyzerə başlayın
+  call_to_action_view_donation_policy: Bağış siyasətinə baxın
+  call_to_action_view_donate_bitpay: BitPay ilə ianə edin
   aria_label_call_to_action_afe: Amazon Future Engineer haqqında daha çox məlumat
     əldə edin
   aria_label_call_to_action_teaching_csf: Tədris Kompüter Elmlərinin Əsasları peşəkar
@@ -391,6 +395,7 @@ az:
   curriculum_name_csp: Kompüter Elmləri Prinsipləri
   curriculum_name_csc: Kompüter Elmləri Əlaqələri
   curriculum_name_csa: AP® Kompüter Elmləri A
+  curriculum_name_csa_ai: Proqram mühəndisliyi və kompüter baxışı
   curriculum_name_csc_02: Hər hansı bir CS Əlaqələri Modulu
   curriculum_name_ai: AI və Maşın Öyrənmə
   curriculum_name_artificial_intelligence: Süni intellekt (AI)
@@ -469,6 +474,12 @@ az:
     sistemləri qurmaqla tanış edir.
   curriculum_desc_csp: Şagirdləri kompüter elminin əsas anlayışları ilə tanış edən
     pulsuz, AP® CSP təsdiqlənmiş, lisey giriş kursu.
+  curriculum_desc_csa_ai_long: 'Bu iki fəsildən sonrakı AP CSA modulu lisey şagirdlərinə
+    GitHub və GitHub Copilot da daxil olmaqla peşəkar proqram təminatı inkişaf etdirmə
+    vasitələri ilə praktiki təcrübə təklif edir və onlara kompüter görmə proqramını
+    inkişaf etdirmək üçün real dünya bacarıqları verir. '
+  curriculum_desc_csa_ai_short: Bu post-AP® CSA modulu orta məktəb şagirdlərinə peşəkar
+    proqram inkişaf vasitələri ilə praktiki təcrübə təklif edir.
   collection_hardware: Avadanlıqlara diqqət yetirin
   collection_hardware_desc: Tələbələrə problemləri həll etmək üçün məlumat və fiziki
     cihazlardan istifadə etmək imkanı verir.
@@ -544,6 +555,7 @@ az:
   module_duration_2_hrs: 2 saat
   module_duration_3_hrs: 3 saat
   module_duration_5_hrs: 5 saat
+  module_duration_5_hrs_plus: 5+ saat
   module_duration_8_hrs: 8 saat
   module_duration_20_hrs: 20 saat
   module_duration_35_hrs: 35 saat
@@ -623,6 +635,7 @@ az:
   heading_objects_first: Əvvəlcə obyektlər
   heading_these_lessons_will: 'Bu dərslər:'
   heading_explore_curriculum_catalog: Kurikulum Kataloqunda bütün kurslarımızı araşdırın
+  heading_csa_ai: AP® imtahanından sonra ediləcək işlər axtarırsınız?
   professional_learning_section_desc: Öyrətməyə hazırlaşarkən sizə lazım olan dəstəyi
     alın. Müəllimlər bunu sevirlər, 90% -dən çoxu bu günə qədər ən yaxşı peşəkar inkişafdır!
   professional_learning_section_desc_short: Öyrətməyə hazırlaşarkən sizə lazım olan
@@ -653,6 +666,23 @@ az:
   support_and_questions_section_desc: Dəstək komandamız Code.org ilə tədrisə başlamaqla
     bağlı suallarınızı cavablandırmaq üçün buradadır. Müəllim forumlarımızda digər
     müəllimlərdən təcrübələri barədə də soruşa bilərsiniz.
+  subscribe_form_section_title: Yeniləmələr üçün abunə olun
+  subscribe_form_section_desc_csa: Code.org-un AP® Computer Science A haqqında aylıq
+    e -poçtları almaq üçün qeydiyyatdan keçin və gələnlər qutunuza göndərilən faydalı
+    xatırlatmalar, məsləhətlər və yeniləmələri əldə edin.
+  subscribe_form_section_desc_csc: Code.org-un Kompüter Elmləri Əlaqələri haqqında
+    aylıq e-poçt almaq üçün qeydiyyatdan keçin və gələnlər qutunuza göndərilən faydalı
+    xatırlatmalar, məsləhətlər və yeniləmələri əldə edin.
+  subscribe_form_section_desc_csd: Code.org-un Kompüter Elmləri Kəşfləri haqqında
+    aylıq e -poçtları almaq üçün qeydiyyatdan keçin və birbaşa gələnlər qutunuza göndərilən
+    faydalı xatırlatmalar, məsləhətlər və yeniləmələri əldə edin.
+  subscribe_form_section_desc_csf: Code.org-un Kompüter Elmlərinin Əsasları haqqında
+    aylıq e-poçtlar almaq üçün qeydiyyatdan keçin və birbaşa gələnlər qutunuza göndərilən
+    faydalı xatırlatmalar, məsləhətlər və yeniləmələri əldə edin.
+  subscribe_form_section_desc_csp: Code.org-un Kompüter Elmləri Prinsipləri haqqında
+    aylıq e-poçt almaq üçün qeydiyyatdan keçin və birbaşa gələnlər qutunuza göndərilən
+    faydalı xatırlatmalar, məsləhətlər və yeniləmələri əldə edin.
+  subscribe_form_section_unsubscribe: İstənilən vaxt abunəlikdən çıxa bilərsiniz.
   blockchain_hero_heading: Blockchain necə işləyir
   blockchain_hero_desc: Yeni video seriyamız və müşayiət olunan dərslərimiz “Blockchain
     necə işləyir” ilə blockchain dünyasına dalış!
@@ -758,6 +788,9 @@ az:
     serialdan bir video ilə birləşdirilir və videolarda təqdim olunan anlayışlara
     daha dərindən dalır.
   ai_curriculum_btn_aria_label_04: AI dərslərinin necə işlədiyini araşdırın
+  ai_curriculum_grades_05: 'Sinif səviyyələri: 9-12'
+  ai_curriculum_btn_aria_label_05: Proqram Mühəndisliyi və Kompüter Görmə modulunu
+    araşdırın
   ai_carousel_heading: 'Code.org ilə AI haqqında müəllimlərin dedikləri:'
   ai_carousel_quote_01: Bu dərs həm də şagirdlərimə təsnifat sistemlərində fikir elementinin
     olduğunu görmək imkanı verdi. Daha sonra, AI -də qərəzin necə nəticələnə biləcəyini
@@ -893,6 +926,8 @@ az:
     mümkün olan ən yaxşı çıxışı əldə etmək üçün vasitələr. Yalnız ayaq barmaqlarını
     batıranlar üçün başlanğıc göstərişləri, eləcə də potensiallarını artırmaq istəyənlər
     üçün qabaqcıl alətlər daxildir.
+  ai_pl_101_resources_3: Tələbə öyrənməsini dəyişdirmək üçün süni intellekt təklif
+    edir
   how_ai_works_hero_heading: AI necə işləyir
   how_ai_works_hero_desc: "“AI necə işləyir”, video seriyamız və müşayiət olunan dərslərimizlə
     AI dünyasına dalın!"
@@ -1299,8 +1334,8 @@ az:
     Animation
   csp_page_curriculum_glance_devices: Laptop, Chromebook
   csp_page_curriculum_glance_tools: Tətbiq Laboratoriyası
-  csp_page_curriculum_glance_professional_learning: Facilitator-led Workshops, Self-paced
-    Modules
+  csp_page_curriculum_glance_professional_learning: Fasilitatorun rəhbərlik etdiyi
+    seminarlar, öz-özünə inkişaf edən modullar
   csp_page_curriculum_glance_professional_languages: Azərbaycan dili
   csp_page_curriculum_glance_professional_accessibility_features: Text-to-speech,
     Closed captioning, Immersive reader
@@ -1427,8 +1462,8 @@ az:
   csd_page_curriculum_glance_devices: Laptop, Chromebook
   csd_page_curriculum_glance_tools: Tətbiq Laboratoriyası, Oyun Laboratoriyası, AI
     Laboratoriyası, Veb Laboratoriyası
-  csd_page_curriculum_glance_professional_learning: Facilitator-led Workshops, Self-paced
-    Modules
+  csd_page_curriculum_glance_professional_learning: Fasilitatorun rəhbərlik etdiyi
+    seminarlar, öz-özünə inkişaf edən modullar
   csd_page_curriculum_glance_professional_languages: Azərbaycan dili
   csd_page_curriculum_glance_professional_accessibility_features: Text-to-speech,
     Closed captioning, Immersive reader
@@ -1570,8 +1605,8 @@ az:
     İncəsənət və Dizayn, Tətbiq Dizaynı
   csf_page_curriculum_glance_devices: Noutbuk, Chromebook, Planşet
   csf_page_curriculum_glance_tools: Sprite Laboratoriyası, Play Laboratoriyası
-  csf_page_curriculum_glance_professional_learning: Facilitator-led Workshops, Self-paced
-    Modules
+  csf_page_curriculum_glance_professional_learning: Fasilitatorun rəhbərlik etdiyi
+    seminarlar, öz-özünə inkişaf edən modullar
   csf_page_curriculum_glance_languages: Ərəb, Bahasa İndoneziya, Katalan, Çin Sadələşdirilmiş,
     Çin Ənənəvi, Çex, Fransız, Alman, Hindi, İtalyan, Yapon, Koreya, Kannada, Malay,
     Marathi, Monqol, Polşa, Portuqaliya-BR, Rumıniya, Rus, Slovak, Tagalog, Tamil,
@@ -1711,6 +1746,38 @@ az:
   csa_page_faq_answer_08_02: For more information about the values that guided our
     work, please see our [curriculum values](%{curriculum_values_url}) and our [professional
     learning values](%{pl_values_url}).
+  donate_page_top_heading: Missiyamızı maliyyələşdirməyə kömək edin
+  donate_page_top_desc: Hər ianə Code.org -un kompüter elmləri təhsilinə çıxışı genişləndirmək
+    missiyasını gücləndirir. Bağışlamaq və fərq yaratmaq üçün bir neçə yol təklif
+    edirik.
+  donate_page_fundraise_title: Code.org üçün fandreyz
+  donate_page_fundraise_desc: Code.org üçün pul yığmağa kömək edin! Hər məktəbdə oxuyan
+    hər bir şagirdin kompüter elmlərini öyrənmək imkanı olmalıdır.
+  donate_page_other_ways_title: Verməyin digər yolları
+  donate_page_other_ways_desc: Töhfə vermək üçün müxtəlif üsulları araşdırın və sizə
+    ən uyğun variantı tapın. Böyük və ya kiçik hər jest missiyamızı irəli aparır.
+  donate_page_501c3: Code.org ictimai 501 (c) (3) qeyri-kommersiya təşkilatı kimi
+    qeydiyyatdan keçmişdir. Code.org-a verdiyi töhfələr qanunla icazə verilən dərəcədə
+    vergidən çıxılır. Code.org-un vergi identifikasiya nömrəsi 46-0858543-dir.
+  donate_page_donation_policy_title: Bağış Siyasətimizi Anlamaq
+  donate_page_donation_policy_desc: Töhfələrinizi necə idarə etdiyimizi və ayırdığımızı
+    öyrənin.
+  donate_tabs_tab_label_daf_direct: DAF Birbaşa
+  donate_tabs_tab_label_amazon: Amazon
+  donate_tabs_tab_label_bitpay: BitPay
+  donate_tabs_tab_label_employee_match: İşçi matçı
+  donate_tabs_daf_direct_title: DAF Direct vasitəsilə ianə edin
+  donate_tabs_daf_direct_desc: Fidelity Charitable, Schwab Charitable və ya BNY Mellon
+    ilə donor tərəfindən tövsiyə olunan fond vasitəsilə ianə verin və DAF Direct onlayn
+    forması vasitəsilə Code.org saytına qrant tövsiyənizi verin.
+  donate_tabs_amazon_title: Amazon vasitəsilə ianə
+  donate_tabs_amazon_desc: Amazon hesabınızı istifadə edərək birbaşa ianə edin. Yalnız
+    bir neçə kliklə Code.org missiyasına problemsiz töhfə verin və kompüter elmləri
+    təhsilinin gələcəyini gücləndirin.
+  donate_tabs_bitpay_title: BitPay vasitəsilə Kripto ilə ianə edin
+  donate_tabs_bitpay_desc: kriptovalyutası ilə verilməsi gələcəyini əhatə. BitPay
+    vasitəsilə rəqəmsal valyutanız Code.org-un kompüter elmləri təhsilini genişləndirmək
+    səylərini birbaşa dəstəkləyə bilər.
   hoc_live: Kod Saatı Canlı
   hoc_live_sign_up_title: Canlı Kod Saatı üçün qeydiyyatdan keçin
   hoc_live_learn_title: Kod Saatı Canlı ilə məlumat əldə edin

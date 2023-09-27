@@ -209,6 +209,27 @@
         "code/poetry/2023": {
           "word": "Kodea"
         },
+        "input/csd/2023": {
+          "word": "Sarrera"
+        },
+        "copyright/csd/2023": {
+          "word": "Egile-eskubideak"
+        },
+        "debugging/csd/2023": {
+          "word": "Arazketa"
+        },
+        "variable/csd/2023": {
+          "word": "Aldagaia"
+        },
+        "conditionals/csd/2023": {
+          "word": "Baldintzak"
+        },
+        "abstraction/csd/2023": {
+          "word": "Abstrakzioa"
+        },
+        "function/csd/2023": {
+          "word": "Funtzioa"
+        },
         "debugging/coursea/2023": {
           "word": "Arazketa"
         },

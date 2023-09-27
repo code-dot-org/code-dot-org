@@ -10,6 +10,7 @@ sl:
         error:
           future: ne more biti v prihodnosti
         finish_sign_up_header: Dokončaj registracijo
+        finish_sign_up_header_error: 'Prosim popravite sledeče napake:'
         gender: Spol
         locale: Jezik
         name: Prikazno ime

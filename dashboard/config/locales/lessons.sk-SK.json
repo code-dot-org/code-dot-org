@@ -5176,6 +5176,9 @@
           "purpose": "V tejto on‑line aktivite sa žiaci naučia, ako sa v Play Labe používajú udalosti. Najprv naprogramujú rytiera tak, aby sa hýbal pri stlačení šípky na klávesnici hýbal, a nakoniec budú mať v rámci záverečnej voľnej úlohy príležitosť ukázať zvyšné zručnosti, ktoré počas kurzu nadobudli, vrátane postupností a cyklov.",
           "student_overview": "Vytvor pomocou udalostí príbeh alebo interaktívnu hru."
         },
+        "ai-ethics-2023/lesson-1": {
+          "student_overview": "Spoločne skúmajte etiku AI a vytvorte zdieľateľný kódex správania."
+        },
         "csc-adaptations-2023/Modeling Animal Adaptations (pilot)": {
           "name": "Úvod do adaptácie zvierat",
           "overview": "V tejto lekcii **budovania zručnosti** sa študenti naučia vytvárať a animovať spritov a používať udalosti, aby boli interaktívne. \n\nŠtudenti budú kódovať model príčin a následkov založený na udalostiach v Sprite Lab, aby demonštrovali, ako druhy prežívajú prispôsobením sa svojmu prostrediu v priebehu času. Interaktívne modely a simulácie sa používajú v reálnom svete, aby pomohli inžinierom a vedcom identifikovať vzorce, porozumieť prírode, predpovedať budúce zmeny a navrhnúť riešenia na prípravu a/alebo boj proti veľkým narušeniam. \n\nŠtudenti preskúmajú príklady evolúcie, adaptácie, migrácie, prirodzeného výberu a prežitia v skupinách. ",
@@ -5333,6 +5336,302 @@
           "preparation": "-   Pripravte jeden počítač na jedného študenta.\n-   Pripravte si jednu kópiu letáku**<a href=\"https://docs.google.com/document/d/1kO4SNEIVyM0GrxxJb6NzVYauXXpi6rzQkDIfrzQf1Ls/template/preview\" target=\"_blank\">Zdieľajte svoju</a>aplikáciu** na študenta.\n-   Uistite sa, že študenti majú pri tejto lekcii po ruke kópiu svojej pôvodnej básne.  \n-   Rozdeľte triedu na páry pre aktivitu Poetry Pair-Share.\n-   Zvážte tieto súvisiace možnosti rozšírenia ([link](https://studio.code.org/s/poetry-2023/lessons/4#activity-4365336)), ktoré chcete preskúmať po tejto lekcii.\n\n##### Voliteľné\n\n-   Najmä pre vzdialené vyučovanie: Zistite, či potrebujete nastaviť digitálny dokument alebo zdieľaný online priestor na uverejnenie adresy URL aplikácie každého študenta (pozri šablónu učiteľa v časti „Odkazy“). ",
           "purpose": "Zdieľanie ich básňových umeleckých projektov s rovesníkmi je dôležitým aspektom tvorivého procesu. Umožňuje študentom získať spätnú väzbu, spolupracovať s ostatnými, premýšľať o svojej vlastnej práci a oslavovať svoje úspechy. Zdieľaním svojej práce s ostatnými môžu študenti rásť a zlepšovať sa ako kreatívni myslitelia a rozvíjať dôležité komunikačné a medziľudské zručnosti.",
           "student_overview": "Podeľte sa o svoje nové básne aplikácie so svojimi priateľmi! "
+        },
+        "csd1-2023/Intro to Problem Solving": {
+          "name": "Úvod do riešenia problémov"
+        },
+        "csd1-2023/The Problem Solving Process": {
+          "name": "Postup riešenia problémov"
+        },
+        "csd1-2023/Exploring Problem Solving": {
+          "name": "Objavujeme riešenie problémov"
+        },
+        "csd1-2023/What is a Computer?": {
+          "name": "Čo je to počítač?"
+        },
+        "csd1-2023/Input and Output": {
+          "name": "Vstup a výstup"
+        },
+        "csd1-2023/Processing": {
+          "name": "Spracúvanie"
+        },
+        "csd1-2023/Storage": {
+          "name": "Pamäť"
+        },
+        "csd1-2023/Project - Propose an App": {
+          "name": "Projekt - Navrhnite aplikáciu"
+        },
+        "csd1-2023/Intro to Problem Solving - Newspaper Table (Alternate Lesson 1)": {
+          "name": "Úvod do riešenia problémov – Novinový stôl (Alternatívna lekcia č. 1)"
+        },
+        "csd1-2023/Intro to Problem Solving - Spaghetti Bridge (Alternate Lesson 1)": {
+          "name": "Úvod do riešenia problémov – Špagetový most (Alternatívna lekcia č. 1)"
+        },
+        "csd1-2023/Intro to Problem Solving - Paper Tower (Alternate Lesson 1)": {
+          "name": "Úvod do riešenia problémov – Papierová veža (Alternatívna lekcia č. 1)"
+        },
+        "csd1-2023/Exploring Problem Solving - Animals Theme (Alternate Lesson 3)": {
+          "name": "Objavujeme riešenie problémov – zvieratká (alternatíva k lekcii č. 3)"
+        },
+        "csd1-2023/Exploring Problem Solving - Games Theme (Alternate Lesson 3)": {
+          "name": "Objavujeme riešenie problémov – hry (alternatíva k lekcii č. 3)"
+        },
+        "csd2-2023/Exploring Web Pages": {
+          "name": "Objavujeme webové stránky"
+        },
+        "csd2-2023/Intro to HTML": {
+          "name": "Úvod do HTML"
+        },
+        "csd2-2023/Mini-Project: HTML Web Page": {
+          "name": "Miniprojekt: Webová stránka v HTML"
+        },
+        "csd2-2023/Digital Footprint": {
+          "name": "Digitálna stopa",
+          "student_overview": "**Otázka dňa: Ako môžete zaistiť, že vaše súkromné údaje zostanú súkromné?**\n\nV tejto lekcii sa zamyslíš nad tým, aké osobné údaje zdieľaš v digitálnom priestore prostredníctvom rôznych webov, aplikácií či sociálnych sietí. "
+        },
+        "csd2-2023/Styling Text with CSS": {
+          "name": "Štýlovanie textu pomocou CSS"
+        },
+        "csd2-2023/Mini-Project: Your Personal Style": {
+          "name": "Miniprojekt: Tvoj vlastný štýl"
+        },
+        "csd2-2023/Intellectual Property": {
+          "name": "Duševné vlastníctvo"
+        },
+        "csd2-2023/Using Images": {
+          "name": "Používanie obrázkov"
+        },
+        "csd2-2023/Websites for Expression": {
+          "name": "Webové stránky ako nástroj na sebavyjadrenie"
+        },
+        "csd2-2023/Styling Elements with CSS": {
+          "name": "Štýlovanie prvkov pomocou CSS"
+        },
+        "csd2-2023/Your Web Page - Prepare": {
+          "name": "Tvoja webová stránka – príprava"
+        },
+        "csd2-2023/Project - Personal Web Page": {
+          "name": "Projekt – Osobná webová stránka"
+        },
+        "csd2-2023/Websites for a Purpose": {
+          "name": "Weby s účelom"
+        },
+        "csd2-2023/Team Problem Solving": {
+          "name": "Riešenie problémov v tímoch"
+        },
+        "csd2-2023/Sources and Research": {
+          "name": "Zdroje a ich vyhľadávanie"
+        },
+        "csd2-2023/CSS Classes": {
+          "name": "CSS triedy"
+        },
+        "csd2-2023/Planning a Multi-Page Site": {
+          "name": "Plánovanie webu s viacerými stránkami"
+        },
+        "csd2-2023/Linking Pages": {
+          "name": "Prepájanie stránok"
+        },
+        "csd2-2023/Project - Website for a Purpose": {
+          "name": "Projekt – Web s účelom"
+        },
+        "csd2-2023/Peer Review and Final Touches": {
+          "name": "Vzájomná kontrola a záverečné úpravy"
+        },
+        "csd3-2023/Plotting Shapes": {
+          "name": "Kreslenie tvarov"
+        },
+        "csd3-2023/Drawing in Game Lab": {
+          "name": "Kreslenie v Game Labe"
+        },
+        "csd3-2023/Shapes and Parameters": {
+          "name": "Tvary a parametre"
+        },
+        "csd3-2023/Variables": {
+          "name": "Premenné"
+        },
+        "csd3-2023/Random Numbers": {
+          "name": "Náhodné čísla"
+        },
+        "csd3-2023/Sprites": {
+          "name": "Sprajty"
+        },
+        "csd3-2023/Sprite Properties": {
+          "name": "Vlastnosti sprajtov"
+        },
+        "csd3-2023/Text": {
+          "name": "Text"
+        },
+        "csd3-2023/Mini-Project - Captioned Scenes": {
+          "name": "Miniprojekt – Scény s titulkami"
+        },
+        "csd3-2023/The Draw Loop": {
+          "name": "Cyklus kreslenia"
+        },
+        "csd3-2023/Sprite Movement": {
+          "name": "Pohyb sprajtov"
+        },
+        "csd3-2023/Mini-Project - Animation": {
+          "name": "Miniprojekt – Animácia"
+        },
+        "csd3-2023/Conditionals": {
+          "name": "Podmienené príkazy"
+        },
+        "csd3-2023/Keyboard Input": {
+          "name": "Vstup z klávesnice"
+        },
+        "csd3-2023/Mouse Input": {
+          "name": "Vstup pomocou myši"
+        },
+        "csd3-2023/Project - Interactive Card": {
+          "name": "Projekt - Interaktívna pohľadnica"
+        },
+        "csd3-2023/Velocity": {
+          "name": "Rýchlosť"
+        },
+        "csd3-2023/Collision Detection": {
+          "name": "Detekcia kolízie"
+        },
+        "csd3-2023/Mini-Project - Side Scroller": {
+          "name": "Miniprojekt – Plošinovka"
+        },
+        "csd3-2023/Complex Sprite Movement": {
+          "name": "Komplexný pohyb sprajtov"
+        },
+        "csd3-2023/Collisions": {
+          "name": "Kolízie sprajtov"
+        },
+        "csd3-2023/Mini-Project - Flyer Game": {
+          "name": "Miniprojekt – Lietacia hra"
+        },
+        "csd3-2023/Functions": {
+          "name": "Funkcie"
+        },
+        "csd3-2023/The Game Design Process": {
+          "name": "Proces návrhu hry"
+        },
+        "csd3-2023/Using the Game Design Process": {
+          "name": "Využitie procesu návrhu hry"
+        },
+        "csd3-2023/Project - Design a Game": {
+          "name": "Projekt – Vytvor si vlastnú hru"
+        },
+        "csd6a-2023/Intro to App Lab": {
+          "name": "Úvod do App Labu"
+        },
+        "csd6a-2023/Color LEDs": {
+          "name": "Farebné LEDky"
+        },
+        "csd6a-2023/Functions": {
+          "name": "Funkcie"
+        },
+        "csd6b-2023/Intro to App Lab": {
+          "name": "Úvod do App Labu"
+        },
+        "csd6b-2023/Functions": {
+          "name": "Funkcie"
+        },
+        "csd7-2023/Intro to App Lab": {
+          "name": "Úvod do App Labu"
+        },
+        "csd7-2023/Introduction to Machine Learning": {
+          "name": "Úvod do strojového učenia",
+          "overview": "V rámci tejto lekcie sa žiaci oboznámia s formou umelej inteligencie nazývanou strojové učenie a s tým, ako môžu použiť proces riešenia problémov pri trénovaní robota na riešenie problémov. Zúčastnia sa na troch aktivitách strojového učenia, v ktorých sa robot – A.I. Bot – učí, ako rozpoznávať vzory v rybách.\n\n**Otázka dňa:** Ako môžeme použiť proces riešenia problémov na riešenie problému pomocou strojového učenia?",
+          "student_overview": "Naučte sa základy strojového učenia tým, že pomôžete A.I. Botovi rozpoznať ryby a vyčistiť oceán."
+        },
+        "csd7-2023/Types of Machine Learning": {
+          "name": "Typy strojového učenia",
+          "overview": "V tejto lekcii sa žiaci zamyslia nad tým, ako si vytvárajú „mentálne“ modely pri učení sa nových pojmov a ako sa tieto modely môžu podobať modelu „strojového učenia“. Zapoja sa do aktivity s farebnými vzormi, aby simulovali vytvorenie modelu strojového učenia bez pomoci, potom si zahrajú hru s názvom „Zelené sklenené dvere“, ktorá je príkladom učenia pod dohľadom, a nakoniec roztriedia niekoľko scenárov na učenie „pod dohľadom“ alebo „bez dohľadu“.\n\n**Otázka dňa:** Aké sú rôzne typy strojového učenia?",
+          "purpose": "-   Pred lekciou si zopakujte úrovne Code Studia, aby ste vedeli, ako hrať hru s názvom „Zelené sklenené dvere“.\n-   Vytlačte alebo pripravte na zdieľanie online kópie sprievodcu aktivitou pre každého žiaka.",
+          "student_overview": "Naučia sa dva rôzne typy strojového učenia – učenie pod dohľadom a učenie bez dohľadu. Potom porovnajú, ako sa strojové učenie môže podobať alebo líšiť od toho, ako sa učia ľudia."
+        },
+        "csd7-2023/Innovations in AI": {
+          "name": "Inovácie v oblasti umelej inteligencie",
+          "assessment_opportunities": "1.  **Vysvetlenie vplyvu umelej inteligencie na spoločnosť**\n\n    Pozrite si sprievodcu aktivitou k tejto lekcii na meranie jednotlivých krokov procesu riešenia problému.",
+          "overview": "Počas tejto lekcie žiaci preskúmajú aplikáciu umelej inteligencie s názvom Seeing AI a zistia, ako pomáha ľuďom so zrakovým postihnutím. Potom žiaci preskúmajú ďalšie príklady toho, ako umelá inteligencia ovplyvňuje spoločnosť, pričom sa zamerajú na používateľov, ktorých sa nájdené príklady týkajú. Nakoniec sa žiaci navzájom podelia o svoje zistenia.\n\n**Otázka dňa:** Ako pomáha umelá inteligencia riešiť problémy na celom svete?",
+          "student_overview": "Preskúmajte rôzne príklady toho, ako sa umelá inteligencia používa na riešenie problémov vo svete."
+        },
+        "csd7-2023/Patterns in Data": {
+          "name": "Vzory v údajoch",
+          "overview": "Počas tejto lekcie žiaci preskúmajú niekoľko aplikácií, ktoré rozhodujú o tom, aké topánky si obuť, a nakoniec dospejú k pochopeniu toho, ako môže strojové učenie pomôcť pri tomto rozhodovaní. Žiaci sú vedení k záveru, že prieskum ich používateľov im môže pomôcť urobiť najlepšie rozhodnutie tým, že hľadajú vzory v údajoch a na základe týchto vzorov sa rozhodujú.\n\n**Otázka dňa:** Aké stratégie používajú počítačové modely pri rozhodovaní?",
+          "student_overview": "Preskúmajte tri rôzne spôsoby, ako môžu počítače poskytovať odporúčania, a zistite, aké dôležité môžu byť údaje na prijímanie presných rozhodnutí."
+        },
+        "csd7-2023/Classification Models": {
+          "name": "Klasifikačné modely",
+          "overview": "V rámci tejto lekcie sa žiaci zapoja do aktivity bez počítača simulujúcej jeden z algoritmov strojového učenia, ktoré počítače používajú na rozdelenie údajov do skupín s cieľom pomôcť pri rozhodovaní. Žiaci budú mať za úlohu pomôcť počítaču naučiť sa klasifikovať potraviny ako ovocie alebo zeleninu, nakresliť graf 20 rôznych druhov ovocia na dvoch osiach porovnávajúcich „sladkosť“ a „ľahkú konzumáciu“ a potom sa pokúsiť rozdeliť údaje do skupín – oblasť ovocia a oblasť zeleniny.\n\n**Otázka dňa:** Ako sa počítače učia klasifikovať údaje?",
+          "student_overview": "Naučiť sa vytvárať model strojového učenia, ktorý pomáha počítaču klasifikovať potraviny ako ovocie alebo zeleninu"
+        },
+        "csd7-2023/Introduction to AI Lab": {
+          "name": "Úvod do UI Labu",
+          "overview": "V tejto lekcii sa žiaci prvýkrát zoznámia s AI Labom, kde si vyberú vlastnosti na trénovanie modelu, ktorý predpovedá dané označenie. Na začiatku preskúmajú AI Lab a vytrénujú model na rozpoznávanie tvarov. Potom budú predstierať, že si ich najalo niekoľko reštaurácií, ktoré by chceli na základe zozbieraných údajov z prieskumov poskytovať odporúčania novým zákazníkom, prejdú jednotlivé množiny údajov a pomocou nástrojov na vizualizáciu údajov identifikujú vlastnosti so silnými vzťahmi v údajoch.\n\n**Otázka dňa:** Ako môžeme využiť strojové učenie na vytváranie odporúčaní?",
+          "student_overview": "Naučte sa, ako používať AI Lab na trénovanie modelov strojového učenia, napríklad ako rozpoznávať tvary alebo ako odporúčať jedlo v reštaurácii."
+        },
+        "csd7-2023/Importing Models in App Lab": {
+          "name": "Importovanie modelov do App Labu",
+          "overview": "V tejto lekcii sa žiaci oboznámia s importovaním svojich modelov do App Labu a prepojením modelu s obrazovkami. Pomôžu vytvoriť aplikáciu na odporúčanie kníh a naučia sa, ako do svojho kódu pridať uvítaciu obrazovku a udalosti. Táto lekcia predpokladá, že žiaci už poznajú App Lab – v prípade tried, ktoré sa s App Labom ešte nestretli, zvážte rozšírenie tejto lekcie a zaradenie ďalších videí alebo aktivít, ktoré sú odporúčané v učebnom pláne.\n\n**Otázka dňa:** Ako môžeme vytvoriť aplikáciu využívajúcu strojové učenie?",
+          "student_overview": "Naučte sa importovať model do App Labu, čo vám pomôže vytvoriť aplikáciu Odporúčanie kníh pre strednú školu."
+        },
+        "csd7-2023/Model Cards": {
+          "name": "Karty modelov",
+          "overview": "V rámci tejto lekcie budú žiaci skúmať model z hľadiska skreslenia a zoznámia sa s kartou modelu, čo je spôsob reprezentácie dôležitých informácií o trénovanom modeli, ktoré by mohli pomôcť odhaliť skreslenie. Budú skúmať aplikáciu Medical Priority, ktorá pomáha nemocnici rozhodnúť sa, ako skoro treba pacientov vyšetriť na základe ich príznakov. Počas vykonávania aktivity si žiaci uvedomia, že aplikácia je zaujatá na základe osobných informácií, a preskúmajú, ako k tomu mohlo dôjsť.\n\n**Otázka dňa:** Ako môžeme vyhodnotiť modely strojového učenia po ich vytrénovaní?",
+          "student_overview": "Pomôžte rozhodnúť, ktorý model by mala nemocnica použiť pre svoj systém určovania priorít na pohotovosti, a určiť, ktoré modely obsahujú neželané skreslenia. Dozviete sa tiež, ako môžu karty modelov pomôcť pri hodnotení a analýze modelov strojového učenia."
+        },
+        "csd7-2023/Saving Models in AI Lab": {
+          "name": "Ukladanie modelov v AI Labe",
+          "overview": "Žiaci dokončia celý proces trénovania a ukladania modelu a potom ho importujú do App Labu. Prvýkrát si žiaci môžu vybrať označenie, ktoré by chceli predpovedať, a venujú čas výberu vlastností, ktoré im pomôžu predpovedať vybrané označenie. Žiaci si tiež vytvoria kartu modelu pre svoje modely, aby ich mohli uložiť a importovať do App Labu.\n\n**Otázka dňa:** Ako môžem použiť karty modelov na zdokumentovanie svojich rozhodnutí pri trénovaní modelu strojového učenia?",
+          "student_overview": "Pomôžte vytrénovať niekoľko modelov, ktoré pomáhajú zoologickej záhrade vytvárať náučné aplikácie pre jej zákazníkov. Pre každý z modelov vytvoríte karty modelov, potom jeden z nich importujete do App Labu a vytvoríte aplikáciu."
+        },
+        "csd7-2023/Model Cards in App Lab": {
+          "name": "Karty modelov v App Labe",
+          "overview": "V rámci tejto lekcie si žiaci precvičia importovanie svojich modelov do App Labu, tentoraz vrátane modelov s číselnými údajmi a použitím modelových kariet, ktoré pomôžu zlepšiť používateľský zážitok pri vypĺňaní formulára. Potom sa naučia, ako zobraziť kartu modelu v App Labe a použiť ju na pridanie ďalších popisných prvkov do aplikácie. Ďalej sa zamerajú na zlepšenie používateľského zážitku pridaním informačného textu, ktorý pomôže používateľom pri vypĺňaní formulára, a pridaním štýlu do svojej aplikácie.\n\n**Otázka dňa:** Ako môžem použiť kartu modelu na zlepšenie svojej aplikácie?",
+          "student_overview": "Zistite, ako používať karty modelov na zlepšenie aplikácie strojového učenia a ako aktualizovať konečnú obrazovku na základe predpovede modelu."
+        },
+        "csd7-2023/Numerical Models": {
+          "name": "Číselné modely",
+          "overview": "V tejto lekcii sa žiaci zapoja do aktivity bez počítača simulujúcej vypuknutie napadnutia zombíkmi. Žiaci musia na základe údajov zo susedného mesta predpovedať, v ktorých častiach mesta je najmenej zombíkov. Žiaci použijú stupne podobnosti a priemery na vytvorenie predpovede o počte zombíkov na konkrétnom mieste. Potom sú žiaci zachránení a majú možnosť porovnať svoje predpovede so skutočnými číslami, čo je príležitosť na diskusiu o tom, ako sa líši presnosť pri číselných údajoch v porovnaní s kategorickými údajmi.\n\n**Otázka dňa:** Ako sa počítače učia robiť predpovede pomocou číselných údajov?",
+          "student_overview": "Zombíci napadli vaše mesto a vy musíte pomocou údajov predpovedať, v ktorých častiach mesta je najmenej zombíkov, aby ste mohli odviesť ľudí do bezpečia."
+        },
+        "csd7-2023/Numerical Data in AI Lab": {
+          "name": "Číselné údaje v AI Labe",
+          "overview": "V tejto lekcii sa žiaci oboznámia s číselnými údajmi, ktoré predstavujú rozsah hodnôt. Žiakom predstavíme scenár, v ktorom je každá funkcia a označenie vyjadrené číselnými údajmi, a naučia sa používať nové nástroje na vizualizáciu údajov v rámci AI Labu, ktoré im pomôžu nájsť vzory.\n\n**Otázka dňa:** Ako môžeme pomocou AI Labu predpovedať číselné údaje?",
+          "student_overview": "Používanie AI Labu a číselných údajov na vytváranie predpovedí o situáciách v reálnom svete"
+        },
+        "csd7-2023/Customizing Apps": {
+          "name": "Prispôsobenie aplikácií",
+          "overview": "V rámci tejto lekcie žiaci preskúmajú, ako upraviť kód svojej aplikácie a vykonať ďalšie zmeny v jej dizajne. Začnú skúmaním aplikácie s jednou obrazovkou a potom si precvičia rozšírenie aplikácie na dve obrazovky a aktualizáciu kódu tak, aby sa použili nové prvky režimu Dizajn. Potom žiaci pomôžu vytvoriť aplikáciu Driver Alert, ktorá si vyžaduje zmeny kódu s použitím nových prvkov režimu Dizajn. Vďaka zručnostiam z tejto lekcie budú žiaci schopní vytvárať aplikácie s viacerými obrazovkami, v ktorých sa otázky môžu zobrazovať na viacerých obrazovkách namiesto jednej obrazovky.\n\n**Otázka dňa:** Ako môžem prispôsobiť kód aplikácie strojového učenia?",
+          "student_overview": "Naučte sa upravovať kód aplikácie strojového učenia vytvorením výstražného systému pre vodičov, kde sa každý senzor nachádza na inej obrazovke aplikácie."
+        },
+        "csd7-2023/AI Code of Ethics": {
+          "name": "Etický kódex umelej inteligencie",
+          "overview": "Žiaci v malých skupinách uskutočnia výskum pomocou článkov a videí, ktoré odhaľujú morálne úskalia v oblasti umelej inteligencie (UI) podľa vlastného výberu. Potom každá skupina vypracuje aspoň jednu zásadu orientovanú na riešenie, ktorá sa týka nimi zvolenej oblasti. Tieto zásady potom zostavia do celotriedneho zdroja „Náš etický kódex umelej inteligencie“ (napríklad prezentácia, dokument alebo webová stránka) pre tvorcov umelej inteligencie a zákonodarcov na celom svete.\n\n**Otázka dňa:** Aké sú zásady, ktoré môžeme použiť na vytvorenie etických aplikácií strojového učenia?",
+          "student_overview": "Čo znamená etické používanie umelej inteligencie? V tejto lekcii vypracujete etický kódex umelej inteligencie a preskúmate príklady umelej inteligencie, ktoré sa riadia alebo neriadia etickým kódexom."
+        },
+        "csd7-2023/Project: Make a Machine Learning App": {
+          "student_overview": "Výber z niekoľkých reálnych množín údajov na trénovanie modelu a vytvorenie aplikácie, ktorá využíva strojové učenie"
+        },
+        "csd7-2023/Issue Statements": {
+          "name": "Stanovenia problémov",
+          "overview": "Toto je prvá lekcia z päťdňovej série lekcií, ktoré pripravujú žiakov na záverečný projekt. V tejto lekcii sa žiaci stretnú s tímom fiktívnych žiakov, ktorí chcú pomocou strojového učenia riešiť problém vo svojej komunite. Žiaci sa zamyslia nad problémom s využitím stratégie „5 prečo“, potom pomôžu vyhodnotiť nápady, s ktorými prišiel druhý tím žiakov. Kroky, ktoré žiaci vykonajú v tejto lekcii, sú totožné s krokmi, ktoré žiaci vykonajú vo svojom záverečnom projekte.\n\n**Otázka dňa:** Ako sa dá strojové učenie využiť na riešenie problému vo vašej komunite?",
+          "student_overview": "V spolupráci s tímom žiakov z inej školy vypracujte nápady, ako by sa strojové učenie dalo využiť na riešenie nejakého problému vo vašej komunite."
+        },
+        "csd7-2023/Survey Planning": {
+          "name": "Plánovanie dotazníka",
+          "overview": "Toto je druhá lekcia z päťdňovej série lekcií, ktoré pripravujú žiakov na záverečný projekt. V tejto lekcii sa žiaci dozvedia, že druhý tím žiakov by chcel vytvoriť aplikáciu na odporúčanie krúžkov na základe krúžkov na ich škole. Žiaci uvažujú o tom, aké otázky by boli najužitočnejšie na vytvorenie tohto odporúčania, a potom sa naučia, ako použiť šablónu formulára Google na vytvorenie dotazníka. Kroky, ktoré žiaci vykonajú v tejto lekcii, sú totožné s krokmi, ktoré žiaci vykonajú vo svojom záverečnom projekte.\n\n**Otázka dňa:** Ako vytvoriť dotazník na zhromaždenie údajov pre aplikáciu strojového učenia?",
+          "student_overview": "Pomôžte druhému žiackemu tímu vypracovať otázky, ktoré by boli užitočné na vytvorenie aplikácie strojového učenia, a potom sa naučte používať Formuláre Google na vytvorenie dotazníka na zhromažďovanie údajov."
+        },
+        "csd7-2023/Survey Data in AI Lab": {
+          "name": "Údaje z dotazníka v AI Labe",
+          "overview": "Toto je tretia lekcia z päťdňovej série lekcií, ktoré pripravujú žiakov na záverečný projekt. V rámci tejto lekcie sa žiaci naučia, ako zobraziť údaje z dotazníka v Tabuľkách Google a uložiť ich do počítača ako súbor CSV. Potom uložené údaje nahrajú do AI Labu a preskúmajú výsledky prieskumu od jedného zo žiakov s cieľom vytrénovať model pomocou svojich údajov. Potom žiaci pomocou Tabuliek Google preskúmajú údaje od iného žiaka, v ktorých sú chyby, a potom sa pokúsia tieto chyby opraviť. Kroky, ktoré žiaci vykonajú v tejto lekcii, sú totožné s krokmi, ktoré žiaci vykonajú vo svojom záverečnom projekte, a stratégie riešenia problémov, ktoré si osvoja, im pomôžu prekonať problémy v ich vlastnom záverečnom projekte.\n\n**Otázka dňa**:  Ako môžem importovať údaje do AI Labu na trénovanie modelu strojového učenia?",
+          "student_overview": "Zistite, ako si stiahnuť údaje z dotazníka a použiť ich v AI Labe na trénovanie modelu. Zručnosti v tejto lekcii sú dôležité na dokončenie záverečnej lekcie v tomto tematickom celku."
+        },
+        "csd7-2023/Troubleshooting Models": {
+          "name": "Riešenie problémov s modelmi",
+          "overview": "Toto je štvrtá lekcia z päťdňovej série lekcií, ktoré pripravujú žiakov na záverečný projekt. V tejto lekcii žiaci preskúmajú údaje z dotazníka od ostatných členov študentského tímu a analyzujú, prečo ich modely nefungujú správne. Pri skúmaní údajov žiaci vypracujú stratégie, ako sa týmto problémom v budúcnosti vyhnúť, a stratégie, ako tieto problémy zvládnuť, ak by sa opakovali. Tieto zručnosti žiaci využijú v záverečnom projekte, keď budú vytvárať vlastné dotazníky a zhromažďovať údaje.\n\n**Otázka dňa**:  Aké sú stratégie na zabezpečenie toho, aby sa z našich údajov generoval presný model?",
+          "student_overview": "Pomôžte žiakom z druhého tímu analyzovať údaje z ich dotazníka a určiť, prečo nie sú schopní získať presné modely _alebo_ nie sú schopní vytvoriť použiteľné modely pri testovaní."
+        },
+        "csd7-2023/Creating an App": {
+          "name": "Vytvorenie aplikácie",
+          "overview": "Toto je piata lekcia z päťdňovej série lekcií, ktoré pripravujú žiakov na záverečný projekt. V tejto lekcii žiaci importujú aplikáciu na odporúčanie krúžkov do App Labu a začnú ju prispôsobovať. Žiaci pridajú uvítaciu obrazovku a aktualizujú opisy jednotlivých vlastností, potom sa môžu rozhodnúť, ako by chceli aplikáciu ďalej prispôsobiť. Kroky, ktoré žiaci vykonajú v tejto lekcii, sú totožné s krokmi, ktoré žiaci vykonajú vo svojom záverečnom projekte.\n\n**Otázka dňa**:  Ako môžem vytvoriť prehľadnú a ľahko použiteľnú aplikáciu strojového učenia?",
+          "student_overview": "Model je konečne hotový! Teraz je čas importovať model do App Labu a vytvoriť aplikáciu na odporúčanie krúžkov!"
         },
         "coursea-2023/Safety in My Online Neighborhood": {
           "name": "Bezpečnosť v mojej online štvrti",

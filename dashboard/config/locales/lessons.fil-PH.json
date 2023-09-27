@@ -4684,6 +4684,222 @@
           "purpose": "Sa online na aktibidad na ito, matututunan ng mga mag-aaral kung paano gumamit ng mga kaganapan sa Play Lab. Magsisimula sila sa pamamagitan ng pagsasanay sa kabalyero na gumalaw kapag pinindot ang arrow key, pagkatapos ay magtatapos sa pagkakataong ipakita ang iba pang mga kasanayan na natutunan nila sa buong kursong ito, kabilang ang pagkakasunud-sunod at pag-loop, bilang bahagi ng panghuling freeplay na palaisipan.",
           "student_overview": "Gumamit ng mga kaganapan upang lumikha ng kuwento o gumawa ng interactive na laro."
         },
+        "ai-ethics-2023/lesson-1": {
+          "name": "Ang aming Kodigo ng Etika sa AI."
+        },
+        "csd1-2023/Intro to Problem Solving": {
+          "name": "Panimula sa Paglutas ng Problema"
+        },
+        "csd1-2023/The Problem Solving Process": {
+          "name": "Ang Proseso ng Pagtuklas ng Problema"
+        },
+        "csd1-2023/Exploring Problem Solving": {
+          "name": "Pagtuklas sa Paglutas ng Problema"
+        },
+        "csd1-2023/What is a Computer?": {
+          "name": "Ano ang isang Kompyuter?"
+        },
+        "csd1-2023/Input and Output": {
+          "name": "Input at Output"
+        },
+        "csd1-2023/Processing": {
+          "name": "Pagproseso"
+        },
+        "csd1-2023/Storage": {
+          "name": "Imbakan"
+        },
+        "csd1-2023/Project - Propose an App": {
+          "name": "Proyekto - Pagmungkahi ng App"
+        },
+        "csd2-2023/Intro to HTML": {
+          "name": "Panimula sa HTML"
+        },
+        "csd2-2023/Digital Footprint": {
+          "name": "Digital na Bakas"
+        },
+        "csd2-2023/Styling Text with CSS": {
+          "name": "Pag-style ng Teksto gamit ang CSS"
+        },
+        "csd2-2023/Intellectual Property": {
+          "name": "Intelektwal na Pag-aari"
+        },
+        "csd2-2023/Styling Elements with CSS": {
+          "name": "Pag-istilo sa mga Elemento gamit ang CSS"
+        },
+        "csd2-2023/Linking Pages": {
+          "name": "Pag-uugnay ng Mga Pahina"
+        },
+        "csd3-2023/Plotting Shapes": {
+          "name": "Pag-plot ng mga Hugis"
+        },
+        "csd3-2023/Drawing in Game Lab": {
+          "name": "Pagguhit sa Game Lab"
+        },
+        "csd3-2023/Variables": {
+          "name": "Mga variable"
+        },
+        "csd3-2023/Sprites": {
+          "name": "Mga Sprites"
+        },
+        "csd3-2023/Text": {
+          "name": "Text"
+        },
+        "csd3-2023/The Draw Loop": {
+          "name": "Ang Draw na Loop"
+        },
+        "csd3-2023/Sprite Movement": {
+          "name": "Galaw ng mga Sprite"
+        },
+        "csd3-2023/Conditionals": {
+          "name": "Mga conditional"
+        },
+        "csd3-2023/Keyboard Input": {
+          "name": "Keyboard na Input"
+        },
+        "csd3-2023/Project - Interactive Card": {
+          "name": "Proyekto - Inter-aktib na Baraha"
+        },
+        "csd3-2023/Velocity": {
+          "name": "Belosidad"
+        },
+        "csd3-2023/Collision Detection": {
+          "name": "Pagtukoy sa mga Banggaan"
+        },
+        "csd3-2023/Complex Sprite Movement": {
+          "name": "Kumplikadong Sprite na Kilusan"
+        },
+        "csd3-2023/Collisions": {
+          "name": "Mga Banggaan"
+        },
+        "csd3-2023/Functions": {
+          "name": "Mga function"
+        },
+        "csd3-2023/The Game Design Process": {
+          "name": "Ang Proseso ng Pagdisenyo ng Laro"
+        },
+        "csd3-2023/Using the Game Design Process": {
+          "name": "Gamitin ang Proseso ng Pagdisenyo ng Laro"
+        },
+        "csd3-2023/Project - Design a Game": {
+          "name": "Proyekto - Pagdisenyo ng Laro"
+        },
+        "csd4-2023/Understanding Your User": {
+          "name": "Pag-uunawa sa Iyong Gumagamit"
+        },
+        "csd4-2023/User Interfaces": {
+          "name": "Mga interface ng Gumagamit"
+        },
+        "csd4-2023/Feedback and Testing": {
+          "name": "Feedback at Pagsubok"
+        },
+        "csd4-2023/Identifying User Needs": {
+          "name": "Pagtukoy sa mga Pangangailangan ng Gumagamit"
+        },
+        "csd4-2023/Project - Paper Prototype": {
+          "name": "Proyekto - Papel na Prototype"
+        },
+        "csd4-2023/Designing Apps for Good": {
+          "name": "Pagdidisenyo ng mga App para sa Ikabubuti"
+        },
+        "csd4-2023/Market Research": {
+          "name": "Pananaliksik sa Merkado"
+        },
+        "csd4-2023/Prototype Testing": {
+          "name": "Prototype na Pagsusuri"
+        },
+        "csd4-2023/Testing the App": {
+          "name": "Pag-test ng App"
+        },
+        "csd4-2023/Project - App Presentation": {
+          "name": "Proyekto - Pagpapakita ng App"
+        },
+        "csd5-2023/Representation Matters": {
+          "name": "Ang Representasyon ay Mahalaga"
+        },
+        "csd5-2023/Patterns and Representation": {
+          "name": "Mga Pattern at Representasyon"
+        },
+        "csd5-2023/ASCII and Binary Representation": {
+          "name": "ASCII at Binary na Representasyon"
+        },
+        "csd5-2023/Representing Images": {
+          "name": "Pagkakatawan sa mga Larawan"
+        },
+        "csd5-2023/Representing Numbers": {
+          "name": "Pagrepresenta ng mga Numero"
+        },
+        "csd5-2023/Combining Representations": {
+          "name": "Pagsasama-sama ng mga Representasyon"
+        },
+        "csd5-2023/Keeping Data Secret": {
+          "name": "Pagiging Sekreto ng mga Datos"
+        },
+        "csd5-2023/Project - Create a Representation": {
+          "name": "Proyekto - Paglikha ng Representasyon"
+        },
+        "csd5-2023/Structuring Data": {
+          "name": "Pagsasaayos ng mga Datos"
+        },
+        "csd5-2023/Interpreting Data": {
+          "name": "Pag-intindi ng mga Datos"
+        },
+        "csd5-2023/Making Decisions with Data": {
+          "name": "Paggawa ng mga Desisyon na may mga Datos"
+        },
+        "csd5-2023/Automating Data Decisions": {
+          "name": "Pag-Automate ng mga Datos na mga Desisyon"
+        },
+        "csd5-2023/Problem Solving with Big Data": {
+          "name": "Paglutas ng Problema kasama ang Malalaking mga Datos"
+        },
+        "csd6a-2023/Intro to App Lab": {
+          "name": "Panimula sa App Lab"
+        },
+        "csd6a-2023/The Circuit Playground": {
+          "name": "Ang Circuit na Playground"
+        },
+        "csd6a-2023/Board Events": {
+          "name": "Mga Pangyayari sa Board"
+        },
+        "csd6a-2023/Color LEDs": {
+          "name": "Mga LED na may kulay"
+        },
+        "csd6a-2023/Accelerometer": {
+          "name": "Accelerometer"
+        },
+        "csd6a-2023/Making Music": {
+          "name": "Paglikha ng Musika"
+        },
+        "csd6a-2023/Functions": {
+          "name": "Mga function"
+        },
+        "csd6a-2023/Project - Prototype an Innovation": {
+          "overview": "Sa huling proyektong ito para sa kurso, ang mga estudyante ay maggrupo-grupo para makagawa at makasubok ng isang prototype para sa isang malikhain na computing na kagamitan na nakabase sa Circuit na Playground. Gamit ang mga input at mga output na nasa board, ang mga grupo ay lilikha ng mga programa na nagbibigay-daan para sa isang mas kawili-wili at pambihirang mga pakikipag-ugnayan sa mga gumagamit. "
+        },
+        "csd6b-2023/Intro to App Lab": {
+          "name": "Panimula sa App Lab"
+        },
+        "csd6b-2023/Board Events": {
+          "name": "Mga Pangyayari sa Board"
+        },
+        "csd6b-2023/Accelerometer": {
+          "name": "Accelerometer"
+        },
+        "csd6b-2023/Functions": {
+          "name": "Mga function"
+        },
+        "csd7-2023/Intro to App Lab": {
+          "name": "Panimula sa App Lab"
+        },
+        "csd7-2023/Introduction to AI Lab": {
+          "name": "Introduksiyon sa AI Lab"
+        },
+        "csd7-2023/Numerical Data in AI Lab": {
+          "name": "Numerical Data sa Ai Lab"
+        },
+        "csd7-2023/Survey Planning": {
+          "name": "Pagdidisenyo ng Koleksyon ng mga Datos"
+        },
         "coursea-2023/Safety in My Online Neighborhood": {
           "name": "Kaligtasan sa Aking Kapaligiran sa Internet",
           "overview": "[![common sense education](https://curriculum.code.org/static/img/common_sense_education.png)](https://www.commonsense.org)\n\nAng araling ito ay orihinal na nilikha ng Common Sense Education. [Matuto pa.](https://www.commonsense.org/education/digital-citizenship/curriculum)\n\nAng kapangyarihan ng internet ay nagbibigay-daan sa mga mag-aaral na maranasan at bisitahin ang mga lugar na maaaring hindi nila makita nang personal. Ngunit, tulad ng paglalakbay sa totoong mundo, mahalagang maging ligtas kapag naglalakbay online. Sa virtual field trip na ito, maaaring magsanay ang mga bata na manatiling ligtas sa mga online na pakikipagsapalaran.",
