@@ -50,6 +50,7 @@ module LtiAccessToken
   # See https://datatracker.ietf.org/doc/html/rfc7519#section-4.1
   # for definitions of the claims.
   def sign_jwt(payload, private_key_json = CDO.jwk_private_key_data)
+    raise ArgumentError.new('Private key required to sign JWT') unless private_key_json
     private_key_hash = private_key_json.transform_keys(&:to_sym)
     private_key = private_key_hash[:private_key]
     kid = private_key_hash[:kid]
