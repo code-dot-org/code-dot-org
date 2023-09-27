@@ -57,7 +57,7 @@ export default class ProgressTableStudentList extends React.Component {
       scriptData.name,
       rowData.student.id
     );
-    let fullName = rowData.student.familyName
+    const fullName = rowData.student.familyName
       ? `${rowData.student.name} ${rowData.student.familyName}`
       : rowData.student.name;
     return (

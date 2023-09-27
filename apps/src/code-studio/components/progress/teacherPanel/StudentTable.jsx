@@ -94,8 +94,7 @@ class StudentTable extends React.Component {
                     />
                   )}
                   <div style={styles.name}>
-                    {student.name}
-                    {` ${student.familyName || ''}`}
+                    {`${student.name} ${student.familyName || ''}`}
                     <a
                       href={this.getRowLink(student.id)}
                       target="_blank"
