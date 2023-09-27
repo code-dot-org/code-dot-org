@@ -46,9 +46,18 @@ end
 # Used by lesson plan generator.
 apt_package 'enscript'
 
-# Used to sync content between our Code.org shared Dropbox folder
-# and our git repository.
-apt_package 'unison' if node.chef_environment == 'staging'
+# Install dependencies required to sync content between our Code.org shared
+# Dropbox folder and our git repository. Also check whether the tool that
+# performs the sync is installed, and display instructions for how to do so if
+# it isn't.
+if node.chef_environment == 'staging' || node.chef_environment == 'adhoc'
+  apt_package 'unison'
+  dropbox_daemon_file = File.join(node[:home], '.dropbox-dist/dropboxd')
+  unless File.exist?(dropbox_daemon_file)
+    Chef::Log.fatal("Chef environment #{node.chef_environment.inspect} expects the Dropbox Daemon to be configured.")
+    Chef::Log.fatal('Follow the instructions at https://www.dropbox.com/install-linux to do so')
+  end
+end
 
 # Debian-family packages for building Ruby C extensions
 apt_package %w(
