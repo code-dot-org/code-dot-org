@@ -31,7 +31,7 @@ import {showArrowButtons} from '@cdo/apps/templates/arrowDisplayRedux';
 import danceCode from '@code-dot-org/dance-party/src/p5.dance.interpreted.js';
 import HttpClient from '@cdo/apps/util/HttpClient';
 import {CHAT_COMPLETION_URL} from '@cdo/apps/aichat/constants';
-import {computeCharactersReferenced} from './utils';
+import {computeCharactersReferenced, getValidationCallback} from './utils';
 
 const ButtonState = {
   UP: 0,
@@ -470,7 +470,7 @@ Dance.prototype.preview = async function () {
     code
   ).hooks;
 
-  const charactersReferenced = this.computeCharactersReferenced(studentCode);
+  const charactersReferenced = computeCharactersReferenced(studentCode);
   await this.nativeAPI.ensureSpritesAreLoaded(charactersReferenced);
   this.hooks.find(v => v.name === 'runUserSetup').func();
   this.nativeAPI.p5_.draw();
@@ -608,14 +608,9 @@ Dance.prototype.execute = async function () {
   const timestamps = this.hooks.find(v => v.name === 'getCueList').func();
   this.nativeAPI.addCues(timestamps);
 
-  const validationCallback = new Function(
-    'World',
-    'nativeAPI',
-    'sprites',
-    'events',
-    this.level.validationCode
+  this.nativeAPI.registerValidation(
+    getValidationCallback(this.level.validationCode)
   );
-  this.nativeAPI.registerValidation(validationCallback);
 
   // songMetadataPromise will resolve immediately if the request which populates
   // it has not yet been initiated. Therefore we must first wait for song init
