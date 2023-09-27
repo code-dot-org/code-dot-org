@@ -23,7 +23,6 @@ import {EVENTS} from '@cdo/apps/lib/util/AnalyticsConstants';
 import ProgressViewHeader from './ProgressViewHeader';
 import logToCloud from '@cdo/apps/logToCloud';
 import SortByNameDropdown from '@cdo/apps/templates/SortByNameDropdown';
-import DCDO from '@cdo/apps/dcdo';
 import styleConstants from './progressTables/progress-table-constants.module.scss';
 
 const SECTION_PROGRESS = 'SectionProgress';
@@ -174,7 +173,7 @@ class SectionProgress extends Component {
           )}
         </div>
         <div style={styles.topRowContainer}>
-          {showProgressTable && !!DCDO.get('family-name-features', false) && (
+          {showProgressTable && (
             <SortByNameDropdown
               selectStyles={styles.sortOrderSelect}
               sectionId={sectionId}
