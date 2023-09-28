@@ -16,11 +16,13 @@ import {
   unloadSong,
   loadSongMetadata,
 } from './songs';
+import GoogleBlockly from 'blockly/core';
 
 export interface DanceState {
   selectedSong: string;
   songData: SongData;
   runIsStarting: boolean;
+  currentAiModalField?: GoogleBlockly.Field;
   // Fields below are used only by Lab2 Dance
   isRunning: boolean;
   currentSongMetadata: SongMetadata | undefined;
@@ -30,6 +32,7 @@ const initialState: DanceState = {
   selectedSong: 'macklemore90',
   songData: {},
   runIsStarting: false,
+  currentAiModalField: undefined,
   isRunning: false,
   currentSongMetadata: undefined,
 };
@@ -150,6 +153,12 @@ const danceSlice = createSlice({
     setCurrentSongMetadata: (state, action: PayloadAction<SongMetadata>) => {
       state.currentSongMetadata = action.payload;
     },
+    setCurrentAiModalField: (
+      state,
+      action: PayloadAction<GoogleBlockly.Field | undefined>
+    ) => {
+      state.currentAiModalField = action.payload;
+    },
   },
 });
 
@@ -158,5 +167,6 @@ export const {
   setSelectedSong,
   setRunIsStarting,
   setCurrentSongMetadata,
+  setCurrentAiModalField,
 } = danceSlice.actions;
 export const reducers = {dance: danceSlice.reducer};

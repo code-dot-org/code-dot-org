@@ -10,6 +10,7 @@ mr:
         error:
           future: भविष्यात होऊ शकत नाही
         finish_sign_up_header: तुमचे खाते तयार करणे पूर्ण करा
+        finish_sign_up_header_error: 'कृपया खालील त्रुटी सुधारा:'
         finish_sign_up_subheader: "<strong>%{email}</strong> साठी Code.org खाते तयार
           करणे पूर्ण करण्यासाठी खालील माहिती भरा."
         finish_sign_up_subheader_markdown: "**%{email}** साठी Code.org खाते तयार करणे
@@ -31,6 +32,7 @@ mr:
           येथे क्लिक करा)](%{url})
         reset_password_token: तुम्ही फॉलो केलेली पासवर्ड लिंक रीसेट करा
         us_state: 'राज्य '
+        user_type: खात्याचा प्रकार
         username: वापरकर्तानाव
         verified_teacher: प्रमाणित शिक्षक
     errors:

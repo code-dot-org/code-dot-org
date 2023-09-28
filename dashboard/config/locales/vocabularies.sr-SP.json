@@ -239,6 +239,27 @@
         "code/poetry/2023": {
           "word": "Kod"
         },
+        "input/csd/2023": {
+          "word": "Унос"
+        },
+        "copyright/csd/2023": {
+          "word": "Ауторска права"
+        },
+        "debugging/csd/2023": {
+          "word": "Отклањање грешака"
+        },
+        "variable/csd/2023": {
+          "word": "Променљива"
+        },
+        "conditionals/csd/2023": {
+          "word": "Кондиционали"
+        },
+        "abstraction/csd/2023": {
+          "word": "Апстракција"
+        },
+        "function/csd/2023": {
+          "word": "Функција"
+        },
         "debugging/coursea/2023": {
           "word": "Отклањање грешака"
         },

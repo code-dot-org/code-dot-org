@@ -25,7 +25,7 @@ title: 编程一小时指南
 
 <a id="how-to-video"></a>
 
-## 1. 观看编程一小时指南视频 <iframe width="500" height="255" src="//www.youtube.com/embed/SrnvvWDm73k" frameborder="0" allowfullscreen></iframe> 
+## 1. 观看编程一小时指南视频 <iframe width="500" height="255" src="https://www.youtube-nocookie.com/embed/SrnvvWDm73k" frameborder="0" allowfullscreen></iframe> 
 
 * * *
 
@@ -111,7 +111,7 @@ Invite a [local volunteer]({{ urls/volunteer_local }}) to inspire your students 
 
 指导学生参与活动
 
-- Write the tutorial link on a whiteboard. Find the link listed on the [information for your selected tutorial]({{ urls/learn }}).
+- 将教程链接写在白板上。在所选教程的 [信息中找到列出的链接]({{ urls/learn }})。
 
 当你的学生遇到困难时，你完全可以用这样的方式回答：
 
@@ -151,6 +151,6 @@ Invite a [local volunteer]({{ urls/volunteer_local }}) to inspire your students 
 
 ### 编程一小时之后该做什么？
 
-Computer science doesn’t have to end with the Hour of Code! [Learn how](/beyond) to bring CS to your school and students.
+计算机科学不必以 “编程一小时” 结束！ [学习如何](/beyond) 将 CS 带给您的学校和学生。
 
 {{ signup_button }}

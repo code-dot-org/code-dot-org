@@ -82,13 +82,11 @@ describe I18n::Utils::MalformedI18nReporter do
 
   describe '#report' do
     let(:worksheet_data) {[%w[expected_key expected_file_name expected_translation]]}
-    let(:gdrive_export_secret) {'expected_gdrive_export_secret'}
     let(:google_drive) {stub}
 
     before do
       malformed_i18n_reporter.instance_variable_set(:@worksheet_data, worksheet_data)
-      CDO.stubs(:gdrive_export_secret).returns(gdrive_export_secret)
-      Google::Drive.stubs(:new).with(service_account_key: gdrive_export_secret).returns(google_drive)
+      Google::Drive.stubs(:new).returns(google_drive)
     end
 
     it 'updates Google spreadsheet "i18n_bad_translations" with invalid translations sheet data' do
@@ -102,10 +100,12 @@ describe I18n::Utils::MalformedI18nReporter do
     end
 
     context 'when CDO.gdrive_export_secret is not present' do
-      let(:gdrive_export_secret) {nil}
+      CDO.stubs(:gdrive_export_secret).returns(nil)
 
-      it 'does not try to update Google spreadsheet' do
-        Google::Drive.any_instance.expects(:update_worksheet).never
+      it 'does not raise error' do
+        google_drive.expects(:update_worksheet).with(
+          'i18n_bad_translations', locale, [['Key', 'File Name', 'Translation'], *worksheet_data]
+        ).once
 
         malformed_i18n_reporter.report
 

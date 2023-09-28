@@ -1212,10 +1212,10 @@
         },
         "courseA_collector_loops1_2021": {
           "courseA_collector_loops1_a": "Pasi të keni lëvizur në një katror me thesar, përdorni këtë bllok për ta marrë atë.\n\n<xml>  <block type=\"collector_collect\"/></xml>",
-          "courseA_collector_loops1_b": "Një zgjidhje e thjeshtë do të ishte të lëvizni Lindjen 2 herë, pastaj të merrni thesarin."
+          "courseA_collector_loops1_b": "Një zgjidhje e thjeshtë do të ishte të lëvizni në Lindje 2 herë, pastaj të merrni thesarin."
         },
         "courseA_collector_loops2_2021": {
-          "courseA_collector_loops2_a": "Ju do të duhet të lëvizni përpara se të grumbulloni ndonjë thesar.",
+          "courseA_collector_loops2_a": "Do të ju duhet të lëvizni përpara se të grumbulloni ndonjë thesar.",
           "courseA_collector_loops2_b": "Pasi të keni lëvizur në një katror me thesar, përdorni këtë bllok për ta marrë atë.\n\n<xml>  <block type=\"collector_collect\"/></xml>"
         },
         "courseA_collector_loops3_2021": {
@@ -1310,7 +1310,7 @@
         },
         "courseA_harvester_loops2_2021": {
           "courseA_harvester_loops2_a": "Kodi juaj do të duhet të lëvizë **katër** \"herë nga perëndimi\".\n\n<xml><block type=\"maze_moveWest\"/></xml>\n\nblloqe dhe **katër** <xml>\n`pick corn`\n  <block type=\"harvester_corn\"/>\n</xml> blloqe. ",
-          "courseA_harvester_loops2_b": "Nëse ende keni vaështirësi, provoni të thoni hapat me zë të lartë. "
+          "courseA_harvester_loops2_b": "Nëse ende keni vështirësi, provoni të thoni hapat me zë të lartë. "
         },
         "courseA_harvester_loops3_2021": {
           "courseA_harvester_loops3_a": "Përdorni një bllok \"përsëritës\" si ky për t'ju ndihmuar!\n\n<xml><block type=\"controls_repeat_simplified_dropdown\">\n    <title name=\"TIMES\" config=\"2-10\">4</title>\n  </block></xml>",
@@ -1895,7 +1895,7 @@
         },
         "courseB_maze_seq1_2021": {
           "courseB_maze_seq1_a": "Lidhni blloqet me bllokun <xml><block type=\"when_run\"/></xml> për të bërë lëvizjen e Scrat!",
-          "courseB_maze_seq1_b": "Tërhiqni tre nga këto shigjeta <xml><block type=\"maze_moveSouth\"/></xml> dhe lidhini ato me bllokun <xml><block type=\"when_run\"/></xml> për ta dërguar Scrat-in te lajthia."
+          "courseB_maze_seq1_b": "Tërhiqni tre nga këto shigjeta <xml><block type=\"maze_moveSouth\"/></xml> dhe lidhini ato me bllokun <xml><block type=\"when_run\"/></xml> për ta dërguar Scratin te lajthia."
         },
         "courseB_maze_seq4_2021": {
           "courseB_maze_seq4_a": "Provoni të shtoni një udhëzim në të njëjtën kohë derisa të arrini te lajthia.",
@@ -1929,7 +1929,7 @@
           "courseB_maze_seq7_c": "Nuk jeni i sigurt se si të arrini te lajthia? Provoni këtë rrugë!"
         },
         "courseB_maze_seq7_2021": {
-          "courseB_maze_seq7_a": "Shtoni 1 bllok për të lëvizur Scrat-in te lajthia.",
+          "courseB_maze_seq7_a": "Shtoni 1 bllok për të lëvizur Scratin te lajthia.",
           "courseB_maze_seq7_b": "Provoni të ekzekutoni kodin që ju është dhënë dhe shikoni se ku përfundoni.",
           "courseB_maze_seq7_c": "Nuk jeni i sigurt se si të arrini te lajthia? Provoni këtë rrugë!"
         },
@@ -2109,7 +2109,7 @@
           "courseB_starWars_prog9_c": "A mund të ndihmojë loop-i `repeat` <xml><block type=\"controls_repeat_simplified\">\n    <title name=\"TIMES\">3</title>\n  </block></xml> këtu?"
         },
         "courseC19_playLab_EOC1_2021": {
-          "courseE_playLab_scaffold1_a": "Vendos aktorin 1 në??? Blloku i imazhit mund të përdoret për të shtuar një aktor në skenë.",
+          "courseE_playLab_scaffold1_a": "`Vendos aktorin 1 në ??? në imazh` blloku mund të përdoret për të shtuar një aktor në skenë.",
           "courseE_playLab_scaffold1_b": "Vendosni bllokun “vendos aktorin” nën “kur të ekzekutohet” për ta bërë aktorin tuaj të shfaqet në fillim të programit.",
           "courseE_playLab_scaffold1_c": "Përdorni `vendos??? prapavijën` për të zgjedhur një prapavijë për skenën tuaj."
         },
@@ -2121,7 +2121,7 @@
         },
         "courseC19_playLab_EOC2_2021": {
           "courseE_playLab_scaffold1_b": "Ju duhet të keni katër blloqe eventesh `kur shigjeta`, me një drejtim për të lëvizur nën secilën.",
-          "courseE_playLab_scaffold1_c": "Kur të keni mbaruar, duhet të jeni në gjendje të lëvizni heroin tuaj me tastet e shigjetave!",
+          "courseE_playLab_scaffold1_c": "Kur të keni mbaruar, ju duhet të jeni në gjendje të lëvizni heroin tuaj me tastet e shigjetave!",
           "playlab_down": "Për të lëvizur aktorin tuaj poshtë, ju mund të lidhni këto blloqe:\n<xml>\n  <block type=\"studio_whenArrow\">\n    <title name=\"VALUE\">down</title>\n    <next>\n      <block type=\"studio_move\">\n        <title name=\"SPRITE\">0</title>\n        <title name=\"DIR\">4</title>\n      </block>\n    </next>\n  </block>\n  </xml>",
           "playlab_left": "Për të lëvizur aktorin tuaj majtas, ju mund të lidhni këto blloqe:\n<xml>\n  <block type=\"studio_whenArrow\">\n    <title name=\"VALUE\">left</title>\n    <next>\n      <block type=\"studio_move\">\n        <title name=\"SPRITE\">0</title>\n        <title name=\"DIR\">8</title>\n      </block>\n    </next>\n  </block>\n  </xml>",
           "playlab_right": "Për të lëvizur aktorin tuaj të djathtas, ju mund të lidhni këto blloqe:\n<xml>\n  <block type=\"studio_whenArrow\">\n    <title name=\"VALUE\">right</title>\n    <next>\n      <block type=\"studio_move\">\n        <title name=\"SPRITE\">0</title>\n        <title name=\"DIR\">2</title>\n      </block>\n    </next>\n  </block>\n  </xml>\n ",
@@ -3151,15 +3151,15 @@
           "courseD_bounce_events10s_a": "Duhet t'i keni të dyja eventet në kodin tuaj:\n\n<xml><block type=\"bounce_whenBallInGoal\" deletable=\"false\"><next><block type=\"bounce_playSound\"><title name=\"SOUND\">swish</title><next><block type=\"bounce_incrementPlayerScore\"></block></next></block></next></block><block type=\"bounce_whenBallMissesPaddle\" deletable=\"false\"><next><block type=\"bounce_playSound\"><title name=\"SOUND\">whistle</title><next><block type=\"bounce_incrementOpponentScore\"></block></next></block></next></block></xml>"
         },
         "courseD_bounce_events11s_2021": {
-          "courseD_bounce_events11s_a": "Ju do të duhet të hidhni një top kur loja fillon, kur ju goditi shportën dhe kur dora humbet topin."
+          "courseD_bounce_events11s_a": "Ju do të duhet të hidhni një top kur loja fillon, kur ju goditni shportën dhe kur dora humbet topin."
         },
         "courseD_bounce_events12s_2021": {
-          "courseD_bounce_events12s_a": "Ju mund të përshpejtoni basketbollin ose dorën duke i bashkangjitur ato blloqe në eventin “kur vraponi”.",
+          "courseD_bounce_events12s_a": "Ju mund të përshpejtoni basketbollin ose dorën duke i bashkangjitur ato blloqe në eventin “kur ekzekutohet”.",
           "courseD_bounce_events12s_b": "Provoni të bëni çdo goditje me vlerë 2 pikë dhe të ndryshoni logon e ekipit në atë nga vendlindja juaj!"
         },
         "courseD_bounce_events1s_2021": {
           "courseD_bounce_events1s_a": "Duhet t'a shtoni bllokun `lëviz majtas` te eventi `kur shigjeta e majtë` që kjo lojë të funksionojë:\n\n <xml> <block type=\"bounce_whenLeft\" deletable=\"false\" x=\"20\" y=\"20\">\n    <next>\n      <block type=\"bounce_moveLeft\"/>\n    </next>\n  </block>\n\n   </xml>",
-          "courseD_bounce_events1s_b": "Mos harroni të shtypni “Run” dhe të çoni dorën te shporta për t'a zgjidhur këtë enigmë."
+          "courseD_bounce_events1s_b": "Mos harroni të shtypni “Ekzekuto” dhe të çoni dorën te shporta për t'a zgjidhur këtë enigmë."
         },
         "courseD_bounce_events2s_2021": {
           "courseD_bounce_events2s_a": "Ju duhet të keni dy grupe të eventeve \"lëviz\" të koduara që kjo të ketë sukses:\n\n<xml>\n  <block type=\"bounce_whenLeft\" deletable=\"false\" x=\"20\" y=\"20\">\n    <next>\n      <block type=\"bounce_moveLeft\"/>\n    </next>\n  </block>\n  <block type=\"bounce_whenRight\" deletable=\"false\" x=\"180\" y=\"20\">\n    <next>\n      <block type=\"bounce_moveRight\"/>\n    </next>\n  </block>\n</xml>"
@@ -3184,7 +3184,7 @@
           "courseD_collector_debugging2a_c": "Çfarë ndodh?\n\nÇfarë supozohet të ndodhë?\n\nÇfarë të tregon kjo ty?"
         },
         "courseD_collector_debugging3a_2021": {
-          "courseD_collector_debugging3_a": "A ka ndonjë vend ku Laurel bën diçka që nuk ka kuptim? Çfarë ndodh kur ju i ndryshoni ato blloqe?"
+          "courseD_collector_debugging3_a": "A ka ndonjë vend ku Laurela bën diçka që nuk ka kuptim? Çfarë ndodh kur ju i ndryshoni ato blloqe?"
         },
         "courseD_collector_debugging4a_2021": {
           "courseD_collector_debugging4_a": "Provo të përdorni procesin e debugging disa herë me radhë. \n\nÇfarë e shkakton problemin e parë?\n\nPasi të rregullohet ai problem, çfarë shkon keq?",
@@ -3484,13 +3484,13 @@
           "courseD_iceage_loops9_b": "Kodi juaj përfundimtar duhet të ketë **4** loops."
         },
         "courseD_maze_intro4_2021": {
-          "courseC_maze_programming4_a": "Ti mund të kthehesh djathtas ose majtas nga këndvështrimi i Kuq. Nëse po përballesh me të djathtën, kthimi në të djathtë do të të bëjë të marrësh drejtimin poshtë.",
-          "courseC_maze_programming4_b": "Për të ndjekur rrugën ec përpara dhe kthehu në një mënyrë, pastaj lëviz përsëri dhe kthehu në rrugën e kundërt. Lëviz përpara edhe një herë për të arritur acorn."
+          "courseC_maze_programming4_a": "Ti mund të kthehesh djathtas ose majtas nga këndvështrimi i Redit. Nëse po përballesh me të djathtën, kthimi në të djathtë do të të bëjë të marrësh drejtimin poshtë.",
+          "courseC_maze_programming4_b": "Për të ndjekur rrugën ec përpara dhe kthehu në një mënyrë, pastaj lëviz përsëri dhe kthehu në rrugën e kundërt. Lëviz përpara edhe një herë për të arritur te lajthia."
         },
         "courseD_maze_intro5a_2021": {
           "courseC_maze_programming5_a": "Provo të përdorësh butonin “Hapi” për të ekzekutuar kodin tënd rresht pas rreshti. A e kupton se çfarë duhet të bësh më pas?",
           "courseC_maze_programming5_b": "Mos harro se kthesat janë nga perspektiva e zogut.",
-          "courseC_maze_programming5_c": "Mos keni frikë të gaboni! Provo të shtoni blloqe dhe të ekzekutoni kodin për të parë se çfarë do të ndodhë edhe nëse nuk mendon se e ke zgjidhur enigmën akoma."
+          "courseC_maze_programming5_c": "Mos keni frikë të gaboni! Provo të shtoni blloqe dhe të ekzekutoni kodin për të parë se çfarë do të ndodhë edhe nëse mendon se e ke zgjidhur enigmën akoma."
         },
         "courseD_maze_nestedLoops32022": {
           "courseD_maze_nestedLoops3_a": "Për t'a zgjidhur këtë enigmë, do t'ju duhet të \"ndërtoni\" një loop `përsërit` brenda një loop `përsërit` tjetër.",
@@ -3531,15 +3531,15 @@
           "courseD_maze_nestedLoops6_c": "Do të duhen dy grupe të nested loops “përsëritëse” për t'a zgjidhur këtë enigmë."
         },
         "courseD_maze_ramp1_2021": {
-          "courseC_maze_programming1_a": "Nëse zogu nuk po shkon te derri sigurohuni që të tre blloqet të jenë klikuar plotësisht së bashku, pastaj klikoni përsëri “Run”.",
+          "courseC_maze_programming1_a": "Nëse zogu nuk po shkon te derri sigurohuni që të tre blloqet të jenë klikuar plotësisht së bashku, pastaj klikoni përsëri “Ekzekuto”.",
           "courseC_maze_programming1_b": "Mos keni frikë të gaboni! Provoni të shtoni blloqe dhe të ekzekutoni kodin për të parë se çfarë do të ndodhë edhe nëse nuk mendoni se e keni zgjidhur enigmën akoma."
         },
         "courseD_maze_ramp2_2021": {
           "courseC_maze_programming2_a": "Për të përdorur një bllok “lëviz përpara”, tërhiqe atë nga kutia e veglave jashtë në hapësirën e punës dhe lidhe atë me bllokun “when run”.",
-          "courseC_maze_programming2_b": "Sigurohu që të 3 blloqet të klikohen së bashku dhe të bashkangjiten në bllokun “when run”."
+          "courseC_maze_programming2_b": "Sigurohu që të 3 blloqet të klikohen së bashku dhe të bashkangjiten në bllokun “kur ekzekutohet”."
         },
         "courseD_maze_ramp3_2021": {
-          "courseC_maze_programming3_a": "![](https://images.code.org/afddde0e99d5d270c658de0c03dd6e2c-image-1481174000309.gif)\n\nPër ta fshirë një bllok nga mesi i kodit tënd tërhiq të gjitha blloqet nën atë larg në të djathtë dhe le të ulen në hapësirën e punës për një kohë.  \n\nKliko në bllokun që dëshiron t'a fshish dhe tërhiqe përsëri në kutinë e veglave.\n\nMë në fund vendos blloqet tuaja të tjera përsëri në vendin ku përkasin."
+          "courseC_maze_programming3_a": "![](https://images.code.org/afddde0e99d5d270c658de0c03dd6e2c-image-1481174000309.gif)\n\nPër ta fshirë një bllok nga mesi i kodit tënd tërhiq të gjitha blloqet nën atë larg në të djathtë dhe le të ulen në hapësirën e punës për një kohë.  \n\nKliko në bllokun që dëshiron t'a fshish dhe tërhiqe përsëri në kutinë e blloqeve.\n\nMë në fund vendos blloqet tuaja të tjera përsëri në vendin ku përkasin."
         },
         "courseD_maze_ramp5_2021": {
           "courseC_maze_programming5_a": "Provo të përdorësh butonin “Hapi” për të ekzekutuar kodin tënd rresht pas rreshti. A e kupton se çfarë duhet të bësh më pas?",
@@ -3549,7 +3549,7 @@
         "courseD_maze_ramp5b_2021": {
           "courseC_maze_programming5_a": "Provo të përdorësh butonin “Hapi” për të ekzekutuar kodin tënd rresht pas rreshti. A e kupton se çfarë duhet të bësh më pas?",
           "courseC_maze_programming5_b": "Mos harro se kthesat janë nga perspektiva e zogut.",
-          "courseC_maze_programming5_c": "Mos keni frikë të gaboni! Provo të shtoni blloqe dhe të ekzekutoni kodin për të parë se çfarë do të ndodhë edhe nëse nuk mendon se e ke zgjidhur enigmën akoma."
+          "courseC_maze_programming5_c": "Mos keni frikë të gaboni! Provo të shtoni blloqe dhe të ekzekutoni kodin për të parë se çfarë do të ndodhë edhe nëse mendoni se nuk e ke zgjidhur enigmën akoma."
         },
         "courseD_maze_until12022": {
           "courseD_maze_until1_a": "A ka ndonjë sekuencë që mund t'a përsëritni për t'a bërë kodin tuaj më të shkurtër?",

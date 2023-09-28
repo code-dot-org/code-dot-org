@@ -4199,6 +4199,10 @@
           "purpose": "Trong hoạt động trực tuyến này, học sinh sẽ học cách sử dụng các sự kiện trong Play Lab. Họ sẽ bắt đầu bằng cách huấn luyện hiệp sĩ di chuyển khi nhấn một phím mũi tên, sau đó kết thúc bài học với cơ hội thể hiện các kỹ năng còn lại mà họ đã học được trong suốt khóa học này, bao gồm trình tự và vòng lặp, trong bài tập chơi tự do cuối cùng.",
           "student_overview": "Sử dụng sự kiện để tạo một câu chuyện hoặc làm game tương tác."
         },
+        "ai-ethics-2023/lesson-1": {
+          "name": "Quy tắc đạo đức trí tuệ nhân tạo",
+          "student_overview": "Hợp tác nghiên cứu về đạo đức AI và tạo ra một quy tắc ứng xử có thể chia sẻ."
+        },
         "csc-adaptations-2023/Modeling Animal Adaptations (pilot)": {
           "name": "Giới thiệu Animal Adaptations",
           "overview": "Trong bài học\\*\\* xây dựng kỹ năng\\*\\* này, học sinh sẽ học cách tạo và tạo hiệu ứng động cho các họa tiết và sử dụng các sự kiện để làm cho chúng tương tác. \n\nHọc sinh sẽ mã hóa một mô hình nguyên nhân và kết quả dựa trên sự kiện trong Sprite Lab để chứng minh cách các loài tồn tại bằng cách thích nghi với môi trường của chúng theo thời gian. Các mô hình và mô phỏng tương tác được sử dụng trong thế giới thực để giúp các kỹ sư và nhà khoa học xác định các mẫu, hiểu bản chất, đưa ra dự đoán về những thay đổi trong tương lai và thiết kế các giải pháp để chuẩn bị và/hoặc chống lại sự gián đoạn lớn. \n\nHọc sinh sẽ khám phá các ví dụ về sự tiến hóa, thích nghi, di cư, chọn lọc tự nhiên và sự tồn tại theo nhóm. ",
@@ -4356,6 +4360,144 @@
           "preparation": "-   Chuẩn bị một máy tính cho mỗi học sinh.\n-   Chuẩn bị một bản sao của tài liệu phát tay **<a href=\"https://docs.google.com/document/d/1kO4SNEIVyM0GrxxJb6NzVYauXXpi6rzQkDIfrzQf1Ls/template/preview\" target=\"_blank\">Chia sẻ ứng dụng của bạ</a>n** cho mỗi học sinh.\n-   Đảm bảo học sinh có sẵn một bản sao của bài thơ gốc của họ cho bài học này.  \n-   Chia lớp thành các cặp cho hoạt động Chia sẻ ghép đôi thơ.\n-   Xem xét các tùy chọn mở rộng liên quan ([link](https://studio.code.org/s/poetry-2023/lessons/4#activity-4365336)) để khám phá sau bài học này.\n\n##### Tùy chọn\n\n-   Đặc biệt đối với giảng dạy từ xa: Xác định xem bạn cần thiết lập tài liệu kỹ thuật số hay không gian trực tuyến được chia sẻ để đăng URL ứng dụng của mỗi học sinh (xem mẫu giáo viên trong “Liên kết”). ",
           "purpose": "Chia sẻ các dự án nghệ thuật thơ của họ với các đồng nghiệp là một khía cạnh quan trọng của quá trình sáng tạo. Nó cho phép sinh viên nhận được phản hồi, cộng tác với những người khác, phản ánh về công việc của chính họ và ăn mừng thành tích của họ. Bằng cách chia sẻ công việc của họ với những người khác, sinh viên có thể phát triển và cải thiện như những người tư duy sáng tạo và phát triển các kỹ năng giao tiếp và giao tiếp quan trọng.",
           "student_overview": "Chia sẻ ứng dụng bài thơ mới của bạn với bạn bè của bạn! "
+        },
+        "csd1-2023/Intro to Problem Solving": {
+          "name": "Giới thiệu phần giải quyết vấn đề"
+        },
+        "csd1-2023/The Problem Solving Process": {
+          "name": "Quá trình giải quyết vấn đề"
+        },
+        "csd1-2023/Exploring Problem Solving": {
+          "name": "Khám phá Giải quyết vấn đề"
+        },
+        "csd1-2023/What is a Computer?": {
+          "name": "Máy tính là gì?"
+        },
+        "csd2-2023/Digital Footprint": {
+          "name": "Dấu vết số"
+        },
+        "csd2-2023/Styling Text with CSS": {
+          "name": "Tạo phong cách cho văn bản với CSS"
+        },
+        "csd2-2023/Intellectual Property": {
+          "name": "Sở hữu trí tuệ"
+        },
+        "csd2-2023/Styling Elements with CSS": {
+          "name": "Tạo phong cách cho các thành phần với CSS"
+        },
+        "csd2-2023/Linking Pages": {
+          "name": "Liên kết trang"
+        },
+        "csd3-2023/Drawing in Game Lab": {
+          "name": "Bản vẽ trong Kho trò chơi"
+        },
+        "csd3-2023/Variables": {
+          "name": "Các biến"
+        },
+        "csd3-2023/Sprites": {
+          "name": "Nhân vật"
+        },
+        "csd3-2023/Sprite Properties": {
+          "name": "Thuộc tính của nhân vật"
+        },
+        "csd3-2023/Text": {
+          "name": "Văn bản"
+        },
+        "csd3-2023/Conditionals": {
+          "name": "Điều kiện"
+        },
+        "csd3-2023/Keyboard Input": {
+          "name": "Tín hiệu đầu vào từ bàn phím"
+        },
+        "csd3-2023/Project - Interactive Card": {
+          "name": "Dự án: Thẻ tương tác"
+        },
+        "csd3-2023/Velocity": {
+          "name": "Vận tốc"
+        },
+        "csd3-2023/Collision Detection": {
+          "name": "Phát hiện va chạm"
+        },
+        "csd3-2023/Complex Sprite Movement": {
+          "name": "Di chuyển nhân vật phức tạp"
+        },
+        "csd3-2023/Collisions": {
+          "name": "Va chạm"
+        },
+        "csd3-2023/Functions": {
+          "name": "Các hàm"
+        },
+        "csd3-2023/The Game Design Process": {
+          "name": "Quá trình thiết kế trò chơi"
+        },
+        "csd3-2023/Using the Game Design Process": {
+          "name": "Sử dụng quy trình thiết kế trò chơi"
+        },
+        "csd3-2023/Project - Design a Game": {
+          "name": "Dự án - thiết kế một trò chơi"
+        },
+        "csd4-2023/Understanding Your User": {
+          "name": "Tìm hiểu về người dùng của bạn"
+        },
+        "csd4-2023/Designing Apps for Good": {
+          "name": "Thiết kế ứng dụng nhằm mục đích tốt"
+        },
+        "csd4-2023/Market Research": {
+          "name": "Nghiên cứu thị trường"
+        },
+        "csd4-2023/Prototype Testing": {
+          "name": "Thử nghiệm nguyên mẫu"
+        },
+        "csd4-2023/Testing the App": {
+          "name": "Thử Ứng dụng"
+        },
+        "csd5-2023/Representing Images": {
+          "name": "Hình ảnh đại diện"
+        },
+        "csd5-2023/Combining Representations": {
+          "name": "Kết hợp các đại diện"
+        },
+        "csd5-2023/Keeping Data Secret": {
+          "name": "Giữ bí mật dữ liệu"
+        },
+        "csd6a-2023/Intro to App Lab": {
+          "name": "Giới thiệu về AppLab"
+        },
+        "csd6a-2023/Board Events": {
+          "name": "Sự kiện bảng mạch"
+        },
+        "csd6a-2023/Color LEDs": {
+          "name": "Đèn LED màu"
+        },
+        "csd6a-2023/Making Music": {
+          "name": "Tạo âm nhạc"
+        },
+        "csd6a-2023/Functions": {
+          "name": "Các hàm"
+        },
+        "csd6b-2023/Intro to App Lab": {
+          "name": "Giới thiệu về AppLab"
+        },
+        "csd6b-2023/Board Events": {
+          "name": "Sự kiện bảng mạch"
+        },
+        "csd6b-2023/Functions": {
+          "name": "Các hàm"
+        },
+        "csd7-2023/Intro to App Lab": {
+          "name": "Giới thiệu về AppLab"
+        },
+        "csd7-2023/Introduction to AI Lab": {
+          "name": "Giới thiệu về AI Lab"
+        },
+        "csd7-2023/Numerical Models": {
+          "overview": "Trong bài học này, học sinh sẽ tham gia hoạt động không sử dụng thiết bị điện tử để mô phỏng một đợt bùng phát thây ma. Học sinh sẽ phải dự đoán khu vực nào của thị trấn có ít thây ma nhất bằng cách sử dụng dữ liệu từ thị trấn lân cận. Học sinh sẽ sử dụng mức độ tương đồng và bình quân để đưa ra dự đoán về số lượng thây ma tại một địa điểm cụ thể. Sau đó, học sinh sẽ được giải đáp và so sánh dự đoán của mình với các con số thực tế nhằm thảo luận về độ chính xác của số liệu chênh lệch như thế nào so với dữ liệu phân loại.\n\n**Câu hỏi trong ngày:** Làm cách nào để máy tính học cách đưa ra dự đoán bằng số liệu?"
+        },
+        "csd7-2023/Numerical Data in AI Lab": {
+          "name": "Dữ liệu số trong phòng thí nghiệm AI"
+        },
+        "csd7-2023/Survey Planning": {
+          "name": "Bộ sưu tập Thiết kế dữ liệu"
         },
         "coursea-2023/Safety in My Online Neighborhood": {
           "name": "Giữ an toàn trong môi trường trực tuyến của tôi",

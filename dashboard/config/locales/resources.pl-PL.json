@@ -7278,6 +7278,51 @@
           "url": "https://www.youtube.com/watch?v=rgbZAWnOWOo",
           "type": "Wideo"
         },
+        "_template_ai_code_of_ethics/ai-ethics/2023": {
+          "type": "Slajdy"
+        },
+        "ai_code_of_ethics/ai-ethics/2023": {
+          "name": "Kodeks etyczny AI ",
+          "type": "Slajdy"
+        },
+        "ai_research_areas/ai-ethics/2023": {
+          "type": "Przewodnik po zajęciach"
+        },
+        "create_a_manifesto/ai-ethics/2023": {
+          "type": "Przewodnik po zajęciach"
+        },
+        "ethics_and_ai_privacy_the_future_of_work/ai-ethics/2023": {
+          "type": "Wideo"
+        },
+        "imagine_your_world/ai-ethics/2023": {
+          "type": "Przewodnik po zajęciach"
+        },
+        "research_reflection_guide/ai-ethics/2023": {
+          "type": "Przewodnik po zajęciach"
+        },
+        "character_card_individual_docs_/ai-ethics/2023": {
+          "type": "Zasoby"
+        },
+        "character_cards/ai-ethics/2023": {
+          "type": "Zasoby"
+        },
+        "generative_ai_activity_instructions/ai-ethics/2023": {
+          "type": "Zasoby"
+        },
+        "generative_ai_news_articles/ai-ethics/2023": {
+          "type": "Zasoby"
+        },
+        "group_scenarios/ai-ethics/2023": {
+          "type": "Zasoby"
+        },
+        "how_ai_works_large_language_models/ai-ethics/2023": {
+          "url": "https://www.youtube.com/watch?v=X-AWdfSFCHQ",
+          "type": "Wideo"
+        },
+        "societal_impact_of_generative_ai/ai-ethics/2023": {
+          "name": "Społeczne oddziaływanie generatywnej sztucznej inteligencji",
+          "type": "Slajdy"
+        },
         "cs_connections_landing_page/csc-adaptations/2023": {
           "name": "Strona docelowa CS Connections",
           "url": "https://code.org/educate/csc",
@@ -7824,6 +7869,2200 @@
         "poem_app_example/poetry/2023": {
           "name": "Przykład aplikacji wiersza",
           "url": "https://studio.code.org/projects/poetry_hoc/j3TXDXNhz0XEsH4Xjk_rT9buBHYCplirIKtY_Pg_bYo",
+          "type": "Zasoby"
+        },
+        "all_resources/csd/2023": {
+          "name": "Wszystkie zasoby"
+        },
+        "all_standards/csd/2023": {
+          "name": "Wszystkie standardy"
+        },
+        "all_vocabulary/csd/2023": {
+          "name": "Całe słownictwo"
+        },
+        "teacher_forum/csd/2023": {
+          "name": "Forum Nauczycieli"
+        },
+        "csd_guide_to_assessment_1/csd/2023": {
+          "name": "Przewodnik po ocenie CSD"
+        },
+        "csd_guide_to_curriculum_videos_1/csd/2023": {
+          "name": "Przewodnik CSD dotyczący filmów o programach nauczania"
+        },
+        "csd_guide_to_teaching_and_learning_strategies_1/csd/2023": {
+          "name": "Przewodnik CSD dotyczący strategii nauczania i uczenia się"
+        },
+        "the_problem_solving_process_2/csd/2023": {
+          "name": "Proces rozwiązywania problemów"
+        },
+        "aluminum_boats/csd/2023": {
+          "type": "Wzór"
+        },
+        "aluminum_boats_1/csd/2023": {
+          "type": "Przewodnik po zajęciach"
+        },
+        "intro_to_problem_solving/csd/2023": {
+          "name": "Wprowadzenie do rozwiązywania problemów",
+          "type": "Slajdy"
+        },
+        "problem_solving_process/csd/2023": {
+          "name": "Proces rozwiązywania problemów",
+          "url": "https://docs.google.com/document/d/1lWv8fKJO2ZRvObUx6Ys1MTVqcSC5ZUfKI8RRXGayRpY/",
+          "type": "Wzór"
+        },
+        "problem_solving_process_1/csd/2023": {
+          "name": "Proces rozwiązywania problemów",
+          "url": "https://youtu.be/z7RaFPT3DTE",
+          "type": "Wideo"
+        },
+        "problem_solving_process_2/csd/2023": {
+          "name": "Proces rozwiązywania problemów",
+          "url": "https://drive.google.com/file/d/0B2UNlnU_5Vg4aC1DVGdWU19hZkE/view?usp=sharing&resourcekey=0-1I3oX1C8Q_P1YAV15vJfOw"
+        },
+        "the_problem_solving_process/csd/2023": {
+          "type": "Wideo"
+        },
+        "the_problem_solving_process_1/csd/2023": {
+          "name": "Proces rozwiązywania problemów",
+          "type": "Slajdy"
+        },
+        "the_problem_solving_process_5/csd/2023": {
+          "name": "Proces rozwiązywania problemów",
+          "type": "Przewodnik po zajęciach"
+        },
+        "exploring_problem_solving/csd/2023": {
+          "name": "Zgłębianie rozwiązywania problemów",
+          "type": "Slajdy"
+        },
+        "solving_problems/csd/2023": {
+          "type": "Klucz odpowiedzi"
+        },
+        "solving_problems_1/csd/2023": {
+          "type": "Przewodnik po zajęciach"
+        },
+        "what_is_a_computer/csd/2023": {
+          "type": "Wideo"
+        },
+        "what_is_a_computer_/csd/2023": {
+          "name": "Czym jest komputer?",
+          "type": "Wzór"
+        },
+        "what_is_a_computer_1/csd/2023": {
+          "type": "Slajdy"
+        },
+        "what_is_a_computer_version_a_/csd/2023": {
+          "type": "Przewodnik po zajęciach"
+        },
+        "what_is_a_computer_version_b_/csd/2023": {
+          "type": "Przewodnik po zajęciach"
+        },
+        "input_and_output/csd/2023": {
+          "name": "Wejście i Wyjście",
+          "url": "https://docs.google.com/document/d/1y6JJOsmZh0zwXpP4qCQoPFhQiLXGi4NJnnQoLnHAkPc/edit?usp=sharing",
+          "type": "Wzór"
+        },
+        "input_and_output_1/csd/2023": {
+          "name": "Wejście i Wyjście",
+          "url": "https://docs.google.com/document/d/1Wf9oUuRi5iNb2cVrn1F8kbDDys0CcAcN-m4ZLpXohmY",
+          "type": "Przewodnik po zajęciach"
+        },
+        "input_and_output_2/csd/2023": {
+          "name": "Wejście i Wyjście",
+          "type": "Slajdy"
+        },
+        "apps_with_processing/csd/2023": {
+          "type": "Wzór"
+        },
+        "apps_with_processing_1/csd/2023": {
+          "type": "Przewodnik po zajęciach"
+        },
+        "apps_with_processing_2/csd/2023": {
+          "type": "Slajdy"
+        },
+        "apps_with_storage/csd/2023": {
+          "type": "Wzór"
+        },
+        "apps_with_storage_1/csd/2023": {
+          "type": "Przewodnik po zajęciach"
+        },
+        "apps_with_storage_2/csd/2023": {
+          "type": "Slajdy"
+        },
+        "what_do_computers_do/csd/2023": {
+          "type": "Wideo"
+        },
+        "apps_and_problem_solving/csd/2023": {
+          "name": "Aplikacje i rozwiązywanie problemów",
+          "type": "Przewodnik po zajęciach"
+        },
+        "apps_and_problem_solving_-_student_checklist/csd/2023": {
+          "type": "Zasoby"
+        },
+        "apps_and_problem_solving_1/csd/2023": {
+          "name": "Aplikacje i rozwiązywanie problemów",
+          "type": "Wzajemne recenzje"
+        },
+        "apps_and_problem_solving_2/csd/2023": {
+          "name": "Aplikacje i rozwiązywanie problemów",
+          "type": "Kategoria"
+        },
+        "computer_science_practices/csd/2023": {
+          "url": "https://docs.google.com/document/d/1Ccf-WMH2qFDhycKaKSILRrZUe42lWESyRqMgdTymCPw/edit",
+          "type": "Refleksja"
+        },
+        "peer_review_exemplar/csd/2023": {
+          "type": "Wzór"
+        },
+        "project_-_propose_an_app/csd/2023": {
+          "name": "Projekt - Zaproponuj aplikację",
+          "type": "Slajdy"
+        },
+        "project_guide_exemplar/csd/2023": {
+          "type": "Wzór"
+        },
+        "sample_marked_rubrics/csd/2023": {
+          "type": "Wzór"
+        },
+        "build_a_newspaper_table/csd/2023": {
+          "type": "Wzór"
+        },
+        "build_a_newspaper_table_1/csd/2023": {
+          "type": "Przewodnik po zajęciach"
+        },
+        "intro_to_problem_solving_newspapers_/csd/2023": {
+          "type": "Slajdy"
+        },
+        "intro_to_problem_solving_spaghetti_/csd/2023": {
+          "type": "Slajdy"
+        },
+        "spaghetti_bridge/csd/2023": {
+          "type": "Wzór"
+        },
+        "spaghetti_bridge_-_activity_guide/csd/2023": {
+          "type": "Przewodnik po zajęciach"
+        },
+        "intro_to_problem_solving_-_paper_tower/csd/2023": {
+          "type": "Wzór"
+        },
+        "intro_to_problem_solving_paper_towels_/csd/2023": {
+          "type": "Slajdy"
+        },
+        "paper_tower/csd/2023": {
+          "type": "Przewodnik po zajęciach"
+        },
+        "exploring_problem_solving_-_animal_theme/csd/2023": {
+          "type": "Wzór"
+        },
+        "exploring_problem_solving_animals_/csd/2023": {
+          "type": "Slajdy"
+        },
+        "solving_problems_2/csd/2023": {
+          "type": "Przewodnik po zajęciach"
+        },
+        "tangrams/csd/2023": {
+          "type": "Zasoby"
+        },
+        "exploring_problem_solving_-_games_theme/csd/2023": {
+          "type": "Wzór"
+        },
+        "exploring_problem_solving_games_/csd/2023": {
+          "type": "Slajdy"
+        },
+        "solving_problems_3/csd/2023": {
+          "type": "Przewodnik po zajęciach"
+        },
+        "all_code_4/csd/2023": {
+          "name": "Cały kod"
+        },
+        "all_resources_5/csd/2023": {
+          "name": "Wszystkie zasoby"
+        },
+        "all_standards_5/csd/2023": {
+          "name": "Wszystkie standardy"
+        },
+        "all_vocabulary_5/csd/2023": {
+          "name": "Całe słownictwo"
+        },
+        "csd_guide_to_assessment_2/csd/2023": {
+          "name": "Przewodnik po ocenie CSD"
+        },
+        "csd_guide_to_curriculum_videos_2/csd/2023": {
+          "name": "Przewodnik CSD dotyczący filmów o programach nauczania"
+        },
+        "csd_guide_to_teaching_and_learning_strategies_2/csd/2023": {
+          "name": "Przewodnik CSD dotyczący strategii nauczania i uczenia się"
+        },
+        "the_problem_solving_process_for_design/csd/2023": {
+          "name": "Proces rozwiązywania problemów z projektowaniem"
+        },
+        "the_problem_solving_process_with_programming/csd/2023": {
+          "name": "Proces rozwiązywania problemów z programowaniem"
+        },
+        "_key_warm_up_word_search/csd/2023": {
+          "type": "Klucz odpowiedzi"
+        },
+        "_key_web_design_for_users/csd/2023": {
+          "type": "Klucz odpowiedzi"
+        },
+        "exploring_web_pages_1/csd/2023": {
+          "type": "Przewodnik po zajęciach"
+        },
+        "exploring_web_pages_2/csd/2023": {
+          "name": "Badanie stron internetowych",
+          "type": "Slajdy"
+        },
+        "problem_solving_and_design/csd/2023": {
+          "type": "Zasoby"
+        },
+        "web_design_for_users_b_/csd/2023": {
+          "type": "Przewodnik po zajęciach"
+        },
+        "web_design_template/csd/2023": {
+          "type": "Zasoby"
+        },
+        "_warm_up_word_search_1/csd/2023": {
+          "type": "Przewodnik po zajęciach"
+        },
+        "exemplar_text_website/csd/2023": {
+          "type": "Strona internetowa"
+        },
+        "html_tags/csd/2023": {
+          "name": "Tagi HTML",
+          "url": "https://drive.google.com/file/d/1Eh3mxDIgNE1guUs_sCB4SBR_hHMBMs26/view",
+          "type": "Zasoby"
+        },
+        "intro_to_html/csd/2023": {
+          "name": "Wprowadzenie do HTML",
+          "type": "Slajdy"
+        },
+        "intro_to_web_lab_part_2/csd/2023": {
+          "url": "https://youtu.be/Hjl6gbg9kmk",
+          "type": "Wideo"
+        },
+        "pair_programming/csd/2023": {
+          "name": "Programowanie w parach",
+          "type": "Wideo"
+        },
+        "video_intro_to_web_lab_part_1/csd/2023": {
+          "url": "https://www.youtube.com/watch?v=itx0RYOnoBs",
+          "type": "Wideo"
+        },
+        "formatting_html/csd/2023": {
+          "name": "Formatowanie HTML",
+          "url": "https://drive.google.com/file/d/1LHg1qYSF9pA22M7grp0DKgXmSh_yBgoF/view",
+          "type": "Zasoby"
+        },
+        "headings/csd/2023": {
+          "type": "Slajdy"
+        },
+        "headings_and_paragraphs/csd/2023": {
+          "name": "Nagłówki i akapity",
+          "url": "https://drive.google.com/file/d/1ei99hpoE35ohPQKQPsQHUF-W3pdpeoQ3/view",
+          "type": "Zasoby"
+        },
+        "lists/csd/2023": {
+          "name": "Listy",
+          "url": "https://drive.google.com/file/d/16QGQA0SxY0R5HzaOnuiId2ER-OGAl9Al/view",
+          "type": "Zasoby"
+        },
+        "video_debugging/csd/2023": {
+          "url": "https://youtu.be/auv10y-dN4s",
+          "type": "Wideo"
+        },
+        "video_pair_programming/csd/2023": {
+          "name": "Film: Programowanie parami",
+          "url": "https://youtu.be/q7d_JtyCq1A",
+          "type": "Wideo"
+        },
+        "html_web_page/csd/2023": {
+          "url": "https://docs.google.com/document/d/1__6xm9Bpb8c4lw21YH_Nbu-N1Tx7XoBzFnWw0gB9xKM/edit",
+          "type": "Kategoria"
+        },
+        "html_web_page_1/csd/2023": {
+          "url": "https://docs.google.com/document/d/1IFhjs4IjCM-mKs28FxJTDTADPS4XTa30aoQR1pG1570/",
+          "type": "Wzajemne recenzje"
+        },
+        "html_web_page_2/csd/2023": {
+          "url": "https://docs.google.com/document/d/1PJlbQlD7Ke9Alb82ci37BbDxJZqC4iUL6XozVoCWJPg",
+          "type": "Przewodnik projektu"
+        },
+        "mini-project_html_web_page/csd/2023": {
+          "name": "Mini-Projekt: strona internetowa HTML",
+          "type": "Slajdy"
+        },
+        "peer_review_-_html_web_page/csd/2023": {
+          "type": "Wzór"
+        },
+        "problem_solving_process_with_programming/csd/2023": {
+          "name": "Proces rozwiązywania problemów z programowaniem",
+          "type": "Zasoby"
+        },
+        "project_guide_-_html_project/csd/2023": {
+          "url": "https://docs.google.com/document/d/1KAf-fnnle9kn1wuqaFEApKSKi0klSnVVFzNOBftSIas/view",
+          "type": "Wzór"
+        },
+        "digital_footprint/csd/2023": {
+          "name": "Cyfrowy ślad",
+          "type": "Slajdy"
+        },
+        "social_sleuth/csd/2023": {
+          "name": "Społeczny detektyw",
+          "url": "https://docs.google.com/document/d/1FX4Js8yX867G4feEbRuWxCdDD2R33f-oHfm5sBD2rnw/edit",
+          "type": "Wzór"
+        },
+        "social_sleuth_1/csd/2023": {
+          "name": "Społeczny detektyw",
+          "url": "https://docs.google.com/document/d/1ZVXQlNMB6uwEI-eEWI2E3T8CtyqItlM5N44HcgY_zrE/view",
+          "type": "Przewodnik po zajęciach"
+        },
+        "intro_to_css_-_part_1/csd/2023": {
+          "name": "Wprowadzenie do CSS - Część 1",
+          "url": "https://www.youtube.com/watch?v=EP9QMdoXvXE",
+          "type": "Wideo"
+        },
+        "intro_to_css_-_part_2/csd/2023": {
+          "name": "Wprowadzenie do CSS - Część 2",
+          "url": "https://youtu.be/VgBVKlpLqsE",
+          "type": "Wideo"
+        },
+        "style_sheets/csd/2023": {
+          "url": "https://drive.google.com/file/d/1va-Va15QP2jyuRnmBRYUQg0ZkQk8PETj/view",
+          "type": "Zasoby"
+        },
+        "styling_text_with_css/csd/2023": {
+          "name": "Ustalanie stylu tekstu przy użyciu CSS",
+          "type": "Slajdy"
+        },
+        "text_properties/csd/2023": {
+          "url": "https://drive.google.com/file/d/1NoseEakxt9yOSuPbpnLgUu9-_Yso3EOB/view?usp=sharing",
+          "type": "Zasoby"
+        },
+        "mini-project_your_personal_style/csd/2023": {
+          "name": "Mini-Projekt: Twój osobisty styl",
+          "type": "Slajdy"
+        },
+        "peer_review_-_your_personal_style/csd/2023": {
+          "url": "https://docs.google.com/document/d/1y_uZjW57RlPgqvO8qjfVbGTVrTehSNGxUfaQXtPZLv0/view",
+          "type": "Wzór"
+        },
+        "project_guide_-_your_personal_style/csd/2023": {
+          "url": "https://docs.google.com/document/d/14Zlx1BC-QxW01D0vk_C5JTB77PCK80OatVFv1hcClZw/view",
+          "type": "Wzór"
+        },
+        "your_personal_style/csd/2023": {
+          "url": "https://docs.google.com/document/d/1znQdx7gLR3CcKYNnq0TJFPw3lpvfvzxIFa9-gZ_6twQ/edit",
+          "type": "Kategoria"
+        },
+        "your_personal_style_1/csd/2023": {
+          "url": "https://docs.google.com/document/d/1Wp_EdUOlhiEw4BQJBRwOidqcgBnJChHUTWOhZclOnBE",
+          "type": "Wzajemne recenzje"
+        },
+        "your_personal_style_2/csd/2023": {
+          "url": "https://docs.google.com/document/d/1vQBq4Aa0IYuQlKD_HgSawYgVwm-QKgO-UHGglzp_bTI/edit",
+          "type": "Przewodnik projektu"
+        },
+        "creative_commons_overview/csd/2023": {
+          "url": "https://www.youtube.com/watch?v=srVPLrmlBJY",
+          "type": "Wideo"
+        },
+        "intellectual_property/csd/2023": {
+          "name": "Własność intelektualna",
+          "type": "Slajdy"
+        },
+        "licensing_your_work/csd/2023": {
+          "url": "https://docs.google.com/document/d/1Fx-NsWsvtGJf4uMM4OuOAE3LCj1bFypoVcRahdpkre0/edit?usp=sharing",
+          "type": "Wzór"
+        },
+        "licensing_your_work_1/csd/2023": {
+          "url": "https://docs.google.com/document/d/1p0krn2ViHQcp2lPfwiqxbnn3e3ukXVnsmsPao4KaDgE/",
+          "type": "Przewodnik po zajęciach"
+        },
+        "creative_commons_search/csd/2023": {
+          "type": "Zasoby"
+        },
+        "images_in_html/csd/2023": {
+          "name": "Obrazy w HTML",
+          "type": "Zasoby"
+        },
+        "using_images/csd/2023": {
+          "name": "Korzystając z obrazów",
+          "type": "Slajdy"
+        },
+        "define_your_web_page/csd/2023": {
+          "type": "Przewodnik po zajęciach"
+        },
+        "define_your_webpage/csd/2023": {
+          "type": "Wzór"
+        },
+        "websites_for_expression/csd/2023": {
+          "type": "Slajdy"
+        },
+        "body_styling/csd/2023": {
+          "type": "Strona zasobów"
+        },
+        "layout_properties/csd/2023": {
+          "type": "Strona zasobów"
+        },
+        "styling_elements_with_css/csd/2023": {
+          "name": "Stylizowanie elementów przy pomocy CSS",
+          "type": "Slajdy"
+        },
+        "personal_web_page_-_prepare/csd/2023": {
+          "type": "Przewodnik projektu"
+        },
+        "project_guide_-_personal_web_page_-_prepare/csd/2023": {
+          "type": "Wzór"
+        },
+        "your_web_page_prepare/csd/2023": {
+          "type": "Slajdy"
+        },
+        "peer_review_-_personal_website/csd/2023": {
+          "type": "Wzór"
+        },
+        "personal_web_page/csd/2023": {
+          "type": "Wzajemne recenzje"
+        },
+        "personal_web_page_-_reflect/csd/2023": {
+          "type": "Przewodnik projektu"
+        },
+        "personal_web_page_-_student_checklist/csd/2023": {
+          "type": "Zasoby"
+        },
+        "personal_web_page_1/csd/2023": {
+          "type": "Kategoria"
+        },
+        "practices_reflection/csd/2023": {
+          "type": "Wzór"
+        },
+        "project_-_personal_web_page/csd/2023": {
+          "name": "Projekt - osobista strona internetowa",
+          "type": "Slajdy"
+        },
+        "project_guide_-_personal_web_page_-_reflect/csd/2023": {
+          "type": "Wzór"
+        },
+        "publishing_your_website/csd/2023": {
+          "name": "Publikowanie Twojej witryny ",
+          "type": "Wideo"
+        },
+        "websites_for_a_purpose/csd/2023": {
+          "name": "Strony internetowe dla określonego celu",
+          "type": "Wzór"
+        },
+        "websites_for_a_purpose_1/csd/2023": {
+          "name": "Strony internetowe dla określonego celu",
+          "type": "Przewodnik po zajęciach"
+        },
+        "websites_for_a_purpose_2/csd/2023": {
+          "name": "Strony internetowe dla określonego celu",
+          "type": "Slajdy"
+        },
+        "team_problem_solving/csd/2023": {
+          "name": "Zespołowe rozwiązywanie problemów",
+          "type": "Slajdy"
+        },
+        "video_managing_disagreement/csd/2023": {
+          "type": "Wideo"
+        },
+        "video_teamwork/csd/2023": {
+          "type": "Wideo"
+        },
+        "website_team_plan/csd/2023": {
+          "type": "Wzór"
+        },
+        "website_team_plan_1/csd/2023": {
+          "type": "Przewodnik po zajęciach"
+        },
+        "internet_scavenger_hunt/csd/2023": {
+          "type": "Przewodnik po zajęciach"
+        },
+        "links_and_research/csd/2023": {
+          "type": "Wzór"
+        },
+        "links_and_research_1/csd/2023": {
+          "type": "Przewodnik po zajęciach"
+        },
+        "sources_and_research/csd/2023": {
+          "name": "Źródła i badanie",
+          "type": "Slajdy"
+        },
+        "video_how_search_works/csd/2023": {
+          "name": "Jak działa wyszukiwanie",
+          "type": "Wideo"
+        },
+        "classes/csd/2023": {
+          "name": "Klasy",
+          "type": "Zasoby"
+        },
+        "css_classes/csd/2023": {
+          "name": "Klasy CSS",
+          "type": "Slajdy"
+        },
+        "plan_a_multi-page_website/csd/2023": {
+          "type": "Przewodnik projektu"
+        },
+        "planning_a_multi-page_site/csd/2023": {
+          "type": "Slajdy"
+        },
+        "project_guide_-_website_for_a_purpose_-_prepare/csd/2023": {
+          "type": "Wzór"
+        },
+        "website_for_a_purpose/csd/2023": {
+          "type": "Kategoria"
+        },
+        "hyperlinks/csd/2023": {
+          "name": "Odnośniki",
+          "type": "Zasoby"
+        },
+        "linking_pages/csd/2023": {
+          "name": "Łączenie stron ",
+          "type": "Slajdy"
+        },
+        "project_-_website_for_a_purpose/csd/2023": {
+          "name": "Projekt - Strona internetowa do określonego celu",
+          "type": "Slajdy"
+        },
+        "peer_review_-_final_personal_website/csd/2023": {
+          "type": "Wzór"
+        },
+        "peer_review_and_final_touches/csd/2023": {
+          "name": "Weryfikacja krzyżowa i ostatnie wykończenia",
+          "type": "Slajdy"
+        },
+        "practices_reflection_1/csd/2023": {
+          "type": "Wzór"
+        },
+        "project_guide_-_website_for_a_purpose_-_reflect/csd/2023": {
+          "type": "Wzór"
+        },
+        "website_for_a_purpose_-_reflect/csd/2023": {
+          "type": "Przewodnik projektu"
+        },
+        "website_for_a_purpose_1/csd/2023": {
+          "type": "Wzajemne recenzje"
+        },
+        "all_code_5/csd/2023": {
+          "name": "Cały kod"
+        },
+        "all_resources_6/csd/2023": {
+          "name": "Wszystkie zasoby"
+        },
+        "all_standards_6/csd/2023": {
+          "name": "Wszystkie standardy"
+        },
+        "all_vocabulary_6/csd/2023": {
+          "name": "Całe słownictwo"
+        },
+        "csd_guide_to_assessment_3/csd/2023": {
+          "name": "Przewodnik po ocenie CSD"
+        },
+        "csd_guide_to_curriculum_videos_3/csd/2023": {
+          "name": "Przewodnik CSD dotyczący filmów o programach nauczania"
+        },
+        "csd_guide_to_teaching_and_learning_strategies_3/csd/2023": {
+          "name": "Przewodnik CSD dotyczący strategii nauczania i uczenia się"
+        },
+        "the_problem_solving_process_with_design/csd/2023": {
+          "name": "Proces rozwiązywania problemów z projektowaniem"
+        },
+        "the_problem_solving_process_with_programming_1/csd/2023": {
+          "name": "Proces rozwiązywania problemów z programowaniem"
+        },
+        "_warm_up_word_search_key_/csd/2023": {
+          "type": "Klucz odpowiedzi"
+        },
+        "app_design_for_users/csd/2023": {
+          "type": "Przewodnik po zajęciach"
+        },
+        "exemplar_-_animation_and_game_design_activity_guide/csd/2023": {
+          "type": "Wzór"
+        },
+        "programming_for_a_purpose/csd/2023": {
+          "type": "Slajdy"
+        },
+        "_warm_up_word_search_unit_3/csd/2023": {
+          "type": "Przewodnik po zajęciach"
+        },
+        "animation_and_game_design_template/csd/2023": {
+          "type": "Zasoby"
+        },
+        "drawing_shapes/csd/2023": {
+          "type": "Wzór"
+        },
+        "drawing_shapes_version_a_/csd/2023": {
+          "type": "Przewodnik po zajęciach"
+        },
+        "drawing_shapes_version_b_/csd/2023": {
+          "type": "Przewodnik po zajęciach"
+        },
+        "plotting_shapes/csd/2023": {
+          "name": "Rysowanie kształtów",
+          "type": "Slajdy"
+        },
+        "sample_shape_drawing/csd/2023": {
+          "type": "Wzór"
+        },
+        "drawing_in_game_lab/csd/2023": {
+          "name": "Rysowanie w laboratorium gier",
+          "type": "Slajdy"
+        },
+        "drawing_in_game_lab_-_part_1/csd/2023": {
+          "url": "https://youtu.be/PXn9gKiKKFo",
+          "type": "Wideo"
+        },
+        "drawing_in_game_lab_-_part_2/csd/2023": {
+          "url": "https://youtu.be/QLabeWhw_O0",
+          "type": "Wideo"
+        },
+        "drawing_shapes_1/csd/2023": {
+          "url": "https://drive.google.com/file/d/1zlXf6POVzO078N25Xos87oTrMaJ_p3Iq/view?usp=sharing",
+          "type": "Zasoby"
+        },
+        "shapes_and_parameters/csd/2023": {
+          "url": "https://drive.google.com/file/d/1uEZ_gMcXJOCd41k6uTKlxsVVWEVrFikj/view?usp=sharing",
+          "type": "Zasoby"
+        },
+        "shapes_and_parameters_1/csd/2023": {
+          "type": "Slajdy"
+        },
+        "introduction_to_variables/csd/2023": {
+          "url": "https://youtu.be/UG7Q1Sr0_F0",
+          "type": "Wideo"
+        },
+        "naming_variables/csd/2023": {
+          "url": "https://drive.google.com/file/d/1GGtHE-IK3S9rN6KoaE9jhdzTK8emO_Kw/view",
+          "type": "Zasoby"
+        },
+        "variables/csd/2023": {
+          "name": "Zmienne",
+          "type": "Zasoby"
+        },
+        "variables_1/csd/2023": {
+          "name": "Zmienne",
+          "type": "Wideo"
+        },
+        "variables_2/csd/2023": {
+          "name": "Zmienne",
+          "type": "Slajdy"
+        },
+        "random_numbers/csd/2023": {
+          "name": "Losowe liczby",
+          "type": "Zasoby"
+        },
+        "random_numbers_1/csd/2023": {
+          "name": "Losowe liczby",
+          "type": "Slajdy"
+        },
+        "activity_guide_-_robot_face_planning/csd/2023": {
+          "type": "Przewodnik po zajęciach"
+        },
+        "mini-project_-_robot_faces/csd/2023": {
+          "type": "Slajdy"
+        },
+        "mini-project_-_robot_faces_1/csd/2023": {
+          "type": "Wzór"
+        },
+        "problem_solving_with_programming/csd/2023": {
+          "type": "Zasoby"
+        },
+        "robot_faces/csd/2023": {
+          "type": "Kategoria"
+        },
+        "animation_tab/csd/2023": {
+          "name": "Karta Animacja",
+          "url": "https://drive.google.com/file/d/1ytsY-Hv17uCKmwY4Af7OpljWdsLtGfTn/view",
+          "type": "Zasoby"
+        },
+        "introduction_to_sprites/csd/2023": {
+          "type": "Wideo"
+        },
+        "sprites/csd/2023": {
+          "name": "Duszki",
+          "url": "https://drive.google.com/file/d/1WS_5m8Ffy0u4OKILPEVSjs2KamZr2a41/view",
+          "type": "Zasoby"
+        },
+        "sprites_1/csd/2023": {
+          "name": "Duszki",
+          "type": "Slajdy"
+        },
+        "the_animation_tab/csd/2023": {
+          "name": "Karta Animacji",
+          "type": "Wideo"
+        },
+        "sprite_properties/csd/2023": {
+          "name": "Właściwości duszka",
+          "type": "Zasoby"
+        },
+        "sprite_properties_1/csd/2023": {
+          "name": "Właściwości duszka",
+          "type": "Slajdy"
+        },
+        "sprite_properties_needs_updating_/csd/2023": {
+          "name": "Właściwości duszka",
+          "type": "Wideo"
+        },
+        "text/csd/2023": {
+          "name": "Tekst",
+          "type": "Slajdy"
+        },
+        "captioned_scenes/csd/2023": {
+          "type": "Kategoria"
+        },
+        "mini-project_-_captioned_scenes/csd/2023": {
+          "type": "Slajdy"
+        },
+        "mini_project_-_captioned_scenes/csd/2023": {
+          "type": "Wzór"
+        },
+        "sprite_scene_planning/csd/2023": {
+          "type": "Przewodnik po zajęciach"
+        },
+        "flipbook_example_-_by_marnic_bos/csd/2023": {
+          "url": "https://youtu.be/hol0p29cd8o",
+          "type": "Wideo"
+        },
+        "introduction_to_the_draw_loop/csd/2023": {
+          "url": "https://youtu.be/G6QJeuHhqCM",
+          "type": "Wideo"
+        },
+        "the_draw_loop/csd/2023": {
+          "url": "https://drive.google.com/file/d/1MxfQObaxvA82Y50YHIRTxUa55gZMNlSW/view?usp=sharing",
+          "type": "Zasoby"
+        },
+        "the_draw_loop_1/csd/2023": {
+          "type": "Slajdy"
+        },
+        "sprite_movement/csd/2023": {
+          "name": "Ruch duszka",
+          "url": "https://youtu.be/G666sFzAg5g",
+          "type": "Wideo"
+        },
+        "sprite_movement_1/csd/2023": {
+          "name": "Ruch duszka",
+          "type": "Slajdy"
+        },
+        "animated_scene/csd/2023": {
+          "name": "Animowana scena",
+          "type": "Kategoria"
+        },
+        "animated_scene_1/csd/2023": {
+          "name": "Animowana scena",
+          "type": "Przewodnik po zajęciach"
+        },
+        "animated_scene_planning/csd/2023": {
+          "name": "Planowanie animowanej sceny",
+          "type": "Wzór"
+        },
+        "mini-project_-_animation/csd/2023": {
+          "type": "Slajdy"
+        },
+        "boolean_expressions/csd/2023": {
+          "name": "Wyrażenia logiczne",
+          "url": "https://youtu.be/_j9nvYKaOVE",
+          "type": "Wideo"
+        },
+        "booleans_and_comparison_operators/csd/2023": {
+          "url": "https://drive.google.com/file/d/1gGmtvyZpXVcH6Vrju9FX73X7qlZLIBvt/view?usp=sharing",
+          "type": "Zasoby"
+        },
+        "conditional_statements/csd/2023": {
+          "name": "Instrukcje warunkowe",
+          "url": "https://youtu.be/TuLIK7DcPWs",
+          "type": "Wideo"
+        },
+        "conditionals/csd/2023": {
+          "name": "Zdania z warunkami",
+          "type": "Slajdy"
+        },
+        "if_statements/csd/2023": {
+          "type": "Zasoby"
+        },
+        "keyboard_input/csd/2023": {
+          "name": "Wejście z klawiatury",
+          "type": "Slajdy"
+        },
+        "if-else_statements/csd/2023": {
+          "url": "https://drive.google.com/file/d/1_RzGKuxpESYxpD__X3RdeTm89pTYcfB4/view?usp=sharing",
+          "type": "Zasoby"
+        },
+        "if_else_statements/csd/2023": {
+          "name": "Instrukcje If/Else",
+          "url": "https://youtu.be/6m6FFUJsOzo",
+          "type": "Wideo"
+        },
+        "mouse_input/csd/2023": {
+          "name": "Użycie myszy",
+          "type": "Slajdy"
+        },
+        "extra_code_in_challenge_levels/csd/2023": {
+          "type": "Zasoby"
+        },
+        "interactive_card/csd/2023": {
+          "type": "Wzór"
+        },
+        "interactive_card_-_marked_rubrics/csd/2023": {
+          "type": "Wzór"
+        },
+        "interactive_card_-_student_checklist/csd/2023": {
+          "type": "Zasoby"
+        },
+        "interactive_card_1/csd/2023": {
+          "type": "Przewodnik po zajęciach"
+        },
+        "interactive_card_2/csd/2023": {
+          "type": "Przewodnik po zajęciach"
+        },
+        "interactive_card_3/csd/2023": {
+          "type": "Kategoria"
+        },
+        "project_-_interactive_card/csd/2023": {
+          "name": "Projekt - Interaktywna karta",
+          "type": "Slajdy"
+        },
+        "velocity/csd/2023": {
+          "name": "Prędkość",
+          "url": "https://youtu.be/zcP94yMYqrI",
+          "type": "Wideo"
+        },
+        "velocity_1/csd/2023": {
+          "name": "Prędkość",
+          "url": "https://drive.google.com/file/d/10n2QcpY__sDlycr09Xar6o-2iDAb0P49/view?usp=sharing",
+          "type": "Zasoby"
+        },
+        "velocity_2/csd/2023": {
+          "name": "Prędkość",
+          "type": "Slajdy"
+        },
+        "collision_detection/csd/2023": {
+          "name": "Wykrywanie kolizji",
+          "type": "Wzór"
+        },
+        "collision_detection_1/csd/2023": {
+          "name": "Wykrywanie kolizji",
+          "type": "Zasoby"
+        },
+        "collision_detection_2/csd/2023": {
+          "name": "Wykrywanie kolizji",
+          "type": "Slajdy"
+        },
+        "collision_detection_version_a_/csd/2023": {
+          "type": "Przewodnik po zajęciach"
+        },
+        "collision_detection_version_b_/csd/2023": {
+          "type": "Przewodnik po zajęciach"
+        },
+        "mini-project_-_side_scroller/csd/2023": {
+          "type": "Slajdy"
+        },
+        "mini-project_guide_-_side_scroller/csd/2023": {
+          "type": "Wzór"
+        },
+        "side_scroller/csd/2023": {
+          "name": "Suwak boczny",
+          "type": "Kategoria"
+        },
+        "side_scroller_1/csd/2023": {
+          "name": "Suwak boczny",
+          "type": "Przewodnik po zajęciach"
+        },
+        "complex_sprite_movement/csd/2023": {
+          "name": "Złożony ruch duszka",
+          "type": "Slajdy"
+        },
+        "velocity_and_the_counter_pattern/csd/2023": {
+          "type": "Zasoby"
+        },
+        "collisions/csd/2023": {
+          "name": "Kolizje",
+          "type": "Slajdy"
+        },
+        "flyer_game/csd/2023": {
+          "name": "Gra Flyer",
+          "type": "Kategoria"
+        },
+        "flyer_game_-_project_guide/csd/2023": {
+          "type": "Wzór"
+        },
+        "flyer_game_1/csd/2023": {
+          "name": "Gra Flyer",
+          "type": "Przewodnik po zajęciach"
+        },
+        "mini-project_-_flyer_game/csd/2023": {
+          "type": "Slajdy"
+        },
+        "functions/csd/2023": {
+          "name": "Funkcje",
+          "type": "Wideo"
+        },
+        "functions_1/csd/2023": {
+          "name": "Funkcje",
+          "type": "Zasoby"
+        },
+        "functions_2/csd/2023": {
+          "name": "Funkcje",
+          "type": "Slajdy"
+        },
+        "the_game_design_process/csd/2023": {
+          "name": "Proces projektowania gier",
+          "type": "Slajdy"
+        },
+        "planning_your_platform_game/csd/2023": {
+          "type": "Wzór"
+        },
+        "planning_your_platform_game_1/csd/2023": {
+          "type": "Przewodnik po zajęciach"
+        },
+        "using_the_game_design_process/csd/2023": {
+          "name": "Używanie procesu projektowania gier",
+          "type": "Slajdy"
+        },
+        "make_your_own_game/csd/2023": {
+          "type": "Wzór"
+        },
+        "make_your_own_game_-_sample_marked_rubrics/csd/2023": {
+          "type": "Wzór"
+        },
+        "make_your_own_game_-_student_checklist/csd/2023": {
+          "type": "Zasoby"
+        },
+        "make_your_own_game_1/csd/2023": {
+          "type": "Przewodnik po zajęciach"
+        },
+        "make_your_own_game_2/csd/2023": {
+          "type": "Przewodnik po zajęciach"
+        },
+        "make_your_own_game_3/csd/2023": {
+          "type": "Kategoria"
+        },
+        "project_-_design_a_game/csd/2023": {
+          "name": "Projekt - Zaprojektuj grę",
+          "type": "Slajdy"
+        },
+        "all_code_6/csd/2023": {
+          "name": "Cały kod"
+        },
+        "all_resources_7/csd/2023": {
+          "name": "Wszystkie zasoby"
+        },
+        "all_standards_7/csd/2023": {
+          "name": "Wszystkie standardy"
+        },
+        "all_vocabulary_7/csd/2023": {
+          "name": "Całe słownictwo"
+        },
+        "csd_guide_to_assessment_4/csd/2023": {
+          "name": "Przewodnik po ocenie CSD"
+        },
+        "csd_guide_to_curriculum_videos_4/csd/2023": {
+          "name": "Przewodnik CSD dotyczący filmów o programach nauczania"
+        },
+        "csd_guide_to_teaching_and_learning_strategies_4/csd/2023": {
+          "name": "Przewodnik CSD dotyczący strategii nauczania i uczenia się"
+        },
+        "the_problem_solving_process_3/csd/2023": {
+          "name": "Proces rozwiązywania problemów z projektowaniem"
+        },
+        "designing_with_empathy/csd/2023": {
+          "name": "Projektowanie z empatią",
+          "url": "https://docs.google.com/document/d/10uAtyNYjzc91_hMTBRHRkSSxx7QJRZptkguzeH8Dwqg/view",
+          "type": "Przewodnik po zajęciach"
+        },
+        "designing_with_empathy_1/csd/2023": {
+          "name": "Projektowanie z empatią",
+          "url": "https://docs.google.com/document/d/1iwf4Y8AYLQFAuHSq-k-FnASFI7Wt8w7skZKFclggBcA/view",
+          "type": "Wzór"
+        },
+        "designing_with_empathy_2/csd/2023": {
+          "name": "Projektowanie z empatią",
+          "type": "Slajdy"
+        },
+        "problem_solving_process_with_empathy/csd/2023": {
+          "url": "https://code.org/curriculum/docs/csd/PSPE.png",
+          "type": "Obraz"
+        },
+        "profile_1/csd/2023": {
+          "type": "Profil użytkownika"
+        },
+        "profile_2/csd/2023": {
+          "type": "Profil użytkownika"
+        },
+        "profile_3/csd/2023": {
+          "type": "Profil użytkownika"
+        },
+        "profile_4/csd/2023": {
+          "type": "Profil użytkownika"
+        },
+        "reacting_as_your_user/csd/2023": {
+          "type": "Przewodnik po zajęciach"
+        },
+        "reacting_as_your_user_profile_1/csd/2023": {
+          "type": "Wzór"
+        },
+        "reacting_as_your_user_profile_2/csd/2023": {
+          "type": "Wzór"
+        },
+        "reacting_as_your_user_profile_3/csd/2023": {
+          "type": "Wzór"
+        },
+        "reacting_as_your_user_profile_4/csd/2023": {
+          "type": "Wzór"
+        },
+        "understanding_your_user/csd/2023": {
+          "name": "Zrozumienie twojego użytkownika",
+          "type": "Slajdy"
+        },
+        "the_design_thinking_process/csd/2023": {
+          "type": "Wideo"
+        },
+        "user_centered_design_-_define_and_prepare/csd/2023": {
+          "type": "Slajdy"
+        },
+        "user_centered_design_define_prepare_/csd/2023": {
+          "type": "Wzór"
+        },
+        "user_centered_design_define_prepare_2021/csd/2023": {
+          "type": "Przewodnik po zajęciach"
+        },
+        "user_centered_design_-_try_and_reflect/csd/2023": {
+          "type": "Slajdy"
+        },
+        "user_centered_design_try_reflect_/csd/2023": {
+          "type": "Wzór"
+        },
+        "user_centered_design_try_reflect_2021/csd/2023": {
+          "type": "Przewodnik po zajęciach"
+        },
+        "user_interface_screens/csd/2023": {
+          "type": "Zasoby"
+        },
+        "user_interfaces/csd/2023": {
+          "name": "Interfejsy użytkownika",
+          "type": "Slajdy"
+        },
+        "user_testing_computer_/csd/2023": {
+          "type": "Przewodnik po zajęciach"
+        },
+        "user_testing_user_/csd/2023": {
+          "type": "Przewodnik po zajęciach"
+        },
+        "feedback_and_testing/csd/2023": {
+          "name": "Informacje zwrotne i testowanie",
+          "type": "Slajdy"
+        },
+        "improve_a_screen/csd/2023": {
+          "type": "Wzór"
+        },
+        "improve_a_screen_1/csd/2023": {
+          "type": "Przewodnik po zajęciach"
+        },
+        "prototype_feedback/csd/2023": {
+          "type": "Zasoby"
+        },
+        "example_user_interviews/csd/2023": {
+          "type": "Zasoby"
+        },
+        "identifying_user_needs/csd/2023": {
+          "name": "Identyfikowanie potrzeb użytkownika",
+          "type": "Slajdy"
+        },
+        "user_interviews/csd/2023": {
+          "type": "Przewodnik po zajęciach"
+        },
+        "example_project_-_cooking_app_-_convincing_evidence/csd/2023": {
+          "type": "Wzór"
+        },
+        "example_project_-_cooking_app_-_extensive_evidence/csd/2023": {
+          "type": "Wzór"
+        },
+        "example_project_-_language_app_-_convincing_evidence/csd/2023": {
+          "type": "Wzór"
+        },
+        "example_project_-_language_app_-_limited_evidence/csd/2023": {
+          "type": "Wzór"
+        },
+        "paper_prototypes/csd/2023": {
+          "name": "Prototypy na papierze",
+          "type": "Kategoria"
+        },
+        "project_-_paper_prototype/csd/2023": {
+          "name": "Projekt - Prototyp papierowy",
+          "type": "Slajdy"
+        },
+        "app_design_kickoff/csd/2023": {
+          "type": "Przewodnik po zajęciach"
+        },
+        "app_design_kickoff_1/csd/2023": {
+          "type": "Wzór"
+        },
+        "designing_apps_for_good/csd/2023": {
+          "name": "Projektowanie aplikacji na dobre",
+          "type": "Slajdy"
+        },
+        "market_research/csd/2023": {
+          "name": "Badania rynku",
+          "type": "Przewodnik po zajęciach"
+        },
+        "market_research_-_research_areas/csd/2023": {
+          "type": "Zasoby"
+        },
+        "market_research_1/csd/2023": {
+          "name": "Badania rynku",
+          "type": "Wzór"
+        },
+        "market_research_2/csd/2023": {
+          "name": "Badania rynku",
+          "type": "Slajdy"
+        },
+        "explore_ui_elements/csd/2023": {
+          "type": "Przewodnik po zajęciach"
+        },
+        "explore_ui_elements_1/csd/2023": {
+          "type": "Wzór"
+        },
+        "exploring_ui_elements/csd/2023": {
+          "name": "Odkrywanie elementów interfejsu użytkownika (UI)",
+          "type": "Slajdy"
+        },
+        "build_a_paper_prototype/csd/2023": {
+          "type": "Slajdy"
+        },
+        "design_mode/csd/2023": {
+          "name": "Tryb projektowania",
+          "type": "Zasoby"
+        },
+        "design_mode_elements/csd/2023": {
+          "type": "Zasoby"
+        },
+        "paper_prototype_planning/csd/2023": {
+          "type": "Przewodnik po zajęciach"
+        },
+        "paper_prototype_planning_1/csd/2023": {
+          "type": "Wzór"
+        },
+        "paper_prototype_user_testing/csd/2023": {
+          "type": "Przewodnik po zajęciach"
+        },
+        "paper_prototype_user_testing_1/csd/2023": {
+          "type": "Wzór"
+        },
+        "prototype_testing/csd/2023": {
+          "name": "Testowanie prototypu",
+          "type": "Slajdy"
+        },
+        "user_test_cases/csd/2023": {
+          "type": "Przewodnik po zajęciach"
+        },
+        "user_test_cases_1/csd/2023": {
+          "type": "Wzór"
+        },
+        "what_s_for_lunch_testing/csd/2023": {
+          "type": "Wideo"
+        },
+        "design_mode_in_app_lab/csd/2023": {
+          "type": "Slajdy"
+        },
+        "intro_to_design_mode/csd/2023": {
+          "type": "Wideo"
+        },
+        "model_screen_design/csd/2023": {
+          "type": "Zasoby"
+        },
+        "screen_design_2021_/csd/2023": {
+          "type": "Przewodnik po zajęciach"
+        },
+        "screen_ownership_2021_/csd/2023": {
+          "type": "Przewodnik po zajęciach"
+        },
+        "build_a_digital_prototype/csd/2023": {
+          "name": "Zbuduj cyfrowy prototyp",
+          "type": "Slajdy"
+        },
+        "events_in_app_lab/csd/2023": {
+          "name": "Zdarzenia w AppLab",
+          "type": "Wideo"
+        },
+        "events_in_app_lab_1/csd/2023": {
+          "name": "Zdarzenia w AppLab",
+          "type": "Wideo"
+        },
+        "events_in_app_lab_2/csd/2023": {
+          "name": "Zdarzenia w AppLab",
+          "type": "Slajdy"
+        },
+        "changing_screens/csd/2023": {
+          "type": "Zasoby"
+        },
+        "importing_screens/csd/2023": {
+          "type": "Zasoby"
+        },
+        "linking_prototype_screens/csd/2023": {
+          "type": "Slajdy"
+        },
+        "multi-screen_apps/csd/2023": {
+          "name": "Aplikacje wieloekranowe",
+          "type": "Zasoby"
+        },
+        "responding_to_user_input/csd/2023": {
+          "type": "Zasoby"
+        },
+        "digital_prototype_user_testing/csd/2023": {
+          "type": "Przewodnik po zajęciach"
+        },
+        "testing_the_app/csd/2023": {
+          "name": "Testowanie aplikacji",
+          "type": "Slajdy"
+        },
+        "bugs_and_features/csd/2023": {
+          "name": "Błędy i właściwości",
+          "type": "Przewodnik po zajęciach"
+        },
+        "bugs_and_features_1/csd/2023": {
+          "name": "Błędy i właściwości",
+          "type": "Wzór"
+        },
+        "bugs_and_features_2/csd/2023": {
+          "name": "Błędy i właściwości",
+          "type": "Slajdy"
+        },
+        "updating_your_prototype/csd/2023": {
+          "name": "Aktualizacja Twojego prototypu",
+          "type": "Przewodnik po zajęciach"
+        },
+        "updating_your_prototype_1/csd/2023": {
+          "name": "Aktualizacja Twojego prototypu",
+          "type": "Slajdy"
+        },
+        "app_presentation/csd/2023": {
+          "name": "Prezentacja aplikacji",
+          "type": "Kategoria"
+        },
+        "app_presentation_1/csd/2023": {
+          "name": "Prezentacja aplikacji",
+          "type": "Wzór"
+        },
+        "app_presentation_template/csd/2023": {
+          "type": "Zestaw slajdów"
+        },
+        "peer_review_1/csd/2023": {
+          "type": "Wzór"
+        },
+        "peer_review_2/csd/2023": {
+          "type": "Wzór"
+        },
+        "project_-_app_presentation/csd/2023": {
+          "name": "Projekt - Prezentacja aplikacji",
+          "type": "Slajdy"
+        },
+        "sample_marked_rubrics_1/csd/2023": {
+          "type": "Wzór"
+        },
+        "all_resources_3/csd/2023": {
+          "name": "Wszystkie zasoby"
+        },
+        "all_standards_3/csd/2023": {
+          "name": "Wszystkie standardy"
+        },
+        "all_vocabulary_3/csd/2023": {
+          "name": "Całe słownictwo"
+        },
+        "csd_guide_to_assessment_5/csd/2023": {
+          "name": "Przewodnik po ocenie CSD"
+        },
+        "csd_guide_to_curriculum_videos_5/csd/2023": {
+          "name": "Przewodnik CSD dotyczący filmów o programach nauczania"
+        },
+        "csd_guide_to_teaching_and_learning_strategies_5/csd/2023": {
+          "name": "Przewodnik CSD dotyczący strategii nauczania i uczenia się"
+        },
+        "meals_data/csd/2023": {
+          "name": "Dane dotyczące posiłków",
+          "url": "https://docs.google.com/document/d/1nVUNkvIqz4sQjXnr52eBd17Pmi61Ir2aTH6ulVnco9o/edit",
+          "type": "Zasoby"
+        },
+        "representation_matters/csd/2023": {
+          "name": "Reprezentacja ma znaczenie",
+          "url": "https://docs.google.com/document/d/17LnkRYXZMiyjC9enTcZRp2akfySN_YYmMe8fJRmkF4E/edit",
+          "type": "Wzór"
+        },
+        "representation_matters_1/csd/2023": {
+          "name": "Reprezentacja ma znaczenie",
+          "url": "https://docs.google.com/document/d/1wU8QANCmyz_DiJf2vdg2QPqKHq1YE0XDLGJmEsbKfiU/edit?usp=sharing",
+          "type": "Przewodnik po zajęciach"
+        },
+        "representation_matters_2/csd/2023": {
+          "name": "Reprezentacja ma znaczenie",
+          "type": "Slajdy"
+        },
+        "patterns_and_representation/csd/2023": {
+          "name": "Wzorce i reprezentacje",
+          "type": "Slajdy"
+        },
+        "representing_information/csd/2023": {
+          "name": "Reprezentowanie informacji",
+          "type": "Przewodnik po zajęciach"
+        },
+        "representing_information_1/csd/2023": {
+          "type": "Wzór"
+        },
+        "representing_information_2/csd/2023": {
+          "type": "Wzór"
+        },
+        "ascii/csd/2023": {
+          "type": "Wzór"
+        },
+        "ascii_and_binary_representation/csd/2023": {
+          "name": "ASCII i reprezentacja binarna",
+          "type": "Slajdy"
+        },
+        "ascii_challenges/csd/2023": {
+          "type": "Przewodnik po zajęciach"
+        },
+        "ascii_challenges_1/csd/2023": {
+          "type": "Klucz odpowiedzi"
+        },
+        "ascii_text/csd/2023": {
+          "type": "Zasoby"
+        },
+        "representing_images/csd/2023": {
+          "name": "Reprezentowanie obrazów",
+          "type": "Slajdy"
+        },
+        "binary_and_data/csd/2023": {
+          "type": "Wideo"
+        },
+        "number_cards_1/csd/2023": {
+          "type": "Manipulacje"
+        },
+        "representing_numbers/csd/2023": {
+          "name": "Reprezentacja liczb",
+          "type": "Wzór"
+        },
+        "representing_numbers_1/csd/2023": {
+          "name": "Reprezentacja liczb",
+          "type": "Slajdy"
+        },
+        "representing_numbers_2021/csd/2023": {
+          "type": "Przewodnik po zajęciach"
+        },
+        "activity_guide_-_pet_records/csd/2023": {
+          "type": "Przewodnik po zajęciach"
+        },
+        "ascii_to_binary_table/csd/2023": {
+          "type": "Referencja"
+        },
+        "combining_representations/csd/2023": {
+          "name": "Łączenie reprezentacji",
+          "type": "Slajdy"
+        },
+        "pet_records/csd/2023": {
+          "type": "Wzór"
+        },
+        "keeping_data_secret/csd/2023": {
+          "name": "Zachowywanie danych w tajemnicy",
+          "type": "Slajdy"
+        },
+        "medical_records/csd/2023": {
+          "type": "Przewodnik po zajęciach"
+        },
+        "medical_records_1/csd/2023": {
+          "type": "Klucz odpowiedzi"
+        },
+        "secret_messages_2021/csd/2023": {
+          "type": "Przewodnik po zajęciach"
+        },
+        "create_a_representation/csd/2023": {
+          "type": "Wzór"
+        },
+        "create_a_representation_2/csd/2023": {
+          "type": "Kategoria"
+        },
+        "create_a_representation_3/csd/2023": {
+          "type": "Slajdy"
+        },
+        "create_a_representation_marked_rubrics/csd/2023": {
+          "type": "Wzór"
+        },
+        "problem_solving_with_data/csd/2023": {
+          "type": "Wzór"
+        },
+        "problem_solving_with_data_1/csd/2023": {
+          "type": "Przewodnik po zajęciach"
+        },
+        "problem_solving_with_data_2/csd/2023": {
+          "type": "Slajdy"
+        },
+        "structuring_data/csd/2023": {
+          "name": "Strukturyzacja danych",
+          "type": "Wzór"
+        },
+        "structuring_data_1/csd/2023": {
+          "name": "Strukturyzacja danych",
+          "type": "Slajdy"
+        },
+        "structuring_data_2021/csd/2023": {
+          "type": "Przewodnik po zajęciach"
+        },
+        "interpreting_data/csd/2023": {
+          "name": "Interpretacja danych",
+          "type": "Wzór"
+        },
+        "interpreting_data_1/csd/2023": {
+          "name": "Interpretacja danych",
+          "type": "Przewodnik po zajęciach"
+        },
+        "interpreting_data_2/csd/2023": {
+          "name": "Interpretacja danych",
+          "type": "Zasoby"
+        },
+        "interpreting_data_3/csd/2023": {
+          "name": "Interpretacja danych",
+          "type": "Slajdy"
+        },
+        "making_decisions_with_data/csd/2023": {
+          "type": "Wzór"
+        },
+        "making_decisions_with_data_1/csd/2023": {
+          "name": "Podejmowanie decyzji na podstawie danych",
+          "type": "Przewodnik po zajęciach"
+        },
+        "making_decisions_with_data_2/csd/2023": {
+          "name": "Podejmowanie decyzji na podstawie danych",
+          "type": "Slajdy"
+        },
+        "problem_solving_process_with_data/csd/2023": {
+          "type": "Zasoby"
+        },
+        "automating_data_decisions/csd/2023": {
+          "name": "Automatyzacja decyzji dotyczących danych",
+          "type": "Wzór"
+        },
+        "automating_data_decisions_1/csd/2023": {
+          "name": "Automatyzacja decyzji dotyczących danych",
+          "type": "Zasoby"
+        },
+        "automating_data_decisions_2/csd/2023": {
+          "name": "Automatyzacja decyzji dotyczących danych",
+          "type": "Przewodnik po zajęciach"
+        },
+        "automating_data_decisions_3/csd/2023": {
+          "name": "Automatyzacja decyzji dotyczących danych",
+          "type": "Slajdy"
+        },
+        "amazon_and_data/csd/2023": {
+          "type": "Wideo"
+        },
+        "data_in_the_real_world/csd/2023": {
+          "name": "Dane w świecie rzeczywistym",
+          "type": "Wzór"
+        },
+        "data_in_the_real_world_1/csd/2023": {
+          "name": "Dane w świecie rzeczywistym",
+          "type": "Przewodnik po zajęciach"
+        },
+        "netflix_and_data/csd/2023": {
+          "type": "Wideo"
+        },
+        "problem_solving_with_big_data/csd/2023": {
+          "name": "Rozwiązywanie problemów z giga danymi",
+          "type": "Slajdy"
+        },
+        "waze_and_data/csd/2023": {
+          "type": "Wideo"
+        },
+        "data_and_machine_learning/csd/2023": {
+          "name": "Dane i uczenie maszynowe",
+          "type": "Slajdy"
+        },
+        "video_impact_on_society/csd/2023": {
+          "type": "Wideo"
+        },
+        "video_machine_learning/csd/2023": {
+          "name": "Wideo: uczenie maszynowe",
+          "url": "https://www.youtube.com/watch?v=OeU5m6vRyCk",
+          "type": "Wideo"
+        },
+        "video_training_data_and_bias/csd/2023": {
+          "type": "Wideo"
+        },
+        "make_a_recommendation/csd/2023": {
+          "type": "Wzajemne recenzje"
+        },
+        "make_a_recommendation_-_student_checklist/csd/2023": {
+          "url": "https://docs.google.com/document/d/1E_k-oOdK8c7CuN1TcR5GWomeAGXvXfafgzLHda1w6J4/edit"
+        },
+        "make_a_recommendation_1/csd/2023": {
+          "type": "Kategoria"
+        },
+        "make_a_recommendation_2/csd/2023": {
+          "type": "Przewodnik projektu"
+        },
+        "peer_review_exemplar_1/csd/2023": {
+          "type": "Wzór"
+        },
+        "peer_review_exemplar_2/csd/2023": {
+          "type": "Wzór"
+        },
+        "project_-_make_a_recommendation/csd/2023": {
+          "name": "Projekt - zarekomenduj",
+          "type": "Slajdy"
+        },
+        "all_code_3/csd/2023": {
+          "name": "Cały kod"
+        },
+        "all_resources_4/csd/2023": {
+          "name": "Wszystkie zasoby"
+        },
+        "all_standards_4/csd/2023": {
+          "name": "Wszystkie standardy"
+        },
+        "all_vocabulary_4/csd/2023": {
+          "name": "Całe słownictwo"
+        },
+        "csd_guide_to_assessment_6/csd/2023": {
+          "name": "Przewodnik po ocenie CSD"
+        },
+        "csd_guide_to_curriculum_videos_6/csd/2023": {
+          "name": "Przewodnik CSD dotyczący filmów o programach nauczania"
+        },
+        "csd_guide_to_teaching_and_learning_strategies_6/csd/2023": {
+          "name": "Przewodnik CSD dotyczący strategii nauczania i uczenia się"
+        },
+        "the_problem_solving_process_with_design_1/csd/2023": {
+          "name": "Proces rozwiązywania problemów z projektowaniem"
+        },
+        "the_problem_solving_process_with_programming_2/csd/2023": {
+          "name": "Proces rozwiązywania problemów z programowaniem"
+        },
+        "physical_design_template/csd/2023": {
+          "type": "Zasoby"
+        },
+        "physical_designs/csd/2023": {
+          "type": "Przewodnik po zajęciach"
+        },
+        "physical_designs_1/csd/2023": {
+          "type": "Slajdy"
+        },
+        "_exemplar_physical_designs/csd/2023": {
+          "type": "Wzór"
+        },
+        "_warm_up_word_search_unit_6/csd/2023": {
+          "type": "Przewodnik po zajęciach"
+        },
+        "circuit_playground/csd/2023": {
+          "type": "Zasoby"
+        },
+        "circuits_and_logic/csd/2023": {
+          "type": "Wideo"
+        },
+        "physical_output/csd/2023": {
+          "type": "Zasoby"
+        },
+        "the_circuit_playground/csd/2023": {
+          "name": "Circuit Playground",
+          "type": "Slajdy"
+        },
+        "designing_screens_with_code/csd/2023": {
+          "type": "Zasoby"
+        },
+        "updating_screen_elements/csd/2023": {
+          "type": "Slajdy"
+        },
+        "board_events/csd/2023": {
+          "name": "Zdarzenia na tablicy",
+          "type": "Zasoby"
+        },
+        "board_events_1/csd/2023": {
+          "name": "Zdarzenia na tablicy",
+          "type": "Slajdy"
+        },
+        "physical_input/csd/2023": {
+          "name": "Wejście fizyczne",
+          "type": "Zasoby"
+        },
+        "the_counter_pattern/csd/2023": {
+          "type": "Wideo"
+        },
+        "if_statements_1/csd/2023": {
+          "type": "Wideo"
+        },
+        "the_counter_pattern_1/csd/2023": {
+          "type": "Zasoby"
+        },
+        "variables_and_if_statements/csd/2023": {
+          "type": "Slajdy"
+        },
+        "exemplar_1_-_loose_papers_app/csd/2023": {
+          "type": "Wzór"
+        },
+        "exemplar_2_-_cats_vs_dogs_app/csd/2023": {
+          "type": "Wzór"
+        },
+        "exemplar_3_-_bird_survey/csd/2023": {
+          "type": "Wzór"
+        },
+        "mini-project_field_collector_app/csd/2023": {
+          "type": "Slajdy"
+        },
+        "project_guide_-_field_collector_app/csd/2023": {
+          "type": "Przewodnik po zajęciach"
+        },
+        "rubric_-_field_collector_app/csd/2023": {
+          "type": "Kategoria"
+        },
+        "color_leds/csd/2023": {
+          "name": "Kolorowe LED",
+          "type": "Slajdy"
+        },
+        "color_lights/csd/2023": {
+          "type": "Zasoby"
+        },
+        "getting_screen_inputs/csd/2023": {
+          "type": "Slajdy"
+        },
+        "taking_input_with_getproperty/csd/2023": {
+          "type": "Zasoby"
+        },
+        "combining_inputs_and_outputs/csd/2023": {
+          "type": "Slajdy"
+        },
+        "input_output_devices/csd/2023": {
+          "type": "Wideo"
+        },
+        "exemplar_1_-_lights_and_music/csd/2023": {
+          "type": "Wzór"
+        },
+        "exemplar_2_-_magic_unicorn/csd/2023": {
+          "type": "Wzór"
+        },
+        "exemplar_3_-_red_light_green_light/csd/2023": {
+          "type": "Wzór"
+        },
+        "peer_review_-_human_device_interaction/csd/2023": {
+          "type": "Zasoby"
+        },
+        "project_guide_-_human_device_interaction/csd/2023": {
+          "type": "Przewodnik po zajęciach"
+        },
+        "project_human_device_interaction/csd/2023": {
+          "type": "Slajdy"
+        },
+        "rubric_-_human_device_interaction/csd/2023": {
+          "type": "Kategoria"
+        },
+        "analog_sensors/csd/2023": {
+          "type": "Zasoby"
+        },
+        "board_sensors/csd/2023": {
+          "type": "Slajdy"
+        },
+        "changing_sensor_scale/csd/2023": {
+          "type": "Zasoby"
+        },
+        "date_and_change_events/csd/2023": {
+          "type": "Zasoby"
+        },
+        "accelerometer/csd/2023": {
+          "name": "Akcelerometr",
+          "type": "Slajdy"
+        },
+        "accelerometer_events/csd/2023": {
+          "name": "Akcelerometr Zdarzeń",
+          "type": "Zasoby"
+        },
+        "the_accelerometer/csd/2023": {
+          "type": "Zasoby"
+        },
+        "arrays/csd/2023": {
+          "name": "Tablice",
+          "type": "Zasoby"
+        },
+        "introduction_to_arrays/csd/2023": {
+          "name": "Wprowadzenie do tablic",
+          "type": "Wideo"
+        },
+        "making_music/csd/2023": {
+          "name": "Tworzenie muzyki",
+          "type": "Slajdy"
+        },
+        "modifying_arrays/csd/2023": {
+          "type": "Zasoby"
+        },
+        "playing_notes/csd/2023": {
+          "name": "Granie z nut",
+          "type": "Zasoby"
+        },
+        "producing_output/csd/2023": {
+          "type": "Zasoby"
+        },
+        "functions_with_parameters/csd/2023": {
+          "name": "Funkcje z parametrami",
+          "type": "Wideo"
+        },
+        "exemplar_1_-_city_silhouette/csd/2023": {
+          "type": "Wzór"
+        },
+        "exemplar_2_-_dual_landscape_painting/csd/2023": {
+          "type": "Wzór"
+        },
+        "exemplar_3_-_monster_puppet/csd/2023": {
+          "type": "Wzór"
+        },
+        "mini-project_interactive_art/csd/2023": {
+          "type": "Slajdy"
+        },
+        "project_guide_-_interactive_art/csd/2023": {
+          "type": "Przewodnik po zajęciach"
+        },
+        "student_example_projects/csd/2023": {
+          "type": "Zasoby"
+        },
+        "student_rubric_-_interactive_art/csd/2023": {
+          "type": "Kategoria"
+        },
+        "circuits_and_leds/csd/2023": {
+          "type": "Zasoby"
+        },
+        "physical_outputs_and_leds/csd/2023": {
+          "type": "Slajdy"
+        },
+        "circuits_and_buttons/csd/2023": {
+          "type": "Zasoby"
+        },
+        "physical_inputs_and_buttons/csd/2023": {
+          "type": "Slajdy"
+        },
+        "project_prototype_an_innovation/csd/2023": {
+          "name": "Projekt - Zbuduj prototyp rozwiązania innowacyjnego",
+          "type": "Slajdy"
+        },
+        "prototype_an_innovation/csd/2023": {
+          "type": "Kategoria"
+        },
+        "prototype_an_innovation_1/csd/2023": {
+          "type": "Przewodnik po zajęciach"
+        },
+        "prototype_an_innovation_example_1/csd/2023": {
+          "type": "Wzór"
+        },
+        "prototype_an_innovation_example_2/csd/2023": {
+          "type": "Wzór"
+        },
+        "prototype_an_innovation_example_3/csd/2023": {
+          "type": "Wzór"
+        },
+        "all_code_1/csd/2023": {
+          "name": "Cały kod"
+        },
+        "all_resources_1/csd/2023": {
+          "name": "Wszystkie zasoby"
+        },
+        "all_standards_1/csd/2023": {
+          "name": "Wszystkie standardy"
+        },
+        "all_vocabulary_1/csd/2023": {
+          "name": "Całe słownictwo"
+        },
+        "csd_guide_to_assessment_7/csd/2023": {
+          "name": "Przewodnik po ocenie CSD"
+        },
+        "csd_guide_to_curriculum_videos_7/csd/2023": {
+          "name": "Przewodnik CSD dotyczący filmów o programach nauczania"
+        },
+        "csd_guide_to_teaching_and_learning_strategies_7/csd/2023": {
+          "name": "Przewodnik CSD dotyczący strategii nauczania i uczenia się"
+        },
+        "teacher_forum_1/csd/2023": {
+          "name": "Forum Nauczycieli"
+        },
+        "the_problem_solving_process_with_design_2/csd/2023": {
+          "name": "Proces rozwiązywania problemów z projektowaniem"
+        },
+        "the_problem_solving_process_with_programming_3/csd/2023": {
+          "name": "Proces rozwiązywania problemów z programowaniem"
+        },
+        "physical_designs_2/csd/2023": {
+          "type": "Slajdy"
+        },
+        "_exemplar_physical_designs_1/csd/2023": {
+          "type": "Wzór"
+        },
+        "introducing_the_micro_bit/csd/2023": {
+          "type": "Slajdy"
+        },
+        "led_planning_sheet/csd/2023": {
+          "type": "Zasoby"
+        },
+        "the_micro_bit_led_display/csd/2023": {
+          "name": "Wyświetlacz LED micro:bita",
+          "type": "Zasoby"
+        },
+        "the_micro_bit_overview/csd/2023": {
+          "type": "Zasoby"
+        },
+        "updating_screen_elements_1/csd/2023": {
+          "type": "Slajdy"
+        },
+        "board_events_2/csd/2023": {
+          "name": "Zdarzenia na tablicy",
+          "type": "Slajdy"
+        },
+        "board_events_3/csd/2023": {
+          "name": "Zdarzenia na tablicy",
+          "type": "Zasoby"
+        },
+        "micro_bit_inputs/csd/2023": {
+          "type": "Zasoby"
+        },
+        "the_counter_pattern_2/csd/2023": {
+          "type": "Wideo"
+        },
+        "variables_and_if_statements_1/csd/2023": {
+          "type": "Slajdy"
+        },
+        "mini-project_field_collector_app_1/csd/2023": {
+          "type": "Slajdy"
+        },
+        "project_guide_-_field_collector_app_1/csd/2023": {
+          "type": "Przewodnik po zajęciach"
+        },
+        "rubric_-_field_collector_app_1/csd/2023": {
+          "type": "Kategoria"
+        },
+        "getting_screen_inputs_1/csd/2023": {
+          "type": "Slajdy"
+        },
+        "combining_inputs_and_outputs_1/csd/2023": {
+          "type": "Slajdy"
+        },
+        "peer_review_-_human_device_interaction_1/csd/2023": {
+          "type": "Zasoby"
+        },
+        "project_guide_-_human_device_interaction_1/csd/2023": {
+          "type": "Przewodnik po zajęciach"
+        },
+        "project_human_device_interaction_1/csd/2023": {
+          "type": "Slajdy"
+        },
+        "rubric_-_human_device_interaction_1/csd/2023": {
+          "type": "Kategoria"
+        },
+        "board_sensors_1/csd/2023": {
+          "type": "Slajdy"
+        },
+        "data_change_events/csd/2023": {
+          "type": "Zasoby"
+        },
+        "setting_sensor_scale/csd/2023": {
+          "type": "Zasoby"
+        },
+        "the_micro_bit_sensors/csd/2023": {
+          "type": "Zasoby"
+        },
+        "accelerometer_1/csd/2023": {
+          "name": "Akcelerometr",
+          "type": "Slajdy"
+        },
+        "accelerometer_events_1/csd/2023": {
+          "name": "Akcelerometr Zdarzeń",
+          "type": "Zasoby"
+        },
+        "the_micro_bit_accelerometer/csd/2023": {
+          "type": "Zasoby"
+        },
+        "functions_3/csd/2023": {
+          "name": "Funkcje",
+          "type": "Slajdy"
+        },
+        "mini-project_interactive_pet/csd/2023": {
+          "type": "Slajdy"
+        },
+        "project_guide_-_interactive_pet/csd/2023": {
+          "type": "Przewodnik po zajęciach"
+        },
+        "student_rubric_-_interactive_pet/csd/2023": {
+          "type": "Kategoria"
+        },
+        "external_leds_on_a_micro_bit/csd/2023": {
+          "name": "Zewnętrzne diody LED na micro:bicie",
+          "type": "Zasoby"
+        },
+        "physical_outputs_and_leds_1/csd/2023": {
+          "type": "Slajdy"
+        },
+        "external_buttons_on_a_micro_bit/csd/2023": {
+          "name": "Przyciski zewnętrzne na micro:bicie",
+          "type": "Zasoby"
+        },
+        "physical_inputs_and_buttons_1/csd/2023": {
+          "type": "Slajdy"
+        },
+        "project_prototype_an_innovation_1/csd/2023": {
+          "name": "Projekt - Zbuduj prototyp rozwiązania innowacyjnego",
+          "type": "Slajdy"
+        },
+        "prototype_an_innovation_2/csd/2023": {
+          "type": "Kategoria"
+        },
+        "prototype_an_innovation_3/csd/2023": {
+          "type": "Przewodnik po zajęciach"
+        },
+        "all_code/csd/2023": {
+          "name": "Cały kod"
+        },
+        "all_resources_8/csd/2023": {
+          "name": "Wszystkie zasoby"
+        },
+        "all_standards_8/csd/2023": {
+          "name": "Wszystkie standardy"
+        },
+        "all_vocabulary_8/csd/2023": {
+          "name": "Całe słownictwo"
+        },
+        "csd_guide_to_assessment_8/csd/2023": {
+          "name": "Przewodnik po ocenie CSD"
+        },
+        "csd_guide_to_curriculum_videos_8/csd/2023": {
+          "name": "Przewodnik CSD dotyczący filmów o programach nauczania"
+        },
+        "csd_guide_to_teaching_and_learning_strategies_8/csd/2023": {
+          "name": "Przewodnik CSD dotyczący strategii nauczania i uczenia się"
+        },
+        "the_problem_solving_process_4/csd/2023": {
+          "name": "Proces rozwiązywania problemów"
+        },
+        "ai_what_is_machine_learning_/csd/2023": {
+          "url": "https://www.youtube.com/watch?v=OeU5m6vRyCk",
+          "type": "Wideo"
+        },
+        "classifying_fish/csd/2023": {
+          "type": "Przewodnik po zajęciach"
+        },
+        "introduction_to_machine_learning/csd/2023": {
+          "name": "Wprowadzenie do uczenia maszynowego",
+          "type": "Slajdy"
+        },
+        "types_of_machine_learning/csd/2023": {
+          "type": "Slajdy"
+        },
+        "types_of_machine_learning_1/csd/2023": {
+          "type": "Przewodnik po zajęciach"
+        },
+        "types_of_machine_learning_2/csd/2023": {
+          "type": "Klucz odpowiedzi"
+        },
+        "innovations_in_ai/csd/2023": {
+          "name": "Innowacje w AI",
+          "type": "Slajdy"
+        },
+        "innovations_in_ai_-_activity_guide/csd/2023": {
+          "type": "Przewodnik po zajęciach"
+        },
+        "innovations_in_ai_research_areas_-_student_resource/csd/2023": {
+          "type": "Zasoby"
+        },
+        "seeing_ai/csd/2023": {
+          "name": "Widząc AI",
+          "type": "Wideo"
+        },
+        "_key_patterns_in_data/csd/2023": {
+          "type": "Klucz odpowiedzi"
+        },
+        "finding_patterns_in_data/csd/2023": {
+          "type": "Wideo"
+        },
+        "patterns_in_data/csd/2023": {
+          "type": "Slajdy"
+        },
+        "patterns_in_data_1/csd/2023": {
+          "type": "Przewodnik po zajęciach"
+        },
+        "shoe_survey/csd/2023": {
+          "type": "Zasoby"
+        },
+        "_key_classification_models/csd/2023": {
+          "type": "Klucz odpowiedzi"
+        },
+        "classification_models/csd/2023": {
+          "type": "Przewodnik po zajęciach"
+        },
+        "classification_models_1/csd/2023": {
+          "type": "Slajdy"
+        },
+        "fruit_veggie_cards/csd/2023": {
+          "type": "Zasoby"
+        },
+        "_key_training_a_model_in_ai_lab/csd/2023": {
+          "type": "Klucz odpowiedzi"
+        },
+        "accuracy_in_ai_lab/csd/2023": {
+          "type": "Zasoby"
+        },
+        "introduction_to_ai_lab/csd/2023": {
+          "name": "Wprowadzenie do AI Lab",
+          "type": "Slajdy"
+        },
+        "introduction_to_ai_lab_1/csd/2023": {
+          "name": "Wprowadzenie do AI Lab",
+          "type": "Wideo"
+        },
+        "selecting_features/csd/2023": {
+          "type": "Zasoby"
+        },
+        "training_a_model_in_ai_lab/csd/2023": {
+          "type": "Przewodnik po zajęciach"
+        },
+        "training_and_testing_in_ai_lab/csd/2023": {
+          "name": "Szkolenie i testowanie w AI Lab ",
+          "type": "Wideo"
+        },
+        "using_data_with_categorical_features/csd/2023": {
+          "type": "Zasoby"
+        },
+        "importing_a_model_in_app_lab/csd/2023": {
+          "type": "Zasoby"
+        },
+        "importing_models_in_app_lab/csd/2023": {
+          "type": "Slajdy"
+        },
+        "ai_training_data_bias/csd/2023": {
+          "name": "AI: Dane treningowe i skłonność",
+          "url": "https://youtu.be/x2mRoFNm22g",
+          "type": "Wideo"
+        },
+        "model_cards/csd/2023": {
+          "type": "Slajdy"
+        },
+        "model_cards_1/csd/2023": {
+          "type": "Przewodnik po zajęciach"
+        },
+        "_key_zoo_models/csd/2023": {
+          "type": "Klucz odpowiedzi"
+        },
+        "model_cards_in_ai_lab/csd/2023": {
+          "name": "Karty modeli w AI Lab",
+          "type": "Wideo"
+        },
+        "saving_models_in_ai_lab/csd/2023": {
+          "type": "Slajdy"
+        },
+        "selecting_a_label/csd/2023": {
+          "type": "Zasoby"
+        },
+        "zoo_models/csd/2023": {
+          "type": "Przewodnik po zajęciach"
+        },
+        "if-statements_in_app_lab/csd/2023": {
+          "type": "Wideo"
+        },
+        "model_cards_in_app_lab/csd/2023": {
+          "type": "Slajdy"
+        },
+        "printable_model_cards/csd/2023": {
+          "type": "Zasoby"
+        },
+        "_key_numerical_accuracy/csd/2023": {
+          "type": "Klucz odpowiedzi"
+        },
+        "_key_zombie_prediction/csd/2023": {
+          "type": "Klucz odpowiedzi"
+        },
+        "numerical_accuracy/csd/2023": {
+          "type": "Przewodnik po zajęciach"
+        },
+        "numerical_models/csd/2023": {
+          "name": "KNN bez komputera",
+          "type": "Slajdy"
+        },
+        "zombie_prediction/csd/2023": {
+          "type": "Przewodnik po zajęciach"
+        },
+        "_key_-_numerical_data_in_ai_lab/csd/2023": {
+          "type": "Klucz odpowiedzi"
+        },
+        "numerical_data_in_ai_lab/csd/2023": {
+          "name": "Dane numeryczne w laboratorium AI",
+          "type": "Slajdy"
+        },
+        "numerical_data_in_ai_lab_1/csd/2023": {
+          "name": "Dane numeryczne w laboratorium AI",
+          "type": "Przewodnik po zajęciach"
+        },
+        "numerical_data_in_ai_lab_2/csd/2023": {
+          "name": "Dane numeryczne w laboratorium AI",
+          "type": "Wideo"
+        },
+        "using_data_with_numerical_features/csd/2023": {
+          "type": "Zasoby"
+        },
+        "customizing_apps/csd/2023": {
+          "type": "Slajdy"
+        },
+        "ai_code_of_ethics/csd/2023": {
+          "name": "Kodeks etyczny AI ",
+          "type": "Slajdy"
+        },
+        "ai_ethics_research_areas/csd/2023": {
+          "type": "Przewodnik po zajęciach"
+        },
+        "ethics_ai_equal_access_and_algorithmic_bias/csd/2023": {
+          "type": "Wideo"
+        },
+        "our_ai_code_of_ethics_template_/csd/2023": {
+          "type": "Slajdy"
+        },
+        "create_an_ml_app/csd/2023": {
+          "type": "Kategoria"
+        },
+        "make_a_machine_learning_app/csd/2023": {
+          "type": "Slajdy"
+        },
+        "issue_statements/csd/2023": {
+          "name": "Zaplanuj aplikację uczenia maszynowego",
+          "type": "Slajdy"
+        },
+        "creating_a_survey/csd/2023": {
+          "type": "Zasoby"
+        },
+        "creating_a_survey_in_google_forms/csd/2023": {
+          "type": "Wideo"
+        },
+        "survey_planning/csd/2023": {
+          "name": "Projektowanie zbierania danych",
+          "type": "Slajdy"
+        },
+        "cleaning_survey_data/csd/2023": {
+          "type": "Wideo"
+        },
+        "survey_data_in_ai_lab/csd/2023": {
+          "name": "Model treningowy na podstawie dobrych danych ",
+          "type": "Slajdy"
+        },
+        "view_and_download_survey_data/csd/2023": {
+          "type": "Wideo"
+        },
+        "troubleshooting_models/csd/2023": {
+          "name": "Model treningowy na podstawie złych danych ",
+          "type": "Slajdy"
+        },
+        "creating_an_app/csd/2023": {
+          "name": "Utwórz aplikację",
+          "type": "Slajdy"
+        },
+        "_template_5_why_s/csd/2023": {
+          "type": "Zasoby"
+        },
+        "design_an_ai_app/csd/2023": {
+          "name": "Utwórz aplikację „AI dla dobra społecznego”",
+          "type": "Slajdy"
+        },
+        "design_an_ai_app_1/csd/2023": {
+          "name": "Utwórz aplikację „AI dla dobra społecznego”",
+          "type": "Kategoria"
+        },
+        "model_card_-_digital_template/csd/2023": {
+          "type": "Zasoby"
+        },
+        "model_card_-_printable_template/csd/2023": {
           "type": "Zasoby"
         },
         "all_resources/coursea/2023": {

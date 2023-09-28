@@ -53,12 +53,14 @@ ka:
         gender: 'სქესი'
         edit_header: 'ანგარიშის მონაცემების შესწორება'
         finish_sign_up_header: 'დაასრულეთ თქვენი ანგარიშის შექმნა'
+        finish_sign_up_header_error: 'თუ შეიძლება, შეასწორეთ შემდეგი შეცდომები:'
         finish_sign_up_subheader: 'შეავსეთ შემდეგი ინფორმაცია, Code.org ანგარიშის, <strong>%{email}</strong> შექმნის დასრულებისთვის.'
         finish_sign_up_subheader_markdown: 'შეავსეთ შემდეგი ინფორმაცია, Code.org ანგარიშის, **%{email}** შექმნის დასრულებისთვის.'
         finish_sign_up_subheader_provider_markdown: 'შეავსეთ შემდეგი ინფორმაცია, რომ დაასრულოთ Code.org ანგარიშის შექმნა **%{provider}** **%{email}** -ისთვის.'
         reset_password_token: "პაროლის გადატვირთვის ბმული, რომელსაც თქვენ მიჰყევით"
         error:
           future: არ შეიძლება იყოს მომავალში
+        user_type: 'ანგარიშის ტიპი'
         us_state: 'შტატი'
   beta: "ბეტა-ვერსია"
   hello: "ჰეი, სამყარო"

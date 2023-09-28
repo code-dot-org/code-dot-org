@@ -4936,6 +4936,9 @@
           "purpose": " Bu onlayn mashg‘ulotda, talabalar Play Labda hodisalardan qanday foydalanishni o‘rganishadi. Ular yo‘nalishli tugma bosilganda otliqni harakatlantirishni mashq qilib ko‘rish orqali boshlashadi va keyin tekinga o‘ynaladigan boshqotirma a’zosi sifatida bu kurs davomida o‘rgangan boshqa mahoratlari, jumladan ketma-ketliklar va sikllarni namoyish qilish imkoniyati bilan tugatishadi.",
           "student_overview": "Use events to create a story or make an interactive game."
         },
+        "ai-ethics-2023/lesson-1": {
+          "student_overview": "AI etikasi haqida birgalikda tadqiqot olib boring va umumiy xulq -atvor kodeksini yarating."
+        },
         "csc-adaptations-2023/Modeling Animal Adaptations (pilot)": {
           "name": "Hayvonlarning moslashuvi Kirish",
           "overview": "Ushbu \\*\\* ko'nikmalarni shakllantirish\\*\\* darsida talabalar spritlarni yaratish va jonlantirishni va ularni interaktiv qilish uchun tadbirlardan foydalanishni o'rganadilar. \n\nTalabalar vaqt o'tishi bilan o'z muhitiga moslashish orqali turlarning qanday omon qolishini ko'rsatish uchun Sprite laboratoriyasida hodisalarga asoslangan sabab-oqibat modelini kodlaydilar. Haqiqiy dunyoda interaktiv modellar va simulyatsiyalar muhandislar va olimlarga naqshlarni aniqlash, tabiatni tushunish, kelajakdagi o'zgarishlar haqida bashorat qilish va katta buzilishlarga tayyorgarlik ko'rish va/yoki ularga qarshi kurashish uchun dizayn echimlari uchun ishlatiladi. \n\nTalabalar guruhlarda evolyutsiya, moslashish, migratsiya, tabiiy tanlanish va omon qolish misollarini o'rganadilar. ",
@@ -5093,6 +5096,233 @@
           "preparation": "-   Har bir talabaga bitta kompyuter tayyorlang.\n-   Har bir talabaga\\*\\* Ilovangizni<a href=\"https://docs.google.com/document/d/1kO4SNEIVyM0GrxxJb6NzVYauXXpi6rzQkDIfrzQf1Ls/template/preview\" target=\"_blank\">baham</a>ko'ring\\*\\* tarqatma materialining bitta nusxasini tayyorlang.\n-   Talabalar ushbu dars uchun asl she'rlarining nusxasiga ega ekanligiga ishonch hosil qiling.  \n-   She'riyat juftligini baham ko'rish uchun sinfni juftlarga bo'ling.\n-   Ushbu darsdan keyin o'rganish uchun ushbu kengaytma variantlarini ([link](https://studio.code.org/s/poetry-2023/lessons/4#activity-4365336)) ko'rib chiqing.\n\n##### Ixtiyoriy\n\n-   Ayniqsa masofadan o'qitish uchun: Har bir talabaning ilovasining URL manzilini joylashtirish uchun raqamli hujjat yoki umumiy onlayn maydonni o'rnatish kerakligini aniqlang (“Havolalar” dagi o'qituvchi shabloniga qarang). ",
           "purpose": "She'r san'ati loyihalarini tengdoshlari bilan bo'lishish ijodiy jarayonning muhim jihati hisoblanadi. Bu talabalarga fikr-mulohazalarni qabul qilish, boshqalar bilan hamkorlik qilish, o'z ishlari haqida o'ylash va yutuqlarini nishonlash imkonini beradi. O'z ishlarini boshqalar bilan baham ko'rish orqali talabalar ijodiy mutafakkir sifatida o'sishi va yaxshilanishi, muhim muloqot va shaxslararo ko'nikmalarni rivojlantirishi mumkin.",
           "student_overview": "Do'stlaringiz bilan yangi she'r ilovalaringizni baham ko'ring! "
+        },
+        "csd1-2023/Intro to Problem Solving": {
+          "name": "Intro to Problem Solving"
+        },
+        "csd1-2023/The Problem Solving Process": {
+          "name": "Muammoni yechish jarayoni"
+        },
+        "csd1-2023/Exploring Problem Solving": {
+          "name": "Exploring Problem Solving"
+        },
+        "csd1-2023/What is a Computer?": {
+          "name": "Kompyuter nima?"
+        },
+        "csd1-2023/Input and Output": {
+          "name": "Input and Output"
+        },
+        "csd1-2023/Processing": {
+          "name": "Processing"
+        },
+        "csd1-2023/Storage": {
+          "name": "Storage"
+        },
+        "csd1-2023/Project - Propose an App": {
+          "name": "Project - Propose an App"
+        },
+        "csd2-2023/Intro to HTML": {
+          "name": "Intro to HTML"
+        },
+        "csd2-2023/Digital Footprint": {
+          "name": "Digital Footprint"
+        },
+        "csd2-2023/Styling Text with CSS": {
+          "name": "Styling Text with CSS"
+        },
+        "csd2-2023/Intellectual Property": {
+          "name": "Intellectual Property"
+        },
+        "csd2-2023/Styling Elements with CSS": {
+          "name": "Styling Elements with CSS"
+        },
+        "csd2-2023/Your Web Page - Prepare": {
+          "name": "Veb-sahifangiz - Tayyorlanish"
+        },
+        "csd2-2023/Project - Personal Web Page": {
+          "name": "Loyiha - Shaxsiy veb-sahifa"
+        },
+        "csd2-2023/Team Problem Solving": {
+          "name": "Jamoada muammoni hal qilish"
+        },
+        "csd2-2023/CSS Classes": {
+          "name": "CSS sinflari"
+        },
+        "csd3-2023/Plotting Shapes": {
+          "name": "Plotting Shapes"
+        },
+        "csd3-2023/Drawing in Game Lab": {
+          "name": "Drawing in Game Lab"
+        },
+        "csd3-2023/Variables": {
+          "name": "O‘zgaruvchilar"
+        },
+        "csd3-2023/Random Numbers": {
+          "name": "Tasodifiy sonlar"
+        },
+        "csd3-2023/Sprites": {
+          "name": "Spraytlar"
+        },
+        "csd3-2023/Sprite Properties": {
+          "name": "Sprait hususiyatlari"
+        },
+        "csd3-2023/Text": {
+          "name": "Matn"
+        },
+        "csd3-2023/Sprite Movement": {
+          "name": "Sprite Movement"
+        },
+        "csd3-2023/Conditionals": {
+          "name": "Shartli bayonotlar"
+        },
+        "csd3-2023/Keyboard Input": {
+          "name": "Keyboard Input"
+        },
+        "csd3-2023/Mouse Input": {
+          "name": "Sichqon orqali kiritish"
+        },
+        "csd3-2023/Project - Interactive Card": {
+          "name": "Project - Interactive Card"
+        },
+        "csd3-2023/Velocity": {
+          "name": "Tezlik"
+        },
+        "csd3-2023/Complex Sprite Movement": {
+          "name": "Complex Sprite Movement"
+        },
+        "csd3-2023/Collisions": {
+          "name": "Collisions"
+        },
+        "csd3-2023/Functions": {
+          "name": "Funksiyalar"
+        },
+        "csd3-2023/The Game Design Process": {
+          "name": "The Game Design Process"
+        },
+        "csd3-2023/Using the Game Design Process": {
+          "name": "Using the Game Design Process"
+        },
+        "csd3-2023/Project - Design a Game": {
+          "name": "Project - Design a Game"
+        },
+        "csd4-2023/Understanding Your User": {
+          "name": "Understanding Your User"
+        },
+        "csd4-2023/User Interfaces": {
+          "name": "User Interfaces"
+        },
+        "csd4-2023/Feedback and Testing": {
+          "name": "Feedback and Testing"
+        },
+        "csd4-2023/Identifying User Needs": {
+          "name": "Identifying User Needs"
+        },
+        "csd4-2023/Project - Paper Prototype": {
+          "name": "Project - Paper Prototype"
+        },
+        "csd4-2023/Designing Apps for Good": {
+          "name": "Designing Apps for Good"
+        },
+        "csd4-2023/Market Research": {
+          "name": "Market Research"
+        },
+        "csd4-2023/Prototype Testing": {
+          "name": "Prototype Testing"
+        },
+        "csd4-2023/Testing the App": {
+          "name": "Testing the App"
+        },
+        "csd4-2023/Project - App Presentation": {
+          "name": "Project - App Presentation"
+        },
+        "csd5-2023/Representation Matters": {
+          "name": "Representation Matters"
+        },
+        "csd5-2023/Patterns and Representation": {
+          "name": "Patterns and Representation"
+        },
+        "csd5-2023/ASCII and Binary Representation": {
+          "name": "ASCII and Binary Representation"
+        },
+        "csd5-2023/Representing Images": {
+          "name": "Representing Images"
+        },
+        "csd5-2023/Representing Numbers": {
+          "name": "Representing Numbers"
+        },
+        "csd5-2023/Combining Representations": {
+          "name": "Combining Representations"
+        },
+        "csd5-2023/Keeping Data Secret": {
+          "name": "Keeping Data Secret"
+        },
+        "csd5-2023/Project - Create a Representation": {
+          "name": "Project - Create a Representation"
+        },
+        "csd5-2023/Structuring Data": {
+          "name": "Structuring Data"
+        },
+        "csd5-2023/Interpreting Data": {
+          "name": "Interpreting Data"
+        },
+        "csd5-2023/Making Decisions with Data": {
+          "name": "Making Decisions with Data"
+        },
+        "csd5-2023/Automating Data Decisions": {
+          "name": "Automating Data Decisions"
+        },
+        "csd5-2023/Problem Solving with Big Data": {
+          "name": "Problem Solving with Big Data"
+        },
+        "csd6a-2023/Intro to App Lab": {
+          "name": "Intro to App Lab"
+        },
+        "csd6a-2023/The Circuit Playground": {
+          "name": "The Circuit Playground"
+        },
+        "csd6a-2023/Board Events": {
+          "name": "Board Events"
+        },
+        "csd6a-2023/Color LEDs": {
+          "name": "LED ranglar"
+        },
+        "csd6a-2023/Accelerometer": {
+          "name": "Accelerometer"
+        },
+        "csd6a-2023/Functions": {
+          "name": "Funksiyalar"
+        },
+        "csd6a-2023/Project - Prototype an Innovation": {
+          "overview": "Kursning ushbu yakuniy loyihasida o‘quvchilar jamoasi sxema maydonchasi asosida innovatsion hisoblash moslamasining prototipini ishlab chiqish va sinovdan o‘tkazadilar. Doskada mavjud bo‘lgan kirish va chiqishlardan foydalangan holda, guruhlar foydalanuvchilarning qiziqarli va o‘ziga xos o‘zaro ta'sirini ta'minlaydigan dasturlarni yaratadilar."
+        },
+        "csd6b-2023/Intro to App Lab": {
+          "name": "Intro to App Lab"
+        },
+        "csd6b-2023/Board Events": {
+          "name": "Board Events"
+        },
+        "csd6b-2023/Accelerometer": {
+          "name": "Accelerometer"
+        },
+        "csd6b-2023/Functions": {
+          "name": "Funksiyalar"
+        },
+        "csd7-2023/Intro to App Lab": {
+          "name": "Intro to App Lab"
+        },
+        "csd7-2023/Introduction to AI Lab": {
+          "name": "6-dars"
+        },
+        "csd7-2023/Numerical Data in AI Lab": {
+          "name": "AI laboratoriyasidagi raqamli ma'lumotlar"
+        },
+        "csd7-2023/AI Code of Ethics": {
+          "overview": "Kichik guruhlarda talabalar o'zlari tanlagan Sun'iy Intellekt (AI) sohasidagi axloqiy tuzoqlarni ochib beradigan maqolalar va videofilmlardan foydalangan holda tadqiqot olib boradilar. Shundan so'ng, har bir guruh o'zlari tanlagan sohaga tegishli kamida bitta yechimga yo'naltirilgan tamoyilni ishlab chiqadi. Keyinchalik ushbu tamoyillar sun'iy intellektni yaratuvchilar va qonun chiqaruvchilar hamma joyda ishlatishi uchun \"Bizning sun'iy intellekt kodeksimiz\" (masalan, slayd taqdimoti, hujjat yoki veb-sahifa) resursiga jamlanadi.",
+          "student_overview": "Kichik guruhlarda talabalar o'zlari tanlagan Sun'iy Intellekt (AI) sohasidagi axloqiy tuzoqlarni ochib beradigan maqolalar va videofilmlardan foydalangan holda tadqiqot olib boradilar. Shundan so'ng, har bir guruh o'zlari tanlagan sohaga tegishli kamida bitta yechimga yo'naltirilgan tamoyilni ishlab chiqadi. Keyinchalik ushbu tamoyillar sun'iy intellektni yaratuvchilar va qonun chiqaruvchilar hamma joyda ishlatishi uchun \"Bizning sun'iy intellekt kodeksimiz\" (masalan, slayd taqdimoti, hujjat yoki veb-sahifa) resursiga jamlanadi."
+        },
+        "csd7-2023/Survey Planning": {
+          "name": "Designing Data Collection",
+          "overview": "Bu o'quvchilarni yakuniy loyihaga tayyorlaydigan besh kunlik darslar ketma-ketligidagi ikkinchi dars. Bu darsda talabalar boshqa o'quvchilar jamoasi o'z maktabidagi klublar asosida klub tavsiya etuvchi dastur yaratmoqchi ekanliklarini bilib oladilar. Talabalar ushbu ishga yordam berish uchun qaysi savollar eng foydali bo'lishini o'ylashadi, so'ng so'rovnoma tuzish uchun Google Form shablonidan foydalanishni o'rganadilar. Talabalarning ushbu darsda qilgan qadamlari, talabalarning yakuniy loyihada bajaradigan qadamlari bilan bir xil.\n\n\\*\\* Kun savoli: \\*\\* Qanday qilib men mashinalar o'rganishi (ML) ilovasiga ma'lumot to'plash uchun so'rovnoma tuzishim mumkin?"
         },
         "coursea-2023/Safety in My Online Neighborhood": {
           "name": "Mening onlayn atrofimda xavfsizlik",
