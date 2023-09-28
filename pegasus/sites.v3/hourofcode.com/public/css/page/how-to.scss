@@ -5,7 +5,12 @@ html {
 }
 
 h2 {
-  margin-top: 0;
+  text-align: center;
+  color: #682A77;
+  font-size: 32px;
+  font-family: "Gotham 7r", sans-serif;
+  margin: 0 auto 1em;
+  line-height: 1.2em;
 }
 
 section.banner {
@@ -110,7 +115,7 @@ section.banner {
 
         &:last-child {
           border-radius: 0 0 4px 4px;
-          padding-bottom: 16px;
+          padding-bottom: 14px;
         }
 
         &::before {
