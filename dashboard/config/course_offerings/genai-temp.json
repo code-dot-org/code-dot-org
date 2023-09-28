@@ -1,9 +1,9 @@
 {
-  "key": "bingo",
-  "display_name": "bingo",
+  "key": "genai-temp",
+  "display_name": "genai-temp",
   "category": "other",
   "is_featured": false,
-  "assignable": false,
+  "assignable": true,
   "curriculum_type": null,
   "marketing_initiative": null,
   "grade_levels": null,
