@@ -23,9 +23,16 @@ export interface DanceState {
   songData: SongData;
   runIsStarting: boolean;
   currentAiModalField?: GoogleBlockly.Field;
+
   // Fields below are used only by Lab2 Dance
+  /** If the program is currently running */
   isRunning: boolean;
+  /** Metadata for the currently selected song */
   currentSongMetadata: SongMetadata | undefined;
+  /** If a load is in progress */
+  isLoading: boolean;
+  /** If a run has been queued while loading */
+  runQueued: boolean;
 }
 
 const initialState: DanceState = {
@@ -35,6 +42,8 @@ const initialState: DanceState = {
   currentAiModalField: undefined,
   isRunning: false,
   currentSongMetadata: undefined,
+  isLoading: false,
+  runQueued: false,
 };
 
 // THUNKS
@@ -159,6 +168,37 @@ const danceSlice = createSlice({
     ) => {
       state.currentAiModalField = action.payload;
     },
+    setIsRunning: (state, action: PayloadAction<boolean>) => {
+      state.isRunning = action.payload;
+      state.runQueued = false;
+    },
+    queueRun: state => {
+      state.runQueued = true;
+    },
+  },
+  extraReducers: builder => {
+    builder.addCase(initSongs.pending, state => {
+      state.isLoading = true;
+    });
+    builder.addCase(initSongs.fulfilled, state => {
+      state.isLoading = false;
+    });
+    builder.addCase(initSongs.rejected, state => {
+      state.isLoading = false;
+      // TODO: Handle error. Should we bubble this up to Lab2 and show the
+      // error modal? Or should we handle internally and retry?
+    });
+    builder.addCase(setSong.pending, state => {
+      state.isLoading = true;
+    });
+    builder.addCase(setSong.fulfilled, state => {
+      state.isLoading = false;
+    });
+    builder.addCase(setSong.rejected, state => {
+      state.isLoading = false;
+      // TODO: Handle error. Should we bubble this up to Lab2 and show the
+      // error modal? Or should we handle internally and retry?
+    });
   },
 });
 
@@ -168,5 +208,7 @@ export const {
   setRunIsStarting,
   setCurrentSongMetadata,
   setCurrentAiModalField,
+  setIsRunning,
+  queueRun,
 } = danceSlice.actions;
 export const reducers = {dance: danceSlice.reducer};
