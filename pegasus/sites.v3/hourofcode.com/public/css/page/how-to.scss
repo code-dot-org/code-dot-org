@@ -11,18 +11,122 @@ h2 {
 section.banner {
   padding: 0;
 
+  .wrapper {
+    padding: 2em 0px 11em;
+  }
+
   h1 {
     margin-bottom: 1rem;
+  }
+
+  .show-overflow {
+    position: absolute;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    margin-top: 3rem;
+    width: 100%;
   }
 
   .flex-container {
     display: flex;
     justify-content: center;
     align-items: center;
+    flex-wrap: wrap;
     gap: 1rem;
   }
-}
 
-section {
+  nav.how-to-nav {
+    height: 3rem;
+    width: 250px;
+    position: relative;
+    color: white;
+    background-color: #5c3f7f;
+    border-radius: 4px;
+    font-size: 1rem;
+    font-family: 'Gotham 5r', sans-serif;
 
+    &::after {
+      content: url('/images/angle-down.svg');
+      position: absolute;
+      right: 10px;
+      top: 14px;
+    }
+
+    &:hover {
+      color: white;
+      background-color: #5c3f7f;
+      border-color: #5c3f7f;
+      border-radius: 4px 4px 0 0;
+      text-decoration: none;
+      cursor: pointer;
+
+      p {
+        cursor: default;
+      }
+
+      ul {
+        display: initial;
+        overflow: visible;
+      }
+
+      &::after {
+        content: "";
+      }
+    }
+
+    &:focus {
+      outline: #5c3f7f solid 2px;
+      outline-offset: 2px;
+
+      &:not(:focus-visible) {
+        outline: none;
+      }
+    }
+
+    p.current_page {
+      color: white;
+      text-decoration: none;
+      padding: 12px 0;
+      display: block;
+    }
+
+    ul {
+      display: none;
+	    top: 0;
+      padding: 0;
+      margin: 0;
+      list-style: none;
+      position: relative;
+
+      nav ul:hover {
+        display: block;
+      }
+
+      li {
+        display:block;
+        text-indent: 0;
+        padding: 12px 0;
+        background: #5c3f7f;
+
+        &:last-child {
+          border-radius: 0 0 4px 4px;
+          padding-bottom: 16px;
+        }
+
+        &::before {
+          content: "";
+        }
+
+        &:hover {
+          background-color: #432d5c;
+        }
+
+        a {
+          color: $neutral-white;
+          display:block;
+          text-decoration:none;
+        }
+      }
+    }
+  }
 }

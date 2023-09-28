@@ -1,0 +1,11 @@
+- nav_index = 7
+
+%nav.how-to-nav
+  %p.current_page.no-margin-bottom
+    = nav_current
+  %ul
+    - nav_index.times do |index|
+      %li
+        %a{href: resolve_url(nav_url[index])}
+          = nav_label[index]
+

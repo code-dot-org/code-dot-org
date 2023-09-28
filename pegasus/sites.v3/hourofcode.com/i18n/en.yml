@@ -43,7 +43,7 @@
 
   hoc_how_to_top_heading: "Your guide to Hour of Code"
   hoc_how_to_top_desc: "Tailored how-to guides for the best Hour of Code experience."
-  hoc_how_to_top_view_guide: "View guide for"
+  hoc_how_to_top_view_guide: "View guide for:"
   hoc_how_to_plan_heading: "How to plan your Hour of Code"
   hoc_how_to_plan_desc: "The Hour of Code is a one-hour introduction to computer science designed to demystify \"code\", show that anybody can learn the basics, and to broaden participation in the field of computer science. You can help raise awareness of the computer science movement and volunteer to inspire more students to try computer science, particularly young women."
 
@@ -167,6 +167,14 @@
 
   students_label: "Students"
   teachers_label: "Teachers"
+  educators_label: "Educators"
+  companies_label: "Companies"
+  districts_label: "Districts"
+  school_assemblies_label: "School Assemblies"
+  parents_label: "Parents"
+  public_officials_label: "Public Officials"
+  volunteers_label: "Volunteers"
+  virtual_events_label: "Virtual Events"
 
   teacher_label_csf: "CS Fundamentals Teacher"
   teacher_label_csd: "CS Discoveries Teacher"
