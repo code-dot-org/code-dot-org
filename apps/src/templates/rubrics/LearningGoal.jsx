@@ -41,7 +41,7 @@ export default function LearningGoal({
   const aiEnabled = learningGoal.aiEnabled && teacherHasEnabledAi;
   const base_endpoint = '/learning_goal_evaluations';
 
-  // Timer variabls for autosaving
+  // Timer variables for autosaving
   const autosaveTimer = useRef();
   const saveAfter = 2000;
 
