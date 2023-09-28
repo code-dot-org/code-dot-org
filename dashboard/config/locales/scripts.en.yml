@@ -13163,3 +13163,14 @@ en:
           description_short: ''
           description: ''
           student_description: ''
+        genai-temp:
+          lessons:
+            lesson-1:
+              name: Temp Lesson for Ali
+          lesson_groups: {}
+          name: genai-temp
+          title: "[Temp] Generative AI"
+          description_audience: ''
+          description_short: ''
+          description: Temporary unit for Generative AI work
+          student_description: ''
