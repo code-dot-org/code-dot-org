@@ -41,6 +41,7 @@ module Google
 
     def initialize(service_account_key = CDO.gdrive_export_secret.to_json)
       $log&.debug 'Establishing Google Drive session'
+      raise "Google Authentication Key not provided." if service_account_key.nil?
       @session = GoogleDrive::Session.from_service_account_key StringIO.new(service_account_key)
     end
 
