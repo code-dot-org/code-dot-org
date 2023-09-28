@@ -21,7 +21,6 @@ module I18n
       # @param locale [String] the BCP 47 (IETF language tag) format (e.g., 'en-US')
       def initialize(locale)
         @locale = locale
-        @google_drive ||= Google::Drive.new
       end
 
       def worksheet_data
@@ -39,12 +38,11 @@ module I18n
 
       def report
         return if worksheet_data.empty?
-
-        @google_drive&.update_worksheet(SPREADSHEET_NAME, locale, [WORKSHEET_HEADERS, *worksheet_data])
-
+        Google::Drive.new.update_worksheet(SPREADSHEET_NAME, locale, [WORKSHEET_HEADERS, *worksheet_data])
+      rescue StandardError => exception
+        puts "Failed to upload malformed restorations for #{locale} because #{exception.message}"
+      ensure
         clear_worksheet_data
-      rescue
-        puts "Failed to upload malformed restorations for #{locale}"
       end
 
       private
