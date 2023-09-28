@@ -31,7 +31,7 @@ import {showArrowButtons} from '@cdo/apps/templates/arrowDisplayRedux';
 import danceCode from '@code-dot-org/dance-party/src/p5.dance.interpreted.js';
 import HttpClient from '@cdo/apps/util/HttpClient';
 import {CHAT_COMPLETION_URL} from '@cdo/apps/aichat/constants';
-import {computeCharactersReferenced, getValidationCallback} from './utils';
+import utils from './utils';
 
 const ButtonState = {
   UP: 0,
@@ -94,7 +94,7 @@ Dance.prototype.init = function (config) {
   }
 
   this.level = config.level;
-  this.usesPreview = !!config.level.usesPreview;
+  this.usesPreview = true || !!config.level.usesPreview;
   this.skin = config.skin;
   this.share = config.share;
   this.studioAppInitPromise = new Promise(resolve => {
@@ -369,7 +369,7 @@ Dance.prototype.afterInject_ = function () {
         // student code can't change. This way, we can start fetching assets while
         // waiting for the user to press the Run button.
         await this.studioAppInitPromise;
-        const charactersReferenced = computeCharactersReferenced(
+        const charactersReferenced = utils.computeCharactersReferenced(
           this.studioApp_.getCode()
         );
         await nativeAPI.ensureSpritesAreLoaded(charactersReferenced);
@@ -470,7 +470,7 @@ Dance.prototype.preview = async function () {
     code
   ).hooks;
 
-  const charactersReferenced = computeCharactersReferenced(studentCode);
+  const charactersReferenced = utils.computeCharactersReferenced(studentCode);
   await this.nativeAPI.ensureSpritesAreLoaded(charactersReferenced);
   this.hooks.find(v => v.name === 'runUserSetup').func();
   this.nativeAPI.p5_.draw();
@@ -609,7 +609,7 @@ Dance.prototype.execute = async function () {
   this.nativeAPI.addCues(timestamps);
 
   this.nativeAPI.registerValidation(
-    getValidationCallback(this.level.validationCode)
+    utils.getValidationCallback(this.level.validationCode)
   );
 
   // songMetadataPromise will resolve immediately if the request which populates
@@ -647,7 +647,7 @@ Dance.prototype.initInterpreter = function () {
     code
   ).hooks;
 
-  return computeCharactersReferenced(studentCode);
+  return utils.computeCharactersReferenced(studentCode);
 };
 
 Dance.prototype.shouldShowSharing = function () {

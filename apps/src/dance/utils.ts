@@ -1,6 +1,6 @@
 // Common utils shared between legacy and Lab2 Dance
 
-export function computeCharactersReferenced(studentCode: string): string[] {
+function computeCharactersReferenced(studentCode: string): string[] {
   // Process studentCode to determine which characters are referenced and create
   // charactersReferencedSet with the results:
   const charactersReferencedSet = new Set<string>();
@@ -21,7 +21,7 @@ export function computeCharactersReferenced(studentCode: string): string[] {
 // repo currently doesn't export types. If/when types are available, we can narrow the
 // return type.
 // eslint-disable-next-line @typescript-eslint/ban-types
-export function getValidationCallback(validationCode: string): Function {
+function getValidationCallback(validationCode: string): Function {
   return new Function(
     'World',
     'nativeAPI',
@@ -30,3 +30,9 @@ export function getValidationCallback(validationCode: string): Function {
     validationCode
   );
 }
+
+// Need to use default exports for stubbing these functions in tests
+export default {
+  computeCharactersReferenced,
+  getValidationCallback,
+};
