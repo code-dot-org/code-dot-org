@@ -13,7 +13,7 @@ module I18n
         class SyncOut < I18n::Utils::SyncOutBase
           def process(language)
             crowdin_file_path = I18nScriptUtils.locale_dir(language[:crowdin_name_s], DIR_NAME, FILE_NAME)
-            next unless File.exist?(crowdin_file_path)
+            return unless File.exist?(crowdin_file_path)
 
             i18n_locale = language[:locale_s]
             distribute_localization(i18n_locale, crowdin_file_path) unless I18nScriptUtils.source_lang?(language)
