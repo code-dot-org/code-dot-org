@@ -3,25 +3,15 @@ require_relative '../i18n_script_utils'
 module I18n
   module Utils
     class SyncInBase
-      class << self
-        def perform
-          new.send(:execute)
-        end
-
-        protected
-
-        def process(&block)
-          @process_block = block
-        end
-
-        private
-
-        def process_block
-          @process_block ||= proc {raise NotImplementedError}
-        end
+      def self.perform
+        new.send(:perform)
       end
 
       protected
+
+      def process
+        raise NotImplementedError
+      end
 
       def progress_bar
         @progress_bar ||= I18nScriptUtils.create_progress_bar(title: self.class.name)
@@ -29,10 +19,10 @@ module I18n
 
       private
 
-      def execute
+      def perform
         progress_bar.start
 
-        instance_exec(&self.class.send(:process_block))
+        process
 
         progress_bar.finish
       end
