@@ -1,8 +1,9 @@
 class RubricsController < ApplicationController
   include Rails.application.routes.url_helpers
 
-  before_action :require_levelbuilder_mode_or_test_env, except: [:submit_evaluations, :get_ai_evaluations]
-  load_and_authorize_resource except: [:submit_evaluations, :get_ai_evaluations]
+  before_action :require_levelbuilder_mode_or_test_env, except: [:submit_evaluations, :get_ai_evaluations, :get_teacher_evaluations]
+  load_resource only: [:get_teacher_evaluations]
+  load_and_authorize_resource except: [:submit_evaluations, :get_ai_evaluations, :get_teacher_evaluations]
 
   # GET /rubrics/:rubric_id/edit
   def edit
@@ -71,6 +72,14 @@ class RubricsController < ApplicationController
         group_by(&:learning_goal_id).
         map {|_, eval_list| eval_list.max_by(&:updated_at)}
     render json: learning_goal_ai_evaluations.map(&:summarize_for_instructor)
+  end
+
+  def get_teacher_evaluations
+    return head :bad_request unless current_user
+
+    learning_goal_ids = @rubric.learning_goals.pluck(:id)
+    teacher_evaluations = LearningGoalTeacherEvaluation.where(user_id: current_user.id, learning_goal_id: learning_goal_ids)
+    render json: teacher_evaluations.map(&:summarize_for_participant)
   end
 
   private

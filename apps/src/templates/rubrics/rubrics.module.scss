@@ -231,6 +231,10 @@ p.aiTokenText {
   gap: 1rem;
   align-self: stretch;
   flex: 1;
+
+  h6 {
+    margin-bottom: 0;
+  }
 }
 
 .evidenceLevelOption {
@@ -239,6 +243,7 @@ p.aiTokenText {
   align-items: flex-start;
   gap: 0.25rem;
   align-self: stretch;
+  padding: 0 12px 0 28px;
 
   span {
     font-size: 0.875rem;
