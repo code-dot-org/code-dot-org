@@ -51,6 +51,7 @@ import HelpTip from '@cdo/apps/lib/ui/HelpTip';
 import CourseSelect from './CourseSelect';
 import SubjectSelect from './SubjectSelect';
 import MapboxLocationSearchField from '../../../../templates/MapboxLocationSearchField';
+import ModuleSelect from './ModuleSelect';
 
 // Default to today, 9am-5pm.
 const placeholderSession = {
@@ -100,6 +101,7 @@ export class WorkshopForm extends React.Component {
         id: PropTypes.number,
         name: PropTypes.string,
       }),
+      module: PropTypes.string,
     }),
     onSaved: PropTypes.func,
     today: PropTypes.instanceOf(Date),
@@ -110,6 +112,7 @@ export class WorkshopForm extends React.Component {
   constructor(props) {
     super(props);
     this.state = this.computeInitialState(props);
+    console.log(this.state);
   }
 
   computeInitialState(props) {
@@ -125,7 +128,7 @@ export class WorkshopForm extends React.Component {
       funding_type: null,
       course: '',
       subject: '',
-      unit: '',
+      module: '',
       fee: null,
       notes: '',
       sessions: [placeholderSession],
@@ -152,7 +155,7 @@ export class WorkshopForm extends React.Component {
           'funding_type',
           'course',
           'subject',
-          'unit',
+          'module',
           'fee',
           'notes',
           'regional_partner_id',
@@ -817,7 +820,7 @@ export class WorkshopForm extends React.Component {
     }
   };
 
-  handleUnitChange = event => {
+  handleModuleChange = event => {
     this.handleFieldChange(event);
   };
 
@@ -841,7 +844,7 @@ export class WorkshopForm extends React.Component {
       funding_type: this.state.funding_type,
       course: this.state.course,
       subject: this.state.subject,
-      unit: this.state.unit,
+      module: this.state.module,
       fee: this.state.fee ? this.state.fee : null,
       notes: this.state.notes,
       virtual: this.state.virtual,
@@ -898,7 +901,7 @@ export class WorkshopForm extends React.Component {
     return !['Counselor', 'Admin'].includes(this.state.course);
   }
 
-  shouldRenderUnits() {
+  shouldRenderModules() {
     return this.state.subject === 'Custom Workshop';
   }
 
@@ -1102,27 +1105,15 @@ export class WorkshopForm extends React.Component {
               )}
             </Col>
             <Col sm={2}>
-              {this.shouldRenderUnits() && (
-                <FormGroup validationState={validation.style.unit}>
-                  <ControlLabel>Unit</ControlLabel>
-                  <FormControl
-                    componentClass="select"
-                    value={this.state.unit || ''}
-                    id="unit"
-                    name="unit"
-                    onChange={this.handleUnitChange}
-                    style={this.getInputStyle()}
-                    disabled={this.props.readOnly}
-                  >
-                    {this.state.unit ? null : <option />}
-                    {Subjects[this.state.course].map((unit, i) => (
-                      <option key={i} value={unit}>
-                        {unit}
-                      </option>
-                    ))}
-                  </FormControl>
-                  <HelpBlock>{validation.help.unit}</HelpBlock>
-                </FormGroup>
+              {this.shouldRenderModules() && (
+                <ModuleSelect
+                  course={this.state.course}
+                  module={this.state.module}
+                  readOnly={this.props.readOnly}
+                  inputStyle={this.getInputStyle()}
+                  validation={validation}
+                  onChange={this.handleModuleChange}
+                />
               )}
             </Col>
           </Row>

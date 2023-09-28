@@ -134,6 +134,12 @@ module Pd
       SUBJECT_VIRTUAL_KICKOFF
     ].freeze
 
+    CSD_CUSTOM_WORKSHOP_MODULES = [
+      CIRCUIT_PLAYGROUND = 'Teaching Creating Apps with Devices (Circuit Playground)'.freeze,
+      MICRO_BIT = 'Teaching Creating Apps with Devices (micro:bit)'.freeze,
+      ARTIFICIAL_INTELLIGENCE_AND_MACHINE_LEARNING = 'Teaching Artificial Intelligence and Machine Learning'.freeze,
+    ].freeze
+
     NOT_FUNDED_SUBJECTS = [
       SUBJECT_ADMIN_COUNSELOR_WELCOME,
       SUBJECT_ADMIN_COUNSELOR_SLP_INTRO,
