@@ -161,6 +161,21 @@
         "code/poetry/2023": {
           "word": "Kods"
         },
+        "debugging/csd/2023": {
+          "word": "Atkļūdošana"
+        },
+        "variable/csd/2023": {
+          "word": "Mainīgais"
+        },
+        "conditionals/csd/2023": {
+          "word": "Sazarojumi"
+        },
+        "abstraction/csd/2023": {
+          "word": "Abstrakcija"
+        },
+        "function/csd/2023": {
+          "word": "Funkcija"
+        },
         "debugging/coursea/2023": {
           "word": "Atkļūdošana"
         },

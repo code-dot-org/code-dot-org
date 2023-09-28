@@ -12,10 +12,10 @@
           "name": "Explorando a solução de problemas"
         },
         "csd1-2017/What is a Computer?": {
-          "name": "O que é um computador?"
+          "name": "O que é um Computador?"
         },
         "csd1-2017/Input and Output": {
-          "name": "Entrada e saída"
+          "name": "Entrada e Saída"
         },
         "csd1-2017/Processing": {
           "name": "Processando"
@@ -774,10 +774,10 @@
           "name": "Explorando a solução de problemas"
         },
         "csd1-2018/What is a Computer?": {
-          "name": "O que é um computador?"
+          "name": "O que é um Computador?"
         },
         "csd1-2018/Input and Output": {
-          "name": "Entrada e saída"
+          "name": "Entrada e Saída"
         },
         "csd1-2018/Processing": {
           "name": "Processando"
@@ -1605,10 +1605,10 @@
           "name": "Explorando a solução de problemas"
         },
         "csd1-2019/What is a Computer?": {
-          "name": "O que é um computador?"
+          "name": "O que é um Computador?"
         },
         "csd1-2019/Input and Output": {
-          "name": "Entrada e saída"
+          "name": "Entrada e Saída"
         },
         "csd1-2019/Processing": {
           "name": "Processando"
@@ -2704,13 +2704,13 @@
           "purpose": "Esta lição oferece aos alunos mais prática no processo de resolução de problemas em diversos contextos. Ela destaca o fato de que o processo de resolução de problemas é particularmente útil para abordar problemas mal definidos. O brainstorming final da lição fornece aos alunos algumas estratégias e perguntas que eles podem se fazer para definir melhor os problemas, já que essa geralmente é a etapa mais crítica. Os problemas apresentados nesta lição também ajudam a conduzir uma discussão na lição a seguir sobre os tipos de problemas que os computadores são preparados para resolver."
         },
         "csd1-2021/What is a Computer?": {
-          "name": "O que é um computador?",
+          "name": "O que é um Computador?",
           "assessment_opportunities": "1.  **Identifique um computador como sendo uma máquina que trabalha com informações.**\n\n    Na última discussão da atividade principal, verifique o raciocínio dos alunos sobre se um dispositivo é um computador. Certifique-se de que eles mencionem que um computador usa informações ou resolve problemas de informação (ou pensamento).\n\n2.  \\*\\*Analise se objetos específicos são ou não computadores. \\*\\*\n\n    Na última discussão da atividade principal, verifique o raciocínio dos alunos sobre se um dispositivo é um computador. Certifique-se de que eles mencionem que um computador usa informações ou resolve problemas de informação (ou pensamento).\n\n3.  **Escolha problemas que possam ser resolvidos com a computação e justifique essas escolhas.**\n\n    Na atividade de fechamento, verifique se os alunos escolheram problemas de informação e explicaram como um computador obtém e usa as informações necessárias para resolver o problema.",
           "overview": "Nesta lição, os alunos desenvolvem uma definição preliminar de um computador. Para iniciar a lição, a turma fará um brainstorming de definições possíveis para um computador e registrará os resultados desse brainstorming no quadro. Em seguida, os alunos trabalharão em grupos para classificar as imagens em \"é um computador\" ou \"não é um computador\" em papel para a elaboração de cartazes. Os grupos fixam seus cartazes pela sala e explicam brevemente suas motivações para escolher algumas de suas categorizações mais difíceis. O professor apresentará uma definição de computador e permitirá que os alunos revisem seus cartazes de acordo com a nova definição.",
           "purpose": "Esta lição se baseia no tema de resolução de problemas das lições anteriores e se concentra nas especificidades de como a computação é usada na resolução de problemas. Nesta lição, os alunos considerarão diferentes tipos de computadores e descobrirão que esses computadores usam informações como parte do processo de resolução de problemas. As próximas aulas abordarão muito mais em como é um problema de informação e como os computadores resolvem esses problemas."
         },
         "csd1-2021/Input and Output": {
-          "name": "Entrada e saída",
+          "name": "Entrada e Saída",
           "assessment_opportunities": "1.  **Selecione as entradas e saídas usadas para realizar tarefas computacionais comuns**\n\n    Na discussão de encerramento, certifique-se de que os alunos apresentem vários exemplos de tarefas que envolvam entrada e saída e que estejam criando vários tipos de entradas e saídas específicas para a tarefa em questão. Você também pode coletar respostas individuais para essa pergunta, como num bilhete de saída, por exemplo.\n\n2.  **Explique a função que a entrada e a saída desempenham quando os computadores são usados para resolver problemas de informação.**\n\n    No guia de atividades, verifique se o “aplicativo do aluno” tem entradas e saídas apropriadas listadas, com uma explicação razoável de por que cada uma é necessária. As respostas dos alunos podem variar, mas você pode usar o exemplo vinculado no primeiro nível da progressão do Code Studio como guia.",
           "overview": "\\*\\*Pergunta do Dia: Como os computadores usam a entrada e a saída de dados para obter e fornecer as informações de que precisam para resolver problemas? \\*\\*\n\nNesta lição, os alunos consideram como os computadores obtêm e fornecem informações ao usuário por meio de entradas e saídas. Os alunos primeiro consideram quais informações precisariam para resolver um “problema de pensamento” e, em seguida, usam essas informações para produzir uma sugestão. Em seguida, eles identificam as entradas e saídas desse processo. Depois, os alunos consideram um aplicativo que se envolve no mesmo processo e determinam como esse aplicativo insere e envia informações. Por fim, eles consideram outros tipos de entradas e saídas que os computadores podem usar para ajudar a resolver problemas.",
           "purpose": "Na lição anterior, os alunos começaram a pensar em recursos que podem ajudar a classificar dispositivos como computadores. Esta lição apresenta a entrada e a saída como um desses recursos e faz com que os alunos identifiquem diferentes métodos de entrada ou saída em aplicativos comuns. "
@@ -2764,7 +2764,8 @@
         },
         "csd2-2021/Intro to HTML": {
           "name": "Introdução a HTML",
-          "overview": "**Pergunta do Dia:Como podemos dizer ao computador _o que_ colocar na página da web e _como_ organizar esse conteúdo?**\n\nNesta lição, os alunos são apresentados ao HTML como uma solução para o desafio de como comunicar o conteúdo e a estrutura de um site a um computador. A lição começa com uma breve atividade offline que demonstra os desafios de comunicar com eficácia a estrutura de uma página da web. Em seguida, os alunos examinam uma página HTML modelo no Web Lab e discutem com seus colegas como as tags HTML ajudam a resolver esse problema. Em seguida, os alunos escrevem seu primeiro HTML. Uma discussão de encerramento ajuda a solidificar a compreensão do conteúdo em oposição à estrutura que foi desenvolvida ao longo da aula."
+          "overview": "**Pergunta do Dia:Como podemos dizer ao computador _o que_ colocar na página da web e _como_ organizar esse conteúdo?**\n\nNesta lição, os alunos são apresentados ao HTML como uma solução para o desafio de como comunicar o conteúdo e a estrutura de um site a um computador. A lição começa com uma breve atividade offline que demonstra os desafios de comunicar com eficácia a estrutura de uma página da web. Em seguida, os alunos examinam uma página HTML modelo no Web Lab e discutem com seus colegas como as tags HTML ajudam a resolver esse problema. Em seguida, os alunos escrevem seu primeiro HTML. Uma discussão de encerramento ajuda a solidificar a compreensão do conteúdo em oposição à estrutura que foi desenvolvida ao longo da aula.",
+          "purpose": "Esta lição apresenta muitos conceitos e ferramentas novas aos alunos. Eles são apresentados ao HTML, a ferramenta do Web Lab, e também passam a saber como navegar pelos recursos das aulas no Code.org. Embora a compreensão do HTML como forma de comunicar a estrutura de uma página da web seja um objetivo principal de aprendizagem, esta lição faz com que os alunos façam uma programação mínima, pois há muitas outras novas ideias e ferramentas para apreender. Na próxima lição, os alunos terão mais tempo para programar em HTML."
         },
         "csd2-2021/Headings": {
           "name": "Cabeçalhos"
@@ -4096,7 +4097,7 @@
           "student_overview": "**Pergunta do Dia: Como podemos aplicar o processo de resolução de problemas a diversos tipos de problemas?**\n\nHoje, você vai aplicar o Processo de Resolução de Problemas a três problemas diferentes, que ficarão progressivamente mais complexos!"
         },
         "csd1-2022/What is a Computer?": {
-          "name": "O que é um computador?",
+          "name": "O que é um Computador?",
           "assessment_opportunities": "1.  **Identifique um computador como sendo uma máquina que trabalha com informações.**\n\n    Na última discussão da atividade principal, verifique o raciocínio dos alunos sobre se um dispositivo é um computador. Certifique-se de que eles mencionem que um computador usa informações ou resolve problemas de informação (ou pensamento).\n\n2.  \\*\\*Analise se objetos específicos são ou não computadores. \\*\\*\n\n    Na última discussão da atividade principal, verifique o raciocínio dos alunos sobre se um dispositivo é um computador. Certifique-se de que eles mencionem que um computador usa informações ou resolve problemas de informação (ou pensamento).\n\n3.  **Escolha problemas que possam ser resolvidos com a computação e justifique essas escolhas.**\n\n    Na atividade de fechamento, verifique se os alunos escolheram problemas de informação e explicaram como um computador obtém e usa as informações necessárias para resolver o problema.",
           "overview": "Nesta lição, os alunos desenvolvem uma definição preliminar de um computador. Para iniciar a lição, a turma fará um brainstorming de definições possíveis para um computador e registrará os resultados desse brainstorming no quadro. Em seguida, os alunos trabalharão em grupos para classificar as imagens em \"é um computador\" ou \"não é um computador\" em papel para a elaboração de cartazes. Os grupos fixam seus cartazes pela sala e explicam brevemente suas motivações para escolher algumas de suas categorizações mais difíceis. O professor apresentará uma definição de computador e permitirá que os alunos revisem seus cartazes de acordo com a nova definição.",
           "preparation": "**Para cada grupo** \n\n-   Imprima cópias do guia de atividades. Observe que há dois conjuntos de imagens, mas cada grupo necessitará de apenas um.\n-   Tesoura (caso não consiga recortar as imagens antes da aula) \n-   Cartolinas ou papel pardo\n-   Canetas hidrográficas ou lápis de cor \n-   Cola ou fita para fixas as imagens \n\n**Para o professor**\n\n-   Verifique o fórum da [\"Sala dos Professores\"](https://forum.code.org/t/resource-hub-problem-solving-and-computing-chapter-2-lessons-4-8/36189) disponível aos professores autorizados para encontrar estratégias ou recursos extras compartilhados por outros professores.\n-   Se você estiver dando aulas online, considere verificar nossas [Adaptações para Aulas Virtuais](https://docs.google.com/document/d/1420LdkGrISwhKjHu7i4XCbi60ahmCRnQoYf1_JosdgA/preview)",
@@ -4104,7 +4105,7 @@
           "student_overview": "**Pergunta do Dia: O que é um Computador?**\n\nNesta lição, você vai trabalhar em equipe para descobrir o que faz de um computador um computador!"
         },
         "csd1-2022/Input and Output": {
-          "name": "Entrada e saída",
+          "name": "Entrada e Saída",
           "assessment_opportunities": "1.  **Selecione as entradas e saídas usadas para realizar tarefas computacionais comuns**\n\n    Na discussão de encerramento, certifique-se de que os alunos apresentem vários exemplos de tarefas que envolvam entrada e saída e que estejam criando vários tipos de entradas e saídas específicas para a tarefa em questão. Você também pode coletar respostas individuais para essa pergunta, como num bilhete de saída, por exemplo.\n\n2.  **Explique a função que a entrada e a saída desempenham quando os computadores são usados para resolver problemas de informação.**\n\n    No guia de atividades, verifique se o “aplicativo do aluno” tem entradas e saídas apropriadas listadas, com uma explicação razoável de por que cada uma é necessária. As respostas dos alunos podem variar, mas você pode usar o exemplo vinculado no primeiro nível da progressão do Code Studio como guia.",
           "overview": "\\*\\*Pergunta do Dia: Como os computadores usam a entrada e a saída de dados para obter e fornecer as informações de que precisam para resolver problemas? \\*\\*\n\nNesta lição, os alunos consideram como os computadores obtêm e fornecem informações ao usuário por meio de entradas e saídas. Os alunos primeiro consideram quais informações precisariam para resolver um “problema de pensamento” e, em seguida, usam essas informações para produzir uma sugestão. Em seguida, eles identificam as entradas e saídas desse processo. Depois, os alunos consideram um aplicativo que se envolve no mesmo processo e determinam como esse aplicativo insere e envia informações. Por fim, eles consideram outros tipos de entradas e saídas que os computadores podem usar para ajudar a resolver problemas.",
           "preparation": "-   Faça cópias do guia de atividades\n-   Consulte o fórum da [\"Sala dos Professores\"](https://forum.code.org/t/resource-hub-problem-solving-and-computing-chapter-2-lessons-4-8/36189) para professores autorizados para encontrar estratégias ou recursos adicionais compartilhados por outros professores\n-   Se você estiver ensinando virtualmente, considere conferir nossas [Adaptações para Aulas Virtuais](https://docs.google.com/document/d/1420LdkGrISwhKjHu7i4XCbi60ahmCRnQoYf1_JosdgA/preview)",
@@ -4185,6 +4186,8 @@
         "csd2-2022/Intro to HTML": {
           "name": "Introdução a HTML",
           "overview": "**Pergunta do Dia:Como podemos dizer ao computador _o que_ colocar na página da web e _como_ organizar esse conteúdo?**\n\nNesta lição, os alunos são apresentados ao HTML como uma solução para o desafio de como comunicar o conteúdo e a estrutura de um site a um computador. A lição começa com uma breve atividade offline que demonstra os desafios de comunicar com eficácia a estrutura de uma página da web. Em seguida, os alunos examinam uma página HTML modelo no Web Lab e discutem com seus colegas como as tags HTML ajudam a resolver esse problema. Em seguida, os alunos escrevem seu primeiro HTML. Uma discussão de encerramento ajuda a solidificar a compreensão do conteúdo em oposição à estrutura que foi desenvolvida ao longo da aula.",
+          "preparation": "-   Revise os níveis do Code Studio\n-   Consulte o[0] fórum na [\"Sala dos Professores\"] para que os professores autorizados encontrem estratégias ou recursos adicionais compartilhados por outros professores\n-   Se você estiver ensinando online, considere conferir nossas [Adaptações para aulas virtuais](https://docs.google.com/document/d/15Gkj12vQaZmbJMZbfKk7Ec3krr1aOJeG16zy3wZ83jQ/preview)",
+          "purpose": "Esta lição apresenta muitos conceitos e ferramentas novas aos alunos. Eles são apresentados ao HTML, a ferramenta do Web Lab, e também passam a saber como navegar pelos recursos das aulas no Code.org. Embora a compreensão do HTML como forma de comunicar a estrutura de uma página da web seja um objetivo principal de aprendizagem, esta lição faz com que os alunos façam uma programação mínima, pois há muitas outras novas ideias e ferramentas para apreender. Na próxima lição, os alunos terão mais tempo para programar em HTML.",
           "student_overview": "\\*\\*Pergunta do Dia: Como podemos dizer ao computador _o que_ colocar na página da web e _como_ organizá-la? \\*\\*\n\nVocê verá uma página HTML no Web Lab e usará HTML para escrever sua primeira página da unidade."
         },
         "csd2-2022/Headings": {
@@ -5539,6 +5542,10 @@
           "purpose": "Nesta atividade on-line, os estudantes irão aprender a usar eventos no Play Lab. Eles começarão treinando o cavaleiro para se mover quando uma tecla de direção for pressionada, depois concluir com a oportunidade de demonstrar as outras habilidades aprendidas durante este curso, inclusive sequências e laços, como parte de seu quebra-cabeça livre.",
           "student_overview": "Use eventos para criar uma história ou criar um jogo interativo."
         },
+        "ai-ethics-2023/lesson-1": {
+          "name": "Nosso Código de Ética em I.A.",
+          "student_overview": "Pesquise de forma colaborativa sobre a ética da IA e crie um código de conduta compartilhável."
+        },
         "csc-adaptations-2023/Modeling Animal Adaptations (pilot)": {
           "name": "Introdução às adaptações animais",
           "overview": "Nesta aula de **desenvolvimento de habilidades**, os alunos aprenderão a criar e animar sprites e a usar eventos para torná-los interativos. \n\nOs alunos codificarão um modelo de causa e efeito baseado em eventos no Sprite Lab para demonstrar como as espécies sobrevivem adaptando-se a seus ambientes ao longo do tempo. Modelos e simulações interativos são usados no mundo real para ajudar engenheiros e cientistas a identificar padrões, entender a natureza, fazer previsões sobre mudanças futuras e projetar soluções para se preparar e/ou combater grandes interrupções. \n\nOs alunos explorarão exemplos de evolução, adaptação, migração, seleção natural e sobrevivência em grupos. ",
@@ -5696,6 +5703,408 @@
           "preparation": "-   Prepare um computador por aluno.\n-   Prepare uma cópia do folheto **<a href=\"https://docs.google.com/document/d/1kO4SNEIVyM0GrxxJb6NzVYauXXpi6rzQkDIfrzQf1Ls/template/preview\" target=\"_blank\">Compartilhe seu</a>aplicativo** por aluno.\n-   Certifique-se de que os alunos tenham uma cópia do poema original à mão para esta lição.  \n-   Divida a turma em duplas para a atividade Poetry Pair-Share.\n-   Considere essas opções de extensão relacionadas ([link](https://studio.code.org/s/poetry-2023/lessons/4#activity-4365336)) a serem exploradas após esta lição.\n\n##### Opcional\n\n-   Especialmente para ensino remoto: determine se você precisa configurar um documento digital ou um espaço on-line compartilhado para publicar a URL do aplicativo de cada aluno (consulte o modelo do professor em “Links”). ",
           "purpose": "Compartilhar seus projetos de arte poética com colegas é um aspecto importante do processo criativo. Ele permite que os alunos recebam feedback, colaborem com outras pessoas, reflitam sobre seu próprio trabalho e celebrem suas realizações. Ao compartilhar seu trabalho com outras pessoas, os alunos podem crescer e melhorar como pensadores criativos e desenvolver importantes habilidades interpessoais e de comunicação.",
           "student_overview": "Compartilhe seus novos aplicativos de poemas com seus amigos! "
+        },
+        "csd1-2023/Intro to Problem Solving": {
+          "name": "Introdução à Resolução de Problemas",
+          "preparation": "**Para cada equipe**\n\n-   2 folhas de papel alumínio, tamanho 12,5 x 12,5 cm\n-   1 pote plástico (tipo sorvete)\n-   Várias toalhas de papel ou pedaços de pano para serem colocados debaixo do pote\n-   15 moedas pequenas\n-   Uma cópia do guia de atividades\n\n**Para o professor**\n\n-   1 pote de plástico (tipo sorvete)\n-   50 moedas pequenas\n-   Toalhas de papel ou pedaços de pano extra\n-   Verificar o fórum da [\"Sala dos Professores\"] para que os professores  autorizados encontrem estratégias ou recursos adicionais compartilhados por outros professores\n-   Caso você esteja dando aulas online, sugerimos verificar o nosso [\"Modificações da Aula Virtual\"]"
+        },
+        "csd1-2023/The Problem Solving Process": {
+          "name": "O Processo de Resolução de Problemas",
+          "preparation": "Para cada aluno\n\n-   Imprima uma cópia do Guia de Atividades\n\nPara a turma\n\n-   Cartolina\n-   Canetas hidrocor e lápis de cor\n\nPara o professor\n\n-   Consulte o[0] fórum na [\"Sala dos Professores\"] para os professores autorizados para encontrar estratégias ou recursos adicionais compartilhados por outros professores\n-   Se você está ensinando online, verifique nossas \\[Adaptações para Aulas Online[1]"
+        },
+        "csd1-2023/Exploring Problem Solving": {
+          "name": "Explorando a solução de problemas",
+          "preparation": "-   Imprima o guia de atividades para cada aluno\n-   Disponibilize papéis para rascunhar o problema da festa de aniversário \n-   Distribua cartolinas para registrar as estratégias para a definição de problemas na discussão de encerramento\n-   Consulte o fórum na [\"Sala dos Professores\"](https://forum.code.org/t/resource-hub-problem-solving-and-computing-chapter-1-lessons-1-3/36188) para os professores autorizados para encontrar estratégias ou recursos adicionais compartilhados por outros professores\n-   Se você estiver ensinando virtualmente, considere verificar nossas [Adaptações para Aulas Virtuais](https://docs.google.com/document/d/1420LdkGrISwhKjHu7i4XCbi60ahmCRnQoYf1_JosdgA/preview)"
+        },
+        "csd1-2023/What is a Computer?": {
+          "name": "O que é um Computador?",
+          "preparation": "**Para cada grupo** \n\n-   Imprima cópias do guia de atividades. Observe que há dois conjuntos de imagens, mas cada grupo necessitará de apenas um.\n-   Tesoura (caso não consiga recortar as imagens antes da aula) \n-   Cartolinas ou papel pardo\n-   Canetas hidrográficas ou lápis de cor \n-   Cola ou fita para fixas as imagens \n\n**Para o professor**\n\n-   Verifique o fórum da [\"Sala dos Professores\"](https://forum.code.org/t/resource-hub-problem-solving-and-computing-chapter-2-lessons-4-8/36189) disponível aos professores autorizados para encontrar estratégias ou recursos extras compartilhados por outros professores.\n-   Se você estiver dando aulas online, considere verificar nossas [Adaptações para Aulas Virtuais](https://docs.google.com/document/d/1420LdkGrISwhKjHu7i4XCbi60ahmCRnQoYf1_JosdgA/preview)"
+        },
+        "csd1-2023/Input and Output": {
+          "name": "Entrada e Saída",
+          "preparation": "-   Faça cópias do guia de atividades\n-   Consulte o fórum da [\"Sala dos Professores\"](https://forum.code.org/t/resource-hub-problem-solving-and-computing-chapter-2-lessons-4-8/36189) para professores autorizados para encontrar estratégias ou recursos adicionais compartilhados por outros professores\n-   Se você estiver ensinando virtualmente, considere conferir nossas [Adaptações para Aulas Virtuais](https://docs.google.com/document/d/1420LdkGrISwhKjHu7i4XCbi60ahmCRnQoYf1_JosdgA/preview)"
+        },
+        "csd1-2023/Processing": {
+          "name": "Processando",
+          "preparation": "-   Consulte o fórum da [\"Sala dos Professores\"](https://forum.code.org/t/resource-hub-problem-solving-and-computing-chapter-2-lessons-4-8/36189) para professores autorizados para encontrar estratégias ou recursos adicionais compartilhados por outros professores\n-   Se você estiver ensinando virtualmente, considere conferir nossas [Modificações para Aulas Virtuais](https://docs.google.com/document/d/1420LdkGrISwhKjHu7i4XCbi60ahmCRnQoYf1_JosdgA/preview)"
+        },
+        "csd1-2023/Storage": {
+          "name": "Armazenamento",
+          "preparation": "-   Imprima uma cópia do guia de atividades para cada aluno\n-   Verifique o fórum da [\"Sala dos Professores\"](https://forum.code.org/t/resource-hub-problem-solving-and-computing-chapter-2-lessons-4-8/36189) para professores autorizados para encontrar estratégias ou recursos adicionais compartilhados por outros professores\n-   Se você estiver ensinando virtualmente, considere conferir nossas [Alterações para Aulas Virtuais](https://docs.google.com/document/d/1420LdkGrISwhKjHu7i4XCbi60ahmCRnQoYf1_JosdgA/preview)"
+        },
+        "csd1-2023/Project - Propose an App": {
+          "name": "Projeto - Propor um Aplicativo",
+          "preparation": "-   Imprima uma cópia dos [r apps_and_problem_solving/csd/2023] para cada dupla de alunos\n-   Papel para cartaz (cartolina ou papel pardo), canetas, canetas hidrográficas, e outros materiais para a confecção de cartazes\n-   Verifique o fórum da [\"Sala dos Professores\"](https://forum.code.org/t/project-hub-propose-an-app-problem-solving-and-computing-lesson-8/36201) para professores autorizados para encontrar estratégias e recursos adicionais compartilhados por outros professores\n-   Se você estiver dando aulas online, verifique nossas [Adaptações para Aulas Virtuais](https://docs.google.com/document/d/1420LdkGrISwhKjHu7i4XCbi60ahmCRnQoYf1_JosdgA/preview)"
+        },
+        "csd1-2023/Intro to Problem Solving - Newspaper Table (Alternate Lesson 1)": {
+          "preparation": "**Para cada grupo**\n\n-   2 jornais completos por grupo de alunos\n-   1 rolo de fita adesiva para cada grupo\n-   uma cópia do guia de atividades\n\n**Para o Professor**\n\n-   de 10 a 20 livros de tamanho e peso semelhantes\n-   Verifique o fórum da [\"Sala dos Professores\"](https://forum.code.org/t/resource-hub-problem-solving-and-computing-chapter-1-lessons-1-3/36188) para professores autorizados para encontrar estratégias e recursos adicionais compartilhados por outros professores - Se você estiver dando aulas online, verifique nossas [Adaptações para Aulas Virtuais](https://docs.google.com/document/d/1420LdkGrISwhKjHu7i4XCbi60ahmCRnQoYf1_JosdgA/preview)"
+        },
+        "csd1-2023/Intro to Problem Solving - Spaghetti Bridge (Alternate Lesson 1)": {
+          "preparation": "**Para cada equipe**\n\n-   2 folhas de papel alumínio, tamanho 12,5 x 12,5 cm\n-   1 pote plástico (tipo sorvete)\n-   Várias toalhas de papel ou pedaços de pano para serem colocados debaixo do pote\n-   15 moedas pequenas\n-   Uma cópia do guia de atividades\n\n**Para o professor**\n\n-   1 pote de plástico (tipo sorvete)\n-   50 moedas pequenas\n-   Toalhas de papel ou pedaços de pano extra\n-   Verificar o fórum da [\"Sala dos Professores\"] para que os professores  autorizados encontrem estratégias ou recursos adicionais compartilhados por outros professores\n-   Caso você esteja dando aulas online, sugerimos verificar o nosso [\"Modificações da Aula Virtual\"]"
+        },
+        "csd1-2023/Intro to Problem Solving - Paper Tower (Alternate Lesson 1)": {
+          "preparation": "**Para cada grupo**\n\n-   20 folhas de papel, 22 x 28 cm\n-   Espaço para construir a torre\n-   Uma cópia do guia de atividades\n\n**Para o Professor**\n\n-   Folhas extras de papel\n\n-   cronômetro\n\n-   regra\n\n-   Verifique o fórum da [\"Sala dos Professores\"](https://forum.code.org/t/resource-hub-problem-solving-and-computing-chapter-1-lessons-1-3/36188) para professores autorizados para encontrar estratégias e recursos adicionais compartilhados por outros professores \n\n-   Se você estiver dando aulas online, verifique nossas [Adaptações para Aulas Virtuais](https://docs.google.com/document/d/1420LdkGrISwhKjHu7i4XCbi60ahmCRnQoYf1_JosdgA/preview)"
+        },
+        "csd1-2023/Exploring Problem Solving - Animals Theme (Alternate Lesson 3)": {
+          "assessment_opportunities": "1.  **Aplique o processo de resolução de problemas para abordar uma variedade de problemas**\n\n    Na página 5 do Guia de Atividades, verifique o gráfico para garantir que os alunos estejam adotando medidas razoáveis para cada um dos problemas.\n\n2.  **Avalie se um problema está bem definido e aplique estratégias para definir o problema com mais precisão**\n\n    Para a última pergunta da página 5 do Guia de Atividades, certifique-se de que os alunos tenham pelo menos uma pergunta ou estratégia que seja uma forma eficaz de definir melhor um problema.",
+          "preparation": "-   Imprima uma cópia do guia de atividades para cada aluno\n-   Prepare tangrams para os alunos, ou imprima uma tabela tangram e dê uma tesoura a cada grupo.\n-   Cartaz para registrar as estratégias para a definição de problemas na discussão do fechamento \n-   Visite o fórum da [\"Sala dos Professores\"](https://forum.code.org/t/resource-hub-problem-solving-and-computing-chapter-1-lessons-1-3/36188) para os professores autorizados para acessar estratégias e recursos adicionais compartilhados por outros professores\n-   Se você estiver dando aulas online, consulte nossas [Adaptações para Aulas Virtuais](https://docs.google.com/document/d/1420LdkGrISwhKjHu7i4XCbi60ahmCRnQoYf1_JosdgA/preview)"
+        },
+        "csd1-2023/Exploring Problem Solving - Games Theme (Alternate Lesson 3)": {
+          "preparation": "-   Imprima o guia de atividades para cada aluno\n-   Disponibilize papéis para rascunhar o problema da festa de aniversário \n-   Distribua cartolinas para registrar as estratégias para a definição de problemas na discussão de fechamento\n-   Consulte o fórum na [\"Sala dos Professores\"](https://forum.code.org/t/resource-hub-problem-solving-and-computing-chapter-1-lessons-1-3/36188) para os professores autorizados para encontrar estratégias ou recursos adicionais compartilhados por outros professores\n-   Se você estiver ensinando virtualmente, verifique nossas [Adaptações para Aulas Virtuais](https://docs.google.com/document/d/1420LdkGrISwhKjHu7i4XCbi60ahmCRnQoYf1_JosdgA/preview)"
+        },
+        "csd2-2023/Exploring Web Pages": {
+          "name": "Explorando páginas da Web",
+          "preparation": "-   Imprima uma cópia do guia de atividades para cada aluno.\n-   Consulte o fórum [\"Sala dos Professores\"](https://forum.code.org/t/resource-hub-web-development-chapter-1-lessons-1-13/36190) para professores verificados a fim de encontrar estratégias ou recursos adicionais compartilhados por outros professores\n-   Se você estiver ensinando virtualmente, considere conferir nossas [Modificações para aulas virtuais](https://docs.google.com/document/d/15Gkj12vQaZmbJMZbfKk7Ec3krr1aOJeG16zy3wZ83jQ/preview)"
+        },
+        "csd2-2023/Intro to HTML": {
+          "name": "Introdução a HTML",
+          "preparation": "-   Revise os níveis do Code Studio\n-   Consulte o[0] fórum na [\"Sala dos Professores\"] para que os professores autorizados encontrem estratégias ou recursos adicionais compartilhados por outros professores\n-   Se você estiver ensinando online, considere conferir nossas [Adaptações para aulas virtuais](https://docs.google.com/document/d/15Gkj12vQaZmbJMZbfKk7Ec3krr1aOJeG16zy3wZ83jQ/preview)"
+        },
+        "csd2-2023/Digital Footprint": {
+          "name": "Pegada Digital"
+        },
+        "csd2-2023/Styling Text with CSS": {
+          "name": "Estilo de texto com CSS"
+        },
+        "csd2-2023/Intellectual Property": {
+          "name": "Propriedade intelectual"
+        },
+        "csd2-2023/Using Images": {
+          "preparation": "-   Consulte o fórum da [\"Sala dos Professores\"](https://forum.code.org/t/resource-hub-web-development-chapter-1-lessons-1-13/36190) para professores autorizados para encontrar estratégias ou recursos adicionais compartilhados por outros professores\n-   Se você estiver ensinando virtualmente, considere conferir nossas [Modificações para Aulas Virtuais](https://docs.google.com/document/d/15Gkj12vQaZmbJMZbfKk7Ec3krr1aOJeG16zy3wZ83jQ/preview)"
+        },
+        "csd2-2023/Styling Elements with CSS": {
+          "name": "Estilizando elementos com CSS",
+          "preparation": "-   Consulte o fórum da [\"Sala dos Professores\"](https://forum.code.org/t/resource-hub-web-development-chapter-1-lessons-1-13/36190) para professores autorizados para encontrar estratégias ou recursos adicionais compartilhados por outros professores\n-   Se você estiver ensinando virtualmente, considere conferir nossas [Modificações para Aulas Virtuais](https://docs.google.com/document/d/15Gkj12vQaZmbJMZbfKk7Ec3krr1aOJeG16zy3wZ83jQ/preview)"
+        },
+        "csd2-2023/Websites for a Purpose": {
+          "name": "Websites com um Propósito",
+          "preparation": "-   Consulte o fórum da [\"Sala dos Professores\"](https://forum.code.org/t/resource-hub-web-development-chapter-2-lessons-14-20/36191) para professores autorizados para encontrar estratégias ou recursos adicionais compartilhados por outros professores\n-   Se você estiver ensinando virtualmente, considere conferir nossas [Modificações para Aulas Virtuais](https://docs.google.com/document/d/15Gkj12vQaZmbJMZbfKk7Ec3krr1aOJeG16zy3wZ83jQ/preview)"
+        },
+        "csd2-2023/Team Problem Solving": {
+          "name": "Solução de problemas da equipe",
+          "preparation": "-   Consulte o fórum da [\"Sala dos Professores\"](https://forum.code.org/t/resource-hub-web-development-chapter-2-lessons-14-20/36191) para professores autorizados para encontrar estratégias ou recursos adicionais compartilhados por outros professores\n-   Se você estiver ensinando virtualmente, considere conferir nossas [Modificações para Aulas Virtuais](https://docs.google.com/document/d/15Gkj12vQaZmbJMZbfKk7Ec3krr1aOJeG16zy3wZ83jQ/preview)"
+        },
+        "csd2-2023/Sources and Research": {
+          "name": "Fontes e Pesquisa"
+        },
+        "csd2-2023/CSS Classes": {
+          "name": "Classes CSS",
+          "preparation": "-   Consulte o fórum da [\"Sala dos Professores\"](https://forum.code.org/t/resource-hub-web-development-chapter-2-lessons-14-20/36191) para professores autorizados para encontrar estratégias ou recursos adicionais compartilhados por outros professores\n-   Se você estiver ensinando virtualmente, considere conferir nossas [Modificações para Aulas Virtuais](https://docs.google.com/document/d/15Gkj12vQaZmbJMZbfKk7Ec3krr1aOJeG16zy3wZ83jQ/preview)"
+        },
+        "csd2-2023/Planning a Multi-Page Site": {
+          "preparation": "-   Consulte o fórum da [\"Sala dos Professores\"](https://forum.code.org/t/resource-hub-web-development-chapter-2-lessons-14-20/36191) para professores autorizados para encontrar estratégias ou recursos adicionais compartilhados por outros professores\n-   Se você estiver ensinando virtualmente, considere conferir nossas [Modificações para Aulas Virtuais](https://docs.google.com/document/d/15Gkj12vQaZmbJMZbfKk7Ec3krr1aOJeG16zy3wZ83jQ/preview)"
+        },
+        "csd2-2023/Linking Pages": {
+          "name": "Vinculando páginas"
+        },
+        "csd2-2023/Project - Website for a Purpose": {
+          "name": "Projeto - Site para uma finalidade",
+          "preparation": "-   Consulte o fórum da [\"Sala dos Professores\"](https://forum.code.org/t/project-hub-website-for-a-purpose-web-development-lesson-20/36205) para professores autorizados para encontrar estratégias ou recursos adicionais compartilhados por outros professores\n-   Se você estiver ensinando virtualmente, considere conferir nossas [Modificações para Aulas Virtuais](https://docs.google.com/document/d/15Gkj12vQaZmbJMZbfKk7Ec3krr1aOJeG16zy3wZ83jQ/preview)"
+        },
+        "csd2-2023/Peer Review and Final Touches": {
+          "name": "Revisão por pares e retoques finais"
+        },
+        "csd3-2023/Programming for Entertainment": {
+          "preparation": "-   Consulte o fórum da [\"Sala dos Professores\"](https://forum.code.org/t/resource-hub-interactive-animations-and-games-chapter-1-lessons-1-17/36192) para professores autorizados para encontrar estratégias ou recursos adicionais compartilhados por outros professores\n-   Se você estiver ensinando virtualmente, considere conferir nossas [Modificações para Aulas Virtuais](https://docs.google.com/document/d/16yHyWom69h5OFd-4yYiuwSq9MOdan9sv3Q0R0tzmtD8/preview)"
+        },
+        "csd3-2023/Plotting Shapes": {
+          "name": "Formas de plotagem",
+          "preparation": "-   Consulte o fórum da [\"Sala dos Professores\"](https://forum.code.org/t/resource-hub-interactive-animations-and-games-chapter-1-lessons-1-17/36192) para professores autorizados para encontrar estratégias ou recursos adicionais compartilhados por outros professores\n-   Se você estiver ensinando virtualmente, considere conferir nossas [Modificações para Aulas Virtuais](https://docs.google.com/document/d/16yHyWom69h5OFd-4yYiuwSq9MOdan9sv3Q0R0tzmtD8/preview)"
+        },
+        "csd3-2023/Drawing in Game Lab": {
+          "name": "Desenhando no Laboratório de Jogos",
+          "preparation": "-   Faça cópias do guia de atividades\n-   Consulte o fórum da [\"Sala dos Professores\"](https://forum.code.org/t/resource-hub-interactive-animations-and-games-chapter-1-lessons-1-17/36192) para professores autorizados para encontrar estratégias ou recursos adicionais compartilhados por outros professores\n-   Se você estiver ensinando virtualmente, confira nossas [Adaptações para Aulas Virtuais](https://docs.google.com/document/d/16yHyWom69h5OFd-4yYiuwSq9MOdan9sv3Q0R0tzmtD8/preview)"
+        },
+        "csd3-2023/Shapes and Parameters": {
+          "name": "Formas e Parâmetros",
+          "preparation": "-   Revise a sequência de níveis no Code Studio\n-   Verifique o fórum na [\"Sala dos Professores\"](https://forum.code.org/t/resource-hub-interactive-animations-and-games-chapter-1-lessons-1-17/36192) para professores auorizados para encontrar estratégias adicionais ou recursos compartilhados por outros professores\n-   Se estiver ensinando virtualmente, verifique nossas [Adaptações para Aulas Virtuais](https://docs.google.com/document/d/16yHyWom69h5OFd-4yYiuwSq9MOdan9sv3Q0R0tzmtD8/preview)"
+        },
+        "csd3-2023/Variables": {
+          "name": "Variáveis",
+          "preparation": "-   Revise a progressão de níveis no Code Studio\n-   Verifique o fórum na [\"Sala dos Professores\"](https://forum.code.org/t/resource-hub-interactive-animations-and-games-chapter-1-lessons-1-17/36192) para professores autorizados para encontrar estratégias adicionais ou recursos compartilhados por outros professores\n-   Se estiver ensinando virtualmente, considere verificar nossas [Adaptações para Aulas Virtuais](https://docs.google.com/document/d/16yHyWom69h5OFd-4yYiuwSq9MOdan9sv3Q0R0tzmtD8/preview)"
+        },
+        "csd3-2023/Random Numbers": {
+          "name": "Números Aleatórios",
+          "preparation": "-   Revise a progressão de níveis no Code Studio\n-   Verifique o fórum na [\"Sala dos Professores\"](https://forum.code.org/t/resource-hub-interactive-animations-and-games-chapter-1-lessons-1-17/36192) para professores autorizados para encontrar estratégias adicionais ou recursos compartilhados por outros professores\n-   Se estiver ensinando virtualmente, considere verificar nossas [Adaptações para Aulas Virtuais](https://docs.google.com/document/d/16yHyWom69h5OFd-4yYiuwSq9MOdan9sv3Q0R0tzmtD8/preview)"
+        },
+        "csd3-2023/lesson-18": {
+          "preparation": "-   Consulte o fórum da [\"Sala dos Professores\"](https://forum.code.org/t/project-hub-captioned-scenes-interactive-animations-and-games-lesson-10/36206) para professores autorizados para encontrar estratégias ou recursos adicionais compartilhados por outros professores\n-   Se você estiver ensinando virtualmente, considere conferir nossas [Modificações para Aulas Virtuais](https://docs.google.com/document/d/16yHyWom69h5OFd-4yYiuwSq9MOdan9sv3Q0R0tzmtD8/preview)"
+        },
+        "csd3-2023/Sprites": {
+          "name": "Sprite",
+          "preparation": "-   Consulte o fórum da [\"Sala dos Professores\"](https://forum.code.org/t/resource-hub-interactive-animations-and-games-chapter-1-lessons-1-17/36192) para professores autorizados para encontrar estratégias ou recursos adicionais compartilhados por outros professores\n-   Se você estiver ensinando virtualmente, considere conferir nossas [Modificações para Aulas Virtuais](https://docs.google.com/document/d/16yHyWom69h5OFd-4yYiuwSq9MOdan9sv3Q0R0tzmtD8/preview)"
+        },
+        "csd3-2023/Sprite Properties": {
+          "name": "Propriedades do Sprite",
+          "preparation": "-   Consulte o fórum da [\"Sala dos Professores\"](https://forum.code.org/t/resource-hub-interactive-animations-and-games-chapter-1-lessons-1-17/36192) para professores autorizados para encontrar estratégias ou recursos adicionais compartilhados por outros professores\n-   Se você estiver ensinando virtualmente, considere conferir nossas [Modificações para Aulas Virtuais](https://docs.google.com/document/d/16yHyWom69h5OFd-4yYiuwSq9MOdan9sv3Q0R0tzmtD8/preview)"
+        },
+        "csd3-2023/Text": {
+          "name": "Texto",
+          "preparation": "-   Consulte o fórum da [\"Sala dos Professores\"](https://forum.code.org/t/resource-hub-interactive-animations-and-games-chapter-1-lessons-1-17/36192) para professores autorizados para encontrar estratégias ou recursos adicionais compartilhados por outros professores\n-   Se você estiver ensinando virtualmente, considere conferir nossas [Modificações para Aulas Virtuais](https://docs.google.com/document/d/16yHyWom69h5OFd-4yYiuwSq9MOdan9sv3Q0R0tzmtD8/preview)"
+        },
+        "csd3-2023/Mini-Project - Captioned Scenes": {
+          "name": "Miniprojeto - Cenas legendadas",
+          "preparation": "-   Consulte o fórum da [\"Sala dos Professores\"](https://forum.code.org/t/project-hub-captioned-scenes-interactive-animations-and-games-lesson-10/36206) para professores autorizados para encontrar estratégias ou recursos adicionais compartilhados por outros professores\n-   Se você estiver ensinando virtualmente, considere conferir nossas [Modificações para Aulas Virtuais](https://docs.google.com/document/d/16yHyWom69h5OFd-4yYiuwSq9MOdan9sv3Q0R0tzmtD8/preview)"
+        },
+        "csd3-2023/The Draw Loop": {
+          "name": "O laço de desenho"
+        },
+        "csd3-2023/Sprite Movement": {
+          "name": "Movimento de Sprite",
+          "preparation": "-   Consulte o fórum da [\"Sala dos Professores\"](https://forum.code.org/t/resource-hub-interactive-animations-and-games-chapter-1-lessons-1-17/36192) para professores autorizados para encontrar estratégias ou recursos adicionais compartilhados por outros professores\n-   Se você estiver ensinando virtualmente, considere conferir nossas [Modificações para Aulas Virtuais](https://docs.google.com/document/d/16yHyWom69h5OFd-4yYiuwSq9MOdan9sv3Q0R0tzmtD8/preview)"
+        },
+        "csd3-2023/Mini-Project - Animation": {
+          "name": "Miniprojeto - Animação",
+          "preparation": "-   Consulte o fórum da [\"Sala dos Professores\"](https://forum.code.org/t/project-hub-animation-interactive-animations-and-games-lesson-13/36207) para professores autorizados para encontrar estratégias ou recursos adicionais compartilhados por outros professores\n-   Se você estiver ensinando virtualmente, considere conferir nossas [Modificações para Aulas Virtuais](https://docs.google.com/document/d/16yHyWom69h5OFd-4yYiuwSq9MOdan9sv3Q0R0tzmtD8/preview)"
+        },
+        "csd3-2023/Conditionals": {
+          "name": "Condições",
+          "preparation": "-   Consulte o fórum da [\"Sala dos Professores\"](https://forum.code.org/t/resource-hub-interactive-animations-and-games-chapter-1-lessons-1-17/36192) para professores autorizados para encontrar estratégias ou recursos adicionais compartilhados por outros professores\n-   Se você estiver ensinando virtualmente, considere conferir nossas [Modificações para Aulas Virtuais](https://docs.google.com/document/d/16yHyWom69h5OFd-4yYiuwSq9MOdan9sv3Q0R0tzmtD8/preview)"
+        },
+        "csd3-2023/Keyboard Input": {
+          "name": "Entrada de Teclado",
+          "preparation": "-   Consulte o fórum da [\"Sala dos Professores\"](https://forum.code.org/t/resource-hub-interactive-animations-and-games-chapter-1-lessons-1-17/36192) para professores autorizados para encontrar estratégias ou recursos adicionais compartilhados por outros professores\n-   Se você estiver ensinando virtualmente, considere conferir nossas [Modificações para Aulas Virtuais](https://docs.google.com/document/d/16yHyWom69h5OFd-4yYiuwSq9MOdan9sv3Q0R0tzmtD8/preview)"
+        },
+        "csd3-2023/Mouse Input": {
+          "name": "Entrada de Mouse",
+          "preparation": "-   Consulte o fórum da [\"Sala dos Professores\"](https://forum.code.org/t/resource-hub-interactive-animations-and-games-chapter-1-lessons-1-17/36192) para professores autorizados para encontrar estratégias ou recursos adicionais compartilhados por outros professores\n-   Se você estiver ensinando virtualmente, considere conferir nossas [Modificações para Aulas Virtuais](https://docs.google.com/document/d/16yHyWom69h5OFd-4yYiuwSq9MOdan9sv3Q0R0tzmtD8/preview)"
+        },
+        "csd3-2023/Project - Interactive Card": {
+          "name": "Projeto - Cartão Interativo"
+        },
+        "csd3-2023/Velocity": {
+          "name": "Velocidade",
+          "preparation": "-   Consulte o fórum da [\"Sala dos Professores\"](https://forum.code.org/t/resource-hub-interactive-animations-and-games-chapter-2-lessons-18-27/36193) para professores autorizados para encontrar estratégias ou recursos adicionais compartilhados por outros professores\n-   Se você estiver ensinando virtualmente, considere conferir nossas [Modificações para Aulas Virtuais](https://docs.google.com/document/d/16yHyWom69h5OFd-4yYiuwSq9MOdan9sv3Q0R0tzmtD8/preview)"
+        },
+        "csd3-2023/Collision Detection": {
+          "name": "Detecção de Colisão"
+        },
+        "csd3-2023/Mini-Project - Side Scroller": {
+          "name": "Mini-projeto - Rolagem Lateral",
+          "preparation": "-   Consulte o fórum da [\"Sala dos Professores\"](https://forum.code.org/t/project-hub-side-scroller-interactive-animations-and-games-lesson-20/36209) para professores autorizados para encontrar estratégias ou recursos adicionais compartilhados por outros professores\n-   Se você estiver ensinando virtualmente, considere conferir nossas [Modificações para Aulas Virtuais](https://docs.google.com/document/d/16yHyWom69h5OFd-4yYiuwSq9MOdan9sv3Q0R0tzmtD8/preview)"
+        },
+        "csd3-2023/Complex Sprite Movement": {
+          "name": "Movimento complexo de Sprite",
+          "preparation": "-   Consulte o fórum da [\"Sala dos Professores\"](https://forum.code.org/t/resource-hub-interactive-animations-and-games-chapter-2-lessons-18-27/36193) para professores autorizados para encontrar estratégias ou recursos adicionais compartilhados por outros professores\n-   Se você estiver ensinando virtualmente, considere conferir nossas [Modificações para Aulas Virtuais](https://docs.google.com/document/d/16yHyWom69h5OFd-4yYiuwSq9MOdan9sv3Q0R0tzmtD8/preview)"
+        },
+        "csd3-2023/Collisions": {
+          "name": "Colisões",
+          "preparation": "-   Consulte o fórum da [\"Sala dos Professores\"](https://forum.code.org/t/resource-hub-interactive-animations-and-games-chapter-2-lessons-18-27/36193) para professores autorizados para encontrar estratégias ou recursos adicionais compartilhados por outros professores\n-   Se você estiver ensinando virtualmente, considere conferir nossas [Modificações para Aulas Virtuais](https://docs.google.com/document/d/16yHyWom69h5OFd-4yYiuwSq9MOdan9sv3Q0R0tzmtD8/preview)"
+        },
+        "csd3-2023/Mini-Project - Flyer Game": {
+          "name": "Mini-Projeto - Jogo de Folhetos",
+          "preparation": "-   Consulte o fórum da [\"Sala dos Professores\"](https://forum.code.org/t/project-hub-flyer-game-interactive-animations-and-games-lesson-23/36210) para professores autorizados para encontrar estratégias ou recursos adicionais compartilhados por outros professores\n-   Se você estiver ensinando virtualmente, considere conferir nossas [Modificações para Aulas Virtuais](https://docs.google.com/document/d/16yHyWom69h5OFd-4yYiuwSq9MOdan9sv3Q0R0tzmtD8/preview)"
+        },
+        "csd3-2023/Functions": {
+          "name": "funções",
+          "preparation": "-   Consulte o fórum da [\"Sala dos Professores\"](https://forum.code.org/t/resource-hub-interactive-animations-and-games-chapter-2-lessons-18-27/36193) para professores autorizados para encontrar estratégias ou recursos adicionais compartilhados por outros professores\n-   Se você estiver ensinando virtualmente, considere conferir nossas [Modificações para Aulas Virtuais](https://docs.google.com/document/d/16yHyWom69h5OFd-4yYiuwSq9MOdan9sv3Q0R0tzmtD8/preview)"
+        },
+        "csd3-2023/The Game Design Process": {
+          "name": "O processo de design de jogos"
+        },
+        "csd3-2023/Using the Game Design Process": {
+          "name": "Usando o processo de design de jogos"
+        },
+        "csd3-2023/Project - Design a Game": {
+          "name": "Projeto - Projetar um Jogo"
+        },
+        "csd4-2023/Designing With Empathy": {
+          "name": "Projetando com Empatia",
+          "preparation": "-   Imprima uma cópia do Guia de Atividades para cada aluno (ou distribua o documento digitalmente).\n-   Verifique o fórum na [\"Sala dos Professores\"](https://forum.code.org/t/resource-hub-the-design-process-chapter-1-lessons-1-8/36194) para professores autorizados para encontrar estratégias adicionais ou recursos compartilhados por outros professores.\n-   Se estiver ensinando virtualmente, verifique nossas [Adaptações para Aulas Virtuais](https://docs.google.com/document/d/1T7aTDpaXW8K8pOeLiz53WP-zGxFY3Q1o_CsaiXRiXpo/preview)"
+        },
+        "csd4-2023/Understanding Your User": {
+          "name": "Entendendo seu usuário",
+          "preparation": "-   Imprima perfis de usuário em número suficiente para todos os alunos, garantindo a maior variedade possível\n-   Imprima um guia de atividades para cada usuário\n-   Prepare perguntas rápidas para o exercício de aquecimento\n-   Identifique os quatro cantos da sala de aula como A, B, C e D\n-   Organize a sala em grupos de 4 mesas e coloque um número em cada grupo de mesa (1, 2, 3,...)\n-   Consulte o fórum na [\"Sala dos Professores\"](https://forum.code.org/t/resource-hub-the-design-process-chapter-1-lessons-1-8/36194) para professores autorizados para encontrar estratégias ou recursos adicionais compartilhados por outros professores\n-   Se você estiver ensinando virtualmente, considere conferir nossas [Adaptações para aulas virtuais](https://docs.google.com/document/d/1T7aTDpaXW8K8pOeLiz53WP-zGxFY3Q1o_CsaiXRiXpo/preview)"
+        },
+        "csd4-2023/User Centered Design - Define and Prepare": {
+          "name": "Design Centrado no Usuário - Definir e Preparar",
+          "preparation": "-   Certifique-se de que você tenha muitas notas adesivas, canetas e cartolinas para cartazes para os alunos trabalharem\n-   Monte grupos com, de preferência, 3 alunos cada\n-   Verifique o fórum na [\"Sala dos Professores\"](https://forum.code.org/t/resource-hub-the-design-process-chapter-1-lessons-1-8/36194) para professores autorizados para encontrar estratégias adicionais ou recursos compartilhados por outros professores\n-   Se estiver ensinando virtualmente, considere verificar nossas [Adaptações para aulas virtuais](https://docs.google.com/document/d/1T7aTDpaXW8K8pOeLiz53WP-zGxFY3Q1o_CsaiXRiXpo/preview)"
+        },
+        "csd4-2023/User Centered Design - Try and Reflect": {
+          "name": "Design Centrado no Usuário - Experimente e Reflita"
+        },
+        "csd4-2023/User Interfaces": {
+          "name": "Interfaces de Usuário"
+        },
+        "csd4-2023/Feedback and Testing": {
+          "name": "Teste e Feedback"
+        },
+        "csd4-2023/Identifying User Needs": {
+          "name": "Identificando Necessidades do Usuário"
+        },
+        "csd4-2023/Project - Paper Prototype": {
+          "name": "Projeto - Protótipo de Papel"
+        },
+        "csd4-2023/Designing Apps for Good": {
+          "name": "Criando Apps for Good"
+        },
+        "csd4-2023/Market Research": {
+          "name": "Pesquisa de mercado"
+        },
+        "csd4-2023/Exploring UI Elements": {
+          "name": "Explorando Elementos de Interface UI"
+        },
+        "csd4-2023/Build a Paper Prototype": {
+          "name": "Crie um Protótipo de Papel"
+        },
+        "csd4-2023/Prototype Testing": {
+          "name": "Protótipo de Teste"
+        },
+        "csd4-2023/Design Mode in App Lab": {
+          "name": "Modo de Design no App Lab"
+        },
+        "csd4-2023/Build a Digital Prototype": {
+          "name": "Crie um Protótipo Digital"
+        },
+        "csd4-2023/Events in App Lab": {
+          "name": "Eventos no App Lab",
+          "preparation": "-   Consulte o fórum da [\"Sala dos Professores\"](https://forum.code.org/t/resource-hub-the-design-process-chapter-2-lessons-9-21/36195) para professores autorizados para encontrar estratégias ou recursos adicionais compartilhados por outros professores\n-   Se você estiver ensinando virtualmente, considere conferir nossas [Modificações para Aulas Virtuais](https://docs.google.com/document/d/1T7aTDpaXW8K8pOeLiz53WP-zGxFY3Q1o_CsaiXRiXpo/preview)"
+        },
+        "csd4-2023/Linking Prototype Screens": {
+          "name": "Vinculando Telas de Protótipo",
+          "preparation": "-   Consulte o fórum da [\"Sala dos Professores\"](https://forum.code.org/t/resource-hub-the-design-process-chapter-2-lessons-9-21/36195) para professores autorizados para encontrar estratégias ou recursos adicionais compartilhados por outros professores\n-   Se você estiver ensinando virtualmente, considere conferir nossas [Modificações para Aulas Virtuais](https://docs.google.com/document/d/1T7aTDpaXW8K8pOeLiz53WP-zGxFY3Q1o_CsaiXRiXpo/preview)"
+        },
+        "csd4-2023/Testing the App": {
+          "name": "Testando o aplicativo"
+        },
+        "csd4-2023/Bugs and Features": {
+          "name": "Erros e Recursos"
+        },
+        "csd4-2023/Updating Your Prototype": {
+          "name": "Atualizando seu Protótipo"
+        },
+        "csd4-2023/Project - App Presentation": {
+          "name": "Projeto - Apresentação do App",
+          "preparation": "-   Determine quanto tempo cada grupo tem para apresentar. Normalmente, esse tempo é de 8 a 10 minutos por equipe, mas lembre-se de reservar algum tempo para acompanhar as equipes\n-   Crie uma cópia do conjunto de slides do modelo de apresentação para cada equipe\n-   Imprima uma cópia da rubrica para cada equipe.\n-   Verifique o fórum na [\"Sala dos Professores\"](https://forum.code.org/t/project-hub-app-presentation-the-design-process-lesson-21/36213) para professores verificados para estratégias adicionais ou recursos compartilhados por outros professores\n-   Se estiver ensinando virtualmente, considere verificar nossas [Adaptações para Aulas Virtuais](https://docs.google.com/document/d/1T7aTDpaXW8K8pOeLiz53WP-zGxFY3Q1o_CsaiXRiXpo/preview)"
+        },
+        "csd5-2023/Representation Matters": {
+          "name": "Representação Importa"
+        },
+        "csd5-2023/Patterns and Representation": {
+          "name": "Padrões e Representações"
+        },
+        "csd5-2023/ASCII and Binary Representation": {
+          "name": "ASCII e Representações Binárias"
+        },
+        "csd5-2023/Representing Images": {
+          "name": "Representando Imagens"
+        },
+        "csd5-2023/Representing Numbers": {
+          "name": "Representando Números",
+          "preparation": "-   Consulte o fórum da [\"Sala dos Professores\"](https://forum.code.org/t/resource-hub-data-and-society-chapter-1-lessons-1-8/36196) para professores autorizados para encontrar estratégias ou recursos adicionais compartilhados por outros professores\n-   Se você estiver ensinando virtualmente, considere conferir nossas [Modificações para Aulas Virtuais](https://docs.google.com/document/d/1c99ennCgsVgXhATRiijGl-L0QTpaMdnMax3OL151F0U/preview)"
+        },
+        "csd5-2023/Combining Representations": {
+          "name": "Combinando Representações"
+        },
+        "csd5-2023/Keeping Data Secret": {
+          "name": "Mantendo o segredo dos dados",
+          "preparation": "-   Consulte o fórum da [\"Sala dos Professores\"](https://forum.code.org/t/resource-hub-data-and-society-chapter-1-lessons-1-8/36196) para professores autorizados para encontrar estratégias ou recursos adicionais compartilhados por outros professores\n-   Se você estiver ensinando virtualmente, considere conferir nossas [Modificações para Aulas Virtuais](https://docs.google.com/document/d/1c99ennCgsVgXhATRiijGl-L0QTpaMdnMax3OL151F0U/preview)"
+        },
+        "csd5-2023/Project - Create a Representation": {
+          "name": "Projeto - Criando uma Representação",
+          "preparation": "-   Consulte o fórum da [\"Sala dos Professores\"](https://forum.code.org/t/project-hub-create-a-representation-data-and-society-lesson-8/36214) para professores autorizados para encontrar estratégias ou recursos adicionais compartilhados por outros professores\n-   Se você estiver ensinando virtualmente, considere conferir nossas [Modificações para Aulas Virtuais](https://docs.google.com/document/d/1c99ennCgsVgXhATRiijGl-L0QTpaMdnMax3OL151F0U/preview)"
+        },
+        "csd5-2023/Problem Solving With Data": {
+          "name": "Resolução de Problemas com Dados",
+          "preparation": "-   Consulte o fórum da [\"Sala dos Professores\"](https://forum.code.org/t/resource-hub-data-and-society-chapter-2-lessons-9-16/36197) para professores autorizados para encontrar estratégias ou recursos adicionais compartilhados por outros professores\n-   Se você estiver ensinando virtualmente, considere conferir nossas [Modificações para Aulas Virtuais](https://docs.google.com/document/d/1c99ennCgsVgXhATRiijGl-L0QTpaMdnMax3OL151F0U/preview)"
+        },
+        "csd5-2023/Structuring Data": {
+          "name": "Estruturação de dados",
+          "preparation": "-   Consulte o fórum da [\"Sala dos Professores\"](https://forum.code.org/t/resource-hub-data-and-society-chapter-2-lessons-9-16/36197) para professores autorizados para encontrar estratégias ou recursos adicionais compartilhados por outros professores\n-   Se você estiver ensinando virtualmente, considere conferir nossas [Modificações para Aulas Virtuais](https://docs.google.com/document/d/1c99ennCgsVgXhATRiijGl-L0QTpaMdnMax3OL151F0U/preview)"
+        },
+        "csd5-2023/Interpreting Data": {
+          "name": "Interpretando Dados",
+          "preparation": "-   Consulte o fórum da [\"Sala dos Professores\"](https://forum.code.org/t/resource-hub-data-and-society-chapter-2-lessons-9-16/36197) para professores autorizados para encontrar estratégias ou recursos adicionais compartilhados por outros professores\n-   Se você estiver ensinando virtualmente, considere conferir nossas [Modificações para Aulas Virtuais](https://docs.google.com/document/d/1c99ennCgsVgXhATRiijGl-L0QTpaMdnMax3OL151F0U/preview)"
+        },
+        "csd5-2023/Making Decisions with Data": {
+          "name": "Tomando Decisões com Dados"
+        },
+        "csd5-2023/Automating Data Decisions": {
+          "name": "Automatizando decisões de dados",
+          "preparation": "-   Consulte o fórum da [\"Sala dos Professores\"](https://forum.code.org/t/resource-hub-data-and-society-chapter-2-lessons-9-16/36197) para professores autorizados para encontrar estratégias ou recursos adicionais compartilhados por outros professores\n-   Se você estiver ensinando virtualmente, considere conferir nossas [Modificações para Aulas Virtuais](https://docs.google.com/document/d/1c99ennCgsVgXhATRiijGl-L0QTpaMdnMax3OL151F0U/preview)"
+        },
+        "csd5-2023/Problem Solving with Big Data": {
+          "name": "Solução de Problemas com Big Data"
+        },
+        "csd5-2023/Project - Make a Recommendation": {
+          "name": "Projeto - Faça uma Recomendação"
+        },
+        "csd6a-2023/Intro to App Lab": {
+          "name": "Introdução Laboratório de Aplicativos"
+        },
+        "csd6a-2023/Physical Designs": {
+          "preparation": "-   Consulte o fórum da [\"Sala dos Professores\"](https://forum.code.org/t/resource-hub-interactive-animations-and-games-chapter-1-lessons-1-17/36192) para professores autorizados para encontrar estratégias ou recursos adicionais compartilhados por outros professores\n-   Se você estiver ensinando virtualmente, considere conferir nossas [Modificações para Aulas Virtuais](https://docs.google.com/document/d/16yHyWom69h5OFd-4yYiuwSq9MOdan9sv3Q0R0tzmtD8/preview)"
+        },
+        "csd6a-2023/The Circuit Playground": {
+          "name": "O parque de diversões do circuito"
+        },
+        "csd6a-2023/Board Events": {
+          "name": "Eventos de borda"
+        },
+        "csd6a-2023/Color LEDs": {
+          "name": "LEDs Coloridos"
+        },
+        "csd6a-2023/Accelerometer": {
+          "name": "Acelerômetro"
+        },
+        "csd6a-2023/Making Music": {
+          "name": "Fazendo Música"
+        },
+        "csd6a-2023/Functions": {
+          "name": "funções"
+        },
+        "csd6a-2023/Project - Prototype an Innovation": {
+          "overview": "Neste projeto final do curso, os alunos se unem para desenvolver e testar um protótipo para um dispositivo de computação inovador baseado no parque de diversões do circuito. Usando as entradas e saídas disponíveis no quadro, os grupos criarão programas que permitem interações interessantes e exclusivas do usuário. "
+        },
+        "csd6b-2023/Intro to App Lab": {
+          "name": "Introdução Laboratório de Aplicativos"
+        },
+        "csd6b-2023/Physical Designs": {
+          "preparation": "-   Consulte o fórum da [\"Sala dos Professores\"](https://forum.code.org/t/resource-hub-interactive-animations-and-games-chapter-1-lessons-1-17/36192) para professores autorizados para encontrar estratégias ou recursos adicionais compartilhados por outros professores\n-   Se você estiver ensinando virtualmente, considere conferir nossas [Modificações para Aulas Virtuais](https://docs.google.com/document/d/16yHyWom69h5OFd-4yYiuwSq9MOdan9sv3Q0R0tzmtD8/preview)"
+        },
+        "csd6b-2023/Board Events": {
+          "name": "Eventos de borda"
+        },
+        "csd6b-2023/Accelerometer": {
+          "name": "Acelerômetro"
+        },
+        "csd6b-2023/Functions": {
+          "name": "funções"
+        },
+        "csd7-2023/Intro to App Lab": {
+          "name": "Introdução Laboratório de Aplicativos"
+        },
+        "csd7-2023/Introduction to Machine Learning": {
+          "name": "Introdução ao Machine Learning",
+          "student_overview": "Aprenda os conceitos básicos de machine learning ajudando o AI Bot a reconhecer peixes para limpar o oceano"
+        },
+        "csd7-2023/Types of Machine Learning": {
+          "name": "Tipos de Machine Learning"
+        },
+        "csd7-2023/Introduction to AI Lab": {
+          "name": "Introdução ao AI Lab"
+        },
+        "csd7-2023/Importing Models in App Lab": {
+          "name": "Importando modelos no App Lab"
+        },
+        "csd7-2023/Model Cards": {
+          "name": "Cartões modelo"
+        },
+        "csd7-2023/Numerical Models": {
+          "student_overview": "Zumbis invadiram sua cidade e você precisa usar dados para prever quais partes da cidade têm a menor quantidade de zumbis para você poder levar as pessoas à segurança."
+        },
+        "csd7-2023/Numerical Data in AI Lab": {
+          "name": "Dados numéricos no AI Lab"
+        },
+        "csd7-2023/Project: Make a Machine Learning App": {
+          "name": "Projeto: Crie um aplicativo de Aprendizado de Máquina"
+        },
+        "csd7-2023/Survey Planning": {
+          "name": "Projetando a coleta de dados"
+        },
+        "csd7-2023/Project - Design an AI App": {
+          "name": "Projeto - Crie um aplicativo de Inteligência Artificial",
+          "student_overview": "Crie um aplicativo que usa aprendizado de máquina para resolver um problema em sua comunidade"
         },
         "coursea-2023/Safety in My Online Neighborhood": {
           "name": "Segurança em minha vizinhança on-line",

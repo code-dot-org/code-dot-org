@@ -43,8 +43,10 @@ et:
         age: 'Vanus'
         gender: 'Sugu'
         edit_header: 'Muuda kasutajakonto üksikasju'
+        finish_sign_up_header_error: 'Palun parandage järgmised vead:'
         error:
           future: ei saa olla tulevikus
+        user_type: 'Konto tüüp'
         us_state: 'Olek'
   beta: "beeta"
   hello: "Tere maailm"

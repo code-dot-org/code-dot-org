@@ -53,6 +53,7 @@ sk:
         gender: 'Pohlavie'
         edit_header: 'Upraviť nastavenia účtu'
         finish_sign_up_header: 'Dokončite vytvorenie svojho účtu'
+        finish_sign_up_header_error: 'Opravte tieto chyby:'
         finish_sign_up_subheader: 'Vyplň nasledujúce informácie na dokončenie vytvorenia Code.org účtu pre <strong>%{email}</strong>.'
         finish_sign_up_subheader_markdown: 'Vyplň nasledujúce informácie na dokončenie vytvorenia Code.org účtu pre **%{email}**.'
         finish_sign_up_subheader_provider: 'Vyplň nasledujúce informácie na dokončenie vytvorenia Code.org účtu s <strong>%{provider}</strong> pre <strong>%{email}</strong>.'
@@ -60,6 +61,7 @@ sk:
         reset_password_token: "Odkaz na obnovenie hesla, ktorý si použil"
         error:
           future: nemôže byť v budúcnosti
+        user_type: 'Typ účtu'
         us_state: 'Kraj'
   beta: "beta"
   hello: "Ahoj svet"

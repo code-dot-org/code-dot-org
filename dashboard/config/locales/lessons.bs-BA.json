@@ -483,6 +483,30 @@
         "pre-express-2022/Sequencing with Scrat": {
           "overview": "Ova lekcija će studentima dati ideju o tome šta da očekuju kada se upute prema kompjuterskom laboratoriju. Sve počinje sa kratkom raspravom koji ih upoznaje sa manirima kompjutorskog laboratorija, onda će nastaviti korištenjem računala da završe online zagonetke."
         },
+        "csd3-2023/Variables": {
+          "name": "Varijable"
+        },
+        "csd3-2023/Text": {
+          "name": "Tekst"
+        },
+        "csd3-2023/Conditionals": {
+          "name": "Uvjeti"
+        },
+        "csd3-2023/Velocity": {
+          "name": "Brzina"
+        },
+        "csd3-2023/Functions": {
+          "name": "Funkcije"
+        },
+        "csd6a-2023/Making Music": {
+          "name": "Pravljenje muzike"
+        },
+        "csd6a-2023/Functions": {
+          "name": "Funkcije"
+        },
+        "csd6b-2023/Functions": {
+          "name": "Funkcije"
+        },
         "coursea-2023/Learn to Drag and Drop": {
           "overview": "Ova lekcija će studentima dati ideju o tome šta da očekuju kada se upute prema kompjuterskom laboratoriju. Sve počinje sa kratkom raspravom koji ih upoznaje sa manirima kompjutorskog laboratorija, onda će nastaviti korištenjem računala da završe online zagonetke."
         },

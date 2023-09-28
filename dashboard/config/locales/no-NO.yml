@@ -10,6 +10,7 @@
         error:
           future: ikke mulig å være i framtiden
         finish_sign_up_header: Fullfør oppretting av kontoen
+        finish_sign_up_header_error: 'Vennligst korriger følgende feil:'
         finish_sign_up_subheader: Fyll ut for å gjøre ferdig Code.org-konto for <strong>%{email}</strong>.
         finish_sign_up_subheader_markdown: Fyll ut for å gjøre ferdig Code.org-konto
           for **%{email}**.
@@ -29,6 +30,7 @@
         personal_email_markdown: Personlig e-post adresse [(Klikk her hvis du ikke
           har en e-postadresse)](%{url})
         us_state: Fylke
+        user_type: Kontotype
         username: brukernavn
     errors:
       messages:

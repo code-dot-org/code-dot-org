@@ -1157,6 +1157,9 @@
           "word": "イベント",
           "definition": "何かを引き起こすアクション。"
         },
+        "artificial_intelligence/ai-ethics/2023": {
+          "word": "人工知能"
+        },
         "adaptation/csc-adaptations/2023": {
           "word": "アダプテーション",
           "definition": "環境により良く生き残るための生物の変化"
@@ -1374,6 +1377,64 @@
         },
         "poetry_circle/poetry/2023": {
           "definition": "新しい詩を試したり、他の人から建設的なフィードバックを得たりできる、安全でクリエイティブなスペース"
+        },
+        "computer/csd/2023": {
+          "word": "コンピュータ"
+        },
+        "input/csd/2023": {
+          "word": "入力"
+        },
+        "processing/csd/2023": {
+          "word": "処理"
+        },
+        "digital_footprint/csd/2023": {
+          "word": "デジタルフットプリント"
+        },
+        "copyright/csd/2023": {
+          "word": "著作権",
+          "definition": "文学的、芸術的、または音楽的な素材を印刷、出版、上演、映画化、または録音する独占的な法的権利、および他の人に同じことをすることを許可する権利。"
+        },
+        "bug/csd/2023": {
+          "word": "バグ",
+          "definition": "正常に動作しないプログラムの一部。"
+        },
+        "debugging/csd/2023": {
+          "word": "デバッギング",
+          "definition": "アルゴリズムやプログラムの問題点を見つけて修正すること。"
+        },
+        "program/csd/2023": {
+          "word": "プログラム",
+          "definition": "マシンで実行できるものにコード化されたアルゴリズム。"
+        },
+        "variable/csd/2023": {
+          "word": "変数",
+          "definition": "プログラムで使用される情報の一部のラベル。"
+        },
+        "sprite/csd/2023": {
+          "word": "スプライト"
+        },
+        "condition/csd/2023": {
+          "word": "条件"
+        },
+        "conditionals/csd/2023": {
+          "word": "条件"
+        },
+        "abstraction/csd/2023": {
+          "word": "抽象化"
+        },
+        "function/csd/2023": {
+          "word": "関数（かんすう）"
+        },
+        "user/csd/2023": {
+          "word": "ユーザー",
+          "definition": "ソフトウェアやハードウェアなどのオブジェクトを使う人。"
+        },
+        "user_interface/csd/2023": {
+          "word": "ユーザーインタフェース"
+        },
+        "machine_learning/csd/2023": {
+          "word": "機械学習",
+          "definition": "コンピュータがどのようにパターンを認識し、明示的にプログラムされずに意思決定を行う方法"
         },
         "algorithm/coursea/2023": {
           "word": "アルゴリズム",

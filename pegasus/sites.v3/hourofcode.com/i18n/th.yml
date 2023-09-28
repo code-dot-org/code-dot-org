@@ -248,6 +248,10 @@ th:
   call_to_action_register_early_access: ลงทะเบียนเพื่อเข้าใช้งานก่อนเวลา
   call_to_action_open_positions: ดูตำแหน่งที่เปิดอยู่
   call_to_action_get_guide: รับคู่มือ
+  call_to_action_donate_to_cdo: บริจาคให้ Code.org
+  call_to_action_start_fundraiser: เริ่มการระดมทุน
+  call_to_action_view_donation_policy: ดูนโยบายการบริจาค
+  call_to_action_view_donate_bitpay: ร่วมบริจาคด้วย BitPay
   aria_label_call_to_action_afe: เรียนรู้เพิ่มเติมเกี่ยวกับวิศวกรในอนาคตของ Amazon
   aria_label_call_to_action_teaching_csf: เริ่มการสอนหลักสูตรวิชาชีพความรู้พื้นฐานวิทยาการคอมพิวเตอร์
   aria_label_call_to_action_teaching_csd: เริ่มการเรียนการสอนโปรแกรมการเรียนรู้วิชาชีพวิทยาการคอมพิวเตอร์
@@ -322,6 +326,7 @@ th:
   curriculum_name_csp: หลักการวิทยาการคอมพิวเตอร์
   curriculum_name_csc: การเชื่อมต่อวิทยาการคอมพิวเตอร์
   curriculum_name_csa: วิทยาการคอมพิวเตอร์ A
+  curriculum_name_csa_ai: วิศวกรรมซอฟต์แวร์ & วิสัยทัศน์คอมพิวเตอร์
   curriculum_name_csc_02: โมดูลการเชื่อมต่อวิทยาการคอมพิวเตอร์ใดๆ
   curriculum_name_ai: "  AI และการเรียนรู้ของระบบขั้นสูง  "
   curriculum_name_artificial_intelligence: ปัญญาประดิษฐ์ (AI)
@@ -378,6 +383,9 @@ th:
   curriculum_desc_csd: หลักสูตรที่ยืดหยุ่นทำให้แต่ละหน่วยสามารถสอนคนเดียวหรือรวมกันได้แนะนำนักเรียนในการสร้างเว็บไซต์
     แอป ภาพเคลื่อนไหว เกม และระบบคอมพิวเตอร์ทางกายภาพ
   curriculum_desc_csp: Free, AP® CSP ได้รับการรับรองหลักสูตรเบื้องต้นระดับมัธยมศึกษาตอนปลายที่แนะนำนักเรียนให้รู้จักกับแนวคิดพื้นฐานของวิทยาการคอมพิวเตอร์
+  curriculum_desc_csa_ai_long: 'โมดูลแบบ Post-AP CSA แบบสองบทนี้มอบประสบการณ์จริงสำหรับนักเรียนระดับมัธยมศึกษาตอนปลายด้วยเครื่องมือพัฒนาซอฟต์แวร์ระดับมืออาชีพ
+    รวมถึง GitHub และ GitHub Copilot และมอบทักษะในโลกแห่งความเป็นจริงในการพัฒนาโปรแกรมคอมพิวเตอร์วิทัศน์ '
+  curriculum_desc_csa_ai_short: โมดูล Post-AP® CSA นี้มอบประสบการณ์จริงให้กับนักเรียนมัธยมปลายด้วยเครื่องมือพัฒนาซอฟต์แวร์ระดับมืออาชีพ
   collection_hardware: มุ่งเน้นไปที่ฮาร์ดแวร์
   collection_hardware_desc: ช่วยให้นักเรียนใช้ข้อมูลและอุปกรณ์ทางกายภาพในการแก้ปัญหา
   collection_design_purpose: มุ่งเน้นไปที่การออกแบบที่มีวัตถุประสงค์
@@ -447,6 +455,7 @@ th:
   module_duration_2_hrs: 2 ชั่วโมง
   module_duration_3_hrs: 3 ชั่วโมง
   module_duration_5_hrs: 5 ชั่วโมง
+  module_duration_5_hrs_plus: 5 ชั่วโมงขึ้นไป
   module_duration_8_hrs: 8 ชั่วโมง
   module_duration_20_hrs: 20 ชั่วโมง
   module_duration_35_hrs: 35 ชั่วโมง
@@ -519,6 +528,7 @@ th:
   heading_objects_first: วัตถุก่อน
   heading_these_lessons_will: 'บทเรียนเหล่านี้จะ:'
   heading_explore_curriculum_catalog: สำรวจหลักสูตรทั้งหมดของเราในแคตตาล็อกหลักสูตร
+  heading_csa_ai: กำลังมองหาสิ่งที่ต้องทำหลังจากการสอบ AP®?
   professional_learning_section_desc: รับการสนับสนุนที่คุณต้องการในขณะที่คุณเตรียมการสอน
     ผู้สอนชอบมัน โดยกว่า 90% ให้คะแนนว่าเป็นการพัฒนาทางวิชาชีพที่ดีที่สุด!
   professional_learning_section_desc_short: รับการสนับสนุนที่คุณต้องการในขณะที่คุณเตรียมการสอน
@@ -540,6 +550,18 @@ th:
   support_and_questions_section_desc: ทีมสนับสนุนของเราอยู่ที่นี่เพื่อตอบคำถามใด ๆ
     ที่คุณอาจมีเกี่ยวกับการเริ่มต้นการสอนด้วย Code.org นอกจากนี้คุณยังสามารถสอบถามผู้สอนคนอื่นๆ
     เกี่ยวกับประสบการณ์ของพวกเขาในฟอรั่มผู้สอนของเรา
+  subscribe_form_section_title: สมัครรับข้อมูลอัปเดต
+  subscribe_form_section_desc_csa: ลงทะเบียนเพื่อรับอีเมลรายเดือนเกี่ยวกับ Code.org®
+    Computer Science A ของ Code.org และรับการแจ้งเตือน เคล็ดลับ และการอัปเดตที่เป็นประโยชน์ซึ่งส่งไปยังกล่องจดหมายของคุณโดยตรง
+  subscribe_form_section_desc_csc: ลงทะเบียนเพื่อรับอีเมลรายเดือนเกี่ยวกับ Connections
+    Computer Science ของ Code.org และรับการแจ้งเตือน เคล็ดลับ และการอัปเดตที่เป็นประโยชน์ซึ่งส่งไปยังกล่องจดหมายของคุณโดยตรง
+  subscribe_form_section_desc_csd: ลงทะเบียนเพื่อรับอีเมลรายเดือนเกี่ยวกับการค้นพบวิทยาการคอมพิวเตอร์ของ
+    Code.org และรับการแจ้งเตือน เคล็ดลับ และการอัปเดตที่เป็นประโยชน์ที่ส่งไปยังกล่องจดหมายของคุณโดยตรง
+  subscribe_form_section_desc_csf: ลงทะเบียนเพื่อรับอีเมลรายเดือนเกี่ยวกับความรู้พื้นฐานด้านวิทยาการคอมพิวเตอร์ของ
+    Code.org และรับการเตือนความจำ เคล็ดลับ และการอัปเดตที่เป็นประโยชน์ที่ส่งไปยังกล่องจดหมายของคุณโดยตรง
+  subscribe_form_section_desc_csp: ลงทะเบียนเพื่อรับอีเมลรายเดือนเกี่ยวกับ Computer
+    Science Principles ของ Code.org และรับการแจ้งเตือน เคล็ดลับ และการอัปเดตที่เป็นประโยชน์ที่ส่งไปยังกล่องจดหมายของคุณโดยตรง
+  subscribe_form_section_unsubscribe: คุณสามารถยกเลิกการสมัครได้ตลอดเวลา
   blockchain_hero_heading: วิธีการทำงานของบล็อกเชน
   blockchain_hero_desc: ดำดิ่งสู่โลกของบล็อกเชนด้วย “วิธีการทำงานของ Blockchain” วิดีโอชุดใหม่ของเราและบทเรียนประกอบ!
   blockchain_intro_heading: ดูว่าบล็อกเชนทำงานอย่างไร
@@ -624,6 +646,8 @@ th:
   ai_curriculum_desc_04: บทเรียนเหล่านี้เสริมชุดวิดีโอ How AI Worksแต่ละบทเรียนจะจับคู่กับวิดีโอเดียวจากซีรีส์,
     เจาะลึกเข้าไปในแนวคิดที่แนะนำในวิดีโอ.
   ai_curriculum_btn_aria_label_04: เรียนรู้วิธีการทำงานของ AI
+  ai_curriculum_grades_05: 'ระดับเกรด: 9-12'
+  ai_curriculum_btn_aria_label_05: สำรวจโมดูลวิศวกรรมซอฟต์แวร์และวิสัยทัศน์คอมพิวเตอร์
   ai_carousel_heading: 'สิ่งที่ครูพูดเกี่ยวกับ AI ด้วย Code.org:'
   ai_carousel_quote_01: บทเรียนนี้ยังทำให้นักเรียนของฉันมีโอกาสที่จะเห็นว่ามีองค์ประกอบของความเห็นในระบบการจัดหมวดหมู่ต่อมาเมื่อเราเริ่มเห็นว่าอคติสามารถจบลงใน
     AI ผมก็สามารถดึงพวกเขากลับมาและเตือนพวกเขาว่าข้อมูลที่ใช้ในการฝึกอบรมแบบจำลองของพวกเขาขึ้นอยู่กับทางเลือก
@@ -721,6 +745,7 @@ th:
   ai_pl_101_llm_slides_desc: เครื่องมือสำหรับการแสดงผลที่ดีที่สุดจาก LLM เช่น ChatGPT
     ตั้งแต่เริ่มต้นจนถึงขั้นสูงรวมถึงคำแนะนำเริ่มต้นสำหรับผู้ที่เพียงแค่จุ่มนิ้วเท้าของพวกเขาใน
     เช่นเดียวกับเครื่องมือขั้นสูงสำหรับผู้ที่ต้องการเพิ่มศักยภาพของพวกเขา
+  ai_pl_101_resources_3: AI แจ้งให้เปลี่ยนการเรียนรู้ของนักเรียน
   how_ai_works_hero_heading: AI ทำงานอย่างไร
   how_ai_works_hero_desc: ดำดิ่งสู่โลกของ AI ด้วย “วิธีการทำงานของ AI” วิดีโอซีรี่ส์และบทเรียนประกอบของเรา!
   how_ai_works_intro_desc: ชุดวิดีโอสั้นและบทเรียนในชั้นเรียนนี้จะแนะนำคุณและนักเรียนของคุณถึงวิธีการทำงานของปัญญาประดิษฐ์
@@ -1027,8 +1052,8 @@ th:
     Animation
   csp_page_curriculum_glance_devices: Laptop, Chromebook
   csp_page_curriculum_glance_tools: App Lab
-  csp_page_curriculum_glance_professional_learning: Facilitator-led Workshops, Self-paced
-    Modules
+  csp_page_curriculum_glance_professional_learning: การประชุมเชิงปฏิบัติการนำของผู้อำนวยการ,
+    โมดูลที่ก้าวขึ้นเอง
   csp_page_curriculum_glance_professional_languages: ภาษาอังกฤษ
   csp_page_curriculum_glance_professional_accessibility_features: Text-to-speech,
     Closed captioning, Immersive reader
@@ -1152,8 +1177,8 @@ th:
     ออกแบบแอป, เกมและแอนิเมชั่น, ศิลปะและการออกแบบ, การเขียนโปรแกรม
   csd_page_curriculum_glance_devices: Laptop, Chromebook
   csd_page_curriculum_glance_tools: App Lab, Game Lab, AI Lab, Web Lab
-  csd_page_curriculum_glance_professional_learning: Facilitator-led Workshops, Self-paced
-    Modules
+  csd_page_curriculum_glance_professional_learning: การประชุมเชิงปฏิบัติการนำของผู้อำนวยการ,
+    โมดูลที่ก้าวขึ้นเอง
   csd_page_curriculum_glance_professional_languages: ภาษาอังกฤษ
   csd_page_curriculum_glance_professional_accessibility_features: Text-to-speech,
     Closed captioning, Immersive reader
@@ -1267,8 +1292,8 @@ th:
     ศิลปะและการออกแบบ, การออกแบบแอป
   csf_page_curriculum_glance_devices: แล็ปท็อป, โครมบุ๊ค, แท็บเล็ต
   csf_page_curriculum_glance_tools: แล็บสไปรท์, เพลย์แล็บ
-  csf_page_curriculum_glance_professional_learning: Facilitator-led Workshops, Self-paced
-    Modules
+  csf_page_curriculum_glance_professional_learning: การประชุมเชิงปฏิบัติการนำของผู้อำนวยการ,
+    โมดูลที่ก้าวขึ้นเอง
   csf_page_curriculum_glance_languages: ภาษาอาหรับ, บาฮาซาอินโดนีเซีย, คาตาลาน, จีนตัวย่อ,
     จีนดั้งเดิม, เช็ก, ฝรั่งเศส, เยอรมัน, ฮินดี, อิตาลี, ญี่ปุ่น, เกาหลี, กันนาดา,
     มลายู, มราฐี, มองโกเลีย, โปแลนด์, โปรตุเกส, รัสเซีย, สโลวัก, ตากาล็อก, ทมิฬ, ไทย,
@@ -1390,6 +1415,32 @@ th:
   csa_page_faq_answer_08_02: For more information about the values that guided our
     work, please see our [curriculum values](%{curriculum_values_url}) and our [professional
     learning values](%{pl_values_url}).
+  donate_page_top_heading: ช่วยสนับสนุนพันธกิจของเรา
+  donate_page_top_desc: ทุกการบริจาคเป็นเชื้อเพลิงพันธกิจของ Code.org ในการขยายการเข้าถึงการศึกษาด้านวิทยาการคอมพิวเตอร์เรามีหลายวิธีให้คุณบริจาคและสร้างความแตกต่าง
+  donate_page_fundraise_title: การระดมทุนสำหรับ Code.org
+  donate_page_fundraise_desc: ช่วยระดมเงินสำหรับ Code.org!นักเรียนทุกคนในโรงเรียนทุกคนควรมีโอกาสที่จะเรียนรู้วิทยาการคอมพิวเตอร์
+  donate_page_other_ways_title: วิธีอื่น ๆ ในการให้
+  donate_page_other_ways_desc: สำรวจวิธีการที่หลากหลายในการมีส่วนร่วม และค้นหาตัวเลือกที่เหมาะสมกับคุณที่สุดทุกท่าทาง
+    ไม่ว่าใหญ่หรือเล็ก ขับเคลื่อนภารกิจของเราไปข้างหน้า
+  donate_page_501c3: Code.org ได้รับการจดทะเบียนเป็นสาธารณะ 501 (ค) (3) องค์กรไม่แสวงหาผลกำไรเงินสมทบ
+    Code.org สามารถนำไปลดหย่อนภาษีได้เท่าที่กฎหมายอนุญาตหมายเลขประจำตัวผู้เสียภาษีของ
+    Code.org คือ 46-0858543
+  donate_page_donation_policy_title: ทำความเข้าใจนโยบายการบริจาคของเรา
+  donate_page_donation_policy_desc: เรียนรู้เกี่ยวกับวิธีที่เราจัดการและจัดสรรการมีส่วนร่วมของคุณ
+  donate_tabs_tab_label_daf_direct: DAF โดยตรง
+  donate_tabs_tab_label_amazon: อเมซอน
+  donate_tabs_tab_label_bitpay: บิตเพย์
+  donate_tabs_tab_label_employee_match: ตรงกับพนักงาน
+  donate_tabs_daf_direct_title: บริจาคผ่านทาง DAF Direct
+  donate_tabs_daf_direct_desc: บริจาคผ่านกองทุนที่ผู้บริจาคแนะนำของคุณกับ Fidelity
+    Charitable, Schwab Charitable หรือ BNY Mellon และทำการแนะนำเงินทุนของคุณไปยัง
+    Code.org ผ่านแบบฟอร์มออนไลน์ DAF Direct
+  donate_tabs_amazon_title: บริจาคผ่านอเมซอน
+  donate_tabs_amazon_desc: บริจาคโดยตรงโดยใช้บัญชี Amazon ของคุณด้วยการคลิกเพียงไม่กี่ครั้ง
+    คุณก็สามารถมีส่วนร่วมในพันธกิจของ Code.org ได้อย่างราบรื่นและช่วยเพิ่มอนาคตของการศึกษาด้านวิทยาการคอมพิวเตอร์
+  donate_tabs_bitpay_title: บริจาคเงินด้วยสกุลเงินดิจิทัลผ่าน BitPay
+  donate_tabs_bitpay_desc: ก้าวสู่อนาคตของการให้ด้วยสกุลเงินดิจิทัลผ่าน BitPay สกุลเงินดิจิทัลของคุณโดยตรงสามารถสนับสนุนความพยายามของ
+    Code.org ในการขยายการศึกษาวิทยาการคอมพิวเตอร์
   hoc_live: ชั่วโมงของรหัสสด
   hoc_live_sign_up_title: ลงทะเบียนสำหรับ Hour of Code สด
   hoc_live_learn_title: เรียนรู้กับชั่วโมงของรหัสสด

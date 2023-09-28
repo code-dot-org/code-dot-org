@@ -6587,6 +6587,10 @@
           "purpose": "In questa attività online, gli alunni impareranno come usare gli eventi nel Laboratorio. Inizieranno addestrando un cavaliere a muoversi quando viene premuto un tasto freccia, per poi terminare con l'opportunità di mostrare nell'ultimo esercizio libero, tutte le competenze apprese durante il corso, tra cui le sequenze di istruzioni ed i cicli.",
           "student_overview": "Usa gli eventi per creare una storia o realizzare un gioco interattivo."
         },
+        "ai-ethics-2023/lesson-1": {
+          "name": "Il nostro codice etico sulla IA",
+          "student_overview": "Effettua ricerche collaborative sull'etica dell'IA e crea un codice di condotta condivisibile."
+        },
         "csc-adaptations-2023/Modeling Animal Adaptations (pilot)": {
           "name": "Introduzione agli adattamenti animali",
           "overview": "In questa lezione**skill-building**, gli studenti impareranno a creare e animare sprite e a utilizzare gli eventi per renderli interattivi. \n\nGli studenti codificheranno un modello di causa-effetto basato su eventi in Sprite Lab per dimostrare come le specie sopravvivono adattandosi ai loro ambienti nel tempo. Nel mondo reale vengono utilizzati modelli e simulazioni interattivi per aiutare ingegneri e scienziati a identificare modelli, comprendere la natura, fare previsioni sui cambiamenti futuri e progettare soluzioni per prepararsi e/o combattere le principali interruzioni. \n\nGli studenti esploreranno esempi di evoluzione, adattamento, migrazione, selezione naturale e sopravvivenza in gruppo. ",
@@ -6744,6 +6748,703 @@
           "preparation": "-   Prepara un computer per studente.\n-   Prepara una copia dell'opuscolo**<a href=\"https://docs.google.com/document/d/1kO4SNEIVyM0GrxxJb6NzVYauXXpi6rzQkDIfrzQf1Ls/template/preview\" target=\"_blank\">Condividi la tua</a>app** per studente.\n-   Assicurati che gli studenti abbiano a portata di mano una copia della loro poesia originale per questa lezione.  \n-   Dividi la classe in coppie per l'attività Poetry Pair-Share.\n-   Considerate queste opzioni di estensione correlate ([link](https://studio.code.org/s/poetry-2023/lessons/4#activity-4365336)) da esplorare dopo questa lezione.\n\n##### Facoltativo\n\n-   Specialmente per l'insegnamento a distanza: stabilisci se è necessario configurare un documento digitale o uno spazio online condiviso per pubblicare l'URL dell'app di ogni studente (vedi il modello per insegnante in «Collegamenti»). ",
           "purpose": "Condividere i loro progetti di arte poetica con colleghi è un aspetto importante del processo creativo. Consente agli studenti di ricevere feedback, collaborare con gli altri, riflettere sul proprio lavoro e celebrare i propri risultati. Condividendo il proprio lavoro con gli altri, gli studenti possono crescere e migliorare come pensatori creativi e sviluppare importanti capacità comunicative e interpersonali.",
           "student_overview": "Condividi le tue nuove app per poesie con i tuoi amici! "
+        },
+        "csd1-2023/Intro to Problem Solving": {
+          "name": "Introduzione alla risoluzione di problemi",
+          "preparation": "**Per ogni gruppo**\n\n-   2 fogli di alluminio, 13x13 cm di lato ciascuno\n-   1 contenitore che può contenere 7/8cm-12/13 cm di acqua\n-   Diversi asciugamani di carta o stracci che possono essere posizionati sotto il contenitore\n-   10 centesimi\n-   Una copia della guida alle attività\n\n**Per l'insegnante**\n\n-   1 contenitore che può contenere 3-5 pollici di acqua\n-   50 centesimi\n-   Tovaglioli di carta o stracci extra\n-   Controlla il forum [\"Aula insegnanti\"](https://forum.code.org/t/resource-hub-problem-solving-and-computing-chapter-1-lessons-1-3/36188) per insegnanti verificati per trovare ulteriori strategie o risorse condivise da altri insegnanti\n-   Se stai insegnando virtualmente, valuta la possibilità di consultare le nostre [Modifiche alle lezione virtuale](https://docs.google.com/document/d/1420LdkGrISwhKjHu7i4XCbi60ahmCRnQoYf1_JosdgA/preview)"
+        },
+        "csd1-2023/The Problem Solving Process": {
+          "name": "Il processo di risoluzione dei problemi",
+          "preparation": "Per ogni studente\n\n-   Stampare una copia della Guida alle attività\n\nPer tutta la classe\n\n-   Carta per cartellone\n-   Pennarelli/matite colorate\n\nPer l'insegnante\n\n-   Controlla il forum [\"Aula insegnanti\"](https://forum.code.org/t/resource-hub-problem-solving-and-computing-chapter-1-lessons-1-3/36188) per insegnanti verificati per trovare strategie o risorse aggiuntive condivise dagli altri insegnanti\n-   Se stai facendo una lezione virtuale, valuta la possibilità di controllare le nostre [Modifiche alla lezione virtuale](https://docs.google.com/document/d/1420LdkGrISwhKjHu7i4XCbi60ahmCRnQoYf1_JosdgA/preview)"
+        },
+        "csd1-2023/Exploring Problem Solving": {
+          "name": "Esplorare la risoluzione dei problemi",
+          "preparation": "-   Stampa la guida alle attività per ogni studente\n-   Fogli per appunti per il problema della festa di compleanno\n-   Cartellone per annotare le strategie per la definizione dei problemi alla fine della discussione\n-   Controlla il forum [\"Aula insegnanti\"](https://forum.code.org/t/resource-hub-problem-solving-and-computing-chapter-1-lessons-1-3/36188) per insegnanti verificati per trovare strategie o risorse aggiuntive condivise dagli altri insegnanti\n-   Se stai facendo una lezione virtuale, valuta la possibilità di controllare le nostre [Modifiche alla lezione virtuale](https://docs.google.com/document/d/1420LdkGrISwhKjHu7i4XCbi60ahmCRnQoYf1_JosdgA/preview)"
+        },
+        "csd1-2023/What is a Computer?": {
+          "name": "Cos'è un computer?",
+          "preparation": "**Per ogni gruppo**\n\n-   Stampa copie della guida alle attività. Nota che ci sono due insiemi di immagini, ma ogni gruppo necessita solo di un singolo insiemi.\n-   Forbici (se non hai tempo di tagliare le foto prima della lezione)\n-   Carta per cartellone\n-   Pennarelli o matite colorate\n-   Colla o nastro adesivo per allegare immagini\n\n**Per l'insegnante**\n\n-   Controlla il forum [\"Aula insegnantie\"](https://forum.code.org/t/resource-hub-problem-solving-and-computing-chapter-2-lessons-4-8/36189) per insegnanti verificati per trovare ulteriori strategie o risorse condivise da altri insegnanti\n-   Se stai insegnando virtualmente, valuta la possibilità di consultare le nostre [Modifiche alle lezioni virtuali](https://docs.google.com/document/d/1420LdkGrISwhKjHu7i4XCbi60ahmCRnQoYf1_JosdgA/preview)"
+        },
+        "csd1-2023/Input and Output": {
+          "name": "Ingressi e uscite",
+          "preparation": "-   Prepara alcune copie della Guida alle attività\n-   Controlla il forum [\"Aula insegnanti\"](https://forum.code.org/t/resource-hub-problem-solving-and-computing-chapter-2-lessons-4-8/36189) per insegnanti verificati per trovare strategie o risorse aggiuntive condivise dagli altri colleghi insegnanti\n-   Se stai facendo una lezione virtuale, valuta la possibilità di controllare le nostre [Modifiche alla lezione virtuale](https://docs.google.com/document/d/1420LdkGrISwhKjHu7i4XCbi60ahmCRnQoYf1_JosdgA/preview)"
+        },
+        "csd1-2023/Processing": {
+          "name": "Elaborazione",
+          "preparation": "-   Controlla il forum [\"Aula insegnanti\"](https://forum.code.org/t/resource-hub-problem-solving-and-computing-chapter-2-lessons-4-8/36189) per insegnanti verificati per trovare strategie o risorse aggiuntive condivise dagli altri colleghi insegnanti\n-   Se stai facendo una lezione virtuale, valuta la possibilità di controllare le nostre [Modifiche alla lezione virtuale](https://docs.google.com/document/d/1420LdkGrISwhKjHu7i4XCbi60ahmCRnQoYf1_JosdgA/preview)"
+        },
+        "csd1-2023/Storage": {
+          "name": "Memoria",
+          "preparation": "-   Stampa per ogni studente una copia della Guida alle attività\n-   Controlla il forum [\"Aula insegnanti\"](https://forum.code.org/t/resource-hub-problem-solving-and-computing-chapter-2-lessons-4-8/36189) per insegnanti verificati per trovare strategie o risorse aggiuntive condivise dagli altri colleghi insegnanti\n-   Se stai facendo una lezione virtuale, valuta la possibilità di controllare le nostre [Modifiche alla lezione virtuale](https://docs.google.com/document/d/1420LdkGrISwhKjHu7i4XCbi60ahmCRnQoYf1_JosdgA/preview)"
+        },
+        "csd1-2023/Project - Propose an App": {
+          "name": "Progetto - Proponi un'app",
+          "preparation": "-   Stampa una copia di [r apps_and_problem_solving/csd/2023] per ogni coppia di studenti\n-   Carta per cartellone, penne, pennarelli e altri materiali per realizzare un cartellone\n-   Controlla il forum [\"Aula insegnanti\"](https://forum.code.org/t/project-hub-propose-an-app-problem-solving-and-computing-lesson-8/36201) per insegnanti verificati per trovare strategie o risorse aggiuntive condivise dagli altri insegnanti\n-   Se stai facendo una lezione virtuale, valuta la possibilità di controllare le nostre [Modifiche alla lezione virtuale](https://docs.google.com/document/d/1420LdkGrISwhKjHu7i4XCbi60ahmCRnQoYf1_JosdgA/preview)"
+        },
+        "csd1-2023/Intro to Problem Solving - Newspaper Table (Alternate Lesson 1)": {
+          "name": "Introduzione alla risoluzione dei problemi - Tavolo di giornali (Lezione alternativa 1)",
+          "preparation": "**Per ciascun gruppo**\n\n-   2 giornali interi per ogni gruppo di studenti\n-   1 rotolo di nastro per ogni gruppo di studenti\n-   Una copia della guida alle attività\n\n**Per l'insegnante**\n\n-   10-20 libri di peso simile.-   Controlla il forum [\"Aula insegnanti\"](https://forum.code.org/t/resource-hub-problem-solving-and-computing-chapter-1-lessons-1-3/36188) per insegnanti verificati per trovare strategie o risorse aggiuntive condivise dagli altri colleghi insegnanti\n-   Se stai facendo una lezione virtuale, valuta la possibilità di controllare le nostre [Modifiche alla lezione virtuale](https://docs.google.com/document/d/1420LdkGrISwhKjHu7i4XCbi60ahmCRnQoYf1_JosdgA/preview)"
+        },
+        "csd1-2023/Intro to Problem Solving - Spaghetti Bridge (Alternate Lesson 1)": {
+          "name": "Introduzione alla risoluzione dei problemi - Ponte di spaghetti (Lezione alternativa 1)",
+          "preparation": "**Per ciascun gruppo**\n\n-   1 chilo di spaghetti secchi (circa 1 scatola)\n-   1 pistola per colla a caldo\n-   Una copia della guida alle attività\n\n**Per l'insegnante**\n\n-   10-20 libri di peso e dimensioni simili.\n-   Controlla il forum [\"Aula insegnanti\"](https://forum.code.org/t/resource-hub-problem-solving-and-computing-chapter-1-lessons-1-3/36188) per insegnanti verificati per trovare strategie o risorse aggiuntive condivise dagli altri colleghi insegnanti\n-   Se stai facendo una lezione virtuale, valuta la possibilità di controllare le nostre [Modifiche alla lezione virtuale](https://docs.google.com/document/d/1420LdkGrISwhKjHu7i4XCbi60ahmCRnQoYf1_JosdgA/preview)"
+        },
+        "csd1-2023/Intro to Problem Solving - Paper Tower (Alternate Lesson 1)": {
+          "name": "Introduzione alla risoluzione dei problemi - Torre di carta (Lezione alternativa 1)",
+          "preparation": "**Per ciascun gruppo**\n\n-   20 fogli di carta  A4\n-   spazio adeguato per costruire la propria torre\n-   una copia della guida alle attività\n\n**Per l'insegnante**\n\n-   carta aggiuntiva  \n-   orologio\n-   righello\n-   Controlla il forum [\"Aula insegnanti\"](https://forum.code.org/t/resource-hub-problem-solving-and-computing-chapter-1-lessons-1-3/36188) per insegnanti verificati per trovare strategie o risorse aggiuntive condivise dagli altri colleghi insegnanti\n-   Se stai facendo una lezione virtuale, valuta la possibilità di controllare le nostre [Modifiche alla lezione virtuale](https://docs.google.com/document/d/1420LdkGrISwhKjHu7i4XCbi60ahmCRnQoYf1_JosdgA/preview)"
+        },
+        "csd1-2023/Exploring Problem Solving - Animals Theme (Alternate Lesson 3)": {
+          "name": "Esplorazione della risoluzione dei problemi - Tema degli animali (Lezione alternativa 3)",
+          "assessment_opportunities": "1.  **Applicare il processo di risoluzione dei problemi per affrontare una ampia varietà di problemi**\n\n    A pagina 5 della Guida alle attività, controlla la tabella di valutazione per assicurarti che gli studenti stiano adottando misure ragionevoli per ciascuno dei problemi.\n\n2.  **Valutare quanto sia ben definito un problema e usa le strategie per definirlo in modo più preciso**\n\n    Per l'ultima domanda a pagina 5 della Guida alle attività, assicurati che gli studenti abbiano almeno una domanda o una strategia che sarebbe un modo efficace per definire meglio un problema.",
+          "preparation": "-   Stampa la guida alle attività per ogni studente\n-   Prepara i tangram per gli studenti o stampa un foglio di tangram e procurati delle forbici per ogni gruppo.\n-   Cartellone per annotare le strategie per la definizione dei problemi alla fine della discussione\n-   Controlla il forum [\"Aula insegnanti\"](https://forum.code.org/t/resource-hub-problem-solving-and-computing-chapter-1-lessons-1-3/36188) per insegnanti verificati per trovare strategie o risorse aggiuntive condivise dagli altri insegnanti\n-   Se stai facendo una lezione virtuale, valuta la possibilità di controllare le nostre [Modifiche alla lezione virtuale](https://docs.google.com/document/d/1420LdkGrISwhKjHu7i4XCbi60ahmCRnQoYf1_JosdgA/preview)"
+        },
+        "csd1-2023/Exploring Problem Solving - Games Theme (Alternate Lesson 3)": {
+          "name": "Esplorazione della risoluzione dei problemi - Tema dei giochi (lezione alternativa 3)",
+          "preparation": "-   Stampa la guida alle attività per ogni studente\n-   Fogli per appunti per il problema \"Staffetta con i compagni\"\n-   Cartellone per annotare le strategie per la definizione dei problemi alla fine della discussione\n-   Controlla il forum [\"Aula insegnanti\"](https://forum.code.org/t/resource-hub-problem-solving-and-computing-chapter-1-lessons-1-3/36188) per insegnanti verificati per trovare strategie o risorse aggiuntive condivise dagli altri insegnanti\n-   Se stai facendo una lezione virtuale, valuta la possibilità di controllare le nostre [Modifiche alla lezione virtuale](https://docs.google.com/document/d/1420LdkGrISwhKjHu7i4XCbi60ahmCRnQoYf1_JosdgA/preview)"
+        },
+        "csd2-2023/Exploring Web Pages": {
+          "name": "Esplorazione di pagine Web",
+          "preparation": "-   Stampa per ogni studente una copia della Guida alle attività\n-   Controlla il forum [\"Aula insegnanti\"](https://forum.code.org/t/resource-hub-web-development-chapter-1-lessons-1-13/36190) per insegnanti verificati per trovare strategie o risorse aggiuntive condivise dagli altri colleghi insegnanti\n-   Se stai facendo una lezione virtuale, valuta la possibilità di controllare le nostre [Modifiche alla lezione virtuale](https://docs.google.com/document/d/15Gkj12vQaZmbJMZbfKk7Ec3krr1aOJeG16zy3wZ83jQ/preview)"
+        },
+        "csd2-2023/Intro to HTML": {
+          "name": "Introduzione all'HTML",
+          "preparation": "-   Ripassa gli esercizi di Code Studio\n-   Controlla il forum [\"Aula insegnanti\"](https://forum.code.org/t/resource-hub-web-development-chapter-1-lessons-1-13/36190) per insegnanti verificati per trovare strategie o risorse aggiuntive condivise dagli altri colleghi insegnanti\n-   Se stai facendo una lezione virtuale, valuta la possibilità di controllare le nostre [Modifiche alla lezione virtuale](https://docs.google.com/document/d/15Gkj12vQaZmbJMZbfKk7Ec3krr1aOJeG16zy3wZ83jQ/preview)"
+        },
+        "csd2-2023/Headings": {
+          "preparation": "-   Prepara i diari degli studenti per restituirli.\n-   Se vuoi usare un diagramma di ancoraggio, prepara la carta per cartellone per farlo con tutta la classe.\n-   Controlla il forum [\"Aula insegnanti\"](https://forum.code.org/t/resource-hub-web-development-chapter-1-lessons-1-13/36190) per insegnanti verificati per trovare strategie o risorse aggiuntive condivise dagli altri colleghi insegnanti\n-   Se stai facendo una lezione virtuale, valuta la possibilità di controllare le nostre [Modifiche alla lezione virtuale](https://docs.google.com/document/d/15Gkj12vQaZmbJMZbfKk7Ec3krr1aOJeG16zy3wZ83jQ/preview)"
+        },
+        "csd2-2023/Mini-Project: HTML Web Page": {
+          "name": "Mini-progetto: pagina Web HTML",
+          "preparation": "-   Stampa una copia per ogni studente della Guida al progetto\n-   Controlla il forum [\"Aula insegnanti\"](https://forum.code.org/t/project-hub-html-web-page-web-development-lesson-4/36202) per insegnanti verificati per trovare strategie o risorse aggiuntive condivise dagli altri colleghi insegnanti\n-   Se stai facendo una lezione virtuale, valuta la possibilità di controllare le nostre [Modifiche alla lezione virtuale](https://docs.google.com/document/d/15Gkj12vQaZmbJMZbfKk7Ec3krr1aOJeG16zy3wZ83jQ/preview)"
+        },
+        "csd2-2023/Digital Footprint": {
+          "name": "Tracce digitali",
+          "preparation": "-   Stampa per ogni studente (o una per gruppo se stai lavorando con i gruppi) una copia di \"Investigatore social\"\n-   Controlla il forum [\"Aula insegnanti\"](https://forum.code.org/t/resource-hub-web-development-chapter-1-lessons-1-13/36190) per insegnanti verificati per trovare strategie o risorse aggiuntive condivise dagli altri colleghi insegnanti\n-   Se stai facendo una lezione virtuale, valuta la possibilità di controllare le nostre [Modifiche alla lezione virtuale](https://docs.google.com/document/d/15Gkj12vQaZmbJMZbfKk7Ec3krr1aOJeG16zy3wZ83jQ/preview)",
+          "student_overview": "**Domanda del giorno: come puoi assicurarti che i tui dati personali rimangano privati?**\n\nIn questa lezione, penserai ai dati personali che scegli di condividere digitalmente attraverso vari siti web, app e social media. "
+        },
+        "csd2-2023/Styling Text with CSS": {
+          "name": "Definire lo stile del testo con i CSS",
+          "preparation": "-   Crea un nuovo cartellone intitolato **Proprietà CSS** se i tuoi studenti non tengono traccia delle nuove proprietà CSS nei loro diari\n-   Controlla il forum [\"Aula insegnanti\"](https://forum.code.org/t/resource-hub-web-development-chapter-1-lessons-1-13/36190) per insegnanti verificati per trovare strategie o risorse aggiuntive condivise dagli altri colleghi insegnanti\n-   Se stai facendo una lezione virtuale, valuta la possibilità di controllare le nostre [Modifiche alla lezione virtuale](https://docs.google.com/document/d/15Gkj12vQaZmbJMZbfKk7Ec3krr1aOJeG16zy3wZ83jQ/preview)"
+        },
+        "csd2-2023/Mini-Project: Your Personal Style": {
+          "name": "Mini-progetto: il tuo stile personale",
+          "preparation": "-   Stampa per ogni studente una copia della Guida al progetto\n-   Controlla il forum [\"Aula insegnanti\"](https://forum.code.org/t/project-hub-your-personal-style-web-development-lesson-7/36203) per insegnanti verificati per trovare strategie o risorse aggiuntive condivise dagli altri colleghi insegnanti\n-   Se stai facendo una lezione virtuale, valuta la possibilità di controllare le nostre [Modifiche alla lezione virtuale](https://docs.google.com/document/d/15Gkj12vQaZmbJMZbfKk7Ec3krr1aOJeG16zy3wZ83jQ/preview)"
+        },
+        "csd2-2023/Intellectual Property": {
+          "name": "Proprietà intellettuale",
+          "preparation": "-   Panoramica su Creative Commons - Video. Potrebbe essere necessario scaricarlo prima se YouTube è bloccato dalla scuola.\n-   Controlla il forum [\"Aula insegnanti\"](https://forum.code.org/t/resource-hub-web-development-chapter-1-lessons-1-13/36190) per insegnanti verificati per trovare strategie o risorse aggiuntive condivise dai colleghi insegnanti\n-   Se stai insegnando virtualmente, considera di controllare le nostre [Modifiche alle lezioni virtuali](https://docs.google.com/document/d/15Gkj12vQaZmbJMZbfKk7Ec3krr1aOJeG16zy3wZ83jQ/preview)"
+        },
+        "csd2-2023/Using Images": {
+          "name": "Utilizzo delle immagini",
+          "preparation": "-   Controlla il forum [\"Aula insegnanti\"](https://forum.code.org/t/resource-hub-web-development-chapter-1-lessons-1-13/36190) per insegnanti verificati per trovare strategie o risorse aggiuntive condivise dagli altri colleghi insegnanti\n-   Se stai facendo una lezione virtuale, valuta la possibilità di controllare le nostre [Modifiche alla lezione virtuale](https://docs.google.com/document/d/15Gkj12vQaZmbJMZbfKk7Ec3krr1aOJeG16zy3wZ83jQ/preview)"
+        },
+        "csd2-2023/Websites for Expression": {
+          "name": "Siti web come mezzo per esprimersi",
+          "preparation": "-   Prepara i diari o, in alternativa, alcune copie della Guida alle attività\n-   Controlla il forum [\"Aula insegnanti\"](https://forum.code.org/t/resource-hub-web-development-chapter-1-lessons-1-13/36190) per insegnanti verificati per trovare strategie o risorse aggiuntive condivise dagli altri colleghi insegnanti\n-   Se stai facendo una lezione virtuale, valuta la possibilità di controllare le nostre [Modifiche alla lezione virtuale](https://docs.google.com/document/d/15Gkj12vQaZmbJMZbfKk7Ec3krr1aOJeG16zy3wZ83jQ/preview)"
+        },
+        "csd2-2023/Styling Elements with CSS": {
+          "name": "Elementi di stile con CSS",
+          "preparation": "-   Controlla il forum [\"Aula insegnanti\"](https://forum.code.org/t/resource-hub-web-development-chapter-1-lessons-1-13/36190) per insegnanti verificati per trovare strategie o risorse aggiuntive condivise dagli altri colleghi insegnanti\n-   Se stai facendo una lezione virtuale, valuta la possibilità di controllare le nostre [Modifiche alla lezione virtuale](https://docs.google.com/document/d/15Gkj12vQaZmbJMZbfKk7Ec3krr1aOJeG16zy3wZ83jQ/preview)"
+        },
+        "csd2-2023/Your Web Page - Prepare": {
+          "name": "La tua pagina Web - Preparazione",
+          "preparation": "-   Stampa per ogni studente una copia della Guida alle attività\n-   Controlla il forum [\"Aula insegnanti\"](https://forum.code.org/t/resource-hub-web-development-chapter-1-lessons-1-13/36190) per insegnanti verificati per trovare strategie o risorse aggiuntive condivise dagli altri colleghi insegnanti\n-   Se stai facendo una lezione virtuale, valuta la possibilità di controllare le nostre [Modifiche alla lezione virtuale](https://docs.google.com/document/d/15Gkj12vQaZmbJMZbfKk7Ec3krr1aOJeG16zy3wZ83jQ/preview)"
+        },
+        "csd2-2023/Project - Personal Web Page": {
+          "name": "Progetto - Pagina Web personale",
+          "preparation": "-   Assicurati che gli studenti abbiano accesso alla Guida al progetto dell'ultima lezione.\n-   Controlla il forum [\"Aula insegnanti\"](https://forum.code.org/t/project-hub-personal-web-page-web-development-lesson-13/36204) per insegnanti verificati per trovare strategie o risorse aggiuntive condivise dagli altri colleghi insegnanti\n-   Se stai facendo una lezione virtuale, valuta la possibilità di controllare le nostre [Modifiche alla lezione virtuale](https://docs.google.com/document/d/15Gkj12vQaZmbJMZbfKk7Ec3krr1aOJeG16zy3wZ83jQ/preview)"
+        },
+        "csd2-2023/Websites for a Purpose": {
+          "name": "Siti web destinati a uno scopo",
+          "preparation": "-   Controlla il forum [\"Aula insegnanti\"](https://forum.code.org/t/resource-hub-web-development-chapter-2-lessons-14-20/36191) per insegnanti verificati per trovare strategie o risorse aggiuntive condivise dagli altri colleghi insegnanti\n-   Se stai facendo una lezione virtuale, valuta la possibilità di controllare le nostre [Modifiche alla lezione virtuale](https://docs.google.com/document/d/15Gkj12vQaZmbJMZbfKk7Ec3krr1aOJeG16zy3wZ83jQ/preview)"
+        },
+        "csd2-2023/Team Problem Solving": {
+          "name": "Risoluzione dei problemi in gruppo",
+          "preparation": "-   Controlla il forum [\"Aula insegnanti\"](https://forum.code.org/t/resource-hub-web-development-chapter-2-lessons-14-20/36191) per insegnanti verificati per trovare strategie o risorse aggiuntive condivise dagli altri colleghi insegnanti\n-   Se stai facendo una lezione virtuale, valuta la possibilità di controllare le nostre [Modifiche alla lezione virtuale](https://docs.google.com/document/d/15Gkj12vQaZmbJMZbfKk7Ec3krr1aOJeG16zy3wZ83jQ/preview)"
+        },
+        "csd2-2023/Sources and Research": {
+          "name": "Fonti e ricerche",
+          "preparation": "-   Stampa una copia della guida alle attività di Caccia al tesoro su Internet per ogni coppia di studenti o preparati a proiettare le domande alla classe.\n-   Crea un cartellone vuoto intitolato **Lista di controllo dell'affidabilità** e posizionalo sul muro.\n-   Controlla il forum [\"Aula insegnanti\"](https://forum.code.org/t/resource-hub-web-development-chapter-2-lessons-14-20/36191) per insegnanti verificati e trova strategie o risorse aggiuntive condivise dagli altri insegnanti\n-   Se stai insegnando virtualmente, prendi in considerazione l'idea di controllare le nostre [Modifiche alle lezioni virtuali](https://docs.google.com/document/d/15Gkj12vQaZmbJMZbfKk7Ec3krr1aOJeG16zy3wZ83jQ/preview)"
+        },
+        "csd2-2023/CSS Classes": {
+          "name": "Classi CSS",
+          "preparation": "-   Controlla il forum [\"Aula insegnanti\"](https://forum.code.org/t/resource-hub-web-development-chapter-2-lessons-14-20/36191) per insegnanti verificati per trovare strategie o risorse aggiuntive condivise dagli altri colleghi insegnanti\n-   Se stai facendo una lezione virtuale, valuta la possibilità di controllare le nostre [Modifiche alla lezione virtuale](https://docs.google.com/document/d/15Gkj12vQaZmbJMZbfKk7Ec3krr1aOJeG16zy3wZ83jQ/preview)"
+        },
+        "csd2-2023/Planning a Multi-Page Site": {
+          "name": "Pianificazione di un sito multipagina",
+          "preparation": "-   Controlla il forum [\"Aula insegnanti\"](https://forum.code.org/t/resource-hub-web-development-chapter-2-lessons-14-20/36191) per insegnanti verificati per trovare strategie o risorse aggiuntive condivise dagli altri colleghi insegnanti\n-   Se stai facendo una lezione virtuale, valuta la possibilità di controllare le nostre [Modifiche alla lezione virtuale](https://docs.google.com/document/d/15Gkj12vQaZmbJMZbfKk7Ec3krr1aOJeG16zy3wZ83jQ/preview)"
+        },
+        "csd2-2023/Linking Pages": {
+          "name": "Creare collegamenti alle pagine",
+          "preparation": "-   Assicurati che gli studenti abbiano accesso alla pianificazione del sito web affrontata nella lezione precedente.\n-   Controlla il forum [\"Aula insegnanti\"](https://forum.code.org/t/resource-hub-web-development-chapter-2-lessons-14-20/36191) per insegnanti verificati per trovare strategie o risorse aggiuntive condivise dagli altri colleghi insegnanti\n-   Se stai facendo una lezione virtuale, valuta la possibilità di controllare le nostre [Modifiche alla lezione virtuale](https://docs.google.com/document/d/15Gkj12vQaZmbJMZbfKk7Ec3krr1aOJeG16zy3wZ83jQ/preview)"
+        },
+        "csd2-2023/Project - Website for a Purpose": {
+          "name": "Progetto - Sito web destinato a uno scopo",
+          "preparation": "-   Controlla il forum [\"Aula insegnanti\"](https://forum.code.org/t/project-hub-website-for-a-purpose-web-development-lesson-20/36205) per insegnanti verificati per trovare strategie o risorse aggiuntive condivise dagli altri colleghi insegnanti\n-   Se stai facendo una lezione virtuale, valuta la possibilità di controllare le nostre [Modifiche alla lezione virtuale](https://docs.google.com/document/d/15Gkj12vQaZmbJMZbfKk7Ec3krr1aOJeG16zy3wZ83jQ/preview)"
+        },
+        "csd2-2023/Peer Review and Final Touches": {
+          "name": "Revisione tra pari e ritocchi finali",
+          "preparation": "-   Stampa una copia della guida alla revisione tra pari per ogni studente.\n-   Se stai insegnando virtualmente, valuta la possibilità di controllare la nostra risorsa [Modifiche alla lezione virtuale](https://docs.google.com/document/d/15Gkj12vQaZmbJMZbfKk7Ec3krr1aOJeG16zy3wZ83jQ/preview)"
+        },
+        "csd3-2023/Programming for Entertainment": {
+          "preparation": "-   Controlla il forum [\"Aula insegnanti\"](https://forum.code.org/t/resource-hub-interactive-animations-and-games-chapter-1-lessons-1-17/36192) per insegnanti verificati per trovare strategie o risorse aggiuntive condivise dagli altri colleghi insegnanti\n-   Se stai facendo una lezione virtuale, valuta la possibilità di controllare le nostre [Modifiche alla lezione virtuale](https://docs.google.com/document/d/16yHyWom69h5OFd-4yYiuwSq9MOdan9sv3Q0R0tzmtD8/preview)"
+        },
+        "csd3-2023/Plotting Shapes": {
+          "name": "Disegnare Forme",
+          "preparation": "-   Controlla il forum [\"Aula insegnanti\"](https://forum.code.org/t/resource-hub-interactive-animations-and-games-chapter-1-lessons-1-17/36192) per insegnanti verificati per trovare strategie o risorse aggiuntive condivise dagli altri colleghi insegnanti\n-   Se stai facendo una lezione virtuale, valuta la possibilità di controllare le nostre [Modifiche alla lezione virtuale](https://docs.google.com/document/d/16yHyWom69h5OFd-4yYiuwSq9MOdan9sv3Q0R0tzmtD8/preview)"
+        },
+        "csd3-2023/Drawing in Game Lab": {
+          "name": "Disegnare in Sviluppo Giochi",
+          "preparation": "-   Prepara un proiettore o altri mezzi per mostrare i video se vuoi farli vedere in classe\n-   Controlla il forum [\"Aula insegnanti\"](https://forum.code.org/t/resource-hub-interactive-animations-and-games-chapter-1-lessons-1-17/36192) per insegnanti verificati per trovare strategie o risorse aggiuntive condivise dagli altri colleghi insegnanti\n-   Se stai facendo una lezione virtuale, valuta la possibilità di controllare le nostre [Modifiche alla lezione virtuale](https://docs.google.com/document/d/16yHyWom69h5OFd-4yYiuwSq9MOdan9sv3Q0R0tzmtD8/preview)"
+        },
+        "csd3-2023/Shapes and Parameters": {
+          "name": "Forme e Parametri",
+          "preparation": "-   Ripassa la sequenza di esercizi di Code Studio\n-   Controlla il forum [\"Aula insegnanti\"](https://forum.code.org/t/resource-hub-interactive-animations-and-games-chapter-1-lessons-1-17/36192) per insegnanti verificati per trovare strategie o risorse aggiuntive condivise dagli altri colleghi insegnanti\n-   Se stai facendo una lezione virtuale, valuta la possibilità di controllare le nostre [Modifiche alla lezione virtuale](https://docs.google.com/document/d/16yHyWom69h5OFd-4yYiuwSq9MOdan9sv3Q0R0tzmtD8/preview)"
+        },
+        "csd3-2023/Variables": {
+          "name": "Variabili",
+          "preparation": "-   Ripassa la progressione di esercizi di Code Studio\n-   Controlla il forum [\"Aula insegnanti\"](https://forum.code.org/t/resource-hub-interactive-animations-and-games-chapter-1-lessons-1-17/36192) per insegnanti verificati per trovare strategie o risorse aggiuntive condivise dagli altri colleghi insegnanti\n-   Se stai facendo una lezione virtuale, valuta la possibilità di controllare le nostre [Modifiche alla lezione virtuale](https://docs.google.com/document/d/16yHyWom69h5OFd-4yYiuwSq9MOdan9sv3Q0R0tzmtD8/preview)"
+        },
+        "csd3-2023/Random Numbers": {
+          "name": "Numeri Casuali",
+          "preparation": "-   Ripassa la progressione di esercizi di Code Studio\n-   Controlla il forum [\"Aula insegnanti\"](https://forum.code.org/t/resource-hub-interactive-animations-and-games-chapter-1-lessons-1-17/36192) per insegnanti verificati per trovare strategie o risorse aggiuntive condivise dagli altri colleghi insegnanti\n-   Se stai facendo una lezione virtuale, valuta la possibilità di controllare le nostre [Modifiche alla lezione virtuale](https://docs.google.com/document/d/16yHyWom69h5OFd-4yYiuwSq9MOdan9sv3Q0R0tzmtD8/preview)"
+        },
+        "csd3-2023/lesson-18": {
+          "preparation": "-   Controlla il forum [\"Aula insegnanti\"](https://forum.code.org/t/project-hub-captioned-scenes-interactive-animations-and-games-lesson-10/36206) per insegnanti verificati per trovare strategie o risorse aggiuntive condivise dagli altri colleghi insegnanti\n-   Se stai facendo una lezione virtuale, valuta la possibilità di controllare le nostre [Modifiche alla lezione virtuale](https://docs.google.com/document/d/16yHyWom69h5OFd-4yYiuwSq9MOdan9sv3Q0R0tzmtD8/preview)"
+        },
+        "csd3-2023/Sprites": {
+          "name": "Personaggi",
+          "preparation": "-   Controlla il forum [\"Aula insegnanti\"](https://forum.code.org/t/resource-hub-interactive-animations-and-games-chapter-1-lessons-1-17/36192) per insegnanti verificati per trovare strategie o risorse aggiuntive condivise dagli altri colleghi insegnanti\n-   Se stai facendo una lezione virtuale, valuta la possibilità di controllare le nostre [Modifiche alla lezione virtuale](https://docs.google.com/document/d/16yHyWom69h5OFd-4yYiuwSq9MOdan9sv3Q0R0tzmtD8/preview)"
+        },
+        "csd3-2023/Sprite Properties": {
+          "name": "Proprietà del personaggio",
+          "preparation": "-   Controlla il forum [\"Aula insegnanti\"](https://forum.code.org/t/resource-hub-interactive-animations-and-games-chapter-1-lessons-1-17/36192) per insegnanti verificati per trovare strategie o risorse aggiuntive condivise dagli altri colleghi insegnanti\n-   Se stai facendo una lezione virtuale, valuta la possibilità di controllare le nostre [Modifiche alla lezione virtuale](https://docs.google.com/document/d/16yHyWom69h5OFd-4yYiuwSq9MOdan9sv3Q0R0tzmtD8/preview)"
+        },
+        "csd3-2023/Text": {
+          "name": "Testo",
+          "preparation": "-   Controlla il forum [\"Aula insegnanti\"](https://forum.code.org/t/resource-hub-interactive-animations-and-games-chapter-1-lessons-1-17/36192) per insegnanti verificati per trovare strategie o risorse aggiuntive condivise dagli altri colleghi insegnanti\n-   Se stai facendo una lezione virtuale, valuta la possibilità di controllare le nostre [Modifiche alla lezione virtuale](https://docs.google.com/document/d/16yHyWom69h5OFd-4yYiuwSq9MOdan9sv3Q0R0tzmtD8/preview)"
+        },
+        "csd3-2023/Mini-Project - Captioned Scenes": {
+          "name": "Mini-progetto - Scene con didascalie",
+          "preparation": "-   Controlla il forum [\"Aula insegnanti\"](https://forum.code.org/t/project-hub-captioned-scenes-interactive-animations-and-games-lesson-10/36206) per insegnanti verificati per trovare strategie o risorse aggiuntive condivise dagli altri colleghi insegnanti\n-   Se stai facendo una lezione virtuale, valuta la possibilità di controllare le nostre [Modifiche alla lezione virtuale](https://docs.google.com/document/d/16yHyWom69h5OFd-4yYiuwSq9MOdan9sv3Q0R0tzmtD8/preview)"
+        },
+        "csd3-2023/The Draw Loop": {
+          "name": "La funzione ciclica `draw()`",
+          "preparation": "-   Stampa e assembla le schede da ritagliare\n-   Prepara il video\n-   Controlla il forum [\"Aula insegnanti\"](https://forum.code.org/t/resource-hub-interactive-animations-and-games-chapter-1-lessons-1-17/36192) per insegnanti verificati per trovare strategie o risorse aggiuntive condivise dagli altri colleghi insegnanti\n-   Se stai facendo una lezione virtuale, valuta la possibilità di controllare le nostre [Modifiche alla lezione virtuale](https://docs.google.com/document/d/16yHyWom69h5OFd-4yYiuwSq9MOdan9sv3Q0R0tzmtD8/preview)"
+        },
+        "csd3-2023/Sprite Movement": {
+          "name": "Movimento dei personaggi",
+          "preparation": "-   Controlla il forum [\"Aula insegnanti\"](https://forum.code.org/t/resource-hub-interactive-animations-and-games-chapter-1-lessons-1-17/36192) per insegnanti verificati per trovare strategie o risorse aggiuntive condivise dagli altri colleghi insegnanti\n-   Se stai facendo una lezione virtuale, valuta la possibilità di controllare le nostre [Modifiche alla lezione virtuale](https://docs.google.com/document/d/16yHyWom69h5OFd-4yYiuwSq9MOdan9sv3Q0R0tzmtD8/preview)"
+        },
+        "csd3-2023/Mini-Project - Animation": {
+          "name": "Mini-Progetto - Animazione",
+          "preparation": "-   Controlla il forum [\"Aula insegnanti\"](https://forum.code.org/t/project-hub-animation-interactive-animations-and-games-lesson-13/36207) per insegnanti verificati per trovare strategie o risorse aggiuntive condivise dagli altri colleghi insegnanti\n-   Se stai facendo una lezione virtuale, valuta la possibilità di controllare le nostre [Modifiche alla lezione virtuale](https://docs.google.com/document/d/16yHyWom69h5OFd-4yYiuwSq9MOdan9sv3Q0R0tzmtD8/preview)"
+        },
+        "csd3-2023/Conditionals": {
+          "name": "Istruzioni condizionali",
+          "preparation": "-   Controlla il forum [\"Aula insegnanti\"](https://forum.code.org/t/resource-hub-interactive-animations-and-games-chapter-1-lessons-1-17/36192) per insegnanti verificati per trovare strategie o risorse aggiuntive condivise dagli altri colleghi insegnanti\n-   Se stai facendo una lezione virtuale, valuta la possibilità di controllare le nostre [Modifiche alla lezione virtuale](https://docs.google.com/document/d/16yHyWom69h5OFd-4yYiuwSq9MOdan9sv3Q0R0tzmtD8/preview)"
+        },
+        "csd3-2023/Keyboard Input": {
+          "name": "Input da tastiera",
+          "preparation": "-   Controlla il forum [\"Aula insegnanti\"](https://forum.code.org/t/resource-hub-interactive-animations-and-games-chapter-1-lessons-1-17/36192) per insegnanti verificati per trovare strategie o risorse aggiuntive condivise dagli altri colleghi insegnanti\n-   Se stai facendo una lezione virtuale, valuta la possibilità di controllare le nostre [Modifiche alla lezione virtuale](https://docs.google.com/document/d/16yHyWom69h5OFd-4yYiuwSq9MOdan9sv3Q0R0tzmtD8/preview)"
+        },
+        "csd3-2023/Mouse Input": {
+          "name": "Input del mouse",
+          "preparation": "-   Controlla il forum [\"Aula insegnanti\"](https://forum.code.org/t/resource-hub-interactive-animations-and-games-chapter-1-lessons-1-17/36192) per insegnanti verificati per trovare strategie o risorse aggiuntive condivise dagli altri colleghi insegnanti\n-   Se stai facendo una lezione virtuale, valuta la possibilità di controllare le nostre [Modifiche alla lezione virtuale](https://docs.google.com/document/d/16yHyWom69h5OFd-4yYiuwSq9MOdan9sv3Q0R0tzmtD8/preview)"
+        },
+        "csd3-2023/Project - Interactive Card": {
+          "name": "Progetto - Cartolina interattiva",
+          "preparation": "-   Stampa una copia per ogni studente della Guida al progetto\n-   Controlla il forum [\"Aula insegnanti\"](https://forum.code.org/t/project-hub-interactive-card-interactive-animations-and-games-lesson-17/36208) per insegnanti verificati per trovare strategie o risorse aggiuntive condivise dagli altri colleghi insegnanti\n-   Se stai facendo una lezione virtuale, valuta la possibilità di controllare le nostre [Modifiche alla lezione virtuale](https://docs.google.com/document/d/16yHyWom69h5OFd-4yYiuwSq9MOdan9sv3Q0R0tzmtD8/preview)"
+        },
+        "csd3-2023/Velocity": {
+          "name": "Velocità",
+          "preparation": "-   Controlla il forum [\"Aula insegnanti\"](https://forum.code.org/t/resource-hub-interactive-animations-and-games-chapter-2-lessons-18-27/36193) per insegnanti verificati per trovare strategie o risorse aggiuntive condivise dagli altri colleghi insegnanti\n-   Se stai facendo una lezione virtuale, valuta la possibilità di controllare le nostre [Modifiche alla lezione virtuale](https://docs.google.com/document/d/16yHyWom69h5OFd-4yYiuwSq9MOdan9sv3Q0R0tzmtD8/preview)"
+        },
+        "csd3-2023/Collision Detection": {
+          "name": "Rilevamento delle collisioni",
+          "preparation": "-   Stampa copie della guida alle attività in modo che ogni coppia di studenti abbia una parte A e una parte B\n-   Controlla il forum [\"Aula insegnanti\"](https://forum.code.org/t/resource-hub-interactive-animations-and-games-chapter-2-lessons-18-27/36193) per insegnanti verificati per trovare strategie o risorse aggiuntive condivise dagli altri colleghi insegnanti\n-   Se stai facendo una lezione virtuale, valuta la possibilità di controllare le nostre [Modifiche alla lezione virtuale](https://docs.google.com/document/d/16yHyWom69h5OFd-4yYiuwSq9MOdan9sv3Q0R0tzmtD8/preview)"
+        },
+        "csd3-2023/Mini-Project - Side Scroller": {
+          "name": "Mini-Progetto - Videogioco a scorrimento laterale",
+          "preparation": "-   Controlla il forum [\"Aula insegnanti\"](https://forum.code.org/t/project-hub-side-scroller-interactive-animations-and-games-lesson-20/36209) per insegnanti verificati per trovare strategie o risorse aggiuntive condivise dagli altri colleghi insegnanti\n-   Se stai facendo una lezione virtuale, valuta la possibilità di controllare le nostre [Modifiche alla lezione virtuale](https://docs.google.com/document/d/16yHyWom69h5OFd-4yYiuwSq9MOdan9sv3Q0R0tzmtD8/preview)"
+        },
+        "csd3-2023/Complex Sprite Movement": {
+          "name": "Movimento complesso del personaggio",
+          "preparation": "-   Controlla il forum [\"Aula insegnanti\"](https://forum.code.org/t/resource-hub-interactive-animations-and-games-chapter-2-lessons-18-27/36193) per insegnanti verificati per trovare strategie o risorse aggiuntive condivise dagli altri colleghi insegnanti\n-   Se stai facendo una lezione virtuale, valuta la possibilità di controllare le nostre [Modifiche alla lezione virtuale](https://docs.google.com/document/d/16yHyWom69h5OFd-4yYiuwSq9MOdan9sv3Q0R0tzmtD8/preview)"
+        },
+        "csd3-2023/Collisions": {
+          "name": "Collisioni",
+          "preparation": "-   Controlla il forum [\"Aula insegnanti\"](https://forum.code.org/t/resource-hub-interactive-animations-and-games-chapter-2-lessons-18-27/36193) per insegnanti verificati per trovare strategie o risorse aggiuntive condivise dagli altri colleghi insegnanti\n-   Se stai facendo una lezione virtuale, valuta la possibilità di controllare le nostre [Modifiche alla lezione virtuale](https://docs.google.com/document/d/16yHyWom69h5OFd-4yYiuwSq9MOdan9sv3Q0R0tzmtD8/preview)"
+        },
+        "csd3-2023/Mini-Project - Flyer Game": {
+          "name": "Mini progetto - Gioco con personaggio volante",
+          "preparation": "-   Controlla il forum [\"Aula insegnanti\"](https://forum.code.org/t/project-hub-flyer-game-interactive-animations-and-games-lesson-23/36210) per insegnanti verificati per trovare strategie o risorse aggiuntive condivise dagli altri colleghi insegnanti\n-   Se stai facendo una lezione virtuale, valuta la possibilità di controllare le nostre [Modifiche alla lezione virtuale](https://docs.google.com/document/d/16yHyWom69h5OFd-4yYiuwSq9MOdan9sv3Q0R0tzmtD8/preview)"
+        },
+        "csd3-2023/Functions": {
+          "name": "Funzioni",
+          "preparation": "-   Controlla il forum [\"Aula insegnanti\"](https://forum.code.org/t/resource-hub-interactive-animations-and-games-chapter-2-lessons-18-27/36193) per insegnanti verificati per trovare strategie o risorse aggiuntive condivise dagli altri colleghi insegnanti\n-   Se stai facendo una lezione virtuale, valuta la possibilità di controllare le nostre [Modifiche alla lezione virtuale](https://docs.google.com/document/d/16yHyWom69h5OFd-4yYiuwSq9MOdan9sv3Q0R0tzmtD8/preview)"
+        },
+        "csd3-2023/The Game Design Process": {
+          "name": "Il processo di progettazione dei giochi",
+          "preparation": "-   Stampa copie della guida del progetto se fornirai copie fisiche agli studenti. Si prega di notare che questa guida al progetto è stata precompilata di proposito. (Vedi le note nel Piano della lezione.)\n-   Controlla il forum [\"Aula insegnanti\"](https://forum.code.org/t/resource-hub-interactive-animations-and-games-chapter-2-lessons-18-27/36193) per insegnanti verificati per trovare strategie o risorse aggiuntive condivise dagli altri colleghi insegnanti\n-   Se stai facendo una lezione virtuale, valuta la possibilità di controllare le nostre [Modifiche alla lezione virtuale](https://docs.google.com/document/d/16yHyWom69h5OFd-4yYiuwSq9MOdan9sv3Q0R0tzmtD8/preview)"
+        },
+        "csd3-2023/Using the Game Design Process": {
+          "name": "Utilizzo del processo di progettazione dei giochi",
+          "preparation": "-   Stampa per ogni studente o coppia di studenti una copia della Guida al progetto\n-   Controlla il forum [\"Aula insegnanti\"](https://forum.code.org/t/resource-hub-interactive-animations-and-games-chapter-2-lessons-18-27/36193) per insegnanti verificati per trovare strategie o risorse aggiuntive condivise dagli altri colleghi insegnanti\n-   Se stai facendo una lezione virtuale, valuta la possibilità di controllare le nostre [Modifiche alla lezione virtuale](https://docs.google.com/document/d/16yHyWom69h5OFd-4yYiuwSq9MOdan9sv3Q0R0tzmtD8/preview)"
+        },
+        "csd3-2023/Project - Design a Game": {
+          "name": "Progetto - Progetta un gioco",
+          "preparation": "-   Stampa copie della guida del progetto, una per ogni studente/coppia di studenti\n-   Stampa copie della tabella di valutazione, una per ogni studente/coppia di studenti\n-   Stampa copie della guida alla revisione tra pari, una per ogni studente/coppia di studenti\n-   Ripassa i giochi di esempio in Code Studio\n-   Controlla il forum [\"Aula insegnanti\"](https://forum.code.org/t/project-hub-design-a-game-interactive-animations-and-games-lesson-27/36211) per insegnanti verificati per trovare strategie o risorse aggiuntive condivise dagli altri colleghi insegnanti\n-   Se stai facendo una lezione virtuale, valuta la possibilità di controllare le nostre [Modifiche alla lezione virtuale](https://docs.google.com/document/d/16yHyWom69h5OFd-4yYiuwSq9MOdan9sv3Q0R0tzmtD8/preview)"
+        },
+        "csd4-2023/Designing With Empathy": {
+          "name": "Progettare con empatia",
+          "preparation": "-   Stampa (o predisponi la distribuzione di documenti in digitale) per ogni studente una copia della Guida alle attività\n-   Controlla il forum [\"Aula insegnanti\"](https://forum.code.org/t/resource-hub-the-design-process-chapter-1-lessons-1-8/36194) per insegnanti verificati per trovare strategie o risorse aggiuntive condivise dagli altri colleghi insegnanti\n-   Se stai facendo una lezione virtuale, valuta la possibilità di controllare le nostre [Modifiche alla lezione virtuale](https://docs.google.com/document/d/1T7aTDpaXW8K8pOeLiz53WP-zGxFY3Q1o_CsaiXRiXpo/preview)"
+        },
+        "csd4-2023/Understanding Your User": {
+          "name": "Comprendere il tuo utente",
+          "preparation": "-   Stampa un numero sufficiente di profili utente per tutti gli studenti, garantendo la massima varietà possibile\n-   Stampa una guida alle attività per ogni utente\n-   Prepara domande veloci per l'esercizio di riscaldamento\n-   Etichetta quattro angoli della stanza come A, B, C e D\n-   Disponi la stanza in gruppi di tavoli da 4, e metti un numero su ogni gruppo di tavoli (1, 2, 3,...)\n-   Controlla il forum [\"Aula insegnanti\"](https://forum.code.org/t/resource-hub-the-design-process-chapter-1-lessons-1-8/36194) per insegnanti verificati per trovare ulteriori strategie o risorse condivise da altri insegnanti\n-   Se stai insegnando a distanza, valuta la possibilità di consultare le nostre [Modifiche alle lezioni virtuali](https://docs.google.com/document/d/1T7aTDpaXW8K8pOeLiz53WP-zGxFY3Q1o_CsaiXRiXpo/preview)"
+        },
+        "csd4-2023/User Centered Design - Define and Prepare": {
+          "name": "Progettazione focalizzata sull'utente -  definisci e prepara",
+          "preparation": "-   Assicurati di avere una certa quantità di note adesive, penne e carta per cartelloni di grandi dimensioni su cui gli studenti possono lavorare\n-   Crea gruppi preferibilmente da 3 studenti ciascuno\n-   Controlla il forum [\"Aula insegnanti\"](https://forum.code.org/t/resource-hub-the-design-process-chapter-1-lessons-1-8/36194) per insegnanti verificati per trovare strategie o risorse aggiuntive condivise dagli altri colleghi insegnanti\n-   Se stai facendo una lezione virtuale, valuta la possibilità di controllare le nostre [Modifiche alla lezione virtuale](https://docs.google.com/document/d/1T7aTDpaXW8K8pOeLiz53WP-zGxFY3Q1o_CsaiXRiXpo/preview)"
+        },
+        "csd4-2023/User Centered Design - Try and Reflect": {
+          "name": "Progettazione focalizzata sull'utente - Prova e rifletti",
+          "preparation": "-   Restituisci agli studenti la guida alle attività di ieri\n-   Fai delle copie della guida all'attività \"Prova e Rifletti\" - una per ogni gruppo\n-   Controlla il forum [\"Aula insegnanti\"](https://forum.code.org/t/resource-hub-the-design-process-chapter-1-lessons-1-8/36194) per insegnanti verificati per trovare strategie o risorse aggiuntive condivise dagli altri colleghi insegnanti\n-   Se stai facendo una lezione virtuale, valuta la possibilità di controllare le nostre [Modifiche alla lezione virtuale](https://docs.google.com/document/d/1T7aTDpaXW8K8pOeLiz53WP-zGxFY3Q1o_CsaiXRiXpo/preview)"
+        },
+        "csd4-2023/User Interfaces": {
+          "name": "Interfaccia Utente (UI)",
+          "preparation": "-   Stampa una copia della guida all'attività delle schermate dell'interfaccia utente per ogni coppia di studenti\n-   Stampa una copia della guida all'attività \"Esperienza utente\" (computer) per ogni coppia di studenti\n-   Stampa una copia della guida all'attività \"Esperienza utente\" (utente) per ogni coppia di studenti\n-   Ritaglia le schermate dell'interfaccia utente o fornisci agli studenti delle forbici per farlo da soli\n-   Controlla il forum [\"Teacher's Lounge\"](https://forum.code.org/t/resource-hub-the-design-process-chapter-1-lessons-1-8/36194) per insegnanti verificati per trovare ulteriori strategie o risorse condivise da altri insegnanti\n-   Se stai insegnando virtualmente, valuta la possibilità di consultare le nostre [Modifiche alle lezioni virtuali](https://docs.google.com/document/d/1T7aTDpaXW8K8pOeLiz53WP-zGxFY3Q1o_CsaiXRiXpo/preview)"
+        },
+        "csd4-2023/Feedback and Testing": {
+          "name": "Commento e collaudo",
+          "preparation": "-   Stampa una copia della risorsa Schermate dell'interfaccia utente per ogni gruppo o preparati a esporre gli schermi davanti alla classe\n-   Stampa una copia della risorsa \"Risontri su prototipo\" per ciascun gruppo. Se possibile, tagliale a strisce in anticipo\n-   Stampa una copia di \"Migliora una schermata\" per ogni gruppo. Se possibile, stampa solo fronte in modo che gli studenti possano suddividere la guida alle attività.\n-   Matite colorate o pennarelli per i prototipi su carta\n-   Controlla il forum [\"Teacher's Lounge\"](https://forum.code.org/t/resource-hub-the-design-process-chapter-1-lessons-1-8/36194) per insegnanti verificati per trovare ulteriori strategie o risorse condivise da altri insegnanti\n-   Se stai insegnando virtualmente, valuta la possibilità di consultare le nostre [Modifiche alle lezioni virtuali](https://docs.google.com/document/d/1T7aTDpaXW8K8pOeLiz53WP-zGxFY3Q1o_CsaiXRiXpo/preview)"
+        },
+        "csd4-2023/Identifying User Needs": {
+          "name": "Identificazione delle esigenze degli utenti",
+          "preparation": "-   Stampa una copia della guida all'attività di \"Intervista all'utente\" per ogni studente\n-   Stampa una copia con degli esempi di \"Intervista agli utenti\" per ciascun gruppo\n-   Raccogli cartelloni e materiali per la riflessione di gruppo (penne, foglietti adesivi, ecc.)\n-   Controlla il forum [\"Aula insegnanti\"](https://forum.code.org/t/resource-hub-the-design-process-chapter-1-lessons-1-8/36194) per insegnanti verificati per trovare ulteriori strategie o risorse condivise da altri insegnanti\n-   Se stai insegnando a distanza, valuta la possibilità di consultare le nostre [Modifiche alle lezioni virtuali](https://docs.google.com/document/d/1T7aTDpaXW8K8pOeLiz53WP-zGxFY3Q1o_CsaiXRiXpo/preview)"
+        },
+        "csd4-2023/Project - Paper Prototype": {
+          "name": "Progetto - Prototipo su carta",
+          "preparation": "-   Stampa per ogni studente una copia della guida del progetto\n-   Stampa per ogni studente una copia della tabella di valutazione\n-   6 bigliettini per ogni studente\n-   Materiale da disegno (matite colorate, pennarelli, righelli, ecc.)\n-   Cartellone di carta per ogni studente\n-   Controlla il forum [\"Aula insegnanti\"](https://forum.code.org/t/project-hub-paper-prototype-the-design-process-lesson-8/36212) per insegnanti verificati per trovare ulteriori strategie o risorse condivise da altri insegnanti\n-   Se stai insegnando a distanza, valuta la possibilità di consultare le nostre [Modifiche alle lezioni virtuali](https://docs.google.com/document/d/1T7aTDpaXW8K8pOeLiz53WP-zGxFY3Q1o_CsaiXRiXpo/preview)"
+        },
+        "csd4-2023/Designing Apps for Good": {
+          "name": "Progettare app per il bene comune",
+          "preparation": "-   Crea gruppi di 3-4 persone, idealmente in base a un interesse simile per un argomento dell'app\n-   Stampa una copia per squadra della guida alle attività\n-   Scegli 1-3 app dalle app di esempio da condividere con la classe\n-   Organizza i posti in classe per le squadre preselezionate di 3-4 studenti\n-   Applica delle note adesive per ogni squadra\n-   Controlla il forum [\"Aula insegnanti\"](https://forum.code.org/t/resource-hub-the-design-process-chapter-2-lessons-9-21/36195) per insegnanti verificati per trovare ulteriori strategie o risorse condivise da altri insegnanti\n-   Se stai insegnando a distanza, valuta la possibilità di consultare le nostre [Modifiche alle lezioni virtuali](https://docs.google.com/document/d/1T7aTDpaXW8K8pOeLiz53WP-zGxFY3Q1o_CsaiXRiXpo/preview)"
+        },
+        "csd4-2023/Market Research": {
+          "name": "Ricerche di mercato",
+          "preparation": "-   Organizza i posti in classe per formare gruppi di 4-5 studenti\n-   Prepara alcune copie della Guida alle attività\n-   Controlla il forum [\"Aula insegnanti\"](https://forum.code.org/t/resource-hub-the-design-process-chapter-2-lessons-9-21/36195) per insegnanti verificati per trovare strategie o risorse aggiuntive condivise dagli altri colleghi insegnanti\n-   Se stai facendo una lezione virtuale, valuta la possibilità di controllare le nostre [Modifiche alla lezione virtuale](https://docs.google.com/document/d/1T7aTDpaXW8K8pOeLiz53WP-zGxFY3Q1o_CsaiXRiXpo/preview)"
+        },
+        "csd4-2023/Exploring UI Elements": {
+          "name": "Esplorazione degli elementi dell'interfaccia utente",
+          "preparation": "-   Stampa per ogni studente una copia della Guida alle attività\n-   (Facoltativo) Anteprima della lezione 14 - Modalità di progettazione in Sviluppo App per aiutare a rispondere alle domande degli studenti sugli elementi dell'interfaccia utente in Sviluppo App.\n-   Controlla il forum [\"Aula insegnanti\"](https://forum.code.org/t/resource-hub-the-design-process-chapter-2-lessons-9-21/36195) per insegnanti verificati per trovare strategie o risorse aggiuntive condivise dagli altri colleghi insegnanti\n-   Se stai facendo una lezione virtuale, valuta la possibilità di controllare le nostre [Modifiche alla lezione virtuale](https://docs.google.com/document/d/1T7aTDpaXW8K8pOeLiz53WP-zGxFY3Q1o_CsaiXRiXpo/preview)"
+        },
+        "csd4-2023/Build a Paper Prototype": {
+          "name": "Costruisci un prototipo su carta",
+          "preparation": "-   Prepara schede da 7/8cmx12/13cm (o copie del prototipo di esempio), foglietti adesivi, penne e matite colorate, forbici per ogni squadra\n-   Stampa per ogni gruppouna copia della Guida alle attività\n-   Controlla il forum [\"Aula insegnanti\"](https://forum.code.org/t/resource-hub-the-design-process-chapter-2-lessons-9-21/36195) per insegnanti verificati per trovare strategie o risorse aggiuntive condivise dagli altri colleghi insegnanti\n-   Se stai facendo una lezione virtuale, valuta la possibilità di controllare le nostre [Modifiche alla lezione virtuale](https://docs.google.com/document/d/1T7aTDpaXW8K8pOeLiz53WP-zGxFY3Q1o_CsaiXRiXpo/preview)"
+        },
+        "csd4-2023/Prototype Testing": {
+          "name": "Collaudo di un prototipo",
+          "preparation": "-   Metti in fila altre persone per far collaudar loro i prototipi su carta di ciascuna squadra o pianifica un tempo sufficiente affinché le squadre possano collaudare i prototipi l'uno dell'altro\n-   Stampa per ogni squadra una copia della Guida alle attività sulle \"Casistiche di collaudo del prototipo su carta da parte degli utenti\"\n-   Stampa una copia della guida all'attività \"Casistiche di collaudo da parte dell'utente\" per ciascuna squadra\n-   Controlla il forum [\"Aula insegnanti\"](https://forum.code.org/t/resource-hub-the-design-process-chapter-2-lessons-9-21/36195) per insegnanti verificati per trovare ulteriori strategie o risorse condivise da altri insegnanti\n-   Se stai insegnando virtualmente, considera di controllare il nostro [Modifiche alla lezione virtuale](https://docs.google.com/document/d/1T7aTDpaXW8K8pOeLiz53WP-zGxFY3Q1o_CsaiXRiXpo/preview)"
+        },
+        "csd4-2023/Design Mode in App Lab": {
+          "name": "Modalità Interfaccia in \"Sviluppo App\"",
+          "preparation": "-   Stampa una copia della guida all'attività Proprietà della schermata per ciascun gruppo\n-   Stampa una copia della guida alle attività di Progettazione della schermata per ogni studente\n-   (Facoltativo) Stampa una copia della guida all'attività Model Screen Design per ciascun gruppo\n-   Controlla il forum [\"Aula insegnanti\"](https://forum.code.org/t/resource-hub-the-design-process-chapter-2-lessons-9-21/36195) per insegnanti verificati per trovare ulteriori strategie o risorse condivise da altri insegnanti\n-   Se stai insegnando a distanza, valuta la possibilità di consultare le nostre [Modifiche alle lezioni virtuali](https://docs.google.com/document/d/1T7aTDpaXW8K8pOeLiz53WP-zGxFY3Q1o_CsaiXRiXpo/preview)"
+        },
+        "csd4-2023/Build a Digital Prototype": {
+          "name": "Costruisci un prototipo digitale",
+          "preparation": "-   Tenere a disposizione degli studenti copie extra della Guida all'attività di Progettazione delle schermate\n-   Controlla il forum [\"Aula insegnanti\"](https://forum.code.org/t/resource-hub-the-design-process-chapter-2-lessons-9-21/36195) per insegnanti verificati per trovare strategie o risorse aggiuntive condivise dagli altri colleghi insegnanti\n-   Se stai facendo una lezione virtuale, valuta la possibilità di controllare le nostre [Modifiche alla lezione virtuale](https://docs.google.com/document/d/1T7aTDpaXW8K8pOeLiz53WP-zGxFY3Q1o_CsaiXRiXpo/preview)"
+        },
+        "csd4-2023/Events in App Lab": {
+          "name": "Eventi in Sviluppo App",
+          "preparation": "-   Controlla il forum [\"Aula insegnanti\"](https://forum.code.org/t/resource-hub-the-design-process-chapter-2-lessons-9-21/36195) per insegnanti verificati per trovare strategie o risorse aggiuntive condivise dagli altri colleghi insegnanti\n-   Se stai facendo una lezione virtuale, valuta la possibilità di controllare le nostre [Modifiche alla lezione virtuale](https://docs.google.com/document/d/1T7aTDpaXW8K8pOeLiz53WP-zGxFY3Q1o_CsaiXRiXpo/preview)"
+        },
+        "csd4-2023/Linking Prototype Screens": {
+          "name": "Collegamento delle schermate dei prototipi",
+          "preparation": "-   Controlla il forum [\"Aula insegnanti\"](https://forum.code.org/t/resource-hub-the-design-process-chapter-2-lessons-9-21/36195) per insegnanti verificati per trovare strategie o risorse aggiuntive condivise dagli altri colleghi insegnanti\n-   Se stai facendo una lezione virtuale, valuta la possibilità di controllare le nostre [Modifiche alla lezione virtuale](https://docs.google.com/document/d/1T7aTDpaXW8K8pOeLiz53WP-zGxFY3Q1o_CsaiXRiXpo/preview)"
+        },
+        "csd4-2023/Testing the App": {
+          "name": "Verifica l'app",
+          "preparation": "-   Stampa per ogni studente una copia della Guida alle attività\n-   Se possibile, procurati utenti esterni alla classe che siano disponibili per testare le app dei gruppi prima di questo giorno di collaudo\n-   Controlla il forum [\"Aula insegnanti\"](https://forum.code.org/t/resource-hub-the-design-process-chapter-2-lessons-9-21/36195) per insegnanti verificati per trovare strategie o risorse aggiuntive condivise dagli altri colleghi insegnanti\n-   Se stai facendo una lezione virtuale, valuta la possibilità di controllare le nostre [Modifiche alla lezione virtuale](https://docs.google.com/document/d/1T7aTDpaXW8K8pOeLiz53WP-zGxFY3Q1o_CsaiXRiXpo/preview)"
+        },
+        "csd4-2023/Bugs and Features": {
+          "name": "Errori e caratteristiche",
+          "preparation": "-   Stampa una copia della guida alle attività per ogni squadra\n-   Prepara delle note adesive per ogni squadra\n-   (Facoltativo) Prepara un cartellone o una grande area della lavagna per ogni squadra\n-   Controlla il forum [\"Aula insegnanti\"](https://forum.code.org/t/resource-hub-the-design-process-chapter-2-lessons-9-21/36195) per insegnanti verificati per trovare ulteriori strategie o risorse condivise da altri insegnanti\n-   Se stai insegnando a distanza, valuta la possibilità di consultare le nostre [Modifiche alle lezioni virtuali](https://docs.google.com/document/d/1T7aTDpaXW8K8pOeLiz53WP-zGxFY3Q1o_CsaiXRiXpo/preview)"
+        },
+        "csd4-2023/Updating Your Prototype": {
+          "name": "Aggiornamento del tuo prototipo",
+          "preparation": "-   Stampa una copia della guida alle attività per ogni squadra\n-   (Facoltativo) Prepara un cartellone o un ampio spazio sulla lavagna per ogni squadra\n-   Controlla il forum [\"Aula insegnanti\"](https://forum.code.org/t/resource-hub-the-design-process-chapter-2-lessons-9-21/36195) per insegnanti verificati per trovare ulteriori strategie o risorse condivise da altri insegnanti\n-   Se stai insegnando a distanza, valuta la possibilità di consultare le nostre [Modifiche alle lezioni virtuali](https://docs.google.com/document/d/1T7aTDpaXW8K8pOeLiz53WP-zGxFY3Q1o_CsaiXRiXpo/preview)"
+        },
+        "csd4-2023/Project - App Presentation": {
+          "name": "Progetto - Presentazione dell'app",
+          "preparation": "-   Stabilisci quanto tempo avrò a disposizione ogni gruppo per presentare. In genere si tratta di 8-10 minuti per squadra, ma ricorda di lasciare del tempo per il passaggio da una squadra all'altra\n-   Crea una copia del mazzo di diapositive del modello di presentazione per ogni squadra\n-   Stampa una copia della tabella di valutazione per ogni squadra.\n-   Controlla il forum [\"Aula insegnanti\"](https://forum.code.org/t/project-hub-app-presentation-the-design-process-lesson-21/36213) per insegnanti verificati per trovare ulteriori strategie o risorse condivise da altri insegnanti\n-   Se stai insegnando a distanza, valuta la possibilità di consultare le nostre [Modifiche alle lezioni virtuali](https://docs.google.com/document/d/1T7aTDpaXW8K8pOeLiz53WP-zGxFY3Q1o_CsaiXRiXpo/preview)"
+        },
+        "csd5-2023/Representation Matters": {
+          "name": "La rappresentazione conta",
+          "preparation": "-   Stampa copie della risorsa \"Dati sui pasti\" in modo che ogni gruppo possa ottenere una delle quattro pagine\n-   Stampa una copia della guida alle attività per ogni gruppo\n-   Controlla il forum [\"Aula insegnanti\"](https://forum.code.org/t/resource-hub-data-and-society-chapter-1-lessons-1-8/36196) per insegnanti verificati per trovare strategie o risorse aggiuntive condivise dagli altri colleghi insegnanti\n-   Se stai facendo una lezione virtuale, valuta la possibilità di controllare le nostre [Modifiche alla lezione virtuale](https://docs.google.com/document/d/1c99ennCgsVgXhATRiijGl-L0QTpaMdnMax3OL151F0U/preview)"
+        },
+        "csd5-2023/Patterns and Representation": {
+          "name": "Schemi e rappresentazione",
+          "preparation": "-   Stampa una copia della guida alle attività per ogni gruppo di 2-3 persone\n-   Stampa e ritaglia una copia delle schede da ritagliare per ogni gruppo di 2-3\n-   Controlla il forum [\"Aula insegnanti\"](https://forum.code.org/t/resource-hub-data-and-society-chapter-1-lessons-1-8/36196) per insegnanti verificati per trovare strategie o risorse aggiuntive condivise dagli altri colleghi insegnanti\n-   Se stai facendo una lezione virtuale, valuta la possibilità di controllare le nostre [Modifiche alla lezione virtuale](https://docs.google.com/document/d/1c99ennCgsVgXhATRiijGl-L0QTpaMdnMax3OL151F0U/preview)"
+        },
+        "csd5-2023/ASCII and Binary Representation": {
+          "name": "ASCII e rappresentazione binaria",
+          "preparation": "-   Stampa per ogni studente delle copie della Guida alle attività\n-   Stampa copie della risorsa di testo ASCII - 1 per ogni coppia di studenti\n-   Controlla il forum [\"Aula insegnanti\"](https://forum.code.org/t/resource-hub-data-and-society-chapter-1-lessons-1-8/36196) per insegnanti verificati per trovare strategie o risorse aggiuntive condivise dagli altri colleghi insegnanti\n-   Se stai facendo una lezione virtuale, valuta la possibilità di controllare le nostre [Modifiche alla lezione virtuale](https://docs.google.com/document/d/1c99ennCgsVgXhATRiijGl-L0QTpaMdnMax3OL151F0U/preview)"
+        },
+        "csd5-2023/Representing Images": {
+          "name": "Rappresentazione di immagini",
+          "preparation": "-   Esercitati a utilizzare per circa 10 minuti il Componente per la conversione di pixel, in modo da prepararti a rispondere alle domande\n-   Controlla il forum [\"Aula insegnanti\"](https://forum.code.org/t/resource-hub-data-and-society-chapter-1-lessons-1-8/36196) per insegnanti verificati per trovare strategie o risorse aggiuntive condivise dagli altri colleghi insegnanti\n-   Se stai facendo una lezione virtuale, valuta la possibilità di controllare le nostre [Modifiche alla lezione virtuale](https://docs.google.com/document/d/1c99ennCgsVgXhATRiijGl-L0QTpaMdnMax3OL151F0U/preview)"
+        },
+        "csd5-2023/Representing Numbers": {
+          "name": "Rappresentazione dei numeri",
+          "preparation": "-   Controlla il forum [\"Aula insegnanti\"](https://forum.code.org/t/resource-hub-data-and-society-chapter-1-lessons-1-8/36196) per insegnanti verificati per trovare strategie o risorse aggiuntive condivise dagli altri colleghi insegnanti\n-   Se stai facendo una lezione virtuale, valuta la possibilità di controllare le nostre [Modifiche alla lezione virtuale](https://docs.google.com/document/d/1c99ennCgsVgXhATRiijGl-L0QTpaMdnMax3OL151F0U/preview)"
+        },
+        "csd5-2023/Combining Representations": {
+          "name": "Combinazione di rappresentazioni",
+          "preparation": "-   Predisponi il componente binario a 8 bit e la tabella da binario ad ASCII per la modellazione con la classe\n-   Controlla il forum [\"Aula insegnanti\"](https://forum.code.org/t/resource-hub-data-and-society-chapter-1-lessons-1-8/36196) per insegnanti verificati per trovare strategie o risorse aggiuntive condivise dagli altri colleghi insegnanti\n-   Se stai facendo una lezione virtuale, valuta la possibilità di controllare le nostre [Modifiche alla lezione virtuale](https://docs.google.com/document/d/1c99ennCgsVgXhATRiijGl-L0QTpaMdnMax3OL151F0U/preview)"
+        },
+        "csd5-2023/Keeping Data Secret": {
+          "name": "Mantenere segreti i dati",
+          "preparation": "-   Controlla il forum [\"Aula insegnanti\"](https://forum.code.org/t/resource-hub-data-and-society-chapter-1-lessons-1-8/36196) per insegnanti verificati per trovare strategie o risorse aggiuntive condivise dagli altri colleghi insegnanti\n-   Se stai facendo una lezione virtuale, valuta la possibilità di controllare le nostre [Modifiche alla lezione virtuale](https://docs.google.com/document/d/1c99ennCgsVgXhATRiijGl-L0QTpaMdnMax3OL151F0U/preview)"
+        },
+        "csd5-2023/Project - Create a Representation": {
+          "name": "Progetto - Creare una Rappresentazione",
+          "preparation": "-   Controlla il forum [\"Aula insegnanti\"](https://forum.code.org/t/project-hub-create-a-representation-data-and-society-lesson-8/36214) per insegnanti verificati per trovare strategie o risorse aggiuntive condivise dagli altri colleghi insegnanti\n-   Se stai facendo una lezione virtuale, valuta la possibilità di controllare le nostre [Modifiche alla lezione virtuale](https://docs.google.com/document/d/1c99ennCgsVgXhATRiijGl-L0QTpaMdnMax3OL151F0U/preview)"
+        },
+        "csd5-2023/Problem Solving With Data": {
+          "name": "Risoluzione dei problemi con i dati",
+          "preparation": "-   Controlla il forum [\"Aula insegnanti\"](https://forum.code.org/t/resource-hub-data-and-society-chapter-2-lessons-9-16/36197) per insegnanti verificati per trovare strategie o risorse aggiuntive condivise dagli altri colleghi insegnanti\n-   Se stai facendo una lezione virtuale, valuta la possibilità di controllare le nostre [Modifiche alla lezione virtuale](https://docs.google.com/document/d/1c99ennCgsVgXhATRiijGl-L0QTpaMdnMax3OL151F0U/preview)"
+        },
+        "csd5-2023/Structuring Data": {
+          "name": "Strutturazione dei dati",
+          "preparation": "-   Controlla il forum [\"Aula insegnanti\"](https://forum.code.org/t/resource-hub-data-and-society-chapter-2-lessons-9-16/36197) per insegnanti verificati per trovare strategie o risorse aggiuntive condivise dagli altri colleghi insegnanti\n-   Se stai facendo una lezione virtuale, valuta la possibilità di controllare le nostre [Modifiche alla lezione virtuale](https://docs.google.com/document/d/1c99ennCgsVgXhATRiijGl-L0QTpaMdnMax3OL151F0U/preview)"
+        },
+        "csd5-2023/Interpreting Data": {
+          "name": "Interpretazione dei dati",
+          "preparation": "-   Controlla il forum [\"Aula insegnanti\"](https://forum.code.org/t/resource-hub-data-and-society-chapter-2-lessons-9-16/36197) per insegnanti verificati per trovare strategie o risorse aggiuntive condivise dagli altri colleghi insegnanti\n-   Se stai facendo una lezione virtuale, valuta la possibilità di controllare le nostre [Modifiche alla lezione virtuale](https://docs.google.com/document/d/1c99ennCgsVgXhATRiijGl-L0QTpaMdnMax3OL151F0U/preview)"
+        },
+        "csd5-2023/Making Decisions with Data": {
+          "name": "Prendere decisioni in base ai dati",
+          "preparation": "-   Stampa copie della guida alle attività\n-   Stampa copie del processo di risoluzione dei problemi con i dati, una per gruppo\n-   Controlla il forum [\"Aula insegnanti\"](https://forum.code.org/t/resource-hub-data-and-society-chapter-2-lessons-9-16/36197) per insegnanti verificati per trovare strategie o risorse aggiuntive condivise dagli altri colleghi insegnanti\n-   Se stai facendo una lezione virtuale, valuta la possibilità di controllare le nostre [Modifiche alla lezione virtuale](https://docs.google.com/document/d/1c99ennCgsVgXhATRiijGl-L0QTpaMdnMax3OL151F0U/preview)"
+        },
+        "csd5-2023/Automating Data Decisions": {
+          "name": "Automatizzare decisioni basate sui dati",
+          "preparation": "-   Controlla il forum [\"Aula insegnanti\"](https://forum.code.org/t/resource-hub-data-and-society-chapter-2-lessons-9-16/36197) per insegnanti verificati per trovare strategie o risorse aggiuntive condivise dagli altri colleghi insegnanti\n-   Se stai facendo una lezione virtuale, valuta la possibilità di controllare le nostre [Modifiche alla lezione virtuale](https://docs.google.com/document/d/1c99ennCgsVgXhATRiijGl-L0QTpaMdnMax3OL151F0U/preview)"
+        },
+        "csd5-2023/Problem Solving with Big Data": {
+          "name": "Risoluzione dei problemi con i Big Data",
+          "preparation": "-   Stampa copie della guida alle attività\n-   Prepara il proiettore se vuoi mostrare i video a tutta la classe\n-   Controlla il forum [\"Aula insegnanti\"](https://forum.code.org/t/resource-hub-data-and-society-chapter-2-lessons-9-16/36197) per insegnanti verificati per trovare strategie o risorse aggiuntive condivise dagli altri colleghi insegnanti\n-   Se stai facendo una lezione virtuale, valuta la possibilità di controllare le nostre [Modifiche alla lezione virtuale](https://docs.google.com/document/d/1c99ennCgsVgXhATRiijGl-L0QTpaMdnMax3OL151F0U/preview)"
+        },
+        "csd5-2023/Data and Machine Learning": {
+          "name": "Dati e apprendimento automatico",
+          "preparation": "-   Ripassa e completa tu stesso il tutorial online. Se non utilizzerai IA per gli Oceani, esplora le altre opzioni elencate di seguito. \n-   Controlla il forum [\"Aula insegnanti\"](https://forum.code.org/t/resource-hub-data-and-society-chapter-2-lessons-9-16/36197) per insegnanti verificati per trovare strategie o risorse aggiuntive condivise dagli altri colleghi insegnanti\n-   Se stai facendo una lezione virtuale, valuta la possibilità di controllare le nostre [Modifiche alla lezione virtuale](https://docs.google.com/document/d/1c99ennCgsVgXhATRiijGl-L0QTpaMdnMax3OL151F0U/preview)"
+        },
+        "csd5-2023/Project - Make a Recommendation": {
+          "name": "Progetto - Suggerimenti automatici",
+          "preparation": "-   Stampa copie della guida del progetto\n-   Stampa copie della rubrica\n-   Stampa copie della guida alla revisione tra pari\n-   Controlla il forum [\"Aula insegnanti\"](https://forum.code.org/t/project-hub-make-a-recommendation-data-and-society-lesson-16/36215) per insegnanti verificati per trovare ulteriori strategie o risorse condivise da altri insegnanti\n-   Se stai insegnando a distanza, valuta la possibilità di consultare le nostre [Modifiche alle lezioni virtuali](https://docs.google.com/document/d/1c99ennCgsVgXhATRiijGl-L0QTpaMdnMax3OL151F0U/preview)"
+        },
+        "csd6a-2023/Intro to App Lab": {
+          "name": "Introduzione a Sviluppo App"
+        },
+        "csd6a-2023/Physical Designs": {
+          "preparation": "-   Controlla il forum [\"Aula insegnanti\"](https://forum.code.org/t/resource-hub-interactive-animations-and-games-chapter-1-lessons-1-17/36192) per insegnanti verificati per trovare strategie o risorse aggiuntive condivise dagli altri colleghi insegnanti\n-   Se stai facendo una lezione virtuale, valuta la possibilità di controllare le nostre [Modifiche alla lezione virtuale](https://docs.google.com/document/d/16yHyWom69h5OFd-4yYiuwSq9MOdan9sv3Q0R0tzmtD8/preview)"
+        },
+        "csd6a-2023/The Circuit Playground": {
+          "name": "Il Circuit Playground",
+          "overview": "In questa lezione gli studenti hanno la prima opportunità di scrivere programmi che utilizzano Circuit Playground. Dopo aver prima ispezionato visivamente la scheda e aver ipotizzato le possibili funzionalità, gli studenti vanno online per imparare a scrivere applicazioni che controllano un LED e utilizzano un cicalino per emettere suoni. Combinando le schermate di Sviluppo App con i Circuit Playgrounds, gli studenti possono iniziare gradualmente a integrare elementi della scheda come dispositivo di uscita facendo affidamento su Sviluppo App  per l'input dell'utente.\n\n**Domanda del giorno:** quali uscite posso controllare nel Circuit Playground?",
+          "preparation": "-   Assicurati che i computer degli studenti siano dotati dei driver e del software necessari per connettersi al Circuit Playground ([qui tutti i dettagli](//studio.code.org/maker/setup))\n-   Prepara una scheda e un cavo USB per ogni coppia di studenti\n-   Consulta il forum [\"Aula insegnanti\"](https://forum.code.org/t/resource-hub-physical-computing-chapter-1-lessons-1-10/36169) per gli insegnanti verificati per trovare strategie o risorse aggiuntive condivise dagli altri insegnanti",
+          "student_overview": "In questa lezione conoscerai il Circuit Playground, la scheda integrata che verrà utilizzata nel resto di questa unità. "
+        },
+        "csd6a-2023/Updating Screen Elements": {
+          "name": "Aggiornamento delle schermate",
+          "overview": "Gli studenti dovrebbero già avere familiarità con la programmazione in Sviluppo App, in particolare con la \"Modalità interfaccia\" per creare elementi sullo schermo e con i blocchi `onEvent` per creare eventi con clic sui pulsanti. Per ampliare il tipo di app che gli studenti possono creare e per incoraggiarli a pensare in un modo nuovo a come gli utenti interagiscono con le app, introduciamo i blocchi `setProperty()` e `setText()` che consentono agli utenti di modificare le proprietà e il contenuto di vari elementi dell'interfaccia utente. In questa lezione gli studenti esplorano come utilizzare gli eventi per aggiornare gli elementi sullo schermo\n\n**Domanda del giorno:** come si possono aggiornare gli elementi di progettazione di un'app?",
+          "preparation": "-   Per questa lezione  _non è necessario_ che gli studenti dispongano di Circuit Playgrounds e consigliamo anzi di svolgere la lezione senza dispositivi così da evitare distrazioni\n-   Consulta il forum [\"Aula insegnanti\"](https://forum.code.org/t/resource-hub-physical-computing-chapter-1-lessons-1-10/36169) per insegnanti verificati per trovare strategie o risorse aggiuntive condivise dagli altri insegnanti",
+          "student_overview": "In questa lezione, inizierai a creare app che consentono molte interazioni e funzionalità con gli utenti"
+        },
+        "csd6a-2023/Board Events": {
+          "name": "Eventi della scheda",
+          "overview": "Questa lezione fa sì che gli studenti non considerino il Circuit Playground solo un dispositivo di output e introduce invece i pulsanti e gli interruttori a levetta come strumenti di input. A partire dai pulsanti e dall'interruttore hardware, gli studenti imparano a usare [\\`onboardEvent()\\`(#f78183)](/docs/applab/onBoardEvent/), analogamente a [\\`onEvent()\\`(#fff176)](/docs/applab/onEvent/), per ricevere input dai loro Circuit Playgrounds.\n\n**Domanda del giorno:** come può l'utente interagire con il Circuit Playground per ricevere input?",
+          "preparation": "-   Prepara una scheda e un cavo USB per ogni coppia di studenti\n-   Consulta il forum [\"Aula insegnanti\"](https://forum.code.org/t/resource-hub-physical-computing-chapter-1-lessons-1-10/36169) per gli insegnanti verificati per trovare strategie o risorse aggiuntive condivise dagli altri insegnanti",
+          "student_overview": "In questa lezione imparerai come usare i pulsanti hardware e l'interruttore del Circuit Playground che forniranno l'input al Circuit Playground."
+        },
+        "csd6a-2023/Variables and If Statements": {
+          "name": "Variabili e istruzioni condizionali `if`",
+          "overview": "In questa lezione, gli studenti vengono introdotti alle variabili, allo schema a contatore e alle istruzioni condizionali `if`. Gli studenti utilizzeranno questi concetti nel contesto della programmazione del Circuit Playground e della creazione di comportamenti di input/output più complessi, come il conteggio del numero di pressioni dei pulsanti prima che il circuito emetta un rumore. I concetti di questa lezione vengono utilizzati per creare app più complesse e soddisfacenti nelle lezioni future e gli studenti potrebbero dover fare riferimento ai video e agli esempi di questa lezione per continuare a padroneggiare questi concetti.\n\n**Domanda del giorno:** come posso creare programmi più complessi che tengono traccia delle informazioni e prendono decisioni?",
+          "preparation": "-   Prepara una scheda e un cavo USB per ogni coppia di studenti\n-   Consulta il forum [\"Aula insegnanti\"](https://forum.code.org/t/resource-hub-physical-computing-chapter-1-lessons-1-10/36169) per gli insegnanti verificati per trovare strategie o risorse aggiuntive condivise dagli altri insegnanti",
+          "student_overview": "Impara a creare programmi più complessi che tengono traccia delle informazioni e prendono decisioni, utilizzando variabili e istruzioni condizionali `if`."
+        },
+        "csd6a-2023/Mini-Project: Field Collector App": {
+          "name": "Mini-progetto: app di rilevamento sul campo",
+          "overview": "In questo mini-progetto, gli studenti utilizzeranno il Circuit Playground per raccogliere dati, quindi utilizzeranno Sviluppo App per analizzare i dati raccolti. È simile alle app di ricerca sul campo o sondaggi di scienza partecipativa in cui una persona raccoglie dati su un dispositivo «sul campo», quindi torna in una posizione centrale per visualizzare e analizzare i dati (come la catalogazione delle specie in via di estinzione in natura). Gli studenti utilizzeranno variabili ed eventi per raccogliere dati dal Circuit Playground, quindi utilizzeranno le istruzioni condizionali `if` per prendere decisioni o fornire consigli in base ai dati raccolti.\n\n**Domanda del giorno:** come posso utilizzare eventi e variabili per creare un'app che raccoglie e analizza i dati?",
+          "preparation": "-   Consulta la guida e la griglia di valutazione del progetto per comprendere l'ambito del progetto.\n-   Esamina i progetti di esempio come modelli di ciò che gli studenti possono creare.\n-   (Facoltativo) Puoi decidere di mostrare uno di questi progetti agli studenti per stimolare le idee.\n-   Consulta il forum [\"Aula insegnanti\"](https://forum.code.org/t/project-hub-field-collector-app-physical-computing-lesson-6/36200) per gli insegnanti verificati per trovare strategie o risorse aggiuntive condivise dagli altri insegnanti",
+          "student_overview": "creare un'app che utilizza Circuit Playground per raccogliere dati per uno scopo specifico, quindi disporre di un'app per analizzare i dati raccolti"
+        },
+        "csd6a-2023/Color LEDs": {
+          "name": "LED a colori",
+          "overview": "In questa lezione, gli studenti imparano a utilizzare i LED a 10 colori del Circuit Playground. Gli studenti controlleranno il colore e l'intensità di ciascun LED, quindi utilizzeranno ciò che hanno imparato per programmare i modelli di luce per creare uno spettacolo di luci nel loro Circuit Playground.\n\n**Domanda del giorno:** come si possono usare i LED colorati in un'app?",
+          "preparation": "-   Prepara una scheda e un cavo USB per ogni coppia di studenti\n-   Consulta il forum [\"Aula insegnanti\"](https://forum.code.org/t/resource-hub-physical-computing-chapter-1-lessons-1-10/36169) per gli insegnanti verificati per trovare strategie o risorse aggiuntive condivise dagli altri insegnanti",
+          "student_overview": "In questa lezione imparerai come accedere e controllare i LED colorati sul Circuit Playground."
+        },
+        "csd6a-2023/Getting Screen Inputs": {
+          "name": "Ottenere input sullo schermo",
+          "overview": "Gli studenti imparano a utilizzare diversi nuovi elementi di progettazione (input di testo, menu a discesa e cursori) in modo da poter ottenere l'input dell'utente dallo schermo delle loro app. Questa lezione introduce inoltre gli studenti ai blocchi getProperty e getText, che consentono loro di accedere all'input dell'utente nel codice. Gli studenti si esercitano innanzitutto nell'uso di questi strumenti per determinare ciò che l'utente ha inserito nei vari elementi dell'interfaccia utente. Successivamente gli studenti utilizzano getProperty e setProperty insieme allo schema a contatoreper far muovere gli elementi sullo schermo. Viene inoltre introdotto un nuovo evento, \"change\", per rappresentare quando un menu a discesa o un cursore modifica i valori.\n\n**Domanda del giorno:** come possiamo usare la schermata dell'app per l'input dell'utente?",
+          "preparation": "-   Per questa lezione  _non è necessario_ che gli studenti dispongano di Circuit Playgrounds e consigliamo anzi di svolgere la lezione senza dispositivi\n-   Consulta il forum [\"Aula insegnanti\"](https://forum.code.org/t/resource-hub-physical-computing-chapter-1-lessons-1-10/36169) per insegnanti verificati per trovare strategie o risorse aggiuntive condivise dagli altri insegnanti",
+          "student_overview": "In questa lezione imparerai a utilizzare elementi di progettazione come caselle di testo o menu a discesa per ottenere l'input dell'utente dalla schermata"
+        },
+        "csd6a-2023/Combining Inputs and Outputs": {
+          "name": "Combinazione di ingressi e uscite",
+          "overview": "In questa lezione, gli studenti combinano input e output sia nel Circuit Playground sia nella schermata dell'app. Ad esempio, gli studenti possono utilizzare menu a discesa o cursori per modificare i LED Circuit Playground. In alternativa, gli studenti possono utilizzare i pulsanti del Circuit Playground per aggiornare gli elementi della schermata. Questa lezione approfondisce anche il modo in cui gli studenti utilizzano le variabili e le istruzioni condizionali `if` per prendere decisioni più complesse in base all'input dell'utente. In questa lezione non ci sono nuove istruzioni di programmazione o funzionalità di circuit playground, ma gli studenti stanno combinando molti elementi delle lezioni precedenti in modi nuovi.\n\n**Domanda del giorno:** come posso usare gli ingressi e le uscite sia dal Circuit Playground sia dalla schermata dell'app?",
+          "preparation": "-   Prepara una scheda e un cavo USB per ogni coppia di studenti\n-   (Facoltativo) prendi in considerazione la possibilità di preparare materiali di riferimento esterni tratti dalle lezioni precedenti per gli studenti, come un tabellone esplicativo o uno schema di riferimento, a cui gli studenti possano accedere.\n-   Consulta il forum [\"Aula insegnanti\"](https://forum.code.org/t/resource-hub-physical-computing-chapter-1-lessons-1-10/36169) per gli insegnanti verificati per trovare strategie o risorse aggiuntive condivise dagli altri insegnanti",
+          "student_overview": "combinare ingressi e uscite dalla schermata e dal Circuit Playground per creare app complesse"
+        },
+        "csd6a-2023/Project: Human Device Interaction": {
+          "name": "Progetto: interazione uomo macchina",
+          "overview": "In questo progetto, gli studenti creano un'app che controlla il Circuit Playground in modo che interagisca con l'ambiente fisico circostante, simile a molte app per smartphone utilizzate per controllare i dispositivi di casa, auto o scuola. Gli studenti utilizzano materiali reali per progettare il proprio dispositivo fisico, quindi creano un'app che consente all'utente di interagire con il dispositivo fisico o modificare le impostazioni. ",
+          "preparation": "-   Riguarda la guida e la tabella di valutazione del progetto per comprendere l'ambito del progetto.\n-   Riguarda i progetti di esempio come modello di ciò che gli studenti possono creare.\n-   (Opzionale) Puoi decidere di mostrare uno di questi progetti agli studenti per stimolare le idee.\n-   Raccogliere materiali per la prototipazione, come:\n    -   Materiale costruttivo (cartone, cartoncino, ecc.)\n    -   Materiale connettivo (nastro, colla, colla a caldo, ecc.)\n    -   Strumenti (forbici, cucitrici, ecc.)\n    -   Altri materiali (bicchieri, graffette, piatti di carta, ecc.)\n-   Controlla il forum [\"Aula insegnanti\"](https://forum.code.org/t/project-hub-human-device-interaction-physical-computing-lesson-10/36216) per insegnanti verificati per trovare ulteriori strategie o risorse condivise da altri insegnanti"
+        },
+        "csd6a-2023/Board Sensors": {
+          "name": "Sensori della scheda",
+          "overview": "In questa lezione, gli studenti esplorano come utilizzare i tre sensori analogici (suono, luce e temperatura) per scrivere programmi che rispondono ai cambiamenti dell'ambiente. L'uso di questi sensori segna una transizione in termini di modalità di interazione degli utenti con un programma. Utilizzando i sensori come input, l'utente di un'app non deve interagire direttamente con essa o può interagire senza rendersene conto.\n\n**Domanda del giorno:** come posso utilizzare i sensori per rilevare i cambiamenti nell'ambiente?",
+          "preparation": "-   Prepara una scheda e un cavo USB per ogni coppia di studenti\n-   Valuta la possibilità di avere a portata di mano delle torce elettriche o altre fonti di luce per testare il sensore di luce\n-   Valuta la possibilità di avere a portata di mano trombette, nacchere, fischietti o piccoli strumenti per testare il sensore sonoro\n-   Consulta il forum [\"Aula insegnanti\"](https://forum.code.org/t/resource-hub-physical-computing-chapter-2-lessons-11-18/36180) per gli insegnanti verificati per trovare strategie o risorse aggiuntive condivise dagli altri insegnanti",
+          "student_overview": "esplorare i sensori del Circuit Playground e scrivere programmi che reagiscono all'ambiente."
+        },
+        "csd6a-2023/Accelerometer": {
+          "name": "Accelerometro",
+          "overview": "In questa lezione, gli studenti esploreranno l'accelerometro e le sue potenzialità. Acquisiranno familiarità con i suoi eventi e le sue proprietà e creeranno più programmi utilizzando l'accelerometro simili a quelli che probabilmente hanno incontrato nelle applicazioni del mondo reale.\n\n**Domanda del giorno:** come posso usare l'accelerometro per creare app?",
+          "preparation": "-   Prepara una scheda e un cavo USB per ogni coppia di studenti\n-   Consulta il forum [\"Aula insegnanti\"](https://forum.code.org/t/resource-hub-physical-computing-chapter-2-lessons-11-18/36180) per gli insegnanti verificati per trovare strategie o risorse aggiuntive condivise dagli altri insegnanti",
+          "student_overview": "In questa lezione, esplorerai l'accelerometro e le sue funzionalità. "
+        },
+        "csd6a-2023/Making Music": {
+          "name": "Fare musica",
+          "overview": "In questa lezione gli studenti useranno il cicalino al massimo del volume producendo suoni, note e canzoni con il cicalino. Gli studenti iniziano con una breve rassegna dei parametri di frequenza e durata del cicalino, quindi passano al concetto di note. Le note consentono agli studenti di limitarsi alle frequenze utilizzate nella musica occidentale e forniscono uno strato di astrazione che li aiuta a capire quali frequenze potrebbero suonare bene insieme. Una volta che gli studenti sono in grado di suonare le note con il cicalino, usano le matrici per mantenere e suonare sequenze di note, riproducendo dei semplici motivi musicali.\n\n**Domanda del giorno:** come posso usare il cicalino per suonare note musicali o canzoni?",
+          "preparation": "-   Prepara una scheda e un cavo USB per ogni coppia di studenti\n-   Consulta il forum [\"Aula insegnanti\"](https://forum.code.org/t/resource-hub-physical-computing-chapter-2-lessons-11-18/36180) per gli insegnanti verificati per trovare strategie o risorse aggiuntive condivise dagli altri insegnanti",
+          "student_overview": "In questa lezione, utilizzerai appieno la funzionalità del cicalino (buzzer) di Circuit Playground producendo suoni, note e canzoni. "
+        },
+        "csd6a-2023/Functions": {
+          "name": "Funzioni",
+          "overview": "Questa lezione introduce gli studenti alle funzioni: queste consentono di organizzare e raggruppare blocchi di codice ripetuti, ad esempio cambiando tutti i LED in rosso o blu. Quindi, gli studenti imparano a utilizzare i parametri nelle loro funzioni per generalizzare i comportamenti in contesti diversi, ad esempio cambiando tutti i LED con un determinato colore anziché cambiarli sempre in rosso o blu. Gli studenti utilizzeranno questi concetti nelle lezioni future e potrebbe essere necessario tornare a questa lezione per fare riferimento alle risorse e ai video.\n\n**Domanda del giorno:** come posso usare le funzioni per organizzare e semplificare il mio codice?",
+          "preparation": "-   Prepara una scheda e un cavo USB per ogni coppia di studenti\n-   Consulta il forum [\"Aula insegnanti\"](https://forum.code.org/t/resource-hub-physical-computing-chapter-2-lessons-11-18/36180) per gli insegnanti verificati per trovare strategie o risorse aggiuntive condivise dagli altri insegnanti",
+          "student_overview": "In questa lezione imparerai come creare e chiamare funzioni, quindi imparerai come usare i parametri per rendere le funzioni utili in molte situazioni diverse"
+        },
+        "csd6a-2023/Mini-Project: Interactive Art": {
+          "name": "Mini-progetto: arte interattiva",
+          "overview": "In questa lezione, gli studenti creano un'opera d'arte interattiva utilizzando i sensori del Circuit Playground e materiali fisici. Gli studenti esplorano come il Circuit Playground può potenziare le caratteristiche dei materiali fisici per creare un'esperienza interattiva. Questo progetto non utilizza la schermata di Sviluppo App se non per facilitare il debugging, altrimenti gli utenti interagiscono solo con la grafica fisica stessa.",
+          "preparation": "-   Riguarda la guida e la tabella di valutazione del progetto per comprendere l'ambito del progetto.\n-   Riguarda i progetti di esempio come modello di ciò che gli studenti possono creare.\n-   (Opzionale) Puoi decidere di mostrare uno di questi progetti agli studenti per stimolare le idee.\n-   Raccogliere materiali per la prototipazione, come:\n    -   Materiale costruttivo (cartone, cartoncino, ecc.)\n    -   Materiale connettivo (nastro, colla, colla a caldo, ecc.)\n    -   Strumenti (forbici, cucitrici, ecc.)\n    -   Altri materiali (bicchieri, graffette, piatti di carta, ecc.)\n-   Controlla il forum [\"Aula insegnanti\"](https://forum.code.org/t/project-hub-interactive-art-physical-computing-lesson-15/36217) per insegnanti verificati per trovare ulteriori strategie o risorse condivise da altri insegnanti",
+          "student_overview": "creare un'opera d'arte interattiva utilizzando un Circuit Playground e materiali fisici"
+        },
+        "csd6a-2023/Physical Outputs and LEDs": {
+          "name": "Uscite fisiche e LED",
+          "overview": "In questa lezione, gli studenti imparano come collegare LED esterni al Circuit Playground e utilizzare il programma per accendere questi LED. Ciò consente agli studenti di creare dispositivi più flessibili che imitano i prodotti del mondo reale. Questa lezione richiede diversi materiali esterni e protocolli di sicurezza per garantire che gli studenti non danneggino accidentalmente il Circuit Playground.\n\n**Domanda del giorno:** come posso usare LED esterni per creare prototipi fisici?",
+          "preparation": "-   Preparare i materiali per il cablaggio del circuito, come:\n    -   Cavi a coccodrillo (inclusi nel kit della classe Circuit Playground)\n    -   LED (inclusi nel kit della classe Circuit Playground)\n    -   Altro materiale conduttivo (cavi, graffette, fogli, ecc.)\n    -   (opzionale) Pulsanti o interruttori\n-   Controlla il forum [\"Aula insegnanti\"](https://forum.code.org/t/resource-hub-physical-computing-chapter-2-lessons-11-18/36180) per insegnanti verificati per trovare ulteriori strategie o risorse condivise da altri insegnanti",
+          "student_overview": "In questa lezione imparerai a usare i cavi per creare dispositivi con LED esterni e ad aggiungere codice per controllare queste luci."
+        },
+        "csd6a-2023/Physical Inputs and Buttons": {
+          "name": "Ingressi fisici e pulsanti",
+          "overview": "In questa lezione, gli studenti imparano a collegare cavi esterni per creare eventi di input quando i cavi si toccano, simulando la pressione di un pulsante. Gli studenti imparano a usare il codice per riconoscere questi eventi di pulsanti esterni e apportare modifiche alla loro app. Ciò consente agli studenti di creare dispositivi più flessibili che imitano i prodotti del mondo reale. Questa lezione richiede diversi materiali esterni e protocolli di sicurezza per garantire che gli studenti non danneggino accidentalmente il Circuit Playground.\n\n**Domanda del giorno:** come posso usare pulsanti esterni per creare prototipi fisici?",
+          "preparation": "-   Preparare i materiali per il cablaggio del circuito, come:\n    -   Cavi a coccodrillo (inclusi nel kit della classe Circuit Playground)\n    -   LED (inclusi nel kit della classe Circuit Playground)\n    -   Altro materiale conduttivo (cavi, graffette, fogli, ecc.)\n    -   (opzionale) Pulsanti o interruttori\n-   Controlla il forum [\"Aula insegnanti\"](https://forum.code.org/t/resource-hub-physical-computing-chapter-2-lessons-11-18/36180) per insegnanti verificati per trovare ulteriori strategie o risorse condivise da altri insegnanti",
+          "student_overview": "scoprire come collegare cavi esterni per creare eventi di input quando i fili si toccano, simulando la pressione di un pulsante"
+        },
+        "csd6a-2023/Project - Prototype an Innovation": {
+          "name": "Progetto - Prototipare un'innovazione",
+          "overview": "In questo progetto conclusivo del corso, gli studenti collaborano per sviluppare e collaudare il prototipo di un dispositivo informatico innovativo basato su Circuit Playground. Utilizzando gli ingressi e le uscite disponibili sulla scheda, i gruppi creeranno programmi che consentiranno interazioni utente interessanti e uniche. ",
+          "preparation": "-   Raccogli materiali per realizzare un prototipo fisico, ad es.\n    -   Cartone\n    -   Forbici\n    -   Nastro\n    -   Colla\n    -   Foglio\n-   Stampa una copia della guida del progetto per ogni coppia di studenti\n-   Stampa una copia del foglio di revisione tra pari per ogni studente\n-   Stampa una copia della tabella di valutazione per ogni studente\n-   Controlla il forum [\"Aula insegnanti\"](https://forum.code.org/t/project-hub-prototype-an-innovation-physical-computing-lesson-18/36218) per insegnanti verificati per trovare ulteriori strategie o risorse condivise da altri insegnanti",
+          "purpose": "Questa lezione costituisce il momento più important dell'Unità 6 e offre agli studenti l'opportunità di costruire un proprio progetto Maker Toolkit da zero. Questo progetto è un'opportunità per mostrare le competenze tecniche, ma dovranno anche dimostrare collaborazione, riscontri costruttivi tra pari e risoluzione iterativa dei problemi man mano che incontrano ostacoli lungo il percorso. Questo progetto dovrebbe essere diretto dagli studenti ogni volta che è possibile e fornire una conclusione potente e memorabile all'unità finale di \"Alla scoperta dell'Informatica\".",
+          "student_overview": "In questo progetto finale, la tua sfida sarà sviluppare e collaudare un prototipo di dispositivo che interagisca con il mondo fisico attraverso vari tipi di ingressi e uscite e che consenta interazioni utente interessanti e uniche. "
+        },
+        "csd6b-2023/Intro to App Lab": {
+          "name": "Introduzione a Sviluppo App"
+        },
+        "csd6b-2023/Physical Designs": {
+          "preparation": "-   Controlla il forum [\"Aula insegnanti\"](https://forum.code.org/t/resource-hub-interactive-animations-and-games-chapter-1-lessons-1-17/36192) per insegnanti verificati per trovare strategie o risorse aggiuntive condivise dagli altri colleghi insegnanti\n-   Se stai facendo una lezione virtuale, valuta la possibilità di controllare le nostre [Modifiche alla lezione virtuale](https://docs.google.com/document/d/16yHyWom69h5OFd-4yYiuwSq9MOdan9sv3Q0R0tzmtD8/preview)"
+        },
+        "csd6b-2023/Updating Screen Elements": {
+          "name": "Aggiornamento delle schermate",
+          "overview": "Gli studenti dovrebbero già avere familiarità con la programmazione in Sviluppo App, in particolare con la \"Modalità interfaccia\" per creare elementi sullo schermo e con i blocchi `onEvent` per creare eventi con clic sui pulsanti. Per ampliare il tipo di app che gli studenti possono creare e per incoraggiarli a pensare in un modo nuovo a come gli utenti interagiscono con le app, introduciamo i blocchi `setProperty()` e `setText()` che consentono agli utenti di modificare le proprietà e il contenuto di vari elementi dell'interfaccia utente. In questa lezione gli studenti esplorano come utilizzare gli eventi per aggiornare gli elementi sullo schermo\n\n**Domanda del giorno:** come si possono aggiornare gli elementi di progettazione di un'app?",
+          "student_overview": "In questa lezione, inizierai a creare app che consentono molte interazioni e funzionalità con gli utenti"
+        },
+        "csd6b-2023/Board Events": {
+          "name": "Eventi della scheda",
+          "preparation": "-   Prepara una scheda e un cavo USB per ogni coppia di studenti\n-   Consulta il forum [\"Aula insegnanti\"](https://forum.code.org/t/resource-hub-physical-computing-chapter-1-lessons-1-10/36169) per gli insegnanti verificati per trovare strategie o risorse aggiuntive condivise dagli altri insegnanti"
+        },
+        "csd6b-2023/Variables and If Statements": {
+          "name": "Variabili e istruzioni condizionali `if`",
+          "preparation": "-   Prepara una scheda e un cavo USB per ogni coppia di studenti\n-   Consulta il forum [\"Aula insegnanti\"](https://forum.code.org/t/resource-hub-physical-computing-chapter-1-lessons-1-10/36169) per gli insegnanti verificati per trovare strategie o risorse aggiuntive condivise dagli altri insegnanti",
+          "student_overview": "Impara a creare programmi più complessi che tengono traccia delle informazioni e prendono decisioni, utilizzando variabili e istruzioni condizionali `if`."
+        },
+        "csd6b-2023/Mini-Project: Field Collector App": {
+          "name": "Mini-progetto: app di rilevamento sul campo",
+          "preparation": "-   Consulta la guida e la griglia di valutazione del progetto per comprendere l'ambito del progetto.\n-   Esamina i progetti di esempio come modelli di ciò che gli studenti possono creare.\n-   (Facoltativo) Puoi decidere di mostrare uno di questi progetti agli studenti per stimolare le idee.\n-   Consulta il forum [\"Aula insegnanti\"](https://forum.code.org/t/project-hub-field-collector-app-physical-computing-lesson-6/36200) per gli insegnanti verificati per trovare strategie o risorse aggiuntive condivise dagli altri insegnanti"
+        },
+        "csd6b-2023/Getting Screen Inputs": {
+          "name": "Ottenere input sullo schermo",
+          "overview": "Gli studenti imparano a utilizzare diversi nuovi elementi di progettazione (input di testo, menu a discesa e cursori) in modo da poter ottenere l'input dell'utente dallo schermo delle loro app. Questa lezione introduce inoltre gli studenti ai blocchi getProperty e getText, che consentono loro di accedere all'input dell'utente nel codice. Gli studenti si esercitano innanzitutto nell'uso di questi strumenti per determinare ciò che l'utente ha inserito nei vari elementi dell'interfaccia utente. Successivamente gli studenti utilizzano getProperty e setProperty insieme allo schema a contatoreper far muovere gli elementi sullo schermo. Viene inoltre introdotto un nuovo evento, \"change\", per rappresentare quando un menu a discesa o un cursore modifica i valori.\n\n**Domanda del giorno:** come possiamo usare la schermata dell'app per l'input dell'utente?",
+          "student_overview": "In questa lezione imparerai a utilizzare elementi di progettazione come caselle di testo o menu a discesa per ottenere l'input dell'utente dalla schermata"
+        },
+        "csd6b-2023/Combining Inputs and Outputs": {
+          "name": "Combinazione di ingressi e uscite",
+          "preparation": "-   Prepara una scheda e un cavo USB per ogni coppia di studenti\n-   (Facoltativo) prendi in considerazione la possibilità di preparare materiali di riferimento esterni tratti dalle lezioni precedenti per gli studenti, come un tabellone esplicativo o uno schema di riferimento, a cui gli studenti possano accedere.\n-   Consulta il forum [\"Aula insegnanti\"](https://forum.code.org/t/resource-hub-physical-computing-chapter-1-lessons-1-10/36169) per gli insegnanti verificati per trovare strategie o risorse aggiuntive condivise dagli altri insegnanti"
+        },
+        "csd6b-2023/Project: Human Device Interaction": {
+          "name": "Progetto: interazione uomo macchina",
+          "preparation": "-   Riguarda la guida e la tabella di valutazione del progetto per comprendere l'ambito del progetto.\n-   Riguarda i progetti di esempio come modello di ciò che gli studenti possono creare.\n-   (Opzionale) Puoi decidere di mostrare uno di questi progetti agli studenti per stimolare le idee.\n-   Raccogliere materiali per la prototipazione, come:\n    -   Materiale costruttivo (cartone, cartoncino, ecc.)\n    -   Materiale connettivo (nastro, colla, colla a caldo, ecc.)\n    -   Strumenti (forbici, cucitrici, ecc.)\n    -   Altri materiali (bicchieri, graffette, piatti di carta, ecc.)\n-   Controlla il forum [\"Aula insegnanti\"](https://forum.code.org/t/project-hub-human-device-interaction-physical-computing-lesson-10/36216) per insegnanti verificati per trovare ulteriori strategie o risorse condivise da altri insegnanti"
+        },
+        "csd6b-2023/Board Sensors": {
+          "name": "Sensori della scheda"
+        },
+        "csd6b-2023/Accelerometer": {
+          "name": "Accelerometro",
+          "overview": "In questa lezione, gli studenti esploreranno l'accelerometro e le sue potenzialità. Acquisiranno familiarità con i suoi eventi e le sue proprietà e creeranno più programmi utilizzando l'accelerometro simili a quelli che probabilmente hanno incontrato nelle applicazioni del mondo reale.\n\n**Domanda del giorno:** come posso usare l'accelerometro per creare app?",
+          "preparation": "-   Prepara una scheda e un cavo USB per ogni coppia di studenti\n-   Consulta il forum [\"Aula insegnanti\"](https://forum.code.org/t/resource-hub-physical-computing-chapter-2-lessons-11-18/36180) per gli insegnanti verificati per trovare strategie o risorse aggiuntive condivise dagli altri insegnanti",
+          "student_overview": "In questa lezione, esplorerai l'accelerometro e le sue funzionalità. "
+        },
+        "csd6b-2023/Functions": {
+          "name": "Funzioni",
+          "preparation": "-   Prepara una scheda e un cavo USB per ogni coppia di studenti\n-   Consulta il forum [\"Aula insegnanti\"](https://forum.code.org/t/resource-hub-physical-computing-chapter-2-lessons-11-18/36180) per gli insegnanti verificati per trovare strategie o risorse aggiuntive condivise dagli altri insegnanti",
+          "student_overview": "In questa lezione imparerai come creare e chiamare funzioni, quindi imparerai come usare i parametri per rendere le funzioni utili in molte situazioni diverse"
+        },
+        "csd6b-2023/Physical Outputs and LEDs": {
+          "name": "Uscite fisiche e LED",
+          "student_overview": "In questa lezione imparerai a usare i cavi per creare dispositivi con LED esterni e ad aggiungere codice per controllare queste luci."
+        },
+        "csd6b-2023/Physical Inputs and Buttons": {
+          "name": "Ingressi fisici e pulsanti",
+          "student_overview": "scoprire come collegare cavi esterni per creare eventi di input quando i fili si toccano, simulando la pressione di un pulsante"
+        },
+        "csd6b-2023/Project - Prototype an Innovation": {
+          "name": "Progetto - Prototipare un'innovazione",
+          "preparation": "-   Raccogli materiali per realizzare un prototipo fisico, ad es.\n    -   Cartone\n    -   Forbici\n    -   Nastro\n    -   Colla\n    -   Foglio\n-   Stampa una copia della guida del progetto per ogni coppia di studenti\n-   Stampa una copia del foglio di revisione tra pari per ogni studente\n-   Stampa una copia della tabella di valutazione per ogni studente\n-   Controlla il forum [\"Aula insegnanti\"](https://forum.code.org/t/project-hub-prototype-an-innovation-physical-computing-lesson-18/36218) per insegnanti verificati per trovare ulteriori strategie o risorse condivise da altri insegnanti"
+        },
+        "csd7-2023/Intro to App Lab": {
+          "name": "Introduzione a Sviluppo App"
+        },
+        "csd7-2023/Introduction to Machine Learning": {
+          "name": "Introduzione all'apprendimento automatico",
+          "overview": "In questa lezione gli studenti vengono introdotti a una forma di intelligenza artificiale chiamata apprendimento automatico e a come possono utilizzare il processo di risoluzione dei problemi per aiutare ad addestrare un robot a risolvere problemi. Partecipano a tre attività di apprendimento automatico in cui un robot, Bot IA, sta imparando a rilevare gli schemi nei pesci.\n\n**Domanda del giorno:** come possiamo utilizzare il processo di risoluzione dei problemi per risolvere un problema con l'apprendimento automatico?",
+          "preparation": "-   Riguarda gli esrcizi di Code Studio prima della lezione\n-   Stampa copie della guida alle attività per ogni studente\n-   Consulta il forum [\"Aula insegnanti\"](https://forum.code.org/t/resource-hub-ai-and-machine-learning-chapter-1-lessons-1-15/36198) per gli insegnanti verificati per trovare strategie o risorse aggiuntive condivise dagli altri insegnanti",
+          "student_overview": "Scopri le basi dell'apprendimento automatico aiutando Bot IA a riconoscere i pesci per ripulire l'oceano"
+        },
+        "csd7-2023/Types of Machine Learning": {
+          "name": "Tipologie di apprendimento automatico",
+          "overview": "In questa lezione gli studenti considereranno come si creano modelli «mentali» quando si apprendono nuovi concetti e come questi possono essere simili a un modello di «apprendimento automatico». Partecipano a un'attività con schemi cromatici per simulare la costruzione di un modello di apprndimento automatico senza ausilio, quindi si cimentano in un gioco chiamato «Porta a vetri verde» come esempio di apprendimento supervisionato e, infine, classificheranno diversi scenari in apprendimento «supervisionato» o «senza supervisione».\n\n**Domanda del giorno:** Quali sono i diversi tipi di apprendimento automatico?",
+          "preparation": "-   Riguarda tutti i materiali per la lezione di oggi.\n-   Consulta il forum [\"Aula insegnanti\"](https://forum.code.org/t/resource-hub-ai-and-machine-learning-chapter-1-lessons-1-15/36198) per gli insegnanti verificati per trovare strategie o risorse aggiuntive condivise dagli altri insegnanti",
+          "purpose": "-   Ripassa gli esercizi di Code Studio prima della lezione in modo da sapere come giocare al gioco chiamato «La porta a vetri verde»\n-   Stampa o preparati a condividere delle copie online della guida alle attività per ogni studente",
+          "student_overview": "Impara due diversi tipi di apprendimento automatico: apprendimento supervisionato e non supervisionato. Quindi confronta come l'apprendimento automatico può essere simile o diverso a come apprendono gli umani."
+        },
+        "csd7-2023/Innovations in AI": {
+          "name": "Innovazioni nell'IA",
+          "assessment_opportunities": "1.  **Descrivere in che modo l'intelligenza artificiale stia avendo un impatto sulla società**\n\n    Consulta la guida alle attività di questa lezione per misurare ogni fase del processo di risoluzione dei problemi.",
+          "overview": "In questa lezione, gli studenti esplorano un'applicazione dell'IA chiamata \"Vedere con l'IA\" ed esaminano come questa supporta le persone con disabilità visive. Quindi, gli studenti ricercano altri esempi di come l'IA stia influenzando la società, concentrandosi sugli utenti che sono influenzati dagli esempi che trovano. Infine, gli studenti condividono le loro scoperte tra loro.\n\n**Domanda del giorno:** in che modo l'IA aiuta a risolvere i problemi in tutto il mondo?",
+          "preparation": "-   Stampa copie della guida alle attività per ogni studente\n-   Preparati a distribuire digitalmente la risorsa \"IA Aree di ricerca\" agli studenti. \n-   Consulta il forum [\"Aula insegnanti\"](https://forum.code.org/t/resource-hub-ai-and-machine-learning-chapter-1-lessons-1-15/36198) per gli insegnanti verificati per trovare strategie o risorse aggiuntive condivise dagli altri insegnanti",
+          "student_overview": "Ricerca diversi esempi di come l'Intelligenza Artificiale viene utilizzata per risolvere problemi nel mondo."
+        },
+        "csd7-2023/Patterns in Data": {
+          "name": "Schemi nei dati",
+          "overview": "In questa lezione gli studenti esamineranno diverse app che prendono decisioni su quali scarpe indossare, fino a comprendere in che modo l'apprendimento automatico può aiutare a prendere questa decisione. Gli studenti sono guidati alla conclusione che intervistare i propri utenti può aiutarli a prendere la decisione migliore cercando schemi nei dati e basando le loro decisioni su questi schemi.\n\n**Domanda del giorno:** quali strategie utilizzano i modelli informatici per prendere decisioni?",
+          "preparation": "-   Riguarda gli esrcizi di Code Studio prima della lezione\n-   Stampa copie della guida alle attività per ogni studente\n-   Consulta il forum [\"Aula insegnanti\"](https://forum.code.org/t/resource-hub-ai-and-machine-learning-chapter-1-lessons-1-15/36198) per gli insegnanti verificati per trovare strategie o risorse aggiuntive condivise dagli altri insegnanti",
+          "student_overview": "Scopri tre diversi modi in cui i computer possono formulare consigli e quanto possono essere importanti i dati per prendere decisioni accurate."
+        },
+        "csd7-2023/Classification Models": {
+          "name": "Modelli di classificazione",
+          "overview": "In questa lezione gli studenti parteciperanno a un'attività tradizionale che simula uno degli algoritmi di apprendimento automatico utilizzati dai computer per separare i dati in gruppi per aiutare a prendere decisioni. Gli studenti avranno il compito di aiutare un computer a imparare a classificare gli alimenti come frutta o verdura, rappresentare graficamente 20 diversi frutti su due assi confrontando «dolcezza» e «facile da mangiare», quindi provare a separare i dati in gruppi: un'area dedicata alla frutta e un'area vegetariana.\n\n**Domanda del giorno:** in che modo i computer imparano a classificare i dati?",
+          "preparation": "-   Ripassa tutti i materiali per la lezione di oggi.\n-   Ritaglia biglietti con frutta e verdura - un set di carte per ogni gruppo\n-   Riga o righello per ogni studente\n-   Controlla il forum [\"Aula insegnanti\"](https://forum.code.org/t/resource-hub-ai-and-machine-learning-chapter-1-lessons-1-15/36198) per insegnanti verificati per trovare strategie o risorse aggiuntive condivise da altri insegnanti",
+          "student_overview": "Scopri come creare un modello di apprendimento automatico aiutando un computer a classificare gli alimenti come frutta o verdura"
+        },
+        "csd7-2023/Introduction to AI Lab": {
+          "name": "Introduzione al Laboratorio IA",
+          "overview": "In questa lezione gli studenti si immergeranno per la prima volta nello strumento Laboratorio IA, dove selezionano le caratteristiche per addestrare un modello che prevede una determinata etichetta. Iniziano esplorando Laboratorio IA e addestrando un modello per riconoscere le forme. Quindi fingono di essere stati assunti da diversi ristoranti che vorrebbero formulare raccomandazioni ai nuovi clienti sulla base dei dati del sondaggio raccolti, esaminare ogni set di dati e utilizzare strumenti di visualizzazione dei dati per identificare le caratteristiche con elevate relazioni tra i dati.\n\n**Domanda del giorno:** come possiamo usare l'apprendimento automatico per formulare consigli?",
+          "preparation": "-   Ripassa gli esercizi di Code Studio prima della lezione\n-   Guarda i due video di questa lezione e acquisisci familiarità con Laboratorio IA\n-   Stampa o preparati a condividere copie online della guida alle attività per ogni studente\n-   Consulta il forum [\"Aula insegnanti\"](https://forum.code.org/t/resource-hub-ai-and-machine-learning-chapter-1-lessons-1-15/36198) per insegnanti verificati per trovare strategie o risorse aggiuntive condivise dagli altri insegnanti",
+          "student_overview": "Scopri come utilizzare Laboratorio IA per addestrare modelli di apprendimento automatico, ad esempio come riconoscere le forme o come formulare consigli sulle pietanze per un ristorante."
+        },
+        "csd7-2023/Importing Models in App Lab": {
+          "name": "Importazione di modelli in Sviluppo App",
+          "overview": "In questa lezione gli studenti imparano a importare i loro modelli in Sviluppo App e a collegare il loro modello alle loro schermate. Aiutano a creare un'app per consigliare libri e a imparare come aggiungere una schermata di benvenuto ed eventi al loro programma. Questa lezione presuppone che gli studenti conoscano già Sviluppo App: per le classi che non hanno mai visto Sviluppo App prima, valuta la possibilità di estendere questa lezione e includere video o attività aggiuntivi consigliati nel piano della lezione.\n\n**Domanda del giorno:** come posso creare un'app utilizzando l'apprendimento automatico?",
+          "preparation": "-   ripassa gli esercizi di Code Studio prima della lezione in modo da acquisire familiarità con l'importazione di un modello in Sviluppo App\n-   decidi se desideri fornire risorse aggiuntive agli studenti per familiarizzare con Sviluppo App, come indicato nel piano della lezione.\n-   Consulta il forum [\"Aula insegnanti\"](https://forum.code.org/t/resource-hub-ai-and-machine-learning-chapter-1-lessons-1-15/36198) per gli insegnanti verificati per trovare strategie o risorse aggiuntive condivise dagli altri insegnanti",
+          "student_overview": "Scopri come importare un modello in Sviluppo App per contribuire a creare un'app \"Consigli sui libri\" per una classe della scuola media."
+        },
+        "csd7-2023/Model Cards": {
+          "name": "Schede modello",
+          "overview": "In questa lezione, gli studenti studieranno un modello di distorsione e verranno introdotti a una scheda modello, che è un modo per rappresentare informazioni importanti su un modello addestrato che potrebbe aiutare a scoprire i pregiudizi. Esamineranno un'app \"Priorità mediche\", che aiuta un ospedale a decidere quanto tempo visitare i pazienti in base ai loro sintomi. Man mano che gli studenti svolgono l'attività, si rendono conto che l'app è non è completa in base alle informazioni personali ed esaminano come ciò potrebbe accadere.\n\n**Domanda del giorno:** come possiamo valutare i modelli di apprendimento automatico una volta che sono stati addestrati?",
+          "preparation": "-   Ripassa gli esercizi di Code Studio prima della lezione\n-   Anticipa come guiderai la discussione sui pregiudizi razziali e di genere, considerando che alcuni studenti potrebbero avere esperienze simili a quelle discusse in questa lezione.\n-   Consulta il forum [\"Aula insegnanti\"](https://forum.code.org/t/resource-hub-ai-and-machine-learning-chapter-1-lessons-1-15/36198) per gli insegnanti verificati per trovare strategie o risorse aggiuntive condivise dagli altri insegnanti",
+          "student_overview": "Aiutaci a decidere quale modello utilizzare un ospedale per il sistema di prioritizzazione del pronto soccorso e a determinare quali modelli includono pregiudizi involontari. Scoprirai anche come le Schede modello possono aiutare a valutare e analizzare i modelli di apprendimento automatico."
+        },
+        "csd7-2023/Saving Models in AI Lab": {
+          "name": "Salvataggio di modelli in Laboratorio IA",
+          "overview": "Gli studenti completano l'intero processo di addestramento e salvataggio di un modello, quindi importano in Sviluppo App. Per la prima volta, gli studenti sono in grado di scegliere l'etichetta che vorrebbero prevedere e dedicare del tempo a decidere le caratteristiche che utilizzeranno per prevedere l'etichetta scelta. Gli studenti creano anche una scheda modello per i loro modelli per salvarli e importarli in Sviluppo App\n\n**Domanda del giorno:** come posso utilizzare le schede modello per documentare le mie decisioni durante l'addestramento di un modello di apprendimento automatico?",
+          "preparation": "-   Ripassa gli esercizi di Code Studio prima della lezione per acquisire dimestichezza con le tabelle di valutazione di Laboratorio IA e addestrare il loro modello\n-   Stampa copie della guida alle attività per ogni studente\n-   Consulta il forum [\"Aula insegnanti\"](https://forum.code.org/t/resource-hub-ai-and-machine-learning-chapter-1-lessons-1-15/36198) per gli insegnanti verificati per trovare strategie o risorse aggiuntive condivise dagli altri insegnanti",
+          "student_overview": "Aiuta ad addestrare diversi modelli per aiutare uno zoo a creare app didattiche per i propri visitatori. Creerai schede modello per ciascuno dei tuoi modelli, quindi ne importerai una in Sviluppo App per creare un'app."
+        },
+        "csd7-2023/Model Cards in App Lab": {
+          "name": "Schede modello in Sviluppo App",
+          "overview": "In questa lezione, gli studenti si esercitano a importare i propri modelli in Sviluppo App, questa volta includendo modelli con dati numerici e utilizzando schede modello per migliorare l'esperienza utente nella compilazione del modulo. Impareranno quindi a visualizzare la scheda modello in Sviluppo App e a utilizzarla per aggiungere altri elementi descrittivi a un'app. Successivamente, si concentrano sul miglioramento dell'esperienza utente aggiungendo testo informativo per guidare gli utenti nella compilazione del modulo e aggiungendo uno stile alla loro app per migliorare l'esperienza utente.\n\n**Domanda del giorno:** come posso usare una Scheda Modello per migliorare la mia app?",
+          "preparation": "-   Ripassa gli esercizi di Code Studio prima della lezione\n-   Consulta il forum [\"Aula insegnanti\"](https://forum.code.org/t/resource-hub-ai-and-machine-learning-chapter-1-lessons-1-15/36198) per gli insegnanti verificati per trovare strategie o risorse aggiuntive condivise dagli altri insegnanti",
+          "student_overview": "Scopri come utilizzare Schede modello per migliorare un'app di apprendimento automatico e come aggiornare la schermata finale in base alla previsione del modello."
+        },
+        "csd7-2023/Numerical Models": {
+          "name": "Modelli numerici",
+          "overview": "In questa lezione, gli studenti partecipano a un'attività tradizionale che simula un'epidemia di zombi. Gli studenti devono prevedere quali parti della città hanno il minor numero di zombi utilizzando i dati di una città vicina. Gli studenti utilizzeranno gradi di somiglianza e medie per fare previsioni sul numero di zombi in un determinato luogo. Quindi, gli studenti vengono salvati e possono confrontare le loro previsioni con i numeri effettivi per discutere di come l'accuratezza sia diversa per i dati numerici rispetto ai dati categoriali.\n\n**Domanda del giorno:** in che modo i computer imparano a fare previsioni con dati numerici?",
+          "preparation": "-   Ripassa tutti i materiali per la lezione di oggi.\n-   Stampa o preparati a condividere online la guida alle attività, una per studente o gruppo.\n-   Consulta il forum [\"Aula insegnanti\"](https://forum.code.org/t/resource-hub-ai-and-machine-learning-chapter-1-lessons-1-15/36198) per gli insegnanti verificati per trovare strategie o risorse aggiuntive condivise dagli altri insegnanti",
+          "student_overview": "Gli zombi hanno invaso la tua città e devi usare i dati per prevedere quali parti della città hanno il minor numero di zombi in modo da poter portare le persone al sicuro."
+        },
+        "csd7-2023/Numerical Data in AI Lab": {
+          "name": "Dati numerici in Laboratorio IA",
+          "overview": "In questa lezione, gli studenti verranno introdotti ai dati numerici che rappresentano un intervallo di valori. Agli studenti viene presentato uno scenario in cui ogni caratteristica ed etichetta è rappresentata con dati numerici e imparano a utilizzare i nuovi strumenti di visualizzazione dei dati all'interno di Laboratorio IA per aiutare a trovare schemi.\n\n**Domanda del giorno:** come possiamo usare Laboratorio IA per prevedere dati numerici?",
+          "preparation": "-   Consulta il forum [\"Aula insegnanti\"](https://forum.code.org/t/resource-hub-ai-and-machine-learning-chapter-1-lessons-1-15/36198) per trovare insegnanti verificati per trovare strategie o risorse aggiuntive condivise da altri insegnanti",
+          "student_overview": "utilizzare Laboratorio IA e i dati numerici per fare previsioni su scenari reali"
+        },
+        "csd7-2023/Customizing Apps": {
+          "name": "Personalizzazione delle app",
+          "overview": "In questa lezione, gli studenti scopriranno come personalizzare il codice della loro app per apportare ulteriori modifiche alla progettazione della loro app. Inizieranno esplorando un'app a schermo singolo, quindi si eserciteranno ad espandere l'app su due schermate e ad aggiornare il codice per utilizzare i nuovi elementi della \"Modalità interfaccia\". Successivamente, gli studenti aiutano a creare un'app \"Avviso al conducente\" che richiede modifiche al programma utilizzando nuovi elementi della \"Modalità interfaccia\". Utilizzando le competenze di questa lezione, gli studenti saranno in grado di creare app multischermo in cui le domande possono apparire su più schermi anziché su un'unica schermata.\n\n**Domanda del giorno:** come posso personalizzare il programma per un'app di apprendimento automatico?",
+          "preparation": "-   Esamina gli esercizi di Code Studio prima della lezione per acquisire familiarità con la modifica dell'elemento di input \n-   Consulta il forum [\"Aula insegnanti\"](https://forum.code.org/t/resource-hub-ai-and-machine-learning-chapter-1-lessons-1-15/36198) per insegnanti verificati per trovare strategie o risorse aggiuntive condivise dagli altri insegnanti",
+          "student_overview": "Scopri come modificare il codice di un'app di apprendimento automatico contribuendo a creare un sistema di avvisi di guida per il conducente, in cui ogni sensore si trova su una schermata diversa dell'app."
+        },
+        "csd7-2023/AI Code of Ethics": {
+          "name": "Codice etico dell'IA",
+          "overview": "In piccoli gruppi, gli studenti conducono ricerche utilizzando articoli e video che espongono le insidie etiche in un'area di loro scelta di Intelligenza Artificiale (IA). Successivamente, ogni gruppo sviluppa almeno un principio orientato alla soluzione che riguarda l'area prescelta. Questi principi vengono poi riuniti in una risorsa a livello di classe intitolata «Il nostro codice etico sull'IA» (ad esempio una presentazione, un documento o una pagina web) destinata ai creatori e ai legislatori di tutto il mondo.\n\n**Domanda del giorno:** quali sono le linee guida che possiamo utilizzare per creare app etiche di apprendimento automatico?",
+          "preparation": "-   Preparati a condividere online l'opuscolo **Aree di ricerca etica sulla IA** per gruppo.\n-   Stampa o preparati a condividere online un volantino **Riflessione sulla ricerca etica della IA** per gruppo.\n-   Prepara un documento web condivisibile, una presentazione con diapositive, un modello di video o qualsiasi altra forma di supporto da utilizzare per includere la risorsa «Il nostro codice etico sull'intelligenza artificiale» della tua classe.\n-   Consulta il forum [\"Aula insegnanti\"](https://forum.code.org/t/resource-hub-ai-and-machine-learning-chapter-1-lessons-1-15/36198) per gli insegnanti verificati per trovare strategie o risorse aggiuntive condivise dagli altri insegnanti",
+          "student_overview": "Cosa significa usare l'intelligenza artificiale in modo etico? In questa lezione, contribuirai a creare un codice etico per l'intelligenza artificiale e ricercherai esempi di intelligenza artificiale che seguono o meno il tuo codice etico."
+        },
+        "csd7-2023/Project: Make a Machine Learning App": {
+          "name": "Progetto: crea un'app per l'apprendimento automatico",
+          "overview": "In questo progetto da completare in uno o due giorni, gli studenti applicano le competenze acquisite finora nell'unità e creano un'app di apprendimento automatico utilizzando dati del mondo reale. Agli studenti vengono forniti diversi insiemi di dati del mondo reale provenienti da una varietà di contesti e scelgono quale insiemi di dati desiderano esaminare. Addestrano e salvano il modello, quindi creano una semplice app di \"Sviluppo App\" che utilizza il modello. Questo mini-progetto è un'opportunità per valutare in che modo gli studenti possono utilizzare le caratteristiche per creare modelli di apprendimento automatico accurati e quanto bene possono creare app che utilizzano l'apprendimento automatico.\n\n**Domanda del giorno:** posso usare dati del mondo reale per creare un'app che utilizza l'apprendimento automatico?",
+          "preparation": "-   Riguarda gli esrcizi di Code Studio prima della lezione\n-   Stampa copie della guida alle attività per ogni studente\n-   Consulta il forum [\"Aula insegnanti\"](https://forum.code.org/t/project-hub-make-a-machine-learning-app-ai-and-machine-learning-lesson-15/36219) per gli insegnanti verificati per trovare strategie o risorse aggiuntive condivise dagli altri insegnanti",
+          "student_overview": "Scegli tra diversi insiemi di dati reali per addestrare un modello e creare un'app che utilizzi l'apprendimento automatico"
+        },
+        "csd7-2023/Issue Statements": {
+          "name": "Definizione di un problema di carattere generale (issue statement)",
+          "overview": "Questa è la prima di una serie di cinque lezioni giornaliere che preparano gli studenti al progetto finale. In questa lezione, gli studenti incontrano un gruppo di studenti immaginari che desiderano utilizzare l'apprendimento automatico per risolvere un problema nella loro comunità. Gli studenti partecipano a una riflessione libera su un problema utilizzando la strategia dei \"5 perché\", quindi aiutano a valutare le idee che l'altro gruppo di studenti ha avuto. I passaggi che gli studenti intraprenderanno in questa lezione sono identici ai passaggi che gli studenti intraprenderanno nel loro progetto finale.\n\n**Domanda del giorno:** come si può utilizzare l'apprendimento automatico per risolvere un problema nella tua comunità?",
+          "preparation": "-   Consulta il forum [\"Aula insegnanti\"](https://forum.code.org/t/resource-hub-ai-and-machine-learning-chapter-2-lessons-16-21/36199) per trovare insegnanti verificati per trovare strategie o risorse aggiuntive condivise da altri insegnanti",
+          "student_overview": "Collaborando con un gruppo di studenti di un'altra scuola, sviluppa idee su come utilizzare l'apprendimento automatico per risolvere un problema nella tua comunità."
+        },
+        "csd7-2023/Survey Planning": {
+          "name": "Pianificazione del sondaggio",
+          "overview": "Questa è la seconda di una serie di cinque lezioni giornaliere che preparano gli studenti al progetto finale. In questa lezione, gli studenti scoprono che l'altro gruppo di studenti vorrebbe creare un'app di selezione per i club basata sui club della loro scuola. Gli studenti immaginano quali domande sarebbero più utili per contribuire a formulare questi consigli, quindi imparano a utilizzare un modello basato su un modulo Google per creare un sondaggio. I passaggi che gli studenti intraprenderanno in questa lezione sono identici ai passaggi che gli studenti intraprenderanno nel loro progetto finale.\n\n**Domanda del giorno:** come posso creare un sondaggio per raccogliere dati per un'app di apprendimento automatico?",
+          "preparation": "-   Stampa copie della guida alle attività per ogni studente\n-   Guarda il video su come utilizzare un modello per creare un Google Form\n-   Consulta il forum [\"Aula insegnanti\"](https://forum.code.org/t/resource-hub-ai-and-machine-learning-chapter-2-lessons-16-21/36199) per gli insegnanti verificati per trovare strategie o risorse aggiuntive condivise dagli altri insegnanti",
+          "student_overview": "Aiuta l'altro gruppo di studenti a sviluppare domande utili per creare un'app di apprendimento automatico, quindi scopri come utilizzare Google Forms per creare un sondaggio per raccogliere dati."
+        },
+        "csd7-2023/Survey Data in AI Lab": {
+          "name": "Dati del sondaggio in Laboratorio IA",
+          "overview": "Questa è la terza di una serie di cinque lezioni giornaliere che preparano gli studenti al progetto finale. In questa lezione, gli studenti imparano a visualizzare i dati del sondaggio in Google Sheets e a salvarli sul proprio computer come file csv. Quindi, caricano i dati salvati su Laboratorio IA ed esaminano i risultati del sondaggio di uno degli studenti per addestrare un modello utilizzando i loro dati. Quindi, gli studenti utilizzano Google Sheets per esaminare i dati di un altro studente in cui i dati contengono errori e quindi provare a correggerli. I passaggi che gli studenti intraprenderanno in questa lezione sono identici ai passaggi che gli studenti intraprenderanno nel loro progetto finale e le strategie di risoluzione dei problemi che svilupperanno li aiuteranno a superare le sfide del loro progetto finale.\n\n**Domanda del giorno**: come posso importare dati in Laboratorio IA per addestrare un modello di apprendimento automatico?",
+          "preparation": "-   Consulta il forum [\"Aula insegnanti\"](https://forum.code.org/t/resource-hub-ai-and-machine-learning-chapter-2-lessons-16-21/36199) per trovare insegnanti verificati per trovare strategie o risorse aggiuntive condivise da altri insegnanti",
+          "student_overview": "Scopri come scaricare i dati del sondaggio e utilizzarli in Laboratorio IA per addestrare un modello. Le abilità di questa lezione sono importanti per completare la lezione finale di questa unità."
+        },
+        "csd7-2023/Troubleshooting Models": {
+          "name": "Modelli di risoluzione dei problemi",
+          "overview": "Questa è la quarta di una serie di cinque giorni di lezioni giornaliere che preparano gli studenti al progetto finale. In questa lezione, gli studenti esaminano i dati del sondaggio di altri membri del gruppo di studenti e analizzano i motivi per cui i loro modelli non funzionano correttamente. Nell'esaminare i dati, gli studenti sviluppano strategie per evitare questi problemi in futuro e strategie per far fronte a questi problemi se dovessero ripetersi. Queste sono le competenze che gli studenti utilizzeranno nel progetto finale per sviluppare i propri sondaggi e raccogliere dati.\n\n**Domanda del giorno**: quali sono le strategie per garantire che i nostri dati generino un modello accurato?",
+          "preparation": "-   Consulta il forum [\"Aula insegnanti\"](https://forum.code.org/t/resource-hub-ai-and-machine-learning-chapter-2-lessons-16-21/36199) per trovare insegnanti verificati per trovare strategie o risorse aggiuntive condivise da altri insegnanti",
+          "student_overview": "Aiuta gli studenti dell'altro gruppo ad analizzare i dati del sondaggio e a determinare perché non sono in grado di ottenere modelli accurati _o_ non sono in grado di creare modelli utilizzabili durante le prove."
+        },
+        "csd7-2023/Creating an App": {
+          "name": "Creazione di un'app",
+          "overview": "Questa è la quinta  di una serie di cinque lezioni giornaliere che preparano gli studenti al progetto finale. In questa lezione, gli studenti importano l'app Consiglio per i Club in Sviluppo App e iniziano a personalizzarla. Gli studenti aggiungono una schermata di benvenuto e aggiornano le descrizioni di ciascuna caratteristica, quindi possono decidere come personalizzare ulteriormente l'app. I passaggi che gli studenti intraprenderanno in questa lezione sono identici ai passaggi che gli studenti intraprenderanno nel loro progetto finale.\n\n**Domanda del giorno**: come posso creare un'app di apprendimento automatico intuitiva e facile da usare?",
+          "preparation": "-   Consulta il forum [\"Aula insegnanti\"](https://forum.code.org/t/resource-hub-ai-and-machine-learning-chapter-2-lessons-16-21/36199) per trovare insegnanti verificati per trovare strategie o risorse aggiuntive condivise da altri insegnanti",
+          "student_overview": "Il modello è finalmente pronto! Ora è il momento di importare il modello in Sviluppo App e creare l'app definitiva di Consigllio per i club!"
+        },
+        "csd7-2023/Project - Design an AI App": {
+          "name": "Progetto - Progetta un'app IA",
+          "overview": "Per concludere questa unità, gli studenti sviluppano un'app di intelligenza artificiale che affronta un problema di carattere generale di loro interesse, utile per il sociale. Gli studenti seguono una guida al progetto per completare questa attività di più giorni. Nella prima fase, gli studenti preparano i dati che utilizzeranno per addestrare il loro modello in Laboratorio IA. Dopo aver addestrato, testato e generato una scheda modello, esportano il modello in Sviluppo App per lo sviluppo. Qui usano il loro modello per creare un'app intuitiva. Gli studenti eseguono una revisione tra pari e apportano gli aggiornamenti necessari ai loro progetti mentre riflettono sul risultato.\n\n**Domanda del giorno:** come posso creare un'app IA che risolva un problema nella mia comunità?",
+          "preparation": "-   Stampa copie della Guida al progetto.\n-   Stampa copie della tabella di valutazione.\n-   Stampa delle copie della Guida alla revisione tra pari.\n-   Consulta il forum [\"Aula insegnanti\"](https://forum.code.org/t/project-hub-design-an-ai-app-ai-and-machine-learning-lesson-21/36220) per gli insegnanti verificati per trovare strategie o risorse aggiuntive condivise dagli altri insegnanti",
+          "student_overview": "Crea un'app che utilizzi l'apprendimento automatico per risolvere un problema nella tua comunità"
         },
         "coursea-2023/Safety in My Online Neighborhood": {
           "name": "Il mio quartiere digitale",

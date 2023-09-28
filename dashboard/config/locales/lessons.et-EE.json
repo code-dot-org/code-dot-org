@@ -482,6 +482,30 @@
         "express-2022/Dance Party": {
           "name": "Tantsuõhtu"
         },
+        "csd3-2023/Variables": {
+          "name": "Muutujad"
+        },
+        "csd3-2023/Sprites": {
+          "name": "Spraidid"
+        },
+        "csd3-2023/Text": {
+          "name": "Tekst"
+        },
+        "csd3-2023/Conditionals": {
+          "name": "Tingimuslaused"
+        },
+        "csd3-2023/Velocity": {
+          "name": "Velocity"
+        },
+        "csd3-2023/Functions": {
+          "name": "Funktsioonid"
+        },
+        "csd6a-2023/Functions": {
+          "name": "Funktsioonid"
+        },
+        "csd6b-2023/Functions": {
+          "name": "Funktsioonid"
+        },
         "coursea-2023/Happy Maps": {
           "name": "Happy Maps"
         },

@@ -1508,7 +1508,7 @@ es-MX:
           SOUND:
             '"sound://category_background/fire_burning.mp3"': Junto al fuego
             '"sound://category_background/inside_plane.mp3"': Zumbido
-            '"sound://category_background/ocean_waves.mp3"': océano
+            '"sound://category_background/ocean_waves.mp3"': mar
             '"sound://category_background/rain_thunderstorm_calm.mp3"': Lluvioso
             '"sound://category_background/rainforest_ambient_sound.mp3"': Bosque lluvioso
             '"sound://category_background/repitition.mp3"': Montar
@@ -2338,9 +2338,9 @@ es-MX:
             "'sound://category_animals/dog.mp3'": perro
             "'sound://category_animals/dolphin.mp3'": delfín
             "'sound://category_animals/elephant.mp3'": elefante
-            "'sound://category_animals/goat.mp3'": Cabra
+            "'sound://category_animals/goat.mp3'": cabra
             "'sound://category_animals/pig.mp3'": cerdo
-            "'sound://category_animals/rooster.mp3'": rejilla
+            "'sound://category_animals/rooster.mp3'": gallo
             "'sound://category_animals/sheep.mp3'": oveja
             "'sound://category_animals/tiger.mp3'": tigre
             "'sound://category_app/app_button_1.mp3'": botón
@@ -2358,7 +2358,7 @@ es-MX:
             "'sound://category_nature/thunderstorm_1.mp3'": tormenta de truenos
             "'sound://category_notifications/vibrant_game_tonal_hit_6_correct.mp3'": golpe
               de tono
-            "'sound://category_pop/bubble_pop_cluster_1.mp3'": Burbuja
+            "'sound://category_pop/bubble_pop_cluster_1.mp3'": burbuja
             "'sound://category_pop/bubble_pop_cluster_airy_1.mp3'": pop
             "'sound://category_projectile/retro_game_magic_spell_6.mp3'": hechizo
               magico
@@ -2373,7 +2373,7 @@ es-MX:
       gamelab_playSoundOptionsSoccer:
         options:
           SOUND:
-            "'sound://category_sports/Airhorn_SFX.mp3'": corneta de aire
+            "'sound://category_sports/Airhorn_SFX.mp3'": bocina
             "'sound://category_sports/Crowd_Applause_SFX.mp3'": aplauso
             "'sound://category_sports/Crowd_Chant_SFX.mp3'": cántico
             "'sound://category_sports/Crowd_Cheer_SFX.mp3'": animar

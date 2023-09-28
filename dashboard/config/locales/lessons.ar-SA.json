@@ -5091,6 +5091,10 @@
           "purpose": "في هذا النشاط عبر الإنترنت، سيتعلم الطلاب كيفية استخدام الأحداث في مختبر اللعب. سيبدؤون بتدريب الفارس على التحرك عند الضغط على أحد مفاتيح الأسهم، ثم ينتهي النشاط بفرصة عرض بقية المهارات التي تعلموها طوال هذه الدورة، بما في ذلك التسلسل والتكرار، كجزء من لغز اللعب الحر النهائي.",
           "student_overview": "استخدم الأحداث لإنشاء قصة أو عمل لعبة تفاعلية."
         },
+        "ai-ethics-2023/lesson-1": {
+          "name": "مدونة أخلاقيات الذكاء الاصطناعي الخاصة بنا",
+          "student_overview": "ابحث بشكل تعاوني حول أخلاقيات الذكاء الاصطناعي وأنشئ مدونة سلوك قابلة للمشاركة."
+        },
         "csc-adaptations-2023/Modeling Animal Adaptations (pilot)": {
           "name": "مقدمة التكيفات الحيوانية",
           "overview": "في درس**بناء المهارات** هذا، سيتعلم الطلاب إنشاء الرسوم المتحركة المتحركة واستخدام الأحداث لجعلها تفاعلية. \n\nسيقوم الطلاب بترميز نموذج السبب والنتيجة القائم على الحدث في Sprite Lab لتوضيح كيفية بقاء الأنواع على قيد الحياة من خلال التكيف مع بيئاتها بمرور الوقت. تُستخدم النماذج التفاعلية وعمليات المحاكاة في العالم الحقيقي لمساعدة المهندسين والعلماء على تحديد الأنماط وفهم الطبيعة والتنبؤ بالتغييرات المستقبلية وتصميم الحلول للتحضير و/أو مكافحة الاضطرابات الرئيسية. \n\nسوف يستكشف الطلاب أمثلة للتطور والتكيف والهجرة والانتقاء الطبيعي والبقاء في مجموعات. ",
@@ -5251,6 +5255,292 @@
           "preparation": "-   إعداد جهاز كمبيوتر واحد لكل طالب.\n-   قم بإعداد نسخة واحدة من نشرة **<a href=\"https://docs.google.com/document/d/1kO4SNEIVyM0GrxxJb6NzVYauXXpi6rzQkDIfrzQf1Ls/template/preview\" target=\"_blank\">شارك</a>تطبيقك** لكل طالب.\n-   تأكد من أن الطلاب لديهم نسخة من قصيدتهم الأصلية في متناول اليد لهذا الدرس.  \n-   قسّم الفصل إلى أزواج لنشاط مشاركة الشعر.\n-   ضع في اعتبارك خيارات الإضافة ذات الصلة ([link](https://studio.code.org/s/poetry-2023/lessons/4#activity-4365336)) لاستكشافها بعد هذا الدرس.\n\n##### اختياري\n\n-   خاصة للتدريس عن بُعد: حدد ما إذا كنت بحاجة إلى إعداد مستند رقمي أو مساحة مشتركة عبر الإنترنت لنشر عنوان URL لتطبيق كل طالب (راجع نموذج المعلم في «الروابط»). ",
           "purpose": "تعد مشاركة مشاريعهم الفنية الشعرية مع أقرانهم جانبًا مهمًا من العملية الإبداعية. فهي تتيح للطلاب تلقي التعليقات والتعاون مع الآخرين والتفكير في عملهم والاحتفال بإنجازاتهم. من خلال مشاركة عملهم مع الآخرين، يمكن للطلاب النمو والتحسن كمفكرين مبدعين وتطوير مهارات التواصل والعلاقات الشخصية الهامة.",
           "student_overview": "شارك تطبيقات القصيدة الجديدة مع أصدقائك! "
+        },
+        "csd1-2023/Intro to Problem Solving": {
+          "name": "مقدمة عن حل المشكلات"
+        },
+        "csd1-2023/The Problem Solving Process": {
+          "name": "عملية حل المشكلات"
+        },
+        "csd1-2023/Exploring Problem Solving": {
+          "name": "استكشاف حل المشكلات"
+        },
+        "csd1-2023/What is a Computer?": {
+          "name": "ما هو الكمبيوتر؟"
+        },
+        "csd1-2023/Input and Output": {
+          "name": "الإدخال والإخراج"
+        },
+        "csd1-2023/Processing": {
+          "name": "المعالجة"
+        },
+        "csd1-2023/Storage": {
+          "name": "التخزين"
+        },
+        "csd1-2023/Project - Propose an App": {
+          "name": "المشروع - اقتراح تطبيق"
+        },
+        "csd1-2023/Intro to Problem Solving - Newspaper Table (Alternate Lesson 1)": {
+          "name": "مقدمة عن حل المشكلات - طاولة من ورق الصحف (الدرس البديل 1)"
+        },
+        "csd1-2023/Intro to Problem Solving - Spaghetti Bridge (Alternate Lesson 1)": {
+          "name": "مقدمة عن حل المشكلات - جسر من السباغيتي (الدرس البديل 1)"
+        },
+        "csd1-2023/Intro to Problem Solving - Paper Tower (Alternate Lesson 1)": {
+          "name": "مقدمة عن حل المشكلات - برج من الورق (الدرس البديل 1)"
+        },
+        "csd1-2023/Exploring Problem Solving - Animals Theme (Alternate Lesson 3)": {
+          "name": "استكشاف حل المشكلات - موضوع الحيوانات (الدرس البديل 3)"
+        },
+        "csd1-2023/Exploring Problem Solving - Games Theme (Alternate Lesson 3)": {
+          "name": "استكشاف حل المشكلات - موضوع الألعاب (الدرس البديل 3)"
+        },
+        "csd2-2023/Exploring Web Pages": {
+          "name": "استكشاف صفحات الويب"
+        },
+        "csd2-2023/Intro to HTML": {
+          "name": "مقدمة عن HTML"
+        },
+        "csd2-2023/Mini-Project: HTML Web Page": {
+          "name": "مشروع مصغر: صفحة ويب HTML"
+        },
+        "csd2-2023/Digital Footprint": {
+          "name": "البصمة الرقمية"
+        },
+        "csd2-2023/Styling Text with CSS": {
+          "name": "تصميم النص باستخدام CSS"
+        },
+        "csd2-2023/Mini-Project: Your Personal Style": {
+          "name": "مشروع مصغر: أسلوبك الشخصي"
+        },
+        "csd2-2023/Intellectual Property": {
+          "name": "الملكية الفكرية"
+        },
+        "csd2-2023/Websites for Expression": {
+          "name": "مواقع الويب المخصصة للتعبير"
+        },
+        "csd2-2023/Styling Elements with CSS": {
+          "name": "تصميم العناصر باستخدام CSS"
+        },
+        "csd2-2023/Your Web Page - Prepare": {
+          "name": "صفحة الويب الخاصة بك - تحضير"
+        },
+        "csd2-2023/Team Problem Solving": {
+          "name": "فريق حل المشكلات"
+        },
+        "csd2-2023/Sources and Research": {
+          "name": "المصادر والبحوث المنهجية"
+        },
+        "csd2-2023/Planning a Multi-Page Site": {
+          "name": "تخطيط موقع ويب متعدد الصفحات"
+        },
+        "csd2-2023/Linking Pages": {
+          "name": "ربط الصفحات"
+        },
+        "csd2-2023/Project - Website for a Purpose": {
+          "name": "المشروع - الموقع الإلكتروني لغرض ما"
+        },
+        "csd2-2023/Peer Review and Final Touches": {
+          "name": "مراجعة الأقران واللمسات الأخيرة"
+        },
+        "csd3-2023/Plotting Shapes": {
+          "name": "رسم الأشكال"
+        },
+        "csd3-2023/Drawing in Game Lab": {
+          "name": "الرسم في مختبر الألعاب"
+        },
+        "csd3-2023/Variables": {
+          "name": "المتغيرات"
+        },
+        "csd3-2023/Sprites": {
+          "name": "النقوش المتحركة"
+        },
+        "csd3-2023/Sprite Properties": {
+          "name": "خصائص الكائنات"
+        },
+        "csd3-2023/Text": {
+          "name": "النص"
+        },
+        "csd3-2023/Mini-Project - Captioned Scenes": {
+          "name": "مشروع صغير: المشاهدات ذات التعليقات التوضيحية"
+        },
+        "csd3-2023/The Draw Loop": {
+          "name": "حلقة الرسم"
+        },
+        "csd3-2023/Sprite Movement": {
+          "name": "حركة الرسوم المتحركة"
+        },
+        "csd3-2023/Mini-Project - Animation": {
+          "name": "مشروع صغير: الرسوم المتحركة"
+        },
+        "csd3-2023/Conditionals": {
+          "name": "الجمل الشرطية"
+        },
+        "csd3-2023/Keyboard Input": {
+          "name": "مدخلات لوحة المفاتيح"
+        },
+        "csd3-2023/Mouse Input": {
+          "name": "مدخلات الماوس"
+        },
+        "csd3-2023/Project - Interactive Card": {
+          "name": "المشروع - البطاقة التفاعلية"
+        },
+        "csd3-2023/Velocity": {
+          "name": "السرعة"
+        },
+        "csd3-2023/Collision Detection": {
+          "name": "كشف التصادم"
+        },
+        "csd3-2023/Mini-Project - Side Scroller": {
+          "name": "مشروع صغير: التمرير الجانبي"
+        },
+        "csd3-2023/Complex Sprite Movement": {
+          "name": "الحركة المعقدة للنقش المتحرك"
+        },
+        "csd3-2023/Collisions": {
+          "name": "التصادمات"
+        },
+        "csd3-2023/Mini-Project - Flyer Game": {
+          "name": "مشروع صغير: لعبة التحليق"
+        },
+        "csd3-2023/Functions": {
+          "name": "دوال"
+        },
+        "csd3-2023/The Game Design Process": {
+          "name": "عملية تصميم اللعبة"
+        },
+        "csd3-2023/Using the Game Design Process": {
+          "name": "استخدام عملية تصميم اللعبة"
+        },
+        "csd3-2023/Project - Design a Game": {
+          "name": "المشروع - تصميم لعبة"
+        },
+        "csd4-2023/Understanding Your User": {
+          "name": "فهم المستخدم"
+        },
+        "csd4-2023/User Interfaces": {
+          "name": "واجهات المستخدم"
+        },
+        "csd4-2023/Feedback and Testing": {
+          "name": "الملاحظات والاختبار"
+        },
+        "csd4-2023/Identifying User Needs": {
+          "name": "تحديد احتياجات المستخدم"
+        },
+        "csd4-2023/Project - Paper Prototype": {
+          "name": "المشروع - النموذج الورقي الأولي"
+        },
+        "csd4-2023/Designing Apps for Good": {
+          "name": "تصميم تطبيقات من أجل الخير"
+        },
+        "csd4-2023/Market Research": {
+          "name": "أبحاث السوق"
+        },
+        "csd4-2023/Build a Paper Prototype": {
+          "name": "النماذج الورقية الأولية"
+        },
+        "csd4-2023/Prototype Testing": {
+          "name": "اختبار النموذج الأولي"
+        },
+        "csd4-2023/Design Mode in App Lab": {
+          "name": "التصميم الرقمي"
+        },
+        "csd4-2023/Linking Prototype Screens": {
+          "name": "ربط الشاشات"
+        },
+        "csd4-2023/Testing the App": {
+          "name": "اختبار التطبيق"
+        },
+        "csd4-2023/Project - App Presentation": {
+          "name": "المشروع - عرض التطبيق"
+        },
+        "csd5-2023/Representation Matters": {
+          "name": "مسائل التمثيل"
+        },
+        "csd5-2023/Patterns and Representation": {
+          "name": "الأنماط والتمثيل"
+        },
+        "csd5-2023/ASCII and Binary Representation": {
+          "name": "ASCII والتمثيل الثنائي"
+        },
+        "csd5-2023/Representing Images": {
+          "name": "تمثيل الصور"
+        },
+        "csd5-2023/Representing Numbers": {
+          "name": "تمثيل الأرقام"
+        },
+        "csd5-2023/Combining Representations": {
+          "name": "الجمع بين التمثيلات"
+        },
+        "csd5-2023/Keeping Data Secret": {
+          "name": "الحفاظ على سرية البيانات"
+        },
+        "csd5-2023/Project - Create a Representation": {
+          "name": "المشروع - إنشاء تمثيل"
+        },
+        "csd5-2023/Structuring Data": {
+          "name": "هيكلة البيانات"
+        },
+        "csd5-2023/Interpreting Data": {
+          "name": "تفسير البيانات"
+        },
+        "csd5-2023/Making Decisions with Data": {
+          "name": "اتخاذ القرارات باستخدام البيانات"
+        },
+        "csd5-2023/Automating Data Decisions": {
+          "name": "أتمتة قرارات البيانات"
+        },
+        "csd5-2023/Problem Solving with Big Data": {
+          "name": "حل المشكلات باستخدام البيانات الضخمة"
+        },
+        "csd6a-2023/Intro to App Lab": {
+          "name": "مقدمة عن مختبر التطبيقات"
+        },
+        "csd6a-2023/The Circuit Playground": {
+          "name": "لوحة الأضواء الدائرية"
+        },
+        "csd6a-2023/Board Events": {
+          "name": "أحداث اللوحة"
+        },
+        "csd6a-2023/Accelerometer": {
+          "name": "مقياس التسارع"
+        },
+        "csd6a-2023/Making Music": {
+          "name": "إنشاء موسيقى"
+        },
+        "csd6a-2023/Functions": {
+          "name": "دوال"
+        },
+        "csd6a-2023/Project - Prototype an Innovation": {
+          "name": "المشروع: إعداد نموذج أولي لابتكار",
+          "overview": "في هذا المشروع النهائي للدورة، يتعاون الطلاب على تطوير واختبار نموذج أولي لجهاز حاسوبي مبتكر يعتمد على لوحة الأضواء الدائرية. باستخدام المدخلات والمخرجات المتاحة على اللوحة، ستقوم المجموعات بإنشاء برامج تسمح بتفاعلات المستخدم المثيرة للاهتمام والفريدة."
+        },
+        "csd6b-2023/Intro to App Lab": {
+          "name": "مقدمة عن مختبر التطبيقات"
+        },
+        "csd6b-2023/Board Events": {
+          "name": "أحداث اللوحة"
+        },
+        "csd6b-2023/Accelerometer": {
+          "name": "مقياس التسارع"
+        },
+        "csd6b-2023/Functions": {
+          "name": "دوال"
+        },
+        "csd6b-2023/Project - Prototype an Innovation": {
+          "name": "المشروع: إعداد نموذج أولي لابتكار"
+        },
+        "csd7-2023/Intro to App Lab": {
+          "name": "مقدمة عن مختبر التطبيقات"
+        },
+        "csd7-2023/Introduction to AI Lab": {
+          "name": "مقدمة لمختبر الذكاء الاصطناعي"
+        },
+        "csd7-2023/Numerical Data in AI Lab": {
+          "name": "البيانات العددية في مختبر الذكاء الاصطناعي"
+        },
+        "csd7-2023/Survey Planning": {
+          "name": "تصميم أداة لجمع البيانات"
         },
         "coursea-2023/Safety in My Online Neighborhood": {
           "name": "السلامة في جاري على الإنترنت",

@@ -765,13 +765,26 @@ pt-PT:
         - {}
         questions:
         - {}
+      CSD Games Properties multi predict_2023:
+        answers:
+        - {}
+        - correct: true
+        - {}
+        - {}
+        - {}
+        questions:
+        - {}
       CSD Games Properties practice_2021:
         display_name: Propriedades do Sprite
       CSD Games Properties practice_2022:
         display_name: Propriedades do Sprite
+      CSD Games Properties practice_2023:
+        display_name: Propriedades do Sprite
       CSD Games variables practice_2021:
         display_name: Prática de Variáveis
       CSD Games variables practice_2022:
+        display_name: Prática de Variáveis
+      CSD Games variables practice_2023:
         display_name: Prática de Variáveis
       CSD Header Size MC:
         answers:
@@ -903,11 +916,39 @@ pt-PT:
 
           <div class="clear"></div>
         title: Verificação rápida de títulos
+      CSD Header Size MC_2018_2019_pilot_2023:
+        answers:
+        - text: https://images.code.org/a4e973cc13db380ca1e1efeb4263974f-image-1473432905067.53.47
+            AM.png
+        - correct: true
+          text: https://images.code.org/1c660b4e54a3e835250597cb261d8e17-image-1473432905068.54.08
+            AM.png
+        - text: https://images.code.org/22e9ae6a04afd8251b29939a6fa63411-image-1473432905069.54.25
+            AM.png
+        - text: https://images.code.org/0eee565202089d44a6bb5633603c45e0-image-1473432905069.54.50
+            AM.png
+        content1: Olhe o código abaixo e preveja como os títulos serão mostrados.
+          Escolha entre uma das opções à direita.
+        markdown: |
+          <pre>
+          &lt;h3&gt; Ovos &lt;/h3&gt;
+          &lt;h1&gt; Bacon &lt;/h1&gt;
+          &lt;h6&gt; Waffles &lt;/h6&gt;
+          </pre>
+        teacher_markdown: |-
+          <img src="https://cdo-curriculum.s3.amazonaws.com/media/uploads/Screen-Shot-2017-04-27-at-10.38.03-AM.png" style="width:200px; float:right">
+
+          **Tipos de nível:** Esta pergunta de múltipla escolha pede aos estudantes que escolham como os títulos em HTML serão exibidos em uma página da Web. Você pode ver quais alunos responderam corretamente à pergunta, indo até esse nível e puxando o Painel do Professor do lado direito.  Os alunos que responderam com sucesso à pergunta terão uma bolha verde.  Os alunos têm tantas chances quanto quiserem de responder corretamente, então chutar e conferir também pode levar a uma resposta correta.
+
+          <div class="clear"></div>
+        title: Verificação rápida de títulos
       CSD Interactive Animations and Games Post-Project Test:
         title: Teste Pós-Projeto de Animações e Jogos Interativos
       CSD Interactive Animations and Games Post-Project Test_pilot_2021:
         title: Teste Pós-Projeto de Animações e Jogos Interativos
       CSD Interactive Animations and Games Post-Project Test_pilot_2022:
+        title: Teste Pós-Projeto de Animações e Jogos Interativos
+      CSD Interactive Animations and Games Post-Project Test_pilot_2023:
         title: Teste Pós-Projeto de Animações e Jogos Interativos
       CSD U1 IOSP match:
         answers:
@@ -1009,6 +1050,60 @@ pt-PT:
         teacher_markdown: |-
           * [Aplicativos e resolução de problemas](https://docs.google.com/document/d/1m8a9nnCGCriSvzWUr5Bh7Siod2iu2FdFQtMEz4TONuc/edit) - Exemplar - Guia de Projetos ([PDF](https://docs.google.com/document/d/1m8a9nnCGCriSvzWUr5Bh7Siod2iu2FdFQtMEz4TONuc/export?format=pdf) | [DOCX](https://docs.google.com/document/d/1m8a9nnCGCriSvzWUr5Bh7Siod2iu2FdFQtMEz4TONuc/export?format=doc))
           * [Aplicativos e resolução de problemas](https://docs.google.com/document/d/1hm5wWoVqDhFHbs4MfN0gcAnskZ5a6a5KdO7N3Y0GLoA/edit) - Exemplar - Revisão de Pares([PDF](https://docs.google.com/document/d/1hm5wWoVqDhFHbs4MfN0gcAnskZ5a6a5KdO7N3Y0GLoA/export?format=pdf) | [DOCX](https://docs.google.com/document/d/1hm5wWoVqDhFHbs4MfN0gcAnskZ5a6a5KdO7N3Y0GLoA/export?format=doc))
+      CSD U1 MC Q1_2023:
+        answers:
+        - correct: true
+        - correct: true
+        - {}
+        - {}
+        - {}
+      CSD U1 MC Q2_2023:
+        answers:
+        - {}
+        - {}
+        - {}
+        - {}
+        - correct: true
+        questions:
+        - {}
+      CSD U1 MC Q3_2023:
+        answers:
+        - {}
+        - {}
+        - text: Música
+        - text: Localização
+        - correct: true
+        questions:
+        - {}
+      CSD U1 MC Q4_2023:
+        answers:
+        - {}
+        - {}
+        - {}
+        - correct: true
+        - correct: true
+        questions:
+        - {}
+      CSD U1 Match Q5_2023:
+        answers:
+        - text: Entrada
+        - text: Armazenamento
+        - text: Processando
+        questions:
+        - {}
+        - {}
+        - {}
+      CSD U1 Match Q6_2023:
+        answers:
+        - {}
+        - {}
+        - {}
+        - {}
+        questions:
+        - text: Preparar
+        - text: Refletir
+        - text: Tentar
+        - text: Definir
       CSD U1 Test PSP match:
         answers:
         - {}
@@ -1096,6 +1191,8 @@ pt-PT:
       CSD U2 CSS practice_pilot_2021:
         display_name: Estilo de texto com CSS
       CSD U2 CSS practice_pilot_2022:
+        display_name: Estilo de texto com CSS
+      CSD U2 CSS practice_pilot_2023:
         display_name: Estilo de texto com CSS
       CSD U2 Design Project:
         content1: descrição aqui
@@ -1230,9 +1327,13 @@ pt-PT:
         display_name: Adicionando Imagens
       CSD U2 Image challenge_pilot_2022:
         display_name: Adicionando Imagens
+      CSD U2 Image challenge_pilot_2023:
+        display_name: Adicionando Imagens
       CSD U2 Image practice_pilot_2021:
         display_name: Adicionando Imagens
       CSD U2 Image practice_pilot_2022:
+        display_name: Adicionando Imagens
+      CSD U2 Image practice_pilot_2023:
         display_name: Adicionando Imagens
       CSD U2 L1 Overview:
         content1: descrição aqui
@@ -1414,6 +1515,95 @@ pt-PT:
         teacher_markdown: |-
           * [Website Pessoal](https://docs.google.com/document/d/1mPwjeBMewyblcHU1fGLQD-og5f2U-cBwYduBG55TgIY/edit) - Exemplar de Guia de Projeto([PDF](https://docs.google.com/document/d/1mPwjeBMewyblcHU1fGLQD-og5f2U-cBwYduBG55TgIY/export?format=pdf) | [DOCX](https://docs.google.com/document/d/1mPwjeBMewyblcHU1fGLQD-og5f2U-cBwYduBG55TgIY/export?format=doc))
           * [Website Pessoal](https://docs.google.com/document/d/1OXAJvxuygTJyfvSUnrajhEbC34O_J26VQswwPsfnLZw/edit) - Exemplar de avaliações dos pares([PDF](https://docs.google.com/document/d/1OXAJvxuygTJyfvSUnrajhEbC34O_J26VQswwPsfnLZw/export?format=pdf) | [DOCX](https://docs.google.com/document/d/1OXAJvxuygTJyfvSUnrajhEbC34O_J26VQswwPsfnLZw/export?format=doc))
+      CSD U2 MC Q10_2023:
+        answers:
+        - text: Seu aniversário
+        - text: Seu endereço
+        - {}
+        - text: Seu nome
+        - correct: true
+        questions:
+        - {}
+      CSD U2 MC Q11_2023:
+        answers:
+        - {}
+        - {}
+        - {}
+        - correct: true
+        questions:
+        - {}
+      CSD U2 MC Q1_2023:
+        answers:
+        - {}
+        - correct: true
+        - {}
+        - {}
+        - {}
+        questions:
+        - {}
+      CSD U2 MC Q2_2023:
+        answers:
+        - correct: true
+        - {}
+        - {}
+        - correct: true
+        - {}
+        questions:
+        - {}
+      CSD U2 MC Q3_2023:
+        answers:
+        - correct: true
+        - {}
+        - correct: true
+        - {}
+        - {}
+        questions:
+        - {}
+      CSD U2 MC Q4_2023:
+        answers:
+        - {}
+        - correct: true
+        - {}
+        - {}
+        - {}
+        questions:
+        - {}
+      CSD U2 MC Q6_2023:
+        answers:
+        - correct: true
+        - {}
+        - {}
+        - {}
+        - {}
+        questions:
+        - {}
+      CSD U2 MC Q7_2023:
+        answers:
+        - {}
+        - {}
+        - correct: true
+        - {}
+        - {}
+        questions:
+        - {}
+      CSD U2 MC Q8_2023:
+        answers:
+        - {}
+        - {}
+        - correct: true
+        - {}
+        - {}
+        questions:
+        - {}
+      CSD U2 Match Q1_2023:
+        answers:
+        - {}
+        - {}
+        - {}
+        questions:
+        - text: cor
+        - {}
+        - {}
       CSD U2 PSP Programming:
         markdown: |+
           # O Processo de Solução de Problemas para Programação
@@ -1865,6 +2055,23 @@ pt-PT:
           do estudante sobre a sintaxe da tag `<img>`, seu principal objetivo é conscientizar
           os estudantes sobre os tipos mais comuns de erros que podem encontrar ao
           adicionar imagens a páginas da web.
+      CSD U2 image debug match_2023:
+        answers:
+        - {}
+        - {}
+        - {}
+        - {}
+        - {}
+        questions:
+        - text: O atributo 'src' está escrito incorretamente.
+        - text: O atributos 'src' e 'alt' estão trocados
+        - text: A extensão do arquivo (.jpg) está faltando no endereço da imagem
+        - {}
+        - text: Há um espaço no nome do arquivo
+        teacher_markdown: Embora este nível possa ser utilizado para avaliar a compreensão
+          do estudante sobre a sintaxe da tag `<img>`, seu principal objetivo é conscientizar
+          os estudantes sobre os tipos mais comuns de erros que podem encontrar ao
+          adicionar imagens a páginas da web.
       CSD U2 image debug match_pilot_2021:
         answers:
         - {}
@@ -2058,6 +2265,14 @@ pt-PT:
           # Ponto de controle de planejamento
 
           Verifique os planos dos estudantes antes de permitir que eles continuem nos demais níveis.
+      CSD U2 project guide_2018_2019_pilot_2023:
+        content1: descrição aqui
+        teacher_markdown: |-
+          # Ponto de controle de planejamento
+
+          Verifique os planos dos estudantes antes de permitir que eles continuem nos demais níveis.
+      CSD U2L2 - Chal_2023:
+        display_name: Níveis de Desafio
       CSD U3 - conditionals - Matching:
         answers:
         - text: cachorro.rotacao &lt; gato.rotacao
@@ -2119,6 +2334,21 @@ pt-PT:
         - text: A sprite x do cachorro é igual ao x da sprite do gato?
         title: 'Combinando: operadores de comparação'
       CSD U3 - conditionals - Matching_2018_2019_pilot_2022:
+        answers:
+        - text: cachorro.rotacao &lt; gato.rotacao
+        - text: cachorro.x &lt; gato.x
+        - text: cachorro.escala &gt; gato.escala
+        - text: cachorro.x &gt; gato.x
+        - text: cachorro.x == gato.x
+        content1: Combine a expressão booleana com a descrição em inglês.
+        questions:
+        - text: A rotação da sprite do cachorro é menor que a do gato?
+        - text: A sprite x do cachorro é menor que a x da sprite do gato?
+        - text: A escala do sprite do cachorro é maior que a do gato?
+        - text: O x da escala do cachorro é maior que o x do gato?
+        - text: A sprite x do cachorro é igual ao x da sprite do gato?
+        title: 'Combinando: operadores de comparação'
+      CSD U3 - conditionals - Matching_2018_2019_pilot_2023:
         answers:
         - text: cachorro.rotacao &lt; gato.rotacao
         - text: cachorro.x &lt; gato.x
@@ -2225,6 +2455,19 @@ pt-PT:
         - text: Qual resultado será mostrado no console por este programa?
         title: título
       CSD U3 Boolean MC_2018_2019_pilot_2022:
+        answers:
+        - correct: true
+          text: |-
+            verdadeiro
+            falso
+            verdadeiro
+        - text: "  0<br>200<br>100"
+        - text: "  verdadeiro<br>erro<br>verdadeiro"
+        - text: "  falso<br>verdadeiro<br>falso"
+        questions:
+        - text: Qual resultado será mostrado no console por este programa?
+        title: título
+      CSD U3 Boolean MC_2018_2019_pilot_2023:
         answers:
         - correct: true
           text: |-
@@ -2489,6 +2732,34 @@ pt-PT:
 
           Observe que o quadrado vermelho é desenhado ** antes de ** sua função ser criada, enquanto o quadrado verde é desenhado ** após ** sua função ser criada. Qual destes você acha que será desenhado?
       CSD U3 Functions Prediction define first_2018_2019_pilot_2022:
+        answers:
+        - feedback: Funções poderão ser criadas em qualquer lugar no seu código. Ainda
+            é uma boa ideia mantê-las agrupadas na parte inferior para que fiquem
+            organizadas!
+          text: O quadrado vermelho será desenhado, mas o verde não. Você não pode
+            chamar funções depois que elas são criadas.
+        - feedback: Funções poderão ser criadas em qualquer lugar no seu código. Ainda
+            é uma boa ideia mantê-las agrupadas na parte inferior para que fiquem
+            organizadas!
+          text: O quadrado verde será desenhado, mas o vermelho não. Você não pode
+            chamar funções depois que elas são criadas.
+        - correct: true
+          feedback: Funções poderão ser criadas em qualquer lugar no seu código. Ainda
+            é uma boa ideia mantê-las agrupadas na parte inferior para que fiquem
+            organizadas!
+          text: Ambos os quadrados serão desenhados. Você pode criar funções em qualquer
+            lugar que você preferir no seu código.
+        - feedback: Funções poderão ser criadas em qualquer lugar no seu código. Ainda
+            é uma boa ideia mantê-las agrupadas na parte inferior para que fiquem
+            organizadas!
+          text: Nenhum quadrado será desenhado. Há um erro no código.
+        markdown: |
+          # Importa onde você cria funções?
+
+          Até agora, todas as suas funções foram criadas na parte inferior do seu código. O que você acha que acontecerá se você chamar uma função antes que ela seja definida?
+
+          Observe que o quadrado vermelho é desenhado ** antes de ** sua função ser criada, enquanto o quadrado verde é desenhado ** após ** sua função ser criada. Qual destes você acha que será desenhado?
+      CSD U3 Functions Prediction define first_2018_2019_pilot_2023:
         answers:
         - feedback: Funções poderão ser criadas em qualquer lugar no seu código. Ainda
             é uma boa ideia mantê-las agrupadas na parte inferior para que fiquem
@@ -2799,6 +3070,138 @@ pt-PT:
           Combinando o desenho do laço e o padrão do contador, a classe escreve programas que movem sprites pela tela, além de animar outras propriedades de sprite.
 
 
+      CSD U3 MC Q10_2023:
+        answers:
+        - correct: true
+        - correct: true
+        - {}
+        - {}
+        questions:
+        - {}
+      CSD U3 MC Q11_2023:
+        answers:
+        - {}
+        - correct: true
+        - {}
+        - {}
+        questions:
+        - {}
+      CSD U3 MC Q12_2023:
+        answers:
+        - {}
+        - {}
+        - correct: true
+        - {}
+        - {}
+        questions:
+        - {}
+      CSD U3 MC Q13_2023:
+        answers:
+        - {}
+        - {}
+        - {}
+        - correct: true
+        - {}
+        questions:
+        - {}
+      CSD U3 MC Q14_2023:
+        answers:
+        - text: '0'
+        - text: '1'
+        - text: '5'
+        - correct: true
+          text: '6'
+        - {}
+        questions:
+        - {}
+      CSD U3 MC Q1_2023:
+        answers:
+        - {}
+        - correct: true
+        - {}
+        - {}
+        - {}
+        questions:
+        - {}
+      CSD U3 MC Q2_2023:
+        answers:
+        - {}
+        - correct: true
+        - {}
+        - {}
+        - {}
+        questions:
+        - {}
+      CSD U3 MC Q4_2023:
+        answers:
+        - {}
+        - {}
+        - {}
+        - correct: true
+        - {}
+        questions:
+        - {}
+      CSD U3 MC Q5_2023:
+        answers:
+        - {}
+        - {}
+        - correct: true
+        - {}
+        - {}
+        questions:
+        - {}
+      CSD U3 MC Q6_2023:
+        answers:
+        - {}
+        - {}
+        - correct: true
+        - {}
+        questions:
+        - {}
+      CSD U3 MC Q8_2023:
+        answers:
+        - {}
+        - correct: true
+        - {}
+        - {}
+        - {}
+        questions:
+        - {}
+      CSD U3 Match Q1_2023:
+        answers:
+        - {}
+        - {}
+        - {}
+        - {}
+        questions:
+        - {}
+        - {}
+        - {}
+        - {}
+      CSD U3 Match Q2_2023:
+        answers:
+        - text: x
+        - text: y
+        - text: largura
+        - text: altura
+        questions:
+        - {}
+        - {}
+        - {}
+        - {}
+      CSD U3 Match Q3_2023:
+        answers:
+        - {}
+        - {}
+        - {}
+        - {}
+        - {}
+        questions:
+        - {}
+        - {}
+        - {}
+        - {}
+        - {}
       CSD U3 Movement Challenges:
         markdown: |
           # Desafios
@@ -2892,6 +3295,20 @@ pt-PT:
         - text: Leia este programa e especifique quais das seguintes animações serão
             produzidas.
       CSD U3 Sprite Movement Predict Multi_2018_2019_pilot_2022:
+        answers:
+        - text: "<img src='https://images.code.org/649915789345f5958475cd2b91e0630c-image-1491939133180.gif'
+            style='border: 1px solid #ccc'>"
+        - text: "<img src='https://images.code.org/2f5e7773ae2f99d6217929bd58490393-image-1491939162998.gif'
+            style='border: 1px solid #ccc'>"
+        - correct: true
+          text: "<img src='https://images.code.org/7c43fbce8cbbe7c15614203290f806e7-image-1491939169414.gif'
+            style='border: 1px solid #ccc'>"
+        - text: "<img src='https://images.code.org/c62dbed9a37b03958cb056bf493bd59c-image-1491939175575.gif'
+            style='border: 1px solid #ccc'>"
+        questions:
+        - text: Leia este programa e especifique quais das seguintes animações serão
+            produzidas.
+      CSD U3 Sprite Movement Predict Multi_2018_2019_pilot_2023:
         answers:
         - text: "<img src='https://images.code.org/649915789345f5958475cd2b91e0630c-image-1491939133180.gif'
             style='border: 1px solid #ccc'>"
@@ -3243,9 +3660,31 @@ pt-PT:
         - text: <img src="https://images.code.org/7465035fc6701dcb91731fe9d160b638-image-1523902103481.58.28
             AM.png">
         title: drawSprites
+      CSD U3 drawSprites placement match_2023:
+        answers:
+        - text: <img src="https://images.code.org/cd11d762b2cb3e36c3d45157b965c968-image-1523901253224.59.08
+            AM.png">
+        - text: <img src="https://images.code.org/653dff2d49f07341b2f2552747212b34-image-1523901253222.59.21
+            AM.png">
+        - text: <img src="https://images.code.org/db71e0cde6861faabc0b5a55d67c739e-image-1523901253227.58.12
+            AM.png">
+        - text: <img src="https://images.code.org/15d6014329fa3da9b73016af9f1d0d74-image-1523901253226.58.34
+            AM.png">
+        questions:
+        - text: <img width="300px" src="https://images.code.org/131282b44fe34cd619a9a21bc68888da-image-1523902103487.58.48
+            AM.png">
+        - text: <img src="https://images.code.org/2fbe4029dc47f6f048e7c9f90ac99cac-image-1523902103485.25.09
+            AM.png">
+        - text: <img src="https://images.code.org/c4cb49e00f7087765865da87cff37549-image-1523902103477.58.00
+            AM.png">
+        - text: <img src="https://images.code.org/7465035fc6701dcb91731fe9d160b638-image-1523902103481.58.28
+            AM.png">
+        title: drawSprites
       CSD U3 drawing practice choice_2021:
         display_name: Praticar
       CSD U3 drawing practice choice_2022:
+        display_name: Praticar
+      CSD U3 drawing practice choice_2023:
         display_name: Praticar
       CSD U3 game intro:
         content1: descrição aqui
@@ -3341,6 +3780,67 @@ pt-PT:
         content1: descrição aqui
       CSD U3 platform intro_2018_2019_pilot_2022:
         content1: descrição aqui
+      CSD U3 platform intro_2018_2019_pilot_2023:
+        content1: descrição aqui
+      CSD U4 MC Q1_2023:
+        answers:
+        - {}
+        - correct: true
+        - {}
+        - correct: true
+        questions:
+        - {}
+      CSD U4 MC Q2_2023:
+        answers:
+        - {}
+        - correct: true
+        - {}
+        - correct: true
+        questions:
+        - {}
+      CSD U4 MC Q3_2023:
+        answers:
+        - {}
+        - {}
+        - {}
+        - correct: true
+        questions:
+        - {}
+      CSD U4 MC Q4_2023:
+        answers:
+        - {}
+        - correct: true
+        - {}
+        - {}
+        - {}
+        questions:
+        - {}
+      CSD U4 MC Q5_2023:
+        answers:
+        - {}
+        - correct: true
+        - {}
+        - correct: true
+        - {}
+        questions:
+        - {}
+      CSD U4 MC Q8_2023:
+        answers:
+        - {}
+        - correct: true
+        - {}
+        - correct: true
+        questions:
+        - {}
+      CSD U4 MC Q9_2023:
+        answers:
+        - correct: true
+        - {}
+        - {}
+        - correct: true
+        - text: Fornecer feedback
+        questions:
+        - {}
       CSD U4 test feature match:
         answers:
         - {}
@@ -3778,6 +4278,84 @@ pt-PT:
           * [Interpretando dados] (https://docs.google.com/document/d/1JZJ5-kZoHb6xI7B4Ua5EHwaS1UiLoeM8i6YUNAAbaEM/export?format=pdf) - Guia de atividades
           * [Interpretando dados] (https://docs.google.com/document/d/1YCqOxw4u8m142zaIVdUk4eBn8VnJBpkMzr4uEaDq2pM/export?format=pdf) - Recurso
         teacher_markdown: "* Interpretando Dados - Exemplar ([PDF](https://docs.google.com/document/d/1WFjiEP9-V2v9IIjsqn0MI-o-Xyn19pg_6apNL-a1gGw/export?format=pdf))"
+      CSD U5 MC Q1_2023:
+        answers:
+        - {}
+        - {}
+        - {}
+        - correct: true
+        - {}
+        questions:
+        - {}
+      CSD U5 MC Q2_2023:
+        answers:
+        - {}
+        - correct: true
+        - correct: true
+        - {}
+        - {}
+        questions:
+        - {}
+      CSD U5 MC Q3_2023:
+        answers:
+        - {}
+        - correct: true
+        questions:
+        - {}
+      CSD U5 MC Q4_2023:
+        answers:
+        - {}
+        - {}
+        - correct: true
+        - {}
+        - {}
+        questions:
+        - {}
+      CSD U5 MC Q5_2023:
+        answers:
+        - {}
+        - {}
+        - {}
+        - correct: true
+        - {}
+        questions:
+        - {}
+      CSD U5 MC Q6_2023:
+        answers:
+        - {}
+        - correct: true
+        - {}
+        - {}
+        - {}
+        questions:
+        - {}
+      CSD U5 MC Q7_2023:
+        answers:
+        - {}
+        - correct: true
+        - {}
+        - {}
+        - {}
+        questions:
+        - {}
+      CSD U5 MC Q8_2023:
+        answers:
+        - {}
+        - correct: true
+        - {}
+        - {}
+        - {}
+        questions:
+        - {}
+      CSD U5 MC Q9_2023:
+        answers:
+        - {}
+        - {}
+        - {}
+        - {}
+        - correct: true
+        questions:
+        - {}
       CSD U5 crosstab warmup:
         content1: descrição aqui
         markdown: |-
@@ -4267,29 +4845,75 @@ pt-PT:
         title: Teste pós-projeto de dados e sociedade
       CSD U5 test_2022:
         title: Teste pós-projeto de dados e sociedade
+      CSD U5 test_2023:
+        title: Teste pós-projeto de dados e sociedade
+      CSD U6 - Accelerometer - Chal_2023a_2023:
+        display_name: Níveis de Desafio
       CSD U6 - Accelerometer - Chal_2222:
+        display_name: Níveis de Desafio
+      CSD U6 - Accelerometer - Chal_mb2022:
+        display_name: Níveis de Desafio
+      CSD U6 - Board Inputs - Chal_2023:
         display_name: Níveis de Desafio
       CSD U6 - Board Inputs - Chal_2222:
         display_name: Níveis de Desafio
+      CSD U6 - Board Inputs - Chal_mb2022:
+        display_name: Níveis de Desafio
+      CSD U6 - Board Outputs - Chal_2023:
+        display_name: Níveis de Desafio
       CSD U6 - Board Outputs - Chal_2222:
+        display_name: Níveis de Desafio
+      CSD U6 - Board Outputs - Chal_mb2022:
+        display_name: Níveis de Desafio
+      CSD U6 - Color LEDs - Chal_2023a_2023:
         display_name: Níveis de Desafio
       CSD U6 - Color LEDs - Chal_2222:
         display_name: Níveis de Desafio
+      CSD U6 - Combine Inputs - Chal_2023a_2023:
+        display_name: Níveis de Desafio
       CSD U6 - Combine Inputs - Chal_2222:
+        display_name: Níveis de Desafio
+      CSD U6 - Combine Inputs - Chal_mb2022:
+        display_name: Níveis de Desafio
+      CSD U6 - If Variables - Chal_2023:
         display_name: Níveis de Desafio
       CSD U6 - If Variables - Chal_2222:
         display_name: Níveis de Desafio
+      CSD U6 - If Variables - Chal_mb2022:
+        display_name: Níveis de Desafio
+      CSD U6 - Music - Chal_2023:
+        display_name: Níveis de Desafio
       CSD U6 - Music - Chal_2222:
+        display_name: Níveis de Desafio
+      CSD U6 - Physical Input - Chal_2023:
         display_name: Níveis de Desafio
       CSD U6 - Physical Input - Chal_2222:
         display_name: Níveis de Desafio
+      CSD U6 - Physical Input - Chal_mb2022:
+        display_name: Níveis de Desafio
+      CSD U6 - Physical Output - Chal_2023:
+        display_name: Níveis de Desafio
       CSD U6 - Physical Output - Chal_2222:
+        display_name: Níveis de Desafio
+      CSD U6 - Physical Output - Chal_mb2022:
+        display_name: Níveis de Desafio
+      CSD U6 - Screen Inputs - Chal_2023:
         display_name: Níveis de Desafio
       CSD U6 - Screen Inputs - Chal_2222:
         display_name: Níveis de Desafio
+      CSD U6 - Screen Inputs - Chal_mb2022:
+        display_name: Níveis de Desafio
+      CSD U6 - Screen Outputs - Chal_2023:
+        display_name: Níveis de Desafio
       CSD U6 - Screen Outputs - Chal_2222:
         display_name: Níveis de Desafio
+      CSD U6 - Screen Outputs - Chal_mb2022:
+        display_name: Níveis de Desafio
+      CSD U6 - Sensors - Chal_2023a_2023:
+        display_name: Níveis de Desafio
       CSD U6 - Sensors - Chal_2222:
+        display_name: Níveis de Desafio
+      CSD U6 - Sensors - Chal_mb2022:
         display_name: Níveis de Desafio
       CSD U6 LED create intro:
         content1: descrição aqui
@@ -4323,6 +4947,132 @@ pt-PT:
           No último nível, você criou um aplicativo para controlar o LED com diferentes botões na tela. Nos próximos dois níveis, você verá outros exemplos de aplicativos e poderá criar um de seus próprios.
 
           Ao examinar os exemplos, pense em qual código pode ser útil para o aplicativo que você e seu parceiro desejam criar.
+      CSD U6 MC Q1_2023:
+        answers:
+        - {}
+        - correct: true
+        - {}
+        - correct: true
+        - {}
+        questions:
+        - {}
+      CSD U6 MC Q1_6b2023:
+        answers:
+        - correct: true
+        - {}
+        - correct: true
+        - {}
+        - {}
+        questions:
+        - {}
+      CSD U6 MC Q2_2023:
+        answers:
+        - {}
+        - {}
+        - {}
+        - correct: true
+          text: Acelerômetro
+        - {}
+        questions:
+        - {}
+      CSD U6 MC Q2_6b2023:
+        answers:
+        - {}
+        - {}
+        - {}
+        - correct: true
+          text: Acelerômetro
+        - text: Claro
+        questions:
+        - {}
+      CSD U6 MC Q3_2023:
+        answers:
+        - {}
+        - {}
+        - {}
+        - correct: true
+        questions:
+        - {}
+      CSD U6 MC Q3_6b2023:
+        answers:
+        - {}
+        - {}
+        - {}
+        - correct: true
+        questions:
+        - {}
+      CSD U6 MC Q4_2023:
+        answers:
+        - {}
+        - {}
+        - correct: true
+        - {}
+        - {}
+        questions:
+        - {}
+      CSD U6 MC Q4_6b2023:
+        answers:
+        - {}
+        - {}
+        - correct: true
+        - {}
+        - {}
+        questions:
+        - {}
+      CSD U6 MC Q5_2023:
+        answers:
+        - {}
+        - {}
+        - correct: true
+        - {}
+        - {}
+        questions:
+        - {}
+      CSD U6 MC Q5_6b2023:
+        answers:
+        - {}
+        - {}
+        - correct: true
+        - {}
+        - {}
+        questions:
+        - {}
+      CSD U6 MC Q6_2023:
+        answers:
+        - {}
+        - correct: true
+        - {}
+        - correct: true
+        - {}
+        questions:
+        - {}
+      CSD U6 MC Q6_6b2023:
+        answers:
+        - {}
+        - correct: true
+        - {}
+        - correct: true
+        - {}
+        questions:
+        - {}
+      CSD U6 MC Q7_2023:
+        answers:
+        - {}
+        - {}
+        - {}
+        - correct: true
+        - {}
+        questions:
+        - {}
+      CSD U6 MC Q7_6b2023:
+        answers:
+        - {}
+        - {}
+        - {}
+        - correct: true
+        - {}
+        questions:
+        - {}
       CSD U6 array multi:
         answers:
         - text: <img src="https://images.code.org/fc497646edb1fc92a4dfdca09030f294-image-1512686800362.42.54
@@ -4627,7 +5377,35 @@ pt-PT:
         questions:
         - text: Leia o código e preveja como esse aplicativo será quando executar.
         title: Faça uma Predição
+      CSD U6 setProperty predict multi_2023:
+        answers:
+        - text: '<img src="https://images.code.org/f1bc9eacc1144bee60b1f04373e583e3-image-1507311692368.png"
+            style="max-width: 100px;">'
+        - text: '<img src="https://images.code.org/f30263a5f6e47e6548706288e67b220d-image-1507311692372.png"
+            style="max-width: 100px;">'
+        - text: '<img src="https://images.code.org/772be0de5cfed112f9066c05d2ea6bb7-image-1507311692376.png"
+            style="max-width: 100px;">'
+        - correct: true
+          text: '<img src="https://images.code.org/cea9a118066ffc296f1023f395e61058-image-1507311692360.png"
+            style="max-width: 100px;">'
+        questions:
+        - text: Leia o código e preveja como esse aplicativo será quando executar.
+        title: Faça uma Predição
       CSD U6 setProperty predict multi_2222:
+        answers:
+        - text: '<img src="https://images.code.org/f1bc9eacc1144bee60b1f04373e583e3-image-1507311692368.png"
+            style="max-width: 100px;">'
+        - text: '<img src="https://images.code.org/f30263a5f6e47e6548706288e67b220d-image-1507311692372.png"
+            style="max-width: 100px;">'
+        - text: '<img src="https://images.code.org/772be0de5cfed112f9066c05d2ea6bb7-image-1507311692376.png"
+            style="max-width: 100px;">'
+        - correct: true
+          text: '<img src="https://images.code.org/cea9a118066ffc296f1023f395e61058-image-1507311692360.png"
+            style="max-width: 100px;">'
+        questions:
+        - text: Leia o código e preveja como esse aplicativo será quando executar.
+        title: Faça uma Predição
+      CSD U6 setProperty predict multi_mb2022:
         answers:
         - text: '<img src="https://images.code.org/f1bc9eacc1144bee60b1f04373e583e3-image-1507311692368.png"
             style="max-width: 100px;">'
@@ -4791,29 +5569,43 @@ pt-PT:
         display_name: Desafios
       CSD games cake challenge choice_2022:
         display_name: Desafios
+      CSD games cake challenge choice_2023:
+        display_name: Desafios
       CSD games functions practice choice_2021:
         display_name: Prática de Funções
       CSD games functions practice choice_2022:
+        display_name: Prática de Funções
+      CSD games functions practice choice_2023:
         display_name: Prática de Funções
       CSD games platform challenge choice_2021:
         display_name: Desafios
       CSD games platform challenge choice_2022:
         display_name: Desafios
+      CSD games platform challenge choice_2023:
+        display_name: Desafios
       CSD web conditionals practice choice_2021:
         display_name: Prática de Condicionais
       CSD web conditionals practice choice_2022:
+        display_name: Prática de Condicionais
+      CSD web conditionals practice choice_2023:
         display_name: Prática de Condicionais
       CSD web draw loop practice choice_2021:
         display_name: Praticar
       CSD web draw loop practice choice_2022:
         display_name: Praticar
+      CSD web draw loop practice choice_2023:
+        display_name: Praticar
       CSD web movement practice choice_2021:
         display_name: Praticar
       CSD web movement practice choice_2022:
         display_name: Praticar
+      CSD web movement practice choice_2023:
+        display_name: Praticar
       CSD web text practice choice_2021:
         display_name: Praticar
       CSD web text practice choice_2022:
+        display_name: Praticar
+      CSD web text practice choice_2023:
         display_name: Praticar
       CSD-U5-SFLP ASCII and Binary Representation:
         markdown: |
@@ -5885,6 +6677,33 @@ pt-PT:
 
           Ainda mais que a atividade de protótipo de papel, é fácil para os alunos nesta lição esquecer que eles precisam considerar como suas escolhas afetam sua equipe. Incentivar a discussão ativa entre as equipes enquanto projetam telas para garantir que todos eles estejam trabalhando para um objetivo comum.
       Design a Screen for your App_2022:
+        markdown: |
+          # Simulando seu App
+
+          Agora que você tem um pouco de experiência movendo elementos no App Lab, você pode começar a trabalhar com a simulação do seu próprio app. Com o seu grupo, divida as telas para que todos estejam trabalhando em telas diferentes.
+
+          Já que você estará dividindo o trabalho, você vai querer realizar um planejamento a frente para decidir em um visual e funcionamento comum a todas suas páginas. Por exemplo, você irá querer acordar em coisas como:
+
+          * Onde os botões de navegação serão colocados?
+          * Quais cores irão ser utilizadas para fundos de tela, textos e botões
+          * Qual o estilo e layout padrão?
+
+          # Espaçamento
+
+          Na próxima aula você irá irá combinar todas as telas dos membros do seu time em apenas um app. Para ter certeza de que os IDs de uma página não entrem em conflito com o de outra, você precisará incluir um único _espaçamento_ para sua página. Isso será algo que você irá adicionar no início de cada id para que seu elemento não entre em conflito com outros quando você juntar todas as telas. Seu espaçamento deve ser o ID da sua tela com um sublinhado no final. Por exemplo, se você estiver fazendo a página inicial, você pode utilizar "home_" como seu espaçamento - o que gerará IDs como:
+
+          * "home_title"
+          * "home_loginButton"
+          * "home_logo"
+        teacher_markdown: |-
+          #### Namespacing
+
+          Garantir que todos os alunos estejam criando identificações únicas para todos os elementos e que os nomes que os coloquem adequadamente irão contribuir muito para evitar problemas na próxima aula, por isso, vale a pena ser rígido aqui. Você pode fornecer aos alunos o Guia de Atividades de Design de Tela opcional para manter o controle de suas identificações de elementos.
+
+          #### Trabalhando juntos, separados
+
+          Ainda mais que a atividade de protótipo de papel, é fácil para os alunos nesta lição esquecer que eles precisam considerar como suas escolhas afetam sua equipe. Incentivar a discussão ativa entre as equipes enquanto projetam telas para garantir que todos eles estejam trabalhando para um objetivo comum.
+      Design a Screen for your App_2023:
         markdown: |
           # Simulando seu App
 
@@ -9311,7 +10130,147 @@ pt-PT:
         - correct: true
         questions:
         - {}
+      Student End of Unit Survey - Q1_2023:
+        answers:
+        - correct: true
+        - correct: true
+        - correct: true
+        - correct: true
+        - correct: true
+        questions:
+        - {}
+      Student End of Unit Survey - Q1_copy1_2023:
+        answers:
+        - correct: true
+        - correct: true
+        - correct: true
+        - correct: true
+        - correct: true
+        questions:
+        - {}
+      Student End of Unit Survey - Q1_copy2_2023:
+        answers:
+        - correct: true
+        - correct: true
+        - correct: true
+        - correct: true
+        - correct: true
+        questions:
+        - {}
+      Student End of Unit Survey - Q1_copy3_2023:
+        answers:
+        - correct: true
+        - correct: true
+        - correct: true
+        - correct: true
+        - correct: true
+        questions:
+        - {}
+      Student End of Unit Survey - Q1_copy4_2023:
+        answers:
+        - correct: true
+        - correct: true
+        - correct: true
+        - correct: true
+        - correct: true
+        questions:
+        - {}
+      Student End of Unit Survey - Q1_copy5_2023:
+        answers:
+        - correct: true
+        - correct: true
+        - correct: true
+        - correct: true
+        - correct: true
+        questions:
+        - {}
+      Student End of Unit Survey - Q1_copy6_2023:
+        answers:
+        - correct: true
+        - correct: true
+        - correct: true
+        - correct: true
+        - correct: true
+        questions:
+        - {}
       Student End of Unit Survey - Q2_2022:
+        answers:
+        - correct: true
+        - correct: true
+        - correct: true
+        - correct: true
+        - correct: true
+        - correct: true
+        - correct: true
+        questions:
+        - {}
+      Student End of Unit Survey - Q2_2023:
+        answers:
+        - correct: true
+        - correct: true
+        - correct: true
+        - correct: true
+        - correct: true
+        - correct: true
+        - correct: true
+        questions:
+        - {}
+      Student End of Unit Survey - Q2_copy1_2023:
+        answers:
+        - correct: true
+        - correct: true
+        - correct: true
+        - correct: true
+        - correct: true
+        - correct: true
+        - correct: true
+        questions:
+        - {}
+      Student End of Unit Survey - Q2_copy2_2023:
+        answers:
+        - correct: true
+        - correct: true
+        - correct: true
+        - correct: true
+        - correct: true
+        - correct: true
+        - correct: true
+        questions:
+        - {}
+      Student End of Unit Survey - Q2_copy3_2023:
+        answers:
+        - correct: true
+        - correct: true
+        - correct: true
+        - correct: true
+        - correct: true
+        - correct: true
+        - correct: true
+        questions:
+        - {}
+      Student End of Unit Survey - Q2_copy4_2023:
+        answers:
+        - correct: true
+        - correct: true
+        - correct: true
+        - correct: true
+        - correct: true
+        - correct: true
+        - correct: true
+        questions:
+        - {}
+      Student End of Unit Survey - Q2_copy5_2023:
+        answers:
+        - correct: true
+        - correct: true
+        - correct: true
+        - correct: true
+        - correct: true
+        - correct: true
+        - correct: true
+        questions:
+        - {}
+      Student End of Unit Survey - Q2_copy6_2023:
         answers:
         - correct: true
         - correct: true
@@ -9589,6 +10548,17 @@ pt-PT:
         - correct: true
         questions:
         - {}
+      aiml-ch1-pulse-survey-q1_2023:
+        answers:
+        - correct: true
+        - correct: true
+        - correct: true
+        - correct: true
+        - correct: true
+        - correct: true
+        - correct: true
+        questions:
+        - {}
       aiml-ch1-pulse-survey-q2_2021:
         answers:
         - correct: true
@@ -9601,6 +10571,17 @@ pt-PT:
         questions:
         - {}
       aiml-ch1-pulse-survey-q2_2022:
+        answers:
+        - correct: true
+        - correct: true
+        - correct: true
+        - correct: true
+        - correct: true
+        - correct: true
+        - correct: true
+        questions:
+        - {}
+      aiml-ch1-pulse-survey-q2_2023:
         answers:
         - correct: true
         - correct: true
@@ -9633,6 +10614,17 @@ pt-PT:
         - correct: true
         questions:
         - {}
+      aiml-ch1-pulse-survey-q3_2023:
+        answers:
+        - correct: true
+        - correct: true
+        - correct: true
+        - correct: true
+        - correct: true
+        - correct: true
+        - correct: true
+        questions:
+        - {}
       aiml-ch1-pulse-survey-q4_2021:
         answers:
         - correct: true
@@ -9645,6 +10637,17 @@ pt-PT:
         questions:
         - {}
       aiml-ch1-pulse-survey-q4_2022:
+        answers:
+        - correct: true
+        - correct: true
+        - correct: true
+        - correct: true
+        - correct: true
+        - correct: true
+        - correct: true
+        questions:
+        - {}
+      aiml-ch1-pulse-survey-q4_2023:
         answers:
         - correct: true
         - correct: true
@@ -9677,6 +10680,17 @@ pt-PT:
         - correct: true
         questions:
         - {}
+      aiml-ch1-pulse-survey-q5_2023:
+        answers:
+        - correct: true
+        - correct: true
+        - correct: true
+        - correct: true
+        - correct: true
+        - correct: true
+        - correct: true
+        questions:
+        - {}
       aiml-intro-pulse-survey-q1_2021:
         answers:
         - correct: true
@@ -9685,6 +10699,13 @@ pt-PT:
         questions:
         - {}
       aiml-intro-pulse-survey-q1_2022:
+        answers:
+        - correct: true
+        - correct: true
+        - correct: true
+        questions:
+        - {}
+      aiml-intro-pulse-survey-q1_2023:
         answers:
         - correct: true
         - correct: true
@@ -9705,6 +10726,13 @@ pt-PT:
         - correct: true
         questions:
         - {}
+      aiml-intro-pulse-survey-q2_2023:
+        answers:
+        - correct: true
+        - correct: true
+        - correct: true
+        questions:
+        - {}
       aiml-intro-pulse-survey-q3_2021:
         answers:
         - correct: true
@@ -9717,6 +10745,17 @@ pt-PT:
         questions:
         - {}
       aiml-intro-pulse-survey-q3_2022:
+        answers:
+        - correct: true
+        - correct: true
+        - correct: true
+        - correct: true
+        - correct: true
+        - correct: true
+        - correct: true
+        questions:
+        - {}
+      aiml-intro-pulse-survey-q3_2023:
         answers:
         - correct: true
         - correct: true
@@ -9749,6 +10788,17 @@ pt-PT:
         - correct: true
         questions:
         - {}
+      aiml-intro-pulse-survey-q4_2023:
+        answers:
+        - correct: true
+        - correct: true
+        - correct: true
+        - correct: true
+        - correct: true
+        - correct: true
+        - correct: true
+        questions:
+        - {}
       aiml-intro-pulse-survey-q5_2021:
         answers:
         - correct: true
@@ -9761,6 +10811,17 @@ pt-PT:
         questions:
         - {}
       aiml-intro-pulse-survey-q5_2022:
+        answers:
+        - correct: true
+        - correct: true
+        - correct: true
+        - correct: true
+        - correct: true
+        - correct: true
+        - correct: true
+        questions:
+        - {}
+      aiml-intro-pulse-survey-q5_2023:
         answers:
         - correct: true
         - correct: true
@@ -9850,6 +10911,17 @@ pt-PT:
         - correct: true
         questions:
         - {}
+      be-myself-in-cs_mb2022:
+        answers:
+        - correct: true
+        - correct: true
+        - correct: true
+        - correct: true
+        - correct: true
+        - correct: true
+        - correct: true
+        questions:
+        - {}
       behaviors 1 predict:
         answers:
         - feedback: Incorreto.
@@ -9917,6 +10989,17 @@ pt-PT:
         - correct: true
         questions:
         - {}
+      comfortable-in-cs-class_mb2022:
+        answers:
+        - correct: true
+        - correct: true
+        - correct: true
+        - correct: true
+        - correct: true
+        - correct: true
+        - correct: true
+        questions:
+        - {}
       confident-ability-to-learn:
         answers:
         - correct: true
@@ -9929,6 +11012,28 @@ pt-PT:
         questions:
         - {}
       confident-ability-to-learn_2022:
+        answers:
+        - correct: true
+        - correct: true
+        - correct: true
+        - correct: true
+        - correct: true
+        - correct: true
+        - correct: true
+        questions:
+        - {}
+      confident-ability-to-learn_2023:
+        answers:
+        - correct: true
+        - correct: true
+        - correct: true
+        - correct: true
+        - correct: true
+        - correct: true
+        - correct: true
+        questions:
+        - {}
+      confident-ability-to-learn_mb2022:
         answers:
         - correct: true
         - correct: true
@@ -9975,6 +11080,14 @@ pt-PT:
         questions:
         - {}
       counselor_encourage_2022:
+        answers:
+        - correct: true
+          text: sim
+        - correct: true
+          text: não
+        questions:
+        - {}
+      counselor_encourage_2023:
         answers:
         - correct: true
           text: sim
@@ -14942,6 +16055,28 @@ pt-PT:
         - correct: true
         questions:
         - {}
+      csd-post-survey-confidence-cs_mb2022:
+        answers:
+        - correct: true
+        - correct: true
+        - correct: true
+        - correct: true
+        - correct: true
+        - correct: true
+        - correct: true
+        questions:
+        - {}
+      csd-post-survey-interested-cs_mb2022:
+        answers:
+        - correct: true
+        - correct: true
+        - correct: true
+        - correct: true
+        - correct: true
+        - correct: true
+        - correct: true
+        questions:
+        - {}
       csd-post-survey-intro-2019:
         markdown: "# Esta pesquisa ainda está em desenvolvimento\n"
       csd-post-survey-levelgroup-2018:
@@ -15087,6 +16222,36 @@ pt-PT:
         - correct: true
         questions:
         - {}
+      csd-post-survey-show-friend_mb2022:
+        answers:
+        - correct: true
+          text: Sim
+        - correct: true
+          text: Não
+        questions:
+        - {}
+      csd-post-survey-solve-real-world_mb2022:
+        answers:
+        - correct: true
+        - correct: true
+        - correct: true
+        - correct: true
+        - correct: true
+        - correct: true
+        - correct: true
+        questions:
+        - {}
+      csd-post-survey-take-more-classes_mb2022:
+        answers:
+        - correct: true
+        - correct: true
+        - correct: true
+        - correct: true
+        - correct: true
+        - correct: true
+        - correct: true
+        questions:
+        - {}
       csd-post-survey-unit1-preamble:
         content1: descrição aqui
       csd-post-survey-unit2-preamble:
@@ -15135,6 +16300,8 @@ pt-PT:
         title: Pesquisa rápida do CS Discoveries!
       csd-pulse-check-survey-1-levelgroup U2Ch1_2018_2019_pilot_2022:
         title: Pesquisa rápida do CS Discoveries!
+      csd-pulse-check-survey-1-levelgroup U2Ch1_2018_2019_pilot_2023:
+        title: Pesquisa rápida do CS Discoveries!
       csd-pulse-check-survey-1-levelgroup U2Ch2:
         title: Pesquisa rápida do CS Discoveries!
       csd-pulse-check-survey-1-levelgroup U2Ch2_2018:
@@ -15152,6 +16319,8 @@ pt-PT:
       csd-pulse-check-survey-1-levelgroup U3Ch1_2018_2019_pilot_2021:
         title: Pesquisa rápida do CS Discoveries!
       csd-pulse-check-survey-1-levelgroup U3Ch1_2018_2019_pilot_2022:
+        title: Pesquisa rápida do CS Discoveries!
+      csd-pulse-check-survey-1-levelgroup U3Ch1_2018_2019_pilot_2023:
         title: Pesquisa rápida do CS Discoveries!
       csd-pulse-check-survey-1-levelgroup U3Ch2:
         title: Pesquisa rápida do CS Discoveries!
@@ -15171,6 +16340,8 @@ pt-PT:
         title: Pesquisa rápida do CS Discoveries!
       csd-pulse-check-survey-1-levelgroup U4Ch1_2022:
         title: Pesquisa rápida do CS Discoveries!
+      csd-pulse-check-survey-1-levelgroup U4Ch1_2023:
+        title: Pesquisa rápida do CS Discoveries!
       csd-pulse-check-survey-1-levelgroup U4Ch2:
         title: Pesquisa rápida do CS Discoveries!
       csd-pulse-check-survey-1-levelgroup U4Ch2_2018:
@@ -15189,6 +16360,8 @@ pt-PT:
         title: Pesquisa rápida do CS Discoveries!
       csd-pulse-check-survey-1-levelgroup U5Ch1_2022:
         title: Pesquisa rápida do CS Discoveries!
+      csd-pulse-check-survey-1-levelgroup U5Ch1_2023:
+        title: Pesquisa rápida do CS Discoveries!
       csd-pulse-check-survey-1-levelgroup U5Ch2:
         title: Pesquisa rápida do CS Discoveries!
       csd-pulse-check-survey-1-levelgroup U5Ch2_2018:
@@ -15205,7 +16378,11 @@ pt-PT:
         title: Pesquisa rápida do CS Discoveries!
       csd-pulse-check-survey-1-levelgroup U6Ch1_2021:
         title: Pesquisa rápida do CS Discoveries!
+      csd-pulse-check-survey-1-levelgroup U6Ch1_pilot_2023a_2023:
+        title: Pesquisa rápida do CS Discoveries!
       csd-pulse-check-survey-1-levelgroup U6Ch1_pilot_2222:
+        title: Pesquisa rápida do CS Discoveries!
+      csd-pulse-check-survey-1-levelgroup U6Ch1_pilot_mb2022:
         title: Pesquisa rápida do CS Discoveries!
       csd-pulse-check-survey-1-levelgroup U6Ch2:
         title: Pesquisa rápida do CS Discoveries!
@@ -15303,6 +16480,17 @@ pt-PT:
         - correct: true
         questions:
         - {}
+      csd-pulse-check-survey-1-q1 U2Ch1_2019_pilot_2023:
+        answers:
+        - correct: true
+        - correct: true
+        - correct: true
+        - correct: true
+        - correct: true
+        - correct: true
+        - correct: true
+        questions:
+        - {}
       csd-pulse-check-survey-1-q1 U2Ch2:
         answers:
         - correct: true
@@ -15370,6 +16558,17 @@ pt-PT:
         questions:
         - {}
       csd-pulse-check-survey-1-q1 U3Ch1_2019_pilot_2022:
+        answers:
+        - correct: true
+        - correct: true
+        - correct: true
+        - correct: true
+        - correct: true
+        - correct: true
+        - correct: true
+        questions:
+        - {}
+      csd-pulse-check-survey-1-q1 U3Ch1_2019_pilot_2023:
         answers:
         - correct: true
         - correct: true
@@ -15458,6 +16657,17 @@ pt-PT:
         questions:
         - {}
       csd-pulse-check-survey-1-q1 U4Ch1_2022:
+        answers:
+        - correct: true
+        - correct: true
+        - correct: true
+        - correct: true
+        - correct: true
+        - correct: true
+        - correct: true
+        questions:
+        - {}
+      csd-pulse-check-survey-1-q1 U4Ch1_2023:
         answers:
         - correct: true
         - correct: true
@@ -15567,6 +16777,17 @@ pt-PT:
         - correct: true
         questions:
         - {}
+      csd-pulse-check-survey-1-q1 U5Ch1_2023:
+        answers:
+        - correct: true
+        - correct: true
+        - correct: true
+        - correct: true
+        - correct: true
+        - correct: true
+        - correct: true
+        questions:
+        - {}
       csd-pulse-check-survey-1-q1 U5Ch2:
         answers:
         - correct: true
@@ -15655,7 +16876,29 @@ pt-PT:
         - correct: true
         questions:
         - {}
+      csd-pulse-check-survey-1-q1 U6Ch1_2023a_2023:
+        answers:
+        - correct: true
+        - correct: true
+        - correct: true
+        - correct: true
+        - correct: true
+        - correct: true
+        - correct: true
+        questions:
+        - {}
       csd-pulse-check-survey-1-q1 U6Ch1_2222:
+        answers:
+        - correct: true
+        - correct: true
+        - correct: true
+        - correct: true
+        - correct: true
+        - correct: true
+        - correct: true
+        questions:
+        - {}
+      csd-pulse-check-survey-1-q1 U6Ch1_mb2022:
         answers:
         - correct: true
         - correct: true
@@ -15798,6 +17041,17 @@ pt-PT:
         - correct: true
         questions:
         - {}
+      csd-pulse-check-survey-1-q2 U2Ch1_2019_pilot_2023:
+        answers:
+        - correct: true
+        - correct: true
+        - correct: true
+        - correct: true
+        - correct: true
+        - correct: true
+        - correct: true
+        questions:
+        - {}
       csd-pulse-check-survey-1-q2 U2Ch2:
         answers:
         - correct: true
@@ -15865,6 +17119,17 @@ pt-PT:
         questions:
         - {}
       csd-pulse-check-survey-1-q2 U3Ch1_2019_pilot_2022:
+        answers:
+        - correct: true
+        - correct: true
+        - correct: true
+        - correct: true
+        - correct: true
+        - correct: true
+        - correct: true
+        questions:
+        - {}
+      csd-pulse-check-survey-1-q2 U3Ch1_2019_pilot_2023:
         answers:
         - correct: true
         - correct: true
@@ -15953,6 +17218,17 @@ pt-PT:
         questions:
         - {}
       csd-pulse-check-survey-1-q2 U4Ch1_2022:
+        answers:
+        - correct: true
+        - correct: true
+        - correct: true
+        - correct: true
+        - correct: true
+        - correct: true
+        - correct: true
+        questions:
+        - {}
+      csd-pulse-check-survey-1-q2 U4Ch1_2023:
         answers:
         - correct: true
         - correct: true
@@ -16062,6 +17338,17 @@ pt-PT:
         - correct: true
         questions:
         - {}
+      csd-pulse-check-survey-1-q2 U5Ch1_2023:
+        answers:
+        - correct: true
+        - correct: true
+        - correct: true
+        - correct: true
+        - correct: true
+        - correct: true
+        - correct: true
+        questions:
+        - {}
       csd-pulse-check-survey-1-q2 U5Ch2:
         answers:
         - correct: true
@@ -16150,7 +17437,29 @@ pt-PT:
         - correct: true
         questions:
         - {}
+      csd-pulse-check-survey-1-q2 U6Ch1_2023a_2023:
+        answers:
+        - correct: true
+        - correct: true
+        - correct: true
+        - correct: true
+        - correct: true
+        - correct: true
+        - correct: true
+        questions:
+        - {}
       csd-pulse-check-survey-1-q2 U6Ch1_2222:
+        answers:
+        - correct: true
+        - correct: true
+        - correct: true
+        - correct: true
+        - correct: true
+        - correct: true
+        - correct: true
+        questions:
+        - {}
+      csd-pulse-check-survey-1-q2 U6Ch1_mb2022:
         answers:
         - correct: true
         - correct: true
@@ -16293,6 +17602,17 @@ pt-PT:
         - correct: true
         questions:
         - {}
+      csd-pulse-check-survey-1-q3 U2Ch1_2019_pilot_2023:
+        answers:
+        - correct: true
+        - correct: true
+        - correct: true
+        - correct: true
+        - correct: true
+        - correct: true
+        - correct: true
+        questions:
+        - {}
       csd-pulse-check-survey-1-q3 U2Ch2:
         answers:
         - correct: true
@@ -16360,6 +17680,17 @@ pt-PT:
         questions:
         - {}
       csd-pulse-check-survey-1-q3 U3Ch1_2019_pilot_2022:
+        answers:
+        - correct: true
+        - correct: true
+        - correct: true
+        - correct: true
+        - correct: true
+        - correct: true
+        - correct: true
+        questions:
+        - {}
+      csd-pulse-check-survey-1-q3 U3Ch1_2019_pilot_2023:
         answers:
         - correct: true
         - correct: true
@@ -16448,6 +17779,17 @@ pt-PT:
         questions:
         - {}
       csd-pulse-check-survey-1-q3 U4Ch1_2022:
+        answers:
+        - correct: true
+        - correct: true
+        - correct: true
+        - correct: true
+        - correct: true
+        - correct: true
+        - correct: true
+        questions:
+        - {}
+      csd-pulse-check-survey-1-q3 U4Ch1_2023:
         answers:
         - correct: true
         - correct: true
@@ -16557,6 +17899,17 @@ pt-PT:
         - correct: true
         questions:
         - {}
+      csd-pulse-check-survey-1-q3 U5Ch1_2023:
+        answers:
+        - correct: true
+        - correct: true
+        - correct: true
+        - correct: true
+        - correct: true
+        - correct: true
+        - correct: true
+        questions:
+        - {}
       csd-pulse-check-survey-1-q3 U5Ch2:
         answers:
         - correct: true
@@ -16645,7 +17998,29 @@ pt-PT:
         - correct: true
         questions:
         - {}
+      csd-pulse-check-survey-1-q3 U6Ch1_2023a_2023:
+        answers:
+        - correct: true
+        - correct: true
+        - correct: true
+        - correct: true
+        - correct: true
+        - correct: true
+        - correct: true
+        questions:
+        - {}
       csd-pulse-check-survey-1-q3 U6Ch1_2222:
+        answers:
+        - correct: true
+        - correct: true
+        - correct: true
+        - correct: true
+        - correct: true
+        - correct: true
+        - correct: true
+        questions:
+        - {}
+      csd-pulse-check-survey-1-q3 U6Ch1_mb2022:
         answers:
         - correct: true
         - correct: true
@@ -16788,6 +18163,17 @@ pt-PT:
         - correct: true
         questions:
         - {}
+      csd-pulse-check-survey-1-q4 U2Ch1_2019_pilot_2023:
+        answers:
+        - correct: true
+        - correct: true
+        - correct: true
+        - correct: true
+        - correct: true
+        - correct: true
+        - correct: true
+        questions:
+        - {}
       csd-pulse-check-survey-1-q4 U2Ch2:
         answers:
         - correct: true
@@ -16855,6 +18241,17 @@ pt-PT:
         questions:
         - {}
       csd-pulse-check-survey-1-q4 U3Ch1_2019_pilot_2022:
+        answers:
+        - correct: true
+        - correct: true
+        - correct: true
+        - correct: true
+        - correct: true
+        - correct: true
+        - correct: true
+        questions:
+        - {}
+      csd-pulse-check-survey-1-q4 U3Ch1_2019_pilot_2023:
         answers:
         - correct: true
         - correct: true
@@ -16943,6 +18340,17 @@ pt-PT:
         questions:
         - {}
       csd-pulse-check-survey-1-q4 U4Ch1_2022:
+        answers:
+        - correct: true
+        - correct: true
+        - correct: true
+        - correct: true
+        - correct: true
+        - correct: true
+        - correct: true
+        questions:
+        - {}
+      csd-pulse-check-survey-1-q4 U4Ch1_2023:
         answers:
         - correct: true
         - correct: true
@@ -17052,6 +18460,17 @@ pt-PT:
         - correct: true
         questions:
         - {}
+      csd-pulse-check-survey-1-q4 U5Ch1_2023:
+        answers:
+        - correct: true
+        - correct: true
+        - correct: true
+        - correct: true
+        - correct: true
+        - correct: true
+        - correct: true
+        questions:
+        - {}
       csd-pulse-check-survey-1-q4 U5Ch2:
         answers:
         - correct: true
@@ -17140,7 +18559,29 @@ pt-PT:
         - correct: true
         questions:
         - {}
+      csd-pulse-check-survey-1-q4 U6Ch1_2023a_2023:
+        answers:
+        - correct: true
+        - correct: true
+        - correct: true
+        - correct: true
+        - correct: true
+        - correct: true
+        - correct: true
+        questions:
+        - {}
       csd-pulse-check-survey-1-q4 U6Ch1_2222:
+        answers:
+        - correct: true
+        - correct: true
+        - correct: true
+        - correct: true
+        - correct: true
+        - correct: true
+        - correct: true
+        questions:
+        - {}
+      csd-pulse-check-survey-1-q4 U6Ch1_mb2022:
         answers:
         - correct: true
         - correct: true
@@ -17283,6 +18724,17 @@ pt-PT:
         - correct: true
         questions:
         - {}
+      csd-pulse-check-survey-1-q5 U2Ch1_2019_pilot_2023:
+        answers:
+        - correct: true
+        - correct: true
+        - correct: true
+        - correct: true
+        - correct: true
+        - correct: true
+        - correct: true
+        questions:
+        - {}
       csd-pulse-check-survey-1-q5 U2Ch2:
         answers:
         - correct: true
@@ -17350,6 +18802,17 @@ pt-PT:
         questions:
         - {}
       csd-pulse-check-survey-1-q5 U3Ch1_2019_pilot_2022:
+        answers:
+        - correct: true
+        - correct: true
+        - correct: true
+        - correct: true
+        - correct: true
+        - correct: true
+        - correct: true
+        questions:
+        - {}
+      csd-pulse-check-survey-1-q5 U3Ch1_2019_pilot_2023:
         answers:
         - correct: true
         - correct: true
@@ -17438,6 +18901,17 @@ pt-PT:
         questions:
         - {}
       csd-pulse-check-survey-1-q5 U4Ch1_2022:
+        answers:
+        - correct: true
+        - correct: true
+        - correct: true
+        - correct: true
+        - correct: true
+        - correct: true
+        - correct: true
+        questions:
+        - {}
+      csd-pulse-check-survey-1-q5 U4Ch1_2023:
         answers:
         - correct: true
         - correct: true
@@ -17547,6 +19021,17 @@ pt-PT:
         - correct: true
         questions:
         - {}
+      csd-pulse-check-survey-1-q5 U5Ch1_2023:
+        answers:
+        - correct: true
+        - correct: true
+        - correct: true
+        - correct: true
+        - correct: true
+        - correct: true
+        - correct: true
+        questions:
+        - {}
       csd-pulse-check-survey-1-q5 U5Ch2:
         answers:
         - correct: true
@@ -17635,7 +19120,29 @@ pt-PT:
         - correct: true
         questions:
         - {}
+      csd-pulse-check-survey-1-q5 U6Ch1_2023a_2023:
+        answers:
+        - correct: true
+        - correct: true
+        - correct: true
+        - correct: true
+        - correct: true
+        - correct: true
+        - correct: true
+        questions:
+        - {}
       csd-pulse-check-survey-1-q5 U6Ch1_2222:
+        answers:
+        - correct: true
+        - correct: true
+        - correct: true
+        - correct: true
+        - correct: true
+        - correct: true
+        - correct: true
+        questions:
+        - {}
+      csd-pulse-check-survey-1-q5 U6Ch1_mb2022:
         answers:
         - correct: true
         - correct: true
@@ -18082,6 +19589,17 @@ pt-PT:
         - correct: true
         questions:
         - {}
+      csp-post-survey-2017-q22_mb2022:
+        answers:
+        - correct: true
+        - correct: true
+        - correct: true
+        - correct: true
+        - correct: true
+        - correct: true
+        - correct: true
+        questions:
+        - {}
       csp-post-survey-2017-q23:
         answers:
         - correct: true
@@ -18359,6 +19877,17 @@ pt-PT:
         - correct: true
         questions:
         - {}
+      csp-pre-survey-2017-q10_copy2_2023:
+        answers:
+        - correct: true
+        - correct: true
+        - correct: true
+        - correct: true
+        - correct: true
+        - correct: true
+        - correct: true
+        questions:
+        - {}
       csp-pre-survey-2017-q11:
         answers:
         - correct: true
@@ -18447,6 +19976,17 @@ pt-PT:
         - correct: true
         questions:
         - {}
+      csp-pre-survey-2017-q13_2023:
+        answers:
+        - correct: true
+        - correct: true
+        - correct: true
+        - correct: true
+        - correct: true
+        - correct: true
+        - correct: true
+        questions:
+        - {}
       csp-pre-survey-2017-q14:
         answers:
         - correct: true
@@ -18513,6 +20053,17 @@ pt-PT:
         - correct: true
         questions:
         - {}
+      csp-pre-survey-2017-q16_copy2_2023:
+        answers:
+        - correct: true
+        - correct: true
+        - correct: true
+        - correct: true
+        - correct: true
+        - correct: true
+        - correct: true
+        questions:
+        - {}
       csp-pre-survey-2017-q17:
         answers:
         - correct: true
@@ -18547,6 +20098,17 @@ pt-PT:
         questions:
         - {}
       csp-pre-survey-2017-q17_2022:
+        answers:
+        - correct: true
+        - correct: true
+        - correct: true
+        - correct: true
+        - correct: true
+        - correct: true
+        - correct: true
+        questions:
+        - {}
+      csp-pre-survey-2017-q17_copy2_2023:
         answers:
         - correct: true
         - correct: true
@@ -18623,6 +20185,17 @@ pt-PT:
         - correct: true
         questions:
         - {}
+      csp-pre-survey-2017-q19_2023:
+        answers:
+        - correct: true
+        - correct: true
+        - correct: true
+        - correct: true
+        - correct: true
+        - correct: true
+        - correct: true
+        questions:
+        - {}
       csp-pre-survey-2017-q1_2018:
         answers:
         - correct: true
@@ -18689,6 +20262,28 @@ pt-PT:
         - correct: true
         questions:
         - {}
+      csp-pre-survey-2017-q20_2023:
+        answers:
+        - correct: true
+        - correct: true
+        - correct: true
+        - correct: true
+        - correct: true
+        - correct: true
+        - correct: true
+        questions:
+        - {}
+      csp-pre-survey-2017-q20_mb2022:
+        answers:
+        - correct: true
+        - correct: true
+        - correct: true
+        - correct: true
+        - correct: true
+        - correct: true
+        - correct: true
+        questions:
+        - {}
       csp-pre-survey-2017-q21:
         answers:
         - correct: true
@@ -18745,6 +20340,28 @@ pt-PT:
         questions:
         - {}
       csp-pre-survey-2017-q22_2022:
+        answers:
+        - correct: true
+        - correct: true
+        - correct: true
+        - correct: true
+        - correct: true
+        - correct: true
+        - correct: true
+        questions:
+        - {}
+      csp-pre-survey-2017-q22_2023:
+        answers:
+        - correct: true
+        - correct: true
+        - correct: true
+        - correct: true
+        - correct: true
+        - correct: true
+        - correct: true
+        questions:
+        - {}
+      csp-pre-survey-2017-q22_mb2022:
         answers:
         - correct: true
         - correct: true
@@ -18975,6 +20592,17 @@ pt-PT:
         - correct: true
         questions:
         - {}
+      csp-pre-survey-2017-q30_2023:
+        answers:
+        - correct: true
+        - correct: true
+        - correct: true
+        - correct: true
+        - correct: true
+        - correct: true
+        - correct: true
+        questions:
+        - {}
       csp-pre-survey-2017-q31:
         answers:
         - correct: true
@@ -19009,6 +20637,28 @@ pt-PT:
         questions:
         - {}
       csp-pre-survey-2017-q31_2022:
+        answers:
+        - correct: true
+        - correct: true
+        - correct: true
+        - correct: true
+        - correct: true
+        - correct: true
+        - correct: true
+        questions:
+        - {}
+      csp-pre-survey-2017-q31_2023:
+        answers:
+        - correct: true
+        - correct: true
+        - correct: true
+        - correct: true
+        - correct: true
+        - correct: true
+        - correct: true
+        questions:
+        - {}
+      csp-pre-survey-2017-q31_mb2022:
         answers:
         - correct: true
         - correct: true
@@ -19120,6 +20770,17 @@ pt-PT:
         - correct: true
         questions:
         - {}
+      csp-pre-survey-2017-q3_copy2_2023:
+        answers:
+        - correct: true
+        - correct: true
+        - correct: true
+        - correct: true
+        - correct: true
+        - correct: true
+        - correct: true
+        questions:
+        - {}
       csp-pre-survey-2017-q4:
         answers:
         - correct: true
@@ -19176,6 +20837,39 @@ pt-PT:
         questions:
         - {}
       csp-pre-survey-2017-q4_2022:
+        answers:
+        - correct: true
+        - correct: true
+        - correct: true
+        - correct: true
+        - correct: true
+        - correct: true
+        - correct: true
+        questions:
+        - {}
+      csp-pre-survey-2017-q4_copy1_mb2022:
+        answers:
+        - correct: true
+        - correct: true
+        - correct: true
+        - correct: true
+        - correct: true
+        - correct: true
+        - correct: true
+        questions:
+        - {}
+      csp-pre-survey-2017-q4_copy2_2023:
+        answers:
+        - correct: true
+        - correct: true
+        - correct: true
+        - correct: true
+        - correct: true
+        - correct: true
+        - correct: true
+        questions:
+        - {}
+      csp-pre-survey-2017-q4_mb2022:
         answers:
         - correct: true
         - correct: true
@@ -19318,9 +21012,29 @@ pt-PT:
         - correct: true
         questions:
         - {}
+      csp-pre-survey-2017-q9_copy2_2023:
+        answers:
+        - correct: true
+        - correct: true
+        - correct: true
+        - correct: true
+        - correct: true
+        - correct: true
+        - correct: true
+        questions:
+        - {}
       csp_unit_assessment_overview:
         content1: descrição aqui
       curriculum-how-challenging:
+        answers:
+        - correct: true
+        - correct: true
+        - correct: true
+        - correct: true
+        - correct: true
+        questions:
+        - {}
+      curriculum-how-challenging_mb2022:
         answers:
         - correct: true
         - correct: true
@@ -19362,7 +21076,31 @@ pt-PT:
         - correct: true
         questions:
         - {}
+      ever-learned-cs-outside-school_2023:
+        answers:
+        - correct: true
+        - correct: true
+        - correct: true
+        - correct: true
+        questions:
+        - {}
+      ever-learned-cs-outside-school_mb2022:
+        answers:
+        - correct: true
+        - correct: true
+        - correct: true
+        - correct: true
+        questions:
+        - {}
       ever-learned-cs_2022:
+        answers:
+        - correct: true
+        - correct: true
+        - correct: true
+        - correct: true
+        questions:
+        - {}
+      ever-learned-cs_2023:
         answers:
         - correct: true
         - correct: true
@@ -19398,6 +21136,14 @@ pt-PT:
         questions:
         - {}
       family_encourage_2022:
+        answers:
+        - correct: true
+          text: sim
+        - correct: true
+          text: não
+        questions:
+        - {}
+      family_encourage_2023:
         answers:
         - correct: true
           text: sim
@@ -19659,6 +21405,310 @@ pt-PT:
         - correct: true
         questions:
         - {}
+      interested-in-learning-cs_2023:
+        answers:
+        - correct: true
+        - correct: true
+        - correct: true
+        - correct: true
+        - correct: true
+        - correct: true
+        - correct: true
+        questions:
+        - {}
+      interested-in-learning-cs_mb2022:
+        answers:
+        - correct: true
+        - correct: true
+        - correct: true
+        - correct: true
+        - correct: true
+        - correct: true
+        - correct: true
+        questions:
+        - {}
+      intro-pulse-survey-q1_csd1_2023:
+        answers:
+        - correct: true
+        - correct: true
+        - correct: true
+        questions:
+        - {}
+      intro-pulse-survey-q1_csd2_2023:
+        answers:
+        - correct: true
+        - correct: true
+        - correct: true
+        questions:
+        - {}
+      intro-pulse-survey-q1_csd3_2023:
+        answers:
+        - correct: true
+        - correct: true
+        - correct: true
+        questions:
+        - {}
+      intro-pulse-survey-q1_csd4_2023:
+        answers:
+        - correct: true
+        - correct: true
+        - correct: true
+        questions:
+        - {}
+      intro-pulse-survey-q1_csd5_2023:
+        answers:
+        - correct: true
+        - correct: true
+        - correct: true
+        questions:
+        - {}
+      intro-pulse-survey-q1_csd6_2023:
+        answers:
+        - correct: true
+        - correct: true
+        - correct: true
+        questions:
+        - {}
+      intro-pulse-survey-q2_csd1_2023:
+        answers:
+        - correct: true
+        - correct: true
+        - correct: true
+        questions:
+        - {}
+      intro-pulse-survey-q2_csd2_2023:
+        answers:
+        - correct: true
+        - correct: true
+        - correct: true
+        questions:
+        - {}
+      intro-pulse-survey-q2_csd3_2023:
+        answers:
+        - correct: true
+        - correct: true
+        - correct: true
+        questions:
+        - {}
+      intro-pulse-survey-q2_csd4_2023:
+        answers:
+        - correct: true
+        - correct: true
+        - correct: true
+        questions:
+        - {}
+      intro-pulse-survey-q2_csd5_2023:
+        answers:
+        - correct: true
+        - correct: true
+        - correct: true
+        questions:
+        - {}
+      intro-pulse-survey-q2_csd6_2023:
+        answers:
+        - correct: true
+        - correct: true
+        - correct: true
+        questions:
+        - {}
+      intro-pulse-survey-q3_csd1_2023:
+        answers:
+        - correct: true
+        - correct: true
+        - correct: true
+        - correct: true
+        - correct: true
+        - correct: true
+        - correct: true
+        questions:
+        - {}
+      intro-pulse-survey-q3_csd2_2023:
+        answers:
+        - correct: true
+        - correct: true
+        - correct: true
+        - correct: true
+        - correct: true
+        - correct: true
+        - correct: true
+        questions:
+        - {}
+      intro-pulse-survey-q3_csd3_2023:
+        answers:
+        - correct: true
+        - correct: true
+        - correct: true
+        - correct: true
+        - correct: true
+        - correct: true
+        - correct: true
+        questions:
+        - {}
+      intro-pulse-survey-q3_csd4_2023:
+        answers:
+        - correct: true
+        - correct: true
+        - correct: true
+        - correct: true
+        - correct: true
+        - correct: true
+        - correct: true
+        questions:
+        - {}
+      intro-pulse-survey-q3_csd5_2023:
+        answers:
+        - correct: true
+        - correct: true
+        - correct: true
+        - correct: true
+        - correct: true
+        - correct: true
+        - correct: true
+        questions:
+        - {}
+      intro-pulse-survey-q3_csd6_2023:
+        answers:
+        - correct: true
+        - correct: true
+        - correct: true
+        - correct: true
+        - correct: true
+        - correct: true
+        - correct: true
+        questions:
+        - {}
+      intro-pulse-survey-q4_csd1_2023:
+        answers:
+        - correct: true
+        - correct: true
+        - correct: true
+        - correct: true
+        - correct: true
+        - correct: true
+        - correct: true
+        questions:
+        - {}
+      intro-pulse-survey-q4_csd2_2023:
+        answers:
+        - correct: true
+        - correct: true
+        - correct: true
+        - correct: true
+        - correct: true
+        - correct: true
+        - correct: true
+        questions:
+        - {}
+      intro-pulse-survey-q4_csd3_2023:
+        answers:
+        - correct: true
+        - correct: true
+        - correct: true
+        - correct: true
+        - correct: true
+        - correct: true
+        - correct: true
+        questions:
+        - {}
+      intro-pulse-survey-q4_csd4_2023:
+        answers:
+        - correct: true
+        - correct: true
+        - correct: true
+        - correct: true
+        - correct: true
+        - correct: true
+        - correct: true
+        questions:
+        - {}
+      intro-pulse-survey-q4_csd5_2023:
+        answers:
+        - correct: true
+        - correct: true
+        - correct: true
+        - correct: true
+        - correct: true
+        - correct: true
+        - correct: true
+        questions:
+        - {}
+      intro-pulse-survey-q4_csd6_2023:
+        answers:
+        - correct: true
+        - correct: true
+        - correct: true
+        - correct: true
+        - correct: true
+        - correct: true
+        - correct: true
+        questions:
+        - {}
+      intro-pulse-survey-q5_csd1_2023:
+        answers:
+        - correct: true
+        - correct: true
+        - correct: true
+        - correct: true
+        - correct: true
+        - correct: true
+        - correct: true
+        questions:
+        - {}
+      intro-pulse-survey-q5_csd2_2023:
+        answers:
+        - correct: true
+        - correct: true
+        - correct: true
+        - correct: true
+        - correct: true
+        - correct: true
+        - correct: true
+        questions:
+        - {}
+      intro-pulse-survey-q5_csd3_2023:
+        answers:
+        - correct: true
+        - correct: true
+        - correct: true
+        - correct: true
+        - correct: true
+        - correct: true
+        - correct: true
+        questions:
+        - {}
+      intro-pulse-survey-q5_csd4_2023:
+        answers:
+        - correct: true
+        - correct: true
+        - correct: true
+        - correct: true
+        - correct: true
+        - correct: true
+        - correct: true
+        questions:
+        - {}
+      intro-pulse-survey-q5_csd5_2023:
+        answers:
+        - correct: true
+        - correct: true
+        - correct: true
+        - correct: true
+        - correct: true
+        - correct: true
+        - correct: true
+        questions:
+        - {}
+      intro-pulse-survey-q5_csd6_2023:
+        answers:
+        - correct: true
+        - correct: true
+        - correct: true
+        - correct: true
+        - correct: true
+        - correct: true
+        - correct: true
+        questions:
+        - {}
       made-choices-about-assignments:
         answers:
         - correct: true
@@ -19701,6 +21751,17 @@ pt-PT:
         - correct: true
         questions:
         - {}
+      naturally-better-at-cs_copy2_2023:
+        answers:
+        - correct: true
+        - correct: true
+        - correct: true
+        - correct: true
+        - correct: true
+        - correct: true
+        - correct: true
+        questions:
+        - {}
       outbreak_freeplay_choice:
         display_name: Atividade livre
       outbreak_story:
@@ -19716,6 +21777,17 @@ pt-PT:
         questions:
         - {}
       post-assessment survey q31-a-2017b:
+        answers:
+        - correct: true
+        - correct: true
+        - correct: true
+        - correct: true
+        - correct: true
+        - correct: true
+        - correct: true
+        questions:
+        - {}
+      post-assessment survey q31-a-2017b_mb2022:
         answers:
         - correct: true
         - correct: true
@@ -20069,6 +22141,18 @@ pt-PT:
         - correct: true
         questions:
         - {}
+      reasons-took-course-csd_2023:
+        answers:
+        - correct: true
+        - correct: true
+        - correct: true
+        - correct: true
+        - correct: true
+        - correct: true
+        - correct: true
+        - correct: true
+        questions:
+        - {}
       same-ability:
         answers:
         - correct: true
@@ -20089,6 +22173,14 @@ pt-PT:
         questions:
         - {}
       someone_else_encourage_2022:
+        answers:
+        - correct: true
+          text: sim
+        - correct: true
+          text: não
+        questions:
+        - {}
+      someone_else_encourage_2023:
         answers:
         - correct: true
           text: sim
@@ -20124,6 +22216,14 @@ pt-PT:
         questions:
         - {}
       teacher_encourage_2022:
+        answers:
+        - correct: true
+          text: sim
+        - correct: true
+          text: não
+        questions:
+        - {}
+      teacher_encourage_2023:
         answers:
         - correct: true
           text: sim
@@ -20204,6 +22304,28 @@ pt-PT:
         - correct: true
         questions:
         - {}
+      will-be-myself-in-cs_2023:
+        answers:
+        - correct: true
+        - correct: true
+        - correct: true
+        - correct: true
+        - correct: true
+        - correct: true
+        - correct: true
+        questions:
+        - {}
+      will-be-myself-in-cs_mb2022:
+        answers:
+        - correct: true
+        - correct: true
+        - correct: true
+        - correct: true
+        - correct: true
+        - correct: true
+        - correct: true
+        questions:
+        - {}
       worried-less-capable:
         answers:
         - correct: true
@@ -20227,6 +22349,17 @@ pt-PT:
         questions:
         - {}
       worried-seen-incapable_2022:
+        answers:
+        - correct: true
+        - correct: true
+        - correct: true
+        - correct: true
+        - correct: true
+        - correct: true
+        - correct: true
+        questions:
+        - {}
+      worried-seen-incapable_2023:
         answers:
         - correct: true
         - correct: true

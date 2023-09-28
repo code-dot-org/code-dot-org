@@ -27,7 +27,7 @@ Elevii din ziua de astăzi trebuie să învețe cum să creeze tehnologie, nu do
 
 <a id="how-to-video"></a>
 
-## 1. Urmărește videoclipul instructiv pentru Hour of Code <iframe width="500" height="255" src="//www.youtube.com/embed/SrnvvWDm73k" frameborder="0" allowfullscreen></iframe> 
+## 1. Urmărește videoclipul instructiv pentru Hour of Code <iframe width="500" height="255" src="https://www.youtube-nocookie.com/embed/SrnvvWDm73k" frameborder="0" allowfullscreen></iframe> 
 
 * * *
 
@@ -113,7 +113,7 @@ Nu este nicio problemă dacă și tu și elevii tăi sunteți începători în d
 
 Îndrumă elevii către activitate
 
-- Write the tutorial link on a whiteboard. Find the link listed on the [information for your selected tutorial]({{ urls/learn }}).
+- Scrieți linkul tutorialului pe o tablă albă. Găsiți linkul listat pe [informațiile pentru tutorialul selectat]({{ urls/learn }}).
 
 Atunci când elevii tăi întâmpină dificultăți, este normal să răspunzi:
 
@@ -153,6 +153,6 @@ Ce se întâmplă dacă un cursant termină mai devreme decât ceilalți?
 
 ### Ce urmeaza dupa Hour of Code?
 
-Computer science doesn’t have to end with the Hour of Code! [Learn how](/beyond) to bring CS to your school and students.
+Informatica nu trebuie să se termine cu Hour of Code! [Aflați cum](/beyond) să aduceți CS la școala și elevii dvs.
 
 {{ signup_button }}

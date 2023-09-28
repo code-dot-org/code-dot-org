@@ -371,7 +371,7 @@ fa:
         CSF_unspotted_bugs: باگ‌های دیده‌نشده
         CSF_zuck_loops_short: حلقه‌های تکرار
         frozen_intro: معرفی ساعت کدزنی
-        frozen_loops: معرفی حلقه ها
+        frozen_loops: معرفی حلقه‌ها
         frozen_functions: معرفی تابع ها
         playlab_intro: معرفی آزمایشگاه بازی
         playlab_events: رویداد های آزمایشگاه بازی
@@ -530,7 +530,7 @@ fa:
         csd_applab_loops: حلقه‌ها در ‏App Lab
         csd_problem_solving_process: فرایند حل مسئله
         CSF_Going_Places_Safely: محله برخط من
-        CSF_SpriteLab_Intro_v2: آشنایی با آزمایشگاه اسپرایت
+        CSF_SpriteLab_Intro_v2: آشنایی با لابراتوار اسپرایت
         CSF_Spritelab_MakeSprite_v2: نحوه ساخت اسپرایت
         CSF_SpriteLab_SpritesInAction_v2: اسپرایت‌ها در عمل
         csd_debugging: رفع اشکال

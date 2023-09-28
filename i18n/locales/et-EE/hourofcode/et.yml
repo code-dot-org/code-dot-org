@@ -275,6 +275,10 @@ et:
   call_to_action_register_early_access: Registreeri varajase juurdepääsu saamiseks
   call_to_action_open_positions: Vaata avatud positsioone
   call_to_action_get_guide: Hankige juhend
+  call_to_action_donate_to_cdo: Anneta Code.org
+  call_to_action_start_fundraiser: Alusta loobus
+  call_to_action_view_donation_policy: Vaata annetuse poliitikat
+  call_to_action_view_donate_bitpay: Anneta BitPayga
   aria_label_call_to_action_afe: Lisateave Amazon Future Engineeri kohta
   aria_label_call_to_action_teaching_csf: Alusta õpetamine arvutiteaduse alused professionaalne
     õppe programm
@@ -374,6 +378,7 @@ et:
   curriculum_name_csp: Arvutiteaduse põhimõtted
   curriculum_name_csc: Arvutiteaduse ühendused
   curriculum_name_csa: AP® Arvutiteadus A
+  curriculum_name_csa_ai: Tarkvaratehnika ja arvuti nägemine
   curriculum_name_csc_02: Iga CS ühenduste moodul
   curriculum_name_ai: Tehisintellekti ja masinõpe
   curriculum_name_artificial_intelligence: Tehisintellekt (AI)
@@ -446,6 +451,12 @@ et:
     mängude ja füüsiliste arvutussüsteemide loomist.
   curriculum_desc_csp: Tasuta, AP® CSP heaks, keskkooli sissejuhatav kursus, mis tutvustab
     õpilastele aluse mõisted infotehnoloogia.
+  curriculum_desc_csa_ai_long: 'See kaks peatükki Post-AP CSA moodul pakub keskkooliõpilastele
+    praktilisi kogemusi professionaalse tarkvara arendamise tööriistad, sealhulgas
+    GitHub ja GitHub Copilot, ja annab neile reaalse maailma oskused arendada arvuti
+    nägemise programmi. '
+  curriculum_desc_csa_ai_short: See Post-AP® CSA moodul pakub keskkooliõpilastele
+    praktilisi kogemusi professionaalse tarkvara arendamise tööriistadega.
   collection_hardware: Keskenduge riistvarale
   collection_hardware_desc: Võimaldab õpilastel kasutada andmeid ja füüsilisi seadmeid
     probleemide lahendamiseks.
@@ -518,6 +529,7 @@ et:
   module_duration_2_hrs: 2 tundi
   module_duration_3_hrs: 3 tundi
   module_duration_5_hrs: 5 tundi
+  module_duration_5_hrs_plus: 5+ tundi
   module_duration_8_hrs: 8 tundi
   module_duration_20_hrs: 20 tundi
   module_duration_35_hrs: 35 tundi
@@ -592,6 +604,7 @@ et:
   heading_objects_first: Esmalt objektid
   heading_these_lessons_will: 'Need õppetunnid:'
   heading_explore_curriculum_catalog: Tutvuge kõigi meie kursuste õppekavakataloogis
+  heading_csa_ai: Kas otsite asju teha pärast AP® eksamit?
   professional_learning_section_desc: Hankige toetus, mida vajate, kui valmistate
     õpetama. Õpetajad armastavad seda, üle 90% pingerida see parim professionaalne
     areng kunagi!
@@ -622,6 +635,23 @@ et:
   support_and_questions_section_desc: Meie tugimeeskond on siin, et vastata küsimustele,
     mis teil võivad olla Code.org õpetamise alustamise kohta. Võite küsida ka teistelt
     õpetajatelt nende kogemusi meie õpetajate foorumites.
+  subscribe_form_section_title: Telli värskendused
+  subscribe_form_section_desc_csa: Registreeru, et saada igakuiseid meilisõnumeid
+    Code.org AP® Computer Science A kohta ning saada kasulikke meeldetuletusi, näpunäiteid
+    ja värskendusi, mis saadetakse otse teie postkasti.
+  subscribe_form_section_desc_csc: Registreeru, et saada igakuiseid meilisõnumeid
+    Code.org Computer Science Connections kohta ning saada kasulikke meeldetuletusi,
+    näpunäiteid ja värskendusi, mis saadetakse otse teie postkasti.
+  subscribe_form_section_desc_csd: Registreeru, et saada igakuiseid meilisõnumeid
+    Code.org arvutiteaduse avastuste kohta ning saada kasulikke meeldetuletusi, näpunäiteid
+    ja värskendusi, mis saadetakse otse teie postkasti.
+  subscribe_form_section_desc_csf: Registreeru, et saada igakuiseid meilisõnumeid
+    Code.org Computer Science Fundamentals kohta ning saada kasulikke meeldetuletusi,
+    näpunäiteid ja värskendusi, mis saadetakse otse teie postkasti.
+  subscribe_form_section_desc_csp: Registreeru, et saada igakuiseid meilisõnumeid
+    Code.org arvutiteaduse põhimõtete kohta ning saada kasulikke meeldetuletusi, näpunäiteid
+    ja värskendusi, mis saadetakse otse teie postkasti.
+  subscribe_form_section_unsubscribe: Saate igal ajal tellimusest loobuda.
   blockchain_hero_heading: Kuidas Blockchain töötab
   blockchain_hero_desc: Sukelduda maailma blockchain koos „Kuidas Blockchain töötab,”
     meie uus video seeria ja kaasnevad õppetunnid!
@@ -723,6 +753,8 @@ et:
     Iga õppetund on seotud ühe seeria videoga, sukeldudes sügavamale videotes kasutusele
     võetud kontseptsioonidesse.
   ai_curriculum_btn_aria_label_04: Avastage, kuidas AI töötab õppetunde
+  ai_curriculum_grades_05: 'Hinne tasemed: 9-12'
+  ai_curriculum_btn_aria_label_05: Tutvuge tarkvaratehnika ja arvuti nägemise mooduliga
   ai_carousel_heading: 'Mida õpetajad ütlevad AI kohta Code.org abil:'
   ai_carousel_quote_01: See õppetund andis ka minu õpilastele võimaluse näha, et klassifitseerimissüsteemides
     on olemas arvamuselement. Hiljem, kui hakkasime nägema, kuidas eelarvamusi tehisintellekti
@@ -845,6 +877,7 @@ et:
     nagu ChatGPT, algajast kuni arenenud. Sisaldab starter küsib neile lihtsalt kastes
     oma varbad, samuti täiustatud tööriistad neile, kes soovivad maksimeerida oma
     potentsiaali.
+  ai_pl_101_resources_3: AI küsib üliõpilaste õppe muutmist
   how_ai_works_hero_heading: Kuidas tehisintellekt toimib
   how_ai_works_hero_desc: Sukelduge AI maailma „Kuidas AI töötab”, meie video seeria
     ja sellega kaasnevad õppetunnid!
@@ -1230,8 +1263,8 @@ et:
     Animation
   csp_page_curriculum_glance_devices: Laptop, Chromebook
   csp_page_curriculum_glance_tools: Rakenduse laboratoorium
-  csp_page_curriculum_glance_professional_learning: Facilitator-led Workshops, Self-paced
-    Modules
+  csp_page_curriculum_glance_professional_learning: Juhendaja juhitavad töötoad, isetempoga
+    moodulid
   csp_page_curriculum_glance_professional_languages: Inglise keel
   csp_page_curriculum_glance_professional_accessibility_features: Text-to-speech,
     Closed captioning, Immersive reader
@@ -1358,8 +1391,8 @@ et:
   csd_page_curriculum_glance_devices: Laptop, Chromebook
   csd_page_curriculum_glance_tools: Rakenduse laboratoorium, mängulab, tehisintellekti
     laboratoorium, veebilabor
-  csd_page_curriculum_glance_professional_learning: Facilitator-led Workshops, Self-paced
-    Modules
+  csd_page_curriculum_glance_professional_learning: Juhendaja juhitavad töötoad, isetempoga
+    moodulid
   csd_page_curriculum_glance_professional_languages: Inglise keel
   csd_page_curriculum_glance_professional_accessibility_features: Text-to-speech,
     Closed captioning, Immersive reader
@@ -1494,8 +1527,8 @@ et:
     Kunst ja disain, Rakenduste kujundus
   csf_page_curriculum_glance_devices: Sülearvuti, Chromebook, tahvelarvuti
   csf_page_curriculum_glance_tools: Sprite Lab, Play Lab
-  csf_page_curriculum_glance_professional_learning: Facilitator-led Workshops, Self-paced
-    Modules
+  csf_page_curriculum_glance_professional_learning: Juhendaja juhitavad töötoad, isetempoga
+    moodulid
   csf_page_curriculum_glance_languages: araabia, bahasa indoneesia, katalaani, hiina
     lihtsustatud, hiina traditsiooniline, tšehhi, prantsuse, saksa, hindi, itaalia,
     jaapani, korea, kannada, malai, marathi, mongoli, poola, portugali-BR, rumeenia,
@@ -1633,6 +1666,38 @@ et:
   csa_page_faq_answer_08_02: For more information about the values that guided our
     work, please see our [curriculum values](%{curriculum_values_url}) and our [professional
     learning values](%{pl_values_url}).
+  donate_page_top_heading: Aidake rahastada meie missiooni
+  donate_page_top_desc: Iga annetus kütab Code.org missiooni laiendada juurdepääsu
+    infotehnoloogia haridusele. Pakume teile mitmeid viise annetamiseks ja muutmiseks.
+  donate_page_fundraise_title: Vahendite kogumine Code.org jaoks
+  donate_page_fundraise_desc: Aita koguda raha Code.org! Igal õpilasel igas koolis
+    peaks olema võimalus õppida arvutiteadust.
+  donate_page_other_ways_title: Muud võimalused anda
+  donate_page_other_ways_desc: Avasta erinevaid meetodeid, et aidata kaasa, ja leida
+    variant, mis sobib teile kõige paremini. Iga suur või väike žest suunab meie missiooni
+    edasi.
+  donate_page_501c3: Code.org on registreeritud avalik-õigusliku 501 (c) (3) mittetulundusühinguna.
+    Sissemaksed Code.org on maksu maha arvata seadusega lubatud ulatuses. Code.org
+    maksukohustuslasena registreerimise number on 46-0858543.
+  donate_page_donation_policy_title: Meie annetuse poliitika mõistmine
+  donate_page_donation_policy_desc: Lugege selle kohta, kuidas me teie panust käsitleme
+    ja eraldame.
+  donate_tabs_tab_label_daf_direct: DAF otsene
+  donate_tabs_tab_label_amazon: Amazon
+  donate_tabs_tab_label_bitpay: BitPay
+  donate_tabs_tab_label_employee_match: Töötaja Match
+  donate_tabs_daf_direct_title: Anneta DAF Directi kaudu
+  donate_tabs_daf_direct_desc: Annetage oma doonoriga soovitatud fondi kaudu Fidelity
+    Heategevusliku, Schwab Heategevusliku või BNY Melloniga ja tehke oma toetuse soovitus
+    Code.org kaudu DAF Direct online-vormi.
+  donate_tabs_amazon_title: Anneta Amazonase kaudu
+  donate_tabs_amazon_desc: Anneta otse, kasutades oma Amazon konto. Vaid paari hiireklõpsuga
+    aitab sujuvalt kaasa Code.org missioonile ja suurendada arvutiteaduse hariduse
+    tulevikku.
+  donate_tabs_bitpay_title: Anneta krüptoga BitPay kaudu
+  donate_tabs_bitpay_desc: Omaks tuleviku andes koos cryptocurrency. Läbi BitPay,
+    oma digitaalse valuuta saab otseselt toetada Code.org püüab laiendada infotehnoloogia
+    haridus.
   hoc_live: Tund kood Live
   hoc_live_sign_up_title: Registreeru kood Hour Live
   hoc_live_learn_title: Õppige kooditund Live
