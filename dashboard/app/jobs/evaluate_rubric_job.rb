@@ -19,7 +19,7 @@ class EvaluateRubricJob < ApplicationJob
     user = User.find(user_id)
     script_level = ScriptLevel.find(script_level_id)
 
-    raise 'OPENAI_API_KEY required' unless ENV['OPENAI_API_KEY']
+    raise 'CDO.openai_teaching_assistant_api_key required' if CDO.openai_teaching_assistant_api_key.blank?
 
     lesson_s3_name = 'CSD-2022-U3-L17'
     channel_id = get_channel_id(user, script_level)
@@ -27,7 +27,7 @@ class EvaluateRubricJob < ApplicationJob
     prompt = read_file_from_s3(lesson_s3_name, 'system_prompt.txt')
     ai_rubric = read_file_from_s3(lesson_s3_name, 'standard_rubric.csv')
     examples = read_examples(lesson_s3_name)
-    api_key = ENV['OPENAI_API_KEY']
+    api_key = CDO.openai_teaching_assistant_api_key
 
     ai_evaluations = get_openai_evaluations(code, prompt, ai_rubric, examples, api_key)
 
