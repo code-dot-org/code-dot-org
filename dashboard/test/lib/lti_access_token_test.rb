@@ -17,6 +17,9 @@ class LtiAccessTokenTest < ActiveSupport::TestCase
       kid: jwk[:kid],
       private_key: jwk.signing_key.to_s,
     }
+  end
+
+  setup do
     CDO.stubs(:jwk_private_key_data).returns(@fake_private_key_obj)
   end
 
