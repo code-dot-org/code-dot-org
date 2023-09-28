@@ -2,7 +2,7 @@ class Announcements
   @@announcements_data = nil
   @@loaded = false
   @@load_error = false
-  @@json_path = dashboard_dir 'config/homepage/announcements.json'
+  @@json_path = dashboard_dir 'config/marketing/announcements.json'
 
   # enables unit tests
   def self.set_file_path(path)
@@ -22,6 +22,35 @@ class Announcements
 
     banner = banners[banner_id_for_page]
     banner&.merge({id: banner_id_for_page})
+  end
+
+  # gets localized special announcement data for a page, or nil if not found
+  def self.get_localized_announcement_for_page(page)
+    announcement = get_announcement_for_page(page)
+    return nil unless announcement
+
+    localized_fields = {
+      title: I18n.t(
+        "title",
+        default: announcement['title'],
+        scope: [:data, :marketing_announcements, :banners, announcement[:id]],
+        smart: true
+      ),
+      body: I18n.t(
+        "body",
+        default: announcement['body'],
+        scope: [:data, :marketing_announcements, :banners, announcement[:id]],
+        smart: true
+      ),
+      buttonText: I18n.t(
+        "buttonText",
+        default: announcement['buttonText'],
+        scope: [:data, :marketing_announcements, :banners, announcement[:id]],
+        smart: true
+      ),
+    }
+
+    announcement.merge(localized_fields)
   end
 
   def self.load_announcements
