@@ -266,9 +266,17 @@ const WEBPACK_BASE_CONFIG = {
             },
           ]
         : []),
+      process.env.DEV && {
+        test: /(blockly\/.*\.js)$/,
+        use: ['source-map-loader'],
+        enforce: 'pre',
+      },
     ],
     noParse: [/html2canvas/],
   },
+  // Ignore spurious warnings from source-map-loader
+  // It can't find source maps for some Closure modules and that is expected
+  ignoreWarnings: [/Failed to parse source map/],
 };
 
 // FIXME: figure out how to re-enable hot reloading with
