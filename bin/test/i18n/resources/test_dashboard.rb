@@ -34,6 +34,7 @@ describe I18n::Resources::Dashboard do
       I18n::Resources::Dashboard::Blocks.expects(:sync_out).in_sequence(execution_sequence)
       I18n::Resources::Dashboard::CourseContent.expects(:sync_out).in_sequence(execution_sequence)
       I18n::Resources::Dashboard::CourseOfferings.expects(:sync_out).in_sequence(execution_sequence)
+      I18n::Resources::Dashboard::Courses.expects(:sync_out).in_sequence(execution_sequence)
 
       I18n::Resources::Dashboard.sync_out
     end
