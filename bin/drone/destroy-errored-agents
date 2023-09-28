@@ -17,9 +17,11 @@ set -e
 # ```
 
 # Check if DRONE_TOKEN is valid
-output=$(drone server ls -l 2>&1)
-if [[ "$output" == *"Error: you must provide your Drone access token."* ]]; then
-    echo "DRONE_TOKEN is either not set or invalid. Follow instructions at https://drone.cdn-code.org/account to set your token."
+if ! output=$(drone server ls 2>&1); then
+    echo "$output"
+    echo -e "\nError executing \`drone server ls\`. Ensure DRONE_SERVER, DRONE_AUTOSCALER, and DRONE_TOKEN are set correctly."
+    echo "For more information, see the 'Drone Continuous Integration System' document in the Engineering Drive."
+    echo "Obtain these values from https://drone.cdn-code.org/account"
     exit 1
 fi
 
