@@ -1,4 +1,4 @@
-@import 'color', 'font', 'breakpoints';
+@import 'font', 'breakpoints';
 
 html {
   font-size: 16px;
@@ -6,7 +6,6 @@ html {
 
 h2 {
   text-align: center;
-  color: #682A77;
   font-size: 32px;
   font-family: "Gotham 7r", sans-serif;
   margin: 0 auto 1em;
@@ -41,11 +40,10 @@ section.banner {
   }
 
   nav.how-to-nav {
-    height: 3rem;
+    height: 3.25rem;
     width: 250px;
     position: relative;
-    color: white;
-    background-color: #5c3f7f;
+    background-color: var(--neutral_dark10);
     border-radius: 4px;
     font-size: 1rem;
     font-family: 'Gotham 5r', sans-serif;
@@ -58,14 +56,13 @@ section.banner {
     }
 
     &:hover {
-      color: white;
-      background-color: #5c3f7f;
-      border-color: #5c3f7f;
+      color: var(--brand_secondary_default);
+      background-color: var(--neutral_dark10);
       border-radius: 4px 4px 0 0;
       text-decoration: none;
       cursor: pointer;
 
-      p {
+      p.current-page {
         cursor: default;
       }
 
@@ -79,20 +76,12 @@ section.banner {
       }
     }
 
-    &:focus {
-      outline: #5c3f7f solid 2px;
-      outline-offset: 2px;
-
-      &:not(:focus-visible) {
-        outline: none;
-      }
-    }
-
     p.current_page {
-      color: white;
       text-decoration: none;
       padding: 12px 0;
       display: block;
+      font-size: 18px;
+      color: var(--neutral_dark);
     }
 
     ul {
@@ -110,12 +99,12 @@ section.banner {
       li {
         display:block;
         text-indent: 0;
-        padding: 12px 0;
-        background: #5c3f7f;
+        padding: 0;
+        color: var(--neutral_dark);
+        background-color: var(--neutral_dark10);
 
         &:last-child {
           border-radius: 0 0 4px 4px;
-          padding-bottom: 14px;
         }
 
         &::before {
@@ -123,13 +112,19 @@ section.banner {
         }
 
         &:hover {
-          background-color: #432d5c;
+          background-color: var(--neutral_dark20);
+        }
+
+        &:last-child a {
+          padding-bottom: 16px;
         }
 
         a {
-          color: $neutral-white;
+          color: var(--neutral_dark);
           display:block;
           text-decoration:none;
+          padding: 14px 0;
+          font-size: 18px;
         }
       }
     }
