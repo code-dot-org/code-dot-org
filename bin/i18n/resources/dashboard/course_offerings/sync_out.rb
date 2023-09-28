@@ -11,7 +11,7 @@ module I18n
     module Dashboard
       module CourseOfferings
         class SyncOut < I18n::Utils::SyncOutBase
-          process do |language|
+          def process(language)
             crowdin_file_path = I18nScriptUtils.locale_dir(language[:crowdin_name_s], DIR_NAME, FILE_NAME)
             next unless File.exist?(crowdin_file_path)
 

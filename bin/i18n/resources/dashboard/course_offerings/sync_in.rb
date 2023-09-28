@@ -12,7 +12,7 @@ module I18n
     module Dashboard
       module CourseOfferings
         class SyncIn < I18n::Utils::SyncInBase
-          process do
+          def process
             I18nScriptUtils.write_file(I18N_SOURCE_FILE_PATH, JSON.pretty_generate(i18n_data))
           end
 

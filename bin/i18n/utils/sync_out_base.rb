@@ -3,25 +3,15 @@ require_relative '../i18n_script_utils'
 module I18n
   module Utils
     class SyncOutBase
-      class << self
-        def perform
-          new.send(:execute)
-        end
-
-        protected
-
-        def process(&block)
-          @process_block = block
-        end
-
-        private
-
-        def process_block
-          @process_block ||= proc {raise NotImplementedError}
-        end
+      def self.perform
+        new.send(:perform)
       end
 
       protected
+
+      def process(_language)
+        raise NotImplementedError
+      end
 
       def languages
         @languages ||= PegasusLanguages.all
@@ -37,11 +27,11 @@ module I18n
 
       private
 
-      def execute
+      def perform
         progress_bar.start
 
         I18nScriptUtils.process_in_threads(languages) do |language|
-          instance_exec language, &self.class.send(:process_block)
+          process(language)
         ensure
           I18nScriptUtils.remove_empty_dir I18nScriptUtils.locale_dir(language[:crowdin_name_s])
 
