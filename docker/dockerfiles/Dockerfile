@@ -5,7 +5,7 @@
 
 
 #########################################################
-FROM ubuntu:18.04 as base
+FROM ubuntu:20.04 as base
 #########################################################
 # multi-stage build for parallel compiling node & ruby: 
 # see: https://docs.docker.com/build/building/multi-stage/
@@ -47,7 +47,7 @@ RUN groupadd --gid 3434 ${USER} && \
     printf "${USER} ALL=NOPASSWD: ALL\n" > /etc/sudoers.d/50-${USER}
 
 #########################################################
-FROM ubuntu:18.04 as node
+FROM ubuntu:20.04 as node
 #########################################################
 # compile node to /build, this layer is merged at the end
 #########################################################
@@ -66,8 +66,6 @@ RUN curl -sSLOJ https://nodejs.org/dist/v18.16.0/node-v18.16.0.tar.gz && \
     tar -xzf node-v18.16.0.tar.gz && \
     rm node-v18.16.0.tar.gz && \
     cd node-v18.16.0 && \
-    # C and CXX flags needed for ubuntu <=18.04: see https://github.com/nodesource/distributions/issues/1392
-    C=/usr/bin/gcc-8 CXX=/usr/bin/g++-8 \
     ./configure && \
     make -j `nproc` && \
     make install PREFIX=/build && \

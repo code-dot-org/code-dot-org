@@ -4,9 +4,13 @@
       "display_name": {
         "CSD U2 text style freeplay_2021": "বিনা পয়সায় খেলা",
         "CSD U3 - Interactive Card - Example1_2022": "উদাহরণ",
+        "CSD U3 - Interactive Card - Example1_2023": "উদাহরণ",
         "CSD U3 - Interactive Card - Example2_2022": "উদাহরণ",
+        "CSD U3 - Interactive Card - Example2_2023": "উদাহরণ",
         "CSD U3 - Interactive Card - Example3_2022": "উদাহরণ",
+        "CSD U3 - Interactive Card - Example3_2023": "উদাহরণ",
         "CSD U3 - Interactive Card - Example4_2022": "উদাহরণ",
+        "CSD U3 - Interactive Card - Example4_2023": "উদাহরণ",
         "CSD U3 L11 Freeplay": "বিনা পয়সায় খেলা",
         "CSD U3 L11 Freeplay_2018": "বিনা পয়সায় খেলা",
         "CSD U3 L11 Freeplay_2019": "বিনা পয়সায় খেলা",
@@ -78,6 +82,7 @@
         "CSD U3 Variables Map": "চলকগুলো",
         "CSD U3 Variables Map_2018": "চলকগুলো",
         "CSD U3 Variables Map_2019": "চলকগুলো",
+        "CSD U6 - Functions - Parameters Video_2023": "বৈশিষ্ট্য-যুক্ত ফাংশনগুলি",
         "CSD U6 - Functions - Parameters Video_2222": "বৈশিষ্ট্য-যুক্ত ফাংশনগুলি",
         "CSD U6 for loop map": "ফর লুপ",
         "CSD U6 for loop map_2018": "ফর লুপ",
@@ -92,7 +97,8 @@
         "CSD web classes freeplay_2021": "বিনা পয়সায় খেলা",
         "CSD: For Loop_2018": "ফর লুপ",
         "courseF_bee_for52022": "চলকগুলো",
-        "courseF_bee_for5_2021": "চলকগুলো"
+        "courseF_bee_for5_2021": "চলকগুলো",
+        "courseF_bee_for5_2023": "চলকগুলো"
       }
     }
   }

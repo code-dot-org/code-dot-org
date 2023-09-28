@@ -85,7 +85,8 @@
   gap: 0.5rem;
   align-self: stretch;
 
-  h5, p {
+  h5,
+  p {
     margin-bottom: 0;
   }
 }
@@ -199,7 +200,7 @@ p.aiTokenText {
   padding: 1.25rem 1rem;
 
   display: flex;
-  flex-direction: column;
+  flex-direction: row;
   gap: 2rem;
   align-self: stretch;
 }
@@ -226,6 +227,7 @@ p.aiTokenText {
   flex-direction: column;
   gap: 1rem;
   align-self: stretch;
+  flex: 1;
 }
 
 .evidenceLevelOption {
@@ -264,4 +266,21 @@ p.aiTokenText {
 p.errorMessage {
   color: $product_negative_default;
   margin-bottom: 0;
+}
+
+.inputTextbox {
+  width: 95%;
+  height: 5rem;
+  margin-top: 5;
+}
+
+.autosaveMessage {
+  float: right;
+  line-height: 100%;
+  padding: 0;
+  color: #3ea33e;
+}
+
+.feedbackArea {
+  flex: 1;
 }

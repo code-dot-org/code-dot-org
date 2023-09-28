@@ -67,7 +67,7 @@
     "CONTROLS_WHILEUNTIL_TOOLTIP_UNTIL": "تا زمانی که یک مقدار ناصحیح است، چند عبارت را انجام بده.",
     "CONTROLS_WHILEUNTIL_TOOLTIP_WHILE": "تا زمانی که یک مقدار صحیح است، چند عبارت را انجام بده.",
     "DEFINE_HEADER_DEFINITION": "تعریف",
-    "DEFINE_FUNCTION_DEFINE": "تعریف کن",
+    "DEFINE_FUNCTION_DEFINE": "تعریف کنید",
     "DEFINE_FUNCTION_FOR_EXAMPLE": "تابع زیر را تعریف کنید و دوباره تلاش کنید.",
     "DELETE": "پاک کردن",
     "DELETE_BLOCK": "حذف بلوک",

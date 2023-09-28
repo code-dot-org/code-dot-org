@@ -6,7 +6,7 @@ title: Hour of Code How-to Guide for After-school
 
 # Ինչպես սովոր մեկ ժամում ծրագրավորում դասերից կամ կլուբներից հետո ։
 
-### Join the movement and introduce your students to computer science with these steps.
+### Միացեք շարժմանը և ձեր աշակերտներին ծանոթացրեք համակարգչային գիտությանը այս քայլերով:
 
 Computational thinking helps nurture problem-solving skills, logic, and creativity. And technology is transforming every industry on the planet. Students today should learn how to create technology, not just use it. By starting early, they’ll have a foundation for success in any 21st-century career path.
 

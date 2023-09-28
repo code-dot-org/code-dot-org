@@ -25,7 +25,7 @@ Dasturlash Soatini sinab ko'rish - bu talabalarni informatika bilan tanishtirish
 
 <a id="how-to-video"></a>
 
-## 1. Dasturlash Soati amaliy qo'llanma videosini tomosha qiling <iframe width="500" height="255" src="//www.youtube.com/embed/SrnvvWDm73k" frameborder="0" allowfullscreen></iframe> 
+## 1. Dasturlash Soati amaliy qo'llanma videosini tomosha qiling <iframe width="500" height="255" src="https://www.youtube-nocookie.com/embed/SrnvvWDm73k" frameborder="0" allowfullscreen></iframe> 
 
 * * *
 

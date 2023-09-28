@@ -1,0 +1,54 @@
+{
+  "title": "Software Engineering and Computer Vision - Pre-Module Teacher Survey",
+  "logoPosition": "right",
+  "pages": [
+    {
+      "name": "preamble_page",
+      "elements": [
+        {
+          "type": "html",
+          "name": "survey_preamble_header_and_text",
+          "html": "<h1>Welcome to Code.org's Software Engineering and Computer Vision - Pre-Module Teacher Survey</h1>\n\n<p><strong>Code.org relies on surveys as a crucial tool to remain connected to teachers, and to give you the opportunity to provide feedback about your experience teaching our curriculum.</strong></p>\n<p>The purpose of this survey is to understand better who our teachers are, their motivation to teach Code.org's Software Engineering and Computer Vision module, and their previous experience with this content and tools.&nbsp;</p>\n<p><strong>Privacy and Confidentiality</strong></p>\n<ul>\n<li>Your individual responses here are completely <strong>confidential.</strong></li>\n<li>Your identity will&nbsp;<strong>never</strong> be revealed publicly or used to tie any responses back to you personally.</li>\n<li>We may share <strong>de-identified</strong>, aggregate data (representing all responses) publicly.</li>\n<li>Your <strong>de-identified&nbsp;</strong>responses will be used by Code.org to improve our curriculum and programs.</li>\n</ul>\n<p>This survey should take <strong>less than 5 minutes</strong> to complete.&nbsp;&nbsp;<strong>Your complete honesty and candor are appreciated.</strong></p>"
+        }
+      ]
+    },
+    {
+      "name": "page1",
+      "elements": [
+        {
+          "type": "html",
+          "name": "section1_student_experience",
+          "html": "<h2>Your Students</h2>\n<p><span style='font-size: 12pt;'>The purpose of this section of the survey is to understand how your students might benefit from the content of this module.</span></p>\n<p><span style='font-size: 12pt;'>Let's get started!</span></p>"
+        },
+        {
+          "type": "radiogroup",
+          "name": "students_code_purpose",
+          "title": "Most students in my class typically articulate the purpose and functionality of their code effectively.",
+          "choices": [
+            {
+              "value": "5",
+              "text": "Strongly Agree"
+            },
+            {
+              "value": "4",
+              "text": "Agree"
+            },
+            {
+              "value": "3",
+              "text": "Neutral"
+            },
+            {
+              "value": "2",
+              "text": "Disagree"
+            },
+            {
+              "value": "1",
+              "text": "Strongly Disagree"
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "published": false
+}

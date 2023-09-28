@@ -79,6 +79,19 @@
           "spinning right": "vrteći se udesno",
           "wandering": "lutanje"
         },
+        "CourseE_Project_SpriteLab_2023": {
+          "growing": "rastući",
+          "jittering": "treperenje",
+          "moving east": "krećući se prema istoku",
+          "moving north": "krećući se prema sjeveru",
+          "moving south": "krećući se prema jugu",
+          "moving west": "krećući se prema zapadu",
+          "patrolling": "patroliranje",
+          "shrinking": "skupljanje",
+          "spinning left": "vrteći se ulijevo",
+          "spinning right": "vrteći se udesno",
+          "wandering": "lutanje"
+        },
         "CourseE_Project_SpriteLab_cupcake_examples2022": {
           "driving with arrow keys": "vožnja sa strelicama",
           "fluttering": "lepršanje",
@@ -117,6 +130,25 @@
           "wandering": "lutanje",
           "wobbling": "njihanje"
         },
+        "CourseE_Project_SpriteLab_cupcake_examples_2023": {
+          "driving with arrow keys": "vožnja sa strelicama",
+          "fluttering": "lepršanje",
+          "growing": "rastući",
+          "jittering": "treperenje",
+          "moving east": "krećući se prema istoku",
+          "moving east and looping": "krećući se prema istoku i petljajući",
+          "moving north": "krećući se prema sjeveru",
+          "moving south": "krećući se prema jugu",
+          "moving west": "krećući se prema zapadu",
+          "moving west and looping": "krećući se prema zapadu i petljajući",
+          "moving with arrow keys": "vožnja sa strelicama",
+          "patrolling": "patroliranje",
+          "shrinking": "skupljanje",
+          "spinning left": "vrteći se ulijevo",
+          "spinning right": "vrteći se udesno",
+          "wandering": "lutanje",
+          "wobbling": "njihanje"
+        },
         "CourseE_Project_SpriteLab_examples2022": {
           "driving with arrow keys": "vožnja sa strelicama",
           "fluttering": "lepršanje",
@@ -137,6 +169,25 @@
           "wobbling": "njihanje"
         },
         "CourseE_Project_SpriteLab_examples_2021": {
+          "driving with arrow keys": "vožnja sa strelicama",
+          "fluttering": "lepršanje",
+          "growing": "rastući",
+          "jittering": "treperenje",
+          "moving east": "krećući se prema istoku",
+          "moving east and looping": "krećući se prema istoku i petljajući",
+          "moving north": "krećući se prema sjeveru",
+          "moving south": "krećući se prema jugu",
+          "moving west": "krećući se prema zapadu",
+          "moving west and looping": "krećući se prema zapadu i petljajući",
+          "moving with arrow keys": "vožnja sa strelicama",
+          "patrolling": "patroliranje",
+          "shrinking": "skupljanje",
+          "spinning left": "vrteći se ulijevo",
+          "spinning right": "vrteći se udesno",
+          "wandering": "lutanje",
+          "wobbling": "njihanje"
+        },
+        "CourseE_Project_SpriteLab_examples_2023": {
           "driving with arrow keys": "vožnja sa strelicama",
           "fluttering": "lepršanje",
           "growing": "rastući",
@@ -232,16 +283,25 @@
         "CourseF_outbreak1_-2022-2": {
           "wandering": "lutanje"
         },
+        "CourseF_outbreak1_2023": {
+          "wandering": "lutanje"
+        },
         "CourseF_outbreak2": {
           "wandering": "lutanje"
         },
         "CourseF_outbreak2_-2022-2": {
           "wandering": "lutanje"
         },
+        "CourseF_outbreak2_2023": {
+          "wandering": "lutanje"
+        },
         "CourseF_outbreak3": {
           "wandering": "lutanje"
         },
         "CourseF_outbreak3_-2022-2": {
+          "wandering": "lutanje"
+        },
+        "CourseF_outbreak3_2023": {
           "wandering": "lutanje"
         },
         "CourseF_outbreak4": {
@@ -272,16 +332,36 @@
           "spinning right": "vrteći se udesno",
           "wandering": "lutanje"
         },
+        "CourseF_outbreak4_2023": {
+          "growing": "rastući",
+          "jittering": "treperenje",
+          "moving east": "krećući se prema istoku",
+          "moving north": "krećući se prema sjeveru",
+          "moving south": "krećući se prema jugu",
+          "moving west": "krećući se prema zapadu",
+          "moving with arrow keys": "vožnja sa strelicama",
+          "patrolling": "patroliranje",
+          "shrinking": "skupljanje",
+          "spinning left": "vrteći se ulijevo",
+          "spinning right": "vrteći se udesno",
+          "wandering": "lutanje"
+        },
         "CourseF_outbreak5": {
           "wandering": "lutanje"
         },
         "CourseF_outbreak5_-2022-2": {
           "wandering": "lutanje"
         },
+        "CourseF_outbreak5_2023": {
+          "wandering": "lutanje"
+        },
         "CourseF_outbreak6": {
           "wandering": "lutanje"
         },
         "CourseF_outbreak6_-2022-2": {
+          "wandering": "lutanje"
+        },
+        "CourseF_outbreak6_2023": {
           "wandering": "lutanje"
         },
         "CourseF_outbreak7": {
@@ -312,6 +392,20 @@
           "spinning right": "vrteći se udesno",
           "wandering": "lutanje"
         },
+        "CourseF_outbreak7_2023": {
+          "growing": "rastući",
+          "jittering": "treperenje",
+          "moving east": "krećući se prema istoku",
+          "moving north": "krećući se prema sjeveru",
+          "moving south": "krećući se prema jugu",
+          "moving west": "krećući se prema zapadu",
+          "moving with arrow keys": "vožnja sa strelicama",
+          "patrolling": "patroliranje",
+          "shrinking": "skupljanje",
+          "spinning left": "vrteći se ulijevo",
+          "spinning right": "vrteći se udesno",
+          "wandering": "lutanje"
+        },
         "CourseF_outbreak8": {
           "growing": "rastući",
           "jittering": "treperenje",
@@ -327,6 +421,20 @@
           "wandering": "lutanje"
         },
         "CourseF_outbreak8_-2022-2": {
+          "growing": "rastući",
+          "jittering": "treperenje",
+          "moving east": "krećući se prema istoku",
+          "moving north": "krećući se prema sjeveru",
+          "moving south": "krećući se prema jugu",
+          "moving west": "krećući se prema zapadu",
+          "moving with arrow keys": "vožnja sa strelicama",
+          "patrolling": "patroliranje",
+          "shrinking": "skupljanje",
+          "spinning left": "vrteći se ulijevo",
+          "spinning right": "vrteći se udesno",
+          "wandering": "lutanje"
+        },
+        "CourseF_outbreak8_2023": {
           "growing": "rastući",
           "jittering": "treperenje",
           "moving east": "krećući se prema istoku",
@@ -653,6 +761,18 @@
           "spinning right": "vrteći se udesno",
           "wandering": "lutanje"
         },
+        "Fish Tank 2-validated_2023": {
+          "growing": "rastući",
+          "jittering": "treperenje",
+          "moving east": "krećući se prema istoku",
+          "moving north": "krećući se prema sjeveru",
+          "moving south": "krećući se prema jugu",
+          "moving west": "krećući se prema zapadu",
+          "patrolling": "patroliranje",
+          "shrinking": "skupljanje",
+          "spinning right": "vrteći se udesno",
+          "wandering": "lutanje"
+        },
         "Fish Tank 3-validated2022": {
           "growing": "rastući",
           "jittering": "treperenje",
@@ -690,6 +810,18 @@
           "wandering": "lutanje"
         },
         "Fish Tank 3-validated_2021": {
+          "growing": "rastući",
+          "jittering": "treperenje",
+          "moving east": "krećući se prema istoku",
+          "moving north": "krećući se prema sjeveru",
+          "moving south": "krećući se prema jugu",
+          "moving west": "krećući se prema zapadu",
+          "patrolling": "patroliranje",
+          "shrinking": "skupljanje",
+          "spinning right": "vrteći se udesno",
+          "wandering": "lutanje"
+        },
+        "Fish Tank 3-validated_2023": {
           "growing": "rastući",
           "jittering": "treperenje",
           "moving east": "krećući se prema istoku",
@@ -749,6 +881,18 @@
           "spinning right": "vrteći se udesno",
           "wandering": "lutanje"
         },
+        "Fish Tank 4-validated_2023": {
+          "growing": "rastući",
+          "jittering": "treperenje",
+          "moving east": "krećući se prema istoku",
+          "moving north": "krećući se prema sjeveru",
+          "moving south": "krećući se prema jugu",
+          "moving west": "krećući se prema zapadu",
+          "patrolling": "patroliranje",
+          "shrinking": "skupljanje",
+          "spinning right": "vrteći se udesno",
+          "wandering": "lutanje"
+        },
         "Fish Tank 5-validated2022": {
           "growing": "rastući",
           "jittering": "treperenje",
@@ -797,6 +941,18 @@
           "spinning right": "vrteći se udesno",
           "wandering": "lutanje"
         },
+        "Fish Tank 5-validated_2023": {
+          "growing": "rastući",
+          "jittering": "treperenje",
+          "moving east": "krećući se prema istoku",
+          "moving north": "krećući se prema sjeveru",
+          "moving south": "krećući se prema jugu",
+          "moving west": "krećući se prema zapadu",
+          "patrolling": "patroliranje",
+          "shrinking": "skupljanje",
+          "spinning right": "vrteći se udesno",
+          "wandering": "lutanje"
+        },
         "Fish Tank 6-validated2022": {
           "growing": "rastući",
           "jittering": "treperenje",
@@ -834,6 +990,18 @@
           "wandering": "lutanje"
         },
         "Fish Tank 6-validated_2021": {
+          "growing": "rastući",
+          "jittering": "treperenje",
+          "moving east": "krećući se prema istoku",
+          "moving north": "krećući se prema sjeveru",
+          "moving south": "krećući se prema jugu",
+          "moving west": "krećući se prema zapadu",
+          "patrolling": "patroliranje",
+          "shrinking": "skupljanje",
+          "spinning right": "vrteći se udesno",
+          "wandering": "lutanje"
+        },
+        "Fish Tank 6-validated_2023": {
           "growing": "rastući",
           "jittering": "treperenje",
           "moving east": "krećući se prema istoku",
@@ -969,6 +1137,25 @@
           "wandering": "lutanje",
           "wobbling": "njihanje"
         },
+        "Virtual Pet 1_2023": {
+          "driving with arrow keys": "vožnja sa strelicama",
+          "fluttering": "lepršanje",
+          "growing": "rastući",
+          "jittering": "treperenje",
+          "moving east": "krećući se prema istoku",
+          "moving east and looping": "krećući se prema istoku i petljajući",
+          "moving north": "krećući se prema sjeveru",
+          "moving south": "krećući se prema jugu",
+          "moving west": "krećući se prema zapadu",
+          "moving west and looping": "krećući se prema zapadu i petljajući",
+          "moving with arrow keys": "vožnja sa strelicama",
+          "patrolling": "patroliranje",
+          "shrinking": "skupljanje",
+          "spinning left": "vrteći se ulijevo",
+          "spinning right": "vrteći se udesno",
+          "wandering": "lutanje",
+          "wobbling": "njihanje"
+        },
         "Virtual Pet 2": {
           "growing": "rastući",
           "jittering": "treperenje",
@@ -1034,6 +1221,19 @@
           "spinning right": "vrteći se udesno",
           "wandering": "lutanje"
         },
+        "Virtual Pet 2_2023": {
+          "growing": "rastući",
+          "jittering": "treperenje",
+          "moving east": "krećući se prema istoku",
+          "moving north": "krećući se prema sjeveru",
+          "moving south": "krećući se prema jugu",
+          "moving west": "krećući se prema zapadu",
+          "patrolling": "patroliranje",
+          "shrinking": "skupljanje",
+          "spinning left": "vrteći se ulijevo",
+          "spinning right": "vrteći se udesno",
+          "wandering": "lutanje"
+        },
         "Virtual Pet 3_-2022-2": {
           "growing": "rastući",
           "jittering": "treperenje",
@@ -1074,6 +1274,19 @@
           "wandering": "lutanje"
         },
         "Virtual Pet 3_2021": {
+          "growing": "rastući",
+          "jittering": "treperenje",
+          "moving east": "krećući se prema istoku",
+          "moving north": "krećući se prema sjeveru",
+          "moving south": "krećući se prema jugu",
+          "moving west": "krećući se prema zapadu",
+          "patrolling": "patroliranje",
+          "shrinking": "skupljanje",
+          "spinning left": "vrteći se ulijevo",
+          "spinning right": "vrteći se udesno",
+          "wandering": "lutanje"
+        },
+        "Virtual Pet 3_2023": {
           "growing": "rastući",
           "jittering": "treperenje",
           "moving east": "krećući se prema istoku",
@@ -1460,6 +1673,19 @@
           "spinning right": "vrteći se udesno",
           "wandering": "lutanje"
         },
+        "courseE_aboutme_2_2023": {
+          "growing": "rastući",
+          "jittering": "treperenje",
+          "moving east": "krećući se prema istoku",
+          "moving north": "krećući se prema sjeveru",
+          "moving south": "krećući se prema jugu",
+          "moving west": "krećući se prema zapadu",
+          "patrolling": "patroliranje",
+          "shrinking": "skupljanje",
+          "spinning left": "vrteći se ulijevo",
+          "spinning right": "vrteći se udesno",
+          "wandering": "lutanje"
+        },
         "courseE_aboutme_3": {
           "growing": "rastući",
           "jittering": "treperenje",
@@ -1500,6 +1726,19 @@
           "wandering": "lutanje"
         },
         "courseE_aboutme_3_2021": {
+          "growing": "rastući",
+          "jittering": "treperenje",
+          "moving east": "krećući se prema istoku",
+          "moving north": "krećući se prema sjeveru",
+          "moving south": "krećući se prema jugu",
+          "moving west": "krećući se prema zapadu",
+          "patrolling": "patroliranje",
+          "shrinking": "skupljanje",
+          "spinning left": "vrteći se ulijevo",
+          "spinning right": "vrteći se udesno",
+          "wandering": "lutanje"
+        },
+        "courseE_aboutme_3_2023": {
           "growing": "rastući",
           "jittering": "treperenje",
           "moving east": "krećući se prema istoku",
@@ -1564,6 +1803,19 @@
           "spinning right": "vrteći se udesno",
           "wandering": "lutanje"
         },
+        "courseE_aboutme_4_2023": {
+          "growing": "rastući",
+          "jittering": "treperenje",
+          "moving east": "krećući se prema istoku",
+          "moving north": "krećući se prema sjeveru",
+          "moving south": "krećući se prema jugu",
+          "moving west": "krećući se prema zapadu",
+          "patrolling": "patroliranje",
+          "shrinking": "skupljanje",
+          "spinning left": "vrteći se ulijevo",
+          "spinning right": "vrteći se udesno",
+          "wandering": "lutanje"
+        },
         "courseE_aboutme_5": {
           "growing": "rastući",
           "jittering": "treperenje",
@@ -1604,6 +1856,19 @@
           "wandering": "lutanje"
         },
         "courseE_aboutme_5_2021": {
+          "growing": "rastući",
+          "jittering": "treperenje",
+          "moving east": "krećući se prema istoku",
+          "moving north": "krećući se prema sjeveru",
+          "moving south": "krećući se prema jugu",
+          "moving west": "krećući se prema zapadu",
+          "patrolling": "patroliranje",
+          "shrinking": "skupljanje",
+          "spinning left": "vrteći se ulijevo",
+          "spinning right": "vrteći se udesno",
+          "wandering": "lutanje"
+        },
+        "courseE_aboutme_5_2023": {
           "growing": "rastući",
           "jittering": "treperenje",
           "moving east": "krećući se prema istoku",
@@ -1664,6 +1929,22 @@
           "wandering": "lutanje",
           "wobbling": "njihanje"
         },
+        "courseF_apps_aquarium_2023": {
+          "driving with arrow keys": "vožnja sa strelicama",
+          "growing": "rastući",
+          "jittering": "treperenje",
+          "moving east": "krećući se prema istoku",
+          "moving north": "krećući se prema sjeveru",
+          "moving south": "krećući se prema jugu",
+          "moving west": "krećući se prema zapadu",
+          "moving with arrow keys": "vožnja sa strelicama",
+          "patrolling": "patroliranje",
+          "shrinking": "skupljanje",
+          "spinning left": "vrteći se ulijevo",
+          "spinning right": "vrteći se udesno",
+          "wandering": "lutanje",
+          "wobbling": "njihanje"
+        },
         "courseF_apps_card": {
           "driving with arrow keys": "vožnja sa strelicama",
           "growing": "rastući",
@@ -1695,6 +1976,21 @@
           "wandering": "lutanje"
         },
         "courseF_apps_card_-2022-2": {
+          "driving with arrow keys": "vožnja sa strelicama",
+          "growing": "rastući",
+          "jittering": "treperenje",
+          "moving east": "krećući se prema istoku",
+          "moving north": "krećući se prema sjeveru",
+          "moving south": "krećući se prema jugu",
+          "moving west": "krećući se prema zapadu",
+          "moving with arrow keys": "vožnja sa strelicama",
+          "patrolling": "patroliranje",
+          "shrinking": "skupljanje",
+          "spinning left": "vrteći se ulijevo",
+          "spinning right": "vrteći se udesno",
+          "wandering": "lutanje"
+        },
+        "courseF_apps_card_2023": {
           "driving with arrow keys": "vožnja sa strelicama",
           "growing": "rastući",
           "jittering": "treperenje",
@@ -1754,6 +2050,21 @@
           "spinning right": "vrteći se udesno",
           "wandering": "lutanje"
         },
+        "courseF_apps_chatbot_2023": {
+          "driving with arrow keys": "vožnja sa strelicama",
+          "growing": "rastući",
+          "jittering": "treperenje",
+          "moving east": "krećući se prema istoku",
+          "moving north": "krećući se prema sjeveru",
+          "moving south": "krećući se prema jugu",
+          "moving west": "krećući se prema zapadu",
+          "moving with arrow keys": "vožnja sa strelicama",
+          "patrolling": "patroliranje",
+          "shrinking": "skupljanje",
+          "spinning left": "vrteći se ulijevo",
+          "spinning right": "vrteći se udesno",
+          "wandering": "lutanje"
+        },
         "courseF_apps_collector": {
           "driving with arrow keys": "vožnja sa strelicama",
           "fluttering": "lepršanje",
@@ -1785,6 +2096,21 @@
           "wandering": "lutanje"
         },
         "courseF_apps_collector_-2022-2": {
+          "driving with arrow keys": "vožnja sa strelicama",
+          "fluttering": "lepršanje",
+          "growing": "rastući",
+          "jittering": "treperenje",
+          "moving east": "krećući se prema istoku",
+          "moving north": "krećući se prema sjeveru",
+          "moving south": "krećući se prema jugu",
+          "moving with arrow keys": "vožnja sa strelicama",
+          "patrolling": "patroliranje",
+          "shrinking": "skupljanje",
+          "spinning left": "vrteći se ulijevo",
+          "spinning right": "vrteći se udesno",
+          "wandering": "lutanje"
+        },
+        "courseF_apps_collector_2023": {
           "driving with arrow keys": "vožnja sa strelicama",
           "fluttering": "lepršanje",
           "growing": "rastući",
@@ -1836,6 +2162,24 @@
           "wobbling": "njihanje"
         },
         "courseF_apps_madlib_-2022-2": {
+          "fluttering": "lepršanje",
+          "growing": "rastući",
+          "jittering": "treperenje",
+          "moving east": "krećući se prema istoku",
+          "moving east and looping": "krećući se prema istoku i petljajući",
+          "moving north": "krećući se prema sjeveru",
+          "moving south": "krećući se prema jugu",
+          "moving west": "krećući se prema zapadu",
+          "moving west and looping": "krećući se prema zapadu i petljajući",
+          "moving with arrow keys": "vožnja sa strelicama",
+          "patrolling": "patroliranje",
+          "shrinking": "skupljanje",
+          "spinning left": "vrteći se ulijevo",
+          "spinning right": "vrteći se udesno",
+          "wandering": "lutanje",
+          "wobbling": "njihanje"
+        },
+        "courseF_apps_madlib_2023": {
           "fluttering": "lepršanje",
           "growing": "rastući",
           "jittering": "treperenje",
@@ -1910,6 +2254,25 @@
           "wandering": "lutanje",
           "wobbling": "njihanje"
         },
+        "courseF_apps_pet_2023": {
+          "driving with arrow keys": "vožnja sa strelicama",
+          "fluttering": "lepršanje",
+          "growing": "rastući",
+          "jittering": "treperenje",
+          "moving east": "krećući se prema istoku",
+          "moving east and looping": "krećući se prema istoku i petljajući",
+          "moving north": "krećući se prema sjeveru",
+          "moving south": "krećući se prema jugu",
+          "moving west": "krećući se prema zapadu",
+          "moving west and looping": "krećući se prema zapadu i petljajući",
+          "moving with arrow keys": "vožnja sa strelicama",
+          "patrolling": "patroliranje",
+          "shrinking": "skupljanje",
+          "spinning left": "vrteći se ulijevo",
+          "spinning right": "vrteći se udesno",
+          "wandering": "lutanje",
+          "wobbling": "njihanje"
+        },
         "courseF_editable_card": {
           "driving with arrow keys": "vožnja sa strelicama",
           "growing": "rastući",
@@ -1926,6 +2289,21 @@
           "wandering": "lutanje"
         },
         "courseF_editable_card_-2022-2": {
+          "driving with arrow keys": "vožnja sa strelicama",
+          "growing": "rastući",
+          "jittering": "treperenje",
+          "moving east": "krećući se prema istoku",
+          "moving north": "krećući se prema sjeveru",
+          "moving south": "krećući se prema jugu",
+          "moving west": "krećući se prema zapadu",
+          "moving with arrow keys": "vožnja sa strelicama",
+          "patrolling": "patroliranje",
+          "shrinking": "skupljanje",
+          "spinning left": "vrteći se ulijevo",
+          "spinning right": "vrteći se udesno",
+          "wandering": "lutanje"
+        },
+        "courseF_editable_card_2023": {
           "driving with arrow keys": "vožnja sa strelicama",
           "growing": "rastući",
           "jittering": "treperenje",
@@ -1970,6 +2348,21 @@
           "spinning right": "vrteći se udesno",
           "wandering": "lutanje"
         },
+        "courseF_editable_chatbot_2023": {
+          "driving with arrow keys": "vožnja sa strelicama",
+          "growing": "rastući",
+          "jittering": "treperenje",
+          "moving east": "krećući se prema istoku",
+          "moving north": "krećući se prema sjeveru",
+          "moving south": "krećući se prema jugu",
+          "moving west": "krećući se prema zapadu",
+          "moving with arrow keys": "vožnja sa strelicama",
+          "patrolling": "patroliranje",
+          "shrinking": "skupljanje",
+          "spinning left": "vrteći se ulijevo",
+          "spinning right": "vrteći se udesno",
+          "wandering": "lutanje"
+        },
         "courseF_editable_madlib": {
           "fluttering": "lepršanje",
           "growing": "rastući",
@@ -1989,6 +2382,24 @@
           "wobbling": "njihanje"
         },
         "courseF_editable_madlib_-2022-2": {
+          "fluttering": "lepršanje",
+          "growing": "rastući",
+          "jittering": "treperenje",
+          "moving east": "krećući se prema istoku",
+          "moving east and looping": "krećući se prema istoku i petljajući",
+          "moving north": "krećući se prema sjeveru",
+          "moving south": "krećući se prema jugu",
+          "moving west": "krećući se prema zapadu",
+          "moving west and looping": "krećući se prema zapadu i petljajući",
+          "moving with arrow keys": "vožnja sa strelicama",
+          "patrolling": "patroliranje",
+          "shrinking": "skupljanje",
+          "spinning left": "vrteći se ulijevo",
+          "spinning right": "vrteći se udesno",
+          "wandering": "lutanje",
+          "wobbling": "njihanje"
+        },
+        "courseF_editable_madlib_2023": {
           "fluttering": "lepršanje",
           "growing": "rastući",
           "jittering": "treperenje",
@@ -2052,7 +2463,38 @@
           "spinning right": "vrteći se udesno",
           "wandering": "lutanje"
         },
+        "courseF_events_choice_conflict2_2023": {
+          "fluttering": "lepršanje",
+          "growing": "rastući",
+          "moving east": "krećući se prema istoku",
+          "moving east and looping": "krećući se prema istoku i petljajući",
+          "moving north": "krećući se prema sjeveru",
+          "moving south": "krećući se prema jugu",
+          "moving west": "krećući se prema zapadu",
+          "moving west and looping": "krećući se prema zapadu i petljajući",
+          "patrolling": "patroliranje",
+          "shrinking": "skupljanje",
+          "spinning left": "vrteći se ulijevo",
+          "spinning right": "vrteći se udesno",
+          "wandering": "lutanje"
+        },
         "courseF_events_choice_conflict_-2022-2": {
+          "fluttering": "lepršanje",
+          "growing": "rastući",
+          "jittering": "treperenje",
+          "moving east": "krećući se prema istoku",
+          "moving east and looping": "krećući se prema istoku i petljajući",
+          "moving north": "krećući se prema sjeveru",
+          "moving south": "krećući se prema jugu",
+          "moving west": "krećući se prema zapadu",
+          "moving west and looping": "krećući se prema zapadu i petljajući",
+          "patrolling": "patroliranje",
+          "shrinking": "skupljanje",
+          "spinning left": "vrteći se ulijevo",
+          "spinning right": "vrteći se udesno",
+          "wandering": "lutanje"
+        },
+        "courseF_events_choice_conflict_2023": {
           "fluttering": "lepršanje",
           "growing": "rastući",
           "jittering": "treperenje",
@@ -2086,6 +2528,23 @@
           "wobbling": "njihanje"
         },
         "courseF_events_choice_penguin_-2022-2": {
+          "fluttering": "lepršanje",
+          "growing": "rastući",
+          "jittering": "treperenje",
+          "moving east": "krećući se prema istoku",
+          "moving east and looping": "krećući se prema istoku i petljajući",
+          "moving north": "krećući se prema sjeveru",
+          "moving south": "krećući se prema jugu",
+          "moving west": "krećući se prema zapadu",
+          "moving west and looping": "krećući se prema zapadu i petljajući",
+          "patrolling": "patroliranje",
+          "shrinking": "skupljanje",
+          "spinning left": "vrteći se ulijevo",
+          "spinning right": "vrteći se udesno",
+          "wandering": "lutanje",
+          "wobbling": "njihanje"
+        },
+        "courseF_events_choice_penguin_2023": {
           "fluttering": "lepršanje",
           "growing": "rastući",
           "jittering": "treperenje",
@@ -2136,6 +2595,23 @@
           "wandering": "lutanje",
           "wobbling": "njihanje"
         },
+        "courseF_events_choice_pufferfish_2023": {
+          "fluttering": "lepršanje",
+          "growing": "rastući",
+          "jittering": "treperenje",
+          "moving east": "krećući se prema istoku",
+          "moving east and looping": "krećući se prema istoku i petljajući",
+          "moving north": "krećući se prema sjeveru",
+          "moving south": "krećući se prema jugu",
+          "moving west": "krećući se prema zapadu",
+          "moving west and looping": "krećući se prema zapadu i petljajući",
+          "patrolling": "patroliranje",
+          "shrinking": "skupljanje",
+          "spinning left": "vrteći se ulijevo",
+          "spinning right": "vrteći se udesno",
+          "wandering": "lutanje",
+          "wobbling": "njihanje"
+        },
         "courseF_events_conflict": {
           "fluttering": "lepršanje",
           "growing": "rastući",
@@ -2153,6 +2629,22 @@
           "wandering": "lutanje"
         },
         "courseF_events_conflict_-2022-2": {
+          "fluttering": "lepršanje",
+          "growing": "rastući",
+          "jittering": "treperenje",
+          "moving east": "krećući se prema istoku",
+          "moving east and looping": "krećući se prema istoku i petljajući",
+          "moving north": "krećući se prema sjeveru",
+          "moving south": "krećući se prema jugu",
+          "moving west": "krećući se prema zapadu",
+          "moving west and looping": "krećući se prema zapadu i petljajući",
+          "patrolling": "patroliranje",
+          "shrinking": "skupljanje",
+          "spinning left": "vrteći se ulijevo",
+          "spinning right": "vrteći se udesno",
+          "wandering": "lutanje"
+        },
+        "courseF_events_conflict_2023": {
           "fluttering": "lepršanje",
           "growing": "rastući",
           "jittering": "treperenje",
@@ -2200,6 +2692,22 @@
           "wandering": "lutanje",
           "wobbling": "njihanje"
         },
+        "courseF_events_freeplay_air_2023": {
+          "fluttering": "lepršanje",
+          "growing": "rastući",
+          "jittering": "treperenje",
+          "moving east": "krećući se prema istoku",
+          "moving east and looping": "krećući se prema istoku i petljajući",
+          "moving north": "krećući se prema sjeveru",
+          "moving south": "krećući se prema jugu",
+          "moving west": "krećući se prema zapadu",
+          "moving west and looping": "krećući se prema zapadu i petljajući",
+          "shrinking": "skupljanje",
+          "spinning left": "vrteći se ulijevo",
+          "spinning right": "vrteći se udesno",
+          "wandering": "lutanje",
+          "wobbling": "njihanje"
+        },
         "courseF_events_freeplay_animals": {
           "fluttering": "lepršanje",
           "growing": "rastući",
@@ -2217,6 +2725,22 @@
           "wobbling": "njihanje"
         },
         "courseF_events_freeplay_animals_-2022-2": {
+          "fluttering": "lepršanje",
+          "growing": "rastući",
+          "jittering": "treperenje",
+          "moving east": "krećući se prema istoku",
+          "moving east and looping": "krećući se prema istoku i petljajući",
+          "moving north": "krećući se prema sjeveru",
+          "moving south": "krećući se prema jugu",
+          "moving west": "krećući se prema zapadu",
+          "moving west and looping": "krećući se prema zapadu i petljajući",
+          "shrinking": "skupljanje",
+          "spinning left": "vrteći se ulijevo",
+          "spinning right": "vrteći se udesno",
+          "wandering": "lutanje",
+          "wobbling": "njihanje"
+        },
+        "courseF_events_freeplay_animals_2023": {
           "fluttering": "lepršanje",
           "growing": "rastući",
           "jittering": "treperenje",
@@ -2264,6 +2788,22 @@
           "wandering": "lutanje",
           "wobbling": "njihanje"
         },
+        "courseF_events_freeplay_aquatic_2023": {
+          "fluttering": "lepršanje",
+          "growing": "rastući",
+          "jittering": "treperenje",
+          "moving east": "krećući se prema istoku",
+          "moving east and looping": "krećući se prema istoku i petljajući",
+          "moving north": "krećući se prema sjeveru",
+          "moving south": "krećući se prema jugu",
+          "moving west": "krećući se prema zapadu",
+          "moving west and looping": "krećući se prema zapadu i petljajući",
+          "shrinking": "skupljanje",
+          "spinning left": "vrteći se ulijevo",
+          "spinning right": "vrteći se udesno",
+          "wandering": "lutanje",
+          "wobbling": "njihanje"
+        },
         "courseF_events_freeplay_blank": {
           "fluttering": "lepršanje",
           "growing": "rastući",
@@ -2281,6 +2821,22 @@
           "wobbling": "njihanje"
         },
         "courseF_events_freeplay_blank_-2022-2": {
+          "fluttering": "lepršanje",
+          "growing": "rastući",
+          "jittering": "treperenje",
+          "moving east": "krećući se prema istoku",
+          "moving east and looping": "krećući se prema istoku i petljajući",
+          "moving north": "krećući se prema sjeveru",
+          "moving south": "krećući se prema jugu",
+          "moving west": "krećući se prema zapadu",
+          "moving west and looping": "krećući se prema zapadu i petljajući",
+          "shrinking": "skupljanje",
+          "spinning left": "vrteći se ulijevo",
+          "spinning right": "vrteći se udesno",
+          "wandering": "lutanje",
+          "wobbling": "njihanje"
+        },
+        "courseF_events_freeplay_blank_2023": {
           "fluttering": "lepršanje",
           "growing": "rastući",
           "jittering": "treperenje",
@@ -2328,6 +2884,22 @@
           "wandering": "lutanje",
           "wobbling": "njihanje"
         },
+        "courseF_events_freeplay_food_2023": {
+          "fluttering": "lepršanje",
+          "growing": "rastući",
+          "jittering": "treperenje",
+          "moving east": "krećući se prema istoku",
+          "moving east and looping": "krećući se prema istoku i petljajući",
+          "moving north": "krećući se prema sjeveru",
+          "moving south": "krećući se prema jugu",
+          "moving west": "krećući se prema zapadu",
+          "moving west and looping": "krećući se prema zapadu i petljajući",
+          "shrinking": "skupljanje",
+          "spinning left": "vrteći se ulijevo",
+          "spinning right": "vrteći se udesno",
+          "wandering": "lutanje",
+          "wobbling": "njihanje"
+        },
         "courseF_events_freeplay_space": {
           "fluttering": "lepršanje",
           "growing": "rastući",
@@ -2345,6 +2917,22 @@
           "wobbling": "njihanje"
         },
         "courseF_events_freeplay_space_-2022-2": {
+          "fluttering": "lepršanje",
+          "growing": "rastući",
+          "jittering": "treperenje",
+          "moving east": "krećući se prema istoku",
+          "moving east and looping": "krećući se prema istoku i petljajući",
+          "moving north": "krećući se prema sjeveru",
+          "moving south": "krećući se prema jugu",
+          "moving west": "krećući se prema zapadu",
+          "moving west and looping": "krećući se prema zapadu i petljajući",
+          "shrinking": "skupljanje",
+          "spinning left": "vrteći se ulijevo",
+          "spinning right": "vrteći se udesno",
+          "wandering": "lutanje",
+          "wobbling": "njihanje"
+        },
+        "courseF_events_freeplay_space_2023": {
           "fluttering": "lepršanje",
           "growing": "rastući",
           "jittering": "treperenje",
@@ -2378,6 +2966,23 @@
           "wobbling": "njihanje"
         },
         "courseF_events_key_-2022-2": {
+          "fluttering": "lepršanje",
+          "growing": "rastući",
+          "jittering": "treperenje",
+          "moving east": "krećući se prema istoku",
+          "moving east and looping": "krećući se prema istoku i petljajući",
+          "moving north": "krećući se prema sjeveru",
+          "moving south": "krećući se prema jugu",
+          "moving west": "krećući se prema zapadu",
+          "moving west and looping": "krećući se prema zapadu i petljajući",
+          "patrolling": "patroliranje",
+          "shrinking": "skupljanje",
+          "spinning left": "vrteći se ulijevo",
+          "spinning right": "vrteći se udesno",
+          "wandering": "lutanje",
+          "wobbling": "njihanje"
+        },
+        "courseF_events_key_2023": {
           "fluttering": "lepršanje",
           "growing": "rastući",
           "jittering": "treperenje",
@@ -2432,6 +3037,25 @@
           "wandering": "lutanje",
           "wobbling": "njihanje"
         },
+        "courseF_events_practice_reorder_2023": {
+          "driving with arrow keys": "vožnja sa strelicama",
+          "fluttering": "lepršanje",
+          "growing": "rastući",
+          "jittering": "treperenje",
+          "moving east": "krećući se prema istoku",
+          "moving east and looping": "krećući se prema istoku i petljajući",
+          "moving north": "krećući se prema sjeveru",
+          "moving south": "krećući se prema jugu",
+          "moving west": "krećući se prema zapadu",
+          "moving west and looping": "krećući se prema zapadu i petljajući",
+          "moving with arrow keys": "vožnja sa strelicama",
+          "patrolling": "patroliranje",
+          "shrinking": "skupljanje",
+          "spinning left": "vrteći se ulijevo",
+          "spinning right": "vrteći se udesno",
+          "wandering": "lutanje",
+          "wobbling": "njihanje"
+        },
         "courseF_events_predict": {
           "growing": "rastući",
           "jittering": "treperenje",
@@ -2446,6 +3070,19 @@
           "wandering": "lutanje"
         },
         "courseF_events_predict_-2022-2": {
+          "growing": "rastući",
+          "jittering": "treperenje",
+          "moving east": "krećući se prema istoku",
+          "moving north": "krećući se prema sjeveru",
+          "moving south": "krećući se prema jugu",
+          "moving west": "krećući se prema zapadu",
+          "patrolling": "patroliranje",
+          "shrinking": "skupljanje",
+          "spinning left": "vrteći se ulijevo",
+          "spinning right": "vrteći se udesno",
+          "wandering": "lutanje"
+        },
+        "courseF_events_predict_2023": {
           "growing": "rastući",
           "jittering": "treperenje",
           "moving east": "krećući se prema istoku",
@@ -2492,6 +3129,23 @@
           "wandering": "lutanje",
           "wobbling": "njihanje"
         },
+        "courseF_events_review_2023": {
+          "fluttering": "lepršanje",
+          "growing": "rastući",
+          "jittering": "treperenje",
+          "moving east": "krećući se prema istoku",
+          "moving east and looping": "krećući se prema istoku i petljajući",
+          "moving north": "krećući se prema sjeveru",
+          "moving south": "krećući se prema jugu",
+          "moving west": "krećući se prema zapadu",
+          "moving west and looping": "krećući se prema zapadu i petljajući",
+          "patrolling": "patroliranje",
+          "shrinking": "skupljanje",
+          "spinning left": "vrteći se ulijevo",
+          "spinning right": "vrteći se udesno",
+          "wandering": "lutanje",
+          "wobbling": "njihanje"
+        },
         "courseF_events_ship": {
           "fluttering": "lepršanje",
           "growing": "rastući",
@@ -2510,6 +3164,23 @@
           "wobbling": "njihanje"
         },
         "courseF_events_ship_-2022-2": {
+          "fluttering": "lepršanje",
+          "growing": "rastući",
+          "jittering": "treperenje",
+          "moving east": "krećući se prema istoku",
+          "moving east and looping": "krećući se prema istoku i petljajući",
+          "moving north": "krećući se prema sjeveru",
+          "moving south": "krećući se prema jugu",
+          "moving west": "krećući se prema zapadu",
+          "moving west and looping": "krećući se prema zapadu i petljajući",
+          "patrolling": "patroliranje",
+          "shrinking": "skupljanje",
+          "spinning left": "vrteći se ulijevo",
+          "spinning right": "vrteći se udesno",
+          "wandering": "lutanje",
+          "wobbling": "njihanje"
+        },
+        "courseF_events_ship_2023": {
           "fluttering": "lepršanje",
           "growing": "rastući",
           "jittering": "treperenje",
@@ -2592,6 +3263,23 @@
           "wandering": "lutanje",
           "wobbling": "njihanje"
         },
+        "courseF_events_time_2023": {
+          "fluttering": "lepršanje",
+          "growing": "rastući",
+          "jittering": "treperenje",
+          "moving east": "krećući se prema istoku",
+          "moving east and looping": "krećući se prema istoku i petljajući",
+          "moving north": "krećući se prema sjeveru",
+          "moving south": "krećući se prema jugu",
+          "moving west": "krećući se prema zapadu",
+          "moving west and looping": "krećući se prema zapadu i petljajući",
+          "patrolling": "patroliranje",
+          "shrinking": "skupljanje",
+          "spinning left": "vrteći se ulijevo",
+          "spinning right": "vrteći se udesno",
+          "wandering": "lutanje",
+          "wobbling": "njihanje"
+        },
         "courseF_extras_sim": {
           "wandering 1": "lutanje 1",
           "wandering 2": "lutanje 2"
@@ -2622,6 +3310,19 @@
           "spinning right": "vrteći se udesno",
           "wandering": "lutanje"
         },
+        "courseF_label_predict_2023": {
+          "growing": "rastući",
+          "jittering": "treperenje",
+          "moving east": "krećući se prema istoku",
+          "moving north": "krećući se prema sjeveru",
+          "moving south": "krećući se prema jugu",
+          "moving west": "krećući se prema zapadu",
+          "patrolling": "patroliranje",
+          "shrinking": "skupljanje",
+          "spinning left": "vrteći se ulijevo",
+          "spinning right": "vrteći se udesno",
+          "wandering": "lutanje"
+        },
         "courseF_place_fruit": {
           "fluttering": "lepršanje",
           "growing": "rastući",
@@ -2638,6 +3339,21 @@
           "wobbling": "njihanje"
         },
         "courseF_place_fruit_-2022-2": {
+          "fluttering": "lepršanje",
+          "growing": "rastući",
+          "jittering": "treperenje",
+          "moving east": "krećući se prema istoku",
+          "moving east and looping": "krećući se prema istoku i petljajući",
+          "moving north": "krećući se prema sjeveru",
+          "moving south": "krećući se prema jugu",
+          "moving west": "krećući se prema zapadu",
+          "moving west and looping": "krećući se prema zapadu i petljajući",
+          "shrinking": "skupljanje",
+          "spinning left": "vrteći se ulijevo",
+          "spinning right": "vrteći se udesno",
+          "wobbling": "njihanje"
+        },
+        "courseF_place_fruit_2023": {
           "fluttering": "lepršanje",
           "growing": "rastući",
           "jittering": "treperenje",
@@ -2685,6 +3401,16 @@
           "spinning left": "vrteći se ulijevo",
           "spinning right": "vrteći se udesno"
         },
+        "courseF_sprites_behaviors_2023": {
+          "growing": "rastući",
+          "moving east": "krećući se prema istoku",
+          "moving north": "krećući se prema sjeveru",
+          "moving south": "krećući se prema jugu",
+          "moving west": "krećući se prema zapadu",
+          "shrinking": "skupljanje",
+          "spinning left": "vrteći se ulijevo",
+          "spinning right": "vrteći se udesno"
+        },
         "courseF_sprites_clouds": {
           "fluttering": "lepršanje",
           "growing": "rastući",
@@ -2702,6 +3428,22 @@
           "wobbling": "njihanje"
         },
         "courseF_sprites_clouds_-2022-2": {
+          "fluttering": "lepršanje",
+          "growing": "rastući",
+          "jittering": "treperenje",
+          "moving east": "krećući se prema istoku",
+          "moving east and looping": "krećući se prema istoku i petljajući",
+          "moving north": "krećući se prema sjeveru",
+          "moving south": "krećući se prema jugu",
+          "moving west": "krećući se prema zapadu",
+          "moving west and looping": "krećući se prema zapadu i petljajući",
+          "shrinking": "skupljanje",
+          "spinning left": "vrteći se ulijevo",
+          "spinning right": "vrteći se udesno",
+          "wandering": "lutanje",
+          "wobbling": "njihanje"
+        },
+        "courseF_sprites_clouds_2023": {
           "fluttering": "lepršanje",
           "growing": "rastući",
           "jittering": "treperenje",
@@ -2747,6 +3489,21 @@
           "spinning right": "vrteći se udesno",
           "wobbling": "njihanje"
         },
+        "courseF_sprites_desert_2023": {
+          "fluttering": "lepršanje",
+          "growing": "rastući",
+          "jittering": "treperenje",
+          "moving east": "krećući se prema istoku",
+          "moving east and looping": "krećući se prema istoku i petljajući",
+          "moving north": "krećući se prema sjeveru",
+          "moving south": "krećući se prema jugu",
+          "moving west": "krećući se prema zapadu",
+          "moving west and looping": "krećući se prema zapadu i petljajući",
+          "shrinking": "skupljanje",
+          "spinning left": "vrteći se ulijevo",
+          "spinning right": "vrteći se udesno",
+          "wobbling": "njihanje"
+        },
         "courseF_sprites_freeplay_air": {
           "fluttering": "lepršanje",
           "growing": "rastući",
@@ -2764,6 +3521,22 @@
           "wobbling": "njihanje"
         },
         "courseF_sprites_freeplay_air_-2022-2": {
+          "fluttering": "lepršanje",
+          "growing": "rastući",
+          "jittering": "treperenje",
+          "moving east": "krećući se prema istoku",
+          "moving east and looping": "krećući se prema istoku i petljajući",
+          "moving north": "krećući se prema sjeveru",
+          "moving south": "krećući se prema jugu",
+          "moving west": "krećući se prema zapadu",
+          "moving west and looping": "krećući se prema zapadu i petljajući",
+          "shrinking": "skupljanje",
+          "spinning left": "vrteći se ulijevo",
+          "spinning right": "vrteći se udesno",
+          "wandering": "lutanje",
+          "wobbling": "njihanje"
+        },
+        "courseF_sprites_freeplay_air_2023": {
           "fluttering": "lepršanje",
           "growing": "rastući",
           "jittering": "treperenje",
@@ -2811,6 +3584,22 @@
           "wandering": "lutanje",
           "wobbling": "njihanje"
         },
+        "courseF_sprites_freeplay_animals_2023": {
+          "fluttering": "lepršanje",
+          "growing": "rastući",
+          "jittering": "treperenje",
+          "moving east": "krećući se prema istoku",
+          "moving east and looping": "krećući se prema istoku i petljajući",
+          "moving north": "krećući se prema sjeveru",
+          "moving south": "krećući se prema jugu",
+          "moving west": "krećući se prema zapadu",
+          "moving west and looping": "krećući se prema zapadu i petljajući",
+          "shrinking": "skupljanje",
+          "spinning left": "vrteći se ulijevo",
+          "spinning right": "vrteći se udesno",
+          "wandering": "lutanje",
+          "wobbling": "njihanje"
+        },
         "courseF_sprites_freeplay_aquatic": {
           "fluttering": "lepršanje",
           "growing": "rastući",
@@ -2828,6 +3617,22 @@
           "wobbling": "njihanje"
         },
         "courseF_sprites_freeplay_aquatic_-2022-2": {
+          "fluttering": "lepršanje",
+          "growing": "rastući",
+          "jittering": "treperenje",
+          "moving east": "krećući se prema istoku",
+          "moving east and looping": "krećući se prema istoku i petljajući",
+          "moving north": "krećući se prema sjeveru",
+          "moving south": "krećući se prema jugu",
+          "moving west": "krećući se prema zapadu",
+          "moving west and looping": "krećući se prema zapadu i petljajući",
+          "shrinking": "skupljanje",
+          "spinning left": "vrteći se ulijevo",
+          "spinning right": "vrteći se udesno",
+          "wandering": "lutanje",
+          "wobbling": "njihanje"
+        },
+        "courseF_sprites_freeplay_aquatic_2023": {
           "fluttering": "lepršanje",
           "growing": "rastući",
           "jittering": "treperenje",
@@ -2875,6 +3680,22 @@
           "wandering": "lutanje",
           "wobbling": "njihanje"
         },
+        "courseF_sprites_freeplay_blank_2023": {
+          "fluttering": "lepršanje",
+          "growing": "rastući",
+          "jittering": "treperenje",
+          "moving east": "krećući se prema istoku",
+          "moving east and looping": "krećući se prema istoku i petljajući",
+          "moving north": "krećući se prema sjeveru",
+          "moving south": "krećući se prema jugu",
+          "moving west": "krećući se prema zapadu",
+          "moving west and looping": "krećući se prema zapadu i petljajući",
+          "shrinking": "skupljanje",
+          "spinning left": "vrteći se ulijevo",
+          "spinning right": "vrteći se udesno",
+          "wandering": "lutanje",
+          "wobbling": "njihanje"
+        },
         "courseF_sprites_freeplay_food": {
           "fluttering": "lepršanje",
           "growing": "rastući",
@@ -2892,6 +3713,22 @@
           "wobbling": "njihanje"
         },
         "courseF_sprites_freeplay_food_-2022-2": {
+          "fluttering": "lepršanje",
+          "growing": "rastući",
+          "jittering": "treperenje",
+          "moving east": "krećući se prema istoku",
+          "moving east and looping": "krećući se prema istoku i petljajući",
+          "moving north": "krećući se prema sjeveru",
+          "moving south": "krećući se prema jugu",
+          "moving west": "krećući se prema zapadu",
+          "moving west and looping": "krećući se prema zapadu i petljajući",
+          "shrinking": "skupljanje",
+          "spinning left": "vrteći se ulijevo",
+          "spinning right": "vrteći se udesno",
+          "wandering": "lutanje",
+          "wobbling": "njihanje"
+        },
+        "courseF_sprites_freeplay_food_2023": {
           "fluttering": "lepršanje",
           "growing": "rastući",
           "jittering": "treperenje",
@@ -2939,6 +3776,22 @@
           "wandering": "lutanje",
           "wobbling": "njihanje"
         },
+        "courseF_sprites_freeplay_space_2023": {
+          "fluttering": "lepršanje",
+          "growing": "rastući",
+          "jittering": "treperenje",
+          "moving east": "krećući se prema istoku",
+          "moving east and looping": "krećući se prema istoku i petljajući",
+          "moving north": "krećući se prema sjeveru",
+          "moving south": "krećući se prema jugu",
+          "moving west": "krećući se prema zapadu",
+          "moving west and looping": "krećući se prema zapadu i petljajući",
+          "shrinking": "skupljanje",
+          "spinning left": "vrteći se ulijevo",
+          "spinning right": "vrteći se udesno",
+          "wandering": "lutanje",
+          "wobbling": "njihanje"
+        },
         "courseF_sprites_make": {
           "fluttering": "lepršanje",
           "growing": "rastući",
@@ -2955,6 +3808,21 @@
           "wobbling": "njihanje"
         },
         "courseF_sprites_make_-2022-2": {
+          "fluttering": "lepršanje",
+          "growing": "rastući",
+          "jittering": "treperenje",
+          "moving east": "krećući se prema istoku",
+          "moving east and looping": "krećući se prema istoku i petljajući",
+          "moving north": "krećući se prema sjeveru",
+          "moving south": "krećući se prema jugu",
+          "moving west": "krećući se prema zapadu",
+          "moving west and looping": "krećući se prema zapadu i petljajući",
+          "shrinking": "skupljanje",
+          "spinning left": "vrteći se ulijevo",
+          "spinning right": "vrteći se udesno",
+          "wobbling": "njihanje"
+        },
+        "courseF_sprites_make_2023": {
           "fluttering": "lepršanje",
           "growing": "rastući",
           "jittering": "treperenje",
@@ -2999,6 +3867,21 @@
           "spinning right": "vrteći se udesno",
           "wobbling": "njihanje"
         },
+        "courseF_sprites_moreSprites_2023": {
+          "fluttering": "lepršanje",
+          "growing": "rastući",
+          "jittering": "treperenje",
+          "moving east": "krećući se prema istoku",
+          "moving east and looping": "krećući se prema istoku i petljajući",
+          "moving north": "krećući se prema sjeveru",
+          "moving south": "krećući se prema jugu",
+          "moving west": "krećući se prema zapadu",
+          "moving west and looping": "krećući se prema zapadu i petljajući",
+          "shrinking": "skupljanje",
+          "spinning left": "vrteći se ulijevo",
+          "spinning right": "vrteći se udesno",
+          "wobbling": "njihanje"
+        },
         "courseF_sprites_positioning": {
           "fluttering": "lepršanje",
           "growing": "rastući",
@@ -3015,6 +3898,21 @@
           "wobbling": "njihanje"
         },
         "courseF_sprites_positioning_-2022-2": {
+          "fluttering": "lepršanje",
+          "growing": "rastući",
+          "jittering": "treperenje",
+          "moving east": "krećući se prema istoku",
+          "moving east and looping": "krećući se prema istoku i petljajući",
+          "moving north": "krećući se prema sjeveru",
+          "moving south": "krećući se prema jugu",
+          "moving west": "krećući se prema zapadu",
+          "moving west and looping": "krećući se prema zapadu i petljajući",
+          "shrinking": "skupljanje",
+          "spinning left": "vrteći se ulijevo",
+          "spinning right": "vrteći se udesno",
+          "wobbling": "njihanje"
+        },
+        "courseF_sprites_positioning_2023": {
           "fluttering": "lepršanje",
           "growing": "rastući",
           "jittering": "treperenje",
@@ -3055,6 +3953,19 @@
           "spinning right": "vrteći se udesno",
           "wandering": "lutanje"
         },
+        "courseF_sprites_predict_2023": {
+          "growing": "rastući",
+          "jittering": "treperenje",
+          "moving east": "krećući se prema istoku",
+          "moving north": "krećući se prema sjeveru",
+          "moving south": "krećući se prema jugu",
+          "moving west": "krećući se prema zapadu",
+          "patrolling": "patroliranje",
+          "shrinking": "skupljanje",
+          "spinning left": "vrteći se ulijevo",
+          "spinning right": "vrteći se udesno",
+          "wandering": "lutanje"
+        },
         "courseF_sprites_properties": {
           "fluttering": "lepršanje",
           "growing": "rastući",
@@ -3071,6 +3982,21 @@
           "wobbling": "njihanje"
         },
         "courseF_sprites_properties_-2022-2": {
+          "fluttering": "lepršanje",
+          "growing": "rastući",
+          "jittering": "treperenje",
+          "moving east": "krećući se prema istoku",
+          "moving east and looping": "krećući se prema istoku i petljajući",
+          "moving north": "krećući se prema sjeveru",
+          "moving south": "krećući se prema jugu",
+          "moving west": "krećući se prema zapadu",
+          "moving west and looping": "krećući se prema zapadu i petljajući",
+          "shrinking": "skupljanje",
+          "spinning left": "vrteći se ulijevo",
+          "spinning right": "vrteći se udesno",
+          "wobbling": "njihanje"
+        },
+        "courseF_sprites_properties_2023": {
           "fluttering": "lepršanje",
           "growing": "rastući",
           "jittering": "treperenje",
@@ -3115,6 +4041,21 @@
           "spinning right": "vrteći se udesno",
           "wobbling": "njihanje"
         },
+        "courseF_sprites_ship_2023": {
+          "fluttering": "lepršanje",
+          "growing": "rastući",
+          "jittering": "treperenje",
+          "moving east": "krećući se prema istoku",
+          "moving east and looping": "krećući se prema istoku i petljajući",
+          "moving north": "krećući se prema sjeveru",
+          "moving south": "krećući se prema jugu",
+          "moving west": "krećući se prema zapadu",
+          "moving west and looping": "krećući se prema zapadu i petljajući",
+          "shrinking": "skupljanje",
+          "spinning left": "vrteći se ulijevo",
+          "spinning right": "vrteći se udesno",
+          "wobbling": "njihanje"
+        },
         "courseF_text_answer": {
           "fluttering": "lepršanje",
           "growing": "rastući",
@@ -3132,6 +4073,22 @@
           "wandering": "lutanje"
         },
         "courseF_text_answer_-2022-2": {
+          "fluttering": "lepršanje",
+          "growing": "rastući",
+          "jittering": "treperenje",
+          "moving east": "krećući se prema istoku",
+          "moving east and looping": "krećući se prema istoku i petljajući",
+          "moving north": "krećući se prema sjeveru",
+          "moving south": "krećući se prema jugu",
+          "moving west": "krećući se prema zapadu",
+          "moving west and looping": "krećući se prema zapadu i petljajući",
+          "patrolling": "patroliranje",
+          "shrinking": "skupljanje",
+          "spinning left": "vrteći se ulijevo",
+          "spinning right": "vrteći se udesno",
+          "wandering": "lutanje"
+        },
+        "courseF_text_answer_2023": {
           "fluttering": "lepršanje",
           "growing": "rastući",
           "jittering": "treperenje",
@@ -3179,6 +4136,22 @@
           "spinning right": "vrteći se udesno",
           "wandering": "lutanje"
         },
+        "courseF_text_choice_color_2023": {
+          "fluttering": "lepršanje",
+          "growing": "rastući",
+          "jittering": "treperenje",
+          "moving east": "krećući se prema istoku",
+          "moving east and looping": "krećući se prema istoku i petljajući",
+          "moving north": "krećući se prema sjeveru",
+          "moving south": "krećući se prema jugu",
+          "moving west": "krećući se prema zapadu",
+          "moving west and looping": "krećući se prema zapadu i petljajući",
+          "patrolling": "patroliranje",
+          "shrinking": "skupljanje",
+          "spinning left": "vrteći se ulijevo",
+          "spinning right": "vrteći se udesno",
+          "wandering": "lutanje"
+        },
         "courseF_text_choice_conversation": {
           "driving with arrow keys": "vožnja sa strelicama",
           "fluttering": "lepršanje",
@@ -3199,6 +4172,25 @@
           "wobbling": "njihanje"
         },
         "courseF_text_choice_conversation_-2022-2": {
+          "driving with arrow keys": "vožnja sa strelicama",
+          "fluttering": "lepršanje",
+          "growing": "rastući",
+          "jittering": "treperenje",
+          "moving east": "krećući se prema istoku",
+          "moving east and looping": "krećući se prema istoku i petljajući",
+          "moving north": "krećući se prema sjeveru",
+          "moving south": "krećući se prema jugu",
+          "moving west": "krećući se prema zapadu",
+          "moving west and looping": "krećući se prema zapadu i petljajući",
+          "moving with arrow keys": "vožnja sa strelicama",
+          "patrolling": "patroliranje",
+          "shrinking": "skupljanje",
+          "spinning left": "vrteći se ulijevo",
+          "spinning right": "vrteći se udesno",
+          "wandering": "lutanje",
+          "wobbling": "njihanje"
+        },
+        "courseF_text_choice_conversation_2023": {
           "driving with arrow keys": "vožnja sa strelicama",
           "fluttering": "lepršanje",
           "growing": "rastući",
@@ -3255,6 +4247,25 @@
           "wandering": "lutanje",
           "wobbling": "njihanje"
         },
+        "courseF_text_choice_events_2023": {
+          "driving with arrow keys": "vožnja sa strelicama",
+          "fluttering": "lepršanje",
+          "growing": "rastući",
+          "jittering": "treperenje",
+          "moving east": "krećući se prema istoku",
+          "moving east and looping": "krećući se prema istoku i petljajući",
+          "moving north": "krećući se prema sjeveru",
+          "moving south": "krećući se prema jugu",
+          "moving west": "krećući se prema zapadu",
+          "moving west and looping": "krećući se prema zapadu i petljajući",
+          "moving with arrow keys": "vožnja sa strelicama",
+          "patrolling": "patroliranje",
+          "shrinking": "skupljanje",
+          "spinning left": "vrteći se ulijevo",
+          "spinning right": "vrteći se udesno",
+          "wandering": "lutanje",
+          "wobbling": "njihanje"
+        },
         "courseF_text_choice_freeplay": {
           "driving with arrow keys": "vožnja sa strelicama",
           "fluttering": "lepršanje",
@@ -3275,6 +4286,25 @@
           "wobbling": "njihanje"
         },
         "courseF_text_choice_freeplay_-2022-2": {
+          "driving with arrow keys": "vožnja sa strelicama",
+          "fluttering": "lepršanje",
+          "growing": "rastući",
+          "jittering": "treperenje",
+          "moving east": "krećući se prema istoku",
+          "moving east and looping": "krećući se prema istoku i petljajući",
+          "moving north": "krećući se prema sjeveru",
+          "moving south": "krećući se prema jugu",
+          "moving west": "krećući se prema zapadu",
+          "moving west and looping": "krećući se prema zapadu i petljajući",
+          "moving with arrow keys": "vožnja sa strelicama",
+          "patrolling": "patroliranje",
+          "shrinking": "skupljanje",
+          "spinning left": "vrteći se ulijevo",
+          "spinning right": "vrteći se udesno",
+          "wandering": "lutanje",
+          "wobbling": "njihanje"
+        },
+        "courseF_text_choice_freeplay_2023": {
           "driving with arrow keys": "vožnja sa strelicama",
           "fluttering": "lepršanje",
           "growing": "rastući",
@@ -3331,6 +4361,25 @@
           "wandering": "lutanje",
           "wobbling": "njihanje"
         },
+        "courseF_text_choice_interview_2023": {
+          "driving with arrow keys": "vožnja sa strelicama",
+          "fluttering": "lepršanje",
+          "growing": "rastući",
+          "jittering": "treperenje",
+          "moving east": "krećući se prema istoku",
+          "moving east and looping": "krećući se prema istoku i petljajući",
+          "moving north": "krećući se prema sjeveru",
+          "moving south": "krećući se prema jugu",
+          "moving west": "krećući se prema zapadu",
+          "moving west and looping": "krećući se prema zapadu i petljajući",
+          "moving with arrow keys": "vožnja sa strelicama",
+          "patrolling": "patroliranje",
+          "shrinking": "skupljanje",
+          "spinning left": "vrteći se ulijevo",
+          "spinning right": "vrteći se udesno",
+          "wandering": "lutanje",
+          "wobbling": "njihanje"
+        },
         "courseF_text_choice_multiprompt": {
           "driving with arrow keys": "vožnja sa strelicama",
           "fluttering": "lepršanje",
@@ -3351,6 +4400,25 @@
           "wobbling": "njihanje"
         },
         "courseF_text_choice_multiprompt_-2022-2": {
+          "driving with arrow keys": "vožnja sa strelicama",
+          "fluttering": "lepršanje",
+          "growing": "rastući",
+          "jittering": "treperenje",
+          "moving east": "krećući se prema istoku",
+          "moving east and looping": "krećući se prema istoku i petljajući",
+          "moving north": "krećući se prema sjeveru",
+          "moving south": "krećući se prema jugu",
+          "moving west": "krećući se prema zapadu",
+          "moving west and looping": "krećući se prema zapadu i petljajući",
+          "moving with arrow keys": "vožnja sa strelicama",
+          "patrolling": "patroliranje",
+          "shrinking": "skupljanje",
+          "spinning left": "vrteći se ulijevo",
+          "spinning right": "vrteći se udesno",
+          "wandering": "lutanje",
+          "wobbling": "njihanje"
+        },
+        "courseF_text_choice_multiprompt_2023": {
           "driving with arrow keys": "vožnja sa strelicama",
           "fluttering": "lepršanje",
           "growing": "rastući",
@@ -3401,6 +4469,22 @@
           "spinning right": "vrteći se udesno",
           "wandering": "lutanje"
         },
+        "courseF_text_choice_title_2023": {
+          "fluttering": "lepršanje",
+          "growing": "rastući",
+          "jittering": "treperenje",
+          "moving east": "krećući se prema istoku",
+          "moving east and looping": "krećući se prema istoku i petljajući",
+          "moving north": "krećući se prema sjeveru",
+          "moving south": "krećući se prema jugu",
+          "moving west": "krećući se prema zapadu",
+          "moving west and looping": "krećući se prema zapadu i petljajući",
+          "patrolling": "patroliranje",
+          "shrinking": "skupljanje",
+          "spinning left": "vrteći se ulijevo",
+          "spinning right": "vrteći se udesno",
+          "wandering": "lutanje"
+        },
         "courseF_text_concat": {
           "fluttering": "lepršanje",
           "growing": "rastući",
@@ -3418,6 +4502,22 @@
           "wandering": "lutanje"
         },
         "courseF_text_concat_-2022-2": {
+          "fluttering": "lepršanje",
+          "growing": "rastući",
+          "jittering": "treperenje",
+          "moving east": "krećući se prema istoku",
+          "moving east and looping": "krećući se prema istoku i petljajući",
+          "moving north": "krećući se prema sjeveru",
+          "moving south": "krećući se prema jugu",
+          "moving west": "krećući se prema zapadu",
+          "moving west and looping": "krećući se prema zapadu i petljajući",
+          "patrolling": "patroliranje",
+          "shrinking": "skupljanje",
+          "spinning left": "vrteći se ulijevo",
+          "spinning right": "vrteći se udesno",
+          "wandering": "lutanje"
+        },
+        "courseF_text_concat_2023": {
           "fluttering": "lepršanje",
           "growing": "rastući",
           "jittering": "treperenje",
@@ -3465,6 +4565,22 @@
           "spinning right": "vrteći se udesno",
           "wandering": "lutanje"
         },
+        "courseF_text_events_2023": {
+          "fluttering": "lepršanje",
+          "growing": "rastući",
+          "jittering": "treperenje",
+          "moving east": "krećući se prema istoku",
+          "moving east and looping": "krećući se prema istoku i petljajući",
+          "moving north": "krećući se prema sjeveru",
+          "moving south": "krećući se prema jugu",
+          "moving west": "krećući se prema zapadu",
+          "moving west and looping": "krećući se prema zapadu i petljajući",
+          "patrolling": "patroliranje",
+          "shrinking": "skupljanje",
+          "spinning left": "vrteći se ulijevo",
+          "spinning right": "vrteći se udesno",
+          "wandering": "lutanje"
+        },
         "courseF_text_print": {
           "fluttering": "lepršanje",
           "growing": "rastući",
@@ -3482,6 +4598,22 @@
           "wandering": "lutanje"
         },
         "courseF_text_print_-2022-2": {
+          "fluttering": "lepršanje",
+          "growing": "rastući",
+          "jittering": "treperenje",
+          "moving east": "krećući se prema istoku",
+          "moving east and looping": "krećući se prema istoku i petljajući",
+          "moving north": "krećući se prema sjeveru",
+          "moving south": "krećući se prema jugu",
+          "moving west": "krećući se prema zapadu",
+          "moving west and looping": "krećući se prema zapadu i petljajući",
+          "patrolling": "patroliranje",
+          "shrinking": "skupljanje",
+          "spinning left": "vrteći se ulijevo",
+          "spinning right": "vrteći se udesno",
+          "wandering": "lutanje"
+        },
+        "courseF_text_print_2023": {
           "fluttering": "lepršanje",
           "growing": "rastući",
           "jittering": "treperenje",
@@ -3529,6 +4661,22 @@
           "spinning right": "vrteći se udesno",
           "wandering": "lutanje"
         },
+        "courseF_text_prompts_2023": {
+          "fluttering": "lepršanje",
+          "growing": "rastući",
+          "jittering": "treperenje",
+          "moving east": "krećući se prema istoku",
+          "moving east and looping": "krećući se prema istoku i petljajući",
+          "moving north": "krećući se prema sjeveru",
+          "moving south": "krećući se prema jugu",
+          "moving west": "krećući se prema zapadu",
+          "moving west and looping": "krećući se prema zapadu i petljajući",
+          "patrolling": "patroliranje",
+          "shrinking": "skupljanje",
+          "spinning left": "vrteći se ulijevo",
+          "spinning right": "vrteći se udesno",
+          "wandering": "lutanje"
+        },
         "courseF_text_review": {
           "fluttering": "lepršanje",
           "growing": "rastući",
@@ -3546,6 +4694,22 @@
           "wandering": "lutanje"
         },
         "courseF_text_review_-2022-2": {
+          "fluttering": "lepršanje",
+          "growing": "rastući",
+          "jittering": "treperenje",
+          "moving east": "krećući se prema istoku",
+          "moving east and looping": "krećući se prema istoku i petljajući",
+          "moving north": "krećući se prema sjeveru",
+          "moving south": "krećući se prema jugu",
+          "moving west": "krećući se prema zapadu",
+          "moving west and looping": "krećući se prema zapadu i petljajući",
+          "patrolling": "patroliranje",
+          "shrinking": "skupljanje",
+          "spinning left": "vrteći se ulijevo",
+          "spinning right": "vrteći se udesno",
+          "wandering": "lutanje"
+        },
+        "courseF_text_review_2023": {
           "fluttering": "lepršanje",
           "growing": "rastući",
           "jittering": "treperenje",
@@ -3580,6 +4744,24 @@
           "wobbling": "njihanje"
         },
         "courseF_variables_card_-2022-2": {
+          "fluttering": "lepršanje",
+          "growing": "rastući",
+          "jittering": "treperenje",
+          "moving east": "krećući se prema istoku",
+          "moving east and looping": "krećući se prema istoku i petljajući",
+          "moving north": "krećući se prema sjeveru",
+          "moving south": "krećući se prema jugu",
+          "moving west": "krećući se prema zapadu",
+          "moving west and looping": "krećući se prema zapadu i petljajući",
+          "moving with arrow keys": "vožnja sa strelicama",
+          "patrolling": "patroliranje",
+          "shrinking": "skupljanje",
+          "spinning left": "vrteći se ulijevo",
+          "spinning right": "vrteći se udesno",
+          "wandering": "lutanje",
+          "wobbling": "njihanje"
+        },
+        "courseF_variables_card_2023": {
           "fluttering": "lepršanje",
           "growing": "rastući",
           "jittering": "treperenje",
@@ -3633,6 +4815,24 @@
           "wandering": "lutanje",
           "wobbling": "njihanje"
         },
+        "courseF_variables_card_finish_2023": {
+          "fluttering": "lepršanje",
+          "growing": "rastući",
+          "jittering": "treperenje",
+          "moving east": "krećući se prema istoku",
+          "moving east and looping": "krećući se prema istoku i petljajući",
+          "moving north": "krećući se prema sjeveru",
+          "moving south": "krećući se prema jugu",
+          "moving west": "krećući se prema zapadu",
+          "moving west and looping": "krećući se prema zapadu i petljajući",
+          "moving with arrow keys": "vožnja sa strelicama",
+          "patrolling": "patroliranje",
+          "shrinking": "skupljanje",
+          "spinning left": "vrteći se ulijevo",
+          "spinning right": "vrteći se udesno",
+          "wandering": "lutanje",
+          "wobbling": "njihanje"
+        },
         "courseF_variables_chatbot": {
           "fluttering": "lepršanje",
           "growing": "rastući",
@@ -3652,6 +4852,24 @@
           "wobbling": "njihanje"
         },
         "courseF_variables_chatbot_-2022-2": {
+          "fluttering": "lepršanje",
+          "growing": "rastući",
+          "jittering": "treperenje",
+          "moving east": "krećući se prema istoku",
+          "moving east and looping": "krećući se prema istoku i petljajući",
+          "moving north": "krećući se prema sjeveru",
+          "moving south": "krećući se prema jugu",
+          "moving west": "krećući se prema zapadu",
+          "moving west and looping": "krećući se prema zapadu i petljajući",
+          "moving with arrow keys": "vožnja sa strelicama",
+          "patrolling": "patroliranje",
+          "shrinking": "skupljanje",
+          "spinning left": "vrteći se ulijevo",
+          "spinning right": "vrteći se udesno",
+          "wandering": "lutanje",
+          "wobbling": "njihanje"
+        },
+        "courseF_variables_chatbot_2023": {
           "fluttering": "lepršanje",
           "growing": "rastući",
           "jittering": "treperenje",
@@ -3705,6 +4923,24 @@
           "wandering": "lutanje",
           "wobbling": "njihanje"
         },
+        "courseF_variables_chatbot_finish_2023": {
+          "fluttering": "lepršanje",
+          "growing": "rastući",
+          "jittering": "treperenje",
+          "moving east": "krećući se prema istoku",
+          "moving east and looping": "krećući se prema istoku i petljajući",
+          "moving north": "krećući se prema sjeveru",
+          "moving south": "krećući se prema jugu",
+          "moving west": "krećući se prema zapadu",
+          "moving west and looping": "krećući se prema zapadu i petljajući",
+          "moving with arrow keys": "vožnja sa strelicama",
+          "patrolling": "patroliranje",
+          "shrinking": "skupljanje",
+          "spinning left": "vrteći se ulijevo",
+          "spinning right": "vrteći se udesno",
+          "wandering": "lutanje",
+          "wobbling": "njihanje"
+        },
         "courseF_variables_madlib": {
           "fluttering": "lepršanje",
           "growing": "rastući",
@@ -3724,6 +4960,24 @@
           "wobbling": "njihanje"
         },
         "courseF_variables_madlib_-2022-2": {
+          "fluttering": "lepršanje",
+          "growing": "rastući",
+          "jittering": "treperenje",
+          "moving east": "krećući se prema istoku",
+          "moving east and looping": "krećući se prema istoku i petljajući",
+          "moving north": "krećući se prema sjeveru",
+          "moving south": "krećući se prema jugu",
+          "moving west": "krećući se prema zapadu",
+          "moving west and looping": "krećući se prema zapadu i petljajući",
+          "moving with arrow keys": "vožnja sa strelicama",
+          "patrolling": "patroliranje",
+          "shrinking": "skupljanje",
+          "spinning left": "vrteći se ulijevo",
+          "spinning right": "vrteći se udesno",
+          "wandering": "lutanje",
+          "wobbling": "njihanje"
+        },
+        "courseF_variables_madlib_2023": {
           "fluttering": "lepršanje",
           "growing": "rastući",
           "jittering": "treperenje",
@@ -3777,6 +5031,24 @@
           "wandering": "lutanje",
           "wobbling": "njihanje"
         },
+        "courseF_variables_madlib_finish_2023": {
+          "fluttering": "lepršanje",
+          "growing": "rastući",
+          "jittering": "treperenje",
+          "moving east": "krećući se prema istoku",
+          "moving east and looping": "krećući se prema istoku i petljajući",
+          "moving north": "krećući se prema sjeveru",
+          "moving south": "krećući se prema jugu",
+          "moving west": "krećući se prema zapadu",
+          "moving west and looping": "krećući se prema zapadu i petljajući",
+          "moving with arrow keys": "vožnja sa strelicama",
+          "patrolling": "patroliranje",
+          "shrinking": "skupljanje",
+          "spinning left": "vrteći se ulijevo",
+          "spinning right": "vrteći se udesno",
+          "wandering": "lutanje",
+          "wobbling": "njihanje"
+        },
         "courseF_variables_predict": {
           "growing": "rastući",
           "jittering": "treperenje",
@@ -3791,6 +5063,19 @@
           "wandering": "lutanje"
         },
         "courseF_variables_predict_-2022-2": {
+          "growing": "rastući",
+          "jittering": "treperenje",
+          "moving east": "krećući se prema istoku",
+          "moving north": "krećući se prema sjeveru",
+          "moving south": "krećući se prema jugu",
+          "moving west": "krećući se prema zapadu",
+          "patrolling": "patroliranje",
+          "shrinking": "skupljanje",
+          "spinning left": "vrteći se ulijevo",
+          "spinning right": "vrteći se udesno",
+          "wandering": "lutanje"
+        },
+        "courseF_variables_predict_2023": {
           "growing": "rastući",
           "jittering": "treperenje",
           "moving east": "krećući se prema istoku",
@@ -3818,6 +5103,295 @@
           "spinning left": "vrteći se ulijevo",
           "spinning right": "vrteći se udesno",
           "wandering": "lutanje"
+        },
+        "coursee_helloworld_events_2023": {
+          "fluttering": "lepršanje",
+          "growing": "rastući",
+          "jittering": "treperenje",
+          "moving east": "krećući se prema istoku",
+          "moving east and looping": "krećući se prema istoku i petljajući",
+          "moving north": "krećući se prema sjeveru",
+          "moving south": "krećući se prema jugu",
+          "moving west": "krećući se prema zapadu",
+          "moving west and looping": "krećući se prema zapadu i petljajući",
+          "patrolling": "patroliranje",
+          "shrinking": "skupljanje",
+          "spinning left": "vrteći se ulijevo",
+          "spinning right": "vrteći se udesno",
+          "wandering": "lutanje"
+        },
+        "csc_animal_adaptaions_fishschool": {
+          "driving with arrow keys": "vožnja sa strelicama",
+          "fluttering": "lepršanje",
+          "growing": "rastući",
+          "jittering": "treperenje",
+          "moving east": "krećući se prema istoku",
+          "moving east and looping": "krećući se prema istoku i petljajući",
+          "moving north": "krećući se prema sjeveru",
+          "moving north and looping": "krećući se prema sjeveru i petljajući",
+          "moving south": "krećući se prema jugu",
+          "moving south and looping": "krećući se prema jugu i petljajući",
+          "moving west": "krećući se prema zapadu",
+          "moving west and looping": "krećući se prema zapadu i petljajući",
+          "moving with arrow keys": "vožnja sa strelicama",
+          "patrolling": "patroliranje",
+          "shrinking": "skupljanje",
+          "spinning left": "vrteći se ulijevo",
+          "spinning right": "vrteći se udesno",
+          "wandering": "lutanje",
+          "wobbling": "njihanje"
+        },
+        "csc_animal_adaptations_birds": {
+          "driving with arrow keys": "vožnja sa strelicama",
+          "fluttering": "lepršanje",
+          "growing": "rastući",
+          "jittering": "treperenje",
+          "moving east": "krećući se prema istoku",
+          "moving east and looping": "krećući se prema istoku i petljajući",
+          "moving north": "krećući se prema sjeveru",
+          "moving north and looping": "krećući se prema sjeveru i petljajući",
+          "moving south": "krećući se prema jugu",
+          "moving south and looping": "krećući se prema jugu i petljajući",
+          "moving west": "krećući se prema zapadu",
+          "moving west and looping": "krećući se prema zapadu i petljajući",
+          "moving with arrow keys": "vožnja sa strelicama",
+          "patrolling": "patroliranje",
+          "shrinking": "skupljanje",
+          "spinning left": "vrteći se ulijevo",
+          "spinning right": "vrteći se udesno",
+          "wandering": "lutanje",
+          "wobbling": "njihanje"
+        },
+        "csc_animal_adaptations_bugs": {
+          "driving with arrow keys": "vožnja sa strelicama",
+          "fluttering": "lepršanje",
+          "growing": "rastući",
+          "jittering": "treperenje",
+          "moving east": "krećući se prema istoku",
+          "moving east and looping": "krećući se prema istoku i petljajući",
+          "moving north": "krećući se prema sjeveru",
+          "moving north and looping": "krećući se prema sjeveru i petljajući",
+          "moving south": "krećući se prema jugu",
+          "moving south and looping": "krećući se prema jugu i petljajući",
+          "moving west": "krećući se prema zapadu",
+          "moving west and looping": "krećući se prema zapadu i petljajući",
+          "moving with arrow keys": "vožnja sa strelicama",
+          "patrolling": "patroliranje",
+          "shrinking": "skupljanje",
+          "spinning left": "vrteći se ulijevo",
+          "spinning right": "vrteći se udesno",
+          "wandering": "lutanje",
+          "wobbling": "njihanje"
+        },
+        "csc_animal_adaptations_butterfly": {
+          "driving with arrow keys": "vožnja sa strelicama",
+          "fluttering": "lepršanje",
+          "growing": "rastući",
+          "jittering": "treperenje",
+          "moving east": "krećući se prema istoku",
+          "moving east and looping": "krećući se prema istoku i petljajući",
+          "moving north": "krećući se prema sjeveru",
+          "moving north and looping": "krećući se prema sjeveru i petljajući",
+          "moving south": "krećući se prema jugu",
+          "moving south and looping": "krećući se prema jugu i petljajući",
+          "moving west": "krećući se prema zapadu",
+          "moving west and looping": "krećući se prema zapadu i petljajući",
+          "moving with arrow keys": "vožnja sa strelicama",
+          "patrolling": "patroliranje",
+          "shrinking": "skupljanje",
+          "spinning left": "vrteći se ulijevo",
+          "spinning right": "vrteći se udesno",
+          "wandering": "lutanje",
+          "wobbling": "njihanje"
+        },
+        "csc_animal_adaptations_choice2": {
+          "driving with arrow keys": "vožnja sa strelicama",
+          "fluttering": "lepršanje",
+          "growing": "rastući",
+          "jittering": "treperenje",
+          "moving east": "krećući se prema istoku",
+          "moving east and looping": "krećući se prema istoku i petljajući",
+          "moving north": "krećući se prema sjeveru",
+          "moving north and looping": "krećući se prema sjeveru i petljajući",
+          "moving south": "krećući se prema jugu",
+          "moving south and looping": "krećući se prema jugu i petljajući",
+          "moving west": "krećući se prema zapadu",
+          "moving west and looping": "krećući se prema zapadu i petljajući",
+          "moving with arrow keys": "vožnja sa strelicama",
+          "patrolling": "patroliranje",
+          "shrinking": "skupljanje",
+          "spinning left": "vrteći se ulijevo",
+          "spinning right": "vrteći se udesno",
+          "wandering": "lutanje",
+          "wobbling": "njihanje"
+        },
+        "csc_animal_adaptations_choice3": {
+          "driving with arrow keys": "vožnja sa strelicama",
+          "fluttering": "lepršanje",
+          "growing": "rastući",
+          "jittering": "treperenje",
+          "moving east": "krećući se prema istoku",
+          "moving east and looping": "krećući se prema istoku i petljajući",
+          "moving north": "krećući se prema sjeveru",
+          "moving north and looping": "krećući se prema sjeveru i petljajući",
+          "moving south": "krećući se prema jugu",
+          "moving south and looping": "krećući se prema jugu i petljajući",
+          "moving west": "krećući se prema zapadu",
+          "moving west and looping": "krećući se prema zapadu i petljajući",
+          "moving with arrow keys": "vožnja sa strelicama",
+          "patrolling": "patroliranje",
+          "shrinking": "skupljanje",
+          "spinning left": "vrteći se ulijevo",
+          "spinning right": "vrteći se udesno",
+          "wandering": "lutanje",
+          "wobbling": "njihanje"
+        },
+        "csc_animal_adaptations_fish": {
+          "driving with arrow keys": "vožnja sa strelicama",
+          "fluttering": "lepršanje",
+          "growing": "rastući",
+          "jittering": "treperenje",
+          "moving east": "krećući se prema istoku",
+          "moving east and looping": "krećući se prema istoku i petljajući",
+          "moving north": "krećući se prema sjeveru",
+          "moving north and looping": "krećući se prema sjeveru i petljajući",
+          "moving south": "krećući se prema jugu",
+          "moving south and looping": "krećući se prema jugu i petljajući",
+          "moving west": "krećući se prema zapadu",
+          "moving west and looping": "krećući se prema zapadu i petljajući",
+          "moving with arrow keys": "vožnja sa strelicama",
+          "patrolling": "patroliranje",
+          "shrinking": "skupljanje",
+          "spinning left": "vrteći se ulijevo",
+          "spinning right": "vrteći se udesno",
+          "wandering": "lutanje",
+          "wobbling": "njihanje"
+        },
+        "csc_animal_adaptations_groups": {
+          "driving with arrow keys": "vožnja sa strelicama",
+          "fluttering": "lepršanje",
+          "growing": "rastući",
+          "jittering": "treperenje",
+          "moving east": "krećući se prema istoku",
+          "moving east and looping": "krećući se prema istoku i petljajući",
+          "moving north": "krećući se prema sjeveru",
+          "moving north and looping": "krećući se prema sjeveru i petljajući",
+          "moving south": "krećući se prema jugu",
+          "moving south and looping": "krećući se prema jugu i petljajući",
+          "moving west": "krećući se prema zapadu",
+          "moving west and looping": "krećući se prema zapadu i petljajući",
+          "moving with arrow keys": "vožnja sa strelicama",
+          "patrolling": "patroliranje",
+          "shrinking": "skupljanje",
+          "spinning left": "vrteći se ulijevo",
+          "spinning right": "vrteći se udesno",
+          "wandering": "lutanje",
+          "wobbling": "njihanje"
+        },
+        "csc_animal_adaptations_migration": {
+          "driving with arrow keys": "vožnja sa strelicama",
+          "fluttering": "lepršanje",
+          "growing": "rastući",
+          "jittering": "treperenje",
+          "moving east": "krećući se prema istoku",
+          "moving east and looping": "krećući se prema istoku i petljajući",
+          "moving north": "krećući se prema sjeveru",
+          "moving north and looping": "krećući se prema sjeveru i petljajući",
+          "moving south": "krećući se prema jugu",
+          "moving south and looping": "krećući se prema jugu i petljajući",
+          "moving west": "krećući se prema zapadu",
+          "moving west and looping": "krećući se prema zapadu i petljajući",
+          "moving with arrow keys": "vožnja sa strelicama",
+          "patrolling": "patroliranje",
+          "shrinking": "skupljanje",
+          "spinning left": "vrteći se ulijevo",
+          "spinning right": "vrteći se udesno",
+          "wandering": "lutanje",
+          "wobbling": "njihanje"
+        },
+        "csc_animal_adaptations_speed": {
+          "driving with arrow keys": "vožnja sa strelicama",
+          "fluttering": "lepršanje",
+          "growing": "rastući",
+          "jittering": "treperenje",
+          "moving east": "krećući se prema istoku",
+          "moving east and looping": "krećući se prema istoku i petljajući",
+          "moving north": "krećući se prema sjeveru",
+          "moving north and looping": "krećući se prema sjeveru i petljajući",
+          "moving south": "krećući se prema jugu",
+          "moving south and looping": "krećući se prema jugu i petljajući",
+          "moving west": "krećući se prema zapadu",
+          "moving west and looping": "krećući se prema zapadu i petljajući",
+          "moving with arrow keys": "vožnja sa strelicama",
+          "patrolling": "patroliranje",
+          "shrinking": "skupljanje",
+          "spinning left": "vrteći se ulijevo",
+          "spinning right": "vrteći se udesno",
+          "wandering": "lutanje",
+          "wobbling": "njihanje"
+        },
+        "csc_ecosystems_giraffe_evo_2023": {
+          "driving with arrow keys": "vožnja sa strelicama",
+          "fluttering": "lepršanje",
+          "growing": "rastući",
+          "jittering": "treperenje",
+          "moving east": "krećući se prema istoku",
+          "moving east and looping": "krećući se prema istoku i petljajući",
+          "moving north": "krećući se prema sjeveru",
+          "moving north and looping": "krećući se prema sjeveru i petljajući",
+          "moving south": "krećući se prema jugu",
+          "moving south and looping": "krećući se prema jugu i petljajući",
+          "moving west": "krećući se prema zapadu",
+          "moving west and looping": "krećući se prema zapadu i petljajući",
+          "moving with arrow keys": "vožnja sa strelicama",
+          "patrolling": "patroliranje",
+          "shrinking": "skupljanje",
+          "spinning left": "vrteći se ulijevo",
+          "spinning right": "vrteći se udesno",
+          "wandering": "lutanje",
+          "wobbling": "njihanje"
+        },
+        "csc_ecosystems_whale_explain_2023": {
+          "driving with arrow keys": "vožnja sa strelicama",
+          "fluttering": "lepršanje",
+          "growing": "rastući",
+          "jittering": "treperenje",
+          "moving east": "krećući se prema istoku",
+          "moving east and looping": "krećući se prema istoku i petljajući",
+          "moving north": "krećući se prema sjeveru",
+          "moving north and looping": "krećući se prema sjeveru i petljajući",
+          "moving south": "krećući se prema jugu",
+          "moving south and looping": "krećući se prema jugu i petljajući",
+          "moving west": "krećući se prema zapadu",
+          "moving west and looping": "krećući se prema zapadu i petljajući",
+          "moving with arrow keys": "vožnja sa strelicama",
+          "patrolling": "patroliranje",
+          "shrinking": "skupljanje",
+          "spinning left": "vrteći se ulijevo",
+          "spinning right": "vrteći se udesno",
+          "wandering": "lutanje",
+          "wobbling": "njihanje"
+        },
+        "csc_ecosystems_whale_movement_2023": {
+          "driving with arrow keys": "vožnja sa strelicama",
+          "fluttering": "lepršanje",
+          "growing": "rastući",
+          "jittering": "treperenje",
+          "moving east": "krećući se prema istoku",
+          "moving east and looping": "krećući se prema istoku i petljajući",
+          "moving north": "krećući se prema sjeveru",
+          "moving north and looping": "krećući se prema sjeveru i petljajući",
+          "moving south": "krećući se prema jugu",
+          "moving south and looping": "krećući se prema jugu i petljajući",
+          "moving west": "krećući se prema zapadu",
+          "moving west and looping": "krećući se prema zapadu i petljajući",
+          "moving with arrow keys": "vožnja sa strelicama",
+          "patrolling": "patroliranje",
+          "shrinking": "skupljanje",
+          "spinning left": "vrteći se ulijevo",
+          "spinning right": "vrteći se udesno",
+          "wandering": "lutanje",
+          "wobbling": "njihanje"
         },
         "helloworld_animals_backgrounds": {
           "driving with arrow keys": "vožnja sa strelicama",
@@ -4028,6 +5602,27 @@
           "wandering": "lutanje",
           "wobbling": "njihanje"
         },
+        "helloworld_food_backgrounds_2023": {
+          "driving with arrow keys": "vožnja sa strelicama",
+          "fluttering": "lepršanje",
+          "growing": "rastući",
+          "jittering": "treperenje",
+          "moving east": "krećući se prema istoku",
+          "moving east and looping": "krećući se prema istoku i petljajući",
+          "moving north": "krećući se prema sjeveru",
+          "moving north and looping": "krećući se prema sjeveru i petljajući",
+          "moving south": "krećući se prema jugu",
+          "moving south and looping": "krećući se prema jugu i petljajući",
+          "moving west": "krećući se prema zapadu",
+          "moving west and looping": "krećući se prema zapadu i petljajući",
+          "moving with arrow keys": "vožnja sa strelicama",
+          "patrolling": "patroliranje",
+          "shrinking": "skupljanje",
+          "spinning left": "vrteći se ulijevo",
+          "spinning right": "vrteći se udesno",
+          "wandering": "lutanje",
+          "wobbling": "njihanje"
+        },
         "helloworld_food_backgrounds_soccer-2022": {
           "driving with arrow keys": "vožnja sa strelicama",
           "fluttering": "lepršanje",
@@ -4091,7 +5686,43 @@
           "wandering": "lutanje",
           "wobbling": "njihanje"
         },
+        "helloworld_food_behaviors_2023": {
+          "driving with arrow keys": "vožnja sa strelicama",
+          "fluttering": "lepršanje",
+          "growing": "rastući",
+          "jittering": "treperenje",
+          "moving east": "krećući se prema istoku",
+          "moving east and looping": "krećući se prema istoku i petljajući",
+          "moving north": "krećući se prema sjeveru",
+          "moving north and looping": "krećući se prema sjeveru i petljajući",
+          "moving south": "krećući se prema jugu",
+          "moving south and looping": "krećući se prema jugu i petljajući",
+          "moving west": "krećući se prema zapadu",
+          "moving west and looping": "krećući se prema zapadu i petljajući",
+          "moving with arrow keys": "vožnja sa strelicama",
+          "patrolling": "patroliranje",
+          "shrinking": "skupljanje",
+          "spinning left": "vrteći se ulijevo",
+          "spinning right": "vrteći se udesno",
+          "wandering": "lutanje",
+          "wobbling": "njihanje"
+        },
         "helloworld_food_costumes": {
+          "fluttering": "lepršanje",
+          "growing": "rastući",
+          "jittering": "treperenje",
+          "moving east": "krećući se prema istoku",
+          "moving east and looping": "krećući se prema istoku i petljajući",
+          "moving north": "krećući se prema sjeveru",
+          "moving south": "krećući se prema jugu",
+          "moving west": "krećući se prema zapadu",
+          "moving west and looping": "krećući se prema zapadu i petljajući",
+          "shrinking": "skupljanje",
+          "spinning left": "vrteći se ulijevo",
+          "spinning right": "vrteći se udesno",
+          "wobbling": "njihanje"
+        },
+        "helloworld_food_costumes_2023": {
           "fluttering": "lepršanje",
           "growing": "rastući",
           "jittering": "treperenje",
@@ -4123,6 +5754,27 @@
           "wandering": "lutanje"
         },
         "helloworld_food_sounds": {
+          "driving with arrow keys": "vožnja sa strelicama",
+          "fluttering": "lepršanje",
+          "growing": "rastući",
+          "jittering": "treperenje",
+          "moving east": "krećući se prema istoku",
+          "moving east and looping": "krećući se prema istoku i petljajući",
+          "moving north": "krećući se prema sjeveru",
+          "moving north and looping": "krećući se prema sjeveru i petljajući",
+          "moving south": "krećući se prema jugu",
+          "moving south and looping": "krećući se prema jugu i petljajući",
+          "moving west": "krećući se prema zapadu",
+          "moving west and looping": "krećući se prema zapadu i petljajući",
+          "moving with arrow keys": "vožnja sa strelicama",
+          "patrolling": "patroliranje",
+          "shrinking": "skupljanje",
+          "spinning left": "vrteći se ulijevo",
+          "spinning right": "vrteći se udesno",
+          "wandering": "lutanje",
+          "wobbling": "njihanje"
+        },
+        "helloworld_food_sounds_2023": {
           "driving with arrow keys": "vožnja sa strelicama",
           "fluttering": "lepršanje",
           "growing": "rastući",
@@ -4512,6 +6164,25 @@
           "wobbling": "njihanje"
         },
         "simcustom_2021": {
+          "driving with arrow keys": "vožnja sa strelicama",
+          "fluttering": "lepršanje",
+          "growing": "rastući",
+          "jittering": "treperenje",
+          "moving east": "krećući se prema istoku",
+          "moving east and looping": "krećući se prema istoku i petljajući",
+          "moving north": "krećući se prema sjeveru",
+          "moving south": "krećući se prema jugu",
+          "moving west": "krećući se prema zapadu",
+          "moving west and looping": "krećući se prema zapadu i petljajući",
+          "moving with arrow keys": "vožnja sa strelicama",
+          "patrolling": "patroliranje",
+          "shrinking": "skupljanje",
+          "spinning left": "vrteći se ulijevo",
+          "spinning right": "vrteći se udesno",
+          "wandering": "lutanje",
+          "wobbling": "njihanje"
+        },
+        "simcustom_2023": {
           "driving with arrow keys": "vožnja sa strelicama",
           "fluttering": "lepršanje",
           "growing": "rastući",

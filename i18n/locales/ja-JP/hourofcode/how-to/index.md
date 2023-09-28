@@ -25,7 +25,7 @@ Hour of Codeを試してみることは、生徒にコンピュータサイエ�
 
 <a id="how-to-video"></a>
 
-## 1. Hour of Codeハウツーガイドのビデオを見る <iframe width="500" height="255" src="//www.youtube.com/embed/SrnvvWDm73k" frameborder="0" allowfullscreen></iframe> 
+## 1. Hour of Codeハウツーガイドのビデオを見る <iframe width="500" height="255" src="https://www.youtube-nocookie.com/embed/SrnvvWDm73k" frameborder="0" allowfullscreen></iframe> 
 
 * * *
 

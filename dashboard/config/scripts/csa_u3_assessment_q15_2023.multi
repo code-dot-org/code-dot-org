@@ -14,7 +14,7 @@ int[] numbers = {0, 6, 0, 4, 0, 0, 2};
 
 int count = 0;
 
-for (int index = 0; index < numbers.index; index++) {
+for (int index = 0; index < numbers.length; index++) {
   if (numbers[index] != 0) {
     numbers[count] = numbers[index];
     count++;
