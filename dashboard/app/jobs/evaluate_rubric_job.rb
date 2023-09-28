@@ -23,7 +23,7 @@ class EvaluateRubricJob < ApplicationJob
 
     lesson_s3_name = 'CSD-2022-U3-L17'
     channel_id = get_channel_id(user, script_level)
-    code = read_user_code(channel_id)
+    code, project_version = read_user_code(channel_id)
     prompt = read_file_from_s3(lesson_s3_name, 'system_prompt.txt')
     ai_rubric = read_file_from_s3(lesson_s3_name, 'standard_rubric.csv')
     examples = read_examples(lesson_s3_name)
@@ -35,7 +35,7 @@ class EvaluateRubricJob < ApplicationJob
 
     validate_evaluations(ai_evaluations, rubric)
 
-    write_ai_evaluations(user, ai_evaluations, rubric, channel_id)
+    write_ai_evaluations(user, ai_evaluations, rubric, channel_id, project_version)
   end
 
   private def get_channel_id(user, script_level)
@@ -54,7 +54,9 @@ class EvaluateRubricJob < ApplicationJob
   private def read_user_code(channel_id)
     # fetch the user's code from S3
     source_data = SourceBucket.new.get(channel_id, "main.json")
-    JSON.parse(source_data[:body].string)['source']
+    code = JSON.parse(source_data[:body].string)['source']
+    version = source_data[:version_id]
+    [code, version]
   end
 
   private def read_file_from_s3(lesson_s3_name, key_suffix)
@@ -116,7 +118,7 @@ class EvaluateRubricJob < ApplicationJob
     end
   end
 
-  private def write_ai_evaluations(user, ai_evaluations, rubric, channel_id)
+  private def write_ai_evaluations(user, ai_evaluations, rubric, channel_id, project_version)
     _owner_id, project_id = storage_decrypt_channel_id(channel_id)
 
     # record the ai evaluations to the database
@@ -128,6 +130,7 @@ class EvaluateRubricJob < ApplicationJob
           user_id: user.id,
           learning_goal_id: learning_goal.id,
           project_id: project_id,
+          project_version: project_version,
           understanding: understanding
         )
       end
