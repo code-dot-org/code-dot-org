@@ -4,7 +4,6 @@ import {connect} from 'react-redux';
 import Radium from 'radium'; // eslint-disable-line no-restricted-imports
 import color from '@cdo/apps/util/color';
 import i18n from '@cdo/locale';
-import DCDO from '@cdo/apps/dcdo';
 import ProgressBubble from '@cdo/apps/templates/progress/ProgressBubble';
 import FontAwesome from '@cdo/apps/templates/FontAwesome';
 import {levelWithProgress, studentShape} from './types';
@@ -96,9 +95,7 @@ class StudentTable extends React.Component {
                     />
                   )}
                   <div style={styles.name}>
-                    {student.name}
-                    {!!DCDO.get('family-name-features', false) &&
-                      ` ${student.familyName || ''}`}
+                    {`${student.name} ${student.familyName || ''}`}
                     <a
                       href={this.getRowLink(student.id)}
                       target="_blank"

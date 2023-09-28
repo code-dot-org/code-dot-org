@@ -182,6 +182,21 @@
         "code/poetry/2023": {
           "word": "කේතය"
         },
+        "copyright/csd/2023": {
+          "word": "ප්‍රකාශන හිමිකම"
+        },
+        "variable/csd/2023": {
+          "word": "විචල්‍යය"
+        },
+        "conditionals/csd/2023": {
+          "word": "කන්ඩිෂනලස්"
+        },
+        "abstraction/csd/2023": {
+          "word": "ඇබ්ස්ට්‍රැක්ෂන්"
+        },
+        "function/csd/2023": {
+          "word": "ශ්‍රිතය"
+        },
         "programming/coursea/2023": {
           "word": "ක්‍රමලේඛනය"
         },

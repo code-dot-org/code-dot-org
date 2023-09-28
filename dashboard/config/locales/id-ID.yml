@@ -10,6 +10,7 @@ id:
         error:
           future: tidak mungkin di masa depan
         finish_sign_up_header: Selesaikan pembuatan akun Anda
+        finish_sign_up_header_error: 'Mohon Perbaiki kesalahan berikut:'
         finish_sign_up_subheader: Isikan informasi berikut untuk menyelesaikan pembuatan
           akun Code.org untuk <strong>%{email}</strong>.
         finish_sign_up_subheader_markdown: Isikan informasi berikut untuk menyelesaikan
@@ -31,6 +32,7 @@ id:
           memiliki sebuah alamat email)](%{url})
         reset_password_token: Tautan pengaturan ulang kata sandi yang telah Anda ikuti
         us_state: Provinsi
+        user_type: Jenis Akun
         username: nama pengguna
         verified_teacher: Guru Terverifikasi
     errors:

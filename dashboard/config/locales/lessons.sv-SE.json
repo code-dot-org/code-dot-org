@@ -558,6 +558,54 @@
           "name": "Dansparty",
           "purpose": "Denna lektion introducerar kärn CS-koncept av kodning och eventprogrammering (med hjälp av block)."
         },
+        "csd1-2023/Processing": {
+          "name": "Bearbetar"
+        },
+        "csd1-2023/Storage": {
+          "name": "Lagring"
+        },
+        "csd2-2023/Intro to HTML": {
+          "name": "Introduktion till HTML"
+        },
+        "csd2-2023/Using Images": {
+          "name": "Använda bilder"
+        },
+        "csd2-2023/CSS Classes": {
+          "name": "CSS-klasser"
+        },
+        "csd3-2023/Variables": {
+          "name": "variabler"
+        },
+        "csd3-2023/Text": {
+          "name": "text"
+        },
+        "csd3-2023/Conditionals": {
+          "name": "Villkor"
+        },
+        "csd3-2023/Collisions": {
+          "name": "Kollisioner"
+        },
+        "csd3-2023/Functions": {
+          "name": "funktioner"
+        },
+        "csd5-2023/Representing Images": {
+          "name": "Representerar bilder"
+        },
+        "csd5-2023/Automating Data Decisions": {
+          "name": "Automatisera databeslut"
+        },
+        "csd6a-2023/Accelerometer": {
+          "name": "Accelerometer"
+        },
+        "csd6a-2023/Functions": {
+          "name": "funktioner"
+        },
+        "csd6b-2023/Accelerometer": {
+          "name": "Accelerometer"
+        },
+        "csd6b-2023/Functions": {
+          "name": "funktioner"
+        },
         "coursea-2023/Happy Maps": {
           "name": "Glada kartor"
         },

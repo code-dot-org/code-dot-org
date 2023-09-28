@@ -1151,6 +1151,9 @@
           "word": "Sự kiện",
           "definition": "Hành động khiến hiện tượng nào đó xảy ra"
         },
+        "artificial_intelligence/ai-ethics/2023": {
+          "word": "Trí tuệ nhân tạo"
+        },
         "adaptation/csc-adaptations/2023": {
           "word": "Thích ứng",
           "definition": "Một sự thay đổi trong một sinh vật để tồn tại tốt hơn trong môi trường của nó"
@@ -1368,6 +1371,61 @@
         },
         "poetry_circle/poetry/2023": {
           "definition": "Một không gian an toàn và sáng tạo để thử nghiệm những bài thơ mới và nhận phản hồi mang tính xây dựng từ những người khác"
+        },
+        "computer/csd/2023": {
+          "word": "Máy tính"
+        },
+        "input/csd/2023": {
+          "word": "Đầu vào"
+        },
+        "digital_footprint/csd/2023": {
+          "word": "Dấu vết số"
+        },
+        "copyright/csd/2023": {
+          "word": "Bản quyền",
+          "definition": "quyền hợp pháp độc quyền để in, xuất bản, biểu diễn, quay phim hoặc ghi lại tài liệu văn học, nghệ thuật hoặc âm nhạc và cho phép người khác làm điều tương tự"
+        },
+        "bug/csd/2023": {
+          "word": "Lỗi",
+          "definition": "Một phần của chương trình không hoạt động chính xác."
+        },
+        "debugging/csd/2023": {
+          "word": "Sửa lỗi",
+          "definition": "Tìm và sửa các vấn đề trong một thuật toán hoặc chương trình."
+        },
+        "program/csd/2023": {
+          "word": "Chương trình",
+          "definition": "Thuật toán đã được mã hóa thành thông tin mà máy tính có thể chạy"
+        },
+        "variable/csd/2023": {
+          "word": "Biến",
+          "definition": "Nhãn cho một phần thông tin dùng trong chương trình."
+        },
+        "sprite/csd/2023": {
+          "word": "Nhân vật"
+        },
+        "condition/csd/2023": {
+          "word": "Điều kiện"
+        },
+        "conditionals/csd/2023": {
+          "word": "Điều kiện"
+        },
+        "abstraction/csd/2023": {
+          "word": "Trừu tượng"
+        },
+        "function/csd/2023": {
+          "word": "Hàm"
+        },
+        "user/csd/2023": {
+          "word": "Người dùng",
+          "definition": "Cá nhân sử dụng một đối tượng, bao gồm cả phần mềm và phần cứng."
+        },
+        "user_interface/csd/2023": {
+          "word": "Giao diện người dùng"
+        },
+        "machine_learning/csd/2023": {
+          "word": "Học máy",
+          "definition": "Cách máy tính nhận ra mẫu và đưa ra quyết định mà không cần được lập trình cụ thể"
         },
         "algorithm/coursea/2023": {
           "word": "Thuật toán",

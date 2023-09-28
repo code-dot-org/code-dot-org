@@ -292,6 +292,10 @@ uz:
   call_to_action_register_early_access: Erta kirish uchun ro'yxatdan o'ting
   call_to_action_open_positions: Ochiq pozitsiyalarni ko'rish
   call_to_action_get_guide: Qo'llanmani oling
+  call_to_action_donate_to_cdo: Code.org saytiga xayriya qiling
+  call_to_action_start_fundraiser: Mablag 'yig'ishni boshlang
+  call_to_action_view_donation_policy: Xayriya siyosatini ko'rish
+  call_to_action_view_donate_bitpay: BitPay bilan xayr-ehson qiling
   aria_label_call_to_action_afe: Amazon Future Engineer haqida ko'proq bilib oling
   aria_label_call_to_action_teaching_csf: Kompyuter fanlari asoslarini o'qitish professional
     ta'lim dasturini boshlang
@@ -403,6 +407,7 @@ uz:
   curriculum_name_csp: Kompyuter fani tamoyillari
   curriculum_name_csc: Kompyuter fanlari aloqalari
   curriculum_name_csa: Kompyuter fanlari A
+  curriculum_name_csa_ai: Dasturiy ta'minot muhandisligi va kompyuter ko'rinishi
   curriculum_name_csc_02: Har qanday Kompyuter aloqalari modullari
   curriculum_name_ai: Sun’iy intellekt (AI) va mashinalar o‘rganishi
   curriculum_name_artificial_intelligence: Sun'iy intellekt (AI)
@@ -483,6 +488,14 @@ uz:
     hisoblash tizimlarini yaratish bilan tanishtiradi.
   curriculum_desc_csp: Bepul, AP® CSP tomonidan tasdiqlangan, o'quvchilarni informatika
     fanining asosiy tushunchalari bilan tanishtiradigan o'rta maktabga kirish kursi.
+  curriculum_desc_csa_ai_long: 'Ushbu ikki bobdan keyingi APP CSA moduli o''rta maktab
+    o''quvchilariga GitHub va GitHub Copilot-ni o''z ichiga olgan dasturiy ta''minotni
+    ishlab chiqish bo''yicha professional vositalar bilan amaliy tajribani taklif
+    etadi va ularga kompyuterni ko''rish dasturini ishlab chiqish uchun haqiqiy ko''nikmalarni
+    beradi. '
+  curriculum_desc_csa_ai_short: Ushbu post-AP® CSA moduli o'rta maktab o'quvchilariga
+    dasturiy ta'minotni ishlab chiqish bo'yicha professional vositalar bilan amaliy
+    tajribani taklif etadi.
   collection_hardware: Uskunaga diqqat qarating
   collection_hardware_desc: O'quvchilarni muammolarni yechishda uchun ma'lumotlar
     va jismoniy qurilmalardan foydalanish imkoniyatini beradi.
@@ -560,6 +573,7 @@ uz:
   module_duration_2_hrs: 2 soat
   module_duration_3_hrs: 3 soat
   module_duration_5_hrs: 5 soat
+  module_duration_5_hrs_plus: 5+ soat
   module_duration_8_hrs: 8 soat
   module_duration_20_hrs: 20 soat
   module_duration_35_hrs: 35 soat
@@ -641,6 +655,7 @@ uz:
   heading_these_lessons_will: 'Ushbu darslar:'
   heading_explore_curriculum_catalog: O'quv dasturlari katalogidagi barcha kurslarimizni
     o'rganing
+  heading_csa_ai: AP® imtihonidan keyin qilinadigan ishlarni qidiryapsizmi?
   professional_learning_section_desc: O'qitishga tayyorgarlik ko'rayotganda kerakli
     yordamni oling. O'qituvchilar buni yaxshi ko'radilar, 90% dan ortig'i bu eng yaxshi
     kasbiy rivojlanish reytingiga ega!
@@ -675,6 +690,23 @@ uz:
     bilan o'qitishni boshlash bilan bog'liq har qanday savollarga javob berish uchun
     shu yerda. Shuningdek, siz boshqa o'qituvchilardan o'qituvchilar forumlarida ularning
     tajribalari haqida so'rashingiz mumkin.
+  subscribe_form_section_title: Yangilanishlar uchun obuna bo'ling
+  subscribe_form_section_desc_csa: Code.org kompaniyasining AP® Computer Science A
+    haqida oylik elektron pochta xabarlarini olish uchun ro'yxatdan o'ting va pochta
+    qutingizga yuborilgan foydali eslatmalar, maslahatlar va yangilanishlarni oling.
+  subscribe_form_section_desc_csc: Code.org ning Computer Science Connections haqida
+    oylik elektron pochta xabarlarini olish uchun ro'yxatdan o'ting va foydali eslatmalar,
+    maslahatlar va yangilanishlarni to'g'ridan-to'g'ri pochta qutingizga yuboring.
+  subscribe_form_section_desc_csd: Code.org kompyuter fanlari kashfiyotlari haqida
+    oylik elektron pochta xabarlarini olish uchun ro'yxatdan o'ting va pochta qutingizga
+    yuborilgan foydali eslatmalar, maslahatlar va yangilanishlarni oling.
+  subscribe_form_section_desc_csf: Code.org kompyuter fanlari asoslari haqida oylik
+    elektron pochta xabarlarini olish uchun ro'yxatdan o'ting va pochta qutingizga
+    yuborilgan foydali eslatmalar, maslahatlar va yangilanishlarni oling.
+  subscribe_form_section_desc_csp: Code.org kompyuter fanlari tamoyillari haqida oylik
+    elektron pochta xabarlarini olish uchun ro'yxatdan o'ting va foydali eslatmalar,
+    maslahatlar va yangilanishlarni to'g'ridan-to'g'ri pochta qutingizga yuboring.
+  subscribe_form_section_unsubscribe: Istalgan vaqtda obunani bekor qilishingiz mumkin.
   blockchain_hero_heading: Blokcheyn qanday ishlaydi
   blockchain_hero_desc: Bizning yangi “Blokcheyn qanday ishlaydi” videolarimiz va
     qo‘shimcha darslarimiz bilan blokcheyn olamiga sho‘ng‘ing!
@@ -783,6 +815,9 @@ uz:
     Har bir dars seriyadagi bitta video bilan birlashtirilgan bo'lib, videolarda kiritilgan
     tushunchalarga chuqurroq kirib boradi.
   ai_curriculum_btn_aria_label_04: AI darslarini qanday ishlashini o'rganing
+  ai_curriculum_grades_05: 'Sinf darajalari: 9-12'
+  ai_curriculum_btn_aria_label_05: Dasturiy ta'minot muhandisligi va kompyuterni ko'rish
+    modulini o'rganing
   ai_carousel_heading: 'Code.org yordamida o''qituvchilar AI haqida nima deyishadi:'
   ai_carousel_quote_01: Bu dars, shuningdek, o'quvchilarimga tasniflash tizimlarida
     fikr elementi borligini ko'rish imkoniyatini berdi. Keyinchalik, biz sun'iy intellektda
@@ -919,6 +954,7 @@ uz:
     uchun vositalar, boshlang'ichdan ilg'orgacha. Oyoq barmoqlarini botirganlar uchun
     boshlang'ich ko'rsatmalarni, shuningdek, o'z potentsialini maksimal darajada oshirishni
     istaganlar uchun ilg'or vositalarni o'z ichiga oladi.
+  ai_pl_101_resources_3: AI talabalar ta'limini o'zgartirishni taklif qiladi
   how_ai_works_hero_heading: AI qanday ishlaydi
   how_ai_works_hero_desc: "“AI qanday ishlaydi”, bizning video seriyamiz va unga qo'shilgan
     darslarimiz bilan sun'iy intellekt dunyosiga sho'ng'ing!"
@@ -1349,8 +1385,8 @@ uz:
     Animation
   csp_page_curriculum_glance_devices: Laptop, Chromebook
   csp_page_curriculum_glance_tools: Laboratoriya ilovasi
-  csp_page_curriculum_glance_professional_learning: Facilitator-led Workshops, Self-paced
-    Modules
+  csp_page_curriculum_glance_professional_learning: Fasilitator-boshchiligidagi seminarlar,
+    o'z-o'zidan ishlaydigan modullar
   csp_page_curriculum_glance_professional_languages: Ingliz
   csp_page_curriculum_glance_professional_accessibility_features: Text-to-speech,
     Closed captioning, Immersive reader
@@ -1478,8 +1514,8 @@ uz:
     Hisoblash, Ilova dizayni, O'yinlar va animatsiyalar, San'at va Dizayn, Dasturlash
   csd_page_curriculum_glance_devices: Laptop, Chromebook
   csd_page_curriculum_glance_tools: App Lab, Game Lab, AI Lab, Web Lab
-  csd_page_curriculum_glance_professional_learning: Facilitator-led Workshops, Self-paced
-    Modules
+  csd_page_curriculum_glance_professional_learning: Fasilitator-boshchiligidagi seminarlar,
+    o'z-o'zidan ishlaydigan modullar
   csd_page_curriculum_glance_professional_languages: Ingliz
   csd_page_curriculum_glance_professional_accessibility_features: Text-to-speech,
     Closed captioning, Immersive reader
@@ -1644,8 +1680,8 @@ uz:
     San'at va Dizayn, Ilova Dizayni
   csf_page_curriculum_glance_devices: Noutbuk, Xrombuk, Planshet
   csf_page_curriculum_glance_tools: Sprite Lab, Play Lab
-  csf_page_curriculum_glance_professional_learning: Facilitator-led Workshops, Self-paced
-    Modules
+  csf_page_curriculum_glance_professional_learning: Fasilitator-boshchiligidagi seminarlar,
+    o'z-o'zidan ishlaydigan modullar
   csf_page_curriculum_glance_languages: Arab, indoneziya, katalon, soddalashtirilgan
     xitoy, anʼanaviy xitoy, chex, frantsuz, nemis, hind, italyan, yapon, koreys, kannada,
     malay, maratxi, moʻgʻul, polyak, portugal-BR, rumin, rus, slovak, tagalog, tamil
@@ -1792,6 +1828,40 @@ uz:
   csa_page_faq_answer_08_02: For more information about the values that guided our
     work, please see our [curriculum values](%{curriculum_values_url}) and our [professional
     learning values](%{pl_values_url}).
+  donate_page_top_heading: Bizning missiyamizni moliyalashtirishga yordam bering
+  donate_page_top_desc: Har bir xayr-ehson Code.org ning informatika ta'limiga kirishni
+    kengaytirish missiyasini kuchaytiradi. Biz sizga xayr-ehson qilish va o'zgarishlarni
+    amalga oshirishning bir necha usullarini taklif qilamiz.
+  donate_page_fundraise_title: Code.org uchun mablag 'yig'ish
+  donate_page_fundraise_desc: Code.org uchun pul yig'ishga yordam bering! Har bir
+    maktabdagi har bir o'quvchi informatika fanini o'rganish imkoniyatiga ega bo'lishi
+    kerak.
+  donate_page_other_ways_title: Berishning boshqa usullari
+  donate_page_other_ways_desc: Hissa qo'shishning turli usullarini o'rganing va sizga
+    eng mos variantni toping. Katta yoki kichik har bir imo-ishora bizning vazifamizni
+    oldinga siljitadi.
+  donate_page_501c3: Code.org jamoat 501 (c) (3) notijorat tashkiloti sifatida ro'yxatdan
+    o'tgan. Code.org saytiga qo'shgan hissasi qonun tomonidan ruxsat etilgan darajada
+    soliqqa tortiladi. Code.org soliq identifikatsiya raqami 46-0858543.
+  donate_page_donation_policy_title: Xayriya siyosatimizni tushunish
+  donate_page_donation_policy_desc: Sizning hissangizni qanday hal qilishimiz va taqsimlashimiz
+    haqida bilib oling.
+  donate_tabs_tab_label_daf_direct: DAF Direct
+  donate_tabs_tab_label_amazon: Amazon
+  donate_tabs_tab_label_bitpay: BitPay
+  donate_tabs_tab_label_employee_match: Xodimlar uchrashuvi
+  donate_tabs_daf_direct_title: DAF Direct orqali xayr-ehson qiling
+  donate_tabs_daf_direct_desc: Fidelity Charitable, Schwab Charitable yoki BNY Mellon
+    bilan donorlar tomonidan tavsiya etilgan fond orqali xayriya qiling va DAF Direct
+    onlayn shakli orqali Code.org saytiga grant tavsiyanomasini bering.
+  donate_tabs_amazon_title: Amazon orqali xayriya qiling
+  donate_tabs_amazon_desc: Amazon hisob qaydnomangiz yordamida to'g'ridan-to'g'ri
+    xayriya qiling. Bir necha marta bosish bilan Code.org missiyasiga muammosiz hissa
+    qo'shing va informatika ta'limining kelajagini kuchaytiring.
+  donate_tabs_bitpay_title: BitPay orqali Crypto bilan xayriya qiling
+  donate_tabs_bitpay_desc: Kripto valyutasi bilan berishning kelajagini quchoqlang.
+    BitPay orqali sizning raqamli valyutangiz Code.org saytining informatika ta'limini
+    kengaytirishdagi sa'y-harakatlarini bevosita qo'llab-quvvatlashi mumkin.
   hoc_live: Dasturlash soati jonli efir
   hoc_live_sign_up_title: Dasturlash soati jonli efiriga ro'yxatdan o'ting
   hoc_live_learn_title: Kod soatini jonli efirda o'rganing

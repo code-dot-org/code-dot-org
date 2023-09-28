@@ -5366,6 +5366,37 @@
           "url": "https://www.youtube.com/watch?v=rgbZAWnOWOo",
           "type": "Video"
         },
+        "_template_ai_code_of_ethics/ai-ethics/2023": {
+          "type": "Trang trình bày"
+        },
+        "ai_code_of_ethics/ai-ethics/2023": {
+          "type": "Trang trình bày"
+        },
+        "ethics_and_ai_privacy_the_future_of_work/ai-ethics/2023": {
+          "type": "Video"
+        },
+        "character_card_individual_docs_/ai-ethics/2023": {
+          "type": "Tài nguyên"
+        },
+        "character_cards/ai-ethics/2023": {
+          "type": "Tài nguyên"
+        },
+        "generative_ai_activity_instructions/ai-ethics/2023": {
+          "type": "Tài nguyên"
+        },
+        "generative_ai_news_articles/ai-ethics/2023": {
+          "type": "Tài nguyên"
+        },
+        "group_scenarios/ai-ethics/2023": {
+          "type": "Tài nguyên"
+        },
+        "how_ai_works_large_language_models/ai-ethics/2023": {
+          "url": "https://www.youtube.com/watch?v=X-AWdfSFCHQ",
+          "type": "Video"
+        },
+        "societal_impact_of_generative_ai/ai-ethics/2023": {
+          "type": "Trang trình bày"
+        },
         "cs_connections_landing_page/csc-adaptations/2023": {
           "name": "Trang đích kết nối CS",
           "url": "https://code.org/educate/csc",
@@ -5907,6 +5938,1264 @@
         "poem_app_example/poetry/2023": {
           "name": "Ví dụ về ứng dụng bài thơ",
           "url": "https://studio.code.org/projects/poetry_hoc/j3TXDXNhz0XEsH4Xjk_rT9buBHYCplirIKtY_Pg_bYo",
+          "type": "Tài nguyên"
+        },
+        "teacher_forum/csd/2023": {
+          "name": "Diễn đàn giáo viên"
+        },
+        "the_problem_solving_process_2/csd/2023": {
+          "name": "Quá trình giải quyết vấn đề"
+        },
+        "intro_to_problem_solving/csd/2023": {
+          "name": "Giới thiệu phần giải quyết vấn đề",
+          "type": "Trang trình bày"
+        },
+        "problem_solving_process_1/csd/2023": {
+          "type": "Video"
+        },
+        "the_problem_solving_process/csd/2023": {
+          "type": "Video"
+        },
+        "the_problem_solving_process_1/csd/2023": {
+          "name": "Quá trình giải quyết vấn đề",
+          "type": "Trang trình bày"
+        },
+        "the_problem_solving_process_5/csd/2023": {
+          "name": "Quá trình giải quyết vấn đề"
+        },
+        "exploring_problem_solving/csd/2023": {
+          "name": "Khám phá Giải quyết vấn đề",
+          "type": "Trang trình bày"
+        },
+        "solving_problems/csd/2023": {
+          "type": "Chìa khóa trả lời"
+        },
+        "what_is_a_computer/csd/2023": {
+          "type": "Video"
+        },
+        "what_is_a_computer_/csd/2023": {
+          "name": "Máy tính là gì?"
+        },
+        "what_is_a_computer_1/csd/2023": {
+          "type": "Trang trình bày"
+        },
+        "input_and_output_2/csd/2023": {
+          "type": "Trang trình bày"
+        },
+        "apps_with_processing_2/csd/2023": {
+          "type": "Trang trình bày"
+        },
+        "apps_with_storage_2/csd/2023": {
+          "type": "Trang trình bày"
+        },
+        "what_do_computers_do/csd/2023": {
+          "type": "Video"
+        },
+        "apps_and_problem_solving_-_student_checklist/csd/2023": {
+          "type": "Tài nguyên"
+        },
+        "apps_and_problem_solving_1/csd/2023": {
+          "type": "Đánh giá đồng cấp"
+        },
+        "apps_and_problem_solving_2/csd/2023": {
+          "type": "Thang điểm"
+        },
+        "computer_science_practices/csd/2023": {
+          "type": "Suy nghĩ"
+        },
+        "project_-_propose_an_app/csd/2023": {
+          "type": "Trang trình bày"
+        },
+        "intro_to_problem_solving_newspapers_/csd/2023": {
+          "type": "Trang trình bày"
+        },
+        "intro_to_problem_solving_spaghetti_/csd/2023": {
+          "type": "Trang trình bày"
+        },
+        "intro_to_problem_solving_paper_towels_/csd/2023": {
+          "type": "Trang trình bày"
+        },
+        "exploring_problem_solving_animals_/csd/2023": {
+          "type": "Trang trình bày"
+        },
+        "tangrams/csd/2023": {
+          "type": "Tài nguyên"
+        },
+        "exploring_problem_solving_games_/csd/2023": {
+          "type": "Trang trình bày"
+        },
+        "_key_warm_up_word_search/csd/2023": {
+          "type": "Chìa khóa trả lời"
+        },
+        "_key_web_design_for_users/csd/2023": {
+          "type": "Chìa khóa trả lời"
+        },
+        "exploring_web_pages_2/csd/2023": {
+          "type": "Trang trình bày"
+        },
+        "problem_solving_and_design/csd/2023": {
+          "type": "Tài nguyên"
+        },
+        "web_design_template/csd/2023": {
+          "type": "Tài nguyên"
+        },
+        "html_tags/csd/2023": {
+          "type": "Tài nguyên"
+        },
+        "intro_to_html/csd/2023": {
+          "type": "Trang trình bày"
+        },
+        "intro_to_web_lab_part_2/csd/2023": {
+          "type": "Video"
+        },
+        "pair_programming/csd/2023": {
+          "name": "Lập trình đôi",
+          "type": "Video"
+        },
+        "video_intro_to_web_lab_part_1/csd/2023": {
+          "type": "Video"
+        },
+        "formatting_html/csd/2023": {
+          "type": "Tài nguyên"
+        },
+        "headings/csd/2023": {
+          "type": "Trang trình bày"
+        },
+        "headings_and_paragraphs/csd/2023": {
+          "type": "Tài nguyên"
+        },
+        "lists/csd/2023": {
+          "name": "Danh sách",
+          "type": "Tài nguyên"
+        },
+        "video_debugging/csd/2023": {
+          "name": "Video: Sửa lỗi",
+          "type": "Video"
+        },
+        "video_pair_programming/csd/2023": {
+          "name": "Video: Lập trình theo cặp",
+          "type": "Video"
+        },
+        "html_web_page/csd/2023": {
+          "type": "Thang điểm"
+        },
+        "html_web_page_1/csd/2023": {
+          "type": "Đánh giá đồng cấp"
+        },
+        "html_web_page_2/csd/2023": {
+          "type": "Hướng dẫn dự án"
+        },
+        "mini-project_html_web_page/csd/2023": {
+          "type": "Trang trình bày"
+        },
+        "problem_solving_process_with_programming/csd/2023": {
+          "type": "Tài nguyên"
+        },
+        "digital_footprint/csd/2023": {
+          "name": "Dấu vết số",
+          "type": "Trang trình bày"
+        },
+        "social_sleuth/csd/2023": {
+          "name": "Thám tử mạng xã hội"
+        },
+        "social_sleuth_1/csd/2023": {
+          "name": "Thám tử mạng xã hội"
+        },
+        "intro_to_css_-_part_1/csd/2023": {
+          "name": "Giới thiệu về CSS - Phần 1",
+          "type": "Video"
+        },
+        "intro_to_css_-_part_2/csd/2023": {
+          "name": "Giới thiệu về CSS - Phần 2",
+          "type": "Video"
+        },
+        "style_sheets/csd/2023": {
+          "type": "Tài nguyên"
+        },
+        "styling_text_with_css/csd/2023": {
+          "name": "Tạo phong cách cho văn bản với CSS",
+          "type": "Trang trình bày"
+        },
+        "text_properties/csd/2023": {
+          "type": "Tài nguyên"
+        },
+        "mini-project_your_personal_style/csd/2023": {
+          "type": "Trang trình bày"
+        },
+        "your_personal_style/csd/2023": {
+          "type": "Thang điểm"
+        },
+        "your_personal_style_1/csd/2023": {
+          "type": "Đánh giá đồng cấp"
+        },
+        "your_personal_style_2/csd/2023": {
+          "type": "Hướng dẫn dự án"
+        },
+        "creative_commons_overview/csd/2023": {
+          "type": "Video"
+        },
+        "intellectual_property/csd/2023": {
+          "name": "Sở hữu trí tuệ",
+          "type": "Trang trình bày"
+        },
+        "creative_commons_search/csd/2023": {
+          "type": "Tài nguyên"
+        },
+        "images_in_html/csd/2023": {
+          "name": "Hình ảnh trong HTML",
+          "type": "Tài nguyên"
+        },
+        "using_images/csd/2023": {
+          "type": "Trang trình bày"
+        },
+        "websites_for_expression/csd/2023": {
+          "type": "Trang trình bày"
+        },
+        "styling_elements_with_css/csd/2023": {
+          "name": "Tạo phong cách cho các thành phần với CSS",
+          "type": "Trang trình bày"
+        },
+        "personal_web_page_-_prepare/csd/2023": {
+          "type": "Hướng dẫn dự án"
+        },
+        "your_web_page_prepare/csd/2023": {
+          "type": "Trang trình bày"
+        },
+        "personal_web_page/csd/2023": {
+          "type": "Đánh giá đồng cấp"
+        },
+        "personal_web_page_-_reflect/csd/2023": {
+          "type": "Hướng dẫn dự án"
+        },
+        "personal_web_page_-_student_checklist/csd/2023": {
+          "type": "Tài nguyên"
+        },
+        "personal_web_page_1/csd/2023": {
+          "type": "Thang điểm"
+        },
+        "project_-_personal_web_page/csd/2023": {
+          "type": "Trang trình bày"
+        },
+        "publishing_your_website/csd/2023": {
+          "name": "Xuất bản trang ",
+          "type": "Video"
+        },
+        "websites_for_a_purpose_2/csd/2023": {
+          "type": "Trang trình bày"
+        },
+        "team_problem_solving/csd/2023": {
+          "type": "Trang trình bày"
+        },
+        "video_managing_disagreement/csd/2023": {
+          "name": "Video: Xử lý sự bất đồng",
+          "type": "Video"
+        },
+        "video_teamwork/csd/2023": {
+          "name": "Video: Làm việc theo nhóm",
+          "type": "Video"
+        },
+        "sources_and_research/csd/2023": {
+          "type": "Trang trình bày"
+        },
+        "video_how_search_works/csd/2023": {
+          "name": "Cách hoạt động của Tìm kiếm",
+          "type": "Video"
+        },
+        "classes/csd/2023": {
+          "type": "Tài nguyên"
+        },
+        "css_classes/csd/2023": {
+          "type": "Trang trình bày"
+        },
+        "plan_a_multi-page_website/csd/2023": {
+          "type": "Hướng dẫn dự án"
+        },
+        "planning_a_multi-page_site/csd/2023": {
+          "type": "Trang trình bày"
+        },
+        "website_for_a_purpose/csd/2023": {
+          "type": "Thang điểm"
+        },
+        "hyperlinks/csd/2023": {
+          "type": "Tài nguyên"
+        },
+        "linking_pages/csd/2023": {
+          "name": "Liên kết trang",
+          "type": "Trang trình bày"
+        },
+        "project_-_website_for_a_purpose/csd/2023": {
+          "type": "Trang trình bày"
+        },
+        "peer_review_and_final_touches/csd/2023": {
+          "type": "Trang trình bày"
+        },
+        "website_for_a_purpose_-_reflect/csd/2023": {
+          "type": "Hướng dẫn dự án"
+        },
+        "website_for_a_purpose_1/csd/2023": {
+          "type": "Đánh giá đồng cấp"
+        },
+        "_warm_up_word_search_key_/csd/2023": {
+          "type": "Chìa khóa trả lời"
+        },
+        "programming_for_a_purpose/csd/2023": {
+          "type": "Trang trình bày"
+        },
+        "animation_and_game_design_template/csd/2023": {
+          "type": "Tài nguyên"
+        },
+        "plotting_shapes/csd/2023": {
+          "type": "Trang trình bày"
+        },
+        "drawing_in_game_lab/csd/2023": {
+          "name": "Bản vẽ trong Kho trò chơi",
+          "type": "Trang trình bày"
+        },
+        "drawing_in_game_lab_-_part_1/csd/2023": {
+          "type": "Video"
+        },
+        "drawing_in_game_lab_-_part_2/csd/2023": {
+          "type": "Video"
+        },
+        "drawing_shapes_1/csd/2023": {
+          "type": "Tài nguyên"
+        },
+        "shapes_and_parameters/csd/2023": {
+          "type": "Tài nguyên"
+        },
+        "shapes_and_parameters_1/csd/2023": {
+          "type": "Trang trình bày"
+        },
+        "introduction_to_variables/csd/2023": {
+          "type": "Video"
+        },
+        "naming_variables/csd/2023": {
+          "type": "Tài nguyên"
+        },
+        "variables/csd/2023": {
+          "name": "Các biến",
+          "type": "Tài nguyên"
+        },
+        "variables_1/csd/2023": {
+          "name": "Các biến",
+          "type": "Video"
+        },
+        "variables_2/csd/2023": {
+          "name": "Các biến",
+          "type": "Trang trình bày"
+        },
+        "random_numbers/csd/2023": {
+          "type": "Tài nguyên"
+        },
+        "random_numbers_1/csd/2023": {
+          "type": "Trang trình bày"
+        },
+        "mini-project_-_robot_faces/csd/2023": {
+          "type": "Trang trình bày"
+        },
+        "problem_solving_with_programming/csd/2023": {
+          "type": "Tài nguyên"
+        },
+        "robot_faces/csd/2023": {
+          "type": "Thang điểm"
+        },
+        "animation_tab/csd/2023": {
+          "type": "Tài nguyên"
+        },
+        "introduction_to_sprites/csd/2023": {
+          "type": "Video"
+        },
+        "sprites/csd/2023": {
+          "name": "Nhân vật",
+          "type": "Tài nguyên"
+        },
+        "sprites_1/csd/2023": {
+          "name": "Nhân vật",
+          "type": "Trang trình bày"
+        },
+        "the_animation_tab/csd/2023": {
+          "name": "Tab hoạt hình",
+          "type": "Video"
+        },
+        "sprite_properties/csd/2023": {
+          "name": "Thuộc tính của nhân vật",
+          "type": "Tài nguyên"
+        },
+        "sprite_properties_1/csd/2023": {
+          "name": "Thuộc tính của nhân vật",
+          "type": "Trang trình bày"
+        },
+        "sprite_properties_needs_updating_/csd/2023": {
+          "name": "Thuộc tính của nhân vật",
+          "type": "Video"
+        },
+        "text/csd/2023": {
+          "name": "Văn bản",
+          "type": "Trang trình bày"
+        },
+        "captioned_scenes/csd/2023": {
+          "type": "Thang điểm"
+        },
+        "mini-project_-_captioned_scenes/csd/2023": {
+          "type": "Trang trình bày"
+        },
+        "flipbook_example_-_by_marnic_bos/csd/2023": {
+          "type": "Video"
+        },
+        "introduction_to_the_draw_loop/csd/2023": {
+          "type": "Video"
+        },
+        "the_draw_loop/csd/2023": {
+          "type": "Tài nguyên"
+        },
+        "the_draw_loop_1/csd/2023": {
+          "type": "Trang trình bày"
+        },
+        "sprite_movement/csd/2023": {
+          "type": "Video"
+        },
+        "sprite_movement_1/csd/2023": {
+          "type": "Trang trình bày"
+        },
+        "animated_scene/csd/2023": {
+          "type": "Thang điểm"
+        },
+        "mini-project_-_animation/csd/2023": {
+          "type": "Trang trình bày"
+        },
+        "boolean_expressions/csd/2023": {
+          "name": "Biểu thức Boolean",
+          "type": "Video"
+        },
+        "booleans_and_comparison_operators/csd/2023": {
+          "type": "Tài nguyên"
+        },
+        "conditional_statements/csd/2023": {
+          "name": "Câu lệnh có điều kiện",
+          "type": "Video"
+        },
+        "conditionals/csd/2023": {
+          "name": "Điều kiện",
+          "type": "Trang trình bày"
+        },
+        "if_statements/csd/2023": {
+          "type": "Tài nguyên"
+        },
+        "keyboard_input/csd/2023": {
+          "name": "Tín hiệu đầu vào từ bàn phím",
+          "type": "Trang trình bày"
+        },
+        "if-else_statements/csd/2023": {
+          "type": "Tài nguyên"
+        },
+        "if_else_statements/csd/2023": {
+          "name": "Câu lệnh IF/Else",
+          "type": "Video"
+        },
+        "mouse_input/csd/2023": {
+          "type": "Trang trình bày"
+        },
+        "extra_code_in_challenge_levels/csd/2023": {
+          "type": "Tài nguyên"
+        },
+        "interactive_card_-_student_checklist/csd/2023": {
+          "type": "Tài nguyên"
+        },
+        "interactive_card_3/csd/2023": {
+          "type": "Thang điểm"
+        },
+        "project_-_interactive_card/csd/2023": {
+          "name": "Dự án: Thẻ tương tác",
+          "type": "Trang trình bày"
+        },
+        "velocity/csd/2023": {
+          "name": "Vận tốc",
+          "type": "Video"
+        },
+        "velocity_1/csd/2023": {
+          "name": "Vận tốc",
+          "type": "Tài nguyên"
+        },
+        "velocity_2/csd/2023": {
+          "name": "Vận tốc",
+          "type": "Trang trình bày"
+        },
+        "collision_detection/csd/2023": {
+          "name": "Phát hiện va chạm"
+        },
+        "collision_detection_1/csd/2023": {
+          "name": "Phát hiện va chạm",
+          "type": "Tài nguyên"
+        },
+        "collision_detection_2/csd/2023": {
+          "name": "Phát hiện va chạm",
+          "type": "Trang trình bày"
+        },
+        "mini-project_-_side_scroller/csd/2023": {
+          "type": "Trang trình bày"
+        },
+        "side_scroller/csd/2023": {
+          "name": "Game đi cảnh",
+          "type": "Thang điểm"
+        },
+        "side_scroller_1/csd/2023": {
+          "name": "Game đi cảnh"
+        },
+        "complex_sprite_movement/csd/2023": {
+          "name": "Di chuyển nhân vật phức tạp",
+          "type": "Trang trình bày"
+        },
+        "velocity_and_the_counter_pattern/csd/2023": {
+          "name": "Vận tốc và mẫu bộ đếm",
+          "type": "Tài nguyên"
+        },
+        "collisions/csd/2023": {
+          "name": "Va chạm",
+          "type": "Trang trình bày"
+        },
+        "flyer_game/csd/2023": {
+          "name": "Trò chơi Thú bay",
+          "type": "Thang điểm"
+        },
+        "flyer_game_1/csd/2023": {
+          "name": "Trò chơi Thú bay"
+        },
+        "mini-project_-_flyer_game/csd/2023": {
+          "type": "Trang trình bày"
+        },
+        "functions/csd/2023": {
+          "name": "Các hàm",
+          "type": "Video"
+        },
+        "functions_1/csd/2023": {
+          "name": "Các hàm",
+          "type": "Tài nguyên"
+        },
+        "functions_2/csd/2023": {
+          "name": "Các hàm",
+          "type": "Trang trình bày"
+        },
+        "the_game_design_process/csd/2023": {
+          "name": "Quá trình thiết kế trò chơi",
+          "type": "Trang trình bày"
+        },
+        "using_the_game_design_process/csd/2023": {
+          "name": "Sử dụng quy trình thiết kế trò chơi",
+          "type": "Trang trình bày"
+        },
+        "make_your_own_game_-_student_checklist/csd/2023": {
+          "type": "Tài nguyên"
+        },
+        "make_your_own_game_3/csd/2023": {
+          "type": "Thang điểm"
+        },
+        "project_-_design_a_game/csd/2023": {
+          "name": "Dự án - thiết kế một trò chơi",
+          "type": "Trang trình bày"
+        },
+        "designing_with_empathy_2/csd/2023": {
+          "type": "Trang trình bày"
+        },
+        "understanding_your_user/csd/2023": {
+          "name": "Tìm hiểu về người dùng của bạn",
+          "type": "Trang trình bày"
+        },
+        "the_design_thinking_process/csd/2023": {
+          "type": "Video"
+        },
+        "user_centered_design_-_define_and_prepare/csd/2023": {
+          "type": "Trang trình bày"
+        },
+        "user_centered_design_-_try_and_reflect/csd/2023": {
+          "type": "Trang trình bày"
+        },
+        "user_interface_screens/csd/2023": {
+          "type": "Tài nguyên"
+        },
+        "user_interfaces/csd/2023": {
+          "type": "Trang trình bày"
+        },
+        "feedback_and_testing/csd/2023": {
+          "type": "Trang trình bày"
+        },
+        "prototype_feedback/csd/2023": {
+          "type": "Tài nguyên"
+        },
+        "example_user_interviews/csd/2023": {
+          "type": "Tài nguyên"
+        },
+        "identifying_user_needs/csd/2023": {
+          "type": "Trang trình bày"
+        },
+        "paper_prototypes/csd/2023": {
+          "name": "Nguyên mẫu giấy",
+          "type": "Thang điểm"
+        },
+        "project_-_paper_prototype/csd/2023": {
+          "type": "Trang trình bày"
+        },
+        "designing_apps_for_good/csd/2023": {
+          "name": "Thiết kế ứng dụng nhằm mục đích tốt",
+          "type": "Trang trình bày"
+        },
+        "market_research/csd/2023": {
+          "name": "Nghiên cứu thị trường"
+        },
+        "market_research_-_research_areas/csd/2023": {
+          "type": "Tài nguyên"
+        },
+        "market_research_1/csd/2023": {
+          "name": "Nghiên cứu thị trường"
+        },
+        "market_research_2/csd/2023": {
+          "name": "Nghiên cứu thị trường",
+          "type": "Trang trình bày"
+        },
+        "exploring_ui_elements/csd/2023": {
+          "type": "Trang trình bày"
+        },
+        "build_a_paper_prototype/csd/2023": {
+          "type": "Trang trình bày"
+        },
+        "design_mode/csd/2023": {
+          "name": "Chế độ thiết kế",
+          "type": "Tài nguyên"
+        },
+        "design_mode_elements/csd/2023": {
+          "type": "Tài nguyên"
+        },
+        "prototype_testing/csd/2023": {
+          "name": "Thử nghiệm nguyên mẫu",
+          "type": "Trang trình bày"
+        },
+        "what_s_for_lunch_testing/csd/2023": {
+          "type": "Video"
+        },
+        "design_mode_in_app_lab/csd/2023": {
+          "type": "Trang trình bày"
+        },
+        "intro_to_design_mode/csd/2023": {
+          "type": "Video"
+        },
+        "model_screen_design/csd/2023": {
+          "type": "Tài nguyên"
+        },
+        "build_a_digital_prototype/csd/2023": {
+          "type": "Trang trình bày"
+        },
+        "events_in_app_lab/csd/2023": {
+          "type": "Video"
+        },
+        "events_in_app_lab_1/csd/2023": {
+          "type": "Video"
+        },
+        "events_in_app_lab_2/csd/2023": {
+          "type": "Trang trình bày"
+        },
+        "changing_screens/csd/2023": {
+          "type": "Tài nguyên"
+        },
+        "importing_screens/csd/2023": {
+          "type": "Tài nguyên"
+        },
+        "linking_prototype_screens/csd/2023": {
+          "type": "Trang trình bày"
+        },
+        "multi-screen_apps/csd/2023": {
+          "name": "Ứng dụng đa màn hình",
+          "type": "Tài nguyên"
+        },
+        "responding_to_user_input/csd/2023": {
+          "type": "Tài nguyên"
+        },
+        "testing_the_app/csd/2023": {
+          "name": "Thử Ứng dụng",
+          "type": "Trang trình bày"
+        },
+        "bugs_and_features_2/csd/2023": {
+          "type": "Trang trình bày"
+        },
+        "updating_your_prototype_1/csd/2023": {
+          "type": "Trang trình bày"
+        },
+        "app_presentation/csd/2023": {
+          "name": "Trình bày ứng dụng",
+          "type": "Thang điểm"
+        },
+        "app_presentation_1/csd/2023": {
+          "name": "Trình bày ứng dụng"
+        },
+        "project_-_app_presentation/csd/2023": {
+          "type": "Trang trình bày"
+        },
+        "meals_data/csd/2023": {
+          "type": "Tài nguyên"
+        },
+        "representation_matters_2/csd/2023": {
+          "type": "Trang trình bày"
+        },
+        "patterns_and_representation/csd/2023": {
+          "type": "Trang trình bày"
+        },
+        "representing_information/csd/2023": {
+          "name": "Miêu tả thông tin"
+        },
+        "ascii_and_binary_representation/csd/2023": {
+          "type": "Trang trình bày"
+        },
+        "ascii_challenges_1/csd/2023": {
+          "type": "Chìa khóa trả lời"
+        },
+        "ascii_text/csd/2023": {
+          "type": "Tài nguyên"
+        },
+        "representing_images/csd/2023": {
+          "name": "Hình ảnh đại diện",
+          "type": "Trang trình bày"
+        },
+        "binary_and_data/csd/2023": {
+          "type": "Video"
+        },
+        "representing_numbers_1/csd/2023": {
+          "type": "Trang trình bày"
+        },
+        "combining_representations/csd/2023": {
+          "name": "Kết hợp các đại diện",
+          "type": "Trang trình bày"
+        },
+        "keeping_data_secret/csd/2023": {
+          "name": "Giữ bí mật dữ liệu",
+          "type": "Trang trình bày"
+        },
+        "medical_records_1/csd/2023": {
+          "type": "Chìa khóa trả lời"
+        },
+        "create_a_representation_2/csd/2023": {
+          "type": "Thang điểm"
+        },
+        "create_a_representation_3/csd/2023": {
+          "type": "Trang trình bày"
+        },
+        "problem_solving_with_data_2/csd/2023": {
+          "type": "Trang trình bày"
+        },
+        "structuring_data_1/csd/2023": {
+          "type": "Trang trình bày"
+        },
+        "interpreting_data_2/csd/2023": {
+          "type": "Tài nguyên"
+        },
+        "interpreting_data_3/csd/2023": {
+          "type": "Trang trình bày"
+        },
+        "making_decisions_with_data_2/csd/2023": {
+          "type": "Trang trình bày"
+        },
+        "problem_solving_process_with_data/csd/2023": {
+          "type": "Tài nguyên"
+        },
+        "automating_data_decisions_1/csd/2023": {
+          "type": "Tài nguyên"
+        },
+        "automating_data_decisions_3/csd/2023": {
+          "type": "Trang trình bày"
+        },
+        "amazon_and_data/csd/2023": {
+          "type": "Video"
+        },
+        "netflix_and_data/csd/2023": {
+          "type": "Video"
+        },
+        "problem_solving_with_big_data/csd/2023": {
+          "type": "Trang trình bày"
+        },
+        "waze_and_data/csd/2023": {
+          "type": "Video"
+        },
+        "data_and_machine_learning/csd/2023": {
+          "type": "Trang trình bày"
+        },
+        "video_impact_on_society/csd/2023": {
+          "name": "Video: Tác động đến xã hội",
+          "type": "Video"
+        },
+        "video_machine_learning/csd/2023": {
+          "name": "Video: Học Máy",
+          "url": "https://www.youtube.com/watch?v=OeU5m6vRyCk",
+          "type": "Video"
+        },
+        "video_training_data_and_bias/csd/2023": {
+          "name": "Video: Dữ liệu đào tạo và Định kiến",
+          "type": "Video"
+        },
+        "make_a_recommendation/csd/2023": {
+          "type": "Đánh giá đồng cấp"
+        },
+        "make_a_recommendation_1/csd/2023": {
+          "type": "Thang điểm"
+        },
+        "make_a_recommendation_2/csd/2023": {
+          "type": "Hướng dẫn dự án"
+        },
+        "project_-_make_a_recommendation/csd/2023": {
+          "type": "Trang trình bày"
+        },
+        "physical_design_template/csd/2023": {
+          "type": "Tài nguyên"
+        },
+        "physical_designs_1/csd/2023": {
+          "type": "Trang trình bày"
+        },
+        "circuit_playground/csd/2023": {
+          "type": "Tài nguyên"
+        },
+        "circuits_and_logic/csd/2023": {
+          "type": "Video"
+        },
+        "physical_output/csd/2023": {
+          "type": "Tài nguyên"
+        },
+        "the_circuit_playground/csd/2023": {
+          "type": "Trang trình bày"
+        },
+        "designing_screens_with_code/csd/2023": {
+          "type": "Tài nguyên"
+        },
+        "updating_screen_elements/csd/2023": {
+          "type": "Trang trình bày"
+        },
+        "board_events/csd/2023": {
+          "name": "Sự kiện bảng mạch",
+          "type": "Tài nguyên"
+        },
+        "board_events_1/csd/2023": {
+          "name": "Sự kiện bảng mạch",
+          "type": "Trang trình bày"
+        },
+        "physical_input/csd/2023": {
+          "type": "Tài nguyên"
+        },
+        "the_counter_pattern/csd/2023": {
+          "type": "Video"
+        },
+        "if_statements_1/csd/2023": {
+          "type": "Video"
+        },
+        "the_counter_pattern_1/csd/2023": {
+          "type": "Tài nguyên"
+        },
+        "variables_and_if_statements/csd/2023": {
+          "type": "Trang trình bày"
+        },
+        "mini-project_field_collector_app/csd/2023": {
+          "type": "Trang trình bày"
+        },
+        "rubric_-_field_collector_app/csd/2023": {
+          "type": "Thang điểm"
+        },
+        "color_leds/csd/2023": {
+          "name": "Đèn LED màu",
+          "type": "Trang trình bày"
+        },
+        "color_lights/csd/2023": {
+          "type": "Tài nguyên"
+        },
+        "getting_screen_inputs/csd/2023": {
+          "type": "Trang trình bày"
+        },
+        "taking_input_with_getproperty/csd/2023": {
+          "type": "Tài nguyên"
+        },
+        "combining_inputs_and_outputs/csd/2023": {
+          "type": "Trang trình bày"
+        },
+        "input_output_devices/csd/2023": {
+          "type": "Video"
+        },
+        "peer_review_-_human_device_interaction/csd/2023": {
+          "type": "Tài nguyên"
+        },
+        "project_human_device_interaction/csd/2023": {
+          "type": "Trang trình bày"
+        },
+        "rubric_-_human_device_interaction/csd/2023": {
+          "type": "Thang điểm"
+        },
+        "analog_sensors/csd/2023": {
+          "type": "Tài nguyên"
+        },
+        "board_sensors/csd/2023": {
+          "type": "Trang trình bày"
+        },
+        "changing_sensor_scale/csd/2023": {
+          "type": "Tài nguyên"
+        },
+        "date_and_change_events/csd/2023": {
+          "type": "Tài nguyên"
+        },
+        "accelerometer/csd/2023": {
+          "type": "Trang trình bày"
+        },
+        "accelerometer_events/csd/2023": {
+          "name": "Sự kiện gia tốc kế",
+          "type": "Tài nguyên"
+        },
+        "the_accelerometer/csd/2023": {
+          "type": "Tài nguyên"
+        },
+        "arrays/csd/2023": {
+          "type": "Tài nguyên"
+        },
+        "introduction_to_arrays/csd/2023": {
+          "name": "Giới thiệu Danh sách",
+          "type": "Video"
+        },
+        "making_music/csd/2023": {
+          "name": "Tạo âm nhạc",
+          "type": "Trang trình bày"
+        },
+        "modifying_arrays/csd/2023": {
+          "type": "Tài nguyên"
+        },
+        "playing_notes/csd/2023": {
+          "name": "Ghi chú khi chơi",
+          "type": "Tài nguyên"
+        },
+        "producing_output/csd/2023": {
+          "type": "Tài nguyên"
+        },
+        "functions_with_parameters/csd/2023": {
+          "name": "Hàm và tham số",
+          "type": "Video"
+        },
+        "mini-project_interactive_art/csd/2023": {
+          "type": "Trang trình bày"
+        },
+        "student_example_projects/csd/2023": {
+          "type": "Tài nguyên"
+        },
+        "student_rubric_-_interactive_art/csd/2023": {
+          "type": "Thang điểm"
+        },
+        "circuits_and_leds/csd/2023": {
+          "type": "Tài nguyên"
+        },
+        "physical_outputs_and_leds/csd/2023": {
+          "type": "Trang trình bày"
+        },
+        "circuits_and_buttons/csd/2023": {
+          "type": "Tài nguyên"
+        },
+        "physical_inputs_and_buttons/csd/2023": {
+          "type": "Trang trình bày"
+        },
+        "project_prototype_an_innovation/csd/2023": {
+          "type": "Trang trình bày"
+        },
+        "prototype_an_innovation/csd/2023": {
+          "type": "Thang điểm"
+        },
+        "teacher_forum_1/csd/2023": {
+          "name": "Diễn đàn giáo viên"
+        },
+        "physical_designs_2/csd/2023": {
+          "type": "Trang trình bày"
+        },
+        "introducing_the_micro_bit/csd/2023": {
+          "type": "Trang trình bày"
+        },
+        "led_planning_sheet/csd/2023": {
+          "type": "Tài nguyên"
+        },
+        "the_micro_bit_led_display/csd/2023": {
+          "type": "Tài nguyên"
+        },
+        "the_micro_bit_overview/csd/2023": {
+          "type": "Tài nguyên"
+        },
+        "updating_screen_elements_1/csd/2023": {
+          "type": "Trang trình bày"
+        },
+        "board_events_2/csd/2023": {
+          "name": "Sự kiện bảng mạch",
+          "type": "Trang trình bày"
+        },
+        "board_events_3/csd/2023": {
+          "name": "Sự kiện bảng mạch",
+          "type": "Tài nguyên"
+        },
+        "micro_bit_inputs/csd/2023": {
+          "type": "Tài nguyên"
+        },
+        "the_counter_pattern_2/csd/2023": {
+          "type": "Video"
+        },
+        "variables_and_if_statements_1/csd/2023": {
+          "type": "Trang trình bày"
+        },
+        "mini-project_field_collector_app_1/csd/2023": {
+          "type": "Trang trình bày"
+        },
+        "rubric_-_field_collector_app_1/csd/2023": {
+          "type": "Thang điểm"
+        },
+        "getting_screen_inputs_1/csd/2023": {
+          "type": "Trang trình bày"
+        },
+        "combining_inputs_and_outputs_1/csd/2023": {
+          "type": "Trang trình bày"
+        },
+        "peer_review_-_human_device_interaction_1/csd/2023": {
+          "type": "Tài nguyên"
+        },
+        "project_human_device_interaction_1/csd/2023": {
+          "type": "Trang trình bày"
+        },
+        "rubric_-_human_device_interaction_1/csd/2023": {
+          "type": "Thang điểm"
+        },
+        "board_sensors_1/csd/2023": {
+          "type": "Trang trình bày"
+        },
+        "data_change_events/csd/2023": {
+          "type": "Tài nguyên"
+        },
+        "setting_sensor_scale/csd/2023": {
+          "type": "Tài nguyên"
+        },
+        "the_micro_bit_sensors/csd/2023": {
+          "type": "Tài nguyên"
+        },
+        "accelerometer_1/csd/2023": {
+          "type": "Trang trình bày"
+        },
+        "accelerometer_events_1/csd/2023": {
+          "name": "Sự kiện gia tốc kế",
+          "type": "Tài nguyên"
+        },
+        "the_micro_bit_accelerometer/csd/2023": {
+          "type": "Tài nguyên"
+        },
+        "functions_3/csd/2023": {
+          "name": "Các hàm",
+          "type": "Trang trình bày"
+        },
+        "mini-project_interactive_pet/csd/2023": {
+          "type": "Trang trình bày"
+        },
+        "student_rubric_-_interactive_pet/csd/2023": {
+          "type": "Thang điểm"
+        },
+        "external_leds_on_a_micro_bit/csd/2023": {
+          "type": "Tài nguyên"
+        },
+        "physical_outputs_and_leds_1/csd/2023": {
+          "type": "Trang trình bày"
+        },
+        "external_buttons_on_a_micro_bit/csd/2023": {
+          "type": "Tài nguyên"
+        },
+        "physical_inputs_and_buttons_1/csd/2023": {
+          "type": "Trang trình bày"
+        },
+        "project_prototype_an_innovation_1/csd/2023": {
+          "type": "Trang trình bày"
+        },
+        "prototype_an_innovation_2/csd/2023": {
+          "type": "Thang điểm"
+        },
+        "the_problem_solving_process_4/csd/2023": {
+          "name": "Quá trình giải quyết vấn đề"
+        },
+        "ai_what_is_machine_learning_/csd/2023": {
+          "url": "https://www.youtube.com/watch?v=OeU5m6vRyCk",
+          "type": "Video"
+        },
+        "introduction_to_machine_learning/csd/2023": {
+          "type": "Trang trình bày"
+        },
+        "types_of_machine_learning/csd/2023": {
+          "type": "Trang trình bày"
+        },
+        "types_of_machine_learning_2/csd/2023": {
+          "type": "Chìa khóa trả lời"
+        },
+        "innovations_in_ai/csd/2023": {
+          "type": "Trang trình bày"
+        },
+        "innovations_in_ai_research_areas_-_student_resource/csd/2023": {
+          "type": "Tài nguyên"
+        },
+        "seeing_ai/csd/2023": {
+          "name": "Quan sát AI",
+          "type": "Video"
+        },
+        "_key_patterns_in_data/csd/2023": {
+          "type": "Chìa khóa trả lời"
+        },
+        "finding_patterns_in_data/csd/2023": {
+          "type": "Video"
+        },
+        "patterns_in_data/csd/2023": {
+          "type": "Trang trình bày"
+        },
+        "shoe_survey/csd/2023": {
+          "type": "Tài nguyên"
+        },
+        "_key_classification_models/csd/2023": {
+          "type": "Chìa khóa trả lời"
+        },
+        "classification_models_1/csd/2023": {
+          "type": "Trang trình bày"
+        },
+        "fruit_veggie_cards/csd/2023": {
+          "type": "Tài nguyên"
+        },
+        "_key_training_a_model_in_ai_lab/csd/2023": {
+          "type": "Chìa khóa trả lời"
+        },
+        "accuracy_in_ai_lab/csd/2023": {
+          "type": "Tài nguyên"
+        },
+        "introduction_to_ai_lab/csd/2023": {
+          "name": "Giới thiệu về AI Lab",
+          "type": "Trang trình bày"
+        },
+        "introduction_to_ai_lab_1/csd/2023": {
+          "name": "Giới thiệu về AI Lab",
+          "type": "Video"
+        },
+        "selecting_features/csd/2023": {
+          "type": "Tài nguyên"
+        },
+        "training_and_testing_in_ai_lab/csd/2023": {
+          "name": "Đào tạo và thử nghiệm trong phòng thí nghiệm AI",
+          "type": "Video"
+        },
+        "using_data_with_categorical_features/csd/2023": {
+          "type": "Tài nguyên"
+        },
+        "importing_a_model_in_app_lab/csd/2023": {
+          "type": "Tài nguyên"
+        },
+        "importing_models_in_app_lab/csd/2023": {
+          "type": "Trang trình bày"
+        },
+        "ai_training_data_bias/csd/2023": {
+          "name": "AI: Dữ liệu đào tạo & Định kiến",
+          "url": "https://youtu.be/x2mRoFNm22g",
+          "type": "Video"
+        },
+        "model_cards/csd/2023": {
+          "type": "Trang trình bày"
+        },
+        "_key_zoo_models/csd/2023": {
+          "type": "Chìa khóa trả lời"
+        },
+        "model_cards_in_ai_lab/csd/2023": {
+          "name": "Thẻ mẫu trong AI Lab",
+          "type": "Video"
+        },
+        "saving_models_in_ai_lab/csd/2023": {
+          "type": "Trang trình bày"
+        },
+        "selecting_a_label/csd/2023": {
+          "type": "Tài nguyên"
+        },
+        "if-statements_in_app_lab/csd/2023": {
+          "type": "Video"
+        },
+        "model_cards_in_app_lab/csd/2023": {
+          "type": "Trang trình bày"
+        },
+        "printable_model_cards/csd/2023": {
+          "type": "Tài nguyên"
+        },
+        "_key_numerical_accuracy/csd/2023": {
+          "type": "Chìa khóa trả lời"
+        },
+        "_key_zombie_prediction/csd/2023": {
+          "type": "Chìa khóa trả lời"
+        },
+        "numerical_models/csd/2023": {
+          "type": "Trang trình bày"
+        },
+        "_key_-_numerical_data_in_ai_lab/csd/2023": {
+          "type": "Chìa khóa trả lời"
+        },
+        "numerical_data_in_ai_lab/csd/2023": {
+          "name": "Dữ liệu số trong phòng thí nghiệm AI",
+          "type": "Trang trình bày"
+        },
+        "numerical_data_in_ai_lab_1/csd/2023": {
+          "name": "Dữ liệu số trong phòng thí nghiệm AI"
+        },
+        "numerical_data_in_ai_lab_2/csd/2023": {
+          "name": "Dữ liệu số trong phòng thí nghiệm AI",
+          "type": "Video"
+        },
+        "using_data_with_numerical_features/csd/2023": {
+          "type": "Tài nguyên"
+        },
+        "customizing_apps/csd/2023": {
+          "type": "Trang trình bày"
+        },
+        "ai_code_of_ethics/csd/2023": {
+          "type": "Trang trình bày"
+        },
+        "ethics_ai_equal_access_and_algorithmic_bias/csd/2023": {
+          "type": "Video"
+        },
+        "our_ai_code_of_ethics_template_/csd/2023": {
+          "type": "Trang trình bày"
+        },
+        "create_an_ml_app/csd/2023": {
+          "type": "Thang điểm"
+        },
+        "make_a_machine_learning_app/csd/2023": {
+          "type": "Trang trình bày"
+        },
+        "issue_statements/csd/2023": {
+          "type": "Trang trình bày"
+        },
+        "creating_a_survey/csd/2023": {
+          "type": "Tài nguyên"
+        },
+        "creating_a_survey_in_google_forms/csd/2023": {
+          "type": "Video"
+        },
+        "survey_planning/csd/2023": {
+          "name": "Bộ sưu tập Thiết kế dữ liệu",
+          "type": "Trang trình bày"
+        },
+        "cleaning_survey_data/csd/2023": {
+          "type": "Video"
+        },
+        "survey_data_in_ai_lab/csd/2023": {
+          "type": "Trang trình bày"
+        },
+        "view_and_download_survey_data/csd/2023": {
+          "type": "Video"
+        },
+        "troubleshooting_models/csd/2023": {
+          "type": "Trang trình bày"
+        },
+        "creating_an_app/csd/2023": {
+          "type": "Trang trình bày"
+        },
+        "_template_5_why_s/csd/2023": {
+          "type": "Tài nguyên"
+        },
+        "design_an_ai_app/csd/2023": {
+          "type": "Trang trình bày"
+        },
+        "design_an_ai_app_1/csd/2023": {
+          "type": "Thang điểm"
+        },
+        "model_card_-_digital_template/csd/2023": {
+          "type": "Tài nguyên"
+        },
+        "model_card_-_printable_template/csd/2023": {
           "type": "Tài nguyên"
         },
         "all_resources/coursea/2023": {

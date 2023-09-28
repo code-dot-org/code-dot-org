@@ -5509,6 +5509,37 @@
           "url": "https://www.youtube.com/watch?v=rgbZAWnOWOo",
           "type": "Video"
         },
+        "_template_ai_code_of_ethics/ai-ethics/2023": {
+          "type": "Slaydlar"
+        },
+        "ai_code_of_ethics/ai-ethics/2023": {
+          "type": "Slaydlar"
+        },
+        "ethics_and_ai_privacy_the_future_of_work/ai-ethics/2023": {
+          "type": "Video"
+        },
+        "character_card_individual_docs_/ai-ethics/2023": {
+          "type": "Manba"
+        },
+        "character_cards/ai-ethics/2023": {
+          "type": "Manba"
+        },
+        "generative_ai_activity_instructions/ai-ethics/2023": {
+          "type": "Manba"
+        },
+        "generative_ai_news_articles/ai-ethics/2023": {
+          "type": "Manba"
+        },
+        "group_scenarios/ai-ethics/2023": {
+          "type": "Manba"
+        },
+        "how_ai_works_large_language_models/ai-ethics/2023": {
+          "url": "https://www.youtube.com/watch?v=X-AWdfSFCHQ",
+          "type": "Video"
+        },
+        "societal_impact_of_generative_ai/ai-ethics/2023": {
+          "type": "Slaydlar"
+        },
         "cs_connections_landing_page/csc-adaptations/2023": {
           "name": "CS Connections Landing Page",
           "url": "https://code.org/educate/csc",
@@ -6038,6 +6069,1321 @@
         "poem_app_example/poetry/2023": {
           "name": "She'r ilovasi namunasi",
           "url": "https://studio.code.org/projects/poetry_hoc/j3TXDXNhz0XEsH4Xjk_rT9buBHYCplirIKtY_Pg_bYo",
+          "type": "Manba"
+        },
+        "teacher_forum/csd/2023": {
+          "name": "O‘qituvchilar forumi"
+        },
+        "the_problem_solving_process_2/csd/2023": {
+          "name": "Muammoni yechish jarayoni"
+        },
+        "intro_to_problem_solving/csd/2023": {
+          "name": "Intro to Problem Solving",
+          "type": "Slaydlar"
+        },
+        "problem_solving_process/csd/2023": {
+          "name": "Muammoni yechish jarayoni"
+        },
+        "problem_solving_process_1/csd/2023": {
+          "name": "Muammoni yechish jarayoni",
+          "type": "Video"
+        },
+        "problem_solving_process_2/csd/2023": {
+          "name": "Muammoni yechish jarayoni"
+        },
+        "the_problem_solving_process/csd/2023": {
+          "type": "Video"
+        },
+        "the_problem_solving_process_1/csd/2023": {
+          "name": "Muammoni yechish jarayoni",
+          "type": "Slaydlar"
+        },
+        "the_problem_solving_process_5/csd/2023": {
+          "name": "Muammoni yechish jarayoni"
+        },
+        "exploring_problem_solving/csd/2023": {
+          "name": "Exploring Problem Solving",
+          "type": "Slaydlar"
+        },
+        "solving_problems/csd/2023": {
+          "type": "Javob kaliti"
+        },
+        "what_is_a_computer/csd/2023": {
+          "type": "Video"
+        },
+        "what_is_a_computer_/csd/2023": {
+          "name": "Kompyuter nima?"
+        },
+        "what_is_a_computer_1/csd/2023": {
+          "type": "Slaydlar"
+        },
+        "input_and_output/csd/2023": {
+          "name": "Input and Output"
+        },
+        "input_and_output_1/csd/2023": {
+          "name": "Input and Output"
+        },
+        "input_and_output_2/csd/2023": {
+          "name": "Input and Output",
+          "type": "Slaydlar"
+        },
+        "apps_with_processing_2/csd/2023": {
+          "type": "Slaydlar"
+        },
+        "apps_with_storage_2/csd/2023": {
+          "type": "Slaydlar"
+        },
+        "what_do_computers_do/csd/2023": {
+          "type": "Video"
+        },
+        "apps_and_problem_solving/csd/2023": {
+          "name": "Apps and Problem Solving"
+        },
+        "apps_and_problem_solving_-_student_checklist/csd/2023": {
+          "type": "Manba"
+        },
+        "apps_and_problem_solving_1/csd/2023": {
+          "name": "Apps and Problem Solving",
+          "type": "Talabalarning o'zaro taqrizi "
+        },
+        "apps_and_problem_solving_2/csd/2023": {
+          "name": "Apps and Problem Solving",
+          "type": "Bo'lim"
+        },
+        "computer_science_practices/csd/2023": {
+          "type": "Reflection"
+        },
+        "project_-_propose_an_app/csd/2023": {
+          "name": "Project - Propose an App",
+          "type": "Slaydlar"
+        },
+        "intro_to_problem_solving_newspapers_/csd/2023": {
+          "type": "Slaydlar"
+        },
+        "intro_to_problem_solving_spaghetti_/csd/2023": {
+          "type": "Slaydlar"
+        },
+        "intro_to_problem_solving_paper_towels_/csd/2023": {
+          "type": "Slaydlar"
+        },
+        "exploring_problem_solving_animals_/csd/2023": {
+          "type": "Slaydlar"
+        },
+        "tangrams/csd/2023": {
+          "type": "Manba"
+        },
+        "exploring_problem_solving_games_/csd/2023": {
+          "type": "Slaydlar"
+        },
+        "_key_warm_up_word_search/csd/2023": {
+          "type": "Javob kaliti"
+        },
+        "_key_web_design_for_users/csd/2023": {
+          "type": "Javob kaliti"
+        },
+        "exploring_web_pages_2/csd/2023": {
+          "type": "Slaydlar"
+        },
+        "problem_solving_and_design/csd/2023": {
+          "type": "Manba"
+        },
+        "web_design_template/csd/2023": {
+          "type": "Manba"
+        },
+        "html_tags/csd/2023": {
+          "name": "HTML Teglar",
+          "type": "Manba"
+        },
+        "intro_to_html/csd/2023": {
+          "name": "Intro to HTML",
+          "type": "Slaydlar"
+        },
+        "intro_to_web_lab_part_2/csd/2023": {
+          "type": "Video"
+        },
+        "pair_programming/csd/2023": {
+          "name": "Juftlikda dasturlash",
+          "type": "Video"
+        },
+        "video_intro_to_web_lab_part_1/csd/2023": {
+          "type": "Video"
+        },
+        "formatting_html/csd/2023": {
+          "name": "HTML-da formatlash",
+          "type": "Manba"
+        },
+        "headings/csd/2023": {
+          "type": "Slaydlar"
+        },
+        "headings_and_paragraphs/csd/2023": {
+          "name": "Sarlavha va paragraflar",
+          "type": "Manba"
+        },
+        "lists/csd/2023": {
+          "name": "Ro‘yxatlar",
+          "type": "Manba"
+        },
+        "video_debugging/csd/2023": {
+          "type": "Video"
+        },
+        "video_pair_programming/csd/2023": {
+          "type": "Video"
+        },
+        "html_web_page/csd/2023": {
+          "type": "Bo'lim"
+        },
+        "html_web_page_1/csd/2023": {
+          "type": "Talabalarning o'zaro taqrizi "
+        },
+        "mini-project_html_web_page/csd/2023": {
+          "type": "Slaydlar"
+        },
+        "problem_solving_process_with_programming/csd/2023": {
+          "type": "Manba"
+        },
+        "digital_footprint/csd/2023": {
+          "name": "Digital Footprint",
+          "type": "Slaydlar"
+        },
+        "intro_to_css_-_part_1/csd/2023": {
+          "name": "CSS-ga kirish - 1-qism",
+          "type": "Video"
+        },
+        "intro_to_css_-_part_2/csd/2023": {
+          "name": "CSS-ga kirish - 2-qism",
+          "type": "Video"
+        },
+        "style_sheets/csd/2023": {
+          "type": "Manba"
+        },
+        "styling_text_with_css/csd/2023": {
+          "name": "Styling Text with CSS",
+          "type": "Slaydlar"
+        },
+        "text_properties/csd/2023": {
+          "type": "Manba"
+        },
+        "mini-project_your_personal_style/csd/2023": {
+          "type": "Slaydlar"
+        },
+        "your_personal_style/csd/2023": {
+          "type": "Bo'lim"
+        },
+        "your_personal_style_1/csd/2023": {
+          "type": "Talabalarning o'zaro taqrizi "
+        },
+        "creative_commons_overview/csd/2023": {
+          "type": "Video"
+        },
+        "intellectual_property/csd/2023": {
+          "name": "Intellectual Property",
+          "type": "Slaydlar"
+        },
+        "creative_commons_search/csd/2023": {
+          "name": "Creative Commons Qidiruv",
+          "type": "Manba"
+        },
+        "images_in_html/csd/2023": {
+          "name": "HTMLda rasmlar",
+          "type": "Manba"
+        },
+        "using_images/csd/2023": {
+          "type": "Slaydlar"
+        },
+        "websites_for_expression/csd/2023": {
+          "type": "Slaydlar"
+        },
+        "layout_properties/csd/2023": {
+          "name": "Maket (Layout) xususiyatlari"
+        },
+        "styling_elements_with_css/csd/2023": {
+          "name": "Styling Elements with CSS",
+          "type": "Slaydlar"
+        },
+        "your_web_page_prepare/csd/2023": {
+          "type": "Slaydlar"
+        },
+        "personal_web_page/csd/2023": {
+          "type": "Talabalarning o'zaro taqrizi "
+        },
+        "personal_web_page_-_student_checklist/csd/2023": {
+          "type": "Manba"
+        },
+        "personal_web_page_1/csd/2023": {
+          "type": "Bo'lim"
+        },
+        "project_-_personal_web_page/csd/2023": {
+          "name": "Loyiha - Shaxsiy veb-sahifa",
+          "type": "Slaydlar"
+        },
+        "publishing_your_website/csd/2023": {
+          "type": "Video"
+        },
+        "websites_for_a_purpose_2/csd/2023": {
+          "type": "Slaydlar"
+        },
+        "team_problem_solving/csd/2023": {
+          "name": "Jamoada muammoni hal qilish",
+          "type": "Slaydlar"
+        },
+        "video_managing_disagreement/csd/2023": {
+          "type": "Video"
+        },
+        "video_teamwork/csd/2023": {
+          "type": "Video"
+        },
+        "sources_and_research/csd/2023": {
+          "type": "Slaydlar"
+        },
+        "video_how_search_works/csd/2023": {
+          "name": "Qidiruv qanday ishlaydi",
+          "type": "Video"
+        },
+        "classes/csd/2023": {
+          "name": "Sinflar",
+          "type": "Manba"
+        },
+        "css_classes/csd/2023": {
+          "name": "CSS sinflari",
+          "type": "Slaydlar"
+        },
+        "planning_a_multi-page_site/csd/2023": {
+          "type": "Slaydlar"
+        },
+        "website_for_a_purpose/csd/2023": {
+          "type": "Bo'lim"
+        },
+        "hyperlinks/csd/2023": {
+          "name": "Giperhavolalar",
+          "type": "Manba"
+        },
+        "linking_pages/csd/2023": {
+          "type": "Slaydlar"
+        },
+        "project_-_website_for_a_purpose/csd/2023": {
+          "type": "Slaydlar"
+        },
+        "peer_review_and_final_touches/csd/2023": {
+          "type": "Slaydlar"
+        },
+        "website_for_a_purpose_1/csd/2023": {
+          "type": "Talabalarning o'zaro taqrizi "
+        },
+        "_warm_up_word_search_key_/csd/2023": {
+          "type": "Javob kaliti"
+        },
+        "programming_for_a_purpose/csd/2023": {
+          "type": "Slaydlar"
+        },
+        "animation_and_game_design_template/csd/2023": {
+          "type": "Manba"
+        },
+        "plotting_shapes/csd/2023": {
+          "name": "Plotting Shapes",
+          "type": "Slaydlar"
+        },
+        "drawing_in_game_lab/csd/2023": {
+          "name": "Drawing in Game Lab",
+          "type": "Slaydlar"
+        },
+        "drawing_in_game_lab_-_part_1/csd/2023": {
+          "type": "Video"
+        },
+        "drawing_in_game_lab_-_part_2/csd/2023": {
+          "type": "Video"
+        },
+        "drawing_shapes_1/csd/2023": {
+          "type": "Manba"
+        },
+        "shapes_and_parameters/csd/2023": {
+          "type": "Manba"
+        },
+        "shapes_and_parameters_1/csd/2023": {
+          "type": "Slaydlar"
+        },
+        "introduction_to_variables/csd/2023": {
+          "name": "Oʻzgaruvchilar mavzusiga kirish",
+          "type": "Video"
+        },
+        "naming_variables/csd/2023": {
+          "type": "Manba"
+        },
+        "variables/csd/2023": {
+          "name": "O‘zgaruvchilar",
+          "type": "Manba"
+        },
+        "variables_1/csd/2023": {
+          "name": "O‘zgaruvchilar",
+          "type": "Video"
+        },
+        "variables_2/csd/2023": {
+          "name": "O‘zgaruvchilar",
+          "type": "Slaydlar"
+        },
+        "random_numbers/csd/2023": {
+          "name": "Tasodifiy sonlar",
+          "type": "Manba"
+        },
+        "random_numbers_1/csd/2023": {
+          "name": "Tasodifiy sonlar",
+          "type": "Slaydlar"
+        },
+        "mini-project_-_robot_faces/csd/2023": {
+          "type": "Slaydlar"
+        },
+        "problem_solving_with_programming/csd/2023": {
+          "type": "Manba"
+        },
+        "robot_faces/csd/2023": {
+          "type": "Bo'lim"
+        },
+        "animation_tab/csd/2023": {
+          "type": "Manba"
+        },
+        "introduction_to_sprites/csd/2023": {
+          "type": "Video"
+        },
+        "sprites/csd/2023": {
+          "name": "Spraytlar",
+          "type": "Manba"
+        },
+        "sprites_1/csd/2023": {
+          "name": "Spraytlar",
+          "type": "Slaydlar"
+        },
+        "the_animation_tab/csd/2023": {
+          "name": "Animatsiya yorlig‘i",
+          "type": "Video"
+        },
+        "sprite_properties/csd/2023": {
+          "name": "Sprait hususiyatlari",
+          "type": "Manba"
+        },
+        "sprite_properties_1/csd/2023": {
+          "name": "Sprait hususiyatlari",
+          "type": "Slaydlar"
+        },
+        "sprite_properties_needs_updating_/csd/2023": {
+          "name": "Sprait hususiyatlari",
+          "type": "Video"
+        },
+        "text/csd/2023": {
+          "name": "Matn",
+          "type": "Slaydlar"
+        },
+        "captioned_scenes/csd/2023": {
+          "type": "Bo'lim"
+        },
+        "mini-project_-_captioned_scenes/csd/2023": {
+          "type": "Slaydlar"
+        },
+        "flipbook_example_-_by_marnic_bos/csd/2023": {
+          "type": "Video"
+        },
+        "introduction_to_the_draw_loop/csd/2023": {
+          "type": "Video"
+        },
+        "the_draw_loop/csd/2023": {
+          "type": "Manba"
+        },
+        "the_draw_loop_1/csd/2023": {
+          "type": "Slaydlar"
+        },
+        "sprite_movement/csd/2023": {
+          "name": "Sprite Movement",
+          "type": "Video"
+        },
+        "sprite_movement_1/csd/2023": {
+          "name": "Sprite Movement",
+          "type": "Slaydlar"
+        },
+        "animated_scene/csd/2023": {
+          "type": "Bo'lim"
+        },
+        "mini-project_-_animation/csd/2023": {
+          "type": "Slaydlar"
+        },
+        "boolean_expressions/csd/2023": {
+          "name": "Mantiqiy ifodalar",
+          "type": "Video"
+        },
+        "booleans_and_comparison_operators/csd/2023": {
+          "type": "Manba"
+        },
+        "conditional_statements/csd/2023": {
+          "name": "Shartli bayonotlar",
+          "type": "Video"
+        },
+        "conditionals/csd/2023": {
+          "name": "Shartli bayonotlar",
+          "type": "Slaydlar"
+        },
+        "if_statements/csd/2023": {
+          "type": "Manba"
+        },
+        "keyboard_input/csd/2023": {
+          "name": "Keyboard Input",
+          "type": "Slaydlar"
+        },
+        "if-else_statements/csd/2023": {
+          "type": "Manba"
+        },
+        "if_else_statements/csd/2023": {
+          "name": "If/Else bayonotlari",
+          "type": "Video"
+        },
+        "mouse_input/csd/2023": {
+          "name": "Sichqon orqali kiritish",
+          "type": "Slaydlar"
+        },
+        "extra_code_in_challenge_levels/csd/2023": {
+          "type": "Manba"
+        },
+        "interactive_card_-_student_checklist/csd/2023": {
+          "type": "Manba"
+        },
+        "interactive_card_3/csd/2023": {
+          "type": "Bo'lim"
+        },
+        "project_-_interactive_card/csd/2023": {
+          "name": "Project - Interactive Card",
+          "type": "Slaydlar"
+        },
+        "velocity/csd/2023": {
+          "name": "Tezlik",
+          "type": "Video"
+        },
+        "velocity_1/csd/2023": {
+          "name": "Tezlik",
+          "type": "Manba"
+        },
+        "velocity_2/csd/2023": {
+          "name": "Tezlik",
+          "type": "Slaydlar"
+        },
+        "collision_detection_1/csd/2023": {
+          "type": "Manba"
+        },
+        "collision_detection_2/csd/2023": {
+          "type": "Slaydlar"
+        },
+        "mini-project_-_side_scroller/csd/2023": {
+          "type": "Slaydlar"
+        },
+        "side_scroller/csd/2023": {
+          "name": "Yon skroller",
+          "type": "Bo'lim"
+        },
+        "side_scroller_1/csd/2023": {
+          "name": "Yon skroller"
+        },
+        "complex_sprite_movement/csd/2023": {
+          "name": "Complex Sprite Movement",
+          "type": "Slaydlar"
+        },
+        "velocity_and_the_counter_pattern/csd/2023": {
+          "type": "Manba"
+        },
+        "collisions/csd/2023": {
+          "name": "Collisions",
+          "type": "Slaydlar"
+        },
+        "flyer_game/csd/2023": {
+          "name": "Flayer o'yini",
+          "type": "Bo'lim"
+        },
+        "flyer_game_1/csd/2023": {
+          "name": "Flayer o'yini"
+        },
+        "mini-project_-_flyer_game/csd/2023": {
+          "type": "Slaydlar"
+        },
+        "functions/csd/2023": {
+          "name": "Funksiyalar",
+          "type": "Video"
+        },
+        "functions_1/csd/2023": {
+          "name": "Funksiyalar",
+          "type": "Manba"
+        },
+        "functions_2/csd/2023": {
+          "name": "Funksiyalar",
+          "type": "Slaydlar"
+        },
+        "the_game_design_process/csd/2023": {
+          "name": "The Game Design Process",
+          "type": "Slaydlar"
+        },
+        "using_the_game_design_process/csd/2023": {
+          "name": "Using the Game Design Process",
+          "type": "Slaydlar"
+        },
+        "make_your_own_game_-_student_checklist/csd/2023": {
+          "type": "Manba"
+        },
+        "make_your_own_game_3/csd/2023": {
+          "type": "Bo'lim"
+        },
+        "project_-_design_a_game/csd/2023": {
+          "name": "Project - Design a Game",
+          "type": "Slaydlar"
+        },
+        "designing_with_empathy_2/csd/2023": {
+          "type": "Slaydlar"
+        },
+        "understanding_your_user/csd/2023": {
+          "name": "Understanding Your User",
+          "type": "Slaydlar"
+        },
+        "the_design_thinking_process/csd/2023": {
+          "type": "Video"
+        },
+        "user_centered_design_-_define_and_prepare/csd/2023": {
+          "type": "Slaydlar"
+        },
+        "user_centered_design_-_try_and_reflect/csd/2023": {
+          "type": "Slaydlar"
+        },
+        "user_interface_screens/csd/2023": {
+          "type": "Manba"
+        },
+        "user_interfaces/csd/2023": {
+          "name": "User Interfaces",
+          "type": "Slaydlar"
+        },
+        "feedback_and_testing/csd/2023": {
+          "name": "Feedback and Testing",
+          "type": "Slaydlar"
+        },
+        "prototype_feedback/csd/2023": {
+          "type": "Manba"
+        },
+        "example_user_interviews/csd/2023": {
+          "type": "Manba"
+        },
+        "identifying_user_needs/csd/2023": {
+          "name": "Identifying User Needs",
+          "type": "Slaydlar"
+        },
+        "paper_prototypes/csd/2023": {
+          "name": "Paper Prototypes",
+          "type": "Bo'lim"
+        },
+        "project_-_paper_prototype/csd/2023": {
+          "name": "Project - Paper Prototype",
+          "type": "Slaydlar"
+        },
+        "designing_apps_for_good/csd/2023": {
+          "name": "Designing Apps for Good",
+          "type": "Slaydlar"
+        },
+        "market_research/csd/2023": {
+          "name": "Market Research"
+        },
+        "market_research_-_research_areas/csd/2023": {
+          "type": "Manba"
+        },
+        "market_research_1/csd/2023": {
+          "name": "Market Research"
+        },
+        "market_research_2/csd/2023": {
+          "name": "Market Research",
+          "type": "Slaydlar"
+        },
+        "exploring_ui_elements/csd/2023": {
+          "type": "Slaydlar"
+        },
+        "build_a_paper_prototype/csd/2023": {
+          "type": "Slaydlar"
+        },
+        "design_mode/csd/2023": {
+          "name": "Design Mode",
+          "type": "Manba"
+        },
+        "design_mode_elements/csd/2023": {
+          "type": "Manba"
+        },
+        "prototype_testing/csd/2023": {
+          "name": "Prototype Testing",
+          "type": "Slaydlar"
+        },
+        "what_s_for_lunch_testing/csd/2023": {
+          "type": "Video"
+        },
+        "design_mode_in_app_lab/csd/2023": {
+          "type": "Slaydlar"
+        },
+        "intro_to_design_mode/csd/2023": {
+          "type": "Video"
+        },
+        "model_screen_design/csd/2023": {
+          "type": "Manba"
+        },
+        "build_a_digital_prototype/csd/2023": {
+          "type": "Slaydlar"
+        },
+        "events_in_app_lab/csd/2023": {
+          "type": "Video"
+        },
+        "events_in_app_lab_1/csd/2023": {
+          "type": "Video"
+        },
+        "events_in_app_lab_2/csd/2023": {
+          "type": "Slaydlar"
+        },
+        "changing_screens/csd/2023": {
+          "type": "Manba"
+        },
+        "importing_screens/csd/2023": {
+          "type": "Manba"
+        },
+        "linking_prototype_screens/csd/2023": {
+          "type": "Slaydlar"
+        },
+        "multi-screen_apps/csd/2023": {
+          "type": "Manba"
+        },
+        "responding_to_user_input/csd/2023": {
+          "type": "Manba"
+        },
+        "testing_the_app/csd/2023": {
+          "name": "Testing the App",
+          "type": "Slaydlar"
+        },
+        "bugs_and_features_2/csd/2023": {
+          "type": "Slaydlar"
+        },
+        "updating_your_prototype_1/csd/2023": {
+          "type": "Slaydlar"
+        },
+        "app_presentation/csd/2023": {
+          "name": "App Presentation",
+          "type": "Bo'lim"
+        },
+        "app_presentation_1/csd/2023": {
+          "name": "App Presentation"
+        },
+        "app_presentation_template/csd/2023": {
+          "type": "Slayd paneli"
+        },
+        "project_-_app_presentation/csd/2023": {
+          "name": "Project - App Presentation",
+          "type": "Slaydlar"
+        },
+        "meals_data/csd/2023": {
+          "type": "Manba"
+        },
+        "representation_matters/csd/2023": {
+          "name": "Representation Matters"
+        },
+        "representation_matters_1/csd/2023": {
+          "name": "Representation Matters"
+        },
+        "representation_matters_2/csd/2023": {
+          "name": "Representation Matters",
+          "type": "Slaydlar"
+        },
+        "patterns_and_representation/csd/2023": {
+          "name": "Patterns and Representation",
+          "type": "Slaydlar"
+        },
+        "representing_information/csd/2023": {
+          "name": "Representing Information"
+        },
+        "ascii_and_binary_representation/csd/2023": {
+          "name": "ASCII and Binary Representation",
+          "type": "Slaydlar"
+        },
+        "ascii_challenges_1/csd/2023": {
+          "type": "Javob kaliti"
+        },
+        "ascii_text/csd/2023": {
+          "type": "Manba"
+        },
+        "representing_images/csd/2023": {
+          "name": "Representing Images",
+          "type": "Slaydlar"
+        },
+        "binary_and_data/csd/2023": {
+          "type": "Video"
+        },
+        "representing_numbers/csd/2023": {
+          "name": "Representing Numbers"
+        },
+        "representing_numbers_1/csd/2023": {
+          "name": "Representing Numbers",
+          "type": "Slaydlar"
+        },
+        "combining_representations/csd/2023": {
+          "name": "Combining Representations",
+          "type": "Slaydlar"
+        },
+        "keeping_data_secret/csd/2023": {
+          "name": "Keeping Data Secret",
+          "type": "Slaydlar"
+        },
+        "medical_records_1/csd/2023": {
+          "type": "Javob kaliti"
+        },
+        "create_a_representation_2/csd/2023": {
+          "type": "Bo'lim"
+        },
+        "create_a_representation_3/csd/2023": {
+          "type": "Slaydlar"
+        },
+        "problem_solving_with_data_2/csd/2023": {
+          "type": "Slaydlar"
+        },
+        "structuring_data/csd/2023": {
+          "name": "Structuring Data"
+        },
+        "structuring_data_1/csd/2023": {
+          "name": "Structuring Data",
+          "type": "Slaydlar"
+        },
+        "interpreting_data/csd/2023": {
+          "name": "Interpreting Data"
+        },
+        "interpreting_data_1/csd/2023": {
+          "name": "Interpreting Data"
+        },
+        "interpreting_data_2/csd/2023": {
+          "name": "Interpreting Data",
+          "type": "Manba"
+        },
+        "interpreting_data_3/csd/2023": {
+          "name": "Interpreting Data",
+          "type": "Slaydlar"
+        },
+        "making_decisions_with_data_1/csd/2023": {
+          "name": "Making Decisions with Data"
+        },
+        "making_decisions_with_data_2/csd/2023": {
+          "name": "Making Decisions with Data",
+          "type": "Slaydlar"
+        },
+        "problem_solving_process_with_data/csd/2023": {
+          "type": "Manba"
+        },
+        "automating_data_decisions/csd/2023": {
+          "name": "Automating Data Decisions"
+        },
+        "automating_data_decisions_1/csd/2023": {
+          "name": "Automating Data Decisions",
+          "type": "Manba"
+        },
+        "automating_data_decisions_2/csd/2023": {
+          "name": "Automating Data Decisions"
+        },
+        "automating_data_decisions_3/csd/2023": {
+          "name": "Automating Data Decisions",
+          "type": "Slaydlar"
+        },
+        "amazon_and_data/csd/2023": {
+          "type": "Video"
+        },
+        "data_in_the_real_world/csd/2023": {
+          "name": "Data in the Real World"
+        },
+        "data_in_the_real_world_1/csd/2023": {
+          "name": "Data in the Real World"
+        },
+        "netflix_and_data/csd/2023": {
+          "type": "Video"
+        },
+        "problem_solving_with_big_data/csd/2023": {
+          "name": "Problem Solving with Big Data",
+          "type": "Slaydlar"
+        },
+        "waze_and_data/csd/2023": {
+          "type": "Video"
+        },
+        "data_and_machine_learning/csd/2023": {
+          "type": "Slaydlar"
+        },
+        "video_impact_on_society/csd/2023": {
+          "type": "Video"
+        },
+        "video_machine_learning/csd/2023": {
+          "name": "Video: Machine Learning - Mashina o'rganishi",
+          "url": "https://www.youtube.com/watch?v=OeU5m6vRyCk",
+          "type": "Video"
+        },
+        "video_training_data_and_bias/csd/2023": {
+          "type": "Video"
+        },
+        "make_a_recommendation/csd/2023": {
+          "type": "Talabalarning o'zaro taqrizi "
+        },
+        "make_a_recommendation_1/csd/2023": {
+          "type": "Bo'lim"
+        },
+        "project_-_make_a_recommendation/csd/2023": {
+          "type": "Slaydlar"
+        },
+        "physical_design_template/csd/2023": {
+          "type": "Manba"
+        },
+        "physical_designs_1/csd/2023": {
+          "type": "Slaydlar"
+        },
+        "circuit_playground/csd/2023": {
+          "type": "Manba"
+        },
+        "circuits_and_logic/csd/2023": {
+          "type": "Video"
+        },
+        "physical_output/csd/2023": {
+          "type": "Manba"
+        },
+        "the_circuit_playground/csd/2023": {
+          "name": "The Circuit Playground",
+          "type": "Slaydlar"
+        },
+        "designing_screens_with_code/csd/2023": {
+          "type": "Manba"
+        },
+        "updating_screen_elements/csd/2023": {
+          "type": "Slaydlar"
+        },
+        "board_events/csd/2023": {
+          "name": "Board Events",
+          "type": "Manba"
+        },
+        "board_events_1/csd/2023": {
+          "name": "Board Events",
+          "type": "Slaydlar"
+        },
+        "physical_input/csd/2023": {
+          "name": "Physical Input",
+          "type": "Manba"
+        },
+        "the_counter_pattern/csd/2023": {
+          "type": "Video"
+        },
+        "if_statements_1/csd/2023": {
+          "type": "Video"
+        },
+        "the_counter_pattern_1/csd/2023": {
+          "type": "Manba"
+        },
+        "variables_and_if_statements/csd/2023": {
+          "type": "Slaydlar"
+        },
+        "mini-project_field_collector_app/csd/2023": {
+          "type": "Slaydlar"
+        },
+        "rubric_-_field_collector_app/csd/2023": {
+          "type": "Bo'lim"
+        },
+        "color_leds/csd/2023": {
+          "name": "LED ranglar",
+          "type": "Slaydlar"
+        },
+        "color_lights/csd/2023": {
+          "type": "Manba"
+        },
+        "getting_screen_inputs/csd/2023": {
+          "type": "Slaydlar"
+        },
+        "taking_input_with_getproperty/csd/2023": {
+          "type": "Manba"
+        },
+        "combining_inputs_and_outputs/csd/2023": {
+          "type": "Slaydlar"
+        },
+        "input_output_devices/csd/2023": {
+          "type": "Video"
+        },
+        "peer_review_-_human_device_interaction/csd/2023": {
+          "type": "Manba"
+        },
+        "project_human_device_interaction/csd/2023": {
+          "type": "Slaydlar"
+        },
+        "rubric_-_human_device_interaction/csd/2023": {
+          "type": "Bo'lim"
+        },
+        "analog_sensors/csd/2023": {
+          "name": "Analog Sensorlar",
+          "type": "Manba"
+        },
+        "board_sensors/csd/2023": {
+          "type": "Slaydlar"
+        },
+        "changing_sensor_scale/csd/2023": {
+          "name": "Sensor Shkalasini o'zgartirish",
+          "type": "Manba"
+        },
+        "date_and_change_events/csd/2023": {
+          "type": "Manba"
+        },
+        "accelerometer/csd/2023": {
+          "name": "Accelerometer",
+          "type": "Slaydlar"
+        },
+        "accelerometer_events/csd/2023": {
+          "name": "Akselerometr hodisalari",
+          "type": "Manba"
+        },
+        "the_accelerometer/csd/2023": {
+          "type": "Manba"
+        },
+        "arrays/csd/2023": {
+          "name": "Massivlar",
+          "type": "Manba"
+        },
+        "introduction_to_arrays/csd/2023": {
+          "name": "Massivlar bilan tanishish",
+          "type": "Video"
+        },
+        "making_music/csd/2023": {
+          "type": "Slaydlar"
+        },
+        "modifying_arrays/csd/2023": {
+          "type": "Manba"
+        },
+        "playing_notes/csd/2023": {
+          "name": "Notalarni ijro etish",
+          "type": "Manba"
+        },
+        "producing_output/csd/2023": {
+          "type": "Manba"
+        },
+        "functions_with_parameters/csd/2023": {
+          "name": "Funksiyalar (parameterlari bilan)",
+          "type": "Video"
+        },
+        "mini-project_interactive_art/csd/2023": {
+          "type": "Slaydlar"
+        },
+        "student_example_projects/csd/2023": {
+          "type": "Manba"
+        },
+        "student_rubric_-_interactive_art/csd/2023": {
+          "type": "Bo'lim"
+        },
+        "circuits_and_leds/csd/2023": {
+          "type": "Manba"
+        },
+        "physical_outputs_and_leds/csd/2023": {
+          "type": "Slaydlar"
+        },
+        "circuits_and_buttons/csd/2023": {
+          "type": "Manba"
+        },
+        "physical_inputs_and_buttons/csd/2023": {
+          "type": "Slaydlar"
+        },
+        "project_prototype_an_innovation/csd/2023": {
+          "name": "Project: Prototype an Innovation",
+          "type": "Slaydlar"
+        },
+        "prototype_an_innovation/csd/2023": {
+          "type": "Bo'lim"
+        },
+        "teacher_forum_1/csd/2023": {
+          "name": "O‘qituvchilar forumi"
+        },
+        "physical_designs_2/csd/2023": {
+          "type": "Slaydlar"
+        },
+        "introducing_the_micro_bit/csd/2023": {
+          "type": "Slaydlar"
+        },
+        "led_planning_sheet/csd/2023": {
+          "type": "Manba"
+        },
+        "the_micro_bit_led_display/csd/2023": {
+          "type": "Manba"
+        },
+        "the_micro_bit_overview/csd/2023": {
+          "type": "Manba"
+        },
+        "updating_screen_elements_1/csd/2023": {
+          "type": "Slaydlar"
+        },
+        "board_events_2/csd/2023": {
+          "name": "Board Events",
+          "type": "Slaydlar"
+        },
+        "board_events_3/csd/2023": {
+          "name": "Board Events",
+          "type": "Manba"
+        },
+        "micro_bit_inputs/csd/2023": {
+          "type": "Manba"
+        },
+        "the_counter_pattern_2/csd/2023": {
+          "type": "Video"
+        },
+        "variables_and_if_statements_1/csd/2023": {
+          "type": "Slaydlar"
+        },
+        "mini-project_field_collector_app_1/csd/2023": {
+          "type": "Slaydlar"
+        },
+        "rubric_-_field_collector_app_1/csd/2023": {
+          "type": "Bo'lim"
+        },
+        "getting_screen_inputs_1/csd/2023": {
+          "type": "Slaydlar"
+        },
+        "combining_inputs_and_outputs_1/csd/2023": {
+          "type": "Slaydlar"
+        },
+        "peer_review_-_human_device_interaction_1/csd/2023": {
+          "type": "Manba"
+        },
+        "project_human_device_interaction_1/csd/2023": {
+          "type": "Slaydlar"
+        },
+        "rubric_-_human_device_interaction_1/csd/2023": {
+          "type": "Bo'lim"
+        },
+        "board_sensors_1/csd/2023": {
+          "type": "Slaydlar"
+        },
+        "data_change_events/csd/2023": {
+          "type": "Manba"
+        },
+        "setting_sensor_scale/csd/2023": {
+          "type": "Manba"
+        },
+        "the_micro_bit_sensors/csd/2023": {
+          "type": "Manba"
+        },
+        "accelerometer_1/csd/2023": {
+          "name": "Accelerometer",
+          "type": "Slaydlar"
+        },
+        "accelerometer_events_1/csd/2023": {
+          "name": "Akselerometr hodisalari",
+          "type": "Manba"
+        },
+        "the_micro_bit_accelerometer/csd/2023": {
+          "type": "Manba"
+        },
+        "functions_3/csd/2023": {
+          "name": "Funksiyalar",
+          "type": "Slaydlar"
+        },
+        "mini-project_interactive_pet/csd/2023": {
+          "type": "Slaydlar"
+        },
+        "student_rubric_-_interactive_pet/csd/2023": {
+          "type": "Bo'lim"
+        },
+        "external_leds_on_a_micro_bit/csd/2023": {
+          "type": "Manba"
+        },
+        "physical_outputs_and_leds_1/csd/2023": {
+          "type": "Slaydlar"
+        },
+        "external_buttons_on_a_micro_bit/csd/2023": {
+          "type": "Manba"
+        },
+        "physical_inputs_and_buttons_1/csd/2023": {
+          "type": "Slaydlar"
+        },
+        "project_prototype_an_innovation_1/csd/2023": {
+          "name": "Project: Prototype an Innovation",
+          "type": "Slaydlar"
+        },
+        "prototype_an_innovation_2/csd/2023": {
+          "type": "Bo'lim"
+        },
+        "the_problem_solving_process_4/csd/2023": {
+          "name": "Muammoni yechish jarayoni"
+        },
+        "ai_what_is_machine_learning_/csd/2023": {
+          "url": "https://www.youtube.com/watch?v=OeU5m6vRyCk",
+          "type": "Video"
+        },
+        "introduction_to_machine_learning/csd/2023": {
+          "type": "Slaydlar"
+        },
+        "types_of_machine_learning/csd/2023": {
+          "type": "Slaydlar"
+        },
+        "types_of_machine_learning_2/csd/2023": {
+          "type": "Javob kaliti"
+        },
+        "innovations_in_ai/csd/2023": {
+          "type": "Slaydlar"
+        },
+        "innovations_in_ai_research_areas_-_student_resource/csd/2023": {
+          "type": "Manba"
+        },
+        "seeing_ai/csd/2023": {
+          "type": "Video"
+        },
+        "_key_patterns_in_data/csd/2023": {
+          "type": "Javob kaliti"
+        },
+        "finding_patterns_in_data/csd/2023": {
+          "type": "Video"
+        },
+        "patterns_in_data/csd/2023": {
+          "type": "Slaydlar"
+        },
+        "shoe_survey/csd/2023": {
+          "type": "Manba"
+        },
+        "_key_classification_models/csd/2023": {
+          "type": "Javob kaliti"
+        },
+        "classification_models_1/csd/2023": {
+          "type": "Slaydlar"
+        },
+        "fruit_veggie_cards/csd/2023": {
+          "type": "Manba"
+        },
+        "_key_training_a_model_in_ai_lab/csd/2023": {
+          "type": "Javob kaliti"
+        },
+        "accuracy_in_ai_lab/csd/2023": {
+          "type": "Manba"
+        },
+        "introduction_to_ai_lab/csd/2023": {
+          "name": "6-dars",
+          "type": "Slaydlar"
+        },
+        "introduction_to_ai_lab_1/csd/2023": {
+          "name": "6-dars",
+          "type": "Video"
+        },
+        "selecting_features/csd/2023": {
+          "type": "Manba"
+        },
+        "training_and_testing_in_ai_lab/csd/2023": {
+          "name": "AI laboratoriyasida o'qitish va sinov",
+          "type": "Video"
+        },
+        "using_data_with_categorical_features/csd/2023": {
+          "type": "Manba"
+        },
+        "importing_a_model_in_app_lab/csd/2023": {
+          "type": "Manba"
+        },
+        "importing_models_in_app_lab/csd/2023": {
+          "type": "Slaydlar"
+        },
+        "ai_training_data_bias/csd/2023": {
+          "name": "AI: O'rganish ma'lumotlari & yanglishishlar",
+          "url": "https://youtu.be/x2mRoFNm22g",
+          "type": "Video"
+        },
+        "model_cards/csd/2023": {
+          "type": "Slaydlar"
+        },
+        "_key_zoo_models/csd/2023": {
+          "type": "Javob kaliti"
+        },
+        "model_cards_in_ai_lab/csd/2023": {
+          "name": "AI laboratoriyasidagi model kartalar",
+          "type": "Video"
+        },
+        "saving_models_in_ai_lab/csd/2023": {
+          "type": "Slaydlar"
+        },
+        "selecting_a_label/csd/2023": {
+          "type": "Manba"
+        },
+        "if-statements_in_app_lab/csd/2023": {
+          "type": "Video"
+        },
+        "model_cards_in_app_lab/csd/2023": {
+          "type": "Slaydlar"
+        },
+        "printable_model_cards/csd/2023": {
+          "type": "Manba"
+        },
+        "_key_numerical_accuracy/csd/2023": {
+          "type": "Javob kaliti"
+        },
+        "_key_zombie_prediction/csd/2023": {
+          "type": "Javob kaliti"
+        },
+        "numerical_models/csd/2023": {
+          "type": "Slaydlar"
+        },
+        "_key_-_numerical_data_in_ai_lab/csd/2023": {
+          "type": "Javob kaliti"
+        },
+        "numerical_data_in_ai_lab/csd/2023": {
+          "name": "AI laboratoriyasidagi raqamli ma'lumotlar",
+          "type": "Slaydlar"
+        },
+        "numerical_data_in_ai_lab_1/csd/2023": {
+          "name": "AI laboratoriyasidagi raqamli ma'lumotlar"
+        },
+        "numerical_data_in_ai_lab_2/csd/2023": {
+          "name": "AI laboratoriyasidagi raqamli ma'lumotlar",
+          "type": "Video"
+        },
+        "using_data_with_numerical_features/csd/2023": {
+          "type": "Manba"
+        },
+        "customizing_apps/csd/2023": {
+          "type": "Slaydlar"
+        },
+        "ai_code_of_ethics/csd/2023": {
+          "type": "Slaydlar"
+        },
+        "ethics_ai_equal_access_and_algorithmic_bias/csd/2023": {
+          "type": "Video"
+        },
+        "our_ai_code_of_ethics_template_/csd/2023": {
+          "type": "Slaydlar"
+        },
+        "create_an_ml_app/csd/2023": {
+          "type": "Bo'lim"
+        },
+        "make_a_machine_learning_app/csd/2023": {
+          "type": "Slaydlar"
+        },
+        "issue_statements/csd/2023": {
+          "type": "Slaydlar"
+        },
+        "creating_a_survey/csd/2023": {
+          "type": "Manba"
+        },
+        "creating_a_survey_in_google_forms/csd/2023": {
+          "type": "Video"
+        },
+        "survey_planning/csd/2023": {
+          "name": "Designing Data Collection",
+          "type": "Slaydlar"
+        },
+        "cleaning_survey_data/csd/2023": {
+          "type": "Video"
+        },
+        "survey_data_in_ai_lab/csd/2023": {
+          "type": "Slaydlar"
+        },
+        "view_and_download_survey_data/csd/2023": {
+          "type": "Video"
+        },
+        "troubleshooting_models/csd/2023": {
+          "type": "Slaydlar"
+        },
+        "creating_an_app/csd/2023": {
+          "type": "Slaydlar"
+        },
+        "_template_5_why_s/csd/2023": {
+          "type": "Manba"
+        },
+        "design_an_ai_app/csd/2023": {
+          "type": "Slaydlar"
+        },
+        "design_an_ai_app_1/csd/2023": {
+          "type": "Bo'lim"
+        },
+        "model_card_-_digital_template/csd/2023": {
+          "type": "Manba"
+        },
+        "model_card_-_printable_template/csd/2023": {
           "type": "Manba"
         },
         "all_resources/coursea/2023": {

@@ -5,7 +5,19 @@
         "AppLab Intro 7 - Change Screen Color": {
           "applab_hoc_finish": "A u be ekrani ne ngjyre te gjelber? Nese po, shtypni 'Finish'. Nese jo, shtypni 'Reset', ndryshoni kodin, dhe shtypni 'Run' perseri."
         },
+        "AppLab Intro 7 - Change Screen Color_2023": {
+          "applab_hoc_finish": "A u be ekrani ne ngjyre te gjelber? Nese po, shtypni 'Finish'. Nese jo, shtypni 'Reset', ndryshoni kodin, dhe shtypni 'Run' perseri."
+        },
+        "AppLab Intro 7 - Change Screen Color_mb2022": {
+          "applab_hoc_finish": "A u be ekrani ne ngjyre te gjelber? Nese po, shtypni 'Finish'. Nese jo, shtypni 'Reset', ndryshoni kodin, dhe shtypni 'Run' perseri."
+        },
         "AppLab Intro 7 - thisOrThatAddButton": {
+          "AppLabHoCFinal11": "Ju jeni tani në Modalitetin e Dizajnit."
+        },
+        "AppLab Intro 7 - thisOrThatAddButton_2023": {
+          "AppLabHoCFinal11": "Ju jeni tani në Modalitetin e Dizajnit."
+        },
+        "AppLab Intro 7 - thisOrThatAddButton_mb2022": {
           "AppLabHoCFinal11": "Ju jeni tani në Modalitetin e Dizajnit."
         },
         "CSD U3 Random add_2021": {
@@ -14,22 +26,58 @@
         "CSD U3 Random add_2022": {
           "CSD_U3_butterfly": "Shikoni me kujdes këtë kod."
         },
+        "CSD U6 - Accelerometer - PB_2023": {
+          "CSD U6L12.5 - increase_steps": "Rritni hapat këtu!",
+          "CSD U6L12.5 - shake_event": "Ndryshoni këtë ngjarje për të zbuluar një ngjarje dridhjeje"
+        },
         "CSD U6 - Accelerometer - PB_2222": {
           "CSD U6L12.5 - increase_steps": "Rritni hapat këtu!",
           "CSD U6L12.5 - shake_event": "Ndryshoni këtë ngjarje për të zbuluar një ngjarje dridhjeje"
+        },
+        "CSD U6 - Accelerometer - PB_mb2022": {
+          "CSD U6L12.5 - increase_steps": "Rritni hapat këtu!",
+          "CSD U6L12.5 - shake_event": "Ndryshoni këtë ngjarje për të zbuluar një ngjarje dridhjeje"
+        },
+        "CSD U6 - Accelerometer - PC_2023": {
+          "CSD U6L12.PB - adding": "Përditësoni pozicionin y këtu!",
+          "CSD U6L12.PB - pitch": "Përditësoni variablën pitch këtu!",
+          "CSD U6L12.PB - playery": "Merrni pozicionin y të lojtarit këtu!"
         },
         "CSD U6 - Accelerometer - PC_2222": {
           "CSD U6L12.PB - adding": "Përditësoni pozicionin y këtu!",
           "CSD U6L12.PB - pitch": "Përditësoni variablën pitch këtu!",
           "CSD U6L12.PB - playery": "Merrni pozicionin y të lojtarit këtu!"
         },
+        "CSD U6 - Accelerometer - PC_mb2022": {
+          "CSD U6L12.PB - adding": "Përditësoni pozicionin y këtu!",
+          "CSD U6L12.PB - pitch": "Përditësoni variablën pitch këtu!",
+          "CSD U6L12.PB - playery": "Merrni pozicionin y të lojtarit këtu!"
+        },
+        "CSD U6 - Accelerometer - SB2_2023": {
+          "CSD U6L12.3 - turn_off": "Shtoni kodin për të fikur LEDs këtu",
+          "CSD U6L12.3 - turn_on": "Shtoni kodin për të ndezur LEDs këtu"
+        },
         "CSD U6 - Accelerometer - SB2_2222": {
           "CSD U6L12.3 - turn_off": "Shtoni kodin për të fikur LEDs këtu",
           "CSD U6L12.3 - turn_on": "Shtoni kodin për të ndezur LEDs këtu"
         },
+        "CSD U6 - Accelerometer - SB2_mb2022": {
+          "CSD U6L12.3 - turn_off": "Shtoni kodin për të fikur LEDs këtu",
+          "CSD U6L12.3 - turn_on": "Shtoni kodin për të ndezur LEDs këtu"
+        },
+        "CSD U6 - Color LEDs - CA_2023": {
+          "CSD U6L7.8b - counter": "Rritni variablën tuaj këtu!",
+          "CSD U6L7.8b - toggle": "Përdorni variablën tuaj këtu"
+        },
         "CSD U6 - Color LEDs - CA_2222": {
           "CSD U6L7.8b - counter": "Rritni variablën tuaj këtu!",
           "CSD U6L7.8b - toggle": "Përdorni variablën tuaj këtu"
+        },
+        "CSD U6 - Combine Inputs - A_2023": {
+          "CSD U6L10.7 - brightnessVar": "Krijoni variablën tuaj këtu",
+          "CSD U6L10.7 - colorVar": "Krijoni variablën tuaj këtu",
+          "CSD U6L10.7 - leftIf": "Ndizni anën e majtë të pllakës",
+          "CSD U6L10.7 - rightIf": "Ndizni anën e djathtë të pllakës"
         },
         "CSD U6 - Combine Inputs - A_2222": {
           "CSD U6L10.7 - brightnessVar": "Krijoni variablën tuaj këtu",
@@ -37,57 +85,154 @@
           "CSD U6L10.7 - leftIf": "Ndizni anën e majtë të pllakës",
           "CSD U6L10.7 - rightIf": "Ndizni anën e djathtë të pllakës"
         },
+        "CSD U6 - Combine Inputs - PA_mb2022": {
+          "CSD U6L10.2 - add_code": "Shtoni kodin tuaj këtu!"
+        },
+        "CSD U6 - Combine Inputs - PracD_2023": {
+          "CSD U6L9.7 - if-statement": "Shtoni deklaratën tuaj nëse këtu",
+          "CSD U6L9.7 - variable": "Merrni vlerën nga dropdown këtu"
+        },
         "CSD U6 - Combine Inputs - PracD_2222": {
           "CSD U6L9.7 - if-statement": "Shtoni deklaratën tuaj nëse këtu",
           "CSD U6L9.7 - variable": "Merrni vlerën nga dropdown këtu"
         },
+        "CSD U6 - Combine Inputs - SB1_2023": {
+          "CSD U6L10.2 - add_code": "Shtoni kodin tuaj këtu!"
+        },
         "CSD U6 - Combine Inputs - SB1_2222": {
           "CSD U6L10.2 - add_code": "Shtoni kodin tuaj këtu!"
         },
+        "CSD U6 - Combine Inputs - SB1_mb2022": {
+          "CSD U6L10.2 - add_code": "Shtoni kodin tuaj këtu!"
+        },
+        "CSD U6 - Combine Inputs - SB6_mb2022": {
+          "CSD U6L10.2 - add_code": "Shtoni kodin tuaj këtu!"
+        },
+        "CSD U6 - Functions - P2A_2023": {
+          "CSD U6L14.PA - define": "Këtu janë funksionet"
+        },
         "CSD U6 - Functions - P2A_2222": {
           "CSD U6L14.PA - define": "Këtu janë funksionet"
+        },
+        "CSD U6 - Functions - P2A_mb2022": {
+          "CSD U6L14.PA - define": "Këtu janë funksionet"
+        },
+        "CSD U6 - Functions - P2C_2023": {
+          "CSD U6L14.PB - todo1": "Përcaktoni funksionin tuaj këtu!",
+          "CSD U6L14.PB - todo2": "Vendoseni këtë kod në funksionin tuaj"
         },
         "CSD U6 - Functions - P2C_2222": {
           "CSD U6L14.PB - todo1": "Përcaktoni funksionin tuaj këtu!",
           "CSD U6L14.PB - todo2": "Vendoseni këtë kod në funksionin tuaj"
         },
+        "CSD U6 - Functions - P2C_mb2022": {
+          "CSD U6L14.PB - todo1": "Përcaktoni funksionin tuaj këtu!",
+          "CSD U6L14.PB - todo2": "Vendoseni këtë kod në funksionin tuaj"
+        },
+        "CSD U6 - Functions - SB1_2023": {
+          "CSD U6L14.3 - examples": "Kjo ngjarje tashmë ka përfunduar",
+          "CSD U6L14.3 - functions": "Ky seksion përcakton dy funksione"
+        },
         "CSD U6 - Functions - SB1_2222": {
           "CSD U6L14.3 - examples": "Kjo ngjarje tashmë ka përfunduar",
           "CSD U6L14.3 - functions": "Ky seksion përcakton dy funksione"
+        },
+        "CSD U6 - Functions - SB1_mb2022": {
+          "CSD U6L14.3 - examples": "Kjo ngjarje tashmë ka përfunduar",
+          "CSD U6L14.3 - functions": "Ky seksion përcakton dy funksione"
+        },
+        "CSD U6 - Functions - SB2_2023": {
+          "CSD U6L14.4 - call": "Thërrisni funksionin tuaj këtu!",
+          "CSD U6L14.4 - define": "Përcaktoni funksionin tuaj këtu!"
         },
         "CSD U6 - Functions - SB2_2222": {
           "CSD U6L14.4 - call": "Thërrisni funksionin tuaj këtu!",
           "CSD U6L14.4 - define": "Përcaktoni funksionin tuaj këtu!"
         },
+        "CSD U6 - Functions - SB2_mb2022": {
+          "CSD U6L14.4 - call": "Thërrisni funksionin tuaj këtu!",
+          "CSD U6L14.4 - define": "Përcaktoni funksionin tuaj këtu!"
+        },
+        "CSD U6 - Functions - SB3_2023": {
+          "CSD U6L5.14B - define": "Shtoni funksionin tuaj këtu!"
+        },
         "CSD U6 - Functions - SB3_2222": {
+          "CSD U6L5.14B - define": "Shtoni funksionin tuaj këtu!"
+        },
+        "CSD U6 - Functions - SB3_mb2022": {
+          "CSD U6L5.14B - define": "Shtoni funksionin tuaj këtu!"
+        },
+        "CSD U6 - Functions - SB4_2023": {
           "CSD U6L5.14B - define": "Shtoni funksionin tuaj këtu!"
         },
         "CSD U6 - Functions - SB4_2222": {
           "CSD U6L5.14B - define": "Shtoni funksionin tuaj këtu!"
         },
+        "CSD U6 - Functions - SB4_mb2022": {
+          "CSD U6L5.14B - define": "Shtoni funksionin tuaj këtu!"
+        },
+        "CSD U6 - Functions - SB6_2023": {
+          "CSD U6L14.6 - define": "Shtoni funksionin tuaj këtu!"
+        },
         "CSD U6 - Functions - SB6_2222": {
           "CSD U6L14.6 - define": "Shtoni funksionin tuaj këtu!"
+        },
+        "CSD U6 - Functions - SB6_mb2022": {
+          "CSD U6L14.6 - define": "Shtoni funksionin tuaj këtu!"
+        },
+        "CSD U6 - Functions - SB7_2023": {
+          "CSD U6L14.9 - define": "Këtu janë përkufizimet e funksionit",
+          "CSD U6L14.9 - events": "Këtu janë ngjarjet"
         },
         "CSD U6 - Functions - SB7_2222": {
           "CSD U6L14.9 - define": "Këtu janë përkufizimet e funksionit",
           "CSD U6L14.9 - events": "Këtu janë ngjarjet"
+        },
+        "CSD U6 - Functions - SB7_mb2022": {
+          "CSD U6L14.9 - define": "Këtu janë përkufizimet e funksionit",
+          "CSD U6L14.9 - events": "Këtu janë ngjarjet"
+        },
+        "CSD U6 - Functions - SB_2023": {
+          "CSD U6L14.PD - todo1": "Përditësoni Funksionin Këtu!",
+          "CSD U6L14.PD - todo2": "Përditësoni kodin për të përdorur color1 dhe color2",
+          "CSD U6L14.PD - todo3": "Thërrisni funksionin tuaj këtu"
         },
         "CSD U6 - Functions - SB_2222": {
           "CSD U6L14.PD - todo1": "Përditësoni Funksionin Këtu!",
           "CSD U6L14.PD - todo2": "Përditësoni kodin për të përdorur color1 dhe color2",
           "CSD U6L14.PD - todo3": "Thërrisni funksionin tuaj këtu"
         },
+        "CSD U6 - If Variables - A_2023": {
+          "U6L6.4 - Counter": "Rritni variablën tuaj këtu",
+          "U6L6.4 - If": "Shtoni deklaratën tuaj nëse këtu",
+          "U6L6.4 - Variable": "Përcaktoni variablën tuaj këtu"
+        },
         "CSD U6 - If Variables - A_2222": {
           "U6L6.4 - Counter": "Rritni variablën tuaj këtu",
           "U6L6.4 - If": "Shtoni deklaratën tuaj nëse këtu",
           "U6L6.4 - Variable": "Përcaktoni variablën tuaj këtu"
         },
+        "CSD U6 - If Variables - A_mb2022": {
+          "U6L6.4 - Counter": "Rritni variablën tuaj këtu",
+          "U6L6.4 - If": "Shtoni deklaratën tuaj nëse këtu",
+          "U6L6.4 - Variable": "Përcaktoni variablën tuaj këtu"
+        },
+        "CSD U6 - Music - A_2023": {
+          "CSD U6L14.8 - happySong": "Shtoni kodin për këngën tuaj \"të lumtur\" këtu",
+          "CSD U6L14.8 - sadSong": "Shtoni kodin për këngën tuaj \"të trishtuar\" këtu"
+        },
         "CSD U6 - Music - A_2222": {
           "CSD U6L14.8 - happySong": "Shtoni kodin për këngën tuaj \"të lumtur\" këtu",
           "CSD U6L14.8 - sadSong": "Shtoni kodin për këngën tuaj \"të trishtuar\" këtu"
         },
+        "CSD U6 - Music - SB3_2023": {
+          "CSD U6L13.6 - sharp_notes": "Këto evente janë për notat e mprehta"
+        },
         "CSD U6 - Music - SB3_2222": {
           "CSD U6L13.6 - sharp_notes": "Këto evente janë për notat e mprehta"
+        },
+        "CSD U6 - Sensors - PB_2023": {
+          "CSD U6L11.PB - boardevent": "Shtoni bordin e eventit tuaj!"
         },
         "CSD U6 - Sensors - PB_2222": {
           "CSD U6L11.PB - boardevent": "Shtoni bordin e eventit tuaj!"
@@ -609,7 +754,7 @@
           "gradek_adventurer_loops2_1": "Ky numër ju tregon se sa prej këtyre blloqeve mund të përdorni në këtë enigmë."
         },
         "courseA_maze_ramp2_2021": {
-          "courseC_maze_programming2_1": "Kjo është kutia e blloqeve. Është vendi ku do të gjeni blloqe shtesë për të përfunduar enigmat tuaja."
+          "courseC_maze_programming2_1": "Kjo është kutia e blloqeve. Këtu është vendi ku do të gjeni blloqe shtesë për të përfunduar enigmat tuaja."
         },
         "courseA_maze_seq1": {
           "courseA_maze_seq1_1": "Klikoni llambën kur keni nevojë për ndihmë!"
@@ -678,7 +823,7 @@
           "courseB_playlab_events6_a": "Përdorni shigjetën e gjelbër te menyja rënëse për të ndryshuar drejtimet."
         },
         "courseC19_playLab_EOC3_2021": {
-          "courseE_playLab_scaffold3_1": "Qojeni aktorin te ky flamur për të kaluar në nivelin tjetër."
+          "courseE_playLab_scaffold3_1": "Dërgojeni aktorin te ky flamur për të kaluar në nivelin tjetër."
         },
         "courseC_PlayLab_events82022": {
           "courseC_PlayLab_events8_callout1": "Përdoreni këtë bllok kur prekin Waddles dhe Chomp!"
@@ -811,7 +956,7 @@
           "courseD_farmer_while7_2018_PathAhead": "Ju do të duhet të përdorni bllokun “ndërsa rruga përpara” në mënyrë që t'a zgjidhni këtë enigmë."
         },
         "courseD_maze_intro4_2021": {
-          "courseC_maze_programming4_1": "Ky është kufiri juaj i bllokimit. Ai ju tregon se sa nga këto blloqe ju kanë mbetur për të përdorur."
+          "courseC_maze_programming4_1": "Ky është kufiri t bllokut tuaj. Ai ju tregon se sa nga këto blloqe ju kanë mbetur për të përdorur."
         },
         "courseD_maze_intro5a_2021": {
           "": "Këto blloqe nuk kanë numra në to. Ti mund të përdorësh aq shumë sa i dëshiron!"
@@ -823,11 +968,11 @@
           "courseC_maze_programming2_1": "Kjo është kutia e veglave. Është vendi ku do të gjeni blloqe shtesë për të përfunduar enigmat tuaja."
         },
         "courseD_maze_ramp3_2021": {
-          "courseC_maze_programming3_2": "Mund të tërheqësh blloqe shtesë te kutia e veglave për t'i hedhur ato larg.",
+          "courseC_maze_programming3_2": "Mund të tërheqësh blloqe shtesë te kutia e blloqeve për t'i hedhur ato larg.",
           "stone_block_2": "Blloqet hiri nuk mund të hidhen larg."
         },
         "courseD_maze_ramp5_2021": {
-          "": "Këto blloqe nuk kanë numra në to. Ti mund të përdorësh aq shumë sa i dëshiron!"
+          "": "Këto blloqe nuk kanë numra në to. Ju mund të përdorni aq sa të dëshironi!"
         },
         "courseE_aboutme_22022": {
           "": "Kliko këtu për të shtuar kostume në projektin tuaj."
@@ -1602,10 +1747,16 @@
         "ml-customize apps-choice3_2022": {
           "CSD_AI_L10_predict": "Shtoni deklaratën tuaj nëse këtu"
         },
+        "ml-customize apps-choice3_2023": {
+          "CSD_AI_L10_predict": "Shtoni deklaratën tuaj nëse këtu"
+        },
         "ml-customize apps-choice5": {
           "CSD_AI_L11_top": "Vendosni bllokun mbi këtë linjë"
         },
         "ml-customize apps-choice5_2022": {
+          "CSD_AI_L11_top": "Vendosni bllokun mbi këtë linjë"
+        },
+        "ml-customize apps-choice5_2023": {
           "CSD_AI_L11_top": "Vendosni bllokun mbi këtë linjë"
         },
         "ml-intro app lab-book recommender 5C-2021": {
@@ -1614,10 +1765,16 @@
         "ml-intro app lab-book recommender 5C_2022": {
           "CSD_AI_L7_event": "Shto bllokun \"play sound\" këtu"
         },
+        "ml-intro app lab-book recommender 5C_2023": {
+          "CSD_AI_L7_event": "Shto bllokun \"play sound\" këtu"
+        },
         "ml-intro app lab-book recommender 5E-2021": {
           "CSD_AI_L7_top": "Vendosni bllokun mbi këtë linjë"
         },
         "ml-intro app lab-book recommender 5E_2022": {
+          "CSD_AI_L7_top": "Vendosni bllokun mbi këtë linjë"
+        },
+        "ml-intro app lab-book recommender 5E_2023": {
           "CSD_AI_L7_top": "Vendosni bllokun mbi këtë linjë"
         },
         "ml-models in applab-screens-1-2021": {
@@ -1626,10 +1783,16 @@
         "ml-models in applab-screens-1_2022": {
           "CSD_AI_L10_ifstatement": "Shtoni deklaratën tuaj nëse këtu"
         },
+        "ml-models in applab-screens-1_2023": {
+          "CSD_AI_L10_ifstatement": "Shtoni deklaratën tuaj nëse këtu"
+        },
         "ml-models in applab-screens-3-2021": {
           "CSD_AI_L7_ifstatement": "Shtoni deklaratën tuaj nëse këtu"
         },
         "ml-models in applab-screens-3_2022": {
+          "CSD_AI_L7_ifstatement": "Shtoni deklaratën tuaj nëse këtu"
+        },
+        "ml-models in applab-screens-3_2023": {
           "CSD_AI_L7_ifstatement": "Shtoni deklaratën tuaj nëse këtu"
         },
         "ml-use model card-choice3": {
@@ -1638,10 +1801,16 @@
         "ml-use model card-choice3_2022": {
           "CSD_AI_L10_predict": "Shtoni deklaratën tuaj nëse këtu"
         },
+        "ml-use model card-choice3_2023": {
+          "CSD_AI_L10_predict": "Shtoni deklaratën tuaj nëse këtu"
+        },
         "ml-use model card-choice5": {
           "CSD_AI_L11_top": "Vendosni bllokun mbi këtë linjë"
         },
         "ml-use model card-choice5_2022": {
+          "CSD_AI_L11_top": "Vendosni bllokun mbi këtë linjë"
+        },
+        "ml-use model card-choice5_2023": {
           "CSD_AI_L11_top": "Vendosni bllokun mbi këtë linjë"
         },
         "ml-use model card-example3C-2021": {
@@ -1650,10 +1819,16 @@
         "ml-use model card-example3C_2022": {
           "CSD_AI_L11_temp": "Kjo është karakteristika e temperaturës"
         },
+        "ml-use model card-example3C_2023": {
+          "CSD_AI_L11_temp": "Kjo është karakteristika e temperaturës"
+        },
         "ml-use model card-example3D-2021": {
           "CSD_AI_L11_time": "Kjo është karakteristika e Time of Day"
         },
         "ml-use model card-example3D_2022": {
+          "CSD_AI_L11_time": "Kjo është karakteristika e Time of Day"
+        },
+        "ml-use model card-example3D_2023": {
           "CSD_AI_L11_time": "Kjo është karakteristika e Time of Day"
         },
         "ml-use model card-example3_EditB-2021": {
@@ -1662,10 +1837,16 @@
         "ml-use model card-example3_EditB_2022": {
           "CSD_AI_L11_cars": "Kjo është karakteristika e numrit të makinave"
         },
+        "ml-use model card-example3_EditB_2023": {
+          "CSD_AI_L11_cars": "Kjo është karakteristika e numrit të makinave"
+        },
         "ml-use model card-example3_EditC-2021": {
           "CSD_AI_L11_weather": "Kjo është karakteristika e motit"
         },
         "ml-use model card-example3_EditC_2022": {
+          "CSD_AI_L11_weather": "Kjo është karakteristika e motit"
+        },
+        "ml-use model card-example3_EditC_2023": {
           "CSD_AI_L11_weather": "Kjo është karakteristika e motit"
         },
         "poetry_hoc_addSprites": {

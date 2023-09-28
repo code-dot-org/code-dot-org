@@ -2153,6 +2153,12 @@
         "a4fa2434-b9c5-4e36-819b-50398d230730": {
           "description": "Comparteix les seves aplicacions entre si"
         },
+        "114f32b8-86b0-4ffe-9078-63eb13745f4e": {
+          "description": "Entrenar i posar a prova un model d'aprenentatge automàtic."
+        },
+        "4ddcd0e5-9848-44c2-b44e-534be14ec029": {
+          "description": "Explicar com i per què els biaixos de les persones afecten l'aprenentatge automàtic."
+        },
         "08121200-84b5-4a5a-bba6-4b562022d2dd": {
           "description": "Explicar les regles per viatjar de manera segura a internet."
         },

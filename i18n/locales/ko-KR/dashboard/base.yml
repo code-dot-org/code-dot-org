@@ -53,6 +53,7 @@ ko:
         gender: '성별'
         edit_header: '계정 정보 수정'
         finish_sign_up_header: '계정 만들기를 마칩니다.'
+        finish_sign_up_header_error: '다음 오류를 수정해주세요:'
         finish_sign_up_subheader: '<strong>%{email}</strong>을 위해 Code.org 계정을 만들려면 밑에 있는 빈 곳에 정보를 입력 하세요.'
         finish_sign_up_subheader_markdown: '**%{email}**을 위해 Code.org 계정을 만들려면 밑에 있는 빈 곳에 정보를 입력 하세요.'
         finish_sign_up_subheader_provider: ' <strong>%{provider}</strong> 으로 <strong>%{email}</strong>을 위한 Code.org 계정 만들기를 마치려면 다음 정보를 작성하세요.'
@@ -60,6 +61,7 @@ ko:
         reset_password_token: "팔로우했던 재설정 비밀번호 링크"
         error:
           future: 오늘 이전 날짜만 가능합니다.
+        user_type: '계정 유형'
         us_state: '주'
   beta: "베타"
   hello: "Hello world"

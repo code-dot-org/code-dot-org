@@ -5063,6 +5063,10 @@
           "purpose": "In dieser Online-Aktivität lernen die SchülerInnen, wie man Ereignisse in Play Lab verwendet. Sie beginnen damit, dass sie dem Ritter beibringen, sich zu bewegen, wenn eine Pfeiltaste gedrückt wird, und haben dann die Möglichkeit, die restlichen Fähigkeiten, die sie in diesem Kurs gelernt haben, einschließlich Sequenz und Schleifenbildung, als Teil des abschließenden Freeplay-Puzzles zu präsentieren.",
           "student_overview": "Verwenden Sie Ereignisse, um eine Geschichte oder ein interaktives Spiel zu erstellen."
         },
+        "ai-ethics-2023/lesson-1": {
+          "name": "Unser KI-Ethikkodex",
+          "student_overview": "Recherchieren Sie gemeinsam über KI-Ethik und erstellen Sie einen Verhaltenskodex, der gemeinsam genutzt werden kann."
+        },
         "csc-adaptations-2023/Modeling Animal Adaptations (pilot)": {
           "name": "Einführung in Tieranpassungen",
           "overview": "In dieser Lektion zum Aufbau von Fähigkeiten lernen die Schüler, Sprites zu erstellen und zu animieren und sie mithilfe von Ereignissen interaktiv zu gestalten. \n\nDie Schüler werden in Sprite Lab ein ereignisbasiertes Ursache-Wirkungs-Modell programmieren, um zu demonstrieren, wie Arten überleben, indem sie sich im Laufe der Zeit an ihre Umgebung anpassen. Interaktive Modelle und Simulationen werden in der realen Welt eingesetzt, um Ingenieuren und Wissenschaftlern dabei zu helfen, Muster zu erkennen, die Natur zu verstehen, Vorhersagen über zukünftige Veränderungen zu treffen und Lösungen zu entwickeln, um sich auf größere Störungen vorzubereiten und/oder sie zu bekämpfen. \n\nDie Studierenden werden Beispiele für Evolution, Anpassung, Migration, natürliche Auslese und Überleben in Gruppen untersuchen. ",
@@ -5220,6 +5224,273 @@
           "preparation": "-   Bereiten Sie einen Computer pro Schüler vor.\n-   Bereiten Sie eine Kopie des Handzettels**<a href=\"https://docs.google.com/document/d/1kO4SNEIVyM0GrxxJb6NzVYauXXpi6rzQkDIfrzQf1Ls/template/preview\" target=\"_blank\">Share Your App</a>** pro Schüler vor.\n-   Stellen Sie sicher, dass die Schüler eine Kopie ihres Originalgedichts für diese Lektion griffbereit haben.  \n-   Teilen Sie die Klasse für die Aktivität Poetry Pair-Share in Paare auf.\n-   Ziehen Sie die entsprechenden Erweiterungsoptionen ([link](https://studio.code.org/s/poetry-2023/lessons/4#activity-4365336)) in Betracht, die Sie im Anschluss an diese Lektion näher untersuchen sollten.\n\n##### Optional\n\n— Speziell für den Fernunterricht: Ermitteln Sie, ob Sie ein digitales Dokument oder einen gemeinsamen Online-Bereich einrichten müssen, um die App-URL jedes Schülers zu veröffentlichen (siehe Vorlage für Lehrer unter „Links“). ",
           "purpose": "Ihre Gedichtkunstprojekte mit Gleichaltrigen zu teilen, ist ein wichtiger Aspekt des kreativen Prozesses. Es ermöglicht den Studierenden, Feedback zu erhalten, mit anderen zusammenzuarbeiten, über ihre eigene Arbeit nachzudenken und ihre Leistungen zu feiern. Indem sie ihre Arbeit mit anderen teilen, können sich die Schüler als kreative Denker weiterentwickeln und sich weiterentwickeln und wichtige kommunikative und zwischenmenschliche Fähigkeiten entwickeln.",
           "student_overview": "Teile deine neuen Gedicht-Apps mit deinen Freunden! "
+        },
+        "csd1-2023/Intro to Problem Solving": {
+          "name": "Einführung in die Problemlösung"
+        },
+        "csd1-2023/The Problem Solving Process": {
+          "name": "Der Problemlösungsprozess"
+        },
+        "csd1-2023/Exploring Problem Solving": {
+          "name": "Problemlösung erforschen"
+        },
+        "csd1-2023/What is a Computer?": {
+          "name": "Was ist ein Computer?"
+        },
+        "csd1-2023/Input and Output": {
+          "name": "Input und Output"
+        },
+        "csd1-2023/Processing": {
+          "name": "Verarbeitung"
+        },
+        "csd1-2023/Storage": {
+          "name": "Speicher"
+        },
+        "csd1-2023/Project - Propose an App": {
+          "name": "Projekt - Eine App vorschlagen"
+        },
+        "csd1-2023/Intro to Problem Solving - Newspaper Table (Alternate Lesson 1)": {
+          "name": "Einführung in das Lösen von Problemen - Zeitungstisch (Alternative Lektion 1)"
+        },
+        "csd1-2023/Intro to Problem Solving - Spaghetti Bridge (Alternate Lesson 1)": {
+          "name": "Einführung in das Lösen von Problemen - Spaghetti-Brücke (Alternative Lektion 1)"
+        },
+        "csd1-2023/Intro to Problem Solving - Paper Tower (Alternate Lesson 1)": {
+          "name": "Einführung in das Lösen von Problemen - Papierturm (Alternative Lektion 1)"
+        },
+        "csd1-2023/Exploring Problem Solving - Animals Theme (Alternate Lesson 3)": {
+          "name": "Erkunden des Problemlösens - Thema Tiere (Alternative Lektion 3)"
+        },
+        "csd1-2023/Exploring Problem Solving - Games Theme (Alternate Lesson 3)": {
+          "name": "Erkunden des Problemlösens - Thema Spiele (Alternative Lektion 3)"
+        },
+        "csd2-2023/Exploring Web Pages": {
+          "name": "Erkundung von Webseiten"
+        },
+        "csd2-2023/Intro to HTML": {
+          "name": "Einführung in HTML"
+        },
+        "csd2-2023/Mini-Project: HTML Web Page": {
+          "name": "Mini-Projekt: HTML-Webseite"
+        },
+        "csd2-2023/Digital Footprint": {
+          "name": "Digitaler Fußabdruck"
+        },
+        "csd2-2023/Styling Text with CSS": {
+          "name": "Text mit CSS formatieren"
+        },
+        "csd2-2023/Mini-Project: Your Personal Style": {
+          "name": "Mini-Projekt: Ihr persönlicher Stil"
+        },
+        "csd2-2023/Intellectual Property": {
+          "name": "Geistiges Eigentum"
+        },
+        "csd2-2023/Styling Elements with CSS": {
+          "name": "Stilelemente mit CSS gestalten"
+        },
+        "csd2-2023/Your Web Page - Prepare": {
+          "name": "Ihre Webseite - Vorbereiten"
+        },
+        "csd2-2023/Team Problem Solving": {
+          "name": "Problemlösung im Team"
+        },
+        "csd2-2023/Sources and Research": {
+          "name": "Quellen und Forschung"
+        },
+        "csd2-2023/CSS Classes": {
+          "name": "CSS-Klassen"
+        },
+        "csd2-2023/Linking Pages": {
+          "name": "Verknüpfung von Seiten"
+        },
+        "csd2-2023/Project - Website for a Purpose": {
+          "name": "Projekt - Website für einen Zweck"
+        },
+        "csd2-2023/Peer Review and Final Touches": {
+          "name": "Beurteilung durch SchulkollegInnen und letzter Schliff"
+        },
+        "csd3-2023/Plotting Shapes": {
+          "name": "Formen plotten"
+        },
+        "csd3-2023/Drawing in Game Lab": {
+          "name": "Zeichnen im Game Lab"
+        },
+        "csd3-2023/Variables": {
+          "name": "Variablen"
+        },
+        "csd3-2023/Random Numbers": {
+          "name": "Zufällige Zahlen"
+        },
+        "csd3-2023/Sprites": {
+          "name": "Sprites"
+        },
+        "csd3-2023/Sprite Properties": {
+          "name": "Sprite Eigenschaften"
+        },
+        "csd3-2023/Text": {
+          "name": "Text"
+        },
+        "csd3-2023/The Draw Loop": {
+          "name": "Die Zieh-Schleife"
+        },
+        "csd3-2023/Sprite Movement": {
+          "name": "Sprite-Bewegung"
+        },
+        "csd3-2023/Conditionals": {
+          "name": "Bedingungen"
+        },
+        "csd3-2023/Keyboard Input": {
+          "name": "Tastatur-Eingabe"
+        },
+        "csd3-2023/Mouse Input": {
+          "name": "Input mit der Maus"
+        },
+        "csd3-2023/Project - Interactive Card": {
+          "name": "Projekt - Interaktive Karte"
+        },
+        "csd3-2023/Velocity": {
+          "name": "Geschwindigkeit"
+        },
+        "csd3-2023/Collision Detection": {
+          "name": "Kollisions-Entdeckung"
+        },
+        "csd3-2023/Complex Sprite Movement": {
+          "name": "Komplexe Sprite-Bewegung"
+        },
+        "csd3-2023/Collisions": {
+          "name": "Kollisionen"
+        },
+        "csd3-2023/Functions": {
+          "name": "Funktionen"
+        },
+        "csd3-2023/The Game Design Process": {
+          "name": "Der Prozess eines Spielentwurfs"
+        },
+        "csd3-2023/Using the Game Design Process": {
+          "name": "Verwendung des Prozesses eines Spielentwurfs"
+        },
+        "csd3-2023/Project - Design a Game": {
+          "name": "Projekt Ein Spiel erstellen"
+        },
+        "csd4-2023/Understanding Your User": {
+          "name": "Den Benutzer verstehen"
+        },
+        "csd4-2023/User Interfaces": {
+          "name": "Benutzeroberflächen"
+        },
+        "csd4-2023/Feedback and Testing": {
+          "name": "Feedback und Tests"
+        },
+        "csd4-2023/Identifying User Needs": {
+          "name": "Identifizieren von Benutzerbedürfnissen"
+        },
+        "csd4-2023/Project - Paper Prototype": {
+          "name": "Projekt - Papier-Prototyp"
+        },
+        "csd4-2023/Designing Apps for Good": {
+          "name": "Apps für gute Zwecke entwickeln"
+        },
+        "csd4-2023/Market Research": {
+          "name": "Marktforschung"
+        },
+        "csd4-2023/Prototype Testing": {
+          "name": "Testen von Prototypen"
+        },
+        "csd4-2023/Testing the App": {
+          "name": "Testen der App"
+        },
+        "csd4-2023/Project - App Presentation": {
+          "name": "Projekt - App-Präsentation"
+        },
+        "csd5-2023/Representation Matters": {
+          "name": "Darstellung ist wichtig"
+        },
+        "csd5-2023/Patterns and Representation": {
+          "name": "Muster und Darstellung"
+        },
+        "csd5-2023/ASCII and Binary Representation": {
+          "name": "ASCII- und Binärdarstellung"
+        },
+        "csd5-2023/Representing Images": {
+          "name": "Darstellung von Bildern"
+        },
+        "csd5-2023/Representing Numbers": {
+          "name": "Zahlendarstellung"
+        },
+        "csd5-2023/Combining Representations": {
+          "name": "Kombinierte Darstellungen"
+        },
+        "csd5-2023/Keeping Data Secret": {
+          "name": "Daten geheim halten"
+        },
+        "csd5-2023/Project - Create a Representation": {
+          "name": "Projekt - Erstellen einer Darstellung"
+        },
+        "csd5-2023/Structuring Data": {
+          "name": "Daten strukturieren"
+        },
+        "csd5-2023/Interpreting Data": {
+          "name": "Daten interpretieren"
+        },
+        "csd5-2023/Making Decisions with Data": {
+          "name": "Entscheidungen mit Daten"
+        },
+        "csd5-2023/Automating Data Decisions": {
+          "name": "Automatisierung von Datenentscheidungen"
+        },
+        "csd5-2023/Problem Solving with Big Data": {
+          "name": "Problemlösung mit Big Data"
+        },
+        "csd6a-2023/Intro to App Lab": {
+          "name": "Einführung in AppLab"
+        },
+        "csd6a-2023/The Circuit Playground": {
+          "name": "Der Circuit Playground"
+        },
+        "csd6a-2023/Board Events": {
+          "name": "Platinen-Ereignisse"
+        },
+        "csd6a-2023/Color LEDs": {
+          "name": "Farbige LEDs"
+        },
+        "csd6a-2023/Accelerometer": {
+          "name": "Beschleunigungssensor"
+        },
+        "csd6a-2023/Making Music": {
+          "name": "Musik machen"
+        },
+        "csd6a-2023/Functions": {
+          "name": "Funktionen"
+        },
+        "csd6a-2023/Project - Prototype an Innovation": {
+          "overview": "In diesem Abschlussprojekt für den Kurs entwickeln und testen die SchülerInnen gemeinsam einen Prototyp für ein innovatives Computergerät, das auf dem Circuit Playground basiert. Unter Verwendung der auf der Platine verfügbaren In- und Outputs werden sie in Gruppenarbeit Programme erstellen, die interessante und einzigartige Benutzerinteraktionen ermöglichen."
+        },
+        "csd6b-2023/Intro to App Lab": {
+          "name": "Einführung in AppLab"
+        },
+        "csd6b-2023/Board Events": {
+          "name": "Platinen-Ereignisse"
+        },
+        "csd6b-2023/Accelerometer": {
+          "name": "Beschleunigungssensor"
+        },
+        "csd6b-2023/Functions": {
+          "name": "Funktionen"
+        },
+        "csd7-2023/Intro to App Lab": {
+          "name": "Einführung in AppLab"
+        },
+        "csd7-2023/Introduction to AI Lab": {
+          "name": "Einführung in das KI-Spielelabor"
+        },
+        "csd7-2023/Numerical Models": {
+          "overview": "In dieser Lektion nehmen die Schüler an einer Offline-Übung teil, die einen Zombie-Ausbruch simuliert. Die Schüler müssen anhand der Daten aus einer Nachbarstadt vorhersagen, in welchen Stadtteilen es die wenigsten Zombies gibt. Die Schüler verwenden Ähnlichkeitsstufen und Durchschnittswerte, um Vorhersagen über die Anzahl der Zombies an einem bestimmten Ort zu treffen. Anschließend werden die Schüler gerettet und können ihre Vorhersagen mit den tatsächlichen Zahlen vergleichen, um zu erörtern, wie genau die numerischen Daten im Vergleich zu den Daten der Kategorie sind.\n\n**Frage des Tages:** Wie lernen Computer, auf der Basis numerischer Daten Vorhersagen zu erstellen?"
+        },
+        "csd7-2023/Numerical Data in AI Lab": {
+          "name": "Numerische Daten im KI-Labor"
+        },
+        "csd7-2023/Survey Planning": {
+          "name": "Entwurf einer Datenerhebung"
         },
         "coursea-2023/Safety in My Online Neighborhood": {
           "name": "Sicherheit in meiner Online-Nachbarschaft",
