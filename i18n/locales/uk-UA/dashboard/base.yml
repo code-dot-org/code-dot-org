@@ -53,6 +53,7 @@ uk:
         gender: 'Стать'
         edit_header: 'Редагувати дані облікового запису'
         finish_sign_up_header: 'Завершіть створення облікового запису'
+        finish_sign_up_header_error: 'Виправ ці помилки:'
         finish_sign_up_subheader: 'Заповніть наступну інформацію для завершення створення облікового в Code.org <strong>%{email}</strong>.'
         finish_sign_up_subheader_markdown: 'Заповніть наступну інформацію для завершення створення облікового в Code.org **%{email}**.'
         finish_sign_up_subheader_provider: 'Заповніть наступну інформацію для завершення створення облікового запису в Code.org з <strong>%{provider}</strong> <strong>%{email}</strong>.'
@@ -60,6 +61,7 @@ uk:
         reset_password_token: "Посилання для скидання пароля, за яким ви перейшли"
         error:
           future: не може бути в майбутньому
+        user_type: 'Тип облікового запису'
         us_state: 'Штат (регіон, область)'
   beta: "бета-версія"
   hello: "Привіт, світ!"

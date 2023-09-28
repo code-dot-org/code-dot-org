@@ -10,6 +10,7 @@ hu:
         error:
           future: nem lehet a jövőben
         finish_sign_up_header: A profilod létrehozásának befejezése
+        finish_sign_up_header_error: 'Kérjük, javítsd a következő hibákat:'
         finish_sign_up_subheader: Töltsd ki az alábbi adatokat <strong>%{email}</strong>
           Code.org fiókod létrehozásához.
         finish_sign_up_subheader_markdown: Töltsd ki az alábbi adatokat **%{email}**
@@ -31,6 +32,7 @@ hu:
           e-mail címmel)](%{url})
         reset_password_token: A jelszó megváltoztatásához használt link
         us_state: Állam
+        user_type: Fióktípus
         username: felhasználónév
         verified_teacher: Igazolt tanár
     errors:

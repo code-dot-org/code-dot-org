@@ -19,7 +19,7 @@ fa:
         Farmer2: کشاورز 2
         Unplug8: انتزاع
         Artist4: هنرمند 4
-        Unplug9: برنامه نویسی دست به دست
+        Unplug9: برنامه نویسی رله
         Farmer3: کشاورز 3
         Unplug10: اینترنت
         Artist5: هنرمند 5
@@ -311,8 +311,8 @@ fa:
         C2_playlab_createstory: آزمایشگاه بازی - یک بازی بسازید
         C2_graph_paper: برنامه نویسی روی کاغذ شطرنجی 
         C2_conditionals_with_cards: مشروط
-        C2_binary_bracelets: دستبند دودویی
-        C2_relay_programming: برنامه نویسی دست به دست
+        C2_binary_bracelets: دستبندهای دودویی
+        C2_relay_programming: برنامه نویسی رله
         C2_paper_airplanes: هواپیماهای کاغذی
         C2_digital_footprint: ردپای دیجیتالی شما
         C2_digital_footprint_v2: ردپای دیجیتالی شما
@@ -371,7 +371,7 @@ fa:
         CSF_unspotted_bugs: باگ‌های دیده‌نشده
         CSF_zuck_loops_short: حلقه‌های تکرار
         frozen_intro: معرفی ساعت کدزنی
-        frozen_loops: معرفی حلقه ها
+        frozen_loops: معرفی حلقه‌ها
         frozen_functions: معرفی تابع ها
         playlab_intro: معرفی آزمایشگاه بازی
         playlab_events: رویداد های آزمایشگاه بازی
@@ -530,7 +530,7 @@ fa:
         csd_applab_loops: حلقه‌ها در ‏App Lab
         csd_problem_solving_process: فرایند حل مسئله
         CSF_Going_Places_Safely: محله برخط من
-        CSF_SpriteLab_Intro_v2: آشنایی با آزمایشگاه اسپرایت
+        CSF_SpriteLab_Intro_v2: آشنایی با لابراتوار اسپرایت
         CSF_Spritelab_MakeSprite_v2: نحوه ساخت اسپرایت
         CSF_SpriteLab_SpritesInAction_v2: اسپرایت‌ها در عمل
         csd_debugging: رفع اشکال

@@ -9,11 +9,13 @@ kk:
         email: Электронды пошта
         error:
           future: болашақта болуы мүмкін емес
+        finish_sign_up_header_error: 'Өтінеміз көрсетілген қателерді түзетіңіз:'
         gender: Жынысы
         locale: Тілі
         name: Аты
         password: Құпия сөз
         password_confirmation: Құпия сөзді растау
+        user_type: Аккаунт Түрі
         username: Логин
     errors:
       messages:

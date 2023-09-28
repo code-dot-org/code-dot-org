@@ -8234,3 +8234,7 @@ zh-CN:
           title: 模块 7
         vpl-csd-2023-m8:
           title: 模块 8
+        ai-ethics-2023:
+          lessons:
+            lesson-1:
+              name: 我们的 AI 道德守则

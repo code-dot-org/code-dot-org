@@ -135,7 +135,7 @@ One of the best ways to help is to spread the word and promote the Hour of Code.
 
 ### 1. Register Your Event
 
-When you [sign up your Hour of Code event](/#join), you’ll receive helpful email communications with news and tips for hosting a successful Hour of Code. It’s also how you can let local schools or parents know that you’re hosting an event near them.
+Ao se [inscrever em seu evento da Hora do Código](/#join), você receberá comunicações úteis por e-mail com notícias e dicas para organizar uma Hora do Código de sucesso. It’s also how you can let local schools or parents know that you’re hosting an event near them.
 
 ### 2. Post on Social Media
 

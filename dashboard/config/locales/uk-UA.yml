@@ -10,6 +10,7 @@ uk:
         error:
           future: не може бути в майбутньому
         finish_sign_up_header: Завершіть створення облікового запису
+        finish_sign_up_header_error: 'Виправ ці помилки:'
         finish_sign_up_subheader: Заповніть наступну інформацію для завершення створення
           облікового в Code.org <strong>%{email}</strong>.
         finish_sign_up_subheader_markdown: Заповніть наступну інформацію для завершення
@@ -32,6 +33,7 @@ uk:
           у Вас немає електронної пошти)](%{url})
         reset_password_token: Посилання для скидання пароля, за яким ви перейшли
         us_state: Штат (регіон, область)
+        user_type: Тип облікового запису
         username: ім'я користувача
         verified_teacher: Підтверджений педагог
     errors:
