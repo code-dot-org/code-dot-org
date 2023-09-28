@@ -268,14 +268,12 @@ class Hamburger
       {title: I18n.t("#{loc_prefix}my_dashboard"), url: CDO.studio_url("/home"), id: "header-teacher-home"},
       {title: I18n.t("#{loc_prefix}course_catalog"), url: CDO.studio_url("/catalog"), id: "header-teacher-courses"},
       {title: I18n.t("#{loc_prefix}project_gallery"), url: CDO.studio_url("/projects"), id: "header-teacher-projects"},
+    ]
+
+    en_teacher = [
       {title: I18n.t("#{loc_prefix}professional_learning"), url: CDO.studio_url("/my-professional-learning"), id: "header-teacher-professional-learning"},
       {title: I18n.t("#{loc_prefix}incubator"), url: CDO.studio_url("/incubator"), id: "header-incubator"},
     ]
-
-    # en_teacher = [
-    #   {title: I18n.t("#{loc_prefix}professional_learning"), url: CDO.studio_url("/my-professional-learning"), id: "header-teacher-professional-learning"},
-    #   {title: I18n.t("#{loc_prefix}incubator"), url: CDO.studio_url("/incubator"), id: "header-incubator"},
-    # ]
 
     any_student_links = [
       {title: I18n.t("#{loc_prefix}my_dashboard"), url: CDO.studio_url("/home"), id: "header-student-home"},
@@ -301,7 +299,6 @@ class Hamburger
     non_en_signed_out_links = [
       {title: I18n.t("#{loc_prefix}learn"), url: CDO.studio_url("/courses"), id: "header-non-en-learn"},
       {title: I18n.t("#{loc_prefix}teach"), url: CDO.code_org_url("/teach"), id: "header-non-en-teach"},
-      {title: I18n.t("#{loc_prefix}course_catalog"), url: CDO.studio_url("/catalog"), id: "header-non-en-courses"},
       {title: I18n.t("#{loc_prefix}project_gallery"), url: CDO.studio_url("/projects/public"), id: "header-non-en-projects"},
       {title: I18n.t("#{loc_prefix}stats"), url: CDO.code_org_url("/promote"), id: "header-non-en-stats"},
       {title: I18n.t("#{loc_prefix}help_us"), url: CDO.code_org_url("/help"), id: "header-non-en-help"},
