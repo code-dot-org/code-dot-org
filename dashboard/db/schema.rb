@@ -307,8 +307,8 @@ ActiveRecord::Schema.define(version: 2023_09_27_153604) do
     t.datetime "deleted_at"
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
-    t.virtual "active", type: :boolean, as: "if((`deleted_at` is null),true,NULL)"
-    t.virtual "open", type: :boolean, as: "if((`closed_at` is null),true,NULL)"
+    t.virtual "active", type: :boolean, as: "if(isnull(`deleted_at`),TRUE,NULL)"
+    t.virtual "open", type: :boolean, as: "if(isnull(`closed_at`),TRUE,NULL)"
     t.index ["project_id", "deleted_at"], name: "index_code_reviews_on_project_id_and_deleted_at"
     t.index ["user_id", "project_id", "open", "active"], name: "index_code_reviews_unique", unique: true
     t.index ["user_id", "script_id", "project_level_id", "closed_at", "deleted_at"], name: "index_code_reviews_for_peer_lookup"
@@ -622,7 +622,7 @@ ActiveRecord::Schema.define(version: 2023_09_27_153604) do
     t.index ["user_id"], name: "index_hint_view_requests_on_user_id"
   end
 
-  create_table "learning_goal_ai_evaluations", charset: "utf8mb4", collation: "utf8mb4_unicode_ci", force: :cascade do |t|
+  create_table "learning_goal_ai_evaluations", charset: "utf8", collation: "utf8_unicode_ci", force: :cascade do |t|
     t.integer "user_id"
     t.integer "learning_goal_id"
     t.integer "project_id"
@@ -660,7 +660,7 @@ ActiveRecord::Schema.define(version: 2023_09_27_153604) do
     t.index ["learning_goal_id", "understanding"], name: "index_learning_goal_evidence_levels_on_lg_id_and_understanding", unique: true
   end
 
-  create_table "learning_goal_teacher_evaluations", charset: "utf8mb4", collation: "utf8mb4_unicode_ci", force: :cascade do |t|
+  create_table "learning_goal_teacher_evaluations", charset: "utf8", collation: "utf8_unicode_ci", force: :cascade do |t|
     t.integer "user_id", null: false
     t.integer "teacher_id", null: false
     t.integer "learning_goal_id", null: false
@@ -1547,7 +1547,7 @@ ActiveRecord::Schema.define(version: 2023_09_27_153604) do
     t.index ["storage_app_id"], name: "index_project_commits_on_storage_app_id"
   end
 
-  create_table "projects", id: :integer, charset: "utf8mb4", collation: "utf8mb4_0900_ai_ci", force: :cascade do |t|
+  create_table "projects", id: :integer, charset: "utf8mb4", force: :cascade do |t|
     t.integer "storage_id"
     t.text "value", size: :medium
     t.datetime "updated_at", null: false
