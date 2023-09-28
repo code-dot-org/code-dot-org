@@ -1769,6 +1769,13 @@
         "pause_and_think_online/pre-express/2022": {
           "type": "סרטון"
         },
+        "ethics_and_ai_privacy_the_future_of_work/ai-ethics/2023": {
+          "type": "סרטון"
+        },
+        "how_ai_works_large_language_models/ai-ethics/2023": {
+          "url": "https://www.youtube.com/watch?v=X-AWdfSFCHQ",
+          "type": "סרטון"
+        },
         "cs_connections_landing_page/csc-adaptations/2023": {
           "name": "דף נחיתה של חיבורי CS",
           "url": "https://code.org/educate/csc"
@@ -2215,6 +2222,327 @@
         "poem_app_example/poetry/2023": {
           "name": "דוגמה לאפליקציית שיר",
           "url": "https://studio.code.org/projects/poetry_hoc/j3TXDXNhz0XEsH4Xjk_rT9buBHYCplirIKtY_Pg_bYo"
+        },
+        "teacher_forum/csd/2023": {
+          "name": "פורום מורים"
+        },
+        "problem_solving_process_1/csd/2023": {
+          "type": "סרטון"
+        },
+        "the_problem_solving_process/csd/2023": {
+          "type": "סרטון"
+        },
+        "what_is_a_computer/csd/2023": {
+          "type": "סרטון"
+        },
+        "what_do_computers_do/csd/2023": {
+          "type": "סרטון"
+        },
+        "apps_and_problem_solving_2/csd/2023": {
+          "type": "כותרת"
+        },
+        "intro_to_web_lab_part_2/csd/2023": {
+          "type": "סרטון"
+        },
+        "pair_programming/csd/2023": {
+          "name": "תכנות בזוגות",
+          "type": "סרטון"
+        },
+        "video_intro_to_web_lab_part_1/csd/2023": {
+          "type": "סרטון"
+        },
+        "lists/csd/2023": {
+          "name": "רשימות"
+        },
+        "video_debugging/csd/2023": {
+          "type": "סרטון"
+        },
+        "video_pair_programming/csd/2023": {
+          "type": "סרטון"
+        },
+        "html_web_page/csd/2023": {
+          "type": "כותרת"
+        },
+        "intro_to_css_-_part_1/csd/2023": {
+          "type": "סרטון"
+        },
+        "intro_to_css_-_part_2/csd/2023": {
+          "type": "סרטון"
+        },
+        "your_personal_style/csd/2023": {
+          "type": "כותרת"
+        },
+        "creative_commons_overview/csd/2023": {
+          "type": "סרטון"
+        },
+        "personal_web_page_1/csd/2023": {
+          "type": "כותרת"
+        },
+        "publishing_your_website/csd/2023": {
+          "type": "סרטון"
+        },
+        "video_managing_disagreement/csd/2023": {
+          "type": "סרטון"
+        },
+        "video_teamwork/csd/2023": {
+          "type": "סרטון"
+        },
+        "video_how_search_works/csd/2023": {
+          "type": "סרטון"
+        },
+        "website_for_a_purpose/csd/2023": {
+          "type": "כותרת"
+        },
+        "drawing_in_game_lab_-_part_1/csd/2023": {
+          "type": "סרטון"
+        },
+        "drawing_in_game_lab_-_part_2/csd/2023": {
+          "type": "סרטון"
+        },
+        "introduction_to_variables/csd/2023": {
+          "type": "סרטון"
+        },
+        "variables/csd/2023": {
+          "name": "משתנים"
+        },
+        "variables_1/csd/2023": {
+          "name": "משתנים",
+          "type": "סרטון"
+        },
+        "variables_2/csd/2023": {
+          "name": "משתנים"
+        },
+        "robot_faces/csd/2023": {
+          "type": "כותרת"
+        },
+        "introduction_to_sprites/csd/2023": {
+          "type": "סרטון"
+        },
+        "sprites/csd/2023": {
+          "name": "דמויות"
+        },
+        "sprites_1/csd/2023": {
+          "name": "דמויות"
+        },
+        "the_animation_tab/csd/2023": {
+          "type": "סרטון"
+        },
+        "sprite_properties/csd/2023": {
+          "name": "מאפייני ספרייט"
+        },
+        "sprite_properties_1/csd/2023": {
+          "name": "מאפייני ספרייט"
+        },
+        "sprite_properties_needs_updating_/csd/2023": {
+          "name": "מאפייני ספרייט",
+          "type": "סרטון"
+        },
+        "text/csd/2023": {
+          "name": "טקסט"
+        },
+        "captioned_scenes/csd/2023": {
+          "type": "כותרת"
+        },
+        "flipbook_example_-_by_marnic_bos/csd/2023": {
+          "type": "סרטון"
+        },
+        "introduction_to_the_draw_loop/csd/2023": {
+          "type": "סרטון"
+        },
+        "sprite_movement/csd/2023": {
+          "type": "סרטון"
+        },
+        "animated_scene/csd/2023": {
+          "type": "כותרת"
+        },
+        "boolean_expressions/csd/2023": {
+          "type": "סרטון"
+        },
+        "conditional_statements/csd/2023": {
+          "type": "סרטון"
+        },
+        "conditionals/csd/2023": {
+          "name": "תנאים"
+        },
+        "if_else_statements/csd/2023": {
+          "type": "סרטון"
+        },
+        "interactive_card_3/csd/2023": {
+          "type": "כותרת"
+        },
+        "velocity/csd/2023": {
+          "type": "סרטון"
+        },
+        "side_scroller/csd/2023": {
+          "type": "כותרת"
+        },
+        "flyer_game/csd/2023": {
+          "type": "כותרת"
+        },
+        "functions/csd/2023": {
+          "name": "פונקציות",
+          "type": "סרטון"
+        },
+        "functions_1/csd/2023": {
+          "name": "פונקציות"
+        },
+        "functions_2/csd/2023": {
+          "name": "פונקציות"
+        },
+        "make_your_own_game_3/csd/2023": {
+          "type": "כותרת"
+        },
+        "the_design_thinking_process/csd/2023": {
+          "type": "סרטון"
+        },
+        "paper_prototypes/csd/2023": {
+          "type": "כותרת"
+        },
+        "design_mode/csd/2023": {
+          "name": "מצב עיצוב"
+        },
+        "what_s_for_lunch_testing/csd/2023": {
+          "type": "סרטון"
+        },
+        "intro_to_design_mode/csd/2023": {
+          "type": "סרטון"
+        },
+        "events_in_app_lab/csd/2023": {
+          "type": "סרטון"
+        },
+        "events_in_app_lab_1/csd/2023": {
+          "type": "סרטון"
+        },
+        "app_presentation/csd/2023": {
+          "type": "כותרת"
+        },
+        "ascii_and_binary_representation/csd/2023": {
+          "name": "ייצוג ASCII וייצוג בינארי"
+        },
+        "binary_and_data/csd/2023": {
+          "type": "סרטון"
+        },
+        "create_a_representation_2/csd/2023": {
+          "type": "כותרת"
+        },
+        "amazon_and_data/csd/2023": {
+          "type": "סרטון"
+        },
+        "netflix_and_data/csd/2023": {
+          "type": "סרטון"
+        },
+        "waze_and_data/csd/2023": {
+          "type": "סרטון"
+        },
+        "video_impact_on_society/csd/2023": {
+          "type": "סרטון"
+        },
+        "video_machine_learning/csd/2023": {
+          "name": "וידאו: למידת מכונה",
+          "type": "סרטון"
+        },
+        "video_training_data_and_bias/csd/2023": {
+          "type": "סרטון"
+        },
+        "make_a_recommendation_1/csd/2023": {
+          "type": "כותרת"
+        },
+        "circuits_and_logic/csd/2023": {
+          "type": "סרטון"
+        },
+        "the_counter_pattern/csd/2023": {
+          "type": "סרטון"
+        },
+        "if_statements_1/csd/2023": {
+          "type": "סרטון"
+        },
+        "rubric_-_field_collector_app/csd/2023": {
+          "type": "כותרת"
+        },
+        "input_output_devices/csd/2023": {
+          "type": "סרטון"
+        },
+        "rubric_-_human_device_interaction/csd/2023": {
+          "type": "כותרת"
+        },
+        "introduction_to_arrays/csd/2023": {
+          "type": "סרטון"
+        },
+        "functions_with_parameters/csd/2023": {
+          "name": "פונקציות ופרמטרים",
+          "type": "סרטון"
+        },
+        "student_rubric_-_interactive_art/csd/2023": {
+          "type": "כותרת"
+        },
+        "prototype_an_innovation/csd/2023": {
+          "type": "כותרת"
+        },
+        "teacher_forum_1/csd/2023": {
+          "name": "פורום מורים"
+        },
+        "the_counter_pattern_2/csd/2023": {
+          "type": "סרטון"
+        },
+        "rubric_-_field_collector_app_1/csd/2023": {
+          "type": "כותרת"
+        },
+        "rubric_-_human_device_interaction_1/csd/2023": {
+          "type": "כותרת"
+        },
+        "functions_3/csd/2023": {
+          "name": "פונקציות"
+        },
+        "student_rubric_-_interactive_pet/csd/2023": {
+          "type": "כותרת"
+        },
+        "prototype_an_innovation_2/csd/2023": {
+          "type": "כותרת"
+        },
+        "ai_what_is_machine_learning_/csd/2023": {
+          "type": "סרטון"
+        },
+        "seeing_ai/csd/2023": {
+          "type": "סרטון"
+        },
+        "finding_patterns_in_data/csd/2023": {
+          "type": "סרטון"
+        },
+        "introduction_to_ai_lab_1/csd/2023": {
+          "type": "סרטון"
+        },
+        "training_and_testing_in_ai_lab/csd/2023": {
+          "type": "סרטון"
+        },
+        "ai_training_data_bias/csd/2023": {
+          "type": "סרטון"
+        },
+        "model_cards_in_ai_lab/csd/2023": {
+          "type": "סרטון"
+        },
+        "if-statements_in_app_lab/csd/2023": {
+          "type": "סרטון"
+        },
+        "numerical_data_in_ai_lab_2/csd/2023": {
+          "type": "סרטון"
+        },
+        "ethics_ai_equal_access_and_algorithmic_bias/csd/2023": {
+          "type": "סרטון"
+        },
+        "create_an_ml_app/csd/2023": {
+          "type": "כותרת"
+        },
+        "creating_a_survey_in_google_forms/csd/2023": {
+          "type": "סרטון"
+        },
+        "cleaning_survey_data/csd/2023": {
+          "type": "סרטון"
+        },
+        "view_and_download_survey_data/csd/2023": {
+          "type": "סרטון"
+        },
+        "design_an_ai_app_1/csd/2023": {
+          "type": "כותרת"
         },
         "all_resources/coursea/2023": {
           "url": "/s/קורסי-2023/משאבים"

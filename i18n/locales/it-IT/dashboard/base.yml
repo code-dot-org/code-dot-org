@@ -53,6 +53,7 @@ it:
         gender: 'Sesso'
         edit_header: 'Modifica i dettagli dell''account'
         finish_sign_up_header: 'Completa la creazione del tuo account'
+        finish_sign_up_header_error: 'Per favore correggi i seguenti errori:'
         finish_sign_up_subheader: 'Compila i seguenti dati per terminare la creazione del tuo account Code.org per <strong>%{email}</strong>.'
         finish_sign_up_subheader_markdown: 'Compila i seguenti dati per terminare la creazione del tuo account Code.org per **%{email}**.'
         finish_sign_up_subheader_provider: 'Compila i seguenti dati per terminare la creazione del tuo account Code.org con <strong>%{provider}</strong> per <strong>%{email}</strong>.'
@@ -60,6 +61,7 @@ it:
         reset_password_token: "Il link per la reimpostazione della password che hai usato"
         error:
           future: non può essere in futuro
+        user_type: 'Tipo di account'
         us_state: 'Stato'
   beta: "versione provvisoria"
   hello: "Ciao mondo"

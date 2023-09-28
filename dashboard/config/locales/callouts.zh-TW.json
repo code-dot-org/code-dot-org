@@ -17,8 +17,43 @@
         "AppLab Intro 7 - Change Screen Color": {
           "applab_hoc_finish": "畫面變成綠色了嗎？ 如果是這樣，請點擊“完成”。 如果沒有，請點擊“重置”，更改你的程式，然後再次點擊“執行”。"
         },
+        "AppLab Intro 7 - Change Screen Color_2023": {
+          "applab_hoc_finish": "畫面變成綠色了嗎？ 如果是這樣，請點擊“完成”。 如果沒有，請點擊“重置”，更改你的程式，然後再次點擊“執行”。"
+        },
+        "AppLab Intro 7 - Change Screen Color_mb2022": {
+          "applab_hoc_finish": "畫面變成綠色了嗎？ 如果是這樣，請點擊“完成”。 如果沒有，請點擊“重置”，更改你的程式，然後再次點擊“執行”。"
+        },
         "AppLab Intro 7 - thisOrThatAddButton": {
           "AppLabHoCFinal11": "你現在處於設計模式中。"
+        },
+        "AppLab Intro 7 - thisOrThatAddButton_2023": {
+          "AppLabHoCFinal11": "你現在處於設計模式中。"
+        },
+        "AppLab Intro 7 - thisOrThatAddButton_mb2022": {
+          "AppLabHoCFinal11": "你現在處於設計模式中。"
+        },
+        "CSD U3 L18 Predict_2023": {
+          "CSD_U3_L11_S4_C1": "添加你的積木到這兒。"
+        },
+        "CSD U3 L7 review arc_2023": {
+          "CSD_U3_rect_c1": "這兒是代碼",
+          "CSD_U3_rect_c2": "拖曳這個積木到工作區裡。"
+        },
+        "CSD U3 L7 review line_2023": {
+          "CSD_U3_rect_c1": "這兒是代碼",
+          "CSD_U3_rect_c2": "拖曳這個積木到工作區裡。"
+        },
+        "CSD U3 L7 review point_2023": {
+          "CSD_U3_rect_c1": "這兒是代碼",
+          "CSD_U3_rect_c2": "拖曳這個積木到工作區裡。"
+        },
+        "CSD U3 L7 review shapes_2023": {
+          "CSD_U3_rect_c1": "這兒是代碼",
+          "CSD_U3_rect_c2": "拖曳這個積木到工作區裡。"
+        },
+        "CSD U3 L7 shapes review polygon_2023": {
+          "CSD_U3_rect_c1": "這兒是代碼",
+          "CSD_U3_rect_c2": "拖曳這個積木到工作區裡。"
         },
         "CSD U3 Variables Predict Where X": {
           "CSD_U3_variables": "在此修改數值"
@@ -36,6 +71,9 @@
           "grid": "點擊此處以顯示格線。"
         },
         "CSD U3 Variables Predict Where XY_2022": {
+          "grid": "點擊此處以顯示格線。"
+        },
+        "CSD U3 Variables Predict Where XY_2023": {
           "grid": "點擊此處以顯示格線。"
         },
         "CSD U3 Variables Predict Where X_2018": {
@@ -65,6 +103,9 @@
         "CSD U3 abstraction accelerateX_2022": {
           "CSD_U3_L11_S6_C1": "添加你的程式到這兒。"
         },
+        "CSD U3 abstraction accelerateX_2023": {
+          "CSD_U3_L11_S6_C1": "添加你的程式到這兒。"
+        },
         "CSD U3 abstraction accelerateY": {
           "CSD_U3_L11_S7_C1": "添加你的程式到這兒。"
         },
@@ -78,6 +119,9 @@
           "CSD_U3_L11_S7_C1": "添加你的程式到這兒。"
         },
         "CSD U3 abstraction accelerateY_2022": {
+          "CSD_U3_L11_S7_C1": "添加你的程式到這兒。"
+        },
+        "CSD U3 abstraction accelerateY_2023": {
           "CSD_U3_L11_S7_C1": "添加你的程式到這兒。"
         },
         "CSD U3 abstraction jumping": {
@@ -95,6 +139,9 @@
         "CSD U3 abstraction jumping_2022": {
           "CSD_U3_L13_S8_C1": "在此設定速度"
         },
+        "CSD U3 abstraction jumping_2023": {
+          "CSD_U3_L13_S8_C1": "在此設定速度"
+        },
         "CSD U3 abstraction velocityX": {
           "CSD_U3_L11_S4_C1": "添加你的積木到這兒。"
         },
@@ -108,6 +155,9 @@
           "CSD_U3_L11_S4_C1": "添加你的積木到這兒。"
         },
         "CSD U3 abstraction velocityX_2022": {
+          "CSD_U3_L11_S4_C1": "添加你的積木到這兒。"
+        },
+        "CSD U3 abstraction velocityX_2023": {
           "CSD_U3_L11_S4_C1": "添加你的積木到這兒。"
         },
         "CSD U3 abstraction velocityY": {
@@ -125,6 +175,9 @@
         "CSD U3 abstraction velocityY_2022": {
           "CSD_U3_L11_S5_C1": "添加你的積木到這兒。"
         },
+        "CSD U3 abstraction velocityY_2023": {
+          "CSD_U3_L11_S5_C1": "添加你的積木到這兒。"
+        },
         "CSD U3 collisions isTouching intro": {
           "CSD_U3_L12_S2_C1": "添加你的積木到這兒。"
         },
@@ -140,6 +193,9 @@
         "CSD U3 collisions isTouching intro_2022": {
           "CSD_U3_L12_S2_C1": "添加你的積木到這兒。"
         },
+        "CSD U3 collisions isTouching intro_2023": {
+          "CSD_U3_L12_S2_C1": "添加你的積木到這兒。"
+        },
         "CSD U3 collisions types": {
           "CSD_U3_L13_S6_C1": "添加你的程式到這兒。"
         },
@@ -149,16 +205,25 @@
         "CSD U3 collisions types2_2022": {
           "CSD_U3_L13_S6_C1": "添加你的程式到這兒。"
         },
+        "CSD U3 collisions types2_2023": {
+          "CSD_U3_L13_S6_C1": "添加你的程式到這兒。"
+        },
         "CSD U3 collisions types3_2021": {
           "CSD_U3_L13_S6_C1": "添加你的程式到這兒。"
         },
         "CSD U3 collisions types3_2022": {
           "CSD_U3_L13_S6_C1": "添加你的程式到這兒。"
         },
+        "CSD U3 collisions types3_2023": {
+          "CSD_U3_L13_S6_C1": "添加你的程式到這兒。"
+        },
         "CSD U3 collisions types4_2021": {
           "CSD_U3_L13_S6_C1": "添加你的程式到這兒。"
         },
         "CSD U3 collisions types4_2022": {
+          "CSD_U3_L13_S6_C1": "添加你的程式到這兒。"
+        },
+        "CSD U3 collisions types4_2023": {
           "CSD_U3_L13_S6_C1": "添加你的程式到這兒。"
         },
         "CSD U3 collisions types_2018": {
@@ -171,6 +236,9 @@
           "CSD_U3_L13_S6_C1": "添加你的程式到這兒。"
         },
         "CSD U3 collisions types_2022": {
+          "CSD_U3_L13_S6_C1": "添加你的程式到這兒。"
+        },
+        "CSD U3 collisions types_2023": {
           "CSD_U3_L13_S6_C1": "添加你的程式到這兒。"
         },
         "CSD U3 debug": {
@@ -193,11 +261,19 @@
           "CSD_U3_rect_c1": "這兒是代碼",
           "CSD_U3_rect_c2": "拖曳這個積木到工作區裡。"
         },
+        "CSD U3 debug_2023": {
+          "CSD_U3_rect_c1": "這兒是代碼",
+          "CSD_U3_rect_c2": "拖曳這個積木到工作區裡。"
+        },
         "CSD U3 drawing challenge 2_2021": {
           "CSD_U3_rect_c1": "這兒是代碼",
           "CSD_U3_rect_c2": "拖曳這個積木到工作區裡。"
         },
         "CSD U3 drawing challenge 2_2022": {
+          "CSD_U3_rect_c1": "這兒是代碼",
+          "CSD_U3_rect_c2": "拖曳這個積木到工作區裡。"
+        },
+        "CSD U3 drawing challenge 2_2023": {
           "CSD_U3_rect_c1": "這兒是代碼",
           "CSD_U3_rect_c2": "拖曳這個積木到工作區裡。"
         },
@@ -209,11 +285,19 @@
           "CSD_U3_rect_c1": "這兒是代碼",
           "CSD_U3_rect_c2": "拖曳這個積木到工作區裡。"
         },
+        "CSD U3 drawing challenge 3_2023": {
+          "CSD_U3_rect_c1": "這兒是代碼",
+          "CSD_U3_rect_c2": "拖曳這個積木到工作區裡。"
+        },
         "CSD U3 drawing practice 1_2021": {
           "CSD_U3_rect_c1": "這兒是代碼",
           "CSD_U3_rect_c2": "拖曳這個積木到工作區裡。"
         },
         "CSD U3 drawing practice 1_2022": {
+          "CSD_U3_rect_c1": "這兒是代碼",
+          "CSD_U3_rect_c2": "拖曳這個積木到工作區裡。"
+        },
+        "CSD U3 drawing practice 1_2023": {
           "CSD_U3_rect_c1": "這兒是代碼",
           "CSD_U3_rect_c2": "拖曳這個積木到工作區裡。"
         },
@@ -225,11 +309,19 @@
           "CSD_U3_rect_c1": "這兒是代碼",
           "CSD_U3_rect_c2": "拖曳這個積木到工作區裡。"
         },
+        "CSD U3 drawing practice 2_2023": {
+          "CSD_U3_rect_c1": "這兒是代碼",
+          "CSD_U3_rect_c2": "拖曳這個積木到工作區裡。"
+        },
         "CSD U3 drawing practice 3_2021": {
           "CSD_U3_rect_c1": "這兒是代碼",
           "CSD_U3_rect_c2": "拖曳這個積木到工作區裡。"
         },
         "CSD U3 drawing practice 3_2022": {
+          "CSD_U3_rect_c1": "這兒是代碼",
+          "CSD_U3_rect_c2": "拖曳這個積木到工作區裡。"
+        },
+        "CSD U3 drawing practice 3_2023": {
           "CSD_U3_rect_c1": "這兒是代碼",
           "CSD_U3_rect_c2": "拖曳這個積木到工作區裡。"
         },
@@ -273,6 +365,10 @@
           "CSD_U3_rect_c1": "這兒是代碼",
           "CSD_U3_rect_c2": "拖曳這個積木到工作區裡。"
         },
+        "CSD U3 fill_2023": {
+          "CSD_U3_rect_c1": "這兒是代碼",
+          "CSD_U3_rect_c2": "拖曳這個積木到工作區裡。"
+        },
         "CSD U3 platform background1": {
           "CSD_U3_L16_S3_C3": "修改這個函式。"
         },
@@ -286,6 +382,9 @@
           "CSD_U3_L16_S3_C3": "修改這個函式。"
         },
         "CSD U3 platform background1_2022": {
+          "CSD_U3_L16_S3_C3": "修改這個函式。"
+        },
+        "CSD U3 platform background1_2023": {
           "CSD_U3_L16_S3_C3": "修改這個函式。"
         },
         "CSD U3 platform platform1": {
@@ -303,6 +402,9 @@
         "CSD U3 platform platform1_2022": {
           "CSD_U3_S17_L8_C1": "這個積木創建了一個新的角色。"
         },
+        "CSD U3 platform platform1_2023": {
+          "CSD_U3_S17_L8_C1": "這個積木創建了一個新的角色。"
+        },
         "CSD U3 platform scoreboard": {
           "CSD_U3_L17_S7_C1": "得分會輸出到這兒。"
         },
@@ -316,6 +418,9 @@
           "CSD_U3_L17_S7_C1": "得分會輸出到這兒。"
         },
         "CSD U3 platform scoreboard_2022": {
+          "CSD_U3_L17_S7_C1": "得分會輸出到這兒。"
+        },
+        "CSD U3 platform scoreboard_2023": {
           "CSD_U3_L17_S7_C1": "得分會輸出到這兒。"
         },
         "CSD U3 platform variable1": {
@@ -333,6 +438,9 @@
         "CSD U3 platform variable1_2022": {
           "callout": "這個積木創建了一個變數。"
         },
+        "CSD U3 platform variable1_2023": {
+          "callout": "這個積木創建了一個變數。"
+        },
         "CSD U3 properties depth_2021": {
           "CSD_U3_rect_c1": "這兒是代碼",
           "CSD_U3_rect_c2": "拖曳這個積木到工作區裡。"
@@ -341,11 +449,19 @@
           "CSD_U3_rect_c1": "這兒是代碼",
           "CSD_U3_rect_c2": "拖曳這個積木到工作區裡。"
         },
+        "CSD U3 properties depth_2023": {
+          "CSD_U3_rect_c1": "這兒是代碼",
+          "CSD_U3_rect_c2": "拖曳這個積木到工作區裡。"
+        },
         "CSD U3 properties tint_2021": {
           "CSD_U3_rect_c1": "這兒是代碼",
           "CSD_U3_rect_c2": "拖曳這個積木到工作區裡。"
         },
         "CSD U3 properties tint_2022": {
+          "CSD_U3_rect_c1": "這兒是代碼",
+          "CSD_U3_rect_c2": "拖曳這個積木到工作區裡。"
+        },
+        "CSD U3 properties tint_2023": {
           "CSD_U3_rect_c1": "這兒是代碼",
           "CSD_U3_rect_c2": "拖曳這個積木到工作區裡。"
         },
@@ -393,11 +509,19 @@
           "CSD_U3_rect_c1": "這兒是代碼",
           "CSD_U3_rect_c2": "拖曳這個積木到工作區裡。"
         },
+        "CSD U3 shapes arc_2023": {
+          "CSD_U3_rect_c1": "這兒是代碼",
+          "CSD_U3_rect_c2": "拖曳這個積木到工作區裡。"
+        },
         "CSD U3 shapes behind_2021": {
           "CSD_U3_rect_c1": "這兒是代碼",
           "CSD_U3_rect_c2": "拖曳這個積木到工作區裡。"
         },
         "CSD U3 shapes behind_2022": {
+          "CSD_U3_rect_c1": "這兒是代碼",
+          "CSD_U3_rect_c2": "拖曳這個積木到工作區裡。"
+        },
+        "CSD U3 shapes behind_2023": {
           "CSD_U3_rect_c1": "這兒是代碼",
           "CSD_U3_rect_c2": "拖曳這個積木到工作區裡。"
         },
@@ -409,11 +533,19 @@
           "CSD_U3_rect_c1": "這兒是代碼",
           "CSD_U3_rect_c2": "拖曳這個積木到工作區裡。"
         },
+        "CSD U3 shapes line_2023": {
+          "CSD_U3_rect_c1": "這兒是代碼",
+          "CSD_U3_rect_c2": "拖曳這個積木到工作區裡。"
+        },
         "CSD U3 shapes missing_2021": {
           "CSD_U3_rect_c1": "這兒是代碼",
           "CSD_U3_rect_c2": "拖曳這個積木到工作區裡。"
         },
         "CSD U3 shapes missing_2022": {
+          "CSD_U3_rect_c1": "這兒是代碼",
+          "CSD_U3_rect_c2": "拖曳這個積木到工作區裡。"
+        },
+        "CSD U3 shapes missing_2023": {
           "CSD_U3_rect_c1": "這兒是代碼",
           "CSD_U3_rect_c2": "拖曳這個積木到工作區裡。"
         },
@@ -425,11 +557,19 @@
           "CSD_U3_rect_c1": "這兒是代碼",
           "CSD_U3_rect_c2": "拖曳這個積木到工作區裡。"
         },
+        "CSD U3 shapes polygon_2023": {
+          "CSD_U3_rect_c1": "這兒是代碼",
+          "CSD_U3_rect_c2": "拖曳這個積木到工作區裡。"
+        },
         "CSD U3 shapes scene_2021": {
           "CSD_U3_rect_c1": "這兒是代碼",
           "CSD_U3_rect_c2": "拖曳這個積木到工作區裡。"
         },
         "CSD U3 shapes scene_2022": {
+          "CSD_U3_rect_c1": "這兒是代碼",
+          "CSD_U3_rect_c2": "拖曳這個積木到工作區裡。"
+        },
+        "CSD U3 shapes scene_2023": {
           "CSD_U3_rect_c1": "這兒是代碼",
           "CSD_U3_rect_c2": "拖曳這個積木到工作區裡。"
         },
@@ -440,6 +580,13 @@
         "CSD U3 shapes_2022": {
           "CSD_U3_rect_c1": "這兒是代碼",
           "CSD_U3_rect_c2": "拖曳這個積木到工作區裡。"
+        },
+        "CSD U3 shapes_2023": {
+          "CSD_U3_rect_c1": "這兒是代碼",
+          "CSD_U3_rect_c2": "拖曳這個積木到工作區裡。"
+        },
+        "CSD U3L3 rect_2023": {
+          "CSD_U3_rect_c1": "這兒是代碼"
         },
         "CSD U6 getProperty input": {
           "CSD_U6L06P03": "添加你的積木到這兒。"
@@ -469,6 +616,9 @@
           "CSD_U3_variables": "在此修改數值"
         },
         "CSD web text explore_2022": {
+          "CSD_U3_variables": "在此修改數值"
+        },
+        "CSD web text explore_2023": {
           "CSD_U3_variables": "在此修改數值"
         },
         "Course 4 Artist 4": {

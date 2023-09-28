@@ -9,11 +9,13 @@ bn:
         email: ই-মেইল
         error:
           future: ভবিষ্যতের হতে পারবে না
+        finish_sign_up_header_error: 'অনুগ্রহ করে নিম্নের ত্রুটিগুলো সংশোধন করুন:'
         gender: লিঙ্গ
         locale: ভাষা
         name: প্রদর্শিত নাম
         password: পাসওআর্ড
         password_confirmation: পাসওআর্ড নিশ্চিতকরণ
+        user_type: অ্যাকাউন্ট-এর ধরন
         username: উজারন্যাম
     errors:
       messages:

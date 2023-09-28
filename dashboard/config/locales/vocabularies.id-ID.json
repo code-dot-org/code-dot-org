@@ -1157,6 +1157,9 @@
           "word": "Event",
           "definition": "Tindakan yang menyebabkan terjadinya sesuatu."
         },
+        "artificial_intelligence/ai-ethics/2023": {
+          "word": "Kecerdasan Buatan"
+        },
         "adaptation/csc-adaptations/2023": {
           "word": "Adaptasi",
           "definition": "Perubahan organisme untuk bertahan hidup dengan lebih baik di lingkungannya"
@@ -1374,6 +1377,64 @@
         },
         "poetry_circle/poetry/2023": {
           "definition": "Ruang yang aman dan kreatif untuk menguji puisi baru dan mendapatkan umpan balik yang konstruktif dari orang lain"
+        },
+        "computer/csd/2023": {
+          "word": "Komputer"
+        },
+        "input/csd/2023": {
+          "word": "Input"
+        },
+        "processing/csd/2023": {
+          "word": "Sedang memproses"
+        },
+        "digital_footprint/csd/2023": {
+          "word": "Jejak Digital"
+        },
+        "copyright/csd/2023": {
+          "word": "Hak cipta",
+          "definition": "hak hukum eksklusif untuk mencetak, menerbitkan, memperagakan, memfilmkan, atau merekam karya sastra, seni, atau musik dan mengotorisasi orang lain untuk melakukan semua tindakan di atas"
+        },
+        "bug/csd/2023": {
+          "word": "Bug",
+          "definition": "Bagian dari program yang tidak berfungsi dengan benar."
+        },
+        "debugging/csd/2023": {
+          "word": "Debugging",
+          "definition": "Menemukan dan memperbaiki masalah dalam algoritma atau program."
+        },
+        "program/csd/2023": {
+          "word": "Program",
+          "definition": "Sebuah algoritme yang sudah dikodekan menjadi sesuatu yang dapat dijalankan oleh mesin."
+        },
+        "variable/csd/2023": {
+          "word": "Variabel",
+          "definition": "Sebuah label untuk penggalan informasi yang digunakan dalam program."
+        },
+        "sprite/csd/2023": {
+          "word": "Sprite"
+        },
+        "condition/csd/2023": {
+          "word": "Kondisi"
+        },
+        "conditionals/csd/2023": {
+          "word": "Kondisi"
+        },
+        "abstraction/csd/2023": {
+          "word": "Abstraksi"
+        },
+        "function/csd/2023": {
+          "word": "Fungsi"
+        },
+        "user/csd/2023": {
+          "word": "Pengguna",
+          "definition": "Seseorang yang menggunakan objek, termasuk perangkat lunak dan perangkat keras."
+        },
+        "user_interface/csd/2023": {
+          "word": "Antarmuka Pengguna"
+        },
+        "machine_learning/csd/2023": {
+          "word": "Pembelajaran Mesin",
+          "definition": "Bagaimana komputer mengenali pola dan membuat keputusan tanpa diprogram secara eksplisit"
         },
         "algorithm/coursea/2023": {
           "word": "Algoritma",

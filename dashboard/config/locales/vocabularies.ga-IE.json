@@ -287,6 +287,30 @@
         "code/poetry/2023": {
           "word": "Cód"
         },
+        "input/csd/2023": {
+          "word": "Ionchur"
+        },
+        "copyright/csd/2023": {
+          "word": "Cóipcheart"
+        },
+        "debugging/csd/2023": {
+          "word": "Dífhabhtú"
+        },
+        "variable/csd/2023": {
+          "word": "Athróg"
+        },
+        "conditionals/csd/2023": {
+          "word": "Coinníollacha"
+        },
+        "abstraction/csd/2023": {
+          "word": "Teibíocht"
+        },
+        "function/csd/2023": {
+          "word": "Feidhm"
+        },
+        "machine_learning/csd/2023": {
+          "word": "Meaisínfhoghlaim"
+        },
         "debugging/coursea/2023": {
           "word": "Dífhabhtú"
         },

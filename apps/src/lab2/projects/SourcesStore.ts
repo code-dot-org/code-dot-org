@@ -3,8 +3,6 @@
  * and remote (saved to the server) implementations of the SourcesStore.
  * A SourcesStore manages the loading and saving of sources to the appropriate location.
  */
-import MetricsReporter from '@cdo/apps/lib/metrics/MetricsReporter';
-import Lab2MetricsReporter from '../Lab2MetricsReporter';
 import {ProjectSources} from '../types';
 import * as sourcesApi from './sourcesApi';
 const {getTabId} = require('@cdo/apps/utils');

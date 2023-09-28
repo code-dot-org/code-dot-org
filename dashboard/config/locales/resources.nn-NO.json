@@ -1715,6 +1715,12 @@
         "pause_and_think_online/pre-express/2022": {
           "type": "Video"
         },
+        "ethics_and_ai_privacy_the_future_of_work/ai-ethics/2023": {
+          "type": "Video"
+        },
+        "how_ai_works_large_language_models/ai-ethics/2023": {
+          "type": "Video"
+        },
         "star_quilts_1/csc-starquilts/2023": {
           "type": "Video"
         },
@@ -1764,6 +1770,278 @@
           "type": "Video"
         },
         "poem_art_video_optional_/poetry/2023": {
+          "type": "Video"
+        },
+        "teacher_forum/csd/2023": {
+          "name": "Lærarforum"
+        },
+        "problem_solving_process_1/csd/2023": {
+          "type": "Video"
+        },
+        "the_problem_solving_process/csd/2023": {
+          "type": "Video"
+        },
+        "what_is_a_computer/csd/2023": {
+          "type": "Video"
+        },
+        "what_do_computers_do/csd/2023": {
+          "type": "Video"
+        },
+        "apps_and_problem_solving_1/csd/2023": {
+          "type": "Gjennomgang av annan elev"
+        },
+        "computer_science_practices/csd/2023": {
+          "type": "Refleksjon"
+        },
+        "intro_to_web_lab_part_2/csd/2023": {
+          "type": "Video"
+        },
+        "pair_programming/csd/2023": {
+          "name": "Parprogrammering",
+          "type": "Video"
+        },
+        "video_intro_to_web_lab_part_1/csd/2023": {
+          "type": "Video"
+        },
+        "lists/csd/2023": {
+          "name": "Lister"
+        },
+        "video_debugging/csd/2023": {
+          "type": "Video"
+        },
+        "video_pair_programming/csd/2023": {
+          "type": "Video"
+        },
+        "html_web_page_1/csd/2023": {
+          "type": "Gjennomgang av annan elev"
+        },
+        "intro_to_css_-_part_1/csd/2023": {
+          "name": "Introduksjon til CSS - Del 1",
+          "type": "Video"
+        },
+        "intro_to_css_-_part_2/csd/2023": {
+          "name": "Introduksjon til CSS - Del 2",
+          "type": "Video"
+        },
+        "your_personal_style_1/csd/2023": {
+          "type": "Gjennomgang av annan elev"
+        },
+        "creative_commons_overview/csd/2023": {
+          "type": "Video"
+        },
+        "personal_web_page/csd/2023": {
+          "type": "Gjennomgang av annan elev"
+        },
+        "publishing_your_website/csd/2023": {
+          "type": "Video"
+        },
+        "video_managing_disagreement/csd/2023": {
+          "type": "Video"
+        },
+        "video_teamwork/csd/2023": {
+          "type": "Video"
+        },
+        "video_how_search_works/csd/2023": {
+          "name": "Korleis søk fungerer",
+          "type": "Video"
+        },
+        "website_for_a_purpose_1/csd/2023": {
+          "type": "Gjennomgang av annan elev"
+        },
+        "drawing_in_game_lab_-_part_1/csd/2023": {
+          "type": "Video"
+        },
+        "drawing_in_game_lab_-_part_2/csd/2023": {
+          "type": "Video"
+        },
+        "introduction_to_variables/csd/2023": {
+          "type": "Video"
+        },
+        "variables/csd/2023": {
+          "name": "Variablar"
+        },
+        "variables_1/csd/2023": {
+          "name": "Variablar",
+          "type": "Video"
+        },
+        "variables_2/csd/2023": {
+          "name": "Variablar"
+        },
+        "introduction_to_sprites/csd/2023": {
+          "type": "Video"
+        },
+        "sprites/csd/2023": {
+          "name": "Sprites"
+        },
+        "sprites_1/csd/2023": {
+          "name": "Sprites"
+        },
+        "the_animation_tab/csd/2023": {
+          "name": "Animasjonsfanen",
+          "type": "Video"
+        },
+        "sprite_properties/csd/2023": {
+          "name": "Eigenskapar ved Sprite"
+        },
+        "sprite_properties_1/csd/2023": {
+          "name": "Eigenskapar ved Sprite"
+        },
+        "sprite_properties_needs_updating_/csd/2023": {
+          "name": "Eigenskapar ved Sprite",
+          "type": "Video"
+        },
+        "text/csd/2023": {
+          "name": "Tekst"
+        },
+        "flipbook_example_-_by_marnic_bos/csd/2023": {
+          "type": "Video"
+        },
+        "introduction_to_the_draw_loop/csd/2023": {
+          "type": "Video"
+        },
+        "sprite_movement/csd/2023": {
+          "type": "Video"
+        },
+        "boolean_expressions/csd/2023": {
+          "type": "Video"
+        },
+        "conditional_statements/csd/2023": {
+          "type": "Video"
+        },
+        "conditionals/csd/2023": {
+          "name": "Betingelser"
+        },
+        "if_else_statements/csd/2023": {
+          "type": "Video"
+        },
+        "velocity/csd/2023": {
+          "name": "Fart",
+          "type": "Video"
+        },
+        "velocity_1/csd/2023": {
+          "name": "Fart"
+        },
+        "velocity_2/csd/2023": {
+          "name": "Fart"
+        },
+        "functions/csd/2023": {
+          "name": "Funksjonar",
+          "type": "Video"
+        },
+        "functions_1/csd/2023": {
+          "name": "Funksjonar"
+        },
+        "functions_2/csd/2023": {
+          "name": "Funksjonar"
+        },
+        "the_design_thinking_process/csd/2023": {
+          "type": "Video"
+        },
+        "design_mode/csd/2023": {
+          "name": "Utformingsmodus"
+        },
+        "what_s_for_lunch_testing/csd/2023": {
+          "type": "Video"
+        },
+        "intro_to_design_mode/csd/2023": {
+          "type": "Video"
+        },
+        "events_in_app_lab/csd/2023": {
+          "type": "Video"
+        },
+        "events_in_app_lab_1/csd/2023": {
+          "type": "Video"
+        },
+        "binary_and_data/csd/2023": {
+          "type": "Video"
+        },
+        "amazon_and_data/csd/2023": {
+          "type": "Video"
+        },
+        "netflix_and_data/csd/2023": {
+          "type": "Video"
+        },
+        "waze_and_data/csd/2023": {
+          "type": "Video"
+        },
+        "video_impact_on_society/csd/2023": {
+          "type": "Video"
+        },
+        "video_machine_learning/csd/2023": {
+          "name": "Video: Maskinlæring",
+          "type": "Video"
+        },
+        "video_training_data_and_bias/csd/2023": {
+          "type": "Video"
+        },
+        "make_a_recommendation/csd/2023": {
+          "type": "Gjennomgang av annan elev"
+        },
+        "circuits_and_logic/csd/2023": {
+          "type": "Video"
+        },
+        "the_counter_pattern/csd/2023": {
+          "type": "Video"
+        },
+        "if_statements_1/csd/2023": {
+          "type": "Video"
+        },
+        "input_output_devices/csd/2023": {
+          "type": "Video"
+        },
+        "introduction_to_arrays/csd/2023": {
+          "type": "Video"
+        },
+        "functions_with_parameters/csd/2023": {
+          "name": "Funksjonar med parameter",
+          "type": "Video"
+        },
+        "teacher_forum_1/csd/2023": {
+          "name": "Lærarforum"
+        },
+        "the_counter_pattern_2/csd/2023": {
+          "type": "Video"
+        },
+        "functions_3/csd/2023": {
+          "name": "Funksjonar"
+        },
+        "ai_what_is_machine_learning_/csd/2023": {
+          "type": "Video"
+        },
+        "seeing_ai/csd/2023": {
+          "type": "Video"
+        },
+        "finding_patterns_in_data/csd/2023": {
+          "type": "Video"
+        },
+        "introduction_to_ai_lab_1/csd/2023": {
+          "type": "Video"
+        },
+        "training_and_testing_in_ai_lab/csd/2023": {
+          "type": "Video"
+        },
+        "ai_training_data_bias/csd/2023": {
+          "type": "Video"
+        },
+        "model_cards_in_ai_lab/csd/2023": {
+          "type": "Video"
+        },
+        "if-statements_in_app_lab/csd/2023": {
+          "type": "Video"
+        },
+        "numerical_data_in_ai_lab_2/csd/2023": {
+          "type": "Video"
+        },
+        "ethics_ai_equal_access_and_algorithmic_bias/csd/2023": {
+          "type": "Video"
+        },
+        "creating_a_survey_in_google_forms/csd/2023": {
+          "type": "Video"
+        },
+        "cleaning_survey_data/csd/2023": {
+          "type": "Video"
+        },
+        "view_and_download_survey_data/csd/2023": {
           "type": "Video"
         },
         "implementation_guide/coursea/2023": {

@@ -3905,6 +3905,10 @@
           "purpose": "V této online aktivitě se studenti naučí používat události v Play Lab. Začnou tím, že naučí rytíře pohybovat se po stisknutí klávesy se šipkou, a na závěr budou mít příležitost předvést v rámci závěrečné volné hry ostatní dovednosti, které se naučili v průběhu tohoto kurzu, včetně sekvencí a cyklů.",
           "student_overview": "Použijte události k vytvoření příběhu nebo vyrobení interaktivní hry."
         },
+        "ai-ethics-2023/lesson-1": {
+          "name": "Náš etický kodex umělé inteligence",
+          "student_overview": "Spolupracujte s výzkumem etiky AI a vytvořte sdílený kodex chování."
+        },
         "csc-adaptations-2023/Modeling Animal Adaptations (pilot)": {
           "name": "Úvod do adaptací zvířat",
           "overview": "V této lekci **budování dovednosti** se studenti naučí vytvářet a animovat skřítky a používat události, aby byly interaktivní. \n\nStudenti budou kódovat model příčin a následků založený na událostech ve Sprite Lab, aby demonstrovali, jak druhy přežívají přizpůsobením se svému prostředí v průběhu času. Interaktivní modely a simulace se používají v reálném světě, aby pomohly inženýrům a vědcům identifikovat vzorce, porozumět přírodě, předpovídat budoucí změny a navrhnout řešení pro přípravu a/nebo boj proti závažným poruchám. \n\nStudenti prozkoumají příklady evoluce, adaptace, migrace, přirozeného výběru a přežití ve skupinách. ",
@@ -4065,6 +4069,87 @@
           "preparation": "-   Připravte jeden počítač na studenta.\n-   Připravte si jednu kopii letáka**<a href=\"https://docs.google.com/document/d/1kO4SNEIVyM0GrxxJb6NzVYauXXpi6rzQkDIfrzQf1Ls/template/preview\" target=\"_blank\">Sdílejte svou</a>aplikaci** na studenta.\n-   Ujistěte se, že studenti mají kopii své původní básně po ruce pro tuto lekci.  \n-   Rozdělte třídu na páry pro aktivitu Poetry Pair-Share.\n-   Zvažte tyto související možnosti rozšíření ([link](https://studio.code.org/s/poetry-2023/lessons/4#activity-4365336)), které chcete prozkoumat po této lekci.\n\n##### Volitelné\n\n-   Zejména pro vzdálenou výuku: Určete, zda potřebujete nastavit digitální dokument nebo sdílený online prostor pro zveřejnění adresy URL aplikace každého studenta (viz šablona učitele v části „Odkazy“). ",
           "purpose": "Sdílení jejich básnických uměleckých projektů s vrstevníky je důležitým aspektem tvůrčího procesu. Umožňuje studentům získat zpětnou vazbu, spolupracovat s ostatními, přemýšlet o své vlastní práci a oslavovat své úspěchy. Sdílením své práce s ostatními mohou studenti růst a zlepšovat se jako kreativní myslitelé a rozvíjet důležité komunikační a mezilidské dovednosti.",
           "student_overview": "Sdílejte své nové básnické aplikace se svými přáteli! "
+        },
+        "csd1-2023/The Problem Solving Process": {
+          "name": "Proces řešení problémů"
+        },
+        "csd1-2023/What is a Computer?": {
+          "name": "Co je to počítač?"
+        },
+        "csd2-2023/Linking Pages": {
+          "name": "Propojení stránek"
+        },
+        "csd3-2023/Variables": {
+          "name": "Proměnné"
+        },
+        "csd3-2023/Random Numbers": {
+          "name": "Náhodná čísla"
+        },
+        "csd3-2023/Sprites": {
+          "name": "Postavy"
+        },
+        "csd3-2023/Sprite Properties": {
+          "name": "Vlastnosti sprajtu"
+        },
+        "csd3-2023/Text": {
+          "name": "Text"
+        },
+        "csd3-2023/Conditionals": {
+          "name": "Podmínky"
+        },
+        "csd3-2023/Keyboard Input": {
+          "name": "Vstup z klávesnice"
+        },
+        "csd3-2023/Velocity": {
+          "name": "Rychlost"
+        },
+        "csd3-2023/Collisions": {
+          "name": "Kolize"
+        },
+        "csd3-2023/Functions": {
+          "name": "Funkce"
+        },
+        "csd5-2023/Representing Images": {
+          "name": "Reprezentace obrázků"
+        },
+        "csd5-2023/Combining Representations": {
+          "name": "Kombinování reprezentací"
+        },
+        "csd5-2023/Keeping Data Secret": {
+          "name": "Udržování dat v tajnosti"
+        },
+        "csd6a-2023/Intro to App Lab": {
+          "name": "Úvod do App Lab"
+        },
+        "csd6a-2023/Board Events": {
+          "name": "Události desky"
+        },
+        "csd6a-2023/Color LEDs": {
+          "name": "Barevné LED"
+        },
+        "csd6a-2023/Functions": {
+          "name": "Funkce"
+        },
+        "csd6b-2023/Intro to App Lab": {
+          "name": "Úvod do App Lab"
+        },
+        "csd6b-2023/Board Events": {
+          "name": "Události desky"
+        },
+        "csd6b-2023/Functions": {
+          "name": "Funkce"
+        },
+        "csd7-2023/Intro to App Lab": {
+          "name": "Úvod do App Lab"
+        },
+        "csd7-2023/Introduction to AI Lab": {
+          "name": "Úvod do laboratoře umělé inteligence"
+        },
+        "csd7-2023/Numerical Models": {
+          "overview": "V této lekci se studenti zapojí do offline aktivity spočívající v simulaci epidemie zombies. Studenti musí pomocí údajů ze sousedního města předpovědět, které části města budou mít nejméně zombies. Studenti budou používat stupňů shody a průměrů k vytváření předpovědí počtu zombies na určitém konkrétním místě. Pak budou studenti zachráněni a bude jim dána příležitost porovnat své předpovědi se skutečnými počty, aby mohli diskutovat o tom, jak pro číselné údaje a kategorické údaje bývá přesnost odlišná.\n\n**Otázka dne:** Jak se počítače naučí dělat předpovědi na základě číselných údajů?"
+        },
+        "csd7-2023/Numerical Data in AI Lab": {
+          "name": "Numerická data v laboratoři AI"
         },
         "coursea-2023/Safety in My Online Neighborhood": {
           "name": "Bezpečnost v mém online sousedství",

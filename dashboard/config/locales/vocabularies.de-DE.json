@@ -1157,6 +1157,9 @@
           "word": "Ereignis",
           "definition": "Eine Aktion, die bewirkt, dass etwas passiert."
         },
+        "artificial_intelligence/ai-ethics/2023": {
+          "word": "Künstliche Intelligenz"
+        },
         "adaptation/csc-adaptations/2023": {
           "word": "Anpassung",
           "definition": "Eine Veränderung in einem Organismus, um seine Umwelt besser zu überleben"
@@ -1374,6 +1377,67 @@
         },
         "poetry_circle/poetry/2023": {
           "definition": "Ein sicherer und kreativer Ort, um neue Gedichte auszuprobieren und konstruktives Feedback von anderen zu erhalten"
+        },
+        "computer/csd/2023": {
+          "word": "Computer"
+        },
+        "input/csd/2023": {
+          "word": "Eingabe"
+        },
+        "processing/csd/2023": {
+          "word": "Verarbeitung"
+        },
+        "list/csd/2023": {
+          "word": "Liste"
+        },
+        "digital_footprint/csd/2023": {
+          "word": "Digitaler Fußabdruck"
+        },
+        "copyright/csd/2023": {
+          "word": "Copyright",
+          "definition": "das ausschließliche Recht, literarisches, künstlerisches oder musikalisches Material zu drucken, zu veröffentlichen, aufzuführen, zu verfilmen oder aufzuzeichnen und andere zu ermächtigen, dasselbe zu tun"
+        },
+        "bug/csd/2023": {
+          "word": "Fehler",
+          "definition": "Element eines Programms, das nicht korrekt funktioniert."
+        },
+        "debugging/csd/2023": {
+          "word": "Debugging/Fehlerbeseitigung",
+          "definition": "Das Suchen und Beheben von Problemen in einem Algorithmus oder Programm."
+        },
+        "program/csd/2023": {
+          "word": "Programm",
+          "definition": "Ein Algorithmus, der so kodiert wurde, das er von einer Maschine ausgeführt werden kann."
+        },
+        "variable/csd/2023": {
+          "word": "Variable",
+          "definition": "Eine Bezeichnung für eine Information, die in einem Programm verwendet wird."
+        },
+        "sprite/csd/2023": {
+          "word": "Sprite"
+        },
+        "condition/csd/2023": {
+          "word": "Bedingung"
+        },
+        "conditionals/csd/2023": {
+          "word": "Bedingungen"
+        },
+        "abstraction/csd/2023": {
+          "word": "Abstraktion"
+        },
+        "function/csd/2023": {
+          "word": "Funktion"
+        },
+        "user/csd/2023": {
+          "word": "Benutzer",
+          "definition": "Die Person, die ein Objekt verwendet, einschließlich Software und Hardware."
+        },
+        "user_interface/csd/2023": {
+          "word": "Benutzeroberfläche"
+        },
+        "machine_learning/csd/2023": {
+          "word": "Maschinelles Lernen",
+          "definition": "Wie Computer Muster erkennen und Entscheidungen machen können, ohne dass sie dafür explizit programmiert wurden."
         },
         "algorithm/coursea/2023": {
           "word": "Algorithmus",

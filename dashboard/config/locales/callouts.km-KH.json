@@ -8,8 +8,43 @@
         "AppLab Intro 7 - Change Screen Color": {
           "applab_hoc_finish": "តើអេក្រង់អ្នកបានប្ដូរពណ៌ទៅជាពណ៌បៃតងហើយឬនៅ? បើបានប្ដូរហើយចូរចុចលើប៊ូតុង 'បញ្ចប់'។ បើមិនទាន់ប្ដូរពណ៌ទេនោះអ្នកអាចចុចលើប៊ូតុង 'កំណត់ឡើងវិញ' រូចធ្វើកំណែលើកូដរបស់អ្នកមុននឹងចុចលើប៊ូតុង 'រុត' ម្ដងទៀត។"
         },
+        "AppLab Intro 7 - Change Screen Color_2023": {
+          "applab_hoc_finish": "តើអេក្រង់អ្នកបានប្ដូរពណ៌ទៅជាពណ៌បៃតងហើយឬនៅ? បើបានប្ដូរហើយចូរចុចលើប៊ូតុង 'បញ្ចប់'។ បើមិនទាន់ប្ដូរពណ៌ទេនោះអ្នកអាចចុចលើប៊ូតុង 'កំណត់ឡើងវិញ' រូចធ្វើកំណែលើកូដរបស់អ្នកមុននឹងចុចលើប៊ូតុង 'រុត' ម្ដងទៀត។"
+        },
+        "AppLab Intro 7 - Change Screen Color_mb2022": {
+          "applab_hoc_finish": "តើអេក្រង់អ្នកបានប្ដូរពណ៌ទៅជាពណ៌បៃតងហើយឬនៅ? បើបានប្ដូរហើយចូរចុចលើប៊ូតុង 'បញ្ចប់'។ បើមិនទាន់ប្ដូរពណ៌ទេនោះអ្នកអាចចុចលើប៊ូតុង 'កំណត់ឡើងវិញ' រូចធ្វើកំណែលើកូដរបស់អ្នកមុននឹងចុចលើប៊ូតុង 'រុត' ម្ដងទៀត។"
+        },
         "AppLab Intro 7 - thisOrThatAddButton": {
           "AppLabHoCFinal11": "ឥឡូវនេះអ្នកកំពុងតែនៅក្នុងផ្នែកឌីហ្សាញ"
+        },
+        "AppLab Intro 7 - thisOrThatAddButton_2023": {
+          "AppLabHoCFinal11": "ឥឡូវនេះអ្នកកំពុងតែនៅក្នុងផ្នែកឌីហ្សាញ"
+        },
+        "AppLab Intro 7 - thisOrThatAddButton_mb2022": {
+          "AppLabHoCFinal11": "ឥឡូវនេះអ្នកកំពុងតែនៅក្នុងផ្នែកឌីហ្សាញ"
+        },
+        "CSD U3 L18 Predict_2023": {
+          "CSD_U3_L11_S4_C1": "បញ្ចូលប្លុកកូដរបស់អ្នកនៅទីនេះ"
+        },
+        "CSD U3 L7 review arc_2023": {
+          "CSD_U3_rect_c1": "ហើយនេះគឺជាលេខកូដ",
+          "CSD_U3_rect_c2": "ទាញប្លុកនេះចូលទៅក្នុងតំបន់កូដ។"
+        },
+        "CSD U3 L7 review line_2023": {
+          "CSD_U3_rect_c1": "ហើយនេះគឺជាលេខកូដ",
+          "CSD_U3_rect_c2": "ទាញប្លុកនេះចូលទៅក្នុងតំបន់កូដ។"
+        },
+        "CSD U3 L7 review point_2023": {
+          "CSD_U3_rect_c1": "ហើយនេះគឺជាលេខកូដ",
+          "CSD_U3_rect_c2": "ទាញប្លុកនេះចូលទៅក្នុងតំបន់កូដ។"
+        },
+        "CSD U3 L7 review shapes_2023": {
+          "CSD_U3_rect_c1": "ហើយនេះគឺជាលេខកូដ",
+          "CSD_U3_rect_c2": "ទាញប្លុកនេះចូលទៅក្នុងតំបន់កូដ។"
+        },
+        "CSD U3 L7 shapes review polygon_2023": {
+          "CSD_U3_rect_c1": "ហើយនេះគឺជាលេខកូដ",
+          "CSD_U3_rect_c2": "ទាញប្លុកនេះចូលទៅក្នុងតំបន់កូដ។"
         },
         "CSD U3 Sprites anitab 1": {
           "": "ចុចទីនេះដើម្បីបើកផ្ទាំងរូបភាពគំនូរជីវចល។"
@@ -24,6 +59,9 @@
           "anicallout": "ចុចទីនេះដើម្បីបើកផ្ទាំងរូបភាពគំនូរជីវចល។"
         },
         "CSD U3 Sprites anitab 1_2022": {
+          "anicallout": "ចុចទីនេះដើម្បីបើកផ្ទាំងរូបភាពគំនូរជីវចល។"
+        },
+        "CSD U3 Sprites anitab 1_2023": {
           "anicallout": "ចុចទីនេះដើម្បីបើកផ្ទាំងរូបភាពគំនូរជីវចល។"
         },
         "CSD U3 Sprites intro sprites": {
@@ -41,6 +79,9 @@
         "CSD U3 Sprites intro sprites_2022": {
           "": "ប្រើប្រាស់ប្លុកខណ្ឌនេះដើម្បិបង្កើsprite"
         },
+        "CSD U3 Sprites intro sprites_2023": {
+          "": "ប្រើប្រាស់ប្លុកខណ្ឌនេះដើម្បិបង្កើsprite"
+        },
         "CSD U3 Sprites text": {
           "": "ប្រើប្លុកមួយនេះដើម្បីដាក់អត្ថបទនៅលើអេក្រង់"
         },
@@ -54,6 +95,9 @@
           "": "ប្រើប្លុកមួយនេះដើម្បីដាក់អត្ថបទនៅលើអេក្រង់"
         },
         "CSD U3 Sprites text_2022": {
+          "": "ប្រើប្លុកមួយនេះដើម្បីដាក់អត្ថបទនៅលើអេក្រង់"
+        },
+        "CSD U3 Sprites text_2023": {
           "": "ប្រើប្លុកមួយនេះដើម្បីដាក់អត្ថបទនៅលើអេក្រង់"
         },
         "CSD U3 Variables Predict Where X": {
@@ -72,6 +116,9 @@
           "grid": "ចុចទីនេះដើម្បីបង្ហាញក្រឡាចត្រង្គ"
         },
         "CSD U3 Variables Predict Where XY_2022": {
+          "grid": "ចុចទីនេះដើម្បីបង្ហាញក្រឡាចត្រង្គ"
+        },
+        "CSD U3 Variables Predict Where XY_2023": {
           "grid": "ចុចទីនេះដើម្បីបង្ហាញក្រឡាចត្រង្គ"
         },
         "CSD U3 Variables Predict Where X_2018": {
@@ -101,6 +148,9 @@
         "CSD U3 abstraction accelerateX_2022": {
           "CSD_U3_L11_S6_C1": "បញ្ចូលកូដរបស់អ្នកនៅទីនេះ"
         },
+        "CSD U3 abstraction accelerateX_2023": {
+          "CSD_U3_L11_S6_C1": "បញ្ចូលកូដរបស់អ្នកនៅទីនេះ"
+        },
         "CSD U3 abstraction accelerateY": {
           "CSD_U3_L11_S7_C1": "បញ្ចូលកូដរបស់អ្នកនៅទីនេះ"
         },
@@ -114,6 +164,9 @@
           "CSD_U3_L11_S7_C1": "បញ្ចូលកូដរបស់អ្នកនៅទីនេះ"
         },
         "CSD U3 abstraction accelerateY_2022": {
+          "CSD_U3_L11_S7_C1": "បញ្ចូលកូដរបស់អ្នកនៅទីនេះ"
+        },
+        "CSD U3 abstraction accelerateY_2023": {
           "CSD_U3_L11_S7_C1": "បញ្ចូលកូដរបស់អ្នកនៅទីនេះ"
         },
         "CSD U3 abstraction jump": {
@@ -136,6 +189,10 @@
           "CSD_U3_L11_S17_C1": "មើលនៅក្នុង if ពាក្យបង្គាប់",
           "CSD_U3_L11_S17_C2": "បញ្ជូនកង្កែបត្រឡប់មកវិញនៅទីនេះ"
         },
+        "CSD U3 abstraction jump_2023": {
+          "CSD_U3_L11_S17_C1": "មើលនៅក្នុង if ពាក្យបង្គាប់",
+          "CSD_U3_L11_S17_C2": "បញ្ជូនកង្កែបត្រឡប់មកវិញនៅទីនេះ"
+        },
         "CSD U3 abstraction jumping": {
           "CSD_U3_L13_S8_C1": "កំណត់ល្បឿននៅទីនេះ"
         },
@@ -151,6 +208,9 @@
         "CSD U3 abstraction jumping_2022": {
           "CSD_U3_L13_S8_C1": "កំណត់ល្បឿននៅទីនេះ"
         },
+        "CSD U3 abstraction jumping_2023": {
+          "CSD_U3_L13_S8_C1": "កំណត់ល្បឿននៅទីនេះ"
+        },
         "CSD U3 abstraction looping": {
           "CSD_U3_L11_S17_C1": "មើលនៅក្នុង if ពាក្យបង្គាប់"
         },
@@ -164,6 +224,9 @@
           "CSD_U3_L11_S17_C1": "មើលនៅក្នុង if ពាក្យបង្គាប់"
         },
         "CSD U3 abstraction looping_2022": {
+          "CSD_U3_L11_S17_C1": "មើលនៅក្នុង if ពាក្យបង្គាប់"
+        },
+        "CSD U3 abstraction looping_2023": {
           "CSD_U3_L11_S17_C1": "មើលនៅក្នុង if ពាក្យបង្គាប់"
         },
         "CSD U3 abstraction rotation": {
@@ -184,6 +247,9 @@
         "CSD U3 abstraction rotation control_2022": {
           "CSD_U3_L11_S5_C1": "មើលកូដនេះ។"
         },
+        "CSD U3 abstraction rotation control_2023": {
+          "CSD_U3_L11_S5_C1": "មើលកូដនេះ។"
+        },
         "CSD U3 abstraction rotation_2018": {
           "CSD_U3_L11_S4_C1": "ប្រើប្លុក rotationSpeed នៅទីនេះ"
         },
@@ -194,6 +260,9 @@
           "CSD_U3_L11_S4_C1": "ប្រើប្លុក rotationSpeed នៅទីនេះ"
         },
         "CSD U3 abstraction rotation_2022": {
+          "CSD_U3_L11_S4_C1": "ប្រើប្លុក rotationSpeed នៅទីនេះ"
+        },
+        "CSD U3 abstraction rotation_2023": {
           "CSD_U3_L11_S4_C1": "ប្រើប្លុក rotationSpeed នៅទីនេះ"
         },
         "CSD U3 abstraction tumbleweed": {
@@ -209,6 +278,9 @@
           "CSD_U3_L11_S17_C1": "មើលនៅក្នុង if ពាក្យបង្គាប់"
         },
         "CSD U3 abstraction tumbleweed_2022": {
+          "CSD_U3_L11_S17_C1": "មើលនៅក្នុង if ពាក្យបង្គាប់"
+        },
+        "CSD U3 abstraction tumbleweed_2023": {
           "CSD_U3_L11_S17_C1": "មើលនៅក្នុង if ពាក្យបង្គាប់"
         },
         "CSD U3 abstraction velocityX": {
@@ -229,6 +301,9 @@
         "CSD U3 abstraction velocityX control_2022": {
           "CSD_U3_L11_S5_C1": "មើលកូដនេះ។"
         },
+        "CSD U3 abstraction velocityX control_2023": {
+          "CSD_U3_L11_S5_C1": "មើលកូដនេះ។"
+        },
         "CSD U3 abstraction velocityX if-statements": {
           "CSD_U3_L11_S5_C1": "មើលកូដនេះ។"
         },
@@ -244,6 +319,9 @@
         "CSD U3 abstraction velocityX if-statements_2022": {
           "CSD_U3_L11_S5_C1": "មើលកូដនេះ។"
         },
+        "CSD U3 abstraction velocityX if-statements_2023": {
+          "CSD_U3_L11_S5_C1": "មើលកូដនេះ។"
+        },
         "CSD U3 abstraction velocityX_2018": {
           "CSD_U3_L11_S4_C1": "បញ្ចូលប្លុកកូដរបស់អ្នកនៅទីនេះ"
         },
@@ -254,6 +332,9 @@
           "CSD_U3_L11_S4_C1": "បញ្ចូលប្លុកកូដរបស់អ្នកនៅទីនេះ"
         },
         "CSD U3 abstraction velocityX_2022": {
+          "CSD_U3_L11_S4_C1": "បញ្ចូលប្លុកកូដរបស់អ្នកនៅទីនេះ"
+        },
+        "CSD U3 abstraction velocityX_2023": {
           "CSD_U3_L11_S4_C1": "បញ្ចូលប្លុកកូដរបស់អ្នកនៅទីនេះ"
         },
         "CSD U3 abstraction velocityY": {
@@ -274,6 +355,9 @@
         "CSD U3 abstraction velocityY control_2022": {
           "CSD_U3_L11_S5_C1": "មើលកូដនេះ។"
         },
+        "CSD U3 abstraction velocityY control_2023": {
+          "CSD_U3_L11_S5_C1": "មើលកូដនេះ។"
+        },
         "CSD U3 abstraction velocityY_2018": {
           "CSD_U3_L11_S5_C1": "បញ្ចូលប្លុកកូដរបស់អ្នកនៅទីនេះ"
         },
@@ -284,6 +368,9 @@
           "CSD_U3_L11_S5_C1": "បញ្ចូលប្លុកកូដរបស់អ្នកនៅទីនេះ"
         },
         "CSD U3 abstraction velocityY_2022": {
+          "CSD_U3_L11_S5_C1": "បញ្ចូលប្លុកកូដរបស់អ្នកនៅទីនេះ"
+        },
+        "CSD U3 abstraction velocityY_2023": {
           "CSD_U3_L11_S5_C1": "បញ្ចូលប្លុកកូដរបស់អ្នកនៅទីនេះ"
         },
         "CSD U3 collisions isTouching intro": {
@@ -299,6 +386,9 @@
           "CSD_U3_L12_S2_C1": "បញ្ចូលប្លុកកូដរបស់អ្នកនៅទីនេះ"
         },
         "CSD U3 collisions isTouching intro_2022": {
+          "CSD_U3_L12_S2_C1": "បញ្ចូលប្លុកកូដរបស់អ្នកនៅទីនេះ"
+        },
+        "CSD U3 collisions isTouching intro_2023": {
           "CSD_U3_L12_S2_C1": "បញ្ចូលប្លុកកូដរបស់អ្នកនៅទីនេះ"
         },
         "CSD U3 collisions scoreboard": {
@@ -322,16 +412,25 @@
         "CSD U3 collisions types2_2022": {
           "CSD_U3_L13_S6_C1": "បញ្ចូលកូដរបស់អ្នកនៅទីនេះ"
         },
+        "CSD U3 collisions types2_2023": {
+          "CSD_U3_L13_S6_C1": "បញ្ចូលកូដរបស់អ្នកនៅទីនេះ"
+        },
         "CSD U3 collisions types3_2021": {
           "CSD_U3_L13_S6_C1": "បញ្ចូលកូដរបស់អ្នកនៅទីនេះ"
         },
         "CSD U3 collisions types3_2022": {
           "CSD_U3_L13_S6_C1": "បញ្ចូលកូដរបស់អ្នកនៅទីនេះ"
         },
+        "CSD U3 collisions types3_2023": {
+          "CSD_U3_L13_S6_C1": "បញ្ចូលកូដរបស់អ្នកនៅទីនេះ"
+        },
         "CSD U3 collisions types4_2021": {
           "CSD_U3_L13_S6_C1": "បញ្ចូលកូដរបស់អ្នកនៅទីនេះ"
         },
         "CSD U3 collisions types4_2022": {
+          "CSD_U3_L13_S6_C1": "បញ្ចូលកូដរបស់អ្នកនៅទីនេះ"
+        },
+        "CSD U3 collisions types4_2023": {
           "CSD_U3_L13_S6_C1": "បញ្ចូលកូដរបស់អ្នកនៅទីនេះ"
         },
         "CSD U3 collisions types_2018": {
@@ -344,6 +443,9 @@
           "CSD_U3_L13_S6_C1": "បញ្ចូលកូដរបស់អ្នកនៅទីនេះ"
         },
         "CSD U3 collisions types_2022": {
+          "CSD_U3_L13_S6_C1": "បញ្ចូលកូដរបស់អ្នកនៅទីនេះ"
+        },
+        "CSD U3 collisions types_2023": {
           "CSD_U3_L13_S6_C1": "បញ្ចូលកូដរបស់អ្នកនៅទីនេះ"
         },
         "CSD U3 debug": {
@@ -366,11 +468,19 @@
           "CSD_U3_rect_c1": "ហើយនេះគឺជាលេខកូដ",
           "CSD_U3_rect_c2": "ទាញប្លុកនេះចូលទៅក្នុងតំបន់កូដ។"
         },
+        "CSD U3 debug_2023": {
+          "CSD_U3_rect_c1": "ហើយនេះគឺជាលេខកូដ",
+          "CSD_U3_rect_c2": "ទាញប្លុកនេះចូលទៅក្នុងតំបន់កូដ។"
+        },
         "CSD U3 drawing challenge 2_2021": {
           "CSD_U3_rect_c1": "ហើយនេះគឺជាលេខកូដ",
           "CSD_U3_rect_c2": "ទាញប្លុកនេះចូលទៅក្នុងតំបន់កូដ។"
         },
         "CSD U3 drawing challenge 2_2022": {
+          "CSD_U3_rect_c1": "ហើយនេះគឺជាលេខកូដ",
+          "CSD_U3_rect_c2": "ទាញប្លុកនេះចូលទៅក្នុងតំបន់កូដ។"
+        },
+        "CSD U3 drawing challenge 2_2023": {
           "CSD_U3_rect_c1": "ហើយនេះគឺជាលេខកូដ",
           "CSD_U3_rect_c2": "ទាញប្លុកនេះចូលទៅក្នុងតំបន់កូដ។"
         },
@@ -382,11 +492,19 @@
           "CSD_U3_rect_c1": "ហើយនេះគឺជាលេខកូដ",
           "CSD_U3_rect_c2": "ទាញប្លុកនេះចូលទៅក្នុងតំបន់កូដ។"
         },
+        "CSD U3 drawing challenge 3_2023": {
+          "CSD_U3_rect_c1": "ហើយនេះគឺជាលេខកូដ",
+          "CSD_U3_rect_c2": "ទាញប្លុកនេះចូលទៅក្នុងតំបន់កូដ។"
+        },
         "CSD U3 drawing practice 1_2021": {
           "CSD_U3_rect_c1": "ហើយនេះគឺជាលេខកូដ",
           "CSD_U3_rect_c2": "ទាញប្លុកនេះចូលទៅក្នុងតំបន់កូដ។"
         },
         "CSD U3 drawing practice 1_2022": {
+          "CSD_U3_rect_c1": "ហើយនេះគឺជាលេខកូដ",
+          "CSD_U3_rect_c2": "ទាញប្លុកនេះចូលទៅក្នុងតំបន់កូដ។"
+        },
+        "CSD U3 drawing practice 1_2023": {
           "CSD_U3_rect_c1": "ហើយនេះគឺជាលេខកូដ",
           "CSD_U3_rect_c2": "ទាញប្លុកនេះចូលទៅក្នុងតំបន់កូដ។"
         },
@@ -398,11 +516,19 @@
           "CSD_U3_rect_c1": "ហើយនេះគឺជាលេខកូដ",
           "CSD_U3_rect_c2": "ទាញប្លុកនេះចូលទៅក្នុងតំបន់កូដ។"
         },
+        "CSD U3 drawing practice 2_2023": {
+          "CSD_U3_rect_c1": "ហើយនេះគឺជាលេខកូដ",
+          "CSD_U3_rect_c2": "ទាញប្លុកនេះចូលទៅក្នុងតំបន់កូដ។"
+        },
         "CSD U3 drawing practice 3_2021": {
           "CSD_U3_rect_c1": "ហើយនេះគឺជាលេខកូដ",
           "CSD_U3_rect_c2": "ទាញប្លុកនេះចូលទៅក្នុងតំបន់កូដ។"
         },
         "CSD U3 drawing practice 3_2022": {
+          "CSD_U3_rect_c1": "ហើយនេះគឺជាលេខកូដ",
+          "CSD_U3_rect_c2": "ទាញប្លុកនេះចូលទៅក្នុងតំបន់កូដ។"
+        },
+        "CSD U3 drawing practice 3_2023": {
           "CSD_U3_rect_c1": "ហើយនេះគឺជាលេខកូដ",
           "CSD_U3_rect_c2": "ទាញប្លុកនេះចូលទៅក្នុងតំបន់កូដ។"
         },
@@ -446,6 +572,10 @@
           "CSD_U3_rect_c1": "ហើយនេះគឺជាលេខកូដ",
           "CSD_U3_rect_c2": "ទាញប្លុកនេះចូលទៅក្នុងតំបន់កូដ។"
         },
+        "CSD U3 fill_2023": {
+          "CSD_U3_rect_c1": "ហើយនេះគឺជាលេខកូដ",
+          "CSD_U3_rect_c2": "ទាញប្លុកនេះចូលទៅក្នុងតំបន់កូដ។"
+        },
         "CSD U3 game variables": {
           "CSD_U3_L18_S3_C2": "ទីតាំងអថេរ"
         },
@@ -459,6 +589,9 @@
           "CSD_U3_L18_S3_C2": "ទីតាំងអថេរ"
         },
         "CSD U3 game variables_2022": {
+          "CSD_U3_L18_S3_C2": "ទីតាំងអថេរ"
+        },
+        "CSD U3 game variables_2023": {
           "CSD_U3_L18_S3_C2": "ទីតាំងអថេរ"
         },
         "CSD U3 platform scoreboard": {
@@ -476,6 +609,9 @@
         "CSD U3 platform scoreboard_2022": {
           "CSD_U3_L17_S7_C1": "ពិន្ទុត្រូវបានបង្ហាញនៅទីនេះ។"
         },
+        "CSD U3 platform scoreboard_2023": {
+          "CSD_U3_L17_S7_C1": "ពិន្ទុត្រូវបានបង្ហាញនៅទីនេះ។"
+        },
         "CSD U3 properties depth_2021": {
           "CSD_U3_rect_c1": "ហើយនេះគឺជាលេខកូដ",
           "CSD_U3_rect_c2": "ទាញប្លុកនេះចូលទៅក្នុងតំបន់កូដ។"
@@ -484,11 +620,19 @@
           "CSD_U3_rect_c1": "ហើយនេះគឺជាលេខកូដ",
           "CSD_U3_rect_c2": "ទាញប្លុកនេះចូលទៅក្នុងតំបន់កូដ។"
         },
+        "CSD U3 properties depth_2023": {
+          "CSD_U3_rect_c1": "ហើយនេះគឺជាលេខកូដ",
+          "CSD_U3_rect_c2": "ទាញប្លុកនេះចូលទៅក្នុងតំបន់កូដ។"
+        },
         "CSD U3 properties tint_2021": {
           "CSD_U3_rect_c1": "ហើយនេះគឺជាលេខកូដ",
           "CSD_U3_rect_c2": "ទាញប្លុកនេះចូលទៅក្នុងតំបន់កូដ។"
         },
         "CSD U3 properties tint_2022": {
+          "CSD_U3_rect_c1": "ហើយនេះគឺជាលេខកូដ",
+          "CSD_U3_rect_c2": "ទាញប្លុកនេះចូលទៅក្នុងតំបន់កូដ។"
+        },
+        "CSD U3 properties tint_2023": {
           "CSD_U3_rect_c1": "ហើយនេះគឺជាលេខកូដ",
           "CSD_U3_rect_c2": "ទាញប្លុកនេះចូលទៅក្នុងតំបន់កូដ។"
         },
@@ -536,11 +680,19 @@
           "CSD_U3_rect_c1": "ហើយនេះគឺជាលេខកូដ",
           "CSD_U3_rect_c2": "ទាញប្លុកនេះចូលទៅក្នុងតំបន់កូដ។"
         },
+        "CSD U3 shapes arc_2023": {
+          "CSD_U3_rect_c1": "ហើយនេះគឺជាលេខកូដ",
+          "CSD_U3_rect_c2": "ទាញប្លុកនេះចូលទៅក្នុងតំបន់កូដ។"
+        },
         "CSD U3 shapes behind_2021": {
           "CSD_U3_rect_c1": "ហើយនេះគឺជាលេខកូដ",
           "CSD_U3_rect_c2": "ទាញប្លុកនេះចូលទៅក្នុងតំបន់កូដ។"
         },
         "CSD U3 shapes behind_2022": {
+          "CSD_U3_rect_c1": "ហើយនេះគឺជាលេខកូដ",
+          "CSD_U3_rect_c2": "ទាញប្លុកនេះចូលទៅក្នុងតំបន់កូដ។"
+        },
+        "CSD U3 shapes behind_2023": {
           "CSD_U3_rect_c1": "ហើយនេះគឺជាលេខកូដ",
           "CSD_U3_rect_c2": "ទាញប្លុកនេះចូលទៅក្នុងតំបន់កូដ។"
         },
@@ -552,11 +704,19 @@
           "CSD_U3_rect_c1": "ហើយនេះគឺជាលេខកូដ",
           "CSD_U3_rect_c2": "ទាញប្លុកនេះចូលទៅក្នុងតំបន់កូដ។"
         },
+        "CSD U3 shapes line_2023": {
+          "CSD_U3_rect_c1": "ហើយនេះគឺជាលេខកូដ",
+          "CSD_U3_rect_c2": "ទាញប្លុកនេះចូលទៅក្នុងតំបន់កូដ។"
+        },
         "CSD U3 shapes missing_2021": {
           "CSD_U3_rect_c1": "ហើយនេះគឺជាលេខកូដ",
           "CSD_U3_rect_c2": "ទាញប្លុកនេះចូលទៅក្នុងតំបន់កូដ។"
         },
         "CSD U3 shapes missing_2022": {
+          "CSD_U3_rect_c1": "ហើយនេះគឺជាលេខកូដ",
+          "CSD_U3_rect_c2": "ទាញប្លុកនេះចូលទៅក្នុងតំបន់កូដ។"
+        },
+        "CSD U3 shapes missing_2023": {
           "CSD_U3_rect_c1": "ហើយនេះគឺជាលេខកូដ",
           "CSD_U3_rect_c2": "ទាញប្លុកនេះចូលទៅក្នុងតំបន់កូដ។"
         },
@@ -568,11 +728,19 @@
           "CSD_U3_rect_c1": "ហើយនេះគឺជាលេខកូដ",
           "CSD_U3_rect_c2": "ទាញប្លុកនេះចូលទៅក្នុងតំបន់កូដ។"
         },
+        "CSD U3 shapes polygon_2023": {
+          "CSD_U3_rect_c1": "ហើយនេះគឺជាលេខកូដ",
+          "CSD_U3_rect_c2": "ទាញប្លុកនេះចូលទៅក្នុងតំបន់កូដ។"
+        },
         "CSD U3 shapes scene_2021": {
           "CSD_U3_rect_c1": "ហើយនេះគឺជាលេខកូដ",
           "CSD_U3_rect_c2": "ទាញប្លុកនេះចូលទៅក្នុងតំបន់កូដ។"
         },
         "CSD U3 shapes scene_2022": {
+          "CSD_U3_rect_c1": "ហើយនេះគឺជាលេខកូដ",
+          "CSD_U3_rect_c2": "ទាញប្លុកនេះចូលទៅក្នុងតំបន់កូដ។"
+        },
+        "CSD U3 shapes scene_2023": {
           "CSD_U3_rect_c1": "ហើយនេះគឺជាលេខកូដ",
           "CSD_U3_rect_c2": "ទាញប្លុកនេះចូលទៅក្នុងតំបន់កូដ។"
         },
@@ -583,6 +751,13 @@
         "CSD U3 shapes_2022": {
           "CSD_U3_rect_c1": "ហើយនេះគឺជាលេខកូដ",
           "CSD_U3_rect_c2": "ទាញប្លុកនេះចូលទៅក្នុងតំបន់កូដ។"
+        },
+        "CSD U3 shapes_2023": {
+          "CSD_U3_rect_c1": "ហើយនេះគឺជាលេខកូដ",
+          "CSD_U3_rect_c2": "ទាញប្លុកនេះចូលទៅក្នុងតំបន់កូដ។"
+        },
+        "CSD U3L3 rect_2023": {
+          "CSD_U3_rect_c1": "ហើយនេះគឺជាលេខកូដ"
         },
         "CSD U6 getProperty input": {
           "CSD_U6L06P03": "បញ្ចូលប្លុកកូដរបស់អ្នកនៅទីនេះ"
@@ -602,10 +777,16 @@
         "CSD games sidescroll background_2022": {
           "CSD_U3_L11_S17_C1": "មើលនៅក្នុង if ពាក្យបង្គាប់"
         },
+        "CSD games sidescroll background_2023": {
+          "CSD_U3_L11_S17_C1": "មើលនៅក្នុង if ពាក្យបង្គាប់"
+        },
         "CSD games velocity bee_2021": {
           "CSD_U3_L11_S5_C1": "មើលកូដនេះ។"
         },
         "CSD games velocity bee_2022": {
+          "CSD_U3_L11_S5_C1": "មើលកូដនេះ។"
+        },
+        "CSD games velocity bee_2023": {
           "CSD_U3_L11_S5_C1": "មើលកូដនេះ។"
         },
         "CSD web text explore_2021": {
@@ -614,10 +795,16 @@
         "CSD web text explore_2022": {
           "CSD_U3_variables": "ប្តូរលេខនៅទីនេះ"
         },
+        "CSD web text explore_2023": {
+          "CSD_U3_variables": "ប្តូរលេខនៅទីនេះ"
+        },
         "CSD web text size_2021": {
           "": "ប្រើប្លុកមួយនេះដើម្បីដាក់អត្ថបទនៅលើអេក្រង់"
         },
         "CSD web text size_2022": {
+          "": "ប្រើប្លុកមួយនេះដើម្បីដាក់អត្ថបទនៅលើអេក្រង់"
+        },
+        "CSD web text size_2023": {
           "": "ប្រើប្លុកមួយនេះដើម្បីដាក់អត្ថបទនៅលើអេក្រង់"
         },
         "Course 4 Play Lab Vars 1": {

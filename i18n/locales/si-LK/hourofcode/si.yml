@@ -272,6 +272,10 @@ si:
   call_to_action_register_early_access: මුල් ප්රවේශය සඳහා ලියාපදිංචි වන්න
   call_to_action_open_positions: විවෘත තනතුරු බලන්න
   call_to_action_get_guide: මාර්ගෝපදේශය ලබා ගන්න
+  call_to_action_donate_to_cdo: Code.org වෙත පරිත්යාග කරන්න
+  call_to_action_start_fundraiser: අරමුදල් සම්පාදකයෙකු ආරම්භ කරන්න
+  call_to_action_view_donation_policy: පරිත්යාග ප්රතිපත්තිය බලන්න
+  call_to_action_view_donate_bitpay: බිට්පේ සමඟ පරිත්යාග කරන්න
   aria_label_call_to_action_afe: ඇමේසන් අනාගත ඉංජිනේරු ගැන තව දැනගන්න
   aria_label_call_to_action_teaching_csf: ඉගැන්වීමේ පරිගණක විද්යා මූලධර්ම වෘත්තීය
     ඉගෙනුම් වැඩසටහන ආරම්භ කරන්න
@@ -376,6 +380,7 @@ si:
   curriculum_name_csp: පරිගණක විද්යා මූලධර්ම
   curriculum_name_csc: පරිගණක විද්යා සම්බන්ධතා
   curriculum_name_csa: AP® පරිගණක විද්යාව A
+  curriculum_name_csa_ai: මෘදුකාංග ඉංජිනේරු සහ පරිගණක දැක්ම
   curriculum_name_csc_02: ඕනෑම CS සම්බන්ධතා මොඩියුලය
   curriculum_name_ai: AI සහ ඉගෙනුම් යන්ත්ර
   curriculum_name_artificial_intelligence: කෘතිම බුද්ධිය (AI)
@@ -447,6 +452,12 @@ si:
     සිසුන්ට හඳුන්වා දෙයි.
   curriculum_desc_csp: පරිගණක විද්යාවේ පදනම් සංකල්ප සඳහා සිසුන් හඳුන්වා දෙන නොමිලේ,
     AP® CSP අනුමත, උසස් පාසැල් හඳුන්වාදීමේ පා course මාලාවක්.
+  curriculum_desc_csa_ai_long: 'පරිච්ඡේද දෙකක පශ්චාත්-ඒපී CSA මොඩියුලය උසස් පාසැල්
+    සිසුන්ට GitHub සහ GitHub Copilot ඇතුළු වෘත්තීය මෘදුකාංග සංවර්ධන මෙවලම් සමඟ අත්දැකීම්
+    ලබා දෙන අතර පරිගණක දර්ශන වැඩසටහනක් සංවර්ධනය කිරීම සඳහා ඔවුන්ට සැබෑ ලෝක කුසලතා
+    ලබා දෙයි. '
+  curriculum_desc_csa_ai_short: මෙම පශ්චාත්-AP® CSA මොඩියුලය උසස් පාසැල් සිසුන්ට වෘත්තීය
+    මෘදුකාංග සංවර්ධන මෙවලම් සමඟ අත්දැකීම් ලබා දෙයි.
   collection_hardware: දෘඩාංග කෙරෙහි අවධානය යොමු කරන්න
   collection_hardware_desc: ගැටළු විසඳීම සඳහා දත්ත සහ භෞතික උපාංග භාවිතා කිරීමට සිසුන්ට
     බලය ලබා දෙයි.
@@ -519,6 +530,7 @@ si:
   module_duration_2_hrs: පැය 2 යි
   module_duration_3_hrs: පැය 3 යි
   module_duration_5_hrs: පැය 5 යි
+  module_duration_5_hrs_plus: 5+ පැය
   module_duration_8_hrs: පැය 8
   module_duration_20_hrs: පැය 20 යි
   module_duration_35_hrs: පැය 35
@@ -601,6 +613,7 @@ si:
   heading_these_lessons_will: 'මෙම පාඩම්:'
   heading_explore_curriculum_catalog: විෂයමාලා නාමාවලිය අපගේ සියලු පා courses මාලා
     ගවේෂණය කරන්න
+  heading_csa_ai: AP® විභාගයෙන් පසු කළ යුතු දේවල් සොයනවාද?
   professional_learning_section_desc: ඔබ ඉගැන්වීමට සූදානම් වන විට ඔබට අවශ්ය සහාය ලබා
     ගන්න. ගුරුවරුන් එයට ආදරය කරන අතර 90% කට වඩා එය හොඳම වෘත්තීය සංවර්ධනය ලෙස ශ්රේණිගත
     කර ඇත!
@@ -631,6 +644,23 @@ si:
   support_and_questions_section_desc: Code.org සමඟ ඉගැන්වීම ආරම්භ කිරීම පිළිබඳව ඔබට
     ඇති ඕනෑම ප්රශ්නයකට පිළිතුරු දීමට අපගේ සහායක කණ්ඩායම මෙහි සිටී. අපගේ ගුරු සංසදවල
     ඔවුන්ගේ අත්දැකීම් පිළිබඳව වෙනත් ගුරුවරුන්ගෙන් විමසන්න.
+  subscribe_form_section_title: යාවත්කාලීන කිරීම් සඳහා දායක වන්න
+  subscribe_form_section_desc_csa: Code.org හි AP® පරිගණක විද්යාව A පිළිබඳ මාසික ඊමේල්
+    ලබා ගැනීමට ලියාපදිංචි වන්න සහ ප්රයෝජනවත් මතක් කිරීම්, ඉඟි සහ යාවත්කාලීන කිරීම්
+    ඔබගේ එන ලිපි වෙත යවනු ලැබේ.
+  subscribe_form_section_desc_csc: Code.org හි පරිගණක විද්යා සම්බන්ධතා පිළිබඳ මාසික
+    ඊමේල් ලබා ගැනීමට ලියාපදිංචි වන්න සහ ප්රයෝජනවත් මතක් කිරීම්, ඉඟි සහ යාවත්කාලීන
+    කිරීම් ඔබගේ එන ලිපි වෙත යවනු ලැබේ.
+  subscribe_form_section_desc_csd: Code.org හි පරිගණක විද්යා සොයාගැනීම් ගැන මාසික
+    ඊමේල් ලබා ගැනීමට ලියාපදිංචි වන්න සහ ප්රයෝජනවත් මතක් කිරීම් ලබා ගන්න, ඉඟි, සහ යාවත්කාලීන
+    කිරීම් ඔබගේ එන ලිපි වෙත යවනු ලැබේ.
+  subscribe_form_section_desc_csf: Code.org හි පරිගණක විද්යා මූලධර්ම පිළිබඳ මාසික
+    ඊමේල් ලබා ගැනීමට ලියාපදිංචි වන්න සහ ප්රයෝජනවත් මතක් කිරීම් ලබා ගන්න, ඉඟි, සහ යාවත්කාලීන
+    කිරීම් ඔබගේ එන ලිපි වෙත යවනු ලැබේ.
+  subscribe_form_section_desc_csp: Code.org හි පරිගණක විද්යා මූලධර්ම පිළිබඳ මාසික
+    ඊමේල් ලබා ගැනීමට ලියාපදිංචි වන්න සහ ප්රයෝජනවත් මතක් කිරීම් ලබා ගන්න, ඉඟි, සහ යාවත්කාලීන
+    කිරීම් ඔබගේ එන ලිපි වෙත යවනු ලැබේ.
+  subscribe_form_section_unsubscribe: ඔබට ඕනෑම වේලාවක දායකත්වයෙන් ඉවත් විය හැකිය.
   blockchain_hero_heading: බ්ලොක්චේන් ක්රියා කරන ආකාරය
   blockchain_hero_desc: අපගේ නව වීඩියෝ මාලාව සහ ඒ සමඟ ඇති පාඩම් “බ්ලොක්චේන් ක්රියා
     කරන ආකාරය” සමඟ බ්ලොක්චේන් ලෝකයට කිමිදෙන්න!
@@ -733,6 +763,9 @@ si:
     පාඩමක්ම මාලාවේ තනි වීඩියෝවක් සමඟ යුගලනය කර ඇති අතර වීඩියෝවල හඳුන්වා දී ඇති සංකල්ප
     වලට ගැඹුරට කිමිදේ.
   ai_curriculum_btn_aria_label_04: AI පාඩම් ක්රියා කරන ආකාරය ගවේෂණය කරන්න
+  ai_curriculum_grades_05: 'ශ්රේණියේ මට්ටම්: 9-12'
+  ai_curriculum_btn_aria_label_05: මෘදුකාංග ඉංජිනේරු සහ පරිගණක දර්ශන මොඩියුලය ගවේෂණය
+    කරන්න
   ai_carousel_heading: 'Code.org සමඟ AI ගැන ගුරුවරුන් පවසන දේ:'
   ai_carousel_quote_01: මෙම පාඩම මගේ සිසුන්ට වර්ගීකරණ පද්ධතිවල මතයේ අංගයක් ඇති බව
     දැකීමට අවස්ථාව ලබා දුන්නේය. පසුව, AI හි නැඹුරුව අවසන් වන්නේ කෙසේදැයි බැලීමට පටන්
@@ -861,6 +894,7 @@ si:
     හැකි හොඳම ප්රතිදානය ලබා ගැනීම සඳහා මෙවලම්. හුදෙක් ඔවුන්ගේ ඇඟිලි ලන අය සඳහා ආරම්භක
     විමසුම් ඇතුළත්, මෙන්ම ඔවුන්ගේ හැකියාවන් උපරිම අස්වැන්නක් ලබා ගැනීමට බලා අය සඳහා
     උසස් මෙවලම්.
+  ai_pl_101_resources_3: ශිෂ්ය ඉගෙනීම පරිවර්තනය කිරීම සඳහා AI විමසයි
   how_ai_works_hero_heading: AI ක්රියා කරන ආකාරය
   how_ai_works_hero_desc: අපගේ වීඩියෝ මාලාව සහ ඒ සමඟ ඇති පාඩම් “AI ක්රියා කරන ආකාරය”
     සමඟ AI ලෝකයට කිමිදෙන්න!
@@ -1252,8 +1286,8 @@ si:
     Animation
   csp_page_curriculum_glance_devices: Laptop, Chromebook
   csp_page_curriculum_glance_tools: යෙදුම් විද්යාගාරය
-  csp_page_curriculum_glance_professional_learning: Facilitator-led Workshops, Self-paced
-    Modules
+  csp_page_curriculum_glance_professional_learning: පහසුකම්-LED වැඩමුළු, ස්වයං-වේග
+    මොඩියුල
   csp_page_curriculum_glance_professional_languages: English
   csp_page_curriculum_glance_professional_accessibility_features: Text-to-speech,
     Closed captioning, Immersive reader
@@ -1379,8 +1413,8 @@ si:
   csd_page_curriculum_glance_devices: Laptop, Chromebook
   csd_page_curriculum_glance_tools: යෙදුම් විද්යාගාරය, ගේම් විද්යාගාරය, AI විද්යාගාරය,
     වෙබ් විද්යාගාරය
-  csd_page_curriculum_glance_professional_learning: Facilitator-led Workshops, Self-paced
-    Modules
+  csd_page_curriculum_glance_professional_learning: පහසුකම්-LED වැඩමුළු, ස්වයං-වේග
+    මොඩියුල
   csd_page_curriculum_glance_professional_languages: English
   csd_page_curriculum_glance_professional_accessibility_features: Text-to-speech,
     Closed captioning, Immersive reader
@@ -1519,8 +1553,8 @@ si:
     චිත්ර සහ නිර්මාණ, යෙදුම් නිර්මාණය
   csf_page_curriculum_glance_devices: ලැප්ටොප්, ක්රෝම්බුක්, කුඩා
   csf_page_curriculum_glance_tools: ස්ප්රයිට් විද්යාගාරය, ප්ලේ විද්යාගාරය
-  csf_page_curriculum_glance_professional_learning: Facilitator-led Workshops, Self-paced
-    Modules
+  csf_page_curriculum_glance_professional_learning: පහසුකම්-LED වැඩමුළු, ස්වයං-වේග
+    මොඩියුල
   csf_page_curriculum_glance_languages: අරාබි, බාසා ඉන්දුනීසියානු, කැටලාන්, චීන සරල,
     චීන සාම්ප්රදායික, චෙක්, ප්රංශ, ජර්මානු, හින්දි, ඉතාලි, ජපන්, කොරියානු, කන්නඩ,
     මැලේ, මරාති, මොන්ගෝලියානු, පෝලන්ත, පෘතුගීසි-බීආර්, රුමේනියානු, රුසියානු, ස්ලෝවැක්,
@@ -1660,6 +1694,38 @@ si:
   csa_page_faq_answer_08_02: For more information about the values that guided our
     work, please see our [curriculum values](%{curriculum_values_url}) and our [professional
     learning values](%{pl_values_url}).
+  donate_page_top_heading: අපගේ මෙහෙවර සඳහා අරමුදල් සපයන්න
+  donate_page_top_desc: සෑම පරිත්යාගයක්ම පරිගණක විද්යා අධ්යාපනයට ප්රවේශය පුළුල් කිරීම
+    සඳහා Code.org හි මෙහෙවර ඉන්ධන සපයයි. පරිත්යාග කිරීමට සහ වෙනසක් කිරීමට අපි ඔබට
+    ක්රම කිහිපයක් ඉදිරිපත් කරමු.
+  donate_page_fundraise_title: Code.org සඳහා අරමුදල් රැස්කිරීම
+  donate_page_fundraise_desc: Code.org සඳහා මුදල් රැස් කිරීමට උදව් කරන්න! සෑම පාසලකම
+    සෑම සිසුවෙකුටම පරිගණක විද්යාව ඉගෙන ගැනීමට අවස්ථාව තිබිය යුතුය.
+  donate_page_other_ways_title: දීමට වෙනත් ක්රම
+  donate_page_other_ways_desc: දායක වීමට විවිධ ක්රම ගවේෂණය කරන්න, සහ ඔබට වඩාත් ගැලපෙන
+    විකල්පය සොයා ගන්න. විශාල හෝ කුඩා සෑම අභිනයක්ම අපගේ මෙහෙවර ඉදිරියට ගෙන යයි.
+  donate_page_501c3: Code.org පොදු 501 (ඇ) (3) ලාභ නොලබන සංවිධානයක් ලෙස ලියාපදිංචි
+    කර ඇත. Code.org සඳහා දායකත්වය නීතියෙන් අවසර දී ඇති ප්රමාණයට බදු අඩු කළ හැකිය.
+    Code.org හි බදු හඳුනාගැනීමේ අංකය 46-0858543 වේ.
+  donate_page_donation_policy_title: අපගේ පරිත්යාග ප්රතිපත්තිය අවබෝධ කර ගැනීම
+  donate_page_donation_policy_desc: අපි හැසිරවිය යුතු ආකාරය සහ ඔබේ දායකත්වය වෙන් කරන
+    ආකාරය ගැන ඉගෙන ගන්න.
+  donate_tabs_tab_label_daf_direct: DAF සෘජු
+  donate_tabs_tab_label_amazon: ඇමසන්
+  donate_tabs_tab_label_bitpay: බිට්පේ
+  donate_tabs_tab_label_employee_match: සේවක තරගය
+  donate_tabs_daf_direct_title: DAF සෘජු හරහා පරිත්යාග කරන්න
+  donate_tabs_daf_direct_desc: විශ්වාසනීය පුණ්යාධාර, ෂ්වාබ් පුණ්යාධාර හෝ බීඑන්වයි
+    මෙලන් සමඟ පරිත්යාගශීලී උපදෙස් දෙන අරමුදල හරහා පරිත්යාග කර ඔබේ ප්රදාන නිර්දේශය
+    DAF සෘජු මාර්ගගත පෝරමය හරහා Code.org වෙත ඉදිරිපත් කරන්න.
+  donate_tabs_amazon_title: ඇමේසන් හරහා පරිත්යාග කරන්න
+  donate_tabs_amazon_desc: ඔබගේ ඇමසන් ගිණුම භාවිතා කර කෙලින්ම පරිත්යාග කරන්න. ක්ලික්
+    කිරීම් කිහිපයක් සමඟ, Code.org හි මෙහෙවරට බාධාවකින් තොරව දායක වන අතර පරිගණක විද්යා
+    අධ්යාපනයේ අනාගතය සවිබල ගැන්වීම.
+  donate_tabs_bitpay_title: බිට්පේ හරහා ක්රිප්ටෝ සමඟ පරිත්යාග කරන්න
+  donate_tabs_bitpay_desc: Cryptocurrency සමඟ ලබා දීමේ අනාගතය වැලඳ ගන්න. BitPay හරහා,
+    ඔබේ ඩිජිටල් මුදල් වලට පරිගණක විද්යා අධ්යාපනය පුළුල් කිරීමේ Code.org හි ප්රයත්නයන්
+    සඳහා සෘජුවම සහාය විය හැකිය.
   hoc_live: සජීවී Hour of Code වැඩසටහන
   hoc_live_sign_up_title: සජීවී Hour of Code වැඩසටහන සඳහා ලියාපදිංචි වෙන්න
   hoc_live_learn_title: සජීවී කේත පැය සමඟ ඉගෙන ගන්න

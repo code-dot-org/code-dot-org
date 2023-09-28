@@ -272,6 +272,10 @@ ps:
   call_to_action_register_early_access: د لومړني لاسرسي لپاره راجستر کړئ
   call_to_action_open_positions: خلاص پوستونه وګورئ
   call_to_action_get_guide: لارښود ترلاسه کړئ
+  call_to_action_donate_to_cdo: Code.org ته مرسته وکړئ
+  call_to_action_start_fundraiser: یو تمویل کونکی پیل کړئ
+  call_to_action_view_donation_policy: د بسپنه ورکولو پالیسي وګورئ
+  call_to_action_view_donate_bitpay: د BitPay سره مرسته وکړئ
   aria_label_call_to_action_afe: د ایمیزون راتلونکي انجینر په اړه نور معلومات زده
     کړئ
   aria_label_call_to_action_teaching_csf: د کمپیوټر ساینس اساساتو د مسلکي زده کړې
@@ -369,6 +373,7 @@ ps:
   curriculum_name_csp: د کمپیوټر ساینس اصول
   curriculum_name_csc: د کمپیوټر ساینس اړیکې
   curriculum_name_csa: AP® کمپیوټر ساینس A
+  curriculum_name_csa_ai: د سافټویر انجینرۍ او کمپیوټر لید
   curriculum_name_csc_02: هر CS پیوستون ماډل
   curriculum_name_ai: د AI او ماشین زده کړه
   curriculum_name_artificial_intelligence: مصنوعي استخبارات (AI)
@@ -441,6 +446,12 @@ ps:
     جوړولو ته معرفي کوي.
   curriculum_desc_csp: وړیا، AP® CSP تایید شوی، د عالي لیسې معرفي کورس چې زده کونکي
     د کمپیوټر ساینس بنسټیز مفاهیمو ته معرفي کوي.
+  curriculum_desc_csa_ai_long: 'دا دوه فصل وروسته د AP CSA ماډل د عالي ښوونځي زده
+    کونکو ته د مسلکي سافټویر پراختیا وسیلو سره تجربه وړاندې کوي، پشمول د GitHub او
+    GitHub Copilot، او دوی ته د کمپیوټر لید برنامې رامینځته کولو لپاره د ریښتیني نړۍ
+    مهارتونو سره وړاندې کوي. '
+  curriculum_desc_csa_ai_short: دا پوسټ - AP® CSA ماډل د عالي ښوونځي زده کونکو ته
+    د مسلکي سافټویر پراختیا وسیلو سره تجربه وړاندې کوي.
   collection_hardware: په هارډویر تمرکز وکړئ
   collection_hardware_desc: زده کونکو ته وړتیا ورکوي چې د ستونزو حل کولو لپاره ډیټا
     او فزیکي وسایل وکاروي.
@@ -514,6 +525,7 @@ ps:
   module_duration_2_hrs: 2 ساعته
   module_duration_3_hrs: 3 ساعته
   module_duration_5_hrs: 5 ساعتونو
+  module_duration_5_hrs_plus: 5+ ساعته
   module_duration_8_hrs: 8 ساعتونو
   module_duration_20_hrs: 20 ساعتونو
   module_duration_35_hrs: 35 ساعتونو
@@ -591,6 +603,7 @@ ps:
   heading_objects_first: لومړی څیزونه
   heading_these_lessons_will: 'دا درسونه به:'
   heading_explore_curriculum_catalog: زموږ ټول کورسونه د نصاب کتلاګ کې وپلټئ
+  heading_csa_ai: د AP® ازموینې وروسته د ترسره کولو شیانو په لټه کې یاست؟
   professional_learning_section_desc: هغه ملاتړ ترلاسه کړئ چې تاسو ورته اړتیا لرئ
     لکه څنګه چې تاسو ښوونې ته چمتو کوئ. ښوونکي له دې سره مینه لري، د 90 over څخه ډیر
     دا د تل غوره مسلکي پرمختګ سره درجه بندي کوي!
@@ -622,6 +635,23 @@ ps:
   support_and_questions_section_desc: زموږ د ملاتړ ټیم دلته د هرې پوښتنې ځواب کولو
     لپاره دی چې تاسو یې د Code.org سره د تدریس پیل کولو په اړه لرئ. تاسو کولی شئ د
     نورو ښوونکو څخه زموږ د ښوونکو په فورمونو کې د دوی تجربې په اړه هم وپوښتئ.
+  subscribe_form_section_title: د تازه معلوماتو لپاره ګډون وکړئ
+  subscribe_form_section_desc_csa: د Code.org AP® کمپیوټر ساینس A په اړه میاشتني بریښنالیکونو
+    ترلاسه کولو لپاره لاسلیک وکړئ او ګټور یادداشتونه، لارښوونې، او تازه معلومات ترلاسه
+    کړئ چې سم خپل ان باکس ته لیږل شوي.
+  subscribe_form_section_desc_csc: د Code.org کمپیوټر ساینس ارتباطاتو په اړه میاشتني
+    بریښنالیکونو ترلاسه کولو لپاره لاسلیک وکړئ او ګټور یادداشتونه، لارښوونې، او تازه
+    معلومات ترلاسه کړئ چې سم ستاسو ان باکس ته لیږل شوي.
+  subscribe_form_section_desc_csd: د Code.org کمپیوټر ساینس کشفونو په اړه میاشتني
+    بریښنالیکونو ترلاسه کولو لپاره لاسلیک وکړئ او ګټور یادداشتونه، لارښوونې، او تازه
+    معلومات ترلاسه کړئ چې سم ستاسو ان باکس ته لیږل شوي.
+  subscribe_form_section_desc_csf: د Code.org کمپیوټر ساینس اساساتو په اړه میاشتني
+    بریښنالیکونو ترلاسه کولو لپاره لاسلیک وکړئ او ګټور یادداشتونه، لارښوونې، او تازه
+    معلومات ترلاسه کړئ چې سم ستاسو ان باکس ته لیږل شوي.
+  subscribe_form_section_desc_csp: د Code.org کمپیوټر ساینس اصولو په اړه میاشتني بریښنالیکونو
+    ترلاسه کولو لپاره لاسلیک وکړئ او ګټور یادداشتونه، لارښوونې، او تازه معلومات ترلاسه
+    کړئ چې سم ستاسو ان باکس ته لیږل شوي.
+  subscribe_form_section_unsubscribe: تاسو کولی شئ په هر وخت کې ګډون لغوه کړئ.
   blockchain_hero_heading: بلاکچین څنګه کار کوي
   blockchain_hero_desc: د بلاکچین نړۍ ته د «بلاکچین څنګه کار کوي» سره ډوب کړئ، زموږ
     نوې ویډیو لړۍ او ورسره درسونه!
@@ -722,6 +752,8 @@ ps:
   ai_curriculum_desc_04: دا درسونه د AI څنګه کار کوي ویډیو لړۍ بشپړوي. هر درس د لړۍ
     څخه د یوې ویډیو سره جوړه شوې، په ویډیوګانو کې معرفي شوي مفاهیمو ته ژور ژور.
   ai_curriculum_btn_aria_label_04: وپلټئ چې AI څنګه درسونه کار کوي
+  ai_curriculum_grades_05: 'د درجې کچه: 9-12'
+  ai_curriculum_btn_aria_label_05: د سافټویر انجینرۍ او کمپیوټر لید ماډل وپلټئ
   ai_carousel_heading: 'د Code.org سره د AI په اړه څه ښوونکي وايي:'
   ai_carousel_quote_01: دې لوست زما زده کونکو ته دا فرصت هم ورکړ چې وګوري چې د ډلبندۍ
     سیسټمونو کې د نظر عنصر شتون لري. وروسته، کله چې موږ لیدل پیل کړل چې څنګه تعصب
@@ -846,6 +878,7 @@ ps:
     لکه ChatGPT، له پیل څخه تر پرمختللي پورې. د هغو کسانو لپاره د سټارټر اشارې شاملې
     دي چې یوازې د خپلو ګوتو ګوتو کې ډوبوي، په بیله بیا د هغو کسانو لپاره پرمختللي
     وسیلې چې د دوی احتمالي اعظمي کولو په لټه کې دي.
+  ai_pl_101_resources_3: AI د زده کونکو زده کړې بدلولو لپاره هڅونه
   how_ai_works_hero_heading: AI څنګه کار کوي
   how_ai_works_hero_desc: د AI نړۍ ته د «AI څنګه کار کوي» سره ډوب کړئ، زموږ د ویډیو
     لړۍ او ورسره درسونه!
@@ -1233,8 +1266,8 @@ ps:
     Animation
   csp_page_curriculum_glance_devices: Laptop, Chromebook
   csp_page_curriculum_glance_tools: ددفتروسایل لابراتوار
-  csp_page_curriculum_glance_professional_learning: Facilitator-led Workshops, Self-paced
-    Modules
+  csp_page_curriculum_glance_professional_learning: د اسانتیا په مشرۍ ورکشاپونه، د
+    ځان سرعت ماډلونه
   csp_page_curriculum_glance_professional_languages: پښتو
   csp_page_curriculum_glance_professional_accessibility_features: Text-to-speech,
     Closed captioning, Immersive reader
@@ -1360,8 +1393,8 @@ ps:
   csd_page_curriculum_glance_devices: Laptop, Chromebook
   csd_page_curriculum_glance_tools: ددفتروسایل لابراتوار، لوبه له لابراتوار، AI له
     لابراتوار، ويب له لابراتوار
-  csd_page_curriculum_glance_professional_learning: Facilitator-led Workshops, Self-paced
-    Modules
+  csd_page_curriculum_glance_professional_learning: د اسانتیا په مشرۍ ورکشاپونه، د
+    ځان سرعت ماډلونه
   csd_page_curriculum_glance_professional_languages: پښتو
   csd_page_curriculum_glance_professional_accessibility_features: Text-to-speech,
     Closed captioning, Immersive reader
@@ -1496,8 +1529,8 @@ ps:
     ډیزاین، د ایپ ډیزاین
   csf_page_curriculum_glance_devices: لپ ټاپ، کروم بوک، ټابلیټ
   csf_page_curriculum_glance_tools: Sprite لابراتوار، Play له لابراتوار
-  csf_page_curriculum_glance_professional_learning: Facilitator-led Workshops, Self-paced
-    Modules
+  csf_page_curriculum_glance_professional_learning: د اسانتیا په مشرۍ ورکشاپونه، د
+    ځان سرعت ماډلونه
   csf_page_curriculum_glance_languages: عربي، اندونېزیايي، کاتالان، چینایی ساده شوی،
     چینایي دودیز، چک، فرانسوی، جرمنی، هندي، ایټالوی، جاپاني، کوریایی، کاناډا، مالایا،
     مراټي، منګولیایی، پولنډي، پرتګالي - BR، رومانیايي، روسی، سلواک، تاګالوګ، تامل،
@@ -1635,6 +1668,38 @@ ps:
   csa_page_faq_answer_08_02: For more information about the values that guided our
     work, please see our [curriculum values](%{curriculum_values_url}) and our [professional
     learning values](%{pl_values_url}).
+  donate_page_top_heading: زموږ د ماموریت تمویل کې مرسته وکړئ
+  donate_page_top_desc: هره مرسته د کمپیوټر ساینس زده کړې ته د لاسرسي پراخولو لپاره
+    د Code.org ماموریت ته وده ورکوي. موږ ستاسو لپاره د مرستې او توپیر کولو لپاره ډیری
+    لارې وړاندیز کوو.
+  donate_page_fundraise_title: د Code.org لپاره تمویل
+  donate_page_fundraise_desc: د Code.org لپاره د پیسو راټولولو کې مرسته وکړئ! په هر
+    ښوونځي کې هر زده کونکی باید د کمپیوټر ساینس زده کولو فرصت ولري.
+  donate_page_other_ways_title: د ورکولو نورې لارې
+  donate_page_other_ways_desc: د شراکت کولو لپاره مختلف میتودونه وپلټئ، او هغه اختیار
+    ومومئ چې ستاسو سره مناسب وي. هره اشاره، لوی یا کوچنی، زموږ ماموریت پرمخ وړي.
+  donate_page_501c3: Code.org د عامه 501 (c) (3) غیر انتفاعي سازمان په توګه راجستر
+    شوی. Code.org ته مرستې د قانون لخوا اجازه ورکړل شوي حد پورې د مالیې د مجرايي وړ
+    دي. د Code.org د مالیې پیژندنې شمیره 46-0858543 ده.
+  donate_page_donation_policy_title: زموږ د بسپنې پالیسۍ درک کول
+  donate_page_donation_policy_desc: د دې په اړه زده کړئ چې موږ څنګه ستاسو مرستې اداره
+    کوو او تخصیص کوو.
+  donate_tabs_tab_label_daf_direct: DAF مستقيم
+  donate_tabs_tab_label_amazon: امازون
+  donate_tabs_tab_label_bitpay: بټ پی
+  donate_tabs_tab_label_employee_match: د کارمند لوبه
+  donate_tabs_daf_direct_title: د DAF مستقیم له لارې مرسته وکړئ
+  donate_tabs_daf_direct_desc: د فیډیټي خیریه، شواب خیریه، یا BNY میلون سره د خپل
+    تمویل کونکي لخوا وړاندیز شوي فنډ له لارې مرسته وکړئ او د DAF مستقیم آنلاین فارم
+    له لارې Code.org ته د مرستې وړاندیز وکړئ.
+  donate_tabs_amazon_title: د ایمیزون له لارې مرسته وکړئ
+  donate_tabs_amazon_desc: مستقیم د خپل ایمیزون حساب په کارولو سره مرسته وکړئ. یوازې
+    د یو څو کلیکونو سره، په بې ساري ډول د Code.org ماموریت کې برخه واخلئ او د کمپیوټر
+    ساینس زده کړې راتلونکي ځواکمن کړئ.
+  donate_tabs_bitpay_title: د BitPay له لارې د کریپټو سره مرسته وکړئ
+  donate_tabs_bitpay_desc: د کریپټو کارنسي سره د ورکولو راتلونکي غیږ کې ونیسئ. د BitPay
+    له لارې، ستاسو ډیجیټل اسعار کولی شي په مستقیم ډول د کمپیوټر ساینس زده کړې پراخولو
+    کې د Code.org هڅو ملاتړ وکړي.
   hoc_live: د ژوند کوډ ساعت
   hoc_live_sign_up_title: د ژوند کوډ ساعت لپاره لاسلیک وکړئ
   hoc_live_learn_title: د ژوند کوډ ساعت سره زده کړئ

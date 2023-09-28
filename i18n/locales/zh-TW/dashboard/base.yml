@@ -53,6 +53,7 @@ zh-TW:
         gender: '性別'
         edit_header: '編輯帳戶資料'
         finish_sign_up_header: '已成功創建你的帳戶'
+        finish_sign_up_header_error: '請修正下列錯誤：'
         finish_sign_up_subheader: '填妥下面的資料以完成 <strong>%{email}</strong> 的帳戶申請。'
         finish_sign_up_subheader_markdown: '填妥下面的資料以完成 **%{email}** 的帳戶申請。'
         finish_sign_up_subheader_provider: '填寫以下資料以使用 <strong>%{provider}</strong>為<strong>%{email}</strong>開設一個Code.org帳號。'
@@ -60,6 +61,7 @@ zh-TW:
         reset_password_token: "你跟隨的重設密碼連結"
         error:
           future: 不能選擇將來的時間
+        user_type: '帳戶類型'
         us_state: '州 / 省'
   beta: "測試版"
   hello: "Hello world"
