@@ -21,6 +21,7 @@ module I18n
       # @param locale [String] the BCP 47 (IETF language tag) format (e.g., 'en-US')
       def initialize(locale)
         @locale = locale
+        @google_drive ||= Google::Drive.new
       end
 
       def worksheet_data
@@ -39,7 +40,7 @@ module I18n
       def report
         return if worksheet_data.empty?
 
-        google_drive&.update_worksheet(SPREADSHEET_NAME, locale, [WORKSHEET_HEADERS, *worksheet_data])
+        @google_drive&.update_worksheet(SPREADSHEET_NAME, locale, [WORKSHEET_HEADERS, *worksheet_data])
 
         clear_worksheet_data
       rescue
@@ -47,12 +48,6 @@ module I18n
       end
 
       private
-
-      def google_drive
-        return @google_drive if defined? @google_drive
-
-        @google_drive = CDO.gdrive_export_secret && Google::Drive.new
-      end
 
       def update_worksheet_data(key, file_name, translation)
         worksheet_data << [key, file_name, translation]
