@@ -36,16 +36,21 @@ class Census::CensusSummary < ApplicationRecord
   CSV_IMPORT_OPTIONS = {col_sep: ",", headers: true, encoding: 'bom|utf-8'}.freeze
 
   # Seeds all the data from the S3 file.
-  def self.seed_all
-    Census::CensusSummary.transaction do
-      CDO.log.info "Seeding census summary data."
-      AWS::S3.seed_from_file('cdo-census', "access-report-data-files-2023/final_csv/final_csv_2023_09_19.csv") do |filename|
-        merge_from_csv(filename) do |row|
-          {
-            school_id:          row['school_id'],
-            school_year:        row['school_year'].to_i,
-            teaches_cs:         row['teaches_cs'],
-          }
+  # @param options [Hash] Optional map of options.
+  def self.seed_all(options = {})
+    options[:stub_school_data] = CDO.stub_school_data unless options.key?(:stub_school_data)
+
+    unless options[:stub_school_data]
+      Census::CensusSummary.transaction do
+        CDO.log.info "Seeding census summary data."
+        AWS::S3.seed_from_file('cdo-census', "access-report-data-files-2023/final_csv/final_csv_2023_09_19.csv") do |filename|
+          merge_from_csv(filename) do |row|
+            {
+              school_id:          row['school_id'],
+              school_year:        row['school_year'].to_i,
+              teaches_cs:         row['teaches_cs'],
+            }
+          end
         end
       end
     end
