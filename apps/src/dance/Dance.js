@@ -94,7 +94,7 @@ Dance.prototype.init = function (config) {
   }
 
   this.level = config.level;
-  this.usesPreview = true || !!config.level.usesPreview;
+  this.usesPreview = !!config.level.usesPreview;
   this.skin = config.skin;
   this.share = config.share;
   this.studioAppInitPromise = new Promise(resolve => {
