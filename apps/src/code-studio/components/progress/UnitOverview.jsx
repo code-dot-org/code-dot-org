@@ -25,6 +25,8 @@ import EndOfLessonDialog from '@cdo/apps/templates/EndOfLessonDialog';
 import {PublishedState} from '@cdo/apps/generated/curriculum/sharedCourseConstants';
 import analyticsReporter from '@cdo/apps/lib/util/AnalyticsReporter';
 import {EVENTS} from '@cdo/apps/lib/util/AnalyticsConstants';
+import {unitHasLevels} from '@cdo/apps/templates/progress/progressHelpers';
+import {lessonShape} from '@cdo/apps/templates/lessonOverview/lessonPlanShapes';
 
 /**
  * Lesson progress component used in level header and script overview.
@@ -49,6 +51,7 @@ class UnitOverview extends React.Component {
     showAssignButton: PropTypes.bool,
     assignedSectionId: PropTypes.number,
     unitCalendarLessons: PropTypes.arrayOf(unitCalendarLesson),
+    unitLessons: PropTypes.arrayOf(lessonShape),
     weeklyInstructionalMinutes: PropTypes.number,
     showCalendar: PropTypes.bool,
     isMigrated: PropTypes.bool,
@@ -118,6 +121,7 @@ class UnitOverview extends React.Component {
       showCalendar,
       weeklyInstructionalMinutes,
       unitCalendarLessons,
+      unitLessons,
       isMigrated,
       scriptOverviewPdfUrl,
       scriptResourcesPdfUrl,
@@ -203,6 +207,7 @@ class UnitOverview extends React.Component {
             courseLink={this.props.courseLink}
             publishedState={publishedState}
             participantAudience={participantAudience}
+            isUnitWithLevels={unitHasLevels(unitLessons)}
           />
         </div>
         <ProgressTable minimal={false} />

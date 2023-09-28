@@ -125,6 +125,7 @@ function initPage() {
         showCalendar={scriptData.showCalendar}
         weeklyInstructionalMinutes={scriptData.weeklyInstructionalMinutes}
         unitCalendarLessons={scriptData.calendarLessons}
+        unitLessons={scriptData.lessons}
         isMigrated={scriptData.is_migrated}
         scriptOverviewPdfUrl={scriptData.scriptOverviewPdfUrl}
         scriptResourcesPdfUrl={scriptData.scriptResourcesPdfUrl}
