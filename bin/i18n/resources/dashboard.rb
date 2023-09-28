@@ -30,6 +30,7 @@ module I18n
         Blocks.sync_out
         CourseContent.sync_out
         CourseOfferings.sync_out
+        Courses.sync_out
       end
     end
   end

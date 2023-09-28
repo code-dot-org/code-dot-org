@@ -115,7 +115,6 @@ module I18n
       # Prepare some collection literals
       resource_and_vocab_paths = [
         'i18n/locales/original/dashboard/scripts.yml',
-        'i18n/locales/original/dashboard/courses.yml'
       ]
 
       Parallel.each(locales, in_processes: (Parallel.processor_count / 2)) do |prop|
@@ -185,26 +184,6 @@ module I18n
       end
     end
 
-    # We provide URLs to the translators for Resources only; because
-    # the sync has a side effect of applying Markdown formatting to
-    # everything it encounters, we want to make sure to un-Markdownify
-    # these URLs
-    def self.postprocess_course_resources(locale, courses_source)
-      courses_yaml = YAML.load_file(courses_source)
-      lang_code = PegasusLanguages.get_code_by_locale(locale)
-      return if courses_yaml[lang_code].nil? # no processing of empty files
-      if courses_yaml[lang_code]['data']['resources']
-        courses_resources = courses_yaml[lang_code]['data']['resources']
-        courses_resources.each do |_key, resource|
-          next if resource['url'].blank?
-          resource['url'].strip!
-          resource['url'].delete_prefix!('<')
-          resource['url'].delete_suffix!('>')
-        end
-      end
-      File.write(courses_source, I18nScriptUtils.to_crowdin_yaml(courses_yaml))
-    end
-
     # Distribute downloaded translations from i18n/locales
     # back to blockly, apps, pegasus, and dashboard.
     def self.distribute_translations
@@ -225,13 +204,13 @@ module I18n
           next if loc_file == File.join('i18n/locales', locale, 'dashboard/parameter_names.yml')
           next if loc_file == File.join('i18n/locales', locale, 'dashboard/progressions.yml')
           next if loc_file == File.join('i18n/locales', locale, 'dashboard/variable_names.yml')
+          next if loc_file == File.join('i18n/locales', locale, 'dashboard/courses.yml')
 
           ext = File.extname(loc_file)
           relative_path = loc_file.delete_prefix(locale_dir)
           next unless I18nScriptUtils.file_changed?(locale, relative_path)
 
           basename = File.basename(loc_file, ext)
-          postprocess_course_resources(locale, loc_file) if File.basename(loc_file) == 'courses.yml'
           # Special case the un-prefixed Yaml file.
           destination = (basename == "base") ?
                           "dashboard/config/locales/#{locale}#{ext}" :
