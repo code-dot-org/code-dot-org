@@ -25,7 +25,7 @@ title: دليل "ساعة من البرمجة" الإرشادي
 
 <a id="how-to-video"></a>
 
-## 1. شاهد فيديو "ساعة من البرمجة" الإرشادي <iframe width="500" height="255" src="//www.youtube.com/embed/SrnvvWDm73k" frameborder="0" allowfullscreen></iframe> 
+## 1. شاهد فيديو "ساعة من البرمجة" الإرشادي <iframe width="500" height="255" src="https://www.youtube-nocookie.com/embed/SrnvvWDm73k" frameborder="0" allowfullscreen></iframe> 
 
 * * *
 
@@ -111,7 +111,7 @@ title: دليل "ساعة من البرمجة" الإرشادي
 
 وجِّه الطلاب إلى النشاط 
 
-- Write the tutorial link on a whiteboard. Find the link listed on the [information for your selected tutorial]({{ urls/learn }}).
+- اكتب رابط البرنامج التعليمي على السبورة البيضاء. ابحث عن الرابط المدرج في [المعلومات الخاصة بالبرنامج التعليمي المحدد]({{ urls/learn }}).
 
 عندما يواجه الطلاب صعوبات، فليس هناك مشكلة في الرد عليهم بما يلي: 
 
@@ -151,6 +151,6 @@ title: دليل "ساعة من البرمجة" الإرشادي
 
 ### ماذا بعد "ساعة من البرمجة"؟
 
-Computer science doesn’t have to end with the Hour of Code! [Learn how](/beyond) to bring CS to your school and students.
+لا يجب أن تنتهي علوم الكمبيوتر بـ «ساعة البرمجة»! [تعرف](/beyond) على كيفية جلب CS إلى مدرستك وطلابك.
 
 {{ signup_button }}

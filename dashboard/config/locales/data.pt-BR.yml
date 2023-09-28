@@ -919,7 +919,7 @@ pt:
           matrizes'
         csa_row_major_traversal: 'CSA: Linha principal de travessia'
         csa_scanner_class_methods: 'CSA: Métodos de classe de scanner'
-        csa_searching_algorithms: 'CSA: Algoritmos de busca'
+        csa_searching_algorithms: 'CSA: Algoritmos de Busca'
         csa_software_engineering_code_reviews: 'CSA: Engenharia de software - Revisões
           de código'
         csa_sorting_algorithms: 'CSA: Algoritmos de classificação'
@@ -996,14 +996,14 @@ pt:
         csd_u6_call_define_functions: 'CSD: Chamando e definindo funções'
         csd_u6_circuit_playground: Computação Física
         csd_u6_if_statements: 'CSD: Declarações If'
-        csd_u6_input_output: Entrada e saída
+        csd_u6_input_output: Entrada e Saída
         csd_u6_variables_part2: Variáveis - Parte 2
         csd_weblab_css_1: Introdução para CSS - Parte 1
         csd_weblab_css_2: Introdução para CSS - Parte 2
         csd_weblab_intro_1: Introdução para o Laboratório Web - Parte 1
         csd_weblab_intro_2: Introdução para o Laboratório Web - Parte 2
         csd_weblab_intro_3: Introdução para o Laboratório Web - Parte 3
-        csd_what_computers_are: O que é um computador?
+        csd_what_computers_are: O que é um Computador?
         csd_what_computers_do: O que os computadores fazem?
         csf21pilot_events: 'Sprite Lab: Sprites em ação'
         csf21pilot_prompts: 'Sprite Lab: texto e instruções'

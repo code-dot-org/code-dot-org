@@ -11,8 +11,7 @@ class LearningGoalEvaluationsController < ApplicationController
   end
 
   def update
-    params.require(:id)
-    learning_goal_evaluation = LearningGoalEvaluation.find_by_id(params[:id])
+    learning_goal_evaluation = LearningGoalEvaluation.find(params[:id])
 
     if learning_goal_evaluation&.teacher_id == current_user.id
       if learning_goal_evaluation.update(learning_goal_evaluation_params)
@@ -23,6 +22,28 @@ class LearningGoalEvaluationsController < ApplicationController
     else
       head :not_found
     end
+  end
+
+  def get_evaluation
+    learning_goal_evaluation = LearningGoalEvaluation.find_by(
+      user_id: learning_goal_evaluation_params[:user_id],
+      teacher_id: current_user.id,
+      learning_goal_id: learning_goal_evaluation_params[:learning_goal_id]
+    )
+    if learning_goal_evaluation&.teacher_id == current_user.id
+      render json: learning_goal_evaluation
+    else
+      head :not_found
+    end
+  end
+
+  def get_or_create_evaluation
+    learning_goal_evaluation = LearningGoalEvaluation.find_or_create_by!(
+      user_id: learning_goal_evaluation_params[:user_id],
+      teacher_id: current_user.id,
+      learning_goal_id: learning_goal_evaluation_params[:learning_goal_id]
+    )
+    render json: learning_goal_evaluation
   end
 
   private def learning_goal_evaluation_params

@@ -53,6 +53,7 @@ he:
         gender: 'מין'
         edit_header: 'שינוי פרטי החשבון'
         finish_sign_up_header: 'סיים ליצור את החשבון שלך'
+        finish_sign_up_header_error: 'אנא תקן את השגיאות הבאות:'
         finish_sign_up_subheader: 'מלא את הפרטים הבאים על מנת לסיים ליצור חשבון Code.org עבור <strong>%{email}</strong>.'
         finish_sign_up_subheader_markdown: 'מלא את הפרטים הבאים על מנת לסיים ליצור חשבון Code.org עבור **%{email}**.'
         finish_sign_up_subheader_provider: 'מלא את הפרטים הבאים על מנת לסיים ליצור חשבון Code.org עם <strong>%{provider}<strong> עבור <strong>%{email}</strong>.'
@@ -60,6 +61,7 @@ he:
         reset_password_token: "הקישור לאיפוס הסיסמה שעקבת אחריו"
         error:
           future: לא יכול להיות בעתיד
+        user_type: 'סוג חשבון'
         us_state: 'איזורי'
   beta: "בטא"
   hello: "הי עולם"

@@ -297,6 +297,11 @@
             "name": "minun funktioni"
           }
         },
+        "Course E: Artist Project_examples_2023": {
+          "my function": {
+            "name": "minun funktioni"
+          }
+        },
         "Course E: Frozen Project_examples2022": {
           "draw a circle": {
             "description": "piirrä ympyrä annetulla sateellä",
@@ -348,6 +353,56 @@
           }
         },
         "Course E: Frozen Project_examples_2021": {
+          "draw a circle": {
+            "description": "piirrä ympyrä annetulla sateellä",
+            "name": "piirrä ympyrä",
+            "parameters": {
+              "radius": "säde"
+            }
+          },
+          "draw a house": {
+            "name": "piirrä talo",
+            "parameters": {
+              "length": "pituus"
+            }
+          },
+          "draw a pinwheel": {
+            "name": "piirrä väkkärä",
+            "parameters": {
+              "length": "pituus",
+              "repeat": "toista",
+              "sides": "sivut"
+            }
+          },
+          "draw a shape": {
+            "name": "piirrä muoto",
+            "parameters": {
+              "length": "pituus",
+              "sides": "sivut"
+            }
+          },
+          "draw a square": {
+            "name": "piirrä neliö",
+            "parameters": {
+              "length": "pituus",
+              "sides": "sivut"
+            }
+          },
+          "draw a star": {
+            "name": "piirrä tähti",
+            "parameters": {
+              "length": "pituus",
+              "points": "pisteet"
+            }
+          },
+          "draw a triangle": {
+            "name": "piirrä kolmio",
+            "parameters": {
+              "length": "pituus"
+            }
+          }
+        },
+        "Course E: Frozen Project_examples_2023": {
           "draw a circle": {
             "description": "piirrä ympyrä annetulla sateellä",
             "name": "piirrä ympyrä",
@@ -598,6 +653,55 @@
             }
           }
         },
+        "CourseD_EOC_artist_2023": {
+          "draw a circle": {
+            "description": "piirrä ympyrä annetulla sateellä",
+            "name": "piirrä ympyrä",
+            "parameters": {
+              "radius": "säde"
+            }
+          },
+          "draw a house": {
+            "name": "piirrä talo",
+            "parameters": {
+              "length": "pituus"
+            }
+          },
+          "draw a pinwheel": {
+            "name": "piirrä väkkärä",
+            "parameters": {
+              "length": "pituus",
+              "repeat": "toista",
+              "sides": "sivut"
+            }
+          },
+          "draw a shape": {
+            "name": "piirrä muoto",
+            "parameters": {
+              "length": "pituus",
+              "sides": "sivut"
+            }
+          },
+          "draw a square": {
+            "name": "piirrä neliö",
+            "parameters": {
+              "length": "pituus"
+            }
+          },
+          "draw a star": {
+            "name": "piirrä tähti",
+            "parameters": {
+              "length": "pituus",
+              "points": "pisteet"
+            }
+          },
+          "draw a triangle": {
+            "name": "piirrä kolmio",
+            "parameters": {
+              "length": "pituus"
+            }
+          }
+        },
         "CourseD_EOC_artist_example2021": {
           "draw a circle": {
             "description": "piirrä ympyrä annetulla sateellä",
@@ -696,6 +800,55 @@
             }
           }
         },
+        "CourseD_EOC_artist_example2021_2023": {
+          "draw a circle": {
+            "description": "piirrä ympyrä annetulla sateellä",
+            "name": "piirrä ympyrä",
+            "parameters": {
+              "radius": "säde"
+            }
+          },
+          "draw a house": {
+            "name": "piirrä talo",
+            "parameters": {
+              "length": "pituus"
+            }
+          },
+          "draw a pinwheel": {
+            "name": "piirrä väkkärä",
+            "parameters": {
+              "length": "pituus",
+              "repeat": "toista",
+              "sides": "sivut"
+            }
+          },
+          "draw a shape": {
+            "name": "piirrä muoto",
+            "parameters": {
+              "length": "pituus",
+              "sides": "sivut"
+            }
+          },
+          "draw a square": {
+            "name": "piirrä neliö",
+            "parameters": {
+              "length": "pituus"
+            }
+          },
+          "draw a star": {
+            "name": "piirrä tähti",
+            "parameters": {
+              "length": "pituus",
+              "points": "pisteet"
+            }
+          },
+          "draw a triangle": {
+            "name": "piirrä kolmio",
+            "parameters": {
+              "length": "pituus"
+            }
+          }
+        },
         "Find the Wizard": {
           "do something": {
             "name": "tee jotain"
@@ -729,6 +882,11 @@
           }
         },
         "Function intro Ryan_2021": {
+          "build bridge": {
+            "name": "rakenna silta"
+          }
+        },
+        "Function intro Ryan_2023": {
           "build bridge": {
             "name": "rakenna silta"
           }
@@ -814,6 +972,11 @@
             "name": "raivaa reitti"
           }
         },
+        "MC_HOC_2017_07_Cole_2023": {
+          "clear path": {
+            "name": "raivaa reitti"
+          }
+        },
         "MC_HOC_2017_10_RETRY": {
           "fix long path": {
             "name": "korjaa pitkä reitti"
@@ -847,6 +1010,14 @@
           }
         },
         "MC_HOC_2017_10_RETRY_2021": {
+          "fix long path": {
+            "name": "korjaa pitkä reitti"
+          },
+          "fix short path": {
+            "name": "korjaa lyhyt reitti"
+          }
+        },
+        "MC_HOC_2017_10_RETRY_2023": {
           "fix long path": {
             "name": "korjaa pitkä reitti"
           },
@@ -894,6 +1065,14 @@
             "name": "rakenna lyhyt silta"
           }
         },
+        "MC_HOC_2017_Ali_2023": {
+          "build long bridge": {
+            "name": "rakenna pitkä silta"
+          },
+          "build short bridge": {
+            "name": "rakenna lyhyt silta"
+          }
+        },
         "MC_HOC_2017_FP20x20": {
           "function 1": {
             "name": "funktio 1"
@@ -927,6 +1106,14 @@
           }
         },
         "MC_HOC_2017_FP20x20_2021": {
+          "function 1": {
+            "name": "funktio 1"
+          },
+          "function 2": {
+            "name": "funktio 2"
+          }
+        },
+        "MC_HOC_2017_FP20x20_2023": {
           "function 1": {
             "name": "funktio 1"
           },
@@ -1396,6 +1583,11 @@
             "name": "tee jotain"
           }
         },
+        "courseC_data wizard_2023": {
+          "do something": {
+            "name": "tee jotain"
+          }
+        },
         "courseD_artist_binary1": {
           "draw": {
             "parameters": {
@@ -1774,6 +1966,11 @@
             "name": "tee jotain"
           }
         },
+        "courseE_artist_functions10_2023": {
+          "do something": {
+            "name": "tee jotain"
+          }
+        },
         "courseE_artist_functions2": {
           "draw a square": {
             "name": "piirrä neliö"
@@ -1800,6 +1997,11 @@
           }
         },
         "courseE_artist_functions2_2021": {
+          "draw a square": {
+            "name": "piirrä neliö"
+          }
+        },
+        "courseE_artist_functions2_2023": {
           "draw a square": {
             "name": "piirrä neliö"
           }
@@ -1835,6 +2037,11 @@
           }
         },
         "courseE_artist_functions3_2021": {
+          "draw a star": {
+            "name": "piirrä tähti"
+          }
+        },
+        "courseE_artist_functions3_2023": {
           "draw a star": {
             "name": "piirrä tähti"
           }
@@ -1880,6 +2087,11 @@
           }
         },
         "courseE_artist_functions5_2021": {
+          "draw a star": {
+            "name": "piirrä tähti"
+          }
+        },
+        "courseE_artist_functions5_2023": {
           "draw a star": {
             "name": "piirrä tähti"
           }
@@ -1939,6 +2151,11 @@
             "name": "tee jotain"
           }
         },
+        "courseE_artist_functions8_2023": {
+          "do something": {
+            "name": "tee jotain"
+          }
+        },
         "courseE_artist_functions8a2022": {
           "do something": {
             "name": "tee jotain"
@@ -1979,6 +2196,14 @@
             "name": "piirrä neliö"
           }
         },
+        "courseE_artist_functions8a_2023": {
+          "do something": {
+            "name": "tee jotain"
+          },
+          "draw a square": {
+            "name": "piirrä neliö"
+          }
+        },
         "courseE_artist_functions8b2022": {
           "do something": {
             "name": "tee jotain"
@@ -2004,6 +2229,11 @@
             "name": "tee jotain"
           }
         },
+        "courseE_artist_functions8b_2023": {
+          "do something": {
+            "name": "tee jotain"
+          }
+        },
         "courseE_artist_functions8c2022": {
           "do something": {
             "name": "tee jotain"
@@ -2025,6 +2255,11 @@
           }
         },
         "courseE_artist_functions8c_2021": {
+          "do something": {
+            "name": "tee jotain"
+          }
+        },
+        "courseE_artist_functions8c_2023": {
           "do something": {
             "name": "tee jotain"
           }
@@ -2059,6 +2294,11 @@
             "name": "tee jotain"
           }
         },
+        "courseE_artist_functions9_2023": {
+          "do something": {
+            "name": "tee jotain"
+          }
+        },
         "courseE_artist_functions_challenge1": {
           "do something": {
             "name": "tee jotain"
@@ -2085,6 +2325,11 @@
           }
         },
         "courseE_artist_functions_challenge1_2021": {
+          "do something": {
+            "name": "tee jotain"
+          }
+        },
+        "courseE_artist_functions_challenge1_2023": {
           "do something": {
             "name": "tee jotain"
           }
@@ -2119,6 +2364,11 @@
             "name": "tee jotain"
           }
         },
+        "courseE_artist_functions_challenge2_2023": {
+          "do something": {
+            "name": "tee jotain"
+          }
+        },
         "courseE_artist_functions_predict1": {
           "draw a square": {
             "name": "piirrä neliö"
@@ -2145,6 +2395,11 @@
           }
         },
         "courseE_artist_functions_predict1_2021": {
+          "draw a square": {
+            "name": "piirrä neliö"
+          }
+        },
+        "courseE_artist_functions_predict1_2023": {
           "draw a square": {
             "name": "piirrä neliö"
           }
@@ -2185,6 +2440,11 @@
           }
         },
         "courseE_artist_functions_predict2_2021": {
+          "do something": {
+            "name": "tee jotain"
+          }
+        },
+        "courseE_artist_functions_predict2_2023": {
           "do something": {
             "name": "tee jotain"
           }
@@ -2250,6 +2510,11 @@
           }
         },
         "courseF_apps_collector_-2022-2": {
+          "end game": {
+            "name": "lopeta peli"
+          }
+        },
+        "courseF_apps_collector_2023": {
           "end game": {
             "name": "lopeta peli"
           }

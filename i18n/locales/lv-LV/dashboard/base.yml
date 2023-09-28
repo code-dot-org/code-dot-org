@@ -39,8 +39,10 @@ lv:
         age: 'Vecums'
         gender: 'Dzimums'
         edit_header: 'Rediģēt konta detaļas'
+        finish_sign_up_header_error: 'Lūdzu, izlabojiet šādas kļūdas:'
         error:
           future: nevar būt nākotnē
+        user_type: 'Konta tips'
   beta: "beta"
   hello: "Sveika, pasaule"
   welcome_back: "Laipni lūdzu atpakaļ, %{name}"

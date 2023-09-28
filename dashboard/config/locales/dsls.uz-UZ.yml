@@ -496,6 +496,11 @@ uz-UZ:
           # Katta hodisa
 
           Informatika fanida hodisalar kompyuter nazorat qiladigan harakatlardir. Ushbu darsda siz qaysi tugma bosilganiga qarab har xil javob qaytarasiz.
+      BigEvent-Unplugged2022_2023:
+        markdown: |-
+          # Katta hodisa
+
+          Informatika fanida hodisalar kompyuter nazorat qiladigan harakatlardir. Ushbu darsda siz qaysi tugma bosilganiga qarab har xil javob qaytarasiz.
       BigEvent-Unplugged_2020:
         markdown: |-
           # Katta hodisa
@@ -514,6 +519,13 @@ uz-UZ:
 
           ![](https://images.code.org/ed15a484276c0989e4adb5daf480f68a-image-1557870226222.png)
       BinaryBracelets-Unplugged2022:
+        markdown: |
+          # Ikkilik bilaguzuklar
+
+          Kompyuterlar tushunadigan tizimda sizning ismingizni ifodalovchi bilaguzuk yarating!
+
+          ![](https://images.code.org/ed15a484276c0989e4adb5daf480f68a-image-1557870226222.png)
+      BinaryBracelets-Unplugged2022_2023:
         markdown: |
           # Ikkilik bilaguzuklar
 
@@ -562,13 +574,26 @@ uz-UZ:
         - {}
         questions:
         - {}
+      CSD Games Properties multi predict_2023:
+        answers:
+        - {}
+        - correct: true
+        - {}
+        - {}
+        - {}
+        questions:
+        - {}
       CSD Games Properties practice_2021:
         display_name: Sprait hususiyatlari
       CSD Games Properties practice_2022:
         display_name: Sprait hususiyatlari
+      CSD Games Properties practice_2023:
+        display_name: Sprait hususiyatlari
       CSD Games variables practice_2021:
         display_name: Variables Practice
       CSD Games variables practice_2022:
+        display_name: Variables Practice
+      CSD Games variables practice_2023:
         display_name: Variables Practice
       CSD Header Size MC:
         answers:
@@ -682,6 +707,26 @@ uz-UZ:
           &lt;h6&gt; Waffles &lt;/h6&gt;
           </pre>
         title: Sarlavhalarni tezkor tekshirish
+      CSD Header Size MC_2018_2019_pilot_2023:
+        answers:
+        - text: https://images.code.org/a4e973cc13db380ca1e1efeb4263974f-image-1473432905067.53.47
+            AM.png
+        - correct: true
+          text: https://images.code.org/1c660b4e54a3e835250597cb261d8e17-image-1473432905068.54.08
+            AM.png
+        - text: https://images.code.org/22e9ae6a04afd8251b29939a6fa63411-image-1473432905069.54.25
+            AM.png
+        - text: https://images.code.org/0eee565202089d44a6bb5633603c45e0-image-1473432905069.54.50
+            AM.png
+        content1: Quyidagi kodga qarang va sarlavhalar qanday ko'rsatilishini taxmin
+          qiling. O'ngdagi variantlardan birini tanlang.
+        markdown: |
+          <pre>
+          &lt;h3&gt; Eggs &lt;/h3&gt;
+          &lt;h1&gt; Bacon &lt;/h1&gt;
+          &lt;h6&gt; Waffles &lt;/h6&gt;
+          </pre>
+        title: Sarlavhalarni tezkor tekshirish
       CSD U1 IOSP match:
         answers:
         - {}
@@ -730,6 +775,60 @@ uz-UZ:
 
           [Qabul qiluvchi va joʻnatuvchi qurilmalar - foydalanish yoʻriqnomasi]
           (https://docs.google.com/document/d/1ObS_kxkXoueaotPYFAEkcCDzn690zumqoLLnrU5kY2Q/export?format=pdf)
+      CSD U1 MC Q1_2023:
+        answers:
+        - correct: true
+        - correct: true
+        - {}
+        - {}
+        - {}
+      CSD U1 MC Q2_2023:
+        answers:
+        - {}
+        - {}
+        - {}
+        - {}
+        - correct: true
+        questions:
+        - {}
+      CSD U1 MC Q3_2023:
+        answers:
+        - {}
+        - {}
+        - text: Musiqa
+        - text: Manzil
+        - correct: true
+        questions:
+        - {}
+      CSD U1 MC Q4_2023:
+        answers:
+        - {}
+        - {}
+        - {}
+        - correct: true
+        - correct: true
+        questions:
+        - {}
+      CSD U1 Match Q5_2023:
+        answers:
+        - text: Kiritish
+        - text: Storage
+        - text: Processing
+        questions:
+        - {}
+        - {}
+        - {}
+      CSD U1 Match Q6_2023:
+        answers:
+        - {}
+        - {}
+        - {}
+        - {}
+        questions:
+        - text: Tayyorlanish
+        - text: O‘ylamoq
+        - text: Urinish (Try)
+        - text: Aniqlash
       CSD U1 Test:
         title: 'Kompyuterlar va muammolarni hal qilish loyihasidan keyingi test '
       CSD U1 Test PSP match:
@@ -820,9 +919,13 @@ uz-UZ:
         title: 'Kompyuterlar va muammolarni hal qilish loyihasidan keyingi test '
       CSD U1 Test_2022:
         title: 'Kompyuterlar va muammolarni hal qilish loyihasidan keyingi test '
+      CSD U1 Test_2023:
+        title: 'Kompyuterlar va muammolarni hal qilish loyihasidan keyingi test '
       CSD U2 CSS practice_pilot_2021:
         display_name: Styling Text with CSS
       CSD U2 CSS practice_pilot_2022:
+        display_name: Styling Text with CSS
+      CSD U2 CSS practice_pilot_2023:
         display_name: Styling Text with CSS
       CSD U2 Design Project:
         content1: tafsilotlar bu yerda
@@ -879,9 +982,13 @@ uz-UZ:
         display_name: Rasm qo'shish
       CSD U2 Image challenge_pilot_2022:
         display_name: Rasm qo'shish
+      CSD U2 Image challenge_pilot_2023:
+        display_name: Rasm qo'shish
       CSD U2 Image practice_pilot_2021:
         display_name: Rasm qo'shish
       CSD U2 Image practice_pilot_2022:
+        display_name: Rasm qo'shish
+      CSD U2 Image practice_pilot_2023:
         display_name: Rasm qo'shish
       CSD U2 L1 Overview:
         content1: tafsilotlar bu yerda
@@ -928,6 +1035,95 @@ uz-UZ:
         content1: tafsilotlar bu yerda
       CSD U2 Lesson 6 Overview:
         content1: tafsilotlar bu yerda
+      CSD U2 MC Q10_2023:
+        answers:
+        - {}
+        - {}
+        - {}
+        - text: Ismingiz
+        - correct: true
+        questions:
+        - {}
+      CSD U2 MC Q11_2023:
+        answers:
+        - {}
+        - {}
+        - {}
+        - correct: true
+        questions:
+        - {}
+      CSD U2 MC Q1_2023:
+        answers:
+        - {}
+        - correct: true
+        - {}
+        - {}
+        - {}
+        questions:
+        - {}
+      CSD U2 MC Q2_2023:
+        answers:
+        - correct: true
+        - {}
+        - {}
+        - correct: true
+        - {}
+        questions:
+        - {}
+      CSD U2 MC Q3_2023:
+        answers:
+        - correct: true
+        - {}
+        - correct: true
+        - {}
+        - {}
+        questions:
+        - {}
+      CSD U2 MC Q4_2023:
+        answers:
+        - {}
+        - correct: true
+        - {}
+        - {}
+        - {}
+        questions:
+        - {}
+      CSD U2 MC Q6_2023:
+        answers:
+        - correct: true
+        - {}
+        - {}
+        - {}
+        - {}
+        questions:
+        - {}
+      CSD U2 MC Q7_2023:
+        answers:
+        - {}
+        - {}
+        - correct: true
+        - {}
+        - {}
+        questions:
+        - {}
+      CSD U2 MC Q8_2023:
+        answers:
+        - {}
+        - {}
+        - correct: true
+        - {}
+        - {}
+        questions:
+        - {}
+      CSD U2 Match Q1_2023:
+        answers:
+        - {}
+        - {}
+        - {}
+        questions:
+        - text: rang
+        - {}
+        - {}
       CSD U2 PSP Programming:
         markdown: |-
           # Dasturlash uchun muammolarni hal qilish jarayoni
@@ -1299,6 +1495,19 @@ uz-UZ:
         - {}
         - {}
         - {}
+      CSD U2 image debug match_2023:
+        answers:
+        - {}
+        - {}
+        - {}
+        - {}
+        - {}
+        questions:
+        - {}
+        - {}
+        - {}
+        - {}
+        - {}
       CSD U2 image debug match_pilot_2021:
         answers:
         - {}
@@ -1426,6 +1635,14 @@ uz-UZ:
           # Rejalarni tekshirish
 
           Qolgan bosqichlarga o'tishga ruxsat berishdan oldin, talabalarning rejalarini tekshiring.
+      CSD U2 project guide_2018_2019_pilot_2023:
+        content1: tafsilotlar bu yerda
+        teacher_markdown: |-
+          # Rejalarni tekshirish
+
+          Qolgan bosqichlarga o'tishga ruxsat berishdan oldin, talabalarning rejalarini tekshiring.
+      CSD U2L2 - Chal_2023:
+        display_name: Chaqiriq bosqichlari
       CSD U3 - conditionals - Matching:
         answers:
         - {}
@@ -1491,6 +1708,19 @@ uz-UZ:
         - {}
         - {}
         - {}
+      CSD U3 - conditionals - Matching_2018_2019_pilot_2023:
+        answers:
+        - {}
+        - text: dog.x &lt; cat.x
+        - text: dog.scale &gt; cat.scale
+        - {}
+        - text: dog.x == cat.x
+        questions:
+        - {}
+        - {}
+        - {}
+        - {}
+        - {}
       CSD U3 Boolean MC:
         answers:
         - correct: true
@@ -1536,6 +1766,15 @@ uz-UZ:
         questions:
         - {}
         title: sarlavha
+      CSD U3 Boolean MC_2018_2019_pilot_2023:
+        answers:
+        - correct: true
+        - {}
+        - {}
+        - {}
+        questions:
+        - {}
+        title: sarlavha
       CSD U3 Card Examples_2018:
         content1: tafsilotlar bu yerda
       CSD U3 Card Examples_2018_2019:
@@ -1572,6 +1811,12 @@ uz-UZ:
         - {}
         - correct: true
         - {}
+      CSD U3 Functions Prediction define first_2018_2019_pilot_2023:
+        answers:
+        - {}
+        - {}
+        - correct: true
+        - {}
       CSD U3 Keypress Matching:
         answers:
         - text: keyWentDown()
@@ -1596,6 +1841,138 @@ uz-UZ:
         - text: keyWentUp()
         - text: keyDown()
         questions:
+        - {}
+        - {}
+        - {}
+      CSD U3 MC Q10_2023:
+        answers:
+        - correct: true
+        - correct: true
+        - {}
+        - {}
+        questions:
+        - {}
+      CSD U3 MC Q11_2023:
+        answers:
+        - {}
+        - correct: true
+        - {}
+        - {}
+        questions:
+        - {}
+      CSD U3 MC Q12_2023:
+        answers:
+        - {}
+        - {}
+        - correct: true
+        - {}
+        - {}
+        questions:
+        - {}
+      CSD U3 MC Q13_2023:
+        answers:
+        - {}
+        - {}
+        - {}
+        - correct: true
+        - {}
+        questions:
+        - {}
+      CSD U3 MC Q14_2023:
+        answers:
+        - text: '0'
+        - text: '1'
+        - text: '5'
+        - correct: true
+          text: '6'
+        - {}
+        questions:
+        - {}
+      CSD U3 MC Q1_2023:
+        answers:
+        - {}
+        - correct: true
+        - {}
+        - {}
+        - {}
+        questions:
+        - {}
+      CSD U3 MC Q2_2023:
+        answers:
+        - {}
+        - correct: true
+        - {}
+        - {}
+        - {}
+        questions:
+        - {}
+      CSD U3 MC Q4_2023:
+        answers:
+        - {}
+        - {}
+        - {}
+        - correct: true
+        - {}
+        questions:
+        - {}
+      CSD U3 MC Q5_2023:
+        answers:
+        - {}
+        - {}
+        - correct: true
+        - {}
+        - {}
+        questions:
+        - {}
+      CSD U3 MC Q6_2023:
+        answers:
+        - {}
+        - {}
+        - correct: true
+        - {}
+        questions:
+        - {}
+      CSD U3 MC Q8_2023:
+        answers:
+        - {}
+        - correct: true
+        - {}
+        - {}
+        - {}
+        questions:
+        - {}
+      CSD U3 Match Q1_2023:
+        answers:
+        - {}
+        - {}
+        - {}
+        - {}
+        questions:
+        - {}
+        - {}
+        - {}
+        - {}
+      CSD U3 Match Q2_2023:
+        answers:
+        - text: x
+        - text: y
+        - text: kenglik
+        - text: balandlik
+        questions:
+        - {}
+        - {}
+        - {}
+        - {}
+      CSD U3 Match Q3_2023:
+        answers:
+        - {}
+        - {}
+        - {}
+        - {}
+        - {}
+        questions:
+        - {}
+        - {}
         - {}
         - {}
         - {}
@@ -1636,6 +2013,15 @@ uz-UZ:
         questions:
         - {}
       CSD U3 Sprite Movement Predict Multi_2018_2019_pilot_2022:
+        answers:
+        - {}
+        - {}
+        - correct: true
+          text: "![](https://images.code.org/7c43fbce8cbbe7c15614203290f806e7-image-1491939169414.gif)"
+        - text: "![](https://images.code.org/c62dbed9a37b03958cb056bf493bd59c-image-1491939175575.gif)"
+        questions:
+        - {}
+      CSD U3 Sprite Movement Predict Multi_2018_2019_pilot_2023:
         answers:
         - {}
         - {}
@@ -1919,9 +2305,30 @@ uz-UZ:
             AM.png
         - text: https://images.code.org/7465035fc6701dcb91731fe9d160b638-image-1523902103481.58.28
             AM.png
+      CSD U3 drawSprites placement match_2023:
+        answers:
+        - text: https://images.code.org/cd11d762b2cb3e36c3d45157b965c968-image-1523901253224.59.08
+            AM.png
+        - text: https://images.code.org/653dff2d49f07341b2f2552747212b34-image-1523901253222.59.21
+            AM.png
+        - text: https://images.code.org/db71e0cde6861faabc0b5a55d67c739e-image-1523901253227.58.12
+            AM.png
+        - text: https://images.code.org/15d6014329fa3da9b73016af9f1d0d74-image-1523901253226.58.34
+            AM.png
+        questions:
+        - text: https://images.code.org/131282b44fe34cd619a9a21bc68888da-image-1523902103487.58.48
+            AM.png,300px
+        - text: https://images.code.org/2fbe4029dc47f6f048e7c9f90ac99cac-image-1523902103485.25.09
+            AM.png
+        - text: https://images.code.org/c4cb49e00f7087765865da87cff37549-image-1523902103477.58.00
+            AM.png
+        - text: https://images.code.org/7465035fc6701dcb91731fe9d160b638-image-1523902103481.58.28
+            AM.png
       CSD U3 drawing practice choice_2021:
         display_name: Amaliyot
       CSD U3 drawing practice choice_2022:
+        display_name: Amaliyot
+      CSD U3 drawing practice choice_2023:
         display_name: Amaliyot
       CSD U3 game intro:
         content1: tafsilotlar bu yerda
@@ -1941,6 +2348,67 @@ uz-UZ:
         content1: tafsilotlar bu yerda
       CSD U3 platform intro_2018_2019_pilot_2022:
         content1: tafsilotlar bu yerda
+      CSD U3 platform intro_2018_2019_pilot_2023:
+        content1: tafsilotlar bu yerda
+      CSD U4 MC Q1_2023:
+        answers:
+        - {}
+        - correct: true
+        - {}
+        - correct: true
+        questions:
+        - {}
+      CSD U4 MC Q2_2023:
+        answers:
+        - {}
+        - correct: true
+        - {}
+        - correct: true
+        questions:
+        - {}
+      CSD U4 MC Q3_2023:
+        answers:
+        - {}
+        - {}
+        - {}
+        - correct: true
+        questions:
+        - {}
+      CSD U4 MC Q4_2023:
+        answers:
+        - {}
+        - correct: true
+        - {}
+        - {}
+        - {}
+        questions:
+        - {}
+      CSD U4 MC Q5_2023:
+        answers:
+        - {}
+        - correct: true
+        - {}
+        - correct: true
+        - {}
+        questions:
+        - {}
+      CSD U4 MC Q8_2023:
+        answers:
+        - {}
+        - correct: true
+        - {}
+        - correct: true
+        questions:
+        - {}
+      CSD U4 MC Q9_2023:
+        answers:
+        - correct: true
+        - {}
+        - {}
+        - correct: true
+        - text: Fikr-mulohaza bildiring
+        questions:
+        - {}
       CSD U4 test feature match:
         answers:
         - {}
@@ -2102,6 +2570,84 @@ uz-UZ:
         content1: tafsilotlar bu yerda
       CSD U5 L13 SFLP Interpreting Data:
         content1: tafsilotlar bu yerda
+      CSD U5 MC Q1_2023:
+        answers:
+        - {}
+        - {}
+        - {}
+        - correct: true
+        - {}
+        questions:
+        - {}
+      CSD U5 MC Q2_2023:
+        answers:
+        - {}
+        - correct: true
+        - correct: true
+        - {}
+        - {}
+        questions:
+        - {}
+      CSD U5 MC Q3_2023:
+        answers:
+        - {}
+        - correct: true
+        questions:
+        - {}
+      CSD U5 MC Q4_2023:
+        answers:
+        - {}
+        - {}
+        - correct: true
+        - {}
+        - {}
+        questions:
+        - {}
+      CSD U5 MC Q5_2023:
+        answers:
+        - {}
+        - {}
+        - {}
+        - correct: true
+        - {}
+        questions:
+        - {}
+      CSD U5 MC Q6_2023:
+        answers:
+        - {}
+        - correct: true
+        - {}
+        - {}
+        - {}
+        questions:
+        - {}
+      CSD U5 MC Q7_2023:
+        answers:
+        - {}
+        - correct: true
+        - {}
+        - {}
+        - {}
+        questions:
+        - {}
+      CSD U5 MC Q8_2023:
+        answers:
+        - {}
+        - correct: true
+        - {}
+        - {}
+        - {}
+        questions:
+        - {}
+      CSD U5 MC Q9_2023:
+        answers:
+        - {}
+        - {}
+        - {}
+        - {}
+        - correct: true
+        questions:
+        - {}
       CSD U5 crosstab warmup:
         content1: tafsilotlar bu yerda
       CSD U5 crosstab warmup_2018:
@@ -2261,29 +2807,73 @@ uz-UZ:
         - {}
         questions:
         - {}
+      CSD U6 - Accelerometer - Chal_2023a_2023:
+        display_name: Chaqiriq bosqichlari
       CSD U6 - Accelerometer - Chal_2222:
+        display_name: Chaqiriq bosqichlari
+      CSD U6 - Accelerometer - Chal_mb2022:
+        display_name: Chaqiriq bosqichlari
+      CSD U6 - Board Inputs - Chal_2023:
         display_name: Chaqiriq bosqichlari
       CSD U6 - Board Inputs - Chal_2222:
         display_name: Chaqiriq bosqichlari
+      CSD U6 - Board Inputs - Chal_mb2022:
+        display_name: Chaqiriq bosqichlari
+      CSD U6 - Board Outputs - Chal_2023:
+        display_name: Chaqiriq bosqichlari
       CSD U6 - Board Outputs - Chal_2222:
+        display_name: Chaqiriq bosqichlari
+      CSD U6 - Board Outputs - Chal_mb2022:
+        display_name: Chaqiriq bosqichlari
+      CSD U6 - Color LEDs - Chal_2023a_2023:
         display_name: Chaqiriq bosqichlari
       CSD U6 - Color LEDs - Chal_2222:
         display_name: Chaqiriq bosqichlari
+      CSD U6 - Combine Inputs - Chal_2023a_2023:
+        display_name: Chaqiriq bosqichlari
       CSD U6 - Combine Inputs - Chal_2222:
+        display_name: Chaqiriq bosqichlari
+      CSD U6 - Combine Inputs - Chal_mb2022:
+        display_name: Chaqiriq bosqichlari
+      CSD U6 - If Variables - Chal_2023:
         display_name: Chaqiriq bosqichlari
       CSD U6 - If Variables - Chal_2222:
         display_name: Chaqiriq bosqichlari
+      CSD U6 - If Variables - Chal_mb2022:
+        display_name: Chaqiriq bosqichlari
+      CSD U6 - Music - Chal_2023:
+        display_name: Chaqiriq bosqichlari
       CSD U6 - Music - Chal_2222:
+        display_name: Chaqiriq bosqichlari
+      CSD U6 - Physical Input - Chal_2023:
         display_name: Chaqiriq bosqichlari
       CSD U6 - Physical Input - Chal_2222:
         display_name: Chaqiriq bosqichlari
+      CSD U6 - Physical Input - Chal_mb2022:
+        display_name: Chaqiriq bosqichlari
+      CSD U6 - Physical Output - Chal_2023:
+        display_name: Chaqiriq bosqichlari
       CSD U6 - Physical Output - Chal_2222:
+        display_name: Chaqiriq bosqichlari
+      CSD U6 - Physical Output - Chal_mb2022:
+        display_name: Chaqiriq bosqichlari
+      CSD U6 - Screen Inputs - Chal_2023:
         display_name: Chaqiriq bosqichlari
       CSD U6 - Screen Inputs - Chal_2222:
         display_name: Chaqiriq bosqichlari
+      CSD U6 - Screen Inputs - Chal_mb2022:
+        display_name: Chaqiriq bosqichlari
+      CSD U6 - Screen Outputs - Chal_2023:
+        display_name: Chaqiriq bosqichlari
       CSD U6 - Screen Outputs - Chal_2222:
         display_name: Chaqiriq bosqichlari
+      CSD U6 - Screen Outputs - Chal_mb2022:
+        display_name: Chaqiriq bosqichlari
+      CSD U6 - Sensors - Chal_2023a_2023:
+        display_name: Chaqiriq bosqichlari
       CSD U6 - Sensors - Chal_2222:
+        display_name: Chaqiriq bosqichlari
+      CSD U6 - Sensors - Chal_mb2022:
         display_name: Chaqiriq bosqichlari
       CSD U6 LED create intro:
         content1: tafsilotlar bu yerda
@@ -2293,6 +2883,132 @@ uz-UZ:
         content1: tafsilotlar bu yerda
       CSD U6 LED create intro_2021:
         content1: tafsilotlar bu yerda
+      CSD U6 MC Q1_2023:
+        answers:
+        - {}
+        - correct: true
+        - {}
+        - correct: true
+        - {}
+        questions:
+        - {}
+      CSD U6 MC Q1_6b2023:
+        answers:
+        - correct: true
+        - {}
+        - correct: true
+        - {}
+        - {}
+        questions:
+        - {}
+      CSD U6 MC Q2_2023:
+        answers:
+        - {}
+        - {}
+        - {}
+        - correct: true
+          text: Accelerometer
+        - {}
+        questions:
+        - {}
+      CSD U6 MC Q2_6b2023:
+        answers:
+        - {}
+        - {}
+        - {}
+        - correct: true
+          text: Accelerometer
+        - text: Chiroq
+        questions:
+        - {}
+      CSD U6 MC Q3_2023:
+        answers:
+        - {}
+        - {}
+        - {}
+        - correct: true
+        questions:
+        - {}
+      CSD U6 MC Q3_6b2023:
+        answers:
+        - {}
+        - {}
+        - {}
+        - correct: true
+        questions:
+        - {}
+      CSD U6 MC Q4_2023:
+        answers:
+        - {}
+        - {}
+        - correct: true
+        - {}
+        - {}
+        questions:
+        - {}
+      CSD U6 MC Q4_6b2023:
+        answers:
+        - {}
+        - {}
+        - correct: true
+        - {}
+        - {}
+        questions:
+        - {}
+      CSD U6 MC Q5_2023:
+        answers:
+        - {}
+        - {}
+        - correct: true
+        - {}
+        - {}
+        questions:
+        - {}
+      CSD U6 MC Q5_6b2023:
+        answers:
+        - {}
+        - {}
+        - correct: true
+        - {}
+        - {}
+        questions:
+        - {}
+      CSD U6 MC Q6_2023:
+        answers:
+        - {}
+        - correct: true
+        - {}
+        - correct: true
+        - {}
+        questions:
+        - {}
+      CSD U6 MC Q6_6b2023:
+        answers:
+        - {}
+        - correct: true
+        - {}
+        - correct: true
+        - {}
+        questions:
+        - {}
+      CSD U6 MC Q7_2023:
+        answers:
+        - {}
+        - {}
+        - {}
+        - correct: true
+        - {}
+        questions:
+        - {}
+      CSD U6 MC Q7_6b2023:
+        answers:
+        - {}
+        - {}
+        - {}
+        - correct: true
+        - {}
+        questions:
+        - {}
       CSD U6 array multi:
         answers:
         - text: https://images.code.org/fc497646edb1fc92a4dfdca09030f294-image-1512686800362.42.54
@@ -2397,7 +3113,25 @@ uz-UZ:
           text: "![](https://images.code.org/b82461e6219e023280c4e22df59071d4-image-1579828841751.png)"
         questions:
         - {}
+      CSD U6 setProperty predict multi_2023:
+        answers:
+        - text: "![](https://images.code.org/1e226012bfa76c84938097e1ff117150-image-1579828841757.png)"
+        - text: "![](https://images.code.org/dc9e1f761ff6a95542f283e2c700f9f1-image-1579828841754.png)"
+        - text: "![](https://images.code.org/f89441dfc9260030feac9de3af2b7d3a-image-1579828841748.png)"
+        - correct: true
+          text: "![](https://images.code.org/b82461e6219e023280c4e22df59071d4-image-1579828841751.png)"
+        questions:
+        - {}
       CSD U6 setProperty predict multi_2222:
+        answers:
+        - text: "![](https://images.code.org/1e226012bfa76c84938097e1ff117150-image-1579828841757.png)"
+        - text: "![](https://images.code.org/dc9e1f761ff6a95542f283e2c700f9f1-image-1579828841754.png)"
+        - text: "![](https://images.code.org/f89441dfc9260030feac9de3af2b7d3a-image-1579828841748.png)"
+        - correct: true
+          text: "![](https://images.code.org/b82461e6219e023280c4e22df59071d4-image-1579828841751.png)"
+        questions:
+        - {}
+      CSD U6 setProperty predict multi_mb2022:
         answers:
         - text: "![](https://images.code.org/1e226012bfa76c84938097e1ff117150-image-1579828841757.png)"
         - text: "![](https://images.code.org/dc9e1f761ff6a95542f283e2c700f9f1-image-1579828841754.png)"
@@ -2538,33 +3272,49 @@ uz-UZ:
         title: 'Foydalanuvchiga qaratilgan dizayn: loyihadan keyingi sinov'
       CSD User Centered Design Post-Project Test_2022:
         title: 'Foydalanuvchiga qaratilgan dizayn: loyihadan keyingi sinov'
+      CSD User Centered Design Post-Project Test_2023:
+        title: 'Foydalanuvchiga qaratilgan dizayn: loyihadan keyingi sinov'
       CSD games cake challenge choice_2021:
         display_name: Chaqiriqlar
       CSD games cake challenge choice_2022:
+        display_name: Chaqiriqlar
+      CSD games cake challenge choice_2023:
         display_name: Chaqiriqlar
       CSD games functions practice choice_2021:
         display_name: Funksiyalar. Amaliyot
       CSD games functions practice choice_2022:
         display_name: Funksiyalar. Amaliyot
+      CSD games functions practice choice_2023:
+        display_name: Funksiyalar. Amaliyot
       CSD games platform challenge choice_2021:
         display_name: Chaqiriqlar
       CSD games platform challenge choice_2022:
+        display_name: Chaqiriqlar
+      CSD games platform challenge choice_2023:
         display_name: Chaqiriqlar
       CSD web conditionals practice choice_2021:
         display_name: Conditionals Practice
       CSD web conditionals practice choice_2022:
         display_name: Conditionals Practice
+      CSD web conditionals practice choice_2023:
+        display_name: Conditionals Practice
       CSD web draw loop practice choice_2021:
         display_name: Amaliyot
       CSD web draw loop practice choice_2022:
+        display_name: Amaliyot
+      CSD web draw loop practice choice_2023:
         display_name: Amaliyot
       CSD web movement practice choice_2021:
         display_name: Amaliyot
       CSD web movement practice choice_2022:
         display_name: Amaliyot
+      CSD web movement practice choice_2023:
+        display_name: Amaliyot
       CSD web text practice choice_2021:
         display_name: Amaliyot
       CSD web text practice choice_2022:
+        display_name: Amaliyot
+      CSD web text practice choice_2023:
         display_name: Amaliyot
       CSP PD Example Question 1:
         answers:
@@ -2592,6 +3342,11 @@ uz-UZ:
 
           Karta o'yinini o'ynang va "Agar men qizil karta olsam, men ball olaman" va "agar men qora kartani tortsam, siz ball olasiz" kabi qoidalarni yaratadilar.
       ConditionalsWithCards-Unplugged2022:
+        markdown: |-
+          # Kartalar bilan shartli bayonotlar
+
+          Karta o'yinini o'ynang va "Agar men qizil karta olsam, men ball olaman" va "agar men qora kartani tortsam, siz ball olasiz" kabi qoidalarni yaratadilar.
+      ConditionalsWithCards-Unplugged2022_2023:
         markdown: |-
           # Kartalar bilan shartli bayonotlar
 
@@ -2739,7 +3494,91 @@ uz-UZ:
 
 
           Tugatgandan so'ng, simulyatsiyangizni boshqalar bilan ulashing. Virus shaharga kelganda boshqalarning sog'lig'ini saqlashga yordam berish uchun nima qilishimiz mumkinligi haqida xabaringizni ulashing.
+      CourseF_outbreak_story2022_2022_pilot_-2022-2_2023:
+        content1: tafsilotlar bu yerda
+        markdown: |
+          # Kasallik: o'zingizning simulyatsiyangizni kodlash
+
+          ## Monster Town-ga xush kelibsiz!
+          Monster Town baxtli va sog'lom joy edi. Monster Town monstrlari do'stlarinikiga borish va mehmon bo'lishni yaxshi ko'rishardi.
+
+          <img src="https://images.code.org/3b55881f776348c6eb32379e4cbd34e1-image-1603133896503.png" style="width:8%"> <img src="https://images.code.org/3b55881f776348c6eb32379e4cbd34e1-image-1603133896503.png" style="width:8%"> <img src="https://images.code.org/3b55881f776348c6eb32379e4cbd34e1-image-1603133896503.png" style="width:8%"> <img src="https://images.code.org/3b55881f776348c6eb32379e4cbd34e1-image-1603133896503.png" style="width:8%"> <img src="https://images.code.org/3b55881f776348c6eb32379e4cbd34e1-image-1603133896503.png" style="width:8%"> <img src="https://images.code.org/3b55881f776348c6eb32379e4cbd34e1-image-1603133896503.png" style="width:8%"> <img src="https://images.code.org/3b55881f776348c6eb32379e4cbd34e1-image-1603133896503.png" style="width:8%"> <img src="https://images.code.org/3b55881f776348c6eb32379e4cbd34e1-image-1603133896503.png" style="width:8%"> <img src="https://images.code.org/3b55881f776348c6eb32379e4cbd34e1-image-1603133896503.png" style="width:8%"> <img src="https://images.code.org/3b55881f776348c6eb32379e4cbd34e1-image-1603133896503.png" style="width:8%"> <img src="https://images.code.org/3b55881f776348c6eb32379e4cbd34e1-image-1603133896503.png" style="width:8%">
+
+          Bir kuni mosnstrlardan biri kasal bo'lib qoldi. U ** virusni ** ushladi! Virus - sizni kasal qilib qo'yadigan mayda jonzot. Boshqa monstrlar juda xavotirlanmadi. Ular do'stlarini ziyorat qilishda davom etishdi.
+
+          <img src="https://images.code.org/3b55881f776348c6eb32379e4cbd34e1-image-1603133896503.png" style="width:8%"> <img src="https://images.code.org/3b55881f776348c6eb32379e4cbd34e1-image-1603133896503.png" style="width:8%"> <img src="https://images.code.org/3b55881f776348c6eb32379e4cbd34e1-image-1603133896503.png" style="width:8%"> <img src="https://images.code.org/3b55881f776348c6eb32379e4cbd34e1-image-1603133896503.png" style="width:8%"> <img src="https://images.code.org/3b55881f776348c6eb32379e4cbd34e1-image-1603133896503.png" style="width:8%"> <img src="https://images.code.org/f30010a430a4189a734467094842b39d-image-1603134238257.png" style="width:8%"> <img src="https://images.code.org/3b55881f776348c6eb32379e4cbd34e1-image-1603133896503.png" style="width:8%"> <img src="https://images.code.org/3b55881f776348c6eb32379e4cbd34e1-image-1603133896503.png" style="width:8%"> <img src="https://images.code.org/3b55881f776348c6eb32379e4cbd34e1-image-1603133896503.png" style="width:8%"> <img src="https://images.code.org/3b55881f776348c6eb32379e4cbd34e1-image-1603133896503.png" style="width:8%"> <img src="https://images.code.org/3b55881f776348c6eb32379e4cbd34e1-image-1603133896503.png" style="width:8%">
+
+          Ko'p o'tmay, yana ikkita monstr kasal bo'lib qoldi. Xuddi shu virus bilan! Aftidan ular virusni do'stidan yuqtirib olishgan.
+
+          <img src="https://images.code.org/3b55881f776348c6eb32379e4cbd34e1-image-1603133896503.png" style="width:8%"> <img src="https://images.code.org/3b55881f776348c6eb32379e4cbd34e1-image-1603133896503.png" style="width:8%"> <img src="https://images.code.org/3b55881f776348c6eb32379e4cbd34e1-image-1603133896503.png" style="width:8%"> <img src="https://images.code.org/3b55881f776348c6eb32379e4cbd34e1-image-1603133896503.png" style="width:8%"> <img src="https://images.code.org/f30010a430a4189a734467094842b39d-image-1603134238257.png" style="width:8%"> <img src="https://images.code.org/f30010a430a4189a734467094842b39d-image-1603134238257.png" style="width:8%"> <img src="https://images.code.org/f30010a430a4189a734467094842b39d-image-1603134238257.png" style="width:8%"> <img src="https://images.code.org/3b55881f776348c6eb32379e4cbd34e1-image-1603133896503.png" style="width:8%"> <img src="https://images.code.org/3b55881f776348c6eb32379e4cbd34e1-image-1603133896503.png" style="width:8%"> <img src="https://images.code.org/3b55881f776348c6eb32379e4cbd34e1-image-1603133896503.png" style="width:8%"> <img src="https://images.code.org/3b55881f776348c6eb32379e4cbd34e1-image-1603133896503.png" style="width:8%">
+
+          Virus asta-sekin yaqin atrofdagi boshqa monstrlarga tarqaldi. Sog'lom monstrlarning barchasi kasal bo'lib qolishidan xavotirlana boshladi. Kasal monstrlar virusni boshqalarga yuqtirishdan xavotirlana boshladi.
+
+          <img src="https://images.code.org/3b55881f776348c6eb32379e4cbd34e1-image-1603133896503.png" style="width:8%"> <img src="https://images.code.org/3b55881f776348c6eb32379e4cbd34e1-image-1603133896503.png" style="width:8%"> <img src="https://images.code.org/3b55881f776348c6eb32379e4cbd34e1-image-1603133896503.png" style="width:8%"> <img src="https://images.code.org/f30010a430a4189a734467094842b39d-image-1603134238257.png" style="width:8%"> <img src="https://images.code.org/f30010a430a4189a734467094842b39d-image-1603134238257.png" style="width:8%"> <img src="https://images.code.org/f30010a430a4189a734467094842b39d-image-1603134238257.png" style="width:8%"> <img src="https://images.code.org/f30010a430a4189a734467094842b39d-image-1603134238257.png" style="width:8%"> <img src="https://images.code.org/f30010a430a4189a734467094842b39d-image-1603134238257.png" style="width:8%"> <img src="https://images.code.org/3b55881f776348c6eb32379e4cbd34e1-image-1603133896503.png" style="width:8%"> <img src="https://images.code.org/3b55881f776348c6eb32379e4cbd34e1-image-1603133896503.png" style="width:8%"> <img src="https://images.code.org/3b55881f776348c6eb32379e4cbd34e1-image-1603133896503.png" style="width:8%">
+
+
+          <div style="display: inline-block">
+          <img src="https://images.code.org/89376b9ebd5fcee77545f13a7a444430-image-1603135356392.png" style="float:right; width:30%">
+
+          ## Tarqatishni to'xtatish
+          Yaxshiyamki, virusni o'rgangandan so'ng, Monster Town-ning qo'shnilari muhim kashfiyot qilishdi. Agar ular og'ziga niqob kiysalar, virusni yuqtirish ehtimoli kamligini angladilar. Yuz maskalari bilan kasallangan monstrlar sog'lom monstrlarga virusni berish ehtimoli kamroq edi.
+
+          <img src="https://images.code.org/c98f28f9bf6a027143592109d59ee484-image-1603134766360.png" style="width:8%"> <img src="https://images.code.org/bac9dbfaf1815c6627fc24e8e6db396d-image-1603134760456.png" style="width:8%">
+
+          </div>
+
+          <img src="https://images.code.org/ef7499758496b39bcccc24aabd2af5d7-image-1603137920037.2020-10-19 16_04_58.gif" style="float:left; width:25%; padding-right:25px">
+
+          ## Keyin nima bo'ladi?
+
+          Bugun siz Monster Town-da virusning ** simulyatsiyasini ** yaratish va boshqarish uchun kod yozasiz. Simulyatsiya - bu jarayon yoki tizimning kompyuter modeli. Monster Town qo'shnilari bilan nima sodir bo'lishi haqida kod yozishni va bashorat qilishni o'rganing.
+
+          <img src="https://images.code.org/fcbfd250d58652bdfd6393ec4f2fe2dd-image-1603134705074.png" style="float:right; width:15%">
+
+          * * Virus qanchalik tez tarqaladi? *
+
+          * * Hamma kasal bo'lib qoladimi? *
+
+          * * Yuz maskalari qanday yordam beradi? *
+
+
+          Tugatgandan so'ng, simulyatsiyangizni boshqalar bilan ulashing. Virus shaharga kelganda boshqalarning sog'lig'ini saqlashga yordam berish uchun nima qilishimiz mumkinligi haqida xabaringizni ulashing.
       CourseF_outbreak_story22022_2022_pilot_-2022-2:
+        content1: tafsilotlar bu yerda
+        markdown: |-
+          # Kasallik: Olim kabi fikrlash
+
+          <img src="https://images.code.org/89376b9ebd5fcee77545f13a7a444430-image-1603135356392.png" style="float:right; width:30%">
+
+          Simulyatsiyalar - bu haqiqiy dunyoda kuzatilishi qiyin bo'lgan narsalarni o'rganishning ajoyib usuli. Ular olimlarga muammolarni hal qilishda va yangi g'oyalarni xavfsiz va samarali sinovdan o'tkazishda yordam beradi. Sizning simulyatsiyaingiz Monster Town shahrida virus tarqalishi ko'rsatadigan usuldir.
+
+          ## Qayta tiklash va takrorlash!
+          Kodni o'zingiz yozganingizda ham, run tugmachasini bosganingizda nima bo'lishini aniq bilmaysiz. Monstrlar tasodifiy yaradi, shuning uchun virus tez tarqaladimi yoki sekin tarqaladimi, bilmaysiz. Har kodingizni o'zgartirganingizda, simulyatsiyani bir necha marta ishlatib ko'ring. Hech narsa ikki marta takrorlanmaydi!
+
+          ## Ma'lumotlarni yig'ish
+          Simulyatsiyani amalga oshirayotganda kuzatuvlaringizni yozib ko'ring. Ishlarning qanchalik tez sodir bo'lishini ko'rish uchun siz kasal bo'lib qolgan hayvonlar sonini hisoblashingiz yoki taymerdan foydalanishingiz mumkin. Masalan, hech qanday niqob bo'lmasa, barcha hayvonlarning kasal bo'lishlari odatda qancha vaqtni oladi?
+
+          ## Bashorat qilish
+          Agar siz modelingizni tushunsangiz, undan bashorat qilish uchun foydalanishingiz mumkin. Siz hatto simulyatsiya qanday ishlashini o'zgartirishingiz va nima bo'lishini taxmin qilishingiz mumkin. Masalan:
+          * Agar ikki baravar ko'p monstrlar bo'lsa, nima bo'ladi?
+          * Monstrlar yarim tezlikda harakat qilsalar nima bo'ladi?
+
+          <img src="https://images.code.org/2e83373ffd346ce3f42917a0624d441c-image-1603749526420.png" style="float:right">
+
+          ## Monster Town haqiqiy dunyoga o'xshaydimi?
+          Har qanday modelni aniqlik chegarasi bor.
+          * Sizningcha tarqalishni simulyatsiya qilishning haqiqiy dunyo viruslari bilan umumiyligi nimada?
+          * Qanday farqlar mavjud?
+          Ushbu mashg'ulotni tugatgandan so'ng, bu savollarni o'qituvchilar yoki oilangiz bilan muhokama qiling!
+
+          ## Yana nimani modellashtirishimiz mumkin?
+          Siz allaqachon Monster Town-da epidemiyaning ishchi modelini yaratdingiz. Sizning simulyatsiya qila olmagan yoki xohlaganingizni ko'rsatadigan narsalar nimada? Davom eting va undan ham ko'proq modellashni o'rganing:
+          * Simulyatsiyada hayvonlar sonini ko'paytirish
+          * Monstrlarga virusni tiklashda yordam berish
+          * Ehtimollar, immunitet, vaksinalar va boshqalar!
+
+          Siz simulyatsiya modelingizni boshqalar bilan ulashishingiz yoki shaharga virus kelganda boshqalarning sog'lig'ini saqlashga yordam berish uchun nima qilishimiz mumkinligi haqida dikr almashishingiz mumkin.
+      CourseF_outbreak_story22022_2022_pilot_-2022-2_2023:
         content1: tafsilotlar bu yerda
         markdown: |-
           # Kasallik: Olim kabi fikrlash
@@ -2946,6 +3785,16 @@ uz-UZ:
           * Imkoniyati cheklanganlar uchun qulay bo'lgan dasturlarni loyihalashtirish ushbu dasturlarni boshqalar uchun ham yaxshilaydi!
 
           ![](https://images.code.org/0c670d0d9078657a870df0ca799492cb-image-1557166420066.png)
+      DesigningForAccessibilityMarkdownLevel2022_2023:
+        markdown: |
+          # Erishuvchanlik (Accessibility) uchun dizayn
+
+          * Informatika dunyosida ** erishuvchanlik ** bu imkoniyati cheklanganlar uchun texnologiyalarni yaratishdir.
+          * Cheklangan imkoniyatlar jismoniy, eshitish, ko'rish va boshqalarni o'z ichiga oladi.
+          * Cheklangan imkoniyatlar turli xil va odamlarga turli xil ta'sir ko'rsatadi, shu jumladan ular **smartfon ilovalari** kabi texnologiyalardan qanday foydalanishiga.
+          * Imkoniyati cheklanganlar uchun qulay bo'lgan dasturlarni loyihalashtirish ushbu dasturlarni boshqalar uchun ham yaxshilaydi!
+
+          ![](https://images.code.org/0c670d0d9078657a870df0ca799492cb-image-1557166420066.png)
       DesigningForAccessibilityMarkdownLevel_2019:
         markdown: |
           # Erishuvchanlik (Accessibility) uchun dizayn
@@ -2994,6 +3843,11 @@ uz-UZ:
           # Sikllanish
 
           Ushbu dars raqs harakatlari orqali sikllarni dasturlash bilan tanishtiradi.
+      GettingLoopy-Unplugged2022_2023:
+        markdown: |-
+          # Sikllanish
+
+          Ushbu dars raqs harakatlari orqali sikllarni dasturlash bilan tanishtiradi.
       GettingLoopy-Unplugged_2020:
         markdown: |-
           # Sikllanish
@@ -3014,6 +3868,11 @@ uz-UZ:
           # Katakli qog'ozda dasturlash
 
           Sinfdoshlaringiz rasm chizishda foydalanishi mumkin bo'lgan algoritmlarni yozing.
+      GraphPaperProgramming-Unplugged2022_2023:
+        markdown: |-
+          # Katakli qog'ozda dasturlash
+
+          Sinfdoshlaringiz rasm chizishda foydalanishi mumkin bo'lgan algoritmlarni yozing.
       GraphPaperProgramming-Unplugged_2020:
         markdown: |-
           # Katakli qog'ozda dasturlash
@@ -3030,6 +3889,11 @@ uz-UZ:
 
           Qahramonni labirint orqali o'tkazish uchun algoritm yarating.
       HappyMaps-Unplugged2022:
+        markdown: |-
+          # Baxtli xaritalar
+
+          Qahramonni labirint orqali o'tkazish uchun algoritm yarating.
+      HappyMaps-Unplugged2022_2023:
         markdown: |-
           # Baxtli xaritalar
 
@@ -3252,6 +4116,11 @@ uz-UZ:
           # Harakatlan, harakatlan
 
           Maqsadga erishish uchun xaritadan foydalaning va buyruqlar bering.
+      MoveItMoveIt-Unplugged2022_2023:
+        markdown: |-
+          # Harakatlan, harakatlan
+
+          Maqsadga erishish uchun xaritadan foydalaning va buyruqlar bering.
       MoveItMoveIt-Unplugged_2020:
         markdown: |-
           # Harakatlan, harakatlan
@@ -3284,6 +4153,11 @@ uz-UZ:
           # Mening sikllashtirilgan Robot Do'stlarim
 
           Sikl yordamida dasturlaringizni qisqartiring!
+      MyLoopyRoboticFriends-Unplugged2022_2023:
+        markdown: |-
+          # Mening sikllashtirilgan Robot Do'stlarim
+
+          Sikl yordamida dasturlaringizni qisqartiring!
       MyLoopyRoboticFriends-Unplugged_2020:
         markdown: |-
           # Mening sikllashtirilgan Robot Do'stlarim
@@ -3300,6 +4174,11 @@ uz-UZ:
 
           Do'stlaringiz uchun kod yozish orqali dasturlashni o'rganing!
       MyRoboticFriends-Unplugged2022:
+        markdown: |-
+          # Mening robot do'stlarim
+
+          Do'stlaringiz uchun kod yozish orqali dasturlashni o'rganing!
+      MyRoboticFriends-Unplugged2022_2023:
         markdown: |-
           # Mening robot do'stlarim
 
@@ -5516,6 +6395,11 @@ uz-UZ:
           #So'z kuchi
 
           ## Agar kimdir internetda qo'pol yoki haqoratli so'z ishlatsa, nima qilish kerak?
+      PowerOfWords-Unplugged2022_2022_pilot_-2022-2_2023:
+        markdown: |-
+          #So'z kuchi
+
+          ## Agar kimdir internetda qo'pol yoki haqoratli so'z ishlatsa, nima qilish kerak?
       PowerOfWords-Unplugged_2020:
         markdown: |-
           #So'z kuchi
@@ -5549,6 +6433,11 @@ uz-UZ:
           # Maxfiy va shaxsiy ma'lumotlar
 
           ## O'zingiz haqingizda qanday maʼlumotlarni internetda ulashishingiz mumkin?
+      PrivatePersonalInformation-Unplugged2022_2023:
+        markdown: |-
+          # Maxfiy va shaxsiy ma'lumotlar
+
+          ## O'zingiz haqingizda qanday maʼlumotlarni internetda ulashishingiz mumkin?
       PrivatePersonalInformation-Unplugged_2020:
         markdown: |-
           # Maxfiy va shaxsiy ma'lumotlar
@@ -5565,6 +6454,11 @@ uz-UZ:
 
           Jamoalarga bo'lining va birgalikda rasm chizish uchun dasturlarni yozing.
       RelayProgramming-Unplugged2022:
+        markdown: |-
+          # Navbatda dasturlash
+
+          Jamoalarga bo'lining va birgalikda rasm chizish uchun dasturlarni yozing.
+      RelayProgramming-Unplugged2022_2023:
         markdown: |-
           # Navbatda dasturlash
 
@@ -5603,6 +6497,11 @@ uz-UZ:
           # Qo'shiq yozish
 
           Talabalar funksiyalarni aniqlash va chaqirish haqida ma'lumot olish uchun qo'shiqdagi xor tushunchasidan foydalanadilar
+      Songwriting-Unplugged2022_2023:
+        markdown: |-
+          # Qo'shiq yozish
+
+          Talabalar funksiyalarni aniqlash va chaqirish haqida ma'lumot olish uchun qo'shiqdagi xor tushunchasidan foydalanadilar
       Songwriting-Unplugged_2020:
         markdown: |-
           # Qo'shiq yozish
@@ -5622,7 +6521,147 @@ uz-UZ:
         - correct: true
         questions:
         - {}
+      Student End of Unit Survey - Q1_2023:
+        answers:
+        - correct: true
+        - correct: true
+        - correct: true
+        - correct: true
+        - correct: true
+        questions:
+        - {}
+      Student End of Unit Survey - Q1_copy1_2023:
+        answers:
+        - correct: true
+        - correct: true
+        - correct: true
+        - correct: true
+        - correct: true
+        questions:
+        - {}
+      Student End of Unit Survey - Q1_copy2_2023:
+        answers:
+        - correct: true
+        - correct: true
+        - correct: true
+        - correct: true
+        - correct: true
+        questions:
+        - {}
+      Student End of Unit Survey - Q1_copy3_2023:
+        answers:
+        - correct: true
+        - correct: true
+        - correct: true
+        - correct: true
+        - correct: true
+        questions:
+        - {}
+      Student End of Unit Survey - Q1_copy4_2023:
+        answers:
+        - correct: true
+        - correct: true
+        - correct: true
+        - correct: true
+        - correct: true
+        questions:
+        - {}
+      Student End of Unit Survey - Q1_copy5_2023:
+        answers:
+        - correct: true
+        - correct: true
+        - correct: true
+        - correct: true
+        - correct: true
+        questions:
+        - {}
+      Student End of Unit Survey - Q1_copy6_2023:
+        answers:
+        - correct: true
+        - correct: true
+        - correct: true
+        - correct: true
+        - correct: true
+        questions:
+        - {}
       Student End of Unit Survey - Q2_2022:
+        answers:
+        - correct: true
+        - correct: true
+        - correct: true
+        - correct: true
+        - correct: true
+        - correct: true
+        - correct: true
+        questions:
+        - {}
+      Student End of Unit Survey - Q2_2023:
+        answers:
+        - correct: true
+        - correct: true
+        - correct: true
+        - correct: true
+        - correct: true
+        - correct: true
+        - correct: true
+        questions:
+        - {}
+      Student End of Unit Survey - Q2_copy1_2023:
+        answers:
+        - correct: true
+        - correct: true
+        - correct: true
+        - correct: true
+        - correct: true
+        - correct: true
+        - correct: true
+        questions:
+        - {}
+      Student End of Unit Survey - Q2_copy2_2023:
+        answers:
+        - correct: true
+        - correct: true
+        - correct: true
+        - correct: true
+        - correct: true
+        - correct: true
+        - correct: true
+        questions:
+        - {}
+      Student End of Unit Survey - Q2_copy3_2023:
+        answers:
+        - correct: true
+        - correct: true
+        - correct: true
+        - correct: true
+        - correct: true
+        - correct: true
+        - correct: true
+        questions:
+        - {}
+      Student End of Unit Survey - Q2_copy4_2023:
+        answers:
+        - correct: true
+        - correct: true
+        - correct: true
+        - correct: true
+        - correct: true
+        - correct: true
+        - correct: true
+        questions:
+        - {}
+      Student End of Unit Survey - Q2_copy5_2023:
+        answers:
+        - correct: true
+        - correct: true
+        - correct: true
+        - correct: true
+        - correct: true
+        - correct: true
+        - correct: true
+        questions:
+        - {}
+      Student End of Unit Survey - Q2_copy6_2023:
         answers:
         - correct: true
         - correct: true
@@ -5724,6 +6763,13 @@ uz-UZ:
           Internetni o'rganish kabi ishlarni bajarishda yordam beradi.\n* Dasturchilar
           boshqalarning ehtiyojlarini tushunishlari va ularni hisobga olgan holda
           dasturlarni loyihalashlari muhimdir!\n\n![](https://images.code.org/fb17eeb9238d2f26c6ab40c9841517a7-image-1555611687284.png)"
+      TheRightAppMarkdownLevel2022_2023:
+        markdown: "# The Right App\n\n* Hozirgi kunda hamma kompyuterlardan, ayniqsa,
+          smartfonlardan foydalanmoqda. \n* Smartfon ilovasi yoki \"app\" odamlarga
+          do'stlari bilan suhbatlashish, musiqa tinglash, xarid qilish yoki shunchaki
+          Internetni o'rganish kabi ishlarni bajarishda yordam beradi.\n* Dasturchilar
+          boshqalarning ehtiyojlarini tushunishlari va ularni hisobga olgan holda
+          dasturlarni loyihalashlari muhimdir!\n\n![](https://images.code.org/fb17eeb9238d2f26c6ab40c9841517a7-image-1555611687284.png)"
       TheRightAppMarkdownLevel_2019:
         markdown: "# The Right App\n\n* Hozirgi kunda hamma kompyuterlardan, ayniqsa,
           smartfonlardan foydalanmoqda. \n* Smartfon ilovasi yoki \"app\" odamlarga
@@ -5782,6 +6828,17 @@ uz-UZ:
         - correct: true
         questions:
         - {}
+      aiml-ch1-pulse-survey-q1_2023:
+        answers:
+        - correct: true
+        - correct: true
+        - correct: true
+        - correct: true
+        - correct: true
+        - correct: true
+        - correct: true
+        questions:
+        - {}
       aiml-ch1-pulse-survey-q2_2021:
         answers:
         - correct: true
@@ -5794,6 +6851,17 @@ uz-UZ:
         questions:
         - {}
       aiml-ch1-pulse-survey-q2_2022:
+        answers:
+        - correct: true
+        - correct: true
+        - correct: true
+        - correct: true
+        - correct: true
+        - correct: true
+        - correct: true
+        questions:
+        - {}
+      aiml-ch1-pulse-survey-q2_2023:
         answers:
         - correct: true
         - correct: true
@@ -5826,6 +6894,17 @@ uz-UZ:
         - correct: true
         questions:
         - {}
+      aiml-ch1-pulse-survey-q3_2023:
+        answers:
+        - correct: true
+        - correct: true
+        - correct: true
+        - correct: true
+        - correct: true
+        - correct: true
+        - correct: true
+        questions:
+        - {}
       aiml-ch1-pulse-survey-q4_2021:
         answers:
         - correct: true
@@ -5838,6 +6917,17 @@ uz-UZ:
         questions:
         - {}
       aiml-ch1-pulse-survey-q4_2022:
+        answers:
+        - correct: true
+        - correct: true
+        - correct: true
+        - correct: true
+        - correct: true
+        - correct: true
+        - correct: true
+        questions:
+        - {}
+      aiml-ch1-pulse-survey-q4_2023:
         answers:
         - correct: true
         - correct: true
@@ -5870,6 +6960,17 @@ uz-UZ:
         - correct: true
         questions:
         - {}
+      aiml-ch1-pulse-survey-q5_2023:
+        answers:
+        - correct: true
+        - correct: true
+        - correct: true
+        - correct: true
+        - correct: true
+        - correct: true
+        - correct: true
+        questions:
+        - {}
       aiml-intro-pulse-survey-q1_2021:
         answers:
         - correct: true
@@ -5878,6 +6979,13 @@ uz-UZ:
         questions:
         - {}
       aiml-intro-pulse-survey-q1_2022:
+        answers:
+        - correct: true
+        - correct: true
+        - correct: true
+        questions:
+        - {}
+      aiml-intro-pulse-survey-q1_2023:
         answers:
         - correct: true
         - correct: true
@@ -5898,6 +7006,13 @@ uz-UZ:
         - correct: true
         questions:
         - {}
+      aiml-intro-pulse-survey-q2_2023:
+        answers:
+        - correct: true
+        - correct: true
+        - correct: true
+        questions:
+        - {}
       aiml-intro-pulse-survey-q3_2021:
         answers:
         - correct: true
@@ -5910,6 +7025,17 @@ uz-UZ:
         questions:
         - {}
       aiml-intro-pulse-survey-q3_2022:
+        answers:
+        - correct: true
+        - correct: true
+        - correct: true
+        - correct: true
+        - correct: true
+        - correct: true
+        - correct: true
+        questions:
+        - {}
+      aiml-intro-pulse-survey-q3_2023:
         answers:
         - correct: true
         - correct: true
@@ -5942,6 +7068,17 @@ uz-UZ:
         - correct: true
         questions:
         - {}
+      aiml-intro-pulse-survey-q4_2023:
+        answers:
+        - correct: true
+        - correct: true
+        - correct: true
+        - correct: true
+        - correct: true
+        - correct: true
+        - correct: true
+        questions:
+        - {}
       aiml-intro-pulse-survey-q5_2021:
         answers:
         - correct: true
@@ -5954,6 +7091,17 @@ uz-UZ:
         questions:
         - {}
       aiml-intro-pulse-survey-q5_2022:
+        answers:
+        - correct: true
+        - correct: true
+        - correct: true
+        - correct: true
+        - correct: true
+        - correct: true
+        - correct: true
+        questions:
+        - {}
+      aiml-intro-pulse-survey-q5_2023:
         answers:
         - correct: true
         - correct: true
@@ -6043,6 +7191,17 @@ uz-UZ:
         - correct: true
         questions:
         - {}
+      be-myself-in-cs_mb2022:
+        answers:
+        - correct: true
+        - correct: true
+        - correct: true
+        - correct: true
+        - correct: true
+        - correct: true
+        - correct: true
+        questions:
+        - {}
       behaviors 1 predict:
         answers:
         - feedback: Noto'g'ri.
@@ -6090,6 +7249,17 @@ uz-UZ:
         - correct: true
         questions:
         - {}
+      comfortable-in-cs-class_mb2022:
+        answers:
+        - correct: true
+        - correct: true
+        - correct: true
+        - correct: true
+        - correct: true
+        - correct: true
+        - correct: true
+        questions:
+        - {}
       confident-ability-to-learn:
         answers:
         - correct: true
@@ -6102,6 +7272,28 @@ uz-UZ:
         questions:
         - {}
       confident-ability-to-learn_2022:
+        answers:
+        - correct: true
+        - correct: true
+        - correct: true
+        - correct: true
+        - correct: true
+        - correct: true
+        - correct: true
+        questions:
+        - {}
+      confident-ability-to-learn_2023:
+        answers:
+        - correct: true
+        - correct: true
+        - correct: true
+        - correct: true
+        - correct: true
+        - correct: true
+        - correct: true
+        questions:
+        - {}
+      confident-ability-to-learn_mb2022:
         answers:
         - correct: true
         - correct: true
@@ -6153,13 +7345,27 @@ uz-UZ:
           text: yo‘q
         questions:
         - {}
+      counselor_encourage_2023:
+        answers:
+        - correct: true
+          text: ha
+        - correct: true
+          text: yo‘q
+        questions:
+        - {}
       courseAB_EOC2022:
+        description: Siz oxirgi darsga keldingiz! Endi ijod qilish uchun loyiha tanlang.
+        display_name: End of Course Project
+      courseAB_EOC2022_2023:
         description: Siz oxirgi darsga keldingiz! Endi ijod qilish uchun loyiha tanlang.
         display_name: End of Course Project
       courseAB_EOC_2021:
         description: Siz oxirgi darsga keldingiz! Endi ijod qilish uchun loyiha tanlang.
         display_name: End of Course Project
       courseB_EOC2022:
+        description: Siz oxirgi darsga keldingiz! Endi ijod qilish uchun loyiha tanlang.
+        display_name: End of Course Project
+      courseB_EOC2022_2023:
         description: Siz oxirgi darsga keldingiz! Endi ijod qilish uchun loyiha tanlang.
         display_name: End of Course Project
       courseB_EOC_2021:
@@ -6180,6 +7386,20 @@ uz-UZ:
         - text: Quyidagi kodga diqqat bilan qarang. "Run" tugmasini bosganingizda
             nima bo‘ladi?
       courseC_multi_artist_prog6_predict12022:
+        answers:
+        - feedback: Noto‘g’ri. Rassom kvadrat chizadi.
+          text: Rassom uchta teng tomonli uchburchak chizadi.
+        - feedback: Noto‘g’ri. Rassom kvadrat chizadi.
+          text: Rassom bitta chiziq chizadi.
+        - correct: true
+          feedback: To‘g’ri!
+          text: Rassom bitta kvadrat chizadi.
+        - feedback: Noto‘g’ri. Rassom kvadrat chizadi.
+          text: Rassom bitta beshburchak chizadi.
+        questions:
+        - text: Quyidagi kodga diqqat bilan qarang. "Run" tugmasini bosganingizda
+            nima bo‘ladi?
+      courseC_multi_artist_prog6_predict12022_2023:
         answers:
         - feedback: Noto‘g’ri. Rassom kvadrat chizadi.
           text: Rassom uchta teng tomonli uchburchak chizadi.
@@ -6283,6 +7503,23 @@ uz-UZ:
         questions:
         - text: Quyidagi kodga diqqat bilan qarang.  "Run"tugmasini bosgandan so‘ng,
             fermer qancha qovoq yig’adi?
+      courseC_multi_harvester_loops11_predict12022_2023:
+        answers:
+        - feedback: Noto‘g’ri. Fermer har 3 siklda 4 tadan qovoq yig‘adi. 3 karra
+            4 12 ga teng bo‘ladi!
+          text: '4'
+        - correct: true
+          feedback: To‘g’ri!
+          text: '12'
+        - feedback: Noto‘g’ri. Fermer har 3 siklda 4 tadan qovoq yig‘adi. 3 karra
+            4 12 ga teng bo‘ladi!
+          text: '15'
+        - feedback: Noto‘g’ri. Fermer har 3 siklda 4 tadan qovoq yig‘adi. 3 karra
+            4 12 ga teng bo‘ladi!
+          text: '20'
+        questions:
+        - text: Quyidagi kodga diqqat bilan qarang.  "Run"tugmasini bosgandan so‘ng,
+            fermer qancha qovoq yig’adi?
       courseC_multi_harvester_loops11_predict1_2018:
         answers:
         - feedback: Noto‘g’ri. Fermer har 3 siklda 4 tadan qovoq yig‘adi. 3 karra
@@ -6369,6 +7606,18 @@ uz-UZ:
         - text: Quyidagi kodga diqqat bilan qarang. Ushbu dastur ishlamay qoladigan
             birinchi xato nima?
       courseC_multi_maze_debugging8_predict12022:
+        answers:
+        - text: Skrat daraxtga yetib boradi. Kodda hech qanday xatolik yo'q.
+        - correct: true
+          text: Skrat yong'oqqa yetib bormaydi, chunki u noto'g'ri tomonga buriladi.
+        - text: Skrat yong'oqqa yetib bormaydi, chunki "oldinga siljish" bloklari
+            yetarli emas.
+        - feedback: Skrat yong'oqqa yetib bormaydi, chunki u noto'g'ri tomonga buriladi.
+          text: Scrat birinchi blokdan qimirlamaydi.
+        questions:
+        - text: Ushbu koddagi xatolarni qidirib toping. Skrat eman yong'og'iga yetib
+            boradimi yoki biror nosozlik bormi?
+      courseC_multi_maze_debugging8_predict12022_2023:
         answers:
         - text: Skrat daraxtga yetib boradi. Kodda hech qanday xatolik yo'q.
         - correct: true
@@ -6486,6 +7735,20 @@ uz-UZ:
         questions:
         - text: Quyidagi kodni diqqat bilan o‘qing. "Run"tugmasini bosganingizda nima
             sodir bo‘ladi??
+      courseC_multi_maze_programming8_predict12022_2023:
+        answers:
+        - feedback: Noto‘g’ri. Ushbu kod qushni cho‘chqaga juda yaxshi yetkazadi.
+          text: Oxirida qush cho‘chqadan bir qadam ortda bo‘ladi.
+        - correct: true
+          feedback: To‘g’ri!
+          text: Qush cho‘chqaga yetib boradi.
+        - feedback: Noto‘g’ri. Ushbu kod qushni cho‘chqaga juda yaxshi yetkazadi.
+          text: Qush TNT ga tushadi.
+        - feedback: Noto‘g’ri. Ushbu kod qushni cho‘chqaga juda yaxshi yetkazadi.
+          text: Qush devorga tegadi.
+        questions:
+        - text: Quyidagi kodni diqqat bilan o‘qing. "Run"tugmasini bosganingizda nima
+            sodir bo‘ladi??
       courseC_multi_maze_programming8_predict1_2018:
         answers:
         - feedback: Noto‘g’ri. Ushbu kod qushni cho‘chqaga juda yaxshi yetkazadi.
@@ -6558,6 +7821,22 @@ uz-UZ:
         questions:
         - text: Sizningcha "Run" tugmasini bosganingizda nima bo‘ladi?
       courseC_multi_starWars_predict12022:
+        answers:
+        - feedback: Noto‘g’ri. Takroriy blok BB-8ni 5 marta oldinga siljitishga majbur
+            qiladi.
+          text: BB-8 harakatlanmaydi.
+        - feedback: Noto‘g’ri. Takroriy blok BB-8ni 5 marta oldinga siljitishga majbur
+            qiladi.
+          text: BB-8 faqat bitta maydonni harakatga keltiradi
+        - correct: true
+          feedback: To‘g’ri!
+          text: BB-8 5 marotaba harakatlanadi va barcha metallolomlarni oladi
+        - feedback: Noto‘g’ri. Takroriy blok BB-8ni 5 marta oldinga siljitishga majbur
+            qiladi.
+          text: BB-8 faqat uchta maydonni harakatga keltiradi.
+        questions:
+        - text: Sizningcha "Run" tugmasini bosganingizda nima bo‘ladi?
+      courseC_multi_starWars_predict12022_2023:
         answers:
         - feedback: Noto‘g’ri. Takroriy blok BB-8ni 5 marta oldinga siljitishga majbur
             qiladi.
@@ -6670,6 +7949,24 @@ uz-UZ:
         questions:
         - text: Quyidagi kodga diqqat bilan qarang. "Run" tugmasini bossangiz nima
             bo‘ladi?
+      courseC_multi_starWars_predict22022_2023:
+        answers:
+        - feedback: Noto‘g’ri. Birinchi sikl BB-8 ga faqat 3 ta oraliq oldinga yurish
+            kerak bo‘lganda, ikkita oraliq oldinga yurishga imkon beradi.
+          text: BB-8 birinchi siklda juda uzoqqa boradi.
+        - correct: true
+          feedback: To‘g’ri!
+          text: BB-8 barcha metallolomlarni olish uchun birinchi sikl bo‘yicha yetarlicha
+            uzoq yurmaydi.
+        - feedback: Noto‘g’ri. Birinchi sikl BB-8 ga faqat 3 ta oraliq oldinga yurish
+            kerak bo‘lganda, ikkita oraliq oldinga yurishga imkon beradi.
+          text: BB-8 barcha metallolomlarni muammosiz yig’adi.
+        - feedback: Noto‘g’ri. Birinchi sikl BB-8 ga faqat 3 ta oraliq oldinga yurish
+            kerak bo‘lganda, ikkita oraliq oldinga yurishga imkon beradi.
+          text: BB-8 birinchi sikldan keyin noto'g'ri tomonga buriladi.
+        questions:
+        - text: Quyidagi kodga diqqat bilan qarang. "Run" tugmasini bossangiz nima
+            bo‘ladi?
       courseC_multi_starWars_predict2_2018:
         answers:
         - feedback: Noto‘g’ri. Birinchi sikl BB-8 ga faqat 3 ta oraliq oldinga yurish
@@ -6745,6 +8042,9 @@ uz-UZ:
       courseD_EOC2022:
         description: Siz D kursini yakunladingiz! Endi ijod qilish uchun loyiha tanlang.
         display_name: End of Course Project
+      courseD_EOC2022_2023:
+        description: Siz D kursini yakunladingiz! Endi ijod qilish uchun loyiha tanlang.
+        display_name: End of Course Project
       courseD_EOC_2020:
         description: Siz D kursini yakunladingiz! Endi ijod qilish uchun loyiha tanlang.
         display_name: End of Course Project
@@ -6752,6 +8052,10 @@ uz-UZ:
         description: Siz D kursini yakunladingiz! Endi ijod qilish uchun loyiha tanlang.
         display_name: End of Course Project
       courseD_EOC_examples2022:
+        description: Siz yakuniy loyihangizni boshlamoqchisiz. Ishni boshlashdan oldin,
+          namunali loyihalarni ko'rib chiqishga vaqt ajrating.
+        display_name: Loyiha namunalari
+      courseD_EOC_examples2022_2023:
         description: Siz yakuniy loyihangizni boshlamoqchisiz. Ishni boshlashdan oldin,
           namunali loyihalarni ko'rib chiqishga vaqt ajrating.
         display_name: Loyiha namunalari
@@ -6971,6 +8275,30 @@ uz-UZ:
         questions:
         - text: Quyidagi kodni yaxshilab ko'rib chiqing. "Ishga tushirish " tugmachasini
             bosganingizda ushbu dastur qaysi rasmni chiqaradi?
+      courseD_multi_artist_nestedLoops9_predict12022_2023:
+        answers:
+        - correct: true
+          feedback: To‘g’ri!
+          text: A
+        - feedback: Noto'g'ri.  Ichki tsikl beshburchak yasaydi, tashqi tsikl esa
+            uni aylanada 4 marta takrorlaydi.
+          text: B
+        - feedback: Noto'g'ri.  Ichki tsikl beshburchak yasaydi, tashqi tsikl esa
+            uni aylanada 4 marta takrorlaydi.
+          text: C
+        - feedback: Noto'g'ri.  Ichki tsikl beshburchak yasaydi, tashqi tsikl esa
+            uni aylanada 4 marta takrorlaydi.
+          text: Yuqoridagilardan hech biri
+        markdown: |+
+          <table>
+          <tr><td>A</td><td><img src="https://images.code.org/cfc3f8206438a60afe3be9afe7fc0a22-image-1489118742610.10.15.png" width="100px" style="mix-blend-mode: multiply;"/></td><td>&nbsp;&nbsp;&nbsp;&nbsp;</td><td>B</td><td><img src="https://images.code.org/975b027684d2f5411b960bf82987663e-image-1489119999013.11.13.png" width="100px" style="mix-blend-mode: multiply;"/></td><td>&nbsp;&nbsp;&nbsp;&nbsp;</td><td>C</td><td><img src="https://images.code.org/635ac54ed7cb2e2d24eb341b3ec4eecb-image-1489120024059.12.00.png" width="80px" style="mix-blend-mode: multiply; clip: rect(0px,0px,0px,40px);"/></td></tr>
+          </table>
+
+          <br/><br/>
+
+        questions:
+        - text: Quyidagi kodni yaxshilab ko'rib chiqing. "Ishga tushirish " tugmachasini
+            bosganingizda ushbu dastur qaysi rasmni chiqaradi?
       courseD_multi_artist_nestedLoops9_predict1_2018:
         answers:
         - correct: true
@@ -7113,6 +8441,29 @@ uz-UZ:
             kerak. Agar gul bo'lmasa, asalarilar hech narsa qilmasliklari kerak. Quyidagi
             kodni yaxshilab ko'rib chiqing. "Ishga tushirish " tugmachasini bosgandan
             so'ng nima bo'ladi deb o'ylaysiz?
+      courseD_multi_bee_conditionals1_predict12022_2023:
+        answers:
+        - feedback: Noto'g'ri. "If at flower" bloki asalari faqat bulut ostida gul
+            bo'lsa, nektar olishga harakat qilishini ta'minlaydi.
+          text: 'Asalari bulutga o''tib, nima bo''lishidan qat''i nazar, nektar olishga
+            harakat qiladi. '
+        - correct: true
+          feedback: To‘g’ri!
+          text: Asalari bulutga o'tadi va faqat ostida gul bo'lsa, nektar olishga
+            harakat qiladi.
+        - feedback: Noto'g'ri. "If at flower" bloki asalari faqat bulut ostida gul
+            bo'lsa, nektar olishga harakat qilishini ta'minlaydi.
+          text: 'Asalari bulutga o''tadi va keyin nima bo''lishidan qat''iy nazar
+            hech narsa qilmaydi. '
+        - feedback: Noto'g'ri. "If at flower" bloki asalari faqat bulut ostida gul
+            bo'lsa, nektar olishga harakat qilishini ta'minlaydi.
+          text: Asalari bulutga etib bormaydi.
+        questions:
+        - text: Bizning ko'rinishimizni to'sib qo'yadigan bulut bor. “Yugurish” tugmasini
+            bosganimizdan so'ng bulut yo'qoladi. Bu bulut ostida gul bo'lishi mumkin
+            edi. Agar gul bo'lsa, ari bir marta nektar to'plashi kerak. Agar gul bo'lmasa,
+            ari hech narsa qilmasligi kerak. Quyidagi kodni yaxshilab ko'rib chiqing.
+            Sizningcha, “Ishga tushirish” tugmasini bosganingizdan keyin nima bo'ladi?
       courseD_multi_bee_conditionals1_predict1_2018:
         answers:
         - feedback: Noto'g'ri. "If at flower" bloki asalari faqat bulut ostida gul
@@ -7294,6 +8645,29 @@ uz-UZ:
         - text: 'Quyidagi kodga diqqat bilan qarang. "Ishga tushirish " tugmachasini
             bosgandan so''ng nima bo''ladi deb o''ylaysiz? Esingizda bo''lsin: har
             bir bulut orqasida faqat * bitta * asal zahirasi yoki * bitta * gul bo''ladi.'
+      courseD_multi_bee_conditionals7_predict22022_2023:
+        answers:
+        - correct: true
+          feedback: To‘g’ri!
+          text: Asalari har bir guldan nektar olib, har bir asalari iniga asal joylaydi.
+        - feedback: Noto'g'ri. "if at flower" bloki asalari har bir gulga nektar va
+            har bir asalari inidagi chuqurchada (sotada) asal joylashiga imkon beradi.
+          text: Asalarilar ham gullardan, ham asal uyasidan nektar olishga harakat
+            qiladi.
+        - feedback: Noto'g'ri. Noto'g'ri. "if at flower" bloki asalari har bir gulga
+            nektar va har bir asalari inidagi chuqurchada (sotada) asal joylashiga
+            imkon beradi.
+          text: Asalarilar asalni ham gullardan, ham asal qoliplaridan olishga harakat
+            qiladi.
+        - feedback: Noto'g'ri. Noto'g'ri. "if at flower" bloki asalari har bir gulga
+            nektar va har bir asalari inidagi chuqurchada (sotada) asal joylashiga
+            imkon beradi.
+          text: Asalarilar ham gullardan, ham asal uyasidan asal va nektar olishga
+            harakat qiladi.
+        questions:
+        - text: 'Quyidagi kodga diqqat bilan qarang. "Ishga tushirish " tugmachasini
+            bosgandan so''ng nima bo''ladi deb o''ylaysiz? Esingizda bo''lsin: har
+            bir bulut orqasida faqat * bitta * asal zahirasi yoki * bitta * gul bo''ladi.'
       courseD_multi_bee_conditionals7_predict2_2018:
         answers:
         - correct: true
@@ -7413,6 +8787,23 @@ uz-UZ:
         questions:
         - text: Quyidagi ichki tsikllarga diqqat bilan qarang. "Ishga tushirish "
             tugmachasini bosganingizda nima bo'ladi?
+      courseD_multi_bee_nestedLoops2_predict12022_2023:
+        answers:
+        - feedback: Noto'g'ri.  Asalari jumboqni yechishga imkon beradigan oldinga
+            siljish va nektar yig'ish tsiklli harakatlarini bajaradi.
+          text: Asalarilar faqat bir marta oldinga siljiydi va nektar oladi.
+        - feedback: Noto'g'ri.  Asalari jumboqni yechishga imkon beradigan oldinga
+            siljish va nektar yig'ish tsiklli harakatlarini bajaradi.
+          text: Ari faqat 2 dona nektar oladi.
+        - correct: true
+          feedback: To‘g’ri!
+          text: Asalari nektarning hammasini oladi.
+        - feedback: Noto'g'ri.  Asalari jumboqni yechishga imkon beradigan oldinga
+            siljish va nektar yig'ish tsiklli harakatlarini bajaradi.
+          text: Asalari noto'g'ri tomonga buriladi.
+        questions:
+        - text: Quyidagi ichki tsikllarga diqqat bilan qarang. "Ishga tushirish "
+            tugmachasini bosganingizda nima bo'ladi?
       courseD_multi_bee_nestedLoops2_predict1_2018:
         answers:
         - feedback: Noto'g'ri.  Asalari jumboqni yechishga imkon beradigan oldinga
@@ -7502,6 +8893,26 @@ uz-UZ:
         - text: Quyidagi kodga diqqat bilan qarang. "Run " tugmachasini bosganingizda
             asalari qancha asal hosil qiladi?
       courseD_multi_bee_nestedLoops9_predict22022:
+        answers:
+        - feedback: Noto'g'ri. Asalarilar oldinga siljiyotgan tsiklda 2 nektarni,
+            so'ngra pastdagi tsiklda 2 nektar to'playdi. Bularning barchasi ikki marta
+            sodir bo'ladigan boshqa tsiklning ichida. 4 marta 2 - 8!
+          text: '4'
+        - correct: true
+          feedback: To‘g’ri!
+          text: '8'
+        - feedback: Noto'g'ri. Asalarilar oldinga siljiyotgan tsiklda 2 nektarni,
+            so'ngra pastdagi tsiklda 2 nektar to'playdi. Bularning barchasi ikki marta
+            sodir bo'ladigan boshqa tsiklning ichida. 4 marta 2 - 8!
+          text: '10'
+        - feedback: Noto'g'ri. Asalarilar oldinga siljiyotgan tsiklda 2 nektarni,
+            so'ngra pastdagi tsiklda 2 nektar to'playdi. Bularning barchasi ikki marta
+            sodir bo'ladigan boshqa tsiklning ichida. 4 marta 2 - 8!
+          text: '12'
+        questions:
+        - text: Quyidagi kodga diqqat bilan qarang. "Run " tugmachasini bosganingizda
+            asalari qancha asal hosil qiladi?
+      courseD_multi_bee_nestedLoops9_predict22022_2023:
         answers:
         - feedback: Noto'g'ri. Asalarilar oldinga siljiyotgan tsiklda 2 nektarni,
             so'ngra pastdagi tsiklda 2 nektar to'playdi. Bularning barchasi ikki marta
@@ -7662,6 +9073,26 @@ uz-UZ:
         questions:
         - text: Quyidagi kodni diqqat bilan ko'rib chiqing. "Ishga tushirish " tugmachasini
             bosgandan so'ng nima bo'ladi?
+      courseD_multi_farmer_condLoops9_predict12022_2023:
+        answers:
+        - feedback: Noto'g'ri. Bu yerda oshqovoqni yig'ish uchun kod yo'q.
+          text: O'rim-yig'imchi barcha hosilni yig'ib oladi.
+        - feedback: Noto'g'ri. Kod terimchini zinapoya naqshida bir necha marotaba
+            o'tkazib, u duch kelganicha makkajo'xori yoki karam yig'ib beradi. U oshqovoqni
+            olmaydi.
+          text: Terimchi o'zi olgan yo'l bilan biron hosilni yig'maydi.
+        - correct: true
+          feedback: To‘g’ri!
+          text: Terimchi oshqovoqdan tashqari barcha hosilni yig'ib oladi.
+        - feedback: Noto'g'ri. Kod terimchini zinapoya naqshida bir necha marotaba
+            o'tkazib, u duch kelganicha makkajo'xori yoki karam yig'ib beradi. U oshqovoqni
+            olmaydi.
+        markdown: |-
+          Ushbu jumboqdagi o'simliklar yo makkajo'xori yoki karam bo'ladi.
+          <br/>
+        questions:
+        - text: Quyidagi kodni diqqat bilan ko'rib chiqing. "Ishga tushirish " tugmachasini
+            bosgandan so'ng nima bo'ladi?
       courseD_multi_farmer_condLoops9_predict1_2018:
         answers:
         - feedback: Noto'g'ri. Bu yerda oshqovoqni yig'ish uchun kod yo'q.
@@ -7798,6 +9229,21 @@ uz-UZ:
         questions:
         - text: Quyidagi kodni yaxshilab ko'rib chiqing. Ushbu jumboqning oxirida
             nima qoladi?
+      courseD_multi_farmer_while10_predict22022_2023:
+        answers:
+        - feedback: Noto'g'ri. To'plamdagi tuproqni olib tashlash uchun kod yo'q.
+          text: Hech narsa yo'q. Ushbu kod faqat tekis zaminni qoldiradi.
+        - correct: true
+          feedback: To‘g’ri!
+          text: Ushbu kod to'plamni shundayligicha qoldiradi.
+        - feedback: Noto'g'ri. "While" tsikli har qanday o'lchamdagi tsikl bilan ishlaydi,
+            lekin to'plamdagi tuproqni olib tashlash uchun kod yo'q.
+          text: Ushbu kod chuqurni shundayligicha qoldiradi.
+        - feedback: Noto'g'ri. To'plamdagi tuproqni olib tashlash uchun kod yo'q.
+          text: Ushbu kod oxirgi chuqurni shundayligicha qoldiradi.
+        questions:
+        - text: Quyidagi kodni yaxshilab ko'rib chiqing. Ushbu jumboqning oxirida
+            nima qoladi?
       courseD_multi_farmer_while10_predict2_2018:
         answers:
         - feedback: Noto'g'ri. To'plamdagi tuproqni olib tashlash uchun kod yo'q.
@@ -7880,6 +9326,24 @@ uz-UZ:
         - text: Quyidagi kodga diqqat bilan qarang. "Ishga tushirish " tugmachasini
             bosgandan so'ng nima bo'ladi?
       courseD_multi_farmer_while4_predict12022:
+        answers:
+        - feedback: Noto'g'ri. To'plam bor ekan, dehqon tuproqni olib tashlayveradi,
+            keyin to'plam yo'q bo'lganda to'xtaydi
+          text: Hech narsa bo'lmaydi.
+        - feedback: Noto'g'ri. To'plam bor ekan, dehqon tuproqni olib tashlayveradi,
+            keyin to'plam yo'q bo'lganda to'xtaydi
+          text: Dehqon tuproqni tozalashdan hech qachon to'xtamaydi.
+        - correct: true
+          feedback: To‘g’ri!
+          text: To'plam bor ekan, dehqon tuproqni olib tashlayveradi, keyin to'plam
+            yo'q bo'lganda to'xtaydi.
+        - feedback: Noto'g'ri. To'plam bor ekan, dehqon tuproqni olib tashlayveradi,
+            keyin to'plam yo'q bo'lganda to'xtaydi
+          text: Fermer axlatni faqat bir marta tozalaydi.
+        questions:
+        - text: Quyidagi kodga diqqat bilan qarang. "Ishga tushirish " tugmachasini
+            bosgandan so'ng nima bo'ladi?
+      courseD_multi_farmer_while4_predict12022_2023:
         answers:
         - feedback: Noto'g'ri. To'plam bor ekan, dehqon tuproqni olib tashlayveradi,
             keyin to'plam yo'q bo'lganda to'xtaydi
@@ -7999,6 +9463,17 @@ uz-UZ:
         questions:
         - text: Quyidagi kodga diqqat bilan qarang. "Ishga tushirish " tugmachasini
             bosgandan so'ng nima bo'ladi?
+      courseD_multi_maze_until10_predict22022_2023:
+        answers:
+        - correct: true
+          feedback: To‘g’ri!
+        - text: Zombi kungaboqarga yetib boradi.
+        - text: Zombi birinchi yo‘lda o‘ng tomonga buriladi va abadiy aylana bo‘ylab
+            yuradi.
+        - text: Zombi oldinga boradigan yo'lning oxirida qolib ketadi.
+        questions:
+        - text: Quyidagi kodga diqqat bilan qarang. "Ishga tushirish " tugmachasini
+            bosgandan so'ng nima bo'ladi?
       courseD_multi_maze_until10_predict2_2018:
         answers:
         - correct: true
@@ -8089,6 +9564,23 @@ uz-UZ:
         - text: Quyidagi kodni diqqat bilan ko'rib chiqing. Sizningcha, "Ishga tushirish
             " tugmachasini bosganingizda nima bo'ladi?
       courseD_multi_maze_until2_predict12022:
+        answers:
+        - feedback: Noto'g'ri. Kod, qushni yo'l bor ekan, oldinga siljitadi, so'ng
+            chapga buriladi. U buni cho'chqaga yetguncha davom ettiradi!
+          text: Qush umuman harakat qilmaydi.
+        - correct: true
+          feedback: To‘g’ri!
+          text: Qush cho‘chqaga yetib boradi.
+        - feedback: Noto'g'ri. Kod xavfsiz yo'l bo'lsa, qushni oldinga siljitadi,
+            so'ng chapga buriladi. U buni cho'chqaga yetguncha davom ettiradi!
+          text: Qush oldinga siljiydi va TNTga uriladi.
+        - feedback: Kod, qushni yo'l bor ekan, oldinga siljitadi, so'ng chapga buriladi.
+            U buni cho'chqaga yetguncha davom ettiradi!.
+          text: Qush noto'g'ri tomonga buriladi.
+        questions:
+        - text: Quyidagi kodni diqqat bilan ko'rib chiqing. Sizningcha, "Ishga tushirish
+            " tugmachasini bosganingizda nima bo'ladi?
+      courseD_multi_maze_until2_predict12022_2023:
         answers:
         - feedback: Noto'g'ri. Kod, qushni yo'l bor ekan, oldinga siljitadi, so'ng
             chapga buriladi. U buni cho'chqaga yetguncha davom ettiradi!
@@ -8215,6 +9707,9 @@ uz-UZ:
       courseE_EOC2022:
         description: Siz E kursini yakunladingiz! Endi ijod qilish uchun loyiha tanlang.
         display_name: End of Course Project
+      courseE_EOC2022_2023:
+        description: Siz E kursini yakunladingiz! Endi ijod qilish uchun loyiha tanlang.
+        display_name: End of Course Project
       courseE_EOC_2020:
         description: Siz E kursini yakunladingiz! Endi ijod qilish uchun loyiha tanlang.
         display_name: End of Course Project
@@ -8222,6 +9717,9 @@ uz-UZ:
         description: Siz E kursini yakunladingiz! Endi ijod qilish uchun loyiha tanlang.
         display_name: End of Course Project
       courseE_EOC_examples2022:
+        description: Siz E kursini yakunladingiz! Endi ijod qilish uchun loyiha tanlang.
+        display_name: End of Course Project
+      courseE_EOC_examples2022_2023:
         description: Siz E kursini yakunladingiz! Endi ijod qilish uchun loyiha tanlang.
         display_name: End of Course Project
       courseE_EOC_examples_2021:
@@ -8272,6 +9770,22 @@ uz-UZ:
         questions:
         - text: Quyida tavsiflangan funksiyalarga qarang. Terimchi nima yig'adi?
       courseE_multi_farmer_functions11_predict2022:
+        answers:
+        - feedback: Noto'g'ri. Terimchi yo'lning oxirigacha oldinga qarab boradi,
+            so'ng burilib, salat terguncha orqaga qaytadi.
+          text: Terimchi ikkita oshqovoqni terib oladi.
+        - feedback: Noto'g'ri. Terimchi yo'lning oxirigacha oldinga qarab boradi,
+            so'ng burilib, salat terguncha orqaga qaytadi.
+          text: Terimchi barcha oshqovoqni terib oladi.
+        - correct: true
+          feedback: To‘g’ri!
+          text: Terimchi salatni terib oladi.
+        - feedback: Noto'g'ri. Terimchi yo'lning oxirigacha oldinga qarab boradi,
+            so'ng burilib, salat terguncha orqaga qaytadi.
+          text: Terimchi makkajo'xorini terib oladi.
+        questions:
+        - text: Quyida tavsiflangan funksiyalarga qarang. Terimchi nima yig'adi?
+      courseE_multi_farmer_functions11_predict2022_2023:
         answers:
         - feedback: Noto'g'ri. Terimchi yo'lning oxirigacha oldinga qarab boradi,
             so'ng burilib, salat terguncha orqaga qaytadi.
@@ -8367,6 +9881,21 @@ uz-UZ:
         questions:
         - text: '"Run" tugmasini bosganingizda nima bo‘ladi?'
       courseE_prediction_artistFunction12022:
+        answers:
+        - feedback: Noto'g'ri. Funksiya aslida dasturda ikki marta chaqirilgan.
+          text: Hech narsa bo'lmadi. Funksiya dasturda chaqirilmagan.
+        - feedback: Noto'g'ri. Funksiya aslida dasturda ikki marta chaqirilgan.
+          text: Rassom bitta kvadrat chizadi.
+        - feedback: Noto'g'ri. Kvadratning har bir tomonining uzunligi atigi 100 pikselni
+            tashkil etadi, ammo rassom funksiyalar orasida 175 pikselga sakrab chiqadi.
+          text: Rassom bir-biri ustidan ikkita kvadratni chizadi.
+        - correct: true
+          feedback: To'g'ri! Funksiya dasturda ikki marta chaqiriladi, oralig'ida
+            sakrash mavjud.
+          text: Rassom ikkita kvadratni o'rtada kichik bo'shliq bilan chizadi.
+        questions:
+        - text: '"Run" tugmasini bosganingizda nima bo‘ladi?'
+      courseE_prediction_artistFunction12022_2023:
         answers:
         - feedback: Noto'g'ri. Funksiya aslida dasturda ikki marta chaqirilgan.
           text: Hech narsa bo'lmadi. Funksiya dasturda chaqirilmagan.
@@ -8523,6 +10052,16 @@ uz-UZ:
         questions:
         - text: Quyidagi kodga diqqat bilan qarang. "Ishga tushirish " tugmachasini
             bosgandan so'ng nima bo'ladi?
+      courseE_swim_fish_behavior_predict12022_2023:
+        answers:
+        - text: Hech narsa bo'lmaydi.
+        - {}
+        - correct: true
+          feedback: To‘g’ri!
+        - {}
+        questions:
+        - text: Quyidagi kodga diqqat bilan qarang. "Ishga tushirish " tugmachasini
+            bosgandan so'ng nima bo'ladi?
       courseE_swim_fish_behavior_predict1_2021:
         answers:
         - text: Hech narsa bo'lmaydi.
@@ -8545,10 +10084,16 @@ uz-UZ:
         display_name: End of Course Project
       courseF_EOC_examples2022_2022_pilot_-2022-2:
         display_name: End of Course Project
+      courseF_EOC_examples2022_2022_pilot_-2022-2_2023:
+        display_name: End of Course Project
       courseF_EOC_examples_2021:
         description: Siz F kursini yakunladingiz! Endi ijod qilish uchun loyiha tanlang.
         display_name: End of Course Project
       courseF_EOC_samples2022:
+        description: Siz yakuniy loyihangizni boshlamoqchisiz. Ishni boshlashdan oldin,
+          namunali loyihalarni ko'rib chiqishga vaqt ajrating.
+        display_name: End of Course Project
+      courseF_EOC_samples2022_2023:
         description: Siz yakuniy loyihangizni boshlamoqchisiz. Ishni boshlashdan oldin,
           namunali loyihalarni ko'rib chiqishga vaqt ajrating.
         display_name: End of Course Project
@@ -8629,6 +10174,14 @@ uz-UZ:
         - {}
         questions:
         - {}
+      courseF_events_predict_multi2022_2022_pilot_-2022-2_2023:
+        answers:
+        - {}
+        - {}
+        - correct: true
+        - {}
+        questions:
+        - {}
       courseF_external_variableConstant:
         markdown: |+
           <h2>O'zgaruvchilar haqida ko'proq ma'lumot</h2>
@@ -8683,6 +10236,14 @@ uz-UZ:
         - {}
         questions:
         - {}
+      courseF_groups_predict_multi_2022_pilot_-2022-2_2023:
+        answers:
+        - correct: true
+        - {}
+        - {}
+        - {}
+        questions:
+        - {}
       courseF_intro_apps:
         description: CS Fundamentals kursiga xush kelibsiz! Undagi loyihalarning barchasi
           Sprite Lab yordamida yaratilgan. Mumkin bo'lgan narsalarni ko'rish uchun
@@ -8690,6 +10251,8 @@ uz-UZ:
           va ulardan ham a'lo loyihalaringizni amalga oshira olasiz!
         display_name: Sprite Lab ilovalari
       courseF_intro_apps2022_2022_pilot_-2022-2:
+        display_name: Sprite Lab ilovalari
+      courseF_intro_apps2022_2022_pilot_-2022-2_2023:
         display_name: Sprite Lab ilovalari
       courseF_labels_predict_multi:
         answers:
@@ -8701,6 +10264,15 @@ uz-UZ:
         questions:
         - {}
       courseF_labels_predict_multi2022_2022_pilot_-2022-2:
+        answers:
+        - {}
+        - {}
+        - {}
+        - correct: true
+        - {}
+        questions:
+        - {}
+      courseF_labels_predict_multi2022_2022_pilot_-2022-2_2023:
         answers:
         - {}
         - {}
@@ -9185,6 +10757,23 @@ uz-UZ:
         questions:
         - text: Biz "uzunlik" o'zgaruvchisini 50 ga o'rnatdik. "Ishga tushirish" tugmachasini
             bosganingizda nima bo'ladi?
+      courseF_multi_artist_variables3a_predict12022_2023:
+        answers:
+        - correct: true
+          feedback: To‘g’ri!
+          text: Rassom 50 piksel tomonli uchburchak chizadi.
+        - feedback: Noto'g'ri. Buning uchun "uzunlik" o'zgaruvchisi "takrorlash" siklida
+            bo'lishi kerak.
+          text: Rassom har bir tomoni 3 pikselga teng 50-burchak chizadi.
+        - feedback: Noto'g'ri. Buning uchun "uzunlik" o'zgaruvchisini "burilish" blokida
+            ishlatish kerak bo'ladi.
+          text: Rassom uchta ochiq tomonni 50 darajaga burilish bilan chizadi.
+        - feedback: '`Uzunlik` o''zgaruvchisi 50 ga o''rnatilgan va u "oldinga siljish"
+            blokida ishlatiladi, shuning uchun rassom tomonlari 50 pikselli uchburchak
+            chizadi.'
+        questions:
+        - text: Biz "uzunlik" o'zgaruvchisini 50 ga o'rnatdik. "Ishga tushirish" tugmachasini
+            bosganingizda nima bo'ladi?
       courseF_multi_artist_variables3a_predict1_2018:
         answers:
         - correct: true
@@ -9325,6 +10914,23 @@ uz-UZ:
         questions:
         - text: Quyidagi kodni o'qing. "Run" tugmasini bossangiz nima bo‘ladi?
       courseF_multi_bee_for3_predict12022:
+        answers:
+        - feedback: Noto'g'ri. `For` sikli asalariga kerakli miqdordagi nektar to'plashiga
+            imkon beradi, ammo u faqat 4 ta gulga yetishga sozlangan.
+          text: Asalari oldinga siljiydi va har bir guldan barcha nektarlarni yig'adi.
+        - correct: true
+          feedback: To‘g’ri!
+          text: Asalari oldinga siljiydi va bittadan tashqari barcha guldan barcha
+            nektarlarni yig'adi.
+        - feedback: Noto'g'ri. `For` sikli asalariga kerakli miqdordagi nektar to'plashiga
+            imkon beradi, ammo u faqat 4 ta gulga yetishga sozlangan.
+          text: Asalari oldinga siljiydi va har bir guldan bitta nektarni yig'adi.
+        - feedback: Noto'g'ri. `For` sikli asalariga kerakli miqdordagi nektar to'plashiga
+            imkon beradi, ammo u faqat 4 ta gulga yetishga sozlangan.
+        markdown: Ah! "For" siklidan foydalanish bu jumboqni ancha osonlashtiradi!
+        questions:
+        - text: Quyidagi kodni o'qing. "Run" tugmasini bossangiz nima bo‘ladi?
+      courseF_multi_bee_for3_predict12022_2023:
         answers:
         - feedback: Noto'g'ri. `For` sikli asalariga kerakli miqdordagi nektar to'plashiga
             imkon beradi, ammo u faqat 4 ta gulga yetishga sozlangan.
@@ -9493,6 +11099,14 @@ uz-UZ:
         - {}
         questions:
         - {}
+      courseF_sprites_predict_multi2022_2022_pilot_-2022-2_2023:
+        answers:
+        - {}
+        - correct: true
+        - {}
+        - {}
+        questions:
+        - {}
       courseF_variables2_predict2_multi2022_-2022-2:
         answers:
         - correct: true
@@ -9501,7 +11115,23 @@ uz-UZ:
         - {}
         questions:
         - {}
+      courseF_variables2_predict2_multi2022_-2022-2_2023:
+        answers:
+        - correct: true
+        - {}
+        - {}
+        - {}
+        questions:
+        - {}
       courseF_variables2_predict_multi2022_2022_pilot_-2022-2:
+        answers:
+        - {}
+        - {}
+        - correct: true
+        - {}
+        questions:
+        - {}
+      courseF_variables2_predict_multi2022_2022_pilot_-2022-2_2023:
         answers:
         - {}
         - {}
@@ -9525,9 +11155,19 @@ uz-UZ:
         - {}
         questions:
         - {}
+      courseF_variables_predict_multi2022_2022_pilot_-2022-2_2023:
+        answers:
+        - {}
+        - correct: true
+        - {}
+        - {}
+        questions:
+        - {}
       courseF_variables_stop:
         content1: tafsilotlar bu yerda
       courseF_variables_stop2022_2022_pilot_-2022-2:
+        content1: tafsilotlar bu yerda
+      courseF_variables_stop2022_2022_pilot_-2022-2_2023:
         content1: tafsilotlar bu yerda
       coursee_prediction_artistfunction2:
         answers:
@@ -9545,6 +11185,21 @@ uz-UZ:
         questions:
         - text: '"Run" tugmasini bosganingizda nima bo‘ladi?'
       coursee_prediction_artistfunction22022:
+        answers:
+        - feedback: Noto'g'ri. Siklda "ko'pburchaklar qatori" o'rniga "ko'pburchak
+            chizish" funksiyasi ishlatiladi.
+          text: Rassom jumboqni to'g'ri yachadi.
+        - correct: true
+          feedback: To‘g’ri!
+          text: Rassom deraza naqshida to'rtta kvadrat chizadi.
+        - feedback: Noto'g'ri. Dastur "ko'pburchaklar qatori" funksiyasini chaqirmaydi.
+          text: Rassom kvadratlarning faqat bitta qatorini chizadi.
+        - feedback: Noto'g'ri. "Ko'pburchak chizish" chaqirishlari o'rtasida sikl
+            90 darajaga buriladi.
+          text: Rassom to'rt kvadratni bir-birining ustiga chizadi.
+        questions:
+        - text: '"Run" tugmasini bosganingizda nima bo‘ladi?'
+      coursee_prediction_artistfunction22022_2023:
         answers:
         - feedback: Noto'g'ri. Siklda "ko'pburchaklar qatori" o'rniga "ko'pburchak
             chizish" funksiyasi ishlatiladi.
@@ -9619,6 +11274,326 @@ uz-UZ:
           text: Rassom to'rt kvadratni bir-birining ustiga chizadi.
         questions:
         - text: '"Run" tugmasini bosganingizda nima bo‘ladi?'
+      csc_animal_adaptations_L3_intro:
+        markdown: "#Make o'z xatti -harakatlaringiz!\n\n<br>\n\n# #Now siz xatti -harakatlarni
+          boshqarasiz!\n\n## #Edit ularni o'zgartirish va o'zgartirish uchun mavjud
+          xatti-harakatlar. \n! [] (https://images.code.org/e2e63b1cd7302b6548591c65ad23a0ee-image-1680019477336.gif)\n\n##
+          #Make xohlagan harakatlaringiz bilan o'zingizning yangi xatti-harakatlaringiz!\n\n!
+          [] (https://images.code.org/5345f53f3b33b2ad2bbf2bc86539cb96-image-1680019210225.gif)\n\n\n"
+      csc_animal_adaptations_choice:
+        description: Quyidagi stsenariylardan tanlang va hayvonlarning yangi va noyob
+          moslashuvini modellashtirish uchun o'zingizning ijodiy kodingizdan foydalaning!
+          Siz bir nechta variantni tanlashingiz va bir nechta variantni qilishingiz
+          mumkin!
+        display_name: O'zingizning hayvonlarga moslashuvingizni kodlang!
+      csc_animal_adaptations_intro:
+        markdown: "#Survival Xulq-atvor\n\n# #Behaviors tabiatda\nHayvonlar omon qolishlariga
+          yordam beradigan <strong>xatti-harakatlar</strong> va harakatlarni ishlab
+          chiqdilar. <br> Masalan, ba'zi hayvonlar qishda **ko'chib ketishadi**, boshqalari
+          esa **guruhlarida qolishga harakat qilishadi.\n\n<img style=\" float: left;
+          width:50%; padding-top:10px\" src=\"https://images.code.org/424ef84f41b7cabdf62e8cc509abe62c-image-1678322413909.jpg\"
+          style= \"width:60%\">\n<img style=\" float: left; width:46%; padding-top:10px\"
+          src=\"https://images.code.org/7c79e255d048e7ccf099eb61976bb90c-image-1678322295452.jpg\"
+          style= \"width:60%\">\n\n<div style=\"float: left\">\n<h2>Kompyuter</h2>\nfanidagi
+          xatti-harakatlar Informatika fanida, <strong>xatti</strong> -harakatlar
+          - bu sprite animatsiya kabi qayta -qayta takrorlanadigan harakatlar to'plami.
+          <br>\nXulq -atvor ichidagi harakatlar to'xtatishga ko'rsatma berilgunga
+          qadar davom etadi. \n<br>\n<br>\n\n<img src=\"https://images.code.org/56809209ca823047729cc01a033a7ac0-image-1679937249706.gif\"
+          style=\" float: left; width:70%; padding-top:10px\">\n</div>\n"
+      csc_animal_adaptations_predict:
+        answers:
+        - feedback: Noto'g'ri. Sprite o'sadi.
+          text: Sprite aylanadi.
+        - correct: true
+          feedback: To‘g’ri!
+          text: Sprite o'sadi.
+        - feedback: Noto'g'ri. Sprite o'sadi.
+        - feedback: Noto'g'ri. Sprite o'sadi.
+        questions:
+        - {}
+      csc_animal_adaptations_shareout:
+        markdown: "# #Share\n<img src=\"https://images.code.org/c480c5c42d9c02e154943f49bbed87ff-image-1675984438344.13.53
+          PM.png\" style= \"width:60%\">\n<div style= \"width: 60%\"> \n\nLoyihangiz**Endi
+          siz omon qolish uchun moslashuvni kodlaganingizdan so'ng, uni baham ko'rish
+          vaqti keldi! ** Sinfdoshlaringizning loyihalarini 9 -darajadan ko'rib\n\nchiqayotganda,
+          quyidagi savollarni ko'rib chiqing:\n\n>1. Siz bir xil muhit stsenariysini
+          yoki boshqalarini tanladingizmi? \n& gt2. Ular bir xil kodlash bloklaridan
+          foydalanganmi? \n& gt3. Sizningcha, hayvon atrof-muhit o'zgarishidan omon
+          qoladimi? Nima uchun yoki nima uchun? \n\n</div>\n\n"
+      csc_bookcover_extensions_choice_2023:
+        description: Kitob muqovasiga qo'shish uchun quyidagi tadbirlardan tanlang!
+          Siz bir nechta variantni tanlashingiz va bir nechta variantni qilishingiz
+          mumkin!
+        display_name: Kitob muqovasini kengaytiring!
+      csc_bookcovers_markdown_lesson_4:
+        markdown: "# #Share Kitobingiz\n<img src=\"https://images.code.org/c480c5c42d9c02e154943f49bbed87ff-image-1675984438344.13.53
+          PM.png\" style= \"width:60%\">\n<div style= \"width: 60%\"> \n\nmuqovasi**Endi
+          siz kitob muqovasini kodlaganingizdan so'ng, uni baham ko'rish vaqti keldi!
+          ** Sinfdoshlaringizning loyihalarini ko'rib\n\nchiqayotganda quyidagi savollarni
+          ko'rib chiqing:\n\n>1. Sinfdoshlaringizning kitob muqovalarida qanday spritlar
+          va dialoglarni ko'rdingiz?\n& gt2. Belgilarni bosganingizda nima bo'ladi?\n&
+          gt2. Qanday qilib ularning tanlovi siznikiga o'xshash edi? Ular qanday farq
+          qilar edi?\n& gt3. Kitobni muqovasiga qarab o'qishni xohlaysizmi?\n</div>\n\n"
+      csc_bookcovers_planning:
+        markdown: "# #Plan Raqamli kitobingiz\n\n<div>\n<img style=\" float: left;
+          width:25%; padding-top:10px\" src=\"https://images.code.org/08ece3f13c8f0f82343e302fb52dc45c-image-1676499630865.png\"
+          />\n\n<div style=\"float: left; width: 70%; padding-left:20px\">\n<h4>\n<strong>muqovasi
+          Rejangizni tuzish vaqti keldi!</strong>\n</h4>\n\n>Siz quyidagilarni kiritishingiz
+          kerak:\n> - Kitobning nomi\n> - Muallif\n> - Ikkita asosiy belgi va o'zlarini
+          tasvirlash uchun bitta jumla \n> - Kitobning bir-ikki jumla xulosasi\n\n**O'zingizni
+          ishlatish uchun nusxa ko'chirishingiz mumkin bo'lgan reja shabloni: **  <a
+          href=\"https://docs.google.com/document/d/18cVgDdq77dbdk6gmQ1rGjHIr7pQk3I2Wb2WsAEeNH64/template/preview\"
+          target=\"_blank\"> Kitob muqovasini rejalashtirish bo'yicha qo'llanma</a>.\n\n</div>\n"
+      csc_codingwithpoetry_markdown_lesson_4:
+        markdown: "# #Share She'r\n<img src=\"https://images.code.org/c480c5c42d9c02e154943f49bbed87ff-image-1675984438344.13.53
+          PM.png\" style= \"width:60%\">\n<div style= \"width: 60%\"> \n\nilovangiz**Endi
+          siz she'ringizni kodlaganingizdan so'ng, uni baham ko'rish vaqti keldi!
+          **\n\nSinfdoshlaringizning loyihasini ko'rib, sherigingizga yozishingiz
+          mumkin bo'lgan “porlash”, “o'sish” va “savol” haqida o'ylang:\n\n- “Yorqinlik”
+          - bu ular yaxshi qilgan narsa - “o'sish”\n- bu ular o'zgartirishi yoki yaxshilanishi
+          mumkin bo'lgan narsa\n- “Savol” - bu siz ko'proq bilmoqchi bo'lgan narsa\n</div>\n\n**Boshlashga
+          tayyormisiz? ** Hamkoringiz bilan fikr almashish</a> uchun <a href=\"https://docs.google.com/document/d/1b6w_lOnibUHyDLYCP3rAWED5iElGm6LOQAJwG-hlih0/template/preview\"
+          target=\"_blank\">ushbu manbadan foydalaning.\n\n"
+      csc_ecosystemes_foodchain_info:
+        markdown: "\n##**Barcha ekotizimlar _nozik muvozanatlangan_ oziq-ovqat zanjiriga
+          ega** ## #The dengiz ekotizimining oziq-ovqat zanjiri\n: >## #1.\n\n\n\n<img
+          src=\"https://images.code.org/2270cbb4656875db210e9871883a7d45-image-1683677265473.jpg\"
+          style= \"width:80%\">\n<div style= \"width: 80%\"> \n\nQuyosh suv o'tlarida
+          fotosintez sodir bo'lishi uchun energiya beradi.\n>## #2. Yosunlarni baliq
+          iste'mol qiladi.\n>## #3. Baliqlarni odamlar ushlaydilar va iste'mol qiladilar,
+          ular baliq ovlash qayiqlarini to'rlar bilan ishlatadilar. \n\n</div>\n\n\n##**Agar
+          oziq -ovqat zanjirida bitta organizm juda ko'p yoki juda oz bo'lsa, butun
+          ekotizimga ta'siri bor.**\n"
+      csc_ecosystems_choice_freeplay_2023:
+        description: Ushbu ekotizim simulyatsiyalarining har birini sozlash kerak.
+          Ekotizimni tanlang, muammoni kuzatish uchun simulyatsiyani ishga tushiring
+          va uni tuzatish uchun kodni sozlang.
+        display_name: Ekotizimni tanlang!
+      csc_ecosystems_conditionals_overview:
+        markdown: "#Cause & Effect Conditionals \n\n</div>\n\n## Keyin suvda qancha
+          suv o'tlari borligini tekshirish uchun kod qo'shasiz <br>\n<img src=\"https://images.code.org/8be316d4e408466b4300c614712fd652-image-1684798211348.jpg\"
+          \ width=50% style=\"margin-right: 10px; float: right\">\n<br> <br>\n\n-
+          Birinchidan, kompyuter shartning to'g'ri yoki noto'g'ri ekanligini tekshiradi.\n\n-
+          Agar bu to'g'ri bo'lsa, u bloklarni ichkarida ishlaydi.\n- Agar u yolg'on
+          bo'lsa, unda u hech narsa qilmaydi.\n\n<br>\n<br>\n<br>\n\n## Agar suv o'tlari
+          juda ko'p bo'lsa, marjon kasal bo'lib qoladi\n\n<br>\n\n<img src=\"https://images.code.org/4d8aaa9c6562e0ca0b3d92ff7aed1d03-image-1681847951794.png\"
+          \ width=20% style=\"margin-right: 10px; float: left\">\n<img src=\"https://images.code.org/941774921f367566bef36cb712cf2bfb-image-1681840836607.png\"
+          \ width=30% style=\" margin-right: 10px; float: left\">\n\n<br>\n<br>\n<br>\n<br>\n<br>\n<br>\n<br>\n<br>\n\n***\n\n\n\n##
+          Agar suv o'tlari juda oz bo'lsa, unda baliq chiqib ketadi\n<img src=\"https://images.code.org/6869f418200edfb88190c0a1e4e5cd10-image-1681838202310.png\"
+          \ width=20% style=\"margin-right: 10px; float: left\">\n\n\n<img src=\"https://images.code.org/233178645539bc7966f55af47865096d-image-1681840833690.png\"
+          \ width=20% style=\" margin-right: 10px; float: left\">\n\n<br>\n<br>\n<br>\n<br>\n<br>\n<br>\n<br>\n<br>\n<br>\n\n\n***\n\n\n\n##
+          Agar suv o'tlari etarli bo'lsa, unda ekotizim sog'lom\n\n<img src=\"https://images.code.org/8bb9247c35d7d167611b02764beaeff3-image-1681838011797.png\"
+          \ width=20% style=\"margin-right: 30px; float: left\">\n<img src=\"https://images.code.org/b1ed2f5c135f9637fd7a9c5778db2b0c-image-1681840830929.png\"
+          \ width=30% style=\"margin-left: 10px;float: left\">\n<br>\n<br>\n<br>\n<br>\n\n"
+      csc_ecosystems_matching_cfu:
+        answers:
+        - text: "! [] (https://images.code.org/284e3b6e09f5d58052a8840e756644c5-image-1683752491112.png)"
+        - text: "! [] (https://images.code.org/d466f0912cd0cadb3d655263c71c072f-image-1683752857648.jpg)"
+        - text: "! [] (https://images.code.org/de2ab3c63bc2cf7cb319be86d5dcdec0-image-1683752570051.png)"
+        markdown: |+
+          ## Uchta barqaror baliq ovlash amaliyotiga qarang Kodni mos keladigan rasmga
+
+          torting.
+
+        questions:
+        - text: Qayiqlar uchun baliq ovlash zonasini yarating! [] (https://images.code.org/5f5e0640a82242d632db10b872280e18-image-1683753001613.gif)
+        - text: |-
+            Baliq ovlash mavsumini va baliq ovlamaslik mavsumini boshlang
+            ! [] (https://images.code.org/becad47fd19a4d0e938a0cd10c404e41-image-1683838684289.gif)
+        - text: Baliq ovlash chegaralarini belgilang! [] (https://images.code.org/f8bbd98ff6199af5d3ad23d64f39629d-image-1683753402925.gif)
+        title: Kodni rasmga moslang
+      csc_ecosystems_matching_conditionals:
+        answers:
+        - text: "! [] (https://images.code.org/db1db479bec9b40c6e0574ade394d32b-image-1680118613718.36.41
+            PM.png)"
+        - text: "! [] (https://images.code.org/7c9171ab2ee2e833e5ff60d5519d8728-image-1680118617438.31.00
+            PM.png)"
+        - text: "! [] (https://images.code.org/412968ba617ef19d2049e0e63d271937-image-1680118620636.30.50
+            PM.png)"
+        markdown: |
+          ## Uchta ekotizimga qarang
+
+          Bir ekotizim muvozanatli, qolgan ikkitasi esa turli yo'llar bilan muvozanatsiz. Kodni mos keladigan rasmga torting.
+        questions:
+        - text: Juda oz suv o'tlari baliqni tark etadi.! [] (https://images.code.org/c0a28473307b7e9b0e827532d2a6ddda-image-1680212227032.png)
+        - text: |-
+            Juda ko'p suv o'tlari marjonni kasal qiladi. <br>
+            ! [] (https://images.code.org/1230fd96832b692b0c8ab88e77957f33-image-1680212254888.png)
+        - text: Yosunlarning to'g'ri miqdori kasal mercanni davolashga imkon beradi
+            va baliqni ham sog'lom saqlaydi.! [] (https://images.code.org/3dd061538a7a73285aa0916fdde34e77-image-1680212284869.png)
+        title: Kodni rasmga moslang
+      csc_ecosystems_matching_events:
+        answers:
+        - text: "! [] (https://images.code.org/bf70d0664e68690f2359a48365e50ccc-image-1680556679495.16.33
+            PM.png)"
+        - text: "! [] (https://images.code.org/fe4d2803162186a8e53ec0027f27a206-image-1680556683660.36.04
+            PM.png)"
+        markdown: |+
+          Ikkala animatsiyada spritlar tegib turganda nima sodir bo'lishiga qarang. Keyin kodning har bir rasmini mos keladigan rasmga torting.
+
+
+        questions:
+        - text: Qayiq baliqni ushlaydi.! [] (https://images.code.org/bcdefefdd1787330e3ad72558b5b492d-image-1680556053866.gif)
+        - text: Baliq yosunlarni yeydi.! [] (https://images.code.org/73febc58a3d23fbf4c66e693abec9e3d-image-1680556608027.gif)
+        title: Kodni animatsiyaga moslang
+      csc_ecosystems_overfishing_solution2_overview:
+        markdown: "> #Sustainable Fishing Practice #2:\n>># #Create a Baliq ovlash
+          mavsumi <img src=\"https://images.code.org/123dd5c82e4c03dcbc32b775fd16ec60-image-1681937158113.png\"
+          \ width=400 style=\"margin-right: 30px; float: left\">\n**Odamlar qachon
+          baliq tutishi mumkinligi chegaralarini belgilang. Baliq ovlash mavsumi bo'lmaganda,
+          ekotizim tiklanish uchun vaqt topadi.** \n<br>\n\n#Save bizning dengizlarimiz!
+          \n<img src=\"https://images.code.org/f3f55eddff9891464c8fb5a5405c31c3-image-1681781301257.png\"
+          width=250 style=\"margin-left: 30px; margin-bottom: 30px; float: right\">\n<img
+          src=\"https://images.code.org/cbccfc42b7e1fe329ac7c9c37dfcb6b5-image-1681781296669.png\"
+          width=250 style=\"margin-left: 30px; margin-bottom: 30px; float: right\">\n\n</div>\n\n###
+          Haddan tashqari baliq ovlash - bu dengiz hayoti ekotizimlariga va ularga
+          ishonadigan odamlarga zarar etkazadigan muammo. Ushbu ekotizimlarni himoya
+          qilish va baliq populyatsiyasining sog'lom bo'lishini ta'minlash uchun barqaror
+          baliq ovlash bilan shug'ullanish muhimdir.\n\n\n\n<br>\n<br>\n<br>\n"
+      csc_ecosystems_overfishing_solution3_overview:
+        markdown: "> #Sustainable Baliq ovlash amaliyoti #3:\n>># #Set Baliq ovlash
+          <img src=\"https://images.code.org/58d4ca52deba39a990c3165ba16e284b-image-1681747630352.png\"
+          \ width=300 style=\"margin-right: 30px; float: left\">\nchegaralari**Olimlar
+          okeanga zarar etkazmasdan qancha baliq tutish mumkinligini aniqlashga yordam
+          berishlari mumkin. Shunda baliqchilar faqat shuncha baliqni tutishni biladilar.**
+          #Save bizning \n<br>\n<br>\n<br>\n\ndengizlarimiz! \n<img src=\"https://images.code.org/35e557d27c4bdb5f546da560716dc10b-image-1681756387784.jpg\"
+          width=400 style=\"margin-left: 30px; margin-bottom: 30px; float: right\">\n</div>\n\n###
+          Birgalikda ishlash orqali biz okeanlarimizni kelajak avlodlar uchun hayotga
+          to'la saqlashga yordam bera olamiz!\n\n\n\n<br>\n<br>\n<br>\n\n"
+      csc_ecosystems_overfishing_solutions_overview:
+        markdown: "#Save bizning dengizlarimiz! \n<img src=\"https://images.code.org/d4267a1de975b8ea46468f74187eb95c-image-1681756621010.jpg\"
+          width=400 style=\"margin-left: 30px; margin-bottom: 30px; float: right\">\n</div>\n\n###
+          Okeanda juda ko'p baliq bor, lekin ba'zida odamlar juda ko'p baliq tutishadi
+          va bu ekotizim uchun yomon bo'lishi mumkin. Quyidagi darajalarda siz okean
+          ekotizimlarini himoya qilishga yordam berish uchun** uch xil barqaror baliq
+          ovlash amaliyoti** kodini olasiz.\n\n<br>\n\n## #To okeanlarimiz uchun barqaror
+          echimlar haqida ko'proq o'qing: Bu <a href=\"https://www.seafoodwatch.org/seafood-basics/sustainable-solutions/avoid-overfishing\"
+          target=\"_blank\">erni bosing</a>\n<br>\n<br>\n\n> #Sustainable Fishing
+          Amaliyot #1:\n>> # #Fishing <img src=\"https://images.code.org/c33e46309c5335dc557c67c34310e723-image-1681511054034.png\"
+          \ width=300 style=\"margin-right: 30px; float: left\">\nzonalari**Baliq
+          ovlash qayiqlari faqat belgilangan joylarda baliq ovlashlari mumkin. Ba'zi
+          hududlar baliq ovlash qayiqlari uchun cheklangan, shuning uchun ekotizim
+          tiklanishi mumkin.** \n<br>\n<br>\n\n\n"
+      csc_ecosystems_planning:
+        markdown: "# #Share Sizning ekotizim simulyatsiyangiz!\n<img src=\"https://images.code.org/c480c5c42d9c02e154943f49bbed87ff-image-1675984438344.13.53
+          PM.png\" style= \"width:50%\">\n<div style= \"width: 60%\"> \n\n###**Ekologlar!
+          Tadqiqotlaringizni baham ko'rish vaqti keldi! **\n\n## #Explain siz qilgan
+          quyidagi kuzatuvlar:\n\n& gt1. Ekotizimingizdagi oziq-ovqat zanjirini va
+          uni qanday kodlaganingizni tushuntiring.\n& gt2. Organizm juda ko'pmi yoki
+          kammi?\n& gt3. Simulyatsiyaga kiritgan o'zgartirishlaringizni tushuntiring.
+          \n& gt4. Qiymatlarni o'zgartirganingizdan keyin nimani payqadingiz?\n</div>\n\n<div
+          style=\"background-color: #a6e3e8; border-radius: 10px; color: #000000;
+          width: 95%; padding: 0.5px 20px 1px 20px;\">\n\n<p style=\"line-height:
+          1.5; margin-left: 10px; margin-right: 10px; margin-top: 20px; margin-bottom:
+          20px; font-size: 18px; \">\n\n###**Ko'proq kodlashga tayyormisiz? ** O'zingizning
+          xohishingiz bilan ko'proq informatika fanini o'rganish uchun code.org ning
+          [Express Course] (https://studio.code.org/s/express-2022) -ni \nsinab ko'ring.
+          \  \n<br>\n</p></div>\n"
+      csc_mappinglandmarks_markdown_lesson_2:
+        markdown: |+
+          # #Plan Sizning diqqatga sazovor joylaringiz xaritasi
+          <div>
+          <img style=" float: left; width:20%; padding-top:10px" src="https://images.code.org/08ece3f13c8f0f82343e302fb52dc45c-image-1676499630865.png" />
+
+          <div style="float: left; width: 70%; padding-left:20px">
+          <h4>
+          <strong>O'zingizning diqqatga sazovor joylaringiz xaritasini rejalashtirish vaqti keldi.</strong>
+          </h4>
+
+          Siz sinfingiz, maktabingiz yoki shaharingiz xaritasini yaratishingiz mumkin. Ehtimol, siz davlat, mintaqaviy yoki milliy diqqatga sazovor joylarni tanlashni tanlaysiz. Yoki sinfda o'qigan hududingiz asosida xaritani yaratishni tanlashingiz mumkin.
+
+          Xaritangizni rejalashtirayotganda, siz tanlagan diqqatga sazovor joylar haqida boshqalarga o'rgatish uchun foydalanmoqchi bo'lgan fon, spritlar va nutq haqida o'ylang.
+
+          **Ishni boshlash uchun yordam kerakmi? ** Ishingizni rejalashtirish</a> uchun <a href="https://docs.google.com/document/d/1t_-cd-f6EhhUbblu8nSGRajStY9FVwLnKn1Bj90GL3Q/template/preview" target="_blank">ushbu manbadan foydalaning.
+
+
+      csc_mappinglandmarks_markdown_lesson_4:
+        markdown: "# #Share Mahalliy diqqatga sazovor joylaringiz xaritasi\n\nEndi
+          xaritangizni kodlaganingizdan so'ng, uni baham ko'rish vaqti keldi! Avval
+          loyihangiz haqida qisqacha mulohaza yuriting: \n\n> 1. Loyihangizning sevimli
+          qismini tushuntiring.\n> 2. Loyihangizda foydali kod bloki nima edi?\n&
+          gt3. Loyihangizni qurishda duch kelgan bitta xato yoki qiyinchilikni tushuntiring.\n&
+          gt4. Xatoni qanday tuzatdingiz yoki qiyinchilikni engdingiz?\n& gt5. Loyihangizni
+          yaxshilash uchun hali ham qanday o'zgarishlar qilmoqchisiz?\n\nO'z ishingizni
+          sinfdoshlaringizga taqdim etayotganda, kodingiz qanday ishlashini, qanday
+          dizayn tanlovini amalga oshirganingizni va duch kelgan qiyinchiliklarni
+          tushuntirib bering.\n\n\n\n"
+      csc_starquilts_markdown_lesson_1:
+        markdown: |+
+          # #Plan Yulduzli yorgan Yulduzli
+
+          <div>
+          <img style=" float: left; width:25%; padding-top:10px" src="https://images.code.org/d5e1eedfbe978ba6feebd3f89da0a667-image-1679522801245.png" />
+
+          <div style="float: left; width: 70%; padding-left:20px">
+          <h4>
+          <strong>choyshabingizni rejalashtirish vaqti keldi.</strong>
+          </h4>
+
+          > Avval siz to'rt xil rangni tanlaysiz va Yulduzli yorganni to'ldirasiz. Keyin siz naqshlar bilan yana bir nechta mashg'ulotlarni bajarasiz.
+
+          **Boshlashga tayyormisiz? ** <a href="https://docs.google.com/document/d/1c__530oWLDH-mX0kSxLMStSz-5Lt3cKUm5K3bTV7Uvo/template/preview" target="_blank">Ushbu manbadan foydalaning</a>.
+
+
+          </div>
+
+
+      csc_timecapsule_choice_lesson_3:
+        description: Vaqt kapsulasi she'riga kod qo'shish haqida xotirangizni yangilash
+          uchun quyidagi tadbirlardan tanlang! Siz bir nechta variantni tanlashingiz
+          va bir nechta variantni qilishingiz mumkin!
+        display_name: Kodlash ko'nikmalaringizni ko'rib chiqing!
+      csc_timecapsule_choice_lesson_3_ -l3:
+        description: Vaqt kapsulasi she'riga kod qo'shish haqida xotirangizni yangilash
+          uchun quyidagi tadbirlardan tanlang! Siz bir nechta variantni tanlashingiz
+          va bir nechta variantni qilishingiz mumkin!
+        display_name: Kodlash ko'nikmalaringizni ko'rib chiqing!
+      csc_timecapsule_info_2023:
+        content1: tafsilotlar bu yerda
+        markdown: "# #Time Kapsüller Vaqt\n\n<img src=\"https://images.code.org/846b0e2d7a84392a70f432fdce00cd29-image-1676501071993.png\"
+          style= \"float:left; width: 25%; padding-right:30px\"/>\n\n<div style= \"width:
+          70%\"> \n<strong>kapsulasi xazina qutisiga o'xshaydi</strong>, lekin ichkarida
+          o'yinchoqlar va konfetlarni saqlash o'rniga, hozirda hayot qanday bo'lganligi
+          haqida hikoya qiluvchi maxsus buyumlar mavjud. Keyin, u ko'p yillar davomida
+          erga ko'milgan yoki kutubxonadagi kuchli qutiga ko'milgan kabi xavfsiz joyga
+          qo'yiladi. \n<br>\n<br>\n<strong>Vaqt to'g'ri kelganda, kimdir qutini ochib,
+          ichkariga qo'yilgan barcha maxsus narsalarni ko'radi</strong> va ular ko'milgan
+          paytda hayot qanday bo'lganligi haqida hamma narsani bilib olishadi. \n<br>\n<br>\n<strong>Raqamli
+          vaqt </strong>kapsulasi she'ri shunga o'xshash, lekin narsalarni qutining
+          ichida saqlash o'rniga, u kompyuterda yoki Internetda saqlanadigan rasmlar,
+          videolar va xabarlarni saqlaydi.\n</div>\n\n"
+      csc_timecapsule_markdown_lesson_2:
+        markdown: "# #Plan Sizning vaqt\n\n<div>\n<img style=\" float: left; width:25%;
+          padding-top:10px\" src=\"https://images.code.org/08ece3f13c8f0f82343e302fb52dc45c-image-1676499630865.png\"
+          />\n\n<div style=\"float: left; width: 70%; padding-left:20px\">\n<h4>\n<strong>kapsulangiz
+          O'z vaqt kapsulasi she'rini rejalashtirish vaqti keldi.</strong>\n</h4>\n\n>
+          Siz quyidagilarni o'z ichiga olishi kerak:\n> - Siz nima qilishni yoqtirasiz
+          \n> - Siz uchun nima muhim\n> - Sizning jamoangizda nima sodir bo'lmoqda
+          \n> - Bir nechta dolzarb dunyo voqealari\n\n**She'ringizni boshlashda yordam
+          kerakmi? ** <a href=\"https://docs.google.com/document/d/1fahr11zX92NW-rLdyZBqrNK2VqgOGtCACkcT87M_luU/template/preview\"
+          target=\"_blank\">Ushbu manbadan foydalaning</a>.\n\n** Faqat ilhom kerakmi?
+          ** <a href=\"https://docs.google.com/document/d/1-aPA3uJIKJAuQ_2Gtck1Ma79eCFY88ZC8YzegQIckG4/template/preview\"
+          target=\"_blank\">Ushbu manbadan foydalaning</a>.\n\n</div>\n"
+      csc_timecapsule_markdown_lesson_2_poetry:
+        markdown: "# #Plan\n\n<div>\n<img style=\" float: left; width:25%; padding-top:10px\"
+          src=\"https://images.code.org/08ece3f13c8f0f82343e302fb52dc45c-image-1676499630865.png\"
+          />\n\n<div style=\"float: left; width: 70%; padding-left:20px\">\n<h4>\n<strong>Sizning
+          She'ringiz O'z she'ringizni rejalashtirish vaqti keldi.</strong>\n</h4>\n\n>
+          Siz quyidagilarni kiritishingiz kerak:\n> - Siz qilishni yaxshi ko'radigan
+          narsa.\n> - Siz uchun muhim bo'lgan kishi.\n> - Ba'zi sevimli narsalaringiz.
+          \n\n** Rejalashtirishni boshlashga tayyormisiz? ** <a href=\"https://docs.google.com/document/d/1b6w_lOnibUHyDLYCP3rAWED5iElGm6LOQAJwG-hlih0/template/preview\"
+          target=\"_blank\">Ushbu manbadan foydalaning</a>.\n\n** Mavzu qidiryapsizmi?
+          ** <a href=\"https://docs.google.com/document/d/1V-DaWOIUk0xT7NYTzx3AEt4my-jc-Hx4vy21Kl4SPoE/template/preview\"
+          target=\"_blank\">Ushbu manbadan foydalaning</a>.\n\n</div>\n"
+      csc_timecapsule_markdown_lesson_4:
+        markdown: "# #Share Sizning vaqt\n<img src=\"https://images.code.org/c480c5c42d9c02e154943f49bbed87ff-image-1675984438344.13.53
+          PM.png\" style= \"width:60%\">\n<div style= \"width: 60%\"> \n\nkapsulasi**Endi
+          siz vaqt kapsulasi she'rini kodlaganingizdan so'ng, uni baham ko'rish vaqti
+          keldi! ** Sinfdoshlaringizning loyihalarini ko'rib\n\nchiqayotganda quyidagi
+          savollarni ko'rib chiqing:\n\n>1. Sinfdoshlaringizning vaqt kapsulalarida
+          qanday tasvirlar va tovushlarni ko'rdingiz?\n& gt2. Ularning hikoyalari
+          siznikidan nimasi bilan farq qilar edi?\n& gt3. Qanday qilib ularning hikoyalari
+          siznikiga o'xshash edi?\n& gt4. Ularning tasvirlari sizni qanday his qildi?\n</div>\n\n"
       csd-post-survey-2017-q11_2018:
         answers:
         - correct: true
@@ -10125,6 +12100,28 @@ uz-UZ:
         - correct: true
         questions:
         - {}
+      csd-post-survey-confidence-cs_mb2022:
+        answers:
+        - correct: true
+        - correct: true
+        - correct: true
+        - correct: true
+        - correct: true
+        - correct: true
+        - correct: true
+        questions:
+        - {}
+      csd-post-survey-interested-cs_mb2022:
+        answers:
+        - correct: true
+        - correct: true
+        - correct: true
+        - correct: true
+        - correct: true
+        - correct: true
+        - correct: true
+        questions:
+        - {}
       csd-post-survey-q26:
         answers:
         - correct: true
@@ -10264,6 +12261,36 @@ uz-UZ:
         - correct: true
         questions:
         - {}
+      csd-post-survey-show-friend_mb2022:
+        answers:
+        - correct: true
+          text: Ha
+        - correct: true
+          text: yo‘q
+        questions:
+        - {}
+      csd-post-survey-solve-real-world_mb2022:
+        answers:
+        - correct: true
+        - correct: true
+        - correct: true
+        - correct: true
+        - correct: true
+        - correct: true
+        - correct: true
+        questions:
+        - {}
+      csd-post-survey-take-more-classes_mb2022:
+        answers:
+        - correct: true
+        - correct: true
+        - correct: true
+        - correct: true
+        - correct: true
+        - correct: true
+        - correct: true
+        questions:
+        - {}
       csd-post-survey-unit1-preamble:
         content1: tafsilotlar bu yerda
       csd-post-survey-unit2-preamble:
@@ -10374,6 +12401,17 @@ uz-UZ:
         - correct: true
         questions:
         - {}
+      csd-pulse-check-survey-1-q1 U2Ch1_2019_pilot_2023:
+        answers:
+        - correct: true
+        - correct: true
+        - correct: true
+        - correct: true
+        - correct: true
+        - correct: true
+        - correct: true
+        questions:
+        - {}
       csd-pulse-check-survey-1-q1 U2Ch2:
         answers:
         - correct: true
@@ -10441,6 +12479,17 @@ uz-UZ:
         questions:
         - {}
       csd-pulse-check-survey-1-q1 U3Ch1_2019_pilot_2022:
+        answers:
+        - correct: true
+        - correct: true
+        - correct: true
+        - correct: true
+        - correct: true
+        - correct: true
+        - correct: true
+        questions:
+        - {}
+      csd-pulse-check-survey-1-q1 U3Ch1_2019_pilot_2023:
         answers:
         - correct: true
         - correct: true
@@ -10529,6 +12578,17 @@ uz-UZ:
         questions:
         - {}
       csd-pulse-check-survey-1-q1 U4Ch1_2022:
+        answers:
+        - correct: true
+        - correct: true
+        - correct: true
+        - correct: true
+        - correct: true
+        - correct: true
+        - correct: true
+        questions:
+        - {}
+      csd-pulse-check-survey-1-q1 U4Ch1_2023:
         answers:
         - correct: true
         - correct: true
@@ -10638,6 +12698,17 @@ uz-UZ:
         - correct: true
         questions:
         - {}
+      csd-pulse-check-survey-1-q1 U5Ch1_2023:
+        answers:
+        - correct: true
+        - correct: true
+        - correct: true
+        - correct: true
+        - correct: true
+        - correct: true
+        - correct: true
+        questions:
+        - {}
       csd-pulse-check-survey-1-q1 U5Ch2:
         answers:
         - correct: true
@@ -10726,7 +12797,29 @@ uz-UZ:
         - correct: true
         questions:
         - {}
+      csd-pulse-check-survey-1-q1 U6Ch1_2023a_2023:
+        answers:
+        - correct: true
+        - correct: true
+        - correct: true
+        - correct: true
+        - correct: true
+        - correct: true
+        - correct: true
+        questions:
+        - {}
       csd-pulse-check-survey-1-q1 U6Ch1_2222:
+        answers:
+        - correct: true
+        - correct: true
+        - correct: true
+        - correct: true
+        - correct: true
+        - correct: true
+        - correct: true
+        questions:
+        - {}
+      csd-pulse-check-survey-1-q1 U6Ch1_mb2022:
         answers:
         - correct: true
         - correct: true
@@ -10869,6 +12962,17 @@ uz-UZ:
         - correct: true
         questions:
         - {}
+      csd-pulse-check-survey-1-q2 U2Ch1_2019_pilot_2023:
+        answers:
+        - correct: true
+        - correct: true
+        - correct: true
+        - correct: true
+        - correct: true
+        - correct: true
+        - correct: true
+        questions:
+        - {}
       csd-pulse-check-survey-1-q2 U2Ch2:
         answers:
         - correct: true
@@ -10936,6 +13040,17 @@ uz-UZ:
         questions:
         - {}
       csd-pulse-check-survey-1-q2 U3Ch1_2019_pilot_2022:
+        answers:
+        - correct: true
+        - correct: true
+        - correct: true
+        - correct: true
+        - correct: true
+        - correct: true
+        - correct: true
+        questions:
+        - {}
+      csd-pulse-check-survey-1-q2 U3Ch1_2019_pilot_2023:
         answers:
         - correct: true
         - correct: true
@@ -11024,6 +13139,17 @@ uz-UZ:
         questions:
         - {}
       csd-pulse-check-survey-1-q2 U4Ch1_2022:
+        answers:
+        - correct: true
+        - correct: true
+        - correct: true
+        - correct: true
+        - correct: true
+        - correct: true
+        - correct: true
+        questions:
+        - {}
+      csd-pulse-check-survey-1-q2 U4Ch1_2023:
         answers:
         - correct: true
         - correct: true
@@ -11133,6 +13259,17 @@ uz-UZ:
         - correct: true
         questions:
         - {}
+      csd-pulse-check-survey-1-q2 U5Ch1_2023:
+        answers:
+        - correct: true
+        - correct: true
+        - correct: true
+        - correct: true
+        - correct: true
+        - correct: true
+        - correct: true
+        questions:
+        - {}
       csd-pulse-check-survey-1-q2 U5Ch2:
         answers:
         - correct: true
@@ -11221,7 +13358,29 @@ uz-UZ:
         - correct: true
         questions:
         - {}
+      csd-pulse-check-survey-1-q2 U6Ch1_2023a_2023:
+        answers:
+        - correct: true
+        - correct: true
+        - correct: true
+        - correct: true
+        - correct: true
+        - correct: true
+        - correct: true
+        questions:
+        - {}
       csd-pulse-check-survey-1-q2 U6Ch1_2222:
+        answers:
+        - correct: true
+        - correct: true
+        - correct: true
+        - correct: true
+        - correct: true
+        - correct: true
+        - correct: true
+        questions:
+        - {}
+      csd-pulse-check-survey-1-q2 U6Ch1_mb2022:
         answers:
         - correct: true
         - correct: true
@@ -11364,6 +13523,17 @@ uz-UZ:
         - correct: true
         questions:
         - {}
+      csd-pulse-check-survey-1-q3 U2Ch1_2019_pilot_2023:
+        answers:
+        - correct: true
+        - correct: true
+        - correct: true
+        - correct: true
+        - correct: true
+        - correct: true
+        - correct: true
+        questions:
+        - {}
       csd-pulse-check-survey-1-q3 U2Ch2:
         answers:
         - correct: true
@@ -11431,6 +13601,17 @@ uz-UZ:
         questions:
         - {}
       csd-pulse-check-survey-1-q3 U3Ch1_2019_pilot_2022:
+        answers:
+        - correct: true
+        - correct: true
+        - correct: true
+        - correct: true
+        - correct: true
+        - correct: true
+        - correct: true
+        questions:
+        - {}
+      csd-pulse-check-survey-1-q3 U3Ch1_2019_pilot_2023:
         answers:
         - correct: true
         - correct: true
@@ -11519,6 +13700,17 @@ uz-UZ:
         questions:
         - {}
       csd-pulse-check-survey-1-q3 U4Ch1_2022:
+        answers:
+        - correct: true
+        - correct: true
+        - correct: true
+        - correct: true
+        - correct: true
+        - correct: true
+        - correct: true
+        questions:
+        - {}
+      csd-pulse-check-survey-1-q3 U4Ch1_2023:
         answers:
         - correct: true
         - correct: true
@@ -11628,6 +13820,17 @@ uz-UZ:
         - correct: true
         questions:
         - {}
+      csd-pulse-check-survey-1-q3 U5Ch1_2023:
+        answers:
+        - correct: true
+        - correct: true
+        - correct: true
+        - correct: true
+        - correct: true
+        - correct: true
+        - correct: true
+        questions:
+        - {}
       csd-pulse-check-survey-1-q3 U5Ch2:
         answers:
         - correct: true
@@ -11716,7 +13919,29 @@ uz-UZ:
         - correct: true
         questions:
         - {}
+      csd-pulse-check-survey-1-q3 U6Ch1_2023a_2023:
+        answers:
+        - correct: true
+        - correct: true
+        - correct: true
+        - correct: true
+        - correct: true
+        - correct: true
+        - correct: true
+        questions:
+        - {}
       csd-pulse-check-survey-1-q3 U6Ch1_2222:
+        answers:
+        - correct: true
+        - correct: true
+        - correct: true
+        - correct: true
+        - correct: true
+        - correct: true
+        - correct: true
+        questions:
+        - {}
+      csd-pulse-check-survey-1-q3 U6Ch1_mb2022:
         answers:
         - correct: true
         - correct: true
@@ -11859,6 +14084,17 @@ uz-UZ:
         - correct: true
         questions:
         - {}
+      csd-pulse-check-survey-1-q4 U2Ch1_2019_pilot_2023:
+        answers:
+        - correct: true
+        - correct: true
+        - correct: true
+        - correct: true
+        - correct: true
+        - correct: true
+        - correct: true
+        questions:
+        - {}
       csd-pulse-check-survey-1-q4 U2Ch2:
         answers:
         - correct: true
@@ -11926,6 +14162,17 @@ uz-UZ:
         questions:
         - {}
       csd-pulse-check-survey-1-q4 U3Ch1_2019_pilot_2022:
+        answers:
+        - correct: true
+        - correct: true
+        - correct: true
+        - correct: true
+        - correct: true
+        - correct: true
+        - correct: true
+        questions:
+        - {}
+      csd-pulse-check-survey-1-q4 U3Ch1_2019_pilot_2023:
         answers:
         - correct: true
         - correct: true
@@ -12014,6 +14261,17 @@ uz-UZ:
         questions:
         - {}
       csd-pulse-check-survey-1-q4 U4Ch1_2022:
+        answers:
+        - correct: true
+        - correct: true
+        - correct: true
+        - correct: true
+        - correct: true
+        - correct: true
+        - correct: true
+        questions:
+        - {}
+      csd-pulse-check-survey-1-q4 U4Ch1_2023:
         answers:
         - correct: true
         - correct: true
@@ -12123,6 +14381,17 @@ uz-UZ:
         - correct: true
         questions:
         - {}
+      csd-pulse-check-survey-1-q4 U5Ch1_2023:
+        answers:
+        - correct: true
+        - correct: true
+        - correct: true
+        - correct: true
+        - correct: true
+        - correct: true
+        - correct: true
+        questions:
+        - {}
       csd-pulse-check-survey-1-q4 U5Ch2:
         answers:
         - correct: true
@@ -12211,7 +14480,29 @@ uz-UZ:
         - correct: true
         questions:
         - {}
+      csd-pulse-check-survey-1-q4 U6Ch1_2023a_2023:
+        answers:
+        - correct: true
+        - correct: true
+        - correct: true
+        - correct: true
+        - correct: true
+        - correct: true
+        - correct: true
+        questions:
+        - {}
       csd-pulse-check-survey-1-q4 U6Ch1_2222:
+        answers:
+        - correct: true
+        - correct: true
+        - correct: true
+        - correct: true
+        - correct: true
+        - correct: true
+        - correct: true
+        questions:
+        - {}
+      csd-pulse-check-survey-1-q4 U6Ch1_mb2022:
         answers:
         - correct: true
         - correct: true
@@ -12354,6 +14645,17 @@ uz-UZ:
         - correct: true
         questions:
         - {}
+      csd-pulse-check-survey-1-q5 U2Ch1_2019_pilot_2023:
+        answers:
+        - correct: true
+        - correct: true
+        - correct: true
+        - correct: true
+        - correct: true
+        - correct: true
+        - correct: true
+        questions:
+        - {}
       csd-pulse-check-survey-1-q5 U2Ch2:
         answers:
         - correct: true
@@ -12421,6 +14723,17 @@ uz-UZ:
         questions:
         - {}
       csd-pulse-check-survey-1-q5 U3Ch1_2019_pilot_2022:
+        answers:
+        - correct: true
+        - correct: true
+        - correct: true
+        - correct: true
+        - correct: true
+        - correct: true
+        - correct: true
+        questions:
+        - {}
+      csd-pulse-check-survey-1-q5 U3Ch1_2019_pilot_2023:
         answers:
         - correct: true
         - correct: true
@@ -12509,6 +14822,17 @@ uz-UZ:
         questions:
         - {}
       csd-pulse-check-survey-1-q5 U4Ch1_2022:
+        answers:
+        - correct: true
+        - correct: true
+        - correct: true
+        - correct: true
+        - correct: true
+        - correct: true
+        - correct: true
+        questions:
+        - {}
+      csd-pulse-check-survey-1-q5 U4Ch1_2023:
         answers:
         - correct: true
         - correct: true
@@ -12618,6 +14942,17 @@ uz-UZ:
         - correct: true
         questions:
         - {}
+      csd-pulse-check-survey-1-q5 U5Ch1_2023:
+        answers:
+        - correct: true
+        - correct: true
+        - correct: true
+        - correct: true
+        - correct: true
+        - correct: true
+        - correct: true
+        questions:
+        - {}
       csd-pulse-check-survey-1-q5 U5Ch2:
         answers:
         - correct: true
@@ -12706,7 +15041,29 @@ uz-UZ:
         - correct: true
         questions:
         - {}
+      csd-pulse-check-survey-1-q5 U6Ch1_2023a_2023:
+        answers:
+        - correct: true
+        - correct: true
+        - correct: true
+        - correct: true
+        - correct: true
+        - correct: true
+        - correct: true
+        questions:
+        - {}
       csd-pulse-check-survey-1-q5 U6Ch1_2222:
+        answers:
+        - correct: true
+        - correct: true
+        - correct: true
+        - correct: true
+        - correct: true
+        - correct: true
+        - correct: true
+        questions:
+        - {}
+      csd-pulse-check-survey-1-q5 U6Ch1_mb2022:
         answers:
         - correct: true
         - correct: true
@@ -12773,6 +15130,12 @@ uz-UZ:
           # Super raqamli fuqaro
 
           ## Kiberbullingga duch kelsak, qanday qilib unga qarshi kurashimiz mumkin?
+      csf_be_a_super_digital_citizen2022_2023:
+        content1: tafsilotlar bu yerda
+        markdown: |-
+          # Super raqamli fuqaro
+
+          ## Kiberbullingga duch kelsak, qanday qilib unga qarshi kurashimiz mumkin?
       csf_be_a_super_digital_citizen_2021:
         content1: tafsilotlar bu yerda
         markdown: |-
@@ -12785,6 +15148,11 @@ uz-UZ:
 
           ## Raqamli izingizda qanday ma'lumotlar bo‘lishi mumkin?
       csf_digital_trails2022:
+        markdown: |-
+          # Raqamli izdan boring
+
+          ## Raqamli izingizda qanday ma'lumotlar bo‘lishi mumkin?
+      csf_digital_trails2022_2023:
         markdown: |-
           # Raqamli izdan boring
 
@@ -12809,6 +15177,20 @@ uz-UZ:
 
           ![](https://images.code.org/bfa69295fbf33c77ecdeb79b5498d8f7-image-1584751340896.png)
       csf_password_power-up2022:
+        content1: tafsilotlar bu yerda
+        markdown: |
+          #  Parolingizni kuchaytiring
+
+          ## Parolni eslab qolish bo'yicha maslahatlar
+
+          * Parolingizni esda qolarli **ibora** bilan boshlang.
+          * Parolingizni faqat sizning **ota-onangiz** bilishi kerak.
+          * Parolingizda hech qachon **shaxsiy** ma'lumotlarini ishlatmang.
+          * Kamida **sakkizta** belgidan iborat parollar tuzing.
+          * Parolingizda ham harflar, ham raqamlar va ** belgilar ** bo‘lsin.
+
+          ![](https://images.code.org/bfa69295fbf33c77ecdeb79b5498d8f7-image-1584751340896.png)
+      csf_password_power-up2022_2023:
         content1: tafsilotlar bu yerda
         markdown: |
           #  Parolingizni kuchaytiring
@@ -12848,6 +15230,12 @@ uz-UZ:
           bo‘lsa, nima qilish kerak?\n\n* **S**tep away - to‘xta.\n* **T**ell a trusted
           adult - ishonchli kattalarga ayt.\n* **O**K sites first - yaxshi saytlarga
           kir.\n* **P**ause and think online - onlayn bo‘lganda o‘ylab ish tut.\n\n![](https://images.code.org/f3e4987a130b27f7b589d7829b753aac-image-1584750971069.png)"
+      csf_putting_a_stop_to_online_meanness2022_2023:
+        content1: tafsilotlar bu yerda
+        markdown: "# Nopoklikka STOP \n\n## Agar kimdir sizga Internetda yomon munosabatda
+          bo‘lsa, nima qilish kerak?\n\n* **S**tep away - to‘xta.\n* **T**ell a trusted
+          adult - ishonchli kattalarga ayt.\n* **O**K sites first - yaxshi saytlarga
+          kir.\n* **P**ause and think online - onlayn bo‘lganda o‘ylab ish tut.\n\n![](https://images.code.org/f3e4987a130b27f7b589d7829b753aac-image-1584750971069.png)"
       csf_putting_a_stop_to_online_meanness_2021:
         content1: tafsilotlar bu yerda
         markdown: "# Nopoklikka STOP \n\n## Agar kimdir sizga Internetda yomon munosabatda
@@ -12860,6 +15248,11 @@ uz-UZ:
 
           ## Qanday qilib onlayn tarzda xavfsiz joylarga boriladi?
       csf_safety_in_my_online_neighborhood2022:
+        markdown: |-
+          # Mening onlayn mahallam
+
+          ## Qanday qilib onlayn tarzda xavfsiz joylarga boriladi?
+      csf_safety_in_my_online_neighborhood2022_2023:
         markdown: |-
           # Mening onlayn mahallam
 
@@ -13079,6 +15472,17 @@ uz-UZ:
         questions:
         - {}
       csp-post-survey-2017-q22_2019:
+        answers:
+        - correct: true
+        - correct: true
+        - correct: true
+        - correct: true
+        - correct: true
+        - correct: true
+        - correct: true
+        questions:
+        - {}
+      csp-post-survey-2017-q22_mb2022:
         answers:
         - correct: true
         - correct: true
@@ -13367,6 +15771,17 @@ uz-UZ:
         - correct: true
         questions:
         - {}
+      csp-pre-survey-2017-q10_copy2_2023:
+        answers:
+        - correct: true
+        - correct: true
+        - correct: true
+        - correct: true
+        - correct: true
+        - correct: true
+        - correct: true
+        questions:
+        - {}
       csp-pre-survey-2017-q11:
         answers:
         - correct: true
@@ -13455,6 +15870,17 @@ uz-UZ:
         - correct: true
         questions:
         - {}
+      csp-pre-survey-2017-q13_2023:
+        answers:
+        - correct: true
+        - correct: true
+        - correct: true
+        - correct: true
+        - correct: true
+        - correct: true
+        - correct: true
+        questions:
+        - {}
       csp-pre-survey-2017-q14:
         answers:
         - correct: true
@@ -13521,6 +15947,17 @@ uz-UZ:
         - correct: true
         questions:
         - {}
+      csp-pre-survey-2017-q16_copy2_2023:
+        answers:
+        - correct: true
+        - correct: true
+        - correct: true
+        - correct: true
+        - correct: true
+        - correct: true
+        - correct: true
+        questions:
+        - {}
       csp-pre-survey-2017-q17:
         answers:
         - correct: true
@@ -13555,6 +15992,17 @@ uz-UZ:
         questions:
         - {}
       csp-pre-survey-2017-q17_2022:
+        answers:
+        - correct: true
+        - correct: true
+        - correct: true
+        - correct: true
+        - correct: true
+        - correct: true
+        - correct: true
+        questions:
+        - {}
+      csp-pre-survey-2017-q17_copy2_2023:
         answers:
         - correct: true
         - correct: true
@@ -13631,6 +16079,17 @@ uz-UZ:
         - correct: true
         questions:
         - {}
+      csp-pre-survey-2017-q19_2023:
+        answers:
+        - correct: true
+        - correct: true
+        - correct: true
+        - correct: true
+        - correct: true
+        - correct: true
+        - correct: true
+        questions:
+        - {}
       csp-pre-survey-2017-q1_2018:
         answers:
         - correct: true
@@ -13697,6 +16156,28 @@ uz-UZ:
         - correct: true
         questions:
         - {}
+      csp-pre-survey-2017-q20_2023:
+        answers:
+        - correct: true
+        - correct: true
+        - correct: true
+        - correct: true
+        - correct: true
+        - correct: true
+        - correct: true
+        questions:
+        - {}
+      csp-pre-survey-2017-q20_mb2022:
+        answers:
+        - correct: true
+        - correct: true
+        - correct: true
+        - correct: true
+        - correct: true
+        - correct: true
+        - correct: true
+        questions:
+        - {}
       csp-pre-survey-2017-q21:
         answers:
         - correct: true
@@ -13753,6 +16234,28 @@ uz-UZ:
         questions:
         - {}
       csp-pre-survey-2017-q22_2022:
+        answers:
+        - correct: true
+        - correct: true
+        - correct: true
+        - correct: true
+        - correct: true
+        - correct: true
+        - correct: true
+        questions:
+        - {}
+      csp-pre-survey-2017-q22_2023:
+        answers:
+        - correct: true
+        - correct: true
+        - correct: true
+        - correct: true
+        - correct: true
+        - correct: true
+        - correct: true
+        questions:
+        - {}
+      csp-pre-survey-2017-q22_mb2022:
         answers:
         - correct: true
         - correct: true
@@ -13983,6 +16486,17 @@ uz-UZ:
         - correct: true
         questions:
         - {}
+      csp-pre-survey-2017-q30_2023:
+        answers:
+        - correct: true
+        - correct: true
+        - correct: true
+        - correct: true
+        - correct: true
+        - correct: true
+        - correct: true
+        questions:
+        - {}
       csp-pre-survey-2017-q31:
         answers:
         - correct: true
@@ -14017,6 +16531,28 @@ uz-UZ:
         questions:
         - {}
       csp-pre-survey-2017-q31_2022:
+        answers:
+        - correct: true
+        - correct: true
+        - correct: true
+        - correct: true
+        - correct: true
+        - correct: true
+        - correct: true
+        questions:
+        - {}
+      csp-pre-survey-2017-q31_2023:
+        answers:
+        - correct: true
+        - correct: true
+        - correct: true
+        - correct: true
+        - correct: true
+        - correct: true
+        - correct: true
+        questions:
+        - {}
+      csp-pre-survey-2017-q31_mb2022:
         answers:
         - correct: true
         - correct: true
@@ -14128,6 +16664,17 @@ uz-UZ:
         - correct: true
         questions:
         - {}
+      csp-pre-survey-2017-q3_copy2_2023:
+        answers:
+        - correct: true
+        - correct: true
+        - correct: true
+        - correct: true
+        - correct: true
+        - correct: true
+        - correct: true
+        questions:
+        - {}
       csp-pre-survey-2017-q4:
         answers:
         - correct: true
@@ -14184,6 +16731,39 @@ uz-UZ:
         questions:
         - {}
       csp-pre-survey-2017-q4_2022:
+        answers:
+        - correct: true
+        - correct: true
+        - correct: true
+        - correct: true
+        - correct: true
+        - correct: true
+        - correct: true
+        questions:
+        - {}
+      csp-pre-survey-2017-q4_copy1_mb2022:
+        answers:
+        - correct: true
+        - correct: true
+        - correct: true
+        - correct: true
+        - correct: true
+        - correct: true
+        - correct: true
+        questions:
+        - {}
+      csp-pre-survey-2017-q4_copy2_2023:
+        answers:
+        - correct: true
+        - correct: true
+        - correct: true
+        - correct: true
+        - correct: true
+        - correct: true
+        - correct: true
+        questions:
+        - {}
+      csp-pre-survey-2017-q4_mb2022:
         answers:
         - correct: true
         - correct: true
@@ -14326,9 +16906,29 @@ uz-UZ:
         - correct: true
         questions:
         - {}
+      csp-pre-survey-2017-q9_copy2_2023:
+        answers:
+        - correct: true
+        - correct: true
+        - correct: true
+        - correct: true
+        - correct: true
+        - correct: true
+        - correct: true
+        questions:
+        - {}
       csp_unit_assessment_overview:
         content1: tafsilotlar bu yerda
       curriculum-how-challenging:
+        answers:
+        - correct: true
+        - correct: true
+        - correct: true
+        - correct: true
+        - correct: true
+        questions:
+        - {}
+      curriculum-how-challenging_mb2022:
         answers:
         - correct: true
         - correct: true
@@ -14370,7 +16970,31 @@ uz-UZ:
         - correct: true
         questions:
         - {}
+      ever-learned-cs-outside-school_2023:
+        answers:
+        - correct: true
+        - correct: true
+        - correct: true
+        - correct: true
+        questions:
+        - {}
+      ever-learned-cs-outside-school_mb2022:
+        answers:
+        - correct: true
+        - correct: true
+        - correct: true
+        - correct: true
+        questions:
+        - {}
       ever-learned-cs_2022:
+        answers:
+        - correct: true
+        - correct: true
+        - correct: true
+        - correct: true
+        questions:
+        - {}
+      ever-learned-cs_2023:
         answers:
         - correct: true
         - correct: true
@@ -14381,10 +17005,17 @@ uz-UZ:
       express_EOC2022:
         description: Siz E kursini yakunladingiz! Endi ijod qilish uchun loyiha tanlang.
         display_name: End of Course Project
+      express_EOC2022_2023:
+        description: Siz E kursini yakunladingiz! Endi ijod qilish uchun loyiha tanlang.
+        display_name: End of Course Project
       express_EOC_2021:
         description: Siz E kursini yakunladingiz! Endi ijod qilish uchun loyiha tanlang.
         display_name: End of Course Project
       express_EOC_examples2022:
+        description: Siz yakuniy loyihangizni boshlamoqchisiz. Ishni boshlashdan oldin,
+          namunali loyihalarni ko'rib chiqishga vaqt ajrating.
+        display_name: Loyiha namunalari
+      express_EOC_examples2022_2023:
         description: Siz yakuniy loyihangizni boshlamoqchisiz. Ishni boshlashdan oldin,
           namunali loyihalarni ko'rib chiqishga vaqt ajrating.
         display_name: Loyiha namunalari
@@ -14401,6 +17032,14 @@ uz-UZ:
         questions:
         - {}
       family_encourage_2022:
+        answers:
+        - correct: true
+          text: ha
+        - correct: true
+          text: yo‘q
+        questions:
+        - {}
+      family_encourage_2023:
         answers:
         - correct: true
           text: ha
@@ -14427,6 +17066,24 @@ uz-UZ:
         - text: Quyidagi kodga diqqat bilan qarang. Agar kod oxirigacha ishlasa (xatolarni
             hisobga olmasa) Laurel qancha xazina to‘playdi?
       grade2_multi_collector_A_predict12022:
+        answers:
+        - feedback: Noto‘g’ri. Laurel xazina yo‘q joyda xazina to‘plashga harakat
+            qiladi va bu xatoga olib keladi.
+          text: Laurel ushbu kod yordamida 4 ta xazina yig’adi.
+        - correct: true
+          feedback: To‘g’ri!
+          text: Laurel will try to collect treasure where there is not any and it
+            causes an error.
+        - feedback: Noto‘g’ri. Laurel xazina yo‘q joyda xazina to‘plashga harakat
+            qiladi va bu xatoga olib keladi.
+          text: Laurel barcha xazinalarni to‘playdi.
+        - feedback: Noto‘g’ri. Laurel xazina yo‘q joyda xazina to‘plashga harakat
+            qiladi va bu xatoga olib keladi.
+          text: Laurel ushbu kod yordamida 1 ta xazina yig’adi.
+        questions:
+        - text: Ushbu kodni diqqat bilan ko'rib chiqing. Sizningcha, dastur ishga
+            tushganda nima bo'ladi?
+      grade2_multi_collector_A_predict12022_2023:
         answers:
         - feedback: Noto‘g’ri. Laurel xazina yo‘q joyda xazina to‘plashga harakat
             qiladi va bu xatoga olib keladi.
@@ -14644,6 +17301,310 @@ uz-UZ:
         - correct: true
         questions:
         - {}
+      interested-in-learning-cs_2023:
+        answers:
+        - correct: true
+        - correct: true
+        - correct: true
+        - correct: true
+        - correct: true
+        - correct: true
+        - correct: true
+        questions:
+        - {}
+      interested-in-learning-cs_mb2022:
+        answers:
+        - correct: true
+        - correct: true
+        - correct: true
+        - correct: true
+        - correct: true
+        - correct: true
+        - correct: true
+        questions:
+        - {}
+      intro-pulse-survey-q1_csd1_2023:
+        answers:
+        - correct: true
+        - correct: true
+        - correct: true
+        questions:
+        - {}
+      intro-pulse-survey-q1_csd2_2023:
+        answers:
+        - correct: true
+        - correct: true
+        - correct: true
+        questions:
+        - {}
+      intro-pulse-survey-q1_csd3_2023:
+        answers:
+        - correct: true
+        - correct: true
+        - correct: true
+        questions:
+        - {}
+      intro-pulse-survey-q1_csd4_2023:
+        answers:
+        - correct: true
+        - correct: true
+        - correct: true
+        questions:
+        - {}
+      intro-pulse-survey-q1_csd5_2023:
+        answers:
+        - correct: true
+        - correct: true
+        - correct: true
+        questions:
+        - {}
+      intro-pulse-survey-q1_csd6_2023:
+        answers:
+        - correct: true
+        - correct: true
+        - correct: true
+        questions:
+        - {}
+      intro-pulse-survey-q2_csd1_2023:
+        answers:
+        - correct: true
+        - correct: true
+        - correct: true
+        questions:
+        - {}
+      intro-pulse-survey-q2_csd2_2023:
+        answers:
+        - correct: true
+        - correct: true
+        - correct: true
+        questions:
+        - {}
+      intro-pulse-survey-q2_csd3_2023:
+        answers:
+        - correct: true
+        - correct: true
+        - correct: true
+        questions:
+        - {}
+      intro-pulse-survey-q2_csd4_2023:
+        answers:
+        - correct: true
+        - correct: true
+        - correct: true
+        questions:
+        - {}
+      intro-pulse-survey-q2_csd5_2023:
+        answers:
+        - correct: true
+        - correct: true
+        - correct: true
+        questions:
+        - {}
+      intro-pulse-survey-q2_csd6_2023:
+        answers:
+        - correct: true
+        - correct: true
+        - correct: true
+        questions:
+        - {}
+      intro-pulse-survey-q3_csd1_2023:
+        answers:
+        - correct: true
+        - correct: true
+        - correct: true
+        - correct: true
+        - correct: true
+        - correct: true
+        - correct: true
+        questions:
+        - {}
+      intro-pulse-survey-q3_csd2_2023:
+        answers:
+        - correct: true
+        - correct: true
+        - correct: true
+        - correct: true
+        - correct: true
+        - correct: true
+        - correct: true
+        questions:
+        - {}
+      intro-pulse-survey-q3_csd3_2023:
+        answers:
+        - correct: true
+        - correct: true
+        - correct: true
+        - correct: true
+        - correct: true
+        - correct: true
+        - correct: true
+        questions:
+        - {}
+      intro-pulse-survey-q3_csd4_2023:
+        answers:
+        - correct: true
+        - correct: true
+        - correct: true
+        - correct: true
+        - correct: true
+        - correct: true
+        - correct: true
+        questions:
+        - {}
+      intro-pulse-survey-q3_csd5_2023:
+        answers:
+        - correct: true
+        - correct: true
+        - correct: true
+        - correct: true
+        - correct: true
+        - correct: true
+        - correct: true
+        questions:
+        - {}
+      intro-pulse-survey-q3_csd6_2023:
+        answers:
+        - correct: true
+        - correct: true
+        - correct: true
+        - correct: true
+        - correct: true
+        - correct: true
+        - correct: true
+        questions:
+        - {}
+      intro-pulse-survey-q4_csd1_2023:
+        answers:
+        - correct: true
+        - correct: true
+        - correct: true
+        - correct: true
+        - correct: true
+        - correct: true
+        - correct: true
+        questions:
+        - {}
+      intro-pulse-survey-q4_csd2_2023:
+        answers:
+        - correct: true
+        - correct: true
+        - correct: true
+        - correct: true
+        - correct: true
+        - correct: true
+        - correct: true
+        questions:
+        - {}
+      intro-pulse-survey-q4_csd3_2023:
+        answers:
+        - correct: true
+        - correct: true
+        - correct: true
+        - correct: true
+        - correct: true
+        - correct: true
+        - correct: true
+        questions:
+        - {}
+      intro-pulse-survey-q4_csd4_2023:
+        answers:
+        - correct: true
+        - correct: true
+        - correct: true
+        - correct: true
+        - correct: true
+        - correct: true
+        - correct: true
+        questions:
+        - {}
+      intro-pulse-survey-q4_csd5_2023:
+        answers:
+        - correct: true
+        - correct: true
+        - correct: true
+        - correct: true
+        - correct: true
+        - correct: true
+        - correct: true
+        questions:
+        - {}
+      intro-pulse-survey-q4_csd6_2023:
+        answers:
+        - correct: true
+        - correct: true
+        - correct: true
+        - correct: true
+        - correct: true
+        - correct: true
+        - correct: true
+        questions:
+        - {}
+      intro-pulse-survey-q5_csd1_2023:
+        answers:
+        - correct: true
+        - correct: true
+        - correct: true
+        - correct: true
+        - correct: true
+        - correct: true
+        - correct: true
+        questions:
+        - {}
+      intro-pulse-survey-q5_csd2_2023:
+        answers:
+        - correct: true
+        - correct: true
+        - correct: true
+        - correct: true
+        - correct: true
+        - correct: true
+        - correct: true
+        questions:
+        - {}
+      intro-pulse-survey-q5_csd3_2023:
+        answers:
+        - correct: true
+        - correct: true
+        - correct: true
+        - correct: true
+        - correct: true
+        - correct: true
+        - correct: true
+        questions:
+        - {}
+      intro-pulse-survey-q5_csd4_2023:
+        answers:
+        - correct: true
+        - correct: true
+        - correct: true
+        - correct: true
+        - correct: true
+        - correct: true
+        - correct: true
+        questions:
+        - {}
+      intro-pulse-survey-q5_csd5_2023:
+        answers:
+        - correct: true
+        - correct: true
+        - correct: true
+        - correct: true
+        - correct: true
+        - correct: true
+        - correct: true
+        questions:
+        - {}
+      intro-pulse-survey-q5_csd6_2023:
+        answers:
+        - correct: true
+        - correct: true
+        - correct: true
+        - correct: true
+        - correct: true
+        - correct: true
+        - correct: true
+        questions:
+        - {}
       made-choices-about-assignments:
         answers:
         - correct: true
@@ -14676,6 +17637,17 @@ uz-UZ:
         questions:
         - {}
       naturally-better-at-cs_2022:
+        answers:
+        - correct: true
+        - correct: true
+        - correct: true
+        - correct: true
+        - correct: true
+        - correct: true
+        - correct: true
+        questions:
+        - {}
+      naturally-better-at-cs_copy2_2023:
         answers:
         - correct: true
         - correct: true
@@ -14783,6 +17755,17 @@ uz-UZ:
         questions:
         - {}
       post-assessment survey q31-a-2017b:
+        answers:
+        - correct: true
+        - correct: true
+        - correct: true
+        - correct: true
+        - correct: true
+        - correct: true
+        - correct: true
+        questions:
+        - {}
+      post-assessment survey q31-a-2017b_mb2022:
         answers:
         - correct: true
         - correct: true
@@ -15136,6 +18119,18 @@ uz-UZ:
         - correct: true
         questions:
         - {}
+      reasons-took-course-csd_2023:
+        answers:
+        - correct: true
+        - correct: true
+        - correct: true
+        - correct: true
+        - correct: true
+        - correct: true
+        - correct: true
+        - correct: true
+        questions:
+        - {}
       same-ability:
         answers:
         - correct: true
@@ -15156,6 +18151,14 @@ uz-UZ:
         questions:
         - {}
       someone_else_encourage_2022:
+        answers:
+        - correct: true
+          text: ha
+        - correct: true
+          text: yo‘q
+        questions:
+        - {}
+      someone_else_encourage_2023:
         answers:
         - correct: true
           text: ha
@@ -15191,6 +18194,14 @@ uz-UZ:
         questions:
         - {}
       teacher_encourage_2022:
+        answers:
+        - correct: true
+          text: ha
+        - correct: true
+          text: yo‘q
+        questions:
+        - {}
+      teacher_encourage_2023:
         answers:
         - correct: true
           text: ha
@@ -15267,6 +18278,28 @@ uz-UZ:
         - correct: true
         questions:
         - {}
+      will-be-myself-in-cs_2023:
+        answers:
+        - correct: true
+        - correct: true
+        - correct: true
+        - correct: true
+        - correct: true
+        - correct: true
+        - correct: true
+        questions:
+        - {}
+      will-be-myself-in-cs_mb2022:
+        answers:
+        - correct: true
+        - correct: true
+        - correct: true
+        - correct: true
+        - correct: true
+        - correct: true
+        - correct: true
+        questions:
+        - {}
       worried-less-capable:
         answers:
         - correct: true
@@ -15290,6 +18323,17 @@ uz-UZ:
         questions:
         - {}
       worried-seen-incapable_2022:
+        answers:
+        - correct: true
+        - correct: true
+        - correct: true
+        - correct: true
+        - correct: true
+        - correct: true
+        - correct: true
+        questions:
+        - {}
+      worried-seen-incapable_2023:
         answers:
         - correct: true
         - correct: true

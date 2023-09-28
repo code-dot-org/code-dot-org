@@ -25,7 +25,7 @@ Hodina kódu poskytuje jednoduchý a zábavný spôsob, ako žiakom priblíži�
 
 <a id="how-to-video"></a>
 
-## 1. Pozrite si video o organizovaní Hodiny kódu <iframe width="500" height="255" src="//www.youtube.com/embed/SrnvvWDm73k" frameborder="0" allowfullscreen></iframe> 
+## 1. Pozrite si video o organizovaní Hodiny kódu <iframe width="500" height="255" src="https://www.youtube-nocookie.com/embed/SrnvvWDm73k" frameborder="0" allowfullscreen></iframe> 
 
 * * *
 
@@ -111,7 +111,7 @@ Nie je problém, ak sa vy alebo vaši žiaci nevyznáte v počítačoch a info
 
 Nasmerujte žiakov na aktivitu
 
-- Write the tutorial link on a whiteboard. Find the link listed on the [information for your selected tutorial]({{ urls/learn }}).
+- Napíšte odkaz na výukový program na tabuľu. Nájdite odkaz uvedený v [informáciách pre vybraný tutoriál]({{ urls/learn }}).
 
 Ak budú mať žiaci nejaké ťažkosti, môžete im odpovedať nasledovne:
 
@@ -151,6 +151,6 @@ Ak budú mať žiaci nejaké ťažkosti, môžete im odpovedať nasledovne:
 
 ### Čo nasleduje po Hodine kódu?
 
-Computer science doesn’t have to end with the Hour of Code! [Learn how](/beyond) to bring CS to your school and students.
+Informatika nemusí končiť Hodinou Kódexu! [Naučte](/beyond) sa, ako priniesť CS do svojej školy a študentov.
 
 {{ signup_button }}

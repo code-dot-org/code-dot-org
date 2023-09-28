@@ -53,6 +53,7 @@ kn:
         gender: 'ಲಿಂಗ'
         edit_header: 'ಖಾತೆಯ ವಿವರಗಳನ್ನು ಸಂಪಾದಿಸಿ'
         finish_sign_up_header: 'ನಿಮ್ಮ ಖಾತೆಯನ್ನು ರಚಿಸುವುದನ್ನು ಪೂರ್ಣಗೊಳಿಸಿ'
+        finish_sign_up_header_error: 'ದಯವಿಟ್ಟು ಕೆಳಗಿನ ದೋಷಗಳನ್ನು ಸರಿಪಡಿಸಿ:'
         finish_sign_up_subheader: '<strong>%{email}</strong> ಗಾಗಿ Code.org ಖಾತೆಯನ್ನು ರಚಿಸುವುದನ್ನು ಪೂರ್ಣಗೊಳಿಸಲು ಕೆಳಗಿನ ಮಾಹಿತಿಯನ್ನು ಭರ್ತಿ ಮಾಡಿ.'
         finish_sign_up_subheader_markdown: '**%{email}** ಗಾಗಿ Code.org ಖಾತೆಯನ್ನು ರಚಿಸುವುದನ್ನು ಪೂರ್ಣಗೊಳಿಸಲು ಕೆಳಗಿನ ಮಾಹಿತಿಯನ್ನು ಭರ್ತಿ ಮಾಡಿ.'
         finish_sign_up_subheader_provider: '<strong>%{email}</strong> ಗಾಗಿ <strong>%{provider}</strong> ನೊಂದಿಗೆ Code.org ಖಾತೆಯನ್ನು ರಚಿಸುವುದನ್ನು ಪೂರ್ಣಗೊಳಿಸಲು ಕೆಳಗಿನ ಮಾಹಿತಿಯನ್ನು ಭರ್ತಿ ಮಾಡಿ.'
@@ -60,6 +61,7 @@ kn:
         reset_password_token: "ನೀವು ಅನುಸರಿಸಿದ ಪಾಸ್‌ವರ್ಡ್ ಲಿಂಕ್ ಅನ್ನು ಮರುಹೊಂದಿಸಿ"
         error:
           future: ಭವಿಷ್ಯದಲ್ಲಿ ಸಾಧ್ಯವಿಲ್ಲ
+        user_type: 'ಖಾತೆ ವಿಧ'
         us_state: 'ರಾಜ್ಯ'
   beta: "ಬೀಟಾ"
   hello: "ಹಲೋ ವರ್ಲ್ಡ್"

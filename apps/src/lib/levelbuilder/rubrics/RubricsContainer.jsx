@@ -1,12 +1,14 @@
 import React, {useState} from 'react';
 import PropTypes from 'prop-types';
-import {BodyTwoText, Heading1} from '@cdo/apps/componentLibrary/typography';
+import {
+  BodyThreeText,
+  BodyTwoText,
+  Heading1,
+} from '@cdo/apps/componentLibrary/typography';
 import Button from '@cdo/apps/templates/Button';
-import {navigateToHref} from '@cdo/apps/utils';
 import RubricEditor from './RubricEditor';
-import {snakeCase, isNumber} from 'lodash';
-
-const RUBRIC_PATH = '/rubrics';
+import {RubricUnderstandingLevels} from '@cdo/apps/util/sharedConstants';
+import {saveRubricToTable, SAVING_TEXT, styles} from './rubricHelper';
 
 export default function RubricsContainer({
   unitName,
@@ -16,40 +18,10 @@ export default function RubricsContainer({
   lessonId,
 }) {
   const [learningGoalList, setLearningGoalList] = useState(
-    !!rubric
-      ? rubric.learningGoals
-      : [
-          {
-            key: 'ui-1',
-            id: 'ui-1',
-            learningGoal: '',
-            aiEnabled: false,
-            position: 1,
-            learningGoalEvidenceLevelsAttributes: [
-              {
-                teacherDescription: '',
-                understanding: 0,
-                aiPrompt: '',
-              },
-              {
-                teacherDescription: '',
-                understanding: 1,
-                aiPrompt: '',
-              },
-              {
-                teacherDescription: '',
-                understanding: 2,
-                aiPrompt: '',
-              },
-              {
-                teacherDescription: '',
-                understanding: 3,
-                aiPrompt: '',
-              },
-            ],
-          },
-        ]
+    !!rubric ? rubric.learningGoals : initialLearningGoal
   );
+
+  const [saveNotificationText, setSaveNotificationText] = useState('');
 
   const generateLearningGoalKey = () => {
     let learningGoalNumber = learningGoalList.length + 1;
@@ -80,22 +52,22 @@ export default function RubricsContainer({
       learningGoalEvidenceLevelsAttributes: [
         {
           teacherDescription: '',
-          understanding: 0,
+          understanding: RubricUnderstandingLevels.NONE,
           aiPrompt: '',
         },
         {
           teacherDescription: '',
-          understanding: 1,
+          understanding: RubricUnderstandingLevels.LIMITED,
           aiPrompt: '',
         },
         {
           teacherDescription: '',
-          understanding: 2,
+          understanding: RubricUnderstandingLevels.CONVINCING,
           aiPrompt: '',
         },
         {
           teacherDescription: '',
-          understanding: 3,
+          understanding: RubricUnderstandingLevels.EXTENSIVE,
           aiPrompt: '',
         },
       ],
@@ -164,105 +136,27 @@ export default function RubricsContainer({
     initialLevelForAssessment
   );
 
-  // TODO-AITT-169: Create notification for when a rubric has been saved
   // TODO-AITT-171: Enable deleting LearningGoals when saveRubric is called
-  const saveRubric = event => {
+  const saveRubric = async event => {
     event.preventDefault();
-    const dataUrl = !!rubric ? `/rubrics/${rubric.id}` : RUBRIC_PATH;
-    const method = !!rubric ? 'PATCH' : 'POST';
-
-    // Checking that the csrf-token exists since it is disabled on test
-    const csrfToken = document.querySelector('meta[name="csrf-token"]')
-      ? document.querySelector('meta[name="csrf-token"]').attributes['content']
-          .value
-      : null;
-    const learningGoalListAsData = removeNewIds(
-      transformKeys(learningGoalList)
+    await saveRubricToTable(
+      setSaveNotificationText,
+      rubric,
+      learningGoalList,
+      selectedLevelForAssessment,
+      lessonId
     );
-
-    const rubric_data = {
-      levelId: selectedLevelForAssessment,
-      lessonId: lessonId,
-      learningGoalsAttributes: learningGoalListAsData,
-    };
-
-    fetch(dataUrl, {
-      method: method,
-      headers: {
-        'Content-Type': 'application/json',
-        'X-CSRF-Token': csrfToken,
-      },
-      body: JSON.stringify(rubric_data),
-    })
-      .then(response => response.json())
-      .then(data => {
-        if (!rubric) {
-          navigateToHref(data.redirectUrl);
-        }
-      })
-      .catch(err => {
-        console.error('Error saving rubric:' + err);
-      });
   };
-
-  /**
-   * Removes the Ids from the newly added LearningGoals.
-   * Context: We use ids of LearningGoals in the front end to connect data.
-   * However, when a new LearningGoal is added in the front end, we want to
-   * have an id to modify the components, but then delete that id before saving
-   * the new LearningGoals to the back end so that new ids can be assigned by Rails.
-   */
-  function removeNewIds(keyConceptList) {
-    keyConceptList.forEach(keyConceptList => {
-      if (!isNumber(keyConceptList.id)) {
-        delete keyConceptList.id;
-      }
-    });
-    return keyConceptList;
-  }
-
-  /**
-   * Transforms the keys of an object from camelCase to snake_case.
-   * Intended to transform the keys of objects in an array of an object.
-   * In this case, it is only intended into the first nested layer.
-   * @param {object} obj - The object with keys in camelCase format.
-   * @returns {object} - The object with keys in snake_case format.
-   */
-  function transformObjectKeys(obj) {
-    const newObj = {};
-
-    for (const [key, value] of Object.entries(obj)) {
-      if (Array.isArray(value)) {
-        newObj[snakeCase(key)] = value.map(item => transformObjectKeys(item));
-      } else {
-        if (key === '_destroy') {
-          newObj[key] = value;
-        } else {
-          newObj[snakeCase(key)] = value;
-        }
-      }
-    }
-
-    return newObj;
-  }
-
-  /**
-   * Transforms the keys of objects inside an array from camelCase to snake_case.
-   * Designed specifically for an array of objects with keys in camelCase.
-   * @param {array} startingList - The list containing objects with camelCase keys.
-   * @returns {array} - The list containing objects with snake_case keys.
-   */
-  function transformKeys(startingList) {
-    return startingList.map(item => transformObjectKeys(item));
-  }
 
   const handleDropdownChange = event => {
     setSelectedLevelForAssessment(event.target.value);
   };
 
+  const pageHeader = !!rubric ? 'Modify your rubric' : 'Create your rubric';
+
   return (
     <div>
-      <Heading1>Create or modify your rubric</Heading1>
+      <Heading1>{pageHeader}</Heading1>
       <BodyTwoText>
         This rubric will be used for {unitName}, lesson {lessonNumber}.
       </BodyTwoText>
@@ -291,11 +185,16 @@ export default function RubricsContainer({
       />
       <div style={styles.bottomRow}>
         <Button
+          className="ui-test-save-button"
           color={Button.ButtonColor.brandSecondaryDefault}
           text="Save your rubric"
           onClick={saveRubric}
           size={Button.ButtonSize.narrow}
+          disabled={saveNotificationText === SAVING_TEXT}
         />
+      </div>
+      <div style={styles.bottomRow}>
+        <BodyThreeText>{saveNotificationText}</BodyThreeText>
       </div>
     </div>
   );
@@ -311,14 +210,34 @@ RubricsContainer.propTypes = {
   lessonId: PropTypes.number,
 };
 
-const styles = {
-  containerStyle: {
-    display: 'flex',
-    alignItems: 'center',
-    gap: 10,
+const initialLearningGoal = [
+  {
+    key: 'ui-1',
+    id: 'ui-1',
+    learningGoal: '',
+    aiEnabled: false,
+    position: 1,
+    learningGoalEvidenceLevelsAttributes: [
+      {
+        teacherDescription: '',
+        understanding: RubricUnderstandingLevels.NONE,
+        aiPrompt: '',
+      },
+      {
+        teacherDescription: '',
+        understanding: RubricUnderstandingLevels.LIMITED,
+        aiPrompt: '',
+      },
+      {
+        teacherDescription: '',
+        understanding: RubricUnderstandingLevels.CONVINCING,
+        aiPrompt: '',
+      },
+      {
+        teacherDescription: '',
+        understanding: RubricUnderstandingLevels.EXTENSIVE,
+        aiPrompt: '',
+      },
+    ],
   },
-  bottomRow: {
-    display: 'flex',
-    justifyContent: 'space-between',
-  },
-};
+];

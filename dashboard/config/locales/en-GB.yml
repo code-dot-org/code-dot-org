@@ -6,6 +6,7 @@ en-GB:
         age: Age
         current_password: Current password
         email: Email
+        finish_sign_up_header_error: 'Please correct the following errors:'
         gender: Gender
         name: Display Name
         password: Password

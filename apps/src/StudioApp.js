@@ -1038,11 +1038,11 @@ StudioApp.prototype.addChangeHandler = function (newHandler) {
   this.changeHandlers.push(newHandler);
 };
 
-StudioApp.prototype.runChangeHandlers = function () {
+StudioApp.prototype.runChangeHandlers = function (e) {
   if (!this.changeHandlers) {
     return;
   }
-  this.changeHandlers.forEach(handler => handler());
+  this.changeHandlers.forEach(handler => handler(e));
 };
 
 StudioApp.prototype.setupChangeHandlers = function () {

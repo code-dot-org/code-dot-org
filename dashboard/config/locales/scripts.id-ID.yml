@@ -117,6 +117,10 @@ id:
         ai-ethics-2021:
           description_audience: Kelas 6-12
           title: Kode Etik AI Kami
+        ai-ethics-2023:
+          lessons:
+            lesson-1:
+              name: Kode Etik AI Kami
         ai-temp:
           title: Bagaimana AI bekerja
         aiml-2021:

@@ -14,6 +14,7 @@ import {currentLocation} from '@cdo/apps/utils';
 import PropTypes from 'prop-types';
 import queryString from 'query-string';
 import $ from 'jquery';
+import fontConstants from '@cdo/apps/fontConstants';
 
 const WorkshopCard = props => {
   return (
@@ -526,10 +527,10 @@ const styles = {
     marginTop: 20,
   },
   bold: {
-    fontFamily: '"Gotham 7r", sans-serif',
+    ...fontConstants['main-font-bold'],
   },
   linkLike: {
-    fontFamily: '"Gotham 7r", sans-serif',
+    ...fontConstants['main-font-bold'],
     cursor: 'pointer',
     color: color.purple,
   },

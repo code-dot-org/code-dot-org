@@ -559,7 +559,7 @@ pt:
         csf_my_online_neighborhood_2020: Minha Vizinhança Online
         csf_follow_the_digital_trail: Siga o Trilha Digital
         csf_private_and_personal_information: Informações Privadas e Pessoais
-        csd_what_computers_are: O que é um computador?
+        csd_what_computers_are: O que é um Computador?
         csd_how_teamwork_works: Como funciona o trabalho em equipe
         csd_teamwork_and_disagreement: Trabalho em equipe - Lidar com discordâncias
         csf21pilot_events: 'Sprite Lab: Sprites em ação'
@@ -623,7 +623,7 @@ pt:
         csd_app_lab_events: Eventos do CSD App Lab
         PL_CSD_Unit4_AppTesting: Teste de protótipo em papel
         csd_u6_circuit_playground: Computação Física
-        csd_u6_input_output: Entrada e saída
+        csd_u6_input_output: Entrada e Saída
         CSA-PL-for-loops: Para loops em Java
         CSA-PL-variables: Criando variáveis em Java
         PL_CS_Journeys_Overview: Jornada de CC
@@ -732,7 +732,7 @@ pt:
         csa_remving_data_from_an_arraylist: 'CSA: Removendo dados de uma lista de matrizes'
         csa_private_methods: 'CSA: Métodos privados'
         csa_recursion: 'CSA: Recursão'
-        csa_searching_algorithms: 'CSA: Algoritmos de busca'
+        csa_searching_algorithms: 'CSA: Algoritmos de Busca'
         csa_sorting_algorithms: 'CSA: Algoritmos de classificação'
         star_quilts_intro_to_artist: 'Star Quilts: Introdução ao artista'
         upload_sprites_backgrounds: Fazendo upload de sprites e planos de fundo personalizados

@@ -1,5 +1,4 @@
-import PropTypes from 'prop-types';
-import React, {useRef, useLayoutEffect, useEffect, useState} from 'react';
+import React, {useLayoutEffect, useState} from 'react';
 import styles from './video.module.scss';
 
 interface VideoProps {

@@ -5,9 +5,12 @@ import color from '@cdo/apps/util/color';
 import Button from '@cdo/apps/templates/Button';
 import AgeDropdown from '@cdo/apps/templates/AgeDropdown';
 import {SignInState} from '@cdo/apps/templates/currentUserRedux';
+import analyticsReporter from '@cdo/apps/lib/util/AnalyticsReporter';
+import {EVENTS} from '@cdo/apps/lib/util/AnalyticsConstants';
 import i18n from '@cdo/locale';
 import PropTypes from 'prop-types';
 import queryString from 'query-string';
+import fontConstants from '@cdo/apps/fontConstants';
 
 /*
  * SignInOrAgeDialog uses 'anon_over13' as its session storage key.
@@ -34,6 +37,7 @@ class AgeDialog extends Component {
     signedIn: PropTypes.bool.isRequired,
     turnOffFilter: PropTypes.func.isRequired,
     storage: PropTypes.object.isRequired,
+    unitName: PropTypes.string,
   };
 
   static defaultProps = {
@@ -62,11 +66,19 @@ class AgeDialog extends Component {
     }
 
     // Sets cookie to true when anon user is 13+. False otherwise.
-    const over13 = parseInt(value, 10) >= 13;
+    const age = parseInt(value, 10);
+    const over13 = age >= 13;
     this.setSessionStorage(over13);
 
     if (over13) {
       this.props.turnOffFilter();
+    }
+
+    // Send Amplitude event when anon user is 21+.
+    if (age >= 21) {
+      analyticsReporter.sendEvent(EVENTS.AGE_21_SELECTED_EVENT, {
+        unit_name: this.props.unitName,
+      });
     }
   };
 
@@ -118,7 +130,7 @@ const styles = {
   },
   dancePartyHeading: {
     fontSize: 32,
-    fontFamily: "'Gotham 7r', sans-serif",
+    ...fontConstants['main-font-bold'],
   },
   middle: {
     marginTop: 20,
@@ -153,4 +165,5 @@ export const UnconnectedAgeDialog = AgeDialog;
 
 export default connect(state => ({
   signedIn: state.currentUser.signInState === SignInState.SignedIn,
+  unitName: state.progress.scriptName,
 }))(AgeDialog);
