@@ -21,6 +21,17 @@ describe('AiAssessmentBox', () => {
     expect(wrapper.find('ReactTooltip')).to.have.lengthOf(1);
   });
 
+  it('renders AiAssessmentBox without AI confidence when unavailable', () => {
+    const updatedProps = {
+      ...props,
+      aiConfidence: null,
+    };
+    const wrapper = shallow(<AiAssessmentBox {...updatedProps} />);
+    expect(wrapper.find('EmText')).to.have.lengthOf(0);
+    expect(wrapper.find('Heading6')).to.have.lengthOf(1);
+    expect(wrapper.find('ReactTooltip')).to.have.lengthOf(0);
+  });
+
   it('should have green color and associated message for aiAssessed with convincing understanding', () => {
     const wrapper = shallow(<AiAssessmentBox {...props} />);
     expect(wrapper.find('div').first().hasClass(style.greenAiAssessment)).to.be

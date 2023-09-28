@@ -39,15 +39,17 @@ export default function AiAssessmentBox({
       {isAiAssessed && (
         <div>
           <Heading6>{studentAchievment()}</Heading6>
-          <div>
-            <EmText>{i18n.aiConfidence({aiConfidence: aiConfidence})}</EmText>
-            <span data-tip data-for="info-tip">
-              <FontAwesome icon="info-circle" className={style.infoTipIcon} />
-            </span>
-            <ReactTooltip id="info-tip" effect="solid">
-              {i18n.aiAssessmentExplanation()}
-            </ReactTooltip>
-          </div>
+          {aiConfidence && (
+            <div>
+              <EmText>{i18n.aiConfidence({aiConfidence: aiConfidence})}</EmText>
+              <span data-tip data-for="info-tip">
+                <FontAwesome icon="info-circle" className={style.infoTipIcon} />
+              </span>
+              <ReactTooltip id="info-tip" effect="solid">
+                PLACEHOLDER TEXT FOR INFO TIP
+              </ReactTooltip>
+            </div>
+          )}
         </div>
       )}
       {!isAiAssessed && (
@@ -57,7 +59,7 @@ export default function AiAssessmentBox({
             <FontAwesome icon="info-circle" className={style.infoTipIcon} />
           </span>
           <ReactTooltip id="info-tip" effect="solid">
-            {i18n.aiCannotAssessExplanation()}
+            PLACEHOLDER TEXT FOR INFO TIP
           </ReactTooltip>
         </div>
       )}
