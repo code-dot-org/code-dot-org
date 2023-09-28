@@ -17,7 +17,19 @@
         "AppLab Intro 7 - Change Screen Color": {
           "applab_hoc_finish": "画面は緑に変わりましたか？もしそうならば「終了」を押してください。そうでなければ「リセット」を押して、プログラムを変更した後、もう一度「実行」を押してください。\n"
         },
+        "AppLab Intro 7 - Change Screen Color_2023": {
+          "applab_hoc_finish": "画面は緑に変わりましたか？もしそうならば「終了」を押してください。そうでなければ「リセット」を押して、プログラムを変更した後、もう一度「実行」を押してください。\n"
+        },
+        "AppLab Intro 7 - Change Screen Color_mb2022": {
+          "applab_hoc_finish": "画面は緑に変わりましたか？もしそうならば「終了」を押してください。そうでなければ「リセット」を押して、プログラムを変更した後、もう一度「実行」を押してください。\n"
+        },
         "AppLab Intro 7 - thisOrThatAddButton": {
+          "AppLabHoCFinal11": "デザイン・モードです。"
+        },
+        "AppLab Intro 7 - thisOrThatAddButton_2023": {
+          "AppLabHoCFinal11": "デザイン・モードです。"
+        },
+        "AppLab Intro 7 - thisOrThatAddButton_mb2022": {
           "AppLabHoCFinal11": "デザイン・モードです。"
         },
         "CSD U3 rect": {

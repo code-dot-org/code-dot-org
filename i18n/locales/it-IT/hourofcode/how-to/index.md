@@ -25,7 +25,7 @@ Provare un'Ora di Codice è un modo semplice e divertente per presentare l'infor
 
 <a id="how-to-video"></a>
 
-## 1. Guarda il video illustrativo dell'Ora del Codice <iframe width="500" height="255" src="//www.youtube.com/embed/SrnvvWDm73k" frameborder="0" allowfullscreen></iframe> 
+## 1. Guarda il video illustrativo dell'Ora del Codice <iframe width="500" height="255" src="https://www.youtube-nocookie.com/embed/SrnvvWDm73k" frameborder="0" allowfullscreen></iframe> 
 
 * * *
 

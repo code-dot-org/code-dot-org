@@ -1166,6 +1166,9 @@
           "word": "Hodisa",
           "definition": "Biror narsa sodir bo‘lishiga olib keladigan harakat."
         },
+        "artificial_intelligence/ai-ethics/2023": {
+          "word": "Sun'iy Intellekt"
+        },
         "adaptation/csc-adaptations/2023": {
           "word": "Moslashuv",
           "definition": "Atrof-muhitdan yaxshiroq omon qolish uchun organizmdagi o'zgarish"
@@ -1376,6 +1379,67 @@
         },
         "poetry_circle/poetry/2023": {
           "definition": "Yangi she'rlarni sinab ko'rish va boshqalardan konstruktiv fikr olish uchun xavfsiz va ijodiy makon"
+        },
+        "computer/csd/2023": {
+          "word": "Kompyuter"
+        },
+        "input/csd/2023": {
+          "word": "Kiritish"
+        },
+        "processing/csd/2023": {
+          "word": "Processing"
+        },
+        "digital_footprint/csd/2023": {
+          "word": "Digital Footprint"
+        },
+        "copyright/csd/2023": {
+          "word": "Mualliflik huquqi",
+          "definition": "adabiy, badiiy yoki musiqiy materiallarni chop etish, nashr etish, ijro etish, videoga tushirish yoki yozib olish va boshqalarga ham shu imkoniyatlarni beradigan eksklyuziv qonuniy huquq."
+        },
+        "bug/csd/2023": {
+          "word": "Bag",
+          "definition": "Dasturning xato yoki kutilgandek ishlamaydigan joyi. "
+        },
+        "debugging/csd/2023": {
+          "word": "Nosozliklarni bartaraf etish (Debugging)",
+          "definition": "Biron algoritm yoki dasturdagi muammolarni topish va to‘g‘rilash."
+        },
+        "program/csd/2023": {
+          "word": "Dastur",
+          "definition": "mashina tomonidan ishlatsa bo‘ladigan biror narsaning kodini yozishda ishlatiladigan algoritm."
+        },
+        "variable/csd/2023": {
+          "word": "O‘zgaruvchi",
+          "definition": "Dasturda ishlatilgan biror ma'lumot yoki qiymat uchun nom."
+        },
+        "sprite/csd/2023": {
+          "word": "Sprait"
+        },
+        "condition/csd/2023": {
+          "word": "Shart"
+        },
+        "conditionals/csd/2023": {
+          "word": "Shartli bayonotlar"
+        },
+        "abstraction/csd/2023": {
+          "word": "Abstraksiya"
+        },
+        "function/csd/2023": {
+          "word": "Funksiya"
+        },
+        "user/csd/2023": {
+          "word": "Foydalanuvchi",
+          "definition": "Ob'ektni, shu jumladan dasturiy ta'minot va apparatni ishlatadigan kishi."
+        },
+        "user_interface/csd/2023": {
+          "word": "UI - Foydalanuvchi interfeysi"
+        },
+        "machine_learning/csd/2023": {
+          "word": "Mashinalar o‘rganishi",
+          "definition": "Kompyuterlar aniq dasturlashtirilmasdan naqshlarni tanishi va qarorlarni qabul qila olishi uslublari"
+        },
+        "ethics/csd/2023": {
+          "word": "Etika"
         },
         "algorithm/coursea/2023": {
           "word": "Algoritm",

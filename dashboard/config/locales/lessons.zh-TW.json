@@ -5160,6 +5160,10 @@
           "purpose": "在這項線上活動中，學生會學習怎樣在 Play Lab 中使用事件。他們首先會訓練武士，在他們按下箭頭鍵時讓武士移動。活動結束時，他們將有機會展示本課程中所學到的其餘技巧（包括序列與迴圈）做為最後的自由探索謎題。",
           "student_overview": "使用事件製作故事或互動遊戲。"
         },
+        "ai-ethics-2023/lesson-1": {
+          "name": "我們的 AI 道德守則",
+          "student_overview": "協同研究人工智慧道德規範，並建立可共用的行為準則。"
+        },
         "csc-adaptations-2023/Modeling Animal Adaptations (pilot)": {
           "name": "動物適應簡介",
           "overview": "在這個 \\*\\* 技能培養 \\*\\* 課程中，學生將學習如何創建精靈並製作動畫，並使用事件使其具有互動性。 \n\n學生將在 Sprite Lab 中編寫基於事件的因果模型，以示範物種如何隨著時間的推移適應環境而生存。互動模型和模擬在現實世界中使用，以幫助工程師和科學家識別模式，了解自然，對未來的變化做出預測，並設計解決方案以準備和/或應對重大破壞。 \n\n學生將分組探索進化，適應，遷移，自然選擇和生存的例子。 ",
@@ -5320,6 +5324,313 @@
           "preparation": "\\-每位學生準備一台電腦\n\\-為每位學生準備一份 **<a href=\"https://docs.google.com/document/d/1kO4SNEIVyM0GrxxJb6NzVYauXXpi6rzQkDIfrzQf1Ls/template/preview\" target=\"_blank\">共享您的應用程序</a>** 講義的副本。\n\\-確保學生在本課程中準備了原始詩歌的副本。\\\n-將班級分成對，以進行詩歌對共享活動。\n\\-考慮這些相關的擴展選項（[link](https://studio.code.org/s/poetry-2023/lessons/4#activity-4365336)）在本課後進行探索。\n\n##### 選用\n\n\\-特別適用於遠端教學：決定您是否需要設定數位文件或共用線上空間來發佈每位學生的應用程式 URL (請參閱「連結」中的教師範本)。 ",
           "purpose": "與同行分享他們的詩歌藝術項目是創作過程的一個重要方面。它允許學生接收反饋，與他人合作，反思自己的工作並慶祝他們的成就。通過與他人分享他們的工作，學生可以成長和提高創意思想家，並發展重要的溝通和人際交往能力。",
           "student_overview": "與您的朋友分享您的新詩應用程序！ "
+        },
+        "csd1-2023/Intro to Problem Solving": {
+          "name": "問題解決能力的介紹"
+        },
+        "csd1-2023/The Problem Solving Process": {
+          "name": "問題解決流程"
+        },
+        "csd1-2023/Exploring Problem Solving": {
+          "name": "問題解決探索"
+        },
+        "csd1-2023/What is a Computer?": {
+          "name": "電腦是什麼？"
+        },
+        "csd1-2023/Input and Output": {
+          "name": "輸入與輸出"
+        },
+        "csd1-2023/Processing": {
+          "name": "處理"
+        },
+        "csd1-2023/Storage": {
+          "name": "儲存"
+        },
+        "csd1-2023/Project - Propose an App": {
+          "name": "專案 - 提出應用程式建議"
+        },
+        "csd1-2023/Intro to Problem Solving - Newspaper Table (Alternate Lesson 1)": {
+          "name": "解難簡介 - 讀報桌 (備選課堂 1)"
+        },
+        "csd1-2023/Intro to Problem Solving - Spaghetti Bridge (Alternate Lesson 1)": {
+          "name": "解難簡介 - 義大利麵橋 (備選課堂 1)"
+        },
+        "csd1-2023/Intro to Problem Solving - Paper Tower (Alternate Lesson 1)": {
+          "name": "解難簡介 - 紙塔 (備選課堂 1)"
+        },
+        "csd1-2023/Exploring Problem Solving - Animals Theme (Alternate Lesson 3)": {
+          "name": "探索解難 - 動物主題 (備選課堂 3)"
+        },
+        "csd1-2023/Exploring Problem Solving - Games Theme (Alternate Lesson 3)": {
+          "name": "探索解難 - 遊戲主題 (備選課堂 3)"
+        },
+        "csd2-2023/Exploring Web Pages": {
+          "name": "瀏覽網頁"
+        },
+        "csd2-2023/Intro to HTML": {
+          "name": "HTML 簡介"
+        },
+        "csd2-2023/Mini-Project: HTML Web Page": {
+          "name": "迷你專案: HTML網頁"
+        },
+        "csd2-2023/Digital Footprint": {
+          "name": "數位足跡"
+        },
+        "csd2-2023/Styling Text with CSS": {
+          "name": "透過 CSS 修改文字樣式"
+        },
+        "csd2-2023/Mini-Project: Your Personal Style": {
+          "name": "迷你專案: 你的個人風格"
+        },
+        "csd2-2023/Intellectual Property": {
+          "name": "知識產權"
+        },
+        "csd2-2023/Using Images": {
+          "name": "使用圖片"
+        },
+        "csd2-2023/Styling Elements with CSS": {
+          "name": "透過 CSS 修改元素樣式"
+        },
+        "csd2-2023/Your Web Page - Prepare": {
+          "name": "你的網頁 - 準備"
+        },
+        "csd2-2023/Project - Personal Web Page": {
+          "name": "專案 - 個人網頁"
+        },
+        "csd2-2023/Websites for a Purpose": {
+          "name": "有目的的網站"
+        },
+        "csd2-2023/Team Problem Solving": {
+          "name": "團隊問題解決"
+        },
+        "csd2-2023/Sources and Research": {
+          "name": "資料來源與研究"
+        },
+        "csd2-2023/Linking Pages": {
+          "name": "鏈接頁面"
+        },
+        "csd2-2023/Project - Website for a Purpose": {
+          "name": "專案 - 為達成目的而製作網站"
+        },
+        "csd2-2023/Peer Review and Final Touches": {
+          "name": "同儕審查與最後修訂"
+        },
+        "csd3-2023/Plotting Shapes": {
+          "name": "幾何繪圖"
+        },
+        "csd3-2023/Drawing in Game Lab": {
+          "name": "用 Game Lab 繪圖"
+        },
+        "csd3-2023/Variables": {
+          "name": "變數"
+        },
+        "csd3-2023/Random Numbers": {
+          "name": "隨機取數"
+        },
+        "csd3-2023/Sprites": {
+          "name": "角色"
+        },
+        "csd3-2023/Text": {
+          "name": "文字"
+        },
+        "csd3-2023/The Draw Loop": {
+          "name": "draw（繪圖）迴圈"
+        },
+        "csd3-2023/Sprite Movement": {
+          "name": "角色動作"
+        },
+        "csd3-2023/Conditionals": {
+          "name": "條件判斷（Conditionals）"
+        },
+        "csd3-2023/Keyboard Input": {
+          "name": "鍵盤輸入"
+        },
+        "csd3-2023/Mouse Input": {
+          "name": "滑鼠輸入"
+        },
+        "csd3-2023/Project - Interactive Card": {
+          "name": "專案 - 互動式卡片"
+        },
+        "csd3-2023/Velocity": {
+          "name": "速度"
+        },
+        "csd3-2023/Collision Detection": {
+          "name": "碰撞檢測"
+        },
+        "csd3-2023/Complex Sprite Movement": {
+          "name": "複合角色動作"
+        },
+        "csd3-2023/Collisions": {
+          "name": "碰撞"
+        },
+        "csd3-2023/Functions": {
+          "name": "函式"
+        },
+        "csd3-2023/The Game Design Process": {
+          "name": "遊戲設計流程"
+        },
+        "csd3-2023/Using the Game Design Process": {
+          "name": "使用遊戲設計流程"
+        },
+        "csd3-2023/Project - Design a Game": {
+          "name": "專案 - 設計一個遊戲"
+        },
+        "csd4-2023/Designing With Empathy": {
+          "name": "用同理心設計"
+        },
+        "csd4-2023/Understanding Your User": {
+          "name": "瞭解您的使用者"
+        },
+        "csd4-2023/User Interfaces": {
+          "name": "使用者介面"
+        },
+        "csd4-2023/Feedback and Testing": {
+          "name": "回饋與測試"
+        },
+        "csd4-2023/Identifying User Needs": {
+          "name": "確定使用者需求"
+        },
+        "csd4-2023/Project - Paper Prototype": {
+          "name": "專案 - 紙上原型"
+        },
+        "csd4-2023/Designing Apps for Good": {
+          "name": "設計良好的應用程式"
+        },
+        "csd4-2023/Market Research": {
+          "name": "市場研究"
+        },
+        "csd4-2023/Exploring UI Elements": {
+          "name": "探索 UI 元素"
+        },
+        "csd4-2023/Build a Paper Prototype": {
+          "name": "製作紙上原型"
+        },
+        "csd4-2023/Prototype Testing": {
+          "name": "原型測試"
+        },
+        "csd4-2023/Design Mode in App Lab": {
+          "name": "App Lab 的設計模式"
+        },
+        "csd4-2023/Build a Digital Prototype": {
+          "name": "製作數位原型"
+        },
+        "csd4-2023/Linking Prototype Screens": {
+          "name": "連接原型畫面"
+        },
+        "csd4-2023/Testing the App": {
+          "name": "測試應用程式"
+        },
+        "csd4-2023/Bugs and Features": {
+          "name": "臭蟲和功能"
+        },
+        "csd4-2023/Updating Your Prototype": {
+          "name": "更新你的原型"
+        },
+        "csd4-2023/Project - App Presentation": {
+          "name": "專案 - 應用程式簡報"
+        },
+        "csd5-2023/Representation Matters": {
+          "name": "表示事項"
+        },
+        "csd5-2023/Patterns and Representation": {
+          "name": "模式和標記法"
+        },
+        "csd5-2023/ASCII and Binary Representation": {
+          "name": "ASCII 和 二進位表示法"
+        },
+        "csd5-2023/Representing Images": {
+          "name": "表示圖像"
+        },
+        "csd5-2023/Representing Numbers": {
+          "name": "數字表示法"
+        },
+        "csd5-2023/Combining Representations": {
+          "name": "組合表示"
+        },
+        "csd5-2023/Keeping Data Secret": {
+          "name": "讓資料保密"
+        },
+        "csd5-2023/Project - Create a Representation": {
+          "name": "專案 - 創建標記法"
+        },
+        "csd5-2023/Structuring Data": {
+          "name": "資料的建構"
+        },
+        "csd5-2023/Interpreting Data": {
+          "name": "解譯數據"
+        },
+        "csd5-2023/Making Decisions with Data": {
+          "name": "依數據來做決定"
+        },
+        "csd5-2023/Automating Data Decisions": {
+          "name": "自動化數據決策"
+        },
+        "csd5-2023/Problem Solving with Big Data": {
+          "name": "用大數據解決問題"
+        },
+        "csd5-2023/Data and Machine Learning": {
+          "name": "數據與機器學習"
+        },
+        "csd5-2023/Project - Make a Recommendation": {
+          "name": "專案 - 提出建議"
+        },
+        "csd6a-2023/Intro to App Lab": {
+          "name": "App Lab 入門"
+        },
+        "csd6a-2023/The Circuit Playground": {
+          "name": "電路（Circuit ）遊樂場"
+        },
+        "csd6a-2023/Board Events": {
+          "name": "電路板事件"
+        },
+        "csd6a-2023/Color LEDs": {
+          "name": "彩色顯示器"
+        },
+        "csd6a-2023/Accelerometer": {
+          "name": "加速計"
+        },
+        "csd6a-2023/Making Music": {
+          "name": "製作音樂"
+        },
+        "csd6a-2023/Functions": {
+          "name": "函式"
+        },
+        "csd6a-2023/Project - Prototype an Innovation": {
+          "name": "專案 - 為新點子製作原型",
+          "overview": "在課程的這個期末專案中，學生會以團隊方式開發並測試一款創新運算裝置的原型，這個原型以 Circuit Playground 為基礎。各小組會使用電路板上可用的輸入與輸出來製作程式，讓程式可與使用者進行有趣且獨一無二的互動。"
+        },
+        "csd6b-2023/Intro to App Lab": {
+          "name": "App Lab 入門"
+        },
+        "csd6b-2023/Board Events": {
+          "name": "電路板事件"
+        },
+        "csd6b-2023/Accelerometer": {
+          "name": "加速計"
+        },
+        "csd6b-2023/Functions": {
+          "name": "函式"
+        },
+        "csd6b-2023/Project - Prototype an Innovation": {
+          "name": "專案 - 為新點子製作原型"
+        },
+        "csd7-2023/Intro to App Lab": {
+          "name": "App Lab 入門"
+        },
+        "csd7-2023/Patterns in Data": {
+          "name": "數據中的規律"
+        },
+        "csd7-2023/Introduction to AI Lab": {
+          "name": "AI Lab 的介紹"
+        },
+        "csd7-2023/Numerical Models": {
+          "overview": "在本課中，學生參與一個線下活動，模擬僵屍疫情爆發。學生必須利用鄰近城鎮的數據來預測城鎮的哪一部分擁有最少的僵屍。學生們將使用相似度和平均值來預測某一特定地點的僵屍數量。然後，學生得到拯救，並將他們的預測與實際數字進行比較，以討論數字數據與分類數據的準確性有何不同。\n\n**今日問題。**電腦如何學習用數字資料進行預測？"
+        },
+        "csd7-2023/Numerical Data in AI Lab": {
+          "name": "AI Lab 的數字資料"
+        },
+        "csd7-2023/Survey Planning": {
+          "name": "設計數據收集"
         },
         "coursea-2023/Safety in My Online Neighborhood": {
           "name": "我的網上社區的安全",

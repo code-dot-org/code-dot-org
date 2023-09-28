@@ -278,6 +278,10 @@ lv:
   call_to_action_register_early_access: Reģistrējieties agrīnai piekļuvei
   call_to_action_open_positions: Skatīt atvērtās pozīcijas
   call_to_action_get_guide: Iegūt ceļvedi
+  call_to_action_donate_to_cdo: Ziedot Code.org
+  call_to_action_start_fundraiser: Sāciet līdzekļu vākšanas līdzekli
+  call_to_action_view_donation_policy: Skatīt ziedošanas politiku
+  call_to_action_view_donate_bitpay: Ziedot ar BitPay
   aria_label_call_to_action_afe: Uzziniet vairāk par Amazon Future Engineer
   aria_label_call_to_action_teaching_csf: Sākt mācību datorzinātnes pamati profesionālās
     apmācības programmu
@@ -386,6 +390,7 @@ lv:
   curriculum_name_csp: Datorzinātņu principi
   curriculum_name_csc: Datorzinātņu savienojumi
   curriculum_name_csa: AP® datorzinātnes A
+  curriculum_name_csa_ai: Programmatūras inženierija un datoru vīzija
   curriculum_name_csc_02: Jebkurš CS savienojumu modulis
   curriculum_name_ai: AI un mašīnmācīšanās
   curriculum_name_artificial_intelligence: Mākslīgais intelekts (AI)
@@ -459,6 +464,12 @@ lv:
     un fizisko skaitļošanas sistēmu veidošanu.
   curriculum_desc_csp: Bezmaksas, AP® CSP apstiprināja, vidusskolas ievadkurss, kas
     iepazīstina studentus ar pamatjēdzieniem datorzinātnēs.
+  curriculum_desc_csa_ai_long: 'Šis divu nodaļu Post-AP CSA modulis piedāvā vidusskolu
+    skolēniem praktisku pieredzi ar profesionāliem programmatūras izstrādes rīkiem,
+    tostarp GitHub un GitHub Copilot, un piešķir viņiem reālās pasaules prasmes, lai
+    izstrādātu datorredzes programmu. '
+  curriculum_desc_csa_ai_short: Šis Post-AP® CSA modulis piedāvā vidusskolas skolēniem
+    praktisku pieredzi ar profesionāliem programmatūras izstrādes rīkiem.
   collection_hardware: Koncentrēties uz aparatūru
   collection_hardware_desc: Dot iespēju skolēniem izmantot datus un fiziskās ierīces
     problēmu risināšanai.
@@ -531,6 +542,7 @@ lv:
   module_duration_2_hrs: 2 stundas
   module_duration_3_hrs: 3 stundas
   module_duration_5_hrs: 5 stundas
+  module_duration_5_hrs_plus: 5+ stundas
   module_duration_8_hrs: 8 stundas
   module_duration_20_hrs: 20 stundas
   module_duration_35_hrs: 35 stundas
@@ -608,6 +620,7 @@ lv:
   heading_objects_first: Objekti vispirms
   heading_these_lessons_will: 'Šīs nodarbības:'
   heading_explore_curriculum_catalog: Izpētiet visus mūsu kursus Curriculum Catalog
+  heading_csa_ai: Vai meklējat lietas, ko darīt pēc AP® eksāmena?
   professional_learning_section_desc: Saņemiet nepieciešamo atbalstu, kad sagatavojat
     mācīt. Skolotāji to mīl, vairāk nekā 90% ierindojot to par labāko profesionālo
     attīstību jebkad!
@@ -639,6 +652,23 @@ lv:
   support_and_questions_section_desc: Mūsu atbalsta komanda ir šeit, lai atbildētu
     uz visiem jautājumiem, kas jums varētu būt par mācību sākšanu ar Code.org. Jūs
     varat arī lūgt citiem skolotājiem par viņu pieredzi mūsu skolotāju forumos.
+  subscribe_form_section_title: Abonēt atjauninājumus
+  subscribe_form_section_desc_csa: Reģistrējieties, lai saņemtu ikmēneša e-pastus
+    par Code.org AP® Computer Science A un saņemiet noderīgus atgādinājumus, padomus
+    un atjauninājumus, kas nosūtīti tieši uz iesūtni.
+  subscribe_form_section_desc_csc: Reģistrējieties, lai saņemtu ikmēneša e-pasta ziņojumus
+    par Code.org datorzinātnes savienojumiem un saņemiet noderīgus atgādinājumus,
+    padomus un atjauninājumus, kas nosūtīti tieši uz iesūtni.
+  subscribe_form_section_desc_csd: Reģistrējieties, lai saņemtu ikmēneša e-pastus
+    par Code.org datorzinātnes atklājumiem un saņemtu noderīgus atgādinājumus, padomus
+    un atjauninājumus, kas nosūtīti tieši uz jūsu iesūtni.
+  subscribe_form_section_desc_csf: Reģistrējieties, lai saņemtu ikmēneša e-pastus
+    par Code.org datorzinātnes pamatiem un saņemiet noderīgus atgādinājumus, padomus
+    un atjauninājumus, kas nosūtīti tieši uz jūsu iesūtni.
+  subscribe_form_section_desc_csp: Reģistrējieties, lai saņemtu ikmēneša e-pastus
+    par Code.org datorzinātnes principiem un saņemiet noderīgus atgādinājumus, padomus
+    un atjauninājumus, kas nosūtīti tieši uz iesūtni.
+  subscribe_form_section_unsubscribe: Jūs varat atteikties no abonēšanas jebkurā laikā.
   blockchain_hero_heading: Kā darbojas Blockchain
   blockchain_hero_desc: Nirt blokķēdes pasaulē ar “Kā Blockchain Works”, mūsu jauno
     video sēriju un pavadošās nodarbības!
@@ -742,6 +772,9 @@ lv:
     nodarbība ir savienota pārī ar vienu videoklipu no sērijas, dziļāk iekļaujot videoklipos
     ieviestos jēdzienus.
   ai_curriculum_btn_aria_label_04: Izpētiet, kā darbojas mākslīgā intelekta nodarbības
+  ai_curriculum_grades_05: 'Pakāpju līmeņi: 9-12'
+  ai_curriculum_btn_aria_label_05: Izpētiet programmatūras inženierijas un datora
+    redzamības moduli
   ai_carousel_heading: 'Ko skolotāji saka par AI ar Code.org:'
   ai_carousel_quote_01: Šī nodarbība arī deva maniem skolēniem iespēju redzēt, ka
     klasifikācijas sistēmās ir viedoklis. Vēlāk, kad mēs sākām redzēt, kā neobjektivitātes
@@ -866,6 +899,7 @@ lv:
     no LLM, piemēram, ChatGPT, no iesācēja līdz progresīvām. Ietver startera uzvednes
     tiem, kas vienkārši iegremdē pirkstus, kā arī uzlabotus rīkus tiem, kas vēlas
     palielināt savu potenciālu.
+  ai_pl_101_resources_3: AI piedāvā skolēnu mācību pārveidošanu
   how_ai_works_hero_heading: Kā darbojas mākslīgā intelekta darbība
   how_ai_works_hero_desc: Ieduriet AI pasaulē ar “Kā AI darbojas”, mūsu video sēriju
     un pavadošās nodarbības!
@@ -1258,8 +1292,8 @@ lv:
     Animation
   csp_page_curriculum_glance_devices: Laptop, Chromebook
   csp_page_curriculum_glance_tools: Lietojumprogrammu laboratorija
-  csp_page_curriculum_glance_professional_learning: Facilitator-led Workshops, Self-paced
-    Modules
+  csp_page_curriculum_glance_professional_learning: Koordinatora vadītas darbnīcas,
+    pašregulējamie moduļi
   csp_page_curriculum_glance_professional_languages: Latviešu valoda
   csp_page_curriculum_glance_professional_accessibility_features: Text-to-speech,
     Closed captioning, Immersive reader
@@ -1386,8 +1420,8 @@ lv:
   csd_page_curriculum_glance_devices: Laptop, Chromebook
   csd_page_curriculum_glance_tools: Lietojumprogrammu laboratorija, spēļu laboratorija,
     AI laboratorija, Web Lab
-  csd_page_curriculum_glance_professional_learning: Facilitator-led Workshops, Self-paced
-    Modules
+  csd_page_curriculum_glance_professional_learning: Koordinatora vadītas darbnīcas,
+    pašregulējamie moduļi
   csd_page_curriculum_glance_professional_languages: Latviešu valoda
   csd_page_curriculum_glance_professional_accessibility_features: Text-to-speech,
     Closed captioning, Immersive reader
@@ -1521,8 +1555,8 @@ lv:
     Māksla un dizains, App Design
   csf_page_curriculum_glance_devices: Klēpjdators, Chromebook dators, planšetdators
   csf_page_curriculum_glance_tools: Sprite Lab, spēlēt Lab
-  csf_page_curriculum_glance_professional_learning: Facilitator-led Workshops, Self-paced
-    Modules
+  csf_page_curriculum_glance_professional_learning: Koordinatora vadītas darbnīcas,
+    pašregulējamie moduļi
   csf_page_curriculum_glance_languages: Arābu, Bahasa Indonēzijas, Katalāņu, ķīniešu
     vienkāršotā, ķīniešu tradicionālā, čehu, franču, vācu, hindu, itāļu, japāņu, korejiešu,
     kannadu, malajiešu, marathu, mongoļu, poļu, portugāļu-BR, rumāņu, krievu, slovāku,
@@ -1658,6 +1692,38 @@ lv:
   csa_page_faq_answer_08_02: For more information about the values that guided our
     work, please see our [curriculum values](%{curriculum_values_url}) and our [professional
     learning values](%{pl_values_url}).
+  donate_page_top_heading: Palīdzēt finansēt mūsu misiju
+  donate_page_top_desc: Katrs ziedojums degvielas Code.org misiju paplašināt piekļuvi
+    datorzinātņu izglītībai. Mēs piedāvājam vairākus veidus, kā ziedot un mainīt.
+  donate_page_fundraise_title: Fundraise par Code.org
+  donate_page_fundraise_desc: Palīdziet piesaistīt naudu Code.org! Katram skolēniem
+    katrā skolā vajadzētu būt iespējai apgūt datorzinātnes.
+  donate_page_other_ways_title: Citi veidi, kā dot
+  donate_page_other_ways_desc: Izpētiet dažādas metodes, lai veicinātu, un atrast
+    iespēju, kas jums vislabāk atbilst. Katrs žests, liels vai mazs, virza mūsu misiju
+    uz priekšu.
+  donate_page_501c3: Code.org ir reģistrēta kā publiska 501 (c) (3) bezpeļņas organizācija.
+    Iemaksas Code.org ir atskaitāmas no nodokļiem, ciktāl to atļauj likums. Code.org
+    nodokļu identifikācijas numurs ir 46-0858543.
+  donate_page_donation_policy_title: Izpratne par ziedojumu politiku
+  donate_page_donation_policy_desc: Uzziniet, kā mēs rīkojamies un piešķiram jūsu
+    ieguldījumu.
+  donate_tabs_tab_label_daf_direct: DAF tiešais
+  donate_tabs_tab_label_amazon: Amazon
+  donate_tabs_tab_label_bitpay: BitPay
+  donate_tabs_tab_label_employee_match: Darbinieku mačs
+  donate_tabs_daf_direct_title: Ziedot caur DAF Direct
+  donate_tabs_daf_direct_desc: Ziedojiet ar savu ziedotāja ieteikto fondu ar Fidelity
+    Charitable, Schwab Charitable vai BNY Mellon un sniedziet savu dotāciju ieteikumu
+    Code.org, izmantojot DAF Direct tiešsaistes veidlapu.
+  donate_tabs_amazon_title: Ziedot caur Amazon
+  donate_tabs_amazon_desc: Ziedojiet tieši, izmantojot savu Amazon kontu. Tikai ar
+    dažiem klikšķiem, nemanāmi veicina Code.org misiju un dod iespēju datorzinātņu
+    izglītības nākotnei.
+  donate_tabs_bitpay_title: Ziedojiet ar kriptogrāfiju, izmantojot BitPay
+  donate_tabs_bitpay_desc: Apskāviens nākotni dod ar kriptonauda. Izmantojot BitPay,
+    jūsu digitālā valūta var tieši atbalstīt Code.org centienus paplašināt datorzinātņu
+    izglītību.
   hoc_live: Live kodēšanas stunda
   hoc_live_sign_up_title: Reģistrējieties Programmstundas tiešraidē
   hoc_live_learn_title: Mācīties ar programēšanas stundu tiešraidē

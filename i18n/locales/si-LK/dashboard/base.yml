@@ -45,8 +45,10 @@ si:
         age: 'වයස'
         gender: 'ස්ත්‍රී/පුරුෂ භාවය'
         edit_header: 'ගිනුමේ තොරතුරු 	සංස්කරණය කරන්න'
+        finish_sign_up_header_error: 'කරුණාකර පහත දෝෂ නිවැරදි කරන්න:'
         error:
           future: අනාගතයේදී විය නොහැකිය
+        user_type: 'ගිණුම් වර්ගය'
   beta: "beta"
   hello: "Hello world"
   welcome_back: "%{name}, ඔබව නැවතත් පිළිගන්නවා"

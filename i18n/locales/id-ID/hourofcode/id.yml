@@ -287,6 +287,10 @@ id:
   call_to_action_register_early_access: Daftar untuk akses awal
   call_to_action_open_positions: Lihat posisi terbuka
   call_to_action_get_guide: Dapatkan panduannya
+  call_to_action_donate_to_cdo: Donasi ke Code.org
+  call_to_action_start_fundraiser: Mulai penggalangan dana
+  call_to_action_view_donation_policy: Lihat kebijakan donasi
+  call_to_action_view_donate_bitpay: Donasi dengan BitPay
   aria_label_call_to_action_afe: Pelajari selengkapnya tentang Amazon Future Engineer
   aria_label_call_to_action_teaching_csf: Mulai program pembelajaran profesional Pengajaran
     Ilmu Komputer Dasar-dasar
@@ -389,6 +393,7 @@ id:
   curriculum_name_csp: Prinsip Ilmu Komputer
   curriculum_name_csc: Computer Science Connections
   curriculum_name_csa: Ilmu Komputer A
+  curriculum_name_csa_ai: Rekayasa Perangkat Lunak & Visi Komputer
   curriculum_name_csc_02: Modul CS Connections apa saja
   curriculum_name_ai: AI dan Machine Learning
   curriculum_name_artificial_intelligence: Kecerdasan Buatan (AI)
@@ -464,6 +469,12 @@ id:
     game, dan sistem komputasi fisik.
   curriculum_desc_csp: Kursus pengantar sekolah menengah gratis yang didukung AP®
     CSP yang memperkenalkan siswa pada konsep dasar ilmu komputer.
+  curriculum_desc_csa_ai_long: 'Modul CSA pasca-AP dua bagian ini menawarkan pengalaman
+    langsung kepada siswa sekolah menengah dengan alat pengembangan perangkat lunak
+    profesional, termasuk GitHub dan GitHub Copilot, dan memberi mereka keterampilan
+    dunia nyata untuk mengembangkan program visi komputer. '
+  curriculum_desc_csa_ai_short: Modul Post-AP® CSA ini menawarkan pengalaman langsung
+    kepada siswa sekolah menengah dengan alat pengembangan perangkat lunak profesional.
   collection_hardware: Fokus pada Perangkat Keras
   collection_hardware_desc: Memberdayakan siswa untuk menggunakan data dan perangkat
     fisik untuk memecahkan masalah.
@@ -538,6 +549,7 @@ id:
   module_duration_2_hrs: 2 jam
   module_duration_3_hrs: 3 jam
   module_duration_5_hrs: 5 jam
+  module_duration_5_hrs_plus: 5+ jam
   module_duration_8_hrs: 8 jam
   module_duration_20_hrs: 20 jam
   module_duration_35_hrs: 35 jam
@@ -617,6 +629,7 @@ id:
   heading_objects_first: Utamakan objek
   heading_these_lessons_will: 'Pelajaran ini akan:'
   heading_explore_curriculum_catalog: Jelajahi semua kursus kami di Katalog Kurikulum
+  heading_csa_ai: Mencari hal-hal yang harus dilakukan setelah ujian AP®?
   professional_learning_section_desc: Dapatkan dukungan yang Anda butuhkan saat Anda
     bersiap untuk mengajar. Para guru menyukainya, dan lebih dari 90% memberinya peringkat
     sebagai pengembangan profesi terbaik yang pernah ada!
@@ -650,6 +663,23 @@ id:
     apa pun yang mungkin Anda miliki tentang cara mulai mengajar dengan Code.org.
     Anda juga dapat bertanya kepada guru lain tentang pengalaman mereka di forum guru
     kami.
+  subscribe_form_section_title: Berlangganan untuk pembaruan
+  subscribe_form_section_desc_csa: Daftar untuk menerima email bulanan tentang AP®
+    Computer Science A Code.org dan dapatkan pengingat, tip, dan pembaruan bermanfaat
+    yang dikirim langsung ke kotak masuk Anda.
+  subscribe_form_section_desc_csc: Daftar untuk menerima email bulanan tentang Koneksi
+    Ilmu Komputer Code.org dan dapatkan pengingat, tip, dan pembaruan bermanfaat yang
+    dikirim langsung ke kotak masuk Anda.
+  subscribe_form_section_desc_csd: Daftar untuk menerima email bulanan tentang Penemuan
+    Ilmu Komputer Code.org dan dapatkan pengingat, tip, dan pembaruan bermanfaat yang
+    dikirim langsung ke kotak masuk Anda.
+  subscribe_form_section_desc_csf: Daftar untuk menerima email bulanan tentang Dasar-Dasar
+    Ilmu Komputer Code.org dan dapatkan pengingat, tip, dan pembaruan bermanfaat yang
+    dikirim langsung ke kotak masuk Anda.
+  subscribe_form_section_desc_csp: Daftar untuk menerima email bulanan tentang Prinsip
+    Ilmu Komputer Code.org dan dapatkan pengingat, tip, dan pembaruan bermanfaat yang
+    dikirim langsung ke kotak masuk Anda.
+  subscribe_form_section_unsubscribe: Anda dapat berhenti berlangganan kapan saja.
   blockchain_hero_heading: Bagaimana Blockchain Bekerja
   blockchain_hero_desc: Selami dunia blockchain dengan “How Blockchain Works,” seri
     video baru kami dan pelajaran yang menyertainya!
@@ -753,6 +783,9 @@ id:
     pelajaran dipasangkan dengan satu video dari seri, menyelami lebih dalam konsep
     yang diperkenalkan dalam video.
   ai_curriculum_btn_aria_label_04: Jelajahi pelajaran Bagaimana AI Bekerja
+  ai_curriculum_grades_05: 'Tingkat Kelas: 9-12'
+  ai_curriculum_btn_aria_label_05: Jelajahi modul Rekayasa Perangkat Lunak & Visi
+    Komputer
   ai_carousel_heading: 'Apa yang dikatakan guru tentang AI dengan Code.org:'
   ai_carousel_quote_01: Pelajaran ini juga memberi siswa saya kesempatan untuk melihat
     bahwa ada unsur opini dalam sistem klasifikasi. Kemudian, ketika kami mulai melihat
@@ -882,6 +915,7 @@ id:
     ChatGPT, dari pemula hingga mahir. Termasuk petunjuk pemula bagi mereka yang baru
     saja mencelupkan jari kaki mereka, serta alat canggih bagi mereka yang ingin memaksimalkan
     potensi mereka.
+  ai_pl_101_resources_3: AI Meminta untuk Mengubah Pembelajaran Siswa
   how_ai_works_hero_heading: Bagaimana AI Bekerja
   how_ai_works_hero_desc: Selami dunia AI dengan “How AI Works,” serial video kami
     dan pelajaran yang menyertainya!
@@ -1297,8 +1331,8 @@ id:
     Animation
   csp_page_curriculum_glance_devices: Laptop, Chromebook
   csp_page_curriculum_glance_tools: App Lab
-  csp_page_curriculum_glance_professional_learning: Facilitator-led Workshops, Self-paced
-    Modules
+  csp_page_curriculum_glance_professional_learning: Lokakarya yang dipimpin fasilitator,
+    Modul Self-paced
   csp_page_curriculum_glance_professional_languages: Bahasa Indonesia
   csp_page_curriculum_glance_professional_accessibility_features: Text-to-speech,
     Closed captioning, Immersive reader
@@ -1425,8 +1459,8 @@ id:
     Fisik, Desain Aplikasi, Game dan Animasi, Seni dan Desain, Pemrograman
   csd_page_curriculum_glance_devices: Laptop, Chromebook
   csd_page_curriculum_glance_tools: App Lab, Game Lab, AI Lab, Web Lab
-  csd_page_curriculum_glance_professional_learning: Facilitator-led Workshops, Self-paced
-    Modules
+  csd_page_curriculum_glance_professional_learning: Lokakarya yang dipimpin fasilitator,
+    Modul Self-paced
   csd_page_curriculum_glance_professional_languages: Bahasa Indonesia
   csd_page_curriculum_glance_professional_accessibility_features: Text-to-speech,
     Closed captioning, Immersive reader
@@ -1571,8 +1605,8 @@ id:
     dan Desain, Desain Aplikasi
   csf_page_curriculum_glance_devices: Laptop, Chromebook, Tablet
   csf_page_curriculum_glance_tools: Sprite Lab, Play Lab
-  csf_page_curriculum_glance_professional_learning: Facilitator-led Workshops, Self-paced
-    Modules
+  csf_page_curriculum_glance_professional_learning: Lokakarya yang dipimpin fasilitator,
+    Modul Self-paced
   csf_page_curriculum_glance_languages: Arab, Bahasa Indonesia, Catalan, Mandarin
     Sederhana, Tionghoa Tradisional, Ceko, Prancis, Jerman, Hindi, Italia, Jepang,
     Korea, Kannada, Melayu, Marathi, Mongolia, Polandia, Portugis-BR, Rumania, Rusia,
@@ -1714,6 +1748,39 @@ id:
   csa_page_faq_answer_08_02: For more information about the values that guided our
     work, please see our [curriculum values](%{curriculum_values_url}) and our [professional
     learning values](%{pl_values_url}).
+  donate_page_top_heading: Bantu mendanai misi kami
+  donate_page_top_desc: Setiap donasi mendorong misi Code.org untuk memperluas akses
+    ke pendidikan ilmu komputer. Kami menawarkan beberapa cara bagi Anda untuk menyumbang
+    dan membuat perbedaan.
+  donate_page_fundraise_title: Penggalangan dana untuk Code.org
+  donate_page_fundraise_desc: Bantu mengumpulkan uang untuk Code.org! Setiap siswa
+    di setiap sekolah harus memiliki kesempatan untuk belajar ilmu komputer.
+  donate_page_other_ways_title: Cara lain untuk memberi
+  donate_page_other_ways_desc: Jelajahi beragam metode untuk berkontribusi, dan temukan
+    opsi yang paling cocok untuk Anda. Setiap gerakan, besar atau kecil, mendorong
+    misi kami maju.
+  donate_page_501c3: Code.org terdaftar sebagai organisasi nirlaba 501 (c) (3) publik.
+    Kontribusi ke Code.org dapat dikurangkan dari pajak sejauh diizinkan oleh hukum.
+    Nomor identifikasi pajak Code.org adalah 46-0858543.
+  donate_page_donation_policy_title: Memahami Kebijakan Donasi
+  donate_page_donation_policy_desc: Pelajari tentang cara kami menangani dan mengalokasikan
+    kontribusi Anda.
+  donate_tabs_tab_label_daf_direct: DAF Langsung
+  donate_tabs_tab_label_amazon: Amazon
+  donate_tabs_tab_label_bitpay: BitPay
+  donate_tabs_tab_label_employee_match: Pertandingan Karyawan
+  donate_tabs_daf_direct_title: Donasi melalui DAF Direct
+  donate_tabs_daf_direct_desc: Donasi melalui dana yang disarankan donor Anda dengan
+    Fidelity Charitable, Schwab Charitable, atau BNY Mellon dan buat rekomendasi hibah
+    Anda ke Code.org melalui formulir online DAF Direct.
+  donate_tabs_amazon_title: Donasi melalui Amazon
+  donate_tabs_amazon_desc: Donasi langsung menggunakan akun Amazon Anda. Hanya dengan
+    beberapa klik, berkontribusi mulus pada misi Code.org dan memberdayakan masa depan
+    pendidikan ilmu komputer.
+  donate_tabs_bitpay_title: Donasi dengan Crypto melalui BitPay
+  donate_tabs_bitpay_desc: Merangkul masa depan memberi dengan cryptocurrency. Melalui
+    BitPay, mata uang digital Anda dapat secara langsung mendukung upaya Code.org
+    dalam memperluas pendidikan ilmu komputer.
   hoc_live: Hour of Code Live
   hoc_live_sign_up_title: Daftar Hour of Code Live
   hoc_live_learn_title: Belajar dengan Hour of Code Live
