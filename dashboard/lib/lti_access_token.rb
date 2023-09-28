@@ -41,7 +41,7 @@ module LtiAccessToken
     exp = token_response[:expires_in]
 
     # cache access_token, set expiration
-    CDO.shared_cache.write(cache_key, access_token, expires_in: exp)
+    CDO.shared_cache.write(cache_key, access_token, expires_in: exp.to_i)
 
     return access_token
   end
