@@ -4,13 +4,9 @@ import {FormGroup, ControlLabel, FormControl, HelpBlock} from 'react-bootstrap';
 import {CsdCustomWorkshopModules} from '@cdo/apps/generated/pd/sharedWorkshopConstants';
 
 /**
- * A dropdown used on the Workshop form for selecting a subject.
- * For professional learning purposes, a subject usually indicates which
- * part of a multi-step PL course this workshop represents.
- * For example: 5-day summer workshop, academic workshop 3, etc.
+ * A dropdown used on the Workshop form for selecting a Module when the subject is Custom Wokshop and course is CSD.
  */
 export default function ModuleSelect({
-  course,
   module,
   readOnly,
   inputStyle,

@@ -112,7 +112,6 @@ export class WorkshopForm extends React.Component {
   constructor(props) {
     super(props);
     this.state = this.computeInitialState(props);
-    console.log(this.state);
   }
 
   computeInitialState(props) {
