@@ -266,7 +266,7 @@ const CustomizableCurriculumCatalogCard = ({
                 type="button"
                 onClick={onQuickViewClick}
                 aria-label={quickViewButtonDescription}
-                text={'Quick View'}
+                text={i18n.quickView()}
               />
               <Button
                 color={Button.ButtonColor.brandSecondaryDefault}
