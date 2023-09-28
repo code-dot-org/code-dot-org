@@ -16,12 +16,15 @@ set -e
 # drone server ls -l | grep error | awk '{print $1}' | xargs -tL1 drone server destroy`
 # ```
 
+export DRONE_SERVER=https://drone.cdn-code.org
+export DRONE_AUTOSCALER=https://drone.cdn-code.org:8443
+
 # Check if DRONE_TOKEN is valid
 if ! output=$(drone server ls 2>&1); then
     echo "$output"
-    echo -e "\nError executing \`drone server ls\`. Ensure DRONE_SERVER, DRONE_AUTOSCALER, and DRONE_TOKEN are set correctly."
+    echo -e "\nError executing \`drone server ls\`. Ensure DRONE_TOKEN is set correctly."
     echo "For more information, see the 'Drone Continuous Integration System' document in the Engineering Drive."
-    echo "Obtain these values from https://drone.cdn-code.org/account"
+    echo "Obtain your DRONE_TOKEN from https://drone.cdn-code.org/account"
     exit 1
 fi
 
