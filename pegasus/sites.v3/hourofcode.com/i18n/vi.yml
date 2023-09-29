@@ -290,6 +290,10 @@ vi:
   call_to_action_register_early_access: Đăng ký để truy cập sớm
   call_to_action_open_positions: Xem các vị trí đang mở
   call_to_action_get_guide: Nhận hướng dẫn
+  call_to_action_donate_to_cdo: Quyên góp cho Code.org
+  call_to_action_start_fundraiser: Bắt đầu gây quỹ
+  call_to_action_view_donation_policy: Xem chính sách quyên góp
+  call_to_action_view_donate_bitpay: Đóng góp với BitPay
   aria_label_call_to_action_afe: Tìm hiểu thêm về Amazon Future Engineer
   aria_label_call_to_action_teaching_csf: Bắt đầu chương trình Teaching Computer Science
     Fundamentals Professional learning
@@ -398,6 +402,7 @@ vi:
   curriculum_name_csp: Các nguyên tắc khoa học máy tính
   curriculum_name_csc: Kết nối khoa học máy tính
   curriculum_name_csa: Khoa học máy tính A
+  curriculum_name_csa_ai: Kỹ thuật phần mềm & Computer Vision
   curriculum_name_csc_02: Học phần Kết nối KHMT bất kỳ
   curriculum_name_ai: AI và Học Máy
   curriculum_name_artificial_intelligence: Trí tuệ nhân tạo (AI)
@@ -475,6 +480,12 @@ vi:
     trò chơi và hệ thống máy tính vật lý.
   curriculum_desc_csp: Khóa học giới thiệu trung học phổ thông miễn phí, AP® CSP được
     chứng thực, giới thiệu cho học sinh các khái niệm cơ bản của khoa học máy tính.
+  curriculum_desc_csa_ai_long: 'Mô-đun CSA sau AP gồm hai chương này cung cấp cho
+    học sinh trung học kinh nghiệm thực hành với các công cụ phát triển phần mềm chuyên
+    nghiệp, bao gồm GitHub và GitHub Copilot, đồng thời truyền đạt cho họ các kỹ năng
+    thực tế để phát triển chương trình thị giác máy tính. '
+  curriculum_desc_csa_ai_short: Mô-đun CSA sau AP® này cung cấp cho học sinh trung
+    học kinh nghiệm thực hành với các công cụ phát triển phần mềm chuyên nghiệp.
   collection_hardware: Chuyên đề Phần cứng
   collection_hardware_desc: Tạo điều kiện cho học viên sử dụng dữ liệu và các thiết
     bị thực tế để giải quyết vấn đề.
@@ -550,6 +561,7 @@ vi:
   module_duration_2_hrs: 2 giờ
   module_duration_3_hrs: 3 giờ
   module_duration_5_hrs: 5 giờ
+  module_duration_5_hrs_plus: 5+ giờ
   module_duration_8_hrs: 8 giờ
   module_duration_20_hrs: 20 giờ
   module_duration_35_hrs: 35 giờ
@@ -631,6 +643,7 @@ vi:
   heading_these_lessons_will: 'Những bài học này sẽ:'
   heading_explore_curriculum_catalog: Khám phá tất cả các khóa học của chúng tôi trong
     Danh mục chương trình giảng dạy
+  heading_csa_ai: Tìm kiếm những việc cần làm sau kỳ thi AP®?
   professional_learning_section_desc: Nhận được sự hỗ trợ mà bạn cần trong quá trình
     chuẩn bị giảng dạy. Các thầy cô giáo rất yêu thích chương trình này, trong đó
     hơn 90% giáo viên xếp hạng chương trình này là bước bồi dưỡng chuyên môn tuyệt
@@ -666,6 +679,23 @@ vi:
     lời bất kỳ câu hỏi nào của bạn về việc bắt đầu giảng dạy với Code.org. Bạn cũng
     có thể hỏi các giáo viên khác về kinh nghiệm của họ trên các diễn đàn dành cho
     giáo viên của chúng tôi.
+  subscribe_form_section_title: Đăng ký để cập nhật
+  subscribe_form_section_desc_csa: Đăng ký để nhận email hàng tháng về AP® Computer
+    Science A của Code.org và nhận các lời nhắc, mẹo và cập nhật hữu ích được gửi
+    ngay đến hộp thư đến của bạn.
+  subscribe_form_section_desc_csc: Đăng ký để nhận email hàng tháng về Kết nối Khoa
+    học Máy tính của Code.org và nhận các lời nhắc, mẹo và cập nhật hữu ích được gửi
+    ngay đến hộp thư đến của bạn.
+  subscribe_form_section_desc_csd: Đăng ký để nhận email hàng tháng về Khám phá Khoa
+    học Máy tính của Code.org và nhận các lời nhắc, mẹo và cập nhật hữu ích được gửi
+    ngay đến hộp thư đến của bạn.
+  subscribe_form_section_desc_csf: Đăng ký để nhận email hàng tháng về các Nguyên
+    tắc cơ bản về Khoa học Máy tính của Code.org và nhận các lời nhắc, mẹo và cập
+    nhật hữu ích được gửi ngay đến hộp thư đến của bạn.
+  subscribe_form_section_desc_csp: Đăng ký để nhận email hàng tháng về Nguyên tắc
+    Khoa học Máy tính của Code.org và nhận các lời nhắc, mẹo và cập nhật hữu ích được
+    gửi ngay đến hộp thư đến của bạn.
+  subscribe_form_section_unsubscribe: Bạn có thể hủy đăng ký bất cứ lúc nào.
   blockchain_hero_heading: Cách thức hoạt động của Blockchain
   blockchain_hero_desc: Đi sâu vào thế giới blockchain với “Cách thức hoạt động của
     Blockchain”, loạt video mới của chúng tôi và các bài học kèm theo!
@@ -770,6 +800,9 @@ vi:
     của AI. Mỗi bài học được ghép nối với một video duy nhất từ bộ truyện, đi sâu
     hơn vào các khái niệm được giới thiệu trong video.
   ai_curriculum_btn_aria_label_04: Khám phá cách thức hoạt động của AI
+  ai_curriculum_grades_05: 'Các cấp lớp: 9-12'
+  ai_curriculum_btn_aria_label_05: Khám phá mô-đun Kỹ thuật Phần mềm & Tầm nhìn Máy
+    tính
   ai_carousel_heading: 'Giáo viên nói gì về AI với Code.org:'
   ai_carousel_quote_01: Bài học này cũng cho học sinh của tôi cơ hội thấy rằng có
     một yếu tố quan điểm trong các hệ thống phân loại. Sau đó, khi chúng tôi bắt đầu
@@ -902,6 +935,7 @@ vi:
     như ChatGPT, từ người mới bắt đầu đến nâng cao. Bao gồm lời nhắc khởi động cho
     những người chỉ cần nhúng ngón chân vào, cũng như các công cụ tiên tiến cho những
     người muốn tối đa hóa tiềm năng của họ.
+  ai_pl_101_resources_3: Lời nhắc AI để chuyển đổi việc học của học sinh
   how_ai_works_hero_heading: Cách thức hoạt động của AI
   how_ai_works_hero_desc: Đi sâu vào thế giới AI với “Cách thức hoạt động của AI”,
     loạt video của chúng tôi và các bài học kèm theo!
@@ -1325,8 +1359,8 @@ vi:
     Animation
   csp_page_curriculum_glance_devices: Laptop, Chromebook
   csp_page_curriculum_glance_tools: App Lab
-  csp_page_curriculum_glance_professional_learning: Facilitator-led Workshops, Self-paced
-    Modules
+  csp_page_curriculum_glance_professional_learning: Hội thảo do người hướng dẫn, Mô-đun
+    tự theo nhịp độ
   csp_page_curriculum_glance_professional_languages: Tiếng Việt
   csp_page_curriculum_glance_professional_accessibility_features: Text-to-speech,
     Closed captioning, Immersive reader
@@ -1454,8 +1488,8 @@ vi:
     trình
   csd_page_curriculum_glance_devices: Laptop, Chromebook
   csd_page_curriculum_glance_tools: App Lab, Game Lab, AI Lab, Web Lab
-  csd_page_curriculum_glance_professional_learning: Facilitator-led Workshops, Self-paced
-    Modules
+  csd_page_curriculum_glance_professional_learning: Hội thảo do người hướng dẫn, Mô-đun
+    tự theo nhịp độ
   csd_page_curriculum_glance_professional_languages: Tiếng Việt
   csd_page_curriculum_glance_professional_accessibility_features: Text-to-speech,
     Closed captioning, Immersive reader
@@ -1605,8 +1639,8 @@ vi:
     và Thiết kế, Thiết kế ứng dụng
   csf_page_curriculum_glance_devices: Máy tính xách tay, Chromebook, Máy tính bảng
   csf_page_curriculum_glance_tools: Sprite Lab, Play Lab
-  csf_page_curriculum_glance_professional_learning: Facilitator-led Workshops, Self-paced
-    Modules
+  csf_page_curriculum_glance_professional_learning: Hội thảo do người hướng dẫn, Mô-đun
+    tự theo nhịp độ
   csf_page_curriculum_glance_languages: Tiếng Ả Rập, Tiếng Indonesia, Tiếng Catalán,
     Tiếng Trung giản thể, Tiếng Trung phồn thể, Tiếng Séc, Tiếng Pháp, Tiếng Đức,
     Tiếng Hindi, Tiếng Ý, Tiếng Nhật, Tiếng Hàn Quốc, Tiếng Kannada, Tiếng Malaysia,
@@ -1755,6 +1789,39 @@ vi:
   csa_page_faq_answer_08_02: For more information about the values that guided our
     work, please see our [curriculum values](%{curriculum_values_url}) and our [professional
     learning values](%{pl_values_url}).
+  donate_page_top_heading: Giúp tài trợ cho sứ mệnh của chúng tôi
+  donate_page_top_desc: Mỗi khoản đóng góp thúc đẩy sứ mệnh của Code.org là mở rộng
+    quyền truy cập vào giáo dục khoa học máy tính. Chúng tôi cung cấp một số cách
+    để bạn quyên góp và tạo ra sự khác biệt.
+  donate_page_fundraise_title: Gây quỹ cho Code.org
+  donate_page_fundraise_desc: Giúp quyên góp tiền cho Code.org! Mỗi học sinh trong
+    mỗi trường nên có cơ hội học khoa học máy tính.
+  donate_page_other_ways_title: Những cách khác để cung cấp
+  donate_page_other_ways_desc: Khám phá các phương pháp đa dạng để đóng góp và tìm
+    tùy chọn phù hợp với bạn nhất. Mỗi cử chỉ, dù lớn hay nhỏ, đều thúc đẩy sứ mệnh
+    của chúng tôi tiến lên phía trước.
+  donate_page_501c3: Code.org được đăng ký là một tổ chức phi lợi nhuận 501 (c) (3)
+    công cộng. Đóng góp cho Code.org được khấu trừ thuế trong phạm vi pháp luật cho
+    phép. Mã số thuế của Code.org là 46-0858543.
+  donate_page_donation_policy_title: Hiểu chính sách quyên góp của chúng tôi
+  donate_page_donation_policy_desc: Tìm hiểu về cách chúng tôi xử lý và phân bổ các
+    khoản đóng góp của bạn.
+  donate_tabs_tab_label_daf_direct: DAF trực tiếp
+  donate_tabs_tab_label_amazon: Amazon
+  donate_tabs_tab_label_bitpay: BitPay
+  donate_tabs_tab_label_employee_match: Trận đấu nhân viên
+  donate_tabs_daf_direct_title: Đóng góp qua DAF Direct
+  donate_tabs_daf_direct_desc: Quyên góp thông qua quỹ do nhà tài trợ tư vấn của bạn
+    với Fidelity Charitable, Schwab Charitable hoặc BNY Mellon và đưa ra đề xuất tài
+    trợ của bạn cho Code.org thông qua biểu mẫu trực tuyến DAF Direct.
+  donate_tabs_amazon_title: Quyên góp qua Amazon
+  donate_tabs_amazon_desc: Đóng góp trực tiếp bằng tài khoản Amazon của bạn. Chỉ với
+    một vài cú nhấp chuột, đóng góp liền mạch vào sứ mệnh của Code.org và trao quyền
+    cho tương lai của giáo dục khoa học máy tính.
+  donate_tabs_bitpay_title: Đóng góp bằng tiền điện tử qua BitPay
+  donate_tabs_bitpay_desc: Nắm bắt tương lai của việc cho đi với tiền điện tử. Thông
+    qua BitPay, đồng tiền kỹ thuật số của bạn có thể hỗ trợ trực tiếp những nỗ lực
+    của Code.org trong việc mở rộng giáo dục khoa học máy tính.
   hoc_live: Giờ lập trình trực tiếp
   hoc_live_sign_up_title: Đăng ký Giờ lập trình trực tiếp
   hoc_live_learn_title: Học với Giờ lập trình trực tiếp

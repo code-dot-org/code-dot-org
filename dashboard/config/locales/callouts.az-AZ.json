@@ -5,7 +5,19 @@
         "AppLab Intro 7 - Change Screen Color": {
           "applab_hoc_finish": "Ekran yaşıl oldu? Əgər belədirsə, 'Bitir' düyməsini vurun. Əks təqdirdə, 'Sıfırla' vurun, kodunuzu dəyişdirin və yenidən 'Çalıştır'ı vurun."
         },
+        "AppLab Intro 7 - Change Screen Color_2023": {
+          "applab_hoc_finish": "Ekran yaşıl oldu? Əgər belədirsə, 'Bitir' düyməsini vurun. Əks təqdirdə, 'Sıfırla' vurun, kodunuzu dəyişdirin və yenidən 'Çalıştır'ı vurun."
+        },
+        "AppLab Intro 7 - Change Screen Color_mb2022": {
+          "applab_hoc_finish": "Ekran yaşıl oldu? Əgər belədirsə, 'Bitir' düyməsini vurun. Əks təqdirdə, 'Sıfırla' vurun, kodunuzu dəyişdirin və yenidən 'Çalıştır'ı vurun."
+        },
         "AppLab Intro 7 - thisOrThatAddButton": {
+          "AppLabHoCFinal11": "Siz indi dizayn rejimindəsiniz"
+        },
+        "AppLab Intro 7 - thisOrThatAddButton_2023": {
+          "AppLabHoCFinal11": "Siz indi dizayn rejimindəsiniz"
+        },
+        "AppLab Intro 7 - thisOrThatAddButton_mb2022": {
           "AppLabHoCFinal11": "Siz indi dizayn rejimindəsiniz"
         },
         "CSD U3 Boolean Predict": {
@@ -23,6 +35,32 @@
         "CSD U3 Boolean Predict_2022": {
           "": "Proqram nəticəni burada çap edəcək"
         },
+        "CSD U3 Boolean Predict_2023": {
+          "": "Proqram nəticəni burada çap edəcək"
+        },
+        "CSD U3 L18 Predict_2023": {
+          "CSD_U3_L11_S4_C1": "Blokunuzu bura əlavə edin."
+        },
+        "CSD U3 L7 review arc_2023": {
+          "CSD_U3_rect_c1": "Kod burdadır",
+          "CSD_U3_rect_c2": "Bu bloku kod sahəsinin daxilinə sürü."
+        },
+        "CSD U3 L7 review line_2023": {
+          "CSD_U3_rect_c1": "Kod burdadır",
+          "CSD_U3_rect_c2": "Bu bloku kod sahəsinin daxilinə sürü."
+        },
+        "CSD U3 L7 review point_2023": {
+          "CSD_U3_rect_c1": "Kod burdadır",
+          "CSD_U3_rect_c2": "Bu bloku kod sahəsinin daxilinə sürü."
+        },
+        "CSD U3 L7 review shapes_2023": {
+          "CSD_U3_rect_c1": "Kod burdadır",
+          "CSD_U3_rect_c2": "Bu bloku kod sahəsinin daxilinə sürü."
+        },
+        "CSD U3 L7 shapes review polygon_2023": {
+          "CSD_U3_rect_c1": "Kod burdadır",
+          "CSD_U3_rect_c2": "Bu bloku kod sahəsinin daxilinə sürü."
+        },
         "CSD U3 Sprites anitab 1": {
           "": "Animasiya sekmesini açmaq üçün bu klikləyin"
         },
@@ -36,6 +74,9 @@
           "anicallout": "Animasiya sekmesini açmaq üçün bu klikləyin"
         },
         "CSD U3 Sprites anitab 1_2022": {
+          "anicallout": "Animasiya sekmesini açmaq üçün bu klikləyin"
+        },
+        "CSD U3 Sprites anitab 1_2023": {
           "anicallout": "Animasiya sekmesini açmaq üçün bu klikləyin"
         },
         "CSD U3 Sprites intro sprites": {
@@ -53,6 +94,9 @@
         "CSD U3 Sprites intro sprites_2022": {
           "": "Sprayt yaratmaq üçün bu bloku istifadə edin."
         },
+        "CSD U3 Sprites intro sprites_2023": {
+          "": "Sprayt yaratmaq üçün bu bloku istifadə edin."
+        },
         "CSD U3 Sprites text": {
           "": "Mətni ekranda görsətmək üçün bu blokdan istifadə edin"
         },
@@ -66,6 +110,9 @@
           "": "Mətni ekranda görsətmək üçün bu blokdan istifadə edin"
         },
         "CSD U3 Sprites text_2022": {
+          "": "Mətni ekranda görsətmək üçün bu blokdan istifadə edin"
+        },
+        "CSD U3 Sprites text_2023": {
           "": "Mətni ekranda görsətmək üçün bu blokdan istifadə edin"
         },
         "CSD U3 Variables Predict Where X": {
@@ -84,6 +131,9 @@
           "grid": "Click here to show the grid."
         },
         "CSD U3 Variables Predict Where XY_2022": {
+          "grid": "Click here to show the grid."
+        },
+        "CSD U3 Variables Predict Where XY_2023": {
           "grid": "Click here to show the grid."
         },
         "CSD U3 Variables Predict Where X_2018": {
@@ -113,6 +163,9 @@
         "CSD U3 abstraction accelerateX_2022": {
           "CSD_U3_L11_S6_C1": "Kodunuzu bura əlavə edin."
         },
+        "CSD U3 abstraction accelerateX_2023": {
+          "CSD_U3_L11_S6_C1": "Kodunuzu bura əlavə edin."
+        },
         "CSD U3 abstraction accelerateY": {
           "CSD_U3_L11_S7_C1": "Kodunuzu bura əlavə edin."
         },
@@ -126,6 +179,9 @@
           "CSD_U3_L11_S7_C1": "Kodunuzu bura əlavə edin."
         },
         "CSD U3 abstraction accelerateY_2022": {
+          "CSD_U3_L11_S7_C1": "Kodunuzu bura əlavə edin."
+        },
+        "CSD U3 abstraction accelerateY_2023": {
           "CSD_U3_L11_S7_C1": "Kodunuzu bura əlavə edin."
         },
         "CSD U3 abstraction jump": {
@@ -148,6 +204,10 @@
           "CSD_U3_L11_S17_C1": "Bu \"əgər\" ifadəsinə baxın",
           "CSD_U3_L11_S17_C2": "Qurbağanı bura geri göndərin"
         },
+        "CSD U3 abstraction jump_2023": {
+          "CSD_U3_L11_S17_C1": "Bu \"əgər\" ifadəsinə baxın",
+          "CSD_U3_L11_S17_C2": "Qurbağanı bura geri göndərin"
+        },
         "CSD U3 abstraction looping": {
           "CSD_U3_L11_S17_C1": "Bu \"əgər\" ifadəsinə baxın"
         },
@@ -161,6 +221,9 @@
           "CSD_U3_L11_S17_C1": "Bu \"əgər\" ifadəsinə baxın"
         },
         "CSD U3 abstraction looping_2022": {
+          "CSD_U3_L11_S17_C1": "Bu \"əgər\" ifadəsinə baxın"
+        },
+        "CSD U3 abstraction looping_2023": {
           "CSD_U3_L11_S17_C1": "Bu \"əgər\" ifadəsinə baxın"
         },
         "CSD U3 abstraction rotation control": {
@@ -178,6 +241,9 @@
         "CSD U3 abstraction rotation control_2022": {
           "CSD_U3_L11_S5_C1": "Bu koda nəzər yetirin."
         },
+        "CSD U3 abstraction rotation control_2023": {
+          "CSD_U3_L11_S5_C1": "Bu koda nəzər yetirin."
+        },
         "CSD U3 abstraction tumbleweed": {
           "CSD_U3_L11_S17_C1": "Bu \"əgər\" ifadəsinə baxın"
         },
@@ -191,6 +257,9 @@
           "CSD_U3_L11_S17_C1": "Bu \"əgər\" ifadəsinə baxın"
         },
         "CSD U3 abstraction tumbleweed_2022": {
+          "CSD_U3_L11_S17_C1": "Bu \"əgər\" ifadəsinə baxın"
+        },
+        "CSD U3 abstraction tumbleweed_2023": {
           "CSD_U3_L11_S17_C1": "Bu \"əgər\" ifadəsinə baxın"
         },
         "CSD U3 abstraction velocityX": {
@@ -211,6 +280,9 @@
         "CSD U3 abstraction velocityX control_2022": {
           "CSD_U3_L11_S5_C1": "Bu koda nəzər yetirin."
         },
+        "CSD U3 abstraction velocityX control_2023": {
+          "CSD_U3_L11_S5_C1": "Bu koda nəzər yetirin."
+        },
         "CSD U3 abstraction velocityX if-statements": {
           "CSD_U3_L11_S5_C1": "Bu koda nəzər yetirin."
         },
@@ -226,6 +298,9 @@
         "CSD U3 abstraction velocityX if-statements_2022": {
           "CSD_U3_L11_S5_C1": "Bu koda nəzər yetirin."
         },
+        "CSD U3 abstraction velocityX if-statements_2023": {
+          "CSD_U3_L11_S5_C1": "Bu koda nəzər yetirin."
+        },
         "CSD U3 abstraction velocityX_2018": {
           "CSD_U3_L11_S4_C1": "Blokunuzu bura əlavə edin."
         },
@@ -236,6 +311,9 @@
           "CSD_U3_L11_S4_C1": "Blokunuzu bura əlavə edin."
         },
         "CSD U3 abstraction velocityX_2022": {
+          "CSD_U3_L11_S4_C1": "Blokunuzu bura əlavə edin."
+        },
+        "CSD U3 abstraction velocityX_2023": {
           "CSD_U3_L11_S4_C1": "Blokunuzu bura əlavə edin."
         },
         "CSD U3 abstraction velocityY": {
@@ -256,6 +334,9 @@
         "CSD U3 abstraction velocityY control_2022": {
           "CSD_U3_L11_S5_C1": "Bu koda nəzər yetirin."
         },
+        "CSD U3 abstraction velocityY control_2023": {
+          "CSD_U3_L11_S5_C1": "Bu koda nəzər yetirin."
+        },
         "CSD U3 abstraction velocityY_2018": {
           "CSD_U3_L11_S5_C1": "Blokunuzu bura əlavə edin."
         },
@@ -266,6 +347,9 @@
           "CSD_U3_L11_S5_C1": "Blokunuzu bura əlavə edin."
         },
         "CSD U3 abstraction velocityY_2022": {
+          "CSD_U3_L11_S5_C1": "Blokunuzu bura əlavə edin."
+        },
+        "CSD U3 abstraction velocityY_2023": {
           "CSD_U3_L11_S5_C1": "Blokunuzu bura əlavə edin."
         },
         "CSD U3 collisions isTouching intro": {
@@ -281,6 +365,9 @@
           "CSD_U3_L12_S2_C1": "Blokunuzu bura əlavə edin."
         },
         "CSD U3 collisions isTouching intro_2022": {
+          "CSD_U3_L12_S2_C1": "Blokunuzu bura əlavə edin."
+        },
+        "CSD U3 collisions isTouching intro_2023": {
           "CSD_U3_L12_S2_C1": "Blokunuzu bura əlavə edin."
         },
         "CSD U3 collisions scoreboard": {
@@ -307,6 +394,9 @@
         "CSD U3 collisions try blocks_2022": {
           "CSD_U3_L13_S6_C1": "Bu bloku dəyişin."
         },
+        "CSD U3 collisions try blocks_2023": {
+          "CSD_U3_L13_S6_C1": "Bu bloku dəyişin."
+        },
         "CSD U3 collisions types": {
           "CSD_U3_L13_S6_C1": "Kodunuzu bura əlavə edin."
         },
@@ -316,16 +406,25 @@
         "CSD U3 collisions types2_2022": {
           "CSD_U3_L13_S6_C1": "Kodunuzu bura əlavə edin."
         },
+        "CSD U3 collisions types2_2023": {
+          "CSD_U3_L13_S6_C1": "Kodunuzu bura əlavə edin."
+        },
         "CSD U3 collisions types3_2021": {
           "CSD_U3_L13_S6_C1": "Kodunuzu bura əlavə edin."
         },
         "CSD U3 collisions types3_2022": {
           "CSD_U3_L13_S6_C1": "Kodunuzu bura əlavə edin."
         },
+        "CSD U3 collisions types3_2023": {
+          "CSD_U3_L13_S6_C1": "Kodunuzu bura əlavə edin."
+        },
         "CSD U3 collisions types4_2021": {
           "CSD_U3_L13_S6_C1": "Kodunuzu bura əlavə edin."
         },
         "CSD U3 collisions types4_2022": {
+          "CSD_U3_L13_S6_C1": "Kodunuzu bura əlavə edin."
+        },
+        "CSD U3 collisions types4_2023": {
           "CSD_U3_L13_S6_C1": "Kodunuzu bura əlavə edin."
         },
         "CSD U3 collisions types_2018": {
@@ -338,6 +437,9 @@
           "CSD_U3_L13_S6_C1": "Kodunuzu bura əlavə edin."
         },
         "CSD U3 collisions types_2022": {
+          "CSD_U3_L13_S6_C1": "Kodunuzu bura əlavə edin."
+        },
+        "CSD U3 collisions types_2023": {
           "CSD_U3_L13_S6_C1": "Kodunuzu bura əlavə edin."
         },
         "CSD U3 debug": {
@@ -360,11 +462,19 @@
           "CSD_U3_rect_c1": "Kod burdadır",
           "CSD_U3_rect_c2": "Bu bloku kod sahəsinin daxilinə sürü."
         },
+        "CSD U3 debug_2023": {
+          "CSD_U3_rect_c1": "Kod burdadır",
+          "CSD_U3_rect_c2": "Bu bloku kod sahəsinin daxilinə sürü."
+        },
         "CSD U3 drawing challenge 2_2021": {
           "CSD_U3_rect_c1": "Kod burdadır",
           "CSD_U3_rect_c2": "Bu bloku kod sahəsinin daxilinə sürü."
         },
         "CSD U3 drawing challenge 2_2022": {
+          "CSD_U3_rect_c1": "Kod burdadır",
+          "CSD_U3_rect_c2": "Bu bloku kod sahəsinin daxilinə sürü."
+        },
+        "CSD U3 drawing challenge 2_2023": {
           "CSD_U3_rect_c1": "Kod burdadır",
           "CSD_U3_rect_c2": "Bu bloku kod sahəsinin daxilinə sürü."
         },
@@ -376,11 +486,19 @@
           "CSD_U3_rect_c1": "Kod burdadır",
           "CSD_U3_rect_c2": "Bu bloku kod sahəsinin daxilinə sürü."
         },
+        "CSD U3 drawing challenge 3_2023": {
+          "CSD_U3_rect_c1": "Kod burdadır",
+          "CSD_U3_rect_c2": "Bu bloku kod sahəsinin daxilinə sürü."
+        },
         "CSD U3 drawing practice 1_2021": {
           "CSD_U3_rect_c1": "Kod burdadır",
           "CSD_U3_rect_c2": "Bu bloku kod sahəsinin daxilinə sürü."
         },
         "CSD U3 drawing practice 1_2022": {
+          "CSD_U3_rect_c1": "Kod burdadır",
+          "CSD_U3_rect_c2": "Bu bloku kod sahəsinin daxilinə sürü."
+        },
+        "CSD U3 drawing practice 1_2023": {
           "CSD_U3_rect_c1": "Kod burdadır",
           "CSD_U3_rect_c2": "Bu bloku kod sahəsinin daxilinə sürü."
         },
@@ -392,11 +510,19 @@
           "CSD_U3_rect_c1": "Kod burdadır",
           "CSD_U3_rect_c2": "Bu bloku kod sahəsinin daxilinə sürü."
         },
+        "CSD U3 drawing practice 2_2023": {
+          "CSD_U3_rect_c1": "Kod burdadır",
+          "CSD_U3_rect_c2": "Bu bloku kod sahəsinin daxilinə sürü."
+        },
         "CSD U3 drawing practice 3_2021": {
           "CSD_U3_rect_c1": "Kod burdadır",
           "CSD_U3_rect_c2": "Bu bloku kod sahəsinin daxilinə sürü."
         },
         "CSD U3 drawing practice 3_2022": {
+          "CSD_U3_rect_c1": "Kod burdadır",
+          "CSD_U3_rect_c2": "Bu bloku kod sahəsinin daxilinə sürü."
+        },
+        "CSD U3 drawing practice 3_2023": {
           "CSD_U3_rect_c1": "Kod burdadır",
           "CSD_U3_rect_c2": "Bu bloku kod sahəsinin daxilinə sürü."
         },
@@ -440,6 +566,10 @@
           "CSD_U3_rect_c1": "Kod burdadır",
           "CSD_U3_rect_c2": "Bu bloku kod sahəsinin daxilinə sürü."
         },
+        "CSD U3 fill_2023": {
+          "CSD_U3_rect_c1": "Kod burdadır",
+          "CSD_U3_rect_c2": "Bu bloku kod sahəsinin daxilinə sürü."
+        },
         "CSD U3 game backgrounds": {
           "CSD_U3_L18_S4_C2": "Funksiyalar sahəsi",
           "CSD_U3_S18_L4_C1": "Bu blok sizin funksiyanızı çağırır."
@@ -460,6 +590,10 @@
           "CSD_U3_L18_S4_C2": "Funksiyalar sahəsi",
           "CSD_U3_S18_L4_C1": "Bu blok sizin funksiyanızı çağırır."
         },
+        "CSD U3 game backgrounds_2023": {
+          "CSD_U3_L18_S4_C2": "Funksiyalar sahəsi",
+          "CSD_U3_S18_L4_C1": "Bu blok sizin funksiyanızı çağırır."
+        },
         "CSD U3 game variables": {
           "CSD_U3_L18_S3_C2": "Dəyişənlər sahəsi",
           "CSD_U3_S18_L3_C1": "Bu blok yeni bir dəyişən yaradır."
@@ -477,6 +611,10 @@
           "CSD_U3_S18_L3_C1": "Bu blok yeni bir dəyişən yaradır."
         },
         "CSD U3 game variables_2022": {
+          "CSD_U3_L18_S3_C2": "Dəyişənlər sahəsi",
+          "CSD_U3_S18_L3_C1": "Bu blok yeni bir dəyişən yaradır."
+        },
+        "CSD U3 game variables_2023": {
           "CSD_U3_L18_S3_C2": "Dəyişənlər sahəsi",
           "CSD_U3_S18_L3_C1": "Bu blok yeni bir dəyişən yaradır."
         },
@@ -505,6 +643,11 @@
           "CSD_U3_L16_S3_C2": "funksiyanı çağıran kod",
           "CSD_U3_L16_S3_C3": "Bu funksiyanı dəyişdirin."
         },
+        "CSD U3 platform background1_2023": {
+          "CSD_U3_L16_S3_C1": "fonu çəkən funksiya",
+          "CSD_U3_L16_S3_C2": "funksiyanı çağıran kod",
+          "CSD_U3_L16_S3_C3": "Bu funksiyanı dəyişdirin."
+        },
         "CSD U3 platform scoreboard": {
           "CSD_U3_L17_S7_C1": "Xalınız burada çap olunub."
         },
@@ -518,6 +661,9 @@
           "CSD_U3_L17_S7_C1": "Xalınız burada çap olunub."
         },
         "CSD U3 platform scoreboard_2022": {
+          "CSD_U3_L17_S7_C1": "Xalınız burada çap olunub."
+        },
+        "CSD U3 platform scoreboard_2023": {
           "CSD_U3_L17_S7_C1": "Xalınız burada çap olunub."
         },
         "CSD U3 platform variable1": {
@@ -535,6 +681,9 @@
         "CSD U3 platform variable1_2022": {
           "callout": "Bu blok bir dəyişən yaradır."
         },
+        "CSD U3 platform variable1_2023": {
+          "callout": "Bu blok bir dəyişən yaradır."
+        },
         "CSD U3 properties depth_2021": {
           "CSD_U3_rect_c1": "Kod burdadır",
           "CSD_U3_rect_c2": "Bu bloku kod sahəsinin daxilinə sürü."
@@ -543,11 +692,19 @@
           "CSD_U3_rect_c1": "Kod burdadır",
           "CSD_U3_rect_c2": "Bu bloku kod sahəsinin daxilinə sürü."
         },
+        "CSD U3 properties depth_2023": {
+          "CSD_U3_rect_c1": "Kod burdadır",
+          "CSD_U3_rect_c2": "Bu bloku kod sahəsinin daxilinə sürü."
+        },
         "CSD U3 properties tint_2021": {
           "CSD_U3_rect_c1": "Kod burdadır",
           "CSD_U3_rect_c2": "Bu bloku kod sahəsinin daxilinə sürü."
         },
         "CSD U3 properties tint_2022": {
+          "CSD_U3_rect_c1": "Kod burdadır",
+          "CSD_U3_rect_c2": "Bu bloku kod sahəsinin daxilinə sürü."
+        },
+        "CSD U3 properties tint_2023": {
           "CSD_U3_rect_c1": "Kod burdadır",
           "CSD_U3_rect_c2": "Bu bloku kod sahəsinin daxilinə sürü."
         },
@@ -595,11 +752,19 @@
           "CSD_U3_rect_c1": "Kod burdadır",
           "CSD_U3_rect_c2": "Bu bloku kod sahəsinin daxilinə sürü."
         },
+        "CSD U3 shapes arc_2023": {
+          "CSD_U3_rect_c1": "Kod burdadır",
+          "CSD_U3_rect_c2": "Bu bloku kod sahəsinin daxilinə sürü."
+        },
         "CSD U3 shapes behind_2021": {
           "CSD_U3_rect_c1": "Kod burdadır",
           "CSD_U3_rect_c2": "Bu bloku kod sahəsinin daxilinə sürü."
         },
         "CSD U3 shapes behind_2022": {
+          "CSD_U3_rect_c1": "Kod burdadır",
+          "CSD_U3_rect_c2": "Bu bloku kod sahəsinin daxilinə sürü."
+        },
+        "CSD U3 shapes behind_2023": {
           "CSD_U3_rect_c1": "Kod burdadır",
           "CSD_U3_rect_c2": "Bu bloku kod sahəsinin daxilinə sürü."
         },
@@ -611,11 +776,19 @@
           "CSD_U3_rect_c1": "Kod burdadır",
           "CSD_U3_rect_c2": "Bu bloku kod sahəsinin daxilinə sürü."
         },
+        "CSD U3 shapes line_2023": {
+          "CSD_U3_rect_c1": "Kod burdadır",
+          "CSD_U3_rect_c2": "Bu bloku kod sahəsinin daxilinə sürü."
+        },
         "CSD U3 shapes missing_2021": {
           "CSD_U3_rect_c1": "Kod burdadır",
           "CSD_U3_rect_c2": "Bu bloku kod sahəsinin daxilinə sürü."
         },
         "CSD U3 shapes missing_2022": {
+          "CSD_U3_rect_c1": "Kod burdadır",
+          "CSD_U3_rect_c2": "Bu bloku kod sahəsinin daxilinə sürü."
+        },
+        "CSD U3 shapes missing_2023": {
           "CSD_U3_rect_c1": "Kod burdadır",
           "CSD_U3_rect_c2": "Bu bloku kod sahəsinin daxilinə sürü."
         },
@@ -627,11 +800,19 @@
           "CSD_U3_rect_c1": "Kod burdadır",
           "CSD_U3_rect_c2": "Bu bloku kod sahəsinin daxilinə sürü."
         },
+        "CSD U3 shapes polygon_2023": {
+          "CSD_U3_rect_c1": "Kod burdadır",
+          "CSD_U3_rect_c2": "Bu bloku kod sahəsinin daxilinə sürü."
+        },
         "CSD U3 shapes scene_2021": {
           "CSD_U3_rect_c1": "Kod burdadır",
           "CSD_U3_rect_c2": "Bu bloku kod sahəsinin daxilinə sürü."
         },
         "CSD U3 shapes scene_2022": {
+          "CSD_U3_rect_c1": "Kod burdadır",
+          "CSD_U3_rect_c2": "Bu bloku kod sahəsinin daxilinə sürü."
+        },
+        "CSD U3 shapes scene_2023": {
           "CSD_U3_rect_c1": "Kod burdadır",
           "CSD_U3_rect_c2": "Bu bloku kod sahəsinin daxilinə sürü."
         },
@@ -642,6 +823,19 @@
         "CSD U3 shapes_2022": {
           "CSD_U3_rect_c1": "Kod burdadır",
           "CSD_U3_rect_c2": "Bu bloku kod sahəsinin daxilinə sürü."
+        },
+        "CSD U3 shapes_2023": {
+          "CSD_U3_rect_c1": "Kod burdadır",
+          "CSD_U3_rect_c2": "Bu bloku kod sahəsinin daxilinə sürü."
+        },
+        "CSD U3L16 Prac D_2023": {
+          "CSD U3L16.7 - start": "Kodunuzu bura əlavə edin"
+        },
+        "CSD U3L3 rect_2023": {
+          "CSD_U3_rect_c1": "Kod burdadır"
+        },
+        "CSD U6 - Color LEDs - SB4_2023": {
+          "CSDU6L10_rainbow": "Kodunuzu bura əlavə edin"
         },
         "CSD U6 - Color LEDs - SB4_2222": {
           "CSDU6L10_rainbow": "Kodunuzu bura əlavə edin"
@@ -700,10 +894,16 @@
         "CSD games sidescroll background_2022": {
           "CSD_U3_L11_S17_C1": "Bu \"əgər\" ifadəsinə baxın"
         },
+        "CSD games sidescroll background_2023": {
+          "CSD_U3_L11_S17_C1": "Bu \"əgər\" ifadəsinə baxın"
+        },
         "CSD games velocity bee_2021": {
           "CSD_U3_L11_S5_C1": "Bu koda nəzər yetirin."
         },
         "CSD games velocity bee_2022": {
+          "CSD_U3_L11_S5_C1": "Bu koda nəzər yetirin."
+        },
+        "CSD games velocity bee_2023": {
           "CSD_U3_L11_S5_C1": "Bu koda nəzər yetirin."
         },
         "CSD web text explore_2021": {
@@ -712,10 +912,16 @@
         "CSD web text explore_2022": {
           "CSD_U3_variables": "Nömreni buradan dəyiş"
         },
+        "CSD web text explore_2023": {
+          "CSD_U3_variables": "Nömreni buradan dəyiş"
+        },
         "CSD web text size_2021": {
           "": "Mətni ekranda görsətmək üçün bu blokdan istifadə edin"
         },
         "CSD web text size_2022": {
+          "": "Mətni ekranda görsətmək üçün bu blokdan istifadə edin"
+        },
+        "CSD web text size_2023": {
           "": "Mətni ekranda görsətmək üçün bu blokdan istifadə edin"
         },
         "Calc Circles of Eval .2": {

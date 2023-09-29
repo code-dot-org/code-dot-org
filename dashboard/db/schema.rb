@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2023_09_26_195427) do
+ActiveRecord::Schema.define(version: 2023_09_27_153604) do
 
   create_table "activities", id: :integer, charset: "utf8", collation: "utf8_unicode_ci", force: :cascade do |t|
     t.integer "user_id"
@@ -666,7 +666,7 @@ ActiveRecord::Schema.define(version: 2023_09_26_195427) do
     t.integer "learning_goal_id", null: false
     t.integer "project_id"
     t.string "project_version"
-    t.integer "understanding", null: false
+    t.integer "understanding"
     t.text "feedback"
     t.datetime "submitted_at"
     t.datetime "created_at", precision: 6, null: false

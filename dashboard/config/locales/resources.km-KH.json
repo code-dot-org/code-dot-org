@@ -509,6 +509,9 @@
         "problem-solving-process-1/csd/2021": {
           "type": "វីដេអូ"
         },
+        "solving-problems-exemplar-2020/csd/2021": {
+          "type": "គន្លឹះចម្លើយ"
+        },
         "what-is-a-computer-1-2-3/csd/2021": {
           "type": "វីដេអូ"
         },
@@ -648,8 +651,14 @@
         "intro_to_design_mode/csd/2021": {
           "type": "វីដេអូ"
         },
+        "ascii_challenges/csd/2021": {
+          "type": "គន្លឹះចម្លើយ"
+        },
         "how-computers-work-data-and-binary/csd/2021": {
           "type": "វីដេអូ"
+        },
+        "medical_records/csd/2021": {
+          "type": "គន្លឹះចម្លើយ"
         },
         "how-big-data-is-used-in-amazon-recommendation-systems/csd/2021": {
           "type": "វីដេអូ"
@@ -703,11 +712,20 @@
         "ai_what_is_machine_learning_/csd/2021": {
           "type": "វីដេអូ"
         },
+        "types_of_machine_learning_2/csd/2021": {
+          "type": "គន្លឹះចម្លើយ"
+        },
         "seeing_ai/csd/2021": {
           "type": "វីដេអូ"
         },
         "finding_patterns_in_data/csd/2021": {
           "type": "វីដេអូ"
+        },
+        "patterns_in_data_3/csd/2021": {
+          "type": "គន្លឹះចម្លើយ"
+        },
+        "_key_classification_models/csd/2021": {
+          "type": "គន្លឹះចម្លើយ"
         },
         "introduction_to_ai_lab_1/csd/2021": {
           "type": "វីដេអូ"
@@ -715,17 +733,32 @@
         "training_and_testing_in_ai_lab/csd/2021": {
           "type": "វីដេអូ"
         },
+        "_key_training_a_model_in_ai_lab/csd/2021": {
+          "type": "គន្លឹះចម្លើយ"
+        },
         "ai_training_data_bias/csd/2021": {
           "type": "វីដេអូ"
         },
         "model_cards_in_ai_lab/csd/2021": {
           "type": "វីដេអូ"
         },
+        "_key_zoo_models/csd/2021": {
+          "type": "គន្លឹះចម្លើយ"
+        },
         "if-statements_in_app_lab/csd/2021": {
           "type": "វីដេអូ"
         },
+        "zombie_prediction_-_answer_key/csd/2021": {
+          "type": "គន្លឹះចម្លើយ"
+        },
+        "_key_numerical_accuracy/csd/2021": {
+          "type": "គន្លឹះចម្លើយ"
+        },
         "numerical_data_in_ai_lab_2/csd/2021": {
           "type": "វីដេអូ"
+        },
+        "_key_-_numerical_data_in_ai_lab/csd/2021": {
+          "type": "គន្លឹះចម្លើយ"
         },
         "ethics_ai_equal_access_and_algorithmic_bias/csd/2021": {
           "type": "វីដេអូ"
@@ -784,6 +817,12 @@
         "unplugged-video-big-event/coursea/2021": {
           "name": "ព្រឹត្តិការណ៍ធំ"
         },
+        "artist_project_planning_guide/coursea/2021": {
+          "type": "ឯកសារសិស្ស"
+        },
+        "artist_project_planning_guide_1/coursea/2021": {
+          "type": "គន្លឹះចម្លើយ"
+        },
         "implementation_guide/courseb/2021": {
           "name": "សៀវភៅណែនាំការអនុវត្ត"
         },
@@ -810,6 +849,9 @@
         "wiggles_-_gonoodle/courseb/2021": {
           "type": "វីដេអូ"
         },
+        "compass-rose/courseb/2021": {
+          "type": "ឯកសារសិស្ស"
+        },
         "stevie_and_the_big_project/courseb/2021": {
           "name": "Stevie and the Big Project"
         },
@@ -830,6 +872,12 @@
         "unplugged-video-big-event/courseb/2021": {
           "name": "ព្រឹត្តិការណ៍ធំ",
           "type": "វីដេអូ"
+        },
+        "play_lab_project_planning_guide/courseb/2021": {
+          "type": "ឯកសារសិស្ស"
+        },
+        "play_lab_project_planning_guide_1/courseb/2021": {
+          "type": "គន្លឹះចម្លើយ"
         },
         "implementation_guide/coursec/2021": {
           "name": "សៀវភៅណែនាំការអនុវត្ត"
@@ -857,9 +905,14 @@
           "type": "វីដេអូ"
         },
         "csf-artist-intro-video/coursec/2021": {
+          "name": "ការណែនាំអំពីវិចិត្រករ",
           "type": "វីដេអូសម្រាប់សិស្ស"
         },
+        "csf-turns-angles-doc/coursec/2021": {
+          "name": "ការបត់ និងមុំ"
+        },
         "csf-turns-angles-video/coursec/2021": {
+          "name": "ការបត់ និងមុំ",
           "type": "វីដេអូសម្រាប់សិស្ស"
         },
         "assessment-answer-big-event/coursec/2021": {
@@ -871,9 +924,15 @@
         "unplugged-video-big-event/coursec/2021": {
           "name": "ព្រឹត្តិការណ៍ធំ"
         },
+        "open-ended_programming_levels/coursec/2021": {
+          "type": "គន្លឹះចម្លើយ"
+        },
         "pause_and_think_online/coursec/2021": {
           "name": "តាមអ៊ីនធឺណិតផ្អាកសិន ហើយគិត",
           "type": "វីដេអូ"
+        },
+        "open-ended_programming_levels_1/coursec/2021": {
+          "type": "គន្លឹះចម្លើយ"
         },
         "csf-bit-byte-video/coursec/2021": {
           "type": "វីដេអូសម្រាប់សិស្ស"
@@ -884,6 +943,21 @@
         "teacher_forum_1/coursed/2021": {
           "name": "វេទិការគ្រូបង្រៀន"
         },
+        "password_power-up_if_then_scenarios/coursed/2021": {
+          "type": "ឯកសារសិស្ស"
+        },
+        "password_power-up_if_then_scenarios_answer_key/coursed/2021": {
+          "type": "គន្លឹះចម្លើយ"
+        },
+        "password_power-up_lesson_quiz_answer_key/coursed/2021": {
+          "type": "គន្លឹះចម្លើយ"
+        },
+        "password_power-up_power-up_your_password/coursed/2021": {
+          "type": "ឯកសារសិស្ស"
+        },
+        "password_power-up_power-up_your_password_answer_key/coursed/2021": {
+          "type": "គន្លឹះចម្លើយ"
+        },
         "pair-programming-vid/coursed/2021": {
           "name": "ការសរសេរកម្មវិធីជាគូ",
           "type": "វីដេអូសម្រាប់សិស្ស"
@@ -891,9 +965,24 @@
         "teacher-video-relay-programming-2/coursed/2021": {
           "type": "វីដេអូសម្រាប់គ្រូ"
         },
+        "open-ended_programming_levels/coursed/2021": {
+          "type": "គន្លឹះចម្លើយ"
+        },
         "pause_and_think_online/coursed/2021": {
           "name": "តាមអ៊ីនធឺណិតផ្អាកសិន ហើយគិត",
           "type": "វីដេអូ"
+        },
+        "open-ended_programming_levels_1/coursed/2021": {
+          "type": "គន្លឹះចម្លើយ"
+        },
+        "dance-party-playlist/coursed/2021": {
+          "name": "បញ្ជីបទចម្រៀងនៅលើ Spotify Playlist (គ្រប់អាយុ)"
+        },
+        "dance-party-project-guide/coursed/2021": {
+          "name": "ការណែនាំអំពីគម្រោងជប់លៀងរាំ"
+        },
+        "open-ended_programming_levels_2/coursed/2021": {
+          "type": "គន្លឹះចម្លើយ"
         },
         "feeling-faces-image/coursed/2021": {
           "name": "មុខចំណាប់អារម្មណ៍",
@@ -927,11 +1016,20 @@
         "teacher_forum_1/coursee/2021": {
           "name": "វេទិការគ្រូបង្រៀន"
         },
+        "follow_the_algorithm/coursee/2021": {
+          "name": "ធ្វើតាមក្បួនដោះស្រាយ​(Algorithm)"
+        },
         "sprite_lab_documentation/coursee/2021": {
           "name": "ឯកសារ Sprite Lab"
         },
+        "private-and-personal-information-lesson-quiz-answer-key/coursee/2021": {
+          "type": "គន្លឹះចម្លើយ"
+        },
         "private-and-personal-information-private-and-personal-information/coursee/2021": {
           "type": "វីដេអូសម្រាប់សិស្ស"
+        },
+        "about_me_planning_guide/coursee/2021": {
+          "type": "ឯកសារសិស្ស"
         },
         "common-sense-media-pause-think/coursee/2021": {
           "name": "តាមអ៊ីនធឺណិតផ្អាកសិន ហើយគិត",
@@ -940,7 +1038,11 @@
         "digital-sharing-video/coursee/2021": {
           "type": "វីដេអូ"
         },
+        "csf-turns-angles-doc/coursee/2021": {
+          "name": "ការបត់ និងមុំ"
+        },
         "csf-turns-angles-video/coursee/2021": {
+          "name": "ការបត់ និងមុំ",
           "type": "វីដេអូសម្រាប់សិស្ស"
         },
         "implementation_guide/coursef/2021": {
@@ -951,6 +1053,9 @@
         },
         "teacher_forum_1/coursef/2021": {
           "name": "វេទិការគ្រូបង្រៀន"
+        },
+        "exploring_apps_1/coursef/2021": {
+          "type": "គន្លឹះចម្លើយ"
         },
         "introducing_sprite_lab/coursef/2021": {
           "name": "សេចក្ដីណែនាំពី Sprite Lab"
@@ -968,8 +1073,23 @@
         "sprites_in_action/coursef/2021": {
           "name": "កំណត់សកម្មភាពឱ្យ Sprites"
         },
+        "the_power_of_words_lesson_quiz_answer_key/coursef/2021": {
+          "type": "គន្លឹះចម្លើយ"
+        },
         "the_power_of_words_the_power_of_words/coursef/2021": {
           "type": "វីដេអូ"
+        },
+        "the_power_of_words_words_can_hurt/coursef/2021": {
+          "type": "ឯកសារសិស្ស"
+        },
+        "blank_space_stories/coursef/2021": {
+          "type": "គន្លឹះចម្លើយ"
+        },
+        "text_and_prompts/coursef/2021": {
+          "name": "អក្សរ និង Prompts"
+        },
+        "mini_project_user_input_programs_1/coursef/2021": {
+          "type": "គន្លឹះចម្លើយ"
         },
         "pause_and_think_online/coursef/2021": {
           "name": "តាមអ៊ីនធឺណិតផ្អាកសិន ហើយគិត",
@@ -995,10 +1115,16 @@
           "type": "វីដេអូ"
         },
         "artist_introduction/express/2021": {
+          "name": "ការណែនាំអំពីវិចិត្រករ",
           "type": "វីដេអូ"
         },
         "turns_angles/express/2021": {
+          "name": "ការបត់ និងមុំ",
           "type": "វីដេអូ"
+        },
+        "turns_angles_1/express/2021": {
+          "name": "ការបត់ និងមុំ",
+          "type": "ឯកសារសិស្ស"
         },
         "sprite_lab_documentation/express/2021": {
           "name": "ឯកសារ Sprite Lab"
@@ -1016,8 +1142,20 @@
           "name": "តាមអ៊ីនធឺណិតផ្អាកសិន ហើយគិត",
           "type": "វីដេអូ"
         },
+        "dance-party-playlist/express/2021": {
+          "name": "បញ្ជីបទចម្រៀងនៅលើ Spotify Playlist (គ្រប់អាយុ)"
+        },
+        "dance-party-project-guide/express/2021": {
+          "name": "ការណែនាំអំពីគម្រោងជប់លៀងរាំ"
+        },
+        "open-ended_programming_levels/express/2021": {
+          "type": "គន្លឹះចម្លើយ"
+        },
         "pair_programming_video/express/2021": {
           "type": "វីដេអូ"
+        },
+        "text_and_prompts/express/2021": {
+          "name": "អក្សរ និង Prompts"
         },
         "variables_video/express/2021": {
           "name": "អ​ថេរ",
@@ -1054,6 +1192,9 @@
         },
         "problem_solving_process_1/csd/2022": {
           "type": "វីដេអូ"
+        },
+        "solving_problems/csd/2022": {
+          "type": "គន្លឹះចម្លើយ"
         },
         "what_is_a_computer/csd/2022": {
           "type": "វីដេអូ"
@@ -1221,8 +1362,14 @@
         "events_in_app_lab_1/csd/2022": {
           "type": "វីដេអូ"
         },
+        "ascii_challenges_1/csd/2022": {
+          "type": "គន្លឹះចម្លើយ"
+        },
         "binary_and_data/csd/2022": {
           "type": "វីដេអូ"
+        },
+        "medical_records_1/csd/2022": {
+          "type": "គន្លឹះចម្លើយ"
         },
         "amazon_and_data/csd/2022": {
           "type": "វីដេអូ"
@@ -1293,11 +1440,23 @@
         "ai_what_is_machine_learning_/csd/2022": {
           "type": "វីដេអូ"
         },
+        "types_of_machine_learning_2/csd/2022": {
+          "type": "គន្លឹះចម្លើយ"
+        },
         "seeing_ai/csd/2022": {
           "type": "វីដេអូ"
         },
+        "_key_patterns_in_data/csd/2022": {
+          "type": "គន្លឹះចម្លើយ"
+        },
         "finding_patterns_in_data/csd/2022": {
           "type": "វីដេអូ"
+        },
+        "_key_classification_models/csd/2022": {
+          "type": "គន្លឹះចម្លើយ"
+        },
+        "_key_training_a_model_in_ai_lab/csd/2022": {
+          "type": "គន្លឹះចម្លើយ"
         },
         "introduction_to_ai_lab_1/csd/2022": {
           "type": "វីដេអូ"
@@ -1308,11 +1467,23 @@
         "ai_training_data_bias/csd/2022": {
           "type": "វីដេអូ"
         },
+        "_key_zoo_models/csd/2022": {
+          "type": "គន្លឹះចម្លើយ"
+        },
         "model_cards_in_ai_lab/csd/2022": {
           "type": "វីដេអូ"
         },
         "if-statements_in_app_lab/csd/2022": {
           "type": "វីដេអូ"
+        },
+        "_key_numerical_accuracy/csd/2022": {
+          "type": "គន្លឹះចម្លើយ"
+        },
+        "_key_zombie_prediction/csd/2022": {
+          "type": "គន្លឹះចម្លើយ"
+        },
+        "_key_-_numerical_data_in_ai_lab/csd/2022": {
+          "type": "គន្លឹះចម្លើយ"
         },
         "numerical_data_in_ai_lab_2/csd/2022": {
           "type": "វីដេអូ"
@@ -1374,6 +1545,12 @@
         "the_big_event_2/coursea/2022": {
           "name": "ព្រឹត្តិការណ៍ធំ"
         },
+        "artist_project_planning_guide/coursea/2022": {
+          "type": "ឯកសារសិស្ស"
+        },
+        "artist_project_planning_guide_1/coursea/2022": {
+          "type": "គន្លឹះចម្លើយ"
+        },
         "implementation_guide/courseb/2022": {
           "name": "សៀវភៅណែនាំការអនុវត្ត"
         },
@@ -1400,6 +1577,9 @@
         "wiggles_-_gonoodle/courseb/2022": {
           "type": "វីដេអូ"
         },
+        "compass_rose/courseb/2022": {
+          "type": "ឯកសារសិស្ស"
+        },
         "stevie_and_the_big_project/courseb/2022": {
           "name": "Stevie and the Big Project"
         },
@@ -1419,6 +1599,12 @@
         },
         "the_big_event_2/courseb/2022": {
           "name": "ព្រឹត្តិការណ៍ធំ"
+        },
+        "play_lab_project_planning_guide/courseb/2022": {
+          "type": "ឯកសារសិស្ស"
+        },
+        "play_lab_project_planning_guide_1/courseb/2022": {
+          "type": "គន្លឹះចម្លើយ"
         },
         "implementation_guide/coursec/2022": {
           "name": "សៀវភៅណែនាំការអនុវត្ត"
@@ -1446,10 +1632,15 @@
           "type": "វីដេអូ"
         },
         "artist_introduction/coursec/2022": {
+          "name": "ការណែនាំអំពីវិចិត្រករ",
           "type": "វីដេអូសម្រាប់សិស្ស"
         },
         "turns_angles/coursec/2022": {
+          "name": "ការបត់ និងមុំ",
           "type": "វីដេអូសម្រាប់សិស្ស"
+        },
+        "turns_angles_1/coursec/2022": {
+          "name": "ការបត់ និងមុំ"
         },
         "the_big_event/coursec/2022": {
           "name": "ព្រឹត្តិការណ៍ធំ"
@@ -1460,9 +1651,18 @@
         "the_big_event_2/coursec/2022": {
           "name": "ព្រឹត្តិការណ៍ធំ"
         },
+        "level_solutions/coursec/2022": {
+          "type": "គន្លឹះចម្លើយ"
+        },
+        "open-ended_programming_levels/coursec/2022": {
+          "type": "គន្លឹះចម្លើយ"
+        },
         "pause_and_think_online/coursec/2022": {
           "name": "តាមអ៊ីនធឺណិតផ្អាកសិន ហើយគិត",
           "type": "វីដេអូ"
+        },
+        "open-ended_programming_levels_1/coursec/2022": {
+          "type": "គន្លឹះចម្លើយ"
         },
         "bits_versus_bytes/coursec/2022": {
           "type": "វីដេអូសម្រាប់សិស្ស"
@@ -1473,6 +1673,21 @@
         "teacher_forum/coursed/2022": {
           "name": "វេទិការគ្រូបង្រៀន"
         },
+        "password_power-up_if_then_scenarios/coursed/2022": {
+          "type": "ឯកសារសិស្ស"
+        },
+        "password_power-up_if_then_scenarios_1/coursed/2022": {
+          "type": "គន្លឹះចម្លើយ"
+        },
+        "password_power-up_lesson_quiz_1/coursed/2022": {
+          "type": "គន្លឹះចម្លើយ"
+        },
+        "password_power-up_power-up_your_password/coursed/2022": {
+          "type": "ឯកសារសិស្ស"
+        },
+        "password_power-up_power-up_your_password_1/coursed/2022": {
+          "type": "គន្លឹះចម្លើយ"
+        },
         "pair_programming/coursed/2022": {
           "name": "ការសរសេរកម្មវិធីជាគូ",
           "type": "វីដេអូសម្រាប់សិស្ស"
@@ -1480,9 +1695,27 @@
         "relay_programming_4/coursed/2022": {
           "type": "វីដេអូសម្រាប់គ្រូ"
         },
+        "open-ended_programming_levels/coursed/2022": {
+          "type": "គន្លឹះចម្លើយ"
+        },
         "pause_and_think_online/coursed/2022": {
           "name": "តាមអ៊ីនធឺណិតផ្អាកសិន ហើយគិត",
           "type": "វីដេអូ"
+        },
+        "open-ended_programming_levels_1/coursed/2022": {
+          "type": "គន្លឹះចម្លើយ"
+        },
+        "sample_level_solutions/coursed/2022": {
+          "type": "គន្លឹះចម្លើយ"
+        },
+        "dance_party_project_guide/coursed/2022": {
+          "name": "ការណែនាំអំពីគម្រោងជប់លៀងរាំ"
+        },
+        "open-ended_programming_levels_2/coursed/2022": {
+          "type": "គន្លឹះចម្លើយ"
+        },
+        "spotify_playlist_all_ages_/coursed/2022": {
+          "name": "បញ្ជីបទចម្រៀងនៅលើ Spotify Playlist (គ្រប់អាយុ)"
         },
         "feeling_faces/coursed/2022": {
           "name": "មុខចំណាប់អារម្មណ៍",
@@ -1512,14 +1745,24 @@
         "teacher_forum/coursee/2022": {
           "name": "វេទិការគ្រូបង្រៀន"
         },
+        "private_and_personal_information_lesson_quiz_1/coursee/2022": {
+          "type": "គន្លឹះចម្លើយ"
+        },
         "private_and_personal_information_private_and_personal_information/coursee/2022": {
           "type": "វីដេអូសម្រាប់សិស្ស"
+        },
+        "about_me_planning_guide/coursee/2022": {
+          "type": "ឯកសារសិស្ស"
         },
         "pause_and_think_online/coursee/2022": {
           "name": "តាមអ៊ីនធឺណិតផ្អាកសិន ហើយគិត",
           "type": "វីដេអូ"
         },
+        "turns_angles/coursee/2022": {
+          "name": "ការបត់ និងមុំ"
+        },
         "turns_angles_1/coursee/2022": {
+          "name": "ការបត់ និងមុំ",
           "type": "វីដេអូសម្រាប់សិស្ស"
         },
         "digital_sharing_ethics_video_/coursee/2022": {
@@ -1534,8 +1777,17 @@
         "teacher_forum/coursef/2022": {
           "name": "វេទិការគ្រូបង្រៀន"
         },
+        "the_power_of_words_lesson_quiz_1/coursef/2022": {
+          "type": "គន្លឹះចម្លើយ"
+        },
         "the_power_of_words_the_power_of_words/coursef/2022": {
           "type": "វីដេអូ"
+        },
+        "the_power_of_words_words_can_hurt/coursef/2022": {
+          "type": "ឯកសារសិស្ស"
+        },
+        "exploring_apps_1/coursef/2022": {
+          "type": "គន្លឹះចម្លើយ"
         },
         "introducing_sprite_lab_1/coursef/2022": {
           "name": "សេចក្ដីណែនាំពី Sprite Lab",
@@ -1543,6 +1795,12 @@
         },
         "making_sprites/coursef/2022": {
           "name": "ការបង្កើត Sprites"
+        },
+        "blank_space_stories_1/coursef/2022": {
+          "type": "គន្លឹះចម្លើយ"
+        },
+        "mini_project_user_input_programs_1/coursef/2022": {
+          "type": "គន្លឹះចម្លើយ"
         },
         "ai_impact_on_society/coursef/2022": {
           "type": "វីដេអូ"
@@ -1564,10 +1822,16 @@
           "type": "វីដេអូ"
         },
         "artist_introduction/express/2022": {
+          "name": "ការណែនាំអំពីវិចិត្រករ",
           "type": "វីដេអូ"
         },
         "turns_angles/express/2022": {
+          "name": "ការបត់ និងមុំ",
           "type": "វីដេអូ"
+        },
+        "turns_angles_1/express/2022": {
+          "name": "ការបត់ និងមុំ",
+          "type": "ឯកសារសិស្ស"
         },
         "sprite_lab_documentation/express/2022": {
           "name": "ឯកសារ Sprite Lab"
@@ -1579,8 +1843,20 @@
           "name": "តាមអ៊ីនធឺណិតផ្អាកសិន ហើយគិត",
           "type": "វីដេអូ"
         },
+        "dance_party_project_guide/express/2022": {
+          "name": "ការណែនាំអំពីគម្រោងជប់លៀងរាំ"
+        },
+        "open-ended_programming_levels/express/2022": {
+          "type": "គន្លឹះចម្លើយ"
+        },
+        "spotify_playlist_all_ages_/express/2022": {
+          "name": "បញ្ជីបទចម្រៀងនៅលើ Spotify Playlist (គ្រប់អាយុ)"
+        },
         "pair_programming_video/express/2022": {
           "type": "វីដេអូ"
+        },
+        "text_and_prompts/express/2022": {
+          "name": "អក្សរ និង Prompts"
         },
         "variables/express/2022": {
           "name": "អ​ថេរ",
@@ -1612,8 +1888,35 @@
           "name": "តាមអ៊ីនធឺណិតផ្អាកសិន ហើយគិត",
           "type": "វីដេអូ"
         },
+        "ethics_and_ai_privacy_the_future_of_work/ai-ethics/2023": {
+          "type": "វីដេអូ"
+        },
+        "how_ai_works_large_language_models/ai-ethics/2023": {
+          "type": "វីដេអូ"
+        },
+        "create_your_own_book_cover/csc-bookcovers/2023": {
+          "type": "ឯកសារសិស្ស"
+        },
+        "create_your_own_book_cover_key_/csc-bookcovers/2023": {
+          "type": "គន្លឹះចម្លើយ"
+        },
+        "planning_your_own_book_cover_-_answer_key/csc-bookcovers/2023": {
+          "type": "គន្លឹះចម្លើយ"
+        },
+        "planning_guide/csc-bookcovers/2023": {
+          "type": "ឯកសារសិស្ស"
+        },
+        "planning_guide_key_esperanza_rising/csc-bookcovers/2023": {
+          "type": "គន្លឹះចម្លើយ"
+        },
+        "activity_guide_planning/csc-mappinglandmarks/2023": {
+          "type": "គន្លឹះចម្លើយ"
+        },
         "star_quilts_1/csc-starquilts/2023": {
           "type": "វីដេអូ"
+        },
+        "star_quilts_worksheet/csc-starquilts/2023": {
+          "type": "ឯកសារសិស្ស"
         },
         "poem_art_1_-_introduction/csc-timecapsule/2023": {
           "type": "វីដេអូ"
@@ -1627,6 +1930,12 @@
         "poem_art_4_-_celebration/csc-timecapsule/2023": {
           "type": "វីដេអូ"
         },
+        "write_your_own_time_capsule_story/csc-timecapsule/2023": {
+          "type": "ឯកសារសិស្ស"
+        },
+        "write_your_own_time_capsule_poem_-_question_grab_bag/csc-timecapsule/2023": {
+          "type": "ឯកសារសិស្ស"
+        },
         "poem_art_celebration_video_optional_/csc-timecapsule/2023": {
           "type": "វីដេអូ"
         },
@@ -1635,6 +1944,9 @@
         },
         "poem_art_video_optional_/csc-timecapsule/2023": {
           "type": "វីដេអូ"
+        },
+        "time_capsule_checklist/csc-timecapsule/2023": {
+          "type": "ឯកសារសិស្ស"
         },
         "enter_your_own_poem/csc-timecapsule/2023": {
           "type": "វីដេអូ"
@@ -1651,6 +1963,12 @@
         "poem_art_4_-_celebration/poetry/2023": {
           "type": "វីដេអូ"
         },
+        "write_your_own_poem/poetry/2023": {
+          "type": "ឯកសារសិស្ស"
+        },
+        "write_your_own_poem_-_topics/poetry/2023": {
+          "type": "ឯកសារសិស្ស"
+        },
         "enter_your_own_poem/poetry/2023": {
           "type": "វីដេអូ"
         },
@@ -1661,6 +1979,335 @@
           "type": "វីដេអូ"
         },
         "poem_art_video_optional_/poetry/2023": {
+          "type": "វីដេអូ"
+        },
+        "time_capsule_checklist/poetry/2023": {
+          "type": "ឯកសារសិស្ស"
+        },
+        "share_your_app_/poetry/2023": {
+          "type": "ឯកសារសិស្ស"
+        },
+        "teacher_forum/csd/2023": {
+          "name": "វេទិការគ្រូបង្រៀន"
+        },
+        "problem_solving_process_1/csd/2023": {
+          "type": "វីដេអូ"
+        },
+        "the_problem_solving_process/csd/2023": {
+          "type": "វីដេអូ"
+        },
+        "solving_problems/csd/2023": {
+          "type": "គន្លឹះចម្លើយ"
+        },
+        "what_is_a_computer/csd/2023": {
+          "type": "វីដេអូ"
+        },
+        "what_do_computers_do/csd/2023": {
+          "type": "វីដេអូ"
+        },
+        "computer_science_practices/csd/2023": {
+          "type": "ការឆ្លុះបញ្ចាំង"
+        },
+        "_key_warm_up_word_search/csd/2023": {
+          "type": "គន្លឹះចម្លើយ"
+        },
+        "_key_web_design_for_users/csd/2023": {
+          "type": "គន្លឹះចម្លើយ"
+        },
+        "intro_to_web_lab_part_2/csd/2023": {
+          "type": "វីដេអូ"
+        },
+        "pair_programming/csd/2023": {
+          "name": "ការសរសេរកម្មវិធីជាគូ",
+          "type": "វីដេអូ"
+        },
+        "video_intro_to_web_lab_part_1/csd/2023": {
+          "type": "វីដេអូ"
+        },
+        "lists/csd/2023": {
+          "name": "បញ្ជី"
+        },
+        "video_debugging/csd/2023": {
+          "type": "វីដេអូ"
+        },
+        "video_pair_programming/csd/2023": {
+          "type": "វីដេអូ"
+        },
+        "intro_to_css_-_part_1/csd/2023": {
+          "type": "វីដេអូ"
+        },
+        "intro_to_css_-_part_2/csd/2023": {
+          "type": "វីដេអូ"
+        },
+        "creative_commons_overview/csd/2023": {
+          "type": "វីដេអូ"
+        },
+        "publishing_your_website/csd/2023": {
+          "type": "វីដេអូ"
+        },
+        "video_managing_disagreement/csd/2023": {
+          "type": "វីដេអូ"
+        },
+        "video_teamwork/csd/2023": {
+          "type": "វីដេអូ"
+        },
+        "video_how_search_works/csd/2023": {
+          "type": "វីដេអូ"
+        },
+        "_warm_up_word_search_key_/csd/2023": {
+          "type": "គន្លឹះចម្លើយ"
+        },
+        "drawing_shapes/csd/2023": {
+          "name": "គំនូរគូរជារាង"
+        },
+        "drawing_in_game_lab_-_part_1/csd/2023": {
+          "type": "វីដេអូ"
+        },
+        "drawing_in_game_lab_-_part_2/csd/2023": {
+          "type": "វីដេអូ"
+        },
+        "drawing_shapes_1/csd/2023": {
+          "name": "គំនូរគូរជារាង"
+        },
+        "shapes_and_parameters/csd/2023": {
+          "name": "រូបរាងនិងប៉ារ៉ាម៉ែត្រ"
+        },
+        "shapes_and_parameters_1/csd/2023": {
+          "name": "រូបរាងនិងប៉ារ៉ាម៉ែត្រ"
+        },
+        "introduction_to_variables/csd/2023": {
+          "type": "វីដេអូ"
+        },
+        "naming_variables/csd/2023": {
+          "name": "ការដាក់ឈ្មោះអថេរ"
+        },
+        "variables/csd/2023": {
+          "name": "អ​ថេរ"
+        },
+        "variables_1/csd/2023": {
+          "name": "អ​ថេរ",
+          "type": "វីដេអូ"
+        },
+        "variables_2/csd/2023": {
+          "name": "អ​ថេរ"
+        },
+        "random_numbers/csd/2023": {
+          "name": "លេខចៃដន្យ"
+        },
+        "random_numbers_1/csd/2023": {
+          "name": "លេខចៃដន្យ"
+        },
+        "introduction_to_sprites/csd/2023": {
+          "type": "វីដេអូ"
+        },
+        "sprites/csd/2023": {
+          "name": "Sprites"
+        },
+        "sprites_1/csd/2023": {
+          "name": "Sprites"
+        },
+        "the_animation_tab/csd/2023": {
+          "type": "វីដេអូ"
+        },
+        "sprite_properties/csd/2023": {
+          "name": "លក្ខណៈសម្បត្តិនៃ sprite"
+        },
+        "sprite_properties_1/csd/2023": {
+          "name": "លក្ខណៈសម្បត្តិនៃ sprite"
+        },
+        "sprite_properties_needs_updating_/csd/2023": {
+          "name": "លក្ខណៈសម្បត្តិនៃ sprite",
+          "type": "វីដេអូ"
+        },
+        "text/csd/2023": {
+          "name": "អត្ថ​​បទ"
+        },
+        "flipbook_example_-_by_marnic_bos/csd/2023": {
+          "type": "វីដេអូ"
+        },
+        "introduction_to_the_draw_loop/csd/2023": {
+          "type": "វីដេអូ"
+        },
+        "the_draw_loop/csd/2023": {
+          "name": "ការគូររង្វិលជុំដដែលៗ"
+        },
+        "the_draw_loop_1/csd/2023": {
+          "name": "ការគូររង្វិលជុំដដែលៗ"
+        },
+        "sprite_movement/csd/2023": {
+          "type": "វីដេអូ"
+        },
+        "boolean_expressions/csd/2023": {
+          "type": "វីដេអូ"
+        },
+        "conditional_statements/csd/2023": {
+          "type": "វីដេអូ"
+        },
+        "conditionals/csd/2023": {
+          "name": "លក្ខខណ្ឌ"
+        },
+        "if_else_statements/csd/2023": {
+          "type": "វីដេអូ"
+        },
+        "velocity/csd/2023": {
+          "type": "វីដេអូ"
+        },
+        "collision_detection/csd/2023": {
+          "name": "ការរកឃើញការប៉ះទង្គិច"
+        },
+        "collision_detection_1/csd/2023": {
+          "name": "ការរកឃើញការប៉ះទង្គិច"
+        },
+        "collision_detection_2/csd/2023": {
+          "name": "ការរកឃើញការប៉ះទង្គិច"
+        },
+        "velocity_and_the_counter_pattern/csd/2023": {
+          "name": "ល្បឿននិងលំនាំរាប់"
+        },
+        "functions/csd/2023": {
+          "name": "អនុ​គមន៍",
+          "type": "វីដេអូ"
+        },
+        "functions_1/csd/2023": {
+          "name": "អនុ​គមន៍"
+        },
+        "functions_2/csd/2023": {
+          "name": "អនុ​គមន៍"
+        },
+        "the_design_thinking_process/csd/2023": {
+          "type": "វីដេអូ"
+        },
+        "what_s_for_lunch_testing/csd/2023": {
+          "type": "វីដេអូ"
+        },
+        "intro_to_design_mode/csd/2023": {
+          "type": "វីដេអូ"
+        },
+        "events_in_app_lab/csd/2023": {
+          "type": "វីដេអូ"
+        },
+        "events_in_app_lab_1/csd/2023": {
+          "type": "វីដេអូ"
+        },
+        "ascii_challenges_1/csd/2023": {
+          "type": "គន្លឹះចម្លើយ"
+        },
+        "binary_and_data/csd/2023": {
+          "type": "វីដេអូ"
+        },
+        "medical_records_1/csd/2023": {
+          "type": "គន្លឹះចម្លើយ"
+        },
+        "amazon_and_data/csd/2023": {
+          "type": "វីដេអូ"
+        },
+        "netflix_and_data/csd/2023": {
+          "type": "វីដេអូ"
+        },
+        "waze_and_data/csd/2023": {
+          "type": "វីដេអូ"
+        },
+        "video_impact_on_society/csd/2023": {
+          "type": "វីដេអូ"
+        },
+        "video_machine_learning/csd/2023": {
+          "name": "វីដេអូ៖ ម៉ាស៊ីនចេះរៀន",
+          "type": "វីដេអូ"
+        },
+        "video_training_data_and_bias/csd/2023": {
+          "type": "វីដេអូ"
+        },
+        "circuits_and_logic/csd/2023": {
+          "type": "វីដេអូ"
+        },
+        "designing_screens_with_code/csd/2023": {
+          "name": "ការរចនា​អេក្រង់​ជាមួយ​កូដ"
+        },
+        "the_counter_pattern/csd/2023": {
+          "type": "វីដេអូ"
+        },
+        "if_statements_1/csd/2023": {
+          "type": "វីដេអូ"
+        },
+        "input_output_devices/csd/2023": {
+          "type": "វីដេអូ"
+        },
+        "introduction_to_arrays/csd/2023": {
+          "type": "វីដេអូ"
+        },
+        "functions_with_parameters/csd/2023": {
+          "type": "វីដេអូ"
+        },
+        "teacher_forum_1/csd/2023": {
+          "name": "វេទិការគ្រូបង្រៀន"
+        },
+        "the_counter_pattern_2/csd/2023": {
+          "type": "វីដេអូ"
+        },
+        "functions_3/csd/2023": {
+          "name": "អនុ​គមន៍"
+        },
+        "ai_what_is_machine_learning_/csd/2023": {
+          "type": "វីដេអូ"
+        },
+        "types_of_machine_learning_2/csd/2023": {
+          "type": "គន្លឹះចម្លើយ"
+        },
+        "seeing_ai/csd/2023": {
+          "type": "វីដេអូ"
+        },
+        "_key_patterns_in_data/csd/2023": {
+          "type": "គន្លឹះចម្លើយ"
+        },
+        "finding_patterns_in_data/csd/2023": {
+          "type": "វីដេអូ"
+        },
+        "_key_classification_models/csd/2023": {
+          "type": "គន្លឹះចម្លើយ"
+        },
+        "_key_training_a_model_in_ai_lab/csd/2023": {
+          "type": "គន្លឹះចម្លើយ"
+        },
+        "introduction_to_ai_lab_1/csd/2023": {
+          "type": "វីដេអូ"
+        },
+        "training_and_testing_in_ai_lab/csd/2023": {
+          "type": "វីដេអូ"
+        },
+        "ai_training_data_bias/csd/2023": {
+          "type": "វីដេអូ"
+        },
+        "_key_zoo_models/csd/2023": {
+          "type": "គន្លឹះចម្លើយ"
+        },
+        "model_cards_in_ai_lab/csd/2023": {
+          "type": "វីដេអូ"
+        },
+        "if-statements_in_app_lab/csd/2023": {
+          "type": "វីដេអូ"
+        },
+        "_key_numerical_accuracy/csd/2023": {
+          "type": "គន្លឹះចម្លើយ"
+        },
+        "_key_zombie_prediction/csd/2023": {
+          "type": "គន្លឹះចម្លើយ"
+        },
+        "_key_-_numerical_data_in_ai_lab/csd/2023": {
+          "type": "គន្លឹះចម្លើយ"
+        },
+        "numerical_data_in_ai_lab_2/csd/2023": {
+          "type": "វីដេអូ"
+        },
+        "ethics_ai_equal_access_and_algorithmic_bias/csd/2023": {
+          "type": "វីដេអូ"
+        },
+        "creating_a_survey_in_google_forms/csd/2023": {
+          "type": "វីដេអូ"
+        },
+        "cleaning_survey_data/csd/2023": {
+          "type": "វីដេអូ"
+        },
+        "view_and_download_survey_data/csd/2023": {
           "type": "វីដេអូ"
         },
         "implementation_guide/coursea/2023": {
@@ -1708,6 +2355,12 @@
         "the_big_event_2/coursea/2023": {
           "name": "ព្រឹត្តិការណ៍ធំ"
         },
+        "artist_project_planning_guide/coursea/2023": {
+          "type": "ឯកសារសិស្ស"
+        },
+        "artist_project_planning_guide_1/coursea/2023": {
+          "type": "គន្លឹះចម្លើយ"
+        },
         "implementation_guide/courseb/2023": {
           "name": "សៀវភៅណែនាំការអនុវត្ត"
         },
@@ -1734,6 +2387,9 @@
         "wiggles_-_gonoodle/courseb/2023": {
           "type": "វីដេអូ"
         },
+        "compass_rose/courseb/2023": {
+          "type": "ឯកសារសិស្ស"
+        },
         "stevie_and_the_big_project/courseb/2023": {
           "name": "Stevie and the Big Project"
         },
@@ -1753,6 +2409,12 @@
         },
         "the_big_event_2/courseb/2023": {
           "name": "ព្រឹត្តិការណ៍ធំ"
+        },
+        "play_lab_project_planning_guide/courseb/2023": {
+          "type": "ឯកសារសិស្ស"
+        },
+        "play_lab_project_planning_guide_1/courseb/2023": {
+          "type": "គន្លឹះចម្លើយ"
         },
         "implementation_guide/coursec/2023": {
           "name": "សៀវភៅណែនាំការអនុវត្ត"
@@ -1780,10 +2442,15 @@
           "type": "វីដេអូ"
         },
         "artist_introduction/coursec/2023": {
+          "name": "ការណែនាំអំពីវិចិត្រករ",
           "type": "វីដេអូសម្រាប់សិស្ស"
         },
         "turns_angles/coursec/2023": {
+          "name": "ការបត់ និងមុំ",
           "type": "វីដេអូសម្រាប់សិស្ស"
+        },
+        "turns_angles_1/coursec/2023": {
+          "name": "ការបត់ និងមុំ"
         },
         "the_big_event/coursec/2023": {
           "name": "ព្រឹត្តិការណ៍ធំ"
@@ -1794,9 +2461,18 @@
         "the_big_event_2/coursec/2023": {
           "name": "ព្រឹត្តិការណ៍ធំ"
         },
+        "open-ended_programming_levels/coursec/2023": {
+          "type": "គន្លឹះចម្លើយ"
+        },
         "pause_and_think_online/coursec/2023": {
           "name": "តាមអ៊ីនធឺណិតផ្អាកសិន ហើយគិត",
           "type": "វីដេអូ"
+        },
+        "sample_level_solutions/coursec/2023": {
+          "type": "គន្លឹះចម្លើយ"
+        },
+        "open-ended_programming_levels_1/coursec/2023": {
+          "type": "គន្លឹះចម្លើយ"
         },
         "bits_versus_bytes/coursec/2023": {
           "type": "វីដេអូសម្រាប់សិស្ស"
@@ -1807,6 +2483,21 @@
         "teacher_forum/coursed/2023": {
           "name": "វេទិការគ្រូបង្រៀន"
         },
+        "password_power-up_if_then_scenarios/coursed/2023": {
+          "type": "ឯកសារសិស្ស"
+        },
+        "password_power-up_if_then_scenarios_1/coursed/2023": {
+          "type": "គន្លឹះចម្លើយ"
+        },
+        "password_power-up_lesson_quiz_1/coursed/2023": {
+          "type": "គន្លឹះចម្លើយ"
+        },
+        "password_power-up_power-up_your_password/coursed/2023": {
+          "type": "ឯកសារសិស្ស"
+        },
+        "password_power-up_power-up_your_password_1/coursed/2023": {
+          "type": "គន្លឹះចម្លើយ"
+        },
         "pair_programming/coursed/2023": {
           "name": "ការសរសេរកម្មវិធីជាគូ",
           "type": "វីដេអូសម្រាប់សិស្ស"
@@ -1814,9 +2505,27 @@
         "relay_programming_4/coursed/2023": {
           "type": "វីដេអូសម្រាប់គ្រូ"
         },
+        "open-ended_programming_levels/coursed/2023": {
+          "type": "គន្លឹះចម្លើយ"
+        },
         "pause_and_think_online/coursed/2023": {
           "name": "តាមអ៊ីនធឺណិតផ្អាកសិន ហើយគិត",
           "type": "វីដេអូ"
+        },
+        "open-ended_programming_levels_1/coursed/2023": {
+          "type": "គន្លឹះចម្លើយ"
+        },
+        "sample_level_solutions/coursed/2023": {
+          "type": "គន្លឹះចម្លើយ"
+        },
+        "dance_party_project_guide/coursed/2023": {
+          "name": "ការណែនាំអំពីគម្រោងជប់លៀងរាំ"
+        },
+        "open-ended_programming_levels_2/coursed/2023": {
+          "type": "គន្លឹះចម្លើយ"
+        },
+        "spotify_playlist_all_ages_/coursed/2023": {
+          "name": "បញ្ជីបទចម្រៀងនៅលើ Spotify Playlist (គ្រប់អាយុ)"
         },
         "feeling_faces/coursed/2023": {
           "name": "មុខចំណាប់អារម្មណ៍",
@@ -1846,14 +2555,24 @@
         "teacher_forum/coursee/2023": {
           "name": "វេទិការគ្រូបង្រៀន"
         },
+        "private_and_personal_information_lesson_quiz_1/coursee/2023": {
+          "type": "គន្លឹះចម្លើយ"
+        },
         "private_and_personal_information_private_and_personal_information/coursee/2023": {
           "type": "វីដេអូសម្រាប់សិស្ស"
+        },
+        "about_me_planning_guide/coursee/2023": {
+          "type": "ឯកសារសិស្ស"
         },
         "pause_and_think_online/coursee/2023": {
           "name": "តាមអ៊ីនធឺណិតផ្អាកសិន ហើយគិត",
           "type": "វីដេអូ"
         },
+        "turns_angles/coursee/2023": {
+          "name": "ការបត់ និងមុំ"
+        },
         "turns_angles_1/coursee/2023": {
+          "name": "ការបត់ និងមុំ",
           "type": "វីដេអូសម្រាប់សិស្ស"
         },
         "digital_sharing_ethics_video_/coursee/2023": {
@@ -1868,8 +2587,17 @@
         "teacher_forum/coursef/2023": {
           "name": "វេទិការគ្រូបង្រៀន"
         },
+        "the_power_of_words_lesson_quiz_1/coursef/2023": {
+          "type": "គន្លឹះចម្លើយ"
+        },
         "the_power_of_words_the_power_of_words/coursef/2023": {
           "type": "វីដេអូ"
+        },
+        "the_power_of_words_words_can_hurt/coursef/2023": {
+          "type": "ឯកសារសិស្ស"
+        },
+        "exploring_apps_1/coursef/2023": {
+          "type": "គន្លឹះចម្លើយ"
         },
         "introducing_sprite_lab/coursef/2023": {
           "name": "សេចក្ដីណែនាំពី Sprite Lab",
@@ -1880,6 +2608,12 @@
         },
         "sprite_lab_documentation/coursef/2023": {
           "name": "ឯកសារ Sprite Lab"
+        },
+        "blank_space_stories_1/coursef/2023": {
+          "type": "គន្លឹះចម្លើយ"
+        },
+        "mini_project_user_input_programs_1/coursef/2023": {
+          "type": "គន្លឹះចម្លើយ"
         },
         "ai_impact_on_society/coursef/2023": {
           "type": "វីដេអូ"
@@ -1901,10 +2635,16 @@
           "type": "វីដេអូ"
         },
         "artist_introduction/express/2023": {
+          "name": "ការណែនាំអំពីវិចិត្រករ",
           "type": "វីដេអូ"
         },
         "turns_angles/express/2023": {
+          "name": "ការបត់ និងមុំ",
           "type": "វីដេអូ"
+        },
+        "turns_angles_1/express/2023": {
+          "name": "ការបត់ និងមុំ",
+          "type": "ឯកសារសិស្ស"
         },
         "sprite_lab_documentation/express/2023": {
           "name": "ឯកសារ Sprite Lab"
@@ -1916,8 +2656,20 @@
           "name": "តាមអ៊ីនធឺណិតផ្អាកសិន ហើយគិត",
           "type": "វីដេអូ"
         },
+        "dance_party_project_guide/express/2023": {
+          "name": "ការណែនាំអំពីគម្រោងជប់លៀងរាំ"
+        },
+        "open-ended_programming_levels/express/2023": {
+          "type": "គន្លឹះចម្លើយ"
+        },
+        "spotify_playlist_all_ages_/express/2023": {
+          "name": "បញ្ជីបទចម្រៀងនៅលើ Spotify Playlist (គ្រប់អាយុ)"
+        },
         "pair_programming_video/express/2023": {
           "type": "វីដេអូ"
+        },
+        "text_and_prompts/express/2023": {
+          "name": "អក្សរ និង Prompts"
         },
         "variables/express/2023": {
           "name": "អ​ថេរ",
@@ -1970,6 +2722,12 @@
         "how_ai_works_chatbots_and_large_language_models_part_2_/how-ai-works/2023": {
           "type": "វីដេអូ"
         },
+        "llm_vocab_and_video_guide_answer_key/how-ai-works/2023": {
+          "type": "គន្លឹះចម្លើយ"
+        },
+        "generative_images_activity_guide/how-ai-works/2023": {
+          "type": "គន្លឹះចម្លើយ"
+        },
         "how_ai_works_creativity_and_imagination/how-ai-works/2023": {
           "type": "វីដេអូ"
         },
@@ -2000,11 +2758,31 @@
         "how_chatbots_and_large_language_models_work/how-ai-works/2023": {
           "type": "វីដេអូ"
         },
+        "_key_vocabulary_matching/how-ai-works/2023": {
+          "type": "គន្លឹះចម្លើយ"
+        },
         "csf-artist-intro-video/artist/unversioned": {
+          "name": "ការណែនាំអំពីវិចិត្រករ",
           "type": "វីដេអូសម្រាប់សិស្ស"
         },
+        "csf-turns-angles-doc/artist/unversioned": {
+          "name": "ការបត់ និងមុំ"
+        },
         "csf-turns-angles-video/artist/unversioned": {
+          "name": "ការបត់ និងមុំ",
           "type": "វីដេអូសម្រាប់សិស្ស"
+        },
+        "dance-party-playlist/dance-2019/unversioned": {
+          "name": "បញ្ជីបទចម្រៀងនៅលើ Spotify Playlist (គ្រប់អាយុ)"
+        },
+        "dance-party-playlist/dance-extras-2019/unversioned": {
+          "name": "បញ្ជីបទចម្រៀងនៅលើ Spotify Playlist (គ្រប់អាយុ)"
+        },
+        "dance-party-playlist/dance-extras/unversioned": {
+          "name": "បញ្ជីបទចម្រៀងនៅលើ Spotify Playlist (គ្រប់អាយុ)"
+        },
+        "dance-party-playlist/dance/unversioned": {
+          "name": "បញ្ជីបទចម្រៀងនៅលើ Spotify Playlist (គ្រប់អាយុ)"
         },
         "encryption-and-public-keys-optional-1/hoc-encryption/unversioned": {
           "type": "វីដេអូ"

@@ -1554,6 +1554,9 @@
           "word": "Evento",
           "definition": "una acción que hace que algo suceda."
         },
+        "artificial_intelligence/ai-ethics/2023": {
+          "word": "Inteligencia Artificial"
+        },
         "adaptation/csc-adaptations/2023": {
           "word": "Adaptación",
           "definition": "Un cambio en un organismo para sobrevivir mejor a su entorno"
@@ -1772,6 +1775,242 @@
         "poetry_circle/poetry/2023": {
           "word": "Círculo de Poesía",
           "definition": "Un espacio seguro y creativo para probar nuevos poemas y obtener comentarios constructivos de otros"
+        },
+        "computer/csd/2023": {
+          "word": "Computadora",
+          "definition": "Una máquina que trabaja con información."
+        },
+        "input/csd/2023": {
+          "word": "Entrada",
+          "definition": "la información que las computadoras obtienen de los usuarios, dispositivos u otras computadoras"
+        },
+        "output/csd/2023": {
+          "word": "Salida",
+          "definition": "la información que las computadoras dan a los usuarios, a los dispositivos o a otras computadoras"
+        },
+        "processing/csd/2023": {
+          "word": "Procesamiento",
+          "definition": "El proceso que las computadoras hacen para convertir la entrada en salida."
+        },
+        "storage/csd/2023": {
+          "word": "almacenamiento",
+          "definition": "Guardar información para poder utilizarla en el futuro"
+        },
+        "html/csd/2023": {
+          "word": "HTML",
+          "definition": "Lenguaje de Marcas de Hipertexto, un lenguaje usado para crear páginas web."
+        },
+        "html_element/csd/2023": {
+          "word": "Elemento HTML",
+          "definition": "Un extracto de un sitio web, marcado por una etiqueta de inicio y por lo general cerrado con una etiqueta de fin."
+        },
+        "html_tag/csd/2023": {
+          "word": "Etiqueta HTML",
+          "definition": "Un conjunto de caracteres que indica el inicio y el fin de un elemento HTML y qué tipo de elemento es"
+        },
+        "website_content/csd/2023": {
+          "word": "Contenido de sitio web",
+          "definition": "El texto y las imágenes en un sitio web"
+        },
+        "website_structure/csd/2023": {
+          "word": "Estructura del sitio web",
+          "definition": "La forma en la que se organiza el contenido de un sitio web"
+        },
+        "heading/csd/2023": {
+          "word": "Encabezado",
+          "definition": "Un título o resumen de un documento o de una sección de un documento."
+        },
+        "digital_footprint/csd/2023": {
+          "word": "Huella Digital",
+          "definition": "La información recopilada sobre una persona en varios sitios web de Internet."
+        },
+        "css/csd/2023": {
+          "word": "CSS",
+          "definition": "Cascading Style Sheets (en español hojas de estilo en cascada): Un lenguaje usado para describir el estilo de los elementos HTML"
+        },
+        "css_selector/csd/2023": {
+          "word": "Selector CSS",
+          "definition": "La parte de un set de reglas de CSS que indica a qué elementos del HTML deben aplicarse un estilo."
+        },
+        "copyright/csd/2023": {
+          "word": "Derechos de autor",
+          "definition": "el derecho legal a imprimir, publicar, realizar, filmar o grabar de forma exclusiva material literario, artístico o musical, y la capacidad de autorizar a otros a hacerlo también"
+        },
+        "relevant/csd/2023": {
+          "word": "Relevante",
+          "definition": "relacionado con un tema"
+        },
+        "search_engine/csd/2023": {
+          "word": "Motor de búsqueda",
+          "definition": "Un programa que busca elementos en la Red Informática Mundial (World wide web)."
+        },
+        "trustworthy/csd/2023": {
+          "word": "Confiable",
+          "definition": "fiable, honesto, y verdadero "
+        },
+        "css_class/csd/2023": {
+          "word": "Clase CSS",
+          "definition": "Un identificador que permite que múltiples elementos en un documento HTML tengan el mismo estilo."
+        },
+        "bug/csd/2023": {
+          "word": "Bug (error)",
+          "definition": "parte de un programa que no funciona correctamente."
+        },
+        "debugging/csd/2023": {
+          "word": "Depuración",
+          "definition": "(v) encontrar y solucionar problemas en un algoritmo o programa."
+        },
+        "program/csd/2023": {
+          "word": "Programa",
+          "definition": "un algoritmo que se ha programado como algo que puede ser ejecutado por una máquina."
+        },
+        "parameter/csd/2023": {
+          "word": "Parámetro",
+          "definition": "Información adicional introducida en un bloque para personalizar su funcionalidad"
+        },
+        "variable/csd/2023": {
+          "word": "Variable",
+          "definition": "Una etiqueta para una porción de información en un programa."
+        },
+        "sprite/csd/2023": {
+          "word": "Sprite",
+          "definition": "Un personaje en la pantalla con propiedades que describen su ubicación, movimiento y apariencia. "
+        },
+        "dot_notation/csd/2023": {
+          "word": "Notación de puntos",
+          "definition": "La forma en la que las propiedades de los sprites se utilizan en el Game Lab. Conectando el sprite y sus propiedades mediante un punto."
+        },
+        "property/csd/2023": {
+          "word": "Propiedades",
+          "definition": "Una etiqueta para una característica de un sprite, como su ubicación y su apariencia"
+        },
+        "boolean_expression/csd/2023": {
+          "word": "Expresión Booleana",
+          "definition": "En programación, una expresión evalúa Verdadero o Falso. "
+        },
+        "condition/csd/2023": {
+          "word": "Condición",
+          "definition": "Algo que un programa debe revisar para comprobar si es verdadero antes de decidir una acción."
+        },
+        "conditionals/csd/2023": {
+          "word": "Condicionales",
+          "definition": "Sentencias que solo se ejecutan cuando ciertas condiciones son verdaderas."
+        },
+        "abstraction/csd/2023": {
+          "word": "Abstracción",
+          "definition": "una representación simplificada de algo más complejo. Las abstracciones permiten ocultar los detalles para ayudarnos a gestionar la complejidad, enfocarnos en conceptos relevantes y para que podamos analizar problemas en un nivel más alto."
+        },
+        "function/csd/2023": {
+          "word": "Función",
+          "definition": "Un fragmento etiquetado de instrucciones de programación."
+        },
+        "empathy/csd/2023": {
+          "word": "Empatía",
+          "definition": "En el área del diseño, se refiere a poner atención a los sentimientos y necesidades del usuario cuando se está diseñando un producto."
+        },
+        "user/csd/2023": {
+          "word": "Usuario",
+          "definition": "Alguien que utiliza un objeto, incluido software y hardware."
+        },
+        "usability/csd/2023": {
+          "word": "Usabilidad",
+          "definition": "Facilidad, eficacia y satisfacción en el uso de un objeto o dispositivo hecho por el hombre (incluido el software)."
+        },
+        "prototype/csd/2023": {
+          "word": "Prototipo",
+          "definition": "primer modelo de un producto que permite probar conjeturas antes de desarrollar una versión final."
+        },
+        "user_interface/csd/2023": {
+          "word": "Pantalla de Usuario",
+          "definition": "elementos visuales de un programa que sirven para comunicarse con la aplicación o controlarla. En español, se usa comúnmente la abreviación en inglés UI."
+        },
+        "feature/csd/2023": {
+          "word": "Característica",
+          "definition": "Parte de un programa que añade funcionalidad para el usuario"
+        },
+        "decode/csd/2023": {
+          "word": "Decodificar",
+          "definition": "cambiar la forma en la que la información está representada para que una persona puede leerla"
+        },
+        "encode/csd/2023": {
+          "word": "Codificar",
+          "definition": "cambiar la forma en la que la información está representada para que una computadora pueda leerla"
+        },
+        "ascii/csd/2023": {
+          "word": "ASCII",
+          "definition": "un sistema popular para representar un texto en binario"
+        },
+        "binary_system/csd/2023": {
+          "word": "Sistema Binario",
+          "definition": "una forma de representar información utilizando solamente dos opciones"
+        },
+        "bit/csd/2023": {
+          "word": "Bit",
+          "definition": "una sola pieza de información binaria"
+        },
+        "pixel/csd/2023": {
+          "word": "Pixel",
+          "definition": "un cuadrado o punto pequeño que representa un solo punto de color en una imagen de gran tamaño."
+        },
+        "decrypt/csd/2023": {
+          "word": "Desencriptar",
+          "definition": "cambiar la información con el objetivo de revelar su significado"
+        },
+        "encrypt/csd/2023": {
+          "word": "Encriptar",
+          "definition": "cambiar la información con el objetivo de ocultar su significado"
+        },
+        "circuit/csd/2023": {
+          "word": "Circuito",
+          "definition": "Un dispositivo que proporciona el trayecto para una corriente eléctrica, usualmente modificando esa corriente. En las computadoras, los circuitos permiten operaciones lógicas y matemáticas utilizando electricidad."
+        },
+        "machine_learning/csd/2023": {
+          "word": "Aprendizaje automático",
+          "definition": "Cómo las computadoras reconocen patrones y toman decisiones sin ser programadas explícitamente"
+        },
+        "features/csd/2023": {
+          "word": "Características",
+          "definition": "Entradas que un modelo utiliza para tomar decisiones"
+        },
+        "label/csd/2023": {
+          "word": "Etiqueta",
+          "definition": "Salida que se intenta decidir o predecir a través de un modelo"
+        },
+        "model/csd/2023": {
+          "word": "Modelo",
+          "definition": "Programa computacional diseñado para tomar decisiones"
+        },
+        "supervised_learning/csd/2023": {
+          "word": "Aprendizaje Supervisado",
+          "definition": "Proceso en el que un humano entrena un modelo para que aprenda mediante ejemplos"
+        },
+        "training/csd/2023": {
+          "word": "Entrenamiento",
+          "definition": "Presentación de ejemplos a un modelo para que éste aprenda"
+        },
+        "unsupervised_learning/csd/2023": {
+          "word": "Aprendizaje No Supervisado",
+          "definition": "Detección de patrones en datos que no tienen etiquetas"
+        },
+        "categorical_data/csd/2023": {
+          "word": "Datos categóricos",
+          "definition": "Datos que pueden separarse en grupos"
+        },
+        "classification/csd/2023": {
+          "word": "Clasificación",
+          "definition": "Predicción de una categoría basada en otras características"
+        },
+        "bias/csd/2023": {
+          "word": "Sesgo",
+          "definition": "Cuando una decisión favorece algunas cosas y quita prioridad o excluye otras"
+        },
+        "numerical_data/csd/2023": {
+          "word": "Datos Numéricos",
+          "definition": "Datos que se pueden contar o medir"
+        },
+        "ethics/csd/2023": {
+          "word": "Ética",
+          "definition": "Normas para un buen comportamiento."
         },
         "algorithm/coursea/2023": {
           "word": "Algoritmo",

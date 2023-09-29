@@ -698,6 +698,11 @@ sk-SK:
           lekciách. Pomocou tohto zoznamu si môžeš premyslieť, aké štýly použiješ
           na svojej webovej stránke.
         display_name: Opakovanie CSS
+      CSD CSS project Review_2023:
+        description: Tu je niekoľko CSS vlastností, s ktorými sme sa stretli v predchádzajúcich
+          lekciách. Pomocou tohto zoznamu si môžeš premyslieť, aké štýly použiješ
+          na svojej webovej stránke.
+        display_name: Opakovanie CSS
       CSD Games Parameters challenge_2021:
         description: Vyskúšaj si jeden alebo viacero z týchto ďalších blokov, ktoré
           môžeš použiť na spestrenie svojich obrázkov.
@@ -706,10 +711,17 @@ sk-SK:
         description: Vyskúšaj si jeden alebo viacero z týchto ďalších blokov, ktoré
           môžeš použiť na spestrenie svojich obrázkov.
         display_name: Úlohy zamerané na tvary a parametre
+      CSD Games Parameters challenge_2023:
+        description: Vyskúšaj si jeden alebo viacero z týchto ďalších blokov, ktoré
+          môžeš použiť na spestrenie svojich obrázkov.
+        display_name: Úlohy zamerané na tvary a parametre
       CSD Games Properties challenge_2021:
         description: Vyskúšaj si tieto nové úlohy s vlastnosťami sprajtov
         display_name: 'Úlohy: Vlastnosti sprajtov'
       CSD Games Properties challenge_2022:
+        description: Vyskúšaj si tieto nové úlohy s vlastnosťami sprajtov
+        display_name: 'Úlohy: Vlastnosti sprajtov'
+      CSD Games Properties challenge_2023:
         description: Vyskúšaj si tieto nové úlohy s vlastnosťami sprajtov
         display_name: 'Úlohy: Vlastnosti sprajtov'
       CSD Games Properties multi predict_2021:
@@ -736,10 +748,25 @@ sk-SK:
         questions:
         - text: Čo zobrazí program?
         title: Umiestnenie sprajtu včely
+      CSD Games Properties multi predict_2023:
+        answers:
+        - text: sprajt včely v strede obrazovky
+        - correct: true
+          text: sprajt včely vpravo dole
+        - text: dva sprajty včely – jeden v strede obrazovky a druhý vpravo dole
+        - text: tri sprajty včely, všetky na rôznych miestach
+        - text: nič, vyskytne sa chyba
+        content1: Pozri si nasledujúci kód a uhádni, kde sa objaví sprajt včely.
+        questions:
+        - text: Čo zobrazí program?
+        title: Umiestnenie sprajtu včely
       CSD Games Properties practice_2021:
         description: Vyskúšaj si vlastnosti sprajtov, ktoré sme sa tu naučili
         display_name: Vlastnosti sprajtov
       CSD Games Properties practice_2022:
+        description: Vyskúšaj si vlastnosti sprajtov, ktoré sme sa tu naučili
+        display_name: Vlastnosti sprajtov
+      CSD Games Properties practice_2023:
         description: Vyskúšaj si vlastnosti sprajtov, ktoré sme sa tu naučili
         display_name: Vlastnosti sprajtov
       CSD Games Sprites Challenges_2021:
@@ -747,6 +774,10 @@ sk-SK:
           svoje sprajty.
         display_name: 'Úlohy: Sprajty a animácie'
       CSD Games Sprites Challenges_2022:
+        description: Vyskúšaj si tieto ďalšie úlohy, ktoré ti pomôžu ešte viac ozvláštniť
+          svoje sprajty.
+        display_name: 'Úlohy: Sprajty a animácie'
+      CSD Games Sprites Challenges_2023:
         description: Vyskúšaj si tieto ďalšie úlohy, ktoré ti pomôžu ešte viac ozvláštniť
           svoje sprajty.
         display_name: 'Úlohy: Sprajty a animácie'
@@ -758,9 +789,15 @@ sk-SK:
         description: Na dokončenie týchto úrovní využi svoje nové vedomosti o sprajtoch
           a animáciách.
         display_name: Vytváranie sprajtov a animácií
+      CSD Games Sprites practice_2023:
+        description: Na dokončenie týchto úrovní využi svoje nové vedomosti o sprajtoch
+          a animáciách.
+        display_name: Vytváranie sprajtov a animácií
       CSD Games parameters practice_2021:
         display_name: Precvičovanie parametrov
       CSD Games parameters practice_2022:
+        display_name: Precvičovanie parametrov
+      CSD Games parameters practice_2023:
         display_name: Precvičovanie parametrov
       CSD Games variables challenge_2021:
         description: Rozšír svoje zručnosti v oblasti premenných pomocou týchto úloh.
@@ -768,10 +805,16 @@ sk-SK:
       CSD Games variables challenge_2022:
         description: Rozšír svoje zručnosti v oblasti premenných pomocou týchto úloh.
         display_name: Úlohy zamerané na premenné
+      CSD Games variables challenge_2023:
+        description: Rozšír svoje zručnosti v oblasti premenných pomocou týchto úloh.
+        display_name: Úlohy zamerané na premenné
       CSD Games variables practice_2021:
         description: Vyber si z nasledujúcich aktivít na precvičenie používania premenných.
         display_name: Precvičovanie používania premenných
       CSD Games variables practice_2022:
+        description: Vyber si z nasledujúcich aktivít na precvičenie používania premenných.
+        display_name: Precvičovanie používania premenných
+      CSD Games variables practice_2023:
         description: Vyber si z nasledujúcich aktivít na precvičenie používania premenných.
         display_name: Precvičovanie používania premenných
       CSD HTML project Lists_2021:
@@ -788,6 +831,11 @@ sk-SK:
           na svojej webovej stránke.
         display_name: Opakovanie HTML
       CSD HTML project Review_2022:
+        description: Tu je niekoľko HTML značiek, s ktorými sme sa stretli v predchádzajúcich
+          lekciách. Pomocou tohto zoznamu si môžeš premyslieť, aké značky použiješ
+          na svojej webovej stránke.
+        display_name: Opakovanie HTML
+      CSD HTML project Review_2023:
         description: Tu je niekoľko HTML značiek, s ktorými sme sa stretli v predchádzajúcich
           lekciách. Pomocou tohto zoznamu si môžeš premyslieť, aké značky použiješ
           na svojej webovej stránke.
@@ -895,11 +943,36 @@ sk-SK:
           možnosť odpovedať na otázku aj viackrát, pričom samotné hádanie a následná
           kontrola odpovede môže rovnako viesť k správnej odpovedi. \n\n<div class=\"clear\"></div>"
         title: Rýchle zopakovanie nadpisov
+      CSD Header Size MC_2018_2019_pilot_2023:
+        answers:
+        - text: https://images.code.org/a4e973cc13db380ca1e1efeb4263974f-image-1473432905067.53.47
+            AM.png
+        - correct: true
+          text: https://images.code.org/1c660b4e54a3e835250597cb261d8e17-image-1473432905068.54.08
+            AM.png
+        - text: https://images.code.org/22e9ae6a04afd8251b29939a6fa63411-image-1473432905069.54.25
+            AM.png
+        - text: https://images.code.org/0eee565202089d44a6bb5633603c45e0-image-1473432905069.54.50
+            AM.png
+        content1: 'Prehliadni si nasledujúci kód a skús odhadnúť, ako bude zobrazený
+          nadpis. Vyber si z možností vpravo. '
+        teacher_markdown: "<img src=\"https://cdo-curriculum.s3.amazonaws.com/media/uploads/Screen-Shot-2017-04-27-at-10.38.03-AM.png\"
+          style=\"width:200px; float:right\">\n\n**Druhy úrovní:** Na otázku, ako
+          sa budú HTML nadpisy zobrazovať na webovej stránke, sú žiaci vyzvaní odpovedať
+          výberom správnej odpovede spomedzi viacerých možností. Ak chcete vidieť,
+          ktorí žiaci odpovedali správne na otázku, ako budú HTML nadpisy zobrazené
+          na webovej stránke, vyhľadajte si túto úroveň cez panel pre učiteľov vpravo.
+          Žiaci so správnou odpoveďou budú mať zobrazenú zelenú bublinku. Žiaci majú
+          možnosť odpovedať na otázku aj viackrát, pričom samotné hádanie a následná
+          kontrola odpovede môže rovnako viesť k správnej odpovedi. \n\n<div class=\"clear\"></div>"
+        title: Rýchle zopakovanie nadpisov
       CSD Interactive Animations and Games Post-Project Test:
         title: 'Záverečný test: Interaktívne animácie a hry'
       CSD Interactive Animations and Games Post-Project Test_pilot_2021:
         title: 'Záverečný test: Interaktívne animácie a hry'
       CSD Interactive Animations and Games Post-Project Test_pilot_2022:
+        title: 'Záverečný test: Interaktívne animácie a hry'
+      CSD Interactive Animations and Games Post-Project Test_pilot_2023:
         title: 'Záverečný test: Interaktívne animácie a hry'
       CSD Physical Computing Post-Project Test:
         title: 'Programovanie s hardvérom: Záverečný test'
@@ -1001,6 +1074,62 @@ sk-SK:
         teacher_markdown: |
           * [Aplikácia a riešenie problémov](https://docs.google.com/document/d/1g6RxE2MszcUn3vAjD-DoFThhlyZZqKIPLceQ3427J_w/) - Príklad sprievodcu projektom ([PDF](https://docs.google.com/document/d/1g6RxE2MszcUn3vAjD-DoFThhlyZZqKIPLceQ3427J_w/export?format=pdf) | [DOCX](https://docs.google.com/document/d/1g6RxE2MszcUn3vAjD-DoFThhlyZZqKIPLceQ3427J_w/export?format=doc))
           * [Aplikácia a Riešenie problému](https://docs.google.com/document/d/1hm5wWoVqDhFHbs4MfN0gcAnskZ5a6a5KdO7N3Y0GLoA/edit) - Príklad hodnotenia spolužiakov  ([PDF](https://docs.google.com/document/d/1hm5wWoVqDhFHbs4MfN0gcAnskZ5a6a5KdO7N3Y0GLoA/export?format=pdf) | [DOCX](https://docs.google.com/document/d/1hm5wWoVqDhFHbs4MfN0gcAnskZ5a6a5KdO7N3Y0GLoA/export?format=doc))
+      CSD U1 MC Q1_2023:
+        answers:
+        - correct: true
+        - correct: true
+        - {}
+        - {}
+        - text: Všetky uvedené možnosti
+      CSD U1 MC Q2_2023:
+        answers:
+        - {}
+        - {}
+        - {}
+        - {}
+        - correct: true
+          text: Všetky uvedené možnosti
+        questions:
+        - {}
+      CSD U1 MC Q3_2023:
+        answers:
+        - {}
+        - {}
+        - text: Hudba
+        - text: Miesto
+        - correct: true
+          text: Všetky uvedené možnosti
+        questions:
+        - {}
+      CSD U1 MC Q4_2023:
+        answers:
+        - {}
+        - {}
+        - {}
+        - correct: true
+        - correct: true
+        questions:
+        - {}
+      CSD U1 Match Q5_2023:
+        answers:
+        - text: Vstup
+        - text: Pamäť
+        - text: Spracúvanie
+        questions:
+        - {}
+        - {}
+        - {}
+      CSD U1 Match Q6_2023:
+        answers:
+        - {}
+        - {}
+        - {}
+        - {}
+        questions:
+        - text: Príprava
+        - text: Reflexia
+        - text: Pokus
+        - text: Definuj
       CSD U1 Test:
         title: 'Počítače a riešenie problémov: záverečný test'
       CSD U1 Test PSP match:
@@ -1148,6 +1277,8 @@ sk-SK:
         title: 'Počítače a riešenie problémov: záverečný test'
       CSD U1 Test_2022:
         title: 'Počítače a riešenie problémov: záverečný test'
+      CSD U1 Test_2023:
+        title: 'Počítače a riešenie problémov: záverečný test'
       CSD U2 CSS challenge_pilot_2021:
         description: Existuje množstvo rôznych spôsobov, ako štýlovať text. Prejdi
           si nasledujúce úlohy, v ktorých nájdeš nové nápady, čo všetko môžeš urobiť
@@ -1158,10 +1289,18 @@ sk-SK:
           si nasledujúce úlohy, v ktorých nájdeš nové nápady, čo všetko môžeš urobiť
           na svojej webovej stránke.
         display_name: Úlohy a ďalší kód
+      CSD U2 CSS challenge_pilot_2023:
+        description: Existuje množstvo rôznych spôsobov, ako štýlovať text. Prejdi
+          si nasledujúce úlohy, v ktorých nájdeš nové nápady, čo všetko môžeš urobiť
+          na svojej webovej stránke.
+        display_name: Úlohy a ďalší kód
       CSD U2 CSS practice_pilot_2021:
         description: Vyskúšaj si svoje nové zručnosti na týchto rôznych úlohách!
         display_name: Štýlovanie textu pomocou CSS
       CSD U2 CSS practice_pilot_2022:
+        description: Vyskúšaj si svoje nové zručnosti na týchto rôznych úlohách!
+        display_name: Štýlovanie textu pomocou CSS
+      CSD U2 CSS practice_pilot_2023:
         description: Vyskúšaj si svoje nové zručnosti na týchto rôznych úlohách!
         display_name: Štýlovanie textu pomocou CSS
       CSD U2 Design Project:
@@ -1196,16 +1335,35 @@ sk-SK:
           <div style="float: left; text-align:center;"><strong>Hudobné nástroje</strong><br /><a href="https://codeprojects.org/HxtpYQ-r79cNzFpnSfGyhMuNKEOTdyH5PPeUpDimEeY" target="_new"><img style="border-radius:10px; margin: 10px;" src="https://images.code.org/82323a78b17b69101dd6e98a6a21c55c-image-1565630573896.png" alt="Instrument Sample Page"></a></div>
           <div style="float: left; text-align:center;"><strong>Recyklačný krúžok</strong><br /><a href="https://codeprojects.org/HxtpYQ-r79cNzFpnSfGyhBiffg8HpOk2lRx1kd5sgaw" target="_new"><img style="border-radius:10px; margin: 10px;" src="https://images.code.org/5b0044bfd92d44c97cd74d82f1933daa-image-1565630578147.png" alt="Recycling Sample Page"></a></div>
           <div style="float: left; text-align:center;"><strong>Básne haiku</strong><br /><a href="https://codeprojects.org/HxtpYQ-r79cNzFpnSfGyhLgd_3k2ffeKaGZZO7Ebvgs" target="_new"><img style="border-radius:10px; margin: 10px;" src="https://images.code.org/40892c338c78da445310ddfb7cf63127-image-1565630595445.png" alt="Haiku Sample Page"></a></div>
+      CSD U2 Expression Exemplars_2018_2019_pilot_2023:
+        markdown: |
+          # Príklady osobných webov
+
+          Na nasledujúcich odkazoch si môžeš pozrieť, aké webové stránky povytvárali iní žiaci.
+
+          ## Príklady
+
+          <div style="float: left; text-align:center;"><strong>Najmilší pes</strong><br /><a href="https://codeprojects.org/vfqqBSl9WL5EmWlRTaCuyGL523thd_RLmA6fZjoahHo/" target="_new"><img style="border-radius:10px; margin: 10px;" src="https://images.code.org/be0c20dba6319b34dc07a9f87ae615fa-image-1565304900473.png" alt="Dog Sample Page"></a></div>
+          <div style="float: left; text-align:center;"><strong>Môj výlet</strong><br /><a href="https://codeprojects.org/HxtpYQ-r79cNzFpnSfGyhHHDE0tb28ed-9-scxvFYE0" target="_new"><img style="border-radius:10px; margin: 10px;" src="https://images.code.org/51b787b6a25663e092b3f55e051e9a94-image-1565630570417.png" alt="Trip Sample Page"></a></div>
+          <div style="float: left; text-align:center;"><strong>Hudobné nástroje</strong><br /><a href="https://codeprojects.org/HxtpYQ-r79cNzFpnSfGyhMuNKEOTdyH5PPeUpDimEeY" target="_new"><img style="border-radius:10px; margin: 10px;" src="https://images.code.org/82323a78b17b69101dd6e98a6a21c55c-image-1565630573896.png" alt="Instrument Sample Page"></a></div>
+          <div style="float: left; text-align:center;"><strong>Recyklačný krúžok</strong><br /><a href="https://codeprojects.org/HxtpYQ-r79cNzFpnSfGyhBiffg8HpOk2lRx1kd5sgaw" target="_new"><img style="border-radius:10px; margin: 10px;" src="https://images.code.org/5b0044bfd92d44c97cd74d82f1933daa-image-1565630578147.png" alt="Recycling Sample Page"></a></div>
+          <div style="float: left; text-align:center;"><strong>Básne haiku</strong><br /><a href="https://codeprojects.org/HxtpYQ-r79cNzFpnSfGyhLgd_3k2ffeKaGZZO7Ebvgs" target="_new"><img style="border-radius:10px; margin: 10px;" src="https://images.code.org/40892c338c78da445310ddfb7cf63127-image-1565630595445.png" alt="Haiku Sample Page"></a></div>
       CSD U2 Image challenge_pilot_2021:
         description: Tu nájdeš náročnejšie úlohy a nové typy kódu.
         display_name: Pridávanie obrázkov
       CSD U2 Image challenge_pilot_2022:
         description: Tu nájdeš náročnejšie úlohy a nové typy kódu.
         display_name: Pridávanie obrázkov
+      CSD U2 Image challenge_pilot_2023:
+        description: Tu nájdeš náročnejšie úlohy a nové typy kódu.
+        display_name: Pridávanie obrázkov
       CSD U2 Image practice_pilot_2021:
         description: Tu si môžeš precvičiť svoje nové zručnosti.
         display_name: Pridávanie obrázkov
       CSD U2 Image practice_pilot_2022:
+        description: Tu si môžeš precvičiť svoje nové zručnosti.
+        display_name: Pridávanie obrázkov
+      CSD U2 Image practice_pilot_2023:
         description: Tu si môžeš precvičiť svoje nové zručnosti.
         display_name: Pridávanie obrázkov
       CSD U2 L1 Overview:
@@ -1290,6 +1448,98 @@ sk-SK:
           - `<ol></ol>`"
       CSD U2 Lesson 6 Overview:
         content1: Sem pridať popis
+      CSD U2 MC Q10_2023:
+        answers:
+        - text: Dátum tvojich narodenín
+        - text: Tvoja adresa
+        - {}
+        - text: Meno a priezvisko
+        - correct: true
+          text: Všetky uvedené možnosti
+        questions:
+        - {}
+      CSD U2 MC Q11_2023:
+        answers:
+        - {}
+        - {}
+        - {}
+        - correct: true
+        questions:
+        - {}
+      CSD U2 MC Q1_2023:
+        answers:
+        - text: HTML
+        - correct: true
+          text: CSS
+        - {}
+        - text: Nadpis
+        - {}
+        questions:
+        - {}
+      CSD U2 MC Q2_2023:
+        answers:
+        - correct: true
+        - {}
+        - {}
+        - correct: true
+        - {}
+        questions:
+        - {}
+      CSD U2 MC Q3_2023:
+        answers:
+        - correct: true
+        - {}
+        - correct: true
+        - {}
+        - {}
+        questions:
+        - {}
+      CSD U2 MC Q4_2023:
+        answers:
+        - {}
+        - correct: true
+        - {}
+        - {}
+        - {}
+        questions:
+        - {}
+      CSD U2 MC Q6_2023:
+        answers:
+        - correct: true
+        - {}
+        - {}
+        - {}
+        - {}
+        questions:
+        - {}
+        title: Otázka č. 1
+      CSD U2 MC Q7_2023:
+        answers:
+        - {}
+        - {}
+        - correct: true
+        - {}
+        - {}
+        questions:
+        - {}
+      CSD U2 MC Q8_2023:
+        answers:
+        - {}
+        - {}
+        - correct: true
+        - {}
+        - {}
+        questions:
+        - {}
+      CSD U2 Match Q1_2023:
+        answers:
+        - {}
+        - {}
+        - {}
+        questions:
+        - text: farba
+        - {}
+        - {}
       CSD U2 Sample CSS layout_2021:
         markdown: |+
           # Ukážkové weby
@@ -1302,6 +1552,17 @@ sk-SK:
 
 
       CSD U2 Sample CSS layout_2022:
+        markdown: |+
+          # Ukážkové weby
+
+          Na nasledujúcich odkazoch si môžeš prezrieť nové typy štýlov, ktoré môžeš využiť na svojich webových stránkach.
+
+          |Príklad č. 1| Príklad č. 2| Príklad č. 3|
+          |-|-|-|
+          |[![](https://images.code.org/7c31d954229b205eff20e4a131271845-image-1585070245513.png)](https://studio.code.org/projects/weblab/-lbgSOg0xktagjHqalYTlPvYzGmfV3OyQxwifLBmmWE/view)|[![](https://images.code.org/00410044eee7dedc993ec9d6c8887444-image-1589309900750.56.13 PM.png)](https://studio.code.org/projects/weblab/3ZP18hc29B_ZMG2Yh17zXJfOZ_97JAa882aj9oJScME/view)|[![](https://images.code.org/c67c9e9b8e44094a403e3974db09e2e3-image-1589314612876.15.47 PM.png)](https://studio.code.org/projects/weblab/Hdfq1QJEwNjrbpI8x7qwPO6ZHgLyywZOxGRKqIZGp8Y/view)|
+
+
+      CSD U2 Sample CSS layout_2023:
         markdown: |+
           # Ukážkové weby
 
@@ -1326,6 +1587,13 @@ sk-SK:
           Otvor si nasledujúci web, kde objavíš niekoľko nových spôsobov štýlovania webových stránok.
 
           [![](https://images.code.org/4343b7c16ca18f6d2c003bf95d756f42-image-1585189253769.png)](https://codeprojects.org/g4ZEsGYTllMm_2Ien3QDtJ4wya6onDyRVzRjWiKNdLo/)
+      CSD U2 Sample CSS text_2023:
+        markdown: |
+          # Ukážkový web
+
+          Otvor si nasledujúci web, kde objavíš niekoľko nových spôsobov štýlovania webových stránok.
+
+          [![](https://images.code.org/4343b7c16ca18f6d2c003bf95d756f42-image-1585189253769.png)](https://codeprojects.org/g4ZEsGYTllMm_2Ien3QDtJ4wya6onDyRVzRjWiKNdLo/)
       CSD U2 Sample classes_2021:
         markdown: |
           # Ukážkový web
@@ -1334,6 +1602,13 @@ sk-SK:
 
           [![](https://images.code.org/71a3cb8e9708093b17b9c75eb0723d10-image-1588247512749.49.53 AM.png)](https://codeprojects.org/zu24LsgcyFFFLdZo9Q3vpBvDu3RpEDrNHtOLnEKNhZE)
       CSD U2 Sample classes_2022:
+        markdown: |
+          # Ukážkový web
+
+          Otvor si nasledujúci web a skús na ňom nájsť nové spôsoby, ako HTML prvkom nastaviť štýl.
+
+          [![](https://images.code.org/71a3cb8e9708093b17b9c75eb0723d10-image-1588247512749.49.53 AM.png)](https://codeprojects.org/zu24LsgcyFFFLdZo9Q3vpBvDu3RpEDrNHtOLnEKNhZE)
+      CSD U2 Sample classes_2023:
         markdown: |
           # Ukážkový web
 
@@ -1703,12 +1978,27 @@ sk-SK:
           [<img src="https://images.code.org/37b9660399cb69d5c0bbc2603e2c43da-image-1566240321606.png" style="float: left; margin: 10px">](https://codeprojects.org/kMDTPWRtSww05TgT-ZnhnNjpStohzsZGRmBxRTtV6cA/)
 
           [<img src="https://images.code.org/7331e5d4b1dda825360217270212ed46-image-1566240324800.png" style="float: left; margin: 10px">](https://codeprojects.org/5FQC3-_R1-LCbwW5oRUVt2h7BKe-N5OBaBr_OfTlxpk/)
+      CSD U2 Top Websites_2018_2019_pilot_2023:
+        markdown: |
+          # Weby na riešenie problémov
+
+          Tieto weby boli vytvorené na vyriešenie nejakého problému. Vyber si z nich dve a vyplň pomocou nich sprievodcu aktivitou.
+
+          [<img src="https://images.code.org/752da9829923228ba71fd32499c2a5bf-image-1566856199999.png" style="float: left; margin: 10px">](https://codeprojects.org/3zq0Xy-f0olOr1uy1wzTzdFqvq4bGQx0zi_PrWM5p8Y)
+
+          [<img src="https://images.code.org/3dbd54718965bf83f0695422d5600b0c-image-1566240318585.png" style="float: left; margin: 10px">](https://codeprojects.org/0YXSEeSdj7HHu8NqZndJKlRz7dO1Vxj8o70HhBSfTHU/)
+
+          [<img src="https://images.code.org/37b9660399cb69d5c0bbc2603e2c43da-image-1566240321606.png" style="float: left; margin: 10px">](https://codeprojects.org/kMDTPWRtSww05TgT-ZnhnNjpStohzsZGRmBxRTtV6cA/)
+
+          [<img src="https://images.code.org/7331e5d4b1dda825360217270212ed46-image-1566240324800.png" style="float: left; margin: 10px">](https://codeprojects.org/5FQC3-_R1-LCbwW5oRUVt2h7BKe-N5OBaBr_OfTlxpk/)
       CSD U2 expand project:
         content1: Sem pridať popis
       CSD U2 expand project_2018:
         content1: Sem pridať popis
       CSD U2 expand project_2018_2019:
         content1: Sem pridať popis
+      CSD U2 hyperlinks practice_2023:
+        description: Tu si môžeš precvičiť svoje nové zručnosti.
       CSD U2 image debug match:
         answers:
         - text: https://images.code.org/6015fb13fa76d32072de2762d7d363ba-image-1553717013288.02.34
@@ -1733,6 +2023,23 @@ sk-SK:
           na najbežnejšie typy chýb, s ktorými sa môžu stretnúť pri pridávaní obrázkov
           na webové stránky.
       CSD U2 image debug match_2022:
+        answers:
+        - {}
+        - {}
+        - {}
+        - {}
+        - {}
+        questions:
+        - text: Atribút `src` je napísaný nesprávne.
+        - text: Atribúty `src` a `alt` sú vymenené.
+        - text: V adrese obrázka chýba prípona súboru (.jpg).
+        - {}
+        - text: V názve súboru je medzera.
+        teacher_markdown: Aj keď túto úroveň možno použiť na vyhodnotenie porozumenia
+          študentov syntaxu `<img>` tagu, jej hlavným účelom je upozorniť študentov
+          na najbežnejšie typy chýb, s ktorými sa môžu stretnúť pri pridávaní obrázkov
+          na webové stránky.
+      CSD U2 image debug match_2023:
         answers:
         - {}
         - {}
@@ -1777,16 +2084,25 @@ sk-SK:
       CSD U2 layout style challenge_pilot_2022:
         description: Vyskúšaj si úlohy navyše alebo sa nauč používať nový kód.
         display_name: Štýlovanie prvkov
+      CSD U2 layout style challenge_pilot_2023:
+        description: Vyskúšaj si úlohy navyše alebo sa nauč používať nový kód.
+        display_name: Štýlovanie prvkov
       CSD U2 layout style practice_pilot_2021:
         description: Tu si môžeš precvičiť svoje nové zručnosti.
         display_name: Štýlovanie prvkov
       CSD U2 layout style practice_pilot_2022:
         description: Tu si môžeš precvičiť svoje nové zručnosti.
         display_name: Štýlovanie prvkov
+      CSD U2 layout style practice_pilot_2023:
+        description: Tu si môžeš precvičiť svoje nové zručnosti.
+        display_name: Štýlovanie prvkov
       CSD U2 links challenge_2021:
         description: Vyskúšaj si úlohy navyše alebo sa nauč používať nový kód.
         display_name: Vytváranie odkazov
       CSD U2 links challenge_2022:
+        description: Vyskúšaj si úlohy navyše alebo sa nauč používať nový kód.
+        display_name: Vytváranie odkazov
+      CSD U2 links challenge_2023:
         description: Vyskúšaj si úlohy navyše alebo sa nauč používať nový kód.
         display_name: Vytváranie odkazov
       CSD U2 lists match:
@@ -1948,6 +2264,46 @@ sk-SK:
           # Kontrolný bod pri plánovaní:
 
           Skontrolujte žiacke plány a až potom im povoľte pokračovať v zvyšných úrovniach.
+      CSD U2 project guide_2018_2019_pilot_2023:
+        content1: Sem pridať popis
+        markdown: |
+          # Tvoja osobná webová stránka
+
+          V niekoľkých nasledujúcich úrovniach si vytvoríš a zverejníš vlastnú webovú stránku. Máš teda príležitosť podeliť sa o svoje myšlienky so zvyškom sveta a ukázať, čo všetko už vďaka tomuto kurzu vieš.
+
+          Budeš potrebovať…
+
+          * Vyplneného sprievodcu projektom
+          * Stiahnuté obrázky
+          * Hodnotiacu tabuľku k projektu
+
+          A tu je zoznam vecí, ktoré sme sa učili…
+
+          * Ako pomocou HTML dodať obsahu stránky štruktúru
+          * Ako pomocou CSS nastaviť štýl textu, farby a rozvrhnutie stránky
+          * Ako formátovať kód tak, aby sa ľahšie čítal
+          * Ako ladiť HTML a CSS kód
+          * Ako používať obrázky zodpovedne
+          * Ako na internete ochraňovať svoje osobné údaje
+
+          ## Príklady
+
+          <div style="float: left; text-align:center;"><strong>Najmilší pes</strong><br /><a href="https://codeprojects.org/vfqqBSl9WL5EmWlRTaCuyGL523thd_RLmA6fZjoahHo/" target="_new"><img style="border-radius:10px; margin: 10px;" src="https://images.code.org/be0c20dba6319b34dc07a9f87ae615fa-image-1565304900473.png" alt="Dog Sample Page"></a></div>
+          <div style="float: left; text-align:center;"><strong>Môj výlet</strong><br /><a href="https://codeprojects.org/HxtpYQ-r79cNzFpnSfGyhHHDE0tb28ed-9-scxvFYE0" target="_new"><img style="border-radius:10px; margin: 10px;" src="https://images.code.org/51b787b6a25663e092b3f55e051e9a94-image-1565630570417.png" alt="Trip Sample Page"></a></div>
+          <div style="float: left; text-align:center;"><strong>Hudobné nástroje</strong><br /><a href="https://codeprojects.org/HxtpYQ-r79cNzFpnSfGyhMuNKEOTdyH5PPeUpDimEeY" target="_new"><img style="border-radius:10px; margin: 10px;" src="https://images.code.org/82323a78b17b69101dd6e98a6a21c55c-image-1565630573896.png" alt="Instrument Sample Page"></a></div>
+          <div style="float: left; text-align:center;"><strong>Recyklačný krúžok</strong><br /><a href="https://codeprojects.org/HxtpYQ-r79cNzFpnSfGyhBiffg8HpOk2lRx1kd5sgaw" target="_new"><img style="border-radius:10px; margin: 10px;" src="https://images.code.org/5b0044bfd92d44c97cd74d82f1933daa-image-1565630578147.png" alt="Recycling Sample Page"></a></div>
+          <div style="float: left; text-align:center;"><strong>Básne haiku</strong><br /><a href="https://codeprojects.org/HxtpYQ-r79cNzFpnSfGyhLgd_3k2ffeKaGZZO7Ebvgs" target="_new"><img style="border-radius:10px; margin: 10px;" src="https://images.code.org/40892c338c78da445310ddfb7cf63127-image-1565630595445.png" alt="Haiku Sample Page"></a></div>
+        teacher_markdown: |-
+          # Kontrolný bod pri plánovaní:
+
+          Skontrolujte žiacke plány a až potom im povoľte pokračovať v zvyšných úrovniach.
+      CSD U2L2 - Chal_2023:
+        description: Precvič si, čo si sa práve naučil(a) na jednej alebo viacerých
+          z nasledujúcich aktivít.
+        display_name: Úrovne výzvy
+      CSD U2L2 - Prac_2023:
+        description: Precvič si, čo si sa práve naučil(a) na jednej alebo viacerých
+          z nasledujúcich aktivít.
       CSD U3 - conditionals - Matching:
         answers:
         - text: dog.rotation &lt; cat.rotation
@@ -2023,6 +2379,21 @@ sk-SK:
         - text: Je x „sprite“ objektu „pes“ väčšie ako x „mačky“?
         - text: Je x „sprite“ objektu „pes“ rovné x „mačky“?
         title: 'Spájanie: porovnávacie znamienka'
+      CSD U3 - conditionals - Matching_2018_2019_pilot_2023:
+        answers:
+        - text: dog.rotation &lt; cat.rotation
+        - text: dog.x &lt; cat.x
+        - text: dog.scale &gt; cat.scale
+        - text: dog.x &gt; cat.x
+        - text: dog.x == cat.x
+        content1: Spoj logický výraz s jeho popisom.
+        questions:
+        - text: Je rotácia objektu „pes“ menšia ako rotácia „mačky“?
+        - text: Je x „sprite“ objektu „pes“ menšie ako x „mačky“?
+        - text: Je veľkosť „sprite“ objektu „pes“ väčšia ako veľkosť „mačky“?
+        - text: Je x „sprite“ objektu „pes“ väčšie ako x „mačky“?
+        - text: Je x „sprite“ objektu „pes“ rovné x „mačky“?
+        title: 'Spájanie: porovnávacie znamienka'
       CSD U3 AnimationsMulti STOP project guide:
         markdown: |
           # Zastav sa
@@ -2048,6 +2419,15 @@ sk-SK:
           * Používa na ukladanie informácií rovnaké premenné?
           * Opisuje tie isté funkcie ako ty?
       CSD U3 AnimationsMulti STOP project guide_2018_2019_pilot_2022:
+        markdown: |
+          # Naplánuj si svoj projekt
+
+          Pozri si sprievodcu projektom, ktorý už bol pre teba vyplnený.
+
+          * Opisuje sprievodca projektom tie isté sprajty, ktoré máš vymyslené?
+          * Používa na ukladanie informácií rovnaké premenné?
+          * Opisuje tie isté funkcie ako ty?
+      CSD U3 AnimationsMulti STOP project guide_2018_2019_pilot_2023:
         markdown: |
           # Naplánuj si svoj projekt
 
@@ -2129,6 +2509,24 @@ sk-SK:
         - text: Ktorý výsledok bude zobrazený v konzole týmto programom?
         title: nadpis
       CSD U3 Boolean MC_2018_2019_pilot_2022:
+        answers:
+        - correct: true
+          text: "true  \nfalse  \ntrue"
+        - {}
+        - text: "true  \nerror  \ntrue"
+        - text: "false  \ntrue  \nfalse"
+        markdown: |
+          # Logické výrazy
+
+          **Logický výraz** – výraz, ktorý sa môže vyhodnotiť len ako „TRUE“ alebo „FALSE“
+
+          # Predpovedaj
+
+          Prečítaj si nasledujúci kód. Je v ňom niekoľko nových symbolov, s ktorými sme sa ešte nestretli. Skús uhádnuť, čo znamenajú, a pokús sa odpovedať na nasledujúcu otázku
+        questions:
+        - text: Ktorý výsledok bude zobrazený v konzole týmto programom?
+        title: nadpis
+      CSD U3 Boolean MC_2018_2019_pilot_2023:
         answers:
         - correct: true
           text: "true  \nfalse  \ntrue"
@@ -2299,6 +2697,24 @@ sk-SK:
 
           Všimni si, že červený štvorec je nakreslený **predtým**, ako je vytvorená jeho funkcia, zatiaľ čo zelený štvorec je nakreslený až **po** vytvorení jeho funkcie. Ktorý z nasledovných variantov je podľa teba správny?
       CSD U3 Functions Prediction define first_2018_2019_pilot_2022:
+        answers:
+        - text: 'Červený štvorec bude nakreslený, no zelený nebude. Nemôžeš zavolať
+            funkcie po tom, čo sú vytvorené.
+
+            '
+        - text: Zelený štvorec bude nakreslený, no červený nebude. Nemôžeš zavolať
+            funkcie predtým, než sú vytvorené
+        - correct: true
+          text: Obidva štvorce budú nakreslené. Funkcie môžeš vytvoriť v ktorejkoľvek
+            časti kódu.
+        - text: Ani jeden zo štvorcov sa nenakreslí. Toto je chyba v kóde.
+        markdown: |-
+          #Záleží na tom, kde sa funkcie vytvoria?
+
+          Doteraz boli všetky funkcie vytvorené na konci kódu. Čo myslíš, že sa stane, keď zavoláš funkciu predtým, ako je definovaná?
+
+          Všimni si, že červený štvorec je nakreslený **predtým**, ako je vytvorená jeho funkcia, zatiaľ čo zelený štvorec je nakreslený až **po** vytvorení jeho funkcie. Ktorý z nasledovných variantov je podľa teba správny?
+      CSD U3 Functions Prediction define first_2018_2019_pilot_2023:
         answers:
         - text: 'Červený štvorec bude nakreslený, no zelený nebude. Nemôžeš zavolať
             funkcie po tom, čo sú vytvorené.
@@ -2535,6 +2951,139 @@ sk-SK:
           * [World.frameRate](//studio.code.org/docs/gamelab/World.frameRate/)
           * [function draw() {}](//studio.code.org/docs/gamelab/draw/)
 
+      CSD U3 MC Q10_2023:
+        answers:
+        - correct: true
+        - correct: true
+        - {}
+        - {}
+        questions:
+        - {}
+      CSD U3 MC Q11_2023:
+        answers:
+        - {}
+        - correct: true
+        - {}
+        - {}
+        questions:
+        - {}
+      CSD U3 MC Q12_2023:
+        answers:
+        - {}
+        - {}
+        - correct: true
+        - {}
+        - {}
+        questions:
+        - {}
+      CSD U3 MC Q13_2023:
+        answers:
+        - {}
+        - {}
+        - {}
+        - correct: true
+        - {}
+        questions:
+        - {}
+      CSD U3 MC Q14_2023:
+        answers:
+        - text: '0'
+        - text: '1'
+        - text: '5'
+        - correct: true
+          text: '6'
+        - {}
+        questions:
+        - {}
+      CSD U3 MC Q1_2023:
+        answers:
+        - {}
+        - correct: true
+        - {}
+        - {}
+        - {}
+        questions:
+        - {}
+      CSD U3 MC Q2_2023:
+        answers:
+        - {}
+        - correct: true
+        - {}
+        - {}
+        - {}
+        questions:
+        - {}
+      CSD U3 MC Q4_2023:
+        answers:
+        - {}
+        - {}
+        - {}
+        - correct: true
+        - {}
+        questions:
+        - {}
+        title: Otázka č. 1
+      CSD U3 MC Q5_2023:
+        answers:
+        - {}
+        - {}
+        - correct: true
+        - {}
+        - {}
+        questions:
+        - {}
+      CSD U3 MC Q6_2023:
+        answers:
+        - {}
+        - {}
+        - correct: true
+        - {}
+        questions:
+        - {}
+      CSD U3 MC Q8_2023:
+        answers:
+        - {}
+        - correct: true
+        - {}
+        - {}
+        - {}
+        questions:
+        - {}
+      CSD U3 Match Q1_2023:
+        answers:
+        - {}
+        - {}
+        - {}
+        - {}
+        questions:
+        - {}
+        - {}
+        - {}
+        - {}
+      CSD U3 Match Q2_2023:
+        answers:
+        - text: x
+        - text: y
+        - text: šírka
+        - text: výška
+        questions:
+        - {}
+        - {}
+        - {}
+        - {}
+      CSD U3 Match Q3_2023:
+        answers:
+        - {}
+        - {}
+        - {}
+        - {}
+        - {}
+        questions:
+        - {}
+        - {}
+        - {}
+        - {}
+        - {}
       CSD U3 Project Build a Game SFLP:
         markdown: "# Prehľad\n\nV tejto lekcii si pomocou Sprievodcu projektom a postupu
           z predchádzajúcich 2 lekcií naplánujeme a vytvoríme vlastnú hru. Následne,
@@ -2586,6 +3135,14 @@ sk-SK:
         questions:
         - {}
       CSD U3 Sprite Movement Predict Multi_2018_2019_pilot_2022:
+        answers:
+        - {}
+        - {}
+        - correct: true
+        - {}
+        questions:
+        - {}
+      CSD U3 Sprite Movement Predict Multi_2018_2019_pilot_2023:
         answers:
         - {}
         - {}
@@ -2878,16 +3435,34 @@ sk-SK:
         - {}
         - {}
         title: drawSprites
+      CSD U3 drawSprites placement match_2023:
+        answers:
+        - {}
+        - {}
+        - {}
+        - {}
+        questions:
+        - {}
+        - {}
+        - {}
+        - {}
+        title: drawSprites
       CSD U3 drawing challenges_2021:
         description: Vyskúšaj si niektoré úlohy!
         display_name: Úlohy na kreslenie
       CSD U3 drawing challenges_2022:
         description: Vyskúšaj si niektoré úlohy!
         display_name: Úlohy na kreslenie
+      CSD U3 drawing challenges_2023:
+        description: Vyskúšaj si niektoré úlohy!
+        display_name: Úlohy na kreslenie
       CSD U3 drawing practice choice_2021:
         description: Veľa precvičuj!
         display_name: Cvičenie
       CSD U3 drawing practice choice_2022:
+        description: Veľa precvičuj!
+        display_name: Cvičenie
+      CSD U3 drawing practice choice_2023:
         description: Veľa precvičuj!
         display_name: Cvičenie
       CSD U3 game intro:
@@ -3004,6 +3579,88 @@ sk-SK:
           ## Zamyslenie
 
           Po dokončení projektu sa zamysli nad tým, či tvoja hra dopadla podľa tvojho plánu, a nad spôsobmi, ako by sa dal tvoj postup nabudúce vylepšiť.
+      CSD U3 platform intro_2018_2019_pilot_2023:
+        content1: Sem pridať popis
+        markdown: |
+          # Vytvorenie skákacej plošinovky
+
+          Pri vytváraní skákacej plošinovky budeš používať proces riešenia problémov.
+
+          ## Definovanie
+
+          Problém je pre túto hru jasne definovaný, pretože už poznáš ukážkovú verziu.  Možno však budeš chcieť urobiť nejaké zmeny. Uisti sa, že všetky nové prvky pre tvoju hru sú jasne definované.
+
+          ## Príprava
+
+          Skôr ako začneš programovať, treba vyplniť sprievodcu projektom. Pripraví ťa na projekt a výrazne ti uľahčí programovanie.
+
+          ## Skúšanie
+
+          Keď začneš kódovať, vyskúšaš si svoj plán. Pri programovaní nezabudni používať všetky zdroje, ktoré máš k dispozícii, ako sú dokumentácia a karta Pomoc a tipy.
+
+          ## Zamyslenie
+
+          Po dokončení projektu sa zamysli nad tým, či tvoja hra dopadla podľa tvojho plánu, a nad spôsobmi, ako by sa dal tvoj postup nabudúce vylepšiť.
+      CSD U4 MC Q1_2023:
+        answers:
+        - {}
+        - correct: true
+        - {}
+        - correct: true
+        questions:
+        - {}
+      CSD U4 MC Q2_2023:
+        answers:
+        - {}
+        - correct: true
+        - {}
+        - correct: true
+        questions:
+        - {}
+      CSD U4 MC Q3_2023:
+        answers:
+        - {}
+        - {}
+        - {}
+        - correct: true
+        questions:
+        - {}
+      CSD U4 MC Q4_2023:
+        answers:
+        - {}
+        - correct: true
+        - {}
+        - {}
+        - {}
+        questions:
+        - {}
+      CSD U4 MC Q5_2023:
+        answers:
+        - {}
+        - correct: true
+        - {}
+        - correct: true
+        - {}
+        questions:
+        - {}
+        title: Otázka č. 1
+      CSD U4 MC Q8_2023:
+        answers:
+        - {}
+        - correct: true
+        - {}
+        - correct: true
+        questions:
+        - {}
+      CSD U4 MC Q9_2023:
+        answers:
+        - correct: true
+        - {}
+        - {}
+        - correct: true
+        - text: Poskytnúť spätnú väzbu
+        questions:
+        - {}
       CSD U4 test feature match:
         answers:
         - {}
@@ -3165,6 +3822,84 @@ sk-SK:
         content1: Sem pridať popis
       CSD U5 L13 SFLP Interpreting Data:
         content1: Sem pridať popis
+      CSD U5 MC Q1_2023:
+        answers:
+        - {}
+        - {}
+        - {}
+        - correct: true
+        - {}
+        questions:
+        - {}
+      CSD U5 MC Q2_2023:
+        answers:
+        - {}
+        - correct: true
+        - correct: true
+        - {}
+        - {}
+        questions:
+        - {}
+      CSD U5 MC Q3_2023:
+        answers:
+        - {}
+        - correct: true
+        questions:
+        - {}
+      CSD U5 MC Q4_2023:
+        answers:
+        - {}
+        - {}
+        - correct: true
+        - {}
+        - {}
+        questions:
+        - {}
+      CSD U5 MC Q5_2023:
+        answers:
+        - {}
+        - {}
+        - {}
+        - correct: true
+        - {}
+        questions:
+        - {}
+      CSD U5 MC Q6_2023:
+        answers:
+        - {}
+        - correct: true
+        - {}
+        - {}
+        - {}
+        questions:
+        - {}
+      CSD U5 MC Q7_2023:
+        answers:
+        - {}
+        - correct: true
+        - {}
+        - {}
+        - {}
+        questions:
+        - {}
+      CSD U5 MC Q8_2023:
+        answers:
+        - {}
+        - correct: true
+        - {}
+        - {}
+        - {}
+        questions:
+        - {}
+      CSD U5 MC Q9_2023:
+        answers:
+        - {}
+        - {}
+        - {}
+        - {}
+        - correct: true
+        questions:
+        - {}
       CSD U5 crosstab warmup:
         content1: Sem pridať popis
       CSD U5 crosstab warmup_2018:
@@ -3332,29 +4067,75 @@ sk-SK:
         title: 'Záverečný test: Údaje a spoločnosť'
       CSD U5 test_2022:
         title: 'Záverečný test: Údaje a spoločnosť'
+      CSD U5 test_2023:
+        title: 'Záverečný test: Údaje a spoločnosť'
+      CSD U6 - Accelerometer - Chal_2023a_2023:
+        display_name: Úrovne výzvy
       CSD U6 - Accelerometer - Chal_2222:
+        display_name: Úrovne výzvy
+      CSD U6 - Accelerometer - Chal_mb2022:
+        display_name: Úrovne výzvy
+      CSD U6 - Board Inputs - Chal_2023:
         display_name: Úrovne výzvy
       CSD U6 - Board Inputs - Chal_2222:
         display_name: Úrovne výzvy
+      CSD U6 - Board Inputs - Chal_mb2022:
+        display_name: Úrovne výzvy
+      CSD U6 - Board Outputs - Chal_2023:
+        display_name: Úrovne výzvy
       CSD U6 - Board Outputs - Chal_2222:
+        display_name: Úrovne výzvy
+      CSD U6 - Board Outputs - Chal_mb2022:
+        display_name: Úrovne výzvy
+      CSD U6 - Color LEDs - Chal_2023a_2023:
         display_name: Úrovne výzvy
       CSD U6 - Color LEDs - Chal_2222:
         display_name: Úrovne výzvy
+      CSD U6 - Combine Inputs - Chal_2023a_2023:
+        display_name: Úrovne výzvy
       CSD U6 - Combine Inputs - Chal_2222:
+        display_name: Úrovne výzvy
+      CSD U6 - Combine Inputs - Chal_mb2022:
+        display_name: Úrovne výzvy
+      CSD U6 - If Variables - Chal_2023:
         display_name: Úrovne výzvy
       CSD U6 - If Variables - Chal_2222:
         display_name: Úrovne výzvy
+      CSD U6 - If Variables - Chal_mb2022:
+        display_name: Úrovne výzvy
+      CSD U6 - Music - Chal_2023:
+        display_name: Úrovne výzvy
       CSD U6 - Music - Chal_2222:
+        display_name: Úrovne výzvy
+      CSD U6 - Physical Input - Chal_2023:
         display_name: Úrovne výzvy
       CSD U6 - Physical Input - Chal_2222:
         display_name: Úrovne výzvy
+      CSD U6 - Physical Input - Chal_mb2022:
+        display_name: Úrovne výzvy
+      CSD U6 - Physical Output - Chal_2023:
+        display_name: Úrovne výzvy
       CSD U6 - Physical Output - Chal_2222:
+        display_name: Úrovne výzvy
+      CSD U6 - Physical Output - Chal_mb2022:
+        display_name: Úrovne výzvy
+      CSD U6 - Screen Inputs - Chal_2023:
         display_name: Úrovne výzvy
       CSD U6 - Screen Inputs - Chal_2222:
         display_name: Úrovne výzvy
+      CSD U6 - Screen Inputs - Chal_mb2022:
+        display_name: Úrovne výzvy
+      CSD U6 - Screen Outputs - Chal_2023:
+        display_name: Úrovne výzvy
       CSD U6 - Screen Outputs - Chal_2222:
         display_name: Úrovne výzvy
+      CSD U6 - Screen Outputs - Chal_mb2022:
+        display_name: Úrovne výzvy
+      CSD U6 - Sensors - Chal_2023a_2023:
+        display_name: Úrovne výzvy
       CSD U6 - Sensors - Chal_2222:
+        display_name: Úrovne výzvy
+      CSD U6 - Sensors - Chal_mb2022:
         display_name: Úrovne výzvy
       CSD U6 LED create intro:
         content1: Sem pridať popis
@@ -3364,6 +4145,130 @@ sk-SK:
         content1: Sem pridať popis
       CSD U6 LED create intro_2021:
         content1: Sem pridať popis
+      CSD U6 MC Q1_2023:
+        answers:
+        - {}
+        - correct: true
+        - {}
+        - correct: true
+        - {}
+        questions:
+        - {}
+      CSD U6 MC Q1_6b2023:
+        answers:
+        - correct: true
+        - {}
+        - correct: true
+        - {}
+        - {}
+        questions:
+        - {}
+      CSD U6 MC Q2_2023:
+        answers:
+        - {}
+        - {}
+        - {}
+        - correct: true
+        - {}
+        questions:
+        - {}
+      CSD U6 MC Q2_6b2023:
+        answers:
+        - {}
+        - {}
+        - {}
+        - correct: true
+        - text: Svetlý
+        questions:
+        - {}
+      CSD U6 MC Q3_2023:
+        answers:
+        - {}
+        - {}
+        - {}
+        - correct: true
+        questions:
+        - {}
+      CSD U6 MC Q3_6b2023:
+        answers:
+        - {}
+        - {}
+        - {}
+        - correct: true
+        questions:
+        - {}
+      CSD U6 MC Q4_2023:
+        answers:
+        - {}
+        - {}
+        - correct: true
+        - {}
+        - {}
+        questions:
+        - {}
+      CSD U6 MC Q4_6b2023:
+        answers:
+        - {}
+        - {}
+        - correct: true
+        - {}
+        - {}
+        questions:
+        - {}
+      CSD U6 MC Q5_2023:
+        answers:
+        - {}
+        - {}
+        - correct: true
+        - {}
+        - {}
+        questions:
+        - {}
+      CSD U6 MC Q5_6b2023:
+        answers:
+        - {}
+        - {}
+        - correct: true
+        - {}
+        - {}
+        questions:
+        - {}
+      CSD U6 MC Q6_2023:
+        answers:
+        - {}
+        - correct: true
+        - {}
+        - correct: true
+        - {}
+        questions:
+        - {}
+      CSD U6 MC Q6_6b2023:
+        answers:
+        - {}
+        - correct: true
+        - {}
+        - correct: true
+        - {}
+        questions:
+        - {}
+      CSD U6 MC Q7_2023:
+        answers:
+        - {}
+        - {}
+        - {}
+        - correct: true
+        - {}
+        questions:
+        - {}
+      CSD U6 MC Q7_6b2023:
+        answers:
+        - {}
+        - {}
+        - {}
+        - correct: true
+        - {}
+        questions:
+        - {}
       CSD U6 array multi:
         answers:
         - {}
@@ -3460,7 +4365,25 @@ sk-SK:
         questions:
         - {}
         title: Odhadni výsledok
+      CSD U6 setProperty predict multi_2023:
+        answers:
+        - {}
+        - {}
+        - {}
+        - correct: true
+        questions:
+        - {}
+        title: Odhadni výsledok
       CSD U6 setProperty predict multi_2222:
+        answers:
+        - {}
+        - {}
+        - {}
+        - correct: true
+        questions:
+        - {}
+        title: Odhadni výsledok
+      CSD U6 setProperty predict multi_mb2022:
         answers:
         - {}
         - {}
@@ -3621,11 +4544,15 @@ sk-SK:
         title: 'Záverečný test: Dizajn zameraný na používateľa'
       CSD User Centered Design Post-Project Test_2022:
         title: 'Záverečný test: Dizajn zameraný na používateľa'
+      CSD User Centered Design Post-Project Test_2023:
+        title: 'Záverečný test: Dizajn zameraný na používateľa'
       CSD Web Development Post-Project Test:
         title: 'Vývoj webových stránok: záverečný test'
       CSD Web Development Post-Project Test_pilot_2021:
         title: 'Vývoj webových stránok: záverečný test'
       CSD Web Development Post-Project Test_pilot_2022:
+        title: 'Vývoj webových stránok: záverečný test'
+      CSD Web Development Post-Project Test_pilot_2023:
         title: 'Vývoj webových stránok: záverečný test'
       CSD Web Headings challenge_2021:
         description: Tu máš ďalší HTML kód na vyskúšanie a voľnú úroveň, kde ho môžeš
@@ -3635,11 +4562,19 @@ sk-SK:
         description: Tu máš ďalší HTML kód na vyskúšanie a voľnú úroveň, kde ho môžeš
           použiť
         display_name: Nadpisy v jazyku HTML
+      CSD Web Headings challenge_2023:
+        description: Tu máš ďalší HTML kód na vyskúšanie a voľnú úroveň, kde ho môžeš
+          použiť
+        display_name: Nadpisy v jazyku HTML
       CSD Web Headings practice_2021:
         description: Precvič si, čo si sa práve naučil(a) na jednej alebo viacerých
           z nasledujúcich aktivít.
         display_name: Nadpisy v jazyku HTML
       CSD Web Headings practice_2022:
+        description: Precvič si, čo si sa práve naučil(a) na jednej alebo viacerých
+          z nasledujúcich aktivít.
+        display_name: Nadpisy v jazyku HTML
+      CSD Web Headings practice_2023:
         description: Precvič si, čo si sa práve naučil(a) na jednej alebo viacerých
           z nasledujúcich aktivít.
         display_name: Nadpisy v jazyku HTML
@@ -3671,6 +4606,9 @@ sk-SK:
 
 
 
+      CSD Web Sample Pages_2023:
+        content1: Prehliadni si tieto ukážkové webové stránky a rozhodni sa, aký účel
+          spĺňajú pre ich autorov a návštevníkov.
       CSD games cake challenge choice_2021:
         description: |2-
 
@@ -3685,10 +4623,20 @@ sk-SK:
 
           Doteraz sme postupovali podľa plánu na vytvorenie hry, ktorý vytvoril niekto iný, takže teraz je čas vytvoriť si vlastný. Aké ďalšie funkcie alebo úlohy chceš vytvoriť?
         display_name: Náročnejšie úlohy
+      CSD games cake challenge choice_2023:
+        description: |2-
+
+          Uprav si ju podľa seba
+
+          Doteraz sme postupovali podľa plánu na vytvorenie hry, ktorý vytvoril niekto iný, takže teraz je čas vytvoriť si vlastný. Aké ďalšie funkcie alebo úlohy chceš vytvoriť?
+        display_name: Náročnejšie úlohy
       CSD games collisions challenge choice_2021:
         description: Vyskúšaj si tieto nové bloky a úlohy týkajúce sa kolízií.
         display_name: Kolízie – úlohy
       CSD games collisions challenge choice_2022:
+        description: Vyskúšaj si tieto nové bloky a úlohy týkajúce sa kolízií.
+        display_name: Kolízie – úlohy
+      CSD games collisions challenge choice_2023:
         description: Vyskúšaj si tieto nové bloky a úlohy týkajúce sa kolízií.
         display_name: Kolízie – úlohy
       CSD games collisions practice choice_2021:
@@ -3697,10 +4645,16 @@ sk-SK:
       CSD games collisions practice choice_2022:
         description: Precvič si používanie nových blokov kolízie sprajtov.
         display_name: Kolízie – cvičenia
+      CSD games collisions practice choice_2023:
+        description: Precvič si používanie nových blokov kolízie sprajtov.
+        display_name: Kolízie – cvičenia
       CSD games functions challenge choice_2021:
         description: Vylepši svoju hru a vyskúšaj si tieto úlohy s funkciami.
         display_name: Funkcie – úlohy
       CSD games functions challenge choice_2022:
+        description: Vylepši svoju hru a vyskúšaj si tieto úlohy s funkciami.
+        display_name: Funkcie – úlohy
+      CSD games functions challenge choice_2023:
         description: Vylepši svoju hru a vyskúšaj si tieto úlohy s funkciami.
         display_name: Funkcie – úlohy
       CSD games functions practice choice_2021:
@@ -3711,10 +4665,17 @@ sk-SK:
         description: Precvič si používanie funkcií a zisti viac o tom, prečo sú také
           užitočné.
         display_name: Funkcie – cvičenia
+      CSD games functions practice choice_2023:
+        description: Precvič si používanie funkcií a zisti viac o tom, prečo sú také
+          užitočné.
+        display_name: Funkcie – cvičenia
       CSD games istouching challenge choice_2021:
         description: Vyskúšaj si tieto nové bloky a úlohy týkajúce sa kolízií.
         display_name: Kolízie – úlohy
       CSD games istouching challenge choice_2022:
+        description: Vyskúšaj si tieto nové bloky a úlohy týkajúce sa kolízií.
+        display_name: Kolízie – úlohy
+      CSD games istouching challenge choice_2023:
         description: Vyskúšaj si tieto nové bloky a úlohy týkajúce sa kolízií.
         display_name: Kolízie – úlohy
       CSD games istouching practice choice_2021:
@@ -3723,10 +4684,16 @@ sk-SK:
       CSD games istouching practice choice_2022:
         description: V týchto aktivitách si precvičíš používanie detekcie kolízií.
         display_name: Kolízie – cvičenia
+      CSD games istouching practice choice_2023:
+        description: V týchto aktivitách si precvičíš používanie detekcie kolízií.
+        display_name: Kolízie – cvičenia
       CSD games movement2 challenge choice_2021:
         description: Vyskúšaj tieto nové bloky a úlohy s rýchlosťou a počítadlom.
         display_name: Zložité pohyby sprajtu – úlohy
       CSD games movement2 challenge choice_2022:
+        description: Vyskúšaj tieto nové bloky a úlohy s rýchlosťou a počítadlom.
+        display_name: Zložité pohyby sprajtu – úlohy
+      CSD games movement2 challenge choice_2023:
         description: Vyskúšaj tieto nové bloky a úlohy s rýchlosťou a počítadlom.
         display_name: Zložité pohyby sprajtu – úlohy
       CSD games movement2 practice choice_2021:
@@ -3735,10 +4702,16 @@ sk-SK:
       CSD games movement2 practice choice_2022:
         description: Precvič si používanie nových spôsobov pohybu sprajtov.
         display_name: Pohyb sprajtov – cvičenia
+      CSD games movement2 practice choice_2023:
+        description: Precvič si používanie nových spôsobov pohybu sprajtov.
+        display_name: Pohyb sprajtov – cvičenia
       CSD games platform challenge choice_2021:
         description: Vylepši si hru pomocou týchto úloh!
         display_name: Náročnejšie úlohy
       CSD games platform challenge choice_2022:
+        description: Vylepši si hru pomocou týchto úloh!
+        display_name: Náročnejšie úlohy
+      CSD games platform challenge choice_2023:
         description: Vylepši si hru pomocou týchto úloh!
         display_name: Náročnejšie úlohy
       CSD games random challenge_2021:
@@ -3747,10 +4720,16 @@ sk-SK:
       CSD games random challenge_2022:
         description: Vyskúšaj si tieto ďalšie úlohy s náhodnými číslami.
         display_name: 'Úlohy: Náhodné čísla'
+      CSD games random challenge_2023:
+        description: Vyskúšaj si tieto ďalšie úlohy s náhodnými číslami.
+        display_name: 'Úlohy: Náhodné čísla'
       CSD games random practice_2021:
         description: Vyskúšaj si svoje nové zručnosti na týchto úrovniach.
         display_name: Precvičovanie náhodných čísel
       CSD games random practice_2022:
+        description: Vyskúšaj si svoje nové zručnosti na týchto úrovniach.
+        display_name: Precvičovanie náhodných čísel
+      CSD games random practice_2023:
         description: Vyskúšaj si svoje nové zručnosti na týchto úrovniach.
         display_name: Precvičovanie náhodných čísel
       CSD games velocity challenge choice_2021:
@@ -3759,10 +4738,16 @@ sk-SK:
       CSD games velocity challenge choice_2022:
         description: Vyskúšaj tieto nové bloky a úlohy týkajúce sa rýchlosti.
         display_name: Rýchlosť – úlohy
+      CSD games velocity challenge choice_2023:
+        description: Vyskúšaj tieto nové bloky a úlohy týkajúce sa rýchlosti.
+        display_name: Rýchlosť – úlohy
       CSD games velocity practice choice_2021:
         description: V týchto aktivitách si precvičíš používanie blokov rýchlosti.
         display_name: Rýchlosť – cvičenia
       CSD games velocity practice choice_2022:
+        description: V týchto aktivitách si precvičíš používanie blokov rýchlosti.
+        display_name: Rýchlosť – cvičenia
+      CSD games velocity practice choice_2023:
         description: V týchto aktivitách si precvičíš používanie blokov rýchlosti.
         display_name: Rýchlosť – cvičenia
       CSD web classes challenge_2021:
@@ -3771,16 +4756,25 @@ sk-SK:
       CSD web classes challenge_2022:
         description: Vyskúšaj si úlohy navyše alebo sa nauč používať nový kód.
         display_name: Používanie tried
+      CSD web classes challenge_2023:
+        description: Vyskúšaj si úlohy navyše alebo sa nauč používať nový kód.
+        display_name: Používanie tried
       CSD web classes practice_2021:
         description: Tu si môžeš precvičiť svoje nové zručnosti.
         display_name: Používanie tried
       CSD web classes practice_2022:
         description: Tu si môžeš precvičiť svoje nové zručnosti.
         display_name: Používanie tried
+      CSD web classes practice_2023:
+        description: Tu si môžeš precvičiť svoje nové zručnosti.
+        display_name: Používanie tried
       CSD web conditionals challenge choice_2021:
         description: Vyskúšaj si tieto úlohy s podmienkami.
         display_name: Podmienky – úlohy
       CSD web conditionals challenge choice_2022:
+        description: Vyskúšaj si tieto úlohy s podmienkami.
+        display_name: Podmienky – úlohy
+      CSD web conditionals challenge choice_2023:
         description: Vyskúšaj si tieto úlohy s podmienkami.
         display_name: Podmienky – úlohy
       CSD web conditionals practice choice_2021:
@@ -3791,10 +4785,17 @@ sk-SK:
         description: V týchto aktivitách si precvičíš používanie logických hodnôt
           a podmienených príkazov.
         display_name: Podmienky – cvičenia
+      CSD web conditionals practice choice_2023:
+        description: V týchto aktivitách si precvičíš používanie logických hodnôt
+          a podmienených príkazov.
+        display_name: Podmienky – cvičenia
       CSD web draw loop challenge choice_2021:
         description: Vyskúšaj si tieto úlohy s cyklom kreslenia.
         display_name: Úlohy s cyklom kreslenia
       CSD web draw loop challenge choice_2022:
+        description: Vyskúšaj si tieto úlohy s cyklom kreslenia.
+        display_name: Úlohy s cyklom kreslenia
+      CSD web draw loop challenge choice_2023:
         description: Vyskúšaj si tieto úlohy s cyklom kreslenia.
         display_name: Úlohy s cyklom kreslenia
       CSD web draw loop practice choice_2021:
@@ -3803,10 +4804,16 @@ sk-SK:
       CSD web draw loop practice choice_2022:
         description: Vyskúšaj si používanie cyklu draw pri týchto aktivitách.
         display_name: Cvičenie
+      CSD web draw loop practice choice_2023:
+        description: Vyskúšaj si používanie cyklu draw pri týchto aktivitách.
+        display_name: Cvičenie
       CSD web keyboard challenge choice_2021:
         description: Vyskúšaj si tieto nové bloky a úlohy so vstupom z klávesnice.
         display_name: Vstup z klávesnice – úlohy
       CSD web keyboard challenge choice_2022:
+        description: Vyskúšaj si tieto nové bloky a úlohy so vstupom z klávesnice.
+        display_name: Vstup z klávesnice – úlohy
+      CSD web keyboard challenge choice_2023:
         description: Vyskúšaj si tieto nové bloky a úlohy so vstupom z klávesnice.
         display_name: Vstup z klávesnice – úlohy
       CSD web keyboard practice choice_2021:
@@ -3815,10 +4822,16 @@ sk-SK:
       CSD web keyboard practice choice_2022:
         description: V týchto aktivitách si precvičíš zadávanie vstupov pomocou klávesnice.
         display_name: Vstup z klávesnice – cvičenie
+      CSD web keyboard practice choice_2023:
+        description: V týchto aktivitách si precvičíš zadávanie vstupov pomocou klávesnice.
+        display_name: Vstup z klávesnice – cvičenie
       CSD web mouse challenge choice_2021:
         description: Vyskúšaj si tieto nové bloky a úlohy so vstupom pomocou myši.
         display_name: Myš – úlohy
       CSD web mouse challenge choice_2022:
+        description: Vyskúšaj si tieto nové bloky a úlohy so vstupom pomocou myši.
+        display_name: Myš – úlohy
+      CSD web mouse challenge choice_2023:
         description: Vyskúšaj si tieto nové bloky a úlohy so vstupom pomocou myši.
         display_name: Myš – úlohy
       CSD web mouse practice choice_2021:
@@ -3826,6 +4839,8 @@ sk-SK:
           a používanie bloku if/else.
         display_name: Vstup pomocou myši a „if/else“ – cvičenia
       CSD web mouse practice choice_2022:
+        display_name: Vstup pomocou myši a „if/else“ – cvičenia
+      CSD web mouse practice choice_2023:
         display_name: Vstup pomocou myši a „if/else“ – cvičenia
       CSD web movement challenge choice_2021:
         description: Pridaj do svojej rybej scény ďalšie ryby alebo si vytvor niečo
@@ -3835,10 +4850,17 @@ sk-SK:
         description: Pridaj do svojej rybej scény ďalšie ryby alebo si vytvor niečo
           nové.
         display_name: Pohyb sprajtov – úlohy
+      CSD web movement challenge choice_2023:
+        description: Pridaj do svojej rybej scény ďalšie ryby alebo si vytvor niečo
+          nové.
+        display_name: Pohyb sprajtov – úlohy
       CSD web movement practice choice_2021:
         description: Vyskúšaj si používanie cyklu draw pri týchto aktivitách.
         display_name: Cvičenie
       CSD web movement practice choice_2022:
+        description: Vyskúšaj si používanie cyklu draw pri týchto aktivitách.
+        display_name: Cvičenie
+      CSD web movement practice choice_2023:
         description: Vyskúšaj si používanie cyklu draw pri týchto aktivitách.
         display_name: Cvičenie
       CSD web text challenge choice_2021:
@@ -3847,10 +4869,16 @@ sk-SK:
       CSD web text challenge choice_2022:
         description: Vyskúšaj si tieto nové bloky a úlohy.
         display_name: Text – úlohy
+      CSD web text challenge choice_2023:
+        description: Vyskúšaj si tieto nové bloky a úlohy.
+        display_name: Text – úlohy
       CSD web text practice choice_2021:
         description: Vyskúšaj si svoje zručnosti pri práci s textom pri týchto aktivitách.
         display_name: Cvičenie
       CSD web text practice choice_2022:
+        description: Vyskúšaj si svoje zručnosti pri práci s textom pri týchto aktivitách.
+        display_name: Cvičenie
+      CSD web text practice choice_2023:
         description: Vyskúšaj si svoje zručnosti pri práci s textom pri týchto aktivitách.
         display_name: Cvičenie
       CSP PD Example Question 1:
@@ -5440,7 +6468,196 @@ sk-SK:
         - correct: true
         questions:
         - {}
+      Student End of Unit Survey - Q1_2023:
+        answers:
+        - correct: true
+        - correct: true
+        - correct: true
+        - correct: true
+        - correct: true
+        questions:
+        - {}
+      Student End of Unit Survey - Q1_copy1_2023:
+        answers:
+        - correct: true
+        - correct: true
+        - correct: true
+        - correct: true
+        - correct: true
+        questions:
+        - {}
+      Student End of Unit Survey - Q1_copy2_2023:
+        answers:
+        - correct: true
+        - correct: true
+        - correct: true
+        - correct: true
+        - correct: true
+        questions:
+        - {}
+      Student End of Unit Survey - Q1_copy3_2023:
+        answers:
+        - correct: true
+        - correct: true
+        - correct: true
+        - correct: true
+        - correct: true
+        questions:
+        - {}
+      Student End of Unit Survey - Q1_copy4_2023:
+        answers:
+        - correct: true
+        - correct: true
+        - correct: true
+        - correct: true
+        - correct: true
+        questions:
+        - {}
+      Student End of Unit Survey - Q1_copy5_2023:
+        answers:
+        - correct: true
+        - correct: true
+        - correct: true
+        - correct: true
+        - correct: true
+        questions:
+        - {}
+      Student End of Unit Survey - Q1_copy6_2023:
+        answers:
+        - correct: true
+        - correct: true
+        - correct: true
+        - correct: true
+        - correct: true
+        questions:
+        - {}
       Student End of Unit Survey - Q2_2022:
+        answers:
+        - correct: true
+          text: Úplne súhlasím
+        - correct: true
+          text: Súhlasím
+        - correct: true
+          text: Čiastočne súhlasím
+        - correct: true
+          text: Ani jedna z možností
+        - correct: true
+          text: Čiastočne nesúhlasím
+        - correct: true
+          text: Nesúhlasím
+        - correct: true
+          text: Vôbec nesúhlasím
+        questions:
+        - {}
+      Student End of Unit Survey - Q2_2023:
+        answers:
+        - correct: true
+          text: Úplne súhlasím
+        - correct: true
+          text: Súhlasím
+        - correct: true
+          text: Čiastočne súhlasím
+        - correct: true
+          text: Ani jedna z možností
+        - correct: true
+          text: Čiastočne nesúhlasím
+        - correct: true
+          text: Nesúhlasím
+        - correct: true
+          text: Vôbec nesúhlasím
+        questions:
+        - {}
+      Student End of Unit Survey - Q2_copy1_2023:
+        answers:
+        - correct: true
+          text: Úplne súhlasím
+        - correct: true
+          text: Súhlasím
+        - correct: true
+          text: Čiastočne súhlasím
+        - correct: true
+          text: Ani jedna z možností
+        - correct: true
+          text: Čiastočne nesúhlasím
+        - correct: true
+          text: Nesúhlasím
+        - correct: true
+          text: Vôbec nesúhlasím
+        questions:
+        - {}
+      Student End of Unit Survey - Q2_copy2_2023:
+        answers:
+        - correct: true
+          text: Úplne súhlasím
+        - correct: true
+          text: Súhlasím
+        - correct: true
+          text: Čiastočne súhlasím
+        - correct: true
+          text: Ani jedna z možností
+        - correct: true
+          text: Čiastočne nesúhlasím
+        - correct: true
+          text: Nesúhlasím
+        - correct: true
+          text: Vôbec nesúhlasím
+        questions:
+        - {}
+      Student End of Unit Survey - Q2_copy3_2023:
+        answers:
+        - correct: true
+          text: Úplne súhlasím
+        - correct: true
+          text: Súhlasím
+        - correct: true
+          text: Čiastočne súhlasím
+        - correct: true
+          text: Ani jedna z možností
+        - correct: true
+          text: Čiastočne nesúhlasím
+        - correct: true
+          text: Nesúhlasím
+        - correct: true
+          text: Vôbec nesúhlasím
+        questions:
+        - {}
+      Student End of Unit Survey - Q2_copy4_2023:
+        answers:
+        - correct: true
+          text: Úplne súhlasím
+        - correct: true
+          text: Súhlasím
+        - correct: true
+          text: Čiastočne súhlasím
+        - correct: true
+          text: Ani jedna z možností
+        - correct: true
+          text: Čiastočne nesúhlasím
+        - correct: true
+          text: Nesúhlasím
+        - correct: true
+          text: Vôbec nesúhlasím
+        questions:
+        - {}
+      Student End of Unit Survey - Q2_copy5_2023:
+        answers:
+        - correct: true
+          text: Úplne súhlasím
+        - correct: true
+          text: Súhlasím
+        - correct: true
+          text: Čiastočne súhlasím
+        - correct: true
+          text: Ani jedna z možností
+        - correct: true
+          text: Čiastočne nesúhlasím
+        - correct: true
+          text: Nesúhlasím
+        - correct: true
+          text: Vôbec nesúhlasím
+        questions:
+        - {}
+      Student End of Unit Survey - Q2_copy6_2023:
         answers:
         - correct: true
           text: Úplne súhlasím
@@ -5643,6 +6860,24 @@ sk-SK:
           text: Vôbec nesúhlasím
         questions:
         - {}
+      aiml-ch1-pulse-survey-q1_2023:
+        answers:
+        - correct: true
+          text: Úplne súhlasím
+        - correct: true
+          text: Súhlasím
+        - correct: true
+          text: Čiastočne súhlasím
+        - correct: true
+          text: Ani jedna z možností
+        - correct: true
+          text: Čiastočne nesúhlasím
+        - correct: true
+          text: Nesúhlasím
+        - correct: true
+          text: Vôbec nesúhlasím
+        questions:
+        - {}
       aiml-ch1-pulse-survey-q2_2021:
         answers:
         - correct: true
@@ -5662,6 +6897,24 @@ sk-SK:
         questions:
         - {}
       aiml-ch1-pulse-survey-q2_2022:
+        answers:
+        - correct: true
+          text: Úplne súhlasím
+        - correct: true
+          text: Súhlasím
+        - correct: true
+          text: Čiastočne súhlasím
+        - correct: true
+          text: Ani jedna z možností
+        - correct: true
+          text: Čiastočne nesúhlasím
+        - correct: true
+          text: Nesúhlasím
+        - correct: true
+          text: Vôbec nesúhlasím
+        questions:
+        - {}
+      aiml-ch1-pulse-survey-q2_2023:
         answers:
         - correct: true
           text: Úplne súhlasím
@@ -5715,6 +6968,24 @@ sk-SK:
           text: Vôbec nesúhlasím
         questions:
         - text: Mám rád/rada informatiku.
+      aiml-ch1-pulse-survey-q3_2023:
+        answers:
+        - correct: true
+          text: Úplne súhlasím
+        - correct: true
+          text: Súhlasím
+        - correct: true
+          text: Čiastočne súhlasím
+        - correct: true
+          text: Ani jedna z možností
+        - correct: true
+          text: Čiastočne nesúhlasím
+        - correct: true
+          text: Nesúhlasím
+        - correct: true
+          text: Vôbec nesúhlasím
+        questions:
+        - text: Mám rád/rada informatiku.
       aiml-ch1-pulse-survey-q4_2021:
         answers:
         - correct: true
@@ -5734,6 +7005,24 @@ sk-SK:
         questions:
         - text: Na tomto kurze informatiky sa cítim pohodlne.
       aiml-ch1-pulse-survey-q4_2022:
+        answers:
+        - correct: true
+          text: Úplne súhlasím
+        - correct: true
+          text: Súhlasím
+        - correct: true
+          text: Čiastočne súhlasím
+        - correct: true
+          text: Ani jedna z možností
+        - correct: true
+          text: Čiastočne nesúhlasím
+        - correct: true
+          text: Nesúhlasím
+        - correct: true
+          text: Vôbec nesúhlasím
+        questions:
+        - text: Na tomto kurze informatiky sa cítim pohodlne.
+      aiml-ch1-pulse-survey-q4_2023:
         answers:
         - correct: true
           text: Úplne súhlasím
@@ -5787,9 +7076,29 @@ sk-SK:
           text: Vôbec nesúhlasím
         questions:
         - text: V budúcnosti chcem absolvovať viac kurzov informatiky.
+      aiml-ch1-pulse-survey-q5_2023:
+        answers:
+        - correct: true
+          text: Úplne súhlasím
+        - correct: true
+          text: Súhlasím
+        - correct: true
+          text: Čiastočne súhlasím
+        - correct: true
+          text: Ani jedna z možností
+        - correct: true
+          text: Čiastočne nesúhlasím
+        - correct: true
+          text: Nesúhlasím
+        - correct: true
+          text: Vôbec nesúhlasím
+        questions:
+        - text: V budúcnosti chcem absolvovať viac kurzov informatiky.
       aiml-ch1-pulse-survey_2021:
         title: Umelá inteligencia a strojové učenie – rýchly dotazník
       aiml-ch1-pulse-survey_2022:
+        title: Umelá inteligencia a strojové učenie – rýchly dotazník
+      aiml-ch1-pulse-survey_2023:
         title: Umelá inteligencia a strojové učenie – rýchly dotazník
       aiml-intro-pulse-survey-q1_2021:
         answers:
@@ -5805,6 +7114,13 @@ sk-SK:
         - correct: true
         questions:
         - {}
+      aiml-intro-pulse-survey-q1_2023:
+        answers:
+        - correct: true
+        - correct: true
+        - correct: true
+        questions:
+        - {}
       aiml-intro-pulse-survey-q2_2021:
         answers:
         - correct: true
@@ -5813,6 +7129,13 @@ sk-SK:
         questions:
         - {}
       aiml-intro-pulse-survey-q2_2022:
+        answers:
+        - correct: true
+        - correct: true
+        - correct: true
+        questions:
+        - {}
+      aiml-intro-pulse-survey-q2_2023:
         answers:
         - correct: true
         - correct: true
@@ -5838,6 +7161,24 @@ sk-SK:
         questions:
         - {}
       aiml-intro-pulse-survey-q3_2022:
+        answers:
+        - correct: true
+          text: Úplne súhlasím
+        - correct: true
+          text: Súhlasím
+        - correct: true
+          text: Čiastočne súhlasím
+        - correct: true
+          text: Ani jedna z možností
+        - correct: true
+          text: Čiastočne nesúhlasím
+        - correct: true
+          text: Nesúhlasím
+        - correct: true
+          text: Vôbec nesúhlasím
+        questions:
+        - {}
+      aiml-intro-pulse-survey-q3_2023:
         answers:
         - correct: true
           text: Úplne súhlasím
@@ -5891,6 +7232,24 @@ sk-SK:
           text: Vôbec nesúhlasím
         questions:
         - {}
+      aiml-intro-pulse-survey-q4_2023:
+        answers:
+        - correct: true
+          text: Úplne súhlasím
+        - correct: true
+          text: Súhlasím
+        - correct: true
+          text: Čiastočne súhlasím
+        - correct: true
+          text: Ani jedna z možností
+        - correct: true
+          text: Čiastočne nesúhlasím
+        - correct: true
+          text: Nesúhlasím
+        - correct: true
+          text: Vôbec nesúhlasím
+        questions:
+        - {}
       aiml-intro-pulse-survey-q5_2021:
         answers:
         - correct: true
@@ -5927,9 +7286,29 @@ sk-SK:
           text: Vôbec nesúhlasím
         questions:
         - text: Mám rád/rada informatiku.
+      aiml-intro-pulse-survey-q5_2023:
+        answers:
+        - correct: true
+          text: Úplne súhlasím
+        - correct: true
+          text: Súhlasím
+        - correct: true
+          text: Čiastočne súhlasím
+        - correct: true
+          text: Ani jedna z možností
+        - correct: true
+          text: Čiastočne nesúhlasím
+        - correct: true
+          text: Nesúhlasím
+        - correct: true
+          text: Vôbec nesúhlasím
+        questions:
+        - text: Mám rád/rada informatiku.
       aiml-intro-pulse-survey_2021:
         title: Umelá inteligencia a strojové učenie – rýchly dotazník
       aiml-intro-pulse-survey_2022:
+        title: Umelá inteligencia a strojové učenie – rýchly dotazník
+      aiml-intro-pulse-survey_2023:
         title: Umelá inteligencia a strojové učenie – rýchly dotazník
       aiml-pulse-check-survey-1-levelgroup Ch2_2021:
         title: Rýchly prieskum o informatike!
@@ -6061,6 +7440,24 @@ sk-SK:
           text: Vôbec nesúhlasím
         questions:
         - {}
+      be-myself-in-cs_mb2022:
+        answers:
+        - correct: true
+          text: Úplne súhlasím
+        - correct: true
+          text: Súhlasím
+        - correct: true
+          text: Čiastočne súhlasím
+        - correct: true
+          text: Ani jedna z možností
+        - correct: true
+          text: Čiastočne nesúhlasím
+        - correct: true
+          text: Nesúhlasím
+        - correct: true
+          text: Vôbec nesúhlasím
+        questions:
+        - {}
       behaviors 1 predict:
         answers:
         - feedback: Nesprávne.
@@ -6133,6 +7530,24 @@ sk-SK:
           text: Vôbec nesúhlasím
         questions:
         - {}
+      comfortable-in-cs-class_mb2022:
+        answers:
+        - correct: true
+          text: Úplne súhlasím
+        - correct: true
+          text: Súhlasím
+        - correct: true
+          text: Čiastočne súhlasím
+        - correct: true
+          text: Ani jedna z možností
+        - correct: true
+          text: Čiastočne nesúhlasím
+        - correct: true
+          text: Nesúhlasím
+        - correct: true
+          text: Vôbec nesúhlasím
+        questions:
+        - {}
       confident-ability-to-learn:
         answers:
         - correct: true
@@ -6152,6 +7567,42 @@ sk-SK:
         questions:
         - text: Som presvedčený/-á o tom, že sa dokážem učiť informatiku.
       confident-ability-to-learn_2022:
+        answers:
+        - correct: true
+          text: Úplne súhlasím
+        - correct: true
+          text: Súhlasím
+        - correct: true
+          text: Čiastočne súhlasím
+        - correct: true
+          text: Ani jedna z možností
+        - correct: true
+          text: Čiastočne nesúhlasím
+        - correct: true
+          text: Nesúhlasím
+        - correct: true
+          text: Vôbec nesúhlasím
+        questions:
+        - text: Som presvedčený/-á o tom, že sa dokážem učiť informatiku.
+      confident-ability-to-learn_2023:
+        answers:
+        - correct: true
+          text: Úplne súhlasím
+        - correct: true
+          text: Súhlasím
+        - correct: true
+          text: Čiastočne súhlasím
+        - correct: true
+          text: Ani jedna z možností
+        - correct: true
+          text: Čiastočne nesúhlasím
+        - correct: true
+          text: Nesúhlasím
+        - correct: true
+          text: Vôbec nesúhlasím
+        questions:
+        - text: Som presvedčený/-á o tom, že sa dokážem učiť informatiku.
+      confident-ability-to-learn_mb2022:
         answers:
         - correct: true
           text: Úplne súhlasím
@@ -6205,6 +7656,14 @@ sk-SK:
         questions:
         - text: Motivoval ťa k účasti na tomto kurze výchovný poradca z tvojej školy?
       counselor_encourage_2022:
+        answers:
+        - correct: true
+          text: áno
+        - correct: true
+          text: nie
+        questions:
+        - text: Motivoval ťa k účasti na tomto kurze výchovný poradca z tvojej školy?
+      counselor_encourage_2023:
         answers:
         - correct: true
           text: áno
@@ -10965,6 +12424,42 @@ sk-SK:
           text: Vôbec nesúhlasím
         questions:
         - text: Na tomto kurze informatiky sa cítim pohodlne.
+      csd-post-survey-confidence-cs_mb2022:
+        answers:
+        - correct: true
+          text: Úplne súhlasím
+        - correct: true
+          text: Súhlasím
+        - correct: true
+          text: Čiastočne súhlasím
+        - correct: true
+          text: Ani jedna z možností
+        - correct: true
+          text: Čiastočne nesúhlasím
+        - correct: true
+          text: Nesúhlasím
+        - correct: true
+          text: Vôbec nesúhlasím
+        questions:
+        - {}
+      csd-post-survey-interested-cs_mb2022:
+        answers:
+        - correct: true
+          text: Úplne súhlasím
+        - correct: true
+          text: Súhlasím
+        - correct: true
+          text: Čiastočne súhlasím
+        - correct: true
+          text: Ani jedna z možností
+        - correct: true
+          text: Čiastočne nesúhlasím
+        - correct: true
+          text: Nesúhlasím
+        - correct: true
+          text: Vôbec nesúhlasím
+        questions:
+        - {}
       csd-post-survey-intro-2019:
         markdown: |-
           # Objavujeme informatiku: Záverečný dotazník
@@ -11158,6 +12653,50 @@ sk-SK:
         - correct: true
         questions:
         - {}
+      csd-post-survey-show-friend_mb2022:
+        answers:
+        - correct: true
+          text: Áno
+        - correct: true
+          text: Nie
+        questions:
+        - {}
+      csd-post-survey-solve-real-world_mb2022:
+        answers:
+        - correct: true
+          text: Úplne súhlasím
+        - correct: true
+          text: Súhlasím
+        - correct: true
+          text: Čiastočne súhlasím
+        - correct: true
+          text: Ani jedna z možností
+        - correct: true
+          text: Čiastočne nesúhlasím
+        - correct: true
+          text: Nesúhlasím
+        - correct: true
+          text: Vôbec nesúhlasím
+        questions:
+        - {}
+      csd-post-survey-take-more-classes_mb2022:
+        answers:
+        - correct: true
+          text: Úplne súhlasím
+        - correct: true
+          text: Súhlasím
+        - correct: true
+          text: Čiastočne súhlasím
+        - correct: true
+          text: Ani jedna z možností
+        - correct: true
+          text: Čiastočne nesúhlasím
+        - correct: true
+          text: Nesúhlasím
+        - correct: true
+          text: Vôbec nesúhlasím
+        questions:
+        - {}
       csd-post-survey-unit1-preamble:
         content1: Sem pridať popis
       csd-post-survey-unit2-preamble:
@@ -11198,6 +12737,8 @@ sk-SK:
         title: Objavujeme informatiku – rýchly prieskum
       csd-pulse-check-survey-1-levelgroup U2Ch1_2018_2019_pilot_2022:
         title: Objavujeme informatiku – rýchly prieskum
+      csd-pulse-check-survey-1-levelgroup U2Ch1_2018_2019_pilot_2023:
+        title: Objavujeme informatiku – rýchly prieskum
       csd-pulse-check-survey-1-levelgroup U2Ch2:
         title: Objavujeme informatiku – rýchly prieskum
       csd-pulse-check-survey-1-levelgroup U2Ch2_2018:
@@ -11215,6 +12756,8 @@ sk-SK:
       csd-pulse-check-survey-1-levelgroup U3Ch1_2018_2019_pilot_2021:
         title: Objavujeme informatiku – rýchly prieskum
       csd-pulse-check-survey-1-levelgroup U3Ch1_2018_2019_pilot_2022:
+        title: Objavujeme informatiku – rýchly prieskum
+      csd-pulse-check-survey-1-levelgroup U3Ch1_2018_2019_pilot_2023:
         title: Objavujeme informatiku – rýchly prieskum
       csd-pulse-check-survey-1-levelgroup U3Ch2:
         title: Objavujeme informatiku – rýchly prieskum
@@ -11234,6 +12777,8 @@ sk-SK:
         title: Objavujeme informatiku – rýchly prieskum
       csd-pulse-check-survey-1-levelgroup U4Ch1_2022:
         title: Objavujeme informatiku – rýchly prieskum
+      csd-pulse-check-survey-1-levelgroup U4Ch1_2023:
+        title: Objavujeme informatiku – rýchly prieskum
       csd-pulse-check-survey-1-levelgroup U4Ch2:
         title: Objavujeme informatiku – rýchly prieskum
       csd-pulse-check-survey-1-levelgroup U4Ch2_2018:
@@ -11252,6 +12797,8 @@ sk-SK:
         title: Objavujeme informatiku – rýchly prieskum
       csd-pulse-check-survey-1-levelgroup U5Ch1_2022:
         title: Objavujeme informatiku – rýchly prieskum
+      csd-pulse-check-survey-1-levelgroup U5Ch1_2023:
+        title: Objavujeme informatiku – rýchly prieskum
       csd-pulse-check-survey-1-levelgroup U5Ch2:
         title: Objavujeme informatiku – rýchly prieskum
       csd-pulse-check-survey-1-levelgroup U5Ch2_2018:
@@ -11268,7 +12815,11 @@ sk-SK:
         title: Objavujeme informatiku – rýchly prieskum
       csd-pulse-check-survey-1-levelgroup U6Ch1_2021:
         title: Objavujeme informatiku – rýchly prieskum
+      csd-pulse-check-survey-1-levelgroup U6Ch1_pilot_2023a_2023:
+        title: Objavujeme informatiku – rýchly prieskum
       csd-pulse-check-survey-1-levelgroup U6Ch1_pilot_2222:
+        title: Objavujeme informatiku – rýchly prieskum
+      csd-pulse-check-survey-1-levelgroup U6Ch1_pilot_mb2022:
         title: Objavujeme informatiku – rýchly prieskum
       csd-pulse-check-survey-1-levelgroup U6Ch2:
         title: Objavujeme informatiku – rýchly prieskum
@@ -11422,6 +12973,24 @@ sk-SK:
           text: Vôbec nesúhlasím
         questions:
         - text: Mám rád/rada informatiku.
+      csd-pulse-check-survey-1-q1 U2Ch1_2019_pilot_2023:
+        answers:
+        - correct: true
+          text: Úplne súhlasím
+        - correct: true
+          text: Súhlasím
+        - correct: true
+          text: Čiastočne súhlasím
+        - correct: true
+          text: Ani jedna z možností
+        - correct: true
+          text: Čiastočne nesúhlasím
+        - correct: true
+          text: Nesúhlasím
+        - correct: true
+          text: Vôbec nesúhlasím
+        questions:
+        - text: Mám rád/rada informatiku.
       csd-pulse-check-survey-1-q1 U2Ch2:
         answers:
         - correct: true
@@ -11531,6 +13100,24 @@ sk-SK:
         questions:
         - text: Mám rád/rada informatiku.
       csd-pulse-check-survey-1-q1 U3Ch1_2019_pilot_2022:
+        answers:
+        - correct: true
+          text: Úplne súhlasím
+        - correct: true
+          text: Súhlasím
+        - correct: true
+          text: Čiastočne súhlasím
+        - correct: true
+          text: Ani jedna z možností
+        - correct: true
+          text: Čiastočne nesúhlasím
+        - correct: true
+          text: Nesúhlasím
+        - correct: true
+          text: Vôbec nesúhlasím
+        questions:
+        - text: Mám rád/rada informatiku.
+      csd-pulse-check-survey-1-q1 U3Ch1_2019_pilot_2023:
         answers:
         - correct: true
           text: Úplne súhlasím
@@ -11675,6 +13262,24 @@ sk-SK:
         questions:
         - text: Mám rád/rada informatiku.
       csd-pulse-check-survey-1-q1 U4Ch1_2022:
+        answers:
+        - correct: true
+          text: Úplne súhlasím
+        - correct: true
+          text: Súhlasím
+        - correct: true
+          text: Čiastočne súhlasím
+        - correct: true
+          text: Ani jedna z možností
+        - correct: true
+          text: Čiastočne nesúhlasím
+        - correct: true
+          text: Nesúhlasím
+        - correct: true
+          text: Vôbec nesúhlasím
+        questions:
+        - text: Mám rád/rada informatiku.
+      csd-pulse-check-survey-1-q1 U4Ch1_2023:
         answers:
         - correct: true
           text: Úplne súhlasím
@@ -11854,6 +13459,24 @@ sk-SK:
           text: Vôbec nesúhlasím
         questions:
         - text: Mám rád/rada informatiku.
+      csd-pulse-check-survey-1-q1 U5Ch1_2023:
+        answers:
+        - correct: true
+          text: Úplne súhlasím
+        - correct: true
+          text: Súhlasím
+        - correct: true
+          text: Čiastočne súhlasím
+        - correct: true
+          text: Ani jedna z možností
+        - correct: true
+          text: Čiastočne nesúhlasím
+        - correct: true
+          text: Nesúhlasím
+        - correct: true
+          text: Vôbec nesúhlasím
+        questions:
+        - text: Mám rád/rada informatiku.
       csd-pulse-check-survey-1-q1 U5Ch2:
         answers:
         - correct: true
@@ -11998,7 +13621,43 @@ sk-SK:
           text: Vôbec nesúhlasím
         questions:
         - text: Mám rád/rada informatiku.
+      csd-pulse-check-survey-1-q1 U6Ch1_2023a_2023:
+        answers:
+        - correct: true
+          text: Úplne súhlasím
+        - correct: true
+          text: Súhlasím
+        - correct: true
+          text: Čiastočne súhlasím
+        - correct: true
+          text: Ani jedna z možností
+        - correct: true
+          text: Čiastočne nesúhlasím
+        - correct: true
+          text: Nesúhlasím
+        - correct: true
+          text: Vôbec nesúhlasím
+        questions:
+        - text: Mám rád/rada informatiku.
       csd-pulse-check-survey-1-q1 U6Ch1_2222:
+        answers:
+        - correct: true
+          text: Úplne súhlasím
+        - correct: true
+          text: Súhlasím
+        - correct: true
+          text: Čiastočne súhlasím
+        - correct: true
+          text: Ani jedna z možností
+        - correct: true
+          text: Čiastočne nesúhlasím
+        - correct: true
+          text: Nesúhlasím
+        - correct: true
+          text: Vôbec nesúhlasím
+        questions:
+        - text: Mám rád/rada informatiku.
+      csd-pulse-check-survey-1-q1 U6Ch1_mb2022:
         answers:
         - correct: true
           text: Úplne súhlasím
@@ -12232,6 +13891,24 @@ sk-SK:
           text: Vôbec nesúhlasím
         questions:
         - text: Dokážem sa učiť informatiku.
+      csd-pulse-check-survey-1-q2 U2Ch1_2019_pilot_2023:
+        answers:
+        - correct: true
+          text: Úplne súhlasím
+        - correct: true
+          text: Súhlasím
+        - correct: true
+          text: Čiastočne súhlasím
+        - correct: true
+          text: Ani jedna z možností
+        - correct: true
+          text: Čiastočne nesúhlasím
+        - correct: true
+          text: Nesúhlasím
+        - correct: true
+          text: Vôbec nesúhlasím
+        questions:
+        - text: Dokážem sa učiť informatiku.
       csd-pulse-check-survey-1-q2 U2Ch2:
         answers:
         - correct: true
@@ -12341,6 +14018,24 @@ sk-SK:
         questions:
         - text: Dokážem sa učiť informatiku.
       csd-pulse-check-survey-1-q2 U3Ch1_2019_pilot_2022:
+        answers:
+        - correct: true
+          text: Úplne súhlasím
+        - correct: true
+          text: Súhlasím
+        - correct: true
+          text: Čiastočne súhlasím
+        - correct: true
+          text: Ani jedna z možností
+        - correct: true
+          text: Čiastočne nesúhlasím
+        - correct: true
+          text: Nesúhlasím
+        - correct: true
+          text: Vôbec nesúhlasím
+        questions:
+        - text: Dokážem sa učiť informatiku.
+      csd-pulse-check-survey-1-q2 U3Ch1_2019_pilot_2023:
         answers:
         - correct: true
           text: Úplne súhlasím
@@ -12485,6 +14180,24 @@ sk-SK:
         questions:
         - text: Dokážem sa učiť informatiku.
       csd-pulse-check-survey-1-q2 U4Ch1_2022:
+        answers:
+        - correct: true
+          text: Úplne súhlasím
+        - correct: true
+          text: Súhlasím
+        - correct: true
+          text: Čiastočne súhlasím
+        - correct: true
+          text: Ani jedna z možností
+        - correct: true
+          text: Čiastočne nesúhlasím
+        - correct: true
+          text: Nesúhlasím
+        - correct: true
+          text: Vôbec nesúhlasím
+        questions:
+        - text: Dokážem sa učiť informatiku.
+      csd-pulse-check-survey-1-q2 U4Ch1_2023:
         answers:
         - correct: true
           text: Úplne súhlasím
@@ -12664,6 +14377,24 @@ sk-SK:
           text: Vôbec nesúhlasím
         questions:
         - text: Dokážem sa učiť informatiku.
+      csd-pulse-check-survey-1-q2 U5Ch1_2023:
+        answers:
+        - correct: true
+          text: Úplne súhlasím
+        - correct: true
+          text: Súhlasím
+        - correct: true
+          text: Čiastočne súhlasím
+        - correct: true
+          text: Ani jedna z možností
+        - correct: true
+          text: Čiastočne nesúhlasím
+        - correct: true
+          text: Nesúhlasím
+        - correct: true
+          text: Vôbec nesúhlasím
+        questions:
+        - text: Dokážem sa učiť informatiku.
       csd-pulse-check-survey-1-q2 U5Ch2:
         answers:
         - correct: true
@@ -12808,7 +14539,43 @@ sk-SK:
           text: Vôbec nesúhlasím
         questions:
         - text: Dokážem sa učiť informatiku.
+      csd-pulse-check-survey-1-q2 U6Ch1_2023a_2023:
+        answers:
+        - correct: true
+          text: Úplne súhlasím
+        - correct: true
+          text: Súhlasím
+        - correct: true
+          text: Čiastočne súhlasím
+        - correct: true
+          text: Ani jedna z možností
+        - correct: true
+          text: Čiastočne nesúhlasím
+        - correct: true
+          text: Nesúhlasím
+        - correct: true
+          text: Vôbec nesúhlasím
+        questions:
+        - text: Dokážem sa učiť informatiku.
       csd-pulse-check-survey-1-q2 U6Ch1_2222:
+        answers:
+        - correct: true
+          text: Úplne súhlasím
+        - correct: true
+          text: Súhlasím
+        - correct: true
+          text: Čiastočne súhlasím
+        - correct: true
+          text: Ani jedna z možností
+        - correct: true
+          text: Čiastočne nesúhlasím
+        - correct: true
+          text: Nesúhlasím
+        - correct: true
+          text: Vôbec nesúhlasím
+        questions:
+        - text: Dokážem sa učiť informatiku.
+      csd-pulse-check-survey-1-q2 U6Ch1_mb2022:
         answers:
         - correct: true
           text: Úplne súhlasím
@@ -13042,6 +14809,24 @@ sk-SK:
           text: Vôbec nesúhlasím
         questions:
         - text: Tento kurz informatiky sa mi páči.
+      csd-pulse-check-survey-1-q3 U2Ch1_2019_pilot_2023:
+        answers:
+        - correct: true
+          text: Úplne súhlasím
+        - correct: true
+          text: Súhlasím
+        - correct: true
+          text: Čiastočne súhlasím
+        - correct: true
+          text: Ani jedna z možností
+        - correct: true
+          text: Čiastočne nesúhlasím
+        - correct: true
+          text: Nesúhlasím
+        - correct: true
+          text: Vôbec nesúhlasím
+        questions:
+        - text: Tento kurz informatiky sa mi páči.
       csd-pulse-check-survey-1-q3 U2Ch2:
         answers:
         - correct: true
@@ -13151,6 +14936,24 @@ sk-SK:
         questions:
         - text: Tento kurz informatiky sa mi páči.
       csd-pulse-check-survey-1-q3 U3Ch1_2019_pilot_2022:
+        answers:
+        - correct: true
+          text: Úplne súhlasím
+        - correct: true
+          text: Súhlasím
+        - correct: true
+          text: Čiastočne súhlasím
+        - correct: true
+          text: Ani jedna z možností
+        - correct: true
+          text: Čiastočne nesúhlasím
+        - correct: true
+          text: Nesúhlasím
+        - correct: true
+          text: Vôbec nesúhlasím
+        questions:
+        - text: Tento kurz informatiky sa mi páči.
+      csd-pulse-check-survey-1-q3 U3Ch1_2019_pilot_2023:
         answers:
         - correct: true
           text: Úplne súhlasím
@@ -13295,6 +15098,24 @@ sk-SK:
         questions:
         - text: Tento kurz informatiky sa mi páči.
       csd-pulse-check-survey-1-q3 U4Ch1_2022:
+        answers:
+        - correct: true
+          text: Úplne súhlasím
+        - correct: true
+          text: Súhlasím
+        - correct: true
+          text: Čiastočne súhlasím
+        - correct: true
+          text: Ani jedna z možností
+        - correct: true
+          text: Čiastočne nesúhlasím
+        - correct: true
+          text: Nesúhlasím
+        - correct: true
+          text: Vôbec nesúhlasím
+        questions:
+        - text: Tento kurz informatiky sa mi páči.
+      csd-pulse-check-survey-1-q3 U4Ch1_2023:
         answers:
         - correct: true
           text: Úplne súhlasím
@@ -13474,6 +15295,24 @@ sk-SK:
           text: Vôbec nesúhlasím
         questions:
         - text: Tento kurz informatiky sa mi páči.
+      csd-pulse-check-survey-1-q3 U5Ch1_2023:
+        answers:
+        - correct: true
+          text: Úplne súhlasím
+        - correct: true
+          text: Súhlasím
+        - correct: true
+          text: Čiastočne súhlasím
+        - correct: true
+          text: Ani jedna z možností
+        - correct: true
+          text: Čiastočne nesúhlasím
+        - correct: true
+          text: Nesúhlasím
+        - correct: true
+          text: Vôbec nesúhlasím
+        questions:
+        - text: Tento kurz informatiky sa mi páči.
       csd-pulse-check-survey-1-q3 U5Ch2:
         answers:
         - correct: true
@@ -13618,7 +15457,43 @@ sk-SK:
           text: Vôbec nesúhlasím
         questions:
         - text: Tento kurz informatiky sa mi páči.
+      csd-pulse-check-survey-1-q3 U6Ch1_2023a_2023:
+        answers:
+        - correct: true
+          text: Úplne súhlasím
+        - correct: true
+          text: Súhlasím
+        - correct: true
+          text: Čiastočne súhlasím
+        - correct: true
+          text: Ani jedna z možností
+        - correct: true
+          text: Čiastočne nesúhlasím
+        - correct: true
+          text: Nesúhlasím
+        - correct: true
+          text: Vôbec nesúhlasím
+        questions:
+        - text: Tento kurz informatiky sa mi páči.
       csd-pulse-check-survey-1-q3 U6Ch1_2222:
+        answers:
+        - correct: true
+          text: Úplne súhlasím
+        - correct: true
+          text: Súhlasím
+        - correct: true
+          text: Čiastočne súhlasím
+        - correct: true
+          text: Ani jedna z možností
+        - correct: true
+          text: Čiastočne nesúhlasím
+        - correct: true
+          text: Nesúhlasím
+        - correct: true
+          text: Vôbec nesúhlasím
+        questions:
+        - text: Tento kurz informatiky sa mi páči.
+      csd-pulse-check-survey-1-q3 U6Ch1_mb2022:
         answers:
         - correct: true
           text: Úplne súhlasím
@@ -13852,6 +15727,24 @@ sk-SK:
           text: Vôbec nesúhlasím
         questions:
         - text: Na tomto kurze informatiky sa cítim pohodlne.
+      csd-pulse-check-survey-1-q4 U2Ch1_2019_pilot_2023:
+        answers:
+        - correct: true
+          text: Úplne súhlasím
+        - correct: true
+          text: Súhlasím
+        - correct: true
+          text: Čiastočne súhlasím
+        - correct: true
+          text: Ani jedna z možností
+        - correct: true
+          text: Čiastočne nesúhlasím
+        - correct: true
+          text: Nesúhlasím
+        - correct: true
+          text: Vôbec nesúhlasím
+        questions:
+        - text: Na tomto kurze informatiky sa cítim pohodlne.
       csd-pulse-check-survey-1-q4 U2Ch2:
         answers:
         - correct: true
@@ -13961,6 +15854,24 @@ sk-SK:
         questions:
         - text: Na tomto kurze informatiky sa cítim pohodlne.
       csd-pulse-check-survey-1-q4 U3Ch1_2019_pilot_2022:
+        answers:
+        - correct: true
+          text: Úplne súhlasím
+        - correct: true
+          text: Súhlasím
+        - correct: true
+          text: Čiastočne súhlasím
+        - correct: true
+          text: Ani jedna z možností
+        - correct: true
+          text: Čiastočne nesúhlasím
+        - correct: true
+          text: Nesúhlasím
+        - correct: true
+          text: Vôbec nesúhlasím
+        questions:
+        - text: Na tomto kurze informatiky sa cítim pohodlne.
+      csd-pulse-check-survey-1-q4 U3Ch1_2019_pilot_2023:
         answers:
         - correct: true
           text: Úplne súhlasím
@@ -14105,6 +16016,24 @@ sk-SK:
         questions:
         - text: Na tomto kurze informatiky sa cítim pohodlne.
       csd-pulse-check-survey-1-q4 U4Ch1_2022:
+        answers:
+        - correct: true
+          text: Úplne súhlasím
+        - correct: true
+          text: Súhlasím
+        - correct: true
+          text: Čiastočne súhlasím
+        - correct: true
+          text: Ani jedna z možností
+        - correct: true
+          text: Čiastočne nesúhlasím
+        - correct: true
+          text: Nesúhlasím
+        - correct: true
+          text: Vôbec nesúhlasím
+        questions:
+        - text: Na tomto kurze informatiky sa cítim pohodlne.
+      csd-pulse-check-survey-1-q4 U4Ch1_2023:
         answers:
         - correct: true
           text: Úplne súhlasím
@@ -14284,6 +16213,24 @@ sk-SK:
           text: Vôbec nesúhlasím
         questions:
         - text: Na tomto kurze informatiky sa cítim pohodlne.
+      csd-pulse-check-survey-1-q4 U5Ch1_2023:
+        answers:
+        - correct: true
+          text: Úplne súhlasím
+        - correct: true
+          text: Súhlasím
+        - correct: true
+          text: Čiastočne súhlasím
+        - correct: true
+          text: Ani jedna z možností
+        - correct: true
+          text: Čiastočne nesúhlasím
+        - correct: true
+          text: Nesúhlasím
+        - correct: true
+          text: Vôbec nesúhlasím
+        questions:
+        - text: Na tomto kurze informatiky sa cítim pohodlne.
       csd-pulse-check-survey-1-q4 U5Ch2:
         answers:
         - correct: true
@@ -14428,7 +16375,43 @@ sk-SK:
           text: Vôbec nesúhlasím
         questions:
         - text: Na tomto kurze informatiky sa cítim pohodlne.
+      csd-pulse-check-survey-1-q4 U6Ch1_2023a_2023:
+        answers:
+        - correct: true
+          text: Úplne súhlasím
+        - correct: true
+          text: Súhlasím
+        - correct: true
+          text: Čiastočne súhlasím
+        - correct: true
+          text: Ani jedna z možností
+        - correct: true
+          text: Čiastočne nesúhlasím
+        - correct: true
+          text: Nesúhlasím
+        - correct: true
+          text: Vôbec nesúhlasím
+        questions:
+        - text: Na tomto kurze informatiky sa cítim pohodlne.
       csd-pulse-check-survey-1-q4 U6Ch1_2222:
+        answers:
+        - correct: true
+          text: Úplne súhlasím
+        - correct: true
+          text: Súhlasím
+        - correct: true
+          text: Čiastočne súhlasím
+        - correct: true
+          text: Ani jedna z možností
+        - correct: true
+          text: Čiastočne nesúhlasím
+        - correct: true
+          text: Nesúhlasím
+        - correct: true
+          text: Vôbec nesúhlasím
+        questions:
+        - text: Na tomto kurze informatiky sa cítim pohodlne.
+      csd-pulse-check-survey-1-q4 U6Ch1_mb2022:
         answers:
         - correct: true
           text: Úplne súhlasím
@@ -14662,6 +16645,24 @@ sk-SK:
           text: Vôbec nesúhlasím
         questions:
         - text: V budúcnosti chcem absolvovať viac kurzov informatiky.
+      csd-pulse-check-survey-1-q5 U2Ch1_2019_pilot_2023:
+        answers:
+        - correct: true
+          text: Úplne súhlasím
+        - correct: true
+          text: Súhlasím
+        - correct: true
+          text: Čiastočne súhlasím
+        - correct: true
+          text: Ani jedna z možností
+        - correct: true
+          text: Čiastočne nesúhlasím
+        - correct: true
+          text: Nesúhlasím
+        - correct: true
+          text: Vôbec nesúhlasím
+        questions:
+        - text: V budúcnosti chcem absolvovať viac kurzov informatiky.
       csd-pulse-check-survey-1-q5 U2Ch2:
         answers:
         - correct: true
@@ -14771,6 +16772,24 @@ sk-SK:
         questions:
         - text: V budúcnosti chcem absolvovať viac kurzov informatiky.
       csd-pulse-check-survey-1-q5 U3Ch1_2019_pilot_2022:
+        answers:
+        - correct: true
+          text: Úplne súhlasím
+        - correct: true
+          text: Súhlasím
+        - correct: true
+          text: Čiastočne súhlasím
+        - correct: true
+          text: Ani jedna z možností
+        - correct: true
+          text: Čiastočne nesúhlasím
+        - correct: true
+          text: Nesúhlasím
+        - correct: true
+          text: Vôbec nesúhlasím
+        questions:
+        - text: V budúcnosti chcem absolvovať viac kurzov informatiky.
+      csd-pulse-check-survey-1-q5 U3Ch1_2019_pilot_2023:
         answers:
         - correct: true
           text: Úplne súhlasím
@@ -14915,6 +16934,24 @@ sk-SK:
         questions:
         - text: V budúcnosti chcem absolvovať viac kurzov informatiky.
       csd-pulse-check-survey-1-q5 U4Ch1_2022:
+        answers:
+        - correct: true
+          text: Úplne súhlasím
+        - correct: true
+          text: Súhlasím
+        - correct: true
+          text: Čiastočne súhlasím
+        - correct: true
+          text: Ani jedna z možností
+        - correct: true
+          text: Čiastočne nesúhlasím
+        - correct: true
+          text: Nesúhlasím
+        - correct: true
+          text: Vôbec nesúhlasím
+        questions:
+        - text: V budúcnosti chcem absolvovať viac kurzov informatiky.
+      csd-pulse-check-survey-1-q5 U4Ch1_2023:
         answers:
         - correct: true
           text: Úplne súhlasím
@@ -15094,6 +17131,24 @@ sk-SK:
           text: Vôbec nesúhlasím
         questions:
         - text: V budúcnosti chcem absolvovať viac kurzov informatiky.
+      csd-pulse-check-survey-1-q5 U5Ch1_2023:
+        answers:
+        - correct: true
+          text: Úplne súhlasím
+        - correct: true
+          text: Súhlasím
+        - correct: true
+          text: Čiastočne súhlasím
+        - correct: true
+          text: Ani jedna z možností
+        - correct: true
+          text: Čiastočne nesúhlasím
+        - correct: true
+          text: Nesúhlasím
+        - correct: true
+          text: Vôbec nesúhlasím
+        questions:
+        - text: V budúcnosti chcem absolvovať viac kurzov informatiky.
       csd-pulse-check-survey-1-q5 U5Ch2:
         answers:
         - correct: true
@@ -15238,7 +17293,43 @@ sk-SK:
           text: Vôbec nesúhlasím
         questions:
         - text: V budúcnosti chcem absolvovať viac kurzov informatiky.
+      csd-pulse-check-survey-1-q5 U6Ch1_2023a_2023:
+        answers:
+        - correct: true
+          text: Úplne súhlasím
+        - correct: true
+          text: Súhlasím
+        - correct: true
+          text: Čiastočne súhlasím
+        - correct: true
+          text: Ani jedna z možností
+        - correct: true
+          text: Čiastočne nesúhlasím
+        - correct: true
+          text: Nesúhlasím
+        - correct: true
+          text: Vôbec nesúhlasím
+        questions:
+        - text: V budúcnosti chcem absolvovať viac kurzov informatiky.
       csd-pulse-check-survey-1-q5 U6Ch1_2222:
+        answers:
+        - correct: true
+          text: Úplne súhlasím
+        - correct: true
+          text: Súhlasím
+        - correct: true
+          text: Čiastočne súhlasím
+        - correct: true
+          text: Ani jedna z možností
+        - correct: true
+          text: Čiastočne nesúhlasím
+        - correct: true
+          text: Nesúhlasím
+        - correct: true
+          text: Vôbec nesúhlasím
+        questions:
+        - text: V budúcnosti chcem absolvovať viac kurzov informatiky.
+      csd-pulse-check-survey-1-q5 U6Ch1_mb2022:
         answers:
         - correct: true
           text: Úplne súhlasím
@@ -15370,6 +17461,76 @@ sk-SK:
           <small>
           <em>Code.org kladie veľký dôraz na tvoje súkromie.</em> Tvoje odpovede na tento dotazník budú<strong>anonymné</strong>. Tvoj učiteľ bude vidieť odpovede za celú triedu, ale nebudú k nim priradené mená.
           </small>
+      csd-pulse-check-survey-preamble_2019_pilot_2023:
+        markdown: |
+          ### Vyhraď si chvíľku času na zodpovedanie týchto **piatich rýchlych otázok**.
+
+          <small>
+          <em>Code.org kladie veľký dôraz na tvoje súkromie.</em> Tvoje odpovede na tento dotazník budú<strong>anonymné</strong>. Tvoj učiteľ bude vidieť odpovede za celú triedu, ale nebudú k nim priradené mená.
+          </small>
+      csd-pulse-check-survey-preamble_2019_pilot_copy1_2023:
+        markdown: |
+          ### Vyhraď si chvíľku času na zodpovedanie týchto **piatich rýchlych otázok**.
+
+          <small>
+          <em>Code.org kladie veľký dôraz na tvoje súkromie.</em> Tvoje odpovede na tento dotazník budú<strong>anonymné</strong>. Tvoj učiteľ bude vidieť odpovede za celú triedu, ale nebudú k nim priradené mená.
+          </small>
+      csd-pulse-check-survey-preamble_2019_pilot_copy2_2023:
+        markdown: |
+          ### Vyhraď si chvíľku času na zodpovedanie týchto **piatich rýchlych otázok**.
+
+          <small>
+          <em>Code.org kladie veľký dôraz na tvoje súkromie.</em> Tvoje odpovede na tento dotazník budú<strong>anonymné</strong>. Tvoj učiteľ bude vidieť odpovede za celú triedu, ale nebudú k nim priradené mená.
+          </small>
+      csd-pulse-check-survey-preamble_2019_pilot_copy2_csd1_2023:
+        markdown: |
+          ### Vyhraď si chvíľku času na zodpovedanie týchto **piatich rýchlych otázok**.
+
+          <small>
+          <em>Code.org kladie veľký dôraz na tvoje súkromie.</em> Tvoje odpovede na tento dotazník budú<strong>anonymné</strong>. Tvoj učiteľ bude vidieť odpovede za celú triedu, ale nebudú k nim priradené mená.
+          </small>
+      csd-pulse-check-survey-preamble_2019_pilot_copy2_csd2_2023:
+        markdown: |
+          ### Vyhraď si chvíľku času na zodpovedanie týchto **piatich rýchlych otázok**.
+
+          <small>
+          <em>Code.org kladie veľký dôraz na tvoje súkromie.</em> Tvoje odpovede na tento dotazník budú<strong>anonymné</strong>. Tvoj učiteľ bude vidieť odpovede za celú triedu, ale nebudú k nim priradené mená.
+          </small>
+      csd-pulse-check-survey-preamble_2019_pilot_copy2_csd3_2023:
+        markdown: |
+          ### Vyhraď si chvíľku času na zodpovedanie týchto **piatich rýchlych otázok**.
+
+          <small>
+          <em>Code.org kladie veľký dôraz na tvoje súkromie.</em> Tvoje odpovede na tento dotazník budú<strong>anonymné</strong>. Tvoj učiteľ bude vidieť odpovede za celú triedu, ale nebudú k nim priradené mená.
+          </small>
+      csd-pulse-check-survey-preamble_2019_pilot_copy2_csd4_2023:
+        markdown: |
+          ### Vyhraď si chvíľku času na zodpovedanie týchto **piatich rýchlych otázok**.
+
+          <small>
+          <em>Code.org kladie veľký dôraz na tvoje súkromie.</em> Tvoje odpovede na tento dotazník budú<strong>anonymné</strong>. Tvoj učiteľ bude vidieť odpovede za celú triedu, ale nebudú k nim priradené mená.
+          </small>
+      csd-pulse-check-survey-preamble_2019_pilot_copy2_csd5_2023:
+        markdown: |
+          ### Vyhraď si chvíľku času na zodpovedanie týchto **piatich rýchlych otázok**.
+
+          <small>
+          <em>Code.org kladie veľký dôraz na tvoje súkromie.</em> Tvoje odpovede na tento dotazník budú<strong>anonymné</strong>. Tvoj učiteľ bude vidieť odpovede za celú triedu, ale nebudú k nim priradené mená.
+          </small>
+      csd-pulse-check-survey-preamble_2019_pilot_copy2_csd6_2023:
+        markdown: |
+          ### Vyhraď si chvíľku času na zodpovedanie týchto **piatich rýchlych otázok**.
+
+          <small>
+          <em>Code.org kladie veľký dôraz na tvoje súkromie.</em> Tvoje odpovede na tento dotazník budú<strong>anonymné</strong>. Tvoj učiteľ bude vidieť odpovede za celú triedu, ale nebudú k nim priradené mená.
+          </small>
+      csd-pulse-check-survey-preamble_2019_pilot_copy3_2023:
+        markdown: |
+          ### Vyhraď si chvíľku času na zodpovedanie týchto **piatich rýchlych otázok**.
+
+          <small>
+          <em>Code.org kladie veľký dôraz na tvoje súkromie.</em> Tvoje odpovede na tento dotazník budú<strong>anonymné</strong>. Tvoj učiteľ bude vidieť odpovede za celú triedu, ale nebudú k nim priradené mená.
+          </small>
       csd-pulse-check-survey-preamble_2021:
         markdown: |
           ### Vyhraď si chvíľku času na zodpovedanie týchto **piatich rýchlych otázok**.
@@ -15384,7 +17545,35 @@ sk-SK:
           <small>
           <em>Code.org kladie veľký dôraz na tvoje súkromie.</em> Tvoje odpovede na tento dotazník budú<strong>anonymné</strong>. Tvoj učiteľ bude vidieť odpovede za celú triedu, ale nebudú k nim priradené mená.
           </small>
+      csd-pulse-check-survey-preamble_2023:
+        markdown: |
+          ### Vyhraď si chvíľku času na zodpovedanie týchto **piatich rýchlych otázok**.
+
+          <small>
+          <em>Code.org kladie veľký dôraz na tvoje súkromie.</em> Tvoje odpovede na tento dotazník budú<strong>anonymné</strong>. Tvoj učiteľ bude vidieť odpovede za celú triedu, ale nebudú k nim priradené mená.
+          </small>
+      csd-pulse-check-survey-preamble_2023a_2023:
+        markdown: |
+          ### Vyhraď si chvíľku času na zodpovedanie týchto **piatich rýchlych otázok**.
+
+          <small>
+          <em>Code.org kladie veľký dôraz na tvoje súkromie.</em> Tvoje odpovede na tento dotazník budú<strong>anonymné</strong>. Tvoj učiteľ bude vidieť odpovede za celú triedu, ale nebudú k nim priradené mená.
+          </small>
       csd-pulse-check-survey-preamble_2222:
+        markdown: |
+          ### Vyhraď si chvíľku času na zodpovedanie týchto **piatich rýchlych otázok**.
+
+          <small>
+          <em>Code.org kladie veľký dôraz na tvoje súkromie.</em> Tvoje odpovede na tento dotazník budú<strong>anonymné</strong>. Tvoj učiteľ bude vidieť odpovede za celú triedu, ale nebudú k nim priradené mená.
+          </small>
+      csd-pulse-check-survey-preamble_copy1_2023:
+        markdown: |
+          ### Vyhraď si chvíľku času na zodpovedanie týchto **piatich rýchlych otázok**.
+
+          <small>
+          <em>Code.org kladie veľký dôraz na tvoje súkromie.</em> Tvoje odpovede na tento dotazník budú<strong>anonymné</strong>. Tvoj učiteľ bude vidieť odpovede za celú triedu, ale nebudú k nim priradené mená.
+          </small>
+      csd-pulse-check-survey-preamble_mb2022:
         markdown: |
           ### Vyhraď si chvíľku času na zodpovedanie týchto **piatich rýchlych otázok**.
 
@@ -15907,6 +18096,24 @@ sk-SK:
           text: Vôbec nesúhlasím
         questions:
         - {}
+      csp-post-survey-2017-q22_mb2022:
+        answers:
+        - correct: true
+          text: Úplne súhlasím
+        - correct: true
+          text: Súhlasím
+        - correct: true
+          text: Čiastočne súhlasím
+        - correct: true
+          text: Ani jedna z možností
+        - correct: true
+          text: Čiastočne nesúhlasím
+        - correct: true
+          text: Nesúhlasím
+        - correct: true
+          text: Vôbec nesúhlasím
+        questions:
+        - {}
       csp-post-survey-2017-q23:
         answers:
         - correct: true
@@ -16297,21 +18504,52 @@ sk-SK:
 
 
           * Prosím, pomôžte nám tým, že aj vaši žiaci prispejú k týmto dôležitým údajom. Aj ich hlas môže prispieť k zmene!
+      csp-pre-survey-2017 preamble 1_2023:
+        markdown: "### **Tento dotazník je anonymný**\n\n* Vyplnenie tohto krátkeho
+          dotazníka by malo trvať **maximálne 10 minút**.\n* Code.org kladie veľký
+          dôraz na tvoje súkromie.\n* Tvoje odpovede na tento dotazník budú **anonymné**.
+          \n\nTvoj učiteľ bude vidieť súhrnné odpovede za celú triedu, ale nebude
+          schopný rozlíšiť jednotlivé odpovede. Robíme to takto, pretože chceme od
+          žiakov získať **čo najotvorenejšie a najúprimnejšie odpovede**. Záleží nám
+          na tom, aký zážitok z kurzu žiaci majú, a preto ich odpovede využívame na
+          jeho zlepšovanie.\n\n***\n### Škola vo všeobecnosti### \n"
+        teacher_markdown: |
+          Najlepšie je dať žiakom za úlohu vyplniť tento dotazník ešte **predtým**, ako sa pustia do ostatných aktivít v rámci kurzu. Väčšina učiteľov ho žiakom zadáva počas prvého dňa, kým pripravujú technické vybavenie na kurz.
+
+          Budete mať prístup k anonymizovaným výsledkom dotazníka.
+
+          Prečo je tu tento dotazník?
+          * Jedným z hlavných cieľov tohto kurzu je zvýšiť záujem o informatiku.
+          * Prostredníctvom úvodných a záverečných dotazníkov chceme zmerať, ako sa v priebehu kurzu menia názory a presvedčenia žiakov o informatike.
+          * Vyplnenie dotazníka nám tiež pomáha odhaliť dôležitý priestor na zlepšenie našich učebných osnov tak, aby boli lepšie pre učiteľov aj žiakov.
+
+
+          * Prosím, pomôžte nám tým, že aj vaši žiaci prispejú k týmto dôležitým údajom. Aj ich hlas môže prispieť k zmene!
       csp-pre-survey-2017 preamble 2 cs in general_2021:
         markdown: "## Informatika vo všeobecnosti"
       csp-pre-survey-2017 preamble 2 cs in general_2022:
+        markdown: "## Informatika vo všeobecnosti"
+      csp-pre-survey-2017 preamble 2 cs in general_copy2_2023:
         markdown: "## Informatika vo všeobecnosti"
       csp-pre-survey-2017 preamble 3 this class_2021:
         markdown: "### Informatika v tvojej budúcnosti"
       csp-pre-survey-2017 preamble 3 this class_2022:
         markdown: "### Informatika v tvojej budúcnosti"
+      csp-pre-survey-2017 preamble 3 this class_copy2_2023:
+        markdown: "### Informatika v tvojej budúcnosti"
       csp-pre-survey-2017 preamble 4 the future_2021:
         markdown: "### Informatika v tvojej budúcnosti"
       csp-pre-survey-2017 preamble 4 the future_2022:
         markdown: "### Informatika v tvojej budúcnosti"
+      csp-pre-survey-2017 preamble 4 the future_2023:
+        markdown: "### Informatika v tvojej budúcnosti"
       csp-pre-survey-2017 preamble 5 demographics_2021:
         markdown: "### Tvoje informatické pozadie\n"
       csp-pre-survey-2017 preamble 5 demographics_2022:
+        markdown: "### Tvoje informatické pozadie\n"
+      csp-pre-survey-2017 preamble 5 demographics_2023:
+        markdown: "### Tvoje informatické pozadie\n"
+      csp-pre-survey-2017 preamble 5 demographics_mb2022:
         markdown: "### Tvoje informatické pozadie\n"
       csp-pre-survey-2017-q1:
         answers:
@@ -16386,6 +18624,24 @@ sk-SK:
         questions:
         - text: Mám rád/rada informatiku.
       csp-pre-survey-2017-q10_2022:
+        answers:
+        - correct: true
+          text: Úplne súhlasím
+        - correct: true
+          text: Súhlasím
+        - correct: true
+          text: Čiastočne súhlasím
+        - correct: true
+          text: Ani jedna z možností
+        - correct: true
+          text: Čiastočne nesúhlasím
+        - correct: true
+          text: Nesúhlasím
+        - correct: true
+          text: Vôbec nesúhlasím
+        questions:
+        - text: Mám rád/rada informatiku.
+      csp-pre-survey-2017-q10_copy2_2023:
         answers:
         - correct: true
           text: Úplne súhlasím
@@ -16551,6 +18807,25 @@ sk-SK:
         questions:
         - text: Myslím si, že informatika mi pôjde lepšie než ostatným deťom z mojej
             školy.
+      csp-pre-survey-2017-q13_2023:
+        answers:
+        - correct: true
+          text: Úplne súhlasím
+        - correct: true
+          text: Súhlasím
+        - correct: true
+          text: Čiastočne súhlasím
+        - correct: true
+          text: Ani jedna z možností
+        - correct: true
+          text: Čiastočne nesúhlasím
+        - correct: true
+          text: Nesúhlasím
+        - correct: true
+          text: Vôbec nesúhlasím
+        questions:
+        - text: Myslím si, že informatika mi pôjde lepšie než ostatným deťom z mojej
+            školy.
       csp-pre-survey-2017-q14:
         answers:
         - correct: true
@@ -16659,6 +18934,24 @@ sk-SK:
           text: Vôbec nesúhlasím
         questions:
         - text: Je pre mňa dôležité byť dobrý/-á v informatike.
+      csp-pre-survey-2017-q16_copy2_2023:
+        answers:
+        - correct: true
+          text: Úplne súhlasím
+        - correct: true
+          text: Súhlasím
+        - correct: true
+          text: Čiastočne súhlasím
+        - correct: true
+          text: Ani jedna z možností
+        - correct: true
+          text: Čiastočne nesúhlasím
+        - correct: true
+          text: Nesúhlasím
+        - correct: true
+          text: Vôbec nesúhlasím
+        questions:
+        - text: Je pre mňa dôležité byť dobrý/-á v informatike.
       csp-pre-survey-2017-q17:
         answers:
         - correct: true
@@ -16714,6 +19007,24 @@ sk-SK:
         questions:
         - text: Ľudia ako ja sa venujú informatike.
       csp-pre-survey-2017-q17_2022:
+        answers:
+        - correct: true
+          text: Úplne súhlasím
+        - correct: true
+          text: Súhlasím
+        - correct: true
+          text: Čiastočne súhlasím
+        - correct: true
+          text: Ani jedna z možností
+        - correct: true
+          text: Čiastočne nesúhlasím
+        - correct: true
+          text: Nesúhlasím
+        - correct: true
+          text: Vôbec nesúhlasím
+        questions:
+        - text: Ľudia ako ja sa venujú informatike.
+      csp-pre-survey-2017-q17_copy2_2023:
         answers:
         - correct: true
           text: Úplne súhlasím
@@ -16839,6 +19150,24 @@ sk-SK:
           text: Vôbec nesúhlasím
         questions:
         - text: Tento kurz informatiky sa mi bude páčiť.
+      csp-pre-survey-2017-q19_2023:
+        answers:
+        - correct: true
+          text: Úplne súhlasím
+        - correct: true
+          text: Súhlasím
+        - correct: true
+          text: Čiastočne súhlasím
+        - correct: true
+          text: Ani jedna z možností
+        - correct: true
+          text: Čiastočne nesúhlasím
+        - correct: true
+          text: Nesúhlasím
+        - correct: true
+          text: Vôbec nesúhlasím
+        questions:
+        - text: Tento kurz informatiky sa mi bude páčiť.
       csp-pre-survey-2017-q1_2018:
         answers:
         - correct: true
@@ -16947,6 +19276,42 @@ sk-SK:
           text: Vôbec nesúhlasím
         questions:
         - text: Na tomto kurze informatiky sa budem cítiť pohodlne.
+      csp-pre-survey-2017-q20_2023:
+        answers:
+        - correct: true
+          text: Úplne súhlasím
+        - correct: true
+          text: Súhlasím
+        - correct: true
+          text: Čiastočne súhlasím
+        - correct: true
+          text: Ani jedna z možností
+        - correct: true
+          text: Čiastočne nesúhlasím
+        - correct: true
+          text: Nesúhlasím
+        - correct: true
+          text: Vôbec nesúhlasím
+        questions:
+        - text: Na tomto kurze informatiky sa budem cítiť pohodlne.
+      csp-pre-survey-2017-q20_mb2022:
+        answers:
+        - correct: true
+          text: Úplne súhlasím
+        - correct: true
+          text: Súhlasím
+        - correct: true
+          text: Čiastočne súhlasím
+        - correct: true
+          text: Ani jedna z možností
+        - correct: true
+          text: Čiastočne nesúhlasím
+        - correct: true
+          text: Nesúhlasím
+        - correct: true
+          text: Vôbec nesúhlasím
+        questions:
+        - text: Na tomto kurze informatiky sa budem cítiť pohodlne.
       csp-pre-survey-2017-q21:
         answers:
         - correct: true
@@ -17038,6 +19403,42 @@ sk-SK:
         questions:
         - text: Predpokladám, že občas sa budem cítiť neisto, či na tento kurz patrím.
       csp-pre-survey-2017-q22_2022:
+        answers:
+        - correct: true
+          text: Úplne súhlasím
+        - correct: true
+          text: Súhlasím
+        - correct: true
+          text: Čiastočne súhlasím
+        - correct: true
+          text: Ani jedna z možností
+        - correct: true
+          text: Čiastočne nesúhlasím
+        - correct: true
+          text: Nesúhlasím
+        - correct: true
+          text: Vôbec nesúhlasím
+        questions:
+        - text: Predpokladám, že občas sa budem cítiť neisto, či na tento kurz patrím.
+      csp-pre-survey-2017-q22_2023:
+        answers:
+        - correct: true
+          text: Úplne súhlasím
+        - correct: true
+          text: Súhlasím
+        - correct: true
+          text: Čiastočne súhlasím
+        - correct: true
+          text: Ani jedna z možností
+        - correct: true
+          text: Čiastočne nesúhlasím
+        - correct: true
+          text: Nesúhlasím
+        - correct: true
+          text: Vôbec nesúhlasím
+        questions:
+        - text: Predpokladám, že občas sa budem cítiť neisto, či na tento kurz patrím.
+      csp-pre-survey-2017-q22_mb2022:
         answers:
         - correct: true
           text: Úplne súhlasím
@@ -17415,6 +19816,24 @@ sk-SK:
           text: Vôbec nesúhlasím
         questions:
         - text: Predpokladám, že vo svojej práci budem využívať informatiku.
+      csp-pre-survey-2017-q30_2023:
+        answers:
+        - correct: true
+          text: Úplne súhlasím
+        - correct: true
+          text: Súhlasím
+        - correct: true
+          text: Čiastočne súhlasím
+        - correct: true
+          text: Ani jedna z možností
+        - correct: true
+          text: Čiastočne nesúhlasím
+        - correct: true
+          text: Nesúhlasím
+        - correct: true
+          text: Vôbec nesúhlasím
+        questions:
+        - text: Predpokladám, že vo svojej práci budem využívať informatiku.
       csp-pre-survey-2017-q31:
         answers:
         - correct: true
@@ -17470,6 +19889,42 @@ sk-SK:
         questions:
         - text: V budúcnosti chcem absolvovať viac kurzov informatiky.
       csp-pre-survey-2017-q31_2022:
+        answers:
+        - correct: true
+          text: Úplne súhlasím
+        - correct: true
+          text: Súhlasím
+        - correct: true
+          text: Čiastočne súhlasím
+        - correct: true
+          text: Ani jedna z možností
+        - correct: true
+          text: Čiastočne nesúhlasím
+        - correct: true
+          text: Nesúhlasím
+        - correct: true
+          text: Vôbec nesúhlasím
+        questions:
+        - text: V budúcnosti chcem absolvovať viac kurzov informatiky.
+      csp-pre-survey-2017-q31_2023:
+        answers:
+        - correct: true
+          text: Úplne súhlasím
+        - correct: true
+          text: Súhlasím
+        - correct: true
+          text: Čiastočne súhlasím
+        - correct: true
+          text: Ani jedna z možností
+        - correct: true
+          text: Čiastočne nesúhlasím
+        - correct: true
+          text: Nesúhlasím
+        - correct: true
+          text: Vôbec nesúhlasím
+        questions:
+        - text: V budúcnosti chcem absolvovať viac kurzov informatiky.
+      csp-pre-survey-2017-q31_mb2022:
         answers:
         - correct: true
           text: Úplne súhlasím
@@ -17623,6 +20078,24 @@ sk-SK:
           text: Vôbec nesúhlasím
         questions:
         - text: Moje školské úlohy sú zaujímavé.
+      csp-pre-survey-2017-q3_copy2_2023:
+        answers:
+        - correct: true
+          text: Úplne súhlasím
+        - correct: true
+          text: Súhlasím
+        - correct: true
+          text: Čiastočne súhlasím
+        - correct: true
+          text: Ani jedna z možností
+        - correct: true
+          text: Čiastočne nesúhlasím
+        - correct: true
+          text: Nesúhlasím
+        - correct: true
+          text: Vôbec nesúhlasím
+        questions:
+        - text: Moje školské úlohy sú zaujímavé.
       csp-pre-survey-2017-q4:
         answers:
         - correct: true
@@ -17700,6 +20173,60 @@ sk-SK:
         questions:
         - text: Je pre mňa dôležité byť dobrý/-á v školských úlohách.
       csp-pre-survey-2017-q4_2022:
+        answers:
+        - correct: true
+          text: Úplne súhlasím
+        - correct: true
+          text: Súhlasím
+        - correct: true
+          text: Čiastočne súhlasím
+        - correct: true
+          text: Ani jedna z možností
+        - correct: true
+          text: Čiastočne nesúhlasím
+        - correct: true
+          text: Nesúhlasím
+        - correct: true
+          text: Vôbec nesúhlasím
+        questions:
+        - text: Je pre mňa dôležité byť dobrý/-á v školských úlohách.
+      csp-pre-survey-2017-q4_copy1_mb2022:
+        answers:
+        - correct: true
+          text: Úplne súhlasím
+        - correct: true
+          text: Súhlasím
+        - correct: true
+          text: Čiastočne súhlasím
+        - correct: true
+          text: Ani jedna z možností
+        - correct: true
+          text: Čiastočne nesúhlasím
+        - correct: true
+          text: Nesúhlasím
+        - correct: true
+          text: Vôbec nesúhlasím
+        questions:
+        - text: Je pre mňa dôležité byť dobrý/-á v školských úlohách.
+      csp-pre-survey-2017-q4_copy2_2023:
+        answers:
+        - correct: true
+          text: Úplne súhlasím
+        - correct: true
+          text: Súhlasím
+        - correct: true
+          text: Čiastočne súhlasím
+        - correct: true
+          text: Ani jedna z možností
+        - correct: true
+          text: Čiastočne nesúhlasím
+        - correct: true
+          text: Nesúhlasím
+        - correct: true
+          text: Vôbec nesúhlasím
+        questions:
+        - text: Je pre mňa dôležité byť dobrý/-á v školských úlohách.
+      csp-pre-survey-2017-q4_mb2022:
         answers:
         - correct: true
           text: Úplne súhlasím
@@ -17933,9 +20460,36 @@ sk-SK:
           text: Vôbec nesúhlasím
         questions:
         - text: Môžem byť v škole sám/sama sebou.
+      csp-pre-survey-2017-q9_copy2_2023:
+        answers:
+        - correct: true
+          text: Úplne súhlasím
+        - correct: true
+          text: Súhlasím
+        - correct: true
+          text: Čiastočne súhlasím
+        - correct: true
+          text: Ani jedna z možností
+        - correct: true
+          text: Čiastočne nesúhlasím
+        - correct: true
+          text: Nesúhlasím
+        - correct: true
+          text: Vôbec nesúhlasím
+        questions:
+        - text: Môžem byť v škole sám/sama sebou.
       csp_unit_assessment_overview:
         content1: Sem pridať popis
       curriculum-how-challenging:
+        answers:
+        - correct: true
+        - correct: true
+        - correct: true
+        - correct: true
+        - correct: true
+        questions:
+        - {}
+      curriculum-how-challenging_mb2022:
         answers:
         - correct: true
         - correct: true
@@ -17991,7 +20545,45 @@ sk-SK:
         questions:
         - text: Učil(a) si sa už niekedy informatiku <em>mimo školy</em>? (Ak áno,
             vyber svoju najnovšiu skúsenosť s informatikou mimo školy)
+      ever-learned-cs-outside-school_2023:
+        answers:
+        - correct: true
+          text: Áno, v rámci záujmového krúžku
+        - correct: true
+          text: Áno, v rámci samostatných online aktivít
+        - correct: true
+          text: Áno, v rámci tábora alebo letného kurzu
+        - correct: true
+          text: 'Nie, mimo školy som sa zatiaľ informatike nevenoval(a) '
+        questions:
+        - text: Učil(a) si sa už niekedy informatiku <em>mimo školy</em>? (Ak áno,
+            vyber svoju najnovšiu skúsenosť s informatikou mimo školy)
+      ever-learned-cs-outside-school_mb2022:
+        answers:
+        - correct: true
+          text: Áno, v rámci záujmového krúžku
+        - correct: true
+          text: Áno, v rámci samostatných online aktivít
+        - correct: true
+          text: Áno, v rámci tábora alebo letného kurzu
+        - correct: true
+          text: 'Nie, mimo školy som sa zatiaľ informatike nevenoval(a) '
+        questions:
+        - text: Učil(a) si sa už niekedy informatiku <em>mimo školy</em>? (Ak áno,
+            vyber svoju najnovšiu skúsenosť s informatikou mimo školy)
       ever-learned-cs_2022:
+        answers:
+        - correct: true
+          text: Áno, už som ju mal(a) ako predmet
+        - correct: true
+          text: Áno, nejaké aktivity, ale nie plnohodnotný predmet
+        - correct: true
+          text: Nie som si istý/-á
+        - correct: true
+          text: Určite nie
+        questions:
+        - text: Učil(a) si sa už <em>v škole</em> informatiku?
+      ever-learned-cs_2023:
         answers:
         - correct: true
           text: Áno, už som ju mal(a) ako predmet
@@ -18037,6 +20629,15 @@ sk-SK:
         - text: Motivoval ťa k účasti na tomto kurze niektorý rodinný príslušník,
             napríklad rodič, súrodenec alebo bratranec/sesternica?
       family_encourage_2022:
+        answers:
+        - correct: true
+          text: áno
+        - correct: true
+          text: nie
+        questions:
+        - text: Motivoval ťa k účasti na tomto kurze niektorý rodinný príslušník,
+            napríklad rodič, súrodenec alebo bratranec/sesternica?
+      family_encourage_2023:
         answers:
         - correct: true
           text: áno
@@ -18315,6 +20916,450 @@ sk-SK:
           text: Vôbec nesúhlasím
         questions:
         - text: Zaujíma ma štúdium informatiky.
+      interested-in-learning-cs_2023:
+        answers:
+        - correct: true
+          text: Úplne súhlasím
+        - correct: true
+          text: Súhlasím
+        - correct: true
+          text: Čiastočne súhlasím
+        - correct: true
+          text: Ani jedna z možností
+        - correct: true
+          text: Čiastočne nesúhlasím
+        - correct: true
+          text: Nesúhlasím
+        - correct: true
+          text: Vôbec nesúhlasím
+        questions:
+        - text: Zaujíma ma štúdium informatiky.
+      interested-in-learning-cs_mb2022:
+        answers:
+        - correct: true
+          text: Úplne súhlasím
+        - correct: true
+          text: Súhlasím
+        - correct: true
+          text: Čiastočne súhlasím
+        - correct: true
+          text: Ani jedna z možností
+        - correct: true
+          text: Čiastočne nesúhlasím
+        - correct: true
+          text: Nesúhlasím
+        - correct: true
+          text: Vôbec nesúhlasím
+        questions:
+        - text: Zaujíma ma štúdium informatiky.
+      intro-pulse-survey-q1_csd1_2023:
+        answers:
+        - correct: true
+        - correct: true
+        - correct: true
+        questions:
+        - {}
+      intro-pulse-survey-q1_csd2_2023:
+        answers:
+        - correct: true
+        - correct: true
+        - correct: true
+        questions:
+        - {}
+      intro-pulse-survey-q1_csd3_2023:
+        answers:
+        - correct: true
+        - correct: true
+        - correct: true
+        questions:
+        - {}
+      intro-pulse-survey-q1_csd4_2023:
+        answers:
+        - correct: true
+        - correct: true
+        - correct: true
+        questions:
+        - {}
+      intro-pulse-survey-q1_csd5_2023:
+        answers:
+        - correct: true
+        - correct: true
+        - correct: true
+        questions:
+        - {}
+      intro-pulse-survey-q1_csd6_2023:
+        answers:
+        - correct: true
+        - correct: true
+        - correct: true
+        questions:
+        - {}
+      intro-pulse-survey-q2_csd1_2023:
+        answers:
+        - correct: true
+        - correct: true
+        - correct: true
+        questions:
+        - {}
+      intro-pulse-survey-q2_csd2_2023:
+        answers:
+        - correct: true
+        - correct: true
+        - correct: true
+        questions:
+        - {}
+      intro-pulse-survey-q2_csd3_2023:
+        answers:
+        - correct: true
+        - correct: true
+        - correct: true
+        questions:
+        - {}
+      intro-pulse-survey-q2_csd4_2023:
+        answers:
+        - correct: true
+        - correct: true
+        - correct: true
+        questions:
+        - {}
+      intro-pulse-survey-q2_csd5_2023:
+        answers:
+        - correct: true
+        - correct: true
+        - correct: true
+        questions:
+        - {}
+      intro-pulse-survey-q2_csd6_2023:
+        answers:
+        - correct: true
+        - correct: true
+        - correct: true
+        questions:
+        - {}
+      intro-pulse-survey-q3_csd1_2023:
+        answers:
+        - correct: true
+          text: Úplne súhlasím
+        - correct: true
+          text: Súhlasím
+        - correct: true
+          text: Čiastočne súhlasím
+        - correct: true
+          text: Ani jedna z možností
+        - correct: true
+          text: Čiastočne nesúhlasím
+        - correct: true
+          text: Nesúhlasím
+        - correct: true
+          text: Vôbec nesúhlasím
+        questions:
+        - {}
+      intro-pulse-survey-q3_csd2_2023:
+        answers:
+        - correct: true
+          text: Úplne súhlasím
+        - correct: true
+          text: Súhlasím
+        - correct: true
+          text: Čiastočne súhlasím
+        - correct: true
+          text: Ani jedna z možností
+        - correct: true
+          text: Čiastočne nesúhlasím
+        - correct: true
+          text: Nesúhlasím
+        - correct: true
+          text: Vôbec nesúhlasím
+        questions:
+        - {}
+      intro-pulse-survey-q3_csd3_2023:
+        answers:
+        - correct: true
+          text: Úplne súhlasím
+        - correct: true
+          text: Súhlasím
+        - correct: true
+          text: Čiastočne súhlasím
+        - correct: true
+          text: Ani jedna z možností
+        - correct: true
+          text: Čiastočne nesúhlasím
+        - correct: true
+          text: Nesúhlasím
+        - correct: true
+          text: Vôbec nesúhlasím
+        questions:
+        - {}
+      intro-pulse-survey-q3_csd4_2023:
+        answers:
+        - correct: true
+          text: Úplne súhlasím
+        - correct: true
+          text: Súhlasím
+        - correct: true
+          text: Čiastočne súhlasím
+        - correct: true
+          text: Ani jedna z možností
+        - correct: true
+          text: Čiastočne nesúhlasím
+        - correct: true
+          text: Nesúhlasím
+        - correct: true
+          text: Vôbec nesúhlasím
+        questions:
+        - {}
+      intro-pulse-survey-q3_csd5_2023:
+        answers:
+        - correct: true
+          text: Úplne súhlasím
+        - correct: true
+          text: Súhlasím
+        - correct: true
+          text: Čiastočne súhlasím
+        - correct: true
+          text: Ani jedna z možností
+        - correct: true
+          text: Čiastočne nesúhlasím
+        - correct: true
+          text: Nesúhlasím
+        - correct: true
+          text: Vôbec nesúhlasím
+        questions:
+        - {}
+      intro-pulse-survey-q3_csd6_2023:
+        answers:
+        - correct: true
+          text: Úplne súhlasím
+        - correct: true
+          text: Súhlasím
+        - correct: true
+          text: Čiastočne súhlasím
+        - correct: true
+          text: Ani jedna z možností
+        - correct: true
+          text: Čiastočne nesúhlasím
+        - correct: true
+          text: Nesúhlasím
+        - correct: true
+          text: Vôbec nesúhlasím
+        questions:
+        - {}
+      intro-pulse-survey-q4_csd1_2023:
+        answers:
+        - correct: true
+          text: Úplne súhlasím
+        - correct: true
+          text: Súhlasím
+        - correct: true
+          text: Čiastočne súhlasím
+        - correct: true
+          text: Ani jedna z možností
+        - correct: true
+          text: Čiastočne nesúhlasím
+        - correct: true
+          text: Nesúhlasím
+        - correct: true
+          text: Vôbec nesúhlasím
+        questions:
+        - {}
+      intro-pulse-survey-q4_csd2_2023:
+        answers:
+        - correct: true
+          text: Úplne súhlasím
+        - correct: true
+          text: Súhlasím
+        - correct: true
+          text: Čiastočne súhlasím
+        - correct: true
+          text: Ani jedna z možností
+        - correct: true
+          text: Čiastočne nesúhlasím
+        - correct: true
+          text: Nesúhlasím
+        - correct: true
+          text: Vôbec nesúhlasím
+        questions:
+        - {}
+      intro-pulse-survey-q4_csd3_2023:
+        answers:
+        - correct: true
+          text: Úplne súhlasím
+        - correct: true
+          text: Súhlasím
+        - correct: true
+          text: Čiastočne súhlasím
+        - correct: true
+          text: Ani jedna z možností
+        - correct: true
+          text: Čiastočne nesúhlasím
+        - correct: true
+          text: Nesúhlasím
+        - correct: true
+          text: Vôbec nesúhlasím
+        questions:
+        - {}
+      intro-pulse-survey-q4_csd4_2023:
+        answers:
+        - correct: true
+          text: Úplne súhlasím
+        - correct: true
+          text: Súhlasím
+        - correct: true
+          text: Čiastočne súhlasím
+        - correct: true
+          text: Ani jedna z možností
+        - correct: true
+          text: Čiastočne nesúhlasím
+        - correct: true
+          text: Nesúhlasím
+        - correct: true
+          text: Vôbec nesúhlasím
+        questions:
+        - {}
+      intro-pulse-survey-q4_csd5_2023:
+        answers:
+        - correct: true
+          text: Úplne súhlasím
+        - correct: true
+          text: Súhlasím
+        - correct: true
+          text: Čiastočne súhlasím
+        - correct: true
+          text: Ani jedna z možností
+        - correct: true
+          text: Čiastočne nesúhlasím
+        - correct: true
+          text: Nesúhlasím
+        - correct: true
+          text: Vôbec nesúhlasím
+        questions:
+        - {}
+      intro-pulse-survey-q4_csd6_2023:
+        answers:
+        - correct: true
+          text: Úplne súhlasím
+        - correct: true
+          text: Súhlasím
+        - correct: true
+          text: Čiastočne súhlasím
+        - correct: true
+          text: Ani jedna z možností
+        - correct: true
+          text: Čiastočne nesúhlasím
+        - correct: true
+          text: Nesúhlasím
+        - correct: true
+          text: Vôbec nesúhlasím
+        questions:
+        - {}
+      intro-pulse-survey-q5_csd1_2023:
+        answers:
+        - correct: true
+          text: Úplne súhlasím
+        - correct: true
+          text: Súhlasím
+        - correct: true
+          text: Čiastočne súhlasím
+        - correct: true
+          text: Ani jedna z možností
+        - correct: true
+          text: Čiastočne nesúhlasím
+        - correct: true
+          text: Nesúhlasím
+        - correct: true
+          text: Vôbec nesúhlasím
+        questions:
+        - text: Mám rád/rada informatiku.
+      intro-pulse-survey-q5_csd2_2023:
+        answers:
+        - correct: true
+          text: Úplne súhlasím
+        - correct: true
+          text: Súhlasím
+        - correct: true
+          text: Čiastočne súhlasím
+        - correct: true
+          text: Ani jedna z možností
+        - correct: true
+          text: Čiastočne nesúhlasím
+        - correct: true
+          text: Nesúhlasím
+        - correct: true
+          text: Vôbec nesúhlasím
+        questions:
+        - text: Mám rád/rada informatiku.
+      intro-pulse-survey-q5_csd3_2023:
+        answers:
+        - correct: true
+          text: Úplne súhlasím
+        - correct: true
+          text: Súhlasím
+        - correct: true
+          text: Čiastočne súhlasím
+        - correct: true
+          text: Ani jedna z možností
+        - correct: true
+          text: Čiastočne nesúhlasím
+        - correct: true
+          text: Nesúhlasím
+        - correct: true
+          text: Vôbec nesúhlasím
+        questions:
+        - text: Mám rád/rada informatiku.
+      intro-pulse-survey-q5_csd4_2023:
+        answers:
+        - correct: true
+          text: Úplne súhlasím
+        - correct: true
+          text: Súhlasím
+        - correct: true
+          text: Čiastočne súhlasím
+        - correct: true
+          text: Ani jedna z možností
+        - correct: true
+          text: Čiastočne nesúhlasím
+        - correct: true
+          text: Nesúhlasím
+        - correct: true
+          text: Vôbec nesúhlasím
+        questions:
+        - text: Mám rád/rada informatiku.
+      intro-pulse-survey-q5_csd5_2023:
+        answers:
+        - correct: true
+          text: Úplne súhlasím
+        - correct: true
+          text: Súhlasím
+        - correct: true
+          text: Čiastočne súhlasím
+        - correct: true
+          text: Ani jedna z možností
+        - correct: true
+          text: Čiastočne nesúhlasím
+        - correct: true
+          text: Nesúhlasím
+        - correct: true
+          text: Vôbec nesúhlasím
+        questions:
+        - text: Mám rád/rada informatiku.
+      intro-pulse-survey-q5_csd6_2023:
+        answers:
+        - correct: true
+          text: Úplne súhlasím
+        - correct: true
+          text: Súhlasím
+        - correct: true
+          text: Čiastočne súhlasím
+        - correct: true
+          text: Ani jedna z možností
+        - correct: true
+          text: Čiastočne nesúhlasím
+        - correct: true
+          text: Nesúhlasím
+        - correct: true
+          text: Vôbec nesúhlasím
+        questions:
+        - text: Mám rád/rada informatiku.
       made-choices-about-assignments:
         answers:
         - correct: true
@@ -18328,9 +21373,13 @@ sk-SK:
         display_name: Prispôsob si aplikáciu
       ml-club app-choice parent_2022:
         display_name: Prispôsob si aplikáciu
+      ml-club app-choice parent_2023:
+        display_name: Prispôsob si aplikáciu
       ml-customize apps-practice choice-2021:
         display_name: Prispôsobenie aplikácií – cvičenia
       ml-customize apps-practice choice_2022:
+        display_name: Prispôsobenie aplikácií – cvičenia
+      ml-customize apps-practice choice_2023:
         display_name: Prispôsobenie aplikácií – cvičenia
       ml-good data-isaac data:
         markdown: |
@@ -18338,6 +21387,11 @@ sk-SK:
 
           ## [Klikni sem](https://docs.google.com/spreadsheets/d/161gqtcyWU7qLGF9wxkiAuWjlTcoMaheWOq0aJlLXnvc/copy) a vytvor kópiu Isaacovych údajov.
       ml-good data-isaac data_2022:
+        markdown: |
+          ![](https://images.code.org/4f85627c74a140b1b09599a5095622ff-image-1624988925067.png)
+
+          ## [Klikni sem](https://docs.google.com/spreadsheets/d/161gqtcyWU7qLGF9wxkiAuWjlTcoMaheWOq0aJlLXnvc/copy) a vytvor kópiu Isaacovych údajov.
+      ml-good data-isaac data_2023:
         markdown: |
           ![](https://images.code.org/4f85627c74a140b1b09599a5095622ff-image-1624988925067.png)
 
@@ -18352,6 +21406,11 @@ sk-SK:
           ![](https://images.code.org/af7558eeafd15ef5e9f2fad0a6446c6a-image-1624987665106.png)
 
           ## [Klikni sem](https://docs.google.com/spreadsheets/d/1bVtUc5KrHaBZ4rx6trdYVqjGHIq9J8jBG0Mx2d9nxDM/copy) a vytvor kópiu Kiminych údajov.
+      ml-good data-kim data_2023:
+        markdown: |
+          ![](https://images.code.org/af7558eeafd15ef5e9f2fad0a6446c6a-image-1624987665106.png)
+
+          ## [Klikni sem](https://docs.google.com/spreadsheets/d/1bVtUc5KrHaBZ4rx6trdYVqjGHIq9J8jBG0Mx2d9nxDM/copy) a vytvor kópiu Kiminych údajov.
       ml-good data-kim survey:
         markdown: |
           ![](https://images.code.org/47cb3494b3c90dcc443e373d58b54c6b-image-1624987469212.png)
@@ -18362,9 +21421,16 @@ sk-SK:
           ![](https://images.code.org/47cb3494b3c90dcc443e373d58b54c6b-image-1624987469212.png)
 
           ## [Klikni sem](https://docs.google.com/forms/d/e/1FAIpQLSftxAAvDCXCoPMfzOgYTVYIrVESYYhNfVP-I83eVu9CXFKr-g/viewform) a vyplň Kimin dotazník.
+      ml-good data-kim survey_2023:
+        markdown: |
+          ![](https://images.code.org/47cb3494b3c90dcc443e373d58b54c6b-image-1624987469212.png)
+
+          ## [Klikni sem](https://docs.google.com/forms/d/e/1FAIpQLSftxAAvDCXCoPMfzOgYTVYIrVESYYhNfVP-I83eVu9CXFKr-g/viewform) a vyplň Kimin dotazník.
       ml-intro app lab-book recommender 5-2021:
         display_name: Prispôsob si aplikáciu
       ml-intro app lab-book recommender 5_2022:
+        display_name: Prispôsob si aplikáciu
+      ml-intro app lab-book recommender 5_2023:
         display_name: Prispôsob si aplikáciu
       ml-model card-medical-1-2021:
         markdown: |
@@ -18376,6 +21442,15 @@ sk-SK:
 
           <a href="https://images.code.org/7e56e5f140aca3f49589e5d2670617ad-image-1625084608419.png" target="_blank"><img src="https://images.code.org/7e56e5f140aca3f49589e5d2670617ad-image-1625084608419.png" width="45%" style="float:right; margin: 2px"></a>
       ml-model card-medical-1_2022:
+        markdown: |
+          # ER Recommender V1
+
+          Kliknutím na kartu modelu ju priblížiš a zobrazíš jej väčšiu verziu
+
+          <a href="https://images.code.org/d3e85af576ec6e92232292140fe9dbcf-image-1625084534081.png" target="_blank"><img src="https://images.code.org/d3e85af576ec6e92232292140fe9dbcf-image-1625084534081.png" width="45%" style="float:left; margin: 2px;"></a>
+
+          <a href="https://images.code.org/7e56e5f140aca3f49589e5d2670617ad-image-1625084608419.png" target="_blank"><img src="https://images.code.org/7e56e5f140aca3f49589e5d2670617ad-image-1625084608419.png" width="45%" style="float:right; margin: 2px"></a>
+      ml-model card-medical-1_2023:
         markdown: |
           # ER Recommender V1
 
@@ -18410,6 +21485,19 @@ sk-SK:
           <img src="https://images.code.org/53e71ad9c3b29438ea84de5d67b4bf96-image-1625084729402.png" width="45%" style="float:right; margin: 2px"></a>
 
           ![]()
+      ml-model card-medical-2_2023:
+        markdown: |
+          # Northern Lights ER Priority
+
+          Kliknutím na kartu modelu ju priblížiš a zobrazíš jej väčšiu verziu
+
+          <a href="https://images.code.org/69fbca920c052d6623787af0f4da7dfd-image-1625084706519.png" target="_blank">
+          <img src="https://images.code.org/69fbca920c052d6623787af0f4da7dfd-image-1625084706519.png" width="45%" style="float:left; margin: 2px;"></a>
+
+          <a href="https://images.code.org/53e71ad9c3b29438ea84de5d67b4bf96-image-1625084729402.png" target="_blank">
+          <img src="https://images.code.org/53e71ad9c3b29438ea84de5d67b4bf96-image-1625084729402.png" width="45%" style="float:right; margin: 2px"></a>
+
+          ![]()
       ml-model card-medical-3-2021:
         markdown: |
           # AI Medical Recommender
@@ -18432,11 +21520,26 @@ sk-SK:
 
           <a href="https://images.code.org/dee6c18af60a6c7e56fc29d5bd249853-image-1625084891350.png" target="_blank">
           <img src="https://images.code.org/dee6c18af60a6c7e56fc29d5bd249853-image-1625084891350.png" width="45%" style="float:right; margin: 2px"></a>
+      ml-model card-medical-3_2023:
+        markdown: |
+          # AI Medical Recommender
+
+          Kliknutím na kartu modelu ju priblížiš a zobrazíš jej väčšiu verziu
+
+          <a href="https://images.code.org/c5180010138ee3104705580dd2ff63c4-image-1625084861215.png" target="_blank">
+          <img src="https://images.code.org/c5180010138ee3104705580dd2ff63c4-image-1625084861215.png" width="45%" style="float:left; margin: 2px;"></a>
+
+          <a href="https://images.code.org/dee6c18af60a6c7e56fc29d5bd249853-image-1625084891350.png" target="_blank">
+          <img src="https://images.code.org/dee6c18af60a6c7e56fc29d5bd249853-image-1625084891350.png" width="45%" style="float:right; margin: 2px"></a>
       ml-models in applab-choice parent:
         description: Precvič si, čo si sa práve naučil(a) na jednej alebo viacerých
           z nasledujúcich aktivít.
         display_name: Karta modelu – cvičenia
       ml-models in applab-choice parent_2022:
+        description: Precvič si, čo si sa práve naučil(a) na jednej alebo viacerých
+          z nasledujúcich aktivít.
+        display_name: Karta modelu – cvičenia
+      ml-models in applab-choice parent_2023:
         description: Precvič si, čo si sa práve naučil(a) na jednej alebo viacerých
           z nasledujúcich aktivít.
         display_name: Karta modelu – cvičenia
@@ -18450,12 +21553,22 @@ sk-SK:
           ![](https://images.code.org/8f69603c91afe4e7beb15a6c4e3db945-image-1625589493100.png)
 
           ## [Klikni sem](https://docs.google.com/forms/d/e/1FAIpQLSfQ0hr1uImhBjvqzv6wnyUaa-WDDgsub2O0vx15eqz7azICdA/viewform) a vyplň dotazník Odporúčanie topánok.
+      ml-models-shoe survey_2023:
+        markdown: |
+          ![](https://images.code.org/8f69603c91afe4e7beb15a6c4e3db945-image-1625589493100.png)
+
+          ## [Klikni sem](https://docs.google.com/forms/d/e/1FAIpQLSfQ0hr1uImhBjvqzv6wnyUaa-WDDgsub2O0vx15eqz7azICdA/viewform) a vyplň dotazník Odporúčanie topánok.
       ml-plan survey-copy form:
         markdown: |
           # Skopírovanie Formulára Google
 
           ## [Klikni sem](https://docs.google.com/forms/d/1Yzoug2iW-_GUWrQJo4jIlfuKNtelVNrer1PvT4rXF7w/copy) a vytvor si kópiu šablóny prieskumu, ktorú budeme dnes používať.
       ml-plan survey-copy form_2022:
+        markdown: |
+          # Skopírovanie Formulára Google
+
+          ## [Klikni sem](https://docs.google.com/forms/d/1Yzoug2iW-_GUWrQJo4jIlfuKNtelVNrer1PvT4rXF7w/copy) a vytvor si kópiu šablóny prieskumu, ktorú budeme dnes používať.
+      ml-plan survey-copy form_2023:
         markdown: |
           # Skopírovanie Formulára Google
 
@@ -18480,9 +21593,21 @@ sk-SK:
 
           <a href="https://images.code.org/1fb88a3553f16cd9a576d54afe8757b9-image-1625509299810.png" target="_blank"><img src="https://images.code.org/1fb88a3553f16cd9a576d54afe8757b9-image-1625509299810.png" width="45%" style="float:right; margin: 2px"></a>
 
+      ml-use model card-pet model card_2023:
+        markdown: |+
+          # Odporúčanie domáceho zvieratka – karta modelu
+
+          **S partnerom:** Ako dokážete rozlíšiť kategorické vlastnosti a číselné vlastnosti na karte modelu?
+
+          <a href="https://images.code.org/e38768393e3033e60dc9dc2696e3df7d-image-1625085031146.png" target="_blank"><img src="https://images.code.org/e38768393e3033e60dc9dc2696e3df7d-image-1625085031146.png" width="45%" style="float:left; margin: 2px;"></a>
+
+          <a href="https://images.code.org/1fb88a3553f16cd9a576d54afe8757b9-image-1625509299810.png" target="_blank"><img src="https://images.code.org/1fb88a3553f16cd9a576d54afe8757b9-image-1625509299810.png" width="45%" style="float:right; margin: 2px"></a>
+
       ml-use models applab-practice choice-2021:
         display_name: Modely v App Labe – cvičenia
       ml-use models applab-practice choice_2022:
+        display_name: Modely v App Labe – cvičenia
+      ml-use models applab-practice choice_2023:
         display_name: Modely v App Labe – cvičenia
       naturally-better-at-cs:
         answers:
@@ -18521,6 +21646,24 @@ sk-SK:
         questions:
         - text: Myslím si, niektorým ľuďom ide informatika od prírody lepšie než iným.
       naturally-better-at-cs_2022:
+        answers:
+        - correct: true
+          text: Úplne súhlasím
+        - correct: true
+          text: Súhlasím
+        - correct: true
+          text: Čiastočne súhlasím
+        - correct: true
+          text: Ani jedna z možností
+        - correct: true
+          text: Čiastočne nesúhlasím
+        - correct: true
+          text: Nesúhlasím
+        - correct: true
+          text: Vôbec nesúhlasím
+        questions:
+        - text: Myslím si, niektorým ľuďom ide informatika od prírody lepšie než iným.
+      naturally-better-at-cs_copy2_2023:
         answers:
         - correct: true
           text: Úplne súhlasím
@@ -18615,6 +21758,24 @@ sk-SK:
         questions:
         - {}
       post-assessment survey q31-a-2017b:
+        answers:
+        - correct: true
+          text: Úplne súhlasím
+        - correct: true
+          text: Súhlasím
+        - correct: true
+          text: Čiastočne súhlasím
+        - correct: true
+          text: Ani jedna z možností
+        - correct: true
+          text: Čiastočne nesúhlasím
+        - correct: true
+          text: Nesúhlasím
+        - correct: true
+          text: Vôbec nesúhlasím
+        questions:
+        - {}
+      post-assessment survey q31-a-2017b_mb2022:
         answers:
         - correct: true
           text: Úplne súhlasím
@@ -19140,6 +22301,27 @@ sk-SK:
         questions:
         - text: Čo sú pre teba dva hlavné dôvody na absolvovanie tohto kurzu? (vyber
             maximálne dva).
+      reasons-took-course-csd_2023:
+        answers:
+        - correct: true
+          text: Mám kamarátov, ktorí ho absolvovali
+        - correct: true
+          text: Veľmi sa mi páči učiteľ
+        - correct: true
+          text: Myslel(a) som si, že to bude zábava
+        - correct: true
+          text: Chcel(a) som sa naučiť viac o informatike
+        - correct: true
+          text: Myslel(a) som si, že to bude ľahké
+        - correct: true
+          text: Myslel(a) som si, že to bude výzva
+        - correct: true
+          text: Je povinný alebo mi ho pridelili.
+        - correct: true
+          text: Iné dôvody, ktoré nie sú uvedené
+        questions:
+        - text: Čo sú pre teba dva hlavné dôvody na absolvovanie tohto kurzu? (vyber
+            maximálne dva).
       same-ability:
         answers:
         - correct: true
@@ -19167,6 +22349,14 @@ sk-SK:
         questions:
         - text: Motivoval ťa k účasti na tomto kurze niekto iný?
       someone_else_encourage_2022:
+        answers:
+        - correct: true
+          text: áno
+        - correct: true
+          text: nie
+        questions:
+        - text: Motivoval ťa k účasti na tomto kurze niekto iný?
+      someone_else_encourage_2023:
         answers:
         - correct: true
           text: áno
@@ -19202,6 +22392,14 @@ sk-SK:
         questions:
         - text: Motivoval ťa k účasti na tomto kurze učiteľ z tvojej školy?
       teacher_encourage_2022:
+        answers:
+        - correct: true
+          text: áno
+        - correct: true
+          text: nie
+        questions:
+        - text: Motivoval ťa k účasti na tomto kurze učiteľ z tvojej školy?
+      teacher_encourage_2023:
         answers:
         - correct: true
           text: áno
@@ -19306,6 +22504,42 @@ sk-SK:
           text: Vôbec nesúhlasím
         questions:
         - text: Na tomto kurze informatiky budem môcť skutočne byť sám/sama sebou.
+      will-be-myself-in-cs_2023:
+        answers:
+        - correct: true
+          text: Úplne súhlasím
+        - correct: true
+          text: Súhlasím
+        - correct: true
+          text: Čiastočne súhlasím
+        - correct: true
+          text: Ani jedna z možností
+        - correct: true
+          text: Čiastočne nesúhlasím
+        - correct: true
+          text: Nesúhlasím
+        - correct: true
+          text: Vôbec nesúhlasím
+        questions:
+        - text: Na tomto kurze informatiky budem môcť skutočne byť sám/sama sebou.
+      will-be-myself-in-cs_mb2022:
+        answers:
+        - correct: true
+          text: Úplne súhlasím
+        - correct: true
+          text: Súhlasím
+        - correct: true
+          text: Čiastočne súhlasím
+        - correct: true
+          text: Ani jedna z možností
+        - correct: true
+          text: Čiastočne nesúhlasím
+        - correct: true
+          text: Nesúhlasím
+        - correct: true
+          text: Vôbec nesúhlasím
+        questions:
+        - text: Na tomto kurze informatiky budem môcť skutočne byť sám/sama sebou.
       worried-less-capable:
         answers:
         - correct: true
@@ -19343,6 +22577,24 @@ sk-SK:
         questions:
         - text: Obávam sa, že ostatní žiaci ma budú vnímať ako menej schopného/schopnú.
       worried-seen-incapable_2022:
+        answers:
+        - correct: true
+          text: Úplne súhlasím
+        - correct: true
+          text: Súhlasím
+        - correct: true
+          text: Čiastočne súhlasím
+        - correct: true
+          text: Ani jedna z možností
+        - correct: true
+          text: Čiastočne nesúhlasím
+        - correct: true
+          text: Nesúhlasím
+        - correct: true
+          text: Vôbec nesúhlasím
+        questions:
+        - text: Obávam sa, že ostatní žiaci ma budú vnímať ako menej schopného/schopnú.
+      worried-seen-incapable_2023:
         answers:
         - correct: true
           text: Úplne súhlasím

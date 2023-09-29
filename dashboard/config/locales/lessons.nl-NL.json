@@ -580,6 +580,48 @@
         "express-2022/Dance Party": {
           "name": "Dansfeest"
         },
+        "csd1-2023/Storage": {
+          "name": "Opslag"
+        },
+        "csd2-2023/Intellectual Property": {
+          "name": "Intellectuele Eigendom"
+        },
+        "csd2-2023/Using Images": {
+          "name": "Afbeeldingen gebruiken"
+        },
+        "csd3-2023/Variables": {
+          "name": "Variabelen"
+        },
+        "csd3-2023/Sprites": {
+          "name": "Sprites"
+        },
+        "csd3-2023/Text": {
+          "name": "Tekst"
+        },
+        "csd3-2023/Conditionals": {
+          "name": "Voorwaardelijke instructies"
+        },
+        "csd3-2023/Velocity": {
+          "name": "Snelheid"
+        },
+        "csd3-2023/Collision Detection": {
+          "name": "Botsingdetectie"
+        },
+        "csd3-2023/Functions": {
+          "name": "Functies"
+        },
+        "csd5-2023/Representing Images": {
+          "name": "Het voorstellen van afbeeldingen"
+        },
+        "csd5-2023/Representing Numbers": {
+          "name": "Het voorstellen van getallen"
+        },
+        "csd6a-2023/Functions": {
+          "name": "Functies"
+        },
+        "csd6b-2023/Functions": {
+          "name": "Functies"
+        },
         "coursea-2023/Happy Maps": {
           "name": "Vrolijke Routes"
         },

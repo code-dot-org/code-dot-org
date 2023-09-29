@@ -10,6 +10,7 @@ th:
         error:
           future: ไม่สามารถทำได้ในอนาคต
         finish_sign_up_header: เสร็จสิ้นการสร้างบัญชีผู้ใช้ของคุณ
+        finish_sign_up_header_error: 'โปรดแก้ไขข้อผิดพลาดต่อไปนี้:'
         gender: เพศ
         locale: ภาษา
         name: ชื่อที่ใช้แสดง
@@ -21,6 +22,7 @@ th:
         personal_email_markdown: ที่อยู่อีเมล์ส่วนบุคคล [(ลิกที่นี่หากคุณยังไม่มีที่อยู่อีเมล์)](%{url})
         reset_password_token: ลิงก์รีเซ็ตรหัสผ่านที่คุณได้ติดตาม
         us_state: รัฐ
+        user_type: ประเภทบัญชี
         username: ชื่อผู้ใช้
         verified_teacher: ครูที่ยืนยันแล้ว
     errors:

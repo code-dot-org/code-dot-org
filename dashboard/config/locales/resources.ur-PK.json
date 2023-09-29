@@ -5001,6 +5001,37 @@
           "url": "https://www.youtube.com/watch?v=rgbZAWnOWOo",
           "type": "ویڈیو"
         },
+        "_template_ai_code_of_ethics/ai-ethics/2023": {
+          "type": "سلائیڈز"
+        },
+        "ai_code_of_ethics/ai-ethics/2023": {
+          "type": "سلائیڈز"
+        },
+        "ethics_and_ai_privacy_the_future_of_work/ai-ethics/2023": {
+          "type": "ویڈیو"
+        },
+        "character_card_individual_docs_/ai-ethics/2023": {
+          "type": "وسیلہ"
+        },
+        "character_cards/ai-ethics/2023": {
+          "type": "وسیلہ"
+        },
+        "generative_ai_activity_instructions/ai-ethics/2023": {
+          "type": "وسیلہ"
+        },
+        "generative_ai_news_articles/ai-ethics/2023": {
+          "type": "وسیلہ"
+        },
+        "group_scenarios/ai-ethics/2023": {
+          "type": "وسیلہ"
+        },
+        "how_ai_works_large_language_models/ai-ethics/2023": {
+          "url": "https://www.youtube.com/watch?v=X-AWdfSFCHQ",
+          "type": "ویڈیو"
+        },
+        "societal_impact_of_generative_ai/ai-ethics/2023": {
+          "type": "سلائیڈز"
+        },
         "cs_connections_landing_page/csc-adaptations/2023": {
           "name": "CS کنکشن لینڈنگ صفحہ",
           "url": "https://code.org/educate/csc",
@@ -5542,6 +5573,1157 @@
         "poem_app_example/poetry/2023": {
           "name": "نظم اپلی کیشن مثال",
           "url": "https://studio.code.org/projects/poetry_hoc/j3TXDXNhz0XEsH4Xjk_rT9buBHYCplirIKtY_Pg_bYo",
+          "type": "وسیلہ"
+        },
+        "teacher_forum/csd/2023": {
+          "name": "ٹیچر فورم"
+        },
+        "the_problem_solving_process_2/csd/2023": {
+          "name": "مسئلہ حل کرنے کا عمل"
+        },
+        "intro_to_problem_solving/csd/2023": {
+          "type": "سلائیڈز"
+        },
+        "problem_solving_process_1/csd/2023": {
+          "type": "ویڈیو"
+        },
+        "the_problem_solving_process/csd/2023": {
+          "type": "ویڈیو"
+        },
+        "the_problem_solving_process_1/csd/2023": {
+          "name": "مسئلہ حل کرنے کا عمل",
+          "type": "سلائیڈز"
+        },
+        "the_problem_solving_process_5/csd/2023": {
+          "name": "مسئلہ حل کرنے کا عمل"
+        },
+        "exploring_problem_solving/csd/2023": {
+          "type": "سلائیڈز"
+        },
+        "solving_problems/csd/2023": {
+          "type": "جوابی کلید"
+        },
+        "what_is_a_computer/csd/2023": {
+          "type": "ویڈیو"
+        },
+        "what_is_a_computer_/csd/2023": {
+          "name": "کمپیوٹر کیا ہے؟"
+        },
+        "what_is_a_computer_1/csd/2023": {
+          "type": "سلائیڈز"
+        },
+        "input_and_output_2/csd/2023": {
+          "type": "سلائیڈز"
+        },
+        "apps_with_processing_2/csd/2023": {
+          "type": "سلائیڈز"
+        },
+        "apps_with_storage_2/csd/2023": {
+          "type": "سلائیڈز"
+        },
+        "what_do_computers_do/csd/2023": {
+          "type": "ویڈیو"
+        },
+        "apps_and_problem_solving_-_student_checklist/csd/2023": {
+          "type": "وسیلہ"
+        },
+        "apps_and_problem_solving_1/csd/2023": {
+          "type": "پیر کا جائزہ"
+        },
+        "apps_and_problem_solving_2/csd/2023": {
+          "type": "روبرک"
+        },
+        "project_-_propose_an_app/csd/2023": {
+          "type": "سلائیڈز"
+        },
+        "intro_to_problem_solving_newspapers_/csd/2023": {
+          "type": "سلائیڈز"
+        },
+        "intro_to_problem_solving_spaghetti_/csd/2023": {
+          "type": "سلائیڈز"
+        },
+        "intro_to_problem_solving_paper_towels_/csd/2023": {
+          "type": "سلائیڈز"
+        },
+        "exploring_problem_solving_animals_/csd/2023": {
+          "type": "سلائیڈز"
+        },
+        "tangrams/csd/2023": {
+          "type": "وسیلہ"
+        },
+        "exploring_problem_solving_games_/csd/2023": {
+          "type": "سلائیڈز"
+        },
+        "_key_warm_up_word_search/csd/2023": {
+          "type": "جوابی کلید"
+        },
+        "_key_web_design_for_users/csd/2023": {
+          "type": "جوابی کلید"
+        },
+        "exploring_web_pages_2/csd/2023": {
+          "type": "سلائیڈز"
+        },
+        "problem_solving_and_design/csd/2023": {
+          "type": "وسیلہ"
+        },
+        "web_design_template/csd/2023": {
+          "type": "وسیلہ"
+        },
+        "html_tags/csd/2023": {
+          "type": "وسیلہ"
+        },
+        "intro_to_html/csd/2023": {
+          "type": "سلائیڈز"
+        },
+        "intro_to_web_lab_part_2/csd/2023": {
+          "type": "ویڈیو"
+        },
+        "pair_programming/csd/2023": {
+          "name": "جوڑی پروگرامنگ",
+          "type": "ویڈیو"
+        },
+        "video_intro_to_web_lab_part_1/csd/2023": {
+          "type": "ویڈیو"
+        },
+        "formatting_html/csd/2023": {
+          "type": "وسیلہ"
+        },
+        "headings/csd/2023": {
+          "type": "سلائیڈز"
+        },
+        "headings_and_paragraphs/csd/2023": {
+          "type": "وسیلہ"
+        },
+        "lists/csd/2023": {
+          "name": "فہرستیں",
+          "type": "وسیلہ"
+        },
+        "video_debugging/csd/2023": {
+          "type": "ویڈیو"
+        },
+        "video_pair_programming/csd/2023": {
+          "type": "ویڈیو"
+        },
+        "html_web_page/csd/2023": {
+          "type": "روبرک"
+        },
+        "html_web_page_1/csd/2023": {
+          "type": "پیر کا جائزہ"
+        },
+        "mini-project_html_web_page/csd/2023": {
+          "type": "سلائیڈز"
+        },
+        "problem_solving_process_with_programming/csd/2023": {
+          "type": "وسیلہ"
+        },
+        "digital_footprint/csd/2023": {
+          "type": "سلائیڈز"
+        },
+        "intro_to_css_-_part_1/csd/2023": {
+          "name": "سی ایس ایس کا تعارف - حصہ 1",
+          "type": "ویڈیو"
+        },
+        "intro_to_css_-_part_2/csd/2023": {
+          "name": "سی ایس ایس کا تعارف - حصہ 2",
+          "type": "ویڈیو"
+        },
+        "style_sheets/csd/2023": {
+          "type": "وسیلہ"
+        },
+        "styling_text_with_css/csd/2023": {
+          "type": "سلائیڈز"
+        },
+        "text_properties/csd/2023": {
+          "type": "وسیلہ"
+        },
+        "mini-project_your_personal_style/csd/2023": {
+          "type": "سلائیڈز"
+        },
+        "your_personal_style/csd/2023": {
+          "type": "روبرک"
+        },
+        "your_personal_style_1/csd/2023": {
+          "type": "پیر کا جائزہ"
+        },
+        "creative_commons_overview/csd/2023": {
+          "type": "ویڈیو"
+        },
+        "intellectual_property/csd/2023": {
+          "type": "سلائیڈز"
+        },
+        "creative_commons_search/csd/2023": {
+          "type": "وسیلہ"
+        },
+        "images_in_html/csd/2023": {
+          "type": "وسیلہ"
+        },
+        "using_images/csd/2023": {
+          "type": "سلائیڈز"
+        },
+        "websites_for_expression/csd/2023": {
+          "type": "سلائیڈز"
+        },
+        "styling_elements_with_css/csd/2023": {
+          "type": "سلائیڈز"
+        },
+        "your_web_page_prepare/csd/2023": {
+          "type": "سلائیڈز"
+        },
+        "personal_web_page/csd/2023": {
+          "type": "پیر کا جائزہ"
+        },
+        "personal_web_page_-_student_checklist/csd/2023": {
+          "type": "وسیلہ"
+        },
+        "personal_web_page_1/csd/2023": {
+          "type": "روبرک"
+        },
+        "project_-_personal_web_page/csd/2023": {
+          "type": "سلائیڈز"
+        },
+        "publishing_your_website/csd/2023": {
+          "type": "ویڈیو"
+        },
+        "websites_for_a_purpose_2/csd/2023": {
+          "type": "سلائیڈز"
+        },
+        "team_problem_solving/csd/2023": {
+          "type": "سلائیڈز"
+        },
+        "video_managing_disagreement/csd/2023": {
+          "type": "ویڈیو"
+        },
+        "video_teamwork/csd/2023": {
+          "type": "ویڈیو"
+        },
+        "sources_and_research/csd/2023": {
+          "type": "سلائیڈز"
+        },
+        "video_how_search_works/csd/2023": {
+          "name": "تلاش کیسے کام کرتا ہے",
+          "type": "ویڈیو"
+        },
+        "classes/csd/2023": {
+          "type": "وسیلہ"
+        },
+        "css_classes/csd/2023": {
+          "type": "سلائیڈز"
+        },
+        "planning_a_multi-page_site/csd/2023": {
+          "type": "سلائیڈز"
+        },
+        "website_for_a_purpose/csd/2023": {
+          "type": "روبرک"
+        },
+        "hyperlinks/csd/2023": {
+          "type": "وسیلہ"
+        },
+        "linking_pages/csd/2023": {
+          "type": "سلائیڈز"
+        },
+        "project_-_website_for_a_purpose/csd/2023": {
+          "type": "سلائیڈز"
+        },
+        "peer_review_and_final_touches/csd/2023": {
+          "type": "سلائیڈز"
+        },
+        "website_for_a_purpose_1/csd/2023": {
+          "type": "پیر کا جائزہ"
+        },
+        "_warm_up_word_search_key_/csd/2023": {
+          "type": "جوابی کلید"
+        },
+        "programming_for_a_purpose/csd/2023": {
+          "type": "سلائیڈز"
+        },
+        "animation_and_game_design_template/csd/2023": {
+          "type": "وسیلہ"
+        },
+        "plotting_shapes/csd/2023": {
+          "type": "سلائیڈز"
+        },
+        "drawing_in_game_lab/csd/2023": {
+          "type": "سلائیڈز"
+        },
+        "drawing_in_game_lab_-_part_1/csd/2023": {
+          "type": "ویڈیو"
+        },
+        "drawing_in_game_lab_-_part_2/csd/2023": {
+          "type": "ویڈیو"
+        },
+        "drawing_shapes_1/csd/2023": {
+          "type": "وسیلہ"
+        },
+        "shapes_and_parameters/csd/2023": {
+          "type": "وسیلہ"
+        },
+        "shapes_and_parameters_1/csd/2023": {
+          "type": "سلائیڈز"
+        },
+        "introduction_to_variables/csd/2023": {
+          "type": "ویڈیو"
+        },
+        "naming_variables/csd/2023": {
+          "type": "وسیلہ"
+        },
+        "variables/csd/2023": {
+          "name": "متغیرات",
+          "type": "وسیلہ"
+        },
+        "variables_1/csd/2023": {
+          "name": "متغیرات",
+          "type": "ویڈیو"
+        },
+        "variables_2/csd/2023": {
+          "name": "متغیرات",
+          "type": "سلائیڈز"
+        },
+        "random_numbers/csd/2023": {
+          "type": "وسیلہ"
+        },
+        "random_numbers_1/csd/2023": {
+          "type": "سلائیڈز"
+        },
+        "mini-project_-_robot_faces/csd/2023": {
+          "type": "سلائیڈز"
+        },
+        "problem_solving_with_programming/csd/2023": {
+          "type": "وسیلہ"
+        },
+        "robot_faces/csd/2023": {
+          "type": "روبرک"
+        },
+        "animation_tab/csd/2023": {
+          "type": "وسیلہ"
+        },
+        "introduction_to_sprites/csd/2023": {
+          "type": "ویڈیو"
+        },
+        "sprites/csd/2023": {
+          "type": "وسیلہ"
+        },
+        "sprites_1/csd/2023": {
+          "type": "سلائیڈز"
+        },
+        "the_animation_tab/csd/2023": {
+          "name": "حرکت پذیری ٹیب",
+          "type": "ویڈیو"
+        },
+        "sprite_properties/csd/2023": {
+          "type": "وسیلہ"
+        },
+        "sprite_properties_1/csd/2023": {
+          "type": "سلائیڈز"
+        },
+        "sprite_properties_needs_updating_/csd/2023": {
+          "type": "ویڈیو"
+        },
+        "text/csd/2023": {
+          "name": "متن",
+          "type": "سلائیڈز"
+        },
+        "captioned_scenes/csd/2023": {
+          "type": "روبرک"
+        },
+        "mini-project_-_captioned_scenes/csd/2023": {
+          "type": "سلائیڈز"
+        },
+        "flipbook_example_-_by_marnic_bos/csd/2023": {
+          "type": "ویڈیو"
+        },
+        "introduction_to_the_draw_loop/csd/2023": {
+          "type": "ویڈیو"
+        },
+        "the_draw_loop/csd/2023": {
+          "type": "وسیلہ"
+        },
+        "the_draw_loop_1/csd/2023": {
+          "type": "سلائیڈز"
+        },
+        "sprite_movement/csd/2023": {
+          "type": "ویڈیو"
+        },
+        "sprite_movement_1/csd/2023": {
+          "type": "سلائیڈز"
+        },
+        "animated_scene/csd/2023": {
+          "type": "روبرک"
+        },
+        "mini-project_-_animation/csd/2023": {
+          "type": "سلائیڈز"
+        },
+        "boolean_expressions/csd/2023": {
+          "name": "بولین اظہار",
+          "type": "ویڈیو"
+        },
+        "booleans_and_comparison_operators/csd/2023": {
+          "type": "وسیلہ"
+        },
+        "conditional_statements/csd/2023": {
+          "name": "مشروط بیانات",
+          "type": "ویڈیو"
+        },
+        "conditionals/csd/2023": {
+          "name": "شرائط",
+          "type": "سلائیڈز"
+        },
+        "if_statements/csd/2023": {
+          "type": "وسیلہ"
+        },
+        "keyboard_input/csd/2023": {
+          "type": "سلائیڈز"
+        },
+        "if-else_statements/csd/2023": {
+          "type": "وسیلہ"
+        },
+        "if_else_statements/csd/2023": {
+          "name": "اگر/اور بیانات",
+          "type": "ویڈیو"
+        },
+        "mouse_input/csd/2023": {
+          "type": "سلائیڈز"
+        },
+        "extra_code_in_challenge_levels/csd/2023": {
+          "type": "وسیلہ"
+        },
+        "interactive_card_-_student_checklist/csd/2023": {
+          "type": "وسیلہ"
+        },
+        "interactive_card_3/csd/2023": {
+          "type": "روبرک"
+        },
+        "project_-_interactive_card/csd/2023": {
+          "type": "سلائیڈز"
+        },
+        "velocity/csd/2023": {
+          "name": "سمتار",
+          "type": "ویڈیو"
+        },
+        "velocity_1/csd/2023": {
+          "name": "سمتار",
+          "type": "وسیلہ"
+        },
+        "velocity_2/csd/2023": {
+          "name": "سمتار",
+          "type": "سلائیڈز"
+        },
+        "collision_detection_1/csd/2023": {
+          "type": "وسیلہ"
+        },
+        "collision_detection_2/csd/2023": {
+          "type": "سلائیڈز"
+        },
+        "mini-project_-_side_scroller/csd/2023": {
+          "type": "سلائیڈز"
+        },
+        "side_scroller/csd/2023": {
+          "type": "روبرک"
+        },
+        "complex_sprite_movement/csd/2023": {
+          "type": "سلائیڈز"
+        },
+        "velocity_and_the_counter_pattern/csd/2023": {
+          "type": "وسیلہ"
+        },
+        "collisions/csd/2023": {
+          "type": "سلائیڈز"
+        },
+        "flyer_game/csd/2023": {
+          "type": "روبرک"
+        },
+        "mini-project_-_flyer_game/csd/2023": {
+          "type": "سلائیڈز"
+        },
+        "functions/csd/2023": {
+          "name": "افعال",
+          "type": "ویڈیو"
+        },
+        "functions_1/csd/2023": {
+          "name": "افعال",
+          "type": "وسیلہ"
+        },
+        "functions_2/csd/2023": {
+          "name": "افعال",
+          "type": "سلائیڈز"
+        },
+        "the_game_design_process/csd/2023": {
+          "type": "سلائیڈز"
+        },
+        "using_the_game_design_process/csd/2023": {
+          "type": "سلائیڈز"
+        },
+        "make_your_own_game_-_student_checklist/csd/2023": {
+          "type": "وسیلہ"
+        },
+        "make_your_own_game_3/csd/2023": {
+          "type": "روبرک"
+        },
+        "project_-_design_a_game/csd/2023": {
+          "type": "سلائیڈز"
+        },
+        "designing_with_empathy_2/csd/2023": {
+          "type": "سلائیڈز"
+        },
+        "understanding_your_user/csd/2023": {
+          "type": "سلائیڈز"
+        },
+        "the_design_thinking_process/csd/2023": {
+          "type": "ویڈیو"
+        },
+        "user_centered_design_-_define_and_prepare/csd/2023": {
+          "type": "سلائیڈز"
+        },
+        "user_centered_design_-_try_and_reflect/csd/2023": {
+          "type": "سلائیڈز"
+        },
+        "user_interface_screens/csd/2023": {
+          "type": "وسیلہ"
+        },
+        "user_interfaces/csd/2023": {
+          "type": "سلائیڈز"
+        },
+        "feedback_and_testing/csd/2023": {
+          "type": "سلائیڈز"
+        },
+        "prototype_feedback/csd/2023": {
+          "type": "وسیلہ"
+        },
+        "example_user_interviews/csd/2023": {
+          "type": "وسیلہ"
+        },
+        "identifying_user_needs/csd/2023": {
+          "type": "سلائیڈز"
+        },
+        "paper_prototypes/csd/2023": {
+          "type": "روبرک"
+        },
+        "project_-_paper_prototype/csd/2023": {
+          "type": "سلائیڈز"
+        },
+        "designing_apps_for_good/csd/2023": {
+          "type": "سلائیڈز"
+        },
+        "market_research_-_research_areas/csd/2023": {
+          "type": "وسیلہ"
+        },
+        "market_research_2/csd/2023": {
+          "type": "سلائیڈز"
+        },
+        "exploring_ui_elements/csd/2023": {
+          "type": "سلائیڈز"
+        },
+        "build_a_paper_prototype/csd/2023": {
+          "type": "سلائیڈز"
+        },
+        "design_mode/csd/2023": {
+          "type": "وسیلہ"
+        },
+        "design_mode_elements/csd/2023": {
+          "type": "وسیلہ"
+        },
+        "prototype_testing/csd/2023": {
+          "type": "سلائیڈز"
+        },
+        "what_s_for_lunch_testing/csd/2023": {
+          "type": "ویڈیو"
+        },
+        "design_mode_in_app_lab/csd/2023": {
+          "type": "سلائیڈز"
+        },
+        "intro_to_design_mode/csd/2023": {
+          "type": "ویڈیو"
+        },
+        "model_screen_design/csd/2023": {
+          "type": "وسیلہ"
+        },
+        "build_a_digital_prototype/csd/2023": {
+          "type": "سلائیڈز"
+        },
+        "events_in_app_lab/csd/2023": {
+          "type": "ویڈیو"
+        },
+        "events_in_app_lab_1/csd/2023": {
+          "type": "ویڈیو"
+        },
+        "events_in_app_lab_2/csd/2023": {
+          "type": "سلائیڈز"
+        },
+        "changing_screens/csd/2023": {
+          "type": "وسیلہ"
+        },
+        "importing_screens/csd/2023": {
+          "type": "وسیلہ"
+        },
+        "linking_prototype_screens/csd/2023": {
+          "type": "سلائیڈز"
+        },
+        "multi-screen_apps/csd/2023": {
+          "type": "وسیلہ"
+        },
+        "responding_to_user_input/csd/2023": {
+          "type": "وسیلہ"
+        },
+        "testing_the_app/csd/2023": {
+          "type": "سلائیڈز"
+        },
+        "bugs_and_features_2/csd/2023": {
+          "type": "سلائیڈز"
+        },
+        "updating_your_prototype_1/csd/2023": {
+          "type": "سلائیڈز"
+        },
+        "app_presentation/csd/2023": {
+          "type": "روبرک"
+        },
+        "project_-_app_presentation/csd/2023": {
+          "type": "سلائیڈز"
+        },
+        "meals_data/csd/2023": {
+          "type": "وسیلہ"
+        },
+        "representation_matters_2/csd/2023": {
+          "type": "سلائیڈز"
+        },
+        "patterns_and_representation/csd/2023": {
+          "type": "سلائیڈز"
+        },
+        "ascii_and_binary_representation/csd/2023": {
+          "type": "سلائیڈز"
+        },
+        "ascii_challenges_1/csd/2023": {
+          "type": "جوابی کلید"
+        },
+        "ascii_text/csd/2023": {
+          "type": "وسیلہ"
+        },
+        "representing_images/csd/2023": {
+          "type": "سلائیڈز"
+        },
+        "binary_and_data/csd/2023": {
+          "type": "ویڈیو"
+        },
+        "representing_numbers_1/csd/2023": {
+          "type": "سلائیڈز"
+        },
+        "combining_representations/csd/2023": {
+          "type": "سلائیڈز"
+        },
+        "keeping_data_secret/csd/2023": {
+          "type": "سلائیڈز"
+        },
+        "medical_records_1/csd/2023": {
+          "type": "جوابی کلید"
+        },
+        "create_a_representation_2/csd/2023": {
+          "type": "روبرک"
+        },
+        "create_a_representation_3/csd/2023": {
+          "type": "سلائیڈز"
+        },
+        "problem_solving_with_data_2/csd/2023": {
+          "type": "سلائیڈز"
+        },
+        "structuring_data_1/csd/2023": {
+          "type": "سلائیڈز"
+        },
+        "interpreting_data_2/csd/2023": {
+          "type": "وسیلہ"
+        },
+        "interpreting_data_3/csd/2023": {
+          "type": "سلائیڈز"
+        },
+        "making_decisions_with_data_2/csd/2023": {
+          "type": "سلائیڈز"
+        },
+        "problem_solving_process_with_data/csd/2023": {
+          "type": "وسیلہ"
+        },
+        "automating_data_decisions_1/csd/2023": {
+          "type": "وسیلہ"
+        },
+        "automating_data_decisions_3/csd/2023": {
+          "type": "سلائیڈز"
+        },
+        "amazon_and_data/csd/2023": {
+          "type": "ویڈیو"
+        },
+        "netflix_and_data/csd/2023": {
+          "type": "ویڈیو"
+        },
+        "problem_solving_with_big_data/csd/2023": {
+          "type": "سلائیڈز"
+        },
+        "waze_and_data/csd/2023": {
+          "type": "ویڈیو"
+        },
+        "data_and_machine_learning/csd/2023": {
+          "type": "سلائیڈز"
+        },
+        "video_impact_on_society/csd/2023": {
+          "type": "ویڈیو"
+        },
+        "video_machine_learning/csd/2023": {
+          "name": "ویڈیو: مشین لرننگ",
+          "url": "https://www.youtube.com/watch?v=OeU5m6vRyCk",
+          "type": "ویڈیو"
+        },
+        "video_training_data_and_bias/csd/2023": {
+          "type": "ویڈیو"
+        },
+        "make_a_recommendation/csd/2023": {
+          "type": "پیر کا جائزہ"
+        },
+        "make_a_recommendation_1/csd/2023": {
+          "type": "روبرک"
+        },
+        "project_-_make_a_recommendation/csd/2023": {
+          "type": "سلائیڈز"
+        },
+        "physical_design_template/csd/2023": {
+          "type": "وسیلہ"
+        },
+        "physical_designs_1/csd/2023": {
+          "type": "سلائیڈز"
+        },
+        "circuit_playground/csd/2023": {
+          "type": "وسیلہ"
+        },
+        "circuits_and_logic/csd/2023": {
+          "type": "ویڈیو"
+        },
+        "physical_output/csd/2023": {
+          "type": "وسیلہ"
+        },
+        "the_circuit_playground/csd/2023": {
+          "type": "سلائیڈز"
+        },
+        "designing_screens_with_code/csd/2023": {
+          "type": "وسیلہ"
+        },
+        "updating_screen_elements/csd/2023": {
+          "type": "سلائیڈز"
+        },
+        "board_events/csd/2023": {
+          "type": "وسیلہ"
+        },
+        "board_events_1/csd/2023": {
+          "type": "سلائیڈز"
+        },
+        "physical_input/csd/2023": {
+          "type": "وسیلہ"
+        },
+        "the_counter_pattern/csd/2023": {
+          "type": "ویڈیو"
+        },
+        "if_statements_1/csd/2023": {
+          "type": "ویڈیو"
+        },
+        "the_counter_pattern_1/csd/2023": {
+          "type": "وسیلہ"
+        },
+        "variables_and_if_statements/csd/2023": {
+          "type": "سلائیڈز"
+        },
+        "mini-project_field_collector_app/csd/2023": {
+          "type": "سلائیڈز"
+        },
+        "rubric_-_field_collector_app/csd/2023": {
+          "type": "روبرک"
+        },
+        "color_leds/csd/2023": {
+          "type": "سلائیڈز"
+        },
+        "color_lights/csd/2023": {
+          "type": "وسیلہ"
+        },
+        "getting_screen_inputs/csd/2023": {
+          "type": "سلائیڈز"
+        },
+        "taking_input_with_getproperty/csd/2023": {
+          "type": "وسیلہ"
+        },
+        "combining_inputs_and_outputs/csd/2023": {
+          "type": "سلائیڈز"
+        },
+        "input_output_devices/csd/2023": {
+          "type": "ویڈیو"
+        },
+        "peer_review_-_human_device_interaction/csd/2023": {
+          "type": "وسیلہ"
+        },
+        "project_human_device_interaction/csd/2023": {
+          "type": "سلائیڈز"
+        },
+        "rubric_-_human_device_interaction/csd/2023": {
+          "type": "روبرک"
+        },
+        "analog_sensors/csd/2023": {
+          "type": "وسیلہ"
+        },
+        "board_sensors/csd/2023": {
+          "type": "سلائیڈز"
+        },
+        "changing_sensor_scale/csd/2023": {
+          "type": "وسیلہ"
+        },
+        "date_and_change_events/csd/2023": {
+          "type": "وسیلہ"
+        },
+        "accelerometer/csd/2023": {
+          "type": "سلائیڈز"
+        },
+        "accelerometer_events/csd/2023": {
+          "type": "وسیلہ"
+        },
+        "the_accelerometer/csd/2023": {
+          "type": "وسیلہ"
+        },
+        "arrays/csd/2023": {
+          "type": "وسیلہ"
+        },
+        "introduction_to_arrays/csd/2023": {
+          "name": "آراء کا تعارف",
+          "type": "ویڈیو"
+        },
+        "making_music/csd/2023": {
+          "type": "سلائیڈز"
+        },
+        "modifying_arrays/csd/2023": {
+          "type": "وسیلہ"
+        },
+        "playing_notes/csd/2023": {
+          "type": "وسیلہ"
+        },
+        "producing_output/csd/2023": {
+          "type": "وسیلہ"
+        },
+        "functions_with_parameters/csd/2023": {
+          "name": "پیرامیٹرز کے ساتھ افعال",
+          "type": "ویڈیو"
+        },
+        "mini-project_interactive_art/csd/2023": {
+          "type": "سلائیڈز"
+        },
+        "student_example_projects/csd/2023": {
+          "type": "وسیلہ"
+        },
+        "student_rubric_-_interactive_art/csd/2023": {
+          "type": "روبرک"
+        },
+        "circuits_and_leds/csd/2023": {
+          "type": "وسیلہ"
+        },
+        "physical_outputs_and_leds/csd/2023": {
+          "type": "سلائیڈز"
+        },
+        "circuits_and_buttons/csd/2023": {
+          "type": "وسیلہ"
+        },
+        "physical_inputs_and_buttons/csd/2023": {
+          "type": "سلائیڈز"
+        },
+        "project_prototype_an_innovation/csd/2023": {
+          "type": "سلائیڈز"
+        },
+        "prototype_an_innovation/csd/2023": {
+          "type": "روبرک"
+        },
+        "teacher_forum_1/csd/2023": {
+          "name": "ٹیچر فورم"
+        },
+        "physical_designs_2/csd/2023": {
+          "type": "سلائیڈز"
+        },
+        "introducing_the_micro_bit/csd/2023": {
+          "type": "سلائیڈز"
+        },
+        "led_planning_sheet/csd/2023": {
+          "type": "وسیلہ"
+        },
+        "the_micro_bit_led_display/csd/2023": {
+          "type": "وسیلہ"
+        },
+        "the_micro_bit_overview/csd/2023": {
+          "type": "وسیلہ"
+        },
+        "updating_screen_elements_1/csd/2023": {
+          "type": "سلائیڈز"
+        },
+        "board_events_2/csd/2023": {
+          "type": "سلائیڈز"
+        },
+        "board_events_3/csd/2023": {
+          "type": "وسیلہ"
+        },
+        "micro_bit_inputs/csd/2023": {
+          "type": "وسیلہ"
+        },
+        "the_counter_pattern_2/csd/2023": {
+          "type": "ویڈیو"
+        },
+        "variables_and_if_statements_1/csd/2023": {
+          "type": "سلائیڈز"
+        },
+        "mini-project_field_collector_app_1/csd/2023": {
+          "type": "سلائیڈز"
+        },
+        "rubric_-_field_collector_app_1/csd/2023": {
+          "type": "روبرک"
+        },
+        "getting_screen_inputs_1/csd/2023": {
+          "type": "سلائیڈز"
+        },
+        "combining_inputs_and_outputs_1/csd/2023": {
+          "type": "سلائیڈز"
+        },
+        "peer_review_-_human_device_interaction_1/csd/2023": {
+          "type": "وسیلہ"
+        },
+        "project_human_device_interaction_1/csd/2023": {
+          "type": "سلائیڈز"
+        },
+        "rubric_-_human_device_interaction_1/csd/2023": {
+          "type": "روبرک"
+        },
+        "board_sensors_1/csd/2023": {
+          "type": "سلائیڈز"
+        },
+        "data_change_events/csd/2023": {
+          "type": "وسیلہ"
+        },
+        "setting_sensor_scale/csd/2023": {
+          "type": "وسیلہ"
+        },
+        "the_micro_bit_sensors/csd/2023": {
+          "type": "وسیلہ"
+        },
+        "accelerometer_1/csd/2023": {
+          "type": "سلائیڈز"
+        },
+        "accelerometer_events_1/csd/2023": {
+          "type": "وسیلہ"
+        },
+        "the_micro_bit_accelerometer/csd/2023": {
+          "type": "وسیلہ"
+        },
+        "functions_3/csd/2023": {
+          "name": "افعال",
+          "type": "سلائیڈز"
+        },
+        "mini-project_interactive_pet/csd/2023": {
+          "type": "سلائیڈز"
+        },
+        "student_rubric_-_interactive_pet/csd/2023": {
+          "type": "روبرک"
+        },
+        "external_leds_on_a_micro_bit/csd/2023": {
+          "type": "وسیلہ"
+        },
+        "physical_outputs_and_leds_1/csd/2023": {
+          "type": "سلائیڈز"
+        },
+        "external_buttons_on_a_micro_bit/csd/2023": {
+          "type": "وسیلہ"
+        },
+        "physical_inputs_and_buttons_1/csd/2023": {
+          "type": "سلائیڈز"
+        },
+        "project_prototype_an_innovation_1/csd/2023": {
+          "type": "سلائیڈز"
+        },
+        "prototype_an_innovation_2/csd/2023": {
+          "type": "روبرک"
+        },
+        "the_problem_solving_process_4/csd/2023": {
+          "name": "مسئلہ حل کرنے کا عمل"
+        },
+        "ai_what_is_machine_learning_/csd/2023": {
+          "url": "https://www.youtube.com/watch?v=OeU5m6vRyCk",
+          "type": "ویڈیو"
+        },
+        "introduction_to_machine_learning/csd/2023": {
+          "type": "سلائیڈز"
+        },
+        "types_of_machine_learning/csd/2023": {
+          "type": "سلائیڈز"
+        },
+        "types_of_machine_learning_2/csd/2023": {
+          "type": "جوابی کلید"
+        },
+        "innovations_in_ai/csd/2023": {
+          "type": "سلائیڈز"
+        },
+        "innovations_in_ai_research_areas_-_student_resource/csd/2023": {
+          "type": "وسیلہ"
+        },
+        "seeing_ai/csd/2023": {
+          "type": "ویڈیو"
+        },
+        "_key_patterns_in_data/csd/2023": {
+          "type": "جوابی کلید"
+        },
+        "finding_patterns_in_data/csd/2023": {
+          "type": "ویڈیو"
+        },
+        "patterns_in_data/csd/2023": {
+          "type": "سلائیڈز"
+        },
+        "shoe_survey/csd/2023": {
+          "type": "وسیلہ"
+        },
+        "_key_classification_models/csd/2023": {
+          "type": "جوابی کلید"
+        },
+        "classification_models_1/csd/2023": {
+          "type": "سلائیڈز"
+        },
+        "fruit_veggie_cards/csd/2023": {
+          "type": "وسیلہ"
+        },
+        "_key_training_a_model_in_ai_lab/csd/2023": {
+          "type": "جوابی کلید"
+        },
+        "accuracy_in_ai_lab/csd/2023": {
+          "type": "وسیلہ"
+        },
+        "introduction_to_ai_lab/csd/2023": {
+          "name": "AI لیب کا تعارف",
+          "type": "سلائیڈز"
+        },
+        "introduction_to_ai_lab_1/csd/2023": {
+          "name": "AI لیب کا تعارف",
+          "type": "ویڈیو"
+        },
+        "selecting_features/csd/2023": {
+          "type": "وسیلہ"
+        },
+        "training_and_testing_in_ai_lab/csd/2023": {
+          "name": "تربیت اور جانچ اس میں AI لیب",
+          "type": "ویڈیو"
+        },
+        "using_data_with_categorical_features/csd/2023": {
+          "type": "وسیلہ"
+        },
+        "importing_a_model_in_app_lab/csd/2023": {
+          "type": "وسیلہ"
+        },
+        "importing_models_in_app_lab/csd/2023": {
+          "type": "سلائیڈز"
+        },
+        "ai_training_data_bias/csd/2023": {
+          "name": "AI: ٹریننگ ڈیٹا اور تعصب",
+          "url": "https://youtu.be/x2mRoFNm22g",
+          "type": "ویڈیو"
+        },
+        "model_cards/csd/2023": {
+          "type": "سلائیڈز"
+        },
+        "_key_zoo_models/csd/2023": {
+          "type": "جوابی کلید"
+        },
+        "model_cards_in_ai_lab/csd/2023": {
+          "name": "AI لیب میں ماڈل کارڈ",
+          "type": "ویڈیو"
+        },
+        "saving_models_in_ai_lab/csd/2023": {
+          "type": "سلائیڈز"
+        },
+        "selecting_a_label/csd/2023": {
+          "type": "وسیلہ"
+        },
+        "if-statements_in_app_lab/csd/2023": {
+          "type": "ویڈیو"
+        },
+        "model_cards_in_app_lab/csd/2023": {
+          "type": "سلائیڈز"
+        },
+        "printable_model_cards/csd/2023": {
+          "type": "وسیلہ"
+        },
+        "_key_numerical_accuracy/csd/2023": {
+          "type": "جوابی کلید"
+        },
+        "_key_zombie_prediction/csd/2023": {
+          "type": "جوابی کلید"
+        },
+        "numerical_models/csd/2023": {
+          "type": "سلائیڈز"
+        },
+        "_key_-_numerical_data_in_ai_lab/csd/2023": {
+          "type": "جوابی کلید"
+        },
+        "numerical_data_in_ai_lab/csd/2023": {
+          "name": "عددی ڈیٹا میں AI لیب",
+          "type": "سلائیڈز"
+        },
+        "numerical_data_in_ai_lab_1/csd/2023": {
+          "name": "عددی ڈیٹا میں AI لیب"
+        },
+        "numerical_data_in_ai_lab_2/csd/2023": {
+          "name": "عددی ڈیٹا میں AI لیب",
+          "type": "ویڈیو"
+        },
+        "using_data_with_numerical_features/csd/2023": {
+          "type": "وسیلہ"
+        },
+        "customizing_apps/csd/2023": {
+          "type": "سلائیڈز"
+        },
+        "ai_code_of_ethics/csd/2023": {
+          "type": "سلائیڈز"
+        },
+        "ethics_ai_equal_access_and_algorithmic_bias/csd/2023": {
+          "type": "ویڈیو"
+        },
+        "our_ai_code_of_ethics_template_/csd/2023": {
+          "type": "سلائیڈز"
+        },
+        "create_an_ml_app/csd/2023": {
+          "type": "روبرک"
+        },
+        "make_a_machine_learning_app/csd/2023": {
+          "type": "سلائیڈز"
+        },
+        "issue_statements/csd/2023": {
+          "type": "سلائیڈز"
+        },
+        "creating_a_survey/csd/2023": {
+          "type": "وسیلہ"
+        },
+        "creating_a_survey_in_google_forms/csd/2023": {
+          "type": "ویڈیو"
+        },
+        "survey_planning/csd/2023": {
+          "type": "سلائیڈز"
+        },
+        "cleaning_survey_data/csd/2023": {
+          "type": "ویڈیو"
+        },
+        "survey_data_in_ai_lab/csd/2023": {
+          "type": "سلائیڈز"
+        },
+        "view_and_download_survey_data/csd/2023": {
+          "type": "ویڈیو"
+        },
+        "troubleshooting_models/csd/2023": {
+          "type": "سلائیڈز"
+        },
+        "creating_an_app/csd/2023": {
+          "type": "سلائیڈز"
+        },
+        "_template_5_why_s/csd/2023": {
+          "type": "وسیلہ"
+        },
+        "design_an_ai_app/csd/2023": {
+          "type": "سلائیڈز"
+        },
+        "design_an_ai_app_1/csd/2023": {
+          "type": "روبرک"
+        },
+        "model_card_-_digital_template/csd/2023": {
+          "type": "وسیلہ"
+        },
+        "model_card_-_printable_template/csd/2023": {
           "type": "وسیلہ"
         },
         "all_resources/coursea/2023": {

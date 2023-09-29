@@ -65,7 +65,7 @@ Blockly.Msg.CONTROLS_WHILEUNTIL_OPERATOR_UNTIL = "تکرار کن تا زمان�
 Blockly.Msg.CONTROLS_WHILEUNTIL_OPERATOR_WHILE = "تکرار کن در حالی که";
 Blockly.Msg.CONTROLS_WHILEUNTIL_TOOLTIP_UNTIL = "تا زمانی که یک مقدار ناصحیح است، چند عبارت را انجام بده.";
 Blockly.Msg.CONTROLS_WHILEUNTIL_TOOLTIP_WHILE = "تا زمانی که یک مقدار صحیح است، چند عبارت را انجام بده.";
-Blockly.Msg.DEFINE_FUNCTION_DEFINE = "تعریف کن";
+Blockly.Msg.DEFINE_FUNCTION_DEFINE = "تعریف کنید";
 Blockly.Msg.DEFINE_FUNCTION_FOR_EXAMPLE = "تابع زیر را تعریف کنید و دوباره تلاش کنید.";
 Blockly.Msg.DEFINE_HEADER_DEFINITION = "تعریف";
 Blockly.Msg.DELETE = "پاک کردن";

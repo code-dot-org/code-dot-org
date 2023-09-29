@@ -38,8 +38,10 @@ hr:
         age: 'Godine'
         gender: 'Spol'
         edit_header: 'Uredi podatke o računu'
+        finish_sign_up_header_error: 'Molimo ispravite sljedeće pogreške:'
         error:
           future: ne može biti u budućnosti
+        user_type: 'Vrsta računa'
   beta: "beta"
   hello: "Pozdrav svima"
   welcome_back: "Dobrodošao natrag, %{name}"

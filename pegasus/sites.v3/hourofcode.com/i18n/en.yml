@@ -40,6 +40,10 @@
   africa_campaign_date_year: "2023"
   africa_campaign_date_full_year: "September 5, 2023 - December 17, 2023"
 
+  hoc2023_header: "Creativity with AI"
+  hoc2023_social_creativity_with_ai_title: "Hour of Code - What will you create?"
+  hoc2023_social_creativity_with_ai_desc: "Use computer science to explore and learn about AI!"
+
   hoc2022_header: 'Explore, Play, Create!'
   social_hoc2022_explore_play_create: 'Use computer science to explore, play, and create!'
   codeorg_homepage_hoc2022_body: 'Explore the universe, score a goal, bust a move — there are so many ways to try computer science.'
@@ -170,11 +174,13 @@
   required_materials: "Required Materials:"
   optional_materials: "Optional Materials:"
 
-  call_to_action_learn_more: 'Learn more'
-  call_to_action_watch_now: 'Watch now'
-  call_to_action_try_activity: 'Try activity'
-  call_to_action_explore_unit: 'Explore unit'
-  call_to_action_explore_curriculum: 'Explore curriculum'
+  call_to_action_hold_an_event: "Hold an event"
+  call_to_action_learn_more: "Learn more"
+  call_to_action_watch_now: "Watch now"
+  call_to_action_try_activity: "Try activity"
+  call_to_action_try_activities: "Try activities"
+  call_to_action_explore_unit: "Explore unit"
+  call_to_action_explore_curriculum: "Explore curriculum"
   call_to_action_explore_curriculum_options: "Explore curriculum options"
   call_to_action_explore_lessons: "Explore lessons"
   call_to_action_explore_modules: "Explore modules"
@@ -7068,7 +7074,7 @@
   tutorial_milnefunctions_name: "Dash Joins a Dance Circle (with Functions)"
   tutorial_sasmap_name: "Show With Code: Features on a Map"
   tutorial_firstrobotics_name: "FIRST Tech Challenge Simulator"
-  tutorial_sasdata_name: "Building Data Fundamentals"
+  tutorial_sasdata_name: "SAS DataFly"
   tutorial_carnegiesensabot_name: "Sensabot Challenge"
   tutorial_robotical4_name: "Hour of Code Activity 4 - Getting Started with MartyBlocks"
   tutorial_kinderadd_name: "Adding and Subtracting with KIBO"
@@ -8519,6 +8525,9 @@
   video_library_page_inspirational_video_title_10: "President Obama on computer science (1 min)"
   video_library_page_inspirational_video_title_11: "Anybody Can Learn (1 min)"
   video_library_page_inspirational_video_title_12: "Lo Que Falta En Nuestras Escuelas (2 min)"
+  video_library_page_inspirational_video_title_13: "NASA Celebrates Hour of Code (2 min)"
+  video_library_page_inspirational_video_title_14: "It's More Than A Game (1 min)"
+  video_library_page_inspirational_video_title_15: "Create With Computer Science (1 min)"
   video_library_page_not_hacked_video_title_1: "How Not To Get Hacked: Introduction"
   video_library_page_not_hacked_video_title_2: "How Not To Get Hacked: Passwords"
   video_library_page_not_hacked_video_title_3: "How Not To Get Hacked: Authentication and Device Locks"

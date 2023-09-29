@@ -292,6 +292,10 @@ hy:
   call_to_action_register_early_access: Գրանցվել վաղ մուտք գործելու համար
   call_to_action_open_positions: Դիտել բաց դիրքերը
   call_to_action_get_guide: Ստացեք ուղեցույցը
+  call_to_action_donate_to_cdo: Նվիրաբերեք Code.org կայքին
+  call_to_action_start_fundraiser: Սկսել դրամահավաք
+  call_to_action_view_donation_policy: Դիտել նվիրատվության քաղաքականությունը
+  call_to_action_view_donate_bitpay: Նվիրատվություն BitPay- ի հետ
   aria_label_call_to_action_afe: Իմացեք ավելին Amazon- ի ապագա ինժեների մասին
   aria_label_call_to_action_teaching_csf: Սկսեք դասավանդման համակարգչային գիտության
     հիմունքներ մասնագիտական ուսուցման ծրագիր
@@ -403,6 +407,7 @@ hy:
   curriculum_name_csp: Համակարգչային գիտության սկզբունքները
   curriculum_name_csc: Համակարգչային գիտության կապեր
   curriculum_name_csa: AP® Համակարգչային գիտություն A
+  curriculum_name_csa_ai: Ծրագրային ապահովման ճարտարագիտություն և համակարգչային տեսողություն
   curriculum_name_csc_02: CS- ի միացումների ցանկացած մոդուլ
   curriculum_name_ai: AI և մեքենայական ուսուցում
   curriculum_name_artificial_intelligence: Արհեստական բանականություն (AI)
@@ -481,6 +486,12 @@ hy:
   curriculum_desc_csp: 'Անվճար, AP® CSP- ի կողմից հավանության է արժանացել, ավագ դպրոցի
     ներածական դասընթաց, որը ուսանողներին ծանոթացնում է համակարգչային գիտության հիմնարար
     հասկացություններին:'
+  curriculum_desc_csa_ai_long: 'Հետընտրական AP CSA- ի այս երկու գլխանի մոդուլը ավագ
+    դպրոցի աշակերտներին առաջարկում է գործնական փորձ պրոֆեսիոնալ ծրագրային ապահովման
+    մշակման գործիքների հետ, ներառյալ GitHub- ը և GitHub Copilot- ը, և նրանց հաղորդում
+    է իրական հմտություններ `համակարգչային տեսողության ծրագիր մշակելու համար: '
+  curriculum_desc_csa_ai_short: Այս Post-AP® CSA մոդուլը առաջարկում է ավագ դպրոցի
+    աշակերտներին ձեռքերը- on փորձը մասնագիտական ծրագրային ապահովման զարգացման գործիքներ.
   collection_hardware: Կենտրոնանալ ապարատային
   collection_hardware_desc: 'Հզորացնում է ուսանողներին օգտագործել տվյալների և ֆիզիկական
     սարքերի խնդիրները լուծելու համար:'
@@ -556,6 +567,7 @@ hy:
   module_duration_2_hrs: 2 ժամ
   module_duration_3_hrs: 3 ժամ
   module_duration_5_hrs: 5 ժամ
+  module_duration_5_hrs_plus: 5+ ժամեր
   module_duration_8_hrs: 8 ժամ
   module_duration_20_hrs: 20 ժամ
   module_duration_35_hrs: 35 ժամեր
@@ -639,6 +651,7 @@ hy:
   heading_these_lessons_will: 'Այս դասերը:'
   heading_explore_curriculum_catalog: Ուսումնասիրեք մեր բոլոր դասընթացները ուսումնական
     կատալոգում
+  heading_csa_ai: Փնտրում բաներ անել հետո AP® քննության?
   professional_learning_section_desc: 'Ստացեք այն աջակցությունը, որը ձեզ հարկավոր
     է, երբ պատրաստվում եք սովորեցնել: Ուսուցիչները սիրում են այն, ավելի քան 90% դասակարգելով
     այն լավագույն մասնագիտական զարգացումը երբեւէ!'
@@ -673,6 +686,23 @@ hy:
     ցանկացած հարցի, որը կարող եք ունենալ Code.org- ի հետ դասավանդումը սկսելու վերաբերյալ:
     Դուք կարող եք նաեւ հարցնել այլ ուսուցիչներին իրենց փորձի վերաբերյալ մեր ուսուցիչների
     ֆորումների.'
+  subscribe_form_section_title: Բաժանորդագրվել թարմացումների համար
+  subscribe_form_section_desc_csa: 'Գրանցվեք Code.org- ի AP® Computer Science A- ի
+    վերաբերյալ ամսական նամակներ ստանալու համար և ստացեք օգտակար հիշեցումներ, խորհուրդներ
+    և թարմացումներ, որոնք ուղարկվել են հենց ձեր մուտքի արկղին:'
+  subscribe_form_section_desc_csc: Sign մինչեւ ստանալ ամսական նամակներ Code.org ի
+    Համակարգչային գիտության կապեր եւ ստանալ օգտակար հիշեցումներ, խորհուրդներ, եւ թարմացումները
+    ուղարկվել ճիշտ է ձեր ներարկղ.
+  subscribe_form_section_desc_csd: 'Գրանցվեք Code.org- ի համակարգչային գիտությունների
+    հայտնագործությունների մասին ամսական նամակներ ստանալու համար և ստացեք օգտակար հիշեցումներ,
+    խորհուրդներ և թարմացումներ, որոնք ուղարկվում են հենց ձեր ներարկղ:'
+  subscribe_form_section_desc_csf: 'Գրանցվեք Code.org- ի համակարգչային գիտության հիմունքների
+    վերաբերյալ ամսական նամակներ ստանալու համար և ստացեք օգտակար հիշեցումներ, խորհուրդներ
+    և թարմացումներ, որոնք ուղարկվել են հենց ձեր մուտքի արկղին:'
+  subscribe_form_section_desc_csp: 'Գրանցվեք ՝ Code.org- ի համակարգչային գիտության
+    սկզբունքների վերաբերյալ ամսական նամակներ ստանալու և ձեր մուտքի արկղին ուղարկված
+    օգտակար հիշեցումներ, խորհուրդներ և թարմացումներ ստանալու համար:'
+  subscribe_form_section_unsubscribe: 'Դուք կարող եք բաժանորդագրվել ցանկացած պահի:'
   blockchain_hero_heading: Ինչպես է աշխատում բլոկչեյնը
   blockchain_hero_desc: 'Սուզվեք բլոկչեյնի աշխարհ ՝ “Ինչպես է աշխատում Blockchain-
     ը”, մեր նոր տեսահոլովակների շարքը և ուղեկցող դասերը:'
@@ -777,6 +807,9 @@ hy:
     դաս զուգորդվում է շարքի մեկ տեսանյութով, խորանալով տեսանյութերում ներկայացված
     հասկացությունների մեջ:'
   ai_curriculum_btn_aria_label_04: Ուսումնասիրեք, թե ինչպես է AI- ն աշխատում դասերը
+  ai_curriculum_grades_05: Դասարանի մակարդակները ՝ 9-12
+  ai_curriculum_btn_aria_label_05: Ուսումնասիրեք Software Engineering & Համակարգչային
+    Vision մոդուլը
   ai_carousel_heading: Ինչ են ասում ուսուցիչները AI- ի մասին Code.org- ի հետ.
   ai_carousel_quote_01: 'Այս դասը նաև հնարավորություն տվեց իմ աշակերտներին տեսնել,
     որ դասակարգման համակարգերում կա կարծիքի տարր: Ավելի ուշ, երբ մենք սկսեցինք տեսնել,
@@ -913,6 +946,7 @@ hy:
     ստանալու գործիքներ ՝ սկսնակից մինչև առաջադեմ: Ներառում է մեկնարկային հուշումներ
     նրանց համար, ովքեր պարզապես լող իրենց ոտք ունեցող մարդիկ, ինչպես նաեւ առաջադեմ
     գործիքներ նրանց համար, ովքեր փնտրում են առավելագույնի հասցնել իրենց ներուժը.'
+  ai_pl_101_resources_3: AI- ն հուշում է ուսանողների ուսուցման վերափոխման համար
   how_ai_works_hero_heading: Ինչպես է աշխատում AI- ն
   how_ai_works_hero_desc: 'Սուզվել AI- ի աշխարհում ՝ “Ինչպես է գործում AI- ն”, մեր
     տեսանյութերի շարքը և ուղեկցող դասերը:'
@@ -1340,8 +1374,8 @@ hy:
     Animation
   csp_page_curriculum_glance_devices: Laptop, Chromebook
   csp_page_curriculum_glance_tools: Հավելվածների լաբորատորիա
-  csp_page_curriculum_glance_professional_learning: Facilitator-led Workshops, Self-paced
-    Modules
+  csp_page_curriculum_glance_professional_learning: Գործարարների կողմից ղեկավարվող
+    սեմինարներ, ինքնակարգավորվող մոդուլներ
   csp_page_curriculum_glance_professional_languages: Հայերեն
   csp_page_curriculum_glance_professional_accessibility_features: Text-to-speech,
     Closed captioning, Immersive reader
@@ -1471,8 +1505,8 @@ hy:
   csd_page_curriculum_glance_devices: Laptop, Chromebook
   csd_page_curriculum_glance_tools: App Lab, Խաղի լաբորատորիա, AI լաբորատորիա, Վեբ
     լաբորատորիա
-  csd_page_curriculum_glance_professional_learning: Facilitator-led Workshops, Self-paced
-    Modules
+  csd_page_curriculum_glance_professional_learning: Գործարարների կողմից ղեկավարվող
+    սեմինարներ, ինքնակարգավորվող մոդուլներ
   csd_page_curriculum_glance_professional_languages: Հայերեն
   csd_page_curriculum_glance_professional_accessibility_features: Text-to-speech,
     Closed captioning, Immersive reader
@@ -1629,8 +1663,8 @@ hy:
     և դիզայն, Հավելվածների դիզայն
   csf_page_curriculum_glance_devices: Նոութբուք, քրոմբուք, պլանշետ
   csf_page_curriculum_glance_tools: Սփրայթ լաբորատորիա, Խաղալ լաբորատորիա
-  csf_page_curriculum_glance_professional_learning: Facilitator-led Workshops, Self-paced
-    Modules
+  csf_page_curriculum_glance_professional_learning: Գործարարների կողմից ղեկավարվող
+    սեմինարներ, ինքնակարգավորվող մոդուլներ
   csf_page_curriculum_glance_languages: Արաբերեն, Ինդոնեզերեն, Կատալան, չինարեն պարզեցված,
     չինարեն ավանդական, չեխերեն, ֆրանսերեն, գերմաներեն, հինդի, իտալերեն, ճապոներեն,
     կորեերեն, կաննադա, մալայերեն, մարաթի, մոնղոլերեն, լեհերեն, պորտուգալերեն, BR,
@@ -1774,6 +1808,40 @@ hy:
   csa_page_faq_answer_08_02: For more information about the values that guided our
     work, please see our [curriculum values](%{curriculum_values_url}) and our [professional
     learning values](%{pl_values_url}).
+  donate_page_top_heading: Օգնեք ֆինանսավորել մեր առաքելությունը
+  donate_page_top_desc: Յուրաքանչյուր նվիրատվություն վառելիք Code.org առաքելությունն
+    է ընդլայնել հասանելիությունը համակարգչային գիտության կրթության. Մենք առաջարկում
+    ենք մի քանի եղանակներ, որպեսզի դուք նվիրաբերել եւ փոխել.
+  donate_page_fundraise_title: Դրամահավաք Code.org-ի համար
+  donate_page_fundraise_desc: 'Օգնեք գումար հավաքել Code.org- ի համար: Յուրաքանչյուր
+    աշակերտ յուրաքանչյուր դպրոցում պետք է հնարավորություն ունենա սովորել համակարգչային
+    գիտություն։'
+  donate_page_other_ways_title: Այլ եղանակներ տալ
+  donate_page_other_ways_desc: Ուսումնասիրել բազմազան մեթոդներ նպաստել, եւ գտնել այն
+    տարբերակը, որ կոստյումներ ձեզ լավագույն. Յուրաքանչյուր ժեստ, մեծ թե փոքր, առաջ
+    է մղում մեր առաքելությունը։
+  donate_page_501c3: 'Code.org գրանցված է որպես հանրային 501 (c) (3) շահույթ չհետապնդող
+    կազմակերպություն: Code.org- ի ներդրումները հարկերից հանվում են օրենքով թույլատրված
+    չափով: Code.org- ի հարկային նույնականացման համարը 46-0858543 է:'
+  donate_page_donation_policy_title: Հասկանալով մեր նվիրատվության քաղաքականությունը
+  donate_page_donation_policy_desc: Իմացեք, թե ինչպես ենք մենք կարգավորել եւ հատկացնել
+    ձեր ներդրումները.
+  donate_tabs_tab_label_daf_direct: DAF ուղղակի
+  donate_tabs_tab_label_amazon: Ամազոն
+  donate_tabs_tab_label_bitpay: BitPay
+  donate_tabs_tab_label_employee_match: Աշխատակիցների համընկնում
+  donate_tabs_daf_direct_title: Նվիրատվություն DAF Direct- ի միջոցով
+  donate_tabs_daf_direct_desc: 'Նվիրաբերեք ձեր նվիրատուների կողմից առաջարկվող ֆոնդի
+    միջոցով Fidelity բարեգործական, Schwab բարեգործական կամ BNY Mellon- ի հետ և կատարեք
+    ձեր դրամաշնորհային առաջարկությունը Code.org- ին DAF Direct առցանց ձևի միջոցով:'
+  donate_tabs_amazon_title: Նվիրաբերել միջոցով Amazon
+  donate_tabs_amazon_desc: 'Նվիրաբերել ուղղակիորեն օգտագործելով Ձեր Amazon հաշիվը.
+    Ընդամենը մի քանի կտտոցով աննշանորեն նպաստել Code.org- ի առաքելությանը և հզորացնել
+    համակարգչային գիտության կրթության ապագան:'
+  donate_tabs_bitpay_title: Նվիրաբերեք ծպտյալ միջոցով BitPay- ի միջոցով
+  donate_tabs_bitpay_desc: Ընդգրկել ապագան տալու հետ cryptocurrency. Միջոցով BitPay,
+    Ձեր թվային արժույթը կարող է ուղղակիորեն աջակցել Code.org ի ձեռնարկումները ընդլայնման
+    համակարգչային գիտության կրթության.
   hoc_live: Ուղիղ օրենսգրքի ժամ
   hoc_live_sign_up_title: Գրանցվեք Code Live ժամի համար
   hoc_live_learn_title: Սովորեք Code Live ժամի հետ

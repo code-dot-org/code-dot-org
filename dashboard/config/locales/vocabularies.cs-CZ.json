@@ -1139,6 +1139,9 @@
           "word": "Událost",
           "definition": "Akce, která způsobí, že se něco stane."
         },
+        "artificial_intelligence/ai-ethics/2023": {
+          "word": "Umělá inteligence"
+        },
         "adaptation/csc-adaptations/2023": {
           "word": "Adaptace",
           "definition": "Změna organismu, aby lépe přežila své prostředí"
@@ -1357,6 +1360,55 @@
         "poetry_circle/poetry/2023": {
           "word": "Kruh poezie",
           "definition": "Bezpečný a kreativní prostor pro testování nových básní a získání konstruktivní zpětné vazby od ostatních"
+        },
+        "input/csd/2023": {
+          "word": "Vstup"
+        },
+        "copyright/csd/2023": {
+          "word": "Autorská práva",
+          "definition": "výhradní zákonné právo tisknout, publikovat, předvádět, filmovat nebo nahrávat literární, umělecký nebo hudební materiál a zmocňovat k témuž ostatní"
+        },
+        "bug/csd/2023": {
+          "word": "Chyba",
+          "definition": "Část programu, která nefunguje správně."
+        },
+        "debugging/csd/2023": {
+          "word": "Ladění",
+          "definition": "vyhledávat a opravovat problémy v nějakém algoritmu nebo programu."
+        },
+        "program/csd/2023": {
+          "word": "Program ",
+          "definition": "algoritmus kódovaný tak, aby ho mohl spouštět stroj."
+        },
+        "variable/csd/2023": {
+          "word": "Proměnná",
+          "definition": "Popisek informace použité v programu."
+        },
+        "sprite/csd/2023": {
+          "word": "Sprite"
+        },
+        "condition/csd/2023": {
+          "word": "Podmínka"
+        },
+        "conditionals/csd/2023": {
+          "word": "Podmínky"
+        },
+        "abstraction/csd/2023": {
+          "word": "Abstrakce"
+        },
+        "function/csd/2023": {
+          "word": "Funkce"
+        },
+        "user/csd/2023": {
+          "word": "Uživatel",
+          "definition": "Někdo, kdo používá nějaký objekt, včetně softwaru a hardwaru."
+        },
+        "user_interface/csd/2023": {
+          "word": "Uživatelské rozhraní"
+        },
+        "machine_learning/csd/2023": {
+          "word": "Strojové učení",
+          "definition": "Jak počítače rozpoznávají vzory a dělají rozhodnutí, aniž by byly konkrétně naprogramovány"
         },
         "algorithm/coursea/2023": {
           "word": "Algoritmus",

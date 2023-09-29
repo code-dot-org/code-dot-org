@@ -25,7 +25,7 @@ Thử Giờ lập trình là một cách đơn giản và thú vị để giới
 
 <a id="how-to-video"></a>
 
-## 1. Xem video hướng dẫn Giờ lập trình <iframe width="500" height="255" src="//www.youtube.com/embed/SrnvvWDm73k" frameborder="0" allowfullscreen></iframe> 
+## 1. Xem video hướng dẫn Giờ lập trình <iframe width="500" height="255" src="https://www.youtube-nocookie.com/embed/SrnvvWDm73k" frameborder="0" allowfullscreen></iframe> 
 
 * * *
 
@@ -111,7 +111,7 @@ Cho dù cả bạn và học sinh đều là những người mới làm quen v�
 
 Định hướng học sinh vào hoạt động
 
-- Write the tutorial link on a whiteboard. Find the link listed on the [information for your selected tutorial]({{ urls/learn }}).
+- Viết liên kết hướng dẫn trên bảng trắng. Tìm liên kết được liệt kê trên thông [tin cho hướng dẫn đã chọn của bạn]({{ urls/learn }}).
 
 Khi trẻ gặp khó khăn, bạn có thể trả lời rằng:
 
@@ -151,6 +151,6 @@ Nếu một học sinh hoàn thành sớm thì sao?
 
 ### Tiếp theo Hour of Code sẽ là gì?
 
-Computer science doesn’t have to end with the Hour of Code! [Learn how](/beyond) to bring CS to your school and students.
+Khoa học máy tính không cần phải kết thúc với Giờ Lập trình! [Tìm hiểu làm thế nào](/beyond) để mang CS đến trường học và học sinh của bạn.
 
 {{ signup_button }}

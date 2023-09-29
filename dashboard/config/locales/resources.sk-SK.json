@@ -7733,6 +7733,50 @@
           "url": "https://www.youtube.com/watch?v=rgbZAWnOWOo",
           "type": "Video"
         },
+        "_template_ai_code_of_ethics/ai-ethics/2023": {
+          "type": "Prezentácia"
+        },
+        "ai_code_of_ethics/ai-ethics/2023": {
+          "name": "Etický kódex umelej inteligencie",
+          "type": "Prezentácia"
+        },
+        "ai_research_areas/ai-ethics/2023": {
+          "type": "Sprievodca aktivitou"
+        },
+        "create_a_manifesto/ai-ethics/2023": {
+          "type": "Sprievodca aktivitou"
+        },
+        "ethics_and_ai_privacy_the_future_of_work/ai-ethics/2023": {
+          "type": "Video"
+        },
+        "imagine_your_world/ai-ethics/2023": {
+          "type": "Sprievodca aktivitou"
+        },
+        "research_reflection_guide/ai-ethics/2023": {
+          "type": "Sprievodca aktivitou"
+        },
+        "character_card_individual_docs_/ai-ethics/2023": {
+          "type": "Zdroj"
+        },
+        "character_cards/ai-ethics/2023": {
+          "type": "Zdroj"
+        },
+        "generative_ai_activity_instructions/ai-ethics/2023": {
+          "type": "Zdroj"
+        },
+        "generative_ai_news_articles/ai-ethics/2023": {
+          "type": "Zdroj"
+        },
+        "group_scenarios/ai-ethics/2023": {
+          "type": "Zdroj"
+        },
+        "how_ai_works_large_language_models/ai-ethics/2023": {
+          "url": "https://www.youtube.com/watch?v=X-AWdfSFCHQ",
+          "type": "Video"
+        },
+        "societal_impact_of_generative_ai/ai-ethics/2023": {
+          "type": "Prezentácia"
+        },
         "cs_connections_landing_page/csc-adaptations/2023": {
           "name": "Vstupná stránka CS Connections",
           "url": "https://code.org/educate/csc",
@@ -8277,6 +8321,2340 @@
         "poem_app_example/poetry/2023": {
           "name": "Príklad aplikácie Poem",
           "url": "https://studio.code.org/projects/poetry_hoc/j3TXDXNhz0XEsH4Xjk_rT9buBHYCplirIKtY_Pg_bYo",
+          "type": "Zdroj"
+        },
+        "all_resources/csd/2023": {
+          "name": "Všetky zdroje"
+        },
+        "all_standards/csd/2023": {
+          "name": "Všetky normy"
+        },
+        "all_vocabulary/csd/2023": {
+          "name": "Všetky pojmy"
+        },
+        "teacher_forum/csd/2023": {
+          "name": "Fórum učiteľov",
+          "url": "https://forum.code.org/c/csd"
+        },
+        "csd_guide_to_differentiation_2/csd/2023": {
+          "name": "Objavujeme informatiku: Sprievodca diferenciáciou"
+        },
+        "the_problem_solving_process_2/csd/2023": {
+          "name": "Postup riešenia problémov"
+        },
+        "aluminum_boats/csd/2023": {
+          "name": "Hliníkové loďky",
+          "url": "https://docs.google.com/document/d/18gJ_V1wvQk6LvyCcCGFczBhblJHoA8t9ow2pfChMKyc/",
+          "type": "Príklad"
+        },
+        "aluminum_boats_1/csd/2023": {
+          "name": "Hliníkové loďky",
+          "url": "https://docs.google.com/document/d/1U73IbO4IjVxaa4DpDgCMssY_iPXynXQkdWqeE2HwmrQ/",
+          "type": "Sprievodca aktivitou"
+        },
+        "code_org_how-to_videos/csd/2023": {
+          "name": "Videonávody Code.org",
+          "url": "https://support.code.org/hc/en-us/articles/4405629586957-New-how-to-walkthrough-videos-for-teachers-"
+        },
+        "intro_to_problem_solving/csd/2023": {
+          "name": "Úvod do riešenia problémov",
+          "type": "Prezentácia"
+        },
+        "problem_solving_process/csd/2023": {
+          "name": "Postup riešenia problémov",
+          "url": "https://docs.google.com/document/d/1o9DjDCtIu5SqGDVfScUiy8vWe0MNsr_AUzfymg2u49U/",
+          "type": "Príklad"
+        },
+        "problem_solving_process_1/csd/2023": {
+          "name": "Postup riešenia problémov",
+          "url": "https://youtu.be/z7RaFPT3DTE",
+          "type": "Video"
+        },
+        "problem_solving_process_2/csd/2023": {
+          "name": "Postup riešenia problémov",
+          "url": "https://drive.google.com/file/d/1jlf2W1ZnVjLJnClZaNtlZ7sw6k-2NhEl/view?usp=sharing"
+        },
+        "the_problem_solving_process/csd/2023": {
+          "type": "Video"
+        },
+        "the_problem_solving_process_1/csd/2023": {
+          "name": "Postup riešenia problémov",
+          "type": "Prezentácia"
+        },
+        "the_problem_solving_process_5/csd/2023": {
+          "name": "Postup riešenia problémov",
+          "type": "Sprievodca aktivitou"
+        },
+        "exploring_problem_solving/csd/2023": {
+          "name": "Objavujeme riešenie problémov",
+          "type": "Prezentácia"
+        },
+        "solving_problems/csd/2023": {
+          "name": "Riešenie problémov",
+          "url": "https://docs.google.com/document/d/13fTFJuB8_pavDP9yzOfF-snGGrLocCkFpn0fRabba7Q/",
+          "type": "Kľúč s odpoveďami"
+        },
+        "solving_problems_1/csd/2023": {
+          "name": "Riešenie problémov",
+          "url": "https://docs.google.com/document/d/10sYnD_9tlHzdIoBhAO_WWXp9FftA2J4QW2gUY55HTB4/",
+          "type": "Sprievodca aktivitou"
+        },
+        "what_is_a_computer/csd/2023": {
+          "name": "Čo je to počítač",
+          "url": "https://youtu.be/rRSD128KWIM",
+          "type": "Video"
+        },
+        "what_is_a_computer_/csd/2023": {
+          "name": "Čo je to počítač?",
+          "url": "https://docs.google.com/document/d/19QfEaVJcF85W6iZwITFIcPycO11znVjYTAaKO78VPH0/edit?usp=sharing",
+          "type": "Príklad"
+        },
+        "what_is_a_computer_1/csd/2023": {
+          "name": "Čo je to počítač",
+          "type": "Prezentácia"
+        },
+        "what_is_a_computer_version_a_/csd/2023": {
+          "name": "Čo je to počítač (verzia A)",
+          "url": "https://docs.google.com/document/d/1I0Pw3qKhtT0TdbPME3EKsi-L7ufgpxB3JBT59uxgp4w",
+          "type": "Sprievodca aktivitou"
+        },
+        "what_is_a_computer_version_b_/csd/2023": {
+          "name": "Čo je to počítač (verzia B)",
+          "url": "https://docs.google.com/document/d/1VUnuHBHtlegMuNewTfO4h9ecWljkZOtTWJbxDwef_bc/",
+          "type": "Sprievodca aktivitou"
+        },
+        "input_and_output/csd/2023": {
+          "name": "Vstup a výstup",
+          "url": "https://docs.google.com/document/d/1YGzaEcYjcc94Tk7616kSXR9jdtJ1MMAkAy-n72sFaGU/",
+          "type": "Príklad"
+        },
+        "input_and_output_1/csd/2023": {
+          "name": "Vstup a výstup",
+          "url": "https://docs.google.com/document/d/1Wf9oUuRi5iNb2cVrn1F8kbDDys0CcAcN-m4ZLpXohmY",
+          "type": "Sprievodca aktivitou"
+        },
+        "input_and_output_2/csd/2023": {
+          "name": "Vstup a výstup",
+          "type": "Prezentácia"
+        },
+        "apps_with_processing/csd/2023": {
+          "name": "Aplikácie so spracúvaním",
+          "url": "https://docs.google.com/document/d/1UJ-FWWF3rNYZD3JFKRjIRT_X-cUwmGOGo8_upe8x2BE/",
+          "type": "Príklad"
+        },
+        "apps_with_processing_1/csd/2023": {
+          "name": "Aplikácie so spracúvaním",
+          "url": "https://docs.google.com/document/d/1gmOOq9Dxa6xZwk-92yvwFj-Qtl3dJZ5WnBjSy_6W114/",
+          "type": "Sprievodca aktivitou"
+        },
+        "apps_with_processing_2/csd/2023": {
+          "name": "Aplikácie so spracúvaním",
+          "type": "Prezentácia"
+        },
+        "apps_with_storage/csd/2023": {
+          "name": "Aplikácie s pamäťou",
+          "url": "https://docs.google.com/document/d/1TipB_p8zYVhYqjerDHCDKeAF3Yr29M5quwmKwaUVgo0/",
+          "type": "Príklad"
+        },
+        "apps_with_storage_1/csd/2023": {
+          "name": "Aplikácie s pamäťou",
+          "url": "https://docs.google.com/document/d/1CBvsxkWV5Vcc85eGgBEFPb9Xj0NosXY-y6ttw4yj1tM/",
+          "type": "Sprievodca aktivitou"
+        },
+        "apps_with_storage_2/csd/2023": {
+          "name": "Aplikácie s pamäťou",
+          "type": "Prezentácia"
+        },
+        "what_do_computers_do/csd/2023": {
+          "name": "Čo robia počítače",
+          "url": "https://www.youtube.com/watch?v=92TaQRBwPSs",
+          "type": "Video"
+        },
+        "apps_and_problem_solving/csd/2023": {
+          "name": "Aplikácie a riešenie problémov",
+          "url": "https://docs.google.com/document/d/1Jz6AiZICxt3sQQE1PwwAwfVTY4RfIfUIogHUs4ai0ik/edit?usp=sharing",
+          "type": "Sprievodca aktivitou"
+        },
+        "apps_and_problem_solving_-_student_checklist/csd/2023": {
+          "name": "Aplikácie a riešenie problémov – kontrolný zoznam pre žiakov",
+          "url": "https://docs.google.com/document/d/1KVhC59py0Myrqx2hJcFX9wEST48u_kxZ8CCAzZSwJe0/edit",
+          "type": "Zdroj"
+        },
+        "apps_and_problem_solving_1/csd/2023": {
+          "name": "Aplikácie a riešenie problémov",
+          "url": "https://docs.google.com/document/d/1_uBOcUKrW9iQylhvGfAThFubngW8vBf8KGNQO6NHhU8/",
+          "type": "Vzájomné hodnotenie"
+        },
+        "apps_and_problem_solving_2/csd/2023": {
+          "name": "Aplikácie a riešenie problémov",
+          "url": "https://docs.google.com/document/d/1v213Ahu-4IGkj2edBROVX0HYaPVs21tKGfKYnbtmZPg/edit?usp=sharing",
+          "type": "Hodnotenie"
+        },
+        "computer_science_practices/csd/2023": {
+          "name": "Informatické prístupy",
+          "url": "https://docs.google.com/document/d/1a3Zr2wq3EzaAeuGuDC2fwfXS7lk1eBIKCGoukVsGQJ8/",
+          "type": "Reflexia"
+        },
+        "peer_review_exemplar/csd/2023": {
+          "name": "Vzorové vzájomné hodnotenie",
+          "url": "https://docs.google.com/document/d/1PoANYHwLe-xaErGi3XHLjeRd_O0zS3OM9ZH-FluJVHI/",
+          "type": "Príklad"
+        },
+        "project_-_propose_an_app/csd/2023": {
+          "name": "Projekt - Navrhnite aplikáciu",
+          "type": "Prezentácia"
+        },
+        "project_guide_exemplar/csd/2023": {
+          "name": "Vzorový sprievodca projektom",
+          "type": "Príklad"
+        },
+        "sample_marked_rubrics/csd/2023": {
+          "name": "Vzorovo vyplnené hodnotiace tabuľky",
+          "type": "Príklad"
+        },
+        "build_a_newspaper_table/csd/2023": {
+          "name": "Staviame stôl z novín",
+          "url": "https://docs.google.com/document/d/1iqWYcxK3DfHC5TjShATJqjuuYdthFE2QvowIOA6_UhI/",
+          "type": "Príklad"
+        },
+        "build_a_newspaper_table_1/csd/2023": {
+          "name": "Staviame stôl z novín",
+          "url": "https://docs.google.com/document/d/1OceR3-cRWJqnaoADj2r0Or69AB8GK6VhCZn4AmFZ-cg/",
+          "type": "Sprievodca aktivitou"
+        },
+        "intro_to_problem_solving_newspapers_/csd/2023": {
+          "type": "Prezentácia"
+        },
+        "intro_to_problem_solving_spaghetti_/csd/2023": {
+          "type": "Prezentácia"
+        },
+        "spaghetti_bridge/csd/2023": {
+          "name": "Špagetový most",
+          "url": "https://docs.google.com/document/d/1XUKyQ3UfGDOugVRWybvjietxgM-LEkdsaT2h6haXp4Q/edit?usp=sharing",
+          "type": "Príklad"
+        },
+        "spaghetti_bridge_-_activity_guide/csd/2023": {
+          "name": "Špagetový most – sprievodca aktivitou",
+          "url": "https://docs.google.com/document/d/1Rb9AZfbiSqqnxsjxXpQZYrvZJ7g46gHHP7N68wwQbCY/",
+          "type": "Sprievodca aktivitou"
+        },
+        "code_org_how-to_video_playlist/csd/2023": {
+          "name": "Zoznam videonávodov Code.org",
+          "url": "https://www.youtube.com/playlist?list=PL7-6SpcrToamXzSMUKkEYZfKTzi6gJos5"
+        },
+        "intro_to_problem_solving_-_paper_tower/csd/2023": {
+          "name": "Úvod do riešenia problémov – Papierová veža",
+          "url": "https://docs.google.com/document/d/1gQU4aEO_lfqeuImV_5pjKjtePOzF_gM3rpmnrQ6d5Q4/",
+          "type": "Príklad"
+        },
+        "intro_to_problem_solving_paper_towels_/csd/2023": {
+          "type": "Prezentácia"
+        },
+        "paper_tower/csd/2023": {
+          "name": "Papierová veža",
+          "url": "https://docs.google.com/document/d/1OLrJhIOd2GXvw7vM3-P6dy3MVz_kGPEe0QvGYYsi2xQ/",
+          "type": "Sprievodca aktivitou"
+        },
+        "exploring_problem_solving_-_animal_theme/csd/2023": {
+          "name": "Objavujeme riešenie problémov – zvieratká",
+          "url": "https://docs.google.com/document/d/1m_EjuJ9d4sMYSD8fJ2612UncCq1f4DPwf4wjqvThUZg/",
+          "type": "Príklad"
+        },
+        "exploring_problem_solving_animals_/csd/2023": {
+          "type": "Prezentácia"
+        },
+        "solving_problems_2/csd/2023": {
+          "name": "Riešenie problémov",
+          "url": "https://docs.google.com/document/d/1tsy9gSorBpgOLtF_mf9gGdvuVN-rdUw5kA1lyjMDqfY/",
+          "type": "Sprievodca aktivitou"
+        },
+        "tangrams/csd/2023": {
+          "name": "Tangramy",
+          "url": "https://docs.google.com/document/d/15EVADKK_Dk3UVwDIbuRK6TLjIJJD8-6bVWPsu0zTvLc/edit",
+          "type": "Zdroj"
+        },
+        "exploring_problem_solving_-_games_theme/csd/2023": {
+          "name": "Objavujeme riešenie problémov – hry",
+          "url": "https://docs.google.com/document/d/1SRVSAGI4E-ZJsO4K4wtftwAiki8NQKDddrlSgfQFb9c/",
+          "type": "Príklad"
+        },
+        "exploring_problem_solving_games_/csd/2023": {
+          "type": "Prezentácia"
+        },
+        "solving_problems_3/csd/2023": {
+          "name": "Riešenie problémov",
+          "url": "https://docs.google.com/document/d/1qfKtiQhbVJuoJqQFZ6ZUXjAvqlo27LLQG02oxSoiRYM/",
+          "type": "Sprievodca aktivitou"
+        },
+        "csd_guide_to_debugging/csd/2023": {
+          "name": "Objavujeme informatiku: Sprievodca ladením"
+        },
+        "csd_guide_to_differentiation/csd/2023": {
+          "name": "Objavujeme informatiku: Sprievodca diferenciáciou"
+        },
+        "all_code_4/csd/2023": {
+          "name": "Všetok kód"
+        },
+        "all_resources_5/csd/2023": {
+          "name": "Všetky zdroje"
+        },
+        "all_standards_5/csd/2023": {
+          "name": "Všetky normy"
+        },
+        "all_vocabulary_5/csd/2023": {
+          "name": "Všetky pojmy"
+        },
+        "_key_warm_up_word_search/csd/2023": {
+          "type": "Kľúč s odpoveďami"
+        },
+        "_key_web_design_for_users/csd/2023": {
+          "type": "Kľúč s odpoveďami"
+        },
+        "exploring_web_pages_1/csd/2023": {
+          "type": "Sprievodca aktivitou"
+        },
+        "exploring_web_pages_2/csd/2023": {
+          "name": "Objavujeme webové stránky",
+          "type": "Prezentácia"
+        },
+        "problem_solving_and_design/csd/2023": {
+          "type": "Zdroj"
+        },
+        "web_design_for_users_b_/csd/2023": {
+          "type": "Sprievodca aktivitou"
+        },
+        "web_design_template/csd/2023": {
+          "type": "Zdroj"
+        },
+        "_warm_up_word_search_1/csd/2023": {
+          "type": "Sprievodca aktivitou"
+        },
+        "exemplar_text_website/csd/2023": {
+          "name": "Vzorový web s textom",
+          "url": "https://codeprojects.org/t0CRT-85_y-VLFBO5RF3VQ/",
+          "type": "Webová stránka"
+        },
+        "html_tags/csd/2023": {
+          "name": "HTML tag-y",
+          "url": "https://docs.google.com/document/d/1tiiocs2Su1bJUUrTyb7dZtxJEQj-qQKpVsl5GW-pI2g/",
+          "type": "Zdroj"
+        },
+        "intro_to_html/csd/2023": {
+          "name": "Úvod do HTML",
+          "type": "Prezentácia"
+        },
+        "intro_to_web_lab_part_2/csd/2023": {
+          "name": "Úvod do Web Labu – 2. časť",
+          "url": "https://youtu.be/Hjl6gbg9kmk",
+          "type": "Video"
+        },
+        "pair_programming/csd/2023": {
+          "name": "Párové programovanie",
+          "type": "Video"
+        },
+        "video_intro_to_web_lab_part_1/csd/2023": {
+          "name": "Video: Úvod do Web Labu – 1. časť",
+          "url": "https://www.youtube.com/watch?v=itx0RYOnoBs",
+          "type": "Video"
+        },
+        "formatting_html/csd/2023": {
+          "name": "Formátovanie HTML",
+          "url": "https://docs.google.com/document/d/1DkgmzClwiQIOowJHpskQmGpsb9n2kca5Tev7iGMuuWM/",
+          "type": "Zdroj"
+        },
+        "headings/csd/2023": {
+          "type": "Prezentácia"
+        },
+        "headings_and_paragraphs/csd/2023": {
+          "name": "Nadpisy a odseky ",
+          "url": "https://docs.google.com/document/d/1EOdCMLbNMd7Zva17f2bMrYPYkelsKJLhhcgCWatn5_4/",
+          "type": "Zdroj"
+        },
+        "lists/csd/2023": {
+          "name": "Zoznamy",
+          "url": "https://docs.google.com/document/d/1o0MrZjF040nh8UIdo8Y909gjg2ztQyvnHSL7csp2v-U/",
+          "type": "Zdroj"
+        },
+        "video_debugging/csd/2023": {
+          "name": "Video: Ladenie",
+          "url": "https://youtu.be/auv10y-dN4s",
+          "type": "Video"
+        },
+        "video_pair_programming/csd/2023": {
+          "name": "Video: Párové programovanie",
+          "url": "https://youtu.be/q7d_JtyCq1A",
+          "type": "Video"
+        },
+        "html_web_page/csd/2023": {
+          "name": "Webová stránka v HTML",
+          "url": "https://docs.google.com/document/d/1O5nHnGqmAkSwpoBa-d_31RoPBWRcq4etebhj9IN0UPg/",
+          "type": "Hodnotenie"
+        },
+        "html_web_page_1/csd/2023": {
+          "name": "Webová stránka v HTML",
+          "url": "https://docs.google.com/document/d/1rSENOG73mn27zzsc4Ljnv3MZPwHIpPecHV7BhULANDg/",
+          "type": "Vzájomné hodnotenie"
+        },
+        "html_web_page_2/csd/2023": {
+          "name": "Webová stránka v HTML",
+          "url": "https://docs.google.com/document/d/1PJlbQlD7Ke9Alb82ci37BbDxJZqC4iUL6XozVoCWJPg",
+          "type": "Sprievodca projektom"
+        },
+        "mini-project_html_web_page/csd/2023": {
+          "name": "Miniprojekt: Webová stránka v HTML",
+          "type": "Prezentácia"
+        },
+        "peer_review_-_html_web_page/csd/2023": {
+          "name": "Vzájomné hodnotenie – Webová stránka v HTML",
+          "url": "https://docs.google.com/document/d/1HK65GWb7a1ardKpYPqbva9NJ9cUqgtPJSj-M-_qWRM0/",
+          "type": "Príklad"
+        },
+        "problem_solving_process_with_programming/csd/2023": {
+          "type": "Zdroj"
+        },
+        "project_guide_-_html_project/csd/2023": {
+          "name": "Sprievodca projektom – Projekt v HTML",
+          "url": "https://docs.google.com/document/d/13ckclCjaRGPxBWjXEdkj7W3vH-A4wgTGEzyxSDfiLpI/",
+          "type": "Príklad"
+        },
+        "digital_footprint/csd/2023": {
+          "name": "Digitálna stopa",
+          "type": "Prezentácia"
+        },
+        "social_sleuth/csd/2023": {
+          "name": "Sociálny detektív",
+          "url": "https://docs.google.com/document/d/1CgKG5HTVnQcw4KD0sturirqeenoAcuDkJqbedLz0caE/",
+          "type": "Príklad"
+        },
+        "social_sleuth_1/csd/2023": {
+          "name": "Sociálny detektív",
+          "url": "https://docs.google.com/document/d/1cwBjQKi4MxavR9aAVKR11T9rWhoTNj82xgxdEygRPOQ/",
+          "type": "Sprievodca aktivitou"
+        },
+        "intro_to_css_-_part_1/csd/2023": {
+          "name": "Úvod do CSS - časť 1",
+          "url": "https://www.youtube.com/watch?v=EP9QMdoXvXE",
+          "type": "Video"
+        },
+        "intro_to_css_-_part_2/csd/2023": {
+          "name": "Úvod do CSS - časť 2",
+          "url": "https://youtu.be/VgBVKlpLqsE",
+          "type": "Video"
+        },
+        "style_sheets/csd/2023": {
+          "name": "Súbory štýlov",
+          "url": "https://docs.google.com/document/d/1jt5HgX0OibX6Wi94r5zqo3fUW1CCp0eWslLbYTNos7A/",
+          "type": "Zdroj"
+        },
+        "styling_text_with_css/csd/2023": {
+          "name": "Štýlovanie textu pomocou CSS",
+          "type": "Prezentácia"
+        },
+        "text_properties/csd/2023": {
+          "name": "Textové vlastnosti",
+          "url": "https://docs.google.com/document/d/1HxsK5lG6Zn7A8E5ONUlKCI7R4C9QT01DgUo-Shc4yNI/",
+          "type": "Zdroj"
+        },
+        "mini-project_your_personal_style/csd/2023": {
+          "name": "Miniprojekt: Tvoj vlastný štýl",
+          "type": "Prezentácia"
+        },
+        "peer_review_-_your_personal_style/csd/2023": {
+          "name": "Vzájomné hodnotenie – Tvoj osobný štýl",
+          "url": "https://docs.google.com/document/d/1IlpyyzinATwYE2KJ2pNq-nCh0q7gfMWKGUjOAIpoiTo/",
+          "type": "Príklad"
+        },
+        "project_guide_-_your_personal_style/csd/2023": {
+          "name": "Sprievodca projektom – Tvoj osobný štýl",
+          "url": "https://docs.google.com/document/d/1-fBbAd2OJdAx7lrHWbiawMjMeX_fRAPAvfQ1gUCRbOc/",
+          "type": "Príklad"
+        },
+        "your_personal_style/csd/2023": {
+          "name": "Tvoj osobný štýl",
+          "url": "https://docs.google.com/document/d/1Kpz4D00_pshz7yxAOA1GeoqWBTmBb6my_YanyEb9Fv8/",
+          "type": "Hodnotenie"
+        },
+        "your_personal_style_1/csd/2023": {
+          "name": "Tvoj osobný štýl",
+          "url": "https://docs.google.com/document/d/1Wp_EdUOlhiEw4BQJBRwOidqcgBnJChHUTWOhZclOnBE",
+          "type": "Vzájomné hodnotenie"
+        },
+        "your_personal_style_2/csd/2023": {
+          "name": "Tvoj osobný štýl",
+          "url": "https://docs.google.com/document/d/13es_Ibeee3-RW9QQpfoWFHxIsm2TiE4sT9kmNb_QPNk/",
+          "type": "Sprievodca projektom"
+        },
+        "creative_commons_overview/csd/2023": {
+          "name": "Prehľad licencií Creative Commons",
+          "url": "https://www.youtube.com/watch?v=srVPLrmlBJY",
+          "type": "Video"
+        },
+        "intellectual_property/csd/2023": {
+          "name": "Duševné vlastníctvo",
+          "type": "Prezentácia"
+        },
+        "licensing_your_work/csd/2023": {
+          "name": "Licencovanie vašej tvorby",
+          "url": "https://docs.google.com/document/d/1YrGODg1qrMtvfWIO8GK3MetaqK9M-vm2KSjTzewzP7Y/",
+          "type": "Príklad"
+        },
+        "licensing_your_work_1/csd/2023": {
+          "name": "Licencovanie vašej tvorby",
+          "url": "https://docs.google.com/document/d/1F9RbAXHCQydWZfhfxTjVFinmbSposJCfBF9AlRQX_rU/",
+          "type": "Sprievodca aktivitou"
+        },
+        "creative_commons_search/csd/2023": {
+          "name": "Vyhľadávanie Creative Commons",
+          "url": "https://docs.google.com/document/d/1pugwa6qLySLNsItiYcQzH13tv4Egso2b-Z_Wqn2k5xI/",
+          "type": "Zdroj"
+        },
+        "images_in_html/csd/2023": {
+          "name": "Obrázky v HTML",
+          "url": "https://docs.google.com/document/d/1nXHyfWzejSA_w5VnKQyL1dxuKvoMTv2xwoPfjLpCYZU/",
+          "type": "Zdroj"
+        },
+        "using_images/csd/2023": {
+          "name": "Používanie obrázkov",
+          "type": "Prezentácia"
+        },
+        "define_your_web_page/csd/2023": {
+          "name": "Zadefinuj svoju webovú stránku",
+          "url": "https://docs.google.com/document/d/1XAr-DEz3Ng3wLPUdTWz74k2BWTyoILntjWS4Z56e5c4/",
+          "type": "Sprievodca aktivitou"
+        },
+        "define_your_webpage/csd/2023": {
+          "name": "Zadefinuj svoju webovú stránku",
+          "url": "https://docs.google.com/document/d/1R8tKdBrzZViFbzRNirqHoLIiQp9HJyRxJCnSZwVdLKc/",
+          "type": "Príklad"
+        },
+        "websites_for_expression/csd/2023": {
+          "name": "Webové stránky ako nástroj na sebavyjadrenie",
+          "type": "Prezentácia"
+        },
+        "body_styling/csd/2023": {
+          "name": "Štýlovanie prvku „body“",
+          "url": "https://drive.google.com/file/d/1joTTFiq8LxbeUOXCFnyNXDDNYDL9_H8O/view",
+          "type": "Stránka so zdrojmi"
+        },
+        "layout_properties/csd/2023": {
+          "name": "Vlastnosti rozloženia",
+          "url": "https://docs.google.com/document/d/1NXQpEEJp854nGA-BylquZD4nTLpmS1wXhTWDRX8T60E/",
+          "type": "Stránka so zdrojmi"
+        },
+        "styling_elements_with_css/csd/2023": {
+          "name": "Štýlovanie prvkov pomocou CSS",
+          "type": "Prezentácia"
+        },
+        "personal_web_page_-_prepare/csd/2023": {
+          "name": "Osobná webová stránka – príprava",
+          "url": "https://docs.google.com/document/d/1CLun3wVBNv-Btwy_ttGBfP2J4QDmA9Xr0y1KHh-DorQ/",
+          "type": "Sprievodca projektom"
+        },
+        "project_guide_-_personal_web_page_-_prepare/csd/2023": {
+          "name": "Sprievodca projektom – Osobná webová stránka – príprava",
+          "url": "https://docs.google.com/document/d/1qFECJTi1PqeD_Xi8R5ixFA-JIaQWDRkvOXjbHr__mto/",
+          "type": "Príklad"
+        },
+        "your_web_page_prepare/csd/2023": {
+          "type": "Prezentácia"
+        },
+        "peer_review_-_personal_website/csd/2023": {
+          "name": "Vzájomné hodnotenie – Osobná webová stránka",
+          "url": "https://docs.google.com/document/d/1lvYMVcWp-eBORPW9SyjrpHgOPp9pjW7YHKXlv7qGdJ8/",
+          "type": "Príklad"
+        },
+        "personal_web_page/csd/2023": {
+          "name": "Osobná webová stránka",
+          "url": "https://docs.google.com/document/d/1AqsBO5h-LuSg1YvBsQn-KIrszSz1L951BuLim--jRPE/",
+          "type": "Vzájomné hodnotenie"
+        },
+        "personal_web_page_-_reflect/csd/2023": {
+          "name": "Osobná webová stránka – reflexia",
+          "url": "https://docs.google.com/document/d/1CEJhoFsul7po9s7Zwi2PCT0QvY0-djEiWppUW5vScGA/",
+          "type": "Sprievodca projektom"
+        },
+        "personal_web_page_-_student_checklist/csd/2023": {
+          "name": "Osobná webová stránka – kontrolný zoznam pre žiakov",
+          "url": "https://docs.google.com/document/d/1VCfGki0YUJaugDIfb-fXzUmaoBV9iaSDhDzIyHcQXYU/",
+          "type": "Zdroj"
+        },
+        "personal_web_page_1/csd/2023": {
+          "name": "Osobná webová stránka",
+          "url": "https://docs.google.com/document/d/1fpyz6IikYuSNq8zy9qjUKf5YZGD4QPEcDeAbxcCMKMw/",
+          "type": "Hodnotenie"
+        },
+        "practices_reflection/csd/2023": {
+          "name": "Precvičovanie reflexie",
+          "url": "https://docs.google.com/document/d/1Gb5AuMR7tURNT9MpqKMYiac3HrHSIyPLPbLbi9SBm4U/",
+          "type": "Príklad"
+        },
+        "project_-_personal_web_page/csd/2023": {
+          "name": "Projekt – Osobná webová stránka",
+          "type": "Prezentácia"
+        },
+        "project_guide_-_personal_web_page_-_reflect/csd/2023": {
+          "name": "Sprievodca projektom – Osobná webová stránka – reflexia",
+          "url": "https://docs.google.com/document/d/1aobuc9ZgHdiuhQtQ3dqvMV5FCsbkK914cHiaXr6BQYM/",
+          "type": "Príklad"
+        },
+        "publishing_your_website/csd/2023": {
+          "name": "Publikovanie tvojho webu",
+          "url": "https://youtu.be/2qcIlRtdpgE",
+          "type": "Video"
+        },
+        "websites_for_a_purpose/csd/2023": {
+          "name": "Weby s účelom",
+          "url": "https://docs.google.com/document/d/1Sh9pfZw6MjXqG8XJViw8XTsojKTbEgxLhYNQqbH1HIE/",
+          "type": "Príklad"
+        },
+        "websites_for_a_purpose_1/csd/2023": {
+          "name": "Weby s účelom",
+          "url": "https://docs.google.com/document/d/146i34EBivfRDPpcgeP2gM62p0hqh4Cbnp9IDUqq9734/",
+          "type": "Sprievodca aktivitou"
+        },
+        "websites_for_a_purpose_2/csd/2023": {
+          "name": "Weby s účelom",
+          "type": "Prezentácia"
+        },
+        "team_problem_solving/csd/2023": {
+          "name": "Riešenie problémov v tímoch",
+          "type": "Prezentácia"
+        },
+        "video_managing_disagreement/csd/2023": {
+          "name": "Video: Riešenie nezhôd",
+          "url": "https://youtu.be/6GgrUeVT-xs",
+          "type": "Video"
+        },
+        "video_teamwork/csd/2023": {
+          "name": "Video: Tímová práca",
+          "url": "https://youtu.be/qkw4pDV5Lec",
+          "type": "Video"
+        },
+        "website_team_plan/csd/2023": {
+          "name": "Tímový plán webu",
+          "url": "https://docs.google.com/document/d/1aIrduaIRH2XJ9oT9QWdW9IhE_l3JNR3ko4McYQVxTA0/",
+          "type": "Príklad"
+        },
+        "website_team_plan_1/csd/2023": {
+          "name": "Tímový plán webu",
+          "url": "https://docs.google.com/document/d/1foTIqIQni1dhgSrjwaiZEVHTE1keuWq4UX77sNwZgWs/",
+          "type": "Sprievodca aktivitou"
+        },
+        "internet_scavenger_hunt/csd/2023": {
+          "name": "Internetová hľadačka",
+          "url": "https://docs.google.com/document/d/1kcCt5XYVNDGv4EJVzpWLeOQqnF28RRqKiZVyqYdq8eM/",
+          "type": "Sprievodca aktivitou"
+        },
+        "links_and_research/csd/2023": {
+          "name": "Odkazy a vyhľadávanie zdrojov",
+          "url": "https://docs.google.com/document/d/177bKYuaoKu4NsevOGUfvjCtXMVWiHBBZPEMfwT9KKiE",
+          "type": "Príklad"
+        },
+        "links_and_research_1/csd/2023": {
+          "name": "Odkazy a vyhľadávanie zdrojov",
+          "type": "Sprievodca aktivitou"
+        },
+        "sources_and_research/csd/2023": {
+          "name": "Zdroje a ich vyhľadávanie",
+          "type": "Prezentácia"
+        },
+        "video_how_search_works/csd/2023": {
+          "name": "Ako funguje vyhľadávanie",
+          "url": "https://youtu.be/LVV_93mBfSU",
+          "type": "Video"
+        },
+        "classes/csd/2023": {
+          "name": "Triedy",
+          "url": "https://docs.google.com/document/d/1xmXXic19KoUe656UFyaeGmntsAsIoNoqUj50z7Q3v5E/",
+          "type": "Zdroj"
+        },
+        "css_classes/csd/2023": {
+          "name": "CSS triedy",
+          "type": "Prezentácia"
+        },
+        "plan_a_multi-page_website/csd/2023": {
+          "name": "Plánovanie viacstránkového webu",
+          "url": "https://docs.google.com/document/d/1Z7VVdLoY0pkfZr3WJN9UKJR4Vnthx-Zj7Qnf0v4GZFQ/",
+          "type": "Sprievodca projektom"
+        },
+        "planning_a_multi-page_site/csd/2023": {
+          "name": "Plánovanie webu s viacerými stránkami",
+          "type": "Prezentácia"
+        },
+        "project_guide_-_website_for_a_purpose_-_prepare/csd/2023": {
+          "name": "Sprievodca projektom – Web s účelom – príprava",
+          "url": "https://docs.google.com/document/d/1-yZPV5tjh_fS_4XNqj70VCqNTlV4HXgMSmusSoAIo_U/",
+          "type": "Príklad"
+        },
+        "website_for_a_purpose/csd/2023": {
+          "name": "Web s účelom",
+          "url": "https://docs.google.com/document/d/1gnpJAZQZcmfZzdDHJzG5jYAgIUnx3NrrmxPyBrfcvDQ/",
+          "type": "Hodnotenie"
+        },
+        "website_for_a_purpose_-_student_checklist/csd/2023": {
+          "name": "Web s účelom – kontrolný zoznam pre žiakov",
+          "url": "https://docs.google.com/document/d/10RIj7M2JBllN6ZD1Wnq6Oua5UsT-bLlMphog-I8rkZQ/"
+        },
+        "hyperlinks/csd/2023": {
+          "name": "Hypertextové odkazy",
+          "url": "https://docs.google.com/document/d/1SlYkxq5X-0Ta6-D6IFBq2WEflg-EeMCM6GCx4mJdQgs/",
+          "type": "Zdroj"
+        },
+        "linking_pages/csd/2023": {
+          "name": "Prepájanie stránok",
+          "type": "Prezentácia"
+        },
+        "project_-_website_for_a_purpose/csd/2023": {
+          "name": "Projekt – Web s účelom",
+          "type": "Prezentácia"
+        },
+        "peer_review_-_final_personal_website/csd/2023": {
+          "name": "Vzájomné hodnotenie – Konečná osobná webová stránka",
+          "url": "https://docs.google.com/document/d/1jwYuhBTiUtVvh8TbL97_Ah9Pjky6wqWotpDisiCWPFE/",
+          "type": "Príklad"
+        },
+        "peer_review_and_final_touches/csd/2023": {
+          "name": "Vzájomná kontrola a záverečné úpravy",
+          "type": "Prezentácia"
+        },
+        "practices_reflection_1/csd/2023": {
+          "name": "Precvičovanie reflexie",
+          "url": "https://docs.google.com/document/d/1K9ePNbHCnxQEe0G4tvgXxHgfBGFsuEobEIznjUhnwh8/",
+          "type": "Príklad"
+        },
+        "project_guide_-_website_for_a_purpose_-_reflect/csd/2023": {
+          "name": "Sprievodca projektom – Web s účelom – reflexia",
+          "url": "https://docs.google.com/document/d/1yAw19zO5FfOx5P1inmgYApu9VXH_Bpo8WDlDjoW-RgA/view",
+          "type": "Príklad"
+        },
+        "website_for_a_purpose_-_reflect/csd/2023": {
+          "name": "Web s účelom – reflexia",
+          "url": "https://docs.google.com/document/d/1RQKjtHdg1ToYHkDhlHAxztNDZ3b2NOGHo7-wfR9LIbA/",
+          "type": "Sprievodca projektom"
+        },
+        "website_for_a_purpose_1/csd/2023": {
+          "name": "Web s účelom",
+          "url": "https://docs.google.com/document/d/1_OBwhcXE97b1DQAaui0o2pqd3OLygT9R0xF0hPJj3t8/",
+          "type": "Vzájomné hodnotenie"
+        },
+        "all_code_5/csd/2023": {
+          "name": "Všetok kód"
+        },
+        "all_resources_6/csd/2023": {
+          "name": "Všetky zdroje"
+        },
+        "all_standards_6/csd/2023": {
+          "name": "Všetky normy"
+        },
+        "all_vocabulary_6/csd/2023": {
+          "name": "Všetky pojmy"
+        },
+        "_warm_up_word_search_key_/csd/2023": {
+          "type": "Kľúč s odpoveďami"
+        },
+        "app_design_for_users/csd/2023": {
+          "type": "Sprievodca aktivitou"
+        },
+        "exemplar_-_animation_and_game_design_activity_guide/csd/2023": {
+          "type": "Príklad"
+        },
+        "programming_for_a_purpose/csd/2023": {
+          "type": "Prezentácia"
+        },
+        "_warm_up_word_search_unit_3/csd/2023": {
+          "type": "Sprievodca aktivitou"
+        },
+        "animation_and_game_design_template/csd/2023": {
+          "type": "Zdroj"
+        },
+        "drawing_shapes/csd/2023": {
+          "name": "Kreslenie tvarov",
+          "type": "Príklad"
+        },
+        "drawing_shapes_version_a_/csd/2023": {
+          "name": "Kreslenie tvarov (verzia A)",
+          "url": "https://docs.google.com/document/d/1nqhvUotZY6Eq_yARq5DQeBVh66-DLgxkxS20gxl9wgE/",
+          "type": "Sprievodca aktivitou"
+        },
+        "drawing_shapes_version_b_/csd/2023": {
+          "name": "Kreslenie tvarov (verzia B)",
+          "url": "https://docs.google.com/document/d/1U8MzSbBgFpoD9RA9juMlwoY8a3-rIqfc2phYGM4rCJs/",
+          "type": "Sprievodca aktivitou"
+        },
+        "plotting_shapes/csd/2023": {
+          "name": "Kreslenie tvarov",
+          "type": "Prezentácia"
+        },
+        "sample_shape_drawing/csd/2023": {
+          "name": "Ukážka kreslenia tvaru",
+          "url": "https://cdo-curriculum.s3.amazonaws.com/media/uploads/Screenshot-2017-05-24-at-1.13.21-PM.png",
+          "type": "Príklad"
+        },
+        "drawing_in_game_lab/csd/2023": {
+          "name": "Kreslenie v Game Labe",
+          "type": "Prezentácia"
+        },
+        "drawing_in_game_lab_-_part_1/csd/2023": {
+          "name": "Video: Kreslenie v Game Labe - 1. časť",
+          "url": "https://youtu.be/PXn9gKiKKFo",
+          "type": "Video"
+        },
+        "drawing_in_game_lab_-_part_2/csd/2023": {
+          "name": "Video: Kreslenie v Game Labe - 2. časť",
+          "url": "https://youtu.be/QLabeWhw_O0",
+          "type": "Video"
+        },
+        "drawing_shapes_1/csd/2023": {
+          "name": "Kreslenie tvarov",
+          "url": "https://docs.google.com/document/d/1UA2V-2K-Y7bWhEKNYa9cnMZLXCDroZf22KthXEhwzT4/view?usp=sharing",
+          "type": "Zdroj"
+        },
+        "shapes_and_parameters/csd/2023": {
+          "name": "Tvary a parametre",
+          "url": "https://docs.google.com/document/d/1rM9FvqqmWieHGuB1Zsa7o6yzdzqTuCJLm3wF5Ur5tWs/view?usp=sharing",
+          "type": "Zdroj"
+        },
+        "shapes_and_parameters_1/csd/2023": {
+          "name": "Tvary a parametre",
+          "type": "Prezentácia"
+        },
+        "introduction_to_variables/csd/2023": {
+          "name": "Predstavenie premenných",
+          "url": "https://youtu.be/UG7Q1Sr0_F0",
+          "type": "Video"
+        },
+        "naming_variables/csd/2023": {
+          "url": "https://drive.google.com/file/d/1GGtHE-IK3S9rN6KoaE9jhdzTK8emO_Kw/view",
+          "type": "Zdroj"
+        },
+        "variables/csd/2023": {
+          "name": "Premenné",
+          "type": "Zdroj"
+        },
+        "variables_1/csd/2023": {
+          "name": "Premenné",
+          "type": "Video"
+        },
+        "variables_2/csd/2023": {
+          "name": "Premenné",
+          "type": "Prezentácia"
+        },
+        "random_numbers/csd/2023": {
+          "name": "Náhodné čísla",
+          "type": "Zdroj"
+        },
+        "random_numbers_1/csd/2023": {
+          "name": "Náhodné čísla",
+          "type": "Prezentácia"
+        },
+        "activity_guide_-_robot_face_planning/csd/2023": {
+          "type": "Sprievodca aktivitou"
+        },
+        "mini-project_-_robot_faces/csd/2023": {
+          "type": "Prezentácia"
+        },
+        "mini-project_-_robot_faces_1/csd/2023": {
+          "type": "Príklad"
+        },
+        "problem_solving_with_programming/csd/2023": {
+          "type": "Zdroj"
+        },
+        "robot_faces/csd/2023": {
+          "type": "Hodnotenie"
+        },
+        "animation_tab/csd/2023": {
+          "name": "Karta Animácie",
+          "url": "https://docs.google.com/document/d/15SMe7U_8fsrGtPcFwekGN9X0HY9vQfRCsjDEusgz9b4/view",
+          "type": "Zdroj"
+        },
+        "introduction_to_sprites/csd/2023": {
+          "type": "Video"
+        },
+        "sprites/csd/2023": {
+          "name": "Sprajty",
+          "url": "https://docs.google.com/document/d/1CcMWooCGNYE8eEBtnTmI2Mkm30zAZ2uomYVU4C1sM3w/view",
+          "type": "Zdroj"
+        },
+        "sprites_1/csd/2023": {
+          "name": "Sprajty",
+          "type": "Prezentácia"
+        },
+        "the_animation_tab/csd/2023": {
+          "name": "Záložka s animáciami",
+          "type": "Video"
+        },
+        "sprite_properties/csd/2023": {
+          "name": "Vlastnosti sprajtov",
+          "url": "https://docs.google.com/document/d/11HX56vUOm9bk5NkPMNKdPe5uZ59gdhXCQfTwJUQa0L0/view?usp=sharing",
+          "type": "Zdroj"
+        },
+        "sprite_properties_1/csd/2023": {
+          "name": "Vlastnosti sprajtov",
+          "type": "Prezentácia"
+        },
+        "sprite_properties_needs_updating_/csd/2023": {
+          "name": "Vlastnosti sprajtov",
+          "type": "Video"
+        },
+        "text/csd/2023": {
+          "name": "Text",
+          "type": "Prezentácia"
+        },
+        "captioned_scenes/csd/2023": {
+          "name": "Scény s titulkami",
+          "type": "Hodnotenie"
+        },
+        "mini-project_-_captioned_scenes/csd/2023": {
+          "name": "Miniprojekt – Scény s titulkami",
+          "type": "Prezentácia"
+        },
+        "mini_project_-_captioned_scenes/csd/2023": {
+          "name": "Mini projekt - Scény s titulkami",
+          "type": "Príklad"
+        },
+        "sprite_scene_planning/csd/2023": {
+          "name": "Plánovanie scény so sprajtmi",
+          "type": "Sprievodca aktivitou"
+        },
+        "flipbook_example_-_by_marnic_bos/csd/2023": {
+          "name": "Príklad flipbooku - od Marnic Bos",
+          "url": "https://youtu.be/hol0p29cd8o",
+          "type": "Video"
+        },
+        "introduction_to_the_draw_loop/csd/2023": {
+          "url": "https://youtu.be/G6QJeuHhqCM",
+          "type": "Video"
+        },
+        "random_dot_flipbook/csd/2023": {
+          "name": "Flipbook s náhodnou bodkou"
+        },
+        "random_sprite_flipbook/csd/2023": {
+          "name": "Flipbook s náhodným sprajtom"
+        },
+        "the_draw_loop/csd/2023": {
+          "name": "Cyklus kreslenia",
+          "url": "https://docs.google.com/document/d/1HVIqBJvUbv34ldvDvWL0btrbATDCdEr3G8GfvNcihHQ",
+          "type": "Zdroj"
+        },
+        "the_draw_loop_1/csd/2023": {
+          "name": "Cyklus kreslenia",
+          "type": "Prezentácia"
+        },
+        "sprite_movement/csd/2023": {
+          "name": "Pohyb sprajtov",
+          "url": "https://youtu.be/G666sFzAg5g",
+          "type": "Video"
+        },
+        "sprite_movement_1/csd/2023": {
+          "name": "Pohyb sprajtov",
+          "type": "Prezentácia"
+        },
+        "animated_scene/csd/2023": {
+          "name": "Animovaná scéna",
+          "type": "Hodnotenie"
+        },
+        "animated_scene_1/csd/2023": {
+          "name": "Animovaná scéna",
+          "type": "Sprievodca aktivitou"
+        },
+        "animated_scene_planning/csd/2023": {
+          "name": "Plánovanie animovanej scény",
+          "type": "Príklad"
+        },
+        "mini-project_-_animation/csd/2023": {
+          "name": "Miniprojekt – Animácia",
+          "type": "Prezentácia"
+        },
+        "boolean_expressions/csd/2023": {
+          "name": "Logické výrazy",
+          "url": "https://youtu.be/_j9nvYKaOVE",
+          "type": "Video"
+        },
+        "booleans_and_comparison_operators/csd/2023": {
+          "name": "Logické výrazy a porovnávacie znamienka",
+          "url": "https://drive.google.com/file/d/1gGmtvyZpXVcH6Vrju9FX73X7qlZLIBvt/view?usp=sharing",
+          "type": "Zdroj"
+        },
+        "conditional_statements/csd/2023": {
+          "name": "Podmienkové výroky",
+          "url": "https://youtu.be/TuLIK7DcPWs",
+          "type": "Video"
+        },
+        "conditionals/csd/2023": {
+          "name": "Podmienené príkazy",
+          "type": "Prezentácia"
+        },
+        "if_statements/csd/2023": {
+          "type": "Zdroj"
+        },
+        "keyboard_input/csd/2023": {
+          "name": "Vstup z klávesnice",
+          "type": "Prezentácia"
+        },
+        "if-else_statements/csd/2023": {
+          "name": "Výroky \"If-Else\"",
+          "url": "https://docs.google.com/document/d/1CKETr-MNCTCGrJSuoeGN9fZEweNa5Kv9o5Q4dWUh2Us",
+          "type": "Zdroj"
+        },
+        "if_else_statements/csd/2023": {
+          "name": "Podmienkové príkazy (if/else)",
+          "url": "https://youtu.be/6m6FFUJsOzo",
+          "type": "Video"
+        },
+        "mouse_input/csd/2023": {
+          "name": "Vstup pomocou myši",
+          "type": "Prezentácia"
+        },
+        "extra_code_in_challenge_levels/csd/2023": {
+          "name": "Extra kód na úrovniach úloh",
+          "url": "https://docs.google.com/document/d/1Zx8e-b_GJFNxsuXx10tIdh3EPSGoqPwpxGh2Hz70B2w/view",
+          "type": "Zdroj"
+        },
+        "interactive_card/csd/2023": {
+          "type": "Príklad"
+        },
+        "interactive_card_-_marked_rubrics/csd/2023": {
+          "name": "Interaktívna pohľadnica – Vyplnené hodnotiace tabuľky",
+          "type": "Príklad"
+        },
+        "interactive_card_-_student_checklist/csd/2023": {
+          "name": "Interaktívna pohľadnica – kontrolný zoznam pre žiakov",
+          "type": "Zdroj"
+        },
+        "interactive_card_1/csd/2023": {
+          "type": "Sprievodca aktivitou"
+        },
+        "interactive_card_2/csd/2023": {
+          "type": "Sprievodca aktivitou"
+        },
+        "interactive_card_3/csd/2023": {
+          "name": "Interaktívna pohľadnica",
+          "type": "Hodnotenie"
+        },
+        "project_-_interactive_card/csd/2023": {
+          "name": "Projekt - Interaktívna pohľadnica",
+          "type": "Prezentácia"
+        },
+        "velocity/csd/2023": {
+          "name": "Rýchlosť",
+          "url": "https://youtu.be/zcP94yMYqrI",
+          "type": "Video"
+        },
+        "velocity_1/csd/2023": {
+          "name": "Rýchlosť",
+          "url": "https://docs.google.com/document/d/1OW_KB7Z1hiW3oNYYJzm12BF1VE0gkjYxi44vQBjTthQ/view?usp=sharing",
+          "type": "Zdroj"
+        },
+        "velocity_2/csd/2023": {
+          "name": "Rýchlosť",
+          "type": "Prezentácia"
+        },
+        "collision_detection/csd/2023": {
+          "name": "Detekcia kolízie",
+          "type": "Príklad"
+        },
+        "collision_detection_1/csd/2023": {
+          "name": "Detekcia kolízie",
+          "url": "https://drive.google.com/file/d/1xPa35tY4P8GUXKSMp0F6OUTQjcDpMa6M/view?usp=sharing",
+          "type": "Zdroj"
+        },
+        "collision_detection_2/csd/2023": {
+          "name": "Detekcia kolízie",
+          "type": "Prezentácia"
+        },
+        "collision_detection_version_a_/csd/2023": {
+          "name": "Detekcia kolízie (Verzia A)",
+          "type": "Sprievodca aktivitou"
+        },
+        "collision_detection_version_b_/csd/2023": {
+          "name": "Detekcia kolízie (Verzia B)",
+          "type": "Sprievodca aktivitou"
+        },
+        "mini-project_-_side_scroller/csd/2023": {
+          "name": "Miniprojekt – Plošinovka",
+          "type": "Prezentácia"
+        },
+        "mini-project_guide_-_side_scroller/csd/2023": {
+          "name": "Sprievodca miniprojektom – Plošinovka",
+          "type": "Príklad"
+        },
+        "side_scroller/csd/2023": {
+          "name": "Plošinovka",
+          "type": "Hodnotenie"
+        },
+        "side_scroller_1/csd/2023": {
+          "name": "Plošinovka",
+          "type": "Sprievodca aktivitou"
+        },
+        "complex_sprite_movement/csd/2023": {
+          "name": "Komplexný pohyb sprajtov",
+          "type": "Prezentácia"
+        },
+        "velocity_and_the_counter_pattern/csd/2023": {
+          "url": "https://docs.google.com/document/d/19muHWImy346SLK-4w9SSHYBvEww743ACHvqii_c6F9w",
+          "type": "Zdroj"
+        },
+        "collisions/csd/2023": {
+          "name": "Kolízie sprajtov",
+          "type": "Prezentácia"
+        },
+        "flyer_game/csd/2023": {
+          "name": "Lietacia hra",
+          "type": "Hodnotenie"
+        },
+        "flyer_game_-_project_guide/csd/2023": {
+          "name": "Lietacia hra – sprievodca projektom",
+          "type": "Príklad"
+        },
+        "flyer_game_1/csd/2023": {
+          "name": "Lietacia hra",
+          "type": "Sprievodca aktivitou"
+        },
+        "mini-project_-_flyer_game/csd/2023": {
+          "name": "Miniprojekt – Lietacia hra",
+          "type": "Prezentácia"
+        },
+        "functions/csd/2023": {
+          "name": "Funkcie",
+          "type": "Video"
+        },
+        "functions_1/csd/2023": {
+          "name": "Funkcie",
+          "type": "Zdroj"
+        },
+        "functions_2/csd/2023": {
+          "name": "Funkcie",
+          "type": "Prezentácia"
+        },
+        "defender_game/csd/2023": {
+          "name": "Hra Obranca"
+        },
+        "the_game_design_process/csd/2023": {
+          "name": "Proces návrhu hry",
+          "type": "Prezentácia"
+        },
+        "planning_your_platform_game/csd/2023": {
+          "name": "Plánovanie plošinovky",
+          "type": "Príklad"
+        },
+        "planning_your_platform_game_1/csd/2023": {
+          "name": "Plánovanie plošinovky",
+          "type": "Sprievodca aktivitou"
+        },
+        "using_the_game_design_process/csd/2023": {
+          "name": "Využitie procesu návrhu hry",
+          "type": "Prezentácia"
+        },
+        "make_your_own_game/csd/2023": {
+          "name": "Vytvor si vlastnú hru",
+          "type": "Príklad"
+        },
+        "make_your_own_game_-_sample_marked_rubrics/csd/2023": {
+          "name": "Vytvor si vlastnú hru – Vzorovo vyplnené hodnotiace tabuľky",
+          "type": "Príklad"
+        },
+        "make_your_own_game_-_student_checklist/csd/2023": {
+          "name": "Vytvor si vlastnú hru – kontrolný zoznam pre žiakov",
+          "type": "Zdroj"
+        },
+        "make_your_own_game_1/csd/2023": {
+          "name": "Vytvor si vlastnú hru",
+          "type": "Sprievodca aktivitou"
+        },
+        "make_your_own_game_2/csd/2023": {
+          "type": "Sprievodca aktivitou"
+        },
+        "make_your_own_game_3/csd/2023": {
+          "name": "Vytvor si vlastnú hru",
+          "type": "Hodnotenie"
+        },
+        "project_-_design_a_game/csd/2023": {
+          "name": "Projekt – Vytvor si vlastnú hru",
+          "type": "Prezentácia"
+        },
+        "all_code_6/csd/2023": {
+          "name": "Všetok kód"
+        },
+        "all_resources_7/csd/2023": {
+          "name": "Všetky zdroje"
+        },
+        "all_standards_7/csd/2023": {
+          "name": "Všetky normy"
+        },
+        "all_vocabulary_7/csd/2023": {
+          "name": "Všetky pojmy"
+        },
+        "csd_guide_to_differentiation_3/csd/2023": {
+          "name": "Objavujeme informatiku: Sprievodca diferenciáciou"
+        },
+        "designing_with_empathy/csd/2023": {
+          "type": "Sprievodca aktivitou"
+        },
+        "designing_with_empathy_1/csd/2023": {
+          "type": "Príklad"
+        },
+        "designing_with_empathy_2/csd/2023": {
+          "type": "Prezentácia"
+        },
+        "reacting_as_your_user/csd/2023": {
+          "type": "Sprievodca aktivitou"
+        },
+        "reacting_as_your_user_profile_1/csd/2023": {
+          "type": "Príklad"
+        },
+        "reacting_as_your_user_profile_2/csd/2023": {
+          "type": "Príklad"
+        },
+        "reacting_as_your_user_profile_3/csd/2023": {
+          "type": "Príklad"
+        },
+        "reacting_as_your_user_profile_4/csd/2023": {
+          "type": "Príklad"
+        },
+        "understanding_your_user/csd/2023": {
+          "type": "Prezentácia"
+        },
+        "the_design_thinking_process/csd/2023": {
+          "type": "Video"
+        },
+        "user_centered_design_-_define_and_prepare/csd/2023": {
+          "type": "Prezentácia"
+        },
+        "user_centered_design_define_prepare_/csd/2023": {
+          "type": "Príklad"
+        },
+        "user_centered_design_define_prepare_2021/csd/2023": {
+          "type": "Sprievodca aktivitou"
+        },
+        "user_centered_design_-_try_and_reflect/csd/2023": {
+          "type": "Prezentácia"
+        },
+        "user_centered_design_try_reflect_/csd/2023": {
+          "type": "Príklad"
+        },
+        "user_centered_design_try_reflect_2021/csd/2023": {
+          "type": "Sprievodca aktivitou"
+        },
+        "user_interface_screens/csd/2023": {
+          "type": "Zdroj"
+        },
+        "user_interfaces/csd/2023": {
+          "type": "Prezentácia"
+        },
+        "user_testing_computer_/csd/2023": {
+          "type": "Sprievodca aktivitou"
+        },
+        "user_testing_user_/csd/2023": {
+          "type": "Sprievodca aktivitou"
+        },
+        "feedback_and_testing/csd/2023": {
+          "type": "Prezentácia"
+        },
+        "improve_a_screen/csd/2023": {
+          "type": "Príklad"
+        },
+        "improve_a_screen_1/csd/2023": {
+          "type": "Sprievodca aktivitou"
+        },
+        "prototype_feedback/csd/2023": {
+          "type": "Zdroj"
+        },
+        "example_user_interviews/csd/2023": {
+          "type": "Zdroj"
+        },
+        "identifying_user_needs/csd/2023": {
+          "type": "Prezentácia"
+        },
+        "user_interviews/csd/2023": {
+          "type": "Sprievodca aktivitou"
+        },
+        "example_project_-_cooking_app_-_convincing_evidence/csd/2023": {
+          "type": "Príklad"
+        },
+        "example_project_-_cooking_app_-_extensive_evidence/csd/2023": {
+          "type": "Príklad"
+        },
+        "example_project_-_language_app_-_convincing_evidence/csd/2023": {
+          "type": "Príklad"
+        },
+        "example_project_-_language_app_-_limited_evidence/csd/2023": {
+          "type": "Príklad"
+        },
+        "paper_prototypes/csd/2023": {
+          "type": "Hodnotenie"
+        },
+        "project_-_paper_prototype/csd/2023": {
+          "type": "Prezentácia"
+        },
+        "app_design_kickoff/csd/2023": {
+          "type": "Sprievodca aktivitou"
+        },
+        "app_design_kickoff_1/csd/2023": {
+          "type": "Príklad"
+        },
+        "designing_apps_for_good/csd/2023": {
+          "type": "Prezentácia"
+        },
+        "market_research/csd/2023": {
+          "type": "Sprievodca aktivitou"
+        },
+        "market_research_-_research_areas/csd/2023": {
+          "type": "Zdroj"
+        },
+        "market_research_1/csd/2023": {
+          "type": "Príklad"
+        },
+        "market_research_2/csd/2023": {
+          "type": "Prezentácia"
+        },
+        "explore_ui_elements/csd/2023": {
+          "type": "Sprievodca aktivitou"
+        },
+        "explore_ui_elements_1/csd/2023": {
+          "type": "Príklad"
+        },
+        "exploring_ui_elements/csd/2023": {
+          "type": "Prezentácia"
+        },
+        "build_a_paper_prototype/csd/2023": {
+          "type": "Prezentácia"
+        },
+        "design_mode/csd/2023": {
+          "name": "Dizajnový mód",
+          "type": "Zdroj"
+        },
+        "design_mode_elements/csd/2023": {
+          "name": "Prvky dizajnového módu",
+          "type": "Zdroj"
+        },
+        "paper_prototype_planning/csd/2023": {
+          "type": "Sprievodca aktivitou"
+        },
+        "paper_prototype_planning_1/csd/2023": {
+          "type": "Príklad"
+        },
+        "paper_prototype_user_testing/csd/2023": {
+          "type": "Sprievodca aktivitou"
+        },
+        "paper_prototype_user_testing_1/csd/2023": {
+          "type": "Príklad"
+        },
+        "prototype_testing/csd/2023": {
+          "type": "Prezentácia"
+        },
+        "user_test_cases/csd/2023": {
+          "type": "Sprievodca aktivitou"
+        },
+        "user_test_cases_1/csd/2023": {
+          "type": "Príklad"
+        },
+        "what_s_for_lunch_testing/csd/2023": {
+          "type": "Video"
+        },
+        "design_mode_in_app_lab/csd/2023": {
+          "type": "Prezentácia"
+        },
+        "intro_to_design_mode/csd/2023": {
+          "name": "Úvod do dizajnového módu",
+          "type": "Video"
+        },
+        "model_screen_design/csd/2023": {
+          "type": "Zdroj"
+        },
+        "screen_design_2021_/csd/2023": {
+          "type": "Sprievodca aktivitou"
+        },
+        "screen_ownership_2021_/csd/2023": {
+          "type": "Sprievodca aktivitou"
+        },
+        "build_a_digital_prototype/csd/2023": {
+          "type": "Prezentácia"
+        },
+        "events_in_app_lab/csd/2023": {
+          "type": "Video"
+        },
+        "events_in_app_lab_1/csd/2023": {
+          "type": "Video"
+        },
+        "events_in_app_lab_2/csd/2023": {
+          "type": "Prezentácia"
+        },
+        "changing_screens/csd/2023": {
+          "type": "Zdroj"
+        },
+        "importing_screens/csd/2023": {
+          "type": "Zdroj"
+        },
+        "linking_prototype_screens/csd/2023": {
+          "type": "Prezentácia"
+        },
+        "multi-screen_apps/csd/2023": {
+          "type": "Zdroj"
+        },
+        "responding_to_user_input/csd/2023": {
+          "type": "Zdroj"
+        },
+        "digital_prototype_user_testing/csd/2023": {
+          "type": "Sprievodca aktivitou"
+        },
+        "testing_the_app/csd/2023": {
+          "type": "Prezentácia"
+        },
+        "bugs_and_features/csd/2023": {
+          "type": "Sprievodca aktivitou"
+        },
+        "bugs_and_features_1/csd/2023": {
+          "type": "Príklad"
+        },
+        "bugs_and_features_2/csd/2023": {
+          "type": "Prezentácia"
+        },
+        "updating_your_prototype/csd/2023": {
+          "type": "Sprievodca aktivitou"
+        },
+        "updating_your_prototype_1/csd/2023": {
+          "type": "Prezentácia"
+        },
+        "app_presentation/csd/2023": {
+          "type": "Hodnotenie"
+        },
+        "app_presentation_1/csd/2023": {
+          "type": "Príklad"
+        },
+        "app_presentation_template/csd/2023": {
+          "type": "Prezentácia"
+        },
+        "peer_review_1/csd/2023": {
+          "type": "Príklad"
+        },
+        "peer_review_2/csd/2023": {
+          "type": "Príklad"
+        },
+        "project_-_app_presentation/csd/2023": {
+          "type": "Prezentácia"
+        },
+        "sample_marked_rubrics_1/csd/2023": {
+          "name": "Vzorovo vyplnené hodnotiace tabuľky",
+          "type": "Príklad"
+        },
+        "all_resources_3/csd/2023": {
+          "name": "Všetky zdroje"
+        },
+        "all_standards_3/csd/2023": {
+          "name": "Všetky normy"
+        },
+        "all_vocabulary_3/csd/2023": {
+          "name": "Všetky pojmy"
+        },
+        "csd_guide_to_differentiation_4/csd/2023": {
+          "name": "Objavujeme informatiku: Sprievodca diferenciáciou"
+        },
+        "meals_data/csd/2023": {
+          "type": "Zdroj"
+        },
+        "representation_matters/csd/2023": {
+          "type": "Príklad"
+        },
+        "representation_matters_1/csd/2023": {
+          "type": "Sprievodca aktivitou"
+        },
+        "representation_matters_2/csd/2023": {
+          "type": "Prezentácia"
+        },
+        "patterns_and_representation/csd/2023": {
+          "type": "Prezentácia"
+        },
+        "representing_information/csd/2023": {
+          "type": "Sprievodca aktivitou"
+        },
+        "representing_information_1/csd/2023": {
+          "type": "Príklad"
+        },
+        "representing_information_2/csd/2023": {
+          "type": "Príklad"
+        },
+        "ascii/csd/2023": {
+          "type": "Príklad"
+        },
+        "ascii_and_binary_representation/csd/2023": {
+          "type": "Prezentácia"
+        },
+        "ascii_challenges/csd/2023": {
+          "type": "Sprievodca aktivitou"
+        },
+        "ascii_challenges_1/csd/2023": {
+          "type": "Kľúč s odpoveďami"
+        },
+        "ascii_text/csd/2023": {
+          "type": "Zdroj"
+        },
+        "representing_images/csd/2023": {
+          "type": "Prezentácia"
+        },
+        "binary_and_data/csd/2023": {
+          "type": "Video"
+        },
+        "representing_numbers/csd/2023": {
+          "type": "Príklad"
+        },
+        "representing_numbers_1/csd/2023": {
+          "type": "Prezentácia"
+        },
+        "representing_numbers_2021/csd/2023": {
+          "type": "Sprievodca aktivitou"
+        },
+        "activity_guide_-_pet_records/csd/2023": {
+          "type": "Sprievodca aktivitou"
+        },
+        "combining_representations/csd/2023": {
+          "type": "Prezentácia"
+        },
+        "pet_records/csd/2023": {
+          "type": "Príklad"
+        },
+        "keeping_data_secret/csd/2023": {
+          "type": "Prezentácia"
+        },
+        "medical_records/csd/2023": {
+          "type": "Sprievodca aktivitou"
+        },
+        "medical_records_1/csd/2023": {
+          "type": "Kľúč s odpoveďami"
+        },
+        "secret_messages_2021/csd/2023": {
+          "type": "Sprievodca aktivitou"
+        },
+        "create_a_representation/csd/2023": {
+          "type": "Príklad"
+        },
+        "create_a_representation_2/csd/2023": {
+          "type": "Hodnotenie"
+        },
+        "create_a_representation_3/csd/2023": {
+          "type": "Prezentácia"
+        },
+        "create_a_representation_marked_rubrics/csd/2023": {
+          "type": "Príklad"
+        },
+        "problem_solving_with_data/csd/2023": {
+          "type": "Príklad"
+        },
+        "problem_solving_with_data_1/csd/2023": {
+          "type": "Sprievodca aktivitou"
+        },
+        "problem_solving_with_data_2/csd/2023": {
+          "type": "Prezentácia"
+        },
+        "structuring_data/csd/2023": {
+          "type": "Príklad"
+        },
+        "structuring_data_1/csd/2023": {
+          "type": "Prezentácia"
+        },
+        "structuring_data_2021/csd/2023": {
+          "type": "Sprievodca aktivitou"
+        },
+        "interpreting_data/csd/2023": {
+          "type": "Príklad"
+        },
+        "interpreting_data_1/csd/2023": {
+          "type": "Sprievodca aktivitou"
+        },
+        "interpreting_data_2/csd/2023": {
+          "type": "Zdroj"
+        },
+        "interpreting_data_3/csd/2023": {
+          "type": "Prezentácia"
+        },
+        "making_decisions_with_data/csd/2023": {
+          "type": "Príklad"
+        },
+        "making_decisions_with_data_1/csd/2023": {
+          "type": "Sprievodca aktivitou"
+        },
+        "making_decisions_with_data_2/csd/2023": {
+          "type": "Prezentácia"
+        },
+        "problem_solving_process_with_data/csd/2023": {
+          "type": "Zdroj"
+        },
+        "automating_data_decisions/csd/2023": {
+          "type": "Príklad"
+        },
+        "automating_data_decisions_1/csd/2023": {
+          "type": "Zdroj"
+        },
+        "automating_data_decisions_2/csd/2023": {
+          "type": "Sprievodca aktivitou"
+        },
+        "automating_data_decisions_3/csd/2023": {
+          "type": "Prezentácia"
+        },
+        "amazon_and_data/csd/2023": {
+          "type": "Video"
+        },
+        "data_in_the_real_world/csd/2023": {
+          "type": "Príklad"
+        },
+        "data_in_the_real_world_1/csd/2023": {
+          "type": "Sprievodca aktivitou"
+        },
+        "netflix_and_data/csd/2023": {
+          "type": "Video"
+        },
+        "problem_solving_with_big_data/csd/2023": {
+          "type": "Prezentácia"
+        },
+        "waze_and_data/csd/2023": {
+          "type": "Video"
+        },
+        "data_and_machine_learning/csd/2023": {
+          "type": "Prezentácia"
+        },
+        "video_impact_on_society/csd/2023": {
+          "type": "Video"
+        },
+        "video_machine_learning/csd/2023": {
+          "name": "Video: Strojové učenie",
+          "url": "https://www.youtube.com/watch?v=OeU5m6vRyCk",
+          "type": "Video"
+        },
+        "video_training_data_and_bias/csd/2023": {
+          "type": "Video"
+        },
+        "make_a_recommendation/csd/2023": {
+          "type": "Vzájomné hodnotenie"
+        },
+        "make_a_recommendation_1/csd/2023": {
+          "type": "Hodnotenie"
+        },
+        "make_a_recommendation_2/csd/2023": {
+          "type": "Sprievodca projektom"
+        },
+        "peer_review_exemplar_1/csd/2023": {
+          "type": "Príklad"
+        },
+        "peer_review_exemplar_2/csd/2023": {
+          "type": "Príklad"
+        },
+        "project_-_make_a_recommendation/csd/2023": {
+          "type": "Prezentácia"
+        },
+        "all_code_3/csd/2023": {
+          "name": "Všetok kód"
+        },
+        "all_resources_4/csd/2023": {
+          "name": "Všetky zdroje"
+        },
+        "all_standards_4/csd/2023": {
+          "name": "Všetky normy"
+        },
+        "all_vocabulary_4/csd/2023": {
+          "name": "Všetky pojmy"
+        },
+        "physical_design_template/csd/2023": {
+          "type": "Zdroj"
+        },
+        "physical_designs/csd/2023": {
+          "type": "Sprievodca aktivitou"
+        },
+        "physical_designs_1/csd/2023": {
+          "type": "Prezentácia"
+        },
+        "_exemplar_physical_designs/csd/2023": {
+          "type": "Príklad"
+        },
+        "_warm_up_word_search_unit_6/csd/2023": {
+          "type": "Sprievodca aktivitou"
+        },
+        "circuit_playground/csd/2023": {
+          "type": "Zdroj"
+        },
+        "circuits_and_logic/csd/2023": {
+          "type": "Video"
+        },
+        "physical_output/csd/2023": {
+          "type": "Zdroj"
+        },
+        "the_circuit_playground/csd/2023": {
+          "type": "Prezentácia"
+        },
+        "designing_screens_with_code/csd/2023": {
+          "type": "Zdroj"
+        },
+        "updating_screen_elements/csd/2023": {
+          "type": "Prezentácia"
+        },
+        "board_events/csd/2023": {
+          "type": "Zdroj"
+        },
+        "board_events_1/csd/2023": {
+          "type": "Prezentácia"
+        },
+        "physical_input/csd/2023": {
+          "type": "Zdroj"
+        },
+        "the_counter_pattern/csd/2023": {
+          "type": "Video"
+        },
+        "if_statements_1/csd/2023": {
+          "type": "Video"
+        },
+        "the_counter_pattern_1/csd/2023": {
+          "type": "Zdroj"
+        },
+        "variables_and_if_statements/csd/2023": {
+          "type": "Prezentácia"
+        },
+        "exemplar_1_-_loose_papers_app/csd/2023": {
+          "type": "Príklad"
+        },
+        "exemplar_2_-_cats_vs_dogs_app/csd/2023": {
+          "type": "Príklad"
+        },
+        "exemplar_3_-_bird_survey/csd/2023": {
+          "type": "Príklad"
+        },
+        "mini-project_field_collector_app/csd/2023": {
+          "type": "Prezentácia"
+        },
+        "project_guide_-_field_collector_app/csd/2023": {
+          "type": "Sprievodca aktivitou"
+        },
+        "rubric_-_field_collector_app/csd/2023": {
+          "type": "Hodnotenie"
+        },
+        "color_leds/csd/2023": {
+          "name": "Farebné LEDky",
+          "type": "Prezentácia"
+        },
+        "color_lights/csd/2023": {
+          "type": "Zdroj"
+        },
+        "getting_screen_inputs/csd/2023": {
+          "type": "Prezentácia"
+        },
+        "taking_input_with_getproperty/csd/2023": {
+          "type": "Zdroj"
+        },
+        "combining_inputs_and_outputs/csd/2023": {
+          "type": "Prezentácia"
+        },
+        "input_output_devices/csd/2023": {
+          "type": "Video"
+        },
+        "exemplar_1_-_lights_and_music/csd/2023": {
+          "type": "Príklad"
+        },
+        "exemplar_2_-_magic_unicorn/csd/2023": {
+          "type": "Príklad"
+        },
+        "exemplar_3_-_red_light_green_light/csd/2023": {
+          "type": "Príklad"
+        },
+        "peer_review_-_human_device_interaction/csd/2023": {
+          "type": "Zdroj"
+        },
+        "project_guide_-_human_device_interaction/csd/2023": {
+          "type": "Sprievodca aktivitou"
+        },
+        "project_human_device_interaction/csd/2023": {
+          "type": "Prezentácia"
+        },
+        "rubric_-_human_device_interaction/csd/2023": {
+          "type": "Hodnotenie"
+        },
+        "analog_sensors/csd/2023": {
+          "type": "Zdroj"
+        },
+        "board_sensors/csd/2023": {
+          "type": "Prezentácia"
+        },
+        "changing_sensor_scale/csd/2023": {
+          "type": "Zdroj"
+        },
+        "date_and_change_events/csd/2023": {
+          "type": "Zdroj"
+        },
+        "accelerometer/csd/2023": {
+          "type": "Prezentácia"
+        },
+        "accelerometer_events/csd/2023": {
+          "name": "Udalosti s akcelerometrom",
+          "type": "Zdroj"
+        },
+        "the_accelerometer/csd/2023": {
+          "type": "Zdroj"
+        },
+        "arrays/csd/2023": {
+          "name": "Rady",
+          "type": "Zdroj"
+        },
+        "introduction_to_arrays/csd/2023": {
+          "name": "Úvod do zoskupení",
+          "type": "Video"
+        },
+        "making_music/csd/2023": {
+          "type": "Prezentácia"
+        },
+        "modifying_arrays/csd/2023": {
+          "type": "Zdroj"
+        },
+        "playing_notes/csd/2023": {
+          "name": "Hranie nôt",
+          "type": "Zdroj"
+        },
+        "producing_output/csd/2023": {
+          "type": "Zdroj"
+        },
+        "functions_with_parameters/csd/2023": {
+          "name": "Funkcie s parametrami",
+          "type": "Video"
+        },
+        "exemplar_1_-_city_silhouette/csd/2023": {
+          "type": "Príklad"
+        },
+        "exemplar_2_-_dual_landscape_painting/csd/2023": {
+          "type": "Príklad"
+        },
+        "exemplar_3_-_monster_puppet/csd/2023": {
+          "type": "Príklad"
+        },
+        "mini-project_interactive_art/csd/2023": {
+          "type": "Prezentácia"
+        },
+        "project_guide_-_interactive_art/csd/2023": {
+          "type": "Sprievodca aktivitou"
+        },
+        "student_example_projects/csd/2023": {
+          "type": "Zdroj"
+        },
+        "student_rubric_-_interactive_art/csd/2023": {
+          "type": "Hodnotenie"
+        },
+        "circuits_and_leds/csd/2023": {
+          "type": "Zdroj"
+        },
+        "physical_outputs_and_leds/csd/2023": {
+          "type": "Prezentácia"
+        },
+        "circuits_and_buttons/csd/2023": {
+          "type": "Zdroj"
+        },
+        "physical_inputs_and_buttons/csd/2023": {
+          "type": "Prezentácia"
+        },
+        "project_prototype_an_innovation/csd/2023": {
+          "type": "Prezentácia"
+        },
+        "prototype_an_innovation/csd/2023": {
+          "type": "Hodnotenie"
+        },
+        "prototype_an_innovation_1/csd/2023": {
+          "type": "Sprievodca aktivitou"
+        },
+        "prototype_an_innovation_example_1/csd/2023": {
+          "type": "Príklad"
+        },
+        "prototype_an_innovation_example_2/csd/2023": {
+          "type": "Príklad"
+        },
+        "prototype_an_innovation_example_3/csd/2023": {
+          "type": "Príklad"
+        },
+        "all_code_1/csd/2023": {
+          "name": "Všetok kód"
+        },
+        "all_resources_1/csd/2023": {
+          "name": "Všetky zdroje"
+        },
+        "all_standards_1/csd/2023": {
+          "name": "Všetky normy"
+        },
+        "all_vocabulary_1/csd/2023": {
+          "name": "Všetky pojmy"
+        },
+        "csd_guide_to_debugging_1/csd/2023": {
+          "name": "Objavujeme informatiku: Sprievodca ladením"
+        },
+        "csd_guide_to_differentiation_5/csd/2023": {
+          "name": "Objavujeme informatiku: Sprievodca diferenciáciou"
+        },
+        "teacher_forum_1/csd/2023": {
+          "name": "Fórum učiteľov",
+          "url": "https://forum.code.org/c/csd"
+        },
+        "physical_designs_2/csd/2023": {
+          "type": "Prezentácia"
+        },
+        "_exemplar_physical_designs_1/csd/2023": {
+          "type": "Príklad"
+        },
+        "introducing_the_micro_bit/csd/2023": {
+          "type": "Prezentácia"
+        },
+        "led_planning_sheet/csd/2023": {
+          "type": "Zdroj"
+        },
+        "the_micro_bit_led_display/csd/2023": {
+          "type": "Zdroj"
+        },
+        "the_micro_bit_overview/csd/2023": {
+          "type": "Zdroj"
+        },
+        "updating_screen_elements_1/csd/2023": {
+          "type": "Prezentácia"
+        },
+        "board_events_2/csd/2023": {
+          "type": "Prezentácia"
+        },
+        "board_events_3/csd/2023": {
+          "type": "Zdroj"
+        },
+        "micro_bit_inputs/csd/2023": {
+          "type": "Zdroj"
+        },
+        "the_counter_pattern_2/csd/2023": {
+          "type": "Video"
+        },
+        "variables_and_if_statements_1/csd/2023": {
+          "type": "Prezentácia"
+        },
+        "mini-project_field_collector_app_1/csd/2023": {
+          "type": "Prezentácia"
+        },
+        "project_guide_-_field_collector_app_1/csd/2023": {
+          "type": "Sprievodca aktivitou"
+        },
+        "rubric_-_field_collector_app_1/csd/2023": {
+          "type": "Hodnotenie"
+        },
+        "getting_screen_inputs_1/csd/2023": {
+          "type": "Prezentácia"
+        },
+        "combining_inputs_and_outputs_1/csd/2023": {
+          "type": "Prezentácia"
+        },
+        "peer_review_-_human_device_interaction_1/csd/2023": {
+          "type": "Zdroj"
+        },
+        "project_guide_-_human_device_interaction_1/csd/2023": {
+          "type": "Sprievodca aktivitou"
+        },
+        "project_human_device_interaction_1/csd/2023": {
+          "type": "Prezentácia"
+        },
+        "rubric_-_human_device_interaction_1/csd/2023": {
+          "type": "Hodnotenie"
+        },
+        "board_sensors_1/csd/2023": {
+          "type": "Prezentácia"
+        },
+        "data_change_events/csd/2023": {
+          "type": "Zdroj"
+        },
+        "setting_sensor_scale/csd/2023": {
+          "type": "Zdroj"
+        },
+        "the_micro_bit_sensors/csd/2023": {
+          "type": "Zdroj"
+        },
+        "accelerometer_1/csd/2023": {
+          "type": "Prezentácia"
+        },
+        "accelerometer_events_1/csd/2023": {
+          "name": "Udalosti s akcelerometrom",
+          "type": "Zdroj"
+        },
+        "the_micro_bit_accelerometer/csd/2023": {
+          "type": "Zdroj"
+        },
+        "functions_3/csd/2023": {
+          "name": "Funkcie",
+          "type": "Prezentácia"
+        },
+        "mini-project_interactive_pet/csd/2023": {
+          "type": "Prezentácia"
+        },
+        "project_guide_-_interactive_pet/csd/2023": {
+          "type": "Sprievodca aktivitou"
+        },
+        "student_rubric_-_interactive_pet/csd/2023": {
+          "type": "Hodnotenie"
+        },
+        "external_leds_on_a_micro_bit/csd/2023": {
+          "type": "Zdroj"
+        },
+        "physical_outputs_and_leds_1/csd/2023": {
+          "type": "Prezentácia"
+        },
+        "external_buttons_on_a_micro_bit/csd/2023": {
+          "type": "Zdroj"
+        },
+        "physical_inputs_and_buttons_1/csd/2023": {
+          "type": "Prezentácia"
+        },
+        "project_prototype_an_innovation_1/csd/2023": {
+          "type": "Prezentácia"
+        },
+        "prototype_an_innovation_2/csd/2023": {
+          "type": "Hodnotenie"
+        },
+        "prototype_an_innovation_3/csd/2023": {
+          "type": "Sprievodca aktivitou"
+        },
+        "all_code/csd/2023": {
+          "name": "Všetok kód"
+        },
+        "all_resources_8/csd/2023": {
+          "name": "Všetky zdroje"
+        },
+        "all_standards_8/csd/2023": {
+          "name": "Všetky normy"
+        },
+        "all_vocabulary_8/csd/2023": {
+          "name": "Všetky pojmy"
+        },
+        "the_problem_solving_process_4/csd/2023": {
+          "name": "Postup riešenia problémov"
+        },
+        "ai_what_is_machine_learning_/csd/2023": {
+          "name": "AI: Čo je strojové učenie?",
+          "url": "https://www.youtube.com/watch?v=OeU5m6vRyCk",
+          "type": "Video"
+        },
+        "classifying_fish/csd/2023": {
+          "name": "Klasifikácia rýb",
+          "type": "Sprievodca aktivitou"
+        },
+        "introduction_to_machine_learning/csd/2023": {
+          "name": "Úvod do strojového učenia",
+          "type": "Prezentácia"
+        },
+        "types_of_machine_learning/csd/2023": {
+          "name": "Typy strojového učenia",
+          "type": "Prezentácia"
+        },
+        "types_of_machine_learning_1/csd/2023": {
+          "name": "Typy strojového učenia",
+          "type": "Sprievodca aktivitou"
+        },
+        "types_of_machine_learning_2/csd/2023": {
+          "name": "Typy strojového učenia",
+          "type": "Kľúč s odpoveďami"
+        },
+        "innovations_in_ai/csd/2023": {
+          "name": "Inovácie v oblasti umelej inteligencie",
+          "type": "Prezentácia"
+        },
+        "innovations_in_ai_-_activity_guide/csd/2023": {
+          "name": "Inovácie v oblasti umelej inteligencie – Sprievodca aktivitou",
+          "type": "Sprievodca aktivitou"
+        },
+        "innovations_in_ai_research_areas_-_student_resource/csd/2023": {
+          "name": "Inovácie v oblasti výskumu umelej inteligencie – Materiál pre žiakov",
+          "type": "Zdroj"
+        },
+        "seeing_ai/csd/2023": {
+          "name": "Vidieť AI",
+          "url": "https://www.youtube.com/watch?v=DybczED-GKE",
+          "type": "Video"
+        },
+        "_key_patterns_in_data/csd/2023": {
+          "name": "[KĽÚČ] Vzory v údajoch",
+          "type": "Kľúč s odpoveďami"
+        },
+        "finding_patterns_in_data/csd/2023": {
+          "name": "Hľadanie vzorov v údajoch",
+          "type": "Video"
+        },
+        "patterns_in_data/csd/2023": {
+          "name": "Vzory v údajoch",
+          "type": "Prezentácia"
+        },
+        "patterns_in_data_1/csd/2023": {
+          "name": "Vzory v údajoch",
+          "type": "Sprievodca aktivitou"
+        },
+        "shoe_survey/csd/2023": {
+          "name": "Dotazník o topánkach",
+          "type": "Zdroj"
+        },
+        "_key_classification_models/csd/2023": {
+          "name": "[KĽÚČ] Klasifikačné modely",
+          "type": "Kľúč s odpoveďami"
+        },
+        "classification_models/csd/2023": {
+          "name": "Klasifikačné modely",
+          "type": "Sprievodca aktivitou"
+        },
+        "classification_models_1/csd/2023": {
+          "name": "Klasifikačné modely",
+          "type": "Prezentácia"
+        },
+        "fruit_veggie_cards/csd/2023": {
+          "name": "Kartičky s ovocím a zeleninou",
+          "type": "Zdroj"
+        },
+        "_key_training_a_model_in_ai_lab/csd/2023": {
+          "name": "[KĽÚČ] Trénovanie modelu v AI Labe",
+          "type": "Kľúč s odpoveďami"
+        },
+        "accuracy_in_ai_lab/csd/2023": {
+          "name": "Presnosť AI Labe",
+          "url": "https://docs.google.com/document/d/13Fw1rXdfiuRK8efy5s1Wlhq8G-8jxSbrKHJ5A-iBFyE/view?usp=sharing",
+          "type": "Zdroj"
+        },
+        "introduction_to_ai_lab/csd/2023": {
+          "name": "Úvod do UI Labu",
+          "type": "Prezentácia"
+        },
+        "introduction_to_ai_lab_1/csd/2023": {
+          "name": "Úvod do UI Labu",
+          "type": "Video"
+        },
+        "selecting_features/csd/2023": {
+          "name": "Výber vlastností",
+          "url": "https://docs.google.com/document/d/1sAar-EcQiOHW2zR38-q2p4QRPG11E--Du-z0Oodwr5I/view?usp=sharing",
+          "type": "Zdroj"
+        },
+        "training_a_model_in_ai_lab/csd/2023": {
+          "name": "Trénovanie modelu v AI Labe",
+          "type": "Sprievodca aktivitou"
+        },
+        "training_and_testing_in_ai_lab/csd/2023": {
+          "name": "Školenie a testovanie v AI Lab",
+          "type": "Video"
+        },
+        "using_data_with_categorical_features/csd/2023": {
+          "name": "Používanie údajov s kategorickými vlastnosťami",
+          "url": "https://docs.google.com/document/d/11q1xnO7AAtteuGaVyA2zmznwE1lfibkRroUbtNL2GGc/view?usp=sharing",
+          "type": "Zdroj"
+        },
+        "importing_a_model_in_app_lab/csd/2023": {
+          "name": "Importovanie modelu v App Labe",
+          "url": "https://docs.google.com/document/d/1Q2k9AZYIbrmEybPM9xWrodachJCESGrbp2Mpot782xo/view?usp=sharing",
+          "type": "Zdroj"
+        },
+        "importing_models_in_app_lab/csd/2023": {
+          "name": "Importovanie modelov do App Labu",
+          "type": "Prezentácia"
+        },
+        "ai_training_data_bias/csd/2023": {
+          "name": "Umelá inteligencia: Trénovacie dáta a skreslenie",
+          "url": "https://youtu.be/x2mRoFNm22g",
+          "type": "Video"
+        },
+        "model_cards/csd/2023": {
+          "name": "Karty modelov",
+          "type": "Prezentácia"
+        },
+        "model_cards_1/csd/2023": {
+          "name": "Karty modelov",
+          "type": "Sprievodca aktivitou"
+        },
+        "_key_zoo_models/csd/2023": {
+          "name": "[KĽÚČ] Modely pre zoo",
+          "type": "Kľúč s odpoveďami"
+        },
+        "model_cards_in_ai_lab/csd/2023": {
+          "name": "Modelové karty v AI Lab",
+          "type": "Video"
+        },
+        "saving_models_in_ai_lab/csd/2023": {
+          "name": "Ukladanie modelov v AI Labe",
+          "type": "Prezentácia"
+        },
+        "selecting_a_label/csd/2023": {
+          "name": "Výber označenia",
+          "url": "https://docs.google.com/document/d/12iftU_mkjODKEU5ZPSIQp5spIYfc1h5q_f_XiDt4Oxc/view?usp=sharing",
+          "type": "Zdroj"
+        },
+        "zoo_models/csd/2023": {
+          "name": "Modely pre zoo",
+          "type": "Sprievodca aktivitou"
+        },
+        "if-statements_in_app_lab/csd/2023": {
+          "name": "Príkazy if v App Labe",
+          "url": "https://www.youtube.com/watch?v=0oG3Wck2fRU",
+          "type": "Video"
+        },
+        "model_cards_in_app_lab/csd/2023": {
+          "name": "Karty modelov v App Labe",
+          "type": "Prezentácia"
+        },
+        "printable_model_cards/csd/2023": {
+          "type": "Zdroj"
+        },
+        "_key_numerical_accuracy/csd/2023": {
+          "name": "[KĽÚČ] Číselná presnosť",
+          "type": "Kľúč s odpoveďami"
+        },
+        "_key_zombie_prediction/csd/2023": {
+          "name": "[KĽÚČ] Predpovedanie zombíkov",
+          "type": "Kľúč s odpoveďami"
+        },
+        "numerical_accuracy/csd/2023": {
+          "name": "Číselná presnosť",
+          "type": "Sprievodca aktivitou"
+        },
+        "numerical_models/csd/2023": {
+          "name": "Číselné modely",
+          "type": "Prezentácia"
+        },
+        "zombie_prediction/csd/2023": {
+          "name": "Predpovedanie zombíkov",
+          "type": "Sprievodca aktivitou"
+        },
+        "_key_-_numerical_data_in_ai_lab/csd/2023": {
+          "name": "[KĽÚČ] – Číselné údaje v AI Labe",
+          "type": "Kľúč s odpoveďami"
+        },
+        "numerical_data_in_ai_lab/csd/2023": {
+          "name": "Číselné údaje v AI Labe",
+          "type": "Prezentácia"
+        },
+        "numerical_data_in_ai_lab_1/csd/2023": {
+          "name": "Číselné údaje v AI Labe",
+          "type": "Sprievodca aktivitou"
+        },
+        "numerical_data_in_ai_lab_2/csd/2023": {
+          "name": "Číselné údaje v AI Labe",
+          "type": "Video"
+        },
+        "using_data_with_numerical_features/csd/2023": {
+          "name": "Používanie údajov s číselnými vlastnosťami",
+          "url": "https://docs.google.com/document/d/1PmL5SyFs30mzbsfsUzKMXchUHjUvN13d5jOEci3TdgQ/view?usp=sharing",
+          "type": "Zdroj"
+        },
+        "customizing_apps/csd/2023": {
+          "name": "Prispôsobenie aplikácií",
+          "type": "Prezentácia"
+        },
+        "ai_code_of_ethics/csd/2023": {
+          "name": "Etický kódex umelej inteligencie",
+          "type": "Prezentácia"
+        },
+        "ai_ethics_research_areas/csd/2023": {
+          "name": "Oblasti výskumu etiky umelej inteligencie",
+          "type": "Sprievodca aktivitou"
+        },
+        "ai_ethics_research_reflection/csd/2023": {
+          "name": "Úvaha o výskume etiky umelej inteligencie"
+        },
+        "ethics_ai_equal_access_and_algorithmic_bias/csd/2023": {
+          "name": "Etika a umelá inteligencia: Rovnosť prístupu a algoritmické skreslenie",
+          "url": "https://www.youtube.com/watch?v=tJQSyzBUAew",
+          "type": "Video"
+        },
+        "our_ai_code_of_ethics_template_/csd/2023": {
+          "name": "Náš etický kódex umelej inteligencie [Šablóna]",
+          "url": "https://docs.google.com/presentation/d/12Q0EqLwi7t179sxUOekPkaeEkUuT-FgHQNLhWk-l9RM/edit?usp=sharing",
+          "type": "Prezentácia"
+        },
+        "create_an_ml_app/csd/2023": {
+          "name": "Vytvorenie aplikácie strojového učenia",
+          "type": "Hodnotenie"
+        },
+        "create_an_ml_app_-_project_guide/csd/2023": {
+          "name": "Vytvorenie aplikácie strojového učenia – sprievodca projektom"
+        },
+        "make_a_machine_learning_app/csd/2023": {
+          "name": "Vytvorenie aplikácie strojového učenia",
+          "type": "Prezentácia"
+        },
+        "5_why_s_-_activity_guide/csd/2023": {
+          "name": "5 prečo – Sprievodca aktivitou"
+        },
+        "app_brainstorm_-_activity_guide/csd/2023": {
+          "name": "Vymyslenie aplikácie – Sprievodca aktivitou"
+        },
+        "issue_statements/csd/2023": {
+          "name": "Stanovenia problémov",
+          "type": "Prezentácia"
+        },
+        "creating_a_survey/csd/2023": {
+          "name": "Vytvorenie dotazníka",
+          "url": "https://docs.google.com/document/d/1Hk6vJdsEMBFB2nJalpCA0xBbcw1DvRsKDyZbn2LwC1w/view?usp=sharing",
+          "type": "Zdroj"
+        },
+        "creating_a_survey_in_google_forms/csd/2023": {
+          "type": "Video"
+        },
+        "survey_planning/csd/2023": {
+          "name": "Plánovanie dotazníka",
+          "type": "Prezentácia"
+        },
+        "survey_planning_-_activity_guide/csd/2023": {
+          "name": "Plánovanie dotazníka – sprievodca aktivitou"
+        },
+        "survey_template_google_form_/csd/2023": {
+          "name": "Šablóna dotazníka [Formulár Google]",
+          "url": "https://docs.google.com/forms/d/1iUUNRsTy4AfLjBj-tslrePH_j5rV0hnuYwcBL8YTBKQ/copy"
+        },
+        "cleaning_survey_data/csd/2023": {
+          "name": "Čistenie údajov z dotazníka",
+          "type": "Video"
+        },
+        "isaac_s_survey_data_-_student_resource/csd/2023": {
+          "name": "Isaacove údaje z dotazníka – materiály pre žiakov",
+          "url": "https://docs.google.com/spreadsheets/d/161gqtcyWU7qLGF9wxkiAuWjlTcoMaheWOq0aJlLXnvc/copy"
+        },
+        "kim_s_survey_data_-_student_resource/csd/2023": {
+          "name": "Kimine údaje z dotazníka – materiály pre žiakov",
+          "url": "https://docs.google.com/spreadsheets/d/1bVtUc5KrHaBZ4rx6trdYVqjGHIq9J8jBG0Mx2d9nxDM/copy"
+        },
+        "survey_data_in_ai_lab/csd/2023": {
+          "name": "Údaje z dotazníka v AI Labe",
+          "type": "Prezentácia"
+        },
+        "view_and_download_survey_data/csd/2023": {
+          "name": "Zobrazenie a stiahnutie údajov z dotazníka",
+          "type": "Video"
+        },
+        "troubleshooting_models/csd/2023": {
+          "name": "Riešenie problémov s modelmi",
+          "type": "Prezentácia"
+        },
+        "troubleshooting_models_-_activity_guide/csd/2023": {
+          "name": "Riešenie problémov s modelmi – sprievodca aktivitou"
+        },
+        "creating_an_app/csd/2023": {
+          "name": "Vytvorenie aplikácie",
+          "type": "Prezentácia"
+        },
+        "_template_5_why_s/csd/2023": {
+          "name": "[Šablóna] 5 prečo",
+          "type": "Zdroj"
+        },
+        "design_an_ai_app/csd/2023": {
+          "name": "Návrh aplikácie umelej inteligencie",
+          "type": "Prezentácia"
+        },
+        "design_an_ai_app_-_project_guide/csd/2023": {
+          "name": "Návrh aplikácie umelej inteligencie – sprievodca projektom"
+        },
+        "design_an_ai_app_1/csd/2023": {
+          "name": "Návrh aplikácie umelej inteligencie",
+          "type": "Hodnotenie"
+        },
+        "exemplar_-_design_an_ai_app/csd/2023": {
+          "name": "Príklad – Návrh aplikácie umelej inteligencie",
+          "url": "https://studio.code.org/projects/applab/9g5u-sqHLP9fU2FGmfhMJcS06nWpXsQt2ApYFb3CNaw"
+        },
+        "exemplar_-_design_an_ai_app_model_card/csd/2023": {
+          "name": "Príklad – Návrh karty modelu aplikácie umelej inteligencie"
+        },
+        "exemplar_-_design_an_ai_app_project_guide/csd/2023": {
+          "name": "Príklad – Návrh aplikácie umelej inteligencie – sprievodca projektom",
+          "url": "https://docs.google.com/document/d/1GOcczf3U2d3qGXKSu4yeU0g2Tnnwib8q7xZcLsd0lLk/edit"
+        },
+        "model_card_-_digital_template/csd/2023": {
+          "name": "Karta modelu – digitálna šablóna",
+          "type": "Zdroj"
+        },
+        "model_card_-_printable_template/csd/2023": {
+          "name": "Karta modelu – šablóna na tlač",
           "type": "Zdroj"
         },
         "all_resources/coursea/2023": {

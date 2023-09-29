@@ -3065,6 +3065,462 @@
         "a4fa2434-b9c5-4e36-819b-50398d230730": {
           "description": "Zdieľajte svoje aplikácie medzi sebou"
         },
+        "31c2522e-3835-49c6-b5f1-2493d8766486": {
+          "description": "Identifikovať rôzne stratégie používané na riešenie problému"
+        },
+        "b654246e-f312-49d1-bc48-e9a9f54dd90a": {
+          "description": " Komunikovať a spolupracovať so spolužiakmi na riešení problému "
+        },
+        "bc806e5d-e63a-4c3e-b0e3-4fd8397e382a": {
+          "description": "Postupne zlepšovať riešenie problému"
+        },
+        "55cea0d8-ea3b-4798-8e17-3be051ca8ad6": {
+          "description": "Identifikovať užitočné stratégie pri každom kroku v postupe riešenia problémov"
+        },
+        "648f023b-2ddc-4c03-bf2a-7efea78a9c10": {
+          "description": "Pri zadaní konkrétneho problému identifikovať jednotlivé kroky, ktoré by zodpovedali jednotlivým krokom v postupe riešenia problémov"
+        },
+        "05f52eb3-60c9-43eb-a1d8-c297406493c7": {
+          "description": "Využívať postup riešenia problémov na rozličné typy problémov"
+        },
+        "526f0d9c-d813-4e1a-bcde-c81d8a8fb7ce": {
+          "description": "Vyhodnotiť, ako dobre je nejaký problém definovaný, a pomocou vhodných stratégií ho zadefinovať presnejšie"
+        },
+        "1fdd6a54-bd02-4d6c-8a87-6983253f4dd6": {
+          "description": "Vyberať si problémy, ktoré sa dajú vyriešiť pomocou výpočtovej techniky, a zdôvodniť tieto rozhodnutia"
+        },
+        "6f0ea3f1-eed6-4b91-b905-a1bfcf8e3f19": {
+          "description": "Definovať počítač ako stroj, ktorý pracuje s informáciami"
+        },
+        "ecb2f62b-3575-4c8e-ba0b-9fecef8020d1": {
+          "description": "Zdôvodniť, či sú konkrétne predmety počítače alebo nie"
+        },
+        "10ed6743-bd65-4c05-85a8-df07cae02495": {
+          "description": "Vybrať vstupy a výstupy používané pri bežných úlohách na počítači"
+        },
+        "d7280644-79b9-47f7-8e31-2f380d107a7c": {
+          "description": "Vysvetliť, akú úlohu zohrávajú vstupy a výstupy, keď pomocou počítačov riešime informačné problémy"
+        },
+        "82058fdb-9daf-476d-8689-2df5199f5470": {
+          "description": "Určiť, aké typy spracúvania sú vhodné na riešenie konkrétneho problému pomocou počítača"
+        },
+        "8b227cfd-93ac-4efd-a8b4-7a8265fd9c24": {
+          "description": "Identifikovať niekoľko bežných typov spracúvania využívaných vo výpočtovej technike"
+        },
+        "8c085209-3865-43b3-8106-68d18efeb5d5": {
+          "description": "Definovať spracúvanie ako aktivitu, ktorou sa (často v počítači) vstup premieňa na výstup"
+        },
+        "2aa90874-67de-48e4-801a-6f72cfd0d75d": {
+          "description": "Určiť, ktoré informácie z výpočtového problému by sa mali uložiť na neskoršie použitie"
+        },
+        "51b1c205-86a5-424f-bb91-b3434f30f0a5": {
+          "description": "Opísať výpočtový proces pomocou modelu vstup-výstup-pamäť-spracúvanie"
+        },
+        "d03ba916-a64d-4485-ad36-52bf1084616a": {
+          "description": "Vytvoriť zásady toho, aké informácie by sa v rámci výpočtového procesu mali ukladať a aké nie."
+        },
+        "5b1459b9-1ab0-409a-ad4d-8a9a2107cd11": {
+          "description": "Poskytnúť a využiť cielenú spätnú väzbu od rovesníkov na zlepšenie informatického produktu"
+        },
+        "6ead7fad-7ba3-46e9-8d63-dbe9f2a805e3": {
+          "description": "Identifikovať a zadefinovať problém, ktorý sa dá vyriešiť pomocou výpočtovej techniky"
+        },
+        "ac55ea81-e464-49cb-92a1-3d0c9fdf589d": {
+          "description": "Navrhnúť aplikáciu, ktorá na riešenie problému využíva vstupy, výstupy, pamäť a spracúvanie informácií"
+        },
+        "0fa2d910-7d6c-4f3d-8bf4-37138d571383": {
+          "description": " Komunikovať a spolupracovať so spolužiakmi na riešení problému "
+        },
+        "18d6b95b-6269-42a9-bbcd-c0c5b1ce6c98": {
+          "description": "Postupne zlepšovať riešenie problému"
+        },
+        "d6bda502-5a63-49d6-b3b6-c5c10256f9fe": {
+          "description": "Identifikovať rôzne stratégie používané na riešenie problému"
+        },
+        "19a88644-264d-4320-9ce5-b0c0332771a7": {
+          "description": " Komunikovať a spolupracovať so spolužiakmi na riešení problému "
+        },
+        "8b1c7740-2ae0-4365-b453-21088d4b31a5": {
+          "description": "Identifikovať rôzne stratégie používané na riešenie problému"
+        },
+        "b1bd6af1-7d5c-4c9c-8268-7b0d2ceba450": {
+          "description": "Postupne zlepšovať riešenie problému"
+        },
+        "082e1f9b-b974-4901-9c4c-6d451aa87de5": {
+          "description": " Komunikovať a spolupracovať so spolužiakmi na riešení problému "
+        },
+        "bdf277e8-97c0-4333-a1d6-f6e2fa82ee42": {
+          "description": "Postupne zlepšovať riešenie problému"
+        },
+        "de97cb31-b410-455a-b8e2-3d66c782422b": {
+          "description": "Identifikovať rôzne stratégie používané na riešenie problému"
+        },
+        "660df950-b29b-49a7-b3c5-dd0bf49593cd": {
+          "description": "Vyhodnotiť, ako dobre je nejaký problém definovaný, a pomocou vhodných stratégií ho zadefinovať presnejšie"
+        },
+        "d0f2019f-b09e-4483-b8f0-c99ed7889acf": {
+          "description": "Využívať postup riešenia problémov na rozličné typy problémov"
+        },
+        "c53b1121-5a26-44ad-b845-03beb2f94493": {
+          "description": "Využívať postup riešenia problémov na rozličné typy problémov"
+        },
+        "ed2fbe41-2a5d-43c7-8d66-1da58d686e33": {
+          "description": "Vyhodnotiť, ako dobre je nejaký problém definovaný, a pomocou vhodných stratégií ho zadefinovať presnejšie"
+        },
+        "13317ce5-4372-4b0b-abf1-b9f81859cc3c": {
+          "description": "Napísať jednoduchý HTML dokument, ktorý štruktúruje obsah pomocou otváracích a ukončovacích značiek"
+        },
+        "7e4d3be8-a80a-42bc-af2c-f1a093c3565c": {
+          "description": "Vysvetliť, že HTML umožňuje programátorovi odkomunikovať, ako by mal byť obsah na webovej stránke štruktúrovaný"
+        },
+        "f260476d-fd85-4b06-8c41-12494598630a": {
+          "description": "Porozumieť, ako využívať zdroje k lekcii poskytnuté v rozhraní Web Lab"
+        },
+        "c1f6baf7-c073-43c9-9637-096148483992": {
+          "description": "Pomocou štruktúrovaného prístupu a spolupráce vytvoriť digitálny produkt."
+        },
+        "8f487170-d07e-4788-b0d9-c33a19a30b1d": {
+          "description": "Vytvoriť webovú stránku pomocou HTML"
+        },
+        "715bb45c-08dc-4d25-a9e8-a0b874302600": {
+          "description": "Pochopiť a vysvetliť zásady bezpečného zverejňovania informácií na internete. "
+        },
+        "973277c2-a5c1-41b0-a078-5ec48c8fc70d": {
+          "description": "Pochopiť a vysvetliť dôvody, prečo je náročné určiť, kto bude mať prístup k informáciám zverejneným na internete."
+        },
+        "0fe13a1e-1d14-4db0-b3ec-a0f8d70faf41": {
+          "description": "Vysvetliť, v čom sa líši použitie a syntax jazykov HTML a CSS."
+        },
+        "2b7ddbc4-c83e-4fed-95c9-5cd78ddb1bcc": {
+          "description": "Použiť CSS selektory na priradenie štýlu k textovým prvkom HTML kódu."
+        },
+        "4a95ebfc-7b48-45a0-8434-fefdc7ab0836": {
+          "description": "Pridať odkaz na externý súbor štýlov."
+        },
+        "be1aedaf-1eb4-45d9-9e07-a7ef368092a0": {
+          "description": "Vysvetliť účel autorských práv."
+        },
+        "c59c3b52-f69a-4c7d-96f6-ca1d102f9396": {
+          "description": "Rozlíšiť práva a obmedzenia, ktoré stanovujú jednotlivé licencie Creative Commons."
+        },
+        "0c92af3b-7c3f-4985-8be0-350ba1afe4e5": {
+          "description": "Pridať na webovú stránku obrázok."
+        },
+        "3300f9fb-fe53-4dd3-951f-e6230ac568e9": {
+          "description": "Dodržiavať autorské práva a presne uvádzať zdroje pri používaní cudzej tvorby."
+        },
+        "416f463c-2d17-4cf2-a885-e0b79fc12b73": {
+          "description": "Identifikovať webové stránky ako formu sebavyjadrenia."
+        },
+        "06eb3296-94a3-480d-9715-21f998d96a24": {
+          "description": "Vytvoriť pre prvok „body“ súbor CSS pravidiel, ktorý ovplyvní všetky prvky na stránke."
+        },
+        "16756932-cc4d-4345-aa58-69e31ffe9c48": {
+          "description": "Použiť CSS vlastnosti na zmenu veľkosti, polohy a ohraničenia prvkov."
+        },
+        "36b74a59-6eca-45aa-9ddd-82b6dfc30bcb": {
+          "description": "Logicky oddeliť obsah, štruktúru a formátovanie digitálneho výtvoru"
+        },
+        "aeed2f2f-07b9-4551-b6c0-77584842f223": {
+          "description": "Vytvoriť dokumentáciu, ktorá vysvetľuje rozhodnutia urobené pri navrhovaní digitálneho výtvoru"
+        },
+        "cdffa34f-c395-401d-a01b-a200ba952292": {
+          "description": "Vytvoriť digitálny produkt"
+        },
+        "7ba84c76-e392-4b03-9bd0-565ef4516cc7": {
+          "description": "Identifikovať dôvody, prečo by chcel niekto vytvoriť daný web"
+        },
+        "d2b026b0-8de2-4f0e-9014-e3a33d5c4896": {
+          "description": " Komunikovať a spolupracovať so spolužiakmi na riešení problému "
+        },
+        "264a3c5e-be86-4cf2-a9df-c0debb3c0b6a": {
+          "description": "Používať základné vyhľadávacie techniky, aby dokázali na internete nájsť relevantné informácie."
+        },
+        "e3ccae7d-7d09-49b0-acfb-323cb9106f8d": {
+          "description": "Identifikovať kľúčové prvky, ktoré prispievajú k (ne)dôveryhodnosti nejakého webu."
+        },
+        "14ff3bcf-a141-4ebd-bac3-b131fc50a44d": {
+          "description": "Spájať prvky do skupín pomoc tried, aby dokázali na svojom webe vytvoriť špecifickejšie štýly."
+        },
+        "63e382b4-56a1-41cb-b63b-cde6f744e1c9": {
+          "description": "Rozdeliť úlohy členom tímu."
+        },
+        "f3e0e143-0db0-452d-99db-0dff9f741a94": {
+          "description": "Vyhľadať a využiť spätnú väzbu od členov tímu."
+        },
+        "f23498b7-fc61-457d-8a4f-7452ee717f30": {
+          "description": "Využiť HTML na prepojenie webových stránok."
+        },
+        "d0e4e4ee-b4fd-45c5-8a21-996dd4f32a3f": {
+          "description": "Vytvoriť digitálny produkt"
+        },
+        "f8abb005-c157-4624-bf56-a0c07ea58da3": {
+          "description": "Rozdeliť úlohy členom tímu a dodržiavať časový plán projektu"
+        },
+        "e894da3e-e496-4b9e-b675-2e641ac0a8da": {
+          "description": "Priorizovať a realizovať postupné zlepšenia"
+        },
+        "ebd626d0-6586-44c6-9b5f-b8ac17495ac1": {
+          "description": "Poskytovať a prijímať spätnú väzbu"
+        },
+        "9b1aec11-89b7-4f8b-a943-e00d8fc88e0d": {
+          "description": "Povedzte, ako nakresliť obrázok v Game Labe s ohľadom na polohu tvaru, farbu a poradie"
+        },
+        "e508cd67-863d-4d64-a6de-e65db1f70575": {
+          "description": "Zdôvodnite umiestnenia v súradnicovej mriežke Game Labu"
+        },
+        "bb0518da-49ef-462c-8ba3-861489893fd9": {
+          "description": "Používanie súradnicového systému na umiestnenie prvkov na obrazovke."
+        },
+        "cd7e6131-748c-4205-b2bd-4dff0b04e562": {
+          "description": "Správna postupnosť kódu na prekrytie tvarov."
+        },
+        "e9f7548b-280a-4191-8376-d8562cb6edcd": {
+          "description": "Používanie a vysvetľovanie príkazov kreslenia s viacerými parametrami"
+        },
+        "a30e4dc9-31e0-4299-826c-a79c68100aa0": {
+          "description": "Používanie premenných v programe na uloženie informácie, ktorá sa použije viackrát"
+        },
+        "fb1c91cd-2242-42e6-8157-6678425bc95e": {
+          "description": "Identifikácia premennej ako spôsobu označovania a odkazovania na hodnotu v programe"
+        },
+        "23542a6b-006e-4aba-82f9-a84d0e3191a2": {
+          "description": "Generovanie a používanie náhodných čísel v programe"
+        },
+        "2b341fb4-14a1-4ecf-8f8f-b44e44c06aa3": {
+          "description": "Aktualizácia hodnoty uloženej v premennej"
+        },
+        "03acfea1-e135-4363-970e-ae24d3a8aef0": {
+          "description": "Používať štruktúrovaný proces na plánovanie a vývoj programov."
+        },
+        "91c9026d-5107-4a92-80d7-440d6e3540c5": {
+          "description": "Vytváranie a používanie sprajtov"
+        },
+        "30b79b8f-3330-4a2f-b0b5-ba7ead047447": {
+          "description": "Používanie zápisu s bodkou na aktualizáciu vlastností sprajtu"
+        },
+        "a09ea05c-bb1b-40d3-8928-51241a53d441": {
+          "description": "Umiestniť text na obrazovku pomocou súradnicovej roviny."
+        },
+        "f7045a46-2926-497c-975d-8a54fb9e9486": {
+          "description": "Pomocou argumentov môžete ovládať spôsob zobrazenia textu na obrazovke."
+        },
+        "859f9c2e-f9fa-4344-8c73-3fe3035b5fc9": {
+          "description": "Používať štruktúrovaný proces na plánovanie a vývoj programov."
+        },
+        "33899193-0208-4b93-8071-6f6b4c97cd6d": {
+          "description": "Použiť cyklus kreslenia v kombinácii s príkazom randomNumber(), tvarmi a sprajtmi na vytvorenie jednoduchých animácií"
+        },
+        "7fba6aa7-9ee4-4dde-b1c8-089ea1274423": {
+          "description": "Vysvetliť, ako cyklus kreslenia umožňuje vytvárať animácie v Game Labe"
+        },
+        "8144f381-7fec-4fd1-aad7-d1841cc5a652": {
+          "description": "Použiť počítadlo na zvýšenie alebo zníženie hodnôt vlastností sprajtu"
+        },
+        "d3475b2f-0839-4265-81b8-0ae6cde4f38b": {
+          "description": "Určiť, ktoré vlastnosti sprajtu je potrebné zmeniť a akým spôsobom, aby sa dosiahol konkrétny pohyb"
+        },
+        "16b8cc70-77c4-4f8b-be73-abf2ea07a0f3": {
+          "description": "Používať podmienené príkazy na reagovanie na zmeny v premenných a vlastnostiach sprajtov"
+        },
+        "3165b257-ff21-434e-8ee2-9b5c16ff53a0": {
+          "description": "Posúvanie sprajtov v reakcii na vstup z klávesnice"
+        },
+        "8f46dfd6-12f6-4d40-b967-243abb049df9": {
+          "description": "Používanie podmienených príkazov na reakciu na vstup z klávesnice"
+        },
+        "594d9bb5-dbe4-4103-b097-f6898efccf81": {
+          "description": "Používať príkaz if/else na riadenie toku programu."
+        },
+        "d0f9b553-815f-445b-9da2-78e4a38cc3b4": {
+          "description": "Reagovať na rôzne typy vstupov od používateľa."
+        },
+        "0442e7e5-7306-4c57-8551-0e3008c07965": {
+          "description": "Používať podmienené príkazy na reagovanie na vstup z klávesnice alebo zmeny v premenných či vlastnostiach"
+        },
+        "7c53c79e-cb27-4dc0-919a-04120f15ddf7": {
+          "description": "Použiť iterátor na premenné alebo vlastnosti v cykle"
+        },
+        "b7aa0b97-f6e7-472b-ad88-320e60d77405": {
+          "description": "Usporiadať príkazy do správneho poradia"
+        },
+        "5c366deb-de44-4093-954f-e43db98323dd": {
+          "description": "Používať bloky velocity a rotationSpeed na vytváranie a zmenu pohybov sprajtov"
+        },
+        "aeb50e3c-3731-488d-9e00-0bde688babad": {
+          "description": "Opísať výhody zjednodušenia kódu použitím blokov vyššej úrovne"
+        },
+        "75c25bb1-0a9a-4400-bbd8-9ee267d5840e": {
+          "description": "Opísať, ako abstrakcie pomáhajú regulovať zložitosť kódu"
+        },
+        "8a36edbe-d38d-451c-8e93-8cef09a25fe6": {
+          "description": "Zistiť, kedy sa sprajty dotýkajú alebo prekrývajú, a v reakcii na to zmeniť program. "
+        },
+        "0aaeeba7-74d2-422d-b603-5b32cfdc2774": {
+          "description": "Vysvetliť, ako možno jednotlivé programovacie štruktúry kombinovať na vytvorenie zložitejšieho správania"
+        },
+        "8197bb13-d10f-4b13-a113-ac309a51614d": {
+          "description": "Používať rýchlosť sprajtov s počítadlom na vytváranie rôznych typov pohybu sprajtov"
+        },
+        "5ff2f07d-413b-4655-beeb-ae5e26a538a4": {
+          "description": "Modelovať rôzne typy interakcií medzi sprajtmi"
+        },
+        "a6c00786-9c8f-475d-85dc-0b925c00bde6": {
+          "description": "Opísať, ako možno abstrakcie rozvíjať a vytvárať na ich základe ďalšie abstrakcie"
+        },
+        "1b64ea91-69a6-45bc-8ef6-a70eba06b999": {
+          "description": "Vysvetliť výhody používania funkcií v programe"
+        },
+        "5b66abba-9b09-4560-b4d9-a0bf57e87557": {
+          "description": "Vysvetliť, ako funkcie umožňujú programátorom uvažovať o programe na vyššej úrovni"
+        },
+        "61b53cbb-b0d1-4c3f-9ea7-69aa45c24d25": {
+          "description": "Vytvárať a používať funkcie pre bloky kódu, ktoré vykonávajú jednu úlohu na vysokej úrovni v rámci programu"
+        },
+        "09bace1d-08b3-4707-995c-b0abc0fa2daa": {
+          "description": "Implementovať rôzne funkcie programu podľa štruktúrovaného sprievodcu projektu"
+        },
+        "02bae04f-806b-42d1-84f6-5ebe238af7ff": {
+          "description": "Implementovať rôzne funkcie programu podľa štruktúrovaného sprievodcu projektom"
+        },
+        "1e42682b-0d98-4936-92ab-de77c9c90a2a": {
+          "description": "Identifikovať základné programové štruktúry potrebné na vytvorenie rôznych súčastí hry"
+        },
+        "25312937-76b0-475d-a24a-e2f132523e65": {
+          "description": "Implementovať plán na tvorbu softvéru"
+        },
+        "4f9dd028-3515-477d-9ca9-a47359197e98": {
+          "description": "Vytvoriť plán na tvorbu softvéru opísaním jeho hlavných súčastí"
+        },
+        "51fd1307-e09b-4245-b9e7-7c00e147ffe0": {
+          "description": "Nezávisle určiť rozsah funkcií softvéru"
+        },
+        "114f32b8-86b0-4ffe-9078-63eb13745f4e": {
+          "description": "Vytrénovať a otestovať model strojového učenia."
+        },
+        "4ddcd0e5-9848-44c2-b44e-534be14ec029": {
+          "description": "Zamyslieť sa nad tým, akú úlohu zohrávajú ľudské predsudky v strojovom učení."
+        },
+        "706d588e-1af3-44f0-b4d8-7bffa52d45e8": {
+          "description": "Vytvárať a zdieľať v App Labe vlastné aplikácie s tlačidlami, textom, obrázkami, zvukmi a obrazovkami."
+        },
+        "e6adc424-7ec3-4898-b06b-bd2f7f0c827d": {
+          "description": "Nezávisle určiť rozsah funkcií softvéru"
+        },
+        "9462a1ca-276f-44b6-8693-898f8b970b8f": {
+          "description": "Vytvárať a zdieľať v App Labe vlastné aplikácie s tlačidlami, textom, obrázkami, zvukmi a obrazovkami."
+        },
+        "c8fecf7c-a1ee-42bb-9a0e-8b4f462adb7e": {
+          "description": "Nezávisle určiť rozsah funkcií softvéru"
+        },
+        "550d0aba-fcca-4adf-985c-2955df143802": {
+          "description": "Vytvárať a zdieľať v App Labe vlastné aplikácie s tlačidlami, textom, obrázkami, zvukmi a obrazovkami."
+        },
+        "536d72a6-6441-4862-932f-ef5a5001ce63": {
+          "description": "Uplatnenie procesu riešenia problémov na trénovanie počítača na riešenie problému"
+        },
+        "03217740-1da9-40a4-943c-4adef1609af5": {
+          "description": "Opíšte rozdiely medzi učením pod dohľadom a bez dohľadu."
+        },
+        "11465545-b713-4712-a1d0-4fcd718604b7": {
+          "description": "Opíšte, aký vplyv má umelá inteligencia na spoločnosť"
+        },
+        "80a81086-3285-449e-9a80-19b36cf9478e": {
+          "description": "Hľadať vzory v údajoch, ktoré pomáhajú pri rozhodovaní"
+        },
+        "df043911-0332-4a6a-80a4-cf14aa070d29": {
+          "description": "Opísať, ako sa model rozhoduje (napríklad: pomocou náhodnosti, rozhodovacieho stromu alebo na základe údajov)."
+        },
+        "33e21a30-7440-43a7-92db-e9b68281275f": {
+          "description": "Vysvetliť, ako môžu počítače oddeľovať údaje a prijímať rozhodnutia"
+        },
+        "87a32ff4-48c6-4ca2-9487-23171a683f19": {
+          "description": "Používať nástroje na vizualizáciu údajov pri rozhodovaní o tom, ktoré vlastnosti zahrnúť pri trénovaní modelu"
+        },
+        "a10ad61d-7535-4dd2-96ad-20fb54716591": {
+          "description": "Používať  AI Lab na výber vlastností na trénovanie modelu"
+        },
+        "1757c772-d810-4205-9d45-5d0adb732646": {
+          "description": "Pridať obrazovky a udalosti v App Labe"
+        },
+        "5574dcbf-224a-41bf-8e38-f00d8936c7ad": {
+          "description": "Vytvoriť aplikáciu, ktorá využíva strojové učenie"
+        },
+        "e2906d9e-21fc-4fc3-8556-b1c237b99bf8": {
+          "description": "Prečítať kartu modelu a použiť ju na vyhodnotenie modelu"
+        },
+        "a2f88848-5ce8-4716-9e0c-5bb9c8aec79f": {
+          "description": "Používať vizualizácie údajov a opakovanie vlastností na trénovanie modelov strojového učenia"
+        },
+        "c4f65e41-72d8-4049-aa41-2fec24577301": {
+          "description": "Vytvárať karty modelov v AI Labe na ukladanie modelov strojového učenia"
+        },
+        "2e453663-599b-4da3-885f-0346c30c6651": {
+          "description": "Používať kartu modelu na aktualizáciu používateľského rozhrania aplikácie"
+        },
+        "f38b15d4-6077-4d6e-bfe0-36d38a40b009": {
+          "description": "Používať príkazy if na zmenu správania aplikácie"
+        },
+        "3095f41c-127c-4d9d-b2b2-982d6ca328ad": {
+          "description": "Vysvetliť, ako môžu počítače prijímať rozhodnutia porovnávaním podobností v údajoch"
+        },
+        "e3ab92a2-271d-4df9-8c19-c155d7448903": {
+          "description": "Vysvetliť, ako sa výpočet presnosti číselných údajov líši od kategorických údajov"
+        },
+        "1e6aaf33-30b8-4b9f-9716-15e6e88f99ed": {
+          "description": "Porovnať kategorické údaje s číselnými údajmi a uviesť rozdiely medzi nimi"
+        },
+        "59f11b7c-1ead-4f83-b039-fd0d23299dce": {
+          "description": "Používať vizualizácie údajov na hľadanie vzorov v číselných údajoch"
+        },
+        "24105db3-cc5e-43be-ad7b-ea57f2a5f011": {
+          "description": "Používať kartu modelu na vytváranie nových vstupných prvkov pre aplikáciu strojového učenia"
+        },
+        "a75cc4e8-e468-4602-82f6-5a84996466d1": {
+          "description": "Aktualizovať predvolený kód modelu na použitie nových vstupov v aplikácii strojového učenia"
+        },
+        "0caa35ad-752c-48ab-9ad2-7b9903d68b25": {
+          "description": "Opíšte aspoň jeden príklad etického problému týkajúceho sa umelej inteligencie spolu s jeho vplyvom na spoločnosť."
+        },
+        "2a58bbe6-0187-456f-825a-7cf23e16030e": {
+          "description": "Vytvorte aspoň jednu kľúčovú zásadu, ktorá sa týka problematiky etiky umelej inteligencie."
+        },
+        "95887ced-8b2d-4703-bd0d-234da5ab332b": {
+          "description": "Definovať umelú inteligenciu (UI) vlastnými slovami na príklade technológií, s ktorými sa stretávajú v každodennom živote."
+        },
+        "18c53cdc-1748-426d-a298-3553a806d2d1": {
+          "description": "Vytvoriť model strojového učenia pomocou množiny údajov z reálneho sveta"
+        },
+        "a178dc50-c6b5-43eb-9d0e-4a079827145d": {
+          "description": "Vytvoriť aplikáciu, ktorá používa model strojového učenia"
+        },
+        "52cf1620-e744-459f-832b-1c3476b8fc45": {
+          "description": "Rozvíjať pozorovanie problému na základný problém pomocou stratégií brainstormingu"
+        },
+        "0e7dc785-5922-4819-aac4-d02250a6af41": {
+          "description": "Použiť šablónu na vytvorenie dotazníka vo formulári Google"
+        },
+        "922f3f47-ce1a-4707-b9df-27d49ff7b797": {
+          "description": "Vypracovať otázky dotazníka, ktoré sa dajú použiť na vytvorenie aplikácie strojového učenia"
+        },
+        "2c2d0851-2489-4a3b-8f6a-d868169a3f58": {
+          "description": "Analyzovať a čistiť údaje v Tabuľkách Google"
+        },
+        "745b10c0-1fd3-40c3-8c1d-eec10de44da4": {
+          "description": "Nahrať súbor CSV do AI Labu"
+        },
+        "df4ad26a-ac16-402c-b5a0-01a478b2299e": {
+          "description": "Stiahnuť súbor CSV z Tabuliek Google"
+        },
+        "8e0399af-7db3-4bbc-8527-173105fe657b": {
+          "description": "Vysvetlite, ako môžu rozhodnutia týkajúce sa zhromažďovania údajov viesť k problémom pri trénovaní modelu strojového učenia."
+        },
+        "00392c61-89be-4864-a36c-e7f05358ef1d": {
+          "description": "Vytvoriť aplikáciu, ktorá využíva strojové učenie"
+        },
+        "25796163-5747-43a1-8038-b842ad6fa780": {
+          "description": "Uplatnenie procesu riešenia problémov na vytvorenie aplikácie umelej inteligencie pre spoločenské blaho"
+        },
         "08121200-84b5-4a5a-bba6-4b562022d2dd": {
           "description": "Vysvetliť pravidlá bezpečného cestovania internetom."
         },

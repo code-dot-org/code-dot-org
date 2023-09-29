@@ -212,6 +212,24 @@
         "code/poetry/2023": {
           "word": "Code"
         },
+        "copyright/csd/2023": {
+          "word": "प्रतिलिपि अधिकार"
+        },
+        "debugging/csd/2023": {
+          "word": "Debugging"
+        },
+        "variable/csd/2023": {
+          "word": "Variable"
+        },
+        "conditionals/csd/2023": {
+          "word": "Conditionals"
+        },
+        "abstraction/csd/2023": {
+          "word": "Abstraction"
+        },
+        "function/csd/2023": {
+          "word": "Function"
+        },
         "debugging/coursea/2023": {
           "word": "Debugging"
         },

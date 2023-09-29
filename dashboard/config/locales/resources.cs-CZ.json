@@ -5322,6 +5322,37 @@
           "url": "https://www.youtube.com/watch?v=rgbZAWnOWOo",
           "type": "Video"
         },
+        "_template_ai_code_of_ethics/ai-ethics/2023": {
+          "type": "Snímky"
+        },
+        "ai_code_of_ethics/ai-ethics/2023": {
+          "type": "Snímky"
+        },
+        "ethics_and_ai_privacy_the_future_of_work/ai-ethics/2023": {
+          "type": "Video"
+        },
+        "character_card_individual_docs_/ai-ethics/2023": {
+          "type": "Zdroje"
+        },
+        "character_cards/ai-ethics/2023": {
+          "type": "Zdroje"
+        },
+        "generative_ai_activity_instructions/ai-ethics/2023": {
+          "type": "Zdroje"
+        },
+        "generative_ai_news_articles/ai-ethics/2023": {
+          "type": "Zdroje"
+        },
+        "group_scenarios/ai-ethics/2023": {
+          "type": "Zdroje"
+        },
+        "how_ai_works_large_language_models/ai-ethics/2023": {
+          "url": "https://www.youtube.com/watch?v=X-AWdfSFCHQ",
+          "type": "Video"
+        },
+        "societal_impact_of_generative_ai/ai-ethics/2023": {
+          "type": "Snímky"
+        },
         "cs_connections_landing_page/csc-adaptations/2023": {
           "name": "Vstupní stránka CS Connections",
           "url": "https://code.org/educate/csc",
@@ -5860,6 +5891,1233 @@
         "poem_app_example/poetry/2023": {
           "name": "Příklad aplikace Báseň",
           "url": "https://studio.code.org/projects/poetry_hoc/j3TXDXNhz0XEsH4Xjk_rT9buBHYCplirIKtY_Pg_bYo",
+          "type": "Zdroje"
+        },
+        "teacher_forum/csd/2023": {
+          "name": "Fórum učitelů"
+        },
+        "the_problem_solving_process_2/csd/2023": {
+          "name": "Proces řešení problémů"
+        },
+        "intro_to_problem_solving/csd/2023": {
+          "type": "Snímky"
+        },
+        "problem_solving_process_1/csd/2023": {
+          "type": "Video"
+        },
+        "the_problem_solving_process/csd/2023": {
+          "type": "Video"
+        },
+        "the_problem_solving_process_1/csd/2023": {
+          "name": "Proces řešení problémů",
+          "type": "Snímky"
+        },
+        "the_problem_solving_process_5/csd/2023": {
+          "name": "Proces řešení problémů"
+        },
+        "exploring_problem_solving/csd/2023": {
+          "type": "Snímky"
+        },
+        "solving_problems/csd/2023": {
+          "type": "Klíč odpovědi"
+        },
+        "what_is_a_computer/csd/2023": {
+          "type": "Video"
+        },
+        "what_is_a_computer_/csd/2023": {
+          "name": "Co je to počítač?"
+        },
+        "what_is_a_computer_1/csd/2023": {
+          "type": "Snímky"
+        },
+        "input_and_output_2/csd/2023": {
+          "type": "Snímky"
+        },
+        "apps_with_processing_2/csd/2023": {
+          "type": "Snímky"
+        },
+        "apps_with_storage_2/csd/2023": {
+          "type": "Snímky"
+        },
+        "what_do_computers_do/csd/2023": {
+          "type": "Video"
+        },
+        "apps_and_problem_solving_-_student_checklist/csd/2023": {
+          "type": "Zdroje"
+        },
+        "apps_and_problem_solving_1/csd/2023": {
+          "type": "Nezávislý posudek"
+        },
+        "apps_and_problem_solving_2/csd/2023": {
+          "type": "Rubrika"
+        },
+        "computer_science_practices/csd/2023": {
+          "type": "Reflexe"
+        },
+        "project_-_propose_an_app/csd/2023": {
+          "type": "Snímky"
+        },
+        "intro_to_problem_solving_newspapers_/csd/2023": {
+          "type": "Snímky"
+        },
+        "intro_to_problem_solving_spaghetti_/csd/2023": {
+          "type": "Snímky"
+        },
+        "intro_to_problem_solving_paper_towels_/csd/2023": {
+          "type": "Snímky"
+        },
+        "exploring_problem_solving_animals_/csd/2023": {
+          "type": "Snímky"
+        },
+        "tangrams/csd/2023": {
+          "type": "Zdroje"
+        },
+        "exploring_problem_solving_games_/csd/2023": {
+          "type": "Snímky"
+        },
+        "_key_warm_up_word_search/csd/2023": {
+          "type": "Klíč odpovědi"
+        },
+        "_key_web_design_for_users/csd/2023": {
+          "type": "Klíč odpovědi"
+        },
+        "exploring_web_pages_2/csd/2023": {
+          "type": "Snímky"
+        },
+        "problem_solving_and_design/csd/2023": {
+          "type": "Zdroje"
+        },
+        "web_design_template/csd/2023": {
+          "type": "Zdroje"
+        },
+        "html_tags/csd/2023": {
+          "type": "Zdroje"
+        },
+        "intro_to_html/csd/2023": {
+          "type": "Snímky"
+        },
+        "intro_to_web_lab_part_2/csd/2023": {
+          "type": "Video"
+        },
+        "pair_programming/csd/2023": {
+          "name": "Párové programování",
+          "type": "Video"
+        },
+        "video_intro_to_web_lab_part_1/csd/2023": {
+          "type": "Video"
+        },
+        "formatting_html/csd/2023": {
+          "type": "Zdroje"
+        },
+        "headings/csd/2023": {
+          "type": "Snímky"
+        },
+        "headings_and_paragraphs/csd/2023": {
+          "type": "Zdroje"
+        },
+        "lists/csd/2023": {
+          "name": "Seznamy",
+          "type": "Zdroje"
+        },
+        "video_debugging/csd/2023": {
+          "name": "Video: Ladění",
+          "type": "Video"
+        },
+        "video_pair_programming/csd/2023": {
+          "name": "Video: Programování ve dvojicích",
+          "type": "Video"
+        },
+        "html_web_page/csd/2023": {
+          "type": "Rubrika"
+        },
+        "html_web_page_1/csd/2023": {
+          "type": "Nezávislý posudek"
+        },
+        "html_web_page_2/csd/2023": {
+          "type": "Průvodce projektem"
+        },
+        "mini-project_html_web_page/csd/2023": {
+          "type": "Snímky"
+        },
+        "problem_solving_process_with_programming/csd/2023": {
+          "name": "Proces řešení problémů s programováním",
+          "type": "Zdroje"
+        },
+        "digital_footprint/csd/2023": {
+          "type": "Snímky"
+        },
+        "social_sleuth/csd/2023": {
+          "name": "Sociální slídil"
+        },
+        "social_sleuth_1/csd/2023": {
+          "name": "Sociální slídil"
+        },
+        "intro_to_css_-_part_1/csd/2023": {
+          "name": "Úvod do CSS - část 1",
+          "type": "Video"
+        },
+        "intro_to_css_-_part_2/csd/2023": {
+          "name": "Úvod do CSS - část 2",
+          "type": "Video"
+        },
+        "style_sheets/csd/2023": {
+          "type": "Zdroje"
+        },
+        "styling_text_with_css/csd/2023": {
+          "type": "Snímky"
+        },
+        "text_properties/csd/2023": {
+          "type": "Zdroje"
+        },
+        "mini-project_your_personal_style/csd/2023": {
+          "type": "Snímky"
+        },
+        "your_personal_style/csd/2023": {
+          "type": "Rubrika"
+        },
+        "your_personal_style_1/csd/2023": {
+          "type": "Nezávislý posudek"
+        },
+        "your_personal_style_2/csd/2023": {
+          "type": "Průvodce projektem"
+        },
+        "creative_commons_overview/csd/2023": {
+          "type": "Video"
+        },
+        "intellectual_property/csd/2023": {
+          "type": "Snímky"
+        },
+        "creative_commons_search/csd/2023": {
+          "type": "Zdroje"
+        },
+        "images_in_html/csd/2023": {
+          "type": "Zdroje"
+        },
+        "using_images/csd/2023": {
+          "type": "Snímky"
+        },
+        "websites_for_expression/csd/2023": {
+          "type": "Snímky"
+        },
+        "styling_elements_with_css/csd/2023": {
+          "type": "Snímky"
+        },
+        "personal_web_page_-_prepare/csd/2023": {
+          "type": "Průvodce projektem"
+        },
+        "your_web_page_prepare/csd/2023": {
+          "type": "Snímky"
+        },
+        "personal_web_page/csd/2023": {
+          "type": "Nezávislý posudek"
+        },
+        "personal_web_page_-_reflect/csd/2023": {
+          "type": "Průvodce projektem"
+        },
+        "personal_web_page_-_student_checklist/csd/2023": {
+          "type": "Zdroje"
+        },
+        "personal_web_page_1/csd/2023": {
+          "type": "Rubrika"
+        },
+        "project_-_personal_web_page/csd/2023": {
+          "type": "Snímky"
+        },
+        "publishing_your_website/csd/2023": {
+          "name": "Publikování webu",
+          "type": "Video"
+        },
+        "websites_for_a_purpose_2/csd/2023": {
+          "type": "Snímky"
+        },
+        "team_problem_solving/csd/2023": {
+          "type": "Snímky"
+        },
+        "video_managing_disagreement/csd/2023": {
+          "name": "Video: Jak vyjádřit nesouhlas",
+          "type": "Video"
+        },
+        "video_teamwork/csd/2023": {
+          "name": "Video: Týmová práce",
+          "type": "Video"
+        },
+        "sources_and_research/csd/2023": {
+          "type": "Snímky"
+        },
+        "video_how_search_works/csd/2023": {
+          "name": "Jak funguje vyhledávání",
+          "type": "Video"
+        },
+        "classes/csd/2023": {
+          "type": "Zdroje"
+        },
+        "css_classes/csd/2023": {
+          "type": "Snímky"
+        },
+        "plan_a_multi-page_website/csd/2023": {
+          "type": "Průvodce projektem"
+        },
+        "planning_a_multi-page_site/csd/2023": {
+          "type": "Snímky"
+        },
+        "website_for_a_purpose/csd/2023": {
+          "type": "Rubrika"
+        },
+        "hyperlinks/csd/2023": {
+          "type": "Zdroje"
+        },
+        "linking_pages/csd/2023": {
+          "name": "Propojení stránek",
+          "type": "Snímky"
+        },
+        "project_-_website_for_a_purpose/csd/2023": {
+          "type": "Snímky"
+        },
+        "peer_review_and_final_touches/csd/2023": {
+          "type": "Snímky"
+        },
+        "website_for_a_purpose_-_reflect/csd/2023": {
+          "type": "Průvodce projektem"
+        },
+        "website_for_a_purpose_1/csd/2023": {
+          "type": "Nezávislý posudek"
+        },
+        "_warm_up_word_search_key_/csd/2023": {
+          "type": "Klíč odpovědi"
+        },
+        "programming_for_a_purpose/csd/2023": {
+          "type": "Snímky"
+        },
+        "animation_and_game_design_template/csd/2023": {
+          "type": "Zdroje"
+        },
+        "drawing_shapes/csd/2023": {
+          "name": "Kreslení tvarů"
+        },
+        "plotting_shapes/csd/2023": {
+          "type": "Snímky"
+        },
+        "drawing_in_game_lab/csd/2023": {
+          "type": "Snímky"
+        },
+        "drawing_in_game_lab_-_part_1/csd/2023": {
+          "type": "Video"
+        },
+        "drawing_in_game_lab_-_part_2/csd/2023": {
+          "type": "Video"
+        },
+        "drawing_shapes_1/csd/2023": {
+          "name": "Kreslení tvarů",
+          "type": "Zdroje"
+        },
+        "shapes_and_parameters/csd/2023": {
+          "type": "Zdroje"
+        },
+        "shapes_and_parameters_1/csd/2023": {
+          "type": "Snímky"
+        },
+        "introduction_to_variables/csd/2023": {
+          "type": "Video"
+        },
+        "naming_variables/csd/2023": {
+          "type": "Zdroje"
+        },
+        "variables/csd/2023": {
+          "name": "Proměnné",
+          "type": "Zdroje"
+        },
+        "variables_1/csd/2023": {
+          "name": "Proměnné",
+          "type": "Video"
+        },
+        "variables_2/csd/2023": {
+          "name": "Proměnné",
+          "type": "Snímky"
+        },
+        "random_numbers/csd/2023": {
+          "name": "Náhodná čísla",
+          "type": "Zdroje"
+        },
+        "random_numbers_1/csd/2023": {
+          "name": "Náhodná čísla",
+          "type": "Snímky"
+        },
+        "mini-project_-_robot_faces/csd/2023": {
+          "type": "Snímky"
+        },
+        "problem_solving_with_programming/csd/2023": {
+          "type": "Zdroje"
+        },
+        "robot_faces/csd/2023": {
+          "type": "Rubrika"
+        },
+        "animation_tab/csd/2023": {
+          "type": "Zdroje"
+        },
+        "introduction_to_sprites/csd/2023": {
+          "type": "Video"
+        },
+        "sprites/csd/2023": {
+          "name": "Postavy",
+          "type": "Zdroje"
+        },
+        "sprites_1/csd/2023": {
+          "name": "Postavy",
+          "type": "Snímky"
+        },
+        "the_animation_tab/csd/2023": {
+          "name": "Karta Animace",
+          "type": "Video"
+        },
+        "sprite_properties/csd/2023": {
+          "name": "Vlastnosti sprajtu",
+          "type": "Zdroje"
+        },
+        "sprite_properties_1/csd/2023": {
+          "name": "Vlastnosti sprajtu",
+          "type": "Snímky"
+        },
+        "sprite_properties_needs_updating_/csd/2023": {
+          "name": "Vlastnosti sprajtu",
+          "type": "Video"
+        },
+        "text/csd/2023": {
+          "name": "Text",
+          "type": "Snímky"
+        },
+        "captioned_scenes/csd/2023": {
+          "type": "Rubrika"
+        },
+        "mini-project_-_captioned_scenes/csd/2023": {
+          "type": "Snímky"
+        },
+        "flipbook_example_-_by_marnic_bos/csd/2023": {
+          "type": "Video"
+        },
+        "introduction_to_the_draw_loop/csd/2023": {
+          "type": "Video"
+        },
+        "the_draw_loop/csd/2023": {
+          "type": "Zdroje"
+        },
+        "the_draw_loop_1/csd/2023": {
+          "type": "Snímky"
+        },
+        "sprite_movement/csd/2023": {
+          "type": "Video"
+        },
+        "sprite_movement_1/csd/2023": {
+          "type": "Snímky"
+        },
+        "animated_scene/csd/2023": {
+          "type": "Rubrika"
+        },
+        "mini-project_-_animation/csd/2023": {
+          "type": "Snímky"
+        },
+        "boolean_expressions/csd/2023": {
+          "name": "Booleovské výrazy",
+          "type": "Video"
+        },
+        "booleans_and_comparison_operators/csd/2023": {
+          "type": "Zdroje"
+        },
+        "conditional_statements/csd/2023": {
+          "name": "Podmíněné příkazy",
+          "type": "Video"
+        },
+        "conditionals/csd/2023": {
+          "name": "Podmínky",
+          "type": "Snímky"
+        },
+        "if_statements/csd/2023": {
+          "type": "Zdroje"
+        },
+        "keyboard_input/csd/2023": {
+          "name": "Vstup z klávesnice",
+          "type": "Snímky"
+        },
+        "if-else_statements/csd/2023": {
+          "type": "Zdroje"
+        },
+        "if_else_statements/csd/2023": {
+          "name": "If/Else prohlášení",
+          "type": "Video"
+        },
+        "mouse_input/csd/2023": {
+          "type": "Snímky"
+        },
+        "extra_code_in_challenge_levels/csd/2023": {
+          "type": "Zdroje"
+        },
+        "interactive_card_-_student_checklist/csd/2023": {
+          "type": "Zdroje"
+        },
+        "interactive_card_3/csd/2023": {
+          "type": "Rubrika"
+        },
+        "project_-_interactive_card/csd/2023": {
+          "type": "Snímky"
+        },
+        "velocity/csd/2023": {
+          "name": "Rychlost",
+          "type": "Video"
+        },
+        "velocity_1/csd/2023": {
+          "name": "Rychlost",
+          "type": "Zdroje"
+        },
+        "velocity_2/csd/2023": {
+          "name": "Rychlost",
+          "type": "Snímky"
+        },
+        "collision_detection_1/csd/2023": {
+          "type": "Zdroje"
+        },
+        "collision_detection_2/csd/2023": {
+          "type": "Snímky"
+        },
+        "mini-project_-_side_scroller/csd/2023": {
+          "type": "Snímky"
+        },
+        "side_scroller/csd/2023": {
+          "name": "Side scroller",
+          "type": "Rubrika"
+        },
+        "side_scroller_1/csd/2023": {
+          "name": "Side scroller"
+        },
+        "complex_sprite_movement/csd/2023": {
+          "type": "Snímky"
+        },
+        "velocity_and_the_counter_pattern/csd/2023": {
+          "name": "Rychlost a přičítací vzor",
+          "type": "Zdroje"
+        },
+        "collisions/csd/2023": {
+          "name": "Kolize",
+          "type": "Snímky"
+        },
+        "flyer_game/csd/2023": {
+          "name": "Hra Flyer",
+          "type": "Rubrika"
+        },
+        "flyer_game_1/csd/2023": {
+          "name": "Hra Flyer"
+        },
+        "mini-project_-_flyer_game/csd/2023": {
+          "type": "Snímky"
+        },
+        "functions/csd/2023": {
+          "name": "Funkce",
+          "type": "Video"
+        },
+        "functions_1/csd/2023": {
+          "name": "Funkce",
+          "type": "Zdroje"
+        },
+        "functions_2/csd/2023": {
+          "name": "Funkce",
+          "type": "Snímky"
+        },
+        "the_game_design_process/csd/2023": {
+          "type": "Snímky"
+        },
+        "using_the_game_design_process/csd/2023": {
+          "type": "Snímky"
+        },
+        "make_your_own_game_-_student_checklist/csd/2023": {
+          "type": "Zdroje"
+        },
+        "make_your_own_game_3/csd/2023": {
+          "type": "Rubrika"
+        },
+        "project_-_design_a_game/csd/2023": {
+          "type": "Snímky"
+        },
+        "designing_with_empathy_2/csd/2023": {
+          "type": "Snímky"
+        },
+        "understanding_your_user/csd/2023": {
+          "type": "Snímky"
+        },
+        "the_design_thinking_process/csd/2023": {
+          "type": "Video"
+        },
+        "user_centered_design_-_define_and_prepare/csd/2023": {
+          "type": "Snímky"
+        },
+        "user_centered_design_-_try_and_reflect/csd/2023": {
+          "type": "Snímky"
+        },
+        "user_interface_screens/csd/2023": {
+          "type": "Zdroje"
+        },
+        "user_interfaces/csd/2023": {
+          "type": "Snímky"
+        },
+        "feedback_and_testing/csd/2023": {
+          "type": "Snímky"
+        },
+        "prototype_feedback/csd/2023": {
+          "type": "Zdroje"
+        },
+        "example_user_interviews/csd/2023": {
+          "type": "Zdroje"
+        },
+        "identifying_user_needs/csd/2023": {
+          "type": "Snímky"
+        },
+        "paper_prototypes/csd/2023": {
+          "type": "Rubrika"
+        },
+        "project_-_paper_prototype/csd/2023": {
+          "type": "Snímky"
+        },
+        "designing_apps_for_good/csd/2023": {
+          "type": "Snímky"
+        },
+        "market_research_-_research_areas/csd/2023": {
+          "type": "Zdroje"
+        },
+        "market_research_2/csd/2023": {
+          "type": "Snímky"
+        },
+        "exploring_ui_elements/csd/2023": {
+          "type": "Snímky"
+        },
+        "build_a_paper_prototype/csd/2023": {
+          "type": "Snímky"
+        },
+        "design_mode/csd/2023": {
+          "name": "Dizajnový mód",
+          "type": "Zdroje"
+        },
+        "design_mode_elements/csd/2023": {
+          "name": "Prvky dizajnového módu",
+          "type": "Zdroje"
+        },
+        "prototype_testing/csd/2023": {
+          "type": "Snímky"
+        },
+        "what_s_for_lunch_testing/csd/2023": {
+          "type": "Video"
+        },
+        "design_mode_in_app_lab/csd/2023": {
+          "type": "Snímky"
+        },
+        "intro_to_design_mode/csd/2023": {
+          "name": "Úvod do dizajnového módu",
+          "type": "Video"
+        },
+        "model_screen_design/csd/2023": {
+          "type": "Zdroje"
+        },
+        "build_a_digital_prototype/csd/2023": {
+          "type": "Snímky"
+        },
+        "events_in_app_lab/csd/2023": {
+          "type": "Video"
+        },
+        "events_in_app_lab_1/csd/2023": {
+          "type": "Video"
+        },
+        "events_in_app_lab_2/csd/2023": {
+          "type": "Snímky"
+        },
+        "changing_screens/csd/2023": {
+          "type": "Zdroje"
+        },
+        "importing_screens/csd/2023": {
+          "type": "Zdroje"
+        },
+        "linking_prototype_screens/csd/2023": {
+          "type": "Snímky"
+        },
+        "multi-screen_apps/csd/2023": {
+          "type": "Zdroje"
+        },
+        "responding_to_user_input/csd/2023": {
+          "type": "Zdroje"
+        },
+        "testing_the_app/csd/2023": {
+          "type": "Snímky"
+        },
+        "bugs_and_features_2/csd/2023": {
+          "type": "Snímky"
+        },
+        "updating_your_prototype_1/csd/2023": {
+          "type": "Snímky"
+        },
+        "app_presentation/csd/2023": {
+          "type": "Rubrika"
+        },
+        "project_-_app_presentation/csd/2023": {
+          "type": "Snímky"
+        },
+        "meals_data/csd/2023": {
+          "type": "Zdroje"
+        },
+        "representation_matters_2/csd/2023": {
+          "type": "Snímky"
+        },
+        "patterns_and_representation/csd/2023": {
+          "type": "Snímky"
+        },
+        "ascii_and_binary_representation/csd/2023": {
+          "type": "Snímky"
+        },
+        "ascii_challenges_1/csd/2023": {
+          "type": "Klíč odpovědi"
+        },
+        "ascii_text/csd/2023": {
+          "type": "Zdroje"
+        },
+        "representing_images/csd/2023": {
+          "name": "Reprezentace obrázků",
+          "type": "Snímky"
+        },
+        "binary_and_data/csd/2023": {
+          "type": "Video"
+        },
+        "representing_numbers_1/csd/2023": {
+          "type": "Snímky"
+        },
+        "combining_representations/csd/2023": {
+          "name": "Kombinování reprezentací",
+          "type": "Snímky"
+        },
+        "keeping_data_secret/csd/2023": {
+          "name": "Udržování dat v tajnosti",
+          "type": "Snímky"
+        },
+        "medical_records_1/csd/2023": {
+          "type": "Klíč odpovědi"
+        },
+        "create_a_representation_2/csd/2023": {
+          "type": "Rubrika"
+        },
+        "create_a_representation_3/csd/2023": {
+          "type": "Snímky"
+        },
+        "problem_solving_with_data_2/csd/2023": {
+          "type": "Snímky"
+        },
+        "structuring_data_1/csd/2023": {
+          "type": "Snímky"
+        },
+        "interpreting_data_2/csd/2023": {
+          "type": "Zdroje"
+        },
+        "interpreting_data_3/csd/2023": {
+          "type": "Snímky"
+        },
+        "making_decisions_with_data_2/csd/2023": {
+          "type": "Snímky"
+        },
+        "problem_solving_process_with_data/csd/2023": {
+          "type": "Zdroje"
+        },
+        "automating_data_decisions_1/csd/2023": {
+          "type": "Zdroje"
+        },
+        "automating_data_decisions_3/csd/2023": {
+          "type": "Snímky"
+        },
+        "amazon_and_data/csd/2023": {
+          "type": "Video"
+        },
+        "netflix_and_data/csd/2023": {
+          "type": "Video"
+        },
+        "problem_solving_with_big_data/csd/2023": {
+          "type": "Snímky"
+        },
+        "waze_and_data/csd/2023": {
+          "type": "Video"
+        },
+        "data_and_machine_learning/csd/2023": {
+          "type": "Snímky"
+        },
+        "video_impact_on_society/csd/2023": {
+          "name": "Video: Dopad na společnost",
+          "type": "Video"
+        },
+        "video_machine_learning/csd/2023": {
+          "name": "Video: Strojové učení",
+          "url": "https://www.youtube.com/watch?v=OeU5m6vRyCk",
+          "type": "Video"
+        },
+        "video_training_data_and_bias/csd/2023": {
+          "name": "Video: Školicí data a podjatost",
+          "type": "Video"
+        },
+        "make_a_recommendation/csd/2023": {
+          "type": "Nezávislý posudek"
+        },
+        "make_a_recommendation_1/csd/2023": {
+          "type": "Rubrika"
+        },
+        "make_a_recommendation_2/csd/2023": {
+          "type": "Průvodce projektem"
+        },
+        "project_-_make_a_recommendation/csd/2023": {
+          "type": "Snímky"
+        },
+        "physical_design_template/csd/2023": {
+          "type": "Zdroje"
+        },
+        "physical_designs_1/csd/2023": {
+          "type": "Snímky"
+        },
+        "circuit_playground/csd/2023": {
+          "type": "Zdroje"
+        },
+        "circuits_and_logic/csd/2023": {
+          "type": "Video"
+        },
+        "physical_output/csd/2023": {
+          "type": "Zdroje"
+        },
+        "the_circuit_playground/csd/2023": {
+          "type": "Snímky"
+        },
+        "designing_screens_with_code/csd/2023": {
+          "type": "Zdroje"
+        },
+        "updating_screen_elements/csd/2023": {
+          "type": "Snímky"
+        },
+        "board_events/csd/2023": {
+          "name": "Události desky",
+          "type": "Zdroje"
+        },
+        "board_events_1/csd/2023": {
+          "name": "Události desky",
+          "type": "Snímky"
+        },
+        "physical_input/csd/2023": {
+          "type": "Zdroje"
+        },
+        "the_counter_pattern/csd/2023": {
+          "type": "Video"
+        },
+        "if_statements_1/csd/2023": {
+          "type": "Video"
+        },
+        "the_counter_pattern_1/csd/2023": {
+          "type": "Zdroje"
+        },
+        "variables_and_if_statements/csd/2023": {
+          "type": "Snímky"
+        },
+        "mini-project_field_collector_app/csd/2023": {
+          "type": "Snímky"
+        },
+        "rubric_-_field_collector_app/csd/2023": {
+          "type": "Rubrika"
+        },
+        "color_leds/csd/2023": {
+          "name": "Barevné LED",
+          "type": "Snímky"
+        },
+        "color_lights/csd/2023": {
+          "type": "Zdroje"
+        },
+        "getting_screen_inputs/csd/2023": {
+          "type": "Snímky"
+        },
+        "taking_input_with_getproperty/csd/2023": {
+          "type": "Zdroje"
+        },
+        "combining_inputs_and_outputs/csd/2023": {
+          "type": "Snímky"
+        },
+        "input_output_devices/csd/2023": {
+          "type": "Video"
+        },
+        "peer_review_-_human_device_interaction/csd/2023": {
+          "type": "Zdroje"
+        },
+        "project_human_device_interaction/csd/2023": {
+          "type": "Snímky"
+        },
+        "rubric_-_human_device_interaction/csd/2023": {
+          "type": "Rubrika"
+        },
+        "analog_sensors/csd/2023": {
+          "type": "Zdroje"
+        },
+        "board_sensors/csd/2023": {
+          "type": "Snímky"
+        },
+        "changing_sensor_scale/csd/2023": {
+          "type": "Zdroje"
+        },
+        "date_and_change_events/csd/2023": {
+          "type": "Zdroje"
+        },
+        "accelerometer/csd/2023": {
+          "type": "Snímky"
+        },
+        "accelerometer_events/csd/2023": {
+          "name": "Události akcelerometru",
+          "type": "Zdroje"
+        },
+        "the_accelerometer/csd/2023": {
+          "type": "Zdroje"
+        },
+        "arrays/csd/2023": {
+          "type": "Zdroje"
+        },
+        "introduction_to_arrays/csd/2023": {
+          "name": "Úvod do polí",
+          "type": "Video"
+        },
+        "making_music/csd/2023": {
+          "type": "Snímky"
+        },
+        "modifying_arrays/csd/2023": {
+          "type": "Zdroje"
+        },
+        "playing_notes/csd/2023": {
+          "name": "Poznámky k hraní",
+          "type": "Zdroje"
+        },
+        "producing_output/csd/2023": {
+          "type": "Zdroje"
+        },
+        "functions_with_parameters/csd/2023": {
+          "name": "Funkce s Parametry",
+          "type": "Video"
+        },
+        "mini-project_interactive_art/csd/2023": {
+          "type": "Snímky"
+        },
+        "student_example_projects/csd/2023": {
+          "type": "Zdroje"
+        },
+        "student_rubric_-_interactive_art/csd/2023": {
+          "type": "Rubrika"
+        },
+        "circuits_and_leds/csd/2023": {
+          "type": "Zdroje"
+        },
+        "physical_outputs_and_leds/csd/2023": {
+          "type": "Snímky"
+        },
+        "circuits_and_buttons/csd/2023": {
+          "type": "Zdroje"
+        },
+        "physical_inputs_and_buttons/csd/2023": {
+          "type": "Snímky"
+        },
+        "project_prototype_an_innovation/csd/2023": {
+          "type": "Snímky"
+        },
+        "prototype_an_innovation/csd/2023": {
+          "type": "Rubrika"
+        },
+        "teacher_forum_1/csd/2023": {
+          "name": "Fórum učitelů"
+        },
+        "physical_designs_2/csd/2023": {
+          "type": "Snímky"
+        },
+        "introducing_the_micro_bit/csd/2023": {
+          "type": "Snímky"
+        },
+        "led_planning_sheet/csd/2023": {
+          "type": "Zdroje"
+        },
+        "the_micro_bit_led_display/csd/2023": {
+          "type": "Zdroje"
+        },
+        "the_micro_bit_overview/csd/2023": {
+          "type": "Zdroje"
+        },
+        "updating_screen_elements_1/csd/2023": {
+          "type": "Snímky"
+        },
+        "board_events_2/csd/2023": {
+          "name": "Události desky",
+          "type": "Snímky"
+        },
+        "board_events_3/csd/2023": {
+          "name": "Události desky",
+          "type": "Zdroje"
+        },
+        "micro_bit_inputs/csd/2023": {
+          "type": "Zdroje"
+        },
+        "the_counter_pattern_2/csd/2023": {
+          "type": "Video"
+        },
+        "variables_and_if_statements_1/csd/2023": {
+          "type": "Snímky"
+        },
+        "mini-project_field_collector_app_1/csd/2023": {
+          "type": "Snímky"
+        },
+        "rubric_-_field_collector_app_1/csd/2023": {
+          "type": "Rubrika"
+        },
+        "getting_screen_inputs_1/csd/2023": {
+          "type": "Snímky"
+        },
+        "combining_inputs_and_outputs_1/csd/2023": {
+          "type": "Snímky"
+        },
+        "peer_review_-_human_device_interaction_1/csd/2023": {
+          "type": "Zdroje"
+        },
+        "project_human_device_interaction_1/csd/2023": {
+          "type": "Snímky"
+        },
+        "rubric_-_human_device_interaction_1/csd/2023": {
+          "type": "Rubrika"
+        },
+        "board_sensors_1/csd/2023": {
+          "type": "Snímky"
+        },
+        "data_change_events/csd/2023": {
+          "type": "Zdroje"
+        },
+        "setting_sensor_scale/csd/2023": {
+          "type": "Zdroje"
+        },
+        "the_micro_bit_sensors/csd/2023": {
+          "type": "Zdroje"
+        },
+        "accelerometer_1/csd/2023": {
+          "type": "Snímky"
+        },
+        "accelerometer_events_1/csd/2023": {
+          "name": "Události akcelerometru",
+          "type": "Zdroje"
+        },
+        "the_micro_bit_accelerometer/csd/2023": {
+          "type": "Zdroje"
+        },
+        "functions_3/csd/2023": {
+          "name": "Funkce",
+          "type": "Snímky"
+        },
+        "mini-project_interactive_pet/csd/2023": {
+          "type": "Snímky"
+        },
+        "student_rubric_-_interactive_pet/csd/2023": {
+          "type": "Rubrika"
+        },
+        "external_leds_on_a_micro_bit/csd/2023": {
+          "type": "Zdroje"
+        },
+        "physical_outputs_and_leds_1/csd/2023": {
+          "type": "Snímky"
+        },
+        "external_buttons_on_a_micro_bit/csd/2023": {
+          "type": "Zdroje"
+        },
+        "physical_inputs_and_buttons_1/csd/2023": {
+          "type": "Snímky"
+        },
+        "project_prototype_an_innovation_1/csd/2023": {
+          "type": "Snímky"
+        },
+        "prototype_an_innovation_2/csd/2023": {
+          "type": "Rubrika"
+        },
+        "the_problem_solving_process_4/csd/2023": {
+          "name": "Proces řešení problémů"
+        },
+        "ai_what_is_machine_learning_/csd/2023": {
+          "url": "https://www.youtube.com/watch?v=OeU5m6vRyCk",
+          "type": "Video"
+        },
+        "introduction_to_machine_learning/csd/2023": {
+          "type": "Snímky"
+        },
+        "types_of_machine_learning/csd/2023": {
+          "type": "Snímky"
+        },
+        "types_of_machine_learning_2/csd/2023": {
+          "type": "Klíč odpovědi"
+        },
+        "innovations_in_ai/csd/2023": {
+          "type": "Snímky"
+        },
+        "innovations_in_ai_research_areas_-_student_resource/csd/2023": {
+          "type": "Zdroje"
+        },
+        "seeing_ai/csd/2023": {
+          "name": "Umělá inteligence vidění",
+          "type": "Video"
+        },
+        "_key_patterns_in_data/csd/2023": {
+          "type": "Klíč odpovědi"
+        },
+        "finding_patterns_in_data/csd/2023": {
+          "type": "Video"
+        },
+        "patterns_in_data/csd/2023": {
+          "type": "Snímky"
+        },
+        "shoe_survey/csd/2023": {
+          "type": "Zdroje"
+        },
+        "_key_classification_models/csd/2023": {
+          "type": "Klíč odpovědi"
+        },
+        "classification_models_1/csd/2023": {
+          "type": "Snímky"
+        },
+        "fruit_veggie_cards/csd/2023": {
+          "type": "Zdroje"
+        },
+        "_key_training_a_model_in_ai_lab/csd/2023": {
+          "type": "Klíč odpovědi"
+        },
+        "accuracy_in_ai_lab/csd/2023": {
+          "type": "Zdroje"
+        },
+        "introduction_to_ai_lab/csd/2023": {
+          "name": "Úvod do laboratoře umělé inteligence",
+          "type": "Snímky"
+        },
+        "introduction_to_ai_lab_1/csd/2023": {
+          "name": "Úvod do laboratoře umělé inteligence",
+          "type": "Video"
+        },
+        "selecting_features/csd/2023": {
+          "type": "Zdroje"
+        },
+        "training_and_testing_in_ai_lab/csd/2023": {
+          "name": "Školení a testování v laboratoři umělé inteligence",
+          "type": "Video"
+        },
+        "using_data_with_categorical_features/csd/2023": {
+          "type": "Zdroje"
+        },
+        "importing_a_model_in_app_lab/csd/2023": {
+          "type": "Zdroje"
+        },
+        "importing_models_in_app_lab/csd/2023": {
+          "type": "Snímky"
+        },
+        "ai_training_data_bias/csd/2023": {
+          "name": "Umělá inteligence: školící data a podjatost",
+          "url": "https://youtu.be/x2mRoFNm22g",
+          "type": "Video"
+        },
+        "model_cards/csd/2023": {
+          "type": "Snímky"
+        },
+        "_key_zoo_models/csd/2023": {
+          "type": "Klíč odpovědi"
+        },
+        "model_cards_in_ai_lab/csd/2023": {
+          "name": "Modelové karty v laboratoři AI",
+          "type": "Video"
+        },
+        "saving_models_in_ai_lab/csd/2023": {
+          "type": "Snímky"
+        },
+        "selecting_a_label/csd/2023": {
+          "type": "Zdroje"
+        },
+        "if-statements_in_app_lab/csd/2023": {
+          "type": "Video"
+        },
+        "model_cards_in_app_lab/csd/2023": {
+          "type": "Snímky"
+        },
+        "printable_model_cards/csd/2023": {
+          "type": "Zdroje"
+        },
+        "_key_numerical_accuracy/csd/2023": {
+          "type": "Klíč odpovědi"
+        },
+        "_key_zombie_prediction/csd/2023": {
+          "type": "Klíč odpovědi"
+        },
+        "numerical_models/csd/2023": {
+          "type": "Snímky"
+        },
+        "_key_-_numerical_data_in_ai_lab/csd/2023": {
+          "type": "Klíč odpovědi"
+        },
+        "numerical_data_in_ai_lab/csd/2023": {
+          "name": "Numerická data v laboratoři AI",
+          "type": "Snímky"
+        },
+        "numerical_data_in_ai_lab_1/csd/2023": {
+          "name": "Numerická data v laboratoři AI"
+        },
+        "numerical_data_in_ai_lab_2/csd/2023": {
+          "name": "Numerická data v laboratoři AI",
+          "type": "Video"
+        },
+        "using_data_with_numerical_features/csd/2023": {
+          "type": "Zdroje"
+        },
+        "customizing_apps/csd/2023": {
+          "type": "Snímky"
+        },
+        "ai_code_of_ethics/csd/2023": {
+          "type": "Snímky"
+        },
+        "ethics_ai_equal_access_and_algorithmic_bias/csd/2023": {
+          "type": "Video"
+        },
+        "our_ai_code_of_ethics_template_/csd/2023": {
+          "type": "Snímky"
+        },
+        "create_an_ml_app/csd/2023": {
+          "type": "Rubrika"
+        },
+        "make_a_machine_learning_app/csd/2023": {
+          "type": "Snímky"
+        },
+        "issue_statements/csd/2023": {
+          "type": "Snímky"
+        },
+        "creating_a_survey/csd/2023": {
+          "type": "Zdroje"
+        },
+        "creating_a_survey_in_google_forms/csd/2023": {
+          "type": "Video"
+        },
+        "survey_planning/csd/2023": {
+          "type": "Snímky"
+        },
+        "cleaning_survey_data/csd/2023": {
+          "type": "Video"
+        },
+        "survey_data_in_ai_lab/csd/2023": {
+          "type": "Snímky"
+        },
+        "view_and_download_survey_data/csd/2023": {
+          "type": "Video"
+        },
+        "troubleshooting_models/csd/2023": {
+          "type": "Snímky"
+        },
+        "creating_an_app/csd/2023": {
+          "type": "Snímky"
+        },
+        "_template_5_why_s/csd/2023": {
+          "type": "Zdroje"
+        },
+        "design_an_ai_app/csd/2023": {
+          "type": "Snímky"
+        },
+        "design_an_ai_app_1/csd/2023": {
+          "type": "Rubrika"
+        },
+        "model_card_-_digital_template/csd/2023": {
+          "type": "Zdroje"
+        },
+        "model_card_-_printable_template/csd/2023": {
           "type": "Zdroje"
         },
         "all_resources/coursea/2023": {
