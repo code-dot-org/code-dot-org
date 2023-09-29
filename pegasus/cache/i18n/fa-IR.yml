@@ -295,7 +295,7 @@ fa-IR:
   condcards_longdescription: درباره ی الگوریتم ها و جملات شرطی در این فعالیت "بدون
     اتصال" با استفاده از یک دسته کارت بیاموزید. دانش آموزان این فعالیت را در گروه
     ها انجام می دهند، و به یک دسته کارت در هر گروه نیاز دارند.
-  condcards_name: شرطی ها با کارتها
+  condcards_name: دستورهای شرطی با کمک کارت‌ها
   condcards_platformtext: Unuplugged
   condcards_shortdescription: 'یادگیری الگوریتم با یک دسته کارت '
   congrats_guest_speaker_cta: یک سنخنران مهمان پیدا کن
@@ -850,9 +850,9 @@ fa-IR:
     ساعت برنامه‌نویسی و نسخه ویژه خلاقیت خودت، هر چیزی که ممکن است باشد، شروع کن.
     ویدیو را مشاهده کن.
   hoc2018_dance_amazon_about_future_engineer_button: بیشتر بیاموزید
-  hoc2018_dance_party_box_title: جشن و رقص
+  hoc2018_dance_party_box_title: مهمانی رقص
   hoc2018_dance_party_button: شروع
-  hoc2018_dance_party_main_heading: جشن و رقص
+  hoc2018_dance_party_main_heading: مهمانی رقص
   hoc2018_dance_teacher_resources_tile1_button: طرح درس
   hoc2018_dance_teacher_resources_tile2_button: فعالیت کلاسی
   hoc2018_mc_aquatic_description: ماینکرافت برگشته برای سایت ساعتی با کد با یه فعالیت
@@ -882,7 +882,7 @@ fa-IR:
   hoc2022_landing_page_create_title: ایجاد کردن
   hoc2022_landing_page_explore_description: با علوم کامپیوتر درها را به دنیاهای جدید
     باز کنید!
-  hoc2022_landing_page_explore_title: اکتشاف
+  hoc2022_landing_page_explore_title: کاوش
   hoc2022_landing_page_play_description: میدون رو در اختیار بگیر و امتیاز کسب کن!
   hoc2022_mc_educators_box3_button: ثبت‌نام كنيد
   hoc2022_mc_educators_box3_desc_markdown: 'از این تقاضا [دوره رایگان] (%{free_course_link})
@@ -904,7 +904,7 @@ fa-IR:
   hoc_overview_dance_2022_subtitle: یک Dance Party را کدنویسی کرده و با دوستان خود
     به اشتراک بگذارید. دوره‌ای با همراهی Beyoncé, Harry Styles, Lizzo, Lil Nas X,
     Selena Gomez همراه با موسیقی فیلم انکانتو کمپانی دیزنی و کلی چیز دیگه!
-  hoc_overview_dance_title: جشن و رقص
+  hoc_overview_dance_title: مهمانی رقص
   hoc_overview_hello_world_2022_alt_text: فضانورد متحرک و کاراکترهای حیوان که در اطراف
     تصویری از زمین معلق هستن
   hoc_overview_hello_world_2022_subtitle: یکی از چهار تم جالب را انتخاب کنید تا کاراکترهای
@@ -983,6 +983,7 @@ fa-IR:
   homepage_signpetition_dropdown: درخواست ما را امضا کنید  &#x25BE;
   homepage_signpetition_dropdown_text: موافقم
   homepage_slot_text_blurb_advocates: از کار ما حمایت کنید
+  homepage_slot_text_blurb_at_home: این منابع کار را آسان می کند
   homepage_slot_text_blurb_educators: به دانش آموزانتان درس بدهید
   homepage_slot_text_blurb_hoc: هرکسی می تواند بیاموزد. امروز شروع کنید
   homepage_slot_text_blurb_students: تمام آموزش های ما را کشف کنید
@@ -1008,6 +1009,7 @@ fa-IR:
   homepage_slot_text_shop: فروشگاه
   homepage_slot_text_studio: تمام آموزش های ما
   homepage_slot_text_title_advocates: مدافعان
+  homepage_slot_text_title_at_home: در خانه یاد بگیرید
   homepage_slot_text_title_educators: آموزگاران
   homepage_slot_text_title_hoc: ساعت کد نویسی
   homepage_slot_text_title_students: دانش آموزان
@@ -1023,6 +1025,7 @@ fa-IR:
   hourofcode_longdescription: جا نگهدار برای code.org/hoc جدید
   hourofcode_name: هزارتوی کلاسیک
   hourofcode_platformtext: مرورگرهای مدرن, تلفن های هوشمند, تبلت
+  hourofcode_shortcode: کد
   hourofcode_shortdescription: کد نویسی را با مارک زاکربرگ و پرندهای خشمگین یاد بگیرید!
   how_to_teach_hoc: نحوه تدریس یک ساعت کد نویسی
   i_agree: موافقم
@@ -1239,7 +1242,7 @@ fa-IR:
   older_systems_subheading: این ها باید روی مرورگرهای وب قدیمی تر کار کنند. برای دسترسی
     به تمام آموزش ها، به یک مرورگر وب به روز <a href="http://browsehappy.com/" target="_blank">  ارتقا
     دهید.</a>
-  outbreak_tile_title: شیوع
+  outbreak_tile_title: همه‌گیری
   page_not_found_title: صفحه پیدا نشد
   participant_educator: مربی
   participant_engineer: مهندس نرم‌افزار
@@ -1376,7 +1379,7 @@ fa-IR:
   sphero_beyond_shortdescription: درسهای اسپارک(SPRK) همزمان با آموزش فشرده برنامه
     نویسی برای روبات ها، به افزایش تواناییهای کودکان در ریاضیات و علوم هم کمک می کنند.
   sports_watch_video: فیلم را تماشا کنید
-  sprite_lab_documentation: مستندات آزمایشگاه اسپرایت
+  sprite_lab_documentation: مستندات لابراتوار اسپرایت
   start_hoc: هم اکنون ساعتِ کدنویسی را آغاز کنید
   starwars_blocks_description: استفاده از کشیدن و رها کردن بلوک.
   starwars_blocks_specs: بسیاری از زبان | مرورگرهای مدرن, تلفن های هوشمند, تبلت |
@@ -1400,7 +1403,8 @@ fa-IR:
     الزيت، كلاس پنجمي'
   students_and_lines: "%{students} دانش آموز ساعت کد را انجام داده اند و %{lines}
     خط کد نوشته شده است."
-  studiobar_dance_title: جشن و رقص
+  studiobar_dance_body: ایجاد و به اشتراک گذاری حزب رقص خود
+  studiobar_dance_title: مهمانی رقص
   studiobar_donate_body: با هر دلاری که کمک می کنید یک کودک یاد می گیرد
   studiobar_donate_title: کمک مالی بدهید
   studiobar_elementary_body: سه درس جدید ما برای کلاس K&#8209;پنجمی ها
@@ -1595,7 +1599,7 @@ fa-IR:
   user_header_applab: 'آزمایشگاه نرم افزار '
   user_header_artist: 'هنرمند '
   user_header_create: 'ایجاد '
-  user_header_dance: جشن و رقص
+  user_header_dance: مهمانی رقص
   user_header_flappy: فلاپی
   user_header_gamelab: کارگاه بازی سازی
   user_header_label: سلام %{username}

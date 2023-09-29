@@ -616,4 +616,12 @@ module SharedConstants
       CDO_SUPPORT_MAILTO: "mailto:support@code.org"
     }
   ).freeze
+
+  CHILD_ACCOUNT_COMPLIANCE_STATES = OpenStruct.new(
+    {
+      LOCKED_OUT: 'l',
+      REQUEST_SENT: 's',
+      PERMISSION_GRANTED: 'g'
+    }
+  ).freeze
 end

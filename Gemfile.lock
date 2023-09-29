@@ -498,7 +498,7 @@ GEM
       addressable (>= 2.4)
     jsonapi-renderer (0.2.2)
     jumphash (0.1.0)
-    jwt (2.5.0)
+    jwt (2.7.1)
     kaminari (0.17.0)
       actionpack (>= 3.0.0)
       activesupport (>= 3.0.0)
@@ -1005,7 +1005,7 @@ DEPENDENCIES
   jquery-rails
   jquery-ui-rails (~> 6.0.1)
   jumphash
-  jwt
+  jwt (~> 2.7.0)
   kaminari
   lograge!
   loofah (~> 2.19.1)
