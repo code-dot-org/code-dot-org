@@ -26,8 +26,8 @@ class Census::CensusSummary < ApplicationRecord
     HISTORICAL_YES: "HY",
     HISTORICAL_NO: "HN",
     HISTORICAL_MAYBE: "HM",
-    UNKNOWN: "U",
     EXCLUDED: "E",
+    UNKNOWN: "U",
   }.freeze
   enum teaches_cs: TEACHES
 
