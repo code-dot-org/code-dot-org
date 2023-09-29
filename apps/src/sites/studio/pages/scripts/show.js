@@ -97,8 +97,10 @@ function initPage() {
   // rendered on this page
   updateQueryParam('completedLessonNumber', undefined);
 
-  const unitHasLevels =
-    scriptData.lessons.reduce((n, {levels}) => n + levels.length, 0) > 0;
+  const unitHasLevels = scriptData.lessons.reduce(
+    (n, {levels}) => n || !!levels?.length,
+    false
+  );
 
   ReactDOM.render(
     <Provider store={store}>

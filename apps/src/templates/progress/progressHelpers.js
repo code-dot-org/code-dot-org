@@ -157,20 +157,6 @@ export function lessonHasLevels(lesson) {
 }
 
 /**
- * Checks if there are any levels in the unit
- * @param {array} list of lessons
- * @returns {bool} if the unit has any levels
- */
-export function unitHasLevels(lessons) {
-  lessons.forEach(lesson => {
-    if (lessonHasLevels(lesson)) {
-      return true;
-    }
-  });
-  return false;
-}
-
-/**
  * Determines if we should show "Keep working" and "Needs review" states for
  * progress in a unit. Unit must be either CSD or CSP.
  */
