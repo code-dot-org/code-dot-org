@@ -7,6 +7,8 @@ import {EVENTS} from '@cdo/apps/lib/util/AnalyticsConstants';
 import LearningGoal from '@cdo/apps/templates/rubrics/LearningGoal';
 
 describe('LearningGoal', () => {
+  const studentLevelInfo = {name: 'Grace Hopper', timeSpent: 706};
+
   it('renders EvidenceLevels', () => {
     const wrapper = shallow(
       <LearningGoal
@@ -23,6 +25,40 @@ describe('LearningGoal', () => {
       [{understanding: 1, teacherDescription: 'test'}]
     );
     expect(wrapper.find('SafeMarkdown')).to.have.lengthOf(0);
+  });
+
+  it('renders AiAssessment when teacher has AiEnabled and the learning goal can be tested by AI', () => {
+    const wrapper = shallow(
+      <LearningGoal
+        learningGoal={{
+          learningGoal: 'Testing',
+          evidenceLevels: [{understanding: 1, teacherDescription: 'test'}],
+          aiEnabled: true,
+        }}
+        teacherHasEnabledAi={true}
+        studentLevelInfo={studentLevelInfo}
+      />
+    );
+    expect(wrapper.find('AiAssessment')).to.have.lengthOf(1);
+    expect(wrapper.find('AiAssessment').props().studentName).to.equal(
+      studentLevelInfo.name
+    );
+    expect(wrapper.find('AiAssessment').props().isAiAssessed).to.equal(true);
+  });
+
+  it('does not renders AiAssessment when teacher has disabled ai', () => {
+    const wrapper = shallow(
+      <LearningGoal
+        learningGoal={{
+          learningGoal: 'Testing',
+          evidenceLevels: [{understanding: 1, teacherDescription: 'test'}],
+          aiEnabled: true,
+        }}
+        teacherHasEnabledAi={false}
+        studentLevelInfo={studentLevelInfo}
+      />
+    );
+    expect(wrapper.find('AiAssessment')).to.have.lengthOf(0);
   });
 
   it('renders tips', () => {
