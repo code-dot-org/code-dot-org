@@ -2,7 +2,7 @@
 @single_session
 Feature: Header navigation bar
 
-Scenario: Signed out user in English should see 6 header links
+Scenario: Signed out user in English should see 7 header links
   Given I am on "http://code.org/"
   And I dismiss the language selector
   And I wait to see "#headerlinks"
@@ -16,6 +16,8 @@ Scenario: Signed out user in English should see 6 header links
   And element "#header-en-help" contains text "Help Us"
   And I see "#header-en-about"
   And element "#header-en-about" contains text "About"
+  And I see "#header-en-incubator"
+  And element "#header-en-incubator" contains text "incubator"
   And I see "#header-en-projects"
   And element "#header-en-projects" contains text "Projects"
 
@@ -39,16 +41,24 @@ Scenario: Teacher in English should see 5 header links
   And I see "#header-teacher-professional-learning"
   And element "#header-teacher-professional-learning" contains text "Professional Learning"
 
-Scenario: Signed out user in Spanish should see 3 header links
+Scenario: Signed out user in Spanish should see 7 header links
   Given I am on "http://code.org/lang/es"
   Then check that I am on "http://code.org/"
   And I dismiss the language selector
   Given I am on "http://studio.code.org/courses"
   And I wait to see ".headerlinks"
-  And I see "#header-non-en-courses"
-  And element "#header-non-en-courses" has "es" text from key "nav.header.course_catalog"
+  And I see "#header-non-en-learn"
+  And element "#header-non-en-learn" has "es" text from key "nav.header.learn"
+  And I see "#header-non-en-teach"
+  And element "#header-non-en-teach" has "es" text from key "nav.header.teach"
+  And I see "#header-non-en-stats"
+  And element "#header-non-en-stats" has "es" text from key "nav.header.stats"
+  And I see "#header-non-en-help"
+  And element "#header-non-en-help" has "es" text from key "nav.header.help_us"
   And I see "#header-non-en-projects"
   And element "#header-non-en-projects" has "es" text from key "nav.header.project_gallery"
+  And I see "#header-non-en-incubator"
+  And element "#header-non-en-incubator" has "es" text from key "nav.header.incubator"
   And I see "#header-non-en-about"
   And element "#header-non-en-about" has "es" text from key "nav.header.about"
 
