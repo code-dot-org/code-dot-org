@@ -4,20 +4,18 @@ layout: wide_index
 theme: how_to_guide
 ---
 
+-# Hero banner
 = view :"how-to/how_to_banner", nav_audience: "educators"
 
-%section.no-padding-bottom
-  .wrapper.centered
-    %h2
-      =hoc_s(:hoc_how_to_plan_heading)
-    %p.body-two{style: "max-width: 750px; margin: 0 auto"}
-      =hoc_s(:hoc_how_to_plan_desc)
-    %hr{style: "margin-top: 4rem"}
+-# Intro section
+= view :"how-to/how_to_intro", intro_header: hoc_s(:hoc_how_to_educators_intro_heading), intro_desc: hoc_s(:hoc_how_to_educators_intro_desc)
 
+-# Steps
 %section
   .wrapper
     CONTENT HERE
 
+-# FAQ
 %section.bg-neutral-light
   .wrapper
     %h2.centered
@@ -32,6 +30,7 @@ theme: how_to_guide
       %summary=hoc_s(:csa_page_faq_question_01)
       %p=hoc_s(:csa_page_faq_answer_01)
 
+-# Resources
 %section
   .wrapper
     %h2.centered
