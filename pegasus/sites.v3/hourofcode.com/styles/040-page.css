@@ -440,8 +440,8 @@ a.about_list_item {
 }
 
 #congrats .button_enabled {
-  background-color: rgb(255, 164, 0) !important;
-  border-color: rgb(255, 164, 0) !important;
+  background-color: var(--brand_secondary_default) !important;
+  border-color: var(--brand_secondary_default) !important;
   color: white !important;
 }
 
@@ -483,12 +483,9 @@ a.about_list_item {
 }
 
 button {
-  -webkit-appearance: none;
-  -webkit-user-select: none;
-  -webkit-writing-mode: horizontal-tb;
   align-items: flex-start;
-  background-color: rgb(255, 164, 0);
-  border: 1px solid rgb(255, 164, 0);
+  background-color: var(--brand_secondary_default);
+  border: 1px solid var(--brand_secondary_default);
   border-radius: 4px;
   box-sizing: border-box;
   color: rgb(255, 255, 255);
@@ -503,14 +500,12 @@ button {
   text-transform: none;
   vertical-align: middle;
   white-space: nowrap;
-  word-spacing: 0px;
-  writing-mode: lr-tb;
 }
 
 .continue-btn{
   background-color: rgb(255, 255, 255);
-  border-color: rgb(255, 164, 0);
-  color: rgb(255, 164, 0);
+  border-color: var(--brand_secondary_default);
+  color: var(--brand_secondary_default);
 }
 
 .dropdown {
