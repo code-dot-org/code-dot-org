@@ -1,0 +1,113 @@
+---
+title: Supporters
+theme: responsive
+layout: none
+---
+
+- require 'state_abbr'
+- thankyou_page_index = 108
+=inline_css 'interactive-map.css'
+=inline_css 'advocacy-stateofcsreport.css'
+=inline_css 'logos.css'
+
+.container_responsive{style: "background-color: #FFF; text-align: center"}
+  .col-33
+    %a{href: "/"}
+      %img{src: "/images/fit-400/CodeLogo.png", style: "width: 200px; padding: 10px", alt: "Code.org Advocacy Coalition Logo"}
+  .col-33
+    %a{href: "https://www.csteachers.org"}
+      %img{src: "/images/fit-400/CSTALogo.png", style: "width: 200px; padding: 10px; padding-top: 15px", alt: "CSTA Logo"}
+  .col-33
+    %a{href: "https://ecepalliance.org"}
+      %img{src: "/images/fit-400/ECEP_Logo.jpg", style: "width: 200px; padding: 10px", alt: "ECEP Logo"}
+  .clear
+
+.container_responsive
+  .col-50
+    %h1{style: "color: black; text-align: left; margin-bottom: 10px"}
+      =hoc_s(:thank_you_page_main_title)
+    %p{style: "margin-top: 0px; margin-bottom: 20px"}
+      =hoc_s(:thank_you_page_description)
+    %br
+
+  .col-50
+    %img{style: "width: 75%; margin-left: 10%; margin-top: 35px;", src: "/images/workiva_logo.png"}
+
+  .clear
+
+.container_responsive
+  .col-25.col-mobile-30{style: "text-align: center;"}
+    .img-wrapper{style: "width: 160px; height: 190px; line-height: 190px; text-align: center;"}
+      %img{src:"/images/amazon_logo.jpg", style: "width: 140px; max-height: 140px"}
+  .col-25.col-mobile-30{style: "text-align: center;"}
+    .img-wrapper{style: "width: 160px; height: 190px; line-height: 190px; text-align: center;"}
+      %img{src:"/images/atlassian_logo.png", style: "width: 140px; max-height: 140px"}
+  .col-25.col-mobile-30{style: "text-align: center;"}
+    .img-wrapper{style: "width: 160px; height: 190px; line-height: 190px; text-align: center;"}
+      %img{src:"/images/Ballmer_Group_logo.jpg", style: "width: 140px; max-height: 140px"}
+  .col-25.col-mobile-30{style: "text-align: center;"}
+    .img-wrapper{style: "width: 160px; height: 190px; line-height: 190px; text-align: center;"}
+      %img{src:"/images/cisco_foundation_logo.jpeg", style: "width: 140px; max-height: 140px"}
+  .col-25.col-mobile-30{style: "text-align: center;"}
+    .img-wrapper{style: "width: 160px; height: 190px; line-height: 190px; text-align: center;"}
+      %img{src:"/images/Cognizant_logo.png", style: "width: 140px; max-height: 140px"}
+  .col-25.col-mobile-30{style: "text-align: center;"}
+    .img-wrapper{style: "width: 160px; height: 190px; line-height: 190px; text-align: center;"}
+      %img{src:"/images/coinbase_logo.png", style: "width: 140px; max-height: 140px"}
+  .col-25.col-mobile-30{style: "text-align: center;"}
+    .img-wrapper{style: "width: 160px; height: 190px; line-height: 190px; text-align: center;"}
+      %img{src:"/images/college-board-vector-logo.png", style: "width: 140px; max-height: 140px"}
+  .col-25.col-mobile-30{style: "text-align: center;"}
+    .img-wrapper{style: "width: 160px; height: 190px; line-height: 190px; text-align: center;"}
+      %img{src:"/images/ExcelinEd.jpg", style: "width: 140px; max-height: 140px"}
+  .col-25.col-mobile-30{style: "text-align: center;"}
+    .img-wrapper{style: "width: 160px; height: 190px; line-height: 190px; text-align: center;"}
+      %img{src:"/images/google_logo.jpg", style: "width: 140px; max-height: 140px"}
+  .col-25.col-mobile-30{style: "text-align: center;"}
+    .img-wrapper{style: "width: 160px; height: 190px; line-height: 190px; text-align: center;"}
+      %img{src:"/images/infosys_USA_logo.png", style: "width: 140px; max-height: 140px"}
+  .col-25.col-mobile-30{style: "text-align: center;"}
+    .img-wrapper{style: "width: 160px; height: 190px; line-height: 190px; text-align: center;"}
+      %img{src:"/images/Microsoft_logo.png", style: "width: 140px; max-height: 140px"}
+  .col-25.col-mobile-30{style: "text-align: center;"}
+    .img-wrapper{style: "width: 160px; height: 190px; line-height: 190px; text-align: center;"}
+      %img{src:"/images/Vista_logo.jpg", style: "width: 140px; max-height: 140px"}
+  %br
+  .clear
+%br
+
+.container_responsive
+  %h2
+    =hoc_s(:thank_you_page_members_section_title)
+  .col-33
+    - thankyou_page_index.times do |index|
+      - if index < 36 
+        %p{style: "font-weight: bold"}
+          =hoc_s("thank_you_page_members_#{index + 1}")  
+  .col-33
+    - thankyou_page_index.times do |index|
+      - if index > 35 && index < 72 
+        %p{style: "font-weight: bold"}
+          =hoc_s("thank_you_page_members_#{index + 1}")
+    %br
+  .col-33
+    - thankyou_page_index.times do |index|
+      - if index > 71 && index < 108
+        %p{style: "font-weight: bold"}
+          =hoc_s("thank_you_page_members_#{index + 1}")
+  .clear
+%br
+
+.container_responsive
+  %h2{style: "font-size: 1.5rem"}
+    =hoc_s(:thank_you_page_individual_organization_title)
+  %p{style: "font-weight: bold;"}
+    =hoc_s(:thank_you_page_individual_organization_description)
+  .clear
+
+.container_responsive
+  %h2{style: "font-size: 1.5rem"}
+    =hoc_s(:thank_you_page_teachers_students_title)
+  %p{style: "font-weight: bold;"}
+    =hoc_s(:thank_you_page_teachers_students_description)
+  .clear
