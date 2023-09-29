@@ -1179,7 +1179,7 @@ $workspace-header-button-margin: ($workspace-headers-height - $workspace-header-
   }
 
   .template-level-warning {
-    font-family: "Gotham 7r", sans-serif;
+    @include main-font-bold;
     color: $red;
     line-height: normal;
     margin-top: 10px;
@@ -1477,7 +1477,7 @@ $workspace-header-button-margin: ($workspace-headers-height - $workspace-header-
   }
 
   button.saved-to-gallery {
-    font-family: "Gotham 4i", sans-serif;
+    @include main-font-regular-italic;
   }
 
   #sharing-input-container {
