@@ -1,0 +1,18 @@
+%section.faq.bg-neutral-light
+  .wrapper
+    .flex-container
+      %h2
+        =hoc_s(:heading_faq)
+      %a.link-button{href: "/faq"}
+        =hoc_s(:call_to_action_view_faqs)
+    %details
+      %summary=hoc_s(:hoc_how_to_faq_question_volunteer)
+      %p=hoc_s(:hoc_how_to_faq_answer_volunteer)
+      %a{href: "/how-to/volunteers"}
+        =hoc_s(:call_to_action_become_a_volunteer)
+    %details
+      %summary=hoc_s(:hoc_how_to_faq_question_full_hour)
+      %p=hoc_s(:hoc_how_to_faq_answer_full_hour)
+    %details
+      %summary=hoc_s(:hoc_how_to_faq_question_account)
+      %p=hoc_s(:hoc_how_to_faq_answer_account)
