@@ -183,7 +183,16 @@
       .pre {
         white-space: pre-wrap;
         word-break: initial;
-        font-size: 14px;
+        font-size: 11px;
+        overflow: scroll;
+      }
+
+      .code {
+        max-height: 80px;
+      }
+
+      .explanation {
+        max-height: 60px;
       }
     }
 
