@@ -259,10 +259,7 @@ class Census::CensusSummary < ApplicationRecord
   end
 
   def self.summarize_census_data
-    # latest_year = Census::CensusSubmission.maximum(:school_year)
-    school_years = (2016..2023)
-
-    # FIX latest_year TO BE 2023 AND NOT NIL
+    school_years = (2016..SharedConstants::CURRENT_CENSUS_SCHOOL_YEAR)
 
     ActiveRecord::Base.transaction do
       School.eager_load(school_info: :census_submissions).

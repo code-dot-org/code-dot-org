@@ -42,9 +42,6 @@ def main
     )
   end
 
-  #  The map should show the data from the school year that began
-  #  in the previous calendar year. So, Aug-Dec we show the previous school
-  #  year's data and then switch over to the current school year in Jan.
   year = SharedConstants::CURRENT_CENSUS_SCHOOL_YEAR
   geojson = JSON.parse('{ "type": "FeatureCollection", "features": [] }')
   Census::CensusSummary.where(school_year: year).find_each do |summary|
