@@ -36,11 +36,8 @@ class Census::CensusSummary < ApplicationRecord
   CSV_IMPORT_OPTIONS = {col_sep: ",", headers: true, encoding: 'bom|utf-8'}.freeze
 
   # Seeds all the data from the S3 file.
-  # @param options [Hash] Optional map of options.
-  def self.seed_all(options = {})
-    options[:stub_school_data] = CDO.stub_school_data unless options.key?(:stub_school_data)
-
-    unless options[:stub_school_data]
+  def self.seed_all
+    unless CDO.stub_school_data
       Census::CensusSummary.transaction do
         CDO.log.info "Seeding census summary data."
         AWS::S3.seed_from_file('cdo-census', "access-report-data-files-2023/final_csv/final_csv_2023_09_19.csv") do |filename|
@@ -67,7 +64,7 @@ class Census::CensusSummary < ApplicationRecord
 
     ActiveRecord::Base.transaction do
       census_summaries = CSV.read(filename, **options).each do |row|
-        parsed = block_given? ? yield(row) : row.to_hash.symbolize_keys
+        parsed = row.to_hash.symbolize_keys
 
         # (As of Sept. 2023) Skip entries with school_id that doesn't match school in our database.
         # This is likely due to not receiving NCES private school data yet (will be ready in November).
