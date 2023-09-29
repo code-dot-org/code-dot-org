@@ -1,7 +1,6 @@
 {
   "pages": {
     "homepage": [
-      "hoc2022-soon-hoc",
       "hoc2022-actual-hoc",
       "pl-launch-superhero",
       "curriculum-launch-2023",
@@ -10,38 +9,6 @@
   },
 
   "banners": {
-    "hoc2022-soon-hoc": {
-      "hoc_modes": ["soon-hoc"],
-      "class": "hoc-banner homepage",
-      "desktopImage": "/images/hoc2022-codeorg-hero-banner-02.png",
-      "mobileImage": "/images/hoc2022-codeorg-hero-banner-mobile-02.png",
-      "leftImage": "/images/hoc2022-codeorg-hero-banner-02-left.svg",
-      "rightImage": "/images/hoc2022-codeorg-hero-banner-02-right.svg",
-      "actions": [
-        {
-          "type": "text",
-          "text": "homepage_hero_hoc_is_coming"
-        },
-        {
-          "type": "heading",
-          "text": "hoc2022_banner_title"
-        },
-        {
-          "type": "heading-two",
-          "text": "hoc2022_banner_description"
-        },
-        {
-          "type": "cta_button_solid_yellow",
-          "text": "hoc2022_cta_primary",
-          "url": "/hourofcode2022"
-        },
-        {
-          "type": "cta_button_hollow_white",
-          "text": "hoc2022_cta_secondary",
-          "url": "/hourofcode/overview"
-        }
-      ]
-    },
     "hoc2022-actual-hoc": {
       "hoc_modes": ["actual-hoc"],
       "class": "hoc-banner homepage",
