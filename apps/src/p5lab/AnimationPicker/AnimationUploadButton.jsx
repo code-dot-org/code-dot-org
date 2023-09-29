@@ -34,16 +34,14 @@ export function UnconnectedAnimationUploadButton({
 
   // Users see a warning to not upload PII as well as a statement that they will not be able
   // to share their project if they upload -- we also save this state to their project and don't show the warning again.
-  let hasConfirmedWarning, updateWarningState;
-  hasConfirmedWarning = inRestrictedShareMode;
-  updateWarningState = () => {
+  const updateWarningState = () => {
     project.setInRestrictedShareMode(true);
     // redux setting, for use in share/remix
     refreshInRestrictedShareMode();
   };
 
   const showRestrictedUploadWarning =
-    shouldWarnOnAnimationUpload && !hasConfirmedWarning;
+    shouldWarnOnAnimationUpload && !inRestrictedShareMode;
 
   function renderUploadButton() {
     return (
