@@ -12,6 +12,9 @@ te:
         error:
           future: భవిష్యత్తులో ఉండకూడదు
         finish_sign_up_header: మీ ఖాతాను సృష్టించడం ముగించండి
+        finish_sign_up_header_error: |2-
+
+          దయచేసి క్రింది లోపాలను సరిచేయండి:
         finish_sign_up_subheader: కోడ్.ఆర్గ్ ఖాతాను సృష్టించడం పూర్తి చేయడానికి కింది
           సమాచారాన్ని పూరించండి<strong>%{email}</strong>.
         finish_sign_up_subheader_markdown: కోడ్.ఆర్గ్ ఖాతాను సృష్టించడం పూర్తి చేయడానికి
@@ -38,6 +41,7 @@ te:
           have an email address)](%{url})
         reset_password_token: మీరు అనుసరించిన పాస్‌వర్డ్ లింక్‌ను రీసెట్ చేయండి
         us_state: రాష్ట్రం
+        user_type: ఖాతా రకం
         username: వినియోగదారు పేరు
         verified_teacher: ధృవీకరించబడిన ఉపాధ్యాయుడు
     errors:

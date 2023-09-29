@@ -6,7 +6,7 @@ title: Hour of Code How-to Guide for After-school
 
 # Как да преподавате Hour of Code след училище
 
-### Join the movement and introduce your students to computer science with these steps.
+### Присъединете се към движението и запознайте учениците си с компютърните науки с тези стъпки.
 
 Computational thinking helps nurture problem-solving skills, logic, and creativity. And technology is transforming every industry on the planet. Students today should learn how to create technology, not just use it. By starting early, they’ll have a foundation for success in any 21st-century career path.
 

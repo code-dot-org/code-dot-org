@@ -211,7 +211,7 @@ gem 'execjs'
 # JavaScript runtime used by ExecJS.
 gem 'mini_racer', group: [:staging, :test, :production, :levelbuilder]
 
-gem 'jwt' # single signon for zendesk
+gem 'jwt', '~> 2.7.0'
 
 # SMS API for send-to-phone feature; 6.0 includes some breaking changes which
 # we'll need to prepare for:

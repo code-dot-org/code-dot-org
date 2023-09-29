@@ -4,6 +4,7 @@ import ReactDOM from 'react-dom';
 import {Provider} from 'react-redux';
 import {getStore} from '@cdo/apps/redux';
 import MigrateToMultiAuth from '@cdo/apps/lib/ui/accounts/MigrateToMultiAuth';
+import LockoutLinkedAccounts from '@cdo/apps/templates/policy_compliance/LockoutLinkedAccounts';
 import AddParentEmailController from '@cdo/apps/lib/ui/accounts/AddParentEmailController';
 import RemoveParentEmailController from '@cdo/apps/lib/ui/accounts/RemoveParentEmailController';
 import ChangeEmailController from '@cdo/apps/lib/ui/accounts/ChangeEmailController';
@@ -27,6 +28,7 @@ const {
   dependedUponForLogin,
   dependentStudents,
   studentCount,
+  personalAccountLinkingEnabled,
 } = scriptData;
 
 $(document).ready(() => {
@@ -80,6 +82,34 @@ $(document).ready(() => {
     new AddPasswordController($('#add-password-form'), addPasswordMountPoint);
   }
 
+  const lockoutLinkedAccountsMountPoint = document.getElementById(
+    'lockout-linked-accounts'
+  );
+  if (lockoutLinkedAccountsMountPoint) {
+    ReactDOM.render(
+      <LockoutLinkedAccounts
+        apiUrl={lockoutLinkedAccountsMountPoint.getAttribute('data-api-url')}
+        pendingEmail={lockoutLinkedAccountsMountPoint.getAttribute(
+          'data-pending-email'
+        )}
+        requestDate={
+          new Date(
+            Date.parse(
+              lockoutLinkedAccountsMountPoint.getAttribute('data-request-date')
+            )
+          )
+        }
+        permissionStatus={lockoutLinkedAccountsMountPoint.getAttribute(
+          'data-permission-status'
+        )}
+        userEmail={lockoutLinkedAccountsMountPoint.getAttribute(
+          'data-user-email'
+        )}
+      />,
+      lockoutLinkedAccountsMountPoint
+    );
+  }
+
   const manageLinkedAccountsMountPoint = document.getElementById(
     'manage-linked-accounts'
   );
@@ -89,7 +119,8 @@ $(document).ready(() => {
       authenticationOptions,
       isPasswordRequired,
       isGoogleClassroomStudent,
-      isCleverStudent
+      isCleverStudent,
+      personalAccountLinkingEnabled
     );
   }
 

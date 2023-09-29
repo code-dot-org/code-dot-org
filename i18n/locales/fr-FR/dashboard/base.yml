@@ -53,6 +53,7 @@ fr:
         gender: 'Sexe'
         edit_header: 'Modifier les détails du compte'
         finish_sign_up_header: 'Terminez la création de votre compte'
+        finish_sign_up_header_error: 'Veuillez corriger les erreurs suivantes:'
         finish_sign_up_subheader: 'Remplissez les informations suivantes pour finir de créer votre compte Code.org pour <strong>%{email}</strong>.'
         finish_sign_up_subheader_markdown: 'Remplissez les informations suivantes pour finir de créer votre compte Code.org pour **%{email}**.'
         finish_sign_up_subheader_provider: 'Remplissez les informations suivantes pour compléter la création d''un Code.org avec <strong>%{provider}</strong> de <strong>%{email}</strong>.'
@@ -60,6 +61,7 @@ fr:
         reset_password_token: "Le lien de réinitialisation du mot de passe que vous avez suivi"
         error:
           future: ne peut pas être dans le futur
+        user_type: 'Type de compte'
         us_state: 'État'
   beta: "beta"
   hello: "Bonjour tout le monde"
