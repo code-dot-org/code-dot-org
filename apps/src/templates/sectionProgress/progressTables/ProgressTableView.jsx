@@ -27,9 +27,9 @@ import {
   getLevelIconHeaderFormatter,
 } from './progressTableHelpers';
 import firehoseClient from '@cdo/apps/lib/util/firehose';
-import letterCompare from '@cdo/apps/util/letterCompare';
 import classnames from 'classnames';
 import {studentShape} from '@cdo/apps/templates/teacherDashboard/teacherSectionsRedux';
+import stringKeyComparator from '@cdo/apps/util/stringKeyComparator';
 
 /**
  * Since our progress tables are built out of standard HTML table elements,
@@ -110,20 +110,10 @@ class ProgressTableView extends React.Component {
     // objects also include an `expansionIndex` to determine which lesson
     // formatter to use to render the row.
 
-    // Returns a comparator function that sorts objects a and b by the given
-    // keys, in order of priority.
-    // Example: comparator(['familyName', 'name']) will sort by familyName
-    // first, looking at name if necessary to break ties.
-    const comparator = keys => (a, b) =>
-      keys.reduce(
-        (result, key) => result || letterCompare(a[key] || '', b[key] || ''),
-        0
-      );
-
     // Sort students, in-place.
     const sortedStudents = props.isSortedByFamilyName
-      ? props.students.sort(comparator(['familyName', 'name']))
-      : props.students.sort(comparator(['name', 'familyName']));
+      ? props.students.sort(stringKeyComparator(['familyName', 'name']))
+      : props.students.sort(stringKeyComparator(['name', 'familyName']));
 
     this.state = {
       rows: sortedStudents.map((student, index) => {
@@ -162,12 +152,7 @@ class ProgressTableView extends React.Component {
 
   sortTableRows() {
     const comparator = keys => (a, b) =>
-      keys.reduce(
-        (result, key) =>
-          result || letterCompare(a.student[key] || '', b.student[key] || ''),
-        0
-      );
-
+      stringKeyComparator(keys)(a.student, b.student);
     const sortedRows = this.props.isSortedByFamilyName
       ? this.state.rows.sort(comparator(['familyName', 'name']))
       : this.state.rows.sort(comparator(['name', 'familyName']));
