@@ -362,7 +362,7 @@ class Census::CensusSummary < ApplicationRecord
   end
 
   def self.summarize_census_data
-    school_years = (2016..SharedConstants::CURRENT_CENSUS_SCHOOL_YEAR)
+    school_years = (2016..SharedConstants::CENSUS_CONSTANTS.CURRENT_CENSUS_SCHOOL_YEAR)
 
     ActiveRecord::Base.transaction do
       School.eager_load(school_info: :census_submissions).

@@ -625,5 +625,7 @@ module SharedConstants
     }
   ).freeze
 
-  CURRENT_CENSUS_SCHOOL_YEAR = '2023'.freeze
+  CENSUS_CONSTANTS = OpenStruct.new(
+    {CURRENT_CENSUS_SCHOOL_YEAR: 2023}
+  )
 end
