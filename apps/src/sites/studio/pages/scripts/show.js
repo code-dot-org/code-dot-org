@@ -97,6 +97,9 @@ function initPage() {
   // rendered on this page
   updateQueryParam('completedLessonNumber', undefined);
 
+  const unitHasLevels =
+    scriptData.lessons.reduce((n, {levels}) => n + levels.length, 0) > 0;
+
   ReactDOM.render(
     <Provider store={store}>
       <UnitOverview
@@ -125,7 +128,7 @@ function initPage() {
         showCalendar={scriptData.showCalendar}
         weeklyInstructionalMinutes={scriptData.weeklyInstructionalMinutes}
         unitCalendarLessons={scriptData.calendarLessons}
-        unitLessons={scriptData.lessons}
+        unitHasLevels={unitHasLevels}
         isMigrated={scriptData.is_migrated}
         scriptOverviewPdfUrl={scriptData.scriptOverviewPdfUrl}
         scriptResourcesPdfUrl={scriptData.scriptResourcesPdfUrl}
