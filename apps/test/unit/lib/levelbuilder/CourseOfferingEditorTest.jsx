@@ -3,7 +3,7 @@ import React from 'react';
 import {mount} from 'enzyme';
 import CourseOfferingEditor from '@cdo/apps/lib/levelbuilder/CourseOfferingEditor';
 import sinon from 'sinon';
-import * as utils from '@cdo/apps/utils';
+import utils from '@cdo/apps/utils';
 
 describe('CourseOfferingEditor', () => {
   let defaultProps;

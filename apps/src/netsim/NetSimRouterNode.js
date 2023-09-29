@@ -4,8 +4,7 @@
  */
 
 import _ from 'lodash';
-import {valueOr, setupFunctionPrototypeInherits} from '../utils';
-import * as utils from '../utils';
+import utils, {valueOr} from '../utils';
 import i18n from '@cdo/netsim/locale';
 import {deserializeNumber, serializeNumber} from './NetSimUtils';
 import NetSimNode from './NetSimNode';
@@ -20,7 +19,7 @@ import {asciiToBinary} from './DataConverters';
 import NetSimNodeFactory from './NetSimNodeFactory';
 import {DnsMode, NodeType, BITS_PER_BYTE} from './NetSimConstants';
 
-setupFunctionPrototypeInherits(Function);
+utils.setupFunctionPrototypeInherits(Function);
 
 var logger = NetSimLogger.getSingleton();
 import NetSimGlobals from './NetSimGlobals';

@@ -4,7 +4,7 @@ import React from 'react';
 import {shallow} from 'enzyme';
 import LessonExtrasProgressBubble from '@cdo/apps/templates/progress/LessonExtrasProgressBubble';
 import LessonExtrasFlagIcon from '@cdo/apps/templates/progress/LessonExtrasFlagIcon';
-import * as utils from '@cdo/apps/utils';
+import utils from '@cdo/apps/utils';
 
 const defaultProps = {
   lessonExtrasUrl: '/extras',

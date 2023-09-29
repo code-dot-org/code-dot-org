@@ -3,7 +3,7 @@ import {mount} from 'enzyme';
 import sinon from 'sinon';
 import {expect, assert} from '../../../util/reconfiguredChai';
 import BubbleChoice from '@cdo/apps/code-studio/components/BubbleChoice';
-import * as utils from '@cdo/apps/utils';
+import utils from '@cdo/apps/utils';
 
 const fakeSublevels = [
   {

@@ -1,7 +1,7 @@
 import React, {useState, useEffect, useCallback} from 'react';
 import PropTypes from 'prop-types';
 import i18n from '@cdo/locale';
-import {queryParams, updateQueryParam} from '../../code-studio/utils';
+import codeStudioUtils from '../../code-studio/utils';
 import style from '../../../style/code-studio/curriculum_catalog_filters.module.scss';
 import {curriculumDataShape} from './curriculumCatalogShapes';
 import CheckboxDropdown from '../CheckboxDropdown';
@@ -74,7 +74,7 @@ const getValidParamValues = (filterKey, paramValues) => {
 // no relevant parameters in the URL).
 const getInitialFilterStates = () => {
   const filterTypeKeys = Object.keys(filterTypes);
-  const urlParams = queryParams();
+  const urlParams = codeStudioUtils.queryParams();
 
   let filters = getEmptyFilters();
   Object.keys(urlParams).forEach(paramKey => {
@@ -229,7 +229,7 @@ const CurriculumCatalogFilters = ({
 
     const valuesParam =
       values.length > 0 || filterKey === 'translated' ? values : undefined;
-    updateQueryParam(filterKey, valuesParam, true);
+    codeStudioUtils.updateQueryParam(filterKey, valuesParam, true);
   };
 
   // Selects the given value in the given filter.
@@ -282,10 +282,10 @@ const CurriculumCatalogFilters = ({
   const handleClear = useCallback(() => {
     setAppliedFilters(getEmptyFilters());
     Object.keys(filterTypes).forEach(filterKey =>
-      updateQueryParam(filterKey, undefined, false)
+      codeStudioUtils.updateQueryParam(filterKey, undefined, false)
     );
     if (!isEnglish) {
-      updateQueryParam('translated', undefined, false);
+      codeStudioUtils.updateQueryParam('translated', undefined, false);
     }
   }, [isEnglish]);
 

@@ -5,7 +5,7 @@ import {mount} from 'enzyme';
 import sinon from 'sinon';
 import {replaceOnWindow, restoreOnWindow} from '../../../util/testUtils';
 import {PoemEditor} from '@cdo/apps/p5lab/poetry/PoemSelector';
-import * as utils from '@cdo/apps/utils';
+import utils from '@cdo/apps/utils';
 
 describe('PoemEditor', () => {
   // PoemEditor pulls this string from i18n, but we'll hardcode it in tests for simplicity.

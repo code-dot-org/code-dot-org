@@ -5,7 +5,7 @@ import {
   channels as channelsApi,
   assets as assetsApi,
 } from '../../clientApi';
-import * as importFuncs from '../import';
+import importFuncs from '../import';
 
 const CHANGE_SCREEN = 'screens/CHANGE_SCREEN';
 const TOGGLE_IMPORT_SCREEN = 'screens/TOGGLE_IMPORT_SCREEN';

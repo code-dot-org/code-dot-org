@@ -3,12 +3,12 @@ import {quote, valueOr} from '../utils';
 import _ from 'lodash';
 var skin, level;
 
-const initWithSkinAndLevel = function (skinData, levelData) {
+export const initWithSkinAndLevel = function (skinData, levelData) {
   skin = skinData;
   level = levelData;
 };
 
-const getPlaySoundValues = function (withRandom) {
+export const getPlaySoundValues = function (withRandom) {
   var names;
   if (withRandom) {
     names = ['random'];
@@ -45,7 +45,7 @@ const getPlaySoundValues = function (withRandom) {
  * Returns a list of sounds for our droplet playSound block.
  */
 
-const playSoundDropdown = function () {
+export const playSoundDropdown = function () {
   var skinSoundMetadata = valueOr(skin.soundMetadata, []);
 
   return getPlaySoundValues(true).map(function (sound) {

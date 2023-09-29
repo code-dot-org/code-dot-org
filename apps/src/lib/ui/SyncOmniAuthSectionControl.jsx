@@ -2,7 +2,7 @@ import PropTypes from 'prop-types';
 import React from 'react';
 import {connect} from 'react-redux';
 import i18n from '@cdo/locale';
-import * as utils from '../../utils';
+import utils from '../../utils';
 import {OAuthSectionTypes} from '@cdo/apps/lib/ui/accounts/constants';
 import BaseDialog from '@cdo/apps/templates/BaseDialog';
 import {Heading1} from './Headings';

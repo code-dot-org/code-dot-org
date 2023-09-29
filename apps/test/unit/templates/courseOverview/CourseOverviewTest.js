@@ -3,7 +3,7 @@ import React from 'react';
 import {shallow} from 'enzyme';
 import {UnconnectedCourseOverview as CourseOverview} from '@cdo/apps/templates/courseOverview/CourseOverview';
 import {ViewType} from '@cdo/apps/code-studio/viewAsRedux';
-import * as utils from '@cdo/apps/utils';
+import utils from '@cdo/apps/utils';
 import sinon from 'sinon';
 import {VisibilityType} from '../../../../src/code-studio/announcementsRedux';
 import {NotificationType} from '@cdo/apps/templates/Notification';

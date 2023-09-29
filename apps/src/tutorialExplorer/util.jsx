@@ -1,5 +1,5 @@
 import i18n from '@cdo/tutorialExplorer/locale';
-import * as utils from '../utils';
+import utils from '../utils';
 
 // Sort By dropdown choices for tutorials.
 export const TutorialsSortByOptions = utils.makeEnum(

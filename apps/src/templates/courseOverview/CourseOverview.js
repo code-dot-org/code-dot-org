@@ -8,8 +8,8 @@ import CourseOverviewTopRow from './CourseOverviewTopRow';
 import {resourceShape} from '@cdo/apps/lib/levelbuilder/shapes';
 import styleConstants from '@cdo/apps/styleConstants';
 import VerifiedResourcesNotification from './VerifiedResourcesNotification';
-import * as utils from '../../utils';
-import {queryParams} from '../../code-studio/utils';
+import utils from '../../utils';
+import codeStudioUtils from '../../code-studio/utils';
 import i18n from '@cdo/locale';
 import {
   onDismissRedirectDialog,
@@ -89,7 +89,7 @@ class CourseOverview extends Component {
   onChangeVersion = versionId => {
     const version = this.props.versions[versionId];
     if (versionId !== this.props.id && version) {
-      const sectionId = queryParams('section_id');
+      const sectionId = codeStudioUtils.queryParams('section_id');
       const queryString = sectionId ? `?section_id=${sectionId}` : '';
       utils.navigateToHref(`${version.path}${queryString}`);
     }

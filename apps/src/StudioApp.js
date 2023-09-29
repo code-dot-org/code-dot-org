@@ -16,7 +16,7 @@ import codegen from './lib/tools/jsinterpreter/codegen';
 import dom from './dom';
 import * as dropletUtils from './dropletUtils';
 import * as shareWarnings from './shareWarnings';
-import * as utils from './utils';
+import utils from './utils';
 import AbuseError from './code-studio/components/AbuseError';
 import Alert from './templates/alert';
 import AuthoredHints from './authoredHints';
@@ -29,7 +29,7 @@ import Sounds from './Sounds';
 import VersionHistory from './templates/VersionHistory';
 import WireframeButtons from './lib/ui/WireframeButtons';
 import annotationList from './acemode/annotationList';
-import color, {workspace_running_background, white} from './util/color';
+import color from './util/color';
 import firehoseClient from './lib/util/firehose';
 import getAchievements from './achievements';
 import logToCloud from './logToCloud';
@@ -50,7 +50,7 @@ import {
   configCircuitPlayground,
   configMicrobit,
 } from './lib/kits/maker/dropletConfig';
-import {getStore} from './redux';
+import redux from '@cdo/apps/redux';
 import {getValidatedResult, initializeContainedLevel} from './containedLevels';
 import {lockContainedLevelAnswers} from './code-studio/levels/codeStudioLevels';
 import {parseElement} from './xml';
@@ -79,8 +79,8 @@ import {
   setUserRoleInCourse,
   CourseRoles,
 } from '@cdo/apps/templates/currentUserRedux';
-import {addCallouts} from '@cdo/apps/code-studio/callouts';
-import {queryParams} from '@cdo/apps/code-studio/utils';
+import callouts from '@cdo/apps/code-studio/callouts';
+import codeStudioUtils from '@cdo/apps/code-studio/utils';
 import {RESIZE_VISUALIZATION_EVENT} from './lib/ui/VisualizationResizeBar';
 import {userAlreadyReportedAbuse} from '@cdo/apps/reportAbuse';
 import {setArrowButtonDisabled} from '@cdo/apps/templates/arrowDisplayRedux';
@@ -89,6 +89,8 @@ import {closeWorkspaceAlert} from './code-studio/projectRedux';
 
 import makeYourOwnHTMLEJS from './templates/makeYourOwn.html.ejs';
 import learnHTMLEJS from './templates/learn.html.ejs';
+
+const {workspace_running_background, white} = color;
 
 const toExport = {};
 
@@ -270,7 +272,7 @@ StudioApp.prototype.configure = function (options) {
 
   // Set default speed
   if (options.level) {
-    getStore().dispatch(setStepSpeed(options.level.sliderSpeed));
+    redux.getStore().dispatch(setStepSpeed(options.level.sliderSpeed));
   }
 };
 
@@ -328,7 +330,7 @@ StudioApp.prototype.init = function (config) {
 
   if (!config.level.iframeEmbedAppAndCode) {
     ReactDOM.render(
-      <Provider store={getStore()}>
+      <Provider store={redux.getStore()}>
         <InstructionsDialog
           title={msg.puzzleTitle({
             stage_total: config.level.lesson_total,
@@ -566,7 +568,7 @@ StudioApp.prototype.init = function (config) {
   if (config.isChallengeLevel) {
     const startDialogDiv = document.createElement('div');
     document.body.appendChild(startDialogDiv);
-    const progress = getStore().getState().progress;
+    const progress = redux.getStore().getState().progress;
     const isComplete =
       progress.levelResults[progress.currentLevelId] >=
       TestResults.MINIMUM_OPTIMAL_RESULT;
@@ -621,7 +623,7 @@ StudioApp.prototype.editDuringRunAlertHandler = function () {
     return;
   }
 
-  getStore().dispatch(setIsEditWhileRun(true));
+  redux.getStore().dispatch(setIsEditWhileRun(true));
   this.clearHighlighting();
 
   // Check if the user has already dismissed this alert. Don't check localStorage again
@@ -648,13 +650,15 @@ StudioApp.prototype.editDuringRunAlertHandler = function () {
 };
 
 StudioApp.prototype.initProjectTemplateWorkspaceIconCallout = function () {
-  if (getStore().getState().pageConstants.showProjectTemplateWorkspaceIcon) {
+  if (
+    redux.getStore().getState().pageConstants.showProjectTemplateWorkspaceIcon
+  ) {
     // The callouts can't appear until the DOM is 100% rendered by react. The
     // safest method is to kick off a requestAnimationFrame from an async
     // setTimeout()
     setTimeout(() => {
       requestAnimationFrame(() => {
-        addCallouts([
+        callouts.addCallouts([
           {
             id: 'projectTemplateWorkspaceIconCallout',
             element_id: '.projectTemplateWorkspaceIcon:visible',
@@ -719,7 +723,7 @@ StudioApp.prototype.getVersionHistoryHandler = function (config) {
         handleClearPuzzle: this.handleClearPuzzle.bind(this, config),
         isProjectTemplateLevel: !!config.level.projectTemplateLevelName,
         useFilesApi: !!config.useFilesApi,
-        selectedVersion: queryParams('version'),
+        selectedVersion: codeStudioUtils.queryParams('version'),
         isReadOnly: !!config.readonlyWorkspace,
       }),
       contentDiv
@@ -1070,14 +1074,14 @@ StudioApp.prototype.toggleRunReset = function (button) {
     throw 'Unexpected input';
   }
 
-  getStore().dispatch(setIsRunning(!showRun));
+  redux.getStore().dispatch(setIsRunning(!showRun));
 
   if (showRun) {
     if (this.editDuringRunAlert !== undefined) {
       this.closeAlert(this.editDuringRunAlert);
       this.editDuringRunAlert = undefined;
     }
-    getStore().dispatch(setIsEditWhileRun(false));
+    redux.getStore().dispatch(setIsEditWhileRun(false));
   } else {
     this.executingCode = this.getCode().trim();
   }
@@ -1120,11 +1124,11 @@ StudioApp.prototype.toggleRunReset = function (button) {
   }
 
   // Toggle soft-buttons (all have the 'arrow' class set):
-  getStore().dispatch(setArrowButtonDisabled(showRun));
+  redux.getStore().dispatch(setArrowButtonDisabled(showRun));
 };
 
 StudioApp.prototype.isRunning = function () {
-  return getStore().getState().runState.isRunning;
+  return redux.getStore().getState().runState.isRunning;
 };
 
 /**
@@ -1237,7 +1241,7 @@ StudioApp.prototype.initReadonly = function (options) {
   Blockly.inject(document.getElementById('codeWorkspace'), {
     assetUrl: this.assetUrl,
     readOnly: true,
-    rtl: getStore().getState().isRtl,
+    rtl: redux.getStore().getState().isRtl,
     scrollbars: false,
   });
   this.loadBlocks(options.blocks);
@@ -1502,7 +1506,7 @@ StudioApp.prototype.resizeVisualization = function (width) {
   var vizSideBorderWidth =
     visualization.offsetWidth - visualization.clientWidth;
 
-  if (getStore().getState().isRtl) {
+  if (redux.getStore().getState().isRtl) {
     visualizationResizeBar.style.right = newVizWidthString;
     editorColumn.css('right', newVizWidthString);
   } else {
@@ -1516,7 +1520,7 @@ StudioApp.prototype.resizeVisualization = function (width) {
   visualization.style.maxHeight = newVizHeightString;
 
   var scale = newVizWidth / this.nativeVizWidth;
-  getStore().dispatch(setVisualizationScale(scale));
+  redux.getStore().dispatch(setVisualizationScale(scale));
 
   const cssScale = `scale(${scale})`;
   applyTransformScaleToChildren(visualization, cssScale);
@@ -1549,7 +1553,7 @@ StudioApp.prototype.resizeVisualization = function (width) {
 StudioApp.prototype.resizeToolboxHeader = function () {
   var toolboxWidth = 0;
   if (this.editCode && this.editor && this.editor.session) {
-    const isRtl = getStore().getState().isRtl;
+    const isRtl = redux.getStore().getState().isRtl;
     const categories = document.querySelector('.droplet-palette-wrapper');
 
     if (isRtl) {
@@ -1576,7 +1580,7 @@ StudioApp.prototype.resizeToolboxHeader = function () {
  * @param {boolean} spotlight Optional.  Highlight entire block if true
  */
 StudioApp.prototype.highlight = function (id, spotlight) {
-  if (this.isUsingBlockly() && !isEditWhileRun(getStore().getState())) {
+  if (this.isUsingBlockly() && !isEditWhileRun(redux.getStore().getState())) {
     if (id) {
       var m = id.match(/^block_id_(\d+)$/);
       if (m) {
@@ -1632,7 +1636,7 @@ StudioApp.prototype.displayFeedback = function (options) {
     const hasNewFinishDialog = newFinishDialogApps[this.config.app];
 
     if (hasNewFinishDialog && !this.hasContainedLevels) {
-      const store = getStore();
+      const store = redux.getStore();
       const generatedCodeProperties = this.feedback_.getGeneratedCodeProperties(
         this.config.appStrings
       );
@@ -1695,7 +1699,7 @@ StudioApp.prototype.displayFeedback = function (options) {
     // redux
     const message = this.feedback_.getFeedbackMessage(options);
     const isFailure = options.feedbackType < TestResults.MINIMUM_PASS_RESULT;
-    getStore().dispatch(setFeedback({message, isFailure}));
+    redux.getStore().dispatch(setFeedback({message, isFailure}));
   }
 
   // If this level is enabled with a hint prompt threshold, check it and some
@@ -1723,7 +1727,7 @@ StudioApp.prototype.shouldDisplayFeedbackDialog_ = function (
 
   // If we show instructions when collapsed, we only use dialogs for
   // success feedback.
-  const constants = getStore().getState().pageConstants;
+  const constants = redux.getStore().getState().pageConstants;
   if (!constants.noInstructionsWhenCollapsed) {
     return this.feedback_.canContinueToNextLevel(feedbackType);
   }
@@ -1756,7 +1760,7 @@ StudioApp.prototype.report = function (options) {
   const currentTime = new Date().getTime();
 
   const idleTimeSinceLastReport = getIdleTimeSinceLastReport(
-    getStore().getState().studioAppActivity
+    redux.getStore().getState().studioAppActivity
   );
 
   // copy from options: app, level, result, testResult, program, onComplete
@@ -1773,11 +1777,12 @@ StudioApp.prototype.report = function (options) {
   // otherwise if we don't leave the page we are compounding the total time
   this.milestoneStartTime = currentTime;
 
-  getStore().dispatch(resetIdleTime());
+  redux.getStore().dispatch(resetIdleTime());
 
   this.lastTestResult = options.testResult;
 
-  const readOnly = getStore().getState().pageConstants.isReadOnlyWorkspace;
+  const readOnly = redux.getStore().getState()
+    .pageConstants.isReadOnlyWorkspace;
 
   // If hideSource is enabled, the user is looking at a shared level that
   // they cannot have modified. In that case, don't report it to the service
@@ -1811,7 +1816,7 @@ StudioApp.prototype.clearAndAttachRuntimeAnnotations = function () {
  */
 StudioApp.prototype.silentlyReport = function (level = this.config.level.id) {
   var options = {
-    app: getStore().getState().pageConstants.appType,
+    app: redux.getStore().getState().pageConstants.appType,
     level: level,
     skipSuccessCallback: true,
   };
@@ -1819,7 +1824,7 @@ StudioApp.prototype.silentlyReport = function (level = this.config.level.id) {
   // Some DB-backed levels (such as craft) only save the user's code when the user
   // successfully finishes the level. Opening the level in a new tab will make the level
   // appear freshly started. Therefore, we mark only channel-backed levels "started" here.
-  if (getStore().getState().pageConstants.channelId) {
+  if (redux.getStore().getState().pageConstants.channelId) {
     options.testResult = TestResults.LEVEL_STARTED;
   }
   this.report(options);
@@ -1840,7 +1845,7 @@ StudioApp.prototype.resetButtonClick = function () {
   this.hasReported = false;
   this.toggleRunReset('run');
   this.clearHighlighting();
-  getStore().dispatch(setFeedback(null));
+  redux.getStore().dispatch(setFeedback(null));
   if (this.isUsingBlockly()) {
     Blockly.mainBlockSpaceEditor.setEnableToolbox(true);
     Blockly.mainBlockSpace.traceOn(false);
@@ -1981,7 +1986,7 @@ StudioApp.prototype.setConfigValues_ = function (config) {
     // This seems to break levels that start in the animation/costume tab.
     // If this feature comes out from behind the experiment, make sure not to
     // regress those levels.
-    getStore().dispatch(setBlockLimit(this.IDEAL_BLOCK_NUM));
+    redux.getStore().dispatch(setBlockLimit(this.IDEAL_BLOCK_NUM));
   }
   this.MIN_WORKSPACE_HEIGHT = config.level.minWorkspaceHeight || 800;
   this.requiredBlocks_ = config.level.requiredBlocks || [];
@@ -2064,7 +2069,7 @@ StudioApp.prototype.skipLevel = function () {
     result: false,
     testResult: TestResults.SKIPPED,
     onComplete() {
-      const newUrl = getStore().getState().pageConstants.nextLevelUrl;
+      const newUrl = redux.getStore().getState().pageConstants.nextLevelUrl;
       if (newUrl) {
         window.location.href = newUrl;
       } else {
@@ -2159,7 +2164,7 @@ StudioApp.prototype.configureDom = function (config) {
       // of a larger page.
       smallFooter.style.boxSizing = 'border-box';
     }
-    if (getStore().getState().pageConstants.isResponsive) {
+    if (redux.getStore().getState().pageConstants.isResponsive) {
       smallFooter.className += ' responsive';
     }
   }
@@ -2686,7 +2691,7 @@ StudioApp.prototype.enableBreakpoints = function () {
       // inline teacher comments; we want to get a sense of how much
       // breakpoints are used and in what scenarios, so we can reason about the
       // feasibility of repurposing line number clicks for this feature.
-      const currentUser = getStore().getState().currentUser;
+      const currentUser = redux.getStore().getState().currentUser;
       const userType = currentUser && currentUser.userType;
       firehoseClient.putRecord(
         {
@@ -2700,7 +2705,7 @@ StudioApp.prototype.enableBreakpoints = function () {
             projectLevelId: this.config.serverProjectLevelId,
             scriptId: this.config.scriptId,
             scriptName: this.config.scriptName,
-            studentUserId: queryParams('user_id'),
+            studentUserId: codeStudioUtils.queryParams('user_id'),
             url: window.location.toString(),
           }),
         },
@@ -2887,7 +2892,7 @@ StudioApp.prototype.handleUsingBlockly_ = function (config) {
     valueTypeTabShapeMap: utils.valueOr(config.valueTypeTabShapeMap, {}),
     typeHints: utils.valueOr(config.level.showTypeHints, false),
     isBlocklyRtl:
-      getStore().getState().isRtl && config.levelGameName !== 'Jigsaw', // disable RTL for blockly on jigsaw
+      redux.getStore().getState().isRtl && config.levelGameName !== 'Jigsaw', // disable RTL for blockly on jigsaw
   };
 
   // Never show unused blocks in edit mode. Procedure autopopulate should always
@@ -3197,7 +3202,7 @@ StudioApp.prototype.displayWorkspaceAlert = function (
   onClose = () => {}
 ) {
   // close currently any open workspace alert from CodeWorkspace.jsx
-  getStore().dispatch(closeWorkspaceAlert());
+  redux.getStore().dispatch(closeWorkspaceAlert());
   var parent = $(bottom && this.editCode ? '#codeTextbox' : '#codeWorkspace');
   var container = $('<div/>');
   parent.append(container);
@@ -3428,7 +3433,7 @@ StudioApp.prototype.setPageConstants = function (config, appSpecificConstants) {
       isEmbedView: !!config.embed,
       isResponsive: this.isResponsiveFromConfig(config),
       displayNotStartedBanner: this.displayNotStartedBanner(config),
-      displayOldVersionBanner: !!queryParams('version'),
+      displayOldVersionBanner: !!codeStudioUtils.queryParams('version'),
       isShareView: !!config.share,
       pinWorkspaceToBottom: !!config.pinWorkspaceToBottom,
       noInstructionsWhenCollapsed: !!config.noInstructionsWhenCollapsed,
@@ -3462,14 +3467,14 @@ StudioApp.prototype.setPageConstants = function (config, appSpecificConstants) {
     appSpecificConstants
   );
 
-  getStore().dispatch(setPageConstants(combined));
+  redux.getStore().dispatch(setPageConstants(combined));
 
   if (config.isInstructor) {
-    getStore().dispatch(setUserRoleInCourse(CourseRoles.Instructor));
+    redux.getStore().dispatch(setUserRoleInCourse(CourseRoles.Instructor));
   }
 
   const instructionsConstants = determineInstructionsConstants(config);
-  getStore().dispatch(setInstructionsConstants(instructionsConstants));
+  redux.getStore().dispatch(setInstructionsConstants(instructionsConstants));
 };
 
 StudioApp.prototype.showRateLimitAlert = function () {

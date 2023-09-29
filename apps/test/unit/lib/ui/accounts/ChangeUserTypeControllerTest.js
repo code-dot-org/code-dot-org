@@ -3,7 +3,7 @@ import $ from 'jquery';
 import {spy, stub} from 'sinon';
 import {expect} from '../../../../util/reconfiguredChai';
 import i18n from '@cdo/locale';
-import * as utils from '@cdo/apps/utils';
+import utils from '@cdo/apps/utils';
 import ChangeUserTypeController from '@cdo/apps/lib/ui/accounts/ChangeUserTypeController';
 
 describe('ChangeUserTypeController', () => {

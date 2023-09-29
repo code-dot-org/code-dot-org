@@ -2,7 +2,7 @@ import PropTypes from 'prop-types';
 import React from 'react';
 import color from '@cdo/apps/util/color';
 import FontAwesome from '@cdo/apps/templates/FontAwesome';
-import {navigateToHref} from '@cdo/apps/utils';
+import utils from '@cdo/apps/utils';
 
 export default function SaveBar({
   error,
@@ -20,7 +20,7 @@ export default function SaveBar({
         className="btn"
         type="button"
         style={styles.saveButton}
-        onClick={handleView || (() => navigateToHref(pathForShowButton))}
+        onClick={handleView || (() => utils.navigateToHref(pathForShowButton))}
         disabled={isSaving}
       >
         Show

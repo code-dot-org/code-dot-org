@@ -20,7 +20,7 @@ import {VIEWING_CODE_REVIEW_URL_PARAM} from '@cdo/apps/templates/instructions/Co
 import ControlButtons from './ControlButtons';
 import {CsaViewMode} from './constants';
 import styleConstants from '../styleConstants';
-import {queryParams} from '@cdo/apps/code-studio/utils';
+import codeStudioUtils from '@cdo/apps/code-studio/utils';
 
 class JavalabView extends React.Component {
   static propTypes = {
@@ -231,7 +231,8 @@ class JavalabView extends React.Component {
                 displayDocumentationTab
                 displayReviewTab
                 initialSelectedTab={
-                  queryParams(VIEWING_CODE_REVIEW_URL_PARAM) === 'true'
+                  codeStudioUtils.queryParams(VIEWING_CODE_REVIEW_URL_PARAM) ===
+                  'true'
                     ? TabType.REVIEW
                     : null
                 }

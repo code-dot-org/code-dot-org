@@ -12,7 +12,7 @@ import teacherSections from '@cdo/apps/templates/teacherDashboard/teacherSection
 import createResourcesReducer from '@cdo/apps/lib/levelbuilder/lesson-editor/resourcesEditorRedux';
 import {Provider} from 'react-redux';
 import sinon from 'sinon';
-import * as utils from '@cdo/apps/utils';
+import utils from '@cdo/apps/utils';
 import $ from 'jquery';
 import {
   PublishedState,

@@ -1,4 +1,4 @@
-import api from './apiJavascript.js';
+import * as api from './apiJavascript.js';
 
 export const blocks = [
   {func: 'moveForward', parent: api, category: 'Artist', params: ['100']},

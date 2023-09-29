@@ -8,7 +8,7 @@ import {
   StudentWarning,
   getCheckboxes,
 } from './DeleteAccountHelpers';
-import {navigateToHref} from '@cdo/apps/utils';
+import utils from '@cdo/apps/utils';
 import BootstrapButton from './BootstrapButton';
 import PersonalLoginDialog, {
   dependentStudentsShape,
@@ -135,7 +135,7 @@ export default class DeleteAccount extends React.Component {
       data: payload,
     })
       .done(result => {
-        navigateToHref('/');
+        utils.navigateToHref('/');
       })
       .fail((jqXhr, _) => {
         this.onFailure(jqXhr);

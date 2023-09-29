@@ -374,3 +374,11 @@ export const levelProgressFromStatus = status => {
 export const levelProgressFromResult = result => {
   return levelProgressFromStatus(activityCssClass(result));
 };
+
+// to use sinon.stub we need these as default exports
+export default {
+  lessonIsLockedForAllStudents,
+  lessonProgressForSection,
+  processedLevel,
+  processServerSectionProgress,
+};

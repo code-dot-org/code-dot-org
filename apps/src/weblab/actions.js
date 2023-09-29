@@ -1,7 +1,7 @@
 /** @file Redux action-creators for WebLab.
  *  @see http://redux.js.org/docs/basics/Actions.html */
 import {getStore} from '@cdo/apps/redux';
-import * as utils from '@cdo/apps/utils';
+import utils from '@cdo/apps/utils';
 
 /** @enum {string} */
 export const ActionType = utils.makeEnum(

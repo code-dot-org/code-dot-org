@@ -1,7 +1,7 @@
 import {useMemo} from 'react';
 import _ from 'lodash';
 import {makeEnum} from '@cdo/apps/utils';
-import {useFetch} from '@cdo/apps/util/useFetch';
+import useFetch from '@cdo/apps/util/useFetch';
 
 export const LockStatus = makeEnum('Locked', 'Editable', 'ReadonlyAnswers');
 
@@ -26,7 +26,9 @@ export const LockStatus = makeEnum('Locked', 'Editable', 'ReadonlyAnswers');
  * @returns {{loading: boolean, serverLockState: LockState}}
  */
 export function useGetLockState(unitId, lessonId, sectionId) {
-  const {loading, data} = useFetch(`/api/lock_status?script_id=${unitId}`);
+  const {loading, data} = useFetch.useFetch(
+    `/api/lock_status?script_id=${unitId}`
+  );
 
   const serverLockState = useMemo(
     () => extractLockData(data, sectionId, lessonId),
@@ -103,3 +105,8 @@ function toLockStatus(lockData) {
     ? LockStatus.ReadonlyAnswers
     : LockStatus.Editable;
 }
+
+export default {
+  useGetLockState,
+  saveLockState,
+};

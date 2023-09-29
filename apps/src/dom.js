@@ -173,4 +173,6 @@ toExport.isIPad = function () {
   return reg.test(window.navigator.userAgent);
 };
 
+export const {addMouseUpTouchEvent, addReadyListener} = toExport;
+
 export {toExport as default};

@@ -142,3 +142,11 @@ export const jumpToLessonDetails = lessonOfInterest => {
 export const getCurrentUnitData = state => {
   return state.sectionProgress.unitDataByUnit[state.unitSelection.scriptId];
 };
+
+// default exports to support sinon.stub() in test files
+sectionProgress.addDataByUnit = addDataByUnit;
+sectionProgress.finishLoadingProgress = finishLoadingProgress;
+sectionProgress.finishRefreshingProgress = finishRefreshingProgress;
+sectionProgress.setCurrentView = setCurrentView;
+sectionProgress.startLoadingProgress = startLoadingProgress;
+sectionProgress.startRefreshingProgress = startRefreshingProgress;

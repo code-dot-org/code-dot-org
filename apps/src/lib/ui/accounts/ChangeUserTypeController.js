@@ -1,6 +1,6 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
-import * as utils from '../../../utils';
+import utils from '../../../utils';
 import ChangeUserTypeModal from './ChangeUserTypeModal';
 import i18n from '@cdo/locale';
 

@@ -14,7 +14,7 @@ import screensReducer, {
   fetchProject,
   importIntoProject,
 } from '@cdo/apps/applab/redux/screens';
-import * as importFuncs from '@cdo/apps/applab/import';
+import importFuncs from '@cdo/apps/applab/import';
 
 describe('Applab Screens Reducer', function () {
   var store;

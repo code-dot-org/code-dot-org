@@ -8,7 +8,7 @@ import React from 'react';
 import ReactDOM from 'react-dom';
 import {singleton as studioApp} from '../StudioApp';
 import bounceMsg from './locale';
-import tiles from './tiles';
+import * as tiles from './tiles';
 import CustomMarshalingInterpreter from '../lib/tools/jsinterpreter/CustomMarshalingInterpreter';
 import * as api from './api';
 import {Provider} from 'react-redux';

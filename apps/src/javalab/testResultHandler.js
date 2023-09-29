@@ -55,3 +55,7 @@ export function onTestResult(data, callback, miniAppType) {
   callback(message);
   return {success: successful, isValidation: isValidation};
 }
+
+export default {
+  onTestResult,
+};

@@ -1,7 +1,7 @@
 import React from 'react';
 import {shallow} from 'enzyme';
 import AnnouncementsEditor from '@cdo/apps/lib/levelbuilder/announcementsEditor/AnnouncementsEditor';
-import * as utils from '@cdo/apps/utils';
+import utils from '@cdo/apps/utils';
 import {expect, assert} from '../../../../util/reconfiguredChai';
 import sinon from 'sinon';
 

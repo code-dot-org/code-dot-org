@@ -2,7 +2,7 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import MultiSelectGroup from '@cdo/apps/templates/teacherDashboard/MultiSelectGroup';
 import {StudentGradeLevels} from '@cdo/apps/util/sharedConstants';
-import {queryParams} from '@cdo/apps/code-studio/utils';
+import codeStudioUtils from '@cdo/apps/code-studio/utils';
 import moduleStyles from './sections-refresh.module.scss';
 import i18n from '@cdo/locale';
 import {ParticipantAudience} from '@cdo/apps/generated/curriculum/sharedCourseConstants';
@@ -16,7 +16,7 @@ export default function SingleSectionSetUp({
 }) {
   const gradeOptions = StudentGradeLevels.map(g => ({label: g, value: g}));
   const participantType = isNewSection
-    ? queryParams('participantType')
+    ? codeStudioUtils.queryParams('participantType')
     : section.participantType;
 
   return (

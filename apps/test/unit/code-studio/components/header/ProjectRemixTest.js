@@ -4,7 +4,7 @@ import {shallow} from 'enzyme';
 
 import {expect} from '../../../../util/reconfiguredChai';
 import {replaceOnWindow, restoreOnWindow} from '../../../../util/testUtils';
-import * as utils from '@cdo/apps/utils';
+import utils from '@cdo/apps/utils';
 import {UnconnectedProjectRemix as ProjectRemix} from '@cdo/apps/code-studio/components/header/ProjectRemix';
 
 const defaultProps = {

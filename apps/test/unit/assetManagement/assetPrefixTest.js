@@ -1,14 +1,14 @@
 import sinon from 'sinon';
-import * as redux from '@cdo/apps/redux';
+import redux from '@cdo/apps/redux';
 import {init, fixPath} from '@cdo/apps/assetManagement/assetPrefix';
 import {expect} from '../../util/reconfiguredChai';
 
 describe('apps/src/assetManagement/assetPrefix.js', () => {
   describe('fixPath', () => {
-    let reduxStub, result;
+    let result;
 
     beforeEach(() => {
-      reduxStub = sinon.stub(redux, 'getStore').returns({
+      sinon.stub(redux, 'getStore').returns({
         getState: () => ({
           level: {
             name: 'test-level',
@@ -21,7 +21,7 @@ describe('apps/src/assetManagement/assetPrefix.js', () => {
     });
 
     afterEach(() => {
-      reduxStub.restore();
+      redux.getStore.restore();
     });
 
     it('should route an absolute URL through the MEDIA_PROXY', () => {

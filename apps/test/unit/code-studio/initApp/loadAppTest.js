@@ -7,7 +7,7 @@ import loadAppOptions, {
   setAppOptions,
 } from '@cdo/apps/code-studio/initApp/loadApp';
 import {files} from '@cdo/apps/clientApi';
-import * as imageUtils from '@cdo/apps/imageUtils';
+import imageUtils from '@cdo/apps/imageUtils';
 import project from '@cdo/apps/code-studio/initApp/project';
 
 const SERVER_LEVEL_ID = 5;
@@ -228,8 +228,8 @@ describe('loadApp.js', () => {
     });
 
     afterEach(() => {
-      files.putFile.restore();
       imageUtils.dataURIToFramedBlob.restore();
+      files.putFile.restore();
     });
 
     it('uploads a share image for a non-droplet project (instead of writing the level)', done => {

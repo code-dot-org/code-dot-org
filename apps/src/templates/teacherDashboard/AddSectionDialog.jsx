@@ -16,13 +16,13 @@ import {
 } from './teacherSectionsRedux';
 import ParticipantTypePicker from './ParticipantTypePicker';
 import Spinner from '@cdo/apps/code-studio/pd/components/spinner';
-import {navigateToHref} from '@cdo/apps/utils';
+import utils from '@cdo/apps/utils';
 import {SectionLoginType} from '@cdo/apps/util/sharedConstants';
 
 // Navigates to the new section setup page if both params are non-null.
 const redirectToNewSectionPage = (participantType, loginType) => {
   if (!!participantType && !!loginType) {
-    navigateToHref(
+    utils.navigateToHref(
       `/sections/new?participantType=${participantType}&loginType=${loginType}`
     );
   }

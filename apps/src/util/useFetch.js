@@ -100,3 +100,5 @@ export const useFetch = (url, options = EMPTY_OPTIONS) => {
     error: fetchState.error,
   };
 };
+
+export default {useFetch};

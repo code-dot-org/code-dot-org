@@ -94,7 +94,7 @@ export default function createCallouts(callouts) {
   $(window).on('hashchange', detectTriggerCalloutOnHash);
 }
 
-export function addCallouts(callouts) {
+function addCallouts(callouts) {
   $.fn.qtip.zindex = 500;
 
   var showCalloutsMode = document.URL.indexOf('show_callouts=1') !== -1;
@@ -295,3 +295,6 @@ function reverseDirection(token) {
       return token;
   }
 }
+
+// exported via default export for sinon.stub() in tests
+createCallouts.addCallouts = addCallouts;

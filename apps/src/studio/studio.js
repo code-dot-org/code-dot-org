@@ -7,7 +7,7 @@
 
 import $ from 'jquery';
 import * as constants from './constants';
-import * as utils from '../utils';
+import utils from '../utils';
 import _ from 'lodash';
 import AppView from '../templates/AppView';
 import BigGameLogic from './customLogic/bigGameLogic';

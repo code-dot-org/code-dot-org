@@ -5,7 +5,7 @@
  *           just binary with "A" sub'd for 0 and "B" sub'd for 1.
  */
 
-import * as utils from '../utils'; // For String.prototype.repeat polyfill
+import utils from '../utils'; // For String.prototype.repeat polyfill
 import {zeroPadLeft, zeroPadRight} from './NetSimUtils';
 
 /**

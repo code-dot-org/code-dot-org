@@ -3,7 +3,7 @@ import PropTypes from 'prop-types';
 import {connect} from 'react-redux';
 import moment from 'moment';
 import msg from '@cdo/locale';
-import * as imageUtils from '@cdo/apps/imageUtils';
+import imageUtils from '@cdo/apps/imageUtils';
 import {html2canvas} from '@cdo/apps/util/htmlToCanvasWrapper';
 import BaseDialog from '@cdo/apps/templates/BaseDialog';
 import PendingButton from '@cdo/apps/templates/PendingButton';

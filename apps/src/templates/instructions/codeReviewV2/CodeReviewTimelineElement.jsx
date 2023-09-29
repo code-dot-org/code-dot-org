@@ -6,7 +6,7 @@ import FontAwesome from '@cdo/apps/templates/FontAwesome';
 import color from '@cdo/apps/util/color';
 import javalabMsg from '@cdo/javalab/locale';
 import {stringifyQueryParams} from '@cdo/apps/utils';
-import {queryParams} from '@cdo/apps/code-studio/utils';
+import codeStudioUtils from '@cdo/apps/code-studio/utils';
 
 export const codeReviewTimelineElementType = {
   CREATED: 'created',
@@ -31,7 +31,7 @@ const CodeReviewTimelineElement = ({
   viewAsCodeReviewer,
   children,
 }) => {
-  const params = queryParams();
+  const params = codeStudioUtils.queryParams();
   params['version'] = projectVersionId;
 
   const versionLink =

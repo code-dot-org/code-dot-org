@@ -1,5 +1,5 @@
 import msg from '@cdo/applab/locale';
-import * as utils from '../utils';
+import utils from '../utils';
 import blockUtils from '../block_utils';
 import {ApplabBlocks} from '@cdo/apps/applab/sharedApplabBlocks';
 import {ApplabGoalBlocks} from '@cdo/apps/applab/sharedApplabGoalBlocks';

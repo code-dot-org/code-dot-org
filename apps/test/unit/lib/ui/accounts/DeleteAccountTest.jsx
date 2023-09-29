@@ -6,7 +6,7 @@ import DeleteAccount, {
   DELETE_VERIFICATION_STRING,
 } from '@cdo/apps/lib/ui/accounts/DeleteAccount';
 import {getCheckboxes} from '@cdo/apps/lib/ui/accounts/DeleteAccountHelpers';
-import * as utils from '@cdo/apps/utils';
+import utils from '@cdo/apps/utils';
 
 const DEFAULT_PROPS = {
   isPasswordRequired: true,

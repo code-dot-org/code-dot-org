@@ -819,3 +819,9 @@ export const install = (blockly, blockInstallOptions) => {
     return `addScore('${score}', 'block_id_${this.id}');\n`;
   };
 };
+
+export default {
+  ENTITY_ACTION_BLOCKS,
+  ENTITY_TARGET_ACTION_BLOCKS,
+  install,
+};

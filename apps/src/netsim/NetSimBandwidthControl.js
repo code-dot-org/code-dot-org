@@ -4,7 +4,7 @@
 // Utils required only for Function.prototype.inherits()
 import '../utils';
 
-import NetSimConstants from './NetSimConstants';
+import * as NetSimConstants from './NetSimConstants';
 import NetSimUtils from './NetSimUtils';
 import NetSimSlider from './NetSimSlider';
 

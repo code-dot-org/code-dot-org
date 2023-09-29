@@ -1,5 +1,5 @@
 // Individual curricula definitions
-const makerCurriculum = {
+export const makerCurriculum = {
   key: 'devices',
   display_name: 'Creating Apps for Devices',
   display_name_with_latest_year: 'Creating Apps for Devices (2022)',
@@ -19,7 +19,7 @@ const makerCurriculum = {
   marketing_initiative: 'CSD',
 };
 
-const countingCurriculum = {
+export const countingCurriculum = {
   key: 'counting-csc',
   display_name: 'Computer Science Connections',
   display_name_with_latest_year: 'Computer Science Connections (2023)',
@@ -40,7 +40,7 @@ const countingCurriculum = {
   marketing_initiative: 'CSC',
 };
 
-const poemArtCurriculum = {
+export const poemArtCurriculum = {
   key: 'poem-art',
   display_name: 'Poem Art',
   display_name_with_latest_year: 'Poem Art (2017)',
@@ -61,7 +61,7 @@ const poemArtCurriculum = {
   marketing_initiative: 'HOC',
 };
 
-const danceUnpluggedCurriculum = {
+export const danceUnpluggedCurriculum = {
   key: 'dance-unplugged',
   display_name: 'Hour of Code - Dance Party - Unplugged',
   display_name_with_latest_year:
@@ -83,7 +83,7 @@ const danceUnpluggedCurriculum = {
   marketing_initiative: 'HOC',
 };
 
-const course1Curriculum = {
+export const course1Curriculum = {
   key: 'course1',
   display_name: 'Course 1',
   display_name_with_latest_year: 'Course 1 (2012)',
@@ -103,7 +103,7 @@ const course1Curriculum = {
   self_paced_pl_course_offering_path: null,
 };
 
-const course2Curriculum = {
+export const course2Curriculum = {
   key: 'course2',
   display_name: 'Course 2',
   display_name_with_latest_year: 'Course 2 (2012)',
@@ -123,7 +123,7 @@ const course2Curriculum = {
   self_paced_pl_course_offering_path: null,
 };
 
-const course3Curriculum = {
+export const course3Curriculum = {
   key: 'course3',
   display_name: 'Course 3',
   display_name_with_latest_year: 'Course 3 (2012)',
@@ -143,7 +143,7 @@ const course3Curriculum = {
   self_paced_pl_course_offering_path: null,
 };
 
-const course4Curriculum = {
+export const course4Curriculum = {
   key: 'course4',
   display_name: 'Course 4',
   display_name_with_latest_year: 'Course 4 (2012)',
@@ -163,7 +163,7 @@ const course4Curriculum = {
   self_paced_pl_course_offering_path: null,
 };
 
-const noGradesCurriculum = {
+export const noGradesCurriculum = {
   key: 'no-grades',
   display_name: 'No Grades',
   display_name_with_latest_year: 'No Grade (2012)',
@@ -183,7 +183,7 @@ const noGradesCurriculum = {
   self_paced_pl_course_offering_path: null,
 };
 
-const noPathCurriculum = {
+export const noPathCurriculum = {
   key: 'no-path',
   display_name: 'No Path',
   display_name_with_latest_year: 'No Path (2012)',
@@ -204,7 +204,7 @@ const noPathCurriculum = {
 };
 
 // Curricula groups
-const allCurricula = [
+export const allCurricula = [
   makerCurriculum,
   countingCurriculum,
   poemArtCurriculum,
@@ -217,7 +217,7 @@ const allCurricula = [
   noPathCurriculum,
 ];
 
-const allShownCurricula = [
+export const allShownCurricula = [
   makerCurriculum,
   countingCurriculum,
   poemArtCurriculum,
@@ -228,23 +228,23 @@ const allShownCurricula = [
   course4Curriculum,
 ];
 
-const gradesKAnd2ShownCurricula = [
+export const gradesKAnd2ShownCurricula = [
   poemArtCurriculum,
   danceUnpluggedCurriculum,
   course1Curriculum,
   course2Curriculum,
 ];
 
-const weeklongShownCurricula = [makerCurriculum];
+export const weeklongShownCurricula = [makerCurriculum];
 
-const physicalCompShownCurricula = [makerCurriculum];
+export const physicalCompShownCurricula = [makerCurriculum];
 
-const nonNullSchoolSubjectShownCurricula = [
+export const nonNullSchoolSubjectShownCurricula = [
   countingCurriculum,
   poemArtCurriculum,
 ];
 
-const tabletAndNoDeviceShownCurricula = [
+export const tabletAndNoDeviceShownCurricula = [
   poemArtCurriculum,
   danceUnpluggedCurriculum,
   course1Curriculum,
@@ -253,13 +253,13 @@ const tabletAndNoDeviceShownCurricula = [
   course4Curriculum,
 ];
 
-const csdAndHocShownCurricula = [
+export const csdAndHocShownCurricula = [
   makerCurriculum,
   poemArtCurriculum,
   danceUnpluggedCurriculum,
 ];
 
-const translatedCurricula = [
+export const translatedCurricula = [
   course1Curriculum,
   course2Curriculum,
   course3Curriculum,
@@ -267,11 +267,11 @@ const translatedCurricula = [
 ];
 
 // Filters for grades 2 or 3, physical computing or interdisciplinary, and tablet or no device curricula.
-const multipleFiltersAppliedShownCurricula = [poemArtCurriculum];
+export const multipleFiltersAppliedShownCurricula = [poemArtCurriculum];
 
 // If every filter is applied, only curricula that have null for the properties associated with the filters
 // will be filtered out.
-const allFiltersAppliedShownCurricula = [
+export const allFiltersAppliedShownCurricula = [
   countingCurriculum,
   poemArtCurriculum,
   danceUnpluggedCurriculum,

@@ -212,3 +212,7 @@ function getMiniAppErrorMessage(
     ? miniAppErrorMessage
     : getUnsupportedMiniAppMessage(messageMiniAppType);
 }
+
+export default {
+  handleException,
+};

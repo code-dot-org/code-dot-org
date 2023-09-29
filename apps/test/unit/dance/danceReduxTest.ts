@@ -11,9 +11,9 @@ import {
 import {setExternalGlobals} from '../../util/testUtils';
 import commonReducers from '@cdo/apps/redux/commonReducers';
 import {combineReducers, Store} from 'redux';
-import * as songs from '@cdo/apps/dance/songs';
-import * as codeStudioUtils from '@cdo/apps/code-studio/utils';
-import * as utils from '@cdo/apps/utils';
+import songs from '@cdo/apps/dance/songs';
+import codeStudioUtils from '@cdo/apps/code-studio/utils';
+import utils from '@cdo/apps/utils';
 import {assert} from 'chai';
 import Sinon from 'sinon';
 import {AppDispatch} from '@cdo/apps/util/reduxHooks';

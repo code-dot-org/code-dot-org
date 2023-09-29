@@ -1,6 +1,6 @@
 import {mount} from 'enzyme';
 import experiments from '@cdo/apps/util/experiments';
-import {withReduxStore} from '../../util/withReduxStore';
+import withReduxStore from '../../util/withReduxStore';
 
 /**
  * Generate and run a suite of simple tests that make sure all of provided

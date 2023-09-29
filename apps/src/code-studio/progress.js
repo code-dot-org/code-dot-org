@@ -7,7 +7,7 @@ import clientState from './clientState';
 import DisabledBubblesModal from './DisabledBubblesModal';
 import DisabledBubblesAlert from './DisabledBubblesAlert';
 import {getStore} from './redux';
-import {setViewType, ViewType} from './viewAsRedux';
+import viewAsRedux, {ViewType} from './viewAsRedux';
 import {getHiddenLessons} from './hiddenLessonRedux';
 import {TestResults} from '@cdo/apps/constants';
 import {
@@ -258,7 +258,7 @@ progress.initViewAs = function (store, isSignedInUser, isInstructor) {
     initialViewAs = query.viewAs || initialViewAs;
   }
 
-  store.dispatch(setViewType(initialViewAs));
+  store.dispatch(viewAsRedux.setViewType(initialViewAs));
 };
 
 progress.retrieveProgress = function (scriptName, scriptData, currentLevelId) {

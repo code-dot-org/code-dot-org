@@ -1,8 +1,8 @@
-import * as codegen from './codegen';
+import codegen from './codegen';
 import ObservableEventDEPRECATED from '../../../ObservableEventDEPRECATED';
-import * as utils from '../../../utils';
+import utils from '../../../utils';
 import acorn from '@code-dot-org/js-interpreter/acorn';
-import {getStore} from '../../../redux';
+import redux from '../../../redux';
 import CustomMarshalingInterpreter from './CustomMarshalingInterpreter';
 import CustomMarshaler from './CustomMarshaler';
 import {generateAST} from '@code-dot-org/js-interpreter';
@@ -113,7 +113,9 @@ export default class JSInterpreter {
     /** @type {ObservableEventDEPRECATED} */
     this.onNextStepChanged = new ObservableEventDEPRECATED();
     this._runStateUpdater = this.onNextStepChanged.register(() => {
-      getStore().dispatch(setIsDebuggerPaused(this.paused, this.nextStep));
+      redux
+        .getStore()
+        .dispatch(setIsDebuggerPaused(this.paused, this.nextStep));
     });
 
     /** @type {ObservableEventDEPRECATED} */
@@ -1374,26 +1376,24 @@ export default class JSInterpreter {
       this.paused = true;
       this.nextStep = StepType.RUN;
     }
-    getStore().dispatch(setIsDebuggerPaused(this.paused, this.nextStep));
+    redux.getStore().dispatch(setIsDebuggerPaused(this.paused, this.nextStep));
   }
 
   handleStepOver() {
     this.paused = true;
     this.nextStep = StepType.OVER;
-    getStore().dispatch(setIsDebuggerPaused(this.paused, this.nextStep));
+    redux.getStore().dispatch(setIsDebuggerPaused(this.paused, this.nextStep));
   }
 
   handleStepIn() {
     this.paused = true;
     this.nextStep = StepType.IN;
-    getStore().dispatch(setIsDebuggerPaused(this.paused, this.nextStep));
+    redux.getStore().dispatch(setIsDebuggerPaused(this.paused, this.nextStep));
   }
 
   handleStepOut() {
     this.paused = true;
     this.nextStep = StepType.OUT;
-    getStore().dispatch(setIsDebuggerPaused(this.paused, this.nextStep));
+    redux.getStore().dispatch(setIsDebuggerPaused(this.paused, this.nextStep));
   }
 }
-
-export const {getFunctionsAndMetadata} = JSInterpreter;

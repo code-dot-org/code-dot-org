@@ -3,8 +3,8 @@
  * or as a instructor
  */
 
-import {makeEnum, reload} from '@cdo/apps/utils';
-import {queryParams, updateQueryParam} from '@cdo/apps/code-studio/utils';
+import utils, {makeEnum} from '@cdo/apps/utils';
+import codeStudioUtils from '@cdo/apps/code-studio/utils';
 
 export const ViewType = makeEnum('Participant', 'Instructor');
 
@@ -19,10 +19,10 @@ export default function reducer(state = ViewType.Participant, action) {
      */
     if (viewType === 'Teacher') {
       viewType = 'Instructor';
-      updateQueryParam('viewAs', 'Instructor');
+      codeStudioUtils.updateQueryParam('viewAs', 'Instructor');
     } else if (viewType === 'Student') {
       viewType = 'Participant';
-      updateQueryParam('viewAs', 'Participant');
+      codeStudioUtils.updateQueryParam('viewAs', 'Participant');
     } else if (!ViewType[viewType]) {
       throw new Error('unknown ViewType: ' + viewType);
     }
@@ -47,13 +47,19 @@ export const changeViewType = viewType => {
     // If changing to viewAs participant while we are a particular participant, remove
     // the user_id and do a reload so that we're instead viewing as a generic
     // participant
-    if (viewType === ViewType.Participant && queryParams('user_id')) {
-      updateQueryParam('user_id', undefined);
+    if (
+      viewType === ViewType.Participant &&
+      codeStudioUtils.queryParams('user_id')
+    ) {
+      codeStudioUtils.updateQueryParam('user_id', undefined);
       // Make a stubbable call to window.location.reload
-      reload();
+      utils.reload();
       return;
     }
 
     dispatch(setViewType(viewType));
   };
 };
+
+// default export for sinon.stub()
+reducer.setViewType = setViewType;

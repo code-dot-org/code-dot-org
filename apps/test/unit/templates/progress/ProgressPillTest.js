@@ -6,7 +6,7 @@ import {LevelStatus, LevelKind} from '@cdo/apps/util/sharedConstants';
 import ReactTooltip from 'react-tooltip';
 import {ReviewStates} from '@cdo/apps/templates/feedback/types';
 import BubbleBadge, {BadgeType} from '@cdo/apps/templates/progress/BubbleBadge';
-import * as utils from '@cdo/apps/code-studio/utils';
+import utils from '@cdo/apps/code-studio/utils';
 import sinon from 'sinon';
 
 const unpluggedLevel = {

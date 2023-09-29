@@ -6,7 +6,7 @@ import craftI18n from '@cdo/apps/craft/locale'; // eslint-disable-line no-unused
 import {expect} from '../../util/reconfiguredChai';
 import sinon from 'sinon';
 import * as utils from '@cdo/apps/craft/utils';
-import * as craftRedux from '@cdo/apps/craft/redux';
+import craftRedux from '@cdo/apps/craft/redux';
 
 describe('craft utils', () => {
   describe('handlePlayerSelection', () => {

@@ -1,9 +1,7 @@
 import {assert} from 'chai';
-import {
+import codeStudioUtils, {
   setWindowLocation,
   resetWindowLocation,
-  queryParams,
-  updateQueryParam,
 } from '@cdo/apps/code-studio/utils';
 
 describe('utils', () => {
@@ -20,19 +18,19 @@ describe('utils', () => {
     });
 
     it('can pull out a specific param from the url', () => {
-      assert.equal(queryParams('param1'), 'one');
-      assert.equal(queryParams('param2'), 'two');
+      assert.equal(codeStudioUtils.queryParams('param1'), 'one');
+      assert.equal(codeStudioUtils.queryParams('param2'), 'two');
     });
 
     it('get a hash of params if no specific one is asked for', () => {
-      assert.deepEqual(queryParams(), {
+      assert.deepEqual(codeStudioUtils.queryParams(), {
         param1: 'one',
         param2: 'two',
       });
     });
   });
 
-  describe('updateQueryParam', () => {
+  describe('codeStudioUtils.updateQueryParam', () => {
     let pushStateOrig = window.history.pushState;
     let replaceStateOrig = window.history.replaceState;
 
@@ -57,7 +55,7 @@ describe('utils', () => {
       fakeWindowLocation.pathname = '/some/path';
       fakeWindowLocation.search = '';
 
-      updateQueryParam('foo', 'bar');
+      codeStudioUtils.updateQueryParam('foo', 'bar');
       assert.equal(pushedLocation, '/some/path?foo=bar');
     });
 
@@ -65,7 +63,7 @@ describe('utils', () => {
       fakeWindowLocation.pathName = '/some/path';
       fakeWindowLocation.search = '?param1=one&param2=two';
 
-      updateQueryParam('param2', 'three');
+      codeStudioUtils.updateQueryParam('param2', 'three');
       assert.equal(pushedLocation, '/some/path?param1=one&param2=three');
     });
 
@@ -73,7 +71,7 @@ describe('utils', () => {
       fakeWindowLocation.pathname = '/some/path';
       fakeWindowLocation.search = '?param1=one&param2=two';
 
-      updateQueryParam('param1', undefined);
+      codeStudioUtils.updateQueryParam('param1', undefined);
       assert.equal(pushedLocation, '/some/path?param2=two');
     });
 
@@ -81,7 +79,7 @@ describe('utils', () => {
       fakeWindowLocation.pathname = '/some/path';
       fakeWindowLocation.search = '?param1=one&param2=two';
 
-      updateQueryParam('param1', undefined, true);
+      codeStudioUtils.updateQueryParam('param1', undefined, true);
       assert.equal(pushedLocation, undefined);
       assert.equal(replacedLocation, '/some/path?param2=two');
     });

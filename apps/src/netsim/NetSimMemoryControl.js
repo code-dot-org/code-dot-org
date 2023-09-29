@@ -3,7 +3,7 @@
  */
 import '../utils'; // Provides Function.prototype.inherits
 
-import NetSimConstants from './NetSimConstants';
+import * as NetSimConstants from './NetSimConstants';
 import NetSimUtils from './NetSimUtils';
 import NetSimSlider from './NetSimSlider';
 

@@ -10,7 +10,7 @@ import {
   createMouseEvent,
   sandboxDocumentBody,
 } from '../../../../util/testUtils.js';
-import * as utils from '@cdo/apps/utils';
+import utils from '@cdo/apps/utils';
 import {
   getStore,
   registerReducers,

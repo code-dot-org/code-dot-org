@@ -20,7 +20,7 @@ import PaneHeader, {
 import SpeedSlider from '../../../templates/SpeedSlider';
 import FontAwesome from '../../../templates/FontAwesome';
 import {setStepSpeed, setIsDebuggingSprites} from '../../../redux/runState';
-import * as utils from '../../../utils';
+import utils from '../../../utils';
 import {
   add as addWatchExpression,
   remove as removeWatchExpression,

@@ -19,6 +19,7 @@ export const Facilitator = 'Facilitator';
 export const CsfFacilitator = 'CsfFacilitator';
 export const Organizer = 'Organizer';
 export const ProgramManager = 'ProgramManager';
+export const Partner = 'Partner';
 
 export const PermissionPropType = PropTypes.shape({
   has: PropTypes.func,

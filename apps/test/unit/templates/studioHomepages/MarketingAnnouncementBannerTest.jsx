@@ -3,7 +3,7 @@ import {Provider} from 'react-redux';
 import {expect} from '../../../util/reconfiguredChai';
 import {mount} from 'enzyme';
 import MarketingAnnouncementBanner from '@cdo/apps/templates/studioHomepages/MarketingAnnouncementBanner';
-import * as utils from '@cdo/apps/utils';
+import utils from '@cdo/apps/utils';
 import sinon from 'sinon';
 import {createStore, combineReducers} from 'redux';
 import isRtl from '@cdo/apps/code-studio/isRtlRedux';

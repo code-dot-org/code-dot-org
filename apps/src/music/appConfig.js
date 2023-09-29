@@ -1,4 +1,4 @@
-import {queryParams} from '@cdo/apps/code-studio/utils';
+import codeStudioUtils from '@cdo/apps/code-studio/utils';
 import {BlockMode} from './constants';
 
 // Static config values passed in via a call to setAppConfig.
@@ -15,7 +15,7 @@ export function setAppConfig(values) {
 export const getBlockMode = () => {
   const defaultMode = BlockMode.SIMPLE2;
 
-  let blockMode = queryParams('blocks') || defaultMode;
+  let blockMode = codeStudioUtils.queryParams('blocks') || defaultMode;
   blockMode = blockMode.replace(/^./, str => str.toUpperCase()); // Capitalize first letter if necessary
 
   if (!Object.values(BlockMode).includes(blockMode)) {
@@ -34,7 +34,7 @@ export default {
     if (configValues) {
       return configValues[name];
     } else {
-      return queryParams(name);
+      return codeStudioUtils.queryParams(name);
     }
   },
 };

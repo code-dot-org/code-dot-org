@@ -1,7 +1,7 @@
 import PropTypes from 'prop-types';
 import React, {useState, useEffect, useRef, useCallback} from 'react';
 import {TwoColumnActionBlock} from './TwoColumnActionBlock';
-import {tryGetLocalStorage, trySetLocalStorage} from '@cdo/apps/utils';
+import utils from '@cdo/apps/utils';
 import Button from '@cdo/apps/templates/Button';
 import color from '../../util/color';
 import shapes from './shapes';
@@ -56,7 +56,7 @@ const MarketingAnnouncementBanner = ({announcement, marginBottom}) => {
 
   const onDismiss = () => {
     const bannerKey = getLocalStorageBannerKey();
-    trySetLocalStorage(bannerKey, false);
+    utils.trySetLocalStorage(bannerKey, false);
     setDisplayBanner(false);
     logEvent('close_button_clicked');
   };
@@ -81,7 +81,7 @@ const MarketingAnnouncementBanner = ({announcement, marginBottom}) => {
   // has changed.
   useEffect(() => {
     const bannerKey = getLocalStorageBannerKey();
-    const displayBannerValue = tryGetLocalStorage(bannerKey, true);
+    const displayBannerValue = utils.tryGetLocalStorage(bannerKey, true);
     setDisplayBanner(displayBannerValue !== 'false');
   }, [getLocalStorageBannerKey]);
 

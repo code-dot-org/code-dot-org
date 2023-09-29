@@ -1,5 +1,5 @@
 import {dropletGlobalConfigBlocks} from '../../../dropletUtils';
-import * as utils from '../../../utils';
+import utils from '../../../utils';
 
 /*
  * Note: These are defined to match the state.mode of the interpreter. The

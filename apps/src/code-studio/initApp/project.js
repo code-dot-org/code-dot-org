@@ -1,6 +1,6 @@
 import $ from 'jquery';
 import msg from '@cdo/locale';
-import * as utils from '../../utils';
+import utils from '../../utils';
 import {CIPHER, ALPHABET} from '../../constants';
 import {files as filesApi} from '../../clientApi';
 import firehoseClient from '@cdo/apps/lib/util/firehose';
@@ -22,7 +22,7 @@ let projectChangedWhileSaveInProgress = false;
 
 import showProjectAdmin from '../showProjectAdmin';
 import header from '../header';
-import {queryParams, hasQueryParam, updateQueryParam} from '../utils';
+import codeStudioUtils from '../utils';
 import {getStore} from '../../redux';
 import {
   workspaceAlertTypes,
@@ -1889,7 +1889,7 @@ let projects = {
     const sourcesApi = this.getSourcesApi_();
     if (sourcesApi && channelData.migratedToS3) {
       var url = current.id + '/' + SOURCE_FILE;
-      const version = queryParams('version');
+      const version = codeStudioUtils.queryParams('version');
       if (version) {
         url += '?version=' + version;
       }
@@ -2019,14 +2019,14 @@ function fetchAbuseScoreAndPrivacyViolations(project) {
  * Allow setting Maker APIs enabled / disabled via URL parameters.
  */
 function setMakerAPIsStatusFromQueryParams() {
-  if (hasQueryParam('enableMaker')) {
+  if (codeStudioUtils.hasQueryParam('enableMaker')) {
     currentSources.makerAPIsEnabled = CP_API;
-    updateQueryParam('enableMaker', undefined, true);
+    codeStudioUtils.updateQueryParam('enableMaker', undefined, true);
   }
 
-  if (hasQueryParam('disableMaker')) {
+  if (codeStudioUtils.hasQueryParam('disableMaker')) {
     currentSources.makerAPIsEnabled = null;
-    updateQueryParam('disableMaker', undefined, true);
+    codeStudioUtils.updateQueryParam('disableMaker', undefined, true);
   }
 }
 
@@ -2059,7 +2059,10 @@ function executeCallback(callback, ...args) {
  */
 function isEditable() {
   return (
-    current && current.isOwner && !current.frozen && !queryParams('version')
+    current &&
+    current.isOwner &&
+    !current.frozen &&
+    !codeStudioUtils.queryParams('version')
   );
 }
 

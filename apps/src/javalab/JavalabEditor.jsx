@@ -42,7 +42,7 @@ import {
   isJavaFile,
 } from './JavalabFileHelper';
 import {darkMode, lightMode} from './editorThemes';
-import {hasQueryParam} from '@cdo/apps/code-studio/utils';
+import codeStudioUtils from '@cdo/apps/code-studio/utils';
 import JavalabEditorDialogManager from './JavalabEditorDialogManager';
 import {JavalabEditorDialog} from './types';
 import JavalabEditorHeader from './JavalabEditorHeader';
@@ -659,7 +659,9 @@ class JavalabEditor extends React.Component {
     } = this.props;
 
     const showOpenCodeReviewWarning =
-      isReadOnlyWorkspace && hasOpenCodeReview && !hasQueryParam('version');
+      isReadOnlyWorkspace &&
+      hasOpenCodeReview &&
+      !codeStudioUtils.hasQueryParam('version');
 
     let menuStyle = {
       display: this.state.showMenu ? 'block' : 'none',

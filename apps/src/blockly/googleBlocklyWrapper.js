@@ -12,7 +12,7 @@ import {
   Renderers,
 } from '@cdo/apps/blockly/constants';
 import styleConstants from '@cdo/apps/styleConstants';
-import * as utils from '@cdo/apps/utils';
+import utils from '@cdo/apps/utils';
 import initializeCdoConstants from './addons/cdoConstants';
 import CdoFieldAngle from './addons/cdoFieldAngle';
 import CdoFieldButton from './addons/cdoFieldButton';

@@ -223,3 +223,8 @@ export function getSuccessDialog(appOptions) {
 
   return <LegacySuccessDialog title={title} body={body} />;
 }
+
+// default exports for using sinon.stub() in tests
+export default {
+  processResults,
+};

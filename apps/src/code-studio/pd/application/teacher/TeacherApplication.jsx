@@ -10,7 +10,7 @@ import AdditionalDemographicInformation from './AdditionalDemographicInformation
 import AdministratorInformation from './AdministratorInformation';
 import ImplementationPlan from './ImplementationPlan';
 import ProfessionalLearningProgramRequirements from './ProfessionalLearningProgramRequirements';
-import {reload} from '@cdo/apps/utils';
+import utils from '@cdo/apps/utils';
 import analyticsReporter from '@cdo/apps/lib/util/AnalyticsReporter';
 import {EVENTS} from '@cdo/apps/lib/util/AnalyticsConstants';
 
@@ -66,7 +66,7 @@ const TeacherApplication = props => {
 
   const onSuccessfulSubmit = () => {
     // Let the server display a confirmation page as appropriate
-    reload();
+    utils.reload();
 
     analyticsReporter.sendEvent(EVENTS.APPLICATION_SUBMITTED_EVENT);
   };

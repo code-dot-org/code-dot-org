@@ -4,14 +4,14 @@
  */
 import {trySetSessionStorage} from '../utils';
 import {mergeActivityResult} from './activityUtils';
-import {queryParams} from './utils';
+import codeStudioUtils from './utils';
 
 // Note: sessionStorage is not shared between tabs.
 var sessionStorage = window.sessionStorage;
 
 const clientState = {};
 
-clientState.queryParams = queryParams;
+clientState.queryParams = (...args) => codeStudioUtils.queryParams(...args);
 
 /**
  * Number of days before client state cookie expires.

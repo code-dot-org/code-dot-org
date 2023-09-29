@@ -6,12 +6,7 @@ import {
   setUserId,
 } from '@amplitude/analytics-browser';
 import logToCloud from '@cdo/apps/logToCloud';
-import {
-  getEnvironment,
-  isProductionEnvironment,
-  isStagingEnvironment,
-  isDevelopmentEnvironment,
-} from '../../utils';
+import utils from '../../utils';
 
 // A flag that can be toggled to send events regardless of environment
 const ALWAYS_SEND = false;
@@ -61,7 +56,7 @@ class AnalyticsReporter {
   }
 
   log(message) {
-    if (isDevelopmentEnvironment() && !IN_UNIT_TEST) {
+    if (utils.isStagingEnvironment() && !IN_UNIT_TEST) {
       console.log(`[AMPLITUDE ANALYTICS EVENT]: ${message}`);
     }
   }
@@ -71,10 +66,10 @@ class AnalyticsReporter {
     if (!userId) {
       return userIdString;
     }
-    if (isProductionEnvironment()) {
+    if (utils.isProductionEnvironment()) {
       return userIdString.padStart(5, '0');
     } else {
-      const environment = getEnvironment();
+      const environment = utils.getEnvironment();
       return `${environment}-${userIdString}`;
     }
   }
@@ -89,7 +84,7 @@ class AnalyticsReporter {
     if (alwaysPut) {
       return true;
     }
-    if (isProductionEnvironment() || isStagingEnvironment()) {
+    if (utils.isProductionEnvironment() || utils.isStagingEnvironment()) {
       return true;
     }
     return false;

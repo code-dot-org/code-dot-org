@@ -41,7 +41,7 @@ import ArtistVisualizationColumn from './ArtistVisualizationColumn';
 import {xFromPosition, yFromPosition, createEvent} from '../utils';
 import Slider from '../slider';
 import _ from 'lodash';
-import dropletConfig from './dropletConfig';
+import * as dropletConfig from './dropletConfig';
 import JSInterpreter from '../lib/tools/jsinterpreter/JSInterpreter';
 import JsInterpreterLogger from '../JsInterpreterLogger';
 import {

@@ -47,3 +47,8 @@ export const textResponsePropType = PropTypes.shape({
   studentName: PropTypes.string.isRequired,
   url: PropTypes.string.isRequired,
 });
+
+// export default permits sinon.stub() in tests
+export default {
+  loadTextResponsesFromServer,
+};

@@ -20,8 +20,8 @@ import project, {getCurrentId} from '@cdo/apps/code-studio/initApp/project';
 import {getStore} from '../redux';
 import {TestResults} from '../constants';
 import {FatalErrorType} from '@cdo/apps/weblab/constants';
-import {queryParams} from '@cdo/apps/code-studio/utils';
-import {reload} from '../utils';
+import codeStudioUtils from '@cdo/apps/code-studio/utils';
+import utils from '../utils';
 import firehoseClient from '../lib/util/firehose';
 import logToCloud from '../logToCloud';
 
@@ -92,7 +92,7 @@ WebLab.prototype.init = function (config) {
 
   this.skin = config.skin;
   this.level = config.level;
-  this.suppliedFilesVersionId = queryParams('version');
+  this.suppliedFilesVersionId = codeStudioUtils.queryParams('version');
   this.initialFilesVersionId = this.suppliedFilesVersionId;
   this.disallowedHtmlTags = config.disallowedHtmlTags;
   getStore().dispatch(actions.changeMaxProjectCapacity(MAX_PROJECT_CAPACITY));
@@ -134,7 +134,7 @@ WebLab.prototype.init = function (config) {
           // The project has been reset, reload() the page now - don't resolve
           // the promise, because that will lead to a project.save() that we
           // don't want or need in this scenario.
-          reload();
+          utils.reload();
           reject(
             new Error(
               'deleteAll succeeded, weblab handling reload to avoid saving'
@@ -585,7 +585,7 @@ WebLab.prototype.openFatalErrorDialog = function (
         this.openFatalErrorDialog(err.message, FatalErrorType.ResetFailure);
       } else {
         this.openResetSuccessDialog();
-        reload();
+        utils.reload();
       }
     });
   };

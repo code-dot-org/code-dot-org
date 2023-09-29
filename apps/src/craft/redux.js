@@ -1,4 +1,4 @@
-import {getStore} from '@cdo/apps/redux';
+import redux from '@cdo/apps/redux';
 
 /**
  * Initial State
@@ -42,18 +42,20 @@ function craft(state = initialState, action) {
   return state;
 }
 
-export default {
-  craft,
-};
-
 /**
  * Helpers
  */
 
 export function openPlayerSelectionDialog(onSelectedCallback) {
-  getStore().dispatch(setPlayerSelectionDialog(true, onSelectedCallback));
+  redux.getStore().dispatch(setPlayerSelectionDialog(true, onSelectedCallback));
 }
 
 export function closePlayerSelectionDialog() {
-  getStore().dispatch(setPlayerSelectionDialog(false));
+  redux.getStore().dispatch(setPlayerSelectionDialog(false));
 }
+
+export default {
+  closePlayerSelectionDialog,
+  craft,
+  openPlayerSelectionDialog,
+};

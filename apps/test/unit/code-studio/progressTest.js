@@ -4,7 +4,7 @@ import assert from 'assert';
 import sinon from 'sinon';
 import queryString from 'query-string';
 
-import * as viewAsRedux from '@cdo/apps/code-studio/viewAsRedux';
+import viewAsRedux, {ViewType} from '@cdo/apps/code-studio/viewAsRedux';
 import {__testonly__} from '@cdo/apps/code-studio/progressReduxSelectors';
 import {initViewAs} from '@cdo/apps/code-studio/progress';
 
@@ -58,32 +58,32 @@ describe('initViewAs', function () {
 
   it('defaults to Participant', function () {
     initViewAs(mockStore, null);
-    assert(mockSetViewType.calledWith(viewAsRedux.ViewType.Participant));
+    assert(mockSetViewType.calledWith(ViewType.Participant));
   });
 
   it('defaults to instructor if current user is instructor for course', function () {
     initViewAs(mockStore, true, true);
-    assert(mockSetViewType.calledWith(viewAsRedux.ViewType.Instructor));
+    assert(mockSetViewType.calledWith(ViewType.Instructor));
   });
 
   it('prevents overriding default if current user is not an instructor', function () {
-    mockQueryStringParse.returns({viewAs: viewAsRedux.ViewType.Instructor});
+    mockQueryStringParse.returns({viewAs: ViewType.Instructor});
     initViewAs(mockStore, true, false);
-    assert(mockSetViewType.calledWith(viewAsRedux.ViewType.Participant));
+    assert(mockSetViewType.calledWith(ViewType.Participant));
   });
 
   it('allows overriding default if current user is not a student', function () {
-    mockQueryStringParse.returns({viewAs: viewAsRedux.ViewType.Instructor});
+    mockQueryStringParse.returns({viewAs: ViewType.Instructor});
 
     initViewAs(mockStore, null, false);
-    assert(mockSetViewType.calledWith(viewAsRedux.ViewType.Instructor));
+    assert(mockSetViewType.calledWith(ViewType.Instructor));
 
     initViewAs(mockStore, true, true);
-    assert(mockSetViewType.calledWith(viewAsRedux.ViewType.Instructor));
+    assert(mockSetViewType.calledWith(ViewType.Instructor));
 
-    mockQueryStringParse.returns({viewAs: viewAsRedux.ViewType.Participant});
+    mockQueryStringParse.returns({viewAs: ViewType.Participant});
 
     initViewAs(mockStore, true, true);
-    assert(mockSetViewType.calledWith(viewAsRedux.ViewType.Participant));
+    assert(mockSetViewType.calledWith(ViewType.Participant));
   });
 });

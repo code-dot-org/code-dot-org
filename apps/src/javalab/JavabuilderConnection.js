@@ -7,10 +7,10 @@ import {
   CsaViewMode,
   JavabuilderLockoutType,
 } from './constants';
-import {handleException} from './javabuilderExceptionHandler';
+import exceptionHandler from './javabuilderExceptionHandler';
 import project from '@cdo/apps/code-studio/initApp/project';
 import javalabMsg from '@cdo/javalab/locale';
-import {onTestResult} from './testResultHandler';
+import resultHandler from './testResultHandler';
 import {SignInState} from '@cdo/apps/templates/currentUserRedux';
 import logToCloud from '@cdo/apps/logToCloud';
 import {getUnsupportedMiniAppMessage} from './utils';
@@ -293,7 +293,11 @@ export default class JavabuilderConnection {
         this.onOutputMessage(data.value);
         break;
       case WebSocketMessageType.TEST_RESULT:
-        testResult = onTestResult(data, this.onOutputMessage, this.miniAppType);
+        testResult = resultHandler.onTestResult(
+          data,
+          this.onOutputMessage,
+          this.miniAppType
+        );
         if (testResult.isValidation) {
           this.sawValidationTests = true;
           if (!testResult.success) {
@@ -318,7 +322,11 @@ export default class JavabuilderConnection {
         break;
       case WebSocketMessageType.EXCEPTION:
         this.onNewlineMessage();
-        handleException(data, this.onOutputMessage, this.miniAppType);
+        exceptionHandler.handleException(
+          data,
+          this.onOutputMessage,
+          this.miniAppType
+        );
         this.onNewlineMessage();
         break;
       case WebSocketMessageType.DEBUG:

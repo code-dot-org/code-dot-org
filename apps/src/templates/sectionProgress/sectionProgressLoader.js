@@ -1,31 +1,22 @@
 import {ViewType} from './sectionProgressConstants';
-import {
-  startLoadingProgress,
-  setCurrentView,
-  finishLoadingProgress,
-  addDataByUnit,
-  startRefreshingProgress,
-  finishRefreshingProgress,
-} from './sectionProgressRedux';
-import {
-  processedLevel,
-  processServerSectionProgress,
-  lessonProgressForSection,
-} from '@cdo/apps/templates/progress/progressHelpers';
+import progressRedux from './sectionProgressRedux';
+import progressHelpers from '@cdo/apps/templates/progress/progressHelpers';
 import {
   fetchStandardsCoveredForScript,
   fetchStudentLevelScores,
 } from '@cdo/apps/templates/sectionProgress/standards/sectionStandardsProgressRedux';
-import {getStore} from '@cdo/apps/redux';
+import redux from '@cdo/apps/redux';
 import _ from 'lodash';
 import logToCloud from '@cdo/apps/logToCloud';
 
 const NUM_STUDENTS_PER_PAGE = 20;
 
 export function loadScriptProgress(scriptId, sectionId) {
-  const state = getStore().getState().sectionProgress;
-  const sectionData = getStore().getState().teacherSections.sections[sectionId];
-  const students = getStore().getState().teacherSections.selectedStudents;
+  const state = redux.getStore().getState().sectionProgress;
+  const sectionData = redux.getStore().getState().teacherSections.sections[
+    sectionId
+  ];
+  const students = redux.getStore().getState().teacherSections.selectedStudents;
 
   // TODO: Save Standards data in a way that allows us
   // not to reload all data to get correct standards data
@@ -38,9 +29,9 @@ export function loadScriptProgress(scriptId, sectionId) {
       return;
     }
     // Continue displaying the UI while updating the data
-    getStore().dispatch(startRefreshingProgress());
+    redux.getStore().dispatch(progressRedux.startRefreshingProgress());
   } else {
-    getStore().dispatch(startLoadingProgress());
+    redux.getStore().dispatch(progressRedux.startLoadingProgress());
     logToCloud.addPageAction(logToCloud.PageAction.LoadScriptProgressStarted, {
       sectionId,
       scriptId,
@@ -71,7 +62,9 @@ export function loadScriptProgress(scriptId, sectionId) {
         state.currentView === ViewType.STANDARDS &&
         !scriptData.hasStandards
       ) {
-        getStore().dispatch(setCurrentView(ViewType.SUMMARY));
+        redux
+          .getStore()
+          .dispatch(progressRedux.setCurrentView(ViewType.SUMMARY));
       }
     });
 
@@ -85,7 +78,9 @@ export function loadScriptProgress(scriptId, sectionId) {
         sectionProgress.studentLevelProgressByUnit = {
           [scriptId]: {
             ...sectionProgress.studentLevelProgressByUnit[scriptId],
-            ...processServerSectionProgress(data.student_progress),
+            ...progressHelpers.processServerSectionProgress(
+              data.student_progress
+            ),
           },
         };
         sectionProgress.studentLastUpdateByUnit = {
@@ -107,18 +102,18 @@ export function loadScriptProgress(scriptId, sectionId) {
 
     sectionProgress.studentLessonProgressByUnit = {
       ...sectionProgress.studentLessonProgressByUnit,
-      [scriptId]: lessonProgressForSection(
+      [scriptId]: progressHelpers.lessonProgressForSection(
         sectionProgress.studentLevelProgressByUnit[scriptId],
         sectionProgress.unitDataByUnit[scriptId].lessons
       ),
     };
-    getStore().dispatch(addDataByUnit(sectionProgress));
-    getStore().dispatch(finishLoadingProgress());
-    getStore().dispatch(finishRefreshingProgress());
+    redux.getStore().dispatch(progressRedux.addDataByUnit(sectionProgress));
+    redux.getStore().dispatch(progressRedux.finishLoadingProgress());
+    redux.getStore().dispatch(progressRedux.finishRefreshingProgress());
 
     if (sectionProgress.unitDataByUnit[scriptId].hasStandards) {
-      getStore().dispatch(fetchStandardsCoveredForScript(scriptId));
-      getStore().dispatch(fetchStudentLevelScores(scriptId, sectionId));
+      redux.getStore().dispatch(fetchStandardsCoveredForScript(scriptId));
+      redux.getStore().dispatch(fetchStudentLevelScores(scriptId, sectionId));
     }
   });
 }
@@ -155,6 +150,11 @@ function postProcessLessonData(lesson, includeBonusLevels) {
     : lesson.levels.filter(level => !level.bonus);
   return {
     ...lesson,
-    levels: levels.map(level => processedLevel(level)),
+    levels: levels.map(level => progressHelpers.processedLevel(level)),
   };
 }
+
+// export default for sinon.stub() in tests
+export default {
+  loadScriptProgress,
+};

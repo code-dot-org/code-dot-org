@@ -3,7 +3,7 @@ import {shallow} from 'enzyme';
 import {expect} from '../../../util/reconfiguredChai';
 import sinon from 'sinon';
 import SaveBar from '@cdo/apps/lib/levelbuilder/SaveBar';
-import * as utils from '@cdo/apps/utils';
+import utils from '@cdo/apps/utils';
 
 describe('SaveBar', () => {
   let handleSave;

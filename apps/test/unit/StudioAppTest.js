@@ -11,7 +11,7 @@ import Sounds from '@cdo/apps/Sounds';
 import {assets as assetsApi} from '@cdo/apps/clientApi';
 import {listStore} from '@cdo/apps/code-studio/assets';
 import commonReducers from '@cdo/apps/redux/commonReducers';
-import * as redux from '@cdo/apps/redux';
+import redux from '@cdo/apps/redux';
 import project from '@cdo/apps/code-studio/initApp/project';
 import {
   sandboxDocumentBody,
@@ -20,7 +20,7 @@ import {
 } from '../util/testUtils';
 import sampleLibrary from './code-studio/components/libraries/sampleLibrary.json';
 import {createLibraryClosure} from '@cdo/apps/code-studio/components/libraries/libraryParser';
-import * as utils from '@cdo/apps/utils';
+import utils from '@cdo/apps/utils';
 import {resetIdleTime} from '@cdo/apps/redux/studioAppActivity';
 
 describe('StudioApp', () => {

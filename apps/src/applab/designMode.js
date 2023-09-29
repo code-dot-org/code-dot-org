@@ -16,7 +16,7 @@ import {singleton as studioApp} from '../StudioApp';
 import {KeyCodes, NOTIFICATION_ALERT_TYPE} from '../constants';
 import * as applabConstants from './constants';
 import sanitizeHtml from './sanitizeHtml';
-import * as utils from '../utils';
+import utils from '../utils';
 import {
   isDraggableContainer,
   snapToGridSize,

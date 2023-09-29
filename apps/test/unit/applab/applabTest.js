@@ -5,7 +5,7 @@ import project from '@cdo/apps/code-studio/initApp/project';
 import commonMsg from '@cdo/locale';
 import applabMsg from '@cdo/applab/locale';
 import * as testUtils from '../../util/testUtils';
-import * as utils from '@cdo/apps/utils';
+import utils from '@cdo/apps/utils';
 import {isOpen as isDebuggerOpen} from '@cdo/apps/lib/tools/jsdebugger/redux';
 import {
   getStore,

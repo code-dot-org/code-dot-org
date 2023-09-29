@@ -3,7 +3,7 @@ import {expect} from '../../../util/reconfiguredChai';
 import {isolateComponent} from 'isolate-react';
 import BorderedCallToAction from '@cdo/apps/templates/studioHomepages/BorderedCallToAction';
 import sinon from 'sinon';
-import * as utils from '@cdo/apps/utils';
+import utils from '@cdo/apps/utils';
 import Button from '@cdo/apps/templates/Button';
 
 describe('BorderedCallToAction', () => {

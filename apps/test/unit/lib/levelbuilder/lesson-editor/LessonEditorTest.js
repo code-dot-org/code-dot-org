@@ -28,7 +28,7 @@ import {sampleActivities, searchOptions} from './activitiesTestData';
 import resourceTestData from './resourceTestData';
 import {Provider} from 'react-redux';
 import sinon from 'sinon';
-import * as utils from '@cdo/apps/utils';
+import utils from '@cdo/apps/utils';
 import _ from 'lodash';
 import {allowConsoleWarnings} from '../../../../util/throwOnConsole';
 

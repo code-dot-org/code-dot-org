@@ -1,7 +1,7 @@
 import {expect} from '../../../util/reconfiguredChai';
 import analyticsReporter from '@cdo/apps/lib/util/AnalyticsReporter';
 import {reportTeacherReviewingStudentNonLabLevel} from '@cdo/apps/lib/util/analyticsUtils';
-import * as utils from '@cdo/apps/code-studio/utils';
+import utils from '@cdo/apps/code-studio/utils';
 import sinon from 'sinon';
 
 describe('AnalyticsUtils', () => {

@@ -3,7 +3,7 @@ import CodeReviewDataApi, {
   timelineElementType,
 } from '@cdo/apps/templates/instructions/codeReviewV2/CodeReviewDataApi';
 import sinon from 'sinon';
-import * as utils from '@cdo/apps/utils';
+import utils from '@cdo/apps/utils';
 
 const fakeCommitData = [
   {

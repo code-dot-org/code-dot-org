@@ -19,10 +19,10 @@ import LegacyDialog from '@cdo/apps/code-studio/LegacyDialog';
 import videos from '@cdo/apps/code-studio/videos';
 import {lockContainedLevelAnswers} from '@cdo/apps/code-studio/levels/codeStudioLevels';
 import queryString from 'query-string';
-import * as imageUtils from '@cdo/apps/imageUtils';
+import imageUtils from '@cdo/apps/imageUtils';
 import trackEvent from '../../util/trackEvent';
 import msg from '@cdo/locale';
-import {queryParams} from '@cdo/apps/code-studio/utils';
+import codeStudioUtils from '@cdo/apps/code-studio/utils';
 import analyticsReporter from '@cdo/apps/lib/util/AnalyticsReporter';
 import {EVENTS} from '@cdo/apps/lib/util/AnalyticsConstants';
 
@@ -62,13 +62,13 @@ export function setupApp(appOptions) {
       createCallouts(this.level.callouts || this.callouts);
       const isTeacher =
         getStore().getState().currentUser?.userType === 'teacher';
-      const isViewingStudent = !!queryParams('user_id');
+      const isViewingStudent = !!codeStudioUtils.queryParams('user_id');
       const teacherViewingStudentWork = isTeacher && isViewingStudent;
       if (teacherViewingStudentWork) {
         analyticsReporter.sendEvent(EVENTS.TEACHER_VIEWING_STUDENT_WORK, {
           unitId: appOptions.serverScriptId,
           levelId: appOptions.serverLevelId,
-          sectionId: queryParams('section_id'),
+          sectionId: codeStudioUtils.queryParams('section_id'),
         });
       }
 

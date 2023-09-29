@@ -1,6 +1,6 @@
 import $ from 'jquery';
 import * as constants from '../constants';
-import * as utils from '../../utils';
+import utils from '../../utils';
 import themeValues from '../themeValues';
 
 // Taken from http://stackoverflow.com/a/3627747/2506748

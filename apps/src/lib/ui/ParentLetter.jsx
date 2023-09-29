@@ -3,7 +3,7 @@ import PropTypes from 'prop-types';
 import {connect} from 'react-redux';
 import {studio, pegasus} from '../util/urlHelpers';
 import {SectionLoginType, EmailLinks} from '../../util/sharedConstants';
-import {queryParams} from '../../code-studio/utils';
+import codeStudioUtils from '../../code-studio/utils';
 import color from '../../util/color';
 import i18n from '@cdo/locale';
 import SafeMarkdown from '@cdo/apps/templates/SafeMarkdown';
@@ -149,7 +149,7 @@ export default connect(state => ({
     state.teacherSections.sections[state.teacherSections.selectedSectionId],
   students: state.teacherSections.selectedStudents,
   teacherName: state.currentUser.userName,
-  studentId: queryParams('studentId'),
+  studentId: codeStudioUtils.queryParams('studentId'),
 }))(ParentLetter);
 
 const Header = ({logoUrl}) => {

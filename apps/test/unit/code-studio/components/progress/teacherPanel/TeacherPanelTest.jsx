@@ -11,10 +11,10 @@ import SelectedStudentInfo from '@cdo/apps/code-studio/components/progress/teach
 import {pageTypes} from '@cdo/apps/templates/teacherDashboard/teacherSectionsRedux';
 import currentUser from '@cdo/apps/templates/currentUserRedux';
 import sinon from 'sinon';
-import * as utils from '@cdo/apps/code-studio/utils';
+import utils from '@cdo/apps/code-studio/utils';
 import {Provider} from 'react-redux';
 import {createStore, combineReducers} from 'redux';
-import * as teacherPanelData from '@cdo/apps/code-studio/components/progress/teacherPanel/teacherPanelData';
+import teacherPanelData from '@cdo/apps/code-studio/components/progress/teacherPanel/teacherPanelData';
 
 const students = [
   {id: 1, name: 'Student 1'},

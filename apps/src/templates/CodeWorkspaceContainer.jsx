@@ -8,7 +8,7 @@ import ReactDOM from 'react-dom';
 import PropTypes from 'prop-types';
 import Radium from 'radium'; // eslint-disable-line no-restricted-imports
 import {connect} from 'react-redux';
-import * as utils from '../utils';
+import utils from '../utils';
 import commonStyles from '../commonStyles';
 
 class CodeWorkspaceContainer extends React.Component {

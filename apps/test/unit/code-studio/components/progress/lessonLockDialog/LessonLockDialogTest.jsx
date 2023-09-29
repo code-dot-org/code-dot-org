@@ -5,7 +5,7 @@ import sinon from 'sinon';
 import {UnconnectedLessonLockDialog as LessonLockDialog} from '@cdo/apps/code-studio/components/progress/lessonLockDialog/LessonLockDialog';
 import {LockStatus} from '@cdo/apps/code-studio/lessonLockRedux';
 import StudentRow from '@cdo/apps/code-studio/components/progress/lessonLockDialog/StudentRow';
-import * as lessonLockDataApi from '@cdo/apps/code-studio/components/progress/lessonLockDialog/LessonLockDataApi';
+import lessonLockDataApi from '@cdo/apps/code-studio/components/progress/lessonLockDialog/LessonLockDataApi';
 import i18n from '@cdo/locale';
 import {
   getStore,

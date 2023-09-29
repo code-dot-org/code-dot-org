@@ -12,7 +12,7 @@ import {unpublishProjectLibrary} from './projectsRedux';
 import PersonalProjectsNameCell from './PersonalProjectsNameCell';
 import Button from '@cdo/apps/templates/Button';
 import BaseDialog from '@cdo/apps/templates/BaseDialog';
-import {reload} from '@cdo/apps/utils';
+import utils from '@cdo/apps/utils';
 
 export const COLUMNS = {
   LIBRARY_NAME: 0,
@@ -210,7 +210,7 @@ class LibraryTable extends React.Component {
             if (error) {
               this.setState({unpublishFailedChannel: rowData.channel});
             } else {
-              reload();
+              utils.reload();
             }
           });
         }}

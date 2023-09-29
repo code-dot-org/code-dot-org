@@ -2,7 +2,7 @@
 import PropTypes from 'prop-types';
 import React, {Component} from 'react';
 import {connect} from 'react-redux';
-import * as utils from '../../../../utils';
+import utils from '../../../../utils';
 import trackEvent from '../../../../util/trackEvent';
 import SetupChecker from '../util/SetupChecker';
 import SafeMarkdown from '@cdo/apps/templates/SafeMarkdown';

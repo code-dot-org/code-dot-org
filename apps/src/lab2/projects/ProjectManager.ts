@@ -13,7 +13,7 @@
 import {SourcesStore} from './SourcesStore';
 import {ChannelsStore} from './ChannelsStore';
 import {Channel, Project, ProjectSources} from '../types';
-import {currentLocation, reload} from '@cdo/apps/utils';
+import utils, {currentLocation} from '@cdo/apps/utils';
 import Lab2MetricsReporter from '../Lab2MetricsReporter';
 import {ValidationError} from '../responseValidators';
 
@@ -330,7 +330,7 @@ export default class ProjectManager {
       // showing the user a dialog before reload.
       this.forceReloading = true;
       Lab2MetricsReporter.logWarning('Conflict on save, reloading page');
-      reload();
+      utils.reload();
     } else {
       // Otherwise, we log the error.
       Lab2MetricsReporter.logError(errorMessage, error);

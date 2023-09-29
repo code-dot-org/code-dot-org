@@ -12,7 +12,7 @@ import {
   BubbleShape,
 } from '@cdo/apps/templates/progress/BubbleFactory';
 import BubbleBadge, {BadgeType} from '@cdo/apps/templates/progress/BubbleBadge';
-import * as utils from '@cdo/apps/utils';
+import utils from '@cdo/apps/utils';
 import {ReviewStates} from '@cdo/apps/templates/feedback/types';
 
 const defaultProps = {

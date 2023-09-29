@@ -5,7 +5,7 @@ import {connect} from 'react-redux';
 import commonMsg from '@cdo/locale';
 import ToggleGroup from '@cdo/apps/templates/ToggleGroup';
 import {ViewType, changeViewType} from '@cdo/apps/code-studio/viewAsRedux';
-import {updateQueryParam} from '@cdo/apps/code-studio/utils';
+import codeStudioUtils from '@cdo/apps/code-studio/utils';
 
 /**
  * Toggle that lets us change between seeing a page as a teacher, or as the
@@ -37,7 +37,7 @@ class ViewAsToggle extends React.Component {
   onChange = viewType => {
     const {changeViewType, logToFirehose} = this.props;
 
-    updateQueryParam('viewAs', viewType);
+    codeStudioUtils.updateQueryParam('viewAs', viewType);
 
     changeViewType(viewType);
 

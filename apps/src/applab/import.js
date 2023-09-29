@@ -183,3 +183,9 @@ export function importScreensAndAssets(projectId, screens, assets) {
     }
   });
 }
+
+// only default exports can be sinon.stub()-ed
+export default {
+  getImportableProject,
+  importScreensAndAssets,
+};

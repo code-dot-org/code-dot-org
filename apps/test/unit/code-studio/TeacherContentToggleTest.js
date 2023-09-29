@@ -7,8 +7,8 @@ import {
   UnconnectedTeacherContentToggle as TeacherContentToggle,
   mapStateToProps,
 } from '@cdo/apps/code-studio/components/TeacherContentToggle';
-import * as progressHelpers from '@cdo/apps/templates/progress/progressHelpers';
-import * as hiddenLessonRedux from '@cdo/apps/code-studio/hiddenLessonRedux';
+import progressHelpers from '@cdo/apps/templates/progress/progressHelpers';
+import hiddenLessonRedux from '@cdo/apps/code-studio/hiddenLessonRedux';
 import {ViewType} from '@cdo/apps/code-studio/viewAsRedux';
 
 describe('TeacherContentToggle', () => {

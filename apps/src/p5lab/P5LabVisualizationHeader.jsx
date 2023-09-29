@@ -10,7 +10,7 @@ import ToggleGroup from '@cdo/apps/templates/ToggleGroup';
 import styleConstants from '@cdo/apps/styleConstants';
 import {allowAnimationMode, countAllowedModes} from './stateQueries';
 import PoemSelector from './poetry/PoemSelector';
-import * as utils from '../utils';
+import utils from '../utils';
 import color from '@cdo/apps/util/color';
 
 /**

@@ -8,7 +8,7 @@ import AddPasswordForm, {
   PASSWORD_TOO_SHORT,
   PASSWORDS_MUST_MATCH,
 } from '@cdo/apps/lib/ui/accounts/AddPasswordForm';
-import * as utils from '@cdo/apps/utils';
+import utils from '@cdo/apps/utils';
 
 describe('AddPasswordForm', () => {
   let wrapper, handleSubmit;

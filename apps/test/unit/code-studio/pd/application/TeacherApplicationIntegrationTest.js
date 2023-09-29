@@ -4,7 +4,7 @@ import {mount} from 'enzyme';
 import sinon from 'sinon';
 import {PageLabels} from '@cdo/apps/generated/pd/teacherApplicationConstants';
 import TeacherApplication from '@cdo/apps/code-studio/pd/application/teacher/TeacherApplication';
-import * as utils from '@cdo/apps/utils';
+import utils from '@cdo/apps/utils';
 import $ from 'jquery';
 import FindYourRegion from '../../../../../src/code-studio/pd/application/teacher/FindYourRegion';
 

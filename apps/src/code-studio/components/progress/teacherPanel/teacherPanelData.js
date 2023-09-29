@@ -1,7 +1,7 @@
-import {queryParams} from '@cdo/apps/code-studio/utils';
+import codeStudioUtils from '@cdo/apps/code-studio/utils';
 
 export const getStudentsForSection = async () => {
-  const sectionId = queryParams('section_id');
+  const sectionId = codeStudioUtils.queryParams('section_id');
 
   let request = '/api/teacher_panel_section';
   if (sectionId) {
@@ -41,4 +41,9 @@ export const queryLockStatus = async scriptId => {
   } catch (err) {
     console.log(err);
   }
+};
+
+export default {
+  getStudentsForSection,
+  queryLockStatus,
 };

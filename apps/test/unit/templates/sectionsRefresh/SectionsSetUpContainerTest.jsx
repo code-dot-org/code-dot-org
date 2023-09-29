@@ -3,10 +3,14 @@ import {shallow} from 'enzyme';
 import {expect} from '../../../util/reconfiguredChai';
 import SectionsSetUpContainer from '@cdo/apps/templates/sectionsRefresh/SectionsSetUpContainer';
 import sinon from 'sinon';
-import * as utils from '@cdo/apps/code-studio/utils';
-import * as windowUtils from '@cdo/apps/utils';
+import utils from '@cdo/apps/code-studio/utils';
+import windowUtils from '@cdo/apps/utils';
 
 describe('SectionsSetUpContainer', () => {
+  afterEach(() => {
+    sinon.restore();
+  });
+
   it('renders an initial set up section form', () => {
     const wrapper = shallow(<SectionsSetUpContainer />);
 
@@ -77,8 +81,6 @@ describe('SectionsSetUpContainer', () => {
       .simulate('click', {preventDefault: () => {}});
 
     expect(reportSpy).to.have.been.called.once;
-
-    sinon.restore();
   });
 
   it('makes an ajax request when save is clicked', async () => {
@@ -108,8 +110,6 @@ describe('SectionsSetUpContainer', () => {
     await new Promise(resolve => setTimeout(resolve, 0));
     expect(navigateToHrefSpy).to.have.been.called.once;
     expect(navigateToHrefSpy.getCall(0).args[0]).to.include('/home');
-
-    sinon.restore();
   });
 
   it('appends showSectionCreationDialog to url if isUsersFirstSection is true', async () => {
@@ -141,8 +141,6 @@ describe('SectionsSetUpContainer', () => {
     expect(navigateToHrefSpy.getCall(0).args[0]).to.include(
       '/home?showSectionCreationDialog=true'
     );
-
-    sinon.restore();
   });
 
   it('passes participantType and loginType to ajax request when save is clicked', () => {
@@ -175,8 +173,6 @@ describe('SectionsSetUpContainer', () => {
     const fetchBody = JSON.parse(fetchSpy.getCall(0).args[1].body);
     expect(fetchBody.login_type).to.equal('word');
     expect(fetchBody.participant_type).to.equal('student');
-
-    sinon.restore();
   });
 
   it('passes url attribute to make a new section if save and create new is clicked', () => {
@@ -204,7 +200,5 @@ describe('SectionsSetUpContainer', () => {
       .simulate('click', {preventDefault: () => {}});
 
     expect(fetchSpy).to.have.been.called.once;
-
-    sinon.restore();
   });
 });

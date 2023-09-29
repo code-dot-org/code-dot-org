@@ -1,4 +1,4 @@
-import * as utils from '../utils';
+import utils from '../utils';
 import {
   ICON_PREFIX,
   ICON_PREFIX_REGEX,

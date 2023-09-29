@@ -286,3 +286,6 @@ function isHiddenForSection(state, sectionId, itemId, bySectionKey) {
   const bySection = state.get(bySectionKey);
   return !!bySection.getIn([sectionId.toString(), itemId.toString()]);
 }
+
+// for sinon.stub to work, we need these as default exports
+reducer.isLessonHiddenForSection = isLessonHiddenForSection;

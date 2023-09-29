@@ -1,6 +1,6 @@
 import {expect} from '../../../util/reconfiguredChai';
 import analyticsReporter from '@cdo/apps/lib/util/AnalyticsReporter';
-import * as utils from '@cdo/apps/utils';
+import utils from '@cdo/apps/utils';
 import {stub} from 'sinon';
 
 describe('AnalyticsReporter', () => {

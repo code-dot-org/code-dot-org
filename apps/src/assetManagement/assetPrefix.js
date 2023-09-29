@@ -1,5 +1,7 @@
-import {unicode} from '@cdo/apps/code-studio/components/icons';
-import {getStore} from '@cdo/apps/redux';
+import icons from '@cdo/apps/code-studio/components/icons';
+import redux from '@cdo/apps/redux';
+
+const unicode = icons.unicode;
 
 // For proxying non-https assets
 const MEDIA_PROXY = '//' + location.host + '/media?u=';
@@ -83,7 +85,7 @@ export function fixPath(filename) {
     return filename.replace(SOUND_PREFIX, soundPathPrefix);
   }
 
-  const state = getStore().getState();
+  const state = redux.getStore().getState();
 
   // If a curriculum level is remixed, any images that were copied from a starter asset
   // image contains 'image://' in its filenmae.

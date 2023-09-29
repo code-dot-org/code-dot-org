@@ -8,7 +8,7 @@ import Button from '@cdo/apps/templates/Button';
 import AgeDropdown from '@cdo/apps/templates/AgeDropdown';
 import {SignInState} from '@cdo/apps/templates/currentUserRedux';
 import i18n from '@cdo/locale';
-import {reload} from '@cdo/apps/utils';
+import utils from '@cdo/apps/utils';
 import {environmentSpecificCookieName} from '@cdo/apps/code-studio/utils';
 import {pegasus} from '@cdo/apps/lib/util/urlHelpers';
 
@@ -51,7 +51,7 @@ class SignInOrAgeDialog extends Component {
     const cookieName = environmentSpecificCookieName('storage_id');
     if (cookies.get(cookieName)) {
       cookies.remove(cookieName, {path: '/', domain: '.code.org'});
-      reload();
+      utils.reload();
     } else {
       this.setState({open: false});
     }

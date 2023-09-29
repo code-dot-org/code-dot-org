@@ -1,6 +1,6 @@
 /** @file The maestro! Helper that knows which music tracks can be played, and
  *        which one is playing now, and selects and plays them appropriately. */
-import * as utils from './utils';
+import utils from './utils';
 
 import _ from 'lodash';
 

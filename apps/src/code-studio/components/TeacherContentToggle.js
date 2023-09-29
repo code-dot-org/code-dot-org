@@ -4,8 +4,8 @@ import PropTypes from 'prop-types';
 import Radium from 'radium'; // eslint-disable-line no-restricted-imports
 import {connect} from 'react-redux';
 import {ViewType} from '../viewAsRedux';
-import {lessonIsLockedForAllStudents} from '@cdo/apps/templates/progress/progressHelpers';
-import {isLessonHiddenForSection} from '../hiddenLessonRedux';
+import progressHelpers from '@cdo/apps/templates/progress/progressHelpers';
+import hiddenLessonRedux from '../hiddenLessonRedux';
 
 /**
  * When viewing a puzzle, we want teachers to be able to toggle between what the
@@ -130,8 +130,11 @@ export const mapStateToProps = state => {
   if (viewAs === ViewType.Participant) {
     const {selectedSectionId} = state.teacherSections;
 
-    isLockedLesson = lessonIsLockedForAllStudents(currentLessonId, state);
-    isHiddenLesson = isLessonHiddenForSection(
+    isLockedLesson = progressHelpers.lessonIsLockedForAllStudents(
+      currentLessonId,
+      state
+    );
+    isHiddenLesson = hiddenLessonRedux.isLessonHiddenForSection(
       state.hiddenLesson,
       selectedSectionId,
       currentLessonId

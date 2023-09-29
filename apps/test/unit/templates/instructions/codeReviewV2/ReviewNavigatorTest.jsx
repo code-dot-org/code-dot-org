@@ -6,7 +6,7 @@ import DropdownButton from '@cdo/apps/templates/DropdownButton';
 import Button from '@cdo/apps/templates/Button';
 import javalabMsg from '@cdo/javalab/locale';
 import sinon from 'sinon';
-import * as utils from '@cdo/apps/utils';
+import utils from '@cdo/apps/utils';
 
 const DEFAULT_PROPS = {
   viewPeerList: true,

@@ -1,7 +1,7 @@
 import sinon from 'sinon';
 import {expect} from '../util/reconfiguredChai';
 
-import * as utils from '@cdo/apps/utils';
+import utils from '@cdo/apps/utils';
 import AuthoredHints from '@cdo/apps/authoredHints';
 import authoredHintsReducer from '@cdo/apps/redux/authoredHints';
 import {TestResults} from '@cdo/apps/constants';

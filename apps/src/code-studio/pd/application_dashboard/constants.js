@@ -41,6 +41,8 @@ export const StatusColors = {
   },
 };
 
+export const AllPartnersValue = 'all';
+
 /**
  * Statuses that represent "finalized" applications
  */

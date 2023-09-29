@@ -7,7 +7,7 @@ import QuickAssignTable from './QuickAssignTable';
 import QuickAssignTableHocPl from './QuickAssignTableHocPl';
 import CurriculumQuickAssignTopRow from './CurriculumQuickAssignTopRow';
 import VersionUnitDropdowns from './VersionUnitDropdowns';
-import {queryParams} from '@cdo/apps/code-studio/utils';
+import codeStudioUtils from '@cdo/apps/code-studio/utils';
 import {
   CourseOfferingCurriculumTypes as curriculumTypes,
   ParticipantAudience,
@@ -34,7 +34,7 @@ export default function CurriculumQuickAssign({
   const [selectedCourseOffering, setSelectedCourseOffering] = useState();
 
   const participantType = isNewSection
-    ? queryParams('participantType')
+    ? codeStudioUtils.queryParams('participantType')
     : initialParticipantType;
 
   const showPlOfferings = participantType !== ParticipantAudience.student;

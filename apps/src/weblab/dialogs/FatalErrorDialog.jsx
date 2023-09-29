@@ -6,7 +6,7 @@ import StylizedBaseDialog, {
   FooterButton,
 } from '@cdo/apps/componentLibrary/StylizedBaseDialog';
 import SupportArticleMarkdown from '@cdo/apps/weblab/SupportArticleMarkdown';
-import {reload} from '@cdo/apps/utils';
+import utils from '@cdo/apps/utils';
 
 export default function FatalErrorDialog({
   isOpen,
@@ -25,7 +25,7 @@ export default function FatalErrorDialog({
   const footerButtons = [
     <FooterButton
       text={commonI18n.tryAgain()}
-      onClick={reload}
+      onClick={utils.reload}
       key="cancel"
       type="cancel"
     />,

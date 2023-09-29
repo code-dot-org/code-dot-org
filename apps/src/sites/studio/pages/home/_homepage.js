@@ -16,7 +16,7 @@ import {
 } from '@cdo/apps/templates/teacherDashboard/teacherSectionsRedux';
 import currentUser from '@cdo/apps/templates/currentUserRedux';
 import {initializeHiddenScripts} from '@cdo/apps/code-studio/hiddenLessonRedux';
-import {queryParams, updateQueryParam} from '@cdo/apps/code-studio/utils';
+import codeStudioUtils from '@cdo/apps/code-studio/utils';
 import locales, {setLocaleCode} from '@cdo/apps/redux/localesRedux';
 import mapboxReducer, {setMapboxAccessToken} from '@cdo/apps/redux/mapbox';
 
@@ -52,22 +52,22 @@ function showHomepage() {
   let participantType;
   if (query.courseOfferingId) {
     courseOfferingId = parseInt(query.courseOfferingId, 10);
-    updateQueryParam('courseOfferingId', undefined, true);
+    codeStudioUtils.updateQueryParam('courseOfferingId', undefined, true);
   }
   if (query.courseVersionId) {
     courseVersionId = parseInt(query.courseVersionId, 10);
-    updateQueryParam('courseVersionId', undefined, true);
+    codeStudioUtils.updateQueryParam('courseVersionId', undefined, true);
   }
   if (query.unitId) {
     unitId = parseInt(query.unitId, 10);
-    updateQueryParam('unitId', undefined, true);
+    codeStudioUtils.updateQueryParam('unitId', undefined, true);
   }
   if (query.participantType) {
-    participantType = queryParams('participantType');
-    updateQueryParam('participantType', undefined, true);
+    participantType = codeStudioUtils.queryParams('participantType');
+    codeStudioUtils.updateQueryParam('participantType', undefined, true);
   }
   if ((courseOfferingId && courseVersionId) || query.openAddSectionDialog) {
-    updateQueryParam('openAddSectionDialog', undefined, true);
+    codeStudioUtils.updateQueryParam('openAddSectionDialog', undefined, true);
     store.dispatch(
       beginCreatingSection(
         courseOfferingId,

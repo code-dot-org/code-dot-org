@@ -4,7 +4,7 @@ import {expect} from '../../../../util/reconfiguredChai';
 import sinon from 'sinon';
 import {ViewType} from '@cdo/apps/code-studio/viewAsRedux';
 import {UnconnectedLevelDetailsDialog as LevelDetailsDialog} from '@cdo/apps/templates/lessonOverview/activities/LevelDetailsDialog';
-import * as utils from '@cdo/apps/utils';
+import utils from '@cdo/apps/utils';
 import firehoseClient from '@cdo/apps/lib/util/firehose';
 
 describe('LevelDetailsDialogTest', () => {

@@ -511,11 +511,11 @@ class StarterAssetsApi {
   }
 }
 
-const animations = new CollectionsApi('animations');
-const assets = new AssetsApi('assets');
-const starterAssets = new StarterAssetsApi();
-const files = new FilesApi('files');
-const sources = new CollectionsApi('sources');
-const channels = new CollectionsApi('channels');
+export const animations = new CollectionsApi('animations');
+export const assets = new AssetsApi('assets');
+export const starterAssets = new StarterAssetsApi();
+export const files = new FilesApi('files');
+export const sources = new CollectionsApi('sources');
+export const channels = new CollectionsApi('channels');
 
-export {animations, assets, starterAssets, files, sources, channels};
+export default {animations, assets, starterAssets, files, sources, channels};

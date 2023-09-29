@@ -1,7 +1,7 @@
 import React from 'react';
 import i18n from '@cdo/locale';
 import color from '@cdo/apps/util/color';
-import {navigateToHref} from '@cdo/apps/utils';
+import utils from '@cdo/apps/utils';
 import SafeMarkdown from '@cdo/apps/templates/SafeMarkdown';
 import SublevelCard from './SublevelCard';
 import {levelType} from '@cdo/apps/templates/progress/progressTypes';
@@ -10,7 +10,7 @@ export default class BubbleChoice extends React.Component {
   static propTypes = {level: levelType};
 
   goToUrl = url => {
-    navigateToHref(url + location.search);
+    utils.navigateToHref(url + location.search);
   };
 
   renderButtons = () => {

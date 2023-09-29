@@ -1,5 +1,5 @@
 import $ from 'jquery';
-import * as utils from '../../utils';
+import utils from '../../utils';
 import * as elementUtils from './elementUtils';
 import designMode from '../designMode';
 import {themeOptions, DEFAULT_THEME_INDEX} from '../constants';

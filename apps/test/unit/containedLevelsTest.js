@@ -3,8 +3,8 @@ import ReactDOM from 'react-dom';
 import {Provider} from 'react-redux';
 import {assert} from '../util/reconfiguredChai';
 import sinon from 'sinon';
-import * as codeStudioLevels from '@cdo/apps/code-studio/levels/codeStudioLevels';
-import * as callouts from '@cdo/apps/code-studio/callouts';
+import codeStudioLevels from '@cdo/apps/code-studio/levels/codeStudioLevels';
+import callouts from '@cdo/apps/code-studio/callouts';
 import {
   getContainedLevelResultInfo,
   getValidatedResult,

@@ -3,7 +3,7 @@ import {shallow} from 'enzyme';
 import sinon from 'sinon';
 import {expect} from '../../util/deprecatedChai';
 import WidgetContinueButton from '@cdo/apps/templates/WidgetContinueButton';
-import * as dialogHelper from '@cdo/apps/code-studio/levels/dialogHelper';
+import dialogHelper from '@cdo/apps/code-studio/levels/dialogHelper';
 
 describe('WidgetContinueButton', () => {
   beforeEach(() => {

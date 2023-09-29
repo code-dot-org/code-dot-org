@@ -12,7 +12,7 @@ import {
   setUserRoleInCourse,
   CourseRoles,
 } from '@cdo/apps/templates/currentUserRedux';
-import {queryParams} from '@cdo/apps/code-studio/utils';
+import codeStudioUtils from '@cdo/apps/code-studio/utils';
 
 $(document).ready(initPage);
 
@@ -33,7 +33,9 @@ function initPage() {
   }
 
   if (teacherPanelData.is_instructor) {
-    store.dispatch(setViewType(queryParams('viewAs') || ViewType.Instructor));
+    store.dispatch(
+      setViewType(codeStudioUtils.queryParams('viewAs') || ViewType.Instructor)
+    );
     store.dispatch(setUserRoleInCourse(CourseRoles.Instructor));
   }
 

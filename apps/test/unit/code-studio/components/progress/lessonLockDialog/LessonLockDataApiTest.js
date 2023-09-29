@@ -8,7 +8,7 @@ import {
   saveLockState,
   useGetLockState,
 } from '@cdo/apps/code-studio/components/progress/lessonLockDialog/LessonLockDataApi';
-import * as useFetch from '@cdo/apps/util/useFetch';
+import useFetch from '@cdo/apps/util/useFetch';
 
 describe('LessonLockDataApi', () => {
   const fakeUnitId = 1;

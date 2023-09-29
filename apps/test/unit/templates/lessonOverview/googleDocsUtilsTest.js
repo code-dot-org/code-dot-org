@@ -1,7 +1,11 @@
 import {assert} from '../../../util/reconfiguredChai';
-import * as utils from '@cdo/apps/templates/lessonOverview/googleDocsUtils';
-const {isGDocsUrl, gDocsBaseUrl, gDocsPdfUrl, gDocsMsOfficeUrl, gDocsCopyUrl} =
-  utils;
+import {
+  isGDocsUrl,
+  gDocsBaseUrl,
+  gDocsPdfUrl,
+  gDocsMsOfficeUrl,
+  gDocsCopyUrl,
+} from '@cdo/apps/templates/lessonOverview/googleDocsUtils';
 
 describe('googleDocsUtils module', () => {
   describe('the isGDocsUrl function', () => {

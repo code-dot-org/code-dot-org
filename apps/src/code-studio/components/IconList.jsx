@@ -1,8 +1,10 @@
 import PropTypes from 'prop-types';
 import React from 'react';
 import IconListEntry from './IconListEntry';
-import {aliases} from './icons';
+import icons from './icons';
 import i18n from '@cdo/locale';
+
+const aliases = icons.aliases;
 
 /**
  * A component for managing icons.

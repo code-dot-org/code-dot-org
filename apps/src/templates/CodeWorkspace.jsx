@@ -9,13 +9,13 @@ import PaneHeader, {PaneSection, PaneButton} from './PaneHeader';
 import i18n from '@cdo/locale';
 import commonStyles from '../commonStyles';
 import color from '../util/color';
-import * as utils from '@cdo/apps/utils';
+import utils from '@cdo/apps/utils';
 import {shouldUseRunModeIndicators} from '../redux/selectors';
 import SettingsCog from '../lib/ui/SettingsCog';
 import ShowCodeToggle from './ShowCodeToggle';
 import {singleton as studioApp} from '../StudioApp';
 import ProjectTemplateWorkspaceIcon from './ProjectTemplateWorkspaceIcon';
-import {queryParams} from '../code-studio/utils';
+import codeStudioUtils from '../code-studio/utils';
 import WorkspaceAlert from '@cdo/apps/code-studio/components/WorkspaceAlert';
 import {closeWorkspaceAlert} from '../code-studio/projectRedux';
 import styleConstants from '@cdo/apps/styleConstants';
@@ -191,7 +191,8 @@ class CodeWorkspace extends React.Component {
     const isRtl = this.props.isRtl;
 
     //TODO: When CSF example solutions are no longer rendered with solution=true in url remove this
-    const inCsfExampleSolution = queryParams('solution') === 'true';
+    const inCsfExampleSolution =
+      codeStudioUtils.queryParams('solution') === 'true';
 
     return (
       <span id="codeWorkspaceWrapper" style={props.style}>

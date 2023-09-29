@@ -12,7 +12,7 @@ import {pegasus} from '@cdo/apps/lib/util/urlHelpers';
 import oauthSignInButtons from '../../../static/teacherDashboard/oauthSignInButtons.png';
 import syncGoogleClassroom from '../../../static/teacherDashboard/syncGoogleClassroom.png';
 import syncClever from '../../../static/teacherDashboard/syncClever.png';
-import {queryParams} from '@cdo/apps/code-studio/utils';
+import codeStudioUtils from '@cdo/apps/code-studio/utils';
 
 const getManageStudentsUrl = sectionId => {
   return `/teacher_dashboard/sections/${sectionId}/manage_students`;
@@ -38,8 +38,9 @@ class SectionLoginInfo extends React.Component {
 
   render() {
     const {studioUrlPrefix, section} = this.props;
-    const singleStudentId = queryParams('studentId');
-    const autoPrint = !!singleStudentId || !!queryParams('autoPrint');
+    const singleStudentId = codeStudioUtils.queryParams('studentId');
+    const autoPrint =
+      !!singleStudentId || !!codeStudioUtils.queryParams('autoPrint');
     const students = singleStudentId
       ? this.props.students.filter(
           student => student.id.toString() === singleStudentId

@@ -11,7 +11,7 @@ import {
   __testing_restoreStudioApp,
 } from '@cdo/apps/StudioApp';
 import LegacyDialog from '@cdo/apps/code-studio/LegacyDialog';
-import * as utils from '@cdo/apps/utils';
+import utils from '@cdo/apps/utils';
 import {
   registerReducers,
   __testing_stubRedux,

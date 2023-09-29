@@ -10,7 +10,7 @@ import color from '@cdo/apps/util/color';
 import TextareaWithMarkdownPreview from '@cdo/apps/lib/levelbuilder/TextareaWithMarkdownPreview';
 import CollapsibleEditorSection from '@cdo/apps/lib/levelbuilder/CollapsibleEditorSection';
 import $ from 'jquery';
-import {linkWithQueryParams, navigateToHref} from '@cdo/apps/utils';
+import utils from '@cdo/apps/utils';
 import {connect} from 'react-redux';
 import {
   init,
@@ -365,7 +365,7 @@ class UnitEditor extends React.Component {
     })
       .done(data => {
         if (shouldCloseAfterSave) {
-          navigateToHref(linkWithQueryParams(data.scriptPath));
+          utils.navigateToHref(utils.linkWithQueryParams(data.scriptPath));
         } else {
           const lessonGroups = mapLessonGroupDataForEditor(data.lesson_groups);
 

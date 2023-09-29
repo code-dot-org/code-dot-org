@@ -5,7 +5,7 @@ import FontAwesome from '../FontAwesome';
 import color from '@cdo/apps/util/color';
 import {levelWithProgressType} from './progressTypes';
 import {levelProgressStyle, hoverStyle} from './progressStyles';
-import {queryParams} from '@cdo/apps/code-studio/utils';
+import codeStudioUtils from '@cdo/apps/code-studio/utils';
 import {isLevelAssessment} from './progressHelpers';
 import {connect} from 'react-redux';
 import {ReviewStates} from '@cdo/apps/templates/feedback/types';
@@ -46,7 +46,7 @@ class ProgressPill extends React.Component {
       return;
     }
 
-    const userId = queryParams('user_id');
+    const userId = codeStudioUtils.queryParams('user_id');
     return getBubbleUrl(levels[0].url, userId, selectedSectionId);
   }
 

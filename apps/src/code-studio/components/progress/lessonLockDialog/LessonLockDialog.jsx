@@ -10,10 +10,8 @@ import i18n from '@cdo/locale';
 import SectionSelector from '../SectionSelector';
 import {NO_SECTION} from '@cdo/apps/templates/teacherDashboard/teacherSectionsRedux';
 import {teacherDashboardUrl} from '@cdo/apps/templates/teacherDashboard/urlHelpers';
-import {
+import dataApi, {
   LockStatus,
-  useGetLockState,
-  saveLockState,
 } from '@cdo/apps/code-studio/components/progress/lessonLockDialog/LessonLockDataApi';
 import StudentRow from '@cdo/apps/code-studio/components/progress/lessonLockDialog/StudentRow';
 import SkeletonRows from '@cdo/apps/code-studio/components/progress/lessonLockDialog/SkeletonRows';
@@ -27,7 +25,7 @@ function LessonLockDialog({
   refetchSectionLockStatus,
   lessonIsHidden,
 }) {
-  const {loading, serverLockState} = useGetLockState(
+  const {loading, serverLockState} = dataApi.useGetLockState(
     unitId,
     lessonId,
     selectedSectionId
@@ -37,7 +35,7 @@ function LessonLockDialog({
   const [saving, setSaving] = useState(false);
   const [error, setError] = useState(null);
 
-  // The data returned from useGetLockState is the state that's currently saved
+  // The data returned from dataApi.useGetLockState is the state that's currently saved
   // on the server associated with the given unit, lesson, and section. We also
   // need to separately track the client state which will reflect the changes
   // made by the user in this dialog. This line re-syncs the client state to the
@@ -93,7 +91,7 @@ function LessonLockDialog({
     setSaving(true);
     setError(null);
     const csrfToken = $('meta[name="csrf-token"]').attr('content');
-    const saveLockStateResponse = await saveLockState(
+    const saveLockStateResponse = await dataApi.saveLockState(
       serverLockState,
       clientLockState,
       csrfToken

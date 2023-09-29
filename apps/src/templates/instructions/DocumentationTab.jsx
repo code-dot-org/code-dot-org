@@ -3,7 +3,7 @@ import {connect} from 'react-redux';
 import PropTypes from 'prop-types';
 import i18n from '@cdo/locale';
 import Spinner from '@cdo/apps/code-studio/pd/components/spinner';
-import {useFetch} from '@cdo/apps/util/useFetch';
+import useFetch from '@cdo/apps/util/useFetch';
 import ProgrammingClassOverview from '../codeDocs/ProgrammingClassOverview';
 import {TextLink} from '@dsco_/link';
 import FontAwesome from '@cdo/apps/templates/FontAwesome';
@@ -15,7 +15,7 @@ export const UnconnectedDocumentationTab = forwardRef(
     {programmingEnvironment, defaultClassKey = DEFAULT_CLASS_KEY},
     ref
   ) {
-    const {loading, data, error} = useFetch(
+    const {loading, data, error} = useFetch.useFetch(
       `/programming_environments/${programmingEnvironment}/get_summary_by_name`,
       null,
       [programmingEnvironment]

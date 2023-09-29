@@ -6,16 +6,9 @@ import {
   ThunkDispatch,
 } from '@reduxjs/toolkit';
 import {SongData, SongMetadata} from './types';
-import {queryParams} from '../code-studio/utils';
+import codeStudioUtils from '../code-studio/utils';
 import {fetchSignedCookies} from '../utils';
-import {
-  getSongManifest,
-  getSelectedSong,
-  parseSongOptions,
-  loadSong,
-  unloadSong,
-  loadSongMetadata,
-} from './songs';
+import songs from './songs';
 
 export interface DanceState {
   selectedSong: string;
@@ -57,19 +50,19 @@ export const initSongs = createAsyncThunk(
       payload;
 
     // Check for a user-specified manifest file.
-    const userManifest = queryParams('manifest') as string;
-    const songManifest = await getSongManifest(
+    const userManifest = codeStudioUtils.queryParams('manifest') as string;
+    const songManifest = await songs.getSongManifest(
       useRestrictedSongs,
       userManifest
     );
-    const songData = parseSongOptions(songManifest) as SongData;
-    const selectedSong = getSelectedSong(songManifest, selectSongOptions);
+    const songData = songs.parseSongOptions(songManifest) as SongData;
+    const selectedSong = songs.getSelectedSong(songManifest, selectSongOptions);
 
     // Set selectedSong first, so we don't initially show the wrong song.
     dispatch(setSelectedSong(selectedSong));
     dispatch(setSongData(songData));
 
-    loadSong(selectedSong, songData, (status: number) => {
+    songs.loadSong(selectedSong, songData, (status: number) => {
       if (status === 403) {
         // Something is wrong, because we just fetched cloudfront credentials.
         onAuthError(selectedSong);
@@ -100,13 +93,13 @@ export const setSong = createAsyncThunk(
     }
 
     dispatch(setSelectedSong(songId));
-    unloadSong(lastSongId, songData);
+    songs.unloadSong(lastSongId, songData);
 
-    loadSong(songId, songData, async (status: number) => {
+    songs.loadSong(songId, songData, async (status: number) => {
       if (status === 403) {
         // The cloudfront signed cookies may have expired.
         await fetchSignedCookies();
-        loadSong(songId, songData, (status: number) => {
+        songs.loadSong(songId, songData, (status: number) => {
           if (status === 403) {
             // Something is wrong, because we just re-fetched cloudfront credentials.
             onAuthError(songId);
@@ -129,7 +122,7 @@ async function handleSongSelection(
   if (onSongSelected) {
     onSongSelected(songId);
   } else {
-    const metadata = await loadSongMetadata(songId);
+    const metadata = await songs.loadSongMetadata(songId);
     dispatch(setCurrentSongMetadata(metadata));
   }
 }

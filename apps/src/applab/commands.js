@@ -1,7 +1,7 @@
 import ChartApi from './ChartApi';
 import EventSandboxer from './EventSandboxer';
 import sanitizeHtml from './sanitizeHtml';
-import * as utils from '../utils';
+import utils from '../utils';
 import elementLibrary from './designElements/library';
 import * as elementUtils from './designElements/elementUtils';
 import * as setPropertyDropdown from './setPropertyDropdown';
@@ -33,7 +33,6 @@ var XHR_PROXY_PATH = '//' + location.host + '/xhr';
 import {ICON_PREFIX_REGEX} from './constants';
 
 var applabCommands = {};
-export default applabCommands;
 
 /**
  * Lookup table of asset URLs. If an asset isn't listed here, initiate a
@@ -2301,3 +2300,7 @@ Object.assign(applabCommands, audioCommands);
 Object.assign(applabCommands, timeoutCommands);
 Object.assign(applabCommands, mlCommands);
 Object.assign(applabCommands, makerCommands);
+
+export const {openUrl, rgb, setSelectionRange} = applabCommands;
+
+export {applabCommands as default};

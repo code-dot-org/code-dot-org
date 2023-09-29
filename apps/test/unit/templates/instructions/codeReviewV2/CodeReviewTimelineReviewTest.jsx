@@ -11,7 +11,7 @@ import CodeReviewCommentEditor from '@cdo/apps/templates/instructions/codeReview
 import {timelineElementType} from '@cdo/apps/templates/instructions/codeReviewV2/CodeReviewDataApi';
 import sinon from 'sinon';
 import CodeReviewError from '@cdo/apps/templates/instructions/codeReviewV2/CodeReviewError';
-import * as utils from '@cdo/apps/code-studio/utils';
+import utils from '@cdo/apps/code-studio/utils';
 
 const DEFAULT_REVIEW = {
   id: 1,

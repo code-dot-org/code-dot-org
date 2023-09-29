@@ -20,7 +20,7 @@ import {
 import ExecutionInfo from './executionInfo';
 import MazeVisualizationColumn from './MazeVisualizationColumn';
 import * as api from './api';
-import dropletConfig from './dropletConfig';
+import * as dropletConfig from './dropletConfig';
 import mazeReducer from './redux';
 import {getStore} from '../redux';
 

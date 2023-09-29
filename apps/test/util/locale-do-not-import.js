@@ -14,7 +14,7 @@ var context = require.context(
   '../../build/package/js/en_us/',
   false,
   /.*_locale.*\.js$/
-);
+); // eslint-disable-line import/no-commonjs
 context.keys().forEach(context);
 
 export default window.locales.common_locale;

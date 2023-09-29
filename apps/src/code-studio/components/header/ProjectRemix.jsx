@@ -2,7 +2,7 @@ import PropTypes from 'prop-types';
 import React from 'react';
 import {connect} from 'react-redux';
 import i18n from '@cdo/locale';
-import * as utils from '../../../utils';
+import utils from '../../../utils';
 import {refreshProjectName} from '../../projectRedux';
 import styles from './project-header.module.scss';
 import Lab2Registry from '@cdo/apps/lab2/Lab2Registry';

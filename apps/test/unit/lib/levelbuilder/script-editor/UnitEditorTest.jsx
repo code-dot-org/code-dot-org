@@ -17,7 +17,7 @@ import createResourcesReducer, {
   initResources,
 } from '@cdo/apps/lib/levelbuilder/lesson-editor/resourcesEditorRedux';
 import sinon from 'sinon';
-import * as utils from '@cdo/apps/utils';
+import utils from '@cdo/apps/utils';
 import $ from 'jquery';
 import {
   PublishedState,

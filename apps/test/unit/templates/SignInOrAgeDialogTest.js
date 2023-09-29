@@ -3,7 +3,7 @@ import React from 'react';
 import {UnconnectedSignInOrAgeDialog as SignInOrAgeDialog} from '@cdo/apps/templates/SignInOrAgeDialog';
 import {shallow} from 'enzyme';
 import sinon from 'sinon';
-import * as utils from '@cdo/apps/utils';
+import utils from '@cdo/apps/utils';
 import cookies from 'js-cookie';
 import {environmentSpecificCookieName} from '@cdo/apps/code-studio/utils';
 import {replaceOnWindow, restoreOnWindow} from '../../util/testUtils';

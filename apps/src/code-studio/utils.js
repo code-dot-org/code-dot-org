@@ -1,5 +1,7 @@
 import queryString from 'query-string';
 
+const toExport = {};
+
 // Provide methods that allow tests to mock window.location
 let windowLocation = window.location;
 export function setWindowLocation(fakeLocation) {
@@ -10,26 +12,26 @@ export function resetWindowLocation() {
   windowLocation = window.location;
 }
 
-export function hasQueryParam(name) {
-  const parsedParams = queryParams();
+toExport.hasQueryParam = name => {
+  const parsedParams = toExport.queryParams();
 
   // can't call hasOwnProperty directly due to bug in query-string:
   // https://github.com/sindresorhus/query-string/issues/50
   return Object.prototype.hasOwnProperty.call(parsedParams, name);
-}
+};
 
 /**
  * Gets the URL querystring params.
  * @param name {string=} Optionally pull a specific param.
  * @return {object|string} Hash of params, or param string if `name` is specified.
  */
-export function queryParams(name) {
+toExport.queryParams = name => {
   const parsed = queryString.parse(windowLocation.search);
   if (name) {
     return parsed[name];
   }
   return parsed;
-}
+};
 
 /**
  * Updates a query parameter in the URL via pushState (i.e. doesn't force a
@@ -39,7 +41,7 @@ export function queryParams(name) {
  * @param {boolean} useReplaceState - optional param if you wish to use replaceState
  *   instead of pushState
  */
-export function updateQueryParam(param, value, useReplaceState = false) {
+toExport.updateQueryParam = (param, value, useReplaceState = false) => {
   const newString = queryString.stringify({
     ...queryString.parse(windowLocation.search),
     [param]: value,
@@ -53,7 +55,7 @@ export function updateQueryParam(param, value, useReplaceState = false) {
 
   const method = useReplaceState ? 'replaceState' : 'pushState';
   window.history[method](null, document.title, newLocation);
-}
+};
 
 /**
  * We have various cookies that we want to be environment specific. We accomplish
@@ -80,3 +82,5 @@ export function environmentSpecificCookieName(name) {
 export function getRootDomainFromHostname(hostname) {
   return hostname.split('.').slice(-2).join('.');
 }
+
+export default toExport;

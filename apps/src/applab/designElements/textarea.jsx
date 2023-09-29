@@ -13,7 +13,7 @@ import TextAlignmentPropertyRow, {
   TEXT_ALIGNMENT_LEFT,
 } from './TextAlignmentPropertyRow';
 import BorderProperties from './BorderProperties';
-import * as utils from '../../utils';
+import utils from '../../utils';
 import * as elementUtils from './elementUtils';
 import designMode from '../designMode';
 import themeValues, {CLASSIC_TEXT_AREA_PADDING} from '../themeValues';

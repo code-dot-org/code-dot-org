@@ -8,7 +8,7 @@ import {
 import color from '@cdo/apps/util/color';
 import javalabMsg from '@cdo/javalab/locale';
 import sinon from 'sinon';
-import * as utils from '@cdo/apps/code-studio/utils';
+import codeStudioUtils from '@cdo/apps/code-studio/utils';
 
 const DEFAULT_PROPS = {
   type: codeReviewTimelineElementType.CREATED,
@@ -77,7 +77,7 @@ describe('CodeReviewTimelineElement', () => {
 
     it('has expected params in eyeball link', () => {
       // Params existing in the url should be included and version param is overridden if one already exists in the url
-      sinon.stub(utils, 'queryParams').returns({
+      sinon.stub(codeStudioUtils, 'queryParams').returns({
         user_id: 123,
         section_id: 456,
         version: 'viewingOldVersion',
@@ -94,7 +94,7 @@ describe('CodeReviewTimelineElement', () => {
         .true;
       expect(eyeballLink.props().versionHref.includes('section_id=456')).to.be
         .true;
-      utils.queryParams.restore();
+      codeStudioUtils.queryParams.restore();
     });
 
     it('hides eyeball link if there is not a version', () => {

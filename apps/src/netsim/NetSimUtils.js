@@ -443,6 +443,8 @@ toExport.getUniqueLevelKeyFromLocation = function (loc) {
 
 export {toExport as default};
 export const {
+  bitrateToLocalizedRoundedBitrate,
+  bitsToLocalizedRoundedBytesize,
   deserializeNumber,
   doesUserOwnShard,
   jQuerySvgElement,

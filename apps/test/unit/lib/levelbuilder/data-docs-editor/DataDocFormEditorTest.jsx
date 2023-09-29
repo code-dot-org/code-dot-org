@@ -6,7 +6,7 @@ import {getStore} from '@cdo/apps/redux';
 import {Provider} from 'react-redux';
 import sinon from 'sinon';
 import {mount} from 'enzyme';
-import * as utils from '@cdo/apps/utils';
+import utils from '@cdo/apps/utils';
 
 describe('DataDocFormEditor', () => {
   let defaultProps;

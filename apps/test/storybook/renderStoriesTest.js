@@ -34,7 +34,7 @@ describe('react-storybook stories render without errors or warnings', function (
   });
 
   // Test all the *.story.jsx files that aren't denylisted
-  const context = require.context('../../src/', true, /.*\.story\.jsx?$/);
+  const context = require.context('../../src/', true, /.*\.story\.jsx?$/); // eslint-disable-line import/no-commonjs
   context.keys().forEach(storyFile => {
     describe(storyFile, () => {
       testStorybook(context(storyFile));

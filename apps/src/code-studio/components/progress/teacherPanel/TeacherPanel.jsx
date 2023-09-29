@@ -25,13 +25,10 @@ import i18n from '@cdo/locale';
 import firehoseClient from '@cdo/apps/lib/util/firehose';
 import {queryUserProgress} from '@cdo/apps/code-studio/progressRedux';
 import {hasLockableLessons} from '@cdo/apps/code-studio/progressReduxSelectors';
-import {reload} from '@cdo/apps/utils';
-import {updateQueryParam, queryParams} from '@cdo/apps/code-studio/utils';
+import utils from '@cdo/apps/utils';
+import codeStudioUtils from '@cdo/apps/code-studio/utils';
 import {studentShape, levelWithProgress} from './types';
-import {
-  getStudentsForSection,
-  queryLockStatus,
-} from '@cdo/apps/code-studio/components/progress/teacherPanel/teacherPanelData';
+import teacherPanelData from '@cdo/apps/code-studio/components/progress/teacherPanel/teacherPanelData';
 import SortByNameDropdown from '@cdo/apps/templates/SortByNameDropdown';
 import DCDO from '@cdo/apps/dcdo';
 
@@ -71,7 +68,8 @@ class TeacherPanel extends React.Component {
   };
 
   componentDidMount() {
-    const initialViewAs = queryParams('viewAs') || ViewType.Instructor;
+    const initialViewAs =
+      codeStudioUtils.queryParams('viewAs') || ViewType.Instructor;
 
     if (this.props.viewAs !== initialViewAs) {
       this.props.setViewType(initialViewAs);
@@ -90,12 +88,12 @@ class TeacherPanel extends React.Component {
   }
 
   loadInitialData = () => {
-    getStudentsForSection().then(section => {
+    teacherPanelData.getStudentsForSection().then(section => {
       section &&
         this.props.setStudentsForCurrentSection(section.id, section.students);
     });
 
-    queryLockStatus(this.props.scriptId).then(result => {
+    teacherPanelData.queryLockStatus(this.props.scriptId).then(result => {
       const {teacherSections, sectionLockStatus} = result;
       // Don't dispatch setSections on script overview pages because setSections
       // has already been dispatched on those pages with data specific to which
@@ -103,7 +101,7 @@ class TeacherPanel extends React.Component {
       if (this.props.pageType !== 'script_overview') {
         this.props.setSections(teacherSections);
 
-        const sectionId = queryParams('section_id');
+        const sectionId = codeStudioUtils.queryParams('section_id');
         sectionId && this.props.selectSection(sectionId);
       }
 
@@ -134,7 +132,7 @@ class TeacherPanel extends React.Component {
   };
 
   getSelectedUserId = () => {
-    const userIdStr = queryParams('user_id');
+    const userIdStr = codeStudioUtils.queryParams('user_id');
     return userIdStr ? parseInt(userIdStr, 10) : null;
   };
 
@@ -361,9 +359,9 @@ export default connect(
   dispatch => ({
     loadLevelsWithProgress: () => dispatch(loadLevelsWithProgress()),
     selectUser: (userId, isAsync = false) => {
-      updateQueryParam('user_id', userId);
-      updateQueryParam('version');
-      isAsync ? dispatch(queryUserProgress(userId)) : reload();
+      codeStudioUtils.updateQueryParam('user_id', userId);
+      codeStudioUtils.updateQueryParam('version');
+      isAsync ? dispatch(queryUserProgress(userId)) : utils.reload();
     },
     setStudentsForCurrentSection: (sectionId, students) => {
       dispatch(setStudentsForCurrentSection(sectionId, students));

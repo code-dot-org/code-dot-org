@@ -3,7 +3,7 @@ import React from 'react';
 import color from '../../util/color';
 import * as rowStyle from './rowStyle';
 import * as elementUtils from './elementUtils';
-import * as utils from '../../utils';
+import utils from '../../utils';
 
 const LockState = utils.makeEnum('LOCKED', 'UNLOCKED');
 

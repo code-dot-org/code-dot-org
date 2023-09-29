@@ -13,7 +13,7 @@ import msg from '@cdo/poetry/locale';
 import {APP_WIDTH} from '../constants';
 import {PoetryStandaloneApp} from './constants';
 import {getPoem, shouldAlphabetizePoems} from './poem';
-import * as utils from '@cdo/apps/utils';
+import utils from '@cdo/apps/utils';
 
 const poemShape = PropTypes.shape({
   key: PropTypes.string,

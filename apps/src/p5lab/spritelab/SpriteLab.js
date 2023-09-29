@@ -1,4 +1,4 @@
-import * as utils from '@cdo/apps/utils';
+import utils from '@cdo/apps/utils';
 import msg from '@cdo/spritelab/locale';
 import P5Lab from '../P5Lab';
 import {P5LabType} from '../constants';

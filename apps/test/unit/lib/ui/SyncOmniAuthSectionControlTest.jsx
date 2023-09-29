@@ -2,7 +2,7 @@ import React from 'react';
 import {shallow} from 'enzyme';
 import {stub} from 'sinon';
 import {expect} from '../../../util/reconfiguredChai';
-import * as utils from '@cdo/apps/utils';
+import utils from '@cdo/apps/utils';
 import {OAuthSectionTypes} from '@cdo/apps/lib/ui/accounts/constants';
 import BaseDialog from '@cdo/apps/templates/BaseDialog';
 import Button from '@cdo/apps/templates/Button';

@@ -7,11 +7,23 @@ import AnimationPickerBody, {
 } from '@cdo/apps/p5lab/AnimationPicker/AnimationPickerBody';
 import AnimationPickerListItem from '@cdo/apps/p5lab/AnimationPicker/AnimationPickerListItem';
 import testAnimationLibrary from '../testAnimationLibrary.json';
-import {CostumeCategories} from '@cdo/apps/p5lab/spritelab/constants';
 import {PICKER_TYPE} from '@cdo/apps/p5lab/AnimationPicker/AnimationPicker';
 import AnimationUploadButton from '@cdo/apps/p5lab/AnimationPicker/AnimationUploadButton';
 
 const emptyFunction = function () {};
+
+const CostumeCategories = {
+  category_animals: msg.costumeCategoryAnimals(),
+  category_generic_items: msg.costumeCategoryGenericItems(),
+  category_vehicles: msg.costumeCategoryVehicles(),
+  category_characters: msg.costumeCategoryCharacters(),
+  category_environment: msg.costumeCategoryEnvironment(),
+  category_food: msg.costumeCategoryFood(),
+  category_tools: msg.costumeCategoryTools(),
+  category_gameplay: msg.costumeCategoryGameplay(),
+  category_obstacles: msg.costumeCategoryObstacles(),
+  category_all: msg.costumeCategoryAll(),
+};
 
 describe('AnimationPickerBody', function () {
   const defaultProps = {

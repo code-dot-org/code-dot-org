@@ -2,7 +2,7 @@ import _ from 'lodash';
 import {expect, assert} from '../../../util/reconfiguredChai';
 import sinon from 'sinon';
 import {replaceOnWindow, restoreOnWindow} from '../../../util/testUtils';
-import * as utils from '@cdo/apps/utils';
+import utils from '@cdo/apps/utils';
 import project from '@cdo/apps/code-studio/initApp/project';
 import {files as filesApi} from '@cdo/apps/clientApi';
 import header from '@cdo/apps/code-studio/header';

@@ -1,7 +1,7 @@
 import PropTypes from 'prop-types';
 import React from 'react';
 import i18n from '@cdo/locale';
-import * as utils from '../../../utils';
+import utils from '../../../utils';
 import color from '@cdo/apps/util/color';
 import {Field} from '../SystemDialog/SystemDialog';
 import BootstrapButton from './BootstrapButton';

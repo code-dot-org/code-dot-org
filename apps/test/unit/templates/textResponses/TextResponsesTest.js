@@ -2,7 +2,7 @@ import React from 'react';
 import {act} from 'react-dom/test-utils';
 import {expect} from '../../../util/deprecatedChai';
 import {UnconnectedTextResponses as TextResponses} from '@cdo/apps/templates/textResponses/TextResponses';
-import * as textReponsesDataApi from '@cdo/apps/templates/textResponses/textReponsesDataApi';
+import textReponsesDataApi from '@cdo/apps/templates/textResponses/textReponsesDataApi';
 import sinon from 'sinon';
 import {isolateComponent} from 'isolate-react';
 

@@ -3,7 +3,7 @@ import PropTypes from 'prop-types';
 import color from '@cdo/apps/util/color';
 import styleConstants from '@cdo/apps/styleConstants';
 import Button from '@cdo/apps/templates/Button';
-import {navigateToHref} from '@cdo/apps/utils';
+import utils from '@cdo/apps/utils';
 
 const BorderedCallToAction = ({
   headingText,
@@ -29,7 +29,7 @@ const BorderedCallToAction = ({
         <div style={styles.description}>{descriptionText}</div>
       </div>
       <Button
-        onClick={onClick || (() => navigateToHref(buttonUrl))}
+        onClick={onClick || (() => utils.navigateToHref(buttonUrl))}
         className={buttonClass}
         color={buttonColor}
         text={buttonText}

@@ -4,7 +4,7 @@ import DropdownButton from '@cdo/apps/templates/DropdownButton';
 import Button from '@cdo/apps/templates/Button';
 import javalabMsg from '@cdo/javalab/locale';
 import Spinner from '@cdo/apps/code-studio/pd/components/spinner';
-import {currentLocation, navigateToHref} from '@cdo/apps/utils';
+import utils from '@cdo/apps/utils';
 import {VIEWING_CODE_REVIEW_URL_PARAM} from '@cdo/apps/templates/instructions/CommitsAndReviewTab';
 
 const ReviewNavigator = ({
@@ -18,8 +18,8 @@ const ReviewNavigator = ({
 
   const generateLevelUrlWithCodeReviewParam = () => {
     let url =
-      currentLocation().origin +
-      currentLocation().pathname +
+      utils.currentLocation().origin +
+      utils.currentLocation().pathname +
       `?${VIEWING_CODE_REVIEW_URL_PARAM}=true`;
 
     // If teacher account is viewing as participant, set up URLs
@@ -32,12 +32,14 @@ const ReviewNavigator = ({
 
   const onSelectPeer = id => {
     if (id) {
-      navigateToHref(generateLevelUrlWithCodeReviewParam() + `&user_id=${id}`);
+      utils.navigateToHref(
+        generateLevelUrlWithCodeReviewParam() + `&user_id=${id}`
+      );
     }
   };
 
   const onClickBackToProject = () => {
-    navigateToHref(generateLevelUrlWithCodeReviewParam());
+    utils.navigateToHref(generateLevelUrlWithCodeReviewParam());
   };
 
   const onDropdownClick = () => {

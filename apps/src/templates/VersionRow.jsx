@@ -2,7 +2,7 @@ import PropTypes from 'prop-types';
 import React from 'react';
 import msg from '@cdo/locale';
 import classnames from 'classnames';
-import {queryParams} from '@cdo/apps/code-studio/utils';
+import codeStudioUtils from '@cdo/apps/code-studio/utils';
 import queryString from 'query-string';
 
 /**
@@ -27,9 +27,9 @@ export default class VersionRow extends React.Component {
   }
 
   getQueryParams() {
-    const userId = queryParams('user_id');
-    const viewAs = queryParams('viewAs');
-    const sectionId = queryParams('section_id');
+    const userId = codeStudioUtils.queryParams('user_id');
+    const viewAs = codeStudioUtils.queryParams('viewAs');
+    const sectionId = codeStudioUtils.queryParams('section_id');
     const params = {};
     if (sectionId) {
       params.section_id = sectionId;

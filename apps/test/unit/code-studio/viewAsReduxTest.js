@@ -10,8 +10,8 @@ import {
   registerReducers,
   getStore,
 } from '@cdo/apps/redux';
-import * as appsUtils from '@cdo/apps/utils';
-import * as codeStudioUtils from '@cdo/apps/code-studio/utils';
+import appsUtils from '@cdo/apps/utils';
+import codeStudioUtils from '@cdo/apps/code-studio/utils';
 import {expect} from '../../util/reconfiguredChai';
 
 describe('viewAs redux', () => {

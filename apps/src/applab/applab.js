@@ -14,7 +14,7 @@ import applabMsg from '@cdo/applab/locale';
 import AppLabView from './AppLabView';
 import {initializeSubmitHelper, onSubmitComplete} from '../submitHelper';
 import dom from '../dom';
-import * as utils from '../utils';
+import utils from '../utils';
 import * as dropletConfig from './dropletConfig';
 import {getDatasetInfo} from '../storage/dataBrowser/dataUtils';
 import {initFirebaseStorage} from '../storage/firebaseStorage';
@@ -77,9 +77,11 @@ import {showHideWorkspaceCallouts} from '../code-studio/callouts';
 import header from '../code-studio/header';
 import {TestResults, ResultType} from '../constants';
 import {userAlreadyReportedAbuse} from '@cdo/apps/reportAbuse';
-import {workspace_running_background, white} from '@cdo/apps/util/color';
+import color from '@cdo/apps/util/color';
 import {MB_API} from '../lib/kits/maker/boards/microBit/MicroBitConstants';
 import autogenerateML from '@cdo/apps/applab/ai';
+
+const {workspace_running_background, white} = color;
 
 /**
  * Create a namespace for the application.

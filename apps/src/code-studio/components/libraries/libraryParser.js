@@ -1,4 +1,4 @@
-import {getFunctionsAndMetadata} from '@cdo/apps/lib/tools/jsinterpreter/JSInterpreter';
+import JSInterpreter from '@cdo/apps/lib/tools/jsinterpreter/JSInterpreter';
 
 /**
  * Finds all functions in the provided code and returns them with any metadata
@@ -6,7 +6,7 @@ import {getFunctionsAndMetadata} from '@cdo/apps/lib/tools/jsinterpreter/JSInter
  * @returns {array} A list of objects where each object represents a function with its doc comment and params
  */
 export function getFunctions(code) {
-  return getFunctionsAndMetadata(code);
+  return JSInterpreter.getFunctionsAndMetadata(code);
 }
 
 /**

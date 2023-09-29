@@ -2,8 +2,8 @@ import PropTypes from 'prop-types';
 import React from 'react';
 import {connect} from 'react-redux';
 import i18n from '@cdo/locale';
-import {updateQueryParam} from '../../utils';
-import {reload} from '../../../utils';
+import codeStudioUtils from '../../utils';
+import utils from '../../../utils';
 import {
   selectSection,
   sectionsNameAndId,
@@ -28,14 +28,14 @@ function SectionSelector({
       logToFirehose();
     }
 
-    updateQueryParam(
+    codeStudioUtils.updateQueryParam(
       'section_id',
       newSectionId === NO_SELECTED_SECTION_VALUE ? undefined : newSectionId
     );
     // If we have a user_id when we switch sections we should get rid of it
-    updateQueryParam('user_id', undefined);
+    codeStudioUtils.updateQueryParam('user_id', undefined);
     if (reloadOnChange) {
-      reload();
+      utils.reload();
     } else {
       selectSection(newSectionId);
     }

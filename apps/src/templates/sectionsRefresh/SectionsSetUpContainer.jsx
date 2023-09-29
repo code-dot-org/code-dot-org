@@ -7,8 +7,8 @@ import CurriculumQuickAssign from './CurriculumQuickAssign';
 import AdvancedSettingToggles from './AdvancedSettingToggles';
 import Button from '@cdo/apps/templates/Button';
 import moduleStyles from './sections-refresh.module.scss';
-import {queryParams} from '@cdo/apps/code-studio/utils';
-import {navigateToHref} from '@cdo/apps/utils';
+import utils from '@cdo/apps/code-studio/utils';
+import windowUtils from '@cdo/apps/utils';
 import {
   BodyTwoText,
   Heading1,
@@ -150,10 +150,10 @@ export default function SectionsSetUpContainer({
       : `${SECTIONS_API}/${section.id}`;
     const method = isNewSection ? 'POST' : 'PATCH';
     const loginType = isNewSection
-      ? queryParams('loginType')
+      ? utils.queryParams('loginType')
       : section.loginType;
     const participantType = isNewSection
-      ? queryParams('participantType')
+      ? utils.queryParams('participantType')
       : section.participantType;
 
     const form = document.querySelector(`#${FORM_ID}`);
@@ -208,7 +208,7 @@ export default function SectionsSetUpContainer({
         } else if (shouldShowCelebrationDialogOnRedirect) {
           redirectUrl += '?showSectionCreationDialog=true';
         }
-        navigateToHref(redirectUrl);
+        windowUtils.navigateToHref(redirectUrl);
       })
       .catch(err => {
         setIsSaveInProgress(false);

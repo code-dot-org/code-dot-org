@@ -12,7 +12,7 @@ import {
   workspaceAlertTypes,
   displayWorkspaceAlert,
 } from '@cdo/apps/code-studio/projectRedux';
-import * as redux from '@cdo/apps/redux';
+import redux from '@cdo/apps/redux';
 
 describe('SpriteLab Core Library', () => {
   let coreLibrary;

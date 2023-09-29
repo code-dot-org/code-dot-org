@@ -188,3 +188,18 @@ export function resetContainedLevel() {
     });
   });
 }
+
+export default {
+  getContainedLevelId,
+  getContainedLevelResult,
+  getLevel,
+  getLevelIds,
+  getResult,
+  hasValidContainedLevelResult,
+  lockContainedLevelAnswers,
+  onAnswerChanged,
+  registerAnswerChangedFn,
+  registerGetResult,
+  registerLevel,
+  resetContainedLevel,
+};

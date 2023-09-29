@@ -8,7 +8,7 @@ import {
 } from '@cdo/apps/generated/pd/sharedWorkshopConstants';
 import {expect} from '../../util/reconfiguredChai';
 import sinon from 'sinon';
-import * as utils from '@cdo/apps/utils';
+import utils from '@cdo/apps/utils';
 
 const MINIMUM_PROPS = {
   responsiveSize: 'md',

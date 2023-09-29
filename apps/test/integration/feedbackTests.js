@@ -631,6 +631,7 @@ describe('getMissingBlocks_ tests', function () {
 
   describe('required blocks for specific levels', function () {
     var collections = testCollectionUtils.getCollections();
+
     collections.forEach(function (item) {
       var testCollection = item.data;
       var app = testCollection.app;

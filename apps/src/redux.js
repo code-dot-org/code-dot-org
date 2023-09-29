@@ -185,6 +185,14 @@ function createStore(reducer, initialState) {
   });
 }
 
+// only default exports can be sinon.stub()ed for testing
+export default {
+  getStore,
+  createStoreWithReducers,
+  registerReducers,
+  hasReducer,
+};
+
 // BEGIN EXPORTS FOR TESTING ONLY
 let __testing_oldReduxStore;
 let __testing_oldGlobalReducers;
@@ -206,6 +214,9 @@ export function __testing_stubRedux() {
 export function __testing_restoreRedux() {
   if (!IN_UNIT_TEST)
     throw new Error('__testing_stubRedux() should only be called in tests');
+  if (!__testing_oldGlobalReducers) {
+    throw new Error('__testing_oldGlobalReducers cant be null');
+  }
   reduxStore = __testing_oldReduxStore;
   globalReducers = __testing_oldGlobalReducers;
   __testing_oldReduxStore = null;

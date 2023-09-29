@@ -3,7 +3,7 @@ import React from 'react';
 import sinon from 'sinon';
 import {expect} from '../../../../../util/reconfiguredChai';
 import {mount} from 'enzyme';
-import * as utils from '@cdo/apps/utils';
+import utils from '@cdo/apps/utils';
 import * as boardUtils from '@cdo/apps/lib/kits/maker/util/boardUtils';
 import SetupChecklist from '@cdo/apps/lib/kits/maker/ui/SetupChecklist';
 import SetupChecker from '@cdo/apps/lib/kits/maker/util/SetupChecker';

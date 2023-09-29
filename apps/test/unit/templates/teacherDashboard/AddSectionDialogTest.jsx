@@ -4,7 +4,7 @@ import sinon from 'sinon';
 import {expect} from '../../../util/reconfiguredChai';
 import {UnconnectedAddSectionDialog as AddSectionDialog} from '@cdo/apps/templates/teacherDashboard/AddSectionDialog';
 import _ from 'lodash';
-import * as utils from '@cdo/apps/utils';
+import utils from '@cdo/apps/utils';
 
 describe('AddSectionDialog', () => {
   let defaultProps,

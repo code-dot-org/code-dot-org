@@ -40,7 +40,7 @@ function filterFiles(files) {
 export default {
   // Get all json files under directory path
   getCollections: function () {
-    var context = require.context('../levelSolutions/', true, /.*\.js$/);
+    var context = require.context('../levelSolutions/', true, /.*\.js$/); // eslint-disable-line import/no-commonjs
     var files = context.keys();
     var testCollections = [];
     filterFiles(files).forEach(file => {

@@ -3,7 +3,7 @@ import {shallow} from 'enzyme';
 import {EnrolledWorkshopsTable} from '@cdo/apps/code-studio/pd/professional_learning_landing/EnrolledWorkshops';
 import sinon from 'sinon';
 import {assert, expect} from 'chai';
-import * as utils from '@cdo/apps/utils';
+import utils from '@cdo/apps/utils';
 import moment from 'moment';
 import {serializedWorkshopFactory} from '../../../../factories/professionalLearning';
 

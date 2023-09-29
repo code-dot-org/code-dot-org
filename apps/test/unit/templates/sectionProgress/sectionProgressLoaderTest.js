@@ -2,9 +2,9 @@ import {expect} from '../../../util/reconfiguredChai';
 import sinon from 'sinon';
 import _ from 'lodash';
 import {loadScriptProgress} from '@cdo/apps/templates/sectionProgress/sectionProgressLoader';
-import * as sectionProgress from '@cdo/apps/templates/sectionProgress/sectionProgressRedux';
-import * as progressHelpers from '@cdo/apps/templates/progress/progressHelpers';
-import * as redux from '@cdo/apps/redux';
+import sectionProgress from '@cdo/apps/templates/sectionProgress/sectionProgressRedux';
+import progressHelpers from '@cdo/apps/templates/progress/progressHelpers';
+import redux from '@cdo/apps/redux';
 
 const serverScriptResponse = {
   csf: true,

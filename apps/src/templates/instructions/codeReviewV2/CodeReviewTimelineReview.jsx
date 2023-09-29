@@ -12,7 +12,7 @@ import Comment from '@cdo/apps/templates/instructions/codeReviewV2/Comment';
 import CodeReviewCommentEditor from '@cdo/apps/templates/instructions/codeReviewV2/CodeReviewCommentEditor';
 import {reviewShape} from '@cdo/apps/templates/instructions/codeReviewV2/shapes';
 import CodeReviewError from '@cdo/apps/templates/instructions/codeReviewV2/CodeReviewError';
-import {queryParams} from '@cdo/apps/code-studio/utils';
+import codeStudioUtils from '@cdo/apps/code-studio/utils';
 
 const CodeReviewTimelineReview = ({
   review,
@@ -28,7 +28,7 @@ const CodeReviewTimelineReview = ({
   const [isClosing, setIsClosing] = useState(false);
   const formattedDate = moment(createdAt).format('M/D/YYYY [at] h:mm A');
 
-  const isViewingOldVersion = !!queryParams('version');
+  const isViewingOldVersion = !!codeStudioUtils.queryParams('version');
 
   const handleCloseCodeReview = () => {
     setIsClosing(true);

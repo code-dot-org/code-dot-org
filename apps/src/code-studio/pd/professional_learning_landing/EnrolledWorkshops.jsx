@@ -1,6 +1,6 @@
 import PropTypes from 'prop-types';
 import React from 'react';
-import * as utils from '../../../utils';
+import utils from '../../../utils';
 import WorkshopTableLoader from '../workshop_dashboard/components/workshop_table_loader';
 import {workshopShape} from '../workshop_dashboard/types.js';
 import {Table, Button, Modal} from 'react-bootstrap'; // eslint-disable-line no-restricted-imports

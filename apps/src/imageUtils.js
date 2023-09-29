@@ -187,3 +187,19 @@ export function downloadBlobAsPng(blob, filename = 'image.png') {
   download.download = filename;
   download.click();
 }
+
+export default {
+  blobToDataURI,
+  canvasToBlob,
+  dataURIFromURI,
+  dataURIToBlob,
+  dataURIToFramedBlob,
+  dataURIToSourceSize,
+  downloadBlobAsPng,
+  fetchURLAsBlob,
+  svgToDataURI,
+  toCanvas,
+  toImage,
+  toImageData,
+  URIFromImageData,
+};

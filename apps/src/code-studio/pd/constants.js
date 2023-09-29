@@ -2,7 +2,7 @@
  * @fileoverview Constants used in pd components.
  */
 
-import * as utils from '../../utils';
+import utils from '../../utils';
 
 /** Default max height for the React-Select menu popup, as defined in the imported react-select.css,
  * is 200px for the container, and 198 for the actual menu (to accommodate 2px for the border).

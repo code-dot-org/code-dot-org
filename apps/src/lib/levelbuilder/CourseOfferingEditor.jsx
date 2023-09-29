@@ -4,7 +4,7 @@ import i18n from '@cdo/locale';
 import HelpTip from '@cdo/apps/lib/ui/HelpTip';
 import $ from 'jquery';
 import SaveBar from '@cdo/apps/lib/levelbuilder/SaveBar';
-import {linkWithQueryParams, navigateToHref} from '@cdo/apps/utils';
+import utils from '@cdo/apps/utils';
 import {
   CourseOfferingCategories,
   CourseOfferingHeaders,
@@ -68,7 +68,7 @@ export default function CourseOfferingEditor(props) {
     })
       .done(data => {
         if (shouldCloseAfterSave) {
-          navigateToHref(linkWithQueryParams('/'));
+          utils.navigateToHref(utils.linkWithQueryParams('/'));
         } else {
           setLastSaved(Date.now());
           setIsSaving(false);

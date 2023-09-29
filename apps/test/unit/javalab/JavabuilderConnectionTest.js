@@ -10,8 +10,8 @@ import {
   UserTestResultSignalType,
   TestStatus,
 } from '@cdo/apps/javalab/constants';
-import * as ExceptionHandler from '@cdo/apps/javalab/javabuilderExceptionHandler';
-import * as TestResultHandler from '@cdo/apps/javalab/testResultHandler';
+import ExceptionHandler from '@cdo/apps/javalab/javabuilderExceptionHandler';
+import TestResultHandler from '@cdo/apps/javalab/testResultHandler';
 import project from '@cdo/apps/code-studio/initApp/project';
 
 describe('JavabuilderConnection', () => {

@@ -37,7 +37,7 @@ import {Z_INDEX as OVERLAY_Z_INDEX} from '../Overlay';
 import Button from '../Button';
 import i18n from '@cdo/locale';
 import ContainedLevelResetButton from './ContainedLevelResetButton';
-import {queryParams} from '@cdo/apps/code-studio/utils';
+import codeStudioUtils from '@cdo/apps/code-studio/utils';
 import {rubricShape} from '@cdo/apps/templates/rubrics/rubricShapes';
 import StudentRubricView from '@cdo/apps/templates/rubrics/StudentRubricView';
 
@@ -139,7 +139,7 @@ class TopInstructions extends Component {
     this.isViewingAsStudent = this.props.viewAs === ViewType.Participant;
     this.isViewingAsTeacher = this.props.viewAs === ViewType.Instructor;
 
-    const studentUserIdIncluded = !!queryParams('user_id');
+    const studentUserIdIncluded = !!codeStudioUtils.queryParams('user_id');
 
     const teacherViewingStudentWork =
       this.isViewingAsTeacher &&

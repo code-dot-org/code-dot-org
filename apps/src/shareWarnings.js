@@ -1,6 +1,6 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
-import * as utils from './utils';
+import utils from './utils';
 import ShareWarningsDialog from './templates/ShareWarningsDialog';
 
 function hasSeenDataAlert(channelId) {

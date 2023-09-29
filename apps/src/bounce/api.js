@@ -1,4 +1,4 @@
-import tiles from './tiles';
+import * as tiles from './tiles';
 import {singleton as studioApp} from '../StudioApp';
 
 export const PaddleSpeed = {

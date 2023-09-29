@@ -6,8 +6,8 @@ import {
   NO_SELECTED_SECTION_VALUE,
 } from '@cdo/apps/code-studio/components/progress/SectionSelector';
 import {mount} from 'enzyme';
-import * as utils from '@cdo/apps/utils';
-import * as codeStudioUtils from '@cdo/apps/code-studio/utils';
+import utils from '@cdo/apps/utils';
+import codeStudioUtils from '@cdo/apps/code-studio/utils';
 
 const fakeSection = {
   name: 'My Section',

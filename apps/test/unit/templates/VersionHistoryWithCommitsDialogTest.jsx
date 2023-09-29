@@ -4,7 +4,7 @@ import sinon from 'sinon';
 import {assert, expect} from '../../util/reconfiguredChai';
 import VersionHistoryWithCommitsDialog from '@cdo/apps/templates/VersionHistoryWithCommitsDialog';
 import {sources as sourcesApi} from '@cdo/apps/clientApi';
-import * as utils from '@cdo/apps/utils';
+import utils from '@cdo/apps/utils';
 import project from '@cdo/apps/code-studio/initApp/project';
 import firehoseClient from '@cdo/apps/lib/util/firehose';
 
