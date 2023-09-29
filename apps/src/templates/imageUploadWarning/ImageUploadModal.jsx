@@ -10,16 +10,13 @@ import styles from './image-upload-warning.module.scss';
 export default function ImageUploadModal({
   isOpen,
   cancelUpload,
-  isTeacher,
   confirmUploadWarning,
 }) {
   const [noPIIConfirmed, setNoPIIConfirmed] = useState(false);
   const [restrictedShareConfirmed, setRestrictedShareConfirmed] =
     useState(false);
 
-  const isConfirmButtonEnabled = isTeacher
-    ? noPIIConfirmed
-    : noPIIConfirmed && restrictedShareConfirmed;
+  const isConfirmButtonEnabled = noPIIConfirmed && restrictedShareConfirmed;
 
   const onCancel = () => {
     setNoPIIConfirmed(false);
@@ -41,25 +38,17 @@ export default function ImageUploadModal({
           />
           {msg.animationPicker_confirmNoPII()}
         </label>
-        {!isTeacher && (
-          <label className={styles.checkboxLabel}>
-            <input
-              type="checkbox"
-              checked={restrictedShareConfirmed}
-              onChange={() =>
-                setRestrictedShareConfirmed(!restrictedShareConfirmed)
-              }
-            />
-            {msg.animationPicker_confirmRestrictedShare()}
-          </label>
-        )}
+        <label className={styles.checkboxLabel}>
+          <input
+            type="checkbox"
+            checked={restrictedShareConfirmed}
+            onChange={() =>
+              setRestrictedShareConfirmed(!restrictedShareConfirmed)
+            }
+          />
+          {msg.animationPicker_confirmRestrictedShare()}
+        </label>
         <p className={styles.modalDetails}>
-          {isTeacher && (
-            <>
-              {msg.animationPicker_warnNoPublishShare()}
-              <br />
-            </>
-          )}
           {msg.animationPicker_undoRestrictedShareInstructions()}
         </p>
       </div>
@@ -88,5 +77,4 @@ ImageUploadModal.propTypes = {
   isOpen: PropTypes.bool.isRequired,
   cancelUpload: PropTypes.func.isRequired,
   confirmUploadWarning: PropTypes.func.isRequired,
-  isTeacher: PropTypes.bool.isRequired,
 };

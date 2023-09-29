@@ -33,7 +33,6 @@ import {
   workspaceAlertTypes,
   displayWorkspaceAlert,
   refreshInRestrictedShareMode,
-  refreshTeacherHasConfirmedUploadWarning,
 } from '../projectRedux';
 
 // Name of the packed source file
@@ -118,7 +117,6 @@ var currentSources = {
   selectedSong: null,
   selectedPoem: null,
   inRestrictedShareMode: false,
-  teacherHasConfirmedUploadWarning: false,
   hiddenDefinitions: null,
 };
 
@@ -146,7 +144,6 @@ function unpackSources(data) {
     selectedPoem: data.selectedPoem,
     libraries: data.libraries,
     inRestrictedShareMode: data.inRestrictedShareMode,
-    teacherHasConfirmedUploadWarning: data.teacherHasConfirmedUploadWarning,
     hiddenDefinitions: data.hiddenDefinitions,
   };
 }
@@ -712,13 +709,6 @@ var projects = (module.exports = {
         getStore().dispatch(refreshInRestrictedShareMode());
       }
 
-      if (currentSources.teacherHasConfirmedUploadWarning !== undefined) {
-        sourceHandler.setTeacherHasConfirmedUploadWarning(
-          currentSources.teacherHasConfirmedUploadWarning
-        );
-        getStore().dispatch(refreshTeacherHasConfirmedUploadWarning());
-      }
-
       if (isEditing) {
         if (current) {
           if (currentSources.source) {
@@ -978,7 +968,7 @@ var projects = (module.exports = {
   },
   /**
    * Saves the project only if the sources {source, html, animations,
-   * makerAPIsEnabled, selectedSong, selectedPoem, inRestrictedShareMode, teacherHasConfirmedUploadWarning} have changed.
+   * makerAPIsEnabled, selectedSong, selectedPoem, inRestrictedShareMode} have changed.
    * @returns {Promise} A promise containing the project data if the project
    * was saved, otherwise returns a promise which resolves with no arguments.
    */
@@ -1236,17 +1226,6 @@ var projects = (module.exports = {
     return this.sourceHandler.inRestrictedShareMode();
   },
 
-  setTeacherHasConfirmedUploadWarning(hasConfirmedUploadWarning) {
-    this.sourceHandler.setTeacherHasConfirmedUploadWarning(
-      hasConfirmedUploadWarning
-    );
-    return this.save();
-  },
-
-  teacherHasConfirmedUploadWarning() {
-    return this.sourceHandler.teacherHasConfirmedUploadWarning();
-  },
-
   /**
    * Saves the project to the Channels API. Calls `callback` on success if a
    * callback function was provided.
@@ -1325,8 +1304,6 @@ var projects = (module.exports = {
           const libraries = this.sourceHandler.getLibrariesList();
           const inRestrictedShareMode =
             this.sourceHandler.inRestrictedShareMode();
-          const teacherHasConfirmedUploadWarning =
-            this.sourceHandler.teacherHasConfirmedUploadWarning();
           const hiddenDefinitions = this.sourceHandler.getHiddenDefinitions();
           callback({
             source,
@@ -1337,7 +1314,6 @@ var projects = (module.exports = {
             selectedPoem,
             libraries,
             inRestrictedShareMode,
-            teacherHasConfirmedUploadWarning,
             hiddenDefinitions,
           });
         })
