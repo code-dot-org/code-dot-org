@@ -17,7 +17,9 @@ export default function ImageUploadModal({
   const [restrictedShareConfirmed, setRestrictedShareConfirmed] =
     useState(false);
 
-  const isConfirmButtonEnabled = noPIIConfirmed && restrictedShareConfirmed;
+  const isConfirmButtonEnabled = isTeacher
+    ? noPIIConfirmed
+    : noPIIConfirmed && restrictedShareConfirmed;
 
   const onCancel = () => {
     setNoPIIConfirmed(false);
