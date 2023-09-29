@@ -5,10 +5,10 @@ html {
 }
 
 h2 {
-  font-size: 32px;
+  font-size: 2rem;
   font-family: "Gotham 7r", sans-serif;
-  margin: 0 0 1em;
-  line-height: 1.2em;
+  margin: 0 0 1rem;
+  line-height: 1.2;
 }
 
 .flex-container {
@@ -19,7 +19,7 @@ section.banner {
   padding: 0;
 
   .wrapper {
-    padding: 2em 0px 12em;
+    padding: 2rem 0px 12rem;
   }
 
   h1 {

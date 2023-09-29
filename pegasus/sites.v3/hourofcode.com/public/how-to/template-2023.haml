@@ -5,7 +5,7 @@ theme: how_to_guide
 ---
 
 -# Hero banner
-= view :"how-to/how_to_banner", nav_audience: "educators"
+= view :"how-to/how_to_banner", nav_audience: "nav_educators"
 
 -# Intro section
 = view :"how-to/how_to_intro", intro_header: hoc_s(:hoc_how_to_educators_intro_heading), intro_desc: hoc_s(:hoc_how_to_educators_intro_desc)
@@ -16,10 +16,7 @@ theme: how_to_guide
     CONTENT HERE
 
 -# FAQ
-=view :"how-to/faq/educators"
+=view :"how-to/faq/faq_educators"
 
 -# Resources
-%section
-  .wrapper
-    %h2.centered
-      =hoc_s(:heading_additional_resources)
+= view :"how-to/resources/resources_educators"
