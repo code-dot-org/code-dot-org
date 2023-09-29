@@ -146,6 +146,45 @@ const DanceAiModal: React.FunctionComponent<DanceAiProps> = ({onClose}) => {
       .replace(/","/g, '", "');
     setResponseParams(`ai(${pickedString})`);
     setResponseExplanation(params.explanation);
+
+    insertBlocks(params);
+  };
+
+  const insertBlocks = (params: any) => {
+    let firstBlock = Blockly.getMainWorkspace().newBlock(
+      'Dancelab_setForegroundEffect'
+    );
+    //firstBlock.setFieldValue('confetti', 'EFFECT');
+    firstBlock.setFieldValue(params.foregroundEffect, 'EFFECT');
+
+    let secondBlock = Blockly.getMainWorkspace().newBlock(
+      'Dancelab_setBackgroundEffectWithPalette'
+    );
+    //secondBlock.setFieldValue('sparkles', 'EFFECT');
+    //secondBlock.setFieldValue('cool', 'PALETTE');
+    secondBlock.setFieldValue(params.backgroundEffect, 'EFFECT');
+    secondBlock.setFieldValue(params.backgroundColor, 'PALETTE');
+
+    if (
+      firstBlock &&
+      secondBlock &&
+      firstBlock.nextConnection &&
+      secondBlock.previousConnection
+    ) {
+      firstBlock.nextConnection.connect(secondBlock.previousConnection);
+
+      const firstBlockSvg = firstBlock as any;
+
+      firstBlockSvg.moveTo(new Blockly.utils.Coordinate(200, 60));
+
+      firstBlockSvg.initSvg();
+      firstBlockSvg.render();
+
+      const secondBlockSvg = secondBlock as any;
+
+      secondBlockSvg.initSvg();
+      secondBlockSvg.render();
+    }
   };
 
   const handleDoneClick = () => {
