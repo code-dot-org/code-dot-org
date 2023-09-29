@@ -50,8 +50,7 @@ end
 # The staging server requires a special worktree at a hardcoded location in
 # order to successfully run the `deploy_to_levelbuilder` and
 # `merge_lb_to_staging` scripts.
-# TODO: remove the or case once I've verified this functionality
-if node.chef_environment == 'staging' || node.chef_environment == 'adhoc'
+if node.chef_environment == 'staging'
   worktree_path = File.join(home_path, 'deploy-management-repo')
 
   execute 'create worktree for managing deployment scripts' do
