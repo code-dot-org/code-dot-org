@@ -6,15 +6,16 @@ import getScriptData from '@cdo/apps/util/getScriptData';
 $(document).ready(() => {
   const rubric = getScriptData('rubricData');
   const lessonData = getScriptData('lessonData');
-  const unitName = lessonData.unitName;
-  const lessonNumber = lessonData.lessonNumber;
-  const levels = lessonData.levels;
+  const {unitName, lessonNumber, levels} = lessonData;
+  const submittableLevels = levels.filter(
+    level => level.properties.submittable === 'true'
+  );
 
   ReactDOM.render(
     <RubricsContainer
       unitName={unitName}
       lessonNumber={lessonNumber}
-      levels={levels}
+      submittableLevels={submittableLevels}
       rubric={rubric}
     />,
     document.getElementById('form')

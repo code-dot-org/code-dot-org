@@ -21,7 +21,9 @@ export async function saveRubricToTable(
     ? document.querySelector('meta[name="csrf-token"]').attributes['content']
         .value
     : null;
-  const learningGoalListAsData = removeNewIds(transformKeys(learningGoalList));
+  const learningGoalListAsData = resetPositionsOfLearningGoals(
+    removeNewIds(transformKeys(learningGoalList))
+  );
 
   const rubric_data = {
     levelId: selectedLevelForAssessment,
@@ -100,6 +102,19 @@ function removeNewIds(keyConceptList) {
   keyConceptList.forEach(keyConceptList => {
     if (!isNumber(keyConceptList.id)) {
       delete keyConceptList.id;
+    }
+  });
+  return keyConceptList;
+}
+
+function resetPositionsOfLearningGoals(keyConceptList) {
+  let position = 1;
+  keyConceptList.forEach(keyConcept => {
+    if (keyConceptList._delete) {
+      keyConcept.position = -1;
+    } else {
+      keyConcept.position = position;
+      position++;
     }
   });
   return keyConceptList;
