@@ -57,8 +57,8 @@ if node.chef_environment == 'staging' || node.chef_environment == 'adhoc'
   execute 'create worktree for managing deployment scripts' do
     command "git worktree add #{worktree_path}"
     cwd git_path
-    user node[:current_user]
-    group node[:current_user]
+    user node[:user]
+    group node[:user]
     not_if {File.exist? worktree_path}
   end
 end
