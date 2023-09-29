@@ -7,6 +7,7 @@ import {
   learningGoalShape,
   reportingDataShape,
   studentLevelInfoShape,
+  submittedEvaluationShape,
 } from './rubricShapes';
 import FontAwesome from '@cdo/apps/templates/FontAwesome';
 import {
@@ -250,9 +251,7 @@ LearningGoal.propTypes = {
   canProvideFeedback: PropTypes.bool,
   reportingData: reportingDataShape,
   studentLevelInfo: studentLevelInfoShape,
-  submittedEvaluation: PropTypes.shape({
-    feedback: PropTypes.string,
-  }),
+  submittedEvaluation: submittedEvaluationShape,
 };
 
 const AiToken = () => {
