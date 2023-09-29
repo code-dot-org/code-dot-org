@@ -2,11 +2,13 @@
 
 %nav.how-to-nav
   %ul
-    %li.how-to-label
-      %button
+    %li
+      %button.menu-button
         = nav_current
-      %ul.how-to-menu
+      %ul.menu-list{style: "display: none"}
         - nav_index.times do |index|
           %li
             %a{href: resolve_url(nav_url[index])}
               = nav_label[index]
+
+%script{src: "/js/how-to-nav.js"}

@@ -28,6 +28,7 @@ section.banner {
     left: 50%;
     transform: translate(-50%, -50%);
     margin-top: 3rem;
+    padding: 0 1rem;
     width: 100%;
   }
 
@@ -40,7 +41,7 @@ section.banner {
   }
 
   nav.how-to-nav {
-    width: 250px;
+    min-width: 270px;
     position: relative;
 
     ul {
@@ -53,22 +54,19 @@ section.banner {
         text-indent: 0;
         padding: 0;
         color: var(--neutral_dark);
-        background-color: var(--neutral_dark10);
-        border-radius: 4px;
 
         &::before {
           content: "";
         }
 
-        &:hover {
-          background-color: var(--neutral_dark20);
-        }
-
         button {
           background-color: var(--neutral_dark10);
           border: none;
+          border-radius: 4px;
           font-family: inherit;
           width: 100%;
+          text-overflow: ellipsis;
+          overflow: hidden;
 
           &::after {
             content: url('/images/angle-down.svg');
@@ -78,48 +76,39 @@ section.banner {
           }
         }
 
-        a, button {
-          color: var(--neutral_dark);
-          display:block;
-          text-decoration:none;
-          padding: 14px 32px;
-          font-size: 18px;
+        button.rotate::after {
+          transform: rotate(180deg);
+          top: 10px;
         }
 
-        ul.how-to-menu {
-          display: none;
+        a, button {
+          color: var(--neutral_dark);
+          display: block;
+          text-decoration: none;
+          font-size: 18px;
+          padding: 14px 34px;
+        }
+
+        ul.menu-list {
           position: absolute;
+          top: calc(100% - 4px);
+          padding-top: 6px;
+          background-color: var(--neutral_dark10);
+          border-radius: 0 0 4px 4px;
           width: 100%;
 
           li {
             border-radius: 0;
+
+            &:hover {
+              background-color: var(--neutral_dark20);
+            }
 
             &:last-child {
               border-radius: 0 0 4px 4px;
               padding-bottom: 2px;
             }
           }
-        }
-      }
-    }
-
-    li.how-to-label {
-      position: relative;
-
-      &:hover,
-      &:focus-within {
-
-        button {
-          border-radius: 4px 4px 0 0;
-          cursor: default;
-
-          &::after {
-            display: none;
-          }
-        }
-
-        ul.how-to-menu {
-          display: block;
         }
       }
     }
