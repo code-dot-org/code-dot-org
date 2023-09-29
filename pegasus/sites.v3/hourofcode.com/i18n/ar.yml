@@ -268,6 +268,10 @@ ar:
   call_to_action_register_early_access: سجل للوصول المبكر
   call_to_action_open_positions: عرض المراكز المفتوحة
   call_to_action_get_guide: احصل على الدليل
+  call_to_action_donate_to_cdo: تبرع لموقع Code.org
+  call_to_action_start_fundraiser: ابدأ حملة لجمع التبرعات
+  call_to_action_view_donation_policy: عرض سياسة التبرع
+  call_to_action_view_donate_bitpay: تبرع باستخدام BitPay
   aria_label_call_to_action_afe: تعرف على المزيد حول مهندس المستقبل في أمازون
   aria_label_call_to_action_teaching_csf: ابدأ برنامج التعلم المهني لتدريس أساسيات
     علوم الكمبيوتر
@@ -362,6 +366,7 @@ ar:
   curriculum_name_csp: مبادئ علوم الكمبيوتر
   curriculum_name_csc: روابط علوم الكمبيوتر
   curriculum_name_csa: علوم الكمبيوتر A
+  curriculum_name_csa_ai: Pseudoloc-سخبفلقث ىلهىثقهى & ؤةحعفق رههخى
   curriculum_name_csc_02: أي وحدة من وحدات روابط علوم الكمبيوتر
   curriculum_name_ai: الذكاء الاصطناعي وتعلم الآلة
   curriculum_name_artificial_intelligence: الذكاء الاصطناعي (AI)
@@ -429,6 +434,11 @@ ar:
     على إنشاء مواقع الويب والتطبيقات والرسوم المتحركة والألعاب وأنظمة الحوسبة المادية.
   curriculum_desc_csp: دورة تمهيدية مجانية للمدارس الثانوية معتمدة من AP® CSP تُعرّف
     الطلاب بالمفاهيم التأسيسية لعلوم الكمبيوتر.
+  curriculum_desc_csa_ai_long: 'تقدم وحدة ما بعد AP CSA المكونة من فصلين لطلاب المدارس
+    الثانوية خبرة عملية في أدوات تطوير البرامج الاحترافية، بما في ذلك GitHub و GitHub
+    Copilot، وتزودهم بمهارات العالم الحقيقي لتطوير برنامج رؤية الكمبيوتر. '
+  curriculum_desc_csa_ai_short: تقدم وحدة Post-AP® CSA لطلاب المدارس الثانوية خبرة
+    عملية مع أدوات تطوير البرامج الاحترافية.
   collection_hardware: التركيز على الأجهزة
   collection_hardware_desc: تُمكّن الطلاب من استخدام البيانات والأجهزة المادية لحل
     المشكلات.
@@ -501,6 +511,7 @@ ar:
   module_duration_2_hrs: 2 ساعة
   module_duration_3_hrs: 3 ساعات
   module_duration_5_hrs: 5 ساعات
+  module_duration_5_hrs_plus: أكثر من 5 ساعات
   module_duration_8_hrs: 8 ساعات
   module_duration_20_hrs: 20 ساعة
   module_duration_35_hrs: 35 ساعة
@@ -574,6 +585,7 @@ ar:
   heading_objects_first: الكائنات أولاً
   heading_these_lessons_will: 'ستقوم هذه الدروس بما يلي:'
   heading_explore_curriculum_catalog: استكشف جميع دوراتنا في كتالوج المناهج
+  heading_csa_ai: هل تبحث عن أشياء للقيام بها بعد اختبار AP®؟
   professional_learning_section_desc: احصل على الدعم الذي تحتاجه أثناء الاستعداد للتدريس.
     يحبها المعلمون، حيث صنفها أكثر من 90٪ على أنها أفضل تطوير مهني على الإطلاق!
   professional_learning_section_desc_short: احصل على الدعم الذي تحتاجه أثناء الاستعداد
@@ -602,6 +614,23 @@ ar:
   support_and_questions_section_desc: فريق الدعم لدينا هنا للإجابة على أي أسئلة قد
     تكون لديك حول بدء التدريس باستخدام Code.org. يمكنك أيضًا سؤال المعلمين الآخرين
     عن تجربتهم في منتديات المعلمين لدينا.
+  subscribe_form_section_title: اشترك للحصول على التحديثات
+  subscribe_form_section_desc_csa: اشترك لتلقي رسائل بريد إلكتروني شهرية حول AP® Computer
+    Science A من Code.org واحصل على تذكيرات ونصائح وتحديثات مفيدة يتم إرسالها مباشرة
+    إلى صندوق الوارد الخاص بك.
+  subscribe_form_section_desc_csc: اشترك لتلقي رسائل بريد إلكتروني شهرية حول اتصالات
+    علوم الكمبيوتر الخاصة بـ Code.org واحصل على تذكيرات ونصائح وتحديثات مفيدة يتم
+    إرسالها مباشرة إلى صندوق الوارد الخاص بك.
+  subscribe_form_section_desc_csd: اشترك لتلقي رسائل بريد إلكتروني شهرية حول اكتشافات
+    علوم الكمبيوتر في Code.org واحصل على تذكيرات ونصائح وتحديثات مفيدة يتم إرسالها
+    مباشرة إلى صندوق الوارد الخاص بك.
+  subscribe_form_section_desc_csf: اشترك لتلقي رسائل بريد إلكتروني شهرية حول أساسيات
+    علوم الكمبيوتر في Code.org واحصل على تذكيرات ونصائح وتحديثات مفيدة يتم إرسالها
+    مباشرة إلى صندوق الوارد الخاص بك.
+  subscribe_form_section_desc_csp: اشترك لتلقي رسائل بريد إلكتروني شهرية حول مبادئ
+    علوم الكمبيوتر الخاصة بـ Code.org واحصل على تذكيرات ونصائح وتحديثات مفيدة يتم
+    إرسالها مباشرة إلى صندوق الوارد الخاص بك.
+  subscribe_form_section_unsubscribe: يمكنك إلغاء الاشتراك في أي وقت.
   blockchain_hero_heading: كيف تعمل تقنية البلوك تشين
   blockchain_hero_desc: انغمس في عالم بلوكتشين من خلال «كيف تعمل بلوكتشين»، سلسلة
     الفيديو الجديدة والدروس المصاحبة لها!
@@ -701,6 +730,8 @@ ar:
   ai_curriculum_desc_04: تكمل هذه الدروس سلسلة فيديو How AI Works. يتم ربط كل درس
     بفيديو واحد من السلسلة، للتعمق في المفاهيم المقدمة في مقاطع الفيديو.
   ai_curriculum_btn_aria_label_04: استكشف دروس كيف يعمل الذكاء الاصطناعي
+  ai_curriculum_grades_05: 'مستويات الصف: 9-12'
+  ai_curriculum_btn_aria_label_05: استكشف وحدة هندسة البرمجيات ورؤية الكمبيوتر
   ai_carousel_heading: 'ماذا يقول المعلمون عن الذكاء الاصطناعي مع Code.org:'
   ai_carousel_quote_01: كما أتاح هذا الدرس لطلابي الفرصة لرؤية وجود عنصر رأي في أنظمة
     التصنيف. في وقت لاحق، عندما بدأنا نرى كيف يمكن أن ينتهي التحيز في الذكاء الاصطناعي،
@@ -818,6 +849,7 @@ ar:
   ai_pl_101_llm_slides_desc: أدوات للحصول على أفضل إخراج ممكن من LLMs مثل ChatGPT،
     من المبتدئين إلى المتقدمين. يتضمن تعليمات البدء لأولئك الذين يغمسون أصابع قدمهم
     فقط، بالإضافة إلى أدوات متقدمة لأولئك الذين يتطلعون إلى تعظيم إمكاناتهم.
+  ai_pl_101_resources_3: موجهات الذكاء الاصطناعي لتحويل تعلم الطلاب
   how_ai_works_hero_heading: كيف يعمل الذكاء الاصطناعي
   how_ai_works_hero_desc: انغمس في عالم الذكاء الاصطناعي من خلال سلسلة مقاطع الفيديو
     «How AI Works» والدروس المصاحبة لها!
@@ -1185,8 +1217,8 @@ ar:
     Animation
   csp_page_curriculum_glance_devices: Laptop, Chromebook
   csp_page_curriculum_glance_tools: مختبر التطبيقات
-  csp_page_curriculum_glance_professional_learning: Facilitator-led Workshops, Self-paced
-    Modules
+  csp_page_curriculum_glance_professional_learning: ورش عمل يقودها الميسرون، وحدات
+    التعلم الذاتي
   csp_page_curriculum_glance_professional_languages: الإنجليزية
   csp_page_curriculum_glance_professional_accessibility_features: Text-to-speech,
     Closed captioning, Immersive reader
@@ -1312,8 +1344,8 @@ ar:
   csd_page_curriculum_glance_devices: Laptop, Chromebook
   csd_page_curriculum_glance_tools: مختبر التطبيقات، مختبر الألعاب، مختبر الذكاء الاصطناعي،
     مختبر الويب
-  csd_page_curriculum_glance_professional_learning: Facilitator-led Workshops, Self-paced
-    Modules
+  csd_page_curriculum_glance_professional_learning: ورش عمل يقودها الميسرون، وحدات
+    التعلم الذاتي
   csd_page_curriculum_glance_professional_languages: الإنجليزية
   csd_page_curriculum_glance_professional_accessibility_features: Text-to-speech,
     Closed captioning, Immersive reader
@@ -1442,8 +1474,8 @@ ar:
     الفن والتصميم, تصميم التطبيقات
   csf_page_curriculum_glance_devices: كمبيوتر محمول، جهاز Chromebook، جهاز لوحي
   csf_page_curriculum_glance_tools: سبرايت لاب، بلاي لاب
-  csf_page_curriculum_glance_professional_learning: Facilitator-led Workshops, Self-paced
-    Modules
+  csf_page_curriculum_glance_professional_learning: ورش عمل يقودها الميسرون، وحدات
+    التعلم الذاتي
   csf_page_curriculum_glance_languages: العربية، البهاسا الإندونيسية، الكاتالونية،
     الصينية المبسطة، الصينية التقليدية، التشيكية، الفرنسية، الألمانية، الهندية، الإيطالية،
     اليابانية، الكورية، الكانادية، الماليزية، الماراثية، المنغولية، البولندية، البرتغالية-BR،
@@ -1578,6 +1610,34 @@ ar:
   csa_page_faq_answer_08_02: For more information about the values that guided our
     work, please see our [curriculum values](%{curriculum_values_url}) and our [professional
     learning values](%{pl_values_url}).
+  donate_page_top_heading: ساعد في تمويل مهمتنا
+  donate_page_top_desc: كل تبرع يغذي مهمة Code.org لتوسيع الوصول إلى تعليم علوم الكمبيوتر.
+    نقدم لك عدة طرق للتبرع وإحداث فرق.
+  donate_page_fundraise_title: جمع التبرعات لموقع Code.org
+  donate_page_fundraise_desc: ساعد في جمع الأموال لـ Code.org! يجب أن تتاح لكل طالب
+    في كل مدرسة الفرصة لتعلم علوم الكمبيوتر.
+  donate_page_other_ways_title: طرق أخرى للعطاء
+  donate_page_other_ways_desc: استكشف طرقًا متنوعة للمساهمة، وابحث عن الخيار الذي
+    يناسبك بشكل أفضل. كل لفتة، كبيرة كانت أم صغيرة، تدفع مهمتنا إلى الأمام.
+  donate_page_501c3: تم تسجيل Code.org كمنظمة غير ربحية عامة 501 (c) (3). المساهمات
+    في Code.org قابلة للخصم الضريبي إلى الحد الذي يسمح به القانون. رقم التعريف الضريبي
+    لـ Code.org هو 46-0858543.
+  donate_page_donation_policy_title: فهم سياسة التبرع الخاصة بنا
+  donate_page_donation_policy_desc: تعرف على كيفية تعاملنا مع مساهماتك وتخصيصها.
+  donate_tabs_tab_label_daf_direct: DAF دايركت
+  donate_tabs_tab_label_amazon: الأمازون
+  donate_tabs_tab_label_bitpay: بيتباي
+  donate_tabs_tab_label_employee_match: مباراة الموظفين
+  donate_tabs_daf_direct_title: تبرع عبر DAF Direct
+  donate_tabs_daf_direct_desc: تبرع من خلال الصندوق الذي ينصح به المانحون مع Fidelity
+    Charitable أو Schwab Charitable أو BNY Mellon وقم بتقديم توصية المنحة الخاصة بك
+    إلى Code.org من خلال نموذج DAF Direct عبر الإنترنت.
+  donate_tabs_amazon_title: تبرع عبر أمازون
+  donate_tabs_amazon_desc: تبرع مباشرة باستخدام حساب Amazon الخاص بك. من خلال بضع
+    نقرات فقط، يمكنك المساهمة بسلاسة في مهمة Code.org وتمكين مستقبل تعليم علوم الكمبيوتر.
+  donate_tabs_bitpay_title: تبرع بالعملات المشفرة عبر BitPay
+  donate_tabs_bitpay_desc: احتضن مستقبل العطاء باستخدام العملة المشفرة. من خلال BitPay،
+    يمكن لعملتك الرقمية أن تدعم بشكل مباشر مساعي Code.org في توسيع تعليم علوم الكمبيوتر.
   hoc_live: أور أوف كود لايف
   hoc_live_sign_up_title: اشترك في برنامج «ساعة البرمجة» المباشر
   hoc_live_learn_title: تعلم مع برنامج «ساعة البرمجة» المباشر

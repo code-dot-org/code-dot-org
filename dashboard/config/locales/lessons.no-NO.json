@@ -455,6 +455,30 @@
         "express-2022/Dance Party": {
           "name": "Dansefest"
         },
+        "csd3-2023/Variables": {
+          "name": "Variabler"
+        },
+        "csd3-2023/Sprite Properties": {
+          "name": "Figuregenskaper"
+        },
+        "csd3-2023/Text": {
+          "name": "tekst"
+        },
+        "csd3-2023/Conditionals": {
+          "name": "Betingelser"
+        },
+        "csd3-2023/Velocity": {
+          "name": "Hastighet"
+        },
+        "csd3-2023/Functions": {
+          "name": "Funksjoner"
+        },
+        "csd6a-2023/Functions": {
+          "name": "Funksjoner"
+        },
+        "csd6b-2023/Functions": {
+          "name": "Funksjoner"
+        },
         "coursea-2023/Happy Maps": {
           "name": "Glade Kart"
         },

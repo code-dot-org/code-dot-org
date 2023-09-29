@@ -608,13 +608,26 @@ ko-KR:
         - {}
         questions:
         - {}
+      CSD Games Properties multi predict_2023:
+        answers:
+        - {}
+        - correct: true
+        - {}
+        - {}
+        - {}
+        questions:
+        - {}
       CSD Games Properties practice_2021:
         display_name: 스프라이트 속성
       CSD Games Properties practice_2022:
         display_name: 스프라이트 속성
+      CSD Games Properties practice_2023:
+        display_name: 스프라이트 속성
       CSD Games variables practice_2021:
         display_name: 변수 연습
       CSD Games variables practice_2022:
+        display_name: 변수 연습
+      CSD Games variables practice_2023:
         display_name: 변수 연습
       CSD Header Size MC:
         answers:
@@ -677,6 +690,18 @@ ko-KR:
           &lt;h6&gt; 와플 &lt;/h6&gt;
           </pre>
       CSD Header Size MC_2018_2019_pilot_2022:
+        answers:
+        - {}
+        - correct: true
+        - {}
+        - {}
+        markdown: |
+          <pre>
+          &lt;h3&gt; 달걀 &lt;/h3&gt;
+          &lt;h1&gt; 베이컨 &lt;/h1&gt;
+          &lt;h6&gt; 와플 &lt;/h6&gt;
+          </pre>
+      CSD Header Size MC_2018_2019_pilot_2023:
         answers:
         - {}
         - correct: true
@@ -778,6 +803,60 @@ ko-KR:
           * [앱과 문제해결 - 프로젝트 가이드](https://docs.google.com/document/d/1S7X-B2V1-WuT7ZLk1LAZRO1O5f4u7pgth4F7G00tGak/export?format=pdf)
           * [앱과 문제해결 - 동료검토](https://docs.google.com/document/d/13ekhJvtz1vovS6FhGBeDf1mcYFRyJe65bQdi8S8T9lU/export?format=pdf)
           * [앱과 문제해결 - 채점표](https://docs.google.com/document/d/1ix0LfgiVglwyC5Bb6PBlfBrnbeCOz2wPIPTgXu-qMZE/export?format=pdf)
+      CSD U1 MC Q1_2023:
+        answers:
+        - correct: true
+        - correct: true
+        - {}
+        - {}
+        - {}
+      CSD U1 MC Q2_2023:
+        answers:
+        - {}
+        - {}
+        - {}
+        - {}
+        - correct: true
+        questions:
+        - {}
+      CSD U1 MC Q3_2023:
+        answers:
+        - {}
+        - {}
+        - text: 음악
+        - text: 위치
+        - correct: true
+        questions:
+        - {}
+      CSD U1 MC Q4_2023:
+        answers:
+        - {}
+        - {}
+        - {}
+        - correct: true
+        - correct: true
+        questions:
+        - {}
+      CSD U1 Match Q5_2023:
+        answers:
+        - text: 입력
+        - text: 저장
+        - text: 프로세싱
+        questions:
+        - {}
+        - {}
+        - {}
+      CSD U1 Match Q6_2023:
+        answers:
+        - {}
+        - {}
+        - {}
+        - {}
+        questions:
+        - text: 준비
+        - text: 점검
+        - text: 시도
+        - text: 함수 정의
       CSD U1 Test PSP match:
         answers:
         - {}
@@ -865,6 +944,8 @@ ko-KR:
       CSD U2 CSS practice_pilot_2021:
         display_name: CSS로 텍스트 스타일링
       CSD U2 CSS practice_pilot_2022:
+        display_name: CSS로 텍스트 스타일링
+      CSD U2 CSS practice_pilot_2023:
         display_name: CSS로 텍스트 스타일링
       CSD U2 Design Project:
         content1: 설명 입력
@@ -999,9 +1080,13 @@ ko-KR:
         display_name: 이미지 추가
       CSD U2 Image challenge_pilot_2022:
         display_name: 이미지 추가
+      CSD U2 Image challenge_pilot_2023:
+        display_name: 이미지 추가
       CSD U2 Image practice_pilot_2021:
         display_name: 이미지 추가
       CSD U2 Image practice_pilot_2022:
+        display_name: 이미지 추가
+      CSD U2 Image practice_pilot_2023:
         display_name: 이미지 추가
       CSD U2 L1 Overview:
         content1: 설명 입력
@@ -1022,6 +1107,95 @@ ko-KR:
         content1: 설명 입력
       CSD U2 Lesson 6 Overview:
         content1: 설명 입력
+      CSD U2 MC Q10_2023:
+        answers:
+        - text: 생일
+        - text: 주소
+        - {}
+        - text: 귀하의 이름
+        - correct: true
+        questions:
+        - {}
+      CSD U2 MC Q11_2023:
+        answers:
+        - {}
+        - {}
+        - {}
+        - correct: true
+        questions:
+        - {}
+      CSD U2 MC Q1_2023:
+        answers:
+        - {}
+        - correct: true
+        - {}
+        - {}
+        - {}
+        questions:
+        - {}
+      CSD U2 MC Q2_2023:
+        answers:
+        - correct: true
+        - {}
+        - {}
+        - correct: true
+        - {}
+        questions:
+        - {}
+      CSD U2 MC Q3_2023:
+        answers:
+        - correct: true
+        - {}
+        - correct: true
+        - {}
+        - {}
+        questions:
+        - {}
+      CSD U2 MC Q4_2023:
+        answers:
+        - {}
+        - correct: true
+        - {}
+        - {}
+        - {}
+        questions:
+        - {}
+      CSD U2 MC Q6_2023:
+        answers:
+        - correct: true
+        - {}
+        - {}
+        - {}
+        - {}
+        questions:
+        - {}
+      CSD U2 MC Q7_2023:
+        answers:
+        - {}
+        - {}
+        - correct: true
+        - {}
+        - {}
+        questions:
+        - {}
+      CSD U2 MC Q8_2023:
+        answers:
+        - {}
+        - {}
+        - correct: true
+        - {}
+        - {}
+        questions:
+        - {}
+      CSD U2 Match Q1_2023:
+        answers:
+        - {}
+        - {}
+        - {}
+        questions:
+        - text: 색깔
+        - {}
+        - {}
       CSD U2 PSP Programming:
         markdown: |+
           # 프로그래밍을 위한 문제해결 프로세스
@@ -1453,6 +1627,19 @@ ko-KR:
         - {}
         - {}
         - {}
+      CSD U2 image debug match_2023:
+        answers:
+        - {}
+        - {}
+        - {}
+        - {}
+        - {}
+        questions:
+        - {}
+        - {}
+        - {}
+        - {}
+        - {}
       CSD U2 image debug match_pilot_2021:
         answers:
         - {}
@@ -1518,6 +1705,10 @@ ko-KR:
         content1: 설명 입력
       CSD U2 project guide_2018_2019_pilot_2022:
         content1: 설명 입력
+      CSD U2 project guide_2018_2019_pilot_2023:
+        content1: 설명 입력
+      CSD U2L2 - Chal_2023:
+        display_name: 도전 레벨
       CSD U3 - conditionals - Matching:
         answers:
         - {}
@@ -1583,6 +1774,19 @@ ko-KR:
         - {}
         - {}
         - {}
+      CSD U3 - conditionals - Matching_2018_2019_pilot_2023:
+        answers:
+        - {}
+        - {}
+        - {}
+        - {}
+        - {}
+        questions:
+        - {}
+        - {}
+        - {}
+        - {}
+        - {}
       CSD U3 Boolean MC:
         answers:
         - correct: true
@@ -1620,6 +1824,15 @@ ko-KR:
         - {}
         title: 제목화면 주제
       CSD U3 Boolean MC_2018_2019_pilot_2022:
+        answers:
+        - correct: true
+        - {}
+        - {}
+        - {}
+        questions:
+        - {}
+        title: 제목화면 주제
+      CSD U3 Boolean MC_2018_2019_pilot_2023:
         answers:
         - correct: true
         - {}
@@ -1676,6 +1889,12 @@ ko-KR:
         - correct: true
         - {}
       CSD U3 Functions Prediction define first_2018_2019_pilot_2022:
+        answers:
+        - {}
+        - {}
+        - correct: true
+        - {}
+      CSD U3 Functions Prediction define first_2018_2019_pilot_2023:
         answers:
         - {}
         - {}
@@ -1748,6 +1967,138 @@ ko-KR:
           ## 리소스
 
           * [변수에 대한 소개](https://youtu.be/G41G_PEWFjE) - 비디오 ([download](https://videos.code.org/2015/csp/applab/variables_1.mp4))
+      CSD U3 MC Q10_2023:
+        answers:
+        - correct: true
+        - correct: true
+        - {}
+        - {}
+        questions:
+        - {}
+      CSD U3 MC Q11_2023:
+        answers:
+        - {}
+        - correct: true
+        - {}
+        - {}
+        questions:
+        - {}
+      CSD U3 MC Q12_2023:
+        answers:
+        - {}
+        - {}
+        - correct: true
+        - {}
+        - {}
+        questions:
+        - {}
+      CSD U3 MC Q13_2023:
+        answers:
+        - {}
+        - {}
+        - {}
+        - correct: true
+        - {}
+        questions:
+        - {}
+      CSD U3 MC Q14_2023:
+        answers:
+        - text: '0'
+        - text: '1'
+        - text: '5'
+        - correct: true
+          text: '6'
+        - {}
+        questions:
+        - {}
+      CSD U3 MC Q1_2023:
+        answers:
+        - {}
+        - correct: true
+        - {}
+        - {}
+        - {}
+        questions:
+        - {}
+      CSD U3 MC Q2_2023:
+        answers:
+        - {}
+        - correct: true
+        - {}
+        - {}
+        - {}
+        questions:
+        - {}
+      CSD U3 MC Q4_2023:
+        answers:
+        - {}
+        - {}
+        - {}
+        - correct: true
+        - {}
+        questions:
+        - {}
+      CSD U3 MC Q5_2023:
+        answers:
+        - {}
+        - {}
+        - correct: true
+        - {}
+        - {}
+        questions:
+        - {}
+      CSD U3 MC Q6_2023:
+        answers:
+        - {}
+        - {}
+        - correct: true
+        - {}
+        questions:
+        - {}
+      CSD U3 MC Q8_2023:
+        answers:
+        - {}
+        - correct: true
+        - {}
+        - {}
+        - {}
+        questions:
+        - {}
+      CSD U3 Match Q1_2023:
+        answers:
+        - {}
+        - {}
+        - {}
+        - {}
+        questions:
+        - {}
+        - {}
+        - {}
+        - {}
+      CSD U3 Match Q2_2023:
+        answers:
+        - {}
+        - text: y
+        - text: 너비
+        - text: '높이:'
+        questions:
+        - {}
+        - {}
+        - {}
+        - {}
+      CSD U3 Match Q3_2023:
+        answers:
+        - {}
+        - {}
+        - {}
+        - {}
+        - {}
+        questions:
+        - {}
+        - {}
+        - {}
+        - {}
+        - {}
       CSD U3 Sprite Movement Predict Multi:
         answers:
         - {}
@@ -1781,6 +2132,14 @@ ko-KR:
         questions:
         - {}
       CSD U3 Sprite Movement Predict Multi_2018_2019_pilot_2022:
+        answers:
+        - {}
+        - {}
+        - correct: true
+        - {}
+        questions:
+        - {}
+      CSD U3 Sprite Movement Predict Multi_2018_2019_pilot_2023:
         answers:
         - {}
         - {}
@@ -2030,9 +2389,22 @@ ko-KR:
         - {}
         - {}
         - {}
+      CSD U3 drawSprites placement match_2023:
+        answers:
+        - {}
+        - {}
+        - {}
+        - {}
+        questions:
+        - {}
+        - {}
+        - {}
+        - {}
       CSD U3 drawing practice choice_2021:
         display_name: 연습
       CSD U3 drawing practice choice_2022:
+        display_name: 연습
+      CSD U3 drawing practice choice_2023:
         display_name: 연습
       CSD U3 game intro:
         content1: 설명 입력
@@ -2052,6 +2424,67 @@ ko-KR:
         content1: 설명 입력
       CSD U3 platform intro_2018_2019_pilot_2022:
         content1: 설명 입력
+      CSD U3 platform intro_2018_2019_pilot_2023:
+        content1: 설명 입력
+      CSD U4 MC Q1_2023:
+        answers:
+        - {}
+        - correct: true
+        - {}
+        - correct: true
+        questions:
+        - {}
+      CSD U4 MC Q2_2023:
+        answers:
+        - {}
+        - correct: true
+        - {}
+        - correct: true
+        questions:
+        - {}
+      CSD U4 MC Q3_2023:
+        answers:
+        - {}
+        - {}
+        - {}
+        - correct: true
+        questions:
+        - {}
+      CSD U4 MC Q4_2023:
+        answers:
+        - {}
+        - correct: true
+        - {}
+        - {}
+        - {}
+        questions:
+        - {}
+      CSD U4 MC Q5_2023:
+        answers:
+        - {}
+        - correct: true
+        - {}
+        - correct: true
+        - {}
+        questions:
+        - {}
+      CSD U4 MC Q8_2023:
+        answers:
+        - {}
+        - correct: true
+        - {}
+        - correct: true
+        questions:
+        - {}
+      CSD U4 MC Q9_2023:
+        answers:
+        - correct: true
+        - {}
+        - {}
+        - correct: true
+        - text: 피드백 남기기
+        questions:
+        - {}
       CSD U4 test feature match:
         answers:
         - {}
@@ -2213,6 +2646,84 @@ ko-KR:
         content1: 설명 입력
       CSD U5 L13 SFLP Interpreting Data:
         content1: 설명 입력
+      CSD U5 MC Q1_2023:
+        answers:
+        - {}
+        - {}
+        - {}
+        - correct: true
+        - {}
+        questions:
+        - {}
+      CSD U5 MC Q2_2023:
+        answers:
+        - {}
+        - correct: true
+        - correct: true
+        - {}
+        - {}
+        questions:
+        - {}
+      CSD U5 MC Q3_2023:
+        answers:
+        - {}
+        - correct: true
+        questions:
+        - {}
+      CSD U5 MC Q4_2023:
+        answers:
+        - {}
+        - {}
+        - correct: true
+        - {}
+        - {}
+        questions:
+        - {}
+      CSD U5 MC Q5_2023:
+        answers:
+        - {}
+        - {}
+        - {}
+        - correct: true
+        - {}
+        questions:
+        - {}
+      CSD U5 MC Q6_2023:
+        answers:
+        - {}
+        - correct: true
+        - {}
+        - {}
+        - {}
+        questions:
+        - {}
+      CSD U5 MC Q7_2023:
+        answers:
+        - {}
+        - correct: true
+        - {}
+        - {}
+        - {}
+        questions:
+        - {}
+      CSD U5 MC Q8_2023:
+        answers:
+        - {}
+        - correct: true
+        - {}
+        - {}
+        - {}
+        questions:
+        - {}
+      CSD U5 MC Q9_2023:
+        answers:
+        - {}
+        - {}
+        - {}
+        - {}
+        - correct: true
+        questions:
+        - {}
       CSD U5 crosstab warmup:
         content1: 설명 입력
       CSD U5 crosstab warmup_2018:
@@ -2372,29 +2883,73 @@ ko-KR:
         - {}
         questions:
         - {}
+      CSD U6 - Accelerometer - Chal_2023a_2023:
+        display_name: 도전 레벨
       CSD U6 - Accelerometer - Chal_2222:
+        display_name: 도전 레벨
+      CSD U6 - Accelerometer - Chal_mb2022:
+        display_name: 도전 레벨
+      CSD U6 - Board Inputs - Chal_2023:
         display_name: 도전 레벨
       CSD U6 - Board Inputs - Chal_2222:
         display_name: 도전 레벨
+      CSD U6 - Board Inputs - Chal_mb2022:
+        display_name: 도전 레벨
+      CSD U6 - Board Outputs - Chal_2023:
+        display_name: 도전 레벨
       CSD U6 - Board Outputs - Chal_2222:
+        display_name: 도전 레벨
+      CSD U6 - Board Outputs - Chal_mb2022:
+        display_name: 도전 레벨
+      CSD U6 - Color LEDs - Chal_2023a_2023:
         display_name: 도전 레벨
       CSD U6 - Color LEDs - Chal_2222:
         display_name: 도전 레벨
+      CSD U6 - Combine Inputs - Chal_2023a_2023:
+        display_name: 도전 레벨
       CSD U6 - Combine Inputs - Chal_2222:
+        display_name: 도전 레벨
+      CSD U6 - Combine Inputs - Chal_mb2022:
+        display_name: 도전 레벨
+      CSD U6 - If Variables - Chal_2023:
         display_name: 도전 레벨
       CSD U6 - If Variables - Chal_2222:
         display_name: 도전 레벨
+      CSD U6 - If Variables - Chal_mb2022:
+        display_name: 도전 레벨
+      CSD U6 - Music - Chal_2023:
+        display_name: 도전 레벨
       CSD U6 - Music - Chal_2222:
+        display_name: 도전 레벨
+      CSD U6 - Physical Input - Chal_2023:
         display_name: 도전 레벨
       CSD U6 - Physical Input - Chal_2222:
         display_name: 도전 레벨
+      CSD U6 - Physical Input - Chal_mb2022:
+        display_name: 도전 레벨
+      CSD U6 - Physical Output - Chal_2023:
+        display_name: 도전 레벨
       CSD U6 - Physical Output - Chal_2222:
+        display_name: 도전 레벨
+      CSD U6 - Physical Output - Chal_mb2022:
+        display_name: 도전 레벨
+      CSD U6 - Screen Inputs - Chal_2023:
         display_name: 도전 레벨
       CSD U6 - Screen Inputs - Chal_2222:
         display_name: 도전 레벨
+      CSD U6 - Screen Inputs - Chal_mb2022:
+        display_name: 도전 레벨
+      CSD U6 - Screen Outputs - Chal_2023:
+        display_name: 도전 레벨
       CSD U6 - Screen Outputs - Chal_2222:
         display_name: 도전 레벨
+      CSD U6 - Screen Outputs - Chal_mb2022:
+        display_name: 도전 레벨
+      CSD U6 - Sensors - Chal_2023a_2023:
+        display_name: 도전 레벨
       CSD U6 - Sensors - Chal_2222:
+        display_name: 도전 레벨
+      CSD U6 - Sensors - Chal_mb2022:
         display_name: 도전 레벨
       CSD U6 LED create intro:
         content1: 설명 입력
@@ -2404,6 +2959,132 @@ ko-KR:
         content1: 설명 입력
       CSD U6 LED create intro_2021:
         content1: 설명 입력
+      CSD U6 MC Q1_2023:
+        answers:
+        - {}
+        - correct: true
+        - {}
+        - correct: true
+        - {}
+        questions:
+        - {}
+      CSD U6 MC Q1_6b2023:
+        answers:
+        - correct: true
+        - {}
+        - correct: true
+        - {}
+        - {}
+        questions:
+        - {}
+      CSD U6 MC Q2_2023:
+        answers:
+        - {}
+        - {}
+        - {}
+        - correct: true
+          text: 가속도 센서
+        - {}
+        questions:
+        - {}
+      CSD U6 MC Q2_6b2023:
+        answers:
+        - {}
+        - {}
+        - {}
+        - correct: true
+          text: 가속도 센서
+        - text: 빛
+        questions:
+        - {}
+      CSD U6 MC Q3_2023:
+        answers:
+        - {}
+        - {}
+        - {}
+        - correct: true
+        questions:
+        - {}
+      CSD U6 MC Q3_6b2023:
+        answers:
+        - {}
+        - {}
+        - {}
+        - correct: true
+        questions:
+        - {}
+      CSD U6 MC Q4_2023:
+        answers:
+        - {}
+        - {}
+        - correct: true
+        - {}
+        - {}
+        questions:
+        - {}
+      CSD U6 MC Q4_6b2023:
+        answers:
+        - {}
+        - {}
+        - correct: true
+        - {}
+        - {}
+        questions:
+        - {}
+      CSD U6 MC Q5_2023:
+        answers:
+        - {}
+        - {}
+        - correct: true
+        - {}
+        - {}
+        questions:
+        - {}
+      CSD U6 MC Q5_6b2023:
+        answers:
+        - {}
+        - {}
+        - correct: true
+        - {}
+        - {}
+        questions:
+        - {}
+      CSD U6 MC Q6_2023:
+        answers:
+        - {}
+        - correct: true
+        - {}
+        - correct: true
+        - {}
+        questions:
+        - {}
+      CSD U6 MC Q6_6b2023:
+        answers:
+        - {}
+        - correct: true
+        - {}
+        - correct: true
+        - {}
+        questions:
+        - {}
+      CSD U6 MC Q7_2023:
+        answers:
+        - {}
+        - {}
+        - {}
+        - correct: true
+        - {}
+        questions:
+        - {}
+      CSD U6 MC Q7_6b2023:
+        answers:
+        - {}
+        - {}
+        - {}
+        - correct: true
+        - {}
+        questions:
+        - {}
       CSD U6 array multi:
         answers:
         - {}
@@ -2480,7 +3161,25 @@ ko-KR:
         questions:
         - {}
         title: 예측하기
+      CSD U6 setProperty predict multi_2023:
+        answers:
+        - {}
+        - {}
+        - {}
+        - correct: true
+        questions:
+        - {}
+        title: 예측하기
       CSD U6 setProperty predict multi_2222:
+        answers:
+        - {}
+        - {}
+        - {}
+        - correct: true
+        questions:
+        - {}
+        title: 예측하기
+      CSD U6 setProperty predict multi_mb2022:
         answers:
         - {}
         - {}
@@ -2619,29 +3318,43 @@ ko-KR:
         display_name: 도전
       CSD games cake challenge choice_2022:
         display_name: 도전
+      CSD games cake challenge choice_2023:
+        display_name: 도전
       CSD games functions practice choice_2021:
         display_name: 함수 연습
       CSD games functions practice choice_2022:
+        display_name: 함수 연습
+      CSD games functions practice choice_2023:
         display_name: 함수 연습
       CSD games platform challenge choice_2021:
         display_name: 도전
       CSD games platform challenge choice_2022:
         display_name: 도전
+      CSD games platform challenge choice_2023:
+        display_name: 도전
       CSD web conditionals practice choice_2021:
         display_name: 조건 연습
       CSD web conditionals practice choice_2022:
+        display_name: 조건 연습
+      CSD web conditionals practice choice_2023:
         display_name: 조건 연습
       CSD web draw loop practice choice_2021:
         display_name: 연습
       CSD web draw loop practice choice_2022:
         display_name: 연습
+      CSD web draw loop practice choice_2023:
+        display_name: 연습
       CSD web movement practice choice_2021:
         display_name: 연습
       CSD web movement practice choice_2022:
         display_name: 연습
+      CSD web movement practice choice_2023:
+        display_name: 연습
       CSD web text practice choice_2021:
         display_name: 연습
       CSD web text practice choice_2022:
+        display_name: 연습
+      CSD web text practice choice_2023:
         display_name: 연습
       CSP PD Example Question 1:
         answers:
@@ -4812,6 +5525,11 @@ ko-KR:
           **교사 단원말 설문조사: ** 학생들이 설문조사를 완료하는 동안 간단한 교사 설문조사를 작성해 주시면 감사하겠습니다.
 
           ## [교사 설문조사를 보려면 여기를 클릭하십시오] (https://studio.code.org/form/teacher_csd_unit_survey?survey_data%5Bunit_number%5D=7)
+      Student End of Unit Survey - Intro+TeacherMD_csd7_2023:
+        teacher_markdown: |
+          **교사 단원말 설문조사: ** 학생들이 설문조사를 완료하는 동안 간단한 교사 설문조사를 작성해 주시면 감사하겠습니다.
+
+          ## [교사 설문조사를 보려면 여기를 클릭하십시오] (https://studio.code.org/form/teacher_csd_unit_survey?survey_data%5Bunit_number%5D=7)
       Student End of Unit Survey - Q1_2022:
         answers:
         - correct: true
@@ -4821,7 +5539,147 @@ ko-KR:
         - correct: true
         questions:
         - {}
+      Student End of Unit Survey - Q1_2023:
+        answers:
+        - correct: true
+        - correct: true
+        - correct: true
+        - correct: true
+        - correct: true
+        questions:
+        - {}
+      Student End of Unit Survey - Q1_copy1_2023:
+        answers:
+        - correct: true
+        - correct: true
+        - correct: true
+        - correct: true
+        - correct: true
+        questions:
+        - {}
+      Student End of Unit Survey - Q1_copy2_2023:
+        answers:
+        - correct: true
+        - correct: true
+        - correct: true
+        - correct: true
+        - correct: true
+        questions:
+        - {}
+      Student End of Unit Survey - Q1_copy3_2023:
+        answers:
+        - correct: true
+        - correct: true
+        - correct: true
+        - correct: true
+        - correct: true
+        questions:
+        - {}
+      Student End of Unit Survey - Q1_copy4_2023:
+        answers:
+        - correct: true
+        - correct: true
+        - correct: true
+        - correct: true
+        - correct: true
+        questions:
+        - {}
+      Student End of Unit Survey - Q1_copy5_2023:
+        answers:
+        - correct: true
+        - correct: true
+        - correct: true
+        - correct: true
+        - correct: true
+        questions:
+        - {}
+      Student End of Unit Survey - Q1_copy6_2023:
+        answers:
+        - correct: true
+        - correct: true
+        - correct: true
+        - correct: true
+        - correct: true
+        questions:
+        - {}
       Student End of Unit Survey - Q2_2022:
+        answers:
+        - correct: true
+        - correct: true
+        - correct: true
+        - correct: true
+        - correct: true
+        - correct: true
+        - correct: true
+        questions:
+        - {}
+      Student End of Unit Survey - Q2_2023:
+        answers:
+        - correct: true
+        - correct: true
+        - correct: true
+        - correct: true
+        - correct: true
+        - correct: true
+        - correct: true
+        questions:
+        - {}
+      Student End of Unit Survey - Q2_copy1_2023:
+        answers:
+        - correct: true
+        - correct: true
+        - correct: true
+        - correct: true
+        - correct: true
+        - correct: true
+        - correct: true
+        questions:
+        - {}
+      Student End of Unit Survey - Q2_copy2_2023:
+        answers:
+        - correct: true
+        - correct: true
+        - correct: true
+        - correct: true
+        - correct: true
+        - correct: true
+        - correct: true
+        questions:
+        - {}
+      Student End of Unit Survey - Q2_copy3_2023:
+        answers:
+        - correct: true
+        - correct: true
+        - correct: true
+        - correct: true
+        - correct: true
+        - correct: true
+        - correct: true
+        questions:
+        - {}
+      Student End of Unit Survey - Q2_copy4_2023:
+        answers:
+        - correct: true
+        - correct: true
+        - correct: true
+        - correct: true
+        - correct: true
+        - correct: true
+        - correct: true
+        questions:
+        - {}
+      Student End of Unit Survey - Q2_copy5_2023:
+        answers:
+        - correct: true
+        - correct: true
+        - correct: true
+        - correct: true
+        - correct: true
+        - correct: true
+        - correct: true
+        questions:
+        - {}
+      Student End of Unit Survey - Q2_copy6_2023:
         answers:
         - correct: true
         - correct: true
@@ -4991,6 +5849,17 @@ ko-KR:
         - correct: true
         questions:
         - text: AI 및 머신 러닝 개념을 이해하고 설명할 수 있습니다.
+      aiml-ch1-pulse-survey-q1_2023:
+        answers:
+        - correct: true
+        - correct: true
+        - correct: true
+        - correct: true
+        - correct: true
+        - correct: true
+        - correct: true
+        questions:
+        - text: AI 및 머신 러닝 개념을 이해하고 설명할 수 있습니다.
       aiml-ch1-pulse-survey-q2_2021:
         answers:
         - correct: true
@@ -5003,6 +5872,17 @@ ko-KR:
         questions:
         - text: 문제를 해결하거나 내 관심사에 맞는 앱을 만드는 방법을 알고 있습니다.
       aiml-ch1-pulse-survey-q2_2022:
+        answers:
+        - correct: true
+        - correct: true
+        - correct: true
+        - correct: true
+        - correct: true
+        - correct: true
+        - correct: true
+        questions:
+        - text: 문제를 해결하거나 내 관심사에 맞는 앱을 만드는 방법을 알고 있습니다.
+      aiml-ch1-pulse-survey-q2_2023:
         answers:
         - correct: true
         - correct: true
@@ -5035,6 +5915,17 @@ ko-KR:
         - correct: true
         questions:
         - {}
+      aiml-ch1-pulse-survey-q3_2023:
+        answers:
+        - correct: true
+        - correct: true
+        - correct: true
+        - correct: true
+        - correct: true
+        - correct: true
+        - correct: true
+        questions:
+        - {}
       aiml-ch1-pulse-survey-q4_2021:
         answers:
         - correct: true
@@ -5047,6 +5938,17 @@ ko-KR:
         questions:
         - {}
       aiml-ch1-pulse-survey-q4_2022:
+        answers:
+        - correct: true
+        - correct: true
+        - correct: true
+        - correct: true
+        - correct: true
+        - correct: true
+        - correct: true
+        questions:
+        - {}
+      aiml-ch1-pulse-survey-q4_2023:
         answers:
         - correct: true
         - correct: true
@@ -5079,9 +5981,22 @@ ko-KR:
         - correct: true
         questions:
         - {}
+      aiml-ch1-pulse-survey-q5_2023:
+        answers:
+        - correct: true
+        - correct: true
+        - correct: true
+        - correct: true
+        - correct: true
+        - correct: true
+        - correct: true
+        questions:
+        - {}
       aiml-ch1-pulse-survey_2021:
         title: AI 및 머신 러닝 신속 설문조사!
       aiml-ch1-pulse-survey_2022:
+        title: AI 및 머신 러닝 신속 설문조사!
+      aiml-ch1-pulse-survey_2023:
         title: AI 및 머신 러닝 신속 설문조사!
       aiml-intro-pulse-survey-q1_2021:
         answers:
@@ -5094,6 +6009,16 @@ ko-KR:
         questions:
         - text: 이전에 컴퓨터 과학과 관련하여 어떤 경험을 해봤나요?
       aiml-intro-pulse-survey-q1_2022:
+        answers:
+        - correct: true
+          text: 컴퓨터 과학에 대해 배우는 것은 이번이 처음입니다.
+        - correct: true
+          text: '소규모의 컴퓨터 과학 활동(예: 아워오브코드)을 해 본 적이 있지만, 긴 시간의 수업은 처음입니다.'
+        - correct: true
+          text: 이미 컴퓨터 과학에 대한 수업을 받아 봤거나 긴 시간의 온라인 튜토리얼을 수강했었습니다.
+        questions:
+        - text: 이전에 컴퓨터 과학과 관련하여 어떤 경험을 해봤나요?
+      aiml-intro-pulse-survey-q1_2023:
         answers:
         - correct: true
           text: 컴퓨터 과학에 대해 배우는 것은 이번이 처음입니다.
@@ -5123,6 +6048,16 @@ ko-KR:
           text: 이미 AI 및 머신 러닝에 대한 수업을 들었거나 긴 시간의 온라인 튜토리얼을 수강했었습니다.
         questions:
         - text: 이전에 AI 및 머신 러닝과 관련하여 어떤 경험을 했나요?
+      aiml-intro-pulse-survey-q2_2023:
+        answers:
+        - correct: true
+          text: AI와 머신 러닝에 대해 배우는 것은 이번이 처음입니다.
+        - correct: true
+          text: '소규모 AI 활동(예: 아워오브코드)을 해본 적이 있지만, 긴 수업은 이번이 처음입니다.'
+        - correct: true
+          text: 이미 AI 및 머신 러닝에 대한 수업을 들었거나 긴 시간의 온라인 튜토리얼을 수강했었습니다.
+        questions:
+        - text: 이전에 AI 및 머신 러닝과 관련하여 어떤 경험을 했나요?
       aiml-intro-pulse-survey-q3_2021:
         answers:
         - correct: true
@@ -5135,6 +6070,17 @@ ko-KR:
         questions:
         - text: AI 및 머신 러닝 개념을 이해하고 설명할 수 있습니다.
       aiml-intro-pulse-survey-q3_2022:
+        answers:
+        - correct: true
+        - correct: true
+        - correct: true
+        - correct: true
+        - correct: true
+        - correct: true
+        - correct: true
+        questions:
+        - text: AI 및 머신 러닝 개념을 이해하고 설명할 수 있습니다.
+      aiml-intro-pulse-survey-q3_2023:
         answers:
         - correct: true
         - correct: true
@@ -5167,6 +6113,17 @@ ko-KR:
         - correct: true
         questions:
         - text: 문제를 해결하거나 내 관심사에 맞는 앱을 만드는 방법을 알고 있습니다.
+      aiml-intro-pulse-survey-q4_2023:
+        answers:
+        - correct: true
+        - correct: true
+        - correct: true
+        - correct: true
+        - correct: true
+        - correct: true
+        - correct: true
+        questions:
+        - text: 문제를 해결하거나 내 관심사에 맞는 앱을 만드는 방법을 알고 있습니다.
       aiml-intro-pulse-survey-q5_2021:
         answers:
         - correct: true
@@ -5189,9 +6146,22 @@ ko-KR:
         - correct: true
         questions:
         - {}
+      aiml-intro-pulse-survey-q5_2023:
+        answers:
+        - correct: true
+        - correct: true
+        - correct: true
+        - correct: true
+        - correct: true
+        - correct: true
+        - correct: true
+        questions:
+        - {}
       aiml-intro-pulse-survey_2021:
         title: AI 및 머신 러닝 신속 설문조사!
       aiml-intro-pulse-survey_2022:
+        title: AI 및 머신 러닝 신속 설문조사!
+      aiml-intro-pulse-survey_2023:
         title: AI 및 머신 러닝 신속 설문조사!
       aiml-pulse-check-survey-1-levelgroup Ch2_2021:
         title: 컴퓨터 과학 신속 설문조사!
@@ -5274,6 +6244,17 @@ ko-KR:
         - correct: true
         questions:
         - {}
+      be-myself-in-cs_mb2022:
+        answers:
+        - correct: true
+        - correct: true
+        - correct: true
+        - correct: true
+        - correct: true
+        - correct: true
+        - correct: true
+        questions:
+        - {}
       behaviors 1 predict:
         answers:
         - feedback: 틀렸습니다.
@@ -5337,6 +6318,17 @@ ko-KR:
         - correct: true
         questions:
         - {}
+      comfortable-in-cs-class_mb2022:
+        answers:
+        - correct: true
+        - correct: true
+        - correct: true
+        - correct: true
+        - correct: true
+        - correct: true
+        - correct: true
+        questions:
+        - {}
       confident-ability-to-learn:
         answers:
         - correct: true
@@ -5349,6 +6341,28 @@ ko-KR:
         questions:
         - {}
       confident-ability-to-learn_2022:
+        answers:
+        - correct: true
+        - correct: true
+        - correct: true
+        - correct: true
+        - correct: true
+        - correct: true
+        - correct: true
+        questions:
+        - {}
+      confident-ability-to-learn_2023:
+        answers:
+        - correct: true
+        - correct: true
+        - correct: true
+        - correct: true
+        - correct: true
+        - correct: true
+        - correct: true
+        questions:
+        - {}
+      confident-ability-to-learn_mb2022:
         answers:
         - correct: true
         - correct: true
@@ -5394,6 +6408,14 @@ ko-KR:
         questions:
         - {}
       counselor_encourage_2022:
+        answers:
+        - correct: true
+          text: 예
+        - correct: true
+          text: 아니요
+        questions:
+        - {}
+      counselor_encourage_2023:
         answers:
         - correct: true
           text: 예
@@ -9518,6 +10540,28 @@ ko-KR:
         - correct: true
         questions:
         - {}
+      csd-post-survey-confidence-cs_mb2022:
+        answers:
+        - correct: true
+        - correct: true
+        - correct: true
+        - correct: true
+        - correct: true
+        - correct: true
+        - correct: true
+        questions:
+        - {}
+      csd-post-survey-interested-cs_mb2022:
+        answers:
+        - correct: true
+        - correct: true
+        - correct: true
+        - correct: true
+        - correct: true
+        - correct: true
+        - correct: true
+        questions:
+        - {}
       csd-post-survey-q26:
         answers:
         - correct: true
@@ -9657,6 +10701,36 @@ ko-KR:
         - correct: true
         questions:
         - {}
+      csd-post-survey-show-friend_mb2022:
+        answers:
+        - correct: true
+          text: 예
+        - correct: true
+          text: 아니요
+        questions:
+        - {}
+      csd-post-survey-solve-real-world_mb2022:
+        answers:
+        - correct: true
+        - correct: true
+        - correct: true
+        - correct: true
+        - correct: true
+        - correct: true
+        - correct: true
+        questions:
+        - {}
+      csd-post-survey-take-more-classes_mb2022:
+        answers:
+        - correct: true
+        - correct: true
+        - correct: true
+        - correct: true
+        - correct: true
+        - correct: true
+        - correct: true
+        questions:
+        - {}
       csd-post-survey-unit1-preamble:
         content1: 설명 입력
       csd-post-survey-unit2-preamble:
@@ -9775,6 +10849,17 @@ ko-KR:
         - correct: true
         questions:
         - {}
+      csd-pulse-check-survey-1-q1 U2Ch1_2019_pilot_2023:
+        answers:
+        - correct: true
+        - correct: true
+        - correct: true
+        - correct: true
+        - correct: true
+        - correct: true
+        - correct: true
+        questions:
+        - {}
       csd-pulse-check-survey-1-q1 U2Ch2:
         answers:
         - correct: true
@@ -9842,6 +10927,17 @@ ko-KR:
         questions:
         - {}
       csd-pulse-check-survey-1-q1 U3Ch1_2019_pilot_2022:
+        answers:
+        - correct: true
+        - correct: true
+        - correct: true
+        - correct: true
+        - correct: true
+        - correct: true
+        - correct: true
+        questions:
+        - {}
+      csd-pulse-check-survey-1-q1 U3Ch1_2019_pilot_2023:
         answers:
         - correct: true
         - correct: true
@@ -9930,6 +11026,17 @@ ko-KR:
         questions:
         - {}
       csd-pulse-check-survey-1-q1 U4Ch1_2022:
+        answers:
+        - correct: true
+        - correct: true
+        - correct: true
+        - correct: true
+        - correct: true
+        - correct: true
+        - correct: true
+        questions:
+        - {}
+      csd-pulse-check-survey-1-q1 U4Ch1_2023:
         answers:
         - correct: true
         - correct: true
@@ -10039,6 +11146,17 @@ ko-KR:
         - correct: true
         questions:
         - {}
+      csd-pulse-check-survey-1-q1 U5Ch1_2023:
+        answers:
+        - correct: true
+        - correct: true
+        - correct: true
+        - correct: true
+        - correct: true
+        - correct: true
+        - correct: true
+        questions:
+        - {}
       csd-pulse-check-survey-1-q1 U5Ch2:
         answers:
         - correct: true
@@ -10127,7 +11245,29 @@ ko-KR:
         - correct: true
         questions:
         - {}
+      csd-pulse-check-survey-1-q1 U6Ch1_2023a_2023:
+        answers:
+        - correct: true
+        - correct: true
+        - correct: true
+        - correct: true
+        - correct: true
+        - correct: true
+        - correct: true
+        questions:
+        - {}
       csd-pulse-check-survey-1-q1 U6Ch1_2222:
+        answers:
+        - correct: true
+        - correct: true
+        - correct: true
+        - correct: true
+        - correct: true
+        - correct: true
+        - correct: true
+        questions:
+        - {}
+      csd-pulse-check-survey-1-q1 U6Ch1_mb2022:
         answers:
         - correct: true
         - correct: true
@@ -10270,6 +11410,17 @@ ko-KR:
         - correct: true
         questions:
         - {}
+      csd-pulse-check-survey-1-q2 U2Ch1_2019_pilot_2023:
+        answers:
+        - correct: true
+        - correct: true
+        - correct: true
+        - correct: true
+        - correct: true
+        - correct: true
+        - correct: true
+        questions:
+        - {}
       csd-pulse-check-survey-1-q2 U2Ch2:
         answers:
         - correct: true
@@ -10337,6 +11488,17 @@ ko-KR:
         questions:
         - {}
       csd-pulse-check-survey-1-q2 U3Ch1_2019_pilot_2022:
+        answers:
+        - correct: true
+        - correct: true
+        - correct: true
+        - correct: true
+        - correct: true
+        - correct: true
+        - correct: true
+        questions:
+        - {}
+      csd-pulse-check-survey-1-q2 U3Ch1_2019_pilot_2023:
         answers:
         - correct: true
         - correct: true
@@ -10425,6 +11587,17 @@ ko-KR:
         questions:
         - {}
       csd-pulse-check-survey-1-q2 U4Ch1_2022:
+        answers:
+        - correct: true
+        - correct: true
+        - correct: true
+        - correct: true
+        - correct: true
+        - correct: true
+        - correct: true
+        questions:
+        - {}
+      csd-pulse-check-survey-1-q2 U4Ch1_2023:
         answers:
         - correct: true
         - correct: true
@@ -10534,6 +11707,17 @@ ko-KR:
         - correct: true
         questions:
         - {}
+      csd-pulse-check-survey-1-q2 U5Ch1_2023:
+        answers:
+        - correct: true
+        - correct: true
+        - correct: true
+        - correct: true
+        - correct: true
+        - correct: true
+        - correct: true
+        questions:
+        - {}
       csd-pulse-check-survey-1-q2 U5Ch2:
         answers:
         - correct: true
@@ -10622,7 +11806,29 @@ ko-KR:
         - correct: true
         questions:
         - {}
+      csd-pulse-check-survey-1-q2 U6Ch1_2023a_2023:
+        answers:
+        - correct: true
+        - correct: true
+        - correct: true
+        - correct: true
+        - correct: true
+        - correct: true
+        - correct: true
+        questions:
+        - {}
       csd-pulse-check-survey-1-q2 U6Ch1_2222:
+        answers:
+        - correct: true
+        - correct: true
+        - correct: true
+        - correct: true
+        - correct: true
+        - correct: true
+        - correct: true
+        questions:
+        - {}
+      csd-pulse-check-survey-1-q2 U6Ch1_mb2022:
         answers:
         - correct: true
         - correct: true
@@ -10765,6 +11971,17 @@ ko-KR:
         - correct: true
         questions:
         - {}
+      csd-pulse-check-survey-1-q3 U2Ch1_2019_pilot_2023:
+        answers:
+        - correct: true
+        - correct: true
+        - correct: true
+        - correct: true
+        - correct: true
+        - correct: true
+        - correct: true
+        questions:
+        - {}
       csd-pulse-check-survey-1-q3 U2Ch2:
         answers:
         - correct: true
@@ -10832,6 +12049,17 @@ ko-KR:
         questions:
         - {}
       csd-pulse-check-survey-1-q3 U3Ch1_2019_pilot_2022:
+        answers:
+        - correct: true
+        - correct: true
+        - correct: true
+        - correct: true
+        - correct: true
+        - correct: true
+        - correct: true
+        questions:
+        - {}
+      csd-pulse-check-survey-1-q3 U3Ch1_2019_pilot_2023:
         answers:
         - correct: true
         - correct: true
@@ -10920,6 +12148,17 @@ ko-KR:
         questions:
         - {}
       csd-pulse-check-survey-1-q3 U4Ch1_2022:
+        answers:
+        - correct: true
+        - correct: true
+        - correct: true
+        - correct: true
+        - correct: true
+        - correct: true
+        - correct: true
+        questions:
+        - {}
+      csd-pulse-check-survey-1-q3 U4Ch1_2023:
         answers:
         - correct: true
         - correct: true
@@ -11029,6 +12268,17 @@ ko-KR:
         - correct: true
         questions:
         - {}
+      csd-pulse-check-survey-1-q3 U5Ch1_2023:
+        answers:
+        - correct: true
+        - correct: true
+        - correct: true
+        - correct: true
+        - correct: true
+        - correct: true
+        - correct: true
+        questions:
+        - {}
       csd-pulse-check-survey-1-q3 U5Ch2:
         answers:
         - correct: true
@@ -11117,7 +12367,29 @@ ko-KR:
         - correct: true
         questions:
         - {}
+      csd-pulse-check-survey-1-q3 U6Ch1_2023a_2023:
+        answers:
+        - correct: true
+        - correct: true
+        - correct: true
+        - correct: true
+        - correct: true
+        - correct: true
+        - correct: true
+        questions:
+        - {}
       csd-pulse-check-survey-1-q3 U6Ch1_2222:
+        answers:
+        - correct: true
+        - correct: true
+        - correct: true
+        - correct: true
+        - correct: true
+        - correct: true
+        - correct: true
+        questions:
+        - {}
+      csd-pulse-check-survey-1-q3 U6Ch1_mb2022:
         answers:
         - correct: true
         - correct: true
@@ -11260,6 +12532,17 @@ ko-KR:
         - correct: true
         questions:
         - {}
+      csd-pulse-check-survey-1-q4 U2Ch1_2019_pilot_2023:
+        answers:
+        - correct: true
+        - correct: true
+        - correct: true
+        - correct: true
+        - correct: true
+        - correct: true
+        - correct: true
+        questions:
+        - {}
       csd-pulse-check-survey-1-q4 U2Ch2:
         answers:
         - correct: true
@@ -11327,6 +12610,17 @@ ko-KR:
         questions:
         - {}
       csd-pulse-check-survey-1-q4 U3Ch1_2019_pilot_2022:
+        answers:
+        - correct: true
+        - correct: true
+        - correct: true
+        - correct: true
+        - correct: true
+        - correct: true
+        - correct: true
+        questions:
+        - {}
+      csd-pulse-check-survey-1-q4 U3Ch1_2019_pilot_2023:
         answers:
         - correct: true
         - correct: true
@@ -11415,6 +12709,17 @@ ko-KR:
         questions:
         - {}
       csd-pulse-check-survey-1-q4 U4Ch1_2022:
+        answers:
+        - correct: true
+        - correct: true
+        - correct: true
+        - correct: true
+        - correct: true
+        - correct: true
+        - correct: true
+        questions:
+        - {}
+      csd-pulse-check-survey-1-q4 U4Ch1_2023:
         answers:
         - correct: true
         - correct: true
@@ -11524,6 +12829,17 @@ ko-KR:
         - correct: true
         questions:
         - {}
+      csd-pulse-check-survey-1-q4 U5Ch1_2023:
+        answers:
+        - correct: true
+        - correct: true
+        - correct: true
+        - correct: true
+        - correct: true
+        - correct: true
+        - correct: true
+        questions:
+        - {}
       csd-pulse-check-survey-1-q4 U5Ch2:
         answers:
         - correct: true
@@ -11612,7 +12928,29 @@ ko-KR:
         - correct: true
         questions:
         - {}
+      csd-pulse-check-survey-1-q4 U6Ch1_2023a_2023:
+        answers:
+        - correct: true
+        - correct: true
+        - correct: true
+        - correct: true
+        - correct: true
+        - correct: true
+        - correct: true
+        questions:
+        - {}
       csd-pulse-check-survey-1-q4 U6Ch1_2222:
+        answers:
+        - correct: true
+        - correct: true
+        - correct: true
+        - correct: true
+        - correct: true
+        - correct: true
+        - correct: true
+        questions:
+        - {}
+      csd-pulse-check-survey-1-q4 U6Ch1_mb2022:
         answers:
         - correct: true
         - correct: true
@@ -11755,6 +13093,17 @@ ko-KR:
         - correct: true
         questions:
         - {}
+      csd-pulse-check-survey-1-q5 U2Ch1_2019_pilot_2023:
+        answers:
+        - correct: true
+        - correct: true
+        - correct: true
+        - correct: true
+        - correct: true
+        - correct: true
+        - correct: true
+        questions:
+        - {}
       csd-pulse-check-survey-1-q5 U2Ch2:
         answers:
         - correct: true
@@ -11822,6 +13171,17 @@ ko-KR:
         questions:
         - {}
       csd-pulse-check-survey-1-q5 U3Ch1_2019_pilot_2022:
+        answers:
+        - correct: true
+        - correct: true
+        - correct: true
+        - correct: true
+        - correct: true
+        - correct: true
+        - correct: true
+        questions:
+        - {}
+      csd-pulse-check-survey-1-q5 U3Ch1_2019_pilot_2023:
         answers:
         - correct: true
         - correct: true
@@ -11910,6 +13270,17 @@ ko-KR:
         questions:
         - {}
       csd-pulse-check-survey-1-q5 U4Ch1_2022:
+        answers:
+        - correct: true
+        - correct: true
+        - correct: true
+        - correct: true
+        - correct: true
+        - correct: true
+        - correct: true
+        questions:
+        - {}
+      csd-pulse-check-survey-1-q5 U4Ch1_2023:
         answers:
         - correct: true
         - correct: true
@@ -12019,6 +13390,17 @@ ko-KR:
         - correct: true
         questions:
         - {}
+      csd-pulse-check-survey-1-q5 U5Ch1_2023:
+        answers:
+        - correct: true
+        - correct: true
+        - correct: true
+        - correct: true
+        - correct: true
+        - correct: true
+        - correct: true
+        questions:
+        - {}
       csd-pulse-check-survey-1-q5 U5Ch2:
         answers:
         - correct: true
@@ -12107,7 +13489,29 @@ ko-KR:
         - correct: true
         questions:
         - {}
+      csd-pulse-check-survey-1-q5 U6Ch1_2023a_2023:
+        answers:
+        - correct: true
+        - correct: true
+        - correct: true
+        - correct: true
+        - correct: true
+        - correct: true
+        - correct: true
+        questions:
+        - {}
       csd-pulse-check-survey-1-q5 U6Ch1_2222:
+        answers:
+        - correct: true
+        - correct: true
+        - correct: true
+        - correct: true
+        - correct: true
+        - correct: true
+        - correct: true
+        questions:
+        - {}
+      csd-pulse-check-survey-1-q5 U6Ch1_mb2022:
         answers:
         - correct: true
         - correct: true
@@ -12554,6 +13958,17 @@ ko-KR:
         - correct: true
         questions:
         - {}
+      csp-post-survey-2017-q22_mb2022:
+        answers:
+        - correct: true
+        - correct: true
+        - correct: true
+        - correct: true
+        - correct: true
+        - correct: true
+        - correct: true
+        questions:
+        - {}
       csp-post-survey-2017-q23:
         answers:
         - correct: true
@@ -12831,6 +14246,17 @@ ko-KR:
         - correct: true
         questions:
         - {}
+      csp-pre-survey-2017-q10_copy2_2023:
+        answers:
+        - correct: true
+        - correct: true
+        - correct: true
+        - correct: true
+        - correct: true
+        - correct: true
+        - correct: true
+        questions:
+        - {}
       csp-pre-survey-2017-q11:
         answers:
         - correct: true
@@ -12919,6 +14345,17 @@ ko-KR:
         - correct: true
         questions:
         - {}
+      csp-pre-survey-2017-q13_2023:
+        answers:
+        - correct: true
+        - correct: true
+        - correct: true
+        - correct: true
+        - correct: true
+        - correct: true
+        - correct: true
+        questions:
+        - {}
       csp-pre-survey-2017-q14:
         answers:
         - correct: true
@@ -12985,6 +14422,17 @@ ko-KR:
         - correct: true
         questions:
         - {}
+      csp-pre-survey-2017-q16_copy2_2023:
+        answers:
+        - correct: true
+        - correct: true
+        - correct: true
+        - correct: true
+        - correct: true
+        - correct: true
+        - correct: true
+        questions:
+        - {}
       csp-pre-survey-2017-q17:
         answers:
         - correct: true
@@ -13019,6 +14467,17 @@ ko-KR:
         questions:
         - {}
       csp-pre-survey-2017-q17_2022:
+        answers:
+        - correct: true
+        - correct: true
+        - correct: true
+        - correct: true
+        - correct: true
+        - correct: true
+        - correct: true
+        questions:
+        - {}
+      csp-pre-survey-2017-q17_copy2_2023:
         answers:
         - correct: true
         - correct: true
@@ -13095,6 +14554,17 @@ ko-KR:
         - correct: true
         questions:
         - {}
+      csp-pre-survey-2017-q19_2023:
+        answers:
+        - correct: true
+        - correct: true
+        - correct: true
+        - correct: true
+        - correct: true
+        - correct: true
+        - correct: true
+        questions:
+        - {}
       csp-pre-survey-2017-q1_2018:
         answers:
         - correct: true
@@ -13161,6 +14631,28 @@ ko-KR:
         - correct: true
         questions:
         - {}
+      csp-pre-survey-2017-q20_2023:
+        answers:
+        - correct: true
+        - correct: true
+        - correct: true
+        - correct: true
+        - correct: true
+        - correct: true
+        - correct: true
+        questions:
+        - {}
+      csp-pre-survey-2017-q20_mb2022:
+        answers:
+        - correct: true
+        - correct: true
+        - correct: true
+        - correct: true
+        - correct: true
+        - correct: true
+        - correct: true
+        questions:
+        - {}
       csp-pre-survey-2017-q21:
         answers:
         - correct: true
@@ -13217,6 +14709,28 @@ ko-KR:
         questions:
         - {}
       csp-pre-survey-2017-q22_2022:
+        answers:
+        - correct: true
+        - correct: true
+        - correct: true
+        - correct: true
+        - correct: true
+        - correct: true
+        - correct: true
+        questions:
+        - {}
+      csp-pre-survey-2017-q22_2023:
+        answers:
+        - correct: true
+        - correct: true
+        - correct: true
+        - correct: true
+        - correct: true
+        - correct: true
+        - correct: true
+        questions:
+        - {}
+      csp-pre-survey-2017-q22_mb2022:
         answers:
         - correct: true
         - correct: true
@@ -13447,6 +14961,17 @@ ko-KR:
         - correct: true
         questions:
         - {}
+      csp-pre-survey-2017-q30_2023:
+        answers:
+        - correct: true
+        - correct: true
+        - correct: true
+        - correct: true
+        - correct: true
+        - correct: true
+        - correct: true
+        questions:
+        - {}
       csp-pre-survey-2017-q31:
         answers:
         - correct: true
@@ -13481,6 +15006,28 @@ ko-KR:
         questions:
         - {}
       csp-pre-survey-2017-q31_2022:
+        answers:
+        - correct: true
+        - correct: true
+        - correct: true
+        - correct: true
+        - correct: true
+        - correct: true
+        - correct: true
+        questions:
+        - {}
+      csp-pre-survey-2017-q31_2023:
+        answers:
+        - correct: true
+        - correct: true
+        - correct: true
+        - correct: true
+        - correct: true
+        - correct: true
+        - correct: true
+        questions:
+        - {}
+      csp-pre-survey-2017-q31_mb2022:
         answers:
         - correct: true
         - correct: true
@@ -13592,6 +15139,17 @@ ko-KR:
         - correct: true
         questions:
         - {}
+      csp-pre-survey-2017-q3_copy2_2023:
+        answers:
+        - correct: true
+        - correct: true
+        - correct: true
+        - correct: true
+        - correct: true
+        - correct: true
+        - correct: true
+        questions:
+        - {}
       csp-pre-survey-2017-q4:
         answers:
         - correct: true
@@ -13648,6 +15206,39 @@ ko-KR:
         questions:
         - {}
       csp-pre-survey-2017-q4_2022:
+        answers:
+        - correct: true
+        - correct: true
+        - correct: true
+        - correct: true
+        - correct: true
+        - correct: true
+        - correct: true
+        questions:
+        - {}
+      csp-pre-survey-2017-q4_copy1_mb2022:
+        answers:
+        - correct: true
+        - correct: true
+        - correct: true
+        - correct: true
+        - correct: true
+        - correct: true
+        - correct: true
+        questions:
+        - {}
+      csp-pre-survey-2017-q4_copy2_2023:
+        answers:
+        - correct: true
+        - correct: true
+        - correct: true
+        - correct: true
+        - correct: true
+        - correct: true
+        - correct: true
+        questions:
+        - {}
+      csp-pre-survey-2017-q4_mb2022:
         answers:
         - correct: true
         - correct: true
@@ -13790,9 +15381,29 @@ ko-KR:
         - correct: true
         questions:
         - {}
+      csp-pre-survey-2017-q9_copy2_2023:
+        answers:
+        - correct: true
+        - correct: true
+        - correct: true
+        - correct: true
+        - correct: true
+        - correct: true
+        - correct: true
+        questions:
+        - {}
       csp_unit_assessment_overview:
         content1: 설명 입력
       curriculum-how-challenging:
+        answers:
+        - correct: true
+        - correct: true
+        - correct: true
+        - correct: true
+        - correct: true
+        questions:
+        - {}
+      curriculum-how-challenging_mb2022:
         answers:
         - correct: true
         - correct: true
@@ -13834,7 +15445,31 @@ ko-KR:
         - correct: true
         questions:
         - {}
+      ever-learned-cs-outside-school_2023:
+        answers:
+        - correct: true
+        - correct: true
+        - correct: true
+        - correct: true
+        questions:
+        - {}
+      ever-learned-cs-outside-school_mb2022:
+        answers:
+        - correct: true
+        - correct: true
+        - correct: true
+        - correct: true
+        questions:
+        - {}
       ever-learned-cs_2022:
+        answers:
+        - correct: true
+        - correct: true
+        - correct: true
+        - correct: true
+        questions:
+        - {}
+      ever-learned-cs_2023:
         answers:
         - correct: true
         - correct: true
@@ -13869,6 +15504,14 @@ ko-KR:
         questions:
         - {}
       family_encourage_2022:
+        answers:
+        - correct: true
+          text: 예
+        - correct: true
+          text: 아니요
+        questions:
+        - {}
+      family_encourage_2023:
         answers:
         - correct: true
           text: 예
@@ -14094,6 +15737,328 @@ ko-KR:
         - correct: true
         questions:
         - {}
+      interested-in-learning-cs_2023:
+        answers:
+        - correct: true
+        - correct: true
+        - correct: true
+        - correct: true
+        - correct: true
+        - correct: true
+        - correct: true
+        questions:
+        - {}
+      interested-in-learning-cs_mb2022:
+        answers:
+        - correct: true
+        - correct: true
+        - correct: true
+        - correct: true
+        - correct: true
+        - correct: true
+        - correct: true
+        questions:
+        - {}
+      intro-pulse-survey-q1_csd1_2023:
+        answers:
+        - correct: true
+          text: 컴퓨터 과학에 대해 배우는 것은 이번이 처음입니다.
+        - correct: true
+          text: '소규모의 컴퓨터 과학 활동(예: 아워오브코드)을 해 본 적이 있지만, 긴 시간의 수업은 처음입니다.'
+        - correct: true
+          text: 이미 컴퓨터 과학에 대한 수업을 받아 봤거나 긴 시간의 온라인 튜토리얼을 수강했었습니다.
+        questions:
+        - text: 이전에 컴퓨터 과학과 관련하여 어떤 경험을 해봤나요?
+      intro-pulse-survey-q1_csd2_2023:
+        answers:
+        - correct: true
+          text: 컴퓨터 과학에 대해 배우는 것은 이번이 처음입니다.
+        - correct: true
+          text: '소규모의 컴퓨터 과학 활동(예: 아워오브코드)을 해 본 적이 있지만, 긴 시간의 수업은 처음입니다.'
+        - correct: true
+          text: 이미 컴퓨터 과학에 대한 수업을 받아 봤거나 긴 시간의 온라인 튜토리얼을 수강했었습니다.
+        questions:
+        - text: 이전에 컴퓨터 과학과 관련하여 어떤 경험을 해봤나요?
+      intro-pulse-survey-q1_csd3_2023:
+        answers:
+        - correct: true
+          text: 컴퓨터 과학에 대해 배우는 것은 이번이 처음입니다.
+        - correct: true
+          text: '소규모의 컴퓨터 과학 활동(예: 아워오브코드)을 해 본 적이 있지만, 긴 시간의 수업은 처음입니다.'
+        - correct: true
+          text: 이미 컴퓨터 과학에 대한 수업을 받아 봤거나 긴 시간의 온라인 튜토리얼을 수강했었습니다.
+        questions:
+        - text: 이전에 컴퓨터 과학과 관련하여 어떤 경험을 해봤나요?
+      intro-pulse-survey-q1_csd4_2023:
+        answers:
+        - correct: true
+          text: 컴퓨터 과학에 대해 배우는 것은 이번이 처음입니다.
+        - correct: true
+          text: '소규모의 컴퓨터 과학 활동(예: 아워오브코드)을 해 본 적이 있지만, 긴 시간의 수업은 처음입니다.'
+        - correct: true
+          text: 이미 컴퓨터 과학에 대한 수업을 받아 봤거나 긴 시간의 온라인 튜토리얼을 수강했었습니다.
+        questions:
+        - text: 이전에 컴퓨터 과학과 관련하여 어떤 경험을 해봤나요?
+      intro-pulse-survey-q1_csd5_2023:
+        answers:
+        - correct: true
+          text: 컴퓨터 과학에 대해 배우는 것은 이번이 처음입니다.
+        - correct: true
+          text: '소규모의 컴퓨터 과학 활동(예: 아워오브코드)을 해 본 적이 있지만, 긴 시간의 수업은 처음입니다.'
+        - correct: true
+          text: 이미 컴퓨터 과학에 대한 수업을 받아 봤거나 긴 시간의 온라인 튜토리얼을 수강했었습니다.
+        questions:
+        - text: 이전에 컴퓨터 과학과 관련하여 어떤 경험을 해봤나요?
+      intro-pulse-survey-q1_csd6_2023:
+        answers:
+        - correct: true
+          text: 컴퓨터 과학에 대해 배우는 것은 이번이 처음입니다.
+        - correct: true
+          text: '소규모의 컴퓨터 과학 활동(예: 아워오브코드)을 해 본 적이 있지만, 긴 시간의 수업은 처음입니다.'
+        - correct: true
+          text: 이미 컴퓨터 과학에 대한 수업을 받아 봤거나 긴 시간의 온라인 튜토리얼을 수강했었습니다.
+        questions:
+        - text: 이전에 컴퓨터 과학과 관련하여 어떤 경험을 해봤나요?
+      intro-pulse-survey-q2_csd1_2023:
+        answers:
+        - correct: true
+        - correct: true
+        - correct: true
+        questions:
+        - {}
+      intro-pulse-survey-q2_csd2_2023:
+        answers:
+        - correct: true
+        - correct: true
+        - correct: true
+        questions:
+        - {}
+      intro-pulse-survey-q2_csd3_2023:
+        answers:
+        - correct: true
+        - correct: true
+        - correct: true
+        questions:
+        - {}
+      intro-pulse-survey-q2_csd4_2023:
+        answers:
+        - correct: true
+        - correct: true
+        - correct: true
+        questions:
+        - {}
+      intro-pulse-survey-q2_csd5_2023:
+        answers:
+        - correct: true
+        - correct: true
+        - correct: true
+        questions:
+        - {}
+      intro-pulse-survey-q2_csd6_2023:
+        answers:
+        - correct: true
+        - correct: true
+        - correct: true
+        questions:
+        - {}
+      intro-pulse-survey-q3_csd1_2023:
+        answers:
+        - correct: true
+        - correct: true
+        - correct: true
+        - correct: true
+        - correct: true
+        - correct: true
+        - correct: true
+        questions:
+        - {}
+      intro-pulse-survey-q3_csd2_2023:
+        answers:
+        - correct: true
+        - correct: true
+        - correct: true
+        - correct: true
+        - correct: true
+        - correct: true
+        - correct: true
+        questions:
+        - {}
+      intro-pulse-survey-q3_csd3_2023:
+        answers:
+        - correct: true
+        - correct: true
+        - correct: true
+        - correct: true
+        - correct: true
+        - correct: true
+        - correct: true
+        questions:
+        - {}
+      intro-pulse-survey-q3_csd4_2023:
+        answers:
+        - correct: true
+        - correct: true
+        - correct: true
+        - correct: true
+        - correct: true
+        - correct: true
+        - correct: true
+        questions:
+        - {}
+      intro-pulse-survey-q3_csd5_2023:
+        answers:
+        - correct: true
+        - correct: true
+        - correct: true
+        - correct: true
+        - correct: true
+        - correct: true
+        - correct: true
+        questions:
+        - {}
+      intro-pulse-survey-q3_csd6_2023:
+        answers:
+        - correct: true
+        - correct: true
+        - correct: true
+        - correct: true
+        - correct: true
+        - correct: true
+        - correct: true
+        questions:
+        - {}
+      intro-pulse-survey-q4_csd1_2023:
+        answers:
+        - correct: true
+        - correct: true
+        - correct: true
+        - correct: true
+        - correct: true
+        - correct: true
+        - correct: true
+        questions:
+        - {}
+      intro-pulse-survey-q4_csd2_2023:
+        answers:
+        - correct: true
+        - correct: true
+        - correct: true
+        - correct: true
+        - correct: true
+        - correct: true
+        - correct: true
+        questions:
+        - {}
+      intro-pulse-survey-q4_csd3_2023:
+        answers:
+        - correct: true
+        - correct: true
+        - correct: true
+        - correct: true
+        - correct: true
+        - correct: true
+        - correct: true
+        questions:
+        - {}
+      intro-pulse-survey-q4_csd4_2023:
+        answers:
+        - correct: true
+        - correct: true
+        - correct: true
+        - correct: true
+        - correct: true
+        - correct: true
+        - correct: true
+        questions:
+        - {}
+      intro-pulse-survey-q4_csd5_2023:
+        answers:
+        - correct: true
+        - correct: true
+        - correct: true
+        - correct: true
+        - correct: true
+        - correct: true
+        - correct: true
+        questions:
+        - {}
+      intro-pulse-survey-q4_csd6_2023:
+        answers:
+        - correct: true
+        - correct: true
+        - correct: true
+        - correct: true
+        - correct: true
+        - correct: true
+        - correct: true
+        questions:
+        - {}
+      intro-pulse-survey-q5_csd1_2023:
+        answers:
+        - correct: true
+        - correct: true
+        - correct: true
+        - correct: true
+        - correct: true
+        - correct: true
+        - correct: true
+        questions:
+        - {}
+      intro-pulse-survey-q5_csd2_2023:
+        answers:
+        - correct: true
+        - correct: true
+        - correct: true
+        - correct: true
+        - correct: true
+        - correct: true
+        - correct: true
+        questions:
+        - {}
+      intro-pulse-survey-q5_csd3_2023:
+        answers:
+        - correct: true
+        - correct: true
+        - correct: true
+        - correct: true
+        - correct: true
+        - correct: true
+        - correct: true
+        questions:
+        - {}
+      intro-pulse-survey-q5_csd4_2023:
+        answers:
+        - correct: true
+        - correct: true
+        - correct: true
+        - correct: true
+        - correct: true
+        - correct: true
+        - correct: true
+        questions:
+        - {}
+      intro-pulse-survey-q5_csd5_2023:
+        answers:
+        - correct: true
+        - correct: true
+        - correct: true
+        - correct: true
+        - correct: true
+        - correct: true
+        - correct: true
+        questions:
+        - {}
+      intro-pulse-survey-q5_csd6_2023:
+        answers:
+        - correct: true
+        - correct: true
+        - correct: true
+        - correct: true
+        - correct: true
+        - correct: true
+        - correct: true
+        questions:
+        - {}
       made-choices-about-assignments:
         answers:
         - correct: true
@@ -14111,9 +16076,13 @@ ko-KR:
           **학생 지원: ** 다음의 레벨은 학생들이 이전 레슨에서 완료한 유사한 사용자 지정 레벨과 유사합니다. 학생들이 힘들어 하면 다음의 이전 강의를 참고해 보라고 하세요.
           - 각 특징 별 복수의 화면 추가: [레슨 13 - 앱 커스터마이징] (../.. /13/levels/2)
           - 결과 예측에 관한 복수의 화면 추가: [레슨 10 - 앱 랩에서 모델 카드] (../.. /10/levels/5)
+      ml-club app-choice parent_2023:
+        display_name: 앱 사용자 지정
       ml-customize apps-practice choice-2021:
         display_name: 앱 사용자 지정 연습하기
       ml-customize apps-practice choice_2022:
+        display_name: 앱 사용자 지정 연습하기
+      ml-customize apps-practice choice_2023:
         display_name: 앱 사용자 지정 연습하기
       ml-good data-isaac data:
         markdown: |
@@ -14121,6 +16090,11 @@ ko-KR:
 
           ## 아이작의 데이터 사본을 만들려면 [여기를 클릭하세요](https://docs.google.com/spreadsheets/d/1XKPrY1ABlrSx3pdKqK7y4dx5OYdSAJkpYdefKrFyqEI/copy)
       ml-good data-isaac data_2022:
+        markdown: |
+          ![](https://images.code.org/4f85627c74a140b1b09599a5095622ff-image-1624988925067.png)
+
+          ## 아이작의 데이터 사본을 만들려면 [여기를 클릭하세요](https://docs.google.com/spreadsheets/d/1XKPrY1ABlrSx3pdKqK7y4dx5OYdSAJkpYdefKrFyqEI/copy)
+      ml-good data-isaac data_2023:
         markdown: |
           ![](https://images.code.org/4f85627c74a140b1b09599a5095622ff-image-1624988925067.png)
 
@@ -14135,6 +16109,11 @@ ko-KR:
           ![](https://images.code.org/af7558eeafd15ef5e9f2fad0a6446c6a-image-1624987665106.png)
 
           ## 김의 데이터 사본을 만들려면 [여기를 클릭하세요](https://docs.google.com/spreadsheets/d/1bVtUc5KrHaBZ4rx6trdYVqjGHIq9J8jBG0Mx2d9nxDM/copy)
+      ml-good data-kim data_2023:
+        markdown: |
+          ![](https://images.code.org/af7558eeafd15ef5e9f2fad0a6446c6a-image-1624987665106.png)
+
+          ## 김의 데이터 사본을 만들려면 [여기를 클릭하세요](https://docs.google.com/spreadsheets/d/1bVtUc5KrHaBZ4rx6trdYVqjGHIq9J8jBG0Mx2d9nxDM/copy)
       ml-good data-kim survey:
         markdown: |
           ![](https://images.code.org/47cb3494b3c90dcc443e373d58b54c6b-image-1624987469212.png)
@@ -14145,9 +16124,16 @@ ko-KR:
           ![](https://images.code.org/47cb3494b3c90dcc443e373d58b54c6b-image-1624987469212.png)
 
           ## 김의 설문조사에 참여하려면 [여기를 클릭하세요](https://docs.google.com/forms/d/e/1FAIpQLSftxAAvDCXCoPMfzOgYTVYIrVESYYhNfVP-I83eVu9CXFKr-g/viewform)
+      ml-good data-kim survey_2023:
+        markdown: |
+          ![](https://images.code.org/47cb3494b3c90dcc443e373d58b54c6b-image-1624987469212.png)
+
+          ## 김의 설문조사에 참여하려면 [여기를 클릭하세요](https://docs.google.com/forms/d/e/1FAIpQLSftxAAvDCXCoPMfzOgYTVYIrVESYYhNfVP-I83eVu9CXFKr-g/viewform)
       ml-intro app lab-book recommender 5-2021:
         display_name: 앱 사용자 지정
       ml-intro app lab-book recommender 5_2022:
+        display_name: 앱 사용자 지정
+      ml-intro app lab-book recommender 5_2023:
         display_name: 앱 사용자 지정
       ml-model card-medical-1-2021:
         markdown: |
@@ -14159,6 +16145,15 @@ ko-KR:
 
           <a href="https://images.code.org/7e56e5f140aca3f49589e5d2670617ad-image-1625084608419.png" target="_blank"><img src="https://images.code.org/7e56e5f140aca3f49589e5d2670617ad-image-1625084608419.png" width="45%" style="float:right; margin: 2px"></a>
       ml-model card-medical-1_2022:
+        markdown: |
+          # ER 추천 V1
+
+          모델 카드를 클릭하여, 확대하여 더 큰 버전을 확인하세요.
+
+          <a href="https://images.code.org/d3e85af576ec6e92232292140fe9dbcf-image-1625084534081.png" target="_blank"><img src="https://images.code.org/d3e85af576ec6e92232292140fe9dbcf-image-1625084534081.png" width="45%" style="float:left; margin: 2px;"></a>
+
+          <a href="https://images.code.org/7e56e5f140aca3f49589e5d2670617ad-image-1625084608419.png" target="_blank"><img src="https://images.code.org/7e56e5f140aca3f49589e5d2670617ad-image-1625084608419.png" width="45%" style="float:right; margin: 2px"></a>
+      ml-model card-medical-1_2023:
         markdown: |
           # ER 추천 V1
 
@@ -14195,6 +16190,20 @@ ko-KR:
 
           ![] (
           )
+      ml-model card-medical-2_2023:
+        markdown: |-
+          # 노던 라이트 ER 우선순위
+
+          모델 카드를 클릭하여, 확대하여 더 큰 버전을 확인하세요.
+
+          <a href="https://images.code.org/69fbca920c052d6623787af0f4da7dfd-image-1625084706519.png" target="_blank">
+          <img src="https://images.code.org/69fbca920c052d6623787af0f4da7dfd-image-1625084706519.png" width="45%" style="float:left; margin: 2px;"></a>
+
+          <a href="https://images.code.org/53e71ad9c3b29438ea84de5d67b4bf96-image-1625084729402.png" target="_blank">
+          <img src="https://images.code.org/53e71ad9c3b29438ea84de5d67b4bf96-image-1625084729402.png" width="45%" style="float:right; margin: 2px"></a>
+
+          ![] (
+          )
       ml-model card-medical-3-2021:
         markdown: |
           # AI 의료 추천기
@@ -14217,9 +16226,22 @@ ko-KR:
 
           <a href="https://images.code.org/dee6c18af60a6c7e56fc29d5bd249853-image-1625084891350.png" target="_blank">
           <img src="https://images.code.org/dee6c18af60a6c7e56fc29d5bd249853-image-1625084891350.png" width="45%" style="float:right; margin: 2px"></a>
+      ml-model card-medical-3_2023:
+        markdown: |
+          # AI 의료 추천기
+
+          모델 카드를 클릭하면 확대하여 더 큰 버전을 볼 수 있습니다.
+
+          <a href="https://images.code.org/c5180010138ee3104705580dd2ff63c4-image-1625084861215.png" target="_blank">
+          <img src="https://images.code.org/c5180010138ee3104705580dd2ff63c4-image-1625084861215.png" width="45%" style="float:left; margin: 2px;"></a>
+
+          <a href="https://images.code.org/dee6c18af60a6c7e56fc29d5bd249853-image-1625084891350.png" target="_blank">
+          <img src="https://images.code.org/dee6c18af60a6c7e56fc29d5bd249853-image-1625084891350.png" width="45%" style="float:right; margin: 2px"></a>
       ml-models in applab-choice parent:
         display_name: 모델 카드 연습
       ml-models in applab-choice parent_2022:
+        display_name: 모델 카드 연습
+      ml-models in applab-choice parent_2023:
         display_name: 모델 카드 연습
       ml-models-shoe survey:
         markdown: |
@@ -14231,12 +16253,22 @@ ko-KR:
           ![] (https://images.code.org/8f69603c91afe4e7beb15a6c4e3db945-image-1625589493100.png)
 
           ## 신발 추천 설문조사에 참여하려면 [여기를 클릭하세요] (https://docs.google.com/forms/d/e/1FAIpQLSdFxPdsfbgqF2ZpAjILjCeLX-GlFCrMdLbGHlk_0-klSf9YcQ/viewform)
+      ml-models-shoe survey_2023:
+        markdown: |
+          ![] (https://images.code.org/8f69603c91afe4e7beb15a6c4e3db945-image-1625589493100.png)
+
+          ## 신발 추천 설문조사에 참여하려면 [여기를 클릭하세요] (https://docs.google.com/forms/d/e/1FAIpQLSdFxPdsfbgqF2ZpAjILjCeLX-GlFCrMdLbGHlk_0-klSf9YcQ/viewform)
       ml-plan survey-copy form:
         markdown: |
           # Google 양식 복사
 
           ## [여기를 클릭] (https://docs.google.com/forms/d/1Yzoug2iW-_GUWrQJo4jIlfuKNtelVNrer1PvT4rXF7w/copy) 하여 오늘 사용할 설문조사 기본서식의 사본을 만드세요
       ml-plan survey-copy form_2022:
+        markdown: |
+          # Google 양식 복사
+
+          ## [여기를 클릭] (https://docs.google.com/forms/d/1Yzoug2iW-_GUWrQJo4jIlfuKNtelVNrer1PvT4rXF7w/copy) 하여 오늘 사용할 설문조사 기본서식의 사본을 만드세요
+      ml-plan survey-copy form_2023:
         markdown: |
           # Google 양식 복사
 
@@ -14261,9 +16293,21 @@ ko-KR:
 
           <a href="https://images.code.org/1fb88a3553f16cd9a576d54afe8757b9-image-1625509299810.png" target="_blank"><img src="https://images.code.org/1fb88a3553f16cd9a576d54afe8757b9-image-1625509299810.png" width="45%" style="float:right; margin: 2px"></a>
 
+      ml-use model card-pet model card_2023:
+        markdown: |+
+          # 반려동물 추천 모델 카드
+
+          **파트너와 함께: ** 모델 카드의 범주 특징과 수치상의 특징을 어떻게 구분할 수 있나요?
+
+          <a href="https://images.code.org/e38768393e3033e60dc9dc2696e3df7d-image-1625085031146.png" target="_blank"><img src="https://images.code.org/e38768393e3033e60dc9dc2696e3df7d-image-1625085031146.png" width="45%" style="float:left; margin: 2px;"></a>
+
+          <a href="https://images.code.org/1fb88a3553f16cd9a576d54afe8757b9-image-1625509299810.png" target="_blank"><img src="https://images.code.org/1fb88a3553f16cd9a576d54afe8757b9-image-1625509299810.png" width="45%" style="float:right; margin: 2px"></a>
+
       ml-use models applab-practice choice-2021:
         display_name: 앱 랩에서 모델을 사용해 연습
       ml-use models applab-practice choice_2022:
+        display_name: 앱 랩에서 모델을 사용해 연습
+      ml-use models applab-practice choice_2023:
         display_name: 앱 랩에서 모델을 사용해 연습
       naturally-better-at-cs:
         answers:
@@ -14298,6 +16342,17 @@ ko-KR:
         - correct: true
         questions:
         - {}
+      naturally-better-at-cs_copy2_2023:
+        answers:
+        - correct: true
+        - correct: true
+        - correct: true
+        - correct: true
+        - correct: true
+        - correct: true
+        - correct: true
+        questions:
+        - {}
       outbreak_freeplay_choice:
         display_name: 자유 플레이
       outbreak_story:
@@ -14313,6 +16368,17 @@ ko-KR:
         questions:
         - {}
       post-assessment survey q31-a-2017b:
+        answers:
+        - correct: true
+        - correct: true
+        - correct: true
+        - correct: true
+        - correct: true
+        - correct: true
+        - correct: true
+        questions:
+        - {}
+      post-assessment survey q31-a-2017b_mb2022:
         answers:
         - correct: true
         - correct: true
@@ -14666,6 +16732,18 @@ ko-KR:
         - correct: true
         questions:
         - {}
+      reasons-took-course-csd_2023:
+        answers:
+        - correct: true
+        - correct: true
+        - correct: true
+        - correct: true
+        - correct: true
+        - correct: true
+        - correct: true
+        - correct: true
+        questions:
+        - {}
       same-ability:
         answers:
         - correct: true
@@ -14686,6 +16764,14 @@ ko-KR:
         questions:
         - {}
       someone_else_encourage_2022:
+        answers:
+        - correct: true
+          text: 예
+        - correct: true
+          text: 아니요
+        questions:
+        - {}
+      someone_else_encourage_2023:
         answers:
         - correct: true
           text: 예
@@ -14721,6 +16807,14 @@ ko-KR:
         questions:
         - {}
       teacher_encourage_2022:
+        answers:
+        - correct: true
+          text: 예
+        - correct: true
+          text: 아니요
+        questions:
+        - {}
+      teacher_encourage_2023:
         answers:
         - correct: true
           text: 예
@@ -14800,6 +16894,28 @@ ko-KR:
         - correct: true
         questions:
         - {}
+      will-be-myself-in-cs_2023:
+        answers:
+        - correct: true
+        - correct: true
+        - correct: true
+        - correct: true
+        - correct: true
+        - correct: true
+        - correct: true
+        questions:
+        - {}
+      will-be-myself-in-cs_mb2022:
+        answers:
+        - correct: true
+        - correct: true
+        - correct: true
+        - correct: true
+        - correct: true
+        - correct: true
+        - correct: true
+        questions:
+        - {}
       worried-less-capable:
         answers:
         - correct: true
@@ -14823,6 +16939,17 @@ ko-KR:
         questions:
         - {}
       worried-seen-incapable_2022:
+        answers:
+        - correct: true
+        - correct: true
+        - correct: true
+        - correct: true
+        - correct: true
+        - correct: true
+        - correct: true
+        questions:
+        - {}
+      worried-seen-incapable_2023:
         answers:
         - correct: true
         - correct: true

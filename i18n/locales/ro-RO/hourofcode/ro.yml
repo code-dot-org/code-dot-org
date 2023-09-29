@@ -288,6 +288,10 @@ ro:
   call_to_action_register_early_access: Înregistrați-vă pentru acces anticipat
   call_to_action_open_positions: Vizualizați pozițiile deschise
   call_to_action_get_guide: Obțineți ghidul
+  call_to_action_donate_to_cdo: Donează lui Code.org
+  call_to_action_start_fundraiser: Începeți o strângere de fonduri
+  call_to_action_view_donation_policy: Vizualizați politica de donații
+  call_to_action_view_donate_bitpay: Donează cu BitPay
   aria_label_call_to_action_afe: Aflați mai multe despre Amazon Future Engineer
   aria_label_call_to_action_teaching_csf: Începeți programul de învățare profesională
     Predarea informaticii Fundamentals
@@ -397,6 +401,7 @@ ro:
   curriculum_name_csp: Principiile informaticii
   curriculum_name_csc: Conexiunile Informaticii
   curriculum_name_csa: Informatică A
+  curriculum_name_csa_ai: Inginerie software și viziune computerizată
   curriculum_name_csc_02: Orice Modul de Conexiuni de Informatică
   curriculum_name_ai: IA și Învățarea Automată
   curriculum_name_artificial_intelligence: Inteligență artificială (AI)
@@ -477,6 +482,12 @@ ro:
     animații, jocuri și sisteme de calcul fizic.
   curriculum_desc_csp: Curs introductiv gratuit, aprobat de CSP® CSP, care introduce
     elevii în conceptele fundamentale ale informaticii.
+  curriculum_desc_csa_ai_long: 'Acest modul CSA post-AP cu două capitole oferă elevilor
+    de liceu experiență practică cu instrumente profesionale de dezvoltare software,
+    inclusiv GitHub și GitHub Copilot, și le oferă abilitățile din lumea reală pentru
+    a dezvolta un program de viziune computerizată. '
+  curriculum_desc_csa_ai_short: Acest modul Post-AP® CSA oferă elevilor de liceu experiență
+    practică cu instrumente profesionale de dezvoltare software.
   collection_hardware: Concentrați-vă pe Hardware
   collection_hardware_desc: Dă posibilitatea elevilor să utilizeze date și dispozitive
     fizice pentru a rezolva probleme.
@@ -552,6 +563,7 @@ ro:
   module_duration_2_hrs: 2 ore
   module_duration_3_hrs: 3 ore
   module_duration_5_hrs: 5 ore
+  module_duration_5_hrs_plus: 5+ ore
   module_duration_8_hrs: 8 ore
   module_duration_20_hrs: 20 de ore
   module_duration_35_hrs: 35 de ore
@@ -633,6 +645,7 @@ ro:
   heading_these_lessons_will: 'Aceste lecții vor:'
   heading_explore_curriculum_catalog: Explorați toate cursurile noastre în Catalogul
     Curriculum
+  heading_csa_ai: Căutați lucruri de făcut după examenul AP®?
   professional_learning_section_desc: Obțineți sprijinul de care aveți nevoie în timp
     ce vă pregătiți să predați. Profesorii o adoră, peste 90% dintre ei considerând-o
     cea mai bună dezvoltare profesională!
@@ -667,6 +680,23 @@ ro:
     a răspunde la orice întrebări pe care le puteți avea despre începerea predării
     cu Code.org. De asemenea, puteți întreba alți profesori despre experiența lor
     pe forumurile noastre pentru profesori.
+  subscribe_form_section_title: Abonați-vă pentru actualizări
+  subscribe_form_section_desc_csa: Înscrieți-vă pentru a primi e-mailuri lunare despre
+    AP® Computer Science A de la Code.org și pentru a primi mementouri utile, sfaturi
+    și actualizări trimise direct în căsuța de e-mail.
+  subscribe_form_section_desc_csc: Înscrieți-vă pentru a primi e-mailuri lunare despre
+    Conexiunile Computer Science ale Code.org și pentru a primi mementouri utile,
+    sfaturi și actualizări trimise direct în căsuța de e-mail.
+  subscribe_form_section_desc_csd: Înscrieți-vă pentru a primi e-mailuri lunare despre
+    descoperirile Computer Science ale Code.org și pentru a primi mementouri utile,
+    sfaturi și actualizări trimise direct în căsuța de e-mail.
+  subscribe_form_section_desc_csf: Înscrieți-vă pentru a primi e-mailuri lunare despre
+    Fundamentele Computer Science ale Code.org și pentru a primi mementouri, sfaturi
+    și actualizări utile trimise direct în căsuța dvs. de e-mail.
+  subscribe_form_section_desc_csp: Înscrieți-vă pentru a primi e-mailuri lunare despre
+    Principiile de Informatică ale Code.org și pentru a primi mementouri utile, sfaturi
+    și actualizări trimise direct în căsuța de e-mail.
+  subscribe_form_section_unsubscribe: Vă puteți dezabona în orice moment.
   blockchain_hero_heading: Cum funcționează Blockchain
   blockchain_hero_desc: Scufundați-vă în lumea blockchain-ului cu „Cum funcționează
     Blockchain”, noua noastră serie video și lecțiile însoțitoare!
@@ -772,6 +802,9 @@ ro:
     lecție este asociată cu un singur videoclip din serie, scufundându-se mai adânc
     în conceptele introduse în videoclipuri.
   ai_curriculum_btn_aria_label_04: Explorați modul în care funcționează AI lecțiile
+  ai_curriculum_grades_05: 'Niveluri de clasă: 9-12'
+  ai_curriculum_btn_aria_label_05: Explorați modulul Software Engineering & Computer
+    Vision
   ai_carousel_heading: 'Ce spun profesorii despre AI cu Code.org:'
   ai_carousel_quote_01: Această lecție a oferit, de asemenea, elevilor mei posibilitatea
     de a vedea că există un element de opinie în sistemele de clasificare. Mai târziu,
@@ -906,6 +939,7 @@ ro:
     de la LLM-uri precum ChatGPT, de la începători la avansați. Include solicitări
     de pornire pentru cei care doar își scufundă degetele de la picioare, precum și
     instrumente avansate pentru cei care doresc să-și maximizeze potențialul.
+  ai_pl_101_resources_3: AI solicită transformarea învățării elevilor
   how_ai_works_hero_heading: Cum funcționează AI
   how_ai_works_hero_desc: Scufundați-vă în lumea AI cu „How AI Works”, seria noastră
     video și lecțiile însoțitoare!
@@ -1324,8 +1358,8 @@ ro:
     Animation
   csp_page_curriculum_glance_devices: Laptop, Chromebook
   csp_page_curriculum_glance_tools: Laboratorul de Aplicații
-  csp_page_curriculum_glance_professional_learning: Facilitator-led Workshops, Self-paced
-    Modules
+  csp_page_curriculum_glance_professional_learning: Ateliere conduse de facilitatori,
+    module cu ritm propriu
   csp_page_curriculum_glance_professional_languages: Română
   csp_page_curriculum_glance_professional_accessibility_features: Text-to-speech,
     Closed captioning, Immersive reader
@@ -1453,8 +1487,8 @@ ro:
   csd_page_curriculum_glance_devices: Laptop, Chromebook
   csd_page_curriculum_glance_tools: Laboratorul de Aplicații, Laboratorul de Jocuri,
     Laboratorul IA, Laboratorul Web
-  csd_page_curriculum_glance_professional_learning: Facilitator-led Workshops, Self-paced
-    Modules
+  csd_page_curriculum_glance_professional_learning: Ateliere conduse de facilitatori,
+    module cu ritm propriu
   csd_page_curriculum_glance_professional_languages: Română
   csd_page_curriculum_glance_professional_accessibility_features: Text-to-speech,
     Closed captioning, Immersive reader
@@ -1610,8 +1644,8 @@ ro:
     și Design, Design de Aplicații
   csf_page_curriculum_glance_devices: Laptop, Chromebook, Tabletă
   csf_page_curriculum_glance_tools: Laboratorul Sprite, Laboratorul de Joacă
-  csf_page_curriculum_glance_professional_learning: Facilitator-led Workshops, Self-paced
-    Modules
+  csf_page_curriculum_glance_professional_learning: Ateliere conduse de facilitatori,
+    module cu ritm propriu
   csf_page_curriculum_glance_languages: Arabă, Indoneziană, Catalană, Chineză simplificată,
     Chineză tradițională, Cehă, Franceză, Germană, Hindi, Italiană, Japoneză, Coreeană,
     Kannada, Malay, Marathi, Mongolă, Poloneză, Portugheză-BR, Română, Rusă, Slovacă,
@@ -1760,6 +1794,39 @@ ro:
   csa_page_faq_answer_08_02: For more information about the values that guided our
     work, please see our [curriculum values](%{curriculum_values_url}) and our [professional
     learning values](%{pl_values_url}).
+  donate_page_top_heading: Ajutați-ne să finanțăm misiunea
+  donate_page_top_desc: Fiecare donație alimentează misiunea Code.org de a extinde
+    accesul la educația informatică. Vă oferim mai multe modalități de a dona și de
+    a face diferența.
+  donate_page_fundraise_title: Strângere de fonduri pentru Code.org
+  donate_page_fundraise_desc: Ajutați la strângerea de bani pentru Code.org! Fiecare
+    elev din fiecare școală ar trebui să aibă posibilitatea de a învăța informatica.
+  donate_page_other_ways_title: Alte modalități de a da
+  donate_page_other_ways_desc: Explorați diverse metode pentru a contribui și găsiți
+    opțiunea care vi se potrivește cel mai bine. Fiecare gest, mare sau mic, ne propulsează
+    misiunea înainte.
+  donate_page_501c3: Code.org este înregistrată ca o organizație publică non-profit
+    501 (c) (3). Contribuțiile la Code.org sunt deductibile fiscal în măsura permisă
+    de lege. Numărul de identificare fiscală al Code.org este 46-0858543.
+  donate_page_donation_policy_title: Înțelegerea politicii noastre de donații
+  donate_page_donation_policy_desc: Aflați mai multe despre modul în care gestionăm
+    și alocăm contribuțiile dvs.
+  donate_tabs_tab_label_daf_direct: DAF Direct
+  donate_tabs_tab_label_amazon: Amazon
+  donate_tabs_tab_label_bitpay: BitPay
+  donate_tabs_tab_label_employee_match: Potrivirea angajaților
+  donate_tabs_daf_direct_title: Donează prin DAF Direct
+  donate_tabs_daf_direct_desc: Donați prin fondul dvs. recomandat de donatori cu Fidelity
+    Charitable, Schwab Charitable sau BNY Mellon și faceți recomandarea dvs. de grant
+    către Code.org prin intermediul formularului online DAF Direct.
+  donate_tabs_amazon_title: Donează prin Amazon
+  donate_tabs_amazon_desc: Donați direct folosind contul dvs. Amazon. Cu doar câteva
+    clicuri, contribuiți fără probleme la misiunea Code.org și împuterniciți viitorul
+    educației în informatică.
+  donate_tabs_bitpay_title: Donează cu Crypto prin BitPay
+  donate_tabs_bitpay_desc: Îmbrățișați viitorul dăruirii cu criptomonede. Prin BitPay,
+    moneda dvs. digitală poate sprijini în mod direct eforturile Code.org de a extinde
+    educația în informatică.
   hoc_live: Hour of Code Live
   hoc_live_sign_up_title: Înscrieți-vă la Hour of Code Live
   hoc_live_learn_title: Învață cu Hour of Code Live

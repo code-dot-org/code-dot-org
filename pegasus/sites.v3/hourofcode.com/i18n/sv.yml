@@ -263,6 +263,10 @@ sv:
   call_to_action_register_early_access: Registrera dig för tidig åtkomst
   call_to_action_open_positions: Visa öppna positioner
   call_to_action_get_guide: Skaffa guiden
+  call_to_action_donate_to_cdo: Donera till Code.org
+  call_to_action_start_fundraiser: Starta en insamling
+  call_to_action_view_donation_policy: Visa policy för donationer
+  call_to_action_view_donate_bitpay: Donera med BitPay
   aria_label_call_to_action_afe: Läs mer om Amazon Future Engineer
   aria_label_call_to_action_teaching_csf: Starta programmet Undervisning Datavetenskap
     Fundamentals professionellt lärande
@@ -365,6 +369,7 @@ sv:
   curriculum_name_csp: Datavetenskapliga principer
   curriculum_name_csc: Datavetenskap Sammanhang
   curriculum_name_csa: AP® Datavetenskap A
+  curriculum_name_csa_ai: Programvaruteknik och datorseende
   curriculum_name_csc_02: Alla CS-anslutningsmodul
   curriculum_name_ai: "  AI och maskininlärning  "
   curriculum_name_artificial_intelligence: Artificiell intelligens (AI)
@@ -435,6 +440,12 @@ sv:
     och fysiska datorsystem.
   curriculum_desc_csp: Gratis, AP® CSP godkänd, gymnasieintroduktionskurs som introducerar
     eleverna till de grundläggande begreppen datavetenskap.
+  curriculum_desc_csa_ai_long: 'Denna tvåkapitels Post-AP CSA-modul erbjuder gymnasieelever
+    praktisk erfarenhet av professionella mjukvaruutvecklingsverktyg, inklusive GitHub
+    och GitHub Copilot, och ger dem de verkliga färdigheterna för att utveckla ett
+    datorvisionsprogram. '
+  curriculum_desc_csa_ai_short: Denna Post-AP® CSA-modul erbjuder gymnasieelever praktisk
+    erfarenhet av professionella programvaruutvecklingsverktyg.
   collection_hardware: Fokusera på hårdvara
   collection_hardware_desc: Ge eleverna möjlighet att använda data och fysiska enheter
     för att lösa problem.
@@ -508,6 +519,7 @@ sv:
   module_duration_2_hrs: 2 timmar
   module_duration_3_hrs: 3 timmar
   module_duration_5_hrs: 5 timmar
+  module_duration_5_hrs_plus: 5+ timmar
   module_duration_8_hrs: 8 timmar
   module_duration_20_hrs: 20 timmar
   module_duration_35_hrs: 35 timmar
@@ -584,6 +596,7 @@ sv:
   heading_objects_first: Objekt först
   heading_these_lessons_will: 'Dessa lektioner kommer att:'
   heading_explore_curriculum_catalog: Utforska alla våra kurser i läroplanskatalogen
+  heading_csa_ai: Letar du efter saker att göra efter AP® -provet?
   professional_learning_section_desc: Få det stöd du behöver när du förbereder dig
     för att undervisa. Lärare älskar det, med över 90% rankar det som den bästa professionella
     utvecklingen någonsin!
@@ -616,6 +629,23 @@ sv:
   support_and_questions_section_desc: Vårt supportteam är här för att svara på alla
     frågor du kan ha om att börja undervisa med Code.org. Du kan också fråga andra
     lärare om deras erfarenhet på våra lärarforum.
+  subscribe_form_section_title: Prenumerera på uppdateringar
+  subscribe_form_section_desc_csa: Registrera dig för att få månatliga e-postmeddelanden
+    om Code.orgs AP® Computer Science A och få användbara påminnelser, tips och uppdateringar
+    skickade direkt till din inkorg.
+  subscribe_form_section_desc_csc: Registrera dig för att få månatliga e-postmeddelanden
+    om Code.orgs datavetenskapsanslutningar och få användbara påminnelser, tips och
+    uppdateringar som skickas direkt till din inkorg.
+  subscribe_form_section_desc_csd: Registrera dig för att få månatliga e-postmeddelanden
+    om Code.orgs Computer Science Discoveries och få användbara påminnelser, tips
+    och uppdateringar skickade direkt till din inkorg.
+  subscribe_form_section_desc_csf: Registrera dig för att få månatliga e-postmeddelanden
+    om Code.orgs Computer Science Fundamentals och få användbara påminnelser, tips
+    och uppdateringar skickade direkt till din inkorg.
+  subscribe_form_section_desc_csp: Registrera dig för att få månatliga e-postmeddelanden
+    om Code.orgs datavetenskapsprinciper och få användbara påminnelser, tips och uppdateringar
+    som skickas direkt till din inkorg.
+  subscribe_form_section_unsubscribe: Du kan avsluta prenumerationen när som helst.
   blockchain_hero_heading: Hur Blockchain fungerar
   blockchain_hero_desc: Dyk in i blockchain-världen med ”Hur Blockchain fungerar”,
     vår nya videoserie och tillhörande lektioner!
@@ -716,6 +746,9 @@ sv:
     lektion är ihopkopplad med en enda video från serien, dyker djupare in i koncepten
     som introduceras i videorna.
   ai_curriculum_btn_aria_label_04: Utforska hur AI fungerar lektioner
+  ai_curriculum_grades_05: 'Betygsnivåer: 9-12'
+  ai_curriculum_btn_aria_label_05: Utforska modulen Software Engineering & Computer
+    Vision
   ai_carousel_heading: 'Vad lärare säger om AI med Code.org:'
   ai_carousel_quote_01: Denna lektion gav också mina elever möjlighet att se att det
     finns ett åsiktselement i klassificeringssystem. Senare, när vi började se hur
@@ -839,6 +872,7 @@ sv:
   ai_pl_101_llm_slides_desc: Verktyg för att få bästa möjliga resultat från LLM som
     ChatGPT, från nybörjare till avancerad. Inkluderar startmeddelanden för dem som
     bara doppar tårna i, samt avancerade verktyg för dem som vill maximera sin potential.
+  ai_pl_101_resources_3: AI uppmanar till omvandling av studentinlärning
   how_ai_works_hero_heading: Så här fungerar AI
   how_ai_works_hero_desc: Dyk in i AI-världen med ”Hur AI fungerar”, vår videoserie
     och tillhörande lektioner!
@@ -1231,8 +1265,8 @@ sv:
     Animation
   csp_page_curriculum_glance_devices: Laptop, Chromebook
   csp_page_curriculum_glance_tools: App Lab
-  csp_page_curriculum_glance_professional_learning: Facilitator-led Workshops, Self-paced
-    Modules
+  csp_page_curriculum_glance_professional_learning: Facilitator-ledda workshops, Moduler
+    i egen takt
   csp_page_curriculum_glance_professional_languages: Svenska
   csp_page_curriculum_glance_professional_accessibility_features: Text-to-speech,
     Closed captioning, Immersive reader
@@ -1358,8 +1392,8 @@ sv:
     databehandling, Appdesign, Spel och animationer, Konst och design, Programmering
   csd_page_curriculum_glance_devices: Laptop, Chromebook
   csd_page_curriculum_glance_tools: App Lab, Game Lab, AI Lab, Web Lab
-  csd_page_curriculum_glance_professional_learning: Facilitator-led Workshops, Self-paced
-    Modules
+  csd_page_curriculum_glance_professional_learning: Facilitator-ledda workshops, Moduler
+    i egen takt
   csd_page_curriculum_glance_professional_languages: Svenska
   csd_page_curriculum_glance_professional_accessibility_features: Text-to-speech,
     Closed captioning, Immersive reader
@@ -1501,8 +1535,8 @@ sv:
     Konst och design, Appdesign
   csf_page_curriculum_glance_devices: Bärbar dator, Chromebook, Surfplatta
   csf_page_curriculum_glance_tools: Sprite Lab, Leklabb
-  csf_page_curriculum_glance_professional_learning: Facilitator-led Workshops, Self-paced
-    Modules
+  csf_page_curriculum_glance_professional_learning: Facilitator-ledda workshops, Moduler
+    i egen takt
   csf_page_curriculum_glance_languages: Arabiska, indonesiska, katalanska, kinesiska
     förenklad, kinesiska traditionella, tjeckiska, franska, tyska, hindi, italienska,
     japanska, koreanska, kannada, malajiska, marathi, mongoliska, polska, portugisiska,
@@ -1641,6 +1675,38 @@ sv:
   csa_page_faq_answer_08_02: For more information about the values that guided our
     work, please see our [curriculum values](%{curriculum_values_url}) and our [professional
     learning values](%{pl_values_url}).
+  donate_page_top_heading: Hjälp till att finansiera vårt uppdrag
+  donate_page_top_desc: Varje donation driver Code.orgs uppdrag att utöka tillgången
+    till datavetenskaplig utbildning. Vi erbjuder flera sätt för dig att donera och
+    göra skillnad.
+  donate_page_fundraise_title: Insamling för Code.org
+  donate_page_fundraise_desc: Hjälp samla in pengar till Code.org! Varje elev i varje
+    skola bör ha möjlighet att lära sig datavetenskap.
+  donate_page_other_ways_title: Andra sätt att ge
+  donate_page_other_ways_desc: Utforska olika metoder för att bidra, och hitta det
+    alternativ som passar dig bäst. Varje gest, stor som liten, driver vårt uppdrag
+    framåt.
+  donate_page_501c3: Code.org är registrerad som en offentlig 501 (c) (3) ideell organisation.
+    Bidrag till Code.org är avdragsgilla i den utsträckning som lagen tillåter. Code.orgs
+    skatteregistreringsnummer är 46-0858543.
+  donate_page_donation_policy_title: Förstå vår donationspolicy
+  donate_page_donation_policy_desc: Läs om hur vi hanterar och fördelar dina bidrag.
+  donate_tabs_tab_label_daf_direct: DAF Direkt
+  donate_tabs_tab_label_amazon: Amazon
+  donate_tabs_tab_label_bitpay: BitPay
+  donate_tabs_tab_label_employee_match: Match för anställda
+  donate_tabs_daf_direct_title: Donera via DAF Direct
+  donate_tabs_daf_direct_desc: Donera via din donatorrådda fond med Fidelity Charitable,
+    Schwab Charitable eller BNY Mellon och gör din bidragsrekommendation till Code.org
+    via DAF Directs onlineformulär.
+  donate_tabs_amazon_title: Donera via Amazon
+  donate_tabs_amazon_desc: Donera direkt med ditt Amazon-konto. Med bara några klick
+    bidrar du sömlöst till Code.orgs uppdrag och stärker framtiden för datavetenskaplig
+    utbildning.
+  donate_tabs_bitpay_title: Donera med Crypto via BitPay
+  donate_tabs_bitpay_desc: Omfamna framtiden för att ge med kryptovaluta. Genom BitPay
+    kan din digitala valuta direkt stödja Code.orgs strävanden att utöka datavetenskaplig
+    utbildning.
   hoc_live: Hour of Code Live
   hoc_live_sign_up_title: Registrera dig för Hour of Code Live
   hoc_live_learn_title: Lär tillsammans med Hour of Code Live

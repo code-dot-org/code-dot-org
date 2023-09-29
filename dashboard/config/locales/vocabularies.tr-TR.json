@@ -1182,6 +1182,9 @@
           "word": "Etkinlik",
           "definition": "Bir şeylerin olmasına neden olan bir eylem."
         },
+        "artificial_intelligence/ai-ethics/2023": {
+          "word": "Yapay Zeka"
+        },
         "adaptation/csc-adaptations/2023": {
           "word": "Adaptasyon",
           "definition": "Çevresini daha iyi hayatta kalmak için bir organizmada değişiklik"
@@ -1400,6 +1403,64 @@
         "poetry_circle/poetry/2023": {
           "word": "Şiir Çemberi",
           "definition": "Yeni şiirleri test etmek ve başkalarından yapıcı geri bildirim almak için güvenli ve yaratıcı bir alan"
+        },
+        "computer/csd/2023": {
+          "word": "Bilgisayar"
+        },
+        "input/csd/2023": {
+          "word": "Girdi"
+        },
+        "processing/csd/2023": {
+          "word": "İşleme"
+        },
+        "digital_footprint/csd/2023": {
+          "word": "Dijital Ayak İzi"
+        },
+        "copyright/csd/2023": {
+          "word": "Telif Hakkı",
+          "definition": "edebi, sanatsal veya müzikal materyali basmak, yayınlamak, icra etmek, filme almak veya kaydetmek ve başkalarına da aynısını yapma yetkisi vermek için münhasır yasal hak"
+        },
+        "bug/csd/2023": {
+          "word": "Hata",
+          "definition": "Bir programın düzgün çalışmayan kısmı."
+        },
+        "debugging/csd/2023": {
+          "word": "Hata Ayıklama",
+          "definition": "Bir algoritma veya programdaki sorunları bulma ve düzeltme."
+        },
+        "program/csd/2023": {
+          "word": "Program",
+          "definition": "Bir makine tarafından çalıştırılabilecek bir şeye kodlanmış bir algoritma."
+        },
+        "variable/csd/2023": {
+          "word": "Değişken",
+          "definition": "Bir programda kullanılan bir bilgi parçası için bir etiket."
+        },
+        "sprite/csd/2023": {
+          "word": "Hareketli nesne"
+        },
+        "condition/csd/2023": {
+          "word": "Koşul"
+        },
+        "conditionals/csd/2023": {
+          "word": "Koşullar"
+        },
+        "abstraction/csd/2023": {
+          "word": "Soyutlama"
+        },
+        "function/csd/2023": {
+          "word": "Fonksiyon"
+        },
+        "user/csd/2023": {
+          "word": "Kullanıcı",
+          "definition": "Yazılım ve donanım da dahil olmak üzere bir nesne kullanan biri."
+        },
+        "user_interface/csd/2023": {
+          "word": "Kullanıcı Arayüzü"
+        },
+        "machine_learning/csd/2023": {
+          "word": "Makine Öğrenimi",
+          "definition": "Bilgisayarlar, açık bir şekilde programlanmadan desenleri nasıl tanır ve kararları nasıl alır"
         },
         "algorithm/coursea/2023": {
           "word": "Algoritma",

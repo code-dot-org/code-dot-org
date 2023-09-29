@@ -137,6 +137,21 @@
         "code/poetry/2023": {
           "word": "کۆد"
         },
+        "input/csd/2023": {
+          "word": "داخڵکردن"
+        },
+        "variable/csd/2023": {
+          "word": "گۆڕاو"
+        },
+        "conditionals/csd/2023": {
+          "word": "مەرجیەکان"
+        },
+        "abstraction/csd/2023": {
+          "word": "پوختە"
+        },
+        "function/csd/2023": {
+          "word": "فرمان"
+        },
         "drop/coursea/2023": {
           "word": "درۆپ"
         },

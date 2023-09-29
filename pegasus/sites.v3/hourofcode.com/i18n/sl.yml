@@ -276,6 +276,10 @@ sl:
   call_to_action_register_early_access: Registrirajte se za zgodnji dostop
   call_to_action_open_positions: Ogled odprtih pozicij
   call_to_action_get_guide: Pridobite vodnik
+  call_to_action_donate_to_cdo: Donirajte za Code.org
+  call_to_action_start_fundraiser: Zaženite zbiranje sredstev
+  call_to_action_view_donation_policy: Oglejte si politiko donacij
+  call_to_action_view_donate_bitpay: Donirajte z BitPay
   aria_label_call_to_action_afe: Preberite več o Amazon Future Engineer
   aria_label_call_to_action_teaching_csf: Začnite program poučevanja računalniških
     znanj Osnove strokovnega učenja
@@ -382,6 +386,7 @@ sl:
   curriculum_name_csp: Načela računalništva
   curriculum_name_csc: Computer Science Povezave
   curriculum_name_csa: AP® Računalništvo A
+  curriculum_name_csa_ai: Programsko inženirstvo in računalniški vid
   curriculum_name_csc_02: Kateri koli modul za povezave CS
   curriculum_name_ai: AI in strojno učenje
   curriculum_name_artificial_intelligence: Umetna inteligenca (AI)
@@ -455,6 +460,12 @@ sl:
     iger in fizičnih računalniških sistemov.
   curriculum_desc_csp: Brezplačno, AP® CSP potrdil, srednješolski uvodni tečaj, ki
     uvaja študente s temeljnimi koncepti računalništva.
+  curriculum_desc_csa_ai_long: 'Ta dvopoglavjni modul CSA po AP ponuja srednješolcem
+    praktične izkušnje s profesionalnimi orodji za razvoj programske opreme, vključno
+    z GitHub in GitHub Copilot, in jim daje resnične veščine za razvoj programa računalniškega
+    vida. '
+  curriculum_desc_csa_ai_short: Ta Post-AP® CSA modul ponuja srednješolcem praktične
+    izkušnje s profesionalnimi orodji za razvoj programske opreme.
   collection_hardware: Osredotočenost na strojno opremo
   collection_hardware_desc: Študentom omogoča uporabo podatkov in fizičnih naprav
     za reševanje problemov.
@@ -527,6 +538,7 @@ sl:
   module_duration_2_hrs: 2 uri
   module_duration_3_hrs: 3 ure
   module_duration_5_hrs: 5 ur
+  module_duration_5_hrs_plus: 5+ ur
   module_duration_8_hrs: 8 ur
   module_duration_20_hrs: 20 ur
   module_duration_35_hrs: 35 ur
@@ -606,6 +618,7 @@ sl:
   heading_objects_first: Predmeti najprej
   heading_these_lessons_will: 'Te lekcije bodo:'
   heading_explore_curriculum_catalog: Raziščite vse naše tečaje v katalogu kurikuluma
+  heading_csa_ai: Iščete stvari, ki jih morate storiti po izpitu AP®?
   professional_learning_section_desc: Pridobite podporo, ki jo potrebujete, ko se
     pripravljate na poučevanje. Učitelji ga imajo radi, saj ga je več kot 90% uvrstilo
     v najboljši profesionalni razvoj doslej!
@@ -637,6 +650,23 @@ sl:
   support_and_questions_section_desc: Naša ekipa za podporo je tukaj, da odgovori
     na vsa vprašanja o začetku poučevanja s Code.org. Druge učitelje lahko vprašate
     tudi o njihovih izkušnjah na naših forumih učiteljev.
+  subscribe_form_section_title: Naročite se na posodobitve
+  subscribe_form_section_desc_csa: Prijavite se za prejemanje mesečnih e-poštnih sporočil
+    o programu Code.org AP® Computer Science A in pridobite koristne opomnike, nasvete
+    in posodobitve, poslane neposredno v mapo« Prejeto«.
+  subscribe_form_section_desc_csc: Prijavite se za prejemanje mesečnih e-poštnih sporočil
+    o Code.org Computer Science Connections in pridobite koristne opomnike, nasvete
+    in posodobitve, poslane neposredno v mapo« Prejeto«.
+  subscribe_form_section_desc_csd: Prijavite se za prejemanje mesečnih e-poštnih sporočil
+    o odkritjih računalniških znanosti Code.org in pridobite koristne opomnike, nasvete
+    in posodobitve, poslane neposredno v mapo« Prejeto«.
+  subscribe_form_section_desc_csf: Prijavite se za prejemanje mesečnih e-poštnih sporočil
+    o osnovah računalništva Code.org in pridobite koristne opomnike, nasvete in posodobitve,
+    poslane neposredno v mapo« Prejeto«.
+  subscribe_form_section_desc_csp: Prijavite se za prejemanje mesečnih e-poštnih sporočil
+    o načelih računalništva Code.org in pridobite koristne opomnike, nasvete in posodobitve,
+    poslane neposredno v mapo« Prejeto«.
+  subscribe_form_section_unsubscribe: Odjavite se lahko kadarkoli.
   blockchain_hero_heading: Kako deluje Blockchain
   blockchain_hero_desc: Potopite se v svet blockchaina z »Kako deluje Blockchain«,
     našo novo video serijo in spremljajoče lekcije!
@@ -743,6 +773,9 @@ sl:
     lekcija je seznanjena z enim samim videoposnetkom iz serije, ki se poglobi v koncepte,
     uvedenih v videoposnetkih.
   ai_curriculum_btn_aria_label_04: Raziščite, kako AI deluje lekcije
+  ai_curriculum_grades_05: 'Stopnje stopnje: 9-12'
+  ai_curriculum_btn_aria_label_05: Raziščite modul za programsko inženirstvo in računalniški
+    vid
   ai_carousel_heading: 'Kaj učitelji pravijo o AI s Code.org:'
   ai_carousel_quote_01: Ta lekcija je tudi mojim učencem omogočila, da vidijo, da
     v klasifikacijskih sistemih obstaja element mnenja. Kasneje, ko smo začeli videti,
@@ -872,6 +905,7 @@ sl:
     LLM-jev, kot je ChatGPT, od začetnika do naprednih. Vključuje začetne pozive za
     tiste, ki samo potapljajo prste, pa tudi napredna orodja za tiste, ki želijo maksimirati
     svoj potencial.
+  ai_pl_101_resources_3: AI poziva k preoblikovanju učenja študentov
   how_ai_works_hero_heading: Kako deluje AI
   how_ai_works_hero_desc: Potopite se v svet umetne inteligence z »Kako deluje AI«,
     našo video serijo in spremljajoče lekcije!
@@ -1269,8 +1303,8 @@ sl:
     Animation
   csp_page_curriculum_glance_devices: Laptop, Chromebook
   csp_page_curriculum_glance_tools: Laboratorij za aplikacije
-  csp_page_curriculum_glance_professional_learning: Facilitator-led Workshops, Self-paced
-    Modules
+  csp_page_curriculum_glance_professional_learning: Delavnice pod vodstvom moderatorjev,
+    moduli s samodejnim tempom
   csp_page_curriculum_glance_professional_languages: Slovenščina
   csp_page_curriculum_glance_professional_accessibility_features: Text-to-speech,
     Closed captioning, Immersive reader
@@ -1398,8 +1432,8 @@ sl:
   csd_page_curriculum_glance_devices: Laptop, Chromebook
   csd_page_curriculum_glance_tools: App Lab, Igralni laboratorij, AI Lab, Spletni
     laboratorij
-  csd_page_curriculum_glance_professional_learning: Facilitator-led Workshops, Self-paced
-    Modules
+  csd_page_curriculum_glance_professional_learning: Delavnice pod vodstvom moderatorjev,
+    moduli s samodejnim tempom
   csd_page_curriculum_glance_professional_languages: Slovenščina
   csd_page_curriculum_glance_professional_accessibility_features: Text-to-speech,
     Closed captioning, Immersive reader
@@ -1536,8 +1570,8 @@ sl:
     in oblikovanje, oblikovanje aplikacij
   csf_page_curriculum_glance_devices: Prenosnik, Chromebook, tablični računalnik
   csf_page_curriculum_glance_tools: Sprite Lab, Igraj Lab
-  csf_page_curriculum_glance_professional_learning: Facilitator-led Workshops, Self-paced
-    Modules
+  csf_page_curriculum_glance_professional_learning: Delavnice pod vodstvom moderatorjev,
+    moduli s samodejnim tempom
   csf_page_curriculum_glance_languages: arabščina, indonezijski jezik, katalonski,
     kitajski poenostavljeni, tradicionalni kitajski, češki, francosko, nemški, hindi,
     italijanski, japonski, korejski, kannada, malajski, maratščina, mongolski, poljski,
@@ -1674,6 +1708,38 @@ sl:
   csa_page_faq_answer_08_02: For more information about the values that guided our
     work, please see our [curriculum values](%{curriculum_values_url}) and our [professional
     learning values](%{pl_values_url}).
+  donate_page_top_heading: Pomoč financirati naše poslanstvo
+  donate_page_top_desc: Vsaka donacija spodbuja poslanstvo Code.org, da razširi dostop
+    do računalniškega izobraževanja. Ponujamo vam več načinov za darovanje in spremembo.
+  donate_page_fundraise_title: Zbiranje sredstev za Code.org
+  donate_page_fundraise_desc: Pomagajte zbrati denar za Code.org! Vsak učenec v vsaki
+    šoli bi moral imeti priložnost, da se nauči računalništva.
+  donate_page_other_ways_title: Drugi načini dajanja
+  donate_page_other_ways_desc: Raziščite različne metode za prispevanje in poiščite
+    možnost, ki vam najbolj ustreza. Vsaka gesta, velika ali majhna, poganja naše
+    poslanstvo naprej.
+  donate_page_501c3: Code.org je registrirana kot javna neprofitna organizacija 501
+    (c) (3). Prispevki za Code.org so davčni odbitni v obsegu, ki ga dovoljuje zakon.
+    Davčna identifikacijska številka Code.org je 46-0858543.
+  donate_page_donation_policy_title: Razumevanje naše politike donacij
+  donate_page_donation_policy_desc: Preberite več o tem, kako ravnamo in dodelite
+    svoje prispevke.
+  donate_tabs_tab_label_daf_direct: DAF Neposredno
+  donate_tabs_tab_label_amazon: Amazon
+  donate_tabs_tab_label_bitpay: BitPay
+  donate_tabs_tab_label_employee_match: Tekma zaposlenih
+  donate_tabs_daf_direct_title: Donirajte prek DAF Direct
+  donate_tabs_daf_direct_desc: Donirajte prek svojega donatorskega sklada z Fidelity
+    Charitable, Schwab Charitable ali BNY Mellon in podajte priporočilo za donacijo
+    na Code.org prek spletnega obrazca DAF Direct.
+  donate_tabs_amazon_title: Donirajte prek Amazona
+  donate_tabs_amazon_desc: Donirajte neposredno s svojim računom Amazon. Z le nekaj
+    kliki brezhibno prispevajte k poslanstvu Code.org in opolnomočite prihodnost računalniškega
+    izobraževanja.
+  donate_tabs_bitpay_title: Donirajte s Crypto prek BitPay
+  donate_tabs_bitpay_desc: Sprejmite prihodnost dajanja s kriptovalutami. Skozi BitPay
+    lahko vaša digitalna valuta neposredno podpira prizadevanja Code.org pri širjenju
+    računalniškega izobraževanja.
   hoc_live: Ura kode v živo
   hoc_live_sign_up_title: Prijavite se za Hour of Code Live
   hoc_live_learn_title: Učite se z Uro kode v živo

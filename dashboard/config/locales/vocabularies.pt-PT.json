@@ -1138,6 +1138,9 @@
           "word": "Evento",
           "definition": "Uma ação que faz com que algo aconteça."
         },
+        "artificial_intelligence/ai-ethics/2023": {
+          "word": "Inteligência artificial"
+        },
         "adaptation/csc-adaptations/2023": {
           "word": "Adaptação",
           "definition": "Uma mudança em um organismo para sobreviver melhor ao meio ambiente"
@@ -1355,6 +1358,60 @@
         },
         "poetry_circle/poetry/2023": {
           "definition": "Um espaço seguro e criativo para testar novos poemas e obter feedback construtivo de outras pessoas"
+        },
+        "input/csd/2023": {
+          "word": "Entrada"
+        },
+        "processing/csd/2023": {
+          "word": "Processando"
+        },
+        "digital_footprint/csd/2023": {
+          "word": "Pegada Digital"
+        },
+        "copyright/csd/2023": {
+          "word": "Copyright"
+        },
+        "bug/csd/2023": {
+          "word": "Bug",
+          "definition": "Parte de um programa que não funciona corretamente."
+        },
+        "debugging/csd/2023": {
+          "word": "Analisando",
+          "definition": "Localizar e corrigir problemas em um algoritmo ou programa."
+        },
+        "program/csd/2023": {
+          "word": "Programa",
+          "definition": "Algoritmo que foi codificado em algo que pode ser executado por uma máquina."
+        },
+        "variable/csd/2023": {
+          "word": "Variável",
+          "definition": "Espaço reservado para uma informação que pode mudar."
+        },
+        "sprite/csd/2023": {
+          "word": "Sprite"
+        },
+        "condition/csd/2023": {
+          "word": "Condição"
+        },
+        "conditionals/csd/2023": {
+          "word": "Condicionais"
+        },
+        "abstraction/csd/2023": {
+          "word": "Abstração"
+        },
+        "function/csd/2023": {
+          "word": "Função"
+        },
+        "user/csd/2023": {
+          "word": "Usuário",
+          "definition": "Alguém que usa um objeto, incluindo software e hardware."
+        },
+        "user_interface/csd/2023": {
+          "word": "Interface do Usuário"
+        },
+        "machine_learning/csd/2023": {
+          "word": "Máquina de aprendizado",
+          "definition": "Maneira como os computadores reconhecem padrões e tomam decisões sem que sejam programados de maneira explícita."
         },
         "algorithm/coursea/2023": {
           "word": "Algoritmo",

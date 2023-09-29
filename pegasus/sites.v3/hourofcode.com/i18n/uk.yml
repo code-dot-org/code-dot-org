@@ -282,6 +282,10 @@ uk:
   call_to_action_register_early_access: Реєстрація для раннього доступу
   call_to_action_open_positions: Перегляд відкритих позицій
   call_to_action_get_guide: Отримайте довідник
+  call_to_action_donate_to_cdo: Зробити пожертвування для Code.org
+  call_to_action_start_fundraiser: Почніть збір коштів
+  call_to_action_view_donation_policy: Переглянути політику пожертвування
+  call_to_action_view_donate_bitpay: Пожертвуйте за допомогою BitPay
   aria_label_call_to_action_afe: Дізнайтеся більше про майбутні інженери Amazon
   aria_label_call_to_action_teaching_csf: Почніть програму професійного навчання «Основи
     інформатики»
@@ -389,6 +393,7 @@ uk:
   curriculum_name_csp: Принципи інформатики
   curriculum_name_csc: Зв'язки в інформатиці
   curriculum_name_csa: 'Інформатика A '
+  curriculum_name_csa_ai: Pseudoloc-Софттварее Eнджджінеееріндждж & CCомпюютер  Вісііон
   curriculum_name_csc_02: Будь-який модуль "Зв'язки в інформатиці"
   curriculum_name_ai: AI та машинне навчання
   curriculum_name_artificial_intelligence: Штучний інтелект (AI)
@@ -465,6 +470,12 @@ uk:
     ігор та фізичних обчислювальних систем.
   curriculum_desc_csp: Безкоштовний, схвалений AP® CSP, вступний курс середньої школи,
     який знайомить учнів з основоположними концепціями інформатики.
+  curriculum_desc_csa_ai_long: 'Цей модуль CSA з двох розділів після AP пропонує старшокласникам
+    практичний досвід роботи з професійними інструментами розробки програмного забезпечення,
+    включаючи GitHub та GitHub Copilot, і надає їм реальні навички для розробки програми
+    комп''ютерного зору. '
+  curriculum_desc_csa_ai_short: Цей модуль Post-AP® CSA пропонує старшокласникам практичний
+    досвід роботи з професійними інструментами розробки програмного забезпечення.
   collection_hardware: Зосередження на «Апаратному обладнанні»
   collection_hardware_desc: Дає учням можливість використовувати дані й фізичні пристрої
     для вирішення проблем.
@@ -537,6 +548,7 @@ uk:
   module_duration_2_hrs: 2 години
   module_duration_3_hrs: 3 годин
   module_duration_5_hrs: 5 годин
+  module_duration_5_hrs_plus: 5+ годин
   module_duration_8_hrs: 8 годин
   module_duration_20_hrs: 20 годин
   module_duration_35_hrs: 35 годин
@@ -617,6 +629,7 @@ uk:
   heading_these_lessons_will: 'Ці уроки будуть:'
   heading_explore_curriculum_catalog: Ознайомтеся з усіма нашими курсами в каталозі
     навчальних програм
+  heading_csa_ai: Шукаєте, чим зайнятися після іспиту AP®?
   professional_learning_section_desc: Отримайте необхідну підтримку під час підготовки
     до викладання. 90 % викладачів оцінюють це рішення як найкраще з можливих!
   professional_learning_section_desc_short: Отримайте необхідну підтримку під час
@@ -649,6 +662,24 @@ uk:
   support_and_questions_section_desc: Наша команда підтримки відповість на будь-які
     запитання щодо початку викладання з Code.org. Ви також можете запитати інших педагогів
     про їхній досвід на наших форумах викладачів.
+  subscribe_form_section_title: Підпишіться на оновлення
+  subscribe_form_section_desc_csa: Зареєструйтеся, щоб отримувати щомісячні електронні
+    листи про AP® Computer Science A від Code.org та отримувати корисні нагадування,
+    поради та оновлення, які надсилаються прямо на вашу поштову скриньку.
+  subscribe_form_section_desc_csc: Зареєструйтесь, щоб отримувати щомісячні електронні
+    листи про Computer Science Connections Code.org та отримувати корисні нагадування,
+    поради та оновлення, які надсилаються прямо на вашу поштову скриньку.
+  subscribe_form_section_desc_csd: Зареєструйтеся, щоб отримувати щомісячні електронні
+    листи про відкриття комп'ютерних наук Code.org та отримувати корисні нагадування,
+    поради та оновлення, які надсилаються прямо на вашу поштову скриньку.
+  subscribe_form_section_desc_csf: Зареєструйтеся, щоб отримувати щомісячні електронні
+    листи про основи комп'ютерних наук Code.org та отримувати корисні нагадування,
+    поради та оновлення, які надсилаються прямо на вашу поштову скриньку.
+  subscribe_form_section_desc_csp: Зареєструйтеся, щоб отримувати щомісячні електронні
+    листи про Принципи комп'ютерних наук Code.org та отримувати корисні нагадування,
+    поради та оновлення, які надсилаються прямо на вашу поштову скриньку.
+  subscribe_form_section_unsubscribe: Ви можете відмовитися від підписки в будь-який
+    час.
   blockchain_hero_heading: Як працює блокчейн
   blockchain_hero_desc: Пориньте у світ блокчейну з нашою новою серією відео та супутніми
     уроками «Як працює блокчейн»!
@@ -754,6 +785,9 @@ uk:
     Кожен урок поєднується з одним відео із серії, занурюючись глибше в концепції,
     представлені у відео.
   ai_curriculum_btn_aria_label_04: Дізнайтеся, як працює штучний інтелект
+  ai_curriculum_grades_05: 'Рівні класу: 9-12'
+  ai_curriculum_btn_aria_label_05: Ознайомтеся з модулем «Програмна інженерія та комп'ютерний
+    зір»
   ai_carousel_heading: 'Що кажуть вчителі про AI з Code.org:'
   ai_carousel_quote_01: Цей урок також дав моїм учням можливість побачити, що в системах
     класифікації є елемент думки. Пізніше, коли ми почали бачити, як упередження може
@@ -883,6 +917,7 @@ uk:
     від LLM, таких як ChatGPT, від початківця до просунутого. Включає початкові підказки
     для тих, хто просто занурює пальці ніг, а також вдосконалені інструменти для тих,
     хто прагне максимізувати свій потенціал.
+  ai_pl_101_resources_3: Підказки штучного інтелекту для трансформації навчання студентів
   how_ai_works_hero_heading: Як працює AI
   how_ai_works_hero_desc: Пориньте у світ AI з нашою серією відео та супутніми уроками
     «Як працює AI»!
@@ -1285,8 +1320,8 @@ uk:
     Animation
   csp_page_curriculum_glance_devices: Laptop, Chromebook
   csp_page_curriculum_glance_tools: Лабораторія застосунків
-  csp_page_curriculum_glance_professional_learning: Facilitator-led Workshops, Self-paced
-    Modules
+  csp_page_curriculum_glance_professional_learning: Семінари під керівництвом фасилітатора,
+    модулі для самостійного прокладання
   csp_page_curriculum_glance_professional_languages: Англійською
   csp_page_curriculum_glance_professional_accessibility_features: Text-to-speech,
     Closed captioning, Immersive reader
@@ -1413,8 +1448,8 @@ uk:
   csd_page_curriculum_glance_devices: Laptop, Chromebook
   csd_page_curriculum_glance_tools: Лабораторія застосунків, Ігрова лабораторія, Лабораторія
     ШІ, Веб-лабораторія
-  csd_page_curriculum_glance_professional_learning: Facilitator-led Workshops, Self-paced
-    Modules
+  csd_page_curriculum_glance_professional_learning: Семінари під керівництвом фасилітатора,
+    модулі для самостійного прокладання
   csd_page_curriculum_glance_professional_languages: Англійською
   csd_page_curriculum_glance_professional_accessibility_features: Text-to-speech,
     Closed captioning, Immersive reader
@@ -1558,8 +1593,8 @@ uk:
     і дизайн, проєктування застосунків
   csf_page_curriculum_glance_devices: Ноутбук, Chromebook, планшет
   csf_page_curriculum_glance_tools: Спрайт-Лабораторія, Лабораторія ігор
-  csf_page_curriculum_glance_professional_learning: Facilitator-led Workshops, Self-paced
-    Modules
+  csf_page_curriculum_glance_professional_learning: Семінари під керівництвом фасилітатора,
+    модулі для самостійного прокладання
   csf_page_curriculum_glance_languages: Арабська, індонезійська, каталонська, китайська
     спрощена, китайська традиційна, чеська, французька, німецька, хінді, італійська,
     японська, корейська, каннада, малайська, маратхі, монгольська, польська, португальська
@@ -1702,6 +1737,39 @@ uk:
   csa_page_faq_answer_08_02: For more information about the values that guided our
     work, please see our [curriculum values](%{curriculum_values_url}) and our [professional
     learning values](%{pl_values_url}).
+  donate_page_top_heading: Допоможіть фінансувати нашу місію
+  donate_page_top_desc: Кожна пожертва підживлює місію Code.org щодо розширення доступу
+    до освіти з інформатики. Ми пропонуємо вам кілька способів пожертвувати та змінити
+    ситуацію.
+  donate_page_fundraise_title: Збір коштів для Code.org
+  donate_page_fundraise_desc: Допоможіть зібрати гроші для Code.org! Кожен учень кожної
+    школи повинен мати можливість вивчати інформатику.
+  donate_page_other_ways_title: Інші способи подарувати
+  donate_page_other_ways_desc: Вивчіть різноманітні методи, щоб внести свій внесок,
+    і знайдіть варіант, який вам найбільше підходить. Кожен жест, великий чи маленький,
+    просуває нашу місію вперед.
+  donate_page_501c3: Code.org зареєстрований як публічна некомерційна організація
+    501 (c) (3). Внески на Code.org не підлягають оподаткуванню в тій мірі, в якій
+    це дозволено законом. Ідентифікаційний номер платника податку Code.org - 46-0858543.
+  donate_page_donation_policy_title: Розуміння нашої політики пожертвувань
+  donate_page_donation_policy_desc: Дізнайтеся про те, як ми обробляємо та розподіляємо
+    ваші внески.
+  donate_tabs_tab_label_daf_direct: DAF Прямий
+  donate_tabs_tab_label_amazon: Амазонка
+  donate_tabs_tab_label_bitpay: БітPay
+  donate_tabs_tab_label_employee_match: Матч співробітників
+  donate_tabs_daf_direct_title: Зробити пожертвування через DAF Direct
+  donate_tabs_daf_direct_desc: Пожертвуйте через свій фонд, який консультували донори,
+    у Fidelity Charitable, Schwab Charitable або BNY Mellon і надайте рекомендації
+    щодо гранту Code.org через онлайн-форму DAF Direct.
+  donate_tabs_amazon_title: Пожертвуйте через Amazon
+  donate_tabs_amazon_desc: Пожертвуйте безпосередньо за допомогою свого облікового
+    запису Amazon. Всього кількома клацаннями миші безперешкодно внесіть свій внесок
+    у місію Code.org та розширюйте можливості майбутнього інформатичної освіти.
+  donate_tabs_bitpay_title: Пожертвуйте за допомогою Crypto через BitPay
+  donate_tabs_bitpay_desc: Прийміть майбутнє дарування за допомогою криптовалюти.
+    Через BitPay ваша цифрова валюта може безпосередньо підтримувати зусилля Code.org
+    щодо розширення освіти в галузі інформатики.
   hoc_live: Година коду в прямому ефірі
   hoc_live_sign_up_title: Підпишіться на Година коду в прямому ефірі
   hoc_live_learn_title: Навчіться за допомогою Години коду в прямому ефірі

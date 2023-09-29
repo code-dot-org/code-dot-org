@@ -39,7 +39,7 @@ namespace :i18n do
   timed_task_with_logging :sync do
     gsheet = 'Data/I18n'
     path = pegasus_dir('cache/i18n/en-US.yml')
-
+    gdrive = Google::Drive.new
     file = gdrive.file(gsheet)
     raise("Google Drive file '#{gsheet}' not found.") unless file
 
