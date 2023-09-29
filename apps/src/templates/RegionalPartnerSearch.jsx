@@ -255,11 +255,7 @@ class RegionalPartnerSearch extends Component {
               </p>
               <p>
                 All of our curriculum, tools, and courses are also available for
-                your school at no cost. Or,{' '}
-                <a href="/educate/curriculum/3rd-party">
-                  contact one of these computer science providers
-                </a>{' '}
-                for other Professional Development options in your area.
+                your school at no cost.
               </p>
               {this.shouldDisplayApplicationLink() && (
                 <StartApplicationButton

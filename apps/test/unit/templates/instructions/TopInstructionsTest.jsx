@@ -265,26 +265,12 @@ describe('TopInstructions', () => {
           .be.false;
       });
 
-      it('passes displayFeedback = true to TopInstructionsHeader teacher is viewing student work and cannot leave feedback', () => {
+      it('passes displayFeedback = true to TopInstructionsHeader teacher is viewing student work', () => {
         const props = {...DEFAULT_PROPS, displayReviewTab: true};
         const wrapper = shallow(<TopInstructions {...props} />);
 
         wrapper.setState({
           teacherViewingStudentWork: true,
-          teacherCanLeaveFeedback: false,
-        });
-
-        expect(wrapper.find(TopInstructionsHeader).props().displayFeedback).to
-          .be.false;
-      });
-
-      it('passes displayFeedback = true to TopInstructionsHeader teacher is viewing student work and can leave feedback', () => {
-        const props = {...DEFAULT_PROPS, displayReviewTab: true};
-        const wrapper = shallow(<TopInstructions {...props} />);
-
-        wrapper.setState({
-          teacherViewingStudentWork: true,
-          teacherCanLeaveFeedback: true,
         });
 
         expect(wrapper.find(TopInstructionsHeader).props().displayFeedback).to

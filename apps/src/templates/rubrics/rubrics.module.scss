@@ -195,8 +195,11 @@ p.aiTokenText {
   color: $product_affirmative_default;
 }
 
-.learningGoalExpanded {
+.expandedBorder {
   border-top: 1px solid $neutral_dark40;
+}
+
+.learningGoalExpanded {
   padding: 1.25rem 1rem;
 
   display: flex;
@@ -266,6 +269,62 @@ p.aiTokenText {
 p.errorMessage {
   color: $product_negative_default;
   margin-bottom: 0;
+}
+
+.infoTipIcon {
+  cursor: pointer;
+  margin-left: 5px;
+  margin-right: 5px;
+  font-size: 18px;
+  vertical-align: middle;
+  color: gray;
+}
+
+.openedAiAssessment {
+  padding: 1.25rem 1rem 0 1rem;
+}
+
+.aiAssessmentBlock {
+  align-items: flex-start;
+  display: flex;
+  gap: 16px;
+  position: relative;
+}
+
+.greenAiAssessment {
+  align-items: left;
+  border: 1px solid $product_affirmative_default;
+  background-color: $light_affirmative_100;
+  border-radius: 4px;
+  display: flex;
+  flex-grow: 1;
+  overflow: hidden;
+  padding: 8px;
+  position: relative;
+}
+
+.redAiAssessment {
+  align-items: left;
+  border: 1px solid $product_negative_default;
+  background-color: $product_negative_light;
+  border-radius: 4px;
+  display: flex;
+  flex-grow: 1;
+  overflow: hidden;
+  padding: 8px;
+  position: relative;
+}
+
+.noAiAssessment {
+  align-items: left;
+  background-color: $lightest_gray;
+  border: 1px solid $light_gray;
+  border-radius: 4px;
+  display: flex;
+  flex-grow: 1;
+  overflow: hidden;
+  padding: 8px;
+  position: relative;
 }
 
 .inputTextbox {

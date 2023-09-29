@@ -10,7 +10,7 @@ import sinon from 'sinon';
 
 describe('RubricsContainerTest', () => {
   const defaultProps = {
-    levels: [
+    submittableLevels: [
       {id: 1, name: 'level 1'},
       {id: 2, name: 'level 2'},
       {id: 3, name: 'level 3'},
@@ -86,7 +86,7 @@ describe('RubricsContainerTest', () => {
     const wrapper = mount(<RubricsContainer {...defaultProps} />);
     expect(wrapper.find('Heading1').text()).to.equal('Create your rubric');
     expect(wrapper.find('select#rubric_level_id option')).to.have.length(
-      defaultProps.levels.length
+      defaultProps.submittableLevels.length
     );
     expect(wrapper.find(LearningGoalItem)).to.have.length(1);
     expect(wrapper.find('Button[text="Save your rubric"]')).to.have.length(1);
@@ -97,7 +97,7 @@ describe('RubricsContainerTest', () => {
     const wrapper = mount(<RubricsContainer {...props} />);
     expect(wrapper.find('Heading1').text()).to.equal('Modify your rubric');
     expect(wrapper.find('select#rubric_level_id option')).to.have.length(
-      props.levels.length
+      defaultProps.submittableLevels.length
     );
     expect(wrapper.find(LearningGoalItem)).to.have.length(
       rubricInfo.learningGoals.length
@@ -121,11 +121,15 @@ describe('RubricsContainerTest', () => {
     const wrapper = shallow(<RubricsContainer {...defaultProps} />);
     let dropdown = wrapper.find('select#rubric_level_id');
     const dropdownValue = dropdown.prop('value');
-    expect(dropdownValue).to.equal(defaultProps.levels[0].id);
+    expect(dropdownValue).to.equal(defaultProps.submittableLevels[0].id);
 
-    dropdown.simulate('change', {target: {value: defaultProps.levels[1].id}});
+    dropdown.simulate('change', {
+      target: {value: defaultProps.submittableLevels[1].id},
+    });
     dropdown = wrapper.find('select#rubric_level_id');
-    expect(dropdown.prop('value')).to.equal(defaultProps.levels[1].id);
+    expect(dropdown.prop('value')).to.equal(
+      defaultProps.submittableLevels[1].id
+    );
   });
 
   it('changes the saveNotificationText and disables the save Button when saving rubric', async () => {
@@ -180,7 +184,6 @@ describe('RubricsContainerTest', () => {
     expect(saveButton.props().disabled).to.be.false;
     saveButton.simulate('click');
     sinon.assert.calledWith(mockSave);
-
     sinon.restore();
   });
 });
