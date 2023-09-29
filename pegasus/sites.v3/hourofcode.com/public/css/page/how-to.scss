@@ -16,7 +16,7 @@ section.banner {
   padding: 0;
 
   .wrapper {
-    padding: 2em 0px 11em;
+    padding: 2em 0px 12em;
   }
 
   h1 {
@@ -40,72 +40,21 @@ section.banner {
   }
 
   nav.how-to-nav {
-    height: 3.25rem;
     width: 250px;
     position: relative;
-    background-color: var(--neutral_dark10);
-    border-radius: 4px;
-    font-size: 1rem;
-    font-family: 'Gotham 5r', sans-serif;
-
-    &::after {
-      content: url('/images/angle-down.svg');
-      position: absolute;
-      right: 10px;
-      top: 14px;
-    }
-
-    &:hover {
-      color: var(--brand_secondary_default);
-      background-color: var(--neutral_dark10);
-      border-radius: 4px 4px 0 0;
-      text-decoration: none;
-      cursor: pointer;
-
-      p.current-page {
-        cursor: default;
-      }
-
-      ul {
-        display: initial;
-        overflow: visible;
-      }
-
-      &::after {
-        content: "";
-      }
-    }
-
-    p.current_page {
-      text-decoration: none;
-      padding: 12px 0;
-      display: block;
-      font-size: 18px;
-      color: var(--neutral_dark);
-    }
 
     ul {
-      display: none;
-	    top: 0;
-      padding: 0;
-      margin: 0;
       list-style: none;
-      position: relative;
-
-      nav ul:hover {
-        display: block;
-      }
+      margin: 0;
+      padding: 0;
 
       li {
-        display:block;
+        font-family: var(--main-font-bold);
         text-indent: 0;
         padding: 0;
         color: var(--neutral_dark);
         background-color: var(--neutral_dark10);
-
-        &:last-child {
-          border-radius: 0 0 4px 4px;
-        }
+        border-radius: 4px;
 
         &::before {
           content: "";
@@ -115,16 +64,62 @@ section.banner {
           background-color: var(--neutral_dark20);
         }
 
-        &:last-child a {
-          padding-bottom: 16px;
+        button {
+          background-color: var(--neutral_dark10);
+          border: none;
+          font-family: inherit;
+          width: 100%;
+
+          &::after {
+            content: url('/images/angle-down.svg');
+            position: absolute;
+            right: 12px;
+            top: 15px;
+          }
         }
 
-        a {
+        a, button {
           color: var(--neutral_dark);
           display:block;
           text-decoration:none;
-          padding: 14px 0;
+          padding: 14px 32px;
           font-size: 18px;
+        }
+
+        ul.how-to-menu {
+          display: none;
+          position: absolute;
+          width: 100%;
+
+          li {
+            border-radius: 0;
+
+            &:last-child {
+              border-radius: 0 0 4px 4px;
+              padding-bottom: 2px;
+            }
+          }
+        }
+      }
+    }
+
+    li.how-to-label {
+      position: relative;
+
+      &:hover,
+      &:focus-within {
+
+        button {
+          border-radius: 4px 4px 0 0;
+          cursor: default;
+
+          &::after {
+            display: none;
+          }
+        }
+
+        ul.how-to-menu {
+          display: block;
         }
       }
     }
