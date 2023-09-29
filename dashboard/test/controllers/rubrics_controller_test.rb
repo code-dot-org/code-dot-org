@@ -66,4 +66,65 @@ class RubricsControllerTest < ActionController::TestCase
     refute_nil LearningGoalEvaluation.find_by(user: student, teacher: teacher).submitted_at
     assert_nil LearningGoalEvaluation.find_by(user: student, teacher: another_teacher).submitted_at
   end
+
+  test "gets ai evaluations for student and learning goal" do
+    student = create :student
+    teacher = create :teacher
+    create :follower, student_user: student, user: teacher
+    sign_in teacher
+
+    rubric = create :rubric
+    learning_goal1 = create :learning_goal, rubric: rubric
+    learning_goal2 = create :learning_goal, rubric: rubric
+    ai_evaluation1 = create :learning_goal_ai_evaluation, learning_goal: learning_goal1, user: student, understanding: 1
+    ai_evaluation2 = create :learning_goal_ai_evaluation, learning_goal: learning_goal2, user: student, understanding: 2
+
+    get :get_ai_evaluations, params: {
+      id: rubric.id,
+      studentId: student.id,
+    }
+
+    assert_response :success
+    assert_equal 2, json_response.length
+    assert_equal ai_evaluation1.understanding, json_response[0]['understanding']
+    assert_equal ai_evaluation2.understanding, json_response[1]['understanding']
+  end
+
+  test "cannot get ai evaluations for student if not teacher of student" do
+    student = create :student
+    teacher = create :teacher
+    sign_in teacher
+
+    learning_goal = create :learning_goal
+    create :learning_goal_ai_evaluation, learning_goal: learning_goal, user: student
+
+    get :get_ai_evaluations, params: {
+      id: learning_goal.rubric.id,
+      studentId: student.id,
+    }
+
+    assert_response :forbidden
+  end
+
+  test "only returns the most recent ai evaluation for student" do
+    student = create :student
+    teacher = create :teacher
+    create :follower, student_user: student, user: teacher
+    sign_in teacher
+
+    learning_goal = create :learning_goal
+    create :learning_goal_ai_evaluation, learning_goal: learning_goal, user: student, understanding: 1
+    travel 1.minute do
+      create :learning_goal_ai_evaluation, learning_goal: learning_goal, user: student, understanding: 2
+    end
+
+    get :get_ai_evaluations, params: {
+      id: learning_goal.rubric.id,
+      studentId: student.id,
+    }
+
+    assert_response :success
+    assert_equal 1, json_response.length
+    assert_equal 2, json_response[0]['understanding']
+  end
 end
