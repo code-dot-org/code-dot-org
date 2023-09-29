@@ -13,88 +13,42 @@ const defaultProps = {
   isBackgroundsTab: false,
   refreshInRestrictedShareMode: emptyFunction,
   inRestrictedShareMode: false,
-  refreshTeacherHasConfirmedUploadWarning: emptyFunction,
-  teacherHasConfirmedUploadWarning: false,
   showingUploadWarning: emptyFunction,
   exitedUploadWarning: emptyFunction,
-  currentUserType: 'student',
 };
 
 describe('AnimationUploadButton', function () {
-  describe('student scenarios', () => {
-    it('shows warning if should restrict and is not already in restricted mode', () => {
-      const body = shallow(<AnimationUploadButton {...defaultProps} />);
-      const uploadButton = body.find(AnimationPickerListItem).at(0);
-      uploadButton.simulate('click');
-      const warningModal = body.find(ImageUploadModal).at(0);
-      expect(warningModal.props().isOpen).to.be.true;
-    });
-
-    it('does not show warning if should restrict and is already in restricted mode', () => {
-      const combinedProps = {
-        ...defaultProps,
-        inRestrictedShareMode: true,
-      };
-
-      const body = shallow(<AnimationUploadButton {...combinedProps} />);
-      const uploadButton = body.find(AnimationPickerListItem).at(0);
-      uploadButton.simulate('click');
-      const warningModal = body.find(ImageUploadModal);
-      expect(warningModal.at(0).props().isOpen).to.be.false;
-    });
-
-    it('does not show warning if should not restrict', () => {
-      const combinedProps = {
-        ...defaultProps,
-        shouldWarnOnAnimationUpload: false,
-      };
-
-      const body = shallow(<AnimationUploadButton {...combinedProps} />);
-      const uploadButton = body.find(AnimationPickerListItem).at(0);
-      uploadButton.simulate('click');
-      const warningModal = body.find(ImageUploadModal);
-      expect(warningModal.at(0).props().isOpen).to.be.false;
-    });
+  it('shows warning if should restrict and is not already in restricted mode', () => {
+    const body = shallow(<AnimationUploadButton {...defaultProps} />);
+    const uploadButton = body.find(AnimationPickerListItem).at(0);
+    uploadButton.simulate('click');
+    const warningModal = body.find(ImageUploadModal).at(0);
+    expect(warningModal.props().isOpen).to.be.true;
   });
 
-  describe('teacher scenarios', () => {
-    const defaultPropsTeacher = {
+  it('does not show warning if should restrict and is already in restricted mode', () => {
+    const combinedProps = {
       ...defaultProps,
-      currentUserType: 'teacher',
+      inRestrictedShareMode: true,
     };
 
-    it('shows warning if should restrict and is not already in restricted mode', () => {
-      const body = shallow(<AnimationUploadButton {...defaultPropsTeacher} />);
-      const uploadButton = body.find(AnimationPickerListItem).at(0);
-      uploadButton.simulate('click');
-      const warningModal = body.find(ImageUploadModal).at(0);
-      expect(warningModal.props().isOpen).to.be.true;
-    });
+    const body = shallow(<AnimationUploadButton {...combinedProps} />);
+    const uploadButton = body.find(AnimationPickerListItem).at(0);
+    uploadButton.simulate('click');
+    const warningModal = body.find(ImageUploadModal);
+    expect(warningModal.at(0).props().isOpen).to.be.false;
+  });
 
-    it('does not show warning if should restrict and is already in restricted mode', () => {
-      const combinedProps = {
-        ...defaultPropsTeacher,
-        teacherHasConfirmedUploadWarning: true,
-      };
+  it('does not show warning if should not restrict', () => {
+    const combinedProps = {
+      ...defaultProps,
+      shouldWarnOnAnimationUpload: false,
+    };
 
-      const body = shallow(<AnimationUploadButton {...combinedProps} />);
-      const uploadButton = body.find(AnimationPickerListItem).at(0);
-      uploadButton.simulate('click');
-      const warningModal = body.find(ImageUploadModal);
-      expect(warningModal.at(0).props().isOpen).to.be.false;
-    });
-
-    it('does not show warning if should not restrict', () => {
-      const combinedProps = {
-        ...defaultPropsTeacher,
-        shouldWarnOnAnimationUpload: false,
-      };
-
-      const body = shallow(<AnimationUploadButton {...combinedProps} />);
-      const uploadButton = body.find(AnimationPickerListItem).at(0);
-      uploadButton.simulate('click');
-      const warningModal = body.find(ImageUploadModal);
-      expect(warningModal.at(0).props().isOpen).to.be.false;
-    });
+    const body = shallow(<AnimationUploadButton {...combinedProps} />);
+    const uploadButton = body.find(AnimationPickerListItem).at(0);
+    uploadButton.simulate('click');
+    const warningModal = body.find(ImageUploadModal);
+    expect(warningModal.at(0).props().isOpen).to.be.false;
   });
 });

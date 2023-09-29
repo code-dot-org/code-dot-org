@@ -4,10 +4,7 @@ import msg from '@cdo/locale';
 import AnimationPickerListItem from './AnimationPickerListItem.jsx';
 import project from '@cdo/apps/code-studio/initApp/project';
 import {connect} from 'react-redux';
-import {
-  refreshInRestrictedShareMode,
-  refreshTeacherHasConfirmedUploadWarning,
-} from '@cdo/apps/code-studio/projectRedux';
+import {refreshInRestrictedShareMode} from '@cdo/apps/code-studio/projectRedux';
 import {
   exitedUploadWarning,
   showingUploadWarning,
@@ -26,40 +23,24 @@ export function UnconnectedAnimationUploadButton({
   onUploadClick,
   shouldWarnOnAnimationUpload,
   isBackgroundsTab,
-  teacherHasConfirmedUploadWarning,
   inRestrictedShareMode,
   refreshInRestrictedShareMode,
-  refreshTeacherHasConfirmedUploadWarning,
   showingUploadWarning,
   exitedUploadWarning,
-  currentUserType,
 }) {
   const [isUploadModalOpen, setIsUploadModalOpen] = useState(false);
   const [isPublishedWarningModalOpen, setIsPublishedWarningModalOpen] =
     useState(false);
 
-  // Some of the behavior (particularly in the confirmation dialog) is conditional
-  // on whether a student or teacher is uploading.
-  // Teachers see a warning not to upload PII, and once they confirm this warning
-  // we save that state to their project and don't show the warning again.
-  // Students see a warning to not upload PII as well as a statement that they will not be able
+  // Users see a warning to not upload PII as well as a statement that they will not be able
   // to share their project if they upload -- we also save this state to their project and don't show the warning again.
-  const isTeacher = currentUserType === 'teacher';
   let hasConfirmedWarning, updateWarningState;
-  if (isTeacher) {
-    hasConfirmedWarning = teacherHasConfirmedUploadWarning;
-    updateWarningState = () => {
-      project.setTeacherHasConfirmedUploadWarning(true);
-      refreshTeacherHasConfirmedUploadWarning();
-    };
-  } else {
-    hasConfirmedWarning = inRestrictedShareMode;
-    updateWarningState = () => {
-      project.setInRestrictedShareMode(true);
-      // redux setting, for use in share/remix
-      refreshInRestrictedShareMode();
-    };
-  }
+  hasConfirmedWarning = inRestrictedShareMode;
+  updateWarningState = () => {
+    project.setInRestrictedShareMode(true);
+    // redux setting, for use in share/remix
+    refreshInRestrictedShareMode();
+  };
 
   const showRestrictedUploadWarning =
     shouldWarnOnAnimationUpload && !hasConfirmedWarning;
@@ -71,7 +52,7 @@ export function UnconnectedAnimationUploadButton({
         icon="upload"
         onClick={
           showRestrictedUploadWarning
-            ? project.isPublished() && !isTeacher
+            ? project.isPublished()
               ? showPublishedWarning
               : showUploadModal
             : onUploadClick
@@ -113,7 +94,6 @@ export function UnconnectedAnimationUploadButton({
       <ImageUploadModal
         isOpen={isUploadModalOpen}
         cancelUpload={cancelUpload}
-        isTeacher={isTeacher}
         confirmUploadWarning={confirmUploadWarning}
       />
       <PublishedWarningModal
@@ -131,26 +111,18 @@ UnconnectedAnimationUploadButton.propTypes = {
   isBackgroundsTab: PropTypes.bool.isRequired,
   // populated from redux
   inRestrictedShareMode: PropTypes.bool.isRequired,
-  teacherHasConfirmedUploadWarning: PropTypes.bool.isRequired,
   refreshInRestrictedShareMode: PropTypes.func.isRequired,
-  refreshTeacherHasConfirmedUploadWarning: PropTypes.func.isRequired,
   showingUploadWarning: PropTypes.func.isRequired,
   exitedUploadWarning: PropTypes.func.isRequired,
-  currentUserType: PropTypes.string,
 };
 
 export default connect(
   state => ({
     inRestrictedShareMode: state.project.inRestrictedShareMode,
-    teacherHasConfirmedUploadWarning:
-      state.project.teacherHasConfirmedUploadWarning,
-    currentUserType: state.currentUser?.userType,
   }),
   dispatch => ({
     refreshInRestrictedShareMode: inRestrictedShareMode =>
       dispatch(refreshInRestrictedShareMode(inRestrictedShareMode)),
-    refreshTeacherHasConfirmedUploadWarning: () =>
-      dispatch(refreshTeacherHasConfirmedUploadWarning()),
     showingUploadWarning: () => dispatch(showingUploadWarning()),
     exitedUploadWarning: () => dispatch(exitedUploadWarning()),
   })

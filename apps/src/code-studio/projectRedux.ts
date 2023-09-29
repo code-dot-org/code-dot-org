@@ -9,7 +9,6 @@ export interface ProjectState {
   showTryAgainDialog: boolean;
   workspaceAlert: WorkspaceAlert | null;
   inRestrictedShareMode: boolean;
-  teacherHasConfirmedUploadWarning: boolean;
 }
 
 interface WorkspaceAlert {
@@ -42,7 +41,6 @@ const initialState: ProjectState = {
   showTryAgainDialog: false,
   workspaceAlert: null,
   inRestrictedShareMode: false,
-  teacherHasConfirmedUploadWarning: false,
 };
 
 const projectReduxSlice = createSlice({
@@ -95,10 +93,6 @@ const projectReduxSlice = createSlice({
     refreshInRestrictedShareMode: state => {
       state.inRestrictedShareMode = dashboard.project.inRestrictedShareMode();
     },
-    refreshTeacherHasConfirmedUploadWarning: state => {
-      state.teacherHasConfirmedUploadWarning =
-        dashboard.project.teacherHasConfirmedUploadWarning();
-    },
   },
 });
 
@@ -115,7 +109,6 @@ export const {
   setNameFailure,
   unsetNameFailure,
   refreshInRestrictedShareMode,
-  refreshTeacherHasConfirmedUploadWarning,
 } = projectReduxSlice.actions;
 
 export default projectReduxSlice.reducer;
