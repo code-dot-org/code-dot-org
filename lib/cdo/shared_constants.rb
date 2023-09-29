@@ -625,5 +625,5 @@ module SharedConstants
     }
   ).freeze
 
-  CURRENT_CENSUS_SCHOOL_YEAR = 2023
+  CURRENT_CENSUS_SCHOOL_YEAR = '2023'.freeze
 end

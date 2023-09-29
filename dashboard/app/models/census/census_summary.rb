@@ -26,6 +26,8 @@ class Census::CensusSummary < ApplicationRecord
     HISTORICAL_YES: "HY",
     HISTORICAL_NO: "HN",
     HISTORICAL_MAYBE: "HM",
+    UNKNOWN: "U",
+    EXCLUDED: "E",
   }.freeze
   enum teaches_cs: TEACHES
 
@@ -45,6 +47,46 @@ class Census::CensusSummary < ApplicationRecord
       stats: {},
       census_submissions: [],
     }
+  end
+
+  # High schools need to teach a 20 hour course with either
+  # block- or text-based programming for it to count as CS.
+  # Other schools can teach any 10 or 20 hour courses.
+  # Schools that are a mix of K8 and high school use the K8 logic.
+  # The teacher banner does not have the topic check boxes
+  # so we count those submissions even though they don't have
+  # those options checked.
+  def self.submission_teaches_cs?(submission, is_high_school:, is_k8_school:)
+    if is_high_school && !is_k8_school
+      (
+        (
+          submission.how_many_20_hours_some? ||
+          submission.how_many_20_hours_all?
+        ) &&
+        (
+          submission.type == "Census::CensusTeacherBannerV1" ||
+          submission.topic_text ||
+          submission.topic_blocks
+        )
+      )
+    else
+      (
+        submission.how_many_10_hours_some? ||
+        submission.how_many_10_hours_all? ||
+        submission.how_many_20_hours_some? ||
+        submission.how_many_20_hours_all?
+      )
+    end
+  end
+
+  def self.submission_has_response(submission, is_high_school)
+    # Treat an "I don't know" response the same as not having any response
+    if is_high_school
+      !(submission.how_many_20_hours.nil? || submission.how_many_20_hours_dont_know?)
+    else
+      !(submission.how_many_10_hours.nil? || submission.how_many_10_hours_dont_know?) ||
+        !(submission.how_many_20_hours.nil? || submission.how_many_20_hours_dont_know?)
+    end
   end
 
   def self.get_school_stats(school, audit)
