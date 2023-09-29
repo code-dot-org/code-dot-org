@@ -33,6 +33,7 @@ module I18n
 
       def self.sync_out
         Blocks.sync_out
+        CourseOfferings.sync_out
       end
     end
   end

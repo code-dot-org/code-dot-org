@@ -147,6 +147,19 @@ describe I18nScriptUtils do
     end
   end
 
+  describe '.to_dashboard_i18n_struct' do
+    let(:locale) {'expected_locale'}
+    let(:type) {'expected_type'}
+    let(:i18n_data) {'expected_i18n_data'}
+
+    it 'returns correct Dashboard i18n file data structure' do
+      assert_equal(
+        {locale => {'data' => {type => i18n_data}}},
+        I18nScriptUtils.to_dashboard_i18n_data(locale, type, i18n_data)
+      )
+    end
+  end
+
   describe '.sort_and_sanitize' do
     it 'returns sorted and sanitized hash' do
       initial_hash_data = {
@@ -428,6 +441,26 @@ describe I18nScriptUtils do
         I18nScriptUtils.remove_empty_dir(dir)
 
         assert File.directory?(dir)
+      end
+    end
+  end
+
+  describe '.source_lang?' do
+    let(:is_source_lang) {I18nScriptUtils.source_lang?(language)}
+
+    context 'when the language is the i18n source language' do
+      let(:language) {{locale_s: 'en-US'}}
+
+      it 'returns true' do
+        assert is_source_lang
+      end
+    end
+
+    context 'when the language is not the i18n source language' do
+      let(:language) {{locale_s: 'not-EN'}}
+
+      it 'returns false' do
+        refute is_source_lang
       end
     end
   end
