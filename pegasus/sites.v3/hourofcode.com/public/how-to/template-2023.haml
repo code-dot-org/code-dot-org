@@ -1,5 +1,5 @@
 ---
-title: Hour of Code How-to Guide for Educators
+title: How-to Guide for Educators | Hour of Code
 layout: wide_index
 theme: how_to_guide
 ---
@@ -16,19 +16,24 @@ theme: how_to_guide
     CONTENT HERE
 
 -# FAQ
-%section.bg-neutral-light
+%section.faq.bg-neutral-light
   .wrapper
-    %h2.centered
-      =hoc_s(:heading_faq)
+    .flex-container
+      %h2
+        =hoc_s(:heading_faq)
+      %a.link-button{href: "/faq"}
+        =hoc_s(:call_to_action_view_faqs)
     %details
-      %summary=hoc_s(:csa_page_faq_question_01)
-      %p=hoc_s(:csa_page_faq_answer_01)
+      %summary=hoc_s(:hoc_how_to_faq_question_volunteer)
+      %p=hoc_s(:hoc_how_to_faq_answer_volunteer)
+      %a{href: "/how-to/volunteers"}
+        =hoc_s(:call_to_action_become_a_volunteer)
     %details
-      %summary=hoc_s(:csa_page_faq_question_01)
-      %p=hoc_s(:csa_page_faq_answer_01)
+      %summary=hoc_s(:hoc_how_to_faq_question_full_hour)
+      %p=hoc_s(:hoc_how_to_faq_answer_full_hour)
     %details
-      %summary=hoc_s(:csa_page_faq_question_01)
-      %p=hoc_s(:csa_page_faq_answer_01)
+      %summary=hoc_s(:hoc_how_to_faq_question_account)
+      %p=hoc_s(:hoc_how_to_faq_answer_account)
 
 -# Resources
 %section

@@ -51,6 +51,13 @@
   hoc_how_to_educators_intro_heading: "How to plan your Hour of Code"
   hoc_how_to_educators_intro_desc: "The Hour of Code is a one-hour introduction to computer science designed to demystify \"code\", show that anybody can learn the basics, and to broaden participation in the field of computer science. You can help raise awareness of the computer science movement and volunteer to inspire more students to try computer science, particularly young women."
 
+  hoc_how_to_faq_question_volunteer: "Who can volunteer?"
+  hoc_how_to_faq_answer_volunteer: "Anyone passionate about computer science education and increasing diversity in tech can be a volunteer! We'd love to see volunteers of all backgrounds participate. The Hour of Code features a large variety of activities for all ages and skill levels, so you don't need to be a programming expert to volunteer!"
+  hoc_how_to_faq_question_full_hour: "Will the Hour of Code take a full hour?"
+  hoc_how_to_faq_answer_full_hour: "Many students will be able to finish their activities in less than an hour, and that's okay! Students can continue to learn while other students complete their activity."
+  hoc_how_to_faq_question_account: "Do students need to log on using an account?"
+  hoc_how_to_faq_answer_account: "No signup or login is required for students to try the Hour of Code. Signing up for the Hour of Code does NOT automatically create a Code.org account. "
+
   hoc2022_header: 'Explore, Play, Create!'
   social_hoc2022_explore_play_create: 'Use computer science to explore, play, and create!'
   codeorg_homepage_hoc2022_body: 'Explore the universe, score a goal, bust a move — there are so many ways to try computer science.'
@@ -277,6 +284,7 @@
   call_to_action_start_translating: "Start translating"
   call_to_action_learn_about_advocacy: "Learn about our advocacy"
   call_to_action_visit_store: "Visit the store"
+  call_to_action_view_faqs: "View more FAQs"
 
   aria_label_call_to_action_afe: "Learn more about Amazon Future Engineer"
   aria_label_call_to_action_teaching_csf: "Start the Teaching Computer Science Fundamentals professional learning program"

@@ -482,6 +482,7 @@ a.about_list_item {
   color: #c1c1c1 !important;
 }
 
+a.link-button,
 button {
   align-items: flex-start;
   background-color: var(--brand_secondary_default);
@@ -497,6 +498,7 @@ button {
   letter-spacing: normal;
   margin: 0;
   padding: 8px 24px;
+  text-decoration: none;
   text-transform: none;
   vertical-align: middle;
   white-space: nowrap;

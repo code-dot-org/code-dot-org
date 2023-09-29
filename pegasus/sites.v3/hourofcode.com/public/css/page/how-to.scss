@@ -5,11 +5,14 @@ html {
 }
 
 h2 {
-  text-align: center;
   font-size: 32px;
   font-family: "Gotham 7r", sans-serif;
-  margin: 0 auto 1em;
+  margin: 0 0 1em;
   line-height: 1.2em;
+}
+
+.flex-container {
+  display: flex;
 }
 
 section.banner {
@@ -111,6 +114,27 @@ section.banner {
           }
         }
       }
+    }
+  }
+}
+
+section.faq {
+  h2 {
+    margin-bottom: 0;
+
+    @media screen and (max-width: $width-sm) {
+      margin-bottom: 1rem;
+      text-align: center;
+    }
+  }
+
+  .flex-container {
+    justify-content: space-between;
+    align-items: start;
+    flex-wrap: wrap;
+
+    @media screen and (max-width: $width-sm) {
+      justify-content: center;
     }
   }
 }
