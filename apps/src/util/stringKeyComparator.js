@@ -8,6 +8,14 @@ const collator = new Intl.Collator();
  */
 export default function stringKeyComparator(keys) {
   return (a, b) => {
+    // Sort strings with characters before strings without
+    if (!!a && !b) {
+      return -1;
+    }
+    if (!a && !!b) {
+      return 1;
+    }
+
     return keys.reduce(
       (result, key) => result || collator.compare(a[key] || '', b[key] || ''),
       0
