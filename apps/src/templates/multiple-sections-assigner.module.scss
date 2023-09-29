@@ -27,6 +27,8 @@
     flex-wrap: wrap;
     justify-content: space-between;
     margin: 12px 0 4px 0;
+    overflow: scroll;
+    max-height: 300px;
 
     label {
       width: 280px;
