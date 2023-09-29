@@ -1,5 +1,10 @@
 <FreeResponse>
   <config><![CDATA[{
+  "published": true,
+  "game_id": 52,
+  "created_at": "2023-03-28T00:10:28.000Z",
+  "level_num": "custom",
+  "user_id": 16889,
   "properties": {
     "encrypted": "false",
     "long_instructions": "In your unit project, you will be creating your own image filters. What should you keep in mind about the impacts of your image filters?",
@@ -7,17 +12,12 @@
     "submittable": "false",
     "peer_reviewable": "false",
     "optional": "false",
-    "allow_multiple_attempts": "false",
+    "allow_multiple_attempts": "true",
     "skip_dialog": true,
     "skip_sound": true,
     "title": "Check for Understanding"
   },
-  "game_id": 52,
-  "published": true,
-  "created_at": "2023-03-28T00:10:28.000Z",
-  "level_num": "custom",
-  "user_id": 16889,
-  "audit_log": "[{\"changed_at\":\"2023-03-28 00:10:29 +0000\",\"changed\":[],\"changed_by_id\":16889,\"changed_by_email\":\"jamila+lb@code.org\"},{\"changed_at\":\"2023-04-21 20:34:08 +0000\",\"changed\":[\"long_instructions\"],\"changed_by_id\":16889,\"changed_by_email\":\"jamila+lb@code.org\"}]",
+  "audit_log": "[{\"changed_at\":\"2023-03-28 00:10:29 +0000\",\"changed\":[],\"changed_by_id\":16889,\"changed_by_email\":\"jamila+lb@code.org\"},{\"changed_at\":\"2023-04-21 20:34:08 +0000\",\"changed\":[\"long_instructions\"],\"changed_by_id\":16889,\"changed_by_email\":\"jamila+lb@code.org\"},{\"changed_at\":\"2023-05-22 13:33:15 +0000\",\"changed\":[\"allow_multiple_attempts\"],\"changed_by_id\":897,\"changed_by_email\":\"bethany+levelbuilder@code.org\"}]",
   "level_concept_difficulty": {
   }
 }]]></config>

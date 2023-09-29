@@ -15,7 +15,6 @@ hu:
             '0.75': kicsi
             '1.00': közepes
             '2.00': nagy
-            '3.00': extra large
       BadGuys_setSize_dropdown:
         options:
           SIZE:
@@ -23,7 +22,6 @@ hu:
             '0.75': kicsi
             '1.00': közepes
             '2.00': nagy
-            '3.00': extra large
       Dancelab_alternateMoves:
         text: "{GROUP} váltakozik {N} ütemenként \n{MOVE1} és {MOVE2} között"
         options:
@@ -449,26 +447,6 @@ hu:
             '18': '18'
             '19': '19'
             '20': '20'
-            '21': '21'
-            '22': '22'
-            '23': '23'
-            '24': '24'
-            '25': '25'
-            '26': '26'
-            '27': '27'
-            '28': '28'
-            '29': '29'
-            '30': '30'
-            '31': '31'
-            '32': '32'
-            '33': '33'
-            '34': '34'
-            '35': '35'
-            '36': '36'
-            '37': '37'
-            '38': '38'
-            '39': '39'
-            '40': '40'
           COSTUME:
             '"ALIEN"': földönkívüliek
             '"BEAR"': összes medve
@@ -992,8 +970,6 @@ hu:
         options:
           INPUT1:
             '1': citromlé
-            '3': baking soda
-            '5': both
       DansBlocks_setForegroundEffect2:
         text: készítsen {EFFECT} effektet
         options:
@@ -1010,8 +986,6 @@ hu:
         options:
           INPUT1:
             '1': citromlé
-            '3': baking soda
-            '5': both
       FunctionBlocks_communicate:
         text: "{VAR1} kommunikál [SPRITE1COSTUME] Sprite-tal"
       FunctionBlocks_makeManipulative2:
@@ -1505,11 +1479,9 @@ hu:
       gamelab_setSpeed_dropdown:
         options:
           SIZE:
-            '1': extra slow
             '3': lassú
             '5': normál
             '7': gyors
-            '9': extra fast
       gamelab_setTint:
         text: "{THIS} színének megváltoztatása erre: {COLOR}"
       gamelab_setupScoreboard:
@@ -1988,14 +1960,10 @@ hu:
         options:
           INPUT1:
             '1': citromlé
-            '3': baking soda
-            '5': both
       ParticlesBlocks_setMicroscope:
         options:
           INPUT1:
             '1': citromlé
-            '3': baking soda
-            '5': both
       ParticlesBlocks_statesOfMatter:
         options:
           BEHAVIOR:
@@ -2217,7 +2185,6 @@ hu:
         text: amikor a vonal ezt mutatja {N}
         options:
           'N':
-            '0': "???"
             '1': '1'
             '2': '2'
             '3': '3'
@@ -2277,16 +2244,10 @@ hu:
         options:
           PORTION:
             '1': összes
-            '0.75': most
-            '0.5': half of
-            '0.25': few
       aalab_someStartIntervention:
         options:
           PORTION:
             '1': összes
-            '0.75': most
-            '0.5': half of
-            '0.25': few
       aalab_spriteSayChoices:
         text: "{SPRITE} mondja {SPEECH}"
       adaptations_adaptationBehaviors:
@@ -2443,6 +2404,21 @@ hu:
           DIR:
             right: jobbra ↻
             left: balra ↺
+      ecosystems_int10:
+        options:
+          VALUE:
+            '1': '1'
+            '2': '2'
+            '3': '3'
+            '4': '4'
+            '5': '5'
+            '6': '6'
+            '7': '7'
+            '8': '8'
+            '9': '9'
+            '10': '10'
+      storylab_printText:
+        text: 'írd ki ezt: {TEXT}'
       storylab_setForegroundEffect2:
         text: készítsen {EFFECT} effektet
         options:

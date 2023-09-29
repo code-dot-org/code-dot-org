@@ -76,8 +76,8 @@ def lib_dir(*dirs)
   deploy_dir('lib', *dirs)
 end
 
-def bin_i18n_dir(*dirs)
-  deploy_dir('bin/i18n', *dirs)
+def bin_dir(*dirs)
+  deploy_dir('bin', *dirs)
 end
 
 def shared_constants_dir(*dirs)

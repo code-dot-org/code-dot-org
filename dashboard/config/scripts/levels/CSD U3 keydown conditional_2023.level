@@ -1,5 +1,10 @@
 <Gamelab>
   <config><![CDATA[{
+  "published": true,
+  "game_id": 50,
+  "created_at": "2022-09-19T22:58:00.000Z",
+  "level_num": "custom",
+  "user_id": 1,
   "properties": {
     "skin": "gamelab",
     "code_functions": {
@@ -55,7 +60,7 @@
     "instructions_important": "false",
     "hide_animation_mode": "false",
     "start_in_animation_tab": "false",
-    "all_animations_single_frame": "true",
+    "all_animations_single_frame": "false",
     "pause_animations_by_default": "false",
     "show_debug_watch": "true",
     "hide_share_and_remix": "false",
@@ -87,13 +92,8 @@
     "libraries_enabled": "false",
     "preload_asset_list": null
   },
-  "game_id": 50,
-  "published": true,
-  "created_at": "2022-09-19T22:58:00.000Z",
-  "level_num": "custom",
-  "user_id": 1,
   "notes": "",
-  "audit_log": "[{\"changed_at\":\"2022-09-19T22:58:00.259+00:00\",\"changed\":[\"cloned from \\\"CSD U3 keydown conditional_2022\\\"\"],\"cloned_from\":\"CSD U3 keydown conditional_2022\"},{\"changed_at\":\"2023-01-14 19:41:01 +0000\",\"changed\":[\"code_functions\",\"encrypted_examples\",\"start_blocks\",\"long_instructions\",\"preload_asset_list\",\"contained_level_names\"],\"changed_by_id\":18602,\"changed_by_email\":\"angelina+levelbuilder@code.org\"}]"
+  "audit_log": "[{\"changed_at\":\"2022-09-19T22:58:00.259+00:00\",\"changed\":[\"cloned from \\\"CSD U3 keydown conditional_2022\\\"\"],\"cloned_from\":\"CSD U3 keydown conditional_2022\"},{\"changed_at\":\"2023-01-14 19:41:01 +0000\",\"changed\":[\"code_functions\",\"encrypted_examples\",\"start_blocks\",\"long_instructions\",\"preload_asset_list\",\"contained_level_names\"],\"changed_by_id\":18602,\"changed_by_email\":\"angelina+levelbuilder@code.org\"},{\"changed_at\":\"2023-07-13 18:37:40 +0000\",\"changed\":[\"code_functions\",\"all_animations_single_frame\",\"encrypted_examples\",\"preload_asset_list\",\"contained_level_names\"],\"changed_by_id\":18602,\"changed_by_email\":\"angelina+levelbuilder@code.org\"}]"
 }]]></config>
   <blocks/>
 </Gamelab>

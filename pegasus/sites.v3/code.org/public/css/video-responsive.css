@@ -10,6 +10,7 @@ figure.video-responsive > div {
   width: 100%;
   padding-top: 56.25%;
   border: 1px solid #EAEBEB;
+  box-sizing: content-box;
 }
 
 figure.video-responsive > div iframe {

@@ -1,6 +1,6 @@
 name 'CSA U6L1-L1_2023'
-display_name 'level display_name here'
-description 'level description here'
+display_name 'Natural Language Processing Project Examples'
+description 'Examples of the Natural Language Processing Project'
 
 sublevels
 level 'CSA U6L1-L1a_2023'

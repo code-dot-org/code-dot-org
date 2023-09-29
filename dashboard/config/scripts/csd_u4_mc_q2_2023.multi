@@ -10,3 +10,5 @@ teacher_markdown <<MARKDOWN
 
 These quotes are the most relevant to designing a smart collar for pets.
 MARKDOWN
+
+allow_multiple_attempts true

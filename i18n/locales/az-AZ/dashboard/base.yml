@@ -53,6 +53,7 @@ az:
         gender: 'Cins'
         edit_header: 'Hesab Detallarına düzəliş edin'
         finish_sign_up_header: 'Hesabınızı yaratmağı başa çatdırın'
+        finish_sign_up_header_error: 'Aşağıdakı səhfləri düzəldin:'
         finish_sign_up_subheader: '<strong>%{email} </strong> Code.org hesabı yaratmağı bitirmək üçün aşağıdakı məlumatları doldurun.'
         finish_sign_up_subheader_markdown: '**%{email} ** üçün bir Code.org hesabı yaratmağı bitirmək üçün aşağıdakı məlumatları doldurun.'
         finish_sign_up_subheader_provider: '<strong>%{provider}</strong> for <strong>%{email}</strong> üçün bir Code.org hesabı yaratmağı sona çatdırmaq üçün aşağıdakı məlumatları doldurun.'
@@ -60,6 +61,8 @@ az:
         reset_password_token: "İzlədiyiniz parolun sıfırlanması bağlantısı"
         error:
           future: gələcəkdə ola bilməz
+        user_type: 'Hesab Növü'
+        us_state: 'dövlət'
   beta: "beta versiya"
   hello: "Salam, dünya"
   welcome_back: "Bir daha xoş gəldiniz, %{name}"
@@ -172,7 +175,6 @@ az:
     data_collection_us: "Code.org-un ABŞ-da mənfəət gətirməyən bir veb sayt olduğunu və ABŞ-da məlumat toplanmasını tənzimləyən qanunların ölkəmdəki qanunlardan fərqli ola biləcəyini başa düşürəm."
     visit_privacy: 'Daha çox məlumat üçün Code.org-un [Məxfilik Siyasəti] (%{privacy_url}) səhifəsini ziyarət edin.'
     student_terms_markdown: "Elektron poçt ünvanları bizim şagirdlərlə əlaqə saxlamağımız üçün götürülməyib. Şagirdlər Code.ord-dan şifrə bərpasından başqa hallarda elektron poçt əldə etməyəcəklər. Daha çox məlumat üçün gizlilik politikamıza(http://code.org/privacy) baxın."
-    additional_information: "Qeydiyyatı davam etdirmək üçün bəzi əlavə məlumatlara ehtiyacımız var."
     user_type_button: "Hesab növünü yeniləyin"
     user_type_label: "Hesab Növü"
     user_type_student: "şagird"
@@ -200,6 +202,7 @@ az:
     parent_account_checkbox: "Mən övladımın adından qeydiyyatdan keçən valideyn/qəyyumam."
     parent_account_email_progress_permission: "Övladınızın tərəqqisi və layihələri haqqında hər hansı bir yeniləmə, kursları və kompüter elmləri ilə bağlı yenilikləri sizə göndərə bilərikmi? [(Məxfilik siyasətimizə baxın)] (%{privacy_policy_url})"
     parent_account_email_label: "Valideyn /Qəyyum E-poçtu"
+    us_state: 'dövlət'
   school_info:
     title: 'Təhsil müəssisəsi haqqında məlumat (istəyə görə)'
     school_country: 'Məktəb Ölkəsi'
@@ -1184,6 +1187,7 @@ az:
         csf_express: 'CS (Əvvəldən ifadə etmək və ya ifadə etmək)'
         csd: 'Kompüter Elmləri kəşfləri'
         csp: 'Kompüter Elmləri prinsipləri'
+        other: 'Digər'
         not_applicable: "Tətbiq olunmağa uyğun deyil"
       email_opt_in:
         opt_in_yes: 'Bəli'
@@ -1267,3 +1271,4 @@ az:
     binary: "İkilik"
     hexadecimal: "Hexadecimal/ on altı ədədli"
     pixel_format_header: "Piksel(-in) Formatı"
+

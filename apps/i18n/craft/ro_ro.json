@@ -1,9 +1,9 @@
 {
   "absolute": "absolut(ă)",
+  "agentDiamondPathCongrats": "Felicitări, ați găsit drumul cu diamante! Până acum ați colectat {count, plural, one {1 diamant} other {# diamante}}!",
   "agentGenericFailureMessage": "Continuă să codezi! Amintește-ți să folosești Agentul pentru ajutor.",
   "agentTooFewBlocksFailureMessage": "Încercă să adaugi doar câte un bloc de fiecare dată pentru a duce Agentul la locul potrivit.",
   "at": "la",
-  "agentDiamondPathCongrats": "Felicitări, ați găsit drumul cu diamante! Până acum ați colectat {count, plural, one {1 diamant} other {# diamante}}!",
   "blockActionAdd": "adaugă",
   "blockActionAttack": "atac",
   "blockActionClone": "clonează blocurile",

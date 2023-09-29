@@ -2,14 +2,14 @@
   "zu-ZA": {
     "data": {
       "programming_environments": {
-        "gamelab": {
+        "applab": {
           "categories": {
             "math": {
               "name": "Izibalo"
             }
           }
         },
-        "applab": {
+        "gamelab": {
           "categories": {
             "math": {
               "name": "Izibalo"
@@ -21,11 +21,11 @@
             "actions": {
               "name": "Izenzo"
             },
-            "math": {
-              "name": "Izibalo"
-            },
             "logic": {
               "name": "Ngokulandelana"
+            },
+            "math": {
+              "name": "Izibalo"
             },
             "text": {
               "name": "Umbhalo"

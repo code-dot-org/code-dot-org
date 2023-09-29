@@ -1,5 +1,5 @@
 ---
-title: Sample Resolution Supportive of Computer Science Education Week and Hour of Code
+title: ಮಾದರಿ ರೆಸಲ್ಯೂಶನ್ ಕಂಪ್ಯೂಟರ್ ಸೈನ್ಸ್ ಎಜುಕೇಶನ್ ವೀಕ್ ಮತ್ತು ಅವರ್ ಆಫ್ ಕೋಡ್ ಅನ್ನು ಬೆಂಬಲಿಸುತ್ತದೆ
 ---
 
 {{ signup_button }}

@@ -14,3 +14,4 @@ answer 'a set of instructions to solve a problem or accomplish a task'
 
 question 'Not ( `!` ) Operator'
 answer 'a logical operator that returns `true` when the operand is `false` and returns `false` when the operand is `true`'
+allow_multiple_attempts true

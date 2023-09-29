@@ -37,7 +37,7 @@ SCRIPT_NAMES = %w(
   express-2021
 ).freeze
 
-$level_names_to_be_updated = Unit.where(name: SCRIPT_NAMES).map(&:levels).flatten.map(&:name).to_set
+$level_names_to_be_updated = Unit.where(name: SCRIPT_NAMES).map(&:levels).flatten.to_set(&:name)
 
 def level_to_be_updated?(level_name)
   $level_names_to_be_updated.include? level_name

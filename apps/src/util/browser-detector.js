@@ -1,58 +1,74 @@
 // We support IE 11+
+function isIE() {
+  return navigator.userAgent.indexOf('MSIE') !== -1 || isIE11();
+}
+
+function IEVersion() {
+  return isIE11()
+    ? '11'
+    : navigator.userAgent
+        .substring(navigator.userAgent.lastIndexOf('MSIE') + 5)
+        .split('.')[0];
+}
+
 function isUnsupportedIE() {
-  var isIE = navigator.userAgent.indexOf('MSIE') !== -1;
-  var IEVersion = navigator.appVersion.indexOf('Trident/');
-  var IEBelow8 = isIE && IEVersion < 8;
-
-  var IE7 = navigator.userAgent.match('MSIE 7.0;');
-  var IE8 = navigator.userAgent.match('MSIE 8.0;');
-  var IE9 = navigator.userAgent.match('MSIE 9.0;');
-  var IE10 = navigator.userAgent.match('MSIE 10.0;');
-
-  var unsupported = IEBelow8 || IE7 || IE8 || IE9 || IE10;
-  return unsupported;
+  return isIE() && IEVersion() < 11;
 }
 
 // We support Chrome 33.x +
-function isUnsupportedChrome() {
-  var isChrome = navigator.userAgent.lastIndexOf('Chrome/') !== -1;
-  var chromeVersion = navigator.userAgent
+function isChrome() {
+  return navigator.userAgent.lastIndexOf('Chrome/') !== -1;
+}
+
+function chromeVersion() {
+  return navigator.userAgent
     .substring(navigator.userAgent.lastIndexOf('Chrome/') + 7)
     .split('.')[0];
-  var unsupported = isChrome && chromeVersion < 33;
-  return unsupported;
+}
+
+function isUnsupportedChrome() {
+  return isChrome() && chromeVersion() < 33;
 }
 
 // We support Safari 7.0.x +
-function isUnsupportedSafari() {
-  var isSafari = navigator.userAgent.indexOf('Safari/') !== -1;
-  var safariVersion = navigator.userAgent
+function isSafari() {
+  return navigator.userAgent.indexOf('Safari/') !== -1;
+}
+
+function safariVersion() {
+  return navigator.userAgent
     .substring(navigator.userAgent.lastIndexOf('Version/') + 8)
     .split('.')[0];
-  var unsupported = isSafari && safariVersion < 7;
-  return unsupported;
+}
+
+function isUnsupportedSafari() {
+  return isSafari() && safariVersion() < 7;
 }
 
 // We support Firefox 25.x +
-function isUnsupportedFirefox() {
-  var isFirefox = navigator.userAgent.indexOf('Firefox') !== -1;
-  var firefoxVersion = navigator.userAgent
+function isFirefox() {
+  return navigator.userAgent.indexOf('Firefox') !== -1;
+}
+
+function firefoxVersion() {
+  return navigator.userAgent
     .substring(navigator.userAgent.lastIndexOf('Firefox/') + 8)
     .split('.')[0];
-  var unsupported = isFirefox && firefoxVersion < 25;
-  return unsupported;
+}
+
+function isUnsupportedFirefox() {
+  return isFirefox() && firefoxVersion() < 25;
 }
 
 // https://support.code.org/hc/en-us/articles/202591743
 // for the full list of supported browsers
 export function isUnsupportedBrowser() {
-  var isUnsupported = false;
-  isUnsupported =
+  return (
     isUnsupportedIE() ||
     isUnsupportedChrome() ||
     isUnsupportedSafari() ||
-    isUnsupportedFirefox();
-  return isUnsupported;
+    isUnsupportedFirefox()
+  );
 }
 
 // Detect a mobile device.
@@ -97,4 +113,28 @@ export function isStorageAvailable(type) {
   } catch (e) {
     return false;
   }
+}
+
+/**
+ * Get the current browser and, if specified, the current browser version.
+ * Returns the user agent string if the browser is unknown.
+ */
+export function getBrowserName(includeVersion = false) {
+  if (isChrome()) {
+    return 'Chrome' + (includeVersion ? ` ${chromeVersion()}` : '');
+  }
+
+  if (isIE()) {
+    return 'Internet Explorer' + (includeVersion ? ` ${IEVersion()}` : '');
+  }
+
+  if (isFirefox()) {
+    return 'Firefox' + (includeVersion ? ` ${firefoxVersion()}` : '');
+  }
+
+  if (isSafari()) {
+    return 'Safari' + (includeVersion ? ` ${safariVersion()}` : '');
+  }
+
+  return navigator.userAgent;
 }

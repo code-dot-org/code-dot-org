@@ -7,7 +7,7 @@ wrong '`int myArray[][] = new int[3, 4];`'
 right '`int[][] myArray = new int[3][4];`'
 wrong '`int[][] myArray = new int[3][];`'
 
-allow_multiple_attempts nil
+allow_multiple_attempts true
 
 markdown <<MARKDOWN
 Which of the following correctly creates a 2D array using the `new` keyword?

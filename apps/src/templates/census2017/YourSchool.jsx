@@ -1,4 +1,3 @@
-/* global adjustScroll */
 import PropTypes from 'prop-types';
 
 import React, {Component} from 'react';
@@ -24,6 +23,7 @@ class YourSchool extends Component {
     hideMap: PropTypes.bool,
     currentCensusYear: PropTypes.number,
     teacherApplicationMode: PropTypes.string,
+    tileset: PropTypes.string.isRequired,
   };
 
   state = {
@@ -115,6 +115,7 @@ class YourSchool extends Component {
             <CensusMapReplacement
               school={schoolForMap}
               onTakeSurveyClick={this.handleTakeSurveyClick}
+              tileset={this.props.tileset}
             />
           </div>
         )}

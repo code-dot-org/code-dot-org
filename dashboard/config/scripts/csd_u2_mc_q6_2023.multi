@@ -18,3 +18,5 @@ teacher_markdown <<MARKDOWN
 
 Headings are the different sized section titles throughout a web page. There are different sized headings which are marked by the number next to the h in the heading tag. They go from `<h1>` to `<h6>`.
 MARKDOWN
+
+allow_multiple_attempts true

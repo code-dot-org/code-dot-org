@@ -7,6 +7,7 @@ import {MARKETING_AUDIENCE} from '@cdo/apps/templates/sectionsRefresh/Curriculum
 import {
   elementarySchoolCourseOffering,
   highSchoolCourseOfferings,
+  noRecommendedVersionsOfferings,
 } from './CourseOfferingsTestData';
 import i18n from '@cdo/locale';
 
@@ -58,17 +59,31 @@ describe('QuickAssignTable', () => {
     expect(updateSpy).to.have.been.called;
   });
 
-  it('automatically checks correct radio button if course is already assigned', () => {
+  it('correctly falls back when a course has no recommended version', () => {
+    const updateSpy = sinon.spy();
     const wrapper = setUpMount({
-      sectionCourse: {displayName: 'Computer Science A'},
+      updateCourse: updateSpy,
+      courseOfferings: noRecommendedVersionsOfferings,
     });
 
+    const radio = wrapper.find('input');
+    expect(updateSpy).not.to.have.been.called;
+    radio.simulate('change', {
+      target: {value: 'Computer Science A', checked: true},
+    });
+    expect(updateSpy).to.have.been.calledWith(sinon.match({versionId: 373}));
+  });
+
+  it('automatically checks correct radio button if course is already assigned', () => {
+    const props = {
+      marketingAudience: MARKETING_AUDIENCE.HIGH,
+      courseOfferings: highSchoolCourseOfferings,
+      setSelectedCourseOffering: () => {},
+      updateCourse: () => {},
+      sectionCourse: {displayName: 'Computer Science A', courseOfferingId: 73},
+    };
+    const wrapper = mount(<QuickAssignTable {...props} />);
     const radio = wrapper.find("input[value='Computer Science A']");
     expect(radio.props().checked).to.be.true;
-    // and verify that the next door radio is checked=false
-    expect(
-      wrapper.find("input[value='Computer Science Discoveries']").props()
-        .checked
-    ).to.be.false;
   });
 });

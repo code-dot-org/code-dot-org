@@ -7,7 +7,7 @@ wrong 'Questions 1, 2, and 3'
 wrong 'Questions 1 and 2'
 right 'Questions 2 and 3'
 
-allow_multiple_attempts false
+allow_multiple_attempts true
 
 markdown <<MARKDOWN
 # Boolean Expressions

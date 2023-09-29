@@ -5,6 +5,7 @@
       "name": "All",
       "imageSrc": "all.png",
       "path": "all-by-type",
+      "defaultSound": "beats/groovy_alternate_beat",
       "folders": [
         {
           "name": "Piano",
@@ -1047,9 +1048,14 @@
         },
         {
           "name": "Beats",
+          "subTitle": "Code.org",
           "path": "beats",
           "imageSrc": "thumbnail.png",
           "sounds": [
+            {
+              "src": "preview",
+              "preview": true
+            },
             {
               "name": "Groovy Beat",
               "src": "groovy_beat",
@@ -1186,6 +1192,7 @@
         },
         {
           "name": "Bass",
+          "subTitle": "Code.org",
           "path": "bass",
           "imageSrc": "thumbnail.png",
           "sounds": [
@@ -1241,6 +1248,7 @@
         },
         {
           "name": "Leads",
+          "subTitle": "Code.org",
           "path": "leads",
           "imageSrc": "thumbnail.png",
           "sounds": [

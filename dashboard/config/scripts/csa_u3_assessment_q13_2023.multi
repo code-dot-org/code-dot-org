@@ -35,3 +35,5 @@ The loop control variable in the `for` loop is initialized to `0` and incremente
 
 ![](https://images.code.org/f22f6ae4d554b8f1eca89ee51b1a793e-image-1674542016302.gif)
 MARKDOWN
+
+allow_multiple_attempts true

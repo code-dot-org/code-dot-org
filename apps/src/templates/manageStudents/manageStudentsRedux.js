@@ -376,26 +376,23 @@ export const addStudents = studentIds => {
 };
 
 // Creates a new RowType.NEW_STUDENT for each name in the array.
-export const addMultipleAddRows = studentNames => {
+export const addMultipleAddRows = studentDataArray => {
   return (dispatch, getState) => {
-    let studentData = {};
-    for (let i = 0; i < studentNames.length; i++) {
-      // Do not add rows with no name
-      if (studentNames[i] === '') {
-        continue;
-      }
+    const studentData = studentDataArray
+      .filter(data => data.name)
+      .reduce((accumulator, data) => {
+        const newId = addRowIdCounter--;
 
-      // Create a new uniqueId for the newStudentRow
-      const newId = addRowIdCounter;
-      addRowIdCounter = addRowIdCounter - 1;
-
-      // Create student data for each student name.
-      studentData[newId] = {
-        ...blankNewStudentRow,
-        name: studentNames[i],
-        id: newId,
-      };
-    }
+        return {
+          ...accumulator,
+          [newId]: {
+            ...blankNewStudentRow,
+            name: data.name,
+            familyName: data.familyName,
+            id: newId,
+          },
+        };
+      }, {});
     dispatch(addMultipleRows(studentData));
   };
 };
@@ -852,10 +849,12 @@ export const convertStudentServerData = (studentData, loginType, sectionId) => {
     studentLookup[student.id] = {
       id: student.id,
       name: student.name,
+      familyName: student.family_name,
       username: student.username,
       email: student.email,
       age: student.age || '',
       gender: student.gender || '',
+      genderTeacherInput: student.gender_teacher_input || '',
       secretWords: student.secret_words,
       secretPicturePath: student.secret_picture_path,
       loginType: loginType,
@@ -884,8 +883,10 @@ const updateStudentOnServer = (updatedStudentInfo, sectionId, onComplete) => {
     student: {
       id: updatedStudentInfo.id,
       name: updatedStudentInfo.name,
+      family_name: updatedStudentInfo.familyName,
       age: updatedStudentInfo.age,
       gender: updatedStudentInfo.gender,
+      gender_teacher_input: updatedStudentInfo.genderTeacherInput,
       sharing_disabled: updatedStudentInfo.sharingDisabled,
     },
   };
@@ -911,8 +912,10 @@ const addStudentOnServer = (updatedStudentsInfo, sectionId, onComplete) => {
     studentsToAdd[i] = {
       editing: true,
       name: updatedStudentsInfo[i].name,
+      family_name: updatedStudentsInfo[i].familyName,
       age: updatedStudentsInfo[i].age,
       gender: updatedStudentsInfo[i].gender,
+      gender_teacher_input: updatedStudentsInfo[i].genderTeacherInput,
       sharing_disabled: updatedStudentsInfo[i].sharingDisabled,
     };
   }

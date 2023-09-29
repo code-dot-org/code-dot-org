@@ -1,2 +1,19 @@
 {
+  "bg-BG": {
+    "data": {
+      "placeholder": {
+        "csd-pulse-check-survey-1-free-response U1Ch2": "Напишете каквото желаете тук. Отговорите ви ще останат анонимни.",
+        "csd-pulse-check-survey-1-free-response U2Ch1": "Напишете каквото желаете тук. Отговорите ви ще останат анонимни.",
+        "csd-pulse-check-survey-1-free-response U2Ch2": "Напишете каквото желаете тук. Отговорите ви ще останат анонимни.",
+        "csd-pulse-check-survey-1-free-response U3Ch1": "Напишете каквото желаете тук. Отговорите ви ще останат анонимни.",
+        "csd-pulse-check-survey-1-free-response U3Ch2": "Напишете каквото желаете тук. Отговорите ви ще останат анонимни.",
+        "csd-pulse-check-survey-1-free-response U4Ch1": "Напишете каквото желаете тук. Отговорите ви ще останат анонимни.",
+        "csd-pulse-check-survey-1-free-response U4Ch2": "Напишете каквото желаете тук. Отговорите ви ще останат анонимни.",
+        "csd-pulse-check-survey-1-free-response U5Ch1": "Напишете каквото желаете тук. Отговорите ви ще останат анонимни.",
+        "csd-pulse-check-survey-1-free-response U5Ch2": "Напишете каквото желаете тук. Отговорите ви ще останат анонимни.",
+        "csd-pulse-check-survey-1-free-response U6Ch1": "Напишете каквото желаете тук. Отговорите ви ще останат анонимни.",
+        "csd-pulse-check-survey-1-free-response U6Ch2": "Напишете каквото желаете тук. Отговорите ви ще останат анонимни."
+      }
+    }
+  }
 }

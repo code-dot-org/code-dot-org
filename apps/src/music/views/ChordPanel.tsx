@@ -5,18 +5,18 @@ import MusicLibrary from '../player/MusicLibrary';
 import {ChordEventValue, PlayStyle} from '../player/interfaces/ChordEvent';
 import {generateGraphDataFromChord, ChordGraphNote} from '../utils/Chords';
 import PreviewControls from './PreviewControls';
-
-const moduleStyles = require('./chordPanel.module.scss').default;
+import musicI18n from '../locale';
+import moduleStyles from './chordPanel.module.scss';
 
 const NUM_OCTAVES = 3;
 const START_OCTAVE = 4;
 const MAX_NOTES = 16;
 
 const styleDropdownOptions: [PlayStyle, string][] = [
-  ['arpeggio-up', 'Arpeggio Up'],
-  ['arpeggio-down', 'Arpeggio Down'],
-  ['arpeggio-random', 'Arpeggio Random'],
-  ['together', 'Together'],
+  ['arpeggio-up', musicI18n.chordArpeggioUp()],
+  ['arpeggio-down', musicI18n.chordArpeggioDown()],
+  ['arpeggio-random', musicI18n.chordArpeggioRandom()],
+  ['together', musicI18n.chordTogether()],
 ];
 
 export interface ChordPanelProps {

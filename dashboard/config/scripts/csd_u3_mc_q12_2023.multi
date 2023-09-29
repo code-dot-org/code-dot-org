@@ -15,3 +15,5 @@ You need to update the code below to animate the fish to move from the right sid
 <br><br>
 ![](https://images.code.org/decc7b1884765200536a1081c4efa011-CSDunit3smoothmotion.png)
 MARKDOWN
+
+allow_multiple_attempts true

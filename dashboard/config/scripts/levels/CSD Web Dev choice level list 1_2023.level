@@ -1,5 +1,10 @@
 <Weblab>
   <config><![CDATA[{
+  "published": true,
+  "game_id": 58,
+  "created_at": "2022-09-27T22:13:23.000Z",
+  "level_num": "custom",
+  "user_id": 324,
   "properties": {
     "instructions_important": "false",
     "hide_share_and_remix": "true",
@@ -15,7 +20,7 @@
     "rubric_performance_level_3": "There is at least one paragraph tag in the text, but it may not be used properly (e.g. missing closing tag, paragraphs created outside of the body element).",
     "rubric_performance_level_4": "There are no paragraph tags in the text.",
     "rubric_key_concept": "Use HTML to create a web page that includes hierarchical headings, paragraphs, lists, and images; understand the need for precision when using computer languages and use appropriate syntax.\r\n",
-    "start_sources": "{\r\n  \"files\": [\r\n    {\r\n      \"name\": \"index.html\",\r\n      \"data\": \"<html>\\r\\n<head>\\r\\n<\\/head>\\r\\n<body>\\r\\n  <h1>Top 10 Most Popular Dog Names This Year<\\/h1>\\r\\n  <li>\\r\\n \r\n ol>Luna<\\/ol>\\r\\n  <ol>Charlie<\\/ol>\\r\\n  <ol>Bella<\\/ol>\\r\\n  <ol>Daisy<\\/ol>\\r\\n  <ol>Milo<\\/ol>\\r\\n  <ol>Lucy<\\/ol>\\r\\n  <ol>Cooper<\\/ol>\\r\\n  <ol>Bailey<\\/ol>\\r\\n  <ol>Teddy<\\/ol>\\r\\n  <ol>Max<\\/ol>\\r\\n  <\\/li>\\r\\n  <\\/body>\\r\\n<\\/html>\\r\\n\"\r\n    }\r\n  ]\r\n}",
+    "start_sources": "{\r\n  \"files\": [\r\n    {\r\n      \"name\": \"index.html\",\r\n      \"data\": \"<html>\\r\\n<head>\\r\\n<\\/head>\\r\\n<body>\\r\\n  <h1>Top 10 Most Popular Dog Names This Year<\\/h1>\\r\\n  <li>\\r\\n  ol>Luna<\\/ol>\\r\\n  <ol>Charlie<\\/ol>\\r\\n  <ol>Bella<\\/ol>\\r\\n  <ol>Daisy<\\/ol>\\r\\n  <ol>Milo<\\/ol>\\r\\n  <ol>Lucy<\\/ol>\\r\\n <ol>Cooper<\\/ol>\\r\\n  <ol>Bailey<\\/ol>\\r\\n  <ol>Teddy<\\/ol>\\r\\n  <ol>Max<\\/ol>\\r\\n  <\\/li>\\r\\n  <\\/body>\\r\\n<\\/html>\\r\\n\"\r\n    }\r\n  ]\r\n}",
     "display_name": "Debug Ordered List",
     "bubble_choice_description": "Use your debugging skills to figure out why the list is not showing up correctly.",
     "thumbnail_url": "https://images.code.org/0ebf696af68df01fdc20b3eed5631d41-debug list.png",
@@ -29,12 +34,7 @@
     "map_reference": "/courses/csd-2022/guides/web-lab",
     "validation_enabled": "false"
   },
-  "game_id": 58,
-  "published": true,
-  "created_at": "2022-09-27T22:13:23.000Z",
-  "level_num": "custom",
-  "user_id": 324,
   "notes": "",
-  "audit_log": "[{\"changed_at\":\"2022-09-27T22:13:23.657+00:00\",\"changed\":[\"cloned from \\\"CSD Web Dev bubble choice br tag_2023\\\"\"],\"cloned_from\":\"CSD Web Dev bubble choice br tag_2023\"},{\"changed_at\":\"2022-09-27 22:13:28 +0000\",\"changed\":[\"encrypted_examples\"],\"changed_by_id\":18602,\"changed_by_email\":\"angelina+levelbuilder@code.org\"},{\"changed_at\":\"2022-09-27 22:27:24 +0000\",\"changed\":[\"long_instructions\",\"display_name\",\"bubble_choice_description\",\"encrypted_examples\"],\"changed_by_id\":18602,\"changed_by_email\":\"angelina+levelbuilder@code.org\"},{\"changed_at\":\"2022-09-27 22:30:29 +0000\",\"changed\":[\"start_sources\",\"encrypted_examples\"],\"changed_by_id\":18602,\"changed_by_email\":\"angelina+levelbuilder@code.org\"},{\"changed_at\":\"2022-09-27 23:09:55 +0000\",\"changed\":[\"encrypted_examples\"],\"changed_by_id\":18602,\"changed_by_email\":\"angelina+levelbuilder@code.org\"},{\"changed_at\":\"2022-09-27 23:23:49 +0000\",\"changed\":[\"thumbnail_url\",\"encrypted_examples\"],\"changed_by_id\":18602,\"changed_by_email\":\"angelina+levelbuilder@code.org\"},{\"changed_at\":\"2023-02-17 23:30:18 +0000\",\"changed\":[\"long_instructions\",\"encrypted_examples\",\"reference_links\",\"map_reference\"],\"changed_by_id\":18602,\"changed_by_email\":\"angelina+levelbuilder@code.org\"}]"
+  "audit_log": "[{\"changed_at\":\"2022-09-27T22:13:23.657+00:00\",\"changed\":[\"cloned from \\\"CSD Web Dev bubble choice br tag_2023\\\"\"],\"cloned_from\":\"CSD Web Dev bubble choice br tag_2023\"},{\"changed_at\":\"2022-09-27 22:13:28 +0000\",\"changed\":[\"encrypted_examples\"],\"changed_by_id\":18602,\"changed_by_email\":\"angelina+levelbuilder@code.org\"},{\"changed_at\":\"2022-09-27 22:27:24 +0000\",\"changed\":[\"long_instructions\",\"display_name\",\"bubble_choice_description\",\"encrypted_examples\"],\"changed_by_id\":18602,\"changed_by_email\":\"angelina+levelbuilder@code.org\"},{\"changed_at\":\"2022-09-27 22:30:29 +0000\",\"changed\":[\"start_sources\",\"encrypted_examples\"],\"changed_by_id\":18602,\"changed_by_email\":\"angelina+levelbuilder@code.org\"},{\"changed_at\":\"2022-09-27 23:09:55 +0000\",\"changed\":[\"encrypted_examples\"],\"changed_by_id\":18602,\"changed_by_email\":\"angelina+levelbuilder@code.org\"},{\"changed_at\":\"2022-09-27 23:23:49 +0000\",\"changed\":[\"thumbnail_url\",\"encrypted_examples\"],\"changed_by_id\":18602,\"changed_by_email\":\"angelina+levelbuilder@code.org\"},{\"changed_at\":\"2023-02-17 23:30:18 +0000\",\"changed\":[\"long_instructions\",\"encrypted_examples\",\"reference_links\",\"map_reference\"],\"changed_by_id\":18602,\"changed_by_email\":\"angelina+levelbuilder@code.org\"},{\"changed_at\":\"2023-06-21 19:18:28 +0000\",\"changed\":[\"start_sources\",\"encrypted_examples\"],\"changed_by_id\":18602,\"changed_by_email\":\"angelina+levelbuilder@code.org\"}]"
 }]]></config>
 </Weblab>

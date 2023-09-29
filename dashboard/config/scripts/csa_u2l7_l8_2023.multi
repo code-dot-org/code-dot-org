@@ -31,3 +31,5 @@ public dataType getInstanceVariable()
 
 Accessor methods should not be `private`, and they do not take a parameter. The return type of an accessor method should be the same as the data type of the instance variable.
 MARKDOWN
+
+allow_multiple_attempts true

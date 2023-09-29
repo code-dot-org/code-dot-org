@@ -8,7 +8,10 @@ export default {
 };
 
 export const OrangeDropdownButton = () => (
-  <DropdownButton text="Assign unit" color={Button.ButtonColor.orange}>
+  <DropdownButton
+    text="Assign unit"
+    color={Button.ButtonColor.brandSecondaryDefault}
+  >
     <a href="asdf">Child with href</a>
     <a onClick={() => console.log('click')}>Child with onClick</a>
   </DropdownButton>

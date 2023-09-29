@@ -5,17 +5,19 @@
     "login_required": true,
     "properties": {
       "curriculum_umbrella": "CSD",
+      "has_verified_resources": true,
       "hideable_lessons": true,
       "include_student_lesson_plans": true,
       "is_migrated": true,
       "project_sharing": true,
       "show_calendar": true,
       "student_detail_progress_view": true,
+      "tts": true,
       "weekly_instructional_minutes": 225
     },
     "new_name": null,
     "family_name": null,
-    "serialized_at": "2023-04-20 17:31:22 UTC",
+    "serialized_at": "2023-09-25 20:24:43 UTC",
     "published_state": null,
     "instruction_type": null,
     "instructor_audience": null,
@@ -1471,7 +1473,7 @@
       "key": "c69098e4-0f17-403c-91cd-258d7bbc2747",
       "position": 4,
       "properties": {
-        "description": "**Circulate & Distribute:** Have students share their thoughts with a neighbor. Listen for examples that may be worth using as examples throughout the lesson. \n\nAs students share, distribute a copy of the [r _warm_up_word_search/csd2/2023] to each student, face down. Make sure students don't start the word search ahead of time.\n"
+        "description": "**Circulate & Distribute:** Have students share their thoughts with a neighbor. Listen for examples that may be worth using as examples throughout the lesson. \n\nAs students share, distribute a copy of the [r _warm_up_word_search/csd/2023] to each student, face down. Make sure students don't start the word search ahead of time.\n"
       },
       "seeding_key": {
         "activity_section.key": "c69098e4-0f17-403c-91cd-258d7bbc2747",
@@ -1550,7 +1552,7 @@
       "key": "ddaafce8-44cf-41eb-b9e1-ee00d637a95a",
       "position": 10,
       "properties": {
-        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Display:** Show [r the_problem_solving_process/csd2/2023]  video.\n\n**Questions to Consider with Video:**\n* What are the 4 steps to the Problem-Solving Process?\n\n",
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Display:** Show [r the_problem_solving_process/csd/2023]  video.\n\n**Questions to Consider with Video:**\n* What are the 4 steps to the Problem-Solving Process?\n\n",
         "duration": "5",
         "name": "The Problem Solving Process",
         "tips": [
@@ -1745,7 +1747,7 @@
       "key": "d0ca4e99-09dc-4748-a535-215cbdf17417",
       "position": 8,
       "properties": {
-        "description": "**Overview:** Have students flip to the back of their activity guide and read the overview of the next part of the activity. Students will choose a user to create a basic website design for, following the Problem Solving Process. Students can sketch their design on pen and paper, or use the provided Google Slides template to create their design. These designs are meant to be sketches - students will not have enough time to \"perfect\" their design.\n\n**Distribute:** Pass out copies of the \n[r problem_solving_and_design/csd2/2023] resource. Students can use this when preparing their design, and it can be a reference throughout the unit."
+        "description": "**Overview:** Have students flip to the back of their activity guide and read the overview of the next part of the activity. Students will choose a user to create a basic website design for, following the Problem Solving Process. Students can sketch their design on pen and paper, or use the provided Google Slides template to create their design. These designs are meant to be sketches - students will not have enough time to \"perfect\" their design.\n\n**Distribute:** Pass out copies of the \n[r problem_solving_and_design/csd/2023] resource. Students can use this when preparing their design, and it can be a reference throughout the unit."
       },
       "seeding_key": {
         "activity_section.key": "d0ca4e99-09dc-4748-a535-215cbdf17417",
@@ -1917,7 +1919,7 @@
       "key": "c82472ea-d9b3-412f-b666-d7e1152fae9a",
       "position": 3,
       "properties": {
-        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Video:** Show students the [r pair_programming/csd2/2023] video in the slides.\n\n**Questions to consider with the video:**\n- Why do you think professional programmers use pair programming?\n- How do you think pair programming will help you to program better?\n\n**Discussion Goal:** The goals of this discussion center less around particular answers to this question and more around promoting positive attitudes toward pair programming. As students discuss its potential benefits, make sure they understand that this is an industry-standard practice, not just something fun to do.\n\n\n\n",
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Video:** Show students the [r pair_programming/csd/2023] video in the slides.\n\n**Questions to consider with the video:**\n- Why do you think professional programmers use pair programming?\n- How do you think pair programming will help you to program better?\n\n**Discussion Goal:** The goals of this discussion center less around particular answers to this question and more around promoting positive attitudes toward pair programming. As students discuss its potential benefits, make sure they understand that this is an industry-standard practice, not just something fun to do.\n\n\n\n",
         "tips": [
           {
             "type": "teachingTip",
@@ -2606,7 +2608,7 @@
       "key": "a357817a-31e8-4c99-a246-8c921873fd01",
       "position": 5,
       "properties": {
-        "description": "**Distribute:**  Hand out a copy of the [r problem_solving_process_with_programming/csd2/2023] to pairs of students. Encourage students to look over the guide.\n\n**Display:** Show the slide with the Problem Solving Process graphic\n"
+        "description": "**Distribute:**  Hand out a copy of the [r problem_solving_process_with_programming/csd/2023] to pairs of students. Encourage students to look over the guide.\n\n**Display:** Show the slide with the Problem Solving Process graphic\n"
       },
       "seeding_key": {
         "activity_section.key": "a357817a-31e8-4c99-a246-8c921873fd01",
@@ -3563,7 +3565,7 @@
       "key": "e2474a34-5c85-4acc-9641-552783d37960",
       "position": 8,
       "properties": {
-        "description": "**Image Hunt**\n\nThe last portion of the guide prompts students to find images of their choosing and identify the licenses under which they were published.\n\nBecause we can't know which sites might be blocked in your district, we've avoided pointing students to a specific search engine. Not all search engines make it easy to set Creative Commons filters - some of the easiest include:\n\n- [Wikimedia Commons](https://commons.wikimedia.org/wiki/Main_Page)\n- [Google Image Advanced Search](https://www.google.com/advanced_image_search)\n- [Flickr Creative Commons](https://www.flickr.com/creativecommons/)\n- [Wordpress Openverse](https://wordpress.org/openverse/) (formerly Creative Commons Search)\n\nAdditionally, [this guide from the Harvard Law School Library](https://guides.library.harvard.edu/c.php?g=310751&p=2072816) has a variety of search engines that could be used for creative commons images. This may be overwhelming for students, but it could be a good resource for specific situations or to find additional search engines that are available at your school.\n\nAs with any site with crowdsourced content, search engine results will change from day to day, and some of those results may be inappropriate for the classroom. You may want to check these sites shortly before displaying them to the class, and decide what is best for your classroom.\n\n**Share:** Allow students to share the images and licenses that they have found, whether the images could be included on a student web site, and if so, what rules the student would need to follow to use the image."
+        "description": "**Image Hunt**\n\nThe last portion of the guide prompts students to find images of their choosing and identify the licenses under which they were published.\n\nBecause we can't know which sites might be blocked in your district, we've avoided pointing students to a specific search engine. Not all search engines make it easy to set Creative Commons filters - some of the easiest include:\n\n- [Wikimedia Commons](https://commons.wikimedia.org/wiki/Main_Page)\n- [Google Image Advanced Search](https://www.google.com/advanced_image_search)\n- [Flickr Creative Commons](https://www.flickr.com/creativecommons/)\n- [Wordpress Openverse](https://wordpress.org/openverse/) (formerly Creative Commons Search)\n\nAdditionally, [this guide from the Harvard Law School Library](https://guides.library.harvard.edu/law/pd-cc) has a variety of search engines that could be used for creative commons images. This may be overwhelming for students, but it could be a good resource for specific situations or to find additional search engines that are available at your school.\n\nAs with any site with crowdsourced content, search engine results will change from day to day, and some of those results may be inappropriate for the classroom. You may want to check these sites shortly before displaying them to the class, and decide what is best for your classroom.\n\n**Share:** Allow students to share the images and licenses that they have found, whether the images could be included on a student web site, and if so, what rules the student would need to follow to use the image."
       },
       "seeding_key": {
         "activity_section.key": "e2474a34-5c85-4acc-9641-552783d37960",
@@ -9415,10 +9417,33 @@
       }
     },
     {
+      "name": "CSD Guide to Assessment ",
+      "url": "https://docs.google.com/document/d/1IO5XgPW_Apil_Uziq5hAMCBgilm8txZ3sp8atxiKiLU/view",
+      "key": "csd_guide_to_assessment_2",
+      "properties": {
+        "include_in_pdf": true
+      },
+      "seeding_key": {
+        "resource.key": "csd_guide_to_assessment_2"
+      }
+    },
+    {
+      "name": "CSD Guide to Curriculum Videos ",
+      "url": "https://docs.google.com/document/d/1c2hF3CaTJacvwDy4y_9-m1jSkSPmK__F6pDPetXVvy4/view",
+      "key": "csd_guide_to_curriculum_videos_2",
+      "properties": {
+        "include_in_pdf": true
+      },
+      "seeding_key": {
+        "resource.key": "csd_guide_to_curriculum_videos_2"
+      }
+    },
+    {
       "name": "CSD Guide to Debugging",
       "url": "https://docs.google.com/document/d/145lvpomqz0tUuzXLbkAFgP9zMDpECMwFYiEIG1_hQFg/view",
       "key": "csd_guide_to_debugging",
       "properties": {
+        "include_in_pdf": true
       },
       "seeding_key": {
         "resource.key": "csd_guide_to_debugging"
@@ -9429,29 +9454,32 @@
       "url": "https://docs.google.com/document/d/10u5N7zCf52IZiSf4drQplEz3d3zS1iqWpegbBMDm0RQ/view",
       "key": "csd_guide_to_differentiation",
       "properties": {
+        "include_in_pdf": true
       },
       "seeding_key": {
         "resource.key": "csd_guide_to_differentiation"
       }
     },
     {
-      "name": "CSD Implementation Guide",
-      "url": "https://docs.google.com/document/d/1sM_1Oxb7TGp5gSfuMjs0X0_Tko9tm8QJ4N6L26NI_iE/view",
-      "key": "csd_implementation_guide",
+      "name": "CSD Guide to Teaching and Learning Strategies",
+      "url": "https://docs.google.com/document/d/1Cg5iTwERoX25Y2DdLNmrPCbVB2d9FPGfUMUvcnVoN8Q/view",
+      "key": "csd_guide_to_teaching_and_learning_strategies_2",
       "properties": {
+        "include_in_pdf": true
       },
       "seeding_key": {
-        "resource.key": "csd_implementation_guide"
+        "resource.key": "csd_guide_to_teaching_and_learning_strategies_2"
       }
     },
     {
-      "name": "CSD Learning Frameworks",
-      "url": "https://docs.google.com/document/d/1WlmAr6CeU4NAQhPAa0YAO-ujVTls_12fOP3lbc2SLxo/view",
-      "key": "csd_learning_frameworks",
+      "name": "CSD Guide to Using Resources ",
+      "url": "https://docs.google.com/document/d/1NYJMHZYnAZYNctehlQOImSstsu48sRGOMbi4It4ZjkI/view",
+      "key": "csd_guide_to_using_resources_3",
       "properties": {
+        "include_in_pdf": true
       },
       "seeding_key": {
-        "resource.key": "csd_learning_frameworks"
+        "resource.key": "csd_guide_to_using_resources_3"
       }
     },
     {
@@ -9459,6 +9487,7 @@
       "url": "https://docs.google.com/document/d/1LlbzDHvq_DXggzeGg_sBcNov9pZX7h9NqardkGW4ELw/view",
       "key": "csd_programming_levels_guide",
       "properties": {
+        "include_in_pdf": true
       },
       "seeding_key": {
         "resource.key": "csd_programming_levels_guide"
@@ -10059,6 +10088,16 @@
       }
     },
     {
+      "name": "Problem Solving Process with Design",
+      "url": "https://docs.google.com/document/d/1qgiwCyO7948qPSWbTvYmR7DjH0nkh8HpfxP1HxubDis/view",
+      "key": "problem_solving_process_for_design",
+      "properties": {
+      },
+      "seeding_key": {
+        "resource.key": "problem_solving_process_for_design"
+      }
+    },
+    {
       "name": "Problem Solving Process with Programming",
       "url": "https://docs.google.com/document/d/1q10YfeMqY95SAq0VAB3wnLPK2aDuJEoD2j82n-i183Y/edit",
       "key": "problem_solving_process_with_programming",
@@ -10069,6 +10108,17 @@
       },
       "seeding_key": {
         "resource.key": "problem_solving_process_with_programming"
+      }
+    },
+    {
+      "name": "Problem Solving Process with Programming",
+      "url": "https://docs.google.com/document/d/1q10YfeMqY95SAq0VAB3wnLPK2aDuJEoD2j82n-i183Y/view",
+      "key": "problem_solving_process_with_programming_1",
+      "properties": {
+        "include_in_pdf": true
+      },
+      "seeding_key": {
+        "resource.key": "problem_solving_process_with_programming_1"
       }
     },
     {
@@ -11257,6 +11307,18 @@
     },
     {
       "seeding_key": {
+        "resource.key": "csd_guide_to_assessment_2",
+        "script.name": "focus-on-creativity2-2023"
+      }
+    },
+    {
+      "seeding_key": {
+        "resource.key": "csd_guide_to_curriculum_videos_2",
+        "script.name": "focus-on-creativity2-2023"
+      }
+    },
+    {
+      "seeding_key": {
         "resource.key": "csd_guide_to_debugging",
         "script.name": "focus-on-creativity2-2023"
       }
@@ -11269,19 +11331,31 @@
     },
     {
       "seeding_key": {
-        "resource.key": "csd_implementation_guide",
+        "resource.key": "csd_guide_to_teaching_and_learning_strategies_2",
         "script.name": "focus-on-creativity2-2023"
       }
     },
     {
       "seeding_key": {
-        "resource.key": "csd_learning_frameworks",
+        "resource.key": "csd_guide_to_using_resources_3",
         "script.name": "focus-on-creativity2-2023"
       }
     },
     {
       "seeding_key": {
         "resource.key": "csd_programming_levels_guide",
+        "script.name": "focus-on-creativity2-2023"
+      }
+    },
+    {
+      "seeding_key": {
+        "resource.key": "problem_solving_process_for_design",
+        "script.name": "focus-on-creativity2-2023"
+      }
+    },
+    {
+      "seeding_key": {
+        "resource.key": "problem_solving_process_with_programming_1",
         "script.name": "focus-on-creativity2-2023"
       }
     },
@@ -12574,6 +12648,15 @@
     }
   ],
   "lessons_opportunity_standards": [
+
+  ],
+  "rubrics": [
+
+  ],
+  "learning_goals": [
+
+  ],
+  "learning_goal_evidence_levels": [
 
   ]
 }

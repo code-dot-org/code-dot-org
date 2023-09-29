@@ -88,8 +88,10 @@ class Api::V1::SectionsStudentsController < Api::V1::JSONApiController
           user_type: User::TYPE_STUDENT,
           provider: User::PROVIDER_SPONSORED,
           name: student["name"],
+          family_name: student["family_name"],
           age: student["age"],
           gender: student["gender"],
+          gender_teacher_input: student["gender_teacher_input"],
           sharing_disabled: !!student["sharing_disabled"],
         )
         @section.add_student(new_student, current_user)
@@ -125,7 +127,9 @@ class Api::V1::SectionsStudentsController < Api::V1::JSONApiController
   def student_params
     params.require(:student).permit(
       :age,
+      :family_name,
       :gender,
+      :gender_teacher_input,
       :name,
       :sharing_disabled,
       :password,

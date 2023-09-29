@@ -103,7 +103,7 @@ class AdminUsersController < ApplicationController
       level: level
     )
     if user_level.persisted? &&
-      user_level.best_result > ActivityConstants::MAXIMUM_NONOPTIMAL_RESULT
+        user_level.best_result > ActivityConstants::MAXIMUM_NONOPTIMAL_RESULT
       flash[:alert] = "UserLevel (ID: #{user_level.id}) already green"
       redirect_to :manual_pass_form
       return
@@ -210,7 +210,7 @@ class AdminUsersController < ApplicationController
         users = restricted_users.where(hashed_email: User.hash_email(search_term)).or(restricted_users.where(username: search_term))
         @user = users.first
         if users.many?
-          flash[:notice] = "More than one User matches email address.  "\
+          flash[:notice] = "More than one User matches email address.  " \
                          "Showing first result.  Matching User IDs - #{users.pluck(:id).join ','}"
         end
       end
@@ -219,9 +219,9 @@ class AdminUsersController < ApplicationController
       end
     elsif permission.present?
       @users_with_permission = restricted_users.
-                                 joins(:permissions).
-                                 where(user_permissions: {permission: permission}).
-                                 order(:email)
+        joins(:permissions).
+        where(user_permissions: {permission: permission}).
+        order(:email)
       @users_with_permission = @users_with_permission.page(page).per(page_size)
     end
   end

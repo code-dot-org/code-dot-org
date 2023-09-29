@@ -53,6 +53,7 @@ de:
         gender: 'Geschlecht'
         edit_header: 'Kontodaten bearbeiten'
         finish_sign_up_header: 'Kontoerstellung abschließen'
+        finish_sign_up_header_error: 'Bitte korrigiere die folgenden Fehler:'
         finish_sign_up_subheader: 'Gib folgende Informationen ein um dein Code.org-Konto für <strong>%{email}</strong> fertigzustellen.'
         finish_sign_up_subheader_markdown: 'Gib folgende Informationen ein um dein Code.org-Konto für **%{email}** fertigzustellen.'
         finish_sign_up_subheader_provider: 'Gib folgende Informationen ein um dein Code.org-Konto mit <strong>%{provider}</strong> für <strong>%{email}</strong> fertigzustellen.'
@@ -60,6 +61,8 @@ de:
         reset_password_token: "Den Link zum Zurücksetzen des Passworts hast du befolgt"
         error:
           future: darf nicht in der Zukunft liegen
+        user_type: 'Kontentyp'
+        us_state: 'Bundesland'
   beta: "Beta"
   hello: "Hallo Welt"
   welcome_back: "Willkommen zurück, %{name}"
@@ -69,6 +72,7 @@ de:
   unsubmit: Zurücknehmen
   previous_page: Vorherige Seite
   next_page: Nächste Seite
+  next_level: Nächstes Level
   next_resource: Nächste Ressource
   done_with_module: Mit dieser Lerneinheit abgeschlossen
   cancel: "Abbrechen"
@@ -172,7 +176,6 @@ de:
     data_collection_us: "Mir ist bekannt, dass Code.org eine in den USA ansässige gemeinnützige Website ist und dass die Gesetze zur Datenerfassung in den USA von den Gesetzen in meinem Land abweichen können."
     visit_privacy: 'Lesen Sie die [Datenschutzerklärung](%{privacy_url}) von Code.org, um mehr zu erfahren.'
     student_terms_markdown: "E-Mail-Adressen werden nicht in einer Form gespeichert, die es uns ermöglicht, mit den Studenten in Kontakt zu treten. Schüler werden niemals E-Mails von Code.org erhalten, außer zur Wiederherstellung des Passworts. Weitere Informationen finden Sie in unserer [Datenschutzerklärung] (http://code.org/privacy)."
-    additional_information: "Wir benötigen noch ein paar weitere Informationen, um mit deiner Anmeldung fortzufahren."
     user_type_button: "Kontoart aktualisieren"
     user_type_label: "Kontentyp"
     user_type_student: "Schüler"
@@ -200,6 +203,7 @@ de:
     parent_account_checkbox: "Ich bin ein(e) Elternteil/Erziehungsberechtige(r) und melde mich im Namen meines Kindes an"
     parent_account_email_progress_permission: "Dürfen wir Sie gelegentlich per E-Mail über den Fortschritt und die Projekte Ihres Kindes sowie über den Kurs und den Informatikunterricht Ihres Kindes auf dem Laufenden halten? [(Bitte beachten Sie unsere Datenschutzerklärung)](%{privacy_policy_url})"
     parent_account_email_label: "Eltern/Vormund E-Mail"
+    us_state: 'Bundesland'
   school_info:
     title: 'Schulinformationen (optional)'
     school_country: 'Land der Schule'
@@ -1187,6 +1191,7 @@ de:
         csf_express: 'CS Grundlagen (Pre-Express oder Express)'
         csd: 'CS Entdeckungen'
         csp: 'Informatik Grundprinzipien'
+        other: 'Andere'
         not_applicable: "Nicht anwendbar"
       email_opt_in:
         opt_in_yes: 'Ja'
@@ -1210,11 +1215,23 @@ de:
   courses_category: 'Vollständige Kurse'
   course_offering:
     headers:
+      favorites: 'Favoriten'
+      labs_and_skills: 'Labore und Fähigkeiten'
       minecraft: 'Minecraft'
       hello_world: 'Hallo Welt'
+      popular_media: 'Populäre Medien'
       sports: 'Sport'
+      express: 'Expres'
       csf: 'Einführung in Informatik und Programmieren'
       csc: 'CS Connections'
+      year_long: 'Jahr lang'
+      csa_labs: 'CSA Labs'
+      self_paced: 'Im eigenen Tempo'
+      teacher_led: 'Von Lehrern geleitet'
+      collections: 'Sammlungen'
+      workshops_k5: 'K-5-Workshops'
+      summer_workshops_612: '6-12 Sommerworkshops'
+      virtual_academic_year_workshops_612: '6—12 Workshops für das virtuelle akademische Jahr'
   cookie_banner:
     message: 'Indem Sie unsere Website weiter benutzen oder auf "Ich stimme zu" klicken, stimmen Sie der Speicherung von Cookies auf Ihrem Computer oder Gerät zu.'
     more_information: "Siehe Datenschutzerklärung von Code.org."
@@ -1270,3 +1287,4 @@ de:
     binary: "Binärdatei"
     hexadecimal: "Hexadezimal"
     pixel_format_header: "Pixelformat"
+

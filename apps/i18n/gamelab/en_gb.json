@@ -1,6 +1,6 @@
 {
   "dropletBlock_createSprite_param3": "height",
-  "dropletBlock_setCollider_param4": "height",
   "dropletBlock_setColliderEach_param4": "height",
+  "dropletBlock_setCollider_param4": "height",
   "shareGame": "Share your game:"
 }

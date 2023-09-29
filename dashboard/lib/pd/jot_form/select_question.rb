@@ -40,7 +40,7 @@ module Pd
       def ensure_valid_answer(answer)
         if answer.is_a? Array
           answer.each {|sub_answer| ensure_valid_answer(sub_answer)}
-        elsif !options.include? answer
+        elsif options.exclude?(answer)
           raise "Unrecognized answer '#{answer}' for question #{id} (Options: #{options.join(',')})"
         end
 

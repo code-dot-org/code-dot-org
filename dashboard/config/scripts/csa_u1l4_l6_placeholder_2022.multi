@@ -46,3 +46,5 @@ public class MyNeighborhood {
 
 ```
 MARKDOWN
+
+allow_multiple_attempts true

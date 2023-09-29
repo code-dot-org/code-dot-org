@@ -1,17 +1,21 @@
 .action-block__wrapper.action-block__wrapper--two-col
-  .action-block.action-block--one-col
-    %p.overline Grades 6-12
-    %h3 Creating Apps with Devices
-    %figure.video-responsive
-      %div
-        %iframe{src: "https://www.youtube-nocookie.com/embed/9_Z1hvx22us", title: "Creating Apps with Devices", frameborder: "0", allowfullscreen: "true"}
-    %p Explore the role of physical devices in computing. Using App Lab and Adafruit's Circuit Playground, students develop programs that utilize the same hardware inputs and outputs that you see in the smart devices.
-    %p{style: "height: 50px"} <strong>Duration:</strong> 25 hours
-    %a.link-button{href: explore_unit_link, aria:{label: "Explore the Creating Apps with Devices unit"}} Explore the unit
-  .action-block.action-block--one-col
-    %p.overline Teachers
-    %h3 Teaching Creating Apps with Devices
-    %img{src: "/images/maker/maker-circuit-playground-teachers.png", alt: "", style: "width: 100%"}
-    %p Self-paced online professional learning experience designed to prepare educators to get started teaching the Creating Apps with Devices unit.
-    %p{style: "height: 70px"} <strong>Note:</strong> A circuit playground device is required to engage with the activities in this professional learning experience
-    %a.link-button{href: teach_unit_link, aria:{label: "Prepare to teach the Teaching Creating Apps with Devices unit"}} Prepare to teach
+  .action-block.action-block--one-col.flex-space-between
+    .content-wrapper
+      %p.overline Grades 6-12
+      %h3 Creating Apps with Devices
+      %figure.video-responsive
+        %div
+          %iframe{src: "https://www.youtube-nocookie.com/embed/9_Z1hvx22us", title: "Creating Apps with Devices", frameborder: "0", allowfullscreen: "true"}
+      %p Explore the role of physical devices in computing. Using App Lab and Adafruit's Circuit Playground, students develop programs that utilize the same hardware inputs and outputs that you see in the smart devices.
+      %p <strong>Duration:</strong> 25 hours
+    .content-footer
+      %a.link-button{href: explore_unit_link, aria:{label: "Explore the Creating Apps with Devices unit"}} Explore the unit
+  .action-block.action-block--one-col.flex-space-between
+    .content-wrapper
+      %p.overline Teachers
+      %h3 Teaching Creating Apps with Devices
+      %img{src: "/images/maker/maker-circuit-playground-teachers.png", alt: "", style: "width: 100%"}
+      %p Self-paced online professional learning experience designed to prepare educators to get started teaching the Creating Apps with Devices unit.
+      %p <strong>Note:</strong> A circuit playground device is required to engage with the activities in this professional learning experience
+    .content-footer
+      %a.link-button{href: teach_unit_link, aria:{label: "Prepare to teach the Teaching Creating Apps with Devices unit"}} Prepare to teach

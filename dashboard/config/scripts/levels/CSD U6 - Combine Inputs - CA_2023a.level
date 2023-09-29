@@ -1,5 +1,6 @@
 <Applab>
   <config><![CDATA[{
+  "published": true,
   "game_id": 41,
   "created_at": "2023-03-17T17:01:45.000Z",
   "level_num": "custom",
@@ -48,7 +49,7 @@
     "expand_debugger": "false",
     "fail_on_lint_errors": "false",
     "debugger_disabled": "false",
-    "makerlab_enabled": "true",
+    "makerlab_enabled": "circuitPlayground",
     "start_blocks": "//1) Turning on the LED\r\nonBoardEvent(toggleSwitch, \"open\", function() {\r\n  var LEDtype = getProperty(\"ledDropdown\", \"value\");\r\n  var LEDinterval = getProperty(\"speedSlider\", \"value\");\r\n  if (LEDtype == \"on\") {\r\n    led.on();\r\n  }\r\n  if (LEDtype == \"Blink\") {\r\n    led.blink(LEDinterval);\r\n  }\r\n  if (LEDtype == \"pulse\") {\r\n    led.pulse(LEDinterval);\r\n  }\r\n});\r\n\r\n//2) Turning off the LED\r\nonBoardEvent(toggleSwitch, \"change\", function() {\r\n  led.off();\r\n});\r\n\r\n//3) Controlling the Buzzer\r\nonBoardEvent(buttonL, \"press\", function() {\r\n  var duration = getProperty(\"frequencySlider\", \"value\");\r\n  var frequency = getProperty(\"durationSlider\", \"value\");\r\n  buzzer.frequency(duration, frequency);\r\n});\r\n\r\n\r\n",
     "top_level_procedure_autopopulate": "false",
     "parent_level_id": 20443,
@@ -57,7 +58,8 @@
     "encrypted_examples": "EG/gPkvX5wEE+4EKhnfN6kCQOfNvQwsfblRzjpi/ZdD5dYySEs+0riH9A+0D\nmotYzzcwaqfrM+waRRlVK8nmWw==\n",
     "text_mode_at_start": "false",
     "reference_links": [
-      "/courses/csd-2022/guides/taking-input-with-getproperty"
+      "/courses/csd-2022/guides/taking-input-with-getproperty",
+      "/maker/setup"
     ],
     "map_reference": "/courses/csd-2022/guides/physical-input",
     "mini_rubric": "false",
@@ -71,9 +73,8 @@
     "thumbnail_url": "https://images.code.org/68eddc0b61b1969d88521e5a4ca7ec15-image-1650648032590.png",
     "preload_asset_list": null
   },
-  "published": true,
   "notes": "",
-  "audit_log": "[{\"changed_at\":\"2023-03-17T17:01:45.482+00:00\",\"changed\":[\"cloned from \\\"CSD U6 - Combine Inputs - CA_2022\\\"\"],\"cloned_from\":\"CSD U6 - Combine Inputs - CA_2022\"}]"
+  "audit_log": "[{\"changed_at\":\"2023-03-17T17:01:45.482+00:00\",\"changed\":[\"cloned from \\\"CSD U6 - Combine Inputs - CA_2022\\\"\"],\"cloned_from\":\"CSD U6 - Combine Inputs - CA_2022\"},{\"changed_at\":\"2023-08-16 18:58:08 +0000\",\"changed\":[\"code_functions\",\"makerlab_enabled\",\"encrypted_examples\",\"reference_links\",\"preload_asset_list\",\"contained_level_names\"],\"changed_by_id\":14639,\"changed_by_email\":\"dan+teacher@code.org\"}]"
 }]]></config>
   <blocks/>
 </Applab>

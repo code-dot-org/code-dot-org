@@ -5,9 +5,10 @@
     "focus-on-design-with-purpose2-2023",
     "focus-on-design-with-purpose3-2023",
     "focus-on-design-with-purpose4a-2023",
-    "focus-on-design-with-purpose4b-2023"
+    "focus-on-design-with-purpose4b-2023",
+    "focus-on-design-with-purpose-post-survey-2023"
   ],
-  "published_state": "beta",
+  "published_state": "stable",
   "instruction_type": "teacher_led",
   "participant_audience": "student",
   "instructor_audience": "teacher",

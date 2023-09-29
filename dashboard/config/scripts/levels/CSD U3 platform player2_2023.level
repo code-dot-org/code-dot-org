@@ -1,5 +1,6 @@
 <Gamelab>
   <config><![CDATA[{
+  "published": true,
   "game_id": 50,
   "created_at": "2022-09-19T23:04:04.000Z",
   "level_num": "custom",
@@ -45,7 +46,7 @@
     "top_level_procedure_autopopulate": "false",
     "parent_level_id": 20912,
     "name_suffix": "_2023",
-    "long_instructions": "# User Controls\r\n\r\nNext, you should add user controls so that you can move your player around.  Your player needs to move to the left when the left arrow key is pressed, to the right when the right arrow key is pressed, and jump when the up arrow is pressed.\r\n\r\n# Do This\r\n\r\n* Create a new `controlPlayer` function in the \"functions\" area of your code.\r\n* Inside the `controlPlayer` function, use the `if`, `keyDown`, and `sprite.x` blocks to make your player move to the left and right according to the arrow keys. Look at [Lesson 15 Level 7](../../15/levels/7) for examples.\r\n* Inside the `controlPlayer` function, use the `if`, `keyDown`, and `velocityY` blocks to make your player jump when the up arrow is pressed. Look at [Lesson 20 Level 5](../../20/levels/5) for examples.\r\n* Call the `controlPlayer` function inside the draw loop.\r\n* Run the game and test your code.",
+    "long_instructions": "# User Controls\r\n\r\nNext, you should add user controls so that you can move your player around.  Your player needs to move to the left when the left arrow key is pressed, to the right when the right arrow key is pressed, and jump when the up arrow is pressed.\r\n\r\n# Do This\r\n\r\n* Create a new `controlPlayer` function in the \"functions\" area of your code.\r\n* Inside the `controlPlayer` function, use the `if`, `keyDown`, and `sprite.x` blocks to make your player move to the left and right according to the arrow keys. Look at [Lesson 16 Level 6](../../16/levels/6) for examples.\r\n* Inside the `controlPlayer` function, use the `if`, `keyDown`, and `velocityY` blocks to make your player jump when the up arrow is pressed. Look at [Lesson 21 Level 4](../../21/levels/4) for examples.\r\n* Call the `controlPlayer` function inside the draw loop.\r\n* Run the game and test your code.",
     "reference_links": [
       "/courses/csd-2022/guides/drawing-shapes",
       "/courses/csd-2022/guides/shapes-and-parameters",
@@ -66,9 +67,8 @@
     "libraries_enabled": "false",
     "preload_asset_list": null
   },
-  "published": true,
   "notes": "",
-  "audit_log": "[{\"changed_at\":\"2022-09-19T23:04:04.305+00:00\",\"changed\":[\"cloned from \\\"CSD U3 platform player2_2022\\\"\"],\"cloned_from\":\"CSD U3 platform player2_2022\"}]"
+  "audit_log": "[{\"changed_at\":\"2022-09-19T23:04:04.305+00:00\",\"changed\":[\"cloned from \\\"CSD U3 platform player2_2022\\\"\"],\"cloned_from\":\"CSD U3 platform player2_2022\"},{\"changed_at\":\"2023-08-02 23:03:43 +0000\",\"changed\":[\"encrypted_examples\",\"long_instructions\",\"preload_asset_list\",\"contained_level_names\"],\"changed_by_id\":18602,\"changed_by_email\":\"angelina+levelbuilder@code.org\"}]"
 }]]></config>
   <blocks/>
 </Gamelab>

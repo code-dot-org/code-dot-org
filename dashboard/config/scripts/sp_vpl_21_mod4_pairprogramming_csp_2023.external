@@ -1,0 +1,63 @@
+name 'SP-VPL-21-mod4-PairProgramming-CSP_2023'
+title 'title'
+description 'description here'
+
+markdown <<MARKDOWN
+# Pair programming
+
+<div style="background-color: #a6e3e8; border-radius: 40px 40px 40px 40px; color: #000000; width: 95%; padding: 0.5px 20px 1px 20px;">
+
+<p style="line-height: 1.5; margin-left: 10px; margin-right: 10px; margin-top: 20px; margin-bottom: 20px; font-size: 18px; ">
+Pair programming is a technique in which two programmers work together at one computer. One, the driver, writes code while the other, the navigator, directs the driver on the design and setup of the code. The two programmers switch roles often. 
+ </p>
+ 
+</div>
+<br>
+
+## What is my role as the teacher? 
+
+##### As the teacher, you play a critical role in determining and establishing routines for how your students will use the pair programming strategy. 
+
+
+
+<img src="https://images.code.org/d54edebfb0b0c6c55393276180ae19f9-image-1639783726177.jpg" alt="Two students high-five each other while sitting at desktop computers." width="300px" style="border-radius:10px; float:right; margin: 0 0 40px 40px;">
+
+## Pair programming has been shown to:
+
+* ##### Improve computer science enrollment, retention, and students' performance.
+* ##### Increase students' confidence.
+* ##### Develop students' critical thinking skills.
+* ##### Introduce students to the “real world” working environment. In fact, many university courses and computer science professionals use pair programming to help them problem solve!
+
+
+<div style="clear:both;">
+<details style="background-color: #ececec; padding: 10px; margin-bottom: 10px; border: 1px solid transparent; border-radius: 5px;">
+<summary style="font-size: 1.5em; font-weight: bold;">🤝🏽 How do I begin pair programming with my students?</summary>
+<div style="margin-top: 20px; margin-left: 20px; margin-right: 20px;">
+    <p>
+
+1. ##### Form pairs.
+2. ##### Give each pair one computer.
+3. ##### Decide upon initial roles (driver or navigator).
+4. ##### Have students start working. 
+5. ##### Ensure that students switch roles at regular intervals (every 3 to 5 minutes).
+6. ##### Ensure that the navigators remain active participants. 
+</p></div></details>
+
+<details style="background-color: #ececec; padding: 10px; margin-bottom: 10px; border: 1px solid transparent; border-radius: 5px;">
+<summary style="font-size: 1.5em; font-weight: bold;">🔎 How is pair programming connected to the curriculum?</summary>
+<div style="margin-top: 20px; margin-left: 20px; margin-right: 20px;">
+    <p>
+
+##### In CS Discoveries, there are many lessons on the computer which students develop programming skills. Pair programming can foster a sense of camaraderie and collaboration in the classroom. In addition, pair programming can  promote inclusion by reducing the "confidence gap" between female and male students while increasing all students' programming confidence. 
+</p></div></details>
+
+<details style="background-color: #ececec; padding: 10px; margin-bottom: 10px; border: 1px solid transparent; border-radius: 5px;">
+<summary style="font-size: 1.5em; font-weight: bold;">📝 Additional resources</summary>
+<div style="margin-top: 20px; margin-left: 20px; margin-right: 20px;">
+    <p>
+
+* ##### The ETR Pair Programming Toolkit provides additional strategies for implementing Pair Programming in your classroom. Check it out at: <a href="http://bit.ly/pair-programming-toolkit" target="blank" rel="noopener noreferrer" >http://bit.ly/pair-programming-toolkit</a>   
+* ##### The National Center for Women & Information Technology (NCWIT) has a great resource about the benefits of pair programming. Check it out at: <a href="http://bit.ly/pair-programming-ncwit" target="blank" rel="noopener noreferrer" >http://bit.ly/pair-programming-ncwit</a>     
+</p></div></details>
+MARKDOWN

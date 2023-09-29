@@ -15,7 +15,6 @@ hi:
             '0.75': छोटा
             '1.00': मध्यम
             '2.00': बड़ा
-            '3.00': extra large
       BadGuys_setSize_dropdown:
         options:
           SIZE:
@@ -23,7 +22,6 @@ hi:
             '0.75': छोटा
             '1.00': मध्यम
             '2.00': बड़ा
-            '3.00': extra large
       Dancelab_alternateMoves:
         text: "{GROUP} प्रत्येक {N} संगीत प्रविधियों के बाद \n{MOVE1} और {MOVE2} को बदलता है"
         options:
@@ -449,26 +447,6 @@ hi:
             '18': '18'
             '19': '19'
             '20': '20'
-            '21': '21'
-            '22': '22'
-            '23': '23'
-            '24': '24'
-            '25': '25'
-            '26': '26'
-            '27': '27'
-            '28': '28'
-            '29': '29'
-            '30': '30'
-            '31': '31'
-            '32': '32'
-            '33': '33'
-            '34': '34'
-            '35': '35'
-            '36': '36'
-            '37': '37'
-            '38': '38'
-            '39': '39'
-            '40': '40'
           COSTUME:
             '"ALIEN"': सभी एलियन्स
             '"BEAR"': भालू
@@ -588,7 +566,6 @@ hi:
         text: "{SPRITE} की डांस स्पीड {SPEED} पर सेट करें"
         options:
           SPEED:
-            '1': normal
             '2': तेज़
             '4': अत्यधिक तेज़
             '0.5': धीमा
@@ -611,7 +588,6 @@ hi:
             '"SLOTH"': निष्क्रियता
             '"UNICORN"': गेंडा
           SPEED:
-            '1': normal
             '2': तेज़
             '4': अत्यधिक तेज़
             '0.5': धीमा
@@ -996,8 +972,6 @@ hi:
         options:
           INPUT1:
             '1': नींबू का रस
-            '3': baking soda
-            '5': both
       DansBlocks_setForegroundEffect2:
         text: "{EFFECT} आगे का इफेक्ट डालें"
         options:
@@ -1014,8 +988,6 @@ hi:
         options:
           INPUT1:
             '1': नींबू का रस
-            '3': baking soda
-            '5': both
       FunctionBlocks_communicate:
         text: "{VAR1} को {SPRITE1COSTUME}के साथ संवाद करें"
       FunctionBlocks_makeManipulative2:
@@ -1508,11 +1480,8 @@ hi:
       gamelab_setSpeed_dropdown:
         options:
           SIZE:
-            '1': extra slow
             '3': धीमा
-            '5': normal
             '7': तेज़
-            '9': extra fast
       gamelab_setTint:
         text: "{THIS} का रंग {COLOR} पर सेट करें"
       gamelab_setupScoreboard:
@@ -2043,14 +2012,10 @@ hi:
         options:
           INPUT1:
             '1': नींबू का रस
-            '3': baking soda
-            '5': both
       ParticlesBlocks_setMicroscope:
         options:
           INPUT1:
             '1': नींबू का रस
-            '3': baking soda
-            '5': both
       ParticlesBlocks_statesOfMatter:
         options:
           BEHAVIOR:
@@ -2552,6 +2517,21 @@ hi:
           DIR:
             right: दाएं ↻
             left: बाएं ↺
+      ecosystems_int10:
+        options:
+          VALUE:
+            '1': १
+            '2': '2'
+            '3': '3'
+            '4': '4'
+            '5': '5'
+            '6': '6'
+            '7': '7'
+            '8': '8'
+            '9': '9'
+            '10': '10'
+      storylab_printText:
+        text: प्रिंट करें {TEXT}
       storylab_setForegroundEffect2:
         text: "{EFFECT} आगे का इफेक्ट डालें"
         options:

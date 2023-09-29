@@ -208,7 +208,7 @@ export class CourseBlocksHoc extends Component {
 
 export class CourseBlocksIntl extends Component {
   static propTypes = {
-    isTeacher: PropTypes.bool.isRequired,
+    isTeacher: PropTypes.bool,
     showModernElementaryCourses: PropTypes.bool.isRequired,
   };
 

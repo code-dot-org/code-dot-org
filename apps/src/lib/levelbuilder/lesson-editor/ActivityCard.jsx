@@ -106,35 +106,38 @@ class ActivityCard extends Component {
             ...(this.props.collapsed && {marginBottom: 10}),
           }}
         >
-          {hasLessonPlan && (
-            <div style={styles.activityHeaderComponents}>
-              <div style={styles.inputsAndIcon}>
-                <FontAwesome
-                  icon={this.props.collapsed ? 'expand' : 'compress'}
-                  onClick={this.props.handleCollapse}
+          <div style={styles.activityHeaderComponents}>
+            <div style={styles.inputsAndIcon}>
+              {hasLessonPlan && (
+                <div>
+                  <FontAwesome
+                    icon={this.props.collapsed ? 'expand' : 'compress'}
+                    onClick={this.props.handleCollapse}
+                  />
+                  <label style={styles.labelAndInput}>
+                    <span style={styles.label}>{`Activity:`}</span>
+                    <input
+                      value={activity.displayName}
+                      style={{width: 200}}
+                      onChange={this.handleChangeDisplayName}
+                      className="uitest-activity-name-input"
+                    />
+                  </label>
+                </div>
+              )}
+              <label style={styles.labelAndInput}>
+                <span style={styles.label}>{`Duration:`}</span>
+                <input
+                  value={activity.duration}
+                  style={{width: 35}}
+                  onChange={this.handleChangeDuration}
+                  className="uitest-activity-duration-input"
                 />
-
-                <label style={styles.labelAndInput}>
-                  <span style={styles.label}>{`Activity:`}</span>
-                  <input
-                    value={activity.displayName}
-                    style={{width: 200}}
-                    onChange={this.handleChangeDisplayName}
-                    className="uitest-activity-name-input"
-                  />
-                </label>
-                <label style={styles.labelAndInput}>
-                  <span style={styles.label}>{`Duration:`}</span>
-                  <input
-                    value={activity.duration}
-                    style={{width: 35}}
-                    onChange={this.handleChangeDuration}
-                    className="uitest-activity-duration-input"
-                  />
-                  <span style={{fontSize: 10}}>{'(mins)'}</span>
-                </label>
-              </div>
-              {(allowMajorCurriculumChanges || levelsInActivity === 0) && (
+                <span style={{fontSize: 10}}>{'(mins)'}</span>
+              </label>
+            </div>
+            {hasLessonPlan &&
+              (allowMajorCurriculumChanges || levelsInActivity === 0) && (
                 <OrderControls
                   name={activity.displayName || 'Unnamed Activity'}
                   move={this.handleMoveActivity}
@@ -143,8 +146,7 @@ class ActivityCard extends Component {
                   itemType={'activity'}
                 />
               )}
-            </div>
-          )}
+          </div>
         </div>
         <div style={styles.activityBody} hidden={this.props.collapsed}>
           {activity.activitySections.map(section => (

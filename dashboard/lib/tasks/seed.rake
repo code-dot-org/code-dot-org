@@ -20,8 +20,8 @@ module CustomRake
 end
 
 module TimedTask
-  def timed_task(*args, &block)
-    CustomRake::TimedTask.define_task(*args, &block)
+  def timed_task(...)
+    CustomRake::TimedTask.define_task(...)
   end
 end
 
@@ -150,7 +150,7 @@ namespace :seed do
     # optionally, only process modified scripts to speed up seed time
     scripts_seeded_mtime = (opts[:incremental] && File.exist?(SEEDED)) ?
       File.mtime(SEEDED) : Time.at(0)
-    touch SEEDED # touch seeded "early" to reduce race conditions
+    FileUtils.touch(SEEDED) # touch seeded "early" to reduce race conditions
     script_files = opts[:script_files] || SCRIPTS_GLOB
     begin
       custom_scripts = script_files.select {|script| File.mtime(script) > scripts_seeded_mtime}
@@ -160,7 +160,7 @@ namespace :seed do
         raise exception, "Error parsing script file #{filepath}: #{exception}"
       end
     rescue
-      rm SEEDED # if we failed somewhere in the process, we may have seeded some Scripts, but not all that we were supposed to.
+      FileUtils.rm(SEEDED) # if we failed somewhere in the process, we may have seeded some Scripts, but not all that we were supposed to.
       raise
     end
   end
@@ -227,7 +227,7 @@ namespace :seed do
   DSLS_GLOB = DSL_TYPES.map {|x| Dir.glob("config/scripts/**/*.#{x.underscore}*").sort}.flatten.freeze
   file 'config/scripts/.dsls_seeded' => DSLS_GLOB do |t|
     Rake::Task['seed:dsls'].invoke
-    touch t.name
+    FileUtils.touch(t.name)
   end
 
   # explicit execution of "seed:dsls"

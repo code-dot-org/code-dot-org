@@ -213,6 +213,28 @@ ca:
         studio_playlab_8: Pots afegir un bloc d'anotar un punt i un bloc que reprodueix un so quan l'unicorn corre cap al mag i llavors moure'l amb les fletxes fins que  facis punt?
         studio_playlab_9: Fes el fons per a aquesta invasió alienígena i ajuda el Robot Espacial a obtenir a l'alien més ràpid canviant la seva velocitat. Llavors mou-lo amb les tecles de fletxa per arribar al Robot Espacial i avisa tothom
         studio_playlab_10: Crea el teu propi joc. Quan hagis acabat, fes clic a Finalitza per fer que els teus amics provin el teu joc als seus mòbils.
+        studio_iceage_hello1: Sid vol reunir a tots per a una nova aventura. Pots ajudar-lo a dir “hola” arrossegant el bloc “dir” cap a fora a l'àrea de treball i escrivint la paraula “hola” dins?
+        studio_iceage_hello2: Manny (actor 1) va trobar Sid (actor 2) i vol convidar-lo a l'aventura. Ajuda'ls a saludar-se utilitzant el bloc “actor dir” dues vegades.
+        studio_iceage_move_to_flag: Scrat busca la seva gla! Ajuda-li a anar els últims 200 píxels utilitzant el bloc “moure”.
+        studio_iceage_move_to_actor: Diego (actor 1) està buscant Manny (actor 2). Ajuda Diego a moure 200 píxels cap avall a Manny utilitzant el bloc “moure actor”. A continuació, connecteu un bloc a l'esdeveniment “quan toca l'actor” per reproduir un so quan es trobin.
+        studio_iceage_repeat: El bloc “repetiu per sempre” us permet executar codi contínuament. Podeu adjuntar-hi blocs per ajudar l'àvia a fer una mica d'exercici movent a l'esquerra i a la dreta repetidament?
+        studio_iceage_click_hello: Pot ajudar a Sid fer una trucada final per als amics quan es fa clic? No us oblideu de fer clic en ell després de colpejar Run.
+        studio_iceage_move_events: Scrat encara busca glans! Ajuda-li estafador voltant adjuntant el bloc “moure” a cada un dels esdeveniments i el canvi de la direcció a treballar per a cada tecla de fletxa. Quan hàgiu acabat, feu clic a Executar i tractar de recollir totes les glans.
+        studio_iceage_sound_and_points: Hem proporcionat la major part del codi que manté Granny moure cap a l'esquerra i la dreta, així com el codi per moure Sid al voltant de la pantalla. Podeu acabar el codi i afegir blocs a l'esdeveniment “quan toca l'actor” per fer-ho de manera que tots dos reproduïu un so i anoteu un punt quan Sid i Granny xoquen? Premeu Run per jugar el joc.
+        studio_iceage_warn_ice_age: Tothom ha de moure's més ràpid perquè arriba una edat de gel! Canvieu el fons a un fons gelat i configureu la velocitat de Sid a ràpida i, a continuació, premeu Run i moveu-lo a Diego per avisar-lo.
+        studio_iceage_throw_hearts: Sid vol deixar que la seva àvia, l'àvia, sàpiga que l'estima. Utilitzeu el comandament “tir actor” per tenir Sid (actor 1) llançar cors a l'àvia (actor 2)! Estableix l'estat d'ànim de l'àvia a feliç quan es colpeja amb els cors.
+        studio_iceage_free_play: Temps per crear el teu propi joc o història! Quan hagueu acabat, feu clic a Finish per deixar que els amics provin el vostre joc en els seus telèfons, tauletes o ordinadors.
+        studio_gumball_hello1: Anais vol fer nous amics. Pots ajudar-la a dir “hola” arrossegant el bloc “dir” cap a fora a l'àrea de treball i escrivint la paraula “hola” dins?
+        studio_gumball_hello2: Darwin (actor 1) i el seu germà Gumball (actor 2) es dirigeixen a l'escola. Ajudeu-los a saludar-se utilitzant el bloc de “dir actor” dues vegades.
+        studio_gumball_move_to_flag: Banana Joe està a punt de guanyar una cursa d'un dia de camp! Ajuda-li a anar els últims 200 píxels utilitzant el bloc “moure”.
+        studio_gumball_move_to_actor: Gumball (actor 1) i Darwin (actor 2) arriben tard al dia de camp! Ajuda Gumball moure 200 píxels cap avall a Darwin utilitzant el bloc “moure actor”. A continuació, connecteu un bloc a l'esdeveniment “quan toca l'actor” per reproduir un so quan es trobin.
+        studio_gumball_repeat: El bloc “repetiu per sempre” us permet executar codi contínuament. Podeu adjuntar-hi blocs per ajudar Gumball a escalfar-se per a la seva carrera movent a l'esquerra i a la dreta repetidament?
+        studio_gumball_click_hello: Pots ajudar l'Anton a anunciar l'inici d'una cursa dient “Preparat, set, vaja!”? Per provar el seu programa, no us oblideu de fer clic a Anton després de fer clic a Executar!
+        studio_gumball_move_events: Darwin està en el concurs de recollida de banderes! Ajuda-li a córrer adjuntant el bloc de “moviment” a cada un dels esdeveniments. Quan hàgiu acabat, feu clic a Executar i tractar de recollir totes les banderes.
+        studio_gumball_sound_and_points: Hem proporcionat la major part del codi que manté Anton (actor 2) en moviment cap a l'esquerra i la dreta, així com el codi per moure Banana Joe (actor 1) al voltant de la pantalla. Podeu acabar el codi i afegir blocs a l'esdeveniment “quan toca l'actor” per fer-ho de manera que tots dos reproduïu un so i anoteu un punt quan el Banana Joe i l'Anton xoquen? Premeu Run per jugar el joc.
+        studio_gumball_warn_food_fight: Darwin acaba d'escapar d'una baralla d'aliments! Canvieu el fons a “caràcters” i configureu la velocitat de Darwin a ràpida, després premeu Run i moveu-lo a Penny per avisar-la.
+        studio_gumball_join_food_fight: Uneix-te a la lluita alimentària! Utilitzeu la comanda “actor tirar element a la dreta” per tenir Banana Joe (actor 1) llençar menjar a Anton (actor 2)! Posar l'estat d'ànim d'Anton a enfadar-se quan és colpejat.
+        studio_gumball_free_play: Crea el teu propi joc o història. Quan hagueu acabat, feu clic a Finish per deixar que els amics provin el vostre joc en els seus telèfons, tauletes o ordinadors.
         studio_full_sandbox: Crea el teu propi joc. Quan hagis acabat, fes clic a Finalitza per fer que els teus amics provin el teu joc als seus mòbils.
         studio_k1_1: Pots fer que aquest gos digui "hola món"?
         studio_k1_2: Pots fer que el gos digui alguna cosa i després ho digui el gat?
@@ -332,14 +354,22 @@ ca:
         C4_unplugged_parameters: Composició amb paràmetres
         C4_unplugged_binary: Binari
         CSF_a_b_artist_loops: Bucles a l'Artista
+        CSF_artist_angles: Angles en artista
         CSF_collector_k1_blocks: 'Fonaments de CS: La col·leccionista'
         CSF_collector_repeat_loops: Bucles de repetir a La col·leccionista
         CSF_collector_text_blocks: 'Fonaments de CS: La col·leccionista'
+        CSF_create_functions: Crear funcions
         CSF_debugging_k1_blocks: Depuració
         CSF_debugging_text_blocks: Depuració
+        CSF_EF_cs_matters: Ciències de la Computació
         CSF_maze_intro_k1_blocks: Introducció a Code Studio
         CSF_maze_intro_text_blocks: Introducció a Code Studio
         CSF_my_robotic_friends: Els meus amics robòtics
+        CSF_Power_of_Words: Poder de les paraules
+        CSF_Super_Digital_Citizen: Súper ciutadà digital
+        CSF_stevie_big_project: Stevie i el gran projecte
+        CSF_unspotted_bugs: Bugs sense taques
+        CSF_zuck_loops_short: Repetiu els bucles
         frozen_intro: Introducció a l'Hora del Codi
         frozen_loops: Introducció als bucles
         frozen_functions: Introducció a les funcions
@@ -350,6 +380,23 @@ ca:
         infinity_playlab_intro: Play Lab - introducció
         infinity_playlab_events: Play Lab - esdeveniments
         infinity_playlab_repeat_forever: Play Lab - repeteix per sempre
+        csd_concept_how_computers_work: Presentació de Com funcionen els ordinadors
+        csd_concept_computer: 'Com funcionen els ordinadors: què fa que un ordinador, un ordinador?'
+        csd_concept_binary_data: 'Com funcionen els ordinadors: binaris i dades'
+        csd_concept_circuits_logic: 'Com funcionen els ordinadors: circuits i lògica'
+        csd_concept_memory_cpu_input_output: 'Com funcionen els ordinadors: memòria, CPU, entrada i sortida'
+        csd_concept_hardware_software: 'Com funcionen els ordinadors: maquinari i programari'
+        csd_concept_search: Com funciona la cerca
+        csd_external_amazon_data: Com s'utilitza el Big Data en els sistemes de recomanació d'Amazon per canviar les nostres vides
+        csd_external_netflix_data: Com fa Netflix programa de televisió i suggeriments de pel·lícules?
+        csd_external_waze_data: Per què tants usuaris estan obsessionats amb Waze?
+        csd_gamelab_animation_tab: La pestanya Animació
+        csd_gamelab_velocity: Velocitat
+        csd_weblab_intro_1: Introducció al Web Lab - Part 1
+        csd_weblab_intro_2: Introducció al Web Lab - Part 2
+        csd_weblab_css_1: Introducció al CSS - Part 1
+        csd_weblab_css_2: Introducció al CSS - Part 2
+        csd_weblab_intro_3: Introducció al Web Lab - Part 3
         csp_applab_functions: Introducció a les funcions
         csp_applab_functions_parameters: Funcions amb Paràmetres
         csp_applab_loops: Bucles
@@ -366,40 +413,298 @@ ca:
         mc_if_statements: Minecraft - Condicionals amb si
         mc_congrats_share: Minecraft - Enhorabona
         mc_congrats_no_share: Minecraft - Enhorabona
+        gumball_intro: Hora del Codi de Gumball - Introducció
+        gumball_events: Gumball Hour of Code - Esdeveniments
+        gumball_repeat: Hora del Codi de Gumball - Repetir declaracions
+        iceage_intro: Ice Age Hour of Code - Introducció
+        iceage_events: Ice Age Hour of Code - Esdeveniments
+        iceage_repeat: Ice Age Hour of Code - Repetir declaracions
+        mc_2016_intro: Minecraft Hora del Codi - Introducció
+        mc_2016_loops: Minecraft Hora del Codi - Loops
+        mc_2016_events: Minecraft Hora del Codi - Esdeveniments
+        mc_2016_spawn: Minecraft Hora del Codi - Spawn
+        mc_2016_congrats: Minecraft Hora del Codi - Felicitacions
+        applab_hoc_welcome: App Lab Hora del Codi - Benvingut
+        applab_hoc_setproperty: App Lab Hora de Codi - SetProperty
+        applab_hoc_onevent: App Lab Hora del Codi - OnEvent
+        applab_hoc_designmode: Hora del codi APPLab - Mode de disseny
+        applab_hoc_share: Hora del Codi APPLab - Compartir
         mc_2017_agent_intro: L'Hora del Codi amb Minecraft - L'agent
+        mc_2017_repeat: Minecraft Hora del Codi - Repetir bucles
+        mc_2017_functions: Minecraft Hora del Codi - Funcions
+        mc_2017_congratulations: Minecraft Hora del Codi - Felicitacions
         mc_2017_puzzle_1: L'Hora del Codi amb Minecraft - L'agent
+        mc_2017_puzzle_3: Minecraft Hora del Codi - Repetir bucles
+        mc_2017_puzzle_8: Minecraft Hora del Codi - Funcions
+        mc_2017_puzzle_12: Minecraft Hora del Codi - Freeplay
+        hint_videos_d_11_3_first: 'Vídeos de pista: D.11.3 Primer'
+        hint_videos_d_11_3_last: 'Vídeos de pista: D.11.3 Últim'
+        hint_videos_d_11_4_first: 'Vídeos de pista: D.11.4 Primer'
+        hint_videos_d_11_4_last: 'Vídeos de pista: D.11.4 Últim'
+        hint_videos_d_11_5_first: 'Vídeos de pista: D.11.5 Primer'
+        hint_videos_d_11_5_last: 'Vídeos de pista: D.11.5 Últim'
+        hint_videos_d_11_6_first: 'Vídeos de pista: D.11.6 Primer'
+        hint_videos_d_11_6_last: 'Vídeos de pista: D.11.6 Últim'
+        hint_videos_d_11_7_first: 'Vídeos de pista: D.11.7 Primer'
+        hint_videos_d_11_7_last: 'Vídeos de pista: D.11.7 Últim'
+        hint_videos_d_11_9_first: 'Vídeos de pista: D.11.9 Primer'
+        hint_videos_d_11_9_last: 'Vídeos de pista: D.11.9 Últim'
+        hint_videos_d_11_11_first: 'Vídeos de pista: D.11.11 Primer'
+        hint_videos_d_11_11_last: 'Vídeos de pista: D.11.11 Últim'
+        applab_intro_welcome: App Lab - Com començar
+        applab_intro_events: 'App Lab: fes-ho interactiu'
+        applab_intro_sounds: App Lab - Imatges i Sons
+        applab_intro_designmode: App Lab - Mode de disseny
+        applab_intro_share: 'App Lab: comparteix la teva aplicació'
+        csd_applab_arrays: Introducció a les matrius
         CSF_skinOverview_Harvester: L'agricultora
+        CSF_bb8_skinOverview_C-F: BB-8
+        CSF_bb8_skinOverview_K-1: BB-8
+        CSF_bb8_loops_C-F: Bucles amb BB-8
         CSF_harvester_skinOverview_K-1: L'agricultora
+        CSF_harvester_loops_K1: Bucles en Harvester
         CSF_scrat_loops_K1: Bucles a l'Edat de Gel
         CSF_scrat_loops_CF: Bucles a l'Edat de Gel
+        CSF_if_allskins: El bloc Si
+        CSF_ifelse_allskins: Utilitzant If/Else Blocs
+        CSF_ifelseifelse_allskins: Ús de blocs IF/Elseif/Else
         CSF_loops_AB: Bucles
+        csd_gamelab_booleans: Expressions booleanes
+        csd_gamelab_conditional_statements: Declaracions Condicionals
+        csd_gamelab_if_else: Declaracions si/Else
         CSF_SpriteLabIntro_CDEF: El Laboratori d'Sprites
+        CSF_Spritelab_MakeSprite_CDEF: Com fer un Sprite a Sprite Lab
         CDEF_Video_SpritesInAction: Sprites en acció
         CSF_SpriteLab_SpritesInAction_CDEF: Sprites en acció
+        CSF_StarWars_ProjectIntro: Introducció al projecte Star Wars
         mc_2018_intro: 'Introducció a Minecraft: Viatge aquàtic'
+        MC_2018_loops: 'Minecraft: viatge aquàtic repetir fins'
+        mc_2018_conditionals: 'Minecraft: Viatge condicionals aquàtics'
+        mc_2018_closing: 'Minecraft: Felicitacions aquàtiques Viatge'
+        hoc_dance_warmup: Festa de ball - Warm Up
         hoc_dance_properties: Festa de ball - Propietats
+        hoc_dance_congrats: Festa de ball - Festa On!
         c_and_c_great_to_create: No hi ha res com crear i utilitzar de manera justa
         c_and_c_digital_sharing: Compartir continguts digitals
+        teaching_csf_how_it_works: 'Didàctica dels fonaments CS: Com funciona el curs'
+        elem_pd_2: Ciències de la Computació de l'Escola Primària - PD vídeo 2/2
+        what_is_cs: Què és la informàtica?
+        repeat_block: Utilitzant el bloc de repetició
+        lesson_planning: Planificació de la lliçó
+        opd_closing: 'Fonaments de l''ensenyament CS: Tancament i passos següents'
+        why_unplugged_lessons: Aconseguir “unplugged”
+        writing_first_program: Escriure el seu primer programa d'ordinador
+        conditionals_with_cards: Unplugged Lliçó d'acció - Condicionals amb Targetes
+        songwriting_with_functions: 'Unplugged Lliçó en acció: escriptura de cançons amb funcions'
+        what_is_an_event: Què és un esdeveniment?
+        teaching_cs_pair_programming: 'Didàctica dels fonaments CS: Programació de parells'
+        teaching_problem_solving: 'Didàctica dels fonaments CS: Ensenyament de la resolució de problemes'
+        csd_applab_designmode: 'CS Discoveries: App Lab - Mode de disseny'
         csd_pair_programming: Programació per parelles
+        csd_gamelab_functions: Funcions de crida i definició
         csd_applab_parameters: Funcions amb Paràmetres
+        csd_applab_loops: Bucles en App Lab
+        csd_problem_solving_process: El procés de resolució de problemes
         CSF_Going_Places_Safely: El meu barri d'internet
         CSF_SpriteLab_Intro_v2: Introducció al Laboratori d'Sprites
         CSF_Spritelab_MakeSprite_v2: Com crear un sprite
         CSF_SpriteLab_SpritesInAction_v2: Sprites en acció
         csd_debugging: Depuració
+        csd_applab_designmode_short: Mode de disseny d'aplicacions de laboratori
+        csp-pd-welcome: Benvinguts a la família!
+        CSF-Teaching-Problem-Solving: CSF Ensenyament Resolució de Problemes
+        u5-traversals-get-list-explanation: Code.org [levelbuilder] - Vídeo pilot - Bloc de dades
+        u7-libraries-explanation: 'App Lab: feu els vostres propis blocs: com utilitzar biblioteques'
+        how-to-k5-workshops: 'Fonaments CS de Code.org: Provat per a nens, aprovat pel professor'
+        why-should-teach-unplugged-activities: 'Preguntes més freqüents: Per què he d''ensenyar activitats “unplugged”?'
+        cs-principles-intro-to-objects: 'Principis CS: Introducció a objectes'
         oceans_machine_learning: Aprenentatge automàtic
+        oceans_training_data: Dades de formació
+        oceans_societal_implications: Implicacions de la societat
+        hoc_dance_congrats_2019: Festa de ball - Festa On!
+        hoc_dance_warmup_2019: Festa de ball - Warm Up
+        hoc_dance_measures_2019: Festa de ball - Mesures
         hoc_dance_properties_2019: Festa de ball - Propietats
+        csd_what_computers_do: Què fan els ordinadors?
         csf_my_online_neighborhood_2020: El meu barri d'internet
+        csf_follow_the_digital_trail: Segueix el Trail Digital
         csf_private_and_personal_information: Informació privada i personal
+        csd_what_computers_are: Què és un ordinador?
+        csd_how_teamwork_works: Com funciona el treball en equip
+        csd_teamwork_and_disagreement: Treball en equip - Tractar amb desacord
+        csf21pilot_events: 'Sprite Lab: Sprites en acció'
         csf21pilot_prompts: 'Laboratori d''Sprites: Text i preguntes'
+        csd_ml_intro_to_ai_lab: Introducció a AI Lab
+        csd_ml_import_model: Importació d'un model AI
+        csf_lots_of_sprites: 'Sprite Lab: un munt de sprites'
         playlab_2021: Introducció a Play Lab
         playlab_2021_reader: Introducció a Play Lab
+        csp_defining_calling_functions: Definició i trucades de funcions
+        csp_tutorial_datatab: Pestanya Dades en App Lab
+        csp_tutorial_libraries: Biblioteques a l'App Lab
+        PL-Video-21: Benvingut a l'aprenentatge professional de Code.org!
+        csp_tutorial_datavis1: Visualitzador de dades en App Lab - Part 1
+        csp_tutorial_datavis2: Visualitzador de dades en App Lab - Part 2
+        csd_ml_intro_ai_lab_july2021: Introducció a AI Lab
+        csd_ml_training_testing_ai_lan: Formació i proves en AI Lab
+        csd_ml_model_cards_july2021: Targetes de model en AI Lab
+        csd_ml_numerical_ai_lab: Dades numèriques en AI Lab
+        Gettting_Started_Progress: Progrés, retroalimentació i avaluació
+        Gettting_Started_ClassSection: Creació d'una secció de classe
+        Gettting_Started_StudentExperience: L'experiència de l'estudiant
+        Getting_Started_BasicFeatures: Serveis bàsics de Code.org
+        PL_overview_CSD: Què és Computer Science Discoveries?
+        PL_CSD_TeacherTips_Advise: 'Consells per a professors: consells per a professors nous'
+        PL_CSD_TeacherTips_IntroToCSD: Consells per a professors - Introducció als descobriments CS
+        PL_CSD_TeacherTips_ProblemSolvingProcess: 'Consells per al professor: el procés de resolució de problemes'
+        PL_CSD_TeacherTips_PairProgramming: 'Consells per a professors: programació de parells'
+        PL_CSD_TeacherTips_Debugging: Consells per al professorat - Depuració
+        PL_CSD_TeacherTips_LeadLearner: 'Consells per a professors: aprenent principal'
+        poembot-playtest-intro: PoemBot Playtest Introducció
+        poembot-playtest-sprites: PoemBot Playtest Sprites
+        poembot-playtest-events: PoemBot Playtest Esdeveniments
+        hello_world_intro: Hola món - Benvingut a Sprite Lab
+        hello_world_events: Hola Món - Programació amb Esdeveniments
+        hello_world_congrats: 'Hola món: feu el que vulgueu'
+        csp_global_vs_local: Depuració de variables globals vs. locals
+        rough_poemart_intro: v1 Poema Art Introducció
+        rough_poemart_events: v1 Esdeveniments Poema Art
+        rough_poemart_imagery: v1 Poema Art Imagery
+        rough_poemart_congrats: v1 Poema Art Congrats
+        poetry_module_variables: Variables - Codificació amb Poesia
+        poetry_module_textandvariables: Text & Variables - Codificació amb Poesia
+        poetry_module_planningapp: Planificació de la seva aplicació Generador de Poemes - Codificació amb Poesia
+        poetry_module_multichoiceprompts: 'Sol·licitud d''elecció múltiple: codificació amb poesia'
+        poetry_module_conditionals: Condicionals - Codificació amb Poesia
         poemart_intro: L'art del poema - Introducció
+        poemart_events: Esdeveniments Poema Art
+        poemart_imagery: Imatges d'art poema
+        poemart_celebration: Poema Art Celebració
+        csd_u6_variables_part2: Variables - El patró de comptador
+        csd_ml_ethics_ai: 'Ètica i IA '
         outbreak_intro: 'Simulador de brots: Introducció'
+        outbreak_events: 'Erupt Simulator: Esdeveniments'
+        outbreak_scientist: 'Simulador de brot: pensar com un científic'
+        outbreak_outro: 'Simulador de brot: joc lliure'
+        PL_overview_CSP: Què és Computer Science Principis?
+        PL_CSP_EIPMOverview: Guia de lliçons de l'EIPM
+        CSA-PL-debugging-temp: Introducció a la Depuració en Java Lab - temp
+        csd_app_lab_design_mode: Mode de disseny de laboratori d'aplicacions CSD
+        csd_app_lab_events: CSD App Lab Esdeveniments
+        PL_CSD_Unit4_AppTesting: Prova de prototips de paper
+        csd_u6_circuit_playground: Informàtica Física
+        CSA-PL-for-loops: Per a bucles en Java
+        CSA-PL-variables: Creació de variables en Java
         PL_CS_Journeys_Overview: Viatges informàtics
+        CSA-PL-intro-to-java-lab: Conceptes bàsics de Java Lab
+        CSA-PL-first-program: Escriure un programa en Java
+        CSD_u6_variables_part1: 'CSD: Variables'
+        csd_u6_if_statements: 'CSD: Si declaracions'
+        csc-poem-art-intro: Introducció de vídeo
+        csc-poem-art-outro: Outro Video
+        csd_u6_call_define_functions: 'CSD: Funcions de crida i definició'
         csp_applab_parameters: Funcions amb Paràmetres
+        starquilts_intro_artist: Introducció a Star edredons
+        CSA-PL-intro-to-arrays: Unidimensional (1D) Matrius
+        CSA-PL-1d-arrays-new-values: Introducció de valors en matrius 1D
+        CSA-PL-conditionals: Declaracions condicionals en Java
+        CSA-PL-two-way-selection: Selecció bidireccional
+        CSA-PL-Printing-in-Java: Impressió en Java
+        CSA-PL-multi-selection-statements: Declaracions de selecció múltiple
+        PL_CSP_TeacherTips_Advice: 'Consells per a professors: Consells per a nous professors de CS'
+        PL_CSP_TeacherTips_IntroToCSP: 'Consells per al professor: Introducció als principis CS'
+        PL_CSP_TeacherTips_Debugging: 'Consells per al professor: Ajuda amb la depuració'
+        PL_CSP_TeacherTips_LeadLearner: 'Consells per al professor: Com ser un aprenent principal'
+        PL_CSP_TeacherTips_APExam: 'Consells per al professor: Preparació per a l''examen AP'
+        PL_CSP_TeacherTips_EIPM: 'Consells per al professorat: el procés EIPM'
+        PL_CSD_CircuitPlayground_Overview: Visió general del circuit de jocs
+        CSA-PL-debugging-22: Depuració en Java Lab
+        CSD_Unit6_InteractiveArtExemplar: Exemplar Art Interactiu
         CS_Changing_Everything: La informàtica ho està canviant tot
+        csa-alias-video: Iguals i Àlies
+        csa-equals-video: El mètode equals ()
+        csa-user-stories: Històries d'usuari en Enginyeria del Programari
+        csa-pl-vpl-m1-unit-3: Enginyeria del Programari en la Unitat 3
+        csa-pl-intro-to-equality: Introducció a la Igualtat
+        csa-pl-intro-to-equals-method: Introducció al mètode .equals ()
+        csa-pl-equals-book: Escriure el mètode equals () per a la classe Llibre
+        csa-multi-select-pl: Declaracions de selecció múltiple en Java
+        csc_timecapsule_intro: Introducció de la càpsula del temps
+        PL_Equity_in_CS_Education: Equitat en CS Educació
+        csc_fm_pilot: Funció Màquines (Pilot)
+        csc_fm_pilot_v2: 'Funció Màquines Introducció '
+        csc-sprite-lab-pixel-editor: Dibuixa el teu propi Sprite
+        csa-pl-intro-to-strings: Introducció a les cadenes en Java
+        csa-pl-compareTo: El mètode compareTo ()
+        csc-event-short-intro: Esdeveniments Curts Intro
+        PL_CSD_CircuitPlayground_Overview_AppsWithDevices: Descripció general de la unitat de circuit de jocs
+        csa-day-in-pm-pl: Què fa un gestor de projectes?
+        csa-pl-intro-to-pm: Introducció a la Gestió de Projectes
+        PL_CSD_CircuitPlayground_Setup: Configuració del circuit de jocs
+        csa_object_oriented_programming: 'CSA: Programació Orientada a Objectes'
+        csa_creating_objects: 'CSA: Creació d''objectes'
+        csa_calling_methods: 'CSA: Mètodes de trucada'
+        csa_while_loops: 'CSA: Mentre bucles'
+        csa_inheritance: 'CSA: Herència'
+        csa_writing_a_method: 'CSA: Escriure un mètode'
+        csa_software_engineering_code_reviews: 'CSA: Enginyeria del Programari - Ressenyes de codi'
+        csa_conditional_statements: 'CSA: Declaracions Condicionals'
+        csa_printing_in_java: 'CSA: Impressió en Java'
+        csa_two_way_selection_and_not: 'CSA: Selecció bidireccional i NO'
+        csa-pl-intro-to-oop: Introducció a la Programació Orientada a Objectes
+        csa-pl-welcome-to-Neighborhood: Benvinguts a El Barri
+        csa-pl-calling-methods: Mètodes de trucada en Java
+        csa-pl-creating-objects: Creació d'objectes
+        csa_accessor_methods: 'CSA: Mètodes d''accessoris'
+        csa_constructors: 'CSA: Constructors'
+        csa_creating_a_scanner_object: 'CSA: Creació d''un objecte d''escàner'
+        csa_creating_variables: 'CSA: Creació de variables'
+        csa_instance_variables_and_attributes: 'CSA: Variables d''instància i atributs'
+        csa_mutator_methods: 'CSA: Mètodes mutador'
+        csa_overloaded_constructors: 'CSA: Constructors sobrecarregats'
+        csa_the_tostring_method: 'CSA: El mètode toString ()'
+        csa_scanner_class_methods: 'CSA: Mètodes de classe d''escàner'
+        csa_for_loops: 'CSA: Per bucles'
+        csa_enhanced_for_loops: 'CSA: millorada per bucles'
+        csa_modifying_values_in_a_1d_array: 'CSA: Modificació de valors en una matriu 1D'
+        csa_nested_loops: 'CSA: Bucles niats'
+        csa_one_dimensional_arrays: 'CSA: unidimensional (1D) Matrius'
+        csa_polymorphism: 'CSA: Polimorfisme'
+        csa_casting: 'CSA: Fosa'
+        csa_equals_and_aliases: 'CSA: Iguals i Àlies'
+        csa_multi-selection_statements: 'CSA: Declaracions de selecció múltiple'
+        csa_random_numbers: 'CSA: Nombres aleatoris'
+        csa_static_methods: 'CSA: Mètodes estàtics'
+        csa_static_variables: 'CSA: Variables estàtiques'
+        csa_the_equals_method: 'CSA: El mètode iguals ()'
+        csa_welcome_to_the_theater: 'CSA: Benvinguts al Teatre'
+        enter_your_own_poem: Introduïu el vostre propi poema
+        csa-example-solution-1: 'Live Coding una solució d''exemple '
         csd_sprite_properties: Propietats de l'sprite
+        csa-pl-documentation: Documentació en Java Lab
+        csc-starquilts-intro: 'CSC: Edredons estrella'
+        csc-mapmakers-intro: csc-mapejarmonuments
+        csa-pl-vocab-pm: Vocabulari de gestió
+        csc-ecosystems-intro: Ecosistemes Introducció
+        PL_CSD_MicroBit_Intro: Introducció al micro:bit
+        csc_animal_adaptations_intro: Adaptacions d'animals Introducció
+        csa_two_dimensional_arrays: 'CSA: Arrays bidimensionals (2D)'
+        csa_working_with_2d_array_elements: 'CSA: Treballar amb elements de matriu 2D'
+        csa_row_major_traversal: 'CSA: Row-Major Traversal'
+        csa_column_major_traversal: 'CSA: Columna-Traversal Major'
+        csa_enhanced_for_loops_and_2d_arrays: 'CSA: millorat per bucles i matrius 2D'
+        csa_images_and_pixels: 'CSA: Imatges i píxels'
+        csa_wrapper_classes_part_1: 'CSA: Classes d''embolcall Part 1'
+        csa_wrapper_classes_part_2: 'CSA: Classes d''embolcall Part 2'
+        csa_the_arraylist_class: 'CSA: La classe ArrayList'
+        csa_working_with_arraylist_data: 'CSA: Treballar amb ArrayList Dades'
+        csa_remving_data_from_an_arraylist: 'CSA: Eliminació de dades d''un ArrayList'
+        csa_private_methods: 'CSA: Mètodes privats'
+        csa_recursion: 'CSA: Recursivitat'
+        csa_searching_algorithms: 'CSA: Algorismes de cerca'
+        csa_sorting_algorithms: 'CSA: Algorismes d''ordenació'
+        star_quilts_intro_to_artist: 'Edredons estrella: Introducció a l''artista'
+        upload_sprites_backgrounds: Pujar sprites i fons personalitzats
     callout:
       text:
         drag_blocks: Arrossegueu un bloc "mou" i enganxeu-lo sota l'altre bloc

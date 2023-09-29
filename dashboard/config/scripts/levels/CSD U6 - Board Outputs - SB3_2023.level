@@ -1,5 +1,6 @@
 <Applab>
   <config><![CDATA[{
+  "published": true,
   "game_id": 41,
   "created_at": "2022-09-21T13:10:49.000Z",
   "level_num": "custom",
@@ -47,15 +48,15 @@
     "expand_debugger": "false",
     "fail_on_lint_errors": "false",
     "debugger_disabled": "false",
-    "makerlab_enabled": "true",
-    "palette_category_at_start": "Circuit",
+    "makerlab_enabled": "circuitPlayground",
     "long_instructions": "# Buzzer Duration\r\n\r\nThe [`buzzer.frequency()`(#f78183)](/docs/applab/buzzer.frequency/) block has two parameters: frequency and duration.\r\n- Frequency changes how the buzzer sounds. The bigger the number you give it, the higher the buzzer's sound will be.\r\n- Duration determines how long the buzzer is going to play a sound for in milliseconds. 1000 milliseconds is the same as 1 second.\r\n\r\nYou can read more about how the buzzer works by [clicking here](/docs/concepts/maker-toolkit/producing-output/). For right now we're going to focus on duration, the second parameter.\r\n\r\n## Do this\r\n1) Drag out a frequency block to each of the events\r\n2) Change the second parameter so the buttons play sounds for different lengths\r\n\r\n",
     "top_level_procedure_autopopulate": "false",
     "parent_level_id": 20396,
     "name_suffix": "_2023",
     "reference_links": [
       "/courses/csd-2022/guides/responding-to-user-input",
-      "/courses/csd-2022/guides/producing-output"
+      "/courses/csd-2022/guides/producing-output",
+      "/maker/setup"
     ],
     "map_reference": "/courses/csd-2022/guides/circuit-playground",
     "mini_rubric": "false",
@@ -70,9 +71,8 @@
     "encrypted_examples": "ePyEQSG1wXKt8fuLTejqhUkw8wi8kvnIiUXZCRzzspx5tlXSkhbAzKacT5ci\nxrUb9ENJ9vtTFrQqbvK8B5FDcA==\n",
     "preload_asset_list": null
   },
-  "published": true,
   "notes": "",
-  "audit_log": "[{\"changed_at\":\"2022-09-21T13:10:49.925+00:00\",\"changed\":[\"cloned from \\\"CSD U6 - Board Outputs - SB3_2222\\\"\"],\"cloned_from\":\"CSD U6 - Board Outputs - SB3_2222\"}]"
+  "audit_log": "[{\"changed_at\":\"2022-09-21T13:10:49.925+00:00\",\"changed\":[\"cloned from \\\"CSD U6 - Board Outputs - SB3_2222\\\"\"],\"cloned_from\":\"CSD U6 - Board Outputs - SB3_2222\"},{\"changed_at\":\"2023-08-16 17:04:05 +0000\",\"changed\":[\"code_functions\",\"makerlab_enabled\",\"palette_category_at_start\",\"reference_links\",\"encrypted_examples\",\"preload_asset_list\",\"contained_level_names\"],\"changed_by_id\":14639,\"changed_by_email\":\"dan+teacher@code.org\"}]"
 }]]></config>
   <blocks/>
 </Applab>

@@ -2,26 +2,35 @@
   "es-ES": {
     "data": {
       "frameworks": {
-        "csta": {
-          "name": "Estándares de Ciencias de la Computación K-12 de la CSTA (2017)"
+        "ai4k12-2021": {
+          "name": "Directrices nacionales AI4K12 2021"
         },
-        "csp2021": {
-          "name": "Marco Conceptual de CSP"
-        },
-        "csta2011": {
-          "name": "Estándares para ciencias de la computación CSTA K-12 (2011)"
+        "c3ss": {
+          "name": "Estándares de estudios sociales C3"
         },
         "ccela": {
           "name": "Normas básicas comunes para artes del lenguaje"
         },
-        "ngss": {
-          "name": "Estándares Científicos de la Próxima Generación"
-        },
         "ccmath": {
           "name": "Normas básicas comunes para matemáticas"
         },
+        "csa": {
+          "name": "Marco conceptual de la CSA"
+        },
+        "csp2021": {
+          "name": "Marco Conceptual de CSP"
+        },
+        "csta": {
+          "name": "Estándares de Ciencias de la Computación K-12 de la CSTA (2017)"
+        },
+        "csta2011": {
+          "name": "Estándares para ciencias de la computación CSTA K-12 (2011)"
+        },
         "iste": {
           "name": "Estándares ISTE para estudiantes"
+        },
+        "ngss": {
+          "name": "Estándares Científicos de la Próxima Generación"
         }
       }
     }

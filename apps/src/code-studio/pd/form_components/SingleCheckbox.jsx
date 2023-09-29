@@ -1,6 +1,6 @@
 import PropTypes from 'prop-types';
 import React from 'react';
-import {Checkbox} from 'react-bootstrap';
+import {Checkbox} from 'react-bootstrap'; // eslint-disable-line no-restricted-imports
 
 const REQUIRED = <span style={{color: 'red'}}>&nbsp;*</span>;
 

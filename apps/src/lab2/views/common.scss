@@ -1,0 +1,16 @@
+@import 'color.scss';
+
+// A translucent overlay that covers the entire container.
+%full-container-overlay {
+  background-color: rgba(0 0 0 / 0.5);
+  color: $neutral_dark;
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  top: 0;
+  left: 0;
+  z-index: 80;
+}

@@ -1,4 +1,3 @@
-/* globals droplet */
 import PropTypes from 'prop-types';
 import React from 'react';
 import BaseDialog from '@cdo/apps/templates/BaseDialog';

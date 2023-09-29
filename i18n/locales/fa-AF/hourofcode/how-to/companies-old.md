@@ -1,5 +1,5 @@
 ---
-title: How to host an Hour of Code - Companies
+title: چگونه برای میزبانی یک ساعت از کد - شرکت
 ---
 
 {{ signup_button }}

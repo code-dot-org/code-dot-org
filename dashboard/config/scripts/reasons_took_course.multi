@@ -12,3 +12,5 @@ right 'Someone encouraged me to take it'
 right 'It\'s a prerequisite for another CS class that I want to take'
 right 'It\'s required, or I was placed in it.'
 right 'Other reasons not listed'
+
+allow_multiple_attempts true

@@ -6,6 +6,9 @@ class SessionsControllerTest < ActionController::TestCase
 
   setup do
     @request.env["devise.mapping"] = Devise.mappings[:user]
+    Cpa.stubs(:cpa_experience).
+      with(any_parameters).
+      returns(Cpa::NEW_USER_LOCKOUT)
   end
 
   test 'login error derives locale from cdo.locale' do
@@ -290,5 +293,36 @@ class SessionsControllerTest < ActionController::TestCase
     }
 
     assert @response.cookies["remember_user_token"]
+  end
+
+  class Lockout < ActionDispatch::IntegrationTest
+    test 'a compliant user should not be able to visit /lockout' do
+      [
+        [:student],
+        [:teacher],
+        [:locked_out_child, :with_parent_permission],
+      ].each do |traits|
+        user = create(*traits)
+        sign_in user
+
+        get '/lockout'
+
+        assert_redirected_to '/home', "user#{traits} should be redirected to /home"
+      end
+    end
+
+    test 'a non-compliant user should be able to visit /lockout' do
+      [
+        [:locked_out_child],
+        [:locked_out_child, :with_pending_parent_permission],
+      ].each do |traits|
+        user = create(*traits)
+        sign_in user
+
+        get '/lockout'
+
+        assert_response :ok, "user#{traits} can visit /lockout"
+      end
+    end
   end
 end

@@ -1,1 +1,20 @@
-{}
+{
+  "addCSSButton": "CSS ஐ சேர்",
+  "addImageButton": "படத்தைச் சேர்",
+  "addHTMLButton": "HTML ஐ சேர்",
+  "closeFullscreenPreview": "மூடு முழுத்திரை முன்னோட்டத்தை",
+  "currentProjectCapacity": "{currentMegabytes}MB இன் {totalMegabytes}MB பயன்படுத்தப்பட்டது",
+  "disallowedHtml": "கோப்பு \"{filename}\" அனுமதிக்கப்படாத HTML உறுப்புகளைக் கொண்டுள்ளது: `{disallowedTags}`. இந்த உரையாடல் மூடப்படும் போது அவை அகற்றப்படும்.",
+  "errorSavingProject": "உங்கள் திட்டத்தை தானாக சேமிக்கும் போது ஏதோ வேலை செய்யவில்லை. உங்கள் இணைய இணைப்பு சரிபார்த்து கைமுறையாக சேமிப்பு முயற்சி. இந்த சிக்கல் தொடர்ந்தால், தொடங்குவதற்கு பக்கத்தை மீண்டும் ஏற்றவும்.",
+  "fatalError": "அபாயகரமான பிழை: {message}. நீங்கள் தனிப்பட்ட உலாவல் முறையில் இருந்தால், தரவு எழுத முடியாது.",
+  "loadFailure": "மன்னிக்கவும், வலை லேப் சில காரணங்களால் ஏற்ற முடியவில்லை. பிழை: {message}",
+  "openFullscreenPreview": "திறந்த முழுத்திரை முன்னோட்டத்தை",
+  "refreshPreview": "புதுப்பித்து சேமி",
+  "reloading": "மீண்டும் ஏற்றுதல்...",
+  "reset": "வலை லேப் மீட்டமை",
+  "resetComplete": "வலை லேப் மீட்டமை முழுமையான",
+  "resetFailure": "வலை லேப் மீட்டமைக்க தோல்வி: {message}.",
+  "toggleInspectorOn": "இன்ஸ்பெக்டர்: ஆஃப்",
+  "toggleInspectorOff": "இன்ஸ்பெக்டர்: ஆன்",
+  "uploadError": "பதிவேற்ற பிழை"
+}

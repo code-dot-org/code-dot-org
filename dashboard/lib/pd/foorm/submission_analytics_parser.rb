@@ -110,7 +110,7 @@ module Pd::Foorm
           choices = question_details[:choices]
           additional_attributes = {
             response_value: answer,
-            response_text: answer.map {|selected| choices[selected]}.compact.sort.join(', ')
+            response_text: answer.filter_map {|selected| choices[selected]}.sort.join(', ')
           }
 
           reshaped_submission_answer.merge! additional_attributes

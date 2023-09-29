@@ -3,27 +3,31 @@ cs:
   data:
     course:
       name:
-        csp-2017:
-          assignment_family_title: Principy informatiky
-          title: Principy informatiky (2017-2018)
-          version_title: 2017-2018
-          description_short: Naučte se základní principy informatiky.
         csd-2017:
           assignment_family_title: Objevování informatiky
+          description_short: Úvodní počítačový kurz, který zapálí studenty k vytvoření
+            jedinečných počinů.
+          description_student: Objevování informatiky je úvodním kurzem do informatiky,
+            v němž se studenti seznamují s informatikou jako prostředkem k tvořivosti,
+            komunikaci, řešení problémů a zábavě.
+          description_teacher: Objevování informatiky je úvodním kurzem do informatiky,
+            v němž se studenti seznamují s informatikou jako prostředkem k tvořivosti,
+            komunikaci, řešení problémů a zábavě.
           title: Objevování informatiky (2017-2018)
           version_title: 2017-2018
-          description_student: Objevování informatiky je úvodním kurzem do informatiky,
-            v němž se studenti seznamují s informatikou jako prostředkem k tvořivosti,
-            komunikaci, řešení problémů a zábavě.
-          description_teacher: Objevování informatiky je úvodním kurzem do informatiky,
-            v němž se studenti seznamují s informatikou jako prostředkem k tvořivosti,
-            komunikaci, řešení problémů a zábavě.
-          description_short: Úvodní počítačový kurz, který zapálí studenty k vytvoření
-            jedinečných počinů.
         csd-2018:
           assignment_family_title: Objevování informatiky
+          description_short: Úvodní počítačový kurz, který zapálí studenty k vytvoření
+            jedinečných počinů.
+          description_student: Objevování informatiky je úvodním kurzem do informatiky,
+            v němž se studenti seznamují s informatikou jako prostředkem k tvořivosti,
+            komunikaci, řešení problémů a zábavě.
+          description_teacher: Objevování informatiky je úvodním kurzem do informatiky,
+            v němž se studenti seznamují s informatikou jako prostředkem k tvořivosti,
+            komunikaci, řešení problémů a zábavě.
           title: Objevování informatiky (2018-2019)
           version_title: 2018-2019
+        csd-2019:
           description_short: Úvodní počítačový kurz, který zapálí studenty k vytvoření
             jedinečných počinů.
           description_student: Objevování informatiky je úvodním kurzem do informatiky,
@@ -32,32 +36,8 @@ cs:
           description_teacher: Objevování informatiky je úvodním kurzem do informatiky,
             v němž se studenti seznamují s informatikou jako prostředkem k tvořivosti,
             komunikaci, řešení problémů a zábavě.
-        csp-2018:
-          assignment_family_title: Principy informatiky
-          title: Principy informatiky (2018-2019)
-          version_title: 2018-2019
-          description_short: Naučte se základní principy informatiky.
-        csp-2019:
-          title: Principy informatiky (2019-2020)
-          version_title: 2019-2020
-          description_short: Naučte se základní principy informatiky.
-        csd-2019:
           title: Objevování informatiky (2019-2020)
           version_title: 2019-2020
-          description_short: Úvodní počítačový kurz, který zapálí studenty k vytvoření
-            jedinečných počinů.
-          description_student: Objevování informatiky je úvodním kurzem do informatiky,
-            v němž se studenti seznamují s informatikou jako prostředkem k tvořivosti,
-            komunikaci, řešení problémů a zábavě.
-          description_teacher: Objevování informatiky je úvodním kurzem do informatiky,
-            v němž se studenti seznamují s informatikou jako prostředkem k tvořivosti,
-            komunikaci, řešení problémů a zábavě.
-        csd-pilot:
-          description_student: Objevování informatiky je úvodním kurzem do informatiky,
-            v němž se studenti seznamují s informatikou jako prostředkem k tvořivosti,
-            komunikaci, řešení problémů a zábavě.
-        csp-2020:
-          description_short: Naučte se základní principy informatiky.
         csd-2020:
           description_short: Úvodní počítačový kurz, který zapálí studenty k vytvoření
             jedinečných počinů.
@@ -67,30 +47,55 @@ cs:
           description_teacher: Objevování informatiky je úvodním kurzem do informatiky,
             v němž se studenti seznamují s informatikou jako prostředkem k tvořivosti,
             komunikaci, řešení problémů a zábavě.
+        csd-2023:
+          title: Objevování informatiky
+        csd-pilot:
+          description_student: Objevování informatiky je úvodním kurzem do informatiky,
+            v němž se studenti seznamují s informatikou jako prostředkem k tvořivosti,
+            komunikaci, řešení problémů a zábavě.
+          title: Pilotní kurz CSD
+        csp-2017:
+          assignment_family_title: Principy informatiky
+          description_short: Naučte se základní principy informatiky.
+          title: Principy informatiky (2017-2018)
+          version_title: 2017-2018
+        csp-2018:
+          assignment_family_title: Principy informatiky
+          description_short: Naučte se základní principy informatiky.
+          title: Principy informatiky (2018-2019)
+          version_title: 2018-2019
+        csp-2019:
+          description_short: Naučte se základní principy informatiky.
+          title: Principy informatiky (2019-2020)
+          version_title: 2019-2020
+        csp-2020:
+          description_short: Naučte se základní principy informatiky.
         csp-2021:
           description_short: Naučte se základní principy informatiky.
-        mike-test:
-          title: Základy informatiky
         csp-2022:
           description_short: Naučte se základní principy informatiky.
         csp-2023:
           description_short: Naučte se základní principy informatiky.
-        csd-2023:
-          title: Objevování informatiky
+        mike-test:
+          title: Základy informatiky
+        vpl-csa-2023:
+          title: CSA Virtuální profesionální učení
     resources:
-      curriculum/csd/2020:
-        name: Obsah kurzu
-      teacher_forum/csd/2020:
-        name: Fórum učitelů
       curriculum/csd/2017:
         name: Obsah kurzu
-      teacher_forum_6/csd/2017:
-        name: Fórum učitelů
-      curriculum/csd/2019:
-        name: Obsah kurzu
-      teacher_forum/csd/2019:
-        name: Fórum učitelů
       curriculum/csd/2018:
         name: Obsah kurzu
+      curriculum/csd/2019:
+        name: Obsah kurzu
+      curriculum/csd/2020:
+        name: Obsah kurzu
+      getting_started_with_csd/csd/2021:
+        name: Začínáme s CSD
+      teacher_forum/csd/2019:
+        name: Fórum učitelů
+      teacher_forum/csd/2020:
+        name: Fórum učitelů
+      teacher_forum_6/csd/2017:
+        name: Fórum učitelů
       teacher_forum_6/csd/2018:
         name: Fórum učitelů

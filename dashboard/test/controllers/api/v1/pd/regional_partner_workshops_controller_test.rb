@@ -155,7 +155,7 @@ module Api::V1::Pd
       sign_in @teacher
       get :find, params: {state: 'somewhere'}
 
-      expected = {id: nil, name: nil, group: nil, workshops: nil, has_csf: nil, pl_programs_offered: nil, applications_principal_approval: nil}.stringify_keys
+      expected = {id: nil, name: nil, group: nil, workshops: nil, has_csf: nil, pl_programs_offered: nil, applications_principal_approval: nil, are_apps_closed: false}.stringify_keys
       assert_equal expected, JSON.parse(response.body)
     end
 
@@ -193,7 +193,8 @@ module Api::V1::Pd
           location: 'Code.org, Seattle, WA'
         }],
         pl_programs_offered: ['CSD', 'CSP'],
-        applications_principal_approval: RegionalPartner::ALL_REQUIRE_APPROVAL
+        applications_principal_approval: RegionalPartner::ALL_REQUIRE_APPROVAL,
+        are_apps_closed: false
       }
     end
 
@@ -213,7 +214,8 @@ module Api::V1::Pd
           location: 'Code.org, Seattle, WA'
         }],
         pl_programs_offered: ['CSD', 'CSP'],
-        applications_principal_approval: RegionalPartner::ALL_REQUIRE_APPROVAL
+        applications_principal_approval: RegionalPartner::ALL_REQUIRE_APPROVAL,
+        are_apps_closed: false
       }
     end
 
@@ -225,7 +227,8 @@ module Api::V1::Pd
         has_csf: nil,
         workshops: [],
         pl_programs_offered: ['CSD', 'CSP'],
-        applications_principal_approval: RegionalPartner::ALL_REQUIRE_APPROVAL
+        applications_principal_approval: RegionalPartner::ALL_REQUIRE_APPROVAL,
+        are_apps_closed: false
       }
     end
   end

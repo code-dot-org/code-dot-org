@@ -1,6 +1,5 @@
 import {TestResults} from '@cdo/apps/constants';
 import tickWrapper from './tickWrapper';
-/* global Gamelab */
 
 /**
  * @param {!string} testName

@@ -35,9 +35,9 @@ export default class VirtualMBBoard extends EventEmitter {
 
   /**
    * Create a serial port controller and open the serial port immediately.
-   * @return {SerialPort}
+   * @return {Serial}
    */
-  openSerialPort() {}
+  openWebSerial() {}
 
   /**
    * Marshals the board component controllers and appropriate constants into the

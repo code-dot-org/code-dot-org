@@ -1,5 +1,10 @@
 <Gamelab>
   <config><![CDATA[{
+  "published": true,
+  "game_id": 50,
+  "created_at": "2022-09-19T22:58:00.000Z",
+  "level_num": "custom",
+  "user_id": 1,
   "properties": {
     "skin": "gamelab",
     "code_functions": {
@@ -84,7 +89,7 @@
     "instructions_important": "false",
     "hide_animation_mode": "false",
     "start_in_animation_tab": "false",
-    "all_animations_single_frame": "true",
+    "all_animations_single_frame": "false",
     "pause_animations_by_default": "false",
     "show_debug_watch": "true",
     "hide_share_and_remix": "false",
@@ -112,17 +117,12 @@
     "encrypted": "false",
     "mini_rubric": "false",
     "libraries_enabled": "false",
-    "preload_asset_list": null,
     "start_blocks": "var bug = createSprite(200, 200);\r\nbug.setAnimation(\"ladybug\");\r\n\r\nfunction draw() {\r\n  //Draw Background\r\n  background(\"white\");\r\n  //1) Add a conditional statement to check if the right arrow key has been pressed down.\r\n\r\n  //2) Add code to move the sprite right if the right arrow is down.\r\n\r\n\r\n  //Draw Animations\r\n  drawSprites();\r\n}\r\n",
-    "start_animations": "{\r\n  \"orderedKeys\": [\r\n    \"632b7a80-3526-48b4-8b27-333199f6d3cf\",\r\n    \"0f775d6a-177e-4b8e-a152-df070aa5e3d2\",\r\n    \"05abc816-2a69-4696-b6a7-f31a576a7d6c\"\r\n  ],\r\n  \"propsByKey\": {\r\n    \"632b7a80-3526-48b4-8b27-333199f6d3cf\": {\r\n      \"name\": \"bee\",\r\n      \"sourceUrl\": \"https://levelbuilder-studio.code.org/media?u=https%3A%2F%2Flevelbuilder-studio.code.org%2Fv3%2Fanimations%2FEW437bB2p4TGfLNBA8qyYQ%2F632b7a80-3526-48b4-8b27-333199f6d3cf.png%3Fversion%3DnfTVVs5JWn8Ba7xwkLzgyOP_g6ACT24W\",\r\n      \"frameSize\": {\r\n        \"x\": 102,\r\n        \"y\": 102\r\n      },\r\n      \"frameCount\": 1,\r\n      \"looping\": true,\r\n      \"frameDelay\": 12,\r\n      \"version\": \"nfTVVs5JWn8Ba7xwkLzgyOP_g6ACT24W\"\r\n    },\r\n    \"0f775d6a-177e-4b8e-a152-df070aa5e3d2\": {\r\n      \"name\": \"fly\",\r\n      \"sourceUrl\": \"https://levelbuilder-studio.code.org/media?u=https%3A%2F%2Flevelbuilder-studio.code.org%2Fv3%2Fanimations%2FEW437bB2p4TGfLNBA8qyYQ%2F0f775d6a-177e-4b8e-a152-df070aa5e3d2.png%3Fversion%3DDcfnQX1eXXw23.KZayenLB2s9ugANk_N\",\r\n      \"frameSize\": {\r\n        \"x\": 104,\r\n        \"y\": 104\r\n      },\r\n      \"frameCount\": 1,\r\n      \"looping\": true,\r\n      \"frameDelay\": 12,\r\n      \"version\": \"DcfnQX1eXXw23.KZayenLB2s9ugANk_N\"\r\n    },\r\n    \"05abc816-2a69-4696-b6a7-f31a576a7d6c\": {\r\n      \"name\": \"ladybug\",\r\n      \"sourceUrl\": \"https://levelbuilder-studio.code.org/media?u=https%3A%2F%2Flevelbuilder-studio.code.org%2Fv3%2Fanimations%2FEW437bB2p4TGfLNBA8qyYQ%2F05abc816-2a69-4696-b6a7-f31a576a7d6c.png%3Fversion%3DtL7rz4wVjyUS51LtPOqyZ8onGkcG4_nv\",\r\n      \"frameSize\": {\r\n        \"x\": 106,\r\n        \"y\": 106\r\n      },\r\n      \"frameCount\": 1,\r\n      \"looping\": true,\r\n      \"frameDelay\": 12,\r\n      \"version\": \"tL7rz4wVjyUS51LtPOqyZ8onGkcG4_nv\"\r\n    }\r\n  }\r\n}"
+    "start_animations": "{\r\n  \"orderedKeys\": [\r\n    \"632b7a80-3526-48b4-8b27-333199f6d3cf\",\r\n    \"0f775d6a-177e-4b8e-a152-df070aa5e3d2\",\r\n    \"05abc816-2a69-4696-b6a7-f31a576a7d6c\"\r\n  ],\r\n  \"propsByKey\": {\r\n    \"632b7a80-3526-48b4-8b27-333199f6d3cf\": {\r\n      \"name\": \"bee\",\r\n      \"sourceUrl\": \"https://levelbuilder-studio.code.org/media?u=https%3A%2F%2Flevelbuilder-studio.code.org%2Fv3%2Fanimations%2FEW437bB2p4TGfLNBA8qyYQ%2F632b7a80-3526-48b4-8b27-333199f6d3cf.png%3Fversion%3DnfTVVs5JWn8Ba7xwkLzgyOP_g6ACT24W\",\r\n      \"frameSize\": {\r\n        \"x\": 102,\r\n        \"y\": 102\r\n      },\r\n      \"frameCount\": 1,\r\n      \"looping\": true,\r\n      \"frameDelay\": 12,\r\n      \"version\": \"nfTVVs5JWn8Ba7xwkLzgyOP_g6ACT24W\"\r\n    },\r\n    \"0f775d6a-177e-4b8e-a152-df070aa5e3d2\": {\r\n      \"name\": \"fly\",\r\n      \"sourceUrl\": \"https://levelbuilder-studio.code.org/media?u=https%3A%2F%2Flevelbuilder-studio.code.org%2Fv3%2Fanimations%2FEW437bB2p4TGfLNBA8qyYQ%2F0f775d6a-177e-4b8e-a152-df070aa5e3d2.png%3Fversion%3DDcfnQX1eXXw23.KZayenLB2s9ugANk_N\",\r\n      \"frameSize\": {\r\n        \"x\": 104,\r\n        \"y\": 104\r\n      },\r\n      \"frameCount\": 1,\r\n      \"looping\": true,\r\n      \"frameDelay\": 12,\r\n      \"version\": \"DcfnQX1eXXw23.KZayenLB2s9ugANk_N\"\r\n    },\r\n    \"05abc816-2a69-4696-b6a7-f31a576a7d6c\": {\r\n      \"name\": \"ladybug\",\r\n      \"sourceUrl\": \"https://levelbuilder-studio.code.org/media?u=https%3A%2F%2Flevelbuilder-studio.code.org%2Fv3%2Fanimations%2FEW437bB2p4TGfLNBA8qyYQ%2F05abc816-2a69-4696-b6a7-f31a576a7d6c.png%3Fversion%3DtL7rz4wVjyUS51LtPOqyZ8onGkcG4_nv\",\r\n      \"frameSize\": {\r\n        \"x\": 106,\r\n        \"y\": 106\r\n      },\r\n      \"frameCount\": 1,\r\n      \"looping\": true,\r\n      \"frameDelay\": 12,\r\n      \"version\": \"tL7rz4wVjyUS51LtPOqyZ8onGkcG4_nv\"\r\n    }\r\n  }\r\n}",
+    "preload_asset_list": null
   },
-  "game_id": 50,
-  "published": true,
-  "created_at": "2022-09-19T22:58:00.000Z",
-  "level_num": "custom",
-  "user_id": 1,
   "notes": "",
-  "audit_log": "[{\"changed_at\":\"2022-09-19T22:58:00.436+00:00\",\"changed\":[\"cloned from \\\"CSD U3 UP_ARROW_2022\\\"\"],\"cloned_from\":\"CSD U3 UP_ARROW_2022\"},{\"changed_at\":\"2023-01-14 19:50:26 +0000\",\"changed\":[\"code_functions\",\"encrypted_examples\",\"long_instructions\",\"preload_asset_list\",\"contained_level_names\"],\"changed_by_id\":18602,\"changed_by_email\":\"angelina+levelbuilder@code.org\"},{\"changed_at\":\"2023-01-14 19:53:49 +0000\",\"changed\":[\"code_functions\",\"project_template_level_name\",\"encrypted_examples\",\"preload_asset_list\"],\"changed_by_id\":18602,\"changed_by_email\":\"angelina+levelbuilder@code.org\"}]"
+  "audit_log": "[{\"changed_at\":\"2022-09-19T22:58:00.436+00:00\",\"changed\":[\"cloned from \\\"CSD U3 UP_ARROW_2022\\\"\"],\"cloned_from\":\"CSD U3 UP_ARROW_2022\"},{\"changed_at\":\"2023-01-14 19:50:26 +0000\",\"changed\":[\"code_functions\",\"encrypted_examples\",\"long_instructions\",\"preload_asset_list\",\"contained_level_names\"],\"changed_by_id\":18602,\"changed_by_email\":\"angelina+levelbuilder@code.org\"},{\"changed_at\":\"2023-01-14 19:53:49 +0000\",\"changed\":[\"code_functions\",\"project_template_level_name\",\"encrypted_examples\",\"preload_asset_list\"],\"changed_by_id\":18602,\"changed_by_email\":\"angelina+levelbuilder@code.org\"},{\"changed_at\":\"2023-07-13 18:38:28 +0000\",\"changed\":[\"code_functions\",\"all_animations_single_frame\",\"encrypted_examples\",\"preload_asset_list\",\"contained_level_names\"],\"changed_by_id\":18602,\"changed_by_email\":\"angelina+levelbuilder@code.org\"}]"
 }]]></config>
   <blocks/>
 </Gamelab>

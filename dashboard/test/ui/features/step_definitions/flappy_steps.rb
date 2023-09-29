@@ -11,7 +11,7 @@ Then /^ensure Flappy tickCount is positive$/ do
 end
 
 Then /^I simulate a mousedown on the svg$/ do
-  @browser.execute_script("$('\#svgFlappy rect').last().simulate('mousedown')")
+  @browser.execute_script("$('#svgFlappy rect').last().simulate('mousedown')")
 end
 
 And /^I've initialized the workspace with my flappy puzzle.$/ do

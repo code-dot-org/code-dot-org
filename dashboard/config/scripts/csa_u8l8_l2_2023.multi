@@ -7,7 +7,7 @@ wrong 'Cannot use merge sort before to sort the list being searched.'
 wrong 'Must use insertion sort before to sort the list being searched.'
 wrong 'The array cannot be sorted.'
 
-allow_multiple_attempts false
+allow_multiple_attempts true
 
 markdown <<MARKDOWN
 What is **always true** about applying binary search on an array?

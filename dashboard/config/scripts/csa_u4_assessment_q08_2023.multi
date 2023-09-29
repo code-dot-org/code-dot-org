@@ -26,3 +26,5 @@ MARKDOWN
 teacher_markdown <<MARKDOWN
 The `Math.abs()` method returns the absolute value of its parameter. In this code segment, the absolute value of `-5` is `5`, so the `if` statement is `true`. This results in `"The output is positive!"` being printed to the console.
 MARKDOWN
+
+allow_multiple_attempts true

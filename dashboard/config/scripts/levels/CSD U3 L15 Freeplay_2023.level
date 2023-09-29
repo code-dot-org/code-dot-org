@@ -1,5 +1,10 @@
 <Gamelab>
   <config><![CDATA[{
+  "published": true,
+  "game_id": 50,
+  "created_at": "2022-09-19T23:00:01.000Z",
+  "level_num": "custom",
+  "user_id": 324,
   "properties": {
     "skin": "gamelab",
     "embed": "false",
@@ -135,13 +140,8 @@
 
     ]
   },
-  "game_id": 50,
-  "published": true,
-  "created_at": "2022-09-19T23:00:01.000Z",
-  "level_num": "custom",
-  "user_id": 324,
   "notes": "",
-  "audit_log": "[{\"changed_at\":\"2022-09-19T23:00:01.027+00:00\",\"changed\":[\"cloned from \\\"CSD U3 L15 Freeplay_2022\\\"\"],\"cloned_from\":\"CSD U3 L15 Freeplay_2022\"},{\"changed_at\":\"2022-10-06 22:23:10 +0000\",\"changed\":[\"code_functions\",\"long_instructions\",\"display_name\",\"thumbnail_url\",\"preload_asset_list\",\"contained_level_names\"],\"changed_by_id\":18602,\"changed_by_email\":\"angelina+levelbuilder@code.org\"},{\"changed_at\":\"2023-01-18 23:42:32 +0000\",\"changed\":[\"code_functions\",\"preload_asset_list\",\"contained_level_names\"],\"changed_by_id\":18602,\"changed_by_email\":\"angelina+levelbuilder@code.org\"}]"
+  "audit_log": "[{\"changed_at\":\"2022-09-19T23:00:01.027+00:00\",\"changed\":[\"cloned from \\\"CSD U3 L15 Freeplay_2022\\\"\"],\"cloned_from\":\"CSD U3 L15 Freeplay_2022\"},{\"changed_at\":\"2022-10-06 22:23:10 +0000\",\"changed\":[\"code_functions\",\"long_instructions\",\"display_name\",\"thumbnail_url\",\"preload_asset_list\",\"contained_level_names\"],\"changed_by_id\":18602,\"changed_by_email\":\"angelina+levelbuilder@code.org\"},{\"changed_at\":\"2023-01-18 23:42:32 +0000\",\"changed\":[\"code_functions\",\"preload_asset_list\",\"contained_level_names\"],\"changed_by_id\":18602,\"changed_by_email\":\"angelina+levelbuilder@code.org\"},{\"changed_at\":\"2023-07-13 18:48:39 +0000\",\"changed\":[\"code_functions\",\"preload_asset_list\",\"contained_level_names\"],\"changed_by_id\":18602,\"changed_by_email\":\"angelina+levelbuilder@code.org\"}]"
 }]]></config>
   <blocks/>
 </Gamelab>

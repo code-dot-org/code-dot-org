@@ -27,9 +27,9 @@ import {
   getLevelIconHeaderFormatter,
 } from './progressTableHelpers';
 import firehoseClient from '@cdo/apps/lib/util/firehose';
+import letterCompare from '@cdo/apps/util/letterCompare';
 import classnames from 'classnames';
 import {studentShape} from '@cdo/apps/templates/teacherDashboard/teacherSectionsRedux';
-import Notification, {NotificationType} from '@cdo/apps/templates/Notification';
 
 /**
  * Since our progress tables are built out of standard HTML table elements,
@@ -85,6 +85,7 @@ class ProgressTableView extends React.Component {
     lessonOfInterest: PropTypes.number.isRequired,
     studentTimestamps: PropTypes.object.isRequired,
     localeCode: PropTypes.string,
+    isSortedByFamilyName: PropTypes.bool,
   };
 
   constructor(props) {
@@ -108,8 +109,24 @@ class ProgressTableView extends React.Component {
     // `studentTableRowType` object to track their expanded state. these
     // objects also include an `expansionIndex` to determine which lesson
     // formatter to use to render the row.
+
+    // Returns a comparator function that sorts objects a and b by the given
+    // keys, in order of priority.
+    // Example: comparator(['familyName', 'name']) will sort by familyName
+    // first, looking at name if necessary to break ties.
+    const comparator = keys => (a, b) =>
+      keys.reduce(
+        (result, key) => result || letterCompare(a[key] || '', b[key] || ''),
+        0
+      );
+
+    // Sort students, in-place.
+    const sortedStudents = props.isSortedByFamilyName
+      ? props.students.sort(comparator(['familyName', 'name']))
+      : props.students.sort(comparator(['name', 'familyName']));
+
     this.state = {
-      rows: props.students.map((student, index) => {
+      rows: sortedStudents.map((student, index) => {
         return {
           id: idForExpansionIndex(student.id, 0),
           student: student,
@@ -138,6 +155,33 @@ class ProgressTableView extends React.Component {
     if (prevProps.currentView !== this.props.currentView) {
       this.setRowsToRender();
     }
+    if (prevProps.isSortedByFamilyName !== this.props.isSortedByFamilyName) {
+      this.sortTableRows();
+    }
+  }
+
+  sortTableRows() {
+    const comparator = keys => (a, b) =>
+      keys.reduce(
+        (result, key) =>
+          result || letterCompare(a.student[key] || '', b.student[key] || ''),
+        0
+      );
+
+    const sortedRows = this.props.isSortedByFamilyName
+      ? this.state.rows.sort(comparator(['familyName', 'name']))
+      : this.state.rows.sort(comparator(['name', 'familyName']));
+
+    // Alternate dark/light background (child rows use same color as parent)
+    let darkBackground = true;
+    this.setState({
+      rows: sortedRows.map(row => {
+        if (row.expansionIndex === 0) {
+          darkBackground = !darkBackground;
+        }
+        return {...row, useDarkBackground: darkBackground};
+      }),
+    });
   }
 
   /**
@@ -356,18 +400,6 @@ class ProgressTableView extends React.Component {
             />
           </div>
         </div>
-        <div style={styles.midpageBanner}>
-          <Notification
-            type={NotificationType.feedback}
-            notice={i18n.feedbackShareBannerTitle()}
-            details={i18n.feedbackShareBannerDesc()}
-            buttonText={i18n.feedbackShareBannerButton()}
-            buttonLink={
-              'https://studio.code.org/form/share_feedback_progress_table'
-            }
-            dismissible={true}
-          />
-        </div>
         {this.props.currentView === ViewType.DETAIL ? (
           <ProgressLegend
             includeCsfColumn={this.props.scriptData.csf}
@@ -394,15 +426,13 @@ const styles = {
     display: 'inline-block',
     width: parseInt(progressTableStyleConstants.CONTENT_VIEW_WIDTH),
   },
-  midpageBanner: {
-    marginTop: '60px',
-  },
 };
 
 export const UnconnectedProgressTableView = ProgressTableView;
 
 export default connect(
   state => ({
+    isSortedByFamilyName: state.currentUser.isSortedByFamilyName,
     sectionId: state.teacherSections.selectedSectionId,
     students: state.teacherSections.selectedStudents,
     scriptData: getCurrentUnitData(state),

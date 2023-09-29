@@ -18,3 +18,5 @@ MARKDOWN
 teacher_markdown <<MARKDOWN
 **Content: Unit 5 Lesson 3**
 MARKDOWN
+
+allow_multiple_attempts true

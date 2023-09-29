@@ -31,7 +31,7 @@ describe('NetSimLogEntry', function () {
     var logEntry = new NetSimLogEntry(testShard);
     var row = logEntry.buildRow();
 
-    assert(row.hasOwnProperty('nodeID'));
+    assert(Object.prototype.hasOwnProperty.call(row, 'nodeID'));
     assert.isUndefined(row.nodeID);
 
     assert.property(row, 'base64Binary');

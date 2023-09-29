@@ -1,15 +1,18 @@
 import $ from 'jquery';
 import PropTypes from 'prop-types';
 import React from 'react';
+import applabMsg from '@cdo/applab/locale';
 import PropertyRow from './PropertyRow';
 import BooleanPropertyRow from './BooleanPropertyRow';
 import ColorPickerPropertyRow from './ColorPickerPropertyRow';
 import ZOrderRow from './ZOrderRow';
 import EventHeaderRow from './EventHeaderRow';
 import EventRow from './EventRow';
-import EnumPropertyRow from './EnumPropertyRow';
 import FontFamilyPropertyRow from './FontFamilyPropertyRow';
 import BorderProperties from './BorderProperties';
+import TextAlignmentPropertyRow, {
+  TEXT_ALIGNMENT_LEFT,
+} from './TextAlignmentPropertyRow';
 import * as elementUtils from './elementUtils';
 import designMode from '../designMode';
 import {themeOptions, CLASSIC_THEME_INDEX} from '../constants';
@@ -29,47 +32,47 @@ class TextInputProperties extends React.Component {
     return (
       <div id="propertyRowContainer">
         <PropertyRow
-          desc={'id'}
+          desc={applabMsg.designElementProperty_id()}
           initialValue={elementUtils.getId(element)}
           handleChange={this.props.handleChange.bind(this, 'id')}
           isIdRow
         />
         <PropertyRow
-          desc={'placeholder'}
+          desc={applabMsg.designElementProperty_placeholder()}
           initialValue={element.getAttribute('placeholder') || ''}
           handleChange={this.props.handleChange.bind(this, 'placeholder')}
         />
         <PropertyRow
-          desc={'width (px)'}
+          desc={applabMsg.designElementProperty_widthPx()}
           isNumber
           initialValue={parseInt(element.style.width, 10)}
           handleChange={this.props.handleChange.bind(this, 'style-width')}
         />
         <PropertyRow
-          desc={'height (px)'}
+          desc={applabMsg.designElementProperty_heightPx()}
           isNumber
           initialValue={parseInt(element.style.height, 10)}
           handleChange={this.props.handleChange.bind(this, 'style-height')}
         />
         <PropertyRow
-          desc={'x position (px)'}
+          desc={applabMsg.designElementProperty_xPositionPx()}
           isNumber
           initialValue={parseInt(element.style.left, 10)}
           handleChange={this.props.handleChange.bind(this, 'left')}
         />
         <PropertyRow
-          desc={'y position (px)'}
+          desc={applabMsg.designElementProperty_yPositionPx()}
           isNumber
           initialValue={parseInt(element.style.top, 10)}
           handleChange={this.props.handleChange.bind(this, 'top')}
         />
         <ColorPickerPropertyRow
-          desc={'text color'}
+          desc={applabMsg.designElementProperty_textColor()}
           initialValue={element.style.color}
           handleChange={this.props.handleChange.bind(this, 'textColor')}
         />
         <ColorPickerPropertyRow
-          desc={'background color'}
+          desc={applabMsg.designElementProperty_backgroundColor()}
           initialValue={element.style.backgroundColor}
           handleChange={this.props.handleChange.bind(this, 'backgroundColor')}
         />
@@ -80,15 +83,13 @@ class TextInputProperties extends React.Component {
           handleChange={this.props.handleChange.bind(this, 'fontFamily')}
         />
         <PropertyRow
-          desc={'font size (px)'}
+          desc={applabMsg.designElementProperty_fontSizePx()}
           isNumber
           initialValue={parseInt(element.style.fontSize, 10)}
           handleChange={this.props.handleChange.bind(this, 'fontSize')}
         />
-        <EnumPropertyRow
-          desc={'text alignment'}
-          initialValue={element.style.textAlign || 'left'}
-          options={['left', 'right', 'center', 'justify']}
+        <TextAlignmentPropertyRow
+          initialValue={element.style.textAlign || TEXT_ALIGNMENT_LEFT}
           handleChange={this.props.handleChange.bind(this, 'textAlign')}
         />
         <BorderProperties
@@ -107,7 +108,7 @@ class TextInputProperties extends React.Component {
           )}
         />
         <BooleanPropertyRow
-          desc={'hidden'}
+          desc={applabMsg.designElementProperty_hidden()}
           initialValue={$(element).hasClass('design-mode-hidden')}
           handleChange={this.props.handleChange.bind(this, 'hidden')}
         />
@@ -150,31 +151,23 @@ class TextInputEvents extends React.Component {
   render() {
     const element = this.props.element;
 
-    const changeName = 'Change';
-    const changeDesc =
-      'Triggered when the text input loses focus if the text has changed.';
-
-    const inputName = 'Input';
-    const inputDesc =
-      'Triggered immediately every time the text input contents change.';
-
     return (
       <div id="eventRowContainer">
         <PropertyRow
-          desc={'id'}
+          desc={applabMsg.designElementProperty_id()}
           initialValue={elementUtils.getId(element)}
           handleChange={this.props.handleChange.bind(this, 'id')}
           isIdRow
         />
         <EventHeaderRow />
         <EventRow
-          name={changeName}
-          desc={changeDesc}
+          name={applabMsg.designElementEvent_change()}
+          desc={applabMsg.designElement_textInput_changeEventDesc()}
           handleInsert={this.insertChange}
         />
         <EventRow
-          name={inputName}
-          desc={inputDesc}
+          name={applabMsg.designElementEvent_input()}
+          desc={applabMsg.designElement_textInput_inputEventDesc()}
           handleInsert={this.insertInput}
         />
       </div>

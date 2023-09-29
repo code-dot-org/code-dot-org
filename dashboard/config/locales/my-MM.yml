@@ -3,52 +3,64 @@ my:
   activerecord:
     attributes:
       user:
+        age: အသက်
+        current_password: စကားဝှက်အဟောင်း
         email: email လိပ္စာ
+        gender: က်ား/မ
+        locale: ဘာသာစကား
         parent_email: မိဘ/အုပ်ထိန်းသူ အီးမေး
         username: အသုံးပြုမည့်အမည်
-        current_password: စကားဝှက်အဟောင်း
-        locale: ဘာသာစကား
-        age: အသက်
-        gender: က်ား/မ
-  hello: မဂၤလာပါ ကမာၻၾကီး
-  submit: ပေးပို့ပါ
-  cancel: ပယ်ဖျတ်သည်
-  okay: ဟုတ်ပြီ
-  or: သို့မဟုတ်
   appname: Code.org
-  stage_number: သင်ခန်းစာ %{number}
-  unplugged_activity: အန်ပလပ် လှုပ်ရှားမှု
-  continue: ဆက်လုပ်ပါ
   auth:
     clever: Clever
-  signup_form:
-    age: အသက်
-  signin_form:
-    login: email လိပ္စာ
-  password:
-    reset_form:
-      submit: ပေးပို့ပါ
-  section:
-    type:
-      email: email လိပ္စာ
-      google_classroom: Google Classroom
-      clever: Clever
-  follower:
-    already_exists: သင်%{section_name} တွင်ပါဝင်ပြီးသားဖြစ်ပါတယ်.
+  cancel: ပယ်ဖျတ်သည်
+  compatibility:
+    upgrade:
+      link: ဆက်သင်ယူရန်
+  continue: ဆက်လုပ်ပါ
+  copy: မိတ္တူ
   crud:
     edit: ပြုပြင်သည်
     submit: ပေးပို့ပါ
+  dialog:
+    ok: "​ကောင်းပြီ"
+    startover_cancel: ပယ်ဖျတ်သည်
+    startover_ok: အစက ပြန်စပါ
+    startover_title: အစက ပြန်စချင်တာ သေချာရဲ့လား?
+  follower:
+    already_exists: သင်%{section_name} တွင်ပါဝင်ပြီးသားဖြစ်ပါတယ်.
+  hello: မဂၤလာပါ ကမာၻၾကီး
+  hoc_download:
+    minecraft_name: Minecraft Hour of Code
+    starwars_blocks_name: 'Star Wars : ကုဒ် (Blocks) ဖြင့် Galaxy တစ်ခုကို တည်ဆောက်ခြင်း'
+    starwars_javascript_name: 'Star Wars : ကုဒ် (JavaScript) ဖြင့် Galaxy တစ်ခုကို
+      တည်ဆောက်ခြင်း'
+  home:
+    trynow: ဆက်သင်ယူရန်
+  lesson_plan: |2-
+
+    Lesson Plan
+    သင်ခန်းစာ အစီအစဉ်
+  level_group:
+    correct_title: ကျေးဇူးတင်ပါတယ်
+    wrong_title: ကျေးဇူးတင်ပါတယ်
+  level_group-submittable:
+    correct_title: ကျေးဇူးတင်ပါတယ်
+    wrong_title: ကျေးဇူးတင်ပါတယ်
+  multi-submittable:
+    correct_title: ကျေးဇူးတင်ပါတယ်
+    wrong_title: ကျေးဇူးတင်ပါတယ်
   nav:
     header:
       my_dashboard: ကျွန်ုပ်ကျောက်သင်ပုံး
+      professional_learning: Professional Learning
       sections: တန်းခွဲများ
       teacher_community: ဆရာဖိုရမ်
-      professional_learning: Professional Learning
     user:
-      create: ဖန်တီးပါ
       algebra_game: Algebra
       artist_k1: Artist(စာစဖတ်တတ်စသူများ)
       basketball: Basketball
+      create: ဖန်တီးပါ
       frozen: Frozen
       gamelab_jr: Game Lab (beta)
       infinity: Infinity
@@ -57,43 +69,65 @@ my:
       playlab_k1: Play Lab(Pre-reader)
       starwars: Star Wars
       weblab: Web Lab
+  okay: ဟုတ်ပြီ
+  or: သို့မဟုတ်
+  password:
+    reset_form:
+      submit: ပေးပို့ပါ
+  pd:
+    form_entries:
+      subjects:
+        cs: ကွန်ပျုတာသိပ္ပံ
+        math: သင်္ချာ
+    form_labels:
+      colombian_school_city: ကျောင်းမြို့
+      email: email လိပ္စာ
+      school_city: ကျောင်းမြို့
+  progress:
+    not_started: မစရသေးပါ
+  project:
+    name: အမည္
+    saved: သိမ်းထားပြီးပါပြီ
+  race_interstitial:
+    decline: ပိတ်ပါ
+    submit: ပေးပို့ပါ
+  section:
+    type:
+      clever: Clever
+      email: email လိပ္စာ
+      google_classroom: Google Classroom
+  share_code:
+    flappy_og_title: ကျွန်ုပ် ဖလပ်ပီ ဂိမ်း ကိုကြည့်ပါ။
+  signin_form:
+    login: email လိပ္စာ
+  signup_form:
+    age: အသက်
+  stage_number: သင်ခန်းစာ %{number}
+  submit: ပေးပို့ပါ
   teacher:
     dashboard: ဆရာ့ကျောက်သင်ပုန်း
     panel:
       answer_viewer: ဆရာအဖွဲ့
-  user:
-    parent_guardian_email_label: မိဘ/အုပ်ထိန်းသူ အီးမေး
-    none: ဘာမှမရှိ
-  home:
-    trynow: ဆက်သင်ယူရန်
-  video:
-    label: ဗီဒီယို
-  compatibility:
-    upgrade:
-      link: ဆက်သင်ယူရန်
-  lesson_plan: |2-
-
-    Lesson Plan
-    သင်ခန်းစာ အစီအစဉ်
-  share_code:
-    flappy_og_title: ကျွန်ုပ် ဖလပ်ပီ ဂိမ်း ကိုကြည့်ပါ။
+  terms_interstitial:
+    print: ပုံနှိပ်သည်
+  unplugged_activity: အန်ပလပ် လှုပ်ရှားမှု
   upsell:
     flappy:
-      title: ဖလပ်ပီ ကုပ်
       body: သင့်ကိုယ်ပိုင်ဂိမ်းကို 10 မိနစ်အောက်သာရေးလိုပါသလား။ ကျွန်ုပ်တို့၏ ဖလပ်ပီ
         ကုပ် သင်ခန်းစာကို စမ်းသုံးကြည့်ပါ။
+      title: ဖလပ်ပီ ကုပ်
     frozen:
       title: Frozen
     hero:
       body: Minecraftက လုပ်ရှားမှုအသစ်များနဲ့အတူ Hour of Codeအတွက်ပြန်လာပါပြီ။ Minecraftနှင့်code
         မှတစ်ဆင့်ခရီးစဉ်
+    hoc:
+      body: ကွန်ပြူတာပညာရပ်၏ အခြေခံများကို စမ်းသုံးကြည့်ပါ။ သန်းပေါင်းများစွာက အဲဒါကို
+        ကစားခဲ့ကြယ်။
+      title: ဂန္တဝင် ဝင်္ကပါ
     hoc-encryption:
       body: ကျောင်းသားများသည် ကုဒ်ဝှက်ထားသော မက်ဆေ့ချ်များကို ဖန်တီးရန်နှင့် crack
         လုပ်ရန် နည်းပညာများကို သင်ယူရပါမည်။
-    hoc:
-      title: ဂန္တဝင် ဝင်္ကပါ
-      body: ကွန်ပြူတာပညာရပ်၏ အခြေခံများကို စမ်းသုံးကြည့်ပါ။ သန်းပေါင်းများစွာက အဲဒါကို
-        ကစားခဲ့ကြယ်။
     hoc2014:
       try_frozen: 'Frozen မှ အနုပညာရှင် Anna နှင့် Elsa တို့နှင့်အတူ '
     infinity:
@@ -108,42 +142,8 @@ my:
     unplugged_conditionals:
       body: ကတ်များကို အသုံးပြု၍ ဤ "unplugged" လုပ်ဆောင်ချက်တွင် algorithms နှင့်
         conditional statements များအကြောင်း လေ့လာပါ။
-  multi-submittable:
-    wrong_title: ကျေးဇူးတင်ပါတယ်
-    correct_title: ကျေးဇူးတင်ပါတယ်
-  level_group:
-    wrong_title: ကျေးဇူးတင်ပါတယ်
-    correct_title: ကျေးဇူးတင်ပါတယ်
-  level_group-submittable:
-    wrong_title: ကျေးဇူးတင်ပါတယ်
-    correct_title: ကျေးဇူးတင်ပါတယ်
-  dialog:
-    ok: "​ကောင်းပြီ"
-    startover_title: အစက ပြန်စချင်တာ သေချာရဲ့လား?
-    startover_ok: အစက ပြန်စပါ
-    startover_cancel: ပယ်ဖျတ်သည်
-  terms_interstitial:
-    print: ပုံနှိပ်သည်
-  race_interstitial:
-    submit: ပေးပို့ပါ
-    decline: ပိတ်ပါ
-  progress:
-    not_started: မစရသေးပါ
-  project:
-    name: အမည္
-    saved: သိမ်းထားပြီးပါပြီ
-  hoc_download:
-    minecraft_name: Minecraft Hour of Code
-    starwars_blocks_name: 'Star Wars : ကုဒ် (Blocks) ဖြင့် Galaxy တစ်ခုကို တည်ဆောက်ခြင်း'
-    starwars_javascript_name: 'Star Wars : ကုဒ် (JavaScript) ဖြင့် Galaxy တစ်ခုကို
-      တည်ဆောက်ခြင်း'
-  pd:
-    form_labels:
-      email: email လိပ္စာ
-      school_city: ကျောင်းမြို့
-      colombian_school_city: ကျောင်းမြို့
-    form_entries:
-      subjects:
-        cs: ကွန်ပျုတာသိပ္ပံ
-        math: သင်္ချာ
-  copy: မိတ္တူ
+  user:
+    none: ဘာမှမရှိ
+    parent_guardian_email_label: မိဘ/အုပ်ထိန်းသူ အီးမေး
+  video:
+    label: ဗီဒီယို

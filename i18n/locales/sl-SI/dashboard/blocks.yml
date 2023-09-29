@@ -5,19 +5,11 @@ sl:
       BadGuys_setSizeAll_dropdown:
         options:
           SIZE:
-            '0.50': extra small
-            '0.75': small
             '1.00': srednje
-            '2.00': large
-            '3.00': extra large
       BadGuys_setSize_dropdown:
         options:
           SIZE:
-            '0.50': extra small
-            '0.75': small
             '1.00': srednje
-            '2.00': large
-            '3.00': extra large
       Dancelab_alternateMoves:
         options:
           GROUP:
@@ -157,11 +149,13 @@ sl:
             '"SHARK"': morski psi
           FORMAT:
             '"diamond"': diamant
+            '"grid"': mreža
             '"random"': naključno
       Dancelab_makeAnonymousDanceSprite:
         options:
           COSTUME:
             '"ALIEN"': marsovec
+            '"BEAR"': medved
             '"CAT"': muca
             '"DOG"': kuža
             '"DUCK"': raca
@@ -175,6 +169,7 @@ sl:
         options:
           COSTUME:
             '"ALIEN"': marsovec
+            '"BEAR"': medved
             '"CAT"': muca
             '"DOG"': kuža
             '"DUCK"': raca
@@ -199,6 +194,7 @@ sl:
             '"SHARK"': morski psi
           LAYOUT:
             '"diamond"': diamant
+            '"grid"': mreža
             '"random"': naključno
       Dancelab_randomColor:
         text: naključna barva
@@ -428,10 +424,18 @@ sl:
             '"space"': vesolje
             '"x"': x
             '"y"': 'y'
+      gamelab_layoutSprites:
+        options:
+          FORMAT:
+            '"grid"': mreža
       gamelab_makeBurst:
         options:
           EFFECT:
             '"rain"': dež
+      gamelab_makeNewSpriteGroup:
+        options:
+          FORMAT:
+            '"grid"': mreža
       gamelab_makeProjectile:
         options:
           DIRECTION:
@@ -442,9 +446,7 @@ sl:
       gamelab_makeSpritesWithSize:
         options:
           SIZE:
-            '30': small
             '50': srednje
-            '100': large
       gamelab_mirrorSprite:
         options:
           DIRECTION:
@@ -454,12 +456,22 @@ sl:
         options:
           SOUND:
             "'sound://category_collect/clicky_crunch.mp3'": hrustati
+            "'sound://category_pop/bubble_pop_cluster_1.mp3'": mehurček
+            "'sound://category_animals/bear.mp3'": medved
             "'sound://category_animals/cat.mp3'": muca
             "'sound://category_animals/cow.mp3'": krava
             "'sound://category_animals/sheep.mp3'": ovca
+            "'sound://category_animals/goat.mp3'": koza
             "'sound://category_animals/chicken.mp3'": piščanec
+            "'sound://category_animals/elephant.mp3'": slon
+            "'sound://category_animals/chick.mp3'": piščanec
             "'sound://category_animals/dog.mp3'": kuža
+            "'sound://category_instrumental/harpe_pluck_1.mp3'": harfa
             "'sound://category_digital/jump_7.mp3'": skoči
+      gamelab_playSoundOptionsSoccer:
+        options:
+          SOUND:
+            "'sound://category_sports/Airhorn_SFX.mp3'": Zračna troblja
       gamelab_randColor:
         text: naključna barva
       gamelab_randomColor:
@@ -471,17 +483,16 @@ sl:
           IMG:
             '"https://studio.code.org/blockly/media/skins/studio/background_cave.png"': votlina
             '"https://studio.code.org/api/v1/animation-library/04L4sdTODkNZF1OHf4qO_I.Al3QP43wA/category_backgrounds/city.png"': mesto
+            '"https://studio.code.org/blockly/media/skins/studio/background.png"': sodišče
             '"https://studio.code.org/blockly/media/skins/studio/background_desert.png"': puščava
+            '"https://studio.code.org/blockly/media/skins/studio/background_grid.png"': mreža
             '"https://studio.code.org/blockly/media/skins/studio/background_rainbow.png"': mavrica
             '"https://studio.code.org/blockly/media/skins/studio/background_underwater.png"': pod vodo
             '"https://studio.code.org/blockly/media/skins/studio/background_winter.png"': zima
       gamelab_setDefaultSpriteSize:
         options:
           SIZE:
-            '25': extra small
-            '50': small
             '75': srednje
-            '100': large
       gamelab_setProp:
         options:
           PROPERTY:
@@ -494,10 +505,7 @@ sl:
           PROPERTY:
             '"scale"': velikost
           SIZE:
-            '25': extra small
-            '50': small
             '75': srednje
-            '100': large
       gamelab_setSizes:
         options:
           PROPERTY:
@@ -658,7 +666,10 @@ sl:
       Poetry_addFrame:
         options:
           BRUSH:
+            '"brick"': opeka
+            '"fire"': ogenj
             '"hearts"': srca
+            '"leaves"': listje
             '"rainbow"': mavrica
       Poetry_makeBurst:
         options:
@@ -668,10 +679,15 @@ sl:
         options:
           SOUND:
             '"sound://category_nature/summer_night_loop.mp3"': noč
+            '"sound://category_background/ocean_waves.mp3"': ocean
+            '"sound://category_background/rainforest_ambient_sound.mp3"': deževni gozd
       Poetry_playSound:
         options:
           SOUND:
+            '"sound://category_bell/long_bell_notification.mp3"': zvonec
+            '"sound://category_pop/bubble_pop_cluster_2.mp3"': mehurček
             '"sound://category_jump/vibrant_game_jumping_up_1.mp3"': skoči
+            '"sound://category_achievements/lighthearted_bonus_objective_5.mp3"': luč
       Poetry_setBackgroundEffect:
         options:
           EFFECT:
@@ -679,6 +695,7 @@ sl:
             '"hearts"': srca
             '"rain"': dež
           PALETTE:
+            '"ocean"': ocean
             '"rainbow"': mavrica
             '"winter"': zima
       Poetry_setForegroundEffect:
@@ -699,21 +716,16 @@ sl:
       aalab_layoutSprites:
         options:
           FORMAT:
+            '"grid"': mreža
             '"random"': naključno
       aalab_someGraduallyStartIntervention:
         options:
           PORTION:
             '1': vse
-            '0.75': most
-            '0.5': half of
-            '0.25': few
       aalab_someStartIntervention:
         options:
           PORTION:
             '1': vse
-            '0.75': most
-            '0.5': half of
-            '0.25': few
       binary_move:
         options:
           DIR:

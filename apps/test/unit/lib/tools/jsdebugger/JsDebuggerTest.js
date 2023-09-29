@@ -329,7 +329,9 @@ function createOrCaptureSpy(parentObj, methodName) {
   let spyFn, wasCaptured;
 
   beforeEach(() => {
-    if (parentObj[methodName].hasOwnProperty('callCount')) {
+    if (
+      Object.prototype.hasOwnProperty.call(parentObj[methodName], 'callCount')
+    ) {
       // Something is already spying on this method.  Capture the spy for use
       // in our test, and don't clean it up ourselves.
       spyFn = parentObj[methodName];

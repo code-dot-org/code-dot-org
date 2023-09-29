@@ -268,7 +268,7 @@ export default class CoreLibrary {
     if (!spriteArg) {
       return [];
     }
-    if (spriteArg.hasOwnProperty('id')) {
+    if (Object.prototype.hasOwnProperty.call(spriteArg, 'id')) {
       let sprite = this.nativeSpriteMap[spriteArg.id];
       if (sprite) {
         return [sprite];
@@ -552,7 +552,8 @@ export default class CoreLibrary {
     const matchingInputEvents = this.inputEvents.filter(
       inputEvent =>
         inputEvent.type === 'whenSpriteCreated' &&
-        (inputEvent.args.name === newSprite.name ||
+        ((inputEvent.args.name !== undefined &&
+          inputEvent.args.name === newSprite.name) ||
           inputEvent.args.costume === newSprite.getAnimationLabel() ||
           inputEvent.args.costume === 'all')
     );

@@ -1,5 +1,3 @@
-/* global appOptions */
-
 import $ from 'jquery';
 import React from 'react';
 import throttle from 'lodash/throttle';

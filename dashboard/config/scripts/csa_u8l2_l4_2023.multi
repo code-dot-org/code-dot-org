@@ -7,7 +7,7 @@ wrong 'III only'
 wrong 'I and II only'
 right 'I and III only'
 
-allow_multiple_attempts false
+allow_multiple_attempts true
 
 markdown <<MARKDOWN
 Consider the following code segment:

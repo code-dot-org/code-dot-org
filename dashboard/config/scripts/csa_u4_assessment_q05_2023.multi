@@ -32,3 +32,5 @@ The next `if` statement checks if `x % 3 == 1`, meaning that the remainder after
 
 The last line then prints `3 * x`. Since `x` now stores the value `9`, the value `27` is printed to the console.
 MARKDOWN
+
+allow_multiple_attempts true

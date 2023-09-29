@@ -12,3 +12,4 @@ answer 'a copy of the value is given to where the method is called'
 
 question 'return keyword'
 answer 'exits a method and provides the value to where the method is called'
+allow_multiple_attempts true

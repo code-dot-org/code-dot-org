@@ -48,19 +48,45 @@ function randomColor() {
   return color('hsba(' + randomNumber(0, 359) + ', 100%, 100%, 0.3)').toString();
 }
 
+/** Creates a rain effect with 20 drops on the screen
+*/
+function rainEffect() {
+  console.log("inside rain effect");
+  push();
+  stroke(
+  rgb(92, 101, randomInt(140, 220), 0.5));
+  strokeWeight(3);
+  for (var i = 0; i < drops.length; i++) {
+    push();
+    translate(drops[i].x - 20, drops[i].y - 20);
+    line(0, 0, drops[i].length, drops[i].length * 2);
+    drops[i].y = drops[i].y + drops[i].length;
+    drops[i].x = drops[i].x + drops[i].length / 2;
+    pop();
+  }
+  drops = drops.filter(function(drop) {
+    return (drop.y < 420 && drop.x < 420);
+  });
+  if (drops.length === 0) {
+    removeBehaviorSimple(({name: "effectSprite"}), new Behavior(rainEffect, []));
+  }
+  pop();
+}
+
 //From: https://github.com/code-dot-org/code-dot-org/blob/staging/apps/src/p5lab/poetry/commands/foregroundEffects.js
 function setForegroundEffect2(option) {
   if(option == "rain") {
       for (var i = 0; i < numDrops; i++) {
-      drops.push({
-        x: randomInt(-400, 380),
-        y: randomInt(-50, -20),
-        length: randomInt(10, 20)
-      });
+      	drops.push({
+          x: randomInt(-400, 380),
+          y: randomInt(-50, -20),
+          length: randomInt(10, 20)
+        });
     }
-    addBehaviorSimple(({name: "effectSprite"}), new Behavior(rainEffect, []));
+    //addBehaviorSimple(({name: "effectSprite"}), new Behavior(rainEffect, []));
+    other.push(rainEffect);
   }
-  else if (option == 'bubbles') {
+  else if (option == "bubbles") {
     for (var bubble_i = 0; bubble_i < numBubbles; bubble_i++) {
       bubbles.push({
         x: random(-100, 400),
@@ -129,29 +155,7 @@ function setForegroundEffect2(option) {
   }
 }
 
-/** Creates a rain effect with 20 drops on the screen
-*/
-function rainEffect() {
-  push();
-  stroke(
-  rgb(92, 101, randomInt(140, 220), 0.5));
-  strokeWeight(3);
-  for (var i = 0; i < drops.length; i++) {
-    push();
-    translate(drops[i].x - 20, drops[i].y - 20);
-    line(0, 0, drops[i].length, drops[i].length * 2);
-    drops[i].y = drops[i].y + drops[i].length;
-    drops[i].x = drops[i].x + drops[i].length / 2;
-    pop();
-  }
-  drops = drops.filter(function(drop) {
-    return (drop.y < 420 && drop.x < 420);
-  });
-  if (drops.length === 0) {
-    removeBehaviorSimple(({name: "effectSprite"}), new Behavior(rainEffect, []));
-  }
-  pop();
-}
+
 
 /** Creates a bubble effect that float up from the bottom
 */
@@ -362,3 +366,5 @@ function drawStar(x, y, radius1, radius2, numPoints) {
   }
   endShape(CLOSE);
 }
+
+console.log("Loaded Foreground Library");

@@ -140,7 +140,7 @@ es-MX:
         options:
           PROPERTY:
             '"scale"': tamaño
-            '"width"': ancho
+            '"width"': el ancho
             '"height"': altura
             '"rotation"': rotación
             '"x"': posición horizontal
@@ -164,7 +164,7 @@ es-MX:
             '"UNICORN"': unicornios
           PROPERTY:
             '"scale"': tamaño
-            '"width"': ancho
+            '"width"': el ancho
             '"height"': altura
             '"rotation"': rotación
             '"x"': posición horizontal
@@ -263,7 +263,7 @@ es-MX:
         options:
           PROPERTY:
             '"scale"': tamaño
-            '"width"': ancho
+            '"width"': el ancho
             '"height"': altura
             '"rotation"': rotación
             '"x"': posición horizontal
@@ -347,7 +347,7 @@ es-MX:
             "{x: 300, y: 300}": abajo a la derecha
             "{x: randomNumber(60, 340), y: randomNumber(60, 340)}": al azar
       Dancelab_layoutSprites:
-        text: diseño {GROUP} como un {FORMAT}
+        text: organizar {GROUP} como {FORMAT}
         options:
           GROUP:
             sprites: todo
@@ -675,7 +675,7 @@ es-MX:
         options:
           PROPERTY:
             '"scale"': tamaño
-            '"width"': ancho
+            '"width"': el ancho
             '"height"': altura
             '"rotation"': rotación
             '"x"': posición horizontal
@@ -699,7 +699,7 @@ es-MX:
             '"UNICORN"': unicornios
           PROPERTY:
             '"scale"': tamaño
-            '"width"': ancho
+            '"width"': el ancho
             '"height"': altura
             '"rotation"': rotación
             '"x"': posición horizontal
@@ -710,7 +710,7 @@ es-MX:
         options:
           PROPERTY:
             '"scale"': tamaño
-            '"width"': ancho
+            '"width"': el ancho
             '"height"': altura
             '"rotation"': rotación
             '"x"': posición horizontal
@@ -735,7 +735,7 @@ es-MX:
             '"UNICORN"': unicornios
           PROPERTY:
             '"scale"': tamaño
-            '"width"': ancho
+            '"width"': el ancho
             '"height"': altura
             '"rotation"': rotación
             '"x"': posición horizontal
@@ -810,7 +810,7 @@ es-MX:
         options:
           PROPERTY:
             '"scale"': tamaño
-            '"width"': ancho
+            '"width"': el ancho
             '"height"': altura
             '"rotation"': rotación
             '"x"': posición horizontal
@@ -839,7 +839,7 @@ es-MX:
             '"UNICORN"': unicornios
           PROPERTY:
             '"scale"': tamaño
-            '"width"': ancho
+            '"width"': el ancho
             '"height"': altura
             '"rotation"': rotación
             '"x"': posición horizontal
@@ -854,7 +854,7 @@ es-MX:
         options:
           PROPERTY:
             '"scale"': tamaño
-            '"width"': ancho
+            '"width"': el ancho
             '"height"': altura
             '"rotation"': rotación
             '"x"': posición horizontal
@@ -884,7 +884,7 @@ es-MX:
             '"UNICORN"': unicornios
           PROPERTY:
             '"scale"': tamaño
-            '"width"': ancho
+            '"width"': el ancho
             '"height"': altura
             '"rotation"': rotación
             '"x"': posición horizontal
@@ -1256,7 +1256,7 @@ es-MX:
       gamelab_layoutGrid:
         text: diseño de sprites como una cuadrícula
       gamelab_layoutSprites:
-        text: diseño {GROUP} como un {FORMAT}
+        text: organizar {GROUP} como {FORMAT}
         options:
           FORMAT:
             '"border"': orilla
@@ -1369,15 +1369,15 @@ es-MX:
             "'sound://category_nature/summer_night_loop.mp3'": noche de verano
             "'sound://category_background/ocean_waves.mp3'": olas
             "'sound://category_nature/south_carolina_beach_ripple.mp3'": olas en la playa
-            "'sound://category_pop/bubble_pop_cluster_1.mp3'": Burbuja
+            "'sound://category_pop/bubble_pop_cluster_1.mp3'": burbuja
             "'sound://category_animals/bear.mp3'": oso
             "'sound://category_animals/cat.mp3'": gato
             "'sound://category_animals/cow.mp3'": vaca
             "'sound://category_animals/pig.mp3'": cerdo
             "'sound://category_animals/sheep.mp3'": oveja
-            "'sound://category_animals/goat.mp3'": Cabra
+            "'sound://category_animals/goat.mp3'": cabra
             "'sound://category_animals/chicken.mp3'": gallina
-            "'sound://category_animals/rooster.mp3'": rejilla
+            "'sound://category_animals/rooster.mp3'": gallo
             "'sound://category_animals/elephant.mp3'": elefante
             "'sound://category_animals/dolphin.mp3'": delfín
             "'sound://category_nature/thunderstorm_1.mp3'": tormenta de truenos
@@ -1399,7 +1399,7 @@ es-MX:
         text: reproducirSonido {SOUND}
         options:
           SOUND:
-            "'sound://category_sports/Airhorn_SFX.mp3'": corneta de aire
+            "'sound://category_sports/Airhorn_SFX.mp3'": bocina
             "'sound://category_sports/Crowd_Applause_SFX.mp3'": aplauso
             "'sound://category_sports/Crowd_Chant_SFX.mp3'": cántico
             "'sound://category_sports/Crowd_Cheer_SFX.mp3'": animar
@@ -1537,7 +1537,7 @@ es-MX:
         options:
           PROPERTY:
             '"scale"': tamaño
-            '"width"': ancho
+            '"width"': el ancho
             '"height"': altura
       gamelab_setSpeed_dropdown:
         text: ajustar {SPRITE} a velocidad {SIZE}
@@ -2171,7 +2171,7 @@ es-MX:
             '"sound://category_background/inside_plane.mp3"': Zumbido
             '"sound://category_loops/red_flag_loop1.mp3"': Misión
             '"sound://category_nature/summer_night_loop.mp3"': Noche
-            '"sound://category_background/ocean_waves.mp3"': océano
+            '"sound://category_background/ocean_waves.mp3"': mar
             '"sound://category_background/rain_thunderstorm_calm.mp3"': Lluvioso
             '"sound://category_background/rainforest_ambient_sound.mp3"': Bosque lluvioso
             '"sound://category_background/repitition.mp3"': Montar
@@ -2380,7 +2380,7 @@ es-MX:
       Vector_setColor:
         text: establecer color para {COLOR}
       Vector_setSize:
-        text: establecer ancho {WIDTH} altura {HEIGHT}
+        text: definir ancho {WIDTH} altura {HEIGHT}
       Vector_teleportTo:
         text: establecer posición {POSITION}
       Vector_vectorNorth:
@@ -2631,8 +2631,24 @@ es-MX:
           DIR:
             right: derecha ↻
             left: izquierda ↺
+      ecosystems_int10:
+        text: "{VALUE}"
+        options:
+          VALUE:
+            '1': '1'
+            '2': '2'
+            '3': '3'
+            '4': '4'
+            '5': '5'
+            '6': '6'
+            '7': '7'
+            '8': '8'
+            '9': '9'
+            '10': '10'
       storylab_clearHeadings:
         text: eliminar títulos
+      storylab_printText:
+        text: imprimir {TEXT}
       storylab_setForegroundEffect2:
         text: hacer efecto de {EFFECT}
         options:

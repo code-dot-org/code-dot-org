@@ -1,0 +1,26 @@
+:scss
+  .afe-partnership {
+    font-size: 1.5rem;
+    text-align: center;
+
+    .flex-container {
+      margin-bottom: 1rem;
+
+      p {
+        font-size: 1.25rem;
+      }
+
+      img {
+        width: 250px;
+        margin-top: -1px;
+      }
+    }
+  }
+
+%aside.afe-partnership
+  .flex-container.justify-center.wrap
+    %p.no-margin-bottom
+      =hoc_s(:in_partnership_with)
+    %img{src: "/images/AFE-dark-logo.png", alt: hoc_s(:afe_partnership_logo_alt)}
+  %p.body-three
+    =hoc_s(:afe_partnership_thanks_desc, markdown: :inline, locals: {afe_url: "/afe"})

@@ -1,8 +1,8 @@
 {
   "dropletBlock_createSprite_param3": "биіктік",
-  "dropletBlock_setCollider_param0": "түр",
-  "dropletBlock_setCollider_param4": "биіктік",
   "dropletBlock_setColliderEach_param0": "түр",
   "dropletBlock_setColliderEach_param4": "биіктік",
+  "dropletBlock_setCollider_param0": "түр",
+  "dropletBlock_setCollider_param4": "биіктік",
   "shareGame": "Ойыныңызбен бөлісіңіз:"
 }

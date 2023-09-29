@@ -50,9 +50,6 @@ fa:
       expired: "منقضی شده است. دوباره درخواست کنید"
       not_found: "یافت نشد"
       not_locked: "قفل نشده بود"
-      not_saved:
-        one: "یک خطا از ذخیره سازی این %{resource} جلوگیری کرد:"
-        other: "%{count} خطا از دخیره سازی این %{resource} جلوگیری کرد:"
     invitations:
       send_instructions: 'یک ایمیل دعوتنامه به ایمیل%{email} فرستاده شده است.'
       invitation_token_invalid: 'نمونه ی دعوتنامه ی ایجاد شده معتبر نیست!'

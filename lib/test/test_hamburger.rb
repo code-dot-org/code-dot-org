@@ -4,7 +4,7 @@ require 'active_support/i18n'
 
 class HamburgerTest < Minitest::Test
   def assert_includes_id(items, id)
-    assert items.find {|e| e[:id] == id}
+    assert(items.find {|e| e[:id] == id})
   end
 
   # Visibility CSS class tests.
@@ -161,13 +161,13 @@ class HamburgerTest < Minitest::Test
 
   def test_hamburger_content_expandable_en
     contents = Hamburger.get_hamburger_contents({level: nil, script_level: nil, user_type: nil, language: "en"})
-    assert contents[:entries].find {|e| e[:type] == "expander"}
+    assert(contents[:entries].find {|e| e[:type] == "expander"})
   end
 
   def test_hamburger_content_noexpandable_nonen
     contents = Hamburger.get_hamburger_contents({level: nil, script_level: nil, user_type: nil, language: "fr"})
     # 'legal_entries' is an allowable section in non-english.
-    refute contents[:entries].find {|e| e[:type] == "expander" && e[:id] != "legal_entries"}
+    refute(contents[:entries].find {|e| e[:type] == "expander" && e[:id] != "legal_entries"})
   end
 
   # Header content tests.

@@ -12,11 +12,12 @@
       "project_sharing": true,
       "show_calendar": true,
       "student_detail_progress_view": true,
+      "tts": true,
       "weekly_instructional_minutes": 225
     },
     "new_name": null,
     "family_name": null,
-    "serialized_at": "2023-04-20 18:54:52 UTC",
+    "serialized_at": "2023-08-03 17:38:20 UTC",
     "published_state": null,
     "instruction_type": null,
     "instructor_audience": null,
@@ -96,7 +97,7 @@
           {
             "notice": "AI/ML Professional Development",
             "details": "Before starting this unit, consider exploring our free online self-paced professional development module that introduces you to the key concepts, tools, and projects of this unit.",
-            "link": "https://studio.code.org/s/self-paced-pl-csd5-2021",
+            "link": "https://studio.code.org/courses/self-paced-pl-aiml-2023",
             "type": "information",
             "visibility": "Teacher-only"
           }
@@ -1870,7 +1871,7 @@
       "key": "f5c37797-9525-4fab-a819-6b699feb020a",
       "position": 5,
       "properties": {
-        "description": "**Training Screen:**\n\n- Informational text will frequently pop up on the screen. Consider asking students to read the prompts aloud to the class, possibly in their best robot voice, for a little fun\n- Ask students to use thumbs up / thumbs down to decide as a class whether something is a fish\n- At 30 images, the level will ask if you would like to continue or keep training. Ask students to help with this decision and follow their lead - either continue training, or go to the next screen.\n- Before continuing, have students record on their activity guide how many images they used to train A.I. Bot.\n\n**Testing Screen:**\n\n- A.I. Bot will probably misidentify a few objects. Make sure students notice this, and ask them to individually consider why they think this might be happening. This ties in to the discussion at the end of this level.\n\n**Evaluation Screen:**\n\n- Have students count the number of fish that it identified correctly. Record this on the activity guide.\n- It’s okay if A.I. Bot misidentifies some trash as fish - this sets the stage for the discussion.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Discuss:** _If we wanted A.I. Bot to become better at recognizing fish, how do you think we could help it do that?_"
+        "description": "| Activity                           | As a Class                                                                                                                                                                      |\n| -------------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------ |\n| **Training Screen** ![](https://images.code.org/d5c6d852f32c09b038315b9c4b5a77f1-oceans1-sm.png) | <ul><li>Informational text will frequently pop up on the screen. Consider asking students to read the prompts aloud to the class, possibly in their best robot voice, for a little fun</li><li>Ask students to use thumbs up / thumbs down to decide as a class whether something is a fish</li><li>At 30 images, the level will ask if you would like to continue or keep training. Ask students to help with this decision and follow their lead - either continue training, or go to the next screen.</li><li>Before continuing, have students record on their activity guide how many images they </li></ul>|\n| **Testing Screen** ![](https://images.code.org/1c133d1ed2eb5f634fe0469aef40b4c6-oceans2-sm.png) | <ul><li>A.I. Bot will probably misidentify a few objects. Make sure students notice this, and ask them to individually consider why they think this might be happening. This ties in to the discussion at the end of this level.</li></ul> |\n| **Evaluation Screen** ![](https://images.code.org/418cdfba3b4181267a1713855a005bc6-oceans3-sm.png) |<ul><li>Have students count the number of fish that it identified correctly. Record this on the activity guide.</li><li>It’s okay if A.I. Bot misidentifies some trash as fish - this sets the stage for the discussion. </li></ul> |\n\n&nbsp;\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Discuss:** _If we wanted A.I. Bot to become better at recognizing fish, how do you think we could help it do that?_"
       },
       "seeding_key": {
         "activity_section.key": "f5c37797-9525-4fab-a819-6b699feb020a",
@@ -11706,6 +11707,28 @@
       }
     },
     {
+      "name": "CSD Guide to Assessment ",
+      "url": "https://docs.google.com/document/d/1IO5XgPW_Apil_Uziq5hAMCBgilm8txZ3sp8atxiKiLU/view",
+      "key": "csd_guide_to_assessment_4",
+      "properties": {
+        "include_in_pdf": true
+      },
+      "seeding_key": {
+        "resource.key": "csd_guide_to_assessment_4"
+      }
+    },
+    {
+      "name": "CSD Guide to Curriculum Videos ",
+      "url": "https://docs.google.com/document/d/1c2hF3CaTJacvwDy4y_9-m1jSkSPmK__F6pDPetXVvy4/view",
+      "key": "csd_guide_to_curriculum_videos_4",
+      "properties": {
+        "include_in_pdf": true
+      },
+      "seeding_key": {
+        "resource.key": "csd_guide_to_curriculum_videos_4"
+      }
+    },
+    {
       "name": "CSD Guide to Debugging",
       "url": "https://docs.google.com/document/d/145lvpomqz0tUuzXLbkAFgP9zMDpECMwFYiEIG1_hQFg/view",
       "key": "csd_guide_to_debugging",
@@ -11726,13 +11749,25 @@
       }
     },
     {
-      "name": "CSD Implementation Guide",
-      "url": "https://docs.google.com/document/d/1sM_1Oxb7TGp5gSfuMjs0X0_Tko9tm8QJ4N6L26NI_iE/view",
-      "key": "csd_implementation_guide",
+      "name": "CSD Guide to Teaching and Learning Strategies",
+      "url": "https://docs.google.com/document/d/1Cg5iTwERoX25Y2DdLNmrPCbVB2d9FPGfUMUvcnVoN8Q/view",
+      "key": "csd_guide_to_teaching_and_learning_strategies_4",
       "properties": {
+        "include_in_pdf": true
       },
       "seeding_key": {
-        "resource.key": "csd_implementation_guide"
+        "resource.key": "csd_guide_to_teaching_and_learning_strategies_4"
+      }
+    },
+    {
+      "name": "CSD Guide to Using Resources ",
+      "url": "https://docs.google.com/document/d/1NYJMHZYnAZYNctehlQOImSstsu48sRGOMbi4It4ZjkI/view",
+      "key": "csd_guide_to_using_resources_4",
+      "properties": {
+        "include_in_pdf": true
+      },
+      "seeding_key": {
+        "resource.key": "csd_guide_to_using_resources_4"
       }
     },
     {
@@ -12217,6 +12252,28 @@
       }
     },
     {
+      "name": "Problem Solving Process",
+      "url": "https://docs.google.com/document/d/1ttgLORbUtEEpWcGsygF0YKVFHpG0PEzfLyi52T8wFIo/view",
+      "key": "problem_solving_process_4",
+      "properties": {
+        "include_in_pdf": true
+      },
+      "seeding_key": {
+        "resource.key": "problem_solving_process_4"
+      }
+    },
+    {
+      "name": "Problem Solving Process with Data",
+      "url": "https://docs.google.com/document/d/19pdlJOjWqA5s7f5sr9mTL-v7x_ZMjQP36SlwqzJ-Ipo/view",
+      "key": "problem_solving_process_with_data_2",
+      "properties": {
+        "include_in_pdf": true
+      },
+      "seeding_key": {
+        "resource.key": "problem_solving_process_with_data_2"
+      }
+    },
+    {
       "name": "Saving Models in AI Lab",
       "url": "https://docs.google.com/presentation/d/1VAtkWeEY9FwyLykuTlJr58El62Xz7CLxNeL44jOZqvs/template/preview",
       "key": "saving_models_in_ai_lab",
@@ -12266,7 +12323,7 @@
     },
     {
       "name": "Shoe Survey",
-      "url": "https://docs.google.com/forms/d/1PWlwQuyTn_7f4lQUXkujQRZQrDPXFQllw7y7IGd02VM/view",
+      "url": "https://docs.google.com/forms/d/e/1FAIpQLSc7rkOHqoMHb2GLBW5tuTjVFPY7xblkCLnzCpGyF6UaX2mKpQ/viewform?usp=sharing",
       "key": "shoe_survey",
       "properties": {
         "audience": "Teacher",
@@ -13033,6 +13090,18 @@
     },
     {
       "seeding_key": {
+        "resource.key": "csd_guide_to_assessment_4",
+        "script.name": "focus-on-impact-in-society4-2023"
+      }
+    },
+    {
+      "seeding_key": {
+        "resource.key": "csd_guide_to_curriculum_videos_4",
+        "script.name": "focus-on-impact-in-society4-2023"
+      }
+    },
+    {
+      "seeding_key": {
         "resource.key": "csd_guide_to_debugging",
         "script.name": "focus-on-impact-in-society4-2023"
       }
@@ -13045,7 +13114,25 @@
     },
     {
       "seeding_key": {
-        "resource.key": "csd_implementation_guide",
+        "resource.key": "csd_guide_to_teaching_and_learning_strategies_4",
+        "script.name": "focus-on-impact-in-society4-2023"
+      }
+    },
+    {
+      "seeding_key": {
+        "resource.key": "csd_guide_to_using_resources_4",
+        "script.name": "focus-on-impact-in-society4-2023"
+      }
+    },
+    {
+      "seeding_key": {
+        "resource.key": "problem_solving_process_4",
+        "script.name": "focus-on-impact-in-society4-2023"
+      }
+    },
+    {
+      "seeding_key": {
+        "resource.key": "problem_solving_process_with_data_2",
         "script.name": "focus-on-impact-in-society4-2023"
       }
     },
@@ -14343,6 +14430,15 @@
     }
   ],
   "lessons_opportunity_standards": [
+
+  ],
+  "rubrics": [
+
+  ],
+  "learning_goals": [
+
+  ],
+  "learning_goal_evidence_levels": [
 
   ]
 }

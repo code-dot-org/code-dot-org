@@ -53,6 +53,7 @@ fa:
         gender: 'جنسیت'
         edit_header: 'ویرایش اطلاعات کاربری'
         finish_sign_up_header: 'ساخت حساب کاربری خود را تمام کنید'
+        finish_sign_up_header_error: 'لطفا خطاهای زیر را درست کنید:'
         finish_sign_up_subheader: 'اطلاعات زیر را پر کنید تا ایجاد یک حساب Code.org برای <strong>%{email}</strong> به پایان برسد.'
         finish_sign_up_subheader_markdown: 'اطلاعات زیر را پر کنید تا ایجاد یک حساب Code.org برای **%{email}** به پایان برسد.'
         finish_sign_up_subheader_provider: 'اطلاعات زیر را پر کنید تا ایجاد یک حساب Code.org با <strong>%{provider}</strong> برای <strong>%{email}</strong> تکمیل شود.'
@@ -60,6 +61,8 @@ fa:
         reset_password_token: "پیوند بازنشانی رمز عبوری که دنبال کرده اید"
         error:
           future: نمیتوان در آینده بود
+        user_type: 'نوع حساب کاربری'
+        us_state: 'وضعیت'
   beta: "بتا"
   hello: "سلام دنیا"
   welcome_back: "%{name}، خوش آمدید"
@@ -69,6 +72,7 @@ fa:
   unsubmit: ثبت نشده
   previous_page: صفحه‌ی قبل
   next_page: صفحه بعد
+  next_level: سطح بعدی
   next_resource: منبع بعدی
   done_with_module: با این ماژول آموزشی تمام شد
   cancel: "لغو"
@@ -172,7 +176,6 @@ fa:
     data_collection_us: "من متوجهم که Code.org یک وب سایت غیرانتفاعی مستقر در ایالات متحده است و قوانین مربوط به جمع‌آوری داده ها در ایالات متحده ممکن است با همان قوانین در کشور من متفاوت باشد."
     visit_privacy: 'برای کسب اطلاعات بیشتر، [خط‌مشی حفظ حریم خصوصی] (%{privacy_url}) Code.org را ببینید.'
     student_terms_markdown: "آدرس‌های ایمیل در فرمی ذخیره نمی‌شوند که به ما امکان تماس با دانشجویان را بدهد. دانش آموزان هرگز ایمیلی از Code.org دریافت نخواهند کرد مگر برای بازیابی رمز عبور. برای اطلاعات بیشتر به [خط‌مشی حفظ حریم خصوصی] ما (http://code.org/privacy) مراجعه کنید."
-    additional_information: "ما به اطلاعات بیشتری برای ادامه ثبت نام شما احتیاج داریم."
     user_type_button: "بروزرسانی نوع حساب کاربری"
     user_type_label: "نوع حساب کاربری"
     user_type_student: "دانش آموز"
@@ -200,6 +203,7 @@ fa:
     parent_account_checkbox: "من یک پدر/مادر/سرپرست هستم که از طرف فرزندم ثبت نام می کنم"
     parent_account_email_progress_permission: "آیا می‌توانیم به‌روزرسانی‌های گاه به گاه در مورد پیشرفت‌ها و پروژه‌های فرزندتان و به‌روزرسانی‌هایی درباره دوره و علوم رایانه‌اش را به شما ایمیل کنیم؟ [(به خط مشی حفظ حریم خصوصی ما مراجعه کنید)](%{privacy_policy_url})"
     parent_account_email_label: "ایمیل والدین/سرپرست"
+    us_state: 'وضعیت'
   school_info:
     title: 'اطلاعات مدرسه (اختیاری)'
     school_country: 'کشور مدرسه'
@@ -343,7 +347,7 @@ fa:
       professional_learning: "یادگیری پیشرفته"
       documentation: "مستندات"
       tutorials: "آموزش‌ها"
-      sprite_lab_documentation: "مستندات آزمایشگاه اسپرایت"
+      sprite_lab_documentation: "مستندات لابراتوار اسپرایت"
       web_lab_documentation: "مستندات آزمایشگاه وب"
       educate_overview: "مروری بر مربی"
       educate_elementary: "مدرسه ابتدایی"
@@ -388,7 +392,7 @@ fa:
       team: 'تیم'
       driver: 'راننده'
       navigator: 'شریک'
-      create: 'ایجاد'
+      create: 'ایجاد کردن'
       algebra_game: 'جبر'
       applab: 'آزمایشگاه نرم افزار'
       artist: 'هنرمند'
@@ -396,7 +400,7 @@ fa:
       basketball: 'بسکتبال'
       bounce: 'پریدن'
       calc: 'کالک'
-      dance: 'جشن و رقص'
+      dance: 'مهمانی رقص'
       eval: 'اِوال'
       flappy: 'فلاپی'
       frozen: 'منجمد'
@@ -412,6 +416,7 @@ fa:
       playlab: 'آزمایشگاه بازی'
       playlab_k1: 'آزمایشگاه بازی (کسانی که هنوز خواندن را یاد نگرفته اند)'
       poetry: 'شعر'
+      poetry_hoc: 'هنر شعر'
       scratch: 'اسکرچ (چرکنویس)'
       sports: 'ورزش'
       spritelab: 'آزمایشگاه اسپرایت'
@@ -567,7 +572,7 @@ fa:
   footer:
     thank_you: 'ما از <a href="https://code.org/about/donors"> اهدا کنندگانمان</a>،<a href="https://code.org/about/partners"> همکارانمان</a>، <a href="https://code.org/about/team"> تیم گسترده مان</a>، گروه فیلم برداری مان، و <a href="https://code.org/about/advisors"> مشاوران آموزشیمان</a> برای همکاریشان در ایجاد استودیو ی کد سپاسگزاریم.'
     help_from_html: 'مهندسین از گوگل , مایکروسافت ، فیس بوک و توییتر در ایجاد این آموزش کمک کردند'
-    help_from_html_old: 'مهندسینی از گوگل، مایکروسافت، فیسبوک، و توییتر به تولید این محتوا کمک کردند.'
+    help_from_html_old: 'مهندسان آمازون، گوگل و مایکروسافت به تولید این محتوا کمک کردند.'
     art_from_html: 'ماینکرافت&#8482;&copy;%{current_year} مایکروسافت. تمام حقوق محفوظ است.<br />جنگ ستارگان&#8482;&copy;%{current_year} دیزنی و لوکاس فیلم. تمام حقوق محفوظ است.<br />فروزن (یخ‌زده)&#8482;&copy;%{current_year} دیزنی. تمام حقوق محفوظ است.<br />عصر یخبندان&#8482;&copy;%{current_year} فاکس قرن بیستم. تمام حقوق محفوظ است.<br />انگری بردز (پرندگان خشمگین)&#8482;&copy; 2009-%{current_year} شرکت تفریحی روویو با مسئولیت محدود. تمام حقوق محفوظ است.<br />گیاهان علیه زامبی‌ها&#8482;&copy;%{current_year} شرکت الکترونیک آرتز. تمام حقوق محفوظ است.<br />رفقای بد دریم ورکز&copy;%{current_year}دریم ورکز. تمام حقوق محفوظ است.'
     art_from_html_old: 'ماینکرافت&#8482;&copy;%{current_year} مایکروسافت. تمام حقوق محفوظ است. جنگ ستارگان&#8482;&copy;%{current_year} دیزنی و لوکاس فیلم. تمام حقوق محفوظ است. فروزن (یخ‌زده)&#8482;&copy;%{current_year} دیزنی. تمام حقوق محفوظ است. عصر یخبندان&#8482;&copy;%{current_year} فاکس قرن بیستم. تمام حقوق محفوظ است. انگری بردز (پرندگان خشمگین)&#8482;&copy; 2009-%{current_year} شرکت تفریحی روویو با مسئولیت محدود. تمام حقوق محفوظ است. گیاهان علیه زامبی‌ها&#8482;&copy;%{current_year} شرکت الکترونیک آرتز. تمام حقوق محفوظ است. رفقای بد دریم ورکز&copy;%{current_year}دریم ورکز. تمام حقوق محفوظ است.'
     code_from_html: 'Code.org از p5.play استفاده می‌کند که تحت لیسانس <a href="http://www.gnu.org/licenses/old-licenses/lgpl-2.1-standalone.html">GNU LGPL 2.1</a> قرار دارد'
@@ -578,7 +583,7 @@ fa:
     copyright: 'حق کپی برداری و نشر'
     more: 'بیشتر'
     feedback: 'ارائه پیشنهادات و انتقادات'
-    translate: 'کمک به ما در ترجمه به زبان شما'
+    translate: 'داوطلب برای ترجمه مطالب ما'
     support: 'پشتیبانی'
     support_url: 'http://support.code.org/'
     tos_short: 'شرایط'
@@ -591,7 +596,7 @@ fa:
     how_it_works: 'چگونه کار می کند'
     try_hour_of_code: 'یک ساعت کدنویسی را امتحان کن!'
     store: 'فروشگاه'
-    cookie_notice: 'اطلاعیه کوکی'
+    cookie_notice: 'هشدار کوکی'
     view_code: 'مشاهده کد'
   reference_area:
     title: 'کمک نیاز دارید؟'
@@ -609,7 +614,7 @@ fa:
     download: 'دانلود ویدیو'
     show_notes: 'نمایش یادداشتها'
     show_video: 'نمایش ویدئو'
-    label: 'ویدیو'
+    label: 'ویدئو'
   compatibility:
     upgrade:
       unsupported_message: "مرورگر شما پشتیبانی نمیشود. لطفا مرورگر خود را به [یکی از مرورگرهای تحت پشتیبانی ما] [one of our supported browsers] %{supported_browsers_url} بروزرسانی کنید. میتوانید محتویات صفحه را مشاهده کنید، اما عملکرد آن مطلوب نخواهد بود."
@@ -658,9 +663,9 @@ fa:
     aquatic:
       title: "ماینکرفت"
     dance-2019:
-      title: 'جشن و رقص'
+      title: 'مهمانی رقص'
     dance:
-      title: 'جشن و رقص'
+      title: 'مهمانی رقص'
     flappy:
       title: 'کدنویسی Flappy'
       body: 'می‌خواهی بازی خودت را در کمتر از 10 دقیقه بسازی؟ آموزش کدنویسی Flappy ما را امتحان کن!'
@@ -675,6 +680,7 @@ fa:
       audience: "سنین سیزده به بالا"
       cta: "یادبگیر چگونه"
     hello-world:
+      title: 'سلام دنیا!'
       body: 'یکی از چهار تم جالب را انتخاب کنید تا کاراکترهای واکنشگر را در دنیایی که خودتان ایجاد کرده‌اید کدنویسی کنید.'
     hero:
       title: "ماینکرفت"
@@ -697,6 +703,7 @@ fa:
       title: "ماینکرفت"
       body: "جانواران برنامه و دیگر موجودات ماینکرافت در نسخه‌ی ماینکرافت شما"
     poem-art:
+      title: 'هنر شعر'
       body: 'خود را نشان دهید! از کد استفاده کنید تا شعرهای متحرک بسازید.'
     sports:
       title: "ورزش"
@@ -704,6 +711,7 @@ fa:
     starwars:
       title: "جنگ ستارگان"
     text-compression:
+      title: "فشرده‌سازی متن"
       body: "در این درس، دانش‌آموزان با استفاده از جایگزینی الگوها با نمادها با کمک ابزار فشرده‌سازی متن متن را فشرده می‌کنند"
     weblab:
       title: "وب لب (نسخه بتا)"
@@ -1083,6 +1091,7 @@ fa:
         csf_express: 'علوم کامپیوتر مقدماتی (پیش از اکسپرس یا اکسپرس)'
         csd: 'کشفیات علوم کامپیوتر'
         csp: 'اصول علوم کامپیوتر'
+        other: 'دیگر'
         not_applicable: "نامرتبط"
       email_opt_in:
         opt_in_yes: 'بله'
@@ -1107,6 +1116,7 @@ fa:
   course_offering:
     headers:
       minecraft: 'ماینکرفت'
+      hello_world: 'سلام دنیا!'
       sports: 'ورزش'
       csf: 'مبانی cs'
       csc: 'اتصالهای cs'
@@ -1162,3 +1172,4 @@ fa:
     binary: "دو دویی"
     hexadecimal: "سیستم شانزده شانزدهی"
     pixel_format_header: "قالب پیکسل"
+

@@ -21,7 +21,6 @@ describe('AnimationPickerBody', function () {
     playAnimations: false,
     libraryManifest: testAnimationLibrary,
     categories: CostumeCategories,
-    hideUploadOption: false,
     hideAnimationNames: false,
     navigable: true,
     hideBackgrounds: false,
@@ -38,22 +37,12 @@ describe('AnimationPickerBody', function () {
 
   describe('upload warning', function () {
     it('shows an upload warning if the upload button is visible', function () {
-      const body = shallow(
-        <AnimationPickerBody {...defaultProps} hideUploadOption={false} />
-      );
+      const body = shallow(<AnimationPickerBody {...defaultProps} />);
       const warnings = body.find(WarningLabel);
       expect(warnings).to.have.length(1);
       expect(warnings.children().text()).to.equal(
         msg.animationPicker_warning()
       );
-    });
-
-    it('does not show an upload warning if upload button is hidden', function () {
-      const body = shallow(
-        <AnimationPickerBody {...defaultProps} hideUploadOption={true} />
-      );
-      const warnings = body.find(WarningLabel);
-      expect(warnings).to.have.length(0);
     });
   });
 
@@ -101,14 +90,6 @@ describe('AnimationPickerBody', function () {
       expect(pickerItems.length).to.equal(4);
       const uploadButton = body.find(AnimationUploadButton);
       expect(uploadButton.length).to.equal(1);
-    });
-
-    it('does not show upload button if hideUploadButton', function () {
-      const body = shallow(
-        <AnimationPickerBody {...defaultProps} hideUploadOption={true} />
-      );
-      const uploadButton = body.find(AnimationUploadButton);
-      expect(uploadButton.length).to.equal(0);
     });
 
     it('only shows backgrounds if defaultQuery has categoryQuery backgrounds', function () {

@@ -2624,8 +2624,24 @@ ru:
           DIR:
             right: направо ↻
             left: налево ↺
+      ecosystems_int10:
+        text: "{VALUE}"
+        options:
+          VALUE:
+            '1': '1'
+            '2': '2'
+            '3': '3'
+            '4': '4'
+            '5': '5'
+            '6': '6'
+            '7': '7'
+            '8': '8'
+            '9': '9'
+            '10': '10'
       storylab_clearHeadings:
         text: понятные заголовки
+      storylab_printText:
+        text: Печати {TEXT}
       storylab_setForegroundEffect2:
         text: выполнить эффект  {EFFECT}
         options:

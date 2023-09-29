@@ -62,7 +62,7 @@ module Services
               # Only these lessons guarantee that their relative position is unique.
               lessons = Lesson.joins(:script).
                 where(
-                  "scripts.name": route_params[:script_id],
+                  'scripts.name': route_params[:script_id],
                   relative_position: route_params[:position].to_i,
                 ).select(&:numbered_lesson?)
               if lessons.count == 0

@@ -9,3 +9,5 @@ wrong 'Light'
 teacher_markdown <<MARKDOWN
 **Content: Unit 6 Lesson 2, 7, 16**
 MARKDOWN
+
+allow_multiple_attempts true

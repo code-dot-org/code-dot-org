@@ -1,7 +1,7 @@
-/* global dashboard */
-
 import PropTypes from 'prop-types';
 import React from 'react';
+
+import commonMsg from '@cdo/locale';
 
 import * as rowStyle from './rowStyle';
 import {getStore} from '../../redux';
@@ -97,7 +97,7 @@ export default class ImagePickerPropertyRow extends React.Component {
           />
           &nbsp;
           <a style={rowStyle.link} onClick={this.handleButtonClick}>
-            Choose...
+            {commonMsg.choosePrefix()}
           </a>
         </div>
       </div>

@@ -1,4 +1,3 @@
-/* global appOptions */
 import $ from 'jquery';
 import msg from '@cdo/locale';
 import * as utils from '../../utils';
@@ -120,6 +119,7 @@ var currentSources = {
   selectedPoem: null,
   inRestrictedShareMode: false,
   teacherHasConfirmedUploadWarning: false,
+  hiddenDefinitions: null,
 };
 
 /**
@@ -147,6 +147,7 @@ function unpackSources(data) {
     libraries: data.libraries,
     inRestrictedShareMode: data.inRestrictedShareMode,
     teacherHasConfirmedUploadWarning: data.teacherHasConfirmedUploadWarning,
+    hiddenDefinitions: data.hiddenDefinitions,
   };
 }
 
@@ -157,6 +158,7 @@ const PROJECT_URL_PATTERN = /^(.*\/projects\/\w+\/[\w\d-]+)\/.*/;
 
 /**
  * Used by setThumbnailUrl() to set the project thumbnail URL path.
+ * NOTE: if changing this URL, update project thumbnail URL validation as well
  */
 const THUMBNAIL_PATH = '.metadata/thumbnail.png';
 
@@ -721,6 +723,11 @@ var projects = (module.exports = {
         if (current) {
           if (currentSources.source) {
             sourceHandler.setInitialLevelSource(currentSources.source);
+          }
+          if (currentSources.hiddenDefinitions) {
+            sourceHandler.setInitialHiddenDefinitions(
+              currentSources.hiddenDefinitions
+            );
           }
         } else {
           this.setName('My Project');
@@ -1320,6 +1327,7 @@ var projects = (module.exports = {
             this.sourceHandler.inRestrictedShareMode();
           const teacherHasConfirmedUploadWarning =
             this.sourceHandler.teacherHasConfirmedUploadWarning();
+          const hiddenDefinitions = this.sourceHandler.getHiddenDefinitions();
           callback({
             source,
             html,
@@ -1330,6 +1338,7 @@ var projects = (module.exports = {
             libraries,
             inRestrictedShareMode,
             teacherHasConfirmedUploadWarning,
+            hiddenDefinitions,
           });
         })
         .catch(error => callback({error}))
@@ -1776,6 +1785,7 @@ var projects = (module.exports = {
   },
 
   setThumbnailUrl() {
+    // NOTE: if changing this URL, update project thumbnail URL validation as well
     current.thumbnailUrl = `/v3/files/${current.id}/${THUMBNAIL_PATH}`;
     thumbnailChanged = true;
   },

@@ -15,4 +15,4 @@ answer 'traversing a 2D array by accessing each row from top to bottom'
 question 'column-major order'
 answer 'traversing a 2D array by accessing each column from left to right'
 
-allow_multiple_attempts nil
+allow_multiple_attempts true

@@ -4,7 +4,6 @@ import {connect} from 'react-redux';
 import i18n from '@cdo/locale';
 import BaseDialog from '../BaseDialog';
 import LoginTypePicker from './LoginTypePicker';
-import EditSectionForm from './EditSectionForm';
 import PadAndCenter from './PadAndCenter';
 import {sectionShape} from './shapes';
 import {
@@ -19,16 +18,10 @@ import ParticipantTypePicker from './ParticipantTypePicker';
 import Spinner from '@cdo/apps/code-studio/pd/components/spinner';
 import {navigateToHref} from '@cdo/apps/utils';
 import {SectionLoginType} from '@cdo/apps/util/sharedConstants';
-import experiments from '@cdo/apps/util/experiments';
 
-// Checks if experiment is enabled and navigates to the new section setup page
-// if both params are non-null.
+// Navigates to the new section setup page if both params are non-null.
 const redirectToNewSectionPage = (participantType, loginType) => {
-  if (
-    experiments.isEnabled('sectionSetupRefresh') &&
-    !!participantType &&
-    !!loginType
-  ) {
+  if (!!participantType && !!loginType) {
     navigateToHref(
       `/sections/new?participantType=${participantType}&loginType=${loginType}`
     );
@@ -36,8 +29,7 @@ const redirectToNewSectionPage = (participantType, loginType) => {
 };
 
 /**
- * UI for a teacher to add a new class section.  For editing a section see
- * EditSectionDialog.
+ * UI for a teacher to add a new class section.
  */
 const AddSectionDialog = ({
   isOpen,
@@ -115,14 +107,9 @@ const AddSectionDialog = ({
         />
       );
     }
-    return <EditSectionForm title={title} isNewSection={true} />;
   };
 
-  if (
-    participantType &&
-    loginType &&
-    experiments.isEnabled('sectionSetupRefresh')
-  ) {
+  if (participantType && loginType) {
     return null;
   } else {
     return (

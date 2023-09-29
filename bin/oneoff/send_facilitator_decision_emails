@@ -4,12 +4,12 @@ require_relative '../../dashboard/config/environment'
 
 ActiveRecord::Base.transaction do
   applications_emailed = []
+  decision_entry_types = ['declined_email', 'waitlisted_email']
   puts "Sending decision emails for locked declined/waitlisted facilitator 1920 applications..."
   Pd::Application::Facilitator1920Application.find_each do |application|
     if application.locked? && Pd::Application::Facilitator1920Application::AUTO_EMAIL_STATUSES.include?(application.status)
       log = application.sanitize_status_timestamp_change_log
-
-      if log.select {|entry| ['declined_email', 'waitlisted_email'].include? entry[:title]}.empty?
+      if log.none? {|entry| decision_entry_types.include? entry[:title]}
         application.emails.unsent.destroy_all
         application.queue_email(application.status)
         applications_emailed << "id: #{application.id}, status: #{application.status}"

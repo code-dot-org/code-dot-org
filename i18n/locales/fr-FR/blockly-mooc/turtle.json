@@ -38,6 +38,8 @@
   "drawATriangle": "dessiner un triangle",
   "drawUpperWave": "dessine une grande vague",
   "drawLowerWave": "dessine un creux de vague",
+  "drawShape": "dessiner une forme",
+  "drawShapeWithSideLength": "dessiner la forme avec la longueur du côté",
   "drawSticker": "dessiner un autocollant",
   "drawStickerWithSize": "dessine un autocollant avec la taille",
   "forward": "en avant",
@@ -103,5 +105,6 @@
   "turtleVisibilityTooltip": "Rend l'artiste visible ou invisible.",
   "widthTooltip": "Modifie la largeur du crayon.",
   "withSize": "avec la taille",
+  "withSideLength": "avec longueur latérale",
   "wrongColour": "Ton image est de la mauvaise couleur. Pour ce casse-tête, elle doit être de 1%."
 }

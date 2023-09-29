@@ -56,8 +56,7 @@ def main
       page.levels.each_with_index do |contained_level, position_index|
         next unless contained_level.type == 'Multi'
         next if contained_levels.
-          select {|existing_contained_level| existing_contained_level[:level_id] == contained_level.id}.
-          any?
+          any? {|existing_contained_level| existing_contained_level[:level_id] == contained_level.id}
 
         contained_question = get_contained_question(contained_level)
         contained_levels << {
@@ -144,8 +143,11 @@ def main
   end
 
   # Verify that the data size is sensible.
-  raise "contained_levels too big: #{contained_levels.size} rows exceeds limit of 10000" if contained_levels.size > 10_000
-  raise "contained_level_answers too big: #{contained_levels_answers.size} rows exceeds limit of 100000" if contained_level_answers.size > 100_000
+  CDO.log.info "contained_levels: #{contained_levels.size}"
+  CDO.log.info "contained_level_answers: #{contained_level_answers.size}"
+  CDO.log.info "level_sources: #{level_sources_multi_types.size}"
+  raise "contained_levels too big: #{contained_levels.size} rows exceeds limit of 100000" if contained_levels.size > 100_000
+  raise "contained_level_answers too big: #{contained_level_answers.size} rows exceeds limit of 100000" if contained_level_answers.size > 100_000
   raise "level_sources too big: #{level_sources_multi_types.size} rows exceeds limit of 100000" if level_sources_multi_types.size > 100_000
 
   # Maximum rows to insert per query
@@ -300,24 +302,22 @@ def pd_applications_status_logs_row(row_hash)
 end
 
 def insert_pd_applications_status_logs_rows(rows)
-  begin
-    ActiveRecord::Base.connection.execute <<~SQL
-      INSERT INTO pd_applications_status_logs (
-        pd_application_id,
-        status,
-        timestamp,
-        position
-      )
-      VALUES
-      #{rows.map {|row| pd_applications_status_logs_row(row)}.join(",\n")}
-    SQL
-  rescue => exception
-    puts exception
-    Honeybadger.notify(
-      exception,
-      error_message: "Error when writing pd_applications_status_logs"
+  ActiveRecord::Base.connection.execute <<~SQL
+    INSERT INTO pd_applications_status_logs (
+      pd_application_id,
+      status,
+      timestamp,
+      position
     )
-  end
+    VALUES
+    #{rows.map {|row| pd_applications_status_logs_row(row)}.join(",\n")}
+  SQL
+rescue => exception
+  puts exception
+  Honeybadger.notify(
+    exception,
+    error_message: "Error when writing pd_applications_status_logs"
+  )
 end
 
 main

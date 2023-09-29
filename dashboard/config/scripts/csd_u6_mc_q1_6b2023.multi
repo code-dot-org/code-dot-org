@@ -9,3 +9,5 @@ wrong 'Toggle switch'
 teacher_markdown <<MARKDOWN
 **Content: Unit 6 Lesson 5**
 MARKDOWN
+
+allow_multiple_attempts true

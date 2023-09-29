@@ -50,9 +50,6 @@ is:
       expired: "er útrunninn, vinsamlegast sæktu um nýjan"
       not_found: "finnst ekki"
       not_locked: "var ekki læstur"
-      not_saved:
-        one: "1 villa kom í veg fyrir vistun %{resource}:"
-        other: "%{count} villur komu í veg fyrir vistun %{resource}:"
     invitations:
       send_instructions: 'Tölvupóstur með boði hefur verið sendur á %{email}.'
       invitation_token_invalid: 'Uppgefnar boðsupplýsingar passa ekki!'

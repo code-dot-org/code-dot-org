@@ -22,3 +22,5 @@ teacher_markdown <<MARKDOWN
 * IOC-1.E: Explain how people participate in problem-solving processes at scale.
 :::
 MARKDOWN
+
+allow_multiple_attempts true

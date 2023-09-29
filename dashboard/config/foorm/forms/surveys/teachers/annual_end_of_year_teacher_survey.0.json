@@ -30,7 +30,7 @@
         {
           "type": "html",
           "name": "section1_teaching_context",
-          "html": "<h1>Teaching Context</h1>\n<p><span style='font-size: 12pt;'>This survey is about teaching with Code.org materials and resources during the 2022-23 school year.</p>\n<p><span style='font-size: 12pt;'>The purpose of this survey is to understand better who our teachers are, their motivation to use the Code.org curriculum and tools, as well as some questions about professional develpment preferences.</span></p>\n<p><span style='font-size: 12pt;'>Let's get started!</span></p>"
+          "html": "<h1>Teaching Context</h1>\n<p><span style='font-size: 12pt;'>This survey is about teaching with Code.org materials and resources during the 2022-23 school year.</p>\n<p><span style='font-size: 12pt;'>The purpose of this survey is to understand better who our teachers are, their motivation to use the Code.org curriculum and tools, as well as some questions about professional development preferences.</span></p>\n<p><span style='font-size: 12pt;'>Let's get started!</span></p>"
         },
         {
           "type": "radiogroup",
@@ -420,7 +420,7 @@
         {
           "type": "radiogroup",
           "name": "cs_plans_next_sy_reasons_not_sure",
-          "visibleIf": "{cs_plans_next_sy} = 'Not sure'",
+          "visibleIf": "{cs_plans_next_sy} = 'not_sure'",
           "title": "Please select the reasons why you don't know if you will teach computer science next school year.",
           "choices": [
             {
@@ -468,10 +468,11 @@
           ]
         },
         {
-          "type": "radiogroup",
+          "type": "checkbox",
           "name": "cdo_plans_next_sy_reasons_no",
           "visibleIf": "{cdo_plans_next_sy} = 'no'",
-          "title": "Please describe why you don't plan to use Code.org next school year",
+          "title": "Please select the reason(s) why you don't plan to use Code.org next school year",
+          "description": "(Select all that apply)",
           "choices": [
             {
               "value": "own_cs_material",
@@ -496,14 +497,24 @@
             {
               "value": "students_not_engaged",
               "text": "My students were not engaged when using Code.org"
+            },
+            {
+              "value": "other",
+              "text": "Other"
             }
           ]
         },
         {
           "type": "text",
+          "name": "cdo_plans_next_sy_reasons_no_switch_provider",
+          "visibleIf": "{cdo_plans_next_sy_reasons_no} contains 'other_provider'",
+          "title": "What computer science provider are you planning to use next year?"
+        },
+        {
+          "type": "text",
           "name": "cdo_plans_next_sy_reasons_no_other",
-          "visibleIf": "{cdo_plans_next_sy_reasons_no} = 'other'",
-          "title": "Please describe the main reason why you don't plan Code.org next school year."
+          "visibleIf": "{cdo_plans_next_sy_reasons_no} contains 'other'",
+          "title": "Please describe the main reason why you don't plan to use Code.org next school year, besides the options listed."
         },
         {
           "type": "checkbox",
@@ -695,9 +706,19 @@
           "maxRateDescription": "Students Feel They Belong in CS"
         },
         {
+          "type": "html",
+          "name": "cdo_features_space",
+          "html": "\n<p></p>"
+        },
+        {
+          "type": "html",
+          "name": "cdo_features_intro",
+          "html": "\n<p><span style='font-size: 12pt;'>In the following two questions please select the <strong>top two reasons</strong> why you opt for Code.org when choosing a computer science curriculum and tool.</span></p>"
+        },
+        {
           "type": "radiogroup",
           "name": "features_main_choice",
-          "title": "When selecting a computer science curriculum and tool to use, what is the main reason why you opt for code.org?",
+          "title": "What is the most important reason why you opt for code.org?",
           "choices": [
             {
               "value": "student_learning_experience",
@@ -744,7 +765,7 @@
         {
           "type": "radiogroup",
           "name": "features_second_choice",
-          "title": "When selecting a computer science curriculum and tool to use, what is the second most important reason why you opt for code.org?",
+          "title": "What is the second most important reason why you opt for code.org?",
           "choices": [
             {
               "value": "student_learning_experience",
@@ -872,7 +893,7 @@
         {
           "type": "radiogroup",
           "name": "pd_type_preference",
-          "visibleIf": "{pd_interest} < 5",
+          "visibleIf": "{pd_interest} > 3",
           "title": "When thinking about engaging in computer science professional development, what would would you prefer?",
           "choices": [
             {
@@ -905,7 +926,7 @@
             },
             {
               "value": "pd_barriers_ce_credits",
-              "text": "The program that does not award Continued Education credit"
+              "text": "The program does not award Continued Education credit"
             },
             {
               "value": "pd_barriers_certification",
@@ -953,6 +974,15 @@
           "html": "\n<p><span style='font-size: 12pt;'>The following are questions about your experience and interests in teaching Artificial Intelligence/Machine Learning (AI/ML). Your responses will provide insight as we develop curriculum for this content.</span></p>\n"
         },
         {
+          "type": "rating",
+          "name": "ai_familiarity",
+          "title": "How familiar are you with AI and Machine Learning concepts and content?",
+          "rateCount": 7,
+          "rateMax": 7,
+          "minRateDescription": "Not Familiar At All",
+          "maxRateDescription": "Very Familiar"
+        },
+        {
           "type": "radiogroup",
           "name": "ai_teaching_experience",
           "title": "Have you taught AI/ML content in a K-12 classroom?",
@@ -985,20 +1015,80 @@
               "text": "Yes"
             },
             {
-              "value": "no",
-              "text": "No"
-            },
-            {
               "value": "maybe",
               "text": "Maybe, I am not very familiar with the existing content"
+            },
+            {
+              "value": "no",
+              "text": "No"
             }
           ]
         },
         {
-          "type": "radiogroup",
-          "name": "ai_integrated_subjects",
+          "type": "checkbox",
+          "name": "ai_teaching_topics",
+          "visibleIf": "{ai_teaching_interest} anyof ['yes', 'maybe']",
+          "title": "What topics are you most interested in having more content on?",
+          "description": "(Select all that apply)",
+          "choices": [
+            {
+              "value": "ai_overview",
+              "text": "An overview of AI: what it is, how it works, main topics and uses"
+            },
+            {
+              "value": "ai_generated_code",
+              "text": "AI-generated programming code"
+            },
+            {
+              "value": "ai_generated_text_images",
+              "text": "AI-generated text and images (e.g. ChatGPT, DALL-E)"
+            },
+            {
+              "value": "ai_other_subjects",
+              "text": "AI in other subjects (e.g. ELA, history)"
+            },
+            {
+              "value": "ai_ethics",
+              "text": "Ethical implications of AI"
+            },
+            {
+              "value": "ai_society",
+              "text": "How AI is affecting jobs, industries and society"
+            },
+            {
+              "value": "ai_computer_sensing",
+              "text": "Computer sensing (e.g. sound and vision sensing)"
+            },
+            {
+              "value": "ai_apps",
+              "text": "Developing apps that use AI"
+            },
+            {
+              "value": "ai_ml",
+              "text": "Machine Learning (ML)"
+            },
+            {
+              "value": "ai_npl",
+              "text": "Natural Language Processing (NPL)"
+            },
+            {
+              "value": "other",
+              "text": "Other"
+            }
+          ]
+        },
+        {
+          "type": "text",
+          "name": "ai_teaching_topics_other",
+          "visibleIf": "{ai_teaching_topics} = 'other'",
+          "title": "What other topics are you interested in having more content for?"
+        },
+        {
+          "type": "checkbox",
+          "name": "ai_teaching_subjects",
           "visibleIf": "{ai_teaching_interest} anyof ['yes', 'maybe']",
           "title": "Code.org is exploring ways to integrate AI into other subjects and topics. Out of the following subjects, which one would you want to have AI-integrated curriculum for?",
+          "description": "(Select all that apply)",
           "choices": [
             {
               "value": "none",
@@ -1036,13 +1126,13 @@
         },
         {
           "type": "text",
-          "name": "ai_integrated_subjects_other",
-          "visibleIf": "{ai_integrated_subjects} = 'other'",
+          "name": "ai_teaching_subjects_other",
+          "visibleIf": "{ai_teaching_subjects} = 'other'",
           "title": "What other subjects would you want to have AI-integrated curriculum for?"
         },
         {
           "type": "checkbox",
-          "name": "ai_barriers",
+          "name": "ai_teaching_barriers",
           "visibleIf": "{ai_teaching_interest} <> 'maybe'",
           "title": "Which of the following do you see as the biggest barrier to implementing new AI curriculum at your school?",
           "description": "(Select all that apply)",
@@ -1067,7 +1157,7 @@
         },
         {
           "type": "comment",
-          "name": "ai_comments",
+          "name": "ai_teaching_comments",
           "title": "Is there anything you would like us to know as we think about future AI/ML content development?"
         }
       ]

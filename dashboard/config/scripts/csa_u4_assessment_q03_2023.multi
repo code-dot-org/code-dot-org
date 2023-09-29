@@ -39,3 +39,5 @@ which would be the same as
 (int)(Math.random() * nameOfArray.length);
 ```
 MARKDOWN
+
+allow_multiple_attempts true

@@ -107,6 +107,7 @@ ms:
         title: Gelung Untuk yang Menyeronokkan
         desc: Kita tahu bahawa gelung membolehkan kita melakukan perkara berulang-kali, tetapi kini kita akan mempelajari cara menggunakan gelung yang mempunyai struktur tambahan terbina di dalam.
       SongwritingWithParameters:
+        title: Penulisan Lagu Dengan Parameter
         desc: 'Satu daripada struktur paling gemilang di dalam dunia sains komputer ialah fungsinya. Fungsi (kadang-kadang disebut sebagai prosedur) ialah atur cara mini yang anda boleh gunakan berulang kali di dalam atur cara anda yang lebih besar. Pelajaran ini akan membantu pelajar memahami secara intuitif tujuan menggabungkan sejumlah besar kod kepada fungsi boleh menjadi latihan yang berguna.  '
       BinaryImages:
         title: Imej Binari
@@ -195,6 +196,7 @@ ms:
         title: 'Algoritma Kehidupan Sebenar: Dice Race'
         desc: Pelajaran ini menyebut cara kita menggunakan algoritma dalam kehidupan seharian kita. Sebagai sebahagian daripada itu, pelajar akan mengenal pasti dan menulis algoritma untuk permainan perlumbaan dadu.
       courseE_unplugged_songwritingParameters:
+        title: Penulisan lagu dengan Parameter
         desc: Pelajar menggunakan konsep korus dalam lagu untuk belajar tentang menentukan dan memanggil fungsi.
       courseE_unplugged_internet:
         title: Internet
@@ -215,6 +217,7 @@ ms:
         title: Gelung Untuk yang Menyeronokkan
         desc: Kita tahu bahawa gelung membolehkan kita melakukan perkara berulang-kali, tetapi kini kita akan mempelajari cara menggunakan gelung yang mempunyai struktur tambahan terbina di dalam.
       courseF_unplugged_songwritingParameters:
+        title: Penulisan Lagu Dengan Parameter
         desc: 'Satu daripada struktur paling gemilang di dalam dunia sains komputer ialah fungsinya. Fungsi (kadang-kadang disebut sebagai prosedur) ialah atur cara mini yang anda boleh gunakan berulang kali di dalam atur cara anda yang lebih besar. Pelajaran ini akan membantu pelajar memahami secara intuitif tujuan menggabungkan sejumlah besar kod kepada fungsi boleh menjadi latihan yang berguna.  '
       courseB_unplugged_MRF_2018:
         title: Rakan-rakan Robotik Saya
@@ -261,6 +264,8 @@ ms:
       BinaryBracelets_2018:
         title: Binary Bracelets
         desc: Pelajar membuat gelang sebagai perwakilan binari huruf pertama nama mereka. Pelajar mengetahui bahawa data boleh diwakili dan disimpan dalam lebih daripada satu cara.
+      MoveItMoveIt_2018:
+        title: Pindahkan, Pindahkan
       courseB_unplugged_CnC_2018:
         title: Sangat Hebat untuk Mencipta dan Bermain dengan Adil
         desc: Dipinjamkan kepada Computer Science Fundamentals oleh pasukan di Copyright and Creativity, pelajaran ini wujud untuk membantu pelajar memahami proses kreatif perkongsian dan inspirasi. Seiring dengan itu, promosi ekspresi kreatif dan keperluan untuk bersikap adil dengan kerja kreatif akan dapat dipupuk.
@@ -344,6 +349,8 @@ ms:
       courseA_unplugged_loops_2019:
         title: Nirplag Gelung
         desc: Dalam pelajaran ini, anda akan belajar tentang gelung!
+      MoveItMoveIt_2019:
+        title: Pindahkan, Pindahkan
       DigitalFootprint_2019:
         title: Your Digital Footprint
         desc: Guru memperkenal kepada pelajar idea meletakkan maklumat tentang diri mereka dalam talian mencipta jejak digital atau "trail" yang mempunyai akibat.

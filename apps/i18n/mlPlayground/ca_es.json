@@ -1,146 +1,21 @@
 {
-  "navigateForward": "Continuar",
-  "navigateBack": "Tornar",
-  "tryAgain": "Intentar de nou",
-  "navigateDone": "Acabar",
-  "saveProgress": "Desa",
-  "correctAnswer": "Correcte",
-  "modelCardPossibleValuesMinimum": "min",
-  "modelCardPossibleValuesMaximum": "màx",
-  "columnInspectorDescription": "Descripció",
-  "columnDetailsMinimumValue": "min",
   "columnDetailsMaximumValue": "màx",
+  "columnDetailsMinimumValue": "min",
+  "columnInspectorDescription": "Descripció",
+  "correctAnswer": "Correcte",
   "dataCardLastUpdated": "Darrera actualització",
-  "predictButton": "Fes una predicció",
-  "uniqueOptionsWarningNotice": "Nota",
   "datasets": {
-    "medical_priority": {
+    "abalone": {
       "fields": {
-        "age": {
-          "id": "edat"
+        "Length": {
+          "id": "Longitud"
         }
       }
     },
-    "shoe_survey_toy": {
+    "bike_sharing": {
       "fields": {
-        "weather": {
-          "id": "clima"
-        },
-        "day": {
-          "id": "dia"
-        },
-        "shoe": {
-          "id": "sabata"
-        }
-      }
-    },
-    "salsa_toy": {
-      "fields": {
-        "onion": {
-          "id": "ceba"
-        },
-        "avocado": {
-          "id": "alvocat"
-        },
-        "corn": {
-          "id": "blat de moro"
-        },
-        "beans": {
-          "id": "mongetes"
-        },
-        "lime": {
-          "id": "llima"
-        }
-      }
-    },
-    "poutine_toy": {
-      "fields": {
-        "mushrooms": {
-          "id": "bolets"
-        },
-        "lobster": {
-          "id": "llagosta"
-        },
-        "bacon": {
-          "id": "bacó"
-        },
-        "cheese": {
-          "id": "formatge"
-        },
-        "meat": {
-          "id": "carn"
-        }
-      }
-    },
-    "club_random_toy": {
-      "fields": {
-        "color": {
-          "id": "color"
-        },
-        "music": {
-          "id": "música"
-        },
-        "food": {
-          "id": "menjar"
-        }
-      }
-    },
-    "insurance_cost": {
-      "fields": {
-        "age": {
-          "id": "edat"
-        }
-      }
-    },
-    "nutrition": {
-      "fields": {
-        "Category": {
-          "id": "Categoria"
-        },
-        "Description": {
-          "id": "Descripció"
-        }
-      }
-    },
-    "raspado_toy": {
-      "fields": {
-        "strawberry": {
-          "id": "maduixa"
-        },
-        "lime": {
-          "id": "llima"
-        }
-      }
-    },
-    "shapes_v2_toy": {
-      "fields": {
-        "sides": {
-          "id": "costats"
-        },
-        "size": {
-          "id": "mida"
-        }
-      }
-    },
-    "salad_toy": {
-      "fields": {
-        "tomato": {
-          "id": "tomàquet"
-        },
-        "avocado": {
-          "id": "alvocat"
-        },
-        "chicken": {
-          "id": "gallina"
-        },
-        "fruit": {
-          "id": "fruita"
-        },
-        "beans": {
-          "id": "mongetes"
-        },
-        "cheese": {
-          "id": "formatge"
+        "Month": {
+          "id": "Mes"
         }
       }
     },
@@ -154,32 +29,10 @@
         }
       }
     },
-    "student_alcohol_consumption": {
+    "boba_toy": {
       "fields": {
-        "school": {
-          "id": "escola"
-        },
-        "age": {
-          "id": "edat"
-        },
-        "health": {
-          "id": "salut"
-        }
-      }
-    },
-    "naan_toy": {
-      "fields": {
-        "chicken": {
-          "id": "gallina"
-        },
-        "lamb": {
-          "id": "xai"
-        },
-        "onion": {
-          "id": "ceba"
-        },
-        "cheese": {
-          "id": "formatge"
+        "banana": {
+          "id": "plàtan"
         }
       }
     },
@@ -190,67 +43,99 @@
         }
       }
     },
+    "club_random_toy": {
+      "fields": {
+        "color": {
+          "id": "color"
+        },
+        "food": {
+          "id": "menjar"
+        },
+        "music": {
+          "id": "música"
+        }
+      }
+    },
+    "heart": {
+      "fields": {
+        "Age": {
+          "id": "Edat"
+        }
+      }
+    },
+    "insurance_cost": {
+      "fields": {
+        "age": {
+          "id": "edat"
+        }
+      }
+    },
     "loneliness_interests": {
       "fields": {
         "Internet": {
           "id": "Internet"
+        },
+        "Writing": {
+          "id": "Escriure"
+        }
+      }
+    },
+    "loneliness_music": {
+      "fields": {
+        "Country": {
+          "id": "País"
+        },
+        "Music": {
+          "id": "Música"
+        }
+      }
+    },
+    "medical_priority": {
+      "fields": {
+        "age": {
+          "id": "edat"
         }
       }
     },
     "movies": {
       "fields": {
-        "Score": {
-          "id": "Puntuació"
-        },
         "Country": {
           "id": "País"
         },
         "Name": {
           "id": "Nom"
         },
+        "Score": {
+          "id": "Puntuació"
+        },
         "Star": {
           "id": "Estrella"
         }
       }
     },
-    "songs": {
+    "naan_toy": {
       "fields": {
-        "Artist": {
-          "id": "Artista"
+        "cheese": {
+          "id": "formatge"
+        },
+        "chicken": {
+          "id": "gallina"
+        },
+        "lamb": {
+          "id": "xai"
+        },
+        "onion": {
+          "id": "ceba"
         }
       }
     },
-    "safari_toy": {
+    "nutrition": {
       "fields": {
-        "people": {
-          "id": "gent"
+        "Category": {
+          "id": "Categoria"
         },
-        "rhino": {
-          "id": "rinoceront"
-        },
-        "elephant": {
-          "id": "elefant"
-        },
-        "alligator": {
-          "id": "cocodril"
-        },
-        "trees": {
-          "id": "arbres"
-        }
-      },
-      "name": "Safari"
-    },
-    "abalone": {
-      "fields": {
-        "Length": {
-          "id": "Longitud"
-        }
-      }
-    },
-    "zoo": {
-      "fields": {
-        "Aquatic": {
-          "id": "Aquàtic"
+        "Description": {
+          "id": "Descripció"
         }
       }
     },
@@ -259,49 +144,101 @@
         "avocado": {
           "id": "alvocat"
         },
-        "onion": {
-          "id": "ceba"
-        },
         "ginger": {
           "id": "gingebre"
+        },
+        "onion": {
+          "id": "ceba"
         }
       }
     },
-    "student_survey": {
+    "poutine_toy": {
       "fields": {
-        "Music": {
-          "id": "Música"
+        "bacon": {
+          "id": "bacó"
         },
-        "Country": {
-          "id": "País"
+        "cheese": {
+          "id": "formatge"
         },
-        "Internet": {
-          "id": "Internet"
+        "lobster": {
+          "id": "llagosta"
         },
-        "Achievements": {
-          "id": "Assoliments"
+        "meat": {
+          "id": "carn"
         },
-        "Age": {
-          "id": "Edat",
-          "description": "Edat"
-        },
-        "Gender": {
-          "id": "Sexe",
-          "description": "Sexe"
+        "mushrooms": {
+          "id": "bolets"
         }
       }
     },
-    "boba_toy": {
+    "raspado_toy": {
       "fields": {
-        "banana": {
-          "id": "plàtan"
+        "lime": {
+          "id": "llima"
+        },
+        "strawberry": {
+          "id": "maduixa"
         }
       }
     },
-    "heart": {
+    "safari_toy": {
       "fields": {
-        "Age": {
-          "id": "Edat"
+        "alligator": {
+          "id": "cocodril"
+        },
+        "elephant": {
+          "id": "elefant"
+        },
+        "people": {
+          "id": "gent"
+        },
+        "rhino": {
+          "id": "rinoceront"
+        },
+        "trees": {
+          "id": "arbres"
+        }
+      },
+      "name": "Safari"
+    },
+    "salad_toy": {
+      "fields": {
+        "avocado": {
+          "id": "alvocat"
+        },
+        "beans": {
+          "id": "mongetes"
+        },
+        "cheese": {
+          "id": "formatge"
+        },
+        "chicken": {
+          "id": "gallina"
+        },
+        "fruit": {
+          "id": "fruita"
+        },
+        "tomato": {
+          "id": "tomàquet"
+        }
+      }
+    },
+    "salsa_toy": {
+      "fields": {
+        "avocado": {
+          "id": "alvocat"
+        },
+        "beans": {
+          "id": "mongetes"
+        },
+        "corn": {
+          "id": "blat de moro"
+        },
+        "lime": {
+          "id": "llima"
+        },
+        "onion": {
+          "id": "ceba"
         }
       }
     },
@@ -315,15 +252,91 @@
         }
       }
     },
-    "loneliness_music": {
+    "shapes_v2_toy": {
       "fields": {
-        "Music": {
-          "id": "Música"
+        "sides": {
+          "id": "costats"
+        },
+        "size": {
+          "id": "mida"
+        }
+      }
+    },
+    "shoe_survey_toy": {
+      "fields": {
+        "day": {
+          "id": "dia"
+        },
+        "shoe": {
+          "id": "sabata"
+        },
+        "weather": {
+          "id": "clima"
+        }
+      }
+    },
+    "songs": {
+      "fields": {
+        "Artist": {
+          "id": "Artista"
+        }
+      }
+    },
+    "student_alcohol_consumption": {
+      "fields": {
+        "age": {
+          "id": "edat"
+        },
+        "health": {
+          "id": "salut"
+        },
+        "school": {
+          "id": "escola"
+        }
+      }
+    },
+    "student_survey": {
+      "fields": {
+        "Achievements": {
+          "id": "Assoliments"
+        },
+        "Age": {
+          "description": "Edat",
+          "id": "Edat"
         },
         "Country": {
           "id": "País"
+        },
+        "Gender": {
+          "description": "Sexe",
+          "id": "Sexe"
+        },
+        "Internet": {
+          "id": "Internet"
+        },
+        "Music": {
+          "id": "Música"
+        },
+        "Writing": {
+          "id": "Escriure"
+        }
+      }
+    },
+    "zoo": {
+      "fields": {
+        "Aquatic": {
+          "id": "Aquàtic"
         }
       }
     }
-  }
+  },
+  "modelCardPossibleValuesMaximum": "màx",
+  "modelCardPossibleValuesMinimum": "min",
+  "navigateBack": "Tornar",
+  "navigateDone": "Acabar",
+  "navigateForward": "Continuar",
+  "predictButton": "Fes una predicció",
+  "saveProgress": "Desa",
+  "tryAgain": "Intentar de nou",
+  "uniqueOptionsWarningNotice": "Nota"
 }

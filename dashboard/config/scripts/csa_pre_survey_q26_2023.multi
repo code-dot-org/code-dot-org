@@ -3,3 +3,4 @@ question 'Did a family member, such as a parent, sibling, or cousin, encourage y
 
 right 'Yes'
 right 'No'
+allow_multiple_attempts true

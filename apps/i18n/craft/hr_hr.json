@@ -1,9 +1,9 @@
 {
   "absolute": "apsolutna vrijednost",
+  "agentDiamondPathCongrats": "Čestitamo, našao si dijamantni put! Do sada si skupio {count, plural, one {1 dijamant} other {# dijamanta}}!",
   "agentGenericFailureMessage": "Nastavi kodirati! Ne zaboravi koristiti Agenta za pomoć.",
   "agentTooFewBlocksFailureMessage": "Pokušaj dodavati jedan po jedan blok, kako bi Agent došao na pravo mjesto.",
   "at": "na",
-  "agentDiamondPathCongrats": "Čestitamo, našao si dijamantni put! Do sada si skupio {count, plural, one {1 dijamant} other {# dijamanta}}!",
   "blockActionAdd": "dodaj",
   "blockActionAttack": "napad",
   "blockActionClone": "kloniraj blokove",

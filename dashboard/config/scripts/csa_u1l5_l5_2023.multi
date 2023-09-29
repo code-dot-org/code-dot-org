@@ -18,3 +18,5 @@ While it is possible that the code inside the body of a `while` loop can run for
 
 It is also possible that the code inside the body of a `while` loop never runs if the condition is never `true`, this is not *always* the case.
 MARKDOWN
+
+allow_multiple_attempts true

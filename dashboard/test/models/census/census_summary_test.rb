@@ -36,9 +36,4 @@ class Census::CensusSummaryTest < ActiveSupport::TestCase
     summary = build :census_summary, :without_school
     refute summary.valid?
   end
-
-  test "Summary creation without audit data fails" do
-    summary = build :census_summary, :without_audit_data
-    refute summary.valid?
-  end
 end

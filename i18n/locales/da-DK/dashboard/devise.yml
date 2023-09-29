@@ -50,9 +50,6 @@ da:
       expired: "er udløbet, venligst anmod om en ny"
       not_found: "ikke fundet"
       not_locked: "var ikke låst"
-      not_saved:
-        one: "1 fejl forhindrede denne %{resource} i at blive gemt:"
-        other: "%{count} fejl forhindrede denne %{resource} i at blive gemt:"
     invitations:
       send_instructions: 'En invitationse-mail er blevet tilsendt %{email}.'
       invitation_token_invalid: 'Den benyttede invitationspolet er ugyldig!'

@@ -1,5 +1,6 @@
 import PropTypes from 'prop-types';
 import React from 'react';
+import applabMsg from '@cdo/applab/locale';
 import color from '../../util/color';
 import * as rowStyle from './rowStyle';
 
@@ -30,7 +31,7 @@ export default class EventRow extends React.Component {
         <div style={style.desc}>{this.props.desc}</div>
         <div>
           <a onClick={this.props.handleInsert} className="hover-pointer">
-            Insert and show code
+            {applabMsg.designWorkspace_eventInsertButton()}
           </a>
         </div>
       </div>

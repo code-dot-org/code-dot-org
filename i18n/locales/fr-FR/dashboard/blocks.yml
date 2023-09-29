@@ -17,7 +17,6 @@ fr:
             '0.75': petit(s)
             '1.00': moyen(s)
             '2.00': grand(s)
-            '3.00': extra large
       BadGuys_setSize_dropdown:
         options:
           SIZE:
@@ -25,7 +24,6 @@ fr:
             '0.75': petit(s)
             '1.00': moyen(s)
             '2.00': grand(s)
-            '3.00': extra large
       Dancelab_alternateMoves:
         text: "{GROUP} alterne toutes les {N} mesures entre {MOVE1} et {MOVE2}"
         options:
@@ -1006,8 +1004,6 @@ fr:
         options:
           INPUT1:
             '1': Jus de citron
-            '3': baking soda
-            '5': both
       DansBlocks_setForegroundEffect2:
         text: Appliquer {EFFECT} effet
         options:
@@ -1024,8 +1020,6 @@ fr:
         options:
           INPUT1:
             '1': Jus de citron
-            '3': baking soda
-            '5': both
       FunctionBlocks_communicate:
         text: Communiquez [VAR1]et[0] avec {SPRITE1COSTUME}
       FunctionBlocks_makeManipulative2:
@@ -2048,14 +2042,10 @@ fr:
         options:
           INPUT1:
             '1': Jus de citron
-            '3': baking soda
-            '5': both
       ParticlesBlocks_setMicroscope:
         options:
           INPUT1:
             '1': Jus de citron
-            '3': baking soda
-            '5': both
       ParticlesBlocks_statesOfMatter:
         text: "{BEHAVIOR}"
         options:
@@ -2540,6 +2530,22 @@ fr:
           DIR:
             right: droite ↻
             left: gauche ↺
+      ecosystems_int10:
+        text: "{VALUE}"
+        options:
+          VALUE:
+            '1': '1'
+            '2': '2'
+            '3': '3'
+            '4': '4'
+            '5': '5'
+            '6': '6'
+            '7': '7'
+            '8': '8'
+            '9': '9'
+            '10': '10'
+      storylab_printText:
+        text: imprimer {TEXT}
       storylab_setForegroundEffect2:
         text: Appliquer {EFFECT} effet
         options:

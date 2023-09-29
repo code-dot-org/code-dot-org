@@ -1,4 +1,5 @@
 import React from 'react';
+import applabMsg from '@cdo/applab/locale';
 import commonStyles from '../../commonStyles';
 import PropTypes from 'prop-types';
 import style from './restore-theme-defaults-button.module.scss';
@@ -20,7 +21,7 @@ class RestoreThemeDefaultsButton extends React.Component {
         className={style.restoreButton}
         onClick={handleRestore}
       >
-        Apply Theme
+        {applabMsg.designWorkspace_restoreThemeButton()}
       </button>
     );
   }

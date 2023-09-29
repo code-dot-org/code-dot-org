@@ -13,13 +13,14 @@
       "project_sharing": true,
       "show_calendar": true,
       "student_detail_progress_view": true,
+      "tts": true,
       "version_year": "2023",
       "weekly_instructional_minutes": 225
     },
     "new_name": null,
     "family_name": "problem-solving-computing",
-    "serialized_at": "2023-04-20 16:44:38 UTC",
-    "published_state": "beta",
+    "serialized_at": "2023-07-26 16:17:35 UTC",
+    "published_state": "stable",
     "instruction_type": "teacher_led",
     "instructor_audience": "teacher",
     "participant_audience": "student",
@@ -75,7 +76,7 @@
       "relative_position": 1,
       "properties": {
         "creative_commons_license": "Creative Commons BY-NC-SA",
-        "overview": "\nThis lesson is a fun introduction to the open-ended, collaborative, and creative problem-solving students will be using over the rest of this unit and course. Students work in groups to design aluminum foil boats that will support as many pennies as possible. Groups have two rounds to work on their boats, with the goal of trying to hold more pennies than they did in round 1. The structure of the activity foreshadows different steps of the problem-solving process that students will be introduced to in more detail in the following lesson. At the end of the lesson, students reflect on their experiences with the activity and make connections to the types of problem-solving they will be doing for the rest of the course\n\n**Question of the Day:** What can help us to work together and solve problems as a team?\n\n\n**Alternate versions of this lesson are also available.** \n\n* [Newspaper Table](/s/csd1-2023/lessons/9/)\n* [Spaghetti Bridge](/s/csd1-2023/lessons/10/)\n* [Paper Tower](/s/csd1-2023/lessons/11/)",
+        "overview": "\nThis lesson is a fun introduction to the open-ended, collaborative, and creative problem-solving students will be using over the rest of this unit and course. Students work in groups to design aluminum foil boats that will support as many pennies as possible. Groups have two rounds to work on their boats, with the goal of trying to hold more pennies than they did in round 1. The structure of the activity foreshadows different steps of the problem-solving process that students will be introduced to in more detail in the following lesson. At the end of the lesson, students reflect on their experiences with the activity and make connections to the types of problem-solving they will be doing for the rest of the course\n\n**Question of the Day:** What can help us to work together and solve problems as a team?\n\n\n**Alternate versions of this lesson are also available.** \n\n* [Newspaper Table](/s/problem-solving-computing-2023/lessons/9)\n* [Spaghetti Bridge](/s/problem-solving-computing-2023/lessons/10)\n* [Paper Tower](/s/problem-solving-computing-2023/lessons/11)",
         "preparation": "**For each group**\n\n* 2 sheets of aluminum foil, 5x5 inches in length each\n* 1 container that can hold 3-5 inches of water \n* Several paper towels or rags that can be placed under the container \n* 15 pennies\n* One copy of the activity guide\n\n**For the teacher**\n\n* 1 container that can hold 3-5 inches of water \n* 50 pennies \n* Extra paper towels or rags \n- Check the [\"Teacher's Lounge\"](https://forum.code.org/t/resource-hub-problem-solving-and-computing-chapter-1-lessons-1-3/36188) forum for verified teachers to find additional strategies or resources shared by fellow teachers\n- If you are teaching virtually, consider checking our [Virtual Lesson Modifications](https://docs.google.com/document/d/1420LdkGrISwhKjHu7i4XCbi60ahmCRnQoYf1_JosdgA/preview)\n",
         "student_overview": "**Question of the Day:** What can help us to work together and solve problems as a team?\n\nYou will work with a group to design and test an aluminum foil boat that will support as many pennies as possible. \n"
       },
@@ -113,7 +114,7 @@
       "relative_position": 3,
       "properties": {
         "creative_commons_license": "Creative Commons BY-NC-SA",
-        "overview": "\nIn this lesson, students apply the problem-solving process to three different problems in order to better understand the value of each step. They will solve a word search, arrange seating for a birthday party, and redesign a classroom. The problems grow increasingly complex and poorly defined to highlight how the problem-solving process is particularly helpful when tackling these types of problems. The lesson concludes with students reflecting on their experience with the problem-solving process. They will justify the inclusion of each step and will brainstorm questions or strategies that can help them better define open-ended problems, as this is often the most critical step.\n\nThis lesson will likely take two class periods or more to complete. The first two problems may fit into a single class period but the third will need to be moved to a second day.\n\n**Question of the Day:** How can we apply the problem-solving process to many different kinds of problems?\n\n\n**Alternate versions of this lesson are also available.** \n\n* [Animal Theme](/s/csd1-2022/lessons/12/)\n* [Games Theme](/s/csd1-2022/lessons/13/)",
+        "overview": "\nIn this lesson, students apply the problem-solving process to three different problems in order to better understand the value of each step. They will solve a word search, arrange seating for a birthday party, and redesign a classroom. The problems grow increasingly complex and poorly defined to highlight how the problem-solving process is particularly helpful when tackling these types of problems. The lesson concludes with students reflecting on their experience with the problem-solving process. They will justify the inclusion of each step and will brainstorm questions or strategies that can help them better define open-ended problems, as this is often the most critical step.\n\nThis lesson will likely take two class periods or more to complete. The first two problems may fit into a single class period but the third will need to be moved to a second day.\n\n**Question of the Day:** How can we apply the problem-solving process to many different kinds of problems?\n\n\n**Alternate versions of this lesson are also available.** \n\n* [Animal Theme](problem-solving-computing-2023/lessons/12)\n* [Games Theme](/s/problem-solving-computing-2023/lessons/13)",
         "preparation": "* Print the activity guide for each student\n* Scratch paper for the Birthday Party problem\n* Poster to record strategies for defining problems in wrap up discussion\n- Check the [\"Teacher's Lounge\"](https://forum.code.org/t/resource-hub-problem-solving-and-computing-chapter-1-lessons-1-3/36188) forum for verified teachers to find additional strategies or resources shared by fellow teachers\n- If you are teaching virtually, consider checking our [Virtual Lesson Modifications](https://docs.google.com/document/d/1420LdkGrISwhKjHu7i4XCbi60ahmCRnQoYf1_JosdgA/preview)",
         "student_overview": "**Question of the Day:** How can we apply the problem-solving process to many different kinds of problems?\n\nToday you will apply the Problem-Solving Process to three different problems which will grow increasingly complex!\n"
       },
@@ -253,7 +254,7 @@
       "relative_position": 9,
       "properties": {
         "creative_commons_license": "Creative Commons BY-NC-SA",
-        "overview": "\n\nThis lesson is a fun introduction to the open-ended, collaborative, and creative problem-solving students will be using over the rest of this unit and course. In this lesson, students work in groups to design newspaper tables that will hold as many books as possible. Groups have two rounds to work on their tables, with the goal of trying to hold more books than they did in the first round. The structure of the activity foreshadows different steps of the problem-solving process that students will be introduced to in more detail in the following lesson. At the end of the lesson, students reflect on their experiences with the activity and make connections to the types of problem-solving they will be doing for the rest of the course.\n\n**Question of the Day:** What can help us to work together and solve problems as a team?\n\n\n**This is an alternate activity to [Intro to Problem Solving - Aluminum Boats](/s/csd1-2022/lessons/1/)**",
+        "overview": "\n\nThis lesson is a fun introduction to the open-ended, collaborative, and creative problem-solving students will be using over the rest of this unit and course. In this lesson, students work in groups to design newspaper tables that will hold as many books as possible. Groups have two rounds to work on their tables, with the goal of trying to hold more books than they did in the first round. The structure of the activity foreshadows different steps of the problem-solving process that students will be introduced to in more detail in the following lesson. At the end of the lesson, students reflect on their experiences with the activity and make connections to the types of problem-solving they will be doing for the rest of the course.\n\n**Question of the Day:** What can help us to work together and solve problems as a team?\n\n\n**This is an alternate activity to [Intro to Problem Solving - Aluminum Boats](/s/problem-solving-computing-2023/lessons/1)**",
         "preparation": "**For each group**\n\n* 2 full newspapers for each group of students\n* 1 roll of tape for each group of students\n* One copy of the activity guide\n\n**For the teacher**\n\n* 10-20 books of similar weight.\n- Check the [\"Teacher's Lounge\"](https://forum.code.org/t/resource-hub-problem-solving-and-computing-chapter-1-lessons-1-3/36188) forum for verified teachers to find additional strategies or resources shared by fellow teachers\n- If you are teaching virtually, consider checking our [Virtual Lesson Modifications](https://docs.google.com/document/d/1420LdkGrISwhKjHu7i4XCbi60ahmCRnQoYf1_JosdgA/preview)\n",
         "student_overview": "**Question of the Day:** What can help us to work together and solve problems as a team?\n\nFor this lesson, you will work with a group to design, build, test, and reflect on a newspaper table that will support as many books as possible. "
       },
@@ -272,7 +273,7 @@
       "relative_position": 10,
       "properties": {
         "creative_commons_license": "Creative Commons BY-NC-SA",
-        "overview": "This lesson is a fun introduction to the open-ended, collaborative, and creative problem-solving students will be using over the rest of this unit and course. In this lesson, students work in groups to design spaghetti bridges that will support as many books as possible. Groups have two rounds to work on their bridges, with the goal of trying to hold more books than they did in Round 1. The structure of the activity foreshadows different steps of the problem-solving process that students will be introduced to in more detail in the following lesson. At the end of the lesson, students reflect on their experiences with the activity and make connections to the types of problem solving they will be doing for the rest of the course.\n\n**Question of the Day:** What can help us to work together and solve problems as a team?\n\n\n**This is an alternate activity to [Intro to Problem Solving - Aluminum Boats](/s/csd1-2022/lessons/1/)**",
+        "overview": "This lesson is a fun introduction to the open-ended, collaborative, and creative problem-solving students will be using over the rest of this unit and course. In this lesson, students work in groups to design spaghetti bridges that will support as many books as possible. Groups have two rounds to work on their bridges, with the goal of trying to hold more books than they did in Round 1. The structure of the activity foreshadows different steps of the problem-solving process that students will be introduced to in more detail in the following lesson. At the end of the lesson, students reflect on their experiences with the activity and make connections to the types of problem solving they will be doing for the rest of the course.\n\n**Question of the Day:** What can help us to work together and solve problems as a team?\n\n\n**This is an alternate activity to [Intro to Problem Solving - Aluminum Boats](/s/problem-solving-computing-2023/lessons/1)**",
         "preparation": "**For each group**\n\n* 1 pound of dry spaghetti noodles (about 1 box)\n* 1 glue gun\n* One copy of the activity guide\n\n**For the teacher**\n\n* 10-20 books of similar size and weight\n- Check the [\"Teacher's Lounge\"](https://forum.code.org/t/resource-hub-problem-solving-and-computing-chapter-1-lessons-1-3/36188) forum for verified teachers to find additional strategies or resources shared by fellow teachers\n- If you are teaching virtually, consider checking our [Virtual Lesson Modifications](https://docs.google.com/document/d/1420LdkGrISwhKjHu7i4XCbi60ahmCRnQoYf1_JosdgA/preview)\n\n",
         "student_overview": "**Question of the Day:** What can help us to work together and solve problems as a team?*\n\nFor this lesson, you will work with a group to design, build, test, and reflect on a spaghetti bridge that will support as many books as possible. \n"
       },
@@ -291,7 +292,7 @@
       "relative_position": 11,
       "properties": {
         "creative_commons_license": "Creative Commons BY-NC-SA",
-        "overview": "This lesson is a fun introduction to the open-ended, collaborative, and creative problem-solving students will be using over the rest of this unit and course. In this lesson, students work in groups to design paper towers that can stand as high as possible. Groups have two rounds to work on their towers, with the goal of trying to go higher than they did in Round 1. The structure of the activity foreshadows different steps of the problem-solving process that students will be introduced to in more detail in the following lesson. At the end of the lesson, students reflect on their experiences with the activity and make connections to the types of problem-solving they will be doing for the rest of the course.\n\n**Question of the Day:** What can help us to work together and solve problems as a team?\n\n\n**This is an alternate activity to [Intro to Problem Solving - Aluminum Boats](/s/csd1-2022/lessons/1/)**",
+        "overview": "This lesson is a fun introduction to the open-ended, collaborative, and creative problem-solving students will be using over the rest of this unit and course. In this lesson, students work in groups to design paper towers that can stand as high as possible. Groups have two rounds to work on their towers, with the goal of trying to go higher than they did in Round 1. The structure of the activity foreshadows different steps of the problem-solving process that students will be introduced to in more detail in the following lesson. At the end of the lesson, students reflect on their experiences with the activity and make connections to the types of problem-solving they will be doing for the rest of the course.\n\n**Question of the Day:** What can help us to work together and solve problems as a team?\n\n\n**This is an alternate activity to [Intro to Problem Solving - Aluminum Boats](/s/problem-solving-computing-2023/lessons/1)**",
         "preparation": "**For each group**\n\n* 20 sheets of paper, 8.5 x 11 inches\n* Space to build their tower\n* One copy of the activity guide\n\n**For the teacher**\n \n* Extra paper \n* Timer\n* Ruler\n- Check the [\"Teacher's Lounge\"](https://forum.code.org/t/resource-hub-problem-solving-and-computing-chapter-1-lessons-1-3/36188) forum for verified teachers to find additional strategies or resources shared by fellow teachers\n- If you are teaching virtually, consider checking our [Virtual Lesson Modifications](https://docs.google.com/document/d/1420LdkGrISwhKjHu7i4XCbi60ahmCRnQoYf1_JosdgA/preview)\n",
         "student_overview": "**Question of the Day:** What can help us to work together and solve problems as a team?\n\nFor this lesson, you will work with a group to design, build, test, and reflect on a paper tower that you will try to make as tall as possible. \n\n"
       },
@@ -311,7 +312,7 @@
       "properties": {
         "assessment_opportunities": "1. **Apply the problem solving process to approach a variety of problems**\r\n\t\r\n    On page 5 of the Activity Guide, check the chart to make sure that students are putting in reasonable steps for each of the problems.\r\n\r\n2. **Assess how well-defined a problem is and use strategies to define the problem more precisely**\r\n\r\n\tFor the last question on page 5 of the Activity Guide, make sure that students have at least one question or strategy that would be an effective way to better define a problem.",
         "creative_commons_license": "Creative Commons BY-NC-SA",
-        "overview": "In this lesson, students apply the problem-solving process to three different problems in order to better understand the value of each step. They will solve tangrams, choose a pet for several people, and plan a pet adoption event. The problems grow increasingly complex and poorly defined to highlight how the problem-solving process is particularly helpful when tackling these types of problems. The lesson concludes with students reflecting on their experience with the problem-solving process. They will justify the inclusion of each step and will brainstorm questions or strategies that can help them better define open-ended problems, as this is often the most critical step.\n\nThis lesson will likely take two class periods or more to complete. The first two problems may fit into a single class period but the third will need to be moved to a second day.\n\n**Question of the Day:** How can we apply the problem-solving process to many different kinds of problems?\n\n\n**This is an alternate activity to [Exploring Problem Solving](/s/csd1-2022/lessons/3/)**",
+        "overview": "In this lesson, students apply the problem-solving process to three different problems in order to better understand the value of each step. They will solve tangrams, choose a pet for several people, and plan a pet adoption event. The problems grow increasingly complex and poorly defined to highlight how the problem-solving process is particularly helpful when tackling these types of problems. The lesson concludes with students reflecting on their experience with the problem-solving process. They will justify the inclusion of each step and will brainstorm questions or strategies that can help them better define open-ended problems, as this is often the most critical step.\n\nThis lesson will likely take two class periods or more to complete. The first two problems may fit into a single class period but the third will need to be moved to a second day.\n\n**Question of the Day:** How can we apply the problem-solving process to many different kinds of problems?\n\n\n**This is an alternate activity to [Exploring Problem Solving](/s/problem-solving-computing-2023/lessons/3)**",
         "preparation": "* Print the activity guide for each student\n* Prepare tangrams for students, or print out one tangram sheet and get scissors for each group.\n* Poster to record strategies for defining problems in wrap up discussion\n- Check the [\"Teacher's Lounge\"](https://forum.code.org/t/resource-hub-problem-solving-and-computing-chapter-1-lessons-1-3/36188) forum for verified teachers to find additional strategies or resources shared by fellow teachers\n- If you are teaching virtually, consider checking our [Virtual Lesson Modifications](https://docs.google.com/document/d/1420LdkGrISwhKjHu7i4XCbi60ahmCRnQoYf1_JosdgA/preview)",
         "student_overview": "**Question of the Day:** How can we apply the problem-solving process to many different kinds of problems?\n\nFor this lesson, you will apply the problem-solving process to several different problems, each one getting increasingly complex! \n\n"
       },
@@ -330,7 +331,7 @@
       "relative_position": 13,
       "properties": {
         "creative_commons_license": "Creative Commons BY-NC-SA",
-        "overview": "In this lesson, students apply the problem-solving process to three different problems in order to better understand the value of each step. They will solve a maze, organize a team to race as fast as possible, and design a game. The problems grow increasingly complex and poorly defined to highlight how the problem-solving process is particularly helpful when tackling these types of problems. The lesson concludes with students reflecting on their experience with the problem-solving process. They will justify the inclusion of each step and will brainstorm questions or strategies that can help them better define open-ended problems, as this is often the most critical step.\n\nThis lesson will likely take two class periods or more to complete. The first two problems may fit into a single class period but the third will need to be moved to a second day.\n\n**Question of the Day:** How can we apply the problem-solving process to many different kinds of problems?\n\n\n**This is an alternate activity to [Exploring Problem Solving](/s/csd1-2022/lessons/3/)**",
+        "overview": "In this lesson, students apply the problem-solving process to three different problems in order to better understand the value of each step. They will solve a maze, organize a team to race as fast as possible, and design a game. The problems grow increasingly complex and poorly defined to highlight how the problem-solving process is particularly helpful when tackling these types of problems. The lesson concludes with students reflecting on their experience with the problem-solving process. They will justify the inclusion of each step and will brainstorm questions or strategies that can help them better define open-ended problems, as this is often the most critical step.\n\nThis lesson will likely take two class periods or more to complete. The first two problems may fit into a single class period but the third will need to be moved to a second day.\n\n**Question of the Day:** How can we apply the problem-solving process to many different kinds of problems?\n\n\n**This is an alternate activity to [Exploring Problem Solving](/s/problem-solving-computing-2023/lessons/3)**",
         "preparation": "* Print the activity guide for each student\n* Scratch paper for the Partner Race Relay problem\n* Poster to record strategies for defining problems in wrap up discussion\n- Check the [\"Teacher's Lounge\"](https://forum.code.org/t/resource-hub-problem-solving-and-computing-chapter-1-lessons-1-3/36188) forum for verified teachers to find additional strategies or resources shared by fellow teachers\n- If you are teaching virtually, consider checking our [Virtual Lesson Modifications](https://docs.google.com/document/d/1420LdkGrISwhKjHu7i4XCbi60ahmCRnQoYf1_JosdgA/preview)",
         "student_overview": "**Question of the Day:** How can we apply the problem-solving process to many different kinds of problems?\n\nFor this lesson, you will apply the problem-solving process to several different problems, each one getting increasingly complex! \n"
       },
@@ -356,21 +357,8 @@
       }
     },
     {
-      "key": "db9dc3e3-1cd0-440c-9a31-ec74f198f17d",
-      "position": 2,
-      "properties": {
-        "name": "CSD Pre-Course Survey"
-      },
-      "seeding_key": {
-        "lesson_activity.key": "db9dc3e3-1cd0-440c-9a31-ec74f198f17d",
-        "lesson.key": "Intro to Problem Solving",
-        "lesson_group.key": "lessonGroup-2",
-        "script.name": "problem-solving-computing-2023"
-      }
-    },
-    {
       "key": "e57ae5d8-9874-4cb6-b987-0816020c6eb3",
-      "position": 3,
+      "position": 2,
       "properties": {
         "duration": 5,
         "name": "Warm Up"
@@ -384,7 +372,7 @@
     },
     {
       "key": "7b62d85e-3f93-44bb-b759-b4af9e0e9032",
-      "position": 4,
+      "position": 3,
       "properties": {
         "duration": 35,
         "name": "Activity"
@@ -398,7 +386,7 @@
     },
     {
       "key": "35b27ae8-d556-4396-890a-8c20472528d1",
-      "position": 5,
+      "position": 4,
       "properties": {
         "duration": 5,
         "name": "Wrap Up"
@@ -783,21 +771,8 @@
       }
     },
     {
-      "key": "25b7724d-7975-4931-a95a-e88f8ada4ddd",
-      "position": 2,
-      "properties": {
-        "name": "CSD Pre-Course Survey"
-      },
-      "seeding_key": {
-        "lesson_activity.key": "25b7724d-7975-4931-a95a-e88f8ada4ddd",
-        "lesson.key": "Intro to Problem Solving - Newspaper Table (Alternate Lesson 1)",
-        "lesson_group.key": "lessonGroup-4",
-        "script.name": "problem-solving-computing-2023"
-      }
-    },
-    {
       "key": "e3b5e29f-17eb-4069-b481-cac4f25ead4e",
-      "position": 3,
+      "position": 2,
       "properties": {
         "duration": 5,
         "name": "Warm Up"
@@ -811,7 +786,7 @@
     },
     {
       "key": "eb568bfb-2e46-4135-9186-c38e21b5848f",
-      "position": 4,
+      "position": 3,
       "properties": {
         "duration": 35,
         "name": "Activity"
@@ -825,7 +800,7 @@
     },
     {
       "key": "3a537969-09cb-4e20-a58a-10328b0b455a",
-      "position": 5,
+      "position": 4,
       "properties": {
         "duration": 5,
         "name": "Wrap Up"
@@ -851,21 +826,8 @@
       }
     },
     {
-      "key": "76c8b608-06d0-4f70-b4fa-328f3c842f25",
-      "position": 2,
-      "properties": {
-        "name": "CSD Pre-Course Survey"
-      },
-      "seeding_key": {
-        "lesson_activity.key": "76c8b608-06d0-4f70-b4fa-328f3c842f25",
-        "lesson.key": "Intro to Problem Solving - Spaghetti Bridge (Alternate Lesson 1)",
-        "lesson_group.key": "lessonGroup-4",
-        "script.name": "problem-solving-computing-2023"
-      }
-    },
-    {
       "key": "fa1e271c-7814-4966-afcd-10e5d271e016",
-      "position": 3,
+      "position": 2,
       "properties": {
         "duration": 5,
         "name": "Warm Up"
@@ -879,7 +841,7 @@
     },
     {
       "key": "f07cdaa6-4fce-4ad2-ab98-6e31bfa43598",
-      "position": 4,
+      "position": 3,
       "properties": {
         "duration": 35,
         "name": "Activity"
@@ -893,7 +855,7 @@
     },
     {
       "key": "062ea663-5751-455f-bb3d-6930fb9923e7",
-      "position": 5,
+      "position": 4,
       "properties": {
         "duration": 5,
         "name": "Wrap Up"
@@ -1091,28 +1053,11 @@
       "key": "7546d613-76b5-4a67-80b8-79da81a46d6e",
       "position": 3,
       "properties": {
-        "description": "## At the beginning of class\n\n1. Have students create a Code Studio account at [https://studio.code.org](https://studio.code.org) if they don't already have one\n2. Share the section Join URL with students and tell them to navigate to it to join your section\n\t- You can confirm that a student successfully joined your section by having the section progress page on the Teacher Home Page open and hitting refresh as students join. Students should see a small green bar at the top of their page that says 'You've successfully joined ...' \n3. From [studio.code.org](https://studio.code.org) have students locate the Computer Science Discoveries tile and click 'View course', then go to Unit 1.\n\nOnce students are looking at the Unit 1 overview page, they will be ready to take the CSD Pre-Course survey"
+        "description": "## At the beginning of class\n\n1. Have students create a Code Studio account at [https://studio.code.org](https://studio.code.org) if they don't already have one\n2. Share the section Join URL with students and tell them to navigate to it to join your section\n\t- You can confirm that a student successfully joined your section by having the section progress page on the Teacher Home Page open and hitting refresh as students join. Students should see a small green bar at the top of their page that says 'You've successfully joined ...' "
       },
       "seeding_key": {
         "activity_section.key": "7546d613-76b5-4a67-80b8-79da81a46d6e",
         "lesson_activity.key": "67407131-9dc1-4428-ae05-2c7c086e85b5"
-      }
-    },
-    {
-      "key": "c2076de3-7477-4cd7-b915-eeb27683aea0",
-      "position": 1,
-      "properties": {
-        "description": "#### Important! Have your students take the CSD Pre-Course Survey!\n\nStudents can find a link to the survey in Code Studio as the first item on the Unit 1 overview page. To ensure that students only take the survey at the appropriate time, it is \"locked\" and unviewable by them until you \"unlock\" the survey. The [How to Administer a Locked Assessment](https://support.code.org/hc/en-us/articles/115001331951-Using-lock-settings-for-assessments-and-surveys) support article provides details on how to do that when you are ready. Note that the instructions for administering an assessment and a survey are the same.    \n\n**How much time does it take?** The survey does take some time - it is roughly 30 questions.  You might consider administering it on an admin day at school, or as an early homework.\n\n**When should I give the survey?** Because it is a pre-course survey it is important that students take it as early in the course as possible before they have had much (or any) exposure to the class so that we may accurately gauge changes in attitudes and beliefs caused by the course.",
-        "tips": [
-          {
-            "type": "teachingTip",
-            "markdown": "* A major goal of CS Discoveries is to broaden participation in computer science.  \n* It is *crucial* therefore to have insight into students' attitudes and beliefs about computer science *before* the course so that we can measure the amount of change that occurred *after* the course is over.\n\n* Please note that this survey is **anonymous for students**\n* Completing it also helps us understand important improvements we can make to the curriculum to improve the teacher and student experience.\n\n**Please help by having your students contribute to this vital dataset.  Their voices make the difference!**\n\n"
-          }
-        ]
-      },
-      "seeding_key": {
-        "activity_section.key": "c2076de3-7477-4cd7-b915-eeb27683aea0",
-        "lesson_activity.key": "db9dc3e3-1cd0-440c-9a31-ec74f198f17d"
       }
     },
     {
@@ -1447,7 +1392,7 @@
       "key": "bcf256e3-2d38-438e-b092-48a4b3b08170",
       "position": 2,
       "properties": {
-        "description": "**Distribute**: Hand out copies of the activity guides."
+        "description": "**Distribute**: Hand out copies of the [r the_problem_solving_process/problem-solving-computing/2023] activity guides. "
       },
       "seeding_key": {
         "activity_section.key": "bcf256e3-2d38-438e-b092-48a4b3b08170",
@@ -3081,7 +3026,13 @@
       "key": "9ae590d1-794c-4021-925a-dfd0e3332f0d",
       "position": 1,
       "properties": {
-        "description": "Throughout the year, in order for you to be able to see student work, and for students to be able to access online tools and resources, all students need to be in the same section on Code Studio. To see assessments and answer keys that Code.org provides, you also need to be a \"verified teacher\"."
+        "description": "Throughout the year, in order for you to be able to see student work, and for students to be able to access online tools and resources, all students need to be in the same section on Code Studio. To see assessments and answer keys that Code.org provides, you also need to be a \"verified teacher\".",
+        "tips": [
+          {
+            "type": "teachingTip",
+            "markdown": "**How-To Videos:** The following steps are also covered in a series of [r code_org_how-to_videos/problem-solving-computing/2023] available on Code.org's Teacher Support website. You may decide to watch these videos before reading the instructions below."
+          }
+        ]
       },
       "seeding_key": {
         "activity_section.key": "9ae590d1-794c-4021-925a-dfd0e3332f0d",
@@ -3092,8 +3043,7 @@
       "key": "9ab075af-854b-4115-834f-849ea5022b17",
       "position": 2,
       "properties": {
-        "description": "#### Ensure you are registered on Code Studio as a \"verified\" teacher account\n\nAnyone can create a teacher account on Code Studio, which means that we need an extra layer of authorization to allow CS Discoveries teachers to see assessments, answer keys, and any other collateral that students should not be able to trivially get access to. If you attended a Code.org professional learning workshop during the summer, you should already have this access.\n\nTo check whether you have access:\n\n1. Navigate to the [Unit 1 course overview page](https://studio.code.org/s/csd1-2023)\n2. Do you see the CS Discoveries Pre-course Survey as the first \"stage\" of the course?\n3. If not, please fill out [this form](https://docs.google.com/forms/d/e/1FAIpQLSdGGAJuaDMBVIRYnimPhAL96w6fCl4UdvhwmynGONM75TWwWw/viewform). Note that it can take a day or so to become a verified teacher account, so please do this step early!\n\nIf you are *not* a verified teacher account, you can still create a section for your class, but you will not be able to administer the pre-course survey on the first day.\n\n\n#### Create a class section on Code Studio.\n\nTo create a section:\n\n1. Navigate to the [Teacher Home Page](https://studio.code.org/home)\n2. Click 'New section' under 'Classroom Sections'\n3. Choose 'Email Logins' \n4. In the space provided, give your section a name (e.g. CSD Period 1), the grade of your students, Course: 'Computer Science Discoveries', Current Unit: 'Unit 1: Problem Solving', and click 'Save'\n5. Once the section is created, click the name of the section\n6. On the new page, you will see a unique Join URL that you will distribute to your students in class. \n\nFor a video walkthrough of these steps and more on navigating your Code.org account, go to the [Code.org How-to Video Playlist](https://www.youtube.com/playlist?list=PL7-6SpcrToamXzSMUKkEYZfKTzi6gJos5)",
-        "name": "Before class\r"
+        "description": "## Preparing for the Unit\n\n**Getting Started with Code.org:** Consider watching our [Getting Started with Code.org](https://www.youtube.com/playlist?list=PLzdnOPI1iJNdX7P76yGw7YUM4Csm1ZZmM) video series for an overview of how to navigate lesson plans, setup a classroom section, and other important features of the Code.org platform. Each video also has a support article if you'd prefer to read or print instructions - [click here to learn more](https://support.code.org/hc/en-us/articles/4405629586957-New-how-to-walkthrough-videos-for-teachers-).\n\n**Setup a Classroom Section:** You can use a class section in Code.org to manage your students, view their progress, and assign specific curriculum - [click here to learn more](https://support.code.org/hc/en-us/articles/115000488132-Creating-a-classroom-section).\n\nIf you are using a learning management system, there may be additional steps to sync your classes with Code.org:\n\n- [Click here](https://support.code.org/hc/en-us/articles/115001319312-Setting-up-sections-with-Google-Classroom-sync) for steps to setup your classes with Google Classroom\n- [Click Here](https://support.code.org/hc/en-us/articles/115002716111-Setting-up-sections-with-Clever-sync) for steps to setup your classes with Clever\n\n**Become a Verified Teacher:** Lesson plans and levels have additional resources and answer keys for Verified Teachers, which is quick process that verifies your position at an educational institution. [Click here to complete a form](https://docs.google.com/forms/d/e/1FAIpQLSdGGAJuaDMBVIRYnimPhAL96w6fCl4UdvhwmynGONM75TWwWw/viewform) and you should have access to verified teacher resources in ~1 business day. Verified teachers also have access to the [\"Teacher's Lounge\"](https://forum.code.org/c/csd/csd-teachers-lounge/444) section of the forums.\n\n**Get Inspired:** Consider watching our [Teacher Tips video playlist](https://www.youtube.com/playlist?list=PLzdnOPI1iJNcc7Q-PvUVqV249l2JzhJes), featuring current CS Discoveries teachers.\n\n**Technical Requirements:** For the very best experience with all Code.org content, we recommend consulting with your school or district's IT department to _ensure specific sites **are allowed** and **are not blocked**_. **[Click here to see a list of sites to unblock](https://code.org/educate/it)**. \n\nYou can also find mobile and tablet support details, hardware recommendation information such as minimum Internet connection speed, smallest screen size supported, and other hardware recommendations, as well as a list of supported browsers and platforms at the same [technical requirements website](https://code.org/educate/it). "
       },
       "seeding_key": {
         "activity_section.key": "9ab075af-854b-4115-834f-849ea5022b17",
@@ -3104,29 +3054,11 @@
       "key": "eedc5de1-33f5-446c-a192-71e010b0b05f",
       "position": 3,
       "properties": {
-        "description": "1. Have students create a Code Studio account at [https://studio.code.org](https://studio.code.org) if they don't already have one\r\n2. Share the section Join URL with students and tell them to navigate to it to join your section\r\n\t- You can confirm that a student successfully joined your section by having the section progress page on the Teacher Home Page open and hitting refresh as students join. Students should see a small green bar at the top of their page that says 'You've successfully joined ...' \r\n3. From [studio.code.org](https://studio.code.org) have students locate the Computer Science Discoveries tile and click 'View course', then go to Unit 1.\r\n\r\nOnce students are looking at the Unit 1 overview page, they will be ready to take the CSD Pre-Course survey",
-        "name": "At the beginning of class\r"
+        "description": "## At the beginning of class\n\n1. Have students create a Code Studio account at [https://studio.code.org](https://studio.code.org) if they don't already have one\n2. Share the section Join URL with students and tell them to navigate to it to join your section\n\t- You can confirm that a student successfully joined your section by having the section progress page on the Teacher Home Page open and hitting refresh as students join. Students should see a small green bar at the top of their page that says 'You've successfully joined ...' "
       },
       "seeding_key": {
         "activity_section.key": "eedc5de1-33f5-446c-a192-71e010b0b05f",
         "lesson_activity.key": "3460cb6a-c22c-4095-8a7f-56ef64b2bbf1"
-      }
-    },
-    {
-      "key": "6950dd82-4098-41f8-a2cc-38c8540f677c",
-      "position": 1,
-      "properties": {
-        "description": "#### Important! Have your students take the CSD Pre-Course Survey!\n\nStudents can find a link to the survey in Code Studio as the first item on the Unit 1 overview page. To ensure that students only take the survey at the appropriate time, it is \"locked\" and unviewable by them until you \"unlock\" the survey. The [r how-to-administer-a-locked-assessment/csd/2021] document provides details on how to do that when you are ready. Note that the instructions for administering an assessment and a survey are the same.    \n\n**How much time does it take?** The survey does take some time - it is roughly 30 questions.  You might consider administering it on an admin day at school, or as an early homework.\n\n**When should I give the survey?** Because it is a pre-course survey it is important that students take it as early in the course as possible before they have had much (or any) exposure to the class so that we may accurately gauge changes in attitudes and beliefs caused by the course.",
-        "tips": [
-          {
-            "type": "teachingTip",
-            "markdown": "* A major goal of CS Discoveries is to broaden participation in computer science.  \n* It is *crucial* therefore to have insight into students' attitudes and beliefs about computer science *before* the course so that we can measure the amount of change that occurred *after* the course is over.\n\n* Please note that this survey is **anonymous for students**\n* Completing it also helps us understand important improvements we can make to the curriculum to improve the teacher and student experience.\n\n**Please help by having your students contribute to this vital dataset.  Their voices make the difference!**\n\n"
-          }
-        ]
-      },
-      "seeding_key": {
-        "activity_section.key": "6950dd82-4098-41f8-a2cc-38c8540f677c",
-        "lesson_activity.key": "25b7724d-7975-4931-a95a-e88f8ada4ddd"
       }
     },
     {
@@ -3407,7 +3339,13 @@
       "key": "2af0c235-fd9e-4d27-87bd-fc7ede5ede6e",
       "position": 1,
       "properties": {
-        "description": "Throughout the year, in order for you to be able to see student work, and for students to be able to access online tools and resources, all students need to be in the same section on Code Studio. To see assessments and answer keys that Code.org provides, you also need to be a \"verified teacher\"."
+        "description": "Throughout the year, in order for you to be able to see student work, and for students to be able to access online tools and resources, all students need to be in the same section on Code Studio. To see assessments and answer keys that Code.org provides, you also need to be a \"verified teacher\".",
+        "tips": [
+          {
+            "type": "teachingTip",
+            "markdown": "**How-To Videos:** The following steps are also covered in a series of [r code_org_how-to_videos/problem-solving-computing/2023] available on Code.org's Teacher Support website. You may decide to watch these videos before reading the instructions below."
+          }
+        ]
       },
       "seeding_key": {
         "activity_section.key": "2af0c235-fd9e-4d27-87bd-fc7ede5ede6e",
@@ -3418,8 +3356,7 @@
       "key": "dacdeed7-ab74-4ce2-8bba-d0600f8100d1",
       "position": 2,
       "properties": {
-        "description": "#### Ensure you are registered on Code Studio as a \"verified\" teacher account\n\nAnyone can create a teacher account on Code Studio, which means that we need an extra layer of authorization to allow CS Discoveries teachers to see assessments, answer keys, and any other collateral that students should not be able to trivially get access to. If you attended a Code.org professional learning workshop during the summer, you should already have this access.\n\nTo check whether you have access:\n\n1. Navigate to the [Unit 1 course overview page](https://studio.code.org/s/csd1-2023)\n2. Do you see the CS Discoveries Pre-course Survey as the first \"stage\" of the course?\n3. If not, please fill out [this form](https://docs.google.com/forms/d/e/1FAIpQLSdGGAJuaDMBVIRYnimPhAL96w6fCl4UdvhwmynGONM75TWwWw/viewform). Note that it can take a day or so to become a verified teacher account, so please do this step early!\n\nIf you are *not* a verified teacher account, you can still create a section for your class, but you will not be able to administer the pre-course survey on the first day.\n\n\n#### Create a class section on Code Studio.\n\nTo create a section:\n\n1. Navigate to the [Teacher Home Page](https://studio.code.org/home)\n2. Click 'New section' under 'Classroom Sections'\n3. Choose 'Email Logins' \n4. In the space provided, give your section a name (e.g. CSD Period 1), the grade of your students, Course: 'Computer Science Discoveries', Current Unit: 'Unit 1: Problem Solving', and click 'Save'\n5. Once the section is created, click the name of the section\n6. On the new page, you will see a unique Join URL that you will distribute to your students in the class. \n\nFor a video walkthrough of these steps and more on navigating your Code.org account, go to the [Code.org How-to Video Playlist](https://www.youtube.com/playlist?list=PL7-6SpcrToamXzSMUKkEYZfKTzi6gJos5)",
-        "name": "Before class\r"
+        "description": "## Preparing for the Unit\n\n**Getting Started with Code.org:** Consider watching our [Getting Started with Code.org](https://www.youtube.com/playlist?list=PLzdnOPI1iJNdX7P76yGw7YUM4Csm1ZZmM) video series for an overview of how to navigate lesson plans, setup a classroom section, and other important features of the Code.org platform. Each video also has a support article if you'd prefer to read or print instructions - [click here to learn more](https://support.code.org/hc/en-us/articles/4405629586957-New-how-to-walkthrough-videos-for-teachers-).\n\n**Setup a Classroom Section:** You can use a class section in Code.org to manage your students, view their progress, and assign specific curriculum - [click here to learn more](https://support.code.org/hc/en-us/articles/115000488132-Creating-a-classroom-section).\n\nIf you are using a learning management system, there may be additional steps to sync your classes with Code.org:\n\n- [Click here](https://support.code.org/hc/en-us/articles/115001319312-Setting-up-sections-with-Google-Classroom-sync) for steps to setup your classes with Google Classroom\n- [Click Here](https://support.code.org/hc/en-us/articles/115002716111-Setting-up-sections-with-Clever-sync) for steps to setup your classes with Clever\n\n**Become a Verified Teacher:** Lesson plans and levels have additional resources and answer keys for Verified Teachers, which is quick process that verifies your position at an educational institution. [Click here to complete a form](https://docs.google.com/forms/d/e/1FAIpQLSdGGAJuaDMBVIRYnimPhAL96w6fCl4UdvhwmynGONM75TWwWw/viewform) and you should have access to verified teacher resources in ~1 business day. Verified teachers also have access to the [\"Teacher's Lounge\"](https://forum.code.org/c/csd/csd-teachers-lounge/444) section of the forums.\n\n**Get Inspired:** Consider watching our [Teacher Tips video playlist](https://www.youtube.com/playlist?list=PLzdnOPI1iJNcc7Q-PvUVqV249l2JzhJes), featuring current CS Discoveries teachers.\n\n**Technical Requirements:** For the very best experience with all Code.org content, we recommend consulting with your school or district's IT department to _ensure specific sites **are allowed** and **are not blocked**_. **[Click here to see a list of sites to unblock](https://code.org/educate/it)**. \n\nYou can also find mobile and tablet support details, hardware recommendation information such as minimum Internet connection speed, smallest screen size supported, and other hardware recommendations, as well as a list of supported browsers and platforms at the same [technical requirements website](https://code.org/educate/it). "
       },
       "seeding_key": {
         "activity_section.key": "dacdeed7-ab74-4ce2-8bba-d0600f8100d1",
@@ -3430,29 +3367,11 @@
       "key": "d1ac95fe-c55a-4dac-a082-a68c6811b34e",
       "position": 3,
       "properties": {
-        "description": "1. Have students create a Code Studio account at [https://studio.code.org](https://studio.code.org) if they don't already have one\r\n2. Share the section Join URL with students and tell them to navigate to it to join your section\r\n\t- You can confirm that a student successfully joined your section by having the section progress page on the Teacher Home Page open and hitting refresh as students join. Students should see a small green bar at the top of their page that says 'You've successfully joined ...' \r\n3. From [studio.code.org](https://studio.code.org) have students locate the Computer Science Discoveries tile and click 'View course', then go to Unit 1.\r\n\r\nOnce students are looking at the Unit 1 overview page, they will be ready to take the CSD Pre-Course survey",
-        "name": "At the beginning of class\r"
+        "description": "## At the beginning of class\n\n1. Have students create a Code Studio account at [https://studio.code.org](https://studio.code.org) if they don't already have one\n2. Share the section Join URL with students and tell them to navigate to it to join your section\n\t- You can confirm that a student successfully joined your section by having the section progress page on the Teacher Home Page open and hitting refresh as students join. Students should see a small green bar at the top of their page that says 'You've successfully joined ...' "
       },
       "seeding_key": {
         "activity_section.key": "d1ac95fe-c55a-4dac-a082-a68c6811b34e",
         "lesson_activity.key": "557b9fc0-58e7-4c95-9acc-e0abc4e9f690"
-      }
-    },
-    {
-      "key": "53bc9e24-139e-4878-b09e-445ebe8ba6c6",
-      "position": 1,
-      "properties": {
-        "description": "#### Important! Have your students take the CSD Pre-Course Survey!\n\nStudents can find a link to the survey in Code Studio as the first item on the Unit 1 overview page. To ensure that students only take the survey at the appropriate time, it is \"locked\" and unviewable by them until you \"unlock\" the survey. The [r how-to-administer-a-locked-assessment/csd/2021] document provides details on how to do that when you are ready. Note that the instructions for administering an assessment and a survey are the same.    \n\n**How much time does it take?** The survey does take some time - it is roughly 30 questions.  You might consider administering it on an admin day at school, or as an early homework.\n\n**When should I give the survey?** Because it is a pre-course survey it is important that students take it as early in the course as possible before they have had much (or any) exposure to the class so that we may accurately gauge changes in attitudes and beliefs caused by the course.",
-        "tips": [
-          {
-            "type": "teachingTip",
-            "markdown": "* A major goal of CS Discoveries is to broaden participation in computer science.  \n* It is *crucial* therefore to have insight into students' attitudes and beliefs about computer science *before* the course so that we can measure the amount of change that occurred *after* the course is over.\n\n* Please note that this survey is **anonymous for students**\n* Completing it also helps us understand important improvements we can make to the curriculum to improve the teacher and student experience.\n\n**Please help by having your students contribute to this vital dataset.  Their voices make the difference!**\n\n"
-          }
-        ]
-      },
-      "seeding_key": {
-        "activity_section.key": "53bc9e24-139e-4878-b09e-445ebe8ba6c6",
-        "lesson_activity.key": "76c8b608-06d0-4f70-b4fa-328f3c842f25"
       }
     },
     {
@@ -3746,7 +3665,13 @@
       "key": "ca0635e5-631d-4b4c-95bb-fe3cb4d93294",
       "position": 1,
       "properties": {
-        "description": "Throughout the year, in order for you to be able to see student work, and for students to be able to access online tools and resources, all students need to be in the same section on Code Studio. To see assessments and answer keys that Code.org provides, you also need to be a \"verified teacher\"."
+        "description": "Throughout the year, in order for you to be able to see student work, and for students to be able to access online tools and resources, all students need to be in the same section on Code Studio. To see assessments and answer keys that Code.org provides, you also need to be a \"verified teacher\".",
+        "tips": [
+          {
+            "type": "teachingTip",
+            "markdown": "**How-To Videos:** The following steps are also covered in a series of [r code_org_how-to_videos/problem-solving-computing/2023] available on Code.org's Teacher Support website. You may decide to watch these videos before reading the instructions below."
+          }
+        ]
       },
       "seeding_key": {
         "activity_section.key": "ca0635e5-631d-4b4c-95bb-fe3cb4d93294",
@@ -3757,8 +3682,7 @@
       "key": "eb8fb453-3251-4b1a-94d3-e1d5097906c4",
       "position": 2,
       "properties": {
-        "description": "#### Ensure you are registered on Code Studio as a \"verified\" teacher account\n\nAnyone can create a teacher account on Code Studio, which means that we need an extra layer of authorization to allow CS Discoveries teachers to see assessments, answer keys, and any other collateral that students should not be able to trivially get access to. If you attended a Code.org professional learning workshop during the summer, you should already have this access.\n\nTo check whether you have access:\n\n1. Navigate to the [Unit 1 course overview page](https://studio.code.org/s/csd1-2023)\n2. Do you see the CS Discoveries Pre-course Survey as the first \"stage\" of the course?\n3. If not, please fill out [this form](https://docs.google.com/forms/d/e/1FAIpQLSdGGAJuaDMBVIRYnimPhAL96w6fCl4UdvhwmynGONM75TWwWw/viewform). Note that it can take a day or so to become a verified teacher account, so please do this step early!\n\nIf you are *not* a verified teacher account, you can still create a section for your class, but you will not be able to administer the pre-course survey on the first day.\n\n\n#### Create a class section on Code Studio.\n\nTo create a section:\n\n1. Navigate to the [Teacher Home Page](https://studio.code.org/home)\n2. Click 'New section' under 'Classroom Sections'\n3. Choose 'Email Logins' \n4. In the space provided, give your section a name (e.g. CSD Period 1), the grade of your students, Course: 'Computer Science Discoveries', Current Unit: 'Unit 1: Problem Solving', and click 'Save'\n5. Once the section is created, click the name of the section\n6. On the new page, you will see a unique Join URL that you will distribute to your students in the class. \n\nFor a video walkthrough of these steps and more on navigating your Code.org account, go to the [Code.org How-to Video Playlist](https://www.youtube.com/playlist?list=PL7-6SpcrToamXzSMUKkEYZfKTzi6gJos5).",
-        "name": "Before class\r"
+        "description": "## Preparing for the Unit\n\n**Getting Started with Code.org:** Consider watching our [Getting Started with Code.org](https://www.youtube.com/playlist?list=PLzdnOPI1iJNdX7P76yGw7YUM4Csm1ZZmM) video series for an overview of how to navigate lesson plans, setup a classroom section, and other important features of the Code.org platform. Each video also has a support article if you'd prefer to read or print instructions - [click here to learn more](https://support.code.org/hc/en-us/articles/4405629586957-New-how-to-walkthrough-videos-for-teachers-).\n\n**Setup a Classroom Section:** You can use a class section in Code.org to manage your students, view their progress, and assign specific curriculum - [click here to learn more](https://support.code.org/hc/en-us/articles/115000488132-Creating-a-classroom-section).\n\nIf you are using a learning management system, there may be additional steps to sync your classes with Code.org:\n\n- [Click here](https://support.code.org/hc/en-us/articles/115001319312-Setting-up-sections-with-Google-Classroom-sync) for steps to setup your classes with Google Classroom\n- [Click Here](https://support.code.org/hc/en-us/articles/115002716111-Setting-up-sections-with-Clever-sync) for steps to setup your classes with Clever\n\n**Become a Verified Teacher:** Lesson plans and levels have additional resources and answer keys for Verified Teachers, which is quick process that verifies your position at an educational institution. [Click here to complete a form](https://docs.google.com/forms/d/e/1FAIpQLSdGGAJuaDMBVIRYnimPhAL96w6fCl4UdvhwmynGONM75TWwWw/viewform) and you should have access to verified teacher resources in ~1 business day. Verified teachers also have access to the [\"Teacher's Lounge\"](https://forum.code.org/c/csd/csd-teachers-lounge/444) section of the forums.\n\n**Get Inspired:** Consider watching our [Teacher Tips video playlist](https://www.youtube.com/playlist?list=PLzdnOPI1iJNcc7Q-PvUVqV249l2JzhJes), featuring current CS Discoveries teachers.\n\n**Technical Requirements:** For the very best experience with all Code.org content, we recommend consulting with your school or district's IT department to _ensure specific sites **are allowed** and **are not blocked**_. **[Click here to see a list of sites to unblock](https://code.org/educate/it)**. \n\nYou can also find mobile and tablet support details, hardware recommendation information such as minimum Internet connection speed, smallest screen size supported, and other hardware recommendations, as well as a list of supported browsers and platforms at the same [technical requirements website](https://code.org/educate/it). "
       },
       "seeding_key": {
         "activity_section.key": "eb8fb453-3251-4b1a-94d3-e1d5097906c4",
@@ -3769,8 +3693,7 @@
       "key": "2c518325-f517-4d4f-a20e-2f3ff0058a50",
       "position": 3,
       "properties": {
-        "description": "1. Have students create a Code Studio account at [https://studio.code.org](https://studio.code.org) if they don't already have one\r\n2. Share the section Join URL with students and tell them to navigate to it to join your section\r\n\t- You can confirm that a student successfully joined your section by having the section progress page on the Teacher Home Page open and hitting refresh as students join. Students should see a small green bar at the top of their page that says 'You've successfully joined ...' \r\n3. From [studio.code.org](https://studio.code.org) have students locate the Computer Science Discoveries tile and click 'View course', then go to Unit 1.\r\n\r\nOnce students are looking at the Unit 1 overview page, they will be ready to take the CSD Pre-Course survey",
-        "name": "At the beginning of class\r"
+        "description": "## At the beginning of class\n\n1. Have students create a Code Studio account at [https://studio.code.org](https://studio.code.org) if they don't already have one\n2. Share the section Join URL with students and tell them to navigate to it to join your section\n\t- You can confirm that a student successfully joined your section by having the section progress page on the Teacher Home Page open and hitting refresh as students join. Students should see a small green bar at the top of their page that says 'You've successfully joined ...' "
       },
       "seeding_key": {
         "activity_section.key": "2c518325-f517-4d4f-a20e-2f3ff0058a50",
@@ -5355,6 +5278,66 @@
       }
     },
     {
+      "name": "CSD Guide to Assessment ",
+      "url": "https://docs.google.com/document/d/1IO5XgPW_Apil_Uziq5hAMCBgilm8txZ3sp8atxiKiLU/view",
+      "key": "csd_guide_to_assessment",
+      "properties": {
+      },
+      "seeding_key": {
+        "resource.key": "csd_guide_to_assessment"
+      }
+    },
+    {
+      "name": "CSD Guide to Code.org Values and Philosophy",
+      "url": "https://docs.google.com/document/d/1Ql3w7D_cWFZVPzRA-2yjuxjCaRP-lneiRGZPpmg81tc/view",
+      "key": "csd_guide_to_code_org_values_and_philosophy",
+      "properties": {
+      },
+      "seeding_key": {
+        "resource.key": "csd_guide_to_code_org_values_and_philosophy"
+      }
+    },
+    {
+      "name": "CSD Guide to Curriculum Videos ",
+      "url": "https://docs.google.com/document/d/1c2hF3CaTJacvwDy4y_9-m1jSkSPmK__F6pDPetXVvy4/view",
+      "key": "csd_guide_to_curriculum_videos",
+      "properties": {
+      },
+      "seeding_key": {
+        "resource.key": "csd_guide_to_curriculum_videos"
+      }
+    },
+    {
+      "name": "CSD Guide to Differentiation ",
+      "url": "https://docs.google.com/document/d/10u5N7zCf52IZiSf4drQplEz3d3zS1iqWpegbBMDm0RQ/view",
+      "key": "csd_guide_to_differentiation",
+      "properties": {
+      },
+      "seeding_key": {
+        "resource.key": "csd_guide_to_differentiation"
+      }
+    },
+    {
+      "name": "CSD Guide to Teaching and Learning Strategies",
+      "url": "https://docs.google.com/document/d/1Cg5iTwERoX25Y2DdLNmrPCbVB2d9FPGfUMUvcnVoN8Q/view",
+      "key": "csd_guide_to_teaching_and_learning_strategies",
+      "properties": {
+      },
+      "seeding_key": {
+        "resource.key": "csd_guide_to_teaching_and_learning_strategies"
+      }
+    },
+    {
+      "name": "CSD Guide to Using Resources ",
+      "url": "https://docs.google.com/document/d/1NYJMHZYnAZYNctehlQOImSstsu48sRGOMbi4It4ZjkI/view",
+      "key": "csd_guide_to_using_resources",
+      "properties": {
+      },
+      "seeding_key": {
+        "resource.key": "csd_guide_to_using_resources"
+      }
+    },
+    {
       "name": "CSD Implementation Guide",
       "url": "https://docs.google.com/document/d/1sM_1Oxb7TGp5gSfuMjs0X0_Tko9tm8QJ4N6L26NI_iE/view",
       "key": "csd_implementation_guide",
@@ -5590,6 +5573,16 @@
       },
       "seeding_key": {
         "resource.key": "problem_solving_process_2"
+      }
+    },
+    {
+      "name": "Problem Solving Process",
+      "url": "https://docs.google.com/document/d/1ttgLORbUtEEpWcGsygF0YKVFHpG0PEzfLyi52T8wFIo/view",
+      "key": "problem_solving_process_3",
+      "properties": {
+      },
+      "seeding_key": {
+        "resource.key": "problem_solving_process_3"
       }
     },
     {
@@ -6182,6 +6175,42 @@
     },
     {
       "seeding_key": {
+        "resource.key": "csd_guide_to_assessment",
+        "script.name": "problem-solving-computing-2023"
+      }
+    },
+    {
+      "seeding_key": {
+        "resource.key": "csd_guide_to_code_org_values_and_philosophy",
+        "script.name": "problem-solving-computing-2023"
+      }
+    },
+    {
+      "seeding_key": {
+        "resource.key": "csd_guide_to_curriculum_videos",
+        "script.name": "problem-solving-computing-2023"
+      }
+    },
+    {
+      "seeding_key": {
+        "resource.key": "csd_guide_to_differentiation",
+        "script.name": "problem-solving-computing-2023"
+      }
+    },
+    {
+      "seeding_key": {
+        "resource.key": "csd_guide_to_teaching_and_learning_strategies",
+        "script.name": "problem-solving-computing-2023"
+      }
+    },
+    {
+      "seeding_key": {
+        "resource.key": "csd_guide_to_using_resources",
+        "script.name": "problem-solving-computing-2023"
+      }
+    },
+    {
+      "seeding_key": {
         "resource.key": "csd_implementation_guide",
         "script.name": "problem-solving-computing-2023"
       }
@@ -6189,6 +6218,12 @@
     {
       "seeding_key": {
         "resource.key": "csd_learning_frameworks",
+        "script.name": "problem-solving-computing-2023"
+      }
+    },
+    {
+      "seeding_key": {
+        "resource.key": "problem_solving_process_3",
         "script.name": "problem-solving-computing-2023"
       }
     },

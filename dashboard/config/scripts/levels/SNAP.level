@@ -1,0 +1,435 @@
+<Music>
+  <config><![CDATA[{
+  "published": true,
+  "game_id": 70,
+  "created_at": "2023-08-10T23:49:46.000Z",
+  "level_num": "custom",
+  "user_id": 976,
+  "properties": {
+    "encrypted": "false",
+    "hide_share_and_remix": "false",
+    "level_data": {
+      "library": "snap",
+      "text": "__SNAP__\nBase Mix",
+      "startSources": {
+        "blocks": {
+          "languageVersion": 0,
+          "blocks": [
+            {
+              "type": "procedures_defnoreturn",
+              "id": "-.wfEKrs4+_t[~u[-Y,c",
+              "x": 350,
+              "y": 270,
+              "extraState": {
+                "procedureId": "~uN~{C5;bGghi,a/bD8V"
+              },
+              "fields": {
+                "NAME": "vox chorus"
+              },
+              "inputs": {
+                "STACK": {
+                  "block": {
+                    "type": "play_sound_at_current_location_simple2",
+                    "id": "Ni,xb9aRsGY[fU!|vHN{",
+                    "fields": {
+                      "sound": "rosa_linn_snap/one_two_where"
+                    },
+                    "next": {
+                      "block": {
+                        "type": "play_sound_at_current_location_simple2",
+                        "id": "M1$dC$X%cfCX*eek;HVX",
+                        "fields": {
+                          "sound": "rosa_linn_snap/heart_snapping"
+                        },
+                        "next": {
+                          "block": {
+                            "type": "play_sound_at_current_location_simple2",
+                            "id": "rj/({Zo-W/S]]%p0oRhs",
+                            "fields": {
+                              "sound": "rosa_linn_snap/three_four_dont"
+                            },
+                            "next": {
+                              "block": {
+                                "type": "play_sound_at_current_location_simple2",
+                                "id": "eTaG2]P^g=xj1(0DUk7?",
+                                "fields": {
+                                  "sound": "rosa_linn_snap/heart_cause_i"
+                                },
+                                "next": {
+                                  "block": {
+                                    "type": "play_sound_at_current_location_simple2",
+                                    "id": "{h-|3;kr8YXkx=l[)Wa6",
+                                    "fields": {
+                                      "sound": "rosa_linn_snap/snap"
+                                    }
+                                  }
+                                }
+                              }
+                            }
+                          }
+                        }
+                      }
+                    }
+                  }
+                }
+              }
+            },
+            {
+              "type": "procedures_defnoreturn",
+              "id": "JkmX;f3v%t:_gtuzDgIS",
+              "x": 350,
+              "y": 30,
+              "extraState": {
+                "procedureId": "KDaSZ{VYNd9YcWHluTo`"
+              },
+              "fields": {
+                "NAME": "vox verse"
+              },
+              "inputs": {
+                "STACK": {
+                  "block": {
+                    "type": "play_sound_at_current_location_simple2",
+                    "id": "=AEW3Ycezj2MZ9)U}Wr]",
+                    "fields": {
+                      "sound": "rosa_linn_snap/its_four"
+                    },
+                    "next": {
+                      "block": {
+                        "type": "play_sound_at_current_location_simple2",
+                        "id": "BdT!p)C(i#QYeeh|aUrY",
+                        "fields": {
+                          "sound": "rosa_linn_snap/am_i_cant"
+                        },
+                        "next": {
+                          "block": {
+                            "type": "play_sound_at_current_location_simple2",
+                            "id": "=t!dYAYr@|QAT#Wx,4-t",
+                            "fields": {
+                              "sound": "rosa_linn_snap/memories_will_fade"
+                            },
+                            "next": {
+                              "block": {
+                                "type": "play_sound_at_current_location_simple2",
+                                "id": "w2qHhJkRSNV|#vi?gb+I",
+                                "fields": {
+                                  "sound": "rosa_linn_snap/lied_they_said"
+                                },
+                                "next": {
+                                  "block": {
+                                    "type": "play_sound_at_current_location_simple2",
+                                    "id": "Z,II.3605A7+V=k~I(cR",
+                                    "fields": {
+                                      "sound": "rosa_linn_snap/really_that_easy"
+                                    }
+                                  }
+                                }
+                              }
+                            }
+                          }
+                        }
+                      }
+                    }
+                  }
+                }
+              }
+            },
+            {
+              "type": "procedures_defnoreturn",
+              "id": "|f#UtJ!0{.5X/BlQm)VY",
+              "x": 810,
+              "y": 50,
+              "extraState": {
+                "procedureId": "D^1106cXd{WMF)bK4juj"
+              },
+              "fields": {
+                "NAME": "inst verse"
+              },
+              "inputs": {
+                "STACK": {
+                  "block": {
+                    "type": "repeat_simple2",
+                    "id": "cKS)_{)MapsZsJ#5yXn-",
+                    "fields": {
+                      "times": 5
+                    },
+                    "inputs": {
+                      "code": {
+                        "block": {
+                          "type": "play_sounds_together",
+                          "id": "J%.:3K^1jk9#]XrbOTrQ",
+                          "inputs": {
+                            "code": {
+                              "block": {
+                                "type": "play_sound_at_current_location_simple2",
+                                "id": "play-sound-block",
+                                "fields": {
+                                  "sound": "rosa_linn_snap/kick"
+                                },
+                                "next": {
+                                  "block": {
+                                    "type": "play_sound_at_current_location_simple2",
+                                    "id": "U8{[2a$qm%XfQRvUQA8j",
+                                    "fields": {
+                                      "sound": "rosa_linn_snap/guitar"
+                                    },
+                                    "next": {
+                                      "block": {
+                                        "type": "play_sound_at_current_location_simple2",
+                                        "id": "b+r$zxdTFn)cvIHGzDL]",
+                                        "fields": {
+                                          "sound": "rosa_linn_snap/rhythm_soft"
+                                        }
+                                      }
+                                    }
+                                  }
+                                }
+                              }
+                            }
+                          }
+                        }
+                      }
+                    }
+                  }
+                }
+              }
+            },
+            {
+              "type": "procedures_defnoreturn",
+              "id": "G{#AU,o;E[A]i0,R)uN0",
+              "x": 870,
+              "y": 390,
+              "extraState": {
+                "procedureId": ";N%)U3:cK[ez-B8WdvIs"
+              },
+              "fields": {
+                "NAME": "inst chorus"
+              },
+              "inputs": {
+                "STACK": {
+                  "block": {
+                    "type": "repeat_simple2",
+                    "id": "MzOU-$,`t?avpbki1Y+k",
+                    "fields": {
+                      "times": 4
+                    },
+                    "inputs": {
+                      "code": {
+                        "block": {
+                          "type": "play_sounds_together",
+                          "id": "Wr0=9tA:39cC#}=4+qiX",
+                          "inputs": {
+                            "code": {
+                              "block": {
+                                "type": "play_sound_at_current_location_simple2",
+                                "id": "%O=v?2ZKb.xuGE?jQ1+q",
+                                "fields": {
+                                  "sound": "rosa_linn_snap/kick"
+                                },
+                                "next": {
+                                  "block": {
+                                    "type": "play_sound_at_current_location_simple2",
+                                    "id": "([H|e7:EImsrFuiivZ7/",
+                                    "fields": {
+                                      "sound": "rosa_linn_snap/driving_guitar"
+                                    },
+                                    "next": {
+                                      "block": {
+                                        "type": "play_sound_at_current_location_simple2",
+                                        "id": ":D*n.B+qyb~qpq$mudlY",
+                                        "fields": {
+                                          "sound": "rosa_linn_snap/rhythm_full"
+                                        },
+                                        "next": {
+                                          "block": {
+                                            "type": "play_sound_at_current_location_simple2",
+                                            "id": "Czeh{y6#C]3L(-KOxXQq",
+                                            "fields": {
+                                              "sound": "rosa_linn_snap/chorus_bass"
+                                            },
+                                            "next": {
+                                              "block": {
+                                                "type": "play_sound_at_current_location_simple2",
+                                                "id": "Fcudn}W7u|~d(nEtmG_O",
+                                                "fields": {
+                                                  "sound": "rosa_linn_snap/piano"
+                                                }
+                                              }
+                                            }
+                                          }
+                                        }
+                                      }
+                                    }
+                                  }
+                                }
+                              }
+                            }
+                          }
+                        }
+                      }
+                    }
+                  }
+                }
+              }
+            },
+            {
+              "type": "when_run_simple2",
+              "id": "*+!=@+i`ETr:}_lA=S!E",
+              "x": 30,
+              "y": 30,
+              "next": {
+                "block": {
+                  "type": "play_sounds_together",
+                  "id": "K;f6z3xSYY01,i5|#2ri",
+                  "inputs": {
+                    "code": {
+                      "block": {
+                        "type": "procedures_callnoreturn",
+                        "id": "C=+Qck[s8*z;jYF|7iiD",
+                        "extraState": {
+                          "name": "inst verse"
+                        },
+                        "next": {
+                          "block": {
+                            "type": "procedures_callnoreturn",
+                            "id": "v_,s`vG]0Ac5}j;$|IEz",
+                            "extraState": {
+                              "name": "vox verse"
+                            }
+                          }
+                        }
+                      }
+                    }
+                  },
+                  "next": {
+                    "block": {
+                      "type": "play_sounds_together",
+                      "id": "-uCJr1_3tg,*M|RQ-7!@",
+                      "inputs": {
+                        "code": {
+                          "block": {
+                            "type": "play_sound_at_current_location_simple2",
+                            "id": "3.p#JFgq+=-?e}ga0V_F",
+                            "fields": {
+                              "sound": "rosa_linn_snap/i_just_need"
+                            },
+                            "next": {
+                              "block": {
+                                "type": "play_sound_at_current_location_simple2",
+                                "id": "=g1vk5NsugP0:tWh.MRz",
+                                "fields": {
+                                  "sound": "rosa_linn_snap/rhythm_soft"
+                                },
+                                "next": {
+                                  "block": {
+                                    "type": "play_sound_at_current_location_simple2",
+                                    "id": "lOoBn43p2Syw0L:oucO[",
+                                    "fields": {
+                                      "sound": "rosa_linn_snap/lead_in_guitar"
+                                    }
+                                  }
+                                }
+                              }
+                            }
+                          }
+                        }
+                      },
+                      "next": {
+                        "block": {
+                          "type": "play_sounds_together",
+                          "id": "=3|WWDJ|#guvn;Dt~y_]",
+                          "inputs": {
+                            "code": {
+                              "block": {
+                                "type": "procedures_callnoreturn",
+                                "id": "?aySlbXzd$6c^[-*=^^m",
+                                "extraState": {
+                                  "name": "vox chorus"
+                                },
+                                "next": {
+                                  "block": {
+                                    "type": "procedures_callnoreturn",
+                                    "id": "!ls~W3%3?8L.nfZF|OfE",
+                                    "extraState": {
+                                      "name": "inst chorus"
+                                    },
+                                    "next": {
+                                      "block": {
+                                        "type": "procedures_callnoreturn",
+                                        "id": "+jf}|D8@OEIBXY!;LSmf",
+                                        "extraState": {
+                                          "name": "backup chorus"
+                                        }
+                                      }
+                                    }
+                                  }
+                                }
+                              }
+                            }
+                          }
+                        }
+                      }
+                    }
+                  }
+                }
+              }
+            },
+            {
+              "type": "procedures_defnoreturn",
+              "id": "H[|B7U;U3J-;3s4wANPK",
+              "x": 330,
+              "y": 510,
+              "extraState": {
+                "procedureId": "q$p7Ifp,Q9-!ztH]Y4EI"
+              },
+              "fields": {
+                "NAME": "backup chorus"
+              },
+              "inputs": {
+                "STACK": {
+                  "block": {
+                    "type": "play_sound_at_current_location_simple2",
+                    "id": "ye/rAAjo3^)+/Zv!uz-o",
+                    "fields": {
+                      "sound": "rosa_linn_snap/one_two_backup"
+                    },
+                    "next": {
+                      "block": {
+                        "type": "play_sound_at_current_location_simple2",
+                        "id": "qOlRXzpJpSFTBEd*f4v)",
+                        "fields": {
+                          "sound": "rosa_linn_snap/heart_backup"
+                        },
+                        "next": {
+                          "block": {
+                            "type": "play_sound_at_current_location_simple2",
+                            "id": "29WOg=cZh8SHsz#*b-t:",
+                            "fields": {
+                              "sound": "rosa_linn_snap/three_four_backup"
+                            },
+                            "next": {
+                              "block": {
+                                "type": "play_sound_at_current_location_simple2",
+                                "id": "]}o%/^[IehmzE_C~@2C+",
+                                "fields": {
+                                  "sound": "rosa_linn_snap/heart_backup_2"
+                                }
+                              }
+                            }
+                          }
+                        }
+                      }
+                    }
+                  }
+                }
+              }
+            }
+          ]
+        }
+      }
+    },
+    "preload_asset_list": null
+  },
+  "audit_log": "[{\"changed_at\":\"2023-08-10T23:49:46.694+00:00\",\"changed\":[\"cloned from \\\"I Need a Dollar\\\"\"],\"cloned_from\":\"I Need a Dollar\"},{\"changed_at\":\"2023-08-10 23:51:22 +0000\",\"changed\":[\"level_data\"],\"changed_by_id\":976,\"changed_by_email\":\"michael@code.org\"},{\"changed_at\":\"2023-08-11 00:21:48 +0000\",\"changed\":[\"level_data\"],\"changed_by_id\":976,\"changed_by_email\":\"michael@code.org\"},{\"changed_at\":\"2023-08-11 00:25:05 +0000\",\"changed\":[\"level_data\"],\"changed_by_id\":976,\"changed_by_email\":\"michael@code.org\"},{\"changed_at\":\"2023-08-11 00:30:58 +0000\",\"changed\":[\"level_data\"],\"changed_by_id\":976,\"changed_by_email\":\"michael@code.org\"},{\"changed_at\":\"2023-08-11 00:35:43 +0000\",\"changed\":[\"level_data\"],\"changed_by_id\":976,\"changed_by_email\":\"michael@code.org\"},{\"changed_at\":\"2023-08-11 00:38:44 +0000\",\"changed\":[\"level_data\"],\"changed_by_id\":976,\"changed_by_email\":\"michael@code.org\"},{\"changed_at\":\"2023-08-11 00:39:55 +0000\",\"changed\":[\"level_data\"],\"changed_by_id\":976,\"changed_by_email\":\"michael@code.org\"},{\"changed_at\":\"2023-08-11 00:40:51 +0000\",\"changed\":[\"level_data\"],\"changed_by_id\":976,\"changed_by_email\":\"michael@code.org\"},{\"changed_at\":\"2023-08-11 00:52:15 +0000\",\"changed\":[\"level_data\"],\"changed_by_id\":976,\"changed_by_email\":\"michael@code.org\"},{\"changed_at\":\"2023-08-11 00:57:04 +0000\",\"changed\":[\"level_data\"],\"changed_by_id\":976,\"changed_by_email\":\"michael@code.org\"},{\"changed_at\":\"2023-08-11 01:01:27 +0000\",\"changed\":[\"level_data\"],\"changed_by_id\":976,\"changed_by_email\":\"michael@code.org\"}]"
+}]]></config>
+  <blocks/>
+</Music>

@@ -1,5 +1,5 @@
 ---
-title: Spread the word
+title: Տարածել բառը
 ---
 
 {{ signup_button }}

@@ -2,8 +2,32 @@
 ky:
   data:
     unplugged:
+      ComputationalThinking:
+        title: Эсептөөчү ой жүгүртүү
+      Conditionals:
+        title: Шартуулар
+      Conditionals_2018:
+        title: Шартуулар
+      Conditionals_2019:
+        title: Шартуулар
+      GraphPaperProgramming:
+        title: Графикалык кагазды програмдоо
+      GraphPaperProgramming_2018:
+        title: Графикалык кагазды програмдоо
+      GraphPaperProgramming_2019:
+        title: Графикалык кагазды програмдоо
+      RelayProgramming:
+        title: Релени програмдоо
+      RelayProgramming_2018:
+        title: Релени програмдоо
+      RelayProgramming_2018_2019:
+        title: Релени програмдоо
       Unplug1:
         title: Компүтер илимине киришүү
+      Unplug10:
+        title: Интернет
+      Unplug11:
+        title: Жыйынтыктоо
       Unplug2:
         title: Эсептөөчү ой жүгүртүү
       Unplug3:
@@ -18,33 +42,9 @@ ky:
         title: Абстракция
       Unplug9:
         title: Релени програмдоо
-      Unplug10:
-        title: Интернет
-      Unplug11:
-        title: Жыйынтыктоо
-      RelayProgramming:
-        title: Релени програмдоо
-      Conditionals:
-        title: Шартуулар
-      GraphPaperProgramming:
-        title: Графикалык кагазды програмдоо
-      ComputationalThinking:
-        title: Эсептөөчү ой жүгүртүү
       courseD_unplugged_graphPaperProgramming:
         title: Графикалык кагазды програмдоо
       courseD_unplugged_relayProgramming:
-        title: Релени програмдоо
-      GraphPaperProgramming_2018:
-        title: Графикалык кагазды програмдоо
-      Conditionals_2018:
-        title: Шартуулар
-      RelayProgramming_2018:
-        title: Релени програмдоо
-      Conditionals_2019:
-        title: Шартуулар
-      GraphPaperProgramming_2019:
-        title: Графикалык кагазды програмдоо
-      RelayProgramming_2018_2019:
         title: Релени програмдоо
       timeforcs_demo_conditionals:
         title: Шартуулар

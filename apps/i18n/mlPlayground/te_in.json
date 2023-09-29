@@ -1,32 +1,13 @@
 {
-  "navigateForward": "కొనసాగు",
-  "navigateDone": "ముగించు",
+  "columnDetailsMaximumValue": "మాక్స్",
+  "columnDetailsMinimumValue": "ని",
+  "correctAnswer": "సరైనది",
+  "dataCardLastUpdated": "చివరిగా నవీకరించబడింది",
   "datasets": {
-    "medical_priority": {
+    "bike_sharing": {
       "fields": {
-        "age": {
-          "id": "వయస్సు"
-        }
-      }
-    },
-    "shoe_survey_toy": {
-      "fields": {
-        "shoe": {
-          "id": "షూ"
-        }
-      }
-    },
-    "insurance_cost": {
-      "fields": {
-        "age": {
-          "id": "వయస్సు"
-        }
-      }
-    },
-    "shapes_v2_toy": {
-      "fields": {
-        "size": {
-          "id": "సైజు"
+        "Month": {
+          "id": "నెల"
         }
       }
     },
@@ -40,14 +21,62 @@
         }
       }
     },
-    "student_alcohol_consumption": {
+    "boba_toy": {
+      "fields": {
+        "banana": {
+          "id": "అరటి"
+        }
+      }
+    },
+    "census_part": {
       "fields": {
         "age": {
           "id": "వయస్సు"
         }
       }
     },
-    "census_part": {
+    "club_random_toy": {
+      "fields": {
+        "food": {
+          "id": "ఆహార"
+        },
+        "music": {
+          "id": "సంగీతం"
+        }
+      }
+    },
+    "heart": {
+      "fields": {
+        "Age": {
+          "id": "వయస్సు"
+        }
+      }
+    },
+    "insurance_cost": {
+      "fields": {
+        "age": {
+          "id": "వయస్సు"
+        }
+      }
+    },
+    "loneliness_interests": {
+      "fields": {
+        "Internet": {
+          "id": "అంతర్జాలం"
+        },
+        "Writing": {
+          "id": "రాయడం"
+        }
+      }
+    },
+    "loneliness_music": {
+      "fields": {
+        "Music": {
+          "id": "సంగీతం"
+        }
+      }
+    },
+    "medical_priority": {
       "fields": {
         "age": {
           "id": "వయస్సు"
@@ -61,29 +90,122 @@
         }
       }
     },
+    "naan_toy": {
+      "fields": {
+        "cheese": {
+          "id": "చీజ్"
+        },
+        "lamb": {
+          "id": "గొర్రె"
+        },
+        "onion": {
+          "id": "ఉల్లిపాయ"
+        }
+      }
+    },
+    "nutrition": {
+      "fields": {
+        "Category": {
+          "id": "వర్గం"
+        }
+      }
+    },
+    "poke_toy": {
+      "fields": {
+        "avocado": {
+          "id": "అవోకాడో"
+        },
+        "ginger": {
+          "id": "అల్లం"
+        },
+        "onion": {
+          "id": "ఉల్లిపాయ"
+        }
+      }
+    },
+    "poutine_toy": {
+      "fields": {
+        "bacon": {
+          "id": "బేకన్"
+        },
+        "cheese": {
+          "id": "చీజ్"
+        },
+        "lobster": {
+          "id": "ఎండ్రకాయలు"
+        },
+        "meat": {
+          "id": "మాంసం"
+        },
+        "mushrooms": {
+          "id": "పుట్టగొడుగులు"
+        }
+      }
+    },
+    "raspado_toy": {
+      "fields": {
+        "lime": {
+          "id": "నిమ్మ"
+        },
+        "strawberry": {
+          "id": "స్ట్రాబెర్రీ"
+        }
+      }
+    },
     "safari_toy": {
       "fields": {
         "alligator": {
           "id": "పెద్ధ  మొసలి "
-        }
-      }
-    },
-    "student_survey": {
-      "fields": {
-        "Age": {
-          "id": "వయస్సు",
-          "description": "వయస్సు"
         },
-        "Gender": {
-          "id": "లింగం",
-          "description": "లింగం"
+        "elephant": {
+          "id": "ఏనుగు"
+        },
+        "people": {
+          "id": "ప్రజలు"
+        },
+        "rhino": {
+          "id": "ఖడ్గమృగం"
+        },
+        "trees": {
+          "id": "చెట్లు"
         }
       }
     },
-    "heart": {
+    "salad_toy": {
       "fields": {
-        "Age": {
-          "id": "వయస్సు"
+        "avocado": {
+          "id": "అవోకాడో"
+        },
+        "beans": {
+          "id": "బీన్స్"
+        },
+        "cheese": {
+          "id": "చీజ్"
+        },
+        "fruit": {
+          "id": "పండు"
+        },
+        "tomato": {
+          "id": "టమోటా"
+        }
+      }
+    },
+    "salsa_toy": {
+      "fields": {
+        "avocado": {
+          "id": "అవోకాడో"
+        },
+        "beans": {
+          "id": "బీన్స్"
+        },
+        "corn": {
+          "id": "మొక్కజొన్న"
+        },
+        "lime": {
+          "id": "నిమ్మ"
+        },
+        "onion": {
+          "id": "ఉల్లిపాయ"
         }
       }
     },
@@ -93,6 +215,75 @@
           "id": "సైజు"
         }
       }
+    },
+    "shapes_v2_toy": {
+      "fields": {
+        "size": {
+          "id": "సైజు"
+        }
+      }
+    },
+    "shoe_survey_toy": {
+      "fields": {
+        "day": {
+          "id": "రోజు"
+        },
+        "shoe": {
+          "id": "షూ"
+        }
+      }
+    },
+    "songs": {
+      "fields": {
+        "Artist": {
+          "id": "కళాకారుడు"
+        }
+      }
+    },
+    "student_alcohol_consumption": {
+      "fields": {
+        "age": {
+          "id": "వయస్సు"
+        },
+        "health": {
+          "id": "ఆరోగ్య"
+        },
+        "school": {
+          "id": "పాఠశాల"
+        }
+      }
+    },
+    "student_survey": {
+      "fields": {
+        "Achievements": {
+          "id": "విజయాలు"
+        },
+        "Age": {
+          "description": "వయస్సు",
+          "id": "వయస్సు"
+        },
+        "Gender": {
+          "description": "లింగం",
+          "id": "లింగం"
+        },
+        "Internet": {
+          "id": "అంతర్జాలం"
+        },
+        "Music": {
+          "id": "సంగీతం"
+        },
+        "Writing": {
+          "id": "రాయడం"
+        }
+      }
     }
-  }
+  },
+  "modelCardPossibleValuesMaximum": "మాక్స్",
+  "modelCardPossibleValuesMinimum": "ని",
+  "navigateBack": "తిరిగి",
+  "navigateDone": "ముగించు",
+  "navigateForward": "కొనసాగు",
+  "saveProgress": "సేవ్",
+  "tryAgain": "మళ్ళీ ప్రయత్నించండి",
+  "uniqueOptionsWarningNotice": "గమనిక"
 }

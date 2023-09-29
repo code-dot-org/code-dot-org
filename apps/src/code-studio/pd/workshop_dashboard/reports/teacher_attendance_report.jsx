@@ -7,7 +7,7 @@ import React from 'react';
 import {connect} from 'react-redux';
 import ReportTable from './report_table';
 import {PermissionPropType} from '../permission';
-import {Button} from 'react-bootstrap';
+import {Button} from 'react-bootstrap'; // eslint-disable-line no-restricted-imports
 import {QUERY_BY_VALUES, COURSE_VALUES} from './report_constants';
 import Spinner from '../../components/spinner';
 

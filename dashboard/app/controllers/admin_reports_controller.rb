@@ -28,15 +28,15 @@ class AdminReportsController < ApplicationController
 
           # Regardless of the level type, query the DB for level answers.
           @responses[level_id] = LevelSource.
-                                 where(level_id: level_id).
-                                 joins(:activities).
-                                 joins("INNER JOIN users ON activities.user_id = users.id").
-                                 limit(@response_limit).
-                                 pluck(:level_id, :email, :data)
+            where(level_id: level_id).
+            joins(:activities).
+            joins("INNER JOIN users ON activities.user_id = users.id").
+            limit(@response_limit).
+            pluck(:level_id, :email, :data)
 
           # Determine whether the level is a multi question, replacing the
           # numerical answer with its corresponding text if so.
-          level_info = Level.where(id: level_id).pluck(:type, :properties).first
+          level_info = Level.where(id: level_id).pick(:type, :properties)
           next unless level_info && level_info[0] == 'Multi' && !level_info[1].empty?
           level_answers = level_info[1]["answers"]
           @responses[level_id].each do |response|

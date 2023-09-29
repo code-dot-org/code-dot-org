@@ -1,9 +1,9 @@
 {
   "dropletBlock_createSprite_param2": "leveys",
   "dropletBlock_createSprite_param3": "korkeus",
-  "dropletBlock_setCollider_param0": "tyyppi",
-  "dropletBlock_setCollider_param4": "korkeus",
   "dropletBlock_setColliderEach_param0": "tyyppi",
   "dropletBlock_setColliderEach_param4": "korkeus",
+  "dropletBlock_setCollider_param0": "tyyppi",
+  "dropletBlock_setCollider_param4": "korkeus",
   "shareGame": "Jaa pelisi:"
 }

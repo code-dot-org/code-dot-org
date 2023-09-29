@@ -1,5 +1,10 @@
 <Applab>
   <config><![CDATA[{
+  "published": true,
+  "game_id": 41,
+  "created_at": "2023-02-01T10:45:16.000Z",
+  "level_num": "custom",
+  "user_id": 324,
   "properties": {
     "skin": "applab",
     "code_functions": {
@@ -44,7 +49,7 @@
     "hide_design_mode": "true",
     "beginner_mode": "false",
     "hide_view_data_button": "true",
-    "show_debug_watch": "false",
+    "show_debug_watch": "true",
     "expand_debugger": "false",
     "fail_on_lint_errors": "false",
     "debugger_disabled": "false",
@@ -55,7 +60,8 @@
     "name_suffix": "_mb2022",
     "reference_links": [
       "/courses/csd-2022/guides/microbit-overview",
-      "/courses/csd-2022/guides/microbit-display"
+      "/courses/csd-2022/guides/microbit-display",
+      "/maker/setup"
     ],
     "mini_rubric": "false",
     "text_mode_at_start": "false",
@@ -68,16 +74,11 @@
     "display_name": "Smile Face Debugging!",
     "bubble_choice_description": "Help find the bug in the code to create a smiley face!",
     "thumbnail_url": "https://images.code.org/6e48d333c2a750f2038147fd373a046a-mb-Practice.png",
-    "preload_asset_list": null,
-    "encrypted_examples": "vMVNUCikltsJLtQX4mFI62GBfbYezVzv9/1Ck7tCEoPSwmLaSpZMF/q4lRHy\ndlRZ6KA9qbN0r8opgbEuAVzusA==\n"
+    "encrypted_examples": "vMVNUCikltsJLtQX4mFI62GBfbYezVzv9/1Ck7tCEoPSwmLaSpZMF/q4lRHy\ndlRZ6KA9qbN0r8opgbEuAVzusA==\n",
+    "preload_asset_list": null
   },
-  "game_id": 41,
-  "published": true,
-  "created_at": "2023-02-01T10:45:16.000Z",
-  "level_num": "custom",
-  "user_id": 324,
   "notes": "",
-  "audit_log": "[{\"changed_at\":\"2023-02-01T10:45:16.232+00:00\",\"changed\":[\"cloned from \\\"CSD U6 - Board Outputs - PracC_2222\\\"\"],\"cloned_from\":\"CSD U6 - Board Outputs - PracC_2222\"},{\"changed_at\":\"2023-02-20 20:07:43 +0000\",\"changed\":[\"code_functions\",\"hide_design_mode\",\"hide_view_data_button\",\"makerlab_enabled\",\"palette_category_at_start\",\"long_instructions\",\"map_reference\",\"start_blocks\",\"start_html\",\"display_name\",\"bubble_choice_description\",\"thumbnail_url\",\"encrypted_examples\",\"preload_asset_list\",\"contained_level_names\"],\"changed_by_id\":14639,\"changed_by_email\":\"dan+teacher@code.org\"},{\"changed_at\":\"2023-03-27 20:45:37 +0000\",\"changed\":[\"code_functions\",\"reference_links\",\"preload_asset_list\",\"contained_level_names\"],\"changed_by_id\":14639,\"changed_by_email\":\"dan+teacher@code.org\"}]"
+  "audit_log": "[{\"changed_at\":\"2023-02-01T10:45:16.232+00:00\",\"changed\":[\"cloned from \\\"CSD U6 - Board Outputs - PracC_2222\\\"\"],\"cloned_from\":\"CSD U6 - Board Outputs - PracC_2222\"},{\"changed_at\":\"2023-02-20 20:07:43 +0000\",\"changed\":[\"code_functions\",\"hide_design_mode\",\"hide_view_data_button\",\"makerlab_enabled\",\"palette_category_at_start\",\"long_instructions\",\"map_reference\",\"start_blocks\",\"start_html\",\"display_name\",\"bubble_choice_description\",\"thumbnail_url\",\"encrypted_examples\",\"preload_asset_list\",\"contained_level_names\"],\"changed_by_id\":14639,\"changed_by_email\":\"dan+teacher@code.org\"},{\"changed_at\":\"2023-03-27 20:45:37 +0000\",\"changed\":[\"code_functions\",\"reference_links\",\"preload_asset_list\",\"contained_level_names\"],\"changed_by_id\":14639,\"changed_by_email\":\"dan+teacher@code.org\"},{\"changed_at\":\"2023-07-17 22:56:24 +0000\",\"changed\":[\"code_functions\",\"show_debug_watch\",\"encrypted_examples\",\"preload_asset_list\",\"contained_level_names\"],\"changed_by_id\":18602,\"changed_by_email\":\"angelina+levelbuilder@code.org\"},{\"changed_at\":\"2023-08-21 22:57:22 +0000\",\"changed\":[\"code_functions\",\"reference_links\",\"encrypted_examples\",\"preload_asset_list\",\"contained_level_names\"],\"changed_by_id\":14639,\"changed_by_email\":\"dan+teacher@code.org\"}]"
 }]]></config>
   <blocks/>
 </Applab>

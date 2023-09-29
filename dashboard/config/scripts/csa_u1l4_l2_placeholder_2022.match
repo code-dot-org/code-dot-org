@@ -14,3 +14,4 @@ answer 'a variable in the method or constructor signature that defines the type 
 
 question 'argument'
 answer 'a value passed to a method or constructor when the method or constructor is called'
+allow_multiple_attempts true

@@ -16,8 +16,8 @@ A Kódolás órája kampány során cége segíthet felhívni a figyelmet a szá
 
 Ellenőrizd a kezdéshez szükséges alábbi lépéseket, nézd át a(z) [Útmutató vállalati partnereknek](/files/hoc-corporate-toolkit.pdf) című kiadványunkat, amelyben további információk találhatók arról, hogy hogyan lehet a vállalatok lelkesedését a Kódolás órája iránt felkelteni.
 
-- [Connect with a local school](#connect-with-a-school)
-- [Encourage employees to volunteer with a classroom](#encourage-employees)
+- [Kapcsolat egy helyi iskolával](#connect-with-a-school)
+- [Alkalmazottak bátorítása, hogy vállaljanak önkéntes munkát az egyik osztályteremben](#encourage-employees)
 - [Szervezzen egy saját Kódolás órája eseményt](#host-hour-of-code)
 - [Népszerűsítsd a Kódolás óráját](#promote-hour-of-code)
 - [Még több lehetőség a Kódolás órája támogatására](#support-hour-of-code)
@@ -26,31 +26,31 @@ Ellenőrizd a kezdéshez szükséges alábbi lépéseket, nézd át a(z) [Útmut
 
 <a id="connect-with-a-school"></a>
 
-## Connect with a local school
+## Kapcsolat egy helyi iskolával
 
-It's always best to start locally, with schools that you or your employees have a strong connection to, like an alma mater, a child’s school, or a local organization or school that is focused on serving a population that has been historically underrepresented in computer science.
+A legjobb helyben kezdeni, egy olyan iskolákkal, amelyekhez magad vagy az alkalmazottaid erősen kötődnek. Ilyen lehet például az alma mater, a gyermek iskolája, vagy egy olyan helyi szervezet vagy iskola, amely az informatikát tekintve alulreprezentált népesség kiszolgálására összpontosít.
 
 [![](/images/fit-600/Marketing/2018_HoC-392.jpg)]({{ urls/learn }})
 
-From there, you can visit the school’s website to find appropriate contacts to reach out to, like a principal, vice principal, technology or computer science instructors, or even the school’s PTSA. You could also partner with organizations like the Boys & Girls Clubs of America, a YMCA branch, and more to co-host an event.
+Ezután ellátogathatsz az iskola weboldalára, megkeresheted a megfelelő kapcsolattartókat, felkeresheted például az igazgatót vagy az igazgatóhelyettest, a műszaki tárgyakat vagy számítástechnikát oktató tanárokat, vagy akár az iskolai SZMK-t. Lehet együttműködni különböző szervezetekkel, ilyen lehet például a Boys & Girls Clubs of America, az YMCA helyi szervezete stb., akikkel lehet közösen szervezni programot.
 
-If you are unable to connect with a school, please [contact us](https://support.code.org/hc/en-us/requests/new) and we’ll connect you with one of our local partners if possible.
+Ha nem tudsz kapcsolatba lépni egyetlen iskolával sem, kérjük, [lépj kapcsolatba velünk](https://support.code.org/hc/en-us/requests/new), és ha lehet, összekötünk valamelyik helyi partnerünkkel.
 
 * * *
 
 <a id="encourage-employees"></a>
 
-## Encourage employees to volunteer with a classroom
+## Alkalmazottak bátorítása, hogy vállaljanak önkéntes munkát az egyik osztályteremben
 
 [![](/images/fit-600/Marketing/pexels-andrea-piacquadio-3762940.jpg)]({{ urls/learn }})
 
-One of the most fulfilling ways to participate in the Hour of Code is to volunteer with a local classroom, either in-person or virtually. Best of all, you don’t have to be an engineer in order to volunteer. You can still provide a meaningful experience to students by sharing your own career experience and how CS or technology has impacted your role.
+A Kódolás óráján való részvétel egyik legörömtelibb módja az, ha önkéntesként vállalsz munkát egy helyi osztályban, akár személyesen, akár virtuálisan. Az egészben az a legjobb, hogy még mérnöknek sem kell lenned ahhoz, hogy önkéntesnek jelentkezz. Azzal is maradandó élményt nyújthatsz a diákoknak, ha megosztod velük saját tapasztalataidat, és azt, hogy az IT és a technológia milyen hatással van a munkádra.
 
 [<button>Jelentkezzen önkéntesnek</button>]({{ urls/volunteer }})
 
-Once a volunteer registers, a teacher can review their profile on our [volunteer map](https://code.org/volunteer/local) - so profiles should be submitted as complete as possible. If you’re a good fit for their classroom, a teacher will contact you through the platform (we will never share your email address with the teacher). You can then coordinate details directly with the teacher around [how to best volunteer with their classroom](https://hourofcode.com/us/how-to/volunteers).
+Az önkéntesként való regisztrálás után a tanár megnézi az adatlapod az [önkéntesek térképén](https://code.org/volunteer/local) - ezért a adatlapon lehetőleg minden információt meg kell adni. Ha a profilod jól illeszkedik az osztály munkájához, a platformon keresztül a tanár felveszi veled a kapcsolatot (az e-mail-címed sohasem osztjuk meg a tanárral). Ezután közvetlenül a tanárral egyeztetheted a részleteket arról, hogy [önkéntesként hogyan lehet a legjobban részt venni az osztály munkájában](https://hourofcode.com/us/how-to/volunteers).
 
-For more guidance on volunteering and sample messaging to get your company excited about the Hour of Code, check out our [guide for corporate partners]({{ localized_files/hoc_corporate_toolkit }}).
+Ha az önkéntes munkával kapcsolatban további iránymutatásra van szükséged, és üzenetmintákat szeretnél megnézni, hogy hogyan lehet a vállalat érdeklődését a Kódolás órája iránt felkelteni, nézd meg az[Útmutató vállalati partnereknek]({{ localized_files/hoc_corporate_toolkit }}}) című kiadványunkat.
 
 * * *
 
@@ -162,7 +162,7 @@ Segítse felhívni a figyelmet az informatikai mozgalomra a következő tartalom
 - Ha a legelső saját kódsor megváltoztatta az életét, segítsen a közelben lévő diákoknak megírni az első #Kódolás órájukat. https://code.org/volunteer
 - Ha megtanult kódolni - mi a saját története? Inspiráljon egy közeli diákot az első #Kódolás órájával https://code.org/volunteer
 
-<a href="https://hourofcode.com/promote/resources#posters">Find more</a> posters, videos, stickers and other ways to promote your event to your community.
+<a href="https://hourofcode.com/promote/resources#posters">Tudj meg többet</a> a plakátokról, videókról, matricákról és más eszközökről, amelyekkel az eseményt a saját közösségedben lehet népszerűsíteni.
 
 * * *
 

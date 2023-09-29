@@ -7,24 +7,17 @@ ka:
       BadGuys_setSizeAll_dropdown:
         options:
           SIZE:
-            '0.50': extra small
-            '0.75': small
             '1.00': საშუალო
-            '2.00': large
-            '3.00': extra large
       BadGuys_setSize_dropdown:
         options:
           SIZE:
-            '0.50': extra small
-            '0.75': small
             '1.00': საშუალო
-            '2.00': large
-            '3.00': extra large
       Dancelab_alternateMoves:
         options:
           GROUP:
             sprites: ყველა
             '"ALIEN"': უცხოპლანეტელები
+            '"MOOSE"': Moose
             '"ROBOT"': რობოტები
           MOVE1:
             MOVES.Rest: არცერთი
@@ -45,6 +38,7 @@ ka:
           GROUP:
             sprites: ყველა
             '"ALIEN"': უცხოპლანეტელები
+            '"MOOSE"': Moose
             '"ROBOT"': რობოტები
           MOVE:
             MOVES.Rest: არცერთი
@@ -64,6 +58,7 @@ ka:
           GROUP:
             sprites: ყველა
             '"ALIEN"': უცხოპლანეტელები
+            '"MOOSE"': Moose
             '"ROBOT"': რობოტები
           PROPERTY:
             '"scale"': ზომა
@@ -75,6 +70,7 @@ ka:
           GROUP:
             sprites: ყველა
             '"ALIEN"': უცხოპლანეტელები
+            '"MOOSE"': Moose
             '"ROBOT"': რობოტები
           MOVE:
             MOVES.XClapSide: ტაში
@@ -136,6 +132,7 @@ ka:
           GROUP:
             sprites: ყველა
             '"ALIEN"': უცხოპლანეტელები
+            '"MOOSE"': Moose
             '"ROBOT"': რობოტები
           LOCATION:
             "{x: 100, y: 200}": მარცხნივ
@@ -151,6 +148,7 @@ ka:
           GROUP:
             sprites: ყველა
             '"ALIEN"': უცხოპლანეტელები
+            '"MOOSE"': Moose
             '"ROBOT"': რობოტები
           FORMAT:
             '"diamond"': ბრილიანტი
@@ -164,11 +162,15 @@ ka:
         options:
           COSTUME:
             '"ALIEN"': უცხოპლანეტელი
+            '"BEAR"': დათვი
             '"CAT"': კატა
             '"DOG"': ძაღლი
             '"DUCK"': იხვი
+            '"FROG"': ბაყაყი
+            '"MOOSE"': Moose
             '"PINEAPPLE"': ანანასი
             '"ROBOT"': რობოტი
+            '"SHARK"': ზვიგენი
             '"UNICORN"': მარტორქა
           LOCATION:
             "{x: 100, y: 200}": მარცხნივ
@@ -183,11 +185,15 @@ ka:
         options:
           COSTUME:
             '"ALIEN"': უცხოპლანეტელი
+            '"BEAR"': დათვი
             '"CAT"': კატა
             '"DOG"': ძაღლი
             '"DUCK"': იხვი
+            '"FROG"': ბაყაყი
+            '"MOOSE"': Moose
             '"PINEAPPLE"': ანანასი
             '"ROBOT"': რობოტი
+            '"SHARK"': ზვიგენი
             '"UNICORN"': მარტორქა
           LOCATION:
             "{x: 100, y: 200}": მარცხნივ
@@ -209,39 +215,11 @@ ka:
             '7': '7'
             '8': '8'
             '9': '9'
-            '10': '10'
-            '11': '11'
             '12': '12'
-            '13': '13'
-            '14': '14'
             '15': '15'
-            '16': '16'
-            '17': '17'
-            '18': '18'
-            '19': '19'
-            '20': '20'
-            '21': '21'
-            '22': '22'
-            '23': '23'
-            '24': '24'
-            '25': '25'
-            '26': '26'
-            '27': '27'
-            '28': '28'
-            '29': '29'
-            '30': '30'
-            '31': '31'
-            '32': '32'
-            '33': '33'
-            '34': '34'
-            '35': '35'
-            '36': '36'
-            '37': '37'
-            '38': '38'
-            '39': '39'
-            '40': '40'
           COSTUME:
             '"ALIEN"': უცხოპლანეტელები
+            '"MOOSE"': Moose
             '"ROBOT"': რობოტები
           LAYOUT:
             '"diamond"': ბრილიანტი
@@ -272,21 +250,18 @@ ka:
           SPEED:
             '1': ჩვეულებრივი
             '2': ჩქარი
-            '4': very fast
             '0.5': ნელი
-            '0.25': very slow
       Dancelab_setDanceSpeedEach:
         options:
           GROUP:
             sprites: ყველა
             '"ALIEN"': უცხოპლანეტელები
+            '"MOOSE"': Moose
             '"ROBOT"': რობოტები
           SPEED:
             '1': ჩვეულებრივი
             '2': ჩქარი
-            '4': very fast
             '0.5': ნელი
-            '0.25': very slow
       Dancelab_setForegroundEffect:
         options:
           EFFECT:
@@ -307,6 +282,7 @@ ka:
           GROUP:
             sprites: ყველა
             '"ALIEN"': უცხოპლანეტელები
+            '"MOOSE"': Moose
             '"ROBOT"': რობოტები
           PROPERTY:
             '"scale"': ზომა
@@ -327,6 +303,7 @@ ka:
           GROUP:
             sprites: ყველა
             '"ALIEN"': უცხოპლანეტელები
+            '"MOOSE"': Moose
             '"ROBOT"': რობოტები
           PROPERTY:
             '"scale"': ზომა
@@ -339,12 +316,14 @@ ka:
           THIS:
             sprites: ყველა
             '"ALIEN"': უცხოპლანეტელები
+            '"MOOSE"': Moose
             '"ROBOT"': რობოტები
       Dancelab_setTintEachInline:
         options:
           THIS:
             sprites: ყველა
             '"ALIEN"': უცხოპლანეტელები
+            '"MOOSE"': Moose
             '"ROBOT"': რობოტები
       Dancelab_setVisible:
         options:
@@ -355,6 +334,7 @@ ka:
           THIS:
             sprites: ყველა
             '"ALIEN"': უცხოპლანეტელები
+            '"MOOSE"': Moose
             '"ROBOT"': რობოტები
           VISIBILITY:
             'true': ხილვადი
@@ -375,6 +355,7 @@ ka:
           GROUP:
             sprites: ყველა
             '"ALIEN"': უცხოპლანეტელები
+            '"MOOSE"': Moose
             '"ROBOT"': რობოტები
           PROPERTY:
             '"scale"': ზომა
@@ -404,6 +385,7 @@ ka:
           GROUP:
             sprites: ყველა
             '"ALIEN"': უცხოპლანეტელები
+            '"MOOSE"': Moose
             '"ROBOT"': რობოტები
           PROPERTY:
             '"scale"': ზომა
@@ -491,8 +473,6 @@ ka:
         options:
           INPUT1:
             '1': ლიმონის წვენი
-            '3': baking soda
-            '5': both
       DansBlocks_setForegroundEffect2:
         options:
           EFFECT:
@@ -502,8 +482,6 @@ ka:
         options:
           INPUT1:
             '1': ლიმონის წვენი
-            '3': baking soda
-            '5': both
       FunctionBlocks_communicate:
         text: კომუნიკაცია {VAR1} {SPRITE1COSTUME}-თან
       FunctionBlocks_makeManipulative2:
@@ -561,7 +539,6 @@ ka:
       gamelab_int10:
         options:
           VALUE:
-            '1': '1'
             '2': '2'
             '3': '3'
             '4': '4'
@@ -570,7 +547,6 @@ ka:
             '7': '7'
             '8': '8'
             '9': '9'
-            '10': '10'
       gamelab_isKeyPressed:
         options:
           KEY:
@@ -649,6 +625,7 @@ ka:
       gamelab_makeBurst:
         options:
           EFFECT:
+            '"burst"': ადიდებული
             '"rain"': წვიმა
             '"spiral"': სპირალი
       gamelab_makeNewSpriteGroup:
@@ -668,9 +645,7 @@ ka:
       gamelab_makeSpritesWithSize:
         options:
           SIZE:
-            '30': small
             '50': საშუალო
-            '100': large
       gamelab_mirrorSprite:
         options:
           DIRECTION:
@@ -691,14 +666,21 @@ ka:
             "'sound://category_app/app_button_1.mp3'": ღილაკი
             "'sound://category_collect/clicky_crunch.mp3'": ხრაშუნი
             "'sound://category_pop/bubble_pop_cluster_1.mp3'": ბუშტი
+            "'sound://category_animals/bear.mp3'": დათვი
             "'sound://category_animals/cat.mp3'": კატა
             "'sound://category_animals/cow.mp3'": ძროხა
             "'sound://category_animals/pig.mp3'": გოჭი
             "'sound://category_animals/sheep.mp3'": ცხვარი
+            "'sound://category_animals/goat.mp3'": თხა
             "'sound://category_animals/chicken.mp3'": ქათამი
             "'sound://category_animals/rooster.mp3'": მამალი
+            "'sound://category_animals/elephant.mp3'": სპილო
+            "'sound://category_animals/dolphin.mp3'": დელფინი
+            "'sound://category_animals/chick.mp3'": chick
             "'sound://category_animals/dog.mp3'": ძაღლი
+            "'sound://category_animals/tiger.mp3'": ვეფხვი
             "'sound://category_instrumental/harpe_pluck_1.mp3'": არფა
+            "'sound://category_retro/retro_game_ui_select_6.mp3'": შერჩევა
             "'sound://category_digital/jump_7.mp3'": ახტომა
       gamelab_playSoundOptionsSoccer:
         options:
@@ -748,11 +730,13 @@ ka:
             '"https://studio.code.org/api/v1/animation-library/04L4sdTODkNZF1OHf4qO_I.Al3QP43wA/category_backgrounds/city.png"': ქალაქი
             '"https://studio.code.org/blockly/media/skins/studio/background.png"': სასამართლო
             '"https://studio.code.org/blockly/media/skins/studio/background_desert.png"': უდაბნო
+            '"https://studio.code.org/blockly/media/skins/studio/background_space.png"': გალაქტიკა
             '"https://studio.code.org/blockly/media/skins/studio/background_grid.png"': ბადე
             '"https://studio.code.org/api/v1/animation-library/cJKusc1WPgWvCvgdwRX1gk8Zk0FggcVj/category_backgrounds/meadow.png"': მდელო
             '"https://studio.code.org/blockly/media/skins/studio/background_rainbow.png"': ცისარტყელა
             '"https://studio.code.org/api/v1/animation-library/Thvd6E7yU59nfop.zZKGWKoR8VLZDTq./category_backgrounds/stage.png"': ეტაპი
             '"https://studio.code.org/blockly/media/skins/studio/background_santa.png"': ვარსკვლავები
+            '"https://studio.code.org/api/v1/animation-library/RblQqWAuW0EkLfYuRVK4LRc0uY_76fvi/category_backgrounds/subway.png"': მეტრო
             '"https://studio.code.org/api/v1/animation-library/INSgmsgsLuIk1Aqp7g72h9nLFez.NX0p/category_backgrounds/underground.png"': მიწისქვეშა
             '"https://studio.code.org/blockly/media/skins/studio/background_underwater.png"': წყალქვეშა
             '"https://studio.code.org/blockly/media/skins/studio/background_winter.png"': ზამთარი
@@ -760,10 +744,7 @@ ka:
       gamelab_setDefaultSpriteSize:
         options:
           SIZE:
-            '25': extra small
-            '50': small
             '75': საშუალო
-            '100': large
       gamelab_setProp:
         options:
           PROPERTY:
@@ -778,10 +759,7 @@ ka:
           PROPERTY:
             '"scale"': ზომა
           SIZE:
-            '25': extra small
-            '50': small
             '75': საშუალო
-            '100': large
       gamelab_setSizes:
         options:
           PROPERTY:
@@ -791,11 +769,9 @@ ka:
       gamelab_setSpeed_dropdown:
         options:
           SIZE:
-            '1': extra slow
             '3': ნელი
             '5': ჩვეულებრივი
             '7': ჩქარი
-            '9': extra fast
       gamelab_spriteClicked:
         options:
           CONDITION:
@@ -850,11 +826,8 @@ ka:
       gamelab_withPercentChanceDropdown:
         options:
           NUM:
-            '10': very low
             '25': დაბალი
-            '50': 50/50
             '75': მაღალი
-            '90': very high
       Mikelab_addBehaviorSimple:
         text: სპრაიტი {SPRITE} იწყება {BEHAVIOR}
       Mikelab_changePropBy:
@@ -961,6 +934,7 @@ ka:
             '"https://studio.code.org/api/v1/animation-library/04L4sdTODkNZF1OHf4qO_I.Al3QP43wA/category_backgrounds/city.png"': ქალაქი
             '"https://studio.code.org/api/v1/animation-library/cJKusc1WPgWvCvgdwRX1gk8Zk0FggcVj/category_backgrounds/meadow.png"': მდელო
             '"https://studio.code.org/api/v1/animation-library/Thvd6E7yU59nfop.zZKGWKoR8VLZDTq./category_backgrounds/stage.png"': ეტაპი
+            '"https://studio.code.org/api/v1/animation-library/RblQqWAuW0EkLfYuRVK4LRc0uY_76fvi/category_backgrounds/subway.png"': მეტრო
             '"https://studio.code.org/api/v1/animation-library/INSgmsgsLuIk1Aqp7g72h9nLFez.NX0p/category_backgrounds/underground.png"': მიწისქვეშა
       Mikelab_setProp:
         options:
@@ -1030,14 +1004,10 @@ ka:
         options:
           INPUT1:
             '1': ლიმონის წვენი
-            '3': baking soda
-            '5': both
       ParticlesBlocks_setMicroscope:
         options:
           INPUT1:
             '1': ლიმონის წვენი
-            '3': baking soda
-            '5': both
       ParticlesBlocks_statesOfMatter:
         options:
           BEHAVIOR:
@@ -1071,6 +1041,7 @@ ka:
       Poetry_makeBurst:
         options:
           EFFECT:
+            '"burst"': ადიდებული
             '"rain"': წვიმა
             '"spiral"': სპირალი
       Poetry_playMusic:
@@ -1079,10 +1050,14 @@ ka:
             '"sound://category_nature/steady_campfire_loop.mp3"': კოცონი
             '"sound://category_nature/forest_woodland_ambience_2.mp3"': ტყე
             '"sound://category_nature/summer_night_loop.mp3"': ღამე
+            '"sound://category_background/ocean_waves.mp3"': ოკეანე
+            '"sound://category_background/rainforest_ambient_sound.mp3"': ტროპიკული ტყე
+            '"sound://category_background/wavering_wind.mp3"': sleepy
             '"sound://category_loops/stabilizing_breath_loop1.mp3"': ნელი
       Poetry_playSound:
         options:
           SOUND:
+            '"sound://category_bell/long_bell_notification.mp3"': ზარი
             '"sound://category_pop/bubble_pop_cluster_2.mp3"': ბუშტი
             '"sound://category_jump/vibrant_game_jumping_up_1.mp3"': ახტომა
             '"sound://category_achievements/lighthearted_bonus_objective_5.mp3"': შუქი
@@ -1107,6 +1082,7 @@ ka:
             '"hearts"': გულები
             '"rain"': წვიმა
           PALETTE:
+            '"ocean"': ოკეანე
             '"rainbow"': ცისარტყელა
             '"spring"': ზამბარა
             '"winter"': ზამთარი
@@ -1115,11 +1091,17 @@ ka:
           EFFECT:
             '"hearts"': გულები
             '"rain"': წვიმა
+      Poetry_startBehavior:
+        options:
+          BEHAVIOR:
+            '"swimming_left_and_right"': ცურვა
+      Poetry_stopBehavior:
+        options:
+          BEHAVIOR:
+            '"swimming_left_and_right"': ცურვა
       Poetry_whenLineShows:
         options:
           'N':
-            '0': "???"
-            '1': '1'
             '2': '2'
             '3': '3'
             '4': '4'
@@ -1128,11 +1110,7 @@ ka:
             '7': '7'
             '8': '8'
             '9': '9'
-            '10': '10'
-            '11': '11'
             '12': '12'
-            '13': '13'
-            '14': '14'
             '15': '15'
       RyanLab_moveForward:
         text: წინ გადაადგილება
@@ -1160,16 +1138,10 @@ ka:
         options:
           PORTION:
             '1': ყველა
-            '0.75': most
-            '0.5': half of
-            '0.25': few
       aalab_someStartIntervention:
         options:
           PORTION:
             '1': ყველა
-            '0.75': most
-            '0.5': half of
-            '0.25': few
       binary_move:
         options:
           DIR:
@@ -1240,6 +1212,7 @@ ka:
         text: შექმენი {ENTITY}
         options:
           ENTITY:
+            '"dolphin"': დელფინი
             '"squid"': კალმარი
       craft_turn:
         text: მობრუნდი {DIR}
@@ -1247,6 +1220,17 @@ ka:
           DIR:
             right: მარჯვნივ ↻
             left: მარცხნივ ↺
+      ecosystems_int10:
+        options:
+          VALUE:
+            '2': '2'
+            '3': '3'
+            '4': '4'
+            '5': '5'
+            '6': '6'
+            '7': '7'
+            '8': '8'
+            '9': '9'
       storylab_setForegroundEffect2:
         options:
           EFFECT:

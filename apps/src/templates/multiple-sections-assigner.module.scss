@@ -1,0 +1,45 @@
+@import "color";
+
+.sectionsDirections {
+  font-size: 14px;
+  margin: 12px 0;
+  padding: 12px 0;
+  border: 1px solid $neutral_dark50;
+  border-left-width: 0;
+  border-right-width: 0;
+
+  p {
+    margin: 0;
+  }
+}
+
+.sectionList {
+  margin: 24px 0 12px 0;
+  padding: 0 0 24px 0;
+  border-bottom: 1px solid $neutral_dark50;
+
+  h5 {
+    margin-bottom: 0;
+  }
+
+  .sectionListOptionsContainer {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    margin: 12px 0 4px 0;
+
+    label {
+      width: 280px;
+      margin-bottom: 8px;
+    }
+  }
+}
+
+.modalHeader h3 {
+  margin-bottom: 0;
+}
+
+.buttonContainer {
+  display: flex;
+  justify-content: space-between;
+}

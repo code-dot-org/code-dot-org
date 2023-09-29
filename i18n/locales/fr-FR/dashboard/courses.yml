@@ -67,22 +67,24 @@ fr:
           description_short: Apprenez les concepts fondamentaux de l’Informatique.
         csd-2023:
           title: Les Découvertes de l’Informatique
+        vpl-csa-2023:
+          title: Formation professionnelle virtuelle CSA
     resources:
-      curriculum/csd/2020:
-        name: Programme
-      teacher_forum/csd/2020:
-        name: Forum des enseignants
       curriculum/csd/2017:
         name: Programme
       teacher_forum_6/csd/2017:
-        name: Forum des enseignants
-      csd_programming_levels_guide/csd/2022:
-        name: Guide des niveaux de programmation CSD
-      curriculum/csd/2019:
-        name: Programme
-      teacher_forum/csd/2019:
         name: Forum des enseignants
       curriculum/csd/2018:
         name: Programme
       teacher_forum_6/csd/2018:
         name: Forum des enseignants
+      curriculum/csd/2019:
+        name: Programme
+      teacher_forum/csd/2019:
+        name: Forum des enseignants
+      curriculum/csd/2020:
+        name: Programme
+      teacher_forum/csd/2020:
+        name: Forum des enseignants
+      csd_programming_levels_guide/csd/2022:
+        name: Guide des niveaux de programmation CSD

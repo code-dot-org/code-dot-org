@@ -8,3 +8,5 @@ right 'Ignore the problem'
 teacher_markdown <<MARKDOWN
 **Content: Unit 4 Lesson 7**
 MARKDOWN
+
+allow_multiple_attempts true

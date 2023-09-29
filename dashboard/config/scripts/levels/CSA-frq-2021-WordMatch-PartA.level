@@ -1,0 +1,22 @@
+<Javalab>
+  <config><![CDATA[{
+  "published": true,
+  "game_id": 68,
+  "created_at": "2023-06-21T19:50:53.000Z",
+  "level_num": "custom",
+  "user_id": 19026,
+  "properties": {
+    "encrypted": "false",
+    "encrypted_examples": [
+
+    ],
+    "project_template_level_name": "CSA-frq-2021-WordMatch",
+    "long_instructions": "##WordMatch FRQ (Part A)\r\n\r\nThis question involves the `WordMatch` class, which stores a secret string and provides methods that compare other strings to the secret string. You will write two methods in the `WordMatch` class. \r\n\r\n<br>\r\nWrite the `WordMatch` method `scoreGuess`. To determine the score to be returned, `scoreGuess` finds the number of times that `guess` occurs as a substring of `secret` and then multiplies that number by the square of the length of `guess`. Occurrences of `guess` may overlap within `secret`. \r\n\r\nAssume that the length of `guess` is less than or equal to the length of `secret` and that `guess` is not an empty string. \r\n\r\nThe following examples show declarations of a `WordMatch` object. The tables show the outcomes of some possible calls to the `scoreGuess` method.\r\n\r\n![](https://images.code.org/5dd06cf731abecdd3080cba8a836e023-image-1687368439194.27.14 PM.png)\r\n\r\nComplete the `scoreGuess` method\r\n",
+    "mini_rubric": "false",
+    "submittable": "false",
+    "hide_share_and_remix": "false",
+    "csa_view_mode": "console"
+  },
+  "audit_log": "[{\"changed_at\":\"2023-06-21 19:51:13 +0000\",\"changed\":[\"encrypted_examples\"],\"changed_by_id\":19026,\"changed_by_email\":\"brandon.spellman@code.org\"}]"
+}]]></config>
+</Javalab>

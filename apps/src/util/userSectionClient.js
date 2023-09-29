@@ -1,5 +1,3 @@
-/* globals $ */
-
 /**
  * Send a request to dashboard and retrieve a JSON array listing the
  * sections this user belongs to.

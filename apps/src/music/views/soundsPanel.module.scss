@@ -1,67 +1,94 @@
 @import "color.scss";
 
 .soundsPanel {
+  background-color: $neutral_dark;
   user-select: none;
-}
+  width: 300px;
+  height: 290px;
+  overflow-x: hidden;
+  overflow-y: auto;
 
-.folder {
-  background-color: $neutral_dark90;
-  overflow: hidden;
-  border-radius: 4px;
-  padding: 6px;
-  &:first-child {
-    margin-top: 0;
+  .folderRow {
+    position: sticky;
+    top: 0;
+    padding: 6px 0;
+    margin-bottom: 6px;
+    background-color: $neutral_dark;
+    overflow: hidden;
+
+    &:first-child {
+      margin-top: 0;
+    }
+    &:not(:first-child) {
+      margin-top: 14px;
+    }
+
+    &Left {
+      width: 65px;
+      height: 65px;
+      margin: 0 6px 0 4px;
+      float: left;
+    }
+
+    &Middle {
+      width: calc(100% - 75px - 58px);
+      float: left;
+
+      &Name {
+        font-size: 18px;
+      }
+
+      &SubTitle {
+        font-size: 11px;
+      }
+    }
+
+    &Right {
+      float: right;
+      width: 43px;
+      margin-right: 15px;
+    }
   }
-  &:not(:first-child) {
-    margin-top: 6px;
+
+  .soundRow {
+    overflow: hidden;
+    padding: 4px 0;
+    &:hover {
+      background-color: $neutral_dark90;
+    }
+    &Selected {
+      background-color: $neutral_dark80;
+    }
+
+    &Left {
+      width: 15px;
+      margin: 0 6px 0 4px;
+      float: left;
+
+      .typeIcon {
+        width: 13px;
+      }
+    }
+
+    &Middle {
+      width: calc(100% - 25px - 58px);
+      float: left;
+    }
+
+    &Right {
+      float: right;
+      width: 43px;
+      margin-right: 15px;
+
+    }
   }
-}
-
-.folderName {
-  font-size: 18px;
-  padding: 6px 0;
-  margin-bottom: 6px;
-  border-bottom: solid 1px $neutral_dark80;
-  margin-right: 12px;
-}
-
-.soundRow {
-  overflow: hidden;
-  padding: 4px 0;
-  &:hover {
-    background-color: $neutral_dark80;
-  }
-  &Selected {
-    background-color: $neutral_dark70;
-  }
-}
-
-.soundRowLeft {
-  width: 15px;
-  margin: 0 6px 0 4px;
-  float: left;
-}
-
-.typeIcon {
-  width: 13px;
-}
-
-.soundRowMiddle {
-  width: calc(100% - 25px - 55px);
-  float: left;
-}
-
-.soundRowRight {
-  float: right;
-  width: 40px;
-  margin-right: 15px;
 
   .length {
     display: inline-block;
     font-size: 13px;
     width: 15px;
     margin-right: 10px;
-    color: $neutral_dark40;
+    color: $neutral_dark50;
     text-align: right;
   }
 
@@ -69,13 +96,13 @@
     display: inline-block;
     font-size: 16px;
   }
-}
 
-.preview {
-  color: $neutral_dark30;
+  .preview {
+    color: $neutral_dark40;
 
-  &Playing {
-    color: $neutral_dark60;
-    cursor: default;
+    &Playing {
+      color: $neutral_dark70;
+      cursor: default;
+    }
   }
 }

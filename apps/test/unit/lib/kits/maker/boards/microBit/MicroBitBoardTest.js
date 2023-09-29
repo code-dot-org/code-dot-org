@@ -15,7 +15,6 @@ describe('MicroBitBoard', () => {
 
   beforeEach(() => {
     // Construct a board to test on
-    window.SerialPort = {};
     board = new MicroBitBoard();
     board.boardClient_ = new MBFirmataClientStub();
     boardSetupAndStub(board);

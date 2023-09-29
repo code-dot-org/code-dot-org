@@ -95,7 +95,7 @@ class CodeReviewsControllerTest < ActionController::TestCase
 
   test 'update fails when trying to re-open a closed review' do
     code_review = create :code_review, user_id: @project_owner.id, closed_at: DateTime.now
-    assert !code_review.open?
+    assert_not code_review.open?
 
     patch :update, params: {
       id: code_review.id,

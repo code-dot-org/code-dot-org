@@ -1,5 +1,5 @@
 import React from 'react';
-import {FormControl, FormGroup, HelpBlock} from 'react-bootstrap';
+import {FormControl, FormGroup, HelpBlock} from 'react-bootstrap'; // eslint-disable-line no-restricted-imports
 import classNames from 'classnames';
 import PropTypes from 'prop-types';
 

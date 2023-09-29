@@ -127,8 +127,8 @@ class Javalab < Level
       # Pull in the level name
       level_prop['name'] = name
 
-      # Set the javabuilder url
-      level_prop['javabuilderUrl'] = CDO.javabuilder_url
+      # Pass through the captcha key so we can challenge users in demo mode
+      level_prop['recaptchaSiteKey'] = CDO.recaptcha_site_key
 
       # Send validation file names without code to prevent naming collisions. If we are in start mode,
       # the actual validation code will be sent by levels_controller.
@@ -141,7 +141,7 @@ class Javalab < Level
       end
 
       # Don't set nil values
-      level_prop.reject! {|_, value| value.nil?}
+      level_prop.compact!
     end
     options.freeze
   end

@@ -1,5 +1,6 @@
 <Applab>
   <config><![CDATA[{
+  "published": true,
   "game_id": 41,
   "created_at": "2023-03-17T17:00:10.000Z",
   "level_num": "custom",
@@ -90,7 +91,8 @@
       "/courses/csd-2022/guides/booleans-and-comparison-operators",
       "/courses/csd-2022/guides/physical-input",
       "/courses/csd-2022/guides/producing-output",
-      "/courses/csd-2022/guides/board-events"
+      "/courses/csd-2022/guides/board-events",
+      "/maker/setup"
     ],
     "callout_json": "[]",
     "start_blocks": "onEvent(\"screen1\", \"mousemove\", function() {\r\n  //1) When the mouse moves on the screen, a random LED toggles\r\n});\r\n",
@@ -101,9 +103,8 @@
     "encrypted_examples": "eaYabnU1owRBwFW9G/7YE3L/l1qu5GUmWi4WfwNp9yP5L7wOdHRhW6OBnkFP\n3ZuSOXI+/gEIfa5yAvz2wBi96w==\n",
     "preload_asset_list": null
   },
-  "published": true,
   "notes": "",
-  "audit_log": "[{\"changed_at\":\"2023-03-17T17:00:10.089+00:00\",\"changed\":[\"cloned from \\\"CSD U6 - Color LEDs - ChalA_2222\\\"\"],\"cloned_from\":\"CSD U6 - Color LEDs - ChalA_2222\"}]"
+  "audit_log": "[{\"changed_at\":\"2023-03-17T17:00:10.089+00:00\",\"changed\":[\"cloned from \\\"CSD U6 - Color LEDs - ChalA_2222\\\"\"],\"cloned_from\":\"CSD U6 - Color LEDs - ChalA_2222\"},{\"changed_at\":\"2023-08-16 17:50:10 +0000\",\"changed\":[\"code_functions\",\"reference_links\",\"encrypted_examples\",\"preload_asset_list\",\"contained_level_names\"],\"changed_by_id\":14639,\"changed_by_email\":\"dan+teacher@code.org\"}]"
 }]]></config>
   <blocks/>
 </Applab>

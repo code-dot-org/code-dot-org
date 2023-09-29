@@ -1,11 +1,13 @@
 import React from 'react';
 import PropTypes from 'prop-types';
+import {connect} from 'react-redux';
 import Radium from 'radium'; // eslint-disable-line no-restricted-imports
 import color from '@cdo/apps/util/color';
 import i18n from '@cdo/locale';
 import ProgressBubble from '@cdo/apps/templates/progress/ProgressBubble';
 import FontAwesome from '@cdo/apps/templates/FontAwesome';
 import {levelWithProgress, studentShape} from './types';
+import letterCompare from '@cdo/apps/util/letterCompare';
 
 class StudentTable extends React.Component {
   static propTypes = {
@@ -15,6 +17,9 @@ class StudentTable extends React.Component {
     levelsWithProgress: PropTypes.arrayOf(levelWithProgress),
     sectionId: PropTypes.number,
     unitName: PropTypes.string,
+
+    // provided by redux
+    isSortedByFamilyName: PropTypes.bool,
   };
 
   getRowLink = studentId => {
@@ -38,8 +43,28 @@ class StudentTable extends React.Component {
   };
 
   render() {
-    const {students, onSelectUser, selectedUserId, levelsWithProgress} =
-      this.props;
+    const {
+      students,
+      onSelectUser,
+      selectedUserId,
+      levelsWithProgress,
+      isSortedByFamilyName,
+    } = this.props;
+
+    // Returns a comparator function that sorts objects a and b by the given
+    // keys, in order of priority.
+    // Example: comparator(['familyName', 'name']) will sort by familyName
+    // first, looking at name if necessary to break ties.
+    const comparator = keys => (a, b) =>
+      keys.reduce(
+        (result, key) => result || letterCompare(a[key] || '', b[key] || ''),
+        0
+      );
+
+    // Sort students, in-place.
+    isSortedByFamilyName
+      ? students.sort(comparator(['familyName', 'name']))
+      : students.sort(comparator(['name', 'familyName']));
 
     return (
       <table style={styles.table} className="student-table">
@@ -69,7 +94,7 @@ class StudentTable extends React.Component {
                     />
                   )}
                   <div style={styles.name}>
-                    {student.name}
+                    {`${student.name} ${student.familyName || ''}`}
                     <a
                       href={this.getRowLink(student.id)}
                       target="_blank"
@@ -130,4 +155,7 @@ const styles = {
   },
 };
 
-export default Radium(StudentTable);
+export const UnconnectedStudentTable = Radium(StudentTable);
+export default connect(state => ({
+  isSortedByFamilyName: state.currentUser.isSortedByFamilyName,
+}))(UnconnectedStudentTable);

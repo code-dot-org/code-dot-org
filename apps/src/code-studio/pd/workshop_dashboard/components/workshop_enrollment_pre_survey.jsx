@@ -1,7 +1,7 @@
 import PropTypes from 'prop-types';
 import React from 'react';
 import _ from 'lodash';
-import {Table} from 'react-bootstrap';
+import {Table} from 'react-bootstrap'; // eslint-disable-line no-restricted-imports
 import {Chart} from 'react-google-charts';
 import {workshopEnrollmentStyles} from '../workshop_enrollment_styles';
 import {enrollmentShape} from '../types';

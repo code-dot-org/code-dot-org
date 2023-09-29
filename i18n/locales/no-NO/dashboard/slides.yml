@@ -970,8 +970,6 @@
       3:
         text: "Vi bruker kjente sanger, inkludert Old Macdonald, for å snakke om hvordan et refreng kalles om og om igjen. Og hvordan noen ganger et refreng kan endre seg. Når du har en sang som Old Macdonald, der ordene endres, er et flott sted å introdusere ideen om parametere. Send forskjellige ord gjennom funksjonen slik at du kan se hvordan refrenget endres. Når alle skjønner det, kan du ta andre kjente sanger og bryte dem opp selv. Se om dere kan finne det ut sammen."
     unplug9:
-      1:
-      2:
       3:
         text: "Dette er en flott introduksjon til feilsøking, korrekturlesning av ditt eget og andres arbeid er en god øvelse. Du vil raskt forstå hvor viktig det er at du er forsiktig med hvordan du koder når mange andre er avhengig av deg."
     unplug10:
@@ -984,7 +982,6 @@
     unplug11:
       1:
         text: "Nå er tiden inne for å ta et steg tilbake og få en god oversikt over de siste nitten leksjonene vi har vært gjennom. Dette er et ypperlig tidspunkt å gi elevene et friminutt om det er mulig, det de nettopp har vært gjennom er en stor prestasjon. De har lært mer om informatikk gjennom disse leksjonene enn de fleste voksne har fått med seg gjennom hele sitt liv."
-      2:
       3:
         text: "Fra alle oss her ved Code.org, vi håper du har hatt MASSEVIS av moro i løpet av dette kurset. Om du drømmer om å lage den beste nye appen, bruke programmering til å kurere sykdommer eller du bare ønsker å være en fremragende problemløser - dette kurset var det første trinnet for å oppnå de drømmene."
     starwars_intro:
@@ -1017,7 +1014,6 @@
         text: "Øverst til høyre i arbeidsområdet, kan du klikke knappen Vis tekst på hvilken som helst oppgave for å bytte fra blokker til å skrive koden som tekst."
       4:
         text: "I neste leksjon vil du starte opp i skrive modus. Her kan du fremdeles dra blokken fra verktøykassen, eller du kan skrive kommandonavnet. Når du begynner å skrive, vil du se at navnene på mulig kommandoer vil vises nedenfor der du skriver. I stedet for å skrive hele kommandonavnet kan du velge en av disse å arbeide raskere. I jobben min bruker jeg denne funksjonen for autofullføring hele tiden når jeg skriver kode."
-      5:
       6:
         text: "Når det blir en feil på en linje vil feilen bli fremhevet slik at du kan endre teksten for å fikse feilen."
       7:
@@ -1046,8 +1042,6 @@
         text: "Hei, mitt navn er Alice og jeg styrer produkt- og ingeniør-teamene her i Code.org. Jeg har jobbet med denne veiledningen som du spiller akkurat nå."
       2:
         text: "Du har nettopp gjort det til det siste nivået. Gratulerer! Du lærte alt du trenger å vite for å lage ditt eget Star Wars spill. Nå er det ingen flere instruksjoner, ingen oppgaver å løse. Du kan lage ditt eget spill og du bestemmer hvordan det skal fungere. En ting til, du har nå låst opp nye lyder og nye kommandoer for å gjøre enda mer."
-      3:
-      4:
       5:
         text: "Når du er ferdig med å lage spillet ditt, klikk på Deling å få en link som du kan dele med venner eller spille spillet ditt på telefonen. Ha det gøy!"
     starwars_blocks_intro:
@@ -1055,7 +1049,6 @@
         text: "Hei, jeg heter Kathleen Kennedy og jeg er produsenten av Star Wars: The Force Awakens. I dag vil du arbeide med en av våre stjerner, BB-8. BB-8 er en rund drone. Hver eneste av hans bevegelser kontrolleres av programvare. Informatikk påvirker alle bransjer, fra markedsføring til helsetjenester til filmindustrien. Faktisk, hundrevis av maskiningeniører jobbet sammen for å lage en filmen The Force Awakens."
       2:
         text: "Hei jeg heter Rachel Rose, og jeg er en senioringeniør ved ILM hvor jeg leder utviklingsteamet for animasjon og skapning. I The Force Awakens er jeg ansvarlig for å hjelpe kunstnere med å bygge delene til filmen slik at de ser troverdige ut i en galakse langt, langt borte."
-      3:
       4:
         text: "Din skjerm er delt opp i tre deler. Til venstre er Star Wars spillet hvor koden vil bli kjørt. Instruksjonene for hvert nivå er beskrevet nedenfor spillområdet."
       5:
@@ -1081,7 +1074,6 @@
         text: "Noen eksempler på hendelser er å lytte etter museklikk, en piltast eller et trykk på skjermen."
       5:
         text: "Her skal vi først få R2-D2 til å bevege seg opp og levere en beskjed til en opprørspilot og så bevege seg ned til den andre opprørspiloten. Vi bruker hendelser for å få ham til å flytte på seg: Når spilleren bruker piltastene opp/ned eller opp/ned-knappene."
-      6:
       7:
         text: "Steg for steg vil gjøre ditt spill mer interaktivt."
     starwars_blocks_congrats:
@@ -1089,8 +1081,6 @@
         text: "Hei, mitt navn er Alice og jeg styrer produkt- og ingeniør-teamene her i Code.org. Jeg har jobbet med denne veiledningen som du spiller akkurat nå."
       2:
         text: "Du har nettopp gjort det til det siste nivået. Gratulerer! Du lærte alt du trenger å vite for å lage ditt eget Star Wars spill. Nå er det ingen flere instruksjoner, ingen oppgaver å løse. Du kan lage ditt eget spill og du bestemmer hvordan det skal fungere. En ting til, du har nå låst opp nye lyder og nye kommandoer for å gjøre enda mer."
-      3:
-      4:
       5:
         text: "Når du er ferdig med å lage spillet ditt, klikk på Deling å få en link som du kan dele med venner eller spille spillet ditt på telefonen. Ha det gøy!"
     mc_intro:
@@ -1239,7 +1229,6 @@
         text: "Du ser at skjermen er delt i tre hoveddeler. 1) På den venstre er Minecraft-spillet. Akkurat nå er verdenen frosset, men vi skal fikse det ved å bruke kode."
       4:
         text: "2) Dette området i midten er verktøykassa. Hver av disse blokkene er en kommando som kyllinger, sauer og andre Minecraft-skapninger kan forstå."
-      5:
       6:
         text: "Hvis du glemmer hva du skal gjøre finner du instruksjoner øverst."
       7:
@@ -1249,8 +1238,6 @@
       9:
         text: "Etter du har trykket på \"Kjør\" kan du alltid trykke på \"Nullstill\"-knappen for å nullstille spillet og starte på nytt. Nå er det din tur til å lage din egen versjon av Minecraft. Kos deg!"
     mc_2016_events:
-      1:
-      2:
       3:
         text: "Men hva skjer når du bruker den? I Minecraft slipper sauer ull når du klipper dem, kuer løper hvis du tar på dem og creepere eksploderer hvis du kommer borti dem. Disse reaksjonene skjer takket være noe som heter hendelser. Hendelser forteller programmet ditt at det skal lytte etter eller vente på at noe skjer og når det skjer, gjøre en handling."
       4:
@@ -1266,19 +1253,8 @@
       2:
         text: "Når du er ferdig å lage spillet ditt, velg deling for å få en lenke som du kan dele med vennene dine eller for å spille spillet ditt på telefonen. Ha det gøy! Jeg gleder meg til å spille din versjon av Minecraft."
     mc_2017_agent_intro:
-      1:
-      2:
-      3:
-      4:
-      5:
-      6:
-      7:
-      8:
-      9:
-      10:
       11:
         text: "Hvis du glemmer hva du skal gjøre finner du instruksjoner øverst."
-      12:
     csd_concept_binary_data:
       1:
         text: "Hei! Jeg heter Limor Fried og jobber som ingeniør her hos Adafruit Industries. Her konstruerer jeg elektronikk for bruk i både teknologi og musikk og moteklær."
@@ -1354,24 +1330,6 @@
     csd_concept_memory_cpu_input_output:
       1:
         image: 'notes/csd_concept_memory_cpu_input_output_1.png'
-      2:
-      3:
-      4:
-      5:
-      6:
-      7:
-      8:
-      9:
-      10:
-      11:
-      12:
     hoc_dance_events_2019:
-      1:
-      2:
-      3:
       4:
         text: "Eksempler på hendelser er å lytte etter et museklikk, en piltast eller trykk på skjermen."
-      5:
-      6:
-      7:
-      8:

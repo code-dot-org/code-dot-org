@@ -1,14 +1,15 @@
-@import "color.scss";
-@import "./theme/tokens-dark";
-@import "./music-view.module.scss";
+@import 'color.scss';
+@import './theme/tokens-dark';
+@import './music-view.module.scss';
 
 .container {
-  background-color: $neutral_dark80;
-  color: $neutral_white;
+  background-color: $neutral_dark90;
+  color: $neutral_light;
   display: flex;
   flex-direction: column;
-  border: $neutral_dark80 solid;
+  border: $neutral_dark90 solid;
   border-radius: $default-border-radius;
+  height: 35px;
 }
 
 .labelContainer {
@@ -30,11 +31,12 @@
 
 .triggersContainer {
   width: 200px;
-  flex: 1;
   display: flex;
-  flex-direction: column;
-  background-color: $neutral_dark90;
-  padding: 10px;
+  flex-direction: row;
+  padding-right: 20px;
+  right: 0;
+  top: 3px;
+  height: 35px;
 }
 
 .triggerButtonRow {
@@ -50,7 +52,7 @@ $hover-opacity: 0.5;
 @mixin enabled-trigger($color) {
   cursor: pointer;
   border-color: $color;
-  color: $neutral_white;
+  color: $neutral_light;
   &:hover {
     background-color: rgba($color, $hover-opacity);
   }
@@ -58,27 +60,39 @@ $hover-opacity: 0.5;
   &:active {
     background-color: $color;
     border-width: 2px;
-    color: $neutral_dark90;
-    border-color: $neutral_white;
-    box-shadow: 0 0 5px $neutral_white;
+    color: $neutral_dark;
+    border-color: $neutral_light;
+    box-shadow: 0 0 5px $neutral_light;
   }
 }
 
 .triggerButton {
   font-size: 20px;
   border-radius: 8px;
-  border-width: 2px 2px 4px 2px;
   border-style: solid;
-  color: $neutral_dark70;
-  background-color: $neutral_dark90;
+  color: $neutral_dark80;
+  background-color: $neutral_dark;
   text-align: center;
-  max-width: 40px;
-  height: 40px;
-  line-height: 40px;
+  max-width: 32px;
+  height: 32px;
+  line-height: 32px;
   flex: 1;
+  margin-right: 10px;
+  border-width: 3px;
+
+  &.greenTrigger {
+    cursor: pointer;
+    border-color: #00bc3e;
+    background-color: #00bc3e;
+    color: white;
+  }
 
   &.purple {
     @include enabled-trigger($purple);
+  }
+
+  &.selected {
+    border-color: #fc3;
   }
 
   &.strawberry {

@@ -11,3 +11,5 @@ wrong 'Values do not need to be provided to a function with parameters in any pa
 markdown <<MARKDOWN
 
 MARKDOWN
+
+allow_multiple_attempts true

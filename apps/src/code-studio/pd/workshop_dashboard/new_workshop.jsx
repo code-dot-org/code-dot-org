@@ -19,7 +19,7 @@ export default class NewWorkshop extends React.Component {
     return (
       <div>
         <h2>New Workshop</h2>
-        <WorkshopForm onSaved={this.handleSaved} />
+        <WorkshopForm onSaved={this.handleSaved} today={new Date()} />
       </div>
     );
   }

@@ -50,9 +50,6 @@ cs:
       expired: "vypršela platnost, požádej o nový, prosím"
       not_found: "nenalezeno"
       not_locked: "nebyl uzamčen"
-      not_saved:
-        one: "1 chyba zabránila %{resource} v uložení:"
-        other: "%{count} chyb zabránilo %{resource} v uložení:"
     invitations:
       send_instructions: 'Pozvání bylo zasláno na e-mail: %{email}.'
       invitation_token_invalid: 'Zadaný kód pozvánky je neplatný!'

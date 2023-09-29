@@ -35,7 +35,7 @@ class ShareDisallowedDialog extends Component {
               __useDeprecatedTag
               href={`/users/sign_up?user_return_to=${location.pathname}`}
               text={i18n.createAccount()}
-              color={Button.ButtonColor.orange}
+              color={Button.ButtonColor.brandSecondaryDefault}
             />
           </div>
         </div>

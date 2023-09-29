@@ -1,5 +1,10 @@
 <Weblab>
   <config><![CDATA[{
+  "published": true,
+  "game_id": 58,
+  "created_at": "2022-09-29T23:54:52.000Z",
+  "level_num": "custom",
+  "user_id": 324,
   "properties": {
     "instructions_important": "false",
     "start_sources": "              {\r\n  \"files\": [\r\n    {\r\n      \"name\": \"index.html\",\r\n      \"data\": \"<!DOCTYPE html>\\n<html>\\n  <head>\\n    \\n  </head>\\n  <body>\\n    \\n    Manny: Aren't you Patrick Star? Patrick: Yup Manny: And this is your ID? Patrick: Yup Manny: I found this ID in this wallet. And if that's the case, this must be your wallet Patrick: That makes sense to me Manny: Then take it Patrick: It's not my wallet\\n    \\n    \\n    \\n  </body>\\n</html>\"\r\n    }\r\n  ]\r\n}\r\n            ",
@@ -21,16 +26,9 @@
     "rubric_performance_level_2": "At least some text has been separated out into a paragraph through proper use of paragraph tags. The resulting webpage partially matches the preview in the level instructions",
     "rubric_performance_level_3": "There is at least one paragraph tag in the text, but it may not be used properly (e.g. missing closing tag, paragraphs created outside of the body element).",
     "rubric_performance_level_4": "There are no paragraph tags in the text.",
-    "encrypted_examples": [
-
-    ]
+    "encrypted_examples": "v+EpjYO6l1BGcxZWfofrLlrX6Gb4qe8XNEE1L0GNTYSCqFKYDHzMjXt3r3TS\nKZTNVMnKhMriztOcQWptSefD7w==\n"
   },
-  "game_id": 58,
-  "published": true,
-  "created_at": "2022-09-29T23:54:52.000Z",
-  "level_num": "custom",
-  "user_id": 324,
   "notes": "",
-  "audit_log": "[{\"changed_at\":\"2022-09-29T23:54:52.236+00:00\",\"changed\":[\"cloned from \\\"CSD U2L2 - PracB_2023\\\"\"],\"cloned_from\":\"CSD U2L2 - PracB_2023\"},{\"changed_at\":\"2022-09-30 00:47:39 +0000\",\"changed\":[\"long_instructions\",\"display_name\",\"bubble_choice_description\",\"thumbnail_url\"],\"changed_by_id\":14639,\"changed_by_email\":\"dan+teacher@code.org\"},{\"changed_at\":\"2022-09-30 00:52:34 +0000\",\"changed\":[\"start_sources\",\"long_instructions\",\"encrypted_examples\"],\"changed_by_id\":14639,\"changed_by_email\":\"dan+teacher@code.org\"},{\"changed_at\":\"2022-10-07 20:57:35 +0000\",\"changed\":[],\"changed_by_id\":14639,\"changed_by_email\":\"dan+teacher@code.org\"},{\"changed_at\":\"2022-10-07 21:09:40 +0000\",\"changed\":[\"mini_rubric\",\"encrypted_examples\"],\"changed_by_id\":14639,\"changed_by_email\":\"dan+teacher@code.org\"},{\"changed_at\":\"2023-02-17 23:30:37 +0000\",\"changed\":[\"long_instructions\"],\"changed_by_id\":18602,\"changed_by_email\":\"angelina+levelbuilder@code.org\"}]"
+  "audit_log": "[{\"changed_at\":\"2022-09-29T23:54:52.236+00:00\",\"changed\":[\"cloned from \\\"CSD U2L2 - PracB_2023\\\"\"],\"cloned_from\":\"CSD U2L2 - PracB_2023\"},{\"changed_at\":\"2022-09-30 00:47:39 +0000\",\"changed\":[\"long_instructions\",\"display_name\",\"bubble_choice_description\",\"thumbnail_url\"],\"changed_by_id\":14639,\"changed_by_email\":\"dan+teacher@code.org\"},{\"changed_at\":\"2022-09-30 00:52:34 +0000\",\"changed\":[\"start_sources\",\"long_instructions\",\"encrypted_examples\"],\"changed_by_id\":14639,\"changed_by_email\":\"dan+teacher@code.org\"},{\"changed_at\":\"2022-10-07 20:57:35 +0000\",\"changed\":[],\"changed_by_id\":14639,\"changed_by_email\":\"dan+teacher@code.org\"},{\"changed_at\":\"2022-10-07 21:09:40 +0000\",\"changed\":[\"mini_rubric\",\"encrypted_examples\"],\"changed_by_id\":14639,\"changed_by_email\":\"dan+teacher@code.org\"},{\"changed_at\":\"2023-02-17 23:30:37 +0000\",\"changed\":[\"long_instructions\"],\"changed_by_id\":18602,\"changed_by_email\":\"angelina+levelbuilder@code.org\"},{\"changed_at\":\"2023-07-06 18:53:25 +0000\",\"changed\":[],\"changed_by_id\":18602,\"changed_by_email\":\"angelina+levelbuilder@code.org\"}]"
 }]]></config>
 </Weblab>

@@ -1,5 +1,10 @@
 <Weblab>
   <config><![CDATA[{
+  "published": true,
+  "game_id": 58,
+  "created_at": "2022-09-30T00:59:47.000Z",
+  "level_num": "custom",
+  "user_id": 324,
   "properties": {
     "instructions_important": "false",
     "start_sources": "              {\r\n  \"files\": [\r\n    {\r\n      \"name\": \"index.html\",\r\n      \"data\": \"<!DOCTYPE html>\\n<hmtl>\\n\\t<head>\\n    \\n\\t</head>\\n\\t<bod>\\n    <p> Welcome to my website! </p>\\n    \\n    <q> These are paragraph tags! </p>\\n    \\n\\t</body>\\n</html>\"\r\n    }\r\n  ]\r\n}",
@@ -16,16 +21,9 @@
     "display_name": "Debugging: Fix Typos",
     "bubble_choice_description": "Sometimes mistakes appear in our code because we mis-type or misspell something. Try to fix the errors in the code below by fixing the spelling mistakes",
     "thumbnail_url": "https://images.code.org/c7eb7c89b50c7eb062a5e962d38256a0-debug2.png",
-    "encrypted_examples": [
-
-    ]
+    "encrypted_examples": "yx/QakRzk4CAZdq8dFofm25Vq66/YEeT/f9ZKkwGYYDRkq94oFsHfm/kshId\nokKDJD+t2boRM7/VDI35mWc9Qg==\n"
   },
-  "game_id": 58,
-  "published": true,
-  "created_at": "2022-09-30T00:59:47.000Z",
-  "level_num": "custom",
-  "user_id": 324,
   "notes": "",
-  "audit_log": "[{\"changed_at\":\"2022-09-30T00:59:47.335+00:00\",\"changed\":[\"cloned from \\\"CSD U2 HTML Debug Paragraphs_2023\\\"\"],\"cloned_from\":\"CSD U2 HTML Debug Paragraphs_2023\"},{\"changed_at\":\"2022-09-30 01:01:00 +0000\",\"changed\":[\"long_instructions\",\"encrypted_examples\",\"display_name\",\"bubble_choice_description\",\"thumbnail_url\"],\"changed_by_id\":14639,\"changed_by_email\":\"dan+teacher@code.org\"},{\"changed_at\":\"2022-09-30 01:03:02 +0000\",\"changed\":[\"start_sources\",\"long_instructions\",\"encrypted_examples\"],\"changed_by_id\":14639,\"changed_by_email\":\"dan+teacher@code.org\"},{\"changed_at\":\"2023-02-17 23:31:32 +0000\",\"changed\":[\"long_instructions\"],\"changed_by_id\":18602,\"changed_by_email\":\"angelina+levelbuilder@code.org\"}]"
+  "audit_log": "[{\"changed_at\":\"2022-09-30T00:59:47.335+00:00\",\"changed\":[\"cloned from \\\"CSD U2 HTML Debug Paragraphs_2023\\\"\"],\"cloned_from\":\"CSD U2 HTML Debug Paragraphs_2023\"},{\"changed_at\":\"2022-09-30 01:01:00 +0000\",\"changed\":[\"long_instructions\",\"encrypted_examples\",\"display_name\",\"bubble_choice_description\",\"thumbnail_url\"],\"changed_by_id\":14639,\"changed_by_email\":\"dan+teacher@code.org\"},{\"changed_at\":\"2022-09-30 01:03:02 +0000\",\"changed\":[\"start_sources\",\"long_instructions\",\"encrypted_examples\"],\"changed_by_id\":14639,\"changed_by_email\":\"dan+teacher@code.org\"},{\"changed_at\":\"2023-02-17 23:31:32 +0000\",\"changed\":[\"long_instructions\"],\"changed_by_id\":18602,\"changed_by_email\":\"angelina+levelbuilder@code.org\"},{\"changed_at\":\"2023-07-06 18:54:58 +0000\",\"changed\":[],\"changed_by_id\":18602,\"changed_by_email\":\"angelina+levelbuilder@code.org\"}]"
 }]]></config>
 </Weblab>

@@ -118,7 +118,7 @@ class SchoolInfoConfirmationDialog extends Component {
           __useDeprecatedTag
           style={isRTL ? styles.buttonRTL : styles.button}
           text={i18n.yes()}
-          color={Button.ButtonColor.orange}
+          color={Button.ButtonColor.brandSecondaryDefault}
           onClick={this.handleClickYes}
           id="yes-button"
         />

@@ -2,27 +2,16 @@ require 'test_helper'
 
 class Policies::GenderTest < ActiveSupport::TestCase
   test 'normalize' do
-    assert_equal 'f', Policies::Gender.normalize('f')
-    assert_equal 'm', Policies::Gender.normalize('m')
-    assert_equal 'n', Policies::Gender.normalize('n')
-    assert_equal 'o', Policies::Gender.normalize('o')
+    f_values = %w(f F female Female girl gal woman feminine she her mujer femail fem)
+    m_values = %w(m M male Male boy guy man masculine him he hombre dude mail)
+    n_values = ['n', 'they', 'them', 'nonbinary', 'NonBinary', 'non-binary', 'non binary', 'intersex', 'inter sex', 'genderfluid', 'gender fluid', 'intergender', 'inter gender', 'agender', 'boyflux', 'trans', 'transgender']
+    o_values = ['o', 'O', 'notlisted', 'some nonsense']
 
-    assert_equal 'f', Policies::Gender.normalize('F')
-    assert_equal 'm', Policies::Gender.normalize('M')
-    assert_equal 'n', Policies::Gender.normalize('N')
-    assert_equal 'o', Policies::Gender.normalize('O')
+    f_values.each {|s| assert_equal 'f', Policies::Gender.normalize(s)}
+    m_values.each {|s| assert_equal 'm', Policies::Gender.normalize(s)}
+    n_values.each {|s| assert_equal 'n', Policies::Gender.normalize(s)}
+    o_values.each {|s| assert_equal 'o', Policies::Gender.normalize(s)}
 
-    assert_equal 'f', Policies::Gender.normalize('Female')
-    assert_equal 'm', Policies::Gender.normalize('Male')
-    assert_equal 'n', Policies::Gender.normalize('NonBinary')
-    assert_equal 'o', Policies::Gender.normalize('NotListed')
-
-    assert_equal 'f', Policies::Gender.normalize('female')
-    assert_equal 'm', Policies::Gender.normalize('male')
-    assert_equal 'n', Policies::Gender.normalize('non-binary')
-    assert_equal 'o', Policies::Gender.normalize('notlisted')
-
-    assert_nil Policies::Gender.normalize('some nonsense')
     assert_nil Policies::Gender.normalize('')
     assert_nil Policies::Gender.normalize(nil)
   end

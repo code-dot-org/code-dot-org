@@ -68,6 +68,20 @@ export const LegacyTooFewDialog = () => (
   </ProtectedStatefulDiv>
 );
 
+export const LegacyIncorrectDialog = () => (
+  <ProtectedStatefulDiv>
+    <div className="modal-content no-modal-icon scrollable-element">
+      <p className="dialog-title">{i18n.incorrectAnswer()}</p>
+      <p>{i18n.incorrectAnswerUnmutableBody()}</p>
+      <div className="farSide">
+        <button type="button" id="ok-button">
+          {i18n.review()}
+        </button>
+      </div>
+    </div>
+  </ProtectedStatefulDiv>
+);
+
 export const LegacyContractMatchErrorDialog = ({text}) => (
   <ProtectedStatefulDiv>
     <div className="modal-content no-modal-icon">

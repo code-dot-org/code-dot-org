@@ -7,9 +7,9 @@ class UserPermissionTest < ActiveSupport::TestCase
     ChatClient.
       expects(:message).
       with('infra-security',
-        "Updating UserPermission: environment: #{rack_env}, "\
-        "user ID: #{levelbuilder.id}, "\
-        "email: #{levelbuilder.email}, "\
+        "Updating UserPermission: environment: #{rack_env}, " \
+        "user ID: #{levelbuilder.id}, " \
+        "email: #{levelbuilder.email}, " \
         "permission: levelbuilder",
         color: 'yellow'
       ).

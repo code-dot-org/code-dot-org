@@ -1,5 +1,6 @@
 <Applab>
   <config><![CDATA[{
+  "published": true,
   "game_id": 41,
   "created_at": "2023-03-17T17:06:36.000Z",
   "level_num": "custom",
@@ -229,7 +230,7 @@
     "expand_debugger": "false",
     "fail_on_lint_errors": "false",
     "debugger_disabled": "false",
-    "makerlab_enabled": "true",
+    "makerlab_enabled": "circuitPlayground",
     "parent_level_id": 20571,
     "name_suffix": "_2023a",
     "encrypted": "false",
@@ -239,11 +240,16 @@
     "libraries_enabled": "false",
     "ai_enabled": "false",
     "teacher_markdown": "Students should notice that the left and right buttons are used, and that the function at the bottom is using the accelerometer to move something on the screen. Students may predict that the function changes depending on which button is pressed - the left button moves the purple bug, and the right button moves the orange bug. Students may also notice that the function has a variable, `bug`, that is included at the top of the function and used throughout. \r\n\r\nIn the next level, students will watch a video describing how these functions work and how `bug` is a **parameter** that can be used to change the behavior of a function when the function is called, like moving the orange bug or purple bug.",
-    "preload_asset_list": null
+    "preload_asset_list": null,
+    "encrypted_examples": [
+
+    ],
+    "reference_links": [
+      "/maker/setup"
+    ]
   },
-  "published": true,
   "notes": "",
-  "audit_log": "[{\"changed_at\":\"2023-03-17T17:06:36.417+00:00\",\"changed\":[\"cloned from \\\"CSD U6 - Functions - P2_2222\\\"\"],\"cloned_from\":\"CSD U6 - Functions - P2_2222\"}]"
+  "audit_log": "[{\"changed_at\":\"2023-03-17T17:06:36.417+00:00\",\"changed\":[\"cloned from \\\"CSD U6 - Functions - P2_2222\\\"\"],\"cloned_from\":\"CSD U6 - Functions - P2_2222\"},{\"changed_at\":\"2023-08-16 19:39:36 +0000\",\"changed\":[\"code_functions\",\"makerlab_enabled\",\"preload_asset_list\"],\"changed_by_id\":14639,\"changed_by_email\":\"dan+teacher@code.org\"}]"
 }]]></config>
   <blocks/>
 </Applab>

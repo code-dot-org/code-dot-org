@@ -1,5 +1,14 @@
 import {assert, expect} from '../../util/reconfiguredChai';
 import sinon from 'sinon';
+import pageConstantsReducer, {
+  setPageConstants,
+} from '@cdo/apps/redux/pageConstants';
+import {
+  getStore,
+  registerReducers,
+  stubRedux,
+  restoreRedux,
+} from '@cdo/apps/redux';
 
 var testUtils = require('../../util/testUtils');
 import * as assetPrefix from '@cdo/apps/assetManagement/assetPrefix';
@@ -44,9 +53,8 @@ a.third-rule {
 
 const STYLE_CSS_CONTENT = `@font-face {
   font-family: 'FontAwesome';
-  src: url("applab/fontawesome-webfont.woff2") format("woff2");
-  font-weight: normal;
-  font-style: normal;
+  font-display: block;
+  src: url("applab/fa-brands-400.woff2") format('woff2');
 }
 `;
 
@@ -92,7 +100,7 @@ describe('Applab Exporter,', function () {
     );
     server.respondWith(/\/webpack_output\/.*\.png/, PNG_ASSET_CONTENT);
     server.respondWith(
-      /\/fonts\/fontawesome-webfont\.woff2\?__cb__=\d+/,
+      /^https:\/\/dsco.code.org\/assets\/font-awesome-pro/,
       FONTAWESOME_CONTENT
     );
     server.respondWith(
@@ -240,6 +248,13 @@ describe('Applab Exporter,', function () {
 
     stashedCookieKey = window.userNameCookieKey;
     window.userNameCookieKey = 'CoolUser';
+    stubRedux();
+    registerReducers({pageConstants: pageConstantsReducer});
+    getStore().dispatch(
+      setPageConstants({
+        isCurriculumLevel: true,
+      })
+    );
   });
 
   afterEach(function () {
@@ -247,6 +262,7 @@ describe('Applab Exporter,', function () {
     window.fetch.restore();
     assetPrefix.init({});
     window.userNameCookieKey = stashedCookieKey;
+    restoreRedux();
   });
 
   describe("when assets can't be fetched,", function () {
@@ -337,7 +353,10 @@ describe('Applab Exporter,', function () {
           'my-app/applab/assets/blockly/media/bar.jpg',
           'my-app/applab/assets/blockly/media/foo.png',
           'my-app/applab/assets/blockly/media/third.jpg',
-          'my-app/applab/fontawesome-webfont.woff2',
+          'my-app/applab/fa-brands-400.woff2',
+          'my-app/applab/fa-regular-400.woff2',
+          'my-app/applab/fa-solid-900.woff2',
+          'my-app/applab/fa-v4compatibility.woff2',
           'my-app/assets/',
           'my-app/assets/bar.png',
           'my-app/assets/default.mp3',

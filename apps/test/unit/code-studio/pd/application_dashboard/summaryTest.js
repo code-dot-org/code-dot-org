@@ -1,6 +1,6 @@
 import React from 'react';
 import {shallow} from 'enzyme';
-import {Row} from 'react-bootstrap';
+import {Row} from 'react-bootstrap'; // eslint-disable-line no-restricted-imports
 import {
   Summary,
   removeIncompleteApplications,
@@ -58,16 +58,17 @@ describe('Summary', () => {
   it('Generates 3 tables in 1 rows after hearing from server', () => {
     let server = sinon.fakeServer.create();
 
-    server.respondWith('GET', '/api/v1/pd/applications', [
-      200,
-      {'Content-Type': 'application/json'},
-      JSON.stringify(data),
-    ]);
+    server.respondWith(
+      'GET',
+      '/api/v1/pd/applications?regional_partner_value=1',
+      [200, {'Content-Type': 'application/json'}, JSON.stringify(data)]
+    );
 
     let summary = createSummary();
 
     server.respond();
     summary.update();
+
     const rows = summary.find(Row);
     expect(rows).to.have.length(1);
     expect(rows.at(0).children()).to.have.length(3);

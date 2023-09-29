@@ -1509,6 +1509,7 @@
   header_stats: "Statistici"
   header_help_us: "Ajutați-ne"
   header_about: "Despre"
+  header_incubator: "Incubator"
   header_teacher_community: "Comunitate profesori"
   header_help_support: 'Ajutor și asistență '
   header_report_bug: "Raportare problemă"
@@ -1697,14 +1698,14 @@
   hoc2018_mc_with_microsoft: "În parteneriat cu â"
   hoc2018_mc_thank_microsoft: "Mulțumim Microsoft pentru că ne susține viziunea și misiunea de a ne asigura că fiecare copil are oportunitatea să învețe informatică și aptitudinile să reușească în secolul 21."
   hoc2021_mc_mee_title: "TimeCraft în Minecraft"
-  hoc2021_mc_mee_description: 'Călătoriți înapoi în timp și învățați să programați! Noul tutorial Hour of Code - Minecraft este acum disponibil în Minecraft: Education Edition pentru Windows, Mac, Chromebook și iPad. Începeți cu resursele gratuite pentru instructori, cursurile de formare și videoclipuri.'
+  hoc2021_mc_mee_description: "Călătoriți înapoi în timp și învățați să programați! Noul tutorial Hour of Code - Minecraft este acum disponibil în Minecraft: Education Edition pentru Windows, Mac, Chromebook și iPad. Începeți cu resursele gratuite pentru instructori, cursurile de formare și videoclipuri."
   hoc2021_mc_mee_villages_title: "Povestea celor două sate"
-  hoc2021_mc_mee_villages_description: 'Învățați elementele de bază ale programării și explorați conceptele de diversitate și incluziune cu elevii în Minecraft: Education Edition.'
+  hoc2021_mc_mee_villages_description: "Învățați elementele de bază ale programării și explorați conceptele de diversitate și incluziune cu elevii în Minecraft: Education Edition."
   hoc2021_mc_mee_ai_title: "Inteligența Artificială pentru a face bine"
-  hoc2021_mc_mee_ai_description: 'Explorați inteligența artificială împreună cu elevii și învățați să programați în Minecraft: Education Edition.'
+  hoc2021_mc_mee_ai_description: "Explorați inteligența artificială împreună cu elevii și învățați să programați în Minecraft: Education Edition."
   hoc2022_mc_mee_title: "Minecraft Escape Estate"
   hoc2022_mc_mee_description: 'Evadează din palatul misterios până în zori și câștigă un milion de smaralde! Noul tutorial Minecraft de la Hour of Code este disponibil acum în Minecraft: Ediția Educație pentru Windows, Mac, Chromebook, Ipad și telefoane mobile. Începe cu resurse, cursuri de formare și videoclipuri gratuite pentru educatori.'
-  hoc2022_mc_mee_timecraft_description: 'Călătorește înapoi în timp ca să salvezi viitorul în această lecție gratuită de codare în Minecraft: Ediția Educație.'
+  hoc2022_mc_mee_timecraft_description: "Călătorește înapoi în timp ca să salvezi viitorul în această lecție gratuită de codare în Minecraft: Ediția Educație."
   footer_powered_by_aws: "Susținut de Amazon Web Services"
   codebytes_skinny_banner_english_only: "Doar în engleză"
   footer_privacy_policy: "Politică de confidențialitate"
@@ -1713,6 +1714,7 @@
   footer_donate: "Donează"
   footer_support: "Ajutor şi comunitate"
   footer_terms: "Termeni"
+  ai_for_oceans: "IA pentru Oceane"
   ai_for_oceans_lesson_plan: "plan de lecție"
   ai_in_partnership_with: "În parteneriat cu â"
   ai_microsoft_thanks: "Mulțumim Microsoft pentru că ne susține viziunea și misiunea de a ne asigura că fiecare copil are oportunitatea să învețe informatică și aptitudinile să reușească în secolul 21."

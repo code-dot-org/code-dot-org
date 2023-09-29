@@ -40,13 +40,13 @@ class DataDoc < ApplicationRecord
   def write_serialization
     return unless Rails.application.config.levelbuilder_mode
     directory_name = File.dirname(file_path)
-    Dir.mkdir(directory_name) unless File.exist?(directory_name)
+    FileUtils.mkdir_p(directory_name)
     File.write(file_path, JSON.pretty_generate(serialize))
   end
 
   def remove_serialization
     return unless Rails.application.config.levelbuilder_mode
-    File.delete(file_path) if File.exist?(file_path)
+    FileUtils.rm_f(file_path)
   end
 
   # creates and deletes records to match all the seed files

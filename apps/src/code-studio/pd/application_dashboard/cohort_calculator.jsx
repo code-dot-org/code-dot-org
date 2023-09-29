@@ -1,6 +1,6 @@
 import PropTypes from 'prop-types';
 import React from 'react';
-import {Table} from 'react-bootstrap';
+import {Table} from 'react-bootstrap'; // eslint-disable-line no-restricted-imports
 import {RegionalPartnerValuePropType} from '../components/regional_partner_dropdown';
 import {CohortCalculatorStatuses} from '@cdo/apps/generated/pd/sharedApplicationConstants';
 import $ from 'jquery';

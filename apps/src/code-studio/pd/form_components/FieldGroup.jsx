@@ -1,5 +1,6 @@
 import PropTypes from 'prop-types';
 import React from 'react';
+/* eslint-disable no-restricted-imports */
 import {
   ControlLabel,
   FormControl,
@@ -8,6 +9,7 @@ import {
   Row,
   Col,
 } from 'react-bootstrap';
+/* eslint-enable no-restricted-imports */
 
 const REQUIRED = <span style={{color: 'red'}}>&nbsp;*</span>;
 

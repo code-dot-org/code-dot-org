@@ -1,0 +1,29 @@
+name 'SP-VPL-21-mod2-feedback-c4u-CSP_2023'
+title 'Check for understanding'
+description 'Match the letter to the correct description.'
+
+question 'A'
+answer 'Provide a student with text feedback'
+
+question 'B'
+answer 'Toggle between teacher and student views'
+
+question 'C'
+answer 'Move to view the work of the next student on the class list'
+
+question 'D'
+answer 'View a worked example'
+
+question 'E'
+answer 'Move to a new class section'
+
+question 'F'
+answer 'Click to move to view the work of a specific student'
+
+markdown <<MARKDOWN
+##### Click on the image to zoom in and see a larger version.
+
+<a href="https://images.code.org/2e35c7924cfe248341f7505671aa5e8b-image-1638407851213.16.56 PM.png" target="_blank"><img src="https://images.code.org/2e35c7924cfe248341f7505671aa5e8b-image-1638407851213.16.56 PM.png" alt="Screenshot showing AppLab's interface with several features labeled A-F" width="100%" style=" margin: 2px;"></a>
+MARKDOWN
+
+allow_multiple_attempts true

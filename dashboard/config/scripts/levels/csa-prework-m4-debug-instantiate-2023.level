@@ -1,5 +1,9 @@
 <Javalab>
   <config><![CDATA[{
+  "game_id": 68,
+  "created_at": "2023-02-01T15:16:44.000Z",
+  "level_num": "custom",
+  "user_id": 16889,
   "properties": {
     "encrypted": "false",
     "mini_rubric": "false",
@@ -353,11 +357,7 @@
       ]
     ]
   },
-  "game_id": 68,
-  "created_at": "2023-02-01T15:16:44.000Z",
-  "level_num": "custom",
-  "user_id": 16889,
   "published": true,
-  "audit_log": "[{\"changed_at\":\"2023-02-01T15:16:44.948+00:00\",\"changed\":[\"cloned from \\\"CSA U1L3-L0_2022\\\"\"],\"cloned_from\":\"CSA U1L3-L0_2022\"},{\"changed_at\":\"2023-02-01 15:19:52 +0000\",\"changed\":[\"long_instructions\",\"serialized_maze\"],\"changed_by_id\":977,\"changed_by_email\":\"kaitie+teacher@code.org\"},{\"changed_at\":\"2023-02-01 15:21:10 +0000\",\"changed\":[\"long_instructions\",\"serialized_maze\",\"teacher_markdown\",\"encrypted_examples\"],\"changed_by_id\":977,\"changed_by_email\":\"kaitie+teacher@code.org\"},{\"changed_at\":\"2023-02-01 15:23:42 +0000\",\"changed\":[\"start_sources\"],\"changed_by_id\":977,\"changed_by_email\":\"kaitie+teacher@code.org\"},{\"changed_at\":\"2023-02-01 15:23:51 +0000\",\"changed\":[],\"changed_by_id\":977,\"changed_by_email\":\"kaitie+teacher@code.org\"}]"
+  "audit_log": "[{\"changed_at\":\"2023-02-01T15:16:44.948+00:00\",\"changed\":[\"cloned from \\\"CSA U1L3-L0_2022\\\"\"],\"cloned_from\":\"CSA U1L3-L0_2022\"},{\"changed_at\":\"2023-02-01 15:19:52 +0000\",\"changed\":[\"long_instructions\",\"serialized_maze\"],\"changed_by_id\":977,\"changed_by_email\":\"kaitie+teacher@code.org\"},{\"changed_at\":\"2023-02-01 15:21:10 +0000\",\"changed\":[\"long_instructions\",\"serialized_maze\",\"teacher_markdown\",\"encrypted_examples\"],\"changed_by_id\":977,\"changed_by_email\":\"kaitie+teacher@code.org\"},{\"changed_at\":\"2023-02-01 15:23:42 +0000\",\"changed\":[\"start_sources\"],\"changed_by_id\":977,\"changed_by_email\":\"kaitie+teacher@code.org\"},{\"changed_at\":\"2023-02-01 15:23:51 +0000\",\"changed\":[],\"changed_by_id\":977,\"changed_by_email\":\"kaitie+teacher@code.org\"},{\"changed_at\":\"2023-08-09 19:00:58 +0000\",\"changed\":[],\"changed_by_id\":977,\"changed_by_email\":\"kaitie+teacher@code.org\"}]"
 }]]></config>
 </Javalab>

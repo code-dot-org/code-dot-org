@@ -48,7 +48,8 @@ const fetchRegionalPartner = ({
 };
 
 // takes {program, school, schoolZipCode, schoolState}
-// returns undefined if loading or null if error, otherwise: {id, name, group, workshops, has_csf, pl_programs_offered}
+// returns undefined if loading or null if error,
+// otherwise, returns the partner with attributes defined in RegionalPartnerWorkshopsSerializer
 // if the request succeeds but regional partner is not found, the returned rp will have nil for all values
 // if the request succeeds but regional partner not offering program, the returned rp will have nil for all values
 // see regional_partner_workshops_serializer.rb

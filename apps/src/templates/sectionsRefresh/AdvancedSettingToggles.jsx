@@ -8,11 +8,8 @@ import style from './sections-refresh.module.scss';
 export default function AdvancedSettingToggles({
   updateSection,
   section,
-
-  // these are currently hard coded into the parent component
-  // TO DO: In the future we will want to make these dynamic based on the course
-  assignedUnitTextToSpeechEnabled,
-  assignedUnitLessonExtrasAvailable,
+  hasLessonExtras,
+  hasTextToSpeech,
 }) {
   const handlePairProgrammingToggle = e => {
     const updatedValue = !section.pairingAllowed;
@@ -62,7 +59,7 @@ export default function AdvancedSettingToggles({
           content={i18n.explainRestrictedSectionEmailToolTip()}
         />
       </div>
-      {assignedUnitTextToSpeechEnabled && (
+      {hasTextToSpeech && (
         <div className={style.toolTipContainer}>
           <ToggleSwitch
             id={'uitest-tts-toggle'}
@@ -76,7 +73,7 @@ export default function AdvancedSettingToggles({
           />
         </div>
       )}
-      {assignedUnitLessonExtrasAvailable && (
+      {hasLessonExtras && (
         <div className={style.toolTipContainer}>
           <ToggleSwitch
             id={'uitest-lesson-extras-toggle'}
@@ -97,6 +94,6 @@ export default function AdvancedSettingToggles({
 AdvancedSettingToggles.propTypes = {
   section: PropTypes.object.isRequired,
   updateSection: PropTypes.func.isRequired,
-  assignedUnitLessonExtrasAvailable: PropTypes.bool,
-  assignedUnitTextToSpeechEnabled: PropTypes.bool,
+  hasLessonExtras: PropTypes.bool,
+  hasTextToSpeech: PropTypes.bool,
 };

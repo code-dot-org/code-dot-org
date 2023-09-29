@@ -74,7 +74,7 @@ export default class AddLevelDialog extends Component {
           <Button
             text={i18n.closeAndSave()}
             onClick={this.props.handleConfirm}
-            color={Button.ButtonColor.orange}
+            color={Button.ButtonColor.brandSecondaryDefault}
             className="save-add-levels-button"
           />
         </DialogFooter>

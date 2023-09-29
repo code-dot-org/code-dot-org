@@ -25,7 +25,7 @@
     },
     "new_name": null,
     "family_name": "coursea",
-    "serialized_at": "2023-04-10 21:46:39 UTC",
+    "serialized_at": "2023-08-16 14:56:12 UTC",
     "published_state": "stable",
     "instruction_type": "teacher_led",
     "instructor_audience": "teacher",
@@ -6766,6 +6766,175 @@
       }
     },
     {
+      "name": "CSF Course A Lesson Slides ",
+      "url": "https://docs.google.com/presentation/d/1HeArt7QO9Q7XJuTN_2oDfqBxbo1qKvhWyOCInDB2Emg/template/preview",
+      "key": "csf_course_a_lesson_slides",
+      "properties": {
+        "audience": "Teacher",
+        "download_url": "https://docs.google.com/presentation/d/1HeArt7QO9Q7XJuTN_2oDfqBxbo1qKvhWyOCInDB2Emg/export/pdf",
+        "type": "Slides"
+      },
+      "seeding_key": {
+        "resource.key": "csf_course_a_lesson_slides"
+      }
+    },
+    {
+      "name": "CSF Course A Lesson Slides",
+      "url": "https://docs.google.com/presentation/d/1HeArt7QO9Q7XJuTN_2oDfqBxbo1qKvhWyOCInDB2Emg/template/preview",
+      "key": "csf_course_a_lesson_slides_1",
+      "properties": {
+        "audience": "Teacher",
+        "download_url": "https://docs.google.com/presentation/d/1HeArt7QO9Q7XJuTN_2oDfqBxbo1qKvhWyOCInDB2Emg/export/pdf",
+        "type": "Slides"
+      },
+      "seeding_key": {
+        "resource.key": "csf_course_a_lesson_slides_1"
+      }
+    },
+    {
+      "name": "CSF Course A Lesson Slides",
+      "url": "https://docs.google.com/presentation/d/1HeArt7QO9Q7XJuTN_2oDfqBxbo1qKvhWyOCInDB2Emg/template/preview",
+      "key": "csf_course_a_lesson_slides_10",
+      "properties": {
+        "audience": "Teacher",
+        "download_url": "https://docs.google.com/presentation/d/1HeArt7QO9Q7XJuTN_2oDfqBxbo1qKvhWyOCInDB2Emg/export/pdf",
+        "type": "Slides"
+      },
+      "seeding_key": {
+        "resource.key": "csf_course_a_lesson_slides_10"
+      }
+    },
+    {
+      "name": "CSF Course A Lesson Slides",
+      "url": "https://docs.google.com/presentation/d/1HeArt7QO9Q7XJuTN_2oDfqBxbo1qKvhWyOCInDB2Emg/template/preview",
+      "key": "csf_course_a_lesson_slides_11",
+      "properties": {
+        "audience": "Teacher",
+        "download_url": "https://docs.google.com/presentation/d/1HeArt7QO9Q7XJuTN_2oDfqBxbo1qKvhWyOCInDB2Emg/export/pdf",
+        "type": "Slides"
+      },
+      "seeding_key": {
+        "resource.key": "csf_course_a_lesson_slides_11"
+      }
+    },
+    {
+      "name": "CSF Course A Lesson Slides",
+      "url": "https://docs.google.com/presentation/d/1HeArt7QO9Q7XJuTN_2oDfqBxbo1qKvhWyOCInDB2Emg/template/preview",
+      "key": "csf_course_a_lesson_slides_12",
+      "properties": {
+        "audience": "Teacher",
+        "download_url": "https://docs.google.com/presentation/d/1HeArt7QO9Q7XJuTN_2oDfqBxbo1qKvhWyOCInDB2Emg/export/pdf",
+        "type": "Slides"
+      },
+      "seeding_key": {
+        "resource.key": "csf_course_a_lesson_slides_12"
+      }
+    },
+    {
+      "name": "CSF Course A Lesson Slides",
+      "url": "https://docs.google.com/presentation/d/1HeArt7QO9Q7XJuTN_2oDfqBxbo1qKvhWyOCInDB2Emg/template/preview",
+      "key": "csf_course_a_lesson_slides_2",
+      "properties": {
+        "audience": "Teacher",
+        "download_url": "https://docs.google.com/presentation/d/1HeArt7QO9Q7XJuTN_2oDfqBxbo1qKvhWyOCInDB2Emg/export/pdf",
+        "type": "Slides"
+      },
+      "seeding_key": {
+        "resource.key": "csf_course_a_lesson_slides_2"
+      }
+    },
+    {
+      "name": "CSF Course A Lesson Slides",
+      "url": "https://docs.google.com/presentation/d/1HeArt7QO9Q7XJuTN_2oDfqBxbo1qKvhWyOCInDB2Emg/template/preview",
+      "key": "csf_course_a_lesson_slides_3",
+      "properties": {
+        "audience": "Teacher",
+        "download_url": "https://docs.google.com/presentation/d/1HeArt7QO9Q7XJuTN_2oDfqBxbo1qKvhWyOCInDB2Emg/export/pdf",
+        "type": "Slides"
+      },
+      "seeding_key": {
+        "resource.key": "csf_course_a_lesson_slides_3"
+      }
+    },
+    {
+      "name": "CSF Course A Lesson Slides",
+      "url": "https://docs.google.com/presentation/d/1HeArt7QO9Q7XJuTN_2oDfqBxbo1qKvhWyOCInDB2Emg/template/preview",
+      "key": "csf_course_a_lesson_slides_4",
+      "properties": {
+        "audience": "Teacher",
+        "download_url": "https://docs.google.com/presentation/d/1HeArt7QO9Q7XJuTN_2oDfqBxbo1qKvhWyOCInDB2Emg/export/pdf",
+        "type": "Slides"
+      },
+      "seeding_key": {
+        "resource.key": "csf_course_a_lesson_slides_4"
+      }
+    },
+    {
+      "name": "CSF Course A Lesson Slides",
+      "url": "https://docs.google.com/presentation/d/1HeArt7QO9Q7XJuTN_2oDfqBxbo1qKvhWyOCInDB2Emg/template/preview",
+      "key": "csf_course_a_lesson_slides_5",
+      "properties": {
+        "audience": "Teacher",
+        "download_url": "https://docs.google.com/presentation/d/1HeArt7QO9Q7XJuTN_2oDfqBxbo1qKvhWyOCInDB2Emg/export/pdf",
+        "type": "Slides"
+      },
+      "seeding_key": {
+        "resource.key": "csf_course_a_lesson_slides_5"
+      }
+    },
+    {
+      "name": "CSF Course A Lesson Slides",
+      "url": "https://docs.google.com/presentation/d/1HeArt7QO9Q7XJuTN_2oDfqBxbo1qKvhWyOCInDB2Emg/template/preview",
+      "key": "csf_course_a_lesson_slides_6",
+      "properties": {
+        "audience": "Teacher",
+        "download_url": "https://docs.google.com/presentation/d/1HeArt7QO9Q7XJuTN_2oDfqBxbo1qKvhWyOCInDB2Emg/export/pdf",
+        "type": "Slides"
+      },
+      "seeding_key": {
+        "resource.key": "csf_course_a_lesson_slides_6"
+      }
+    },
+    {
+      "name": "CSF Course A Lesson Slides",
+      "url": "https://docs.google.com/presentation/d/1HeArt7QO9Q7XJuTN_2oDfqBxbo1qKvhWyOCInDB2Emg/template/preview",
+      "key": "csf_course_a_lesson_slides_7",
+      "properties": {
+        "audience": "Teacher",
+        "download_url": "https://docs.google.com/presentation/d/1HeArt7QO9Q7XJuTN_2oDfqBxbo1qKvhWyOCInDB2Emg/export/pdf",
+        "type": "Slides"
+      },
+      "seeding_key": {
+        "resource.key": "csf_course_a_lesson_slides_7"
+      }
+    },
+    {
+      "name": "CSF Course A Lesson Slides",
+      "url": "https://docs.google.com/presentation/d/1HeArt7QO9Q7XJuTN_2oDfqBxbo1qKvhWyOCInDB2Emg/template/preview",
+      "key": "csf_course_a_lesson_slides_8",
+      "properties": {
+        "audience": "Teacher",
+        "download_url": "https://docs.google.com/presentation/d/1HeArt7QO9Q7XJuTN_2oDfqBxbo1qKvhWyOCInDB2Emg/export/pdf",
+        "type": "Slides"
+      },
+      "seeding_key": {
+        "resource.key": "csf_course_a_lesson_slides_8"
+      }
+    },
+    {
+      "name": "CSF Course A Lesson Slides",
+      "url": "https://docs.google.com/presentation/d/1HeArt7QO9Q7XJuTN_2oDfqBxbo1qKvhWyOCInDB2Emg/template/preview",
+      "key": "csf_course_a_lesson_slides_9",
+      "properties": {
+        "audience": "Teacher",
+        "download_url": "https://docs.google.com/presentation/d/1HeArt7QO9Q7XJuTN_2oDfqBxbo1qKvhWyOCInDB2Emg/export/pdf",
+        "type": "Slides"
+      },
+      "seeding_key": {
+        "resource.key": "csf_course_a_lesson_slides_9"
+      }
+    },
+    {
       "name": "CSF Lesson Recommendations",
       "url": "https://docs.google.com/document/d/1N3aiitOxz_cut1AQn90g1nYJouKT5dC_4m1M0KFNzP8/edit?usp=sharing",
       "key": "csf_lesson_recommendations",
@@ -7189,6 +7358,18 @@
     },
     {
       "seeding_key": {
+        "lesson.key": "End of Course Project",
+        "resource.key": "csf_course_a_lesson_slides_12"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Happy Loops",
+        "resource.key": "csf_course_a_lesson_slides_6"
+      }
+    },
+    {
+      "seeding_key": {
         "lesson.key": "Happy Loops",
         "resource.key": "feeling_faces_emotion_image"
       }
@@ -7215,6 +7396,12 @@
       "seeding_key": {
         "lesson.key": "Happy Loops",
         "resource.key": "happy_map_game_pieces_bonus_pack"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Happy Maps",
+        "resource.key": "csf_course_a_lesson_slides_2"
       }
     },
     {
@@ -7256,6 +7443,12 @@
     {
       "seeding_key": {
         "lesson.key": "Learn to Drag and Drop",
+        "resource.key": "csf_course_a_lesson_slides_1"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Learn to Drag and Drop",
         "resource.key": "getting_started_-_creating_a_class_section"
       }
     },
@@ -7274,6 +7467,12 @@
     {
       "seeding_key": {
         "lesson.key": "Loops with Laurel",
+        "resource.key": "csf_course_a_lesson_slides_8"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Loops with Laurel",
         "resource.key": "csf_lesson_recommendations"
       }
     },
@@ -7287,6 +7486,12 @@
       "seeding_key": {
         "lesson.key": "Loops with Laurel",
         "resource.key": "unplugged_blockly_blocks_grades_k-1_"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Loops with Scrat",
+        "resource.key": "csf_course_a_lesson_slides_7"
       }
     },
     {
@@ -7334,6 +7539,12 @@
     {
       "seeding_key": {
         "lesson.key": "Mini-Project: On the Move with Play Lab",
+        "resource.key": "csf_course_a_lesson_slides_11"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Mini-Project: On the Move with Play Lab",
         "resource.key": "csf_lesson_recommendations"
       }
     },
@@ -7364,6 +7575,12 @@
     {
       "seeding_key": {
         "lesson.key": "Ocean Scene with Loops",
+        "resource.key": "csf_course_a_lesson_slides_9"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Ocean Scene with Loops",
         "resource.key": "csf_lesson_recommendations"
       }
     },
@@ -7382,6 +7599,12 @@
     {
       "seeding_key": {
         "lesson.key": "Programming with Rey and BB-8",
+        "resource.key": "csf_course_a_lesson_slides_5"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Programming with Rey and BB-8",
         "resource.key": "feeling_faces_-_emotion_image_1"
       }
     },
@@ -7389,6 +7612,12 @@
       "seeding_key": {
         "lesson.key": "Programming with Rey and BB-8",
         "resource.key": "pair_programming"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Programming with Scrat",
+        "resource.key": "csf_course_a_lesson_slides_4"
       }
     },
     {
@@ -7407,6 +7636,12 @@
       "seeding_key": {
         "lesson.key": "Programming with Scrat",
         "resource.key": "pair_programming"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Safety in My Online Neighborhood",
+        "resource.key": "csf_course_a_lesson_slides"
       }
     },
     {
@@ -7442,6 +7677,12 @@
     {
       "seeding_key": {
         "lesson.key": "Sequencing with Scrat",
+        "resource.key": "csf_course_a_lesson_slides_3"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Sequencing with Scrat",
         "resource.key": "pair_programming"
       }
     },
@@ -7455,6 +7696,12 @@
       "seeding_key": {
         "lesson.key": "Sequencing with Scrat",
         "resource.key": "wiggles_-_gonoodle"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "The Big Event Jr",
+        "resource.key": "csf_course_a_lesson_slides_10"
       }
     },
     {
@@ -8430,6 +8677,15 @@
     }
   ],
   "lessons_opportunity_standards": [
+
+  ],
+  "rubrics": [
+
+  ],
+  "learning_goals": [
+
+  ],
+  "learning_goal_evidence_levels": [
 
   ]
 }

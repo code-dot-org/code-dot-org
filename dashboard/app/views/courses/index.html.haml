@@ -5,18 +5,13 @@
 
   courses_data = {}
   courses_data[:english] = @is_english
-  courses_data[:teacher] = @is_teacher
   courses_data[:studentscount] = students_count
   courses_data[:codeorgurlprefix] = CDO.code_org_url
   courses_data[:signedout] = @is_signed_out
   courses_data[:modernelementarycoursesavailable] = @modern_elementary_courses_available
   courses_data[:showAiCard] = DCDO.get('courses_show_ai', CDO.default_courses_show_ai)
 
-  @page_title = @is_teacher ? I18n.t('courses_page.title_teacher') : I18n.t('courses_page.title_student')
-
-  if @is_teacher
-    courses_data[:specialAnnouncement] = Announcements.get_announcement_for_page("/courses")
-  end
+  @page_title = I18n.t('courses_page.title_student')
 
 %link{:href=>'/shared/css/course-explorer.css', :rel=>'stylesheet'}
 

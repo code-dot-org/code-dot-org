@@ -5,11 +5,11 @@
         "CT": {
           "description": "Računalniško razmišljanje"
         },
-        "L": {
-          "description": "Jezik"
-        },
         "F": {
           "description": "Funkcije"
+        },
+        "L": {
+          "description": "Jezik"
         }
       }
     }

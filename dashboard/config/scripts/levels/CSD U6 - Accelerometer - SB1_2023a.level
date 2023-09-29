@@ -1,5 +1,6 @@
 <Applab>
   <config><![CDATA[{
+  "published": true,
   "game_id": 41,
   "created_at": "2023-03-17T17:05:37.000Z",
   "level_num": "custom",
@@ -224,7 +225,7 @@
     "expand_debugger": "false",
     "fail_on_lint_errors": "false",
     "debugger_disabled": "false",
-    "makerlab_enabled": "true",
+    "makerlab_enabled": "circuitPlayground",
     "start_html": "<div id=\"designModeViz\" class=\"appModern withCrosshair clip-content\" tabindex=\"1\" data-radium=\"true\" style=\"width: 320px; height: 450px; display: none;\"><div class=\"screen\" tabindex=\"1\" id=\"screen\" style=\"display: block; height: 450px; width: 320px; left: 0px; top: 0px; position: absolute; z-index: 0;\"><label style=\"margin: 0px; padding: 2px; line-height: 1; font-size: 34px; overflow: hidden; word-wrap: break-word; color: rgb(51, 51, 51); max-width: 320px; width: 99px; height: 40px; position: absolute; left: 35px; top: 100px;\" id=\"label1\">pitch:</label><label style=\"margin: 0px; padding: 2px; line-height: 1; font-size: 34px; overflow: hidden; word-wrap: break-word; color: rgb(51, 51, 51); max-width: 320px; height: 40px; position: absolute; left: 140px; top: 175px; width: 150px;\" id=\"roll\"></label><label style=\"margin: 0px; padding: 2px; line-height: 1; font-size: 34px; overflow: hidden; word-wrap: break-word; color: rgb(51, 51, 51); max-width: 320px; width: 150px; height: 40px; position: absolute; left: 145px; top: 100px;\" id=\"pitch\"></label><label style=\"margin: 0px; padding: 2px; line-height: 1; font-size: 34px; overflow: hidden; word-wrap: break-word; color: rgb(51, 51, 51); max-width: 320px; width: 67px; height: 40px; position: absolute; left: 60px; top: 175px;\" id=\"label5\">roll:</label></div></div>",
     "start_blocks": "var pitch;\r\nvar roll;\r\nonBoardEvent(accelerometer, \"data\", function() {\r\n  pitch = accelerometer.getOrientation(\"pitch\");\r\n  roll = accelerometer.getOrientation(\"roll\");\r\n  setText(\"pitch\", pitch);\r\n  setText(\"roll\", roll);\r\n  if (check(0, -20)) {\r\n    setProperty(\"screen\", \"background-color\", \"skyblue\");\r\n  } else if (check(30, 0)) {\r\n    setProperty(\"screen\", \"background-color\", \"burlywood\");\r\n  } else if (check(-15, 10)) {\r\n    setProperty(\"screen\", \"background-color\", \"mistyrose\");\r\n  } else if (check(5, -25)) {\r\n    setProperty(\"screen\", \"background-color\", \"yellowgreen\");\r\n  } else if (check(10, 30)) {\r\n    setProperty(\"screen\", \"background-color\", \"thistle\");\r\n  } else {\r\n    setProperty(\"screen\", \"background-color\", \"white\");\r\n  }\r\n});\r\n\r\n\r\nfunction check(targetPitch, targetRoll) {\r\n  return ((Math.abs(targetPitch - pitch) < 4) && (Math.abs(targetRoll - roll) < 4));\r\n}\r\n",
     "parent_level_id": 20557,
@@ -239,11 +240,16 @@
     "validation_enabled": "false",
     "ai_enabled": "false",
     "teacher_markdown": "The last two questions depend on how students are holding their circuit playgrounds. Encourage students to all hold their devices the same way:\r\n\r\n- The board starts flat and level to the ground\r\n- The USB cable is pointed away from students so if you looked down on the device, all of the letters and numbers would appear rightside-up",
-    "preload_asset_list": null
+    "preload_asset_list": null,
+    "encrypted_examples": [
+
+    ],
+    "reference_links": [
+      "/maker/setup"
+    ]
   },
-  "published": true,
   "notes": "",
-  "audit_log": "[{\"changed_at\":\"2023-03-17T17:05:37.981+00:00\",\"changed\":[\"cloned from \\\"CSD U6 - Accelerometer - SB1_2222\\\"\"],\"cloned_from\":\"CSD U6 - Accelerometer - SB1_2222\"}]"
+  "audit_log": "[{\"changed_at\":\"2023-03-17T17:05:37.981+00:00\",\"changed\":[\"cloned from \\\"CSD U6 - Accelerometer - SB1_2222\\\"\"],\"cloned_from\":\"CSD U6 - Accelerometer - SB1_2222\"},{\"changed_at\":\"2023-08-16 19:26:40 +0000\",\"changed\":[\"code_functions\",\"makerlab_enabled\",\"preload_asset_list\",\"contained_level_names\"],\"changed_by_id\":14639,\"changed_by_email\":\"dan+teacher@code.org\"}]"
 }]]></config>
   <blocks/>
 </Applab>

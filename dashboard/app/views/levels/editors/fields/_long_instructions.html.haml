@@ -19,7 +19,9 @@
 :javascript
   var mdEditor = levelbuilder.initializeCodeMirror('level_long_instructions', 'markdown', {
     callback: function (editor, change) {
-      convertXmlToBlockly(document.getElementById('level_long_instructions_preview'));
+      const xmlContainer = document.getElementById('level_long_instructions_preview');
+
+      convertXmlToBlockly(xmlContainer);
 
       localStorage.setItem('markdown_' + '#{@level.id || html_escape(params[:type])}', editor.getValue());
     },

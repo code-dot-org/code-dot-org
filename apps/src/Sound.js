@@ -324,19 +324,19 @@ Sound.prototype.getPlayableFile = function () {
     var audioTest = new window.Audio();
 
     if (
-      this.config.hasOwnProperty('mp3') &&
+      Object.prototype.hasOwnProperty.call(this.config, 'mp3') &&
       audioTest.canPlayType('audio/mp3')
     ) {
       return this.config.mp3;
     }
     if (
-      this.config.hasOwnProperty('ogg') &&
+      Object.prototype.hasOwnProperty.call(this.config, 'ogg') &&
       audioTest.canPlayType('audio/ogg')
     ) {
       return this.config.ogg;
     }
     if (
-      this.config.hasOwnProperty('wav') &&
+      Object.prototype.hasOwnProperty.call(this.config, 'wav') &&
       audioTest.canPlayType('audio/wav')
     ) {
       return this.config.wav;
@@ -357,7 +357,7 @@ Sound.prototype.getPlayableBytes = function () {
 
     let audioTest = new window.Audio();
     if (
-      this.config.hasOwnProperty('bytes') &&
+      Object.prototype.hasOwnProperty.call(this.config, 'bytes') &&
       audioTest.canPlayType('audio/mp3')
     ) {
       return this.config.bytes;

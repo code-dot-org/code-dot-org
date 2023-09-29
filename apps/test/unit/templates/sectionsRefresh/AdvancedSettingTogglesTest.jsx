@@ -31,7 +31,7 @@ describe('AdvancedSettingToggles', () => {
           ttsAutoplayEnabled: false,
           lessonExtras: true,
         }}
-        assignedUnitLessonExtrasAvailable={true}
+        hasLessonExtras={true}
       />
     );
     expect(
@@ -49,7 +49,7 @@ describe('AdvancedSettingToggles', () => {
           ttsAutoplayEnabled: false,
           lessonExtras: true,
         }}
-        assignedUnitTextToSpeechEnabled={true}
+        hasTextToSpeech={true}
       />
     );
     expect(
@@ -67,7 +67,7 @@ describe('AdvancedSettingToggles', () => {
           ttsAutoplayEnabled: false,
           lessonExtras: true,
         }}
-        assignedUnitTextToSpeechEnabled={true}
+        hasTextToSpeech={true}
       />
     );
     expect(

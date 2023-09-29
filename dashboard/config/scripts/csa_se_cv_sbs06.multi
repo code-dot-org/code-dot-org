@@ -1,0 +1,11 @@
+name 'CSA-SE-CV-SBS06'
+
+question 'I often think about the real-world applications of what I am learning in AP CSA.'
+
+right 'Strongly Agree'
+right 'Agree'
+right 'Neutral'
+right 'Disagree'
+right 'Strongly Disagree'
+
+allow_multiple_attempts true

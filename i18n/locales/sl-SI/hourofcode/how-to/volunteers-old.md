@@ -1,5 +1,5 @@
 ---
-title: How-to guide for Hour of Code volunteers
+title: Navodila za uporabo za prostovoljce Hour of Code
 ---
 
 {{ signup_button }}

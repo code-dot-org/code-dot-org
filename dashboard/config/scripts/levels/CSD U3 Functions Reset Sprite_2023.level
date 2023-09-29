@@ -1,5 +1,10 @@
 <Gamelab>
   <config><![CDATA[{
+  "published": true,
+  "game_id": 50,
+  "created_at": "2022-09-19T23:03:09.000Z",
+  "level_num": "custom",
+  "user_id": 106,
   "properties": {
     "skin": "gamelab",
     "embed": "false",
@@ -33,7 +38,7 @@
     "project_template_level_name": "CSD U3 Functions Template Flyman_2023",
     "instructions_important": "false",
     "start_in_animation_tab": "false",
-    "all_animations_single_frame": "true",
+    "all_animations_single_frame": "false",
     "show_debug_watch": "true",
     "teacher_markdown": "**Why Use Functions** \r\n\r\nThis and the next two levels introduce three uses of functions, namely removing repetition in programs, allowing code to quickly be changed at multiple points, and providing organization in code. Students will need to write more of their own functions in these levels.",
     "encrypted_examples": "DusiBp6A3e3IIpE4eKzPI4kCNm5H86dUFIGqV9/A0LkRz9uyzUx9lCT4Kk6r\n4d4Ax1wK7IseDjZMHZCVXPhKFQ==\n",
@@ -54,16 +59,11 @@
       "/courses/csd-2022/guides/drawing-shapes",
       "/courses/csd-2022/guides/shapes-and-parameters"
     ],
-    "preload_asset_list": null,
-    "validation_enabled": "false"
+    "validation_enabled": "false",
+    "preload_asset_list": null
   },
-  "game_id": 50,
-  "published": true,
-  "created_at": "2022-09-19T23:03:09.000Z",
-  "level_num": "custom",
-  "user_id": 106,
   "notes": "",
-  "audit_log": "[{\"changed_at\":\"2022-09-19T23:03:09.256+00:00\",\"changed\":[\"cloned from \\\"CSD U3 Functions Reset Sprite_2022\\\"\"],\"cloned_from\":\"CSD U3 Functions Reset Sprite_2022\"},{\"changed_at\":\"2023-01-20 22:34:15 +0000\",\"changed\":[\"long_instructions\",\"encrypted_examples\",\"preload_asset_list\",\"contained_level_names\"],\"changed_by_id\":18602,\"changed_by_email\":\"angelina+levelbuilder@code.org\"}]"
+  "audit_log": "[{\"changed_at\":\"2022-09-19T23:03:09.256+00:00\",\"changed\":[\"cloned from \\\"CSD U3 Functions Reset Sprite_2022\\\"\"],\"cloned_from\":\"CSD U3 Functions Reset Sprite_2022\"},{\"changed_at\":\"2023-01-20 22:34:15 +0000\",\"changed\":[\"long_instructions\",\"encrypted_examples\",\"preload_asset_list\",\"contained_level_names\"],\"changed_by_id\":18602,\"changed_by_email\":\"angelina+levelbuilder@code.org\"},{\"changed_at\":\"2023-05-12 22:17:47 +0000\",\"changed\":[\"all_animations_single_frame\",\"encrypted_examples\",\"preload_asset_list\",\"contained_level_names\"],\"changed_by_id\":18602,\"changed_by_email\":\"angelina+levelbuilder@code.org\"}]"
 }]]></config>
   <blocks/>
 </Gamelab>

@@ -7,7 +7,7 @@ wrong '`M`'
 right '`N`'
 wrong '`ArrayIndexOutOfBoundsException`'
 
-allow_multiple_attempts nil
+allow_multiple_attempts true
 
 markdown <<MARKDOWN
 Consider the following code segment.

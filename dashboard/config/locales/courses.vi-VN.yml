@@ -3,54 +3,42 @@ vi:
   data:
     course:
       name:
-        csp-2017:
-          assignment_family_title: Nguyên tắc Khoa học Máy tính
-          title: Nguyên tắc Khoa học Máy tính ('17 ' 18)
-          version_title: "'17 - 18'"
-          description_student: Trong mùa thu năm 2016, hội đồng quản trị trường cao
-            đẳng ra mắt khóa học AP® mới nhất của mình, AP Nguyên tắc Khoa học Máy
-            tính. Các khóa học giới thiệu cho học sinh những khái niệm căn bản về
-            khoa học máy tính và thách thức họ để khám phá cách các máy tính và công
-            nghệ có thể tác động trên thế giới. Chương trình AP thiết kế AP Nguyên
-            tắc Khoa học Máy tính với mục đích của việc tạo ra các nhà lãnh đạo trong
-            các lĩnh vực khoa học máy tính và thu hút và hấp dẫn những người theo
-            truyền thống không thích trình bày với công cụ tính toán cần thiết và
-            cơ hội đa ngành.
-          description_teacher: Trong mùa thu năm 2016, hội đồng quản trị trường cao
-            đẳng ra mắt khóa học AP® mới nhất của mình, AP Nguyên tắc Khoa học Máy
-            tính. Các khóa học giới thiệu cho học sinh những khái niệm căn bản về
-            khoa học máy tính và thách thức họ để khám phá cách các máy tính và công
-            nghệ có thể tác động trên thế giới. Chương trình AP thiết kế AP Nguyên
-            tắc Khoa học Máy tính với mục đích của việc tạo ra các nhà lãnh đạo trong
-            các lĩnh vực khoa học máy tính và thu hút và hấp dẫn những người theo
-            truyền thống không thích trình bày với công cụ tính toán cần thiết và
-            cơ hội đa ngành.
-          description_short: Tìm hiểu khái niệm nền tảng khoa học máy tính.
-        csd-2017:
-          assignment_family_title: Những khám phá Khoa học Máy tính
-          title: Khám phá Khoa học Máy tính ('17 ' 18)
-          version_title: "'17 - 18'"
-          description_student: Khám phá Khoa học Máy tính (Khám phá CS) là một khóa
-            học giới thiệu khoa học máy tính cho phép học sinh để tạo ra thực hiện
-            vật và tham gia với khoa học máy tính như một phương tiện cho sự sáng
-            tạo, giao tiếp, giải quyết vấn đề và vui vẻ.
-          description_teacher: Khám phá Khoa học Máy tính (Khám phá CS) là một khóa
-            học giới thiệu khoa học máy tính cho phép học sinh để tạo ra thực hiện
-            vật và tham gia với khoa học máy tính như một phương tiện cho sự sáng
-            tạo, giao tiếp, giải quyết vấn đề và vui vẻ.
-          description_short: Một giới thiệu khóa học khoa học máy tính rằng trao quyền
-            cho các sinh viên để tạo ra các đồ tạo tác xác thực.
         allthethingscourse:
-          title: allthethingscourse
           description_short: Đây là một khóa học cho allthethings
           description_student: Đây là một khóa học cho allthethings và có mô tả dài
             hơn cho học sinh
           description_teacher: Đây là một khóa học cho allthethings và có mô tả dài
             hơn cho giáo viên
+          title: allthethingscourse
+        csd-2017:
+          assignment_family_title: Những khám phá Khoa học Máy tính
+          description_short: Một giới thiệu khóa học khoa học máy tính rằng trao quyền
+            cho các sinh viên để tạo ra các đồ tạo tác xác thực.
+          description_student: Khám phá Khoa học Máy tính (Khám phá CS) là một khóa
+            học giới thiệu khoa học máy tính cho phép học sinh để tạo ra thực hiện
+            vật và tham gia với khoa học máy tính như một phương tiện cho sự sáng
+            tạo, giao tiếp, giải quyết vấn đề và vui vẻ.
+          description_teacher: Khám phá Khoa học Máy tính (Khám phá CS) là một khóa
+            học giới thiệu khoa học máy tính cho phép học sinh để tạo ra thực hiện
+            vật và tham gia với khoa học máy tính như một phương tiện cho sự sáng
+            tạo, giao tiếp, giải quyết vấn đề và vui vẻ.
+          title: Khám phá Khoa học Máy tính ('17 ' 18)
+          version_title: "'17 - 18'"
         csd-2018:
           assignment_family_title: Những khám phá Khoa học Máy tính
+          description_short: Một giới thiệu khóa học khoa học máy tính rằng trao quyền
+            cho các sinh viên để tạo ra các đồ tạo tác xác thực.
+          description_student: Khám phá Khoa học Máy tính (Khám phá CS) là một khóa
+            học giới thiệu khoa học máy tính cho phép học sinh để tạo ra thực hiện
+            vật và tham gia với khoa học máy tính như một phương tiện cho sự sáng
+            tạo, giao tiếp, giải quyết vấn đề và vui vẻ.
+          description_teacher: Khám phá Khoa học Máy tính (Khám phá CS) là một khóa
+            học giới thiệu khoa học máy tính cho phép học sinh để tạo ra thực hiện
+            vật và tham gia với khoa học máy tính như một phương tiện cho sự sáng
+            tạo, giao tiếp, giải quyết vấn đề và vui vẻ.
           title: Khám phá Khoa học Máy tính ('18 ' 19)
           version_title: "'18 - 19'"
+        csd-2019:
           description_short: Một giới thiệu khóa học khoa học máy tính rằng trao quyền
             cho các sinh viên để tạo ra các đồ tạo tác xác thực.
           description_student: Khám phá Khoa học Máy tính (Khám phá CS) là một khóa
@@ -61,71 +49,8 @@ vi:
             học giới thiệu khoa học máy tính cho phép học sinh để tạo ra thực hiện
             vật và tham gia với khoa học máy tính như một phương tiện cho sự sáng
             tạo, giao tiếp, giải quyết vấn đề và vui vẻ.
-        csp-2018:
-          assignment_family_title: Nguyên tắc Khoa học Máy tính
-          title: Nguyên tắc Khoa học Máy tính ('18-'19)
-          version_title: "'18 - 19'"
-          description_short: Tìm hiểu khái niệm nền tảng khoa học máy tính.
-          description_student: Trong mùa thu năm 2016, hội đồng quản trị trường cao
-            đẳng ra mắt khóa học AP® mới nhất của mình, AP Nguyên tắc Khoa học Máy
-            tính. Các khóa học giới thiệu cho học sinh những khái niệm căn bản về
-            khoa học máy tính và thách thức họ để khám phá cách các máy tính và công
-            nghệ có thể tác động trên thế giới. Chương trình AP thiết kế AP Nguyên
-            tắc Khoa học Máy tính với mục đích của việc tạo ra các nhà lãnh đạo trong
-            các lĩnh vực khoa học máy tính và thu hút và hấp dẫn những người theo
-            truyền thống không thích trình bày với công cụ tính toán cần thiết và
-            cơ hội đa ngành.
-          description_teacher: Trong mùa thu năm 2016, hội đồng quản trị trường cao
-            đẳng ra mắt khóa học AP® mới nhất của mình, AP Nguyên tắc Khoa học Máy
-            tính. Các khóa học giới thiệu cho học sinh những khái niệm căn bản về
-            khoa học máy tính và thách thức họ để khám phá cách các máy tính và công
-            nghệ có thể tác động trên thế giới. Chương trình AP thiết kế AP Nguyên
-            tắc Khoa học Máy tính với mục đích của việc tạo ra các nhà lãnh đạo trong
-            các lĩnh vực khoa học máy tính và thu hút và hấp dẫn những người theo
-            truyền thống không thích trình bày với công cụ tính toán cần thiết và
-            cơ hội đa ngành.
-        csp-2019:
-          title: Nguyên tắc Khoa học Máy tính ('19-'20)
-          version_title: "'19 - 20'"
-          description_short: Tìm hiểu khái niệm nền tảng khoa học máy tính.
-          description_student: Trong mùa thu năm 2016, hội đồng quản trị trường cao
-            đẳng ra mắt khóa học AP® mới nhất của mình, AP Nguyên tắc Khoa học Máy
-            tính. Các khóa học giới thiệu cho học sinh những khái niệm căn bản về
-            khoa học máy tính và thách thức họ để khám phá cách các máy tính và công
-            nghệ có thể tác động trên thế giới. Chương trình AP thiết kế AP Nguyên
-            tắc Khoa học Máy tính với mục đích của việc tạo ra các nhà lãnh đạo trong
-            các lĩnh vực khoa học máy tính và thu hút và hấp dẫn những người theo
-            truyền thống không thích trình bày với công cụ tính toán cần thiết và
-            cơ hội đa ngành.
-          description_teacher: Trong mùa thu năm 2016, hội đồng quản trị trường cao
-            đẳng ra mắt khóa học AP® mới nhất của mình, AP Nguyên tắc Khoa học Máy
-            tính. Các khóa học giới thiệu cho học sinh những khái niệm căn bản về
-            khoa học máy tính và thách thức họ để khám phá cách các máy tính và công
-            nghệ có thể tác động trên thế giới. Chương trình AP thiết kế AP Nguyên
-            tắc Khoa học Máy tính với mục đích của việc tạo ra các nhà lãnh đạo trong
-            các lĩnh vực khoa học máy tính và thu hút và hấp dẫn những người theo
-            truyền thống không thích trình bày với công cụ tính toán cần thiết và
-            cơ hội đa ngành.
-        csd-2019:
           title: Khám phá Khoa học Máy tính ('19 ' 20)
           version_title: "'19 - 20'"
-          description_short: Một giới thiệu khóa học khoa học máy tính rằng trao quyền
-            cho các sinh viên để tạo ra các đồ tạo tác xác thực.
-          description_student: Khám phá Khoa học Máy tính (Khám phá CS) là một khóa
-            học giới thiệu khoa học máy tính cho phép học sinh để tạo ra thực hiện
-            vật và tham gia với khoa học máy tính như một phương tiện cho sự sáng
-            tạo, giao tiếp, giải quyết vấn đề và vui vẻ.
-          description_teacher: Khám phá Khoa học Máy tính (Khám phá CS) là một khóa
-            học giới thiệu khoa học máy tính cho phép học sinh để tạo ra thực hiện
-            vật và tham gia với khoa học máy tính như một phương tiện cho sự sáng
-            tạo, giao tiếp, giải quyết vấn đề và vui vẻ.
-        csd-pilot:
-          description_student: Khám phá Khoa học Máy tính (Khám phá CS) là một khóa
-            học giới thiệu khoa học máy tính cho phép học sinh để tạo ra thực hiện
-            vật và tham gia với khoa học máy tính như một phương tiện cho sự sáng
-            tạo, giao tiếp, giải quyết vấn đề và vui vẻ.
-        csp-2020:
-          description_short: Tìm hiểu khái niệm nền tảng khoa học máy tính.
         csd-2020:
           description_short: Một giới thiệu khóa học khoa học máy tính rằng trao quyền
             cho các sinh viên để tạo ra các đồ tạo tác xác thực.
@@ -137,30 +62,107 @@ vi:
             học giới thiệu khoa học máy tính cho phép học sinh để tạo ra thực hiện
             vật và tham gia với khoa học máy tính như một phương tiện cho sự sáng
             tạo, giao tiếp, giải quyết vấn đề và vui vẻ.
+        csd-2023:
+          title: Những khám phá Khoa học Máy tính
+        csd-pilot:
+          description_student: Khám phá Khoa học Máy tính (Khám phá CS) là một khóa
+            học giới thiệu khoa học máy tính cho phép học sinh để tạo ra thực hiện
+            vật và tham gia với khoa học máy tính như một phương tiện cho sự sáng
+            tạo, giao tiếp, giải quyết vấn đề và vui vẻ.
+        csp-2017:
+          assignment_family_title: Nguyên tắc Khoa học Máy tính
+          description_short: Tìm hiểu khái niệm nền tảng khoa học máy tính.
+          description_student: Trong mùa thu năm 2016, hội đồng quản trị trường cao
+            đẳng ra mắt khóa học AP® mới nhất của mình, AP Nguyên tắc Khoa học Máy
+            tính. Các khóa học giới thiệu cho học sinh những khái niệm căn bản về
+            khoa học máy tính và thách thức họ để khám phá cách các máy tính và công
+            nghệ có thể tác động trên thế giới. Chương trình AP thiết kế AP Nguyên
+            tắc Khoa học Máy tính với mục đích của việc tạo ra các nhà lãnh đạo trong
+            các lĩnh vực khoa học máy tính và thu hút và hấp dẫn những người theo
+            truyền thống không thích trình bày với công cụ tính toán cần thiết và
+            cơ hội đa ngành.
+          description_teacher: Trong mùa thu năm 2016, hội đồng quản trị trường cao
+            đẳng ra mắt khóa học AP® mới nhất của mình, AP Nguyên tắc Khoa học Máy
+            tính. Các khóa học giới thiệu cho học sinh những khái niệm căn bản về
+            khoa học máy tính và thách thức họ để khám phá cách các máy tính và công
+            nghệ có thể tác động trên thế giới. Chương trình AP thiết kế AP Nguyên
+            tắc Khoa học Máy tính với mục đích của việc tạo ra các nhà lãnh đạo trong
+            các lĩnh vực khoa học máy tính và thu hút và hấp dẫn những người theo
+            truyền thống không thích trình bày với công cụ tính toán cần thiết và
+            cơ hội đa ngành.
+          title: Nguyên tắc Khoa học Máy tính ('17 ' 18)
+          version_title: "'17 - 18'"
+        csp-2018:
+          assignment_family_title: Nguyên tắc Khoa học Máy tính
+          description_short: Tìm hiểu khái niệm nền tảng khoa học máy tính.
+          description_student: Trong mùa thu năm 2016, hội đồng quản trị trường cao
+            đẳng ra mắt khóa học AP® mới nhất của mình, AP Nguyên tắc Khoa học Máy
+            tính. Các khóa học giới thiệu cho học sinh những khái niệm căn bản về
+            khoa học máy tính và thách thức họ để khám phá cách các máy tính và công
+            nghệ có thể tác động trên thế giới. Chương trình AP thiết kế AP Nguyên
+            tắc Khoa học Máy tính với mục đích của việc tạo ra các nhà lãnh đạo trong
+            các lĩnh vực khoa học máy tính và thu hút và hấp dẫn những người theo
+            truyền thống không thích trình bày với công cụ tính toán cần thiết và
+            cơ hội đa ngành.
+          description_teacher: Trong mùa thu năm 2016, hội đồng quản trị trường cao
+            đẳng ra mắt khóa học AP® mới nhất của mình, AP Nguyên tắc Khoa học Máy
+            tính. Các khóa học giới thiệu cho học sinh những khái niệm căn bản về
+            khoa học máy tính và thách thức họ để khám phá cách các máy tính và công
+            nghệ có thể tác động trên thế giới. Chương trình AP thiết kế AP Nguyên
+            tắc Khoa học Máy tính với mục đích của việc tạo ra các nhà lãnh đạo trong
+            các lĩnh vực khoa học máy tính và thu hút và hấp dẫn những người theo
+            truyền thống không thích trình bày với công cụ tính toán cần thiết và
+            cơ hội đa ngành.
+          title: Nguyên tắc Khoa học Máy tính ('18-'19)
+          version_title: "'18 - 19'"
+        csp-2019:
+          description_short: Tìm hiểu khái niệm nền tảng khoa học máy tính.
+          description_student: Trong mùa thu năm 2016, hội đồng quản trị trường cao
+            đẳng ra mắt khóa học AP® mới nhất của mình, AP Nguyên tắc Khoa học Máy
+            tính. Các khóa học giới thiệu cho học sinh những khái niệm căn bản về
+            khoa học máy tính và thách thức họ để khám phá cách các máy tính và công
+            nghệ có thể tác động trên thế giới. Chương trình AP thiết kế AP Nguyên
+            tắc Khoa học Máy tính với mục đích của việc tạo ra các nhà lãnh đạo trong
+            các lĩnh vực khoa học máy tính và thu hút và hấp dẫn những người theo
+            truyền thống không thích trình bày với công cụ tính toán cần thiết và
+            cơ hội đa ngành.
+          description_teacher: Trong mùa thu năm 2016, hội đồng quản trị trường cao
+            đẳng ra mắt khóa học AP® mới nhất của mình, AP Nguyên tắc Khoa học Máy
+            tính. Các khóa học giới thiệu cho học sinh những khái niệm căn bản về
+            khoa học máy tính và thách thức họ để khám phá cách các máy tính và công
+            nghệ có thể tác động trên thế giới. Chương trình AP thiết kế AP Nguyên
+            tắc Khoa học Máy tính với mục đích của việc tạo ra các nhà lãnh đạo trong
+            các lĩnh vực khoa học máy tính và thu hút và hấp dẫn những người theo
+            truyền thống không thích trình bày với công cụ tính toán cần thiết và
+            cơ hội đa ngành.
+          title: Nguyên tắc Khoa học Máy tính ('19-'20)
+          version_title: "'19 - 20'"
+        csp-2020:
+          description_short: Tìm hiểu khái niệm nền tảng khoa học máy tính.
         csp-2021:
           description_short: Tìm hiểu khái niệm nền tảng khoa học máy tính.
-        mike-test:
-          title: Máy tính khoa học cơ bản
         csp-2022:
           description_short: Tìm hiểu khái niệm nền tảng khoa học máy tính.
         csp-2023:
           description_short: Tìm hiểu khái niệm nền tảng khoa học máy tính.
-        csd-2023:
-          title: Những khám phá Khoa học Máy tính
+        mike-test:
+          title: Máy tính khoa học cơ bản
     resources:
-      curriculum/csd/2020:
-        name: Chương trình
-      teacher_forum/csd/2020:
-        name: Diễn đàn giáo viên
       curriculum/csd/2017:
         name: Chương trình
-      teacher_forum_6/csd/2017:
-        name: Diễn đàn giáo viên
-      curriculum/csd/2019:
-        name: Chương trình
-      teacher_forum/csd/2019:
-        name: Diễn đàn giáo viên
       curriculum/csd/2018:
         name: Chương trình
+      curriculum/csd/2019:
+        name: Chương trình
+      curriculum/csd/2020:
+        name: Chương trình
+      getting_started_with_csd/csd/2021:
+        name: Bắt đầu Khám phá KHMT
+      teacher_forum/csd/2019:
+        name: Diễn đàn giáo viên
+      teacher_forum/csd/2020:
+        name: Diễn đàn giáo viên
+      teacher_forum_6/csd/2017:
+        name: Diễn đàn giáo viên
       teacher_forum_6/csd/2018:
         name: Diễn đàn giáo viên

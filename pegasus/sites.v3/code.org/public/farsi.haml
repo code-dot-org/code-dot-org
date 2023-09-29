@@ -1,0 +1,96 @@
+---
+title: Code.org in Farsi
+theme: responsive_full_width
+---
+
+%link{href: "/css/generated/design-system-pegasus.css", rel: "stylesheet"}
+%link{href: "/css/generated/farsi-styles.css", rel: "stylesheet"}
+
+%section
+  .wrapper
+    %h1=hoc_s(:farsi_page_top_heading)
+    %div.flex-container.justify-space-between.wrap
+      %div.col-60{style: "margin-bottom: 1rem"}
+        %h2.heading-lg=hoc_s(:farsi_page_top_heading_02)
+        %p.body-three=hoc_s(:farsi_page_top_desc)
+        %a{href: 'https://donate.code.org/CodeDotOrgInFarsi', class: "link-button", target: "_blank", rel: "noopener noreferrer"}
+          =hoc_s(:call_to_action_support_farsi)
+      %div.col-33{style: "float:right"}
+        %img{src: "/images/farsi/farsi-page-students.jpg", alt: "", style: "width: 100%"}
+      .clear
+
+%section.bg-neutral-light
+  .wrapper
+    %h2=hoc_s(:farsi_page_global_heading)
+    %p.body-three=hoc_s(:farsi_page_global_desc_01)
+    %p.body-three=hoc_s(:farsi_page_global_desc_02)
+    %p.body-three=hoc_s(:farsi_page_global_desc_03)
+
+%section
+  .wrapper
+    %h2=hoc_s(:farsi_page_supporters_heading)
+    %p.heading-sm
+      =hoc_s(:farsi_page_supporters_desc)
+    %ul.supporters-list
+      %li Amidi Family
+      %li Nima Asgharbeygi
+      %li Nima and Cindi Badiey
+      %li Narges Baniasadi
+      %li Bita Daryabari
+      %li Arash Ferdowsi
+      %li Jeff Huber and Angel Vossough
+      %li Azadeh Khazraee
+      %li Dara Khosrowshahi
+      %li Milan Kordestani
+      %li Ashkan and Nansi Marsh
+      %li Mohsen Moazami
+      %li Shahrokh Mortazavi
+      %li Ramtin Naimi
+      %li F. Francis Najafi
+      %li Steve and Shanna Nasiri
+      %li Kate Nowrouzi
+      %li Babak Pahlavan and Arezou Azar
+      %li Ali Partovi
+      %li Hooman Radfar
+      %li Poorya Sabounchi and Newsha Sharifzadeh
+      %li Mehran Sahami
+      %li Darian and Hilary Shirazi
+      %li Parisa Tabriz
+      %li AmirAli and Maryam Talasaz
+      %li Sahar Tashakorinia
+      %li Leila Yari
+      %li Bobby Yazdani
+      %li Anonymous (3)
+    %hr.dark
+    %p=hoc_s(:farsi_page_supporters_desc_02)
+    %a{href: 'https://donate.code.org/CodeDotOrgInFarsi', class: "link-button", target: "_blank", rel: "noopener noreferrer"}
+      =hoc_s(:call_to_action_support_farsi)
+
+%section.bg-neutral-light
+  .wrapper
+    %h2=hoc_s(:farsi_timeline_heading)
+    = view :farsi_timeline
+
+%section
+  .wrapper
+    %h2=hoc_s(:farsi_page_founders_heading)
+    .photo-carousel-wrapper
+      = view :farsi_carousel
+
+%section.bg-neutral-light
+  .wrapper
+    %h2=hoc_s(:farsi_page_support_heading)
+    %h3.heading-sm{style: "margin-bottom: 1rem"}
+      =hoc_s(:farsi_page_support_heading_02)
+    %p=hoc_s(:farsi_page_support_get_updates, markdown: :inline, locals: {form_url: "http://go.pardot.com/l/153401/2022-05-31/pq1716"})
+    %iframe.col-50{allowtransparency: "true", frameborder: "0", height: "325", scrolling: "yes", src: "http://go.pardot.com/l/153401/2022-05-31/pq1716", style: "overflow:hidden; float: none;", type: "text/html", width: "100%"}
+    %p=hoc_s(:farsi_page_support_contact_us, markdown: :inline, locals: {contact_link: "https://forms.gle/fMb9z7Wy2Qrjrowb7"})
+    %a{href: 'https://donate.code.org/CodeDotOrgInFarsi', class: "link-button", target: "_blank", rel: "noopener noreferrer"}
+      =hoc_s(:call_to_action_donate_online)
+
+%section
+  .wrapper
+    %h2.heading-sm
+      =hoc_s(:farsi_page_compliance_heading)
+    %p.body-three
+      =hoc_s(:farsi_page_compliance_desc)

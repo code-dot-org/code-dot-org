@@ -63,19 +63,19 @@ hu:
         csd-2023:
           title: Számítástechnikai Felfedezések
     resources:
-      curriculum/csd/2020:
-        name: Tanterv
-      teacher_forum/csd/2020:
-        name: Tanári fórum
       curriculum/csd/2017:
         name: Tanterv
       teacher_forum_6/csd/2017:
+        name: Tanári fórum
+      curriculum/csd/2018:
+        name: Tanterv
+      teacher_forum_6/csd/2018:
         name: Tanári fórum
       curriculum/csd/2019:
         name: Tanterv
       teacher_forum/csd/2019:
         name: Tanári fórum
-      curriculum/csd/2018:
+      curriculum/csd/2020:
         name: Tanterv
-      teacher_forum_6/csd/2018:
+      teacher_forum/csd/2020:
         name: Tanári fórum

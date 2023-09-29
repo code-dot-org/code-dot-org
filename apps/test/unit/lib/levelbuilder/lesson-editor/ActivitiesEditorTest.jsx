@@ -26,7 +26,7 @@ describe('ActivitiesEditor', () => {
     expect(hiddenInputs.length, 'hidden input').to.equal(1);
   });
 
-  it('renders without button if hasLessonPlan false', () => {
+  it('renders without activity button if hasLessonPlan false', () => {
     const wrapper = shallow(
       <ActivitiesEditor {...defaultProps} hasLessonPlan={false} />
     );
@@ -37,11 +37,11 @@ describe('ActivitiesEditor', () => {
     expect(hiddenInputs.length, 'hidden input').to.equal(1);
   });
 
-  it('adds activity when button pressed', () => {
+  it('adds activity when activity button pressed', () => {
     const wrapper = shallow(<ActivitiesEditor {...defaultProps} />);
     expect(wrapper.find('button').length).to.equal(1);
 
-    const button = wrapper.find('button');
+    const button = wrapper.find('button').at(0);
     expect(button.text()).to.include('Activity');
     button.simulate('mouseDown');
     expect(addActivity).to.have.been.calledWith(

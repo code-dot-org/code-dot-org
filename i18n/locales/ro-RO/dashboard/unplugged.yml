@@ -130,18 +130,30 @@ ro:
       CollisionDetection:
         title: Detectarea coliziunilor şi teorema lui Pitagora
         desc: A determina când se ating obiectele de pe ecran este un aspect important în cele mai multe jocuri. În această lecţie ne vom uita la modul în care Teorema lui Pitagora şi Formula Distanței pot fi folosite pentru a măsura distanţa dintre două puncte pe un plan, pentru ca apoi să decidem dacă aceste două puncte (sau caractere ale jocului) se ating.
+      courseA_unplugged_loops:
+        title: Bucle deconectate
+        desc: În această lecție, veți afla despre bucle!
       courseB_unplugged_MRF:
         title: Activitate fără Calculator
+        desc: În această lecție, vă veți „programa” prietenii!
       courseB_unplugged_loopyMRF:
         title: Activitate fără Calculator
+        desc: La fel ca în „Prietenii mei robotici”, veți „programa” prietenii dvs., dar de data aceasta cu bucle!
       courseC_Unplugged_ScreenOutTheMean:
         title: Activitate fără Calculator
+        desc: Astăzi veți afla despre ce să faceți dacă cineva este mediu online.
       courseD_unplugged_digitalCitizenship:
         title: Activitate fără Calculator
+        desc: Astăzi vei afla ce înseamnă să fii cetățean digital.
+      courseE_unplugged_privateInformation:
+        title: 'Educație pentru bunul simț: informații private și personale '
+        desc: Astăzi veți afla diferența dintre informațiile private și cele personale!
       courseF_unplugged_powerOfWords:
         title: Activitate fără Calculator
+        desc: Astăzi veți afla despre ce să faceți dacă cineva este mediu online.
       deeper learning description:
         title: '[șir gol]'
+        desc: 'traducere lipsă: ro-US.data.unplugged.desc'
       courseAB_unplugged_plantASeed:
         title: 'Algoritmi din viaţa reală: Plantează o sămânţă'
         desc: Această lecție evidențiază modul în care noi folosim algoritmi în viața de zi cu zi, utilizând drept exemplu plantarea unei semințe. De asemenea, aceasta se concentrează pe imaginea de ansamblu a informaticii și pe modul în care algoritmii joacă un rol esențial.
@@ -210,6 +222,7 @@ ro:
         desc: 'Una din cele mai magnifice structuri din lumea informaticii este funcţia.  Funcţiile (uneori numite proceduri) sunt mini-programe pe care le puteţi folosi iar și iar in interiorul programului vostru mai mare. Această lecţie va ajuta elevii să înţeleagă intuitiv de ce combinarea de bucăţi de cod în funcţii este o practică așa de utilă.  '
       courseB_unplugged_MRF_2018:
         title: Amicii mei roboți
+        desc: Învață să programezi scriind cod pentru prietenii tăi!
       BuildingAFoundation_2018:
         title: '[șir gol]'
         desc: '[șir gol]'
@@ -255,6 +268,9 @@ ro:
       GoingPlacesSafely_2018:
         title: Mergând în locuri în siguranţă
         desc: Internet-ul este o forță, dar uneori și un loc periculos. Profesorii arată cum poate fi sigură navigarea pe Internet.
+      courseA_unplugged_loops_2018:
+        title: Bucle deconectate
+        desc: În această lecție, veți afla despre bucle!
       BigEvent_2018:
         title: Marele eveniment
         desc: Elevilor li se prezintă conceptul de ”evenimente” în programare, care reprezintă acțiuni pe care calculatorul le monitorizează în mod constant. Profesorul va apăsa butoane pe o telecomandă de hârtie, iar elevii vor reacționa în funcție de butonul care a fost apăsat.
@@ -263,8 +279,10 @@ ro:
         desc: Elevii scriu un algoritm (un set de instrucțiuni) folosind un set de comenzi predefinite pentru a-i direcționa pe colegii de clasă să reproducă un desen.
       courseD_unplugged_digitalCitizenship_2018:
         title: Activitate fără Calculator
+        desc: Astăzi vei afla ce înseamnă să fii cetățean digital.
       courseC_Unplugged_ScreenOutTheMean_2018:
         title: Activitate fără Calculator
+        desc: Astăzi veți afla despre ce să faceți dacă cineva este mediu online.
       Conditionals_2018:
         title: Condiţionale
         desc: 'Pentru a învăța despre declarații condiționale, elevii joacă un joc de cărți și creează reguli precum: ”Dacă trag o carte roșie, obțin un punct” și ”Dacă trag o carte neagră, tu obții un punct.”'
@@ -286,30 +304,69 @@ ro:
       MoveItMoveIt_2018:
         title: Mutaţi-l, mutați-l
         desc: '[șir gol]'
+      courseB_unplugged_CnC_2018:
+        title: Este minunat să creezi și să joci corect
+        desc: Crumutat Fundamentelor Informaticii de către echipa de la Drepturi de autor și creativitate, această lecție există pentru a ajuta elevii să înțeleagă procesul creativ de partajare și inspirație. Împreună cu aceasta vine promovarea expresiei creative și nevoia de a fi corect cu munca creativă.
+      courseE_unplugged_CnC_2018:
+        title: Partajare digitală
+        desc: Crumutat Fundamentelor Informaticii de către echipa de la Drepturi de autor și creativitate, această lecție există pentru a ajuta elevii să înțeleagă provocările și beneficiile respectării dreptului de proprietate și a drepturilor de autor, în special în mediile digitale. Elevii ar trebui încurajați să respecte drepturile artiștilor ca o parte importantă a faptului de a fi cetățean digital etic.
       RelayProgramming_2018:
         title: Programare de releu
+        desc: Această activitate va începe cu o scurtă lecție despre depanare și persistență, apoi se va muta rapid la o cursă contra cronometru, în timp ce elevii intră în echipe și lucrează împreună pentru a scrie un program câte o instrucțiune la un moment dat.
       courseB_unplugged_MRF_2019:
         title: Amicii mei roboți
+        desc: Învață să programezi scriind cod pentru prietenii tăi!
+      BuildingAFoundation_2019:
+        title: 'traducere lipsă: ro-US.data.unplugged.buildingaFoundation_2018.title'
+        desc: 'traducere lipsă: en-us.data.unplugged.buildingaFoundation_2018.desc'
       courseB_unplugged_loopyMRF_2019:
+        title: Prietenii mei Robotici Loopy
         desc: '[șir gol]'
       Conditionals_2019:
         title: Condiţionale
         desc: 'Pentru a învăța despre declarații condiționale, elevii joacă un joc de cărți și creează reguli precum: ”Dacă trag o carte roșie, obțin un punct” și ”Dacă trag o carte neagră, tu obții un punct.”'
+      courseF_unplugged_powerOfWords_2019:
+        title: 'traducere lipsă: en-us.data.unplugged.coursef_unplugged_powerofwords_2018.title'
+        desc: 'traducere lipsă: en-us.data.unplugged.coursef_unplugged_powerofwords_2018.desc'
+      EnvelopeVariables_2019:
+        title: 'traducere lipsă: en-us.data.unplugged.envelopevariables_2018.title'
+        desc: 'traducere lipsă: en-us.data.unplugged.envelopevariables_2018.desc'
+      ForLoopFun_2019:
+        title: 'traducere lipsă: en-us.data.unplugged.forloopfun_2018.title'
+        desc: 'traducere lipsă: en-us.data.unplugged.forloopfun_2018.desc'
       GraphPaperProgramming_2019:
         title: Programare pe Hârtie Milimetrică
         desc: Elevii scriu un algoritm (un set de instrucțiuni) folosind un set de comenzi predefinite pentru a-i direcționa pe colegii de clasă să reproducă un desen.
       RelayProgramming_2018_2019:
         title: Programare de releu
+        desc: Această activitate va începe cu o scurtă lecție despre depanare și persistență, apoi se va muta rapid la o cursă contra cronometru, în timp ce elevii intră în echipe și lucrează împreună pentru a scrie un program câte o instrucțiune la un moment dat.
       courseD_unplugged_digitalCitizenship_2019:
         title: Activitate fără Calculator
+        desc: Astăzi vei afla ce înseamnă să fii cetățean digital.
       BinaryImages_2019:
         title: Imagini binare
         desc: Deşi mulţi oameni cred că binar înseamnă strict zerouri și unu, cursurile noastre anterioare predate elevilor arată că informaţiile pot fi reprezentate într-o varietate de opţiuni binare.  Această lecţie face un pas mai departe pentru dezvoltarea conceptului, ilustrând cum un computer poate stoca, de asemenea, chiar și informații mai complexe (precum imagini şi culori) în sistem binar.
+      courseE_unplugged_privateInformation_2019:
+        title: Informații private și personale
+        desc: Dezvoltată de Common Sense Education, această lecție se referă la diferența dintre informațiile care pot fi partajate în siguranță online și informațiile care nu sunt.
+      SongwritingParameters_2019:
+        title: 'traducere lipsă: en-us.data.unplugged.songwritingParameters_2018.title'
+        desc: 'traducere lipsă: en-us.data.unplugged.songwritingParameters_2018.desc'
+      courseE_unplugged_CnC_2019:
+        title: Partajare digitală
+        desc: Crumutat Fundamentelor Informaticii de către echipa de la Drepturi de autor și creativitate, această lecție există pentru a ajuta elevii să înțeleagă provocările și beneficiile respectării dreptului de proprietate și a drepturilor de autor, în special în mediile digitale. Elevii ar trebui încurajați să respecte drepturile artiștilor ca o parte importantă a faptului de a fi cetățean digital etic.
+      Internet_2019:
+        title: 'traducere lipsă: en-us.data.unplugged.internet_2018.title'
+        desc: 'traducere lipsă: en-us.data.unplugged.internet_2018.desc'
+      Crowdsourcing_2019:
+        title: 'traducere lipsă: en-us.data.unplugged.crowdsourcing_2018.title'
+        desc: 'traducere lipsă: en-us.data.unplugged.crowdsourcing_2018.desc'
       GettingLoopy_2019:
         title: Transformând în Buclă
         desc: Această lecție prezintă conceptul în programare de bucle (instrucțiuni repetate) printr-o activitate care implică dansul. Elevii vor învăța o coregrafie simplă, apoi vor fi instruiți să o repete.
       courseC_Unplugged_ScreenOutTheMean_2019:
         title: Activitate fără Calculator
+        desc: Astăzi veți afla despre ce să faceți dacă cineva este mediu online.
       BigEvent_2019:
         title: Marele eveniment
         desc: Elevilor li se prezintă conceptul de ”evenimente” în programare, care reprezintă acțiuni pe care calculatorul le monitorizează în mod constant. Profesorul va apăsa butoane pe o telecomandă de hârtie, iar elevii vor reacționa în funcție de butonul care a fost apăsat.
@@ -328,14 +385,33 @@ ro:
       GoingPlacesSafely_2019:
         title: Mergând în locuri în siguranţă
         desc: Internet-ul este o forță, dar uneori și un loc periculos. Profesorii arată cum poate fi sigură navigarea pe Internet.
+      courseA_unplugged_loops_2019:
+        title: Bucle deconectate
+        desc: În această lecție, veți afla despre bucle!
       MoveItMoveIt_2019:
         title: Mutaţi-l, mutați-l
         desc: '[șir gol]'
       DigitalFootprint_2019:
         title: Amprenta ta Digitală
         desc: Profesorii introduc elevilor ideea că postarea informațiilor online despre ei înșiși creează un "traseu", o amprentă digitală, care are consecințe.
+      courseB_unplugged_CnC_2019:
+        title: Este minunat să creezi și să joci corect
+        desc: Crumutat Fundamentelor Informaticii de către echipa de la Drepturi de autor și creativitate, această lecție există pentru a ajuta elevii să înțeleagă procesul creativ de partajare și inspirație. Împreună cu aceasta vine promovarea expresiei creative și nevoia de a fi corect cu munca creativă.
+      GraphingData_2019:
+        title: Fotografierea datelor
+        desc: În această lecție, elevii vor colecta date dintr-un proiect Play Lab sau scenariu din lumea reală și le vor folosi pentru a face predicții.
+      courseE_unplugged_accessAbility_2019:
+        title: Abilitatea de acces
+        desc: Aflați despre accesibilitate și valoarea empatiei prin brainstorming și proiectarea de soluții accesibile pentru aplicații ipotetice.
+      courseE_simon_says_2019:
+        title: Simon Spune
+        desc: "Joacă un joc și gândește-te ce comenzi sunt necesare pentru a obține rezultatul potrivit.\\r\n\\r\n! [imagine test] (https://code.org/images/logo.png)"
+      courseB_unplugged_passwords_2019:
+        title: Parole puternice
+        desc: Explorați de ce utilizatorii folosesc parolele, aflați beneficiile utilizării parolelor și descoperiți strategii pentru crearea și păstrarea parolelor puternice și sigure.
       timeforcs_demo_crowdsourcing:
         title: Obţinând Informaţii/Critici
+        desc: 'Notă _Josh: în contrast cu prima lecție, l-am formatat pe acesta la fel ca o lecție tipică deconectată. _'
       timeforcs_demo_conditionals:
         title: Condiţionale
         desc: 'Pentru a învăța despre declarații condiționale, elevii joacă un joc de cărți și creează reguli precum: ”Dacă trag o carte roșie, obțin un punct” și ”Dacă trag o carte neagră, tu obții un punct.”'

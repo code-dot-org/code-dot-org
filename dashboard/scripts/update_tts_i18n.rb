@@ -17,7 +17,7 @@ def text_translated?(left, right)
   clean(left) != clean(right)
 end
 
-def update_level_tts_i18n(level, script=nil)
+def update_level_tts_i18n(level, script = nil)
   # Short Instructions
 
   translated_text = level.tts_short_instructions_text

@@ -1,6 +1,6 @@
 /** @file controls below an animation looping toggle */
 import React from 'react';
-import {OverlayTrigger, Tooltip} from 'react-bootstrap';
+import {OverlayTrigger, Tooltip} from 'react-bootstrap'; // eslint-disable-line no-restricted-imports
 import PropTypes from 'prop-types';
 import style from './item-loop-toggle.module.scss';
 

@@ -35,7 +35,7 @@ class CreateStandardsReportStep1 extends Component {
             __useDeprecatedTag
             text={i18n.next()}
             onClick={this.props.onNext}
-            color={Button.ButtonColor.orange}
+            color={Button.ButtonColor.brandSecondaryDefault}
             className="uitest-standards-generate-report-next"
           />
         </DialogFooter>

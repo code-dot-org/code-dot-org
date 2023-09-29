@@ -1,7 +1,7 @@
 import React from 'react';
 import {connect} from 'react-redux';
 import PropTypes from 'prop-types';
-import {Tabs, Tab} from 'react-bootstrap';
+import {Tabs, Tab} from 'react-bootstrap'; // eslint-disable-line no-restricted-imports
 import FoormEntityEditorPreview from './FoormEntityEditorPreview';
 import FoormEntityEditorHeader from './FoormEntityEditorHeader';
 import _ from 'lodash';

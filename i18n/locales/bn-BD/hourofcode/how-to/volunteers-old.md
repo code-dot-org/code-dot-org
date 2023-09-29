@@ -1,5 +1,5 @@
 ---
-title: How-to guide for Hour of Code volunteers
+title: আওয়ার অফ কোড স্বেচ্ছাসেবকদের জন্য গাইড কিভাবে
 ---
 
 {{ signup_button }}

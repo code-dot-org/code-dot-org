@@ -9,8 +9,6 @@ module Api::V1::Pd
     freeze_time
 
     setup_all do
-      Pd::Application::ApplicationBase.any_instance.stubs(:deliver_email)
-
       @workshop_admin = create :workshop_admin
       @workshop_organizer = create :workshop_organizer
       @program_manager = create :teacher
@@ -133,34 +131,38 @@ module Api::V1::Pd
       sign_in @workshop_admin
       get :quick_view, params: {role: 'csd_teachers', regional_partner_value: @regional_partner.id}
       assert_response :success
-      assert_equal [@csd_teacher_application_with_partner.id, @csd_incomplete_application_with_partner.id],
+      assert_equal(
+        [@csd_teacher_application_with_partner.id, @csd_incomplete_application_with_partner.id],
         JSON.parse(@response.body).map {|r| r['id']}
+      )
     end
 
     test 'quick view if not admin returns applications without incomplete apps and with filter' do
       sign_in @program_manager
       get :quick_view, params: {role: 'csd_teachers', regional_partner_value: @regional_partner.id}
       assert_response :success
-      assert_equal [@csd_teacher_application_with_partner.id], JSON.parse(@response.body).map {|r| r['id']}
+      assert_equal([@csd_teacher_application_with_partner.id], JSON.parse(@response.body).map {|r| r['id']})
     end
 
     test "quick view returns applications with regional partner filter unset" do
       sign_in @workshop_admin
       get :quick_view, params: {role: 'csd_teachers'}
       assert_response :success
-      assert_equal [
-        @csd_teacher_application.id,
-        @csd_teacher_application_with_partner.id,
-        @csd_incomplete_application_with_partner.id
-      ],
+      assert_equal(
+        [
+          @csd_teacher_application.id,
+          @csd_teacher_application_with_partner.id,
+          @csd_incomplete_application_with_partner.id
+        ],
         JSON.parse(@response.body).map {|r| r['id']}
+      )
     end
 
     test "quick view returns applications with regional partner filter set to no partner" do
       sign_in @workshop_admin
       get :quick_view, params: {role: 'csd_teachers', regional_partner_value: 'none'}
       assert_response :success
-      assert_equal [@csd_teacher_application.id], JSON.parse(@response.body).map {|r| r['id']}
+      assert_equal([@csd_teacher_application.id], JSON.parse(@response.body).map {|r| r['id']})
     end
 
     # TODO: remove this test when workshop_organizer is deprecated
@@ -252,6 +254,8 @@ module Api::V1::Pd
     # TODO: remove this test when workshop_organizer is deprecated
     test 'regional partners can edit their applications as workshop organizers' do
       sign_in @workshop_organizer
+      Pd::Application::TeacherApplication.any_instance.stubs(:deliver_email)
+
       put :update, params: {id: @csd_teacher_application_with_partner, application: {status: 'accepted', notes: 'Notes'}}
       assert_response :success
     end
@@ -265,6 +269,8 @@ module Api::V1::Pd
 
     test 'regional partners can edit their applications' do
       sign_in @program_manager
+      Pd::Application::TeacherApplication.any_instance.stubs(:deliver_email)
+
       put :update, params: {id: @csd_teacher_application_with_partner, application: {status: 'accepted', notes: 'Notes'}}
       assert_response :success
     end
@@ -375,7 +381,9 @@ module Api::V1::Pd
 
     test 'update sends a decision email once if status changed to decision and if associated with an RP' do
       sign_in @program_manager
-      Pd::Application::TeacherApplicationMailer.expects(:accepted).once
+      Pd::Application::TeacherApplicationMailer.expects(:accepted).
+        with(instance_of(TEACHER_APPLICATION_CLASS)).
+        returns(mock {|mail| mail.expects(:deliver_now)})
 
       post :update, params: {id: @csd_teacher_application_with_partner.id, application: {
         status: 'accepted'
@@ -385,7 +393,6 @@ module Api::V1::Pd
       post :update, params: {id: @csd_teacher_application_with_partner.id, application: {
         notes: 'More notes'
       }}
-      assert_equal 1, @csd_teacher_application_with_partner.emails.where.not(sent_at: nil).where(email_type: 'accepted').count
     end
 
     test 'update does not send a decision email if status changed to decision but no RP' do
@@ -470,11 +477,11 @@ module Api::V1::Pd
 
       [:csp_which_grades, :csp_how_offer].each do |key|
         column = TEACHER_APPLICATION_CLASS.csv_filtered_labels('csp')[:teacher][key]
-        refute response_csv.first.include?(column)
+        refute_includes(response_csv.first, column)
       end
 
       column = TEACHER_APPLICATION_CLASS.csv_filtered_labels('csd')[:teacher][:csd_which_grades]
-      assert response_csv.first.include?(column)
+      assert_includes(response_csv.first, column)
     end
 
     test 'csv download for csp teacher returns expected columns' do
@@ -486,11 +493,11 @@ module Api::V1::Pd
 
       [:csp_which_grades, :csp_how_offer].each do |key|
         column = TEACHER_APPLICATION_CLASS.csv_filtered_labels('csp')[:teacher][key]
-        assert response_csv.first.include?(column)
+        assert_includes(response_csv.first, column)
       end
 
       column = TEACHER_APPLICATION_CLASS.csv_filtered_labels('csd')[:teacher][:csd_which_grades]
-      refute response_csv.first.include?(column)
+      refute_includes(response_csv.first, column)
     end
 
     test 'cohort view returns teacher applications of correct statuses' do

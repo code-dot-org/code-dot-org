@@ -30,7 +30,7 @@ export default class LessonStatusDialog extends Component {
             __useDeprecatedTag
             text={i18n.closeAndSave()}
             onClick={this.props.handleConfirm}
-            color={Button.ButtonColor.orange}
+            color={Button.ButtonColor.brandSecondaryDefault}
           />
         </DialogFooter>
       </BaseDialog>

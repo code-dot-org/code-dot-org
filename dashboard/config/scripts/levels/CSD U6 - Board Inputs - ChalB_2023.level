@@ -1,5 +1,6 @@
 <Applab>
   <config><![CDATA[{
+  "published": true,
   "game_id": 41,
   "created_at": "2022-09-21T13:12:24.000Z",
   "level_num": "custom",
@@ -63,7 +64,7 @@
     "expand_debugger": "false",
     "fail_on_lint_errors": "false",
     "debugger_disabled": "false",
-    "makerlab_enabled": "true",
+    "makerlab_enabled": "circuitPlayground",
     "long_instructions": "<div markdown=\"1\" style=\"float: right; margin: 20px;\">\r\n\r\n![expandable](https://images.code.org/4bf1fd438e5bd20d5f25e272459a2505-image-1650059526083.gif)\r\n\r\n<br/>\r\n\r\nClick to expand\r\n\r\n</div>\r\n\r\n# Day and Night\r\n\r\nUse design mode to create two scenes representing daytime and nighttime. Several assets have already been provided in this level, but you can also search for more on the internet. Add code so when the toggle switch is open, the scene is during the day. But when the toggle switch is closed, the scene is at night. \r\n\r\nYou can use [`hideElement()`(#fff176)](/docs/applab/hideElement/) and [`showElement()`(#fff176)](/docs/applab/showElement/) to change what images are displayed based on the toggle switch.\r\n\r\n_Note: Instead of using \"day and night\", you can choose a different pair of opposites to represent with this app (like land and sea, or light and dark). The important thing is that, when you use the toggle switch, it changes between the two opposites_\r\n\r\n## Do This\r\n**In Design Mode:**\r\n1) Create your daytime scene\r\n2) Create your nighttime scene\r\n\t- Note: in design mode, these two scenes will appear at the same time. You can hide some design elements by defualt by checking the `hidden` checkbox on design elements\r\n    \r\n**In Code Mode:**\r\n3) When the toggle switch is open, display the daytime scene\r\n4) When the toggle switch is closed, display the nighttime scene",
     "parent_level_id": 20595,
     "name_suffix": "_2023",
@@ -77,9 +78,9 @@
       "/courses/csd-2022/guides/circuit-playground",
       "/courses/csd-2022/guides/physical-input",
       "/courses/csd-2022/guides/producing-output",
-      "/courses/csd-2022/guides/board-events"
+      "/courses/csd-2022/guides/board-events",
+      "/maker/setup"
     ],
-    "palette_category_at_start": "Circuit",
     "display_name": "Day and Night",
     "thumbnail_url": "https://images.code.org/6985fc900e9e40383c5c5d802eea1ae9-image-1650059548032.8.b-preview.gif",
     "starter_assets": {
@@ -98,9 +99,8 @@
     "start_blocks": "//3) When the toggle switch is open, display the daytime scene\r\n\r\n//4) When the toggle switch is closed, display the nighttime scene",
     "preload_asset_list": null
   },
-  "published": true,
   "notes": "",
-  "audit_log": "[{\"changed_at\":\"2022-09-21T13:12:24.573+00:00\",\"changed\":[\"cloned from \\\"CSD U6 - Board Inputs - ChalB_2222\\\"\"],\"cloned_from\":\"CSD U6 - Board Inputs - ChalB_2222\"}]"
+  "audit_log": "[{\"changed_at\":\"2022-09-21T13:12:24.573+00:00\",\"changed\":[\"cloned from \\\"CSD U6 - Board Inputs - ChalB_2222\\\"\"],\"cloned_from\":\"CSD U6 - Board Inputs - ChalB_2222\"},{\"changed_at\":\"2023-08-16 17:13:48 +0000\",\"changed\":[\"code_functions\",\"makerlab_enabled\",\"reference_links\",\"palette_category_at_start\",\"encrypted_examples\",\"preload_asset_list\",\"contained_level_names\"],\"changed_by_id\":14639,\"changed_by_email\":\"dan+teacher@code.org\"}]"
 }]]></config>
   <blocks/>
 </Applab>

@@ -3,52 +3,42 @@ de:
   data:
     course:
       name:
-        csp-2017:
-          assignment_family_title: Informatik Prinzipien
-          title: Informatik Prinzipien ('17-'18)
-          version_title: "'17-'18"
-          description_student: Im Herbst 2016, startete die College-Leitung ihren
-            neusten AP®-Kurs, AP Computer Science Principles (Informatik-Grundprinzipien).
-            Der Kurs führt Schüler in die grundlegenden Konzepte der Informatik ein
-            und fordert sie heraus, herauszufinden, wie Computer und Technologie die
-            Welt beeinflussen können. Das AP-Programm gestaltete AP Informatik-Grundprinzipien
-            mit dem Ziel, Führungspersönlichkeiten im Feld der Informatik hervorzubringen
-            und die anzuziehen und zu fördern, die traditionell unterrepräsentiert
-            sind by essenziellen Computer-Werkzeugen und multi-disziplinären Möglichkeiten.
-          description_teacher: Im Herbst 2016, startete die College-Leitung ihren
-            neusten AP®-Kurs, AP Computer Science Principles (Informatik-Grundprinzipien).
-            Der Kurs führt Schüler in die grundlegenden Konzepte der Informatik ein
-            und fordert sie heraus, herauszufinden, wie Computer und Technologie die
-            Welt beeinflussen können. Das AP-Programm gestaltete AP Informatik-Grundprinzipien
-            mit dem Ziel, Führungspersönlichkeiten im Feld der Informatik hervorzubringen
-            und die anzuziehen und zu fördern, die traditionell unterrepräsentiert
-            sind by essenziellen Computer-Werkzeugen und multi-disziplinären Möglichkeiten.
-          description_short: Lerne grundlegende Konzepte der Informatik!
-        csd-2017:
-          assignment_family_title: Informatik Entdeckungen
-          title: Informatik entdecken ('17-'18)
-          version_title: "'17-'18"
-          description_student: Computer Science Discoveries (CS Discoveries) ist ein
-            einführender Informatikkurs, der die Studenten befähigt, authentische
-            Artefakte zu schaffen und sich mit der Informatik als Medium für Kreativität,
-            Kommunikation, Problemlösung und Spaß zu beschäftigen.
-          description_teacher: Computer Science Discoveries (CS Discoveries) ist ein
-            einführender Informatikkurs, der die Studenten befähigt, authentische
-            Artefakte zu schaffen und sich mit der Informatik als Medium für Kreativität,
-            Kommunikation, Problemlösung und Spaß zu beschäftigen.
-          description_short: Ein Einführungs-Informatik-Kurs, der Schülern ermöglicht,
-            echte Produkte zu erzeugen.
         allthethingscourse:
-          title: Allthethingskurs
           description_short: Dies ist ein Kurs für Allthethings
           description_student: Dies ist ein Kurs für Allthethings und er hat eine
             längere Beschreibung für Schüler
           description_teacher: Dies ist ein Kurs für Allthethings und er hat eine
             längere Beschreibung für Lehrer
+          title: Allthethingskurs
+        csd-2017:
+          assignment_family_title: Informatik Entdeckungen
+          description_short: Ein Einführungs-Informatik-Kurs, der Schülern ermöglicht,
+            echte Produkte zu erzeugen.
+          description_student: Computer Science Discoveries (CS Discoveries) ist ein
+            einführender Informatikkurs, der die Studenten befähigt, authentische
+            Artefakte zu schaffen und sich mit der Informatik als Medium für Kreativität,
+            Kommunikation, Problemlösung und Spaß zu beschäftigen.
+          description_teacher: Computer Science Discoveries (CS Discoveries) ist ein
+            einführender Informatikkurs, der die Studenten befähigt, authentische
+            Artefakte zu schaffen und sich mit der Informatik als Medium für Kreativität,
+            Kommunikation, Problemlösung und Spaß zu beschäftigen.
+          title: Informatik entdecken ('17-'18)
+          version_title: "'17-'18"
         csd-2018:
           assignment_family_title: Informatik Entdeckungen
+          description_short: Ein Einführungs-Informatik-Kurs, der Schülern ermöglicht,
+            echte Produkte zu erzeugen.
+          description_student: Computer Science Discoveries (CS Discoveries) ist ein
+            einführender Informatikkurs, der die Studenten befähigt, authentische
+            Artefakte zu schaffen und sich mit der Informatik als Medium für Kreativität,
+            Kommunikation, Problemlösung und Spaß zu beschäftigen.
+          description_teacher: Computer Science Discoveries (CS Discoveries) ist ein
+            einführender Informatikkurs, der die Studenten befähigt, authentische
+            Artefakte zu schaffen und sich mit der Informatik als Medium für Kreativität,
+            Kommunikation, Problemlösung und Spaß zu beschäftigen.
           title: Informatik entdecken ('18-'19)
           version_title: "'18-'19"
+        csd-2019:
           description_short: Ein Einführungs-Informatik-Kurs, der Schülern ermöglicht,
             echte Produkte zu erzeugen.
           description_student: Computer Science Discoveries (CS Discoveries) ist ein
@@ -59,68 +49,8 @@ de:
             einführender Informatikkurs, der die Studenten befähigt, authentische
             Artefakte zu schaffen und sich mit der Informatik als Medium für Kreativität,
             Kommunikation, Problemlösung und Spaß zu beschäftigen.
-        csp-2018:
-          assignment_family_title: Informatik-Prinzipien
-          title: Informatik Prinzipien ('18-'19)
-          version_title: "'18-'19"
-          description_short: Lerne grundlegende Konzepte der Informatik!
-          description_student: Im Herbst 2016, startete die College-Leitung ihren
-            neusten AP®-Kurs, AP Computer Science Principles (Informatik-Grundprinzipien).
-            Der Kurs führt Schüler in die grundlegenden Konzepte der Informatik ein
-            und fordert sie heraus, herauszufinden, wie Computer und Technologie die
-            Welt beeinflussen können. Das AP-Programm gestaltete AP Informatik-Grundprinzipien
-            mit dem Ziel, Führungspersönlichkeiten im Feld der Informatik hervorzubringen
-            und die anzuziehen und zu fördern, die traditionell unterrepräsentiert
-            sind by essenziellen Computer-Werkzeugen und multi-disziplinären Möglichkeiten.
-          description_teacher: Im Herbst 2016, startete die College-Leitung ihren
-            neusten AP®-Kurs, AP Computer Science Principles (Informatik-Grundprinzipien).
-            Der Kurs führt Schüler in die grundlegenden Konzepte der Informatik ein
-            und fordert sie heraus, herauszufinden, wie Computer und Technologie die
-            Welt beeinflussen können. Das AP-Programm gestaltete AP Informatik-Grundprinzipien
-            mit dem Ziel, Führungspersönlichkeiten im Feld der Informatik hervorzubringen
-            und die anzuziehen und zu fördern, die traditionell unterrepräsentiert
-            sind by essenziellen Computer-Werkzeugen und multi-disziplinären Möglichkeiten.
-        csp-2019:
-          title: Informatik-Grundprinzipien ('19-'20)
-          version_title: "'19-'20"
-          description_short: Lerne grundlegende Konzepte der Informatik!
-          description_student: Im Herbst 2016, startete die College-Leitung ihren
-            neusten AP®-Kurs, AP Computer Science Principles (Informatik-Grundprinzipien).
-            Der Kurs führt Schüler in die grundlegenden Konzepte der Informatik ein
-            und fordert sie heraus, herauszufinden, wie Computer und Technologie die
-            Welt beeinflussen können. Das AP-Programm gestaltete AP Informatik-Grundprinzipien
-            mit dem Ziel, Führungspersönlichkeiten im Feld der Informatik hervorzubringen
-            und die anzuziehen und zu fördern, die traditionell unterrepräsentiert
-            sind by essenziellen Computer-Werkzeugen und multi-disziplinären Möglichkeiten.
-          description_teacher: Im Herbst 2016, startete die College-Leitung ihren
-            neusten AP®-Kurs, AP Computer Science Principles (Informatik-Grundprinzipien).
-            Der Kurs führt Schüler in die grundlegenden Konzepte der Informatik ein
-            und fordert sie heraus, herauszufinden, wie Computer und Technologie die
-            Welt beeinflussen können. Das AP-Programm gestaltete AP Informatik-Grundprinzipien
-            mit dem Ziel, Führungspersönlichkeiten im Feld der Informatik hervorzubringen
-            und die anzuziehen und zu fördern, die traditionell unterrepräsentiert
-            sind by essenziellen Computer-Werkzeugen und multi-disziplinären Möglichkeiten.
-        csd-2019:
           title: Informatik entdecken ('19-'20)
           version_title: "'19-'20"
-          description_short: Ein Einführungs-Informatik-Kurs, der Schülern ermöglicht,
-            echte Produkte zu erzeugen.
-          description_student: Computer Science Discoveries (CS Discoveries) ist ein
-            einführender Informatikkurs, der die Studenten befähigt, authentische
-            Artefakte zu schaffen und sich mit der Informatik als Medium für Kreativität,
-            Kommunikation, Problemlösung und Spaß zu beschäftigen.
-          description_teacher: Computer Science Discoveries (CS Discoveries) ist ein
-            einführender Informatikkurs, der die Studenten befähigt, authentische
-            Artefakte zu schaffen und sich mit der Informatik als Medium für Kreativität,
-            Kommunikation, Problemlösung und Spaß zu beschäftigen.
-        csd-pilot:
-          title: Erkenntnisse aus der Informatik - Pilotkurs
-          description_student: Computer Science Discoveries (CS Discoveries) ist ein
-            einführender Informatikkurs, der die Studenten befähigt, authentische
-            Artefakte zu schaffen und sich mit der Informatik als Medium für Kreativität,
-            Kommunikation, Problemlösung und Spaß zu beschäftigen.
-        csp-2020:
-          description_short: Lerne grundlegende Konzepte der Informatik!
         csd-2020:
           description_short: Ein Einführungs-Informatik-Kurs, der Schülern ermöglicht,
             echte Produkte zu erzeugen.
@@ -132,30 +62,102 @@ de:
             einführender Informatikkurs, der die Studenten befähigt, authentische
             Artefakte zu schaffen und sich mit der Informatik als Medium für Kreativität,
             Kommunikation, Problemlösung und Spaß zu beschäftigen.
+        csd-2023:
+          title: Informatik Entdeckungen
+        csd-pilot:
+          description_student: Computer Science Discoveries (CS Discoveries) ist ein
+            einführender Informatikkurs, der die Studenten befähigt, authentische
+            Artefakte zu schaffen und sich mit der Informatik als Medium für Kreativität,
+            Kommunikation, Problemlösung und Spaß zu beschäftigen.
+          title: Erkenntnisse aus der Informatik - Pilotkurs
+        csp-2017:
+          assignment_family_title: Informatik Prinzipien
+          description_short: Lerne grundlegende Konzepte der Informatik!
+          description_student: Im Herbst 2016, startete die College-Leitung ihren
+            neusten AP®-Kurs, AP Computer Science Principles (Informatik-Grundprinzipien).
+            Der Kurs führt Schüler in die grundlegenden Konzepte der Informatik ein
+            und fordert sie heraus, herauszufinden, wie Computer und Technologie die
+            Welt beeinflussen können. Das AP-Programm gestaltete AP Informatik-Grundprinzipien
+            mit dem Ziel, Führungspersönlichkeiten im Feld der Informatik hervorzubringen
+            und die anzuziehen und zu fördern, die traditionell unterrepräsentiert
+            sind by essenziellen Computer-Werkzeugen und multi-disziplinären Möglichkeiten.
+          description_teacher: Im Herbst 2016, startete die College-Leitung ihren
+            neusten AP®-Kurs, AP Computer Science Principles (Informatik-Grundprinzipien).
+            Der Kurs führt Schüler in die grundlegenden Konzepte der Informatik ein
+            und fordert sie heraus, herauszufinden, wie Computer und Technologie die
+            Welt beeinflussen können. Das AP-Programm gestaltete AP Informatik-Grundprinzipien
+            mit dem Ziel, Führungspersönlichkeiten im Feld der Informatik hervorzubringen
+            und die anzuziehen und zu fördern, die traditionell unterrepräsentiert
+            sind by essenziellen Computer-Werkzeugen und multi-disziplinären Möglichkeiten.
+          title: Informatik Prinzipien ('17-'18)
+          version_title: "'17-'18"
+        csp-2018:
+          assignment_family_title: Informatik-Prinzipien
+          description_short: Lerne grundlegende Konzepte der Informatik!
+          description_student: Im Herbst 2016, startete die College-Leitung ihren
+            neusten AP®-Kurs, AP Computer Science Principles (Informatik-Grundprinzipien).
+            Der Kurs führt Schüler in die grundlegenden Konzepte der Informatik ein
+            und fordert sie heraus, herauszufinden, wie Computer und Technologie die
+            Welt beeinflussen können. Das AP-Programm gestaltete AP Informatik-Grundprinzipien
+            mit dem Ziel, Führungspersönlichkeiten im Feld der Informatik hervorzubringen
+            und die anzuziehen und zu fördern, die traditionell unterrepräsentiert
+            sind by essenziellen Computer-Werkzeugen und multi-disziplinären Möglichkeiten.
+          description_teacher: Im Herbst 2016, startete die College-Leitung ihren
+            neusten AP®-Kurs, AP Computer Science Principles (Informatik-Grundprinzipien).
+            Der Kurs führt Schüler in die grundlegenden Konzepte der Informatik ein
+            und fordert sie heraus, herauszufinden, wie Computer und Technologie die
+            Welt beeinflussen können. Das AP-Programm gestaltete AP Informatik-Grundprinzipien
+            mit dem Ziel, Führungspersönlichkeiten im Feld der Informatik hervorzubringen
+            und die anzuziehen und zu fördern, die traditionell unterrepräsentiert
+            sind by essenziellen Computer-Werkzeugen und multi-disziplinären Möglichkeiten.
+          title: Informatik Prinzipien ('18-'19)
+          version_title: "'18-'19"
+        csp-2019:
+          description_short: Lerne grundlegende Konzepte der Informatik!
+          description_student: Im Herbst 2016, startete die College-Leitung ihren
+            neusten AP®-Kurs, AP Computer Science Principles (Informatik-Grundprinzipien).
+            Der Kurs führt Schüler in die grundlegenden Konzepte der Informatik ein
+            und fordert sie heraus, herauszufinden, wie Computer und Technologie die
+            Welt beeinflussen können. Das AP-Programm gestaltete AP Informatik-Grundprinzipien
+            mit dem Ziel, Führungspersönlichkeiten im Feld der Informatik hervorzubringen
+            und die anzuziehen und zu fördern, die traditionell unterrepräsentiert
+            sind by essenziellen Computer-Werkzeugen und multi-disziplinären Möglichkeiten.
+          description_teacher: Im Herbst 2016, startete die College-Leitung ihren
+            neusten AP®-Kurs, AP Computer Science Principles (Informatik-Grundprinzipien).
+            Der Kurs führt Schüler in die grundlegenden Konzepte der Informatik ein
+            und fordert sie heraus, herauszufinden, wie Computer und Technologie die
+            Welt beeinflussen können. Das AP-Programm gestaltete AP Informatik-Grundprinzipien
+            mit dem Ziel, Führungspersönlichkeiten im Feld der Informatik hervorzubringen
+            und die anzuziehen und zu fördern, die traditionell unterrepräsentiert
+            sind by essenziellen Computer-Werkzeugen und multi-disziplinären Möglichkeiten.
+          title: Informatik-Grundprinzipien ('19-'20)
+          version_title: "'19-'20"
+        csp-2020:
+          description_short: Lerne grundlegende Konzepte der Informatik!
         csp-2021:
           description_short: Lerne grundlegende Konzepte der Informatik!
-        mike-test:
-          title: Informatik Grundlagen
         csp-2022:
           description_short: Lerne grundlegende Konzepte der Informatik!
         csp-2023:
           description_short: Lerne grundlegende Konzepte der Informatik!
-        csd-2023:
-          title: Informatik Entdeckungen
+        mike-test:
+          title: Informatik Grundlagen
     resources:
-      curriculum/csd/2020:
-        name: Lehrplan
-      teacher_forum/csd/2020:
-        name: Lehrer Forum
       curriculum/csd/2017:
         name: Lehrplan
-      teacher_forum_6/csd/2017:
-        name: Lehrer Forum
-      curriculum/csd/2019:
-        name: Lehrplan
-      teacher_forum/csd/2019:
-        name: Lehrer Forum
       curriculum/csd/2018:
         name: Lehrplan
+      curriculum/csd/2019:
+        name: Lehrplan
+      curriculum/csd/2020:
+        name: Lehrplan
+      getting_started_with_csd/csd/2021:
+        name: Erste Schritte der Informatik
+      teacher_forum/csd/2019:
+        name: Lehrer Forum
+      teacher_forum/csd/2020:
+        name: Lehrer Forum
+      teacher_forum_6/csd/2017:
+        name: Lehrer Forum
       teacher_forum_6/csd/2018:
         name: Lehrer Forum

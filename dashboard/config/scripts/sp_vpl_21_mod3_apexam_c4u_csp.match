@@ -13,3 +13,4 @@ answer 'Multi-select'
 
 question 'An independent programming project, along with written responses explaining the project.'
 answer 'Create Performance Task'
+allow_multiple_attempts true

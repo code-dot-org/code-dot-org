@@ -20,7 +20,6 @@ Feature: NeighborhoodPainting
   #Scenario: Stop Button Closes Connection
     #Given I create a levelbuilder named "Simone"
     #And I am on "http://studio.code.org/s/allthethings/lessons/44/levels/7"
-    #And I rotate to landscape
     #And I wait for the page to fully load
     #Then element "#runButton" is visible
     #Then I press "runButton"

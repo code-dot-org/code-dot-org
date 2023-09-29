@@ -15,8 +15,8 @@ module Pd::FacilitatorSpecificForm
   def validate_required_fields
     hash = sanitized_form_data_hash
 
-    if get_facilitator_names.any?
-      add_key_error(:who_facilitated) unless hash.key?(:who_facilitated)
+    if get_facilitator_names.any? && !hash.key?(:who_facilitated)
+      add_key_error(:who_facilitated)
     end
 
     # validate facilitator required fields
@@ -45,7 +45,7 @@ module Pd::FacilitatorSpecificForm
   # the field, and the combined field name we expect in the flattened version of
   # our hash. Supports either rails-style keys (underscored symbols) or
   # JSON-style keys (camelCased strings)
-  def each_facilitator_field(hash=nil, camel=false)
+  def each_facilitator_field(hash = nil, camel = false)
     hash ||= camel ? form_data_hash : sanitized_form_data_hash
 
     facilitators = hash.try(:[], camel ? 'whoFacilitated' : :who_facilitated) || []

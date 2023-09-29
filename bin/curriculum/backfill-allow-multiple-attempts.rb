@@ -18,7 +18,7 @@ def level_is_standalone?(level)
 end
 
 def level_is_contained?(level)
-  level.levels_parent_levels.count {|l| l.kind == 'contained'} > 0
+  ParentLevelsChildLevel.where(child_level_id: level.id).where(kind: 'contained').count > 0
 end
 
 def find_union(standalone_levels, contained_levels)
@@ -49,21 +49,22 @@ end
 # Then call assign_attributes to update the level and rewrite the file
 # This method catches exceptions as not all errors are immediately addressable
 def update_dsl_level(level, allow_multiple_attempts)
-  begin
-    allow_multiple_attempts_str = allow_multiple_attempts.to_s
-    text = level.dsl_text
-    if text.include?('allow_multiple_attempts')
-      return if text.include?("allow_multiple_attempts #{allow_multiple_attempts_str}")
-      text.gsub!(/allow_multiple_attempts.*$/, "allow_multiple_attempts #{allow_multiple_attempts_str}")
-    else
-      text += "\nallow_multiple_attempts #{allow_multiple_attempts_str}"
-    end
-    level.assign_attributes({dsl_text: text, allow_multiple_attempts: allow_multiple_attempts_str})
-    level.save!
-    raise "allow_multiple_attempts unset for #{level.name}" if level.reload.allow_multiple_attempts.nil?
-  rescue => exception
-    puts "Error updating #{level.name} with error #{exception.inspect}"
+  allow_multiple_attempts_str = allow_multiple_attempts.to_s
+  path = level.file_path
+  file_contents = File.read(path)
+  text = level.class.decrypt_dsl_text_if_necessary(file_contents)
+  encrypted = file_contents =~ /^encrypted '(.*)'$/m
+  if text.include?('allow_multiple_attempts')
+    return if text.include?("allow_multiple_attempts #{allow_multiple_attempts_str}")
+    text.gsub!(/allow_multiple_attempts.*$/, "allow_multiple_attempts #{allow_multiple_attempts_str}")
+  else
+    text += "\nallow_multiple_attempts #{allow_multiple_attempts_str}"
   end
+  level.assign_attributes({dsl_text: text, allow_multiple_attempts: allow_multiple_attempts_str, encrypted: encrypted})
+  level.save!
+  raise "allow_multiple_attempts unset for #{level.name}" if level.reload.allow_multiple_attempts.nil?
+rescue => exception
+  puts "Error updating #{level.name} with error #{exception.inspect}"
 end
 
 def backfill_match_levels
@@ -78,13 +79,14 @@ def backfill_match_levels
     update_dsl_level(level, false)
   end
 
-  Match.all.filter {|l| l.allow_multiple_attempts.nil?}.each do |level|
+  contained_level_names = contained_match_levels.map(&:name)
+  Match.all.filter {|l| l.allow_multiple_attempts.nil? && !contained_level_names.include?(l.name)}.each do |level|
     update_dsl_level(level, true)
   end
 end
 
 def main
-  backfill_free_response_levels
+  # backfill_free_response_levels
   backfill_match_levels
 end
 

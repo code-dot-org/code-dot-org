@@ -50,9 +50,6 @@ ru:
       expired: "истек, запросите новый"
       not_found: "не найдено"
       not_locked: "не был заблокирован"
-      not_saved:
-        one: "1 ошибка запрещает сохранить %{resource}:"
-        other: "%{count} ошибок запрещают сохранить %{resource}:"
     invitations:
       send_instructions: 'Приглашение было выслано на адрес %{email}.'
       invitation_token_invalid: 'Предоставленный токен приглашения недействителен!'

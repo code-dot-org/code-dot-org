@@ -90,6 +90,7 @@
   "import": "idxal\n",
   "includeFiles": "Faylları daxil edin",
   "insertCode": "Kodu daxil edin",
+  "inStartSourcesMode": "Başlanğıc mənbələrini redaktə edirsiniz.",
   "internalCompilerException": "Ups. Proqramınızı tərtib edərkən bizim tərəfimizdə bir səhv var. Yenidən çalışdırın.Bu səhv davam edərsə, support@code.org ünvanından bizimlə əlaqə saxlayın. Mesajınıza {connectionId} əlaqə kimliyini daxil etdiyinizə əmin olun.",
   "internalException": "Ups. Bizim tərəfimizdə bir səhv var.Proqramınızı yeniden çalışdırmağa cəhd edin.Bu səhv davam edərsə, support@code.org ünvanından bizimlə əlaqə saxlayın. Mesajınıza {connectionId} əlaqə kimliyini daxil etdiyinizə əmin olun.",
   "internalRuntimeException": "Ups.Proqramınızı tərtib edərkən bizim tərəfimizdə bir səhv var.Yeniden çalışdırmağa cəhd edin.Bu səhv davam edərsə, support@code.org ünvanından bizimlə əlaqə saxlayın. Mesajınıza {connectionId} əlaqə kimliyini daxil etdiyinizə əmin olun.",
@@ -120,6 +121,7 @@
   "onlyVisibleToYou": "müəllim şərhləri yalnız sizə görünür",
   "openedDate": "açıldı {date}",
   "programCompleted": "Proqram tamamlandı.",
+  "programEndedUnexpectedly": "Proqramınız gözlənilmədən dayandı. Proqramınızı idarə etmək imkanımız tükənmiş ola bilər və ya şəbəkə problemləriniz ola bilər. Zəhmət olmasa şəbəkə bağlantınızı yoxlayın və yenidən cəhd edin.",
   "programStopped": "Proqram dayandırıldı.",
   "refresh": "Yenilə",
   "rename": "Adını dəyiş",
@@ -136,6 +138,7 @@
   "sendingVideo": "Video göndərilir. Ümumi Uzunluq: {totalTime} saniyə.",
   "startingPainter": "Boyaçı başladılır.",
   "startReview": "Baxışa başlayın",
+  "startSourcesTemplateWarning": "XƏBƏRDARLIQ: Bir şablon ilə bir səviyyədə başlanğıc mənbələrini redaktə edirsiniz. Başlanğıc mənbələri şablonda müəyyən edilməlidir.",
   "submit": "Göndər",
   "successfulTestResult": "{className} > {methodName} UĞUR ALDI",
   "switchToDisplayTheme": "{displayTheme}-ə keçin",
@@ -152,6 +155,8 @@
   "unknownError": "Ups. Biz bir səhvlə qarşılaşdıq. Proqramınızı yenidən çalışdırın. Bu səhv yenidən baş verərsə, bizimlə support@code.org vasitəsilə əlaqə qurun. Bağlantı İD‘sini mesajınızda qeyd etdiyinizdən əmin olun.",
   "unsupportedMiniAppMessage": "Səviyyə növü uyğunsuzluğu: {miniAppType} layihələri qeyri-{miniAppType} səviyyədə dəstəklənmir.",
   "userBlocked": "Siz kodunuzu çox dəfə işlətmisiniz və hesabınız kilidlənib. Hesabınızı açmaq üçün support@code.org ilə əlaqə saxlayın.",
+  "userBlockedTemporary": "Java kodunu 24 saat ərzində işlədə biləcəyiniz neçə dəfə həddinə çatdınız. Özünüz və tələbələriniz üçün daha yüksək bir kvota əldə etmək üçün təsdiqlənmiş müəllim olun.\n[Doğrulanmış müəllim olmaq üçün necə] haqqında daha çox məlumat əldə edin (https://support.code.org/hc/en-us/articles/115001550131-How-to-Become-a-Verified-Teacher).\n[Müəllim yoxlanmasına niyə ehtiyac olduğunu] öyrənin (https://support.code.org/hc/en-us/articles/6104078305549-Teacher-Verification-and-CSA).\nBu mesajın səhv olduğuna inanırsınızsa, support@code.org ilə əlaqə saxlayın.",
+  "waitingForServer": "Cavab gözləyirəm...",
   "youHaveProjectsToReview": "You have projects to review...",
   "yourPeer": "Sənin yaşıdın"
 }

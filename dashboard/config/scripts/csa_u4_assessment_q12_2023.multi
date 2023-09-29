@@ -42,3 +42,5 @@ We start by checking the condition `(x > 0) && (y > 0)`. This is `true` because 
 
 We then check the condition `x > y`. This is `false` because `3` is not greater than `4`, so the body of the `if` statement is skipped, and the body of the `else` branch is executed. This results in `"O"` being printed to the console.
 MARKDOWN
+
+allow_multiple_attempts true

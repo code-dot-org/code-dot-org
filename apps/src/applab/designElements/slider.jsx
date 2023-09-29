@@ -1,6 +1,7 @@
 import $ from 'jquery';
 import PropTypes from 'prop-types';
 import React from 'react';
+import applabMsg from '@cdo/applab/locale';
 import PropertyRow from './PropertyRow';
 import BooleanPropertyRow from './BooleanPropertyRow';
 import ZOrderRow from './ZOrderRow';
@@ -21,61 +22,61 @@ class SliderProperties extends React.Component {
     return (
       <div id="propertyRowContainer">
         <PropertyRow
-          desc={'id'}
+          desc={applabMsg.designElementProperty_id()}
           initialValue={elementUtils.getId(element)}
           handleChange={this.props.handleChange.bind(this, 'id')}
           isIdRow={true}
         />
         <PropertyRow
-          desc={'width (px)'}
+          desc={applabMsg.designElementProperty_widthPx()}
           isNumber={true}
           initialValue={parseInt(element.style.width, 10)}
           handleChange={this.props.handleChange.bind(this, 'style-width')}
         />
         <PropertyRow
-          desc={'height (px)'}
+          desc={applabMsg.designElementProperty_heightPx()}
           isNumber={true}
           initialValue={parseInt(element.style.height, 10)}
           handleChange={this.props.handleChange.bind(this, 'style-height')}
         />
         <PropertyRow
-          desc={'x position (px)'}
+          desc={applabMsg.designElementProperty_xPositionPx()}
           isNumber={true}
           initialValue={parseInt(element.style.left, 10)}
           handleChange={this.props.handleChange.bind(this, 'left')}
         />
         <PropertyRow
-          desc={'y position (px)'}
+          desc={applabMsg.designElementProperty_yPositionPx()}
           isNumber={true}
           initialValue={parseInt(element.style.top, 10)}
           handleChange={this.props.handleChange.bind(this, 'top')}
         />
         <PropertyRow
-          desc={'value'}
+          desc={applabMsg.designElementProperty_value()}
           isNumber={true}
           initialValue={element.defaultValue}
           handleChange={this.props.handleChange.bind(this, 'defaultValue')}
         />
         <PropertyRow
-          desc={'minimum value'}
+          desc={applabMsg.designElementProperty_minimumValue()}
           isNumber={true}
           initialValue={parseInt(element.min, 10)}
           handleChange={this.props.handleChange.bind(this, 'min')}
         />
         <PropertyRow
-          desc={'maximum value'}
+          desc={applabMsg.designElementProperty_maximumValue()}
           isNumber={true}
           initialValue={parseInt(element.max, 10)}
           handleChange={this.props.handleChange.bind(this, 'max')}
         />
         <PropertyRow
-          desc={'step size'}
+          desc={applabMsg.designElementProperty_stepSize()}
           isNumber={true}
           initialValue={parseInt(element.step, 10)}
           handleChange={this.props.handleChange.bind(this, 'step')}
         />
         <BooleanPropertyRow
-          desc={'hidden'}
+          desc={applabMsg.designElementProperty_hidden()}
           initialValue={$(element).hasClass('design-mode-hidden')}
           handleChange={this.props.handleChange.bind(this, 'hidden')}
         />
@@ -108,21 +109,18 @@ class SliderEvents extends React.Component {
   render() {
     const element = this.props.element;
 
-    const inputName = 'Input';
-    const inputDesc = 'Triggered whenever the value of the slider is modified.';
-
     return (
       <div id="eventRowContainer">
         <PropertyRow
-          desc={'id'}
+          desc={applabMsg.designElementProperty_id()}
           initialValue={elementUtils.getId(element)}
           handleChange={this.props.handleChange.bind(this, 'id')}
           isIdRow={true}
         />
         <EventHeaderRow />
         <EventRow
-          name={inputName}
-          desc={inputDesc}
+          name={applabMsg.designElementEvent_input()}
+          desc={applabMsg.designElement_slider_inputEventDesc()}
           handleInsert={this.insertInput}
         />
       </div>

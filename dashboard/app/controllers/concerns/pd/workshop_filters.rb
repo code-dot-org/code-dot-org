@@ -21,7 +21,7 @@ module Pd::WorkshopFilters
   #  - course: null (all), 'csf', or '-csf' (not CSF)
   def load_filtered_ended_workshops
     # Default to the last week, by schedule
-    end_date = params[:end] || Date.today
+    end_date = params[:end] || Time.zone.today
     start_date = params[:start] || (end_date - 1.week)
     query_by = params[:query_by] || QUERY_BY_SCHEDULE
     course = params[:course]

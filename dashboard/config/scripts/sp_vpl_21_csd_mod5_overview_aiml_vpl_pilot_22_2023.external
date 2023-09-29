@@ -5,8 +5,10 @@ description 'description here'
 markdown <<MARKDOWN
 # Teaching AI and Machine Learning
 
-##### Welcome! This professional learning module is designed help you prepare to teach Code.org's Artificial Intelligence and Machine Learning unit. 
+<div style="background-color: #a6e3e8; border-radius: 40px; color: #000000; width: 95%; padding: 1px 20px 1px 20px;">
 
+<p style="line-height: 1.5; margin-left: 10px; margin-right: 10px; margin-top: 10px; margin-bottom: 10px; font-size: 18px; ">Welcome! This professional learning module is designed help you prepare to teach Code.org's Artificial Intelligence and Machine Learning unit. 
+</p></div>
 
 <img src="https://images.code.org/1cd0ec71458414495502b9598efd2028-image-1639773441510.37.01 PM.png" alt="Image of AI bot and a model card" style="border-radius:40px; float: right; padding-right: 120px; height: 275px; clear: both; margin: 0 20px 20px 0;">
 

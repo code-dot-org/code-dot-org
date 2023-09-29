@@ -8,3 +8,5 @@ right 'Sources are cited'
 teacher_markdown <<MARKDOWN
 **Content: Unit 2 Lesson 16**
 MARKDOWN
+
+allow_multiple_attempts true

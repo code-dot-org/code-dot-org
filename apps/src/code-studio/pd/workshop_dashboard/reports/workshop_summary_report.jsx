@@ -7,7 +7,7 @@ import React from 'react';
 import {connect} from 'react-redux';
 import ReportTable from './report_table';
 import {PermissionPropType, WorkshopAdmin} from '../permission';
-import {Checkbox, Button} from 'react-bootstrap';
+import {Checkbox, Button} from 'react-bootstrap'; // eslint-disable-line no-restricted-imports
 import {QUERY_BY_VALUES, COURSE_VALUES} from './report_constants';
 import Spinner from '../../components/spinner';
 

@@ -7,7 +7,7 @@ wrong '`prices.get(i) <= budget, 		menu.add(menu.get(i));`'
 wrong '`menu.get(i) <= budget,			choices.add(prices.get(i));`'
 wrong '`menu.get(i) == budget,			choices.add(prices.get(i));`'
 
-allow_multiple_attempts false
+allow_multiple_attempts true
 
 markdown <<MARKDOWN
 Consider the following code segment:

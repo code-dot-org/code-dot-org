@@ -1,5 +1,10 @@
 <Gamelab>
   <config><![CDATA[{
+  "published": true,
+  "game_id": 50,
+  "created_at": "2022-10-14T13:55:29.000Z",
+  "level_num": "custom",
+  "user_id": 155,
   "properties": {
     "skin": "gamelab",
     "code_functions": {
@@ -61,18 +66,12 @@
     "start_blocks": "var fruit = createSprite(100, 200);\r\n//1) Update the fruit animation\r\nfruit.setAnimation(\"apple\");\r\n\r\nvar vegetable = createSprite(300, 200);\r\n//2) Update the vegetable animation\r\nvegetable.setAnimation(\"carrot\");\r\n\r\ndrawSprites();",
     "map_reference": "/courses/csd-2022/guides/sprites",
     "libraries_enabled": "false",
+    "video_key": "csd_gamelab_animation_tab",
     "preload_asset_list": null,
-    "encrypted_examples": [
-
-    ]
+    "encrypted_examples": "JQwgQZWLCuWNBd78cU17bTc/PFLd04Y7NfsRjU+m+jLPSoSpgEp4U/fNmZ4t\nogCCdtDx7WgjOa+y6GEc/WHrug==\n"
   },
-  "game_id": 50,
-  "published": true,
-  "created_at": "2022-10-14T13:55:29.000Z",
-  "level_num": "custom",
-  "user_id": 155,
   "notes": "",
-  "audit_log": "[{\"changed_at\":\"2022-10-14T13:55:29.762+00:00\",\"changed\":[\"cloned from \\\"CSD U3 Sprites Exploration_2023\\\"\"],\"cloned_from\":\"CSD U3 Sprites Exploration_2023\"},{\"changed_at\":\"2022-10-14 14:24:00 +0000\",\"changed\":[\"code_functions\",\"hide_animation_mode\",\"start_animations\",\"preload_asset_list\"],\"changed_by_id\":14639,\"changed_by_email\":\"dan+teacher@code.org\"},{\"changed_at\":\"2022-10-14 15:45:09 +0000\",\"changed\":[\"code_functions\",\"long_instructions\",\"validation_enabled\",\"display_name\",\"start_blocks\",\"preload_asset_list\",\"encrypted_examples\"],\"changed_by_id\":14639,\"changed_by_email\":\"dan+teacher@code.org\"},{\"changed_at\":\"2022-10-14 15:46:43 +0000\",\"changed\":[\"code_functions\",\"long_instructions\",\"preload_asset_list\",\"encrypted_examples\"],\"changed_by_id\":14639,\"changed_by_email\":\"dan+teacher@code.org\"},{\"changed_at\":\"2022-10-14 16:17:09 +0000\",\"changed\":[\"code_functions\",\"long_instructions\",\"start_blocks\",\"preload_asset_list\",\"encrypted_examples\"],\"changed_by_id\":14639,\"changed_by_email\":\"dan+teacher@code.org\"},{\"changed_at\":\"2022-10-20 21:16:08 +0000\",\"changed\":[\"code_functions\",\"long_instructions\",\"preload_asset_list\",\"contained_level_names\"],\"changed_by_id\":14639,\"changed_by_email\":\"dan+teacher@code.org\"},{\"changed_at\":\"2022-10-21 19:12:42 +0000\",\"changed\":[\"code_functions\",\"long_instructions\",\"start_blocks\",\"preload_asset_list\",\"contained_level_names\"],\"changed_by_id\":14639,\"changed_by_email\":\"dan+teacher@code.org\"},{\"changed_at\":\"2023-03-15 00:57:24 +0000\",\"changed\":[\"code_functions\",\"long_instructions\",\"preload_asset_list\",\"contained_level_names\"],\"changed_by_id\":14639,\"changed_by_email\":\"dan+teacher@code.org\"}]"
+  "audit_log": "[{\"changed_at\":\"2022-10-14T13:55:29.762+00:00\",\"changed\":[\"cloned from \\\"CSD U3 Sprites Exploration_2023\\\"\"],\"cloned_from\":\"CSD U3 Sprites Exploration_2023\"},{\"changed_at\":\"2022-10-14 14:24:00 +0000\",\"changed\":[\"code_functions\",\"hide_animation_mode\",\"start_animations\",\"preload_asset_list\"],\"changed_by_id\":14639,\"changed_by_email\":\"dan+teacher@code.org\"},{\"changed_at\":\"2022-10-14 15:45:09 +0000\",\"changed\":[\"code_functions\",\"long_instructions\",\"validation_enabled\",\"display_name\",\"start_blocks\",\"preload_asset_list\",\"encrypted_examples\"],\"changed_by_id\":14639,\"changed_by_email\":\"dan+teacher@code.org\"},{\"changed_at\":\"2022-10-14 15:46:43 +0000\",\"changed\":[\"code_functions\",\"long_instructions\",\"preload_asset_list\",\"encrypted_examples\"],\"changed_by_id\":14639,\"changed_by_email\":\"dan+teacher@code.org\"},{\"changed_at\":\"2022-10-14 16:17:09 +0000\",\"changed\":[\"code_functions\",\"long_instructions\",\"start_blocks\",\"preload_asset_list\",\"encrypted_examples\"],\"changed_by_id\":14639,\"changed_by_email\":\"dan+teacher@code.org\"},{\"changed_at\":\"2022-10-20 21:16:08 +0000\",\"changed\":[\"code_functions\",\"long_instructions\",\"preload_asset_list\",\"contained_level_names\"],\"changed_by_id\":14639,\"changed_by_email\":\"dan+teacher@code.org\"},{\"changed_at\":\"2022-10-21 19:12:42 +0000\",\"changed\":[\"code_functions\",\"long_instructions\",\"start_blocks\",\"preload_asset_list\",\"contained_level_names\"],\"changed_by_id\":14639,\"changed_by_email\":\"dan+teacher@code.org\"},{\"changed_at\":\"2023-03-15 00:57:24 +0000\",\"changed\":[\"code_functions\",\"long_instructions\",\"preload_asset_list\",\"contained_level_names\"],\"changed_by_id\":14639,\"changed_by_email\":\"dan+teacher@code.org\"},{\"changed_at\":\"2023-05-23 17:29:32 +0000\",\"changed\":[\"code_functions\",\"preload_asset_list\",\"contained_level_names\"],\"changed_by_id\":18602,\"changed_by_email\":\"angelina+levelbuilder@code.org\"},{\"changed_at\":\"2023-07-10 02:17:48 +0000\",\"changed\":[\"code_functions\",\"preload_asset_list\",\"contained_level_names\"],\"changed_by_id\":18602,\"changed_by_email\":\"angelina+levelbuilder@code.org\"}]"
 }]]></config>
   <blocks/>
 </Gamelab>

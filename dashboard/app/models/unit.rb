@@ -122,6 +122,7 @@ class Unit < ApplicationRecord
             :vocabularies,
             :programming_expressions,
             :objectives,
+            {rubric: {learning_goals: :learning_goal_evidence_levels}},
             :standards,
             :opportunity_standards
           ]
@@ -159,6 +160,7 @@ class Unit < ApplicationRecord
       message: 'cannot start with a tilde or dot or contain slashes'
     }
 
+  validates_presence_of :link
   validates :published_state, acceptance: {accept: Curriculum::SharedCourseConstants::PUBLISHED_STATE.to_h.values.push(nil), message: 'must be nil, in_development, pilot, beta, preview or stable'}
   validate :deeper_learning_courses_cannot_be_launched
 
@@ -279,6 +281,10 @@ class Unit < ApplicationRecord
   #   said json.  Expect this to be nil on levelbulider, since those objects
   #   are created, not seeded. Used by the staging build to identify when a
   #   unit is being updated, so we can regenerate PDFs.
+  # is_deprecated - true if the unit is deprecated. If this flag is set, we will redirect
+  #   all /s, /lessons and /levels page in that unit to our "This course is deprecated" page.
+  #   We don't use published_state here because some courses in the deprecated published state
+  #   are not ready to be redirected. In the future we should unify these two states.
   serialized_attrs %w(
     hideable_lessons
     professional_learning_course
@@ -306,6 +312,7 @@ class Unit < ApplicationRecord
     is_migrated
     seeded_from
     use_legacy_lesson_plans
+    is_deprecated
   )
 
   def self.twenty_hour_unit
@@ -783,7 +790,7 @@ class Unit < ApplicationRecord
     script_levels.map do |script_level|
       script_level.levels.map do |level|
         next if level.contained_levels.empty? ||
-          !TEXT_RESPONSE_TYPES.include?(level.contained_levels.first.class)
+          TEXT_RESPONSE_TYPES.exclude?(level.contained_levels.first.class)
         text_response_levels << {
           script_level: script_level,
           levels: [level.contained_levels.first]
@@ -859,6 +866,10 @@ class Unit < ApplicationRecord
       standards_with_lessons << standard_summary
     end
     standards_with_lessons
+  end
+
+  def duration_in_minutes
+    lessons.sum(&:total_lesson_duration)
   end
 
   def under_curriculum_umbrella?(specific_curriculum_umbrella)
@@ -1243,7 +1254,7 @@ class Unit < ApplicationRecord
       end
     rescue => exception
       filepath_to_delete = Unit.script_json_filepath(new_name)
-      File.delete(filepath_to_delete) if File.exist?(filepath_to_delete)
+      FileUtils.rm_f(filepath_to_delete)
       raise exception, "Error: #{exception.message}"
     end
   end
@@ -1581,7 +1592,7 @@ class Unit < ApplicationRecord
   end
 
   def unit_without_lesson_plans?
-    lessons.select(&:has_lesson_plan).empty?
+    lessons.none?(&:has_lesson_plan)
   end
 
   def summarize_for_rollup(user = nil)

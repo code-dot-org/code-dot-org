@@ -1,15 +1,15 @@
 {
-  "selectDataset": "Vyberte soubor dat, který chcete použít.",
-  "uploadedDataset": "Právě jste nahráli soubor dat.",
-  "selectedDataset": "Právě jste vybrali soubor dat.",
-  "dataDisplayLabel": "Vyberte jeden sloupec, který chcete předpovědět.",
   "dataDisplayFeatures": "Zvolte jeden nebo více sloupců jako vtupy, které vám pomohou předpovídat. ",
-  "selectedFeatureNumerical": "Právě jste vybrali číselnou funkci.",
-  "selectedFeatureCategorical": "Právě jste vybrali kategorickou funkci.",
-  "trainModel": "Váš model se trénuje.",
+  "dataDisplayLabel": "Vyberte jeden sloupec, který chcete předpovědět.",
   "generateResults": "Váš model se testuje.",
+  "modelSummary": "Model jste úspěšně vytrénovali a uložili. Zkontrolujte podrobnosti o modelu a kliknutím na tlačítko Dokončit použijete vytrénovaný model v a App Lab.",
   "results": "Zkontrolujte výsledky.",
   "resultsDetails": "Zobrazují se podrobnosti o výsledcích.",
   "saveModel": "Vytrénovaný model uložte pro použítí v aplikaci App Lab.",
-  "modelSummary": "Model jste úspěšně vytrénovali a uložili. Zkontrolujte podrobnosti o modelu a kliknutím na tlačítko Dokončit použijete vytrénovaný model v a App Lab."
+  "selectDataset": "Vyberte soubor dat, který chcete použít.",
+  "selectedDataset": "Právě jste vybrali soubor dat.",
+  "selectedFeatureCategorical": "Právě jste vybrali kategorickou funkci.",
+  "selectedFeatureNumerical": "Právě jste vybrali číselnou funkci.",
+  "trainModel": "Váš model se trénuje.",
+  "uploadedDataset": "Právě jste nahráli soubor dat."
 }

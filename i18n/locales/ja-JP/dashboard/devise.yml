@@ -50,9 +50,6 @@ ja:
       expired: "期限が切れたので、もう一度リクエストしてください"
       not_found: "見つかりませんでした"
       not_locked: "ロックされていませんでした"
-      not_saved:
-        one: "エラーが1つあるのでこの%{resource}は保存されませんでした："
-        other: "%{count}つのエラーがあるのでこの%{resource}は保存されませんでした："
     invitations:
       send_instructions: '%{email} に招待メールを送りました。'
       invitation_token_invalid: 'この招待コードは使えません。'

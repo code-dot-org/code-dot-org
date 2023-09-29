@@ -14,3 +14,4 @@ answer 'a simplified for loop that can be used to iterate through every element 
 
 question 'infinite loop'
 answer 'a loop that never stops running'
+allow_multiple_attempts true

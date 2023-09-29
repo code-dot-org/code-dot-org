@@ -64,7 +64,7 @@ Resources:
               - !Sub "arn:aws:secretsmanager:${AWS::Region}:${AWS::AccountId}:secret:<%=environment%>/cdo/*"
               - !Ref ChefConfig
 <% if database && !rack_env?(:production) -%>
-              - !Ref DatabaseSecret
+              - !Ref DatabaseSecretAdmin
 <% end -%>
             Condition:
               StringEquals:
@@ -236,14 +236,19 @@ Resources:
       HealthCheckIntervalSeconds: 10
       HealthCheckTimeoutSeconds: 5
       TargetGroupAttributes:
+        # Least Outstanding Requests algorithm precludes usage of Slow Start feature below.
         - Key: load_balancing.algorithm.type
-          Value: least_outstanding_requests
+          Value: round_robin
         - Key: stickiness.enabled
           Value: true
         - Key: stickiness.type
           Value: lb_cookie
         - Key: stickiness.lb_cookie.duration_seconds
           Value: 30
+        # Linearly increase the HTTP throughput share to new instances to give them time to initialize and load caches.
+        - Key: slow_start.duration_seconds
+          Value: 300
+
 <%   unless frontends -%>
       Targets:
         - {Id: !Ref <%=daemon%>, Port: 80}
@@ -515,9 +520,22 @@ Resources:
         # BlockDeviceMappings cannot be modified after instance creation, doing so will DELETE the instance and recreate it.
         # EBS Volume is manually modified via CLI or Console to prevent instance recreation.
         # https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ec2-instance.html#cfn-ec2-instance-blockdevicemappings
+        <%
+          # Historically, our instances have used 64-gigabyte volumes. That's
+          # smaller than we'd like, but updating the volume size requires
+          # recreating the whole stack. We have been gradually rolling out
+          # updates on a per-environment basis, with the goal of eventually
+          # upgrading everything to 256.
+          default_volume_size = 64
+          volume_size_overrides = {
+            production: 128,
+            staging: 256,
+            test: 256
+          }
+        %>
         - DeviceName: /dev/sda1
           Ebs:
-            VolumeSize: <%= rack_env?(:production) ? 128 : 64 %>
+            VolumeSize: <%= volume_size_overrides.fetch(rack_env, default_volume_size) %>
             VolumeType: gp2
       UserData:
         Fn::Base64: !Sub |
@@ -552,7 +570,7 @@ Resources:
       DisableApiTermination: <%= rack_env?(:adhoc) ? false : true %>
 # We don't yet provision the production database cluster/instances via CloudFormation.
 <% if database && !rack_env?(:production) %>
-    DependsOn: Aurora1
+    DependsOn: DBProxy
 <% end -%>
 <%end-%>
 
@@ -600,7 +618,7 @@ Resources:
           GroupSet: [!ImportValue VPC-FrontendSecurityGroup]
 # We don't yet provision the production database cluster/instances via CloudFormation.
 <%   if database && !rack_env?(:production)%>
-    DependsOn: Aurora1
+    DependsOn: DBProxy
 <%   end -%>
 <% end-%>
 
@@ -612,14 +630,12 @@ Resources:
 <%=  component 'alarms'%>
 <% end -%>
 
+<%=  component 'logging'%>
 
-
-<% if database-%>
   # ---------------------------------------------
   # Database
   # ---------------------------------------------
 <%=  component 'database'%>
-<% end -%>
 
   # ---------------------------------------------
   # Codeprojects Resources

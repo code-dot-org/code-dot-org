@@ -22,7 +22,7 @@ export default function MultiSelectGroup({
   return (
     <div className={styles.multiSelectGroup}>
       <fieldset>
-        <label>{label}</label>
+        <label className={styles.typographyLabel}>{label}</label>
         {options.map(option => (
           <MultiSelectButton
             label={option.label}

@@ -12,11 +12,12 @@
       "project_sharing": true,
       "show_calendar": true,
       "student_detail_progress_view": true,
+      "tts": true,
       "weekly_instructional_minutes": 225
     },
     "new_name": null,
     "family_name": null,
-    "serialized_at": "2023-04-20 18:02:58 UTC",
+    "serialized_at": "2023-07-17 23:36:36 UTC",
     "published_state": null,
     "instruction_type": null,
     "instructor_audience": null,
@@ -5634,33 +5635,47 @@
       }
     },
     {
+      "name": "CSD Guide to Assessment ",
+      "url": "https://docs.google.com/document/d/1IO5XgPW_Apil_Uziq5hAMCBgilm8txZ3sp8atxiKiLU/view",
+      "key": "csd_guide_to_assessment_2",
+      "properties": {
+        "include_in_pdf": true
+      },
+      "seeding_key": {
+        "resource.key": "csd_guide_to_assessment_2"
+      }
+    },
+    {
+      "name": "CSD Guide to Curriculum Videos ",
+      "url": "https://docs.google.com/document/d/1c2hF3CaTJacvwDy4y_9-m1jSkSPmK__F6pDPetXVvy4/view",
+      "key": "csd_guide_to_curriculum_videos_2",
+      "properties": {
+        "include_in_pdf": true
+      },
+      "seeding_key": {
+        "resource.key": "csd_guide_to_curriculum_videos_2"
+      }
+    },
+    {
+      "name": "CSD Guide to Teaching and Learning Strategies",
+      "url": "https://docs.google.com/document/d/1Cg5iTwERoX25Y2DdLNmrPCbVB2d9FPGfUMUvcnVoN8Q/view",
+      "key": "csd_guide_to_teaching_and_learning_strategies_2",
+      "properties": {
+        "include_in_pdf": true
+      },
+      "seeding_key": {
+        "resource.key": "csd_guide_to_teaching_and_learning_strategies_2"
+      }
+    },
+    {
       "name": "CSD Guide to Using Resources",
-      "url": "https://docs.google.com/document/d/1NYJMHZYnAZYNctehlQOImSstsu48sRGOMbi4It4ZjkI/view\t",
+      "url": "https://docs.google.com/document/d/1NYJMHZYnAZYNctehlQOImSstsu48sRGOMbi4It4ZjkI/view",
       "key": "csd_guide_to_using_resources",
       "properties": {
+        "include_in_pdf": true
       },
       "seeding_key": {
         "resource.key": "csd_guide_to_using_resources"
-      }
-    },
-    {
-      "name": "CSD Implementation Guide",
-      "url": "https://docs.google.com/document/d/1sM_1Oxb7TGp5gSfuMjs0X0_Tko9tm8QJ4N6L26NI_iE/view\t",
-      "key": "csd_implementation_guide",
-      "properties": {
-      },
-      "seeding_key": {
-        "resource.key": "csd_implementation_guide"
-      }
-    },
-    {
-      "name": "CSD Learning Frameworks",
-      "url": "https://docs.google.com/document/d/1WlmAr6CeU4NAQhPAa0YAO-ujVTls_12fOP3lbc2SLxo/view\t",
-      "key": "csd_learning_frameworks",
-      "properties": {
-      },
-      "seeding_key": {
-        "resource.key": "csd_learning_frameworks"
       }
     },
     {
@@ -5986,6 +6001,16 @@
       }
     },
     {
+      "name": "Problem Solving Process with Data",
+      "url": "https://docs.google.com/document/d/19pdlJOjWqA5s7f5sr9mTL-v7x_ZMjQP36SlwqzJ-Ipo/view",
+      "key": "problem_solving_process_with_data_1",
+      "properties": {
+      },
+      "seeding_key": {
+        "resource.key": "problem_solving_process_with_data_1"
+      }
+    },
+    {
       "name": "Problem Solving with Big Data",
       "url": "https://docs.google.com/presentation/d/1pOEp_iDVNnscSE3LZvErt5DMmoBGJc2uixcwqApdpyM/template/preview",
       "key": "problem_solving_with_big_data",
@@ -6195,8 +6220,8 @@
       }
     },
     {
-      "name": "Secret Messages 2021",
-      "url": "https://docs.google.com/document/d/1McCQtY7xWPnKvemkAf0bLxxxyJVJzQomWv4wcjInjXc/view",
+      "name": "Secret Messages ",
+      "url": "https://docs.google.com/document/d/1j1IKIzIf3R3sck0hgW740SGbQmWTFdNKMrwPK0dBqSA/edit?usp=sharing",
       "key": "secret_messages_2021",
       "properties": {
         "audience": "Student",
@@ -6774,19 +6799,31 @@
     },
     {
       "seeding_key": {
+        "resource.key": "csd_guide_to_assessment_2",
+        "script.name": "focus-on-data2-2023"
+      }
+    },
+    {
+      "seeding_key": {
+        "resource.key": "csd_guide_to_curriculum_videos_2",
+        "script.name": "focus-on-data2-2023"
+      }
+    },
+    {
+      "seeding_key": {
+        "resource.key": "csd_guide_to_teaching_and_learning_strategies_2",
+        "script.name": "focus-on-data2-2023"
+      }
+    },
+    {
+      "seeding_key": {
         "resource.key": "csd_guide_to_using_resources",
         "script.name": "focus-on-data2-2023"
       }
     },
     {
       "seeding_key": {
-        "resource.key": "csd_implementation_guide",
-        "script.name": "focus-on-data2-2023"
-      }
-    },
-    {
-      "seeding_key": {
-        "resource.key": "csd_learning_frameworks",
+        "resource.key": "problem_solving_process_with_data_1",
         "script.name": "focus-on-data2-2023"
       }
     },

@@ -39,10 +39,6 @@ $container-width: 309px;
     color: $neutral_dark80;
   }
 
-  button {
-    margin: 0;
-  }
-
   h4 {
     margin-bottom: 0.75em;
     color: $neutral_dark;
@@ -91,11 +87,31 @@ $container-width: 309px;
     white-space: nowrap;
     overflow: hidden;
     text-overflow: ellipsis;
+  }
+}
 
-    &:hover {
-      max-width: inherit;
-      overflow: inherit;
+.labelTooltip {
+  opacity: 1;
+  margin-bottom: 0.75em;
+  pointer-events: none;
+
+  :global(.tooltip-inner) { /* stylelint-disable-line selector-pseudo-class-no-unknown */
+    border-radius: 5px;
+    color: #fff;
+    background-color: #222;
+
+    p {
+      color: #fff;
+      margin: 0;
     }
+  }
+
+  :global(.tooltip-arrow) { /* stylelint-disable-line selector-pseudo-class-no-unknown */
+    left: 50%;
+    bottom: 0;
+    border: 15px solid transparent;
+    border-top: 15px solid #222;
+    transform: translate(-50%, calc(100% - 8px));
   }
 }
 
@@ -110,33 +126,79 @@ $container-width: 309px;
     margin: 0;
     color: $neutral_dark;
   }
+
+  i {
+    font-size: 0.875em;
+  }
 }
 
 .buttonsContainer {
   display: flex;
   flex-wrap: wrap;
   margin-top: auto;
+
+  button,
+  a,
+  a:link,
+  a:visited {
+    margin: 0;
+    height: 40px;
+    font-size: 1em;
+    line-height: 36.5px;
+  }
 }
 
 .buttonsContainer_notEnglish {
   flex-direction: column-reverse;
   row-gap: 1em;
 
-  button {
+  button,
+  a,
+  a:link,
+  a:visited {
     width: 100%;
-    height: 40px;
-    font-size: 1em;
+    display: flex;
+    justify-content: center;
   }
 }
 
 .buttonsContainer_english {
   justify-content: space-between;
 
-  button {
+  button,
+  a,
+  a:link,
+  a:visited {
     // width calculated to ensure space between buttons is 12px
     // (totalContainerWidth - 2*padding - minimumSpaceBetweenButtons) / 2
     width: math.div($container-width - (2 * 16) - 12, 2);
-    height: 40px;
-    font-size: 1em;
+  }
+}
+
+.centerExpandedCard {
+  display: flex;
+}
+
+.cardsContainer:nth-child(3n + 1) .centerExpandedCard {
+  justify-content: flex-start;
+}
+
+.cardsContainer:nth-child(3n + 2) .centerExpandedCard {
+  justify-content: center;
+}
+
+.cardsContainer:nth-child(3n + 3) {
+  .centerExpandedCard {
+    justify-content: flex-end;
+  }
+
+  .arrowContainer:before {
+    background: $neutral_light;
+  }
+}
+
+.expandedCard {
+  .curriculumInfoContainer {
+    border-color: $neutral-dark !important;
   }
 }

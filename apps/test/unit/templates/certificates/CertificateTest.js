@@ -91,7 +91,11 @@ describe('Certificate', () => {
       wrapper.update();
       image = wrapper.find('#uitest-certificate img');
       const expectedData = {name: 'Student', course: 'dance'};
-      const expectedFilename = btoa(JSON.stringify(expectedData));
+      const encodedData = btoa(JSON.stringify(expectedData));
+      const expectedFilename = encodedData
+        .replace(/\+/g, '-')
+        .replace(/\//g, '_')
+        .replace(/=+$/g, '');
       const expectedSrc = `/certificate_images/${expectedFilename}.jpg`;
       expect(image.prop('src')).to.equal(expectedSrc);
     });

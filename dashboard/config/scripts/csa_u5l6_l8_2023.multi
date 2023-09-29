@@ -7,7 +7,7 @@ wrong '![](https://images.code.org/486a61ecfc1b02aa824a14ee2351c449-image-168212
 wrong '![](https://images.code.org/8e8f92bf4b5f7dfa621f7d17d2ebb706-image-1682124258149.png)'
 wrong '![](https://images.code.org/693d5e7800fe14d936c21a57044a520c-image-1682124262663.png)'
 
-allow_multiple_attempts nil
+allow_multiple_attempts true
 
 markdown <<MARKDOWN
 Consider the method below which is intended to find and return the `Pixel` object containing the most amount of red.

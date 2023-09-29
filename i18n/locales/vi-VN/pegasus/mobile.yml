@@ -1504,6 +1504,7 @@
   header_stats: "Số liệu thống kê"
   header_help_us: "Giúp đỡ chúng tôi"
   header_about: "Giới thiệu"
+  header_incubator: "Ấp ấp"
   header_teacher_community: "Cộng đồng giáo viên"
   header_help_support: 'Giúp đỡ và hỗ trợ'
   header_report_bug: "Báo cáo sự cố"
@@ -1618,7 +1619,7 @@
   hoc2018_mc_download_adventurer: "Tải về các phiên bản ngoại tuyến của Minecraft Chuyến phiêu lưu."
   hoc2018_mc_educators: "Dành cho những người làm giáo dục"
   hoc2018_mc_educators_box1_title: "Lập trình với Minecraft"
-  hoc2018_mc_educators_box1_desc: 'Minecraft: Phiên bản dành cho Giáo dục cung cấp giáo trình, khóa đào tạo và lập trình tiêu chuẩn trong Minecraft.'
+  hoc2018_mc_educators_box1_desc: "Minecraft: Phiên bản dành cho Giáo dục cung cấp giáo trình, khóa đào tạo và lập trình tiêu chuẩn trong Minecraft."
   hoc2018_mc_educators_box1_button: "Hãy bắt đầu"
   hoc2018_mc_educators_box2_title: "Tải Hướng dẫn dành cho người Điều phối"
   hoc2018_mc_educators_box2_desc: "Bộ công cụ này sẽ giúp bạn tổ chức một Giờ Lập trình và khuyến khích các học viên của bạn tham gia khoa học máy tính."
@@ -1726,7 +1727,7 @@
   hoc2018_mc_with_microsoft: "Hợp tác cùng"
   hoc2018_mc_thank_microsoft: "Cảm ơn Microsoft đã ủng hộ tầm nhìn và sứ mệnh của chúng tôi để giúp cho mọi trẻ em đều có cơ hội học khoa học máy tính cũng như các kỹ năng cần thiết để thành công trong thế kỷ 21."
   hoc2019_mc_mee_title: "Minecraft Lợi ích của AI"
-  hoc2019_mc_mee_description1: 'Hướng dẫn Giờ lập trình Minecraft hiện đã có mặt trên Minecraft: Education Edition dành cho Windows, Mac và iPad. Hãy tìm hiểu những căn bản về viết mã lệnh và khám phá AI cùng các em học sinh!'
+  hoc2019_mc_mee_description1: "Hướng dẫn Giờ lập trình Minecraft hiện đã có mặt trên Minecraft: Education Edition dành cho Windows, Mac và iPad. Hãy tìm hiểu những căn bản về viết mã lệnh và khám phá AI cùng các em học sinh!"
   hoc2019_mc_mee_description2: "Truy cập các tài liệu miễn phí bao gồm giáo án, video, giáo trình khoa học máy tính và đào tạo giáo viên."
   hoc2019_mc_more_coding_resources: "Xem thêm nguồn hỗ trợ viết mã"
   hoc2019_dance_previous_versions: "Bạn đang tìm phiên bản trước của Bữa tiệc Khiêu vũ?\nNhấn vào đây để bắt đầu [Phần 1](%{dance_2018_link}) và [Phần 2](%{dance_extras_2018_link}) từ năm 2018."
@@ -1739,18 +1740,18 @@
   page_not_available_description: "Rất tiếc, trang bạn yêu cầu không còn khả dụng tại địa chỉ này. Nếu bạn vẫn cần truy cập, vui lòng gửi email đến [support@code.org](%{support_email_link})."
   page_not_available_button: "Quay về Trang chủ"
   hoc2020_mc_available_code_org: "Có trên Code.org"
-  hoc2020_mc_available_mee: 'Có trong Minecraft: Education Edition'
+  hoc2020_mc_available_mee: "Có trong Minecraft: Education Edition"
   hoc2020_mc_mee_title: "Minecraft Truyện cổ tích về hai ngôi làng"
-  hoc2020_mc_mee_description: 'Hướng dẫn Giờ lập trình Minecraft hiện đã có mặt trên Minecraft: Education Edition dành cho Windows, Mac, Chromebook và iPad. Hãy tìm hiểu những căn bản về viết mã lệnh và khám phá sự đa dạng cũng như hòa nhập của các em học sinh! Hãy truy cập những nguồn hỗ trợ miễn phí, bao gồm thời khóa biểu, video, chương trình đào tạo khoa học máy tính, bài học về sự công bằng và các khóa đào tạo giáo viên.'
+  hoc2020_mc_mee_description: "Hướng dẫn Giờ lập trình Minecraft hiện đã có mặt trên Minecraft: Education Edition dành cho Windows, Mac, Chromebook và iPad. Hãy tìm hiểu những căn bản về viết mã lệnh và khám phá sự đa dạng cũng như hòa nhập của các em học sinh! Hãy truy cập những nguồn hỗ trợ miễn phí, bao gồm thời khóa biểu, video, chương trình đào tạo khoa học máy tính, bài học về sự công bằng và các khóa đào tạo giáo viên."
   hoc2021_mc_mee_title: "Minecraft TimeCraft"
-  hoc2021_mc_mee_description: 'Du hành ngược thời gian và học cách code! Hướng dẫn Giờ Lập Trình Minecraft mới hiện đã có trong Minecraft: Education Edition (Minecraft: Phiên bản giáo dục) dành cho Windows, Mac, Chromebook và iPad. Bắt đầu với các tài nguyên, tài liệu đào tạo và video miễn phí dành cho giáo viên.'
+  hoc2021_mc_mee_description: "Du hành ngược thời gian và học cách code! Hướng dẫn Giờ Lập Trình Minecraft mới hiện đã có trong Minecraft: Education Edition (Minecraft: Phiên bản giáo dục) dành cho Windows, Mac, Chromebook và iPad. Bắt đầu với các tài nguyên, tài liệu đào tạo và video miễn phí dành cho giáo viên."
   hoc2021_mc_mee_villages_title: "Tale of Two Villages (Câu chuyện về hai ngôi làng)"
-  hoc2021_mc_mee_villages_description: 'Tìm hiểu kiến thức cơ bản về lập trình và khám phá sự đa dạng và hòa nhập với học viên của bạn trong Minecraft: Education Edition.'
+  hoc2021_mc_mee_villages_description: "Tìm hiểu kiến thức cơ bản về lập trình và khám phá sự đa dạng và hòa nhập với học viên của bạn trong Minecraft: Education Edition."
   hoc2021_mc_mee_ai_title: "AI For Good (AI vì những điều tốt đẹp)"
-  hoc2021_mc_mee_ai_description: 'Khám phá AI với học viên của bạn và học cách viết code trong Minecraft: Education Edition.'
+  hoc2021_mc_mee_ai_description: "Khám phá AI với học viên của bạn và học cách viết code trong Minecraft: Education Edition."
   hoc2022_mc_mee_title: "Minecraft Thoát khỏi công trình"
   hoc2022_mc_mee_description: 'Hãy thoát khỏi biệt thự bí ẩn trước bình minh và nhận một triệu viên ngọc lục bảo! Hướng dẫn Minecraft Giờ lập trình mới hiện đã có trong Minecraft: Phiên bản giáo dục cho Windows, Mac, Chromebook, iPad và điện thoại. Hãy bắt đầu với các tài liệu, khóa đào tạo và video miễn phí dành cho giáo viên. '
-  hoc2022_mc_mee_timecraft_description: 'Hãy du hành ngược về quá khứ để giải cứu tương lai trong bài học lập trình miễn phí trong Minecraft: Phiên bản giáo dục này.'
+  hoc2022_mc_mee_timecraft_description: "Hãy du hành ngược về quá khứ để giải cứu tương lai trong bài học lập trình miễn phí trong Minecraft: Phiên bản giáo dục này."
   footer_powered_by_aws: "Amazon Web Services và biểu tượng “Được hỗ trợ bởi AWS” là các nhãn hiệu của Amazon.com, Inc. hoặc các chi nhánh của Amazon tại Hoa Kỳ và / hoặc các quốc gia khác."
   footer_built_on_github: "Được lập trình trên GitHub của Microsoft"
   codebytes_skinny_banner_title: "Từ ngày 7 đến 11 tháng 12, hãy cùng chúng tôi tham gia các bài học mini trực tiếp về CodeBytes!"
@@ -1799,7 +1800,7 @@
   ai_zooniverse: "Zooniverse - Chụp hình ngựa vằn núi"
   ai_zooniverse_description: "Giúp bảo vệ loài ngựa vằn núi Cape có nguy cơ tuyệt chủng bằng cách xác định các loài động vật khác nhau trong hình ảnh."
   ai_audience: "Khán giả"
-  ai_minecraft_description: 'Truy cập các tài liệu miễn phí bao gồm giáo án, video, giáo trình khoa học máy tính và đào tạo giáo viên. (Yêu cầu Minecraft: Education Edition)'
+  ai_minecraft_description: "Truy cập các tài liệu miễn phí bao gồm giáo án, video, giáo trình khoa học máy tính và đào tạo giáo viên. (Yêu cầu Minecraft: Education Edition)"
   ai_k_12_audience: "K-12 (Yêu cầu biết đọc)"
   ai_microsoft_workshop: "Hội thảo trực tuyến miễn phí từ Microsoft"
   ai_microsoft_workshop_description: "Khơi dậy trí tò mò với hội thảo STEM và lập trình miễn phí."

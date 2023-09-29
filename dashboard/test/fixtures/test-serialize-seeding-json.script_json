@@ -1055,5 +1055,101 @@
         "opportunity_standard.shortcode": "test-serialize-seeding-json-lg-1-l-2-opportunity-standard-2"
       }
     }
+  ],
+  "rubrics": [
+    {
+      "level_name": "test-serialize-seeding-json_blockly_8",
+      "seeding_key": {
+        "lesson.key": "test-serialize-seeding-json-lg-1-l-1",
+        "lesson_group.key": "test-serialize-seeding-json-lesson-group-1",
+        "script.name": "test-serialize-seeding-json-script"
+      }
+    },
+    {
+      "level_name": "test-serialize-seeding-json_blockly_16",
+      "seeding_key": {
+        "lesson.key": "test-serialize-seeding-json-lg-1-l-2",
+        "lesson_group.key": "test-serialize-seeding-json-lesson-group-1",
+        "script.name": "test-serialize-seeding-json-script"
+      }
+    }
+  ],
+  "learning_goals": [
+    {
+      "key": "test-serialize-seeding-json-lg-1-l-1-learning-goal-1",
+      "position": 0,
+      "learning_goal": "Test Learning Goal",
+      "ai_enabled": false,
+      "tips": null,
+      "seeding_key": {
+        "learning_goal.key": "test-serialize-seeding-json-lg-1-l-1-learning-goal-1",
+        "lesson.key": "test-serialize-seeding-json-lg-1-l-1",
+        "lesson_group.key": "test-serialize-seeding-json-lesson-group-1",
+        "script.name": "test-serialize-seeding-json-script"
+      }
+    },
+    {
+      "key": "test-serialize-seeding-json-lg-1-l-2-learning-goal-1",
+      "position": 0,
+      "learning_goal": "Test Learning Goal",
+      "ai_enabled": false,
+      "tips": null,
+      "seeding_key": {
+        "learning_goal.key": "test-serialize-seeding-json-lg-1-l-2-learning-goal-1",
+        "lesson.key": "test-serialize-seeding-json-lg-1-l-2",
+        "lesson_group.key": "test-serialize-seeding-json-lesson-group-1",
+        "script.name": "test-serialize-seeding-json-script"
+      }
+    }
+  ],
+  "learning_goal_evidence_levels": [
+    {
+      "understanding": 0,
+      "teacher_description": "Description for teacher",
+      "ai_prompt": null,
+      "seeding_key": {
+        "understanding": 0,
+        "learning_goal.key": "test-serialize-seeding-json-lg-1-l-1-learning-goal-1",
+        "lesson.key": "test-serialize-seeding-json-lg-1-l-1",
+        "lesson_group.key": "test-serialize-seeding-json-lesson-group-1",
+        "script.name": "test-serialize-seeding-json-script"
+      }
+    },
+    {
+      "understanding": 0,
+      "teacher_description": "Description for teacher",
+      "ai_prompt": null,
+      "seeding_key": {
+        "understanding": 0,
+        "learning_goal.key": "test-serialize-seeding-json-lg-1-l-2-learning-goal-1",
+        "lesson.key": "test-serialize-seeding-json-lg-1-l-2",
+        "lesson_group.key": "test-serialize-seeding-json-lesson-group-1",
+        "script.name": "test-serialize-seeding-json-script"
+      }
+    },
+    {
+      "understanding": 1,
+      "teacher_description": "Description for teacher",
+      "ai_prompt": null,
+      "seeding_key": {
+        "understanding": 1,
+        "learning_goal.key": "test-serialize-seeding-json-lg-1-l-1-learning-goal-1",
+        "lesson.key": "test-serialize-seeding-json-lg-1-l-1",
+        "lesson_group.key": "test-serialize-seeding-json-lesson-group-1",
+        "script.name": "test-serialize-seeding-json-script"
+      }
+    },
+    {
+      "understanding": 1,
+      "teacher_description": "Description for teacher",
+      "ai_prompt": null,
+      "seeding_key": {
+        "understanding": 1,
+        "learning_goal.key": "test-serialize-seeding-json-lg-1-l-2-learning-goal-1",
+        "lesson.key": "test-serialize-seeding-json-lg-1-l-2",
+        "lesson_group.key": "test-serialize-seeding-json-lesson-group-1",
+        "script.name": "test-serialize-seeding-json-script"
+      }
+    }
   ]
 }

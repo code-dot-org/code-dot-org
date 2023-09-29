@@ -1,22 +1,22 @@
 import {ChordEvent, ChordEventValue} from './interfaces/ChordEvent';
-import {Effects} from './interfaces/Effects';
-import {FunctionContext} from './interfaces/FunctionContext';
 import {PatternEvent, PatternEventValue} from './interfaces/PatternEvent';
 import {PlaybackEvent} from './interfaces/PlaybackEvent';
-import {SkipContext} from './interfaces/SkipContext';
 import {SoundEvent} from './interfaces/SoundEvent';
-import {TrackMetadata} from './interfaces/TrackMetadata';
-import MusicLibrary, {SoundFolder} from './MusicLibrary';
+import MusicLibrary, {SampleSequence, SoundFolder} from './MusicLibrary';
 import SamplePlayer, {SampleEvent} from './SamplePlayer';
 import {generateNotesFromChord, ChordNote} from '../utils/Chords';
+import {getTranposedNote, Key} from '../utils/Notes';
+import {Effects} from './interfaces/Effects';
+import Lab2MetricsReporter from '@cdo/apps/lab2/Lab2MetricsReporter';
 
 // Using require() to import JS in TS files
 const soundApi = require('./sound');
 const constants = require('../constants');
 
-// Default to 4/4 time
+// Default to 4/4 time, 120 BPM, C Major
 const BEATS_PER_MEASURE = 4;
 const DEFAULT_BPM = 120;
+const DEFAULT_KEY = Key.C;
 
 /**
  * Main music player component which maintains the list of playback events and
@@ -24,30 +24,38 @@ const DEFAULT_BPM = 120;
  */
 export default class MusicPlayer {
   private bpm: number;
-  private playbackEvents: PlaybackEvent[];
-  private lastMeasure: number;
-  private tracksMetadata: {[trackId: string]: TrackMetadata};
-  private uniqueInvocationIdUpto: number;
+  private key: Key;
   private samplePlayer: SamplePlayer;
   private library: MusicLibrary | null;
 
-  constructor(bpm: number = DEFAULT_BPM) {
-    this.bpm = bpm;
-    this.playbackEvents = [];
-    this.tracksMetadata = {};
-    this.uniqueInvocationIdUpto = 0;
+  constructor(bpm: number = DEFAULT_BPM, key: Key = DEFAULT_KEY) {
+    this.bpm = this.validateBpm(bpm);
+    this.key = this.validateKey(key);
     this.samplePlayer = new SamplePlayer();
     this.library = null;
-    this.lastMeasure = 0;
   }
 
   /**
    * Initializes the MusicPlayer and {@link SamplePlayer} with the music library.
    * Playback cannot start until the player is initialized.
    */
-  initialize(library: MusicLibrary) {
+  initialize(
+    library: MusicLibrary,
+    updateLoadProgress: (value: number) => void
+  ) {
     this.library = library;
-    this.samplePlayer.initialize(library);
+
+    // Set key and BPM from library if present
+    const libraryBpm = library.getBPM();
+    if (libraryBpm) {
+      this.bpm = this.validateBpm(libraryBpm);
+    }
+    const libraryKey = library.getKey();
+    if (libraryKey) {
+      this.key = this.validateKey(libraryKey);
+    }
+
+    this.samplePlayer.initialize(library, this.bpm, updateLoadProgress);
   }
 
   /**
@@ -63,137 +71,6 @@ export default class MusicPlayer {
 
   getBPM(): number {
     return this.bpm;
-  }
-
-  /**
-   * Schedule a given sound (identified by its ID) for playback, at a given measure.
-   * If playback is in progress, the sound will be played by the {@link SamplePlayer}
-   *
-   * @param id unique ID of the sound
-   * @param measure when the sound should be played
-   * @param insideWhenRun whether the sound was scheduled via normal playback, or triggered
-   * @param trackId (optional) track ID this sound belongs to
-   * @param functionContext (optional) function context this sound belongs to
-   */
-  playSoundAtMeasureById(
-    id: string,
-    measure: number,
-    insideWhenRun: boolean,
-    trackId?: string,
-    functionContext?: FunctionContext,
-    skipContext?: SkipContext,
-    effects?: Effects,
-    blockId?: string
-  ) {
-    if (!this.samplePlayer.initialized() || this.library === null) {
-      console.log('MusicPlayer not initialized');
-      return;
-    }
-    const soundData = this.library.getSoundForId(id);
-    if (!id || soundData === null || !measure) {
-      console.log(`Invalid input. id: ${id} measure: ${measure}`);
-      return;
-    }
-
-    const soundEvent: SoundEvent = {
-      type: 'sound',
-      id,
-      triggered: !insideWhenRun,
-      when: measure,
-      trackId,
-      functionContext,
-      skipContext,
-      effects,
-      length: soundData.length,
-      soundType: soundData.type,
-      blockId,
-    };
-
-    this.addNewEvent(soundEvent);
-
-    if (this.samplePlayer.playing()) {
-      this.samplePlayer.playSamples(this.convertEventToSamples(soundEvent));
-    }
-  }
-
-  playPatternAtMeasureById(
-    value: PatternEventValue,
-    measure: number,
-    insideWhenRun: boolean,
-    trackId?: string,
-    functionContext?: FunctionContext,
-    skipContext?: SkipContext,
-    effects?: Effects,
-    blockId?: string
-  ) {
-    if (!this.samplePlayer.initialized()) {
-      console.log('MusicPlayer not initialized');
-      return;
-    }
-    if (!value || !measure) {
-      console.log(`Invalid input. pattern value: ${value} measure: ${measure}`);
-      return;
-    }
-
-    const patternEvent: PatternEvent = {
-      type: 'pattern',
-      value,
-      triggered: !insideWhenRun,
-      when: measure,
-      trackId,
-      functionContext,
-      skipContext,
-      effects,
-      length: constants.DEFAULT_PATTERN_LENGTH,
-      blockId,
-      id: JSON.stringify(value),
-    };
-
-    this.addNewEvent(patternEvent);
-
-    if (this.samplePlayer.playing()) {
-      this.samplePlayer.playSamples(this.convertEventToSamples(patternEvent));
-    }
-  }
-
-  playChordAtMeasure(
-    value: ChordEventValue,
-    measure: number,
-    insideWhenRun: boolean,
-    trackId?: string,
-    functionContext?: FunctionContext,
-    skipContext?: SkipContext,
-    effects?: Effects,
-    blockId?: string
-  ) {
-    if (!this.samplePlayer.initialized()) {
-      console.log('MusicPlayer not initialized');
-      return;
-    }
-    if (!value || !measure) {
-      console.log(`Invalid input. pattern value: ${value} measure: ${measure}`);
-      return;
-    }
-
-    const chordEvent: ChordEvent = {
-      type: 'chord',
-      value,
-      triggered: !insideWhenRun,
-      when: measure,
-      trackId,
-      functionContext,
-      skipContext,
-      effects,
-      length: constants.DEFAULT_CHORD_LENGTH,
-      blockId,
-      id: JSON.stringify(value),
-    };
-
-    this.addNewEvent(chordEvent);
-
-    if (this.samplePlayer.playing()) {
-      this.samplePlayer.playSamples(this.convertEventToSamples(chordEvent));
-    }
   }
 
   /**
@@ -214,6 +91,7 @@ export default class MusicPlayer {
       triggered: false,
       length: constants.DEFAULT_CHORD_LENGTH,
       id: 'preview',
+      blockId: 'preview',
     };
     this.samplePlayer.previewSamples(
       this.convertEventToSamples(chordEvent),
@@ -238,6 +116,7 @@ export default class MusicPlayer {
       triggered: false,
       length: constants.DEFAULT_PATTERN_LENGTH,
       id: 'preview',
+      blockId: 'preview',
     };
 
     this.samplePlayer.previewSamples(
@@ -256,14 +135,24 @@ export default class MusicPlayer {
   /**
    * Start playback. Schedules all queued playback events for playback
    * and tells the {@link SamplePlayer} to start playing.
+   *
+   * @param startPosition to start playback from. Defaults to 1
+   * (beginning of song) if not specified.
    */
-  playSong() {
-    const sampleEvents = [];
-    for (const event of this.playbackEvents) {
-      sampleEvents.push(...this.convertEventToSamples(event));
-    }
+  playSong(events: PlaybackEvent[], startPosition = 1) {
+    this.samplePlayer.startPlayback(
+      events.map(event => this.convertEventToSamples(event)).flat(),
+      this.convertPlayheadPositionToSeconds(startPosition)
+    );
+  }
 
-    this.samplePlayer.startPlayback(sampleEvents);
+  /**
+   * Play the given events. Assumes that playback is in progress.
+   */
+  playEvents(events: PlaybackEvent[]) {
+    this.samplePlayer.playSamples(
+      events.map(event => this.convertEventToSamples(event)).flat()
+    );
   }
 
   /**
@@ -274,30 +163,10 @@ export default class MusicPlayer {
   }
 
   /**
-   * Clear all from the list of playback events, and stop any sounds that have
-   * not yet been played, if playback is in progress.
+   * Stop any sounds that have not yet been played if playback is in progress.
    */
-  clearAllEvents() {
-    this.playbackEvents = [];
-    this.lastMeasure = 0;
-    this.tracksMetadata = {};
-
-    Object.keys(this.tracksMetadata).forEach(trackId => {
-      if (this.tracksMetadata[trackId].insideWhenRun) {
-        delete this.tracksMetadata[trackId];
-      }
-    });
-
-    // If playing, stop all samples that have not yet been played.
+  stopAllSoundsStillToPlay() {
     this.samplePlayer.stopAllSamplesStillToPlay();
-  }
-
-  getPlaybackEvents(): PlaybackEvent[] {
-    return this.playbackEvents;
-  }
-
-  getLastMeasure(): number {
-    return this.lastMeasure;
   }
 
   // Returns the current playhead position, in floating point for an exact position,
@@ -327,143 +196,33 @@ export default class MusicPlayer {
     return (60 / this.bpm) * BEATS_PER_MEASURE;
   }
 
-  /**
-   * Create a new track.
-   *
-   * @param id unique ID of this track
-   * @param name display name of the track (does not have to be unique)
-   * @param measureStart starting measure of the track
-   * @param insideWhenRun whether the track was scheduled via standard playback, or triggered
-   */
-  createTrack(
-    id: string,
-    name: string,
-    measureStart: number,
-    insideWhenRun: boolean
-  ) {
-    if (id === null) {
-      console.warn(`Invalid track ID`);
-      return;
-    }
-
-    if (this.tracksMetadata[id]) {
-      console.warn(`Track ${id}: ${name} already exists!`);
-      return;
-    }
-
-    this.tracksMetadata[id] = {
-      name,
-      insideWhenRun,
-      currentMeasure: measureStart,
-      maxConcurrentSounds: 0,
-    };
-  }
-
-  /**
-   * Add the given sounds to the track identified by the track Id
-   *
-   * @param trackId
-   * @param soundIds
-   */
-  addSoundsToTrack(trackId: string, ...soundIds: string[]) {
-    if (this.library === null) {
-      console.warn('MusicPlayer not initialized');
-      return;
-    }
-
-    if (!this.tracksMetadata[trackId]) {
-      console.warn('No track with ID: ' + trackId);
-      return;
-    }
-
-    const {currentMeasure, insideWhenRun} = this.tracksMetadata[trackId];
-    let maxSoundLength = 0;
-
-    for (const soundId of soundIds) {
-      this.playSoundAtMeasureById(
-        soundId,
-        currentMeasure,
-        insideWhenRun,
-        trackId
-      );
-
-      maxSoundLength = Math.max(
-        maxSoundLength,
-        this.library.getSoundForId(soundId)?.length || 0
-      );
-    }
-
-    this.tracksMetadata[trackId].currentMeasure += maxSoundLength;
-    this.tracksMetadata[trackId].maxConcurrentSounds = Math.max(
-      soundIds.length,
-      this.tracksMetadata[trackId].maxConcurrentSounds
-    );
-  }
-
-  /**
-   * Add a rest of the given length to the track identified by the track ID.
-   *
-   * @param trackId
-   * @param lengthMeasures
-   */
-  addRestToTrack(trackId: string, lengthMeasures: number) {
-    if (!this.tracksMetadata[trackId]) {
-      console.warn('No track with ID: ' + trackId);
-      return;
-    }
-
-    this.tracksMetadata[trackId].currentMeasure += lengthMeasures;
-  }
-
-  getTracksMetadata(): {[trackId: string]: TrackMetadata} {
-    return this.tracksMetadata;
-  }
-
-  // Called by interpreted code in the simple2 model, this returns
-  // a unique value that is used to differentiate each invocation of
-  // a function, so that the timeline renderer can group relevant events.
-  getUniqueInvocationId() {
-    return this.uniqueInvocationIdUpto++;
-  }
-
-  // Returns an object containing two arrays.  One has the block IDs of all
-  // blocks currently playing, while the other is for those not currently
-  // playing.
-  getCurrentlyPlayingBlockIds(): string[] {
-    const currentPlayheadPosition = this.getCurrentPlayheadPosition();
-    const playbackEvents = this.getPlaybackEvents();
-
-    const playingBlockIds: string[] = [];
-
-    playbackEvents.forEach((playbackEvent: PlaybackEvent) => {
-      const currentlyPlaying =
-        currentPlayheadPosition !== 0 &&
-        currentPlayheadPosition >= playbackEvent.when &&
-        currentPlayheadPosition < playbackEvent.when + playbackEvent.length;
-
-      if (currentlyPlaying) {
-        playingBlockIds.push(playbackEvent.blockId || '');
-      }
-    });
-
-    return playingBlockIds;
-  }
-
-  private addNewEvent(event: PlaybackEvent) {
-    this.playbackEvents.push(event);
-    this.lastMeasure = Math.max(
-      this.lastMeasure,
-      event.when + event.length - 1
-    );
-  }
-
   private convertEventToSamples(event: PlaybackEvent): SampleEvent[] {
+    if (this.library === null) {
+      Lab2MetricsReporter.logWarning('Music Player not initialized');
+      return [];
+    }
+
     if (event.skipContext?.skipSound) {
       return [];
     }
 
     if (event.type === 'sound') {
       const soundEvent = event as SoundEvent;
+      const soundData = this.library.getSoundForId(soundEvent.id);
+      if (!soundData) {
+        Lab2MetricsReporter.logWarning('No sound for ID: ' + soundEvent.id);
+        return [];
+      }
+
+      if (soundData.sequence) {
+        return this.getSamplesForSequence(
+          soundData.sequence,
+          event.when,
+          event.triggered,
+          event.effects
+        );
+      }
+
       return [
         {
           sampleId: soundEvent.id,
@@ -502,7 +261,7 @@ export default class MusicPlayer {
     return [];
   }
 
-  convertChordEventToSampleEvents(event: PlaybackEvent): SampleEvent[] {
+  private convertChordEventToSampleEvents(event: PlaybackEvent): SampleEvent[] {
     const chordEvent = event as ChordEvent;
 
     const {instrument, notes} = chordEvent.value;
@@ -518,11 +277,7 @@ export default class MusicPlayer {
 
     generatedNotes.forEach(note => {
       const sampleId = this.getSampleForNote(note.note, instrument);
-      if (sampleId === null) {
-        console.warn(
-          `No sound for note value ${note} on instrument ${instrument}`
-        );
-      } else {
+      if (sampleId !== null) {
         const noteWhen = chordEvent.when + (note.tick - 1) / 16;
 
         results.push({
@@ -538,7 +293,6 @@ export default class MusicPlayer {
 
   private getSampleForNote(note: number, instrument: string): string | null {
     if (this.library === null) {
-      console.warn('Music Player not initialized');
       return null;
     }
 
@@ -546,18 +300,64 @@ export default class MusicPlayer {
       this.library.getFolderForPath(instrument);
 
     if (folder === null) {
-      console.warn(`No instrument ${instrument}`);
+      Lab2MetricsReporter.logWarning(`No instrument ${instrument}`);
       return null;
     }
 
     const sound = folder.sounds.find(sound => sound.note === note) || null;
     if (sound === null) {
-      console.warn(
+      Lab2MetricsReporter.logWarning(
         `No sound for note value ${note} on instrument ${instrument}`
       );
       return null;
     }
 
     return `${instrument}/${sound.src}`;
+  }
+
+  private getSamplesForSequence(
+    sequence: SampleSequence,
+    eventStart: number,
+    triggered: boolean,
+    effects?: Effects
+  ): SampleEvent[] {
+    const {instrument, events} = sequence;
+    const samples: SampleEvent[] = [];
+
+    events.forEach(event => {
+      const tranposedNote = getTranposedNote(this.key, event.noteOffset);
+      const sampleId = this.getSampleForNote(tranposedNote, instrument);
+      if (sampleId !== null) {
+        const eventWhen = eventStart + (event.position - 1) / 16;
+        const lengthSeconds = (event.length / 16) * this.secondsPerMeasure();
+        samples.push({
+          sampleId,
+          offsetSeconds: this.convertPlayheadPositionToSeconds(eventWhen),
+          lengthSeconds,
+          triggered,
+          effects,
+        });
+      }
+    });
+
+    return samples;
+  }
+
+  private validateBpm(bpm: number): number {
+    if (bpm < 1 || bpm > 500) {
+      console.warn('Invalid BPM. Defaulting to 120');
+      return DEFAULT_BPM;
+    }
+
+    return bpm;
+  }
+
+  private validateKey(key: number): Key {
+    if (Key[key] === undefined) {
+      console.warn('Invalid key. Defaulting to C');
+      return Key.C;
+    }
+
+    return key;
   }
 }

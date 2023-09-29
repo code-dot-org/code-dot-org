@@ -1,5 +1,5 @@
 import GoogleBlockly from 'blockly/core';
-import {blockTypes} from './cdoConstants';
+import {customConnectionBlockTypes} from './cdoConstants';
 
 export default class CdoConstantsProvider extends GoogleBlockly.blockRendering
   .ConstantProvider {
@@ -13,9 +13,9 @@ export default class CdoConstantsProvider extends GoogleBlockly.blockRendering
    */
   shapeFor(connection) {
     const blockTypeShapeMap = {
-      [blockTypes.SPRITE]: this.TRI_INPUT_OUTPUT,
-      [blockTypes.BEHAVIOR]: this.ROUND_INPUT_OUTPUT,
-      [blockTypes.LOCATION]: this.RECT_INPUT_OUTPUT,
+      [customConnectionBlockTypes.SPRITE]: this.TRI_INPUT_OUTPUT,
+      [customConnectionBlockTypes.BEHAVIOR]: this.ROUND_INPUT_OUTPUT,
+      [customConnectionBlockTypes.LOCATION]: this.RECT_INPUT_OUTPUT,
     };
     // `connection.check_` returns a list of accepted value types for the connection
     // or null if all types are compatible.

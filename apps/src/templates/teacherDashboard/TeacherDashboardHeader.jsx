@@ -3,15 +3,10 @@ import React from 'react';
 import {connect} from 'react-redux';
 import Notification, {NotificationType} from '../Notification';
 import {SectionLoginType} from '@cdo/apps/util/sharedConstants';
-import {
-  switchToSection,
-  recordSwitchToSection,
-  recordOpenEditSectionDetails,
-} from './sectionHelpers';
+import {switchToSection, recordSwitchToSection} from './sectionHelpers';
 import PropTypes from 'prop-types';
 import i18n from '@cdo/locale';
 import SmallChevronLink from '../SmallChevronLink';
-import {ReloadAfterEditSectionDialog} from './EditSectionDialog';
 import {
   beginEditingSection,
   getAssignmentName,
@@ -88,6 +83,12 @@ class TeacherDashboardHeader extends React.Component {
       />
     );
   }
+  /**
+   * Returns the URL to the correct section to be edited
+   */
+  editRedirectUrl = sectionId => {
+    return '/sections/' + sectionId + '/edit';
+  };
 
   render() {
     return (
@@ -119,15 +120,9 @@ class TeacherDashboardHeader extends React.Component {
           <div style={styles.rightColumn}>
             <div style={styles.buttonSection}>
               <Button
-                onClick={() => {
-                  this.props.openEditSectionDialog(
-                    this.props.selectedSection.id
-                  );
-                  recordOpenEditSectionDetails(
-                    this.props.selectedSection.id,
-                    'dashboard_header'
-                  );
-                }}
+                __useDeprecatedTag
+                href={this.editRedirectUrl(this.props.selectedSection.id)}
+                className="edit-section-details-link"
                 icon="gear"
                 size="narrow"
                 color="gray"
@@ -144,7 +139,6 @@ class TeacherDashboardHeader extends React.Component {
             </div>
           </div>
         </div>
-        <ReloadAfterEditSectionDialog />
       </div>
     );
   }

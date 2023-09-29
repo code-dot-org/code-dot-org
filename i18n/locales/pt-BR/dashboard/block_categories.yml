@@ -19,6 +19,7 @@ pt:
       Game/Score: Jogo/Pontuação
       Games/Score: Jogos/Pontuação
       Groups: Grupos
+      Image: Imagem
       Input: Entrada
       Location: Localização
       Locations: Localizações
@@ -29,7 +30,7 @@ pt:
       Properties: Propriedades
       Sprites: Sprite
       Text: Texto
-      Variables: variáveis
+      Variables: Variáveis
       'Variables ': 'Variáveis '
       'Variables  ': 'Variáveis  '
       World: Mundo

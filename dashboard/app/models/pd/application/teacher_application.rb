@@ -367,7 +367,7 @@ module Pd::Application
 
     def workshop_present_if_required_for_status
       if regional_partner&.applications_decision_emails == RegionalPartner::SENT_BY_SYSTEM &&
-        WORKSHOP_REQUIRED_STATUSES.include?(status) && !pd_workshop_id
+          WORKSHOP_REQUIRED_STATUSES.include?(status) && !pd_workshop_id
         errors.add :status, "#{status} requires workshop to be assigned"
       end
     end
@@ -398,7 +398,7 @@ module Pd::Application
       end
 
       # email_type maps to the mailer action
-      TeacherApplicationMailer.send(email.email_type, self)
+      TeacherApplicationMailer.send(email.email_type, self).deliver_now
     end
 
     # Return a string if the principal approval state is complete, in-progress, or not required.
@@ -927,6 +927,7 @@ module Pd::Application
       principal_application = Pd::Application::PrincipalApprovalApplication.where(application_guid: application_guid).first
       principal_answers = principal_application&.csv_data
       school_stats = get_latest_school_stats(school_id)
+      simple_columns = [:title_i_status, :students_total, :urm_percent]
       CSV.generate do |csv|
         row = []
         CSV_COLUMNS[:teacher].each do |k|
@@ -947,7 +948,7 @@ module Pd::Application
         end
         CSV_COLUMNS[:nces].each do |k|
           if school_stats
-            if [:title_i_status, :students_total, :urm_percent].include? k
+            if simple_columns.include? k
               row.push(school_stats[k] || school_stats.try(k) || "")
             elsif k == :rural_status
               row.push(school_stats.rural_school?)

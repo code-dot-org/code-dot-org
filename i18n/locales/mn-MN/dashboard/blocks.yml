@@ -7,19 +7,11 @@ mn:
       BadGuys_setSizeAll_dropdown:
         options:
           SIZE:
-            '0.50': extra small
-            '0.75': small
             '1.00': дундаж
-            '2.00': large
-            '3.00': extra large
       BadGuys_setSize_dropdown:
         options:
           SIZE:
-            '0.50': extra small
-            '0.75': small
             '1.00': дундаж
-            '2.00': large
-            '3.00': extra large
       Dancelab_alternateMoves:
         text: "{GROUP}-н төстэй бүр {N} арга хэмжээ \n{MOVE1} ба {MOVE2}-н хоорондох"
         options:
@@ -364,6 +356,7 @@ mn:
             '"right"': баруун багана
             '"x"': хөндлөн загалмай
             '"plus"': нэмэх
+            '"spiral"': спираль
       Dancelab_makeAnonymousDanceSprite:
         text: "{LOCATION} дээр шинэ {COSTUME}-г хийх"
         options:
@@ -443,26 +436,6 @@ mn:
             '18': '18'
             '19': '19'
             '20': '20'
-            '21': '21'
-            '22': '22'
-            '23': '23'
-            '24': '24'
-            '25': '25'
-            '26': '26'
-            '27': '27'
-            '28': '28'
-            '29': '29'
-            '30': '30'
-            '31': '31'
-            '32': '32'
-            '33': '33'
-            '34': '34'
-            '35': '35'
-            '36': '36'
-            '37': '37'
-            '38': '38'
-            '39': '39'
-            '40': '40'
           COSTUME:
             '"ALIEN"': харийнхан
             '"BEAR"': баавгай
@@ -490,6 +463,7 @@ mn:
             '"right"': баруун багана
             '"x"': хөндлөн загалмай
             '"plus"': нэмэх
+            '"spiral"': спираль
       Dancelab_mixColors:
         text: холимог {COLOR1} ба {COLOR2}
       Dancelab_nMeasures:
@@ -1177,7 +1151,9 @@ mn:
       gamelab_makeBurst:
         options:
           EFFECT:
+            '"burst"': тэсрэлт
             '"rain"': бороотой
+            '"spiral"': спираль
       gamelab_makeNewSpriteAnon:
         text: шинэ {ANIMATION_NAME} шидтэнг {LOCATION} руу аваачих
       gamelab_makeNewSpriteGroup:
@@ -1202,9 +1178,7 @@ mn:
       gamelab_makeSpritesWithSize:
         options:
           SIZE:
-            '30': small
             '50': дундаж
-            '100': large
       gamelab_mirrorSprite:
         text: "{SPRITE} нь {DIRECTION} руу харж байна"
         options:
@@ -1235,17 +1209,31 @@ mn:
         text: хөгжимтоглох {SOUND}
         options:
           SOUND:
+            "'sound://category_app/app_button_1.mp3'": товч
             "'sound://category_collect/clicky_crunch.mp3'": хямрах
+            "'sound://category_pop/bubble_pop_cluster_1.mp3'": хөөс
             "'sound://category_animals/bear.mp3'": баавгай
             "'sound://category_animals/cat.mp3'": муур
             "'sound://category_animals/cow.mp3'": үхэр
+            "'sound://category_animals/pig.mp3'": Гахайн
             "'sound://category_animals/sheep.mp3'": хонь
+            "'sound://category_animals/goat.mp3'": ямаа
             "'sound://category_animals/chicken.mp3'": тахиа
+            "'sound://category_animals/rooster.mp3'": азарган тахиа
+            "'sound://category_animals/elephant.mp3'": заан
             "'sound://category_animals/dolphin.mp3'": далайн гахай
+            "'sound://category_animals/chick.mp3'": дэгдээхэйн
             "'sound://category_animals/dog.mp3'": нохой
+            "'sound://category_animals/tiger.mp3'": Бар
+            "'sound://category_instrumental/harpe_pluck_1.mp3'": ятга
+            "'sound://category_retro/retro_game_ui_select_6.mp3'": сонго
             "'sound://category_digital/jump_7.mp3'": үсрэх
       gamelab_playSoundOptionsSoccer:
         text: хөгжимтоглох {SOUND}
+        options:
+          SOUND:
+            "'sound://category_sports/Airhorn_SFX.mp3'": Airhorn
+            "'sound://category_sports/One_Whistle_SFX.mp3'": шүгэл
       gamelab_playSoundOptionsSpace:
         text: хөгжимтоглох {SOUND}
       gamelab_playerBehaviors:
@@ -1290,9 +1278,13 @@ mn:
             '"https://studio.code.org/blockly/media/skins/studio/background_desert.png"': элсэн цөл
             '"https://studio.code.org/blockly/media/skins/studio/background_space.png"': галакси
             '"https://studio.code.org/blockly/media/skins/studio/background_grid.png"': сүлжээ
+            '"https://studio.code.org/api/v1/animation-library/cJKusc1WPgWvCvgdwRX1gk8Zk0FggcVj/category_backgrounds/meadow.png"': нуга
             '"https://studio.code.org/blockly/media/skins/studio/background_rainbow.png"': солонго
             '"https://studio.code.org/blockly/media/skins/studio/background_scifi.png"': шинжлэх ухааны зөгнөлт
+            '"https://studio.code.org/api/v1/animation-library/Thvd6E7yU59nfop.zZKGWKoR8VLZDTq./category_backgrounds/stage.png"': үе шат
             '"https://studio.code.org/blockly/media/skins/studio/background_santa.png"': одод
+            '"https://studio.code.org/api/v1/animation-library/RblQqWAuW0EkLfYuRVK4LRc0uY_76fvi/category_backgrounds/subway.png"': метроны
+            '"https://studio.code.org/api/v1/animation-library/INSgmsgsLuIk1Aqp7g72h9nLFez.NX0p/category_backgrounds/underground.png"': далд
             '"https://studio.code.org/blockly/media/skins/studio/background_underwater.png"': усан доор
             '"https://studio.code.org/blockly/media/skins/studio/background_winter.png"': өвөл
             undefined: байхгүй
@@ -1301,10 +1293,7 @@ mn:
       gamelab_setDefaultSpriteSize:
         options:
           SIZE:
-            '25': extra small
-            '50': small
             '75': дундаж
-            '100': large
       gamelab_setProp:
         text: "{SPRITE} {PROPERTY}-г {VAL} руу тохируулах"
         options:
@@ -1321,10 +1310,7 @@ mn:
           PROPERTY:
             '"scale"': хэмжээ
           SIZE:
-            '25': extra small
-            '50': small
             '75': дундаж
-            '100': large
       gamelab_setSizes:
         text: "{SPRITE} {PROPERTY}-г {N}% руу тохируулах"
         options:
@@ -1335,11 +1321,9 @@ mn:
       gamelab_setSpeed_dropdown:
         options:
           SIZE:
-            '1': extra slow
             '3': удаан
             '5': хэвийн
             '7': хурдан
-            '9': extra fast
       gamelab_setTint:
         text: "{THIS}-г {COLOR} руу өөрчлөх"
       gamelab_setupSim:
@@ -1630,6 +1614,10 @@ mn:
         options:
           BG:
             '"https://studio.code.org/api/v1/animation-library/04L4sdTODkNZF1OHf4qO_I.Al3QP43wA/category_backgrounds/city.png"': хот
+            '"https://studio.code.org/api/v1/animation-library/cJKusc1WPgWvCvgdwRX1gk8Zk0FggcVj/category_backgrounds/meadow.png"': нуга
+            '"https://studio.code.org/api/v1/animation-library/Thvd6E7yU59nfop.zZKGWKoR8VLZDTq./category_backgrounds/stage.png"': үе шат
+            '"https://studio.code.org/api/v1/animation-library/RblQqWAuW0EkLfYuRVK4LRc0uY_76fvi/category_backgrounds/subway.png"': метроны
+            '"https://studio.code.org/api/v1/animation-library/INSgmsgsLuIk1Aqp7g72h9nLFez.NX0p/category_backgrounds/underground.png"': далд
       Mikelab_setProp:
         options:
           PROPERTY:
@@ -1710,26 +1698,41 @@ mn:
       Poetry_addFrame:
         options:
           BRUSH:
+            '"brick"': тоосго
+            '"fire"': гал
+            '"flowers"': цэцэг
             '"hearts"': зүрхнүүд
             '"iceCream"': Зайрмаг
+            '"leaves"': навч
             '"rainbow"': солонго
             '"stars"': одод
+            '"waves"': долгион
       Poetry_makeBurst:
         options:
           EFFECT:
+            '"burst"': тэсрэлт
             '"rain"': бороотой
+            '"spiral"': спираль
       Poetry_makeNewSpriteAnon:
         text: шинэ {ANIMATION_NAME} шидтэнг {LOCATION} руу аваачих
       Poetry_playMusic:
         options:
           SOUND:
+            '"sound://category_nature/steady_campfire_loop.mp3"': тулгын
+            '"sound://category_nature/forest_woodland_ambience_2.mp3"': ойн
             '"sound://category_nature/summer_night_loop.mp3"': шөнө
+            '"sound://category_background/ocean_waves.mp3"': далайн
+            '"sound://category_background/rainforest_ambient_sound.mp3"': ширэнгэн ой
+            '"sound://category_background/wavering_wind.mp3"': нойрмог
             '"sound://category_loops/stabilizing_breath_loop1.mp3"': удаан
       Poetry_playSound:
         text: хөгжимтоглох {SOUND}
         options:
           SOUND:
+            '"sound://category_bell/long_bell_notification.mp3"': хонх
+            '"sound://category_pop/bubble_pop_cluster_2.mp3"': хөөс
             '"sound://category_jump/vibrant_game_jumping_up_1.mp3"': үсрэх
+            '"sound://category_achievements/lighthearted_bonus_objective_5.mp3"': гэрэл
       Poetry_playSoundOptionsSpace:
         text: хөгжимтоглох {SOUND}
       Poetry_setBackground:
@@ -1748,7 +1751,9 @@ mn:
             '"stars"': Одод
             '"squiggles"': Жижиг долгио
           PALETTE:
+            '"ocean"': далайн
             '"rainbow"': солонго
+            '"spring"': хавар
             '"winter"': өвөл
       Poetry_setBackgroundImageAs:
         text: суурь өнгийг {IMG} руу тохируулах
@@ -1760,12 +1765,19 @@ mn:
             '"hearts"': зүрхнүүд
             '"rain"': бороотой
             '"starburst"': Оддын тэсрэлт
+      Poetry_startBehavior:
+        options:
+          BEHAVIOR:
+            '"swimming_left_and_right"': усан
+      Poetry_stopBehavior:
+        options:
+          BEHAVIOR:
+            '"swimming_left_and_right"': усан
       Poetry_textVariableJoin:
         text: "{VAR}{TEXT2}"
       Poetry_whenLineShows:
         options:
           'N':
-            '0': "???"
             '1': '1'
             '2': '2'
             '3': '3'
@@ -1822,16 +1834,10 @@ mn:
         options:
           PORTION:
             '1': бүгд
-            '0.75': most
-            '0.5': half of
-            '0.25': few
       aalab_someStartIntervention:
         options:
           PORTION:
             '1': бүгд
-            '0.75': most
-            '0.5': half of
-            '0.25': few
       binary_drawBin:
         text: хоёртыг зурах {BIN}
       binary_drawBinScreen:
@@ -1974,6 +1980,21 @@ mn:
           DIR:
             right: баруун гар тийш ↻
             left: зүүн гар тийш ↺
+      ecosystems_int10:
+        options:
+          VALUE:
+            '1': '1'
+            '2': '2'
+            '3': '3'
+            '4': '4'
+            '5': '5'
+            '6': '6'
+            '7': '7'
+            '8': '8'
+            '9': '9'
+            '10': '10'
+      storylab_printText:
+        text: "{TEXT}-г хэвлэх"
       storylab_setForegroundEffect2:
         options:
           EFFECT:

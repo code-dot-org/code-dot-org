@@ -1,5 +1,5 @@
 ---
-title: Hour of Code Event How-To
+title: د کوډ پیښې ساعت څنګه
 ---
 
 {{ signup_button }}

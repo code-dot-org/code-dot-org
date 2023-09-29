@@ -38,3 +38,5 @@ The `else if` condition is then checked, which is also `false` because `4 % 2 ==
 
 This means that the `else` branch is executed, which assigns `3` to `y`. This value is then printed to the console.
 MARKDOWN
+
+allow_multiple_attempts true

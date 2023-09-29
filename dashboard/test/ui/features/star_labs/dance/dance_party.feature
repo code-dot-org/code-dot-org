@@ -13,7 +13,6 @@ Feature: Dance Party
   @no_mobile
   Scenario: Can toggle run/reset in Dance Party
     Given I am on "http://studio.code.org/s/allthethings/lessons/37/levels/2?noautoplay=true"
-    And I rotate to landscape
     And I wait for the page to fully load
     And I wait for 3 seconds
     And I wait until I don't see selector "#p5_loading"
@@ -34,7 +33,6 @@ Feature: Dance Party
   @no_mobile
   Scenario: Can get to level success in Dance Party
     Given I am on "http://studio.code.org/s/allthethings/lessons/37/levels/1?noautoplay=true"
-    And I rotate to landscape
     And I wait for the page to fully load
     And I wait for 3 seconds
     And I wait until I don't see selector "#p5_loading"
@@ -64,7 +62,6 @@ Feature: Dance Party
   @no_mobile
   Scenario: Dance Party Share
     Given I am on "http://studio.code.org/s/dance/lessons/1/levels/13?noautoplay=true"
-    And I rotate to landscape
     And I wait for the page to fully load
     And I wait for the song selector to load
     And element "#song_selector" has value "cheapthrills_sia"
@@ -96,7 +93,6 @@ Feature: Dance Party
   @no_mobile
   Scenario: Dance Party can share while logged out
     Given I am on "http://studio.code.org/s/dance/lessons/1/levels/13?noautoplay=true"
-    And I rotate to landscape
     And I wait for the page to fully load
 
     When I navigate to the shared version of my project

@@ -7,7 +7,7 @@ wrong '`CSA is the best! A is the best! The best! est! est!`'
 wrong '`CSA is the best!A is the best! The best!est!`'
 wrong '`CSA is the best!A is the best! The best!`'
 
-allow_multiple_attempts false
+allow_multiple_attempts true
 
 markdown <<MARKDOWN
 Consider the following method:

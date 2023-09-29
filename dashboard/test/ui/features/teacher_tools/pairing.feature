@@ -7,7 +7,6 @@ Feature: Student pairing
     Given I create a student named "Thing_Two"
     And I join the section
     Given I am on "http://studio.code.org/s/allthethings/lessons/18/levels/7"
-    And I rotate to landscape
     And I wait for the page to fully load
     Then I initiate pairing
     And I verify the user menu shows "Thing_One" and "Thing_Two" are in a pairing group
@@ -39,7 +38,6 @@ Feature: Student pairing
     Given I create a student named "Thing_Two"
     And I join the section
     Given I am on "http://studio.code.org/s/allthethings/lessons/2/levels/2"
-    And I rotate to landscape
     And I wait for the page to fully load
     Then I initiate pairing
     And I verify the user menu shows "Thing_One" and "Thing_Two" are in a pairing group
@@ -63,7 +61,6 @@ Feature: Student pairing
     Given I create a student named "Thing_Two"
     And I join the section
     Given I am on "http://studio.code.org/s/starwars/lessons/1/levels/5"
-    And I rotate to landscape
     And I wait for the page to fully load
     Then I initiate pairing
     And I verify the user menu shows "Thing_One" and "Thing_Two" are in a pairing group

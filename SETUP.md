@@ -9,19 +9,21 @@ You can do Code.org development using OSX, Ubuntu, or Windows (running Ubuntu in
 
 1. Request and Configure AWS access (code.org staff) or configure local secrets (open source contributors). See [Configure AWS Access or Secrets](#configure-aws-access-or-secrets) below. This step is not required until rake is first run below, but staff may wish to submit the request first so its ready when rake is.
 
+1. Clone the repo, which also may take a while.
+  - The simplest option is to clone via SSH with: `git clone git@github.com:code-dot-org/code-dot-org.git`
+  - The fastest option is to clone via HTTP with: `git clone https://github.com/code-dot-org/code-dot-org.git`. Although faster than SSH, this option requires you to reauthenticate every time you want to update. You will therefore probably want to switch to SSH after the initial clone with `git remote set-url origin git@github.com:code-dot-org/code-dot-org.git`
+
+1. `cd code-dot-org`
+
 1. Install OS-specific prerequisites
-   - See the appropriate section below: [macOS](#macos), [Ubuntu](#ubuntu-1804-download-iso), [Windows](#windows)
+   - See the appropriate section below: [macOS](#macos), [Ubuntu](#ubuntu-1804), [Windows](#windows)
    - *Important*: When done, check for correct versions of these dependencies:
 
      ```sh
-     ruby --version  # --> ruby 2.7.5
-     node --version  # --> v14.17.1
+     ruby --version  # --> ruby 3.0.5
+     node --version  # --> v18.16.0
      yarn --version  # --> 1.22.5
      ```
-
-1. If using SSH (recommended): `git clone git@github.com:code-dot-org/code-dot-org.git` , if using HTTPS: `git clone https://github.com/code-dot-org/code-dot-org.git`
-
-1. `cd code-dot-org`
 
 1. `gem install bundler -v 2.3.22`
 
@@ -65,12 +67,12 @@ You can do Code.org development using OSX, Ubuntu, or Windows (running Ubuntu in
     - This can take a long time, ~30 minutes or more. The most expensive are the "seeding" tasks, where your local DB is populated from data in the repository. Some of the seeding rake tasks can take several minutes. The longest one, `seed:scripts`, can take > 10 minutes, but it should at least print out progress as it goes.
 
 1. fix your database charset and collation to match our servers
-    - `bin/dashboard-sql`
+    - `bin/mysql-client-admin`
     - `ALTER DATABASE dashboard_development CHARACTER SET utf8 COLLATE utf8_unicode_ci;`
     - `ALTER DATABASE dashboard_test CHARACTER SET utf8 COLLATE utf8_unicode_ci;`
 
 1. `bundle exec rake build`
-    - This may fail if your are on a Mac and your OSX XCode Command Line Tools were not installed properly. See [Bundle Install Tips](#bundle-install-tips) for more information.
+    - This may fail if you are on a Mac and your OSX XCode Command Line Tools were not installed properly. See [Bundle Install Tips](#bundle-install-tips) for more information.
     - This may fail for external contributors who don't have permissions to access Code.org AWS Secrets. Assign placeholder values to any configuration settings that are [ordinarily populated in Development environments from AWS Secrets](https://github.com/code-dot-org/code-dot-org/blob/staging/config/development.yml.erb) as indicated in this example: https://github.com/code-dot-org/code-dot-org/blob/5b3baed4a9c2e7226441ca4492a3bca23a4d7226/locals.yml.default#L136-L139
 
 1. Run the website `bin/dashboard-server`
@@ -157,11 +159,11 @@ Setup steps for macOS:
     3. Reload your .zshrc to load **rbenv**: `source ~/.zshrc`
 
 1. Install **Ruby**
-    1. For non-M1 systems (including M1 systems using Rosetta), running `rbenv install` from the project root directory should be sufficient.
+    1. For non-M1 systems (including M1 systems using Rosetta), running `rbenv install --skip-existing` from the project root directory should be sufficient.
     2. For Apple Silicon, special configuration is required to set *libffi* options correctly. The following is a single line to execute.
 
       ```sh
-      optflags="-Wno-error=implicit-function-declaration" LDFLAGS="-L/opt/homebrew/opt/libffi/lib" CPPFLAGS="-I/opt/homebrew/opt/libffi/include" PKG_CONFIG_PATH="/opt/homebrew/opt/libffi/lib/pkgconfig" rbenv install
+      optflags="-Wno-error=implicit-function-declaration" LDFLAGS="-L/opt/homebrew/opt/libffi/lib" CPPFLAGS="-I/opt/homebrew/opt/libffi/include" PKG_CONFIG_PATH="/opt/homebrew/opt/libffi/lib/pkgconfig" rbenv install --skip-existing
       ```
 
 1. *(Optional)* Install **pdftk**, which is not available as a standard Homebrew formula. Skipping this will cause some PDF related tests to fail. See <https://leancrew.com/all-this/2017/01/pdftk/> and <https://github.com/turforlag/homebrew-cervezas/pull/1> for more information about pdftk on macOS.
@@ -172,7 +174,7 @@ Setup steps for macOS:
     rm ./pdftk.rb
     ```
 
-1. Install an assortment of additional packages via `brew install enscript gs imagemagick ruby-build coreutils sqlite parallel tidy-html5`
+1. Install an assortment of additional packages via `brew install enscript gs imagemagick ruby-build coreutils parallel tidy-html5`
 
 1. Install [Node Version Manager](https://github.com/nvm-sh/nvm) and install Node
     1. Install NVM via `brew install nvm`
@@ -181,18 +183,7 @@ Setup steps for macOS:
 
     3. Running `nvm alias default $(cat ./.nvmrc)` will set your default node version for future shells.
 
-    4. For Apple Silicon (M1) systems, Node 14 is not available. We can temporarily switch to an x86_64 shell to install Node 14, which will then be available from our normal arm64 shell.
-
-       ```sh
-       arch -arch x86_64 zsh
-       # You are now in a new shell, run `arch` to confirm
-       nvm install # or `nvm install 14.17.1`
-       exit
-       # You are now back in the original shell, run `arch` to confirm
-       nvm use && nvm alias default $(cat ./.nvmrc)
-       ```
-
-1. Install **yarn** via `npm install -g yarn@1.22.5`
+1. Install **yarn** via `npm install -g yarn@1.22.19`
 
 1. Install **OpenSSL**
     1. Run `brew install openssl`
@@ -208,7 +199,7 @@ Setup steps for macOS:
 Note: Virtual Machine Users should check the [Alternative note](#alternative-use-an-ubuntu-vm) below before starting
 
 1. `sudo apt-get update`
-1. `sudo apt-get install -y git mysql-server mysql-client libmysqlclient-dev libxslt1-dev libssl-dev zlib1g-dev imagemagick libmagickcore-dev libmagickwand-dev openjdk-11-jre-headless libcairo2-dev libjpeg8-dev libpango1.0-dev libgif-dev curl pdftk enscript libsqlite3-dev build-essential redis-server rbenv chromium-browser parallel`
+1. `sudo apt-get install -y git mysql-server mysql-client libmysqlclient-dev libxslt1-dev libssl-dev zlib1g-dev imagemagick libmagickcore-dev libmagickwand-dev openjdk-11-jre-headless libcairo2-dev libjpeg8-dev libpango1.0-dev libgif-dev curl pdftk enscript build-essential redis-server rbenv chromium-browser parallel`
     * **Hit enter and select default options for any configuration popups, leaving mysql passwords blank**
 
     * Troubleshoot: `E: Package 'pdftk' has no installation candidate`. If you run into this error, remove `pdftk` from the previous command and run it again. Then try installing `pdftk` another way:
@@ -226,7 +217,7 @@ Note: Virtual Machine Users should check the [Alternative note](#alternative-use
         ```
 1. Install Node and Nodejs
     1. Install the latest version of [Node Version Manager (nvm)](https://github.com/nvm-sh/nvm)
-    1. `nvm install v14.17.1 && nvm alias default 14.17.1` Install nodejs v14.17.1  
+    1. Running `nvm install` or `nvm use` within the project directory will install and use the version specified in [.nvmrc](.nvmrc)
     1. `node --version` Double check the version of node you are using. If it is wrong, then try restarting your terminal.
 1. Ensure rbenv and ruby-build are properly installed
     1. run `rbenv init` and follow the instructions.
@@ -239,7 +230,7 @@ Note: Virtual Machine Users should check the [Alternative note](#alternative-use
     1. **Note:** Ubuntu 22.04 ships with versions of `libssl` and `openssl` that are incompatible with `ruby-build`; see https://github.com/rbenv/ruby-build/discussions/1940 for context
         1. As a result, attempts to run `rbenv install` will fail. To resolve, compile a valid version of `openssl` locally and direct `rbenv` to configure ruby to use it as described here: https://github.com/rbenv/ruby-build/discussions/1940#discussioncomment-2663209
 1. Install Ruby with rbenv
-    1. Execute `rbenv install --skip-existing` from the root directory
+    1. Execute `rbenv install --skip-existing` from the root directory, which will install the version specified in ".ruby-version"
     1. If your PATH is missing `~/.rbenv/shims`, the next two commands might not work. Edit your .bashrc to include the following line:
        `export PATH="$HOME/.rbenv/bin:~/.rbenv/shims:$PATH"`, then run `source .bashrc` for the change to take effect (as seen in [this github issue](https://github.com/rbenv/rbenv/issues/877)).
     1. `rbenv rehash`
@@ -285,6 +276,7 @@ It is worthwhile to make sure that you are using WSL 2. Attempting to use WSL 1 
     * Before updating the root password to empty in SQL (step 10), restart MySQL using `sudo /etc/init.d/mysql restart`
 1. Followed by the [overview instructions](#overview), _with the following observations_:
     * Before running `bundle exec rake install`, restart the mysql service: `sudo service mysql start`
+    * If localhost responds slowly and you have exhausted conventional options (e.g. turning off Firewall during testing), try moving the code-dot-org repo outside of the /mnt/ directory (e.g. ~) to improve responsiveness
 
 ### Alternative: Use an Ubuntu VM
 
@@ -300,10 +292,10 @@ It is worthwhile to make sure that you are using WSL 2. Attempting to use WSL 1 
 * Option C: Use an Amazon EC2 instance:
   1. Request AWS access from [accounts@code.org](mailto:accounts@code.org) if you haven't already done so.
   1. From the [EC2 Homepage](https://console.aws.amazon.com/ec2), click on "Launch Instance" and follow the wizard:
-     * **Step 1: Choose AMI**: Select Ubuntu Server 18.04
+     * **Step 1: Choose AMI**: Select Ubuntu Server 18.04 if you want to match our current server version; 20.04 or 22.04 both work fine as well but 22.04 does require extra setup steps explained later in the setup.
      * **Step 2: Choose instance type**: Choose at least 16 GiB memory (e.g. `t2.xlarge`)
      * **Step 3: Configure Instance**: 
-       * Set IAM Role to `DeveloperEC2`
+       * Set IAM Instance Profile to `DeveloperEC2`
        * Set VPC to `vpc-a48462c3`
      * **Step 4: Storage**: Increase storage to 100GiB
   1. Launch the instance. When asked for a key pair, you can create a new key pair (be sure to download and save the .pem file) or use an existing key pair that you have the .pem file for.
@@ -319,7 +311,7 @@ It is worthwhile to make sure that you are using WSL 2. Attempting to use WSL 1 
          IdentityFile ~/.ssh/<keyname>.pem
        ```
      * run `ssh yourname-ec2` to connect to your instance
-  1. Go back up to the [overview](#overview) and run the commands there.
+  1. Go back up to the [overview](#overview) and run the commands there but when you have completed steps in overview, return to instructions below.
   1. Once you have successfully completed `bundle exec rake build`, you can connect to it as follows:
      * run `ssh -L 3000:127.0.0.1:3000 yourname-ec2` and then `~/code-dot-org/bin/dashboard-server` on your local machine. This sets up SSH port forwarding from your local machine to your ec2 dev instance for as long as your ssh connection is open.
      * navigate to http://localhost-studio.code.org:3000/ on your local machine
@@ -569,4 +561,4 @@ While it's possible to run the server locally without these, we've found the fol
 - Memory: minimum of 8GB RAM for `dashboard-server` and `yarn`
 - Storage: The repository takes up 20GB
 
-[ubuntu-iso-url]: http://releases.ubuntu.com/bionic/ubuntu-18.04.5-desktop-amd64.iso
+[ubuntu-iso-url]:  https://releases.ubuntu.com/18.04/ubuntu-18.04.6-desktop-amd64.iso

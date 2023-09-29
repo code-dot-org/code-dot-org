@@ -9,13 +9,13 @@ hy:
       Dancelab_changePropBy:
         options:
           PROPERTY:
-            '"scale"': չափ
             '"height"': բարձրություն
+            '"scale"': չափ
       Dancelab_changePropEachBy:
         options:
           PROPERTY:
-            '"scale"': չափ
             '"height"': բարձրություն
+            '"scale"': չափ
       Dancelab_everySeconds:
         options:
           UNIT:
@@ -23,8 +23,8 @@ hy:
       Dancelab_getProp:
         options:
           PROPERTY:
-            '"scale"': չափ
             '"height"': բարձրություն
+            '"scale"': չափ
       Dancelab_getTime:
         options:
           UNIT:
@@ -86,23 +86,23 @@ hy:
       Dancelab_setProp:
         options:
           PROPERTY:
-            '"scale"': չափ
             '"height"': բարձրություն
+            '"scale"': չափ
       Dancelab_setPropEach:
         options:
           PROPERTY:
-            '"scale"': չափ
             '"height"': բարձրություն
+            '"scale"': չափ
       Dancelab_setPropRandom:
         options:
           PROPERTY:
-            '"scale"': չափ
             '"height"': բարձրություն
+            '"scale"': չափ
       Dancelab_setPropRandomEach:
         options:
           PROPERTY:
-            '"scale"': չափ
             '"height"': բարձրություն
+            '"scale"': չափ
       Dancelab_setVisible:
         options:
           VISIBILITY:
@@ -114,23 +114,23 @@ hy:
       Dancelab_startMapping:
         options:
           PROPERTY:
-            '"scale"': չափ
             '"height"': բարձրություն
+            '"scale"': չափ
       Dancelab_startMappingEach:
         options:
           PROPERTY:
-            '"scale"': չափ
             '"height"': բարձրություն
+            '"scale"': չափ
       Dancelab_stopMapping:
         options:
           PROPERTY:
-            '"scale"': չափ
             '"height"': բարձրություն
+            '"scale"': չափ
       Dancelab_stopMappingEach:
         options:
           PROPERTY:
-            '"scale"': չափ
             '"height"': բարձրություն
+            '"scale"': չափ
       Dancelab_translateStrings:
         options:
           STRING:
@@ -139,144 +139,16 @@ hy:
       Dancelab_whenKey:
         options:
           KEY:
-            '"up"': մինչեւ
-            '"left"': ձախ
             '"down"': ներքեւ
+            '"left"': ձախ
             '"right"': ճիշտ
             '"space"': տարածություն
+            '"up"': մինչեւ
             '"x"': x
       DansBlocks_setForegroundEffect2:
         options:
           EFFECT:
             '"hearts"': hearts
-      gamelab_atTime:
-        options:
-          UNIT:
-            '"seconds"': վայրկյան
-      gamelab_changePropBy:
-        options:
-          PROPERTY:
-            '"scale"': չափ
-            '"speed"': արագություն
-      gamelab_checkTouching:
-        options:
-          CONDITION:
-            '"when"': երբ
-            '"while"': ժամանակ
-      gamelab_everyInterval:
-        options:
-          UNIT:
-            '"seconds"': վայրկյան
-      gamelab_getProp:
-        options:
-          PROPERTY:
-            '"scale"': չափ
-            '"speed"': արագություն
-      gamelab_getTime:
-        options:
-          UNIT:
-            '"seconds"': վայրկյան
-      gamelab_isKeyPressed:
-        options:
-          KEY:
-            '"up"': մինչեւ
-            '"down"': ներքեւ
-            '"left"': ձախ
-            '"right"': ճիշտ
-            '"space"': տարածություն
-            '"x"': x
-      gamelab_keyPressed:
-        options:
-          CONDITION:
-            '"when"': երբ
-            '"while"': ժամանակ
-          KEY:
-            '"up"': մինչեւ
-            '"down"': ներքեւ
-            '"left"': ձախ
-            '"right"': ճիշտ
-            '"space"': տարածություն
-            '"x"': x
-      gamelab_makeProjectile:
-        options:
-          DIRECTION:
-            '0': ճիշտ
-            '90': ներքեւ
-            '180': ձախ
-            '270': մինչեւ
-      gamelab_mirrorSprite:
-        options:
-          DIRECTION:
-            '"right"': ճիշտ
-            '"left"': ձախ
-      gamelab_playSoundOptions:
-        options:
-          SOUND:
-            "'sound://category_collect/clicky_crunch.mp3'": ճռճռոց
-            "'sound://category_pop/bubble_pop_cluster_1.mp3'": պղպջակ
-            "'sound://category_animals/cat.mp3'": կատու
-            "'sound://category_animals/cow.mp3'": կով
-            "'sound://category_animals/pig.mp3'": խող
-            "'sound://category_animals/sheep.mp3'": ոչխար
-            "'sound://category_animals/chicken.mp3'": ճուտիկ
-            "'sound://category_animals/elephant.mp3'": փիղ
-            "'sound://category_animals/dog.mp3'": շուն
-            "'sound://category_digital/jump_7.mp3'": ցատկել
-      gamelab_randColor:
-        text: կամայական գույն
-      gamelab_randomColor:
-        text: կամայական գույն
-      gamelab_repeatForever:
-        text: կրկնել հավերժ
-      gamelab_setBackgroundImage:
-        options:
-          IMG:
-            '"https://studio.code.org/blockly/media/skins/studio/background_cave.png"': քարանձավ
-            '"https://studio.code.org/api/v1/animation-library/04L4sdTODkNZF1OHf4qO_I.Al3QP43wA/category_backgrounds/city.png"': քաղաք
-            '"https://studio.code.org/blockly/media/skins/studio/background_desert.png"': անապատ
-            '"https://studio.code.org/blockly/media/skins/studio/background_rainbow.png"': ծիածան
-            '"https://studio.code.org/blockly/media/skins/studio/background_underwater.png"': Ստորջրյա
-            '"https://studio.code.org/blockly/media/skins/studio/background_winter.png"': Ձմեռ
-      gamelab_setProp:
-        options:
-          PROPERTY:
-            '"scale"': չափ
-            '"speed"': արագություն
-      gamelab_setProp_dropdown:
-        options:
-          PROPERTY:
-            '"scale"': չափ
-      gamelab_setSizes:
-        options:
-          PROPERTY:
-            '"scale"': չափ
-            '"height"': բարձրություն
-      gamelab_spriteClicked:
-        options:
-          CONDITION:
-            '"when"': երբ
-            '"while"': ժամանակ
-      gamelab_turn:
-        options:
-          DIRECTION:
-            '"right"': ճիշտ
-            '"left"': ձախ
-      gamelab_whenKey:
-        options:
-          KEY:
-            '"up"': մինչեւ
-            '"down"': ներքեւ
-            '"left"': ձախ
-            '"right"': ճիշտ
-            '"space"': տարածություն
-      gamelab_whileKey:
-        options:
-          KEY:
-            '"up"': մինչեւ
-            '"down"': ներքեւ
-            '"left"': ձախ
-            '"right"': ճիշտ
-            '"space"': տարածություն
       Mikelab_changePropBy:
         options:
           PROPERTY:
@@ -322,8 +194,8 @@ hy:
       Mikelab_showScoreboard:
         options:
           CORNER:
-            '"right"': ճիշտ
             '"left"': ձախ
+            '"right"': ճիշտ
       Mikelab_sprite:
         options:
           LOCATION:
@@ -332,33 +204,33 @@ hy:
       Mikelab_whenKeyPressed:
         options:
           KEY:
-            '"up"': մինչեւ arrow
             '"down"': ներքեւ arrow
             '"left"': ձախ arrow
             '"right"': ճիշտ arrow
-            '"w"': W
             '"s"': S
+            '"up"': մինչեւ arrow
+            '"w"': W
       Mikelab_whenKeyReleased:
         options:
           KEY:
-            '"up"': մինչեւ arrow
             '"down"': ներքեւ arrow
             '"left"': ձախ arrow
             '"right"': ճիշտ arrow
-            '"w"': W
             '"s"': S
+            '"up"': մինչեւ arrow
+            '"w"': W
       Mikelab_whenYesNoClicked:
         options:
           KEY:
-            '"yes"': այո
             '"no"': ոչ
+            '"yes"': այո
       Mikelab_whileKeyPressed:
         options:
           KEY:
-            '"up"': մինչեւ arrow
             '"down"': ներքեւ arrow
             '"left"': ձախ arrow
             '"right"': ճիշտ arrow
+            '"up"': մինչեւ arrow
       Poetry_addFrame:
         options:
           BRUSH:
@@ -372,8 +244,8 @@ hy:
         options:
           SOUND:
             '"sound://category_bell/long_bell_notification.mp3"': զանգ
-            '"sound://category_pop/bubble_pop_cluster_2.mp3"': պղպջակ
             '"sound://category_jump/vibrant_game_jumping_up_1.mp3"': ցատկել
+            '"sound://category_pop/bubble_pop_cluster_2.mp3"': պղպջակ
       Poetry_setBackgroundEffect:
         options:
           EFFECT:
@@ -403,18 +275,18 @@ hy:
       binary_move:
         options:
           DIR:
-            '"up"': մինչեւ
             '"down"': ներքեւ
             '"left"': ձախ
             '"right"': ճիշտ
+            '"up"': մինչեւ
       binary_whenKey:
         options:
           KEY:
-            '"up"': մինչեւ
             '"down"': ներքեւ
             '"left"': ձախ
             '"right"': ճիշտ
             '"space"': տարածություն
+            '"up"': մինչեւ
       craft_ifPath:
         options:
           DIR:
@@ -422,8 +294,8 @@ hy:
       craft_ifStandingOn:
         options:
           TYPE:
-            "'sand'": ավազ
             "'planksOak'": oak planks
+            "'sand'": ավազ
       craft_ifStandingOnLimit:
         options:
           TYPE:
@@ -432,6 +304,134 @@ hy:
         text: առաջ ընթանալ
       craft_placeTorch:
         text: Տեղ ջահը
+      gamelab_atTime:
+        options:
+          UNIT:
+            '"seconds"': վայրկյան
+      gamelab_changePropBy:
+        options:
+          PROPERTY:
+            '"scale"': չափ
+            '"speed"': արագություն
+      gamelab_checkTouching:
+        options:
+          CONDITION:
+            '"when"': երբ
+            '"while"': ժամանակ
+      gamelab_everyInterval:
+        options:
+          UNIT:
+            '"seconds"': վայրկյան
+      gamelab_getProp:
+        options:
+          PROPERTY:
+            '"scale"': չափ
+            '"speed"': արագություն
+      gamelab_getTime:
+        options:
+          UNIT:
+            '"seconds"': վայրկյան
+      gamelab_isKeyPressed:
+        options:
+          KEY:
+            '"down"': ներքեւ
+            '"left"': ձախ
+            '"right"': ճիշտ
+            '"space"': տարածություն
+            '"up"': մինչեւ
+            '"x"': x
+      gamelab_keyPressed:
+        options:
+          CONDITION:
+            '"when"': երբ
+            '"while"': ժամանակ
+          KEY:
+            '"down"': ներքեւ
+            '"left"': ձախ
+            '"right"': ճիշտ
+            '"space"': տարածություն
+            '"up"': մինչեւ
+            '"x"': x
+      gamelab_makeProjectile:
+        options:
+          DIRECTION:
+            '0': ճիշտ
+            '180': ձախ
+            '270': մինչեւ
+            '90': ներքեւ
+      gamelab_mirrorSprite:
+        options:
+          DIRECTION:
+            '"left"': ձախ
+            '"right"': ճիշտ
+      gamelab_playSoundOptions:
+        options:
+          SOUND:
+            "'sound://category_animals/cat.mp3'": կատու
+            "'sound://category_animals/chicken.mp3'": ճուտիկ
+            "'sound://category_animals/cow.mp3'": կով
+            "'sound://category_animals/dog.mp3'": շուն
+            "'sound://category_animals/elephant.mp3'": փիղ
+            "'sound://category_animals/pig.mp3'": խող
+            "'sound://category_animals/sheep.mp3'": ոչխար
+            "'sound://category_collect/clicky_crunch.mp3'": ճռճռոց
+            "'sound://category_digital/jump_7.mp3'": ցատկել
+            "'sound://category_pop/bubble_pop_cluster_1.mp3'": պղպջակ
+      gamelab_randColor:
+        text: կամայական գույն
+      gamelab_randomColor:
+        text: կամայական գույն
+      gamelab_repeatForever:
+        text: կրկնել հավերժ
+      gamelab_setBackgroundImage:
+        options:
+          IMG:
+            '"https://studio.code.org/api/v1/animation-library/04L4sdTODkNZF1OHf4qO_I.Al3QP43wA/category_backgrounds/city.png"': քաղաք
+            '"https://studio.code.org/blockly/media/skins/studio/background_cave.png"': քարանձավ
+            '"https://studio.code.org/blockly/media/skins/studio/background_desert.png"': անապատ
+            '"https://studio.code.org/blockly/media/skins/studio/background_rainbow.png"': ծիածան
+            '"https://studio.code.org/blockly/media/skins/studio/background_underwater.png"': Ստորջրյա
+            '"https://studio.code.org/blockly/media/skins/studio/background_winter.png"': Ձմեռ
+      gamelab_setProp:
+        options:
+          PROPERTY:
+            '"scale"': չափ
+            '"speed"': արագություն
+      gamelab_setProp_dropdown:
+        options:
+          PROPERTY:
+            '"scale"': չափ
+      gamelab_setSizes:
+        options:
+          PROPERTY:
+            '"height"': բարձրություն
+            '"scale"': չափ
+      gamelab_spriteClicked:
+        options:
+          CONDITION:
+            '"when"': երբ
+            '"while"': ժամանակ
+      gamelab_turn:
+        options:
+          DIRECTION:
+            '"left"': ձախ
+            '"right"': ճիշտ
+      gamelab_whenKey:
+        options:
+          KEY:
+            '"down"': ներքեւ
+            '"left"': ձախ
+            '"right"': ճիշտ
+            '"space"': տարածություն
+            '"up"': մինչեւ
+      gamelab_whileKey:
+        options:
+          KEY:
+            '"down"': ներքեւ
+            '"left"': ձախ
+            '"right"': ճիշտ
+            '"space"': տարածություն
+            '"up"': մինչեւ
       storylab_setForegroundEffect2:
         options:
           EFFECT:

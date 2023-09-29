@@ -1,5 +1,10 @@
 <Applab>
   <config><![CDATA[{
+  "published": true,
+  "game_id": 41,
+  "created_at": "2023-02-01T10:47:11.000Z",
+  "level_num": "custom",
+  "user_id": 1,
   "properties": {
     "skin": "applab",
     "code_functions": {
@@ -36,7 +41,8 @@
       "ledScreen.on": null,
       "ledScreen.off": null,
       "ledScreen.toggle": null,
-      "ledScreen.clear": null
+      "ledScreen.clear": null,
+      "setScreen": null
     },
     "edit_code": true,
     "embed": "false",
@@ -72,7 +78,7 @@
     "hide_design_mode": "false",
     "beginner_mode": "false",
     "hide_view_data_button": "true",
-    "show_debug_watch": "false",
+    "show_debug_watch": "true",
     "expand_debugger": "false",
     "fail_on_lint_errors": "false",
     "debugger_disabled": "false",
@@ -90,7 +96,8 @@
       "/courses/csd-2022/guides/if-statements-2",
       "/courses/csd-2022/guides/booleans-and-comparison-operators",
       "/courses/csd-2022/guides/variables",
-      "/courses/csd-2022/guides/counter-patterns-with-event"
+      "/courses/csd-2022/guides/counter-patterns-with-event",
+      "/maker/setup"
     ],
     "callout_json": "[]",
     "display_name": "Emoji Race",
@@ -98,16 +105,11 @@
     "start_html": "<div id=\"designModeViz\" class=\"appModern\" tabindex=\"1\" data-radium=\"true\" style=\"display: none; width: 320px; height: 450px;\"><div class=\"screen\" tabindex=\"1\" data-theme=\"default\" id=\"screen1\" style=\"height: 450px; width: 320px; left: 0px; top: 0px; position: absolute; z-index: 0; background-color: rgb(255, 255, 255);\"><img data-canonical-image-url=\"icon://fa-smile-o\" data-image-type=\"icon\" data-object-fit=\"contain\" id=\"redIcon\" style=\"height: 100px; width: 100px; border-style: solid; border-width: 0px; border-color: rgb(0, 0, 0); border-radius: 0px; position: absolute; left: 35px; top: 105px; margin: 0px;\" data-icon-color=\"#ff0000\"><img data-canonical-image-url=\"icon://fa-smile-o\" data-image-type=\"icon\" data-object-fit=\"contain\" id=\"blueIcon\" style=\"height: 100px; width: 100px; border-style: solid; border-width: 0px; border-color: rgb(0, 0, 0); border-radius: 0px; position: absolute; left: 180px; top: 105px; margin: 0px;\" data-icon-color=\"#000dff\"><label style=\"margin: 0px; line-height: 1; overflow: hidden; overflow-wrap: break-word; max-width: 320px; border-style: solid; text-rendering: optimizespeed; color: rgb(77, 87, 95); background-color: rgba(0, 0, 0, 0); border-color: rgb(77, 87, 95); border-radius: 0px; border-width: 0px; font-family: &quot;Arial Black&quot;, Gadget, sans-serif; font-size: 20px; padding: 2px 15px; width: 320px; height: 40px; position: absolute; left: 0px; top: 0px; text-align: center;\" id=\"titleLabel\">Emoji Race!</label><label style=\"margin: 0px; line-height: 1; overflow: hidden; overflow-wrap: break-word; max-width: 320px; border-style: solid; text-rendering: optimizespeed; color: rgb(77, 87, 95); background-color: rgba(0, 0, 0, 0); border-color: rgb(77, 87, 95); border-radius: 0px; border-width: 0px; font-family: &quot;Arial Black&quot;, Gadget, sans-serif; font-size: 13px; padding: 2px 15px; width: 320px; height: 80px; position: absolute; left: 0px; top: 35px;\" id=\"descriptionLabel\">Press the left button to move the red emoji. Press the right button to move the blue emoji. Whoever reaches the bottom of the screen first is the winner!</label></div><div class=\"screen\" tabindex=\"1\" data-theme=\"default\" id=\"redWinner\" style=\"display: none; height: 450px; width: 320px; left: 0px; top: 0px; position: absolute; z-index: 0; background-color: rgb(255, 255, 255);\"><label style=\"margin: 0px; line-height: 1; overflow: hidden; overflow-wrap: break-word; max-width: 320px; border-style: solid; text-rendering: optimizespeed; color: rgb(249, 0, 28); border-radius: 0px; border-width: 0px; font-family: &quot;Arial Black&quot;, Gadget, sans-serif; font-size: 40px; padding: 2px 15px; width: 280px; height: 150px; position: absolute; left: 20px; top: 150px; text-align: center; background-color: rgba(0, 0, 0, 0); border-color: rgb(0, 0, 0);\" id=\"redWinnerLabel\">Red Player Wins!</label></div><div class=\"screen\" tabindex=\"1\" data-theme=\"default\" id=\"blueWinner\" style=\"display: none; height: 450px; width: 320px; left: 0px; top: 0px; position: absolute; z-index: 0; background-color: rgb(255, 255, 255);\"><label style=\"margin: 0px; line-height: 1; overflow: hidden; overflow-wrap: break-word; max-width: 320px; border-style: solid; text-rendering: optimizespeed; color: rgb(0, 42, 255); border-radius: 0px; border-width: 0px; font-family: &quot;Arial Black&quot;, Gadget, sans-serif; font-size: 40px; padding: 2px 15px; width: 280px; height: 150px; position: absolute; left: 20px; top: 150px; text-align: center; background-color: rgba(0, 0, 0, 0); border-color: rgb(77, 87, 95);\" id=\"blueWinnerLabel\" data-mod-textcolor=\"1\" data-mod-fontsize=\"1\">Blue Player Wins!</label></div></div>",
     "start_blocks": "var redY = 105;\r\nvar blueY = 105;\r\n\r\nonBoardEvent(buttonA, \"down\", function() {\r\n  //1) When the A button is pressed, move the red emoji down the screen\r\n\t\r\n  //2) If the red emoji is at the bottom of the screen, show the `redWinner` screen\r\n  \r\n});\r\nonBoardEvent(buttonB, \"down\", function() {\r\n  //3) When the B button is pressed, move the blue emoji down the screen\r\n\t\r\n  //4) If the blue emoji is at the bottom of the screen, show the `blueWinner` screen\r\n  \r\n});\r\n",
     "bubble_choice_description": "Create a game that uses the left and right buttons to move characters down the screen. The first person to reach the bottom of the screen is the winner!",
-    "preload_asset_list": null,
-    "encrypted_examples": "a5OD7qdlsqj+P1wE45nWRQBv65+VUrdrNU9IgtS0XGk6KjyW+Fl1VMEgC8rJ\nkejHvKVafdCnmRa0n17/bvAifA==\n"
+    "encrypted_examples": "a5OD7qdlsqj+P1wE45nWRQBv65+VUrdrNU9IgtS0XGk6KjyW+Fl1VMEgC8rJ\nkejHvKVafdCnmRa0n17/bvAifA==\n",
+    "preload_asset_list": null
   },
-  "game_id": 41,
-  "published": true,
-  "created_at": "2023-02-01T10:47:11.000Z",
-  "level_num": "custom",
-  "user_id": 1,
   "notes": "",
-  "audit_log": "[{\"changed_at\":\"2023-02-01T10:47:11.948+00:00\",\"changed\":[\"cloned from \\\"CSD U6 - If Variables - ChalC_2222\\\"\"],\"cloned_from\":\"CSD U6 - If Variables - ChalC_2222\"},{\"changed_at\":\"2023-02-07 22:34:24 +0000\",\"changed\":[\"code_functions\",\"makerlab_enabled\",\"long_instructions\",\"reference_links\",\"start_blocks\",\"encrypted_examples\",\"preload_asset_list\",\"contained_level_names\"],\"changed_by_id\":14639,\"changed_by_email\":\"dan+teacher@code.org\"},{\"changed_at\":\"2023-03-29 16:27:06 +0000\",\"changed\":[\"code_functions\",\"reference_links\",\"preload_asset_list\",\"contained_level_names\"],\"changed_by_id\":14639,\"changed_by_email\":\"dan+teacher@code.org\"}]"
+  "audit_log": "[{\"changed_at\":\"2023-02-01T10:47:11.948+00:00\",\"changed\":[\"cloned from \\\"CSD U6 - If Variables - ChalC_2222\\\"\"],\"cloned_from\":\"CSD U6 - If Variables - ChalC_2222\"},{\"changed_at\":\"2023-02-07 22:34:24 +0000\",\"changed\":[\"code_functions\",\"makerlab_enabled\",\"long_instructions\",\"reference_links\",\"start_blocks\",\"encrypted_examples\",\"preload_asset_list\",\"contained_level_names\"],\"changed_by_id\":14639,\"changed_by_email\":\"dan+teacher@code.org\"},{\"changed_at\":\"2023-03-29 16:27:06 +0000\",\"changed\":[\"code_functions\",\"reference_links\",\"preload_asset_list\",\"contained_level_names\"],\"changed_by_id\":14639,\"changed_by_email\":\"dan+teacher@code.org\"},{\"changed_at\":\"2023-05-31 19:20:26 +0000\",\"changed\":[\"code_functions\",\"encrypted_examples\",\"preload_asset_list\",\"contained_level_names\"],\"changed_by_id\":18602,\"changed_by_email\":\"angelina+levelbuilder@code.org\"},{\"changed_at\":\"2023-07-17 23:21:40 +0000\",\"changed\":[\"code_functions\",\"show_debug_watch\",\"encrypted_examples\",\"preload_asset_list\",\"contained_level_names\"],\"changed_by_id\":18602,\"changed_by_email\":\"angelina+levelbuilder@code.org\"},{\"changed_at\":\"2023-08-21 23:03:13 +0000\",\"changed\":[\"code_functions\",\"reference_links\",\"encrypted_examples\",\"preload_asset_list\",\"contained_level_names\"],\"changed_by_id\":14639,\"changed_by_email\":\"dan+teacher@code.org\"}]"
 }]]></config>
   <blocks/>
 </Applab>

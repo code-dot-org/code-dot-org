@@ -62,7 +62,7 @@ export default class FindVocabularyDialog extends Component {
               e.preventDefault();
               this.props.handleConfirm(this.state.selectedVocabularyKey);
             }}
-            color={Button.ButtonColor.orange}
+            color={Button.ButtonColor.brandSecondaryDefault}
           />
         </DialogFooter>
       </LessonEditorDialog>

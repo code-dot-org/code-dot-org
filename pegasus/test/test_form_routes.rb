@@ -52,7 +52,7 @@ class FormRoutesTest < SequelTestCase
       create_volunteer name: 'Middle', location: here
       create_volunteer name: 'Newest', location: here
       results = search location: here
-      assert_equal %w(Newest Middle Oldest), results.map {|r| r['name_s']}
+      assert_equal(%w(Newest Middle Oldest), results.map {|r| r['name_s']})
     end
 
     def create_volunteer(name:, location:)

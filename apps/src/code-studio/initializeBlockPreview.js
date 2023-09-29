@@ -1,14 +1,16 @@
 function update(blockSpace, container, editor) {
   try {
-    // populate with new xml; because we do this every time the editor
+    // Populate with new xml; because we do this every time the editor
     // updates, there is the potential for many different kinds of
     // errors here as we will end up updating as the levelbuilder is
     // typing out the new content. Because of that and the fact that
     // this is simply an informative but not functional view, we simply
     // catch and ignore all errors.
-    var xml = Blockly.Xml.textToDom(editor.getValue());
     blockSpace.clear();
-    Blockly.Xml.domToBlockSpace(blockSpace, xml);
+    Blockly.cdoUtils.loadBlocksToWorkspace(
+      blockSpace,
+      Blockly.Xml.domToText(editor.getValue())
+    );
   } catch (e) {
     return;
   }
@@ -17,7 +19,7 @@ function update(blockSpace, container, editor) {
   var metrics = blockSpace.getMetrics();
   var height = metrics.contentHeight + metrics.contentTop;
   container.style.height = height + 'px';
-  blockSpace.blockSpaceEditor.svgResize();
+  Blockly.cdoUtils.resizeSvg(blockSpace);
 }
 
 module.exports = function (editor, container) {
@@ -30,8 +32,5 @@ module.exports = function (editor, container) {
     update(blockSpace, container, editor);
   });
 
-  // need to update twice initially to counter Blockly's weird sizing
-  // requirements
-  update(blockSpace, container, editor);
   update(blockSpace, container, editor);
 };

@@ -4,12 +4,24 @@ te:
       Blue: నీలం
       Green: ఆకుపచ్చ
       Red: ఎరుపు
+      actor: నటుడు
       age: వయస్సు
+      birds: పక్షులు
       cats: క్యాట్
       dogs: డాగ్
       height: ఎత్తు
+      honey: తేనె
       i: i
       left: ఎడమ
+      name: పేరు
+      planet: గ్రహం
+      points: పాయింట్లు
       right: కుడి
+      score: స్కోరు
+      shout: అరవడం
       size: సైజు
+      speed: వేగం
+      type: రకం
       width: వెడల్పు
+      wizard: విజర్డ్
+      x: x

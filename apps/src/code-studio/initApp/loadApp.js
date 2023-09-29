@@ -1,4 +1,3 @@
-/* global addToHome Applab Blockly */
 import $ from 'jquery';
 import React from 'react';
 import ReactDOM from 'react-dom';
@@ -461,6 +460,9 @@ const sourceHandler = {
   setInitialLevelSource(levelSource) {
     getAppOptions().level.lastAttempt = levelSource;
   },
+  setInitialHiddenDefinitions(hiddenDefinitions) {
+    getAppOptions().level.hiddenDefinitions = hiddenDefinitions;
+  },
   setInRestrictedShareMode(inRestrictedShareMode) {
     getAppOptions().level.inRestrictedShareMode = inRestrictedShareMode;
   },
@@ -480,10 +482,11 @@ const sourceHandler = {
       let source;
       let appOptions = getAppOptions();
       if (window.Blockly && Blockly.mainBlockSpace) {
+        const getSourceAsJson = true;
         // If we're readOnly, source hasn't changed at all
         source = Blockly.cdoUtils.isWorkspaceReadOnly(Blockly.mainBlockSpace)
           ? currentLevelSource
-          : Blockly.cdoUtils.getCode(Blockly.mainBlockSpace);
+          : Blockly.cdoUtils.getCode(Blockly.mainBlockSpace, getSourceAsJson);
         resolve(source);
       } else if (appOptions.getCode) {
         source = appOptions.getCode();
@@ -512,6 +515,17 @@ const sourceHandler = {
       return prepareForRemix();
     }
     return Promise.resolve(); // Return an insta-resolved promise.
+  },
+  // Get the source from the hidden definition workspace, if any. Otherwise return undefined.
+  // Hidden definitions will only exist for Google Blockly levels.
+  getHiddenDefinitions() {
+    if (window.Blockly && Blockly.getHiddenDefinitionWorkspace()) {
+      return Blockly.cdoUtils.getCode(
+        Blockly.getHiddenDefinitionWorkspace(),
+        true
+      );
+    }
+    return undefined;
   },
 };
 

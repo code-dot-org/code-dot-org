@@ -728,8 +728,6 @@ mi:
         text: "Mutu ana tō ako i te rorohiko ki te kawe i tētahi hohenga kua wātea tēra taumahi kia karangahia anō ā tōna wā, ā, koinei tētahi o ngā tino painga o te papatonotanga rorohiko. Ka tapaina atu he ingoa, ka karangahia. Ānō nei e whakawhanake ana i te reo."
       2:
         text: "I te papatono i hangaia e tātou, i ako tātou ki te tā i tētahi tapawhā mā te neke me te huri e whā ngā wā. Ka taea e tātou tērā taumahi te tapa ki te ingoa, tāngia he tapawhā, kia eke te wā ka hiahia tā tapawā tātou, ko tā tātou he kī noa atu tāngia he tapawhā, ā, ka hoki atu te rorohiko ki te whakaara i taua taumahi, taua waehere. Ka ea mā tātou. Kua tāpiritia tērā ariā ki tō tātou reo papatonotanga."
-      3:
-      4:
     C4_intro:
       1:
         text: "He mea tuhi te papatonotanga i te nuinga o te wā engari ka whakamahi tātou i te Blockly. Whakamahia ai te Blockly i ngā paraka atanga ka tōia, ka waiho hoki ki te tuhi papatonotanga. He hanga waehere tonu te mahi ahakoa pēhea. Hei tīmatanga, ka hanga e tātou tētahi papatonotanga ki te āwhina i tēnei Manu Takariri ki te haere mā te rīrapa ki ngā poaka kino kua tāhae i āna hua."
@@ -742,91 +740,44 @@ mi:
       5:
         text: "Ki te hiahia koe ki te muku i tētahi paraka, tēnā, tangohia i te putunga ka tōia ai ki te ipu para. Mutu ana tō pāwhiri i te whakahaerehia, ka wātea kia pāwhiritia te pātene tautuhi anō kia hoki atu te manu ki te tīmatanga. Hoake tātou ki te tiki i ngā poaka!"
     infinity_playlab_intro:
-      1:
-      2:
-      3:
-      4:
-      5:
-      6:
       7:
         text: "Tīmata mai, ā, hei te mutunga kua mōhio koe ki te waihanga i tāu ake kēmu me ngā momo kaitapere ka pāhekoheko, ka whiwhi piro, ka maka karetaoriki, tīere, kōhua, kōrikoriko, me te tio... ka whakanumi hoki i a rātou anō. Kei a koe te tikanga!"
     starwars_intro:
-      1:
-      2:
-      3:
-      4:
       5:
         text: "He pouaka utauta te wāhanga o waenganui, ā, he whakahau ia paraka e taea ana e BB-8 te mārama hoki."
       6:
         text: "Ko te mokowā kei te taha matau tērā e kīia nei ko te papamahi, ā, koinei te wāhi ka hanga tātou i tā tātou papatono."
-      7:
-      8:
-      9:
-      10:
     starwars_events:
-      1:
-      2:
-      3:
       4:
         text: "Ko te tangi a te kiore, te pātene pere, te pato rānei ki te mata ētahi tauira o te takahanga e whakarongo ana."
-      5:
-      6:
-      7:
-      8:
-      9:
     starwars_blocks_intro:
-      1:
-      2:
-      3:
       4:
         text: "Kua wāhia tō mata ki ngā wāhanga matua e toru. Kei te taha mauī te mokowā mō te kēmu Star Wars, te wāhi whakahaere i tō waehere. Ko ngā tohutohu mō ia taumata kua tuhia ki raro i te mokowā kēmu."
       5:
         text: "He pouaka utauta te wāhanga o waenganui, ā, he whakahau ia paraka e taea ana e BB-8 te mārama hoki."
       6:
         text: "Ko te mokowā kei te taha matau tērā e kīia nei ko te papamahi, ā, koinei te wāhi ka hanga tātou i tā tātou papatono."
-      7:
-      8:
       9:
         text: "Ki te hiahia koe ki te muku i tētahi paraka me tango noa iho i te raupapatanga, me tō ki roto i te pouaka utauta."
-      10:
     starwars_blocks_events:
-      1:
-      2:
-      3:
       4:
         text: "Ko te tangi a te kiore, te pātene pere, te pato rānei ki te mata ētahi tauira o te takahanga e whakarongo ana."
-      5:
-      6:
-      7:
     mc_intro:
-      1:
-      2:
-      3:
-      4:
-      5:
       6:
         text: "Kua wāhia tō mata ki ngā wāhanga e toru. Kei te taha mauī te papatākaro Mahimaina, ā, koinei te wāhi whakahaere i tō papatono. Ko ngā tohutohu mō ia taumata kua tuhia ki raro."
       7:
         text: "He pouaka utauta te wāhanga o waenganui, ā, he whakahau ia paraka e whakahaere ana i ngā hohenga o Alex."
       8:
         text: "Ko te wāhanga kei te taha matau tērā e kīia nei ko te papamahi, ā, koinei te wāhi ka hanga tātou i tā tātou papatono."
-      9:
-      10:
       11:
         text: "Ki te hiahia koe ki te muku i tētahi paraka me tō noa iho i te pūkei ki te pouaka utauta."
-      12:
     gumball_intro:
-      1:
-      2:
-      3:
       4:
         text: "Kua wāhia tō mata ki ngā wāhanga e toru. Kei te taha mauī te papa tio, ā, koinei te wāhi whakahaere i tō papatono. Ko ngā tohutohu mō ia taumata kua tuhia ki raro."
-      5:
       6:
         text: "Ko te wāhanga kei te taha matau tērā e kīia nei ko te papamahi, ā, koinei te wāhi ka hanga tātou i tā tātou papatono."
       7:
         text: "Hei tīmatanga, me tūhono i o paraka ki te paraka \"ina whakahaerehia\" karaka. Ka taea ngā paraka huhua te tūhonohono mā te tō atu i aua paraka tae noa ki te wā ka kite koe i tētahi rārangi kātahi aua paraka ka piri."
-      8:
       9:
         text: "Tīmata māi, ā, hei te mutunga kua mōhio koe ki te waihanga i tāu ake kēmu me ngā momo kaitātakaro rerekē ka pāhekoheko, ka maka mea, ka whiwhi piro, ka whakanumi rānei i a rātou anō. Kei a koe te tikanga!"
     gumball_events:
@@ -846,17 +797,12 @@ mi:
       3:
         text: "I te panga e whai mai ana, ko te whāinga ia kia auau te mahi a te rehetoi. Mā te ako ki te whakamahinga o te whakahau tōai ka penapenatia te wā i a koe e hanga ana i tō ake kēmu ā tōna wā."
     iceage_intro:
-      1:
-      2:
-      3:
       4:
         text: "Kua wāhia tō mata ki ngā wāhanga e toru. Kei te taha mauī te papa tio, ā, koinei te wāhi whakahaere i tō papatono. Ko ngā tohutohu mō ia taumata kua tuhia ki raro."
-      5:
       6:
         text: "Ko te wāhanga kei te taha matau tērā e kīia nei ko te papamahi, ā, koinei te wāhi ka hanga tātou i tā tātou papatono."
       7:
         text: "Hei tīmatanga, me tūhono i o paraka ki te paraka \"ina whakahaerehia\" karaka. Ka taea ngā paraka huhua te tūhonohono mā te tō atu i aua paraka tae noa ki te wā ka kite koe i tētahi rārangi kātahi aua paraka ka piri."
-      8:
       9:
         text: "Tīmata māi, ā, hei te mutunga kua mōhio koe ki te waihanga i tāu ake kēmu me ngā momo kaitātakaro rerekē ka pāhekoheko, ka maka mea, ka whiwhi piro, ka whakanumi rānei i a rātou anō. Kei a koe te tikanga!"
     iceage_events:
@@ -921,26 +867,8 @@ mi:
       2:
         text: "Mutu ana tō hanga i tō kēmu, pāwhiritia te tiri kia riro i a koe te honongaitua hei tiritiri ki ō hoa, hei korikori rānei māu ki tō waea. Kia ngahau! E hīkaka ana ahau ki te tākaro i tō putanga o Mahimaina."
     mc_2017_agent_intro:
-      1:
-      2:
-      3:
-      4:
-      5:
-      6:
-      7:
-      8:
-      9:
-      10:
       11:
         text: "Kei runga ngā tohutohu mō ia taumata ki te wareware i a koe me aha koe."
-      12:
     hoc_dance_events_2019:
-      1:
-      2:
-      3:
       4:
         text: "Ko te tangi a te kiore, te pātene pere, te pato rānei ki te mata ētahi tauira o te takahanga e whakarongo ana."
-      5:
-      6:
-      7:
-      8:

@@ -1,5 +1,10 @@
 <Applab>
   <config><![CDATA[{
+  "published": true,
+  "game_id": 41,
+  "created_at": "2022-04-08T17:06:52.000Z",
+  "level_num": "custom",
+  "user_id": 1,
   "properties": {
     "skin": "applab",
     "code_functions": {
@@ -66,7 +71,7 @@
     "expand_debugger": "false",
     "fail_on_lint_errors": "false",
     "debugger_disabled": "false",
-    "makerlab_enabled": "true",
+    "makerlab_enabled": "circuitPlayground",
     "long_instructions": "# Assistive Mouse\r\n\r\nAssistive Technology helps people with disabilities use technology in the same way able-bodied individuals can. For example, someone with a physical disability with their hand or wrist may not be able to use a mouse the same way we can. But, the circuit playground can help then navigate an app in a different way.\r\n \r\nThis app is designed to use the accelerometer to move the cursor, then use the sound-sensor to detect when the user says “Click”. The sound sensor has already been coded, but the app still needs the accelerometer.\r\n\r\n## Do This\r\n\r\n1) Create an event to continuously check the accelerometer\r\n2) Get the `pitch` and `roll` properties of the accelerometer and store them in two variables\r\n3) Update the `x` and `y` position of the cursor based on the `pitch` and `roll`\r\n",
     "parent_level_id": 20595,
     "name_suffix": "_2222",
@@ -101,13 +106,8 @@
     "encrypted_examples": "kRZaCVcjDU9mI0TDYRygtCXesrlh4WTE5+nbLYhQMrptDwSUy4FJ9iHLCZHv\n1p6ACkNCyjnKB8Y671te4D8c8Q==\n",
     "preload_asset_list": null
   },
-  "level_num": "custom",
-  "game_id": 41,
-  "created_at": "2022-04-08T17:06:52.000Z",
-  "user_id": 1,
-  "published": true,
   "notes": "",
-  "audit_log": "[{\"changed_at\":\"2022-04-08T17:06:52.969+00:00\",\"changed\":[\"cloned from \\\"CSD U6 - Accelerometer - A_2022\\\"\"],\"cloned_from\":\"CSD U6 - Accelerometer - A_2022\"}]"
+  "audit_log": "[{\"changed_at\":\"2022-04-08T17:06:52.969+00:00\",\"changed\":[\"cloned from \\\"CSD U6 - Accelerometer - A_2022\\\"\"],\"cloned_from\":\"CSD U6 - Accelerometer - A_2022\"},{\"changed_at\":\"2023-05-23 17:38:09 +0000\",\"changed\":[\"code_functions\",\"makerlab_enabled\",\"encrypted_examples\",\"preload_asset_list\",\"contained_level_names\"],\"changed_by_id\":18602,\"changed_by_email\":\"angelina+levelbuilder@code.org\"}]"
 }]]></config>
   <blocks/>
 </Applab>

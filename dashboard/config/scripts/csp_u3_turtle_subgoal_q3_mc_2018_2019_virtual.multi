@@ -17,3 +17,5 @@ versus giving the parameters a value (calling):
 
 `drawShape(150, "red")`
 MARKDOWN
+
+allow_multiple_attempts true

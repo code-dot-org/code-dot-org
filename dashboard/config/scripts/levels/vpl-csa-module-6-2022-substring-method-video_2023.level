@@ -1,0 +1,23 @@
+<StandaloneVideo>
+  <config><![CDATA[{
+  "game_id": 54,
+  "created_at": "2023-08-01T16:32:43.000Z",
+  "level_num": "custom",
+  "user_id": 63,
+  "properties": {
+    "video_key": "csa-pl-intro-to-strings",
+    "instructions_important": "false",
+    "skip_dialog": true,
+    "skip_sound": true,
+    "parent_level_id": 28813,
+    "name_suffix": "_2023",
+    "encrypted": "false",
+    "long_instructions": "## The indexOf() and substring() methods\r\n\r\nIn the curriculum, students will learn more about how the `indexOf()` and `substring()` methods work.  The video below goes into more detail on these methods.  As you watch the video, consider what might be challenging or surprising about these methods for students.\r\n\r\n\r\n**Up next:** You will look at an investigate level that uses the `compareTo()` method from the `String` class."
+  },
+  "published": true,
+  "notes": "",
+  "audit_log": "[{\"changed_at\":\"2023-08-01T16:32:43.291+00:00\",\"changed\":[\"cloned from \\\"vpl-csa-module-6-2022-substring-method-video\\\"\"],\"cloned_from\":\"vpl-csa-module-6-2022-substring-method-video\"}]",
+  "level_concept_difficulty": {
+  }
+}]]></config>
+</StandaloneVideo>

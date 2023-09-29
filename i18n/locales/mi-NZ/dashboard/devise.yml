@@ -50,9 +50,6 @@ mi:
       expired: "kua mōnehu, tēnā tonoa he mea hou"
       not_found: "kāore i kitea"
       not_locked: "kāore i raka"
-      not_saved:
-        one: "Kāore tēnei %{resource} i tiakina, i haukotia i runga i te hē kotahi:"
-        other: "Kāore tēnei %{resource} i tiakina, i haukotia i runga i ngā hē %{count}:"
     invitations:
       send_instructions: 'Kua tukuna te pōhiri ā-īmērā ki %{email}.'
       invitation_token_invalid: 'He muhu te maimai pōhiri nei!'

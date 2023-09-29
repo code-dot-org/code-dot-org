@@ -16,3 +16,5 @@ A team is making a platform jumper game.  The background and platforms are worki
 1. The character sprite is drawn behind the background sprite.
 1. The character sprite is drawn off the screen.
 MARKDOWN
+
+allow_multiple_attempts true

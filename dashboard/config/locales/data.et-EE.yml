@@ -1,81 +1,186 @@
 ---
 et:
   data:
-    game:
-      name:
-        Unplug1: Sissejuhatus arvutiõpetusse
-        Maze: Labürint
-        Multi: Mitmik-valiku asjad
-        Unplug2: Arvutuslik mõtlemine
-        Unplug3: Millimeetripaberi programmeerimine
-        Artist: Kunstnik
-        Unplug4: Algoritmid
-        Artist2: Kunstnik tase 2
-        Unplug5: Funktsioonid
-        Farmer: Talunik
-        Unplug6: Tingimuslaused
-        Artist3: Kunstnik tase 3
-        Unplug7: Laulu kirjutamine
-        Farmer2: Talunik tase 2
-        Unplug8: Abstraktsus
-        Artist4: Kunstnik tase 4
-        Unplug9: Relee programmeerimine
-        Farmer3: Talunik tase 3
-        Unplug10: Internet
-        Artist5: Kunstnik tase 5
-        Unplug11: Kokkuvõte
-        MazeEC: Labürint
-        Bounce: Põrkama
-        Flappy: Flappy Bird
-        Jigsaw: Pusle
-        MazeStep: Labürindi sammu režiim
-        Wordsearch: Sõnaotsing
-        Webapp: App Lab
-        ArtistEC: Kunstnik
-        TextMatch: Teksti vaste
-        StudioEC: Play Lab
-        Applab: App Lab
-        NetSim: Interneti simulaator
-        Custom: Kunstnik
-        CustomStudio: Play Lab
-        Gamelab: Game Lab
-    trophy:
-      name:
-        Bronze: Pronks
-        Silver: Hõbe
-        Gold: Kuld
+    callout:
+      text:
+        Infinity_move_collide_callout: Mängi heli, kui sündmus juhtub.
+        Infinity_move_directions_callout: Milline plokk paneb Baymaxi üles liikuma,
+          kui üles noole klahvile on vajutatud?
+        Infinity_move_directions_callout_arrow: Noolte abil saate juhtida
+        Infinity_move_right_runbutton: Lisa liigutamise plokk siia
+        Infinity_repeat_callout: Aseta Liigu plokid siia sisse
+        actions_category: Tööriistakastil on uus ilme. Tegevuste plokid on nüüd siin.
+        add_and_drag_parameter: Kirjuta siia oma parameetri nimi, kliki lisamisnupul
+          ja lohista see oma funktsioonimääratlusse
+        arrows_move_actor: Kasuta tegelaskuju liigutamiseks nooleklahve
+        bee_for_loop: Lohista siia arv, mis näitab, kui palju nektarit peaks mesilane
+          kõige rohkem koguma
+        category_explanation: Sul on samad plokid, aga nüüd on need jaotatud kategooriate
+          järgi
+        change_here: Tee siin oma muudatus
+        craft_callout_moveforward: Selle koodiga otsitakse laavat. Kas oskad lisada
+          käsu edasiliikumiseks?
+        craft_callout_preplaced: Panime sulle alustuseks siia mõned plokid
+        craft_callout_preplaced_house: Selle koodiga alustatakse majaehitust. Kas
+          oskad selle lõpetada?
+        craft_drag_block_callout: Lohista plokki „liigu edasi();“ ja kinnita see teise
+          ploki alla
+        craft_inside_repeat: Tegevuste kordamiseks panne siia plokid
+        craft_run_button_callout: Programmi proovimiseks vajuta nuppu „Käivita“
+        craft_what_is_iron: Kaevanda seda rauda!
+        create_function: Kliki siin, et avada hüpik „Funktsioonid“ ja kliki nupul
+          „Loo funktsioon“.
+        degrees_per_side: Jaga number 360 külgede arvuga, et saaksid iga nurga kraadide
+          arvu.
+        drag_blocks: Lohista plokki „liiguta“ ja kinnita see teise ploki alla
+        draw_square_hint: 'Vihje: kasuta kandilist tsüklit, mille tegid just eelmises
+          mõistatuses.'
+        edit_add_parameter: Kliki muutmisnupul, et lisada oma funktsiooni parameeter
+        edit_draw_square: Kasuta seda nuppu funktsiooni muutmiseks ja tsükli lisamiseks.
+        edit_function: Funktsiooni muutmiseks kliki siin.
+        edit_get_nectar: Kasuta seda nuppu funktsiooni muutmiseks ja mesilase liikumissuuna
+          muutmiseks, kui ta nektarit korjab.
+        fill_in_actor: Täida ??? numbritega, mis vastavad igale tegelaskujule (1,
+          2 ja 3)
+        frozen_circle_function_in_circle_turn: Ära unusta peale igat ringi loomist
+          keerata.
+        frozen_circle_function_with_parameter_circle: Kasuta " loo ring" plokki ja
+          muuda suurus.
+        frozen_create_square: Lisa rohkem plokke, et luua ruut
+        frozen_diamond_repeat: Kasuta korduse plokki, et see kujund luua.
+        frozen_snowflake_branch: Kasuta "joonista lumehelbe võrestik" plokki
+        function_editor_draw_square: See on sinu funktsioonimääratlus. Neid plokke
+          käitatakse iga kord, kui kasutad plokki „joonista ruut“
+        get_nectar: Kasuta uut plokki „korja nektarit“.
+        gray_block_explanation: Halle plokke ei saa kustutada. Kas oskad mõistatuse
+          ikkagi lahendada?
+        house_hint: Pole midagi, kui pilt pole veel päris maja moodi. Järgmises mõistatuses
+          parandame selle ära.
+        if_bee_nectar: Kasuta plokki „kui“, et näidata, kas mesilane peab nektarit
+          korjama
+        if_else_bee: Kasuta plokki „kui teine“, et mesilane saaks lillelt nektarit
+          ja kui see pole lill, siis teeks mett
+        instructions_repeat_explanation: Siin korratakse iga mõistatuse juhiseid
+        jigsaw_click: Kliki sellel plokil.
+        length_parameter: Kas oskad seda funktsiooni uuendada, et see kasutaks parameetrit
+          „pikkus“?
+        logic_category: Ploki „kui teine“ leidmiseks ava hüpik „Loogika“.
+        move_elsa_forward: Lohista plokk „Liigu edasi“ ploki „pärast käivitamist“
+          alla, et Elsa liiguks edasi
+        name_function: Kirjuta siia oma funktsiooni nimi
+        place_counter_variable: Lohista oma loendurimuutuja selle ploki sisse
+        place_length_variable: Küsimärkide asendamiseks lohista siia pikkusemuutuja
+        place_variable: Lohista oma muutuja selle ploki sisse
+        playlab_add_blocks: Lisa siia oma plokid
+        playlab_add_move: Lisa selle kordamisploki sisse plokid „liiguta“
+        playlab_add_score: Lisa siia tulemuseplokid
+        playlab_arrow_keys: Kasuta neid nõia liigutamiseks pärast seda, kui oled klikkinud
+          nupul Käivita
+        playlab_drag_say: Lohista siia plokk „ütle“ ja kirjuta „tere“
+        playlab_move_girl: Kasuta tennisetüdruku juurde liikumiseks plokki „liigu
+          paremale“
+        playlab_play_sound: Lisa siia plokk „heli esitamine“
+        playlab_use_twice: Kasuta seda plokki kaks korda ja ära unusta muuta tegelaskuju
+          numbrit
+        repeat: Käskude kordamiseks aseta plokid tsükli sisse
+        repeat_blocks: Kasuta plokki „Korda“ ja pane see tööruumis olevate plokkide
+          ümber
+        repeat_blocks_1: "(1) Kasuta seda plokki ja pane see tööruumis hallide plokkide
+          ümber"
+        repeat_blocks_2: "(2) Teisalda plokk „Korda“ siia ja pane hallid plokid selle
+          sisse"
+        repeat_full_circle: Sisesta, mitu korda peab zombi liikuma, et teha üks täisring
+        replace_questions: Kasuta rippmenüüd, et asendada „???“ numbriga
+        replace_questions_degree: Kasuta rippmenüüd, et asendada „???“ õige pööramisnurgaga
+        right_arrow_fireball: Kasuta tulekerade laskmiseks paremnoolt
+        run: Programmi proovimiseks vajuta nuppu „Käivita“
+        set_length: Kasuta seda plokk, et määrata õige pikkus.
+        set_sides: Kasuta seda plokki, et määrata külgede arvuks see arv, mida on
+          vaja mõistatuse lahendamiseks.
+        set_sprite_image: Kinnita plokk „määra tegelaskuju pildile“ ploki „kui lugu
+          algab“ külge, et selle loo tegelane aktiveerida
+        set_variable: Muutuja määramiseks lohista siia numbriplokk
+        show_code_explanation: Poolelioleva programmi koodi vaatamiseks kliki siin
+        snowflake_dropdown: Kasuta seda rippmenüüd erinevate lumehelveste loomiseks.
+        studio_say_text: Kirjuta tekst, mida sa tahad, et tegelaskuju nende jutumärkide
+          vahel ütleks
+        turn_elsa: Kasuta plokki „Pööra“, et Elsa pööraks. Rippmenüüs valitud number
+          näitab, mitu korda Elsa pöörab
+        watch_again: Video uuesti vaatamiseks kliki siin
+        which_equation: Millise võrrandiga saab rohkemate külgedega kujundite külgi
+          lühemaks muuta?
+        write_draw_square_function: Lohista tööriistakastist siia plokid, millega
+          joonistatakse ruut
+        write_draw_triangle_function: Lohista tööriistakastist siia plokid, millega
+          joonistatakse kolmnurk
     concept:
       description:
-        sequence: Jada
+        function: Funktsioonid
         if: '"kui" plokk'
         if_else: '"kui teine" plokk'
+        loop_for: Loenduri plokk
         loop_times: '"korduste arvu" plokk'
         loop_until: '"Korda kuni" plokk'
         loop_while: '"kuni" plokk'
-        loop_for: Loenduri plokk
-        function: Funktsioonid
         parameters: Parameetritega funktsioonid
+        sequence: Jada
+    game:
+      name:
+        Applab: App Lab
+        Artist: Kunstnik
+        Artist2: Kunstnik tase 2
+        Artist3: Kunstnik tase 3
+        Artist4: Kunstnik tase 4
+        Artist5: Kunstnik tase 5
+        ArtistEC: Kunstnik
+        Bounce: Põrkama
+        Custom: Kunstnik
+        CustomStudio: Play Lab
+        Farmer: Talunik
+        Farmer2: Talunik tase 2
+        Farmer3: Talunik tase 3
+        Flappy: Flappy Bird
+        Gamelab: Game Lab
+        Jigsaw: Pusle
+        Maze: Labürint
+        MazeEC: Labürint
+        MazeStep: Labürindi sammu režiim
+        Multi: Mitmik-valiku asjad
+        NetSim: Interneti simulaator
+        StudioEC: Play Lab
+        TextMatch: Teksti vaste
+        Unplug1: Sissejuhatus arvutiõpetusse
+        Unplug10: Internet
+        Unplug11: Kokkuvõte
+        Unplug2: Arvutuslik mõtlemine
+        Unplug3: Millimeetripaberi programmeerimine
+        Unplug4: Algoritmid
+        Unplug5: Funktsioonid
+        Unplug6: Tingimuslaused
+        Unplug7: Laulu kirjutamine
+        Unplug8: Abstraktsus
+        Unplug9: Relee programmeerimine
+        Webapp: App Lab
+        Wordsearch: Sõnaotsing
     level:
       instructions:
-        maze_2_2: 'Kas sa oskad mind aidata ulaka sea kinnipüüdmisel? Sea paar "liigu
-          edasi" plokki kokku ja vajuta "Käivita", et mind sinna aidata. '
+        Custom_builder: Lohista plokid tööriistakastist tööruumi, et joonistada soovitud
+          tase. Kui oled valmis, vajuta nuppu „Käivita“.
+        applab_ec_simple: Kasuta tööriistakastis olevaid plokke ja loo oma rakendus.
+        jigsaw_1: Kliki plokil
+        jigsaw_10: Korrasta plokke, et tekiks pilt
+        jigsaw_11: Korrasta plokke, et tekiks pilt
+        jigsaw_12: Korrasta plokke, et tekiks pilt
+        jigsaw_13: Paranda pusle!
+        jigsaw_2: Lohista plokk sihtmärgile
+        jigsaw_3: Korrasta plokke, et tekiks pilt
+        jigsaw_4: Korrasta plokke, et tekiks pilt
+        jigsaw_5: Korrasta plokke, et tekiks pilt
+        jigsaw_6: Korrasta plokke, et tekiks pilt
+        jigsaw_7: Korrasta plokke, et tekiks pilt
+        jigsaw_8: Korrasta plokke, et tekiks pilt
+        jigsaw_9: Korrasta plokke, et tekiks pilt
         maze_2_1: See siga ajab mu suled turri. Aita mul ta leida!
-        maze_2_2_5: Jälgi rada ja juhi mind tobeda sea juurde. Väldi dünamiiti või
-          suled lendavad!
-        maze_2_3: Juhi mind rohelise õeluse juurde! (Ettevaatust dünamiidiga)
-        maze_2_4: Ole rahulik ja aita mul paha siga leida. Vastasel korral võin ma
-          vihaseks saada!
-        maze_2_5: On viis, kuidas ainult 2 plokki kasutades sea juurde jõuda. Kas
-          saad sellele pihta?
-        maze_2_6: Püüa mind aidata rohelise sissetungija juurde, kasutades ainult
-          3 plokki.
-        maze_2_7: Aita mul see paha siga pagendada, kasutades võimalikult vähe plokke.
-          Proovi kasutada "korduste arvu" plokki rohkem kui üks kord.
-        maze_2_8: 'Halli värvi plokki ei saa kustutada. Pusle lahendamiseks kasuta
-          "korduste arvu" plokki, mis kordub 3 korda. Proovi asetada need 3 plokki:
-          "liigu", "liigu", "keera" halli "korduste arvu" ploki sisse.'
-        maze_2_9: Hea küll, proovi uut "korda kuni" plokki - see jätkab kordamist,
-          kuni ma jõuan tüütu seani.
         maze_2_10: Hea küll, viimane kord harjutada - kas sa saad selle lahendada,
           kasutades ainult 4 plokki?
         maze_2_11: Kallis inimene. Mina zombi. Mina näljane. Pean... saama... päevalillele...Kas
@@ -97,59 +202,41 @@ et:
         maze_2_19: Kas sa saad lisada 3 plokki, et aidata mul lahendada veel keerulisem
           labürint? Kui sa teed seda õigesti, saan ma läbida erinevaid kurvilisi radu,
           ükskõik kui pikk see on.
-        turtle_1_1: Tere, mina olen kunstnik. Koodi kirjutades saate mind panna joonistama
-          peaaegu kõike. Kasutades paari plokki ja pane mind üle joonistama pildil
-          olevad hallid jooned.
-        turtle_1_2: 'Nüüd joonista ruut. MÄRKUS: kasuta enda lemmikvärvi, valides
-          see "vali värv" plokist.'
-        turtle_1_3: Joonista ruut, kasutades ainult kolme plokki.
-        turtle_1_4: 'Joonista kolmnurk mille kõik küljed on erinevat värvi. Selleks
-          kasuta "juhuslik värv" valikut, mis iga kord valib erineva värvi, Vihje:
-          Klõpsates pöörde plokil olevale numbrile, pead välja mõtlema, kui kaugele
-          pöörata.'
-        turtle_1_5: Harjutamiseks joonista kolmnurk ja ruut, et joonistada ümbrik.
-        turtle_1_6: 'Kas mõtled välja, kuidas joonistada seda kolmnurka ja ruutu?
-          Vihje: Joonista kolmnurk enne ja siis mõtle kui palju pead pöörama, et joonistada
-          ruutu.'
-        turtle_1_7: Nüüd natukene raskem ülesanne - kas oskad joonistada neid rohelisi
-          prille. Ruudud on küljepikkusega 100 pikslit ja ruutude kaugus on 50 pikslit.
-          Ära unusta prille roheliseks värvida!
-        turtle_1_8: Proovi aru saada, mis juhtub antud koodi käivitamisel (või vajuta
-          "Käivita", et proovida). Seejärel käivita nii mitu korda, et lõpetada joonistus.
-          Värvid muutuvad igal käivitamisel.
-        turtle_1_9: Nuputa välja, mis numbriga asendada küsimärk, et joonistada ring?
-        turtle_1_10: 'Sa said sellega hakkama! Nüüd võid joonistada, mida ise tahad.
-          Mõned lahedad ideed: kriipsujuku, lumehelves või spiraal. Proovi kasutada
-          uut "määra laius" plokki. Laske käia!'
-        turtle_4_1: 'Kas sa saad joonistada kolmnurga, (külgedega 100 pikslit) kasutades
-          ainult kolme plokki? Vihje: kasuta "korda" plokki.'
-        turtle_4_2: Lisa "pööra 90 kraadi" plokk kuhugi töölaual olevale programmile,
-          et joonistada need kolmnurgad.
-        turtle_4_3: Okei, siin on kood mille sa kirjutasid ühe kolmnurga joonistamiseks.
-          Kas sa saad ilusa lille joonistamiseks lisada "korda" ja "pööra" ploki?
-        turtle_4_4: 'Siin on sama kood, mis eelmises pusles, kuid pöördub vaid 36
-          kraadi pärast iga kolmnurga joonistamist. Mitu korda on vaja ülesannet korrata?
-          (Vihje: pärast pöördumist 360 kraadi saab joonisest täisring)'
-        turtle_4_5: 'Siin on sama kood, mis eelmises pusles, kuid pööramised on korratud
-          36 korda. Mitu kraadi peaksid olema pöörded? (Vihje: pärast pöördumist 360
-          kraadi saab joonisest täisring)'
-        turtle_4_6: Kasutades vaid kolme blokki, kas sa saad joonistada ruudu, mille
-          serva pikkus on 20 pikslit?
-        turtle_4_7: 'Siin on kood ruudu joonistamiseks viimases mõistatuses. Kas sul
-          õnnestub seda korrata ja joonistada 10 külgnevat ruutu, nagu redel? Vihje:
-          vajad ainult 2 täiendavat blokki.'
-        turtle_4_8: Siin on eelmise mõistatuse lahendus. Kas saad lisada veel ainult
-          2 plokki, et joonistus valmis saaks?
-        turtle_4_9: Siin on eelmise mõistatuse lahendus. Mitu kraadi pead pöörama,
-          et joonistus valmis saaks? (Sa pead arvatavasti paar korda arvama)
-        turtle_4_10: Siin on eelmise mõistatuse lahendus. Kui mitu korda pead kordust
-          kasutama, et joonistus ära lõpetada?
-        turtle_4_11: Erinevate mustrite loomiseks proovi muuta plokkides „pööra“ ja
-          „korda“ olevaid numbreid. Või proovi muuta ülejäänud koodi, et joonistada
-          just seda, mida soovid.
+        maze_2_2: 'Kas sa oskad mind aidata ulaka sea kinnipüüdmisel? Sea paar "liigu
+          edasi" plokki kokku ja vajuta "Käivita", et mind sinna aidata. '
+        maze_2_2_5: Jälgi rada ja juhi mind tobeda sea juurde. Väldi dünamiiti või
+          suled lendavad!
+        maze_2_3: Juhi mind rohelise õeluse juurde! (Ettevaatust dünamiidiga)
+        maze_2_4: Ole rahulik ja aita mul paha siga leida. Vastasel korral võin ma
+          vihaseks saada!
+        maze_2_5: On viis, kuidas ainult 2 plokki kasutades sea juurde jõuda. Kas
+          saad sellele pihta?
+        maze_2_6: Püüa mind aidata rohelise sissetungija juurde, kasutades ainult
+          3 plokki.
+        maze_2_7: Aita mul see paha siga pagendada, kasutades võimalikult vähe plokke.
+          Proovi kasutada "korduste arvu" plokki rohkem kui üks kord.
+        maze_2_8: 'Halli värvi plokki ei saa kustutada. Pusle lahendamiseks kasuta
+          "korduste arvu" plokki, mis kordub 3 korda. Proovi asetada need 3 plokki:
+          "liigu", "liigu", "keera" halli "korduste arvu" ploki sisse.'
+        maze_2_9: Hea küll, proovi uut "korda kuni" plokki - see jätkab kordamist,
+          kuni ma jõuan tüütu seani.
+        maze_3_1: Pean selle põrsani jõudma! Kirjuta liikumiseks(); paar käsklust,
+          et saaksin oma munad tagasi.
+        maze_3_2: Kirjuta programm, mis viiks mind põrsa juurde.
+        maze_3_3: Millist teed mööda ma põrsani jõuan? Vaata, et ma TNT-dünamiidi
+          vastu ei kõnni!
+        maze_3_4: Oih! Kirjuta programm, mis viiks mind põrsa juurde nii, et ma ei
+          puudutaks TNT-dünamiiti.
         maze_karel_1_1: Tere, mina olen talunik. Mul on vaja su abi, et sa aitaksid
           mu talu põldu siluda, nii et sinna saaks midagi istutada. Liiguta mind mullahunniku
           juurde ja kasuta selle eemaldamiseks plokki „eemalda“.
+        maze_karel_1_10: Töötan hilja, mistõttu on väljas pime, ja ma ei tea, kui
+          suured on kuhjad. Samuti ei ole mul kõiki valikuid, mis mul enne olid seoses
+          korduv-blokkidega. Liiguta mind väljal ringi ja kui seal on kuhi, siis eemalda
+          see.
+        maze_karel_1_11: 'Väljas on ikka pime. Liigu minuga väljal ringi. Kui seal
+          on kuhi, siis eemalda see, ja kui seal on auk, siis täida see. Vihje: kasuta
+          avanevat valikute menüüd "kui" bloki juures.'
         maze_karel_1_2: Järgmiseks liiguta mind augu juurde ja täida see KAHE labidatäie
           mullaga, kasutades plokki „täida“.
         maze_karel_1_3: Liiguta mind mullahunniku juurde ja ütle, mitu labidatäit
@@ -168,16 +255,259 @@ et:
           kui võimalik.
         maze_karel_1_9: 'Aita mul kogu see mustus eemaldada. Proovi kasutada võimalikult
           vähe blokke. Vihje: proovi kasutada blokki "korduv".'
-        maze_karel_1_10: Töötan hilja, mistõttu on väljas pime, ja ma ei tea, kui
-          suured on kuhjad. Samuti ei ole mul kõiki valikuid, mis mul enne olid seoses
-          korduv-blokkidega. Liiguta mind väljal ringi ja kui seal on kuhi, siis eemalda
-          see.
-        maze_karel_1_11: 'Väljas on ikka pime. Liigu minuga väljal ringi. Kui seal
-          on kuhi, siis eemalda see, ja kui seal on auk, siis täida see. Vihje: kasuta
-          avanevat valikute menüüd "kui" bloki juures.'
+        maze_karel_2_1: 'Proovi kasutada blokke et eemaldada kuhjad ning täita kõik
+          augud pinnal. Proovi kasutada korduvtsükleid suure hulga blokkide asemel.
+          Vihje: korduvtsükleid saab panna üksteise sisse.'
+        maze_karel_2_10: Liigu minuga üle välja ja kasuta neid kahte funktsiooni,
+          et aidata mul eemaldada kõik hunnikud ja täita augud.
+        maze_karel_2_2: Oleme määratlenud oma bloki nimega "täida 5", mis asub nüüd
+          funktsioonide kategoorias. Kasuta seda, et aidata mind selle augu täitmisel.
+        maze_karel_2_3: Kasuta uut "täida 5" funktsiooniga blokki, et aidata mind
+          kõikide aukude täitmisel. Sul tuleb lohistada "täida 5" blokk funktsioonide
+          kategooriast välja.
+        maze_karel_2_4: Määratle uus funktsioon, mis eemaldaks 7 labidatäit. Nüüd
+          kasuta seda uue programmi kirjutamiseks, mis aitaks mul kõik kuhjad eemaldada.
+        maze_karel_2_5: Loo uus funktsioon, mis eemaldaks 6 labidatäit kuhjast ning
+          kasuta seda, et aidata mul tasandada kõik kuhjad.
+        maze_karel_2_6: Kasuta kahte uut funktsiooni "täida 8" ja "eemalda 8", et
+          aidata mul tasandada kuhi ja täita auk.
+        maze_karel_2_7: Minu väljal on lehm! Kirjuta uus funktsioon, mis aitaks mul
+          lehma vältida ja kuhi eemaldada. Aseta kõik blokid uue funktsiooni sisse.
+        maze_karel_2_8: Kasuta uut funktsiooni "väldi lehma ja eemalda 1", et aidata
+          mind kõikide kuhjade eemaldamisel.
+        maze_karel_2_9: Ok, siin on funktsioon, mis eemaldab 4 eri mustuse hunnikut
+          vertikaalses tulbas. Proovi panna see funktsioon korduvtsüklisse, nõnda
+          et sa saaksid kõik mustuse hunnikud eemaldada kasutades vaid väheseid uusi
+          blokke.
+        maze_karel_debug_function_1: Mida sa peaksid selles programmis muutma, et
+          ma saaksin kõik hunnikud eemaldada?
+        maze_karel_debug_function_2: Kas saaksid parandada selle programmi vead, et
+          ma saaks põllu ära siluda?
+        maze_karel_debug_function_3: 'Muuda seda programmi nii, et ma saaksin põllult
+          kõik hunnikud eemaldada. '
+        maze_karel_debug_if: Appi! Paranda seda programm nii, et minu põld oleks täiesti
+          sile.
+        maze_karel_debug_if_else: Paranda selle programmi vead, et ma saaksid täita
+          augud ja eemaldada kõik hunnikud.
+        maze_karel_debug_repeat: Paranda seda programmi nii, et minu põld oleks kena
+          ja sile.
+        maze_karel_debug_seq_1: Tere tulemast koodi silumisse! Minu kood ei tööta
+          õigesti. Kas sa leiaksid probleemi ja parandaksid selle nii, et ma saaksin
+          oma põllu siledaks ning istutamiseks valmis?
+        maze_karel_debug_seq_2: MIs sellel programmil viga on? Kuidas sa peaksid seda
+          parandama, et see eemaldaks selle kuhja?
+        maze_karel_debug_while: Kuidas peaksid sa seda programmi muutma, et aidata
+          mul täita see auk?
+        maze_wordsearch_k_1: Liiguta mind, et kirjutada sõna EAST
+        maze_wordsearch_k_13: Liiguta mind ühes ja siis teises suunas, et kirjutada
+          sõna DEBUG
+        maze_wordsearch_k_15: Liiguta mind ühes ja siis teises suunas, et kirjutada
+          sõna ABOVE
+        maze_wordsearch_k_16: Liiguta mind ühes ja siis teises suunas, et kirjutada
+          sõna BELOW
+        maze_wordsearch_k_2: Liiguta mind, et kirjutada sõna SOUTH
+        maze_wordsearch_k_20: See on katse. Liiguta mind ühes ja siis teises suunas,
+          et kirjutada sõna STORY
+        maze_wordsearch_k_3: Liiguta mind, et kirjutada sõna WEST
+        maze_wordsearch_k_4: Liiguta mind, et kirjutada sõna NORTH
+        maze_wordsearch_k_6: Liiguta mind ida (E) suunas ja siis lõuna (S) suunas,
+          et kirjutada sõna JUMP
+        maze_wordsearch_k_9: Liiguta mind ühes ja siis teises suunas, et kirjutada
+          sõna CODE
+        mazestep_1: Siin on labürindietapi kirjeldus
+        mazestep_2: Siin on labürindietapi kirjeldus
+        mazestep_3: Siin on labürindietapi kirjeldus
+        mazestep_4: Siin on labürindietapi kirjeldus
+        mazestep_5: Siin on labürindietapi kirjeldus
+        studio_c2_1: Kas oskad panna koera ütlema "tere maailm"?
+        studio_c2_10: Kas sa saaksid lisada ploki, et tausta vahetada ja muuta pingviini
+          kiirust ja liigutada teda nooltega kuni punkti saad?
+        studio_c2_11: Loo oma lugu. Kui valmis saad, vajuta nuppu „Valmis“ ja lase
+          sõpradel nende telefonis oma lugu proovida.
+        studio_c2_2: Kas oskad teha nii, et koer ütleks midagi ja pärast seda ütleks
+          kass midagi?
+        studio_c2_3: Kas oskad kirjutada programmi, mille abil see koer liigub kassi
+          juurde?
+        studio_c2_4: Kas sa saaksid kirjutada programmi, mille abil koer liigub kassi
+          juurde ja kass ütleb „tere“, kui koer tema juurde jõuab?
+        studio_c2_5: Kas saaksid kirjutada programmi, mille abil kaheksajalg ütleb
+          „tere“, kui temal klikitakse?
+        studio_c2_6: Kas sa saaksid kirjutada programmi, mille abil liigutada pingviini
+          üles-, alla-, parem- ja vasaknooleklahvide abil nii, et ta jõuaks kõigi
+          sihtmärkideni?
+        studio_c2_7: Ploki „korda igavesti“ abil saad koodi pidevalt käivitada. Kas
+          oskad kinnitada plokid nii, et dinosaurus liiguks kogu aeg üles ja alla?
+        studio_c2_8: Kas sa saaksid panna pingviini nooleklahvidega liikuma ja teha
+          nii, et kui pingviin põrkab dinosaurusega kokku, siis ta ütleb „Oih!“ ja
+          kõlab heli „löök“?
+        studio_c2_9: Kas sa saaksid lisada ploki nii, et saaksid punkti kui pingviin
+          põrkab kaheksajalaga kokku, ja liigutada pingviini nooleklahvidega kuni
+          saad punkti?
+        studio_c3_game_1: Kas saaksid kirjutada programmi, mille abil kaheksajalg
+          ütleb „tere“, kui temal klikitakse?
+        studio_c3_game_2: Kas sa saaksid kirjutada programmi, mille abil liigutada
+          pingviini üles-, alla-, parem- ja vasaknooleklahvide abil nii, et ta jõuaks
+          kõigi sihtmärkideni?
+        studio_c3_game_3: Ploki „korda igavesti“ abil saad koodi pidevalt käivitada.
+          Kas oskad kinnitada plokid nii, et dinosaurus liiguks kogu aeg üles ja alla?
+        studio_c3_game_4: Kas sa saaksid panna pingviini nooleklahvidega liikuma ja
+          teha nii, et kui pingviin põrkab dinosaurusega kokku, siis ta ütleb „Oih!“
+          ja kõlab heli „löök“?
+        studio_c3_game_5: Kas sa saaksid lisada ploki nii, et saaksid punkti kui pingviin
+          põrkab kaheksajalaga kokku, ja liigutada pingviini nooleklahvidega kuni
+          saad punkti?
+        studio_c3_game_6: Kas sa saaksid lisada ploki, et tausta vahetada ja muuta
+          pingviini kiirust ja liigutada teda nooltega kuni punkti saad?
+        studio_c3_game_7: Loo oma lugu. Kui oled valmis, vajuta nuppu „Valmis“ ja
+          lase sõpradel telefonis lugu proovida.
+        studio_c3_story_1: Kas oskad panna koera ütlema "tere maailm"?
+        studio_c3_story_2: Kas oskad teha nii, et koer ütleks midagi ja pärast seda
+          ütleks kass midagi?
+        studio_c3_story_3: Kas oskad kirjutada programmi, mille abil see koer liigub
+          kassi juurde?
+        studio_c3_story_4: Kas sa saaksid kirjutada programmi, mille abil koer liigub
+          kassi juurde ja kass ütleb „tere“, kui koer tema juurde jõuab?
+        studio_c3_story_5: Kas sa saaksid lisada ploki, et kaheksajalg õnnelikuks
+          teha?
+        studio_c3_story_6: Loo oma lugu. Kui valmis saad, vajuta nuppu „Valmis“ ja
+          lase sõpradel nende telefonis oma lugu proovida.
+        studio_ec_sandbox: Loo oma lugu. Kui oled valmis, vajuta nuppu „Valmis“ ja
+          lase sõpradel telefonis lugu proovida.
+        studio_full_sandbox: Loo oma lugu. Kui oled valmis, vajuta nuppu „Valmis“
+          ja lase sõpradel telefonis lugu proovida.
+        studio_gumball_click_hello: 'Aita Antonil anda võidujooksu stardikorraldus:
+          "Tähelepanu, valmis, läks!" Programmi katsetamiseks ära unusta klõpsata
+          Antonil pärast nupu "Käivita" klõpsamist.'
+        studio_gumball_free_play: Loo oma mäng või lugu. Kui oled valmis, vajuta nuppu
+          "Valmis" ja lase sõpradel telefonis, tahvelarvutis või arvutis lugu proovida.
+        studio_gumball_hello1: Anais otsib uusi sõpru. Aita tal öelda "tere", selleks
+          lohista plokk "ütle" tööruumi ja kirjuta sellesse sõna "tere".
+        studio_gumball_hello2: Darwin (tegelane 1) ja tema vend Gumball (tegelane
+          2) on teel kooli. Aita neil üksteist tervitada, kasutades kaks korda plokki
+          "tegelaskuju ütleb".
+        studio_gumball_join_food_fight: Löö kaasa toidusõjas. Kasuta käsklust "tegelaskuju
+          viskab eseme paremale", et Banana Joe (tegelane 1) loobiks Antonit (tegelane
+          2) toiduga. Kui Anton saab pihta, sea ta vihasesse meeleollu.
+        studio_gumball_move_events: Darwin osaleb lipukogumisvõistlusel. Aita tal
+          liikuda, kinnitades iga sündmuse külge plokk "liiguta". Kui oled valmis,
+          klõpsa nuppu "Käivita" ja proovi koguda kokku kõik lipud.
+        studio_gumball_move_to_actor: Gumball (tegelane 1) ja Darwin (tegelane 2)
+          jäävad spordipäevale hiljaks! Aita Gumballil läbida 200 pikslit Darwinini,
+          kasutades plokki "liiguta tegelaskuju".  Seejärel ühenda plokk sündmusega
+          "kui tegelane puudutab", et mängida heli, kui nad üksteist leiavad.
+        studio_gumball_move_to_flag: Banana Joe võidab kohe spordipäeva võidujooksu!
+          Aita tal läbida viimased 200 pikslit, kasutades plokki "liiguta".
+        studio_gumball_repeat: Ploki "korda igavesti" abil saad koodi pidevalt käitada.
+          Kas oskad kinnitada plokid nii, et Gumball teeks võidujooksu jaoks soojendust,
+          liikudes korduvalt vasakule ja paremale?
+        studio_gumball_sound_and_points: Siin on suurem osa koodist, mis aitab Antonil
+          (tegelane 2) liikuda vasakule ja paremale ning samuti kood, mis paneb Banana
+          Joe (tegelane 1) ekraanil liikuma. Kas oskad koodi lõpuni koostada ja lisada
+          plokke sündmusele "kui tegelane puudutab", et siis, kui Banana Joe ja Anton
+          kokku põrkavad, kostab heli ja saad punkti? Mängimiseks vajuta nuppu "Käivita".
+        studio_gumball_warn_food_fight: Darwin pääses just toidusõjast. Määra taustaks
+          "tegelased" ja sea Darwini liikumiskiirus kiireks ja siis vajuta nuppu "Käivita"
+          ning liiguta ta Penny juurde, et teda hoiatada.
+        studio_iceage_click_hello: Kas saad aidata Sidil viimast korda oma sõpru kutsuda
+          ploki „kui tegelaskuju puudutatakse“ abil? Ära unusta Sidi klõpsata pärast
+          nupu Käivita vajutamist.
+        studio_iceage_free_play: On aeg luua oma mäng või lugu. Kui oled valmis, vajuta
+          nuppu "Valmis" ja lase sõpradel telefonis, tahvelarvutis või arvutis lugu
+          proovida.
+        studio_iceage_hello1: Sid tahab kõiki uue seikluse jaoks kokku koguda. Aita
+          tal öelda "tere", selleks lohista plokk "ütle" tööruumi ja kirjuta sellesse
+          sõna "tere".
+        studio_iceage_hello2: Manny (tegelaskuju 1) leidis Sidi (tegelaskuju 2) ja
+          soovib teda seiklema kutsuda. Aita neil teineteist tervitada ja kasuta selleks
+          kaks korda plokki „tegelaskuju ütleb“.
+        studio_iceage_move_events: Scrat otsib ikka veel tammetõrusid! Aita tal ringi
+          lipata. Selleks kinnita iga sündmuse külge plokk „liigu“ ja muuda suunda
+          iga nooleklahviga töötamiseks. Kui see on valmis, klõpsa nuppu Käivita ja
+          proovi kokku koguda kõik tammetõrud.
+        studio_iceage_move_to_actor: Diego (tegelaskuju 1) otsib Mannyt (tegelaskuju
+          2). Aita Diegol liikuda 200 pikslit allapoole Manny juurde ja kasuta selleks
+          plokki „liiguta tegelaskuju“. Seejärel ühenda plokk sündmusega „kui tegelane
+          puudutab“, et esitada heli, kui nad teineteist leiavad.
+        studio_iceage_move_to_flag: Scrat otsib oma tammetõru. Aita tal liikuda edasi
+          viimased 200 pikslit ja kasuta selleks plokki „liiguta“.
+        studio_iceage_repeat: Ploki "korda igavesti" abil saad koodi pidevalt käitada.
+          Kas oskad kinnitada plokid nii, et vanaema liiguks harjutuste tegemiseks
+          korduvalt vasakule ja paremale?
+        studio_iceage_sound_and_points: Siin on suurem osa koodist, mis aitab vanaemal
+          liikuda vasakule ja paremale ning samuti kood, mis paneb Sidi ekraanil liikuma.
+          Kas oskad koodi lõpuni koostada ja lisada plokke sündmusele "kui tegelane
+          puudutab", et siis, kui Sid ja vanaema kokku põrkavad, kostab heli ja saad
+          punkti? Mängimiseks vajuta nuppu "Käivita".
+        studio_iceage_throw_hearts: Sid tahab oma vanaemale öelda, et ta armastab
+          teda. Selleks, et Sid (tegelaskuju 1) saaks vanaemale (tegelaskuju 2) südameid
+          visata, kasuta käsku „tegelaskuju viskab“ . Sea vanaema rõõmsasse meeleollu,
+          kui ta südamega pihta saab.
+        studio_iceage_warn_ice_age: Kõik peavad kiiremini liikuma, sest jääaeg on
+          tulemas! Muuda taust jäämägedeks ja sea Sidi liikumiskiirus kiireks ning
+          seejärel vajuta nuppu Käivita ning liiguta ta Diego juurde, et teda hoiatada.
+        studio_k1_1: Kas oskad panna koera ütlema "tere maailm"?
+        studio_k1_2: Kas oskad teha nii, et koer ütleks midagi ja pärast seda ütleks
+          kass midagi?
+        studio_k1_3: Kas oskad kirjutada programmi, mille abil see koer liigub kassi
+          juurde?
+        studio_k1_4: Tee nii, et koer liiguks kassi juurde ja kass ütleks „tere“,
+          kui koer kohale jõuab.
+        studio_k1_5: Kas sa saaksid lisada ploki, et kaheksajalg õnnelikuks teha?
+        studio_k1_6: Loo oma lugu. Liiguta kassi ja koera ja tee, et nad ütleksid
+          midagi.
+        studio_playlab_1: Pingviin tahab öelda „tere“. Kas saad teda aidata?
+        studio_playlab_10: Loo oma lugu. Kui oled valmis, vajuta nuppu „Valmis“ ja
+          lase sõpradel telefonis lugu proovida.
+        studio_playlab_2: Koopapoiss (tegelaskuju 1) ja Jasmine (tegelaskuju 2) tahavad
+          teineteisele „tere“ öelda. Kas saad neid aidata, kasutades kaks korda plokki
+          „ütle“?
+        studio_playlab_3: Kas saad aidata tennisetüdrukul lipuni jõuda?
+        studio_playlab_4: Kas saad aidata tennisepoisil (tegelaskuju 1) jõuda tennisetüdrukuni
+          (tegelaskuju 2) ja esitada heli, kui poiss tüdruku juurde jõuab?
+        studio_playlab_5: Kas saad aidata kosmoserobotil öelda „tervitus, maalased“,
+          kui temal klikitakse? Ära unusta temal klikkida pärast seda, kui oled klikkinud
+          nupul Käivita
+        studio_playlab_6: Kas saad aidata nõial üles-, alla-, vasak- ja paremnooleklahvide
+          abil liikuda, et ta saaks kätte kõik võlutulekerad?
+        studio_playlab_7: Ploki „korda igavesti“ abil saad koodi pidevalt käitada.
+          Kas oskad kinnitada plokid nii, et võlur liiguks mitu korda vasakule ja
+          paremale?
+        studio_playlab_8: Kas oskad lisada ühe ploki nii, et kui ükssarvik põrkab
+          võluriga kokku, siis sa saad punkti, ja teise ploki nii, et kõlaks heli,
+          ja kas oskad neid punkti saamiseks nooleklahvide abil liigutada?
+        studio_playlab_9: Määra selle tulnukate sissetungi jaoks sobiv taust ja muuda
+          kosmoseroboti kiirust, et ta jõuaks kiiremini tulnukani. Siis liiguta teda
+          nooleklahvide abil, et ta jõuaks tulnukani ja saaks teisi hoiatada.
+        turtle_1_1: Tere, mina olen kunstnik. Koodi kirjutades saate mind panna joonistama
+          peaaegu kõike. Kasutades paari plokki ja pane mind üle joonistama pildil
+          olevad hallid jooned.
+        turtle_1_10: 'Sa said sellega hakkama! Nüüd võid joonistada, mida ise tahad.
+          Mõned lahedad ideed: kriipsujuku, lumehelves või spiraal. Proovi kasutada
+          uut "määra laius" plokki. Laske käia!'
+        turtle_1_2: 'Nüüd joonista ruut. MÄRKUS: kasuta enda lemmikvärvi, valides
+          see "vali värv" plokist.'
+        turtle_1_3: Joonista ruut, kasutades ainult kolme plokki.
+        turtle_1_4: 'Joonista kolmnurk mille kõik küljed on erinevat värvi. Selleks
+          kasuta "juhuslik värv" valikut, mis iga kord valib erineva värvi, Vihje:
+          Klõpsates pöörde plokil olevale numbrile, pead välja mõtlema, kui kaugele
+          pöörata.'
+        turtle_1_5: Harjutamiseks joonista kolmnurk ja ruut, et joonistada ümbrik.
+        turtle_1_6: 'Kas mõtled välja, kuidas joonistada seda kolmnurka ja ruutu?
+          Vihje: Joonista kolmnurk enne ja siis mõtle kui palju pead pöörama, et joonistada
+          ruutu.'
+        turtle_1_7: Nüüd natukene raskem ülesanne - kas oskad joonistada neid rohelisi
+          prille. Ruudud on küljepikkusega 100 pikslit ja ruutude kaugus on 50 pikslit.
+          Ära unusta prille roheliseks värvida!
+        turtle_1_8: Proovi aru saada, mis juhtub antud koodi käivitamisel (või vajuta
+          "Käivita", et proovida). Seejärel käivita nii mitu korda, et lõpetada joonistus.
+          Värvid muutuvad igal käivitamisel.
+        turtle_1_9: Nuputa välja, mis numbriga asendada küsimärk, et joonistada ring?
         turtle_2_1: 'Hei! Olen zombie-kunstnik. Armastan joonistada! Aita mul joonistada
           ring spetsiaalse värviga. Oluline tähelepanek: sul on kõik samad blokid,
           aga nad on nüüd liigitatud.'
+        turtle_2_10: Siin on mõned koodid, mis on mõeldud proovimiseks eri spiraalides.
+          Mis juhtub, kui muuta pöörete hulka? Või seadistada juhuslik värv korduvtsüklisse?
+          Joonista, mis sulle meeldib.
         turtle_2_2: Tere tulemast kasutama funktsioone, mille abil saad määratleda
           uusi blokke! Proovi uut "joonista ruut" blokki, mis on "funktsioonide" kategoorias,
           et joonistada väike 50 x 50 roheline ruut.
@@ -204,36 +534,11 @@ et:
         turtle_2_9: Kasuta "loenda koos" korduvtsüklit ja joonista lumememmede perekond
           kõrgustega 110, 100, 90, 80 ja 70. Lumememmed peaksid olema teineteisest
           60 pikslit eemal.
-        turtle_2_10: Siin on mõned koodid, mis on mõeldud proovimiseks eri spiraalides.
-          Mis juhtub, kui muuta pöörete hulka? Või seadistada juhuslik värv korduvtsüklisse?
-          Joonista, mis sulle meeldib.
-        maze_karel_2_1: 'Proovi kasutada blokke et eemaldada kuhjad ning täita kõik
-          augud pinnal. Proovi kasutada korduvtsükleid suure hulga blokkide asemel.
-          Vihje: korduvtsükleid saab panna üksteise sisse.'
-        maze_karel_2_2: Oleme määratlenud oma bloki nimega "täida 5", mis asub nüüd
-          funktsioonide kategoorias. Kasuta seda, et aidata mind selle augu täitmisel.
-        maze_karel_2_3: Kasuta uut "täida 5" funktsiooniga blokki, et aidata mind
-          kõikide aukude täitmisel. Sul tuleb lohistada "täida 5" blokk funktsioonide
-          kategooriast välja.
-        maze_karel_2_4: Määratle uus funktsioon, mis eemaldaks 7 labidatäit. Nüüd
-          kasuta seda uue programmi kirjutamiseks, mis aitaks mul kõik kuhjad eemaldada.
-        maze_karel_2_5: Loo uus funktsioon, mis eemaldaks 6 labidatäit kuhjast ning
-          kasuta seda, et aidata mul tasandada kõik kuhjad.
-        maze_karel_2_6: Kasuta kahte uut funktsiooni "täida 8" ja "eemalda 8", et
-          aidata mul tasandada kuhi ja täita auk.
-        maze_karel_2_7: Minu väljal on lehm! Kirjuta uus funktsioon, mis aitaks mul
-          lehma vältida ja kuhi eemaldada. Aseta kõik blokid uue funktsiooni sisse.
-        maze_karel_2_8: Kasuta uut funktsiooni "väldi lehma ja eemalda 1", et aidata
-          mind kõikide kuhjade eemaldamisel.
-        maze_karel_2_9: Ok, siin on funktsioon, mis eemaldab 4 eri mustuse hunnikut
-          vertikaalses tulbas. Proovi panna see funktsioon korduvtsüklisse, nõnda
-          et sa saaksid kõik mustuse hunnikud eemaldada kasutades vaid väheseid uusi
-          blokke.
-        maze_karel_2_10: Liigu minuga üle välja ja kasuta neid kahte funktsiooni,
-          et aidata mul eemaldada kõik hunnikud ja täita augud.
         turtle_3_1: See mõistatus näitab kuidas "joonista ruut" ja "joonista ring"
           funktsioonid on määratletud. Funktsiooni määratlemine ei käivita selle blokke.
           Sul tuleb tõmmata välja "joonista ruut" blokk, et tegelikult ruut joonistada.
+        turtle_3_10: Oled palju õppinud! Kasuta õpitut millegi huvitava joonistamiseks.
+          Proovi joonistada täht, spiraal või lumehelves.
         turtle_3_2: Kasuta "joonist ruut" funktsiooni näidisena ning loo "joonista
           kolmnurk" funktsioon ka kasuta seda.
         turtle_3_3: 'Joonista kolmnurksed aiad ümber kasside ja ruudukujuline aed
@@ -253,27 +558,32 @@ et:
           järel all paremas nurgas. Kasuta muudetud funktsiooni ja joonista kolm maja.
         turtle_3_9: Kas saaksid ilma abita uuesti kirjutada funktsiooni „joonista
           maja“? Proovi seda ja seejärel joonista majade rivi.
-        turtle_3_10: Oled palju õppinud! Kasuta õpitut millegi huvitava joonistamiseks.
-          Proovi joonistada täht, spiraal või lumehelves.
-        maze_karel_debug_seq_1: Tere tulemast koodi silumisse! Minu kood ei tööta
-          õigesti. Kas sa leiaksid probleemi ja parandaksid selle nii, et ma saaksin
-          oma põllu siledaks ning istutamiseks valmis?
-        maze_karel_debug_seq_2: MIs sellel programmil viga on? Kuidas sa peaksid seda
-          parandama, et see eemaldaks selle kuhja?
-        maze_karel_debug_repeat: Paranda seda programmi nii, et minu põld oleks kena
-          ja sile.
-        maze_karel_debug_while: Kuidas peaksid sa seda programmi muutma, et aidata
-          mul täita see auk?
-        maze_karel_debug_if: Appi! Paranda seda programm nii, et minu põld oleks täiesti
-          sile.
-        maze_karel_debug_if_else: Paranda selle programmi vead, et ma saaksid täita
-          augud ja eemaldada kõik hunnikud.
-        maze_karel_debug_function_1: Mida sa peaksid selles programmis muutma, et
-          ma saaksin kõik hunnikud eemaldada?
-        maze_karel_debug_function_2: Kas saaksid parandada selle programmi vead, et
-          ma saaks põllu ära siluda?
-        maze_karel_debug_function_3: 'Muuda seda programmi nii, et ma saaksin põllult
-          kõik hunnikud eemaldada. '
+        turtle_4_1: 'Kas sa saad joonistada kolmnurga, (külgedega 100 pikslit) kasutades
+          ainult kolme plokki? Vihje: kasuta "korda" plokki.'
+        turtle_4_10: Siin on eelmise mõistatuse lahendus. Kui mitu korda pead kordust
+          kasutama, et joonistus ära lõpetada?
+        turtle_4_11: Erinevate mustrite loomiseks proovi muuta plokkides „pööra“ ja
+          „korda“ olevaid numbreid. Või proovi muuta ülejäänud koodi, et joonistada
+          just seda, mida soovid.
+        turtle_4_2: Lisa "pööra 90 kraadi" plokk kuhugi töölaual olevale programmile,
+          et joonistada need kolmnurgad.
+        turtle_4_3: Okei, siin on kood mille sa kirjutasid ühe kolmnurga joonistamiseks.
+          Kas sa saad ilusa lille joonistamiseks lisada "korda" ja "pööra" ploki?
+        turtle_4_4: 'Siin on sama kood, mis eelmises pusles, kuid pöördub vaid 36
+          kraadi pärast iga kolmnurga joonistamist. Mitu korda on vaja ülesannet korrata?
+          (Vihje: pärast pöördumist 360 kraadi saab joonisest täisring)'
+        turtle_4_5: 'Siin on sama kood, mis eelmises pusles, kuid pööramised on korratud
+          36 korda. Mitu kraadi peaksid olema pöörded? (Vihje: pärast pöördumist 360
+          kraadi saab joonisest täisring)'
+        turtle_4_6: Kasutades vaid kolme blokki, kas sa saad joonistada ruudu, mille
+          serva pikkus on 20 pikslit?
+        turtle_4_7: 'Siin on kood ruudu joonistamiseks viimases mõistatuses. Kas sul
+          õnnestub seda korrata ja joonistada 10 külgnevat ruutu, nagu redel? Vihje:
+          vajad ainult 2 täiendavat blokki.'
+        turtle_4_8: Siin on eelmise mõistatuse lahendus. Kas saad lisada veel ainult
+          2 plokki, et joonistus valmis saaks?
+        turtle_4_9: Siin on eelmise mõistatuse lahendus. Mitu kraadi pead pöörama,
+          et joonistus valmis saaks? (Sa pead arvatavasti paar korda arvama)
         turtle_5_1: Proovi see programm käivitada, tee muudatused ja vaata, mis juhtub.
           Kas saad aru, kuidas see toimib? (Või kustuta see ja lisa selle asemel hoopis
           midagi muud)
@@ -292,231 +602,116 @@ et:
         turtle_5_6: Proovi see programm käivitada, tee muudatused ja vaata, mis juhtub.
           Kas saad aru, kuidas see toimib? (Või kustuta see ja lisa selle asemel hoopis
           midagi muud)
-        maze_3_1: Pean selle põrsani jõudma! Kirjuta liikumiseks(); paar käsklust,
-          et saaksin oma munad tagasi.
-        maze_3_2: Kirjuta programm, mis viiks mind põrsa juurde.
-        maze_3_3: Millist teed mööda ma põrsani jõuan? Vaata, et ma TNT-dünamiidi
-          vastu ei kõnni!
-        maze_3_4: Oih! Kirjuta programm, mis viiks mind põrsa juurde nii, et ma ei
-          puudutaks TNT-dünamiiti.
-        Custom_builder: Lohista plokid tööriistakastist tööruumi, et joonistada soovitud
-          tase. Kui oled valmis, vajuta nuppu „Käivita“.
-        jigsaw_1: Kliki plokil
-        jigsaw_2: Lohista plokk sihtmärgile
-        jigsaw_3: Korrasta plokke, et tekiks pilt
-        jigsaw_4: Korrasta plokke, et tekiks pilt
-        jigsaw_5: Korrasta plokke, et tekiks pilt
-        jigsaw_6: Korrasta plokke, et tekiks pilt
-        jigsaw_7: Korrasta plokke, et tekiks pilt
-        jigsaw_8: Korrasta plokke, et tekiks pilt
-        jigsaw_9: Korrasta plokke, et tekiks pilt
-        jigsaw_10: Korrasta plokke, et tekiks pilt
-        jigsaw_11: Korrasta plokke, et tekiks pilt
-        jigsaw_12: Korrasta plokke, et tekiks pilt
-        jigsaw_13: Paranda pusle!
-        mazestep_1: Siin on labürindietapi kirjeldus
-        mazestep_2: Siin on labürindietapi kirjeldus
-        mazestep_3: Siin on labürindietapi kirjeldus
-        mazestep_4: Siin on labürindietapi kirjeldus
-        mazestep_5: Siin on labürindietapi kirjeldus
-        studio_c2_1: Kas oskad panna koera ütlema "tere maailm"?
-        studio_c2_2: Kas oskad teha nii, et koer ütleks midagi ja pärast seda ütleks
-          kass midagi?
-        studio_c2_3: Kas oskad kirjutada programmi, mille abil see koer liigub kassi
-          juurde?
-        studio_c2_4: Kas sa saaksid kirjutada programmi, mille abil koer liigub kassi
-          juurde ja kass ütleb „tere“, kui koer tema juurde jõuab?
-        studio_c2_5: Kas saaksid kirjutada programmi, mille abil kaheksajalg ütleb
-          „tere“, kui temal klikitakse?
-        studio_c2_6: Kas sa saaksid kirjutada programmi, mille abil liigutada pingviini
-          üles-, alla-, parem- ja vasaknooleklahvide abil nii, et ta jõuaks kõigi
-          sihtmärkideni?
-        studio_c2_7: Ploki „korda igavesti“ abil saad koodi pidevalt käivitada. Kas
-          oskad kinnitada plokid nii, et dinosaurus liiguks kogu aeg üles ja alla?
-        studio_c2_8: Kas sa saaksid panna pingviini nooleklahvidega liikuma ja teha
-          nii, et kui pingviin põrkab dinosaurusega kokku, siis ta ütleb „Oih!“ ja
-          kõlab heli „löök“?
-        studio_c2_9: Kas sa saaksid lisada ploki nii, et saaksid punkti kui pingviin
-          põrkab kaheksajalaga kokku, ja liigutada pingviini nooleklahvidega kuni
-          saad punkti?
-        studio_c2_10: Kas sa saaksid lisada ploki, et tausta vahetada ja muuta pingviini
-          kiirust ja liigutada teda nooltega kuni punkti saad?
-        studio_c2_11: Loo oma lugu. Kui valmis saad, vajuta nuppu „Valmis“ ja lase
-          sõpradel nende telefonis oma lugu proovida.
-        studio_c3_story_1: Kas oskad panna koera ütlema "tere maailm"?
-        studio_c3_story_2: Kas oskad teha nii, et koer ütleks midagi ja pärast seda
-          ütleks kass midagi?
-        studio_c3_story_3: Kas oskad kirjutada programmi, mille abil see koer liigub
-          kassi juurde?
-        studio_c3_story_4: Kas sa saaksid kirjutada programmi, mille abil koer liigub
-          kassi juurde ja kass ütleb „tere“, kui koer tema juurde jõuab?
-        studio_c3_story_5: Kas sa saaksid lisada ploki, et kaheksajalg õnnelikuks
-          teha?
-        studio_c3_story_6: Loo oma lugu. Kui valmis saad, vajuta nuppu „Valmis“ ja
-          lase sõpradel nende telefonis oma lugu proovida.
-        studio_c3_game_1: Kas saaksid kirjutada programmi, mille abil kaheksajalg
-          ütleb „tere“, kui temal klikitakse?
-        studio_c3_game_2: Kas sa saaksid kirjutada programmi, mille abil liigutada
-          pingviini üles-, alla-, parem- ja vasaknooleklahvide abil nii, et ta jõuaks
-          kõigi sihtmärkideni?
-        studio_c3_game_3: Ploki „korda igavesti“ abil saad koodi pidevalt käivitada.
-          Kas oskad kinnitada plokid nii, et dinosaurus liiguks kogu aeg üles ja alla?
-        studio_c3_game_4: Kas sa saaksid panna pingviini nooleklahvidega liikuma ja
-          teha nii, et kui pingviin põrkab dinosaurusega kokku, siis ta ütleb „Oih!“
-          ja kõlab heli „löök“?
-        studio_c3_game_5: Kas sa saaksid lisada ploki nii, et saaksid punkti kui pingviin
-          põrkab kaheksajalaga kokku, ja liigutada pingviini nooleklahvidega kuni
-          saad punkti?
-        studio_c3_game_6: Kas sa saaksid lisada ploki, et tausta vahetada ja muuta
-          pingviini kiirust ja liigutada teda nooltega kuni punkti saad?
-        studio_c3_game_7: Loo oma lugu. Kui oled valmis, vajuta nuppu „Valmis“ ja
-          lase sõpradel telefonis lugu proovida.
-        studio_playlab_1: Pingviin tahab öelda „tere“. Kas saad teda aidata?
-        studio_playlab_2: Koopapoiss (tegelaskuju 1) ja Jasmine (tegelaskuju 2) tahavad
-          teineteisele „tere“ öelda. Kas saad neid aidata, kasutades kaks korda plokki
-          „ütle“?
-        studio_playlab_3: Kas saad aidata tennisetüdrukul lipuni jõuda?
-        studio_playlab_4: Kas saad aidata tennisepoisil (tegelaskuju 1) jõuda tennisetüdrukuni
-          (tegelaskuju 2) ja esitada heli, kui poiss tüdruku juurde jõuab?
-        studio_playlab_5: Kas saad aidata kosmoserobotil öelda „tervitus, maalased“,
-          kui temal klikitakse? Ära unusta temal klikkida pärast seda, kui oled klikkinud
-          nupul Käivita
-        studio_playlab_6: Kas saad aidata nõial üles-, alla-, vasak- ja paremnooleklahvide
-          abil liikuda, et ta saaks kätte kõik võlutulekerad?
-        studio_playlab_7: Ploki „korda igavesti“ abil saad koodi pidevalt käitada.
-          Kas oskad kinnitada plokid nii, et võlur liiguks mitu korda vasakule ja
-          paremale?
-        studio_playlab_8: Kas oskad lisada ühe ploki nii, et kui ükssarvik põrkab
-          võluriga kokku, siis sa saad punkti, ja teise ploki nii, et kõlaks heli,
-          ja kas oskad neid punkti saamiseks nooleklahvide abil liigutada?
-        studio_playlab_9: Määra selle tulnukate sissetungi jaoks sobiv taust ja muuda
-          kosmoseroboti kiirust, et ta jõuaks kiiremini tulnukani. Siis liiguta teda
-          nooleklahvide abil, et ta jõuaks tulnukani ja saaks teisi hoiatada.
-        studio_playlab_10: Loo oma lugu. Kui oled valmis, vajuta nuppu „Valmis“ ja
-          lase sõpradel telefonis lugu proovida.
-        studio_iceage_hello1: Sid tahab kõiki uue seikluse jaoks kokku koguda. Aita
-          tal öelda "tere", selleks lohista plokk "ütle" tööruumi ja kirjuta sellesse
-          sõna "tere".
-        studio_iceage_hello2: Manny (tegelaskuju 1) leidis Sidi (tegelaskuju 2) ja
-          soovib teda seiklema kutsuda. Aita neil teineteist tervitada ja kasuta selleks
-          kaks korda plokki „tegelaskuju ütleb“.
-        studio_iceage_move_to_flag: Scrat otsib oma tammetõru. Aita tal liikuda edasi
-          viimased 200 pikslit ja kasuta selleks plokki „liiguta“.
-        studio_iceage_move_to_actor: Diego (tegelaskuju 1) otsib Mannyt (tegelaskuju
-          2). Aita Diegol liikuda 200 pikslit allapoole Manny juurde ja kasuta selleks
-          plokki „liiguta tegelaskuju“. Seejärel ühenda plokk sündmusega „kui tegelane
-          puudutab“, et esitada heli, kui nad teineteist leiavad.
-        studio_iceage_repeat: Ploki "korda igavesti" abil saad koodi pidevalt käitada.
-          Kas oskad kinnitada plokid nii, et vanaema liiguks harjutuste tegemiseks
-          korduvalt vasakule ja paremale?
-        studio_iceage_click_hello: Kas saad aidata Sidil viimast korda oma sõpru kutsuda
-          ploki „kui tegelaskuju puudutatakse“ abil? Ära unusta Sidi klõpsata pärast
-          nupu Käivita vajutamist.
-        studio_iceage_move_events: Scrat otsib ikka veel tammetõrusid! Aita tal ringi
-          lipata. Selleks kinnita iga sündmuse külge plokk „liigu“ ja muuda suunda
-          iga nooleklahviga töötamiseks. Kui see on valmis, klõpsa nuppu Käivita ja
-          proovi kokku koguda kõik tammetõrud.
-        studio_iceage_sound_and_points: Siin on suurem osa koodist, mis aitab vanaemal
-          liikuda vasakule ja paremale ning samuti kood, mis paneb Sidi ekraanil liikuma.
-          Kas oskad koodi lõpuni koostada ja lisada plokke sündmusele "kui tegelane
-          puudutab", et siis, kui Sid ja vanaema kokku põrkavad, kostab heli ja saad
-          punkti? Mängimiseks vajuta nuppu "Käivita".
-        studio_iceage_warn_ice_age: Kõik peavad kiiremini liikuma, sest jääaeg on
-          tulemas! Muuda taust jäämägedeks ja sea Sidi liikumiskiirus kiireks ning
-          seejärel vajuta nuppu Käivita ning liiguta ta Diego juurde, et teda hoiatada.
-        studio_iceage_throw_hearts: Sid tahab oma vanaemale öelda, et ta armastab
-          teda. Selleks, et Sid (tegelaskuju 1) saaks vanaemale (tegelaskuju 2) südameid
-          visata, kasuta käsku „tegelaskuju viskab“ . Sea vanaema rõõmsasse meeleollu,
-          kui ta südamega pihta saab.
-        studio_iceage_free_play: On aeg luua oma mäng või lugu. Kui oled valmis, vajuta
-          nuppu "Valmis" ja lase sõpradel telefonis, tahvelarvutis või arvutis lugu
-          proovida.
-        studio_gumball_hello1: Anais otsib uusi sõpru. Aita tal öelda "tere", selleks
-          lohista plokk "ütle" tööruumi ja kirjuta sellesse sõna "tere".
-        studio_gumball_hello2: Darwin (tegelane 1) ja tema vend Gumball (tegelane
-          2) on teel kooli. Aita neil üksteist tervitada, kasutades kaks korda plokki
-          "tegelaskuju ütleb".
-        studio_gumball_move_to_flag: Banana Joe võidab kohe spordipäeva võidujooksu!
-          Aita tal läbida viimased 200 pikslit, kasutades plokki "liiguta".
-        studio_gumball_move_to_actor: Gumball (tegelane 1) ja Darwin (tegelane 2)
-          jäävad spordipäevale hiljaks! Aita Gumballil läbida 200 pikslit Darwinini,
-          kasutades plokki "liiguta tegelaskuju".  Seejärel ühenda plokk sündmusega
-          "kui tegelane puudutab", et mängida heli, kui nad üksteist leiavad.
-        studio_gumball_repeat: Ploki "korda igavesti" abil saad koodi pidevalt käitada.
-          Kas oskad kinnitada plokid nii, et Gumball teeks võidujooksu jaoks soojendust,
-          liikudes korduvalt vasakule ja paremale?
-        studio_gumball_click_hello: 'Aita Antonil anda võidujooksu stardikorraldus:
-          "Tähelepanu, valmis, läks!" Programmi katsetamiseks ära unusta klõpsata
-          Antonil pärast nupu "Käivita" klõpsamist.'
-        studio_gumball_move_events: Darwin osaleb lipukogumisvõistlusel. Aita tal
-          liikuda, kinnitades iga sündmuse külge plokk "liiguta". Kui oled valmis,
-          klõpsa nuppu "Käivita" ja proovi koguda kokku kõik lipud.
-        studio_gumball_sound_and_points: Siin on suurem osa koodist, mis aitab Antonil
-          (tegelane 2) liikuda vasakule ja paremale ning samuti kood, mis paneb Banana
-          Joe (tegelane 1) ekraanil liikuma. Kas oskad koodi lõpuni koostada ja lisada
-          plokke sündmusele "kui tegelane puudutab", et siis, kui Banana Joe ja Anton
-          kokku põrkavad, kostab heli ja saad punkti? Mängimiseks vajuta nuppu "Käivita".
-        studio_gumball_warn_food_fight: Darwin pääses just toidusõjast. Määra taustaks
-          "tegelased" ja sea Darwini liikumiskiirus kiireks ja siis vajuta nuppu "Käivita"
-          ning liiguta ta Penny juurde, et teda hoiatada.
-        studio_gumball_join_food_fight: Löö kaasa toidusõjas. Kasuta käsklust "tegelaskuju
-          viskab eseme paremale", et Banana Joe (tegelane 1) loobiks Antonit (tegelane
-          2) toiduga. Kui Anton saab pihta, sea ta vihasesse meeleollu.
-        studio_gumball_free_play: Loo oma mäng või lugu. Kui oled valmis, vajuta nuppu
-          "Valmis" ja lase sõpradel telefonis, tahvelarvutis või arvutis lugu proovida.
-        studio_full_sandbox: Loo oma lugu. Kui oled valmis, vajuta nuppu „Valmis“
-          ja lase sõpradel telefonis lugu proovida.
-        studio_k1_1: Kas oskad panna koera ütlema "tere maailm"?
-        studio_k1_2: Kas oskad teha nii, et koer ütleks midagi ja pärast seda ütleks
-          kass midagi?
-        studio_k1_3: Kas oskad kirjutada programmi, mille abil see koer liigub kassi
-          juurde?
-        studio_k1_4: Tee nii, et koer liiguks kassi juurde ja kass ütleks „tere“,
-          kui koer kohale jõuab.
-        studio_k1_5: Kas sa saaksid lisada ploki, et kaheksajalg õnnelikuks teha?
-        studio_k1_6: Loo oma lugu. Liiguta kassi ja koera ja tee, et nad ütleksid
-          midagi.
-        maze_wordsearch_k_1: Liiguta mind, et kirjutada sõna EAST
-        maze_wordsearch_k_2: Liiguta mind, et kirjutada sõna SOUTH
-        maze_wordsearch_k_3: Liiguta mind, et kirjutada sõna WEST
-        maze_wordsearch_k_4: Liiguta mind, et kirjutada sõna NORTH
-        maze_wordsearch_k_6: Liiguta mind ida (E) suunas ja siis lõuna (S) suunas,
-          et kirjutada sõna JUMP
-        maze_wordsearch_k_9: Liiguta mind ühes ja siis teises suunas, et kirjutada
-          sõna CODE
-        maze_wordsearch_k_13: Liiguta mind ühes ja siis teises suunas, et kirjutada
-          sõna DEBUG
-        maze_wordsearch_k_15: Liiguta mind ühes ja siis teises suunas, et kirjutada
-          sõna ABOVE
-        maze_wordsearch_k_16: Liiguta mind ühes ja siis teises suunas, et kirjutada
-          sõna BELOW
-        maze_wordsearch_k_20: See on katse. Liiguta mind ühes ja siis teises suunas,
-          et kirjutada sõna STORY
-        applab_ec_simple: Kasuta tööriistakastis olevaid plokke ja loo oma rakendus.
-        turtle_ec_1_2: 'Nüüd joonista ruut. MÄRKUS: kasuta oma lemmikvärvi, valides
-          see plokist „pliiatsi värv“.'
         turtle_ec_1_10: 'Sa said sellega hakkama! Nüüd võid joonistada, mida ise tahad.
           Mõned lahedad ideed: kriipsujuku, lumehelves või spiraal. Proovi kasutada
           uut plokki „pliiatsi laius“. Lase käia!'
-        studio_ec_sandbox: Loo oma lugu. Kui oled valmis, vajuta nuppu „Valmis“ ja
-          lase sõpradel telefonis lugu proovida.
+        turtle_ec_1_2: 'Nüüd joonista ruut. MÄRKUS: kasuta oma lemmikvärvi, valides
+          see plokist „pliiatsi värv“.'
+    trophy:
+      name:
+        Bronze: Pronks
+        Gold: Kuld
+        Silver: Hõbe
     video:
       name:
-        maze_intro: Labürindi sissejuhatus
-        artist_intro: Kunstniku sissejuhatus
-        farmer_intro: Taluniku sissejuhatus
-        flappy_intro: Flappy sissejuhatus
-        loop_times: Plokk „korduste arv“
-        loop_until: Plokk „korda kuni“
-        if: Plokk „kui“
-        if_else: Plokk „kui teine“
-        if_else_scrat: Plokk „kui teine“
-        function: Funktsioonid
-        loop_while: Plokk „kuni“
-        loop_for: Plokk „loendur“
-        parameters: Parameetritega funktsioonid
-        hoc_wrapup: Kooditunni kokkuvõte
+        C1_artist_intro: Kunstniku sissejuhatus
+        C1_bee_level_intro: Mesilase tase – sissejuhatus
+        C1_bee_loops: Mesilane tsüklid
+        C1_bigevent_unplugged: Suursündmus
+        C1_building_foundation: Vundamendi ehitus
+        C1_getting_loopy: Muutub tsükliliseks
+        C1_going_places_safely: Läheb asukohta turvaliselt
+        C1_happy_maps_unplugged: Happy Maps
+        C1_maze_debugging: Labürindi vigade silumine
+        C1_maze_intro_sequencing: Labürindi jada sissejuhatus
+        C1_maze_loops: Labürint tsüklid
+        C1_moveitmoveit_unplugged: Liiguta, liiguta
+        C1_pair_programming: Paarisprogrammeerimine
+        C1_planting_seed: Seemne istutamine
+        C1_playlab_storytelling: Play Lab – loo lugu
+        C1_spelling_bee_intro: Sõnamesilase sissejuhatus
+        C1_zuck_repeat_loop: Labürint tsüklid
+        C2_artist_debugging: Kunstnik - vigade silumine
+        C2_artist_intro: Kunstniku sissejuhatus
+        C2_artist_loops: Kunstnik tsüklid
+        C2_bee_conditionals: Mesilane tingimuslaused
+        C2_bee_debugging: Mesilane vigade silumine
+        C2_bee_loops: Mesilane tsüklid
+        C2_binary_bracelets: Binaarsed käevõrud
+        C2_conditionals_with_cards: Tingimuslaused
+        C2_digital_footprint: Sinu digitaalne jalajälg
+        C2_digital_footprint_v2: Sinu digitaalne jalajälg
+        C2_graph_paper: Millimeetripaberi programmeerimine
+        C2_maze_intro: Labürindi sissejuhatus
+        C2_paper_airplanes: Paberlennukid
+        C2_playlab_createstory: Play Lab – loo lugu
+        C2_relay_programming: Relee programmeerimine
+        C2_zuck_repeat_loop: Labürint tsüklid
+        C3_artist_functions: Kunstniku funktsioonid
+        C3_artist_intro: Kunstniku sissejuhatus
+        C3_artist_nested_loops: Korduvad tsüklid
+        C3_bee_conditionals: Mesilane tingimuslaused
+        C3_bee_debugging: Mesilane vigade silumine
+        C3_bee_functions: Mesilane funktsioonid
+        C3_bee_nested_loops: Korduvad tsüklid
+        C3_bounce: Põrkama
+        C3_computational_thinking: Arvutuslik mõtlemine
+        C3_crowdsourcing: Ühistegevused
+        C3_dice_race: Täringuralli
+        C3_farmer_while: "„Kui“ tsüklid"
+        C3_functional_suncatchers: Funktsionaalsed päikesepüüdjad
+        C3_internet: Internet
+        C3_maze_conditionals: Labürint tingimuslaused
+        C3_maze_level_4: Labürint tsüklid
+        C3_playlab_create_game: Play Lab – loo mäng
+        C3_songwriting_with_parameters: Laulukirjutamine parameetritega
+        C4_bee_conditional: Mesilane tingimuslaused
+        C4_conditionals: Tingimuslaused
+        C4_for_loops: For tsükkel
+        C4_for_loops_bee: For tsükkel
+        C4_for_loops_no_bee: For tsükkel
+        C4_function_create: Loomisfunktsioonid
+        C4_function_edit: Muutmisfunktsioonid
+        C4_function_parameters: Parameetritega funktsioonid
+        C4_intro: Sissejuhatus
+        C4_loops_zombie: Tsüklid
+        C4_math_artist: Kunstniku programmeerimine matemaatika abil
+        C4_unplugged_algorithms: Tangramitega algoritmid
+        C4_unplugged_binary: Binaarne
+        C4_unplugged_forloops: For tsükkel
+        C4_unplugged_madlibs: Mad Libs
+        C4_unplugged_parameters: Laulukirjutamine parameetritega
+        C4_unplugged_variables: Muutujad ümbrikes
+        C4_variables_artist: Muutujad – kunstnik
+        C4_variables_playlab: Muutujad – Play Lab
+        CSF_EF_cs_matters: Arvutiteadus on oluline
+        CSF_Power_of_Words: Sõna jõud
+        CSF_Super_Digital_Citizen: Super digitaalne kodanik
+        CSF_artist_angles: Nurgad Artistis
+        CSF_bb8_skinOverview_C-F: BB-8
+        CSF_bb8_skinOverview_K-1: BB-8
+        CSF_collector_k1_blocks: 'CS alused: Koguja'
+        CSF_collector_repeat_loops: Korruta tsükleid
+        CSF_collector_text_blocks: 'CS alused: Koguja'
+        CSF_create_functions: Koosta funktsioone
+        CSF_debugging_k1_blocks: Debugimine
+        CSF_debugging_text_blocks: Debugimine
+        CSF_if_allskins: '"Kui" blokk'
+        CSF_ifelse_allskins: '"Kui"/"või" blokkide kasutamine'
+        CSF_loops_AB: Tsüklid
+        CSF_maze_intro_k1_blocks: Sissejuhatus Code Studiosse
+        CSF_maze_intro_text_blocks: Sissejuhatus Code Studiosse
+        CSF_my_robotic_friends: Minu robotsõbrad
+        CSF_scrat_loops_CF: Tsüklik - Jääaeg
+        CSF_scrat_loops_K1: Tsüklik - Jääaeg
+        CSF_stevie_big_project: Stevie ja suur projekt
+        CSF_unspotted_bugs: Märkamata vead
+        CSF_zuck_loops_short: Korrake tsükleid
+        MC_2018_loops: 'Minecraft: Voyage Aquatic korda kuni'
+        PL_CS_Journeys_Overview: Arvutiteaduse teekonnad
         Unplug1: Mis on CS?
+        Unplug10: Internet
+        Unplug11: Kokkuvõte
         Unplug2: Arvutuslik mõtlemine
         Unplug3: Millimeetripaberi programmeerimine
         Unplug4: Algoritmid
@@ -525,160 +720,52 @@ et:
         Unplug7: Laulude kirjutamine
         Unplug8: Abstraktsus
         Unplug9: Relee programmeerimine
-        Unplug10: Internet
-        Unplug11: Kokkuvõte
-        C1_happy_maps_unplugged: Happy Maps
-        C1_moveitmoveit_unplugged: Liiguta, liiguta
-        C1_bigevent_unplugged: Suursündmus
-        C1_getting_loopy: Muutub tsükliliseks
-        C1_pair_programming: Paarisprogrammeerimine
-        C1_maze_intro_sequencing: Labürindi jada sissejuhatus
-        C1_maze_debugging: Labürindi vigade silumine
-        C1_bee_level_intro: Mesilase tase – sissejuhatus
-        C1_artist_intro: Kunstniku sissejuhatus
-        C1_spelling_bee_intro: Sõnamesilase sissejuhatus
-        C1_zuck_repeat_loop: Labürint tsüklid
-        C1_bee_loops: Mesilane tsüklid
-        C1_maze_loops: Labürint tsüklid
-        C1_playlab_storytelling: Play Lab – loo lugu
-        C1_planting_seed: Seemne istutamine
-        C1_building_foundation: Vundamendi ehitus
-        C1_going_places_safely: Läheb asukohta turvaliselt
-        C2_maze_intro: Labürindi sissejuhatus
-        C2_artist_intro: Kunstniku sissejuhatus
-        C2_zuck_repeat_loop: Labürint tsüklid
-        C2_artist_loops: Kunstnik tsüklid
-        C2_artist_debugging: Kunstnik - vigade silumine
-        C2_bee_loops: Mesilane tsüklid
-        C2_bee_debugging: Mesilane vigade silumine
-        C2_bee_conditionals: Mesilane tingimuslaused
-        C2_playlab_createstory: Play Lab – loo lugu
-        C2_graph_paper: Millimeetripaberi programmeerimine
-        C2_conditionals_with_cards: Tingimuslaused
-        C2_binary_bracelets: Binaarsed käevõrud
-        C2_relay_programming: Relee programmeerimine
-        C2_paper_airplanes: Paberlennukid
-        C2_digital_footprint: Sinu digitaalne jalajälg
-        C2_digital_footprint_v2: Sinu digitaalne jalajälg
-        C3_maze_level_4: Labürint tsüklid
-        C3_artist_intro: Kunstniku sissejuhatus
-        C3_artist_functions: Kunstniku funktsioonid
-        C3_bee_functions: Mesilane funktsioonid
-        C3_bee_conditionals: Mesilane tingimuslaused
-        C3_maze_conditionals: Labürint tingimuslaused
-        C3_artist_nested_loops: Korduvad tsüklid
-        C3_farmer_while: "„Kui“ tsüklid"
-        C3_bee_nested_loops: Korduvad tsüklid
-        C3_bee_debugging: Mesilane vigade silumine
-        C3_bounce: Põrkama
-        C3_playlab_create_game: Play Lab – loo mäng
-        C3_computational_thinking: Arvutuslik mõtlemine
-        C3_dice_race: Täringuralli
-        C3_internet: Internet
-        C3_crowdsourcing: Ühistegevused
-        C3_functional_suncatchers: Funktsionaalsed päikesepüüdjad
-        C3_songwriting_with_parameters: Laulukirjutamine parameetritega
-        C4_intro: Sissejuhatus
-        C4_loops_zombie: Tsüklid
-        C4_bee_conditional: Mesilane tingimuslaused
-        C4_variables_artist: Muutujad – kunstnik
-        C4_variables_playlab: Muutujad – Play Lab
-        C4_for_loops: For tsükkel
-        C4_for_loops_bee: For tsükkel
-        C4_for_loops_no_bee: For tsükkel
-        C4_math_artist: Kunstniku programmeerimine matemaatika abil
-        C4_function_edit: Muutmisfunktsioonid
-        C4_function_create: Loomisfunktsioonid
-        C4_function_parameters: Parameetritega funktsioonid
-        C4_conditionals: Tingimuslaused
-        C4_unplugged_algorithms: Tangramitega algoritmid
-        C4_unplugged_madlibs: Mad Libs
-        C4_unplugged_variables: Muutujad ümbrikes
-        C4_unplugged_forloops: For tsükkel
-        C4_unplugged_parameters: Laulukirjutamine parameetritega
-        C4_unplugged_binary: Binaarne
-        CSF_artist_angles: Nurgad Artistis
-        CSF_collector_k1_blocks: 'CS alused: Koguja'
-        CSF_collector_repeat_loops: Korruta tsükleid
-        CSF_collector_text_blocks: 'CS alused: Koguja'
-        CSF_create_functions: Koosta funktsioone
-        CSF_debugging_k1_blocks: Debugimine
-        CSF_debugging_text_blocks: Debugimine
-        CSF_EF_cs_matters: Arvutiteadus on oluline
-        CSF_maze_intro_k1_blocks: Sissejuhatus Code Studiosse
-        CSF_maze_intro_text_blocks: Sissejuhatus Code Studiosse
-        CSF_my_robotic_friends: Minu robotsõbrad
-        CSF_Power_of_Words: Sõna jõud
-        CSF_Super_Digital_Citizen: Super digitaalne kodanik
-        CSF_stevie_big_project: Stevie ja suur projekt
-        CSF_unspotted_bugs: Märkamata vead
-        CSF_zuck_loops_short: Korrake tsükleid
-        frozen_intro: KoodiTunni sissejuhatus
-        frozen_loops: Sissejuhatus kordustele (Loops)
-        frozen_functions: Funktsioonide tutvustus
-        playlab_intro: Play Lab – sissejuhatus
-        playlab_events: Play Lab – sündmused
-        playlab_repeat_forever: Play Lab – korda igavesti
-        tutorial_puzzle_challenge: Mõistatuse juhend
-        infinity_playlab_intro: Play Lab - Sissejuhatus
-        infinity_playlab_events: Play Lab - Üritused
-        infinity_playlab_repeat_forever: Play Lab – korda Igavesti
-        csd_concept_how_computers_work: Tutvustus, kuidas arvutid töötavad
-        csd_concept_computer: 'Kuidas töötavad arvutid: Mis teeb arvutist arvuti?'
+        applab_hoc_designmode: App Lab Hour of Code - disain
+        applab_hoc_onevent: App Lab Hour of Code - onEvent
+        applab_hoc_setproperty: App Lab Hour of Code - setProperty
+        applab_hoc_share: App Lab Hour of Code - jaga
+        applab_hoc_welcome: App Lab Hour of Code - teretulemast
+        applab_intro_designmode: App Lab - kujundamine
+        applab_intro_events: App Lab - tee see interaktiivseks
+        applab_intro_share: App Lab - jaga oma App'i
+        applab_intro_sounds: App Lab - pildid ja helid
+        applab_intro_welcome: App Lab - kuidas alustada
+        artist_intro: Kunstniku sissejuhatus
+        csd_applab_parameters: Parameetritega funktsioonid
         csd_concept_binary_data: 'Kuidas töötavad arvutid: Binaararvud & andmed'
         csd_concept_circuits_logic: 'Kuidas arvutid töötavad: ahelad ja loogika'
+        csd_concept_computer: 'Kuidas töötavad arvutid: Mis teeb arvutist arvuti?'
+        csd_concept_hardware_software: 'Kuidas arvutid töötavad: riistvara ja tarkvara'
+        csd_concept_how_computers_work: Tutvustus, kuidas arvutid töötavad
         csd_concept_memory_cpu_input_output: 'Kuidas arvutid töötavad: mälu, CPU,
           Input, & Output'
-        csd_concept_hardware_software: 'Kuidas arvutid töötavad: riistvara ja tarkvara'
         csd_concept_search: Kuidas Otsing töötab
+        csd_debugging: Debugimine
         csd_external_amazon_data: Kui kasutatakse Big Data't Amazonis, et muuta meie
           elu
         csd_gamelab_animation_tab: Animatsioon
         csd_gamelab_velocity: Velocity
-        csd_weblab_intro_1: Sissejuhatus Web Lab - osa 1
-        csd_weblab_intro_2: Sissejuhatus Web Lab - osa 2
+        csd_pair_programming: Paarisprogrammeerimine
         csd_weblab_css_1: Sissejuhatus CSS - osa 1
         csd_weblab_css_2: Sissejuhatus CSS - osa 2
+        csd_weblab_intro_1: Sissejuhatus Web Lab - osa 1
+        csd_weblab_intro_2: Sissejuhatus Web Lab - osa 2
         csd_weblab_intro_3: Sissejuhatus Web Lab - osa 3
         csp_applab_functions: Funktsioonide tutvustus
         csp_applab_functions_parameters: Parameetritega funktsioonid
         csp_applab_loops: Tsüklid
-        starwars_intro: 'Star Wars: galaktika loomine koodiga – sissejuhatus'
-        starwars_typing: 'Star Wars: galaktika loomine koodiga – JavaScript'
-        starwars_events: 'Star Wars: galaktika loomine koodiga – sündmused'
-        starwars_congrats: 'Star Wars: galaktika loomine koodiga – palju õnne'
-        starwars_blocks_intro: 'Star Wars: galaktika loomine koodiga – sissejuhatus'
-        starwars_blocks_events: 'Star Wars: galaktika loomine koodiga – sündmused'
-        starwars_blocks_congrats: 'Star Wars: galaktika loomine koodiga – palju õnne'
-        mc_intro: Minecraft – sissejuhatus
-        mc_repeat: Minecraft – korda
-        mc_if_statements: Minecraft – „kui“-laused
-        mc_congrats_share: Minecraft – palju õnne
-        mc_congrats_no_share: Minecraft – palju õnne
-        gumball_intro: Gumballi KoodiTund - Sissejuhatus
+        csp_applab_parameters: Parameetritega funktsioonid
+        farmer_intro: Taluniku sissejuhatus
+        flappy_intro: Flappy sissejuhatus
+        frozen_functions: Funktsioonide tutvustus
+        frozen_intro: KoodiTunni sissejuhatus
+        frozen_loops: Sissejuhatus kordustele (Loops)
+        function: Funktsioonid
         gumball_events: Gumballi KoodiTund - Sündmused
+        gumball_intro: Gumballi KoodiTund - Sissejuhatus
         gumball_repeat: Gumballi KoodiTund - "Korda" laused
-        iceage_intro: Jääaeg KoodiTund - Sissejuhatus
-        iceage_events: Jääaeg KoodiTund - Üritused
-        iceage_repeat: Jääaeg Kooditund - Korduvad laused
-        mc_2016_intro: Minecraft KoodiTund - Sissejuhatus
-        mc_2016_loops: Minecraft KoodiTund - Tsüklid
-        mc_2016_events: Jääaeg KoodiTund - Sündmused
-        mc_2016_spawn: Minecrafti KoodiTund - Loo
-        mc_2016_congrats: Minecraft KoodiTund - Palju Õnne
-        applab_hoc_welcome: App Lab Hour of Code - teretulemast
-        applab_hoc_setproperty: App Lab Hour of Code - setProperty
-        applab_hoc_onevent: App Lab Hour of Code - onEvent
-        applab_hoc_designmode: App Lab Hour of Code - disain
-        applab_hoc_share: App Lab Hour of Code - jaga
-        mc_2017_agent_intro: Minecraft Hour of Code - The Agent
-        mc_2017_repeat: App Lab Hour of Code - tsüklid
-        mc_2017_functions: Minecraft Hour of Code - funktsioonid
-        mc_2017_congratulations: Minecraft KoodiTund - Palju Õnne
-        mc_2017_puzzle_1: Minecraft Hour of Code - The Agent
-        mc_2017_puzzle_3: App Lab Hour of Code - tsüklid
-        mc_2017_puzzle_8: Minecraft Hour of Code - funktsioonid
-        mc_2017_puzzle_12: Minecraft KoodiTund - Vabamäng
+        hint_videos_d_11_11_first: 'Vihje videod: D.11.11 esimene'
+        hint_videos_d_11_11_last: 'Vihje videod: D.11.11 viimane'
         hint_videos_d_11_3_first: 'Vihje videod: D.11.3 esimene'
         hint_videos_d_11_3_last: 'Vihje videod: D.11.3 viimane'
         hint_videos_d_11_4_first: 'Vihje videod: D.11.4 esimene'
@@ -691,144 +778,58 @@ et:
         hint_videos_d_11_7_last: 'Vihje videod: D.11.7 viimane'
         hint_videos_d_11_9_first: 'Vihje videod: D.11.9 esimene'
         hint_videos_d_11_9_last: 'Vihje Videod: D.11.9 viimane'
-        hint_videos_d_11_11_first: 'Vihje videod: D.11.11 esimene'
-        hint_videos_d_11_11_last: 'Vihje videod: D.11.11 viimane'
-        applab_intro_welcome: App Lab - kuidas alustada
-        applab_intro_events: App Lab - tee see interaktiivseks
-        applab_intro_sounds: App Lab - pildid ja helid
-        applab_intro_designmode: App Lab - kujundamine
-        applab_intro_share: App Lab - jaga oma App'i
-        CSF_bb8_skinOverview_C-F: BB-8
-        CSF_bb8_skinOverview_K-1: BB-8
-        CSF_scrat_loops_K1: Tsüklik - Jääaeg
-        CSF_scrat_loops_CF: Tsüklik - Jääaeg
-        CSF_if_allskins: '"Kui" blokk'
-        CSF_ifelse_allskins: '"Kui"/"või" blokkide kasutamine'
-        CSF_loops_AB: Tsüklid
-        mc_2018_intro: 'Minecraft: Voyage Aquatic sissejuhatus'
-        MC_2018_loops: 'Minecraft: Voyage Aquatic korda kuni'
-        mc_2018_conditionals: 'Minecraft: Voyage Aquatic tingimused'
-        mc_2018_closing: 'Minecraft: Voyage Aquatic palju õnne'
         hoc_dance_events: Tantsuõhtu - sündmused
-        hoc_dance_properties: Tantsuõhtu - omadused
-        csd_pair_programming: Paarisprogrammeerimine
-        csd_applab_parameters: Parameetritega funktsioonid
-        csd_debugging: Debugimine
         hoc_dance_events_2019: Tantsuõhtu - sündmused
+        hoc_dance_properties: Tantsuõhtu - omadused
         hoc_dance_properties_2019: Tantsuõhtu - omadused
+        hoc_wrapup: Kooditunni kokkuvõte
+        iceage_events: Jääaeg KoodiTund - Üritused
+        iceage_intro: Jääaeg KoodiTund - Sissejuhatus
+        iceage_repeat: Jääaeg Kooditund - Korduvad laused
+        if: Plokk „kui“
+        if_else: Plokk „kui teine“
+        if_else_scrat: Plokk „kui teine“
+        infinity_playlab_events: Play Lab - Üritused
+        infinity_playlab_intro: Play Lab - Sissejuhatus
+        infinity_playlab_repeat_forever: Play Lab – korda Igavesti
+        loop_for: Plokk „loendur“
+        loop_times: Plokk „korduste arv“
+        loop_until: Plokk „korda kuni“
+        loop_while: Plokk „kuni“
+        maze_intro: Labürindi sissejuhatus
+        mc_2016_congrats: Minecraft KoodiTund - Palju Õnne
+        mc_2016_events: Jääaeg KoodiTund - Sündmused
+        mc_2016_intro: Minecraft KoodiTund - Sissejuhatus
+        mc_2016_loops: Minecraft KoodiTund - Tsüklid
+        mc_2016_spawn: Minecrafti KoodiTund - Loo
+        mc_2017_agent_intro: Minecraft Hour of Code - The Agent
+        mc_2017_congratulations: Minecraft KoodiTund - Palju Õnne
+        mc_2017_functions: Minecraft Hour of Code - funktsioonid
+        mc_2017_puzzle_1: Minecraft Hour of Code - The Agent
+        mc_2017_puzzle_12: Minecraft KoodiTund - Vabamäng
+        mc_2017_puzzle_3: App Lab Hour of Code - tsüklid
+        mc_2017_puzzle_8: Minecraft Hour of Code - funktsioonid
+        mc_2017_repeat: App Lab Hour of Code - tsüklid
+        mc_2018_closing: 'Minecraft: Voyage Aquatic palju õnne'
+        mc_2018_conditionals: 'Minecraft: Voyage Aquatic tingimused'
+        mc_2018_intro: 'Minecraft: Voyage Aquatic sissejuhatus'
+        mc_congrats_no_share: Minecraft – palju õnne
+        mc_congrats_share: Minecraft – palju õnne
+        mc_if_statements: Minecraft – „kui“-laused
+        mc_intro: Minecraft – sissejuhatus
+        mc_repeat: Minecraft – korda
+        parameters: Parameetritega funktsioonid
         playlab_2021: Play Lab – sissejuhatus
         playlab_2021_reader: Play Lab – sissejuhatus
-        PL_CS_Journeys_Overview: Arvutiteaduse teekonnad
-        csp_applab_parameters: Parameetritega funktsioonid
-    callout:
-      text:
-        drag_blocks: Lohista plokki „liiguta“ ja kinnita see teise ploki alla
-        run: Programmi proovimiseks vajuta nuppu „Käivita“
-        watch_again: Video uuesti vaatamiseks kliki siin
-        gray_block_explanation: Halle plokke ei saa kustutada. Kas oskad mõistatuse
-          ikkagi lahendada?
-        show_code_explanation: Poolelioleva programmi koodi vaatamiseks kliki siin
-        instructions_repeat_explanation: Siin korratakse iga mõistatuse juhiseid
-        category_explanation: Sul on samad plokid, aga nüüd on need jaotatud kategooriate
-          järgi
-        set_sprite_image: Kinnita plokk „määra tegelaskuju pildile“ ploki „kui lugu
-          algab“ külge, et selle loo tegelane aktiveerida
-        studio_say_text: Kirjuta tekst, mida sa tahad, et tegelaskuju nende jutumärkide
-          vahel ütleks
-        jigsaw_click: Kliki sellel plokil.
-        move_elsa_forward: Lohista plokk „Liigu edasi“ ploki „pärast käivitamist“
-          alla, et Elsa liiguks edasi
-        turn_elsa: Kasuta plokki „Pööra“, et Elsa pööraks. Rippmenüüs valitud number
-          näitab, mitu korda Elsa pöörab
-        replace_questions: Kasuta rippmenüüd, et asendada „???“ numbriga
-        replace_questions_degree: Kasuta rippmenüüd, et asendada „???“ õige pööramisnurgaga
-        repeat_blocks: Kasuta plokki „Korda“ ja pane see tööruumis olevate plokkide
-          ümber
-        repeat_blocks_1: "(1) Kasuta seda plokki ja pane see tööruumis hallide plokkide
-          ümber"
-        repeat_blocks_2: "(2) Teisalda plokk „Korda“ siia ja pane hallid plokid selle
-          sisse"
-        snowflake_dropdown: Kasuta seda rippmenüüd erinevate lumehelveste loomiseks.
-        degrees_per_side: Jaga number 360 külgede arvuga, et saaksid iga nurga kraadide
-          arvu.
-        set_sides: Kasuta seda plokki, et määrata külgede arvuks see arv, mida on
-          vaja mõistatuse lahendamiseks.
-        set_length: Kasuta seda plokk, et määrata õige pikkus.
-        which_equation: Millise võrrandiga saab rohkemate külgedega kujundite külgi
-          lühemaks muuta?
-        get_nectar: Kasuta uut plokki „korja nektarit“.
-        actions_category: Tööriistakastil on uus ilme. Tegevuste plokid on nüüd siin.
-        draw_square_hint: 'Vihje: kasuta kandilist tsüklit, mille tegid just eelmises
-          mõistatuses.'
-        edit_function: Funktsiooni muutmiseks kliki siin.
-        create_function: Kliki siin, et avada hüpik „Funktsioonid“ ja kliki nupul
-          „Loo funktsioon“.
-        house_hint: Pole midagi, kui pilt pole veel päris maja moodi. Järgmises mõistatuses
-          parandame selle ära.
-        edit_draw_square: Kasuta seda nuppu funktsiooni muutmiseks ja tsükli lisamiseks.
-        edit_get_nectar: Kasuta seda nuppu funktsiooni muutmiseks ja mesilase liikumissuuna
-          muutmiseks, kui ta nektarit korjab.
-        logic_category: Ploki „kui teine“ leidmiseks ava hüpik „Loogika“.
-        length_parameter: Kas oskad seda funktsiooni uuendada, et see kasutaks parameetrit
-          „pikkus“?
-        frozen_diamond_repeat: Kasuta korduse plokki, et see kujund luua.
-        frozen_circle_function_in_circle_turn: Ära unusta peale igat ringi loomist
-          keerata.
-        frozen_circle_function_with_parameter_circle: Kasuta " loo ring" plokki ja
-          muuda suurus.
-        frozen_snowflake_branch: Kasuta "joonista lumehelbe võrestik" plokki
-        frozen_create_square: Lisa rohkem plokke, et luua ruut
-        playlab_drag_say: Lohista siia plokk „ütle“ ja kirjuta „tere“
-        playlab_use_twice: Kasuta seda plokki kaks korda ja ära unusta muuta tegelaskuju
-          numbrit
-        playlab_move_girl: Kasuta tennisetüdruku juurde liikumiseks plokki „liigu
-          paremale“
-        playlab_play_sound: Lisa siia plokk „heli esitamine“
-        playlab_arrow_keys: Kasuta neid nõia liigutamiseks pärast seda, kui oled klikkinud
-          nupul Käivita
-        playlab_add_move: Lisa selle kordamisploki sisse plokid „liiguta“
-        playlab_add_score: Lisa siia tulemuseplokid
-        playlab_add_blocks: Lisa siia oma plokid
-        set_variable: Muutuja määramiseks lohista siia numbriplokk
-        place_variable: Lohista oma muutuja selle ploki sisse
-        bee_for_loop: Lohista siia arv, mis näitab, kui palju nektarit peaks mesilane
-          kõige rohkem koguma
-        place_counter_variable: Lohista oma loendurimuutuja selle ploki sisse
-        function_editor_draw_square: See on sinu funktsioonimääratlus. Neid plokke
-          käitatakse iga kord, kui kasutad plokki „joonista ruut“
-        change_here: Tee siin oma muudatus
-        write_draw_square_function: Lohista tööriistakastist siia plokid, millega
-          joonistatakse ruut
-        write_draw_triangle_function: Lohista tööriistakastist siia plokid, millega
-          joonistatakse kolmnurk
-        edit_add_parameter: Kliki muutmisnupul, et lisada oma funktsiooni parameeter
-        add_and_drag_parameter: Kirjuta siia oma parameetri nimi, kliki lisamisnupul
-          ja lohista see oma funktsioonimääratlusse
-        fill_in_actor: Täida ??? numbritega, mis vastavad igale tegelaskujule (1,
-          2 ja 3)
-        repeat: Käskude kordamiseks aseta plokid tsükli sisse
-        if_bee_nectar: Kasuta plokki „kui“, et näidata, kas mesilane peab nektarit
-          korjama
-        if_else_bee: Kasuta plokki „kui teine“, et mesilane saaks lillelt nektarit
-          ja kui see pole lill, siis teeks mett
-        repeat_full_circle: Sisesta, mitu korda peab zombi liikuma, et teha üks täisring
-        place_length_variable: Küsimärkide asendamiseks lohista siia pikkusemuutuja
-        arrows_move_actor: Kasuta tegelaskuju liigutamiseks nooleklahve
-        right_arrow_fireball: Kasuta tulekerade laskmiseks paremnoolt
-        name_function: Kirjuta siia oma funktsiooni nimi
-        Infinity_move_right_runbutton: Lisa liigutamise plokk siia
-        Infinity_move_directions_callout: Milline plokk paneb Baymaxi üles liikuma,
-          kui üles noole klahvile on vajutatud?
-        Infinity_move_directions_callout_arrow: Noolte abil saate juhtida
-        Infinity_move_collide_callout: Mängi heli, kui sündmus juhtub.
-        Infinity_repeat_callout: Aseta Liigu plokid siia sisse
-        craft_run_button_callout: Programmi proovimiseks vajuta nuppu „Käivita“
-        craft_drag_block_callout: Lohista plokki „liigu edasi();“ ja kinnita see teise
-          ploki alla
-        craft_callout_preplaced: Panime sulle alustuseks siia mõned plokid
-        craft_inside_repeat: Tegevuste kordamiseks panne siia plokid
-        craft_callout_preplaced_house: Selle koodiga alustatakse majaehitust. Kas
-          oskad selle lõpetada?
-        craft_what_is_iron: Kaevanda seda rauda!
-        craft_callout_moveforward: Selle koodiga otsitakse laavat. Kas oskad lisada
-          käsu edasiliikumiseks?
+        playlab_events: Play Lab – sündmused
+        playlab_intro: Play Lab – sissejuhatus
+        playlab_repeat_forever: Play Lab – korda igavesti
+        starwars_blocks_congrats: 'Star Wars: galaktika loomine koodiga – palju õnne'
+        starwars_blocks_events: 'Star Wars: galaktika loomine koodiga – sündmused'
+        starwars_blocks_intro: 'Star Wars: galaktika loomine koodiga – sissejuhatus'
+        starwars_congrats: 'Star Wars: galaktika loomine koodiga – palju õnne'
+        starwars_events: 'Star Wars: galaktika loomine koodiga – sündmused'
+        starwars_intro: 'Star Wars: galaktika loomine koodiga – sissejuhatus'
+        starwars_typing: 'Star Wars: galaktika loomine koodiga – JavaScript'
+        tutorial_puzzle_challenge: Mõistatuse juhend
+        what-is-creativity: Mis on loovus?

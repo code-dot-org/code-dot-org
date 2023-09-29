@@ -11,3 +11,5 @@ right 'Another person not listed'
 right 'No one in particular. I just wanted to take it.'
 right 'I didn\'t choose to take this class.'
 
+
+allow_multiple_attempts true

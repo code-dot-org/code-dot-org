@@ -54,7 +54,7 @@ const sections = [
 
 const DEFAULT_PROPS = {
   sectionData: sections[0],
-  onEdit: () => {},
+  handleEdit: () => {},
   removeSection: () => {},
   toggleSectionHidden: () => {},
   updateRoster: () => {},
@@ -132,5 +132,17 @@ describe('SectionActionDropdown', () => {
       <SectionActionDropdown {...DEFAULT_PROPS} sectionData={sections[3]} />
     );
     expect(wrapper).to.contain('Restore Section');
+  });
+
+  it('sends selected user to the new edit page', () => {
+    const wrapper = shallow(
+      <SectionActionDropdown {...DEFAULT_PROPS} sectionData={sections[3]} />
+    );
+    const sectionId = wrapper.instance().props.sectionData.id;
+    const expectedUrl = '/sections/' + sectionId + '/edit';
+    expect(wrapper).to.contain('Edit Section Details');
+    expect(wrapper.find('.edit-section-details-link').props().href).to.equal(
+      expectedUrl
+    );
   });
 });

@@ -2,28 +2,28 @@
   "gl-ES": {
     "data": {
       "course_offerings": {
-        "csd": "Descubrimentos da informática",
-        "csp": "AP® Principios da informática",
         "20-hour": "Curso acelerado de Introdución a programación informática",
-        "flappy": "Código do Flappy bird",
-        "jigsaw": "Crebacabezas",
         "algebra": "Informática na álxebra",
+        "allthethingscourse": "allthethingscourse",
         "artist": "Artista",
         "course1": "Curso 1",
         "course2": "Curso 2",
         "course3": "Curso 3",
         "course4": "Curso 4",
+        "csd": "Descubrimentos da informática",
+        "csp": "AP® Principios da informática",
+        "edit-code": "Editar código",
+        "flappy": "Código do Flappy bird",
         "frozen": "Programa con Ana e Elsa",
         "gumball": "Laboratorio de xogo de Gumball",
         "hourofcode": "Labirinto clásico",
         "iceage": "O xogo de laboratorio da Idade de xeo",
         "infinity": "Laboratorio de Xogo Disney Infinity",
+        "jigsaw": "Crebacabezas",
         "mc": "Hora do Código Minecraft",
         "playlab": "Laboratorio de Xogos",
-        "edit-code": "Editar código",
-        "allthethingscourse": "allthethingscourse",
-        "step": "paso",
-        "soccer": "fútbol"
+        "soccer": "fútbol",
+        "step": "paso"
       }
     }
   }

@@ -33,41 +33,37 @@ const errorTransferStatus = {
     'You cannot move these students because they are already in the new section.',
 };
 
-const DEFAULT_PROPS = {
-  studentData,
-  transferData: blankStudentTransfer,
-  transferStatus: blankStudentTransferStatus,
-  currentSectionId: 1,
-  sections,
-  updateStudentTransfer: action('Update'),
-  transferStudents: action('Transfer'),
-  cancelStudentTransfer: action('Cancel'),
+export default {
+  title: 'ManageStudents/MoveStudents',
+  component: MoveStudents,
 };
 
-export default storybook => {
-  storybook.storiesOf('MoveStudents', module).addStoryTable([
-    {
-      name: 'Move students empty dialog',
-      story: () => <MoveStudents {...DEFAULT_PROPS} />,
-    },
-    {
-      name: 'Move students dialog when "other teacher" option is chosen',
-      story: () => (
-        <MoveStudents
-          {...DEFAULT_PROPS}
-          transferData={transferToOtherTeacher}
-        />
-      ),
-    },
-    {
-      name: 'Move students dialog when an error has occurred',
-      story: () => (
-        <MoveStudents
-          {...DEFAULT_PROPS}
-          transferData={transferToOtherTeacher}
-          transferStatus={errorTransferStatus}
-        />
-      ),
-    },
-  ]);
+const Template = args => (
+  <MoveStudents
+    studentData={studentData}
+    sections={sections}
+    currentSectionId={1}
+    updateStudentTransfer={action('Update')}
+    transferStudents={action('Transfer')}
+    cancelStudentTransfer={action('Cancel')}
+    {...args}
+  />
+);
+
+export const MoveStudentsEmptyDialog = Template.bind({});
+MoveStudentsEmptyDialog.args = {
+  transferData: blankStudentTransfer,
+  transferStatus: blankStudentTransferStatus,
+};
+
+export const MoveStudentsDialogToOtherTeacher = Template.bind({});
+MoveStudentsDialogToOtherTeacher.args = {
+  transferData: transferToOtherTeacher,
+  transferStatus: blankStudentTransferStatus,
+};
+
+export const MoveStudentsDialogWithError = Template.bind({});
+MoveStudentsDialogWithError.args = {
+  transferData: transferToOtherTeacher,
+  transferStatus: errorTransferStatus,
 };

@@ -1,5 +1,3 @@
-/* global Promise */
-
 import $ from 'jquery';
 import {predict} from '@cdo/apps/MLTrainers';
 

@@ -1,5 +1,3 @@
-/* globals dashboard, appOptions */
-
 import React from 'react';
 import ReactDOM from 'react-dom';
 import popupWindow from './popup-window';

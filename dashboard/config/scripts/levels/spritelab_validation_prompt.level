@@ -1,5 +1,9 @@
 <GamelabJr>
   <config><![CDATA[{
+  "game_id": 64,
+  "created_at": "2022-02-17T17:34:32.000Z",
+  "level_num": "custom",
+  "user_id": 9,
   "properties": {
     "skin": "gamelab",
     "show_debug_watch": "true",
@@ -61,18 +65,11 @@
     "hide_pause_button": "false",
     "instructions_icon": "drmonster",
     "validation_code": "var state;\r\nvar promptVars = getPromptVars();\r\n\r\nif (promptVars.state==\"pass\") {\r\n  state=0;\r\n  background('green');\r\n} else {\r\n  state =3;\r\n  background('red');\r\n}\r\n\r\nvar promptVars = getPromptVars();\r\nif (promptVars.string) {\r\n  levelFailure(state, promptVars.string);\r\n}",
-    "preload_asset_list": null,
-    "encrypted_examples": [
-
-    ]
+    "preload_asset_list": null
   },
-  "game_id": 64,
   "published": true,
-  "created_at": "2022-02-17T17:34:32.000Z",
-  "level_num": "custom",
-  "user_id": 9,
   "notes": "",
-  "audit_log": "[{\"changed_at\":\"2022-02-17T17:34:32.526+00:00\",\"changed\":[\"cloned from \\\"spritelab_validation_testing\\\"\"],\"cloned_from\":\"spritelab_validation_testing\"},{\"changed_at\":\"2022-02-17 17:35:57 +0000\",\"changed\":[\"start_blocks\",\"validation_code\",\"preload_asset_list\"],\"changed_by_id\":831,\"changed_by_email\":\"mike.harvey@code.org\"},{\"changed_at\":\"2022-02-17 17:39:05 +0000\",\"changed\":[\"start_blocks\"],\"changed_by_id\":831,\"changed_by_email\":\"mike.harvey@code.org\"},{\"changed_at\":\"2022-02-17 17:39:24 +0000\",\"changed\":[\"validation_code\",\"preload_asset_list\"],\"changed_by_id\":831,\"changed_by_email\":\"mike.harvey@code.org\"},{\"changed_at\":\"2022-02-17 17:40:50 +0000\",\"changed\":[\"preload_asset_list\",\"encrypted_examples\"],\"changed_by_id\":831,\"changed_by_email\":\"mike.harvey@code.org\"},{\"changed_at\":\"2022-02-17 17:43:29 +0000\",\"changed\":[\"validation_code\",\"preload_asset_list\",\"encrypted_examples\",\"start_blocks\"],\"changed_by_id\":831,\"changed_by_email\":\"mike.harvey@code.org\"},{\"changed_at\":\"2022-02-17 17:48:20 +0000\",\"changed\":[\"validation_code\",\"preload_asset_list\",\"encrypted_examples\",\"start_blocks\"],\"changed_by_id\":831,\"changed_by_email\":\"mike.harvey@code.org\"},{\"changed_at\":\"2022-02-17 17:59:16 +0000\",\"changed\":[\"long_instructions\",\"validation_code\",\"preload_asset_list\",\"encrypted_examples\",\"start_blocks\"],\"changed_by_id\":831,\"changed_by_email\":\"mike.harvey@code.org\"},{\"changed_at\":\"2022-02-17 18:02:12 +0000\",\"changed\":[\"start_blocks\"],\"changed_by_id\":831,\"changed_by_email\":\"mike.harvey@code.org\"},{\"changed_at\":\"2022-11-03 16:33:02 +0000\",\"changed\":[\"start_blocks\",\"start_animations\",\"preload_asset_list\",\"contained_level_names\"],\"changed_by_id\":831,\"changed_by_email\":\"mike.harvey@code.org\"}]",
+  "audit_log": "[{\"changed_at\":\"2022-02-17T17:34:32.526+00:00\",\"changed\":[\"cloned from \\\"spritelab_validation_testing\\\"\"],\"cloned_from\":\"spritelab_validation_testing\"},{\"changed_at\":\"2022-02-17 17:35:57 +0000\",\"changed\":[\"start_blocks\",\"validation_code\",\"preload_asset_list\"],\"changed_by_id\":831,\"changed_by_email\":\"mike.harvey@code.org\"},{\"changed_at\":\"2022-02-17 17:39:05 +0000\",\"changed\":[\"start_blocks\"],\"changed_by_id\":831,\"changed_by_email\":\"mike.harvey@code.org\"},{\"changed_at\":\"2022-02-17 17:39:24 +0000\",\"changed\":[\"validation_code\",\"preload_asset_list\"],\"changed_by_id\":831,\"changed_by_email\":\"mike.harvey@code.org\"},{\"changed_at\":\"2022-02-17 17:40:50 +0000\",\"changed\":[\"preload_asset_list\",\"encrypted_examples\"],\"changed_by_id\":831,\"changed_by_email\":\"mike.harvey@code.org\"},{\"changed_at\":\"2022-02-17 17:43:29 +0000\",\"changed\":[\"validation_code\",\"preload_asset_list\",\"encrypted_examples\",\"start_blocks\"],\"changed_by_id\":831,\"changed_by_email\":\"mike.harvey@code.org\"},{\"changed_at\":\"2022-02-17 17:48:20 +0000\",\"changed\":[\"validation_code\",\"preload_asset_list\",\"encrypted_examples\",\"start_blocks\"],\"changed_by_id\":831,\"changed_by_email\":\"mike.harvey@code.org\"},{\"changed_at\":\"2022-02-17 17:59:16 +0000\",\"changed\":[\"long_instructions\",\"validation_code\",\"preload_asset_list\",\"encrypted_examples\",\"start_blocks\"],\"changed_by_id\":831,\"changed_by_email\":\"mike.harvey@code.org\"},{\"changed_at\":\"2022-02-17 18:02:12 +0000\",\"changed\":[\"start_blocks\"],\"changed_by_id\":831,\"changed_by_email\":\"mike.harvey@code.org\"},{\"changed_at\":\"2022-11-03 16:33:02 +0000\",\"changed\":[\"start_blocks\",\"start_animations\",\"preload_asset_list\",\"contained_level_names\"],\"changed_by_id\":831,\"changed_by_email\":\"mike.harvey@code.org\"},{\"changed_at\":\"2023-05-08 23:28:51 +0000\",\"changed\":[],\"changed_by_id\":14639,\"changed_by_email\":\"dan+teacher@code.org\"},{\"changed_at\":\"2023-05-08 23:40:30 +0000\",\"changed\":[\"toolbox_blocks\"],\"changed_by_id\":14639,\"changed_by_email\":\"dan+teacher@code.org\"},{\"changed_at\":\"2023-05-09 02:43:08 +0000\",\"changed\":[\"toolbox_blocks\"],\"changed_by_id\":14639,\"changed_by_email\":\"dan+teacher@code.org\"},{\"changed_at\":\"2023-05-09 03:01:44 +0000\",\"changed\":[\"toolbox_blocks\"],\"changed_by_id\":14639,\"changed_by_email\":\"dan+teacher@code.org\"}]",
   "level_concept_difficulty": {
   }
 }]]></config>
@@ -1435,5 +1432,31 @@
         </block>
       </xml>
     </start_blocks>
+    <toolbox_blocks>
+      <xml>
+        <block type="gamelab_printText"/>
+        <block type="gamelab_textJoin">
+          <field name="TEXT1"/>
+        </block>
+        <block type="gamelab_makeNewSpriteAnon">
+          <field name="ANIMATION_NAME">"bear"</field>
+        </block>
+        <block type="gamelab_checkTouching">
+          <field name="CONDITION">"when"</field>
+        </block>
+        <block type="gamelab_allSpritesWithAnimation">
+          <field name="ANIMATION">"bear"</field>
+        </block>
+        <block type="gamelab_setBackgroundImageAs">
+          <field name="IMG">"cave"</field>
+        </block>
+        <block type="gamelab_location_picker">
+          <field name="LOCATION">undefined</field>
+        </block>
+        <block type="gamelab_setAnimation">
+          <field name="ANIMATION">"bear"</field>
+        </block>
+      </xml>
+    </toolbox_blocks>
   </blocks>
 </GamelabJr>

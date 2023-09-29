@@ -45,7 +45,7 @@ class AnnouncementsTest < ActiveSupport::TestCase
   test 'quietly reject invalid data' do
     incomplete_banner_data = {
       pages: {
-        "/courses": "test"
+        '/courses': "test"
       },
       banners: {
         test: {

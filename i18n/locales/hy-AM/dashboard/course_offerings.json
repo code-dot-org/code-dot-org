@@ -1,10 +1,4 @@
 {
-  "coursea": "Կուրս A",
-  "courseb": "Կուրս B",
-  "coursec": "Կուրս C",
-  "coursed": "Կուրս D",
-  "coursee": "Կուրս E",
-  "coursef": "Կուրս F",
   "csp": "AP® Computer Science Principles",
   "20-hour": "Accelerated Intro to CS Course",
   "flappy": "Flappy-ի կոդը",
@@ -22,6 +16,7 @@
   "infinity": "Disney Infinity Play Lab",
   "mc": "Minecraft Hour of Code",
   "playlab": "Play Lab",
+  "starwars": "Star Wars: Building a Galaxy With Code (JavaScript)",
   "edit-code": "Խմբագրել Code",
   "step": "step",
   "soccer": "ֆուտբոլ"

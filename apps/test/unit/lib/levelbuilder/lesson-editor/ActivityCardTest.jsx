@@ -134,7 +134,7 @@ describe('ActivityCard', () => {
       />
     );
     expect(wrapper.contains('Activity:')).to.be.false;
-    expect(wrapper.contains('Duration:')).to.be.false;
+    expect(wrapper.contains('Duration:')).to.be.true;
     expect(wrapper.find('OrderControls').length).to.equal(0);
     expect(wrapper.find('Connect(ActivitySectionCard)').length).to.equal(1);
     expect(wrapper.find('button').length).to.equal(1);

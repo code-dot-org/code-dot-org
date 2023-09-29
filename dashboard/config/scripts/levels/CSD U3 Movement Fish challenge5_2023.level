@@ -1,5 +1,10 @@
 <Gamelab>
   <config><![CDATA[{
+  "published": true,
+  "game_id": 50,
+  "created_at": "2022-09-23T22:26:26.000Z",
+  "level_num": "custom",
+  "user_id": 155,
   "properties": {
     "skin": "gamelab",
     "edit_code": true,
@@ -72,7 +77,12 @@
       "regularPolygon": null,
       "shape": null,
       "draw": null,
-      "World.frameRate": null
+      "World.frameRate": null,
+      "assign_x": null,
+      "addOperator": null,
+      "subtractOperator": null,
+      "multiplyOperator": null,
+      "divideOperator": null
     },
     "encrypted_examples": "1YK+G0c0HFzgKP0hw0l6jBq+6GvE0vDmBHQ9k22aPUEJWXHoxXR43WZlmQEF\nrKRfIlx8FhW3ETliuNNLXfZe8w==\n",
     "disable_procedure_autopopulate": "false",
@@ -105,13 +115,8 @@
     "start_blocks": "var orangeFish = createSprite(400, randomNumber(0, 100));\r\norangeFish.setAnimation(\"orange_fish\");\r\nvar blueFish = createSprite(250, randomNumber(0, 200));\r\nblueFish.setAnimation(\"blue_fish\");\r\nvar greenFish = createSprite(300, randomNumber(200, 300));\r\ngreenFish.setAnimation(\"green_fish\");\r\n\r\nfunction draw() {\r\n  // Draw Background\r\n  background(\"navy\");\r\n  \r\n  // Update Values\r\n  orangeFish.x = orangeFish.x - 2;\r\n  blueFish.x = blueFish.x - 2;\r\n  greenFish.x = greenFish.x - 2;\r\n  \r\n  // Draw Animations\r\n  drawSprites();\r\n}",
     "preload_asset_list": null
   },
-  "game_id": 50,
-  "published": true,
-  "created_at": "2022-09-23T22:26:26.000Z",
-  "level_num": "custom",
-  "user_id": 155,
   "notes": "",
-  "audit_log": "[{\"changed_at\":\"2022-09-23T22:26:26.730+00:00\",\"changed\":[\"cloned from \\\"CSD U3 Movement Fish challenge3_2023\\\"\"],\"cloned_from\":\"CSD U3 Movement Fish challenge3_2023\"},{\"changed_at\":\"2022-09-23 22:32:54 +0000\",\"changed\":[\"code_functions\",\"encrypted_examples\",\"long_instructions\",\"preload_asset_list\"],\"changed_by_id\":18602,\"changed_by_email\":\"angelina+levelbuilder@code.org\"},{\"changed_at\":\"2022-09-23 22:38:56 +0000\",\"changed\":[\"code_functions\",\"encrypted_examples\",\"preload_asset_list\"],\"changed_by_id\":18602,\"changed_by_email\":\"angelina+levelbuilder@code.org\"},{\"changed_at\":\"2022-09-27 22:48:55 +0000\",\"changed\":[\"code_functions\",\"encrypted_examples\",\"long_instructions\",\"preload_asset_list\",\"contained_level_names\"],\"changed_by_id\":14639,\"changed_by_email\":\"dan+teacher@code.org\"},{\"changed_at\":\"2023-01-11 20:42:03 +0000\",\"changed\":[\"code_functions\",\"encrypted_examples\",\"long_instructions\",\"preload_asset_list\",\"contained_level_names\"],\"changed_by_id\":18602,\"changed_by_email\":\"angelina+levelbuilder@code.org\"},{\"changed_at\":\"2023-01-11 20:42:45 +0000\",\"changed\":[\"code_functions\",\"encrypted_examples\",\"long_instructions\",\"preload_asset_list\"],\"changed_by_id\":18602,\"changed_by_email\":\"angelina+levelbuilder@code.org\"}]"
+  "audit_log": "[{\"changed_at\":\"2022-09-23T22:26:26.730+00:00\",\"changed\":[\"cloned from \\\"CSD U3 Movement Fish challenge3_2023\\\"\"],\"cloned_from\":\"CSD U3 Movement Fish challenge3_2023\"},{\"changed_at\":\"2022-09-23 22:32:54 +0000\",\"changed\":[\"code_functions\",\"encrypted_examples\",\"long_instructions\",\"preload_asset_list\"],\"changed_by_id\":18602,\"changed_by_email\":\"angelina+levelbuilder@code.org\"},{\"changed_at\":\"2022-09-23 22:38:56 +0000\",\"changed\":[\"code_functions\",\"encrypted_examples\",\"preload_asset_list\"],\"changed_by_id\":18602,\"changed_by_email\":\"angelina+levelbuilder@code.org\"},{\"changed_at\":\"2022-09-27 22:48:55 +0000\",\"changed\":[\"code_functions\",\"encrypted_examples\",\"long_instructions\",\"preload_asset_list\",\"contained_level_names\"],\"changed_by_id\":14639,\"changed_by_email\":\"dan+teacher@code.org\"},{\"changed_at\":\"2023-01-11 20:42:03 +0000\",\"changed\":[\"code_functions\",\"encrypted_examples\",\"long_instructions\",\"preload_asset_list\",\"contained_level_names\"],\"changed_by_id\":18602,\"changed_by_email\":\"angelina+levelbuilder@code.org\"},{\"changed_at\":\"2023-01-11 20:42:45 +0000\",\"changed\":[\"code_functions\",\"encrypted_examples\",\"long_instructions\",\"preload_asset_list\"],\"changed_by_id\":18602,\"changed_by_email\":\"angelina+levelbuilder@code.org\"},{\"changed_at\":\"2023-08-07 16:25:37 +0000\",\"changed\":[\"code_functions\",\"encrypted_examples\",\"preload_asset_list\",\"contained_level_names\"],\"changed_by_id\":18602,\"changed_by_email\":\"angelina+levelbuilder@code.org\"}]"
 }]]></config>
   <blocks/>
 </Gamelab>

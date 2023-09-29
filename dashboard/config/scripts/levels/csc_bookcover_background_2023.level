@@ -1,5 +1,10 @@
 <GamelabJr>
   <config><![CDATA[{
+  "published": true,
+  "game_id": 64,
+  "created_at": "2023-04-12T21:02:31.000Z",
+  "level_num": "custom",
+  "user_id": 1196,
   "properties": {
     "encrypted": "false",
     "skin": "gamelab",
@@ -33,24 +38,18 @@
     "start_in_animation_tab": "false",
     "mini_toolbox": "false",
     "hide_pause_button": "false",
-    "authored_hints": "[{\"hint_class\":null,\"hint_markdown\":\"Drag the `set background` block under when run\",\"hint_id\":\"hint1\",\"hint_type\":\"general\",\"hint_path\":\"\",\"hint_video\":\"\",\"tts_url\":\"https://tts.code.org/sharon22k/180/100/d4690d209fd8e4115b74a02140745cf7/csc_bookcover_background.mp3\"},{\"hint_class\":null,\"hint_markdown\":\"Select a background from the dropdown menu\\n\\n<xml>\\n<block type=\\\"gamelab_setBackgroundImageAs\\\">\\n  <field name=\\\"IMG\\\">\\\"hw_sky_background\\\"</field>\\n</block>\\n</xml>\\n\\n\",\"hint_id\":\"hint2\",\"hint_type\":\"general\",\"hint_path\":\"\",\"hint_video\":\"\",\"tts_url\":\"https://tts.code.org/sharon22k/180/100/9c7e1bda3996d577f16a440b93ee4626/csc_bookcover_background.mp3\"}]",
-    "long_instructions": "**Time to decorate your book cover.** \r\n \r\n##Do This\r\n- Drag a <code style=\"color:black; background-color:#B3B2FB\">set background</code> to block and connect it under when run. ",
+    "authored_hints": "[{\"hint_class\":null,\"hint_markdown\":\"The <code style=\\\"color:black; background-color:#B3B2FB\\\">set background</code> block goes at the end of the program. \\n\\nAfter the other code under <code style=\\\"color:black; background-color:#FFBD46\\\">When run</code>.\",\"hint_id\":\"hint1\",\"hint_type\":\"general\",\"hint_path\":\"\",\"hint_video\":\"\",\"tts_url\":\"https://tts.code.org/sharon22k/180/100/f2754e34007c8e737a96df34037ca9a4/csc_bookcover_background_2023.mp3\"},{\"hint_class\":null,\"hint_markdown\":\"Select a background from the dropdown menu\\n\\n<xml>\\n<block type=\\\"gamelab_setBackgroundImageAs\\\">\\n  <field name=\\\"IMG\\\">\\\"hw_sky_background\\\"</field>\\n</block>\\n</xml>\\n\\n\",\"hint_id\":\"hint2\",\"hint_type\":\"general\",\"hint_path\":\"\",\"hint_video\":\"\",\"tts_url\":\"https://tts.code.org/sharon22k/180/100/9c7e1bda3996d577f16a440b93ee4626/csc_bookcover_background_2023.mp3\"}]",
+    "long_instructions": "**Design your book cover with a background!** \r\n \r\n\r\n- Add a <code style=\"color:black; background-color:#B3B2FB\">set background</code> block to your code.\r\n\r\n- Choose a background that you like for this book cover. \r\n- Click <code style=\"color:black; background-color:#FFBD46\">Run</code> ",
     "instructions_icon": "bear",
     "name_suffix": "_2023",
     "start_animations": "{\"orderedKeys\":[\"1e71474d-f62d-454a-b39a-e45dec93ea2d\"],\"propsByKey\":{\"1e71474d-f62d-454a-b39a-e45dec93ea2d\":{\"name\":\"sci_fi\",\"categories\":[\"backgrounds\"],\"frameCount\":1,\"frameSize\":{\"x\":400,\"y\":400},\"looping\":true,\"frameDelay\":2,\"jsonLastModified\":\"2021-01-19 23:53:38 UTC\",\"pngLastModified\":\"2021-01-19 23:53:39 UTC\",\"version\":\"0qaMBfuUPDzY7TO.DacrNIBod8CUquPT\",\"sourceUrl\":\"/api/v1/animation-library/spritelab/0qaMBfuUPDzY7TO.DacrNIBod8CUquPT/category_backgrounds/background_scifi.png\",\"sourceSize\":{\"x\":400,\"y\":400}}}}",
-    "validation_code": "//Make sure [CSC Module Helper Library] is included as a library in this level\r\nif (World.frameCount == 1) {\r\n  //Everything in this if-statement will just run once, during the first frame of your level\r\n  //README() //uncomment this to see the README for the helper library in the console of this level\r\n  //turnOnDebugging() //uncomment this to use a DEBUG global variable to control console.log statements in your code\r\n  \r\n  setFailTime(150); // Frames to wait before failing student\r\n  setDelayTime(90); // Frames to wait after success before stopping program\r\n  setupPrevious(); //Defines the validationProps.previous{} object. To use it, call updatePrevious() at the end of this box\r\n  \r\n  //use addCriteria to setup the validation logic.\r\n  //You can use criterion commands as helper functions: \r\n  //https://github.com/code-dot-org/code-dot-org/blob/staging/apps/src/p5lab/spritelab/commands/criterionCommands.js\r\n  addCriteria(function() {\r\n    //You can write code in here like if-statements and such, but if possible, try to abstract to a function.\r\n    //This isn't always possible, but should be the goal\r\n    return checkSetBackground();\r\n\r\n  }, \"spritelabFeedbackChangeBackgroundColor\");  // include i18n feedback string\r\n}\r\n//Everything after this will run during each 'tick' of the draw loop in your level\r\n//Be careful about putting console.log statements here\r\n\r\n//Always have this first to get most up-to-date helper variables\r\ngetHelperVars();\r\n\r\n//This is what calls updateValidation in \r\n//https://github.com/code-dot-org/code-dot-org/blob/staging/apps/src/p5lab/spritelab/commands/validationCommands.js\r\n//To check the validation criteria\r\ncheck();\r\n\r\n//Always have this at end to store previous state in validationProps.previous\r\nupdatePrevious();",
-    "standalone_app_name": "spritelab",
-    "preload_asset_list": null,
-    "encrypted_examples": [
-
-    ]
+    "validation_code": "//Make sure [CSC Module Helper Library] is included as a library in this level\r\nif (World.frameCount == 1) {\r\n  //Everything in this if-statement will just run once, during the first frame of your level\r\n  //README() //uncomment this to see the README for the helper library in the console of this level\r\n  //turnOnDebugging() //uncomment this to use a DEBUG global variable to control console.log statements in your code\r\n  \r\n  setFailTime(90); // Frames to wait before failing student\r\n  setDelayTime(90); // Frames to wait after success before stopping program\r\n  setupPrevious(); //Defines the validationProps.previous{} object. To use it, call updatePrevious() at the end of this box\r\n  \r\n  //use addCriteria to setup the validation logic.\r\n  //You can use criterion commands as helper functions: \r\n  //https://github.com/code-dot-org/code-dot-org/blob/staging/apps/src/p5lab/spritelab/commands/criterionCommands.js\r\n  addCriteria(function() {\r\n    //You can write code in here like if-statements and such, but if possible, try to abstract to a function.\r\n    //This isn't always possible, but should be the goal\r\n    return checkSetBackground();\r\n\r\n  }, \"spritelabFeedbackChangeBackgroundColor\");  // include i18n feedback string\r\n}\r\n//Everything after this will run during each 'tick' of the draw loop in your level\r\n//Be careful about putting console.log statements here\r\n\r\n//Always have this first to get most up-to-date helper variables\r\ngetHelperVars();\r\n\r\n//This is what calls updateValidation in \r\n//https://github.com/code-dot-org/code-dot-org/blob/staging/apps/src/p5lab/spritelab/commands/validationCommands.js\r\n//To check the validation criteria\r\ncheck();\r\n\r\n//Always have this at end to store previous state in validationProps.previous\r\nupdatePrevious();",
+    "standalone_app_name": "story",
+    "short_instructions": "Design your book cover with a <code style=\"color:black; background-color:#B3B2FB\">set background</code> block!",
+    "encrypted_examples": "wM81N9j9Jk95LkMvvDy2+p/lA1q+fs2Pb0AlVwrxVZc0alb5bFWzOc02O3lT\nPs0OQUQzk52A16O8NnQbWizdnA==\n",
+    "preload_asset_list": null
   },
-  "game_id": 64,
-  "published": true,
-  "created_at": "2023-04-12T21:02:31.000Z",
-  "level_num": "custom",
-  "user_id": 1196,
-  "audit_log": "[{\"changed_at\":\"2023-04-12T21:02:31.655+00:00\",\"changed\":[\"cloned from \\\"csc_bookcover_background_-wonder\\\"\"],\"cloned_from\":\"csc_bookcover_background_-wonder\"},{\"changed_at\":\"2023-04-14 15:08:09 +0000\",\"changed\":[\"start_blocks\",\"toolbox_blocks\",\"long_instructions\",\"preload_asset_list\",\"contained_level_names\"],\"changed_by_id\":18602,\"changed_by_email\":\"angelina+levelbuilder@code.org\"}]",
+  "audit_log": "[{\"changed_at\":\"2023-04-12T21:02:31.655+00:00\",\"changed\":[\"cloned from \\\"csc_bookcover_background_-wonder\\\"\"],\"cloned_from\":\"csc_bookcover_background_-wonder\"},{\"changed_at\":\"2023-04-14 15:08:09 +0000\",\"changed\":[\"start_blocks\",\"toolbox_blocks\",\"long_instructions\",\"preload_asset_list\",\"contained_level_names\"],\"changed_by_id\":18602,\"changed_by_email\":\"angelina+levelbuilder@code.org\"},{\"changed_at\":\"2023-06-01 16:39:26 +0000\",\"changed\":[\"start_blocks\",\"toolbox_blocks\",\"long_instructions\",\"preload_asset_list\",\"contained_level_names\"],\"changed_by_id\":18605,\"changed_by_email\":\"katie.frank+levelbuilder@code.org\"},{\"changed_at\":\"2023-06-01 16:42:13 +0000\",\"changed\":[\"start_blocks\",\"toolbox_blocks\",\"authored_hints\",\"preload_asset_list\",\"encrypted_examples\"],\"changed_by_id\":18605,\"changed_by_email\":\"katie.frank+levelbuilder@code.org\"},{\"changed_at\":\"2023-06-01 16:42:57 +0000\",\"changed\":[\"start_blocks\",\"toolbox_blocks\",\"preload_asset_list\",\"encrypted_examples\"],\"changed_by_id\":18605,\"changed_by_email\":\"katie.frank+levelbuilder@code.org\"},{\"changed_at\":\"2023-06-06 20:36:01 +0000\",\"changed\":[\"start_blocks\",\"toolbox_blocks\",\"hide_share_and_remix\",\"standalone_app_name\",\"preload_asset_list\",\"contained_level_names\"],\"changed_by_id\":18605,\"changed_by_email\":\"katie.frank+levelbuilder@code.org\"},{\"changed_at\":\"2023-06-09 16:08:43 +0000\",\"changed\":[\"start_blocks\",\"toolbox_blocks\",\"validation_code\",\"preload_asset_list\",\"contained_level_names\"],\"changed_by_id\":16899,\"changed_by_email\":\"emma.wingreen+teacher@code.org\"},{\"changed_at\":\"2023-06-12 22:02:01 +0000\",\"changed\":[\"start_blocks\",\"toolbox_blocks\",\"preload_asset_list\",\"contained_level_names\"],\"changed_by_id\":16899,\"changed_by_email\":\"emma.wingreen+teacher@code.org\"},{\"changed_at\":\"2023-06-27 15:57:08 +0000\",\"changed\":[\"start_blocks\"],\"changed_by_id\":18605,\"changed_by_email\":\"katie.frank+levelbuilder@code.org\"},{\"changed_at\":\"2023-06-27 20:58:17 +0000\",\"changed\":[\"start_blocks\",\"toolbox_blocks\",\"hide_share_and_remix\",\"encrypted_examples\",\"preload_asset_list\"],\"changed_by_id\":18605,\"changed_by_email\":\"katie.frank+levelbuilder@code.org\"}]",
   "level_concept_difficulty": {
   }
 }]]></config>
@@ -59,16 +58,16 @@
       <xml>
         <block type="when_run" deletable="false" movable="false">
           <next>
-            <block type="storylab_setHeading">
+            <block type="storylab_setHeading" deletable="false" movable="false">
               <value name="HEADING">
-                <block type="text">
+                <block type="text" can_disconnect_from_parent="false">
                   <field name="TEXT">Holes</field>
                 </block>
               </value>
               <next>
-                <block type="storylab_setSubheading">
+                <block type="storylab_setSubheading" deletable="false" movable="false">
                   <value name="SUBHEADING">
-                    <block type="text">
+                    <block type="text" can_disconnect_from_parent="false">
                       <field name="TEXT">Louis Sachar</field>
                     </block>
                   </value>

@@ -10,7 +10,7 @@ import moment from 'moment';
 import WorkshopSummaryReport from './workshop_summary_report';
 import TeacherAttendanceReport from './teacher_attendance_report';
 import DatePicker from '../components/date_picker';
-
+/* eslint-disable no-restricted-imports */
 import {
   Grid,
   Row,
@@ -19,6 +19,7 @@ import {
   ControlLabel,
   FormControl,
 } from 'react-bootstrap';
+/* eslint-enable no-restricted-imports */
 import {
   QUERY_BY_OPTIONS,
   QUERY_BY_VALUES,
@@ -111,7 +112,7 @@ export default class ReportView extends React.Component {
       API_DATE_FORMAT
     );
     const queryBy = newState.queryBy || this.state.queryBy;
-    const course = newState.hasOwnProperty('course')
+    const course = Object.prototype.hasOwnProperty.call(newState, 'course')
       ? newState.course
       : this.state.course;
     const report = newState.report || this.state.report;

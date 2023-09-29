@@ -13,6 +13,7 @@ class LevelsHelperTest < ActionView::TestCase
 
   setup do
     @level = create(:maze)
+    @game = Game.custom_maze
 
     def request
       OpenStruct.new(
@@ -234,9 +235,9 @@ class LevelsHelperTest < ActionView::TestCase
 
     callouts = select_and_remember_callouts
 
-    assert callouts.any? {|callout| callout['id'] == callout1.id}
-    assert callouts.any? {|callout| callout['id'] == callout2.id}
-    assert callouts.none? {|callout| callout['id'] == irrelevant_callout.id}
+    assert(callouts.any? {|callout| callout['id'] == callout1.id})
+    assert(callouts.any? {|callout| callout['id'] == callout2.id})
+    assert(callouts.none? {|callout| callout['id'] == irrelevant_callout.id})
   end
 
   test "should localize callouts" do
@@ -249,7 +250,7 @@ class LevelsHelperTest < ActionView::TestCase
 
     callouts = select_and_remember_callouts
 
-    assert callouts.any? {|c| c['localized_text'] == 'Hit "Run" to try your program'}
+    assert(callouts.any? {|c| c['localized_text'] == 'Hit "Run" to try your program'})
   end
 
   test 'app_options returns camelCased view option on Blockly level' do
@@ -1076,14 +1077,14 @@ class LevelsHelperTest < ActionView::TestCase
     stubs(:request).returns(mock_request)
 
     assert_equal render_multi_or_match_content("embedded blockly test.start_blocks"),
-      "<xml><xml><block type=\"embedded_block\"/></xml></xml>"\
-      "<div id=\"codeWorkspace\" style=\"display: none\"></div>"\
-      "<style>.blocklySvg { background: none; }</style>"\
-      "<script src=\"/assets/js/blockly.js\"></script>"\
-      "<script src=\"/assets/js/en_us/blockly_locale.js\"></script>"\
-      "<script src=\"/assets/js/common.js\"></script>"\
-      "<script src=\"/assets/js/en_us/maze_locale.js\"></script>"\
-      "<script src=\"/assets/js/maze.js\" data-appoptions=\"{&quot;readonly&quot;:true,&quot;embedded&quot;:true,&quot;locale&quot;:&quot;en_us&quot;,&quot;baseUrl&quot;:&quot;/blockly/&quot;,&quot;blocks&quot;:&quot;\\u003cxml\\u003e\\u003c/xml\\u003e&quot;,&quot;dialog&quot;:{},&quot;nonGlobal&quot;:true}\"></script>"\
+      "<xml><xml><block type=\"embedded_block\"/></xml></xml>" \
+      "<div id=\"codeWorkspace\" style=\"display: none\"></div>" \
+      "<style>.blocklySvg { background: none; }</style>" \
+      "<script src=\"/assets/js/blockly.js\"></script>" \
+      "<script src=\"/assets/js/en_us/blockly_locale.js\"></script>" \
+      "<script src=\"/assets/js/common.js\"></script>" \
+      "<script src=\"/assets/js/en_us/maze_locale.js\"></script>" \
+      "<script src=\"/assets/js/maze.js\" data-appoptions=\"{&quot;readonly&quot;:true,&quot;embedded&quot;:true,&quot;locale&quot;:&quot;en_us&quot;,&quot;baseUrl&quot;:&quot;/blockly/&quot;,&quot;blocks&quot;:&quot;\\u003cxml\\u003e\\u003c/xml\\u003e&quot;,&quot;dialog&quot;:{},&quot;nonGlobal&quot;:true}\"></script>" \
       "<script src=\"/assets/js/embedBlocks.js\"></script>"
 
     unstub(:request)
@@ -1094,8 +1095,8 @@ class LevelsHelperTest < ActionView::TestCase
       name: "embedded iframe test"
 
     assert_equal render_multi_or_match_content("embedded iframe test.level"),
-      "<div class=\"aspect-ratio\">"\
-      "<iframe src=\"/levels/#{test_level.id}/embed_level\" width=\"100%\" scrolling=\"no\" seamless=\"seamless\" style=\"border: none;\"></iframe>"\
+      "<div class=\"aspect-ratio\">" \
+      "<iframe src=\"/levels/#{test_level.id}/embed_level\" width=\"100%\" scrolling=\"no\" seamless=\"seamless\" style=\"border: none;\"></iframe>" \
       "</div>"
   end
 

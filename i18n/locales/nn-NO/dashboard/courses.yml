@@ -36,19 +36,19 @@ nn:
         csd-2023:
           title: Oppdagingar i datavitskap
     resources:
-      curriculum/csd/2020:
-        name: Læreplan
-      teacher_forum/csd/2020:
-        name: Lærarforum
       curriculum/csd/2017:
         name: Læreplan
       teacher_forum_6/csd/2017:
+        name: Lærarforum
+      curriculum/csd/2018:
+        name: Læreplan
+      teacher_forum_6/csd/2018:
         name: Lærarforum
       curriculum/csd/2019:
         name: Læreplan
       teacher_forum/csd/2019:
         name: Lærarforum
-      curriculum/csd/2018:
+      curriculum/csd/2020:
         name: Læreplan
-      teacher_forum_6/csd/2018:
+      teacher_forum/csd/2020:
         name: Lærarforum

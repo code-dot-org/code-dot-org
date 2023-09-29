@@ -18,6 +18,7 @@
         "es-MX",
         "fr-FR",
         "hi-IN",
+        "it-IT",
         "kn-IN",
         "mr-IN",
         "ms-MY",
@@ -34,7 +35,7 @@
     },
     "new_name": null,
     "family_name": "coursed",
-    "serialized_at": "2022-09-09 16:37:14 UTC",
+    "serialized_at": "2023-08-31 17:23:02 UTC",
     "published_state": "stable",
     "instruction_type": "teacher_led",
     "instructor_audience": "teacher",
@@ -11243,5 +11244,14 @@
         "opportunity_standard.shortcode": "3-5-ETS1-1"
       }
     }
+  ],
+  "rubrics": [
+
+  ],
+  "learning_goals": [
+
+  ],
+  "learning_goal_evidence_levels": [
+
   ]
 }

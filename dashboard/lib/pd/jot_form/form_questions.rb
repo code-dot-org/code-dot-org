@@ -88,7 +88,7 @@ module Pd
       # @return [Hash] {question_name => answer_data}, sorted by appearance order in the form
       # @see Question#process_answers
       def process_answers(answers_data, show_hidden_questions: false)
-        questions_with_form_data = answers_data.map do |question_id, answer_data|
+        questions_with_form_data = answers_data.filter_map do |question_id, answer_data|
           question = get_question_by_id_or_name(question_id)
           raise "Unrecognized question id #{question_id}" unless question
 
@@ -104,7 +104,7 @@ module Pd
             question: question,
             form_data: form_data
           }
-        end.compact
+        end
 
         questions_with_form_data.
           sort_by {|d| d[:question].order}.

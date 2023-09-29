@@ -1,6 +1,7 @@
 // Pop-up modal for downloading all Foorm submissions for a single form as a csv.
 import React from 'react';
 import PropTypes from 'prop-types';
+/* eslint-disable no-restricted-imports */
 import {
   Modal,
   Button,
@@ -9,6 +10,7 @@ import {
   Col,
   Row,
 } from 'react-bootstrap';
+/* eslint-enable no-restricted-imports */
 import 'react-select/dist/react-select.css';
 import Select from 'react-select/lib/Select';
 import ReactTooltip from 'react-tooltip';

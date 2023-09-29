@@ -1,5 +1,10 @@
 <Gamelab>
   <config><![CDATA[{
+  "published": true,
+  "game_id": 50,
+  "created_at": "2022-09-19T22:54:48.000Z",
+  "level_num": "custom",
+  "user_id": 155,
   "properties": {
     "skin": "gamelab",
     "edit_code": true,
@@ -95,18 +100,11 @@
       "/courses/csd-2022/guides/shapes-and-parameters",
       "/courses/csd-2022/guides/problem-solving-process-programming"
     ],
-    "preload_asset_list": null,
-    "encrypted_examples": [
-
-    ]
+    "encrypted_examples": "akXcJSPWnnd1xJfaELZdkyG7qxdzfl5bzE7xiYh0bzBKwpbdPjfnBjTN/xQy\nStmC05dXyEhJlZmzx1LPD3Pr6w==\n",
+    "preload_asset_list": null
   },
-  "game_id": 50,
-  "published": true,
-  "created_at": "2022-09-19T22:54:48.000Z",
-  "level_num": "custom",
-  "user_id": 155,
   "notes": "",
-  "audit_log": "[{\"changed_at\":\"2022-09-19T22:54:48.876+00:00\",\"changed\":[\"cloned from \\\"CSD U3 Sprites scene challenge_2022\\\"\"],\"cloned_from\":\"CSD U3 Sprites scene challenge_2022\"},{\"changed_at\":\"2023-01-11 17:30:06 +0000\",\"changed\":[\"code_functions\",\"long_instructions\",\"preload_asset_list\",\"contained_level_names\"],\"changed_by_id\":18602,\"changed_by_email\":\"angelina+levelbuilder@code.org\"},{\"changed_at\":\"2023-03-06 23:55:41 +0000\",\"changed\":[\"code_functions\",\"preload_asset_list\",\"contained_level_names\"],\"changed_by_id\":18602,\"changed_by_email\":\"angelina+levelbuilder@code.org\"},{\"changed_at\":\"2023-03-09 17:43:32 +0000\",\"changed\":[\"code_functions\",\"reference_links\",\"preload_asset_list\",\"contained_level_names\"],\"changed_by_id\":18602,\"changed_by_email\":\"angelina+levelbuilder@code.org\"}]"
+  "audit_log": "[{\"changed_at\":\"2022-09-19T22:54:48.876+00:00\",\"changed\":[\"cloned from \\\"CSD U3 Sprites scene challenge_2022\\\"\"],\"cloned_from\":\"CSD U3 Sprites scene challenge_2022\"},{\"changed_at\":\"2023-01-11 17:30:06 +0000\",\"changed\":[\"code_functions\",\"long_instructions\",\"preload_asset_list\",\"contained_level_names\"],\"changed_by_id\":18602,\"changed_by_email\":\"angelina+levelbuilder@code.org\"},{\"changed_at\":\"2023-03-06 23:55:41 +0000\",\"changed\":[\"code_functions\",\"preload_asset_list\",\"contained_level_names\"],\"changed_by_id\":18602,\"changed_by_email\":\"angelina+levelbuilder@code.org\"},{\"changed_at\":\"2023-03-09 17:43:32 +0000\",\"changed\":[\"code_functions\",\"reference_links\",\"preload_asset_list\",\"contained_level_names\"],\"changed_by_id\":18602,\"changed_by_email\":\"angelina+levelbuilder@code.org\"},{\"changed_at\":\"2023-07-10 02:53:40 +0000\",\"changed\":[\"code_functions\",\"preload_asset_list\",\"contained_level_names\"],\"changed_by_id\":18602,\"changed_by_email\":\"angelina+levelbuilder@code.org\"},{\"changed_at\":\"2023-07-31 21:02:38 +0000\",\"changed\":[\"code_functions\",\"encrypted_examples\",\"preload_asset_list\",\"contained_level_names\"],\"changed_by_id\":18602,\"changed_by_email\":\"angelina+levelbuilder@code.org\"}]"
 }]]></config>
   <blocks/>
 </Gamelab>

@@ -60,3 +60,16 @@ return true;
 MARKDOWN
 
 allow_multiple_attempts true
+teacher_markdown <<MARKDOWN
+**Option I**
+
+This option iterates over the `nums` array and checks if each element is greater than the next element. If it finds any element that is not in increasing order, it immediately returns `false`. If the loop completes without returning `false`, it means that all elements are in increasing order, so it returns `true`. This option correctly determines if the array is arranged in increasing order.
+
+**Option II**
+
+This option iterates over the `nums` array and checks if each element is less than the next element. If it finds any element that is in increasing order, it immediately returns `true`. If the loop completes without returning `true`, it means that the array is not arranged in increasing order, so it returns `false`. This option incorrectly determines if the array is arranged in increasing order.
+
+**Option III**
+
+This option also iterates over the `nums` array, but it has a logical flaw. In the first iteration, it checks if the first element is greater than or equal to the next element. If it is, it returns `false`, indicating that the array is not arranged in increasing order. If the first element is smaller than the next element, it returns `true` without checking the remaining elements. This approach is incorrect because it only considers the ordering of the first two elements and does not correctly evaluate the entire array.
+MARKDOWN

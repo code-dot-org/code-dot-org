@@ -41,7 +41,7 @@ export default class NoSectionCodeDialog extends React.Component {
           <hr />
           <Button
             onClick={this.props.handleClose}
-            color={Button.ButtonColor.orange}
+            color={Button.ButtonColor.brandSecondaryDefault}
             text={i18n.ok()}
             style={styles.buttonStyle}
           />

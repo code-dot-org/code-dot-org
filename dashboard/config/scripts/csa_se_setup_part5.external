@@ -1,0 +1,38 @@
+name 'csa-se-setup-part5'
+title 'Step 5: Set Up GitHub Copilot'
+
+markdown <<MARKDOWN
+# Step 5: Set Up GitHub Copilot
+
+## Requesting Access for GitHub Copilot Chat
+
+⚠️ **Do this step** ***after*** **you have received confirmation that you have verified student access on GitHub.**
+
+1. Navigate to [**github.com/github-copilot/chat_waitlist_signup**](https://github.com/github-copilot/chat_waitlist_signup).
+
+2. If you are not already logged in to GitHub, click the green **Sign in to join the waitlist** button.
+
+![](https://images.code.org/204c86d3c026a1a6b9d0ec8353576060-image-1691773027887.png)
+
+<div style="background-color: #E0D1EC; border: 1px solid #9660bf; border-radius: 5px; font-size: 1.1em; padding: 15px; margin-bottom: 20px; margin-left: auto; margin-right: auto; width: 90%;">
+If you see the following message about needing to have a GitHub Copilot license, you do not yet have verified student access on GitHub. Try again after you have received confirmation that you have verified student access.
+<br><br>
+<img src="https://images.code.org/fd0bef19ee5ca84a58e51277c57912bf-image-1691773092332.png" />
+</div>
+
+3. Select **Visual Studio Code**, then click the green **Join the waitlist** button.
+
+![](https://images.code.org/c623a4499f2200bb9df8d5c3c06c7b23-image-1691773185899.png)
+
+You should receive access to GitHub Copilot Chat within a few days, although it can take up to a week. It is important to complete this step as soon as possible to ensure you have access.
+
+## Adding GitHub Copilot to VS Code
+
+1. Click the **Extensions** icon in VS Code.
+
+2. In the search bar, type **copilot**.
+
+3. Install the **GitHub Copilot** and **GitHub Copilot Chat** extensions.
+
+![](https://images.code.org/2e18a5d4f5a868d1ca86cfebb441ac0b-image-1691773266097.png)
+MARKDOWN

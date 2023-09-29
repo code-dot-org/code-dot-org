@@ -7,7 +7,7 @@ wrong 'Finds and returns the brightest `Pixel` object in the given array'
 right 'Changes all of the `Pixel` objects in the given array to the color white'
 wrong 'This method doesn\’t do anything because you cannot modify an object with an enhanced `for` loop.'
 
-allow_multiple_attempts nil
+allow_multiple_attempts true
 
 markdown <<MARKDOWN
 Consider the method below.

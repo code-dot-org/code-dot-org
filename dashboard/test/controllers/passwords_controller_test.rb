@@ -41,8 +41,8 @@ class PasswordsControllerTest < ActionController::TestCase
 
     assert_redirected_to '/users/password/new'
 
-    assert flash[:notice].include? 'Reset password link sent to user. You may also send this link directly:'
-    assert flash[:notice].include? 'http://test-studio.code.org/users/password/edit?reset_password_token='
+    assert_includes(flash[:notice], 'Reset password link sent to user. You may also send this link directly:')
+    assert_includes(flash[:notice], 'http://test-studio.code.org/users/password/edit?reset_password_token=')
   end
 
   test "create with multiple associated accounts includes link for admin" do
@@ -55,9 +55,9 @@ class PasswordsControllerTest < ActionController::TestCase
 
     assert_redirected_to '/users/password/new'
 
-    assert flash[:notice].include? 'Reset password link sent to user. You may also send the link directly:'
-    assert flash[:notice].include? "#{user1.username}: <a href='http://test-studio.code.org/users/password/edit?reset_password_token="
-    assert flash[:notice].include? "#{user2.username}: <a href='http://test-studio.code.org/users/password/edit?reset_password_token="
+    assert_includes(flash[:notice], 'Reset password link sent to user. You may also send the link directly:')
+    assert_includes(flash[:notice], "#{user1.username}: <a href='http://test-studio.code.org/users/password/edit?reset_password_token=")
+    assert_includes(flash[:notice], "#{user2.username}: <a href='http://test-studio.code.org/users/password/edit?reset_password_token=")
   end
 
   test "create with valid email that doesn't exist says it doesn't work" do

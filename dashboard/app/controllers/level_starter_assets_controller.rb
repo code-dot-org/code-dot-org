@@ -10,10 +10,10 @@ class LevelStarterAssetsController < ApplicationController
 
   # GET /level_starter_assets/:level_name
   def show
-    starter_assets = (@level&.project_template_level&.starter_assets || @level.starter_assets || []).map do |friendly_name, uuid_name|
+    starter_assets = (@level&.project_template_level&.starter_assets || @level.starter_assets || []).filter_map do |friendly_name, uuid_name|
       file_obj = get_object(uuid_name)
       summarize(file_obj, friendly_name, uuid_name)
-    end.compact
+    end
 
     render json: {starter_assets: starter_assets}
   end
@@ -76,7 +76,7 @@ class LevelStarterAssetsController < ApplicationController
   #
 
   def summarize(file_obj, friendly_name, uuid_name)
-    if file_obj.nil? || file_obj.size.zero?
+    if file_obj.blank?
       nil
     else
       {

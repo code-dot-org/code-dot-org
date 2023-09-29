@@ -21,3 +21,5 @@ If we create a truth table for this expression:
 
 We find that none of the states are true about the resulting truth values.
 MARKDOWN
+
+allow_multiple_attempts true

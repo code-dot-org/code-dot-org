@@ -12,12 +12,13 @@
       "project_sharing": true,
       "show_calendar": true,
       "student_detail_progress_view": true,
+      "tts": true,
       "version_year": "2023",
       "weekly_instructional_minutes": 225
     },
     "new_name": null,
     "family_name": null,
-    "serialized_at": "2023-04-20 20:31:51 UTC",
+    "serialized_at": "2023-08-14 22:19:09 UTC",
     "published_state": null,
     "instruction_type": null,
     "instructor_audience": null,
@@ -2169,7 +2170,7 @@
       "key": "f203bf80-a5b0-4f3a-a127-21388aebf211",
       "position": 3,
       "properties": {
-        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Video:** Show students the [r binary_and_data/csd5/2023] video in the slides.\n",
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Video:** Show students the [r binary_and_data/csd/2023] video in the slides.\n",
         "tips": [
           {
             "type": "teachingTip",
@@ -2905,7 +2906,7 @@
       "key": "5730857e-7a0a-48df-a302-1fe8bb5e5b9e",
       "position": 4,
       "properties": {
-        "description": "**Group:** Put students into groups of 3-4\n\n**Distribute:** Distribute copies of [r problem_solving_with_data_1/csd5/2023], one per student.\n\n\n\n#### Solving a Data Problem"
+        "description": "**Group:** Put students into groups of 3-4\n\n**Distribute:** Distribute copies of [r problem_solving_with_data_1/csd/2023], one per student.\n\n\n\n#### Solving a Data Problem"
       },
       "seeding_key": {
         "activity_section.key": "5730857e-7a0a-48df-a302-1fe8bb5e5b9e",
@@ -3116,7 +3117,7 @@
       "key": "b9095172-593b-4dcc-ad3b-f06a872d3be2",
       "position": 1,
       "properties": {
-        "description": "**Group:** Put students into pairs and give each pair a copy of [r structuring_data_2021/csd5/2023].\n\n\n\n#### ***Structuring Data Activity Guide***\n\nRead the instructions together as a class, ensuring that students understand the problem that they are trying to solve (choosing a pizza topping for the pizza party).\n\n"
+        "description": "**Group:** Put students into pairs and give each pair a copy of [r structuring_data_2021/csd/2023].\n\n\n\n#### ***Structuring Data Activity Guide***\n\nRead the instructions together as a class, ensuring that students understand the problem that they are trying to solve (choosing a pizza topping for the pizza party).\n\n"
       },
       "seeding_key": {
         "activity_section.key": "b9095172-593b-4dcc-ad3b-f06a872d3be2",
@@ -3746,7 +3747,7 @@
       "key": "bd7c80b3-b9d6-491b-ac42-b2e8c3217d16",
       "position": 1,
       "properties": {
-        "description": "**Distribute:** Copies of [r automating_data_decisions_1/csd5/2023] and [r automating_data_decisions_2/csd5/2023] to each student.\n\n\n\n#### ***Automating Data Decisions Activity Guide***\n\n"
+        "description": "**Distribute:** Copies of [r automating_data_decisions_1/csd/2023] and [r automating_data_decisions_2/csd/2023] to each student.\n\n\n\n#### ***Automating Data Decisions Activity Guide***\n\n"
       },
       "seeding_key": {
         "activity_section.key": "bd7c80b3-b9d6-491b-ac42-b2e8c3217d16",
@@ -3940,7 +3941,7 @@
       "key": "91cbbd3d-4b95-4f21-a652-00c8ef3e52ec",
       "position": 4,
       "properties": {
-        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Video:** Show students the [r netflix_and_data/csd5/2023] video in the slides.\n",
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Video:** Show students the [r netflix_and_data/csd/2023] video in the slides.\n",
         "progression_name": "Video: Netflix and Data",
         "tips": [
           {
@@ -3969,7 +3970,7 @@
       "key": "37ca2725-b3b0-49a9-a860-83f4d2d3bc29",
       "position": 6,
       "properties": {
-        "description": "**Routz:** Ask students to move on to the Routz problem.  Again, they should take a few minutes to work individually or in pairs on the first two problems.  \n\n**Share Out:** Allow students to quickly share out some ideas, then introduce the Waze video.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Video:** Show students the [r waze_and_data/csd5/2023] video in the slides.\n",
+        "description": "**Routz:** Ask students to move on to the Routz problem.  Again, they should take a few minutes to work individually or in pairs on the first two problems.  \n\n**Share Out:** Allow students to quickly share out some ideas, then introduce the Waze video.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Video:** Show students the [r waze_and_data/csd/2023] video in the slides.\n",
         "name": "Routz\r",
         "progression_name": "Video: Waze and Data"
       },
@@ -3993,7 +3994,7 @@
       "key": "d2b336e0-89eb-40ca-acb7-b31758c7794b",
       "position": 8,
       "properties": {
-        "description": "**Nyle:** Ask students to move on to the Nyle problem.  Again, they should take a few minutes to work individually or in pairs on the first two problems.  \n\n**Share Out:** Allow students to quickly share out some ideas, then introduce the Amazon video.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Video:** Show students the [r amazon_and_data/csd5/2023] video in the slides.\n",
+        "description": "**Nyle:** Ask students to move on to the Nyle problem.  Again, they should take a few minutes to work individually or in pairs on the first two problems.  \n\n**Share Out:** Allow students to quickly share out some ideas, then introduce the Amazon video.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Video:** Show students the [r amazon_and_data/csd/2023] video in the slides.\n",
         "name": "Nyle\r",
         "progression_name": "Video: Amazon and Data"
       },
@@ -4128,7 +4129,7 @@
       "key": "5f34a7ba-cca4-44ac-a233-5445f00c8d37",
       "position": 1,
       "properties": {
-        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Video:** Show students the [r video_machine_learning/csd5/2023] video in the slides.\n",
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Video:** Show students the [r video_machine_learning/csd/2023] video in the slides.\n",
         "progression_name": "Video: What is Machine Learning?",
         "tips": [
           {
@@ -4182,7 +4183,7 @@
       "key": "442bf598-494c-417c-a21d-c9191886f481",
       "position": 4,
       "properties": {
-        "description": "**Discuss:** How well did A.I. do? How do you think it decided what to include in the ocean?\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Video:** Show students the [r video_training_data_and_bias/csd5/2023] video in the slides.\n",
+        "description": "**Discuss:** How well did A.I. do? How do you think it decided what to include in the ocean?\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Video:** Show students the [r video_training_data_and_bias/csd/2023] video in the slides.\n",
         "progression_name": "Video: Training Data and Bias"
       },
       "seeding_key": {
@@ -4269,7 +4270,7 @@
       "key": "418a851d-7b88-4a3b-ac45-a981407461b9",
       "position": 11,
       "properties": {
-        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Video:** Show students the [r video_impact_on_society/csd5/2023] video in the slides which recaps the concepts discussed today.\n",
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Video:** Show students the [r video_impact_on_society/csd/2023] video in the slides which recaps the concepts discussed today.\n",
         "progression_name": "Video: Impact on Society"
       },
       "seeding_key": {
@@ -6074,7 +6075,7 @@
     },
     {
       "name": "Project Guide Exemplar",
-      "url": "https://docs.google.com/document/d/1D-Wr_Q9st_DsT1MF92Ixm8RFnWwI9tYmQN2rUXpd8I8/edit",
+      "url": "https://docs.google.com/document/d/1m8a9nnCGCriSvzWUr5Bh7Siod2iu2FdFQtMEz4TONuc/edit?usp=sharing",
       "key": "project_guide_exemplar",
       "properties": {
         "audience": "Verified Teacher",
@@ -6209,7 +6210,7 @@
     },
     {
       "name": "Sample Marked Rubrics",
-      "url": "https://docs.google.com/document/d/1fbImuYWBio4mkmFMWWGBolyEWihxFPlvtxgxGhRokIc/edit",
+      "url": "https://docs.google.com/document/d/17C1pGuIk1FL84FjMvUIisYa6x_U8aKREcljfqnEm21c/edit?usp=sharing",
       "key": "sample_marked_rubrics",
       "properties": {
         "audience": "Verified Teacher",
@@ -6221,8 +6222,8 @@
       }
     },
     {
-      "name": "Secret Messages 2021",
-      "url": "https://docs.google.com/document/d/1McCQtY7xWPnKvemkAf0bLxxxyJVJzQomWv4wcjInjXc/view",
+      "name": "Secret Messages",
+      "url": "https://docs.google.com/document/d/1j1IKIzIf3R3sck0hgW740SGbQmWTFdNKMrwPK0dBqSA/edit?usp=sharing",
       "key": "secret_messages_2021",
       "properties": {
         "audience": "Student",
@@ -7533,6 +7534,15 @@
     }
   ],
   "lessons_opportunity_standards": [
+
+  ],
+  "rubrics": [
+
+  ],
+  "learning_goals": [
+
+  ],
+  "learning_goal_evidence_levels": [
 
   ]
 }

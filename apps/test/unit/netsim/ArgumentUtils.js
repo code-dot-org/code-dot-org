@@ -68,7 +68,7 @@ describe('ArgumentUtils', function () {
       var originalOptions = {a: 1, b: 2, c: 3};
       var options = ArgumentUtils.extendOptionsObject(originalOptions);
       for (var key in originalOptions) {
-        assert(options.hasOwnProperty(key));
+        assert(Object.prototype.hasOwnProperty.call(options, key));
         assert.equal(options[key], originalOptions[key]);
       }
     });

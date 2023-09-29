@@ -1,5 +1,5 @@
 ---
-title: Hour of Code Press Release for Elected Officials
+title: ข่าวประชาสัมพันธ์ชั่วโมงประมวลกฎหมายสำหรับข้าราชการที่ได้รับการเลือกตั้ง
 ---
 
 {{ signup_button }}

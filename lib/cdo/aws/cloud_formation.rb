@@ -105,12 +105,12 @@ module AWS
         loop do
           sleep 1
           change_set = cfn.describe_change_set(change_set_name: change_set_id)
-          break unless %w(CREATE_PENDING CREATE_IN_PROGRESS).include?(change_set.status)
+          break unless change_set.status == "CREATE_PENDING" || change_set.status == "CREATE_IN_PROGRESS"
         end
         change_set.changes.each do |change|
           c = change.resource_change
           str = "#{c.action} #{c.logical_resource_id} [#{c.resource_type}] #{c.scope.join(', ')}"
-          str += " Replacement: #{c.replacement}" if %w(True Conditional).include?(c.replacement)
+          str += " Replacement: #{c.replacement}" if c.replacement == "True" || c.replacement == "Conditional"
           str += " (#{c.details.map {|d| d.target.name}.join(', ')})" if c.details.any?
           log.info str unless options[:quiet]
         end
@@ -179,7 +179,7 @@ module AWS
       params = YAML.load(template)['Parameters']
       # rubocop:enable Security/YAMLLoad
       return [] unless params
-      params.map do |key, properties|
+      params.filter_map do |key, properties|
         value = CDO[key.underscore] || ENV[key.underscore.upcase]
         param = {parameter_key: key}
         if value
@@ -196,7 +196,7 @@ module AWS
             HighLine.new.ask("Enter value for Parameter #{key}:", String)
         end
         param
-      end.compact
+      end
     end
 
     private def base_options
@@ -301,7 +301,10 @@ module AWS
       begin
         cfn.wait_until("stack_#{action}_complete".to_sym, stack_name: @stack_id) do |w|
           w.delay = 5 # seconds
-          w.max_attempts = 1.5.hours / w.delay
+          # TODO: lower this back to 1.5 hours once we're no longer building
+          # Node.js from source as part of adhoc creation, which right now is
+          # making this often take longer than that.
+          w.max_attempts = 2.5.hours / w.delay
           w.before_wait do
             yield
             print '.' unless options[:quiet]

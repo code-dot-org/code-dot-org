@@ -114,7 +114,7 @@ Default: https://google.github.io/styleguide/javascriptguide.xml
   function test() { ... }
   while (n < 1) { ... }
   ```
-  
+
 * <a name="js-object-curly-spacing"></a>
   Unlike Google's JavaScript styleguide, we don't require padding spaces inside object literals.
   <sup>[[link](#js-object-curly-spacing)]</sup>
@@ -160,7 +160,7 @@ Default: https://google.github.io/styleguide/javascriptguide.xml
   myObject.doSomething()
       .doSomethingElse();
   ```
-  
+
 * <a name="js-module-exports"></a>
   We have a few different patterns for how we export things in our JS files currently. There's not necessarily
   an expectation that we'll go fix these all, but new code should try to follow these patterns.
@@ -170,25 +170,25 @@ Default: https://google.github.io/styleguide/javascriptguide.xml
   module.exports.foo = function foo() { }
   // elsewhere
   foo();
-  
+
   // okay, unless you're calling this method locally
   module.exports.foo = function () {
   }
   // elsewhere - bad
   module.exports.foo();
-  
+
   // good
   var Foo = module.exports = function () {
   };
   Foo.prototype.bar = function () {
   }
-  
+
   // bad
   module.exports = {
     foo: function () {
     }
   }
-  
+
   // bad
   function foo() {
   }
@@ -271,7 +271,7 @@ them on the same line to avoid extra spaces.
 <Component
   prop1="prop1"
   prop2="prop2">textContent</Component>
-    
+
 // good - fine to put content on same line if the tag opens & closes on that line
 <Component>textContent</Component>
 ```
@@ -390,9 +390,11 @@ On the frontend, some lint and style rules are enforced by [Stylelint](https://s
 
 Some key points:
 - Use SCSS modules over CSS-in-JS. The module file takes the name "my-component.module.scss" and lives in the same directory as the component.
-- Use kebab-case (not camelCase nor snake_case) for separating words in IDs, classes, mixins and filenames. 
-- Use `px` for small values (e.g. less than 4 px) and specific values (e.g. 87px). Use `em` for other values.
-  - To convert between `px` and `em` for our site, use a [Pixel to Em converter](https://www.w3schools.com/tags/ref_pxtoemconversion.asp) with 16 as the default pixel size.
+- Use kebab-case (not camelCase nor snake_case) for separating words in IDs, classes, mixins and filenames.
+- Use `px` for small values (e.g. less than 4 px) and specific values (e.g. 87px).
+- Use `rem` or `em` for other values like `font-size`, `margin`, and `padding`.
+  - Default to `rem`, but to quote [this article](https://www.digitalocean.com/community/tutorials/css-rem-vs-em-units) "use `em` units in places where the influence of nearby parent elements would make sense".
+  - To convert between `px` and `em` (or `rem`) for our site, use a [Pixel to Em converter](https://www.w3schools.com/tags/ref_pxtoemconversion.asp) with 16 as the default pixel size.
 - Avoid inline styles in markup.
 - Use names that are as short as possible but as long as necessary.
 - Use SCSS helpers for vendor prefixing.

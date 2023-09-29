@@ -116,11 +116,9 @@ module Pd
         form_ids.each do |form_id|
           questions = get_questions(form_id, force_sync: true)
           questions_details = use_names_for_question_ids? ? JSON.parse(questions.questions) : nil
-          if questions_details
-            # Make sure that there is a unique, non-nil name for each question.
-            if questions_details.pluck("name").compact.uniq.size != questions_details.size
-              raise "Not all questions for form #{form_id} have unique names."
-            end
+          # Make sure that there is a unique, non-nil name for each question.
+          if questions_details && (questions_details.pluck("name").compact.uniq.size != questions_details.size)
+            raise "Not all questions for form #{form_id} have unique names."
           end
 
           last_known_submission_id = questions.last_submission_id
@@ -179,7 +177,7 @@ module Pd
           end
         end
 
-        CDO.log.info("#{imported} JotForm submissions imported in #{batches} #{'batch'.pluralize(batches)}. "\
+        CDO.log.info("#{imported} JotForm submissions imported in #{batches} #{'batch'.pluralize(batches)}. " \
           "All sync results: #{all_sync_results.inspect}"
         )
 
@@ -204,7 +202,7 @@ module Pd
       #   attempt to use the name field from each question rather than its numerical ID when
       #   storing answers.
       # @return [symbol] one of the PROCESS_SUBMISSION_RESULT states
-      def process_submission(submission, questions_details=nil)
+      def process_submission(submission, questions_details = nil)
         # There should be no duplicates, but just in case handle them gracefully as an upsert.
         find_or_initialize_by(submission.slice(:form_id, :submission_id)).tap do |model|
           dest_answers = model.process_answers_from_submission(submission[:answers], questions_details)

@@ -1,9 +1,9 @@
 {
   "absolute": "ನಿಖರ",
+  "agentDiamondPathCongrats": "ಅಭಿನಂದನೆಗಳು, ನೀವು ವಜ್ರದ ಮಾರ್ಗವನ್ನು ಕಂಡುಕೊಂಡಿದ್ದೀರಿ! ನೀವು ಇಲ್ಲಿಯವರೆಗೆ  {count, plural, one {1 diamond} other {# diamonds}} ಸಂಗ್ರಹಿಸಿರುವಿರಿ!",
   "agentGenericFailureMessage": "ಕೋಡ್ ಮಾಡುತ್ತಿರಿ! ಸಹಾಯಕ್ಕಾಗಿ ದಿ ಏಜೆಂಟ್ ಬಳಸಲು ನೆನಪಿಡಿ.",
   "agentTooFewBlocksFailureMessage": "ಏಜೆಂಟ್ ಅನ್ನು ಸರಿಯಾದ ಸ್ಥಳಕ್ಕೆ ಪಡೆಯಲು ಒಂದು ಸಮಯದಲ್ಲಿ ಕೇವಲ ಒಂದು ಬ್ಲಾಕ್ ಅನ್ನು ಸೇರಿಸಲು ಪ್ರಯತ್ನಿಸಿ.",
   "at": "ಇಲ್ಲಿ",
-  "agentDiamondPathCongrats": "ಅಭಿನಂದನೆಗಳು, ನೀವು ವಜ್ರದ ಮಾರ್ಗವನ್ನು ಕಂಡುಕೊಂಡಿದ್ದೀರಿ! ನೀವು ಇಲ್ಲಿಯವರೆಗೆ  {count, plural, one {1 diamond} other {# diamonds}} ಸಂಗ್ರಹಿಸಿರುವಿರಿ!",
   "blockActionAdd": "ಸೇರಿಸಿ",
   "blockActionAttack": "ದಾಳಿ",
   "blockActionClone": "ಕ್ಲೋನ್ ಬ್ಲಾಕ್‌ಗಳು",

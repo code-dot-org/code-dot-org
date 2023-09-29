@@ -1,38 +1,34 @@
 ---
-title: Teacher Resources - MINECRAFT
-nav: hoc_teacher_resources_nav
-video_player: true
-theme: responsive
-style_min: true
+title: Ресурси для вчителя - MINECRAFT
 ---
 
-# MINECRAFT Hour of Code
+# Година коду MINECRAFT
 
 {{ hoc_mc_video }}
 
 [col-50]
 
-## Teacher Resources
+## Ресурси для вчителів
 
-### Lesson Plans:
+### Плани уроків:
 
-- [MINECRAFT Lesson Plan](/files/minecraft-lp.pdf)
-- [Answer Sheet and Teacher Tips for Minecraft Hour of Code Voyage Aquatic](/files/minecraft-aquatic-answer-sheet.pdf)
-- [Answer Sheet and Teacher Tips for Minecraft Hour of Code Adventurer](/files/minecraft-adventurer-answer-sheet.pdf)
-- [Answer Sheet and Teacher Tips for Minecraft Hour of Code Designer](/files/minecraft-designer-answer-sheet.pdf)
-- [Extra Challenges](https://education.minecraft.net/wp-content/uploads/Hour-of-Code-Daily-Puzzles.pdf)
+- [План уроку MINECRAFT](/files/minecraft-lp.pdf)
+- [Лист відповідей та поради для вчителя для Години коду Minecraft "Підводна подорож"](/files/minecraft-aquatic-answer-sheet.pdf)
+- [Лист відповідей та поради для вчителя для Години коду Minecraft "Пригоди"](/files/minecraft-adventurer-answer-sheet.pdf)
+- [Лист відповідей та поради для вчителя для Години коду Minecraft "Розробник"](/files/minecraft-designer-answer-sheet.pdf)
+- [Додаткові завдання](https://education.minecraft.net/wp-content/uploads/Hour-of-Code-Daily-Puzzles.pdf)
 
-### Extension Activities:
+### Завдання для поглиблення знань:
 
-- [Beyond an Hour of Code](http://code.org/learn/beyond)
-- [Computer Science Fundamentals: Course 2](https://studio.code.org/s/course2)
+- [Поза Годиною коду](http://code.org/learn/beyond)
+- [Computer Science Fundamentals: Курс 2](https://studio.code.org/s/course2)
 
-### Other Teacher Resources:
+### Інші ресурси для вчителів:
 
-- [Hour of Code: How-To Guide for Educators](https://hourofcode.com/how-to)
-- [Best Practices from Successful Educators](http://www.slideshare.net/TeachCode/hour-of-code-best-practices-for-successful-educators-51273466)
-- Live Event: [An Educator's Guide to the Hour of Code](https://www.eventbrite.com/e/an-educators-guide-to-the-hour-of-code-tickets-17987415845)
-- [Resources to help you plan and lead an event](https://docs.com/hourofcode2016)
+- [Година коду: Посібник для викладачів](https://hourofcode.com/how-to)
+- [Найкращі практики від успішних викладачів](http://www.slideshare.net/TeachCode/hour-of-code-best-practices-for-successful-educators-51273466)
+- Live Event: [Посібник для викладача до Години коду](https://www.eventbrite.com/e/an-educators-guide-to-the-hour-of-code-tickets-17987415845)
+- [Ресурси, які допоможуть вам спланувати та провести подію](https://docs.com/hourofcode2016)
 
 [/col-50]
 
@@ -40,12 +36,12 @@ style_min: true
 
 ## Огляд
 
-Use blocks of code to take Steve or Alex on an adventure through this Minecraft world.
+Використайте блоки коду, щоб допомогти Стіву чи Алекс в їхніх пригодах у світі Minecraft.
 
-**Recommended Age Range:** 6+
+**Рекомендована вікова категорія:** 6+
 
-**Technology Requirements:** Modern browsers + tablets
+**Технологічні вимоги:** Сучасні браузери + планшети
 
-<a href="/mc"><button>Try the tutorial</button></a>
+<a href="/mc"><button>Спробуйте цей підручник</button></a>
 
 [/col-50]

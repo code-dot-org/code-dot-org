@@ -24,3 +24,5 @@ Assume that ints x and y have been declared and initialized with int values. Con
 Which of the following is equivalent to the expression shown above?
 
 MARKDOWN
+
+allow_multiple_attempts true

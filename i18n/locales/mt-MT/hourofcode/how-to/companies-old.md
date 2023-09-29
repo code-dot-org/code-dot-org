@@ -1,5 +1,5 @@
 ---
-title: How to host an Hour of Code - Companies
+title: Kif tospita Siegħa ta 'Kodiċi - Kumpaniji
 ---
 
 {{ signup_button }}

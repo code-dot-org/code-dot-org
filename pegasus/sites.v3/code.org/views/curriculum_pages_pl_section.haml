@@ -1,0 +1,20 @@
+%h2=hoc_s(:heading_professional_learning)
+%p=hoc_s(:professional_learning_section_desc)
+.action-block__wrapper.action-block__wrapper--two-col
+  .action-block.action-block--one-col.flex-space-between
+    .content-wrapper
+      %h3=hoc_s(:teach_page_pl_offerings_list_heading_workshops_facilitator_led)
+      %img{src: "/images/pl-facilitator-led-workshops.png", alt: ""}
+      %p
+        #{facilitator_desc}
+    .content-footer
+      %a.link-button{href: apply_url}
+        =hoc_s(:call_to_action_apply_for_pl)
+  .action-block.action-block--one-col.flex-space-between
+    .content-wrapper
+      %h3=hoc_s(:teach_page_pl_offerings_list_heading_self_paced)
+      %img{src: "/images/pl-self-paced-modules.png", alt: ""}
+      %p=hoc_s(:self_paced_pl_modules_desc)
+    .content-footer
+      %a.link-button{href: modules_url}
+        =hoc_s(:call_to_action_explore_modules)

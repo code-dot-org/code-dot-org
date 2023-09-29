@@ -1,5 +1,6 @@
 <Applab>
   <config><![CDATA[{
+  "published": true,
   "game_id": 41,
   "created_at": "2022-09-21T13:10:51.000Z",
   "level_num": "custom",
@@ -53,15 +54,15 @@
     "expand_debugger": "false",
     "fail_on_lint_errors": "false",
     "debugger_disabled": "false",
-    "makerlab_enabled": "true",
-    "palette_category_at_start": "Circuit",
+    "makerlab_enabled": "circuitPlayground",
     "long_instructions": "# Buzzer Frequencies\r\n\r\nCreate an app that plays the buzzer at the frequency listed on each button\r\n\r\n## Do This\r\n\r\n1) Add a [`buzzer.frequency()`(#f78183)](/docs/applab/buzzer.frequency/) block to each [`onEvent()`(#fff176)](/docs/applab/onEvent/) to play the buzzer for half a second at the listed frequency\r\n\t- For example: The \"100\" button should play at a frequency of 100 for half a second\r\n\r\n",
     "top_level_procedure_autopopulate": "false",
     "parent_level_id": 20396,
     "name_suffix": "_2023",
     "reference_links": [
       "/courses/csd-2022/guides/responding-to-user-input",
-      "/courses/csd-2022/guides/producing-output"
+      "/courses/csd-2022/guides/producing-output",
+      "/maker/setup"
     ],
     "map_reference": "/courses/csd-2022/guides/circuit-playground",
     "mini_rubric": "false",
@@ -78,9 +79,8 @@
     "encrypted_examples": "/ErCMOYEGqpGHO/g1tWFtn0EM3rWqeOEpNRy256kXWnh6cM0XhX16gwW5p/T\nulp20NBMSr7C3y7buP80SyFF6g==\n",
     "preload_asset_list": null
   },
-  "published": true,
   "notes": "",
-  "audit_log": "[{\"changed_at\":\"2022-09-21T13:10:51.274+00:00\",\"changed\":[\"cloned from \\\"CSD U6 - Board Outputs - PracD_2222\\\"\"],\"cloned_from\":\"CSD U6 - Board Outputs - PracD_2222\"}]"
+  "audit_log": "[{\"changed_at\":\"2022-09-21T13:10:51.274+00:00\",\"changed\":[\"cloned from \\\"CSD U6 - Board Outputs - PracD_2222\\\"\"],\"cloned_from\":\"CSD U6 - Board Outputs - PracD_2222\"},{\"changed_at\":\"2023-08-16 17:05:10 +0000\",\"changed\":[\"code_functions\",\"makerlab_enabled\",\"palette_category_at_start\",\"reference_links\",\"encrypted_examples\",\"preload_asset_list\",\"contained_level_names\"],\"changed_by_id\":14639,\"changed_by_email\":\"dan+teacher@code.org\"}]"
 }]]></config>
   <blocks/>
 </Applab>

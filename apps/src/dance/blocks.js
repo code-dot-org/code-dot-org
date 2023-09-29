@@ -1,4 +1,5 @@
 import i18n from '@cdo/locale';
+import CdoFieldDanceAi from './cdoFieldDanceAi';
 
 // This color palette is limited to colors which have different hues, therefore
 // it should not contain different shades of the same color such as
@@ -72,7 +73,7 @@ const customInputTypes = {
   limitedColourPicker: {
     addInput(blockly, block, inputConfig, currentInputRow) {
       const options = {
-        colours: limitedColours,
+        colourOptions: limitedColours,
         columns: 3,
       };
       currentInputRow
@@ -86,11 +87,23 @@ const customInputTypes = {
       return `'${block.getFieldValue(arg.name)}'`;
     },
   },
+  danceAi: {
+    addInput(blockly, block, inputConfig, currentInputRow) {
+      const newField = new CdoFieldDanceAi();
+      currentInputRow
+        .appendField(inputConfig.label)
+        .appendField(newField, 'VALUE');
+    },
+    generateCode(block, arg) {
+      return block.getFieldValue(arg.name);
+    },
+  },
 };
 
 export default {
   customInputTypes,
   install(blockly, blockInstallOptions) {
+    Blockly.cdoUtils.registerCustomProcedureBlocks();
     // Legacy style block definitions :(
     const generator = blockly.getGenerator();
 

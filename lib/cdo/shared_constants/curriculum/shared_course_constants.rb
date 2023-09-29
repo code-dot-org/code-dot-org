@@ -107,7 +107,8 @@ module Curriculum
         collections: 'Collections',
         workshops_k5: 'K-5 Workshops',
         summer_workshops_612: '6-12 Summer Workshops',
-        virtual_academic_year_workshops_612: '6–12 Virtual Academic Year Workshops'
+        virtual_academic_year_workshops_612: '6–12 Virtual Academic Year Workshops',
+        unsupported: 'Unsupported'
       }
     ).freeze
 
@@ -116,7 +117,10 @@ module Curriculum
       {
         hoc: 'HOC',
         csc: 'CSC',
-        csf: 'CSF'
+        csf: 'CSF',
+        csa: 'CSA',
+        csp: 'CSP',
+        csd: 'CSD'
       }
     )
 
@@ -127,6 +131,7 @@ module Curriculum
       artificial_intelligence
       cybersecurity
       data
+      digital_literacy
       games_and_animations
       internet
       physical_computing

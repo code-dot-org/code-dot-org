@@ -2,67 +2,10 @@
   "se-FI": {
     "data": {
       "programming_environments": {
-        "gamelab": {
-          "categories": {
-            "game_lab": {
-              "expressions": {
-                "mouseWentDown": {
-                  "examples": {
-                    "Black and White": {
-                      "name": "Čáhppes ja Vilges"
-                    }
-                  }
-                },
-                "playSound": {
-                  "examples": {
-                    "Making Music": {
-                      "name": "Ráhkat Musihka"
-                    }
-                  }
-                }
-              }
-            },
-            "sprites": {
-              "name": "Sprite:at",
-              "expressions": {
-                "getSpeed": {
-                  "examples": {
-                    "Spiral": {
-                      "name": "Spirála"
-                    }
-                  }
-                }
-              }
-            },
-            "groups": {
-              "name": "Joavkkut"
-            },
-            "drawing": {
-              "expressions": {
-                "shape": {
-                  "examples": {
-                    "Star": {
-                      "name": "Násti"
-                    }
-                  }
-                }
-              }
-            }
-          }
-        },
         "applab": {
-          "description": "App Lab lea programmerenbiras gos sáhtát ráhkadit eaŋkilis app:aid. Ráhkat app:a, koda blohkaiguin dahje JavaScript:ain oažžut dán doaibmat, ja de juoge app:a jođánit.",
           "categories": {
-            "ui_controls": {
-              "expressions": {
-                "playSound": {
-                  "examples": {
-                    "Making Music": {
-                      "name": "Ráhkat Musihka"
-                    }
-                  }
-                }
-              }
+            "advanced": {
+              "name": "Avanserta"
             },
             "canvas": {
               "expressions": {
@@ -184,33 +127,90 @@
                 }
               }
             },
-            "advanced": {
-              "name": "Avanserta"
+            "ui_controls": {
+              "expressions": {
+                "playSound": {
+                  "examples": {
+                    "Making Music": {
+                      "name": "Ráhkat Musihka"
+                    }
+                  }
+                }
+              }
+            }
+          },
+          "description": "App Lab lea programmerenbiras gos sáhtát ráhkadit eaŋkilis app:aid. Ráhkat app:a, koda blohkaiguin dahje JavaScript:ain oažžut dán doaibmat, ja de juoge app:a jođánit."
+        },
+        "gamelab": {
+          "categories": {
+            "drawing": {
+              "expressions": {
+                "shape": {
+                  "examples": {
+                    "Star": {
+                      "name": "Násti"
+                    }
+                  }
+                }
+              }
+            },
+            "game_lab": {
+              "expressions": {
+                "mouseWentDown": {
+                  "examples": {
+                    "Black and White": {
+                      "name": "Čáhppes ja Vilges"
+                    }
+                  }
+                },
+                "playSound": {
+                  "examples": {
+                    "Making Music": {
+                      "name": "Ráhkat Musihka"
+                    }
+                  }
+                }
+              }
+            },
+            "groups": {
+              "name": "Joavkkut"
+            },
+            "sprites": {
+              "expressions": {
+                "getSpeed": {
+                  "examples": {
+                    "Spiral": {
+                      "name": "Spirála"
+                    }
+                  }
+                }
+              },
+              "name": "Sprite:at"
             }
           }
         },
         "spritelab": {
-          "name": "Sprite-lab",
           "categories": {
-            "sprites": {
-              "name": "Sprite:at"
-            },
-            "world": {
-              "name": "Máilbmi"
-            },
-            "location": {
-              "name": "Báikkit"
-            },
-            "events": {
-              "name": "Dáhpáhusaid"
-            },
             "behaviors": {
               "name": "Láhttemat"
             },
             "comments": {
               "name": "Kommentárat"
+            },
+            "events": {
+              "name": "Dáhpáhusaid"
+            },
+            "location": {
+              "name": "Báikkit"
+            },
+            "sprites": {
+              "name": "Sprite:at"
+            },
+            "world": {
+              "name": "Máilbmi"
             }
-          }
+          },
+          "name": "Sprite-lab"
         }
       }
     }

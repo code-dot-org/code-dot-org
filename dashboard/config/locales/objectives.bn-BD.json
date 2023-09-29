@@ -2,6 +2,9 @@
   "bn-BD": {
     "data": {
       "objectives": {
+        "106cae6e-93eb-48ca-b7bf-c8017b52139d": {
+          "description": "একটি variable বানাও"
+        },
         "a42fea5f-a36c-4c10-8c6a-025ce196bab8": {
           "description": ""
         },
@@ -9,6 +12,9 @@
           "description": ""
         },
         "8805bb75-452c-4778-9cd2-6df020a13216": {
+          "description": "একটি variable বানাও"
+        },
+        "10c60f4a-ddfe-4828-8f53-36292496b61b": {
           "description": "একটি variable বানাও"
         },
         "ba0eef71-97bc-4525-824e-3abc2087dbaf": {
@@ -19,9 +25,6 @@
         },
         "08ca334f-bc69-46fb-b4ae-0b4b63ec4f7f": {
           "description": ""
-        },
-        "106cae6e-93eb-48ca-b7bf-c8017b52139d": {
-          "description": "একটি variable বানাও"
         }
       }
     }

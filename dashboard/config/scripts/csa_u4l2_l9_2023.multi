@@ -10,3 +10,5 @@ wrong '`public int getNumStudents()`'
 markdown <<MARKDOWN
 Consider a method called `getNumStudents` in the `Student` class which should be able to be called from a different class and returns the static variable `numStudents`. Which of the following is the best method header?
 MARKDOWN
+
+allow_multiple_attempts true

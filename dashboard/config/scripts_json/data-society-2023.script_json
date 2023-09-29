@@ -13,13 +13,14 @@
       "project_sharing": true,
       "show_calendar": true,
       "student_detail_progress_view": true,
+      "tts": true,
       "version_year": "2023",
       "weekly_instructional_minutes": 225
     },
     "new_name": null,
     "family_name": "data-society",
-    "serialized_at": "2023-04-20 18:02:13 UTC",
-    "published_state": "beta",
+    "serialized_at": "2023-07-17 23:34:40 UTC",
+    "published_state": "stable",
     "instruction_type": "teacher_led",
     "instructor_audience": "teacher",
     "participant_audience": "student",
@@ -49,6 +50,18 @@
       },
       "seeding_key": {
         "lesson_group.key": "lessonGroup-3",
+        "script.name": "data-society-2023"
+      }
+    },
+    {
+      "key": "lessonGroup-4",
+      "user_facing": true,
+      "position": 3,
+      "properties": {
+        "display_name": "Survey"
+      },
+      "seeding_key": {
+        "lesson_group.key": "lessonGroup-4",
         "script.name": "data-society-2023"
       }
     }
@@ -381,6 +394,21 @@
       "seeding_key": {
         "lesson.key": "Post-Project Test",
         "lesson_group.key": "lessonGroup-3",
+        "script.name": "data-society-2023"
+      }
+    },
+    {
+      "key": "Post-Course Survey",
+      "name": "Post-Course Survey",
+      "absolute_position": 18,
+      "lockable": true,
+      "has_lesson_plan": false,
+      "relative_position": 2,
+      "properties": {
+      },
+      "seeding_key": {
+        "lesson.key": "Post-Course Survey",
+        "lesson_group.key": "lessonGroup-4",
         "script.name": "data-society-2023"
       }
     }
@@ -1107,6 +1135,18 @@
         "lesson_activity.key": "f065db40-9b4c-4491-b6a1-f86ae8813966",
         "lesson.key": "Post-Project Test",
         "lesson_group.key": "lessonGroup-3",
+        "script.name": "data-society-2023"
+      }
+    },
+    {
+      "key": "f2321ea5-7e55-4407-bb0b-d08459a99598",
+      "position": 1,
+      "properties": {
+      },
+      "seeding_key": {
+        "lesson_activity.key": "f2321ea5-7e55-4407-bb0b-d08459a99598",
+        "lesson.key": "Post-Course Survey",
+        "lesson_group.key": "lessonGroup-4",
         "script.name": "data-society-2023"
       }
     }
@@ -4639,7 +4679,7 @@
       "key": "ecf2dcbe-b4ce-4da1-a69f-a357eeb2875a",
       "position": 2,
       "properties": {
-        "description": "If this is the last unit of CS Discoveries that you are teaching, also have students take the end-of-course survey. See the [CSD Instructions resource](https://docs.google.com/document/d/170NdiEBwcLEsLHQqgPy_zdNKFZfO-rS9aCAFCcEYhzY/edit?usp=sharing) for more information about the End-of-Course survey and how to assign and see the results. ",
+        "description": "Have students take the end-of-course survey. See the [Post-Course Survey Instructions](https://docs.google.com/document/d/1gb5gLQAIQyMc_o4RP7zParEvpyO9kfAYp7cGnYyvZLw/edit#) for more information about the End-of-Course survey and how to assign and see the results. ",
         "name": "End of Course Survey"
       },
       "seeding_key": {
@@ -4655,6 +4695,17 @@
       "seeding_key": {
         "activity_section.key": "8a17f70d-dce1-4ffa-840b-792364fcaeca",
         "lesson_activity.key": "f065db40-9b4c-4491-b6a1-f86ae8813966"
+      }
+    },
+    {
+      "key": "d848263d-42e2-4d56-bad4-f2e109a8e0df",
+      "position": 1,
+      "properties": {
+        "progression_name": "Survey"
+      },
+      "seeding_key": {
+        "activity_section.key": "d848263d-42e2-4d56-bad4-f2e109a8e0df",
+        "lesson_activity.key": "f2321ea5-7e55-4407-bb0b-d08459a99598"
       }
     }
   ],
@@ -5107,6 +5158,31 @@
       "level_keys": [
         "CSD U5 test_2023"
       ]
+    },
+    {
+      "chapter": 19,
+      "position": 1,
+      "activity_section_position": 1,
+      "assessment": true,
+      "properties": {
+        "level_keys": [
+          "csd-post-survey-levelgroup_2023"
+        ],
+        "progression": "Survey"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "csd-post-survey-levelgroup_2023"
+        ],
+        "lesson.key": "Post-Course Survey",
+        "lesson_group.key": "lessonGroup-4",
+        "script.name": "data-society-2023",
+        "activity_section.key": "d848263d-42e2-4d56-bad4-f2e109a8e0df"
+      },
+      "level_keys": [
+        "csd-post-survey-levelgroup_2023"
+      ]
     }
   ],
   "levels_script_levels": [
@@ -5324,6 +5400,18 @@
         "lesson_group.key": "lessonGroup-3",
         "script.name": "data-society-2023",
         "activity_section.key": "8a17f70d-dce1-4ffa-840b-792364fcaeca"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "csd-post-survey-levelgroup_2023",
+        "script_level.level_keys": [
+          "csd-post-survey-levelgroup_2023"
+        ],
+        "lesson.key": "Post-Course Survey",
+        "lesson_group.key": "lessonGroup-4",
+        "script.name": "data-society-2023",
+        "activity_section.key": "d848263d-42e2-4d56-bad4-f2e109a8e0df"
       }
     }
   ],
@@ -5633,6 +5721,56 @@
       },
       "seeding_key": {
         "resource.key": "create_a_representation_marked_rubrics"
+      }
+    },
+    {
+      "name": "CSD Guide to Assessment ",
+      "url": "https://docs.google.com/document/d/1IO5XgPW_Apil_Uziq5hAMCBgilm8txZ3sp8atxiKiLU/view",
+      "key": "csd_guide_to_assessment",
+      "properties": {
+      },
+      "seeding_key": {
+        "resource.key": "csd_guide_to_assessment"
+      }
+    },
+    {
+      "name": "CSD Guide to Code.org Values and Philosophy",
+      "url": "https://docs.google.com/document/d/1Ql3w7D_cWFZVPzRA-2yjuxjCaRP-lneiRGZPpmg81tc/view",
+      "key": "csd_guide_to_code_org_values_and_philosophy",
+      "properties": {
+      },
+      "seeding_key": {
+        "resource.key": "csd_guide_to_code_org_values_and_philosophy"
+      }
+    },
+    {
+      "name": "CSD Guide to Curriculum Videos ",
+      "url": "https://docs.google.com/document/d/1c2hF3CaTJacvwDy4y_9-m1jSkSPmK__F6pDPetXVvy4/view",
+      "key": "csd_guide_to_curriculum_videos",
+      "properties": {
+      },
+      "seeding_key": {
+        "resource.key": "csd_guide_to_curriculum_videos"
+      }
+    },
+    {
+      "name": "CSD Guide to Differentiation ",
+      "url": "https://docs.google.com/document/d/10u5N7zCf52IZiSf4drQplEz3d3zS1iqWpegbBMDm0RQ/view",
+      "key": "csd_guide_to_differentiation",
+      "properties": {
+      },
+      "seeding_key": {
+        "resource.key": "csd_guide_to_differentiation"
+      }
+    },
+    {
+      "name": "CSD Guide to Teaching and Learning Strategies",
+      "url": "https://docs.google.com/document/d/1Cg5iTwERoX25Y2DdLNmrPCbVB2d9FPGfUMUvcnVoN8Q/view",
+      "key": "csd_guide_to_teaching_and_learning_strategies",
+      "properties": {
+      },
+      "seeding_key": {
+        "resource.key": "csd_guide_to_teaching_and_learning_strategies"
       }
     },
     {
@@ -5988,6 +6126,16 @@
       }
     },
     {
+      "name": "Problem Solving Process with Data",
+      "url": "https://docs.google.com/document/d/19pdlJOjWqA5s7f5sr9mTL-v7x_ZMjQP36SlwqzJ-Ipo/view",
+      "key": "problem_solving_process_with_data_1",
+      "properties": {
+      },
+      "seeding_key": {
+        "resource.key": "problem_solving_process_with_data_1"
+      }
+    },
+    {
       "name": "Problem Solving with Big Data",
       "url": "https://docs.google.com/presentation/d/1pOEp_iDVNnscSE3LZvErt5DMmoBGJc2uixcwqApdpyM/template/preview",
       "key": "problem_solving_with_big_data",
@@ -6197,8 +6345,8 @@
       }
     },
     {
-      "name": "Secret Messages 2021",
-      "url": "https://docs.google.com/document/d/1McCQtY7xWPnKvemkAf0bLxxxyJVJzQomWv4wcjInjXc/view",
+      "name": "Secret Messages",
+      "url": "https://docs.google.com/document/d/1j1IKIzIf3R3sck0hgW740SGbQmWTFdNKMrwPK0dBqSA/edit?usp=sharing",
       "key": "secret_messages_2021",
       "properties": {
         "audience": "Student",
@@ -6776,6 +6924,36 @@
     },
     {
       "seeding_key": {
+        "resource.key": "csd_guide_to_assessment",
+        "script.name": "data-society-2023"
+      }
+    },
+    {
+      "seeding_key": {
+        "resource.key": "csd_guide_to_code_org_values_and_philosophy",
+        "script.name": "data-society-2023"
+      }
+    },
+    {
+      "seeding_key": {
+        "resource.key": "csd_guide_to_curriculum_videos",
+        "script.name": "data-society-2023"
+      }
+    },
+    {
+      "seeding_key": {
+        "resource.key": "csd_guide_to_differentiation",
+        "script.name": "data-society-2023"
+      }
+    },
+    {
+      "seeding_key": {
+        "resource.key": "csd_guide_to_teaching_and_learning_strategies",
+        "script.name": "data-society-2023"
+      }
+    },
+    {
+      "seeding_key": {
         "resource.key": "csd_guide_to_using_resources",
         "script.name": "data-society-2023"
       }
@@ -6789,6 +6967,12 @@
     {
       "seeding_key": {
         "resource.key": "csd_learning_frameworks",
+        "script.name": "data-society-2023"
+      }
+    },
+    {
+      "seeding_key": {
+        "resource.key": "problem_solving_process_with_data_1",
         "script.name": "data-society-2023"
       }
     },

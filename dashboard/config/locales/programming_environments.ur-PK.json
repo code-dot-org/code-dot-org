@@ -2,11 +2,549 @@
   "ur-PK": {
     "data": {
       "programming_environments": {
-        "weblab": {
-          "name": "ویب لیب"
+        "applab": {
+          "categories": {
+            "advanced": {
+              "name": "اعلی درجے کی"
+            },
+            "canvas": {
+              "expressions": {
+                "circle": {
+                  "palette_params": {
+                    "radius": {
+                      "description": "دائرے کے رداس, پکسلز میں."
+                    }
+                  }
+                },
+                "drawImage": {
+                  "palette_params": {
+                    "id": {
+                      "description": "اپنی طرف متوجہ کرنے کے لئے تصویر کے اوپری بائیں کونے کے پکسلز میں X پوزیشن."
+                    },
+                    "x": {
+                      "description": "اپنی طرف متوجہ کرنے کے لئے تصویر کے اوپری بائیں کونے کے پکسلز میں X پوزیشن."
+                    },
+                    "y": {
+                      "description": "اپنی طرف متوجہ کرنے کے لئے تصویر کے اوپری بائیں کونے کے پکسلز میں Y پوزیشن."
+                    }
+                  }
+                },
+                "getAlpha": {
+                  "palette_params": {
+                    "imageData": {
+                      "type": "اعتراض"
+                    },
+                    "x": {
+                      "description": "تصویر کے اوپری بائیں کونے سے شروع ہونے والے پکسلز میں X پوزیشن."
+                    },
+                    "y": {
+                      "description": "تصویر کے اوپری بائیں کونے سے شروع ہونے والے پکسلز میں Y پوزیشن."
+                    }
+                  },
+                  "short_description": "الفا کی رقم واپس (دھندلاپن) (سے لے کر 0 سے 255) دیئے گئے تصویر کے اعداد و شمار میں دی گئی X اور Y پوزیشن پر واقع پکسل کے رنگ میں."
+                },
+                "getBlue": {
+                  "palette_params": {
+                    "imageData": {
+                      "type": "اعتراض"
+                    },
+                    "x": {
+                      "description": "تصویر کے اوپری بائیں کونے سے شروع ہونے والے پکسلز میں X پوزیشن."
+                    },
+                    "y": {
+                      "description": "تصویر کے اوپری بائیں کونے سے شروع ہونے والے پکسلز میں Y پوزیشن."
+                    }
+                  }
+                },
+                "getGreen": {
+                  "palette_params": {
+                    "imageData": {
+                      "type": "اعتراض"
+                    },
+                    "x": {
+                      "description": "تصویر کے اوپری بائیں کونے سے شروع ہونے والے پکسلز میں X پوزیشن."
+                    },
+                    "y": {
+                      "description": "تصویر کے اوپری بائیں کونے سے شروع ہونے والے پکسلز میں Y پوزیشن."
+                    }
+                  }
+                },
+                "getImageData": {
+                  "palette_params": {
+                    "height": {
+                      "description": "تصویر کے اعداد و شمار پر قبضہ کرنے کے لئے bounding مستطیل کی اونچائی."
+                    },
+                    "width": {
+                      "description": "تصویر کے اعداد و شمار پر قبضہ کرنے کے لئے bounding مستطیل کی چوڑائی."
+                    },
+                    "x": {
+                      "description": "پکسلز میں X پوزیشن کی گرفتاری شروع کرنے کے لئے."
+                    },
+                    "y": {
+                      "description": "پکسلز میں Y پوزیشن کی گرفتاری شروع کرنے کے لئے."
+                    }
+                  }
+                },
+                "getRed": {
+                  "palette_params": {
+                    "imageData": {
+                      "type": "اعتراض"
+                    },
+                    "x": {
+                      "description": "تصویر کے اوپری بائیں کونے سے شروع ہونے والے پکسلز میں X پوزیشن."
+                    },
+                    "y": {
+                      "description": "تصویر کے اوپری بائیں کونے سے شروع ہونے والے پکسلز میں Y پوزیشن."
+                    }
+                  }
+                },
+                "putImageData": {
+                  "palette_params": {
+                    "imageData": {
+                      "type": "اعتراض"
+                    },
+                    "x": {
+                      "description": "تصویر کے اوپری بائیں کونے سے شروع ہونے والے پکسلز میں X پوزیشن کینوس پر ڈیٹا رکھنے کے لئے."
+                    },
+                    "y": {
+                      "description": "تصویر کے اوپری بائیں کونے سے شروع ہونے والے پکسلز میں Y پوزیشن کینوس پر ڈیٹا رکھنے کے لئے."
+                    }
+                  }
+                },
+                "rect": {
+                  "palette_params": {
+                    "height": {
+                      "description": "مستطیل کے پکسلز میں عمودی اونچائی."
+                    },
+                    "width": {
+                      "description": "مستطیل کے پکسلز میں افقی چوڑائی."
+                    },
+                    "x": {
+                      "description": "مستطیل کے اوپری بائیں کونے کے پکسلز میں X پوزیشن."
+                    },
+                    "y": {
+                      "description": "Y پوزیشن مستطیل کے اوپری بائیں کونے کے پکسلز میں."
+                    }
+                  }
+                },
+                "setAlpha": {
+                  "palette_params": {
+                    "alphaValue": {
+                      "description": "پکسل میں مقرر کرنے کے لیے الفا (دھندلاپن) کی مقدار (0 سے 255 تک) ۔"
+                    },
+                    "imageData": {
+                      "type": "اعتراض"
+                    },
+                    "x": {
+                      "description": "تصویر کے اوپری بائیں کونے سے شروع ہونے والے پکسلز میں X پوزیشن."
+                    },
+                    "y": {
+                      "description": "تصویر کے اوپری بائیں کونے سے شروع ہونے والے پکسلز میں Y پوزیشن."
+                    }
+                  },
+                  "short_description": "الفا کی مقدار کا تعین کرتا ہے (دھندلاپن) (سے لے کر 0 سے 255) دیئے گئے تصویر کے اعداد و شمار میں دی گئی X اور Y پوزیشن پر واقع پکسل کے رنگ میں."
+                },
+                "setBlue": {
+                  "palette_params": {
+                    "blueValue": {
+                      "description": "پکسل میں سیٹ کرنے کے لئے نیلے رنگ کی مقدار (0 سے 255 تک)."
+                    },
+                    "imageData": {
+                      "type": "اعتراض"
+                    },
+                    "x": {
+                      "description": "تصویر کے اوپری بائیں کونے سے شروع ہونے والے پکسلز میں X پوزیشن."
+                    },
+                    "y": {
+                      "description": "تصویر کے اوپری بائیں کونے سے شروع ہونے والے پکسلز میں Y پوزیشن."
+                    }
+                  },
+                  "short_description": "نیلے رنگ کی مقدار (0 سے 255 تک) دی گئی تصویر کے اعداد و شمار میں دی گئی X اور Y پوزیشن پر واقع پکسل کے رنگ میں BlueValue ان پٹ رقم کو مقرر کرتا ہے."
+                },
+                "setGreen": {
+                  "palette_params": {
+                    "greenValue": {
+                      "description": "سبز کی مقدار (0 سے 255) پکسل میں مقرر کرنے کے لئے."
+                    },
+                    "imageData": {
+                      "type": "اعتراض"
+                    },
+                    "x": {
+                      "description": "تصویر کے اوپری بائیں کونے سے شروع ہونے والے پکسلز میں X پوزیشن."
+                    },
+                    "y": {
+                      "description": "تصویر کے اوپری بائیں کونے سے شروع ہونے والے پکسلز میں Y پوزیشن."
+                    }
+                  },
+                  "short_description": "سبز کی مقدار کا تعین کرتا ہے (0 سے 255 تک) دیئے گئے تصویر کے اعداد و شمار میں دیئے گئے X اور Y پوزیشن پر واقع پکسل کے رنگ میں GreenValue ان پٹ رقم پر."
+                },
+                "setRGB": {
+                  "palette_params": {
+                    "alpha": {
+                      "description": "اختیاری. پکسل میں سیٹ کرنے کے لئے دھندلاپن کی مقدار (0 سے 255 تک). 255 پر ڈیفالٹ (مکمل دھندلاپن)."
+                    },
+                    "blue": {
+                      "description": "پکسل میں سیٹ کرنے کے لئے نیلے رنگ کی مقدار (0 سے 255 تک)."
+                    },
+                    "green": {
+                      "description": "سبز کی مقدار (0 سے 255) پکسل میں مقرر کرنے کے لئے."
+                    },
+                    "imageData": {
+                      "type": "اعتراض"
+                    },
+                    "red": {
+                      "description": "پکسل میں سیٹ کرنے کے لئے سرخ (0 سے 255) کی مقدار."
+                    },
+                    "x": {
+                      "description": "تصویر کے اوپری بائیں کونے سے شروع ہونے والے پکسلز میں X پوزیشن."
+                    },
+                    "y": {
+                      "description": "تصویر کے اوپری بائیں کونے سے شروع ہونے والے پکسلز میں Y پوزیشن."
+                    }
+                  }
+                },
+                "setRed": {
+                  "palette_params": {
+                    "imageData": {
+                      "type": "اعتراض"
+                    },
+                    "redValue": {
+                      "description": "پکسل میں سیٹ کرنے کے لئے سرخ (0 سے 255) کی مقدار."
+                    },
+                    "x": {
+                      "description": "تصویر کے اوپری بائیں کونے سے شروع ہونے والے پکسلز میں X پوزیشن."
+                    },
+                    "y": {
+                      "description": "تصویر کے اوپری بائیں کونے سے شروع ہونے والے پکسلز میں Y پوزیشن."
+                    }
+                  },
+                  "short_description": "دی گئی تصویر کے اعداد و شمار میں دیئے گئے X اور Y پوزیشن پر واقع پکسل کے رنگ میں سرخ کی مقدار (0 سے 255 تک) کا تعین کرتا ہے RedValue ان پٹ رقم پر."
+                }
+              }
+            },
+            "control": {
+              "expressions": {
+                "clearTimeout": {
+                  "palette_params": {
+                    "timeout": {
+                      "description": "منسوخ کرنے کے لئے setTimeout فنکشن کی طرف سے واپس کی گئی قدر."
+                    }
+                  }
+                },
+                "setInterval": {
+                  "palette_params": {
+                    "ms": {
+                      "description": "فنکشن کے ہر عملدرآمد کے درمیان ملی سیکنڈ کی تعداد."
+                    }
+                  }
+                },
+                "setTimeout": {
+                  "palette_params": {
+                    "ms": {
+                      "description": "ملی سیکنڈ کی تعداد تقریب پر عمل کرنے سے پہلے انتظار کرنا."
+                    }
+                  }
+                },
+                "timedLoop": {
+                  "palette_params": {
+                    "callback": {
+                      "type": "فنکشن"
+                    }
+                  }
+                }
+              }
+            },
+            "data": {
+              "expressions": {
+                "createRecord": {
+                  "palette_params": {
+                    "record": {
+                      "type": "اعتراض"
+                    }
+                  }
+                },
+                "deleteRecord": {
+                  "palette_params": {
+                    "record": {
+                      "type": "اعتراض"
+                    }
+                  }
+                },
+                "drawChart": {
+                  "palette_params": {
+                    "options": {
+                      "type": "اعتراض"
+                    }
+                  }
+                },
+                "drawChartFromRecords": {
+                  "palette_params": {
+                    "options": {
+                      "type": "اعتراض"
+                    },
+                    "tableName": {
+                      "description": "سے ریکارڈ بازیافت کرنے کے لئے میز کا نام."
+                    }
+                  }
+                },
+                "getKeyValue": {
+                  "palette_params": {
+                    "key": {
+                      "description": "کلید کا نام بازیافت کیا جائے گا."
+                    }
+                  }
+                },
+                "getPrediction": {
+                  "palette_params": {
+                    "callback": {
+                      "type": "فنکشن"
+                    }
+                  }
+                },
+                "getUserId": {
+                  "short_description": "اس اپلی کیشن کے موجودہ صارف کے لئے ایک منفرد شناخت کنندہ ہو جاتا ہے."
+                },
+                "onRecordEvent": {
+                  "palette_params": {
+                    "table": {
+                      "description": "ٹیبل کا نام جس پر اس ایونٹ ہینڈلر لاگو ہوتا ہے."
+                    }
+                  }
+                },
+                "readRecords": {
+                  "palette_params": {
+                    "terms": {
+                      "type": "اعتراض"
+                    }
+                  }
+                },
+                "setKeyValue": {
+                  "palette_params": {
+                    "key": {
+                      "description": "ذخیرہ کرنے کے لئے کلید کا نام."
+                    },
+                    "value": {
+                      "description": "ذخیرہ کرنے کے لئے ڈیٹا."
+                    }
+                  },
+                  "short_description": "ایپ لیب کی کلی/قدر ڈیٹا اسٹوریج میں ایک کلی/قدر جوڑی ذخیرہ کرتا ہے، اور کارروائی ختم ہونے پر کال بیک فنکشن کو کال کرتا ہے."
+                },
+                "startWebRequest": {
+                  "palette_params": {
+                    "url": {
+                      "description": "ایک سروس کا ویب پتہ جو ڈیٹا واپس کرتا ہے."
+                    }
+                  }
+                },
+                "updateRecord": {
+                  "palette_params": {
+                    "record": {
+                      "type": "اعتراض"
+                    }
+                  }
+                }
+              },
+              "name": "ڈیٹا"
+            },
+            "functions": {
+              "name": "افعال"
+            },
+            "math": {
+              "expressions": {
+                "randomNumber": {
+                  "palette_params": {
+                    "max": {
+                      "description": "زیادہ سے زیادہ ریٹرنڈ نمبر"
+                    },
+                    "min": {
+                      "description": "کم سے کم ریٹرنڈ نمبر"
+                    }
+                  }
+                },
+                "randomNumber_min_max": {
+                  "palette_params": {
+                    "max": {
+                      "description": "زیادہ سے زیادہ ریٹرنڈ نمبر"
+                    },
+                    "min": {
+                      "description": "کم سے کم ریٹرنڈ نمبر"
+                    }
+                  }
+                }
+              },
+              "name": "ریاضی"
+            },
+            "turtle": {
+              "expressions": {
+                "arcLeft": {
+                  "short_description": "ایک ہموار، سرکلر آرک میں کچھی آگے اور بائیں طرف منتقل کرتا ہے."
+                },
+                "getX": {
+                  "short_description": "موجودہ X کچھی کے پکسلز میں محدد ہو جاتا ہے."
+                },
+                "getY": {
+                  "short_description": "موجودہ Y کچھی کے پکسلز میں محدد ہو جاتا ہے."
+                },
+                "hide": {
+                  "short_description": "کچھی کو اپنے موجودہ مقام پر پوشیدہ بناتا ہے۔"
+                },
+                "move": {
+                  "palette_params": {
+                    "x": {
+                      "description": "پکسلز کی تعداد کچھی دائیں منتقل کرنے کے لئے."
+                    },
+                    "y": {
+                      "description": "پکسلز کی تعداد کچھی نیچے منتقل کرنے کے لئے."
+                    }
+                  }
+                },
+                "moveBackward": {
+                  "short_description": "موجودہ سمت سے پکسلز کی ایک دی گئی تعداد پسماندہ کچھی منتقل کرتا ہے."
+                },
+                "moveForward": {
+                  "short_description": "کچھی کو موجودہ سمت میں پکسلز کی ایک دی گئی تعداد کو آگے بڑھاتا ہے."
+                },
+                "moveTo": {
+                  "short_description": "کچھی کو سکرین پر کسی مخصوص (x، y) مقام پر منتقل کرتا ہے۔"
+                },
+                "penColor": {
+                  "short_description": "کچھی کی جانب سے لکیروں اور نقطوں کو کھینچنے کے لیے استعمال کیے جانے والے قلم کا رنگ مقرر کرتا ہے۔"
+                },
+                "penDown": {
+                  "short_description": "قلم کو نیچے رکھتا ہے تاکہ کچھی اس کے پیچھے ایک لکیر کھینچ لے جیسے وہ چلتا ہے."
+                },
+                "penRGB": {
+                  "short_description": "RGBA اقدار کا استعمال کرتے ہوئے، کچھی کی طرف سے لائنوں اور نقطوں کو ڈرائنگ کے لئے استعمال قلم کا رنگ مقرر کرتا ہے."
+                },
+                "penUp": {
+                  "short_description": "یہ چلتا ہے کے طور پر کچھی ایک لائن اپنی طرف متوجہ نہیں کرتا تو قلم اٹھاتا ہے."
+                },
+                "penWidth": {
+                  "short_description": "پکسلز میں لائن کی چوڑائی کا تعین کرتا ہے کہ کچھی اس کے پیچھے کھینچتا ہے جیسے یہ چلتا ہے."
+                },
+                "show": {
+                  "short_description": "کچھی کو اپنے موجودہ مقام پر دکھائی دیتا ہے۔"
+                },
+                "speed": {
+                  "short_description": "ایپ کی عملدرآمد کے لئے رفتار کو سیٹ کرتا ہے، جس میں کچھی کی رفتار شامل ہوتی ہے."
+                },
+                "turnLeft": {
+                  "short_description": "مخصوص زاویہ کی طرف سے بائیں کچھی کو گھماتا ہے. کچھی کا مقام وہی رہتا ہے۔"
+                },
+                "turnRight": {
+                  "short_description": "مخصوص زاویہ کی طرف سے کچھی دائیں گھماتا ہے. کچھی کا مقام وہی رہتا ہے۔"
+                },
+                "turnTo": {
+                  "short_description": "کچھی کی سمت کو ایک مخصوص زاویہ میں تبدیل کرتا ہے. 0 اوپر ہے، 90 دائیں ہے، 180 نیچے ہے اور 270 باقی ہے۔"
+                }
+              }
+            },
+            "ui_controls": {
+              "expressions": {
+                "button": {
+                  "short_description": "اسکرین پر ایک بٹن بناتا ہے جو پہلے سے طے شدہ مقام پر دی گئی شناخت کی طرف سے فراہم کردہ متن کی نمائش کرتا ہے (0,0)."
+                },
+                "onEvent": {
+                  "examples": {
+                    "Shrink and Grow": {
+                      "name": "سکڑیں اور بڑھیں"
+                    }
+                  },
+                  "palette_params": {
+                    "callback": {
+                      "type": "فنکشن"
+                    }
+                  }
+                },
+                "playSound": {
+                  "short_description": "MP3 آواز مسل کو اختصاصی URL سے ادا کرتا ہے ۔"
+                },
+                "setProperty": {
+                  "palette_params": {
+                    "property": {
+                      "description": "جائیداد تبدیل کرنے کے لئے."
+                    }
+                  },
+                  "short_description": "مخصوص عنصر کے لئے ایک پراپرٹی کو نئی قدر پر مرتب کرتا ہے۔"
+                },
+                "setScreen": {
+                  "short_description": "اسکرین کو دیئے گئے ScreenID پر سیٹ کرتا ہے."
+                },
+                "showElement": {
+                  "short_description": "فراہم کی شناخت کے ساتھ عنصر دکھاتا ہے."
+                },
+                "textLabel": {
+                  "short_description": "اسکرین پر ایک ٹیکسٹ لیبل بناتا ہے جو ڈیفالٹ مقام (0,0) پر دی گئی شناخت کی طرف سے فراہم کردہ متن کو ظاہر کرتا ہے."
+                }
+              }
+            },
+            "variables": {
+              "expressions": {
+                "addPair": {
+                  "return_value": "کوئی نہيں"
+                },
+                "declareAssign_list_123": {
+                  "short_description": "اعلان اور ایک متغیر کے لئے ایک صف تفویض"
+                },
+                "includes": {
+                  "palette_params": {
+                    "searchValue": {
+                      "description": "تلاش کرنے کے لئے سٹرنگ."
+                    }
+                  }
+                },
+                "indexOf": {
+                  "palette_params": {
+                    "searchValue": {
+                      "description": "تلاش کرنے کے لئے سٹرنگ."
+                    }
+                  }
+                },
+                "length": {
+                  "return_value": "سٹرنگ کی لمبائی"
+                }
+              },
+              "name": "متغیرات"
+            }
+          },
+          "description": "ایپ لیب ایک پروگرامنگ ماحول ہے جہاں آپ سادہ اطلاقات بنا سکتے ہیں. یہ کام کرنے کے لئے بلاکس یا جاوا اسکرپٹ کے ساتھ ایک اپلی کیشن، کوڈ ڈیزائن کریں، پھر سیکنڈ میں اپنی ایپ کا اشتراک کریں.",
+          "name": "ایپ لیب"
         },
         "gamelab": {
           "categories": {
+            "control": {
+              "expressions": {
+                "setInterval": {
+                  "palette_params": {
+                    "ms": {
+                      "description": "فنکشن کے ہر عملدرآمد کے درمیان ملی سیکنڈ کی تعداد."
+                    }
+                  }
+                },
+                "setTimeout": {
+                  "palette_params": {
+                    "ms": {
+                      "description": "ملی سیکنڈ کی تعداد تقریب پر عمل کرنے سے پہلے انتظار کرنا."
+                    }
+                  }
+                }
+              }
+            },
+            "drawing": {
+              "expressions": {
+                "shape": {
+                  "examples": {
+                    "Star": {
+                      "name": "ستارہ"
+                    }
+                  }
+                }
+              },
+              "name": "ڈرائنگ"
+            },
+            "functions": {
+              "name": "افعال"
+            },
             "game_lab": {
               "expressions": {
                 "mouseIsOver": {
@@ -32,22 +570,15 @@
                 },
                 "playSound": {
                   "short_description": "MP3 آواز مسل کو اختصاصی URL سے ادا کرتا ہے ۔"
+                },
+                "showMobileControls": {
+                  "content": "کھیل کی جگہ کے نیچے نظر آنے والے موبائل کنٹرول کو تبدیل کرتا ہے.",
+                  "short_description": "کھیل کی جگہ کے نیچے نظر آنے والے موبائل کنٹرول کو تبدیل کرتا ہے."
                 }
-              }
-            },
-            "sprites": {
-              "expressions": {
-                "getSpeed": {
-                  "examples": {
-                    "Spiral": {
-                      "name": "مرغولہ"
-                    }
-                  }
-                }
-              }
+              },
+              "name": "کھیل لیب"
             },
             "groups": {
-              "name": "گروپس",
               "expressions": {
                 "add": {
                   "palette_params": {
@@ -84,287 +615,118 @@
                     }
                   }
                 }
-              }
-            },
-            "drawing": {
-              "name": "ڈرائنگ",
-              "expressions": {
-                "shape": {
-                  "examples": {
-                    "Star": {
-                      "name": "ستارہ"
-                    }
-                  }
-                }
-              }
+              },
+              "name": "گروپس"
             },
             "math": {
-              "name": "ریاضی",
               "expressions": {
                 "randomNumber": {
                   "palette_params": {
-                    "min": {
-                      "description": "کم سے کم ریٹرنڈ نمبر"
-                    },
                     "max": {
                       "description": "زیادہ سے زیادہ ریٹرنڈ نمبر"
+                    },
+                    "min": {
+                      "description": "کم سے کم ریٹرنڈ نمبر"
                     }
                   }
                 },
                 "randomNumber_min_max": {
                   "palette_params": {
-                    "min": {
-                      "description": "کم سے کم ریٹرنڈ نمبر"
-                    },
                     "max": {
                       "description": "زیادہ سے زیادہ ریٹرنڈ نمبر"
+                    },
+                    "min": {
+                      "description": "کم سے کم ریٹرنڈ نمبر"
                     }
                   }
+                }
+              },
+              "name": "ریاضی"
+            },
+            "sprites": {
+              "expressions": {
+                "getSpeed": {
+                  "examples": {
+                    "Spiral": {
+                      "name": "مرغولہ"
+                    }
+                  }
+                },
+                "sprite.height": {
+                  "return_value": "سپرائٹ کی اونچائی."
+                },
+                "sprite.width": {
+                  "return_value": "سپرائٹ کی چوڑائی."
                 }
               }
             },
             "variables": {
+              "expressions": {
+                "includes": {
+                  "palette_params": {
+                    "searchValue": {
+                      "description": "تلاش کرنے کے لئے سٹرنگ."
+                    }
+                  }
+                },
+                "indexOf": {
+                  "palette_params": {
+                    "searchValue": {
+                      "description": "تلاش کرنے کے لئے سٹرنگ."
+                    }
+                  }
+                },
+                "length": {
+                  "return_value": "سٹرنگ کی لمبائی"
+                }
+              },
               "name": "متغیرات"
             }
-          }
+          },
+          "name": "کھیل لیب"
         },
-        "applab": {
-          "categories": {
-            "ui_controls": {
-              "expressions": {
-                "onEvent": {
-                  "examples": {
-                    "Shrink and Grow": {
-                      "name": "سکڑیں اور بڑھیں"
-                    }
-                  },
-                  "palette_params": {
-                    "callback": {
-                      "type": "فنکشن"
-                    }
-                  }
-                },
-                "playSound": {
-                  "short_description": "MP3 آواز مسل کو اختصاصی URL سے ادا کرتا ہے ۔"
-                }
-              }
-            },
-            "canvas": {
-              "expressions": {
-                "getAlpha": {
-                  "palette_params": {
-                    "imageData": {
-                      "type": "اعتراض"
-                    }
-                  }
-                },
-                "getBlue": {
-                  "palette_params": {
-                    "imageData": {
-                      "type": "اعتراض"
-                    }
-                  }
-                },
-                "getGreen": {
-                  "palette_params": {
-                    "imageData": {
-                      "type": "اعتراض"
-                    }
-                  }
-                },
-                "getRed": {
-                  "palette_params": {
-                    "imageData": {
-                      "type": "اعتراض"
-                    }
-                  }
-                },
-                "putImageData": {
-                  "palette_params": {
-                    "imageData": {
-                      "type": "اعتراض"
-                    }
-                  }
-                },
-                "setAlpha": {
-                  "palette_params": {
-                    "imageData": {
-                      "type": "اعتراض"
-                    }
-                  }
-                },
-                "setBlue": {
-                  "palette_params": {
-                    "imageData": {
-                      "type": "اعتراض"
-                    }
-                  }
-                },
-                "setGreen": {
-                  "palette_params": {
-                    "imageData": {
-                      "type": "اعتراض"
-                    }
-                  }
-                },
-                "setRGB": {
-                  "palette_params": {
-                    "imageData": {
-                      "type": "اعتراض"
-                    }
-                  }
-                },
-                "setRed": {
-                  "palette_params": {
-                    "imageData": {
-                      "type": "اعتراض"
-                    }
-                  }
-                }
-              }
-            },
-            "data": {
-              "name": "ڈیٹا",
-              "expressions": {
-                "createRecord": {
-                  "palette_params": {
-                    "record": {
-                      "type": "اعتراض"
-                    }
-                  }
-                },
-                "deleteRecord": {
-                  "palette_params": {
-                    "record": {
-                      "type": "اعتراض"
-                    }
-                  }
-                },
-                "drawChart": {
-                  "palette_params": {
-                    "options": {
-                      "type": "اعتراض"
-                    }
-                  }
-                },
-                "drawChartFromRecords": {
-                  "palette_params": {
-                    "options": {
-                      "type": "اعتراض"
-                    }
-                  }
-                },
-                "getPrediction": {
-                  "palette_params": {
-                    "callback": {
-                      "type": "فنکشن"
-                    }
-                  }
-                },
-                "readRecords": {
-                  "palette_params": {
-                    "terms": {
-                      "type": "اعتراض"
-                    }
-                  }
-                },
-                "updateRecord": {
-                  "palette_params": {
-                    "record": {
-                      "type": "اعتراض"
-                    }
-                  }
-                }
-              }
-            },
-            "control": {
-              "expressions": {
-                "timedLoop": {
-                  "palette_params": {
-                    "callback": {
-                      "type": "فنکشن"
-                    }
-                  }
-                }
-              }
-            },
-            "math": {
-              "name": "ریاضی",
-              "expressions": {
-                "randomNumber_min_max": {
-                  "palette_params": {
-                    "min": {
-                      "description": "کم سے کم ریٹرنڈ نمبر"
-                    },
-                    "max": {
-                      "description": "زیادہ سے زیادہ ریٹرنڈ نمبر"
-                    }
-                  }
-                },
-                "randomNumber": {
-                  "palette_params": {
-                    "min": {
-                      "description": "کم سے کم ریٹرنڈ نمبر"
-                    },
-                    "max": {
-                      "description": "زیادہ سے زیادہ ریٹرنڈ نمبر"
-                    }
-                  }
-                }
-              }
-            },
-            "variables": {
-              "name": "متغیرات",
-              "expressions": {
-                "addPair": {
-                  "return_value": "کوئی نہيں"
-                }
-              }
-            },
-            "advanced": {
-              "name": "اعلی درجے کی"
-            }
-          }
+        "javalab": {
+          "name": "جاوا لیب"
         },
         "spritelab": {
           "categories": {
-            "world": {
-              "name": "دنیا"
-            },
-            "location": {
-              "name": "مقامات"
-            },
             "actions": {
               "name": "ایکشنز"
-            },
-            "events": {
-              "name": "ایونٹس/واقعات"
             },
             "behaviors": {
               "name": "رویے"
             },
-            "loops": {
-              "name": "لوپس"
+            "comments": {
+              "name": "تبصرے"
             },
-            "variables": {
-              "name": "متغیرات"
+            "events": {
+              "name": "ایونٹس/واقعات"
             },
-            "math": {
-              "name": "ریاضی"
+            "location": {
+              "name": "مقامات"
             },
             "logic": {
               "name": "منطق"
             },
+            "loops": {
+              "name": "لوپس"
+            },
+            "math": {
+              "name": "ریاضی"
+            },
             "text": {
               "name": "متن"
             },
-            "comments": {
-              "name": "تبصرے"
+            "variables": {
+              "name": "متغیرات"
+            },
+            "world": {
+              "name": "دنیا"
             }
           }
         },
-        "javalab": {
-          "name": "جاوا لیب"
+        "weblab": {
+          "name": "ویب لیب"
         }
       }
     }

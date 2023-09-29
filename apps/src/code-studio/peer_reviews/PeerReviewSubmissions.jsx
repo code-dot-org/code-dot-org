@@ -1,5 +1,5 @@
 import React from 'react';
-import {Button, FormControl} from 'react-bootstrap';
+import {Button, FormControl} from 'react-bootstrap'; // eslint-disable-line no-restricted-imports
 import PropTypes from 'prop-types';
 import _ from 'lodash';
 import Spinner from '../pd/components/spinner';

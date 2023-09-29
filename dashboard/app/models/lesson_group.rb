@@ -60,14 +60,7 @@ class LessonGroup < ApplicationRecord
     counters = Counters.new(0, 0, 0, 0)
 
     raw_lesson_groups&.map(&:deep_symbolize_keys)&.map do |raw_lesson_group|
-      if !raw_lesson_group[:user_facing]
-        lesson_group = LessonGroup.find_or_create_by!(
-          key: '',
-          script: script,
-          user_facing: false,
-          position: 1
-        )
-      else
+      if raw_lesson_group[:user_facing]
         LessonGroup.prevent_changing_plc_display_name(raw_lesson_group)
         LessonGroup.prevent_blank_display_name(raw_lesson_group)
         LessonGroup.prevent_changing_stable_i18n_key(script, raw_lesson_group)
@@ -89,6 +82,13 @@ class LessonGroup < ApplicationRecord
           }
         )
         lesson_group.save! if lesson_group.changed?
+      else
+        lesson_group = LessonGroup.find_or_create_by!(
+          key: '',
+          script: script,
+          user_facing: false,
+          position: 1
+        )
       end
 
       new_lessons =

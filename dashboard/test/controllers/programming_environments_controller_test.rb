@@ -116,8 +116,8 @@ class ProgrammingEnvironmentsControllerTest < ActionController::TestCase
     assert_response :ok
 
     programming_environment.reload
-    assert programming_environment.categories.include?(category_to_keep)
-    refute programming_environment.categories.include?(category_to_destroy)
+    assert_includes(programming_environment.categories, category_to_keep)
+    refute_includes(programming_environment.categories, category_to_destroy)
     assert_equal 2, programming_environment.categories.count
     assert_equal ['brand new category', category_to_keep.name], programming_environment.categories.map(&:name)
   end
@@ -159,8 +159,7 @@ class ProgrammingEnvironmentsControllerTest < ActionController::TestCase
 
     programming_environment = create :programming_environment, name: 'test-environment'
 
-    File.expects(:exist?).returns(true).once
-    File.expects(:delete).once
+    FileUtils.expects(:rm_f).once
     delete :destroy, params: {
       name: programming_environment.name
     }
@@ -173,8 +172,7 @@ class ProgrammingEnvironmentsControllerTest < ActionController::TestCase
 
     programming_environment = create :programming_environment, name: 'test-environment'
 
-    File.expects(:exist?).returns(true).once
-    File.expects(:delete).throws(StandardError).once
+    FileUtils.expects(:rm_f).throws(StandardError).once
     delete :destroy, params: {
       name: programming_environment.name
     }

@@ -12,7 +12,7 @@ import {DisplayTheme} from './DisplayTheme';
 import {makeEnum} from '@cdo/apps/utils';
 import JavalabDialog from './JavalabDialog';
 import {PaneButton} from '@cdo/apps/templates/PaneHeader';
-import CloseOnEscape from './components/CloseOnEscape';
+import CloseOnEscape from '@cdo/apps/templates/CloseOnEscape';
 import {BackpackAPIContext} from './BackpackAPIContext';
 
 const Dialog = makeEnum(

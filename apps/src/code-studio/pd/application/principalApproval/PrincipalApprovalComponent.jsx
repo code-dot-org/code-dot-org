@@ -1,6 +1,6 @@
 import React, {useState} from 'react';
 import PropTypes from 'prop-types';
-import {FormGroup, Row, Col, ControlLabel} from 'react-bootstrap';
+import {FormGroup, Row, Col, ControlLabel} from 'react-bootstrap'; // eslint-disable-line no-restricted-imports
 import {
   PageLabels,
   TextFields,

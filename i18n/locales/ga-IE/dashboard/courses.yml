@@ -67,19 +67,19 @@ ga:
         csd-2023:
           title: Fionnachtana sa Ríomheolaíocht
     resources:
-      curriculum/csd/2020:
-        name: Curaclam
-      teacher_forum/csd/2020:
-        name: Fóram do Mhúinteoirí
       curriculum/csd/2017:
         name: Curaclam
       teacher_forum_6/csd/2017:
+        name: Fóram do Mhúinteoirí
+      curriculum/csd/2018:
+        name: Curaclam
+      teacher_forum_6/csd/2018:
         name: Fóram do Mhúinteoirí
       curriculum/csd/2019:
         name: Curaclam
       teacher_forum/csd/2019:
         name: Fóram do Mhúinteoirí
-      curriculum/csd/2018:
+      curriculum/csd/2020:
         name: Curaclam
-      teacher_forum_6/csd/2018:
+      teacher_forum/csd/2020:
         name: Fóram do Mhúinteoirí

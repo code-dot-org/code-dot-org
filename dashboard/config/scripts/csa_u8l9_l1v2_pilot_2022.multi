@@ -37,3 +37,5 @@ public int mystery(int low, int high, int num) {
 
 What is returned by the call `mystery(0, data.length - 1, number)`?
 MARKDOWN
+
+allow_multiple_attempts true

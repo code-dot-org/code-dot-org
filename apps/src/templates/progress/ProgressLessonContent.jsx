@@ -3,7 +3,7 @@ import React from 'react';
 import ProgressLevelSet from './ProgressLevelSet';
 import ProgressBubbleSet from './ProgressBubbleSet';
 import {levelWithProgressType} from './progressTypes';
-import {progressionsFromLevels} from '@cdo/apps/code-studio/progressRedux';
+import {progressionsFromLevels} from '@cdo/apps/code-studio/progressReduxSelectors';
 import SafeMarkdown from '@cdo/apps/templates/SafeMarkdown';
 import i18n from '@cdo/locale';
 

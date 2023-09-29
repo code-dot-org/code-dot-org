@@ -2,32 +2,27 @@
   "hy-AM": {
     "data": {
       "course_offerings": {
-        "coursea": "Կուրս A",
-        "courseb": "Կուրս B",
-        "coursec": "Կուրս C",
-        "coursed": "Կուրս D",
-        "coursee": "Կուրս E",
-        "coursef": "Կուրս F",
-        "csp": "AP® Computer Science Principles",
         "20-hour": "Accelerated Intro to CS Course",
-        "flappy": "Flappy-ի կոդը",
-        "jigsaw": "ոլորահատ սղոց",
         "algebra": "Computer Science in Algebra",
         "artist": "Արտիստ",
         "course1": "Course 1",
         "course2": "Course 2",
         "course3": "Course 3",
         "course4": "Course 4",
+        "csp": "AP® Computer Science Principles",
+        "edit-code": "Խմբագրել Code",
+        "flappy": "Flappy-ի կոդը",
         "frozen": "Code with Anna and Elsa",
         "gumball": "Gumball Play Lab",
         "hourofcode": "Classic Maze",
         "iceage": "Ice Age Play Lab",
         "infinity": "Disney Infinity Play Lab",
+        "jigsaw": "ոլորահատ սղոց",
         "mc": "Minecraft Hour of Code",
         "playlab": "Play Lab",
-        "edit-code": "Խմբագրել Code",
-        "step": "step",
-        "soccer": "ֆուտբոլ"
+        "soccer": "ֆուտբոլ",
+        "starwars": "Star Wars: Building a Galaxy With Code (JavaScript)",
+        "step": "step"
       }
     }
   }

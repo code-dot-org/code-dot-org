@@ -1,7 +1,7 @@
 - content_for :body_scripts do
   - poems = {}
-  - poetry_poems = @level.class.poems_for_subtype('poetry_hoc')
-  - time_capsule_poems =  @level.class.poems_for_subtype('time_capsule')
+  - poetry_poems = @level.class.poems_for_standalone_app('poetry_hoc')
+  - time_capsule_poems =  @level.class.poems_for_standalone_app('time_capsule')
   - script_data = { poems: {poetry_hoc: poetry_poems, time_capsule: time_capsule_poems}.to_json }
   %script{src: webpack_asset_path('js/levels/editors/fields/_poetry_fields.js'), data: script_data}
 
@@ -18,7 +18,7 @@
 
   #defaultPoem{class: ('collapse' if @level.standalone_app_name == 'poetry')}
     = f.label :default_poem, 'Default Poem'
-    = f.select :default_poem, options_for_select(@level.class.poems_for_subtype(@level.standalone_app_name), @level.default_poem)
+    = f.select :default_poem, options_for_select(@level.class.poems_for_standalone_app(@level.standalone_app_name), @level.default_poem)
 
     = f.label :available_poems, 'Available Poems'
     %p If you would like to customize the available poems in the level, select poems here. Otherwise, all poems will be available.
@@ -28,4 +28,4 @@
       \/
       %a.select_none{href: '#'} no
       (shift-click or cmd-click to select multiple).
-    = f.select :available_poems, (@level.class.poems_for_subtype(@level.standalone_app_name)), {}, {multiple: true}
+    = f.select :available_poems, (@level.class.poems_for_standalone_app(@level.standalone_app_name)), {}, {multiple: true}

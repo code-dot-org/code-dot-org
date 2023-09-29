@@ -1,4 +1,3 @@
-/* global dashboard */
 import $ from 'jquery';
 import * as api from './api';
 import dontMarshalApi from '../dontMarshalApi';
@@ -118,6 +117,12 @@ export var blocks = [
     params: ['"id"', '"text"'],
   },
   {
+    func: 'textArea',
+    parent: api,
+    category: 'UI controls',
+    params: ['"id"', '"text"'],
+  },
+  {
     func: 'dropdown',
     parent: api,
     category: 'UI controls',
@@ -175,6 +180,13 @@ export var blocks = [
     paletteParams: ['id', 'checked'],
     params: ['"id"', 'false', '"group"'],
     dropdown: {1: ['true', 'false']},
+  },
+  {
+    func: 'slider',
+    parent: api,
+    category: 'UI controls',
+
+    params: ['"id"', '0', '100', '50', '1'],
   },
   {
     func: 'getChecked',

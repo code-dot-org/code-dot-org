@@ -50,9 +50,6 @@ bg:
       expired: "е изтекъл, моля поискайте нов"
       not_found: "не е намерен"
       not_locked: "не е заключен"
-      not_saved:
-        one: "1 грешка забранява записването на този %{resource}:"
-        other: "%{count} грешки забраняват записването на този %{resource} :"
     invitations:
       send_instructions: 'Имейл покана е изпратен до %{email}.'
       invitation_token_invalid: 'Подаден е сигнал, че поканата не е валидна!'

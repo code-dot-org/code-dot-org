@@ -1,5 +1,3 @@
-/* global dashboard */
-
 import PropTypes from 'prop-types';
 import React from 'react';
 import {connect} from 'react-redux';
@@ -24,6 +22,7 @@ import QRCode from 'qrcode.react';
 import copyToClipboard from '@cdo/apps/util/copyToClipboard';
 import FontAwesome from '@cdo/apps/templates/FontAwesome';
 import Button from '../../templates/Button';
+import defaultThumbnail from '@cdo/static/projects/project_default.png';
 
 function recordShare(type) {
   if (!window.dashboard) {
@@ -208,7 +207,7 @@ class ShareAllowedDialog extends React.Component {
     const hasThumbnail = !!this.props.thumbnailUrl;
     const thumbnailUrl = hasThumbnail
       ? this.props.thumbnailUrl
-      : '/blockly/media/projects/project_default.png';
+      : defaultThumbnail;
 
     const facebookShareUrl =
       'https://www.facebook.com/sharer/sharer.php?u=' +
@@ -308,7 +307,6 @@ class ShareAllowedDialog extends React.Component {
                   </div>
                   <div>
                     <Button
-                      type="primary"
                       color={Button.ButtonColor.brandSecondaryDefault}
                       id="sharing-dialog-copy-button"
                       icon="clipboard"
@@ -389,6 +387,7 @@ class ShareAllowedDialog extends React.Component {
                             onClickPopup.bind(this),
                             'facebook'
                           )}
+                          style={styles.socialLink}
                         >
                           <FontAwesome icon="facebook" />
                         </a>
@@ -402,6 +401,7 @@ class ShareAllowedDialog extends React.Component {
                             onClickPopup.bind(this),
                             'twitter'
                           )}
+                          style={styles.socialLink}
                         >
                           <FontAwesome icon="twitter" />
                         </a>
@@ -508,8 +508,10 @@ const styles = {
     paddingBottom: 12.5,
     paddingLeft: 10,
     paddingRight: 10,
-    margin: 0,
-    marginRight: 8,
+    marginTop: 0,
+    marginRight: 16,
+    marginBottom: 0,
+    marginLeft: 0,
     verticalAlign: 'top',
   },
   buttonDisabled: {
@@ -519,14 +521,19 @@ const styles = {
     paddingBottom: 12.5,
     paddingLeft: 10,
     paddingRight: 5,
-    margin: 0,
+    marginTop: 0,
     marginRight: 8,
+    marginBottom: 0,
+    marginLeft: 0,
     verticalAlign: 'top',
   },
   copyButton: {
     paddingTop: 12.5,
     paddingBottom: 12.5,
-    margin: 0,
+    marginLeft: 0,
+    marginBottom: 0,
+    marginTop: 0,
+    marginRight: 16,
     fontSize: 'large',
   },
   copyButtonLight: {
@@ -534,7 +541,7 @@ const styles = {
   },
   thumbnail: {
     float: 'left',
-    marginRight: 12,
+    marginRight: 16,
     width: 125,
     height: 125,
     overflow: 'hidden',
@@ -563,7 +570,7 @@ const styles = {
   },
   sendToPhoneButton: {
     margin: 0,
-    marginRight: 12,
+    marginRight: 16,
     fontSize: 'large',
     padding: '0 16px',
     paddingRight: 6,
@@ -584,13 +591,16 @@ const styles = {
     float: 'right',
     width: '30%',
   },
+  socialLink: {
+    marginRight: 16,
+  },
 };
 
 export const UnconnectedShareAllowedDialog = ShareAllowedDialog;
 
 export default connect(
   state => ({
-    exportApp: state.pageConstants.exportApp,
+    exportApp: state.pageConstants?.exportApp,
     isOpen: state.shareDialog.isOpen,
     isUnpublishPending: state.shareDialog.isUnpublishPending,
     inRestrictedShareMode: state.project.inRestrictedShareMode,

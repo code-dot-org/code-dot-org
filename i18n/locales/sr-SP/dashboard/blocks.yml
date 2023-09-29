@@ -5,19 +5,11 @@ sr:
       BadGuys_setSizeAll_dropdown:
         options:
           SIZE:
-            '0.50': extra small
-            '0.75': small
             '1.00': средње
-            '2.00': large
-            '3.00': extra large
       BadGuys_setSize_dropdown:
         options:
           SIZE:
-            '0.50': extra small
-            '0.75': small
             '1.00': средње
-            '2.00': large
-            '3.00': extra large
       Dancelab_alternateMoves:
         options:
           GROUP:
@@ -235,10 +227,6 @@ sr:
         options:
           SPEED:
             '1': нормално
-            '2': fast
-            '4': very fast
-            '0.5': slow
-            '0.25': very slow
       Dancelab_setDanceSpeedEach:
         options:
           GROUP:
@@ -255,10 +243,6 @@ sr:
             '"SHARK"': ајкуле
           SPEED:
             '1': нормално
-            '2': fast
-            '4': very fast
-            '0.5': slow
-            '0.25': very slow
       Dancelab_setForegroundEffect:
         options:
           EFFECT: {}
@@ -517,9 +501,7 @@ sr:
       gamelab_makeSpritesWithSize:
         options:
           SIZE:
-            '30': small
             '50': средње
-            '100': large
       gamelab_mirrorSprite:
         options:
           DIRECTION:
@@ -551,10 +533,7 @@ sr:
       gamelab_setDefaultSpriteSize:
         options:
           SIZE:
-            '25': extra small
-            '50': small
             '75': средње
-            '100': large
       gamelab_setProp:
         options:
           PROPERTY:
@@ -565,10 +544,7 @@ sr:
           PROPERTY:
             '"scale"': величина
           SIZE:
-            '25': extra small
-            '50': small
             '75': средње
-            '100': large
       gamelab_setSizes:
         options:
           PROPERTY:
@@ -578,11 +554,7 @@ sr:
       gamelab_setSpeed_dropdown:
         options:
           SIZE:
-            '1': extra slow
-            '3': slow
             '5': нормално
-            '7': fast
-            '9': extra fast
       gamelab_spriteClicked:
         options:
           CONDITION:
@@ -781,16 +753,10 @@ sr:
         options:
           PORTION:
             '1': све
-            '0.75': most
-            '0.5': half of
-            '0.25': few
       aalab_someStartIntervention:
         options:
           PORTION:
             '1': све
-            '0.75': most
-            '0.5': half of
-            '0.25': few
       binary_move:
         options:
           DIR:

@@ -5,34 +5,9 @@ description 'description here'
 markdown <<MARKDOWN
 # About Code.org
 
-<div style="background-color: #a6e3e8; border-radius: 40px; color: #000000; width: 95%; padding: 1px 20px 1px 20px;">
-
-<p style="line-height: 1.5; margin-left: 10px; margin-right: 10px; margin-top: 10px; margin-bottom: 10px; font-size: 18px; ">Code.org is a nonprofit dedicated to expanding access to computer science in schools and increasing participation by young women and students from other underrepresented groups. Our vision is that every student in every school has the opportunity to learn computer science as part of their core K-12 education.
-</p>
-</div>
-
-## Over 70 million students and 2 million teachers on Code.org
-
-<img src="https://images.code.org/fba984e40049c335ff81edd7a4b2a6de-image-1656085390114.42.03 AM.png" alt="Donut charts representing Code.org participation. Female or Gender-Expansive: 45%; Underrrepresented racial/ethnic groups: 50%; Students qualifying for free and reduced-price lunch: 46%; "  style = "height: 300px; clear: both; margin: 0 20px 20px 0;">
+> <img src="https://images.code.org/d7b27d5c36fea4bfa38e9415bd712d0e-image-1667244505864.png" alt="code.org logo" style="float: left; height: 50px; clear: both; margin: 0 20px 20px 0;"> Code.org® is an education innovation nonprofit dedicated to the vision that every student in every school has the opportunity to learn computer science as part of their core K-12 education.
 
 
-<h5 style="text-align: center;">Code.org participation from the 2020-2021 school year. <a href="https://code.org/promote/diversitydata" target="blank" >See disaggregated data</a>.</h5>
-
-##### Code.org increases diversity in computer science by reaching students of all backgrounds where they are — at their skill-level, in their schools, and in ways that inspire them to keep learning. The vast majority of the students on Code.org are from student groups historically underrepresented in computer science. Increasing diversity in computer science is foundational to our work, and <a href="https://code.org/diversity" target="blank" rel="noopener noreferrer">we encourage you to read more about our efforts</a>.
-<br>
-
-> ##**Curriculum Value:** Equity
-> #####**We believe that acknowledging and shining a light on the historical inequities within the field of computer science is critical to reaching our goal of bringing computer science to all students.** We provide tools and strategies to help teachers understand and address well-known equity gaps within the field. We recognize that some students and classrooms need more supports than others, and so those with the greatest needs should be prioritized. **All students can succeed in computer science when given the right supports and opportunities, regardless of prior knowledge or privilege.** We actively seek to eliminate and discredit stereotypes that plague computer science and lead to attrition of the very students we aim to reach.
-
-## Our commitment to accessibility
-
-##### Code.org believes computer science is **foundational for all students** and we are committed to equity, access, and opportunity in our organizational <a href="https://code.org/about/values" target="blank" rel="noopener noreferrer" >values</a>. To achieve this goal, we work to identify and eliminate barriers that prevent the inclusion and full participation of students and educators with disabilities. To learn more about our efforts, see our <a href="https://code.org/accessibility" target="blank" >accessibility statement</a>.
-
-
-
-## Our commitment to free curriculum and open source technology
-
-##### All curriculum resources and tutorials we author will forever be free to use and openly licensed under a <a href="https://creativecommons.org/licenses/by-nc-sa/4.0/" target="blank" rel="noopener noreferrer" >Creative Commons license</a> allowing others to make derivative education resources for non-commercial purposes. Our courses are translated for worldwide use or by speakers of different languages. Our technology is developed as an open source project.
-
+<img src="https://images.code.org/3a07b49d015947e790915158e646acef-image-1686852606095.09.19 AM.png" alt="text" style="padding-left:40px; height: 265px; clear: both; margin: 0 20px 20px 0;">
 
 MARKDOWN

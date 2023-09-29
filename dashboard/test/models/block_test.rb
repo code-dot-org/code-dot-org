@@ -74,7 +74,7 @@ class BlockTest < ActiveSupport::TestCase
     block.name = block.name + '_the_great'
     block.save
 
-    assert Block.for(block.pool).any? {|b| b[:name] == block.name}
+    assert(Block.for(block.pool).any? {|b| b[:name] == block.name})
     refute File.exist? old_file_path
     refute File.exist? old_js_path
   end
@@ -94,7 +94,7 @@ class BlockTest < ActiveSupport::TestCase
   end
 
   test 'always includes blocks from the default pool' do
-    assert Block.for.any? {|b| b[:pool] == Block::DEFAULT_POOL}
+    assert(Block.for.any? {|b| b[:pool] == Block::DEFAULT_POOL})
   end
 
   test 'file_path works for unmodified and modified blocks' do

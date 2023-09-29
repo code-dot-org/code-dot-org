@@ -1,5 +1,10 @@
 <Gamelab>
   <config><![CDATA[{
+  "published": true,
+  "game_id": 50,
+  "created_at": "2022-09-19T22:52:12.000Z",
+  "level_num": "custom",
+  "user_id": 106,
   "properties": {
     "skin": "gamelab",
     "code_functions": {
@@ -13,7 +18,7 @@
     "long_instructions": "<img src=\"https://images.code.org/45d1d513f5ed63592e98ea3e4a08840c-image-1520403109680.11.28 PM.png\" style=\"float:right;height:150px\">\r\n\r\n# Debug - Using 4 Parameters\r\n\r\nNow that the grass is working, let's add a cloud to the sky. Unfortunately, it looks a little funny right now.\r\n\r\n# Do This\r\n\r\n1) Debug this program to make the cloud wider than it is tall, like in the image.\r\n\t- Hint: You'll need to change two parameters. Which ones set your cloud's width and height?\r\n\r\n",
     "instructions_important": "false",
     "hide_share_and_remix": "false",
-    "start_blocks": "// Draw sky\r\nbackground(\"skyblue\");\r\n\r\n// Draw sun\r\nfill(\"yellow\");\r\nellipse(300,50,50,50);\r\n\r\n// Draw grass\r\nfill(\"green\");\r\nrect(0,300,400,100);\r\n\r\n// Draw cloud\r\nfill(\"white\");\r\nellipse(150,100,100,200);",
+    "start_blocks": "//1) Debug this program to make the cloud wider than it is tall, like in the image.\r\n\r\n// Draw sky\r\nbackground(\"skyblue\");\r\n\r\n// Draw sun\r\nfill(\"yellow\");\r\nellipse(300,50,50,50);\r\n\r\n// Draw grass\r\nfill(\"green\");\r\nrect(0,300,400,100);\r\n\r\n// Draw cloud\r\nfill(\"white\");\r\nellipse(150,100,100,200);",
     "is_k1": "false",
     "skip_instructions_popup": "false",
     "never_autoplay_video": "false",
@@ -64,13 +69,8 @@
     "libraries_enabled": "false",
     "preload_asset_list": null
   },
-  "game_id": 50,
-  "published": true,
-  "created_at": "2022-09-19T22:52:12.000Z",
-  "level_num": "custom",
-  "user_id": 106,
   "notes": "",
-  "audit_log": "[{\"changed_at\":\"2022-09-19T22:52:12.978+00:00\",\"changed\":[\"cloned from \\\"CSD U3 Random Debug Cloud_2022\\\"\"],\"cloned_from\":\"CSD U3 Random Debug Cloud_2022\"},{\"changed_at\":\"2022-10-12 19:04:49 +0000\",\"changed\":[\"code_functions\",\"long_instructions\",\"free_play\",\"encrypted_examples\",\"preload_asset_list\",\"contained_level_names\"],\"changed_by_id\":14639,\"changed_by_email\":\"dan+teacher@code.org\"}]"
+  "audit_log": "[{\"changed_at\":\"2022-09-19T22:52:12.978+00:00\",\"changed\":[\"cloned from \\\"CSD U3 Random Debug Cloud_2022\\\"\"],\"cloned_from\":\"CSD U3 Random Debug Cloud_2022\"},{\"changed_at\":\"2022-10-12 19:04:49 +0000\",\"changed\":[\"code_functions\",\"long_instructions\",\"free_play\",\"encrypted_examples\",\"preload_asset_list\",\"contained_level_names\"],\"changed_by_id\":14639,\"changed_by_email\":\"dan+teacher@code.org\"},{\"changed_at\":\"2023-07-18 16:19:09 +0000\",\"changed\":[\"code_functions\",\"start_blocks\",\"encrypted_examples\",\"preload_asset_list\",\"contained_level_names\"],\"changed_by_id\":18602,\"changed_by_email\":\"angelina+levelbuilder@code.org\"}]"
 }]]></config>
   <blocks/>
 </Gamelab>

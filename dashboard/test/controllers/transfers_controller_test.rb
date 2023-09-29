@@ -61,7 +61,7 @@ class TransfersControllerTest < ActionController::TestCase
     post :create, params: @params
     assert_response :not_found
     assert_equal(
-      "Sorry, but section #{NONEXISTENT_SECTION_CODE} does not exist. Please "\
+      "Sorry, but section #{NONEXISTENT_SECTION_CODE} does not exist. Please " \
         "enter a different section code.",
       json_response["error"]
     )
@@ -97,7 +97,7 @@ class TransfersControllerTest < ActionController::TestCase
     post :create, params: @params
     assert_response :not_found
     assert_equal(
-      "Sorry, but section #{NONEXISTENT_SECTION_CODE} does not exist. Please "\
+      "Sorry, but section #{NONEXISTENT_SECTION_CODE} does not exist. Please " \
         "enter a different section code.",
       json_response["error"]
     )
@@ -224,7 +224,7 @@ class TransfersControllerTest < ActionController::TestCase
 
     assert_response :not_found
     assert_equal(
-      "Sorry, but section #{@other_teacher_section.code} does not exist. "\
+      "Sorry, but section #{@other_teacher_section.code} does not exist. " \
         "Please enter a different section code.",
       json_response['error']
     )

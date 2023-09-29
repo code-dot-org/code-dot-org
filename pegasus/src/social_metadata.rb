@@ -13,6 +13,8 @@
 #   code.org/maker
 #   code.org/blockchain
 #   code.org/ai
+#   code.org/ai/pl/101
+#   code.org/ai/how-ai-works
 #
 #   hourofcode.com/
 #   hourofcode.com/learn
@@ -42,6 +44,7 @@ def get_social_metadata_for_page(request)
     dance_2018: {path: "/images/social-media/dance-social-2018.png", width: 1200, height: 630},
     dance_2019: {path: "/images/social-media/dance-social-2019.png", width: 1200, height: 630},
     dance_2022: {path: "/images/social-media/dance-social-2022.png", width: 1200, height: 630},
+    dance_2023: {path: "/images/social-media/dance-social-2023-spring.png", width: 1200, height: 630},
     hoc_thanks: {path: "/images/hourofcode-2015-video-thumbnail.png", width: 1440, height: 900},
     hoc_2019_social: {path: "/shared/images/social-media/hoc2019_social.png", width: 1200, height: 630},
     oceans: {path: "/shared/images/social-media/oceans_social.png", width: 1200, height: 630},
@@ -56,6 +59,9 @@ def get_social_metadata_for_page(request)
     maker_physical_computing: {path: "/shared/images/social-media/maker_social.png", width: 1200, height: 630},
     blockchain: {path: "/shared/images/social-media/blockchain-social.png", width: 1200, height: 630},
     ai: {path: "/shared/images/social-media/ai-social.png", width: 1200, height: 630},
+    ai_101: {path: "/shared/images/social-media/ai-101-social.png", width: 1200, height: 630},
+    ai_how_ai_works: {path: "/shared/images/social-media/ai-how-ai-works-social.png", width: 1200, height: 630},
+    hoc_2023_social: {path: "/shared/images/social-media/hoc2023_social.png", width: 1200, height: 630},
   }
 
   # Important:
@@ -71,9 +77,9 @@ def get_social_metadata_for_page(request)
     },
     "hourofcode.com" => {
       "default" => {
-        title: hoc_s(:social_hoc_anybody),
-        description: hoc_s(:social_hoc2022_explore_play_create),
-        image: images[:hoc_2022_social]
+        title: hoc_s(:hoc2023_social_creativity_with_ai_title),
+        description: hoc_s(:hoc2023_social_creativity_with_ai_desc),
+        image: images[:hoc_2023_social]
       }
     },
     "challenge" => {
@@ -125,8 +131,8 @@ def get_social_metadata_for_page(request)
     "dance" => {
       "default" => {
         title: hoc_s(:social_hoc2018_dance_party),
-        description: hoc_s(:social_hoc2022_dance),
-        image: images[:dance_2022]
+        description: hoc_s(:social_hoc2023_dance),
+        image: images[:dance_2023]
       }
     },
     "oceans" => {
@@ -199,6 +205,20 @@ def get_social_metadata_for_page(request)
         image: images[:ai]
       }
     },
+    "ai_101" => {
+      "default" => {
+        title: hoc_s(:ai_pl_101_hero_heading),
+        description: hoc_s(:ai_pl_101_hero_desc),
+        image: images[:ai_101]
+      }
+    },
+    "ai_how_ai_works" => {
+      "default" => {
+        title: hoc_s(:how_ai_works_hero_heading),
+        description: hoc_s(:how_ai_works_hero_desc),
+        image: images[:ai_how_ai_works]
+      }
+    },
   }
 
   if request.path == "/challenge" && request.site == "code.org"
@@ -231,6 +251,10 @@ def get_social_metadata_for_page(request)
     page = "blockchain"
   elsif request.path == "/ai" && request.site == "code.org"
     page = "ai"
+  elsif request.path == "/ai/pl/101" && request.site == "code.org"
+    page = "ai_101"
+  elsif request.path == "/ai/how-ai-works" && request.site == "code.org"
+    page = "ai_how_ai_works"
   else
     return {}
   end

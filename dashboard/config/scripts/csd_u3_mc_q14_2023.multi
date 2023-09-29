@@ -17,3 +17,5 @@ Consider the following program. What is the value of `score` at the end of this 
 <br><br>
 ![](https://images.code.org/b5b627075db961b5cd56afe9447153d4-CSDunit3variable.png)
 MARKDOWN
+
+allow_multiple_attempts true

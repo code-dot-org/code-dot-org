@@ -16,8 +16,8 @@ module Cdo::CloudFormation
     def js(filename, uglify: true, max: ZIPFILE_MAX)
       str =
         if uglify
-          RakeUtils.npm_install
-          `$(npm bin)/uglifyjs --compress --mangle -- #{filename}`
+          RakeUtils.yarn_install
+          `npx uglifyjs --compress --mangle -- #{filename}`
         else
           File.read(filename)
         end
@@ -65,7 +65,7 @@ module Cdo::CloudFormation
     # Zip an array of JS files (along with the `node_modules` folder), and upload to S3.
     def js_zip(files)
       Dir.chdir(aws_dir('cloudformation')) do
-        RakeUtils.npm_install '--production'
+        RakeUtils.yarn_install '--production'
       end
       lambda_zip(*files, 'node_modules', key_prefix: 'lambdajs')
     end
@@ -80,7 +80,7 @@ module Cdo::CloudFormation
 
     # Helper function to call a Lambda-function-based AWS::CloudFormation::CustomResource.
     # Ref: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-cfn-customresource.html
-    def lambda_fn(function_name, properties={})
+    def lambda_fn(function_name, properties = {})
       custom_type = properties.delete(:CustomType)
       depends_on = properties.delete(:DependsOn)
       custom_resource = {

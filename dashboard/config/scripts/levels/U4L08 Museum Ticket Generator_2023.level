@@ -1,5 +1,10 @@
 <Applab>
   <config><![CDATA[{
+  "published": true,
+  "game_id": 41,
+  "created_at": "2022-10-19T18:18:21.000Z",
+  "level_num": "custom",
+  "user_id": 106,
   "properties": {
     "skin": "applab",
     "code_functions": {
@@ -61,19 +66,14 @@
     "encrypted": "false",
     "libraries_enabled": "false",
     "widget_mode": "false",
-    "long_instructions": "Build the Museum Ticket Generator app, using your activity guide to help you plan. When you're done, submit your work.\r\n\r\n:::details [**☑️ Checklist Rubric**]\r\n<br>\r\n\r\n\r\n| Category                      | Checklist Item(s)                                                                                           |\r\n|-------------------------------|-------------------------------------------------------------------------------------------------------------|\r\n| **Input**                     | 🔲 onEvents are created for all required inputs.   <br> &nbsp                                                        |\r\n| **Storage: Variables**        | 🔲 Variables are created and appropriately used for all pieces of information in the app.           <br> &nbsp        |\r\n| **Processing: Conditional Logic** &nbsp| 🔲 The code correctly determines the price for all combinations of inputs (age, price, discount code).  <br> &nbsp  |\r\n| **Code: Output**              | 🔲 The screen correctly displays the day, age, and price of the ticket.   <br> &nbsp                                  |\r\n| **Code runs without errors.** | 🔲 No errors are present in the required code.         <br> &nbsp                                                    |\r\n| **Coding Comments**           | 🔲 Comments are used to correctly explain the purpose and function of all onEvents and conditional logic. <br> &nbsp |\r\n\r\n:::\r\n",
+    "long_instructions": "Build the Museum Ticket Generator app, using your activity guide to help you plan. When you're done, submit your work.\r\n\r\n:::details [**☑️ Checklist Rubric**]\r\n<br>\r\n\r\n\r\n| Category                      | Checklist Item(s)                                                                                           |\r\n|-------------------------------|-------------------------------------------------------------------------------------------------------------|\r\n| **Input**                     | &nbsp<br>🔲 onEvents are created for all required inputs.   <br> &nbsp                                                        |\r\n| **Storage: Variables**        | &nbsp<br>🔲 Variables are created and appropriately used for all pieces of information in the app.           <br> &nbsp        |\r\n| **Processing: Conditional Logic** &nbsp| &nbsp<br>🔲 The code correctly determines the price for all combinations of inputs (age, price, discount code).  <br> &nbsp  |\r\n| **Code: Output**              | &nbsp<br>🔲 The screen correctly displays the day, age, and price of the ticket.   <br> &nbsp                                  |\r\n| **Code runs without errors.** | &nbsp<br>🔲 No errors are present in the required code.         <br> &nbsp                                                    |\r\n| **Coding Comments**           | &nbsp<br>🔲 Comments are used to correctly explain the purpose and function of all onEvents and conditional logic. <br> &nbsp |\r\n\r\n:::\r\n",
     "encrypted_examples": "Zqs9pf7zb7jMJXqDz/VGomMBAZ0Qfq177fSjAwJJuCT0tMjgr/Yu5++YUMfv\nKD/3ageY4UcEe1K+6NkC0JNfPw==\n",
     "name_suffix": "_2023",
-    "preload_asset_list": null,
-    "ai_enabled": "false"
+    "ai_enabled": "false",
+    "preload_asset_list": null
   },
-  "game_id": 41,
-  "published": true,
-  "created_at": "2022-10-19T18:18:21.000Z",
-  "level_num": "custom",
-  "user_id": 106,
   "notes": "",
-  "audit_log": "[{\"changed_at\":\"2022-10-19T18:18:21.829+00:00\",\"changed\":[\"cloned from \\\"U4L08 Museum Ticket Generator2022\\\"\"],\"cloned_from\":\"U4L08 Museum Ticket Generator2022\"},{\"changed_at\":\"2023-04-03 23:16:34 +0000\",\"changed\":[\"code_functions\",\"makerlab_enabled\",\"long_instructions\",\"encrypted_examples\",\"preload_asset_list\",\"contained_level_names\"],\"changed_by_id\":1574,\"changed_by_email\":\"ken.akiha@code.org\"},{\"changed_at\":\"2023-04-03 23:35:13 +0000\",\"changed\":[\"code_functions\",\"long_instructions\",\"encrypted_examples\",\"preload_asset_list\"],\"changed_by_id\":1574,\"changed_by_email\":\"ken.akiha@code.org\"}]"
+  "audit_log": "[{\"changed_at\":\"2022-10-19T18:18:21.829+00:00\",\"changed\":[\"cloned from \\\"U4L08 Museum Ticket Generator2022\\\"\"],\"cloned_from\":\"U4L08 Museum Ticket Generator2022\"},{\"changed_at\":\"2023-04-03 23:16:34 +0000\",\"changed\":[\"code_functions\",\"makerlab_enabled\",\"long_instructions\",\"encrypted_examples\",\"preload_asset_list\",\"contained_level_names\"],\"changed_by_id\":1574,\"changed_by_email\":\"ken.akiha@code.org\"},{\"changed_at\":\"2023-04-03 23:35:13 +0000\",\"changed\":[\"code_functions\",\"long_instructions\",\"encrypted_examples\",\"preload_asset_list\"],\"changed_by_id\":1574,\"changed_by_email\":\"ken.akiha@code.org\"},{\"changed_at\":\"2023-05-24 17:09:11 +0000\",\"changed\":[\"code_functions\",\"long_instructions\",\"encrypted_examples\",\"preload_asset_list\",\"contained_level_names\"],\"changed_by_id\":1574,\"changed_by_email\":\"ken.akiha@code.org\"}]"
 }]]></config>
   <blocks/>
 </Applab>

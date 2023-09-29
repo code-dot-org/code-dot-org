@@ -39,7 +39,7 @@ module Cdo
         raise "Unknown property not in defaults: #{key}" unless defaults.key?(key.to_sym)
       end
       raise "'#{rack_env}' is not known environment." unless rack_envs.include?(rack_env)
-      freeze
+      freeze_config
     end
 
     def shared_cache
@@ -103,7 +103,7 @@ module Cdo
     def site_host(domain)
       host = canonical_hostname(domain)
       if (rack_env?(:development) && !https_development) ||
-        (ENV['CI'] && host.include?('localhost'))
+          (ENV['CI'] && host.include?('localhost'))
         port = ['studio.code.org'].include?(domain) ? dashboard_port : pegasus_port
         host += ":#{port}"
       end
@@ -172,6 +172,15 @@ module Cdo
         http_url = DCDO.get("javabuilder_http_url", 'https://javabuilder-http.code.org')
         http_url + "/seedsources/sources.json"
       end
+    end
+
+    def javabuilder_demo_url(path = '', scheme = '')
+      DCDO.get("javabuilder_demo_websocket_url", 'wss://javabuilder-demo.code.org')
+    end
+
+    def javabuilder_demo_upload_url(path = '', scheme = '')
+      http_url = DCDO.get("javabuilder_demo_http_url", 'https://javabuilder-demo-http.code.org')
+      http_url + "/seedsources/sources.json"
     end
 
     # Get a list of all languages for which we want to link to a localized
@@ -270,7 +279,7 @@ module Cdo
       @@log ||= Logger.new(STDOUT).tap do |l|
         l.level = Logger::INFO
         l.formatter = proc do |severity, _, _, msg|
-          "#{severity != 'INFO' ? "#{severity}: " : ''}#{msg}\n"
+          "#{severity == 'INFO' ? '' : "#{severity}: "}#{msg}\n"
         end
       end
     end
@@ -313,4 +322,4 @@ module Cdo
     end
   end
 end
-CDO ||= Cdo::Impl.instance
+CDO = Cdo::Impl.instance

@@ -6,8 +6,8 @@
   font-size: 30px;
   font-family: 'Gotham 7r', sans-serif;
   line-height: 1.2em;
-  background-color: #7665a0;
-  color: white;
+  background-color: var(--neutral_dark70);
+  color: var(--neutral_white);
   height: auto;
   width: 100%;
   padding-top: 12px;
@@ -26,7 +26,7 @@
 }
 
 .solid-block-subtitle {
-  color: white;
+  color: var(--neutral_white);
   font-size: 16px;
   font-family: 'Gotham 4r', sans-serif;
 }
@@ -396,7 +396,7 @@
   margin: 10px 10px 0 0;
 }
 .share-buttons button i {
-  padding-right: .5em;
+  margin-right: .5em;
 }
 
 button {
@@ -405,8 +405,8 @@ button {
 
 a.link-button {
   display: inline-block;
-  color: white;
-  background-color: #ffa400;
+  color: var(--neutral_white);
+  background-color: var(--brand_secondary_default);
   border-radius: 4px;
   padding: 6px 12px;
   font-size: 14px;
@@ -416,7 +416,7 @@ a.link-button {
 
 #map .mapboxgl-popup-close-button {
   margin-top: 0px;
-  background-color: #ffa400;
+  background-color: var(--brand_secondary_default);
 }
 
 /* Promote page */
@@ -426,9 +426,6 @@ a.link-button {
 #promote-page .section {
   clear: both;
   margin: 0 0 20px 0;
-}
-#promote-page h2 {
-  margin-bottom: 10px;
 }
 #promote-page .main-video {
   float: left;
@@ -541,8 +538,8 @@ a.link-button {
 
 .impact-stats-link {
   width: 100%;
-  color: white;
-  background-color: #7665a0;
+  color: var(--neutral_white);
+  background-color: var(--neutral_dark80);
   margin-top: 20px;
   margin-bottom: 20px;
   overflow: hidden;
@@ -663,7 +660,7 @@ a.link-button {
 }
 
 .user_menu, .create_menu { /* copied from dashboard's .header-button */
-  color: white;
+  color: var(--neutral_white);
   display: inline-block;
   background-color: #ffa400;
   background-color: transparent;

@@ -20,3 +20,5 @@ teacher_markdown <<MARKDOWN
 
 The first parameter of `rect()` is the x-location. By increasing the x-location to `100`, the rectangle will be further right.
 MARKDOWN
+
+allow_multiple_attempts true

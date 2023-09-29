@@ -39,3 +39,5 @@ To test the `else if` branch, we would want a value that would cause `x % 3 == 0
 
 To test the `else` branch, we would want a value that would cause `x % 3 == 0` to evaluate to `false` and `x < 10` to evaluate to `false`. We could use the value `11` for `x` to achieve this.
 MARKDOWN
+
+allow_multiple_attempts true

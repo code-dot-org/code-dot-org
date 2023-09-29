@@ -10,11 +10,11 @@ et:
         mike-test:
           title: Arvutiteaduse alused
     resources:
-      curriculum/csd/2020:
-        name: Õppekava
       curriculum/csd/2017:
+        name: Õppekava
+      curriculum/csd/2018:
         name: Õppekava
       curriculum/csd/2019:
         name: Õppekava
-      curriculum/csd/2018:
+      curriculum/csd/2020:
         name: Õppekava

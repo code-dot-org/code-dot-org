@@ -31,6 +31,7 @@ class SectionLoginInfo extends React.Component {
     section: PropTypes.shape({
       id: PropTypes.number.isRequired,
       loginType: PropTypes.string.isRequired,
+      code: PropTypes.string,
     }).isRequired,
     students: PropTypes.array.isRequired,
   };
@@ -61,8 +62,6 @@ class SectionLoginInfo extends React.Component {
         {section.loginType === SectionLoginType.email && (
           <EmailLogins
             studioUrlPrefix={studioUrlPrefix}
-            // TODO: define this prop
-            // eslint-disable-next-line react/prop-types
             sectionCode={section.code}
             sectionId={section.id}
           />
@@ -226,6 +225,11 @@ class WordOrPictureLogins extends React.Component {
 
   render() {
     const {studioUrlPrefix, section, students} = this.props;
+    // Filter out any users who are teachers, used below to generate picture
+    // login cards.
+    const studentsOnly = students.filter(
+      student => student.userType !== 'teacher'
+    );
     const manageStudentsUrl = getManageStudentsUrl(section.id);
 
     return (
@@ -272,7 +276,7 @@ class WordOrPictureLogins extends React.Component {
             />
             <br />
             <div id="printArea" style={styles.container}>
-              {students.map(student => (
+              {studentsOnly.map(student => (
                 <LoginCard
                   key={student.id}
                   section={section}

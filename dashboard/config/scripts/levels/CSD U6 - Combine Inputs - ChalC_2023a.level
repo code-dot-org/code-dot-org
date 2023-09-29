@@ -1,5 +1,6 @@
 <Applab>
   <config><![CDATA[{
+  "published": true,
   "game_id": 41,
   "created_at": "2023-03-17T17:01:46.000Z",
   "level_num": "custom",
@@ -95,7 +96,8 @@
       "/courses/csd-2022/guides/circuit-playground",
       "/courses/csd-2022/guides/color-lights",
       "/courses/csd-2022/guides/producing-output",
-      "/courses/csd-2022/guides/board-events"
+      "/courses/csd-2022/guides/board-events",
+      "/maker/setup"
     ],
     "display_name": "Trivia Game",
     "thumbnail_url": "https://images.code.org/748787fbb11a6679c5ae1a526e978b56-image-1650060250380.png",
@@ -105,9 +107,8 @@
     "encrypted_examples": "o8QokOys8leCfc6dAa5G4EKp7dbvWpacRyGRbGUTIehHGoeblHl+RiKljstY\nyV+WufU+3Hk+FF9uDlCRRE+vtg==\n",
     "preload_asset_list": null
   },
-  "published": true,
   "notes": "",
-  "audit_log": "[{\"changed_at\":\"2023-03-17T17:01:46.820+00:00\",\"changed\":[\"cloned from \\\"CSD U6 - Combine Inputs - ChalC_2222\\\"\"],\"cloned_from\":\"CSD U6 - Combine Inputs - ChalC_2222\"}]"
+  "audit_log": "[{\"changed_at\":\"2023-03-17T17:01:46.820+00:00\",\"changed\":[\"cloned from \\\"CSD U6 - Combine Inputs - ChalC_2222\\\"\"],\"cloned_from\":\"CSD U6 - Combine Inputs - ChalC_2222\"},{\"changed_at\":\"2023-08-16 18:58:55 +0000\",\"changed\":[\"code_functions\",\"reference_links\",\"encrypted_examples\",\"preload_asset_list\",\"contained_level_names\"],\"changed_by_id\":14639,\"changed_by_email\":\"dan+teacher@code.org\"}]"
 }]]></config>
   <blocks/>
 </Applab>

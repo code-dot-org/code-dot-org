@@ -53,7 +53,7 @@ export default class LessonExtras extends React.Component {
             href={nextLevelPath}
             text={nextMessage}
             size={Button.ButtonSize.large}
-            color={Button.ButtonColor.orange}
+            color={Button.ButtonColor.brandSecondaryDefault}
             style={styles.button}
           />
         </div>

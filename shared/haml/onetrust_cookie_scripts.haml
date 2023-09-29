@@ -1,6 +1,6 @@
 - require '../shared/middleware/helpers/experiments'
 -# OneTrust Cookies Consent Notice scripts for code.org
-- cookie_script_env = experiment_value('onetrust_cookie_scripts')
+- cookie_script_env = experiment_value('onetrust_cookie_scripts', request)
 - if cookie_script_env == 'off'
   return
 - elsif cookie_script_env == 'test'

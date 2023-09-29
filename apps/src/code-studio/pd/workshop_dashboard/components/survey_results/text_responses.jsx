@@ -1,6 +1,6 @@
 import PropTypes from 'prop-types';
 import React from 'react';
-import {Well} from 'react-bootstrap';
+import {Well} from 'react-bootstrap'; // eslint-disable-line no-restricted-imports
 import _ from 'lodash';
 import he from 'he';
 

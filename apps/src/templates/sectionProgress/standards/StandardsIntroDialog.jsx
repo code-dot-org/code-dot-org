@@ -81,7 +81,7 @@ class StandardsIntroDialog extends Component {
             __useDeprecatedTag
             text={i18n.gotIt()}
             onClick={this.dismissStandardsDialog}
-            color={Button.ButtonColor.orange}
+            color={Button.ButtonColor.brandSecondaryDefault}
             className="uitest-standards-intro-button"
             disabled={this.state.pending}
             isPending={this.state.pending}

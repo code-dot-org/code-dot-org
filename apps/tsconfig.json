@@ -1,4 +1,12 @@
 {
+  "include": [
+    "./src/**/*.ts",
+    "./src/**/*.tsx",
+    "./test/**/*.ts",
+    "./test/**/*.tsx",
+    "./src/**/*.js",
+    "./src/**/*.jsx",
+  ],
   "compilerOptions": {
     "jsx": "react",
     "target": "es5",
@@ -12,6 +20,11 @@
     "forceConsistentCasingInFileNames": true,
     "strict": true,
     "skipDefaultLibCheck": true,
-    "skipLibCheck": true
+    "skipLibCheck": true,
+    "allowJs": true,
+    "baseUrl": "./",
+    "paths": {
+      "@cdo/apps/*": ["./src/*"]
+    }
   }
 }

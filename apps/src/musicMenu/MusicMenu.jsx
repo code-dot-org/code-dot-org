@@ -1,4 +1,5 @@
 import React from 'react';
+import {LOCAL_STORAGE, REMOTE_STORAGE} from '../music/constants';
 
 const baseUrl = window.location.origin + '/musiclab';
 
@@ -64,25 +65,38 @@ const optionsList = [
     ],
   },
   {
-    name: 'load-progression',
+    name: 'storage-type',
     type: 'radio',
     values: [
-      {value: 'false', description: "Don't load a progression."},
-      {value: 'true', description: 'Load a progression'},
+      {value: LOCAL_STORAGE, description: 'Save to local storage.'},
+      {value: REMOTE_STORAGE, description: 'Save to remote storage (default).'},
     ],
   },
   {
-    name: 'local-progression',
-    type: 'radio',
-    values: [
-      {value: 'false', description: 'Use online progression file.'},
-      {value: 'true', description: 'Use local progression file.'},
-    ],
-  },
-  {
-    name: 'progression',
+    name: 'BPM',
     type: 'string',
-    description: 'Use a specific progression file.',
+    description: 'Set a specific BPM',
+  },
+  {
+    name: 'key',
+    type: 'string',
+    description: 'Set a specific key by name (i.e. "C", "C#", "D", etc)',
+  },
+  {
+    name: 'skip-controls-enabled',
+    type: 'radio',
+    values: [
+      {value: 'false', description: 'Disable skip controls.'},
+      {value: 'true', description: 'Enable skip controls.'},
+    ],
+  },
+  {
+    name: 'keyboard-shortcuts-enabled',
+    type: 'radio',
+    values: [
+      {value: 'false', description: 'Disable keyboard shortcuts.'},
+      {value: 'true', description: 'Enable keyboard shortcuts.'},
+    ],
   },
 ];
 

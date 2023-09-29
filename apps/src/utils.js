@@ -950,3 +950,11 @@ export function isTestEnvironment() {
 export function isProductionEnvironment() {
   return getEnvironment() === Environments.production;
 }
+
+/**
+ * Fetch cookies signed by cloudfront which grant access to restricted content.
+ * @returns {Promise<Response>}
+ */
+export function fetchSignedCookies() {
+  return fetch('/dashboardapi/sign_cookies', {credentials: 'same-origin'});
+}

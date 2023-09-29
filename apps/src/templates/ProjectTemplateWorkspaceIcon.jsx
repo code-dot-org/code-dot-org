@@ -21,6 +21,7 @@ export default class ProjectTemplateWorkspaceIcon extends React.Component {
           data-tip
           data-for={this.tooltipId}
           aria-describedby={this.tooltipId}
+          alt={msg.workspaceProjectTemplateLevel()}
         />
         <ReactTooltip
           id={this.tooltipId}

@@ -53,6 +53,7 @@ tr:
         gender: 'Cinsiyet'
         edit_header: 'Hesap Bilgilerini Düzenle'
         finish_sign_up_header: 'Hesabınızı oluşturmayı bitirin'
+        finish_sign_up_header_error: 'Lütfen aşağıdaki hataları düzeltiniz:'
         finish_sign_up_subheader: ' <strong>%{email}</strong> için bir Code.org hesabı oluşturmayı tamamlamak için sıradaki bilgileri doldurunuz.'
         finish_sign_up_subheader_markdown: '**%{email}** için bir Code.org hesabı oluşturmayı tamamlamak için sıradaki bilgileri doldurunuz.'
         finish_sign_up_subheader_provider: '<strong>%{email}</strong> için <strong>%{provider}</strong> ile bir Code.org hesabı oluşturmayı tamamlamak üzere aşağıdaki bilgileri doldurun.'
@@ -60,6 +61,8 @@ tr:
         reset_password_token: "Takip ettiğiniz şifre sıfırlama bağlantısı"
         error:
           future: gelecekte olması mümkün değil
+        user_type: 'Hesap Türü'
+        us_state: 'Eyalet'
   beta: "beta"
   hello: "Merhaba dünya"
   welcome_back: "Hoş geldiniz %{name}"
@@ -69,6 +72,7 @@ tr:
   unsubmit: Gönderini gerial
   previous_page: Önceki Sayfa
   next_page: Sonraki Sayfa
+  next_level: Sonraki Seviye
   next_resource: Sonraki Kaynak
   done_with_module: Bu Öğrenme Modülü tamamlandı
   cancel: "İptal"
@@ -172,7 +176,6 @@ tr:
     data_collection_us: "Code.org, kâr amacı gütmeyen, ABD merkezli bir web sitesi olup ABD'nin veri toplama için geçerli kanunlarının, ülkemdeki kanunlardan farklı olabileceğini anlıyorum."
     visit_privacy: 'Daha fazla bilgi için Code.org''un [Gizlilik Politikasını](%{privacy_url}) ziyaret edin.'
     student_terms_markdown: "Öğrenci elektronik postaları öğrencilerle iletişim kurmamıza izin verecek bir formda saklanmıyor. Öğrenciler şifrelerini tekrar almak dışında asla Code.org'dan elektronik posta almazlar. Daha fazla bilgi için [Güvenlik politikamıza](http://code.org/privacy) bakınız."
-    additional_information: "Giriş işleminize devam edebilmek için ek bilgilere ihtiyaç duymaktayız."
     user_type_button: "Hesap Türünü Güncelle"
     user_type_label: "Hesap Türü"
     user_type_student: "öğrenci"
@@ -200,6 +203,7 @@ tr:
     parent_account_checkbox: "Çocuğum adına kayıt olan bir ebeveyn/veliyim"
     parent_account_email_progress_permission: "Size ara sıra çocuğunuzun gelişimi ve projeleriyle ilgili güncellemeler ve kursu ve bilgisayar bilimi hakkında güncellemeler gönderebilir miyiz? [(Gizlilik politikamıza bakın)](%{privacy_policy_url})"
     parent_account_email_label: "Ebeveyn/Veli E-postası"
+    us_state: 'Eyalet'
   school_info:
     title: 'Okul bilgileri (isteğe bağlı)'
     school_country: 'Okulun bulunduğu ülke'
@@ -1187,6 +1191,7 @@ tr:
         csf_express: 'Bilgisayar Bilimleri Temelleri (Hızlandırma Öncesi veya Hızlandırılmış)'
         csd: 'Bilgisayar Bilimi Keşifleri'
         csp: 'BB (Bilgisayar Bilimleri) İlkeleri'
+        other: 'Diğer'
         not_applicable: "Uygulanamaz"
       email_opt_in:
         opt_in_yes: 'Evet'
@@ -1282,3 +1287,4 @@ tr:
     binary: "İkili"
     hexadecimal: "Onaltılık"
     pixel_format_header: "Piksel Biçimi"
+

@@ -2,6 +2,28 @@
 bg:
   data:
     blocks:
+      AmysBlocks_addTarget:
+        options:
+          OPT:
+            '"follows"': следва
+            '"avoids"': избягва
+      AmysBlocks_goldilocks:
+        text: |2-
+           ако{CONDITION}{SPRITE}
+          {STATEMENT}
+        options:
+          CONDITION:
+            '"too much"': твърде много
+            '"just right"': точно
+            '"too little"': твърде малко
+      AmysBlocks_goldilocksElse:
+        text: |2-
+           ако твърде много{SPRITE}
+          {STATEMENT}иначе ако точно
+          {STATEMENT3}иначе ако твърде малко
+          {STATEMENT2}
+      AmysBlocks_makeNumSprites:
+        text: направи {NUM} нови {ANIMATION_NAME} Спрайт а {LOCATION}
       AmysBlocks_playerBehaviors:
         text: "{BEHAVIOR}"
       AmysBlocks_spriteSayVar:
@@ -189,14 +211,18 @@ bg:
             MOVES.XClapSide: Плесни
             MOVES.ClapHigh: Пляскай високо
             MOVES.Dab: Бучица
+            MOVES.XFever: Диско
             MOVES.DoubleJam: Двойно почукване
             MOVES.Drop: Капка
             MOVES.Floss: Памук
             MOVES.Fresh: Пресен
             MOVES.Clown: Клоун
+            MOVES.XHeadHips: Глава + Бедра
             MOVES.XHop: Скочи
             MOVES.XHighKick: Ритник
             MOVES.XKnee: Коляно
+            MOVES.XKneel: Коленичи
+            MOVES.XOle: Оле
             MOVES.XArmsSide: Достигни
             MOVES.XSlide: Плъзни се
             MOVES.Kick: Ритник
@@ -214,14 +240,18 @@ bg:
             MOVES.XClapSide: Плесни
             MOVES.ClapHigh: Пляскай високо
             MOVES.Dab: Бучица
+            MOVES.XFever: Диско
             MOVES.DoubleJam: Двойно почукване
             MOVES.Drop: Капка
             MOVES.Floss: Памук
             MOVES.Fresh: Пресен
             MOVES.Clown: Клоун
+            MOVES.XHeadHips: Глава + Бедра
             MOVES.XHop: Скочи
             MOVES.XHighKick: Ритник
             MOVES.XKnee: Коляно
+            MOVES.XKneel: Коленичи
+            MOVES.XOle: Оле
             MOVES.XArmsSide: Достигни
             MOVES.XSlide: Плъзни се
             MOVES.Kick: Ритник
@@ -248,6 +278,7 @@ bg:
         options:
           RANGE:
             '"low"': бас
+            '"mid"': среда
             '"high"': сопрано
       Dancelab_getProp:
         text: "{SPRITE} {PROPERTY}"
@@ -309,6 +340,7 @@ bg:
             "{x: 300, y: 300}": долу вдясно
             "{x: randomNumber(50, 350), y: randomNumber(50, 350)}": случаен
       Dancelab_jumpToEach:
+        text: скочи {GROUP} до {LOCATION}
         options:
           GROUP:
             sprites: всички
@@ -336,6 +368,7 @@ bg:
             "{x: 300, y: 300}": долу вдясно
             "{x: randomNumber(60, 340), y: randomNumber(60, 340)}": случаен
       Dancelab_layoutSprites:
+        text: подредба {GROUP} като {FORMAT}
         options:
           GROUP:
             sprites: всички
@@ -523,6 +556,7 @@ bg:
             '"diamonds"': Диаманти
             '"disco_ball"': Диско Топка
             '"fireworks"': Фойерверки
+            '"swirl"': Хипно
             '"kaleidoscope"': Калейдоскоп
             '"lasers"': Лазерен Дансинг
             '"rainbow"': Дъга
@@ -559,6 +593,7 @@ bg:
             '"fireworks"': Фойерверки
             '"flowers"': Цветя
             '"growing_stars"': Порастващи Звезди
+            '"swirl"': Хипно
             '"kaleidoscope"': Калейдоскоп
             '"lasers"': Лазерен Дансинг
             '"rainbow"': Дъга
@@ -616,11 +651,14 @@ bg:
             '0.5': бавно
             '0.25': много бавно
       Dancelab_setForegroundEffect:
+        text: задай ефект на преден план {EFFECT}
         options:
           EFFECT:
             '"none"': Без
             '"bubbles"': Балончета
             '"confetti"': Конфети
+            '"hearts_red"': Сърца
+            '"music_notes"': Музикални Ноти
             '"pineapples"': Ананаси
             '"pizzas"': Пици
             '"smiling_poop"': Ако
@@ -631,6 +669,7 @@ bg:
             '"color_lights"': Сценични Лампи
             '"raining_tacos"': Такос
       Dancelab_setForegroundEffectExtended:
+        text: задай ефект на преден план {EFFECT}
         options:
           EFFECT:
             '"none"': Без
@@ -639,6 +678,8 @@ bg:
             '"hearts_colorful"': Цветни Сърца
             '"confetti"': Конфети
             '"emojis"': Емотикони
+            '"hearts_red"': Сърца
+            '"music_notes"': Музикални Ноти
             '"pineapples"': Ананаси
             '"pizzas"': Пици
             '"smiling_poop"': Ако
@@ -719,7 +760,10 @@ bg:
             '"x"': хоризонтално положение
             '"y"': вертикално положение
             '"tint"': оттенък
+      Dancelab_setTint:
+        text: задай нюанса на {SPRITE} на {VAL}
       Dancelab_setTintEach:
+        text: задай нюанса на {THIS} на {VAL}
         options:
           THIS:
             sprites: всички
@@ -736,6 +780,7 @@ bg:
             '"SLOTH"': ленивци
             '"UNICORN"': еднорози
       Dancelab_setTintEachInline:
+        text: задай нюанса на {THIS} на {VAL}
         options:
           THIS:
             sprites: всички
@@ -751,6 +796,8 @@ bg:
             '"SHARK"': акули
             '"SLOTH"': ленивци
             '"UNICORN"': еднорози
+      Dancelab_setTintInline:
+        text: задай нюанса на {SPRITE} на {VAL}
       Dancelab_setVisible:
         text: задай видимостта на {SPRITE} към {VISIBILITY}
         options:
@@ -758,6 +805,7 @@ bg:
             'true': видим
             'false': невидим
       Dancelab_setVisibleEach:
+        text: задай видимостта на {THIS} на {VISIBILITY}
         options:
           THIS:
             sprites: всички
@@ -777,6 +825,7 @@ bg:
             'true': видим
             'false': невидим
       Dancelab_startMapping:
+        text: "{SPRITE} започва {PROPERTY} да следва {RANGE}"
         options:
           PROPERTY:
             '"scale"': размер
@@ -788,8 +837,10 @@ bg:
             '"tint"': оттенък
           RANGE:
             '"bass"': бас
+            '"mid"': среда
             '"treble"': сопрано
       Dancelab_startMappingEach:
+        text: "{GROUP} започва {PROPERTY} да следва {RANGE}"
         options:
           GROUP:
             sprites: всички
@@ -815,8 +866,10 @@ bg:
             '"tint"': оттенък
           RANGE:
             '"bass"': бас
+            '"mid"': среда
             '"treble"': сопрано
       Dancelab_stopMapping:
+        text: "{SPRITE} спира {PROPERTY} да следва {RANGE}"
         options:
           PROPERTY:
             '"scale"': размер
@@ -829,8 +882,10 @@ bg:
             '"tint"': оттенък
           RANGE:
             '"bass"': бас
+            '"mid"': среда
             '"treble"': сопрано
       Dancelab_stopMappingEach:
+        text: "{GROUP} спри {PROPERTY} да следваш {RANGE}"
         options:
           GROUP:
             sprites: всички
@@ -857,8 +912,10 @@ bg:
             '"tint"': оттенък
           RANGE:
             '"bass"': бас
+            '"mid"': среда
             '"treble"': сопрано
       Dancelab_translateStrings:
+        text: преведи {STRING}
         options:
           STRING:
             '"music_wave"': Вълни
@@ -866,14 +923,17 @@ bg:
             '"ripples_random"': Слуачйни Вълни
             '"quads"': Ъгли
             '"flowers"': Цветя
+            '"popsicles"': Близалки
             '"squiggles"': Драскулки
             '"growing_stars"': Порастващи Звезди
             '"emojis"': Емотикони
+            '"hearts_colorful"': Сърца
             '"row_top"': най-горен ред
             '"row_bottom"': най-долен ред
             '"column_left"': лява колона
             '"column_right"': дясна колона
             '"diamond"': диамант
+            '"mural"': Стенопис
             '"safari"': Сафари
             '"network"': Мрежа
             '"highway"': Магистрала
@@ -943,10 +1003,11 @@ bg:
             '"8"': '8'
             '"9"': '9'
       Dancelab_whenPeak:
+        text: когато {RANGE} пик
         options:
           RANGE:
             '0': бас
-            '1': mid
+            '1': среда
             '2': сопрано
       Dancelab_whenSetupSong:
         options:
@@ -954,6 +1015,13 @@ bg:
             '"macklemore90"': Macklemore - Can't Hold Us
             '"hammer"': MC Hammer - U Can't Touch This
             '"peas"': The Black Eyed Peas - I Got a Feeling
+      DansBlocks_getMicroscope:
+        text: Микроскоп има {INPUT1}
+        options:
+          INPUT1:
+            '1': лимонов сок
+            '3': сода за хляб
+            '5': и двете
       DansBlocks_setForegroundEffect2:
         text: направи {EFFECT} ефект
         options:
@@ -964,6 +1032,37 @@ bg:
             '"emojis"': щастливи емоджита
             '"rain"': дъжд
             '"glass"': счупено стъкло
+      DansBlocks_setMicroscope:
+        text: Задай Микроскоп на {INPUT1}
+        options:
+          INPUT1:
+            '1': лимонов сок
+            '3': сода за хляб
+            '5': и двете
+      DansBlocks_testRectangle:
+        text: 'направи правоъгълник x: {X} y: [Y][Y] ш: {W} в: {H} цвят: {COLOR}'
+      FunctionBlocks_addEightBlock:
+        text: добавиОсем
+      FunctionBlocks_addFiveBlock:
+        text: добавиПет
+      FunctionBlocks_addFourBlock:
+        text: добавиЧетири
+      FunctionBlocks_addNineBlock:
+        text: добавиДевет
+      FunctionBlocks_addOneBlock:
+        text: добавиЕдно
+      FunctionBlocks_addSevenBlock:
+        text: добавиСедем
+      FunctionBlocks_addSixBlock:
+        text: добавиШест
+      FunctionBlocks_addThreeBlock:
+        text: добавиТри
+      FunctionBlocks_addTwoBlock:
+        text: добавиДве
+      FunctionBlocks_communicate:
+        text: Комуникирай {VAR1} с {SPRITE1COSTUME}
+      FunctionBlocks_makeManipulative2:
+        text: направи {NUM} нови {ANIMATION_NAME} спрайта {BEHAVIOR}
       FunctionBlocks_spriteSayVar:
         text: "{SPRITE}казва{TEXT1}"
       gamelab_addBehaviorSimple:
@@ -1083,7 +1182,6 @@ bg:
         text: "{VALUE}"
         options:
           VALUE:
-            '1': '1'
             '2': '2'
             '3': '3'
             '4': '4'
@@ -1175,6 +1273,7 @@ bg:
             '"y"': 'y'
             '"z"': z
       gamelab_layoutSprites:
+        text: подредба {GROUP} като {FORMAT}
         options:
           FORMAT:
             '"border"': рамка
@@ -1352,6 +1451,7 @@ bg:
       gamelab_setBackground:
         text: задай цвят на фона {COLOR}
       gamelab_setBackgroundImage:
+        text: задай фон на {IMG}
         options:
           IMG:
             '"https://studio.code.org/blockly/media/skins/studio/background_cave.png"': пещера
@@ -1369,6 +1469,8 @@ bg:
             '"https://studio.code.org/blockly/media/skins/studio/background_underwater.png"': под вода
             '"https://studio.code.org/blockly/media/skins/studio/background_winter.png"': зима
             undefined: няма
+      gamelab_setBackgroundImageAs:
+        text: задай фон на {IMG}
       gamelab_setDefaultSpriteSize:
         options:
           SIZE:
@@ -1851,19 +1953,57 @@ bg:
         text: х координат на {SPRITE}
       Mikelab_yLocationOf:
         text: y координат на {SPRITE}
+      ParticlesBlocks_getMicroscope:
+        text: Микроскоп има {INPUT1}
+        options:
+          INPUT1:
+            '1': лимонов сок
+            '3': сода за хляб
+            '5': и двете
+      ParticlesBlocks_setMicroscope:
+        text: Задай Микроскоп на {INPUT1}
+        options:
+          INPUT1:
+            '1': лимонов сок
+            '3': сода за хляб
+            '5': и двете
       ParticlesBlocks_statesOfMatter:
         text: "{BEHAVIOR}"
+        options:
+          BEHAVIOR:
+            new Behavior(solid, []): твърдо
+            new Behavior(liquid, []): течно
+            new Behavior(wandering, []): газообразно
+      ParticlesBlocks_statesOfMatter2:
+        text: Задай {COSTUME} на {BEHAVIOR} поведение
+        options:
+          BEHAVIOR:
+            '"solid"': 'твърда частица '
+            '"liquid"': течна частица
+      ParticlesBlocks_statesOfMatter_testing:
+        options:
+          BEHAVIOR:
+            '"solid"': 'твърда частица '
+            '"liquid"': течна частица
       Poetry_addFrame:
         options:
           BRUSH:
+            '"bamboo"': бамбук
             '"brick"': тухла
+            '"decorative"': декоративно
+            '"donuts"': донъти
             '"fire"': пожар
             '"flowers"': цветя
             '"hearts"': сърца
+            '"iceCream"': сладолед
             '"leaves"': листа
+            '"metal"': метална рамка
+            '"pawPrints"': отпечатъци на лапи
             '"rainbow"': дъга
             '"stars"': звезди
             '"waves"': вълни
+            '"wood"': дървена рамка
+            '"zigzag"': зиг-заг
       Poetry_addLine:
         text: добави ред {LINE}
       Poetry_animateText:
@@ -1919,6 +2059,8 @@ bg:
             '"sound://category_jump/vibrant_game_jumping_up_1.mp3"': скок
             '"sound://category_achievements/lighthearted_bonus_objective_5.mp3"': светлина
             '"sound://category_poof/puzzle_game_poof_04.mp3"': пуф
+            '"sound://category_achievements/puzzle_game_achievement_big_03.mp3"': сканирай
+            '"sound://category_background/typewriter.mp3"': машинопис
             '"sound://category_achievements/peaceful_win_1.mp3"': победа
       Poetry_playSoundOptionsSpace:
         text: пускане на звук {SOUND}
@@ -1952,6 +2094,8 @@ bg:
             '"spring"': пролет
             '"summer"': лято
             '"winter"': зима
+      Poetry_setBackgroundImageAs:
+        text: задай фон на {IMG}
       Poetry_setFont:
         text: задай шрифт {FONT}
         options:
@@ -1972,8 +2116,23 @@ bg:
             '"emojis"': щастливи емоджита
             '"rain"': дъжд
             '"glass"': счупено стъкло
+      Poetry_setPrompt:
+        text: попитай потребител {LEFT_QUOTE}{NAME}{RIGHT_QUOTE} за променлива {VAR}
+      Poetry_setPromptWithChoices:
+        text: попитай потребител {LEFT_QUOTE}{TEXT}{RIGHT_QUOTE} за променлива {VAR} с избори {LEFT_QUOTE_A}{A}{RIGHT_QUOTE_A} {LEFT_QUOTE_B}{B}{RIGHT_QUOTE_B} {LEFT_QUOTE_C}{C}{RIGHT_QUOTE_C}
+      Poetry_setSize:
+        text: задай размера на {SPRITE} към {VAL}
       Poetry_setTextEffect:
         text: задай текстов ефект {EFFECT}
+        options:
+          EFFECT:
+            '"flyLeft"': влита отляво
+            '"flyRight"': влита отдясно
+            '"flyTop"': влита отгоре
+            '"flyBottom"': влита отдолу
+            '"typewriter"': машинопис
+      Poetry_setTitle:
+        text: задай заглавие {TITLE}
       Poetry_showText:
         text: покажи текст
       Poetry_startBehavior:
@@ -1990,6 +2149,7 @@ bg:
             '"wandering"': блуждаейки
             '"wobbling"': люлеене
       Poetry_stopBehavior:
+        text: 'спрайт {ANIMATION_NAME} спира {BEHAVIOR} '
         options:
           BEHAVIOR:
             '"fluttering"': пърхане
@@ -2001,6 +2161,9 @@ bg:
             '"swimming_left_and_right"': плуване
             '"wandering"': блуждаейки
             '"wobbling"': люлеене
+            '"all"': "--всички поведения--"
+      Poetry_stringValue:
+        text: "{LEFT_QUOTE}{TEXT}{RIGHT_QUOTE}"
       Poetry_textConcat:
         text: "{LEFT_QUOTE}{TEXT1}{TEXT2}{RIGHT_QUOTE}"
       Poetry_textVariableJoin:
@@ -2010,7 +2173,6 @@ bg:
         options:
           'N':
             '0': "???"
-            '1': '1'
             '2': '2'
             '3': '3'
             '4': '4'
@@ -2033,6 +2195,10 @@ bg:
         text: завий наляво
       RyanLab_turnRight:
         text: завий надясно
+      Vector_createSpriteWith:
+        text: |-
+          създай спрайт
+          прави{STATEMENT}
       Vector_positionCenter:
         text: център
       Vector_push:
@@ -2253,8 +2419,36 @@ bg:
           DIR:
             right: дясно ↻
             left: ляво ↺
+      ecosystems_goldilocks:
+        text: |2-
+           ако{CONDITION}{SPRITE}
+          {STATEMENT}
+        options:
+          CONDITION:
+            '"too much"': твърде много
+            '"just right"': точно
+            '"too little"': твърде малко
+      ecosystems_int10:
+        text: "{VALUE}"
+        options:
+          VALUE:
+            '2': '2'
+            '3': '3'
+            '4': '4'
+            '5': '5'
+            '6': '6'
+            '7': '7'
+            '8': '8'
+            '9': '9'
+            '10': '10'
+      ecosystems_randomLocationWithinRange:
+        text: х мин{X1}х макс{X2}y мин{Y1}y макс{Y2}
+      ecosystems_randomLocationWithinSelectedRange:
+        text: "{RANGE}"
       storylab_clearHeadings:
         text: изчисти заглавия
+      storylab_printText:
+        text: изпечатай {TEXT}
       storylab_setForegroundEffect2:
         text: направи {EFFECT} ефект
         options:
@@ -2265,5 +2459,7 @@ bg:
             '"rain"': дъжд
       storylab_setHeading:
         text: задай заглавие {HEADING}
+      storylab_setPromptWithChoice:
+        text: попитай потребител {QUESTION} за променлива {VAR} с избор {A}
       storylab_setSubheading:
         text: задай подзаглавие {SUBHEADING}

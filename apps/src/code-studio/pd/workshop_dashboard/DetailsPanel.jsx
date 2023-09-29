@@ -1,7 +1,7 @@
 import $ from 'jquery';
 import React from 'react';
 import PropTypes from 'prop-types';
-import {Row, Col, ButtonToolbar, Button} from 'react-bootstrap';
+import {Row, Col, ButtonToolbar, Button} from 'react-bootstrap'; // eslint-disable-line no-restricted-imports
 import ConfirmationDialog from '../components/confirmation_dialog';
 import WorkshopForm from './components/workshop_form';
 import WorkshopPanel from './WorkshopPanel';
@@ -26,6 +26,10 @@ export default class DetailsPanel extends React.Component {
 
   state = {
     showAdminEditConfirmation: false,
+  };
+
+  getToday = () => {
+    return new Date();
   };
 
   handleEditClick = () => {
@@ -61,7 +65,11 @@ export default class DetailsPanel extends React.Component {
       return (
         <WorkshopPanel header={header}>
           <div>
-            <WorkshopForm workshop={workshop} onSaved={onWorkshopSaved} />
+            <WorkshopForm
+              workshop={workshop}
+              onSaved={onWorkshopSaved}
+              today={this.getToday()}
+            />
           </div>
         </WorkshopPanel>
       );
@@ -76,7 +84,7 @@ export default class DetailsPanel extends React.Component {
     return (
       <WorkshopPanel header={header}>
         <div>
-          <WorkshopForm workshop={workshop} readOnly>
+          <WorkshopForm workshop={workshop} today={this.getToday()} readOnly>
             <Row>
               <Col sm={4}>
                 <ButtonToolbar>

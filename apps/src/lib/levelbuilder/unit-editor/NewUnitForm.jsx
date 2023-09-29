@@ -60,7 +60,6 @@ export default function NewUnitForm(props) {
           <option key={'single-unit'} value={'true'}>
             {'Single Unit'}
           </option>
-          ))}
         </select>
         <HelpTip>
           <p>

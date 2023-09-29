@@ -1,5 +1,10 @@
 <GamelabJr>
   <config><![CDATA[{
+  "published": true,
+  "game_id": 64,
+  "created_at": "2023-04-19T18:34:11.000Z",
+  "level_num": "custom",
+  "user_id": 1196,
   "properties": {
     "encrypted": "false",
     "skin": "gamelab",
@@ -22,7 +27,7 @@
     "use_modal_function_editor": "true",
     "embed": "false",
     "instructions_important": "false",
-    "long_instructions": "**Get the tour guide moving around the map! Assign a behavior.**\r\n- Behaviors are actions the sprite performs over and over, like an animation.\r\n- Make a sprite.\r\n- Add a <code style=\"color:black; background-color:#5ED5DD\">sprite begins moving with arrow keys</code> behavior block.\r\n- Click <code style=\"color:black; background-color:#FFBD46\">Run</code> and test it out by pressing your arrow keys.\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n",
+    "long_instructions": "**Get the tour guide moving around the map! Assign a behavior.**\r\n- Behaviors are actions the sprite performs over and over, like an animation.\r\n- Add a <code style=\"color:black; background-color:#D93F3F\">make new sprite at </code> block and choose from a variety of sprites.\r\n- Add a <code style=\"color:black; background-color:#5ED5DD\">sprite begins moving with arrow keys</code> behavior block.\r\n- Click <code style=\"color:black; background-color:#FFBD46\">Run</code> and test it out by pressing your arrow keys.\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n",
     "submittable": "false",
     "hide_share_and_remix": "true",
     "never_autoplay_video": "false",
@@ -47,12 +52,7 @@
     "short_instructions": "Get the tour guide moving around the map! Assign a behavior.",
     "preload_asset_list": null
   },
-  "game_id": 64,
-  "published": true,
-  "created_at": "2023-04-19T18:34:11.000Z",
-  "level_num": "custom",
-  "user_id": 1196,
-  "audit_log": "[{\"changed_at\":\"2023-04-19T18:34:11.712+00:00\",\"changed\":[\"cloned from \\\"csc_landmarks_behaviors_2023\\\"\"],\"cloned_from\":\"csc_landmarks_behaviors_2023\"},{\"changed_at\":\"2023-04-19 18:34:24 +0000\",\"changed\":[\"start_blocks\",\"toolbox_blocks\",\"encrypted_examples\",\"preload_asset_list\"],\"changed_by_id\":1157,\"changed_by_email\":\"sariah.bujanda@code.org\"},{\"changed_at\":\"2023-04-19 18:34:52 +0000\",\"changed\":[\"start_blocks\",\"toolbox_blocks\",\"encrypted_examples\",\"preload_asset_list\"],\"changed_by_id\":1157,\"changed_by_email\":\"sariah.bujanda@code.org\"},{\"changed_at\":\"2023-04-19 18:40:32 +0000\",\"changed\":[\"start_blocks\",\"toolbox_blocks\",\"long_instructions\",\"encrypted_examples\",\"preload_asset_list\"],\"changed_by_id\":1157,\"changed_by_email\":\"sariah.bujanda@code.org\"}]",
+  "audit_log": "[{\"changed_at\":\"2023-04-19T18:34:11.712+00:00\",\"changed\":[\"cloned from \\\"csc_landmarks_behaviors_2023\\\"\"],\"cloned_from\":\"csc_landmarks_behaviors_2023\"},{\"changed_at\":\"2023-04-19 18:34:24 +0000\",\"changed\":[\"start_blocks\",\"toolbox_blocks\",\"encrypted_examples\",\"preload_asset_list\"],\"changed_by_id\":1157,\"changed_by_email\":\"sariah.bujanda@code.org\"},{\"changed_at\":\"2023-04-19 18:34:52 +0000\",\"changed\":[\"start_blocks\",\"toolbox_blocks\",\"encrypted_examples\",\"preload_asset_list\"],\"changed_by_id\":1157,\"changed_by_email\":\"sariah.bujanda@code.org\"},{\"changed_at\":\"2023-04-19 18:40:32 +0000\",\"changed\":[\"start_blocks\",\"toolbox_blocks\",\"long_instructions\",\"encrypted_examples\",\"preload_asset_list\"],\"changed_by_id\":1157,\"changed_by_email\":\"sariah.bujanda@code.org\"},{\"changed_at\":\"2023-05-18 22:05:49 +0000\",\"changed\":[\"start_blocks\",\"toolbox_blocks\",\"long_instructions\",\"encrypted_examples\",\"preload_asset_list\",\"contained_level_names\"],\"changed_by_id\":1157,\"changed_by_email\":\"sariah.bujanda@code.org\"},{\"changed_at\":\"2023-05-18 22:08:02 +0000\",\"changed\":[\"start_blocks\",\"toolbox_blocks\",\"long_instructions\",\"encrypted_examples\",\"preload_asset_list\"],\"changed_by_id\":1157,\"changed_by_email\":\"sariah.bujanda@code.org\"},{\"changed_at\":\"2023-05-18 22:09:07 +0000\",\"changed\":[\"start_blocks\",\"toolbox_blocks\",\"long_instructions\",\"encrypted_examples\",\"preload_asset_list\"],\"changed_by_id\":1157,\"changed_by_email\":\"sariah.bujanda@code.org\"}]",
   "level_concept_difficulty": {
   }
 }]]></config>

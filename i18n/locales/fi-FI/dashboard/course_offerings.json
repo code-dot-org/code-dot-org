@@ -8,7 +8,6 @@
   "algebra": "Tietotekniikka algebrassa",
   "aquatic": "Minecraft: Merellinen matka",
   "artist": "Taiteilija",
-  "basketball": "Tee koripallopeli",
   "course1": "Kurssi 1",
   "course2": "Kurssi 2",
   "course3": "Kurssi 3",
@@ -25,6 +24,7 @@
   "minecraft": "Koodaustunti Minecraft Suunnittelija",
   "pixelation": "Pikselöityminen",
   "playlab": "Pelilabra",
+  "starwars": "Tähtien sota: Rakenna galaksi koodaten (JavaScript)",
   "edit-code": "Muokkaa koodia",
   "step": "askel",
   "soccer": "Jalkapallo"

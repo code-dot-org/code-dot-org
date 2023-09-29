@@ -1,4 +1,3 @@
-/*global dashboard*/
 /**
  * @file Redux module for new format for tracking project animations.
  */

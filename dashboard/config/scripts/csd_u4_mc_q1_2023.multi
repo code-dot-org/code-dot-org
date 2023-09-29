@@ -10,3 +10,5 @@ teacher_markdown <<MARKDOWN
 
 The target users are the ones most likely to use the app, not necessarily the people creating the app.
 MARKDOWN
+
+allow_multiple_attempts true

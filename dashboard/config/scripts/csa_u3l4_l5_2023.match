@@ -14,3 +14,4 @@ answer 'to increase a value by one'
 
 question 'decrement'
 answer 'to decrease a value by one'
+allow_multiple_attempts true

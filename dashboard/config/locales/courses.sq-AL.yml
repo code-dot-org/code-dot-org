@@ -3,16 +3,127 @@ sq:
   data:
     course:
       name:
+        csa-2022:
+          title: Shkenca Kompjuterike A ('22-'23)
+          version_title: "'22-'23"
+        csa-validation-pilot-2022:
+          version_title: "'22-'23"
+        csd-2020:
+          version_title: "'20-'21"
+        csd-2021:
+          version_title: "'21-'22"
+        csd-2022:
+          version_title: "'22-'23"
         csp-2017:
           assignment_family_title: Ap® Parimet e Shkencave Kompjuterike
         csp-2018:
           assignment_family_title: Ap® Parimet e Shkencave Kompjuterike
+        csp-2020:
+          version_title: "'20-'21"
+        csp-2021:
+          version_title: "'21-'22"
+        csp-2022:
+          version_title: "'22-'23"
+        focus-on-coding-2023:
+          title: Fokusimi në Kodim (CSD)
+        focus-on-creativity-2023:
+          title: Fokusimi në Kreativitet (CSD)
+          version_title: "'23-24"
+        focus-on-data-2023:
+          title: Fokusimi në të dhëna (CSD)
+        focus-on-design-with-purpose-2023:
+          title: Fokusimi në Dizajn me Qëllim (CSD)
+        focus-on-hardware-2023:
+          title: Fokusimi në Hardware (CSD)
+        focus-on-impact-in-society-2023:
+          title: Fokusimi në Ndikimin në Shoqëri (CSD)
+        self-paced-pl-csa-2022:
+          version_title: "'22-'23"
+        self-paced-pl-csa-2023:
+          version_title: '2023'
+        self-paced-pl-csd-2021:
+          version_title: "'21 - '22"
+        self-paced-pl-csd-2022:
+          version_title: "'22-'23"
+        self-paced-pl-csp-2021:
+          version_title: "'21-'22"
+        self-paced-pl-csp-2022:
+          version_title: "'22-'23"
+        vpl-csa-2023:
+          version_title: '2023'
+        vpl-csd-2023:
+          version_title: '2023'
+        vpl-csd-summer-pilot-ci-2022:
+          version_title: "'21-'22"
+        vpl-csp-2023:
+          version_title: '2023'
     resources:
-      curriculum/csd/2020:
-        name: Plani mësimor
+      all_code/csd/2021:
+        name: Të gjitha kodet
+      all_code_2/csd/2023:
+        name: Të gjitha kodet
+      all_code_5/csd/2022:
+        name: Të gjitha kodet
+      all_resources_1/csd/2021:
+        name: Të gjitha burimet
+      all_resources_2/csd/2023:
+        name: Të gjitha burimet
+      all_resources_7/csd/2022:
+        name: Të gjitha burimet
+      all_standards_1/csd/2021:
+        name: Të gjitha standardet
+      all_standards_2/csd/2023:
+        name: Të gjitha standardet
+      all_standards_7/csd/2022:
+        name: Të gjitha standardet
+      all_vocabulary_1/csd/2021:
+        name: Fjalori
+      all_vocabulary_2/csd/2023:
+        name: Fjalori
+      all_vocabulary_7/csd/2022:
+        name: Fjalori
+      csd_curriculum_guide/csd/2021:
+        name: Udhëzues për kurrikulën CSD
+      csd_curriculum_guide/csd/2022:
+        name: Udhëzues për kurrikulën CSD
+      csd_guide_to_debugging/csd/2021:
+        name: Udhëzues CSD për debugging
+      csd_guide_to_debugging/csd/2022:
+        name: Udhëzues CSD për debugging
+      csd_guide_to_differentiation/csd/2021:
+        name: Udhëzues CSD për diferencimin
+      csd_guide_to_differentiation/csd/2022:
+        name: Udhëzues CSD për diferencimin
+      csd_guide_to_differentiation_1/csd/2023:
+        name: Udhëzues CSD për diferencimin
+      csd_guide_to_using_resources/csd/2021:
+        name: Udhëzues CSD për përdorimin e burimeve
+      csd_guide_to_using_resources/csd/2022:
+        name: Udhëzues CSD për përdorimin e burimeve
+      csd_guide_to_using_resources_1/csd/2023:
+        name: Udhëzues CSD për përdorimin e burimeve
+      csd_implementation_guide/csd/2021:
+        name: Udhëzues për zbatimin e CSD
+      csd_implementation_guide/csd/2022:
+        name: Udhëzues për zbatimin e CSD
+        url: https://docs.google.com/document/d/1vLGKcHC46jE6zZozBTmExOKdKwl544s0tbCds1LSg1Q/preview
+      csd_implementation_guide_1/csd/2023:
+        name: Udhëzues për zbatimin e CSD
+      csd_programming_levels_guide/csd/2022:
+        name: Udhëzues për nivelet e programimit CSD
       curriculum/csd/2017:
-        name: Plani mësimor
-      curriculum/csd/2019:
         name: Plani mësimor
       curriculum/csd/2018:
         name: Plani mësimor
+      curriculum/csd/2019:
+        name: Plani mësimor
+      curriculum/csd/2020:
+        name: Plani mësimor
+      teacher_forum/csd/2019:
+        name: Forumi i mësimdhënësve
+      teacher_forum/csd/2020:
+        name: Forumi i mësimdhënësve
+      teacher_forum_6/csd/2017:
+        name: Forumi i mësimdhënësve
+      teacher_forum_6/csd/2018:
+        name: Forumi i mësimdhënësve

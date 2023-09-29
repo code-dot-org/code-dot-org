@@ -1,16 +1,15 @@
 import {BlockTypes} from '../blockTypes';
 import {
   DEFAULT_TRACK_NAME_EXTENSION,
-  DYNAMIC_TRIGGER_EXTENSION,
   EXTRA_SOUND_INPUT_PREFIX,
   FIELD_REST_DURATION_NAME,
   PLAY_MULTI_MUTATOR,
   PRIMARY_SOUND_INPUT_NAME,
   SOUND_VALUE_TYPE,
   TRACK_NAME_FIELD,
-  TRIGGER_FIELD,
 } from '../constants';
-import {fieldRestDurationDefinition} from '../fields';
+import {fieldRestDurationDefinition, fieldTriggerDefinition} from '../fields';
+import musicI18n from '../../locale';
 
 const getCurrentTrackId = ctx => {
   let block = ctx;
@@ -34,7 +33,7 @@ const getCurrentTrackId = ctx => {
 export const newTrackAtStart = {
   definition: {
     type: BlockTypes.NEW_TRACK_AT_START,
-    message0: 'new track %1',
+    message0: musicI18n.blockly_blockNewTrackAtStart({name: '%1'}),
     args0: [
       {
         type: 'field_input',
@@ -45,12 +44,12 @@ export const newTrackAtStart = {
     inputsInline: true,
     nextStatement: null,
     style: 'setup_blocks',
-    tooltip: 'new track',
+    tooltip: musicI18n.blockly_blockNewTrackAtStartTooltip(),
     helpUrl: '',
     extensions: [DEFAULT_TRACK_NAME_EXTENSION],
   },
   generator: ctx => {
-    return `MusicPlayer.createTrack("${ctx.id}", "${ctx.getFieldValue(
+    return `Sequencer.createTrack("${ctx.id}", "${ctx.getFieldValue(
       TRACK_NAME_FIELD
     )}", 1, true);\n`;
   },
@@ -59,7 +58,10 @@ export const newTrackAtStart = {
 export const newTrackAtMeasure = {
   definition: {
     type: BlockTypes.NEW_TRACK_AT_MEASURE,
-    message0: 'new track %1 at measure %2',
+    message0: musicI18n.blockly_blockNewTrackAtMeasure({
+      track: '%1',
+      measure: '%2',
+    }),
     args0: [
       {
         type: 'field_input',
@@ -74,12 +76,12 @@ export const newTrackAtMeasure = {
     inputsInline: true,
     nextStatement: null,
     style: 'setup_blocks',
-    tooltip: 'new track',
+    tooltip: musicI18n.blockly_blockNewTrackAtMeasureTooltip(),
     helpUrl: '',
     extensions: [DEFAULT_TRACK_NAME_EXTENSION],
   },
   generator: ctx => {
-    return `MusicPlayer.createTrack("${ctx.id}", "${ctx.getFieldValue(
+    return `Sequencer.createTrack("${ctx.id}", "${ctx.getFieldValue(
       TRACK_NAME_FIELD
     )}", ${Blockly.JavaScript.valueToCode(
       ctx,
@@ -92,27 +94,27 @@ export const newTrackAtMeasure = {
 export const newTrackOnTrigger = {
   definition: {
     type: BlockTypes.NEW_TRACK_ON_TRIGGER,
-    message0: 'new track %1 when %2 triggered',
+    message0: musicI18n.blockly_blockNewTrackOnTrigger({
+      track: '%1',
+      trigger: '%2',
+    }),
     args0: [
       {
         type: 'field_input',
         name: TRACK_NAME_FIELD,
         text: 'my track',
       },
-      {
-        type: 'input_dummy',
-        name: TRIGGER_FIELD,
-      },
+      fieldTriggerDefinition,
     ],
     inputsInline: true,
     nextStatement: null,
     style: 'event_blocks',
-    tooltip: 'new track',
+    tooltip: musicI18n.blockly_blockNewTrackOnTriggerTooltip(),
     helpUrl: '',
-    extensions: [DEFAULT_TRACK_NAME_EXTENSION, DYNAMIC_TRIGGER_EXTENSION],
+    extensions: [DEFAULT_TRACK_NAME_EXTENSION],
   },
   generator: ctx => {
-    return `MusicPlayer.createTrack("${
+    return `Sequencer.createTrack("${
       ctx.id
     }" + "--" + getTriggerCount(), "${ctx.getFieldValue(
       TRACK_NAME_FIELD
@@ -123,7 +125,7 @@ export const newTrackOnTrigger = {
 export const playSoundInTrack = {
   definition: {
     type: BlockTypes.PLAY_SOUND_IN_TRACK,
-    message0: 'play %1',
+    message0: musicI18n.blockly_blockPlaySound({sound: '%1'}),
     args0: [
       {
         type: 'input_value',
@@ -136,7 +138,7 @@ export const playSoundInTrack = {
     nextStatement: null,
     mutator: PLAY_MULTI_MUTATOR,
     style: 'lab_blocks',
-    tooltip: 'play sound',
+    tooltip: musicI18n.blockly_blockPlaySoundTooltip(),
     helpUrl: '',
   },
   generator: ctx => {
@@ -156,7 +158,7 @@ export const playSoundInTrack = {
         )}"`
       );
     }
-    return `MusicPlayer.addSoundsToTrack(${getCurrentTrackId(
+    return `Sequencer.addSoundsToTrack(${getCurrentTrackId(
       ctx
     )}, ${allSounds.join(',')});\n`;
   },
@@ -165,15 +167,16 @@ export const playSoundInTrack = {
 export const restInTrack = {
   definition: {
     type: BlockTypes.REST_IN_TRACK,
-    message0: 'rest for %1',
+    message0: musicI18n.blockly_blockRest({duration: '%1'}),
     args0: [fieldRestDurationDefinition],
     inputsInline: true,
     previousStatement: null,
     nextStatement: null,
     style: 'lab_blocks',
+    tooltip: musicI18n.blockly_blockRestTooltip(),
   },
   generator: ctx =>
-    `MusicPlayer.addRestToTrack(${getCurrentTrackId(ctx)}, ${ctx.getFieldValue(
+    `Sequencer.addRestToTrack(${getCurrentTrackId(ctx)}, ${ctx.getFieldValue(
       FIELD_REST_DURATION_NAME
     )});\n`,
 };

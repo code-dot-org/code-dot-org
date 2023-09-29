@@ -64,7 +64,7 @@ export default class GDPRDialog extends Component {
             __useDeprecatedTag
             text={i18n.gdprDialogYes()}
             onClick={this.handleYesClick}
-            color={Button.ButtonColor.orange}
+            color={Button.ButtonColor.brandSecondaryDefault}
             className="ui-test-gdpr-dialog-accept"
           />
         </DialogFooter>

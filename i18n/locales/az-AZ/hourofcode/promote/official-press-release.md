@@ -1,5 +1,5 @@
 ---
-title: Hour of Code Press Release for Elected Officials
+title: Seçilmiş Məmurlar üçün Kod Mətbuat Relizi Saatı
 ---
 
 {{ signup_button }}

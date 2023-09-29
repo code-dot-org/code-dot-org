@@ -48,16 +48,16 @@ module QuickAssignHelper
       data[curriculum_type].keys.each do |header|
         data[curriculum_type][header].sort_by! {|co| co[:display_name]}
       end
-      data[curriculum_type] = data[curriculum_type].sort.to_h
+      data[curriculum_type] = data[curriculum_type].sort {|(h1, _), (h2, _)| compare_headers(h1, h2)}.to_h
     end
 
     data
   end
 
-  # Helper function to compare headers so that "Favorites" is always first in the list
+  # Helper function to compare headers so that "Favorites" (hoc) and "Year Long" are always first
   def self.compare_headers(h1, h2)
-    return -1 if h1 == localized_header('favorites')
-    return 1 if h2 == localized_header('favorites')
+    return -1 if h1 == localized_header('favorites') || h1 == localized_header('year_long')
+    return 1 if h2 == localized_header('favorites') || h2 == localized_header('year_long')
     h1 <=> h2
   end
 

@@ -2,7 +2,7 @@
   <config><![CDATA[{
   "properties": {
     "encrypted": "false",
-    "long_instructions": "##Investigate and Modify\r\n\r\nGreen screens, also known as chroma key screens, are used in various fields to replace a solid green color with a different background image or video. These are commonly used in film and TV production to create special effects, by meteorologists in TV news to present weather reports, in photography to create composite images, or in gaming and virtual reality to create immersive experiences.\r\n\r\nExperiment with the program by making the following modifications, then run the program to observe the results.\r\n\r\n✅ **TO DO:** Look at the <code style=\"background-color: #ececec; color: black; font-weight: bold;\">chromakey()</code> method in the <code style=\"background-color: #ececec; color: black; font-weight: bold;\">ImageEditor</code> class. What does this method do?\r\n\r\nChange the condition in the <code style=\"background-color: #ececec; color: black; font-weight: bold;\">if</code> statement to the following:\r\n\r\n<pre style=\"background-color: #333333; color: white;\">\r\nif (toPixel.getGreen() > toPixel.getRed())\r\n</pre>\r\n\r\nHow does this change the functionality of the <code style=\"background-color: #ececec; color: black; font-weight: bold;\">chromakey()</code> method?\r\n\r\nTry experimenting with different conditions to explore how this impacts the way the <code style=\"background-color: #ececec; color: black; font-weight: bold;\">Pixel</code> objects in the image are modified.",
+    "long_instructions": "##Investigate and Modify\r\n\r\nGreen screens, also known as chroma key screens, are used in various fields to replace a solid green color with a different background image or video. These are commonly used in film and TV production to create special effects, by meteorologists in TV news to present weather reports, in photography to create composite images, or in gaming and virtual reality to create immersive experiences.\r\n\r\nExperiment with the program by making the following modifications, then run the program to observe the results.\r\n\r\n✅ **TO DO:** Look at the <code style=\"background-color: #ececec; color: black; font-weight: bold;\">replaceGreenBackground()</code> method in the <code style=\"background-color: #ececec; color: black; font-weight: bold;\">ChromaImage</code> class. What does this method do?\r\n\r\nChange the condition in the <code style=\"background-color: #ececec; color: black; font-weight: bold;\">if</code> statement to the following:\r\n\r\n<pre style=\"background-color: #333333; color: white;\">\r\nif (toPixel.getGreen() > toPixel.getRed())\r\n</pre>\r\n\r\nHow does this change the functionality of the <code style=\"background-color: #ececec; color: black; font-weight: bold;\">replaceGreenBackground()</code> method?\r\n\r\nTry calling the <code style=\"background-color: #ececec; color: black; font-weight: bold;\">replaceGreenBackground()</code> method using the <code style=\"background-color: #ececec; color: black; font-weight: bold;\">donuts</code> object and the <code style=\"background-color: #ececec; color: black; font-weight: bold;\">\"space.jpg\"</code> file in the <code style=\"background-color: #ececec; color: black; font-weight: bold;\">TheaterRunner</code> class.",
     "mini_rubric": "false",
     "submittable": "false",
     "hide_share_and_remix": "false",
@@ -14,16 +14,17 @@
         "tabOrder": 0
       }
     },
+    "project_template_level_name": "CSA U5L9-Manipulations PBT_2023",
     "encrypted_examples": [
 
     ],
-    "project_template_level_name": "CSA U5L9-Manipulations PBT_2023"
+    "teacher_markdown": "The <code style=\"background-color: #ececec; color: black; font-weight: bold;\">replaceGreenBackground()</code> method replaces the current pixel color with the color from another picture at the same row and column when the current pixel color is close to a specified color."
   },
   "game_id": 68,
   "published": true,
   "created_at": "2023-03-28T00:09:56.000Z",
   "level_num": "custom",
   "user_id": 16889,
-  "audit_log": "[{\"changed_at\":\"2023-03-28T00:09:56.553+00:00\",\"changed\":[\"cloned from \\\"CSA U5L7-L4_2023\\\"\"],\"cloned_from\":\"CSA U5L7-L4_2023\"},{\"changed_at\":\"2023-03-28 00:09:58 +0000\",\"changed\":[],\"changed_by_id\":16889,\"changed_by_email\":\"jamila+lb@code.org\"},{\"changed_at\":\"2023-04-21 20:36:07 +0000\",\"changed\":[\"long_instructions\",\"contained_level_names\"],\"changed_by_id\":16889,\"changed_by_email\":\"jamila+lb@code.org\"}]"
+  "audit_log": "[{\"changed_at\":\"2023-03-28T00:09:56.553+00:00\",\"changed\":[\"cloned from \\\"CSA U5L7-L4_2023\\\"\"],\"cloned_from\":\"CSA U5L7-L4_2023\"},{\"changed_at\":\"2023-03-28 00:09:58 +0000\",\"changed\":[],\"changed_by_id\":16889,\"changed_by_email\":\"jamila+lb@code.org\"},{\"changed_at\":\"2023-04-21 20:36:07 +0000\",\"changed\":[\"long_instructions\",\"contained_level_names\"],\"changed_by_id\":16889,\"changed_by_email\":\"jamila+lb@code.org\"},{\"changed_at\":\"2023-04-29 01:52:54 +0000\",\"changed\":[\"long_instructions\",\"contained_level_names\"],\"changed_by_id\":16889,\"changed_by_email\":\"jamila+lb@code.org\"}]"
 }]]></config>
 </Javalab>

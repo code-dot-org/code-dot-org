@@ -21,7 +21,7 @@ import QuickViewTable from './quick_view_table';
 import Spinner from '../components/spinner';
 import $ from 'jquery';
 import {getApplicationStatuses} from './constants';
-import {Button, FormGroup, ControlLabel, Row, Col} from 'react-bootstrap';
+import {Button, FormGroup, ControlLabel, Row, Col} from 'react-bootstrap'; // eslint-disable-line no-restricted-imports
 
 export class QuickView extends React.Component {
   static propTypes = {

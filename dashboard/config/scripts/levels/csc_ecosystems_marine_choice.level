@@ -1,5 +1,10 @@
 <GamelabJr>
   <config><![CDATA[{
+  "published": true,
+  "game_id": 64,
+  "created_at": "2023-03-01T22:49:42.000Z",
+  "level_num": "custom",
+  "user_id": 182,
   "properties": {
     "skin": "gamelab",
     "show_debug_watch": "true",
@@ -42,7 +47,7 @@
     "pause_animations_by_default": "false",
     "start_animations": "{\"orderedKeys\":[\"674b35fe-1d8b-494b-9b03-a4c5982337b8\",\"f29d8834-d71b-477d-8e28-a9a479a32d5b\",\"8572b2bf-9e54-4fd9-916d-3c1f1cdc0ff4\"],\"propsByKey\":{\"8572b2bf-9e54-4fd9-916d-3c1f1cdc0ff4\":{\"name\":\"dolphin\",\"categories\":[\"animals\"],\"frameCount\":1,\"frameSize\":{\"x\":395,\"y\":315},\"looping\":true,\"frameDelay\":2,\"jsonLastModified\":\"2021-01-19 23:46:49 UTC\",\"pngLastModified\":\"2021-01-19 23:46:49 UTC\",\"version\":\"ul11nGGXQlHKMBNrBp1qmBJbS9fwg3UJ\",\"sourceUrl\":\"/api/v1/animation-library/spritelab/ul11nGGXQlHKMBNrBp1qmBJbS9fwg3UJ/category_animals/dolphin.png\",\"sourceSize\":{\"x\":395,\"y\":315}},\"f29d8834-d71b-477d-8e28-a9a479a32d5b\":{\"name\":\"cuteanimals_dolphin\",\"categories\":[\"animals\"],\"frameCount\":1,\"frameSize\":{\"x\":400,\"y\":400},\"looping\":true,\"frameDelay\":2,\"jsonLastModified\":\"2021-09-02 18:05:42 UTC\",\"pngLastModified\":\"2021-09-02 22:41:29 UTC\",\"version\":\"U_XL7Tta6Xo19wLLiwHSJ22EyoeWCw5W\",\"sourceUrl\":\"/api/v1/animation-library/spritelab/U_XL7Tta6Xo19wLLiwHSJ22EyoeWCw5W/category_animals/cuteanimals_dolphin.png\",\"sourceSize\":{\"x\":400,\"y\":400}},\"674b35fe-1d8b-494b-9b03-a4c5982337b8\":{\"name\":\"background_landscape_10\",\"frameCount\":1,\"frameSize\":{\"x\":400,\"y\":400},\"looping\":true,\"frameDelay\":2,\"categories\":[\"backgrounds\"],\"jsonLastModified\":\"2020-12-01 23:21:14 UTC\",\"pngLastModified\":\"2020-12-01 23:21:15 UTC\",\"version\":\"wT8H5cnXZ3IQlkPnvLQgPWSbH0csfkWt\",\"sourceUrl\":\"/api/v1/animation-library/spritelab/wT8H5cnXZ3IQlkPnvLQgPWSbH0csfkWt/category_backgrounds/background_landscape_10.png\",\"sourceSize\":{\"x\":400,\"y\":400}}}}",
     "hide_custom_blocks": "true",
-    "long_instructions": "## Marine Ecosystem\r\n- Add different animals and plants to create a balanced marine ecosystem\r\n",
+    "long_instructions": "##Cause & Effect: The Food Chain\r\n\r\n\r\n**Add events to model the food chain**\r\n\r\n- Add the `when sprite touches sprite` with `eat object` code\r\n\r\n- Also add the `when sprite touches sprite` with `catch object` code\r\n\r\n- Click `Run` and watch for the correct organisms to disappear when they touch their predator\r\n",
     "parent_level_id": 28525,
     "auto_run_setup": "DRAW_LOOP",
     "show_type_hints": "true",
@@ -60,7 +65,7 @@
     "mini_toolbox": "false",
     "hide_pause_button": "false",
     "callout_json": "[]",
-    "instructions_icon": "bear",
+    "instructions_icon": "star",
     "authored_hints": "[{\"hint_class\":\"bottom-out\",\"hint_markdown\":\"Make 4 dolphins like this: \\n<xml><block type=\\\"when_run\\\" deletable=\\\"false\\\" movable=\\\"false\\\"><next><block type=\\\"gamelab_setBackgroundImageAs\\\"><field name=\\\"IMG\\\">\\\"background_landscape_10\\\"</field><next><block type=\\\"gamelab_makeNewSpriteAnon\\\"><field name=\\\"ANIMATION_NAME\\\">\\\"dolphin\\\"</field><value name=\\\"LOCATION\\\"><block type=\\\"gamelab_location_picker\\\" can_disconnect_from_parent=\\\"false\\\"><field name=\\\"LOCATION\\\">{\\\"x\\\":91,\\\"y\\\":231}</field></block></value><next><block type=\\\"gamelab_makeNewSpriteAnon\\\"><field name=\\\"ANIMATION_NAME\\\">\\\"dolphin\\\"</field><value name=\\\"LOCATION\\\"><block type=\\\"gamelab_location_picker\\\" can_disconnect_from_parent=\\\"false\\\"><field name=\\\"LOCATION\\\">{\\\"x\\\":200,\\\"y\\\":200}</field></block></value><next><block type=\\\"gamelab_makeNewSpriteAnon\\\"><field name=\\\"ANIMATION_NAME\\\">\\\"dolphin\\\"</field><value name=\\\"LOCATION\\\"><block type=\\\"gamelab_location_picker\\\" can_disconnect_from_parent=\\\"false\\\"><field name=\\\"LOCATION\\\">{\\\"x\\\":274,\\\"y\\\":275}</field></block></value><next><block type=\\\"gamelab_makeNewSpriteAnon\\\"><field name=\\\"ANIMATION_NAME\\\">\\\"dolphin\\\"</field><value name=\\\"LOCATION\\\"><block type=\\\"gamelab_location_picker\\\" can_disconnect_from_parent=\\\"false\\\"><field name=\\\"LOCATION\\\">{\\\"x\\\":141,\\\"y\\\":316}</field></block></value></block></next></block></next></block></next></block></next></block></next></block></xml>\\n\",\"hint_id\":\"make_sprite_hint\",\"hint_type\":\"general\",\"hint_path\":\"\",\"hint_video\":\"\",\"tts_url\":\"https://tts.code.org/sharon22k/180/100/82c20ca2d6d6ae04bd99899a427954c8/csc_ecosystems_survival_choice_dolphins_2022.mp3\"},{\"hint_class\":null,\"hint_markdown\":\"Set the new sprite’s location next to the first dolphin by clicking on the pin on the yellow location block <xml><block type=\\\"gamelab_location_picker\\\" can_disconnect_from_parent=\\\"false\\\"><field name=\\\"LOCATION\\\">{\\\"x\\\":200,\\\"y\\\":200}</field></block></xml> and then click where you want to place it on the stage.\",\"hint_id\":\"location_hint\",\"hint_type\":\"general\",\"hint_path\":\"\",\"hint_video\":\"\",\"tts_url\":\"https://tts.code.org/sharon22k/180/100/1a99c86b413114516d1ffdf244f455cc/csc_ecosystems_survival_choice_dolphins_2022.mp3\"}]",
     "skip_autosave": true,
     "display_name": "Marine Ecosystem",
@@ -69,13 +74,8 @@
     "standalone_app_name": "spritelab",
     "preload_asset_list": null
   },
-  "level_num": "custom",
-  "game_id": 64,
-  "created_at": "2023-03-01T22:49:42.000Z",
-  "user_id": 182,
-  "published": true,
   "notes": "",
-  "audit_log": "[{\"changed_at\":\"2023-03-01T22:49:42.711+00:00\",\"changed\":[\"cloned from \\\"csc_ecosystems_survival_choice_dolphins_1\\\"\"],\"cloned_from\":\"csc_ecosystems_survival_choice_dolphins_1\"},{\"changed_at\":\"2023-03-01 22:50:30 +0000\",\"changed\":[\"start_blocks\",\"toolbox_blocks\",\"solution_blocks\",\"long_instructions\",\"short_instructions\",\"encrypted_examples\",\"preload_asset_list\"],\"changed_by_id\":16899,\"changed_by_email\":\"emma.wingreen+teacher@code.org\"},{\"changed_at\":\"2023-03-01 22:57:12 +0000\",\"changed\":[\"start_blocks\",\"toolbox_blocks\",\"solution_blocks\",\"display_name\",\"encrypted_examples\",\"preload_asset_list\"],\"changed_by_id\":16899,\"changed_by_email\":\"emma.wingreen+teacher@code.org\"},{\"changed_at\":\"2023-03-01 23:20:46 +0000\",\"changed\":[\"toolbox_blocks\"],\"changed_by_id\":16899,\"changed_by_email\":\"emma.wingreen+teacher@code.org\"},{\"changed_at\":\"2023-03-01 23:21:06 +0000\",\"changed\":[\"toolbox_blocks\"],\"changed_by_id\":16899,\"changed_by_email\":\"emma.wingreen+teacher@code.org\"}]",
+  "audit_log": "[{\"changed_at\":\"2023-03-01T22:49:42.711+00:00\",\"changed\":[\"cloned from \\\"csc_ecosystems_survival_choice_dolphins_1\\\"\"],\"cloned_from\":\"csc_ecosystems_survival_choice_dolphins_1\"},{\"changed_at\":\"2023-03-01 22:50:30 +0000\",\"changed\":[\"start_blocks\",\"toolbox_blocks\",\"solution_blocks\",\"long_instructions\",\"short_instructions\",\"encrypted_examples\",\"preload_asset_list\"],\"changed_by_id\":16899,\"changed_by_email\":\"emma.wingreen+teacher@code.org\"},{\"changed_at\":\"2023-03-01 22:57:12 +0000\",\"changed\":[\"start_blocks\",\"toolbox_blocks\",\"solution_blocks\",\"display_name\",\"encrypted_examples\",\"preload_asset_list\"],\"changed_by_id\":16899,\"changed_by_email\":\"emma.wingreen+teacher@code.org\"},{\"changed_at\":\"2023-03-01 23:20:46 +0000\",\"changed\":[\"toolbox_blocks\"],\"changed_by_id\":16899,\"changed_by_email\":\"emma.wingreen+teacher@code.org\"},{\"changed_at\":\"2023-03-01 23:21:06 +0000\",\"changed\":[\"toolbox_blocks\"],\"changed_by_id\":16899,\"changed_by_email\":\"emma.wingreen+teacher@code.org\"},{\"changed_at\":\"2023-05-09 16:29:45 +0000\",\"changed\":[\"start_blocks\",\"toolbox_blocks\",\"solution_blocks\",\"long_instructions\",\"encrypted_examples\",\"preload_asset_list\",\"contained_level_names\"],\"changed_by_id\":18605,\"changed_by_email\":\"katie.frank+levelbuilder@code.org\"},{\"changed_at\":\"2023-05-09 16:37:03 +0000\",\"changed\":[\"start_blocks\",\"toolbox_blocks\",\"solution_blocks\",\"instructions_icon\",\"encrypted_examples\",\"preload_asset_list\"],\"changed_by_id\":18605,\"changed_by_email\":\"katie.frank+levelbuilder@code.org\"}]",
   "level_concept_difficulty": {
   }
 }]]></config>

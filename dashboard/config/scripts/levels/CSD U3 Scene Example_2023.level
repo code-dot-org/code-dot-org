@@ -1,5 +1,6 @@
 <Gamelab>
   <config><![CDATA[{
+  "published": true,
   "game_id": 50,
   "created_at": "2022-09-19T22:54:47.000Z",
   "level_num": "custom",
@@ -178,12 +179,12 @@
       "comment": null
     },
     "edit_code": true,
-    "encrypted_examples": "Hyx5WBwpaW84kgVQlkOPxN4mHkJyRf7bqqggRDNDp23qhfZWJyJ2QcnZrEWR\nkh7C\n",
+    "encrypted_examples": "oAdNeb8ADiRRmG3ngzXDOZ4kpSlbFxaVDUcPtgYOBDxJtNw8t7NXOC4NtpU2\n/rL6x3nGYb6dANwuZRqSX5KM5A==\n",
     "embed": "true",
     "long_instructions": "# Sprite Scenes\r\n\r\nIt's time to put everything together and make a fun scene.  Take a look at this example and think about what you'd like to make.\r\n\r\n# Sketch It Out\r\n\r\nBefore moving on, take a second to sketch out a scene that you'd like to make at the end of this lesson. Consider the simple shapes that you've used in the past, sprites for your characters, and any text that you'd like on the screen. Once you've sketched out an idea, you'll learn about how to compose a scene.\r\n\r\n**Is there anything else that you still need to learn how to do?**\r\n\r\n**Are there any skills that you'd like to review?**\r\n",
     "instructions_important": "false",
     "display_name": "Sprite Scenes",
-    "start_blocks": "// Create alien sprites and assign animations\r\nvar alienBlue = createSprite(100, 200);\r\nalienBlue.setAnimation(\"alienBlue\");\r\nvar alienGreen = createSprite(250, 275);\r\nalienGreen.setAnimation(\"alienGreen\");\r\n\r\n// Draw space background and planets\r\nbackground(\"darkblue\");\r\n\r\nnoStroke();\r\nfill(\"yellow\");\r\nellipse(375, -50, 300, 300);\r\n\r\nfill(\"darkgreen\");\r\nellipse(125, 75, 100, 100);\r\n\r\nfill(\"blue\");\r\nellipse(350, 350, 150, 150)\r\n\r\n// Add joke text\r\nfill(\"white\");\r\ntextSize(20);\r\ntext(\"What kind of music do planets sing?\", 25, 125);\r\ntext(\"Neptunes!\", 200, 200);\r\n\r\ndrawSprites();\r\n",
+    "start_blocks": "// Create alien sprites and assign animations\r\nvar alienBlue = createSprite(100, 200);\r\nalienBlue.setAnimation(\"alienBlue\");\r\nvar alienGreen = createSprite(250, 275);\r\nalienGreen.setAnimation(\"alienGreen\");\r\n\r\n// Draw space background and planets\r\nbackground(\"darkblue\");\r\n\r\nnoStroke();\r\nfill(\"yellow\");\r\nellipse(375, -50, 300, 300);\r\n\r\nfill(\"darkgreen\");\r\nellipse(125, 75, 100, 100);\r\n\r\nfill(\"blue\");\r\nellipse(350, 350, 150, 150);\r\n\r\n// Add joke text\r\nfill(\"white\");\r\ntextSize(20);\r\ntext(\"What kind of music do planets sing?\", 25, 125);\r\ntext(\"Neptunes!\", 200, 200);\r\n\r\ndrawSprites();\r\n",
     "is_k1": "false",
     "skip_instructions_popup": "false",
     "never_autoplay_video": "false",
@@ -221,11 +222,12 @@
     "name_suffix": "_2023",
     "encrypted": "false",
     "mini_rubric": "false",
+    "libraries_enabled": "false",
+    "validation_enabled": "false",
     "preload_asset_list": null
   },
-  "published": true,
   "notes": "",
-  "audit_log": "[{\"changed_at\":\"2022-09-19T22:54:47.808+00:00\",\"changed\":[\"cloned from \\\"CSD U3 Scene Example_2022\\\"\"],\"cloned_from\":\"CSD U3 Scene Example_2022\"}]"
+  "audit_log": "[{\"changed_at\":\"2022-09-19T22:54:47.808+00:00\",\"changed\":[\"cloned from \\\"CSD U3 Scene Example_2022\\\"\"],\"cloned_from\":\"CSD U3 Scene Example_2022\"},{\"changed_at\":\"2023-07-10 02:51:05 +0000\",\"changed\":[\"code_functions\",\"encrypted_examples\",\"start_blocks\",\"preload_asset_list\",\"contained_level_names\"],\"changed_by_id\":18602,\"changed_by_email\":\"angelina+levelbuilder@code.org\"},{\"changed_at\":\"2023-08-09 16:53:06 +0000\",\"changed\":[\"code_functions\",\"encrypted_examples\",\"preload_asset_list\",\"contained_level_names\"],\"changed_by_id\":18602,\"changed_by_email\":\"angelina+levelbuilder@code.org\"}]"
 }]]></config>
   <blocks/>
 </Gamelab>

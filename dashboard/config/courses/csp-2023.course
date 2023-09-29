@@ -13,7 +13,7 @@
     "csp10-2023",
     "csp-post-survey-2023"
   ],
-  "published_state": "beta",
+  "published_state": "stable",
   "instruction_type": "teacher_led",
   "participant_audience": "student",
   "instructor_audience": "teacher",
@@ -44,6 +44,18 @@
       },
       "seeding_key": {
         "resource.key": "all_standards_10"
+      }
+    },
+    {
+      "name": "Change Log",
+      "url": "https://docs.google.com/document/d/1o7UePZl4KIXImkHkgY0AKMU2SWyF9EW0IUw16TD5U7Q/edit?usp=sharing",
+      "key": "change_log",
+      "properties": {
+        "audience": "Teacher",
+        "type": "Resource"
+      },
+      "seeding_key": {
+        "resource.key": "change_log"
       }
     },
     {
@@ -152,6 +164,18 @@
       },
       "seeding_key": {
         "resource.key": "syllabus"
+      }
+    },
+    {
+      "name": "Tech Requirements and Required Materials",
+      "url": "https://docs.google.com/document/d/1bz9KZcgb92D2-DZZdfghQy_HyTG7FRkOE4us3pwpRHY/edit?usp=sharing",
+      "key": "tech_requirements_and_required_materials",
+      "properties": {
+        "audience": "Teacher",
+        "type": "Resource"
+      },
+      "seeding_key": {
+        "resource.key": "tech_requirements_and_required_materials"
       }
     },
     {

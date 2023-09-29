@@ -1,6 +1,6 @@
 import React from 'react';
 import PropTypes from 'prop-types';
-import {FormGroup, ControlLabel, FormControl, HelpBlock} from 'react-bootstrap';
+import {FormGroup, ControlLabel, FormControl, HelpBlock} from 'react-bootstrap'; // eslint-disable-line no-restricted-imports
 import {Subjects} from '@cdo/apps/generated/pd/sharedWorkshopConstants';
 
 /**

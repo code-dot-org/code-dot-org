@@ -6,6 +6,8 @@ import {
   setSessionId,
   flush,
 } from '@amplitude/analytics-browser';
+import Lab2MetricsReporter from '@cdo/apps/lab2/Lab2MetricsReporter';
+import {isDevelopmentEnvironment} from '@cdo/apps/utils';
 import {Block} from 'blockly';
 
 const BlockTypes = require('../blockly/blockTypes').BlockTypes;
@@ -91,16 +93,33 @@ export default class AnalyticsReporter {
     // Capture start time before making init call
     this.sessionStartTime = Date.now();
 
-    await this.initialize();
-    setSessionId(this.sessionStartTime);
+    try {
+      await this.initialize();
+      setSessionId(this.sessionStartTime);
 
-    this.log(`Session start. Session ID: ${this.sessionStartTime}`);
-    this.sessionInProgress = true;
+      this.log(`Session start. Session ID: ${this.sessionStartTime}`);
+      this.sessionInProgress = true;
+    } catch (error) {
+      const message = error instanceof Error ? error.message : String(error);
+      console.log(
+        `[AMPLITUDE ANALYTICS] Did not initialize analytics reporter.  (${message})`
+      );
+
+      // Log an error if this is not development. On development, this error is expected.
+      if (!isDevelopmentEnvironment()) {
+        Lab2MetricsReporter.logError(message, error as Error);
+      }
+    }
   }
 
   async initialize(): Promise<void> {
     const response = await fetch(API_KEY_ENDPOINT);
     const responseJson = await response.json();
+
+    if (!responseJson.key) {
+      throw new Error('No key for analytics.');
+    }
+
     return init(responseJson.key, undefined, {minIdLength: 1}).promise;
   }
 

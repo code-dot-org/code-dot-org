@@ -5,7 +5,7 @@ import {
   SectionHeaders,
   TextFields,
 } from '@cdo/apps/generated/pd/teacherApplicationConstants';
-import {FormGroup} from 'react-bootstrap';
+import {FormGroup} from 'react-bootstrap'; // eslint-disable-line no-restricted-imports
 import {
   PROGRAM_CSD,
   PROGRAM_CSP,

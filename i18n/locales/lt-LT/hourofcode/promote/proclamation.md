@@ -1,5 +1,5 @@
 ---
-title: Sample Resolution Supportive of Computer Science Education Week and Hour of Code
+title: Imties rezoliucija, palaikanti kompiuterių mokslo švietimo savaitę ir kodo valandą
 ---
 
 {{ signup_button }}

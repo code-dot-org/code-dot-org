@@ -1,8 +1,9 @@
+import {fetchSignedCookies} from '@cdo/apps/utils';
 import WebAudio from './soundSub';
-
+import {baseAssetUrl} from '../constants';
 var soundList = [];
 
-var baseSoundUrl;
+var restrictedSoundUrlPath;
 
 var audioSoundBuffers = [];
 var tagGroups = {};
@@ -11,12 +12,33 @@ var audioIdUpto = 0;
 
 var audioSystem = null;
 
-export function InitSound(desiredSounds) {
+/**
+ *
+ * @param {*} desiredSounds A list of sounds to load into the audio system.
+ *  Each sound has a format:
+ *  {
+ *    path: string // relative file path to load,
+ *    restricted: boolean // if this sound is restricted (and should be
+ *        loaded from the restricted bucket)
+ *  }
+ * @param {*} options Optional audio system configuration.
+ *   {
+ *     delayTimeSeconds: number, // Delay time used in the delay effect
+ *     releaseTimeSeconds: number // Release time for fading out fixed-duration sounds
+ *     updateLoadProgress: progress: number => void // Callback to report loading progress
+ *     reportSoundLibraryLoadTime: loadTimeMs: number => void // Optional callback to report sound library load time
+ *   }
+ */
+export function InitSound(desiredSounds, options) {
   // regular web version.
-  baseSoundUrl = 'https://curriculum.code.org/media/musiclab/';
-  audioSystem = new WebAudio();
+  restrictedSoundUrlPath = '/restricted/musiclab/';
+  audioSystem = new WebAudio(options);
 
-  LoadSounds(desiredSounds);
+  LoadSounds(
+    desiredSounds,
+    options.updateLoadProgress,
+    options.reportSoundLibraryLoadTime
+  );
 }
 
 export function LoadSoundFromBuffer(id, buffer) {
@@ -32,18 +54,53 @@ export function GetCurrentAudioTime() {
   return audioSystem?.getCurrentTime();
 }
 
-function LoadSounds(desiredSounds) {
-  //console.log("Loading sounds from " + baseSoundUrl);
-
+async function LoadSounds(
+  desiredSounds,
+  updateLoadProgress,
+  reportSoundLibraryLoadTime
+) {
+  const soundLoadStartTime = Date.now();
   soundList = desiredSounds;
 
-  for (var i = 0; i < soundList.length; i++) {
+  // If there are any restricted sounds in the manifest, we need to load
+  // signed cookies.
+  let canLoadRestrictedContent = false;
+  if (soundList.findIndex(sound => sound.restricted) >= 0) {
+    try {
+      const response = await fetchSignedCookies();
+      if (response.ok) {
+        canLoadRestrictedContent = true;
+      }
+    } catch (error) {
+      console.error('Error loading signed cookies: ' + error);
+    }
+  }
+
+  let soundsToLoad = 0;
+  for (let i = 0; i < soundList.length; i++) {
+    const sound = soundList[i];
+    const basePath = sound.restricted ? restrictedSoundUrlPath : baseAssetUrl;
+    if (sound.restricted && !canLoadRestrictedContent) {
+      // Skip loading restricted songs if we can't load restricted content.
+      continue;
+    }
+
+    soundsToLoad++;
     audioSystem.LoadSound(
-      baseSoundUrl + soundList[i] + '.mp3',
+      basePath + sound.path + '.mp3',
       function (id, buffer) {
         audioSoundBuffers[id] = buffer;
-        //console.log("saving audio", id);
-      }.bind(this, i)
+      }.bind(this, i),
+      () => {
+        soundsToLoad--;
+        if (soundsToLoad === 0) {
+          const loadTimeMs = Date.now() - soundLoadStartTime;
+          reportSoundLibraryLoadTime(loadTimeMs);
+        }
+        updateLoadProgress(
+          (soundList.length - soundsToLoad) / soundList.length
+        );
+      }
     );
   }
 }
@@ -60,12 +117,21 @@ export function PlaySound(
   when = 0,
   onStop = () => {},
   loop = false,
-  effects = false
+  effects = false,
+  duration = undefined
 ) {
   for (var i = 0; i < soundList.length; i++) {
-    if (soundList[i] === name) {
+    if (soundList[i].path === name) {
       // Always provide a groupTag.  If one wasn't provided, just use the sound name as the group name.
-      return PlaySoundByIndex(i, groupTag || name, when, loop, effects, onStop);
+      return PlaySoundByIndex(
+        i,
+        groupTag || name,
+        when,
+        loop,
+        effects,
+        onStop,
+        duration
+      );
     }
   }
 }
@@ -76,7 +142,8 @@ function PlaySoundByIndex(
   when,
   loop,
   effects,
-  onStop
+  onStop,
+  duration
 ) {
   if (!audioSoundBuffers[audioBufferIndex]) {
     return;
@@ -107,7 +174,8 @@ function PlaySoundByIndex(
       if (onStop) {
         onStop();
       }
-    }
+    },
+    duration
   );
 
   tagGroup.sources.push({source: source, id: audioIdUpto});

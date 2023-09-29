@@ -41,6 +41,7 @@ Dashboard::Application.routes.draw do
     get "/musiclab", to: redirect("/projectbeats", status: 302)
     get "/projectbeats", to: "musiclab#index"
     get "/musiclab/menu", to: "musiclab#menu"
+    get "/musiclab/gallery", to: "musiclab#gallery"
     get "/musiclab/analytics_key", to: "musiclab#get_analytics_key"
 
     resources :activity_hints, only: [:update]
@@ -108,7 +109,7 @@ Dashboard::Application.routes.draw do
     get '/catalog', to: 'curriculum_catalog#index'
 
     # User-facing section routes
-    resources :sections, only: [:show, :new] do
+    resources :sections, only: [:show, :new, :edit] do
       member do
         post 'log_in'
       end
@@ -197,8 +198,10 @@ Dashboard::Application.routes.draw do
       get '/users/demigrate_from_multi_auth', to: 'registrations#demigrate_from_multi_auth'
       get '/users/to_destroy', to: 'registrations#users_to_destroy'
       get '/reset_session', to: 'sessions#reset'
+      get '/lockout', to: 'sessions#lockout'
       get '/users/existing_account', to: 'registrations#existing_account'
       post '/users/auth/maker_google_oauth2', to: 'omniauth_callbacks#maker_google_oauth2'
+      get '/users/edit', to: 'registrations#edit'
     end
     devise_for :users, controllers: {
       omniauth_callbacks: 'omniauth_callbacks',
@@ -268,6 +271,10 @@ Dashboard::Application.routes.draw do
       end
     end
 
+    # Get or create a project for the given level_id. Optionally, the request
+    # can include script_id to get or create a project for the level and script.
+    get "projects(/script/:script_id)/level/:level_id", to: 'projects#get_or_create_for_level'
+
     post '/locale', to: 'home#set_locale', as: 'locale'
 
     # quick links for cartoon network arabic
@@ -315,6 +322,7 @@ Dashboard::Application.routes.draw do
         post 'clone'
         post 'update_start_code'
         post 'update_exemplar_code'
+        get 'level_properties'
       end
     end
 
@@ -466,6 +474,9 @@ Dashboard::Application.routes.draw do
             get 'page/:puzzle_page', to: 'script_levels#show', as: 'puzzle_page', format: false
             # /s/xxx/lessons/yyy/levels/zzz/sublevel/sss
             get 'sublevel/:sublevel_position', to: 'script_levels#show', as: 'sublevel', format: false
+            # Get the level's properties via JSON.
+            # /s/xxx/lessons/yyy/levels/zzz/level_properties
+            get 'level_properties', to: 'script_levels#level_properties'
           end
         end
         resources :script_levels, only: [:show], path: "/levels", format: false do
@@ -584,12 +595,20 @@ Dashboard::Application.routes.draw do
     post '/admin/gatekeeper/delete', to: 'dynamic_config#gatekeeper_delete', as: 'gatekeeper_delete'
     post '/admin/gatekeeper/set', to: 'dynamic_config#gatekeeper_set', as: 'gatekeeper_set'
 
+    # LTI API endpoints
+    match '/lti/v1/login(/:platform_id)', to: 'lti_v1#login', via: [:get, :post]
+    post '/lti/v1/authenticate', to: 'lti_v1#authenticate'
+
+    # OAuth endpoints
+    get '/oauth/jwks', to: 'oauth_jwks#jwks'
+
     get '/notes/:key', to: 'notes#index'
 
     resources :zendesk_session, only: [:index]
 
     post '/report_abuse', to: 'report_abuse#report_abuse'
     get '/report_abuse', to: 'report_abuse#report_abuse_form'
+    post '/report_abuse_pop_up', to: 'report_abuse#report_abuse_pop_up'
 
     get '/too_young', to: 'too_young#index'
 
@@ -933,6 +952,8 @@ Dashboard::Application.routes.draw do
     get '/dashboardapi/v1/schools/:school_district_id/:school_type', to: 'api/v1/schools#index', defaults: {format: 'json'}
     get '/dashboardapi/v1/schools/:id', to: 'api/v1/schools#show', defaults: {format: 'json'}
 
+    post '/dashboardapi/v1/users/:user_id/verify_captcha', to: 'api/v1/users#verify_captcha'
+
     # Routes used by census
     post '/dashboardapi/v1/census/:form_version', to: 'api/v1/census/census#create', defaults: {format: 'json'}
 
@@ -1019,6 +1040,20 @@ Dashboard::Application.routes.draw do
 
     resources :code_review_comments, only: [:create, :update, :destroy]
 
+    resources :rubrics, only: [:create, :edit, :new, :update] do
+      member do
+        get 'get_ai_evaluations'
+        post 'submit_evaluations'
+      end
+    end
+
+    resources :learning_goal_evaluations, only: [:create, :update] do
+      collection do
+        get :get_evaluation
+        post :get_or_create_evaluation
+      end
+    end
+
     get '/backpacks/channel', to: 'backpacks#get_channel'
 
     resources :project_commits, only: [:create]
@@ -1038,5 +1073,18 @@ Dashboard::Application.routes.draw do
     # Adds the experiment cookie in the User's browser which allows them to experience offline features
     get '/offline/join_pilot', action: :set_offline_cookie, controller: :offline
     get '/offline-files.json', action: :offline_files, controller: :offline
+
+    post '/browser_events/put_logs', to: 'browser_events#put_logs'
+    post '/browser_events/put_metric_data', to: 'browser_events#put_metric_data'
+
+    get '/get_token', to: 'authenticity_token#get_token'
+
+    post '/openai/chat_completion', to: 'openai_chat#chat_completion'
+
+    # Policy Compliance
+    get '/policy_compliance/child_account_consent/', to:
+      'policy_compliance#child_account_consent'
+    post '/policy_compliance/child_account_consent/', to:
+      'policy_compliance#child_account_consent_request'
   end
 end

@@ -8,11 +8,11 @@ si:
         csp-2018:
           assignment_family_title: AP® පරිගණක විද්‍යා මූලධර්ම
     resources:
-      curriculum/csd/2020:
-        name: විෂයමාලාව
       curriculum/csd/2017:
+        name: විෂයමාලාව
+      curriculum/csd/2018:
         name: විෂයමාලාව
       curriculum/csd/2019:
         name: විෂයමාලාව
-      curriculum/csd/2018:
+      curriculum/csd/2020:
         name: විෂයමාලාව

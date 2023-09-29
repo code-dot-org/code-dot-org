@@ -1,2 +1,38 @@
 {
+  "fr-FR": {
+    "data": {
+      "frameworks": {
+        "ai4k12-2021": {
+          "name": "Directives nationales AI4K12 2021"
+        },
+        "c3ss": {
+          "name": "C3 Normes d'études sociales"
+        },
+        "ccela": {
+          "name": "Normes de base communes pour les arts de la langue anglaise"
+        },
+        "ccmath": {
+          "name": "Normes mathématiques de base communes"
+        },
+        "csa": {
+          "name": "Cadre conceptuel du CSA"
+        },
+        "csp2021": {
+          "name": "Cadre conceptuel du CSP"
+        },
+        "csta": {
+          "name": "Normes informatiques CSTA K-12 (2017)"
+        },
+        "csta2011": {
+          "name": "Normes informatiques CSTA K-12 (2011)"
+        },
+        "iste": {
+          "name": "Normes ISTE pour les étudiants"
+        },
+        "ngss": {
+          "name": "Normes scientifiques de nouvelle génération"
+        }
+      }
+    }
+  }
 }

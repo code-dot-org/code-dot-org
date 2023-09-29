@@ -3,6 +3,7 @@
   "addAComment": "Afegir un comentari",
   "addACommentToReview": "Afegir un comentari a la revisió",
   "authorizerNearLimit": "Has executat el teu codi massa vegades en l'última hora. Et queden {attemptsLeft} intents abans que el teu compte es bloquegi de manera permanent i que no puguis seguir executant codi Java. Espera 15 minuts abans d'intentar-ho de nou.",
+  "authorizerNearLimitTemporary": "Vostè ha executat el seu codi massa vegades en l'últim {lockoutPeriod}. Et queden {attemptsLeft} intents. Converteix-te en un professor verificat per accedir a una quota molt més alta per a tu i els teus estudiants.\nObteniu més informació sobre [com convertir-se en un professor verificat] (https://support.code.org/hc/en-us/articles/115001550131-How-to-Become-a-Verified-Teacher).\nAprendre [per què és necessària la verificació del professorat] (https://support.code.org/hc/en-us/articles/6104078305549-Teacher-Verification-and-CSA).\n",
   "authorizerTokenUsed": "Esteu intentant tornar a fer servir un token que ja ha executat el codi. Comproveu que esteu connectats a una xarxa segura abans de tornar a intentar-ho. Si creieu que aquest missatge és un error, contacteu amb support@code.org.",
   "authorLabel": "autor",
   "allFilesCompile": "Compilació de tots els fitxers",
@@ -121,6 +122,7 @@
   "onlyVisibleToYou": "només tu pots veure els comentaris del professor",
   "openedDate": "obert el {date}",
   "programCompleted": "Programa completat.",
+  "programEndedUnexpectedly": "El seu programa es va aturar inesperadament. Podem estar fora de la capacitat d'executar el seu programa, o pot ser que tingui problemes de xarxa. Comproveu la vostra connexió de xarxa i torneu-ho a provar.",
   "programStopped": "Programa aturat.",
   "refresh": "Actualitzar",
   "rename": "Canviar el nom",
@@ -154,6 +156,8 @@
   "unknownError": "Vaja, hem tingut un problema. Proveu de tornar a executar el programa. Si l'error persisteix, contacteu amb nosaltres a support@code.org. Assegureu-vos d'incloure la ID de connexió {connectionId} al vostre missatge.\n{type}",
   "unsupportedMiniAppMessage": "Discrepància de tipus de nivell: els projectes {miniAppType} no són compatibles amb nivells que no són {miniAppType}.",
   "userBlocked": "Has executat el teu codi massa vegades i el teu compte s'ha bloquejat. Contacta amb support@code.org per desbloquejar-lo.",
+  "userBlockedTemporary": "Heu arribat al límit del nombre de vegades que podeu executar codi Java en 24 hores. Converteix-te en un professor verificat per accedir a una quota molt més alta per a tu i els teus estudiants.\nObteniu més informació sobre [com convertir-se en un professor verificat] (https://support.code.org/hc/en-us/articles/115001550131-How-to-Become-a-Verified-Teacher).\nAprendre [per què és necessària la verificació del professorat] (https://support.code.org/hc/en-us/articles/6104078305549-Teacher-Verification-and-CSA).\nSi creus que aquest missatge està en error, contacta amb support@code.org.",
+  "waitingForServer": "Esperant una resposta...",
   "youHaveProjectsToReview": "Tens projectes per revisar...",
   "yourPeer": "el teu company"
 }

@@ -23,6 +23,9 @@
         "csd-2022/changing-sensor-scale": {
           "display_name": "Sensor Shkalasini o'zgartirish"
         },
+        "csd-2022/circuit-playground": {
+          "display_name": "O'chirish maydonchasi haqida umumiy ma'lumot"
+        },
         "csd-2022/classes": {
           "display_name": "Sinflar"
         },
@@ -85,6 +88,9 @@
         },
         "csd-2022/maker-toolkit-overview": {
           "display_name": "Overview"
+        },
+        "csd-2022/model-cards-in-ai-lab": {
+          "display_name": "AI laboratoriyasidagi model kartalar"
         },
         "csd-2022/other": {
           "display_name": "Boshqa"

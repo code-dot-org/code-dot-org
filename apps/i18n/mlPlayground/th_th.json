@@ -1,142 +1,24 @@
 {
-  "navigateForward": "\nไปต่อ",
-  "navigateBack": "กลับ",
-  "tryAgain": "ลองอีกสักครั้ง",
-  "navigateDone": "เสร็จ",
-  "saveProgress": "บันทึก",
-  "correctAnswer": "ถูกต้อง",
-  "incorrectAnswer": "ไม่ถูกต้อง",
-  "modelCardPossibleValuesMinimum": "ค่าต่ำสุด",
-  "modelCardPossibleValuesMaximum": "ค่าสูงสุด",
-  "columnInspectorDescription": "รายละเอียด",
-  "columnDetailsMinimumValue": "ค่าต่ำสุด",
   "columnDetailsMaximumValue": "ค่าสูงสุด",
+  "columnDetailsMinimumValue": "ค่าต่ำสุด",
+  "columnInspectorDescription": "รายละเอียด",
+  "correctAnswer": "ถูกต้อง",
   "dataCardLastUpdated": "อัพเดทครั้งสุดท้าย",
   "datasets": {
-    "medical_priority": {
+    "abalone": {
       "fields": {
-        "age": {
-          "id": "อายุ"
+        "Height": {
+          "id": "ความสูง"
+        },
+        "Length": {
+          "id": "ความยาว"
         }
       }
     },
-    "shoe_survey_toy": {
+    "bike_sharing": {
       "fields": {
-        "weather": {
-          "id": "สภาพอากาศ"
-        },
-        "shoe": {
-          "id": "รองเท้า"
-        }
-      }
-    },
-    "salsa_toy": {
-      "fields": {
-        "onion": {
-          "id": "หัวหอม"
-        },
-        "avocado": {
-          "id": "อะโวคาโด"
-        },
-        "corn": {
-          "id": "ข้าวโพด"
-        },
-        "beans": {
-          "id": "ถั่ว"
-        },
-        "lime": {
-          "id": "มะนาว"
-        }
-      }
-    },
-    "poutine_toy": {
-      "fields": {
-        "mushrooms": {
-          "id": "เห็ด"
-        },
-        "lobster": {
-          "id": "ลอบสเตอร์"
-        },
-        "bacon": {
-          "id": "เบคอน"
-        },
-        "cheese": {
-          "id": "ชีส"
-        },
-        "meat": {
-          "id": "เนื้อ"
-        }
-      }
-    },
-    "club_random_toy": {
-      "fields": {
-        "color": {
-          "id": "สี"
-        },
-        "music": {
-          "id": "ดนตรี"
-        },
-        "food": {
-          "id": "อาหาร"
-        }
-      }
-    },
-    "insurance_cost": {
-      "fields": {
-        "age": {
-          "id": "อายุ"
-        }
-      }
-    },
-    "nutrition": {
-      "fields": {
-        "Category": {
-          "id": "หมวดหมู่"
-        },
-        "Description": {
-          "id": "รายละเอียด"
-        }
-      }
-    },
-    "raspado_toy": {
-      "fields": {
-        "strawberry": {
-          "id": "สตรอเบอร์รี่"
-        },
-        "lime": {
-          "id": "มะนาว"
-        }
-      }
-    },
-    "shapes_v2_toy": {
-      "fields": {
-        "sides": {
-          "id": "ด้านข้าง"
-        },
-        "size": {
-          "id": "ขนาด"
-        }
-      }
-    },
-    "salad_toy": {
-      "fields": {
-        "tomato": {
-          "id": "มะเขือเทศ"
-        },
-        "avocado": {
-          "id": "อะโวคาโด"
-        },
-        "chicken": {
-          "id": "ไก่"
-        },
-        "fruit": {
-          "id": "ผลไม้"
-        },
-        "beans": {
-          "id": "ถั่ว"
-        },
-        "cheese": {
-          "id": "ชีส"
+        "Month": {
+          "id": "เดือน"
         }
       }
     },
@@ -150,36 +32,41 @@
         }
       }
     },
-    "student_alcohol_consumption": {
+    "boba_toy": {
       "fields": {
-        "school": {
-          "id": "โรงเรียน"
-        },
-        "age": {
-          "id": "อายุ"
-        },
-        "health": {
-          "id": "สุขภาพ"
-        }
-      }
-    },
-    "naan_toy": {
-      "fields": {
-        "chicken": {
-          "id": "ไก่"
-        },
-        "lamb": {
-          "id": "แกะ"
-        },
-        "onion": {
-          "id": "หัวหอม"
-        },
-        "cheese": {
-          "id": "ชีส"
+        "banana": {
+          "id": "กล้วย"
         }
       }
     },
     "census_part": {
+      "fields": {
+        "age": {
+          "id": "อายุ"
+        }
+      }
+    },
+    "club_random_toy": {
+      "fields": {
+        "color": {
+          "id": "สี"
+        },
+        "food": {
+          "id": "อาหาร"
+        },
+        "music": {
+          "id": "ดนตรี"
+        }
+      }
+    },
+    "heart": {
+      "fields": {
+        "Age": {
+          "id": "อายุ"
+        }
+      }
+    },
+    "insurance_cost": {
       "fields": {
         "age": {
           "id": "อายุ"
@@ -196,63 +83,62 @@
         }
       }
     },
+    "loneliness_music": {
+      "fields": {
+        "Country": {
+          "id": "ประเทศ"
+        },
+        "Music": {
+          "id": "เพลง"
+        }
+      }
+    },
+    "medical_priority": {
+      "fields": {
+        "age": {
+          "id": "อายุ"
+        }
+      }
+    },
     "movies": {
       "fields": {
-        "Score": {
-          "id": "คะแนน"
-        },
         "Country": {
           "id": "ประเทศ"
         },
         "Name": {
           "id": "ชื่อ"
         },
+        "Score": {
+          "id": "คะแนน"
+        },
         "Star": {
           "id": "สตาร์"
         }
       }
     },
-    "songs": {
+    "naan_toy": {
       "fields": {
-        "Artist": {
-          "id": "ศิลปิน"
+        "cheese": {
+          "id": "ชีส"
+        },
+        "chicken": {
+          "id": "ไก่"
+        },
+        "lamb": {
+          "id": "แกะ"
+        },
+        "onion": {
+          "id": "หัวหอม"
         }
       }
     },
-    "safari_toy": {
+    "nutrition": {
       "fields": {
-        "people": {
-          "id": "ผู้คน"
+        "Category": {
+          "id": "หมวดหมู่"
         },
-        "rhino": {
-          "id": "แรด"
-        },
-        "elephant": {
-          "id": "ช้าง"
-        },
-        "alligator": {
-          "id": "จระเข้"
-        },
-        "trees": {
-          "id": "ต้นไม้"
-        }
-      },
-      "name": "ซาฟารี"
-    },
-    "abalone": {
-      "fields": {
-        "Length": {
-          "id": "ความยาว"
-        },
-        "Height": {
-          "id": "ความสูง"
-        }
-      }
-    },
-    "zoo": {
-      "fields": {
-        "Aquatic": {
-          "id": "สัตว์น้ำ"
+        "Description": {
+          "id": "รายละเอียด"
         }
       }
     },
@@ -261,53 +147,101 @@
         "avocado": {
           "id": "อะโวคาโด"
         },
-        "onion": {
-          "id": "หัวหอม"
-        },
         "ginger": {
           "id": "ขิง"
+        },
+        "onion": {
+          "id": "หัวหอม"
         }
       }
     },
-    "student_survey": {
+    "poutine_toy": {
       "fields": {
-        "Country": {
-          "id": "ประเทศ"
+        "bacon": {
+          "id": "เบคอน"
         },
-        "Internet": {
-          "id": "อินเทอร์เน็ต"
+        "cheese": {
+          "id": "ชีส"
         },
-        "Writing": {
-          "id": "การเขียน"
+        "lobster": {
+          "id": "ลอบสเตอร์"
         },
-        "Achievements": {
-          "id": "ความสำเร็จ"
+        "meat": {
+          "id": "เนื้อ"
         },
-        "Age": {
-          "id": "อายุ",
-          "description": "อายุ"
-        },
-        "Height": {
-          "id": "ความสูง",
-          "description": "ความสูง"
-        },
-        "Gender": {
-          "id": "เพศ",
-          "description": "เพศ"
+        "mushrooms": {
+          "id": "เห็ด"
         }
       }
     },
-    "boba_toy": {
+    "raspado_toy": {
       "fields": {
-        "banana": {
-          "id": "กล้วย"
+        "lime": {
+          "id": "มะนาว"
+        },
+        "strawberry": {
+          "id": "สตรอเบอร์รี่"
         }
       }
     },
-    "heart": {
+    "safari_toy": {
       "fields": {
-        "Age": {
-          "id": "อายุ"
+        "alligator": {
+          "id": "จระเข้"
+        },
+        "elephant": {
+          "id": "ช้าง"
+        },
+        "people": {
+          "id": "ผู้คน"
+        },
+        "rhino": {
+          "id": "แรด"
+        },
+        "trees": {
+          "id": "ต้นไม้"
+        }
+      },
+      "name": "ซาฟารี"
+    },
+    "salad_toy": {
+      "fields": {
+        "avocado": {
+          "id": "อะโวคาโด"
+        },
+        "beans": {
+          "id": "ถั่ว"
+        },
+        "cheese": {
+          "id": "ชีส"
+        },
+        "chicken": {
+          "id": "ไก่"
+        },
+        "fruit": {
+          "id": "ผลไม้"
+        },
+        "tomato": {
+          "id": "มะเขือเทศ"
+        }
+      }
+    },
+    "salsa_toy": {
+      "fields": {
+        "avocado": {
+          "id": "อะโวคาโด"
+        },
+        "beans": {
+          "id": "ถั่ว"
+        },
+        "corn": {
+          "id": "ข้าวโพด"
+        },
+        "lime": {
+          "id": "มะนาว"
+        },
+        "onion": {
+          "id": "หัวหอม"
         }
       }
     },
@@ -321,12 +255,95 @@
         }
       }
     },
-    "loneliness_music": {
+    "shapes_v2_toy": {
       "fields": {
+        "sides": {
+          "id": "ด้านข้าง"
+        },
+        "size": {
+          "id": "ขนาด"
+        }
+      }
+    },
+    "shoe_survey_toy": {
+      "fields": {
+        "day": {
+          "id": "วัน"
+        },
+        "shoe": {
+          "id": "รองเท้า"
+        },
+        "weather": {
+          "id": "สภาพอากาศ"
+        }
+      }
+    },
+    "songs": {
+      "fields": {
+        "Artist": {
+          "id": "ศิลปิน"
+        }
+      }
+    },
+    "student_alcohol_consumption": {
+      "fields": {
+        "age": {
+          "id": "อายุ"
+        },
+        "health": {
+          "id": "สุขภาพ"
+        },
+        "school": {
+          "id": "โรงเรียน"
+        }
+      }
+    },
+    "student_survey": {
+      "fields": {
+        "Achievements": {
+          "id": "ความสำเร็จ"
+        },
+        "Age": {
+          "description": "อายุ",
+          "id": "อายุ"
+        },
         "Country": {
           "id": "ประเทศ"
+        },
+        "Gender": {
+          "description": "เพศ",
+          "id": "เพศ"
+        },
+        "Height": {
+          "description": "ความสูง",
+          "id": "ความสูง"
+        },
+        "Internet": {
+          "id": "อินเทอร์เน็ต"
+        },
+        "Music": {
+          "id": "เพลง"
+        },
+        "Writing": {
+          "id": "การเขียน"
+        }
+      }
+    },
+    "zoo": {
+      "fields": {
+        "Aquatic": {
+          "id": "สัตว์น้ำ"
         }
       }
     }
-  }
+  },
+  "incorrectAnswer": "ไม่ถูกต้อง",
+  "modelCardPossibleValuesMaximum": "ค่าสูงสุด",
+  "modelCardPossibleValuesMinimum": "ค่าต่ำสุด",
+  "navigateBack": "กลับ",
+  "navigateDone": "เสร็จ",
+  "navigateForward": "\nไปต่อ",
+  "saveProgress": "บันทึก",
+  "tryAgain": "ลองอีกสักครั้ง",
+  "uniqueOptionsWarningNotice": "หมายเหตุ"
 }

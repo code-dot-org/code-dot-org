@@ -174,6 +174,7 @@ class OmniauthCallbacksControllerTest < ActionController::TestCase
     assert_equal User::TYPE_STUDENT, user.user_type
     assert_equal "21+", user.age
     assert_equal 'm', user.gender
+    assert_equal 'M', user.gender_third_party_input
     assert_equal user.id, signed_in_user_id
   end
 
@@ -190,7 +191,7 @@ class OmniauthCallbacksControllerTest < ActionController::TestCase
         name: {'first' => 'Hat', 'last' => 'Cat'},
         email: 'hat.cat@example.com',
         user_type: 'student',
-        dob: Date.today - 10.years,
+        dob: Time.zone.today - 10.years,
         gender: 'f'
       },
     )
@@ -250,7 +251,7 @@ class OmniauthCallbacksControllerTest < ActionController::TestCase
         name: {'first' => 'Hat', 'last' => 'Cat'},
         email: 'hat.cat@example.com',
         user_type: 'student',
-        dob: Date.today - 10.years,
+        dob: Time.zone.today - 10.years,
         gender: 'f'
       },
     )
@@ -300,7 +301,7 @@ class OmniauthCallbacksControllerTest < ActionController::TestCase
         name: 'someone',
         email: 'test@email.com',
         user_type: User::TYPE_STUDENT,
-        dob: Date.today - 20.years,
+        dob: Time.zone.today - 20.years,
         gender: 'f'
       },
       credentials: {
@@ -1690,7 +1691,7 @@ class OmniauthCallbacksControllerTest < ActionController::TestCase
         name: args[:name] || 'someone',
         email: args[:email] || 'new@example.com',
         user_type: args[:user_type] || 'teacher',
-        dob: args[:dob] || (Date.today - 20.years),
+        dob: args[:dob] || (Time.zone.today - 20.years),
         gender: args[:gender] || 'f'
       },
       credentials: {

@@ -5,169 +5,64 @@
 
 import PropTypes from 'prop-types';
 import React from 'react';
-import color from '../util/color';
-import {connect} from 'react-redux';
-import styleConstants from '@cdo/apps/styleConstants';
+import Typography from '@cdo/apps/componentLibrary/typography';
+import style from './header-banner.module.scss';
 
-class HeaderBanner extends React.Component {
+export default class HeaderBanner extends React.Component {
   static propTypes = {
     headingText: PropTypes.string,
     subHeadingText: PropTypes.string,
     description: PropTypes.string,
     children: PropTypes.node,
-    short: PropTypes.bool,
-    responsiveSize: PropTypes.oneOf(['lg', 'md', 'sm', 'xs']).isRequired,
     backgroundUrl: PropTypes.string.isRequired,
+    backgroundImageStyling: PropTypes.object,
     imageUrl: PropTypes.string,
+    imgStyling: PropTypes.object,
   };
 
   render() {
     const {
-      short,
       headingText,
       subHeadingText,
       description,
-      responsiveSize,
+      children,
       backgroundUrl,
+      backgroundImageStyling,
       imageUrl,
+      imgStyling,
     } = this.props;
 
-    let headerBannerContainerStyle,
-      headingStyle,
-      subHeadingStyle,
-      descriptionStyle;
-
-    const isSmallScreen = responsiveSize === 'xs';
-    headerBannerContainerStyle = short
-      ? styles.headerBannerContainerShort
-      : styles.headerBannerContainer;
-    headingStyle = short ? styles.bannerHeadingShort : styles.bannerHeading;
-    if (isSmallScreen) {
-      subHeadingStyle = styles.bannerSubHeadingResponsive;
-      descriptionStyle = styles.bannerDescriptionResponsive;
-    } else {
-      subHeadingStyle = styles.bannerSubHeading;
-      descriptionStyle = styles.bannerDescription;
-    }
-
-    const headerBannerStyle = {
+    const backgroundImageStyle = {
       backgroundImage: `url(${backgroundUrl})`,
+      ...backgroundImageStyling,
     };
 
-    const bannerContentImageStyle = short
-      ? styles.bannerContentImageShort
-      : styles.bannerContentImage;
-
-    if (isSmallScreen) {
-      return (
-        <div>
-          <div id={'header-banner'} style={headerBannerStyle}>
-            <div
-              className={'bannerContentContainer'}
-              style={headerBannerContainerStyle}
-            >
-              <div className={'bannerContent'}>
-                <h1 style={headingStyle}>{headingText}</h1>
-              </div>
-            </div>
-          </div>
-          <div id={'header-banner-overflow'}>
-            <div className={'bannerContent'}>
-              {subHeadingText && (
-                <div style={subHeadingStyle}>{subHeadingText}</div>
-              )}
-              {description && <div style={descriptionStyle}>{description}</div>}
-              {this.props.children && (
-                <div className={'children'}>{this.props.children}</div>
-              )}
-            </div>
-          </div>
-        </div>
-      );
-    } else {
-      return (
-        <div id={'header-banner'} style={headerBannerStyle}>
-          <div
-            className={'bannerContentContainer'}
-            style={headerBannerContainerStyle}
-          >
-            <div className={'bannerContent'}>
-              <h1 style={headingStyle}>{headingText}</h1>
-              {subHeadingText && (
-                <div style={subHeadingStyle}>{subHeadingText}</div>
-              )}
-              {description && <div style={descriptionStyle}>{description}</div>}
-              {this.props.children && (
-                <div className={'children'}>{this.props.children}</div>
-              )}
-            </div>
-            {imageUrl && (
-              <img style={bannerContentImageStyle} src={imageUrl} alt="" />
+    return (
+      <div style={backgroundImageStyle} className={style.banner}>
+        <div className={style.contentWrapper}>
+          <div className={style.textWrapper}>
+            <Typography semanticTag="h1" visualAppearance="heading-xxl">
+              {headingText}
+            </Typography>
+            {subHeadingText && (
+              <Typography semanticTag="p" visualAppearance="body-one">
+                {subHeadingText}
+              </Typography>
             )}
+            {description && (
+              <Typography semanticTag="p" visualAppearance="body-one">
+                {description}
+              </Typography>
+            )}
+            {children}
           </div>
+          {imageUrl && (
+            <figure>
+              <img src={imageUrl} style={imgStyling} alt="" />
+            </figure>
+          )}
         </div>
-      );
-    }
+      </div>
+    );
   }
 }
-
-const styles = {
-  headerBannerContainer: {
-    minHeight: 260,
-    maxWidth: styleConstants['content-width'],
-  },
-  headerBannerContainerShort: {
-    minHeight: 140,
-    maxWidth: styleConstants['content-width'],
-  },
-  bannerHeading: {
-    fontFamily: '"Barlow Semi Condensed Semibold", sans-serif',
-    color: color.white,
-    fontSize: 48,
-    marginBottom: 0,
-  },
-  bannerHeadingShort: {
-    fontFamily: '"Barlow Semi Condensed Semibold", sans-serif',
-    color: color.white,
-    fontSize: 48,
-    marginBottom: 0,
-  },
-  bannerSubHeading: {
-    fontFamily: '"Gotham 4r", sans-serif',
-    color: color.white,
-    fontSize: 16,
-    lineHeight: '21px',
-    marginTop: 16,
-  },
-  bannerSubHeadingResponsive: {
-    fontFamily: '"Gotham 4r", sans-serif',
-    color: color.dark_charcoal,
-    fontSize: 16,
-    lineHeight: '21px',
-    marginTop: 16,
-  },
-  bannerDescription: {
-    fontFamily: '"Gotham 4r", sans-serif',
-    color: color.white,
-    fontSize: 16,
-    lineHeight: '21px',
-    marginTop: 16,
-  },
-  bannerDescriptionResponsive: {
-    fontFamily: '"Gotham 4r", sans-serif',
-    color: color.dark_charcoal,
-    fontSize: 16,
-    lineHeight: '21px',
-    marginTop: 16,
-  },
-  bannerContentImage: {
-    maxHeight: 260,
-  },
-  bannerContentImageShort: {
-    maxHeight: 140,
-  },
-};
-
-export default connect(state => ({
-  responsiveSize: state.responsive.responsiveSize,
-}))(HeaderBanner);

@@ -971,6 +971,7 @@
   coursee-2021_name: Cours E (2021)
   coursef-2021_name: Cours F (2021)
   coursea-2022_name: Cours A (2022)
+  courseb-2022_name: Cours B (2022)
   coursec-2022_name: Cours C (2022)
   coursed-2022_name: Cours D (2022)
   coursee-2022_name: Cours E (2022)
@@ -1497,6 +1498,7 @@
   header_stats: "Statistiques"
   header_help_us: "Nous aider"
   header_about: "À propos"
+  header_incubator: "Incubateur"
   header_teacher_community: "Communauté des enseignants"
   header_help_support: 'Aide et support '
   header_report_bug: "Signaler un problème"
@@ -1611,7 +1613,7 @@
   hoc2018_mc_download_adventurer: "Télécharger la version offline de Minecraft aventurier."
   hoc2018_mc_educators: "Pour les Enseignants"
   hoc2018_mc_educators_box1_title: "Coder avec Minecraft"
-  hoc2018_mc_educators_box1_desc: 'Minecraft : Education Edition offre un programme d’études, une formation et du codage dans Minecraft, conformes aux normes.'
+  hoc2018_mc_educators_box1_desc: "Minecraft : Education Edition offre un programme d’études, une formation et du codage dans Minecraft, conformes aux normes."
   hoc2018_mc_educators_box1_button: "Commencer"
   hoc2018_mc_educators_box2_title: "Télécharger le guide de l'animateur"
   hoc2018_mc_educators_box2_desc: "Cette boîte à outils vous aidera à organiser une Hour of Code et à impliquer vos élèves dans l'informatique."
@@ -1719,7 +1721,7 @@
   hoc2018_mc_with_microsoft: "En partenariat avec"
   hoc2018_mc_thank_microsoft: "Nous remercions Microsoft du soutien accordé à notre vision et notre mission d'offrir à chaque enfant la possibilité d’apprendre l’informatique et d’obtenir les compétences nécessaires pour réussir au XXIe siècle."
   hoc2019_mc_mee_title: "Minecraft AI pour de Bon"
-  hoc2019_mc_mee_description1: 'Le nouveau didacticiel Minecraft Hour of Code est maintenant disponible dans Minecraft : Édition Éducation pour Windows, Mac et iPad. Apprenez les bases du codage et explorez l''IA avec vos élèves!'
+  hoc2019_mc_mee_description1: "Le nouveau didacticiel Minecraft Hour of Code est maintenant disponible dans Minecraft : Édition Éducation pour Windows, Mac et iPad. Apprenez les bases du codage et explorez l'IA avec vos élèves!"
   hoc2019_mc_mee_description2: "Accédez à des ressources gratuites, qui comprennent un plan de leçon, des vidéos, un programme d'études en informatique et des formations pour les enseignants."
   hoc2019_mc_more_coding_resources: "Plus De Ressources De Codage"
   hoc2019_dance_previous_versions: "Vous cherchez une version antérieure de Soirée Dansante ?  Cliquez ici pour commencer [Partie 1](%{dance_2018_link}) et [Partie 2](%{dance_extras_2018_link}) qui datent de l'année dernière."
@@ -1732,18 +1734,18 @@
   page_not_available_description: "Nous sommes désolés, la page que vous avez demandée n'est plus disponible à cette adresse. Si vous avez toujours besoin d'y accéder, veuillez envoyer un e-mail à [support@code.org] (%{support_email_link})."
   page_not_available_button: "Retourner à la page d’accueil"
   hoc2020_mc_available_code_org: "Disponible sur Code.org"
-  hoc2020_mc_available_mee: 'Disponible dans Minecraft : Education Edition'
+  hoc2020_mc_available_mee: "Disponible dans Minecraft : Education Edition"
   hoc2020_mc_mee_title: "Le conte de deux villages Minecraft"
-  hoc2020_mc_mee_description: 'Le nouveau didacticiel Minecraft Hour of Code est désormais disponible dans Minecraft : Education Edition pour Windows, Mac, Chromebook et iPad. Apprenez les bases du codage et explorez la diversité et l''inclusion avec vos élèves ! Accédez à des ressources gratuites, notamment un plan de cours, des vidéos, un programme d''informatique, des leçons d''équité et des formations pour les enseignants.'
+  hoc2020_mc_mee_description: "Le nouveau didacticiel Minecraft Hour of Code est désormais disponible dans Minecraft : Education Edition pour Windows, Mac, Chromebook et iPad. Apprenez les bases du codage et explorez la diversité et l'inclusion avec vos élèves ! Accédez à des ressources gratuites, notamment un plan de cours, des vidéos, un programme d'informatique, des leçons d'équité et des formations pour les enseignants."
   hoc2021_mc_mee_title: "Minecraft TimeCraft"
-  hoc2021_mc_mee_description: 'Voyagez dans le temps et apprenez à coder ! Le nouveau didacticiel Minecraft Heure de Code est désormais disponible dans Minecraft : Education Edition pour Windows, Mac, Chromebook et iPad. Commencez avec des ressources, des formations et des vidéos gratuites pour les enseignants.'
+  hoc2021_mc_mee_description: "Voyagez dans le temps et apprenez à coder ! Le nouveau didacticiel Minecraft Heure de Code est désormais disponible dans Minecraft : Education Edition pour Windows, Mac, Chromebook et iPad. Commencez avec des ressources, des formations et des vidéos gratuites pour les enseignants."
   hoc2021_mc_mee_villages_title: "Conte de deux villages"
-  hoc2021_mc_mee_villages_description: 'Apprenez les bases du codage et explorez la diversité et l''inclusion avec vos élèves dans Minecraft : Education Edition.'
+  hoc2021_mc_mee_villages_description: "Apprenez les bases du codage et explorez la diversité et l'inclusion avec vos élèves dans Minecraft : Education Edition."
   hoc2021_mc_mee_ai_title: "AI pour de bon"
-  hoc2021_mc_mee_ai_description: 'Explorez l''AI avec vos élèves et apprenez à coder dans Minecraft : Education Edition.'
+  hoc2021_mc_mee_ai_description: "Explorez l'AI avec vos élèves et apprenez à coder dans Minecraft : Education Edition."
   hoc2022_mc_mee_title: "Domaine d'évasion Minecraft"
   hoc2022_mc_mee_description: 'Échappez-vous du mystérieux manoir à l''aube et gagnez un million d''émeraudes ! Le nouveau tutoriel Minecraft Hour of Code est désormais disponible dans Minecraft : Education Edition et accessible via Windows, Mac, Chromebook, Ipad et Mobile. Démarrez avec des supports éducatifs, des formations et des vidéos gratuits. '
-  hoc2022_mc_mee_timecraft_description: 'Voyagez dans le temps pour sauver le futur grâce à cette leçon de codage gratuite sur Minecraft : Education Edition.'
+  hoc2022_mc_mee_timecraft_description: "Voyagez dans le temps pour sauver le futur grâce à cette leçon de codage gratuite sur Minecraft : Education Edition."
   footer_powered_by_aws: "Amazon Web Services et le logo « Powered by AWS » sont des marques déposées d'Amazon.com, Inc. ou ses filiales aux États-Unis et/ou dans d'autres pays. "
   footer_built_on_github: "Construit avec GitHub de Microsoft"
   codebytes_skinny_banner_title: "Rejoignez-nous du 7 au 11 décembre pour nos mini-leçons en direct CodeBytes !"
@@ -1792,7 +1794,7 @@
   ai_zooniverse: "Zooniverse - Zèbre de montagne instantané"
   ai_zooniverse_description: "Aidez à protéger le zèbre du Cap, en voie de disparition, en identifiant les différents animaux sur les images."
   ai_audience: "Public"
-  ai_minecraft_description: 'Accédez à des ressources gratuites, notamment un plan de cours, des vidéos, un programme d''informatique et des formations pour enseignants. (Nécessite Minecraft : Education Edition)'
+  ai_minecraft_description: "Accédez à des ressources gratuites, notamment un plan de cours, des vidéos, un programme d'informatique et des formations pour enseignants. (Nécessite Minecraft : Education Edition)"
   ai_k_12_audience: "K-12 (lecture requise)"
   ai_microsoft_workshop: "Ateliers virtuels gratuits de Microsoft"
   ai_microsoft_workshop_description: "Éveillez la curiosité avec des ateliers gratuits sur les STEM et le codage."

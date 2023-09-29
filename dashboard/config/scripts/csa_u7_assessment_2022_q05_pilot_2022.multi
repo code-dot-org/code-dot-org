@@ -34,3 +34,5 @@ public class CellPhone extends HomePhone {
 }
 ```
 MARKDOWN
+
+allow_multiple_attempts true

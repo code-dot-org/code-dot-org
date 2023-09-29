@@ -1,5 +1,10 @@
 <Weblab>
   <config><![CDATA[{
+  "published": true,
+  "game_id": 58,
+  "created_at": "2022-09-29T23:25:04.000Z",
+  "level_num": "custom",
+  "user_id": 324,
   "properties": {
     "instructions_important": "false",
     "start_sources": "              {\r\n  \"files\": [\r\n    {\r\n      \"name\": \"index.html\",\r\n      \"data\": \"<!DOCTYPE html>\\n<html>\\n  <head>\\n    \\n  </head>\\n  <body>\\n    \\n    \\n    \\n    \\n  </body>\\n</html>\"\r\n    }\r\n  ]\r\n}\r\n            ",
@@ -16,16 +21,9 @@
     "display_name": "Creating Paragraphs",
     "bubble_choice_description": "Revisit the first level from this lesson to write your name, favorite color, and favorite animal using paragraph tags",
     "thumbnail_url": "https://images.code.org/d67ce58721645341693a847aa3662dc5-weblab-inspector.gif",
-    "encrypted_examples": [
-
-    ]
+    "encrypted_examples": "+XicMn4IrppSEu6kdnI52lBd3fp7NIwSJgUNXM18GwQVHBbE7V4Lk8X1b0W9\n5TfvNulryNavcqtKZ8xK06PzkQ==\n"
   },
-  "game_id": 58,
-  "published": true,
-  "created_at": "2022-09-29T23:25:04.000Z",
-  "level_num": "custom",
-  "user_id": 324,
   "notes": "",
-  "audit_log": "[{\"changed_at\":\"2022-09-29T23:25:04.006+00:00\",\"changed\":[\"cloned from \\\"CSD U2 HTML Adding Paragraphs_2023\\\"\"],\"cloned_from\":\"CSD U2 HTML Adding Paragraphs_2023\"},{\"changed_at\":\"2022-09-29 23:26:45 +0000\",\"changed\":[\"start_sources\",\"long_instructions\"],\"changed_by_id\":14639,\"changed_by_email\":\"dan+teacher@code.org\"},{\"changed_at\":\"2022-09-29 23:28:48 +0000\",\"changed\":[\"start_sources\",\"long_instructions\",\"encrypted_examples\"],\"changed_by_id\":14639,\"changed_by_email\":\"dan+teacher@code.org\"},{\"changed_at\":\"2023-02-17 23:25:38 +0000\",\"changed\":[\"long_instructions\"],\"changed_by_id\":18602,\"changed_by_email\":\"angelina+levelbuilder@code.org\"},{\"changed_at\":\"2023-02-22 20:31:15 +0000\",\"changed\":[\"long_instructions\"],\"changed_by_id\":18602,\"changed_by_email\":\"angelina+levelbuilder@code.org\"},{\"changed_at\":\"2023-02-22 21:52:11 +0000\",\"changed\":[\"long_instructions\",\"encrypted_examples\"],\"changed_by_id\":18602,\"changed_by_email\":\"angelina+levelbuilder@code.org\"}]"
+  "audit_log": "[{\"changed_at\":\"2022-09-29T23:25:04.006+00:00\",\"changed\":[\"cloned from \\\"CSD U2 HTML Adding Paragraphs_2023\\\"\"],\"cloned_from\":\"CSD U2 HTML Adding Paragraphs_2023\"},{\"changed_at\":\"2022-09-29 23:26:45 +0000\",\"changed\":[\"start_sources\",\"long_instructions\"],\"changed_by_id\":14639,\"changed_by_email\":\"dan+teacher@code.org\"},{\"changed_at\":\"2022-09-29 23:28:48 +0000\",\"changed\":[\"start_sources\",\"long_instructions\",\"encrypted_examples\"],\"changed_by_id\":14639,\"changed_by_email\":\"dan+teacher@code.org\"},{\"changed_at\":\"2023-02-17 23:25:38 +0000\",\"changed\":[\"long_instructions\"],\"changed_by_id\":18602,\"changed_by_email\":\"angelina+levelbuilder@code.org\"},{\"changed_at\":\"2023-02-22 20:31:15 +0000\",\"changed\":[\"long_instructions\"],\"changed_by_id\":18602,\"changed_by_email\":\"angelina+levelbuilder@code.org\"},{\"changed_at\":\"2023-02-22 21:52:11 +0000\",\"changed\":[\"long_instructions\",\"encrypted_examples\"],\"changed_by_id\":18602,\"changed_by_email\":\"angelina+levelbuilder@code.org\"},{\"changed_at\":\"2023-07-06 18:46:04 +0000\",\"changed\":[],\"changed_by_id\":18602,\"changed_by_email\":\"angelina+levelbuilder@code.org\"}]"
 }]]></config>
 </Weblab>

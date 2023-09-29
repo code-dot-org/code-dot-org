@@ -65,7 +65,18 @@ function Certificate(props) {
       course: props.tutorial,
       donor,
     };
-    return btoa(reEncodeNonLatin1(JSON.stringify(data)));
+    const asciiData = btoa(reEncodeNonLatin1(JSON.stringify(data)));
+    const urlSafeData = asciiData
+      .replace(/\+/g, '-')
+      .replace(/\//g, '_')
+      .replace(/=+$/g, '');
+    // This method complies with “Base 64 Encoding with URL and Filename
+    // Safe Alphabet” in RFC 4648. The alphabet uses ‘-’ instead of ‘+’ and
+    // ‘_’ instead of ‘/’.
+    // NOTE: using replaceAll has causes issues in the test machine due to the
+    // version of the google-chrome-stable package installed. replace method has
+    // better support.
+    return urlSafeData;
   };
 
   const getCertificateImagePath = () => {

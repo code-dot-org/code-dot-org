@@ -48,7 +48,7 @@ class ControlProjectSharingDialog extends Component {
             <Button
               text={i18n.projectSharingDialogButton()}
               onClick={this.handleShowSharingClick}
-              color={Button.ButtonColor.orange}
+              color={Button.ButtonColor.brandSecondaryDefault}
               style={styles.buttonWithoutMargin}
             />
           </DialogFooter>

@@ -1,11 +1,11 @@
 import PropTypes from 'prop-types';
 import React from 'react';
 import {connect} from 'react-redux';
-import {Button, Table} from 'react-bootstrap';
+import {Button, Table} from 'react-bootstrap'; // eslint-disable-line no-restricted-imports
 import ConfirmationDialog from '../../components/confirmation_dialog';
 import {enrollmentShape} from '../types';
 import {workshopEnrollmentStyles as styles} from '../workshop_enrollment_styles';
-import {ScholarshipDropdown} from '../../components/scholarshipDropdown';
+import ScholarshipDropdown from '../../components/scholarshipDropdown';
 import Spinner from '../../components/spinner';
 import {WorkshopAdmin, ProgramManager} from '../permission';
 import {CourseSpecificScholarshipDropdownOptions} from '@cdo/apps/generated/pd/scholarshipInfoConstants';
@@ -247,10 +247,6 @@ export class WorkshopEnrollmentSchoolInfo extends React.Component {
           {this.props.workshopCourse === CSF &&
             this.props.workshopSubject === DEEP_DIVE && (
               <td>{enrollment.attended_csf_intro_workshop}</td>
-            )}
-          {this.props.workshopCourse === CSF &&
-            this.props.workshopSubject === DEEP_DIVE && (
-              <td>{enrollment.csf_has_physical_curriculum_guide}</td>
             )}
           {this.props.workshopCourse === CSP &&
             this.props.workshopSubject ===

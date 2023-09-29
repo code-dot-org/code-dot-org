@@ -1,6 +1,19 @@
 ---
 en-GB:
   slides:
+    gumball_intro:
+      6:
+        text: The white space on the right is called the workspace and this is where
+          we'll build our program.
+    iceage_intro:
+      6:
+        text: The white space on the right is called the workspace and this is where
+          we'll build our program.
+    mc_if_statements:
+      4:
+        text: In this case, we don't want to fall into the lava. It's easy to plan
+          for the lava. We can see it on the screen. But what about the lava that
+          we can't under the stone?
     mc_intro:
       8:
         text: The white space on the right is called the workspace and this is where
@@ -28,16 +41,3 @@ en-GB:
           the action multiple times. Now we'll click on the repeat block and tell
           her how many times we want her to perform this action. Now let's build our
           house before night falls! Have fun!
-    mc_if_statements:
-      4:
-        text: In this case, we don't want to fall into the lava. It's easy to plan
-          for the lava. We can see it on the screen. But what about the lava that
-          we can't under the stone?
-    gumball_intro:
-      6:
-        text: The white space on the right is called the workspace and this is where
-          we'll build our program.
-    iceage_intro:
-      6:
-        text: The white space on the right is called the workspace and this is where
-          we'll build our program.

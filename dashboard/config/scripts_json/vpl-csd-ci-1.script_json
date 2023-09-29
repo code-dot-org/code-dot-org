@@ -7,11 +7,12 @@
       "curriculum_umbrella": "CSD Self Paced PL",
       "has_verified_resources": true,
       "is_migrated": true,
-      "student_detail_progress_view": true
+      "student_detail_progress_view": true,
+      "tts": true
     },
     "new_name": null,
     "family_name": null,
-    "serialized_at": "2023-04-11 17:53:49 UTC",
+    "serialized_at": "2023-04-26 08:05:53 UTC",
     "published_state": null,
     "instruction_type": null,
     "instructor_audience": null,
@@ -283,6 +284,9 @@
       "activity_section_position": 3,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "VPL-CI-LessonTypes-U1-2023"
+        ],
         "progression": "Unit Overview"
       },
       "bonus": false,
@@ -555,6 +559,7 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "instructor_in_training": true,
         "level_keys": [
           "VPL-CSD-PILOT-S22-CI-CSD U1 processing bday_2023"
         ],
@@ -580,6 +585,7 @@
       "activity_section_position": 2,
       "assessment": false,
       "properties": {
+        "instructor_in_training": true,
         "level_keys": [
           "VPL-CSD-PILOT-S22-CI-CSD U1 storage outfit_2023"
         ],

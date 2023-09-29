@@ -1,0 +1,81 @@
+<GamelabJr>
+  <config><![CDATA[{
+  "published": true,
+  "game_id": 64,
+  "created_at": "2023-06-01T21:11:43.000Z",
+  "level_num": "custom",
+  "user_id": 1196,
+  "properties": {
+    "encrypted": "false",
+    "skin": "gamelab",
+    "show_debug_watch": "true",
+    "block_pools": [
+      "GamelabJr",
+      "storylab"
+    ],
+    "helper_libraries": [
+      "NativeSpriteLab",
+      "zStorybookModule-CSC"
+    ],
+    "use_default_sprites": "false",
+    "hide_animation_mode": "false",
+    "show_type_hints": true,
+    "hide_custom_blocks": true,
+    "all_animations_single_frame": "true",
+    "use_modal_function_editor": "true",
+    "embed": "false",
+    "instructions_important": "false",
+    "submittable": "false",
+    "hide_share_and_remix": "true",
+    "never_autoplay_video": "false",
+    "disable_param_editing": "true",
+    "disable_if_else_editing": "false",
+    "include_shared_functions": "false",
+    "free_play": "false",
+    "expand_debugger": "false",
+    "debugger_disabled": "false",
+    "validation_enabled": "false",
+    "start_in_animation_tab": "false",
+    "mini_toolbox": "false",
+    "hide_pause_button": "false",
+    "authored_hints": "[{\"hint_class\":null,\"hint_markdown\":\"The <code style=\\\"color:black; background-color:#B3B2FB\\\">set heading</code> block adds the title of the book to the cover. \\n\",\"hint_id\":\"Hint1\",\"hint_type\":\"general\",\"hint_path\":\"\",\"hint_video\":\"\",\"tts_url\":\"https://tts.code.org/sharon22k/180/100/dd51d4695df6f66e6237dcfdc915c9db/csc_bookcover_project_title.mp3\"},{\"hint_class\":null,\"hint_markdown\":\"The <code style=\\\"color:black; background-color:#B3B2FB\\\">set subheading</code> adds the author to the book cover!\\n\\nBe sure to change the text.\",\"hint_id\":\"Hint2\",\"hint_type\":\"general\",\"hint_path\":\"\",\"hint_video\":\"\",\"tts_url\":\"https://tts.code.org/sharon22k/180/100/8d111c8e129bae23a10b88897479baf6/csc_bookcover_project_title.mp3\"}]",
+    "long_instructions": "**Get started with adding the title and author onto your book cover!** \r\n\r\n- First, drag the <code style=\"color:black; background-color:#B3B2FB\">set heading</code> block from the toolbox and connect it under when run. \r\n\r\n- Then add the <code style=\"color:black; background-color:#B3B2FB\">set subheading</code>.\r\n- **Type** the title of your book in the heading and the author in the subheading.\r\n- Press <code style=\"color:black; background-color:#FFBD46\">Run</code>.\r\n",
+    "instructions_icon": "emoji",
+    "name_suffix": "_2023",
+    "validation_code": "//Make sure [CSC Module Helper Library] is included as a library in this level\r\nif (World.frameCount == 1) {\r\n  //Everything in this if-statement will just run once, during the first frame of your level\r\n  //README() //uncomment this to see the README for the helper library in the console of this level\r\n  //turnOnDebugging() //uncomment this to use a DEBUG global variable to control console.log statements in your code\r\n  \r\n  setFailTime(70); // Frames to wait before failing student\r\n  setDelayTime(70); // Frames to wait after success before stopping program\r\n  setupPrevious(); //Defines the validationProps.previous{} object. To use it, call updatePrevious() at the end of this box\r\n  \r\n  //use addCriteria to setup the validation logic.\r\n  //You can use criterion commands as helper functions: \r\n  //https://github.com/code-dot-org/code-dot-org/blob/staging/apps/src/p5lab/spritelab/commands/criterionCommands.js\r\n  addCriteria(function() {\r\n    return checkHeadingNotBlank();\r\n  }, \"cscBookcoverNoTitle\");  // include i18n feedback string\r\n  \r\n  addCriteria(function() {\r\n    return checkSubheadingNotBlank();\r\n  }, \"cscBookcoverNoAuthor\");  // include i18n feedback string\r\n}\r\n//Everything after this will run during each 'tick' of the draw loop in your level\r\n//Be careful about putting console.log statements here\r\n\r\n//Always have this first to get most up-to-date helper variables\r\ngetHelperVars();\r\n\r\n//This is what calls updateValidation in \r\n//https://github.com/code-dot-org/code-dot-org/blob/staging/apps/src/p5lab/spritelab/commands/validationCommands.js\r\n//To check the validation criteria\r\ncheck();\r\n\r\n//Always have this at end to store previous state in validationProps.previous\r\nupdatePrevious();",
+    "standalone_app_name": "story",
+    "short_instructions": "To get started, add the <code style=\"color:black; background-color:#B3B2FB\">set heading</code> block and the <code style=\"color:black; background-color:#B3B2FB\">set subheading</code>.",
+    "project_template_level_name": "csc_bookcovers_project_template",
+    "preload_asset_list": null,
+    "encrypted_examples": "+e9UHMBl7+2tW9LSa37u9tcQ4U8x4bif4xD5nET80AO3jbog1j70vSiQHVkM\nFPGlBRGUsPKMd4Xu/7ijnGL6DQ==\n"
+  },
+  "audit_log": "[{\"changed_at\":\"2023-06-01T21:11:43.405+00:00\",\"changed\":[\"cloned from \\\"csc_bookcover_title_2023\\\"\"],\"cloned_from\":\"csc_bookcover_title_2023\"},{\"changed_at\":\"2023-06-02 16:05:45 +0000\",\"changed\":[\"start_blocks\",\"toolbox_blocks\",\"long_instructions\",\"short_instructions\",\"preload_asset_list\",\"contained_level_names\"],\"changed_by_id\":18605,\"changed_by_email\":\"katie.frank+levelbuilder@code.org\"},{\"changed_at\":\"2023-06-02 16:13:53 +0000\",\"changed\":[\"start_blocks\",\"toolbox_blocks\",\"preload_asset_list\",\"encrypted_examples\"],\"changed_by_id\":18605,\"changed_by_email\":\"katie.frank+levelbuilder@code.org\"},{\"changed_at\":\"2023-06-02 16:16:48 +0000\",\"changed\":[\"start_blocks\",\"toolbox_blocks\",\"instructions_icon\",\"preload_asset_list\",\"encrypted_examples\"],\"changed_by_id\":18605,\"changed_by_email\":\"katie.frank+levelbuilder@code.org\"},{\"changed_at\":\"2023-06-02 21:18:35 +0000\",\"changed\":[\"start_blocks\",\"toolbox_blocks\",\"use_default_sprites\",\"hide_animation_mode\",\"preload_asset_list\",\"encrypted_examples\"],\"changed_by_id\":18605,\"changed_by_email\":\"katie.frank+levelbuilder@code.org\"},{\"changed_at\":\"2023-06-02 21:19:02 +0000\",\"changed\":[\"start_blocks\",\"toolbox_blocks\",\"preload_asset_list\",\"encrypted_examples\"],\"changed_by_id\":18605,\"changed_by_email\":\"katie.frank+levelbuilder@code.org\"},{\"changed_at\":\"2023-06-02 21:31:26 +0000\",\"changed\":[\"start_blocks\",\"toolbox_blocks\",\"hide_share_and_remix\",\"preload_asset_list\",\"encrypted_examples\"],\"changed_by_id\":18605,\"changed_by_email\":\"katie.frank+levelbuilder@code.org\"},{\"changed_at\":\"2023-06-06 20:48:49 +0000\",\"changed\":[\"start_blocks\",\"toolbox_blocks\",\"standalone_app_name\",\"preload_asset_list\",\"contained_level_names\"],\"changed_by_id\":18605,\"changed_by_email\":\"katie.frank+levelbuilder@code.org\"},{\"changed_at\":\"2023-06-06 21:09:47 +0000\",\"changed\":[\"toolbox_blocks\"],\"changed_by_id\":18605,\"changed_by_email\":\"katie.frank+levelbuilder@code.org\"},{\"changed_at\":\"2023-06-06 21:10:12 +0000\",\"changed\":[\"start_blocks\",\"toolbox_blocks\",\"long_instructions\",\"preload_asset_list\"],\"changed_by_id\":18605,\"changed_by_email\":\"katie.frank+levelbuilder@code.org\"},{\"changed_at\":\"2023-06-26 22:51:59 +0000\",\"changed\":[\"start_blocks\",\"toolbox_blocks\",\"long_instructions\",\"preload_asset_list\",\"contained_level_names\"],\"changed_by_id\":18605,\"changed_by_email\":\"katie.frank+levelbuilder@code.org\"},{\"changed_at\":\"2023-06-26 23:54:20 +0000\",\"changed\":[\"start_blocks\",\"toolbox_blocks\",\"authored_hints\",\"preload_asset_list\",\"encrypted_examples\"],\"changed_by_id\":18605,\"changed_by_email\":\"katie.frank+levelbuilder@code.org\"},{\"changed_at\":\"2023-06-27 15:36:26 +0000\",\"changed\":[\"start_blocks\",\"toolbox_blocks\",\"preload_asset_list\",\"contained_level_names\"],\"changed_by_id\":18605,\"changed_by_email\":\"katie.frank+levelbuilder@code.org\"},{\"changed_at\":\"2023-06-27 16:42:11 +0000\",\"changed\":[\"start_blocks\",\"toolbox_blocks\",\"preload_asset_list\",\"encrypted_examples\"],\"changed_by_id\":18605,\"changed_by_email\":\"katie.frank+levelbuilder@code.org\"},{\"changed_at\":\"2023-06-27 20:37:23 +0000\",\"changed\":[\"start_blocks\",\"toolbox_blocks\",\"validation_code\",\"preload_asset_list\",\"encrypted_examples\"],\"changed_by_id\":18605,\"changed_by_email\":\"katie.frank+levelbuilder@code.org\"},{\"changed_at\":\"2023-06-27 20:56:54 +0000\",\"changed\":[\"start_blocks\",\"toolbox_blocks\",\"hide_share_and_remix\",\"preload_asset_list\",\"encrypted_examples\"],\"changed_by_id\":18605,\"changed_by_email\":\"katie.frank+levelbuilder@code.org\"}]",
+  "level_concept_difficulty": {
+  }
+}]]></config>
+  <blocks>
+    <start_blocks>
+      <xml>
+        <block type="when_run" movable="false"/>
+      </xml>
+    </start_blocks>
+    <toolbox_blocks>
+      <xml>
+        <block type="storylab_setHeading">
+          <value name="HEADING">
+            <block type="text">
+              <field name="TEXT">Book Title</field>
+            </block>
+          </value>
+        </block>
+        <block type="storylab_setSubheading">
+          <value name="SUBHEADING">
+            <block type="text">
+              <field name="TEXT">Author</field>
+            </block>
+          </value>
+        </block>
+      </xml>
+    </toolbox_blocks>
+  </blocks>
+</GamelabJr>

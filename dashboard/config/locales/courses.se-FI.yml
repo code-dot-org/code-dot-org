@@ -3,50 +3,42 @@ se:
   data:
     course:
       name:
-        csp-2017:
-          assignment_family_title: DihtorDiehtaga Prinsihpat
-          title: DihtorDiehtaga Prinsihpat ('17-'18)
-          version_title: 17-'18
-          description_student: 2016:ii čavčča almmuhii College Board ođđaseamos AP®
-            kurssa, AP Dihtordiehtaga prinsihpa. Kurssas oahppit ohppet dihtordiehtaga
-            vuođđodoahpagiid mas sii hástaluvvojit guorahallat movt dihtorgeavaheapmi
-            ja teknologiija sáhttet váikkuhit máilbmái. AP prográmma ráhkadii AP DihtorDiehtaga
-            prinsihpaid main lea ulbmil SKAPE jođiheddjiid DihtorDiehtaga suorggis.
-            Dás maid hástalit ja movttidahttit sin geat dábálaččat eai oassálastte
-            geavahettiin dehálaš dihtorreaidduid ja fágarasttideaddji vejolašvuođaid.
-          description_teacher: 2016:ii čavčča almmuhii College Board ođđaseamos AP®
-            kurssa, AP Dihtordiehtaga prinsihpa. Kurssas oahppit ohppet dihtordiehtaga
-            vuođđodoahpagiid mas sii hástaluvvojit guorahallat movt dihtorgeavaheapmi
-            ja teknologiija sáhttet váikkuhit máilbmái. AP prográmma ráhkadii AP DihtorDiehtaga
-            prinsihpaid main lea ulbmil SKAPE jođiheddjiid DihtorDiehtaga suorggis.
-            Dás maid hástalit ja movttidahttit sin geat dábálaččat eai oassálastte
-            geavahettiin dehálaš dihtorreaidduid ja fágarasttideaddji vejolašvuođaid.
-          description_short: Oahpa dihtordiehtaga vuođđodoahpagiid.
-        csd-2017:
-          assignment_family_title: DihtorDiehtaga Fuomášumit
-          title: DihtorDiehtaga Fuomášumit ('17-'18)
-          version_title: 17-'18
-          description_student: DihtorDiehtaga Fuomášumit (CS Discoveries) lea dihtordiehtaga
-            álggahankursa mii veahkeha ohppiid ráhkadit albma artefávttaid ja movttidahttá
-            sin geavahit dihtordiehtaga kreativitehta, gulahallama, čuolbmačoavdima
-            ja suohtasdihte reaidun.
-          description_teacher: DihtorDiehtaga Fuomášumit (CS Discoveries) lea dihtordiehtaga
-            álggahankursa mii veahkeha ohppiid ráhkadit albma artefávttaid ja movttidahttá
-            sin geavahit dihtordiehtaga kreativitehta, gulahallama, čuolbmačoavdima
-            ja suohtasdihte reaidun.
-          description_short: DihtorDiehtaga álggahankursa mat veahkehit ohppiid ráhkadit
-            albma artefávttaid.
         allthethingscourse:
-          title: buotáđaidkursa
           description_short: Dát kursa lea buotáđaide
           description_student: Dát kursa lea buotáđaide ja das lea guhkit čilgehus
             ohppiide
           description_teacher: Dát kursa lea buotáđaide ja das lea guhkit čilgehus
             ohppiide
+          title: buotáđaidkursa
+        csd-2017:
+          assignment_family_title: DihtorDiehtaga Fuomášumit
+          description_short: DihtorDiehtaga álggahankursa mat veahkehit ohppiid ráhkadit
+            albma artefávttaid.
+          description_student: DihtorDiehtaga Fuomášumit (CS Discoveries) lea dihtordiehtaga
+            álggahankursa mii veahkeha ohppiid ráhkadit albma artefávttaid ja movttidahttá
+            sin geavahit dihtordiehtaga kreativitehta, gulahallama, čuolbmačoavdima
+            ja suohtasdihte reaidun.
+          description_teacher: DihtorDiehtaga Fuomášumit (CS Discoveries) lea dihtordiehtaga
+            álggahankursa mii veahkeha ohppiid ráhkadit albma artefávttaid ja movttidahttá
+            sin geavahit dihtordiehtaga kreativitehta, gulahallama, čuolbmačoavdima
+            ja suohtasdihte reaidun.
+          title: DihtorDiehtaga Fuomášumit ('17-'18)
+          version_title: 17-'18
         csd-2018:
           assignment_family_title: DihtorDiehtaga Fuomášumit
+          description_short: DihtorDiehtaga álggahankursa mat veahkehit ohppiid ráhkadit
+            albma artefávttaid.
+          description_student: DihtorDiehtaga Fuomášumit (CS Discoveries) lea dihtordiehtaga
+            álggahankursa mii veahkeha ohppiid ráhkadit albma artefávttaid ja movttidahttá
+            sin geavahit dihtordiehtaga kreativitehta, gulahallama, čuolbmačoavdima
+            ja suohtasdihte reaidun.
+          description_teacher: DihtorDiehtaga Fuomášumit (CS Discoveries) lea dihtordiehtaga
+            álggahankursa mii veahkeha ohppiid ráhkadit albma artefávttaid ja movttidahttá
+            sin geavahit dihtordiehtaga kreativitehta, gulahallama, čuolbmačoavdima
+            ja suohtasdihte reaidun.
           title: DihtorDiehtaga Fuomášumit ('18-'19)
           version_title: 18-'19
+        csd-2019:
           description_short: DihtorDiehtaga álggahankursa mat veahkehit ohppiid ráhkadit
             albma artefávttaid.
           description_student: DihtorDiehtaga Fuomášumit (CS Discoveries) lea dihtordiehtaga
@@ -57,63 +49,8 @@ se:
             álggahankursa mii veahkeha ohppiid ráhkadit albma artefávttaid ja movttidahttá
             sin geavahit dihtordiehtaga kreativitehta, gulahallama, čuolbmačoavdima
             ja suohtasdihte reaidun.
-        csp-2018:
-          assignment_family_title: DihtorDiehtaga Prinsihpat
-          title: DihtorDiehtaga Prinsihpat ('18-'19)
-          version_title: 18-'19
-          description_short: Oahpa dihtordiehtaga vuođđodoahpagiid.
-          description_student: 2016:ii čavčča almmuhii College Board ođđaseamos AP®
-            kurssa, AP Dihtordiehtaga prinsihpa. Kurssas oahppit ohppet dihtordiehtaga
-            vuođđodoahpagiid mas sii hástaluvvojit guorahallat movt dihtorgeavaheapmi
-            ja teknologiija sáhttet váikkuhit máilbmái. AP prográmma ráhkadii AP DihtorDiehtaga
-            prinsihpaid main lea ulbmil SKAPE jođiheddjiid DihtorDiehtaga suorggis.
-            Dás maid hástalit ja movttidahttit sin geat dábálaččat eai oassálastte
-            geavahettiin dehálaš dihtorreaidduid ja fágarasttideaddji vejolašvuođaid.
-          description_teacher: 2016:ii čavčča almmuhii College Board ođđaseamos AP®
-            kurssa, AP Dihtordiehtaga prinsihpa. Kurssas oahppit ohppet dihtordiehtaga
-            vuođđodoahpagiid mas sii hástaluvvojit guorahallat movt dihtorgeavaheapmi
-            ja teknologiija sáhttet váikkuhit máilbmái. AP prográmma ráhkadii AP DihtorDiehtaga
-            prinsihpaid main lea ulbmil SKAPE jođiheddjiid DihtorDiehtaga suorggis.
-            Dás maid hástalit ja movttidahttit sin geat dábálaččat eai oassálastte
-            geavahettiin dehálaš dihtorreaidduid ja fágarasttideaddji vejolašvuođaid.
-        csp-2019:
-          title: DihtorDiehtaga Prinsihpat ('19-'20)
-          version_title: "('19-'20)"
-          description_short: Oahpa dihtordiehtaga vuođđodoahpagiid.
-          description_student: 2016:ii čavčča almmuhii College Board ođđaseamos AP®
-            kurssa, AP Dihtordiehtaga prinsihpa. Kurssas oahppit ohppet dihtordiehtaga
-            vuođđodoahpagiid mas sii hástaluvvojit guorahallat movt dihtorgeavaheapmi
-            ja teknologiija sáhttet váikkuhit máilbmái. AP prográmma ráhkadii AP DihtorDiehtaga
-            prinsihpaid main lea ulbmil SKAPE jođiheddjiid DihtorDiehtaga suorggis.
-            Dás maid hástalit ja movttidahttit sin geat dábálaččat eai oassálastte
-            geavahettiin dehálaš dihtorreaidduid ja fágarasttideaddji vejolašvuođaid.
-          description_teacher: 2016:ii čavčča almmuhii College Board ođđaseamos AP®
-            kurssa, AP Dihtordiehtaga prinsihpa. Kurssas oahppit ohppet dihtordiehtaga
-            vuođđodoahpagiid mas sii hástaluvvojit guorahallat movt dihtorgeavaheapmi
-            ja teknologiija sáhttet váikkuhit máilbmái. AP prográmma ráhkadii AP DihtorDiehtaga
-            prinsihpaid main lea ulbmil SKAPE jođiheddjiid DihtorDiehtaga suorggis.
-            Dás maid hástalit ja movttidahttit sin geat dábálaččat eai oassálastte
-            geavahettiin dehálaš dihtorreaidduid ja fágarasttideaddji vejolašvuođaid.
-        csd-2019:
           title: DihtorDiehtaga Fuomášumit ('19-'20)
           version_title: "('19-'20)"
-          description_short: DihtorDiehtaga álggahankursa mat veahkehit ohppiid ráhkadit
-            albma artefávttaid.
-          description_student: DihtorDiehtaga Fuomášumit (CS Discoveries) lea dihtordiehtaga
-            álggahankursa mii veahkeha ohppiid ráhkadit albma artefávttaid ja movttidahttá
-            sin geavahit dihtordiehtaga kreativitehta, gulahallama, čuolbmačoavdima
-            ja suohtasdihte reaidun.
-          description_teacher: DihtorDiehtaga Fuomášumit (CS Discoveries) lea dihtordiehtaga
-            álggahankursa mii veahkeha ohppiid ráhkadit albma artefávttaid ja movttidahttá
-            sin geavahit dihtordiehtaga kreativitehta, gulahallama, čuolbmačoavdima
-            ja suohtasdihte reaidun.
-        csd-pilot:
-          description_student: DihtorDiehtaga Fuomášumit (CS Discoveries) lea dihtordiehtaga
-            álggahankursa mii veahkeha ohppiid ráhkadit albma artefávttaid ja movttidahttá
-            sin geavahit dihtordiehtaga kreativitehta, gulahallama, čuolbmačoavdima
-            ja suohtasdihte reaidun.
-        csp-2020:
-          description_short: Oahpa dihtordiehtaga vuođđodoahpagiid.
         csd-2020:
           description_short: DihtorDiehtaga álggahankursa mat veahkehit ohppiid ráhkadit
             albma artefávttaid.
@@ -125,13 +62,76 @@ se:
             álggahankursa mii veahkeha ohppiid ráhkadit albma artefávttaid ja movttidahttá
             sin geavahit dihtordiehtaga kreativitehta, gulahallama, čuolbmačoavdima
             ja suohtasdihte reaidun.
+        csd-2023:
+          title: DihtorDiehtaga Fuomášumit
+        csd-pilot:
+          description_student: DihtorDiehtaga Fuomášumit (CS Discoveries) lea dihtordiehtaga
+            álggahankursa mii veahkeha ohppiid ráhkadit albma artefávttaid ja movttidahttá
+            sin geavahit dihtordiehtaga kreativitehta, gulahallama, čuolbmačoavdima
+            ja suohtasdihte reaidun.
+        csp-2017:
+          assignment_family_title: DihtorDiehtaga Prinsihpat
+          description_short: Oahpa dihtordiehtaga vuođđodoahpagiid.
+          description_student: 2016:ii čavčča almmuhii College Board ođđaseamos AP®
+            kurssa, AP Dihtordiehtaga prinsihpa. Kurssas oahppit ohppet dihtordiehtaga
+            vuođđodoahpagiid mas sii hástaluvvojit guorahallat movt dihtorgeavaheapmi
+            ja teknologiija sáhttet váikkuhit máilbmái. AP prográmma ráhkadii AP DihtorDiehtaga
+            prinsihpaid main lea ulbmil SKAPE jođiheddjiid DihtorDiehtaga suorggis.
+            Dás maid hástalit ja movttidahttit sin geat dábálaččat eai oassálastte
+            geavahettiin dehálaš dihtorreaidduid ja fágarasttideaddji vejolašvuođaid.
+          description_teacher: 2016:ii čavčča almmuhii College Board ođđaseamos AP®
+            kurssa, AP Dihtordiehtaga prinsihpa. Kurssas oahppit ohppet dihtordiehtaga
+            vuođđodoahpagiid mas sii hástaluvvojit guorahallat movt dihtorgeavaheapmi
+            ja teknologiija sáhttet váikkuhit máilbmái. AP prográmma ráhkadii AP DihtorDiehtaga
+            prinsihpaid main lea ulbmil SKAPE jođiheddjiid DihtorDiehtaga suorggis.
+            Dás maid hástalit ja movttidahttit sin geat dábálaččat eai oassálastte
+            geavahettiin dehálaš dihtorreaidduid ja fágarasttideaddji vejolašvuođaid.
+          title: DihtorDiehtaga Prinsihpat ('17-'18)
+          version_title: 17-'18
+        csp-2018:
+          assignment_family_title: DihtorDiehtaga Prinsihpat
+          description_short: Oahpa dihtordiehtaga vuođđodoahpagiid.
+          description_student: 2016:ii čavčča almmuhii College Board ođđaseamos AP®
+            kurssa, AP Dihtordiehtaga prinsihpa. Kurssas oahppit ohppet dihtordiehtaga
+            vuođđodoahpagiid mas sii hástaluvvojit guorahallat movt dihtorgeavaheapmi
+            ja teknologiija sáhttet váikkuhit máilbmái. AP prográmma ráhkadii AP DihtorDiehtaga
+            prinsihpaid main lea ulbmil SKAPE jođiheddjiid DihtorDiehtaga suorggis.
+            Dás maid hástalit ja movttidahttit sin geat dábálaččat eai oassálastte
+            geavahettiin dehálaš dihtorreaidduid ja fágarasttideaddji vejolašvuođaid.
+          description_teacher: 2016:ii čavčča almmuhii College Board ođđaseamos AP®
+            kurssa, AP Dihtordiehtaga prinsihpa. Kurssas oahppit ohppet dihtordiehtaga
+            vuođđodoahpagiid mas sii hástaluvvojit guorahallat movt dihtorgeavaheapmi
+            ja teknologiija sáhttet váikkuhit máilbmái. AP prográmma ráhkadii AP DihtorDiehtaga
+            prinsihpaid main lea ulbmil SKAPE jođiheddjiid DihtorDiehtaga suorggis.
+            Dás maid hástalit ja movttidahttit sin geat dábálaččat eai oassálastte
+            geavahettiin dehálaš dihtorreaidduid ja fágarasttideaddji vejolašvuođaid.
+          title: DihtorDiehtaga Prinsihpat ('18-'19)
+          version_title: 18-'19
+        csp-2019:
+          description_short: Oahpa dihtordiehtaga vuođđodoahpagiid.
+          description_student: 2016:ii čavčča almmuhii College Board ođđaseamos AP®
+            kurssa, AP Dihtordiehtaga prinsihpa. Kurssas oahppit ohppet dihtordiehtaga
+            vuođđodoahpagiid mas sii hástaluvvojit guorahallat movt dihtorgeavaheapmi
+            ja teknologiija sáhttet váikkuhit máilbmái. AP prográmma ráhkadii AP DihtorDiehtaga
+            prinsihpaid main lea ulbmil SKAPE jođiheddjiid DihtorDiehtaga suorggis.
+            Dás maid hástalit ja movttidahttit sin geat dábálaččat eai oassálastte
+            geavahettiin dehálaš dihtorreaidduid ja fágarasttideaddji vejolašvuođaid.
+          description_teacher: 2016:ii čavčča almmuhii College Board ođđaseamos AP®
+            kurssa, AP Dihtordiehtaga prinsihpa. Kurssas oahppit ohppet dihtordiehtaga
+            vuođđodoahpagiid mas sii hástaluvvojit guorahallat movt dihtorgeavaheapmi
+            ja teknologiija sáhttet váikkuhit máilbmái. AP prográmma ráhkadii AP DihtorDiehtaga
+            prinsihpaid main lea ulbmil SKAPE jođiheddjiid DihtorDiehtaga suorggis.
+            Dás maid hástalit ja movttidahttit sin geat dábálaččat eai oassálastte
+            geavahettiin dehálaš dihtorreaidduid ja fágarasttideaddji vejolašvuođaid.
+          title: DihtorDiehtaga Prinsihpat ('19-'20)
+          version_title: "('19-'20)"
+        csp-2020:
+          description_short: Oahpa dihtordiehtaga vuođđodoahpagiid.
         csp-2021:
           description_short: Oahpa dihtordiehtaga vuođđodoahpagiid.
-        mike-test:
-          title: DihtorDiehtaga Vuođut
         csp-2022:
           description_short: Oahpa dihtordiehtaga vuođđodoahpagiid.
         csp-2023:
           description_short: Oahpa dihtordiehtaga vuođđodoahpagiid.
-        csd-2023:
-          title: DihtorDiehtaga Fuomášumit
+        mike-test:
+          title: DihtorDiehtaga Vuođut

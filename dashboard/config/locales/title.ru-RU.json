@@ -53,16 +53,16 @@
         "courseB_unplugged_MRF": "Урок без компьютера",
         "courseB_unplugged_MRF_2018": "Мои друзья роботы",
         "courseB_unplugged_loopyMRF": "Урок без компьютера",
+        "courseB_unplugged_loopyMRF_2018": "Не установлено: en-US.data.unplugged.courseB_unplugged_loopyMRF_2018.title",
         "courseC_Unplugged_ScreenOutTheMean": "Урок без компьютера",
         "courseC_Unplugged_ScreenOutTheMean_2018": "Урок без компьютера",
         "courseD_unplugged_digitalCitizenship": "Урок без компьютера",
         "courseD_unplugged_digitalCitizenship_2018": "Урок без компьютера",
         "courseE_unplugged_CnC_2018": "Публикация цифровых произведений",
         "courseE_unplugged_privateInformation": "Common Sense Education: конфиденциальная и персональная информация ",
+        "courseE_unplugged_privateInformation_2018": "отсутствует перевод: en-US.data.unplugged.courseE_unplugged_privateInformation_2018.title\n",
         "courseF_unplugged_powerOfWords": "Урок без компьютера",
-        "courseF_unplugged_powerOfWords_2018": "отсутствует перевод: en-US.data.unplugged.courseF_unplugged_powerOfWords_2018.title",
-        "courseB_unplugged_loopyMRF_2018": "Не установлено: en-US.data.unplugged.courseB_unplugged_loopyMRF_2018.title",
-        "courseE_unplugged_privateInformation_2018": "отсутствует перевод: en-US.data.unplugged.courseE_unplugged_privateInformation_2018.title\n"
+        "courseF_unplugged_powerOfWords_2018": "отсутствует перевод: en-US.data.unplugged.courseF_unplugged_powerOfWords_2018.title"
       }
     }
   }

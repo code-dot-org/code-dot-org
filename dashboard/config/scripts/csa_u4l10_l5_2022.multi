@@ -29,3 +29,5 @@ public void test(int x) {
 
 What is printed when `test(4)` is called?
 MARKDOWN
+
+allow_multiple_attempts true

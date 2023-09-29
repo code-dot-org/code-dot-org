@@ -14,3 +14,4 @@ answer 'the type of the value to be given from the method'
 
 question 'overloading'
 answer 'defining two or more constructors or methods with the same name but different signatures'
+allow_multiple_attempts true

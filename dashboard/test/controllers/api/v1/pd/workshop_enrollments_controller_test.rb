@@ -1,6 +1,6 @@
 require 'test_helper'
 
-class Api::V1::Pd::WorkshopEnrollmentsControllerTest < ::ActionController::TestCase
+class Api::V1::Pd::WorkshopEnrollmentsControllerTest < ActionController::TestCase
   setup do
     @organizer = create :workshop_organizer
     @program_manager = create :program_manager
@@ -270,12 +270,11 @@ class Api::V1::Pd::WorkshopEnrollmentsControllerTest < ::ActionController::TestC
       role: "Counselor",
       grades_teaching: ["Kindergarten", "Grade 1", "Grade 2"],
       attended_csf_intro_workshop: "No",
-      csf_course_experience: {"Course A": "none", "Course B": "a few lessons", "Course E": "most lessons"},
+      csf_course_experience: {'Course A': "none", 'Course B': "a few lessons", 'Course E': "most lessons"},
       csf_courses_planned: ["Course E", "Course F"],
       csf_intro_intent: "No",
       years_teaching: "30",
       years_teaching_cs: "10",
-      csf_has_physical_curriculum_guide: "No",
       previous_courses: "I don’t have experience teaching any of these courses",
       replace_existing: "I don’t know",
       csf_intro_other_factors: "I want to learn computer science concepts.",
