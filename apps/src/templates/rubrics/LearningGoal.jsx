@@ -20,6 +20,7 @@ import {EVENTS} from '@cdo/apps/lib/util/AnalyticsConstants';
 import EvidenceLevels from './EvidenceLevels';
 import SafeMarkdown from '@cdo/apps/templates/SafeMarkdown';
 import HttpClient from '@cdo/apps/util/HttpClient';
+import {UNDERSTANDING_LEVEL_STRINGS} from './rubricHelpers';
 
 export default function LearningGoal({
   learningGoal,
@@ -35,6 +36,7 @@ export default function LearningGoal({
   const [errorAutosaving, setErrorAutosaving] = useState(false);
   const [learningGoalEval, setLearningGoalEval] = useState(null);
   const [displayFeedback, setDisplayFeedback] = useState('');
+  const [displayUnderstanding, setDisplayUnderstanding] = useState(-1);
   const understandingLevel = useRef(0);
   const teacherFeedback = useRef('');
 
@@ -107,15 +109,15 @@ export default function LearningGoal({
         .then(response => response.json())
         .then(json => {
           setLearningGoalEval(json);
-          if (!json.feedback) {
-            teacherFeedback.current = '';
-          } else {
+          if (json.feedback) {
             teacherFeedback.current = json.feedback;
             setDisplayFeedback(teacherFeedback.current);
           }
-          if (json.understanding) {
+          if (json.understanding >= 0 && json.understanding !== null) {
             understandingLevel.current = json.understanding;
+            setDisplayUnderstanding(json.understanding);
           }
+          console.log(understandingLevel.current);
         })
         .catch(error => console.log(error));
     }
@@ -124,6 +126,7 @@ export default function LearningGoal({
   // Callback to retrieve understanding data from EvidenceLevels
   const radioButtonCallback = radioButtonData => {
     understandingLevel.current = radioButtonData;
+    setDisplayUnderstanding(radioButtonData);
     if (!isAutosaving) {
       autosave();
     }
@@ -153,8 +156,16 @@ export default function LearningGoal({
         <div className={style.learningGoalHeaderRightSide}>
           {aiEnabled && <AiToken />}
           {/*TODO: Display status of feedback*/}
-          {canProvideFeedback && (
-            <BodyThreeText>{i18n.needsApproval()}</BodyThreeText>
+          {displayUnderstanding === -1 ? (
+            canProvideFeedback && aiEnabled ? (
+              <BodyThreeText>{i18n.approve()}</BodyThreeText>
+            ) : (
+              <BodyThreeText>{i18n.evaluate()}</BodyThreeText>
+            )
+          ) : (
+            <BodyThreeText>
+              {UNDERSTANDING_LEVEL_STRINGS[understandingLevel.current]}
+            </BodyThreeText>
           )}
         </div>
       </summary>
