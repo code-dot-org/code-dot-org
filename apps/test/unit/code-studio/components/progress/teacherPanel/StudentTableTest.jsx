@@ -123,9 +123,9 @@ describe('StudentTable', () => {
     });
 
     const studentRows = wrapper.find('tr');
-    expect(studentRows.at(1).text()).to.match(/^Student 3/);
-    expect(studentRows.at(2).text()).to.match(/^Student 1/);
-    expect(studentRows.at(3).text()).to.match(/^Student 4/);
+    expect(studentRows.at(1).text()).to.match(/^Student 4/);
+    expect(studentRows.at(2).text()).to.match(/^Student 3/);
+    expect(studentRows.at(3).text()).to.match(/^Student 1/);
     expect(studentRows.at(4).text()).to.match(/^Student 2/);
   });
 

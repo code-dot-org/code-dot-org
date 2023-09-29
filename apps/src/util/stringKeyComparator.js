@@ -8,17 +8,25 @@ const collator = new Intl.Collator();
  */
 export default function stringKeyComparator(keys) {
   return (a, b) => {
-    // Sort strings with characters before strings without
-    if (!!a && !b) {
-      return -1;
-    }
-    if (!a && !!b) {
-      return 1;
-    }
+    return keys.reduce((result, key) => {
+      // Return early if we already have a result from a previous field.
+      if (result !== 0) {
+        return result;
+      }
 
-    return keys.reduce(
-      (result, key) => result || collator.compare(a[key] || '', b[key] || ''),
-      0
-    );
+      const aField = a[key] || '';
+      const bField = b[key] || '';
+
+      // Sort strings with characters before strings without
+      if (!!aField && !bField) {
+        return -1;
+      }
+      if (!aField && !!bField) {
+        return 1;
+      }
+
+      // Compare strings directly
+      return collator.compare(aField, bField);
+    }, 0);
   };
 }
