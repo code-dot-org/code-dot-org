@@ -2,13 +2,13 @@ require_relative '../../test_helper'
 require_relative '../../../cdo/google/drive'
 
 describe Google::Drive do
-  let(:google_drive) {Google::Drive.new(service_account_key: service_account_key)}
+  let(:google_drive) {Google::Drive.new(service_account_key)}
 
-  let(:service_account_key) {'expected_service_account_key'}
+  let(:service_account_key) {'expected_service_account_key_json'}
   let(:google_drive_session) {stub}
 
   before do
-    StringIO.stubs(:new).with(JSON.dump(service_account_key)).returns('expected_service_account_key_json_io')
+    StringIO.stubs(:new).with(service_account_key).returns('expected_service_account_key_json_io')
     GoogleDrive::Session.stubs(:from_service_account_key).with('expected_service_account_key_json_io').returns(google_drive_session)
   end
 
