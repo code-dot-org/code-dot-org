@@ -12,7 +12,7 @@
     },
     "new_name": null,
     "family_name": "draft-hoc-dp",
-    "serialized_at": "2023-09-26 23:46:01 UTC",
+    "serialized_at": "2023-09-27 20:45:22 UTC",
     "published_state": "pilot",
     "instruction_type": "teacher_led",
     "instructor_audience": "teacher",
@@ -480,6 +480,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "Dance_2019_01_draft_markdown"
+        ],
         "progression": "Training the AI"
       },
       "bonus": false,

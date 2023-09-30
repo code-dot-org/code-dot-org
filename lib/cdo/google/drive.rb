@@ -39,15 +39,10 @@ module Google
       @session
     end
 
-    def initialize(params = {})
+    def initialize(service_account_key = CDO.gdrive_export_secret.to_json)
       $log&.debug 'Establishing Google Drive session'
-      @session = if params[:service_account_key]
-                   account_key = params[:service_account_key]
-                   account_key = StringIO.new JSON.dump(account_key) unless account_key.is_a?(StringIO)
-                   GoogleDrive::Session.from_service_account_key account_key
-                 else
-                   GoogleDrive.saved_session(deploy_dir('.gdrive_session'))
-                 end
+      raise "Google Authentication Key not provided." if service_account_key.nil?
+      @session = GoogleDrive::Session.from_service_account_key StringIO.new(service_account_key)
     end
 
     def file(path)
