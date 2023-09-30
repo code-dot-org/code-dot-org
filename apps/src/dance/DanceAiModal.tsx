@@ -133,9 +133,8 @@ const DanceAiModal: React.FunctionComponent<DanceAiProps> = ({onClose}) => {
     const responseJson = await doAi(value);
     const response = JSON.parse(responseJson);
     const formattedResponseJson = JSON.stringify(response)
-      .replace(/":"/g, '": "')
+      .replace(/":/g, '": ')
       .replace(/","/g, '", "')
-      .replace(/:{/g, ': {')
       .replace(/,"/g, ', "');
 
     setResponseJson(responseJson);
