@@ -1008,12 +1008,12 @@ exports.createJsWrapperBlockCreator = function (
     });
     const blockName = `${pool}_${name || func}`;
     if (eventLoopBlock && args.filter(arg => arg.statement).length === 0) {
-      // If the eventloop block doesn't explicitly list its statement inputs,
-      // just tack one onto the end
-      args.push({
+      let argsCopy = [...args];
+      argsCopy.push({
         name: 'DO',
         statement: true,
       });
+      args = argsCopy;
     }
     const inputs = [...args];
     if (methodCall && !thisObject) {
