@@ -304,7 +304,6 @@ module I18n
                 # Don't localize encrypted levels; the whole point of encryption is to
                 # keep the contents of certain levels secret.
                 next if level.encrypted?
-                next unless level.start_libraries
 
                 url = I18nScriptUtils.get_level_url_key(script, level)
                 script_strings[url] = get_i18n_strings(level)
