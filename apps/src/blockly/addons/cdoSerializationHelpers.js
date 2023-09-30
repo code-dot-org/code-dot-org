@@ -48,7 +48,7 @@ export function addPositionsToState(xmlBlocks, blockIdMap) {
   xmlBlocks.forEach(xmlBlock => {
     const blockJson = blockIdMap.get(xmlBlock.blockly_block.id);
     if (blockJson) {
-      // Do not change values if xmlBlock values are NaN (unspecified in XML)
+      // Note: If xmlBlock values are NaN, they will be ignored and blockJson values will be used
       blockJson.x = xmlBlock.x || blockJson.x;
       blockJson.y = xmlBlock.y || blockJson.y;
     }

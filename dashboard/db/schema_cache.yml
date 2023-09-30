@@ -4258,6 +4258,14 @@ columns:
     collation: utf8_unicode_ci
     comment:
   - *46
+  - !ruby/object:ActiveRecord::ConnectionAdapters::MySQL::Column
+    name: module
+    sql_type_metadata: *3
+    'null': true
+    default:
+    default_function:
+    collation: utf8_unicode_ci
+    comment:
   pd_workshops_facilitators:
   - *92
   - *13

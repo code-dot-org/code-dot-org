@@ -57,6 +57,7 @@ CROWDIN_TEST_PROJECTS = {
 class I18nScriptUtils
   PROGRESS_BAR_FORMAT = '%t: |%B| %p% %a'.freeze
   PARALLEL_PROCESSES = Parallel.processor_count / 2
+  SOURCE_LOCALE = 'en-US'.freeze
 
   # Because we log many of the i18n operations to slack, we often want to
   # explicitly force stdout to operate synchronously, rather than buffering
@@ -310,6 +311,13 @@ class I18nScriptUtils
     locale.tr('-', '_').downcase
   end
 
+  # Wraps hash in correct format to be loaded by our i18n backend.
+  # This will most likely be JSON file data due to Crowdin only
+  # setting the locale for yml files.
+  def self.to_dashboard_i18n_data(locale, type, i18n_data)
+    {locale => {'data' => {type => i18n_data}}}
+  end
+
   def self.sort_and_sanitize(hash)
     hash.sort_by {|key, _| key}.each_with_object({}) do |(key, value), result|
       case value
@@ -416,5 +424,13 @@ class I18nScriptUtils
     return unless Dir.empty?(dir)
 
     FileUtils.rm_r(dir)
+  end
+
+  # Checks if the language is the i18n source language
+  #
+  # @param lang [PegasusLanguage] a pegasus language object
+  # @return [true, false]
+  def self.source_lang?(lang)
+    lang[:locale_s] == SOURCE_LOCALE
   end
 end

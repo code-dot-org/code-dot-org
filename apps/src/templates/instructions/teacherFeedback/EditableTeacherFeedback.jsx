@@ -36,7 +36,6 @@ export class EditableTeacherFeedback extends Component {
     teacher: PropTypes.number,
     latestFeedback: teacherFeedbackShape,
     token: PropTypes.string,
-    allowUnverified: PropTypes.bool.isRequired,
     //Provided by Redux
     verifiedInstructor: PropTypes.bool,
     selectedSectionId: PropTypes.number,
@@ -50,7 +49,7 @@ export class EditableTeacherFeedback extends Component {
     this.studentId = queryString.parse(window.location.search).user_id;
     this.onRubricChange = this.onRubricChange.bind(this);
 
-    const {latestFeedback, allowUnverified, verifiedInstructor} = this.props;
+    const {latestFeedback} = this.props;
 
     this.state = {
       comment: latestFeedback?.comment || '',
@@ -60,7 +59,6 @@ export class EditableTeacherFeedback extends Component {
       reviewStateUpdated: false,
       submitting: false,
       errorState: ErrorType.NoError,
-      allowEditing: verifiedInstructor || allowUnverified,
     };
   }
 
@@ -205,7 +203,8 @@ export class EditableTeacherFeedback extends Component {
   }
 
   renderSubmitFeedbackButton() {
-    const {latestFeedback, submitting, errorState, allowEditing} = this.state;
+    const {latestFeedback, submitting, errorState} = this.state;
+    const {verifiedInstructor} = this.props;
 
     const buttonText = latestFeedback ? i18n.update() : i18n.saveAndShare();
 
@@ -213,7 +212,7 @@ export class EditableTeacherFeedback extends Component {
       !this.didFeedbackChange() ||
       submitting ||
       errorState === ErrorType.Load ||
-      !allowEditing;
+      !verifiedInstructor;
 
     return (
       <div style={styles.button}>
@@ -231,12 +230,11 @@ export class EditableTeacherFeedback extends Component {
   }
 
   render() {
-    const {rubric, visible} = this.props;
+    const {verifiedInstructor, rubric, visible} = this.props;
 
-    const {comment, performance, latestFeedback, errorState, allowEditing} =
-      this.state;
+    const {comment, performance, latestFeedback, errorState} = this.state;
 
-    const placeholderWarning = allowEditing
+    const placeholderWarning = verifiedInstructor
       ? i18n.feedbackPlaceholder()
       : i18n.feedbackPlaceholderNonVerified();
 
