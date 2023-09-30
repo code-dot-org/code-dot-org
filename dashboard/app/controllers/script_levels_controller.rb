@@ -205,8 +205,10 @@ class ScriptLevelsController < ApplicationController
     raise ActiveRecord::RecordNotFound unless @script_level
 
     @level = @script_level.level
-
-    render json: @level.summarize_for_lab2_properties
+    blockly_options = @level.localized_blockly_level_options(@script).dup
+    level_properties = @level.summarize_for_lab2_properties
+    level_properties[:sharedBlocks] = blockly_options["sharedBlocks"]
+    render json: level_properties
   end
 
   # Get a list of hidden lessons for the current users section
