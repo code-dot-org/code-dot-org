@@ -155,14 +155,21 @@ module I18n
                 i18n_strings['placeholder_texts'].merge! get_all_placeholder_text_types(processed_doc)
               end
 
-              # start_html
-              if level.start_html
-                start_html = Nokogiri::XML(level.start_html, &:noblanks)
-                i18n_strings['start_html'] = Hash.new unless level.start_html.empty?
+              # start_libraries
+              if level.start_libraries
+                level_libraries = JSON.parse(level.start_libraries)
+                level_libraries.each do |library|
+                  next unless /^I18n_/.match?(library["name"])
+                  library_name = library["name"]
+                  library_source = library["source"]
+                  translation_text = library_source.match(/var TRANSLATIONTEXT = (\{[^}]*});/m).captures
 
-                # match any element that contains text
-                start_html.xpath('//*[text()[normalize-space()]]').each do |element|
-                  i18n_strings['start_html'][element.text] = element.text
+                  i18n_strings['start_libraries'] = Hash.new if i18n_strings['start_libraries'].blank?
+                  i18n_strings['start_libraries'][library_name] = {}
+
+                  JSON.parse(translation_text[0]).each do |key, value|
+                    i18n_strings['start_libraries'][library_name][key] = value
+                  end
                 end
               end
 
@@ -297,6 +304,7 @@ module I18n
                 # Don't localize encrypted levels; the whole point of encryption is to
                 # keep the contents of certain levels secret.
                 next if level.encrypted?
+                next unless level.start_libraries
 
                 url = I18nScriptUtils.get_level_url_key(script, level)
                 script_strings[url] = get_i18n_strings(level)
