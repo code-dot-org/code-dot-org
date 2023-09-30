@@ -1,4 +1,4 @@
-import React, {useCallback, useEffect, useState} from 'react';
+import React, {useCallback, useEffect, useState, useRef} from 'react';
 import {TypedUseSelectorHook, useSelector} from 'react-redux';
 import Instructions from '@cdo/apps/lab2/views/components/Instructions';
 import PanelContainer from '@cdo/apps/lab2/views/components/PanelContainer';
@@ -61,6 +61,16 @@ const DanceView: React.FunctionComponent = () => {
   const sharedBlocks = levelProperties?.sharedBlocks || undefined;
   console.log('sharedBlocks in DanceView', sharedBlocks);
 
+  const blockInstallOptions = {
+    skin,
+    isK1,
+    level: levelProperties,
+  };
+  console.log('blockInstallOptions', blockInstallOptions);
+  const danceBlocklyWorkspace = useRef<DanceBlocklyWorkspace>(
+    new DanceBlocklyWorkspace(blockInstallOptions, levelProperties)
+  );
+
   const onAuthError = (songId: string) => {
     Lab2MetricsReporter.logWarning({
       message: 'Error loading song',
@@ -69,23 +79,12 @@ const DanceView: React.FunctionComponent = () => {
   };
 
   // Initialize Blockly.
-
   useEffect(() => {
     // loadLevel
-    const blockInstallOptions = {
-      skin,
-      isK1,
-      level: levelProperties,
-    };
-    console.log('blockInstallOptions', blockInstallOptions);
-    const danceBlocklyWorkspace = new DanceBlocklyWorkspace(
-      blockInstallOptions,
-      levelProperties
-    );
     const blocklyContainer = document.getElementById(BLOCKLY_DIV_ID);
     console.log('blocklyContainer', blocklyContainer);
-    danceBlocklyWorkspace.init(blocklyContainer);
-  }, [isK1, levelProperties, skin]);
+    danceBlocklyWorkspace.current.init(blocklyContainer);
+  }, []);
 
   // If level data or initial sources change, loadlevel
 
