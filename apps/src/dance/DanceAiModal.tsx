@@ -132,13 +132,27 @@ const DanceAiModal: React.FunctionComponent<DanceAiProps> = ({onClose}) => {
   const startAi = async (value: string) => {
     const responseJson = await doAi(value);
     const response = JSON.parse(responseJson);
-    const formattedResponseJson = JSON.stringify(response)
+    const pickedResponse = (({
+      backgroundEffect,
+      backgroundColor,
+      foregroundEffect,
+      dancers,
+    }) => ({backgroundEffect, backgroundColor, foregroundEffect, dancers}))(
+      response
+    );
+    const pickedResponseJson = JSON.stringify(pickedResponse);
+    const formattedPickedResponseJson = pickedResponseJson
       .replace(/":/g, '": ')
       .replace(/","/g, '", "')
       .replace(/,"/g, ', "');
 
-    setResponseJson(responseJson);
-    setResponseCall(`ai(${formattedResponseJson})`);
+    // The block value will be set to this JSON.
+    setResponseJson(pickedResponseJson);
+
+    // The user will see this function call.
+    setResponseCall(`ai(${formattedPickedResponseJson})`);
+
+    // The user will see this explanation.
     setResponseExplanation(response.explanation);
   };
 
