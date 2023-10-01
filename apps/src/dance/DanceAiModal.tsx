@@ -129,7 +129,9 @@ const DanceAiModal: React.FunctionComponent<DanceAiProps> = ({onClose}) => {
   };
 
   const startAi = async (value: string) => {
-    const response = await doAi(value);
+    //const response = await doAi(value);
+    const response =
+      '{"backgroundColor": "rave", "backgroundEffect": "splatter", "foregroundEffect": "rain"}';
 
     const params = JSON.parse(response);
 
@@ -154,14 +156,13 @@ const DanceAiModal: React.FunctionComponent<DanceAiProps> = ({onClose}) => {
     let firstBlock = Blockly.getMainWorkspace().newBlock(
       'Dancelab_setForegroundEffect'
     );
-    //firstBlock.setFieldValue('confetti', 'EFFECT');
+
     firstBlock.setFieldValue(params.foregroundEffect, 'EFFECT');
 
     let secondBlock = Blockly.getMainWorkspace().newBlock(
       'Dancelab_setBackgroundEffectWithPalette'
     );
-    //secondBlock.setFieldValue('sparkles', 'EFFECT');
-    //secondBlock.setFieldValue('cool', 'PALETTE');
+
     secondBlock.setFieldValue(params.backgroundEffect, 'EFFECT');
     secondBlock.setFieldValue(params.backgroundColor, 'PALETTE');
 
@@ -181,11 +182,23 @@ const DanceAiModal: React.FunctionComponent<DanceAiProps> = ({onClose}) => {
 
       const firstBlockSvg = firstBlock as any;
 
-      //firstBlockSvg.moveTo(new Blockly.utils.Coordinate(200, 60));
+      if (!origBlock.getPreviousBlock()) {
+        // This block isn't attached to anything at all.
+        const blockXY:any = origBlock.getRelativeToSurfaceXY();
+        firstBlockSvg.moveTo(blockXY);
+      }
+      else if (!origBlock?.getPreviousBlock()?.nextConnection) {
+        // origBlock is the first input, without a regular code block above it.
+        origBlock
+          ?.getPreviousBlock()
+          ?.getInput('DO')
+          ?.connection?.connect(firstBlock.previousConnection);
+      } else {
+        origBlock
+          ?.getPreviousBlock()
+          ?.nextConnection?.connect(firstBlock.previousConnection);
+      }
 
-      origBlock
-        ?.getPreviousBlock()
-        ?.nextConnection?.connect(firstBlock.previousConnection);
       origBlock
         ?.getNextBlock()
         ?.previousConnection?.connect(secondBlock.nextConnection);
@@ -199,7 +212,6 @@ const DanceAiModal: React.FunctionComponent<DanceAiProps> = ({onClose}) => {
       secondBlockSvg.render();
 
       origBlock.dispose(false);
-      //Blockly.getMainWorkspace().removeBlockById(origBlock.id);
     }
   };
 
