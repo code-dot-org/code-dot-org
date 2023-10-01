@@ -165,17 +165,30 @@ const DanceAiModal: React.FunctionComponent<DanceAiProps> = ({onClose}) => {
     secondBlock.setFieldValue(params.backgroundEffect, 'EFFECT');
     secondBlock.setFieldValue(params.backgroundColor, 'PALETTE');
 
+    const origBlock = currentAiModalField?.getSourceBlock();
+
     if (
       firstBlock &&
       secondBlock &&
+      origBlock &&
+      firstBlock.previousConnection &&
       firstBlock.nextConnection &&
-      secondBlock.previousConnection
+      secondBlock.previousConnection &&
+      secondBlock.nextConnection &&
+      currentAiModalField
     ) {
       firstBlock.nextConnection.connect(secondBlock.previousConnection);
 
       const firstBlockSvg = firstBlock as any;
 
-      firstBlockSvg.moveTo(new Blockly.utils.Coordinate(200, 60));
+      //firstBlockSvg.moveTo(new Blockly.utils.Coordinate(200, 60));
+
+      origBlock
+        ?.getPreviousBlock()
+        ?.nextConnection?.connect(firstBlock.previousConnection);
+      origBlock
+        ?.getNextBlock()
+        ?.previousConnection?.connect(secondBlock.nextConnection);
 
       firstBlockSvg.initSvg();
       firstBlockSvg.render();
@@ -184,6 +197,9 @@ const DanceAiModal: React.FunctionComponent<DanceAiProps> = ({onClose}) => {
 
       secondBlockSvg.initSvg();
       secondBlockSvg.render();
+
+      origBlock.dispose(false);
+      //Blockly.getMainWorkspace().removeBlockById(origBlock.id);
     }
   };
 
