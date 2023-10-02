@@ -7,12 +7,16 @@ require 'dynamic_config/environment_aware_dynamic_config_helper'
 require 'dynamic_config/adapters/dynamodb_adapter'
 require 'dynamic_config/adapters/json_file_adapter'
 require 'dynamic_config/adapters/memory_adapter'
+require 'cdo/data/logging/infrastructure_logger'
 
 class DCDOBase < DynamicConfigBase
   # Adds a listener whose on_change() method will be invoked at least
   # once whenever the configuration changes. The on_change() method
   # will be invoked on an arbitrary thread and must not block.
   def add_change_listener(listener)
+    extra_dimensions = {listener_name: listener,
+                        feature_name: feature}
+    Infrastructure::Logger.put('listener_added', extra_dimensions)
     @datastore_cache.add_change_listener(listener)
   end
 

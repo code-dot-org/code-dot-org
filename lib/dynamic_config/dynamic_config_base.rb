@@ -10,6 +10,11 @@ class DynamicConfigBase
   # @param value [JSONable]
   def set(key, value)
     raise ArgumentError unless key.is_a? String
+    extra_dimensions = {key_name: key,
+                        value: value,
+                        host: host}
+    Infrastructure::Logger.put('dcdo_key_value_set', extra_dimensions)
+    Infrastructure::Logger.flush
     @datastore_cache.set(key, value)
   end
 
@@ -30,12 +35,16 @@ class DynamicConfigBase
   # Clear all stored settings
   def clear
     @datastore_cache.clear
+    Infrastructure::Logger.put('dcdo_cache_cleared')
+    Infrastructure::Logger.flush
   end
 
   # The datastore needs to restart the update thread
   # after a fork.
   def after_fork
     @datastore_cache.after_fork
+    Infrastructure::Logger.put('dcdo_after_fork')
+    Infrastructure::Logger.flush
   end
 
   # Returns the current dcdo config state as yaml
