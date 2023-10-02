@@ -5,15 +5,13 @@ theme: how_to_guide
 ---
 
 -# Hero banner
-= view :"how-to/how_to_banner", nav_audience: "nav_educators"
+= view :"how-to/how_to_banner", nav_audience: "main_nav_educators"
 
 -# Intro section
 = view :"how-to/how_to_intro", intro_header: hoc_s(:hoc_how_to_educators_intro_heading), intro_desc: hoc_s(:hoc_how_to_educators_intro_desc)
 
 -# Steps
-%section
-  .wrapper
-    CONTENT HERE
+= view :"how-to/steps/steps_educators"
 
 -# FAQ
 =view :"how-to/faq/faq_educators"

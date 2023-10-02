@@ -4,7 +4,8 @@
   %ul
     %li
       %button.menu-button
-        = nav_current
+        %span
+          = nav_current
       %ul.menu-list{style: "display: none"}
         - nav_index.times do |index|
           %li

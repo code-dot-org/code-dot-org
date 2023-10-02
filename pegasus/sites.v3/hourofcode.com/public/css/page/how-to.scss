@@ -1,5 +1,19 @@
 @import 'font', 'breakpoints';
 
+@mixin reset-spacing {
+  margin: 0;
+  padding: 0;
+}
+
+@mixin reset-list-item-spacing {
+  text-indent: 0;
+  padding: 0;
+}
+
+@mixin remove-list-dot {
+  content: "";
+}
+
 html {
   font-size: 16px;
 }
@@ -44,22 +58,20 @@ section.banner {
   }
 
   nav.how-to-nav {
-    min-width: 270px;
+    min-width: 230px;
     position: relative;
 
     ul {
       list-style: none;
-      margin: 0;
-      padding: 0;
+      @include reset-spacing;
 
       li {
         font-family: var(--main-font-bold);
-        text-indent: 0;
-        padding: 0;
         color: var(--neutral_dark);
+        @include reset-list-item-spacing;
 
         &::before {
-          content: "";
+          @include remove-list-dot;
         }
 
         button {
@@ -68,28 +80,38 @@ section.banner {
           border-radius: 4px;
           font-family: inherit;
           width: 100%;
+          text-align: initial;
           text-overflow: ellipsis;
           overflow: hidden;
+          display: flex;
+          justify-content: space-between;
+          gap: 0.5rem;
+
+          span {
+            pointer-events: none;
+            overflow: hidden;
+            text-overflow: ellipsis;
+          }
 
           &::after {
             content: url('/images/angle-down.svg');
-            position: absolute;
-            right: 12px;
-            top: 15px;
+            line-height: 1;
           }
         }
 
         button.rotate::after {
           transform: rotate(180deg);
-          top: 10px;
         }
 
         a, button {
           color: var(--neutral_dark);
-          display: block;
           text-decoration: none;
           font-size: 18px;
-          padding: 14px 34px;
+          padding: 14px 12px 14px 16px;
+        }
+
+        a {
+          display: block;
         }
 
         ul.menu-list {
@@ -99,6 +121,7 @@ section.banner {
           background-color: var(--neutral_dark10);
           border-radius: 0 0 4px 4px;
           width: 100%;
+          text-align: initial;
 
           li {
             border-radius: 0;
@@ -114,6 +137,133 @@ section.banner {
           }
         }
       }
+    }
+  }
+}
+
+section.steps {
+  position: relative;
+  padding-bottom: 5rem;
+
+  .wrapper {
+    display: flex;
+    justify-content: space-between;
+    align-items: baseline;
+    gap: 2rem;
+  }
+
+  ul.steps-nav {
+    @include reset-spacing;
+    width: 28%;
+    border-right: 1px solid var(--neutral_dark20);
+    position: sticky;
+    top: 2rem;
+
+    @media screen and (max-width: $width-md) {
+      display: none;
+    }
+
+    a {
+      display: block;
+      font-family: unset;
+      text-decoration: none;
+      color: var(--neutral_dark);
+      padding: 12px 0 12px 12px;
+      margin-bottom: 0.5rem;
+
+      &:hover {
+        background-color: var(--neutral_light);
+      }
+
+      &:last-child {
+        margin-bottom: 0;
+      }
+
+      &.selected {
+        border-right: 2px solid var(--brand_primary_default);
+
+        p.body-two {
+          font-family: var(--main-font-bold);
+        }
+      }
+    }
+
+    li {
+      @include reset-list-item-spacing;
+      padding-right: 1rem;
+
+      &::before {
+        @include remove-list-dot;
+      }
+
+      span {
+        background: var(--brand_primary_light);
+        color: var(--brand_primary_dark);
+        padding: 0px 6px;
+        border-radius: 4px;
+        font-size: 0.75rem;
+        margin: 0 0 4px -2px;
+        display: inline-block;
+      }
+
+      p {
+        margin-bottom: 0;
+        line-height: 1.4;
+
+        &.overline-one {
+          margin-bottom: 0.25rem;
+        }
+
+        .body-two {
+          padding-right: 1rem;
+        }
+      }
+    }
+  }
+
+  div.steps-wrapper {
+    width: 70%;
+
+    @media screen and (max-width: $width-md) {
+      width: 100%;
+    }
+
+    .step {
+      padding-bottom: 4rem;
+      margin-bottom: 4rem;
+      border-bottom: 1px solid var(--neutral_dark20);
+      display: flex;
+      align-items: baseline;
+      gap: 1rem;
+
+      &:last-child {
+        border: 0;
+        padding-bottom: 0;
+        margin-bottom: 2rem;
+      }
+    }
+
+    span {
+      background: var(--brand_primary_default);
+      color: var(--neutral_white);
+      display: block;
+      width: 2rem;
+      height: 2rem;
+      border-radius: 100%;
+      font-size: 1rem;
+      text-align: center;
+      line-height: 2;
+      font-family: var(--main-font-bold);
+    }
+
+    h3 {
+      margin-top: 0;
+      font-size: 1.25rem;
+    }
+
+    img {
+      border-radius: 4px;
+      width: 100%;
     }
   }
 }
