@@ -18,6 +18,7 @@ require 'active_support/core_ext/object/blank'
 
 require_relative 'i18n_script_utils'
 require_relative 'redact_restore_utils'
+require_relative 'metrics'
 require_relative 'utils/malformed_i18n_reporter'
 require_relative '../animation_assets/manifest_builder'
 
@@ -28,11 +29,11 @@ module I18n
     def self.perform
       puts "Sync out starting"
       I18n::Resources::Apps.sync_out
+      I18n::Resources::Dashboard.sync_out
       I18n::Resources::Pegasus.sync_out
       rename_from_crowdin_name_to_locale
       restore_redacted_files
       distribute_translations
-      restore_markdown_headers
       Services::I18n::CurriculumSyncUtils.sync_out
       puts "updating TTS I18n (should usually take 2-3 minutes, may take up to 15 if there are a whole lot of translation updates)"
       I18nScriptUtils.with_synchronous_stdout do
@@ -43,8 +44,10 @@ module I18n
         I18nScriptUtils.run_standalone_script "dashboard/scripts/update_tts_i18n_static_messages.rb"
       end
       clean_up_sync_out(CROWDIN_PROJECTS)
+      I18n::Metrics.report_status(true, 'sync-out', 'Sync out completed successfully')
       puts "Sync out completed successfully"
     rescue => exception
+      I18n::Metrics.report_status(false, 'sync-out', "Sync out failed from the error: #{exception}")
       puts "Sync out failed from the error: #{exception}"
       raise exception
     end
@@ -130,8 +133,7 @@ module I18n
           next unless File.file?(translated_path)
 
           if original_path == 'i18n/locales/original/dashboard/blocks.yml'
-            # Blocks are text, not markdown
-            RedactRestoreUtils.restore(original_path, translated_path, translated_path, ['blockfield'], 'txt')
+            next # moved to I18n::Resources::Dashboard::Blocks::SyncOut#restore
           elsif original_path.starts_with? "i18n/locales/original/course_content"
             # Course content should be merged with existing content, so existing
             # data doesn't get lost
@@ -185,17 +187,6 @@ module I18n
       else
         raise "can't process unknown type: #{data}"
       end
-    end
-
-    # Wraps hash in correct format to be loaded by our i18n backend.
-    # This will most likely be JSON file data due to Crowdin only
-    # setting the locale for yml files.
-    def self.wrap_with_locale(data, locale, type)
-      final_hash = Hash.new
-      final_hash[locale] = Hash.new
-      final_hash[locale]["data"] = Hash.new
-      final_hash[locale]["data"][type] = data
-      final_hash
     end
 
     def self.serialize_i18n_strings(level, strings)
@@ -271,7 +262,7 @@ module I18n
                           {}
 
         merged_data = existing_data.deep_merge(translations.sort.to_h)
-        type_data = wrap_with_locale(merged_data, locale, type)
+        type_data = I18nScriptUtils.to_dashboard_i18n_data(locale, type, merged_data)
 
         I18nScriptUtils.sanitize_data_and_write(type_data, type_file)
       end
@@ -311,6 +302,10 @@ module I18n
 
         ### Dashboard
         Dir.glob("i18n/locales/#{locale}/dashboard/*.{json,yml}") do |loc_file|
+          # Moved to I18n::Resources::Dashboard::Blocks::SyncOut#distribute_localization
+          next if loc_file == File.join('i18n/locales', locale, 'dashboard/blocks.yml')
+          next if loc_file == File.join('i18n/locales', locale, 'dashboard/course_offerings.json')
+
           ext = File.extname(loc_file)
           relative_path = loc_file.delete_prefix(locale_dir)
           next unless I18nScriptUtils.file_changed?(locale, relative_path)
@@ -325,7 +320,7 @@ module I18n
           if ext == ".json"
             # JSON files in this directory need the root key to be set to the locale
             loc_data = JSON.parse(File.read(loc_file))
-            loc_data = wrap_with_locale(loc_data, locale, basename)
+            loc_data = I18nScriptUtils.to_dashboard_i18n_data(locale, basename, loc_data)
             I18nScriptUtils.sanitize_data_and_write(loc_data, destination)
           else
             I18nScriptUtils.sanitize_file_and_write(loc_file, destination)
@@ -334,24 +329,6 @@ module I18n
 
         ### Course Content
         distribute_course_content(locale)
-
-        ### Pegasus markdown
-        Dir.glob("#{locale_dir}/codeorg-markdown/**/*.*") do |loc_file|
-          relative_path = loc_file.delete_prefix("#{locale_dir}/codeorg-markdown")
-          next unless I18nScriptUtils.file_changed?(locale, relative_path)
-
-          destination_dir = "pegasus/sites.v3/code.org/i18n/public"
-          # The `views` path is actually outside of the `public` path, so when we
-          # see such files, we make sure we restore the `/..` to the destination.
-          destination_dir << "/.." if relative_path.start_with? "/views"
-          relative_dir = File.dirname(relative_path)
-          name = File.basename(loc_file, ".*")
-          # TODO: Remove the ai.md exception when ai.md files are deleted from crowdin
-          next if name == "ai" # ai.md file has been substituted by ai.haml
-          destination = File.join(destination_dir, relative_dir, "#{name}.#{locale}.md.partial")
-          FileUtils.mkdir_p(File.dirname(destination))
-          FileUtils.mv(loc_file, destination)
-        end
 
         ### Docs
         Dir.glob("i18n/locales/#{locale}/docs/*.json") do |loc_file|
@@ -369,7 +346,7 @@ module I18n
                                    {}
           programming_env_data[programming_env] = loc_data[programming_env]
           # JSON files in this directory need the root key to be set to the locale
-          programming_env_data = wrap_with_locale(programming_env_data, locale, "programming_environments")
+          programming_env_data = I18nScriptUtils.to_dashboard_i18n_data(locale, 'programming_environments', programming_env_data)
           I18nScriptUtils.sanitize_data_and_write(programming_env_data, destination)
         end
 
@@ -393,7 +370,7 @@ module I18n
           framework_data[framework] = {
             "name" => loc_data["name"]
           }
-          framework_data = wrap_with_locale(framework_data, locale, "frameworks")
+          framework_data = I18nScriptUtils.to_dashboard_i18n_data(locale, 'frameworks', framework_data)
           I18nScriptUtils.sanitize_data_and_write(framework_data, destination)
 
           # Standard Categories
@@ -406,7 +383,7 @@ module I18n
               "description" => loc_data["categories"][category]["description"]
             }
           end
-          category_data = wrap_with_locale(category_data, locale, "standard_categories")
+          category_data = I18nScriptUtils.to_dashboard_i18n_data(locale, 'standard_categories', category_data)
           I18nScriptUtils.sanitize_data_and_write(category_data, destination)
 
           # Standards
@@ -419,53 +396,12 @@ module I18n
               "description" => loc_data["standards"][standard]["description"]
             }
           end
-          standard_data = wrap_with_locale(standard_data, locale, "standards")
+          standard_data = I18nScriptUtils.to_dashboard_i18n_data(locale, 'standards', standard_data)
           I18nScriptUtils.sanitize_data_and_write(standard_data, destination)
         end
-
-        ### Pegasus
-        loc_file = "#{locale_dir}/pegasus/mobile.yml"
-        destination = "pegasus/cache/i18n/#{locale}.yml"
-        I18nScriptUtils.sanitize_file_and_write(loc_file, destination)
       end
 
       puts "Distribution finished!"
-    end
-
-    # In the sync in, we slice the YAML headers of the files we upload to crowdin
-    # down to just the part we want to translate (ie, the title). Here, we
-    # reinflate the header with all the values from the source file.
-    def self.restore_markdown_headers
-      Dir.glob("pegasus/sites.v3/code.org/i18n/public/**/*.md.partial").each do |path|
-        # Find the source version of this file
-        source_path = path.sub(/\/i18n\/public\//, "/public/").sub(/[a-z]+-[A-Z]+.md.partial/, "md.partial")
-        unless File.exist? source_path
-          # Because we give _all_ files coming from crowdin the partial
-          # extension, we can't know for sure whether or not the source also uses
-          # that extension unless we check both with and without.
-          source_path = File.join(File.dirname(source_path), File.basename(source_path, ".partial"))
-        end
-        begin
-          # TODO: Remove the ai.md exception when ai.md files are deleted from crowdin
-          # ai.md file has been substituted by ai.haml therefore source_path for ai.md translations does not exist
-          next unless File.exist? source_path # if source path does not exist, the markdown heaader can not be restored
-          source_header, _source_content, _source_line = Documents.new.helpers.parse_yaml_header(source_path)
-        rescue Exception => exception
-          puts "Error parsing yaml header in source_path=#{source_path} for path=#{path}"
-          raise exception
-        end
-        begin
-          header, content, _line = Documents.new.helpers.parse_yaml_header(path)
-        rescue Exception => exception
-          puts "Error parsing yaml header path=#{path}"
-          raise exception
-        end
-
-        sanitized_header = I18nScriptUtils.sanitize_markdown_header(header)
-        restored_header = source_header.merge(sanitized_header)
-
-        I18nScriptUtils.write_markdown_with_header(content, restored_header, path)
-      end
     end
   end
 end

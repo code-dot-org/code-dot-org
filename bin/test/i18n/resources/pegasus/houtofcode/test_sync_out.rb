@@ -1,18 +1,13 @@
 require_relative '../../../../test_helper'
-require_relative '../../../../../i18n/resources/pegasus/hourofcode/sync_in'
+require_relative '../../../../../i18n/resources/pegasus/hourofcode/sync_out'
 
 describe I18n::Resources::Pegasus::HourOfCode::SyncOut do
-  class I18n::Resources::Pegasus::HourOfCode::SyncOut::Documents; end
-
-  let(:pegasus_documents_helper) {stub}
-
   def around
     FakeFS.with_fresh {yield}
   end
 
   before do
     STDOUT.stubs(:print)
-    I18n::Resources::Pegasus::HourOfCode::SyncOut::Documents.stubs(new: stub(helpers: pegasus_documents_helper))
   end
 
   describe '.perform' do
@@ -34,6 +29,7 @@ describe I18n::Resources::Pegasus::HourOfCode::SyncOut do
 
     before do
       PegasusLanguages.stubs(:hoc_languages).returns([{crowdin_name_s: crowdin_locale, locale_s: i18n_locale, unique_language_s: unique_language_code}])
+      I18n::Utils::PegasusMarkdown.stubs(:restore_file_header)
     end
 
     context 'when the crowdin locale resource dir exists' do
@@ -108,35 +104,23 @@ describe I18n::Resources::Pegasus::HourOfCode::SyncOut do
       let(:i18n_markdown_file_path) {CDO.dir('i18n/locales', i18n_locale, 'hourofcode/expected/markdown.md')}
 
       let(:hoc_markdown_file_path) {CDO.dir('pegasus/sites.v3/hourofcode.com/public/expected/markdown.md')}
-      let(:hoc_markdown_file_content) {'expected_crowdin_markdown_file_content'}
-      let(:hoc_markdown_header) {{title: 'hoc_markdown_header_title', layout: 'hoc_markdown_header_layout'}}
-
       let(:hoc_markdown_i18n_file_path) {CDO.dir('pegasus/sites.v3/hourofcode.com/i18n/public', unique_language_code, 'expected/markdown.md.partial')}
-      let(:hoc_markdown_i18n_header) {{title: 'hoc_markdown_i18n_header_title'}}
-      let(:hoc_markdown_i18n_content) {'expected_hoc_markdown_i18n_content'}
-      let(:hoc_markdown_i18n_sanitized_header) {{title: 'hoc_markdown_i18n_sanitized_header_title'}}
 
       let(:expect_crowdin_file_to_hoc_markdown_i18n_dir_copying) do
         I18nScriptUtils.expects(:copy_file).with(crowdin_markdown_file_path, hoc_markdown_i18n_file_path)
       end
       let(:expect_hoc_markdown_i18n_file_header_restoring) do
-        I18nScriptUtils.expects(:write_markdown_with_header).with(
-          hoc_markdown_i18n_content,
-          {title: 'hoc_markdown_i18n_sanitized_header_title', layout: 'hoc_markdown_header_layout'},
-          hoc_markdown_i18n_file_path
+        I18n::Utils::PegasusMarkdown.expects(:restore_file_header).with(
+          hoc_markdown_file_path, hoc_markdown_i18n_file_path
         )
       end
 
       before do
         FileUtils.mkdir_p(File.dirname(crowdin_markdown_file_path))
-        File.write(crowdin_markdown_file_path, crowdin_markdown_file_content)
+        FileUtils.touch(crowdin_markdown_file_path)
 
         FileUtils.mkdir_p(File.dirname(hoc_markdown_file_path))
-        File.write(hoc_markdown_file_path, hoc_markdown_file_content)
-
-        pegasus_documents_helper.stubs(:parse_yaml_header).with(hoc_markdown_file_path).returns([hoc_markdown_header])
-        pegasus_documents_helper.stubs(:parse_yaml_header).with(hoc_markdown_i18n_file_path).returns([hoc_markdown_i18n_header, hoc_markdown_i18n_content])
-        I18nScriptUtils.stubs(:sanitize_markdown_header).with(hoc_markdown_i18n_header).returns(hoc_markdown_i18n_sanitized_header)
+        FileUtils.touch(hoc_markdown_file_path)
       end
 
       it 'distributes the crowdin markdown file with restored sanitized headers' do

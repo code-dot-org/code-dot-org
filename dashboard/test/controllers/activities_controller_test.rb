@@ -84,8 +84,8 @@ class ActivitiesControllerTest < ActionController::TestCase
 
   def studio_program_with_text(text)
     '<xml><block type="when_run" deletable="false"><next><block type="studio_showTitleScreen"><title name="TITLE">' +
-        text +
-        '</title><title name="TEXT">type text here</title></block></next></block>'
+      text +
+      '</title><title name="TEXT">type text here</title></block></next></block>'
   end
 
   def build_expected_response(options = {})

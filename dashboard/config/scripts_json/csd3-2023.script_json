@@ -17,7 +17,7 @@
     },
     "new_name": null,
     "family_name": null,
-    "serialized_at": "2023-09-13 16:31:26 UTC",
+    "serialized_at": "2023-09-28 05:01:50 UTC",
     "published_state": null,
     "instruction_type": null,
     "instructor_audience": null,
@@ -19341,7 +19341,7 @@
     {
       "key": "e463ba5c-6fb7-46b4-ac0b-b2a608593a77",
       "properties": {
-        "description": "Apply variables, shapes, and ranomNumber concepts to create a program."
+        "description": "Apply variables, shapes, and randomNumber concepts to create a program."
       },
       "seeding_key": {
         "lesson.key": "lesson-18",
@@ -20347,12 +20347,261 @@
 
   ],
   "rubrics": [
-
+    {
+      "level_name": "CSD U3 Interactive Card Final_2023",
+      "seeding_key": {
+        "lesson.key": "Project - Interactive Card",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "csd3-2023"
+      }
+    }
   ],
   "learning_goals": [
-
+    {
+      "key": "3a264bf8-ae90-4eba-8442-0adee5613bd1",
+      "position": 1,
+      "learning_goal": "Modularity - Multiple Sprites",
+      "ai_enabled": true,
+      "tips": null,
+      "seeding_key": {
+        "learning_goal.key": "3a264bf8-ae90-4eba-8442-0adee5613bd1",
+        "lesson.key": "Project - Interactive Card",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "csd3-2023"
+      }
+    },
+    {
+      "key": "44ad9d40-4f3a-4ed7-91ab-cf6e86315b7f",
+      "position": 3,
+      "learning_goal": "Algorithms and Control - Conditionals",
+      "ai_enabled": true,
+      "tips": null,
+      "seeding_key": {
+        "learning_goal.key": "44ad9d40-4f3a-4ed7-91ab-cf6e86315b7f",
+        "lesson.key": "Project - Interactive Card",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "csd3-2023"
+      }
+    },
+    {
+      "key": "e89407ff-10e2-400c-868e-aeb0c6d5b1e7",
+      "position": 4,
+      "learning_goal": "Position and Movement",
+      "ai_enabled": true,
+      "tips": null,
+      "seeding_key": {
+        "learning_goal.key": "e89407ff-10e2-400c-868e-aeb0c6d5b1e7",
+        "lesson.key": "Project - Interactive Card",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "csd3-2023"
+      }
+    },
+    {
+      "key": "f7799b1e-f81e-46a3-a206-8b2ec055555e",
+      "position": 2,
+      "learning_goal": "Algorithms and Control - User Input",
+      "ai_enabled": true,
+      "tips": null,
+      "seeding_key": {
+        "learning_goal.key": "f7799b1e-f81e-46a3-a206-8b2ec055555e",
+        "lesson.key": "Project - Interactive Card",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "csd3-2023"
+      }
+    }
   ],
   "learning_goal_evidence_levels": [
-
+    {
+      "understanding": 0,
+      "teacher_description": "",
+      "ai_prompt": "",
+      "seeding_key": {
+        "understanding": 0,
+        "learning_goal.key": "3a264bf8-ae90-4eba-8442-0adee5613bd1",
+        "lesson.key": "Project - Interactive Card",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "csd3-2023"
+      }
+    },
+    {
+      "understanding": 0,
+      "teacher_description": "",
+      "ai_prompt": "",
+      "seeding_key": {
+        "understanding": 0,
+        "learning_goal.key": "44ad9d40-4f3a-4ed7-91ab-cf6e86315b7f",
+        "lesson.key": "Project - Interactive Card",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "csd3-2023"
+      }
+    },
+    {
+      "understanding": 0,
+      "teacher_description": "",
+      "ai_prompt": "",
+      "seeding_key": {
+        "understanding": 0,
+        "learning_goal.key": "e89407ff-10e2-400c-868e-aeb0c6d5b1e7",
+        "lesson.key": "Project - Interactive Card",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "csd3-2023"
+      }
+    },
+    {
+      "understanding": 0,
+      "teacher_description": "",
+      "ai_prompt": "",
+      "seeding_key": {
+        "understanding": 0,
+        "learning_goal.key": "f7799b1e-f81e-46a3-a206-8b2ec055555e",
+        "lesson.key": "Project - Interactive Card",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "csd3-2023"
+      }
+    },
+    {
+      "understanding": 1,
+      "teacher_description": "",
+      "ai_prompt": "",
+      "seeding_key": {
+        "understanding": 1,
+        "learning_goal.key": "3a264bf8-ae90-4eba-8442-0adee5613bd1",
+        "lesson.key": "Project - Interactive Card",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "csd3-2023"
+      }
+    },
+    {
+      "understanding": 1,
+      "teacher_description": "",
+      "ai_prompt": "",
+      "seeding_key": {
+        "understanding": 1,
+        "learning_goal.key": "44ad9d40-4f3a-4ed7-91ab-cf6e86315b7f",
+        "lesson.key": "Project - Interactive Card",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "csd3-2023"
+      }
+    },
+    {
+      "understanding": 1,
+      "teacher_description": "",
+      "ai_prompt": "",
+      "seeding_key": {
+        "understanding": 1,
+        "learning_goal.key": "e89407ff-10e2-400c-868e-aeb0c6d5b1e7",
+        "lesson.key": "Project - Interactive Card",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "csd3-2023"
+      }
+    },
+    {
+      "understanding": 1,
+      "teacher_description": "",
+      "ai_prompt": "",
+      "seeding_key": {
+        "understanding": 1,
+        "learning_goal.key": "f7799b1e-f81e-46a3-a206-8b2ec055555e",
+        "lesson.key": "Project - Interactive Card",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "csd3-2023"
+      }
+    },
+    {
+      "understanding": 2,
+      "teacher_description": "",
+      "ai_prompt": "",
+      "seeding_key": {
+        "understanding": 2,
+        "learning_goal.key": "3a264bf8-ae90-4eba-8442-0adee5613bd1",
+        "lesson.key": "Project - Interactive Card",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "csd3-2023"
+      }
+    },
+    {
+      "understanding": 2,
+      "teacher_description": "",
+      "ai_prompt": "",
+      "seeding_key": {
+        "understanding": 2,
+        "learning_goal.key": "44ad9d40-4f3a-4ed7-91ab-cf6e86315b7f",
+        "lesson.key": "Project - Interactive Card",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "csd3-2023"
+      }
+    },
+    {
+      "understanding": 2,
+      "teacher_description": "",
+      "ai_prompt": "",
+      "seeding_key": {
+        "understanding": 2,
+        "learning_goal.key": "e89407ff-10e2-400c-868e-aeb0c6d5b1e7",
+        "lesson.key": "Project - Interactive Card",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "csd3-2023"
+      }
+    },
+    {
+      "understanding": 2,
+      "teacher_description": "",
+      "ai_prompt": "",
+      "seeding_key": {
+        "understanding": 2,
+        "learning_goal.key": "f7799b1e-f81e-46a3-a206-8b2ec055555e",
+        "lesson.key": "Project - Interactive Card",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "csd3-2023"
+      }
+    },
+    {
+      "understanding": 3,
+      "teacher_description": "",
+      "ai_prompt": "",
+      "seeding_key": {
+        "understanding": 3,
+        "learning_goal.key": "3a264bf8-ae90-4eba-8442-0adee5613bd1",
+        "lesson.key": "Project - Interactive Card",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "csd3-2023"
+      }
+    },
+    {
+      "understanding": 3,
+      "teacher_description": "",
+      "ai_prompt": "",
+      "seeding_key": {
+        "understanding": 3,
+        "learning_goal.key": "44ad9d40-4f3a-4ed7-91ab-cf6e86315b7f",
+        "lesson.key": "Project - Interactive Card",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "csd3-2023"
+      }
+    },
+    {
+      "understanding": 3,
+      "teacher_description": "",
+      "ai_prompt": "",
+      "seeding_key": {
+        "understanding": 3,
+        "learning_goal.key": "e89407ff-10e2-400c-868e-aeb0c6d5b1e7",
+        "lesson.key": "Project - Interactive Card",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "csd3-2023"
+      }
+    },
+    {
+      "understanding": 3,
+      "teacher_description": "",
+      "ai_prompt": "",
+      "seeding_key": {
+        "understanding": 3,
+        "learning_goal.key": "f7799b1e-f81e-46a3-a206-8b2ec055555e",
+        "lesson.key": "Project - Interactive Card",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "csd3-2023"
+      }
+    }
   ]
 }

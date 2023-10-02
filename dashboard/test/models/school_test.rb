@@ -49,7 +49,6 @@ class SchoolTest < ActiveSupport::TestCase
     parse_row = proc do |row|
       {
         id: row['id'],
-        state_school_id: row['state_school_id'],
         name: row['name'] + 'test'
       }
     end
@@ -60,16 +59,6 @@ class SchoolTest < ActiveSupport::TestCase
       assert_includes exception.message, 'This was a dry run'
       assert_equal before_count, School.count
     end
-  end
-
-  test 'null state_school_id is valid' do
-    school = build :school, :without_state_school_id
-    assert school.valid?, school.errors.full_messages
-  end
-
-  test 'invalid state_school_id is invalid' do
-    school = build :school, :with_invalid_state_school_id
-    refute school.valid?
   end
 
   test 'maker high needs false when no stats data' do

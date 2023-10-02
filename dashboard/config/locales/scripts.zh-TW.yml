@@ -319,6 +319,10 @@ zh-TW:
           name: 人工智能倫理 -2021
           student_description: '使用在您選擇的人工智能（AI）領域暴露道德陷阱的文章和視頻進行研究。 '
           title: 我們的 AI 道德守則
+        ai-ethics-2023:
+          lessons:
+            lesson-1:
+              name: 我們的 AI 道德守則
         ai-lab:
           student_description: 使用這些級別來探索 AI Lab 並在其他課程或活動中使用。您必須建立 Code.org 帳戶並登入才能使用這些工具。
           title: AI Lab
