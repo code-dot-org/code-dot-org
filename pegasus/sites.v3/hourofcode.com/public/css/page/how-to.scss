@@ -119,14 +119,6 @@ section.banner {
 }
 
 section.faq {
-  h2 {
-    margin-bottom: 0;
-
-    @media screen and (max-width: $width-sm) {
-      margin-bottom: 1rem;
-      text-align: center;
-    }
-  }
 
   .flex-container {
     justify-content: space-between;
@@ -137,4 +129,18 @@ section.faq {
       justify-content: center;
     }
   }
+
+  details {
+    margin-top: 1.5rem;
+
+    summary {
+      font-size: 1.15rem;
+    }
+  }
+
+  @media screen and (max-width: $width-sm) {
+    h2 { text-align: center; }
+    a.link-button { margin: 1rem auto; }
+  }
+
 }

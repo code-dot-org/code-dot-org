@@ -6,6 +6,22 @@
       %a.link-button{href: "/faq"}
         =hoc_s(:call_to_action_view_faqs)
     %details
+      %summary=hoc_s(:hoc_how_to_faq_question_prerequisites)
+      %p=hoc_s(:hoc_how_to_faq_answer_prerequisites)
+    %details
+      %summary=hoc_s(:hoc_how_to_faq_question_devices)
+      %p=hoc_s(:hoc_how_to_faq_answer_devices_01)
+      %ul
+        %li
+          %p=hoc_s(:device_tablet)
+        %li
+          %p=hoc_s(:device_laptop)
+        %li
+          %p=hoc_s(:device_desktop_computer)
+        %li
+          %p=hoc_s(:device_mobile_device)
+      %p=hoc_s(:hoc_how_to_faq_answer_devices_02, markdown: :inline, locals: {pair_url: "https://www.youtube.com/watch?v=q7d_JtyCq1A", unplugged_url: "/learn?platform=no-computers"})
+    %details
       %summary=hoc_s(:hoc_how_to_faq_question_volunteer)
       %p=hoc_s(:hoc_how_to_faq_answer_volunteer)
       %a{href: "/how-to/volunteers"}
