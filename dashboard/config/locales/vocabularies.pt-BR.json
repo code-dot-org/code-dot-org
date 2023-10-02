@@ -61,7 +61,11 @@
           "definition": "Espaço reservado para uma informação que pode mudar."
         },
         "sprite/csd/2021": {
-          "word": "Sprite"
+          "word": "Sprite",
+          "definition": "Um caractere na tela com propriedades que descrevem sua localização, movimento e aparência."
+        },
+        "dot_notation/csd/2021": {
+          "word": "Notação de pontos"
         },
         "condition/csd/2021": {
           "word": "Condição"
@@ -741,7 +745,7 @@
         },
         "sprite/csd/2022": {
           "word": "Sprite",
-          "definition": "Um personagem ou objeto na tela com propriedades que descrevem sua localização, movimento e aparência."
+          "definition": "Um caractere na tela com propriedades que descrevem sua localização, movimento e aparência."
         },
         "property/csd/2022": {
           "word": "Propriedade",
@@ -1610,7 +1614,11 @@
           "definition": "Espaço reservado para uma informação que pode mudar."
         },
         "sprite/csd/2023": {
-          "word": "Sprite"
+          "word": "Sprite",
+          "definition": "Um caractere na tela com propriedades que descrevem sua localização, movimento e aparência."
+        },
+        "dot_notation/csd/2023": {
+          "word": "Notação de pontos"
         },
         "condition/csd/2023": {
           "word": "Condição"

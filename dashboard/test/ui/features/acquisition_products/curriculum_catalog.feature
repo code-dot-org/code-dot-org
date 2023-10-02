@@ -244,7 +244,7 @@ Feature: Curriculum Catalog Page
     And I see that "Section 2" is assigned to "Computer Science Principles" in the section table
 
     # Unassign standalone unit
-    Then I am on "http://studio.code.org/catalog?quick_view=true"
+    Then I am on "http://studio.code.org/catalog"
     And I wait until element "h4:contains(AI for Oceans)" is visible
     And I click selector "[aria-label='View details about AI for Oceans']"
 

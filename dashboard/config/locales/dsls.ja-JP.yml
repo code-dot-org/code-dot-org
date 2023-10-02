@@ -11157,25 +11157,25 @@ ja-JP:
           <a href=\"https://docs.google.com/document/d/1b6w_lOnibUHyDLYCP3rAWED5iElGm6LOQAJwG-hlih0/template/preview\"
           target=\"_blank\"></a> このリソースを使用して、パートナーとフィードバックを共有してください。\n\n"
       csc_ecosystemes_foodchain_info:
-        markdown: "\n##**すべての生態系には_微妙にバランスのとれた_食物連鎖があります** ## #The 海洋生態系の食物連鎖\n:>##
-          #1\n\n\n\n<img src=\"https://images.code.org/2270cbb4656875db210e9871883a7d45-image-1683677265473.jpg\"
-          style= \"width:80%\">\n<div style= \"width: 80%\"> \n\n太陽は藻類が光合成を行うためのエネルギーを供給します。\n>##
-          #2.藻は魚に食べられます。\n>## #3.魚は網のついた漁船を使う人間が捕まえて食べます。 \n\n</div>\n\n\n##**食物連鎖に含まれる1つの生物が多すぎたり少なすぎたりすると、生態系全体に影響を及ぼします。**\n"
+        markdown: "\n##**すべての生態系には、_絶妙にバランスのとれた_食物連鎖があります。**\n###海洋生態系の食物連鎖\n\n\n\n<img
+          src=\"https://images.code.org/2270cbb4656875db210e9871883a7d45-image-1683677265473.jpg\"
+          style= \"width:80%\">\n<div style= \"width: 80%\"> \n\n>###1. 太陽は藻に光合成を起こすためのエネルギーを供給する。\n>###2.
+          藻は魚に食べられる。\n>###3. 魚は、網を持った漁船を使う人間によって捕らえられ、食べられる。\n\n</div>\n\n\n##**食物連鎖の中で、ある生物が多すぎても少なすぎても、生態系全体に影響が出ます。**\n"
       csc_ecosystems_choice_freeplay_2023:
-        description: これらの生態系シミュレーションはそれぞれ調整する必要があります。エコシステムを選択し、シミュレーションを実行して問題を観察し、コードを調整して修正します。
-        display_name: エコシステムを選択してください！
+        description: これらの生態系シミュレーションはそれぞれ調整する必要があります。生態系を選び、シミュレーションを実行して問題を観察し、コードを調整して問題を解決しましょう。
+        display_name: 生態系を選んでください！
       csc_ecosystems_conditionals_overview:
-        markdown: "#Cause & Effect Conditionals \n\n</div>\n\n## 次に、水中の藻類の量を確認するコードを追加します
-          <br>\n<img src=\"https://images.code.org/8be316d4e408466b4300c614712fd652-image-1684798211348.jpg\"
-          \ width=50% style=\"margin-right: 10px; float: right\">\n<br> <br>\n\n-まず、コンピューターが条件が正しいか間違っているかを確認します。\n\n-真であれば、内部のブロックを実行します。\n-false
-          の場合、何も実行されません。\n\n<br>\n<br>\n<br>\n\n## 藻類が多すぎるとサンゴが病気になる\n\n<br>\n\n<img
-          src=\"https://images.code.org/4d8aaa9c6562e0ca0b3d92ff7aed1d03-image-1681847951794.png\"
+        markdown: "#原因と結果の条件 \n\n</div>\n\n## 次に、水の中に藻がどれくらいあるかをチェックするコードを追加します <br>\n<img
+          src=\"https://images.code.org/8be316d4e408466b4300c614712fd652-image-1684798211348.jpg\"
+          \ width=50% style=\"margin-right: 10px; float: right\">\n<br> <br>\n\n-
+          まず、コンピュータは条件が真か偽かをチェックします。\n\n- もし真なら、中のブロックを実行します。\n- もし偽なら、何もしません。\n\n<br>\n<br>\n<br>\n\n##
+          もし藻が多ければ、サンゴは病気になります。\n\n<br>\n\n<img src=\"https://images.code.org/4d8aaa9c6562e0ca0b3d92ff7aed1d03-image-1681847951794.png\"
           \ width=20% style=\"margin-right: 10px; float: left\">\n<img src=\"https://images.code.org/941774921f367566bef36cb712cf2bfb-image-1681840836607.png\"
           \ width=30% style=\" margin-right: 10px; float: left\">\n\n<br>\n<br>\n<br>\n<br>\n<br>\n<br>\n<br>\n<br>\n\n***\n\n\n\n##
-          藻類が少なすぎると魚は出て行ってしまう\n<img src=\"https://images.code.org/6869f418200edfb88190c0a1e4e5cd10-image-1681838202310.png\"
+          藻が少なすぎると、魚は出て行ってしまう\n<img src=\"https://images.code.org/6869f418200edfb88190c0a1e4e5cd10-image-1681838202310.png\"
           \ width=20% style=\"margin-right: 10px; float: left\">\n\n\n<img src=\"https://images.code.org/233178645539bc7966f55af47865096d-image-1681840833690.png\"
           \ width=20% style=\" margin-right: 10px; float: left\">\n\n<br>\n<br>\n<br>\n<br>\n<br>\n<br>\n<br>\n<br>\n<br>\n\n\n***\n\n\n\n##
-          藻類が十分にあれば生態系は健全だ。\n\n<img src=\"https://images.code.org/8bb9247c35d7d167611b02764beaeff3-image-1681838011797.png\"
+          もし藻が十分にあれば、生態系は健全です。\n\n<img src=\"https://images.code.org/8bb9247c35d7d167611b02764beaeff3-image-1681838011797.png\"
           \ width=20% style=\"margin-right: 30px; float: left\">\n<img src=\"https://images.code.org/b1ed2f5c135f9637fd7a9c5778db2b0c-image-1681840830929.png\"
           \ width=30% style=\"margin-left: 10px;float: left\">\n<br>\n<br>\n<br>\n<br>\n\n"
       csc_ecosystems_matching_cfu:
@@ -11184,17 +11184,17 @@ ja-JP:
         - text: "![] (https://images.code.org/d466f0912cd0cadb3d655263c71c072f-image-1683752857648.jpg)"
         - text: "![] (https://images.code.org/de2ab3c63bc2cf7cb319be86d5dcdec0-image-1683752570051.png)"
         markdown: |+
-          ##
+          ## 持続可能な3つの漁業を見てください
 
-          持続可能な漁業の3つの方法を見てみてくださいコードをマッチする画像にドラッグしてください。
+          コードを一致する画像にドラッグしてください。
 
         questions:
-        - text: ボート用のフィッシングゾーンを作ろう！[] (https://images.code.org/5f5e0640a82242d632db10b872280e18-image-1683753001613.gif)
+        - text: 船のための漁業区域を作ろう！[] (https://images.code.org/5f5e0640a82242d632db10b872280e18-image-1683753001613.gif)
         - text: |2-
 
-            釣りシーズンとノーフィッシングシーズンを始めましょう！[] (https://images.code.org/becad47fd19a4d0e938a0cd10c404e41-image-1683838684289.gif)
-        - text: 釣りの制限を設定してください！[] (https://images.code.org/f8bbd98ff6199af5d3ad23d64f39629d-image-1683753402925.gif)
-        title: コードを画像に合わせる
+            漁期と禁漁期の開始！[] (https://images.code.org/becad47fd19a4d0e938a0cd10c404e41-image-1683838684289.gif)
+        - text: 漁獲制限を設定してください！[] (https://images.code.org/f8bbd98ff6199af5d3ad23d64f39629d-image-1683753402925.gif)
+        title: コードを画像を一致させます
       csc_ecosystems_matching_conditionals:
         answers:
         - text: "![] (https://images.code.org/db1db479bec9b40c6e0574ade394d32b-image-1680118613718.36.41
@@ -11204,62 +11204,94 @@ ja-JP:
         - text: "![] (https://images.code.org/412968ba617ef19d2049e0e63d271937-image-1680118620636.30.50
             PM.png)"
         markdown: |
-          ## 3つの生態系を見てみましょう
+          ## 3つの生態系を見ましょう
 
-          1つの生態系はバランスが取れており、他の2つはそれぞれバランスが取れていて不均衡です。コードを一致する画像にドラッグします。
+          ひとつの生態系はバランスが取れており、他の2つの生態系はそれぞれ異なる形でバランスが崩れています。コードを一致する画像にドラッグしてください。
         questions:
-        - text: 藻が少なすぎると魚が逃げてしまいます。![] (https://images.code.org/c0a28473307b7e9b0e827532d2a6ddda-image-1680212227032.png)
+        - text: 藻が少なすぎたら、魚が出て行ってしまう。![] (https://images.code.org/c0a28473307b7e9b0e827532d2a6ddda-image-1680212227032.png)
         - text: |-
-            藻類が多すぎるとサンゴが病気になります。 <br>
+            藻類が多すぎたらサンゴが病気になります。 <br>
             ![] (https://images.code.org/1230fd96832b692b0c8ab88e77957f33-image-1680212254888.png)
-        - text: ちょうどいい量の藻類は、病気のサンゴを癒し、魚も健康に保ちます。[] (https://images.code.org/3dd061538a7a73285aa0916fdde34e77-image-1680212284869.png)
-        title: コードを画像に合わせる
+        - text: 適度な量の藻は、病気のサンゴを回復させ、魚の健康も保ちます。[] (https://images.code.org/3dd061538a7a73285aa0916fdde34e77-image-1680212284869.png)
+        title: コードを画像を一致させます
       csc_ecosystems_matching_events:
         answers:
         - text: "![] (https://images.code.org/bf70d0664e68690f2359a48365e50ccc-image-1680556679495.16.33
             PM.png)"
         - text: "![] (https://images.code.org/fe4d2803162186a8e53ec0027f27a206-image-1680556683660.36.04
             PM.png)"
-        markdown: |+
-          両方のアニメーションでスプライトが接触するとどうなるか見てみましょう。次に、コードの各画像を対応する画像にドラッグします。
-
-
+        markdown: "両方のアニメーションでスプライトが触れたときに何が起こるか見てみましょう。次に、それぞれのコードの絵を、対応する画像にドラッグしてください。\n\n"
         questions:
-        - text: ボートが魚を捕まえます。![] (https://images.code.org/bcdefefdd1787330e3ad72558b5b492d-image-1680556053866.gif)
-        - text: 魚は藻を食べます。![] (https://images.code.org/73febc58a3d23fbf4c66e693abec9e3d-image-1680556608027.gif)
-        title: コードをアニメーションに合わせる
+        - text: 船が魚を捕まえます。![] (https://images.code.org/bcdefefdd1787330e3ad72558b5b492d-image-1680556053866.gif)
+        - text: 魚が藻を食べます。![] (https://images.code.org/73febc58a3d23fbf4c66e693abec9e3d-image-1680556608027.gif)
+        title: コードをアニメーションに一致させます
       csc_ecosystems_overfishing_solution2_overview:
-        markdown: "> #Sustainable フィッシング・プラクティス #2:\n>># #Create 釣りシーズン <img src=\"https://images.code.org/123dd5c82e4c03dcbc32b775fd16ec60-image-1681937158113.png\"
-          \ width=400 style=\"margin-right: 30px; float: left\">\n**人が魚を釣れる時間に制限を設けてください。漁期でなければ、
-          \n<br>\n\n生態系は回復する時間があります。** #Save our Seas! \n<img src=\"https://images.code.org/f3f55eddff9891464c8fb5a5405c31c3-image-1681781301257.png\"
-          width=250 style=\"margin-left: 30px; margin-bottom: 30px; float: right\">\n<img
-          src=\"https://images.code.org/cbccfc42b7e1fe329ac7c9c37dfcb6b5-image-1681781296669.png\"
-          width=250 style=\"margin-left: 30px; margin-bottom: 30px; float: right\">\n\n</div>\n\n###
-          乱獲は、海洋生物の生態系やそれに依存する人々に害を及ぼす恐れのある問題です。これらの生態系を保護し、魚の個体数を健康に保つためには、持続可能な漁業を実践することが重要です。\n\n\n\n<br>\n<br>\n<br>\n"
+        markdown: |
+          背景の下で、漁業区域でのみ釣りを始めるを>#持続可能な漁業の実践#2に接続します：
+          >>##漁期を設定する。
+          **人々が魚を獲れる時期に制限を設ける。漁期でないときは生態系が回復する時間があります。
+          <br>
+
+          #海を救おう！
+          <img src="https://images.code.org/f3f55eddff9891464c8fb5a5405c31c3-image-1681781301257.png" width=250 style="margin-left: 30px; margin-bottom: 30px; float: right">
+          <img src="https://images.code.org/cbccfc42b7e1fe329ac7c9c37dfcb6b5-image-1681781296669.png" width=250 style="margin-left: 30px; margin-bottom: 30px; float: right">
+
+          </div>
+
+          ### 乱獲は、海洋生物の生態系とそれに依存する人々に害を与える問題です。これらの生態系を保護し、魚の個体数を健全に保つためには、持続可能な漁業を実践することが重要です。
+
+
+          <br>
+          <br>
+          <br>
       csc_ecosystems_overfishing_solution3_overview:
-        markdown: "> #Sustainable 釣り慣行 #3:\n>># #Set 釣りの限界 <img src=\"https://images.code.org/58d4ca52deba39a990c3165ba16e284b-image-1681747630352.png\"
-          \ width=300 style=\"margin-right: 30px; float: left\">\n**科学者は、海に害を及ぼさずに何匹の魚を捕まえることができるかを調べるのを手伝ってくれます。そうすれば、漁師はその数の魚しか釣れないことを知るでしょう。**
-          #Save our Seas! \n<br>\n<br>\n<br>\n\n \n<img src=\"https://images.code.org/35e557d27c4bdb5f546da560716dc10b-image-1681756387784.jpg\"
-          width=400 style=\"margin-left: 30px; margin-bottom: 30px; float: right\">\n</div>\n\n###
-          力を合わせることで、何世代にもわたって海を生き生きとさせ続けることができるのです！\n\n\n\n<br>\n<br>\n<br>\n\n"
+        markdown: |+
+          >#持続可能な漁業の実践#3：
+          >>##漁獲制限の設定 <0
+          **科学者は、海に害を与えることなく漁獲できる魚の数を割り出すことができます。そうすれば、漁師はその数しか獲ってはいけないことがわかります。
+          <br>
+          <br>
+          <br>
+
+          #海を救おう！
+          <img src="https://images.code.org/35e557d27c4bdb5f546da560716dc10b-image-1681756387784.jpg" width=400 style="margin-left: 30px; margin-bottom: 30px; float: right">
+          </div>
+
+          ### みんなで協力することで、海を何世代にもわたって生命でいっぱいに保つことができます！
+
+          <br>
+          <br>
+          <br>
+
       csc_ecosystems_overfishing_solutions_overview:
-        markdown: "#Save 我らの海！ \n<img src=\"https://images.code.org/d4267a1de975b8ea46468f74187eb95c-image-1681756621010.jpg\"
-          width=400 style=\"margin-left: 30px; margin-bottom: 30px; float: right\">\n</div>\n\n##
-          #海にはたくさんの魚がいますが、魚を捕まえすぎると生態系に悪影響を及ぼすこともあります。次のレベルでは、海洋生態系の保護に役立つ**持続可能な漁業慣行**をコーディングします。\n\n<br>\n\n##
-          #To 海洋の持続可能な解決策についてもっと読む:ここをクリック > #Sustainable Fishing <a href=\"https://www.seafoodwatch.org/seafood-basics/sustainable-solutions/avoid-overfishing\"
-          target=\"_blank\"></a>\n<br>\n<br>\n\n練習 #1:\n>> # #Fishing ゾーン <img src=\"https://images.code.org/c33e46309c5335dc557c67c34310e723-image-1681511054034.png\"
-          \ width=300 style=\"margin-right: 30px; float: left\">\n**漁船は指定されたエリアでのみ釣りをすることができます。生態系の回復のため、漁船の立ち入りが禁止されている地域もあります。**
-          \n<br>\n<br>\n\n\n"
+        markdown: |+
+          #海を救おう
+          <img src="https://images.code.org/d4267a1de975b8ea46468f74187eb95c-image-1681756621010.jpg" width=400 style="margin-left: 30px; margin-bottom: 30px; float: right">
+          </div>
+
+          ### 海にはたくさんの魚がいますが、時々人々は魚を捕りすぎて生態系に悪影響を及ぼすことがあります。次からのレベルでは、海の生態系を守るための**3つの異なる持続可能な漁業**をコーディングします。
+
+          <br>
+
+          ###海のための持続可能な解決策についてもっと読むには： <a href="https://www.seafoodwatch.org/seafood-basics/sustainable-solutions/avoid-overfishing" target="_blank">ここをクリック</3
+          <br>
+          <br>
+
+          >#持続可能な漁業の実践その1：
+          >> ##漁業区域 <4
+          **漁船は指定された区域でのみ漁ができる。生態系を回復させるため、漁船が立ち入れない区域もある。
+          <br>
+          <br>
+
+
       csc_ecosystems_planning:
-        markdown: "# #Share あなたの生態系シミュレーション！\n<img src=\"https://images.code.org/c480c5c42d9c02e154943f49bbed87ff-image-1675984438344.13.53
-          PM.png\" style= \"width:50%\">\n<div style= \"width: 60%\"> \n\n###**エコロジスト！今こそ研究を分かち合う時です！**\n\n##
-          #Explain 以下の観察結果をごらんください:\n\n>1.生態系内の食物連鎖と、それをどのようにコーディングしたかを説明してください。\n>2.生物は多すぎたのか、少なすぎたのか？\n>3。シミュレーションに加えた変更を説明してください。
-          \n>4.値を変えて気づいたことはありますか？\n</div>\n\n<div style=\"background-color: #a6e3e8;
-          border-radius: 10px; color: #000000; width: 95%; padding: 0.5px 20px 1px
-          20px;\">\n\n<p style=\"line-height: 1.5; margin-left: 10px; margin-right:
-          10px; margin-top: 20px; margin-bottom: 20px; font-size: 18px; \">\n\n###**さらにコーディングする準備はできていますか？**
-          code.org の [エクスプレス・コース] (https://studio.code.org/s/express-2022) \nを試して、自分のペースでコンピュータ・サイエンスをもっと学びましょう。
-          \  \n<br>\n</p></div>\n"
+        markdown: "#生態系シミュレーションを共有しよう！\n<img src=\"https://images.code.org/c480c5c42d9c02e154943f49bbed87ff-image-1675984438344.13.53
+          PM.png\" style= \"width:50%\">\n<div style= \"width: 60%\"> \n\n###**生態学者の皆さん！あなたの研究を共有する時が来ました！***。\n\n###あなたが行った以下の観察について説明してください：\n\n>1.
+          あなたの生態系における食物連鎖と、それをどのようにコード化したか説明してください。\n>2.生物は多すぎましたか、それとも少なすぎましたか？\n>3.シミュレーションに加えた修正を説明してください。\n>4.数値を変更した後、どのようなことに気づきましたか？\n</div>\n\n<div
+          style=\"background-color: #a6e3e8; border-radius: 10px; color: #000000;
+          width: 95%; padding: 0.5px 20px 1px 20px;\">\n\n<p style=\"line-height:
+          1.5; margin-left: 10px; margin-right: 10px; margin-top: 20px; margin-bottom:
+          20px; font-size: 18px; \">\n\n###**コーディングの準備はできましたか？\ncode.orgの[エクスプレスコース](https://studio.code.org/s/express-2022)を試して、自分のペースでコンピューターサイエンスを学びましょう。\n<br>\n</p></div>\n"
       csc_mappinglandmarks_markdown_lesson_2:
         markdown: |+
           # #Plan

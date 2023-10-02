@@ -40,18 +40,15 @@ social:
     = view :header
     %section.banner.homepage
       .wrapper
-        - if ["pre-hoc", "soon-hoc", "actual-hoc", "post-hoc"].include?(hoc_mode)
-          %h1=hoc_s(:hoc2022_header)
-          %h2=hoc_s(:hourofcode_homepage_hoc2018_header_line1)
-          .ctabuttongroup
-            #tryittext.ctatext
-              = view :hoc_action_buttons, hoc_mode: hoc_mode
-        - else
-          %h1=hoc_s(:hoc2022_header)
-          %h2=hoc_s(:hourofcode_homepage_hoc2018_header_line1)
-          .ctabuttongroup
-            #tryittext.ctatext
-              = view :hoc_action_buttons, hoc_mode: hoc_mode
+        %h1=hoc_s(:hoc2023_header)
+        %h2=hoc_s(:hourofcode_homepage_hoc2018_header_line1)
+        .button-wrapper
+          %a.ctabuttonatag{href: resolve_url('/how-to')}
+            %button.ctabutton
+              = hoc_s(:call_to_action_hold_an_event)
+          %a.ctabuttonatag{href: resolve_url('/learn')}
+            %button.ctabutton.secondary
+              = hoc_s(:call_to_action_try_activities)
 
 %main
   -# HoC Live Spanish banner
