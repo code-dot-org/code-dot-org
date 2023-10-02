@@ -15,7 +15,7 @@ $(document).ready(function () {
       deleteDate={
         new Date(Date.parse(element.getAttribute('data-delete-date')))
       }
-      studentEmail={element.getAttribute('data-student-email')}
+      disallowEmail={element.getAttribute('data-disallow-email')}
     />,
     element
   );

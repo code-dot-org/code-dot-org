@@ -2221,6 +2221,11 @@ class User < ApplicationRecord
     student? && parent_email.present? && hashed_email.blank?
   end
 
+  # Returns true when the parent email matches the account email.
+  def parent_created_account?
+    student? && parent_email.present? && hashed_email == User.hash_email(parent_email)
+  end
+
   # Temporary: Allow single-auth students to add a parent email so it's possible
   # to add a recovery option to their account.  Once they are on multi-auth they
   # can just add an email or another SSO, so this is no longer needed.

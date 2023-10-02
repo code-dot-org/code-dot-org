@@ -72,10 +72,10 @@ class SessionsController < Devise::SessionsController
     @pending_email = ''
     @request_date = DateTime.now
 
-    # Get the student's email address (unless a parent is creating the account)
-    @student_email = ''
-    unless current_user.parent_email_preference_opt_in_required
-      @student_email = current_user.hashed_email
+    # Disallow the student's email address (unless a parent is creating the account)
+    @disallow_email = ''
+    unless current_user.parent_created_account?
+      @disallow_email = current_user.hashed_email
     end
 
     # Determine the deletion date as the creation time of the account + 7 days

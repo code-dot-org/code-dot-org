@@ -18,13 +18,13 @@ import {hashString} from '../../utils';
  */
 export default function LockoutPanel(props) {
   // Determine if we think the given email matches the child email
-  const isStudentEmail = email => {
-    return props.studentEmail === hashString(email);
+  const isEmailDisallowed = email => {
+    return props.disallowEmail === hashString(email);
   };
 
   // Determine if the email is allowed
   const validateEmail = email => {
-    return isEmail(email) && !isStudentEmail(email);
+    return isEmail(email) && !isEmailDisallowed(email);
   };
 
   // Set the disabled state of the submit button based on the validity of the
@@ -233,7 +233,7 @@ LockoutPanel.propTypes = {
   deleteDate: PropTypes.instanceOf(Date).isRequired,
   pendingEmail: PropTypes.string,
   requestDate: PropTypes.instanceOf(Date),
-  studentEmail: PropTypes.string.isRequired,
+  disallowEmail: PropTypes.string.isRequired,
 };
 
 const styles = {
