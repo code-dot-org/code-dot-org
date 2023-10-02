@@ -19,7 +19,7 @@ import {hashString} from '../../utils';
 export default function LockoutPanel(props) {
   // Determine if we think the given email matches the child email
   const isEmailDisallowed = email => {
-    return props.disallowEmail === hashString(email);
+    return props.disallowedEmail === hashString(email);
   };
 
   // Determine if the email is allowed
@@ -233,7 +233,7 @@ LockoutPanel.propTypes = {
   deleteDate: PropTypes.instanceOf(Date).isRequired,
   pendingEmail: PropTypes.string,
   requestDate: PropTypes.instanceOf(Date),
-  disallowEmail: PropTypes.string.isRequired,
+  disallowedEmail: PropTypes.string.isRequired,
 };
 
 const styles = {
