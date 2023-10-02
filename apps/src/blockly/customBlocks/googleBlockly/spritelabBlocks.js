@@ -131,9 +131,12 @@ export const blocks = {
       return container;
     };
     this.domToMutation = function (xmlElement) {
+      console.log(xmlElement);
       const useDefaultIcon =
         // Coerce string to Boolean
+        xmlElement.getAttribute('useDefaultIcon') === null ||
         xmlElement.getAttribute('useDefaultIcon') === 'true';
+      console.log({useDefaultIcon: useDefaultIcon});
       flyoutToggleButton.setIcon(useDefaultIcon);
     };
   },
