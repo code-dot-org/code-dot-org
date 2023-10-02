@@ -132,6 +132,9 @@ const DanceAiModal: React.FunctionComponent<DanceAiProps> = ({onClose}) => {
   const startAi = async (value: string) => {
     const responseJson = await doAi(value);
     const response = JSON.parse(responseJson);
+
+    // "Pick" a subset of fields to be used.  Specifically, we exclude the
+    // explanation, since we don't want it becoming part of the code.
     const pickedResponse = (({
       backgroundEffect,
       backgroundColor,
