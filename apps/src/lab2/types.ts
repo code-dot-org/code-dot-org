@@ -97,6 +97,13 @@ export interface LevelProperties {
   appName: AppName;
   longInstructions?: string;
   freePlay?: boolean;
+  customBlocks?: string;
+  edit_blocks?: string;
+  hideCustomBlocks?: boolean;
+  isK1?: boolean;
+  sharedBlocks?: any[]; // will update this type soon.
+  skin?: string;
+  toolboxBlocks?: string;
 }
 
 // Level configuration data used by project-backed labs that don't require
