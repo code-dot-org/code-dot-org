@@ -1363,6 +1363,7 @@ ActiveRecord::Schema.define(version: 2023_09_27_153604) do
     t.boolean "funded", comment: "Should this workshop's attendees be reimbursed?"
     t.string "funding_type"
     t.text "properties"
+    t.string "module"
     t.index ["organizer_id"], name: "index_pd_workshops_on_organizer_id"
     t.index ["regional_partner_id"], name: "index_pd_workshops_on_regional_partner_id"
   end
