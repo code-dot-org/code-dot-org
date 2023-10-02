@@ -1,4 +1,4 @@
-import React, {useState} from 'react';
+import React, {useState, useEffect} from 'react';
 import moduleStyles from './dance-ai.module.scss';
 import AccessibleDialog from '@cdo/apps/templates/AccessibleDialog';
 import Button from '@cdo/apps/templates/Button';
@@ -80,6 +80,16 @@ const DanceAiModal: React.FunctionComponent<DanceAiProps> = ({onClose}) => {
     (state: {dance: DanceState}) => state.dance.currentAiModalField
   );
 
+  useEffect(() => {
+    const currentValue = currentAiModalField?.getValue();
+    console.log(currentValue);
+
+    if (currentValue) {
+      setMode(Mode.RESULTS);
+      setResponseParams(`ai(${currentValue})`);
+    }
+  }, []);
+
   const getImageUrl = (id: string) => {
     return `/blockly/media/dance/ai/${id}.png`;
   };
@@ -131,7 +141,7 @@ const DanceAiModal: React.FunctionComponent<DanceAiProps> = ({onClose}) => {
   const startAi = async (value: string) => {
     //const response = await doAi(value);
     const response =
-      '{"backgroundColor": "rave", "backgroundEffect": "splatter", "foregroundEffect": "rain"}';
+      '{"backgroundColor": "rave", "backgroundEffect": "splatter", "foregroundEffect": "rain", "explanation": "This is the explanation."}';
 
     const params = JSON.parse(response);
 
@@ -149,10 +159,12 @@ const DanceAiModal: React.FunctionComponent<DanceAiProps> = ({onClose}) => {
     setResponseParams(`ai(${pickedString})`);
     setResponseExplanation(params.explanation);
 
-    insertBlocks(params);
+    //convertBlocks(params);
   };
 
-  const insertBlocks = (params: any) => {
+  const convertBlocks = (params: any) => {
+    responseParams;
+
     let firstBlock = Blockly.getMainWorkspace().newBlock(
       'Dancelab_setForegroundEffect'
     );
@@ -184,10 +196,9 @@ const DanceAiModal: React.FunctionComponent<DanceAiProps> = ({onClose}) => {
 
       if (!origBlock.getPreviousBlock()) {
         // This block isn't attached to anything at all.
-        const blockXY:any = origBlock.getRelativeToSurfaceXY();
+        const blockXY: any = origBlock.getRelativeToSurfaceXY();
         firstBlockSvg.moveTo(blockXY);
-      }
-      else if (!origBlock?.getPreviousBlock()?.nextConnection) {
+      } else if (!origBlock?.getPreviousBlock()?.nextConnection) {
         // origBlock is the first input, without a regular code block above it.
         origBlock
           ?.getPreviousBlock()
@@ -212,6 +223,9 @@ const DanceAiModal: React.FunctionComponent<DanceAiProps> = ({onClose}) => {
       secondBlockSvg.render();
 
       origBlock.dispose(false);
+
+      // End modal.
+      dispatch(setCurrentAiModalField(undefined));
     }
   };
 
@@ -361,8 +375,12 @@ const DanceAiModal: React.FunctionComponent<DanceAiProps> = ({onClose}) => {
             >
               <Heading5>Code</Heading5>
               <pre className={moduleStyles.pre}>{responseParams}</pre>
-              <Heading5>Explanation</Heading5>
-              <pre className={moduleStyles.pre}>{responseExplanation}</pre>
+              <div
+                style={{display: responseExplanation !== '' ? 'block' : 'none'}}
+              >
+                <Heading5>Explanation</Heading5>
+                <pre className={moduleStyles.pre}>{responseExplanation}</pre>
+              </div>
             </Typist>
           )}
         </div>
@@ -389,13 +407,22 @@ const DanceAiModal: React.FunctionComponent<DanceAiProps> = ({onClose}) => {
           )}
 
           {mode === Mode.RESULTS && typingDone && (
-            <Button
-              id="done"
-              text={'Done'}
-              onClick={handleDoneClick}
-              color={Button.ButtonColor.brandSecondaryDefault}
-              className={moduleStyles.button}
-            />
+            <div>
+              <Button
+                id="convert"
+                text={'Convert'}
+                onClick={convertBlocks}
+                color={Button.ButtonColor.brandSecondaryDefault}
+                className={moduleStyles.button}
+              />
+              <Button
+                id="done"
+                text={'Use'}
+                onClick={handleDoneClick}
+                color={Button.ButtonColor.brandSecondaryDefault}
+                className={moduleStyles.button}
+              />
+            </div>
           )}
         </div>
       </div>
