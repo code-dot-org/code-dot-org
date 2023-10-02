@@ -588,6 +588,7 @@ class ApiController < ApplicationController
 
   # GET /dashboardapi/sign_cookies
   def sign_cookies
+    prevent_caching
     # length of time the browser can privately cache this request for cookies
     expires_in 1.hour
 
