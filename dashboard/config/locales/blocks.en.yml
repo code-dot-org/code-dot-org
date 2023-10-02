@@ -56,6 +56,8 @@ en:
             '3.00': extra large
       Dancelab_ai:
         text: use AI to {VALUE}
+      Dancelab_aiText:
+        text: use AI to {VALUE}
       Dancelab_alternateMoves:
         text: "{GROUP} alternate every {N} measures \nbetween {MOVE1} and {MOVE2}"
         options:
