@@ -675,7 +675,7 @@
   dashboard_navigation_view_assessments: "Hodnotenia"
   dashboard_navigation_view_assessments_surveys: "Hodnotenia/dotazníky"
   dashboard_navigation_add_students: "Pridať študentov"
-  dashboard_navigation_manage_students: "Správa študentov"
+  dashboard_navigation_manage_students: "Spravovať žiakov"
   dashboard_navigation_lesson_plans_resources: "Plány hodín"
   dashboard_navigation_view_stats: "Štatistiky"
   dashboard_navigation_section: 'Trieda: %{section_name}'

@@ -174,7 +174,7 @@ sq:
       courseF_unplugged_powerOfWords:
         title: Aktiviteti Unplugged
       deeper learning description:
-        title: ''
+        title: '[empty string]'
       courseAB_unplugged_plantASeed:
         title: 'Algoritmet e jetës-Reale: Mbill një Farë'
         desc: Ky mësim thërret mënyrat se si ne përdorim algoritmet në jetët tona të përditshme, duke përdorur veprimin e mbjelljes së një fare për shembull. Gjithashtu, fokusohet në figurën më të madhe të shkencës kompjuterike dhe se si algoritmat luajnë një rol esencial.
@@ -243,41 +243,41 @@ sq:
       courseB_unplugged_MRF_2018:
         title: Shokët e mi robotik
       BuildingAFoundation_2018:
-        title:
-        desc:
+        title: '[empty string]'
+        desc: '[empty string]'
       courseB_unplugged_loopyMRF_2018:
-        title:
-        desc:
+        title: '[empty string]'
+        desc: '[empty string]'
       DiceRace_2018:
-        title:
-        desc:
+        title: '[empty string]'
+        desc: '[empty string]'
       courseE_unplugged_privateInformation_2018:
-        title:
-        desc:
+        title: '[empty string]'
+        desc: '[empty string]'
       SongwritingParameters_2018:
-        title:
-        desc:
+        title: '[empty string]'
+        desc: '[empty string]'
       Internet_2018:
-        title:
-        desc:
+        title: '[empty string]'
+        desc: '[empty string]'
       Crowdsourcing_2018:
-        title:
-        desc:
+        title: '[empty string]'
+        desc: '[empty string]'
       TangramAlgorithms_2018:
-        title:
-        desc:
+        title: '[empty string]'
+        desc: '[empty string]'
       courseF_unplugged_powerOfWords_2018:
-        title:
-        desc:
+        title: '[empty string]'
+        desc: '[empty string]'
       EnvelopeVariables_2018:
-        title:
-        desc:
+        title: '[empty string]'
+        desc: '[empty string]'
       ForLoopFun_2018:
-        title:
-        desc:
+        title: '[empty string]'
+        desc: '[empty string]'
       SongwritingWithParameters_2018:
-        title:
-        desc:
+        title: '[empty string]'
+        desc: '[empty string]'
       PlantASeed_2018:
         title: 'Algoritmet e jetës-Reale: Mbill një Farë'
         desc: Ky mësim thërret mënyrat se si ne përdorim algoritmet në jetët tona të përditshme, duke përdorur veprimin e mbjelljes së një fare për shembull. Gjithashtu, fokusohet në figurën më të madhe të shkencës kompjuterike dhe se si algoritmat luajnë një rol esencial.
@@ -317,13 +317,13 @@ sq:
         desc: Studentët krijojnë byzylykë si një përfaqësim binar të shkronjës së parë të emrit të tyre. Studentët mësojnë që të dhënat mund të përfaqësohen dhe të ruhen në më shumë se një mënyrë.
       MoveItMoveIt_2018:
         title: Lëvize atë, lëvize atë
-        desc: ''
+        desc: '[empty string]'
       RelayProgramming_2018:
         title: Programimi i Besuar
       courseB_unplugged_MRF_2019:
         title: Shokët e mi robotik
       courseB_unplugged_loopyMRF_2019:
-        desc: ''
+        desc: '[empty string]'
       Conditionals_2019:
         title: Kushtet
         desc: Për të mësuar rreth përcaktimeve të kushtoreve, studentët luajnë një lojë me karta dhe krijojnë rregulla si "Nëse vizatoj një kartë të kuqe, unë marr një pikë" dhe "Nëse unë vizatoj një kartë të zezë, ti merr një pikë."
@@ -362,7 +362,7 @@ sq:
         desc: Interneti është një vend i fuqishëm, por ndonjëherë i rrezikshëm. Mësuesit prezantojnë si të qëndrojmë të sigurtë ndërsa navigojmë në Internet.
       MoveItMoveIt_2019:
         title: Lëvize atë, lëvize atë
-        desc: ''
+        desc: '[empty string]'
       DigitalFootprint_2019:
         title: Gjurmët e Tua Dixhitale
         desc: Mësuesit i prezantojnë studentëve idenë që futja e informacionit online rreth vetes krijon një gjurmë dixhitale ose "shteg" që ka pasoja.
@@ -374,8 +374,8 @@ sq:
         title: Kushtet
         desc: Për të mësuar rreth përcaktimeve të kushtoreve, studentët luajnë një lojë me karta dhe krijojnë rregulla si "Nëse vizatoj një kartë të kuqe, unë marr një pikë" dhe "Nëse unë vizatoj një kartë të zezë, ti merr një pikë."
       SP-VPL-CSD-21-CourseNavigation:
-        title:
-        desc:
+        title: '[empty string]'
+        desc: '[empty string]'
       SP-VPL-CSA-21-mod3-1-1:
-        title:
-        desc:
+        title: '[empty string]'
+        desc: '[empty string]'
