@@ -135,6 +135,8 @@ export const blocks = {
     };
     this.domToMutation = function (xmlElement) {
       const useDefaultIcon =
+        // Assume default icon if no XML attribute present
+        !xmlElement.hasAttribute('useDefaultIcon') ||
         // Coerce string to Boolean
         xmlElement.getAttribute('useDefaultIcon') === 'true';
       flyoutToggleButton.setIcon(useDefaultIcon);
