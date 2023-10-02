@@ -13,7 +13,7 @@ import Lab2MetricsReporter from '@cdo/apps/lab2/Lab2MetricsReporter';
 import {LabState} from '@cdo/apps/lab2/lab2Redux';
 import {DanceLevelProperties, DanceProjectSources} from '../../types';
 import {registerReducers} from '@cdo/apps/redux';
-import DanceBlocklyWorkspace from './DanceBlocklyWorkspace';
+import {setUpBlocklyForDanceLab} from '@cdo/apps/dance/blockly/setup';
 const commonI18n = require('@cdo/locale');
 
 const DANCE_VISUALIZATION_ID = 'dance-visualization';
@@ -55,21 +55,7 @@ const DanceView: React.FunctionComponent = () => {
   const isRunning = useTypedSelector(state => state.dance.isRunning);
 
   const levelProperties = useTypedSelector(state => state.lab.levelProperties);
-  console.log('levelProperties in danceview', levelProperties);
-  const skin = levelProperties?.skin || undefined;
-  const isK1 = levelProperties?.isK1 || undefined;
-  const sharedBlocks = levelProperties?.sharedBlocks || undefined;
-  console.log('sharedBlocks in DanceView', sharedBlocks);
-
-  const blockInstallOptions = {
-    skin,
-    isK1,
-    level: levelProperties,
-  };
-  console.log('blockInstallOptions', blockInstallOptions);
-  const danceBlocklyWorkspace = useRef<DanceBlocklyWorkspace>(
-    new DanceBlocklyWorkspace(blockInstallOptions, levelProperties)
-  );
+  const toolboxBlocks = useRef(levelProperties?.toolboxBlocks || undefined);
 
   const onAuthError = (songId: string) => {
     Lab2MetricsReporter.logWarning({
@@ -78,12 +64,22 @@ const DanceView: React.FunctionComponent = () => {
     });
   };
 
-  // Initialize Blockly.
+  // Install level and shared blocks on the global Blockly environment.
+  // This should only be called once per page load, as it configures the global
+  // Blockly state.
   useEffect(() => {
-    // loadLevel
-    const blocklyContainer = document.getElementById(BLOCKLY_DIV_ID);
-    console.log('blocklyContainer', blocklyContainer);
-    danceBlocklyWorkspace.current.init(blocklyContainer);
+    const skin = levelProperties?.skin || undefined;
+    const isK1 = levelProperties?.isK1 || undefined;
+    const blockInstallOptions = {
+      skin,
+      isK1,
+      level: levelProperties,
+    };
+    // If categories are used in the toolbox, then toolboxBlocks are reassigned accordingly.
+    toolboxBlocks.current = setUpBlocklyForDanceLab(
+      blockInstallOptions,
+      levelProperties
+    );
   }, []);
 
   // If level data or initial sources change, loadlevel
