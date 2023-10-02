@@ -29,28 +29,22 @@ class Announcements
     announcement = get_announcement_for_page(page)
     return nil unless announcement
 
+    announcement_scope = [:data, :marketing_announcements, :banners, announcement[:id]]
     localized_fields = {
-      title: I18n.t(
-        "title",
-        default: announcement['title'],
-        scope: [:data, :marketing_announcements, :banners, announcement[:id]],
-        smart: true
-      ),
-      body: I18n.t(
-        "body",
-        default: announcement['body'],
-        scope: [:data, :marketing_announcements, :banners, announcement[:id]],
-        smart: true
-      ),
-      buttonText: I18n.t(
-        "buttonText",
-        default: announcement['buttonText'],
-        scope: [:data, :marketing_announcements, :banners, announcement[:id]],
-        smart: true
-      ),
+      title: localize_property("title", announcement['title'], announcement_scope),
+      body: localize_property("body", announcement['body'], announcement_scope),
+      buttonText: localize_property("buttonText", announcement['buttonText'], announcement_scope),
     }
-
     announcement.merge(localized_fields)
+  end
+
+  def self.localize_property(property_name, default, scope)
+    I18n.t(
+      property_name,
+      default: default,
+      scope: scope,
+      smart: true
+    )
   end
 
   def self.load_announcements
