@@ -156,10 +156,10 @@ module I18n
               end
 
               # start_libraries
-              if level.start_libraries
+              unless level.start_libraries.blank?
                 level_libraries = JSON.parse(level.start_libraries)
                 level_libraries.each do |library|
-                  next unless /^I18n_/.match?(library["name"])
+                  next unless /^i18n_/i.match?(library["name"])
                   library_name = library["name"]
                   library_source = library["source"]
                   translation_text = library_source.match(/var TRANSLATIONTEXT = (\{[^}]*});/m).captures
