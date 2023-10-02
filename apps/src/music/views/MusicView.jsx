@@ -105,6 +105,7 @@ class UnconnectedMusicView extends React.Component {
   };
 
   constructor(props) {
+    console.log('musicview - constructor');
     super(props);
 
     if (this.props.appConfig) {
@@ -143,6 +144,7 @@ class UnconnectedMusicView extends React.Component {
   }
 
   componentDidMount() {
+    console.log('musicview - componentdidmount');
     this.analyticsReporter.startSession().then(() => {
       this.analyticsReporter.setUserProperties(
         this.props.userId,
@@ -158,6 +160,7 @@ class UnconnectedMusicView extends React.Component {
     });
 
     if (this.props.appName === 'music') {
+      console.log('onLevelLoad called in componentDidMount');
       this.onLevelLoad(this.props.levelData, this.props.initialSources);
     }
   }
@@ -204,11 +207,13 @@ class UnconnectedMusicView extends React.Component {
         !isEqual(prevProps.initialSources, this.props.initialSources)) &&
       this.props.appName === 'music'
     ) {
+      console.log('onLevelLoad called in componentDidUpdate');
       this.onLevelLoad(this.props.levelData, this.props.initialSources);
     }
   }
 
   async onLevelLoad(levelData, initialSources) {
+    console.log('musicview - onlevelload');
     // Load and initialize the library and player if not done already.
     // Read the library name first from level data, or from the project
     // sources if not present on the level. If there is no library name
