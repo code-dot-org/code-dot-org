@@ -1174,7 +1174,7 @@
         },
         "event/csc-adaptations/2023": {
           "word": "事件",
-          "definition": "导致某件事发生的动作"
+          "definition": "导致某件事发生的行动"
         },
         "evolution/csc-adaptations/2023": {
           "word": "进化",
@@ -1234,7 +1234,7 @@
         },
         "condition/csc-ecosystems/2023": {
           "word": "条件",
-          "definition": "在允许操作之前，程序会检查它是否属实"
+          "definition": "在允许一项行动之前程序检查是否为真的东西"
         },
         "conditionals/csc-ecosystems/2023": {
           "word": "条件语句",
@@ -1242,15 +1242,15 @@
         },
         "ecosystem/csc-ecosystems/2023": {
           "word": "生态系统",
-          "definition": "由相互作用的生物体及其环境组成的生物群落"
+          "definition": "由相互作用的生物及其环境组成的生物群落"
         },
         "event/csc-ecosystems/2023": {
           "word": "事件",
-          "definition": "导致某件事发生的动作"
+          "definition": "导致某件事发生的行动"
         },
         "overfishing/csc-ecosystems/2023": {
           "word": "过度捕捞",
-          "definition": "去除鱼类的速度比它们繁殖的速度快"
+          "definition": "移除鱼的速度比它们繁殖的速度快"
         },
         "simulation/csc-ecosystems/2023": {
           "word": "模拟",
@@ -1270,7 +1270,7 @@
         },
         "energy/csc-ecosystems/2023": {
           "word": "能源",
-          "definition": "在食物网中的生物之间从生产者转移到消费者。生物利用这种能量来执行复杂的任务。"
+          "definition": "在食物网中的生物之间转移，从生产者到消费者。能量被生物用来执行复杂的任务。"
         },
         "food_chain/csc-ecosystems/2023": {
           "word": "食物链 ",
