@@ -56,7 +56,7 @@ ja:
     already_linked: "%{provider}アカウントはすでにあなたのCode.orgアカウントにリンクされています。"
     already_signedup: もうサインアップしましたか？
     clever: Cleverアカウント
-    continue_with: "%{provider} で続きます"
+    continue_with: "%{provider} を使用してサインインする"
     demigration_success: あなたのアカウントで新しいアカウントエクスペリエンスが無効となりました。
     disconnect_successful: 成功しました！Code.orgアカウントから外部アカウントが切断されました。
     existing_account:

@@ -14424,73 +14424,73 @@
           "hint1": "确保在 “运行时” 下至少连接一个 “打印” 块。"
         },
         "csc_ecosystems_algae_freeplay_2023": {
-          "YouCan": "你可以： \n\n\\-更改鱼的数量\n\\-更改藻类的数量\n\\-更改距离鱼和藻类 \n    再生的秒数\n\\-进行其他修改",
+          "YouCan": "你可以： \n\n-   更改鱼的数量\n-   更改藻类的数量\n-   更改鱼和藻类重新\n    生长前的秒数\n-   进行其他修改",
           "change": "对模拟进行几处更改！"
         },
         "csc_ecosystems_arctic_2023": {
-          "hint1": "北极熊需要变大！将其大小更改为大于 30。",
-          "hint2": "更改背景，让北极熊有更多的冰可供狩猎。 "
+          "hint1": "北极熊需要变大！将其大小更改为大于30。",
+          "hint2": "更改背景，使其有更多冰让北极熊狩猎。 "
         },
         "csc_ecosystems_desert_2023": {
-          "hint1": "兔子需要更快地移动！将兔子的 \n速度更改为大于 0。"
+          "hint1": "兔子需要更快地移动！将兔子 \n的速度更改为大于0。"
         },
         "csc_ecosystems_giraffe_evo_2023": {
           "first_event_hint": "你的 “活动” (#6AF36C) 是否使用短颈长颈鹿？ \n\n服装会从**短领变为长领**吗？\n\n换装方块应该是这样的：\n<xml>\n<block type=\"gamelab_setAnimation\">\n  <field name=\"ANIMATION\">\"giraffe_longer_neck\"</field>\n  <value name=\"THIS\">\n    <block type=\"gamelab_allSpritesWithAnimation\" movable=\"false\">\n      <field name=\"ANIMATION\">\"giraffe_shorter_neck\"</field>\n    </block>\n  </value>\n</block></xml>"
         },
         "csc_ecosystems_marsh_2023": {
-          "Hint1": "我们需要更多的青蛙！将青蛙的数量更改为大于 0。"
+          "Hint1": "我们需要更多青蛙！将青蛙的数量更改为大于0。"
         },
         "csc_ecosystems_ocean_algae_2023": {
-          "Connect": "确保 eat 方块已连接到事件方块。 \n\n它们应该像拼图一样拼凑在一起！"
+          "Connect": "确保eat 模块已连接到事件模块。 \n\n它们应该像拼图一样拼凑在一起！"
         },
         "csc_ecosystems_ocean_boat_2023": {
-          "Catch": "使用捕获物块让船抓住鱼",
-          "CatchUnder": "捕获物块应\n连接在船只触摸 \n鱼类事件下方。"
+          "Catch": "使用catch object模块让船捕鱼",
+          "CatchUnder": "catch object模块应连接\n在boats touches fish\n事件下方。"
         },
         "csc_ecosystems_ocean_coral_2023": {
-          "BlockInside": "如果藻类太多，则将更换服装方块放在方块内。",
-          "Costume": "如果藻类过多，珊瑚就会受到损害。 \n\n接下来使用更换服装方块。",
-          "TooMuch": "将 “如果藻类过多” 区块与 “当鱼碰到藻类时” 事件联系起来。"
+          "BlockInside": "将更换服装模块放置在if too much algae模块内。",
+          "Costume": "如果藻类太多，珊瑚就会受到损害。 \n\n接下来使用更换服装模块。",
+          "TooMuch": "将if too much algae模块与when fish touches algae事件连接。"
         },
         "csc_ecosystems_ocean_coral_health_2023": {
-          "Below": "继续将方块连接在你上一个关卡结束的工作区底部！",
-          "BlocksInside": "如果藻类太少，鱼就会离开。 \n\n如果藻类太少，则将其他方块放在藻类块内。",
-          "TooLittle": "如果藻类太少，则将藻类块与 “当鱼碰到藻类时” 事件联系起来。"
+          "Below": "在你结束上一关卡的地方，在工作区底部继续连接模块！",
+          "BlocksInside": "如果藻类太少，鱼就会离开。 \n\n将其他模块放置在if too little algae模块内。",
+          "TooLittle": "将if too little algae模块连接到when fish touches algae事件。"
         },
         "csc_ecosystems_ocean_fish_2023": {
-          "No Code": "还没有什么要编码的。只要观察一下这个系统的运行即可。 "
+          "No Code": "还没有什么要编码的。只需观察这个系统的运行。 "
         },
         "csc_ecosystems_ocean_justright_algae": {
-          "Bellow": "继续将方块连接在你上一个关卡结束的工作区底部！",
-          "JustRight": "将 “如果恰到好处” 的藻类区块与 “当鱼碰到藻类时” 事件联系起来。",
-          "costume": "如果藻类恰到好处，珊瑚\n就会健康。 \n\n如果恰到好处的藻类方块内使用更换服装方块。"
+          "Bellow": "在你结束上一关卡的地方，在工作区底部继续连接模块！",
+          "JustRight": "将if just right algae模块连接到when fish touches algae事件。",
+          "costume": "如果藻类恰到好处，珊瑚\n就会健康。 \n\n在if just right algae模块内使用更换服装模块。"
         },
         "csc_ecosystems_rainforest_freeplay_2023": {
-          "hint1": "鹦鹉太多了！将鹦鹉\n的数量更改为小于 8。"
+          "hint1": "鹦鹉太多了！将鹦鹉\n的数量更改为小于8。"
         },
         "csc_ecosystems_solution1_2023": {
-          "hint1": "在计划开始之前，已经捕获了 \n0条鱼。使用工作区最顶部的 “将 FishCauth \n设置为 0”。",
-          "hint2": "使用 catch fish 方块\n下方的 “fishCauth by 1\\`” 来计算船捕获的\n每条鱼。",
-          "hint3": "连接 “boat says”\n方块 **下方** “change FishCaut by 1” 方块 "
+          "hint1": "在程序开始之前，已经捕获了\n0条鱼。在工作区最顶部 \n使用“set fishCaught to 0”。",
+          "hint2": "在捕鱼模块下面使用\nchange `fishCaught by 1`来计数\n船捕获的每条鱼。",
+          "hint3": "在“change fishCaught by 1”\n模块**下面**\n连接“boat says”\n模块"
         },
         "csc_ecosystems_solution1b_2023": {
-          "hint1": "在 “当船碰到鱼时” 活动 \n下继续连接方块，你在上一个关卡 \n结束的地方！",
-          "hint2": "要让船在 5 条鱼处停止钓鱼，请在 “当船碰到鱼时” 事件结束时连接 “if fishCauth = 5\\` 方块。",
-          "hint3": "然后将 “移除船” 方块添加到\\*\\*\n里面\\*\\*的 'if fishCauth = 5\\`block"
+          "hint1": "在你结束上一关卡的地方，\n在“when boat touches fish” \n事件下面继续连接模块！",
+          "hint2": "要让船在5条鱼时停止捕鱼，请在“when boat touches fish”事件末尾连接“if fishCaught = 5”模块。",
+          "hint3": "然后将“remove boat”模块添加到\n“if fishCaught = 5”模块**里面**"
         },
         "csc_ecosystems_solution2_2023": {
-          "Hint1": "**注意**：为了适应新的方块，你可能需要将一些触摸  <code style=\"color:black; background-color:#6AF36C\">时</code> 代码拖到屏幕下方。",
-          "hint2": "在工作空间的顶部，在运行时将背景块连接到。",
-          "hint3": "在后台\n连接只在\n钓鱼\n区开始钓鱼"
+          "Hint1": "**注意**：为了容纳新模块，你可能需要将一些<code style=\"color:black; background-color:#6AF36C\">when touches</code> 代码拖到屏幕下方。",
+          "hint2": "在工作区的顶部，将背景模块连接到when run。",
+          "hint3": "在背景下面\n连接开始\n仅在捕鱼\n区域捕鱼"
         },
         "csc_ecosystems_solution3A_2023": {
-          "hint1": "在 “每 4 秒重复一次”\n方块下方添加新方块。",
-          "hint2": "将工作区顶部\n附近的 “禁止钓鱼背景” 连接到 “每 4 秒” \n方块下方。",
-          "hint3": "在 “禁止钓鱼背景”\n下连接 “不开始钓鱼”。 "
+          "hint1": "在“每4秒重复”模块\n下方添加新模块。",
+          "hint2": "将工作区顶部附近的\n“禁止捕鱼背景”连接到\n“每4秒”模块下方。",
+          "hint3": "将“开始禁止捕鱼”\n连接到“禁止捕鱼\n背景”下面。"
         },
         "csc_ecosystems_solution3B_2023": {
-          "hint1": "在重复的 “每 9 秒”\n方块下方添加新方块",
-          "hint2": "使用 “禁止钓鱼背景”\n和 “不开始钓鱼季节” 的行为"
+          "hint1": "在重复的“每9秒”\n模块下方添加新模块",
+          "hint2": "使用“禁止捕鱼背景”\n和“开始禁止捕鱼季节”行为"
         },
         "csc_ecosystems_whale_explain_2023": {
           "event_hint": "确保在活动下方添加一个 “设置背景” 方块和一个 “换服装” 方块。 \n\n别忘了按下向下箭头来触发你的活动！ \n\n<xml><block type=\"gamelab_keyPressed\"><field name=\"CONDITION\">\"when\"</field><field name=\"KEY\">\"down\"</field><next><block type=\"gamelab_setBackgroundImageAs\"><field name=\"IMG\">\"night_moon\"</field><next><block type=\"gamelab_setAnimation\"><field name=\"ANIMATION\">\"firefily\"</field><value name=\"THIS\"><block type=\"gamelab_allSpritesWithAnimation\"><field name=\"ANIMATION\">\"firefily_dark\"</field></block></value></block></next></block></next></block></xml>"

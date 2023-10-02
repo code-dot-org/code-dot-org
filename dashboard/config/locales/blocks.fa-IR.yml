@@ -51,7 +51,7 @@ fa:
             MOVES.Drop: انداختن
             MOVES.Floss: فلاس - قر دادن (رقص)
             MOVES.Fresh: فِرِش (رقص)
-            MOVES.Kick: استار - ستاره (رقص)
+            MOVES.Kick: ستاره
             MOVES.Rest: هیچکدام
             MOVES.Roll: بادی رول - خم شدن (رقص)
             MOVES.ThisOrThat: دیس اور دت (رقص)
@@ -106,7 +106,7 @@ fa:
             MOVES.Drop: انداختن
             MOVES.Floss: فلاس - قر دادن (رقص)
             MOVES.Fresh: فِرِش (رقص)
-            MOVES.Kick: استار - ستاره (رقص)
+            MOVES.Kick: ستاره
             MOVES.Rest: هیچکدام
             MOVES.Roll: بادی رول - خم شدن (رقص)
             MOVES.ThisOrThat: دیس اور دت (رقص)
@@ -124,7 +124,7 @@ fa:
             MOVES.Drop: انداختن
             MOVES.Floss: فلاس - قر دادن (رقص)
             MOVES.Fresh: فِرِش (رقص)
-            MOVES.Kick: استار - ستاره (رقص)
+            MOVES.Kick: ستاره
             MOVES.Rest: هیچکدام
             MOVES.Roll: بادی رول - خم شدن (رقص)
             MOVES.ThisOrThat: دیس اور دت (رقص)
@@ -182,7 +182,7 @@ fa:
             MOVES.Drop: انداختن
             MOVES.Floss: فلاس - قر دادن (رقص)
             MOVES.Fresh: فِرِش (رقص)
-            MOVES.Kick: استار - ستاره (رقص)
+            MOVES.Kick: ستاره
             MOVES.Rest: هیچکدام
             MOVES.Roll: بادی رول - خم شدن (رقص)
             MOVES.ThisOrThat: دیس اور دت (رقص)
@@ -210,7 +210,7 @@ fa:
             MOVES.Drop: انداختن
             MOVES.Floss: فلاس - قر دادن (رقص)
             MOVES.Fresh: فِرِش (رقص)
-            MOVES.Kick: استار - ستاره (رقص)
+            MOVES.Kick: ستاره
             MOVES.Rest: هیچکدام
             MOVES.Roll: بادی رول - خم شدن (رقص)
             MOVES.ThisOrThat: دیس اور دت (رقص)
@@ -272,7 +272,7 @@ fa:
             MOVES.Drop: انداختن
             MOVES.Floss: فلاس - قر دادن (رقص)
             MOVES.Fresh: فِرِش (رقص)
-            MOVES.Kick: استار - ستاره (رقص)
+            MOVES.Kick: ستاره
             MOVES.Rest: هیچکدام
             MOVES.Roll: بادی رول - خم شدن (رقص)
             MOVES.ThisOrThat: دیس اور دت (رقص)
@@ -850,6 +850,7 @@ fa:
         options:
           STRING:
             '"0"': '0'
+            '"1"': '1'
             '"2"': '2'
             '"3"': '3'
             '"4"': '4'
@@ -895,6 +896,7 @@ fa:
         options:
           KEY:
             '"0"': '0'
+            '"1"': '1'
             '"2"': '2'
             '"3"': '3'
             '"4"': '4'
@@ -1177,7 +1179,7 @@ fa:
             MOVES.Drop: انداختن
             MOVES.Floss: فلاس - قر دادن (رقص)
             MOVES.Fresh: فِرِش (رقص)
-            MOVES.Kick: استار - ستاره (رقص)
+            MOVES.Kick: ستاره
             MOVES.Rest: هیچکدام
             MOVES.Roll: بادی رول - خم شدن (رقص)
             MOVES.ThisOrThat: دیس اور دت (رقص)
@@ -1632,9 +1634,9 @@ fa:
             '"moving_north_and_looping"': حرکت حلقوی به سمت شمال
             '"moving_south_and_looping"': حرکت حلقوی به سمت جنوب
             '"moving_west_and_looping"': حرکت حلقوی به سمت غرب
-            '"shrinking"': منقبض شدن
-            '"spinning_left"': چرخش به چپ
-            '"spinning_right"': چرخش به راست
+            '"shrinking"': کوچک شدن
+            '"spinning_left"': چرخش به سمت چپ
+            '"spinning_right"': چرخش به سمت راست
             '"swimming_left_and_right"': شنا
             '"wandering"': گردش کردن
             '"wobbling"': تلوتلو خوردن
@@ -1650,9 +1652,9 @@ fa:
             '"moving_north_and_looping"': حرکت حلقوی به سمت شمال
             '"moving_south_and_looping"': حرکت حلقوی به سمت جنوب
             '"moving_west_and_looping"': حرکت حلقوی به سمت غرب
-            '"shrinking"': منقبض شدن
-            '"spinning_left"': چرخش به چپ
-            '"spinning_right"': چرخش به راست
+            '"shrinking"': کوچک شدن
+            '"spinning_left"': چرخش به سمت چپ
+            '"spinning_right"': چرخش به سمت راست
             '"swimming_left_and_right"': شنا
             '"wandering"': گردش کردن
             '"wobbling"': تلوتلو خوردن
@@ -1666,6 +1668,7 @@ fa:
       Poetry_whenLineShows:
         options:
           N:
+            '1': '1'
             '10': '10'
             '11': '11'
             '12': '12'
@@ -1810,9 +1813,9 @@ fa:
           BEHAVIOR:
             new Behavior(fluttering, []): بال زدن
             new Behavior(jittering, []): با عصبانیت رفتار کردن
-            new Behavior(patrolling, []): گشت‌زنی
-            new Behavior(spinning_left, []): چرخش به چپ
-            new Behavior(spinning_right, []): چرخش به راست
+            new Behavior(patrolling, []): گشت‌ زدن
+            new Behavior(spinning_left, []): چرخش به سمت چپ
+            new Behavior(spinning_right, []): چرخش به سمت راست
             new Behavior(wandering, []): گردش کردن
             new Behavior(wobbling, []): تلوتلو خوردن
         text: "{BEHAVIOR}"
@@ -1963,6 +1966,7 @@ fa:
       ecosystems_int10:
         options:
           VALUE:
+            '1': '1'
             '10': '10'
             '2': '2'
             '3': '3'
@@ -2032,9 +2036,9 @@ fa:
               حلقه‏
             new Behavior(moving_west_and_looping, []): حرکت به سمت غرب و درست کردن
               حلقه‏
-            new Behavior(patrolling, []): گشت‌زنی
-            new Behavior(spinning_left, []): چرخش به چپ
-            new Behavior(spinning_right, []): چرخش به راست
+            new Behavior(patrolling, []): گشت‌ زدن
+            new Behavior(spinning_left, []): چرخش به سمت چپ
+            new Behavior(spinning_right, []): چرخش به سمت راست
             new Behavior(wandering, []): گردش کردن
             new Behavior(wobbling, []): تلوتلو خوردن
         text: "{BEHAVIOR}"
@@ -2099,6 +2103,7 @@ fa:
       gamelab_int10:
         options:
           VALUE:
+            '1': '1'
             '10': '10'
             '2': '2'
             '3': '3'
@@ -2371,7 +2376,7 @@ fa:
           BEHAVIOR:
             draggable(): قابل کشیدن باشد
             new Behavior(driving_with_arrow_keys, []): رانندگی با کلیدهای پیکان
-            new Behavior(moving_with_arrow_keys, []): حرکت با کلیدهای پیکان
+            new Behavior(moving_with_arrow_keys, []): حرکت با کلیدهای جهت‌دار
         text: "{BEHAVIOR}"
       gamelab_pointInDirection:
         options:
