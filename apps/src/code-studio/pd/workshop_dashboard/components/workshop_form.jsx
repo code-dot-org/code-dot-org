@@ -778,7 +778,7 @@ export class WorkshopForm extends React.Component {
   handleCourseChange = event => {
     const course = this.handleFieldChange(event);
 
-    // clear facilitators, subject, funding, and email reminders
+    // clear facilitators, subject, module, funding, and email reminders
     this.setState({
       facilitators: [],
       subject: null,
@@ -786,6 +786,7 @@ export class WorkshopForm extends React.Component {
       funded: '',
       funding_type: null,
       suppress_email: false,
+      module: null,
     });
     this.loadAvailableFacilitators(course);
   };
@@ -817,10 +818,10 @@ export class WorkshopForm extends React.Component {
         suppress_email: false,
       });
     }
-  };
 
-  handleModuleChange = event => {
-    this.handleFieldChange(event);
+    this.setState({
+      module: null,
+    });
   };
 
   handleCustomizeFeeChange = event => {
@@ -859,7 +860,6 @@ export class WorkshopForm extends React.Component {
     if (this.state.organizer) {
       workshop_data.organizer_id = this.state.organizer.id;
     }
-
     let method, url;
     if (this.props.workshop) {
       method = 'PATCH';
@@ -901,7 +901,7 @@ export class WorkshopForm extends React.Component {
   }
 
   shouldRenderModules() {
-    return this.state.subject === 'Custom Workshop';
+    return this.state.subject === SubjectNames['SUBJECT_CUSTOM_WORKSHOP'];
   }
 
   renderFormButtons() {
@@ -1012,6 +1012,11 @@ export class WorkshopForm extends React.Component {
         validation.style.fee = 'error';
         validation.help.fee = 'Required';
       }
+      if (this.shouldRenderModules() && !this.state.module) {
+        validation.isValid = false;
+        validation.style.module = 'error';
+        validation.help.module = 'Required.';
+      }
     }
     return validation;
   }
@@ -1103,7 +1108,9 @@ export class WorkshopForm extends React.Component {
                 />
               )}
             </Col>
-            <Col sm={2}>
+          </Row>
+          <Row>
+            <Col sm={5}>
               {this.shouldRenderModules() && (
                 <ModuleSelect
                   course={this.state.course}
@@ -1111,7 +1118,7 @@ export class WorkshopForm extends React.Component {
                   readOnly={this.props.readOnly}
                   inputStyle={this.getInputStyle()}
                   validation={validation}
-                  onChange={this.handleModuleChange}
+                  onChange={this.handleFieldChange}
                 />
               )}
             </Col>
