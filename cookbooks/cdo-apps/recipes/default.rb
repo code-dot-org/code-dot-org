@@ -49,13 +49,20 @@ apt_package 'enscript'
 # Install dependencies required to sync content between our Code.org shared
 # Dropbox folder and our git repository. Also check whether the tool that
 # performs the sync is installed, and display instructions for how to do so if
-# it isn't.
+# it isn't. Ideally, we would be able to install the tool with this code, but
+# the process is sufficiently interactive and we have to do it sufficiently
+# rarely that we think documentation will suffice for now.
 if node.chef_environment == 'staging' || node.chef_environment == 'adhoc'
   apt_package 'unison'
   dropbox_daemon_file = File.join(node[:home], '.dropbox-dist/dropboxd')
   unless File.exist?(dropbox_daemon_file)
-    Chef::Log.fatal("Chef environment #{node.chef_environment.inspect} expects the Dropbox Daemon to be configured.")
-    Chef::Log.fatal('Follow the instructions at https://www.dropbox.com/install-linux to do so')
+    environment_name = node.chef_environment.inspect
+    Chef.event_handler do
+      on :run_completed do
+        puts "CODE.ORG WARNING: Chef environment #{environment_name} expects the Dropbox Daemon to be configured."
+        puts 'Follow the instructions at https://www.dropbox.com/install-linux to do so'
+      end
+    end
   end
 end
 
