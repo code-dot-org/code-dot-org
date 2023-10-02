@@ -80,9 +80,7 @@ const DanceView: React.FunctionComponent = () => {
       blockInstallOptions,
       levelProperties
     );
-  }, []);
-
-  // If level data or initial sources change, loadlevel
+  }, []); // Empty dependency array so that this only runs once.
 
   // Initialize song manifest and load initial song when level loads.
   useEffect(() => {
