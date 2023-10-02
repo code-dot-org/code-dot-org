@@ -231,6 +231,9 @@
           "rubric_performance_level_4": "Las etiquetas de lista no se utilizan, o se utilizan de forma incorrecta de manera que no aparece ningún contenido en una lista."
         },
         "CSD U2L2 - PracC_2023": {
+          "rubric_key_concept": "Utiliza la sintaxis HTML correcta para crear párrafos de texto",
+          "rubric_performance_level_1": "Todo el texto está dentro de etiquetas de párrafo. La página web resultante coincide con la vista previa de las instrucciones de nivel.",
+          "rubric_performance_level_2": "Al menos parte del texto se ha separado en un párrafo mediante el uso adecuado de etiquetas de párrafo. La página web resultante coincide parcialmente con la vista previa de las instrucciones de nivel.",
           "rubric_performance_level_3": "Hay al menos una etiqueta de párrafo en el texto, pero puede que no se utilice correctamente (por ejemplo, falta la etiqueta de cierre, párrafos creados fuera del elemento body).",
           "rubric_performance_level_4": "No hay etiquetas de párrafo en el texto."
         },

@@ -346,36 +346,36 @@ fa-IR:
   coursea-2019_gradelevel: سنین 4 تا 7
   coursea-2020_gradelevel: سنین 4 تا 7
   coursea-2020_shortdescription_congrats: مبانی علم کامپیوتر و ایمنی اینترنت را بیاموزید.
-    در پایان دوره، بازی خودتان را بسازید یا تجربه‌ای برای هم‌رسانی با دیگران داشته
-    باشید.
+    در پایان دوره، بازی خودتان را بسازید یا تجربه‌ای برای به اشتراک گذاشتن با دیگران
+    داشته باشید.
   coursea-2021_gradelevel: سنین 4 تا 7
   coursea-2021_name: دوره A ‏(2021)
   coursea-2021_shortdescription_congrats: مبانی علم کامپیوتر و ایمنی اینترنت را بیاموزید.
-    در پایان دوره، بازی خودتان را بسازید یا تجربه‌ای برای هم‌رسانی با دیگران داشته
-    باشید.
+    در پایان دوره، بازی خودتان را بسازید یا تجربه‌ای برای به اشتراک گذاشتن با دیگران
+    داشته باشید.
   coursea-2022_gradelevel: سنین 4 تا 7
   coursea-2022_name: دوره A ‏(2022)
   coursea-2022_shortdescription_congrats: مبانی علم کامپیوتر و ایمنی اینترنت را بیاموزید.
-    در پایان دوره، بازی خودتان را بسازید یا تجربه‌ای برای هم‌رسانی با دیگران داشته
-    باشید.
+    در پایان دوره، بازی خودتان را بسازید یا تجربه‌ای برای به اشتراک گذاشتن با دیگران
+    داشته باشید.
   coursea_gradelevel: سنین 4 تا 7
   courseb-2017_gradelevel: سنین 5-8
   courseb-2018_gradelevel: سنین 5-8
   courseb-2019_gradelevel: سنین 5-8
   courseb-2020_gradelevel: سنین 5-8
   courseb-2020_shortdescription_congrats: مبانی علم کامپیوتر و ایمنی اینترنت را بیاموزید.
-    در پایان دوره، بازی خودتان را بسازید یا تجربه‌ای برای هم‌رسانی با دیگران داشته
-    باشید.
+    در پایان دوره، بازی خودتان را بسازید یا تجربه‌ای برای به اشتراک گذاشتن با دیگران
+    داشته باشید.
   courseb-2021_gradelevel: سنین 5-8
   courseb-2021_name: دوره B ‏(2021)
   courseb-2021_shortdescription_congrats: مبانی علم کامپیوتر و ایمنی اینترنت را بیاموزید.
-    در پایان دوره، بازی خودتان را بسازید یا تجربه‌ای برای هم‌رسانی با دیگران داشته
-    باشید.
+    در پایان دوره، بازی خودتان را بسازید یا تجربه‌ای برای به اشتراک گذاشتن با دیگران
+    داشته باشید.
   courseb-2022_gradelevel: سنین 5-8
   courseb-2022_name: دوره B ‏(2022)
   courseb-2022_shortdescription_congrats: مبانی علم کامپیوتر و ایمنی اینترنت را بیاموزید.
-    در پایان دوره، بازی خودتان را بسازید یا تجربه‌ای برای هم‌رسانی با دیگران داشته
-    باشید.
+    در پایان دوره، بازی خودتان را بسازید یا تجربه‌ای برای به اشتراک گذاشتن با دیگران
+    داشته باشید.
   courseb_gradelevel: سنین 5-8
   coursec-2017_gradelevel: سنین 6-10
   coursec-2018_gradelevel: سنین 6-10
@@ -583,7 +583,7 @@ fa-IR:
   dashboard_navigation_section_teacher_progress: پیشرفت دوره ی شما
   dashboard_navigation_student: 'دانش آموز: %{student_name}'
   dashboard_navigation_view_assessments: ارزیابی
-  dashboard_navigation_view_progress: پیشرفت
+  dashboard_navigation_view_progress: روند
   dashboard_navigation_view_stats: آمار
   dashboard_overview: مرور کلی
   dashboard_privacy_document_link: <a href="/privacy/student-privacy", target="_blank">
@@ -600,7 +600,7 @@ fa-IR:
   dashboard_progress_submitted: ثبت شده
   dashboard_puzzle: پازل
   dashboard_puzzle_solving: 'حل پازل:'
-  dashboard_question: سوال
+  dashboard_question: سؤال
   dashboard_sections_account_creation_question: چه کسی یک حساب کاربری دانش آموزی ساخته
     است؟
   dashboard_sections_choose_secret: اگر شما می خواهید به دانش آموزان خود حساب کاربری
@@ -664,7 +664,7 @@ fa-IR:
     <b>تصویر</b> تغییر دهید.
   dashboard_students_print_info: کارت های اطلاعات ورود دانش آموزان خود راه چاپ نمایید.
   dashboard_students_print_page: چاپ این صفحه
-  dashboard_students_progress: پیشرفت
+  dashboard_students_progress: روند
   dashboard_students_reset_picture: شما در هر زمان میتوانید عکس محرمانه هر دانش آموز
     را تغییر دهید با انتخاب <b>نمایش محرمانه</b> و سپس <b>تغییر محرمانه</b>. با انجام
     این کار، یک عکس محرمانه جدید برای استفاده آن دانش آموز در هنگام ورودش به سیستم
@@ -681,7 +681,7 @@ fa-IR:
     اشتراک بگذارید:'
   dashboard_students_total_lines: خطوطی از کد
   dashboard_students_url: آدرس اینترنتی
-  dashboard_submission_in_progress: در حال پیش رفت
+  dashboard_submission_in_progress: در حال اجرا
   dashboard_submission_submitted: ثبت‌شده
   dashboard_teacher: دبیر
   dashboard_teacher_worksheet: ورقه کار معلم
@@ -854,7 +854,7 @@ fa-IR:
   hoc2018_dance_party_button: شروع
   hoc2018_dance_party_main_heading: مهمانی رقص
   hoc2018_dance_teacher_resources_tile1_button: طرح درس
-  hoc2018_dance_teacher_resources_tile2_button: فعالیت کلاسی
+  hoc2018_dance_teacher_resources_tile2_button: فعالیت بدون کامپیوتر
   hoc2018_mc_aquatic_description: ماینکرافت برگشته برای سایت ساعتی با کد با یه فعالیت
     داغ! با کد زدن به دنیای ماینکرافت سفر کنید.
   hoc2018_mc_back: ماینکرافت برگشته برای سایت ساعتی با کد با یه فعالیت داغ!
@@ -1113,7 +1113,7 @@ fa-IR:
     fuzzfamily مقدمه ای بر منطق برنامه نویسی برای کودکان 5 سال به بالا است. معلم باید
     بازی را توضیح دهد، سپس دانش آموزان برنامه یک شریک را می نویسند تا درس یک مانع
     ساده را کامل کنند. '
-  kodableunplugged_platformtext: Unuplugged
+  kodableunplugged_platformtext: بدون کامپیوتر
   kodableunplugged_shortdescription: یک تمرین بدون اتصال جالب
   kodu_beyond_gradelevel: سنین بالای 8
   kodu_beyond_longdescription: Kodu به کودکان اجازه می دهد بازی ها را با استفاده از
@@ -1280,6 +1280,7 @@ fa-IR:
   pocketcode_beyond_platformtext: نرم افزار موبایل
   pocketcode_beyond_shortdescription: سعی کنید برای یجاد یک بازی بر روی گوشی های هوشمند
     و به اشتراک گذاری با دوستان !
+  pre-express-2022_name: دوره اکسپرس برای پیش دبستانیها (2022)
   previous: قبلی
   print_all: همه چیز را پرینت بگیرید
   print_ice_art: هنر یخیتان را پرینت بگیرید
@@ -1307,7 +1308,7 @@ fa-IR:
     بازی کردن گونه های مختلف سنگ، کاغذ، قیچی، و مشاهده ی نتایج به عنوان تجربه های
     مدل سازی متفاوت، بیاموزند مدل سازی و شبیه سازی چگونه کار می کند.
   projguts_name: سنگ، کاغذ، قیچی
-  projguts_platformtext: Unuplugged
+  projguts_platformtext: بدون کامپیوتر
   projguts_shortdescription: مدل سازی و شبیه سازی  رابا استفاده از سنگ/کاغذ/قیچی امتحان
     کنید
   quorum_gradelevel: مدارس راهنمایی به بالا
@@ -1447,7 +1448,7 @@ fa-IR:
   thinkersmith2_longdescription: دانش آموزان درباره ی نمایش و ذخیره ی حروف در منطق
     دودویی، با عملکرد روشن و خاموش می آموزند. در پایان، بچه های کلاس می توانند حرف
     اول اسم و فامیلشان را کد کنند تا با خودشان به خانه ببرند.
-  thinkersmith2_platformtext: Unuplugged
+  thinkersmith2_platformtext: بدون کامپیوتر
   thinkersmith2_shortdescription: یادبگیریم  که کامپیوتر ها چگونه از 0 ها و 1ها برای
     نشان دادن اطلاعات استفاده میکنند.
   thinkersmith_gradelevel: همه‌ی سنین
@@ -1458,13 +1459,13 @@ fa-IR:
     من" برای فعایت گروهی بهترین عملکرد را دارد و یک کتاب کار آموزگار برای استفاده
     ی کلاسی دارد.
   thinkersmith_name: دوستان رباتی من
-  thinkersmith_platformtext: Unuplugged
+  thinkersmith_platformtext: بدون کامپیوتر
   thinkersmith_shortdescription: آموزش بدون اتصال برای یک گروه با هیچ وسیله ای
   thinkersmithspanish_longdescription: با استفاده از "واژگان رباتی" از پیش تعیین شده
     دانش آموزان خواهند آموخت چگونه برای انجام کارهای مشخص یکدیگر را هدایت کنند بدون
     این که ابتدا راجع به آن ها بحث کنند. این درس به بچه ها ارتباط بین نماد ها و کار
     ها را می آموزد، همان طور که مهارت خیلی با ارزش رفع عیب را می آموزد.
-  thinkersmithspanish_platformtext: Unuplugged
+  thinkersmithspanish_platformtext: بدون کامپیوتر
   third_party_curriculum: برنامه آموزشی
   third_party_gradelevel_2to8: رده ی سنی  2-8
   third_party_gradelevel_4to12: رده ی سنی 4-12
