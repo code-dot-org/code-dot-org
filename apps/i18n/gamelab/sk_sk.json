@@ -59,6 +59,7 @@
   "dropletBlock_sprite.height_description": "Výška sprite.",
   "dropletBlock_sprite.height_signatureOverride": "[Sprite].výška",
   "dropletBlock_sprite.width_description": "Šírka sprite.",
+  "dropletBlock_sprite.width_signatureOverride": "[Sprite].width",
   "dropletBlock_x_description": "X súradnice sprite.",
   "dropletBlock_y_description": "Y súradnice sprite.",
   "reinfFeedbackMsg": "Hotovo! Stlač „Pokračovať“ a prejdi na ďalšiu úroveň.",

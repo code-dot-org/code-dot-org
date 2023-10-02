@@ -42,11 +42,11 @@ steps:
       debug: true
       pull: true
       restore: true
-      filename: unit-tests-cache.tar
+      filename: unit-tests-cache-ubuntu-20.tar
 
   - name: unit-tests
     # see: docker/dockerfiles/Dockerfile
-    image: codedotorg/code-dot-org:1.8.3
+    image: codedotorg/code-dot-org:1.9.0
     pull: always
     volumes:
       - name: rbenv
@@ -81,7 +81,7 @@ steps:
       debug: true
       pull: true
       rebuild: true
-      filename: unit-tests-cache.tar
+      filename: unit-tests-cache-ubuntu-20.tar
       mount:
         - /home/circleci/.rbenv
 
@@ -141,10 +141,11 @@ steps:
       debug: true
       pull: true
       restore: true
+      filename: ui-tests-cache-ubuntu-20.tar
 
   - name: ui-tests
     # see: docker/dockerfiles/Dockerfile
-    image: codedotorg/code-dot-org:1.8.3
+    image: codedotorg/code-dot-org:1.9.0
     pull: always
     volumes:
       - name: rbenv
@@ -190,6 +191,7 @@ steps:
       debug: true
       pull: true
       rebuild: true
+      filename: ui-tests-cache-ubuntu-20.tar
       mount:
         - /home/circleci/.rbenv
         # Used to avoid re-seeding UI test data unless something changed - see cached_ui_test task in https://github.com/code-dot-org/code-dot-org/blob/staging/dashboard/lib/tasks/seed.rake
@@ -210,6 +212,6 @@ trigger:
     - pull_request
 ---
 kind: signature
-hmac: 4a01bb949625a45e5445319b70c6268e9e5a4f555786ae999fc6982a94fb3089
+hmac: a2f1cd7b4540678764dcdd8fcc091de1080c4a96c919f10479459fe8d51bcfb3
 
 ...

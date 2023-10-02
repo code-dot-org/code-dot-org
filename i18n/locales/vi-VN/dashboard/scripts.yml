@@ -3830,3 +3830,7 @@ vi:
           description_short: Tìm hiểu tất cả các khái niệm trong bài học Nguyên tắc cơ bản của khoa học máy tính và sáng tạo tác phẩm cũng như câu chuyện và game của riêng bạn.
         how-ai-works-2023:
           title: Cách thức hoạt động của AI
+        ai-ethics-2023:
+          lessons:
+            lesson-1:
+              name: Quy tắc đạo đức trí tuệ nhân tạo

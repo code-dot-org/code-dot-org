@@ -42,6 +42,10 @@ te:
         ai-ethics-2021:
           description_audience: 6-12 తరగతులు
           title: మా నైతికతల యొక్క AI కోడ్
+        ai-ethics-2023:
+          lessons:
+            lesson-1:
+              name: మా నైతికతల యొక్క AI కోడ్
         aiml-2021:
           title: AI మరియు మెషీన్ లెర్నింగ్ మాడ్యూల్
         aiml-2022:

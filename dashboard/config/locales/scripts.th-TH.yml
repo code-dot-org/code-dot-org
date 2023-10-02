@@ -76,6 +76,10 @@ th:
         ai-ethics-2021:
           description_audience: เกรด 6-12
           title: จรรยาบรรณ AI ของเรา
+        ai-ethics-2023:
+          lessons:
+            lesson-1:
+              name: จรรยาบรรณ AI ของเรา
         ai-temp:
           title: AI ทำงานอย่างไร
         aiml-2021:

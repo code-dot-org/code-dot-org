@@ -10,6 +10,7 @@ se:
         error:
           future: ii sáhte nie boahtteáiggis
         finish_sign_up_header: Válbme du kontoásaheami
+        finish_sign_up_header_error: 'Divo dáid boasttuvuođaid:'
         finish_sign_up_subheader: Deavdde dáid dieđuid válbmet ásahit Code.org-konto
           <strong>%{email}</strong>.
         finish_sign_up_subheader_markdown: Deavdde dáid dieđuid válbmet ásahit Code.org-konto
@@ -32,6 +33,7 @@ se:
         reset_password_token: Dat ruovttoluotta bidjat čoavddasáni liŋka maid leat
           čuvvon
         us_state: Fylka
+        user_type: KontoMálle
         username: Geavaheaddjenamma
     errors:
       messages:

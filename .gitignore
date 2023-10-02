@@ -58,7 +58,6 @@ npm-debug.log
 /apps/src/p5lab/gamelab/sharedGamelabBlocks.js
 /apps/src/styleConstants.js
 /apps/storybook-deploy
-/apps/test/entry-tests.js
 /apps/yarn-error.log
 
 # Yarn ignores based on documentation at https://yarnpkg.com/getting-started/qa#which-files-should-be-gitignored
@@ -84,6 +83,7 @@ npm-debug.log
 /bin/cron/log
 /bin/i18n/*_credentials.yml
 /bin/i18n/crowdin/*files_to_sync_out.json
+/bin/test/coverage
 /dashboard/config/newrelic.yml
 /dashboard/db/ui_test_data.*
 /dashboard/public/blockly

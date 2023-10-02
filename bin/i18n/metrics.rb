@@ -1,3 +1,4 @@
+require File.expand_path('../../../dashboard/config/environment', __FILE__)
 require 'cdo/aws/metrics'
 require 'aws-sdk-ec2'
 require 'net/http'
@@ -35,6 +36,20 @@ module I18n
         File.size(file_path),
         [{name: 'SyncStep', value: sync_step}, {name: 'FileName', value: file_name}, {name: 'FileDir', value: file_dir}],
         'Bytes'
+      )
+    end
+
+    # logging to CloudWatch the Completion Status of a sync process, either success or fail.
+    # @param status [Boolean] Whether a step has been successful or not.
+    # @param sync_step [String] Step of the sync where the method is used. Options: sync-in, sync-up, sync-down, sync-out.
+    # @option message [String] Exception message causing the process to fail.
+    # # @option sync_component [String] Specific sync component being logged.
+    def self.report_status(status, sync_step, message = 'None', sync_component = 'None')
+      status_value = status ? 1 : 0
+      log_metric(
+        :Status,
+        status_value,
+        [{name: 'SyncStep', value: sync_step}, {name: 'SyncComponent', value: sync_component}, {name: 'Message', value: message}]
       )
     end
 

@@ -147,6 +147,19 @@ describe I18nScriptUtils do
     end
   end
 
+  describe '.to_dashboard_i18n_struct' do
+    let(:locale) {'expected_locale'}
+    let(:type) {'expected_type'}
+    let(:i18n_data) {'expected_i18n_data'}
+
+    it 'returns correct Dashboard i18n file data structure' do
+      assert_equal(
+        {locale => {'data' => {type => i18n_data}}},
+        I18nScriptUtils.to_dashboard_i18n_data(locale, type, i18n_data)
+      )
+    end
+  end
+
   describe '.sort_and_sanitize' do
     it 'returns sorted and sanitized hash' do
       initial_hash_data = {
@@ -277,6 +290,98 @@ describe I18nScriptUtils do
     end
   end
 
+  describe '.write_file' do
+    let(:write_file) {I18nScriptUtils.write_file(file_path, content)}
+
+    let(:file_path) {'/expected/file.txt'}
+    let(:content) {'expected_file_content'}
+
+    it 'creates the file with the content' do
+      write_file
+
+      assert File.exist?(file_path)
+      assert_equal content, File.read(file_path)
+    end
+
+    context 'when the file exists' do
+      before do
+        FileUtils.mkdir_p(File.dirname(file_path))
+        File.write(file_path, 'origin_file_content')
+      end
+
+      it 'rewrites the file content' do
+        write_file
+
+        assert File.exist?(file_path)
+        assert_equal content, File.read(file_path)
+      end
+    end
+  end
+
+  describe '.copy_file' do
+    let(:copy_file) {I18nScriptUtils.copy_file(file_path, dest_path)}
+
+    let(:file_name) {'file.txt'}
+    let(:file_path) {File.join('/origin/dir', file_name)}
+
+    before do
+      FileUtils.mkdir_p(File.dirname(file_path))
+      FileUtils.touch(file_path)
+    end
+
+    context 'when the destination is a dir' do
+      let(:dest_path) {'/dest/dir'}
+
+      it 'copies the file to the dir' do
+        copy_file
+        assert File.exist?(File.join(dest_path, file_name))
+      end
+    end
+
+    context 'when the destination is a file path' do
+      let(:dest_path) {'/dest/dir/copy.txt'}
+
+      it 'copies the file' do
+        copy_file
+        assert File.exist?(dest_path)
+      end
+    end
+  end
+
+  describe '.move_file' do
+    let(:move_file) {I18nScriptUtils.move_file(file_path, dest_path)}
+
+    let(:file_name) {'file.txt'}
+    let(:file_path) {File.join('/origin/dir', file_name)}
+
+    before do
+      FileUtils.mkdir_p(File.dirname(file_path))
+      FileUtils.touch(file_path)
+    end
+
+    context 'when the destination is a dir' do
+      let(:dest_path) {'/dest/dir'}
+
+      it 'moves the file to the dir' do
+        move_file
+
+        refute File.exist?(file_path)
+        assert File.exist?(File.join(dest_path, file_name))
+      end
+    end
+
+    context 'when the destination is a file path' do
+      let(:dest_path) {'/dest/dir/copy.txt'}
+
+      it 'moves the file' do
+        move_file
+
+        refute File.exist?(file_path)
+        assert File.exist?(dest_path)
+      end
+    end
+  end
+
   describe '.rename_dir' do
     let(:from_dir) {'/from_dir'}
     let(:to_dir) {'/to_dir'}
@@ -336,6 +441,26 @@ describe I18nScriptUtils do
         I18nScriptUtils.remove_empty_dir(dir)
 
         assert File.directory?(dir)
+      end
+    end
+  end
+
+  describe '.source_lang?' do
+    let(:is_source_lang) {I18nScriptUtils.source_lang?(language)}
+
+    context 'when the language is the i18n source language' do
+      let(:language) {{locale_s: 'en-US'}}
+
+      it 'returns true' do
+        assert is_source_lang
+      end
+    end
+
+    context 'when the language is not the i18n source language' do
+      let(:language) {{locale_s: 'not-EN'}}
+
+      it 'returns false' do
+        refute is_source_lang
       end
     end
   end

@@ -5,7 +5,7 @@ ur:
   language: انگلش
   front_title: تاریخ میں ہونے والی تدریس کی سب سے بڑی تقریب میں شامل ہوجائیے، %{campaign_date}
   coming_soon: جلد آ رہا ہے
-  campaign_date_start_short: دسمبر 5
+  campaign_date_start_short: 5 دسمبر
   campaign_date_start_long: دسمبر 5
   campaign_date_short: دسمبر 5 - 11
   campaign_date_full: 5 تا 11 دسمبر
@@ -16,25 +16,25 @@ ur:
   nonus_campaign_date_short: 1 اکتوبر - 18 دسمبر
   nonus_campaign_date_full: 1 اکتوبر - 18 دسمبر
   nonus_campaign_date_year: '2022'
-  nonus_campaign_date_full_year: 1 اکتوبر2022 - 18 دسمبر 2022
+  nonus_campaign_date_full_year: 1 اکتوبر، 2022 - 18 دسمبر، 2022
   latam_campaign_date_start_short: اکتوبر 1
   latam_campaign_date_start_long: اکتوبر 1
   latam_campaign_date_short: 1 اکتوبر - 18 دسمبر
   latam_campaign_date_full: 1 اکتوبر - 18 دسمبر
   latam_campaign_date_year: '2022'
-  latam_campaign_date_full_year: 1 اکتوبر2022 - 18 دسمبر 2022
+  latam_campaign_date_full_year: 1 اکتوبر، 2022 - 18 دسمبر، 2022
   europe_campaign_date_start_short: اکتوبر 1
   europe_campaign_date_start_long: اکتوبر 1
   europe_campaign_date_short: 1 اکتوبر - 18 دسمبر
   europe_campaign_date_full: 1 اکتوبر - 18 دسمبر
   europe_campaign_date_year: '2022'
-  europe_campaign_date_full_year: 1 اکتوبر2022 - 18 دسمبر 2022
+  europe_campaign_date_full_year: 1 اکتوبر، 2022 - 18 دسمبر، 2022
   africa_campaign_date_start_short: اکتوبر 1
   africa_campaign_date_start_long: اکتوبر 1
   africa_campaign_date_short: 1 اکتوبر - 18 دسمبر
   africa_campaign_date_full: 1 اکتوبر - 18 دسمبر
   africa_campaign_date_year: '2022'
-  africa_campaign_date_full_year: 1 اکتوبر2022 - 18 دسمبر 2022
+  africa_campaign_date_full_year: 1 اکتوبر، 2022 - 18 دسمبر، 2022
   hoc2022_header: کھوجیں، کھیلیں، تخلیق کریں!
   social_hoc2022_explore_play_create: کمپیوٹر سائنس کا استعمال کرتے ہوئے کھوجیں، کھیلیں،
     اور تخلیق کریں۔
@@ -184,6 +184,15 @@ ur:
   grade_level_label_elementary: ایلیمنٹری اسکول
   grade_level_label_middle: مڈل اسکول
   grade_level_label_high: ہائی اسکول
+  curricula_title_elementary: ایلیمنٹری اسکول کا نصاب
+  curricula_desc_elementary: مزہ، مفت کورس اور سرگرمیوں کو براؤز کریں جو آپ کو اپنے
+    ابتدائی اسکول کے طالب علموں کے ساتھ کمپیوٹر سائنس کی تلاش کے لئے مدعو کرتے ہیں.
+  curricula_title_middle: مڈل اسکول کا نصاب
+  curricula_desc_middle: ان مشغول پیشکشوں کو براؤز کریں جو آپ کو اور آپ کے مڈل اسکول
+    کے طلباء کو مل کر کمپیوٹر سائنس کی تلاش کرنے کے قابل بناتی ہیں۔
+  curricula_title_high: ہائی اسکول کا نصاب
+  curricula_desc_high: مجبور کورسز اور سرگرمیوں کو براؤز کریں جو آپ کو اور آپ کے ہائی
+    اسکول کے طالب علموں کو کمپیوٹر سائنس میں گہری کھودنے کے لئے مدعو کرتے ہیں.
   students_label: طلباء
   teachers_label: استاد
   teacher_label_csf: CS کی بنیادی تعلمیات کے استاد
@@ -193,6 +202,7 @@ ur:
   teacher_label_csa: AP® Computer Science A Teacher
   required_materials: 'مطلوبہ امواد:'
   optional_materials: 'اختیاری امواد:'
+  call_to_action_explore_roles: کھلے کردار تلاش کریں
   call_to_action_learn_more: مزید جانیں
   call_to_action_watch_now: اب دیکھیے
   call_to_action_try_activity: سرگرمی کی کوشش کریں
@@ -210,6 +220,15 @@ ur:
   call_to_action_explore_choice_level: انتخاب کی سطح کی کوئی مثال دریافت کریں
   call_to_action_explore_collection: کلیکشن دریافت کریں
   call_to_action_explore_unplugged_lesson: ان پلگ شدہ اسباق دریافت کریں
+  call_to_action_explore_csf: CS بنیادی اصول دریافت کریں
+  call_to_action_explore_csd: CS دریافتوں کو دریافت کریں
+  call_to_action_explore_csp: CS اصولوں کو دریافت کریں
+  call_to_action_explore_csc: CS کنکشن دریافت کریں
+  call_to_action_explore_csa: AP® کمپیوٹر سائنس A دریافت کریں
+  call_to_action_explore_csa_short: AP® CSA دریافت کریں
+  call_to_action_explore_maker: نصاب ساز دریافت کریں
+  call_to_action_explore_hoc: گھنٹہ کوڈ ٹیوٹوریل دریافت کریں
+  call_to_action_explore_hoc_short: گھنٹہ کوڈ دریافت کریں
   call_to_action_try_app_lab: ایپ لیب آزمائیں
   call_to_action_view_lesson_plan: سبق کی منصوبہ بندی دیکھیں
   call_to_action_self_paced_pl: خود رفتار پیشہ ورانہ سیکھنے شروع کریں
@@ -233,6 +252,7 @@ ur:
   call_to_action_resources_tools: پروگرامنگ ٹولز آزمائیں
   call_to_action_sign_up_free: مفت سائن اپ کریں
   call_to_action_explore_ai_resources: AI ذرائع ڈھونڈیں
+  call_to_action_explore_ai_curricula: AI نصاب دریافت کریں
   call_to_action_explore_curriculum_catalog: نصاب کا کیٹالاگ ڈھونڈیں
   call_to_action_see_full_curriculum_catalog: نصاب کا مکمل کیٹالاگ دیکھیں
   call_to_action_find_self_paced_modules: ذاتی پیش رفت کے ماڈیولز تلاش کریں
@@ -254,6 +274,11 @@ ur:
   call_to_action_notify_available: دستیاب ہونے پر مجھے مطلع کریں
   call_to_action_register_early_access: ابتدائی رسائی کے لئے رجسٹر کریں
   call_to_action_open_positions: کھلی پوزیشنز دیکھیں
+  call_to_action_get_guide: گائیڈ حاصل کریں
+  call_to_action_donate_to_cdo: Code.org کو عطیہ
+  call_to_action_start_fundraiser: فنڈ جمع کرنے والا شروع کریں
+  call_to_action_view_donation_policy: عطیہ پالیسی دیکھیں
+  call_to_action_view_donate_bitpay: Bitpay کے ساتھ عطیہ
   aria_label_call_to_action_afe: ایمیزون مستقبل انجینئر کے بارے میں مزید جانیں
   aria_label_call_to_action_teaching_csf: تدریس کمپیوٹر سائنس کے بنیادی اصول پیشہ
     ورانہ سیکھنے کا پروگرام شروع کریں
@@ -360,8 +385,11 @@ ur:
   curriculum_name_csp: کمپیوٹر سائنس کے اصول
   curriculum_name_csc: کمپیوٹر سائنس کنیکشنز
   curriculum_name_csa: کمپیوٹر سائنس A
+  curriculum_name_csa_ai: سافٹ ویئر انجینئرنگ اور کمپیوٹر وژن
   curriculum_name_csc_02: CS کنیکشنز کا کوئی ماڈیول
   curriculum_name_ai: مصنوعی ذہانت اور مشین لرننگ
+  curriculum_name_artificial_intelligence: مصنوعی انٹیلی جنس (AI)
+  curriculum_name_maker: بنانے والا
   curriculum_name_maker_cp: آلات کے ساتھ اطلاقات بنانا (سرکٹ کھیل کے میدان)
   curriculum_name_maker_microbit: 'آلات کے ساتھ اطلاقات بنانا (مائیکرو: بٹ)'
   curriculum_name_creating_apps_with_devices: ڈیوائسز کے ساتھ ایپس کی تخلیق کاری
@@ -372,6 +400,8 @@ ur:
   curriculum_name_interactive_animations_games: تعاملاتی متحرک تصاویر اور گیمز
   curriculum_name_design_process: ڈیزائن کا عمل
   curriculum_name_data_society: ڈیٹا اور سوسائٹی
+  curriculum_desc_csf: کمپیوٹر سائنس کے بنیادی تصورات کے طالب علموں کو متعارف کرایا
+    ہے کہ ابتدائی نصاب کی مفت سیٹ.
   curriculum_desc_csf_express: کمپیوٹر پروگرامز تخلیق کرنے کا طریقہ جانیں، مسئلہ حل
     کرنے کا ہنر سیکھیں، اور پُرلطف چیلنجز سے گزریں! گیمز اور تخلیقی پراجیکٹس تیار
     کر کے انہیں اپنے دوستوں، اہلِ خانہ، اور اساتذہ کے ساتھ شیئر کریں۔
@@ -420,6 +450,26 @@ ur:
   curriculum_desc_creating_apps_with_devices: کمپیوٹنگ میں مادی ڈیوائسز کی اہمیت دریافت
     کریں۔ ایسے پروگرامز تیار کریں جو ہارڈ ویئر ان پٹس اور آؤٹ پٹس کو استعمال کرتے
     ہیں۔ مائیکرو:بٹ اور سرکٹ پلے گراؤںڈ، دونوں کے لیے اس یونٹ کا ایک ورژن موجود ہے۔
+  curriculum_desc_csa: وہ AP® کمپیوٹر سائنس A (AP® CSA) کے لئے اس مفت نصاب میں جاوا
+    پروگرامنگ زبان سیکھنے جبکہ سافٹ ویئر انجینئرنگ اور اعتراض پر مبنی ڈیزائن کرنے
+    کے لئے طالب علموں کو متعارف کرانے.
+  curriculum_desc_maker: میکر تعلیم STEM (سائنس، ٹیکنالوجی، انجینئرنگ، ریاضی) کو کلاس
+    روم میں ہاتھوں پر تجربے اور تعاون کو مدعو کرکے ایک قدم آگے لے جاتی ہے تاکہ مسئلہ
+    حل کرنے اور تنقیدی سوچ کو سکھانے میں مدد ملے.
+  curriculum_desc_maker_short: ساز تعلیم کے مسائل کو حل کرنے اور تنقیدی سوچ کو سکھانے
+    میں مدد کرنے کے لئے کلاس روم میں ہاتھ پر تجربے اور تعاون کی دعوت دیتا ہے.
+  curriculum_desc_csd: لچکدار کورس، ہر یونٹ اکیلے یا مشترکہ سکھایا جا کرنے کی اجازت
+    دیتا ہے. طالب علموں کو ویب سائٹس، اطلاقات، متحرک تصاویر، کھیل، اور جسمانی کمپیوٹنگ
+    سسٹم کی تعمیر کے لئے متعارف کرایا.
+  curriculum_desc_csp: مفت، AP® CSP کی توثیق کی، کمپیوٹر سائنس کے بنیادی تصورات کے
+    طالب علموں کو متعارف کرایا ہے کہ ہائی اسکول تعارفی کورس.
+  curriculum_desc_csa_ai_long: 'یہ دو باب پوسٹ اے پی سی ایس ماڈیول ہائی اسکول کے طالب
+    علموں کو پیشہ ورانہ سافٹ ویئر ڈویلپمنٹ ٹولز کے ساتھ ہاتھوں پر تجربہ فراہم کرتا
+    ہے، بشمول گٹ ہب اور گٹ ہب کوپیلوٹ، اور انہیں کمپیوٹر وژن پروگرام تیار کرنے کے
+    لئے حقیقی دنیا کی مہارت کے ساتھ فراہم کرتا ہے. '
+  curriculum_desc_csa_ai_short: یہ پوسٹ اے پی® سی ایس ماڈیول پیشہ ورانہ سافٹ ویئر
+    کی ترقی کے اوزار کے ساتھ ہائی اسکول کے طالب علموں کو ہاتھوں پر تجربہ فراہم کرتا
+    ہے.
   collection_hardware: ہارڈ ویئر پر توجہ مرکوز کریں
   collection_hardware_desc: طالب علموں کو مسائل کو حل کرنے کے لئے اعداد و شمار اور
     مادی آلات استعمال کرنے کا اختیار دیتا ہے.
@@ -454,6 +504,7 @@ ur:
   module_label_professional_learning: 'پیشہ ورانہ تعلیم:'
   module_label_languages: 'معاونت یافتہ زبانیں:'
   module_label_accessibility_features: 'رسائی پذیری:'
+  module_label_accessibility_features_full: 'رسائی کی خصوصیات:'
   module_label_educator_tool: ماہرِ تعلیم کا ٹول
   module_label_educator_course: ماہرِ تعلیم کا کورس
   module_label_student_tool: طالب علم کا ٹول
@@ -461,6 +512,7 @@ ur:
   module_label_student_content_resources: مواد اور وسائل
   module_label_new: نیا
   module_label_coming_soon: جلد ہی آ رہا ہے
+  module_label_available_now: اب دستیاب
   module_label_video_series: ویڈیو سیریز
   module_label_self_paced: خود رفتار ماڈیول
   module_ages_5_10: 5-10
@@ -471,6 +523,8 @@ ur:
   module_grade_2_5: 2-5
   module_grade_3_5: 3-5
   module_grade_3_8: 3-8
+  module_grade_k_12: K-12
+  module_grade_3_12: 3-12
   module_grade_6_12: 6-12
   module_grade_6_10: 6-10
   module_grade_9_12: 9-12
@@ -485,11 +539,14 @@ ur:
   module_grade_9_12_teachers: 9-12 ٹیچرز
   module_level_beginner: نوآموز
   module_level_intermediate: انٹرمیڈیٹ
+  module_level_advanced: اعلی درجے کی
   module_duration_45_mins: 45 منٹ
+  module_duration_2_weeks: 2 ہفتوں
   module_duration_1_hr: 1 گھنٹہ
   module_duration_2_hrs: 2 گھنٹے
   module_duration_3_hrs: 3 گھنٹے
   module_duration_5_hrs: 5 گھنٹے
+  module_duration_5_hrs_plus: 5+ گھنٹے
   module_duration_8_hrs: 8 گھنٹے
   module_duration_20_hrs: 20 گھنٹے
   module_duration_35_hrs: 35 گھنٹے
@@ -501,6 +558,7 @@ ur:
   module_duration_school_year: اسکول کا سال
   module_duration_month_quarter: مہینہ یا سہ ماہی
   module_duration_month_semester_year: مہینہ، سمسٹر، یا سال
+  module_duration_varies: مختلف ہوتی ہے
   module_prerequisites_none: کوئی بھی نہیں
   module_prerequisites_maker_cp: ایک سرکٹ کھیل کے میدان تک رسائی
   module_prerequisites_maker_microbit: 'مائیکرو تک رسائی: بٹ'
@@ -568,6 +626,8 @@ ur:
   heading_java_lab: Java لیب
   heading_objects_first: اشیاء ہماری اولین ترجیح
   heading_these_lessons_will: 'یہ سبق کریں گے:'
+  heading_explore_curriculum_catalog: نصاب کیٹلاگ میں ہمارے تمام کورسز کو تلاش کریں
+  heading_csa_ai: AP® امتحان کے بعد چیزوں کی تلاش میں ہیں؟
   professional_learning_section_desc: تدریس کی تیاری کے دوران ضروری معاونت حاصل کریں۔
     اساتذہ کو یہ بے حد پسند ہے، جن میں سے 90% سے زیادہ اسے بہترین پیشہ ورانہ ترقی
     گردانتے ہیں!
@@ -602,6 +662,23 @@ ur:
     کوئی سوالات ہوں، تو ہماری معاونتی ٹیم ان تمام سوالات کا جواب دینے کے لیے حاضر
     ہے۔ آپ ہمارے استاد کے فورمز پر موجود دیگر اساتذہ سے ان کے تجربے کے بارے میں استفسار
     بھی کر سکتے ہیں۔
+  subscribe_form_section_title: اپ ڈیٹس کے لئے سبسکرائب کریں
+  subscribe_form_section_desc_csa: Code.org کے AP® کمپیوٹر سائنس A کے بارے میں ماہانہ
+    ای میلز وصول کرنے کے لئے سائن اپ کریں اور مددگار یاددہانی، تجاویز، اور اپ ڈیٹس
+    حاصل کریں جو آپ کے ان باکس میں صحیح بھیجے گئے ہیں.
+  subscribe_form_section_desc_csc: Code.org کے کمپیوٹر سائنس کنکشن کے بارے میں ماہانہ
+    ای میلز وصول کرنے کے لئے سائن اپ کریں اور اپنے ان باکس پر بھیجے گئے مددگار یاددہانی،
+    تجاویز اور اپ ڈیٹس حاصل کریں.
+  subscribe_form_section_desc_csd: Code.org کے کمپیوٹر سائنس دریافتوں کے بارے میں
+    ماہانہ ای میلز وصول کرنے کے لیے سائن اپ کریں اور اپنے ان باکس پر بھیجے گئے مددگار
+    یاددہانی، تجاویز اور اپ ڈیٹس حاصل کریں۔
+  subscribe_form_section_desc_csf: Code.org کے کمپیوٹر سائنس کے بنیادی اصول کے بارے
+    میں ماہانہ ای میلز وصول کرنے کے لئے سائن اپ کریں اور اپنے ان باکس پر بھیجے گئے
+    مددگار یاددہانی، تجاویز اور اپ ڈیٹس حاصل کریں.
+  subscribe_form_section_desc_csp: Code.org کے کمپیوٹر سائنس اصولوں کے بارے میں ماہانہ
+    ای میلز وصول کرنے کے لئے سائن اپ کریں اور اپنے ان باکس پر بھیجے گئے مددگار یاددہانی،
+    تجاویز اور اپ ڈیٹس حاصل کریں.
+  subscribe_form_section_unsubscribe: آپ کسی بھی وقت رکنیت ختم کر سکتے ہیں.
   blockchain_hero_heading: بلاک چین کیسے کام کرتا ہے
   blockchain_hero_desc: بلاکچین کی دنیا میں “کس طرح بلاک چین کام کرتا ہے،” ہماری نئی
     ویڈیو سیریز اور سبق کے ساتھ ساتھ!
@@ -706,6 +783,9 @@ ur:
     سیریز سے ایک ویڈیو کے ساتھ جوڑا جاتا ہے، ویڈیوز میں متعارف کرایا تصورات میں گہری
     ڈائیونگ.
   ai_curriculum_btn_aria_label_04: تلاش کریں کہ کس طرح AI کام کرتا ہے سبق
+  ai_curriculum_grades_05: 'گریڈ لیول: 9-12'
+  ai_curriculum_btn_aria_label_05: سافٹ ویئر انجینئرنگ اور کمپیوٹر ویژن ماڈیول دریافت
+    کریں
   ai_carousel_heading: 'Code.org کے ساتھ AI کے بارے میں اساتذہ کیا کہتے ہیں:'
   ai_carousel_quote_01: اس سبق نے میرے طالب علموں کو یہ بھی موقع دیا کہ درجہ بندی
     کے نظام میں رائے کا عنصر موجود ہے. بعد میں، جب ہم نے یہ دیکھنا شروع کیا کہ AI
@@ -829,6 +909,12 @@ ur:
     دو نئے ویڈیوز کی خاصیت ہے. سنیں کہ یہ نئی ٹیکنالوجیز ماہرین سے براہ راست کس طرح
     کام کرتی ہیں: مائیرا مرتی، اوپن اے آئی کے سی ٹی او، اور رن وے ایم ایل کے سی ای
     او کرسٹبل ویلنزیلا.'
+  ai_pl_101_llm_slides_title: اساتذہ کے لئے بڑی زبان ماڈل کے اشارے
+  ai_pl_101_llm_slides_desc: ابتدائی طور پر اعلی درجے کی طرف سے، چیٹ جی پی کی طرح
+    ایل ایل ایم سے بہترین ممکنہ پیداوار حاصل کرنے کے لئے اوزار. ان لوگوں کے لئے سٹارٹر
+    اشارے شامل ہیں جو صرف ان کی انگلیوں کو ڈوبنے کے ساتھ ساتھ ان کی صلاحیت کو زیادہ
+    سے زیادہ کرنے کے لئے اعلی درجے کے اوزار بھی شامل ہیں.
+  ai_pl_101_resources_3: طالب علم سیکھنے کو تبدیل کرنے کے لئے AI اشارے
   how_ai_works_hero_heading: AI کیسے کام کرتا ہے
   how_ai_works_hero_desc: اے آئی کی دنیا میں “کس طرح اے کام کرتا ہے،” ہماری ویڈیو
     سیریز اور سبق کے ساتھ ساتھ!
@@ -1163,19 +1249,18 @@ ur:
   teach_page_free_curriculum_desc: ہم چاہتے ہیں کہ آپ لاگت کی پرواہ کیے بغیر کمپیوٹر
     سائنس کو اپنے اسکول میں لائیں۔ یہی وجہ ہے کہ ہم ہمیشہ اپنے نصاب کی پیشکشیں مفت
     فراہم کرنے کے لیے پُر عزم ہیں!
-  teach_page_free_curriculum_list_heading_01: ہر درجے کے لیول کے لیے مشغولیت کا حامل
-    نصاب
   teach_page_free_curriculum_list_desc_01: 67 سے زائد زبانوں میں پیشکشوں کے ساتھ مفت،
     لچک دار، اور تفریح بخش نصاب۔
-  teach_page_free_curriculum_list_heading_02: مطابقت پذیر، جدید نصاب
   teach_page_free_curriculum_list_desc_02: Code.org مکمل سال کے نصاب سے لے کر واحد
     یونٹ کی سرگرمیوں تک ہر چیز کی پیشکش کرتا ہے۔ نیز، ہم بہترین کاموں اور دلچسپی کے  شعبوں
     کی معاونت کرنے کے لیے اپنے نصاب کو سالانہ طور پر اپ ڈیٹ کرتے ہیں، اور نئی پیشکشیں
     تخلیق کرتے ہیں جو کہ حالیہ مطلوبہ موضوعات سکھاتی ہیں۔
-  teach_page_free_curriculum_list_heading_03: قومی معیارات کے مطابق منظم کردہ نصاب
   teach_page_free_curriculum_list_desc_03: ہر نصاب کو قومی معیارات کے کم از کم ایک
     سیٹ کے مطابق بنایا جاتا ہے، بشمول CSTA، Next Generation Science Standards، اور
     Common Core۔
+  teach_page_free_curriculum_list_desc_04: 67 سے زائد زبانوں میں پیشکش
+  teach_page_free_curriculum_list_desc_05: قومی معیار کے کم از کم ایک سیٹ (بشمول سی
+    ایس ٹی اے، این جی ایس ایس، اور کامن کور) پر نقشہ لگایا گیا
   teach_page_free_curriculum_heading_02: 'درجے کے مختلف لیولز کے لیے ہمارے نصاب کی
     پیشکشیں ڈھونڈیں:'
   teach_page_resources_heading: وہ ذرائع جو ہر قدم پر آپ کی معاونت کرتے ہیں
@@ -1236,8 +1321,8 @@ ur:
     Animation
   csp_page_curriculum_glance_devices: Laptop, Chromebook
   csp_page_curriculum_glance_tools: ایپ لیب
-  csp_page_curriculum_glance_professional_learning: Facilitator-led Workshops, Self-paced
-    Modules
+  csp_page_curriculum_glance_professional_learning: سہولت کار کی قیادت میں ورکشاپس،
+    خود رفتار ماڈیولز
   csp_page_curriculum_glance_professional_languages: انگلش
   csp_page_curriculum_glance_professional_accessibility_features: Text-to-speech,
     Closed captioning, Immersive reader
@@ -1363,8 +1448,8 @@ ur:
     ایپلیکیشن ڈیزائن، گیمز اور متحرک تصاویر، آرٹ اور ڈیزائن، پروگرامنگ
   csd_page_curriculum_glance_devices: Laptop, Chromebook
   csd_page_curriculum_glance_tools: ایپ لیب، گیم لیب، AI لیب، ویب لیب
-  csd_page_curriculum_glance_professional_learning: Facilitator-led Workshops, Self-paced
-    Modules
+  csd_page_curriculum_glance_professional_learning: سہولت کار کی قیادت میں ورکشاپس،
+    خود رفتار ماڈیولز
   csd_page_curriculum_glance_professional_languages: انگلش
   csd_page_curriculum_glance_professional_accessibility_features: Text-to-speech,
     Closed captioning, Immersive reader
@@ -1516,8 +1601,8 @@ ur:
     اور ڈیزائن، ایپ ڈیزائن
   csf_page_curriculum_glance_devices: لیپ ٹاپ، کروم بک، ٹیبلٹ
   csf_page_curriculum_glance_tools: Sprite Lab، Play Lab
-  csf_page_curriculum_glance_professional_learning: Facilitator-led Workshops, Self-paced
-    Modules
+  csf_page_curriculum_glance_professional_learning: سہولت کار کی قیادت میں ورکشاپس،
+    خود رفتار ماڈیولز
   csf_page_curriculum_glance_languages: عربی، بہاسا انڈونیشیا، کیٹالان، آسان چینی،
     روایتی چینی، چیک، فرانسیسی، جرمن، ہندی، اطالوی، جاپانی، کوریائی، کنڑا، مالے، مراٹھی،
     منگول، پولش، پرتگیزی، رومانوی، روسی، سلوواک، تگالوگ، تمل، تھائی، ترکی، یوکرینیائی،
@@ -1667,6 +1752,39 @@ ur:
   csa_page_faq_answer_08_02: For more information about the values that guided our
     work, please see our [curriculum values](%{curriculum_values_url}) and our [professional
     learning values](%{pl_values_url}).
+  donate_page_top_heading: مدد فنڈ ہمارے مشن
+  donate_page_top_desc: ہر عطیہ کمپیوٹر سائنس کی تعلیم تک رسائی کو بڑھانے کے لئے Code.org
+    کے مشن کو ایندھن دیتا ہے. ہم آپ کو عطیہ دینے اور فرق کرنے کے لئے کئی طریقے پیش
+    کرتے ہیں.
+  donate_page_fundraise_title: Code.org کے لئے فنڈ جمع
+  donate_page_fundraise_desc: Code.org کے لئے رقم جمع کرنے میں مدد کریں! ہر اسکول
+    کے ہر طالب علم کو کمپیوٹر سائنس سیکھنے کا موقع ہونا چاہئے.
+  donate_page_other_ways_title: دینے کے دیگر طریقے
+  donate_page_other_ways_desc: شراکت کے لئے متنوع طریقوں کو تلاش کریں، اور اس اختیار
+    کو تلاش کریں جو آپ کو بہترین طور پر مناسب ہے. ہر اشارہ، بڑا یا چھوٹا، ہمارے مشن
+    کو آگے بڑھاتا ہے.
+  donate_page_501c3: Code.org عوامی 501 (c) (3) غیر منافع بخش تنظیم کے طور پر رجسٹرڈ
+    ہے۔ Cod.org میں شراکت قانون کی طرف سے مجاز حد تک ٹیکس کٹوتی ہے. Code.org کا ٹیکس
+    شناختی نمبر 46-0858543 ہے۔
+  donate_page_donation_policy_title: ہماری عطیہ پالیسی کو سمجھنا
+  donate_page_donation_policy_desc: اس بارے میں جانیں کہ ہم کس طرح آپ کی شراکت کو
+    سنبھالتے اور مختص کرتے ہیں.
+  donate_tabs_tab_label_daf_direct: DAF براہ راست
+  donate_tabs_tab_label_amazon: ایمیزون
+  donate_tabs_tab_label_bitpay: Bitpay
+  donate_tabs_tab_label_employee_match: ملازم میچ
+  donate_tabs_daf_direct_title: DAF براہ راست کے ذریعے عطیہ
+  donate_tabs_daf_direct_desc: وفاداری خیراتی، شواب خیراتی، یا BNY Mellon کے ساتھ
+    اپنے ڈون-مشورہ فنڈ کے ذریعے عطیہ کریں اور DAF براہ راست آن لائن فارم کے ذریعے
+    Code.org کو اپنی گرانٹ کی سفارش کریں.
+  donate_tabs_amazon_title: ایمیزون کے ذریعے عطیہ
+  donate_tabs_amazon_desc: اپنے ایمیزون اکاؤنٹ کا استعمال کرتے ہوئے براہ راست عطیہ
+    کریں. صرف چند کلکس کے ساتھ، بغیر کسی رکاوٹ Cod.org کے مشن میں شراکت اور کمپیوٹر
+    سائنس کی تعلیم کے مستقبل کو بااختیار بنانا.
+  donate_tabs_bitpay_title: Bitpay کے ذریعے کرپٹو کے ساتھ عطیہ کریں
+  donate_tabs_bitpay_desc: cryptocurrency کے ساتھ دینے کے مستقبل کو اپنائیں. BitPay
+    کے ذریعے، آپ کی ڈیجیٹل کرنسی براہ راست کمپیوٹر سائنس کی تعلیم کو بڑھانے میں Code.org
+    کی کوششوں کی حمایت کر سکتی ہے.
   hoc_live: کوڈ کا گھنٹے لائیو
   hoc_live_sign_up_title: لائیو کوڈ کے گھنٹے کے لئے سائن اپ کریں
   hoc_live_learn_title: لائیو کوڈ کے گھنٹے کے ساتھ سیکھیں
@@ -2091,6 +2209,11 @@ ur:
     کورسز، مقامی مواقع، یا دیگر کمپیوٹر سائنس نیوز کو ای میل کر سکتے ہیں؟
   signup_email_preference_privacy: "(ہماری رازداری کی پالیسی دیکھیں)"
   signup_email_preference_yes: ہاں
+  signup_email_preference_yes_elementary: جی ہاں - مجھے ابتدائی اسکول وسائل پر اپ
+    ڈیٹ بھیجیں
+  signup_email_preference_yes_middle: جی ہاں - مجھے مڈل اسکول وسائل پر اپ ڈیٹ بھیجیں
+  signup_email_preference_yes_high: جی ہاں - مجھے ہائی اسکول وسائل پر اپ ڈیٹ بھیجیں
+  signup_email_preference_yes_general: جی ہاں - مجھے عام اپ ڈیٹس بھیجیں
   signup_email_preference_no: نہيں
   signup_email_preference_error: ای میل کی ترجیح مطلوب ہے ۔
   signup_multiple_event_warning: رجسٹر ہونے پر ہم آپ کے اسکول کا نام اور شہر نقشہ
@@ -12839,12 +12962,12 @@ ur:
   tutorial_googlename _longdescription: ایک کا نام لینے اور کلام کے خطوط کوڈ کا استعمال
     کرتے ہوئے زندگی کے لئے لے آئے ۔ ایک عرفی نام، ایک پالتو جانور کا نام، جانور، کھیل،
     ایک جگہ یا ایک شوق کا انتخاب کریں ۔
-  tutorial_carnegiezillah_longdescription: Zillah City is thriving, and music is in
-    the air. Rumor has it, the famed Gargantua bot is online and sending the last
-    Toxibots to trash the city block by block…. Grab your cobot hoverboard and get
-    ready to groove, move, and finish off what you started! Players program their
-    cobot hoverbots to change lanes, avoid obstacles, and take out many Toxibots in
-    this rhythm-styled game.
+  tutorial_carnegiezillah_longdescription: زلہ شہر فروغ پزیر ہے اور موسیقی ہوا میں
+    ہے۔ افواہ یہ ہے، مشہور Gargantua بوٹ آن لائن ہے اور بلاک کی طرف سے شہر کے بلاک
+    کو ردی کی ٹوکری میں آخری Toxibots بھیج رہا ہے.…اپنے cobot hoverboard پکڑو اور
+    نالی، منتقل، اور آپ کو شروع کیا ختم کرنے کے لئے تیار ہو جاؤ! کھلاڑیوں کو لین تبدیل
+    رکاوٹوں سے بچنے، اور اس تال سٹائل کھیل میں بہت سے Toxibots باہر لے جانے کے لئے
+    ان کے cobot hoverbots پروگرام.
   tutorial_nasachspacejam_longdescription: واقعی پتھروں کہ ایک شمسی نظام بنائیں! اس
     خود ہدایت کی سرگرمی میں موسیقی، فلکیات، اور کوڈنگ کے بارے میں جانیں (کوئی کوڈنگ
     تجربہ کی ضرورت نہیں ہے). پروگرام سیارے موسیقی بنانے کے لئے، آپ کے اپنے موسیقی
@@ -13679,6 +13802,339 @@ ur:
     بدھ کو کوئی ملاقاتوں سے لطف اندوز کرتے ہیں، ہمارے پی ٹی او (5 ہفتوں کل، جس میں
     سال کے اختتام پر آرگ وسیع 2 ہفتے کے دفتر کی بندش شامل ہے)، موسم گرما کے دوران
     جمعہ کو نصف کام کرنے والے دن موسم گرما کے جمعہ کے دوران، اور دیگر ادار فوائد.
+  careers_hero_title: کیریئر
+  careers_hero_description: Code.org ایک غیر منافع بخش تنظیم ہے جو اسکولوں میں کمپیوٹر
+    سائنس تک رسائی کو بڑھانے کے لئے وقف ہے. ہم خاص طور پر نوجوان خواتین اور کم نمائندگی
+    والے طالب علموں میں شرکت میں اضافہ پر توجہ مرکوز کر رہے ہیں.
+  careers_hero_description_under: دنیا کو تبدیل کرنے میں ہماری مدد کریں، ایک وقت میں
+    ایک طالب علم!
+  careers_vision_title: ہمارا نقطہ نظر
+  careers_vision_decsription: ہمارا نقطہ نظر یہ ہے کہ ہر اسکول میں ہر طالب علم کو
+    اپنے بنیادی K-12 تعلیم کے حصے کے طور پر کمپیوٹر سائنس سیکھنے کا موقع ہونا چاہئے.
+  careers_vision_description_under: اس نقطہ نظر کو ایک حقیقت بنانے میں مدد کرنے کے
+    لئے ہماری ٹیم میں شامل ہو جاؤ!
+  careers_values_title: ہماری بنیادی اقدار
+  careers_values_first_column_text_1: ہم یقین رکھتے ہیں کہ کمپیوٹر سائنس تمام طالب
+    علموں کے لئے بنیادی ہے
+  careers_values_first_column_text_2: ہم مساوات، رسائی اور مواقع کے لیے پرعزم ہیں۔
+  careers_values_first_column_text_3: ہم ایک تعاون کے ساتھ تعلیمی برادری کی طاقت پر
+    یقین رکھتے ہیں
+  careers_values_second_column_text_1: ہم آراء کے لئے فرتیلی اور ذمہ دار ہیں
+  careers_values_second_column_text_2: ہم سالمیت اور شفافیت کے ساتھ کام کرتے ہیں
+  careers_values_second_column_text_3: ہمیں یقین ہے کہ وسیع اثرات کو بڑے پیمانے پر
+    سوچنے اور پورے طور پر کام کرنے کی ضرورت ہے.
+  careers_approach_section_title: ہمارا متحد نقطہ نظر
+  careers_approach_section_description: K-12 کمپیوٹر سائنس تحریک میں Code.org کا عالمی
+    کردار صرف اس لیے ممکن ہے کہ ہم متنوع اور اکثر تقسیم شدہ اسٹیک ہولڈرز میں ایک متحد
+    نقطہ نظر کا استعمال کرتے ہیں۔ بڑھتی ہوئی پولرائزیشن کے وقت، طالب علموں کے لئے
+    بڑھتی ہوئی مواقع کا خیال سیاسی سپیکٹرم بھر سے لوگوں کو متحد کرتا ہے. Code.org
+    کی ٹیم کے ارکان، طلباء، اساتذہ اور حامیوں کے پاس متنوع اور مختلف نقطہ نظر ہیں،
+    اور ان سب کو ہمارے مشن میں خوش آمدید کہا جاتا ہے.
+  careers_aproach_section_description_link: Code.org کے اتحاد کے نقطہ نظر کے بارے
+    میں مزید پڑھیں۔
+  careers_approach_section_button: کھلے کردار تلاش کریں
+  careers_principle_section_title: ہمارے ثقافتی اصول
+  careers_principle_title_1: ہمارے طلباء اور اساتذہ ہمارے نارتھ سٹار ہیں
+  careers_principle_description_1: ہم اپنے تحائف، وقت اور توانائی کا استعمال کرتے
+    ہیں تاکہ کمپیوٹر سائنس کو ان لوگوں تک پہنچایا جا سکے۔ یہ ہے جو ہمیں متحد کرتا
+    ہے. یہ ہمارا سب سے اہم اصول ہے.
+  careers_principle_title_2: ہم ایک دوسرے کے ساتھ مسائل اور قسم پر سخت ہیں.
+  careers_principle_description_2: ہم عالمی سطح پر طلباء اور اساتذہ کو کمپیوٹر سائنس
+    لانے کے چیلنج پر مرکوز رہتے ہیں۔ ہم تسلیم کرتے ہیں کہ ہم میں سے ہر ایک اپنے مشن
+    کی حمایت کرنے اور غلطیوں کو کرتے وقت فضل دینے کے لئے اپنے ارادے میں سے بہترین
+    لاتا ہے.
+  careers_principle_title_3: حل تلاش کریں، اتفاق نہیں
+  careers_principle_description_3: ہم فیصلے کے مالک ہیں، چاہے ہم چھوٹے اقدامات کریں
+    یا نتائج کی طرف بڑے پیمانے پر لے جا رہے ہیں. مالکان پوچھتے ہیں اور سنتے ہیں، لیکن
+    رائے سے مفلوج نہیں ہوتے ہیں. ہم مالکان کے فیصلوں کو قبول کرتے ہیں اور ان کی حمایت
+    کرتے ہیں، یہاں تک کہ اگر ہم متفق نہیں ہیں.
+  careers_principle_title_4: بانی کی ذہنیت اپنانے
+  careers_principle_description_4: ہم نتائج کے بارے میں مشاہدہ کرتے ہیں اور ان کو
+    ڈرائیونگ کرنے پر اپنے اعمال پر توجہ مرکوز کرتے ہیں. ہم تفصیلات میں ڈوبتے ہیں اور
+    محنت کرتے ہیں. ہم ایماندار ہیں، چپلتا میں دبلے ہوئے ہیں، اور مسلسل اندازہ لگاتے
+    ہیں کہ آیا ہم راستے پر ہیں؛ ہم محور سے خوفزدہ نہیں ہیں. دنیا کو تبدیل کرنے سے
+    اس کا مطالبہ ہوتا ہے.
+  careers_principle_title_5: چیمپیئن جدت
+  careers_principle_description_5: ہم بڑے سوچتے ہیں، خطرات لیتے ہیں، اور ناکام ہونے
+    سے خوفزدہ نہیں ہیں. اگر ہم اپنے مقاصد کو پورا کرنے کا ایک بہتر طریقہ دیکھتے ہیں،
+    تو ہم ایسا کرتے ہیں اور دوسروں کو بھی ایسا کرنے کی حوصلہ افزائی کرتے ہیں. اضافی
+    حل دنیا کو تبدیل کرنے میں مدد نہیں کریں گے.
+  careers_principle_title_6: حقائق میں لنگر فیصلے
+  careers_principle_description_6: ہم اپنے کاروبار کو سمجھنے کے لئے ڈیٹا کا استعمال
+    کرتے ہیں، مطلوبہ نتائج قائم کرتے ہیں، اور فیصلہ سازی کی رہنمائی کرتے ہیں. ہم تسلیم
+    کرتے ہوئے اس کو متوازن کرتے ہیں کہ ہمارے پاس ہمیشہ وہ ڈیٹا نہیں ہوگا جو ہمیں کام
+    کرنے کی ضرورت ہے.
+  careers_principle_title_7: ترقی کی ذہنیت ہمیں ایندھن دیتی ہے
+  careers_principle_description_7: ہم تجسس کے ساتھ ہر چیلنج سے رجوع کرتے ہیں. ہم برائے
+    مہربانی اور candidly رائے دیتے ہیں؛ ہم کھل کر رائے موصول کرتے ہیں. ہم اپنی غلطیوں
+    سے سیکھتے ہیں اور اپنے کام کی رسائی اور اثرات کو بڑھانے کے طریقوں کی تلاش کرتے
+    ہیں.
+  careers_balance_section_title: ہمارے کام کی زندگی کا توازن
+  careers_balance_section_description: ہم اپنے ملازمین کے بارے میں پرواہ کرتے ہیں
+    اور کام کے باہر اور کام کے باہر ہر کسی کی مدد کرنے کے لئے وقف ہیں. ہم جانتے ہیں
+    کہ ہر ایک کی مختلف ضروریات ہیں، لہذا ہم ایک جامع فوائد پیکج پیش کرتے ہیں جو اس
+    بات کا یقین کرے گا کہ آپ (اور آپ کے خاندان) کا خیال رکھا جائے گا.
+  careers_balance_first_column_text_1: آپ اور آپ کے خاندان کے لئے صحت کے فوائد
+  careers_balance_first_column_text_2: ادار ادائیگی کا وقت بند اور منصوبوں کو چھوڑ
+    دیں
+  careers_balance_second_column_text_1: لچکدار، معاون کام کا ماحول
+  careers_balance_second_column_text_2: ترقی اور پیشہ ورانہ سیکھنے کے مواقع
+  careers_openroles_section_title: اوپن رولز
+  careers_openroles_section_description: Code.org سیئٹل میں مبنی ہے، لیکن ہماری ٹیم
+    کے بہت سے ارکان دور دراز ہیں. ریموٹ امیدواروں کا استقبال اور درخواست دینے کے لئے
+    حوصلہ افزائی کی جاتی ہے.
+  careers_more_info_text: Code.org کے بارے میں مزید معلومات کے لئے، ہمارے [اکثر پوچھے
+    جانے والے سوالات] (%{support_url}) کو چیک کریں یا [ہمارے مشن کے ساتھ ملوث ہونے
+    کے دیگر طریقوں] (%{help_url}) کے بارے میں جانیں.
+  careers_approach_section_title2: تنوع کے لئے ہمارا نقطہ نظر
+  careers_approach_section_description_1: ہم Code.org پر متنوع نقطہ نظر، خیالات اور
+    پس منظر کو اپناتے ہیں. ہم تمام ملازمین اور درخواست دہندگان کو مساوی موقع فراہم
+    کرنے کے لئے پرعزم ہیں. ہم نسل، مذہب، رنگ، قومی اصل، جنس، جنسی رجحان، عمر، ازدواجی
+    حیثیت، تجربہ کار حیثیت، یا معذوری (ذہنی اور جسمانی) حیثیت کی بنیاد پر امتیازی
+    سلوک نہیں کرتے ہیں.
+  careers_approach_section_description_2: ہم اس بات کو یقینی بنائیں گے کہ معذور افراد
+    کو ملازمت کی درخواست یا انٹرویو کے عمل میں حصہ لینے کے لئے مناسب رہائش فراہم کی
+    جائے، ضروری ملازمت کے افعال انجام دینے اور ملازمت کے دیگر فوائد اور مراعات حاصل
+    کرنے کے لئے. اگر آپ کے پاس معذوری سے متعلق انفرادی ضروریات ہیں تو براہ کرم accommodations@code.org
+    پر رابطہ کریں.
+  csa_ai_page_hero_title: سافٹ ویئر انجینئرنگ اور کمپیوٹر وژن
+  csa_ai_page_hero_description: 'یہ دو باب پوسٹ اے پی سی ایس ماڈیول ہائی اسکول کے
+    طالب علموں کو پیشہ ورانہ سافٹ ویئر ڈویلپمنٹ ٹولز کے ساتھ ہاتھوں پر تجربہ فراہم
+    کرتا ہے، بشمول گٹ ہب اور گٹ ہب کوپیلوٹ، اور انہیں کمپیوٹر وژن پروگرام تیار کرنے
+    کے لئے حقیقی دنیا کی مہارت کے ساتھ فراہم کرتا ہے. '
+  csa_ai_page_video_section_title: Code.org پروگرامنگ ماحول کی دنیا سے باہر قدم
+  csa_ai_page_video_section_li_1: AI اور اس کے ایپلی کیشنز کے بارے میں جانیں
+  csa_ai_page_video_section_li_2: پیشہ ورانہ سافٹ ویئر ڈویلپمنٹ ٹولز کے ساتھ ہاتھوں
+    پر تجربہ
+  csa_ai_page_video_section_li_3: صنعتی معیاری طرز عمل سیکھیں
+  csa_ai_page_video_section_li_4: تنقیدی سوچ کو فروغ
+  csa_ai_page_programming_tools: 'پروگرامنگ کے اوزار: گیتھب، گیتھب کوپیلوٹ، وی ایس
+    کوڈ، ٹینسورفلو '
+  csa_ai_page_professional_learning: کوئی بھی نہیں
+  csa_ai_page_curriculum_topics: 'موضوعات: پروگرامنگ، ڈیٹا، آرٹ اور ڈیزائن، کھیل اور
+    حرکت پذیری'
+  csa_ai_page_curriculum_accessibility_features: تفصیلات کے لئے اکثر پوچھے گئے سوالات
+    کے سیکشن دیکھیں
+  csa_ai_page_curriculum_languages_support: انگلش
+  csa_ai_page_article_title_1: کوپیلوٹ کے ساتھ تعمیر کریں
+  csa_ai_page_article_description_1: طلباء سیکھتے ہیں کہ کس طرح GitHub Copilot کو
+    ایک جوڑی پروگرامر کے طور پر استعمال کرنے کے لئے موجودہ کوڈ کی وضاحت، غلطیوں کو
+    تلاش کرنے اور درست کرنے اور نئے مسائل کے حل پیدا کرنے کے لئے.
+  csa_ai_page_article_link_1: Copilot کے بارے میں مزید جانیں
+  csa_ai_page_article_title_2: اپنا خود کا AI ماڈل بنائیں
+  csa_ai_page_article_description_2: طالب علم ٹیچبل مشین کا استعمال کرتے ہوئے اپنے
+    AI ماڈلز کو تربیت دیتے ہیں تاکہ تصاویر اور اشاروں کو تسلیم کیا جا سکے اور اس بات
+    پر غور کریں کہ کمپیوٹر وژن کس طرح اثر انداز کرتا ہے جس طرح صارفین ایپس کے ساتھ
+    بات چیت کرتے ہیں.
+  csa_ai_page_article_link_2: سبق کی منصوبہ بندی کو تلاش کریں
+  csa_ai_page_article_title_3: کمپیوٹر وژن کی تلاش کریں
+  csa_ai_page_article_description_3: طالب علموں کو ایک جاوا اپلی کیشن میں ٹیچبل مشین
+    کے ساتھ پیدا AI ماڈلز کو لاگو, انہیں مختلف آدانوں کے ساتھ کام کرنے کے لئے اطلاقات
+    کے موجودہ ورژن میں ترمیم کرنے میں مدد کرنے کے لئے GitHub Copilot کا استعمال کرتے
+    ہوئے.
+  csa_ai_page_article_link_3: ایک مثال ملاحظہ کریں
+  csa_ai_page_learn_more_section_title: مصنوعی انٹیلی جنس کے بارے میں مزید جانیں
+  csa_ai_page_learn_more_title: اساتذہ کے لئے AI 101 دریافت کریں
+  csa_ai_page_learn_more_description: اساتذہ کے لئے ہمارے جامع آن لائن لرننگ سیریز
+    کے ساتھ مصنوعی انٹیلی جنس (AI) اور تعلیم میں اس کی تبدیلی کی صلاحیت کی بنیاد پر
+    دنیا کو دریافت کریں.
+  csa_ai_page_learn_more_link: اساتذہ سیریز کے لئے AI 101 دیکھیں
+  csa_ai_page_faq_question_01: اس ماڈیول کے لئے لازمی شرائط کیا ہیں؟
+  csa_ai_page_faq_answer_01_01: 'اس ماڈیول میں ڈائیونگ کرنے سے پہلے، طالب علموں کو
+    جاوا کے اندراج کی سطح کا علم ہونا چاہئے. خاص طور پر، وہ پر ایک گرفت چاہئے:'
+  csa_ai_page_faq_answer_01_list_01: "** کلاسیں اور اشیاء: ** طالب علموں کو کلاس کی
+    وضاحت اور استعمال کرنے کے ساتھ ساتھ اشیاء بنانے اور ہیرا پھیری کرنے سے واقف ہونا
+    چاہئے."
+  csa_ai_page_faq_answer_01_list_02: "** تحریری اور کالنگ کے طریقوں: ** طالب علموں
+    کو کلاس کے اندر طریقوں کی وضاحت کرنے، طریقہ کار پیرامیٹرز اور واپسی کی اقسام کو
+    سمجھنے اور اشیاء یا دیگر طریقوں سے طریقوں کو کال کرنے کے قابل ہونا چاہئے."
+  csa_ai_page_faq_answer_01_list_03: "** 1D Arrays اور ArrayLists** وہ اعلان شروع،
+    اور ایک جہتی arrays اور ArrayListes ہیرا پھیری میں ماہر ہونا چاہئے ان کے ذریعے
+    iterating سمیت،."
+  csa_ai_page_faq_answer_01_list_04: "** انتخاب اور Ieration: ** مشروط بیانات اور
+    loops میں ایک ٹھوس بنیاد اہم ہے."
+  csa_ai_page_faq_question_01_02: مثالی طور پر، طالب علموں نے اے پی کمپیوٹر سائنس
+    A مکمل کیا ہے یا اسی طرح کی گہرائی اور سختی کا ایک کورس اس ماڈیول کے لئے اچھی
+    طرح سے تیار کیا جائے گا.
+  csa_ai_page_faq_question_02: میں اس ماڈیول کے لئے ضروری سافٹ ویئر کیسے انسٹال کروں؟
+  csa_ai_page_faq_answer_02_01: یہ ماڈیول منفرد ہے کیونکہ اس میں Code.org لیبز اور
+    ٹولز کی بجائے تیسری پارٹی کے سافٹ ویئر کا استعمال شامل ہے. [یہاں سافٹ ویئر نصب
+    کرنے کے بارے میں مزید پڑھیں] (%{accessibility_url}).
+  csa_ai_page_faq_question_03: اس ماڈیول کی تعلیم دیتے وقت میں رسائی کی ضروریات کی
+    حمایت کیسے کرسکتا ہوں؟
+  csa_ai_page_faq_answer_03_01: ایک جامع سیکھنے کے ماحول کے لئے رسائی کی ضروریات کے
+    لئے کیٹرنگ اہم ہے. [اس ماڈیول میں استعمال ہونے والے سافٹ ویئر میں رسائی کی خصوصیات
+    کے بارے میں مزید پڑھیں] (%{install_url}).
+  csa_ai_page_faq_question_04: میں Chromebooks پر وی ایس کوڈ کیسے استعمال کروں؟
+  csa_ai_page_faq_answer_04: Chromebook پر وی ایس کوڈ کا استعمال کرتے ہوئے زیادہ براہ
+    راست بن گیا ہے، خاص طور پر نئے Chromebook ماڈل پر لینکس ایپس کو چلانے کی صلاحیت
+    کے ساتھ. [یہاں Chromebooks پر وی ایس کوڈ قائم کرنے کے بارے میں مزید پڑھیں] ()%{chromebook_url}.
+  csa_ai_page_faq_question_05: میں اس ماڈیول کے لئے پیشہ ورانہ ترقی کیسے حاصل کرسکتا
+    ہوں؟
+  csa_ai_page_faq_answer_05: اس کورس کے لئے فی الحال مخصوص پیشہ ورانہ ترقی نہیں ہے.
+    اگر آپ اپنے کلاس روم میں مصنوعی انٹیلی جنس سے رابطہ کرنے کا طریقہ سمجھنے کے لئے
+    تلاش کر رہے ہیں تو آپ [اساتذہ کے لئے AI 101 کی تلاش] کر سکتے ہیں (%{ai_101_url}).
+  csa_ai_page_faq_question_06: اس ماڈیول کو پڑھانے کے لئے سفارش کی وقت کیا ہے؟
+  csa_ai_page_faq_answer_06_01: سافٹ ویئر انجینئرنگ اور کمپیوٹر ویژن ماڈیول ایک جامع
+    وقت کی حد میں جامع سیکھنے فراہم کرنے کے لئے سوچ سمجھ کر تشکیل دیا گیا ہے. پورے
+    ماڈیول ہدایات کے 2 ہفتوں تک پھیلانے کے لئے ڈیزائن کیا گیا ہے**. زیادہ تر سبق**
+    45 منٹ** کے لئے موزوں ہیں، جبکہ سبق جہاں طالب علموں کو جاوا منصوبے کی ترقی کے
+    ہاتھوں میں ڈالتے ہیں، **90 منٹ** کے لئے ڈیزائن کیا گیا ہے. یہ توسیع شدہ وقت اس
+    بات کو یقینی بناتا ہے کہ طالب علموں کو کام کرنے، سمجھنے، لاگو کرنے اور دشواری
+    کو حل کرنے کا کافی موقع ملے.
+  csa_ai_page_faq_answer_06_02: ماڈیول کی ساخت میں بھی جان بوجھ کر لچک بنایا گیا ہے.
+    کلاس روم کی حرکیات، طالب علموں کی مشغولیت اور ہر موضوع کی گہرائی پر منحصر ہے کہ
+    آپ ہر موضوع کو تلاش کرنا چاہتے ہیں، آپ دورانیے کو ایڈجسٹ کرسکتے ہیں۔ مثال کے طور
+    پر، 45 منٹ کے سبق کے طور پر ڈیزائن کیا گیا Copilot سبق کے لئے انٹرو، 90 منٹ تک
+    وسیع کیا جا سکتا ہے اگر آپ گٹ ہب کوپیلوٹ اور چیٹ جی پی کام جیسے بڑے زبان کے ماڈل
+    اور اوزار میں گہری ڈوبنا چاہتے ہیں.
+  csa_ai_page_faq_question_07: How can I access answer keys?
+  csa_ai_page_faq_answer_07: ایک منظور شدہ استاد اکاؤنٹ کے ساتھ، آپ کو ایک نیلے رنگ
+    میں جواب کی چابیاں تلاش کر سکتے ہیں “استاد” آن لائن سبق اور سرگرمیوں میں ظاہر
+    ہوتا ہے کہ صرف پینل. اگر آپ کو منظور شدہ استاد اکاؤنٹ کی ضرورت ہے تو، آپ [اس فارم]
+    () کے ذریعے محفوظ اساتذہ صرف مواد (جواب کی چابیاں، وغیرہ) تک رسائی کے لئے درخواست
+    دے سکتے ہیں.%{form_url}براہ کرم ذہن میں رکھیں کہ آپ کے اکاؤنٹ کی توثیق کرنے میں
+    3-5 کاروباری دن لگ سکتے ہیں.
+  csa_ai_page_faq_question_08: کیا یہ ماڈیول معیارات پر نقشہ لگایا گیا ہے؟
+  csa_ai_page_faq_answer_08: جی ہاں، سافٹ ویئر انجینئرنگ اور کمپیوٹر ویژن نصاب [CSTA
+    K-12 معیارات] (%{csta_k12_url}) اور AI [K-12 ہدایات] () کے لئے نقشہ لگایا گیا
+    ہے.%{k12_url}
+  csa_ai_page_faq_question_09: اس ماڈیول کو سکھانے کے لئے کتنا خرچ ہوتا ہے؟
+  csa_ai_page_faq_answer_09_01: ہمارے نصاب اور پلیٹ فارم کسی کے لئے، کہیں بھی، سکھانے
+    کے لئے [کوئی قیمت نہیں] (%{no_cost_url}) پر دستیاب ہیں!
+  csa_ai_page_faq_answer_09_02: اس کے علاوہ، اس ماڈیول میں استعمال ہونے والے سافٹ
+    ویئر اور اوزار مفت چارج ہیں. GitHub Copilot تصدیق شدہ [teachers](%{teachers_url})
+    اور [students](%{students_url}) کے لئے مفت ہے.
+  csa_ai_page_faq_question_10: اگر سافٹ ویئر کی تنصیب کام نہیں کر رہی ہے تو میں کیا
+    کروں؟
+  csa_ai_page_faq_answer_10: سافٹ ویئر کی تنصیب کے دوران مسائل کا سامنا کرنا عام ہو
+    سکتا ہے، لیکن منظم اقدامات ہیں جو آپ کو حل کرنے اور حل کرنے کے لئے پیروی کرسکتے
+    ہیں. [یہاں کچھ خرابی کا سراغ لگانے کی تجاویز چیک کریں] (%{troubleshooting_url}).
+  csa_ai_page_faq_question_11: How was the curriculum developed?
+  csa_ai_page_faq_answer_11_01: 'ہمارے سافٹ ویئر انجینئرنگ اور کمپیوٹر وژن نصاب کو
+    ذہن میں ہماری نصاب اقدار کے ساتھ ڈیزائن کیا گیا تھا. مندرجہ ذیل اہداف نے اس نصاب
+    کی تخلیق کی رہنمائی کی:'
+  csa_ai_page_faq_answer_11_list_01: "** مقصد 1: ** کوڈ پیدا کرنے، ڈیبگ کرنے اور ترمیم
+    کرنے کے لئے AI ٹولز کا استعمال کریں."
+  csa_ai_page_faq_answer_11_list_02: "** مقصد 2: ** جاوا لیب سے حقیقی دنیا کے اوزار
+    پر منتقلی."
+  csa_ai_page_faq_answer_11_list_03: "** مقصد 3: ** AI ماڈلز کو تربیت اور پروگراموں
+    میں ضم کیا جاتا ہے کہ کس طرح سمجھ بوجھ."
+  csa_ai_page_faq_answer_11_02: ہمارے کام کی رہنمائی کرنے والے اقدار کے بارے میں مزید
+    معلومات کے لئے، براہ کرم ہماری [نصاب اقدار] (%{curriculum_values_url}) ملاحظہ
+    کریں.
+  video_library_page_main_title: تعلیمی مختصر ویڈیوز
+  video_library_page_hero_description: Code.org کی تعلیمی ویڈیوز کی بڑھتی ہوئی لائبریری
+    دنیا بھر میں، آن لائن یا کلاس روم میں اساتذہ کی طرف سے دوبارہ استعمال کے لئے دستیاب
+    ہے. ہمارا مقصد اپنی کوششوں کو اپنے نصاب کی رسائی سے آگے بڑھانا ہے۔
+  video_library_page_title_ai_works: AI کیسے کام کرتا ہے
+  video_library_page_description_ai_works: مختصر ویڈیوز کا یہ سلسلہ آپ کو متعارف کرائے
+    گا کہ مصنوعی انٹیلی جنس کس طرح کام کرتی ہے اور یہ کیوں اہمیت رکھتی ہے. عصبی نیٹ
+    ورکس کے بارے میں جانیں، یا AI سیکھتا ہے، اور الگورتھممک تعصب اور AI فیصلہ سازی
+    کی اخلاقیات جیسے مسائل میں delve.
+  video_library_page_title_computers_work: کمپیوٹر کیسے کام کرتے ہیں
+  video_library_page_description_computers_work: وضاحت کرتا ہے کہ کمپیوٹر کو کمپیوٹر
+    کیا بناتا ہے، 1s اور 0s میں کس طرح ڈیجیٹل معلومات کی نمائندگی کی جاتی ہے، کس طرح
+    کمپیوٹر سرکٹس ڈیجیٹل معلومات کو جوڑتوڑ دینے کے لیے کام کرتے ہیں، اور کس طرح ایک
+    سینٹرل پروسیسنگ یونٹ (CPU) اور آپریٹنگ سسٹم ایک کمپیوٹر کے آدانوں، آؤٹ پٹ، میموری
+    اور ہارڈ ویئر کو کنٹرول کرتے ہیں۔
+  video_library_page_title_internet_works: انٹرنیٹ کیسے کام کرتا ہے
+  video_library_page_description_internet_works: TCP/IP کے موجد Vint Cerf کی خاصیت،
+    TCP/IP کے موجد، Tumblr کے بانی ڈیوڈ کارپ HTTP اور ایچ ٹی ایم ایل، ایس ایس ایل
+    اور سائبر سیکیورٹی کی وضاحت کرنے کے لئے گوگل کی سیکورٹی شہزادی، اور مائیکروسافٹ،
+    سپوٹیفی اور سیمنٹیک سے انجینئرز کی وضاحت کرنے کے لئے. مختصر ویڈیوز کا یہ سلسلہ
+    کس طرح انٹرنیٹ کام کرتا ہے کی وضاحت.
+  video_library_page_title_not_hacked: ہیک کرنے کے لئے کس طرح نہیں
+  video_library_page_description_not_hacked: انٹرنیٹ کھلا ہے، لہذا اس پر جو کچھ ہوتا
+    ہے اسے دیکھا جا سکتا ہے جب تک کہ یہ محفوظ نہ ہو. جدید ممالک میں، لوگ کسی بھی دوسرے
+    جرم کے مقابلے میں ہیک کرنے کے بارے میں زیادہ فکر مند ہیں. کیوں؟ کیونکہ انٹرنیٹ
+    پر ہر کمپیوٹر یا فون کو مجرموں، دہشت گردوں یا یہاں تک کہ ریاستی اداکاروں کی جانب
+    سے خطرات کے لیے باقاعدگی سے جانچا جا رہا ہے۔ اگر آپ محتاط نہیں ہیں تو، کوئی آپ
+    کے آلے یا اکاؤنٹس کو ہیک کر سکتا ہے، اور یہاں تک کہ آپ کی شناخت یا آپ کے پیسے
+    کو چوری بھی کر سکتا ہے.
+  video_library_page_title_blockchain: بلاک چین کیسے کام کرتا ہے
+  video_library_page_description_blockchain: Coinbase کے ساتھ شراکت داری میں بنایا
+    گیا، یہ سیریز صنعت کے ماہرین کی خصوصیات اور مقصد اس ٹیکنالوجی کو ختم کرنے کا مقصد
+    ہے کہ بلاکچین کیا ہے، یہ کیسے کام کرتا ہے، اور اس کے ممکنہ سماجی اثرات - اچھے
+    اور برا دونوں.
+  video_library_page_title_careers: کیریئر اس میں CS
+  video_library_page_description_careers: کمپیوٹر سائنس اور ٹیکنالوجی میں کیریئر مزہ
+    اور فائدہ مند ہوسکتا ہے. لیکن ان شعبوں میں کام کرنے والا شخص واقعی کیا کرتا ہے؟
+    مختلف قسم کی ملازمتوں اور کمپنیوں کے ساتھ، اس سوال کا صرف ایک جواب نہیں ہے. تخلیقی
+    طریقوں میں بڑے مسائل سے نمٹنے والے کچھ لوگوں سے ملنے کے لئے ذیل میں ویڈیوز دیکھیں.
+  video_library_page_title_inspirational: متاثر کن
+  video_library_page_description_inspirational: کمپیوٹر سائنس ہماری دنیا میں کیا بدل
+    جائے گا؟ سب کچھ؟ یہ کس کے لئے ہے؟ ہر کوئی! آپ کو حوصلہ افزائی اور حوصلہ افزائی
+    کرنے کے لئے یہ ویڈیوز دیکھیں.
+  video_library_page_footer_description: کچھ اور تلاش کر رہے ہیں؟ ہمارے پاس ہمارے
+    یو ٹیوب چینل پر بہت سے عظیم ویڈیوز دستیاب ہیں.
+  video_library_page_footer_cta: YouTube پر تمام Code.org ویڈیوز دریافت کریں
+  video_library_page_computer_work_video_title_1: تعارف کہ کمپیوٹر کیسے کام کرتے ہیں
+  video_library_page_computer_work_video_title_2: بائنری اور ڈیٹا
+  video_library_page_computer_work_video_title_3: سی پی یو، میموری، ان پٹ، اور آؤٹ
+    پٹ
+  video_library_page_computer_work_video_title_4: کیا ایک کمپیوٹر، ایک کمپیوٹر بناتا
+    ہے؟
+  video_library_page_computer_work_video_title_5: سرکٹس منطق
+  video_library_page_computer_work_video_title_6: ہارڈ ویئر اور سافٹ ویئر
+  video_library_page_internet_work_video_title_1: انٹرنیٹ کیا ہے؟
+  video_library_page_internet_work_video_title_2: 'انٹرنیٹ: آئی پی پتے اور ڈی این
+    ایس'
+  video_library_page_internet_work_video_title_3: 'انٹرنیٹ: HTTP اور ایچ ٹی ایم ایل'
+  video_library_page_internet_work_video_title_4: 'انٹرنیٹ: سائبر سیکورٹی اور جرائم'
+  video_library_page_internet_work_video_title_5: 'انٹرنیٹ: تاروں، کیبلز، اور وائی
+    فائی'
+  video_library_page_internet_work_video_title_6: 'انٹرنیٹ: پیکٹ، راؤٹنگ اور وشوسنییتا'
+  video_library_page_internet_work_video_title_7: 'انٹرنیٹ: خفیہ کاری اور عوامی کلیدیں'
+  video_library_page_internet_work_video_title_8: 'انٹرنیٹ: تلاش کیسے کام کرتا ہے'
+  video_library_page_cs_video_title_1: میرا نام جیروم ہے اور میں میو ولف میں ایک ڈیزائن
+    ٹیکنولوجسٹ ہوں
+  video_library_page_cs_video_title_2: میرا نام نیکیشا ہے اور میں ناسا میں ایرو اسپیس
+    انجینئر ہوں
+  video_library_page_cs_video_title_3: میرا نام برینا ہے اور میں انسٹاگرام میں سافٹ
+    ویئر انجینئر ہوں
+  video_library_page_cs_video_title_4: میرا نام Kinsley ہے اور میں فیس بک پر ایک سافٹ
+    ویئر انجینئر ہوں
+  video_library_page_cs_video_title_5: میرا نام پولینا ہے اور میں الیکٹرانک آرٹس میں
+    ڈیٹا سائنسدان ہوں
+  video_library_page_cs_video_title_6: میرا نام دانیال ہے اور میں مباری میں سافٹ ویئر
+    انجینئر ہوں
+  video_library_page_cs_video_title_7: میرا نام کرسٹوفر ہے اور میں ٹینیم میں سیکورٹی
+    تجزیہ کار ہوں
+  video_library_page_cs_video_title_8: میرا نام فیڈریکو ہے اور میں مائیکروسافٹ میں
+    ایک تکنیکی پروگرام مینیجر ہوں
+  video_library_page_cs_video_title_9: میرا نام ٹیس ہے اور میں گوگل میں سافٹ ویئر
+    انجینئر ہوں
+  video_library_page_inspirational_video_title_1: کمپیوٹر سائنس کا چہرہ تبدیل کریں
+    (3 منٹ)
+  video_library_page_inspirational_video_title_2: اپنے آپ کو دھکا. کوئی بھی سیکھ سکتا
+    ہے. (1 منٹ)
+  video_library_page_inspirational_video_title_3: ایک لڑکی کو حوصلہ افزائی (2 منٹ)
+  video_library_page_inspirational_video_title_4: اکثر اسکول کیا نہیں سیکھاتے (5 منٹ)
+  video_library_page_inspirational_video_title_5: کوڈ کا گھنٹہ یہاں ہے - کوئی بھی
+    سیکھ سکتا ہے (2 منٹ)
+  video_library_page_inspirational_video_title_6: میرا نام آراسیلی ہے (3 منٹ)
+  video_library_page_inspirational_video_title_7: سیف کری کے ساتھ کوڈ کا گھنٹے (2
+    منٹ)
+  video_library_page_inspirational_video_title_8: کمپیوٹر سائنس ہر چیز کو تبدیل کر
+    رہا ہے (5 منٹ)
+  video_library_page_inspirational_video_title_9: کمپیوٹر سائنس تعارف (1 منٹ)
+  video_library_page_inspirational_video_title_10: کمپیوٹر سائنس پر صدر اوباما (1
+    منٹ)
+  video_library_page_inspirational_video_title_11: کوئی بھی سیکھ سکتا ہے (1 منٹ)
+  video_library_page_inspirational_video_title_12: لو کوے فالٹا این نیوسٹراس ایسکویلاس
+    (2 منٹ)
+  video_library_page_not_hacked_video_title_1: 'ہیک کرنے کے لئے کس طرح نہیں: تعارف'
+  video_library_page_not_hacked_video_title_2: 'ہیک کرنے کے لئے کس طرح نہیں: پاس ورڈ'
+  video_library_page_not_hacked_video_title_3: 'ہیک کرنے کے لئے کس طرح نہیں: توثیق
+    اور ڈیوائس تالے'
+  video_library_page_not_hacked_video_title_4: 'ہیک کرنے کے لئے کس طرح نہیں: فشنگ'
+  video_library_page_not_hacked_video_title_5: 'ہیک کرنے کے لئے کس طرح نہیں: ویب سائٹس
+    اور وائی فائی'
+  video_library_page_not_hacked_video_title_6: 'ہیک کرنے کے لئے کس طرح نہیں: پیغام
+    رسانی اور ڈاؤن لوڈ'
+  video_library_page_not_hacked_video_title_7: 'ہیک کرنے کے لئے کس طرح نہیں: اپ ڈیٹس
+    انسٹال کریں'
   language_code:
     ar: عربی
     az: آذربائیجان
