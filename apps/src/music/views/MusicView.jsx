@@ -50,7 +50,6 @@ import UpdateTimer from './UpdateTimer';
 import ValidatorProvider from '@cdo/apps/lab2/progress/ValidatorProvider';
 import {Key} from '../utils/Notes';
 import Lab2Registry from '@cdo/apps/lab2/Lab2Registry';
-import {setUpBlocklyForMusicLab} from '../blockly/setup';
 import {isEqual} from 'lodash';
 import HeaderButtons from './HeaderButtons';
 
@@ -138,8 +137,6 @@ class UnconnectedMusicView extends React.Component {
       loadedLibrary: false,
       currentLibraryName: null,
     };
-
-    setUpBlocklyForMusicLab();
   }
 
   componentDidMount() {
