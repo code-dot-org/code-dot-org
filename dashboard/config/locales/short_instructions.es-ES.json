@@ -5094,7 +5094,7 @@
         "csc_bookcover_prop_2023": "¡Añade un segundo personaje a la portada del libro! Establece también el tamaño y la ubicación del nuevo sprite. ",
         "csc_bookcover_say2_2023": "Usa el nuevo</code> bloque de tamaño <code style=\"color:black; background-color:#5ED5DD\">establecido para cambiar el tamaño de Jordania.",
         "csc_bookcover_say_2023": "Agrega el personaje principal a la portada del libro con un <code style=\"color:black; background-color:#F79EA5\">nuevo</code> bloque de sprites. <code style=\"color:black; background-color:#5ED5DD\">¡El dicho</code> hará que el sprite diga algo!",
-        "csc_bookcover_title_2023": "¡Comienza a aprender a programar la portada de un libro interactivo! Agrega el</code> bloque de encabezado <code style=\"color:black; background-color:#B3B2FB\">establecido y el subtítulo <code style=\"color:black; background-color:#B3B2FB\"></code>establecido.",
+        "csc_bookcover_title_2023": "¡Empieza aprendiendo a codificar una cubierta de libro interactiva! Añade el bloque <code style=\"color:black; background-color:#B3B2FB\">del grupo de cabeceras</code>  y el <code style=\"color:black; background-color:#B3B2FB\">grupo de subtítulos</code>.",
         "csc_bookcovers_project_background": "Comience por añadir un fondo a su proyecto. ",
         "csc_bookcovers_project_character1": "Agrega al personaje principal a la portada de tu libro creando un nuevo sprite. ",
         "csc_bookcovers_project_character2": "Agrega un segundo personaje creando otro sprite nuevo. ",
