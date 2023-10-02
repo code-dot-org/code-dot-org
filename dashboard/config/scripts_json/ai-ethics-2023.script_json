@@ -12,7 +12,7 @@
     },
     "new_name": null,
     "family_name": "ai-ethics",
-    "serialized_at": "2023-09-14 23:59:41 UTC",
+    "serialized_at": "2023-09-26 13:57:36 UTC",
     "published_state": "in_development",
     "instruction_type": "teacher_led",
     "instructor_audience": "teacher",
@@ -43,7 +43,7 @@
       "has_lesson_plan": true,
       "relative_position": 1,
       "properties": {
-        "overview": "This lesson builds off prior activities involving research and finding sources to justify an argument. In small groups, students conduct research using articles and videos that expose ethical pitfalls in an Artificial Intelligence (AI) area of their choice. Afterward, each group develops at least one solution-oriented principle that addresses their chosen area. These principles are then assembled into a class-wide “Our AI Code of Ethics” resource (e.g. a slide presentation, document, or webpage) for AI creators and legislators everywhere.",
+        "overview": "This lesson builds off prior activities involving research and finding sources to justify an argument. In small groups, students conduct research using articles and videos that expose ethical pitfalls in an Artificial Intelligence (AI) area of their choice. Afterward, there are options for how students synthesize what they've learned to make recommendations for how AI can be used in society: creating an AI Code of Ethics, or creating an AI Manifesto, or designing an \"Imagine your World\" artistic representation.",
         "student_overview": "Collaboratively research about AI ethics and create a shareable code of conduct."
       },
       "seeding_key": {
@@ -218,24 +218,14 @@
       }
     },
     {
-      "key": "cf27b526-62a8-441d-babe-832a7d7387ed",
-      "position": 3,
-      "properties": {
-      },
-      "seeding_key": {
-        "activity_section.key": "cf27b526-62a8-441d-babe-832a7d7387ed",
-        "lesson_activity.key": "691fbd8a-5729-420b-9593-74e1ccb13e2a"
-      }
-    },
-    {
       "key": "24da4d9a-3535-4e33-9cc7-dd723720e098",
-      "position": 4,
+      "position": 3,
       "properties": {
         "description": "<i class=\"fa fa-comments\" aria-hidden=\"true\"></i> **Prompt:** The Internet has been one of the greatest technological innovations in the last century. What are ways it has been helpful towards society? What are ways it has been harmful?",
         "tips": [
           {
             "type": "teachingTip",
-            "markdown": "**Differentiating the Topic:** You could decide to change this prompt to use a different technology that is more relevant to your students and their interests, as long as there are clear examples of how it has been helpful or harmful in society. For example, you could ask the class for examples of a technology that's had a big impact on their lives and then continue the warm-up using the class idea as the prompt.&#x20;\n\nYou could also change the topic entirely to a relevant issue in your community - for example, if a new mining quarry might be opening near a community, this could be used as a topic to discuss ways it can be helpful or harmful (ie: boosts the economy, but may decrease the air quality in the community)."
+            "markdown": "**Differentiating the Topic:** You could decide to change this prompt to use a different technology that is more relevant to your students and their interests, as long as there are clear examples of how it has been helpful or harmful in society. For example, you could ask the class for examples of a technology that's had a big impact on their lives (such as social media, maps, voice assistants, or self-driving cars) and then continue the warm-up using the class idea as the prompt.&#x20;\n\nYou could also change the topic entirely to a relevant issue in your community - for example, if a new mining quarry might be opening near a community, this could be used as a topic to discuss ways it can be helpful or harmful (ie: boosts the economy, but may decrease the air quality in the community)."
           }
         ]
       },
@@ -246,7 +236,7 @@
     },
     {
       "key": "3b890a2d-9635-4ae1-ba6f-9f2bc9e3db77",
-      "position": 5,
+      "position": 4,
       "properties": {
       },
       "seeding_key": {
@@ -256,9 +246,15 @@
     },
     {
       "key": "8beb2941-dd64-44f4-9e99-6149c445067a",
-      "position": 6,
+      "position": 5,
       "properties": {
-        "description": "<i class=\"fa fa-lightbulb-o\" aria-hidden=\"true\"></i> **Discussion Goal:** Have students brainstorm individually, then share with a neighbor before regrouping. Call on students to share, keeping track of responses on the T-chart. \n\nStudents should be able to pull from news sources or lived experiences to populate the chart. If students struggle generating ideas, continue to the next slide which includes a few examples."
+        "description": "<i class=\"fa fa-lightbulb-o\" aria-hidden=\"true\"></i> **Discussion Goal:** Have students brainstorm individually, then share with a neighbor before regrouping. Call on students to share, keeping track of responses on the T-chart. \n\nStudents should be able to pull from news sources or lived experiences to populate the chart. If students struggle generating ideas, continue to the next slide which includes a few examples.",
+        "tips": [
+          {
+            "type": "teachingTip",
+            "markdown": "**Context Matters**: What helps one student may harm another, and vice versa. If students have conflicting ideas around “helpful” and “harmful”, try not to open for direct debate, as this may result in the majority outweighing a vulnerable student. Instead, encourage students to think about future technologies, research, or policies that could protect people from being harmed. This will help segue into later activities encouraging students to be a part of the solution!"
+          }
+        ]
       },
       "seeding_key": {
         "activity_section.key": "8beb2941-dd64-44f4-9e99-6149c445067a",
@@ -267,7 +263,7 @@
     },
     {
       "key": "6be8b1be-05b2-4d26-aa0d-188288039047",
-      "position": 7,
+      "position": 6,
       "properties": {
       },
       "seeding_key": {
@@ -277,7 +273,7 @@
     },
     {
       "key": "85de25c7-c750-4c07-99e4-680d10487b72",
-      "position": 8,
+      "position": 7,
       "properties": {
         "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Display:** Show the slide with various news articles about the impact of the Internet on society. If you changed the prompt to a different technology, also update these slides."
       },
@@ -288,7 +284,7 @@
     },
     {
       "key": "d9416ebe-bfb8-4825-99dd-66db01e3c2e3",
-      "position": 9,
+      "position": 8,
       "properties": {
       },
       "seeding_key": {
@@ -298,7 +294,7 @@
     },
     {
       "key": "e180c1b6-6c75-4901-bd35-4b38c3ccf685",
-      "position": 10,
+      "position": 9,
       "properties": {
         "description": "Even though the Internet is a grand technological innovation, its legacy is complicated - in some cases, it's been incredibly helpful and beneficial to society. And in others, it's been harmful and detrimental to society. Technology can have a wide-range of impacts, sometimes beyond what was intended. Today, we're going to example another piece of technology and explore the impacts its having on society: Artificial Intelligence.",
         "remarks": true
@@ -317,7 +313,7 @@
         "tips": [
           {
             "type": "teachingTip",
-            "markdown": "**Skip to the Research:** This section starts with a brief introduction of artificial intelligence. If you have already introduced artificial intelligence to students in previous lessons, consider skipping this section"
+            "markdown": "**Skip to the Research:** This section starts with a brief introduction of artificial intelligence. If you have already introduced artificial intelligence to students in previous lessons, consider skipping this section.\n\n**Connecting to your Subject:** In order to expand on the definition of AI, you may want to bring up other examples to help students think about AI in their daily lives. You can even specifically discuss AI and your subject area. For example, English teachers can discuss AI-written essays. Math teachers can discuss how AI assists computation. Economics teachers can discuss how AI is used for financial prediction. History teachers can discuss the past decade of innovation in AI and how it has impacted society. You can simply think about the apps you use on a daily basis, as these are all opportunities to discuss AI."
           }
         ]
       },
@@ -425,7 +421,6 @@
       "key": "0e3ac94e-a466-40cc-b43b-1f3052a498d5",
       "position": 11,
       "properties": {
-        "description": "**Groups**: Place students in groups of three or four.",
         "duration": "15",
         "name": "Student Research & Reflection"
       },
@@ -448,7 +443,7 @@
       "key": "00f0ba89-cddd-45a1-9669-a2cd4b0b684f",
       "position": 13,
       "properties": {
-        "description": "<i class=\"fa fa-file-text-o\" aria-hidden=\"true\"></i> **Distribute:** **Distribute:** Digitally share the [r ai_research_areas/ai-ethics/2023]. This activity guide is designed to be used digitally so students can click the links and explore the online resources.\n\n\n"
+        "description": "<i class=\"fa fa-file-text-o\" aria-hidden=\"true\"></i> **Distribute:** Digitally share the [r ai_research_areas/ai-ethics/2023]. This activity guide is designed to be used digitally so students can click the links and explore the online resources.\n\n\n"
       },
       "seeding_key": {
         "activity_section.key": "00f0ba89-cddd-45a1-9669-a2cd4b0b684f",
@@ -456,20 +451,16 @@
       }
     },
     {
-      "key": "5ba09a86-be17-454f-90df-684f4a092b9d",
+      "key": "a45155ff-19af-43ac-bf11-6ca4001816f4",
       "position": 14,
       "properties": {
-      },
-      "seeding_key": {
-        "activity_section.key": "5ba09a86-be17-454f-90df-684f4a092b9d",
-        "lesson_activity.key": "fe088a05-31b9-4a26-991c-1a12e71d6648"
-      }
-    },
-    {
-      "key": "a45155ff-19af-43ac-bf11-6ca4001816f4",
-      "position": 15,
-      "properties": {
-        "description": "<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Read over the introduction on the activity guide. Have groups choose an area of specialization, encouraging groups to pick different topics if possible. Students should skim 2-3 articles on their topic."
+        "description": "<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Read over the introduction on the activity guide. Have students choose an area of specialization.",
+        "tips": [
+          {
+            "type": "teachingTip",
+            "markdown": "**Groups:** You could decide to have students work in groups for their research, with all students in the same group researching the same topic but reading different articles. This allows students to see a broader picture of the impact of their technology, especially when filling in the Research Reflection handout later."
+          }
+        ]
       },
       "seeding_key": {
         "activity_section.key": "a45155ff-19af-43ac-bf11-6ca4001816f4",
@@ -477,18 +468,8 @@
       }
     },
     {
-      "key": "c65c33f1-1c86-47fe-848c-c3e18622bbdd",
-      "position": 16,
-      "properties": {
-      },
-      "seeding_key": {
-        "activity_section.key": "c65c33f1-1c86-47fe-848c-c3e18622bbdd",
-        "lesson_activity.key": "fe088a05-31b9-4a26-991c-1a12e71d6648"
-      }
-    },
-    {
       "key": "d314fbbc-6eef-46ca-9e01-26cabb1aca65",
-      "position": 17,
+      "position": 15,
       "properties": {
         "description": "<i class=\"fa fa-file-text-o\" aria-hidden=\"true\"></i> **Distribute:** Provide each student with one copy of the [r research_reflection_guide/ai-ethics/2023] handout.\n\n\n"
       },
@@ -498,20 +479,16 @@
       }
     },
     {
-      "key": "b487b403-1b0f-48eb-80cc-7182193d477c",
-      "position": 18,
-      "properties": {
-      },
-      "seeding_key": {
-        "activity_section.key": "b487b403-1b0f-48eb-80cc-7182193d477c",
-        "lesson_activity.key": "fe088a05-31b9-4a26-991c-1a12e71d6648"
-      }
-    },
-    {
       "key": "a7d5069b-aa1c-4efa-a8d8-b58bd43a6c7b",
-      "position": 19,
+      "position": 16,
       "properties": {
-        "description": "<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Have students research their area with fellow group members, answering questions on the handout along the way. Have students only consider the front page of the reflection for now. Students can skim the longer articles for key ideas, take notes, pose additional questions, and use a search engine to investigate further if time permits."
+        "description": "<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Have students research their area, answering questions on the handout along the way. Make sure students only answer questions on the front of their reflection guide for now. \n\nEncourage students to look over 3-4 articles from their list, making sure at least one article comes from the \"Societal Impact\" section and at least one article comes from the \"Ethical Considerations\" section. Students can also do their own research, for example: looking up the \"Spotlight Person\" listed in each section. \n\nStudents can skim the longer articles for key ideas, take notes, pose additional questions, and use a search engine to investigate further if time permits.",
+        "tips": [
+          {
+            "type": "teachingTip",
+            "markdown": "**Empathize with Student Experience:** Students may be personally impacted when learning about how AI can be biased. For example, students may be worried about how facial recognition bias affects them and their communities, or may have family members undergoing medical treatment and are concerned about AI in medicine. This follows advice from the A in the LEADERS framework - assume someone in the room is your datapoint.\n\nAcknowledge that AI may impact each of us differently, and encourage students to find the proposed solutions in each of the articles, or ideate on solutions themselves. Many scholars, technologists, and policymakers are working hard to combat bias in AI."
+          }
+        ]
       },
       "seeding_key": {
         "activity_section.key": "a7d5069b-aa1c-4efa-a8d8-b58bd43a6c7b",
@@ -519,18 +496,8 @@
       }
     },
     {
-      "key": "bef341c8-4ebd-4e78-959c-f515a899f303",
-      "position": 20,
-      "properties": {
-      },
-      "seeding_key": {
-        "activity_section.key": "bef341c8-4ebd-4e78-959c-f515a899f303",
-        "lesson_activity.key": "fe088a05-31b9-4a26-991c-1a12e71d6648"
-      }
-    },
-    {
       "key": "378dbba8-2a98-4d7b-8695-141021465608",
-      "position": 21,
+      "position": 17,
       "properties": {
         "description": "<i class=\"fa fa-refresh\" aria-hidden=\"true\"></i> **Circulate:** Monitor students as they perform their research. Consider prompting students for their reactions as they read certain articles, especially on unexpected impacts of technology on society."
       },
@@ -540,18 +507,8 @@
       }
     },
     {
-      "key": "7d86841b-85ce-495d-8f6f-35ee070dd23d",
-      "position": 22,
-      "properties": {
-      },
-      "seeding_key": {
-        "activity_section.key": "7d86841b-85ce-495d-8f6f-35ee070dd23d",
-        "lesson_activity.key": "fe088a05-31b9-4a26-991c-1a12e71d6648"
-      }
-    },
-    {
       "key": "5cb9d6e8-b73f-4bfd-829d-8f43c3e84b66",
-      "position": 23,
+      "position": 18,
       "properties": {
         "description": "**Regroup:** Regroup the class for a class shareout"
       },
@@ -561,18 +518,8 @@
       }
     },
     {
-      "key": "bcfaff85-6fd4-4ba3-8334-8cfac4ae170b",
-      "position": 24,
-      "properties": {
-      },
-      "seeding_key": {
-        "activity_section.key": "bcfaff85-6fd4-4ba3-8334-8cfac4ae170b",
-        "lesson_activity.key": "fe088a05-31b9-4a26-991c-1a12e71d6648"
-      }
-    },
-    {
       "key": "98b65021-bdf1-49a1-a85d-58102b4d4347",
-      "position": 25,
+      "position": 19,
       "properties": {
         "description": "<i class=\"fa fa-comments\" aria-hidden=\"true\"></i> **Prompt:** What is one thing that surprised you in your research? This could be about a positive use of this technology, or something concerning you didn't know about."
       },
@@ -582,20 +529,10 @@
       }
     },
     {
-      "key": "acaf8cca-a1ff-4f7d-8cec-8dfe087a137e",
-      "position": 26,
-      "properties": {
-      },
-      "seeding_key": {
-        "activity_section.key": "acaf8cca-a1ff-4f7d-8cec-8dfe087a137e",
-        "lesson_activity.key": "fe088a05-31b9-4a26-991c-1a12e71d6648"
-      }
-    },
-    {
       "key": "58aa1c76-1932-4388-a141-a2efb19b3fee",
-      "position": 27,
+      "position": 20,
       "properties": {
-        "description": "<i class=\"fa fa-lightbulb-o\" aria-hidden=\"true\"></i> **Discussion Goal:** This is an opportunity for students to share their thoughts and reflections from the articles, processing their thoughts and emotions. Some students may have strong reactions to the way AI is being used in society, both positively and negatively. Try to guide the discussion so a variety of perspectives are heard, possibly even complicating people's thoughts on the technology as they weigh the pros and cons of these technologies and whether the benefits are worth the other consequences."
+        "description": "<i class=\"fa fa-lightbulb-o\" aria-hidden=\"true\"></i> **Discussion Goal:** This is an opportunity for students to share their thoughts and reflections from the articles, processing their thoughts and emotions. Some students may have strong reactions to the way AI is being used in society, both positively and negatively. Try to avoid open debate, but acknowledge that the pros and cons of these technologies must be weighed against the potential benefits and consequences to society. Consider reminding students that there are entire career paths dedicated towards addressing these issues in AI Ethics – policy writers, software engineers, AI ethicists, researchers, stakeholder advocates, and more. "
       },
       "seeding_key": {
         "activity_section.key": "58aa1c76-1932-4388-a141-a2efb19b3fee",
@@ -603,18 +540,8 @@
       }
     },
     {
-      "key": "5294e2d8-fcf9-481d-9462-3011e22f6086",
-      "position": 28,
-      "properties": {
-      },
-      "seeding_key": {
-        "activity_section.key": "5294e2d8-fcf9-481d-9462-3011e22f6086",
-        "lesson_activity.key": "fe088a05-31b9-4a26-991c-1a12e71d6648"
-      }
-    },
-    {
       "key": "32c2d10f-8f5b-4143-8905-120466671907",
-      "position": 29,
+      "position": 21,
       "properties": {
         "description": "Any new technology can be complicated, as we've heard so far. One of the challenges is figuring out how to weigh the benefits with the harms - what potential downsides are we willing to accept in order to reap the benefits of a new technology? Or do we need to make changes so the harms are minimized? Or rethink things entirely?\n\nThis line of thinking is related to **ethics**, or guidelines on how a person or society should behave.  After reading the articles, you may have an opinion on what ethical uses of this technology are. We're going to imagine what these ethical uses might be on the back of your activity guide.",
         "remarks": true
@@ -625,18 +552,8 @@
       }
     },
     {
-      "key": "0e34de41-9d70-466f-8928-7589911b4058",
-      "position": 30,
-      "properties": {
-      },
-      "seeding_key": {
-        "activity_section.key": "0e34de41-9d70-466f-8928-7589911b4058",
-        "lesson_activity.key": "fe088a05-31b9-4a26-991c-1a12e71d6648"
-      }
-    },
-    {
       "key": "9b1e32fb-7b7e-4387-8267-5ba5c7d51f18",
-      "position": 31,
+      "position": 22,
       "properties": {
         "description": "<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Have students flip to the back of their handout and read the introduction."
       },
@@ -646,20 +563,16 @@
       }
     },
     {
-      "key": "839e8e8a-bcca-45e3-a3bb-795717cc536e",
-      "position": 32,
-      "properties": {
-      },
-      "seeding_key": {
-        "activity_section.key": "839e8e8a-bcca-45e3-a3bb-795717cc536e",
-        "lesson_activity.key": "fe088a05-31b9-4a26-991c-1a12e71d6648"
-      }
-    },
-    {
       "key": "871eb332-b63a-430f-958a-075cbe3bf544",
-      "position": 33,
+      "position": 23,
       "properties": {
-        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Display:** Display the slide with the ethical frameworks on them:\n\n* Utilitarianism - Does this generate the best outcome for the largest number of people?\n* Deontology - What are the rules?\n* Rights-Based Ethics - Are people's rights being honored?\n* Care-Based Ethics - Are people receiving appropriate care for their wellbeing?\n* Fairness Approach - What action treats everyone the same?"
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Display:** Display the slide with the ethical frameworks on them as well as the hypothetical scenario",
+        "tips": [
+          {
+            "type": "teachingTip",
+            "markdown": "**Why Introduce Ethical Frameworks?** This lesson introduces 5 ethical frameworks: Utilitarianism, Rights-Based Ethics, Care-Based Ethics, Equality-based, Values-Based. The goal of this lesson is _not_ to become an expert on each framework, nor is it to become an expert on ethical thinking in general. Instead, the hope is students start to recognize that anytime they make a choice, that choice is influenced by covert factors on how they see and value the world **and those values have names**. For example:\n\n- Deciding to do something because \"it's what most of us want\" has a name - Utilitarianism.\n- Or, deciding _not_ to do something because \"first, do no harm\" has a name - Care-Based Ethics. \n\nBy introducing students to these frameworks, we give them the language to talk about these values so they can see how they are informing the decisions they (and others) are making. And, they can also start to see other ways of thinking that might lead to different decisions that they may not have previously considered."
+          }
+        ]
       },
       "seeding_key": {
         "activity_section.key": "871eb332-b63a-430f-958a-075cbe3bf544",
@@ -668,7 +581,7 @@
     },
     {
       "key": "aa83e171-956b-407c-a1ac-34e4e9686393",
-      "position": 34,
+      "position": 24,
       "properties": {
       },
       "seeding_key": {
@@ -678,7 +591,7 @@
     },
     {
       "key": "9c748f44-3f3d-446b-9f1b-dd90930ec84d",
-      "position": 35,
+      "position": 25,
       "properties": {
         "description": "These are examples of **ethical frameworks**, which are different viewpoints on how to make ethical decisions. Take some consider which viewpoint resonates with your own on how to address some of the issues with the technology that you researched",
         "remarks": true
@@ -690,7 +603,7 @@
     },
     {
       "key": "32b5ea10-df25-4a76-977c-d4a55f183c18",
-      "position": 36,
+      "position": 26,
       "properties": {
       },
       "seeding_key": {
@@ -700,7 +613,7 @@
     },
     {
       "key": "501981ff-3864-4b52-8bd6-f11c031cc49c",
-      "position": 37,
+      "position": 27,
       "properties": {
         "description": "<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Have students fill in the back of their reflection guide"
       },
@@ -711,7 +624,7 @@
     },
     {
       "key": "a732598f-26a0-4f40-b858-3aa59356a5ab",
-      "position": 38,
+      "position": 28,
       "properties": {
       },
       "seeding_key": {
@@ -721,7 +634,7 @@
     },
     {
       "key": "1e292fb2-2f86-4eee-89b1-ffc0d5b7ccb2",
-      "position": 39,
+      "position": 29,
       "properties": {
         "description": "<i class=\"fa fa-refresh\" aria-hidden=\"true\"></i> **Circulate:** Monitor students as they complete the task, connecting their own ideas with different ethical frameworks. The frameworks are meant to help students shape their thoughts and potentially make them more coherent, and introduce them to other viewpoints on how to solve a particular problem. For example, students may default to a Utilitarian point of view where as long as the most people get the benefits everything is fine, but may shift their thinking when considering an Ethics of Care perspective and reconsider how technology impacts different groups."
       },
@@ -732,7 +645,7 @@
     },
     {
       "key": "95365002-deff-4808-941f-896faa80774f",
-      "position": 40,
+      "position": 30,
       "properties": {
       },
       "seeding_key": {
@@ -742,7 +655,7 @@
     },
     {
       "key": "8b198500-9c3c-4195-8697-61812677b22c",
-      "position": 41,
+      "position": 31,
       "properties": {
         "description": "**Regroup:** Regroup students to introduce the culminating activity of the lesson."
       },
@@ -753,7 +666,7 @@
     },
     {
       "key": "85e90e0c-c779-40a4-b12c-9baa70d0ae3d",
-      "position": 42,
+      "position": 32,
       "properties": {
       },
       "seeding_key": {
@@ -763,7 +676,7 @@
     },
     {
       "key": "8be6b726-ddca-4424-aa12-21bc80c263bc",
-      "position": 43,
+      "position": 33,
       "properties": {
         "tips": [
           {
@@ -844,7 +757,28 @@
       "key": "b2b4b9e6-fe3f-4d2d-a828-1402cc1572e8",
       "position": 7,
       "properties": {
-        "description": "<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Students will write at least one principle for the class code of ethics. Ideally, their principles should be written as a sentence followed by a short paragraph that provides more context to the reader (see Google’s page).",
+        "description": "<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Students will write at least one principle for the class code of ethics. Ideally, their principles should be written as a sentence followed by a short paragraph that provides more context to the reader (see Google’s page)."
+      },
+      "seeding_key": {
+        "activity_section.key": "b2b4b9e6-fe3f-4d2d-a828-1402cc1572e8",
+        "lesson_activity.key": "00f9385c-daa7-4590-a138-13a063e6f8c8"
+      }
+    },
+    {
+      "key": "a509a8e3-b10c-409a-a019-2b5a0545272c",
+      "position": 8,
+      "properties": {
+        "description": "<i class=\"fa fa-refresh\" aria-hidden=\"true\"></i> **Circulate:** Check in with students as they complete this activity. You might ask which ethical framework most influenced their final Code of Ethics, or if they combined multiple frameworks to come up with their best practices.  \n\nRemind students that creating a code of ethics means having empathy for multiple stakeholders – the people who benefit most and benefit least from these technologies. A Code of Ethics can also include protocols for speaking to the most impacted people, or setting up ways to respond if bias occurs. The entirety of AI ethics is too large a problem to solve, but a Code of Ethics gives us some best practices."
+      },
+      "seeding_key": {
+        "activity_section.key": "a509a8e3-b10c-409a-a019-2b5a0545272c",
+        "lesson_activity.key": "00f9385c-daa7-4590-a138-13a063e6f8c8"
+      }
+    },
+    {
+      "key": "4ff33db6-6668-4423-8f1d-ad0b25f6da40",
+      "position": 9,
+      "properties": {
         "tips": [
           {
             "type": "teachingTip",
@@ -853,7 +787,7 @@
         ]
       },
       "seeding_key": {
-        "activity_section.key": "b2b4b9e6-fe3f-4d2d-a828-1402cc1572e8",
+        "activity_section.key": "4ff33db6-6668-4423-8f1d-ad0b25f6da40",
         "lesson_activity.key": "00f9385c-daa7-4590-a138-13a063e6f8c8"
       }
     },
@@ -988,7 +922,7 @@
       "key": "ad86262b-b33a-4575-9b4b-940a0da61d80",
       "position": 13,
       "properties": {
-        "description": "<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Have students create their own personal manifesto centered on AI technology. Encourage them to be creative in how they design their manifesto. You can circulate and prompt students to tell you why they are including certain statements in their manifesto, listening for connections back to the articles from earlier in the class."
+        "description": "<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Have students create their own personal manifesto centered on AI technology. Encourage them to be creative in how they design their manifesto. "
       },
       "seeding_key": {
         "activity_section.key": "ad86262b-b33a-4575-9b4b-940a0da61d80",
@@ -999,6 +933,7 @@
       "key": "8c590a64-b469-4495-b312-009c957f060e",
       "position": 14,
       "properties": {
+        "description": "**Circulate:** Check in with students as they complete this activity. Consider prompting students to tell you why they are including certain statements in their manifesto, listening for connections back to the articles from earlier in the class.\n\nManifestos can draw on deep emotion. Encourage students to use their passion to advocate strongly for themselves and others. They might use their manifesto as a protest sign, a call to action, a poetic description of AI failures. If a student does get particularly passionate, remind them of the work being done to combat AI bias, and encourage them to continue learning more. You may direct them to resources of different groups researching AI bias, such as the [Algorithmic Justice League](https://www.ajl.org/)"
       },
       "seeding_key": {
         "activity_section.key": "8c590a64-b469-4495-b312-009c957f060e",
@@ -1009,7 +944,7 @@
       "key": "93d66581-1434-4548-a0da-f8ccf247aa4e",
       "position": 15,
       "properties": {
-        "description": "**Display the Result:** Consider how you would like to display the manifestos students create. If time permits, allow students to do a Gallery Walk looking at the content created by their peers."
+        "description": "**(Optional) Display the Result:** Consider if/how you would like to offer students the chance to share their manifestos. Some students may want to display them publicly as a call to action, while others may wish to keep theirs private and only share with you. Be sure to consider the potentially personal nature of these manifestos when deciding if/how students should share."
       },
       "seeding_key": {
         "activity_section.key": "93d66581-1434-4548-a0da-f8ccf247aa4e",
@@ -1020,7 +955,7 @@
       "key": "3ef56e31-1c7e-4006-8378-761321ed8d66",
       "position": 1,
       "properties": {
-        "description": "This section guides students towards creating an artistic expression displaying an idealized world that uses artificial intelligence. Students also create a smaller artist-card to go along with their artistic work."
+        "description": "This section guides students towards creating an artistic expression displaying an idealized world that uses artificial intelligence. Students also create a smaller artist-card to go along with their artistic work. \n\nAI mistakes can be particularly harmful, and give us a pessimistic view of technology. One way to approach fear of AI is to also envision the possible benefits of responsible and fair AI systems. We want to encourage students to feel part of the solution, and to channel their creativity into imagining a better world."
       },
       "seeding_key": {
         "activity_section.key": "3ef56e31-1c7e-4006-8378-761321ed8d66",
@@ -1062,7 +997,13 @@
       "key": "169c3eed-52d7-4a4b-b7c6-161cf287ed33",
       "position": 5,
       "properties": {
-        "description": "<i class=\"fa fa-comments\" aria-hidden=\"true\"></i> **Prompt:** How do you think this quote could apply to some of the scenarios we've read about today?\n\nHave students reflect on their own and share with a partner before returning as a full group"
+        "description": "<i class=\"fa fa-comments\" aria-hidden=\"true\"></i> **Prompt:** How do you think this quote could apply to some of the scenarios we've read about today?\n\nHave students reflect on their own and share with a partner before returning as a full group",
+        "tips": [
+          {
+            "type": "teachingTip",
+            "markdown": "**Connect back to the Warm-Up:** Consider connecting this discussion back to one example from the warmup, and apply this quote to it. For example, if you talked about self-driving cars, what does a future world look like where that technology benefits people most?"
+          }
+        ]
       },
       "seeding_key": {
         "activity_section.key": "169c3eed-52d7-4a4b-b7c6-161cf287ed33",
@@ -1147,7 +1088,7 @@
       "key": "ce33ae3c-68b4-4e41-b974-dcf08aba2483",
       "position": 13,
       "properties": {
-        "description": "<i class=\"fa fa-refresh\" aria-hidden=\"true\"></i> **Circulate:** Monitor students as they complete their artwork. Also ensure they are completing the Artist Card to explain the artwork they are creating."
+        "description": "<i class=\"fa fa-refresh\" aria-hidden=\"true\"></i> **Circulate:** Monitor students as they complete their artwork. Also ensure they are completing the Artist Card to explain the artwork they are creating.\n\nSome students may simply imagine a world where the AI problems they read about are fixed. For example, facial recognition that works on everyone’s faces. Encourage students to use ‘moonshot thinking’ – “an approach of choosing a huge, seemingly insurmountable problem and proposing a radical solution to that problem using technology”. An imagined world can be as outlandish as they want. Think big!"
       },
       "seeding_key": {
         "activity_section.key": "ce33ae3c-68b4-4e41-b974-dcf08aba2483",
@@ -1200,7 +1141,13 @@
       "key": "f1632666-ffc1-457a-832a-c2d3b2d1fc20",
       "position": 3,
       "properties": {
-        "description": "<i class=\"fa fa-comments\" aria-hidden=\"true\"></i> **Prompt:** How would you describe \"AI ethics\" to a family member or friend who didn’t participate in today’s lesson?"
+        "description": "<i class=\"fa fa-comments\" aria-hidden=\"true\"></i> **Prompt:** How would you describe \"AI ethics\" to a family member or friend who didn’t participate in today’s lesson?",
+        "tips": [
+          {
+            "type": "teachingTip",
+            "markdown": "**Future Thinking:** Following the lesson, students may still feel apprehensive about the impacts of AI technology on their future. They may be concerned about medical AI, college admissions, or even their own social media algorithms. If you feel comfortable, allow for students to approach you with their concerns. Remind them that more and more experts are interested in creating responsible AI, and that students can research more advocacy groups who fight against AI injustice. You may even encourage students to write letters to local representatives about these issues."
+          }
+        ]
       },
       "seeding_key": {
         "activity_section.key": "f1632666-ffc1-457a-832a-c2d3b2d1fc20",
@@ -1339,7 +1286,7 @@
         "tips": [
           {
             "type": "teachingTip",
-            "markdown": "**Preparing for the Activity:** This activity has several components that, when reading the lesson plan linearly, can be difficult to see how they all fit together. Here's the big picture behind this activity:\n- Students are [participating in a **collaborative game**](https://docs.google.com/document/d/1rqtfMZyn-UekUoVFgYCHyVqOa7StNY9-wl-FlLOaZqk/edit#heading=h.59k2gm16lgj2), where each person takes on a specific role or persona and they all have to work together to \"win\" against the scenario set out by the game. This is similar in spirit to board games like [Pandemic](https://boardgamegeek.com/boardgame/30549/pandemic) or [Forbidden Island](https://en.wikipedia.org/wiki/Forbidden_Island_(game))\n- Students will be in groups of 4, where all four people have taken on a persona [related to a specific scenario](https://docs.google.com/document/d/1-bJpL4tXOgg6jpGhiXTCxowVh_ogsNmd-K-S64Nb4lo/edit#heading=h.59k2gm16lgj2). Their goal will be to work together to come up with guidelines for Generative AI that try to satisfy the needs and goals of everyone in the group. \n  - For example: an actor, a producer, an audience member, and a costume designer must work together to come up with guidelines for use of Generative AI in movie productions.\n- Each student has a particular persona they can embody on a [Character Card](https://docs.google.com/document/d/1dliLfkCYxPTfdo7kirgSBODCn94C092z_tTwE_C2SbA/edit). These cards include some baseline information about how this person might feel about generative AI, along with some [news articles](https://docs.google.com/document/d/1fFsIddVKKTvl067o0GpW0PsjampUbdNAGeptVbtDl6I/edit) that students read and react to _as this character_.\n- Logistically, the lesson plan introduces each of these elements in the reverse-order listed here - first students are introduced to their character and news articles. Once they understand their character, then they form their groups and are given their scenario. And once they understand their scenario, they can begin the collaborative game of coming up with guidelines for generative AI."
+            "markdown": "**Preparing for the Activity:** This activity has several components that, when reading the lesson plan linearly, can be difficult to see how they all fit together. Here's the big picture behind this activity:\n- Students are [participating in a **collaborative game**](https://docs.google.com/document/d/1rqtfMZyn-UekUoVFgYCHyVqOa7StNY9-wl-FlLOaZqk/edit#heading=h.59k2gm16lgj2), where each person takes on a specific role or persona and they all have to work together to \"win\" against the scenario set out by the game. This is similar in spirit to board games like [Pandemic](https://boardgamegeek.com/boardgame/30549/pandemic) or [Forbidden Island](https://en.wikipedia.org/wiki/Forbidden_Island_(game))\n- Students will be in groups of 4, where all four people have taken on a persona [related to a specific scenario](https://docs.google.com/document/d/1-bJpL4tXOgg6jpGhiXTCxowVh_ogsNmd-K-S64Nb4lo/edit#heading=h.59k2gm16lgj2). Their goal will be to work together to come up with guidelines for Generative AI that try to satisfy the needs and goals of everyone in the group. \n  - For example: an actor, a producer, an audience member, and a costume designer must work together to come up with guidelines for use of Generative AI in movie productions.\n- Each student has a particular persona they can embody on a [Character Card](https://docs.google.com/document/d/1dliLfkCYxPTfdo7kirgSBODCn94C092z_tTwE_C2SbA/edit). These cards include some baseline information about how this person might feel about generative AI, along with some [news articles](https://docs.google.com/document/d/1fFsIddVKKTvl067o0GpW0PsjampUbdNAGeptVbtDl6I/edit) that students read and react to _as this character_.\n\n\nEven though the ultimate goal is to be in a group as a character solving a problem, the lesson plan introduces these steps in stages rather than explaining the full game all-at-once. First students are introduced to their character and read their news articles. Once they understand their character, then they form their groups and are given their scenario. And once they understand their scenario, they can begin the collaborative game of coming up with guidelines for generative AI."
           }
         ]
       },
@@ -1385,7 +1332,13 @@
       "position": 5,
       "properties": {
         "description": "Each one of you will now take on the persona of someone affected by generative AI. This person has a unique perspective on how generative AI could be helpful or harmful for them. To better understand their perspective and embody this persona, we're going to read a bit about them and add a few more details to the character card. Then, we're going to read some of the same articles they've been reading that are influencing their thoughts and opinions.",
-        "remarks": true
+        "remarks": true,
+        "tips": [
+          {
+            "type": "teachingTip",
+            "markdown": "**Embrace the Persona:** Encourage students to really take on the persona of their character. In the Character Cards, they can give their character a name and some backstory. The students will be communicating with their group as if they really are this character stakeholder. Encourage them to think like their character would about the problem."
+          }
+        ]
       },
       "seeding_key": {
         "activity_section.key": "b2777295-b74f-4240-bb3d-c76b79dde6a9",
@@ -1657,7 +1610,13 @@
       "key": "bedaca2d-4f48-45b4-b6e9-431f6a38cc13",
       "position": 30,
       "properties": {
-        "description": "**Share Out:** Have groups share out their scenario and the guidelines they created, especially since each group had a different scenario and read a different set of articles. Groups should share what their problem was, what their biggest challenges were, and the organization rules they came up with!"
+        "description": "**Share Out:** Have groups share out their scenario and the guidelines they created, especially since each group had a different scenario and read a different set of articles. Groups should share what their problem was, what their biggest challenges were, and the organization rules they came up with!",
+        "tips": [
+          {
+            "type": "teachingTip",
+            "markdown": "**Extending Impact:** Students may feel passionately about the pros and cons of generative AI, with some students more impacted than others. Remind students that these are _current_ issues which have yet to be resolved, and that their opinions matter. You may want to offer an option for students to write to their legislators about what they learned."
+          }
+        ]
       },
       "seeding_key": {
         "activity_section.key": "bedaca2d-4f48-45b4-b6e9-431f6a38cc13",
@@ -1679,7 +1638,13 @@
       "key": "221b5029-fcfd-4791-b951-852609cb0198",
       "position": 2,
       "properties": {
-        "description": "* What was the biggest challenge you successfully resolved?\n* Whose needs were the easiest to meet?\n* Which compromise are you proudest of?\n* List what you felt were the top concerns/needs that needed to be met.\n* What is your biggest concern about generative AI moving forward?\n* What is your most exciting hope about generative AI moving forward?\n* In a letter, write your advice for businesses and organizations to collaborate on issues of AI. Use what you learned today, and include one article."
+        "description": "* What was the biggest challenge you successfully resolved?\n* Whose needs were the easiest to meet?\n* Which compromise are you proudest of?\n* List what you felt were the top concerns/needs that needed to be met.\n* What is your biggest concern about generative AI moving forward?\n* What is your most exciting hope about generative AI moving forward?\n* In a letter, write your advice for businesses and organizations to collaborate on issues of AI. Use what you learned today, and include one article.",
+        "tips": [
+          {
+            "type": "teachingTip",
+            "markdown": "**Extending the Lesson:** Students may go home and play with Generative AI tools, testing their theories or experimenting with what they learned. Encourage students to open up dialogue with their family and friends, with a solutions oriented approach. You may want to guide passionate students towards the multiple careers in AI technology!"
+          }
+        ]
       },
       "seeding_key": {
         "activity_section.key": "221b5029-fcfd-4791-b951-852609cb0198",
@@ -1845,7 +1810,7 @@
     },
     {
       "name": "Research Reflection Guide",
-      "url": "https://docs.google.com/document/d/1FfAtafc2GTtWbLy7HM5NbUNYjoQwavLjTyZoXHdgQvY/edit",
+      "url": "https://docs.google.com/document/d/1YYw8n8HPq3WDx7l7ZfyDeAoMkUCSEIFZb1670RzwKZE/edit",
       "key": "research_reflection_guide",
       "properties": {
         "audience": "Student",

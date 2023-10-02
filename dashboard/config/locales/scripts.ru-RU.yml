@@ -307,6 +307,10 @@ ru:
         ai-ethics-2021:
           description_audience: 6–12 классы
           title: Наш этический кодекс искусственного интеллекта
+        ai-ethics-2023:
+          lessons:
+            lesson-1:
+              name: Наш этический кодекс искусственного интеллекта
         ai-temp:
           title: Как ИИ Работает
         aiml-2021:

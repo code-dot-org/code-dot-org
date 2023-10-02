@@ -10,11 +10,19 @@
           "No": "Ne",
           "Yes": "Da"
         },
+        "CSD U1 IO Pet Chooser 2_2023": {
+          "No": "Ne",
+          "Yes": "Da"
+        },
         "CSD U1 IO Pet Chooser_2021": {
           "No": "Ne",
           "Yes": "Da"
         },
         "CSD U1 IO Pet Chooser_2022": {
+          "No": "Ne",
+          "Yes": "Da"
+        },
+        "CSD U1 IO Pet Chooser_2023": {
           "No": "Ne",
           "Yes": "Da"
         },
@@ -30,11 +38,25 @@
           "Name": "Ime",
           "text": "tekst"
         },
+        "CSD U1 IO Story_2023": {
+          "City": "Grad",
+          "Color": "Boja",
+          "Name": "Ime",
+          "text": "tekst"
+        },
         "CSD U1 processing guess_2021": {
           "text": "tekst"
         },
         "CSD U1 processing guess_2022": {
           "text": "tekst"
+        },
+        "CSD U1 processing guess_2023": {
+          "text": "tekst"
+        },
+        "CSD U1 processing live_2023": {
+          "cat": "mačka",
+          "chicken": "kokoš",
+          "dog": "pas"
         },
         "CSD U1 processing npark_2021": {
           "Sorry!": "Oprosti!"
@@ -42,10 +64,16 @@
         "CSD U1 processing npark_2022": {
           "Sorry!": "Oprosti!"
         },
+        "CSD U1 processing npark_2023": {
+          "Sorry!": "Oprosti!"
+        },
         "CSD U1 storage friends_2021": {
           "Back": "Nazad"
         },
         "CSD U1 storage friends_2022": {
+          "Back": "Nazad"
+        },
+        "CSD U1 storage friends_2023": {
           "Back": "Nazad"
         },
         "CSD U1 storage movies_2021": {
@@ -60,6 +88,12 @@
           "Yes": "Da",
           "text": "tekst"
         },
+        "CSD U1 storage movies_2023": {
+          "No": "Ne",
+          "Star Wars": "Ratovi zvijezda",
+          "Yes": "Da",
+          "text": "tekst"
+        },
         "CSD U1 storage outfit_2021": {
           "black": "crno",
           "green": "zelena"
@@ -68,17 +102,48 @@
           "black": "crno",
           "green": "zelena"
         },
+        "CSD U1 storage outfit_2023": {
+          "black": "crno",
+          "green": "zelena"
+        },
+        "CSD U6 - Accelerometer - PD_2023": {
+          "You did it!": "Uspio si!"
+        },
         "CSD U6 - Accelerometer - PD_2222": {
           "You did it!": "Uspio si!"
+        },
+        "CSD U6 - Board Outputs - A_2023": {
+          "Happy": "Sretnu"
         },
         "CSD U6 - Board Outputs - A_2222": {
           "Happy": "Sretnu"
         },
+        "CSD U6 - Board Outputs - A_mb2022": {
+          "Age": "Godine",
+          "Happy": "Sretnu",
+          "Name": "Ime"
+        },
+        "CSD U6 - Board Outputs - ChalC_mb2022": {
+          "No": "Ne",
+          "Yes": "Da"
+        },
+        "CSD U6 - Board Outputs - SB4_2023": {
+          "Fish": "Riba"
+        },
         "CSD U6 - Board Outputs - SB4_2222": {
           "Fish": "Riba"
         },
+        "CSD U6 - Color LEDs - SB4_2023": {
+          "Medium": "Srednje"
+        },
         "CSD U6 - Color LEDs - SB4_2222": {
           "Medium": "Srednje"
+        },
+        "CSD U6 - Combine Inputs - A_2023": {
+          "green": "zelena",
+          "left": "lijevo",
+          "red": "crvena",
+          "right": "desno"
         },
         "CSD U6 - Combine Inputs - A_2222": {
           "green": "zelena",
@@ -86,25 +151,55 @@
           "red": "crvena",
           "right": "desno"
         },
+        "CSD U6 - Combine Inputs - A_mb2022": {
+          "left": "lijevo",
+          "right": "desno"
+        },
         "CSD U6 - Combine Inputs - CA_2022": {
           "fast": "brzu",
           "long": "dugo",
           "short": "kratko"
+        },
+        "CSD U6 - Combine Inputs - CA_2023": {
+          "fast": "brzu",
+          "long": "dugo",
+          "short": "kratko"
+        },
+        "CSD U6 - Combine Inputs - ChalG_2023": {
+          "Blue": "Plava",
+          "Green": "Zelena",
+          "Red": "Crvena"
         },
         "CSD U6 - Combine Inputs - ChalG_2222": {
           "Blue": "Plava",
           "Green": "Zelena",
           "Red": "Crvena"
         },
+        "CSD U6 - Combine Inputs - PracA_2023": {
+          "left": "lijevo",
+          "right": "desno"
+        },
         "CSD U6 - Combine Inputs - PracA_2222": {
           "left": "lijevo",
           "right": "desno"
+        },
+        "CSD U6 - Combine Inputs - PracC_2023": {
+          "blue": "plavo",
+          "green": "zelena"
         },
         "CSD U6 - Combine Inputs - PracC_2222": {
           "blue": "plavo",
           "green": "zelena"
         },
+        "CSD U6 - Combine Inputs - SB2_2023": {
+          "long": "dugo",
+          "short": "kratko"
+        },
         "CSD U6 - Combine Inputs - SB2_2222": {
+          "long": "dugo",
+          "short": "kratko"
+        },
+        "CSD U6 - Combine Inputs - SB3_2023": {
           "long": "dugo",
           "short": "kratko"
         },
@@ -112,25 +207,72 @@
           "long": "dugo",
           "short": "kratko"
         },
+        "CSD U6 - Combine Inputs - SB4_2023": {
+          "long": "dugo",
+          "short": "kratko"
+        },
         "CSD U6 - Combine Inputs - SB4_2222": {
           "long": "dugo",
           "short": "kratko"
+        },
+        "CSD U6 - Functions - P2C_2023": {
+          "Blue": "Plava",
+          "Red": "Crvena"
         },
         "CSD U6 - Functions - P2C_2222": {
           "Blue": "Plava",
           "Red": "Crvena"
         },
+        "CSD U6 - Functions - P2C_mb2022": {
+          "Blue": "Plava",
+          "Red": "Crvena"
+        },
+        "CSD U6 - If Variables - ChalD_2023": {
+          "+": "+",
+          "-": "-"
+        },
         "CSD U6 - If Variables - ChalD_2222": {
           "+": "+",
           "-": "-"
         },
+        "CSD U6 - If Variables - ChalD_mb2022": {
+          "+": "+",
+          "-": "-"
+        },
+        "CSD U6 - If Variables - SB3_2023": {
+          "Name": "Ime"
+        },
         "CSD U6 - If Variables - SB3_2222": {
           "Name": "Ime"
+        },
+        "CSD U6 - If Variables - SB3_mb2022": {
+          "Name": "Ime"
+        },
+        "CSD U6 - Music - A_2023": {
+          "Happy": "Sretnu"
         },
         "CSD U6 - Music - A_2222": {
           "Happy": "Sretnu"
         },
+        "CSD U6 - Music - ChalD_2023": {
+          "A": "A",
+          "B": "B",
+          "C": "C",
+          "D": "D",
+          "E": "Istok",
+          "F": "F",
+          "G": "G"
+        },
         "CSD U6 - Music - ChalD_2222": {
+          "A": "A",
+          "B": "B",
+          "C": "C",
+          "D": "D",
+          "E": "Istok",
+          "F": "F",
+          "G": "G"
+        },
+        "CSD U6 - Music - Piano_2023": {
           "A": "A",
           "B": "B",
           "C": "C",
@@ -148,7 +290,25 @@
           "F": "F",
           "G": "G"
         },
+        "CSD U6 - Music - SB1_2023": {
+          "A": "A",
+          "B": "B",
+          "C": "C",
+          "D": "D",
+          "E": "Istok",
+          "F": "F",
+          "G": "G"
+        },
         "CSD U6 - Music - SB1_2222": {
+          "A": "A",
+          "B": "B",
+          "C": "C",
+          "D": "D",
+          "E": "Istok",
+          "F": "F",
+          "G": "G"
+        },
+        "CSD U6 - Music - SB2.5_2023": {
           "A": "A",
           "B": "B",
           "C": "C",
@@ -166,6 +326,15 @@
           "F": "F",
           "G": "G"
         },
+        "CSD U6 - Music - SB3_2023": {
+          "A": "A",
+          "B": "B",
+          "C": "C",
+          "D": "D",
+          "E": "Istok",
+          "F": "F",
+          "G": "G"
+        },
         "CSD U6 - Music - SB3_2222": {
           "A": "A",
           "B": "B",
@@ -175,15 +344,43 @@
           "F": "F",
           "G": "G"
         },
+        "CSD U6 - Physical Input - PA_2023": {
+          "Score": "Bodovi"
+        },
         "CSD U6 - Physical Input - PA_2222": {
           "Score": "Bodovi"
+        },
+        "CSD U6 - Physical Input - PA_mb2022": {
+          "Score": "Bodovi"
+        },
+        "CSD U6 - Screen Inputs - ChalB_2023": {
+          "Blue": "Plava",
+          "Green": "Zelena",
+          "Red": "Crvena"
         },
         "CSD U6 - Screen Inputs - ChalB_2222": {
           "Blue": "Plava",
           "Green": "Zelena",
           "Red": "Crvena"
         },
+        "CSD U6 - Screen Inputs - ChalB_mb2022": {
+          "Blue": "Plava",
+          "Green": "Zelena",
+          "Red": "Crvena"
+        },
+        "CSD U6 - Screen Inputs - P_2023": {
+          "Blue": "Plava",
+          "Green": "Zelena",
+          "Red": "Crvena",
+          "Save": "Spremi"
+        },
         "CSD U6 - Screen Inputs - P_2222": {
+          "Blue": "Plava",
+          "Green": "Zelena",
+          "Red": "Crvena",
+          "Save": "Spremi"
+        },
+        "CSD U6 - Screen Inputs - P_mb2022": {
           "Blue": "Plava",
           "Green": "Zelena",
           "Red": "Crvena",
@@ -192,14 +389,44 @@
         "CSD U6 - Screen Inputs - SB2.1_2022": {
           "black": "crno"
         },
+        "CSD U6 - Screen Inputs - SB2.1_2023": {
+          "black": "crno"
+        },
+        "CSD U6 - Screen Inputs - SB2.1_mb2022": {
+          "black": "crno"
+        },
         "CSD U6 - Screen Inputs - SB2.2_2022": {
           "black": "crno"
+        },
+        "CSD U6 - Screen Inputs - SB2.2_2023": {
+          "black": "crno"
+        },
+        "CSD U6 - Screen Inputs - SB2.2_mb2022": {
+          "black": "crno"
+        },
+        "CSD U6 - Screen Outputs - ChalB_2023": {
+          "Happy": "Sretnu"
         },
         "CSD U6 - Screen Outputs - ChalB_2222": {
           "Happy": "Sretnu"
         },
+        "CSD U6 - Screen Outputs - ChalB_mb2022": {
+          "Happy": "Sretnu"
+        },
+        "CSD U6 - Screen Outputs - P_2023": {
+          "title": "naslov"
+        },
         "CSD U6 - Screen Outputs - P_2222": {
           "title": "naslov"
+        },
+        "CSD U6 - Screen Outputs - P_mb2022": {
+          "title": "naslov"
+        },
+        "CSD U6 - Screen Outputs - PracA_2023": {
+          "Blue": "Plava",
+          "Green": "Zelena",
+          "Red": "Crvena",
+          "White": "Bijela"
         },
         "CSD U6 - Screen Outputs - PracA_2222": {
           "Blue": "Plava",
@@ -207,19 +434,55 @@
           "Red": "Crvena",
           "White": "Bijela"
         },
+        "CSD U6 - Screen Outputs - PracA_mb2022": {
+          "Blue": "Plava",
+          "Green": "Zelena",
+          "Red": "Crvena",
+          "White": "Bijela"
+        },
+        "CSD U6 - Screen Outputs - PracB_2023": {
+          "down": "dolje",
+          "left": "lijevo",
+          "right": "desno",
+          "up": "gore"
+        },
         "CSD U6 - Screen Outputs - PracB_2222": {
           "down": "dolje",
           "left": "lijevo",
           "right": "desno",
           "up": "gore"
         },
+        "CSD U6 - Screen Outputs - PracB_mb2022": {
+          "down": "dolje",
+          "left": "lijevo",
+          "right": "desno",
+          "up": "gore"
+        },
+        "CSD U6 - Screen Outputs - SB1.1_2023": {
+          "name": "ime"
+        },
         "CSD U6 - Screen Outputs - SB1.1_2222": {
           "name": "ime"
+        },
+        "CSD U6 - Screen Outputs - SB1.1_mb2022": {
+          "name": "ime"
+        },
+        "CSD U6 - Sensors - P_2023": {
+          "text": "tekst"
         },
         "CSD U6 - Sensors - P_2222": {
           "text": "tekst"
         },
+        "CSD U6 - Sensors - P_mb2022": {
+          "text": "tekst"
+        },
+        "CSD U6 - Sensors - SB2_2023": {
+          "Update": "Osvježi"
+        },
         "CSD U6 - Sensors - SB2_2222": {
+          "Update": "Osvježi"
+        },
+        "CSD U6 - Sensors - SB2_mb2022": {
           "Update": "Osvježi"
         },
         "CSD U6 Driver pt 2": {
@@ -683,6 +946,12 @@
           "F": "F",
           "G": "G"
         },
+        "LLM - Written Voice Simulator_ai23": {
+          "Back": "Nazad"
+        },
+        "U9L5 Cropping Widget_ai2023": {
+          "Reset": "Ispočetka"
+        },
         "allthethings design mode elements": {
           "text": "tekst"
         },
@@ -698,10 +967,16 @@
         "csd u5 recommender sample_2022": {
           "Start": "Početak"
         },
+        "csd u5 recommender sample_2023": {
+          "Start": "Početak"
+        },
         "csd-apps for good-2": {
           "Next": "Sljedeći"
         },
         "csd-apps for good-2_2022": {
+          "Next": "Sljedeći"
+        },
+        "csd-apps for good-2_2023": {
           "Next": "Sljedeći"
         },
         "csd-apps for good-3": {
@@ -710,10 +985,16 @@
         "csd-apps for good-3_2022": {
           "???": "???"
         },
+        "csd-apps for good-3_2023": {
+          "???": "???"
+        },
         "csd-explore ui-2": {
           "Next": "Sljedeći"
         },
         "csd-explore ui-2_2022": {
+          "Next": "Sljedeći"
+        },
+        "csd-explore ui-2_2023": {
           "Next": "Sljedeći"
         },
         "csd-explore ui-4": {
@@ -722,10 +1003,16 @@
         "csd-explore ui-4_2022": {
           "Sorry!": "Oprosti!"
         },
+        "csd-explore ui-4_2023": {
+          "Sorry!": "Oprosti!"
+        },
         "csd-explore ui-6": {
           "Next": "Sljedeći"
         },
         "csd-explore ui-6_2022": {
+          "Next": "Sljedeći"
+        },
+        "csd-explore ui-6_2023": {
           "Next": "Sljedeći"
         },
         "ml-L2 supervised - green glass door-2021": {
@@ -734,10 +1021,16 @@
         "ml-L2 supervised - green glass door_2022": {
           "Accepted": "Prihvaćeno"
         },
+        "ml-L2 supervised - green glass door_2023": {
+          "Accepted": "Prihvaćeno"
+        },
         "ml-L2 unsupervised - 1-2021": {
           "Next": "Sljedeći"
         },
         "ml-L2 unsupervised - 1_2022": {
+          "Next": "Sljedeći"
+        },
+        "ml-L2 unsupervised - 1_2023": {
           "Next": "Sljedeći"
         },
         "ml-customize-raspado-2021": {
@@ -745,6 +1038,10 @@
           "yes": "da"
         },
         "ml-customize-raspado_2022": {
+          "no": "ne",
+          "yes": "da"
+        },
+        "ml-customize-raspado_2023": {
           "no": "ne",
           "yes": "da"
         },
@@ -756,10 +1053,17 @@
           "Continue": "Nastavi",
           "Loading...": "Učitavanje..."
         },
+        "ml-intro ai lab- fruit veggie widget_2023": {
+          "Continue": "Nastavi",
+          "Loading...": "Učitavanje..."
+        },
         "ml-intro app lab-book recommender demo-2021": {
           "Silly": "Smiješnu"
         },
         "ml-intro app lab-book recommender demo_2022": {
+          "Silly": "Smiješnu"
+        },
+        "ml-intro app lab-book recommender demo_2023": {
           "Silly": "Smiješnu"
         },
         "ml-model card-medical app v2 2021-2": {
@@ -774,16 +1078,28 @@
           "no": "ne",
           "yes": "da"
         },
+        "ml-model card-medical app v2 2021-2_2023": {
+          "A": "A",
+          "W": "Zapad",
+          "no": "ne",
+          "yes": "da"
+        },
         "ml-model cards-book recommender model card": {
           "Silly": "Smiješnu"
         },
         "ml-model cards-book recommender model card_2022": {
           "Silly": "Smiješnu"
         },
+        "ml-model cards-book recommender model card_2023": {
+          "Silly": "Smiješnu"
+        },
         "ml-models in applab-choice intended warnings": {
           "Back": "Nazad"
         },
         "ml-models in applab-choice intended warnings_2022": {
+          "Back": "Nazad"
+        },
+        "ml-models in applab-choice intended warnings_2023": {
           "Back": "Nazad"
         },
         "ml-models in applab-zoo assessment": {
@@ -796,11 +1112,20 @@
           "No": "Ne",
           "Yes": "Da"
         },
+        "ml-models in applab-zoo assessment_2023": {
+          "B": "B",
+          "No": "Ne",
+          "Yes": "Da"
+        },
         "ml-models in applab-zoo model embed": {
           "No": "Ne",
           "Yes": "Da"
         },
         "ml-models in applab-zoo model embed_2022": {
+          "No": "Ne",
+          "Yes": "Da"
+        },
+        "ml-models in applab-zoo model embed_2023": {
           "No": "Ne",
           "Yes": "Da"
         },
@@ -811,6 +1136,12 @@
           "snow": "snijeg"
         },
         "ml-use model card-example3A_2022": {
+          "cloudy": "oblaci",
+          "night": "noć",
+          "rain": "kiša",
+          "snow": "snijeg"
+        },
+        "ml-use model card-example3A_2023": {
           "cloudy": "oblaci",
           "night": "noć",
           "rain": "kiša",

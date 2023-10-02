@@ -57,6 +57,7 @@ CROWDIN_TEST_PROJECTS = {
 class I18nScriptUtils
   PROGRESS_BAR_FORMAT = '%t: |%B| %p% %a'.freeze
   PARALLEL_PROCESSES = Parallel.processor_count / 2
+  SOURCE_LOCALE = 'en-US'.freeze
 
   # Because we log many of the i18n operations to slack, we often want to
   # explicitly force stdout to operate synchronously, rather than buffering
@@ -310,6 +311,13 @@ class I18nScriptUtils
     locale.tr('-', '_').downcase
   end
 
+  # Wraps hash in correct format to be loaded by our i18n backend.
+  # This will most likely be JSON file data due to Crowdin only
+  # setting the locale for yml files.
+  def self.to_dashboard_i18n_data(locale, type, i18n_data)
+    {locale => {'data' => {type => i18n_data}}}
+  end
+
   def self.sort_and_sanitize(hash)
     hash.sort_by {|key, _| key}.each_with_object({}) do |(key, value), result|
       case value
@@ -368,6 +376,15 @@ class I18nScriptUtils
     Parallel.each(data_array, **args, in_threads: PARALLEL_PROCESSES) {|data| yield(data)}
   end
 
+  # Writes file
+  #
+  # @param file_path [String] path to the file
+  # @param content [String] the file content
+  def self.write_file(file_path, content)
+    FileUtils.mkdir_p(File.dirname(file_path))
+    File.write(file_path, content)
+  end
+
   # Copies file
   #
   # @param file_path [String] path to the file
@@ -378,10 +395,20 @@ class I18nScriptUtils
     FileUtils.cp(file_path, dest_path)
   end
 
+  # Moves file
+  #
+  # @param file_path [String] path to the file
+  # @param dest_path [String] destination path
+  def self.move_file(file_path, dest_path)
+    dest_dir = File.extname(dest_path).empty? ? dest_path : File.dirname(dest_path)
+    FileUtils.mkdir_p(dest_dir)
+    FileUtils.mv(file_path, dest_path, force: true)
+  end
+
   # Renames directory
   #
-  # @param [String] from_dir, e.g. `i18n/locales/English/resource`
-  # @param [String] to_dir, e.g. `i18n/locales/en-US/resource`
+  # @param from_dir [String] the original directory path name, e.g. `i18n/locales/English/resource`
+  # @param to_dir [String] the new directory path name, e.g. `i18n/locales/en-US/resource`
   def self.rename_dir(from_dir, to_dir)
     FileUtils.mkdir_p(to_dir)
     FileUtils.cp_r File.join(from_dir, '.'), to_dir
@@ -397,5 +424,13 @@ class I18nScriptUtils
     return unless Dir.empty?(dir)
 
     FileUtils.rm_r(dir)
+  end
+
+  # Checks if the language is the i18n source language
+  #
+  # @param lang [PegasusLanguage] a pegasus language object
+  # @return [true, false]
+  def self.source_lang?(lang)
+    lang[:locale_s] == SOURCE_LOCALE
   end
 end

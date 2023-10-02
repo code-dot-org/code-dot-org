@@ -1518,16 +1518,6 @@ FactoryBot.define do
     school_type {SchoolInfo::SCHOOL_TYPE_PUBLIC}
     name {"A seattle public school"}
     with_district
-
-    state_school_id {School.construct_state_school_id(state, school_district.try(:id), id)}
-
-    trait :without_state_school_id do
-      state_school_id {nil}
-    end
-
-    trait :with_invalid_state_school_id do
-      state_school_id {"123456789"}
-    end
   end
 
   factory :private_school, parent: :school_common do
@@ -1841,5 +1831,11 @@ FactoryBot.define do
 
   factory :learning_goal_evaluation do
     association :learning_goal
+  end
+
+  factory :learning_goal_ai_evaluation do
+    association :learning_goal
+    association :user, factory: :student
+    understanding {0}
   end
 end

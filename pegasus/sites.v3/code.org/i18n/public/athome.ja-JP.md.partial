@@ -13,7 +13,7 @@ theme: responsive
   <img src="/images/marketing/fit-318x212/mother-helping-her-daughter-use-a-laptop-4260325.jpg" style="width:100%" alt="お母さんが娘がノートパソコンを使用する手助けをする">
 </div>
 
-<p>あなたが親/保護者または独自に学習する学生であるかに関わらず、以下のオプションは人を引き付け、コンピューターサイエンスの探索を始めることを気軽に試せる方法です。</p>
+<p>保護者または保護者の方も、独学で学習する学生の方も、コンピュータサイエンスの探求を始めるための魅力的で簡単に試せる方法として、以下の選択肢があります。</p>
 <ul>
     <li><a class="linktag" id="hoc-nav" href="#hoc">1時間のコードを試す</a></li>
     <li><a class="linktag" id="videos-nav" href="#videos">コンピューターサイエンスの基礎の関する短編動画シリーズを見る</a></li>
@@ -38,8 +38,8 @@ theme: responsive
       </a>
     <div class="tutorial-info" style="background-color: #ffffff; border: 1px solid #696969; border-top: none; border-radius: 0 0 15px 15px; padding: 15px 25px 25px 25px">
       <span>
-        <h3 class="tutorial-info-h" style="text-align: left; margin-top:10px; margin-bottom:10px"><strong>ダンスパーティー</strong></h3>
-        <div class="smalltext" style="text-align: left; margin-bottom: 10px">ダンスパーティーをコーディングして友達や家族と共有しましょう。 Beyoncé、Harry Styles、Lizzo、Lil Nas X、Selena Gomez、Disneyの「エンカント」の音楽などが登場！</div>
+        <h3 class="tutorial-info-h" style="text-align: left; margin-top:10px; margin-bottom:10px"></h3>
+        <div class="smalltext" style="text-align: left; margin-bottom: 10px">ダンスパーティーコード友達や家族と共有するダンスパーティー. Beyoncé、Harry Styles、Lizzo、Lil Nas X、Selena Gomez、Disneyの「エンカント」の音楽などが登場！</div>
         <a class="linktag" id="danceparty" href="/dance" target="_blank"><button>アクティビティを試します</button></a>
     </span>
   </div>
@@ -53,8 +53,8 @@ theme: responsive
       </a>
     <div class="tutorial-info" style="background-color: #ffffff; border: 1px solid #696969; border-top: none; border-radius: 0 0 15px 15px; padding: 15px 25px 25px 25px">
       <span>
-        <h3 class="tutorial-info-h" style="text-align: left; margin-top:10px; margin-bottom: 10px"><strong>マインクラフトアワーオブコード</strong></h3>
-        <div class="smalltext" style="text-align: left; margin-bottom: 10px">マインクラフトがまったく新しいアクティビティでアワーオブコードに戻ってきました！ Journey through コード付きマインクラフトを通した課程</div>
+        <h3 class="tutorial-info-h" style="text-align: left; margin-top:10px; margin-bottom: 10px"></h3>
+        <div class="smalltext" style="text-align: left; margin-bottom: 10px">マインクラフトアワーオブコードマインクラフトがまったく新しいアクティビティでアワーオブコードに戻ってきました！ Journey through コード付きマインクラフトを通した課程</div>
         <br>
         <a class="linktag" id="minecraft" href="/minecraft" target="_blank"><button>アクティビティを試す</button></a>
     </span>
@@ -69,8 +69,8 @@ theme: responsive
       </a>
     <div class="tutorial-info" style="background-color: #ffffff; border: 1px solid #696969; border-top: none; border-radius: 0 0 15px 15px; padding: 15px 25px 25px 25px">
       <span>
-        <h3 class="tutorial-info-h" style="text-align: left; margin-top:10px; margin-bottom:10px"><strong>AI for Oceans</strong></h3>
-        <div class="smalltext" style="text-align: left; margin-bottom: 10px">ゴミを検出するように訓練することで、人工知能が海をきれいにするのを手伝ってください！ トレーニングデータおよびバイアス、および AI がどのように世界の問題に対処するかを学びましょう。 <a class="linktag" id="oceans-lesson" href="https://curriculum.code.org/hoc/plugged/9/" target="_blank">レッスンプラン</a>をご覧ください。</div>
+        <h3 class="tutorial-info-h" style="text-align: left; margin-top:10px; margin-bottom:10px">AI for Oceans</h3>
+        <div class="smalltext" style="text-align: left; margin-bottom: 10px">ゴミを検知するように人工知能を訓練して海をきれいにするのを手伝おう！ トレーニングデータおよびバイアス、および AI がどのように世界の問題に対処するかを学びましょう。 <a class="linktag" id="oceans-lesson" href="https://curriculum.code.org/hoc/plugged/9/" target="_blank">レッスンプラン</a>をご覧ください。</div>
         <a class="linktag" id="aiforoceans" href="https://studio.code.org/s/oceans/lessons/1/levels/1" target="_blank"><button>Try activity</button></a>
     </span>
   </div>
@@ -96,9 +96,9 @@ theme: responsive
       </a>
     <div class="tutorial-info" style="background-color: #ffffff; border: 1px solid #696969; border-top: none; border-radius: 0 0 15px 15px; padding: 15px 25px 25px 25px">
       <span>
-        <h3 class="tutorial-info-h" style="text-align: left; margin-top:10px; margin-bottom:10px"><strong>コンピューターのしくみ</strong></h3>
-        <div class="smalltext" style="text-align: left; margin-bottom: 10px">ビル・ゲイツによる紹介のもと、この6つの短いビデオシリーズでは、コンピューターがコンピューターになる理由とコンピューター回路の仕組みを説明しています。</div>
-        <a class="linktag" id="howcomputers" href="https://www.youtube.com/watch?v=OAx_6-wdslM&list=PLzdnOPI1iJNcsRwJhvksEo1tJqjIqWbN-" target="_blank"><button>ビデオシリーズを見る</button></a>
+        <h3 class="tutorial-info-h" style="text-align: left; margin-top:10px; margin-bottom:10px">コンピューターのしくみ Bill</h3>
+        <div class="smalltext" style="text-align: left; margin-bottom: 10px">Gatesによる紹介とともに、この6つの短いビデオシリーズでは、コンピューターがコンピューターになる理由とコンピューター回路の仕組みについて説明しています。</div>
+        <a class="linktag" id="howcomputers" href="https://www.youtube.com/watch?v=OAx_6-wdslM&list=PLzdnOPI1iJNcsRwJhvksEo1tJqjIqWbN-" target="_blank"><button>ビデオシリーズをご覧ください。</button></a>
     </span>
   </div>
 </div>
@@ -111,9 +111,9 @@ theme: responsive
       </a>
     <div class="tutorial-info" style="background-color: #ffffff; border: 1px solid #696969; border-top: none; border-radius: 0 0 15px 15px; padding: 15px 25px 25px 25px">
       <span>
-        <h3 class="tutorial-info-h" style="text-align: left; margin-top:10px; margin-bottom: 10px"><strong>How the Internet Works</strong></h3>
-        <div class="smalltext" style="text-align: left; margin-bottom: 10px">In this series of eight short videos, you’ll learn how the internet was invented, what HTML is, and how search engines like Google work.</div>
-        <a class="linktag" id="howinternet" href="https://www.youtube.com/watch?v=Dxcc6ycZ73M&list=PLzdnOPI1iJNfMRZm5DDxco3UdsFegvuB7-" target="_blank"><button>Watch the video series</button></a>
+        <h3 class="tutorial-info-h" style="text-align: left; margin-top:10px; margin-bottom: 10px"></h3>
+        <div class="smalltext" style="text-align: left; margin-bottom: 10px">インターネットの仕組みこの8本の短い動画シリーズでは、インターネットがどのように発明されたか、HTMLとは何か、Googleのような検索エンジンがどのように機能するのかを学びます。</div>
+        <a class="linktag" id="howinternet" href="https://www.youtube.com/watch?v=Dxcc6ycZ73M&list=PLzdnOPI1iJNfMRZm5DDxco3UdsFegvuB7-" target="_blank"><button>ビデオシリーズをご覧ください。</button></a>
     </span>
   </div>
 </div>
@@ -126,8 +126,8 @@ theme: responsive
       </a>
     <div class="tutorial-info" style="background-color: #ffffff; border: 1px solid #696969; border-top: none; border-radius: 0 0 15px 15px; padding: 15px 25px 25px 25px">
       <span>
-        <h3 class="tutorial-info-h" style="text-align: left; margin-top:10px; margin-bottom: 10px"><strong>AI の仕組み</strong></h3>
-        <div class="smalltext" style="text-align: left; margin-bottom: 10px">このショートビデオシリーズで、AI の仕組みと重要性について学びましょう。 Microsoft CEO の Satya Nadella および多様な専門家が出演します。 </div>
+        <h3 class="tutorial-info-h" style="text-align: left; margin-top:10px; margin-bottom: 10px">AI のしくみ AI の仕組みこの短い動画シリーズで、AI</h3>
+        <div class="smalltext" style="text-align: left; margin-bottom: 10px">の仕組みと重要性について学びましょう。 Microsoft CEO の Satya Nadella および多様な専門家が出演します。 </div>
         <a class="linktag" id="ai-videos" href="/ai#ai-videos" target="_blank"><button>本ビデオシリーズを見る</button></a>
     </span>
   </div>
@@ -162,7 +162,7 @@ theme: responsive
 <a class="linktag" id="prereader-course" href="https://studio.code.org/s/pre-express-2019" target="_blank"><img src="/images/curriculum/course-tile-pre-reader-express.png" style="width: 100%" alt="予習者お急ぎコース"></a><br><a class="linktag" id="prereader-course" href="https://studio.code.org/s/pre-express-2019" target="_blank">予習者向けお急ぎコース</a>
 
 </div>
-<div style="clear: both"></div>
+<div style="clear: both; margin-bottom: 2rem"></div>
 
 <h3>自分のペースで進められるゲームラボおよびアプリラボ入門</h3>
 <p>本校の CS Discoveries および CS Principles コースから調整された、これらの短期、自分ペースのモジュールはあらゆるプログラミング言語およびツールに及ぶコンセプトを学ぶ素晴らしい方法です。  <i>アクセスするためには Code.org アカウントが必要です</i>。</p>
@@ -176,8 +176,8 @@ theme: responsive
       </a>
     <div class="tutorial-info" style="background-color: #ffffff; border: 1px solid #696969; border-top: none; border-radius: 0 0 15px 15px; padding: 15px 25px 25px 25px">
       <span>
-        <h3 class="tutorial-info-h" style="text-align: left; margin-top:10px; margin-bottom:10px"><strong>Game Lab 入門</strong></h3>
-        <div class="smalltext" style="text-align: left; margin-bottom: 10px">Game Lab のプログラムアニメーション、インタラクティブアート、ゲーム 単純な形状から始めて、 更に洗練されたスプライトベースのアニメーションおよびゲームを構築しましょう。</div>
+        <h3 class="tutorial-info-h" style="text-align: left; margin-top:10px; margin-bottom:10px">Game Lab</h3>
+        <div class="smalltext" style="text-align: left; margin-bottom: 10px">プログラムのアニメーション、インタラクティブアート、Game Lab のゲームの紹介 単純な形状から始めて、 更に洗練されたスプライトベースのアニメーションおよびゲームを構築しましょう。</div>
         <a class="linktag" id="gamelab-intro" href="https://studio.code.org/s/csd3-virtual" target="_blank"><button>モジュールを試す</button></a>
     </span>
   </div>
@@ -191,9 +191,9 @@ theme: responsive
       </a>
     <div class="tutorial-info" style="background-color: #ffffff; border: 1px solid #696969; border-top: none; border-radius: 0 0 15px 15px; padding: 15px 25px 25px 25px">
       <span>
-        <h3 class="tutorial-info-h" style="text-align: left; margin-top:10px; margin-bottom: 10px"><strong>App Lab でのタートルプログラミング</strong></h3>
-        <div class="smalltext" style="text-align: left; margin-bottom: 10px">簡単な JavaScript コマンドを使用して、仮想「タートル」を使用して図形や画像を描画します。自分だけのデジタルシーンをデザインしてプログラミングしよう！</div>
-        <a class="linktag" id="turtle-applab" href="https://studio.code.org/s/csp3-virtual" target="_blank"><button>モジュールをお試しください</button></a>
+        <h3 class="tutorial-info-h" style="text-align: left; margin-top:10px; margin-bottom: 10px">App Lab</h3>
+        <div class="smalltext" style="text-align: left; margin-bottom: 10px">でのタートルプログラミング簡単な JavaScript コマンドを使用して、仮想「タートル」を使って図形や画像を描きます。自分だけのデジタルシーンをデザインしてプログラミングしよう！</div>
+        <a class="linktag" id="turtle-applab" href="https://studio.code.org/s/csp3-virtual" target="_blank"><button>このモジュールを試してみよう</button></a>
     </span>
   </div>
 </div>
@@ -206,8 +206,8 @@ theme: responsive
       </a>
     <div class="tutorial-info" style="background-color: #ffffff; border: 1px solid #696969; border-top: none; border-radius: 0 0 15px 15px; padding: 15px 25px 25px 25px">
       <span>
-        <h3 class="tutorial-info-h" style="text-align: left; margin-top:10px; margin-bottom: 10px"><strong>アプリラボでのイベント駆動型プログラミング</strong></h3>
-        <div class="smalltext" style="text-align: left; margin-bottom: 10px">クリックやキーの押下に応答するアプリの設計を学びましょう。 ウェブ上で生きる一連の単純なアプリケーション (アプリ) を作成します!</div>
+        <h3 class="tutorial-info-h" style="text-align: left; margin-top:10px; margin-bottom: 10px">App Lab</h3>
+        <div class="smalltext" style="text-align: left; margin-bottom: 10px">でのイベント駆動型プログラミングクリックやキーの押下に応答するアプリの設計を学びましょう。 ウェブ上で生きる一連の単純なアプリケーション (アプリ) を作成します!</div>
         <a class="linktag" id="events-applab" href="https://studio.code.org/s/csp5-virtual" target="_blank"><button>モジュールを試す</button></a>
     </span>
   </div>
@@ -230,7 +230,7 @@ theme: responsive
 
 <div class="col-33" style="padding:15px; border-radius:15px; border:10px solid white; background-color:#00adbc">
   <div style="width: 87%; float: left">
-    <a class="linktag" id="applab" href="https://code.org/educate/applab" style="text-decoration:none" target="_blank"><h3 style="color:#ffffff; margin:0; margin-bottom:5px; text-decoration:none"><strong>アプリラボ</strong></h3></a>
+    <a class="linktag" id="applab" href="https://code.org/educate/applab" style="text-decoration:none" target="_blank"><h3 style="color:#ffffff; margin:0; margin-bottom:5px; text-decoration:none">アプリラボ</h3></a>
     <p style="color:#ffffff">アプリラボは単純なアプリを作成できるプログラミング環境です。 アプリをデザイン、ブロックまたはJavaScript でコーディングして動作させて、あなたのアプリを数秒で構築しましょう。</p>
     <a class="linktag" id="applab" href="https://code.org/educate/applab" target="_blank"><button style="background-color:#e7e8ea; border-color:#e7e8ea; color:#696969">アプリを構築</button></a>
   </div>
@@ -239,7 +239,7 @@ theme: responsive
 
 <div class="col-33" style="padding:15px; border-radius:15px; border:10px solid white; background-color:#00adbc">
   <div style="width: 87%; float: left">
-    <a class="linktag" id="gamelab" href="https://code.org/educate/gamelab" style="text-decoration:none" target="_blank"><h3 style="color:#ffffff; margin:0; margin-bottom:5px; text-decoration:none"><strong>ゲームラボ</strong></h3></a>
+    <a class="linktag" id="gamelab" href="https://code.org/educate/gamelab" style="text-decoration:none" target="_blank"><h3 style="color:#ffffff; margin:0; margin-bottom:5px; text-decoration:none">ゲームラボ</h3></a>
     <p style="color:#ffffff">ゲームラボは互いに交流するオブジェクトとキャラクターを使用してシンプルなアニメーションとゲームを作成できるプログラミング環境です。</p>
     <br>
     <a class="linktag" id="gamelab" href="https://code.org/educate/gamelab" target="_blank"><button style="background-color:#e7e8ea; border-color:#e7e8ea; color:#696969">ゲームを作成</button></a>
@@ -249,7 +249,7 @@ theme: responsive
 
 <div class="col-33" style="padding:15px; border-radius:15px; border:10px solid white; background-color:#00adbc">
   <div style="width: 87%; float: left">
-    <a class="linktag" id="weblab" href="https://code.org/educate/weblab" style="text-decoration:none" target="_blank"><h3 style="color:#ffffff; margin:0; margin-bottom:5px; text-decoration:none"><strong>ウェブラボ</strong></h3></a>
+    <a class="linktag" id="weblab" href="https://code.org/educate/weblab" style="text-decoration:none" target="_blank"><h3 style="color:#ffffff; margin:0; margin-bottom:5px; text-decoration:none">ウェブラボ</h3></a>
     <p style="color:#ffffff">ウェブラボはHTML および CSS を使用して単純なウェブページを作成できるプログラミング環境です。 あなたのウェブページをデザインして数秒であなたのサイトをシェアしましょう。</p>
     <br>
     <a class="linktag" id="weblab" href="https://code.org/educate/weblab" target="_blank"><button style="background-color:#e7e8ea; border-color:#e7e8ea; color:#696969">ウェブページを作成</button></a>
@@ -286,16 +286,12 @@ theme: responsive
 
 <h2>家にコンピューターがありませんか? 本校のパートナーからのアプリを使って CS をお使いの電話で試して見ましょう </h2>
 
-<div class="col-33" style="padding-right: 30px; padding-bottom:40px">
-  <a class="linktag" id="box-island" href="https://boxisland.io/" target="_blank"><img src="images/tutorials/new/boxisland.jpg" style="width: 100%" alt="ボックスアイランド"></a><br><a class="linktag" id="box-island" href="https://boxisland.io/" target="_blank"><h3 style="color:#7665a0"><strong>ボックスアイランド</strong></h3></a>アルゴリズム、パターン認識、順序、ループおよび if 文などのコーディングの基礎を教えながら、学習者をワクワクする冒険に連れて行くチャーミングなモバイルコーディングゲームです。 <i>(全年齢向き)</i>
+<div class="col-50" style="padding-right: 30px; padding-bottom:40px">
+  <a class="linktag" id="box-island" href="https://boxisland.io/" target="_blank"><img src="images/tutorials/new/boxisland.jpg" style="width: 100%" alt="ボックスアイランド"></a><br><a class="linktag" id="box-island" href="https://boxisland.io/" target="_blank"><h3 style="margin-top: 1rem;">Box Island</h3></a>アルゴリズム、パターン認識、シーケンス、ループ、条件などのコーディングの基礎を教えながら、学習者をエキサイティングな冒険に連れて行ってくれる魅力的なモバイルコーディングゲームです。 <i>(全年齢向き)</i>
 </div>
 
-<div class="col-33" style="padding-right: 30px; padding-bottom:40px">
-  <a class="linktag" id="codespark" href="https://accounts.codespark.com/promo?utm_source=codeorg&utm_medium=referral&utm_campaign=schoolsclosed-parents&utm_content=offer&promoCode=schoolclosed" target="_blank"><img src="/images/tutorials/hoc2018/codespark_create.jpg" style="width: 100%" alt="codeSpark"></a><br><a class="linktag" id="codespark" href="https://accounts.codespark.com/promo?utm_source=codeorg&utm_medium=referral&utm_campaign=schoolsclosed-parents&utm_content=offer&promoCode=schoolclosed" target="_blank"><h3 style="color:#7665a0"><strong>codeSpark</strong></h3></a>受賞歴のある 5～9歳のお子様向けのコーディングを学ぶプラットフォームです。 コーディングを学びながら、The Foos でパズルを解いてゲームを作成します。 <strong>注: codeSpark は無料の 3ヶ月トライアルを提供します。 ご父兄のメールアドレスおよびクレジットカード情報がサインアップの際に必要です。</strong> <i>(第5学年を通した予習者向け)</i>
-</div>
-
-<div class="col-33" style="padding-right: 30px; padding-bottom:40px">
-  <a class="linktag" id="grasshopper" href="https://grasshopper.app/" target="_blank"><img src="/images/athome/grasshopper.png" style="width: 100%" alt="グラスホッパー"></a><br><a class="linktag" id="grasshopper" href="https://grasshopper.app/" target="_blank"><h3 style="color:#7665a0"><strong>グラスホッパー</strong></h3></a>楽しんでコーディングを学び、本物の JavaScript の書き方を自習する、お使いの電話によるクイックレッスン。 グーグルプログラムでのコード。 <i>(中学生以上向け)</i>
+<div class="col-50" style="padding-right: 30px; padding-bottom:40px">
+  <a class="linktag" id="codespark" href="https://accounts.codespark.com/promo?utm_source=codeorg&utm_medium=referral&utm_campaign=schoolsclosed-parents&utm_content=offer&promoCode=schoolclosed" target="_blank"><img src="/images/tutorials/hoc2018/codespark_create.jpg" style="width: 100%" alt="codeSpark"></a><br><a class="linktag" id="codespark" href="https://accounts.codespark.com/promo?utm_source=codeorg&utm_medium=referral&utm_campaign=schoolsclosed-parents&utm_content=offer&promoCode=schoolclosed" target="_blank"><h3 style="margin-top: 1rem;"></h3></a>CodeSpark賞を受賞した5歳から9歳の子供向けのコーディング学習プラットフォーム。 コーディングを学びながら、The Foos でパズルを解いてゲームを作成します。 <strong>注: codeSpark は無料の 3ヶ月トライアルを提供します。 ご父兄のメールアドレスおよびクレジットカード情報がサインアップの際に必要です。</strong> <i>(第5学年を通した予習者向け)</i>
 </div>
 
 <div style="clear: both; margin-bottom: 15px"></div>
@@ -312,8 +308,8 @@ theme: responsive
       </a>
     <div class="tutorial-info" style="background-color: #ffffff; border: 1px solid black; border-top: none; border-radius: 0 0 15px 15px; padding: 15px 25px 25px 25px">
       <span>
-        <h3 class="tutorial-info-h" style="margin-top:10px"><strong>CodeBytes</strong></h3>
-        <div class="smalltext" style="color: dimgray;">CodeBytes は、コンピュータサイエンスと現実世界のトピックを融合させた、わかりやすい20分のインタラクティブなレッスンです。 AI をトレーニングして手話を読み取る、便利なアプリをデザインする、explore the world of Minecraft, and more!</div>
+        <h3 class="tutorial-info-h" style="margin-top:10px">CodeBytes</h3>
+        <div class="smalltext" style="color: dimgray;">CodeBytes は、コンピューターサイエンスと現実世界のトピックを融合させた、わかりやすい20分のインタラクティブなレッスンです。 AI をトレーニングして手話を読み取る、便利なアプリをデザインする、explore the world of Minecraft, and more!</div>
         <br>
         <br>
         <a class="linktag" id="codebytes" href="https://code.org/codebytes" target="_blank"><button>エピソードを見る</button></a>
@@ -329,7 +325,7 @@ theme: responsive
       </a>
     <div class="tutorial-info" style="background-color: #ffffff; border: 1px solid black; border-top: none; border-radius: 0 0 15px 15px; padding: 15px 25px 25px 25px">
       <span>
-        <h3 class="tutorial-info-h" style="margin-top:10px"><strong>コードブレーク</strong></h3>
+        <h3 class="tutorial-info-h" style="margin-top:10px">Code Break</h3>
         <div class="smalltext" style="">コードブレイクをしてコンピュータサイエンスを楽しくしましょう！ Ashton Kutcherと暗号を作成、Yara Shahidiと変数について学び、インターネットの実際の発明者、Vint Cerfとインターネットがどのように機能するかを探索します!</div>
         <br>
         <a class="linktag" id="codebreak" href="https://code.org/break" target="_blank"><button>接続</button></a>

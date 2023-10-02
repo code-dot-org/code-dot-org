@@ -53,9 +53,11 @@ th:
         gender: 'เพศ'
         edit_header: 'แก้ไขรายละเอียดบัญชี'
         finish_sign_up_header: 'เสร็จสิ้นการสร้างบัญชีผู้ใช้ของคุณ'
+        finish_sign_up_header_error: 'โปรดแก้ไขข้อผิดพลาดต่อไปนี้:'
         reset_password_token: "ลิงก์รีเซ็ตรหัสผ่านที่คุณได้ติดตาม"
         error:
           future: ไม่สามารถทำได้ในอนาคต
+        user_type: 'ประเภทบัญชี'
         us_state: 'รัฐ'
   beta: "เบต้า"
   hello: "สวัสดีชาวโลก"

@@ -9,6 +9,7 @@ si:
         email: විද්‍යුත් තැපැල
         error:
           future: අනාගතයේදී විය නොහැකිය
+        finish_sign_up_header_error: 'කරුණාකර පහත දෝෂ නිවැරදි කරන්න:'
         gender: ස්ත්‍රී/පුරුෂ භාවය
         locale: භාෂාව
         name: ප්‍රදර්ශක නාමය
@@ -20,6 +21,7 @@ si:
           නැති නම් මෙතන ඔබන්න)</a>
         personal_email_markdown: පෞද්ගලික e-තැපැල් ලිපිනය [(ඔබට e-තැපැල් ලිපිනයක්
           නැති නම් මෙතන ඔබන්න)](%{url})
+        user_type: ගිණුම් වර්ගය
         username: පරිශීලක නාමය
     errors:
       messages:
