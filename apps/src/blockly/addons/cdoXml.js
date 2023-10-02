@@ -49,12 +49,14 @@ export default function initializeBlocklyXml(blocklyWrapper) {
       xml,
       PROCEDURE_DEFINITION_TYPES
     );
+
     const blocks = [];
     // To position the blocks, we first render them all to the Block Space
     //  and parse any X or Y coordinates set in the XML. Then, we store
     //  the rendered blocks and the coordinates in an array so that we can
     //  position them.
     partitionedBlockElements.forEach(xmlChild => {
+      addMutationToMinitoolboxBlocks(xmlChild);
       const blockly_block = Blockly.Xml.domToBlock(xmlChild, workspace);
       const x = parseInt(xmlChild.getAttribute('x'), 10);
       const y = parseInt(xmlChild.getAttribute('y'), 10);
@@ -71,6 +73,17 @@ export default function initializeBlocklyXml(blocklyWrapper) {
   blocklyWrapper.Xml.blockSpaceToDom = blocklyWrapper.Xml.workspaceToDom;
 
   blocklyWrapper.Xml.createBlockOrderMap = createBlockOrderMap;
+}
+
+// CDO Blockly uses an unsupported method for serializing miniflyout state.
+// We need to use a mutation element instead with the expected attribute.
+export function addMutationToMinitoolboxBlocks(blockElement) {
+  if (blockElement.hasAttribute('miniflyout')) {
+    const mutationElement =
+      blockElement.ownerDocument.createElement('mutation');
+    mutationElement.setAttribute('useDefaultIcon', 'false');
+    blockElement.insertBefore(mutationElement, blockElement.firstChild);
+  }
 }
 
 /**
