@@ -52,6 +52,7 @@ import {Key} from '../utils/Notes';
 import Lab2Registry from '@cdo/apps/lab2/Lab2Registry';
 import {isEqual} from 'lodash';
 import HeaderButtons from './HeaderButtons';
+import {setUpBlocklyForMusicLab} from '../blockly/setup';
 
 /**
  * Top-level container for Music Lab. Manages all views on the page as well as the
@@ -137,6 +138,12 @@ class UnconnectedMusicView extends React.Component {
       loadedLibrary: false,
       currentLibraryName: null,
     };
+
+    // If in incubator, we need to manually setup Blockly for Music Lab.
+    // Otherwise, this is handled by Lab2.
+    if (props.inIncubator) {
+      setUpBlocklyForMusicLab();
+    }
   }
 
   componentDidMount() {
