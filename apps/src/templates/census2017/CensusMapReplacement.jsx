@@ -234,9 +234,10 @@ export default class CensusMapReplacement extends Component {
           'circle-stroke-color': '#000000',
         },
         filter: [
-          'any',
+          'all',
           ['!=', 'teaches_cs', 'YES'],
           ['!=', 'teaches_cs', 'HISTORICAL_YES'],
+          ['!=', 'teaches_cs', 'EXCLUDED'],
         ],
       });
       _this.map.addLayer({
