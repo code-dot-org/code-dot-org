@@ -32,7 +32,6 @@ export interface DanceProjectSources extends ProjectSources {
 }
 
 export interface DanceLevelProperties extends LevelProperties {
-  customBlocks?: string;
   defaultSong?: string;
   useRestrictedSongs?: boolean;
 }
