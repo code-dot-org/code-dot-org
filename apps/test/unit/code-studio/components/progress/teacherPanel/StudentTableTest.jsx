@@ -111,20 +111,22 @@ describe('StudentTable', () => {
     expect(lastStudentRow.text()).to.not.match(/undefined/);
   });
 
-  it('ignores non-alphabetic characters in sorting', () => {
+  it('includes non-alphabetic characters in sorting', () => {
     const wrapper = setUp({
       students: [
-        {id: 1, name: 'Student 1', familyName: '1Brown'},
-        {id: 2, name: 'Student 2', familyName: '!Charles'},
-        {id: 3, name: 'Student 3', familyName: 'Adams'},
+        {id: 1, name: 'Student 1', familyName: '2Brown'},
+        {id: 2, name: 'Student 2', familyName: 'Delta'},
+        {id: 3, name: 'Student 3', familyName: '1Adams'},
+        {id: 4, name: 'Student 4', familyName: '!Charles'},
       ],
       isSortedByFamilyName: true,
     });
 
     const studentRows = wrapper.find('tr');
-    expect(studentRows.at(1).text()).to.match(/^Student 3/);
-    expect(studentRows.at(2).text()).to.match(/^Student 1/);
-    expect(studentRows.at(3).text()).to.match(/^Student 2/);
+    expect(studentRows.at(1).text()).to.match(/^Student 4/);
+    expect(studentRows.at(2).text()).to.match(/^Student 3/);
+    expect(studentRows.at(3).text()).to.match(/^Student 1/);
+    expect(studentRows.at(4).text()).to.match(/^Student 2/);
   });
 
   it('sorts by name when family names are equivalent', () => {
