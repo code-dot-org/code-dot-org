@@ -18,6 +18,14 @@ class ActivitiesController < ApplicationController
   MIN_LINES_OF_CODE = 0
   MAX_LINES_OF_CODE = 1000
 
+  # 2D Map from unit name and level name, to the name of the lesson files in S3
+  # which will be used for AI evaluation.
+  UNIT_AND_LEVEL_TO_LESSON_S3_NAME = {
+    'csd3-2023' => {
+      'CSD U3 Interactive Card Final_2023' => 'CSD-2022-U3-L17',
+    }
+  }
+
   use_reader_connection_for_route(:milestone)
 
   def milestone
@@ -33,8 +41,9 @@ class ActivitiesController < ApplicationController
       @level = Unit.cache_find_level(params[:level_id].to_i)
     end
 
-    if ai_eval_enabled?(@script_level) && params[:submitted] == 'true'
-      EvaluateRubricJob.perform_later(user_id: current_user.id, script_level_id: @script_level.id)
+    lesson_s3_name = UNIT_AND_LEVEL_TO_LESSON_S3_NAME[@script_level&.script&.name].try(:[], @script_level&.level&.name)
+    if lesson_s3_name && params[:submitted] == 'true'
+      EvaluateRubricJob.perform_later(user_id: current_user.id, script_level_id: @script_level.id, lesson_s3_name: lesson_s3_name)
     end
 
     # Immediately return with a "Service Unavailable" status if milestone posts are
@@ -247,10 +256,5 @@ class ActivitiesController < ApplicationController
     log_string += "\t#{request.user_agent}"
 
     milestone_logger.info log_string
-  end
-
-  private def ai_eval_enabled?(script_level)
-    # CSD 2023, Unit 3, Lesson 18, final project level
-    script_level && script_level.script.name == 'csd3-2023' && script_level.level.name == 'CSD U3 Interactive Card Final_2023'
   end
 end

@@ -14,14 +14,13 @@ class EvaluateRubricJob < ApplicationJob
     raise
   end
 
-  def perform(user_id:, script_level_id:)
-    puts "Evaluating rubric for user #{user_id} on script level #{script_level_id}"
+  def perform(user_id:, script_level_id:, lesson_s3_name:)
+    puts "Evaluating rubric for user #{user_id} on script level #{script_level_id} with lesson_s3_name #{lesson_s3_name.inspect}"
     user = User.find(user_id)
     script_level = ScriptLevel.find(script_level_id)
 
     raise 'CDO.openai_evaluate_rubric_api_key required' if CDO.openai_evaluate_rubric_api_key.blank?
 
-    lesson_s3_name = 'CSD-2022-U3-L17'
     channel_id = get_channel_id(user, script_level)
     code, project_version = read_user_code(channel_id)
     prompt = read_file_from_s3(lesson_s3_name, 'system_prompt.txt')
