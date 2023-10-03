@@ -158,10 +158,10 @@ $almost_white: #eee;
   }
 
   #close_btn_go_to_account {
+    @include main-font-bold;
     background-color: $orange;
     border: 1px solid $orange;
     color: $white;
-    font-family: "Gotham 7r", sans-serif;
     margin: 25px 0 0 0;
     padding: 10px 25px;
   }
