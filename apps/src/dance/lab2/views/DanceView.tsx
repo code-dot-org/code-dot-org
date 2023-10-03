@@ -53,8 +53,6 @@ const DanceView: React.FunctionComponent = () => {
   );
   const isRunning = useTypedSelector(state => state.dance.isRunning);
 
-  // const levelProperties = useTypedSelector(state => state.lab.levelProperties);
-
   const onAuthError = (songId: string) => {
     Lab2MetricsReporter.logWarning({
       message: 'Error loading song',
