@@ -78,7 +78,10 @@ class RubricsController < ApplicationController
     return head :bad_request unless current_user
 
     learning_goal_ids = @rubric.learning_goals.pluck(:id)
-    teacher_evaluations = LearningGoalTeacherEvaluation.where(user_id: current_user.id, learning_goal_id: learning_goal_ids)
+    teacher_evaluations =
+      LearningGoalTeacherEvaluation.where(user_id: current_user.id, learning_goal_id: learning_goal_ids).where.not(submitted_at: nil).
+        group_by(&:learning_goal_id).
+        map {|_, eval_list| eval_list.max_by(&:submitted_at)}
     render json: teacher_evaluations.map(&:summarize_for_participant)
   end
 
