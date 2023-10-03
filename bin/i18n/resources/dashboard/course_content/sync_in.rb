@@ -394,7 +394,6 @@ module I18n
           end
 
           def redact_level_content
-            # Redacting level content
             Dir[File.join(I18N_SOURCE_DIR_PATH, '/**/*.json')].each do |source_path|
               source_data = JSON.load_file(source_path)
               next if source_data.blank?
