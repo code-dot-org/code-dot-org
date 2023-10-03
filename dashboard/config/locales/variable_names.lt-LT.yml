@@ -22,5 +22,6 @@ lt:
       size: dydis
       speed: greitis
       type: tipas
+      variable: Kintamasis
       wizard: burtininkas
       x: x
