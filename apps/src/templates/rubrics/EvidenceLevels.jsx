@@ -12,6 +12,8 @@ export default function EvidenceLevels({
   evidenceLevels,
   canProvideFeedback,
   learningGoalKey,
+  understanding,
+  radioButtonCallback,
 }) {
   if (canProvideFeedback) {
     const radioGroupName = `evidence-levels-${learningGoalKey}`;
@@ -32,6 +34,10 @@ export default function EvidenceLevels({
               name={radioGroupName}
               value={evidenceLevel.id}
               size="s"
+              onChange={() => {
+                radioButtonCallback(evidenceLevel.understanding);
+              }}
+              checked={understanding === evidenceLevel.understanding}
             />
             <BodyThreeText
               className={classNames(style.evidenceLevelDescriptionIndented)}
@@ -63,4 +69,6 @@ EvidenceLevels.propTypes = {
   evidenceLevels: PropTypes.arrayOf(evidenceLevelShape).isRequired,
   canProvideFeedback: PropTypes.bool,
   learningGoalKey: PropTypes.string,
+  understanding: PropTypes.number,
+  radioButtonCallback: PropTypes.func,
 };

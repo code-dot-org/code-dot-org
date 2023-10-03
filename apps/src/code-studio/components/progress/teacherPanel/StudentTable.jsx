@@ -4,11 +4,10 @@ import {connect} from 'react-redux';
 import Radium from 'radium'; // eslint-disable-line no-restricted-imports
 import color from '@cdo/apps/util/color';
 import i18n from '@cdo/locale';
-import DCDO from '@cdo/apps/dcdo';
 import ProgressBubble from '@cdo/apps/templates/progress/ProgressBubble';
 import FontAwesome from '@cdo/apps/templates/FontAwesome';
 import {levelWithProgress, studentShape} from './types';
-import letterCompare from '@cdo/apps/util/letterCompare';
+import stringKeyComparator from '@cdo/apps/util/stringKeyComparator';
 
 class StudentTable extends React.Component {
   static propTypes = {
@@ -43,29 +42,27 @@ class StudentTable extends React.Component {
     return isSelected ? [styles.tr, styles.selected] : styles.tr;
   };
 
-  render() {
-    const {
-      students,
-      onSelectUser,
-      selectedUserId,
-      levelsWithProgress,
-      isSortedByFamilyName,
-    } = this.props;
+  componentDidMount() {
+    this.sortStudents();
+  }
 
-    // Returns a comparator function that sorts objects a and b by the given
-    // keys, in order of priority.
-    // Example: comparator(['familyName', 'name']) will sort by familyName
-    // first, looking at name if necessary to break ties.
-    const comparator = keys => (a, b) =>
-      keys.reduce(
-        (result, key) => result || letterCompare(a[key] || '', b[key] || ''),
-        0
-      );
+  componentDidUpdate(prevProps) {
+    if (prevProps.isSortedByFamilyName !== this.props.isSortedByFamilyName) {
+      this.sortStudents();
+    }
+  }
 
-    // Sort students, in-place.
+  sortStudents() {
+    const {students, isSortedByFamilyName} = this.props;
     isSortedByFamilyName
-      ? students.sort(comparator(['familyName', 'name']))
-      : students.sort(comparator(['name', 'familyName']));
+      ? students.sort(stringKeyComparator(['familyName', 'name']))
+      : students.sort(stringKeyComparator(['name', 'familyName']));
+    this.setState({students});
+  }
+
+  render() {
+    const {students, onSelectUser, selectedUserId, levelsWithProgress} =
+      this.props;
 
     return (
       <table style={styles.table} className="student-table">
@@ -95,9 +92,7 @@ class StudentTable extends React.Component {
                     />
                   )}
                   <div style={styles.name}>
-                    {student.name}
-                    {!!DCDO.get('family-name-features', false) &&
-                      ` ${student.familyName || ''}`}
+                    {`${student.name} ${student.familyName || ''}`}
                     <a
                       href={this.getRowLink(student.id)}
                       target="_blank"

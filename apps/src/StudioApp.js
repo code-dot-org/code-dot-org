@@ -2123,7 +2123,6 @@ StudioApp.prototype.configureDom = function (config) {
       // Modify the arrangement of toolbox blocks so categories align left
       if (config.level.edit_blocks === TOOLBOX_EDIT_MODE) {
         this.blockYCoordinateInterval = 80;
-        config.blockArrangement = {category: {x: 20}};
       }
       // Enable if/else, param & var editing in levelbuilder, regardless of level setting
       config.level.disableIfElseEditing = false;

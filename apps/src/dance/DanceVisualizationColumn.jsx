@@ -1,4 +1,6 @@
 import React from 'react';
+import {getStore} from '../redux';
+import {setCurrentAiModalField} from './danceRedux';
 import GameButtons from '../templates/GameButtons';
 import ArrowButtons from '../templates/ArrowButtons';
 import BelowVisualization from '../templates/BelowVisualization';
@@ -10,6 +12,7 @@ import {connect} from 'react-redux';
 import i18n from '@cdo/locale';
 import AgeDialog from '../templates/AgeDialog';
 import {getFilteredSongKeys, getFilterStatus} from '@cdo/apps/dance/songs';
+import DanceAiModal from './DanceAiModal';
 
 import clickToRunPNG from '@cdo/static/dance/click-to-run.png';
 
@@ -69,6 +72,7 @@ class DanceVisualizationColumn extends React.Component {
     songData: PropTypes.objectOf(PropTypes.object).isRequired,
     userType: PropTypes.string.isRequired,
     under13: PropTypes.bool.isRequired,
+    currentAiModalField: PropTypes.object,
   };
 
   state = {
@@ -130,6 +134,11 @@ class DanceVisualizationColumn extends React.Component {
             <ArrowButtons />
           </GameButtons>
           <BelowVisualization />
+          {this.props.currentAiModalField && (
+            <DanceAiModal
+              onClose={() => getStore().dispatch(setCurrentAiModalField(false))}
+            />
+          )}
         </div>
       </div>
     );
@@ -170,4 +179,5 @@ export default connect(state => ({
   under13: state.currentUser.under13,
   levelIsRunning: state.runState.isRunning,
   levelRunIsStarting: state.dance.runIsStarting,
+  currentAiModalField: state.dance.currentAiModalField,
 }))(DanceVisualizationColumn);
