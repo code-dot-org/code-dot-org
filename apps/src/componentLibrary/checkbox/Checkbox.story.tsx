@@ -186,7 +186,7 @@ export const SupernovaGroupOfDefaultCheckboxes =
 
 const SupernovaSizesMultipleTemplate: Story<{
   components: CheckboxProps[];
-}> = args => (
+}> = () => (
   <>
     <div style={{display: 'flex', justifyContent: 'space-around'}}>
       {[

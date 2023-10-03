@@ -4,7 +4,7 @@ import i18n from '@cdo/locale';
 import style from './rubrics.module.scss';
 import {Heading6} from '@cdo/apps/componentLibrary/typography';
 import AiAssessmentBox from './AiAssessmentBox';
-const icon = require('@cdo/static/ai-bot.png');
+import icon from '@cdo/static/ai-bot.png';
 
 export default function AiAssessment({
   isAiAssessed,

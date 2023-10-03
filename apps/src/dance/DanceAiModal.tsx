@@ -11,9 +11,8 @@ import {StrongText, Heading5} from '@cdo/apps/componentLibrary/typography';
 import classNames from 'classnames';
 import FontAwesome from '@cdo/apps/templates/FontAwesome';
 import {AiModalItem, AiModalReturnedItem} from './types';
-const Typist = require('react-typist').default;
-
-const aiBotBorder = require('@cdo/static/dance/ai-bot-border.png');
+import Typist from 'react-typist';
+import aiBotBorder from '@cdo/static/dance/ai-bot-border.png';
 
 const promptString = 'Generate a scene using this mood:';
 
