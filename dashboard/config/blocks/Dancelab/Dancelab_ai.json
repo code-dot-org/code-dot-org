@@ -12,8 +12,7 @@
     "args": [
       {
         "name": "VALUE",
-        "type": "String",
-        "field": true
+        "customInput": "danceAi"
       }
     ]
   }

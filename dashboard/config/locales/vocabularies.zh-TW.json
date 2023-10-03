@@ -1167,6 +1167,9 @@
           "word": "事件（Event）",
           "definition": "導致某些事情發生的操作。"
         },
+        "artificial_intelligence/ai-ethics/2023": {
+          "word": "人工智能"
+        },
         "adaptation/csc-adaptations/2023": {
           "word": "適應",
           "definition": "生物體的改變，以更好地生存其環境"
@@ -1385,6 +1388,67 @@
         "poetry_circle/poetry/2023": {
           "word": "詩圈",
           "definition": "一個安全而富有創意的空間，可以測試新詩並獲得他人的建設性反饋"
+        },
+        "computer/csd/2023": {
+          "word": "計算機"
+        },
+        "input/csd/2023": {
+          "word": "輸入"
+        },
+        "processing/csd/2023": {
+          "word": "處理"
+        },
+        "digital_footprint/csd/2023": {
+          "word": "數位足跡"
+        },
+        "copyright/csd/2023": {
+          "word": "版權所有",
+          "definition": "印刷、出版、表演、拍攝或錄製文學、藝術或音樂材料的專屬法律權利，並授權他人這樣做"
+        },
+        "bug/csd/2023": {
+          "word": "程式錯誤（Bug）",
+          "definition": "程式中無法正確運作的部分。"
+        },
+        "debugging/csd/2023": {
+          "word": "除錯",
+          "definition": "尋找並修復演算法或程式中的問題。"
+        },
+        "program/csd/2023": {
+          "word": "程式",
+          "definition": "編碼為可以由電腦運行的演算法。"
+        },
+        "variable/csd/2023": {
+          "word": "變數",
+          "definition": "放置可變更資訊的佔位符。"
+        },
+        "sprite/csd/2023": {
+          "word": "雪碧"
+        },
+        "condition/csd/2023": {
+          "word": "條件（Condition）"
+        },
+        "conditionals/csd/2023": {
+          "word": "條件判斷（Conditionals）"
+        },
+        "abstraction/csd/2023": {
+          "word": "抽象概念"
+        },
+        "function/csd/2023": {
+          "word": "函式"
+        },
+        "user/csd/2023": {
+          "word": "使用者",
+          "definition": "使用物件的人員，包括軟體和硬體。"
+        },
+        "user_interface/csd/2023": {
+          "word": "使用者介面"
+        },
+        "machine_learning/csd/2023": {
+          "word": "機器學習",
+          "definition": "這種方式可讓電腦瞭解規律模式並做出決定，而不用明確設計程式"
+        },
+        "ethics/csd/2023": {
+          "word": "倫理"
         },
         "algorithm/coursea/2023": {
           "word": "演算法（Algorithm）",

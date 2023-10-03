@@ -2257,6 +2257,13 @@
         "pause_and_think_online/pre-express/2022": {
           "type": "Βίντεο"
         },
+        "ethics_and_ai_privacy_the_future_of_work/ai-ethics/2023": {
+          "type": "Βίντεο"
+        },
+        "how_ai_works_large_language_models/ai-ethics/2023": {
+          "url": "https://www.youtube.com/watch?v=X-AWdfSFCHQ",
+          "type": "Βίντεο"
+        },
         "cs_connections_landing_page/csc-adaptations/2023": {
           "name": "Σελίδα προορισμού συνδέσεων CS",
           "url": "https://code.org/educate/csc"
@@ -2706,6 +2713,518 @@
         "poem_app_example/poetry/2023": {
           "name": "Παράδειγμα εφαρμογής Poem",
           "url": "https://studio.code.org/projects/poetry_hoc/j3TXDXNhz0XEsH4Xjk_rT9buBHYCplirIKtY_Pg_bYo"
+        },
+        "all_standards/csd/2023": {
+          "name": "Όλα τα Πρότυπα"
+        },
+        "teacher_forum/csd/2023": {
+          "name": "Φόρουμ Καθηγητών"
+        },
+        "the_problem_solving_process_2/csd/2023": {
+          "name": "Η Διαδικασία Επίλυσης Προβλημάτων"
+        },
+        "problem_solving_process_1/csd/2023": {
+          "type": "Βίντεο"
+        },
+        "the_problem_solving_process/csd/2023": {
+          "type": "Βίντεο"
+        },
+        "the_problem_solving_process_1/csd/2023": {
+          "name": "Η Διαδικασία Επίλυσης Προβλημάτων"
+        },
+        "the_problem_solving_process_5/csd/2023": {
+          "name": "Η Διαδικασία Επίλυσης Προβλημάτων"
+        },
+        "what_is_a_computer/csd/2023": {
+          "type": "Βίντεο"
+        },
+        "what_is_a_computer_/csd/2023": {
+          "name": "Τι είναι ένας υπολογιστής;"
+        },
+        "what_do_computers_do/csd/2023": {
+          "type": "Βίντεο"
+        },
+        "apps_and_problem_solving_1/csd/2023": {
+          "type": "Επανεξέταση Συνομηλίκου"
+        },
+        "apps_and_problem_solving_2/csd/2023": {
+          "type": "Κατάλογος"
+        },
+        "computer_science_practices/csd/2023": {
+          "type": "Αντανάκλαση"
+        },
+        "all_standards_5/csd/2023": {
+          "name": "Όλα τα Πρότυπα"
+        },
+        "intro_to_web_lab_part_2/csd/2023": {
+          "type": "Βίντεο"
+        },
+        "pair_programming/csd/2023": {
+          "name": "Προγραμματισμός κατά ζεύγη",
+          "type": "Βίντεο"
+        },
+        "video_intro_to_web_lab_part_1/csd/2023": {
+          "type": "Βίντεο"
+        },
+        "headings_and_paragraphs/csd/2023": {
+          "name": "Κεφαλίδες και Παράγραφοι"
+        },
+        "lists/csd/2023": {
+          "name": "Λίστες"
+        },
+        "video_debugging/csd/2023": {
+          "name": "Βίντεο: Αποσφαλμάτωση",
+          "type": "Βίντεο"
+        },
+        "video_pair_programming/csd/2023": {
+          "name": "Βίντεο: Προγραμματισμός ανά ζεύγη",
+          "type": "Βίντεο"
+        },
+        "html_web_page/csd/2023": {
+          "type": "Κατάλογος"
+        },
+        "html_web_page_1/csd/2023": {
+          "type": "Επανεξέταση Συνομηλίκου"
+        },
+        "html_web_page_2/csd/2023": {
+          "type": "Οδηγός Προγράμματος"
+        },
+        "social_sleuth/csd/2023": {
+          "name": "Ανίχνευση στα μέσα κοινωνικής δικτύωσης"
+        },
+        "social_sleuth_1/csd/2023": {
+          "name": "Ανίχνευση στα μέσα κοινωνικής δικτύωσης"
+        },
+        "intro_to_css_-_part_1/csd/2023": {
+          "name": "Εισαγωγή στην CSS - μέρος 1",
+          "type": "Βίντεο"
+        },
+        "intro_to_css_-_part_2/csd/2023": {
+          "name": "Εισαγωγή στην CSS - μέρος 2",
+          "type": "Βίντεο"
+        },
+        "your_personal_style/csd/2023": {
+          "type": "Κατάλογος"
+        },
+        "your_personal_style_1/csd/2023": {
+          "type": "Επανεξέταση Συνομηλίκου"
+        },
+        "your_personal_style_2/csd/2023": {
+          "type": "Οδηγός Προγράμματος"
+        },
+        "creative_commons_overview/csd/2023": {
+          "type": "Βίντεο"
+        },
+        "layout_properties/csd/2023": {
+          "name": "Ιδιότητες Διάταξης"
+        },
+        "personal_web_page_-_prepare/csd/2023": {
+          "type": "Οδηγός Προγράμματος"
+        },
+        "personal_web_page/csd/2023": {
+          "type": "Επανεξέταση Συνομηλίκου"
+        },
+        "personal_web_page_-_reflect/csd/2023": {
+          "type": "Οδηγός Προγράμματος"
+        },
+        "personal_web_page_1/csd/2023": {
+          "type": "Κατάλογος"
+        },
+        "publishing_your_website/csd/2023": {
+          "name": "Δημοσιοποιώντας Τον Ιστότοπό Σας",
+          "type": "Βίντεο"
+        },
+        "video_managing_disagreement/csd/2023": {
+          "name": "Βίντεο: Διαχείριση Διαφωνιών",
+          "type": "Βίντεο"
+        },
+        "video_teamwork/csd/2023": {
+          "name": "Βίντεο: Ομαδική εργασία",
+          "type": "Βίντεο"
+        },
+        "video_how_search_works/csd/2023": {
+          "name": "Πως λειτουργεί η αναζήτηση",
+          "type": "Βίντεο"
+        },
+        "plan_a_multi-page_website/csd/2023": {
+          "type": "Οδηγός Προγράμματος"
+        },
+        "website_for_a_purpose/csd/2023": {
+          "type": "Κατάλογος"
+        },
+        "hyperlinks/csd/2023": {
+          "name": "Υπερσύνδεσμοι"
+        },
+        "linking_pages/csd/2023": {
+          "name": "Συνδέοντας Σελίδες"
+        },
+        "website_for_a_purpose_-_reflect/csd/2023": {
+          "type": "Οδηγός Προγράμματος"
+        },
+        "website_for_a_purpose_1/csd/2023": {
+          "type": "Επανεξέταση Συνομηλίκου"
+        },
+        "all_standards_6/csd/2023": {
+          "name": "Όλα τα Πρότυπα"
+        },
+        "drawing_in_game_lab_-_part_1/csd/2023": {
+          "type": "Βίντεο"
+        },
+        "drawing_in_game_lab_-_part_2/csd/2023": {
+          "type": "Βίντεο"
+        },
+        "introduction_to_variables/csd/2023": {
+          "type": "Βίντεο"
+        },
+        "naming_variables/csd/2023": {
+          "name": "Ορίζοντας Μεταβλητές"
+        },
+        "variables/csd/2023": {
+          "name": "Μεταβλητές"
+        },
+        "variables_1/csd/2023": {
+          "name": "Μεταβλητές",
+          "type": "Βίντεο"
+        },
+        "variables_2/csd/2023": {
+          "name": "Μεταβλητές"
+        },
+        "random_numbers/csd/2023": {
+          "name": "Τυχαίοι αριθμοί"
+        },
+        "random_numbers_1/csd/2023": {
+          "name": "Τυχαίοι αριθμοί"
+        },
+        "robot_faces/csd/2023": {
+          "type": "Κατάλογος"
+        },
+        "introduction_to_sprites/csd/2023": {
+          "type": "Βίντεο"
+        },
+        "sprites/csd/2023": {
+          "name": "Χαρακτήρας"
+        },
+        "sprites_1/csd/2023": {
+          "name": "Χαρακτήρας"
+        },
+        "the_animation_tab/csd/2023": {
+          "name": "Η Καρτέλα Κίνησης",
+          "type": "Βίντεο"
+        },
+        "sprite_properties/csd/2023": {
+          "name": "Ιδιότητες Χαρακτήρα"
+        },
+        "sprite_properties_1/csd/2023": {
+          "name": "Ιδιότητες Χαρακτήρα"
+        },
+        "sprite_properties_needs_updating_/csd/2023": {
+          "name": "Ιδιότητες Χαρακτήρα",
+          "type": "Βίντεο"
+        },
+        "text/csd/2023": {
+          "name": "κείμενο"
+        },
+        "captioned_scenes/csd/2023": {
+          "type": "Κατάλογος"
+        },
+        "flipbook_example_-_by_marnic_bos/csd/2023": {
+          "type": "Βίντεο"
+        },
+        "introduction_to_the_draw_loop/csd/2023": {
+          "type": "Βίντεο"
+        },
+        "sprite_movement/csd/2023": {
+          "type": "Βίντεο"
+        },
+        "animated_scene/csd/2023": {
+          "type": "Κατάλογος"
+        },
+        "boolean_expressions/csd/2023": {
+          "name": "Boolean Εκφράσεις",
+          "type": "Βίντεο"
+        },
+        "conditional_statements/csd/2023": {
+          "name": "Συνθήκες Ελέγχου",
+          "type": "Βίντεο"
+        },
+        "conditionals/csd/2023": {
+          "name": "Συνθήκες"
+        },
+        "keyboard_input/csd/2023": {
+          "name": "Είσοδος Πληκτρολογίου"
+        },
+        "if_else_statements/csd/2023": {
+          "name": "Δηλώσεις Αν/Αλλιώς",
+          "type": "Βίντεο"
+        },
+        "interactive_card_3/csd/2023": {
+          "type": "Κατάλογος"
+        },
+        "velocity/csd/2023": {
+          "name": "Ταχύτητα",
+          "type": "Βίντεο"
+        },
+        "velocity_1/csd/2023": {
+          "name": "Ταχύτητα"
+        },
+        "velocity_2/csd/2023": {
+          "name": "Ταχύτητα"
+        },
+        "side_scroller/csd/2023": {
+          "name": "Side Scroller",
+          "type": "Κατάλογος"
+        },
+        "side_scroller_1/csd/2023": {
+          "name": "Side Scroller"
+        },
+        "velocity_and_the_counter_pattern/csd/2023": {
+          "name": "Ταχύτητα και το μοτίβο αντίθετης φοράς"
+        },
+        "collisions/csd/2023": {
+          "name": "Συγκρούσεις"
+        },
+        "flyer_game/csd/2023": {
+          "name": "Παιχνίδι δημιουργίας διαφημιστικού  εντύπου",
+          "type": "Κατάλογος"
+        },
+        "flyer_game_1/csd/2023": {
+          "name": "Παιχνίδι δημιουργίας διαφημιστικού  εντύπου"
+        },
+        "functions/csd/2023": {
+          "name": "Συναρτήσεις",
+          "type": "Βίντεο"
+        },
+        "functions_1/csd/2023": {
+          "name": "Συναρτήσεις"
+        },
+        "functions_2/csd/2023": {
+          "name": "Συναρτήσεις"
+        },
+        "make_your_own_game_3/csd/2023": {
+          "type": "Κατάλογος"
+        },
+        "all_standards_7/csd/2023": {
+          "name": "Όλα τα Πρότυπα"
+        },
+        "the_design_thinking_process/csd/2023": {
+          "type": "Βίντεο"
+        },
+        "paper_prototypes/csd/2023": {
+          "type": "Κατάλογος"
+        },
+        "design_mode/csd/2023": {
+          "name": "Κατάσταση Σχεδίασης"
+        },
+        "what_s_for_lunch_testing/csd/2023": {
+          "type": "Βίντεο"
+        },
+        "intro_to_design_mode/csd/2023": {
+          "type": "Βίντεο"
+        },
+        "events_in_app_lab/csd/2023": {
+          "type": "Βίντεο"
+        },
+        "events_in_app_lab_1/csd/2023": {
+          "type": "Βίντεο"
+        },
+        "app_presentation/csd/2023": {
+          "type": "Κατάλογος"
+        },
+        "all_standards_3/csd/2023": {
+          "name": "Όλα τα Πρότυπα"
+        },
+        "representing_images/csd/2023": {
+          "name": "Αναπαριστώντας Εικόνες"
+        },
+        "binary_and_data/csd/2023": {
+          "type": "Βίντεο"
+        },
+        "combining_representations/csd/2023": {
+          "name": "Συνδυάζοντας Αναπαραστάσεις"
+        },
+        "keeping_data_secret/csd/2023": {
+          "name": "Κρατώντας τα Δεδομένα Μυστικά"
+        },
+        "create_a_representation_2/csd/2023": {
+          "type": "Κατάλογος"
+        },
+        "amazon_and_data/csd/2023": {
+          "type": "Βίντεο"
+        },
+        "netflix_and_data/csd/2023": {
+          "type": "Βίντεο"
+        },
+        "waze_and_data/csd/2023": {
+          "type": "Βίντεο"
+        },
+        "video_impact_on_society/csd/2023": {
+          "name": "Βίντεο: Αντίκτυπος στην Κοινωνία",
+          "type": "Βίντεο"
+        },
+        "video_machine_learning/csd/2023": {
+          "name": "Βίντεο: Μηχανική Μάθηση",
+          "type": "Βίντεο"
+        },
+        "video_training_data_and_bias/csd/2023": {
+          "name": "Βίντεο: Δεδομένα εκπαίδευσης και Προκαταλήψεις",
+          "type": "Βίντεο"
+        },
+        "make_a_recommendation/csd/2023": {
+          "type": "Επανεξέταση Συνομηλίκου"
+        },
+        "make_a_recommendation_1/csd/2023": {
+          "type": "Κατάλογος"
+        },
+        "make_a_recommendation_2/csd/2023": {
+          "type": "Οδηγός Προγράμματος"
+        },
+        "all_standards_4/csd/2023": {
+          "name": "Όλα τα Πρότυπα"
+        },
+        "circuits_and_logic/csd/2023": {
+          "type": "Βίντεο"
+        },
+        "board_events/csd/2023": {
+          "name": "Γεγονότα Πίνακα"
+        },
+        "board_events_1/csd/2023": {
+          "name": "Γεγονότα Πίνακα"
+        },
+        "the_counter_pattern/csd/2023": {
+          "type": "Βίντεο"
+        },
+        "if_statements_1/csd/2023": {
+          "type": "Βίντεο"
+        },
+        "rubric_-_field_collector_app/csd/2023": {
+          "type": "Κατάλογος"
+        },
+        "color_leds/csd/2023": {
+          "name": "Χρωματισμός των LED"
+        },
+        "input_output_devices/csd/2023": {
+          "type": "Βίντεο"
+        },
+        "rubric_-_human_device_interaction/csd/2023": {
+          "type": "Κατάλογος"
+        },
+        "accelerometer_events/csd/2023": {
+          "name": "Γεγονότα Επιταχυνσιόμετρου"
+        },
+        "introduction_to_arrays/csd/2023": {
+          "name": "Εισαγωγή στις συστοιχίες",
+          "type": "Βίντεο"
+        },
+        "playing_notes/csd/2023": {
+          "name": "Παίζοντας Νότες"
+        },
+        "functions_with_parameters/csd/2023": {
+          "name": "Συναρτήσεις με παραμέτρους",
+          "type": "Βίντεο"
+        },
+        "student_rubric_-_interactive_art/csd/2023": {
+          "type": "Κατάλογος"
+        },
+        "prototype_an_innovation/csd/2023": {
+          "type": "Κατάλογος"
+        },
+        "all_standards_1/csd/2023": {
+          "name": "Όλα τα Πρότυπα"
+        },
+        "teacher_forum_1/csd/2023": {
+          "name": "Φόρουμ Καθηγητών"
+        },
+        "board_events_2/csd/2023": {
+          "name": "Γεγονότα Πίνακα"
+        },
+        "board_events_3/csd/2023": {
+          "name": "Γεγονότα Πίνακα"
+        },
+        "the_counter_pattern_2/csd/2023": {
+          "type": "Βίντεο"
+        },
+        "rubric_-_field_collector_app_1/csd/2023": {
+          "type": "Κατάλογος"
+        },
+        "rubric_-_human_device_interaction_1/csd/2023": {
+          "type": "Κατάλογος"
+        },
+        "accelerometer_events_1/csd/2023": {
+          "name": "Γεγονότα Επιταχυνσιόμετρου"
+        },
+        "functions_3/csd/2023": {
+          "name": "Συναρτήσεις"
+        },
+        "student_rubric_-_interactive_pet/csd/2023": {
+          "type": "Κατάλογος"
+        },
+        "prototype_an_innovation_2/csd/2023": {
+          "type": "Κατάλογος"
+        },
+        "all_standards_8/csd/2023": {
+          "name": "Όλα τα Πρότυπα"
+        },
+        "the_problem_solving_process_4/csd/2023": {
+          "name": "Η Διαδικασία Επίλυσης Προβλημάτων"
+        },
+        "ai_what_is_machine_learning_/csd/2023": {
+          "type": "Βίντεο"
+        },
+        "seeing_ai/csd/2023": {
+          "name": "Βλέποντας την τεχνητή νοημοσύνη",
+          "type": "Βίντεο"
+        },
+        "finding_patterns_in_data/csd/2023": {
+          "type": "Βίντεο"
+        },
+        "introduction_to_ai_lab/csd/2023": {
+          "name": "Εισαγωγή στο Εργαστήριο Τεχνητής Νοημοσύνης"
+        },
+        "introduction_to_ai_lab_1/csd/2023": {
+          "name": "Εισαγωγή στο Εργαστήριο Τεχνητής Νοημοσύνης",
+          "type": "Βίντεο"
+        },
+        "training_and_testing_in_ai_lab/csd/2023": {
+          "name": "Εκπαίδευση και Δοκιμές στο Εργαστήριο Τεχνητής Νοημοσύνης",
+          "type": "Βίντεο"
+        },
+        "ai_training_data_bias/csd/2023": {
+          "type": "Βίντεο"
+        },
+        "model_cards_in_ai_lab/csd/2023": {
+          "name": "Κάρτες Μοντέλων στο Εργαστήριο Τεχνητής Νοημοσύνης",
+          "type": "Βίντεο"
+        },
+        "if-statements_in_app_lab/csd/2023": {
+          "type": "Βίντεο"
+        },
+        "numerical_data_in_ai_lab/csd/2023": {
+          "name": "Αριθμητικά δεδομένα στο Εργαστήριο Τεχνητής Νοημοσύνης"
+        },
+        "numerical_data_in_ai_lab_1/csd/2023": {
+          "name": "Αριθμητικά δεδομένα στο Εργαστήριο Τεχνητής Νοημοσύνης"
+        },
+        "numerical_data_in_ai_lab_2/csd/2023": {
+          "name": "Αριθμητικά δεδομένα στο Εργαστήριο Τεχνητής Νοημοσύνης",
+          "type": "Βίντεο"
+        },
+        "ethics_ai_equal_access_and_algorithmic_bias/csd/2023": {
+          "type": "Βίντεο"
+        },
+        "create_an_ml_app/csd/2023": {
+          "type": "Κατάλογος"
+        },
+        "creating_a_survey_in_google_forms/csd/2023": {
+          "type": "Βίντεο"
+        },
+        "cleaning_survey_data/csd/2023": {
+          "type": "Βίντεο"
+        },
+        "view_and_download_survey_data/csd/2023": {
+          "type": "Βίντεο"
+        },
+        "design_an_ai_app_1/csd/2023": {
+          "type": "Κατάλογος"
         },
         "all_resources/coursea/2023": {
           "url": "/s/δικαστήριο-2023/πόροι"

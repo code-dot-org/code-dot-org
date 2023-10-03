@@ -62,6 +62,7 @@ describe('CurriculumCatalogCard', () => {
       pathToCourse: '/s/course',
       scriptId: 1,
       isSignedOut: true,
+      onQuickViewClick: () => {},
     };
   });
 

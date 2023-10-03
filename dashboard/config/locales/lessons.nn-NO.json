@@ -623,6 +623,33 @@
         "pre-express-2022/A Royal Battle with Events": {
           "name": "Hendingar i Spellab"
         },
+        "csd3-2023/Variables": {
+          "name": "Variablar"
+        },
+        "csd3-2023/Sprites": {
+          "name": "Sprites"
+        },
+        "csd3-2023/Sprite Properties": {
+          "name": "Eigenskapar ved Sprite"
+        },
+        "csd3-2023/Text": {
+          "name": "Tekst"
+        },
+        "csd3-2023/Conditionals": {
+          "name": "Betingelser"
+        },
+        "csd3-2023/Velocity": {
+          "name": "Fart"
+        },
+        "csd3-2023/Functions": {
+          "name": "Funksjonar"
+        },
+        "csd6a-2023/Functions": {
+          "name": "Funksjonar"
+        },
+        "csd6b-2023/Functions": {
+          "name": "Funksjonar"
+        },
         "coursea-2023/Happy Maps": {
           "name": "Glade Kart"
         },

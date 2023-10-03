@@ -749,6 +749,85 @@
           "word": "Program",
           "definition": "Ett antal steg som har kodats till något som kan köras av en maskin."
         },
+        "computer/csd/2023": {
+          "word": "Dator"
+        },
+        "input/csd/2023": {
+          "word": "Inmatning"
+        },
+        "processing/csd/2023": {
+          "word": "Bearbetar"
+        },
+        "html/csd/2023": {
+          "word": "HTML"
+        },
+        "css/csd/2023": {
+          "word": "CSS"
+        },
+        "copyright/csd/2023": {
+          "word": "Copyright"
+        },
+        "bug/csd/2023": {
+          "word": "Bugg"
+        },
+        "debugging/csd/2023": {
+          "word": "Felsökning"
+        },
+        "program/csd/2023": {
+          "word": "Program",
+          "definition": "En algotirm som har kodats in i något som kan köras av en maskin."
+        },
+        "parameter/csd/2023": {
+          "word": "Parameter"
+        },
+        "variable/csd/2023": {
+          "word": "Variabel"
+        },
+        "property/csd/2023": {
+          "word": "Egenskap"
+        },
+        "conditionals/csd/2023": {
+          "word": "Villkor"
+        },
+        "abstraction/csd/2023": {
+          "word": "Abstraktion"
+        },
+        "function/csd/2023": {
+          "word": "Funktion"
+        },
+        "user/csd/2023": {
+          "word": "Användare"
+        },
+        "prototype/csd/2023": {
+          "word": "Prototyp"
+        },
+        "feature/csd/2023": {
+          "word": "Funktion"
+        },
+        "ascii/csd/2023": {
+          "word": "ASCII"
+        },
+        "pixel/csd/2023": {
+          "word": "Pixel"
+        },
+        "circuit/csd/2023": {
+          "word": "Krets"
+        },
+        "features/csd/2023": {
+          "word": "Funktioner"
+        },
+        "label/csd/2023": {
+          "word": "Etikett"
+        },
+        "model/csd/2023": {
+          "word": "Modell"
+        },
+        "training/csd/2023": {
+          "word": "Träning"
+        },
+        "ethics/csd/2023": {
+          "word": "Etik"
+        },
         "algorithm/coursea/2023": {
           "word": "Algoritm"
         },

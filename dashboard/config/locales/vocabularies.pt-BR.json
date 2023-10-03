@@ -14,6 +14,9 @@
         "processing/csd/2021": {
           "word": "Processando"
         },
+        "html/csd/2021": {
+          "word": "HTML"
+        },
         "html_element/csd/2021": {
           "word": "Elemento HTML"
         },
@@ -58,7 +61,11 @@
           "definition": "Espaço reservado para uma informação que pode mudar."
         },
         "sprite/csd/2021": {
-          "word": "Sprite"
+          "word": "Sprite",
+          "definition": "Um caractere na tela com propriedades que descrevem sua localização, movimento e aparência."
+        },
+        "dot_notation/csd/2021": {
+          "word": "Notação de pontos"
         },
         "condition/csd/2021": {
           "word": "Condição"
@@ -658,6 +665,7 @@
           "definition": "informações salvas para uso futuro"
         },
         "html/csd/2022": {
+          "word": "HTML",
           "definition": "Hypertext Markup Language, uma linguagem usada para criar páginas na web"
         },
         "html_element/csd/2022": {
@@ -737,7 +745,7 @@
         },
         "sprite/csd/2022": {
           "word": "Sprite",
-          "definition": "Um personagem ou objeto na tela com propriedades que descrevem sua localização, movimento e aparência."
+          "definition": "Um caractere na tela com propriedades que descrevem sua localização, movimento e aparência."
         },
         "property/csd/2022": {
           "word": "Propriedade",
@@ -1323,6 +1331,9 @@
           "word": "Evento",
           "definition": "Uma ação que faz com que algo aconteça."
         },
+        "artificial_intelligence/ai-ethics/2023": {
+          "word": "Inteligência Artificial"
+        },
         "adaptation/csc-adaptations/2023": {
           "word": "Adaptação",
           "definition": "Uma mudança em um organismo para sobreviver melhor ao meio ambiente"
@@ -1540,6 +1551,125 @@
         },
         "poetry_circle/poetry/2023": {
           "definition": "Um espaço seguro e criativo para testar novos poemas e obter feedback construtivo de outras pessoas"
+        },
+        "computer/csd/2023": {
+          "word": "Computador"
+        },
+        "input/csd/2023": {
+          "word": "Entrada"
+        },
+        "output/csd/2023": {
+          "word": "Saída"
+        },
+        "processing/csd/2023": {
+          "word": "Processando"
+        },
+        "html/csd/2023": {
+          "word": "HTML"
+        },
+        "html_element/csd/2023": {
+          "word": "Elemento HTML"
+        },
+        "html_tag/csd/2023": {
+          "word": "Tag HTML"
+        },
+        "website_content/csd/2023": {
+          "word": "Conteúdo do Site",
+          "definition": "o texto e as imagens de um site"
+        },
+        "website_structure/csd/2023": {
+          "word": "Estrutura do Site"
+        },
+        "heading/csd/2023": {
+          "word": "Cabeçalho"
+        },
+        "digital_footprint/csd/2023": {
+          "word": "Pegada Digital",
+          "definition": "As informações coletadas sobre um indivíduo com base em vários sites da  Internet."
+        },
+        "css_selector/csd/2023": {
+          "word": "Seletor CSS"
+        },
+        "copyright/csd/2023": {
+          "word": "Direitos Autorais",
+          "definition": "o direito legal exclusivo de imprimir, publicar, executar, filmar ou gravar material literário, artístico ou musical e autorizar outros a fazer o mesmo"
+        },
+        "bug/csd/2023": {
+          "word": "Bug",
+          "definition": "Parte de um programa que não funciona corretamente."
+        },
+        "debugging/csd/2023": {
+          "word": "Analisando",
+          "definition": "Encontrar e corrigir problemas em um algoritmo ou programa."
+        },
+        "program/csd/2023": {
+          "word": "Programa",
+          "definition": "Algoritmo que foi codificado em algo que pode ser executado por uma máquina."
+        },
+        "parameter/csd/2023": {
+          "definition": "Informações adicionais fornecidas como entrada a um bloco para personalizar sua funcionalidade"
+        },
+        "variable/csd/2023": {
+          "word": "Variável",
+          "definition": "Espaço reservado para uma informação que pode mudar."
+        },
+        "sprite/csd/2023": {
+          "word": "Sprite",
+          "definition": "Um caractere na tela com propriedades que descrevem sua localização, movimento e aparência."
+        },
+        "dot_notation/csd/2023": {
+          "word": "Notação de pontos"
+        },
+        "condition/csd/2023": {
+          "word": "Condição"
+        },
+        "conditionals/csd/2023": {
+          "word": "Condições"
+        },
+        "abstraction/csd/2023": {
+          "word": "Abstração"
+        },
+        "function/csd/2023": {
+          "word": "Função"
+        },
+        "empathy/csd/2023": {
+          "word": "Empatia",
+          "definition": "No design, refere-se a prestar atenção aos sentimentos e às necessidades do usuário ao projetar um produto."
+        },
+        "user/csd/2023": {
+          "word": "Usuário",
+          "definition": "Alguém que usa um objeto, incluindo software e hardware."
+        },
+        "usability/csd/2023": {
+          "word": "Usabilidade",
+          "definition": "Como é fácil, eficiente e gratificante usar um objeto ou dispositivo feito por humanos (incluindo software)."
+        },
+        "prototype/csd/2023": {
+          "word": "Protótipo",
+          "definition": "Um primeiro modelo ou modelo inicial de um produto que permite testar suposições antes de desenvolver uma versão final."
+        },
+        "user_interface/csd/2023": {
+          "word": "Interface do Usuário",
+          "definition": "Os elementos visuais de um programa por meio dos quais um usuário controla ou se comunica com o aplicativo; frequentemente abreviada como UI."
+        },
+        "feature/csd/2023": {
+          "word": "Recurso",
+          "definition": "Parte de um programa que adiciona funcionalidade para o usuário"
+        },
+        "machine_learning/csd/2023": {
+          "word": "Máquina de aprendizado",
+          "definition": "A maneira como os computadores reconhecem padrões e tomam decisões sem que tenham sido programados para tal."
+        },
+        "features/csd/2023": {
+          "definition": "As entradas que um modelo utiliza para tomar decisões"
+        },
+        "label/csd/2023": {
+          "word": "Rótulo",
+          "definition": "a saída que você está tentando definir ou prever a partir de um modelo."
+        },
+        "model/csd/2023": {
+          "word": "Modelo",
+          "definition": "Um programa de computador projetado para tomar uma determinada decisão"
         },
         "algorithm/coursea/2023": {
           "word": "Algoritmo",

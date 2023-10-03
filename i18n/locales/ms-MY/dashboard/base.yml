@@ -53,6 +53,7 @@ ms:
         gender: 'Jantina'
         edit_header: 'Edit Maklumat Akaun'
         finish_sign_up_header: 'Selesai membuat akaun anda'
+        finish_sign_up_header_error: 'Sila betulkan kesilapan yang berikut:'
         finish_sign_up_subheader: 'Isi maklumat berikut untuk menyelesaikan membuat akaun Code.org untuk <strong>%{email}</strong>.'
         finish_sign_up_subheader_markdown: 'Isikan maklumat berikut untuk menyelesaikan membuat akaun Code.org untuk **%{email}**.'
         finish_sign_up_subheader_provider: 'Isikan maklumat berikut untuk menyelesaikan membuat akaun Code.org dengan <strong>%{provider}</strong> untuk <strong>%{email}</strong>.'
@@ -60,6 +61,7 @@ ms:
         reset_password_token: "Pautan tetapan semula kata laluan yang telah anda ikuti"
         error:
           future: tidak boleh ada di masa depan
+        user_type: 'Jenis Akaun'
         us_state: 'Negeri'
   beta: "beta"
   hello: "Helo dunia"

@@ -3456,6 +3456,10 @@
           "purpose": "En aquesta activitat en línia, els alumnes aprendran a utilitzar esdeveniments al Laboratori de Jocs. Començaran configurant el cavaller perquè es mogui en prémer una tecla de fletxa, i després podran demostrar la resta d'habilitats que han adquirit al llarg d'aquest curs, com l'ús de seqüències i bucles, al trencaclosques de joc lliure que hi ha al final.",
           "student_overview": "Fes servir esdeveniments per crear una història o un joc interactiu."
         },
+        "ai-ethics-2023/lesson-1": {
+          "name": "El nostre Codi Ètic d'IA",
+          "student_overview": "Investigueu col·laborativament sobre l'ètica de la IA i creeu un codi de conducta compartible."
+        },
         "csc-adaptations-2023/Modeling Animal Adaptations (pilot)": {
           "name": "Adaptacions animals Introducció",
           "overview": "En aquesta lliçó**skill-building**, els estudiants aprendran a crear i animar sprites i utilitzar esdeveniments per fer-los interactius. \n\nEls estudiants codificaran un model de causa i efecte basat en esdeveniments a Sprite Lab per demostrar com les espècies sobreviuen adaptant-se al seu entorn al llarg del temps. En el món real s'utilitzen models i simulacions interactives per ajudar els enginyers i científics a identificar patrons, entendre la natura, fer prediccions sobre canvis futurs i dissenyar solucions per preparar-se i/o combatre les principals interrupcions. \n\nEls estudiants exploraran exemples d'evolució, adaptació, migració, selecció natural i supervivència en grups. ",
@@ -3616,6 +3620,87 @@
           "preparation": "-   Preparar un ordinador per alumne.\n-   Prepareu una còpia del manual **<a href=\"https://docs.google.com/document/d/1kO4SNEIVyM0GrxxJb6NzVYauXXpi6rzQkDIfrzQf1Ls/template/preview\" target=\"_blank\">Compartir la vostra</a>aplicació** per alumne.\n-   Assegureu-vos que els estudiants tinguin una còpia del seu poema original a mà per a aquesta lliçó.  \n-   Dividir la classe en parelles per a l'activitat Parella-Compartir poesia.\n-   Penseu en aquestes opcions d'extensió relacionades ([link](https://studio.code.org/s/poetry-2023/lessons/4#activity-4365336)) per explorar després d'aquesta lliçó.\n\n##### Opcional\n\n-   Especialment per a docència remota: Determineu si heu de configurar un document digital o un espai en línia compartit per publicar l'URL de l'aplicació de cada estudiant (vegeu la plantilla del professor a “Enllaços”). ",
           "purpose": "Compartir els seus projectes d'art poemari amb els companys és un aspecte important del procés creatiu. Permet als estudiants rebre comentaris, col·laborar amb altres persones, reflexionar sobre el seu propi treball i celebrar els seus èxits. En compartir el seu treball amb els altres, els estudiants poden créixer i millorar com a pensadors creatius i desenvolupar habilitats comunicatives i interpersonals importants.",
           "student_overview": "Comparteix les teves noves aplicacions de poemes amb els teus amics! "
+        },
+        "csd1-2023/The Problem Solving Process": {
+          "name": "El procés de resolució de problemes"
+        },
+        "csd1-2023/What is a Computer?": {
+          "name": "Què és un ordinador?"
+        },
+        "csd2-2023/Linking Pages": {
+          "name": "Enllaçar pàgines"
+        },
+        "csd3-2023/Variables": {
+          "name": "Variables"
+        },
+        "csd3-2023/Sprites": {
+          "name": "Sprites"
+        },
+        "csd3-2023/Sprite Properties": {
+          "name": "Propietats de l'sprite"
+        },
+        "csd3-2023/Text": {
+          "name": "Text"
+        },
+        "csd3-2023/Sprite Movement": {
+          "name": "Moviment d'sprites"
+        },
+        "csd3-2023/Conditionals": {
+          "name": "Condicionals"
+        },
+        "csd3-2023/Keyboard Input": {
+          "name": "Entrada de teclat"
+        },
+        "csd3-2023/Velocity": {
+          "name": "Velocitat"
+        },
+        "csd3-2023/Collisions": {
+          "name": "Col·lisions"
+        },
+        "csd3-2023/Functions": {
+          "name": "Funcions"
+        },
+        "csd4-2023/Updating Your Prototype": {
+          "name": "Actualitzant el teu prototip"
+        },
+        "csd5-2023/Representing Images": {
+          "name": "Representant imatges"
+        },
+        "csd5-2023/Combining Representations": {
+          "name": "Combinar representacions"
+        },
+        "csd5-2023/Keeping Data Secret": {
+          "name": "Mantenir les dades en secret"
+        },
+        "csd6a-2023/Intro to App Lab": {
+          "name": "Introducció a App Lab"
+        },
+        "csd6a-2023/Board Events": {
+          "name": "Esdeveniments amb placa"
+        },
+        "csd6a-2023/Color LEDs": {
+          "name": "LED de colors"
+        },
+        "csd6a-2023/Functions": {
+          "name": "Funcions"
+        },
+        "csd6b-2023/Intro to App Lab": {
+          "name": "Introducció a App Lab"
+        },
+        "csd6b-2023/Board Events": {
+          "name": "Esdeveniments amb placa"
+        },
+        "csd6b-2023/Functions": {
+          "name": "Funcions"
+        },
+        "csd7-2023/Intro to App Lab": {
+          "name": "Introducció a App Lab"
+        },
+        "csd7-2023/Introduction to AI Lab": {
+          "name": "Introducció a AI Lab"
+        },
+        "csd7-2023/Numerical Data in AI Lab": {
+          "name": "Dades numèriques en AI Lab"
         },
         "coursea-2023/Safety in My Online Neighborhood": {
           "name": "Seguretat al meu barri d'internet",

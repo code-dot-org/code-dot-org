@@ -10,5 +10,7 @@ fa:
       length: طول
       min: حداقل
       points: امتیازات
+      radius: شعاع
+      sides: اضلاع
       size: اندازه
       speed: سرعت

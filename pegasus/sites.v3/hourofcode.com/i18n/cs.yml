@@ -282,6 +282,10 @@ cs:
   call_to_action_register_early_access: Zaregistrujte se pro předběžný přístup
   call_to_action_open_positions: Zobrazení otevřených pozic
   call_to_action_get_guide: Získejte průvodce
+  call_to_action_donate_to_cdo: Přispějte na Code.org
+  call_to_action_start_fundraiser: Spusťte sbírku
+  call_to_action_view_donation_policy: Zobrazit zásady darování
+  call_to_action_view_donate_bitpay: Přispějte pomocí BitPay
   aria_label_call_to_action_afe: Další informace o Amazon Future Engineer
   aria_label_call_to_action_teaching_csf: Začněte odborný vzdělávací program Teaching
     Computer Science Fundamentals
@@ -387,6 +391,7 @@ cs:
   curriculum_name_csp: Principy informatiky
   curriculum_name_csc: Napojení na počítačovou vědu
   curriculum_name_csa: AP® Počítačová věda A
+  curriculum_name_csa_ai: Softwarové inženýrství a počítačové vidění
   curriculum_name_csc_02: Jakýkoli modul CS Connections
   curriculum_name_ai: Umělá inteligence a strojové učení
   curriculum_name_artificial_intelligence: Umělá inteligence (AI)
@@ -460,6 +465,12 @@ cs:
     animací, her a fyzických výpočetních systémů.
   curriculum_desc_csp: Zdarma, středoškolský úvodní kurz schválený AP® CSP, který
     seznamuje studenty se základními koncepty informatiky.
+  curriculum_desc_csa_ai_long: 'Tento dvoukapitolový modul CSA po AP nabízí studentům
+    středních škol praktické zkušenosti s profesionálními nástroji pro vývoj softwaru,
+    včetně GitHub a GitHub Copilot, a předává jim skutečné dovednosti pro vývoj programu
+    počítačového vidění. '
+  curriculum_desc_csa_ai_short: Tento modul Post-AP® CSA nabízí studentům středních
+    škol praktické zkušenosti s profesionálními nástroji pro vývoj softwaru.
   collection_hardware: Zaměření na Hardware
   collection_hardware_desc: Motivuje studenty k tomu, aby k řešení problémů využívali
     data a fyzická zařízení.
@@ -533,6 +544,7 @@ cs:
   module_duration_2_hrs: 2 hodiny
   module_duration_3_hrs: 3 hodiny
   module_duration_5_hrs: 5 hodin
+  module_duration_5_hrs_plus: 5+ hodin
   module_duration_8_hrs: 8 hodin
   module_duration_20_hrs: 20 hodin
   module_duration_35_hrs: 35 hodin
@@ -612,6 +624,7 @@ cs:
   heading_these_lessons_will: 'Tyto lekce budou:'
   heading_explore_curriculum_catalog: Prozkoumejte všechny naše kurzy v katalogu učebních
     osnov
+  heading_csa_ai: Hledáte co dělat po zkoušce AP®?
   professional_learning_section_desc: Získejte podporu potřebnou k přípravě na učení,
     kterou doporučují samotní učitelé. Až 90 % z nich kurz považuje za ten nejlepší
     program pro profesní rozvoj.
@@ -644,6 +657,23 @@ cs:
   support_and_questions_section_desc: Náš tým podpory vám rád zodpoví jakékoliv otázky
     ohledně toho, jak začít učit s Code.org. Na fóru pro učitele se také můžete zeptat
     kolegů na jejich zkušenosti.
+  subscribe_form_section_title: Přihlaste se k odběru aktualizací
+  subscribe_form_section_desc_csa: Přihlaste se k odběru měsíčních e-mailů o AP® Computer
+    Science A společnosti Code.org a získejte užitečné připomenutí, tipy a aktualizace
+    zasílané přímo do vaší doručené pošty.
+  subscribe_form_section_desc_csc: Přihlaste se k odběru měsíčních e-mailů o připojeních
+    Computer Science Connections společnosti Code.org a získejte užitečné připomenutí,
+    tipy a aktualizace zasílané přímo do vaší doručené pošty.
+  subscribe_form_section_desc_csd: Přihlaste se k odběru měsíčních e-mailů o objevech
+    počítačových věd společnosti Code.org a získejte užitečné připomenutí, tipy a
+    aktualizace zasílané přímo do vaší doručené pošty.
+  subscribe_form_section_desc_csf: Přihlaste se k odběru měsíčních e-mailů o Computer
+    Science Fundamentals společnosti Code.org a získejte užitečné připomenutí, tipy
+    a aktualizace zasílané přímo do vaší doručené pošty.
+  subscribe_form_section_desc_csp: Přihlaste se k odběru měsíčních e-mailů o principech
+    informatiky Code.org a získejte užitečné připomenutí, tipy a aktualizace zasílané
+    přímo do vaší doručené pošty.
+  subscribe_form_section_unsubscribe: Z odběru se můžete kdykoli odhlásit.
   blockchain_hero_heading: Jak funguje blockchain
   blockchain_hero_desc: Ponořte se do světa blockchainu s „Jak funguje blockchain“,
     naší nové video série a doprovodných lekcí!
@@ -746,6 +776,9 @@ cs:
     je spárována s jediným videem ze série, ponoří se hlouběji do konceptů zavedených
     ve videích.
   ai_curriculum_btn_aria_label_04: Prozkoumejte, jak funguje umělá inteligence
+  ai_curriculum_grades_05: 'Úrovně stupně: 9-12'
+  ai_curriculum_btn_aria_label_05: Prozkoumejte modul Softwarové inženýrství a počítačové
+    vidění
   ai_carousel_heading: 'Co říkají učitelé o AI s Code.org:'
   ai_carousel_quote_01: Tato lekce také dala mým studentům příležitost vidět, že v
     klasifikačních systémech existuje prvek názoru. Později, když jsme začali vidět,
@@ -872,6 +905,7 @@ cs:
     jako je ChatGPT, od začátečníků po pokročilé. Zahrnuje startovací výzvy pro ty,
     kteří si jen ponoří prsty na nohou, stejně jako pokročilé nástroje pro ty, kteří
     chtějí maximalizovat svůj potenciál.
+  ai_pl_101_resources_3: AI výzvy k transformaci učení studentů
   how_ai_works_hero_heading: Jak funguje umělá inteligence
   how_ai_works_hero_desc: Ponořte se do světa AI pomocí „Jak AI funguje“, naší video
     série a doprovodných lekcí!
@@ -1260,8 +1294,8 @@ cs:
     Animation
   csp_page_curriculum_glance_devices: Laptop, Chromebook
   csp_page_curriculum_glance_tools: App Lab
-  csp_page_curriculum_glance_professional_learning: Facilitator-led Workshops, Self-paced
-    Modules
+  csp_page_curriculum_glance_professional_learning: Workshopy vedené facilitátorem,
+    moduly s vlastním tempem
   csp_page_curriculum_glance_professional_languages: Čeština
   csp_page_curriculum_glance_professional_accessibility_features: Text-to-speech,
     Closed captioning, Immersive reader
@@ -1387,8 +1421,8 @@ cs:
     Programování
   csd_page_curriculum_glance_devices: Laptop, Chromebook
   csd_page_curriculum_glance_tools: App Lab, Game Lab, AI Lab, Web Lab
-  csd_page_curriculum_glance_professional_learning: Facilitator-led Workshops, Self-paced
-    Modules
+  csd_page_curriculum_glance_professional_learning: Workshopy vedené facilitátorem,
+    moduly s vlastním tempem
   csd_page_curriculum_glance_professional_languages: Čeština
   csd_page_curriculum_glance_professional_accessibility_features: Text-to-speech,
     Closed captioning, Immersive reader
@@ -1537,8 +1571,8 @@ cs:
     a design, Návrh aplikací
   csf_page_curriculum_glance_devices: Notebook, chromebook, tablet
   csf_page_curriculum_glance_tools: Sprite Lab, Play Lab
-  csf_page_curriculum_glance_professional_learning: Facilitator-led Workshops, Self-paced
-    Modules
+  csf_page_curriculum_glance_professional_learning: Workshopy vedené facilitátorem,
+    moduly s vlastním tempem
   csf_page_curriculum_glance_languages: Arabština, indonéština, katalánština, zjednodušená
     čínština, tradiční čínština, čeština, francouzština, němčina, hindština, italština,
     japonština, korejština, kannadština, malajština, maráthština, mongolština, polština,
@@ -1679,6 +1713,37 @@ cs:
   csa_page_faq_answer_08_02: For more information about the values that guided our
     work, please see our [curriculum values](%{curriculum_values_url}) and our [professional
     learning values](%{pl_values_url}).
+  donate_page_top_heading: Pomozte financovat naše poslání
+  donate_page_top_desc: Každý dar podporuje poslání Code.org rozšířit přístup ke vzdělávání
+    v oblasti informatiky. Nabízíme několik způsobů, jak darovat a změnit.
+  donate_page_fundraise_title: Fundraise pro Code.org
+  donate_page_fundraise_desc: Pomozte získat peníze pro Code.org! Každý student v
+    každé škole by měl mít příležitost učit se informatiku.
+  donate_page_other_ways_title: Další způsoby, jak dát
+  donate_page_other_ways_desc: Prozkoumejte různé metody, jak přispět, a najděte možnost,
+    která vám nejlépe vyhovuje. Každé gesto, velké nebo malé, pohání naši misi vpřed.
+  donate_page_501c3: Code.org je registrována jako veřejná nezisková organizace 501
+    (c) (3). Příspěvky na Code.org jsou daňově uznatelné v rozsahu povoleném zákonem.
+    Daňové identifikační číslo společnosti Code.org je 46-0858543.
+  donate_page_donation_policy_title: Pochopení naší politiky darování
+  donate_page_donation_policy_desc: Zjistěte, jak zpracováváme a přidělujeme vaše
+    příspěvky.
+  donate_tabs_tab_label_daf_direct: Přímý DAF
+  donate_tabs_tab_label_amazon: Amazon
+  donate_tabs_tab_label_bitpay: BitPay
+  donate_tabs_tab_label_employee_match: Zápas zaměstnanců
+  donate_tabs_daf_direct_title: Přispějte prostřednictvím DAF Direct
+  donate_tabs_daf_direct_desc: Darujte prostřednictvím svého dárcovského fondu s Fidelity
+    Charitable, Schwab Charitable nebo BNY Mellon a prostřednictvím online formuláře
+    DAF Direct poskytněte doporučení grantu společnosti Code.org.
+  donate_tabs_amazon_title: Přispějte přes Amazon
+  donate_tabs_amazon_desc: Přispějte přímo pomocí svého účtu Amazon. Pouhými několika
+    kliknutími plynule přispět k poslání Code.org a posílit budoucnost vzdělávání
+    v oblasti informatiky.
+  donate_tabs_bitpay_title: Darujte pomocí Crypto přes BitPay
+  donate_tabs_bitpay_desc: Přijměte budoucnost dávání pomocí kryptoměny. Prostřednictvím
+    BitPay může vaše digitální měna přímo podporovat úsilí Code.org o rozšiřování
+    vzdělávání v oblasti informatiky.
   hoc_live: Hodina kódu naživo
   hoc_live_sign_up_title: Přihlaste se k odběru Hour of Code Live
   hoc_live_learn_title: Učte se s Hour of Code Live

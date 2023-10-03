@@ -14,7 +14,19 @@
         "AppLab Intro 7 - Change Screen Color": {
           "applab_hoc_finish": "S-a făcut verde ecranul? Dacă da, apasă 'Terminat'. Dacă nu, apasă 'Resetează', schimbă codul tău și apasă din nou 'Rulează'."
         },
+        "AppLab Intro 7 - Change Screen Color_2023": {
+          "applab_hoc_finish": "S-a făcut verde ecranul? Dacă da, apasă 'Terminat'. Dacă nu, apasă 'Resetează', schimbă codul tău și apasă din nou 'Rulează'."
+        },
+        "AppLab Intro 7 - Change Screen Color_mb2022": {
+          "applab_hoc_finish": "S-a făcut verde ecranul? Dacă da, apasă 'Terminat'. Dacă nu, apasă 'Resetează', schimbă codul tău și apasă din nou 'Rulează'."
+        },
         "AppLab Intro 7 - thisOrThatAddButton": {
+          "AppLabHoCFinal11": "Acum ești în Modul Design."
+        },
+        "AppLab Intro 7 - thisOrThatAddButton_2023": {
+          "AppLabHoCFinal11": "Acum ești în Modul Design."
+        },
+        "AppLab Intro 7 - thisOrThatAddButton_mb2022": {
           "AppLabHoCFinal11": "Acum ești în Modul Design."
         },
         "CSD U3 Draw Loop Plugged wiggle sprite y_2018": {
@@ -27,6 +39,12 @@
           "": "[șir gol]"
         },
         "CSD U3 Draw Loop Plugged wiggle sprite y_2022": {
+          "": "[șir gol]"
+        },
+        "CSD U3 Draw Loop Plugged wiggle sprite y_2023": {
+          "": "[șir gol]"
+        },
+        "CSD U3 rect_2023": {
           "": "[șir gol]"
         },
         "Course 4 Artist 4": {
