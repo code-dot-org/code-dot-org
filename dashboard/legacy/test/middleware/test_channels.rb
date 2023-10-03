@@ -333,7 +333,6 @@ class ChannelsTest < Minitest::Test
     channel_id = last_response.location.split('/').last
 
     assert_cannot_publish('applab', channel_id)
-    ChannelsApi.any_instance.unstub(:current_user)
   end
 
   def test_cannot_publish_if_project_too_new
@@ -350,7 +349,6 @@ class ChannelsTest < Minitest::Test
     channel_id = last_response.location.split('/').last
 
     assert_cannot_publish('applab', channel_id)
-    ChannelsApi.any_instance.unstub(:current_user)
   end
 
   def test_can_publish_when_override_applied
@@ -364,7 +362,6 @@ class ChannelsTest < Minitest::Test
     ChannelsApi.any_instance.stubs(:current_user).returns(stub_user)
 
     assert_can_publish('applab')
-    ChannelsApi.any_instance.unstub(:current_user)
   end
 
   def test_restricted_publish_permissions
