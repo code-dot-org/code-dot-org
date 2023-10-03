@@ -98,7 +98,7 @@ fa:
   courses_page:
     title_student: "در استودیو ی کد یاد بگیرید"
     title_teacher: "آموزش علوم کامپیوتر"
-  unplugged_activity: 'فعالیت کلاسی'
+  unplugged_activity: 'فعالیت بدون کامپیوتر'
   of: "از"
   more: "بیشتر"
   less: "کمتر"
@@ -738,7 +738,7 @@ fa:
   landing:
     prerelease_tutorial: "این آموزش در مرحله آزمایشی قرار دارد. با دریافت نظرات و بازخوردها جهت بهبود آن تغییراتی در ان خواهیم داد. "
     report_bug: "گزارش اشکال"
-    support: "کمک گرفتن"
+    support: "کمک بگیرید"
     support_url: "support.code.org"
     help_resources: "کمک و منابع"
     help_support: "راهنمایی و پشتیبانی"

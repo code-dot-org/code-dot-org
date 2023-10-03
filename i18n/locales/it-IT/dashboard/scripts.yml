@@ -410,22 +410,10 @@ it:
             practice:
               display_name: Pratiche d'insegnante
         basketball:
-          title: |-
-            <https://studio.code.org/s/basketball/stage/>
-
-            Scegli la tua squadra e fai una partita di basket
-          description_short: |-
-            <https://studio.code.org/s/basketball/stage/>
-
-            Scegli la tua squadra e fai una partita di basket
-          description: |-
-            <https://studio.code.org/s/basketball/stage/>
-
-            Scegli la tua squadra e fai una partita di basket
-          student_description: |-
-            <https://studio.code.org/s/basketball/stage/>
-
-            Scegli la tua squadra e fai una partita di basket
+          title: Scegli la tua squadra e fai una partita di basket
+          description_short: Scegli la tua squadra e fai una partita di basket
+          description: Scegli la tua squadra e fai una partita di basket
+          student_description: Scegli la tua squadra e fai una partita di basket
           name: pallacanestro
         csd2-2017:
           title: Unità 2 - Sviluppo Web ('17-'18)

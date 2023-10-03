@@ -13480,18 +13480,17 @@ zh-CN:
           “问题” 是你想更多地了解的问题\n</div>\n\n**准备好开始了吗？** 使用 <a href=\"https://docs.google.com/document/d/1b6w_lOnibUHyDLYCP3rAWED5iElGm6LOQAJwG-hlih0/template/preview\"
           target=\"_blank\">此资源</a> 与您的合作伙伴分享反馈。\n\n"
       csc_ecosystemes_foodchain_info:
-        markdown: "\n##**所有生态系统都有_微妙平衡的_食物链**\n## #The 海洋生态系统食物链：>## #1.\n\n\n\n<img
-          src=\"https://images.code.org/2270cbb4656875db210e9871883a7d45-image-1683677265473.jpg\"
-          style= \"width:80%\">\n<div style= \"width: 80%\"> \n\n太阳为藻类的光合作用提供能量。\n>##
-          #2.藻类被鱼吃掉。\n>## #3.鱼被人类捕获和食用，他们使用带渔网的渔船。 \n\n</div>\n\n\n##**如果食物链中一种生物体过多或过少，就会对整个生态系统产生影响**\n"
+        markdown: "\n##**所有生态系统都有_微妙平衡的_食物链**\n###海洋生态系统食物链：\n\n\n\n<img src=\"https://images.code.org/2270cbb4656875db210e9871883a7d45-image-1683677265473.jpg\"
+          style= \"width:80%\">\n<div style= \"width: 80%\"> \n\n>###1. 太阳为藻类的光合作用提供能量。\n>###2.
+          藻类被鱼吃。\n>###3. 鱼被人类捕获和食用，人类使用带渔网的渔船。 \n\n</div>\n\n\n##**如果食物链中一种生物过多或过少，就会对整个生态系统产生影响。**\n"
       csc_ecosystems_choice_freeplay_2023:
-        description: 这些生态系统模拟中的每一个都需要调整。选择一个生态系统，运行仿真以观察问题，然后调整代码以修复问题。
+        description: 这些生态系统模拟中的每一个都需要调整。选择一个生态系统，运行模拟以观察问题，然后调整代码以修复问题。
         display_name: 选择一个生态系统！
       csc_ecosystems_conditionals_overview:
-        markdown: "#Cause & Effect Conditials \n\n</div>\n\n## 接下来你将添加代码来检查水中有多少藻类
-          <br>\n<img src=\"https://images.code.org/8be316d4e408466b4300c614712fd652-image-1684798211348.jpg\"
-          \ width=50% style=\"margin-right: 10px; float: right\">\n<br> <br>\n\n-首先，计算机检查条件是真还是假。\n\n-如果是真的，那么它就会把方块塞进去。\n-如果它是假的，那么它什么也做不了。\n\n<br>\n<br>\n<br>\n\n##
-          如果藻类过多，珊瑚就会生病\n\n<br>\n\n<img src=\"https://images.code.org/4d8aaa9c6562e0ca0b3d92ff7aed1d03-image-1681847951794.png\"
+        markdown: "#因果关系条件语句 \n\n</div>\n\n## 接下来你将添加代码来检查水中有多少藻类<br>\n<img src=\"https://images.code.org/8be316d4e408466b4300c614712fd652-image-1684798211348.jpg\"
+          \ width=50% style=\"margin-right: 10px; float: right\">\n<br> <br>\n\n-
+          首先，计算机检查条件为真还是为假。\n\n- 如果为真，它将运行里面的模块。\n- 如果为假，它不会做任何事情。\n\n<br>\n<br>\n<br>\n\n##
+          如果藻类太多，珊瑚就会生病\n\n<br>\n\n<img src=\"https://images.code.org/4d8aaa9c6562e0ca0b3d92ff7aed1d03-image-1681847951794.png\"
           \ width=20% style=\"margin-right: 10px; float: left\">\n<img src=\"https://images.code.org/941774921f367566bef36cb712cf2bfb-image-1681840836607.png\"
           \ width=30% style=\" margin-right: 10px; float: left\">\n\n<br>\n<br>\n<br>\n<br>\n<br>\n<br>\n<br>\n<br>\n\n***\n\n\n\n##
           如果藻类太少，鱼就会离开\n<img src=\"https://images.code.org/6869f418200edfb88190c0a1e4e5cd10-image-1681838202310.png\"
@@ -13502,87 +13501,84 @@ zh-CN:
           \ width=30% style=\"margin-left: 10px;float: left\">\n<br>\n<br>\n<br>\n<br>\n\n"
       csc_ecosystems_matching_cfu:
         answers:
-        - text: "！[] (https://images.code.org/284e3b6e09f5d58052a8840e756644c5-image-1683752491112.png)"
-        - text: "！[] (https://images.code.org/d466f0912cd0cadb3d655263c71c072f-image-1683752857648.jpg)"
-        - text: "！[] (https://images.code.org/de2ab3c63bc2cf7cb319be86d5dcdec0-image-1683752570051.png)"
+        - text: "![](https://images.code.org/284e3b6e09f5d58052a8840e756644c5-image-1683752491112.png)"
+        - text: "![](https://images.code.org/d466f0912cd0cadb3d655263c71c072f-image-1683752857648.jpg)"
+        - text: "![](https://images.code.org/de2ab3c63bc2cf7cb319be86d5dcdec0-image-1683752570051.png)"
         markdown: |+
           ## 看看三种可持续的捕鱼方法
 
           将代码拖到匹配的图像上。
 
         questions:
-        - text: 为船只创建一个钓鱼区！[] (https://images.code.org/5f5e0640a82242d632db10b872280e18-image-1683753001613.gif)
+        - text: 为船创建一个捕鱼区域![](https://images.code.org/5f5e0640a82242d632db10b872280e18-image-1683753001613.gif)
         - text: |-
-            开始钓鱼季和禁钓季节
-            ！[] (https://images.code.org/becad47fd19a4d0e938a0cd10c404e41-image-1683838684289.gif)
-        - text: 设定钓鱼限制！[] (https://images.code.org/f8bbd98ff6199af5d3ad23d64f39629d-image-1683753402925.gif)
+            开始捕鱼季节和禁止捕鱼季节
+            ![](https://images.code.org/becad47fd19a4d0e938a0cd10c404e41-image-1683838684289.gif)
+        - text: 设置捕鱼限制![](https://images.code.org/f8bbd98ff6199af5d3ad23d64f39629d-image-1683753402925.gif)
         title: 将代码与图像匹配
       csc_ecosystems_matching_conditionals:
         answers:
-        - text: "！[] (https://images.code.org/db1db479bec9b40c6e0574ade394d32b-image-1680118613718.36.41
+        - text: "![](https://images.code.org/db1db479bec9b40c6e0574ade394d32b-image-1680118613718.36.41
             PM.png)"
-        - text: "！[] (https://images.code.org/7c9171ab2ee2e833e5ff60d5519d8728-image-1680118617438.31.00
+        - text: "![](https://images.code.org/7c9171ab2ee2e833e5ff60d5519d8728-image-1680118617438.31.00
             PM.png)"
-        - text: "！[] (https://images.code.org/412968ba617ef19d2049e0e63d271937-image-1680118620636.30.50
+        - text: "![](https://images.code.org/412968ba617ef19d2049e0e63d271937-image-1680118620636.30.50
             PM.png)"
         markdown: |
-          ## 看看三个生态系统
+          ## 看看这三个生态系统
 
           一个生态系统是平衡的，另外两个以不同的方式不平衡。将代码拖到匹配的图像上。
         questions:
-        - text: 藻类太少会让鱼离开。！[] (https://images.code.org/c0a28473307b7e9b0e827532d2a6ddda-image-1680212227032.png)
+        - text: 藻类太少会使鱼离开。![](https://images.code.org/c0a28473307b7e9b0e827532d2a6ddda-image-1680212227032.png)
         - text: |-
-            藻类过多会使珊瑚生病。 <br>
-            ！[] (https://images.code.org/1230fd96832b692b0c8ab88e77957f33-image-1680212254888.png)
-        - text: 恰到好处的藻类可以让生病的珊瑚愈合，也可以保持鱼的健康。！[] (https://images.code.org/3dd061538a7a73285aa0916fdde34e77-image-1680212284869.png)
+            藻类太多会使珊瑚生病。<br>
+            ![](https://images.code.org/1230fd96832b692b0c8ab88e77957f33-image-1680212254888.png)
+        - text: 恰到好处的藻类可以让生病的珊瑚愈合，也可以保持鱼的健康。![](https://images.code.org/3dd061538a7a73285aa0916fdde34e77-image-1680212284869.png)
         title: 将代码与图像匹配
       csc_ecosystems_matching_events:
         answers:
-        - text: "！[] (https://images.code.org/bf70d0664e68690f2359a48365e50ccc-image-1680556679495.16.33
+        - text: "![](https://images.code.org/bf70d0664e68690f2359a48365e50ccc-image-1680556679495.16.33
             PM.png)"
-        - text: "！[] (https://images.code.org/fe4d2803162186a8e53ec0027f27a206-image-1680556683660.36.04
+        - text: "![](https://images.code.org/fe4d2803162186a8e53ec0027f27a206-image-1680556683660.36.04
             PM.png)"
         markdown: |+
-          看看两个动画中精灵触摸时会发生什么。然后将每张代码图片拖到其匹配的图像上。
+          看看两个动画中精灵图触碰时会发生什么。然后将每张代码图片拖到其匹配的图像上。
 
 
         questions:
-        - text: 船抓住了鱼。！[] (https://images.code.org/bcdefefdd1787330e3ad72558b5b492d-image-1680556053866.gif)
-        - text: 鱼吃掉藻类。！[] (https://images.code.org/73febc58a3d23fbf4c66e693abec9e3d-image-1680556608027.gif)
+        - text: 船捕鱼。![](https://images.code.org/bcdefefdd1787330e3ad72558b5b492d-image-1680556053866.gif)
+        - text: 鱼吃藻类。![](https://images.code.org/73febc58a3d23fbf4c66e693abec9e3d-image-1680556608027.gif)
         title: 将代码与动画匹配
       csc_ecosystems_overfishing_solution2_overview:
-        markdown: "> #Sustainable Fishing Practice #2:\n>># #Create 钓鱼季节 <img src=\"https://images.code.org/123dd5c82e4c03dcbc32b775fd16ec60-image-1681937158113.png\"
+        markdown: ">#可持续捕鱼方法#2：\n>>##创建捕鱼季节<img src=\"https://images.code.org/123dd5c82e4c03dcbc32b775fd16ec60-image-1681937158113.png\"
           \ width=400 style=\"margin-right: 30px; float: left\">\n**限制人们何时可以钓鱼。当不是捕鱼季节时，生态系统有时间恢复。**
-          \n<br>\n\n#Save 我们的海洋！ \n<img src=\"https://images.code.org/f3f55eddff9891464c8fb5a5405c31c3-image-1681781301257.png\"
+          \n<br>\n\n#拯救我们的海洋！ \n<img src=\"https://images.code.org/f3f55eddff9891464c8fb5a5405c31c3-image-1681781301257.png\"
           width=250 style=\"margin-left: 30px; margin-bottom: 30px; float: right\">\n<img
           src=\"https://images.code.org/cbccfc42b7e1fe329ac7c9c37dfcb6b5-image-1681781296669.png\"
           width=250 style=\"margin-left: 30px; margin-bottom: 30px; float: right\">\n\n</div>\n\n###
-          过度捕捞是一个可能危害海洋生物生态系统和依赖海洋生物生态系统的人们的问题。重要的是要实行可持续捕鱼，以帮助保护这些生态系统并确保鱼类种群保持健康。\n\n\n\n<br>\n<br>\n<br>\n"
+          过度捕捞是一个问题，可能危害海洋生物生态系统和依赖海洋生物生态系统的人。重要的是要实行可持续捕鱼，以帮助保护这些生态系统并确保鱼类种群保持健康。\n\n\n\n<br>\n<br>\n<br>\n"
       csc_ecosystems_overfishing_solution3_overview:
-        markdown: "> #Sustainable Fishing Practice #3:\n>># #Set Fishing Limits <img
-          src=\"https://images.code.org/58d4ca52deba39a990c3165ba16e284b-image-1681747630352.png\"
-          \ width=300 style=\"margin-right: 30px; float: left\">\n**科学家们可以帮助弄清楚在不对海洋造成伤害的情况下可以捕到多少鱼。然后渔民就会知道只能钓那么多鱼。**
-          \n<br>\n<br>\n<br>\n\n#Save 我们的海洋！ \n<img src=\"https://images.code.org/35e557d27c4bdb5f546da560716dc10b-image-1681756387784.jpg\"
+        markdown: "> #可持续捕鱼方法#3：\n>>##设置捕鱼限制<img src=\"https://images.code.org/58d4ca52deba39a990c3165ba16e284b-image-1681747630352.png\"
+          \ width=300 style=\"margin-right: 30px; float: left\">\n**科学家可以帮助弄清楚在不对海洋造成伤害的情况下可以捕到多少鱼。然后渔民将知道只能捕那么多的鱼。**
+          \n<br>\n<br>\n<br>\n\n#拯救我们的海洋！ \n<img src=\"https://images.code.org/35e557d27c4bdb5f546da560716dc10b-image-1681756387784.jpg\"
           width=400 style=\"margin-left: 30px; margin-bottom: 30px; float: right\">\n</div>\n\n###
-          通过共同努力，我们可以帮助子孙后代让我们的海洋充满生机！\n\n\n\n<br>\n<br>\n<br>\n\n"
+          通过共同努力，我们可以为子孙后代留下充满生机的海洋！\n\n\n\n<br>\n<br>\n<br>\n\n"
       csc_ecosystems_overfishing_solutions_overview:
-        markdown: "#Save 我们的海洋！ \n<img src=\"https://images.code.org/d4267a1de975b8ea46468f74187eb95c-image-1681756621010.jpg\"
+        markdown: "#拯救我们的海洋！ \n<img src=\"https://images.code.org/d4267a1de975b8ea46468f74187eb95c-image-1681756621010.jpg\"
           width=400 style=\"margin-left: 30px; margin-bottom: 30px; float: right\">\n</div>\n\n###
-          海洋里有很多鱼，但有时候人们捕到的鱼太多了，这可能对生态系统不利。在以下关卡中，您将编写**三种不同的可持续捕鱼方法**，以帮助保护我们的海洋生态系统。\n\n<br>\n\n##
-          #To 阅读更多关于海洋可持续解决方案的信息： <a href=\"https://www.seafoodwatch.org/seafood-basics/sustainable-solutions/avoid-overfishing\"
-          target=\"_blank\">点击这里</a>\n<br>\n<br>\n\n> #Sustainable Fishing练习 #1:\n>>
-          # #Fishing Zones <img src=\"https://images.code.org/c33e46309c5335dc557c67c34310e723-image-1681511054034.png\"
-          \ width=300 style=\"margin-right: 30px; float: left\">\n**渔船只能在指定区域捕鱼。有些区域禁止渔船进入，因此生态系统可以恢复。**
+          海洋里有很多鱼，但有时候人们捕到的鱼太多了，这可能对生态系统不利。在以下关卡中，你将编写**三种不同的可持续捕鱼方法**，以帮助保护我们的海洋生态系统。\n\n<br>\n\n###阅读更多关于海洋可持续解决方案的内容：<a
+          href=\"https://www.seafoodwatch.org/seafood-basics/sustainable-solutions/avoid-overfishing\"
+          target=\"_blank\">点击这里</a>\n<br>\n<br>\n\n>#可持续捕鱼方法#1：\n>> ##捕鱼区域<img src=\"https://images.code.org/c33e46309c5335dc557c67c34310e723-image-1681511054034.png\"
+          \ width=300 style=\"margin-right: 30px; float: left\">\n**渔船只能在指定区域捕鱼。有些区域禁止渔船进入，这样生态系统就可以恢复。**
           \n<br>\n<br>\n\n\n"
       csc_ecosystems_planning:
-        markdown: "# #Share 你的生态系统模拟！\n<img src=\"https://images.code.org/c480c5c42d9c02e154943f49bbed87ff-image-1675984438344.13.53
-          PM.png\" style= \"width:50%\">\n<div style= \"width: 60%\"> \n\n###**生态学家！是时候分享你的研究成果了！**\n\n##
-          #Explain 你做了以下观察：\n\n>1.解释你生态系统中的食物链以及你是如何编码的。\n>2。生物体是太多还是太少？\n>3。解释您对仿真所做的修改。
-          \n>4。更改值后你注意到了什么？\n</div>\n\n<div style=\"background-color: #a6e3e8; border-radius:
-          10px; color: #000000; width: 95%; padding: 0.5px 20px 1px 20px;\">\n\n<p
-          style=\"line-height: 1.5; margin-left: 10px; margin-right: 10px; margin-top:
-          20px; margin-bottom: 20px; font-size: 18px; \">\n\n###**准备好进行更多编码了吗？** \n试试
-          code.org 的 [Express Course] (https://studio.code.org/s/express-2022)，按照自己的节奏学习更多计算机科学。
+        markdown: "##分享你的生态系统模拟！\n<img src=\"https://images.code.org/c480c5c42d9c02e154943f49bbed87ff-image-1675984438344.13.53
+          PM.png\" style= \"width:50%\">\n<div style= \"width: 60%\"> \n\n###**生态学家！是时候分享你的研究成果了！**\n\n###解释你做的以下观察：\n\n>1.
+          解释你的生态系统中的食物链以及你如何编码。\n>2. 一种生物是太多还是太少？\n>3. 解释你对模拟所做的修改。 \n>4. 更改值后你注意到了什么？\n</div>\n\n<div
+          style=\"background-color: #a6e3e8; border-radius: 10px; color: #000000;
+          width: 95%; padding: 0.5px 20px 1px 20px;\">\n\n<p style=\"line-height:
+          1.5; margin-left: 10px; margin-right: 10px; margin-top: 20px; margin-bottom:
+          20px; font-size: 18px; \">\n\n###**准备好进行更多编码了吗？** \n试试code.org的[快捷课程] (https://studio.code.org/s/express-2022)，按照自己的节奏学习更多计算机科学。
           \  \n<br>\n</p></div>\n"
       csc_mappinglandmarks_markdown_lesson_2:
         markdown: |+

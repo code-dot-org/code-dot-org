@@ -137,6 +137,18 @@
         "e09ca0a1-6d0c-4177-9bcb-b97ab36faeca": {
           "description": "Usar variáveis em um programa para armazenar uma informação usada várias vezes"
         },
+        "40bde7b5-fc47-455e-9d21-5dc53330e8e8": {
+          "description": "Criar e usar um sprite"
+        },
+        "c61f1e5d-d728-499d-9729-a1ff2db8de64": {
+          "description": "Colocar o texto na tela usando um plano de coordenadas."
+        },
+        "b40e994c-3d1e-4ba8-9cf1-8674567bb26c": {
+          "description": "Usar argumentos para controlar como o texto é exibido na tela."
+        },
+        "d6709c2c-76b3-495d-bb07-af8a4c772363": {
+          "description": "Usar um processo estruturado para planejar e desenvolver um programa."
+        },
         "ad6a4213-49c3-49e2-ace9-5a7d36daa458": {
           "description": "Avaliar criticamente um objeto para verificar se seu design atende a um determinado conjunto de necessidades"
         },
@@ -1294,6 +1306,21 @@
         },
         "c25b3f0d-dcfb-415a-a97f-89b4e89311a5": {
           "description": "Usar variáveis em um programa para armazenar uma informação usada várias vezes"
+        },
+        "f94d8eca-cf05-40a8-acf0-8c5b1ed3868f": {
+          "description": "Criar e usar um sprite"
+        },
+        "9d865e75-6b5a-43d4-a145-17de9aee4ad3": {
+          "description": "Usar a notação de pontos para atualizar as propriedades de um sprite"
+        },
+        "411f894a-c802-41df-822e-41c4b8dd9a9d": {
+          "description": "Colocar o texto na tela usando um plano de coordenadas."
+        },
+        "72496109-18f7-4a09-84eb-3aabcc22ae92": {
+          "description": "Usar argumentos para controlar como o texto é exibido na tela."
+        },
+        "36566c25-03d9-4b33-9269-bf4155649445": {
+          "description": "Usar um processo estruturado para planejar e desenvolver um programa."
         },
         "608b3d15-c429-49e9-84e0-26c7e151143c": {
           "description": "Identificar-se de maneira empática com o usuário como um componente importante do processo de design"
@@ -2623,6 +2650,21 @@
         },
         "fb1c91cd-2242-42e6-8157-6678425bc95e": {
           "description": "Identificar uma variável como uma forma de rotular e referenciar um valor em um programa"
+        },
+        "03acfea1-e135-4363-970e-ae24d3a8aef0": {
+          "description": "Usar um processo estruturado para planejar e desenvolver um programa."
+        },
+        "91c9026d-5107-4a92-80d7-440d6e3540c5": {
+          "description": "Criar e usar um sprite"
+        },
+        "a09ea05c-bb1b-40d3-8928-51241a53d441": {
+          "description": "Colocar o texto na tela usando um plano de coordenadas."
+        },
+        "f7045a46-2926-497c-975d-8a54fb9e9486": {
+          "description": "Usar argumentos para controlar como o texto é exibido na tela."
+        },
+        "859f9c2e-f9fa-4344-8c73-3fe3035b5fc9": {
+          "description": "Usar um processo estruturado para planejar e desenvolver um programa."
         },
         "64f02372-bdc0-41d2-8504-1ad016a794d4": {
           "description": "Identificar-se de maneira empática com o usuário como um componente importante do processo de design"

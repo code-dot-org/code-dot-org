@@ -645,18 +645,18 @@
             }
           },
           "draw a pinwheel": {
-            "name": "vizato një pinwheel",
+            "name": "vizato një helikë prej letre",
             "parameters": {
               "length": "gjatësia",
               "repeat": "përsërit",
-              "sides": "anët"
+              "sides": "brinjtë"
             }
           },
           "draw a shape": {
             "name": "vizato një formë",
             "parameters": {
               "length": "gjatësia",
-              "sides": "anët"
+              "sides": "brinjtë"
             }
           },
           "draw a square": {
@@ -666,7 +666,7 @@
             }
           },
           "draw a star": {
-            "description": "vizatoni një yll me pikat e dhëna dhe anët e gjatësisë së dhënë",
+            "description": "vizatoni një yll me pikat e dhëna dhe brinjët e gjatësisë së dhënë",
             "name": "vizato një yll",
             "parameters": {
               "length": "gjatësia",
