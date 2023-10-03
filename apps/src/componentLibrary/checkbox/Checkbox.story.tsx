@@ -123,7 +123,7 @@ GroupOfSizesOfCheckboxes.args = {
 // -----------------------------------------------------------
 const SupernovaDefaultMultipleTemplate: Story<{
   components: CheckboxProps[];
-}> = args => (
+}> = () => (
   <>
     <div style={{display: 'flex', justifyContent: 'space-around'}}>
       {[
