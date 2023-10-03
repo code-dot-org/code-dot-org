@@ -11,6 +11,7 @@ import {StrongText, Heading5} from '@cdo/apps/componentLibrary/typography';
 import classNames from 'classnames';
 import FontAwesome from '@cdo/apps/templates/FontAwesome';
 import {AiModalItem, AiModalReturnedItem} from './types';
+import {BlockSvg} from 'blockly/core';
 const Typist = require('react-typist').default;
 
 const aiBotBorder = require('@cdo/static/dance/ai-bot-border.png');
@@ -73,7 +74,6 @@ const DanceAiModal: React.FunctionComponent<DanceAiProps> = ({onClose}) => {
   const [currentInputSlot, setCurrentInputSlot] = useState(0);
   const [inputs, setInputs] = useState<string[]>([]);
   const [responseJson, setResponseJson] = useState<string>('');
-  const [responseCall, setResponseCall] = useState<string>('');
   const [responseExplanation, setResponseExplanation] = useState<string>('');
   const [typingDone, setTypingDone] = useState<boolean>(false);
 
@@ -87,9 +87,11 @@ const DanceAiModal: React.FunctionComponent<DanceAiProps> = ({onClose}) => {
 
     if (currentValue) {
       setMode(Mode.RESULTS);
-      setResponseCall(`ai(${currentValue})`);
+
+      // The block value will be set to this JSON.
+      setResponseJson(currentValue);
     }
-  }, []);
+  }, [currentAiModalField]);
 
   const getImageUrl = (id: string) => {
     return `/blockly/media/dance/ai/${id}.png`;
@@ -140,8 +142,8 @@ const DanceAiModal: React.FunctionComponent<DanceAiProps> = ({onClose}) => {
   };
 
   const startAi = async (value: string) => {
-    const responseJson = await doAi(value);
-    const response = JSON.parse(responseJson);
+    const responseJsonString = await doAi(value);
+    const response = JSON.parse(responseJsonString);
 
     // "Pick" a subset of fields to be used.  Specifically, we exclude the
     // explanation, since we don't want it becoming part of the code.
@@ -154,29 +156,31 @@ const DanceAiModal: React.FunctionComponent<DanceAiProps> = ({onClose}) => {
       response
     );
     const pickedResponseJson = JSON.stringify(pickedResponse);
-    const formattedPickedResponseJson = pickedResponseJson
-      .replace(/":/g, '": ')
-      .replace(/","/g, '", "')
-      .replace(/,"/g, ', "');
 
     // The block value will be set to this JSON.
     setResponseJson(pickedResponseJson);
-
-    // The user will see this function call.
-    setResponseCall(`ai(${formattedPickedResponseJson})`);
 
     // The user will see this explanation.
     setResponseExplanation(response.explanation);
   };
 
-  const convertBlocks = (params: any) => {
-    let firstBlock = Blockly.getMainWorkspace().newBlock(
+  const formatJsonString = (jsonString: string) => {
+    return jsonString
+      .replace(/":/g, '": ')
+      .replace(/","/g, '", "')
+      .replace(/,"/g, ', "');
+  };
+
+  const convertBlocks = () => {
+    const params = JSON.parse(responseJson);
+
+    const firstBlock = Blockly.getMainWorkspace().newBlock(
       'Dancelab_setForegroundEffect'
     );
 
     firstBlock.setFieldValue(params.foregroundEffect, 'EFFECT');
 
-    let secondBlock = Blockly.getMainWorkspace().newBlock(
+    const secondBlock = Blockly.getMainWorkspace().newBlock(
       'Dancelab_setBackgroundEffectWithPalette'
     );
 
@@ -197,7 +201,7 @@ const DanceAiModal: React.FunctionComponent<DanceAiProps> = ({onClose}) => {
     ) {
       firstBlock.nextConnection.connect(secondBlock.previousConnection);
 
-      const firstBlockSvg = firstBlock as any;
+      const firstBlockSvg = firstBlock as BlockSvg;
 
       if (!origBlock.getPreviousBlock()) {
         // This block isn't attached to anything at all.
@@ -222,7 +226,7 @@ const DanceAiModal: React.FunctionComponent<DanceAiProps> = ({onClose}) => {
       firstBlockSvg.initSvg();
       firstBlockSvg.render();
 
-      const secondBlockSvg = secondBlock as any;
+      const secondBlockSvg = secondBlock as BlockSvg;
 
       secondBlockSvg.initSvg();
       secondBlockSvg.render();
@@ -250,9 +254,9 @@ const DanceAiModal: React.FunctionComponent<DanceAiProps> = ({onClose}) => {
             {' '}
             {mode === Mode.SELECT_INPUTS
               ? 'Make a sentence by selecting some emoji.'
-              : mode === Mode.GENERATING && responseCall === ''
+              : mode === Mode.GENERATING && responseJson === ''
               ? 'The AI is processing your sentence.'
-              : mode === Mode.GENERATING && responseCall !== ''
+              : mode === Mode.GENERATING && responseJson !== ''
               ? 'The AI is ready to generate results!'
               : mode === Mode.RESULTS && !typingDone
               ? 'The AI is generating results.'
@@ -298,7 +302,7 @@ const DanceAiModal: React.FunctionComponent<DanceAiProps> = ({onClose}) => {
           }}
         >
           {(mode === Mode.SELECT_INPUTS ||
-            (mode === Mode.GENERATING && responseCall === '')) && (
+            (mode === Mode.GENERATING && responseJson === '')) && (
             <div className={moduleStyles.prompt}>
               {promptString}
               {Array.from(Array(SLOT_COUNT).keys()).map(index => {
@@ -353,7 +357,7 @@ const DanceAiModal: React.FunctionComponent<DanceAiProps> = ({onClose}) => {
               />
             </div>
           )}
-          {mode === Mode.GENERATING && responseCall === '' && (
+          {mode === Mode.GENERATING && responseJson === '' && (
             <div className={moduleStyles.spinner}>
               <FontAwesome
                 title={undefined}
@@ -382,7 +386,7 @@ const DanceAiModal: React.FunctionComponent<DanceAiProps> = ({onClose}) => {
               <Heading5>Code</Heading5>
 
               <pre className={classNames(moduleStyles.pre, moduleStyles.code)}>
-                {responseCall}
+                ai({formatJsonString(responseJson)})
               </pre>
 
               <div
@@ -413,7 +417,7 @@ const DanceAiModal: React.FunctionComponent<DanceAiProps> = ({onClose}) => {
             />
           )}
 
-          {mode === Mode.GENERATING && responseCall !== '' && (
+          {mode === Mode.GENERATING && responseJson !== '' && (
             <Button
               id="done"
               text={'Generate results'}
