@@ -36,7 +36,6 @@
   max-width: initial !important;
   width: 800px !important;
   height: 380px;
-  bottom: 10% !important;
 
   .innerArea {
     width: 100%;
@@ -161,6 +160,10 @@
 
           &CenterToLeft {
             animation: center-to-left 1.75s;
+            left: 5%;
+          }
+
+          &Left {
             left: 5%;
           }
         }
