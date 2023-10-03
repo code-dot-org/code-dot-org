@@ -6,6 +6,7 @@ module I18n
   module Resources
     module Dashboard
       I18N_SOURCE_DIR_PATH = CDO.dir(File.join(I18N_SOURCE_DIR, 'dashboard')).freeze
+      DASHBOARD_CONFIG_PATH = CDO.dir('dashboard/config').freeze
 
       def self.sync_in
         Blocks.sync_in
