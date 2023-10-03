@@ -17,7 +17,7 @@ Scenario: Signed out user in English should see 7 header links
   And I see "#header-en-about"
   And element "#header-en-about" contains text "About"
   And I see "#header-en-incubator"
-  And element "#header-en-incubator" contains text "incubator"
+  And element "#header-en-incubator" contains text "Incubator"
   And I see "#header-en-projects"
   And element "#header-en-projects" contains text "Projects"
 
