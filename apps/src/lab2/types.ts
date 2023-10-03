@@ -97,7 +97,6 @@ export interface LevelProperties {
   appName: AppName;
   longInstructions?: string;
   freePlay?: boolean;
-  customBlocks?: string;
   edit_blocks?: string;
   isK1?: boolean;
   sharedBlocks?: any[]; // will update this type soon.
