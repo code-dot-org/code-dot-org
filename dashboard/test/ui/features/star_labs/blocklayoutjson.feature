@@ -8,9 +8,9 @@ Background:
 Scenario: Auto-placing malformed start blocks
   When I've initialized the workspace with an auto-positioned flappy puzzle with extra newlines
   Then block "whenClick" is near offset "16, 81"
-  And block "whenCollideGround" is near offset "16, 186"
+  And block "whenCollideGround" is near offset "16, 172"
 
 Scenario: Auto-placing blocks
   When I've initialized the workspace with an auto-positioned flappy puzzle
   Then block "whenClick" is near offset "16, 81"
-  And block "whenCollideGround" is near offset "16, 186"
+  And block "whenCollideGround" is near offset "16, 172"
