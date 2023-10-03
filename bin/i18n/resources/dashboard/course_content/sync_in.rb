@@ -278,8 +278,6 @@ module I18n
           end
 
           def prepare_level_content
-            # Preparing level content
-
             block_category_strings = {}
             progression_strings = {}
 
@@ -343,7 +341,6 @@ module I18n
           end
 
           def prepare_project_content
-            # Preparing project content
             project_content_file = File.join(I18N_SOURCE_DIR_PATH, 'projects.json')
             project_strings = {}
 
