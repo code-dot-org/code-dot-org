@@ -72,27 +72,29 @@ export default function RubricContainer({
   };
 
   useEffect(() => {
-    const studentId = studentLevelInfo.user_id;
-    const rubricId = rubric.id;
-    const dataUrl = `/rubrics/${rubricId}/get_ai_evaluations?student_id=${studentId}`;
+    if (!!studentLevelInfo) {
+      const studentId = studentLevelInfo.user_id;
+      const rubricId = rubric.id;
+      const dataUrl = `/rubrics/${rubricId}/get_ai_evaluations?student_id=${studentId}`;
 
-    fetch(dataUrl)
-      .then(response => {
-        if (!response.ok) {
-          throw new Error('Network response was not ok');
-        }
-        return response.json();
-      })
-      .then(data => {
-        setAiEvaluations(data);
-      })
-      .catch(error => {
-        console.log(
-          'There was a problem with the fetch operation:',
-          error.message
-        );
-      });
-  }, [rubric.id, studentLevelInfo.user_id]);
+      fetch(dataUrl)
+        .then(response => {
+          if (!response.ok) {
+            throw new Error('Network response was not ok');
+          }
+          return response.json();
+        })
+        .then(data => {
+          setAiEvaluations(data);
+        })
+        .catch(error => {
+          console.log(
+            'There was a problem with the fetch operation:',
+            error.message
+          );
+        });
+    }
+  }, [rubric.id, studentLevelInfo]);
 
   const getAiUnderstanding = learningGoalId => {
     if (!!aiEvaluation) {
