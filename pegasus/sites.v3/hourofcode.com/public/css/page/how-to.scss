@@ -73,83 +73,81 @@ section.banner {
     gap: 1rem;
   }
 
-  nav.how-to-nav {
+  ul.how-to-nav {
     min-width: 230px;
     position: relative;
+    list-style: none;
+    @include reset-spacing;
 
-    ul {
-      list-style: none;
-      @include reset-spacing;
+    li {
+      font-family: var(--main-font-bold);
+      color: var(--neutral_dark);
+      @include reset-list-item-spacing;
 
-      li {
-        font-family: var(--main-font-bold);
-        color: var(--neutral_dark);
-        @include reset-list-item-spacing;
+      &::before {
+        @include remove-list-dot;
+      }
 
-        &::before {
-          @include remove-list-dot;
-        }
+      button {
+        background-color: var(--neutral_dark10);
+        border: none;
+        border-radius: 4px;
+        font-family: inherit;
+        width: 100%;
+        text-align: initial;
+        text-overflow: ellipsis;
+        overflow: hidden;
+        display: flex;
+        justify-content: space-between;
+        gap: 0.5rem;
 
-        button {
-          background-color: var(--neutral_dark10);
-          border: none;
-          border-radius: 4px;
-          font-family: inherit;
-          width: 100%;
-          text-align: initial;
-          text-overflow: ellipsis;
+        span {
+          pointer-events: none;
           overflow: hidden;
-          display: flex;
-          justify-content: space-between;
-          gap: 0.5rem;
+          text-overflow: ellipsis;
+        }
 
-          span {
-            pointer-events: none;
-            overflow: hidden;
-            text-overflow: ellipsis;
+        &::after {
+          content: url('/images/angle-down.svg');
+          line-height: 1;
+        }
+      }
+
+      button.rotate::after {
+        transform: rotate(180deg);
+      }
+
+      a, button {
+        color: var(--neutral_dark);
+        text-decoration: none;
+        font-size: 18px;
+        padding: 14px 12px 14px 16px;
+      }
+
+      a {
+        display: block;
+      }
+
+      ul.menu-list {
+        position: absolute;
+        top: calc(100% - 4px);
+        padding-top: 6px;
+        margin: 0;
+        background-color: var(--neutral_dark10);
+        border-radius: 0 0 4px 4px;
+        width: 100%;
+        text-align: initial;
+
+        li {
+          border-radius: 0;
+
+          &:hover {
+            background-color: var(--neutral_dark20);
           }
 
-          &::after {
-            content: url('/images/angle-down.svg');
-            line-height: 1;
-          }
-        }
-
-        button.rotate::after {
-          transform: rotate(180deg);
-        }
-
-        a, button {
-          color: var(--neutral_dark);
-          text-decoration: none;
-          font-size: 18px;
-          padding: 14px 12px 14px 16px;
-        }
-
-        a {
-          display: block;
-        }
-
-        ul.menu-list {
-          position: absolute;
-          top: calc(100% - 4px);
-          padding-top: 6px;
-          background-color: var(--neutral_dark10);
-          border-radius: 0 0 4px 4px;
-          width: 100%;
-          text-align: initial;
-
-          li {
-            border-radius: 0;
-
-            &:hover {
-              background-color: var(--neutral_dark20);
-            }
-
-            &:last-child {
-              border-radius: 0 0 4px 4px;
-              padding-bottom: 2px;
-            }
+          &:last-child {
+            border-radius: 0 0 4px 4px;
+            padding-bottom: 2px;
           }
         }
       }
@@ -159,7 +157,7 @@ section.banner {
 
 section.steps {
   position: relative;
-  padding-bottom: 5rem;
+  padding: 0 2rem 5rem;
 
   .wrapper {
     display: flex;
@@ -247,8 +245,7 @@ section.steps {
     }
 
     .step {
-      padding-bottom: 4rem;
-      margin-bottom: 4rem;
+      padding: 4rem 0;
       border-bottom: 1px solid var(--neutral_dark20);
       display: flex;
       align-items: start;
@@ -268,7 +265,7 @@ section.steps {
 
     p.tag {
       position: absolute;
-      top: -77px;
+      top: -14px;
       font-size: 0.75rem;
       padding: 4px 12px 4px 10px;
       border-radius: 4px 16px 16px 4px;

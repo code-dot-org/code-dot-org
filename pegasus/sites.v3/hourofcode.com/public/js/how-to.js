@@ -1,6 +1,8 @@
-const menuButton = document.querySelector("button.menu-button");
-const menuList = document.querySelector("ul.menu-list");
+const menuButton = document.querySelector("ul.how-to-nav button.menu-button");
+const menuList = document.querySelector("ul.how-to-nav ul.menu-list");
+//const sideNavList = document.querySelector("ul.steps-nav a");
 
+// Dropdown menu in hero banner
 menuButton.onclick = () => {
   if (menuList.style.display !== "none") {
     menuList.style.display = "none";
