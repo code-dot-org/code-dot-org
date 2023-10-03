@@ -97,7 +97,7 @@ function devtool({minify} = {}) {
   } else if (process.env.DEBUG_MINIFIED) {
     return 'eval-source-map';
   } else if (process.env.DEV) {
-    return 'eval-cheap-module-source-map';
+    return 'eval';
   } else {
     return 'inline-source-map';
   }
@@ -266,11 +266,13 @@ const WEBPACK_BASE_CONFIG = {
             },
           ]
         : []),
-      process.env.DEV && {
-        test: /(blockly\/.*\.js)$/,
-        use: ['source-map-loader'],
-        enforce: 'pre',
-      },
+      process.env.DEV
+        ? {
+            test: /(blockly\/.*\.js)$/,
+            use: ['source-map-loader'],
+            enforce: 'pre',
+          }
+        : {},
     ],
     noParse: [/html2canvas/],
   },
