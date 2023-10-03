@@ -54,6 +54,15 @@ module Google
       return nil
     end
 
+    def file_by_id(id)
+      file = @session.file_by_id(id)
+      return nil if file.nil?
+      Google::Drive::File.new(@session, file)
+    rescue GoogleDrive::Error => exception
+      CDO.log.info "Error accessing Google Drive file with id: #{id} because: #{exception.message}"
+      return nil
+    end
+
     def folder(path)
       collection = @session.collection_by_title(path_to_title_array(path))
       return nil if collection.nil?
