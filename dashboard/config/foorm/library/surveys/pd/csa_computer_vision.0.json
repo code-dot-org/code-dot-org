@@ -1,0 +1,537 @@
+{
+  "published": true,
+  "pages": [
+    {
+      "elements": [
+        {
+          "type": "panel",
+          "name": "pre_module_survey_header_panel",
+          "visibleIf": "{survey_variable}='pre_module'",
+          "elements": [
+            {
+              "type": "html",
+              "name": "survey_preamble_header_and_text",
+              "html": "<h1>Welcome to Code.org's Software Engineering and Computer Vision - Pre-Module Teacher Survey</h1>\n\n<p><strong>Code.org relies on surveys as a crucial tool to remain connected to teachers, and to give you the opportunity to provide feedback about your experience teaching our curriculum.</strong></p>\n<p>The purpose of this survey is to understand better who our teachers are, their motivation to teach Code.org's Software Engineering and Computer Vision module, and their previous experience with this content and tools.&nbsp;</p>\n<p><strong>Privacy and Confidentiality</strong></p>\n<ul>\n<li>Your individual responses here are completely <strong>confidential.</strong></li>\n<li>Your identity will&nbsp;<strong>never</strong> be revealed publicly or used to tie any responses back to you personally.</li>\n<li>We may share <strong>de-identified</strong>, aggregate data (representing all responses) publicly.</li>\n<li>Your <strong>de-identified&nbsp;</strong>responses will be used by Code.org to improve our curriculum and programs.</li>\n</ul>\n<p>This survey should take <strong>less than 5 minutes</strong> to complete.&nbsp;&nbsp;<strong>Your complete honesty and candor are appreciated.</strong></p>"
+            }
+          ]
+        },
+        {
+          "type": "panel",
+          "name": "pre_module_survey_questions_panel",
+          "visibleIf": "{survey_variable}='pre_module'",
+          "elements": [
+            {
+              "type": "html",
+              "name": "section1_student_experience",
+              "html": "<h1>Your Students</h1>\n<p><span style='font-size: 12pt;'>The purpose of this section of the survey is to understand how your students might benefit from the content of this module.</span></p>\n<p><span style='font-size: 12pt;'>Let's get started!</span></p>"
+            },
+            {
+              "type": "radiogroup",
+              "name": "students_code_purpose",
+              "title": "Most students in my class typically articulate the purpose and functionality of their code effectively.",
+              "choices": [
+                {
+                  "value": "5",
+                  "text": "Strongly Agree"
+                },
+                {
+                  "value": "4",
+                  "text": "Agree"
+                },
+                {
+                  "value": "3",
+                  "text": "Neutral"
+                },
+                {
+                  "value": "2",
+                  "text": "Disagree"
+                },
+                {
+                  "value": "1",
+                  "text": "Strongly Disagree"
+                }
+              ]
+            },
+            {
+              "type": "radiogroup",
+              "name": "explain_code_challenge",
+              "title": "What is the most common challenge students face in explaining their coding decisions and thought processes?",
+              "choices": [
+                {
+                  "value": "logic",
+                  "text": "Articulating complex logic"
+                },
+                {
+                  "value": "debugging",
+                  "text": "Explaining debugging decisions"
+                },
+                {
+                  "value": "algorithms",
+                  "text": "Understanding underlying algorithms"
+                },
+                {
+                  "value": "confidence",
+                  "text": "Lack of confidence in their code"
+                },
+                {
+                  "value": "other",
+                  "text": "Something else"
+                }
+              ]
+            },
+            {
+              "type": "radiogroup",
+              "name": "students_relevance",
+              "title": "I anticipate that this module's content will be highly relevant for my students.",
+              "choices": [
+                {
+                  "value": "5",
+                  "text": "Strongly Agree"
+                },
+                {
+                  "value": "4",
+                  "text": "Agree"
+                },
+                {
+                  "value": "3",
+                  "text": "Neutral"
+                },
+                {
+                  "value": "2",
+                  "text": "Disagree"
+                },
+                {
+                  "value": "1",
+                  "text": "Strongly Disagree"
+                }
+              ]
+            },
+            {
+              "type": "html",
+              "name": "section2_real_world_tools",
+              "html": "<h2>Real World Tools</h2>\n<p><span style='font-size: 12pt;'>The purpose of this section of the survey is to understand  your experience with Java Lab and professional integrated development environments (IDEs) like VS Code.</span></p>"
+            },
+            {
+              "type": "radiogroup",
+              "name": "javalab_comfort",
+              "title": "I am comfortable navigating and using features in Java Lab.",
+              "choices": [
+                {
+                  "value": "5",
+                  "text": "Strongly Agree"
+                },
+                {
+                  "value": "4",
+                  "text": "Agree"
+                },
+                {
+                  "value": "3",
+                  "text": "Neutral"
+                },
+                {
+                  "value": "2",
+                  "text": "Disagree"
+                },
+                {
+                  "value": "1",
+                  "text": "Strongly Disagree"
+                }
+              ]
+            },
+            {
+              "type": "radiogroup",
+              "name": "professional_ides_comfort",
+              "title": "I am comfortable navigating and using features within a professional integrated development environment (IDE) like VS Code.",
+              "choices": [
+                {
+                  "value": "5",
+                  "text": "Strongly Agree"
+                },
+                {
+                  "value": "4",
+                  "text": "Agree"
+                },
+                {
+                  "value": "3",
+                  "text": "Neutral"
+                },
+                {
+                  "value": "2",
+                  "text": "Disagree"
+                },
+                {
+                  "value": "1",
+                  "text": "Strongly Disagree"
+                }
+              ]
+            },
+            {
+              "type": "html",
+              "name": "section3_ai_generated_code",
+              "html": "<h2>AI-Generated Code</h2>\n<p><span style='font-size: 12pt;'>The purpose of this section of the survey is to understand  your experience and perceptions around AI-generated Code.</span></p>\n"
+            },
+            {
+              "type": "checkbox",
+              "name": "ai_code_challenges_students",
+              "title": "What specific challenges do you anticipate students might have regarding their use of AI-generated code?",
+              "description": "(Select all that apply)",
+              "choices": [
+                {
+                  "value": "over_reliance",
+                  "text": "They might rely too heavily on AI"
+                },
+                {
+                  "value": "misunderstanding",
+                  "text": "Students might misunderstand AI-generated logic"
+                },
+                {
+                  "value": "debugging",
+                  "text": "Students might find it difficult to debug AI-generated code"
+                },
+                {
+                  "value": "overconfidence",
+                  "text": "Students might be overconfident in AI's accuracy"
+                },
+                {
+                  "value": "other",
+                  "text": "Other"
+                }
+              ]
+            },
+            {
+              "type": "radiogroup",
+              "name": "ai_generated_code_experience_students",
+              "title": "To your knowledge, how often have your students previously interacted with or used code-generating AI tools in their assignments or projects?",
+              "choices": [
+                {
+                  "value": "5",
+                  "text": "Always"
+                },
+                {
+                  "value": "4",
+                  "text": "Often"
+                },
+                {
+                  "value": "3",
+                  "text": "Sometimes"
+                },
+                {
+                  "value": "2",
+                  "text": "Rarely"
+                },
+                {
+                  "value": "1",
+                  "text": "Never"
+                }
+              ]
+            },
+            {
+              "type": "radiogroup",
+              "name": "ai_generated_code_comfort_teacher",
+              "title": "I feel comfortable guiding students in using AI code-generating tools.",
+              "choices": [
+                {
+                  "value": "5",
+                  "text": "Strongly Agree"
+                },
+                {
+                  "value": "4",
+                  "text": "Agree"
+                },
+                {
+                  "value": "3",
+                  "text": "Neutral"
+                },
+                {
+                  "value": "2",
+                  "text": "Disagree"
+                },
+                {
+                  "value": "1",
+                  "text": "Strongly Disagree"
+                }
+              ]
+            },
+            {
+              "type": "radiogroup",
+              "name": "ai_generated_code_beneficial_teacher",
+              "title": "I believe my students and I would benefit from using AI code-generating tools to generate real-world examples of Java concepts.",
+              "choices": [
+                {
+                  "value": "5",
+                  "text": "Strongly Agree"
+                },
+                {
+                  "value": "4",
+                  "text": "Agree"
+                },
+                {
+                  "value": "3",
+                  "text": "Neutral"
+                },
+                {
+                  "value": "2",
+                  "text": "Disagree"
+                },
+                {
+                  "value": "1",
+                  "text": "Strongly Disagree"
+                }
+              ]
+            },
+            {
+              "type": "html",
+              "name": "section4_ai_models_computer_vision",
+              "html": "<h2>AI Models and Computer Vision</h2>\n<p><span style='font-size: 12pt;'>The purpose of this section of the survey is to understand your familiarity with teaching AI models and Computer Vision.</span></p>\n"
+            },
+            {
+              "type": "radiogroup",
+              "name": "ai_models_understanding_students",
+              "title": "I believe my students have a strong understanding of how AI models are trained.",
+              "choices": [
+                {
+                  "value": "5",
+                  "text": "Strongly Agree"
+                },
+                {
+                  "value": "4",
+                  "text": "Agree"
+                },
+                {
+                  "value": "3",
+                  "text": "Neutral"
+                },
+                {
+                  "value": "2",
+                  "text": "Disagree"
+                },
+                {
+                  "value": "1",
+                  "text": "Strongly Disagree"
+                }
+              ]
+            },
+            {
+              "type": "radiogroup",
+              "name": "ai_model_integration_familiarity_teacher",
+              "title": "I am familiar with integrating AI models into a Java program.",
+              "choices": [
+                {
+                  "value": "5",
+                  "text": "Strongly Agree"
+                },
+                {
+                  "value": "4",
+                  "text": "Agree"
+                },
+                {
+                  "value": "3",
+                  "text": "Neutral"
+                },
+                {
+                  "value": "2",
+                  "text": "Disagree"
+                },
+                {
+                  "value": "1",
+                  "text": "Strongly Disagree"
+                }
+              ]
+            },
+            {
+              "type": "radiogroup",
+              "name": "ai_model_integration_teaching_experience_teacher",
+              "title": "Have you previously taught a lesson on incorporating AI models in any programming language?",
+              "choices": [
+                {
+                  "value": "yes",
+                  "text": "Yes"
+                },
+                {
+                  "value": "no_interested",
+                  "text": "No, but I've wanted to"
+                },
+                {
+                  "value": "No",
+                  "text": "No, and I haven't considered it"
+                }
+              ]
+            },
+            {
+              "type": "html",
+              "name": "section5_teaching_context",
+              "html": "<h2>Teaching Context</h2>\n<p><span style='font-size: 12pt;'>The purpose of this section of the survey is to understand our teachers' motivation to teach Code.org's Software Engineering and Computer Vision module, and their previous experience with this content and tools.</span></p>\n"
+            },
+            {
+              "type": "radiogroup",
+              "name": "confidence_teaching_content",
+              "title": "I feel confident to teach the content of this module to my students.",
+              "choices": [
+                {
+                  "value": "5",
+                  "text": "Strongly Agree"
+                },
+                {
+                  "value": "4",
+                  "text": "Agree"
+                },
+                {
+                  "value": "3",
+                  "text": "Neutral"
+                },
+                {
+                  "value": "2",
+                  "text": "Disagree"
+                },
+                {
+                  "value": "1",
+                  "text": "Strongly Disagree"
+                }
+              ]
+            },
+            {
+              "type": "radiogroup",
+              "name": "confidence_teaching_new_cs_concepts",
+              "title": "I am comfortable introducing and discussing new CS and AI topics with my students.",
+              "choices": [
+                {
+                  "value": "5",
+                  "text": "Strongly Agree"
+                },
+                {
+                  "value": "4",
+                  "text": "Agree"
+                },
+                {
+                  "value": "3",
+                  "text": "Neutral"
+                },
+                {
+                  "value": "2",
+                  "text": "Disagree"
+                },
+                {
+                  "value": "1",
+                  "text": "Strongly Disagree"
+                }
+              ]
+            },
+            {
+              "type": "checkbox",
+              "name": "hesitant_new_cs_concepts",
+              "title": "Which CS or AI topics have you been hesitant to introduce in the classroom?",
+              "description": "(Select all that apply)",
+              "choices": [
+                {
+                  "value": "integrate_ai_code",
+                  "text": "Integration of AI in coding projects"
+                },
+                {
+                  "value": "code_optimization",
+                  "text": "Code optimization techniques"
+                },
+                {
+                  "value": "professional_ides",
+                  "text": "Using professional IDEs in classroom settings"
+                },
+                {
+                  "value": "understand_ai_generated_code",
+                  "text": "Understanding and critiquing AI-generated code"
+                },
+                {
+                  "value": "other",
+                  "text": "Other"
+                },
+                {
+                  "value": "none",
+                  "text": "None"
+                }
+              ]
+            },
+            {
+              "type": "radiogroup",
+              "name": "frequency_update_lesson_plans",
+              "title": "How often do you update your lesson plans or materials to include new developments in the CS and AI fields?",
+              "choices": [
+                {
+                  "value": "every_term",
+                  "text": "Every term/quarter"
+                },
+                {
+                  "value": "annually",
+                  "text": "Annually"
+                },
+                {
+                  "value": "every_few_years",
+                  "text": "Every few years"
+                },
+                {
+                  "value": "rarely",
+                  "text": "Rarely"
+                },
+                {
+                  "value": "never",
+                  "text": "Never"
+                }
+              ]
+            },
+            {
+              "type": "radiogroup",
+              "name": "confidence_use_ai_teaching_practices",
+              "title": "I feel comfortable using AI tools as part of my teaching practices (i.e., to generate real-world examples to show to students, draft lesson plans or activities, brainstorm ways to differentiate content or provide extension activities, and/or demonstrate writing or debugging code).",
+              "choices": [
+                {
+                  "value": "5",
+                  "text": "Strongly Agree"
+                },
+                {
+                  "value": "4",
+                  "text": "Agree"
+                },
+                {
+                  "value": "3",
+                  "text": "Neutral"
+                },
+                {
+                  "value": "2",
+                  "text": "Disagree"
+                },
+                {
+                  "value": "1",
+                  "text": "Strongly Disagree"
+                }
+              ]
+            },
+            {
+              "type": "radiogroup",
+              "name": "confidence_teaching_ai_tools",
+              "title": "I feel comfortable teaching students how to use the AI tools and resources used in this module (i.e., GitHub Copilot, Teachable Machine).",
+              "choices": [
+                {
+                  "value": "5",
+                  "text": "Strongly Agree"
+                },
+                {
+                  "value": "4",
+                  "text": "Agree"
+                },
+                {
+                  "value": "3",
+                  "text": "Neutral"
+                },
+                {
+                  "value": "2",
+                  "text": "Disagree"
+                },
+                {
+                  "value": "1",
+                  "text": "Strongly Disagree"
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}
