@@ -165,4 +165,21 @@ describe('LearningGoal', () => {
     );
     sendEventSpy.restore();
   });
+
+  it('shows feedback in disabled textbox when available', () => {
+    const wrapper = shallow(
+      <LearningGoal
+        learningGoal={{
+          learningGoal: 'Testing',
+          evidenceLevels: [],
+        }}
+        submittedEvaluation={{
+          feedback: 'test feedback',
+          understanding: 1,
+        }}
+      />
+    );
+    expect(wrapper.find('textarea').props().value).to.equal('test feedback');
+    expect(wrapper.find('textarea').props().disabled).to.equal(true);
+  });
 });

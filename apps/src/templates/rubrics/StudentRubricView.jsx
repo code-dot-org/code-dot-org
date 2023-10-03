@@ -1,5 +1,6 @@
 import React, {useEffect, useState} from 'react';
 import classnames from 'classnames';
+import HttpClient from '@cdo/apps/util/HttpClient';
 import style from './rubrics.module.scss';
 import {rubricShape} from './rubricShapes';
 import LearningGoal from './LearningGoal';
@@ -9,21 +10,18 @@ export default function StudentRubricView({rubric}) {
     useState(null);
 
   useEffect(() => {
-    fetch(`/rubrics/${rubric.id}/get_teacher_evaluations`).then(response => {
-      if (response.ok) {
-        response.json().then(data => {
-          const evaluationMap = {};
-          data.forEach(evaluation => {
-            evaluationMap[evaluation.learning_goal_id] = evaluation;
-          });
-          setEvaluationsByLearningGoal(evaluationMap);
+    HttpClient.fetchJson(`/rubrics/${rubric.id}/get_teacher_evaluations`)
+      .then(response => {
+        const data = response.value;
+        const evaluationMap = {};
+        data.forEach(evaluation => {
+          evaluationMap[evaluation.learning_goal_id] = evaluation;
         });
-      } else {
-        console.error(
-          `Failed to fetch teacher feedback for rubric ${rubric.id}`
-        );
-      }
-    });
+        setEvaluationsByLearningGoal(evaluationMap);
+      })
+      .catch(error => {
+        console.error(error);
+      });
   }, [rubric.id]);
 
   return (

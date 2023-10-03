@@ -52,7 +52,7 @@ export default function EvidenceLevels({
   } else {
     return (
       <div className={style.evidenceLevelSet}>
-        <Heading6>Rubric Scores</Heading6>
+        <Heading6>{i18n.rubricScores()}</Heading6>
         {evidenceLevels.map(evidenceLevel => (
           <div
             key={evidenceLevel.id}
