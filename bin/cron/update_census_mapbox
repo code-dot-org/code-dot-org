@@ -23,8 +23,6 @@ def make_location(lat, long)
 end
 
 def main
-  Census::CensusSummary.summarize_census_data
-
   year = SharedConstants::CENSUS_CONSTANTS.CURRENT_CENSUS_SCHOOL_YEAR
   geojson = JSON.parse('{ "type": "FeatureCollection", "features": [] }')
   Census::CensusSummary.where(school_year: year).find_each do |summary|
