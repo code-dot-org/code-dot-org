@@ -119,6 +119,7 @@ section.banner {
 
       button.rotate::after {
         transform: rotate(180deg);
+        margin-top: 2px;
       }
 
       a, button {
