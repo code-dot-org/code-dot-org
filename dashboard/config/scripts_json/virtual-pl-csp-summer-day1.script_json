@@ -1,0 +1,479 @@
+{
+  "script": {
+    "name": "virtual-pl-csp-summer-day1",
+    "wrapup_video_id": null,
+    "login_required": false,
+    "properties": {
+      "has_verified_resources": true,
+      "is_migrated": true
+    },
+    "new_name": null,
+    "family_name": null,
+    "serialized_at": "2023-10-03 19:17:15 UTC",
+    "published_state": null,
+    "instruction_type": null,
+    "instructor_audience": null,
+    "participant_audience": null,
+    "seeding_key": {
+      "script.name": "virtual-pl-csp-summer-day1"
+    }
+  },
+  "lesson_groups": [
+    {
+      "key": "lessonGroup-2",
+      "user_facing": true,
+      "position": 1,
+      "properties": {
+        "display_name": "Synchronous Part 1"
+      },
+      "seeding_key": {
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "virtual-pl-csp-summer-day1"
+      }
+    },
+    {
+      "key": "lessonGroup-3",
+      "user_facing": true,
+      "position": 2,
+      "properties": {
+        "display_name": "Synchronous Part 2"
+      },
+      "seeding_key": {
+        "lesson_group.key": "lessonGroup-3",
+        "script.name": "virtual-pl-csp-summer-day1"
+      }
+    }
+  ],
+  "lessons": [
+    {
+      "key": "Introduction",
+      "name": "Welcome to the Workshop!",
+      "absolute_position": 1,
+      "lockable": false,
+      "has_lesson_plan": true,
+      "relative_position": 1,
+      "properties": {
+        "overview": "**Purpose:**\nKick off the week! Get to know the people you are with and understand what will happen during the week.\n\n**Objectives:**\n\n* Participants have started to get to know others at the workshop.\n* Participants know what we’re doing this week.\n* Participants will generate examples of how aspects of their identity and experiences may have shaped their views on computer science.\n* Participants recognize disparities by race and gender in access, diversity, and inclusion in computer science education nationally.\n* Participants use a shared definition for access, diversity, inclusion, equity, and “students from underrepresented groups” in the context of computer science education.\n* Participants use a shared definition for identity.\n\n**Suggested time:** 60 minutes\n",
+        "student_overview": "**You will:**\n\n* Get to know others at the workshop.\n* Know what we’re doing this week.\n* Generate examples of how aspects of their identity and experiences may have shaped their views on computer science.\n* Recognize disparities by race and gender in access, diversity, and inclusion in computer science education nationally.\n* Use a shared definition for access, diversity, inclusion, equity, and “students from underrepresented groups” in the context of computer science education.\n* Use a shared definition for identity."
+      },
+      "seeding_key": {
+        "lesson.key": "Introduction",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "virtual-pl-csp-summer-day1"
+      }
+    },
+    {
+      "key": "CS Discoveries Overview",
+      "name": "Intro to CS Principles",
+      "absolute_position": 2,
+      "lockable": false,
+      "has_lesson_plan": true,
+      "relative_position": 2,
+      "properties": {
+        "overview": "**Purpose:**\nThis session provides an overview of CSP, how it was created, and the background on the AP.\n\n**Objectives:**\n\n* Participants can explain how AP CSP is different from other AP Courses.\n* Participants are informed that Code.org is one of several College Board-* endorsed providers.\n* Participants are aware that this professional development is NOT a College Board-sponsored AP workshop.\n\n**Suggested time:** 15 minutes",
+        "student_overview": "**You will:**\n\n* Explain how AP CSP is different from other AP Courses.\n* Be informed that Code.org is one of several College Board-* endorsed providers.\n* Be made aware that this professional development is NOT a College Board-sponsored AP workshop."
+      },
+      "seeding_key": {
+        "lesson.key": "CS Discoveries Overview",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "virtual-pl-csp-summer-day1"
+      }
+    },
+    {
+      "key": "Navigating the Codeorg Platform",
+      "name": "Welcome to the Course and Exam Description",
+      "absolute_position": 3,
+      "lockable": false,
+      "has_lesson_plan": true,
+      "relative_position": 3,
+      "properties": {
+        "overview": "**Purpose:**\nDuring this session participants engage in a scavenger hunt which serves as a time to explore the Course & Exam Description (CED). At the end of the session, a facilitator goes over the \"answers\" to the scavenger hunt and connects the “Big Ideas” and “Computational Thinking Skills” from the CED to the Unit 1-10 plan of the curriculum.\n\n**Objectives:**\n\n* Participants can explain how the curriculum unit structure lends itself to the AP requirements.\n* Participants can navigate the CED binder and access it online.\n* Participants can explain how the curriculum framework is organized (i.e., big ideas, enduring understandings, learning objectives, essential knowledge, practices / skills)\n* Participants can describe the “big ideas” of the course (as provided by the College Board) and the Computational Thinking Practices and Skills of the course.\n* Participants have engaged in an activity to explore the exam section of the CED, and how students will be assessed on both content and skills.\n\n**Suggested time:** 45 minutes",
+        "student_overview": "**You will:**\n\n* Navigate the CED binder and access it online.\n* Explain how the curriculum framework is organized (i.e., big ideas, enduring understandings, learning objectives, essential knowledge, practices / skills)\n* Describe the “big ideas” of the course (as provided by the College Board) and the Computational Thinking Practices and Skills of the course.\n* Engage in an activity to explore the exam section of the CED, and how students will be assessed on both content and skills."
+      },
+      "seeding_key": {
+        "lesson.key": "Navigating the Codeorg Platform",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "virtual-pl-csp-summer-day1"
+      }
+    },
+    {
+      "key": "Unit 1 - Problem Solving & Computing",
+      "name": "Unit 1, Lesson 2 - Representing Information",
+      "absolute_position": 4,
+      "lockable": false,
+      "has_lesson_plan": true,
+      "relative_position": 4,
+      "properties": {
+        "overview": "**Purpose:**\nThis is the first opportunity to expose participants to the curriculum and to the feel of a CS Principles classroom. This shows participants the teaching practices used in CS Principles lessons.\n\n**Objectives:**\n* Participants experience how CSP is \"different\" from other AP courses.\n* Participants experience the value of building a culture around problem solving and inclusion early in the course.\n* Participants experience an unplugged lesson.\n* Participants recognize that all students can and should learn CS.\n\n**Suggested time:** 60 minutes",
+        "student_overview": "**You will:**\n\n* Experience how CSP is \"different\" from other AP courses.\n* Experience the value of building a culture around problem solving and inclusion early in the course.\n* Experience an unplugged lesson.\n* Recognize that all students can and should learn CS."
+      },
+      "seeding_key": {
+        "lesson.key": "Unit 1 - Problem Solving & Computing",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "virtual-pl-csp-summer-day1"
+      }
+    },
+    {
+      "key": "Intro to Async",
+      "name": "Unit 1, Lesson 3 - Circle/Square Patterns",
+      "absolute_position": 5,
+      "lockable": false,
+      "has_lesson_plan": true,
+      "relative_position": 5,
+      "properties": {
+        "overview": "**Purpose:**\nThis lesson is chosen so that early on in the workshop participants see manipulatives as a valuable experience for students. We want participants to “buy-in” to the benefits of manipulatives as a way to make content approachable.\n\n**Objectives:**\n\n\n* Participants see that using manipulatives makes content and tasks more approachable for students.\n* Participants experience an intentional approach to introducing vocabulary after building a common experience for learners to connect vocabulary to.\n* Participants see how the lessons build on one another.\n\n**Suggested time:** 65 minutes",
+        "student_overview": "**You will:**\n\n* See that using manipulatives makes content and tasks more approachable for students.\n* Experience an intentional approach to introducing vocabulary after building a common experience for learners to connect vocabulary to.\n* See how the lessons build on one another.\n"
+      },
+      "seeding_key": {
+        "lesson.key": "Intro to Async",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "virtual-pl-csp-summer-day1"
+      }
+    },
+    {
+      "key": "Async Debrief",
+      "name": "Binary Number Systems",
+      "absolute_position": 6,
+      "lockable": false,
+      "has_lesson_plan": true,
+      "relative_position": 6,
+      "properties": {
+        "overview": "**Purpose:**\nWe show that binary numbers don't need to be scary and this doesn't need to be overly math-y. This session puts a bow on the two previous lessons to show how we build on-ramps to content in order to make it more approachable to students.\n\n**Objectives:**\n\n* Participants will be able to use the binary number system to translate between decimal and binary representations of a number.\n* Participants will see how the two model lessons help provide a mental model and motivation for the binary number system.\n\n**Suggested time:** 25 minutes",
+        "student_overview": "**You will:**\n\n* Use the binary number system to translate between decimal and binary representations of a number.\n* See how the two model lessons help provide a mental model and motivation for the binary number system.\n"
+      },
+      "seeding_key": {
+        "lesson.key": "Async Debrief",
+        "lesson_group.key": "lessonGroup-3",
+        "script.name": "virtual-pl-csp-summer-day1"
+      }
+    },
+    {
+      "key": "Lesson Planning: Make a Plan",
+      "name": "Plugged and Unplugged",
+      "absolute_position": 7,
+      "lockable": false,
+      "has_lesson_plan": true,
+      "relative_position": 7,
+      "properties": {
+        "overview": "**Purpose:** Before we get to lesson planning, we want to introduce different types of lessons and the importance of mental models in both. This approach allows us to be more explicit about the teacher's role in each of these lessons - specifically, that the teacher needs to check for understanding in both of these lessons constantly. This foreshadows tomorrow's topic of “the teacher's role”.\n\n\n\n**Objectives:**\n* Participants can explain the similarities and differences between Unplugged and Plugged lessons.\n* Participants can explain the role the teacher plays in successfully implementing Unplugged and Plugged lessons.\n* Participants experience joining a section in Code Studio.\n\n**Suggested Time:** 30 minutes",
+        "student_overview": "**You will:**\n* Explain the similarities and differences between Unplugged and Plugged lessons.\n* Explain the role the teacher plays in successfully implementing Unplugged and Plugged lessons.\n* Experience joining a section in Code Studio."
+      },
+      "seeding_key": {
+        "lesson.key": "Lesson Planning: Make a Plan",
+        "lesson_group.key": "lessonGroup-3",
+        "script.name": "virtual-pl-csp-summer-day1"
+      }
+    },
+    {
+      "key": "Day 2 Wrap Up",
+      "name": "Lesson Planning: Understanding the Lesson",
+      "absolute_position": 8,
+      "lockable": false,
+      "has_lesson_plan": true,
+      "relative_position": 8,
+      "properties": {
+        "overview": "**Purpose:**\nThe purpose of this session is for participants to understand the lesson they have been assigned and the resources available in the lesson:\n* Try activities and tools\n* Watch videos\n* Read lesson plan\n* Review and coordinate the slides with the lesson plan\n* Look through linked resources\n* Participants get to know what is actually in their lesson and the resources available to them (lesson plans, Code Studio and slides).\n\n**Objectives:**\n* Participants understand how to use curriculum resources to prepare for lessons, including how to read a lesson plan, the importance of doing the activities in the lesson plan, and reviewing the slides.\n* Participants understand how to navigate the Code.org website to access lesson plans and activities.\n\n**Suggested Time:** 60 minutes",
+        "student_overview": "**You will:**\n* Understand how to use curriculum resources to prepare for lessons, including how to read a lesson plan, the importance of doing the activities in the lesson plan, and reviewing the slides.\n* Understand how to navigate the Code.org website to access lesson plans and activities."
+      },
+      "seeding_key": {
+        "lesson.key": "Day 2 Wrap Up",
+        "lesson_group.key": "lessonGroup-3",
+        "script.name": "virtual-pl-csp-summer-day1"
+      }
+    },
+    {
+      "key": "Day 1 Wrap Up",
+      "name": "Day 1 Wrap Up",
+      "absolute_position": 9,
+      "lockable": false,
+      "has_lesson_plan": true,
+      "relative_position": 9,
+      "properties": {
+        "overview": "**Purpose:**\nGet feedback from participants about their gots and needs to inform the next day, clarify housekeeping, and take the survey.\n\n**Objectives:**\n* Participants will be able to share what they’ve learned and what they still need\n* Participants will be able to provide constructive feedback to facilitators\n\n**Suggested time:** 20 minutes",
+        "student_overview": "**You will:**\n\n* Share what they’ve learned and what they still need\n* Provide constructive feedback to facilitators\n\n<a href=\"https://studio.code.org/pd/workshop_survey/day/1\" target=\"blank\" rel=\"noopener noreferrer\">Link to Day 1 Survey</a> "
+      },
+      "seeding_key": {
+        "lesson.key": "Day 1 Wrap Up",
+        "lesson_group.key": "lessonGroup-3",
+        "script.name": "virtual-pl-csp-summer-day1"
+      }
+    }
+  ],
+  "lesson_activities": [
+    {
+      "key": "dfee978f-593a-48a9-9b7d-9dcb617b1759",
+      "position": 1,
+      "properties": {
+      },
+      "seeding_key": {
+        "lesson_activity.key": "dfee978f-593a-48a9-9b7d-9dcb617b1759",
+        "lesson.key": "Introduction",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "virtual-pl-csp-summer-day1"
+      }
+    },
+    {
+      "key": "f455e1d4-e717-4acc-974e-bcb04a14aff5",
+      "position": 1,
+      "properties": {
+      },
+      "seeding_key": {
+        "lesson_activity.key": "f455e1d4-e717-4acc-974e-bcb04a14aff5",
+        "lesson.key": "CS Discoveries Overview",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "virtual-pl-csp-summer-day1"
+      }
+    },
+    {
+      "key": "307430dc-6fa4-4964-babc-44df858eab22",
+      "position": 1,
+      "properties": {
+      },
+      "seeding_key": {
+        "lesson_activity.key": "307430dc-6fa4-4964-babc-44df858eab22",
+        "lesson.key": "Navigating the Codeorg Platform",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "virtual-pl-csp-summer-day1"
+      }
+    },
+    {
+      "key": "6ecb9e50-9efc-440d-90f9-23078af5932c",
+      "position": 1,
+      "properties": {
+      },
+      "seeding_key": {
+        "lesson_activity.key": "6ecb9e50-9efc-440d-90f9-23078af5932c",
+        "lesson.key": "Unit 1 - Problem Solving & Computing",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "virtual-pl-csp-summer-day1"
+      }
+    },
+    {
+      "key": "8dd23a2d-63f2-419a-8e64-7f06272be3f9",
+      "position": 1,
+      "properties": {
+      },
+      "seeding_key": {
+        "lesson_activity.key": "8dd23a2d-63f2-419a-8e64-7f06272be3f9",
+        "lesson.key": "Intro to Async",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "virtual-pl-csp-summer-day1"
+      }
+    },
+    {
+      "key": "92a7079a-e6b8-47f2-bd83-670151e79170",
+      "position": 1,
+      "properties": {
+      },
+      "seeding_key": {
+        "lesson_activity.key": "92a7079a-e6b8-47f2-bd83-670151e79170",
+        "lesson.key": "Async Debrief",
+        "lesson_group.key": "lessonGroup-3",
+        "script.name": "virtual-pl-csp-summer-day1"
+      }
+    },
+    {
+      "key": "9339faea-31cf-4a75-b48f-5485c6007ded",
+      "position": 1,
+      "properties": {
+      },
+      "seeding_key": {
+        "lesson_activity.key": "9339faea-31cf-4a75-b48f-5485c6007ded",
+        "lesson.key": "Lesson Planning: Make a Plan",
+        "lesson_group.key": "lessonGroup-3",
+        "script.name": "virtual-pl-csp-summer-day1"
+      }
+    },
+    {
+      "key": "d58c249b-0f8d-4ee2-aeb4-1e1ad48c2c42",
+      "position": 1,
+      "properties": {
+      },
+      "seeding_key": {
+        "lesson_activity.key": "d58c249b-0f8d-4ee2-aeb4-1e1ad48c2c42",
+        "lesson.key": "Day 2 Wrap Up",
+        "lesson_group.key": "lessonGroup-3",
+        "script.name": "virtual-pl-csp-summer-day1"
+      }
+    },
+    {
+      "key": "cb897f66-e849-4f56-8d60-5201ffa9b048",
+      "position": 1,
+      "properties": {
+      },
+      "seeding_key": {
+        "lesson_activity.key": "cb897f66-e849-4f56-8d60-5201ffa9b048",
+        "lesson.key": "Day 1 Wrap Up",
+        "lesson_group.key": "lessonGroup-3",
+        "script.name": "virtual-pl-csp-summer-day1"
+      }
+    }
+  ],
+  "activity_sections": [
+    {
+      "key": "e89190ca-5109-411a-9740-8cce028c0c0d",
+      "position": 1,
+      "properties": {
+      },
+      "seeding_key": {
+        "activity_section.key": "e89190ca-5109-411a-9740-8cce028c0c0d",
+        "lesson_activity.key": "dfee978f-593a-48a9-9b7d-9dcb617b1759"
+      }
+    },
+    {
+      "key": "1122b1e1-0802-497a-b9e4-484d41f5bb4b",
+      "position": 1,
+      "properties": {
+      },
+      "seeding_key": {
+        "activity_section.key": "1122b1e1-0802-497a-b9e4-484d41f5bb4b",
+        "lesson_activity.key": "f455e1d4-e717-4acc-974e-bcb04a14aff5"
+      }
+    },
+    {
+      "key": "a09f9ca2-fe1c-477b-aa8c-067f886564ea",
+      "position": 1,
+      "properties": {
+      },
+      "seeding_key": {
+        "activity_section.key": "a09f9ca2-fe1c-477b-aa8c-067f886564ea",
+        "lesson_activity.key": "307430dc-6fa4-4964-babc-44df858eab22"
+      }
+    },
+    {
+      "key": "3ae14f2b-2a90-4d81-9c7e-b6ffd9868251",
+      "position": 1,
+      "properties": {
+      },
+      "seeding_key": {
+        "activity_section.key": "3ae14f2b-2a90-4d81-9c7e-b6ffd9868251",
+        "lesson_activity.key": "6ecb9e50-9efc-440d-90f9-23078af5932c"
+      }
+    },
+    {
+      "key": "15ae959a-31af-4ebe-afa8-d3f2815f63e4",
+      "position": 1,
+      "properties": {
+      },
+      "seeding_key": {
+        "activity_section.key": "15ae959a-31af-4ebe-afa8-d3f2815f63e4",
+        "lesson_activity.key": "8dd23a2d-63f2-419a-8e64-7f06272be3f9"
+      }
+    },
+    {
+      "key": "fa7226ee-bf71-4352-b2f8-3cb06eb61798",
+      "position": 1,
+      "properties": {
+      },
+      "seeding_key": {
+        "activity_section.key": "fa7226ee-bf71-4352-b2f8-3cb06eb61798",
+        "lesson_activity.key": "92a7079a-e6b8-47f2-bd83-670151e79170"
+      }
+    },
+    {
+      "key": "2cefc2f2-4f40-41b3-a5a8-e8aed4f1c3f0",
+      "position": 1,
+      "properties": {
+      },
+      "seeding_key": {
+        "activity_section.key": "2cefc2f2-4f40-41b3-a5a8-e8aed4f1c3f0",
+        "lesson_activity.key": "9339faea-31cf-4a75-b48f-5485c6007ded"
+      }
+    },
+    {
+      "key": "72280308-bb26-4d46-bccd-3c64eca006ac",
+      "position": 1,
+      "properties": {
+      },
+      "seeding_key": {
+        "activity_section.key": "72280308-bb26-4d46-bccd-3c64eca006ac",
+        "lesson_activity.key": "d58c249b-0f8d-4ee2-aeb4-1e1ad48c2c42"
+      }
+    },
+    {
+      "key": "bf16d67b-d1cc-45b9-92e2-e01b9b7386ac",
+      "position": 1,
+      "properties": {
+      },
+      "seeding_key": {
+        "activity_section.key": "bf16d67b-d1cc-45b9-92e2-e01b9b7386ac",
+        "lesson_activity.key": "cb897f66-e849-4f56-8d60-5201ffa9b048"
+      }
+    }
+  ],
+  "script_levels": [
+
+  ],
+  "levels_script_levels": [
+
+  ],
+  "resources": [
+    {
+      "name": "2023 Virtual CSP Summer Workshop - Day 1 Agenda",
+      "url": "https://docs.google.com/document/d/1MhL-WxbG7ZqMYyYhvJ2m74FHLeM_2dLzzSZOH-MmvVY/edit#heading=h.z84jwpltvqnh",
+      "key": "2023_virtual_csp_summer_workshop_-_day_1_agenda",
+      "properties": {
+      },
+      "seeding_key": {
+        "resource.key": "2023_virtual_csp_summer_workshop_-_day_1_agenda"
+      }
+    },
+    {
+      "name": "2023 Virtual CSP Summer Workshop - Day 1 Slides",
+      "url": "https://docs.google.com/presentation/d/1aKaFm5imjjW6SXjkPcI1URUfTPiYb-9A-khgzPHg9-c/edit#slide=id.gdc8b0dc810_0_182",
+      "key": "2023_virtual_csp_summer_workshop_-_day_1_slides",
+      "properties": {
+      },
+      "seeding_key": {
+        "resource.key": "2023_virtual_csp_summer_workshop_-_day_1_slides"
+      }
+    }
+  ],
+  "lessons_resources": [
+
+  ],
+  "scripts_resources": [
+    {
+      "seeding_key": {
+        "resource.key": "2023_virtual_csp_summer_workshop_-_day_1_agenda",
+        "script.name": "virtual-pl-csp-summer-day1"
+      }
+    },
+    {
+      "seeding_key": {
+        "resource.key": "2023_virtual_csp_summer_workshop_-_day_1_slides",
+        "script.name": "virtual-pl-csp-summer-day1"
+      }
+    }
+  ],
+  "scripts_student_resources": [
+
+  ],
+  "vocabularies": [
+
+  ],
+  "lessons_vocabularies": [
+
+  ],
+  "lessons_programming_expressions": [
+
+  ],
+  "objectives": [
+
+  ],
+  "lessons_standards": [
+
+  ],
+  "lessons_opportunity_standards": [
+
+  ],
+  "rubrics": [
+
+  ],
+  "learning_goals": [
+
+  ],
+  "learning_goal_evidence_levels": [
+
+  ]
+}

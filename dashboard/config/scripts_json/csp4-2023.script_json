@@ -18,7 +18,7 @@
     },
     "new_name": null,
     "family_name": null,
-    "serialized_at": "2023-09-19 17:25:48 UTC",
+    "serialized_at": "2023-10-03 18:33:52 UTC",
     "published_state": null,
     "instruction_type": null,
     "instructor_audience": null,
@@ -3032,7 +3032,7 @@
       "key": "ea7dcb25-25c8-4090-865a-6a31dbc8ccbf",
       "position": 3,
       "properties": {
-        "description": "####Plan the Decision Maker App\n**Level 1-2 - Explore:** Have students explore the two sample apps in levels 1 and 2. These apps should spark ideas in what the students can create for this project.\n\n**Sample App #1: Where Should I Eat?** \n\n* Recommends a restaurant to the user.\n* Inputs: text box for user name, drop down menu for restaurant type, up and down buttons to control the amount of dollars the user wants to spend.\n* Outputs: Text box at the bottom of the screen which displays the recommendation and sound that plays when the user interacts with the app. \n* Variables: username, type of restaurant, dollar amount, output text\n* Conditional Logic: If the dollar amount within certain amounts, recommend different restaurants\n* Function: Update the screen every time the user changes an input. \n\n**Sample App #2: Activity Finder** \n\n* Recommends an activity to the user.\n* Inputs: text box for user name, drop down menu for time of day, drop down menu for activity level.\n* Outputs: Text box at the bottom of the screen which displays the recommendation and sound that plays when the user interacts with the app. \n* Variables: username, time of day, activity level, output text\n* Conditional Logic: If the user selects certain times of day and activity levels, make targeted recommendations.  \n* Function: Update the screen every time the user changes an input. \n\n",
+        "description": "####Plan the Decision Maker App\n**Level 1-2 - Explore:** Have students explore the two sample apps in levels 1 and 2. These apps should spark ideas in what the students can create for this project.\n\n**Sample App #1: Where Should I Eat?** \n\n* Recommends a restaurant to the user.\n* Expected User: Someone looking for a place to eat.\n* Inputs: text box for user name, drop down menu for restaurant type, up and down buttons to control the amount of dollars the user wants to spend.\n* Outputs: Text box at the bottom of the screen which displays the recommendation and sound that plays when the user interacts with the app. \n* Variables: username, type of restaurant, dollar amount, output text\n* Conditional Logic: If the dollar amount within certain amounts, recommend different restaurants\n* Function: Update the screen every time the user changes an input. \n\n**Sample App #2: Activity Finder** \n\n* Recommends an activity to the user.\n* Expected User: Someone who is looking for an activity.\n* Inputs: text box for user name, drop down menu for time of day, drop down menu for activity level.\n* Outputs: Text box at the bottom of the screen which displays the recommendation and sound that plays when the user interacts with the app. \n* Variables: username, time of day, activity level, output text\n* Conditional Logic: If the user selects certain times of day and activity levels, make targeted recommendations.  \n* Function: Update the screen every time the user changes an input. \n\n",
         "duration": "40",
         "name": "Activity"
       },
@@ -3067,7 +3067,7 @@
       "key": "a32b507c-b729-4324-8b93-95d57dcc8d05",
       "position": 6,
       "properties": {
-        "description": "* *What does this app do?*\n* *What are the inputs?*\n* *What are the outputs?*\n* *What variables do you think would be necessary for this app to work?*\n* *What kinds of conditional logic do you think are necessary to make it work?*\n* *How could a function be used in this app?*\n\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Distribute:** Each student should have a copy of the Practice PT Decision Maker App Planning Guide."
+        "description": "* *What does this app do?*\n* *Who is an expected user for this app?*\n* *What are the inputs?*\n* *What are the outputs?*\n* *What variables do you think would be necessary for this app to work?*\n* *What kinds of conditional logic do you think are necessary to make it work?*\n* *How could a function be used in this app?*\n\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Distribute:** Each student should have a copy of the Practice PT Decision Maker App Planning Guide."
       },
       "seeding_key": {
         "activity_section.key": "a32b507c-b729-4324-8b93-95d57dcc8d05",

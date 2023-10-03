@@ -1,6 +1,6 @@
 {
   "script": {
-    "name": "virtual-pl-csa-summer-day2",
+    "name": "virtual-pl-csa-summer-day5",
     "wrapup_video_id": null,
     "login_required": true,
     "properties": {
@@ -17,7 +17,7 @@
     "instructor_audience": null,
     "participant_audience": null,
     "seeding_key": {
-      "script.name": "virtual-pl-csa-summer-day2"
+      "script.name": "virtual-pl-csa-summer-day5"
     }
   },
   "lesson_groups": [
@@ -29,7 +29,7 @@
       },
       "seeding_key": {
         "lesson_group.key": "",
-        "script.name": "virtual-pl-csa-summer-day2"
+        "script.name": "virtual-pl-csa-summer-day5"
       }
     }
   ],

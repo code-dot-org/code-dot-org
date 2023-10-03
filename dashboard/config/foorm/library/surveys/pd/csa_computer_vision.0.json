@@ -5,6 +5,1672 @@
       "elements": [
         {
           "type": "panel",
+          "name": "post_lesson_2_survey_questions_panel",
+          "visibleIf": "{survey_variable}='post_lesson_2'",
+          "elements": [
+            {
+              "type": "html",
+              "name": "intro",
+              "html": "<h1>Your Experience Teaching Code.org's Software Engineering and Computer Vision Module</h1>\n<p><h2>Chapter 1: GitHub and Copilot || Lesson 2: Intro to GitHub</h2></n>\n<p><span style='font-size: 12pt;'>The purpose of this survey is to understand your experience and perceptions after teaching this lesson.</span></p>\n<p><span style='font-size: 12pt;'>Let's get started!</span></p>"
+            },
+            {
+              "type": "radiogroup",
+              "name": "ch1_l2_st_connections_java_ides",
+              "title": "What percentage of students frequently made connections between AP CSA tools like Java Lab and skills and real-world applications during the lesson?",
+              "choices": [
+                {
+                  "value": "quintile_5",
+                  "text": "90% or more"
+                },
+                {
+                  "value": "quintile_4",
+                  "text": "75 - 89%"
+                },
+                {
+                  "value": "quintile_3",
+                  "text": "50 - 74%"
+                },
+                {
+                  "value": "quintile_2",
+                  "text": "25 - 49%"
+                },
+                {
+                  "value": "quintile_1",
+                  "text": "0 - 24%"
+                }
+              ]
+            },
+            {
+              "type": "radiogroup",
+              "name": "ch1_l2_similarities_javalab_ides",
+              "title": "I was able to highlight features of Java Lab that were similar to professional IDEs (i.e., VS Code).",
+              "choices": [
+                {
+                  "value": "5",
+                  "text": "Strongly Agree"
+                },
+                {
+                  "value": "4",
+                  "text": "Agree"
+                },
+                {
+                  "value": "3",
+                  "text": "Neutral"
+                },
+                {
+                  "value": "2",
+                  "text": "Disagree"
+                },
+                {
+                  "value": "1",
+                  "text": "Strongly Disagree"
+                }
+              ]
+            },
+            {
+              "type": "radiogroup",
+              "name": "ch1_l2_relevant_content",
+              "title": "I believe today's content was relevant to my students.",
+              "choices": [
+                {
+                  "value": "5",
+                  "text": "Strongly Agree"
+                },
+                {
+                  "value": "4",
+                  "text": "Agree"
+                },
+                {
+                  "value": "3",
+                  "text": "Neutral"
+                },
+                {
+                  "value": "2",
+                  "text": "Disagree"
+                },
+                {
+                  "value": "1",
+                  "text": "Strongly Disagree"
+                }
+              ]
+            },
+            {
+              "type": "radiogroup",
+              "name": "ch1_l2_integrate_future_lessons",
+              "title": "I am considering integrating some of today's tools or resources into my future lessons.",
+              "choices": [
+                {
+                  "value": "5",
+                  "text": "Strongly Agree"
+                },
+                {
+                  "value": "4",
+                  "text": "Agree"
+                },
+                {
+                  "value": "3",
+                  "text": "Neutral"
+                },
+                {
+                  "value": "2",
+                  "text": "Disagree"
+                },
+                {
+                  "value": "1",
+                  "text": "Strongly Disagree"
+                }
+              ]
+            },
+            {
+              "type": "radiogroup",
+              "name": "ch1_l2_usability",
+              "title": "I frequently faced challenges in integrating parts of today's lesson due to usability issues.",
+              "choices": [
+                {
+                  "value": "5",
+                  "text": "Strongly Agree"
+                },
+                {
+                  "value": "4",
+                  "text": "Agree"
+                },
+                {
+                  "value": "3",
+                  "text": "Neutral"
+                },
+                {
+                  "value": "2",
+                  "text": "Disagree"
+                },
+                {
+                  "value": "1",
+                  "text": "Strongly Disagree"
+                }
+              ]
+            },
+            {
+              "type": "radiogroup",
+              "name": "ch1_l2_teaching_materials_effective",
+              "title": "The materials provided for this lesson were very effective in supporting my students' understanding.",
+              "choices": [
+                {
+                  "value": "5",
+                  "text": "Strongly Agree"
+                },
+                {
+                  "value": "4",
+                  "text": "Agree"
+                },
+                {
+                  "value": "3",
+                  "text": "Neutral"
+                },
+                {
+                  "value": "2",
+                  "text": "Disagree"
+                },
+                {
+                  "value": "1",
+                  "text": "Strongly Disagree"
+                }
+              ]
+            },
+            {
+              "type": "text",
+              "name": "ch1_l2_overall_feedback",
+              "title": "Is there any area of this lesson you felt could have been improved or explained more thoroughly? Please provide any specific suggestions for improvement."
+            }
+          ]
+        },
+        {
+          "type": "panel",
+          "name": "post_lesson_3_survey_questions_panel",
+          "visibleIf": "{survey_variable}='post_lesson_3'",
+          "elements": [
+            {
+              "type": "html",
+              "name": "intro",
+              "html": "<h1>Your Experience Teaching Code.org's Software Engineering and Computer Vision Module</h1>\n<p><h2>Chapter 1: GitHub and Copilot || Lesson 3: Intro to Copilot</h2></n>\n<p><span style='font-size: 12pt;'>The purpose of this survey is to understand your experience and perceptions after teaching this lesson.</span></p>\n<p><span style='font-size: 12pt;'>Let's get started!</span></p>"
+            },
+            {
+              "type": "radiogroup",
+              "name": "ch1_l3_st_engagement_ai_generated_code",
+              "title": "What percentage of students actively engaged in discussions and asked questions about adjusting AI-generated code during today's lesson?",
+              "choices": [
+                {
+                  "value": "quintile_5",
+                  "text": "90% or more"
+                },
+                {
+                  "value": "quintile_4",
+                  "text": "75 - 89%"
+                },
+                {
+                  "value": "quintile_3",
+                  "text": "50 - 74%"
+                },
+                {
+                  "value": "quintile_2",
+                  "text": "25 - 49%"
+                },
+                {
+                  "value": "quintile_1",
+                  "text": "0 - 24%"
+                }
+              ]
+            },
+            {
+              "type": "radiogroup",
+              "name": "ch1_l3_st_mistakes_ai_generated_code",
+              "title": "What percentage of students did you observe making recurring mistakes or misconceptions when they tried to adapt AI-generated code?",
+              "choices": [
+                {
+                  "value": "quintile_5",
+                  "text": "90% or more"
+                },
+                {
+                  "value": "quintile_4",
+                  "text": "75 - 89%"
+                },
+                {
+                  "value": "quintile_3",
+                  "text": "50 - 74%"
+                },
+                {
+                  "value": "quintile_2",
+                  "text": "25 - 49%"
+                },
+                {
+                  "value": "quintile_1",
+                  "text": "0 - 24%"
+                }
+              ]
+            },
+            {
+              "type": "radiogroup",
+              "name": "ch1_l3_st_questions_relevance",
+              "title": "What percentage of students posed challenging and insightful questions about the real-world relevance of the content?",
+              "choices": [
+                {
+                  "value": "quintile_5",
+                  "text": "90% or more"
+                },
+                {
+                  "value": "quintile_4",
+                  "text": "75 - 89%"
+                },
+                {
+                  "value": "quintile_3",
+                  "text": "50 - 74%"
+                },
+                {
+                  "value": "quintile_2",
+                  "text": "25 - 49%"
+                },
+                {
+                  "value": "quintile_1",
+                  "text": "0 - 24%"
+                }
+              ]
+            },
+            {
+              "type": "radiogroup",
+              "name": "ch1_l3_relevant_content",
+              "title": "I believe today's content was relevant to my students.",
+              "choices": [
+                {
+                  "value": "5",
+                  "text": "Strongly Agree"
+                },
+                {
+                  "value": "4",
+                  "text": "Agree"
+                },
+                {
+                  "value": "3",
+                  "text": "Neutral"
+                },
+                {
+                  "value": "2",
+                  "text": "Disagree"
+                },
+                {
+                  "value": "1",
+                  "text": "Strongly Disagree"
+                }
+              ]
+            },
+            {
+              "type": "radiogroup",
+              "name": "ch1_l3_integrate_future_lessons",
+              "title": "I am considering integrating some of today's tools or resources into my future lessons.",
+              "choices": [
+                {
+                  "value": "5",
+                  "text": "Strongly Agree"
+                },
+                {
+                  "value": "4",
+                  "text": "Agree"
+                },
+                {
+                  "value": "3",
+                  "text": "Neutral"
+                },
+                {
+                  "value": "2",
+                  "text": "Disagree"
+                },
+                {
+                  "value": "1",
+                  "text": "Strongly Disagree"
+                }
+              ]
+            },
+            {
+              "type": "radiogroup",
+              "name": "ch1_l3_usability",
+              "title": "I frequently faced challenges in integrating parts of today's lesson due to usability issues.",
+              "choices": [
+                {
+                  "value": "5",
+                  "text": "Strongly Agree"
+                },
+                {
+                  "value": "4",
+                  "text": "Agree"
+                },
+                {
+                  "value": "3",
+                  "text": "Neutral"
+                },
+                {
+                  "value": "2",
+                  "text": "Disagree"
+                },
+                {
+                  "value": "1",
+                  "text": "Strongly Disagree"
+                }
+              ]
+            },
+            {
+              "type": "radiogroup",
+              "name": "ch1_l3_teaching_materials_effective",
+              "title": "The materials provided for this lesson were very effective in supporting my students' understanding.",
+              "choices": [
+                {
+                  "value": "5",
+                  "text": "Strongly Agree"
+                },
+                {
+                  "value": "4",
+                  "text": "Agree"
+                },
+                {
+                  "value": "3",
+                  "text": "Neutral"
+                },
+                {
+                  "value": "2",
+                  "text": "Disagree"
+                },
+                {
+                  "value": "1",
+                  "text": "Strongly Disagree"
+                }
+              ]
+            },
+            {
+              "type": "text",
+              "name": "ch1_l3_overall_feedback",
+              "title": "Is there any area of this lesson you felt could have been improved or explained more thoroughly? Please provide any specific suggestions for improvement."
+            }
+          ]
+        },
+        {
+          "type": "panel",
+          "name": "post_lesson_4_survey_questions_panel",
+          "visibleIf": "{survey_variable}='post_lesson_4'",
+          "elements": [
+            {
+              "type": "html",
+              "name": "intro",
+              "html": "<h1>Your Experience Teaching Code.org's Software Engineering and Computer Vision Module</h1>\n<p><h2>Chapter 1: GitHub and Copilot || Lesson 4: Build with Copilot</h2></n>\n<p><span style='font-size: 12pt;'>The purpose of this survey is to understand your experience and perceptions after teaching this lesson.</span></p>\n<p><span style='font-size: 12pt;'>Let's get started!</span></p>"
+            },
+            {
+              "type": "radiogroup",
+              "name": "ch1_l4_st_critical_think_ai_code",
+              "title": "What percentage of students demonstrated a high level of critical thinking when reviewing the AI-generated code during today's lesson?",
+              "choices": [
+                {
+                  "value": "quintile_5",
+                  "text": "90% or more"
+                },
+                {
+                  "value": "quintile_4",
+                  "text": "75 - 89%"
+                },
+                {
+                  "value": "quintile_3",
+                  "text": "50 - 74%"
+                },
+                {
+                  "value": "quintile_2",
+                  "text": "25 - 49%"
+                },
+                {
+                  "value": "quintile_1",
+                  "text": "0 - 24%"
+                }
+              ]
+            },
+            {
+              "type": "radiogroup",
+              "name": "ch1_l4_st_identify_bugs_ai_code",
+              "title": "What percentage of students were able to identify actual issues or bugs in the AI-generated code today?",
+              "choices": [
+                {
+                  "value": "quintile_5",
+                  "text": "90% or more"
+                },
+                {
+                  "value": "quintile_4",
+                  "text": "75 - 89%"
+                },
+                {
+                  "value": "quintile_3",
+                  "text": "50 - 74%"
+                },
+                {
+                  "value": "quintile_2",
+                  "text": "25 - 49%"
+                },
+                {
+                  "value": "quintile_1",
+                  "text": "0 - 24%"
+                }
+              ]
+            },
+            {
+              "type": "radiogroup",
+              "name": "ch1_l4_st_engagement_ai_code",
+              "title": "What percentage of students were engaged in discussions or activities centered around explaining their AI-generated code?",
+              "choices": [
+                {
+                  "value": "quintile_5",
+                  "text": "90% or more"
+                },
+                {
+                  "value": "quintile_4",
+                  "text": "75 - 89%"
+                },
+                {
+                  "value": "quintile_3",
+                  "text": "50 - 74%"
+                },
+                {
+                  "value": "quintile_2",
+                  "text": "25 - 49%"
+                },
+                {
+                  "value": "quintile_1",
+                  "text": "0 - 24%"
+                }
+              ]
+            },
+            {
+              "type": "radiogroup",
+              "name": "ch1_l4_ai_generated_examples",
+              "title": "I incorporated AI-generated examples in today's lesson, which stimulated discussion or inquiry.",
+              "choices": [
+                {
+                  "value": "5",
+                  "text": "Strongly Agree"
+                },
+                {
+                  "value": "4",
+                  "text": "Agree"
+                },
+                {
+                  "value": "3",
+                  "text": "Neutral"
+                },
+                {
+                  "value": "2",
+                  "text": "Disagree"
+                },
+                {
+                  "value": "1",
+                  "text": "Strongly Disagree"
+                }
+              ]
+            },
+            {
+              "type": "radiogroup",
+              "name": "ch1_l4_relevant_content",
+              "title": "I believe today's content was relevant to my students.",
+              "choices": [
+                {
+                  "value": "5",
+                  "text": "Strongly Agree"
+                },
+                {
+                  "value": "4",
+                  "text": "Agree"
+                },
+                {
+                  "value": "3",
+                  "text": "Neutral"
+                },
+                {
+                  "value": "2",
+                  "text": "Disagree"
+                },
+                {
+                  "value": "1",
+                  "text": "Strongly Disagree"
+                }
+              ]
+            },
+            {
+              "type": "radiogroup",
+              "name": "ch1_l4_integrate_future_lessons",
+              "title": "I am considering integrating some of today's tools or resources into my future lessons.",
+              "choices": [
+                {
+                  "value": "5",
+                  "text": "Strongly Agree"
+                },
+                {
+                  "value": "4",
+                  "text": "Agree"
+                },
+                {
+                  "value": "3",
+                  "text": "Neutral"
+                },
+                {
+                  "value": "2",
+                  "text": "Disagree"
+                },
+                {
+                  "value": "1",
+                  "text": "Strongly Disagree"
+                }
+              ]
+            },
+            {
+              "type": "radiogroup",
+              "name": "ch1_l4_usability",
+              "title": "I frequently faced challenges in integrating parts of today's lesson due to usability issues.",
+              "choices": [
+                {
+                  "value": "5",
+                  "text": "Strongly Agree"
+                },
+                {
+                  "value": "4",
+                  "text": "Agree"
+                },
+                {
+                  "value": "3",
+                  "text": "Neutral"
+                },
+                {
+                  "value": "2",
+                  "text": "Disagree"
+                },
+                {
+                  "value": "1",
+                  "text": "Strongly Disagree"
+                }
+              ]
+            },
+            {
+              "type": "radiogroup",
+              "name": "ch1_l4_teaching_materials_effective",
+              "title": "The materials provided for this lesson were very effective in supporting my students' understanding.",
+              "choices": [
+                {
+                  "value": "5",
+                  "text": "Strongly Agree"
+                },
+                {
+                  "value": "4",
+                  "text": "Agree"
+                },
+                {
+                  "value": "3",
+                  "text": "Neutral"
+                },
+                {
+                  "value": "2",
+                  "text": "Disagree"
+                },
+                {
+                  "value": "1",
+                  "text": "Strongly Disagree"
+                }
+              ]
+            },
+            {
+              "type": "text",
+              "name": "ch1_l4_overall_feedback",
+              "title": "Is there any area of this lesson you felt could have been improved or explained more thoroughly? Please provide any specific suggestions for improvement."
+            }
+          ]
+        },
+        {
+          "type": "panel",
+          "name": "post_lesson_5_survey_questions_panel",
+          "visibleIf": "{survey_variable}='post_lesson_5'",
+          "elements": [
+            {
+              "type": "html",
+              "name": "intro",
+              "html": "<h1>Your Experience Teaching Code.org's Software Engineering and Computer Vision Module</h1>\n<p><h2>Chapter 2: Computer Vision || Lesson 5: Intro to AI Models</h2></n>\n<p><span style='font-size: 12pt;'>The purpose of this survey is to understand your experience and perceptions after teaching this lesson.</span></p>\n<p><span style='font-size: 12pt;'>Let's get started!</span></p>"
+            },
+            {
+              "type": "radiogroup",
+              "name": "ch2_l5_st_engagement_ai_models",
+              "title": "What percentage of students were notably engaged or curious about model training and its limitations during today's lesson?",
+              "choices": [
+                {
+                  "value": "quintile_5",
+                  "text": "90% or more"
+                },
+                {
+                  "value": "quintile_4",
+                  "text": "75 - 89%"
+                },
+                {
+                  "value": "quintile_3",
+                  "text": "50 - 74%"
+                },
+                {
+                  "value": "quintile_2",
+                  "text": "25 - 49%"
+                },
+                {
+                  "value": "quintile_1",
+                  "text": "0 - 24%"
+                }
+              ]
+            },
+            {
+              "type": "radiogroup",
+              "name": "ch2_l5_st_misconceptions_ai_models",
+              "title": "What percentage of students had misconceptions or misunderstandings related to model training today?",
+              "choices": [
+                {
+                  "value": "quintile_5",
+                  "text": "90% or more"
+                },
+                {
+                  "value": "quintile_4",
+                  "text": "75 - 89%"
+                },
+                {
+                  "value": "quintile_3",
+                  "text": "50 - 74%"
+                },
+                {
+                  "value": "quintile_2",
+                  "text": "25 - 49%"
+                },
+                {
+                  "value": "quintile_1",
+                  "text": "0 - 24%"
+                }
+              ]
+            },
+            {
+              "type": "radiogroup",
+              "name": "ch2_l5_confidence_new_topics",
+              "title": "Today's lesson made me feel more confident in discussing and teaching new CS and AI topics.",
+              "choices": [
+                {
+                  "value": "5",
+                  "text": "Strongly Agree"
+                },
+                {
+                  "value": "4",
+                  "text": "Agree"
+                },
+                {
+                  "value": "3",
+                  "text": "Neutral"
+                },
+                {
+                  "value": "2",
+                  "text": "Disagree"
+                },
+                {
+                  "value": "1",
+                  "text": "Strongly Disagree"
+                }
+              ]
+            },
+            {
+              "type": "radiogroup",
+              "name": "ch2_l5_relevant_content",
+              "title": "I believe today's content was relevant to my students.",
+              "choices": [
+                {
+                  "value": "5",
+                  "text": "Strongly Agree"
+                },
+                {
+                  "value": "4",
+                  "text": "Agree"
+                },
+                {
+                  "value": "3",
+                  "text": "Neutral"
+                },
+                {
+                  "value": "2",
+                  "text": "Disagree"
+                },
+                {
+                  "value": "1",
+                  "text": "Strongly Disagree"
+                }
+              ]
+            },
+            {
+              "type": "radiogroup",
+              "name": "ch2_l5_usability",
+              "title": "I frequently faced challenges in integrating parts of today's lesson due to usability issues.",
+              "choices": [
+                {
+                  "value": "5",
+                  "text": "Strongly Agree"
+                },
+                {
+                  "value": "4",
+                  "text": "Agree"
+                },
+                {
+                  "value": "3",
+                  "text": "Neutral"
+                },
+                {
+                  "value": "2",
+                  "text": "Disagree"
+                },
+                {
+                  "value": "1",
+                  "text": "Strongly Disagree"
+                }
+              ]
+            },
+            {
+              "type": "radiogroup",
+              "name": "ch2_l5_teaching_materials_effective",
+              "title": "The materials provided for this lesson were very effective in supporting my students' understanding.",
+              "choices": [
+                {
+                  "value": "5",
+                  "text": "Strongly Agree"
+                },
+                {
+                  "value": "4",
+                  "text": "Agree"
+                },
+                {
+                  "value": "3",
+                  "text": "Neutral"
+                },
+                {
+                  "value": "2",
+                  "text": "Disagree"
+                },
+                {
+                  "value": "1",
+                  "text": "Strongly Disagree"
+                }
+              ]
+            },
+            {
+              "type": "text",
+              "name": "ch2_l5_overall_feedback",
+              "title": "Is there any area of this lesson you felt could have been improved or explained more thoroughly? Please provide any specific suggestions for improvement."
+            }
+          ]
+        },
+        {
+          "type": "panel",
+          "name": "post_lesson_6_survey_questions_panel",
+          "visibleIf": "{survey_variable}='post_lesson_6'",
+          "elements": [
+            {
+              "type": "html",
+              "name": "intro",
+              "html": "<h1>Your Experience Teaching Code.org's Software Engineering and Computer Vision Module</h1>\n<p><h2>Chapter 2: Computer Vision || Lesson 6: Training Your Model</h2></n>\n<p><span style='font-size: 12pt;'>The purpose of this survey is to understand your experience and perceptions after teaching this lesson.</span></p>\n<p><span style='font-size: 12pt;'>Let's get started!</span></p>"
+            },
+            {
+              "type": "radiogroup",
+              "name": "ch2_l6_st_engagement_ai_models",
+              "title": "What percentage of students were notably engaged or curious about model training and its limitations during today's lesson?",
+              "choices": [
+                {
+                  "value": "quintile_5",
+                  "text": "90% or more"
+                },
+                {
+                  "value": "quintile_4",
+                  "text": "75 - 89%"
+                },
+                {
+                  "value": "quintile_3",
+                  "text": "50 - 74%"
+                },
+                {
+                  "value": "quintile_2",
+                  "text": "25 - 49%"
+                },
+                {
+                  "value": "quintile_1",
+                  "text": "0 - 24%"
+                }
+              ]
+            },
+            {
+              "type": "radiogroup",
+              "name": "ch2_l6_st_misconceptions_ai_models",
+              "title": "What percentage of students had misconceptions or misunderstandings related to model training today?",
+              "choices": [
+                {
+                  "value": "quintile_5",
+                  "text": "90% or more"
+                },
+                {
+                  "value": "quintile_4",
+                  "text": "75 - 89%"
+                },
+                {
+                  "value": "quintile_3",
+                  "text": "50 - 74%"
+                },
+                {
+                  "value": "quintile_2",
+                  "text": "25 - 49%"
+                },
+                {
+                  "value": "quintile_1",
+                  "text": "0 - 24%"
+                }
+              ]
+            },
+            {
+              "type": "radiogroup",
+              "name": "ch2_l6_confidence_new_topics",
+              "title": "Today's lesson made me feel more confident in discussing and teaching new CS and AI topics.",
+              "choices": [
+                {
+                  "value": "5",
+                  "text": "Strongly Agree"
+                },
+                {
+                  "value": "4",
+                  "text": "Agree"
+                },
+                {
+                  "value": "3",
+                  "text": "Neutral"
+                },
+                {
+                  "value": "2",
+                  "text": "Disagree"
+                },
+                {
+                  "value": "1",
+                  "text": "Strongly Disagree"
+                }
+              ]
+            },
+            {
+              "type": "radiogroup",
+              "name": "ch2_l6_relevant_content",
+              "title": "I believe today's content was relevant to my students.",
+              "choices": [
+                {
+                  "value": "5",
+                  "text": "Strongly Agree"
+                },
+                {
+                  "value": "4",
+                  "text": "Agree"
+                },
+                {
+                  "value": "3",
+                  "text": "Neutral"
+                },
+                {
+                  "value": "2",
+                  "text": "Disagree"
+                },
+                {
+                  "value": "1",
+                  "text": "Strongly Disagree"
+                }
+              ]
+            },
+            {
+              "type": "radiogroup",
+              "name": "ch2_l6_usability",
+              "title": "I frequently faced challenges in integrating parts of today's lesson due to usability issues.",
+              "choices": [
+                {
+                  "value": "5",
+                  "text": "Strongly Agree"
+                },
+                {
+                  "value": "4",
+                  "text": "Agree"
+                },
+                {
+                  "value": "3",
+                  "text": "Neutral"
+                },
+                {
+                  "value": "2",
+                  "text": "Disagree"
+                },
+                {
+                  "value": "1",
+                  "text": "Strongly Disagree"
+                }
+              ]
+            },
+            {
+              "type": "radiogroup",
+              "name": "ch2_l6_teaching_materials_effective",
+              "title": "The materials provided for this lesson were very effective in supporting my students' understanding.",
+              "choices": [
+                {
+                  "value": "5",
+                  "text": "Strongly Agree"
+                },
+                {
+                  "value": "4",
+                  "text": "Agree"
+                },
+                {
+                  "value": "3",
+                  "text": "Neutral"
+                },
+                {
+                  "value": "2",
+                  "text": "Disagree"
+                },
+                {
+                  "value": "1",
+                  "text": "Strongly Disagree"
+                }
+              ]
+            },
+            {
+              "type": "text",
+              "name": "ch2_l6_overall_feedback",
+              "title": "Is there any area of this lesson you felt could have been improved or explained more thoroughly? Please provide any specific suggestions for improvement."
+            }
+          ]
+        },
+        {
+          "type": "panel",
+          "name": "post_lesson_7_survey_questions_panel",
+          "visibleIf": "{survey_variable}='post_lesson_7'",
+          "elements": [
+            {
+              "type": "html",
+              "name": "intro",
+              "html": "<h1>Your Experience Teaching Code.org's Software Engineering and Computer Vision Module</h1>\n<p><h2>Chapter 2: Computer Vision || Lesson 7: Using Your Model</h2></n>\n<p><span style='font-size: 12pt;'>The purpose of this survey is to understand your experience and perceptions after teaching this lesson.</span></p>\n<p><span style='font-size: 12pt;'>Let's get started!</span></p>"
+            },
+            {
+              "type": "radiogroup",
+              "name": "ch2_l7_st_struggle_ai_code",
+              "title": "What percentage of students struggled to explain the functionality or purpose of AI-assisted code?",
+              "choices": [
+                {
+                  "value": "quintile_5",
+                  "text": "90% or more"
+                },
+                {
+                  "value": "quintile_4",
+                  "text": "75 - 89%"
+                },
+                {
+                  "value": "quintile_3",
+                  "text": "50 - 74%"
+                },
+                {
+                  "value": "quintile_2",
+                  "text": "25 - 49%"
+                },
+                {
+                  "value": "quintile_1",
+                  "text": "0 - 24%"
+                }
+              ]
+            },
+            {
+              "type": "radiogroup",
+              "name": "ch2_l7_ai_examples_use",
+              "title": "I incorporated AI-generated examples in today's lesson.",
+              "choices": [
+                {
+                  "value": "5",
+                  "text": "Strongly Agree"
+                },
+                {
+                  "value": "4",
+                  "text": "Agree"
+                },
+                {
+                  "value": "3",
+                  "text": "Neutral"
+                },
+                {
+                  "value": "2",
+                  "text": "Disagree"
+                },
+                {
+                  "value": "1",
+                  "text": "Strongly Disagree"
+                }
+              ]
+            },
+            {
+              "type": "radiogroup",
+              "name": "ch2_l7_ai_examples_discussion",
+              "title": "The AI-generated examples I used stimulated student discussion and inquiry.",
+              "choices": [
+                {
+                  "value": "5",
+                  "text": "Strongly Agree"
+                },
+                {
+                  "value": "4",
+                  "text": "Agree"
+                },
+                {
+                  "value": "3",
+                  "text": "Neutral"
+                },
+                {
+                  "value": "2",
+                  "text": "Disagree"
+                },
+                {
+                  "value": "1",
+                  "text": "Strongly Disagree"
+                }
+              ]
+            },
+            {
+              "type": "radiogroup",
+              "name": "ch2_l7_relevant_content",
+              "title": "I believe today's content was relevant to my students.",
+              "choices": [
+                {
+                  "value": "5",
+                  "text": "Strongly Agree"
+                },
+                {
+                  "value": "4",
+                  "text": "Agree"
+                },
+                {
+                  "value": "3",
+                  "text": "Neutral"
+                },
+                {
+                  "value": "2",
+                  "text": "Disagree"
+                },
+                {
+                  "value": "1",
+                  "text": "Strongly Disagree"
+                }
+              ]
+            },
+            {
+              "type": "radiogroup",
+              "name": "ch2_l7_usability",
+              "title": "I frequently faced challenges in integrating parts of today's lesson due to usability issues.",
+              "choices": [
+                {
+                  "value": "5",
+                  "text": "Strongly Agree"
+                },
+                {
+                  "value": "4",
+                  "text": "Agree"
+                },
+                {
+                  "value": "3",
+                  "text": "Neutral"
+                },
+                {
+                  "value": "2",
+                  "text": "Disagree"
+                },
+                {
+                  "value": "1",
+                  "text": "Strongly Disagree"
+                }
+              ]
+            },
+            {
+              "type": "radiogroup",
+              "name": "ch2_l7_teaching_materials_effective",
+              "title": "The materials provided for this lesson were very effective in supporting my students' understanding.",
+              "choices": [
+                {
+                  "value": "5",
+                  "text": "Strongly Agree"
+                },
+                {
+                  "value": "4",
+                  "text": "Agree"
+                },
+                {
+                  "value": "3",
+                  "text": "Neutral"
+                },
+                {
+                  "value": "2",
+                  "text": "Disagree"
+                },
+                {
+                  "value": "1",
+                  "text": "Strongly Disagree"
+                }
+              ]
+            },
+            {
+              "type": "text",
+              "name": "ch2_l7_overall_feedback",
+              "title": "Is there any area of this lesson you felt could have been improved or explained more thoroughly? Please provide any specific suggestions for improvement."
+            }
+          ]
+        },
+        {
+          "type": "panel",
+          "name": "post_lesson_survey_header_panel",
+          "visibleIf": "{survey_variable}<>'pre_module' and {survey_variable} <> 'post_module'",
+          "elements": [
+            {
+              "type": "html",
+              "name": "survey_preamble_header_and_text",
+              "html": "<h1>Welcome to Code.org's Software Engineering and Computer Vision's {survey_variable}</h1>\n\n<p><strong>Code.org relies on surveys as a crucial tool to remain connected to teachers, and to give you the opportunity to provide feedback about your experience teaching our curriculum.</strong></p>\n<p>The purpose of this survey is to understand your experience teaching Code.org's Software Engineering and Computer Vision module to inform how it can be improved.&nbsp;</p>\n<p><strong>Privacy and Confidentiality</strong></p>\n<ul>\n<li>Your individual responses here are completely <strong>confidential.</strong></li>\n<li>Your identity will&nbsp;<strong>never</strong> be revealed publicly or used to tie any responses back to you personally.</li>\n<li>We may share <strong>de-identified</strong>, aggregate data (representing all responses) publicly.</li>\n<li>Your <strong>de-identified&nbsp;</strong>responses will be used by Code.org to improve our curriculum and programs.</li>\n</ul>\n<p>This survey should take <strong>less than 5 minutes</strong> to complete.&nbsp;&nbsp;<strong>Your complete honesty and candor are appreciated.</strong></p>"
+            }
+          ]
+        },
+        {
+          "type": "panel",
+          "name": "post_module_survey_header_panel",
+          "visibleIf": "{survey_variable}='post_module'",
+          "elements": [
+            {
+              "type": "html",
+              "name": "survey_preamble_header_and_text",
+              "html": "<h1>Welcome to Code.org's Software Engineering and Computer Vision - Post-Module Teacher Survey</h1>\n\n<p><strong>Code.org relies on surveys as a crucial tool to remain connected to teachers, and to give you the opportunity to provide feedback about your experience teaching our curriculum.</strong></p>\n<p>The purpose of this survey is to understand your experience teaching Code.org's Software Engineering and Computer Vision module to inform how it can be improved.&nbsp;</p>\n<p><strong>Privacy and Confidentiality</strong></p>\n<ul>\n<li>Your individual responses here are completely <strong>confidential.</strong></li>\n<li>Your identity will&nbsp;<strong>never</strong> be revealed publicly or used to tie any responses back to you personally.</li>\n<li>We may share <strong>de-identified</strong>, aggregate data (representing all responses) publicly.</li>\n<li>Your <strong>de-identified&nbsp;</strong>responses will be used by Code.org to improve our curriculum and programs.</li>\n</ul>\n<p>This survey should take <strong>less than 5 minutes</strong> to complete.&nbsp;&nbsp;<strong>Your complete honesty and candor are appreciated.</strong></p>"
+            }
+          ]
+        },
+        {
+          "type": "panel",
+          "name": "post_module_survey_questions_panel",
+          "visibleIf": "{survey_variable}='post_module'",
+          "elements": [
+            {
+              "type": "html",
+              "name": "intro",
+              "html": "<h1>Your Experience Teaching Code.org's Software Engineering and Computer Vision Module</h1>\n<p><span style='font-size: 12pt;'>The purpose of this survey is to understand your experience, perceptions, and your learning after teaching this module.</span></p>\n<p><span style='font-size: 12pt;'>Let's get started!</span></p>"
+            },
+            {
+              "type": "html",
+              "name": "section_intro_coding_proficiency",
+              "html": "<h2>General Coding Proficiency</h2>"
+            },
+            {
+              "type": "radiogroup",
+              "name": "st_articulate_coding_decisions",
+              "title": "After participating in this module, what percentage of students do you believe can effectively articulate their coding decisions and processes?",
+              "choices": [
+                {
+                  "value": "quintile_5",
+                  "text": "90% or more"
+                },
+                {
+                  "value": "quintile_4",
+                  "text": "75 - 89%"
+                },
+                {
+                  "value": "quintile_3",
+                  "text": "50 - 74%"
+                },
+                {
+                  "value": "quintile_2",
+                  "text": "25 - 49%"
+                },
+                {
+                  "value": "quintile_1",
+                  "text": "0 - 24%"
+                }
+              ]
+            },
+            {
+              "type": "matrix",
+              "name": "effect_communication_matrix",
+              "title": "How impactful were each of the following on students' communication skills?",
+              "columns": [
+                {
+                  "value": "5",
+                  "text": "Very Effective"
+                },
+                {
+                  "value": "4",
+                  "text": "Effective"
+                },
+                {
+                  "value": "3",
+                  "text": "Neutral"
+                },
+                {
+                  "value": "2",
+                  "text": "Not Too Effective"
+                },
+                {
+                  "value": "1",
+                  "text": "Not Effective At All"
+                },
+                {
+                  "value": "0",
+                  "text": "Not Applicable (Didn't teach it)"
+                }
+              ],
+              "rows": [
+                {
+                  "value": "collaborative_coding_version_control",
+                  "text": "Collaborative coding and version control"
+                },
+                {
+                  "value": "ai_assisted_code",
+                  "text": "AI-assisted code generation"
+                },
+                {
+                  "value": "real_world_applications",
+                  "text": "Real-world applications of code"
+                },
+                {
+                  "value": "ethical_considerations",
+                  "text": "Ethical considerations in coding"
+                },
+                {
+                  "value": "model_training_java_integration",
+                  "text": "Model training and integration in Java"
+                }
+              ]
+            },
+            {
+              "type": "html",
+              "name": "section_intro_real_world_tools",
+              "html": "<h2>Real World Tools</h2>"
+            },
+            {
+              "type": "radiogroup",
+              "name": "javalab_ides_similarities",
+              "title": "After teaching this module, I can confidently identify similarities between Java Lab and professional IDEs (i.e., VS Code).",
+              "choices": [
+                {
+                  "value": "5",
+                  "text": "Strongly Agree"
+                },
+                {
+                  "value": "4",
+                  "text": "Agree"
+                },
+                {
+                  "value": "3",
+                  "text": "Neutral"
+                },
+                {
+                  "value": "2",
+                  "text": "Disagree"
+                },
+                {
+                  "value": "1",
+                  "text": "Strongly Disagree"
+                }
+              ]
+            },
+            {
+              "type": "radiogroup",
+              "name": "confidence_ides",
+              "title": "Teaching this module significantly boosted my confidence in using professional IDEs (i.e., VS Code).",
+              "choices": [
+                {
+                  "value": "5",
+                  "text": "Strongly Agree"
+                },
+                {
+                  "value": "4",
+                  "text": "Agree"
+                },
+                {
+                  "value": "3",
+                  "text": "Neutral"
+                },
+                {
+                  "value": "2",
+                  "text": "Disagree"
+                },
+                {
+                  "value": "1",
+                  "text": "Strongly Disagree"
+                }
+              ]
+            },
+            {
+              "type": "radiogroup",
+              "name": "additional_content_ai_assisted_coding",
+              "title": "Which of the following would be your FIRST CHOICE to improve or add to better guide students in AI-assisted coding?",
+              "choices": [
+                {
+                  "value": "intro_ai_tools",
+                  "text": "Introduction to AI tools and their relevance"
+                },
+                {
+                  "value": "hands_on_exercises_ai_code",
+                  "text": "Hands-on exercises with AI-generated code"
+                },
+                {
+                  "value": "case_studies",
+                  "text": "Case studies showcasing real-world AI-assisted coding scenarios"
+                },
+                {
+                  "value": "deep_dive_challenges",
+                  "text": "Deep dives into common pitfalls and challenges"
+                },
+                {
+                  "value": "guided_peer_review",
+                  "text": "Guided peer review sessions on AI-generated solutions"
+                },
+                {
+                  "value": "troubleshooting_ai_projects",
+                  "text": "Troubleshooting and debugging AI-assisted projects"
+                },
+                {
+                  "value": "ethical_ai",
+                  "text": "Ethical considerations and responsible use of AI in coding"
+                },
+                {
+                  "value": "compare_traditional_ai",
+                  "text": "Comparing traditional coding with AI-assisted techniques"
+                },
+                {
+                  "value": "other",
+                  "text": "Other"
+                },
+                {
+                  "value": "none",
+                  "text": "None"
+                }
+              ]
+            },
+            {
+              "type": "radiogroup",
+              "name": "ai_generated_code_critique_students",
+              "title": "How often did students critique AI-generated code during the module?",
+              "choices": [
+                {
+                  "value": "5",
+                  "text": "Always"
+                },
+                {
+                  "value": "4",
+                  "text": "Often"
+                },
+                {
+                  "value": "3",
+                  "text": "Sometimes"
+                },
+                {
+                  "value": "2",
+                  "text": "Occasionally"
+                },
+                {
+                  "value": "1",
+                  "text": "Never"
+                }
+              ]
+            },
+            {
+              "type": "matrix",
+              "name": "ai_code_difficulties_matrix",
+              "title": "How often did you notice the following while students worked with AI-generated code?",
+              "columns": [
+                {
+                  "value": "5",
+                  "text": "Always"
+                },
+                {
+                  "value": "4",
+                  "text": "Often"
+                },
+                {
+                  "value": "3",
+                  "text": "Sometimes"
+                },
+                {
+                  "value": "2",
+                  "text": "Occasionally"
+                },
+                {
+                  "value": "1",
+                  "text": "Never"
+                },
+                {
+                  "value": "0",
+                  "text": "Not Applicable (Didn't teach it)"
+                }
+              ],
+              "rows": [
+                {
+                  "value": "collaborative_coding_version_control",
+                  "text": "Collaborative coding and version control"
+                },
+                {
+                  "value": "over_reliance_ai_assisted_code",
+                  "text": "Over-reliance on AI suggestions without critical analysis"
+                },
+                {
+                  "value": "difficulty_integrating_ai_code",
+                  "text": "Difficulty in integrating AI-generated code with existing code"
+                },
+                {
+                  "value": "uncertainty_ai_logic",
+                  "text": "Uncertainty about the underlying logic or reasoning behind AI suggestions"
+                },
+                {
+                  "value": "resistance_ai_tools",
+                  "text": "Hesitation or resistance to using AI tools due to unfamiliarity or mistrust"
+                }
+              ]
+            },
+            {
+              "type": "radiogroup",
+              "name": "st_ability_adapt_ai_generated_code",
+              "title": "After completing this module, what percentage of students improved in their ability to adapt AI-generated code?",
+              "choices": [
+                {
+                  "value": "quintile_5",
+                  "text": "90% or more"
+                },
+                {
+                  "value": "quintile_4",
+                  "text": "75 - 89%"
+                },
+                {
+                  "value": "quintile_3",
+                  "text": "50 - 74%"
+                },
+                {
+                  "value": "quintile_2",
+                  "text": "25 - 49%"
+                },
+                {
+                  "value": "quintile_1",
+                  "text": "0 - 24%"
+                }
+              ]
+            },
+            {
+              "type": "html",
+              "name": "section_ai_models_computer_vision",
+              "html": "<h2>AI Models and Computer Vision</h2>"
+            },
+            {
+              "type": "radiogroup",
+              "name": "st_limitations_model_training",
+              "title": "After completing this module, what percentage of students effectively understand the limitations of model training?",
+              "choices": [
+                {
+                  "value": "quintile_5",
+                  "text": "90% or more"
+                },
+                {
+                  "value": "quintile_4",
+                  "text": "75 - 89%"
+                },
+                {
+                  "value": "quintile_3",
+                  "text": "50 - 74%"
+                },
+                {
+                  "value": "quintile_2",
+                  "text": "25 - 49%"
+                },
+                {
+                  "value": "quintile_1",
+                  "text": "0 - 24%"
+                }
+              ]
+            },
+            {
+              "type": "radiogroup",
+              "name": "st_integrate_ai_into_java",
+              "title": "After completing this module, what percentage of students understand how to incorporate AI models in a Java program?",
+              "choices": [
+                {
+                  "value": "quintile_5",
+                  "text": "90% or more"
+                },
+                {
+                  "value": "quintile_4",
+                  "text": "75 - 89%"
+                },
+                {
+                  "value": "quintile_3",
+                  "text": "50 - 74%"
+                },
+                {
+                  "value": "quintile_2",
+                  "text": "25 - 49%"
+                },
+                {
+                  "value": "quintile_1",
+                  "text": "0 - 24%"
+                }
+              ]
+            },
+            {
+              "type": "html",
+              "name": "section_teacher_confidence_new_cs_ai_concepts",
+              "html": "<h2>Teacher Confidence with New CS and AI Concepts</h2>"
+            },
+            {
+              "type": "radiogroup",
+              "name": "frequency_use_ai_generated_examples",
+              "title": "How frequently did you utilize AI-generated examples while teaching this module?",
+              "choices": [
+                {
+                  "value": "5",
+                  "text": "Every lesson"
+                },
+                {
+                  "value": "4",
+                  "text": "Frequently"
+                },
+                {
+                  "value": "3",
+                  "text": "About half of the lessons"
+                },
+                {
+                  "value": "2",
+                  "text": "Occasionally"
+                },
+                {
+                  "value": "1",
+                  "text": "Never"
+                }
+              ]
+            },
+            {
+              "type": "radiogroup",
+              "name": "confidence_introducing_new_concepts",
+              "title": "I feel confident in introducing new CS and AI topics to my students.",
+              "choices": [
+                {
+                  "value": "5",
+                  "text": "Strongly Agree"
+                },
+                {
+                  "value": "4",
+                  "text": "Agree"
+                },
+                {
+                  "value": "3",
+                  "text": "Neutral"
+                },
+                {
+                  "value": "2",
+                  "text": "Disagree"
+                },
+                {
+                  "value": "1",
+                  "text": "Strongly Disagree"
+                }
+              ]
+            },
+            {
+              "type": "html",
+              "name": "section_general_feedback",
+              "html": "<h2>General Feedback</h2>"
+            },
+            {
+              "type": "radiogroup",
+              "name": "pacing",
+              "title": "The pacing outlined in the lesson plan worked for me.",
+              "choices": [
+                {
+                  "value": "5",
+                  "text": "Strongly Agree"
+                },
+                {
+                  "value": "4",
+                  "text": "Agree"
+                },
+                {
+                  "value": "3",
+                  "text": "Neutral"
+                },
+                {
+                  "value": "2",
+                  "text": "Disagree"
+                },
+                {
+                  "value": "1",
+                  "text": "Strongly Disagree"
+                }
+              ]
+            },
+            {
+              "type": "radiogroup",
+              "name": "reason_didnt_finish",
+              "title": "Did you finish the module?",
+              "choices": [
+                {
+                  "value": "finished",
+                  "text": "Yes, I finished the module."
+                },
+                {
+                  "value": "no_time",
+                  "text": "No, I didn't have enough time."
+                },
+                {
+                  "value": "no_difficult_to_teach",
+                  "text": "No, it was too difficult to teach."
+                },
+                {
+                  "value": "no_difficult_for_students",
+                  "text": "My students found it too difficult."
+                },
+                {
+                  "value": "no_other",
+                  "text": "No, for other reasons."
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "type": "panel",
           "name": "pre_module_survey_header_panel",
           "visibleIf": "{survey_variable}='pre_module'",
           "elements": [
