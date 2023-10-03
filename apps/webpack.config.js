@@ -268,6 +268,7 @@ const WEBPACK_BASE_CONFIG = {
         : []),
       ...(process.env.DEV
         ? [
+            // Enable source maps locally for Blockly for easier debugging.
             {
               test: /(blockly\/.*\.js)$/,
               use: ['source-map-loader'],
@@ -278,8 +279,8 @@ const WEBPACK_BASE_CONFIG = {
     ],
     noParse: [/html2canvas/],
   },
-  // Ignore spurious warnings from source-map-loader
-  // It can't find source maps for some Closure modules and that is expected
+  // Ignore spurious warnings from source-map-loader.
+  // It can't find source maps for some Closure modules in Blockly and that is expected.
   ignoreWarnings: [/Failed to parse source map/],
 };
 
