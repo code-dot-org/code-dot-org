@@ -16,6 +16,7 @@ export const NotificationType = {
   bullhorn: 'bullhorn',
   feedback: 'feedback',
   bullhorn_yellow: 'bullhorn_yellow',
+  collaborate: 'collaborate',
 };
 
 const Notification = ({
@@ -103,6 +104,7 @@ const Notification = ({
     bullhorn: 'bullhorn',
     bullhorn_yellow: 'bullhorn',
     feedback: 'envelope',
+    collaborate: 'users',
   };
 
   const mainStyle = {
@@ -125,7 +127,12 @@ const Notification = ({
             <FontAwesome icon={icons[type]} style={styles.icon} />
           </div>
         )}
-        <div style={styles.contentBox}>
+        <div
+          style={{
+            ...styles.contentBox,
+            width: dismissible ? 'calc( 100% - 100px)' : 'calc( 100% - 72px)',
+          }}
+        >
           <div style={styles.wordBox}>
             <div style={{...colorStyles, ...styles.notice}}>{notice}</div>
             <div style={styles.details}>
@@ -164,9 +171,9 @@ const Notification = ({
                   __useDeprecatedTag
                   key={index}
                   href={button.link}
-                  color={Button.ButtonColor.gray}
+                  color={button.color || Button.ButtonColor.gray}
                   text={button.text}
-                  style={styles.button}
+                  style={{...styles.button, ...button.style}}
                   target={button.newWindow ? '_blank' : null}
                   onClick={button.onClick}
                   className={button.className}
@@ -215,6 +222,8 @@ Notification.propTypes = {
       newWindow: PropTypes.bool,
       onClick: PropTypes.func,
       className: PropTypes.string,
+      color: PropTypes.oneOf(Object.keys(Button.ButtonColor)),
+      style: PropTypes.object,
     })
   ),
 
@@ -338,6 +347,11 @@ const styles = {
       borderColor: color.purple,
       color: color.purple,
       backgroundColor: color.purple,
+    },
+    [NotificationType.collaborate]: {
+      borderColor: color.light_secondary_500,
+      color: color.light_secondary_500,
+      backgroundColor: color.light_secondary_500,
     },
   },
   clear: {
