@@ -9,6 +9,8 @@ import {
  * workspace view, execute code, and save/load projects.
  */
 export default class DanceBlocklyWorkspace {
+  // Will move function to DanceBlocklyWorkspace once it is created
+  // blockDefinitions: sharedBlocksConfig from levelProperties.sharedBlocks
   getBlocksByCategoryForEditBlocks(levelProperties) {
     const blockDefinitions = levelProperties.sharedBlocks || [];
     const blocksByCategory = {};
