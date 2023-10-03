@@ -2,12 +2,8 @@ class LearningGoalTeacherEvaluationsController < ApplicationController
   load_and_authorize_resource
 
   def create
-    learning_goal_teacher_evaluation = LearningGoalTeacherEvaluation.new(learning_goal_teacher_evaluation_params)
-    learning_goal_teacher_evaluation.teacher_id = current_user.id
-
-    learning_goal_teacher_evaluation.save!
-
-    render json: learning_goal_teacher_evaluation
+    @learning_goal_teacher_evaluation.update(learning_goal_teacher_evaluation_params.merge(teacher_id: current_user.id))
+    render json: @learning_goal_teacher_evaluation
   end
 
   def update
