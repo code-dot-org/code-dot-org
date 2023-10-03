@@ -1,12 +1,14 @@
 import React from 'react';
 import {expect} from '../../../util/reconfiguredChai';
-import {shallow} from 'enzyme';
+import {shallow, mount} from 'enzyme';
 import sinon from 'sinon';
 import analyticsReporter from '@cdo/apps/lib/util/AnalyticsReporter';
 import {EVENTS} from '@cdo/apps/lib/util/AnalyticsConstants';
 import LearningGoal from '@cdo/apps/templates/rubrics/LearningGoal';
 
 describe('LearningGoal', () => {
+  const processEventLoop = t => new Promise(resolve => setTimeout(resolve, t));
+
   it('renders EvidenceLevels', () => {
     const wrapper = shallow(
       <LearningGoal
@@ -129,4 +131,60 @@ describe('LearningGoal', () => {
     );
     sendEventSpy.restore();
   });
+
+  it('displays Evaluate when AI is disabled and no understanding has been selected', () => {
+    const wrapper = mount(
+      <LearningGoal
+        learningGoal={{
+          learningGoal: 'Testing',
+          aiEnabled: false,
+          evidenceLevels: [],
+        }}
+        teacherHasEnabledAi
+        canProvideFeedback
+      />
+    );
+    wrapper.update();
+    expect(wrapper.find('BodyThreeText').text()).to.include('Evaluate');
+    wrapper.unmount();
+  });
+
+  it('displays Approve when AI is enabled and no understanding has been selected', () => {
+    const wrapper = mount(
+      <LearningGoal
+        learningGoal={{
+          learningGoal: 'Testing',
+          aiEnabled: true,
+          evidenceLevels: [],
+        }}
+        teacherHasEnabledAi
+        canProvideFeedback
+      />
+    );
+    wrapper.update();
+    expect(wrapper.find('BodyThreeText').text()).to.include('Approve');
+    wrapper.unmount();
+  });
+
+//   it('runs autosave when understanding has been selected', async () => {
+//     const wrapper = shallow(
+//       <LearningGoal
+//         learningGoal={{
+//           id: 0,
+//           key: '0',
+//           learningGoal: 'Testing',
+//           aiEnabled: true,
+//           evidenceLevels: [
+//             {id: 1, understanding: 0, teacherDescription: 'test'},
+//           ],
+//         }}
+//         studentLevelInfo={{
+//           user_id: 0,
+//         }}
+//         teacherHasEnabledAi
+//         canProvideFeedback
+//       />
+//     );
+//     wrapper.find('EvidenceLevels').invoke('radioButtonCallback')();
+//   });
 });

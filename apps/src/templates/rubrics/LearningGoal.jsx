@@ -37,7 +37,7 @@ export default function LearningGoal({
   const [learningGoalEval, setLearningGoalEval] = useState(null);
   const [displayFeedback, setDisplayFeedback] = useState('');
   const [displayUnderstanding, setDisplayUnderstanding] = useState(-1);
-  const understandingLevel = useRef(0);
+  const understandingLevel = useRef(-1);
   const teacherFeedback = useRef('');
 
   const aiEnabled = learningGoal.aiEnabled && teacherHasEnabledAi;
@@ -116,6 +116,8 @@ export default function LearningGoal({
           if (json.understanding >= 0 && json.understanding !== null) {
             understandingLevel.current = json.understanding;
             setDisplayUnderstanding(json.understanding);
+          } else {
+            setDisplayUnderstanding(-1);
           }
           console.log(understandingLevel.current);
         })
@@ -156,15 +158,19 @@ export default function LearningGoal({
         <div className={style.learningGoalHeaderRightSide}>
           {aiEnabled && <AiToken />}
           {/*TODO: Display status of feedback*/}
-          {displayUnderstanding === -1 ? (
-            canProvideFeedback && aiEnabled ? (
+          {canProvideFeedback &&
+            aiEnabled &&
+            understandingLevel.current === -1 && (
               <BodyThreeText>{i18n.approve()}</BodyThreeText>
-            ) : (
+            )}
+          {canProvideFeedback &&
+            !aiEnabled &&
+            understandingLevel.current === -1 && (
               <BodyThreeText>{i18n.evaluate()}</BodyThreeText>
-            )
-          ) : (
+            )}
+          {understandingLevel.current >= 0 && (
             <BodyThreeText>
-              {UNDERSTANDING_LEVEL_STRINGS[understandingLevel.current]}
+              {UNDERSTANDING_LEVEL_STRINGS[displayUnderstanding]}
             </BodyThreeText>
           )}
         </div>
