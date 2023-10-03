@@ -55,7 +55,6 @@ const DanceView: React.FunctionComponent = () => {
   const isRunning = useTypedSelector(state => state.dance.isRunning);
 
   const levelProperties = useTypedSelector(state => state.lab.levelProperties);
-  const toolboxBlocks = useRef(levelProperties?.toolboxBlocks || undefined);
 
   const onAuthError = (songId: string) => {
     Lab2MetricsReporter.logWarning({
@@ -63,24 +62,6 @@ const DanceView: React.FunctionComponent = () => {
       songId,
     });
   };
-
-  // Install level and shared blocks on the global Blockly environment.
-  // This should only be called once per page load, as it configures the global
-  // Blockly state.
-  useEffect(() => {
-    const skin = levelProperties?.skin || undefined;
-    const isK1 = levelProperties?.isK1 || undefined;
-    const blockInstallOptions = {
-      skin,
-      isK1,
-      level: levelProperties,
-    };
-    // If categories are used in the toolbox, then toolboxBlocks are reassigned accordingly.
-    toolboxBlocks.current = setUpBlocklyForDanceLab(
-      blockInstallOptions,
-      levelProperties
-    );
-  }, []); // Empty dependency array so that this only runs once.
 
   // Initialize song manifest and load initial song when level loads.
   useEffect(() => {

@@ -6,6 +6,7 @@
 import AichatView from '@cdo/apps/aichat/views/AichatView';
 import DanceView from '@cdo/apps/dance/lab2/views/DanceView';
 import {setUpBlocklyForMusicLab} from '@cdo/apps/music/blockly/setup';
+import {setUpBlocklyForDanceLab} from '@cdo/apps/dance/blockly/setup';
 import MusicView from '@cdo/apps/music/views/MusicView';
 import StandaloneVideo from '@cdo/apps/standaloneVideo/StandaloneVideo';
 import classNames from 'classnames';
@@ -13,7 +14,7 @@ import React, {useContext, useEffect, useState} from 'react';
 import {useSelector} from 'react-redux';
 import {LabState} from '../lab2Redux';
 import ProgressContainer from '../progress/ProgressContainer';
-import {AppName} from '../types';
+import {AppName, LevelProperties} from '../types';
 import moduleStyles from './lab-views-renderer.module.scss';
 import {DEFAULT_THEME, Theme, ThemeContext} from './ThemeWrapper';
 
@@ -38,7 +39,7 @@ interface AppProperties {
    * Optional function to run when the lab is first mounted. This is useful
    * for any one-time setup actions such as setting up Blockly.
    */
-  setupFunction?: () => void;
+  setupFunction?: (levelProperties: LevelProperties | undefined) => void;
 }
 
 const appsProperties: {[appName in AppName]?: AppProperties} = {
@@ -61,6 +62,7 @@ const appsProperties: {[appName in AppName]?: AppProperties} = {
     backgroundMode: false,
     node: <DanceView />,
     theme: Theme.LIGHT,
+    setupFunction: setUpBlocklyForDanceLab,
   },
 };
 
@@ -69,16 +71,19 @@ const LabViewsRenderer: React.FunctionComponent = () => {
     (state: {lab: LabState}) => state.lab.levelProperties?.appName
   );
 
+  const levelProperties = useSelector(
+    (state: {lab: LabState}) => state.lab.levelProperties
+  );
   const [appsToRender, setAppsToRender] = useState<AppName[]>([]);
 
   // When navigating to a new app type, add it to the list of apps to render.
   useEffect(() => {
     if (currentAppName && !appsToRender.includes(currentAppName)) {
       // Run the setup function for the Lab if it has one.
-      appsProperties[currentAppName]?.setupFunction?.();
+      appsProperties[currentAppName]?.setupFunction?.(levelProperties);
       setAppsToRender([...appsToRender, currentAppName]);
     }
-  }, [currentAppName, appsToRender]);
+  }, [currentAppName, appsToRender, levelProperties]);
 
   // Set the theme for the current app.
   const {setTheme} = useContext(ThemeContext);
