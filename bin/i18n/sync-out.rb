@@ -189,17 +189,6 @@ module I18n
       end
     end
 
-    # Wraps hash in correct format to be loaded by our i18n backend.
-    # This will most likely be JSON file data due to Crowdin only
-    # setting the locale for yml files.
-    def self.wrap_with_locale(data, locale, type)
-      final_hash = Hash.new
-      final_hash[locale] = Hash.new
-      final_hash[locale]["data"] = Hash.new
-      final_hash[locale]["data"][type] = data
-      final_hash
-    end
-
     def self.serialize_i18n_strings(level, strings)
       result = Hash.new
 
@@ -273,7 +262,7 @@ module I18n
                           {}
 
         merged_data = existing_data.deep_merge(translations.sort.to_h)
-        type_data = wrap_with_locale(merged_data, locale, type)
+        type_data = I18nScriptUtils.to_dashboard_i18n_data(locale, type, merged_data)
 
         I18nScriptUtils.sanitize_data_and_write(type_data, type_file)
       end
@@ -315,6 +304,7 @@ module I18n
         Dir.glob("i18n/locales/#{locale}/dashboard/*.{json,yml}") do |loc_file|
           # Moved to I18n::Resources::Dashboard::Blocks::SyncOut#distribute_localization
           next if loc_file == File.join('i18n/locales', locale, 'dashboard/blocks.yml')
+          next if loc_file == File.join('i18n/locales', locale, 'dashboard/course_offerings.json')
 
           ext = File.extname(loc_file)
           relative_path = loc_file.delete_prefix(locale_dir)
@@ -330,7 +320,7 @@ module I18n
           if ext == ".json"
             # JSON files in this directory need the root key to be set to the locale
             loc_data = JSON.parse(File.read(loc_file))
-            loc_data = wrap_with_locale(loc_data, locale, basename)
+            loc_data = I18nScriptUtils.to_dashboard_i18n_data(locale, basename, loc_data)
             I18nScriptUtils.sanitize_data_and_write(loc_data, destination)
           else
             I18nScriptUtils.sanitize_file_and_write(loc_file, destination)
@@ -356,7 +346,7 @@ module I18n
                                    {}
           programming_env_data[programming_env] = loc_data[programming_env]
           # JSON files in this directory need the root key to be set to the locale
-          programming_env_data = wrap_with_locale(programming_env_data, locale, "programming_environments")
+          programming_env_data = I18nScriptUtils.to_dashboard_i18n_data(locale, 'programming_environments', programming_env_data)
           I18nScriptUtils.sanitize_data_and_write(programming_env_data, destination)
         end
 
@@ -380,7 +370,7 @@ module I18n
           framework_data[framework] = {
             "name" => loc_data["name"]
           }
-          framework_data = wrap_with_locale(framework_data, locale, "frameworks")
+          framework_data = I18nScriptUtils.to_dashboard_i18n_data(locale, 'frameworks', framework_data)
           I18nScriptUtils.sanitize_data_and_write(framework_data, destination)
 
           # Standard Categories
@@ -393,7 +383,7 @@ module I18n
               "description" => loc_data["categories"][category]["description"]
             }
           end
-          category_data = wrap_with_locale(category_data, locale, "standard_categories")
+          category_data = I18nScriptUtils.to_dashboard_i18n_data(locale, 'standard_categories', category_data)
           I18nScriptUtils.sanitize_data_and_write(category_data, destination)
 
           # Standards
@@ -406,7 +396,7 @@ module I18n
               "description" => loc_data["standards"][standard]["description"]
             }
           end
-          standard_data = wrap_with_locale(standard_data, locale, "standards")
+          standard_data = I18nScriptUtils.to_dashboard_i18n_data(locale, 'standards', standard_data)
           I18nScriptUtils.sanitize_data_and_write(standard_data, destination)
         end
       end

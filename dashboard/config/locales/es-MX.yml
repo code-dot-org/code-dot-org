@@ -500,6 +500,8 @@ es-MX:
     unsubmit-title: Cancelar tu evaluación
     wrong_body: Gracias por enviar respuestas.
     wrong_title: Gracias
+  level_summary:
+    correct_answer: Respuesta correcta
   locked_stage: No puedes ver los contenidos de esta etapa porque se encuentra bloqueada.
     Tu docente puede desbloquear esta etapa cuando sea el momento de trabajar en ella
     o para revisar tus respuestas.

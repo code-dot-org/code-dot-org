@@ -549,9 +549,9 @@ km-KH:
         - {}
         - {}
         questions:
-        - {}
+        - text: ការរៀបចំ
         - text: ការឆ្លុះបញ្ចាំង
-        - {}
+        - text: ព្យាយាម
         - text: កំណត់
       CSD U1 Test PSP match:
         answers:
@@ -560,9 +560,9 @@ km-KH:
         - {}
         - {}
         questions:
-        - {}
+        - text: ការរៀបចំ
         - text: ការឆ្លុះបញ្ចាំង
-        - {}
+        - text: ព្យាយាម
         - text: កំណត់
       CSD U1 Test PSP match_2021:
         answers:
@@ -571,9 +571,9 @@ km-KH:
         - {}
         - {}
         questions:
-        - {}
+        - text: ការរៀបចំ
         - text: ការឆ្លុះបញ្ចាំង
-        - {}
+        - text: ព្យាយាម
         - text: កំណត់
       CSD U1 Test PSP match_2022:
         answers:
@@ -582,9 +582,9 @@ km-KH:
         - {}
         - {}
         questions:
-        - {}
+        - text: ការរៀបចំ
         - text: ការឆ្លុះបញ្ចាំង
-        - {}
+        - text: ព្យាយាម
         - text: កំណត់
       CSD U1 Test define a computer:
         answers:
