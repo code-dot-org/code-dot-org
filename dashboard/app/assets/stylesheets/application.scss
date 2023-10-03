@@ -240,7 +240,7 @@ img.video_thumbnail {
     margin-top: 12px;
 
     .headerlink {
-      font-family: 'Gotham 4r', sans-serif;
+      @include main-font-regular;
       margin-left: 30px;
       font-size: 14px;
       line-height: 22px;
@@ -264,7 +264,7 @@ img.video_thumbnail {
     &.header_button_light {
       background-color: $teal;
     }
-    font-family: 'Gotham 4r', sans-serif;
+    @include main-font-regular;
     display: inline-block;
     color: $white;
     background-color: transparent;
@@ -3027,7 +3027,7 @@ $modal-no-icon-gap: 22px;
   }
 
   .congrats {
-    font-family: "Gotham 5r", sans-serif;
+    @include main-font-semi-bold;
     font-size: 21px;
     line-height: 27px;
   }
@@ -3650,15 +3650,15 @@ h2.danger {
   padding: 30px 10px 36px 10px;
 
   h1 {
+    @include main-font-semi-bold;
     color: $white;
     margin-bottom: 24px;
     margin-top: 0;
-    font-family: "Gotham 5r", sans-serif;
     font-size: 38px;
   }
 
   h3 {
-    font-family: "Gotham 5r", sans-serif;
+    @include main-font-semi-bold;
     font-size: 20px;
     line-height: normal;
   }
@@ -3700,7 +3700,9 @@ h2.danger {
 .foorm-adjust-header {
   background-color: $white;
   h3 {
-    font-family: "Gotham 5r", sans-serif !important;
+    @include main-font-semi-bold;
+    font-family: $main-font !important;
+    font-weight: $semi-bold-font-weight !important;
     font-size: 22px !important;
     line-height: 30px !important;
     color: $teal !important;
@@ -3708,7 +3710,9 @@ h2.danger {
 }
 
 .foorm-adjust-page-title {
-  font-family: "Gotham 5r", sans-serif !important;
+  @include main-font-semi-bold;
+  font-family: $main-font !important;
+  font-weight: $semi-bold-font-weight !important;
   font-size: 22px !important;
 }
 
@@ -3724,10 +3728,10 @@ h2.danger {
   table-layout: fixed;
 
   th {
+    @include main-font-regular;
     font-size: 12px;
     text-align: center;
-    font-family: 'Gotham 4r', sans-serif;
-    font-weight: normal !important;
+    font-weight: $regular-font-weight !important;
   }
 
   @media (min-width: 601px) {
@@ -3858,19 +3862,21 @@ h2.danger {
       }
 
       #link_your_email {
+        @include main-font-regular;
+        font-family: $main-font !important;
         background-color: $orange;
         border-color: $orange;
         border-image-source: none !important;
-        font-family: 'Gotham 4r', sans-serif !important;
         text-shadow: none !important;
         border-width: 1px !important;
       }
 
       #not_now {
+        @include main-font-regular;
+        font-family: $main-font !important;
         background-color: $light_purple;
         border-color: $light_purple;
         border-image-source: none !important;
-        font-family: 'Gotham 4r', sans-serif !important;
         text-shadow: none !important;
         border-width: 1px !important;
       }
