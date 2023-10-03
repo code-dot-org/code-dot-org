@@ -62,7 +62,7 @@ function installCustomBlocks({blockly, customInputTypes}) {
 
 // Will move function to DanceBlocklyWorkspace once it is created
 // blockDefinitions: sharedBlocksConfig from levelProperties.sharedBlocks
-export function getBlocksByCategory(levelProperties) {
+export function getBlocksByCategoryForEditBlocks(levelProperties) {
   const blockDefinitions = levelProperties.sharedBlocks || [];
   const blocksByCategory = {};
   blockDefinitions.forEach(({name, pool, category, config, helperCode}) => {
