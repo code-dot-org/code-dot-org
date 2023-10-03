@@ -64,5 +64,5 @@ Scenario: Signed out courses, non-english
   Given I am on "http://studio.code.org/home/lang/es"
   Then I wait until I am on "http://studio.code.org/users/sign_in"
   And I wait to see ".headerlinks"
-  And I don't see "#header-non-en-courses"
+  And I wait until I don't see "#header-non-en-courses"
   And I close my eyes
