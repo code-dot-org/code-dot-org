@@ -341,7 +341,7 @@ class I18nScriptUtils
   end
 
   def self.json_file?(file_path)
-    %w[.json].include? File.extname(file_path)
+    %w[.json].include?(File.extname(file_path).downcase)
   end
 
   def self.yaml_file?(file_path)
