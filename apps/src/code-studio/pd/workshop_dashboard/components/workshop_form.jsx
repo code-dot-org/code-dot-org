@@ -860,6 +860,7 @@ export class WorkshopForm extends React.Component {
     if (this.state.organizer) {
       workshop_data.organizer_id = this.state.organizer.id;
     }
+
     let method, url;
     if (this.props.workshop) {
       method = 'PATCH';
