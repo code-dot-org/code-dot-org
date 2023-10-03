@@ -6,6 +6,8 @@
 
 set -xe
 
+# rerun tests 1
+
 ulimit -n 4096
 
 export CI=true
