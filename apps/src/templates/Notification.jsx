@@ -134,7 +134,12 @@ const Notification = ({
             <FontAwesome icon={icons[type]} style={styles.icon} />
           </div>
         )}
-        <div style={styles.contentBox}>
+        <div
+          style={{
+            ...styles.contentBox,
+            width: dismissible ? 'calc( 100% - 100px)' : 'calc( 100% - 72px)',
+          }}
+        >
           <div style={styles.wordBox}>
             <div style={{...colorStyles, ...styles.notice}}>
               {notice}
