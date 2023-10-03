@@ -499,7 +499,7 @@ sq:
       about_partners: Partnerët
       about_team: Ekipi i plotë
       about_us: Rreth nesh
-      course_catalog: Katalogu i kursit
+      course_catalog: Katalogu i kurseve
       educate_beyond: Përtej Code.org
       educate_community: Komuniteti Online
       educate_elementary: Shkolla Fillore
@@ -544,7 +544,7 @@ sq:
       puzzle_map: Fazat
     user:
       already_registered: Jeni i rregistruar?
-      applab: Laboratori i Aplikacioneve
+      applab: App Lab
       artist: Artisti
       bounce: Hidhu
       calc: Llogarit

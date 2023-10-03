@@ -7,30 +7,25 @@ class I18n::Resources::Dashboard::CourseContent::SyncInTest < Minitest::Test
     FileUtils.stubs(:mkdir_p)
   end
 
-  def test_performing
-    sync_in_instance = mock(:execute)
-
-    I18n::Resources::Dashboard::CourseContent::SyncIn.expects(:new).once.returns(sync_in_instance)
-
-    I18n::Resources::Dashboard::CourseContent::SyncIn.perform
+  def test_base_class_inheriting
+    assert_equal I18n::Utils::SyncInBase, I18n::Resources::Dashboard::CourseOfferings::SyncIn.superclass
   end
 
   def test_execution
-    sync_in_instance = I18n::Resources::Dashboard::CourseContent::SyncIn.new
-    exec_seq = sequence('execution')
+    execution_sequence = sequence('execution')
 
-    sync_in_instance.stubs(:variable_strings).returns('expected_variable_strings')
-    sync_in_instance.stubs(:parameter_strings).returns('expected_parameter_strings')
+    I18n::Resources::Dashboard::CourseContent::SyncIn.any_instance.stubs(:variable_strings).returns('expected_variable_strings')
+    I18n::Resources::Dashboard::CourseContent::SyncIn.any_instance.stubs(:parameter_strings).returns('expected_parameter_strings')
 
-    sync_in_instance.expects(:prepare_level_content).in_sequence(exec_seq)
-    sync_in_instance.expects(:prepare_project_content).in_sequence(exec_seq)
+    I18n::Resources::Dashboard::CourseContent::SyncIn.any_instance.expects(:prepare_level_content).in_sequence(execution_sequence)
+    I18n::Resources::Dashboard::CourseContent::SyncIn.any_instance.expects(:prepare_project_content).in_sequence(execution_sequence)
 
-    sync_in_instance.expects(:write_to_yml).with('variable_names', 'expected_variable_strings').in_sequence(exec_seq)
-    sync_in_instance.expects(:write_to_yml).with('parameter_names', 'expected_parameter_strings').in_sequence(exec_seq)
+    I18n::Resources::Dashboard::CourseContent::SyncIn.any_instance.expects(:write_to_yml).with('variable_names', 'expected_variable_strings').in_sequence(execution_sequence)
+    I18n::Resources::Dashboard::CourseContent::SyncIn.any_instance.expects(:write_to_yml).with('parameter_names', 'expected_parameter_strings').in_sequence(execution_sequence)
 
-    sync_in_instance.expects(:redact_level_content).in_sequence(exec_seq)
+    I18n::Resources::Dashboard::CourseContent::SyncIn.any_instance.expects(:redact_level_content).in_sequence(execution_sequence)
 
-    sync_in_instance.execute
+    I18n::Resources::Dashboard::CourseContent::SyncIn.perform
   end
 
   def test_level_content_preparation_of_hoc_script

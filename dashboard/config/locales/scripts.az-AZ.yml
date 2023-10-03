@@ -1370,9 +1370,13 @@ az:
             lesson-5:
               name: Təsadüfi Cavablar Almaq Üçün Massivlərdən İstifadə Edin
         csa-software-engineering:
+          lesson_groups:
+            lessonGroup-3:
+              display_name: 'Fəsil 2: Kompüter görməsi'
           lessons:
             lesson-9:
               name: Qur
+          title: Proqram təminatı mühəndisliyi və kompüter görməsi
         csa-u6-dev:
           lesson_groups:
             lessonGroup-2:

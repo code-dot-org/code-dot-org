@@ -445,7 +445,7 @@
   dashboard_navigation_section_pd: "توسعه ی حرفه ای"
   dashboard_navigation_section_speakers: "علوم کامپیوتر <br/> سخنرانا مهمان"
   dashboard_navigation_all_sections: "حساب کاربری دانش‌ آموزان و پیشرفت آنها"
-  dashboard_navigation_view_progress: "پیشرفت"
+  dashboard_navigation_view_progress: "روند"
   dashboard_navigation_view_assessments: "ارزیابی"
   dashboard_navigation_add_students: "افزودن دانش آموز"
   dashboard_navigation_manage_students: "مدیریت دانش آموزان"
@@ -481,7 +481,7 @@
   dashboard_students_add_multiple: 'نامهای دانش آموزان خود را تایپ یا جای گذاری نمایید، فقط یک نام در هر خط:'
   dashboard_students_new_section: "شما یک بخش جدید ایجاد کرده اید! اکنون با استفاده از دکمه های <b>افزودن دانش آموز</b> و <b>اضافه کردن چند دانش آموز</b> بالا دانش آموزان خود را اضافه کنید."
   dashboard_students_name: 'نام'
-  dashboard_students_progress: "پیشرفت"
+  dashboard_students_progress: "روند"
   dashboard_students_male: "مرد"
   dashboard_students_female: "زن"
   dashboard_students_completed_levels: "سطح‌های کامل شده"
@@ -532,10 +532,10 @@
   dashboard_login_none: "ایمیل"
   dashboard_stage: "مرحله"
   dashboard_puzzle: "پازل"
-  dashboard_question: "سوال"
+  dashboard_question: "سؤال"
   dashboard_correctness_correct: "صحیح است"
   dashboard_submission_submitted: "ثبت‌شده"
-  dashboard_submission_in_progress: "در حال پیش رفت"
+  dashboard_submission_in_progress: "در حال اجرا"
   stats_hoc_2013_heading: 'آمار باور نکردنی از سال گذشته ساعت کدنويسي. تنها در یک هفته:'
   stats_hoc_2013_image_alt: "وضعیت کد نویسی در سال 2013"
   dashboard_teacher: "دبیر"
@@ -647,6 +647,7 @@
   coursef-2022_name: دوره F ‏(2022)
   express-2021_name: دوره اکسپرس (2021)
   express-2022_name: دوره اکسپرس (2022)
+  pre-express-2022_name: دوره اکسپرس برای پیش دبستانیها (2022)
   accelerated_name: "دوره های سریع"
   20-hour_name: دوره های سریع
   classicmaze_name: "هزارتوی کلاسیک"
@@ -754,7 +755,7 @@
   accelerated_gradelevel: "سنین 10 به بالا (پس از دوره 3)"
   codeorg_platformtext: "مرورگرهای مدرن, تلفن های هوشمند, تبلت"
   codeintl_platformtext: "مرورگرهای مدرن, تلفن های هوشمند, تبلت"
-  thinkersmithspanish_platformtext: "Unuplugged"
+  thinkersmithspanish_platformtext: "بدون کامپیوتر"
   khan_platformtext: "مرورگرهای وب مدرن"
   khanes_platformtext: "مرورگرهای وب مدرن"
   khanpt_platformtext: "مرورگرهای وب مدرن"
@@ -764,7 +765,7 @@
   tynker_platformtext: "مرورگرهای وب مدرن"
   scratch_platformtext: "تنها مرورگر های وب دسک تاپ (نه تبلت)"
   lightbot_platformtext: "تمام مرورگر ها و iOS، اندروید، یا کنسول های بازی"
-  thinkersmith_platformtext: "Unuplugged"
+  thinkersmith_platformtext: "بدون کامپیوتر"
   condcards_platformtext: "Unuplugged"
   lightbotintl_platformtext: "iOS, Android  (یا مرورگر وب)"
   codehs_platformtext: "مرورگر های به روز. (پیشرفت دوره نیاز به پول دارد)"
@@ -785,9 +786,9 @@
   touchdevelop_platformtext: "مرورگرهای مدرن, تلفن های هوشمند, تمام دستگاه های"
   appinventor_platformtext: "مرورگرهای مدرن + آندروید"
   blockly_platformtext: "تنها مرورگرهای مدرن "
-  thinkersmith2_platformtext: "Unuplugged"
-  kodableunplugged_platformtext: "Unuplugged"
-  projguts_platformtext: "Unuplugged"
+  thinkersmith2_platformtext: "بدون کامپیوتر"
+  kodableunplugged_platformtext: "بدون کامپیوتر"
+  projguts_platformtext: "بدون کامپیوتر"
   hourofcode_platformtext: "مرورگرهای مدرن, تلفن های هوشمند, تبلت"
   frozen_platformtext: "مرورگرهای جدید +تبلت"
   starwars_platformtext: "مرورگرهای جدید +تبلت"
@@ -840,14 +841,14 @@
   playlab_shortdescription: "یک داستان بنویس یا یک بازی با آزمایشگاه بازی بساز!"
   infinity_shortdescription: "با استفاده از آزمایشگاه بازی برای ایجاد داستان بازی بازیگران شخصیت های دیزنی بی نهایت."
   artist_shortdescription: "با نقاش چند عکس و طرح باحال بکش!"
-  coursea-2020_shortdescription_congrats: مبانی علم کامپیوتر و ایمنی اینترنت را بیاموزید. در پایان دوره، بازی خودتان را بسازید یا تجربه‌ای برای هم‌رسانی با دیگران داشته باشید.
-  courseb-2020_shortdescription_congrats: مبانی علم کامپیوتر و ایمنی اینترنت را بیاموزید. در پایان دوره، بازی خودتان را بسازید یا تجربه‌ای برای هم‌رسانی با دیگران داشته باشید.
+  coursea-2020_shortdescription_congrats: مبانی علم کامپیوتر و ایمنی اینترنت را بیاموزید. در پایان دوره، بازی خودتان را بسازید یا تجربه‌ای برای به اشتراک گذاشتن با دیگران داشته باشید.
+  courseb-2020_shortdescription_congrats: مبانی علم کامپیوتر و ایمنی اینترنت را بیاموزید. در پایان دوره، بازی خودتان را بسازید یا تجربه‌ای برای به اشتراک گذاشتن با دیگران داشته باشید.
   coursec-2020_shortdescription_congrats: با استفاده از توالی، حلقه و رویدادها برنامه بسازید. حروف اول خود را به باینری برگردانید، فنون مختلف حل مسئله را بررسی کنید و یاد بگیرید که چه واکنشی به مزاحمت اینترنتی نشان دهید. در پایان دوره، بازی یا داستان خود را بسازید که بتوانید آن را به اشتراک بگذارید!
-  coursea-2021_shortdescription_congrats: مبانی علم کامپیوتر و ایمنی اینترنت را بیاموزید. در پایان دوره، بازی خودتان را بسازید یا تجربه‌ای برای هم‌رسانی با دیگران داشته باشید.
-  courseb-2021_shortdescription_congrats: مبانی علم کامپیوتر و ایمنی اینترنت را بیاموزید. در پایان دوره، بازی خودتان را بسازید یا تجربه‌ای برای هم‌رسانی با دیگران داشته باشید.
+  coursea-2021_shortdescription_congrats: مبانی علم کامپیوتر و ایمنی اینترنت را بیاموزید. در پایان دوره، بازی خودتان را بسازید یا تجربه‌ای برای به اشتراک گذاشتن با دیگران داشته باشید.
+  courseb-2021_shortdescription_congrats: مبانی علم کامپیوتر و ایمنی اینترنت را بیاموزید. در پایان دوره، بازی خودتان را بسازید یا تجربه‌ای برای به اشتراک گذاشتن با دیگران داشته باشید.
   coursec-2021_shortdescription_congrats: با استفاده از توالی، حلقه و رویدادها برنامه بسازید. حروف اول خود را به باینری برگردانید، فنون مختلف حل مسئله را بررسی کنید و یاد بگیرید که چه واکنشی به مزاحمت اینترنتی نشان دهید. در پایان دوره، بازی یا داستان خود را بسازید که بتوانید آن را به اشتراک بگذارید!
-  coursea-2022_shortdescription_congrats: مبانی علم کامپیوتر و ایمنی اینترنت را بیاموزید. در پایان دوره، بازی خودتان را بسازید یا تجربه‌ای برای هم‌رسانی با دیگران داشته باشید.
-  courseb-2022_shortdescription_congrats: مبانی علم کامپیوتر و ایمنی اینترنت را بیاموزید. در پایان دوره، بازی خودتان را بسازید یا تجربه‌ای برای هم‌رسانی با دیگران داشته باشید.
+  coursea-2022_shortdescription_congrats: مبانی علم کامپیوتر و ایمنی اینترنت را بیاموزید. در پایان دوره، بازی خودتان را بسازید یا تجربه‌ای برای به اشتراک گذاشتن با دیگران داشته باشید.
+  courseb-2022_shortdescription_congrats: مبانی علم کامپیوتر و ایمنی اینترنت را بیاموزید. در پایان دوره، بازی خودتان را بسازید یا تجربه‌ای برای به اشتراک گذاشتن با دیگران داشته باشید.
   coursec-2022_shortdescription_congrats: با استفاده از توالی، حلقه و رویدادها برنامه بسازید. حروف اول خود را به باینری برگردانید، فنون مختلف حل مسئله را بررسی کنید و یاد بگیرید که چه واکنشی به مزاحمت اینترنتی نشان دهید. در پایان دوره، بازی یا داستان خود را بسازید که بتوانید آن را به اشتراک بگذارید!
   codeorg_longdescription: "با برنامه نویسی کشیدن و رها کردن مفاهیم اولیه علم کامپیوتر را یاد بگیرید. این یک آموزشی شبیه بازی است با حضور ویدیو سخنرانی بیل گیتس، مارک زوکربرگ، پرندگان عصبانی و گیاهان مقابل زامبی ها. در این آموزش حلقه های تکراری، شرطها و الگریتمهای ابتدایی را یاد بگیرید. این آموزش در 34 زبان مختلف در دسترس است."
   codeintl_longdescription: "با برنامه نویسی کشیدن و رها کردن مفاهیم اولیه علم کامپیوتر را یاد بگیرید. این یک آموزشی شبیه بازی است با حضور ویدیو سخنرانی بیل گیتس، مارک زوکربرگ، پرندگان عصبانی و گیاهان مقابل زامبی ها. در این آموزش حلقه های تکراری، شرطها و الگریتمهای ابتدایی را یاد بگیرید. این آموزش در 34 زبان مختلف در دسترس است."
@@ -1147,7 +1148,7 @@
   hoc2018_dance_party_box_title: "مهمانی رقص"
   hoc2018_dance_party_button: "شروع"
   hoc2018_dance_teacher_resources_tile1_button: "طرح درس"
-  hoc2018_dance_teacher_resources_tile2_button: "فعالیت کلاسی"
+  hoc2018_dance_teacher_resources_tile2_button: "فعالیت بدون کامپیوتر"
   hoc2018_dance_amazon_about_future_engineer_button: "بیشتر بیاموزید"
   page_not_found_title: "صفحه پیدا نشد"
   homepage_slot_text_title_at_home: "در خانه یاد بگیرید"
