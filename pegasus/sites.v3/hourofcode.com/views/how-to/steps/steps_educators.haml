@@ -1,108 +1,85 @@
+- steps_educators_index = 8
+
+- steps_educators_heading = [hoc_s(:hoc_how_to_step_label_plan), hoc_s(:hoc_how_to_step_label_choose_activity), hoc_s(:hoc_how_to_step_label_test_activity), hoc_s(:hoc_how_to_step_label_register_event), hoc_s(:hoc_how_to_step_label_tell), hoc_s(:hoc_how_to_step_label_get_coding), hoc_s(:hoc_how_to_step_label_celebrate), hoc_s(:hoc_how_to_step_label_beyond_hoc)]
+
+- steps_educators_subheading = [hoc_s(:hoc_how_to_step_01_educators_subhead), "", "", "", "", "", "", hoc_s(:hoc_how_to_step_beyond_hoc_subhead)]
+
+- steps_educators_desc = [hoc_s(:hoc_how_to_step_01_educators_desc_01), hoc_s(:hoc_how_to_step_02_educators_desc_01), hoc_s(:hoc_how_to_step_03_educators_desc_01), hoc_s(:hoc_how_to_step_04_educators_desc_01), "", hoc_s(:hoc_how_to_step_06_educators_desc_01), hoc_s(:hoc_how_to_step_07_educators_desc_01), hoc_s(:hoc_how_to_step_beyond_hoc_desc)]
+
 
 %section.steps
   .wrapper
     = view :"how-to/steps/side-nav/side_nav_educators"
     %div.steps-wrapper
-      .step#step-1
-        .step-counter
-          %span 1
-        .step-content
-          %h3.heading-xl
-            Plan where and when you'll do your Hour of Code
-          %p.heading-sm
-            Select an event time and space that works for the number of students and devices you have available.
-          %p
-            What spaces are available for you to do your Hour of Code? Consider the tech capabilities of your space, and the kinds of devices you expect your students to work on. Students can work on tutorials on a single device, take turns using a shared device, or try a tutorial together on a classroom whiteboard. There are even unplugged tutorials that can be completed with no devices at all. Unplugged options can be done anywhere—even outdoors!
-          %p
-            People around the world join the Hour of Code celebration during CS Education Week (December 4-8) when the latest tutorials and activities are released. But you can do an Hour of Code any day of the year!
-          %img{src: "/images/group_ipad.jpg", alt: ""}
-      .step#step-2
-        .step-counter
-          %span 2
-        .step-content
-          %h3.heading-xl
-            Choose your activity
-          %p
-            Explore activities based on your group's age, experience, interests, and more. It's popular for students to try self-led tutorials, though many activities include lesson plans for teachers to guide discussion or extend the activity as well.
-          %p
-            Decide ahead of time if you want to choose a single tutorial for all of your students, or let each child pick their own.
-          %p
-            This year, you and your students can learn all about AI through tutorials, lesson plans, and our new How AI Works video series.
-          %img{src: "/images/activites_2023.jpg", alt: ""}
-          .button-wrapper
-            %a.link-button{href: "/learn"}
-              Select an activity
-            %a.link-button.secondary{href: "#"}
-              Explore AI
-      .step#step-3
-        .step-counter
-          %span 3
-        .step-content
-          %h3.heading-xl
-            Test out your activity
-          %p
-            Try out the tutorial yourself before you get into the classroom so you can answer questions!
-          %p
-            You can also test tutorials on student computers or devices to ensure they support sound and video. Have low bandwidth? Plan to show videos at the front of the class, so each student isn't downloading their own videos.
-          %p
-            Consider providing headphones for your class, or ask students to bring their own, if the tutorial you choose works best with sound.
-      .step#step-4
-        .step-counter
-          %span 4
-        .step-content
-          %h3.heading-xl
-            Register your event
-          %p
-            When you register your Hour of Code event, you'll receive helpful emails with news and tips for hosting a successful Hour of Code. It's also how you can let local volunteers know your school is participating. Volunteers are a great resource and can come speak to your class about computer science or help your students with Hour of Code activities.
-          %p
-            People around the world join the Hour of Code celebration during CS Education Week (December 4-8) when the latest tutorials and activities are released. But you can do an Hour of Code any day of the year!
-          %a.link-button{href: "/#join"}
-            Register your event
-      .step#step-5.divider-accent
-        .step-counter
-          %span 5
-        .step-content
-          %h3.heading-xl
-            Tell your students, school, and community
-          %p
-            Get your students excited for the event by sharing inspirational videos highlighting diverse people and creative ways that computer science can be used in the real world.
-          %p
-            Share your Hour of Code plans with other teachers who may want to join in on the fun! This is also a great opportunity to reach out to your school's Parent Teacher Student Association or share in parent newsletters, letting them know what their children are learning.
-      .step#step-6
-        %p.tag.day-of
-          Day of Hour of Code
-        .step-counter
-          %span 6
-        .step-content
-          %h3.heading-xl
-            Get coding!
-          %p
-            Direct your students to the activity, maybe by sharing the link on the board or through your classroom's learning management system. Your students may encounter challenges—that's okay! Learning to program is like learning a new language; you won't be fluent right away. If you don't know the answer, you can figure it out together.
-          %a.link-button{href: "/learn"}
-            Register your event
-      .step#step-7.divider-accent
-        .step-counter
-          %span 7
-        .step-content
-          %h3.heading-xl
-            Celebrate
-          %p
-            Be sure to celebrate success! Share photos and videos of your Hour of Code event on social media. Use #HourOfCode and @codeorg so we can highlight your success, too!
-          %p
-            You can also print certificates for your students to show off their achievement!
-          %a.link-button{href: "https://code.org/certificates"}
-            Certificates
-      .step#step-8
-        %p.tag.day-of
-          After Hour of Code
-        .step-counter
-          %span 8
-        .step-content
-          %h3.heading-xl
-            Beyond Hour of Code
-          %p.heading-sm
-            It doesn't end here!
-          %p
-            Computer science doesn't have to end with the Hour of Code! While 90% of parents want their child to learn computer science, most schools still don't teach it. Learn how to bring CS to your child's school today.
-          %a.link-button{href: "/beyond"}
-            Go Beyond the Hour of Code
+      - steps_educators_index.times do |index|
+        .step{id: "step-0#{index + 1}", class:"#{'divider-accent' if index === 4 || index === 6}"}
+          .step-counter
+            %span
+              = index + 1
+          .step-content
+            %h3.heading-xl
+              = steps_educators_heading[index]
+            %p.heading-sm
+              = steps_educators_subheading[index]
+            %p
+              = steps_educators_desc[index]
+
+            -# Step 1 additional content
+            - if index === 0
+              %p
+                =hoc_s(:hoc_how_to_step_01_educators_desc_02)
+              %img{src: "/images/group_ipad.jpg", alt: ""}
+
+            -# Step 2 additional content
+            - if index === 1
+              %p
+                =hoc_s(:hoc_how_to_step_02_educators_desc_02)
+              %p
+                =hoc_s(:hoc_how_to_step_02_educators_desc_03, markdown: :inline, locals:{ai_url: "#"})
+              %img{src: "/images/activites_2023.jpg", alt: ""}
+              .button-wrapper
+                %a.link-button{href: "/learn"}
+                  =hoc_s(:call_to_action_select_activity)
+                %a.link-button.secondary{href: "#"}
+                  =hoc_s(:call_to_action_explore_ai)
+
+            -# Step 3 additional content
+            - if index === 2
+              %p
+                =hoc_s(:hoc_how_to_step_03_educators_desc_02)
+              %p
+                =hoc_s(:hoc_how_to_step_03_educators_desc_03)
+
+            -# Step 4 additional content
+            - if index === 3
+              %a.link-button{href: "/#join"}
+                =hoc_s(:call_to_action_register_event)
+
+            -# Step 5 additional content
+            - if index === 4
+              %p
+                =hoc_s(:hoc_how_to_step_05_educators_desc_01, markdown: :inline, locals:{videos_url: "https://code.org/videos"})
+              %p
+                =hoc_s(:hoc_how_to_step_05_educators_desc_02)
+
+            -# Step 6 additional content
+            - if index === 5
+              %p.tag.day-of
+                =hoc_s(:day_of_hoc)
+              %a.link-button{href: "/learn"}
+                =hoc_s(:call_to_action_start_activity)
+
+            -# Step 7 additional content
+            - if index === 6
+              %p
+                =hoc_s(:hoc_how_to_step_07_educators_desc_02)
+              %a.link-button{href: "https://code.org/certificates"}
+                =hoc_s(:call_to_action_get_certificates)
+
+            -# Step 8 additional content
+            - if index === 7
+              %p.tag.day-of
+                =hoc_s(:after_hoc)
+              %p.heading-sm
+                %a.link-button{href: "/beyond"}
+                  =hoc_s(:call_to_action_go_beyond_hoc)

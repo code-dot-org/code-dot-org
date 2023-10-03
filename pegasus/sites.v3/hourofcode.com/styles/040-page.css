@@ -505,6 +505,11 @@ button {
   white-space: nowrap;
 }
 
+a.link-button:hover,
+button:hover {
+  background-color: var(--brand_secondary_dark);
+}
+
 .continue-btn{
   background-color: rgb(255, 255, 255);
   border-color: var(--brand_secondary_default);

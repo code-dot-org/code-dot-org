@@ -42,6 +42,10 @@ a.link-button {
     background: none;
     border: 2px solid var(--brand_secondary_default);
     color: var(--brand_secondary_default);
+
+    &:hover {
+      background-color: var(--neutral_light);
+    }
   }
 }
 
@@ -266,6 +270,7 @@ section.steps {
     p.tag {
       position: absolute;
       top: -14px;
+      left: 0;
       font-size: 0.75rem;
       padding: 4px 12px 4px 10px;
       border-radius: 4px 16px 16px 4px;

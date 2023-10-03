@@ -1,55 +1,20 @@
+- steps_nav_index = 8
+
+- steps_nav_tag = [hoc_s(:before_hoc), "", "", "", "", hoc_s(:day_of_hoc), "", hoc_s(:after_hoc)]
+
+- steps_nav_number = [hoc_s(:step_01), hoc_s(:step_02), hoc_s(:step_03), hoc_s(:step_04), hoc_s(:step_05), hoc_s(:step_06), hoc_s(:step_07), hoc_s(:step_08)]
+
+- steps_nav_label = [hoc_s(:hoc_how_to_step_label_plan), hoc_s(:hoc_how_to_step_label_choose_activity), hoc_s(:hoc_how_to_step_label_test_activity), hoc_s(:hoc_how_to_step_label_register_event), hoc_s(:hoc_how_to_step_label_tell), hoc_s(:hoc_how_to_step_label_get_coding), hoc_s(:hoc_how_to_step_label_celebrate), hoc_s(:hoc_how_to_step_label_beyond_hoc)]
+
+
 %ul.steps-nav
-  %a.selected{href: "#step-1"}
-    %li
-      %p.tag
-        Before Hour of Code
-      %p.overline-one
-        Step 1
-      %p.body-two
-        Plan where and when you will do your Hour of Code
-  %a{href: "#step-2"}
-    %li
-      %p.overline-one
-        Step 2
-      %p.body-two
-        Choose your activity
-  %a{href: "#step-3"}
-    %li
-      %p.overline-one
-        Step 3
-      %p.body-two
-        Test out your activity
-  %a{href: "#step-4"}
-    %li
-      %p.overline-one
-        Step 4
-      %p.body-two
-        Register your event
-  %a{href: "#step-5"}
-    %li
-      %p.overline-one
-        Step 5
-      %p.body-two
-        Tell your students, school, and community
-  %a{href: "#step-6"}
-    %li
-      %p.tag
-        Day of Hour of Code
-      %p.overline-one
-        Step 6
-      %p.body-two
-        Get coding!
-  %a{href: "#step-7"}
-    %li
-      %p.overline-one
-        Step 7
-      %p.body-two
-        Celebrate
-  %a{href: "#step-7"}
-    %li
-      %p.tag
-        After Hour of Code
-      %p.overline-one
-        Step 8
-      %p.body-two
-        Beyond Hour of Code
+  - steps_nav_index.times do |index|
+    %a{href: "#step-0#{index + 1}"}
+      %li
+        - if index === 0 || index === 5 || index === 7
+          %p.tag
+            = steps_nav_tag[index]
+        %p.overline-one
+          = steps_nav_number[index]
+        %p.body-two
+          = steps_nav_label[index]
