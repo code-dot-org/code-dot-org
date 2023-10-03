@@ -1,4 +1,4 @@
-import React, {useCallback, useEffect, useState, useRef} from 'react';
+import React, {useCallback, useEffect, useState} from 'react';
 import {TypedUseSelectorHook, useSelector} from 'react-redux';
 import Instructions from '@cdo/apps/lab2/views/components/Instructions';
 import PanelContainer from '@cdo/apps/lab2/views/components/PanelContainer';
@@ -13,7 +13,6 @@ import Lab2MetricsReporter from '@cdo/apps/lab2/Lab2MetricsReporter';
 import {LabState} from '@cdo/apps/lab2/lab2Redux';
 import {DanceLevelProperties, DanceProjectSources} from '../../types';
 import {registerReducers} from '@cdo/apps/redux';
-import {setUpBlocklyForDanceLab} from '@cdo/apps/dance/blockly/setup';
 const commonI18n = require('@cdo/locale');
 
 const DANCE_VISUALIZATION_ID = 'dance-visualization';
@@ -54,7 +53,7 @@ const DanceView: React.FunctionComponent = () => {
   );
   const isRunning = useTypedSelector(state => state.dance.isRunning);
 
-  const levelProperties = useTypedSelector(state => state.lab.levelProperties);
+  // const levelProperties = useTypedSelector(state => state.lab.levelProperties);
 
   const onAuthError = (songId: string) => {
     Lab2MetricsReporter.logWarning({
