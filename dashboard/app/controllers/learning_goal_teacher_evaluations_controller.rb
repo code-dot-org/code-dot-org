@@ -2,7 +2,7 @@ class LearningGoalTeacherEvaluationsController < ApplicationController
   load_and_authorize_resource
 
   def create
-    @learning_goal_teacher_evaluation.update(learning_goal_teacher_evaluation_params.merge(teacher_id: current_user.id))
+    @learning_goal_teacher_evaluation.update!(learning_goal_teacher_evaluation_params.merge(teacher_id: current_user.id))
     render json: @learning_goal_teacher_evaluation
   end
 
@@ -35,13 +35,13 @@ class LearningGoalTeacherEvaluationsController < ApplicationController
   end
 
   private def learning_goal_teacher_evaluation_params
-    lgep = params.transform_keys(&:underscore)
-    lgep = lgep.permit(
+    eval_params = params.transform_keys(&:underscore)
+    eval_params = eval_params.permit(
       :user_id,
       :learning_goal_id,
       :understanding,
       :feedback,
     )
-    lgep
+    eval_params
   end
 end
