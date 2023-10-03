@@ -969,7 +969,7 @@ class LessonsControllerTest < ActionController::TestCase
 
     assert_equal 1, @lesson.objectives.count
     assert_nil Objective.find_by_id(objective_to_remove.id)
-    assert_not_nil objective_to_keep.reload
+    refute_nil objective_to_keep.reload
   end
 
   test 'editing an objective updates the objective' do
@@ -1001,7 +1001,7 @@ class LessonsControllerTest < ActionController::TestCase
 
     assert_equal 1, @lesson.objectives.count
     assert_nil Objective.find_by_id(objective_to_remove.id)
-    assert_not_nil objective_to_keep.reload
+    refute_nil objective_to_keep.reload
   end
 
   test 'add script level via lesson update' do
