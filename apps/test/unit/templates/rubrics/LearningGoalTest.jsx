@@ -7,8 +7,6 @@ import {EVENTS} from '@cdo/apps/lib/util/AnalyticsConstants';
 import LearningGoal from '@cdo/apps/templates/rubrics/LearningGoal';
 
 describe('LearningGoal', () => {
-  const processEventLoop = t => new Promise(resolve => setTimeout(resolve, t));
-
   it('renders EvidenceLevels', () => {
     const wrapper = shallow(
       <LearningGoal
@@ -166,25 +164,25 @@ describe('LearningGoal', () => {
     wrapper.unmount();
   });
 
-//   it('runs autosave when understanding has been selected', async () => {
-//     const wrapper = shallow(
-//       <LearningGoal
-//         learningGoal={{
-//           id: 0,
-//           key: '0',
-//           learningGoal: 'Testing',
-//           aiEnabled: true,
-//           evidenceLevels: [
-//             {id: 1, understanding: 0, teacherDescription: 'test'},
-//           ],
-//         }}
-//         studentLevelInfo={{
-//           user_id: 0,
-//         }}
-//         teacherHasEnabledAi
-//         canProvideFeedback
-//       />
-//     );
-//     wrapper.find('EvidenceLevels').invoke('radioButtonCallback')();
-//   });
+  //   it('runs autosave when understanding has been selected', async () => {
+  //     const wrapper = shallow(
+  //       <LearningGoal
+  //         learningGoal={{
+  //           id: 0,
+  //           key: '0',
+  //           learningGoal: 'Testing',
+  //           aiEnabled: true,
+  //           evidenceLevels: [
+  //             {id: 1, understanding: 0, teacherDescription: 'test'},
+  //           ],
+  //         }}
+  //         studentLevelInfo={{
+  //           user_id: 0,
+  //         }}
+  //         teacherHasEnabledAi
+  //         canProvideFeedback
+  //       />
+  //     );
+  //     wrapper.find('EvidenceLevels').invoke('radioButtonCallback')();
+  //   });
 });
