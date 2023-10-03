@@ -15,19 +15,10 @@ class GSheetToCsv
 
   def up_to_date?
     @file ||= (@@gdrive ||= Google::Drive.new).file_by_id(@gsheet_id)
-    unless @file
-      CDO.log.info "Google Drive file with id: #{@gsheet_id} not found."
-      return
-    end
 
-    begin
-      mtime = @file.mtime
-      ctime = File.mtime(@csv_path) if File.file?(@csv_path)
-      return mtime.to_s == ctime.to_s
-    rescue GoogleDrive::Error => exception
-      CDO.log.info "Error getting modified time for Google file with id: #{@gsheet_id} from Google Drive.#{exception.message}"
-      true # Assume the current thing is up to date.
-    end
+    mtime = @file.mtime
+    ctime = File.mtime(@csv_path) if File.file?(@csv_path)
+    return mtime.to_s == ctime.to_s
   end
 
   def import
@@ -39,10 +30,6 @@ class GSheetToCsv
     CDO.log.info "Downloading Googgle File with id: #{@gsheet_id}</b> from Google Drive."
 
     @file ||= (@@gdrive ||= Google::Drive.new).file(@gsheet_id)
-    unless @file
-      CDO.log.info "Google Drive file with id: #{@gsheet_id} not found."
-      return
-    end
 
     begin
       buf = @file.spreadsheet_csv
