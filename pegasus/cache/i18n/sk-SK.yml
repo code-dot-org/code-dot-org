@@ -728,7 +728,7 @@ sk-SK:
   dashboard_navigation_all_sections: Študentské účty a pokrok
   dashboard_navigation_home_page: Domovská stránka učiteľa
   dashboard_navigation_lesson_plans_resources: Plány hodín
-  dashboard_navigation_manage_students: Správa študentov
+  dashboard_navigation_manage_students: Spravovať žiakov
   dashboard_navigation_section: 'Trieda: %{section_name}'
   dashboard_navigation_section_community: Podpora
   dashboard_navigation_section_lesson_plans: Plány hodín a Materiály
