@@ -1,4 +1,4 @@
-@import 'font', 'breakpoints';
+@import 'breakpoints';
 
 @mixin reset-spacing {
   margin: 0;
@@ -20,7 +20,7 @@ html {
 
 h2 {
   font-size: 2rem;
-  font-family: "Gotham 7r", sans-serif;
+  font-family: var(--main-font-extra-bold);
   margin: 0 0 1rem;
   line-height: 1.2;
 }
