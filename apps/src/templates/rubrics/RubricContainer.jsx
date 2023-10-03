@@ -101,7 +101,10 @@ export default function RubricContainer({
       const aiInfo = aiEvaluation.find(
         item => item.learning_goal_id === learningGoalId
       );
-      return aiInfo.understanding;
+      if (!!aiInfo) {
+        return aiInfo.understanding ? aiInfo.understanding : null;
+      }
+      return null;
     } else {
       return null;
     }
@@ -112,7 +115,10 @@ export default function RubricContainer({
       const aiInfo = aiEvaluation.find(
         item => item.learning_goal_id === learningGoalId
       );
-      return aiInfo.confidence ? aiInfo.confidence : null;
+      if (!!aiInfo) {
+        return aiInfo.confidence ? aiInfo.confidence : null;
+      }
+      return null;
     } else {
       return null;
     }
