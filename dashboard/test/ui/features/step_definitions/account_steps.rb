@@ -47,8 +47,8 @@ Given(/^I am a (student|teacher)( and go home)?$/) do |user_type, home|
   steps "And I create a #{user_type} named \"#{random_name}\"#{home}"
 end
 
-def generate_user(name)
-  email = "user#{Time.now.to_i}_#{rand(1_000_000)}@test.xx"
+def generate_user(name, email = nil)
+  email ||= "user#{Time.now.to_i}_#{rand(1_000_000)}@test.xx"
   password = name + "password" # hack
   @users ||= {}
   @users[name] = {
@@ -87,7 +87,7 @@ def create_user(name, url: '/users.json', code: 201, **user_opts)
   navigate_to replace_hostname('http://studio.code.org/reset_session')
   Retryable.retryable(on: RSpec::Expectations::ExpectationNotMetError, tries: 3) do
     # Generate the user
-    email, password = generate_user(name)
+    email, password = generate_user(name, user_opts[:email])
 
     # Set the parent email to the user email, if we see it
     # in the user options (we generate the email, here)
@@ -114,6 +114,25 @@ def create_user(name, url: '/users.json', code: 201, **user_opts)
       code: code
     )
   end
+end
+
+def admin_user
+  require_rails_env
+
+  u = User.find_by(email: 'admin-test@example.com')
+  if u
+    generate_user('admin-test', 'admin-test@example.com')
+  else
+    create_user('admin-test', email: 'admin-test@example.com', user_type: 'teacher', email_preference_opt_in: 'off')
+    u = User.find_by(email: 'admin-test@example.com')
+  end
+
+  unless u.admin
+    u.admin = true
+    u.save!
+  end
+
+  'admin-test'
 end
 
 And(/^I create( as a parent)? a (young )?student( in Colorado)?( who has never signed in)? named "([^"]*)"( and go home)?$/) do |parent_created, young, locked, new_account, name, home|
