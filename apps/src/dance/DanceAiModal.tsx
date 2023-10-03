@@ -202,62 +202,72 @@ const DanceAiModal: React.FunctionComponent<DanceAiProps> = ({onClose}) => {
   const convertBlocks = () => {
     const params = JSON.parse(responseJson);
 
-    const firstBlock = Blockly.getMainWorkspace().newBlock(
-      'Dancelab_setForegroundEffect'
-    );
+    const blocks = [
+      Blockly.getMainWorkspace().newBlock('Dancelab_setForegroundEffect'),
+      Blockly.getMainWorkspace().newBlock(
+        'Dancelab_setBackgroundEffectWithPalette'
+      ),
+      Blockly.getMainWorkspace().newBlock('Dancelab_makeNewDanceSpriteGroup'),
+    ];
 
-    firstBlock.setFieldValue(params.foregroundEffect, 'EFFECT');
+    // Foreground block.
+    blocks[0].setFieldValue(params.foregroundEffect, 'EFFECT');
 
-    const secondBlock = Blockly.getMainWorkspace().newBlock(
-      'Dancelab_setBackgroundEffectWithPalette'
-    );
+    // Background block.
+    blocks[1].setFieldValue(params.backgroundEffect, 'EFFECT');
+    blocks[1].setFieldValue(params.backgroundColor, 'PALETTE');
 
-    secondBlock.setFieldValue(params.backgroundEffect, 'EFFECT');
-    secondBlock.setFieldValue(params.backgroundColor, 'PALETTE');
+    // Dancers block.
+    blocks[2].setFieldValue(params.dancers.type.toUpperCase(), 'COSTUME');
+    blocks[2].setFieldValue(params.dancers.count.toString(), 'N');
+    blocks[2].setFieldValue(params.dancers.layout, 'LAYOUT');
 
     const origBlock = currentAiModalField?.getSourceBlock();
 
     if (
-      firstBlock &&
-      secondBlock &&
       origBlock &&
-      firstBlock.previousConnection &&
-      firstBlock.nextConnection &&
-      secondBlock.previousConnection &&
-      secondBlock.nextConnection &&
-      currentAiModalField
+      currentAiModalField &&
+      blocks[0] &&
+      blocks[1] &&
+      blocks[2] &&
+      blocks[0].previousConnection &&
+      blocks[0].nextConnection &&
+      blocks[1].previousConnection &&
+      blocks[1].nextConnection &&
+      blocks[2].previousConnection &&
+      blocks[2].nextConnection
     ) {
-      firstBlock.nextConnection.connect(secondBlock.previousConnection);
+      blocks[0].nextConnection.connect(blocks[1].previousConnection);
+      blocks[1].nextConnection.connect(blocks[2].previousConnection);
 
-      const firstBlockSvg = firstBlock as BlockSvg;
+      const blocksSvg = blocks.map(block => block as BlockSvg);
 
       if (!origBlock.getPreviousBlock()) {
         // This block isn't attached to anything at all.
         const blockXY: any = origBlock.getRelativeToSurfaceXY();
-        firstBlockSvg.moveTo(blockXY);
+        blocksSvg[0].moveTo(blockXY);
       } else if (!origBlock?.getPreviousBlock()?.nextConnection) {
-        // origBlock is the first input, without a regular code block above it.
+        // origBlock is the first input (for example, to a setup block),
+        // without a regular code block above it.
         origBlock
           ?.getPreviousBlock()
           ?.getInput('DO')
-          ?.connection?.connect(firstBlock.previousConnection);
+          ?.connection?.connect(blocks[0].previousConnection);
       } else {
+        // origBlock has a regular block above it.
         origBlock
           ?.getPreviousBlock()
-          ?.nextConnection?.connect(firstBlock.previousConnection);
+          ?.nextConnection?.connect(blocks[0].previousConnection);
       }
 
       origBlock
         ?.getNextBlock()
-        ?.previousConnection?.connect(secondBlock.nextConnection);
+        ?.previousConnection?.connect(blocks[2].nextConnection);
 
-      firstBlockSvg.initSvg();
-      firstBlockSvg.render();
-
-      const secondBlockSvg = secondBlock as BlockSvg;
-
-      secondBlockSvg.initSvg();
-      secondBlockSvg.render();
+      blocksSvg.forEach(blockSvg => {
+        blockSvg.initSvg();
+        blockSvg.render();
+      });
 
       origBlock.dispose(false);
 
