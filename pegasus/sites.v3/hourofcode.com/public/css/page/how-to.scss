@@ -326,8 +326,11 @@ section.faq {
   }
 
   @media screen and (max-width: $width-sm) {
-    h2 { text-align: center; }
-    a.link-button { margin: 1rem auto; }
+    h2 {
+      text-align: center;
+    }
+    a.link-button {
+      margin: 1rem auto;
+    }
   }
-
 }
