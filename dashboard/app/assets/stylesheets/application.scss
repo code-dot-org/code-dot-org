@@ -35,9 +35,12 @@
 @import "mixins";
 @import "style-constants";
 
-$headingsFontWeight: normal;
+// Bootstrap Variables
+$baseFontFamily: $main-font;
+$headingsFontWeight: $regular-font-weight;
 $btnPrimaryBackground: $orange;
 $btnPrimaryBackgroundHighlight: $orange;
+
 $selectUserTypeButtonBorderColor: #ccc;
 $selectUserTypeButtonBackgroundColor: #fff;
 $selectUserTypeButtonTextColor: #000;
