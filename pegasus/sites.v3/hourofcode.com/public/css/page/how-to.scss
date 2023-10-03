@@ -29,6 +29,22 @@ h2 {
   display: flex;
 }
 
+.button-wrapper {
+  margin: 2rem 0 0;
+  display: flex;
+  justify-content: start;
+  flex-wrap: wrap;
+  gap: 1em;
+}
+
+a.link-button {
+  &.secondary {
+    background: none;
+    border: 2px solid var(--brand_secondary_default);
+    color: var(--brand_secondary_default);
+  }
+}
+
 section.banner {
   padding: 0;
 
@@ -149,7 +165,19 @@ section.steps {
     display: flex;
     justify-content: space-between;
     align-items: baseline;
-    gap: 2rem;
+    gap: 3rem;
+  }
+
+  p.tag {
+    background: var(--brand_primary_light);
+    color: var(--brand_primary_dark);
+    padding: 2px 6px;
+    border-radius: 4px;
+    font-family: var(--main-font-bold);
+    font-size: 0.65rem;
+    text-transform: uppercase;
+    margin: 0 0 6px -2px !important;
+    display: inline-block;
   }
 
   ul.steps-nav {
@@ -196,16 +224,6 @@ section.steps {
         @include remove-list-dot;
       }
 
-      span {
-        background: var(--brand_primary_light);
-        color: var(--brand_primary_dark);
-        padding: 0px 6px;
-        border-radius: 4px;
-        font-size: 0.75rem;
-        margin: 0 0 4px -2px;
-        display: inline-block;
-      }
-
       p {
         margin-bottom: 0;
         line-height: 1.4;
@@ -233,14 +251,27 @@ section.steps {
       margin-bottom: 4rem;
       border-bottom: 1px solid var(--neutral_dark20);
       display: flex;
-      align-items: baseline;
+      align-items: start;
       gap: 1rem;
+      position: relative;
+
+      &.divider-accent {
+        border-bottom: 2px solid var(--brand_primary_light);
+      }
 
       &:last-child {
         border: 0;
         padding-bottom: 0;
         margin-bottom: 2rem;
       }
+    }
+
+    p.tag {
+      position: absolute;
+      top: -77px;
+      font-size: 0.75rem;
+      padding: 4px 12px 4px 10px;
+      border-radius: 4px 16px 16px 4px;
     }
 
     span {
@@ -258,7 +289,6 @@ section.steps {
 
     h3 {
       margin-top: 0;
-      font-size: 1.25rem;
     }
 
     img {
@@ -272,12 +302,16 @@ section.faq {
 
   .flex-container {
     justify-content: space-between;
-    align-items: start;
+    align-items: flex-start;
     flex-wrap: wrap;
 
     @media screen and (max-width: $width-sm) {
       justify-content: center;
     }
+  }
+
+  h2 {
+    margin-top: 4px;
   }
 
   details {
