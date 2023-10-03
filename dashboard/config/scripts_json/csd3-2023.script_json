@@ -17,7 +17,7 @@
     },
     "new_name": null,
     "family_name": null,
-    "serialized_at": "2023-09-28 05:01:50 UTC",
+    "serialized_at": "2023-10-02 23:06:56 UTC",
     "published_state": null,
     "instruction_type": null,
     "instructor_audience": null,
@@ -20348,6 +20348,22 @@
   ],
   "rubrics": [
     {
+      "level_name": "CSD web project animated review_2023",
+      "seeding_key": {
+        "lesson.key": "Mini-Project - Animation",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "csd3-2023"
+      }
+    },
+    {
+      "level_name": "CSD U3 Sprites scene challenge_2023",
+      "seeding_key": {
+        "lesson.key": "Mini-Project - Captioned Scenes",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "csd3-2023"
+      }
+    },
+    {
       "level_name": "CSD U3 Interactive Card Final_2023",
       "seeding_key": {
         "lesson.key": "Project - Interactive Card",
@@ -20357,6 +20373,45 @@
     }
   ],
   "learning_goals": [
+    {
+      "key": "0e77d5a5-1b7f-45c7-a88f-9ca19d8aff65",
+      "position": 2,
+      "learning_goal": "Modularity - Sprites and Sprite Properties",
+      "ai_enabled": true,
+      "tips": null,
+      "seeding_key": {
+        "learning_goal.key": "0e77d5a5-1b7f-45c7-a88f-9ca19d8aff65",
+        "lesson.key": "Mini-Project - Captioned Scenes",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "csd3-2023"
+      }
+    },
+    {
+      "key": "209798cd-e25b-4b96-bf1b-699f090bdb77",
+      "position": 4,
+      "learning_goal": "Creating a Digital Artifact",
+      "ai_enabled": false,
+      "tips": null,
+      "seeding_key": {
+        "learning_goal.key": "209798cd-e25b-4b96-bf1b-699f090bdb77",
+        "lesson.key": "Mini-Project - Captioned Scenes",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "csd3-2023"
+      }
+    },
+    {
+      "key": "2a5cc4ca-7b41-43e4-8cf9-cce00df53071",
+      "position": 3,
+      "learning_goal": "Position and Movement",
+      "ai_enabled": true,
+      "tips": null,
+      "seeding_key": {
+        "learning_goal.key": "2a5cc4ca-7b41-43e4-8cf9-cce00df53071",
+        "lesson.key": "Mini-Project - Animation",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "csd3-2023"
+      }
+    },
     {
       "key": "3a264bf8-ae90-4eba-8442-0adee5613bd1",
       "position": 1,
@@ -20379,6 +20434,71 @@
       "seeding_key": {
         "learning_goal.key": "44ad9d40-4f3a-4ed7-91ab-cf6e86315b7f",
         "lesson.key": "Project - Interactive Card",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "csd3-2023"
+      }
+    },
+    {
+      "key": "846752b3-e04d-466c-818b-1215a9d280ff",
+      "position": 3,
+      "learning_goal": "Position - Elements and the Coordinate System",
+      "ai_enabled": false,
+      "tips": null,
+      "seeding_key": {
+        "learning_goal.key": "846752b3-e04d-466c-818b-1215a9d280ff",
+        "lesson.key": "Mini-Project - Captioned Scenes",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "csd3-2023"
+      }
+    },
+    {
+      "key": "aa66e9b9-1889-4e6d-bfda-ceba0933b50a",
+      "position": 2,
+      "learning_goal": "Modularity - Sprites and Sprite Properties",
+      "ai_enabled": true,
+      "tips": null,
+      "seeding_key": {
+        "learning_goal.key": "aa66e9b9-1889-4e6d-bfda-ceba0933b50a",
+        "lesson.key": "Mini-Project - Animation",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "csd3-2023"
+      }
+    },
+    {
+      "key": "cc7a008d-06d3-4754-8c72-07d620a48b8a",
+      "position": 1,
+      "learning_goal": "Program Development - Program Sequence",
+      "ai_enabled": true,
+      "tips": null,
+      "seeding_key": {
+        "learning_goal.key": "cc7a008d-06d3-4754-8c72-07d620a48b8a",
+        "lesson.key": "Mini-Project - Animation",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "csd3-2023"
+      }
+    },
+    {
+      "key": "db5da8f8-e85a-40de-82bf-d53b36c883cd",
+      "position": 1,
+      "learning_goal": "Program Development - Program Sequence",
+      "ai_enabled": true,
+      "tips": null,
+      "seeding_key": {
+        "learning_goal.key": "db5da8f8-e85a-40de-82bf-d53b36c883cd",
+        "lesson.key": "Mini-Project - Captioned Scenes",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "csd3-2023"
+      }
+    },
+    {
+      "key": "de31137f-f4d5-4cbe-91d2-961a4733d916",
+      "position": 4,
+      "learning_goal": "Optional “Stretch” Feature - Variables",
+      "ai_enabled": true,
+      "tips": null,
+      "seeding_key": {
+        "learning_goal.key": "de31137f-f4d5-4cbe-91d2-961a4733d916",
+        "lesson.key": "Mini-Project - Animation",
         "lesson_group.key": "lessonGroup-2",
         "script.name": "csd3-2023"
       }
@@ -20413,6 +20533,42 @@
   "learning_goal_evidence_levels": [
     {
       "understanding": 0,
+      "teacher_description": "No sprites are used in the program.",
+      "ai_prompt": "",
+      "seeding_key": {
+        "understanding": 0,
+        "learning_goal.key": "0e77d5a5-1b7f-45c7-a88f-9ca19d8aff65",
+        "lesson.key": "Mini-Project - Captioned Scenes",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "csd3-2023"
+      }
+    },
+    {
+      "understanding": 0,
+      "teacher_description": "The project guide is not filled out or is unrelated to the program.",
+      "ai_prompt": "",
+      "seeding_key": {
+        "understanding": 0,
+        "learning_goal.key": "209798cd-e25b-4b96-bf1b-699f090bdb77",
+        "lesson.key": "Mini-Project - Captioned Scenes",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "csd3-2023"
+      }
+    },
+    {
+      "understanding": 0,
+      "teacher_description": "No elements (sprites, shapes, or text) are placed on the screen using the coordinate system.",
+      "ai_prompt": "",
+      "seeding_key": {
+        "understanding": 0,
+        "learning_goal.key": "2a5cc4ca-7b41-43e4-8cf9-cce00df53071",
+        "lesson.key": "Mini-Project - Animation",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "csd3-2023"
+      }
+    },
+    {
+      "understanding": 0,
       "teacher_description": "",
       "ai_prompt": "",
       "seeding_key": {
@@ -20431,6 +20587,66 @@
         "understanding": 0,
         "learning_goal.key": "44ad9d40-4f3a-4ed7-91ab-cf6e86315b7f",
         "lesson.key": "Project - Interactive Card",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "csd3-2023"
+      }
+    },
+    {
+      "understanding": 0,
+      "teacher_description": "No elements (shapes, sprites, or text) are placed on the screen using the coordinate system.",
+      "ai_prompt": "",
+      "seeding_key": {
+        "understanding": 0,
+        "learning_goal.key": "846752b3-e04d-466c-818b-1215a9d280ff",
+        "lesson.key": "Mini-Project - Captioned Scenes",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "csd3-2023"
+      }
+    },
+    {
+      "understanding": 0,
+      "teacher_description": "No sprites are used in the program.",
+      "ai_prompt": "",
+      "seeding_key": {
+        "understanding": 0,
+        "learning_goal.key": "aa66e9b9-1889-4e6d-bfda-ceba0933b50a",
+        "lesson.key": "Mini-Project - Animation",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "csd3-2023"
+      }
+    },
+    {
+      "understanding": 0,
+      "teacher_description": "Errors in program sequencing are significant enough to keep the output from resembling the intended scene or the Draw loop is not used to create animation",
+      "ai_prompt": "",
+      "seeding_key": {
+        "understanding": 0,
+        "learning_goal.key": "cc7a008d-06d3-4754-8c72-07d620a48b8a",
+        "lesson.key": "Mini-Project - Animation",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "csd3-2023"
+      }
+    },
+    {
+      "understanding": 0,
+      "teacher_description": "Errors in program sequencing are significant enough to keep the output from resembling the intended scene.",
+      "ai_prompt": "",
+      "seeding_key": {
+        "understanding": 0,
+        "learning_goal.key": "db5da8f8-e85a-40de-82bf-d53b36c883cd",
+        "lesson.key": "Mini-Project - Captioned Scenes",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "csd3-2023"
+      }
+    },
+    {
+      "understanding": 0,
+      "teacher_description": "No non-sprite variables are created and used.",
+      "ai_prompt": "",
+      "seeding_key": {
+        "understanding": 0,
+        "learning_goal.key": "de31137f-f4d5-4cbe-91d2-961a4733d916",
+        "lesson.key": "Mini-Project - Animation",
         "lesson_group.key": "lessonGroup-2",
         "script.name": "csd3-2023"
       }
@@ -20461,6 +20677,42 @@
     },
     {
       "understanding": 1,
+      "teacher_description": "At least 1 sprite created. No properties updated after creation.",
+      "ai_prompt": "",
+      "seeding_key": {
+        "understanding": 1,
+        "learning_goal.key": "0e77d5a5-1b7f-45c7-a88f-9ca19d8aff65",
+        "lesson.key": "Mini-Project - Captioned Scenes",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "csd3-2023"
+      }
+    },
+    {
+      "understanding": 1,
+      "teacher_description": "Some elements are used as described in the project guide.",
+      "ai_prompt": "",
+      "seeding_key": {
+        "understanding": 1,
+        "learning_goal.key": "209798cd-e25b-4b96-bf1b-699f090bdb77",
+        "lesson.key": "Mini-Project - Captioned Scenes",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "csd3-2023"
+      }
+    },
+    {
+      "understanding": 1,
+      "teacher_description": "A cumulative of at least a total of 3 elements are placed on the screen using the coordinate system (e.g 2 sprites & 1 line of text or 1 sprite, 1 shape, & 1 line of text).",
+      "ai_prompt": "",
+      "seeding_key": {
+        "understanding": 1,
+        "learning_goal.key": "2a5cc4ca-7b41-43e4-8cf9-cce00df53071",
+        "lesson.key": "Mini-Project - Animation",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "csd3-2023"
+      }
+    },
+    {
+      "understanding": 1,
       "teacher_description": "",
       "ai_prompt": "",
       "seeding_key": {
@@ -20479,6 +20731,66 @@
         "understanding": 1,
         "learning_goal.key": "44ad9d40-4f3a-4ed7-91ab-cf6e86315b7f",
         "lesson.key": "Project - Interactive Card",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "csd3-2023"
+      }
+    },
+    {
+      "understanding": 1,
+      "teacher_description": "A cumulative of at least a total of 3 elements are placed on the screen using the coordinate system (e.g 2 sprites & 1 line of text or 1 sprite, 1 shape, & 1 line of text)",
+      "ai_prompt": "",
+      "seeding_key": {
+        "understanding": 1,
+        "learning_goal.key": "846752b3-e04d-466c-818b-1215a9d280ff",
+        "lesson.key": "Mini-Project - Captioned Scenes",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "csd3-2023"
+      }
+    },
+    {
+      "understanding": 1,
+      "teacher_description": "At least 1 sprite created. No properties updated inside the draw loop.",
+      "ai_prompt": "",
+      "seeding_key": {
+        "understanding": 1,
+        "learning_goal.key": "aa66e9b9-1889-4e6d-bfda-ceba0933b50a",
+        "lesson.key": "Mini-Project - Animation",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "csd3-2023"
+      }
+    },
+    {
+      "understanding": 1,
+      "teacher_description": "You have several sequencing errors, resulting in many elements unintentionally hidden or overlapping others. Some code is improperly placed in or out of the loop",
+      "ai_prompt": "",
+      "seeding_key": {
+        "understanding": 1,
+        "learning_goal.key": "cc7a008d-06d3-4754-8c72-07d620a48b8a",
+        "lesson.key": "Mini-Project - Animation",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "csd3-2023"
+      }
+    },
+    {
+      "understanding": 1,
+      "teacher_description": "Your program has significant sequencing errors, resulting in many elements unintentionally hidden or overlapping others.",
+      "ai_prompt": "",
+      "seeding_key": {
+        "understanding": 1,
+        "learning_goal.key": "db5da8f8-e85a-40de-82bf-d53b36c883cd",
+        "lesson.key": "Mini-Project - Captioned Scenes",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "csd3-2023"
+      }
+    },
+    {
+      "understanding": 1,
+      "teacher_description": "At least 1 non-sprite variable is created and used in the program but does not update in the draw loop.",
+      "ai_prompt": "",
+      "seeding_key": {
+        "understanding": 1,
+        "learning_goal.key": "de31137f-f4d5-4cbe-91d2-961a4733d916",
+        "lesson.key": "Mini-Project - Animation",
         "lesson_group.key": "lessonGroup-2",
         "script.name": "csd3-2023"
       }
@@ -20509,6 +20821,42 @@
     },
     {
       "understanding": 2,
+      "teacher_description": "At least 1 sprite created with at least one property updated after creation.",
+      "ai_prompt": "",
+      "seeding_key": {
+        "understanding": 2,
+        "learning_goal.key": "0e77d5a5-1b7f-45c7-a88f-9ca19d8aff65",
+        "lesson.key": "Mini-Project - Captioned Scenes",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "csd3-2023"
+      }
+    },
+    {
+      "understanding": 2,
+      "teacher_description": "Elements are generally used as described in the project guide.",
+      "ai_prompt": "",
+      "seeding_key": {
+        "understanding": 2,
+        "learning_goal.key": "209798cd-e25b-4b96-bf1b-699f090bdb77",
+        "lesson.key": "Mini-Project - Captioned Scenes",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "csd3-2023"
+      }
+    },
+    {
+      "understanding": 2,
+      "teacher_description": "At least 1 shape, 2 sprites, and 1 line of text are placed on the screen using the coordinate system. At least 1 element moves during the program.",
+      "ai_prompt": "",
+      "seeding_key": {
+        "understanding": 2,
+        "learning_goal.key": "2a5cc4ca-7b41-43e4-8cf9-cce00df53071",
+        "lesson.key": "Mini-Project - Animation",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "csd3-2023"
+      }
+    },
+    {
+      "understanding": 2,
       "teacher_description": "",
       "ai_prompt": "",
       "seeding_key": {
@@ -20527,6 +20875,66 @@
         "understanding": 2,
         "learning_goal.key": "44ad9d40-4f3a-4ed7-91ab-cf6e86315b7f",
         "lesson.key": "Project - Interactive Card",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "csd3-2023"
+      }
+    },
+    {
+      "understanding": 2,
+      "teacher_description": "At least 1 shape, 2 sprites, and 1 line of text are placed on the screen using the coordinate system.",
+      "ai_prompt": "",
+      "seeding_key": {
+        "understanding": 2,
+        "learning_goal.key": "846752b3-e04d-466c-818b-1215a9d280ff",
+        "lesson.key": "Mini-Project - Captioned Scenes",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "csd3-2023"
+      }
+    },
+    {
+      "understanding": 2,
+      "teacher_description": "At least 1 sprite created with at least one property updated inside the draw loop",
+      "ai_prompt": "",
+      "seeding_key": {
+        "understanding": 2,
+        "learning_goal.key": "aa66e9b9-1889-4e6d-bfda-ceba0933b50a",
+        "lesson.key": "Mini-Project - Animation",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "csd3-2023"
+      }
+    },
+    {
+      "understanding": 2,
+      "teacher_description": "You properly separated code in and out of the draw loop, however they have a few incorrectly sequenced code resulting in a few elements hidden behind others unintentionally.",
+      "ai_prompt": "",
+      "seeding_key": {
+        "understanding": 2,
+        "learning_goal.key": "cc7a008d-06d3-4754-8c72-07d620a48b8a",
+        "lesson.key": "Mini-Project - Animation",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "csd3-2023"
+      }
+    },
+    {
+      "understanding": 2,
+      "teacher_description": "Your program may contain a few incorrectly sequenced code resulting in a few elements hidden behind others unintentionally.",
+      "ai_prompt": "",
+      "seeding_key": {
+        "understanding": 2,
+        "learning_goal.key": "db5da8f8-e85a-40de-82bf-d53b36c883cd",
+        "lesson.key": "Mini-Project - Captioned Scenes",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "csd3-2023"
+      }
+    },
+    {
+      "understanding": 2,
+      "teacher_description": "At least 1 non-sprite variable is created and its value is updated in the draw loop and affects the program output.",
+      "ai_prompt": "",
+      "seeding_key": {
+        "understanding": 2,
+        "learning_goal.key": "de31137f-f4d5-4cbe-91d2-961a4733d916",
+        "lesson.key": "Mini-Project - Animation",
         "lesson_group.key": "lessonGroup-2",
         "script.name": "csd3-2023"
       }
@@ -20557,6 +20965,42 @@
     },
     {
       "understanding": 3,
+      "teacher_description": "At least 2 sprites created, each with at least one property updated after creation (2).",
+      "ai_prompt": "",
+      "seeding_key": {
+        "understanding": 3,
+        "learning_goal.key": "0e77d5a5-1b7f-45c7-a88f-9ca19d8aff65",
+        "lesson.key": "Mini-Project - Captioned Scenes",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "csd3-2023"
+      }
+    },
+    {
+      "understanding": 3,
+      "teacher_description": "Elements are used as described in the project guide and clearly display a captioned scene.",
+      "ai_prompt": "",
+      "seeding_key": {
+        "understanding": 3,
+        "learning_goal.key": "209798cd-e25b-4b96-bf1b-699f090bdb77",
+        "lesson.key": "Mini-Project - Captioned Scenes",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "csd3-2023"
+      }
+    },
+    {
+      "understanding": 3,
+      "teacher_description": "At least 2 shapes, 2 sprites, and 2 lines of text are placed correctly on the screen using the coordinate system. At least 2 elements move in different ways (4).",
+      "ai_prompt": "",
+      "seeding_key": {
+        "understanding": 3,
+        "learning_goal.key": "2a5cc4ca-7b41-43e4-8cf9-cce00df53071",
+        "lesson.key": "Mini-Project - Animation",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "csd3-2023"
+      }
+    },
+    {
+      "understanding": 3,
       "teacher_description": "",
       "ai_prompt": "",
       "seeding_key": {
@@ -20575,6 +21019,66 @@
         "understanding": 3,
         "learning_goal.key": "44ad9d40-4f3a-4ed7-91ab-cf6e86315b7f",
         "lesson.key": "Project - Interactive Card",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "csd3-2023"
+      }
+    },
+    {
+      "understanding": 3,
+      "teacher_description": "At least 2 shapes, 2 sprites, and 2 lines of text are placed correctly on the screen using the coordinate system.",
+      "ai_prompt": "",
+      "seeding_key": {
+        "understanding": 3,
+        "learning_goal.key": "846752b3-e04d-466c-818b-1215a9d280ff",
+        "lesson.key": "Mini-Project - Captioned Scenes",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "csd3-2023"
+      }
+    },
+    {
+      "understanding": 3,
+      "teacher_description": "At least 2 sprites created, each with at least one property updating in the draw loop (3).",
+      "ai_prompt": "",
+      "seeding_key": {
+        "understanding": 3,
+        "learning_goal.key": "aa66e9b9-1889-4e6d-bfda-ceba0933b50a",
+        "lesson.key": "Mini-Project - Animation",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "csd3-2023"
+      }
+    },
+    {
+      "understanding": 3,
+      "teacher_description": "You sequenced the program well (1)  and properly separated code in and out of the draw loop (2).",
+      "ai_prompt": "",
+      "seeding_key": {
+        "understanding": 3,
+        "learning_goal.key": "cc7a008d-06d3-4754-8c72-07d620a48b8a",
+        "lesson.key": "Mini-Project - Animation",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "csd3-2023"
+      }
+    },
+    {
+      "understanding": 3,
+      "teacher_description": "You sequenced the program well(1) and and all elements on the screen appear as intended.",
+      "ai_prompt": "",
+      "seeding_key": {
+        "understanding": 3,
+        "learning_goal.key": "db5da8f8-e85a-40de-82bf-d53b36c883cd",
+        "lesson.key": "Mini-Project - Captioned Scenes",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "csd3-2023"
+      }
+    },
+    {
+      "understanding": 3,
+      "teacher_description": "At least 2 non-sprite variables are created and their values are updated in the draw loop and affect the program output.",
+      "ai_prompt": "",
+      "seeding_key": {
+        "understanding": 3,
+        "learning_goal.key": "de31137f-f4d5-4cbe-91d2-961a4733d916",
+        "lesson.key": "Mini-Project - Animation",
         "lesson_group.key": "lessonGroup-2",
         "script.name": "csd3-2023"
       }

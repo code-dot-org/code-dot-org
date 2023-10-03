@@ -1,32 +1,31 @@
+#!/usr/bin/env ruby
+
 require 'fileutils'
 require 'json'
 
 require_relative '../../../../../dashboard/config/environment'
 require_relative '../../../i18n_script_utils'
+require_relative '../../../utils/sync_in_base'
 require_relative '../../../redact_restore_utils'
+require_relative '../course_content'
 
 module I18n
   module Resources
     module Dashboard
       module CourseContent
-        class SyncIn
-          I18N_SOURCE_DIR_PATH = CDO.dir(File.join(I18N_SOURCE_DIR, 'course_content')).freeze
-
-          VARIABLE_NAMES_TYPE = 'variable_names'.freeze
-          PARAMETER_NAMES_TYPE = 'parameter_names'.freeze
-          BLOCK_CATEGORIES_TYPE = 'block_categories'.freeze
-          PROGRESSIONS_TYPE = 'progressions'.freeze
-
-          def self.perform
-            new.execute
-          end
-
-          def execute
+        class SyncIn < I18n::Utils::SyncInBase
+          def process
             prepare_level_content
+            progress_bar.progress = 25
+
             prepare_project_content
+            progress_bar.progress = 50
 
             write_to_yml(VARIABLE_NAMES_TYPE, variable_strings)
+            progress_bar.progress = 65
+
             write_to_yml(PARAMETER_NAMES_TYPE, parameter_strings)
+            progress_bar.progress = 80
 
             redact_level_content
           end
@@ -260,7 +259,7 @@ module I18n
           end
 
           def write_to_yml(type, strings)
-            dashboard_dir = CDO.dir(File.join(I18N_SOURCE_DIR, 'dashboard'))
+            dashboard_dir = CDO.dir(I18N_SOURCE_DIR, DASHBOARD_DIR_NAME)
 
             FileUtils.mkdir_p(dashboard_dir)
 
@@ -279,8 +278,6 @@ module I18n
           end
 
           def prepare_level_content
-            puts 'Preparing level content'
-
             block_category_strings = {}
             progression_strings = {}
 
@@ -344,7 +341,6 @@ module I18n
           end
 
           def prepare_project_content
-            puts 'Preparing project content'
             project_content_file = File.join(I18N_SOURCE_DIR_PATH, 'projects.json')
             project_strings = {}
 
@@ -395,7 +391,6 @@ module I18n
           end
 
           def redact_level_content
-            puts 'Redacting level content'
             Dir[File.join(I18N_SOURCE_DIR_PATH, '/**/*.json')].each do |source_path|
               source_data = JSON.load_file(source_path)
               next if source_data.blank?
@@ -408,7 +403,7 @@ module I18n
               FileUtils.mkdir_p(File.dirname(backup_path))
               File.write(backup_path, JSON.pretty_generate(redactable_data))
 
-              redacted_data = RedactRestoreUtils.redact_data(redactable_data, %w[blockly])
+              redacted_data = RedactRestoreUtils.redact_data(redactable_data, REDACT_PLUGINS)
               File.write(source_path, JSON.pretty_generate(source_data.deep_merge(redacted_data)))
             end
           end
@@ -417,3 +412,5 @@ module I18n
     end
   end
 end
+
+I18n::Resources::Dashboard::CourseContent::SyncIn.perform if __FILE__ == $0
