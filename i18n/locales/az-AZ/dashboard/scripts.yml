@@ -3852,6 +3852,10 @@ az:
           lessons:
             lesson-9:
               name: Qur
+          lesson_groups:
+            lessonGroup-3:
+              display_name: 'Fəsil 2: Kompüter görməsi'
+          title: Proqram təminatı mühəndisliyi və kompüter görməsi
         csa-frq-practice:
           lesson_groups:
             lessonGroup-3:

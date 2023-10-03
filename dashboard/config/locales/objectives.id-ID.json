@@ -3096,10 +3096,10 @@
           "description": "Bagikan karya kreatif kepada murid lain."
         },
         "13d689fe-f5b2-4e76-84d5-4fd24f91cfab": {
-          "description": "Jelaskan bagaimana visi komputer dibangun dari lapisan yang menggabungkan komponen yang lebih kecil menjadi prediksi akhir"
+          "description": "Jelaskan konstruksi computer vision yang terdiri beberapa lapisan yang memadukan komponen yang lebih kecil untuk menghasilkan prediksi akhir"
         },
         "5bb33a90-28cb-40cb-9647-59a1818980b8": {
-          "description": "Jelaskan perlunya perspektif yang beragam saat membuat sistem rekomendasi"
+          "description": "Jelaskan perlunya sudut pandang yang beragam saat membuat sistem rekomendasi"
         },
         "bb862e7c-9808-4414-b027-fc747d58b6c0": {
           "description": "Gunakan bobot neuron buatan untuk menyesuaikan output dari sistem rekomendasi"
