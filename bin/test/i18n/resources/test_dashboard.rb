@@ -6,8 +6,6 @@ describe I18n::Resources::Dashboard do
     it 'sync-in Resources resources' do
       execution_sequence = sequence('execution')
 
-      FileUtils.expects(:mkdir_p).with(CDO.dir('i18n/locales/source/dashboard')).in_sequence(execution_sequence)
-
       I18n::Resources::Dashboard::Blocks.expects(:sync_in).in_sequence(execution_sequence)
       I18n::Resources::Dashboard::CourseContent.expects(:sync_in).in_sequence(execution_sequence)
       I18n::Resources::Dashboard::CourseOfferings.expects(:sync_in).in_sequence(execution_sequence)
@@ -18,13 +16,12 @@ describe I18n::Resources::Dashboard do
       I18n::Resources::Dashboard::SharedFunctions.expects(:sync_in).in_sequence(execution_sequence)
       I18n::Resources::Dashboard::Standards.expects(:sync_in).in_sequence(execution_sequence)
 
-      # Copying source files
-      FileUtils.expects(:cp).with(CDO.dir('dashboard/config/locales/en.yml'), CDO.dir('i18n/locales/source/dashboard/base.yml')).in_sequence(execution_sequence)
-      FileUtils.expects(:cp).with(CDO.dir('dashboard/config/locales/data.en.yml'), CDO.dir('i18n/locales/source/dashboard/data.yml')).in_sequence(execution_sequence)
-      FileUtils.expects(:cp).with(CDO.dir('dashboard/config/locales/devise.en.yml'), CDO.dir('i18n/locales/source/dashboard/devise.yml')).in_sequence(execution_sequence)
-      FileUtils.expects(:cp).with(CDO.dir('dashboard/config/locales/restricted.en.yml'), CDO.dir('i18n/locales/source/dashboard/restricted.yml')).in_sequence(execution_sequence)
-      FileUtils.expects(:cp).with(CDO.dir('dashboard/config/locales/slides.en.yml'), CDO.dir('i18n/locales/source/dashboard/slides.yml')).in_sequence(execution_sequence)
-      FileUtils.expects(:cp).with(CDO.dir('dashboard/config/locales/unplugged.en.yml'), CDO.dir('i18n/locales/source/dashboard/unplugged.yml')).in_sequence(execution_sequence)
+      I18nScriptUtils.expects(:copy_file).with(CDO.dir('dashboard/config/locales/en.yml'), CDO.dir('i18n/locales/source/dashboard/base.yml')).in_sequence(execution_sequence)
+      I18nScriptUtils.expects(:copy_file).with(CDO.dir('dashboard/config/locales/data.en.yml'), CDO.dir('i18n/locales/source/dashboard/data.yml')).in_sequence(execution_sequence)
+      I18nScriptUtils.expects(:copy_file).with(CDO.dir('dashboard/config/locales/devise.en.yml'), CDO.dir('i18n/locales/source/dashboard/devise.yml')).in_sequence(execution_sequence)
+      I18nScriptUtils.expects(:copy_file).with(CDO.dir('dashboard/config/locales/restricted.en.yml'), CDO.dir('i18n/locales/source/dashboard/restricted.yml')).in_sequence(execution_sequence)
+      I18nScriptUtils.expects(:copy_file).with(CDO.dir('dashboard/config/locales/slides.en.yml'), CDO.dir('i18n/locales/source/dashboard/slides.yml')).in_sequence(execution_sequence)
+      I18nScriptUtils.expects(:copy_file).with(CDO.dir('dashboard/config/locales/unplugged.en.yml'), CDO.dir('i18n/locales/source/dashboard/unplugged.yml')).in_sequence(execution_sequence)
 
       I18n::Resources::Dashboard.sync_in
     end
@@ -35,6 +32,7 @@ describe I18n::Resources::Dashboard do
       execution_sequence = sequence('execution')
 
       I18n::Resources::Dashboard::Blocks.expects(:sync_out).in_sequence(execution_sequence)
+      I18n::Resources::Dashboard::CourseContent.expects(:sync_out).in_sequence(execution_sequence)
       I18n::Resources::Dashboard::CourseOfferings.expects(:sync_out).in_sequence(execution_sequence)
 
       I18n::Resources::Dashboard.sync_out
