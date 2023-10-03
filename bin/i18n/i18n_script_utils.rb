@@ -345,7 +345,7 @@ class I18nScriptUtils
   end
 
   def self.yaml_file?(file_path)
-    %w[.yaml .yml].include? File.extname(file_path)
+    %w[.yaml .yml].include?(File.extname(file_path).downcase)
   end
 
   def self.sanitize_data_and_write(data, dest_path)
