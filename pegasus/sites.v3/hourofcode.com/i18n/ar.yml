@@ -5,35 +5,35 @@ ar:
   language: الإنجليزية
   front_title: انضم إلى أكبر حدث تعليمي في التاريخ، %{campaign_date}
   coming_soon: قريباً
-  campaign_date_start_short: 5 ديسمبر
-  campaign_date_start_long: 5 ديسمبر
-  campaign_date_short: 5 - 11 ديسمبر
-  campaign_date_full: 5 - 11 ديسمبر
-  campaign_date_year: '2022'
-  campaign_date_full_year: 5 - 11 ديسمبر 2022
-  nonus_campaign_date_start_short: 1 أكتوبر
-  nonus_campaign_date_start_long: 1 أكتوبر
+  campaign_date_start_short: 4 دجنبر
+  campaign_date_start_long: 4 دجنبر
+  campaign_date_short: 4-10 ديسمبر
+  campaign_date_full: 4-10 ديسمبر
+  campaign_date_year: '2023'
+  campaign_date_full_year: 4-10 دجنبر 2023
+  nonus_campaign_date_start_short: 5 أكتوبر
+  nonus_campaign_date_start_long: 5 أكتوبر
   nonus_campaign_date_short: 1 أكتوبر - 18 ديسمبر
   nonus_campaign_date_full: 1 أكتوبر - 18 ديسمبر
-  nonus_campaign_date_year: '2022'
+  nonus_campaign_date_year: '2023'
   nonus_campaign_date_full_year: 1 أكتوبر 2022 - 18 ديسمبر 2022
-  latam_campaign_date_start_short: 1 أكتوبر
-  latam_campaign_date_start_long: 1 أكتوبر
+  latam_campaign_date_start_short: 5 أكتوبر
+  latam_campaign_date_start_long: 5 أكتوبر
   latam_campaign_date_short: 1 أكتوبر - 18 ديسمبر
   latam_campaign_date_full: 1 أكتوبر - 18 ديسمبر
-  latam_campaign_date_year: '2022'
+  latam_campaign_date_year: '2023'
   latam_campaign_date_full_year: 1 أكتوبر 2022 - 18 ديسمبر 2022
-  europe_campaign_date_start_short: 1 أكتوبر
-  europe_campaign_date_start_long: 1 أكتوبر
+  europe_campaign_date_start_short: 5 أكتوبر
+  europe_campaign_date_start_long: 5 أكتوبر
   europe_campaign_date_short: 1 أكتوبر - 18 ديسمبر
   europe_campaign_date_full: 1 أكتوبر - 18 ديسمبر
   europe_campaign_date_year: '2021'
   europe_campaign_date_full_year: 1 أكتوبر 2022 - 18 ديسمبر 2022
   africa_campaign_date_start_short: 1 أكتوبر
-  africa_campaign_date_start_long: 1 أكتوبر
+  africa_campaign_date_start_long: 5 أكتوبر
   africa_campaign_date_short: 1 أكتوبر - 18 ديسمبر
   africa_campaign_date_full: 1 أكتوبر - 18 ديسمبر
-  africa_campaign_date_year: '2022'
+  africa_campaign_date_year: '2023'
   africa_campaign_date_full_year: 1 أكتوبر 2022 - 18 ديسمبر 2022
   hoc2022_header: استكشف، العب، ابتكِر!
   social_hoc2022_explore_play_create: استخدم علم الكمبيوتر للاستكشاف واللعب والابتكار!
