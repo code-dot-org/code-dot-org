@@ -54,7 +54,6 @@ class Census::CensusSummary < ApplicationRecord
   end
 
   # Loads/merges the data from a CSV into the table.
-  # Requires a block to parse the row.
   # @param filename [String] The CSV file name.
   # @param options [Hash] The CSV file parsing options.
   # @param is_dry_run [Boolean] Allows testing of importing a CSV by rolling back any changes.
