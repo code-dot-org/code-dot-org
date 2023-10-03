@@ -4,9 +4,9 @@
 # In most cases, you will not run this script directly, but instead
 # use docker-compose to run using the ui-tests-compose.yml file in this directory. See instructions in that file.
 
-set -xe
-
 # rerun tests 1
+
+set -e
 
 ulimit -n 4096
 
@@ -27,8 +27,6 @@ mkdir $CIRCLE_ARTIFACTS
 
 # rbenv-doctor https://github.com/rbenv/rbenv-installer#readme
 curl -fsSL https://github.com/rbenv/rbenv-installer/raw/main/bin/rbenv-doctor | bash
-
-bundle install --verbose
 
 # set up locals.yml
 # Need to actually write all the commented out lines also
@@ -69,19 +67,22 @@ libraries_s3_directory: libraries_circle/$CIRCLE_BUILD_NUM
 dashboard_db_reader: \"mysql://readonly@localhost/dashboard_test\"
 " >> locals.yml
 echo "Wrote secrets from env vars into locals.yml."
+
 set -x
 
+bundle install
+
 # name: rake install
-RAKE_VERBOSE=true bundle exec rake install --trace
+RAKE_VERBOSE=true bundle exec rake install
 
 # name: rake build
-RAKE_VERBOSE=true bundle exec rake build --trace
+RAKE_VERBOSE=true bundle exec rake build
 
 # reprint the hostname in case the first printing has already been truncated by the drone UI
 hostname=$(curl -s --max-time 3 http://169.254.169.254/latest/meta-data/public-hostname || echo $DRONE_RUNNER_HOSTNAME); echo "Running on $hostname"
 
 # name: seed ui tests
-bundle exec rake circle:seed_ui_test --trace
+bundle exec rake circle:seed_ui_test
 
 # name: run ui tests
-bundle exec rake circle:run_ui_tests --trace
+bundle exec rake circle:run_ui_tests

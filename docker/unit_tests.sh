@@ -14,8 +14,6 @@ export RACK_ENV=test
 export DISABLE_SPRING=1
 export LD_LIBRARY_PATH=/usr/local/lib
 
-mispipe "bundle install --verbose" ts
-
 # set up locals.yml
 set +x
 echo "
@@ -41,13 +39,15 @@ dashboard_db_reader: \"mysql://readonly@localhost/dashboard_test\"
 echo "Wrote secrets from env vars into locals.yml."
 set -x
 
+mispipe "bundle install" ts
+
 # name: rake install
-RAKE_VERBOSE=true mispipe "bundle exec rake install --trace" "ts '[%Y-%m-%d %H:%M:%S]'"
+RAKE_VERBOSE=true mispipe "bundle exec rake install" "ts '[%Y-%m-%d %H:%M:%S]'"
 
 # name: rake build
-RAKE_VERBOSE=true mispipe "bundle exec rake build --trace" "ts '[%Y-%m-%d %H:%M:%S]'"
+RAKE_VERBOSE=true mispipe "bundle exec rake build" "ts '[%Y-%m-%d %H:%M:%S]'"
 
 # unit tests
-bundle exec rake circle:run_tests --trace
+bundle exec rake circle:run_tests
 
 mispipe "echo 'Ending timestamp'" ts
