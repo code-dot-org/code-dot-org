@@ -151,9 +151,9 @@ def get_social_metadata_for_page(request)
     },
     "learn" => {
       "default" => {
-        title: hoc_s(:social_hoc_anybody),
-        description: hoc_s(:social_hoc2022_explore_play_create),
-        image: images[:hoc_2022_social]
+        title: hoc_s(:hoc2023_social_creativity_with_ai_title),
+        description: hoc_s(:hoc2023_social_creativity_with_ai_desc),
+        image: images[:hoc_2023_social]
       }
     },
     "hoc-overview" => {

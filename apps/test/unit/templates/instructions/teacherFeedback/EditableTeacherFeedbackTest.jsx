@@ -22,6 +22,7 @@ const DEFAULT_PROPS = {
   verifiedInstructor: true,
   selectedSectionId: 789,
   canHaveFeedbackReviewState: true,
+  allowUnverified: false,
   updateUserProgress: () => {},
 };
 
