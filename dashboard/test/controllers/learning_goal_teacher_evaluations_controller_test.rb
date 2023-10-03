@@ -100,7 +100,6 @@ class LearningGoalTeacherEvaluationsControllerTest < ActionController::TestCase
     assert_equal response_json['user_id'], user_id
   end
 
-
   # Test create responses
   test_user_gets_response_for :create, user: nil, response: :redirect, redirected_to: '/users/sign_in'
   test_user_gets_response_for :create, user: :student, response: :forbidden
@@ -108,7 +107,9 @@ class LearningGoalTeacherEvaluationsControllerTest < ActionController::TestCase
   # Test update responses
   test_user_gets_response_for :update, params: -> {{id: @learning_goal_teacher_evaluation.id}}, user: nil, response: :redirect, redirected_to: '/users/sign_in'
   test_user_gets_response_for :update, params: -> {{id: @learning_goal_teacher_evaluation.id}}, user: :student, response: :forbidden
-  test_user_gets_response_for :update, params: -> {{id: @learning_goal_teacher_evaluation.id}}, user: :teacher, response: :not_found
+  test_user_gets_response_for :update, params: -> {{id: @learning_goal_teacher_evaluation.id}}, user: -> {@teacher}, response: :success
+  # Test returns forbidden for a different teacher
+  test_user_gets_response_for :update, params: -> {{id: @learning_goal_teacher_evaluation.id}}, user: :teacher, response: :forbidden
 
   # Test get_evaluation responses
   test_user_gets_response_for :get_evaluation, params: -> {{learningGoalId: @learning_goal.id, userId: @student.id}}, user: nil, response: :redirect, redirected_to: '/users/sign_in'

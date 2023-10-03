@@ -1,5 +1,5 @@
 class LearningGoalTeacherEvaluationsController < ApplicationController
-  authorize_resource
+  load_and_authorize_resource
 
   def create
     learning_goal_teacher_evaluation = LearningGoalTeacherEvaluation.new(learning_goal_teacher_evaluation_params)
@@ -11,18 +11,9 @@ class LearningGoalTeacherEvaluationsController < ApplicationController
   end
 
   def update
-    params.require(:id)
-    learning_goal_teacher_evaluation = LearningGoalTeacherEvaluation.find_by_id(params[:id])
-
-    if learning_goal_teacher_evaluation&.teacher_id == current_user.id
-      if learning_goal_teacher_evaluation.update(learning_goal_teacher_evaluation_params)
-        render json: learning_goal_teacher_evaluation
-      else
-        head :bad_request
-      end
-    else
-      head :not_found
-    end
+    @learning_goal_teacher_evaluation.update!(learning_goal_teacher_evaluation_params)
+    return head :not_found unless @learning_goal_teacher_evaluation
+    render json: @learning_goal_teacher_evaluation
   end
 
   def get_evaluation
