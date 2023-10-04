@@ -589,8 +589,6 @@ class ApiController < ApplicationController
   # GET /dashboardapi/sign_cookies
   def sign_cookies
     prevent_caching
-    # length of time the browser can privately cache this request for cookies
-    expires_in 1.hour
 
     # length of time these cookies are considered valid by cloudfront
     expiration_date = Time.now + 4.hours
