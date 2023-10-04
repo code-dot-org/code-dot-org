@@ -37,6 +37,7 @@ class Hamburger
         show_student_options = SHOW_ALWAYS
       else
         show_signed_out_options = SHOW_ALWAYS
+        show_pegasus_options = SHOW_ALWAYS
       end
 
       # Regardless of user type, if they are English, then they also need the pegasus
@@ -131,7 +132,7 @@ class Hamburger
         }
       end
     else
-      entries = [teacher_entries, student_entries, signed_out_entries]
+      entries = [teacher_entries, student_entries]
       entries.each do |entry|
         entry << {
           title: I18n.t("#{loc_prefix}about"),
