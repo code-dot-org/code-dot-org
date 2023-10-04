@@ -23,6 +23,7 @@ const Notification = ({
   buttonClassName,
   buttonLink,
   buttons,
+  buttonsStyles,
   buttonText,
   children,
   details,
@@ -152,7 +153,7 @@ const Notification = ({
               )}
             </div>
           </div>
-          <div style={desktop ? null : styles.buttonsMobile}>
+          <div style={desktop ? buttonsStyles : styles.buttonsMobile}>
             {buttonText && buttonLink && (
               <Button
                 __useDeprecatedTag
@@ -215,6 +216,7 @@ Notification.propTypes = {
   buttonClassName: PropTypes.string,
 
   // Optionally can provide an array of buttons.
+  buttonsStyles: PropTypes.object,
   buttons: PropTypes.arrayOf(
     PropTypes.shape({
       text: PropTypes.string,
