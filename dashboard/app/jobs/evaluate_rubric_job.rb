@@ -140,13 +140,13 @@ class EvaluateRubricJob < ApplicationJob
   private def grade_to_understanding(grade)
     case grade
     when 'Extensive Evidence'
-      1
+      3
     when 'Convincing Evidence'
       2
     when 'Limited Evidence'
-      3
+      1
     when 'No Evidence'
-      4
+      0
     else
       raise "Unexpected grade: #{grade}"
     end
