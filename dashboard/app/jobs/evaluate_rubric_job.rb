@@ -112,8 +112,9 @@ class EvaluateRubricJob < ApplicationJob
   private def validate_evaluations(evaluations, rubric)
     expected_learning_goals = rubric.learning_goals.map(&:learning_goal)
     actual_learning_goals = evaluations.map {|evaluation| evaluation['Key Concept']}
-    unless expected_learning_goals == actual_learning_goals
-      raise "Expected learning goals #{expected_learning_goals.inspect} but got #{actual_learning_goals.inspect}"
+    unexpected_learning_goals = actual_learning_goals - expected_learning_goals
+    unless unexpected_learning_goals.empty?
+      raise "Unexpected learning goals: #{unexpected_learning_goals.inspect}"
     end
   end
 
