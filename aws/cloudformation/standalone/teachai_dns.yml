@@ -150,16 +150,22 @@ Resources:
       AutoPublish: true
       FunctionCode: |
         function handler(event) {
+          var request = event.request;
           var newUrl = 'www.teachai.org';
 
+          // Check if the host is already 'www.teachai.org'
+          if (request.headers.host && request.headers.host.value === newUrl) {
+            return request;  // Return original request
+          }
+
           // Append path
-          newUrl += event.request.uri;
+          newUrl += request.uri;
 
           return {
             statusCode: 301,
-            statusDescription: '301 Redirect to root domain',
-            headers:{
-              "location": { "value": newUrl }
+            statusDescription: '301 Redirect to www domain',
+            headers: {
+              "location": { "value": `https://${newUrl}` }
             }
           };
         };
