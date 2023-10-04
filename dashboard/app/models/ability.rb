@@ -192,7 +192,12 @@ class Ability
       end
 
       if user.teacher?
-        can :manage, Section, user_id: user.id
+        can :manage, Section do |s|
+          s.user_id == user.id || s.instructors.include?(user)
+        end
+        can :manage, SectionInstructor do |si|
+          si.section.instructors.include?(user) || si.instructor_id == user.id
+        end
         can :manage, :teacher
         can :manage, User do |u|
           user.students.include?(u)

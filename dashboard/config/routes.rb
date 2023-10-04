@@ -921,6 +921,8 @@ Dashboard::Application.routes.draw do
         get 'peer_review_submissions/index', to: 'peer_review_submissions#index'
         get 'peer_review_submissions/report_csv', to: 'peer_review_submissions#report_csv'
 
+        resources :section_instructors, only: [:show, :index, :create]
+
         resources :ml_models, only: [:show, :destroy] do
           collection do
             get 'names'
