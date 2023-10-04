@@ -8353,7 +8353,7 @@
 
   hoc_how_to_step_01_educators_subhead: "Select an event time and space that works for the number of students and devices you have available."
   hoc_how_to_step_01_educators_desc_01: "What spaces are available for you to do your Hour of Code? Consider the tech capabilities of your space, and the kinds of devices you expect your students to work on. Students can work on tutorials on a single device, take turns using a shared device, or try a tutorial together on a classroom whiteboard. There are even unplugged tutorials that can be completed with no devices at all. Unplugged options can be done anywhere—even outdoors!"
-  hoc_how_to_step_01_educators_desc_02: "People around the world join the Hour of Code celebration during CS Education Week (December 4-8) when the latest tutorials and activities are released. But you can do an Hour of Code any day of the year!"
+  hoc_how_to_step_01_educators_desc_02: "People around the world join the Hour of Code celebration during CS Education Week %{campaign_date} when the latest tutorials and activities are released. But you can do an Hour of Code any day of the year!"
   hoc_how_to_step_02_educators_desc_01: "Explore activities based on your group's age, experience, interests, and more. It's popular for students to try self-led tutorials, though many activities include lesson plans for teachers to guide discussion or extend the activity as well."
   hoc_how_to_step_02_educators_desc_02: "Decide ahead of time if you want to choose a single tutorial for all of your students, or let each child pick their own."
   hoc_how_to_step_02_educators_desc_03: "This year, you and your students can [learn all about AI](%ai_url) through tutorials, lesson plans, and our new How AI Works video series."
