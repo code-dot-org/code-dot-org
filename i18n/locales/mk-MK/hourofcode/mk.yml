@@ -283,6 +283,10 @@ mk:
   call_to_action_register_early_access: Регистрирај се за ран пристап
   call_to_action_open_positions: Прикажи ги отворените позиции
   call_to_action_get_guide: Добијте го водичот
+  call_to_action_donate_to_cdo: Донирајте на Code.org
+  call_to_action_start_fundraiser: Започнете прибирање финансиски средства
+  call_to_action_view_donation_policy: Погледнете ја политиката за донирање
+  call_to_action_view_donate_bitpay: Донирајте со BitPay
   aria_label_call_to_action_afe: Дознајте повеќе за инженерот за иднината на Амазон
   aria_label_call_to_action_teaching_csf: Започнете со наставата компјутерски науки
     Основи професионално учење програма
@@ -392,6 +396,7 @@ mk:
   curriculum_name_csp: Компјутерски науки принципи
   curriculum_name_csc: Компјутерски науки врски
   curriculum_name_csa: АП® Компјутерски науки А
+  curriculum_name_csa_ai: Софтверско инженерство и компјутерска визија
   curriculum_name_csc_02: Секој модул за врски со CS
   curriculum_name_ai: АИ и машинско учење
   curriculum_name_artificial_intelligence: Вештачка интелигенција (АИ)
@@ -471,6 +476,12 @@ mk:
     апликации, анимации, игри и физички компјутерски системи.
   curriculum_desc_csp: Слободен, AP® CSP одобрен, средношколски воведен курс кој ги
     запознава студентите со основните концепти на компјутерските науки.
+  curriculum_desc_csa_ai_long: 'Овој две поглавја пост-АП АДС модул им нуди на средношколците
+    практично искуство со професионални алатки за развој на софтвер, вклучувајќи GitHub
+    и GitHub Copilot, и им дава вештини од реалниот свет за да развијат програма за
+    компјутерска визија. '
+  curriculum_desc_csa_ai_short: Овој модул Post-AP® CSA им нуди на средношколците
+    практично искуство со професионални алатки за развој на софтвер.
   collection_hardware: Фокусирајте се на хардвер
   collection_hardware_desc: Оспособува учениците да користат податоци и физички уреди
     за решавање на проблемите.
@@ -545,6 +556,7 @@ mk:
   module_duration_2_hrs: 2 часа
   module_duration_3_hrs: 3 часа
   module_duration_5_hrs: 5 часа
+  module_duration_5_hrs_plus: 5+ часа
   module_duration_8_hrs: 8 часа
   module_duration_20_hrs: 20 часа
   module_duration_35_hrs: 35 часа
@@ -624,6 +636,7 @@ mk:
   heading_these_lessons_will: 'Овие лекции ќе:'
   heading_explore_curriculum_catalog: Истражете ги сите наши курсеви во Каталогот
     за наставни програми
+  heading_csa_ai: Барате работи што треба да ги направите по испитот AP®?
   professional_learning_section_desc: Добијте поддршка што ви треба додека се подготвувате
     да предавате. Наставниците го сакаат, со над 90% го рангираат најдобриот професионален
     развој досега!
@@ -657,6 +670,24 @@ mk:
     на сите прашања што може да ги имате за започнување на наставата со Code.org.
     Можете исто така да прашате други наставници за нивното искуство на нашите форуми
     за наставници.
+  subscribe_form_section_title: Претплатете се за ажурирања
+  subscribe_form_section_desc_csa: Пријавете се за да добивате месечни пораки за AP®
+    Computer Science A на Code.org и добијте корисни потсетници, совети и ажурирања
+    испратени веднаш до вашето сандаче.
+  subscribe_form_section_desc_csc: Пријавете се за да добивате месечни пораки за Computer
+    Science Connections на Code.org и добијте корисни потсетници, совети и ажурирања
+    испратени веднаш до вашето сандаче.
+  subscribe_form_section_desc_csd: Пријавете се за да добивате месечни пораки за откритијата
+    за компјутерски науки на Code.org и добијте корисни потсетници, совети и ажурирања
+    испратени веднаш до вашето сандаче.
+  subscribe_form_section_desc_csf: Пријавете се за да добивате месечни пораки за Основи
+    на компјутерски науки на Code.org и добијте корисни потсетници, совети и ажурирања
+    испратени веднаш до вашето сандаче.
+  subscribe_form_section_desc_csp: Пријавете се за да добивате месечни пораки за принципите
+    за компјутерски науки на Code.org и добијте корисни потсетници, совети и ажурирања
+    испратени веднаш до вашето сандаче.
+  subscribe_form_section_unsubscribe: Можете да се откажете од претплатата во секое
+    време.
   blockchain_hero_heading: Како работи блокчејн
   blockchain_hero_desc: Нурнете во светот на блокчејн со “Како работи блокчејн”, нашата
     нова видео серија и придружни лекции!
@@ -763,6 +794,9 @@ mk:
     Секоја лекција е спарена со едно видео од серијата, нуркање-подлабоко во концептите
     воведени во видеата.
   ai_curriculum_btn_aria_label_04: Истражете како работи лекциите за АИ
+  ai_curriculum_grades_05: 'Одделение нивоа: 9-12'
+  ai_curriculum_btn_aria_label_05: Истражете го модулот за софтверско инженерство
+    и компјутерска визија
   ai_carousel_heading: 'Што велат наставниците за АИ со Code.org:'
   ai_carousel_quote_01: Оваа лекција, исто така, им даде можност на моите ученици
     да видат дека постои елемент на мислење во системите за класификација. Подоцна,
@@ -897,6 +931,7 @@ mk:
     ChatGPT, од почетник до напредни. Вклучува стартер поттикнува за оние само брцнувајќи
     нивните прсти во, како и напредни алатки за оние кои бараат да се зголеми нивниот
     потенцијал.
+  ai_pl_101_resources_3: АИ поттикнува за трансформирање на учењето на учениците
   how_ai_works_hero_heading: Како работи АИ
   how_ai_works_hero_desc: Нурнете се во светот на АИ со “Како работи АИ”, нашата видео
     серија и придружни лекции!
@@ -1309,8 +1344,8 @@ mk:
     Animation
   csp_page_curriculum_glance_devices: Laptop, Chromebook
   csp_page_curriculum_glance_tools: Лабораторија за апликации
-  csp_page_curriculum_glance_professional_learning: Facilitator-led Workshops, Self-paced
-    Modules
+  csp_page_curriculum_glance_professional_learning: Работилници предводени од фасилитатор,
+    модули со само-темпо
   csp_page_curriculum_glance_professional_languages: Mакедонски
   csp_page_curriculum_glance_professional_accessibility_features: Text-to-speech,
     Closed captioning, Immersive reader
@@ -1439,8 +1474,8 @@ mk:
   csd_page_curriculum_glance_devices: Laptop, Chromebook
   csd_page_curriculum_glance_tools: Лабораторија за апликации, Лабораторија за игри,
     лабораторија за АИ, Веб лабораторија
-  csd_page_curriculum_glance_professional_learning: Facilitator-led Workshops, Self-paced
-    Modules
+  csd_page_curriculum_glance_professional_learning: Работилници предводени од фасилитатор,
+    модули со само-темпо
   csd_page_curriculum_glance_professional_languages: Mакедонски
   csd_page_curriculum_glance_professional_accessibility_features: Text-to-speech,
     Closed captioning, Immersive reader
@@ -1584,8 +1619,8 @@ mk:
     и дизајн, Дизајн на апликации
   csf_page_curriculum_glance_devices: Лаптоп, Chromebook, таблет
   csf_page_curriculum_glance_tools: Спрајт лабораторија, игра лабораторија
-  csf_page_curriculum_glance_professional_learning: Facilitator-led Workshops, Self-paced
-    Modules
+  csf_page_curriculum_glance_professional_learning: Работилници предводени од фасилитатор,
+    модули со само-темпо
   csf_page_curriculum_glance_languages: арапски јазик, индонезиски, каталонски, Кинески
     поедноставен, Кинески традиционални, Чешка, француската, германски, хинди, италијански,
     Јапонски, Кореја, Каннада, Malay, марати, монголски, полскиот, Portuguese-BR,
@@ -1726,6 +1761,39 @@ mk:
   csa_page_faq_answer_08_02: For more information about the values that guided our
     work, please see our [curriculum values](%{curriculum_values_url}) and our [professional
     learning values](%{pl_values_url}).
+  donate_page_top_heading: Помогнете да ја финансирате нашата мисија
+  donate_page_top_desc: Секоја донација ја подгрева мисијата на Code.org за проширување
+    на пристапот до образование за компјутерски науки. Ние нудиме неколку начини за
+    да донирате и да направите разлика.
+  donate_page_fundraise_title: Прибирање финансиски средства за Code.org
+  donate_page_fundraise_desc: Помогнете да соберете пари за Code.org! Секој ученик
+    во секое училиште треба да има можност да учи компјутерски науки.
+  donate_page_other_ways_title: Други начини да се даде
+  donate_page_other_ways_desc: Истражете разновидни методи за да придонесете, и пронајдете
+    ја опцијата која најмногу ви одговара. Секој гест, голем или мал, ја движи нашата
+    мисија напред.
+  donate_page_501c3: Code.org е регистрирана како јавна 501 (c) (3) непрофитна организација.
+    Придонесите кон Code.org се одбиваат од данок до степен дозволен со закон. Даночниот
+    идентификациски број на Code.org е 46-0858543.
+  donate_page_donation_policy_title: Разбирање на нашата политика за донирање
+  donate_page_donation_policy_desc: Дознајте за тоа како се справуваме и ги распределуваме
+    вашите придонеси.
+  donate_tabs_tab_label_daf_direct: DAF Директен
+  donate_tabs_tab_label_amazon: Амазон
+  donate_tabs_tab_label_bitpay: BitPay
+  donate_tabs_tab_label_employee_match: Вработен натпревар
+  donate_tabs_daf_direct_title: Донирајте преку ДАФ Директен
+  donate_tabs_daf_direct_desc: Донирајте преку вашиот донаторски советуван фонд со
+    Fidelity Charitable, Schwab Charitable или BNY Mellon и направете ја вашата препорака
+    за грант до Code.org преку онлајн формуларот DAF Direct.
+  donate_tabs_amazon_title: Донирајте преку Амазон
+  donate_tabs_amazon_desc: Донирајте директно користејќи ја вашата сметка на Амазон.
+    Со само неколку кликања, беспрекорно да придонесе за мисијата Code.org е и зајакнување
+    на иднината на компјутерски науки образование.
+  donate_tabs_bitpay_title: Донирајте со крипто преку BitPay
+  donate_tabs_bitpay_desc: Прегратка на иднината на давање со cryptocurrency. Преку
+    BitPay, вашата дигитална валута може директно да ги поддржи потфати Code.org е
+    во проширување на компјутерски науки образование.
   hoc_live: Час на кодот во живо
   hoc_live_sign_up_title: Пријавете се за час на кодот во живо
   hoc_live_learn_title: Научете со час на кодот во живо

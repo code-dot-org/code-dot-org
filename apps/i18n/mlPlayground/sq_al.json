@@ -36,6 +36,7 @@
     "abalone": {
       "card": {
         "context": {
+          "potentialMisuses": "[empty string]",
           "potentialUses": "Përcaktoni moshën e kërmillit të detit."
         },
         "description": "Ky grup i të dhënave përmban atribute të ndryshme kërmijsh të ndryshëm, një lloj kërmijsh detarë. Qëllimi është të parashikohet numri i unazave në guaskën e kërmillit, i cili është një tregues i moshës së tij."
@@ -126,6 +127,7 @@
     "basketball_shots": {
       "card": {
         "context": {
+          "potentialMisuses": "[empty string]",
           "potentialUses": "Parashikoni nëse një goditje me 3 pikë është bërë ose humbur."
         },
         "description": "Ky grup të dhënash përmban çdo përpjekje me 3 pikë të realizuar gjatë turneut NCAA 2017. Me këto të dhëna është e mundur të parashikohet nëse gjuajtja është bërë apo është humbur."
@@ -165,6 +167,7 @@
     "bike_sharing": {
       "card": {
         "context": {
+          "potentialMisuses": "[empty string]",
           "potentialUses": "Parashikoni sa biçikleta do të merren me qira në bazë të kushteve të motit ose periudhës së vitit."
         },
         "description": "Të dhënat ditore të qirasë nga Uashingtoni, D.C. ' S Sistemi Capital Bikeshare nga 2011 dhe 2012, së bashku me të dhënat e motit për ato ditë."
@@ -774,6 +777,7 @@
     "heart": {
       "card": {
         "context": {
+          "potentialMisuses": "[empty string]",
           "potentialUses": "Diagnostifikoni nëse dikush mund të jetë në rrezik për sëmundje të zemrës bazuar në faktorë të ndryshëm."
         },
         "description": "Një grup i të dhënave të rezultateve të testeve për pacientët me sëmundje të zemrës, i përdorur për të parashikuar nëse dikush mund të ketë apo jo sëmundje të zemrës."
@@ -939,6 +943,7 @@
     "insurance_cost": {
       "card": {
         "context": {
+          "potentialMisuses": "[empty string]",
           "potentialUses": "Mund të përdoret për të parashikuar nëse dikush është duhanpirës bazuar në informacione të tjera të sigurimit"
         },
         "description": "Kostot e sigurimit së bashku me faktorë si numri i fëmijëve, vendndodhja, statusi i duhanpirësit/jo-duhanpirësit, mosha, gjinia, BMI."
@@ -977,6 +982,7 @@
     "jeans": {
       "card": {
         "context": {
+          "potentialMisuses": "[empty string]",
           "potentialUses": "Parashikoni çmimin e një palë xhinse bazuar në atë për kë janë, madhësinë e xhepave, etj."
         },
         "description": "Ky grup të dhënash përmban të dhëna matëse për markat e njohura të xhinseve."
@@ -1499,6 +1505,7 @@
     "movies": {
       "card": {
         "context": {
+          "potentialMisuses": "[empty string]",
           "potentialUses": "Për shembull, përcaktoni arkën e një filmi sipas buxhetit ose zhanrit të tij."
         },
         "description": "Një grup të dhënash filmash të publikuar nga 1986-2016, me numra të arkëtarëve, vlerësime, rezultate në IMDB dhe më shumë."
@@ -1622,6 +1629,7 @@
     "nutrition": {
       "card": {
         "context": {
+          "potentialMisuses": "[empty string]",
           "potentialUses": "Për shembull, përcaktoni sa kalori ka një ushqim nga përmbajtja e tij ushqyese."
         },
         "description": "Një grup të dhënash i përpiluar nga USDA për përmbajtje të ndryshme ushqimore dhe përmbajtjen e tyre ushqyese: kalori, minerale, vitamina dhe shumë më tepër."
@@ -2248,6 +2256,7 @@
     "songs": {
       "card": {
         "context": {
+          "potentialMisuses": "[empty string]",
           "potentialUses": "Parashikoni sa hit i madh ishte një këngë bazuar në zhanrin e saj dhe faktorë të tjerë."
         },
         "description": "Një përzgjedhje e rastësishme e këngëve të njohura me informacione të tabelës Billboard Top 100, si dhe karakteristika të tjera."
@@ -2294,6 +2303,10 @@
     },
     "student_alcohol_consumption": {
       "card": {
+        "context": {
+          "potentialMisuses": "[empty string]",
+          "potentialUses": "[empty string]"
+        },
         "description": "Përmban përgjigje individuale ndaj një studimi social të nxënësve të shkollave të mesme portugeze, duke ndjekur informacionin social, gjinor dhe studimor."
       },
       "fields": {

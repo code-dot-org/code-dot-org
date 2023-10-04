@@ -85,7 +85,8 @@
   gap: 0.5rem;
   align-self: stretch;
 
-  h5, p {
+  h5,
+  p {
     margin-bottom: 0;
   }
 }
@@ -194,12 +195,15 @@ p.aiTokenText {
   color: $product_affirmative_default;
 }
 
-.learningGoalExpanded {
+.expandedBorder {
   border-top: 1px solid $neutral_dark40;
+}
+
+.learningGoalExpanded {
   padding: 1.25rem 1rem;
 
   display: flex;
-  flex-direction: column;
+  flex-direction: row;
   gap: 2rem;
   align-self: stretch;
 }
@@ -226,6 +230,7 @@ p.aiTokenText {
   flex-direction: column;
   gap: 1rem;
   align-self: stretch;
+  flex: 1;
 }
 
 .evidenceLevelOption {
@@ -264,4 +269,77 @@ p.aiTokenText {
 p.errorMessage {
   color: $product_negative_default;
   margin-bottom: 0;
+}
+
+.infoTipIcon {
+  cursor: pointer;
+  margin-left: 5px;
+  margin-right: 5px;
+  font-size: 18px;
+  vertical-align: middle;
+  color: gray;
+}
+
+.openedAiAssessment {
+  padding: 1.25rem 1rem 0 1rem;
+}
+
+.aiAssessmentBlock {
+  align-items: flex-start;
+  display: flex;
+  gap: 16px;
+  position: relative;
+}
+
+.greenAiAssessment {
+  align-items: left;
+  border: 1px solid $product_affirmative_default;
+  background-color: $light_affirmative_100;
+  border-radius: 4px;
+  display: flex;
+  flex-grow: 1;
+  overflow: hidden;
+  padding: 8px;
+  position: relative;
+}
+
+.redAiAssessment {
+  align-items: left;
+  border: 1px solid $product_negative_default;
+  background-color: $product_negative_light;
+  border-radius: 4px;
+  display: flex;
+  flex-grow: 1;
+  overflow: hidden;
+  padding: 8px;
+  position: relative;
+}
+
+.noAiAssessment {
+  align-items: left;
+  background-color: $lightest_gray;
+  border: 1px solid $light_gray;
+  border-radius: 4px;
+  display: flex;
+  flex-grow: 1;
+  overflow: hidden;
+  padding: 8px;
+  position: relative;
+}
+
+.inputTextbox {
+  width: 95%;
+  height: 5rem;
+  margin-top: 5;
+}
+
+.autosaveMessage {
+  float: right;
+  line-height: 100%;
+  padding: 0;
+  color: #3ea33e;
+}
+
+.feedbackArea {
+  flex: 1;
 }

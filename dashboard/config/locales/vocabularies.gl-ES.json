@@ -134,6 +134,21 @@
         "code/poetry/2023": {
           "word": "Código"
         },
+        "copyright/csd/2023": {
+          "word": "Dereitos de Autor"
+        },
+        "variable/csd/2023": {
+          "word": "Variábel"
+        },
+        "conditionals/csd/2023": {
+          "word": "Condicionais"
+        },
+        "abstraction/csd/2023": {
+          "word": "Abstracción"
+        },
+        "function/csd/2023": {
+          "word": "Función"
+        },
         "binary/coursec/2023": {
           "word": "Binario"
         },

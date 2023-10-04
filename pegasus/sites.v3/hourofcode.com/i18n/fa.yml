@@ -274,6 +274,10 @@ fa:
   call_to_action_register_early_access: برای دسترسی زودهنگام ثبت نام کنید
   call_to_action_open_positions: مشاهده پوزیشن های باز
   call_to_action_get_guide: راهنما را دریافت کنید
+  call_to_action_donate_to_cdo: به Code.org کمک مالی کنید
+  call_to_action_start_fundraiser: شروع یک جمع آوری کمک مالی
+  call_to_action_view_donation_policy: مشاهده سیاست کمک مالی
+  call_to_action_view_donate_bitpay: با BitPay اهدا کنید
   aria_label_call_to_action_afe: درباره مهندس آینده آمازون بیشتر بدانید
   aria_label_call_to_action_teaching_csf: برنامه آموزش حرفه ای مبانی علوم کامپیوتر
     را شروع کنید
@@ -379,6 +383,7 @@ fa:
   curriculum_name_csp: اصول علوم کامپیوتر
   curriculum_name_csc: پیوند با علوم کامپیوتر
   curriculum_name_csa: علوم کامپیوتر A
+  curriculum_name_csa_ai: مهندسی نرم افزار و بینایی کامپیوتر
   curriculum_name_csc_02: هر نوع ماژول پیوند با علوم کامپیوتر
   curriculum_name_ai: هوش مصنوعی و یادگیری ماشین
   curriculum_name_artificial_intelligence: هوش مصنوعی (AI)
@@ -449,6 +454,12 @@ fa:
     ها و سیستم های محاسبات فیزیکی معرفی می کند.
   curriculum_desc_csp: رایگان، AP® CSP تایید شده، دوره مقدماتی دبیرستان که دانش آموزان
     را به مفاهیم پایه علوم کامپیوتر معرفی می کند.
+  curriculum_desc_csa_ai_long: 'این ماژول دو فصل Post-AP CSA دانش آموزان دبیرستانی
+    را با استفاده از ابزارهای حرفه ای توسعه نرم افزار، از جمله GitHub و GitHub Copilot،
+    تجربه می کند و آنها را با مهارت های دنیای واقعی برای توسعه یک برنامه بینایی کامپیوتری
+    به ارمغان می آورد. '
+  curriculum_desc_csa_ai_short: این ماژول Post-AP® CSA دانش آموزان دبیرستانی را با
+    استفاده از ابزارهای حرفه ای توسعه نرم افزار تجربه می کند.
   collection_hardware: تمرکز روی سخت‌افزار
   collection_hardware_desc: دانش‌آموزان را قادر می‌سازد تا از داده‌ها و دستگاه‌های
     فیزیکی برای حل مشکلات استفاده کنند.
@@ -523,6 +534,7 @@ fa:
   module_duration_2_hrs: 2 ساعت
   module_duration_3_hrs: 3 ساعت
   module_duration_5_hrs: 5 ساعت
+  module_duration_5_hrs_plus: 5+ ساعت
   module_duration_8_hrs: 8 ساعت
   module_duration_20_hrs: 20 ساعت ها
   module_duration_35_hrs: 35 ساعت ها
@@ -600,6 +612,7 @@ fa:
   heading_these_lessons_will: 'این درسها:'
   heading_explore_curriculum_catalog: تمام دوره های ما را در کاتالوگ برنامه درسی کاوش
     کنید
+  heading_csa_ai: آیا به دنبال کارهایی هستید که بعد از آزمون AP® انجام دهید؟
   professional_learning_section_desc: همانطور که برای تدریس آماده می‌شوید، پشتیبانی
     لازم را دریافت کنید. معلمان آن را دوست دارند، و بیش از 90% آنها آن را بهترین پیشرفت
     حرفه‌ای در طول تاریخ دانسته‌اند.
@@ -630,6 +643,23 @@ fa:
   support_and_questions_section_desc: تیم پشتیبانی ما اینجاست تا به هر سوالی که ممکن
     است در مورد شروع تدریس با Code.org داشته باشید پاسخ دهد. همچنین می‌توانید از سایر
     معلمان در مورد تجربه آنها در انجمن معلمان ما بپرسید.
+  subscribe_form_section_title: مشترک شدن برای به روز رسانی
+  subscribe_form_section_desc_csa: برای دریافت ایمیل های ماهانه در مورد Code.org AP®
+    Computer Science A ثبت نام کنید و یادآوری ها، نکات و به روزرسانی های مفید را مستقیماً
+    به صندوق ورودی خود ارسال کنید.
+  subscribe_form_section_desc_csc: برای دریافت ایمیل های ماهانه در مورد اتصالات علوم
+    کامپیوتر Code.org ثبت نام کنید و یادآوری ها، نکات و به روزرسانی های مفید را مستقیماً
+    به صندوق ورودی خود ارسال کنید.
+  subscribe_form_section_desc_csd: برای دریافت ایمیل های ماهانه در مورد اکتشافات علوم
+    کامپیوتر Code.org ثبت نام کنید و یادآوری ها، نکات و به روزرسانی های مفید را مستقیماً
+    به صندوق ورودی خود ارسال کنید.
+  subscribe_form_section_desc_csf: برای دریافت ایمیل های ماهانه در مورد اصول علوم
+    کامپیوتر Code.org ثبت نام کنید و یادآوری ها، نکات و به روزرسانی های مفید را مستقیماً
+    به صندوق ورودی خود ارسال کنید.
+  subscribe_form_section_desc_csp: برای دریافت ایمیل های ماهانه در مورد اصول علوم
+    کامپیوتر Code.org ثبت نام کنید و یادآوری ها، نکات و به روزرسانی های مفید را مستقیماً
+    به صندوق ورودی خود ارسال کنید.
+  subscribe_form_section_unsubscribe: در هر زمان می توانید اشتراک خود را لغو کنید.
   blockchain_hero_heading: بلاکچین چگونه کار می کند
   blockchain_hero_desc: با «Blockchain چگونه کار می کند»، سری ویدیوی جدید ما و درس
     های همراه آن، به دنیای بلاک چین شیرجه بزنید!
@@ -734,6 +764,8 @@ fa:
     درس با یک ویدیوی واحد از این مجموعه جفت می شود و عمیق تر به مفاهیم معرفی شده در
     فیلم ها می پردازد.
   ai_curriculum_btn_aria_label_04: کاوش در درس های هوش مصنوعی چگونه کار می کند
+  ai_curriculum_grades_05: 'سطح درجه: 9-12'
+  ai_curriculum_btn_aria_label_05: کاوش در مهندسی نرم افزار و ماژول بینایی کامپیوتر
   ai_carousel_heading: 'آنچه معلمان در مورد هوش مصنوعی با Code.org می گویند:'
   ai_carousel_quote_01: این درس همچنین به دانش آموزان من این فرصت را داد تا ببینند
     که یک عنصر از نظر در سیستم های طبقه بندی وجود دارد. بعدها، زمانی که ما شروع کردیم
@@ -859,6 +891,7 @@ fa:
     ChatGPT، از مبتدی تا پیشرفته. شامل دستورالعمل های استارتر برای کسانی که فقط انگشتان
     خود را در آن فرو می برند، و همچنین ابزارهای پیشرفته برای کسانی که به دنبال به
     حداکثر رساندن پتانسیل خود هستند.
+  ai_pl_101_resources_3: دستورالعمل های هوش مصنوعی برای تبدیل یادگیری دانش آموزان
   how_ai_works_hero_heading: هوش مصنوعی چگونه کار می کند
   how_ai_works_hero_desc: با «هوش مصنوعی چگونه کار می کند»، مجموعه ویدیویی ما و درس
     های همراه آن، به دنیای هوش مصنوعی شیرجه بزنید!
@@ -1662,6 +1695,38 @@ fa:
   csa_page_faq_answer_08_02: For more information about the values that guided our
     work, please see our [curriculum values](%{curriculum_values_url}) and our [professional
     learning values](%{pl_values_url}).
+  donate_page_top_heading: کمک مالی به ماموریت ما
+  donate_page_top_desc: هر کمک مالی به ماموریت Code.org برای گسترش دسترسی به آموزش
+    علوم کامپیوتر کمک می کند. ما راه های مختلفی را برای شما ارائه می دهیم تا کمک مالی
+    کنید و تفاوت ایجاد کنید.
+  donate_page_fundraise_title: جمع آوری کمک مالی برای Code.org
+  donate_page_fundraise_desc: کمک به جمع آوری پول برای Code.org! هر دانش آموز در هر
+    مدرسه باید فرصت یادگیری علوم کامپیوتر را داشته باشد.
+  donate_page_other_ways_title: راه های دیگر برای دادن
+  donate_page_other_ways_desc: روش های متنوعی را برای مشارکت کاوش کنید و گزینه ای
+    را پیدا کنید که مناسب شما باشد. هر حرکت، بزرگ یا کوچک، ماموریت ما را به جلو می
+    برد.
+  donate_page_501c3: Code.org به عنوان یک سازمان غیرانتفاعی 501 (c) (3) عمومی ثبت
+    شده است. مشارکت در Code.org تا حدی که توسط قانون مجاز است، از مالیات کسر می شود.
+    شماره شناسایی مالیاتی Code.org 46-0858543 است.
+  donate_page_donation_policy_title: درک سیاست کمک مالی ما
+  donate_page_donation_policy_desc: در مورد نحوه مدیریت و تخصیص مشارکت های خود بیاموزید.
+  donate_tabs_tab_label_daf_direct: DAF مستقیم
+  donate_tabs_tab_label_amazon: آمازون
+  donate_tabs_tab_label_bitpay: بیت پی
+  donate_tabs_tab_label_employee_match: مسابقه کارمند
+  donate_tabs_daf_direct_title: کمک مالی از طریق DAF مستقیم
+  donate_tabs_daf_direct_desc: از طریق صندوق توصیه شده توسط اهدا کننده خود با Fidelity
+    Charitive، Schwab Charitive یا BNY Mellon اهدا کنید و توصیه کمک مالی خود را از
+    طریق فرم آنلاین DAF Direct به Code.org ارائه دهید.
+  donate_tabs_amazon_title: کمک مالی از طریق آمازون
+  donate_tabs_amazon_desc: با استفاده از حساب آمازون خود مستقیماً اهدا کنید. تنها
+    با چند کلیک، به طور یکپارچه به ماموریت Code.org کمک می کند و آینده آموزش علوم
+    کامپیوتر را تقویت می کند.
+  donate_tabs_bitpay_title: از طریق BitPay با رمزنگاری کمک مالی کنید
+  donate_tabs_bitpay_desc: آینده دادن با ارز رمزنگاری شده را در آغوش بگیرید. از طریق
+    BitPay، ارز دیجیتال شما می تواند به طور مستقیم از تلاش های Code.org در گسترش آموزش
+    علوم کامپیوتر پشتیبانی کند.
   hoc_live: ساعت کد زنده
   hoc_live_sign_up_title: ثبت نام برای ساعت کد زنده
   hoc_live_learn_title: یادگیری با ساعت کد زنده

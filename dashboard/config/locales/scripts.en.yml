@@ -673,7 +673,7 @@ en:
           name: starwarsblocks
           lessons: {}
         mc:
-          title: Minecraft Hour of Code
+          title: Minecraft Adventurer
           description: Use blocks of code to take Steve or Alex on an adventure through this Minecraft world.
           description_short: Explore a Minecraft world through code.
           description_audience: ''
@@ -1269,7 +1269,7 @@ en:
               display_name: Post-Course Survey
           student_description: Unit 4 introduces the broader social impacts of computing. Through a series of design challenges, you will learn how to better understand the needs of others while developing a solution to a problem. The second half of the unit consists of an iterative team project, during which teams have the opportunity to identify a need that they care about, prototype solutions both on paper and in App Lab, and test solutions with real users to get feedback and drive further iteration.
         minecraft:
-          title: Minecraft Hour of Code Designer
+          title: Minecraft Designer
           description_audience: ''
           description_short: Program animals and other Minecraft creatures in your own version of Minecraft.
           description: Program animals and other Minecraft creatures in your own version of Minecraft.
@@ -6616,11 +6616,12 @@ en:
         dance-unplugged:
           lesson_groups: {}
           name: dance-unplugged
-          title: Hour of Code - Dance Party - Unplugged
+          title: Dance Party Unplugged
           description_audience: grades K-12
           description_short: 'Learners of all ages get an introductory experience with coding and computer science in a safe, supportive environment and learn to think about controlling actions using events. '
           description: Students will learn that events are a useful way to control when an action happens, and can even be used to make make multiple things act in sync. In programming, you can use events to respond to a user controlling it (like pressing buttons or clicking the mouse). Events can make your program more interesting and interactive.
           student_description: Learn to think about controlling actions using events. Events are widely used in programming and should be easily recognizable after this lesson.
+          lessons: {}
         csc-things:
           lesson_groups:
             lessonGroup-2:
@@ -13152,13 +13153,152 @@ en:
           description_audience: ''
           description_short: ''
           description: These lessons introduce students to ethical considerations around artificial intelligence. Students research different topics and current events surrounding AI technologies, then are asked to reflect and take a stance on how they feel these technologies should be used in society.
-          student_description: ''
+          student_description: Learn about how artificial intelligence is impacting society, both the intentional solutions that can be beneficial to society and the unintended consequences that may be harmful to society.
         draft-hoc-dp:
           lessons: {}
           lesson_groups: {}
           name: draft-hoc-dp
-          title: Dance Party (Draft)
+          title: Dance Party (Pilot)
           description_audience: ''
           description_short: ''
           description: ''
           student_description: ''
+        genai-temp:
+          lessons:
+            lesson-1:
+              name: Temp Lesson for Ali
+          lesson_groups: {}
+          name: genai-temp
+          title: "[Temp] Generative AI"
+          description_audience: ''
+          description_short: ''
+          description: Temporary unit for Generative AI work
+          student_description: ''
+        virtual-pl-csa-summer-2024:
+          lessons: {}
+          lesson_groups: {}
+        virtual-pl-csp-summer-day1-2024:
+          lessons: {}
+          lesson_groups: {}
+          name: virtual-pl-csp-summer-day1-2024
+          title: ''
+          description_audience: ''
+          description_short: ''
+          description: ''
+          student_description: ''
+        virtual-pl-csa-summer-2024-day1:
+          lessons: {}
+          lesson_groups: {}
+          name: virtual-pl-csa-summer-2024-day1
+          title: Day 1
+          description_audience: ''
+          description_short: ''
+          description: ''
+          student_description: ''
+        virtual-pl-csp-summer-day2:
+          lessons: {}
+          lesson_groups: {}
+          name: virtual-pl-csp-summer-day2
+          title: Day 2
+          description_audience: ''
+          description_short: ''
+          description: ''
+          student_description: ''
+        virtual-pl-csp-summer-day3:
+          lessons: {}
+          lesson_groups: {}
+          name: virtual-pl-csp-summer-day3
+          title: Day 3
+          description_audience: ''
+          description_short: ''
+          description: ''
+          student_description: ''
+        virtual-pl-csp-summer-day4:
+          lessons: {}
+          lesson_groups: {}
+          name: virtual-pl-csp-summer-day4
+          title: Day 4
+          description_audience: ''
+          description_short: ''
+          description: ''
+          student_description: ''
+        virtual-pl-csp-summer-day5:
+          lessons: {}
+          lesson_groups: {}
+          name: virtual-pl-csp-summer-day5
+          title: Day 5
+          description_audience: ''
+          description_short: ''
+          description: ''
+          student_description: ''
+        virtual-pl-csa-summer-day2:
+          lessons: {}
+          lesson_groups: {}
+          name: virtual-pl-csa-summer-day2
+          title: Day 2
+          description_audience: ''
+          description_short: ''
+          description: ''
+          student_description: ''
+        virtual-pl-csa-summer-day3:
+          lessons: {}
+          lesson_groups: {}
+          name: virtual-pl-csa-summer-day3
+          title: Day 3
+          description_audience: ''
+          description_short: ''
+          description: ''
+          student_description: ''
+        virtual-pl-csa-summer-day4:
+          lessons: {}
+          lesson_groups: {}
+          name: virtual-pl-csa-summer-day4
+          title: Day 4
+          description_audience: ''
+          description_short: ''
+          description: ''
+          student_description: ''
+        virtual-pl-csa-summer-day5:
+          lessons: {}
+          lesson_groups: {}
+          name: virtual-pl-csa-summer-day5
+          title: 'Day 5 '
+          description_audience: ''
+          description_short: ''
+          description: ''
+          student_description: ''
+        virtual-pl-csa-summer-day1:
+          lessons: {}
+          lesson_groups: {}
+          name: virtual-pl-csa-summer-day1
+          title: Day 1
+          description_audience: ''
+          description_short: ''
+          description: ''
+          student_description: ''
+        virtual-pl-csp-summer-day1:
+          lessons: {}
+          lesson_groups:
+            lessonGroup-2:
+              display_name: Synchronous Part 1
+            lessonGroup-3:
+              display_name: Synchronous Part 2
+          name: virtual-pl-csp-summer-day1
+          title: Day 1
+          description_audience: ''
+          description_short: ''
+          description: ''
+          student_description: ''
+        csa-postap-se-and-computer-vision-2023:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: 'Chapter 1: GitHub and Copilot'
+            lessonGroup-3:
+              display_name: 'Chapter 2: Computer Vision'
+            lessonGroup-5:
+              display_name: Post-Survey
+          title: Software Engineering & Computer Vision
+          description: This two-chapter post-AP CSA module offers high school students hands-on experience with professional software development tools, including GitHub and GitHub Copilot, and imparts them with the real-world skills to develop a computer vision program. Students will gain practical knowledge, learn industry-standard practices, and cultivate critical thinking through discussions and problem-solving centered around AI tools and models. These lessons aim not only to bolster their understanding of AI and its applications but also foster creativity and collaboration, equipping students with the set of skills and the beginning of a software development portfolio they can take with them beyond high school.
+          student_description: This two-part module lets you explore pro-level tools like GitHub and GitHub Copilot and teaches you how to create your own computer vision program. You'll be solving real-world AI problems and tinkering with cutting-edge models, learning industry-standard practices along the way. This isn't just about understanding AI better - it's about sparking your creativity, improving your teamwork skills, and starting to build your own software development portfolio.
+          description_short: ''
+          description_audience: ''

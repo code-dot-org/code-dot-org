@@ -161,6 +161,24 @@
         "code/poetry/2023": {
           "word": "Waehere"
         },
+        "input/csd/2023": {
+          "word": "Tāuru"
+        },
+        "copyright/csd/2023": {
+          "word": "Manatārua"
+        },
+        "variable/csd/2023": {
+          "word": "Taurangi"
+        },
+        "conditionals/csd/2023": {
+          "word": "Ngā Here"
+        },
+        "abstraction/csd/2023": {
+          "word": "Te Whakawaitara"
+        },
+        "function/csd/2023": {
+          "word": "Taumahi"
+        },
         "drop/coursea/2023": {
           "word": "Taka Iho"
         },

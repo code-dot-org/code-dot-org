@@ -218,6 +218,27 @@
         "code/poetry/2023": {
           "word": "Kode"
         },
+        "input/csd/2023": {
+          "word": "Inngang"
+        },
+        "copyright/csd/2023": {
+          "word": "Opphavsrett"
+        },
+        "debugging/csd/2023": {
+          "word": "Feilsøking"
+        },
+        "variable/csd/2023": {
+          "word": "Variabel"
+        },
+        "conditionals/csd/2023": {
+          "word": "Betingelser"
+        },
+        "abstraction/csd/2023": {
+          "word": "Abstraksjon"
+        },
+        "function/csd/2023": {
+          "word": "Funksjon"
+        },
         "debugging/coursea/2023": {
           "word": "Feilsøking"
         },

@@ -135,7 +135,7 @@ Een van de beste manieren om helpen is het verspreiden van informatie en het pro
 
 ### 1. Registreer uw evenement
 
-When you [sign up your Hour of Code event](/#join), you’ll receive helpful email communications with news and tips for hosting a successful Hour of Code. Tevens kunt u op deze wijze locale scholen of ouders laten weten dat u een evenement bij hen in de buurt zult hosten.
+Wanneer je je [aanmeldt voor je Hour of Code-evenement](/#join), ontvang je nuttige e-mailberichten met nieuws en tips voor het organiseren van een succesvol Hour of Code-evenement. Tevens kunt u op deze wijze locale scholen of ouders laten weten dat u een evenement bij hen in de buurt zult hosten.
 
 ### 2. Plaatsen op sociale media
 

@@ -25,7 +25,7 @@ Isprobavanje sata kodiranja jednostavan je i zabavan način da učenike upoznate
 
 <a id="how-to-video"></a>
 
-## 1. Pogledajte video s uputama za Sat kodiranja <iframe width="500" height="255" src="//www.youtube.com/embed/SrnvvWDm73k" frameborder="0" allowfullscreen></iframe> 
+## 1. Pogledajte video s uputama za Sat kodiranja <iframe width="500" height="255" src="https://www.youtube-nocookie.com/embed/SrnvvWDm73k" frameborder="0" allowfullscreen></iframe> 
 
 * * *
 

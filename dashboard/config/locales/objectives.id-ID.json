@@ -2159,6 +2159,21 @@
         "a4fa2434-b9c5-4e36-819b-50398d230730": {
           "description": "Bagikan aplikasi mereka satu sama lain"
         },
+        "114f32b8-86b0-4ffe-9078-63eb13745f4e": {
+          "description": "Latih dan uji model pembelajaran mesin."
+        },
+        "4ddcd0e5-9848-44c2-b44e-534be14ec029": {
+          "description": "Alasan tentang cara prasangka manusia berperan dalam pembelajaran mesin."
+        },
+        "706d588e-1af3-44f0-b4d8-7bffa52d45e8": {
+          "description": "Buat dan bagikan aplikasi mereka sendiri di App Lab menggunakan berbagai fitur seperti tombol, teks, gambar, suara, dan layar."
+        },
+        "9462a1ca-276f-44b6-8693-898f8b970b8f": {
+          "description": "Buat dan bagikan aplikasi mereka sendiri di App Lab menggunakan berbagai fitur seperti tombol, teks, gambar, suara, dan layar."
+        },
+        "550d0aba-fcca-4adf-985c-2955df143802": {
+          "description": "Buat dan bagikan aplikasi mereka sendiri di App Lab menggunakan berbagai fitur seperti tombol, teks, gambar, suara, dan layar."
+        },
         "08121200-84b5-4a5a-bba6-4b562022d2dd": {
           "description": "Jelaskan aturan dalam melakukan penelusuran yang aman di internet."
         },
@@ -3081,10 +3096,10 @@
           "description": "Bagikan karya kreatif kepada murid lain."
         },
         "13d689fe-f5b2-4e76-84d5-4fd24f91cfab": {
-          "description": "Jelaskan bagaimana visi komputer dibangun dari lapisan yang menggabungkan komponen yang lebih kecil menjadi prediksi akhir"
+          "description": "Jelaskan konstruksi computer vision yang terdiri beberapa lapisan yang memadukan komponen yang lebih kecil untuk menghasilkan prediksi akhir"
         },
         "5bb33a90-28cb-40cb-9647-59a1818980b8": {
-          "description": "Jelaskan perlunya perspektif yang beragam saat membuat sistem rekomendasi"
+          "description": "Jelaskan perlunya sudut pandang yang beragam saat membuat sistem rekomendasi"
         },
         "bb862e7c-9808-4414-b027-fc747d58b6c0": {
           "description": "Gunakan bobot neuron buatan untuk menyesuaikan output dari sistem rekomendasi"
