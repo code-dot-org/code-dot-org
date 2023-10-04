@@ -13,6 +13,7 @@ import SetUpSections from './SetUpSections';
 import Spinner from '@cdo/apps/code-studio/pd/components/spinner';
 import RosterDialog from '../teacherDashboard/RosterDialog';
 import AddSectionDialog from '../teacherDashboard/AddSectionDialog';
+import CoteacherInviteNotification from './CoteacherInviteNotification';
 
 class TeacherSections extends Component {
   static propTypes = {
@@ -47,6 +48,7 @@ class TeacherSections extends Component {
         </ContentContainer>
         {this.props.studentSectionIds?.length > 0 && (
           <ContentContainer heading={i18n.sectionsTitle()}>
+            <CoteacherInviteNotification />
             <OwnedSections
               sectionIds={studentSectionIds}
               hiddenSectionIds={hiddenStudentSectionIds}
@@ -85,5 +87,17 @@ export default connect(
 const styles = {
   spinner: {
     marginTop: '10px',
+  },
+  acceptButton: {
+    marginLeft: 20,
+    marginRight: 20,
+  },
+  declineButton: {
+    marginRight: 0,
+  },
+  buttonsStyles: {
+    // center vertically
+    display: 'flex',
+    alignItems: 'center',
   },
 };
