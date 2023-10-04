@@ -341,7 +341,7 @@ sq:
       finished_hoc: "Unë e mbarova Orën e Kodimit"
       sign_in_to_save: 'Logohu për të ruajtur ecurinë tënde'
       my_dashboard: "Paneli im"
-      course_catalog: "Katalogu i kursit"
+      course_catalog: "Katalogu i kurseve"
       project_gallery: "Projektet"
       sections: "Seksionet"
       help_support: "Ndihmë dhe mbështetje"
@@ -398,7 +398,7 @@ sq:
       driver: 'Përdorues'
       navigator: 'Lundrues'
       create: 'Krijo'
-      applab: 'Laboratori i Aplikacioneve'
+      applab: 'App Lab'
       artist: 'Artisti'
       bounce: 'Hidhu'
       calc: 'Llogarit'

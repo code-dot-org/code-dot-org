@@ -13,6 +13,7 @@ km:
       Collision Detection: ការរកឃើញការប៉ះទង្គិច
       Collision Detection Review: ការរកឃើញការប៉ះទង្គិច
       Course E Artist Project: វគ្គសិក្សា​ E គម្រោងអ្នកសិល្បៈ
+      Create your project: បង្កើតគម្រោងរបស់អ្នក
       Creating Sprites: ការបង្កើត Sprites
       Dance Crews: ក្រុមរាំ
       Debugging: ការបំបាត់កំហុស (Debugging)
@@ -22,8 +23,10 @@ km:
       End of Course Projects: គម្រោងត្រូវបានបញ្ចប់
       Events: ព្រឹត្តិការណ៍
       Example: ឧទាហរណ៍
+      Example Projects: ឧទាហរណ៍គម្រោងមួយចំនួន
       Exploration: ការរុករក
       'Exploration: Clicker Game': 'ការរុករក៖ ហ្គេម Clicker'
+      'Exploration: For Loops': 'ការស្វែងយល់៖ For Loops'
       Explore HTML: ស្វែងយល់ពី HTML
       Free Play: លេងដោយសេរី
       Functions: អនុ​គមន៍
@@ -49,10 +52,12 @@ km:
       Naming Variables: ការដាក់ឈ្មោះអថេរ
       Overview: ទិដ្ឋភាពទូទៅ 
       Pair Programming: ការសរសេរកម្មវិធីជាគូ
+      Planning: គម្រោង
       Plotting Shapes in Game Lab: គម្រោងរូបភាពនៅក្នុងបន្ទប់ល្បែងពិសោធន៍
       Practice: អនុវត្តន៍
       Prediction: ការទស្សន៍ទាយ
       Programming with Rey and BB-8: សរសេរកម្មវិធីជាមួយ Rey និង BB-8
+      Project Guide: មគ្គុទ្ទេសក៍លើគម្រោង
       Properties: ធាតុ
       Quarter Notes: រង្វាស់ ១ ភាគ ៤
       Random Numbers: លេខចៃដន្យ
@@ -82,6 +87,7 @@ km:
       'Video: Debugging with the Step Button': 'វីដេអូ: ការបំបាត់កំហុសដោយប្រើ ប៊ូតុងជំហាន'
       'Video: Drawing in Game Lab - Part 1': 'វីដេអូ: គំនូរនៅក្នុងបន្ទប់ពិសោធន៍នៃហ្គេម- ផ្នែកទី១'
       'Video: Drawing in Game Lab - Part 2': 'វីដេអូ: គំនូរគំនូរនៅក្នុងបន្ទប់ពិសោធន៍នៃហ្គេម-ផ្នែកទី២'
+      'Video: For Loops': 'វីដេអូ៖ For Loops'
       'Video: How to Create a Simple Function': 'វីដេអូ៖ របៀបបង្កើតអនុគមន៍សាមញ្ញមួយ'
       'Video: How to Make a Sprite': 'របៀបបង្កើតអាង (Sprite)'
       'Video: Ice Age Loops': 'វីដេអូ: ប្រតិបត្តិដដែលៗក្នុង Ice Age'
