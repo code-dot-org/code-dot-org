@@ -105,8 +105,8 @@ class LtiV1ControllerTest < ActionDispatch::IntegrationTest
     assert_equal parsed_url[:response_mode], 'form_post'
     assert_equal parsed_url[:prompt], 'none'
     assert_equal parsed_url[:login_hint], login_hint
-    assert_not_nil parsed_url[:state]
-    assert_not_nil parsed_url[:nonce]
+    refute_nil parsed_url[:state]
+    refute_nil parsed_url[:nonce]
   end
 
   test 'auth - given no params, return unauthorized' do

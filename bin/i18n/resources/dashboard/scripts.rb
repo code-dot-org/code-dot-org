@@ -3,18 +3,21 @@ require 'json'
 
 require_relative '../../i18n_script_utils'
 require_relative '../../redact_restore_utils'
+require_relative '../dashboard'
 
 module I18n
   module Resources
     module Dashboard
       module Scripts
-        I18N_SOURCE_FILE_PATH = CDO.dir(File.join(I18N_SOURCE_DIR, 'dashboard/scripts.yml')).freeze
+        FILE_NAME = 'scripts.yml'.freeze
+        ORIGIN_I18N_FILE_PATH = File.join(I18n::Resources::Dashboard::ORIGIN_I18N_DIR_PATH, 'scripts.en.yml')
+        I18N_SOURCE_FILE_PATH = File.join(I18n::Resources::Dashboard::I18N_SOURCE_DIR_PATH, FILE_NAME).freeze
 
         def self.sync_in
           puts 'Preparing dashboard scripts'
           FileUtils.mkdir_p(File.dirname(I18N_SOURCE_FILE_PATH))
           # `dashboard/config/locales/blocks.en.yml` updates automatically from levelbuilder content
-          FileUtils.cp(CDO.dir('dashboard/config/locales/scripts.en.yml'), I18N_SOURCE_FILE_PATH)
+          FileUtils.cp(ORIGIN_I18N_FILE_PATH, I18N_SOURCE_FILE_PATH)
 
           puts 'Redacting dashboard scripts'
           # Save the original data, for restoration
