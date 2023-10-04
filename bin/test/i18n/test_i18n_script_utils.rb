@@ -185,9 +185,54 @@ describe I18nScriptUtils do
     end
   end
 
+  describe '.json_file?' do
+    context 'when the file format is .json' do
+      let(:file_path) {'test.json'}
+
+      it 'returns true' do
+        assert I18nScriptUtils.json_file?(file_path)
+      end
+    end
+
+    context 'when the file format is not valid' do
+      let(:file_path) {'test.yml'}
+
+      it 'returns false' do
+        refute I18nScriptUtils.json_file?(file_path)
+      end
+    end
+  end
+
+  describe '.yaml_file?' do
+    context 'when the file format is .yml' do
+      let(:file_path) {'test.yml'}
+
+      it 'returns true' do
+        assert I18nScriptUtils.yaml_file?(file_path)
+      end
+    end
+
+    context 'when the file format is .yaml' do
+      let(:file_path) {'test.yaml'}
+
+      it 'returns true' do
+        assert I18nScriptUtils.yaml_file?(file_path)
+      end
+    end
+
+    context 'when the file format is not valid' do
+      let(:file_path) {'test.json'}
+
+      it 'returns false' do
+        refute I18nScriptUtils.yaml_file?(file_path)
+      end
+    end
+  end
+
   describe '.sanitize_data_and_write' do
     let(:data) {{'expected' => 'data'}}
     let(:sorted_and_sanitized_data) {{'expected' => 'sorted_and_sanitized_data'}}
+    let(:dest_file_data) {File.read(dest_path)}
 
     before do
       I18nScriptUtils.expects(:sort_and_sanitize).with(data).once.returns(sorted_and_sanitized_data)
@@ -196,48 +241,44 @@ describe I18nScriptUtils do
     context 'when the dest file is .yaml' do
       let(:dest_path) {'/expected.yaml'}
 
-      it 'creates the dest file with the data' do
+      it 'creates the dest file with yaml data' do
         I18nScriptUtils.sanitize_data_and_write(data, dest_path)
 
         assert File.exist?(dest_path)
-
-        assert_equal "---\nexpected: sorted_and_sanitized_data\n", File.read(dest_path)
+        assert_equal "---\nexpected: sorted_and_sanitized_data\n", dest_file_data
       end
     end
 
     context 'when the dest file is .yml' do
       let(:dest_path) {'/expected.yml'}
 
-      it 'creates the file with the data' do
+      it 'creates the file with yaml data' do
         I18nScriptUtils.sanitize_data_and_write(data, dest_path)
 
         assert File.exist?(dest_path)
-
-        assert_equal "---\nexpected: sorted_and_sanitized_data\n", File.read(dest_path)
+        assert_equal "---\nexpected: sorted_and_sanitized_data\n", dest_file_data
       end
     end
 
     context 'when the dest file is .json' do
       let(:dest_path) {'/expected.json'}
 
-      it 'creates the file with the data' do
+      it 'creates the file with json data' do
         I18nScriptUtils.sanitize_data_and_write(data, dest_path)
 
         assert File.exist?(dest_path)
-
-        assert_equal %Q[{\n  "expected": "sorted_and_sanitized_data"\n}], File.read(dest_path)
+        assert_equal %Q[{\n  "expected": "sorted_and_sanitized_data"\n}], dest_file_data
       end
     end
 
     context 'when the file is in unknown format' do
       let(:dest_path) {'/unexpected.txt'}
 
-      it 'raises error' do
-        actual_error = assert_raises {I18nScriptUtils.sanitize_data_and_write(data, dest_path)}
+      it 'creates the file with the data' do
+        I18nScriptUtils.sanitize_data_and_write(data, dest_path)
 
-        refute File.exist?(dest_path)
-
-        assert_equal 'do not know how to serialize localization data to /unexpected.txt', actual_error.message
+        assert File.exist?(dest_path)
+        assert_equal '{"expected"=>"sorted_and_sanitized_data"}', dest_file_data
       end
     end
   end
