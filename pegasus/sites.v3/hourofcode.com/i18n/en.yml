@@ -184,6 +184,9 @@
   teacher_label_csc: "CS Connections Teacher"
   teacher_label_csa: "AP® Computer Science A Teacher"
 
+  teacher_forum_heading: "Teacher Forum"
+  teacher_forum_desc: "Visit the Hour of Code Teacher Forum to get advice, insight and support from other educators."
+
   required_materials: "Required Materials:"
   optional_materials: "Optional Materials:"
 
@@ -193,10 +196,12 @@
   call_to_action_start_activity: "Start an activity"
   call_to_action_get_certificates: "Get certificates"
   call_to_action_go_beyond_hoc: "Go beyond the Hour of Code"
+  call_to_action_view_promo_resources: "View promo resources"
   call_to_action_learn_more: "Learn more"
   call_to_action_watch_now: "Watch now"
   call_to_action_try_activity: "Try activity"
   call_to_action_try_activities: "Try activities"
+  call_to_action_explore_activities: "Explore activities"
   call_to_action_explore_ai: "Explore AI"
   call_to_action_explore_unit: "Explore unit"
   call_to_action_explore_curriculum: "Explore curriculum"
@@ -251,6 +256,7 @@
   call_to_action_find_self_paced_modules: "Find self-paced modules"
   call_to_action_join_teacher_forums: "Join teacher forums"
   call_to_action_explore_teacher_forums: "Explore teacher forums"
+  call_to_action_explore_teacher_forum: "Explore teacher forum"
   call_to_action_explore_career_resources: "Explore career resources"
   call_to_action_watch_videos: "Watch videos"
   call_to_action_download_posters: "Download posters"
@@ -8303,6 +8309,18 @@
 
   language_label: "Language"
 
+  before_hoc: "Before Hour of Code"
+  day_of_hoc: "Day of Hour of Code"
+  after_hoc: "After Hour of Code"
+  step_01: "Step 1"
+  step_02: "Step 2"
+  step_03: "Step 3"
+  step_04: "Step 4"
+  step_05: "Step 5"
+  step_06: "Step 6"
+  step_07: "Step 7"
+  step_08: "Step 8"
+
   hoc_how_to_top_heading: "Your guide to Hour of Code"
   hoc_how_to_top_desc: "Tailored how-to guides for the best Hour of Code experience."
   hoc_how_to_top_view_guide: "View guide for"
@@ -8326,18 +8344,10 @@
   hoc_how_to_faq_answer_account: "No signup or login is required for students to try the Hour of Code. Signing up for the Hour of Code does NOT automatically create a Code.org account."
 
   hoc_how_to_resources_heading_educators: "Other Hour of Code resources for educators"
-
-  before_hoc: "Before Hour of Code"
-  day_of_hoc: "Day of Hour of Code"
-  after_hoc: "After Hour of Code"
-  step_01: "Step 1"
-  step_02: "Step 2"
-  step_03: "Step 3"
-  step_04: "Step 4"
-  step_05: "Step 5"
-  step_06: "Step 6"
-  step_07: "Step 7"
-  step_08: "Step 8"
+  hoc_how_to_resources_promo_heading: "Promotional Resources"
+  hoc_how_to_resources_promo_desc: "Find all the resources you need—print and digital—to bring attention to your Hour of Code."
+  hoc_how_to_resources_discover_heading: "Discover Activities"
+  hoc_how_to_resources_discover_desc: "Explore a wide selection of one-hour tutorial designed for all ages in over 45 languages."
 
   hoc_how_to_step_label_plan: "Plan where and when you will do your Hour of Code"
   hoc_how_to_step_label_choose_activity: "Choose your activity"
