@@ -6,6 +6,8 @@ import CdoFieldFlyout from '@cdo/apps/blockly/addons/cdoFieldFlyout';
 import {spriteLabPointers} from '@cdo/apps/p5lab/spritelab/blockly/constants';
 import {blocks as behaviorBlocks} from './behaviorBlocks';
 import msg from '@cdo/locale';
+import {NO_OPTIONS_MESSAGE} from '@cdo/apps/blockly/constants';
+import {editButtonHandler} from './proceduresBlocks';
 
 // This file contains customizations to Google Blockly Sprite Lab blocks.
 
@@ -267,26 +269,47 @@ export const blocks = {
   // All logic for behavior picker custom input type
   behaviorPicker() {
     return {
-      // PLACEHOLDER - required by block_utils
       addInput(blockly, block, inputConfig, currentInputRow) {
-        console.log({
-          addInput: {
-            block: block,
-            inputConfig: inputConfig,
-            currentInputRow: currentInputRow,
-            this: this,
-          },
-        });
+        {
+          currentInputRow
+            .appendField(inputConfig.label)
+            .appendField(
+              new Blockly.FieldDropdown(getAllBehaviors, undefined, undefined),
+              inputConfig.name
+            );
+          if (
+            window.appOptions && // global appOptions is not available on level edit page
+            appOptions.level.toolbox &&
+            !appOptions.readonlyWorkspace &&
+            Blockly.useModalFunctionEditor &&
+            block.inputList.length &&
+            !block.workspace.isFlyout
+          ) {
+            const button = new Blockly.FieldButton({
+              value: msg.edit(),
+              onClick: editButtonHandler,
+              colorOverrides: {button: 'blue', text: 'white'},
+            });
+            block.inputList[block.inputList.length - 1].appendField(
+              button,
+              'EDIT'
+            );
+          }
+        }
       },
-      // PLACEHOLDER - required by block_utils
       generateCode(block, arg) {
-        console.log({
-          generateCode: {
-            block: block,
-            arg: arg,
-          },
-        });
-        return '';
+        const invalidBehavior =
+          block.getFieldValue(arg.name) === NO_OPTIONS_MESSAGE;
+        const behaviorId = Blockly.JavaScript.nameDB_?.getName(
+          block.getFieldValue(arg.name),
+          'PROCEDURE'
+        );
+        if (invalidBehavior) {
+          console.warn('No behaviors available');
+          return undefined;
+        } else {
+          return `new Behavior(${behaviorId}, [])`;
+        }
       },
     };
   },
@@ -326,4 +349,28 @@ function onBlockImageSourceChange(event, block) {
   ) {
     updatePointerBlockImage(block, spriteLabPointers);
   }
+}
+// Get a list of behavior options for a dropdown field, based on
+// blocks found on the main workspace.
+function getAllBehaviors() {
+  let allowBehaviorEditing = Blockly.useModalFunctionEditor;
+  const noBehaviorLabel = allowBehaviorEditing
+    ? `${msg.createBlocklyBehavior()}\u2026`
+    : msg.behaviorsNotFound();
+  const behaviorBlocks = [];
+  Blockly.Workspace.getAll().forEach(workspace => {
+    behaviorBlocks.push(
+      ...workspace.getTopBlocks().filter(block => block.behaviorId)
+    );
+  });
+  const behaviorOptions = behaviorBlocks.map(block => [
+    block.getProcedureModel().name,
+    block.getProcedureModel().name,
+  ]);
+  behaviorOptions.sort();
+  // Add a "Create a behavior" or "No behaviors found" option
+  if (allowBehaviorEditing || behaviorOptions.length === 0) {
+    behaviorOptions.push([noBehaviorLabel, NO_OPTIONS_MESSAGE]);
+  }
+  return behaviorOptions;
 }

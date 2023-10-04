@@ -114,7 +114,11 @@ export const editButtonHandler = function () {
     // If we aren't using the new modal function editor yet, just center the block that
     // was clicked.
     const workspace = this.getSourceBlock().workspace;
-    const name = this.getSourceBlock().getFieldValue('NAME');
+    const name =
+      // Function call and behavior get blocks use a NAME field.
+      this.getSourceBlock().getFieldValue('NAME') ||
+      // Sprite Lab behavior picker uses a BEHAVIOR field.
+      this.getSourceBlock().getFieldValue('BEHAVIOR');
     const definition = GoogleBlockly.Procedures.getDefinition(name, workspace);
     if (definition) {
       workspace.centerOnBlock(definition.id);
