@@ -1,0 +1,48 @@
+@import 'color.scss';
+
+$default-button-height: 38px;
+$default-button-font-size: 14px;
+$default-button-border-radius: 8px;
+
+%control-button {
+  text-align: center;
+  display: flex;
+  width: 100%;
+  height: $default-button-height;
+  font-size: $default-button-font-size;
+  justify-content: center;
+  align-items: center;
+  border: initial;
+  border-radius: $default-button-border-radius;
+  margin: 0;
+  padding: 5px 10px;
+
+  .text {
+    padding-left: 10px;
+  }
+
+  &:active {
+    border: initial !important;
+  }
+
+  &.disabled {
+    opacity: 50%;
+    cursor: default;
+
+    &:hover {
+      box-shadow: none;
+    }
+  }
+}
+
+.controlButtonRun {
+  @extend %control-button;
+  background-color: #fca401;
+  color: $neutral_light;
+}
+
+.controlButtonReset {
+  @extend %control-button;
+  background-color: $brand_secondary_dark;
+  color: $neutral_light;
+}

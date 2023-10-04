@@ -30,6 +30,7 @@ class Aichat < Level
     bot_title
     bot_description
     disable_projects
+    is_project_level
   )
 
   def self.create_from_level_builder(params, level_params)
