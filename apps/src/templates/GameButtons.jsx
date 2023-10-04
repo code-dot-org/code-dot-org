@@ -12,12 +12,7 @@ import {connect} from 'react-redux';
 import blankImg from '../../static/common_images/1x1.gif';
 
 export const FinishButton = () => (
-  <button
-    type="button"
-    id="finishButton"
-    className="share"
-    style={{fontSize: 100}}
-  >
+  <button type="button" id="finishButton" className="share">
     <img src="/blockly/media/1x1.gif" />
     {msg.finish()}
   </button>
