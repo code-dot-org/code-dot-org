@@ -2,7 +2,7 @@ import {expect} from '../../../util/reconfiguredChai';
 import {
   getPartitionedBlockElements,
   createBlockOrderMap,
-  addMutationToMinitoolboxBlocks,
+  addMutationToMiniToolboxBlocks,
 } from '@cdo/apps/blockly/addons/cdoXml';
 import {PROCEDURE_DEFINITION_TYPES} from '@cdo/apps/blockly/constants';
 
@@ -67,7 +67,7 @@ describe('createBlockOrderMap', function () {
   });
 });
 
-describe('addMutationToMinitoolboxBlocks', function () {
+describe('addMutationToMiniToolboxBlocks', function () {
   it('should add a mutation element with useDefaultIcon attribute to miniflyout block with "open" miniflyout', function () {
     // Sample mini-toolbox block XML
     const xmlData = `
@@ -80,11 +80,11 @@ describe('addMutationToMinitoolboxBlocks', function () {
         </value>
       </block>
     `;
-    const xmlDoc = new DOMParser().parseFromString(xmlData, 'text/xml');
+    const xmlDoc = parser.parseFromString(xmlData, 'text/xml');
     const blockElement = xmlDoc.documentElement;
 
     // Call the function
-    addMutationToMinitoolboxBlocks(blockElement);
+    addMutationToMiniToolboxBlocks(blockElement);
 
     // Find mutation element and useDefaultIcon attribute
     const expectedMutation = blockElement.querySelector('mutation');
@@ -95,18 +95,20 @@ describe('addMutationToMinitoolboxBlocks', function () {
     expect(expectedMutation).to.exist;
     // An open flyout will NOT use the default icon, since the default state is closed.
     expect(expectedUseDefaultIcon).to.equal('false');
+    // Ensure that the miniflyout attribute is removed.
+    expect(blockElement.getAttribute('miniflyout')).to.be.null;
   });
 
   it('should not add a mutation element to block without miniflyout attribute', function () {
     // Create a sample block element without miniflyout attribute
     const xmlData = '<block type="someBlock"></block>';
-    const xmlDoc = new DOMParser().parseFromString(xmlData, 'text/xml');
+    const xmlDoc = parser.parseFromString(xmlData, 'text/xml');
     const blockElement = xmlDoc.documentElement;
 
     // Make a copy of the original blockElement
     const originalBlockElement = blockElement.cloneNode(true);
 
-    addMutationToMinitoolboxBlocks(blockElement);
+    addMutationToMiniToolboxBlocks(blockElement);
 
     // Compare the modified blockElement with the original copy
     expect(blockElement.isEqualNode(originalBlockElement)).to.be.true;

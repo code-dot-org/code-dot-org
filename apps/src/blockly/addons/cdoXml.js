@@ -56,7 +56,7 @@ export default function initializeBlocklyXml(blocklyWrapper) {
     //  the rendered blocks and the coordinates in an array so that we can
     //  position them.
     partitionedBlockElements.forEach(xmlChild => {
-      addMutationToMinitoolboxBlocks(xmlChild);
+      addMutationToMiniToolboxBlocks(xmlChild);
       const blockly_block = Blockly.Xml.domToBlock(xmlChild, workspace);
       const x = parseInt(xmlChild.getAttribute('x'), 10);
       const y = parseInt(xmlChild.getAttribute('y'), 10);
@@ -79,23 +79,44 @@ export default function initializeBlocklyXml(blocklyWrapper) {
  * Adds a mutation element to a block if it should have an open miniflyout.
  * CDO Blockly uses an unsupported method for serializing miniflyout state
  * where arbitrary block attribute could be used to manage extra state.
- * Mainline Blockly expects a mutator. The precence of the mutation element
+ * Mainline Blockly expects a mutator. The presence of the mutation element
  * will trigger the block's domToMutation function to run, if it exists.
  *
  * @param {Element} blockElement - The XML element for a single block.
- * @returns {Map} A map with partitioned block index as key and original index in the XML as value.
  */
-export function addMutationToMinitoolboxBlocks(blockElement) {
+export function addMutationToMiniToolboxBlocks(blockElement) {
   const miniflyoutAttribute = blockElement.getAttribute('miniflyout');
   if (!miniflyoutAttribute) {
     return; // Not a miniflyout block
   }
-  const mutationElement = blockElement.ownerDocument.createElement('mutation');
   // The default icon is a '+' symbol which represents a currently-closed flyout.
   const useDefaultIcon = miniflyoutAttribute === 'open' ? 'false' : 'true';
-  mutationElement.setAttribute('useDefaultIcon', useDefaultIcon);
-  // Place mutator before fields, values, and other nested blocks.
-  blockElement.insertBefore(mutationElement, blockElement.firstChild);
+  // We don't expect a mutation to exist yet, but check just in case.
+  const existingMutationElement = blockElement.querySelector('mutation');
+
+  if (!existingMutationElement) {
+    // The mutation element does not exist, so create it.
+    const newMutationElement =
+      blockElement.ownerDocument.createElement('mutation');
+
+    // Create new mutation attribute based on original block attribute.
+    newMutationElement.setAttribute('useDefaultIcon', useDefaultIcon);
+
+    // Place mutator before fields, values, and other nested blocks.
+    blockElement.insertBefore(newMutationElement, blockElement.firstChild);
+  } else {
+    // The mutation element already exists, inspect it.
+    const existingUseDefaultIcon =
+      existingMutationElement.getAttribute('useDefaultIcon');
+
+    // If the useDefaultIcon attribute is not set, set it based on the block attribute.
+    if (existingUseDefaultIcon === null) {
+      existingMutationElement.setAttribute('useDefaultIcon', useDefaultIcon);
+    }
+  }
+
+  // Remove the miniflyout attribute from the parent block element.
+  blockElement.removeAttribute('miniflyout');
 }
 
 /**
