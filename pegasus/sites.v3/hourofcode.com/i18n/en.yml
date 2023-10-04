@@ -8307,6 +8307,9 @@
   hoc_how_to_top_desc: "Tailored how-to guides for the best Hour of Code experience."
   hoc_how_to_top_view_guide: "View guide for"
 
+  hoc_how_to_nav_main_aria_label: "Choose a guide"
+  hoc_how_to_nav_sidebar_aria_label: "Sidebar navigation"
+
   hoc_how_to_educators_intro_heading: "How to plan your Hour of Code"
   hoc_how_to_educators_intro_desc: "The Hour of Code is a one-hour introduction to computer science designed to demystify \"code\", show that anybody can learn the basics, and to broaden participation in the field of computer science. You can help raise awareness of the computer science movement and volunteer to inspire more students to try computer science, particularly young women."
 

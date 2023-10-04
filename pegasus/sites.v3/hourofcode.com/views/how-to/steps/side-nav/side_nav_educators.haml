@@ -6,15 +6,15 @@
 
 - steps_nav_label = [hoc_s(:hoc_how_to_step_label_plan), hoc_s(:hoc_how_to_step_label_choose_activity), hoc_s(:hoc_how_to_step_label_test_activity), hoc_s(:hoc_how_to_step_label_register_event), hoc_s(:hoc_how_to_step_label_tell), hoc_s(:hoc_how_to_step_label_get_coding), hoc_s(:hoc_how_to_step_label_celebrate), hoc_s(:hoc_how_to_step_label_beyond_hoc)]
 
-
-%ul.steps-nav
-  - steps_nav_index.times do |index|
-    %a{href: "#step-0#{index + 1}"}
-      %li
-        - if index === 0 || index === 5 || index === 7
-          %p.tag
-            = steps_nav_tag[index]
-        %p.overline-one
-          = steps_nav_number[index]
-        %p.body-two
-          = steps_nav_label[index]
+%nav.steps-nav{"aria-label": hoc_s(:hoc_how_to_nav_sidebar_aria_label)}
+  %ul
+    - steps_nav_index.times do |index|
+      %a{href: "#step-0#{index + 1}"}
+        %li
+          - if index === 0 || index === 5 || index === 7
+            %p.tag
+              = steps_nav_tag[index]
+          %p.overline-one
+            = steps_nav_number[index]
+          %p.body-two
+            = steps_nav_label[index]

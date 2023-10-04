@@ -183,64 +183,68 @@ section.steps {
     display: inline-block;
   }
 
-  ul.steps-nav {
-    @include reset-spacing;
+  nav.steps-nav {
     width: 28%;
-    border-right: 1px solid var(--neutral_dark20);
     position: sticky;
     top: 2rem;
+    border-right: 1px solid var(--neutral_dark20);
 
     @media screen and (max-width: $width-md) {
       display: none;
     }
 
-    a {
-      display: block;
-      font-family: unset;
-      text-decoration: none;
-      color: var(--neutral_dark);
-      padding: 12px 0 12px 12px;
-      margin-bottom: 0.5rem;
+    ul {
+      @include reset-spacing;
 
-      &:hover {
-        background-color: var(--neutral_light);
-      }
+      a {
+        display: block;
+        font-family: unset;
+        text-decoration: none;
+        color: var(--neutral_dark);
+        padding: 12px 0 12px 12px;
+        margin-bottom: 0.5rem;
 
-      &:last-child {
-        margin-bottom: 0;
-      }
-
-      &.selected {
-        border-right: 2px solid var(--brand_primary_default);
-
-        p.body-two {
-          font-family: var(--main-font-bold);
-        }
-      }
-    }
-
-    li {
-      @include reset-list-item-spacing;
-      padding-right: 1rem;
-
-      &::before {
-        @include remove-list-dot;
-      }
-
-      p {
-        margin-bottom: 0;
-        line-height: 1.4;
-
-        &.overline-one {
-          margin-bottom: 0.25rem;
+        &:hover {
+          background-color: var(--neutral_light);
         }
 
-        .body-two {
-          padding-right: 1rem;
+        &:last-child {
+          margin-bottom: 0;
+        }
+
+        &.selected {
+          border-right: 2px solid var(--brand_primary_default);
+
+          p.body-two {
+            font-family: var(--main-font-bold);
+          }
+        }
+      }
+
+      li {
+        @include reset-list-item-spacing;
+        padding-right: 1rem;
+
+        &::before {
+          @include remove-list-dot;
+        }
+
+        p {
+          margin-bottom: 0;
+          line-height: 1.4;
+
+          &.overline-one {
+            margin-bottom: 0.25rem;
+          }
+
+          .body-two {
+            padding-right: 1rem;
+          }
         }
       }
     }
   }
+
 
   div.steps-wrapper {
     width: 70%;
