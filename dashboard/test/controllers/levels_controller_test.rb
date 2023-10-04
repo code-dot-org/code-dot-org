@@ -134,7 +134,7 @@ class LevelsControllerTest < ActionController::TestCase
   test "should get index" do
     get :index, params: {game_id: @level.game}
     assert_response :success
-    assert_not_nil assigns(:levels)
+    refute_nil assigns(:levels)
   end
 
   test_user_gets_response_for(
@@ -739,7 +739,7 @@ class LevelsControllerTest < ActionController::TestCase
     get :edit, params: {id: @level.id}
     assert_response :success
     assert_includes @response.body, @level.name
-    assert_not_includes @response.body, 'level cannot be renamed'
+    refute_includes @response.body, 'level cannot be renamed'
   end
 
   test "should prevent rename of level in launched or pilot script" do
@@ -773,7 +773,7 @@ class LevelsControllerTest < ActionController::TestCase
     get :edit, params: {id: level.id}
     assert_response :success
     assert_includes @response.body, level.name
-    assert_not_includes @response.body, 'level cannot be renamed'
+    refute_includes @response.body, 'level cannot be renamed'
   end
 
   test "should prevent rename of stanadalone project level" do
@@ -860,7 +860,7 @@ class LevelsControllerTest < ActionController::TestCase
     level = create(:artist)
     get :edit, params: {id: level}
     css = css_select "form[action=\"#{level_path(level)}\"]"
-    assert_not css.empty?
+    refute css.empty?
   end
 
   test "should use first skin as default" do

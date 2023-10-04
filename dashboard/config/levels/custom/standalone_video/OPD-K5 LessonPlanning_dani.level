@@ -1,0 +1,20 @@
+<StandaloneVideo>
+  <config><![CDATA[{
+  "game_id": 54,
+  "created_at": "2021-05-27T17:26:35.000Z",
+  "level_num": "custom",
+  "user_id": 884,
+  "properties": {
+    "video_key": "lesson_planning",
+    "instructions_important": "false",
+    "long_instructions": "So far, you've been introduced to some of our unplugged lesson plans. However, there are lesson plans for every single CS Fundamentals lesson -- both plugged and online. You can find the full list of lesson plans for each course below:\r\n<br/>\r\n<br/> \r\n[Course A lesson plans](https://curriculum.code.org/csf-18/coursea/)<br/> \r\n[Course B lesson plans](https://curriculum.code.org/csf-18/courseb/)<br/>\r\n[Course C lesson plans](https://curriculum.code.org/csf-18/coursec/)<br/> \r\n[Course D lesson plans](https://curriculum.code.org/csf-18/coursed/)<br/> \r\n[Course E lesson plans](https://curriculum.code.org/csf-18/coursee/)<br/> \r\n[Course F lesson plans](https://curriculum.code.org/csf-18/coursef/)<br/> \r\n\r\nHowever, you may want to adapt these lessons, or build your own! The video below explains the structure of the CS Fundamentals lessons, but also provides tips in case if you want to develop your own lessons.",
+    "skip_dialog": true,
+    "skip_sound": true,
+    "parent_level_id": 16684,
+    "name_suffix": "_dani"
+  },
+  "published": true,
+  "notes": "",
+  "audit_log": "[{\"changed_at\":\"2019-02-22 17:18:38 +0000\",\"changed\":[\"long_instructions\"],\"changed_by_id\":884,\"changed_by_email\":\"emma@code.org\"},{\"changed_at\":\"2019-02-22 17:21:06 +0000\",\"changed\":[\"long_instructions\"],\"changed_by_id\":884,\"changed_by_email\":\"emma@code.org\"},{\"changed_at\":\"2019-02-22 17:56:41 +0000\",\"changed\":[\"long_instructions\"],\"changed_by_id\":884,\"changed_by_email\":\"emma@code.org\"}]"
+}]]></config>
+</StandaloneVideo>

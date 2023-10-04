@@ -1,0 +1,19 @@
+<Javalab>
+  <config><![CDATA[{
+  "properties": {
+    "encrypted": "false",
+    "long_instructions": "Import `FoodTruck.java` from your **Backpack**.\r\n\r\n1. In `FoodTruck.java`, write a `toString()` method which calls the `toString()` method from `Dessert`.\r\n\r\n2. Refactor the `printTruckInfo()` method.\r\n\r\n3. Instantiate `Dessert` and `FoodTruck` objects in `MyFoodTruck.java` to test your output.",
+    "mini_rubric": "false",
+    "hide_share_and_remix": "false",
+    "csa_view_mode": "console",
+    "project_template_level_name": "CSA U2L10 Template",
+    "encrypted_examples": "BeLIdeJFNrCImeoFw0e5Y5JTkjzYkJ6d8vZ6/Av263NMOfnNRl9In8cL1grc\neED/zBeS7t+lG6OdO8Dx7y7faufeh31UNjbIg1lKzaVlf1I=\n"
+  },
+  "game_id": 68,
+  "published": true,
+  "created_at": "2021-06-23T15:15:49.000Z",
+  "level_num": "custom",
+  "user_id": 9271,
+  "audit_log": "[{\"changed_at\":\"2021-06-23 16:36:30 +0000\",\"changed\":[\"encrypted_examples\"],\"changed_by_id\":9271,\"changed_by_email\":\"jamila@code.org\"},{\"changed_at\":\"2021-06-24 13:22:35 +0000\",\"changed\":[],\"changed_by_id\":9271,\"changed_by_email\":\"jamila@code.org\"},{\"changed_at\":\"2021-06-24 19:50:38 +0000\",\"changed\":[\"encrypted_examples\"],\"changed_by_id\":832,\"changed_by_email\":\"hannah@code.org\"}]"
+}]]></config>
+</Javalab>

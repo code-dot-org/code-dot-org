@@ -1,0 +1,347 @@
+<Artist>
+  <config><![CDATA[{
+  "game_id": 23,
+  "created_at": "2021-05-27T17:26:32.000Z",
+  "level_num": "custom",
+  "user_id": 285,
+  "properties": {
+    "skin": "artist_zombie",
+    "embed": "false",
+    "short_instructions": "Draw only those three stars to finish this puzzle.",
+    "authored_hints": "[{\"hint_class\":\"pointer\",\"hint_markdown\":\"Don't give up!  Remember what you have been learning.\",\"hint_id\":\"courseD_artist_functions5_a\",\"hint_type\":\"general\",\"tts_url\":\"https://tts.code.org/sharon22k/180/100/5565ab5a03e2e30868c82267a0d63cdc/courseE_artist_functions5.mp3\"},{\"hint_class\":\"content\",\"hint_markdown\":\"Functions make it easy to call saved code at any time, not just from inside a loop!\",\"hint_id\":\"courseD_artist_functions5_b\",\"hint_type\":\"general\",\"tts_url\":\"https://tts.code.org/sharon22k/180/100/62fbc4434b6a63445243be3d9c05def0/courseE_artist_functions5.mp3\"},{\"hint_class\":\"content\",\"hint_markdown\":\"Start by dragging the code for a star shape into the `draw a star` function, then use this function to draw the three stars!\",\"hint_id\":\"courseD_artist_functions5_c\",\"hint_type\":\"general\",\"tts_url\":\"https://tts.code.org/sharon22k/180/100/f9fa243cdd4366f9c2e80ac8155192e4/courseE_artist_functions5.mp3\"}]",
+    "is_k1": "false",
+    "skip_instructions_popup": "false",
+    "never_autoplay_video": "true",
+    "disable_param_editing": "true",
+    "disable_variable_editing": "false",
+    "use_modal_function_editor": "false",
+    "use_contract_editor": "false",
+    "contract_highlight": "false",
+    "contract_collapse": "false",
+    "examples_highlight": "false",
+    "examples_collapse": "false",
+    "examples_required": "false",
+    "definition_highlight": "false",
+    "definition_collapse": "false",
+    "disable_examples": "false",
+    "free_play": "false",
+    "impressive": "false",
+    "discard_background": "false",
+    "disable_sharing": "false",
+    "start_direction": "90",
+    "x": "50",
+    "y": "100",
+    "ideal": "11",
+    "long_instructions": "When is drawing three stars harder than drawing four? When you also have to jump over the moon!\r\n\r\nDraw only those three stars to finish this puzzle.",
+    "instructions_important": "false",
+    "hide_share_and_remix": "false",
+    "disable_if_else_editing": "false",
+    "hint_prompt_attempts_threshold": 15,
+    "parent_level_id": 5160,
+    "name_suffix": "_dani",
+    "preload_asset_list": null
+  },
+  "published": true,
+  "notes": "",
+  "audit_log": "[{\"changed_at\":\"2017-07-13 03:44:59 +0000\",\"changed\":[\"initialization_blocks\",\"start_blocks\",\"toolbox_blocks\",\"solution_blocks\",\"predraw_blocks\",\"authored_hints\",\"contained_level_names\"],\"changed_by_id\":302,\"changed_by_email\":\"mara.downing@code.org\"}]"
+}]]></config>
+  <blocks>
+    <initialization_blocks>
+      <xml>
+        <block type="when_run" deletable="false" movable="false"/>
+      </xml>
+    </initialization_blocks>
+    <start_blocks>
+      <xml>
+        <block type="when_run" deletable="false" movable="false">
+          <next>
+            <block type="draw_colour" inline="true" id="draw-color">
+              <value name="COLOUR">
+                <block type="colour_picker">
+                  <title name="COLOUR">#ffffff</title>
+                </block>
+              </value>
+              <next>
+                <block type="controls_repeat" editable="false">
+                  <title name="TIMES">8</title>
+                  <statement name="DO">
+                    <block type="draw_move_by_constant">
+                      <title name="DIR">moveForward</title>
+                      <title name="VALUE">25</title>
+                      <next>
+                        <block type="draw_move_by_constant">
+                          <title name="DIR">moveBackward</title>
+                          <title name="VALUE">25</title>
+                          <next>
+                            <block type="draw_turn_by_constant">
+                              <title name="DIR">turnRight</title>
+                              <title name="VALUE">45</title>
+                            </block>
+                          </next>
+                        </block>
+                      </next>
+                    </block>
+                  </statement>
+                </block>
+              </next>
+            </block>
+          </next>
+        </block>
+        <block type="procedures_defnoreturn" editable="false">
+          <mutation/>
+          <title name="NAME">draw a star</title>
+        </block>
+      </xml>
+    </start_blocks>
+    <toolbox_blocks>
+      <xml>
+        <block type="draw_colour" inline="true" id="draw-color">
+          <value name="COLOUR">
+            <block type="colour_picker">
+              <title name="COLOUR">#ffffff</title>
+            </block>
+          </value>
+        </block>
+        <block type="draw_move_by_constant">
+          <title name="DIR">moveForward</title>
+          <title name="VALUE">25</title>
+        </block>
+        <block type="draw_turn_by_constant">
+          <title name="DIR">turnRight</title>
+          <title name="VALUE">45</title>
+        </block>
+        <block type="draw_turn_by_constant">
+          <title name="DIR">turnLeft</title>
+          <title name="VALUE">90</title>
+        </block>
+        <block type="jump_by_constant">
+          <title name="DIR">jumpForward</title>
+          <title name="VALUE">100</title>
+        </block>
+        <block type="controls_repeat" limit="1">
+          <title name="TIMES">8</title>
+        </block>
+        <block type="procedures_callnoreturn">
+          <mutation name="draw a star"/>
+        </block>
+        <block type="procedures_defnoreturn">
+          <mutation/>
+          <title name="NAME">draw a star</title>
+        </block>
+      </xml>
+    </toolbox_blocks>
+    <recommended_blocks>
+      <xml/>
+    </recommended_blocks>
+    <solution_blocks>
+      <xml>
+        <block type="when_run" deletable="false" movable="false">
+          <next>
+            <block type="draw_colour" inline="true" id="draw-color">
+              <value name="COLOUR">
+                <block type="colour_picker">
+                  <title name="COLOUR">#ffffff</title>
+                </block>
+              </value>
+              <next>
+                <block type="procedures_callnoreturn">
+                  <mutation name="draw a star"/>
+                  <next>
+                    <block type="jump_by_constant">
+                      <title name="DIR">jumpForward</title>
+                      <title name="VALUE">200</title>
+                      <next>
+                        <block type="procedures_callnoreturn">
+                          <mutation name="draw a star"/>
+                          <next>
+                            <block type="jump_by_constant">
+                              <title name="DIR">jumpForward</title>
+                              <title name="VALUE">100</title>
+                              <next>
+                                <block type="procedures_callnoreturn">
+                                  <mutation name="draw a star"/>
+                                </block>
+                              </next>
+                            </block>
+                          </next>
+                        </block>
+                      </next>
+                    </block>
+                  </next>
+                </block>
+              </next>
+            </block>
+          </next>
+        </block>
+        <block type="procedures_defnoreturn">
+          <mutation/>
+          <title name="NAME">draw a star</title>
+          <statement name="STACK">
+            <block type="controls_repeat">
+              <title name="TIMES">8</title>
+              <statement name="DO">
+                <block type="draw_move_by_constant">
+                  <title name="DIR">moveForward</title>
+                  <title name="VALUE">25</title>
+                  <next>
+                    <block type="draw_move_by_constant">
+                      <title name="DIR">moveBackward</title>
+                      <title name="VALUE">25</title>
+                      <next>
+                        <block type="draw_turn_by_constant">
+                          <title name="DIR">turnRight</title>
+                          <title name="VALUE">45</title>
+                        </block>
+                      </next>
+                    </block>
+                  </next>
+                </block>
+              </statement>
+            </block>
+          </statement>
+        </block>
+      </xml>
+    </solution_blocks>
+    <predraw_blocks>
+      <xml>
+        <block type="when_run" deletable="false" movable="false">
+          <next>
+            <block type="draw_colour" inline="true" id="draw-color">
+              <value name="COLOUR">
+                <block type="colour_picker">
+                  <title name="COLOUR">#000000</title>
+                </block>
+              </value>
+              <next>
+                <block type="draw_width_inline">
+                  <title name="WIDTH">1000</title>
+                  <next>
+                    <block type="draw_move_by_constant">
+                      <title name="DIR">moveForward</title>
+                      <title name="VALUE">0</title>
+                      <next>
+                        <block type="draw_turn_by_constant">
+                          <title name="DIR">turnRight</title>
+                          <title name="VALUE">90</title>
+                          <next>
+                            <block type="jump_by_constant">
+                              <title name="DIR">jumpForward</title>
+                              <title name="VALUE">250</title>
+                              <next>
+                                <block type="draw_turn_by_constant">
+                                  <title name="DIR">turnLeft</title>
+                                  <title name="VALUE">90</title>
+                                  <next>
+                                    <block type="draw_width_inline">
+                                      <title name="WIDTH">100</title>
+                                      <next>
+                                        <block type="draw_colour" inline="true" id="draw-color">
+                                          <value name="COLOUR">
+                                            <block type="colour_picker">
+                                              <title name="COLOUR">#228b22</title>
+                                            </block>
+                                          </value>
+                                          <next>
+                                            <block type="draw_move_by_constant">
+                                              <title name="DIR">moveBackward</title>
+                                              <title name="VALUE">50</title>
+                                              <next>
+                                                <block type="draw_move_by_constant">
+                                                  <title name="DIR">moveForward</title>
+                                                  <title name="VALUE">400</title>
+                                                  <next>
+                                                    <block type="draw_move_by_constant">
+                                                      <title name="DIR">moveBackward</title>
+                                                      <title name="VALUE">200</title>
+                                                      <next>
+                                                        <block type="draw_turn_by_constant">
+                                                          <title name="DIR">turnLeft</title>
+                                                          <title name="VALUE">90</title>
+                                                          <next>
+                                                            <block type="jump_by_constant">
+                                                            <title name="DIR">jumpForward</title>
+                                                            <title name="VALUE">250</title>
+                                                            <next>
+                                                            <block type="draw_turn_by_constant_dropdown">
+                                                            <title name="DIR">turnRight</title>
+                                                            <title name="VALUE" config="45,60,90,120,180">90</title>
+                                                            <next>
+                                                            <block type="jump_by_constant">
+                                                            <title name="DIR">jumpBackward</title>
+                                                            <title name="VALUE">30</title>
+                                                            <next>
+                                                            <block type="draw_colour" inline="true" id="draw-color">
+                                                            <value name="COLOUR">
+                                                            <block type="colour_picker">
+                                                            <title name="COLOUR">#ffffff</title>
+                                                            </block>
+                                                            </value>
+                                                            <next>
+                                                            <block type="draw_width_inline">
+                                                            <title name="WIDTH">100</title>
+                                                            <next>
+                                                            <block type="draw_move_by_constant">
+                                                            <title name="DIR">moveForward</title>
+                                                            <title name="VALUE">0</title>
+                                                            <next>
+                                                            <block type="jump_by_constant">
+                                                            <title name="DIR">jumpForward</title>
+                                                            <title name="VALUE">30</title>
+                                                            <next>
+                                                            <block type="draw_colour" inline="true" id="draw-color">
+                                                            <value name="COLOUR">
+                                                            <block type="colour_picker">
+                                                            <title name="COLOUR">#000000</title>
+                                                            </block>
+                                                            </value>
+                                                            <next>
+                                                            <block type="draw_move_by_constant">
+                                                            <title name="DIR">moveForward</title>
+                                                            <title name="VALUE">0</title>
+                                                            </block>
+                                                            </next>
+                                                            </block>
+                                                            </next>
+                                                            </block>
+                                                            </next>
+                                                            </block>
+                                                            </next>
+                                                            </block>
+                                                            </next>
+                                                            </block>
+                                                            </next>
+                                                            </block>
+                                                            </next>
+                                                            </block>
+                                                            </next>
+                                                            </block>
+                                                          </next>
+                                                        </block>
+                                                      </next>
+                                                    </block>
+                                                  </next>
+                                                </block>
+                                              </next>
+                                            </block>
+                                          </next>
+                                        </block>
+                                      </next>
+                                    </block>
+                                  </next>
+                                </block>
+                              </next>
+                            </block>
+                          </next>
+                        </block>
+                      </next>
+                    </block>
+                  </next>
+                </block>
+              </next>
+            </block>
+          </next>
+        </block>
+      </xml>
+    </predraw_blocks>
+  </blocks>
+</Artist>

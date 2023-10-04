@@ -44,7 +44,7 @@ class EmailReminderTest < ActiveSupport::TestCase
     email_reminder.send_all_reminder_emails
 
     email = ActionMailer::Base.deliveries.last
-    assert_not_nil email
+    refute_nil email
     assert_equal @request.parent_email, email.to[0]
     assert_equal 1, @request.reload.reminders_sent
   end

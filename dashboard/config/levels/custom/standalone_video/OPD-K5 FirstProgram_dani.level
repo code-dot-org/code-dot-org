@@ -1,0 +1,19 @@
+<StandaloneVideo>
+  <config><![CDATA[{
+  "game_id": 54,
+  "created_at": "2021-05-27T17:26:05.000Z",
+  "level_num": "custom",
+  "user_id": 884,
+  "properties": {
+    "video_key": "writing_first_program",
+    "instructions_important": "false",
+    "long_instructions": "Watch the video below, which explains the very first program that young students will write in [Course A](https://studio.code.org/s/coursea-2018?section_id=2042045). On the next page, you'll get to write a similar program of your own!",
+    "skip_dialog": true,
+    "skip_sound": true,
+    "parent_level_id": 16686,
+    "name_suffix": "_dani"
+  },
+  "published": true,
+  "notes": ""
+}]]></config>
+</StandaloneVideo>

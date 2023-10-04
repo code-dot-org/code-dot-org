@@ -83,4 +83,11 @@ class RedactRestoreUtilsTest < Minitest::Test
 
     assert_equal expected_result, RedactRestoreUtils.redact_data(raw_redact_data, %w[vocabularyDefinition])
   end
+
+  def test_redaction_of_data_with_blockly_plugin
+    raw_redact_data = {'test' => '<xml><block>block_content</block></xml>'}
+    expected_result = {'test' => '[blockly block][0]'}
+
+    assert_equal expected_result, RedactRestoreUtils.redact_data(raw_redact_data, %w[blockly])
+  end
 end

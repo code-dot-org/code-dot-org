@@ -1,0 +1,93 @@
+<Artist>
+  <config><![CDATA[{
+  "properties": {
+    "skin": "artist",
+    "short_instructions": "It's time for your final project. You can make whatever you want!",
+    "x": "50",
+    "y": "200",
+    "start_direction": "90",
+    "is_k1": "true",
+    "skip_instructions_popup": "false",
+    "free_play": "true",
+    "slider_speed": ".2",
+    "embed": "false",
+    "never_autoplay_video": "false",
+    "disable_param_editing": "true",
+    "disable_variable_editing": "false",
+    "use_modal_function_editor": "false",
+    "use_contract_editor": "false",
+    "contract_highlight": "false",
+    "contract_collapse": "false",
+    "examples_highlight": "false",
+    "examples_collapse": "false",
+    "examples_required": "false",
+    "definition_highlight": "false",
+    "definition_collapse": "false",
+    "disable_examples": "false",
+    "impressive": "false",
+    "disable_sharing": "false",
+    "discard_background": "false",
+    "authored_hints": "[]",
+    "long_instructions": "It's time for your final project. You can make whatever you want!",
+    "instructions_important": "false",
+    "hide_share_and_remix": "false",
+    "disable_if_else_editing": "false",
+    "tts_long_instructions_override": "Use what you have learned to draw a picture of what you think the artist saw when he got home.",
+    "parent_level_id": 27831,
+    "name_suffix": "_2021",
+    "encrypted": "false",
+    "mini_rubric": "false",
+    "disable_procedure_autopopulate": "false",
+    "top_level_procedure_autopopulate": "false",
+    "show_type_hints": "false",
+    "validation_enabled": "false",
+    "enable_download_image": "false",
+    "images": "[\r\n  {\"filename\":\"https://images.code.org/ecb15c8443de9ffa4e4c538861939617-image-1617803252359.png\",\"position\":[160,110]},\r\n  {\"filename\":\"https://images.code.org/639700053be7cb39cf5fb4ef28c7075f-image-1617803256238.png\",\"position\":[160,210]},\r\n  {\"filename\":\"https://images.code.org/77ba17b2a0a033f656aee6cffb489522-image-1617822379540.png\",\"position\":[310,10]}\r\n]\r\n\r\n",
+    "display_name": "Artist: Space",
+    "encrypted_examples": [
+
+    ],
+    "thumbnail_url": "https://images.code.org/20098c5475a7d2921aca967c36b65542-image-1617803549795.2021-04-07 09_52_03.gif",
+    "preload_asset_list": null
+  },
+  "game_id": 23,
+  "published": true,
+  "created_at": "2021-04-07T13:47:03.000Z",
+  "level_num": "custom",
+  "user_id": 19,
+  "notes": "",
+  "audit_log": "[{\"changed_at\":\"2017-06-20 22:36:27 +0000\",\"changed\":[\"start_blocks\",\"toolbox_blocks\",\"markdown_instructions\",\"contained_level_names\"],\"changed_by_id\":302,\"changed_by_email\":\"mara.downing@code.org\"},{\"changed_at\":\"2017-06-21 17:18:46 +0000\",\"changed\":[\"start_blocks\",\"toolbox_blocks\",\"contained_level_names\"],\"changed_by_id\":302,\"changed_by_email\":\"mara.downing@code.org\"},{\"changed_at\":\"2019-06-19 14:12:19 +0000\",\"changed\":[\"start_blocks\",\"toolbox_blocks\",\"contained_level_names\",\"preload_asset_list\"],\"changed_by_id\":831,\"changed_by_email\":\"mike.harvey@code.org\"},{\"changed_at\":\"2019-07-03 17:44:08 +0000\",\"changed\":[\"start_blocks\",\"toolbox_blocks\",\"teacher_markdown\",\"preload_asset_list\",\"contained_level_names\"],\"changed_by_id\":958,\"changed_by_email\":\"stephanie.wong@code.org\"},{\"changed_at\":\"2021-03-31 15:12:23 +0000\",\"changed\":[\"start_blocks\",\"toolbox_blocks\",\"short_instructions\",\"long_instructions\",\"teacher_markdown\",\"encrypted_examples\"],\"changed_by_id\":831,\"changed_by_email\":\"mike.harvey@code.org\"},{\"changed_at\":\"2021-03-31 15:20:01 +0000\",\"changed\":[\"start_blocks\",\"toolbox_blocks\",\"encrypted_examples\"],\"changed_by_id\":831,\"changed_by_email\":\"mike.harvey@code.org\"},{\"changed_at\":\"2021-03-31 15:27:00 +0000\",\"changed\":[\"start_blocks\",\"toolbox_blocks\",\"encrypted_examples\",\"images\"],\"changed_by_id\":831,\"changed_by_email\":\"mike.harvey@code.org\"},{\"changed_at\":\"2021-03-31 15:27:15 +0000\",\"changed\":[\"start_blocks\",\"toolbox_blocks\",\"encrypted_examples\",\"images\"],\"changed_by_id\":831,\"changed_by_email\":\"mike.harvey@code.org\"},{\"changed_at\":\"2021-03-31 15:27:54 +0000\",\"changed\":[\"start_blocks\",\"toolbox_blocks\",\"x\",\"y\",\"encrypted_examples\"],\"changed_by_id\":831,\"changed_by_email\":\"mike.harvey@code.org\"},{\"changed_at\":\"2021-03-31 15:32:04 +0000\",\"changed\":[\"start_blocks\",\"toolbox_blocks\",\"encrypted_examples\"],\"changed_by_id\":831,\"changed_by_email\":\"mike.harvey@code.org\"},{\"changed_at\":\"2021-04-07 13:41:27 +0000\",\"changed\":[\"start_blocks\",\"toolbox_blocks\",\"images\"],\"changed_by_id\":831,\"changed_by_email\":\"mike.harvey@code.org\"},{\"changed_at\":\"2021-04-07 13:42:29 +0000\",\"changed\":[\"start_blocks\",\"toolbox_blocks\",\"x\",\"y\",\"images\",\"encrypted_examples\"],\"changed_by_id\":831,\"changed_by_email\":\"mike.harvey@code.org\"},{\"changed_at\":\"2021-04-07 13:46:27 +0000\",\"changed\":[\"start_blocks\",\"toolbox_blocks\",\"display_name\",\"thumbnail_url\",\"encrypted_examples\"],\"changed_by_id\":831,\"changed_by_email\":\"mike.harvey@code.org\"},{\"changed_at\":\"2021-04-07 13:48:29 +0000\",\"changed\":[\"start_blocks\",\"toolbox_blocks\",\"images\",\"display_name\",\"thumbnail_url\"],\"changed_by_id\":831,\"changed_by_email\":\"mike.harvey@code.org\"},{\"changed_at\":\"2021-04-07 13:48:58 +0000\",\"changed\":[\"start_blocks\",\"toolbox_blocks\",\"x\",\"y\",\"images\",\"encrypted_examples\"],\"changed_by_id\":831,\"changed_by_email\":\"mike.harvey@code.org\"},{\"changed_at\":\"2021-04-07 13:49:45 +0000\",\"changed\":[\"start_blocks\",\"toolbox_blocks\",\"x\",\"y\",\"images\",\"encrypted_examples\"],\"changed_by_id\":831,\"changed_by_email\":\"mike.harvey@code.org\"},{\"changed_at\":\"2021-04-07 13:52:50 +0000\",\"changed\":[\"start_blocks\",\"toolbox_blocks\",\"encrypted_examples\"],\"changed_by_id\":831,\"changed_by_email\":\"mike.harvey@code.org\"},{\"changed_at\":\"2021-04-07 19:06:49 +0000\",\"changed\":[\"start_blocks\",\"toolbox_blocks\",\"images\",\"encrypted_examples\"],\"changed_by_id\":831,\"changed_by_email\":\"mike.harvey@code.org\"},{\"changed_at\":\"2021-04-07 19:09:14 +0000\",\"changed\":[\"start_blocks\",\"toolbox_blocks\",\"images\",\"encrypted_examples\"],\"changed_by_id\":831,\"changed_by_email\":\"mike.harvey@code.org\"},{\"changed_at\":\"2021-04-07 19:18:36 +0000\",\"changed\":[\"start_blocks\",\"toolbox_blocks\",\"images\",\"encrypted_examples\"],\"changed_by_id\":831,\"changed_by_email\":\"mike.harvey@code.org\"},{\"changed_at\":\"2021-04-07 19:18:58 +0000\",\"changed\":[\"start_blocks\",\"toolbox_blocks\",\"images\",\"encrypted_examples\"],\"changed_by_id\":831,\"changed_by_email\":\"mike.harvey@code.org\"},{\"changed_at\":\"2021-04-07 19:19:16 +0000\",\"changed\":[\"start_blocks\",\"toolbox_blocks\",\"images\",\"encrypted_examples\"],\"changed_by_id\":831,\"changed_by_email\":\"mike.harvey@code.org\"},{\"changed_at\":\"2021-04-07 19:37:31 +0000\",\"changed\":[\"start_blocks\",\"toolbox_blocks\",\"images\",\"encrypted_examples\"],\"changed_by_id\":831,\"changed_by_email\":\"mike.harvey@code.org\"}]"
+}]]></config>
+  <blocks>
+    <start_blocks>
+      <xml>
+
+</xml>
+    </start_blocks>
+    <toolbox_blocks>
+      <xml>
+        <block type="simple_move_up"/>
+        <block type="simple_move_down"/>
+        <block type="simple_move_right"/>
+        <block type="simple_move_left"/>
+        <block type="controls_repeat_simplified">
+          <title name="TIMES">5</title>
+        </block>
+        <block type="simple_move_up_left"/>
+        <block type="simple_move_up_right"/>
+        <block type="simple_move_down_left"/>
+        <block type="simple_move_down_right"/>
+        <block type="simple_jump_up"/>
+        <block type="simple_jump_left"/>
+        <block type="simple_jump_right"/>
+        <block type="simple_jump_down"/>
+        <block type="draw_line_style_pattern">
+          <title name="VALUE">DEFAULT</title>
+        </block>
+        <block type="draw_colour_simple">
+          <title name="COLOUR">#ff0000</title>
+        </block>
+      </xml>
+    </toolbox_blocks>
+  </blocks>
+</Artist>
