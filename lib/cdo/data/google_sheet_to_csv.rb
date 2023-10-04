@@ -27,7 +27,7 @@ class GSheetToCsv
   end
 
   def import!
-    CDO.log.info "Downloading Googgle File with id: #{@gsheet_id}</b> from Google Drive."
+    CDO.log.info "Downloading Google File with id: #{@gsheet_id} from Google Drive."
 
     @file ||= (@@gdrive ||= Google::Drive.new).file(@gsheet_id)
 
