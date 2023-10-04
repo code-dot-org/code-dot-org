@@ -27,7 +27,7 @@
             -# Step 1 additional content
             - if index === 0
               %p
-                =hoc_s(:hoc_how_to_step_01_educators_desc_02)
+                =hoc_s(:hoc_how_to_step_01_educators_desc_02, locals: {campaign_date: campaign_date("full")})
               %img{src: "/images/group_ipad.jpg", alt: ""}
 
             -# Step 2 additional content
