@@ -3,7 +3,6 @@ import {getStore} from '@cdo/apps/redux';
 import {getLocation} from '../redux/locationPicker';
 import {P5LabInterfaceMode} from '../constants';
 import {TOOLBOX_EDIT_MODE} from '../../constants';
-import {NO_OPTIONS_MESSAGE} from '@cdo/apps/blockly/constants';
 import {animationSourceUrl} from '../redux/animationList';
 import {changeInterfaceMode} from '../actions';
 import i18n from '@cdo/locale';
@@ -54,31 +53,6 @@ function costumeList() {
 }
 function backgroundList() {
   return animations(true);
-}
-function getAllBehaviors() {
-  let allowBehaviorEditing = Blockly.useModalFunctionEditor;
-  const noBehaviorLabel = allowBehaviorEditing
-    ? `${i18n.createBlocklyBehavior()}\u2026`
-    : i18n.behaviorsNotFound();
-  const behaviors = [];
-  Blockly.mainBlockSpace?.getAllBlocks().forEach(function (block) {
-    if (
-      block.type === 'behavior_definition' &&
-      block.getProcedureInfo()?.name &&
-      block.getProcedureInfo()?.id
-    ) {
-      const newOption = [
-        block.getProcedureInfo().name,
-        block.getProcedureInfo().id,
-      ];
-      behaviors.push(newOption);
-    }
-  });
-  behaviors.sort();
-  if (allowBehaviorEditing || behaviors.length === 0) {
-    behaviors.push([noBehaviorLabel, NO_OPTIONS_MESSAGE]);
-  }
-  return behaviors;
 }
 
 // This color palette is limited to colors which have different hues, therefore
@@ -377,60 +351,7 @@ const customInputTypes = {
       )}'}`;
     },
   },
-  behaviorPicker: {
-    addInput(blockly, block, inputConfig, currentInputRow) {
-      currentInputRow
-        .appendField(inputConfig.label)
-        .appendField(
-          new Blockly.FieldDropdown(getAllBehaviors, undefined, undefined),
-          inputConfig.name
-        );
-      let allowBehaviorEditing = Blockly.useModalFunctionEditor;
-      if (
-        window.appOptions && // global appOptions is not available on level edit page
-        appOptions.level.toolbox &&
-        !appOptions.readonlyWorkspace &&
-        !Blockly.hasCategories
-      ) {
-        allowBehaviorEditing = false;
-      }
-      if (allowBehaviorEditing) {
-        const editLabel = new Blockly.FieldIcon(Blockly.Msg.FUNCTION_EDIT);
-        Blockly.cdoUtils.bindBrowserEvent(
-          editLabel.fieldGroup_,
-          'mousedown',
-          block,
-          this.openEditor
-        );
-        currentInputRow.appendField(editLabel);
-      }
-    },
-    generateCode(block, arg) {
-      const invalidBehavior =
-        block.getFieldValue(arg.name) === NO_OPTIONS_MESSAGE;
-      const behaviorId = Blockly.JavaScript.variableDB_?.getName(
-        block.getFieldValue(arg.name),
-        'PROCEDURE'
-      );
-      if (invalidBehavior) {
-        console.warn('No behaviors available');
-        return undefined;
-      } else {
-        return `new Behavior(${behaviorId}, [])`;
-      }
-    },
-    openEditor(e) {
-      e.stopPropagation();
-      if (this.getFieldValue('BEHAVIOR') === NO_OPTIONS_MESSAGE) {
-        Blockly.behaviorEditor.openWithNewFunction();
-      } else {
-        Blockly.behaviorEditor.openEditorForFunction(
-          this,
-          this.getFieldValue('BEHAVIOR')
-        );
-      }
-    },
-  },
+  behaviorPicker: Blockly.customBlocks.behaviorPicker(),
   limitedColourPicker: {
     addInput(blockly, block, inputConfig, currentInputRow) {
       const options = {
