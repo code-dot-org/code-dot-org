@@ -15,6 +15,24 @@ describe I18n::Resources::Dashboard::CurriculumContent::SyncIn do
     assert_equal I18n::Utils::SyncInBase, described_class.superclass
   end
 
+  describe '#translatable_units' do
+    let(:translatable_units) {described_instance.send(:translatable_units)}
+
+    let(:untranslatable_unit) {FactoryBot.create(:unit, name: 'untranslatable')}
+    let(:translatable_unit) {FactoryBot.create(:unit, name: 'translatable')}
+
+    before do
+      untranslatable_unit
+      translatable_unit
+    end
+
+    it 'returns only translatable Unit records' do
+      ScriptConstants.stub_const(:TRANSLATEABLE_UNITS, [translatable_unit.name]) do
+        assert_equal [translatable_unit.name], translatable_units.pluck(:name)
+      end
+    end
+  end
+
   describe '#get_unit_subdirectory' do
     let(:unit_subdirectory) {described_instance.send(:get_unit_subdirectory, unit)}
 
@@ -154,8 +172,7 @@ describe I18n::Resources::Dashboard::CurriculumContent::SyncIn do
     end
 
     before do
-      Unit.stubs(:find_each).yields(unit)
-      ScriptConstants.stubs(:i18n?).with(unit_name).returns(true)
+      described_instance.stubs(:translatable_units).returns([unit])
       Services::I18n::CurriculumSyncUtils::Serializers::ScriptCrowdinSerializer.
         stubs(:new).
         with(unit, scope: {only_numbered_lessons: true}).
@@ -171,20 +188,6 @@ describe I18n::Resources::Dashboard::CurriculumContent::SyncIn do
       expect_i18n_source_file_redaction.in_sequence(execution_sequence)
 
       process_resource
-    end
-
-    context 'when the unit directory is changed' do
-      before do
-        I18nScriptUtils.expects(:unit_directory_change?).with(i18n_source_dir, unit_file_name, i18n_source_file_path).returns(true)
-      end
-
-      it 'does not prepare the i18n source file' do
-        expect_i18n_source_file_redaction.never
-
-        process_resource
-
-        refute File.exist?(i18n_source_file_path)
-      end
     end
 
     context 'when the unit i18n data is blank' do
@@ -221,9 +224,9 @@ describe I18n::Resources::Dashboard::CurriculumContent::SyncIn do
       end
     end
 
-    context 'when the unit should not be internationalized' do
+    context 'when the unit directory is changed' do
       before do
-        ScriptConstants.stubs(:i18n?).with(unit_name).returns(false)
+        I18nScriptUtils.expects(:unit_directory_change?).with(i18n_source_dir, unit_file_name, i18n_source_file_path).returns(true)
       end
 
       it 'does not prepare the i18n source file' do

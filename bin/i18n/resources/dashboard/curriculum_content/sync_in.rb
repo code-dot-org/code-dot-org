@@ -1,9 +1,9 @@
 #!/usr/bin/env ruby
 
-require 'fileutils'
 require 'json'
 
 require_relative '../../../../../dashboard/config/environment'
+require_relative '../../../../../dashboard/lib/script_constants'
 require_relative '../../../../../dashboard/lib/services/i18n/curriculum_sync_utils/serializers'
 require_relative '../../../i18n_script_utils'
 require_relative '../../../redact_restore_utils'
@@ -16,15 +16,16 @@ module I18n
       module CurriculumContent
         class SyncIn < I18n::Utils::SyncInBase
           def process
+            progress_bar.total = translatable_units.size
+
             # Serialize all curriculum data to the I18N source directory.
             #
             # Relies heavily on the custom serializer logic defined in
             # curriculum_sync_utils/serializers to generate a hash of results with
             # translator-readable keys, rather than the basic array that is produced by
             # default.
-            Unit.find_each do |unit|
+            I18nScriptUtils.process_in_threads(translatable_units) do |unit|
               next unless unit.is_migrated?
-              next unless ::ScriptConstants.i18n?(unit.name)
 
               name = "#{unit.name}.json"
               i18n_source_file_path = File.join(I18N_SOURCE_DIR_PATH, get_unit_subdirectory(unit), name)
@@ -35,10 +36,25 @@ module I18n
 
               I18nScriptUtils.write_file(i18n_source_file_path, JSON.pretty_generate(i18n_data))
               redact_file_content(i18n_source_file_path)
+            ensure
+              mutex.synchronize {progress_bar.increment}
             end
           end
 
           private
+
+          def translatable_units
+            # Eager loads Unit resources needed for Curriculum i18n data serialization,
+            # see: Services::I18n::CurriculumSyncUtils::Serializers::ScriptCrowdinSerializer
+            @translatable_units ||= Unit.where(name: ScriptConstants::TRANSLATEABLE_UNITS).includes(
+              :resources, :student_resources, course_version: :reference_guides,
+              lessons: [:objectives, :resources, :vocabularies, {lesson_activities: :activity_sections}],
+            )
+          end
+
+          def mutex
+            @mutex ||= Thread::Mutex.new
+          end
 
           def i18n_data_of(unit)
             # Select only lessons that pass `numbered_lesson?` for consistent `relative_position` values
