@@ -1,165 +1,70 @@
-@import "color";
+@import "color.scss";
+@import "font.scss";
 
-.radioButton {
-  display: flex;
-  gap: 10px;
-  align-items: center;
-  margin: 0;
+.multiSelectGroup {
+  fieldset div {
+    display: inline-block;
+    margin: 0 4px;
+  }
 
-  input[type="radio"] {
+  fieldset div:nth-of-type(1) {
+    margin-left: 0;
+  }
+
+  fieldset div label {
+    display: inline-block;
+    background-color: $neutral_white;
+    border: 1px solid $neutral_dark;
+    color: $neutral_dark;
+    min-width: 30px;
+    text-align: center;
+    border-radius: 25px;
+    white-space: nowrap;
+    margin: 4px 0;
+    padding: 8px 12px;
+    cursor: pointer;
+    -webkit-touch-callout: none;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+    -webkit-tap-highlight-color: transparent;
+  }
+
+  // TODO: once we agree and receive a final approve on what styles of typography
+  //  are and the Label styles added to Typography Elements - remove and rewrite labels with typography elements.
+  label.typographyLabel {
+    font-family: $gotham-bold;
+    color: $neutral_dark;
+    font-size: 16px;
+  }
+
+  fieldset div input[type="checkbox"] {
     position: absolute;
     opacity: 0;
   }
 
-  .radioIcon {
-    position: relative;
-    box-sizing: border-box;
-    margin: 2px;
-    font-size: unset;
-    line-height: unset;
-    border: 2px solid $neutral_dark;
-    border-radius: 50%;
-    background: $neutral_white;
-
-    &::after {
-      content: '';
-      background: $light_primary_500;
-      position: absolute;
-      border-radius: 50%;
-      top: 50%;
-      left: 50%;
-      transform: translate(-50%, -50%);
-      opacity: 0;
-      transition: opacity 0.2s;
-    }
+  fieldset div input[type="checkbox"]:hover + label {
+    background-color: $neutral_dark10;
   }
 
-  input[type="radio"]:checked + .radioIcon {
-    border-color: $light_primary_500;
-
-    &::after {
-      opacity: 1;
-    }
-  }
-
-  .radioButtonLabel {
-    margin: 0;
-    user-select: none;
-    -webkit-user-select: none;
-  }
-
-  // Hover styles
-  &:hover input[type="radio"]:not(:disabled) {
-      + .radioIcon {
-        background: $light_primary_100;
-      }
-    &:checked + .radioIcon {
-      border-color: $light_primary_700;
-      background: $neutral_white;
-
-      &::after {
-        background: $light_primary_700;
-      }
-    }
-  }
-
-  // Focus styles
-  input[type="radio"]:focus-visible + .radioIcon {
-    outline: 2px solid $light_primary_500;
+  fieldset div input[type="checkbox"]:focus + label {
+    outline: 2px solid $brand_primary_default;
     outline-offset: 2px;
   }
 
-  // Pressed styles
-  &:active:has(input[type="radio"]:not(:disabled)),
-  &:has(input[type="radio"]:active:not(:disabled)){
-    .radioIcon {
-      background: $light_primary_100;
-      border-color: $light_primary_500;
-    }
-    &:has(input[type="radio"]:checked) {
-      .radioIcon {
-        background: $light_primary_100;
-        border-color: $light_primary_700;
-
-        &::after {
-          background: $light_primary_700;
-        }
-      }
-    }
+  fieldset div input[type="checkbox"]:checked + label {
+    border: 1px solid $brand_primary_default;
+    background-color: $brand_primary_default;
+    color: $neutral_white;
   }
 
-  // Disabled styles
-  &:has(input[type="radio"]:disabled) {
-    cursor: not-allowed;
-
-    .radioIcon {
-      border-color: $neutral_dark20;
-
-      &::after {
-        background: $neutral_dark20;
-      }
-    }
-
-    .radioButtonLabel {
-      color: $neutral_dark20;
-    }
+  fieldset div input[type="checkbox"]:checked:focus + label {
+    outline: 2px solid $brand_primary_default;
+    outline-offset: 2px;
   }
 
-}
-
-// Sizes
-.radioButton-l {
-  height: 28px;
-
-  .radioIcon {
-    height: 24px;
-    width: 24px;
-
-    &::after {
-      width: 9.33px;
-      height: 9.33px;
-    }
-  }
-}
-
-.radioButton-m {
-  height: 24px;
-
-  .radioIcon {
-    height: 20px;
-    width: 20px;
-
-    &::after {
-      width: 8px;
-      height: 8px;
-    }
-  }
-}
-
-.radioButton-s {
-  height: 22px;
-
-  .radioIcon {
-    height: 18px;
-    width: 18px;
-
-    &::after {
-      width: 7.33px;
-      height: 7.33px;
-    }
-  }
-}
-
-.radioButton-xs {
-  height: 20px;
-
-  .radioIcon {
-    height: 16px;
-    width: 16px;
-
-    &::after {
-      width: 6.67px;
-      height: 6.67px;
-    }
+  fieldset div input[type="checkbox"]:checked:hover + label {
+    background-color: $brand_primary_dark;
   }
 }

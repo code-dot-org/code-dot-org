@@ -40,7 +40,7 @@ export default function SingleSectionSetUp({
           <MultiSelectGroup
             label={i18n.chooseGrades()}
             name="grades"
-            required={true}
+            // required={true}
             options={gradeOptions}
             values={section.grade || []}
             setValues={g => updateSection('grade', g)}
