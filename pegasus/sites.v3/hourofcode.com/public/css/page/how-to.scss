@@ -164,12 +164,12 @@ section.banner {
 
 section.steps {
   position: relative;
-  padding: 0 2rem 5rem;
+  padding: 4rem 2rem 5rem;
 
   .wrapper {
     display: flex;
     justify-content: space-between;
-    align-items: baseline;
+    align-items: start;
     gap: 3rem;
   }
 
@@ -202,6 +202,10 @@ section.steps {
 
     p.tag {
       margin: 10px 0 10px 10px !important;
+
+      &:first-child {
+        margin-top: 0 !important;
+      }
     }
 
     ul {
@@ -269,20 +273,25 @@ section.steps {
 
     .step {
       padding: 4rem 0;
-      border-bottom: 1px solid var(--neutral_dark20);
+      border-top: 1px solid var(--neutral_dark20);
       display: flex;
       align-items: start;
       gap: 1rem;
       position: relative;
+      scroll-margin-top: -2px;
 
       &.divider-accent {
-        border-bottom: 2px solid var(--brand_primary_light);
+        border-top: 2px solid var(--brand_primary_light);
+        scroll-margin-top: 4.5rem;
+      }
+
+      &:first-child {
+        margin-top: 12px;
       }
 
       &:last-child {
-        border: 0;
         padding-bottom: 0;
-        margin-bottom: 2rem;
+        margin-bottom: 0;
       }
     }
 

@@ -12,7 +12,7 @@
     = view :"how-to/steps/side-nav/side_nav_educators"
     %div.steps-wrapper
       - steps_educators_index.times do |index|
-        .step{id: "step-0#{index + 1}", class:"#{'divider-accent' if index === 4 || index === 6}"}
+        .step{id: "step-0#{index + 1}", class:"#{'divider-accent' if index === 0 || index === 5 || index === 7}"}
           .step-counter
             %span
               = index + 1
@@ -26,6 +26,8 @@
 
             -# Step 1 additional content
             - if index === 0
+              %p.tag.day-of
+                =hoc_s(:before_hoc)
               %p
                 =hoc_s(:hoc_how_to_step_01_educators_desc_02, locals: {campaign_date: campaign_date("full")})
               %img{src: "/images/group_ipad.jpg", alt: ""}
