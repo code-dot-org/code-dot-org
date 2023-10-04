@@ -17,7 +17,6 @@ Resources:
       HostedZoneId: !Ref HostedZone
       RecordSets:
         - Name: teachai.org
-          HostedZoneId : !Ref CsedconDotOrgHostedZone
           Type: A
           AliasTarget:
             DNSName: !GetAtt [RedirectDistribution, DomainName]
