@@ -59,40 +59,6 @@ export enum Mode {
   RESULTS_FINAL = 'resultsFinal',
 }
 
-interface ResultsProps {
-  responseJson: string;
-  explanation: string;
-}
-
-const Results: React.FunctionComponent<ResultsProps> = ({
-  responseJson,
-  explanation,
-}) => {
-  const formatJsonString = (jsonString: string) => {
-    return jsonString
-      .replace(/":/g, '": ')
-      .replace(/","/g, '", "')
-      .replace(/,"/g, ', "');
-  };
-
-  return (
-    <div>
-      <Heading5>Code</Heading5>
-
-      <pre className={classNames(moduleStyles.pre, moduleStyles.code)}>
-        ai({formatJsonString(responseJson)})
-      </pre>
-
-      <div style={{display: explanation !== '' ? 'block' : 'none'}}>
-        <Heading5>Explanation</Heading5>
-        <pre className={classNames(moduleStyles.pre, moduleStyles.explanation)}>
-          {explanation}
-        </pre>
-      </div>
-    </div>
-  );
-};
-
 interface DanceAiProps {
   onClose: () => void;
 }
