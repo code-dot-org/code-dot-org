@@ -204,7 +204,7 @@ const MultipleSectionsAssigner = ({
         <Heading5>{i18n.yourSectionsList()}</Heading5>
         <div
           role="region"
-          aria-label="List of all teacher-created sections available to assign"
+          aria-label={i18n.sectionSelectionLabel()}
           className={moduleStyle.sectionListOptionsContainer}
           tabIndex="0"
         >
