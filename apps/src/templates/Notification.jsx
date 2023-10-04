@@ -1,11 +1,13 @@
 import React, {useState} from 'react';
 import PropTypes from 'prop-types';
 import {connect} from 'react-redux';
+import ReactTooltip from 'react-tooltip';
 import color from '@cdo/apps/util/color';
 import FontAwesome from '@cdo/apps/templates/FontAwesome';
 import Button from './Button';
 import trackEvent from '../util/trackEvent';
 import firehoseClient from '@cdo/apps/lib/util/firehose';
+import _ from 'lodash';
 
 export const NotificationType = {
   information: 'information',
@@ -33,6 +35,7 @@ const Notification = ({
   dismissible,
   firehoseAnalyticsData,
   googleAnalyticsId,
+  iconStyles,
   isRtl,
   newWindow,
   notice,
@@ -40,6 +43,7 @@ const Notification = ({
   onButtonClick,
   responsiveSize,
   type,
+  tooltipText,
   width,
 }) => {
   const [open, setOpen] = useState(true);
@@ -120,11 +124,13 @@ const Notification = ({
 
   const colorStyles = styles.colors[type];
 
+  const tooltipId = _.uniqueId();
+
   return (
     <div className="announcement-notification">
       <div style={{...colorStyles, ...mainStyle}}>
         {type !== NotificationType.course && (
-          <div style={{...styles.iconBox, ...colorStyles}}>
+          <div style={{...styles.iconBox, ...colorStyles, ...iconStyles}}>
             <FontAwesome icon={icons[type]} style={styles.icon} />
           </div>
         )}
@@ -135,7 +141,19 @@ const Notification = ({
           }}
         >
           <div style={styles.wordBox}>
-            <div style={{...colorStyles, ...styles.notice}}>{notice}</div>
+            <div style={{...colorStyles, ...styles.notice}}>
+              {notice}
+              {tooltipText ? (
+                <span>
+                  <span data-tip data-for={tooltipId} style={styles.tooltip}>
+                    <FontAwesome icon="info-circle" />
+                  </span>
+                  <ReactTooltip id={tooltipId} effect="solid">
+                    <p style={styles.tooltipText}>{tooltipText}</p>
+                  </ReactTooltip>
+                </span>
+              ) : null}
+            </div>
             <div style={styles.details}>
               {details}
               {detailsLinkText && detailsLink && (
@@ -204,6 +222,7 @@ Notification.propTypes = {
   buttonText: PropTypes.string,
   buttonLink: PropTypes.string,
   dismissible: PropTypes.bool.isRequired,
+  iconStyles: PropTypes.object,
   onDismiss: PropTypes.func,
   newWindow: PropTypes.bool,
   // googleAnalyticsId and firehoseAnalyticsData are only used when a primary button is provided.
@@ -214,6 +233,9 @@ Notification.propTypes = {
   isRtl: PropTypes.bool.isRequired,
   onButtonClick: PropTypes.func,
   buttonClassName: PropTypes.string,
+
+  // Optionally can provide a tooltip after the title with text on hover.
+  tooltipText: PropTypes.string,
 
   // Optionally can provide an array of buttons.
   buttonsStyles: PropTypes.object,
@@ -358,6 +380,18 @@ const styles = {
   },
   clear: {
     clear: 'both',
+  },
+  tooltip: {
+    cursor: 'pointer',
+    marginLeft: '5px',
+    marginRight: '5px',
+    fontSize: '14px',
+    verticalAlign: 'middle',
+    color: color.light_gray_500,
+  },
+  tooltipText: {
+    color: color.white,
+    margin: 0,
   },
 };
 
