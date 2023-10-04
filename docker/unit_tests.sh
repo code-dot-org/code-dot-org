@@ -4,9 +4,7 @@
 # In most cases, you will not run this script directly, but instead
 # use docker-compose to run using the unit-tests-compose.yml file in this directory. See instructions in that file.
 
-set -xe
-
-mispipe "echo 'Starting timestamp'" ts
+set -e
 
 export CI=true
 export RAILS_ENV=test
@@ -37,17 +35,10 @@ google_maps_api_key: boguskey
 dashboard_db_reader: \"mysql://readonly@localhost/dashboard_test\"
 " >> locals.yml
 echo "Wrote secrets from env vars into locals.yml."
+
 set -x
 
 bundle install --quiet
-
-# name: rake install
-RAKE_VERBOSE=true mispipe "bundle exec rake install" "ts '[%Y-%m-%d %H:%M:%S]'"
-
-# name: rake build
-RAKE_VERBOSE=true mispipe "bundle exec rake build" "ts '[%Y-%m-%d %H:%M:%S]'"
-
-# unit tests
+bundle exec rake install
+bundle exec rake build
 bundle exec rake circle:run_tests
-
-mispipe "echo 'Ending timestamp'" ts
