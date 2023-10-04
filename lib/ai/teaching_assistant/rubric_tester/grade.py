@@ -101,8 +101,9 @@ class Grade:
         if not isinstance(tsv_data, list):
             raise InvalidResponseError('invalid format')
 
-        if not all((set(row.keys()) & set(expected_columns)) == set(expected_columns) for row in tsv_data):
-            raise InvalidResponseError('incorrect column names')
+        for row in tsv_data:
+            if not (set(row.keys()) & set(expected_columns)) == set(expected_columns):
+                raise InvalidResponseError(f"incorrect column names: {repr(list(row.keys()))}")
 
         key_concepts_from_response = list(set(row["Key Concept"] for row in tsv_data))
         if sorted(rubric_key_concepts) != sorted(key_concepts_from_response):
