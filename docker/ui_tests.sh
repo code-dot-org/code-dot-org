@@ -32,39 +32,39 @@ curl -fsSL https://github.com/rbenv/rbenv-installer/raw/main/bin/rbenv-doctor | 
 # Need to actually write all the commented out lines also
 set +x
 echo "
-netsim_redis_groups:
-- master: redis://ui-tests-redis:6379
+animations_s3_directory: animations_circle/$CIRCLE_BUILD_NUM
+assets_s3_directory: assets_circle/$CIRCLE_BUILD_NUM
+build_apps: true
+build_dashboard: true
+build_i18n: false
+build_pegasus: true
 bundler_use_sudo: false
-properties_encryption_key: $PROPERTIES_ENCRYPTION_KEY
 cloudfront_key_pair_id: $CLOUDFRONT_KEY_PAIR_ID
 cloudfront_private_key: \"$CLOUDFRONT_PRIVATE_KEY\"
-saucelabs_username: $SAUCE_USERNAME
-saucelabs_authkey: $SAUCE_ACCESS_KEY
-ignore_eyes_mismatches: true
+dashboard_db_reader: \"mysql://readonly@localhost/dashboard_test\"
+dashboard_enable_pegasus: true
+dashboard_port: 3000
+dashboard_workers: 5
 disable_all_eyes_running: true
+files_s3_directory: files_circle/$CIRCLE_BUILD_NUM
 firebase_name: $FIREBASE_NAME
 firebase_secret: $FIREBASE_SECRET
 firebase_shared_secret: $FIREBASE_SHARED_SECRET
-use_my_apps: true
-build_dashboard: true
-build_pegasus: true
-build_apps: true
-build_i18n: false
+ignore_eyes_mismatches: true
+libraries_s3_directory: libraries_circle/$CIRCLE_BUILD_NUM
 localize_apps: true
-dashboard_enable_pegasus: true
-dashboard_workers: 5
-skip_seed_all: true
+netsim_redis_groups:
+- master: redis://ui-tests-redis:6379
 no_https_store: true
 override_dashboard: \"localhost-studio.code.org\"
 override_pegasus: \"localhost.code.org\"
-dashboard_port: 3000
 pegasus_port: 3000
-animations_s3_directory: animations_circle/$CIRCLE_BUILD_NUM
-assets_s3_directory: assets_circle/$CIRCLE_BUILD_NUM
-files_s3_directory: files_circle/$CIRCLE_BUILD_NUM
+properties_encryption_key: $PROPERTIES_ENCRYPTION_KEY
+saucelabs_authkey: $SAUCE_ACCESS_KEY
+saucelabs_username: $SAUCE_USERNAME
+skip_seed_all: true
 sources_s3_directory: sources_circle/$CIRCLE_BUILD_NUM
-libraries_s3_directory: libraries_circle/$CIRCLE_BUILD_NUM
-dashboard_db_reader: \"mysql://readonly@localhost/dashboard_test\"
+use_my_apps: true
 " >> locals.yml
 echo "Wrote secrets from env vars into locals.yml."
 
