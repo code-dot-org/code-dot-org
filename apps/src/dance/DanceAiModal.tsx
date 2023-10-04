@@ -1,5 +1,5 @@
-import React, {useState} from 'react';
-import moduleStyles from './dance-ai.module.scss';
+import React, {useState, useEffect} from 'react';
+import moduleStyles from './dance-ai-modal.module.scss';
 import AccessibleDialog from '@cdo/apps/templates/AccessibleDialog';
 import Button from '@cdo/apps/templates/Button';
 import HttpClient from '@cdo/apps/util/HttpClient';
@@ -11,6 +11,7 @@ import {StrongText, Heading5} from '@cdo/apps/componentLibrary/typography';
 import classNames from 'classnames';
 import FontAwesome from '@cdo/apps/templates/FontAwesome';
 import {AiModalItem, AiModalReturnedItem} from './types';
+import {BlockSvg} from 'blockly/core';
 const Typist = require('react-typist').default;
 
 const aiBotBorder = require('@cdo/static/dance/ai-bot-border.png');
@@ -19,7 +20,7 @@ const promptString = 'Generate a scene using this mood:';
 
 const doAi = async (input: string) => {
   const systemPrompt =
-    'You are a helper which can accept a request for a mood or atmosphere, and you then generate JSON like the following format: {backgroundColor: "black", backgroundEffect: "splatter", foregroundEffect: "rain"}.  The only valid values for backgroundEffect are circles, color_cycle, diamonds, disco_ball, fireworks, swirl, kaleidoscope, lasers, splatter, rainbow, snowflakes, galaxy, sparkles, spiral, disco, stars.  The only valid values for backgroundColor are rave, cool, electronic, iceCream, neon, tropical, vintage, warm.  The only valid values for foregroundEffect are bubbles, confetti, hearts_red, music_notes, pineapples, pizzas, smiling_poop, rain, floating_rainbows, smile_face, spotlight, color_lights, raining_tacos.  Make sure you always generate all three of those values.  Also, add a field called "explanation" to the result JSON, which contains a simple explanation of why you chose the values that you did, at the reading level of a 5th-grade school student, in one sentence of less than forty words.';
+    'You are a helper which can accept a request for a mood or atmosphere, and you then generate JSON like the following format: {backgroundColor: "black", backgroundEffect: "splatter", foregroundEffect: "rain", dancers: {type: "frogs", count: 3, layout: "circle"}}.  The only valid values for backgroundEffect are circles, color_cycle, diamonds, disco_ball, fireworks, swirl, kaleidoscope, lasers, splatter, rainbow, snowflakes, galaxy, sparkles, spiral, disco, stars.  The only valid values for backgroundColor are rave, cool, electronic, iceCream, neon, tropical, vintage, warm.  The only valid values for foregroundEffect are bubbles, confetti, hearts_red, music_notes, pineapples, pizzas, smiling_poop, rain, floating_rainbows, smile_face, spotlight, color_lights, raining_tacos.  Make sure you always generate all three of these values.  The dancers sub-object is optional, but when included, it has three parameters of its own: type must be one of the following: alien, bear, cat, dog, duck, frog, moose, pineapple, robot, shark, sloth, unicorn; count must be between 2 and 40 inclusive; layout must be one of the following: border, inner, diamond, circle, grid, top, row, bottom, left, column, right, x, plus, spiral, random.   Also, add a field called "explanation" to the result JSON, which contains a simple explanation of why you chose the values that you did, at the reading level of a 5th-grade school student, in one sentence of less than forty words.';
 
   const messages = [
     {
@@ -55,6 +56,7 @@ export enum Mode {
   SELECT_INPUTS = 'selectInputs',
   GENERATING = 'generating',
   RESULTS = 'results',
+  RESULTS_FINAL = 'resultsFinal',
 }
 
 interface DanceAiProps {
@@ -72,13 +74,25 @@ const DanceAiModal: React.FunctionComponent<DanceAiProps> = ({onClose}) => {
   const [mode, setMode] = useState(Mode.SELECT_INPUTS);
   const [currentInputSlot, setCurrentInputSlot] = useState(0);
   const [inputs, setInputs] = useState<string[]>([]);
-  const [responseParams, setResponseParams] = useState<string>('');
+  const [responseJson, setResponseJson] = useState<string>('');
   const [responseExplanation, setResponseExplanation] = useState<string>('');
   const [typingDone, setTypingDone] = useState<boolean>(false);
 
   const currentAiModalField = useSelector(
     (state: {dance: DanceState}) => state.dance.currentAiModalField
   );
+
+  useEffect(() => {
+    const currentValue = currentAiModalField?.getValue();
+    console.log(currentValue);
+
+    if (currentValue) {
+      setMode(Mode.RESULTS_FINAL);
+
+      // The block value will be set to this JSON.
+      setResponseJson(currentValue);
+    }
+  }, [currentAiModalField]);
 
   const getImageUrl = (id: string) => {
     return `/blockly/media/dance/ai/${id}.png`;
@@ -129,28 +143,132 @@ const DanceAiModal: React.FunctionComponent<DanceAiProps> = ({onClose}) => {
   };
 
   const startAi = async (value: string) => {
-    const response = await doAi(value);
+    const responseJsonString = await doAi(value);
+    const response = JSON.parse(responseJsonString);
 
-    const params = JSON.parse(response);
-
-    currentAiModalField?.setValue(response);
-
-    const picked = (({
+    // "Pick" a subset of fields to be used.  Specifically, we exclude the
+    // explanation, since we don't want it becoming part of the code.
+    const pickedResponse = (({
       backgroundEffect,
       backgroundColor,
       foregroundEffect,
-    }) => ({backgroundEffect, backgroundColor, foregroundEffect}))(params);
+      dancers,
+    }) => ({backgroundEffect, backgroundColor, foregroundEffect, dancers}))(
+      response
+    );
+    const pickedResponseJson = JSON.stringify(pickedResponse);
 
-    const pickedString = JSON.stringify(picked)
-      .replace(/":"/g, '": "')
-      .replace(/","/g, '", "');
-    setResponseParams(`ai(${pickedString})`);
-    setResponseExplanation(params.explanation);
+    // The block value will be set to this JSON.
+    setResponseJson(pickedResponseJson);
+
+    // The user will see this explanation.
+    setResponseExplanation(response.explanation);
+  };
+
+  const convertBlocks = () => {
+    const params = JSON.parse(responseJson);
+
+    const blocksSvg = [
+      Blockly.getMainWorkspace().newBlock(
+        'Dancelab_setForegroundEffect'
+      ) as BlockSvg,
+      Blockly.getMainWorkspace().newBlock(
+        'Dancelab_setBackgroundEffectWithPalette'
+      ) as BlockSvg,
+      Blockly.getMainWorkspace().newBlock(
+        'Dancelab_makeNewDanceSpriteGroup'
+      ) as BlockSvg,
+    ];
+
+    // Foreground block.
+    blocksSvg[0].setFieldValue(params.foregroundEffect, 'EFFECT');
+
+    // Background block.
+    blocksSvg[1].setFieldValue(params.backgroundEffect, 'EFFECT');
+    blocksSvg[1].setFieldValue(params.backgroundColor, 'PALETTE');
+
+    // Dancers block.
+    blocksSvg[2].setFieldValue(params.dancers.type.toUpperCase(), 'COSTUME');
+    blocksSvg[2].setFieldValue(params.dancers.count.toString(), 'N');
+    blocksSvg[2].setFieldValue(params.dancers.layout, 'LAYOUT');
+
+    const origBlock = currentAiModalField?.getSourceBlock();
+
+    if (
+      origBlock &&
+      currentAiModalField &&
+      blocksSvg[0].previousConnection &&
+      blocksSvg[1].previousConnection &&
+      blocksSvg[2].previousConnection &&
+      blocksSvg[2].nextConnection
+    ) {
+      blocksSvg[0].nextConnection.connect(blocksSvg[1].previousConnection);
+      blocksSvg[1].nextConnection.connect(blocksSvg[2].previousConnection);
+
+      if (!origBlock.getPreviousBlock()) {
+        // This block isn't attached to anything at all.
+        const blockXY = origBlock.getRelativeToSurfaceXY();
+        blocksSvg[0].moveTo(blockXY);
+      } else if (!origBlock?.getPreviousBlock()?.nextConnection) {
+        // origBlock is the first input (for example, to a setup block),
+        // without a regular code block above it.
+        origBlock
+          ?.getPreviousBlock()
+          ?.getInput('DO')
+          ?.connection?.connect(blocksSvg[0].previousConnection);
+      } else {
+        // origBlock has a regular block above it.
+        origBlock
+          ?.getPreviousBlock()
+          ?.nextConnection?.connect(blocksSvg[0].previousConnection);
+      }
+
+      origBlock
+        ?.getNextBlock()
+        ?.previousConnection?.connect(blocksSvg[2].nextConnection);
+
+      blocksSvg.forEach(blockSvg => {
+        blockSvg.initSvg();
+        blockSvg.render();
+      });
+
+      origBlock.dispose(false);
+
+      // End modal.
+      dispatch(setCurrentAiModalField(undefined));
+    }
   };
 
   const handleDoneClick = () => {
     dispatch(setCurrentAiModalField(undefined));
   };
+
+  const formatJsonString = (jsonString: string) => {
+    return jsonString
+      .replace(/":/g, '": ')
+      .replace(/","/g, '", "')
+      .replace(/,"/g, ', "');
+  };
+
+  // We might or might not wrap this with Typist.  Typist doesn't seem to cope
+  // with this being a separate functional component.
+  const resultsComponent = (mode === Mode.RESULTS ||
+    mode === Mode.RESULTS_FINAL) && (
+    <div>
+      <Heading5>Code</Heading5>
+
+      <pre className={classNames(moduleStyles.pre, moduleStyles.code)}>
+        ai({formatJsonString(responseJson)})
+      </pre>
+
+      <div style={{display: responseExplanation !== '' ? 'block' : 'none'}}>
+        <Heading5>Explanation</Heading5>
+        <pre className={classNames(moduleStyles.pre, moduleStyles.explanation)}>
+          {responseExplanation}
+        </pre>
+      </div>
+    </div>
+  );
 
   return (
     <AccessibleDialog
@@ -164,14 +282,16 @@ const DanceAiModal: React.FunctionComponent<DanceAiProps> = ({onClose}) => {
             {' '}
             {mode === Mode.SELECT_INPUTS
               ? 'Make a sentence by selecting some emoji.'
-              : mode === Mode.GENERATING && responseParams === ''
+              : mode === Mode.GENERATING && responseJson === ''
               ? 'The AI is processing your sentence.'
-              : mode === Mode.GENERATING && responseParams !== ''
+              : mode === Mode.GENERATING && responseJson !== ''
               ? 'The AI is ready to generate results!'
               : mode === Mode.RESULTS && !typingDone
               ? 'The AI is generating results.'
               : mode === Mode.RESULTS && typingDone
               ? 'This is the result generated by the AI.'
+              : mode === Mode.RESULTS_FINAL
+              ? 'This was the result generated by the AI.'
               : undefined}
           </StrongText>
         </div>
@@ -212,7 +332,7 @@ const DanceAiModal: React.FunctionComponent<DanceAiProps> = ({onClose}) => {
           }}
         >
           {(mode === Mode.SELECT_INPUTS ||
-            (mode === Mode.GENERATING && responseParams === '')) && (
+            (mode === Mode.GENERATING && responseJson === '')) && (
             <div className={moduleStyles.prompt}>
               {promptString}
               {Array.from(Array(SLOT_COUNT).keys()).map(index => {
@@ -250,7 +370,8 @@ const DanceAiModal: React.FunctionComponent<DanceAiProps> = ({onClose}) => {
         <div id="bot-area" className={moduleStyles.botArea}>
           {((mode === Mode.SELECT_INPUTS && currentInputSlot >= SLOT_COUNT) ||
             mode === Mode.GENERATING ||
-            mode === Mode.RESULTS) && (
+            mode === Mode.RESULTS ||
+            mode === Mode.RESULTS_FINAL) && (
             <div className={moduleStyles.botContainer}>
               <img
                 src={aiBotBorder}
@@ -262,12 +383,14 @@ const DanceAiModal: React.FunctionComponent<DanceAiProps> = ({onClose}) => {
                     ? moduleStyles.botAppearCentered
                     : mode === Mode.RESULTS
                     ? moduleStyles.botCenterToLeft
+                    : mode === Mode.RESULTS_FINAL
+                    ? moduleStyles.botLeft
                     : undefined
                 )}
               />
             </div>
           )}
-          {mode === Mode.GENERATING && responseParams === '' && (
+          {mode === Mode.GENERATING && responseJson === '' && (
             <div className={moduleStyles.spinner}>
               <FontAwesome
                 title={undefined}
@@ -281,23 +404,25 @@ const DanceAiModal: React.FunctionComponent<DanceAiProps> = ({onClose}) => {
         <div
           id="outputs-area"
           className={moduleStyles.outputsArea}
-          style={{zIndex: mode === Mode.RESULTS ? 1 : 0}}
+          style={{
+            zIndex:
+              mode === Mode.RESULTS || mode === Mode.RESULTS_FINAL ? 1 : 0,
+          }}
         >
           {mode === Mode.RESULTS && (
             <Typist
               startDelay={1500}
-              avgTypingDelay={30}
+              avgTypingDelay={20}
               cursor={{show: false}}
               onTypingDone={() => {
                 setTypingDone(true);
+                currentAiModalField?.setValue(responseJson);
               }}
             >
-              <Heading5>Code</Heading5>
-              <pre className={moduleStyles.pre}>{responseParams}</pre>
-              <Heading5>Explanation</Heading5>
-              <pre className={moduleStyles.pre}>{responseExplanation}</pre>
+              {resultsComponent}
             </Typist>
           )}
+          {mode === Mode.RESULTS_FINAL && resultsComponent}
         </div>
 
         <div className={moduleStyles.buttonsArea}>
@@ -311,7 +436,7 @@ const DanceAiModal: React.FunctionComponent<DanceAiProps> = ({onClose}) => {
             />
           )}
 
-          {mode === Mode.GENERATING && responseParams !== '' && (
+          {mode === Mode.GENERATING && responseJson !== '' && (
             <Button
               id="done"
               text={'Generate results'}
@@ -321,14 +446,24 @@ const DanceAiModal: React.FunctionComponent<DanceAiProps> = ({onClose}) => {
             />
           )}
 
-          {mode === Mode.RESULTS && typingDone && (
-            <Button
-              id="done"
-              text={'Done'}
-              onClick={handleDoneClick}
-              color={Button.ButtonColor.brandSecondaryDefault}
-              className={moduleStyles.button}
-            />
+          {((mode === Mode.RESULTS && typingDone) ||
+            mode === Mode.RESULTS_FINAL) && (
+            <div>
+              <Button
+                id="convert"
+                text={'Convert'}
+                onClick={convertBlocks}
+                color={Button.ButtonColor.brandSecondaryDefault}
+                className={moduleStyles.button}
+              />
+              <Button
+                id="done"
+                text={'Use'}
+                onClick={handleDoneClick}
+                color={Button.ButtonColor.brandSecondaryDefault}
+                className={moduleStyles.button}
+              />
+            </div>
           )}
         </div>
       </div>
