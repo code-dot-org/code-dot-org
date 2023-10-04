@@ -16,7 +16,7 @@ export const FinishButton = () => (
     type="button"
     id="finishButton"
     className="share"
-    style={{fontSize: 25}}
+    style={{fontSize: 100}}
   >
     <img src="/blockly/media/1x1.gif" />
     {msg.finish()}
