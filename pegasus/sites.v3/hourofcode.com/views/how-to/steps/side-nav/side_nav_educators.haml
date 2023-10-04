@@ -9,8 +9,8 @@
 %nav.steps-nav{"aria-label": hoc_s(:hoc_how_to_nav_sidebar_aria_label)}
   %ul
     - steps_nav_index.times do |index|
-      %a{href: "#step-0#{index + 1}"}
-        %li
+      %li
+        %a{href: "#step-0#{index + 1}"}
           - if index === 0 || index === 5 || index === 7
             %p.tag
               = steps_nav_tag[index]

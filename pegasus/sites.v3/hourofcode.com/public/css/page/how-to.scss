@@ -188,7 +188,7 @@ section.steps {
   nav.steps-nav {
     width: 28%;
     position: sticky;
-    top: 2rem;
+    top: 4rem;
     border-right: 1px solid var(--neutral_dark20);
 
     @media screen and (max-width: $width-md) {
@@ -213,22 +213,21 @@ section.steps {
         &:last-child {
           margin-bottom: 0;
         }
+      }
 
-        &.selected {
+      li {
+        @include reset-list-item-spacing;
+
+        &::before {
+          @include remove-list-dot;
+        }
+
+        &.active {
           border-right: 2px solid var(--brand_primary_default);
 
           p.body-two {
             font-family: var(--main-font-bold);
           }
-        }
-      }
-
-      li {
-        @include reset-list-item-spacing;
-        padding-right: 1rem;
-
-        &::before {
-          @include remove-list-dot;
         }
 
         p {
@@ -239,7 +238,7 @@ section.steps {
             margin-bottom: 0.25rem;
           }
 
-          .body-two {
+          &.body-two {
             padding-right: 1rem;
           }
         }

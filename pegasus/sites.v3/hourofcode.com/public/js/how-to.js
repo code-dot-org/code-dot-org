@@ -1,6 +1,5 @@
 const menuButton = document.querySelector("ul.how-to-nav button.menu-button");
 const menuList = document.querySelector("ul.how-to-nav ul.menu-list");
-//const sideNavList = document.querySelector("ul.steps-nav a");
 
 // Dropdown menu in hero banner
 menuButton.onclick = () => {
@@ -19,4 +18,31 @@ document.body.addEventListener("click", (event) => {
     menuList.style.display = "none";
     menuButton.classList.remove("rotate");
   }
+});
+
+// Sticky scroller styles on steps section navigation
+window.addEventListener("DOMContentLoaded", () => {
+  const options = {
+    rootMargin: "-10% 0px -75%",
+  };
+
+  const observer = new IntersectionObserver((entries) => {
+    entries.forEach((entry) => {
+      const id = entry.target.getAttribute("id");
+      const navLink = document.querySelector(
+        `nav.steps-nav ul a[href="#${id}"]`
+      );
+
+      if (entry.intersectionRatio > 0) {
+        navLink.parentElement.classList.add("active");
+      } else {
+        navLink.parentElement.classList.remove("active");
+      }
+    });
+  }, options);
+
+  // Track sections
+  document.querySelectorAll("div.step[id]").forEach((section) => {
+    observer.observe(section);
+  });
 });
