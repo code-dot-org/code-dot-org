@@ -52,7 +52,7 @@ apt_package 'enscript'
 # it isn't. Ideally, we would be able to install the tool with this code, but
 # the process is sufficiently interactive and we have to do it sufficiently
 # rarely that we think documentation will suffice for now.
-if node.chef_environment == 'staging' || node.chef_environment == 'adhoc'
+if node.chef_environment == 'staging'
   apt_package 'unison'
   dropbox_daemon_file = File.join(node[:home], '.dropbox-dist/dropboxd')
   unless File.exist?(dropbox_daemon_file)
