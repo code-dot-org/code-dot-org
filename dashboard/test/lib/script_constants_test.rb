@@ -34,11 +34,27 @@ class ScriptConstantsTest < ActiveSupport::TestCase
   end
 
   [
-    *ScriptConstants::CATEGORIES[:csf], *ScriptConstants::CATEGORIES[:csf_2018], *ScriptConstants::CATEGORIES[:csf_2019],
-    *ScriptConstants::CATEGORIES[:csf_2020], *ScriptConstants::CATEGORIES[:csf_2021], *ScriptConstants::CATEGORIES[:csf_2022],
-    *ScriptConstants::CATEGORIES[:csd], *ScriptConstants::CATEGORIES[:csd_2018], *ScriptConstants::CATEGORIES[:csd_2019],
-    *ScriptConstants::CATEGORIES[:csd_2021], *ScriptConstants::CATEGORIES[:csd_2022], *ScriptConstants::CATEGORIES[:twenty_hour],
-    *ScriptConstants::CATEGORIES[:hoc], ScriptConstants::JIGSAW_NAME, *ScriptConstants::ADDITIONAL_I18N_UNITS
+    *CATEGORIES[:csd],
+    *CATEGORIES[:csd_2018],
+    *CATEGORIES[:csd_2019],
+    *CATEGORIES[:csd_2021],
+    *CATEGORIES[:csd_2022],
+    *CATEGORIES[:csd_2023],
+
+    *CATEGORIES[:csf],
+    *CATEGORIES[:csf_2018],
+    *CATEGORIES[:csf_2019],
+    *CATEGORIES[:csf_2020],
+    *CATEGORIES[:csf_2021],
+    *CATEGORIES[:csf_2022],
+    *CATEGORIES[:csf_2023],
+    *CATEGORIES[:csf_international],
+
+    *CATEGORIES[:twenty_hour],
+    *CATEGORIES[:hoc],
+    *ADDITIONAL_I18N_UNITS,
+    *TRANSLATEABLE_CSC_UNITS,
+    JIGSAW_NAME,
   ].uniq.each do |script|
     test "ScriptConstants.i18n? returns true when the script is #{script}" do
       assert ScriptConstants.i18n?(script)
