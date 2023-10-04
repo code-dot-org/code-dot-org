@@ -243,12 +243,12 @@ class Foorm::Form < ApplicationRecord
       # Put new headers first, as they generally contain important general
       # information (eg, user_id, pd_workshop_id, etc.)
       potential_new_headers = answers.keys.map do |question_id|
-          if headers.key?(question_id)
-            [nil, nil]
-          else
-            [question_id, question_id]
-          end
-        end.to_h.compact
+        if headers.key?(question_id)
+          [nil, nil]
+        else
+          [question_id, question_id]
+        end
+      end.to_h.compact
 
       headers = potential_new_headers.merge headers
 
@@ -355,7 +355,7 @@ class Foorm::Form < ApplicationRecord
 
   def readable_questions_with_facilitator_number(questions, number)
     questions[:facilitator].map do |question_id, question_text|
-        [question_id + "_#{number}", "Facilitator #{number}: " + question_text]
+      [question_id + "_#{number}", "Facilitator #{number}: " + question_text]
     end.to_h
   end
 

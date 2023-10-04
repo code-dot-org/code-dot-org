@@ -124,7 +124,7 @@ class Foorm::Submission < ApplicationRecord
     return {} unless workshop_metadata.facilitator_specific?
 
     formatted_answers.map do |question_id, answer_text|
-        [question_id + "_#{number}", answer_text]
+      [question_id + "_#{number}", answer_text]
     end.to_h
   end
 
