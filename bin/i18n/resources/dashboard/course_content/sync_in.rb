@@ -259,11 +259,9 @@ module I18n
           end
 
           def write_to_yml(type, strings)
-            dashboard_dir = CDO.dir(I18N_SOURCE_DIR, DASHBOARD_DIR_NAME)
+            FileUtils.mkdir_p(I18n::Resources::Dashboard::I18N_SOURCE_DIR_PATH)
 
-            FileUtils.mkdir_p(dashboard_dir)
-
-            File.open(File.join(dashboard_dir, "#{type}.yml"), 'w') do |file|
+            File.open(File.join(I18n::Resources::Dashboard::I18N_SOURCE_DIR_PATH, "#{type}.yml"), 'w') do |file|
               # Format strings for consumption by the rails i18n engine
               formatted_data = {
                 'en' => {
