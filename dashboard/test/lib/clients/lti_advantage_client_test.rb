@@ -2,6 +2,8 @@ require 'test_helper'
 require_relative '../../../lib/clients/lti_advantage_client'
 
 class LtiAdvantageClientTest < ActiveSupport::TestCase
+  include LtiAccessToken
+
   test 'throws an error if the API returns a non-200 response' do
     HTTParty.stubs(:get).returns(OpenStruct.new({code: 400}))
     LtiAccessToken.stubs(:get_access_token).returns('fake_access_token')
