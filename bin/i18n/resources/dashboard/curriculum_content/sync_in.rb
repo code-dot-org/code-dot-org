@@ -24,7 +24,7 @@ module I18n
             # curriculum_sync_utils/serializers to generate a hash of results with
             # translator-readable keys, rather than the basic array that is produced by
             # default.
-            I18nScriptUtils.process_in_threads(translatable_units) do |unit|
+            translatable_units.find_each do |unit|
               next unless unit.is_migrated?
 
               name = "#{unit.name}.json"
@@ -37,7 +37,7 @@ module I18n
               I18nScriptUtils.write_file(i18n_source_file_path, JSON.pretty_generate(i18n_data))
               redact_file_content(i18n_source_file_path)
             ensure
-              mutex.synchronize {progress_bar.increment}
+              progress_bar.increment
             end
           end
 
@@ -52,16 +52,10 @@ module I18n
             )
           end
 
-          def mutex
-            @mutex ||= Thread::Mutex.new
-          end
-
           def i18n_data_of(unit)
             # Select only lessons that pass `numbered_lesson?` for consistent `relative_position` values
             # throughout our translation pipeline
-            i18n_data = Services::I18n::CurriculumSyncUtils::Serializers::ScriptCrowdinSerializer.new(
-              unit, scope: {only_numbered_lessons: true}
-            ).as_json.compact
+            i18n_data = UNIT_SERIALIZER.new(unit, scope: {only_numbered_lessons: true}).as_json.compact
 
             # The JSON object will have the unit's crowdin_key as the top level key, but we don't
             # need that, so we will discard the crowdin_key and set data to be the object it is
@@ -74,7 +68,7 @@ module I18n
           end
 
           def redact_file_content(i18n_source_file_path)
-            i18n_original_file_path = i18n_source_file_path.sub(I18N_SOURCE_DIR, I18N_ORIGINAL_DIR)
+            i18n_original_file_path = i18n_source_file_path.sub(I18N_SOURCE_DIR_PATH, I18N_BACKUP_DIR_PATH)
             I18nScriptUtils.copy_file(i18n_source_file_path, i18n_original_file_path)
 
             redacted = RedactRestoreUtils.redact_file(i18n_source_file_path, REDACT_RESTORE_PLUGINS)

@@ -34,7 +34,6 @@ module I18n
       rename_from_crowdin_name_to_locale
       restore_redacted_files
       distribute_translations
-      Services::I18n::CurriculumSyncUtils.sync_out
       puts "updating TTS I18n (should usually take 2-3 minutes, may take up to 15 if there are a whole lot of translation updates)"
       I18nScriptUtils.with_synchronous_stdout do
         I18nScriptUtils.run_standalone_script "dashboard/scripts/update_tts_i18n.rb"
@@ -142,7 +141,7 @@ module I18n
               plugins << 'resourceLink'
               plugins << 'vocabularyDefinition'
             elsif original_path.starts_with? "i18n/locales/original/curriculum_content"
-              plugins.push(*Services::I18n::CurriculumSyncUtils::REDACT_RESTORE_PLUGINS)
+              next # moved to I18n::Resources::Dashboard::CurriculumContent::SyncOut#restore_file_content
             elsif original_path.starts_with? "i18n/locales/original/docs"
               plugins << 'visualCodeBlock'
               plugins << 'link'
