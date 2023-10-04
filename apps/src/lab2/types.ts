@@ -99,7 +99,6 @@ export interface LevelProperties {
   freePlay?: boolean;
   edit_blocks?: string;
   isK1?: boolean;
-  sharedBlocks?: any[]; // will update this type soon.
   skin?: string;
   toolboxBlocks?: string;
 }
