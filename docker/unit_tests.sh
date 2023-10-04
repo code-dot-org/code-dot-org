@@ -39,7 +39,7 @@ dashboard_db_reader: \"mysql://readonly@localhost/dashboard_test\"
 echo "Wrote secrets from env vars into locals.yml."
 set -x
 
-mispipe "bundle install" ts
+bundle install --quiet
 
 # name: rake install
 RAKE_VERBOSE=true mispipe "bundle exec rake install" "ts '[%Y-%m-%d %H:%M:%S]'"

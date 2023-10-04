@@ -70,7 +70,7 @@ echo "Wrote secrets from env vars into locals.yml."
 
 set -x
 
-bundle install
+bundle install --quiet
 
 # name: rake install
 RAKE_VERBOSE=true bundle exec rake install
