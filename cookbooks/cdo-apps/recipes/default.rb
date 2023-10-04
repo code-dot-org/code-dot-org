@@ -59,8 +59,8 @@ if node.chef_environment == 'staging' || node.chef_environment == 'adhoc'
     environment_name = node.chef_environment.inspect
     Chef.event_handler do
       on :run_completed do
-        puts "CODE.ORG WARNING: Chef environment #{environment_name} expects the Dropbox Daemon to be configured."
-        puts 'Follow the instructions at https://www.dropbox.com/install-linux to do so'
+        Chef::Log.warn("Chef environment #{environment_name} expects the Dropbox Daemon to be configured.")
+        Chef::Log.warn('Follow the instructions at https://www.dropbox.com/install-linux to do so')
       end
     end
   end
