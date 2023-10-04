@@ -72,7 +72,7 @@ module I18n
           end
 
           def distribute_localization(language)
-            target_i18n_file_path = CDO.dir("dashboard/config/locales/courses.#{language[:locale_s]}.yml")
+            target_i18n_file_path = File.join(ORIGIN_I18N_DIR_PATH, "courses.#{language[:locale_s]}.yml")
             I18nScriptUtils.sanitize_file_and_write(crowdin_file_path_of(language), target_i18n_file_path)
           end
         end
