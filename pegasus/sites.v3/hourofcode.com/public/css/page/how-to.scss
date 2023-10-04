@@ -180,8 +180,8 @@ section.steps {
     border-radius: $border-radius;
     font-family: var(--main-font-bold);
     font-size: 0.65rem;
+    line-height: 1.6;
     text-transform: uppercase;
-    margin: 0 0 6px -2px !important;
     display: inline-block;
   }
 
@@ -191,8 +191,17 @@ section.steps {
     top: 4rem;
     border-right: 1px solid var(--neutral_dark20);
 
+    html[dir="rtl"] & {
+      border-left: 1px solid var(--neutral_dark20);
+      border-right: 0;
+    }
+
     @media screen and (max-width: $width-md) {
       display: none;
+    }
+
+    p.tag {
+      margin: 10px 0 10px 10px !important;
     }
 
     ul {
@@ -225,6 +234,11 @@ section.steps {
         &.active {
           border-right: 2px solid var(--brand_primary_default);
 
+          html[dir="rtl"] & {
+            border-left: 2px solid var(--brand_primary_default);
+            border-right: 0;
+          }
+
           p.body-two {
             font-family: var(--main-font-bold);
           }
@@ -239,7 +253,7 @@ section.steps {
           }
 
           &.body-two {
-            padding-right: 1rem;
+            width: 90%;
           }
         }
       }
