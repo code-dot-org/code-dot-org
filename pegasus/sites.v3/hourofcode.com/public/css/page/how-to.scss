@@ -302,6 +302,13 @@ section.steps {
       font-size: 0.75rem;
       padding: 4px 12px 4px 10px;
       border-radius: 4px 16px 16px 4px;
+
+      html[dir="rtl"] & {
+        left: unset;
+        right: 0;
+        padding: 4px 10px 4px 12px;
+        border-radius: 16px 4px 4px 16px;
+      }
     }
 
     span {
