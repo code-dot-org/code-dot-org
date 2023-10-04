@@ -366,6 +366,10 @@ module ScriptConstants
     return nil
   end
 
+  # Checks if the unit is translatable
+  #
+  # @param unit_name [String] the Unit name
+  # @return [true, false]
   def self.i18n?(unit_name)
     TRANSLATEABLE_UNITS.include?(unit_name)
   end
