@@ -147,6 +147,11 @@ describe I18n::Resources::Dashboard::CurriculumContent::SyncIn do
     let(:i18n_source_file_path) {File.join(i18n_source_dir, unit_subdirectory, unit_file_name)}
 
     let(:crowdin_serializer) {stub(as_json: unit_serialized_data)}
+    let(:translatable_units) do
+      translatable_units = [unit]
+      translatable_units.stubs(:find_each).yields(*translatable_units)
+      translatable_units
+    end
 
     let(:unit_serialized_data) do
       {
@@ -172,11 +177,13 @@ describe I18n::Resources::Dashboard::CurriculumContent::SyncIn do
     end
 
     before do
-      described_instance.stubs(:translatable_units).returns([unit])
+      described_instance.stubs(:translatable_units).returns(translatable_units)
+
       Services::I18n::CurriculumSyncUtils::Serializers::ScriptCrowdinSerializer.
         stubs(:new).
         with(unit, scope: {only_numbered_lessons: true}).
         returns(crowdin_serializer)
+
       described_instance.stubs(:get_unit_subdirectory).with(unit).returns(unit_subdirectory)
       I18nScriptUtils.stubs(:unit_directory_change?).with(i18n_source_dir, unit_file_name, i18n_source_file_path).returns(false)
     end
