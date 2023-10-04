@@ -1,6 +1,7 @@
 import React from 'react';
 import {expect} from '../../../util/reconfiguredChai';
-import {shallow} from 'enzyme';
+import {shallow, mount} from 'enzyme';
+import sinon from 'sinon';
 import EvidenceLevels from '@cdo/apps/templates/rubrics/EvidenceLevels';
 
 const DEFAULT_PROPS = {
@@ -29,5 +30,18 @@ describe('EvidenceLevels', () => {
     expect(wrapper.find('Memo(RadioButton)').length).to.equal(0);
     // Two BodyThreeText per evidence level
     expect(wrapper.find('BodyThreeText').length).to.equal(4);
+  });
+
+  it('calls radioButtonCallback when understanding is selected', () => {
+    const callback = sinon.stub();
+    const wrapper = mount(
+      <EvidenceLevels
+        {...DEFAULT_PROPS}
+        canProvideFeedback
+        radioButtonCallback={callback}
+      />
+    );
+    wrapper.find('input').first().simulate('change');
+    sinon.assert.calledOnce(callback);
   });
 });

@@ -163,26 +163,4 @@ describe('LearningGoal', () => {
     expect(wrapper.find('BodyThreeText').text()).to.include('Approve');
     wrapper.unmount();
   });
-
-  //   it('runs autosave when understanding has been selected', async () => {
-  //     const wrapper = shallow(
-  //       <LearningGoal
-  //         learningGoal={{
-  //           id: 0,
-  //           key: '0',
-  //           learningGoal: 'Testing',
-  //           aiEnabled: true,
-  //           evidenceLevels: [
-  //             {id: 1, understanding: 0, teacherDescription: 'test'},
-  //           ],
-  //         }}
-  //         studentLevelInfo={{
-  //           user_id: 0,
-  //         }}
-  //         teacherHasEnabledAi
-  //         canProvideFeedback
-  //       />
-  //     );
-  //     wrapper.find('EvidenceLevels').invoke('radioButtonCallback')();
-  //   });
 });

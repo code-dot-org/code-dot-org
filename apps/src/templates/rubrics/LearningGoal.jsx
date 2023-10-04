@@ -30,7 +30,6 @@ export default function LearningGoal({
   studentLevelInfo,
 }) {
   const [isOpen, setIsOpen] = useState(false);
-
   const [isAutosaving, setIsAutosaving] = useState(false);
   const [autosaved, setAutosaved] = useState(false);
   const [errorAutosaving, setErrorAutosaving] = useState(false);
