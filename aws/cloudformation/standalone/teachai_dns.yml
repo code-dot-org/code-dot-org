@@ -16,16 +16,28 @@ Resources:
     Properties:
       HostedZoneId: !Ref HostedZone
       RecordSets:
-        - Name: teachai.org
+        - Name: teachai.org.
           Type: A
-          AliasTarget:
-            DNSName: !GetAtt [RedirectDistribution, DomainName]
-            HostedZoneId: Z2FDTNDATAQYW2 # static ID for CloudFront aliases
-        - Name: www.teachai.org.
-          Type: CNAME
           TTL: '300'
           ResourceRecords:
-            - 'd1zp22d0hxajlk.cloudfront.net'
+            - '141.193.213.10'
+            - '141.193.213.11'
+        - Name: www.teachai.org.
+          Type: A
+          TTL: '300'
+          ResourceRecords:
+            - '141.193.213.10'
+            - '141.193.213.11'
+        # - Name: teachai.org
+        #   Type: A
+        #   AliasTarget:
+        #     DNSName: !GetAtt [RedirectDistribution, DomainName]
+        #     HostedZoneId: Z2FDTNDATAQYW2 # static ID for CloudFront aliases
+        # - Name: www.teachai.org.
+        #   Type: CNAME
+        #   TTL: '300'
+        #   ResourceRecords:
+        #     - 'd1zp22d0hxajlk.cloudfront.net'
         - Name: teachai.org.
           Type: TXT
           TTL: '3600'
