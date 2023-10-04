@@ -1,0 +1,23 @@
+<StandaloneVideo>
+  <config><![CDATA[{
+  "properties": {
+    "video_key": "CSF_maze_intro_k1_blocks",
+    "instructions_important": "false",
+    "skip_dialog": true,
+    "skip_sound": true,
+    "parent_level_id": 26380,
+    "name_suffix": "_2021",
+    "encrypted": "false",
+    "long_instructions": "**Watch this video from Course A - Lesson 4, Level 1: Sequencing with Scrat.**"
+  },
+  "game_id": 54,
+  "published": true,
+  "created_at": "2021-06-16T23:00:38.000Z",
+  "level_num": "custom",
+  "user_id": 63,
+  "notes": "",
+  "audit_log": "[{\"changed_at\":\"2017-05-10 19:08:49 +0000\",\"changed\":[],\"changed_by_id\":63,\"changed_by_email\":\"kiki@code.org\"},{\"changed_at\":\"2021-06-16 23:00:43 +0000\",\"changed\":[],\"changed_by_id\":1157,\"changed_by_email\":\"sariah.bujanda@code.org\"},{\"changed_at\":\"2021-06-23 18:06:28 +0000\",\"changed\":[],\"changed_by_id\":1157,\"changed_by_email\":\"sariah.bujanda@code.org\"},{\"changed_at\":\"2021-06-23 18:06:58 +0000\",\"changed\":[\"long_instructions\"],\"changed_by_id\":1157,\"changed_by_email\":\"sariah.bujanda@code.org\"}]",
+  "level_concept_difficulty": {
+  }
+}]]></config>
+</StandaloneVideo>

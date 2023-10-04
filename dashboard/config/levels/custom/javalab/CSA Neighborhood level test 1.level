@@ -1,0 +1,315 @@
+<Javalab>
+  <config><![CDATA[{
+  "properties": {
+    "encrypted": "false",
+    "instructions_important": "false",
+    "teacher_markdown": "Teachers should see this extra info.",
+    "long_instructions": "This is a sample Java Lab level.",
+    "mini_rubric": "false",
+    "hide_share_and_remix": "false",
+    "csa_view_mode": "neighborhood",
+    "start_direction": "1",
+    "serialized_maze": [
+      [
+        {
+          "tileType": 2,
+          "value": 0,
+          "assetId": 287
+        },
+        {
+          "tileType": 1,
+          "assetId": 303,
+          "value": 5
+        },
+        {
+          "tileType": 1,
+          "value": 0
+        },
+        {
+          "tileType": 1,
+          "value": 0
+        },
+        {
+          "tileType": 1,
+          "value": 0
+        },
+        {
+          "tileType": 1,
+          "value": 0
+        },
+        {
+          "tileType": 1,
+          "value": 0
+        },
+        {
+          "tileType": 1,
+          "value": 0
+        }
+      ],
+      [
+        {
+          "tileType": 1,
+          "value": 0
+        },
+        {
+          "tileType": 1,
+          "value": 0
+        },
+        {
+          "tileType": 0,
+          "assetId": 53,
+          "value": 0
+        },
+        {
+          "tileType": 0,
+          "assetId": 54,
+          "value": 0
+        },
+        {
+          "tileType": 1,
+          "value": 0
+        },
+        {
+          "tileType": 1,
+          "value": 0
+        },
+        {
+          "tileType": 1,
+          "value": 0
+        },
+        {
+          "tileType": 1,
+          "value": 99,
+          "assetId": 303
+        }
+      ],
+      [
+        {
+          "tileType": 1,
+          "value": 0
+        },
+        {
+          "tileType": 1,
+          "value": 0
+        },
+        {
+          "tileType": 1,
+          "value": 0
+        },
+        {
+          "tileType": 1,
+          "value": 0
+        },
+        {
+          "tileType": 1,
+          "value": 0
+        },
+        {
+          "tileType": 1,
+          "value": 0
+        },
+        {
+          "tileType": 1,
+          "value": 0
+        },
+        {
+          "tileType": 1,
+          "value": 0
+        }
+      ],
+      [
+        {
+          "tileType": 1,
+          "value": 0
+        },
+        {
+          "tileType": 1,
+          "value": 0
+        },
+        {
+          "tileType": 1,
+          "value": 0
+        },
+        {
+          "tileType": 1,
+          "value": 0
+        },
+        {
+          "tileType": 1,
+          "value": 0
+        },
+        {
+          "tileType": 1,
+          "value": 0
+        },
+        {
+          "tileType": 0,
+          "assetId": 12,
+          "value": 0
+        },
+        {
+          "tileType": 0,
+          "assetId": 13,
+          "value": 0
+        }
+      ],
+      [
+        {
+          "tileType": 1,
+          "value": 0
+        },
+        {
+          "tileType": 1,
+          "value": 0
+        },
+        {
+          "tileType": 1,
+          "value": 0
+        },
+        {
+          "tileType": 1,
+          "value": 0
+        },
+        {
+          "tileType": 1,
+          "value": 0
+        },
+        {
+          "tileType": 1,
+          "value": 0
+        },
+        {
+          "tileType": 0,
+          "assetId": 14,
+          "value": 0
+        },
+        {
+          "tileType": 0,
+          "assetId": 15,
+          "value": 0
+        }
+      ],
+      [
+        {
+          "tileType": 1,
+          "value": 0
+        },
+        {
+          "tileType": 1,
+          "value": 0
+        },
+        {
+          "tileType": 1,
+          "value": 0
+        },
+        {
+          "tileType": 1,
+          "value": 0
+        },
+        {
+          "tileType": 1,
+          "value": 0
+        },
+        {
+          "tileType": 1,
+          "value": 0
+        },
+        {
+          "tileType": 0,
+          "assetId": 16,
+          "value": 0
+        },
+        {
+          "tileType": 0,
+          "assetId": 17,
+          "value": 0
+        }
+      ],
+      [
+        {
+          "tileType": 1,
+          "value": 0
+        },
+        {
+          "tileType": 1,
+          "value": 0
+        },
+        {
+          "tileType": 1,
+          "value": 0
+        },
+        {
+          "tileType": 1,
+          "value": 0
+        },
+        {
+          "tileType": 1,
+          "value": 0
+        },
+        {
+          "tileType": 1,
+          "value": 0
+        },
+        {
+          "tileType": 0,
+          "assetId": 18,
+          "value": 0
+        },
+        {
+          "tileType": 0,
+          "assetId": 19,
+          "value": 0
+        }
+      ],
+      [
+        {
+          "tileType": 1,
+          "value": 0
+        },
+        {
+          "tileType": 1,
+          "value": 0
+        },
+        {
+          "tileType": 1,
+          "value": 0
+        },
+        {
+          "tileType": 1,
+          "value": 0
+        },
+        {
+          "tileType": 1,
+          "value": 0
+        },
+        {
+          "tileType": 1,
+          "value": 0
+        },
+        {
+          "tileType": 1,
+          "value": 0
+        },
+        {
+          "tileType": 1,
+          "value": 0
+        }
+      ]
+    ],
+    "parent_level_id": 27650,
+    "start_sources": {
+      "MyClass.java": {
+        "text": "jkdla;fjek;lajfkl;a",
+        "isVisible": true
+      }
+    }
+  },
+  "game_id": 68,
+  "created_at": "2021-06-10T14:46:44.000Z",
+  "level_num": "custom",
+  "user_id": 1,
+  "published": true,
+  "notes": "",
+  "audit_log": "[{\"changed_at\":\"2021-05-05 00:41:48 +0000\",\"changed\":[],\"changed_by_id\":22,\"changed_by_email\":\"jessica+localtest@code.org\"},{\"changed_at\":\"2021-06-10 14:47:40 +0000\",\"changed\":[\"start_direction\",\"serialized_maze\"],\"changed_by_id\":832,\"changed_by_email\":\"hannah@code.org\"},{\"changed_at\":\"2021-06-10 14:48:10 +0000\",\"changed\":[],\"changed_by_id\":832,\"changed_by_email\":\"hannah@code.org\"}]"
+}]]></config>
+</Javalab>

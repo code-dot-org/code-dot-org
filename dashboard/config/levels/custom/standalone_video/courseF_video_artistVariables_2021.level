@@ -1,0 +1,18 @@
+<StandaloneVideo>
+  <config><![CDATA[{
+  "game_id": 54,
+  "created_at": "2020-12-04T22:40:23.000Z",
+  "level_num": "custom",
+  "user_id": 63,
+  "properties": {
+    "video_key": "C4_variables_artist",
+    "instructions_important": "false",
+    "skip_dialog": true,
+    "skip_sound": true,
+    "name_suffix": "_2021",
+    "parent_level_id": 21589
+  },
+  "published": true,
+  "notes": ""
+}]]></config>
+</StandaloneVideo>

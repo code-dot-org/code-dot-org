@@ -1,0 +1,20 @@
+<StandaloneVideo>
+  <config><![CDATA[{
+  "properties": {
+    "video_key": "CSF_a_b_artist_loops",
+    "skip_dialog": true,
+    "skip_sound": true,
+    "instructions_important": "false",
+    "parent_level_id": 26531,
+    "name_suffix": "_2021",
+    "encrypted": "false"
+  },
+  "game_id": 54,
+  "published": true,
+  "created_at": "2021-04-21T18:50:51.000Z",
+  "level_num": "custom",
+  "user_id": 302,
+  "notes": "Is there a way for these videos to start automatically (and if so, is that a good idea for this stage)?",
+  "audit_log": "[{\"changed_at\":\"2018-01-09 02:18:34 +0000\",\"changed\":[\"video_key\"],\"changed_by_id\":63,\"changed_by_email\":\"kiki@code.org\"},{\"changed_at\":\"2021-04-21 18:52:02 +0000\",\"changed\":[],\"changed_by_id\":8945,\"changed_by_email\":\"debbie.spear@code.org\"},{\"changed_at\":\"2021-04-21 18:57:08 +0000\",\"changed\":[],\"changed_by_id\":8945,\"changed_by_email\":\"debbie.spear@code.org\"}]"
+}]]></config>
+</StandaloneVideo>

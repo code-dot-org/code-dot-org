@@ -1,0 +1,20 @@
+<StandaloneVideo>
+  <config><![CDATA[{
+  "properties": {
+    "video_key": "mc_2018_intro",
+    "skip_dialog": true,
+    "skip_sound": true,
+    "instructions_important": "false",
+    "name_suffix": "_2021",
+    "parent_level_id": 26821,
+    "encrypted": "false"
+  },
+  "game_id": 54,
+  "published": true,
+  "created_at": "2021-03-17T17:04:57.000Z",
+  "level_num": "custom",
+  "user_id": 63,
+  "notes": "",
+  "audit_log": "[{\"changed_at\":\"2021-03-17 17:05:48 +0000\",\"changed\":[\"video_key\"],\"changed_by_id\":831,\"changed_by_email\":\"mike.harvey@code.org\"}]"
+}]]></config>
+</StandaloneVideo>

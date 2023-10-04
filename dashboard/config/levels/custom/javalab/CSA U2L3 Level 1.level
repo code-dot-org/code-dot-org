@@ -1,0 +1,22 @@
+<Javalab>
+  <config><![CDATA[{
+  "properties": {
+    "parent_level_id": 27651,
+    "encrypted": "false",
+    "encrypted_examples": [
+
+    ],
+    "long_instructions": "**Do This:** Help the owner of the Project Mercury Pastries food truck keep track of her desserts! Write the Dessert class by declaring instance variables for the flavor, quantity available, and price so she can enter these values for each of her desserts.",
+    "mini_rubric": "false",
+    "hide_share_and_remix": "false",
+    "csa_view_mode": "console"
+  },
+  "game_id": 68,
+  "published": true,
+  "created_at": "2021-05-13T17:55:16.000Z",
+  "level_num": "custom",
+  "user_id": 1,
+  "notes": "",
+  "audit_log": "[{\"changed_at\":\"2021-05-13 17:57:06 +0000\",\"changed\":[],\"changed_by_id\":832,\"changed_by_email\":\"hannah@code.org\"}]"
+}]]></config>
+</Javalab>
