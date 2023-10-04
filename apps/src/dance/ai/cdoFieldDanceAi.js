@@ -1,8 +1,8 @@
 import GoogleBlockly from 'blockly/core';
 import experiments from '@cdo/apps/util/experiments';
 import color from '@cdo/apps/util/color';
-import {getStore} from '../redux';
-import {setCurrentAiModalField} from './danceRedux';
+import {getStore} from '../../redux';
+import {setCurrentAiModalField} from '../danceRedux';
 
 const FIELD_WIDTH = 32;
 const FIELD_HEIGHT = 18;
