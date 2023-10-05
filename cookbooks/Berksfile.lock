@@ -125,7 +125,6 @@ GRAPH
     chocolatey (>= 3.0)
     yum (>= 7.2)
   ntp (3.12.2)
-  ohai (5.3.1)
   postfix (6.0.7)
   redisio (6.3.0)
     selinux (>= 0.0.0)
