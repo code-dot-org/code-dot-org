@@ -45,9 +45,25 @@ end
 # Used by lesson plan generator.
 apt_package 'enscript'
 
-# Used to sync content between our Code.org shared Dropbox folder
-# and our git repository.
-apt_package 'unison' if node.chef_environment == 'staging'
+# Install dependencies required to sync content between our Code.org shared
+# Dropbox folder and our git repository. Also check whether the tool that
+# performs the sync is installed, and display instructions for how to do so if
+# it isn't. Ideally, we would be able to install the tool with this code, but
+# the process is sufficiently interactive and we have to do it sufficiently
+# rarely that we think documentation will suffice for now.
+if node.chef_environment == 'staging'
+  apt_package 'unison'
+  dropbox_daemon_file = File.join(node[:home], '.dropbox-dist/dropboxd')
+  unless File.exist?(dropbox_daemon_file)
+    environment_name = node.chef_environment.inspect
+    Chef.event_handler do
+      on :run_completed do
+        Chef::Log.warn("Chef environment #{environment_name} expects the Dropbox Daemon to be configured.")
+        Chef::Log.warn('Follow the instructions at https://www.dropbox.com/install-linux to do so')
+      end
+    end
+  end
+end
 
 # Debian-family packages for building Ruby C extensions
 apt_package %w(
@@ -103,7 +119,7 @@ if node['cdo-secrets']["build_apps"] ||
   include_recipe 'cdo-nodejs'
   include_recipe 'cdo-apps::google_chrome'
   include_recipe 'cdo-apps::generate_pdf'
-  apt_package 'parallel' # Used by test-low-memory.sh to run apps tests in parallel
+  apt_package 'parallel' # Used by apps/run-tests-in-parallel.sh
 end
 
 # Workaround for lack of zoneinfo in docker: https://forums.docker.com/t/synchronize-timezone-from-host-to-container/39116/3

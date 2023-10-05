@@ -13,7 +13,7 @@ theme: responsive
   <img src="/images/marketing/fit-318x212/mother-helping-her-daughter-use-a-laptop-4260325.jpg" style="width:100%" alt="딸이 노트북을 사용하도록 돕는 어머니">
 </div>
 
-<p>학부모/보호자이든 독학하려는 학생이든 상관없이 아래 옵션은 컴퓨터 과학 탐구를 쉽게 도전할 수 있는 매력적인 방법입니다.</p>
+<p>부모/보호자이든 독립적으로 학습하는 학생이든, 아래 옵션은 컴퓨터 과학 탐구를 시작할 수 있는 매력적이고 쉽게 시도할 수 있는 방법입니다.</p>
 <ul>
     <li><a class="linktag" id="hoc-nav" href="#hoc">아워 오브 코드 체험하기</a></li>
     <li><a class="linktag" id="videos-nav" href="#videos">CS의 기초를 다루는 짧은 동영상 시리즈 시청하기</a></li>
@@ -38,8 +38,8 @@ theme: responsive
       </a>
     <div class="tutorial-info" style="background-color: #ffffff; border: 1px solid #696969; border-top: none; border-radius: 0 0 15px 15px; padding: 15px 25px 25px 25px">
       <span>
-        <h3 class="tutorial-info-h" style="text-align: left; margin-top:10px; margin-bottom:10px"><strong>댄스 파티</strong></h3>
-        <div class="smalltext" style="text-align: left; margin-bottom: 10px">친구 및 가족과 공유할 댄스 파티를 코딩하세요. 비욘세, 해리 스타일스, 리조, 릴 나스 X, 셀레나 고메즈, 디즈니 “엔칸토”의 음악 등이 등장합니다!</div>
+        <h3 class="tutorial-info-h" style="text-align: left; margin-top:10px; margin-bottom:10px">댄스 파티</h3>
+        <div class="smalltext" style="text-align: left; margin-bottom: 10px">코드 친구 및 가족과 함께 즐길 수 있는 댄스 파티입니다. 비욘세, 해리 스타일스, 리조, 릴 나스 X, 셀레나 고메즈, 디즈니 “엔칸토”의 음악 등이 등장합니다!</div>
         <a class="linktag" id="danceparty" href="/dance" target="_blank"><button>활동 시도하기</button></a>
     </span>
   </div>
@@ -53,8 +53,8 @@ theme: responsive
       </a>
     <div class="tutorial-info" style="background-color: #ffffff; border: 1px solid #696969; border-top: none; border-radius: 0 0 15px 15px; padding: 15px 25px 25px 25px">
       <span>
-        <h3 class="tutorial-info-h" style="text-align: left; margin-top:10px; margin-bottom: 10px"><strong>마인크래프트 아워 오브 코드</strong></h3>
-        <div class="smalltext" style="text-align: left; margin-bottom: 10px">마인크래프트가 새로운 액티비티와 함께 아워 오브 코드에 돌아왔습니다! 코드로 Minecraft를 여행하세요.</div>
+        <h3 class="tutorial-info-h" style="text-align: left; margin-top:10px; margin-bottom: 10px">마인크래프트 아워오브코드</h3>
+        <div class="smalltext" style="text-align: left; margin-bottom: 10px">마인크래프트가 새로운 액티비티와 함께 아워오브코드로 돌아왔습니다! 코드로 Minecraft를 여행하세요.</div>
         <br>
         <a class="linktag" id="minecraft" href="/minecraft" target="_blank"><button>활동 체험하기</button></a>
     </span>
@@ -69,8 +69,8 @@ theme: responsive
       </a>
     <div class="tutorial-info" style="background-color: #ffffff; border: 1px solid #696969; border-top: none; border-radius: 0 0 15px 15px; padding: 15px 25px 25px 25px">
       <span>
-        <h3 class="tutorial-info-h" style="text-align: left; margin-top:10px; margin-bottom:10px"><strong>해양용 AI</strong></h3>
-        <div class="smalltext" style="text-align: left; margin-bottom: 10px">인공지능이 쓰레기를 감지하도록 훈련시켜 바다를 정화하도록 도와주세요! 훈련 데이터와 편향, AI가 세계의 문제를 다루는 원리를 알아보세요. <a class="linktag" id="oceans-lesson" href="https://curriculum.code.org/hoc/plugged/9/" target="_blank">수업 계획</a>을 확인하세요.</div>
+        <h3 class="tutorial-info-h" style="text-align: left; margin-top:10px; margin-bottom:10px">인공지능은 인공지능이 쓰레기를 감지하도록 훈련시켜 바다를</h3>
+        <div class="smalltext" style="text-align: left; margin-bottom: 10px">청소하도록 도와주세요! 훈련 데이터와 편향, AI가 세계의 문제를 다루는 원리를 알아보세요. <a class="linktag" id="oceans-lesson" href="https://curriculum.code.org/hoc/plugged/9/" target="_blank">수업 계획</a>을 확인하세요.</div>
         <a class="linktag" id=”aiforoceans" href="https://studio.code.org/s/oceans/lessons/1/levels/1" target="_blank"><button>활동 체험하기</button></a>
     </span>
   </div>
@@ -96,8 +96,8 @@ theme: responsive
       </a>
     <div class="tutorial-info" style="background-color: #ffffff; border: 1px solid #696969; border-top: none; border-radius: 0 0 15px 15px; padding: 15px 25px 25px 25px">
       <span>
-        <h3 class="tutorial-info-h" style="text-align: left; margin-top:10px; margin-bottom:10px"><strong>컴퓨터 작동 원리</strong></h3>
-        <div class="smalltext" style="text-align: left; margin-bottom: 10px">빌 게이츠의 소개와 함께 컴퓨터를 컴퓨터로 만드는 요인과 컴퓨터 회로의 작동 방식에 대해 설명하는 6개의 짧은 동영상 시리즈입니다.</div>
+        <h3 class="tutorial-info-h" style="text-align: left; margin-top:10px; margin-bottom:10px">컴퓨터 작동 원리 빌 게이츠의</h3>
+        <div class="smalltext" style="text-align: left; margin-bottom: 10px">소개와 함께 이 6개의 짧은 비디오 시리즈는 컴퓨터를 컴퓨터로 만드는 요인과 컴퓨터 회로의 작동 방식에 대해 설명합니다.</div>
         <a class="linktag" id="howcomputers" href="https://www.youtube.com/watch?v=OAx_6-wdslM&list=PLzdnOPI1iJNcsRwJhvksEo1tJqjIqWbN-" target="_blank"><button>동영상 시리즈 보기</button></a>
     </span>
   </div>
@@ -111,9 +111,9 @@ theme: responsive
       </a>
     <div class="tutorial-info" style="background-color: #ffffff; border: 1px solid #696969; border-top: none; border-radius: 0 0 15px 15px; padding: 15px 25px 25px 25px">
       <span>
-        <h3 class="tutorial-info-h" style="text-align: left; margin-top:10px; margin-bottom: 10px"><strong>How the Internet Works</strong></h3>
-        <div class="smalltext" style="text-align: left; margin-bottom: 10px">In this series of eight short videos, you’ll learn how the internet was invented, what HTML is, and how search engines like Google work.</div>
-        <a class="linktag" id="howinternet" href="https://www.youtube.com/watch?v=Dxcc6ycZ73M&list=PLzdnOPI1iJNfMRZm5DDxco3UdsFegvuB7-" target="_blank"><button>Watch the video series</button></a>
+        <h3 class="tutorial-info-h" style="text-align: left; margin-top:10px; margin-bottom: 10px">인터넷의 작동 원리 8개의 짧은 동영상으로 구성된 이</h3>
+        <div class="smalltext" style="text-align: left; margin-bottom: 10px">시리즈에서는 인터넷이 어떻게 만들어졌는지, HTML이 무엇인지, Google과 같은 검색 엔진이 어떻게 작동하는지 알아봅니다.</div>
+        <a class="linktag" id="howinternet" href="https://www.youtube.com/watch?v=Dxcc6ycZ73M&list=PLzdnOPI1iJNfMRZm5DDxco3UdsFegvuB7-" target="_blank"><button>동영상 시리즈 보기</button></a>
     </span>
   </div>
 </div>
@@ -126,8 +126,8 @@ theme: responsive
       </a>
     <div class="tutorial-info" style="background-color: #ffffff; border: 1px solid #696969; border-top: none; border-radius: 0 0 15px 15px; padding: 15px 25px 25px 25px">
       <span>
-        <h3 class="tutorial-info-h" style="text-align: left; margin-top:10px; margin-bottom: 10px"><strong>AI의 작동 원리</strong></h3>
-        <div class="smalltext" style="text-align: left; margin-bottom: 10px">이 짧은 동영상 시리즈를 통해 AI의 작동 원리와 AI가 중요한 이유에 대해 알아보십시오. Microsoft CEO Satya Nadella와 여러 전문가들이 나옵니다.</div>
+        <h3 class="tutorial-info-h" style="text-align: left; margin-top:10px; margin-bottom: 10px">AI의 작동 원리 이 짧은 동영상 시리즈를 통해 AI의 작동 원리와 AI가 중요한 이유에 대해</h3>
+        <div class="smalltext" style="text-align: left; margin-bottom: 10px">알아보십시오. Microsoft CEO Satya Nadella와 여러 전문가들이 나옵니다.</div>
         <a class="linktag" id="ai-videos" href="/ai#ai-videos" target="_blank"><button>동영상 시리즈 시청하기</button></a>
     </span>
   </div>
@@ -163,7 +163,7 @@ href="https://studio.code.org/s/20-hour" target="_blank">가속 코스</a>를 �
 <a class="linktag" id="prereader-course" href="https://studio.code.org/s/pre-express-2019" target="_blank"><img src="/images/curriculum/course-tile-pre-reader-express.png" style="width: 100%" alt="프리리더 속성 코스"></a><br><a class="linktag" id="prereader-course" href="https://studio.code.org/s/pre-express-2019" target="_blank">프리리더용 속성 코스</a>
 
 </div>
-<div style="clear: both"></div>
+<div style="clear: both; margin-bottom: 2rem"></div>
 
 <h3>게임 랩 및 앱 랩에 자기 주도적 입문하기</h3>
 <p>CS 발견과 CS 원리에서 응용한 이 짧은 자기 주도적 모듈은 모든 프로그래밍 언어와 도구에 적용되는 개념을 배우기에 좋은 방법입니다. <i>Code.org 계정이 있어야 액세스할 수 있습니다</i>.</p>
@@ -177,8 +177,8 @@ href="https://studio.code.org/s/20-hour" target="_blank">가속 코스</a>를 �
       </a>
     <div class="tutorial-info" style="background-color: #ffffff; border: 1px solid #696969; border-top: none; border-radius: 0 0 15px 15px; padding: 15px 25px 25px 25px">
       <span>
-        <h3 class="tutorial-info-h" style="text-align: left; margin-top:10px; margin-bottom:10px"><strong>게임랩 소개</strong></h3>
-        <div class="smalltext" style="text-align: left; margin-bottom: 10px">게임랩 내 프로그램 애니메이션, 인터랙티브 아트, 게임 간단한 모형으로 시작해 보다 정교한 스프라이트 기반의 애니메이션과 게임으로 나아가세요.</div>
+        <h3 class="tutorial-info-h" style="text-align: left; margin-top:10px; margin-bottom:10px">Game Lab</h3>
+        <div class="smalltext" style="text-align: left; margin-bottom: 10px">프로그램 애니메이션, 인터랙티브 아트, Game Lab의 게임을 소개합니다. 간단한 모형으로 시작해 보다 정교한 스프라이트 기반의 애니메이션과 게임으로 나아가세요.</div>
         <a class="linktag" id="gamelab-intro" href="https://studio.code.org/s/csd3-virtual" target="_blank"><button>모듈 체험하기</button></a>
     </span>
   </div>
@@ -192,8 +192,8 @@ href="https://studio.code.org/s/20-hour" target="_blank">가속 코스</a>를 �
       </a>
     <div class="tutorial-info" style="background-color: #ffffff; border: 1px solid #696969; border-top: none; border-radius: 0 0 15px 15px; padding: 15px 25px 25px 25px">
       <span>
-        <h3 class="tutorial-info-h" style="text-align: left; margin-top:10px; margin-bottom: 10px"><strong>App Lab에서의 거북이 프로그래밍</strong></h3>
-        <div class="smalltext" style="text-align: left; margin-bottom: 10px">간단한 자바스크립트 명령을 사용하여 가상의 “거북이”를 사용하여 모양과 이미지를 그립니다.나만의 디지털 장면을 디자인하고 프로그래밍하세요!</div>
+        <h3 class="tutorial-info-h" style="text-align: left; margin-top:10px; margin-bottom: 10px">App</h3>
+        <div class="smalltext" style="text-align: left; margin-bottom: 10px">Lab에서의 거북이 프로그래밍 간단한 JavaScript 명령을 사용하여 가상의 “거북이”를 사용하여 모양과 이미지를 그릴 수 있습니다.나만의 디지털 장면을 디자인하고 프로그래밍하세요!</div>
         <a class="linktag" id="turtle-applab" href="https://studio.code.org/s/csp3-virtual" target="_blank"><button>모듈을 사용해 보세요</button></a>
     </span>
   </div>
@@ -207,8 +207,8 @@ href="https://studio.code.org/s/20-hour" target="_blank">가속 코스</a>를 �
       </a>
     <div class="tutorial-info" style="background-color: #ffffff; border: 1px solid #696969; border-top: none; border-radius: 0 0 15px 15px; padding: 15px 25px 25px 25px">
       <span>
-        <h3 class="tutorial-info-h" style="text-align: left; margin-top:10px; margin-bottom: 10px"><strong>App Lab에서의 이벤트 기반 프로그래밍</strong></h3>
-        <div class="smalltext" style="text-align: left; margin-bottom: 10px">클릭과 키 누름에 반응하는 앱을 설계하는 방법을 알아봅니다. 웹에서 동작할 간단한 일련의 애플리케이션(앱)을 만들어보세요!</div>
+        <h3 class="tutorial-info-h" style="text-align: left; margin-top:10px; margin-bottom: 10px">App Lab에서의 이벤트 기반 프로그래밍 클릭과 키 누름에 반응하는 앱을 설계하는</h3>
+        <div class="smalltext" style="text-align: left; margin-bottom: 10px">방법을 알아봅니다. 웹에서 동작할 간단한 일련의 애플리케이션(앱)을 만들어보세요!</div>
         <a class="linktag" id="events-applab" href="https://studio.code.org/s/csp5-virtual" 
 target="_blank"><button>모듈 체험하기</button></a>
     </span>
@@ -232,7 +232,7 @@ target="_blank"><button>모듈 체험하기</button></a>
 
 <div class="col-33" style="padding:15px; border-radius:15px; border:10px solid white; background-color:#00adbc">
   <div style="width: 87%; float: left">
-    <a class="linktag" id="applab" href="https://code.org/educate/applab" style="text-decoration:none" target="_blank"><h3 style="color:#ffffff; margin:0; margin-bottom:5px; text-decoration:none"><strong>앱 랩</strong></h3></a>
+    <a class="linktag" id="applab" href="https://code.org/educate/applab" style="text-decoration:none" target="_blank"><h3 style="color:#ffffff; margin:0; margin-bottom:5px; text-decoration:none">앱 랩</h3></a>
     <p style="color:#ffffff">앱 랩은 간단한 앱을 만들어볼 수 있는 프로그래밍 환경입니다. 앱을 디자인하고 블록이나 JavaScript로 코드를 작성해 작동하게 한 다음 수 초 만에 앱을 공유하세요.</p>
     <a class="linktag" id="applab" href="https://code.org/educate/applab" target="_blank"><button style="background-color:#e7e8ea; border-color:#e7e8ea; color:#696969">앱 만들기</button></a>
   </div>
@@ -241,7 +241,7 @@ target="_blank"><button>모듈 체험하기</button></a>
 
 <div class="col-33" style="padding:15px; border-radius:15px; border:10px solid white; background-color:#00adbc">
   <div style="width: 87%; float: left">
-    <a class="linktag" id="gamelab" href="https://code.org/educate/gamelab" style="text-decoration:none" target="_blank"><h3 style="color:#ffffff; margin:0; margin-bottom:5px; text-decoration:none"><strong>게임 랩</strong></h3></a>
+    <a class="linktag" id="gamelab" href="https://code.org/educate/gamelab" style="text-decoration:none" target="_blank"><h3 style="color:#ffffff; margin:0; margin-bottom:5px; text-decoration:none">게임 랩</h3></a>
     <p style="color:#ffffff">게임 랩은 서로 상호작용하는 캐릭터와 물체를 가지고 간단한 애니메이션과 게임을 만들어볼 수 있는 프로그래밍 환경입니다.</p>
     <br>
     <a class="linktag" id="gamelab" href="https://code.org/educate/gamelab" target="_blank"><button style="background-color:#e7e8ea; border-color:#e7e8ea; color:#696969">게임 제작하기</button></a>
@@ -251,7 +251,7 @@ target="_blank"><button>모듈 체험하기</button></a>
 
 <div class="col-33" style="padding:15px; border-radius:15px; border:10px solid white; background-color:#00adbc">
   <div style="width: 87%; float: left">
-    <a class="linktag" id="weblab" href="https://code.org/educate/weblab" style="text-decoration:none" target="_blank"><h3 style="color:#ffffff; margin:0; margin-bottom:5px; text-decoration:none"><strong>웹 랩</strong></h3></a>
+    <a class="linktag" id="weblab" href="https://code.org/educate/weblab" style="text-decoration:none" target="_blank"><h3 style="color:#ffffff; margin:0; margin-bottom:5px; text-decoration:none">웹 랩</h3></a>
     <p style="color:#ffffff">웹 랩은 HTML과 CSS를 활용해 간단한 웹 페이지를 만들어볼 수 있는 프로그래밍 환경입니다. 웹 페이지를 디자인하고 수 초 만에 사이트를 공유하세요.</p>
     <br>
     <a class="linktag" id="weblab" href="https://code.org/educate/weblab" target="_blank"><button style="background-color:#e7e8ea; border-color:#e7e8ea; color:#696969">웹 페이지 만들기</button></a>
@@ -288,18 +288,12 @@ target="_blank"><button>모듈 체험하기</button></a>
 
 <h2>집에 컴퓨터가 없으세요? 저희 제휴사가 제공하는 이 앱들로 스마트폰에서 CS를 체험하세요</h2>
 
-<div class="col-33" style="padding-right: 30px; padding-bottom:40px">
-  <a class="linktag" id="box-island" href="https://boxisland.io/" target="_blank"><img src="images/tutorials/new/boxisland.jpg" style="width: 100%" alt="박스 아일랜드"></a><br><a class="linktag" id="box-island" href="https://boxisland.io/" target="_blank"><h3 
-style="color:#7665a0"><strong>박스 아일랜드</strong></h3></a>신나는 모험을 떠나 알고리즘, 패턴 인식, 시퀀스, 루프, 조건문 같은 코딩의 기초를 배울 수 있는 멋진 모바일 코딩 게임입니다. <i>(전 연령용)</i>
+<div class="col-50" style="padding-right: 30px; padding-bottom:40px">
+  <a class="linktag" id="box-island" href="https://boxisland.io/" target="_blank"><img src="images/tutorials/new/boxisland.jpg" style="width: 100%" alt="박스 아일랜드"></a><br><a class="linktag" id="box-island" href="https://boxisland.io/" target="_blank"><h3 style="margin-top: 1rem;">Box Island</h3></a>알고리즘, 패턴 인식, 시퀀스, 루프 및 조건문과 같은 코딩의 기초를 가르치면서 학습자를 흥미진진한 모험으로 안내하는 매력적인 모바일 코딩 게임입니다. <i>(전 연령용)</i>
 </div>
 
-<div class="col-33" style="padding-right: 30px; padding-bottom:40px">
-  <a class="linktag" id="codespark" href="https://accounts.codespark.com/promo?utm_source=codeorg&utm_medium=referral&utm_campaign=schoolsclosed-parents&utm_content=offer&promoCode=schoolclosed" target="_blank"><img src="/images/tutorials/hoc2018/codespark_create.jpg" style="width: 100%" alt="codeSpark"></a><br><a class="linktag" id="codespark" href="https://accounts.codespark.com/promo?utm_source=codeorg&utm_medium=referral&utm_campaign=schoolsclosed-parents&utm_content=offer&promoCode=schoolclosed" target="_blank"><h3 
-style="color:#7665a0"><strong>codeSpark</strong></h3></a>5~9세 어린이를 위한 코드 학습 플랫폼 수상작입니다. The Foos와 함께 퍼즐을 풀고 게임을 만들며 코드를 배워보세요. <strong>참고: codeSpark는 3개월간 무료 체험할 수 있습니다. 회원 가입 시 학부모의 이메일 주소와 신용 카드 정보가 필요합니다.</strong> <i>(프리리더부터 5학년까지)</i>
-</div>
-
-<div class="col-33" style="padding-right: 30px; padding-bottom:40px">
-  <a class="linktag" id="grasshopper" href="https://grasshopper.app/" target="_blank"><img src="/images/athome/grasshopper.png" style="width: 100%" alt="메뚜기"></a><br><a class="linktag" id="grasshopper" href="https://grasshopper.app/" target="_blank"><h3 style="color:#7665a0"><strong>메뚜기</strong></h3></a>스마트폰에서 진짜 JavaScript 작성법을 가르쳐주는 재미있고 빠른 수업으로 코딩을 배우세요. Google 프로그램을 이용하는 코드. <i>(중학생 이상)</i>
+<div class="col-50" style="padding-right: 30px; padding-bottom:40px">
+  <a class="linktag" id="codespark" href="https://accounts.codespark.com/promo?utm_source=codeorg&utm_medium=referral&utm_campaign=schoolsclosed-parents&utm_content=offer&promoCode=schoolclosed" target="_blank"><img src="/images/tutorials/hoc2018/codespark_create.jpg" style="width: 100%" alt="codeSpark"></a><br><a class="linktag" id="codespark" href="https://accounts.codespark.com/promo?utm_source=codeorg&utm_medium=referral&utm_campaign=schoolsclosed-parents&utm_content=offer&promoCode=schoolclosed" target="_blank"><h3 style="margin-top: 1rem;">CodesPark</h3></a>어워드를 수상한 5-9세 어린이를 위한 코드 학습 플랫폼입니다. The Foos와 함께 퍼즐을 풀고 게임을 만들며 코드를 배워보세요. <strong>참고: codeSpark는 3개월간 무료 체험할 수 있습니다. 회원 가입 시 학부모의 이메일 주소와 신용 카드 정보가 필요합니다.</strong> <i>(프리리더부터 5학년까지)</i>
 </div>
 
 <div style="clear: both; margin-bottom: 15px"></div>
@@ -316,8 +310,8 @@ style="color:#7665a0"><strong>codeSpark</strong></h3></a>5~9세 어린이를 위
       </a>
     <div class="tutorial-info" style="background-color: #ffffff; border: 1px solid black; border-top: none; border-radius: 0 0 15px 15px; padding: 15px 25px 25px 25px">
       <span>
-        <h3 class="tutorial-info-h" style="margin-top:10px"><strong>CodeBytes</strong></h3>
-        <div class="smalltext" style="color: dimgray;">CodeBytes는 컴퓨터 과학과 실제 주제를 혼합하여 이해하기 쉬운 20분 대화형 수업입니다. AI가 수화를 읽고 선의의 앱을 디자인하고 Minecraft의 세계를 탐험하는 등 다양한 일을 할 수 있도록 훈련하세요!</div>
+        <h3 class="tutorial-info-h" style="margin-top:10px">CodeBytes</h3>
+        <div class="smalltext" style="color: dimgray;">CodeBytes는 컴퓨터 과학과 실제 주제를 결합한 이해하기 쉬운 20분 대화형 수업입니다. AI가 수화를 읽고 선의의 앱을 디자인하고 Minecraft의 세계를 탐험하는 등 다양한 일을 할 수 있도록 훈련하세요!</div>
         <br>
         <br>
         <a class="linktag" id="codebytes" href="https://code.org/codebytes" target="_blank"><button>에피소드 보기</button></a>
@@ -333,8 +327,8 @@ style="color:#7665a0"><strong>codeSpark</strong></h3></a>5~9세 어린이를 위
       </a>
     <div class="tutorial-info" style="background-color: #ffffff; border: 1px solid black; border-top: none; border-radius: 0 0 15px 15px; padding: 15px 25px 25px 25px">
       <span>
-        <h3 class="tutorial-info-h" style="margin-top:10px"><strong>코드 브레이크</strong></h3>
-        <div class="smalltext" style="">코드 브레이크를 통해 컴퓨터 과학의 재미를 유지하세요! Ashton Kutcher와 암호를 만들고 Yara Shahidi와 변수를 배우며 인터넷의 실제 발명가인 Vint Cerf와 함께 인터넷의 작동 원리를 알아볼 수도 있습니다!</div>
+        <h3 class="tutorial-info-h" style="margin-top:10px">코드 브레이크 코드 브레이크를 통해 컴퓨터 과학의 재미를</h3>
+        <div class="smalltext" style="">유지하세요! Ashton Kutcher와 암호를 만들고 Yara Shahidi와 변수를 배우며 인터넷의 실제 발명가인 Vint Cerf와 함께 인터넷의 작동 원리를 알아볼 수도 있습니다!</div>
         <br>
         <a class="linktag" id="codebreak" href="https://code.org/break" target="_blank"><button>연결하기</button></a>
     </span>

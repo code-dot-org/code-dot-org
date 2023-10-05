@@ -10,6 +10,7 @@ he:
         error:
           future: לא יכול להיות בעתיד
         finish_sign_up_header: סיים ליצור את החשבון שלך
+        finish_sign_up_header_error: 'אנא תקן את השגיאות הבאות:'
         finish_sign_up_subheader: מלא את הפרטים הבאים על מנת לסיים ליצור חשבון Code.org
           עבור <strong>%{email}</strong>.
         finish_sign_up_subheader_markdown: מלא את הפרטים הבאים על מנת לסיים ליצור
@@ -30,6 +31,7 @@ he:
         personal_email_markdown: כתובת דוא"ל אישי [(לחץ כאן אם אין לך כתובת דואר אלקטרוני)](%{url})
         reset_password_token: הקישור לאיפוס הסיסמה שעקבת אחריו
         us_state: איזורי
+        user_type: סוג חשבון
         username: שם משתמש
         verified_teacher: מורה מאומת
     errors:

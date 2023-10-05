@@ -1,10 +1,12 @@
 <Dancelab>
   <config><![CDATA[{
+  "published": true,
   "game_id": 63,
   "created_at": "2023-09-20T16:54:08.000Z",
   "level_num": "custom",
   "user_id": 182,
   "properties": {
+    "uses_preview": "true",
     "skin": "dance",
     "helper_libraries": [
       "DanceLab"
@@ -55,15 +57,22 @@
     "video_key": "hoc_dance_measures_2019",
     "encrypted": "false",
     "mini_rubric": "false",
-    "long_instructions": "##Let's move the dancer with the music!\r\n\r\nConnect the <xml><block type=\"Dancelab_atTimestamp\"><title name=\"TIMESTAMP\">4</title><title name=\"UNIT\">\"measures\"</title></block></xml> block to a <xml><block xmlns=\"https://developers.google.com/blockly/xml\" type=\"Dancelab_changeMoveEachLR\" id=\"PWyAjvPI0?[cHUrJ*QT9\">\r\n  <field name=\"GROUP\" config=\"&quot;BEAR&quot;, &quot;CAT&quot;, &quot;SHARK&quot;, &quot;SLOTH&quot;\">\"CAT\"</field>\r\n  <field name=\"MOVE\">MOVES.ThisOrThat</field>\r\n  <field name=\"DIR\">-1</field>\r\n</block></xml> block from the toolbox. \r\n\r\nYour dancer should start a new move after the fourth measure.\r\n\r\n**Measures** are used to count time in music. In this tutorial, a measure is four beats long.",
-    "validation_code": "if(!World.validationState.startingMoves){\r\n  World.validationState.startingMoves={};\r\n}\r\n\r\nsprites.forEach(function(sprite, index) {\r\n  if (World.validationState.startingMoves[index] === undefined) {\r\n    World.validationState.startingMoves[index] = sprites[index].current_move;\r\n  }\r\n});\r\n  \r\nif (nativeAPI.getTime(\"measures\") > 5.5) {\r\n  //check for new move after 4.5 measures\r\n  if (sprites.length > 0) {\r\n    var shouldPass=false;\r\n    sprites.forEach(function(sprite,index){\r\n  \t  if (sprites[index].current_move != World.validationState.startingMoves[index]) {\r\n        shouldPass=true;\r\n      }\r\n    });\r\n    if (!shouldPass){//if we didn't find any dancers who had changed moves\r\n      nativeAPI.fail(\"danceFeedbackStartNewMove\");\r\n    }\r\n  } else {\r\n    nativeAPI.fail(\"danceFeedbackNoDancers\");\r\n  }\r\n}\r\n\r\nif (nativeAPI.getTime(\"measures\") > 8 && shouldPass) {\r\n  //if you haven't failed yet, pass\r\n  nativeAPI.pass();\r\n}",
+    "long_instructions": "##Time to code!\r\n\r\n* Connect a `Use AI to` block to the <xml><block xmlns=\"https://developers.google.com/blockly/xml\" type=\"Dancelab_whenKey\" id=\"*R3Us3z5;rM#sBE?1zjX\" deletable=\"false\" movable=\"false\">\r\n  <field name=\"KEY\">\"up\"</field>\r\n</block></xml> event to code a new background.\r\n* Click <code style=\"color:black; background-color:#FFBD46\">Run</code>, then press the \"Up\" key to see the background change! ",
     "tts_long_instructions_override": "Let's get the dancers moving in time with the music!\r\n\r\nConnect the after 4 measures block to a do forever block from the toolbox. \r\n\r\nYour dancer should start a new move after the fourth measure.\r\n\r\nMeasures are used to count time in music. In this tutorial, a measure is four beats long.",
     "validation_enabled": "false",
-    "hide_pause_button": "false"
+    "hide_pause_button": "false",
+    "soft_buttons": [
+      "leftButton",
+      "rightButton",
+      "upButton",
+      "downButton"
+    ],
+    "encrypted_examples": [
+
+    ]
   },
-  "published": true,
   "notes": "",
-  "audit_log": "[{\"changed_at\":\"2023-09-20T16:54:08.061+00:00\",\"changed\":[\"cloned from \\\"Dance_2019_04\\\"\"],\"cloned_from\":\"Dance_2019_04\"},{\"changed_at\":\"2023-09-20 17:48:00 +0000\",\"changed\":[\"start_blocks\",\"toolbox_blocks\",\"never_autoplay_video\"],\"changed_by_id\":16899,\"changed_by_email\":\"emma.wingreen+teacher@code.org\"},{\"changed_at\":\"2023-09-21 22:20:07 +0000\",\"changed\":[\"toolbox_blocks\"],\"changed_by_id\":16899,\"changed_by_email\":\"emma.wingreen+teacher@code.org\"},{\"changed_at\":\"2023-09-21 22:22:52 +0000\",\"changed\":[\"start_blocks\",\"toolbox_blocks\",\"long_instructions\"],\"changed_by_id\":16899,\"changed_by_email\":\"emma.wingreen+teacher@code.org\"},{\"changed_at\":\"2023-09-21 22:23:26 +0000\",\"changed\":[\"start_blocks\"],\"changed_by_id\":16899,\"changed_by_email\":\"emma.wingreen+teacher@code.org\"},{\"changed_at\":\"2023-09-21 22:25:32 +0000\",\"changed\":[\"start_blocks\"],\"changed_by_id\":16899,\"changed_by_email\":\"emma.wingreen+teacher@code.org\"},{\"changed_at\":\"2023-09-21 22:43:55 +0000\",\"changed\":[\"toolbox_blocks\"],\"changed_by_id\":16899,\"changed_by_email\":\"emma.wingreen+teacher@code.org\"},{\"changed_at\":\"2023-09-21 22:48:24 +0000\",\"changed\":[\"start_blocks\"],\"changed_by_id\":16899,\"changed_by_email\":\"emma.wingreen+teacher@code.org\"},{\"changed_at\":\"2023-09-21 22:49:35 +0000\",\"changed\":[\"start_blocks\"],\"changed_by_id\":16899,\"changed_by_email\":\"emma.wingreen+teacher@code.org\"},{\"changed_at\":\"2023-09-21 22:51:39 +0000\",\"changed\":[\"start_blocks\",\"toolbox_blocks\",\"long_instructions\"],\"changed_by_id\":16899,\"changed_by_email\":\"emma.wingreen+teacher@code.org\"},{\"changed_at\":\"2023-09-21 22:51:48 +0000\",\"changed\":[\"toolbox_blocks\"],\"changed_by_id\":16899,\"changed_by_email\":\"emma.wingreen+teacher@code.org\"}]",
+  "audit_log": "[{\"changed_at\":\"2023-09-20T16:54:08.061+00:00\",\"changed\":[\"cloned from \\\"Dance_2019_04\\\"\"],\"cloned_from\":\"Dance_2019_04\"},{\"changed_at\":\"2023-09-20 17:48:00 +0000\",\"changed\":[\"start_blocks\",\"toolbox_blocks\",\"never_autoplay_video\"],\"changed_by_id\":16899,\"changed_by_email\":\"emma.wingreen+teacher@code.org\"},{\"changed_at\":\"2023-09-21 22:20:07 +0000\",\"changed\":[\"toolbox_blocks\"],\"changed_by_id\":16899,\"changed_by_email\":\"emma.wingreen+teacher@code.org\"},{\"changed_at\":\"2023-09-21 22:22:52 +0000\",\"changed\":[\"start_blocks\",\"toolbox_blocks\",\"long_instructions\"],\"changed_by_id\":16899,\"changed_by_email\":\"emma.wingreen+teacher@code.org\"},{\"changed_at\":\"2023-09-21 22:23:26 +0000\",\"changed\":[\"start_blocks\"],\"changed_by_id\":16899,\"changed_by_email\":\"emma.wingreen+teacher@code.org\"},{\"changed_at\":\"2023-09-21 22:25:32 +0000\",\"changed\":[\"start_blocks\"],\"changed_by_id\":16899,\"changed_by_email\":\"emma.wingreen+teacher@code.org\"},{\"changed_at\":\"2023-09-21 22:43:55 +0000\",\"changed\":[\"toolbox_blocks\"],\"changed_by_id\":16899,\"changed_by_email\":\"emma.wingreen+teacher@code.org\"},{\"changed_at\":\"2023-09-21 22:48:24 +0000\",\"changed\":[\"start_blocks\"],\"changed_by_id\":16899,\"changed_by_email\":\"emma.wingreen+teacher@code.org\"},{\"changed_at\":\"2023-09-21 22:49:35 +0000\",\"changed\":[\"start_blocks\"],\"changed_by_id\":16899,\"changed_by_email\":\"emma.wingreen+teacher@code.org\"},{\"changed_at\":\"2023-09-21 22:51:39 +0000\",\"changed\":[\"start_blocks\",\"toolbox_blocks\",\"long_instructions\"],\"changed_by_id\":16899,\"changed_by_email\":\"emma.wingreen+teacher@code.org\"},{\"changed_at\":\"2023-09-21 22:51:48 +0000\",\"changed\":[\"toolbox_blocks\"],\"changed_by_id\":16899,\"changed_by_email\":\"emma.wingreen+teacher@code.org\"},{\"changed_at\":\"2023-09-25 18:56:57 +0000\",\"changed\":[\"start_blocks\",\"toolbox_blocks\",\"long_instructions\",\"contained_level_names\"],\"changed_by_id\":16899,\"changed_by_email\":\"emma.wingreen+teacher@code.org\"},{\"changed_at\":\"2023-09-25 19:18:27 +0000\",\"changed\":[\"start_blocks\"],\"changed_by_id\":16899,\"changed_by_email\":\"emma.wingreen+teacher@code.org\"},{\"changed_at\":\"2023-09-25 19:18:29 +0000\",\"changed\":[],\"changed_by_id\":16899,\"changed_by_email\":\"emma.wingreen+teacher@code.org\"},{\"changed_at\":\"2023-09-25 19:18:35 +0000\",\"changed\":[],\"changed_by_id\":16899,\"changed_by_email\":\"emma.wingreen+teacher@code.org\"},{\"changed_at\":\"2023-09-25 19:19:07 +0000\",\"changed\":[],\"changed_by_id\":16899,\"changed_by_email\":\"emma.wingreen+teacher@code.org\"},{\"changed_at\":\"2023-09-25 19:19:19 +0000\",\"changed\":[],\"changed_by_id\":16899,\"changed_by_email\":\"emma.wingreen+teacher@code.org\"},{\"changed_at\":\"2023-09-25 19:21:17 +0000\",\"changed\":[\"toolbox_blocks\"],\"changed_by_id\":16899,\"changed_by_email\":\"emma.wingreen+teacher@code.org\"},{\"changed_at\":\"2023-09-25 19:22:51 +0000\",\"changed\":[\"start_blocks\"],\"changed_by_id\":16899,\"changed_by_email\":\"emma.wingreen+teacher@code.org\"},{\"changed_at\":\"2023-09-25 19:23:27 +0000\",\"changed\":[\"toolbox_blocks\",\"start_blocks\"],\"changed_by_id\":16899,\"changed_by_email\":\"emma.wingreen+teacher@code.org\"},{\"changed_at\":\"2023-09-25 19:24:01 +0000\",\"changed\":[\"start_blocks\"],\"changed_by_id\":16899,\"changed_by_email\":\"emma.wingreen+teacher@code.org\"},{\"changed_at\":\"2023-09-25 19:25:09 +0000\",\"changed\":[\"toolbox_blocks\",\"long_instructions\",\"start_blocks\"],\"changed_by_id\":16899,\"changed_by_email\":\"emma.wingreen+teacher@code.org\"},{\"changed_at\":\"2023-09-26 23:41:00 +0000\",\"changed\":[\"toolbox_blocks\",\"long_instructions\",\"start_blocks\",\"encrypted_examples\"],\"changed_by_id\":16899,\"changed_by_email\":\"emma.wingreen+teacher@code.org\"},{\"changed_at\":\"2023-09-26 23:41:23 +0000\",\"changed\":[\"start_blocks\"],\"changed_by_id\":16899,\"changed_by_email\":\"emma.wingreen+teacher@code.org\"},{\"changed_at\":\"2023-09-26 23:42:16 +0000\",\"changed\":[\"toolbox_blocks\"],\"changed_by_id\":16899,\"changed_by_email\":\"emma.wingreen+teacher@code.org\"},{\"changed_at\":\"2023-09-26 23:42:49 +0000\",\"changed\":[\"start_blocks\"],\"changed_by_id\":16899,\"changed_by_email\":\"emma.wingreen+teacher@code.org\"},{\"changed_at\":\"2023-09-26 23:43:38 +0000\",\"changed\":[\"toolbox_blocks\"],\"changed_by_id\":16899,\"changed_by_email\":\"emma.wingreen+teacher@code.org\"},{\"changed_at\":\"2023-09-28 16:47:53 +0000\",\"changed\":[\"toolbox_blocks\"],\"changed_by_id\":18605,\"changed_by_email\":\"katie.frank+levelbuilder@code.org\"},{\"changed_at\":\"2023-09-28 16:48:29 +0000\",\"changed\":[\"start_blocks\",\"toolbox_blocks\"],\"changed_by_id\":18605,\"changed_by_email\":\"katie.frank+levelbuilder@code.org\"},{\"changed_at\":\"2023-09-28 16:49:28 +0000\",\"changed\":[\"start_blocks\",\"toolbox_blocks\",\"validation_code\",\"encrypted_examples\"],\"changed_by_id\":18605,\"changed_by_email\":\"katie.frank+levelbuilder@code.org\"},{\"changed_at\":\"2023-09-28 16:49:51 +0000\",\"changed\":[\"start_blocks\"],\"changed_by_id\":18605,\"changed_by_email\":\"katie.frank+levelbuilder@code.org\"},{\"changed_at\":\"2023-09-28 16:58:21 +0000\",\"changed\":[\"start_blocks\"],\"changed_by_id\":18605,\"changed_by_email\":\"katie.frank+levelbuilder@code.org\"},{\"changed_at\":\"2023-09-28 17:19:12 +0000\",\"changed\":[\"start_blocks\",\"toolbox_blocks\",\"long_instructions\"],\"changed_by_id\":16899,\"changed_by_email\":\"emma.wingreen+teacher@code.org\"}]",
   "level_concept_difficulty": {
   }
 }]]></config>
@@ -72,26 +81,17 @@
       <xml xmlns="https://developers.google.com/blockly/xml">
         <block type="Dancelab_whenSetup" id="j$yrO^C*jfX*iuc~Z*Ev" deletable="false" movable="false" x="16" y="16">
           <statement name="DO">
-            <block type="Dancelab_makeAnonymousDanceSprite" id="c8wjX(X5r$|_c2=P2:[3" deletable="false" movable="false">
-              <field name="COSTUME" config="&quot;BEAR&quot;, &quot;CAT&quot;, &quot;SHARK&quot;, &quot;SLOTH&quot;">"CAT"</field>
-              <field name="LOCATION">{x: 200, y: 200}</field>
+            <block type="Dancelab_ai" id="T7uTkol`jUpn:XlpAKEo">
+              <field name="VALUE">{  "backgroundColor": "neon",  "backgroundEffect": "splatter",  "foregroundEffect": "floating_rainbows",  "explanation": "I chose neon colors and splatter effect for the background to create an artistic vibe, and added floating rainbows in the foreground to make it feel like a colorful flower garden with a touch of magic."}</field>
               <next>
-                <block type="Dancelab_changeMoveEachLR" id="d4Nd5:R9|s6aO$0$Cd!N" deletable="false" movable="false">
-                  <field name="GROUP">"CAT"</field>
-                  <field name="MOVE">MOVES.ClapHigh</field>
-                  <field name="DIR">-1</field>
+                <block type="Dancelab_makeAnonymousDanceSprite" id="c8wjX(X5r$|_c2=P2:[3">
+                  <field name="COSTUME" config="&quot;BEAR&quot;, &quot;CAT&quot;, &quot;SHARK&quot;, &quot;SLOTH&quot;">"BEAR"</field>
+                  <field name="LOCATION">{x: 200, y: 200}</field>
                   <next>
-                    <block type="Dancelab_makeNewDanceSpriteGroup" id="3" deletable="false" movable="false">
-                      <field name="N">10</field>
-                      <field name="COSTUME" config="&quot;BEAR&quot;, &quot;CAT&quot;, &quot;FROG&quot;, &quot;PINEAPPLE&quot;, &quot;SHARK&quot;, &quot;UNICORN&quot;, &quot;SLOTH&quot;">"SLOTH"</field>
-                      <field name="LAYOUT">"circle"</field>
-                      <next>
-                        <block type="Dancelab_changeMoveEachLR" id="`YvXPfW@O`f|WA.H+t0j">
-                          <field name="GROUP">"SLOTH"</field>
-                          <field name="MOVE">MOVES.Drop</field>
-                          <field name="DIR">-1</field>
-                        </block>
-                      </next>
+                    <block type="Dancelab_makeNewDanceSpriteGroup" id="3">
+                      <field name="N">16</field>
+                      <field name="COSTUME" config="&quot;BEAR&quot;, &quot;CAT&quot;, &quot;FROG&quot;, &quot;PINEAPPLE&quot;, &quot;SHARK&quot;, &quot;UNICORN&quot;, &quot;SLOTH&quot;">"FROG"</field>
+                      <field name="LAYOUT">"diamond"</field>
                     </block>
                   </next>
                 </block>
@@ -99,30 +99,27 @@
             </block>
           </statement>
         </block>
-        <block type="Dancelab_atTimestamp" id="TGWiD_y?9Z(u(.$3qTNS" deletable="false" editable="false" x="56" y="230">
-          <field name="TIMESTAMP">4</field>
-          <field name="UNIT">"measures"</field>
+        <block type="Dancelab_whenKey" id="*R3Us3z5;rM#sBE?1zjX" deletable="false" x="19" y="221">
+          <field name="KEY">"up"</field>
         </block>
       </xml>
     </start_blocks>
     <toolbox_blocks>
       <xml>
-        <block type="Dancelab_makeAnonymousDanceSprite" id="1" x="16" y="16">
-          <field name="COSTUME" config="&quot;BEAR&quot;, &quot;CAT&quot;, &quot;SHARK&quot;, &quot;SLOTH&quot;">"CAT"</field>
-          <field name="LOCATION">{x: 200, y: 200}</field>
+        <block type="Dancelab_ai" id="Ru3$z|81JlKgT/;fMb]K" x="35" y="49">
+          <field name="VALUE"/>
         </block>
-        <block type="Dancelab_makeNewDanceSpriteGroup" id="p2L|}Q5pHj%[9vG+0}lN" x="16" y="99">
-          <field name="N">10</field>
-          <field name="COSTUME">"SLOTH"</field>
-          <field name="LAYOUT">"circle"</field>
+        <block type="Dancelab_whenKey" id="{;e[WB=LDmM:JwaT9[ny" x="20" y="152">
+          <field name="KEY">"up"</field>
         </block>
-        <block type="Dancelab_atTimestamp" id="2" x="38" y="206">
-          <field name="TIMESTAMP">4</field>
-          <field name="UNIT">"measures"</field>
+        <block type="Dancelab_doMoveEachLR" id="*hCDocpHXqlku@f[[rK=" x="18" y="224">
+          <field name="GROUP">"BEAR"</field>
+          <field name="MOVE">MOVES.Dab</field>
+          <field name="DIR">-1</field>
         </block>
-        <block type="Dancelab_changeMoveEachLR" id="3" x="29" y="295">
-          <field name="GROUP" config="&quot;BEAR&quot;, &quot;CAT&quot;, &quot;SHARK&quot;, &quot;SLOTH&quot;">"CAT"</field>
-          <field name="MOVE">MOVES.ThisOrThat</field>
+        <block type="Dancelab_doMoveEachLR" id="K,s:?b;es-2/:#X1xBtC" x="28" y="299">
+          <field name="GROUP">"FROG"</field>
+          <field name="MOVE">MOVES.DoubleJam</field>
           <field name="DIR">-1</field>
         </block>
       </xml>

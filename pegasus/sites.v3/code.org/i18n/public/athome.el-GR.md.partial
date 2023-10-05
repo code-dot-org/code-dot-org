@@ -38,7 +38,7 @@ theme: responsive
       </a>
     <div class="tutorial-info" style="background-color: #ffffff; border: 1px solid #696969; border-top: none; border-radius: 0 0 15px 15px; padding: 15px 25px 25px 25px">
       <span>
-        <h3 class="tutorial-info-h" style="text-align: left; margin-top:10px; margin-bottom:10px"><strong>Πάρτι χορού</strong></h3>
+        <h3 class="tutorial-info-h" style="text-align: left; margin-top:10px; margin-bottom:10px">Dance Party</h3>
         <div class="smalltext" style="text-align: left; margin-bottom: 10px">Κωδικοποιήστε ένα πάρτι χορού για κοινή χρήση με φίλους και συγγενείς. Με τους Beyoncé, Harry Styles, Lizzo, Lil Nas X, Selena Gomez, μουσική από το "Encanto" της Disney και πολλά ακόμα!</div>
         <a class="linktag" id="danceparty" href="/dance" target="_blank"><button>Δοκίμασε τη δραστηριότητα</button></a>
     </span>
@@ -53,8 +53,8 @@ theme: responsive
       </a>
     <div class="tutorial-info" style="background-color: #ffffff; border: 1px solid #696969; border-top: none; border-radius: 0 0 15px 15px; padding: 15px 25px 25px 25px">
       <span>
-        <h3 class="tutorial-info-h" style="text-align: left; margin-top:10px; margin-bottom: 10px"><strong>Ώρα Κώδικα Minecraft</strong></h3>
-        <div class="smalltext" style="text-align: left; margin-bottom: 10px">Το Minecraft επιστρέφει για την Ώρα του Κώδικα με μια ολοκαίνουργια δραστηριότητα! Ταξιδέψτε μέσω του Minecraft με κωδικό.</div>
+        <h3 class="tutorial-info-h" style="text-align: left; margin-top:10px; margin-bottom: 10px">Minecraft Hour of Code Το</h3>
+        <div class="smalltext" style="text-align: left; margin-bottom: 10px">Minecraft επέστρεψε για την Ώρα του Κώδικα με μια ολοκαίνουργια δραστηριότητα! Ταξιδέψτε μέσω του Minecraft με κωδικό.</div>
         <br>
         <a class="linktag" id="minecraft" href="/minecraft" target="_blank"><button>Δοκιμάστε τη δραστηριότητα</button></a>
     </span>
@@ -69,7 +69,7 @@ theme: responsive
       </a>
     <div class="tutorial-info" style="background-color: #ffffff; border: 1px solid #696969; border-top: none; border-radius: 0 0 15px 15px; padding: 15px 25px 25px 25px">
       <span>
-        <h3 class="tutorial-info-h" style="text-align: left; margin-top:10px; margin-bottom:10px"><strong>AI for Oceans</strong></h3>
+        <h3 class="tutorial-info-h" style="text-align: left; margin-top:10px; margin-bottom:10px">AI for Oceans</h3>
         <div class="smalltext" style="text-align: left; margin-bottom: 10px">Βοηθήστε την τεχνητή νοημοσύνη να καθαρίσει τους ωκεανούς εκπαιδεύοντάς την να ανιχνεύει σκουπίδια! Μάθετε για τα δεδομένα εκπαίδευσης και την προκατάληψη, και πώς η τεχνητή νοημοσύνη μπορεί να αντιμετωπίσει παγκόσμια προβλήματα. Προβολή <a class="linktag" id="oceans-lesson" href="https://curriculum.code.org/hoc/plugged/9/" target="_blank">σχέδιο μαθήματος</a>.</div>
         <a class="linktag" id="aiforoceans" href="https://studio.code.org/s/oceans/lessons/1/levels/1" target="_blank"><button>Δοκιμάστε τη δραστηριότητα</button></a>
     </span>
@@ -96,8 +96,8 @@ theme: responsive
       </a>
     <div class="tutorial-info" style="background-color: #ffffff; border: 1px solid #696969; border-top: none; border-radius: 0 0 15px 15px; padding: 15px 25px 25px 25px">
       <span>
-        <h3 class="tutorial-info-h" style="text-align: left; margin-top:10px; margin-bottom:10px"><strong>Πώς λειτουργούν οι υπολογιστές</strong></h3>
-        <div class="smalltext" style="text-align: left; margin-bottom: 10px">Με μια εισαγωγή από τον Bill Gates, αυτή η σειρά έξι σύντομων βίντεο εξηγεί τι κάνει έναν υπολογιστή έναν υπολογιστή και πώς λειτουργούν τα κυκλώματα υπολογιστών.</div>
+        <h3 class="tutorial-info-h" style="text-align: left; margin-top:10px; margin-bottom:10px">Πώς λειτουργούν οι υπολογιστές</h3>
+        <div class="smalltext" style="text-align: left; margin-bottom: 10px">Με μια εισαγωγή από τον Bill Gates, Αυτή η σειρά έξι σύντομων βίντεο εξηγεί τι κάνει έναν υπολογιστή υπολογιστή και πώς λειτουργούν τα κυκλώματα υπολογιστών.</div>
         <a class="linktag" id="howcomputers" href="https://www.youtube.com/watch?v=OAx_6-wdslM&list=PLzdnOPI1iJNcsRwJhvksEo1tJqjIqWbN-" target="_blank"><button>Παρακολουθήστε τη σειρά βίντεο</button></a>
     </span>
   </div>
@@ -111,7 +111,7 @@ theme: responsive
       </a>
     <div class="tutorial-info" style="background-color: #ffffff; border: 1px solid #696969; border-top: none; border-radius: 0 0 15px 15px; padding: 15px 25px 25px 25px">
       <span>
-        <h3 class="tutorial-info-h" style="text-align: left; margin-top:10px; margin-bottom: 10px"><strong>Πώς λειτουργεί το Διαδίκτυο</strong></h3>
+        <h3 class="tutorial-info-h" style="text-align: left; margin-top:10px; margin-bottom: 10px">Πώς λειτουργεί το Διαδίκτυο</h3>
         <div class="smalltext" style="text-align: left; margin-bottom: 10px">Σε αυτήν τη σειρά οκτώ σύντομων βίντεο, θα μάθετε πώς εφευρέθηκε το Διαδίκτυο, τι είναι το HTML, και πώς λειτουργούν οι μηχανές αναζήτησης όπως το Google.</div>
         <a class="linktag" id="howinternet" href="https://www.youtube.com/watch?v=Dxcc6ycZ73M&list=PLzdnOPI1iJNfMRZm5DDxco3UdsFegvuB7-" target="_blank"><button>Παρακολουθήστε τη σειρά βίντεο</button></a>
     </span>
@@ -126,7 +126,7 @@ theme: responsive
       </a>
     <div class="tutorial-info" style="background-color: #ffffff; border: 1px solid #696969; border-top: none; border-radius: 0 0 15px 15px; padding: 15px 25px 25px 25px">
       <span>
-        <h3 class="tutorial-info-h" style="text-align: left; margin-top:10px; margin-bottom: 10px"><strong>Πώς λειτουργεί το AI</strong></h3>
+        <h3 class="tutorial-info-h" style="text-align: left; margin-top:10px; margin-bottom: 10px">Πώς λειτουργεί το AI</h3>
         <div class="smalltext" style="text-align: left; margin-bottom: 10px">Μάθετε πώς λειτουργεί το AI και γιατί έχει σημασία με αυτήν τη σειρά σύντομων βίντεο. Με τον CEO της Microsoft Satya Nadella και ένα διαφορετικό καστ εμπειρογνωμόνων.</div>
         <a class="linktag" id="ai-videos" href="/ai#ai-videos" target="_blank"><button>Παρακολουθήστε τη σειρά βίντεο</button></a>
     </span>
@@ -136,7 +136,7 @@ theme: responsive
 
 <div style="clear: both"></div>
 
-<p>View more videos, including short inspirational videos featuring celebrities like Steph Curry and Shakira, <a class="linktag" id="all-videos" href="https://code.org/educate/resources/videos" target="_blank">here</a>.</p>
+<p>Δείτε περισσότερα βίντεο, συμπεριλαμβανομένων σύντομων εμπνευσμένων βίντεο με διασημότητες όπως ο Steph Curry και η Shakira, εδώ. <a class="linktag" id="all-videos" href="https://code.org/educate/resources/videos" target="_blank"></a></p>
 <br>
 <p><a href="#top">[Πίσω στην κορυφή]</a></p>
 
@@ -159,10 +159,10 @@ theme: responsive
 
 <div class="col-50" style="padding-right: 20px; padding-bottom:10px">
 
-<a class="linktag" id="prereader-course" href="https://studio.code.org/s/pre-express-2019" target="_blank"><img src="/images/curriculum/course-tile-pre-reader-express.png" style="width: 100%" alt="Μάθημα Express πριν από τον αναγνώστη"></a><br><a class="linktag" id="prereader-course" href="https://studio.code.org/s/pre-express-2019" target="_blank">Express Course for pre-readers</a>
+<a class="linktag" id="prereader-course" href="https://studio.code.org/s/pre-express-2019" target="_blank"><img src="/images/curriculum/course-tile-pre-reader-express.png" style="width: 100%" alt="Μάθημα Express πριν από τον αναγνώστη"></a><br><a class="linktag" id="prereader-course" href="https://studio.code.org/s/pre-express-2019" target="_blank">Express Course για προ-αναγνώστες</a>
 
 </div>
-<div style="clear: both"></div>
+<div style="clear: both; margin-bottom: 2rem"></div>
 
 <h3>Εισαγωγές με αυτόματο ρυθμό στο Game Lab και στο App Lab</h3>
 <p>Προσαρμοσμένες από τα μαθήματα CS Discoveries και CS Principles, αυτές οι σύντομες, αυτορυθμισμένες ενότητες είναι ένας πολύ καλός τρόπος για να μάθετε έννοιες που καλύπτουν όλες τις γλώσσες και τα εργαλεία προγραμματισμού. <i>Απαιτείται λογαριασμός Code.org για πρόσβαση</i>.</p>
@@ -176,8 +176,8 @@ theme: responsive
       </a>
     <div class="tutorial-info" style="background-color: #ffffff; border: 1px solid #696969; border-top: none; border-radius: 0 0 15px 15px; padding: 15px 25px 25px 25px">
       <span>
-        <h3 class="tutorial-info-h" style="text-align: left; margin-top:10px; margin-bottom:10px"><strong>Εισαγωγή στο Game Lab</strong></h3>
-        <div class="smalltext" style="text-align: left; margin-bottom: 10px">Κινούμενα σχέδια προγράμματος, διαδραστική τέχνη, και παιχνίδια στο Game Lab. Ξεκινήστε με απλά σχήματα και δημιουργήστε πιο εξελιγμένα κινούμενα σχέδια και παιχνίδια που βασίζονται σε sprite.</div>
+        <h3 class="tutorial-info-h" style="text-align: left; margin-top:10px; margin-bottom:10px">Εισαγωγή στα κινούμενα σχέδια</h3>
+        <div class="smalltext" style="text-align: left; margin-bottom: 10px">του προγράμματος Game Lab, διαδραστική τέχνη, και παιχνίδια στο Game Lab. Ξεκινήστε με απλά σχήματα και δημιουργήστε πιο εξελιγμένα κινούμενα σχέδια και παιχνίδια που βασίζονται σε sprite.</div>
         <a class="linktag" id="gamelab-intro" href="https://studio.code.org/s/csd3-virtual" target="_blank"><button>Δοκιμάστε την ενότητα</button></a>
     </span>
   </div>
@@ -191,7 +191,7 @@ theme: responsive
       </a>
     <div class="tutorial-info" style="background-color: #ffffff; border: 1px solid #696969; border-top: none; border-radius: 0 0 15px 15px; padding: 15px 25px 25px 25px">
       <span>
-        <h3 class="tutorial-info-h" style="text-align: left; margin-top:10px; margin-bottom: 10px"><strong>Προγραμματισμός χελωνών στο App Lab</strong></h3>
+        <h3 class="tutorial-info-h" style="text-align: left; margin-top:10px; margin-bottom: 10px">Προγραμματισμός χελωνών στο App Lab</h3>
         <div class="smalltext" style="text-align: left; margin-bottom: 10px">Χρησιμοποιήστε απλές εντολές JavaScript για να σχεδιάσετε σχήματα και εικόνες χρησιμοποιώντας μια εικονική «χελώνα». Σχεδιάστε και προγραμματίστε τη δική σας ψηφιακή σκηνή!</div>
         <a class="linktag" id="turtle-applab" href="https://studio.code.org/s/csp3-virtual" target="_blank"><button>Δοκιμάστε την ενότητα</button></a>
     </span>
@@ -206,7 +206,7 @@ theme: responsive
       </a>
     <div class="tutorial-info" style="background-color: #ffffff; border: 1px solid #696969; border-top: none; border-radius: 0 0 15px 15px; padding: 15px 25px 25px 25px">
       <span>
-        <h3 class="tutorial-info-h" style="text-align: left; margin-top:10px; margin-bottom: 10px"><strong>Προγραμματισμός βάσει συμβάντων στο App Lab</strong></h3>
+        <h3 class="tutorial-info-h" style="text-align: left; margin-top:10px; margin-bottom: 10px">Προγραμματισμός βάσει συμβάντων στο App Lab</h3>
         <div class="smalltext" style="text-align: left; margin-bottom: 10px">Μάθετε να σχεδιάζετε εφαρμογές που ανταποκρίνονται σε κλικ και πατήματα πλήκτρων. Δημιουργήστε μια σειρά απλών εφαρμογών (apps) που ζουν στο διαδίκτυο!</div>
         <a class="linktag" id="events-applab" href="https://studio.code.org/s/csp5-virtual" target="_blank"><button>Δοκιμάστε την ενότητα</button></a>
     </span>
@@ -230,7 +230,7 @@ theme: responsive
 
 <div class="col-33" style="padding:15px; border-radius:15px; border:10px solid white; background-color:#00adbc">
   <div style="width: 87%; float: left">
-    <a class="linktag" id="applab" href="https://code.org/educate/applab" style="text-decoration:none" target="_blank"><h3 style="color:#ffffff; margin:0; margin-bottom:5px; text-decoration:none"><strong>Εργαστήριο εφαρμογών</strong></h3></a>
+    <a class="linktag" id="applab" href="https://code.org/educate/applab" style="text-decoration:none" target="_blank"><h3 style="color:#ffffff; margin:0; margin-bottom:5px; text-decoration:none">Εργαστήριο εφαρμογών</h3></a>
     <p style="color:#ffffff">Το App Lab (Εργαστήρι Εφαρμογών) είναι ένα περιβάλλον προγραμματισμού όπου μπορούμε να κάνουμε απλές εφαρμογές. Σχεδιάστε μια εφαρμογή, κωδικοποιήστε με μπλοκ ή JavaScript για να λειτουργήσει και, στη συνέχεια, μοιραστείτε την εφαρμογή σας σε δευτερόλεπτα.</p>
     <a class="linktag" id="applab" href="https://code.org/educate/applab" target="_blank"><button style="background-color:#e7e8ea; border-color:#e7e8ea; color:#696969">Δημιουργήστε μια εφαρμογή</button></a>
   </div>
@@ -239,7 +239,7 @@ theme: responsive
 
 <div class="col-33" style="padding:15px; border-radius:15px; border:10px solid white; background-color:#00adbc">
   <div style="width: 87%; float: left">
-    <a class="linktag" id="gamelab" href="https://code.org/educate/gamelab" style="text-decoration:none" target="_blank"><h3 style="color:#ffffff; margin:0; margin-bottom:5px; text-decoration:none"><strong>Εργαστήριο Παιχνιδιών</strong></h3></a>
+    <a class="linktag" id="gamelab" href="https://code.org/educate/gamelab" style="text-decoration:none" target="_blank"><h3 style="color:#ffffff; margin:0; margin-bottom:5px; text-decoration:none">Εργαστήριο παιχνιδιών</h3></a>
     <p style="color:#ffffff">Το Game Lab είναι ένα περιβάλλον προγραμματισμού όπου μπορείτε να κάνετε απλά κινούμενα σχέδια και παιχνίδια με αντικείμενα και χαρακτήρες που αλληλεπιδρούν μεταξύ τους.</p>
     <br>
     <a class="linktag" id="gamelab" href="https://code.org/educate/gamelab" target="_blank"><button style="background-color:#e7e8ea; border-color:#e7e8ea; color:#696969">Δημιουργήστε ένα παιχνίδι</button></a>
@@ -249,7 +249,7 @@ theme: responsive
 
 <div class="col-33" style="padding:15px; border-radius:15px; border:10px solid white; background-color:#00adbc">
   <div style="width: 87%; float: left">
-    <a class="linktag" id="weblab" href="https://code.org/educate/weblab" style="text-decoration:none" target="_blank"><h3 style="color:#ffffff; margin:0; margin-bottom:5px; text-decoration:none"><strong>Εργαστήριο Ιστού</strong></h3></a>
+    <a class="linktag" id="weblab" href="https://code.org/educate/weblab" style="text-decoration:none" target="_blank"><h3 style="color:#ffffff; margin:0; margin-bottom:5px; text-decoration:none">Εργαστήριο Ιστού</h3></a>
     <p style="color:#ffffff">Το Web Lab είναι ένα περιβάλλον προγραμματισμού όπου μπορείτε να δημιουργήσετε απλές ιστοσελίδες χρησιμοποιώντας HTML και CSS. Σχεδιάστε τις ιστοσελίδες σας και μοιραστείτε τον ιστότοπό σας σε δευτερόλεπτα.</p>
     <br>
     <a class="linktag" id="weblab" href="https://code.org/educate/weblab" target="_blank"><button style="background-color:#e7e8ea; border-color:#e7e8ea; color:#696969">Δημιουργήστε μια ιστοσελίδα</button></a>
@@ -286,16 +286,12 @@ theme: responsive
 
 <h2>Δεν υπάρχει υπολογιστής στο σπίτι; Δοκιμάστε το CS στο τηλέφωνό σας με αυτές τις εφαρμογές από τους συνεργάτες μας</h2>
 
-<div class="col-33" style="padding-right: 30px; padding-bottom:40px">
-  <a class="linktag" id="box-island" href="https://boxisland.io/" target="_blank"><img src="images/tutorials/new/boxisland.jpg" style="width: 100%" alt="Νήσος Μποξ"></a><br><a class="linktag" id="box-island" href="https://boxisland.io/" target="_blank"><h3 style="color:#7665a0"><strong>Box Island</strong></h3></a>Ένα γοητευτικό παιχνίδι κωδικοποίησης για κινητά που οδηγεί τους μαθητές σε μια συναρπαστική περιπέτεια, ενώ διδάσκει τις βασικές αρχές της κωδικοποίησης, όπως αλγόριθμοι, αναγνώριση προτύπων, ακολουθίες, βρόχοι και προϋποθέσεις. <i>(για όλες τις ηλικίες)</i>
+<div class="col-50" style="padding-right: 30px; padding-bottom:40px">
+  <a class="linktag" id="box-island" href="https://boxisland.io/" target="_blank"><img src="images/tutorials/new/boxisland.jpg" style="width: 100%" alt="Νήσος Μποξ"></a><br><a class="linktag" id="box-island" href="https://boxisland.io/" target="_blank"><h3 style="margin-top: 1rem;">Box Island</h3></a>Ένα γοητευτικό παιχνίδι κωδικοποίησης για κινητά που οδηγεί τους μαθητές σε μια συναρπαστική περιπέτεια, ενώ διδάσκει τις βασικές αρχές της κωδικοποίησης, σαν αλγόριθμοι, αναγνώριση προτύπων, ακολουθίες, βρόχοι και προϋποθέσεις. <i>(για όλες τις ηλικίες)</i>
 </div>
 
-<div class="col-33" style="padding-right: 30px; padding-bottom:40px">
-  <a class="linktag" id="codespark" href="https://accounts.codespark.com/promo?utm_source=codeorg&utm_medium=referral&utm_campaign=schoolsclosed-parents&utm_content=offer&promoCode=schoolclosed" target="_blank"><img src="/images/tutorials/hoc2018/codespark_create.jpg" style="width: 100%" alt="CodesPark"></a><br><a class="linktag" id="codespark" href="https://accounts.codespark.com/promo?utm_source=codeorg&utm_medium=referral&utm_campaign=schoolsclosed-parents&utm_content=offer&promoCode=schoolclosed" target="_blank"><h3 style="color:#7665a0"><strong>CodesPark</strong></h3></a>Βραβευμένη πλατφόρμα εκμάθησης κώδικα για παιδιά ηλικίας 5-9 ετών. Επιλύστε παζλ και δημιουργήστε παιχνίδια με The Foos μαθαίνοντας ταυτόχρονα να φτιάχνετε κώδικες,. <strong>Σημείωση: codeSpark προσφέρει μια δωρεάν δοκιμή 3 μηνών. Η διεύθυνση ηλεκτρονικού ταχυδρομείου και οι πληροφορίες της πιστωτικής κάρτας των γονέων απαιτούνται κατά την εγγραφή.</strong><i>(για προαναγνώστες έως την έκτη δημοτικού)</i>
-</div>
-
-<div class="col-33" style="padding-right: 30px; padding-bottom:40px">
-  <a class="linktag" id="grasshopper" href="https://grasshopper.app/" target="_blank"><img src="/images/athome/grasshopper.png" style="width: 100%" alt="Ακρίδα"></a><br><a class="linktag" id="grasshopper" href="https://grasshopper.app/" target="_blank"><h3 style="color:#7665a0"><strong>Ακρίδα</strong></h3></a>Μάθετε κωδικοποίηση με διασκεδαστικά, γρήγορα μαθήματα στο τηλέφωνό σας που σας διδάσκουν να γράφετε πραγματική JavaScript. Ένας Κώδικας με Google Program. <i>(για τάξεις του γυμνασίου και ανώτερες τάξεις)</i>
+<div class="col-50" style="padding-right: 30px; padding-bottom:40px">
+  <a class="linktag" id="codespark" href="https://accounts.codespark.com/promo?utm_source=codeorg&utm_medium=referral&utm_campaign=schoolsclosed-parents&utm_content=offer&promoCode=schoolclosed" target="_blank"><img src="/images/tutorials/hoc2018/codespark_create.jpg" style="width: 100%" alt="CodesPark"></a><br><a class="linktag" id="codespark" href="https://accounts.codespark.com/promo?utm_source=codeorg&utm_medium=referral&utm_campaign=schoolsclosed-parents&utm_content=offer&promoCode=schoolclosed" target="_blank"><h3 style="margin-top: 1rem;"></h3></a>Βραβευμένη πλατφόρμα εκμάθησης κώδικα CodesPark για παιδιά ηλικίας 5-9 ετών. Επιλύστε παζλ και δημιουργήστε παιχνίδια με The Foos μαθαίνοντας ταυτόχρονα να φτιάχνετε κώδικες,. <strong>Σημείωση: codeSpark προσφέρει μια δωρεάν δοκιμή 3 μηνών. Η διεύθυνση ηλεκτρονικού ταχυδρομείου και οι πληροφορίες της πιστωτικής κάρτας των γονέων απαιτούνται κατά την εγγραφή.</strong><i>(για προαναγνώστες έως την έκτη δημοτικού)</i>
 </div>
 
 <div style="clear: both; margin-bottom: 15px"></div>
@@ -312,8 +308,8 @@ theme: responsive
       </a>
     <div class="tutorial-info" style="background-color: #ffffff; border: 1px solid black; border-top: none; border-radius: 0 0 15px 15px; padding: 15px 25px 25px 25px">
       <span>
-        <h3 class="tutorial-info-h" style="margin-top:10px"><strong>CodeBytes</strong></h3>
-        <div class="smalltext" style="color: dimgray;">CodeBytes είναι εύχρηστα, διαδραστικά μαθήματα 20 λεπτών που συνδυάζουν την επιστήμη των υπολογιστών με θέματα πραγματικού κόσμου. Εκπαιδεύστε ένα AI για να διαβάσετε τη νοηματική γλώσσα, σχεδιάστε μια εφαρμογή για πάντα, εξερευνήστε τον κόσμο του Minecraft, κι αλλα!</div>
+        <h3 class="tutorial-info-h" style="margin-top:10px">CodeBytes</h3>
+        <div class="smalltext" style="color: dimgray;">CodeBytes είναι εύπεπτα, 20 λεπτά διαδραστικά μαθήματα που συνδυάζουν την επιστήμη των υπολογιστών με θέματα πραγματικού κόσμου. Εκπαιδεύστε ένα AI για να διαβάσετε τη νοηματική γλώσσα, σχεδιάστε μια εφαρμογή για πάντα, εξερευνήστε τον κόσμο του Minecraft, κι αλλα!</div>
         <br>
         <br>
         <a class="linktag" id="codebytes" href="https://code.org/codebytes" target="_blank"><button>Προβολή επεισοδίων</button></a>
@@ -329,8 +325,8 @@ theme: responsive
       </a>
     <div class="tutorial-info" style="background-color: #ffffff; border: 1px solid black; border-top: none; border-radius: 0 0 15px 15px; padding: 15px 25px 25px 25px">
       <span>
-        <h3 class="tutorial-info-h" style="margin-top:10px"><strong>Διακοπή κώδικα</strong></h3>
-        <div class="smalltext" style="">Διατηρήστε την επιστήμη των υπολογιστών διασκεδαστική κάνοντας ένα διάλειμμα κώδικα! Μπορείτε να δημιουργήσετε έναν κρυπτογράφο με τον Ashton Kutcher, μάθετε για τις μεταβλητές με την Yara Shahidi, και ακόμη και να εξερευνήσετε πώς λειτουργεί το Διαδίκτυο με τον πραγματικό εφευρέτη του Διαδικτύου, Vint Cerf!</div>
+        <h3 class="tutorial-info-h" style="margin-top:10px">Code Break</h3>
+        <div class="smalltext" style="">Διατηρήστε την επιστήμη των υπολογιστών διασκεδαστική κάνοντας ένα Code Break! Μπορείτε να δημιουργήσετε έναν κρυπτογράφο με τον Ashton Kutcher, μάθετε για τις μεταβλητές με την Yara Shahidi, και ακόμη και να εξερευνήσετε πώς λειτουργεί το Διαδίκτυο με τον πραγματικό εφευρέτη του Διαδικτύου, Vint Cerf!</div>
         <br>
         <a class="linktag" id="codebreak" href="https://code.org/break" target="_blank"><button>Συνδεθείτε</button></a>
     </span>

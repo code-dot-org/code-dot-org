@@ -20,6 +20,15 @@
           "Yes": "Ναι",
           "cute": "χαριτωμένος"
         },
+        "CSD U1 IO Pet Chooser 2_2023": {
+          "Do you want to play with the pet?": "Θέλεις να παίζεις με το κατοικίδιο;",
+          "Get a parrot!": "Πάρτε έναν παπαγάλο!",
+          "Get a tarantula!": "Πάρτε μια ταραντούλα!",
+          "No": "Όχι",
+          "Should the pet be noisy?": "Το κατοικίδιο να είναι θορυβώδες;",
+          "Yes": "Ναι",
+          "cute": "χαριτωμένος"
+        },
         "CSD U1 IO Pet Chooser_2021": {
           "Do you want to play with the pet?": "Θέλεις να παίζεις με το κατοικίδιο;",
           "Get a parrot!": "Πάρτε έναν παπαγάλο!",
@@ -38,6 +47,15 @@
           "Yes": "Ναι",
           "cute": "χαριτωμένος"
         },
+        "CSD U1 IO Pet Chooser_2023": {
+          "Do you want to play with the pet?": "Θέλεις να παίζεις με το κατοικίδιο;",
+          "Get a parrot!": "Πάρτε έναν παπαγάλο!",
+          "Get a tarantula!": "Πάρτε μια ταραντούλα!",
+          "No": "Όχι",
+          "Should the pet be noisy?": "Το κατοικίδιο να είναι θορυβώδες;",
+          "Yes": "Ναι",
+          "cute": "χαριτωμένος"
+        },
         "CSD U1 IO Story_2021": {
           "City": "Πόλη",
           "Color": "Χρώμα",
@@ -46,6 +64,13 @@
           "text": "κείμενο"
         },
         "CSD U1 IO Story_2022": {
+          "City": "Πόλη",
+          "Color": "Χρώμα",
+          "Food": "Φαγητό",
+          "Name": "Όνομα",
+          "text": "κείμενο"
+        },
+        "CSD U1 IO Story_2023": {
           "City": "Πόλη",
           "Color": "Χρώμα",
           "Food": "Φαγητό",
@@ -96,12 +121,39 @@
           "8": "8",
           "9": "9"
         },
+        "CSD U1 processing bday_2023": {
+          "1": "1",
+          "10": "10",
+          "11": "11",
+          "12": "12",
+          "13": "13",
+          "14": "14",
+          "15": "15",
+          "16": "16",
+          "17": "17",
+          "18": "18",
+          "19": "19",
+          "2": "2",
+          "20": "20",
+          "3": "3",
+          "4": "4",
+          "5": "5",
+          "6": "6",
+          "7": "7",
+          "8": "8",
+          "9": "9"
+        },
         "CSD U1 processing fastest_2021": {
           "0": "0",
           "k": "κ",
           "s": "σ"
         },
         "CSD U1 processing fastest_2022": {
+          "0": "0",
+          "k": "κ",
+          "s": "σ"
+        },
+        "CSD U1 processing fastest_2023": {
           "0": "0",
           "k": "κ",
           "s": "σ"
@@ -152,6 +204,29 @@
           "9": "9",
           "text": "κείμενο"
         },
+        "CSD U1 processing guess_2023": {
+          "1": "1",
+          "10": "10",
+          "11": "11",
+          "12": "12",
+          "13": "13",
+          "14": "14",
+          "15": "15",
+          "16": "16",
+          "17": "17",
+          "18": "18",
+          "19": "19",
+          "2": "2",
+          "20": "20",
+          "3": "3",
+          "4": "4",
+          "5": "5",
+          "6": "6",
+          "7": "7",
+          "8": "8",
+          "9": "9",
+          "text": "κείμενο"
+        },
         "CSD U1 processing live_2021": {
           "bear": "Αρκούδα",
           "rat": "αρουραίος",
@@ -162,11 +237,22 @@
           "rat": "αρουραίος",
           "walking": "περπατώντας"
         },
+        "CSD U1 processing live_2023": {
+          "cat": "γάτα",
+          "chicken": "κοτόπουλο",
+          "dog": "σκύλος",
+          "horse": "άλογο",
+          "walking": "περπατώντας"
+        },
         "CSD U1 processing npark_2021": {
           "Correct!": "Σωστά!",
           "Sorry!": "Συγνώμη!"
         },
         "CSD U1 processing npark_2022": {
+          "Correct!": "Σωστά!",
+          "Sorry!": "Συγνώμη!"
+        },
+        "CSD U1 processing npark_2023": {
           "Correct!": "Σωστά!",
           "Sorry!": "Συγνώμη!"
         },
@@ -214,10 +300,35 @@
           "8": "8",
           "9": "9"
         },
+        "CSD U1 processing writers_2023": {
+          "1": "1",
+          "10": "10",
+          "11": "11",
+          "12": "12",
+          "13": "13",
+          "14": "14",
+          "15": "15",
+          "16": "16",
+          "17": "17",
+          "18": "18",
+          "19": "19",
+          "2": "2",
+          "20": "20",
+          "3": "3",
+          "4": "4",
+          "5": "5",
+          "6": "6",
+          "7": "7",
+          "8": "8",
+          "9": "9"
+        },
         "CSD U1 storage friends_2021": {
           "Back": "Πίσω"
         },
         "CSD U1 storage friends_2022": {
+          "Back": "Πίσω"
+        },
+        "CSD U1 storage friends_2023": {
           "Back": "Πίσω"
         },
         "CSD U1 storage movies_2021": {
@@ -232,6 +343,12 @@
           "Yes": "Ναι",
           "text": "κείμενο"
         },
+        "CSD U1 storage movies_2023": {
+          "No": "Όχι",
+          "Star Wars": "Star Wars",
+          "Yes": "Ναι",
+          "text": "κείμενο"
+        },
         "CSD U1 storage outfit_2021": {
           "Clear": "Εκκαθάριση",
           "black": "μαύρο",
@@ -241,6 +358,14 @@
           "white": "λευκό"
         },
         "CSD U1 storage outfit_2022": {
+          "Clear": "Εκκαθάριση",
+          "black": "μαύρο",
+          "green": "πράσινο",
+          "pink": "ροζ",
+          "purple": "μωβ",
+          "white": "λευκό"
+        },
+        "CSD U1 storage outfit_2023": {
           "Clear": "Εκκαθάριση",
           "black": "μαύρο",
           "green": "πράσινο",
@@ -283,16 +408,67 @@
           "4": "4",
           "5": "5"
         },
+        "CSD U6 - Accelerometer - PB_2023": {
+          "0": "0"
+        },
         "CSD U6 - Accelerometer - PB_2222": {
           "0": "0"
+        },
+        "CSD U6 - Accelerometer - PB_mb2022": {
+          "0": "0"
+        },
+        "CSD U6 - Accelerometer - PD_2023": {
+          "You did it!": "Τα κατάφερες!"
         },
         "CSD U6 - Accelerometer - PD_2222": {
           "You did it!": "Τα κατάφερες!"
         },
+        "CSD U6 - Accelerometer - PF_2023": {
+          "0": "0"
+        },
         "CSD U6 - Accelerometer - PF_2222": {
           "0": "0"
         },
+        "CSD U6 - Accelerometer - PF_mb2022": {
+          "0": "0"
+        },
+        "CSD U6 - Accelerometer - SB2_mb2022": {
+          "Plug the board into a different USB": "Συνδέστε την πλακέτα σε ένα διαφορετικό USB",
+          "Refresh this page and try again": "Ανανέωση αυτής της σελίδας και προσπαθήστε ξανά",
+          "Success!": "Επιτυχία!",
+          "Visit studio.code.org/maker/setup": "Επισκεφθείτε το studio.code.org/maker/setup"
+        },
+        "CSD U6 - Board Inputs - P_2023": {
+          "Plug the board into a different USB": "Συνδέστε την πλακέτα σε ένα διαφορετικό USB",
+          "Refresh this page and try again": "Ανανέωση αυτής της σελίδας και προσπαθήστε ξανά",
+          "Success!": "Επιτυχία!",
+          "Visit studio.code.org/maker/setup": "Επισκεφθείτε το studio.code.org/maker/setup"
+        },
+        "CSD U6 - Board Inputs - PracC_mb2022": {
+          "Plug the board into a different USB": "Συνδέστε την πλακέτα σε ένα διαφορετικό USB",
+          "Refresh this page and try again": "Ανανέωση αυτής της σελίδας και προσπαθήστε ξανά",
+          "Success!": "Επιτυχία!",
+          "Visit studio.code.org/maker/setup": "Επισκεφθείτε το studio.code.org/maker/setup"
+        },
+        "CSD U6 - Board Inputs - SB1_2023": {
+          "Plug the board into a different USB": "Συνδέστε την πλακέτα σε ένα διαφορετικό USB",
+          "Refresh this page and try again": "Ανανέωση αυτής της σελίδας και προσπαθήστε ξανά",
+          "Success!": "Επιτυχία!",
+          "Visit studio.code.org/maker/setup": "Επισκεφθείτε το studio.code.org/maker/setup"
+        },
         "CSD U6 - Board Inputs - SB1_2222": {
+          "Plug the board into a different USB": "Συνδέστε την πλακέτα σε ένα διαφορετικό USB",
+          "Refresh this page and try again": "Ανανέωση αυτής της σελίδας και προσπαθήστε ξανά",
+          "Success!": "Επιτυχία!",
+          "Visit studio.code.org/maker/setup": "Επισκεφθείτε το studio.code.org/maker/setup"
+        },
+        "CSD U6 - Board Inputs - SB1_mb2022": {
+          "Plug the board into a different USB": "Συνδέστε την πλακέτα σε ένα διαφορετικό USB",
+          "Refresh this page and try again": "Ανανέωση αυτής της σελίδας και προσπαθήστε ξανά",
+          "Success!": "Επιτυχία!",
+          "Visit studio.code.org/maker/setup": "Επισκεφθείτε το studio.code.org/maker/setup"
+        },
+        "CSD U6 - Board Inputs - SB2_2023": {
           "Plug the board into a different USB": "Συνδέστε την πλακέτα σε ένα διαφορετικό USB",
           "Refresh this page and try again": "Ανανέωση αυτής της σελίδας και προσπαθήστε ξανά",
           "Success!": "Επιτυχία!",
@@ -304,17 +480,51 @@
           "Success!": "Επιτυχία!",
           "Visit studio.code.org/maker/setup": "Επισκεφθείτε το studio.code.org/maker/setup"
         },
+        "CSD U6 - Board Inputs - SB2_mb2022": {
+          "Plug the board into a different USB": "Συνδέστε την πλακέτα σε ένα διαφορετικό USB",
+          "Refresh this page and try again": "Ανανέωση αυτής της σελίδας και προσπαθήστε ξανά",
+          "Success!": "Επιτυχία!",
+          "Visit studio.code.org/maker/setup": "Επισκεφθείτε το studio.code.org/maker/setup"
+        },
+        "CSD U6 - Board Inputs - SB3_2023": {
+          "Plug the board into a different USB": "Συνδέστε την πλακέτα σε ένα διαφορετικό USB",
+          "Refresh this page and try again": "Ανανέωση αυτής της σελίδας και προσπαθήστε ξανά",
+          "Success!": "Επιτυχία!",
+          "Visit studio.code.org/maker/setup": "Επισκεφθείτε το studio.code.org/maker/setup"
+        },
         "CSD U6 - Board Inputs - SB3_2222": {
           "Plug the board into a different USB": "Συνδέστε την πλακέτα σε ένα διαφορετικό USB",
           "Refresh this page and try again": "Ανανέωση αυτής της σελίδας και προσπαθήστε ξανά",
           "Success!": "Επιτυχία!",
           "Visit studio.code.org/maker/setup": "Επισκεφθείτε το studio.code.org/maker/setup"
         },
+        "CSD U6 - Board Outputs - A_2023": {
+          "Happy": "Χαρούμενο"
+        },
         "CSD U6 - Board Outputs - A_2222": {
           "Happy": "Χαρούμενο"
         },
+        "CSD U6 - Board Outputs - A_mb2022": {
+          "Age": "Ηλικία",
+          "Happy": "Χαρούμενο",
+          "Name": "Όνομα"
+        },
+        "CSD U6 - Board Outputs - ChalC_mb2022": {
+          "No": "Όχι",
+          "Yes": "Ναι"
+        },
+        "CSD U6 - Board Outputs - P2_2023": {
+          "Low": "Χαμηλά"
+        },
         "CSD U6 - Board Outputs - P2_2222": {
           "Low": "Χαμηλά"
+        },
+        "CSD U6 - Board Outputs - P_2023": {
+          "Click Me": "Κάντε κλικ εδώ",
+          "Plug the board into a different USB": "Συνδέστε την πλακέτα σε ένα διαφορετικό USB",
+          "Refresh this page and try again": "Ανανέωση αυτής της σελίδας και προσπαθήστε ξανά",
+          "Success!": "Επιτυχία!",
+          "Visit studio.code.org/maker/setup": "Επισκεφθείτε το studio.code.org/maker/setup"
         },
         "CSD U6 - Board Outputs - P_2222": {
           "Click Me": "Κάντε κλικ εδώ",
@@ -323,10 +533,30 @@
           "Success!": "Επιτυχία!",
           "Visit studio.code.org/maker/setup": "Επισκεφθείτε το studio.code.org/maker/setup"
         },
+        "CSD U6 - Board Outputs - PracC_2023": {
+          "Light Off": "Φως σβηστό"
+        },
         "CSD U6 - Board Outputs - PracC_2222": {
           "Light Off": "Φως σβηστό"
         },
+        "CSD U6 - Board Outputs - PracD_mb2022": {
+          "1": "1",
+          "2": "2",
+          "3": "3"
+        },
+        "CSD U6 - Board Outputs - SB1_2023": {
+          "Plug the board into a different USB": "Συνδέστε την πλακέτα σε ένα διαφορετικό USB",
+          "Refresh this page and try again": "Ανανέωση αυτής της σελίδας και προσπαθήστε ξανά",
+          "Success!": "Επιτυχία!",
+          "Visit studio.code.org/maker/setup": "Επισκεφθείτε το studio.code.org/maker/setup"
+        },
         "CSD U6 - Board Outputs - SB1_2222": {
+          "Plug the board into a different USB": "Συνδέστε την πλακέτα σε ένα διαφορετικό USB",
+          "Refresh this page and try again": "Ανανέωση αυτής της σελίδας και προσπαθήστε ξανά",
+          "Success!": "Επιτυχία!",
+          "Visit studio.code.org/maker/setup": "Επισκεφθείτε το studio.code.org/maker/setup"
+        },
+        "CSD U6 - Board Outputs - SB2_2023": {
           "Plug the board into a different USB": "Συνδέστε την πλακέτα σε ένα διαφορετικό USB",
           "Refresh this page and try again": "Ανανέωση αυτής της σελίδας και προσπαθήστε ξανά",
           "Success!": "Επιτυχία!",
@@ -338,9 +568,19 @@
           "Success!": "Επιτυχία!",
           "Visit studio.code.org/maker/setup": "Επισκεφθείτε το studio.code.org/maker/setup"
         },
+        "CSD U6 - Board Outputs - SB4_2023": {
+          "Dog": "Σκύλος",
+          "Fish": "Ψάρι"
+        },
         "CSD U6 - Board Outputs - SB4_2222": {
           "Dog": "Σκύλος",
           "Fish": "Ψάρι"
+        },
+        "CSD U6 - Board Outputs - Setup_2023": {
+          "Plug the board into a different USB": "Συνδέστε την πλακέτα σε ένα διαφορετικό USB",
+          "Refresh this page and try again": "Ανανέωση αυτής της σελίδας και προσπαθήστε ξανά",
+          "Success!": "Επιτυχία!",
+          "Visit studio.code.org/maker/setup": "Επισκεφθείτε το studio.code.org/maker/setup"
         },
         "CSD U6 - Board Outputs - Setup_2222": {
           "Plug the board into a different USB": "Συνδέστε την πλακέτα σε ένα διαφορετικό USB",
@@ -348,13 +588,37 @@
           "Success!": "Επιτυχία!",
           "Visit studio.code.org/maker/setup": "Επισκεφθείτε το studio.code.org/maker/setup"
         },
+        "CSD U6 - Board Outputs - Setup_mb2022": {
+          "Plug the board into a different USB": "Συνδέστε την πλακέτα σε ένα διαφορετικό USB",
+          "Refresh this page and try again": "Ανανέωση αυτής της σελίδας και προσπαθήστε ξανά",
+          "Success!": "Επιτυχία!",
+          "Visit studio.code.org/maker/setup": "Επισκεφθείτε το studio.code.org/maker/setup"
+        },
+        "CSD U6 - Color LEDs - ChalD_2023": {
+          "East": "Ανατολή",
+          "North": "Βοράς",
+          "South": "Νότος",
+          "West": "Δυτικά"
+        },
         "CSD U6 - Color LEDs - ChalD_2222": {
           "East": "Ανατολή",
           "North": "Βοράς",
           "South": "Νότος",
           "West": "Δυτικά"
         },
+        "CSD U6 - Color LEDs - PracA_2023": {
+          "Plug the board into a different USB": "Συνδέστε την πλακέτα σε ένα διαφορετικό USB",
+          "Refresh this page and try again": "Ανανέωση αυτής της σελίδας και προσπαθήστε ξανά",
+          "Success!": "Επιτυχία!",
+          "Visit studio.code.org/maker/setup": "Επισκεφθείτε το studio.code.org/maker/setup"
+        },
         "CSD U6 - Color LEDs - PracA_2222": {
+          "Plug the board into a different USB": "Συνδέστε την πλακέτα σε ένα διαφορετικό USB",
+          "Refresh this page and try again": "Ανανέωση αυτής της σελίδας και προσπαθήστε ξανά",
+          "Success!": "Επιτυχία!",
+          "Visit studio.code.org/maker/setup": "Επισκεφθείτε το studio.code.org/maker/setup"
+        },
+        "CSD U6 - Color LEDs - SB2_2023": {
           "Plug the board into a different USB": "Συνδέστε την πλακέτα σε ένα διαφορετικό USB",
           "Refresh this page and try again": "Ανανέωση αυτής της σελίδας και προσπαθήστε ξανά",
           "Success!": "Επιτυχία!",
@@ -366,14 +630,31 @@
           "Success!": "Επιτυχία!",
           "Visit studio.code.org/maker/setup": "Επισκεφθείτε το studio.code.org/maker/setup"
         },
+        "CSD U6 - Color LEDs - SB3_2023": {
+          "Plug the board into a different USB": "Συνδέστε την πλακέτα σε ένα διαφορετικό USB",
+          "Refresh this page and try again": "Ανανέωση αυτής της σελίδας και προσπαθήστε ξανά",
+          "Success!": "Επιτυχία!",
+          "Visit studio.code.org/maker/setup": "Επισκεφθείτε το studio.code.org/maker/setup"
+        },
         "CSD U6 - Color LEDs - SB3_2222": {
           "Plug the board into a different USB": "Συνδέστε την πλακέτα σε ένα διαφορετικό USB",
           "Refresh this page and try again": "Ανανέωση αυτής της σελίδας και προσπαθήστε ξανά",
           "Success!": "Επιτυχία!",
           "Visit studio.code.org/maker/setup": "Επισκεφθείτε το studio.code.org/maker/setup"
         },
+        "CSD U6 - Color LEDs - SB4_2023": {
+          "Medium": "Μέτριο"
+        },
         "CSD U6 - Color LEDs - SB4_2222": {
           "Medium": "Μέτριο"
+        },
+        "CSD U6 - Combine Inputs - A_2023": {
+          "green": "πράσινο",
+          "left": "αριστερά",
+          "purple": "μωβ",
+          "red": "κόκκινο",
+          "right": "δεξιά",
+          "yellow": "κίτρινο"
         },
         "CSD U6 - Combine Inputs - A_2222": {
           "green": "πράσινο",
@@ -383,6 +664,10 @@
           "right": "δεξιά",
           "yellow": "κίτρινο"
         },
+        "CSD U6 - Combine Inputs - A_mb2022": {
+          "left": "αριστερά",
+          "right": "δεξιά"
+        },
         "CSD U6 - Combine Inputs - CA_2022": {
           "fast": "γρήγορη",
           "long": "μεγάλη",
@@ -390,14 +675,36 @@
           "short": "σύντομη",
           "slow": "αργή"
         },
+        "CSD U6 - Combine Inputs - CA_2023": {
+          "fast": "γρήγορη",
+          "long": "μεγάλη",
+          "on": "ανοιχτό",
+          "short": "σύντομη",
+          "slow": "αργή"
+        },
+        "CSD U6 - Combine Inputs - ChalG_2023": {
+          "Blue": "Μπλε",
+          "Green": "Πράσινο",
+          "Red": "Κόκκινο"
+        },
         "CSD U6 - Combine Inputs - ChalG_2222": {
           "Blue": "Μπλε",
           "Green": "Πράσινο",
           "Red": "Κόκκινο"
         },
+        "CSD U6 - Combine Inputs - PracA_2023": {
+          "left": "αριστερά",
+          "right": "δεξιά"
+        },
         "CSD U6 - Combine Inputs - PracA_2222": {
           "left": "αριστερά",
           "right": "δεξιά"
+        },
+        "CSD U6 - Combine Inputs - PracC_2023": {
+          "blue": "μπλε",
+          "green": "πράσινο",
+          "orange": "πορτοκάλι",
+          "yellow": "κίτρινο"
         },
         "CSD U6 - Combine Inputs - PracC_2222": {
           "blue": "μπλε",
@@ -405,11 +712,27 @@
           "orange": "πορτοκάλι",
           "yellow": "κίτρινο"
         },
+        "CSD U6 - Combine Inputs - PracD_2023": {
+          "Test": "Δοκιμή",
+          "quiet": "ήσυχο"
+        },
         "CSD U6 - Combine Inputs - PracD_2222": {
           "Test": "Δοκιμή",
           "quiet": "ήσυχο"
         },
+        "CSD U6 - Combine Inputs - SB1_mb2022": {
+          "bottom row": "κάτω σειρά",
+          "top row": "πάνω σειρά"
+        },
+        "CSD U6 - Combine Inputs - SB2_2023": {
+          "long": "μεγάλη",
+          "short": "σύντομη"
+        },
         "CSD U6 - Combine Inputs - SB2_2222": {
+          "long": "μεγάλη",
+          "short": "σύντομη"
+        },
+        "CSD U6 - Combine Inputs - SB3_2023": {
           "long": "μεγάλη",
           "short": "σύντομη"
         },
@@ -417,18 +740,53 @@
           "long": "μεγάλη",
           "short": "σύντομη"
         },
+        "CSD U6 - Combine Inputs - SB4_2023": {
+          "long": "μεγάλη",
+          "short": "σύντομη"
+        },
         "CSD U6 - Combine Inputs - SB4_2222": {
           "long": "μεγάλη",
           "short": "σύντομη"
+        },
+        "CSD U6 - Combine Inputs - SB4v2_mb2022": {
+          "Row": "Σειρά"
+        },
+        "CSD U6 - Combine Inputs - SB5v2_mb2022": {
+          "Row": "Σειρά"
+        },
+        "CSD U6 - Functions - P2C_2023": {
+          "Blue": "Μπλε",
+          "Red": "Κόκκινο"
         },
         "CSD U6 - Functions - P2C_2222": {
           "Blue": "Μπλε",
           "Red": "Κόκκινο"
         },
+        "CSD U6 - Functions - P2C_mb2022": {
+          "Blue": "Μπλε",
+          "Red": "Κόκκινο"
+        },
+        "CSD U6 - Functions - P_2023": {
+          "0": "0"
+        },
         "CSD U6 - Functions - P_2222": {
           "0": "0"
         },
+        "CSD U6 - Functions - P_mb2022": {
+          "0": "0"
+        },
+        "CSD U6 - Functions - SB7_2023": {
+          "0": "0"
+        },
         "CSD U6 - Functions - SB7_2222": {
+          "0": "0"
+        },
+        "CSD U6 - Functions - SB7_mb2022": {
+          "0": "0"
+        },
+        "CSD U6 - If Variables - ChalD_2023": {
+          "+": "+",
+          "-": "-",
           "0": "0"
         },
         "CSD U6 - If Variables - ChalD_2222": {
@@ -436,14 +794,43 @@
           "-": "-",
           "0": "0"
         },
+        "CSD U6 - If Variables - ChalD_mb2022": {
+          "+": "+",
+          "-": "-",
+          "0": "0"
+        },
+        "CSD U6 - If Variables - SB3_2023": {
+          "Name": "Όνομα"
+        },
         "CSD U6 - If Variables - SB3_2222": {
           "Name": "Όνομα"
+        },
+        "CSD U6 - If Variables - SB3_mb2022": {
+          "Name": "Όνομα"
+        },
+        "CSD U6 - If Variables - SB4_2023": {
+          "0": "0"
         },
         "CSD U6 - If Variables - SB4_2222": {
           "0": "0"
         },
+        "CSD U6 - If Variables - SB4_mb2022": {
+          "0": "0"
+        },
+        "CSD U6 - Music - A_2023": {
+          "Happy": "Χαρούμενο"
+        },
         "CSD U6 - Music - A_2222": {
           "Happy": "Χαρούμενο"
+        },
+        "CSD U6 - Music - ChalD_2023": {
+          "A": "Α",
+          "B": "Β",
+          "C": "Γ",
+          "D": "Δ",
+          "E": "Α",
+          "F": "Ε",
+          "G": "Ζ"
         },
         "CSD U6 - Music - ChalD_2222": {
           "A": "Α",
@@ -453,6 +840,16 @@
           "E": "Α",
           "F": "Ε",
           "G": "Ζ"
+        },
+        "CSD U6 - Music - Piano_2023": {
+          "A": "Α",
+          "B": "Β",
+          "C": "Γ",
+          "D": "Δ",
+          "E": "Α",
+          "F": "Ε",
+          "G": "Ζ",
+          "Note:": "Σημείωση:"
         },
         "CSD U6 - Music - Piano_2222": {
           "A": "Α",
@@ -464,7 +861,25 @@
           "G": "Ζ",
           "Note:": "Σημείωση:"
         },
+        "CSD U6 - Music - SB1_2023": {
+          "A": "Α",
+          "B": "Β",
+          "C": "Γ",
+          "D": "Δ",
+          "E": "Α",
+          "F": "Ε",
+          "G": "Ζ"
+        },
         "CSD U6 - Music - SB1_2222": {
+          "A": "Α",
+          "B": "Β",
+          "C": "Γ",
+          "D": "Δ",
+          "E": "Α",
+          "F": "Ε",
+          "G": "Ζ"
+        },
+        "CSD U6 - Music - SB2.5_2023": {
           "A": "Α",
           "B": "Β",
           "C": "Γ",
@@ -482,6 +897,15 @@
           "F": "Ε",
           "G": "Ζ"
         },
+        "CSD U6 - Music - SB3_2023": {
+          "A": "Α",
+          "B": "Β",
+          "C": "Γ",
+          "D": "Δ",
+          "E": "Α",
+          "F": "Ε",
+          "G": "Ζ"
+        },
         "CSD U6 - Music - SB3_2222": {
           "A": "Α",
           "B": "Β",
@@ -491,17 +915,49 @@
           "F": "Ε",
           "G": "Ζ"
         },
+        "CSD U6 - Music - SB4_2023": {
+          "Plug the board into a different USB": "Συνδέστε την πλακέτα σε ένα διαφορετικό USB",
+          "Refresh this page and try again": "Ανανέωση αυτής της σελίδας και προσπαθήστε ξανά",
+          "Success!": "Επιτυχία!",
+          "Visit studio.code.org/maker/setup": "Επισκεφθείτε το studio.code.org/maker/setup"
+        },
         "CSD U6 - Music - SB4_2222": {
           "Plug the board into a different USB": "Συνδέστε την πλακέτα σε ένα διαφορετικό USB",
           "Refresh this page and try again": "Ανανέωση αυτής της σελίδας και προσπαθήστε ξανά",
           "Success!": "Επιτυχία!",
           "Visit studio.code.org/maker/setup": "Επισκεφθείτε το studio.code.org/maker/setup"
         },
+        "CSD U6 - Physical Input - A_2023": {
+          "1": "1",
+          "2": "2"
+        },
         "CSD U6 - Physical Input - A_2222": {
           "1": "1",
           "2": "2"
         },
+        "CSD U6 - Physical Input - A_mb2022": {
+          "1": "1",
+          "2": "2"
+        },
+        "CSD U6 - Physical Input - ChalA_2023": {
+          "Plug the board into a different USB": "Συνδέστε την πλακέτα σε ένα διαφορετικό USB",
+          "Refresh this page and try again": "Ανανέωση αυτής της σελίδας και προσπαθήστε ξανά",
+          "Success!": "Επιτυχία!",
+          "Visit studio.code.org/maker/setup": "Επισκεφθείτε το studio.code.org/maker/setup"
+        },
         "CSD U6 - Physical Input - ChalA_2222": {
+          "Plug the board into a different USB": "Συνδέστε την πλακέτα σε ένα διαφορετικό USB",
+          "Refresh this page and try again": "Ανανέωση αυτής της σελίδας και προσπαθήστε ξανά",
+          "Success!": "Επιτυχία!",
+          "Visit studio.code.org/maker/setup": "Επισκεφθείτε το studio.code.org/maker/setup"
+        },
+        "CSD U6 - Physical Input - ChalA_mb2022": {
+          "Plug the board into a different USB": "Συνδέστε την πλακέτα σε ένα διαφορετικό USB",
+          "Refresh this page and try again": "Ανανέωση αυτής της σελίδας και προσπαθήστε ξανά",
+          "Success!": "Επιτυχία!",
+          "Visit studio.code.org/maker/setup": "Επισκεφθείτε το studio.code.org/maker/setup"
+        },
+        "CSD U6 - Physical Input - ChalB_2023": {
           "Plug the board into a different USB": "Συνδέστε την πλακέτα σε ένα διαφορετικό USB",
           "Refresh this page and try again": "Ανανέωση αυτής της σελίδας και προσπαθήστε ξανά",
           "Success!": "Επιτυχία!",
@@ -513,17 +969,55 @@
           "Success!": "Επιτυχία!",
           "Visit studio.code.org/maker/setup": "Επισκεφθείτε το studio.code.org/maker/setup"
         },
+        "CSD U6 - Physical Input - ChalB_mb2022": {
+          "Plug the board into a different USB": "Συνδέστε την πλακέτα σε ένα διαφορετικό USB",
+          "Refresh this page and try again": "Ανανέωση αυτής της σελίδας και προσπαθήστε ξανά",
+          "Success!": "Επιτυχία!",
+          "Visit studio.code.org/maker/setup": "Επισκεφθείτε το studio.code.org/maker/setup"
+        },
+        "CSD U6 - Physical Input - ChalC_2023": {
+          "Plug the board into a different USB": "Συνδέστε την πλακέτα σε ένα διαφορετικό USB",
+          "Refresh this page and try again": "Ανανέωση αυτής της σελίδας και προσπαθήστε ξανά",
+          "Success!": "Επιτυχία!",
+          "Visit studio.code.org/maker/setup": "Επισκεφθείτε το studio.code.org/maker/setup"
+        },
         "CSD U6 - Physical Input - ChalC_2222": {
           "Plug the board into a different USB": "Συνδέστε την πλακέτα σε ένα διαφορετικό USB",
           "Refresh this page and try again": "Ανανέωση αυτής της σελίδας και προσπαθήστε ξανά",
           "Success!": "Επιτυχία!",
           "Visit studio.code.org/maker/setup": "Επισκεφθείτε το studio.code.org/maker/setup"
         },
+        "CSD U6 - Physical Input - ChalC_mb2022": {
+          "Plug the board into a different USB": "Συνδέστε την πλακέτα σε ένα διαφορετικό USB",
+          "Refresh this page and try again": "Ανανέωση αυτής της σελίδας και προσπαθήστε ξανά",
+          "Success!": "Επιτυχία!",
+          "Visit studio.code.org/maker/setup": "Επισκεφθείτε το studio.code.org/maker/setup"
+        },
+        "CSD U6 - Physical Input - PA_2023": {
+          "0": "0",
+          "Score": "Βαθμολογία"
+        },
         "CSD U6 - Physical Input - PA_2222": {
           "0": "0",
           "Score": "Βαθμολογία"
         },
+        "CSD U6 - Physical Input - PA_mb2022": {
+          "0": "0",
+          "Score": "Βαθμολογία"
+        },
+        "CSD U6 - Physical Input - PC_2023": {
+          "Plug the board into a different USB": "Συνδέστε την πλακέτα σε ένα διαφορετικό USB",
+          "Refresh this page and try again": "Ανανέωση αυτής της σελίδας και προσπαθήστε ξανά",
+          "Success!": "Επιτυχία!",
+          "Visit studio.code.org/maker/setup": "Επισκεφθείτε το studio.code.org/maker/setup"
+        },
         "CSD U6 - Physical Input - PC_2222": {
+          "Plug the board into a different USB": "Συνδέστε την πλακέτα σε ένα διαφορετικό USB",
+          "Refresh this page and try again": "Ανανέωση αυτής της σελίδας και προσπαθήστε ξανά",
+          "Success!": "Επιτυχία!",
+          "Visit studio.code.org/maker/setup": "Επισκεφθείτε το studio.code.org/maker/setup"
+        },
+        "CSD U6 - Physical Input - PD_2023": {
           "Plug the board into a different USB": "Συνδέστε την πλακέτα σε ένα διαφορετικό USB",
           "Refresh this page and try again": "Ανανέωση αυτής της σελίδας και προσπαθήστε ξανά",
           "Success!": "Επιτυχία!",
@@ -535,7 +1029,31 @@
           "Success!": "Επιτυχία!",
           "Visit studio.code.org/maker/setup": "Επισκεφθείτε το studio.code.org/maker/setup"
         },
+        "CSD U6 - Physical Input - PD_mb2022": {
+          "Plug the board into a different USB": "Συνδέστε την πλακέτα σε ένα διαφορετικό USB",
+          "Refresh this page and try again": "Ανανέωση αυτής της σελίδας και προσπαθήστε ξανά",
+          "Success!": "Επιτυχία!",
+          "Visit studio.code.org/maker/setup": "Επισκεφθείτε το studio.code.org/maker/setup"
+        },
+        "CSD U6 - Physical Input - SB1_2023": {
+          "Plug the board into a different USB": "Συνδέστε την πλακέτα σε ένα διαφορετικό USB",
+          "Refresh this page and try again": "Ανανέωση αυτής της σελίδας και προσπαθήστε ξανά",
+          "Success!": "Επιτυχία!",
+          "Visit studio.code.org/maker/setup": "Επισκεφθείτε το studio.code.org/maker/setup"
+        },
         "CSD U6 - Physical Input - SB1_2222": {
+          "Plug the board into a different USB": "Συνδέστε την πλακέτα σε ένα διαφορετικό USB",
+          "Refresh this page and try again": "Ανανέωση αυτής της σελίδας και προσπαθήστε ξανά",
+          "Success!": "Επιτυχία!",
+          "Visit studio.code.org/maker/setup": "Επισκεφθείτε το studio.code.org/maker/setup"
+        },
+        "CSD U6 - Physical Input - SB1_mb2022": {
+          "Plug the board into a different USB": "Συνδέστε την πλακέτα σε ένα διαφορετικό USB",
+          "Refresh this page and try again": "Ανανέωση αυτής της σελίδας και προσπαθήστε ξανά",
+          "Success!": "Επιτυχία!",
+          "Visit studio.code.org/maker/setup": "Επισκεφθείτε το studio.code.org/maker/setup"
+        },
+        "CSD U6 - Physical Output - ChalA_2023": {
           "Plug the board into a different USB": "Συνδέστε την πλακέτα σε ένα διαφορετικό USB",
           "Refresh this page and try again": "Ανανέωση αυτής της σελίδας και προσπαθήστε ξανά",
           "Success!": "Επιτυχία!",
@@ -547,7 +1065,31 @@
           "Success!": "Επιτυχία!",
           "Visit studio.code.org/maker/setup": "Επισκεφθείτε το studio.code.org/maker/setup"
         },
+        "CSD U6 - Physical Output - ChalA_mb2022": {
+          "Plug the board into a different USB": "Συνδέστε την πλακέτα σε ένα διαφορετικό USB",
+          "Refresh this page and try again": "Ανανέωση αυτής της σελίδας και προσπαθήστε ξανά",
+          "Success!": "Επιτυχία!",
+          "Visit studio.code.org/maker/setup": "Επισκεφθείτε το studio.code.org/maker/setup"
+        },
+        "CSD U6 - Physical Output - ChalB_2023": {
+          "Plug the board into a different USB": "Συνδέστε την πλακέτα σε ένα διαφορετικό USB",
+          "Refresh this page and try again": "Ανανέωση αυτής της σελίδας και προσπαθήστε ξανά",
+          "Success!": "Επιτυχία!",
+          "Visit studio.code.org/maker/setup": "Επισκεφθείτε το studio.code.org/maker/setup"
+        },
         "CSD U6 - Physical Output - ChalB_2222": {
+          "Plug the board into a different USB": "Συνδέστε την πλακέτα σε ένα διαφορετικό USB",
+          "Refresh this page and try again": "Ανανέωση αυτής της σελίδας και προσπαθήστε ξανά",
+          "Success!": "Επιτυχία!",
+          "Visit studio.code.org/maker/setup": "Επισκεφθείτε το studio.code.org/maker/setup"
+        },
+        "CSD U6 - Physical Output - ChalB_mb2022": {
+          "Plug the board into a different USB": "Συνδέστε την πλακέτα σε ένα διαφορετικό USB",
+          "Refresh this page and try again": "Ανανέωση αυτής της σελίδας και προσπαθήστε ξανά",
+          "Success!": "Επιτυχία!",
+          "Visit studio.code.org/maker/setup": "Επισκεφθείτε το studio.code.org/maker/setup"
+        },
+        "CSD U6 - Physical Output - ChalC_2023": {
           "Plug the board into a different USB": "Συνδέστε την πλακέτα σε ένα διαφορετικό USB",
           "Refresh this page and try again": "Ανανέωση αυτής της σελίδας και προσπαθήστε ξανά",
           "Success!": "Επιτυχία!",
@@ -559,7 +1101,31 @@
           "Success!": "Επιτυχία!",
           "Visit studio.code.org/maker/setup": "Επισκεφθείτε το studio.code.org/maker/setup"
         },
+        "CSD U6 - Physical Output - ChalC_mb2022": {
+          "Plug the board into a different USB": "Συνδέστε την πλακέτα σε ένα διαφορετικό USB",
+          "Refresh this page and try again": "Ανανέωση αυτής της σελίδας και προσπαθήστε ξανά",
+          "Success!": "Επιτυχία!",
+          "Visit studio.code.org/maker/setup": "Επισκεφθείτε το studio.code.org/maker/setup"
+        },
+        "CSD U6 - Physical Output - PB_2023": {
+          "Plug the board into a different USB": "Συνδέστε την πλακέτα σε ένα διαφορετικό USB",
+          "Refresh this page and try again": "Ανανέωση αυτής της σελίδας και προσπαθήστε ξανά",
+          "Success!": "Επιτυχία!",
+          "Visit studio.code.org/maker/setup": "Επισκεφθείτε το studio.code.org/maker/setup"
+        },
         "CSD U6 - Physical Output - PB_2222": {
+          "Plug the board into a different USB": "Συνδέστε την πλακέτα σε ένα διαφορετικό USB",
+          "Refresh this page and try again": "Ανανέωση αυτής της σελίδας και προσπαθήστε ξανά",
+          "Success!": "Επιτυχία!",
+          "Visit studio.code.org/maker/setup": "Επισκεφθείτε το studio.code.org/maker/setup"
+        },
+        "CSD U6 - Physical Output - PB_mb2022": {
+          "Plug the board into a different USB": "Συνδέστε την πλακέτα σε ένα διαφορετικό USB",
+          "Refresh this page and try again": "Ανανέωση αυτής της σελίδας και προσπαθήστε ξανά",
+          "Success!": "Επιτυχία!",
+          "Visit studio.code.org/maker/setup": "Επισκεφθείτε το studio.code.org/maker/setup"
+        },
+        "CSD U6 - Physical Output - PC_2023": {
           "Plug the board into a different USB": "Συνδέστε την πλακέτα σε ένα διαφορετικό USB",
           "Refresh this page and try again": "Ανανέωση αυτής της σελίδας και προσπαθήστε ξανά",
           "Success!": "Επιτυχία!",
@@ -571,7 +1137,31 @@
           "Success!": "Επιτυχία!",
           "Visit studio.code.org/maker/setup": "Επισκεφθείτε το studio.code.org/maker/setup"
         },
+        "CSD U6 - Physical Output - PC_mb2022": {
+          "Plug the board into a different USB": "Συνδέστε την πλακέτα σε ένα διαφορετικό USB",
+          "Refresh this page and try again": "Ανανέωση αυτής της σελίδας και προσπαθήστε ξανά",
+          "Success!": "Επιτυχία!",
+          "Visit studio.code.org/maker/setup": "Επισκεφθείτε το studio.code.org/maker/setup"
+        },
+        "CSD U6 - Physical Output - P_2023": {
+          "Plug the board into a different USB": "Συνδέστε την πλακέτα σε ένα διαφορετικό USB",
+          "Refresh this page and try again": "Ανανέωση αυτής της σελίδας και προσπαθήστε ξανά",
+          "Success!": "Επιτυχία!",
+          "Visit studio.code.org/maker/setup": "Επισκεφθείτε το studio.code.org/maker/setup"
+        },
         "CSD U6 - Physical Output - P_2222": {
+          "Plug the board into a different USB": "Συνδέστε την πλακέτα σε ένα διαφορετικό USB",
+          "Refresh this page and try again": "Ανανέωση αυτής της σελίδας και προσπαθήστε ξανά",
+          "Success!": "Επιτυχία!",
+          "Visit studio.code.org/maker/setup": "Επισκεφθείτε το studio.code.org/maker/setup"
+        },
+        "CSD U6 - Physical Output - P_mb2022": {
+          "Plug the board into a different USB": "Συνδέστε την πλακέτα σε ένα διαφορετικό USB",
+          "Refresh this page and try again": "Ανανέωση αυτής της σελίδας και προσπαθήστε ξανά",
+          "Success!": "Επιτυχία!",
+          "Visit studio.code.org/maker/setup": "Επισκεφθείτε το studio.code.org/maker/setup"
+        },
+        "CSD U6 - Physical Output - SB1_2023": {
           "Plug the board into a different USB": "Συνδέστε την πλακέτα σε ένα διαφορετικό USB",
           "Refresh this page and try again": "Ανανέωση αυτής της σελίδας και προσπαθήστε ξανά",
           "Success!": "Επιτυχία!",
@@ -583,7 +1173,31 @@
           "Success!": "Επιτυχία!",
           "Visit studio.code.org/maker/setup": "Επισκεφθείτε το studio.code.org/maker/setup"
         },
+        "CSD U6 - Physical Output - SB1_mb2022": {
+          "Plug the board into a different USB": "Συνδέστε την πλακέτα σε ένα διαφορετικό USB",
+          "Refresh this page and try again": "Ανανέωση αυτής της σελίδας και προσπαθήστε ξανά",
+          "Success!": "Επιτυχία!",
+          "Visit studio.code.org/maker/setup": "Επισκεφθείτε το studio.code.org/maker/setup"
+        },
+        "CSD U6 - Physical Output - SB2.2_2023": {
+          "Plug the board into a different USB": "Συνδέστε την πλακέτα σε ένα διαφορετικό USB",
+          "Refresh this page and try again": "Ανανέωση αυτής της σελίδας και προσπαθήστε ξανά",
+          "Success!": "Επιτυχία!",
+          "Visit studio.code.org/maker/setup": "Επισκεφθείτε το studio.code.org/maker/setup"
+        },
         "CSD U6 - Physical Output - SB2.2_2222": {
+          "Plug the board into a different USB": "Συνδέστε την πλακέτα σε ένα διαφορετικό USB",
+          "Refresh this page and try again": "Ανανέωση αυτής της σελίδας και προσπαθήστε ξανά",
+          "Success!": "Επιτυχία!",
+          "Visit studio.code.org/maker/setup": "Επισκεφθείτε το studio.code.org/maker/setup"
+        },
+        "CSD U6 - Physical Output - SB2.2_mb2022": {
+          "Plug the board into a different USB": "Συνδέστε την πλακέτα σε ένα διαφορετικό USB",
+          "Refresh this page and try again": "Ανανέωση αυτής της σελίδας και προσπαθήστε ξανά",
+          "Success!": "Επιτυχία!",
+          "Visit studio.code.org/maker/setup": "Επισκεφθείτε το studio.code.org/maker/setup"
+        },
+        "CSD U6 - Physical Output - SB2_2023": {
           "Plug the board into a different USB": "Συνδέστε την πλακέτα σε ένα διαφορετικό USB",
           "Refresh this page and try again": "Ανανέωση αυτής της σελίδας και προσπαθήστε ξανά",
           "Success!": "Επιτυχία!",
@@ -595,13 +1209,42 @@
           "Success!": "Επιτυχία!",
           "Visit studio.code.org/maker/setup": "Επισκεφθείτε το studio.code.org/maker/setup"
         },
+        "CSD U6 - Physical Output - SB2_mb2022": {
+          "Plug the board into a different USB": "Συνδέστε την πλακέτα σε ένα διαφορετικό USB",
+          "Refresh this page and try again": "Ανανέωση αυτής της σελίδας και προσπαθήστε ξανά",
+          "Success!": "Επιτυχία!",
+          "Visit studio.code.org/maker/setup": "Επισκεφθείτε το studio.code.org/maker/setup"
+        },
+        "CSD U6 - Screen Inputs - A_2023": {
+          "Name:": "Όνομα:"
+        },
         "CSD U6 - Screen Inputs - A_2222": {
           "Name:": "Όνομα:"
+        },
+        "CSD U6 - Screen Inputs - A_mb2022": {
+          "Name:": "Όνομα:"
+        },
+        "CSD U6 - Screen Inputs - ChalB_2023": {
+          "Blue": "Μπλε",
+          "Green": "Πράσινο",
+          "Red": "Κόκκινο"
         },
         "CSD U6 - Screen Inputs - ChalB_2222": {
           "Blue": "Μπλε",
           "Green": "Πράσινο",
           "Red": "Κόκκινο"
+        },
+        "CSD U6 - Screen Inputs - ChalB_mb2022": {
+          "Blue": "Μπλε",
+          "Green": "Πράσινο",
+          "Red": "Κόκκινο"
+        },
+        "CSD U6 - Screen Inputs - P_2023": {
+          "Blue": "Μπλε",
+          "Green": "Πράσινο",
+          "Name:": "Όνομα:",
+          "Red": "Κόκκινο",
+          "Save": "Αποθήκευση"
         },
         "CSD U6 - Screen Inputs - P_2222": {
           "Blue": "Μπλε",
@@ -610,10 +1253,31 @@
           "Red": "Κόκκινο",
           "Save": "Αποθήκευση"
         },
+        "CSD U6 - Screen Inputs - P_mb2022": {
+          "Blue": "Μπλε",
+          "Green": "Πράσινο",
+          "Name:": "Όνομα:",
+          "Red": "Κόκκινο",
+          "Save": "Αποθήκευση"
+        },
+        "CSD U6 - Screen Inputs - PracD_2023": {
+          "0": "0"
+        },
         "CSD U6 - Screen Inputs - PracD_2222": {
           "0": "0"
         },
+        "CSD U6 - Screen Inputs - PracD_mb2022": {
+          "0": "0"
+        },
         "CSD U6 - Screen Inputs - SB2.1_2022": {
+          "black": "μαύρο",
+          "white": "λευκό"
+        },
+        "CSD U6 - Screen Inputs - SB2.1_2023": {
+          "black": "μαύρο",
+          "white": "λευκό"
+        },
+        "CSD U6 - Screen Inputs - SB2.1_mb2022": {
           "black": "μαύρο",
           "white": "λευκό"
         },
@@ -621,11 +1285,37 @@
           "black": "μαύρο",
           "white": "λευκό"
         },
+        "CSD U6 - Screen Inputs - SB2.2_2023": {
+          "black": "μαύρο",
+          "white": "λευκό"
+        },
+        "CSD U6 - Screen Inputs - SB2.2_mb2022": {
+          "black": "μαύρο",
+          "white": "λευκό"
+        },
+        "CSD U6 - Screen Outputs - ChalB_2023": {
+          "Happy": "Χαρούμενο"
+        },
         "CSD U6 - Screen Outputs - ChalB_2222": {
           "Happy": "Χαρούμενο"
         },
+        "CSD U6 - Screen Outputs - ChalB_mb2022": {
+          "Happy": "Χαρούμενο"
+        },
+        "CSD U6 - Screen Outputs - P_2023": {
+          "title": "τίτλος"
+        },
         "CSD U6 - Screen Outputs - P_2222": {
           "title": "τίτλος"
+        },
+        "CSD U6 - Screen Outputs - P_mb2022": {
+          "title": "τίτλος"
+        },
+        "CSD U6 - Screen Outputs - PracA_2023": {
+          "Blue": "Μπλε",
+          "Green": "Πράσινο",
+          "Red": "Κόκκινο",
+          "White": "Λευκός/η"
         },
         "CSD U6 - Screen Outputs - PracA_2222": {
           "Blue": "Μπλε",
@@ -633,39 +1323,105 @@
           "Red": "Κόκκινο",
           "White": "Λευκός/η"
         },
+        "CSD U6 - Screen Outputs - PracA_mb2022": {
+          "Blue": "Μπλε",
+          "Green": "Πράσινο",
+          "Red": "Κόκκινο",
+          "White": "Λευκός/η"
+        },
+        "CSD U6 - Screen Outputs - PracB_2023": {
+          "down": "κάτω",
+          "left": "αριστερά",
+          "right": "δεξιά",
+          "up": "επάνω"
+        },
         "CSD U6 - Screen Outputs - PracB_2222": {
           "down": "κάτω",
           "left": "αριστερά",
           "right": "δεξιά",
           "up": "επάνω"
         },
+        "CSD U6 - Screen Outputs - PracB_mb2022": {
+          "down": "κάτω",
+          "left": "αριστερά",
+          "right": "δεξιά",
+          "up": "επάνω"
+        },
+        "CSD U6 - Screen Outputs - SB1.1_2023": {
+          "name": "όνομα"
+        },
         "CSD U6 - Screen Outputs - SB1.1_2222": {
           "name": "όνομα"
         },
+        "CSD U6 - Screen Outputs - SB1.1_mb2022": {
+          "name": "όνομα"
+        },
+        "CSD U6 - Sensors - A_2023": {
+          "0": "0"
+        },
         "CSD U6 - Sensors - A_2222": {
           "0": "0"
+        },
+        "CSD U6 - Sensors - A_mb2022": {
+          "0": "0"
+        },
+        "CSD U6 - Sensors - PC_2023": {
+          "off": "σβηστό",
+          "on": "ανοιχτό"
         },
         "CSD U6 - Sensors - PC_2222": {
           "off": "σβηστό",
           "on": "ανοιχτό"
         },
+        "CSD U6 - Sensors - P_2023": {
+          "text": "κείμενο"
+        },
         "CSD U6 - Sensors - P_2222": {
           "text": "κείμενο"
         },
+        "CSD U6 - Sensors - P_mb2022": {
+          "text": "κείμενο"
+        },
+        "CSD U6 - Sensors - SB1_2023": {
+          "value": "εκτιμώ"
+        },
         "CSD U6 - Sensors - SB1_2222": {
+          "value": "εκτιμώ"
+        },
+        "CSD U6 - Sensors - SB2_2023": {
+          "Update": "Ενημέρωση",
           "value": "εκτιμώ"
         },
         "CSD U6 - Sensors - SB2_2222": {
           "Update": "Ενημέρωση",
           "value": "εκτιμώ"
         },
+        "CSD U6 - Sensors - SB2_mb2022": {
+          "Update": "Ενημέρωση",
+          "value": "εκτιμώ"
+        },
+        "CSD U6 - Sensors - SB3_2023": {
+          "value": "εκτιμώ"
+        },
         "CSD U6 - Sensors - SB3_2222": {
+          "value": "εκτιμώ"
+        },
+        "CSD U6 - Sensors - SB3_mb2022": {
+          "value": "εκτιμώ"
+        },
+        "CSD U6 - Sensors - SB4.1_2023": {
           "value": "εκτιμώ"
         },
         "CSD U6 - Sensors - SB4.1_2222": {
           "value": "εκτιμώ"
         },
+        "CSD U6 - Sensors - SB4_2023": {
+          "value": "εκτιμώ"
+        },
         "CSD U6 - Sensors - SB4_2222": {
+          "value": "εκτιμώ"
+        },
+        "CSD U6 - Sensors - SB4_mb2022": {
           "value": "εκτιμώ"
         },
         "CSD U6 Driver pt 2": {
@@ -1295,7 +2051,19 @@
           "Success!": "Επιτυχία!",
           "Visit studio.code.org/maker/setup": "Επισκεφθείτε το studio.code.org/maker/setup"
         },
+        "CSDU6 Circuit Playground Test_2023": {
+          "Plug the board into a different USB": "Συνδέστε την πλακέτα σε ένα διαφορετικό USB",
+          "Refresh this page and try again": "Ανανέωση αυτής της σελίδας και προσπαθήστε ξανά",
+          "Success!": "Επιτυχία!",
+          "Visit studio.code.org/maker/setup": "Επισκεφθείτε το studio.code.org/maker/setup"
+        },
         "CSDU6 Circuit Playground Test_2222": {
+          "Plug the board into a different USB": "Συνδέστε την πλακέτα σε ένα διαφορετικό USB",
+          "Refresh this page and try again": "Ανανέωση αυτής της σελίδας και προσπαθήστε ξανά",
+          "Success!": "Επιτυχία!",
+          "Visit studio.code.org/maker/setup": "Επισκεφθείτε το studio.code.org/maker/setup"
+        },
+        "CSDU6 Circuit Playground Test_mb2022": {
           "Plug the board into a different USB": "Συνδέστε την πλακέτα σε ένα διαφορετικό USB",
           "Refresh this page and try again": "Ανανέωση αυτής της σελίδας και προσπαθήστε ξανά",
           "Success!": "Επιτυχία!",
@@ -1373,6 +2141,94 @@
           "F": "Ε",
           "G": "Ζ"
         },
+        "GAN Guess Widget_ai23": {
+          "Click on the buttons below to build a guess for what follows the rule": "Κάντε κλικ στα παρακάτω κουμπιά για να δημιουργήσετε μια εικασία για το τι ακολουθεί τον κανόνα",
+          "Computer's Guess FOLLOWS Rule": "Η εικασία του υπολογιστή ακολουθεί τον κανόνα",
+          "Computer's Guess does NOT follow the Rule": "Η εικασία του υπολογιστή ΔΕΝ ακολουθεί τον κανόνα",
+          "Computer's Guess:": "Η εικασία του υπολογιστή:",
+          "Current Guess": "Τρέχουσα εικασία",
+          "Previous Guesses": "Προηγούμενες εικασίες",
+          "Submit Guess": "Υποβολή εικασίας"
+        },
+        "LLM - Eliza_ai23": {
+          "Talk to Eliza by entering text in the prompt box. When you are finished, type quit in the prompt.": "Μιλήστε με την Eliza εισάγοντας κείμενο στο πλαίσιο προτροπής. Όταν τελειώσετε, πληκτρολογήστε quit στην προτροπή."
+        },
+        "LLM - Written Voice Simulator_ai23": {
+          "BTS: \"Dynamite\"": "BTS: «Δυναμίτης»",
+          "Back": "Πίσω",
+          "Change Voice": "Αλλαγή φωνής",
+          "Choose a voice to model": "Επιλέξτε μια φωνή για μοντέλο",
+          "Choose the Save file you want to load from the dropdown below": "Επιλέξτε το Αποθήκευση αρχείου που θέλετε να φορτώσετε από το αναπτυσσόμενο μενού παρακάτω",
+          "Copy / Paste or type the words you want to create a model based on below": "Αντιγραφή/ Επικόλληση ή πληκτρολογήστε τις λέξεις που θέλετε να δημιουργήσετε ένα μοντέλο με βάση παρακάτω",
+          "Create my own!": "Δημιουργήστε το δικό μου!",
+          "Delete Text": "Διαγραφή κειμένου",
+          "Dr Seuss: Green Eggs and Ham": "Δρ Seuss: Πράσινα αυγά και ζαμπόν",
+          "Generate!": "Παράγω!",
+          "Give the voice a name": "Δώστε στη φωνή ένα όνομα",
+          "Give your save file a name": "Δώστε ένα όνομα στο αρχείο αποθήκευσης",
+          "Load Save": "Αποθήκευση φορτίου",
+          "Load this story": "Φορτώστε αυτήν την ιστορία",
+          "Maya Angelou: \"Caged Bird\"": "Μάγια Αγγέλου: «Πουλί σε κλουβί»",
+          "Model This Voice!": "Μοντελοποιήστε αυτήν τη φωνή!",
+          "Modeling Voice": "Μοντελοποίηση φωνής",
+          "Pharell: \"Happy\"": "Φάρελ: «Χαρούμενος»",
+          "Sandra Cisneros: \"Abuelito Who\"": "Σάντρα Σισνέρος: «Abuelito Who»",
+          "Save Text": "Αποθήκευση κειμένου",
+          "Save!": "Αποθηκεύσετε!"
+        },
+        "Neural Networks - Perceptron - Beta_ai23": {
+          "Choose one of the content creators below to generate recommendations for you. Clicking their name will show more information about them.Once you've selected someone, click the \"Show Recommendations\" button to see what your video feed!See Recommendations! ➡️Your RecommendationsThese are the videos you've been recommended based on who you selected in the last screen.Only 3 videos are shown at a time - use the Scroll buttons to see more. Use the buttons on the left to filter by certain categories.Example!Example!Example!⬆️ Scroll Up ⬆️⬇️ Scroll Down ⬇️⬅️ Select New Person": "Επιλέξτε έναν από τους δημιουργούς περιεχομένου παρακάτω για να δημιουργήσετε προτάσεις για εσάς. Κάνοντας κλικ στο όνομά τους θα εμφανιστούν περισσότερες πληροφορίες σχετικά με αυτούς. Μόλις επιλέξετε κάποιον, κάντε κλικ στο κουμπί «Εμφάνιση συστάσεων» για να δείτε ποια είναι η ροή βίντεο! Δείτε τις συστάσεις! ➡️ Οι προτάσεις σαςΑυτά είναι τα βίντεο που σας έχουν προταθεί με βάση τα άτομα που επιλέξατε στην τελευταία οθόνη.Εμφανίζονται μόνο 3 βίντεο κάθε φορά - χρησιμοποιήστε τα κουμπιά Κύλιση για να δείτε περισσότερα. Χρησιμοποιήστε τα κουμπιά στα αριστερά για να φιλτράρετε κατά συγκεκριμένες κατηγορίες.Παράδειγμα! Παράδειγμα! Παράδειγμα! ⬆️ Κύλιση προς τα πάνω ⬆️⬇️ Κύλιση προς τα κάτω ⬇️⬅️ Επιλέξτε νέο άτομο",
+          "Example!": "Παράδειγμα!",
+          "Let's Get Started! ➡️": "Ας ξεκινήσουμε! ➡️",
+          "Once you've selected someone, click the \"Show Recommendations\" button to see what your video feed!": "Μόλις επιλέξετε κάποιον, κάντε κλικ στο κουμπί «Εμφάνιση συστάσεων» για να δείτε ποια είναι η ροή βίντεο!",
+          "Only 3 videos are shown at a time - use the Scroll buttons to see more. ": "Εμφανίζονται μόνο 3 βίντεο κάθε φορά - χρησιμοποιήστε τα κουμπιά κύλισης για να δείτε περισσότερα. ",
+          "See Recommendations! ➡️": "Δείτε τις συστάσεις! ➡️",
+          "Select at least one person to use for recommendations to continue!": "Επιλέξτε τουλάχιστον ένα άτομο για χρήση για να συνεχίσετε τις προτάσεις!",
+          "Simply pick which content creators you want to follow and then see your video recommendations!": "Απλώς επιλέξτε τους δημιουργούς περιεχομένου που θέλετε να ακολουθήσετε και, στη συνέχεια, δείτε τις προτάσεις βίντεο!",
+          "These are the videos you've been recommended based on who you selected in the last screen.Only 3 videos are shown at a time - use the Scroll buttons to see more. Use the buttons on the left to filter by certain categories.Example!Example!Example!⬆️ Scroll Up ⬆️⬇️ Scroll Down ⬇️⬅️ Select New Person": "Αυτά είναι τα βίντεο που σας έχουν προταθεί με βάση τα άτομα που επιλέξατε στην τελευταία οθόνη.Εμφανίζονται μόνο 3 βίντεο κάθε φορά - χρησιμοποιήστε τα κουμπιά κύλισης για να δείτε περισσότερα. Χρησιμοποιήστε τα κουμπιά στα αριστερά για να φιλτράρετε κατά συγκεκριμένες κατηγορίες.Παράδειγμα! Παράδειγμα! Παράδειγμα! ⬆️ Κύλιση προς τα πάνω ⬆️⬇️ Κύλιση προς τα κάτω ⬇️⬅️ Επιλέξτε νέο άτομο",
+          "Use the buttons on the left to filter by certain categories.": "Χρησιμοποιήστε τα κουμπιά στα αριστερά για να φιλτράρετε κατά συγκεκριμένες κατηγορίες.",
+          "We've gathered all your favorite personalities to make videos that match your interests AND to help curate your video feed.": "Συγκεντρώσαμε όλες τις αγαπημένες σας προσωπικότητες για να δημιουργήσουμε βίντεο που ταιριάζουν με τα ενδιαφέροντά σας ΚΑΙ για να βοηθήσουμε στην επιμέλεια της ροής βίντεο.",
+          "WeTube is a new media website for all your favorite content creators. We've gathered all your favorite personalities to make videos that match your interests AND to help curate your video feed.Simply pick which content creators you want to follow and then see your video recommendations!Let's Get Started! ➡️Select at least one person to use for recommendations to continue!Choose one of the content creators below to generate recommendations for you. Clicking their name will show more information about them.Once you've selected someone, click the \"Show Recommendations\" button to see what your video feed!See Recommendations! ➡️Your RecommendationsThese are the videos you've been recommended based on who you selected in the last screen.Only 3 videos are shown at a time - use the Scroll buttons to see more. Use the buttons on the left to filter by certain categories.Example!Example!Example!⬆️ Scroll Up ⬆️⬇️ Scroll Down ⬇️⬅️ Select New Person": "Το WeTube είναι ένας νέος ιστότοπος πολυμέσων για όλους τους αγαπημένους σας δημιουργούς περιεχομένου. Συγκεντρώσαμε όλες τις αγαπημένες σας προσωπικότητες για να δημιουργήσουμε βίντεο που ταιριάζουν με τα ενδιαφέροντά σας ΚΑΙ για να σας βοηθήσουμε να επιμεληθείτε τη ροή βίντεο. Απλώς επιλέξτε τους δημιουργούς περιεχομένου που θέλετε να ακολουθήσετε και, στη συνέχεια, δείτε τις προτάσεις βίντεο! Ας ξεκινήσουμε! ➡️ Επιλέξτε τουλάχιστον ένα άτομο για χρήση για να συνεχίσετε τις συστάσεις! Επιλέξτε έναν από τους δημιουργούς περιεχομένου παρακάτω για να δημιουργήσετε προτάσεις για εσάς. Κάνοντας κλικ στο όνομά τους θα εμφανιστούν περισσότερες πληροφορίες σχετικά με αυτούς. Μόλις επιλέξετε κάποιον, κάντε κλικ στο κουμπί «Εμφάνιση συστάσεων» για να δείτε ποια είναι η ροή βίντεο! Δείτε τις συστάσεις! ➡️ Οι προτάσεις σαςΑυτά είναι τα βίντεο που σας έχουν προταθεί με βάση τα άτομα που επιλέξατε στην τελευταία οθόνη.Εμφανίζονται μόνο 3 βίντεο κάθε φορά - χρησιμοποιήστε τα κουμπιά Κύλιση για να δείτε περισσότερα. Χρησιμοποιήστε τα κουμπιά στα αριστερά για να φιλτράρετε κατά συγκεκριμένες κατηγορίες.Παράδειγμα! Παράδειγμα! Παράδειγμα! ⬆️ Κύλιση προς τα πάνω ⬆️⬇️ Κύλιση προς τα κάτω ⬇️⬅️ Επιλέξτε νέο άτομο",
+          "Your Recommendations": "Οι συστάσεις σας",
+          "⬅️ Select New Person": "⬅️ Επιλέξτε νέο άτομο",
+          "⬆️ Scroll Up ⬆️": "⬆️ Κύλιση επάνω ⬆️",
+          "⬇️ Scroll Down ⬇️": "⬇️ Μετακινηθείτε προς τα κάτω ⬇️"
+        },
+        "Neural Networks - Perceptron - Full_ai23": {
+          "0 means their opinion isn't included in your recommendations at all": "0 σημαίνει ότι η γνώμη τους δεν περιλαμβάνεται καθόλου στις συστάσεις σας",
+          "10 means they have a huge influence on the recommendations you receive": "10 σημαίνει ότι έχουν τεράστια επιρροή στις συστάσεις που λαμβάνετε",
+          "Choose one of the content creators below, then use the slider to adjust how much you want them to influence your recommendations!0 means their opinion isn't included in your recommendations at all10 means they have a huge influence on the recommendations you receivefeatureLabelSee Recommendations! ➡️featureValueYour RecommendationsThese are the videos you've been recommended based on how you adjusted the weights on the last screen. Only 3 videos are shown at a time - use the Scroll buttons to see more. Use the buttons on the left to filter by certain videosExample!Example!Example!⬆️ Scroll Up ⬆️⬇️ Scroll Down ⬇️⬅️ Select New Weights": "Επιλέξτε έναν από τους δημιουργούς περιεχομένου παρακάτω και, στη συνέχεια, χρησιμοποιήστε το ρυθμιστικό για να προσαρμόσετε πόσο θέλετε να επηρεάσουν τις προτάσεις σας! 0 σημαίνει ότι η γνώμη τους δεν περιλαμβάνεται καθόλου στις προτάσεις σας10 σημαίνει ότι έχουν τεράστια επιρροή στις συστάσεις που λαμβάνετεFeatureBelΔείτε προτάσεις! ➡️ FeatureValueΟι προτάσεις σαςΑυτά είναι τα βίντεο που σας έχουν προταθεί με βάση τον τρόπο προσαρμογής των βαρών στην τελευταία οθόνη. Εμφανίζονται μόνο 3 βίντεο κάθε φορά - χρησιμοποιήστε τα κουμπιά κύλισης για να δείτε περισσότερα. Χρησιμοποιήστε τα κουμπιά στα αριστερά για να φιλτράρετε με συγκεκριμένο βίντεοΠαράδειγμα! Παράδειγμα! Παράδειγμα! ⬆️ Κύλιση προς τα πάνω ⬆️⬇️ Κύλιση προς τα κάτω ⬇️⬅️ Επιλέξτε νέα βάρη",
+          "Example!": "Παράδειγμα!",
+          "Let's Get Started! ➡️": "Ας ξεκινήσουμε! ➡️",
+          "Only 3 videos are shown at a time - use the Scroll buttons to see more. ": "Εμφανίζονται μόνο 3 βίντεο κάθε φορά - χρησιμοποιήστε τα κουμπιά κύλισης για να δείτε περισσότερα. ",
+          "See Recommendations! ➡️": "Δείτε τις συστάσεις! ➡️",
+          "Select at least one person to use for recommendations to continue!": "Επιλέξτε τουλάχιστον ένα άτομο για χρήση για να συνεχίσετε τις προτάσεις!",
+          "Simply pick which content creators you want to follow to see your recommendations!": "Απλώς επιλέξτε τους δημιουργούς περιεχομένου που θέλετε να ακολουθήσετε για να δείτε τις προτάσεις σας!",
+          "These are the videos you've been recommended based on how you adjusted the weights on the last screen. Only 3 videos are shown at a time - use the Scroll buttons to see more. Use the buttons on the left to filter by certain videosExample!Example!Example!⬆️ Scroll Up ⬆️⬇️ Scroll Down ⬇️⬅️ Select New Weights": "Αυτά είναι τα βίντεο που σας έχουν προταθεί με βάση τον τρόπο προσαρμογής των βαρών στην τελευταία οθόνη. Εμφανίζονται μόνο 3 βίντεο κάθε φορά - χρησιμοποιήστε τα κουμπιά κύλισης για να δείτε περισσότερα. Χρησιμοποιήστε τα κουμπιά στα αριστερά για να φιλτράρετε με συγκεκριμένο βίντεοΠαράδειγμα! Παράδειγμα! Παράδειγμα! ⬆️ Κύλιση προς τα πάνω ⬆️⬇️ Κύλιση προς τα κάτω ⬇️⬅️ Επιλέξτε νέα βάρη",
+          "Use the buttons on the left to filter by certain videos": "Χρησιμοποιήστε τα κουμπιά στα αριστερά για να φιλτράρετε με συγκεκριμένα βίντεο",
+          "We've gathered all your favorite personalities to make videos that match your interests.": "Συγκεντρώσαμε όλες τις αγαπημένες σας προσωπικότητες για να δημιουργήσουμε βίντεο που ταιριάζουν με τα ενδιαφέροντά σας.",
+          "WeTube Video Recommendations": "Προτάσεις βίντεο WeTube",
+          "WeTube is a new media website for all your favorite content creators. We've gathered all your favorite personalities to make videos that match your interests.Simply pick which content creators you want to follow to see your recommendations!Let's Get Started! ➡️Select at least one person to use for recommendations to continue!Choose one of the content creators below, then use the slider to adjust how much you want them to influence your recommendations!0 means their opinion isn't included in your recommendations at all10 means they have a huge influence on the recommendations you receivefeatureLabelSee Recommendations! ➡️featureValueYour RecommendationsThese are the videos you've been recommended based on how you adjusted the weights on the last screen. Only 3 videos are shown at a time - use the Scroll buttons to see more. Use the buttons on the left to filter by certain videosExample!Example!Example!⬆️ Scroll Up ⬆️⬇️ Scroll Down ⬇️⬅️ Select New Weights": "Το WeTube είναι ένας νέος ιστότοπος πολυμέσων για όλους τους αγαπημένους σας δημιουργούς περιεχομένου. Συγκεντρώσαμε όλες τις αγαπημένες σας προσωπικότητες για να δημιουργήσουμε βίντεο που ταιριάζουν με τα ενδιαφέροντά σας. Απλώς επιλέξτε τους δημιουργούς περιεχομένου που θέλετε να ακολουθήσετε για να δείτε τις προτάσεις σας! Ας ξεκινήσουμε! ➡️ Επιλέξτε τουλάχιστον ένα άτομο για χρήση για να συνεχίσετε τις συστάσεις! Επιλέξτε έναν από τους δημιουργούς περιεχομένου παρακάτω και, στη συνέχεια, χρησιμοποιήστε το ρυθμιστικό για να προσαρμόσετε πόσο θέλετε να επηρεάσουν τις προτάσεις σας! 0 σημαίνει ότι η γνώμη τους δεν περιλαμβάνεται καθόλου στις προτάσεις σας10 σημαίνει ότι έχουν τεράστια επιρροή στις συστάσεις που λαμβάνετεFeatureBelΔείτε προτάσεις! ➡️ FeatureValueΟι προτάσεις σαςΑυτά είναι τα βίντεο που σας έχουν προταθεί με βάση τον τρόπο προσαρμογής των βαρών στην τελευταία οθόνη. Εμφανίζονται μόνο 3 βίντεο κάθε φορά - χρησιμοποιήστε τα κουμπιά κύλισης για να δείτε περισσότερα. Χρησιμοποιήστε τα κουμπιά στα αριστερά για να φιλτράρετε με συγκεκριμένο βίντεοΠαράδειγμα! Παράδειγμα! Παράδειγμα! ⬆️ Κύλιση προς τα πάνω ⬆️⬇️ Κύλιση προς τα κάτω ⬇️⬅️ Επιλέξτε νέα βάρη",
+          "Your Recommendations": "Οι συστάσεις σας",
+          "featureLabel": "ΧαρακτηριστικάΑναμπέλ",
+          "featureValue": "ΧαρακτηριστικόΤιμή",
+          "⬅️ Select New Weights": "⬅️ Επιλέξτε νέα βάρη",
+          "⬆️ Scroll Up ⬆️": "⬆️ Κύλιση επάνω ⬆️",
+          "⬇️ Scroll Down ⬇️": "⬇️ Μετακινηθείτε προς τα κάτω ⬇️"
+        },
+        "Noisy Image Widget_ai23": {
+          "0%": "0%",
+          "Be patient! Noisy image loading!": "Να είστε υπομονετικοί! Θορυβώδης φόρτωση εικόνας!",
+          "Move the slider to add more or less generations of noise to the image": "Μετακινήστε το ρυθμιστικό για να προσθέσετε περισσότερες ή λιγότερες γενιές θορύβου στην εικόνα",
+          "New Image": "Νέα εικόνα",
+          "Noise Generations:": "Γενιές θορύβου:",
+          "Noise Generations: ": "Γενιές θορύβου: "
+        },
+        "U9L5 Cropping Widget_ai2023": {
+          "Crop": "Καλλιέργεια",
+          "Image Select": "Επιλογή εικόνας",
+          "Reset": "Επαναφορά"
+        },
         "allthethings design mode elements": {
           "text": "κείμενο"
         },
@@ -1391,11 +2247,18 @@
         "csd u5 recommender sample_2022": {
           "Start": "Έναρξη"
         },
+        "csd u5 recommender sample_2023": {
+          "Start": "Έναρξη"
+        },
         "csd-apps for good-1": {
           "Durham Central Park": "Ντάρχαμ Σέντραλ Παρκ",
           "Seeds": "Σπόροι"
         },
         "csd-apps for good-1_2022": {
+          "Durham Central Park": "Ντάρχαμ Σέντραλ Παρκ",
+          "Seeds": "Σπόροι"
+        },
+        "csd-apps for good-1_2023": {
           "Durham Central Park": "Ντάρχαμ Σέντραλ Παρκ",
           "Seeds": "Σπόροι"
         },
@@ -1407,6 +2270,13 @@
           "Spanish": "Ισπανικά"
         },
         "csd-apps for good-2_2022": {
+          "Click on the timer": "Κάντε κλικ στο χρονόμετρο",
+          "English": "Αγγλικά",
+          "Home": "Αρχική",
+          "Next": "Επόμενο",
+          "Spanish": "Ισπανικά"
+        },
+        "csd-apps for good-2_2023": {
           "Click on the timer": "Κάντε κλικ στο χρονόμετρο",
           "English": "Αγγλικά",
           "Home": "Αρχική",
@@ -1425,6 +2295,12 @@
           "3": "3",
           "4": "4"
         },
+        "csd-apps for good-3_2023": {
+          "1": "1",
+          "2": "2",
+          "3": "3",
+          "4": "4"
+        },
         "csd-explore ui-2": {
           "Click on the timer": "Κάντε κλικ στο χρονόμετρο",
           "English": "Αγγλικά",
@@ -1433,6 +2309,13 @@
           "Spanish": "Ισπανικά"
         },
         "csd-explore ui-2_2022": {
+          "Click on the timer": "Κάντε κλικ στο χρονόμετρο",
+          "English": "Αγγλικά",
+          "Home": "Αρχική",
+          "Next": "Επόμενο",
+          "Spanish": "Ισπανικά"
+        },
+        "csd-explore ui-2_2023": {
           "Click on the timer": "Κάντε κλικ στο χρονόμετρο",
           "English": "Αγγλικά",
           "Home": "Αρχική",
@@ -1483,11 +2366,37 @@
           "8": "8",
           "9": "9"
         },
+        "csd-explore ui-3_2023": {
+          "1": "1",
+          "10": "10",
+          "11": "11",
+          "12": "12",
+          "13": "13",
+          "14": "14",
+          "15": "15",
+          "16": "16",
+          "17": "17",
+          "18": "18",
+          "19": "19",
+          "2": "2",
+          "20": "20",
+          "3": "3",
+          "4": "4",
+          "5": "5",
+          "6": "6",
+          "7": "7",
+          "8": "8",
+          "9": "9"
+        },
         "csd-explore ui-4": {
           "Correct!": "Σωστά!",
           "Sorry!": "Συγνώμη!"
         },
         "csd-explore ui-4_2022": {
+          "Correct!": "Σωστά!",
+          "Sorry!": "Συγνώμη!"
+        },
+        "csd-explore ui-4_2023": {
           "Correct!": "Σωστά!",
           "Sorry!": "Συγνώμη!"
         },
@@ -1535,10 +2444,35 @@
           "8": "8",
           "9": "9"
         },
+        "csd-explore ui-5_2023": {
+          "1": "1",
+          "10": "10",
+          "11": "11",
+          "12": "12",
+          "13": "13",
+          "14": "14",
+          "15": "15",
+          "16": "16",
+          "17": "17",
+          "18": "18",
+          "19": "19",
+          "2": "2",
+          "20": "20",
+          "3": "3",
+          "4": "4",
+          "5": "5",
+          "6": "6",
+          "7": "7",
+          "8": "8",
+          "9": "9"
+        },
         "csd-explore ui-6": {
           "Next": "Επόμενο"
         },
         "csd-explore ui-6_2022": {
+          "Next": "Επόμενο"
+        },
+        "csd-explore ui-6_2023": {
           "Next": "Επόμενο"
         },
         "ml-L2 supervised - green glass door-2021": {
@@ -1551,10 +2485,18 @@
           "Green Glass Door": "Πράσινη γυάλινη πόρτα",
           "Rejected": "Απορρίφθηκε"
         },
+        "ml-L2 supervised - green glass door_2023": {
+          "Accepted": "Αποδεκτή",
+          "Green Glass Door": "Πράσινη γυάλινη πόρτα",
+          "Rejected": "Απορρίφθηκε"
+        },
         "ml-L2 unsupervised - 1-2021": {
           "Next": "Επόμενο"
         },
         "ml-L2 unsupervised - 1_2022": {
+          "Next": "Επόμενο"
+        },
+        "ml-L2 unsupervised - 1_2023": {
           "Next": "Επόμενο"
         },
         "ml-customize-raspado-2021": {
@@ -1569,6 +2511,12 @@
           "no": "όχι",
           "yes": "ναι"
         },
+        "ml-customize-raspado_2023": {
+          "Predict": "Προβλέψτε",
+          "Raspado Recommender": "Σύστημα Πρότασης Raspado",
+          "no": "όχι",
+          "yes": "ναι"
+        },
         "ml-intro ai lab- fruit veggie widget": {
           "Continue": "Συνέχεια",
           "Loading...": "Φόρτωση..."
@@ -1577,11 +2525,19 @@
           "Continue": "Συνέχεια",
           "Loading...": "Φόρτωση..."
         },
+        "ml-intro ai lab- fruit veggie widget_2023": {
+          "Continue": "Συνέχεια",
+          "Loading...": "Φόρτωση..."
+        },
         "ml-intro app lab-book recommender demo-2021": {
           "Predict": "Προβλέψτε",
           "Silly": "Χαζούλικο"
         },
         "ml-intro app lab-book recommender demo_2022": {
+          "Predict": "Προβλέψτε",
+          "Silly": "Χαζούλικο"
+        },
+        "ml-intro app lab-book recommender demo_2023": {
           "Predict": "Προβλέψτε",
           "Silly": "Χαζούλικο"
         },
@@ -1599,11 +2555,22 @@
           "no": "όχι",
           "yes": "ναι"
         },
+        "ml-model card-medical app v2 2021-2_2023": {
+          "A": "Α",
+          "W": "Δ",
+          "head": "κεφάλι",
+          "no": "όχι",
+          "yes": "ναι"
+        },
         "ml-model cards-book recommender model card": {
           "Predict": "Προβλέψτε",
           "Silly": "Χαζούλικο"
         },
         "ml-model cards-book recommender model card_2022": {
+          "Predict": "Προβλέψτε",
+          "Silly": "Χαζούλικο"
+        },
+        "ml-model cards-book recommender model card_2023": {
           "Predict": "Προβλέψτε",
           "Silly": "Χαζούλικο"
         },
@@ -1619,6 +2586,12 @@
           "3": "3",
           "Predict": "Προβλέψτε"
         },
+        "ml-models in applab-choice if quotes_2023": {
+          "1": "1",
+          "2": "2",
+          "3": "3",
+          "Predict": "Προβλέψτε"
+        },
         "ml-models in applab-choice if wrong place": {
           "1": "1",
           "2": "2",
@@ -1626,6 +2599,12 @@
           "Predict": "Προβλέψτε"
         },
         "ml-models in applab-choice if wrong place_2022": {
+          "1": "1",
+          "2": "2",
+          "3": "3",
+          "Predict": "Προβλέψτε"
+        },
+        "ml-models in applab-choice if wrong place_2023": {
           "1": "1",
           "2": "2",
           "3": "3",
@@ -1645,6 +2624,13 @@
           "Back": "Πίσω",
           "Predict": "Προβλέψτε"
         },
+        "ml-models in applab-choice intended warnings_2023": {
+          "1": "1",
+          "2": "2",
+          "3": "3",
+          "Back": "Πίσω",
+          "Predict": "Προβλέψτε"
+        },
         "ml-models in applab-choice predict typos": {
           "1": "1",
           "2": "2",
@@ -1652,6 +2638,12 @@
           "Predict": "Προβλέψτε"
         },
         "ml-models in applab-choice predict typos_2022": {
+          "1": "1",
+          "2": "2",
+          "3": "3",
+          "Predict": "Προβλέψτε"
+        },
+        "ml-models in applab-choice predict typos_2023": {
           "1": "1",
           "2": "2",
           "3": "3",
@@ -1669,12 +2661,23 @@
           "Predict": "Προβλέψτε",
           "Yes": "Ναι"
         },
+        "ml-models in applab-zoo assessment_2023": {
+          "B": "Β",
+          "No": "Όχι",
+          "Predict": "Προβλέψτε",
+          "Yes": "Ναι"
+        },
         "ml-models in applab-zoo model embed": {
           "No": "Όχι",
           "Predict": "Προβλέψτε",
           "Yes": "Ναι"
         },
         "ml-models in applab-zoo model embed_2022": {
+          "No": "Όχι",
+          "Predict": "Προβλέψτε",
+          "Yes": "Ναι"
+        },
+        "ml-models in applab-zoo model embed_2023": {
           "No": "Όχι",
           "Predict": "Προβλέψτε",
           "Yes": "Ναι"
@@ -1687,16 +2690,26 @@
           "Improved Shoe Recommender": "Βελτιωμένο Σύστημα Προτάσεων Παπουτσιών",
           "Sports": "Αθλητισμός"
         },
+        "ml-models-shoes decision tree_2023": {
+          "Improved Shoe Recommender": "Βελτιωμένο Σύστημα Προτάσεων Παπουτσιών",
+          "Sports": "Αθλητισμός"
+        },
         "ml-models-shoes points-2021": {
           "Ultimate Shoe Recommender": "Υπέρτατο Σύστημα Πρότασης Παπουτσιών"
         },
         "ml-models-shoes points_2022": {
           "Ultimate Shoe Recommender": "Υπέρτατο Σύστημα Πρότασης Παπουτσιών"
         },
+        "ml-models-shoes points_2023": {
+          "Ultimate Shoe Recommender": "Υπέρτατο Σύστημα Πρότασης Παπουτσιών"
+        },
         "ml-models-shoes random-2021": {
           "Shoe Recommender": "Σύστημα Πρότασης Παπουτσιών"
         },
         "ml-models-shoes random_2022": {
+          "Shoe Recommender": "Σύστημα Πρότασης Παπουτσιών"
+        },
+        "ml-models-shoes random_2023": {
           "Shoe Recommender": "Σύστημα Πρότασης Παπουτσιών"
         },
         "ml-use model card-example3A-2021": {
@@ -1708,6 +2721,14 @@
           "snow": "χιόνι"
         },
         "ml-use model card-example3A_2022": {
+          "Driver Alert System": "Σύστημα Ειδοποιήσεων Οδηγού",
+          "Predict": "Προβλέψτε",
+          "cloudy": "συννεφιασμένος",
+          "night": "νύχτα",
+          "rain": "βροχή",
+          "snow": "χιόνι"
+        },
+        "ml-use model card-example3A_2023": {
           "Driver Alert System": "Σύστημα Ειδοποιήσεων Οδηγού",
           "Predict": "Προβλέψτε",
           "cloudy": "συννεφιασμένος",

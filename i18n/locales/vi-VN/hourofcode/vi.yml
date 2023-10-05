@@ -197,6 +197,15 @@ vi:
   grade_level_label_elementary: Trường tiểu học
   grade_level_label_middle: Trường trung học cơ sở
   grade_level_label_high: Trường trung học
+  curricula_title_elementary: Chương trình giảng dạy của trường tiểu học
+  curricula_desc_elementary: Duyệt qua các khóa học và hoạt động vui nhộn, miễn phí
+    mời bạn khám phá khoa học máy tính với học sinh tiểu học của mình.
+  curricula_title_middle: Chương trình giảng dạy trung học cơ sở
+  curricula_desc_middle: Duyệt qua các dịch vụ hấp dẫn cho phép bạn và học sinh trung
+    học cơ sở của bạn khám phá khoa học máy tính cùng nhau.
+  curricula_title_high: Chương trình giảng dạy trung học
+  curricula_desc_high: Duyệt qua các khóa học và hoạt động hấp dẫn mời bạn và học
+    sinh trung học của bạn tìm hiểu sâu hơn về khoa học máy tính.
   students_label: Học sinh, sinh viên
   teachers_label: Giáo viên
   teacher_label_csf: Nguyên tắc cơ bản của KHMT cho Giáo viên
@@ -206,6 +215,7 @@ vi:
   teacher_label_csa: AP® Computer Science A Teacher
   required_materials: 'Tài liệu bắt buộc:'
   optional_materials: 'Tài liệu không bắt buộc:'
+  call_to_action_explore_roles: Khám phá các vai trò mở
   call_to_action_learn_more: Tìm hiểu thêm
   call_to_action_watch_now: Xem ngay
   call_to_action_try_activity: Thử hoạt động
@@ -224,6 +234,15 @@ vi:
   call_to_action_explore_collection: Khám phá cụm bài học
   call_to_action_explore_unplugged_lesson: Khám phá bài học không dùng thiết bị điện
     tử
+  call_to_action_explore_csf: Khám phá CS Fundamentals
+  call_to_action_explore_csd: Khám phá CS Discoveries
+  call_to_action_explore_csp: Khám phá các nguyên tắc CS
+  call_to_action_explore_csc: Khám phá CS Connections
+  call_to_action_explore_csa: Khám phá AP® Computer Science A
+  call_to_action_explore_csa_short: Khám phá AP® CSA
+  call_to_action_explore_maker: Khám phá chương trình giảng dạy Maker
+  call_to_action_explore_hoc: Khám phá các hướng dẫn Hour of Code
+  call_to_action_explore_hoc_short: Khám phá Hour of Code
   call_to_action_try_app_lab: Dùng thử App Lab
   call_to_action_view_lesson_plan: Xem kế hoạch bài học
   call_to_action_self_paced_pl: Bắt đầu học chuyên nghiệp theo nhịp độ tự
@@ -247,6 +266,7 @@ vi:
   call_to_action_resources_tools: Dùng thử các công cụ lập trình
   call_to_action_sign_up_free: Đăng kí miễn phí
   call_to_action_explore_ai_resources: Khám phá tài nguyên AI
+  call_to_action_explore_ai_curricula: Khám phá chương trình giảng dạy AI
   call_to_action_explore_curriculum_catalog: Khám phá Danh mục chương trình đào tạo
   call_to_action_see_full_curriculum_catalog: Xem đầy đủ Danh mục chương trình đào
     tạo
@@ -269,6 +289,11 @@ vi:
   call_to_action_notify_available: Thông báo cho tôi khi có sẵn
   call_to_action_register_early_access: Đăng ký để truy cập sớm
   call_to_action_open_positions: Xem các vị trí đang mở
+  call_to_action_get_guide: Nhận hướng dẫn
+  call_to_action_donate_to_cdo: Quyên góp cho Code.org
+  call_to_action_start_fundraiser: Bắt đầu gây quỹ
+  call_to_action_view_donation_policy: Xem chính sách quyên góp
+  call_to_action_view_donate_bitpay: Đóng góp với BitPay
   aria_label_call_to_action_afe: Tìm hiểu thêm về Amazon Future Engineer
   aria_label_call_to_action_teaching_csf: Bắt đầu chương trình Teaching Computer Science
     Fundamentals Professional learning
@@ -377,8 +402,11 @@ vi:
   curriculum_name_csp: Các nguyên tắc khoa học máy tính
   curriculum_name_csc: Kết nối khoa học máy tính
   curriculum_name_csa: Khoa học máy tính A
+  curriculum_name_csa_ai: Kỹ thuật phần mềm & Computer Vision
   curriculum_name_csc_02: Học phần Kết nối KHMT bất kỳ
   curriculum_name_ai: AI và Học Máy
+  curriculum_name_artificial_intelligence: Trí tuệ nhân tạo (AI)
+  curriculum_name_maker: Nhà sản xuất
   curriculum_name_maker_cp: Tạo ứng dụng với thiết bị (Circuit Playground)
   curriculum_name_maker_microbit: Tạo ứng dụng với thiết bị (micro:bit)
   curriculum_name_creating_apps_with_devices: Tạo ứng dụng bằng thiết bị
@@ -389,6 +417,8 @@ vi:
   curriculum_name_interactive_animations_games: Tương tác hoạt hình & game
   curriculum_name_design_process: Quy trình thiết kế
   curriculum_name_data_society: Dữ liệu và xã hội
+  curriculum_desc_csf: Bộ chương trình giảng dạy tiểu học miễn phí giới thiệu cho
+    học sinh các khái niệm cơ bản của khoa học máy tính.
   curriculum_desc_csf_express: Hãy học cách tạo các chương trình máy tính, phát triển
     kỹ năng giải quyết vấn đề và vượt qua các thử thách thú vị! Hãy làm game và các
     dự án sáng tạo để chia sẻ với bạn bè, gia đình và giáo viên.
@@ -437,6 +467,25 @@ vi:
   curriculum_desc_creating_apps_with_devices: Khám phá vai trò của các thiết bị thực
     tế trong điện toán. Phát triển các chương trình sử dụng dữ liệu đầu vào và đầu
     ra phần cứng. Có một phiên bản của bài học này cho cả micro:bit và Circuit Playground.
+  curriculum_desc_csa: Giới thiệu sinh viên về kỹ thuật phần mềm và thiết kế hướng
+    đối tượng trong khi họ học ngôn ngữ lập trình Java trong chương trình giảng dạy
+    miễn phí này cho AP® Computer Science A (AP® CSA).
+  curriculum_desc_maker: Giáo dục Maker đưa STEM (Khoa học, Công nghệ, Kỹ thuật, Toán
+    học) tiến thêm một bước bằng cách mời kinh nghiệm thực hành và cộng tác vào lớp
+    học để giúp dạy cách giải quyết vấn đề và tư duy phản biện.
+  curriculum_desc_maker_short: Giáo dục Maker mời kinh nghiệm thực hành và sự hợp
+    tác vào lớp học để giúp dạy cách giải quyết vấn đề và tư duy phản biện.
+  curriculum_desc_csd: Khóa học linh hoạt, cho phép mỗi đơn vị được dạy một mình hoặc
+    kết hợp. Giới thiệu cho sinh viên xây dựng trang web, ứng dụng, hình ảnh động,
+    trò chơi và hệ thống máy tính vật lý.
+  curriculum_desc_csp: Khóa học giới thiệu trung học phổ thông miễn phí, AP® CSP được
+    chứng thực, giới thiệu cho học sinh các khái niệm cơ bản của khoa học máy tính.
+  curriculum_desc_csa_ai_long: 'Mô-đun CSA sau AP gồm hai chương này cung cấp cho
+    học sinh trung học kinh nghiệm thực hành với các công cụ phát triển phần mềm chuyên
+    nghiệp, bao gồm GitHub và GitHub Copilot, đồng thời truyền đạt cho họ các kỹ năng
+    thực tế để phát triển chương trình thị giác máy tính. '
+  curriculum_desc_csa_ai_short: Mô-đun CSA sau AP® này cung cấp cho học sinh trung
+    học kinh nghiệm thực hành với các công cụ phát triển phần mềm chuyên nghiệp.
   collection_hardware: Chuyên đề Phần cứng
   collection_hardware_desc: Tạo điều kiện cho học viên sử dụng dữ liệu và các thiết
     bị thực tế để giải quyết vấn đề.
@@ -470,6 +519,7 @@ vi:
   module_label_professional_learning: 'Đào tạo chuyên môn:'
   module_label_languages: 'Ngôn ngữ hỗ trợ:'
   module_label_accessibility_features: 'Trợ năng:'
+  module_label_accessibility_features_full: 'Các tính năng trợ năng:'
   module_label_educator_tool: Công cụ dạy học
   module_label_educator_course: Khóa học dành cho giáo viên
   module_label_student_tool: Công cụ dành cho học viên
@@ -477,6 +527,7 @@ vi:
   module_label_student_content_resources: Nội dung & tài nguyên
   module_label_new: Mới
   module_label_coming_soon: Sắp ra mắt
+  module_label_available_now: Có sẵn ngay bây giờ
   module_label_video_series: Loạt video
   module_label_self_paced: Mô-đun tự theo nhịp độ
   module_ages_5_10: 5-10
@@ -487,6 +538,8 @@ vi:
   module_grade_2_5: 2-5
   module_grade_3_5: 3-5
   module_grade_3_8: 3-8
+  module_grade_k_12: K-12
+  module_grade_3_12: 3-12
   module_grade_6_12: 6-12
   module_grade_6_10: 6-10
   module_grade_9_12: 9-12
@@ -501,11 +554,14 @@ vi:
   module_grade_9_12_teachers: Giáo viên lớp 9-12
   module_level_beginner: Sơ cấp
   module_level_intermediate: Trung cấp
+  module_level_advanced: Nâng cao
   module_duration_45_mins: 45 phút
+  module_duration_2_weeks: 2 tuần
   module_duration_1_hr: 1 giờ
   module_duration_2_hrs: 2 giờ
   module_duration_3_hrs: 3 giờ
   module_duration_5_hrs: 5 giờ
+  module_duration_5_hrs_plus: 5+ giờ
   module_duration_8_hrs: 8 giờ
   module_duration_20_hrs: 20 giờ
   module_duration_35_hrs: 35 giờ
@@ -517,6 +573,7 @@ vi:
   module_duration_school_year: Năm học
   module_duration_month_quarter: Tháng hoặc Quý
   module_duration_month_semester_year: Tháng, học kỳ hoặc năm
+  module_duration_varies: Khác nhau
   module_prerequisites_none: Không có
   module_prerequisites_maker_cp: Truy cập vào Sân chơi Circuit
   module_prerequisites_maker_microbit: Truy cập vào micro:bit
@@ -584,6 +641,9 @@ vi:
   heading_java_lab: Java Lab
   heading_objects_first: Đối tượng đầu tiên
   heading_these_lessons_will: 'Những bài học này sẽ:'
+  heading_explore_curriculum_catalog: Khám phá tất cả các khóa học của chúng tôi trong
+    Danh mục chương trình giảng dạy
+  heading_csa_ai: Tìm kiếm những việc cần làm sau kỳ thi AP®?
   professional_learning_section_desc: Nhận được sự hỗ trợ mà bạn cần trong quá trình
     chuẩn bị giảng dạy. Các thầy cô giáo rất yêu thích chương trình này, trong đó
     hơn 90% giáo viên xếp hạng chương trình này là bước bồi dưỡng chuyên môn tuyệt
@@ -619,6 +679,23 @@ vi:
     lời bất kỳ câu hỏi nào của bạn về việc bắt đầu giảng dạy với Code.org. Bạn cũng
     có thể hỏi các giáo viên khác về kinh nghiệm của họ trên các diễn đàn dành cho
     giáo viên của chúng tôi.
+  subscribe_form_section_title: Đăng ký để cập nhật
+  subscribe_form_section_desc_csa: Đăng ký để nhận email hàng tháng về AP® Computer
+    Science A của Code.org và nhận các lời nhắc, mẹo và cập nhật hữu ích được gửi
+    ngay đến hộp thư đến của bạn.
+  subscribe_form_section_desc_csc: Đăng ký để nhận email hàng tháng về Kết nối Khoa
+    học Máy tính của Code.org và nhận các lời nhắc, mẹo và cập nhật hữu ích được gửi
+    ngay đến hộp thư đến của bạn.
+  subscribe_form_section_desc_csd: Đăng ký để nhận email hàng tháng về Khám phá Khoa
+    học Máy tính của Code.org và nhận các lời nhắc, mẹo và cập nhật hữu ích được gửi
+    ngay đến hộp thư đến của bạn.
+  subscribe_form_section_desc_csf: Đăng ký để nhận email hàng tháng về các Nguyên
+    tắc cơ bản về Khoa học Máy tính của Code.org và nhận các lời nhắc, mẹo và cập
+    nhật hữu ích được gửi ngay đến hộp thư đến của bạn.
+  subscribe_form_section_desc_csp: Đăng ký để nhận email hàng tháng về Nguyên tắc
+    Khoa học Máy tính của Code.org và nhận các lời nhắc, mẹo và cập nhật hữu ích được
+    gửi ngay đến hộp thư đến của bạn.
+  subscribe_form_section_unsubscribe: Bạn có thể hủy đăng ký bất cứ lúc nào.
   blockchain_hero_heading: Cách thức hoạt động của Blockchain
   blockchain_hero_desc: Đi sâu vào thế giới blockchain với “Cách thức hoạt động của
     Blockchain”, loạt video mới của chúng tôi và các bài học kèm theo!
@@ -723,6 +800,9 @@ vi:
     của AI. Mỗi bài học được ghép nối với một video duy nhất từ bộ truyện, đi sâu
     hơn vào các khái niệm được giới thiệu trong video.
   ai_curriculum_btn_aria_label_04: Khám phá cách thức hoạt động của AI
+  ai_curriculum_grades_05: 'Các cấp lớp: 9-12'
+  ai_curriculum_btn_aria_label_05: Khám phá mô-đun Kỹ thuật Phần mềm & Tầm nhìn Máy
+    tính
   ai_carousel_heading: 'Giáo viên nói gì về AI với Code.org:'
   ai_carousel_quote_01: Bài học này cũng cho học sinh của tôi cơ hội thấy rằng có
     một yếu tố quan điểm trong các hệ thống phân loại. Sau đó, khi chúng tôi bắt đầu
@@ -850,6 +930,12 @@ vi:
     lớn trong AI, bao gồm hai video mới về Mô hình ngôn ngữ lớn (như ChatGPT) và AI
     thế hệ. Nghe cách các công nghệ mới này hoạt động trực tiếp từ các chuyên gia:
     Mira Murati, CTO của OpenAI và Cristóbal Valenzuela, Giám đốc điều hành của RunwayML.'
+  ai_pl_101_llm_slides_title: Lời nhắc về mô hình ngôn ngữ lớn cho các nhà giáo dục
+  ai_pl_101_llm_slides_desc: Các công cụ để có được đầu ra tốt nhất có thể từ LLM
+    như ChatGPT, từ người mới bắt đầu đến nâng cao. Bao gồm lời nhắc khởi động cho
+    những người chỉ cần nhúng ngón chân vào, cũng như các công cụ tiên tiến cho những
+    người muốn tối đa hóa tiềm năng của họ.
+  ai_pl_101_resources_3: Lời nhắc AI để chuyển đổi việc học của học sinh
   how_ai_works_hero_heading: Cách thức hoạt động của AI
   how_ai_works_hero_desc: Đi sâu vào thế giới AI với “Cách thức hoạt động của AI”,
     loạt video của chúng tôi và các bài học kèm theo!
@@ -1198,22 +1284,19 @@ vi:
   teach_page_free_curriculum_desc: Chúng tôi muốn bạn mang Khoa học máy tính về trường
     của mình mà không phải lo lắng về chi phí. Đó là lý do chúng tôi cam kết cung
     cấp chương trình đào tạo miễn phí mãi mãi!
-  teach_page_free_curriculum_list_heading_01: Chương trình đào tạo hấp dẫn cho mọi
-    trình độ
   teach_page_free_curriculum_list_desc_01: Chương trình đào tạo miễn phí, linh hoạt
     và thú vị với hơn 67 ngôn ngữ.
-  teach_page_free_curriculum_list_heading_02: Chương trình đào tạo linh hoạt, đổi
-    mới
   teach_page_free_curriculum_list_desc_02: Code.org cung cấp mọi thứ, từ chương trình
     đào tạo trong suốt một năm cho đến các hoạt động đơn lẻ. Ngoài ra, chúng tôi cập
     nhật chương trình đào tạo của mình hàng năm để hỗ trợ các phương pháp hay nhất
     và các lĩnh vực trọng tâm, đồng thời tạo ra các chương trình mới để dạy các chủ
     đề hiện đang có nhu cầu.
-  teach_page_free_curriculum_list_heading_03: Cấu trúc chương trình đào tạo chuẩn
-    quốc gia
   teach_page_free_curriculum_list_desc_03: Mỗi chương trình đào tạo được đối chiếu
     với ít nhất một bộ tiêu chuẩn quốc gia, bao gồm CSTA, Tiêu chuẩn Khoa học thế
     hệ tiếp theo mới và Common Core.
+  teach_page_free_curriculum_list_desc_04: Cung cấp bằng hơn 67 ngôn ngữ
+  teach_page_free_curriculum_list_desc_05: Được ánh xạ tới ít nhất một bộ tiêu chuẩn
+    quốc gia (bao gồm CSTA, NGSS và Common Core)
   teach_page_free_curriculum_heading_02: 'Khám phá các chương trình đào tạo của chúng
     tôi cho các trình độ khác nhau:'
   teach_page_resources_heading: Tài nguyên hỗ trợ bạn từng bước
@@ -1276,8 +1359,8 @@ vi:
     Animation
   csp_page_curriculum_glance_devices: Laptop, Chromebook
   csp_page_curriculum_glance_tools: App Lab
-  csp_page_curriculum_glance_professional_learning: Facilitator-led Workshops, Self-paced
-    Modules
+  csp_page_curriculum_glance_professional_learning: Hội thảo do người hướng dẫn, Mô-đun
+    tự theo nhịp độ
   csp_page_curriculum_glance_professional_languages: Tiếng Việt
   csp_page_curriculum_glance_professional_accessibility_features: Text-to-speech,
     Closed captioning, Immersive reader
@@ -1405,8 +1488,8 @@ vi:
     trình
   csd_page_curriculum_glance_devices: Laptop, Chromebook
   csd_page_curriculum_glance_tools: App Lab, Game Lab, AI Lab, Web Lab
-  csd_page_curriculum_glance_professional_learning: Facilitator-led Workshops, Self-paced
-    Modules
+  csd_page_curriculum_glance_professional_learning: Hội thảo do người hướng dẫn, Mô-đun
+    tự theo nhịp độ
   csd_page_curriculum_glance_professional_languages: Tiếng Việt
   csd_page_curriculum_glance_professional_accessibility_features: Text-to-speech,
     Closed captioning, Immersive reader
@@ -1556,8 +1639,8 @@ vi:
     và Thiết kế, Thiết kế ứng dụng
   csf_page_curriculum_glance_devices: Máy tính xách tay, Chromebook, Máy tính bảng
   csf_page_curriculum_glance_tools: Sprite Lab, Play Lab
-  csf_page_curriculum_glance_professional_learning: Facilitator-led Workshops, Self-paced
-    Modules
+  csf_page_curriculum_glance_professional_learning: Hội thảo do người hướng dẫn, Mô-đun
+    tự theo nhịp độ
   csf_page_curriculum_glance_languages: Tiếng Ả Rập, Tiếng Indonesia, Tiếng Catalán,
     Tiếng Trung giản thể, Tiếng Trung phồn thể, Tiếng Séc, Tiếng Pháp, Tiếng Đức,
     Tiếng Hindi, Tiếng Ý, Tiếng Nhật, Tiếng Hàn Quốc, Tiếng Kannada, Tiếng Malaysia,
@@ -1706,6 +1789,39 @@ vi:
   csa_page_faq_answer_08_02: For more information about the values that guided our
     work, please see our [curriculum values](%{curriculum_values_url}) and our [professional
     learning values](%{pl_values_url}).
+  donate_page_top_heading: Giúp tài trợ cho sứ mệnh của chúng tôi
+  donate_page_top_desc: Mỗi khoản đóng góp thúc đẩy sứ mệnh của Code.org là mở rộng
+    quyền truy cập vào giáo dục khoa học máy tính. Chúng tôi cung cấp một số cách
+    để bạn quyên góp và tạo ra sự khác biệt.
+  donate_page_fundraise_title: Gây quỹ cho Code.org
+  donate_page_fundraise_desc: Giúp quyên góp tiền cho Code.org! Mỗi học sinh trong
+    mỗi trường nên có cơ hội học khoa học máy tính.
+  donate_page_other_ways_title: Những cách khác để cung cấp
+  donate_page_other_ways_desc: Khám phá các phương pháp đa dạng để đóng góp và tìm
+    tùy chọn phù hợp với bạn nhất. Mỗi cử chỉ, dù lớn hay nhỏ, đều thúc đẩy sứ mệnh
+    của chúng tôi tiến lên phía trước.
+  donate_page_501c3: Code.org được đăng ký là một tổ chức phi lợi nhuận 501 (c) (3)
+    công cộng. Đóng góp cho Code.org được khấu trừ thuế trong phạm vi pháp luật cho
+    phép. Mã số thuế của Code.org là 46-0858543.
+  donate_page_donation_policy_title: Hiểu chính sách quyên góp của chúng tôi
+  donate_page_donation_policy_desc: Tìm hiểu về cách chúng tôi xử lý và phân bổ các
+    khoản đóng góp của bạn.
+  donate_tabs_tab_label_daf_direct: DAF trực tiếp
+  donate_tabs_tab_label_amazon: Amazon
+  donate_tabs_tab_label_bitpay: BitPay
+  donate_tabs_tab_label_employee_match: Trận đấu nhân viên
+  donate_tabs_daf_direct_title: Đóng góp qua DAF Direct
+  donate_tabs_daf_direct_desc: Quyên góp thông qua quỹ do nhà tài trợ tư vấn của bạn
+    với Fidelity Charitable, Schwab Charitable hoặc BNY Mellon và đưa ra đề xuất tài
+    trợ của bạn cho Code.org thông qua biểu mẫu trực tuyến DAF Direct.
+  donate_tabs_amazon_title: Quyên góp qua Amazon
+  donate_tabs_amazon_desc: Đóng góp trực tiếp bằng tài khoản Amazon của bạn. Chỉ với
+    một vài cú nhấp chuột, đóng góp liền mạch vào sứ mệnh của Code.org và trao quyền
+    cho tương lai của giáo dục khoa học máy tính.
+  donate_tabs_bitpay_title: Đóng góp bằng tiền điện tử qua BitPay
+  donate_tabs_bitpay_desc: Nắm bắt tương lai của việc cho đi với tiền điện tử. Thông
+    qua BitPay, đồng tiền kỹ thuật số của bạn có thể hỗ trợ trực tiếp những nỗ lực
+    của Code.org trong việc mở rộng giáo dục khoa học máy tính.
   hoc_live: Giờ lập trình trực tiếp
   hoc_live_sign_up_title: Đăng ký Giờ lập trình trực tiếp
   hoc_live_learn_title: Học với Giờ lập trình trực tiếp
@@ -2142,6 +2258,13 @@ vi:
     học máy tính khác không?
   signup_email_preference_privacy: "(Xem chính sách bảo mật của chúng tôi)"
   signup_email_preference_yes: Có
+  signup_email_preference_yes_elementary: Có - Gửi cho tôi thông tin cập nhật về Tài
+    nguyên của Trường Tiểu học
+  signup_email_preference_yes_middle: Có - Gửi cho tôi thông tin cập nhật về Tài nguyên
+    của Trường Trung học Cơ sở
+  signup_email_preference_yes_high: Có - Gửi cho tôi thông tin cập nhật về Tài nguyên
+    Trung học
+  signup_email_preference_yes_general: Có - Gửi cho tôi thông tin cập nhật chung
   signup_email_preference_no: Không
   signup_email_preference_error: Tùy chọn email là bắt buộc
   signup_multiple_event_warning: Chúng tôi sẽ hiển thị tên trường và thành phố bạn
@@ -5627,11 +5750,11 @@ vi:
     cuộc phiêu lưu thông qua thế giới Minecraft này.
   tutorial_minecraft-2016_longdescription: Xây dựng một trò chơi Minecraft. Tạo phiên
     bản gà, cừu, dây leo, thây ma của riêng bạn và hơn thế nữa.
-  tutorial_thinkersmith-es_longdescription: Mediante el uso de un "Vocabulario Robot"
+  tutorial_thinkersmith-es_longdescription: Mediante el uso de un “Vocabulario Robot”
     predefinido, los estudiantes descubrir&aacute;n como guiarse de modo tal de llevar
-    a cabo tareas espec&iacute;ficas sin ser estas discutidas previamente. Este segmento
-    ense&ntilde;a a los estudiantes la conexi&oacute;n entre s&iacute;mbolos y acciones
-    as&iacute; como la valiosa habilidad de depuraci&oacute;n.
+    a cabo tareas espec ficas sin ser estas discutidas previamente.&iacute;Este segmento
+    ense&ntilde;a los estudiantes la conexi&oacute;n entre s&iacute;mbolos y acciones
+    as como la valiosa habilidad de depuraci n.&iacute;&oacute;
   tutorial_pixie_longdescription: Hướng dẫn Hour of Code với Pixie
   tutorial_play_longdescription: Tạo câu chuyện hoặc làm một trò chơi với Play Lab!
     Làm cho động vật, cướp biển, zombie, ninja, và nhiều hơn nữa nhân vật di chuyển,
@@ -12912,12 +13035,13 @@ vi:
   tutorial_googlename _longdescription: Chọn một tên và đưa các chữ cái của từ đó
     vào cuộc sống bằng cách sử dụng mã. Chọn một biệt danh, tên của thú cưng, một
     con vật, một môn thể thao, một địa điểm hoặc một sở thích.
-  tutorial_carnegiezillah_longdescription: Zillah City is thriving, and music is in
-    the air. Rumor has it, the famed Gargantua bot is online and sending the last
-    Toxibots to trash the city block by block…. Grab your cobot hoverboard and get
-    ready to groove, move, and finish off what you started! Players program their
-    cobot hoverbots to change lanes, avoid obstacles, and take out many Toxibots in
-    this rhythm-styled game.
+  tutorial_carnegiezillah_longdescription: Thành phố Zillah đang phát triển mạnh,
+    và âm nhạc đang ở trong không khí. Có tin đồn rằng, bot Gargantua nổi tiếng đang
+    trực tuyến và gửi những Toxibots cuối cùng để dọn rác thành phố từng khối.…Lấy
+    hoverboard cobot của bạn và sẵn sàng để tạo rãnh, di chuyển và hoàn thành những
+    gì bạn đã bắt đầu! Người chơi lập trình cobot hoverbots của họ để thay đổi làn
+    đường, tránh chướng ngại vật và loại bỏ nhiều Toxibots trong trò chơi theo phong
+    cách nhịp nhàng này.
   tutorial_nasachspacejam_longdescription: Tạo ra một hệ mặt trời thực sự đá! Tìm
     hiểu về âm nhạc, thiên văn học và mã hóa trong hoạt động tự hướng dẫn này (không
     cần kinh nghiệm mã hóa). Lập trình các hành tinh để tạo ra âm nhạc, tạo ra hệ
@@ -13767,6 +13891,356 @@ vi:
     tôi (tổng cộng 5 tuần, bao gồm đóng cửa văn phòng 2 tuần toàn tổ chức vào cuối
     năm hay còn gọi là Kỳ nghỉ đông), nửa ngày làm việc vào các ngày thứ Sáu trong
     mùa hè hay còn gọi là Thứ Sáu Mùa hè và các lợi ích hào phóng khác.
+  careers_hero_title: Nghề nghiệp
+  careers_hero_description: Code.org là một tổ chức phi lợi nhuận dành riêng cho việc
+    mở rộng quyền truy cập vào khoa học máy tính trong trường học. Chúng tôi đặc biệt
+    tập trung vào việc tăng cường sự tham gia của phụ nữ trẻ và sinh viên không có
+    đại diện.
+  careers_hero_description_under: Giúp chúng tôi thay đổi thế giới, một học sinh tại
+    một thời điểm!
+  careers_vision_title: Tầm nhìn của chúng tôi
+  careers_vision_decsription: Tầm nhìn của chúng tôi là mọi học sinh ở mọi trường
+    học nên có cơ hội học khoa học máy tính như một phần của nền giáo dục K-12 cốt
+    lõi của họ.
+  careers_vision_description_under: Hãy tham gia nhóm của chúng tôi để giúp biến tầm
+    nhìn này thành hiện thực!
+  careers_values_title: Giá trị cốt lõi của chúng tôi
+  careers_values_first_column_text_1: Chúng tôi tin rằng khoa học máy tính là nền
+    tảng cho tất cả học sinh
+  careers_values_first_column_text_2: Chúng tôi cam kết công bằng, tiếp cận và cơ
+    hội
+  careers_values_first_column_text_3: Chúng tôi tin vào sức mạnh của một cộng đồng
+    giáo dục hợp tác
+  careers_values_second_column_text_1: Chúng tôi nhanh nhẹn và đáp ứng với phản hồi
+  careers_values_second_column_text_2: Chúng tôi hành động với tính toàn vẹn và minh
+    bạch
+  careers_values_second_column_text_3: Chúng tôi tin rằng tác động rộng đòi hỏi phải
+    suy nghĩ lớn và hành động toàn diện
+  careers_approach_section_title: Cách tiếp cận thống nhất của chúng tôi
+  careers_approach_section_description: Vai trò toàn cầu của Code.org trong phong
+    trào khoa học máy tính K-12 chỉ có thể thực hiện được vì chúng tôi sử dụng cách
+    tiếp cận thống nhất giữa các bên liên quan đa dạng và thường bị chia rẽ. Vào thời
+    điểm phân cực ngày càng tăng, ý tưởng tăng cơ hội cho sinh viên đoàn kết mọi người
+    từ khắp các phổ chính trị. Các thành viên trong nhóm, sinh viên, giáo viên và
+    những người ủng hộ của Code.org có quan điểm đa dạng và khác nhau, và tất cả họ
+    đều được chào đón trong sứ mệnh của chúng tôi.
+  careers_aproach_section_description_link: Đọc thêm về cách tiếp cận của Code.org
+    đối với sự thống nhất.
+  careers_approach_section_button: Khám phá các vai trò mở
+  careers_principle_section_title: Nguyên tắc văn hóa của chúng tôi
+  careers_principle_title_1: Học sinh và giáo viên của chúng tôi là Sao Bắc Cực của
+    chúng tôi
+  careers_principle_description_1: Chúng tôi sử dụng quà tặng, thời gian và năng lượng
+    của mình để mang khoa học máy tính đến những người cần nó nhất. Đây là những gì
+    hợp nhất chúng ta. Đây là nguyên tắc quan trọng nhất của chúng tôi.
+  careers_principle_title_2: Chúng tôi khó khăn với các vấn đề và tử tế với nhau
+  careers_principle_description_2: Chúng tôi tập trung vào thách thức đưa khoa học
+    máy tính đến sinh viên và giáo viên trên toàn cầu. Chúng ta nhận ra rằng mỗi người
+    chúng ta đều mang những ý định tốt nhất của mình để hỗ trợ sứ mệnh của mình và
+    ban ân sủng khi chúng ta phạm sai lầm.
+  careers_principle_title_3: Tìm kiếm giải pháp, không phải sự đồng thuận
+  careers_principle_description_3: Chúng tôi sở hữu các quyết định, cho dù thực hiện
+    các bước nhỏ hoặc bước nhảy vọt lớn đối với kết quả mà chúng tôi đang tìm kiếm.
+    Chủ sở hữu yêu cầu và lắng nghe, nhưng không bị tê liệt bởi phản hồi. Chúng tôi
+    chấp nhận và ủng hộ các quyết định của chủ sở hữu, ngay cả khi chúng tôi không
+    đồng ý.
+  careers_principle_title_4: Áp dụng tâm lý của người sáng lập
+  careers_principle_description_4: Chúng tôi ám ảnh về kết quả và tập trung hành động
+    của mình vào việc thúc đẩy chúng. Chúng tôi đi sâu vào các chi tiết và làm việc
+    chăm chỉ. Chúng tôi trung thực, dựa vào sự nhanh nhẹn và liên tục đánh giá xem
+    chúng tôi có đang đi đúng hướng hay không; chúng tôi không ngại xoay vòng. Thay
+    đổi thế giới đòi hỏi điều đó.
+  careers_principle_title_5: Vô địch đổi mới
+  careers_principle_description_5: Chúng ta nghĩ lớn, chấp nhận rủi ro và không sợ
+    thất bại. Nếu chúng ta thấy một cách tốt hơn để hoàn thành mục tiêu của mình,
+    chúng ta sẽ làm điều đó và khuyến khích người khác cũng làm như vậy. Các giải
+    pháp gia tăng sẽ không giúp thay đổi thế giới.
+  careers_principle_title_6: Các quyết định neo trong thực tế
+  careers_principle_description_6: Chúng tôi sử dụng dữ liệu để hiểu doanh nghiệp
+    của mình, thiết lập kết quả mong muốn và hướng dẫn việc ra quyết định. Chúng tôi
+    cân bằng điều này bằng cách nhận ra rằng chúng tôi sẽ không luôn có dữ liệu chúng
+    tôi cần để hành động.
+  careers_principle_title_7: Một tư duy tăng trưởng thúc đẩy chúng ta
+  careers_principle_description_7: Chúng tôi tiếp cận từng thử thách với sự tò mò.
+    Chúng tôi đưa ra phản hồi một cách tử tế và thẳng thắn; chúng tôi nhận được phản
+    hồi một cách cởi mở. Chúng tôi học hỏi từ những sai lầm của mình và tìm cách để
+    tăng phạm vi tiếp cận và tác động của công việc của chúng tôi.
+  careers_balance_section_title: Sự cân bằng giữa công việc và cuộc sống của chúng
+    tôi
+  careers_balance_section_description: Chúng tôi quan tâm đến nhân viên của mình và
+    tận tâm hỗ trợ mọi người cả trong công việc và ngoài công việc. Chúng tôi biết
+    rằng mọi người đều có những nhu cầu khác nhau, đó là lý do tại sao chúng tôi cung
+    cấp gói phúc lợi toàn diện sẽ đảm bảo rằng bạn (và gia đình bạn) được chăm sóc.
+  careers_balance_first_column_text_1: Lợi ích sức khỏe cho bạn và gia đình
+  careers_balance_first_column_text_2: Thời gian nghỉ và nghỉ có lương hào phóng
+  careers_balance_second_column_text_1: Môi trường làm việc linh hoạt, hỗ trợ
+  careers_balance_second_column_text_2: Tăng trưởng và cơ hội học tập chuyên nghiệp
+  careers_openroles_section_title: Vai trò mở
+  careers_openroles_section_description: Code.org có trụ sở tại Seattle, nhưng nhiều
+    thành viên trong nhóm của chúng tôi ở xa. Các ứng cử viên từ xa được chào đón
+    và khuyến khích nộp đơn.
+  careers_more_info_text: Để biết thêm thông tin về Code.org, hãy xem [Câu hỏi thường
+    gặp] (%{support_url}) của chúng tôi hoặc tìm hiểu về [các cách khác để tham gia
+    vào sứ mệnh của chúng tôi] (%{help_url}).
+  careers_approach_section_title2: Cách tiếp cận của chúng tôi đối với sự đa dạng
+  careers_approach_section_description_1: Chúng tôi nắm bắt các quan điểm, ý tưởng
+    và nền tảng đa dạng tại Code.org. Chúng tôi cam kết cung cấp một cơ hội bình đẳng
+    cho tất cả nhân viên và ứng viên. Chúng tôi không phân biệt đối xử dựa trên chủng
+    tộc, tôn giáo, màu da, nguồn gốc quốc gia, giới tính, khuynh hướng tình dục, tuổi
+    tác, tình trạng hôn nhân, tình trạng cựu chiến binh hoặc tình trạng khuyết tật
+    (tinh thần và thể chất).
+  careers_approach_section_description_2: Chúng tôi sẽ đảm bảo rằng các cá nhân khuyết
+    tật được cung cấp chỗ ở hợp lý để tham gia vào quá trình nộp đơn xin việc hoặc
+    phỏng vấn, để thực hiện các chức năng công việc thiết yếu và nhận được các lợi
+    ích và đặc quyền khác của việc làm. Nếu bạn có nhu cầu cá nhân liên quan đến khuyết
+    tật, vui lòng liên hệ với accommodations@code.org.
+  csa_ai_page_hero_title: Kỹ thuật phần mềm & Computer Vision
+  csa_ai_page_hero_description: 'Mô-đun CSA sau AP gồm hai chương này cung cấp cho
+    học sinh trung học kinh nghiệm thực hành với các công cụ phát triển phần mềm chuyên
+    nghiệp, bao gồm GitHub và GitHub Copilot, đồng thời truyền đạt cho họ các kỹ năng
+    thực tế để phát triển chương trình thị giác máy tính. '
+  csa_ai_page_video_section_title: Bước ra ngoài thế giới của môi trường lập trình
+    Code.org
+  csa_ai_page_video_section_li_1: Tìm hiểu về AI và các ứng dụng của nó
+  csa_ai_page_video_section_li_2: Kinh nghiệm thực hành với các công cụ phát triển
+    phần mềm chuyên nghiệp
+  csa_ai_page_video_section_li_3: Tìm hiểu các phương pháp thực hành theo tiêu chuẩn
+    ngành
+  csa_ai_page_video_section_li_4: Tu luyện tư duy phản biện
+  csa_ai_page_programming_tools: 'Công cụ lập trình: Github, Github Copilot, VSCode,
+    TensorFlow '
+  csa_ai_page_professional_learning: Không có
+  csa_ai_page_curriculum_topics: 'Chuyên đề: Lập trình, Dữ liệu, Nghệ thuật và Thiết
+    kế, Games and Animation'
+  csa_ai_page_curriculum_accessibility_features: Xem phần Câu hỏi thường gặp để biết
+    chi tiết
+  csa_ai_page_curriculum_languages_support: Tiếng Việt
+  csa_ai_page_article_title_1: Xây dựng với Copilot
+  csa_ai_page_article_description_1: Học sinh học cách sử dụng GitHub Copilot như
+    một lập trình viên cặp để giải thích mã hiện có, tìm và sửa lỗi và tạo ra các
+    giải pháp cho các vấn đề mới.
+  csa_ai_page_article_link_1: Tìm hiểu thêm về Copilot
+  csa_ai_page_article_title_2: Xây dựng mô hình AI của riêng bạn
+  csa_ai_page_article_description_2: Học sinh đào tạo các mô hình AI của riêng mình
+    bằng cách sử dụng Teachable Machine để nhận dạng hình ảnh và cử chỉ tạo thành
+    webcam và xem xét tầm nhìn máy tính tác động như thế nào đến cách người dùng tương
+    tác với các ứng dụng.
+  csa_ai_page_article_link_2: Khám phá kế hoạch bài học
+  csa_ai_page_article_title_3: Khám phá tầm nhìn máy tính
+  csa_ai_page_article_description_3: Học sinh triển khai các mô hình AI mà họ đã tạo
+    bằng Teachable Machine vào ứng dụng Java, sử dụng GitHub Copilot để giúp họ sửa
+    đổi các phiên bản ứng dụng hiện có để hoạt động với các đầu vào khác nhau.
+  csa_ai_page_article_link_3: Xem một ví dụ
+  csa_ai_page_learn_more_section_title: Tìm hiểu thêm về Artificial Intelligence
+  csa_ai_page_learn_more_title: Khám phá AI 101 dành cho giáo viên
+  csa_ai_page_learn_more_description: Khám phá thế giới đột phá của Trí tuệ nhân tạo
+    (AI) và tiềm năng biến đổi của nó trong giáo dục với loạt bài học trực tuyến toàn
+    diện dành cho giáo viên của chúng tôi.
+  csa_ai_page_learn_more_link: Xem loạt bài AI 101 dành cho giáo viên
+  csa_ai_page_faq_question_01: Các điều kiện tiên quyết cho mô-đun này là gì?
+  csa_ai_page_faq_answer_01_01: 'Trước khi đi sâu vào mô-đun này, sinh viên nên có
+    kiến thức đầu vào về Java. Cụ thể, họ nên nắm bắt được:'
+  csa_ai_page_faq_answer_01_list_01: "** Lớp học và Đối tượng: ** Học sinh nên làm
+    quen với việc xác định và sử dụng các lớp học, cũng như tạo và thao tác các đối
+    tượng."
+  csa_ai_page_faq_answer_01_list_02: "** Phương thức viết và gọi: ** Học sinh có thể
+    định nghĩa các phương thức trong một lớp, hiểu các tham số phương thức và kiểu
+    trả về và gọi các phương thức từ các đối tượng hoặc các phương thức khác."
+  csa_ai_page_faq_answer_01_list_03: "**Mảng 1D và ArrayLists: ** Chúng phải thành
+    thạo trong việc khai báo, khởi tạo và thao tác các mảng và ArrayLists một chiều,
+    bao gồm cả việc lặp lại chúng."
+  csa_ai_page_faq_answer_01_list_04: "** Lựa chọn và lặp lại: ** Một nền tảng vững
+    chắc trong các câu lệnh và vòng lặp có điều kiện là rất quan trọng."
+  csa_ai_page_faq_question_01_02: Lý tưởng nhất, những sinh viên đã hoàn thành AP
+    Computer Science A hoặc một khóa học có chiều sâu và nghiêm ngặt tương tự sẽ được
+    chuẩn bị tốt cho mô-đun này.
+  csa_ai_page_faq_question_02: Làm cách nào để cài đặt phần mềm cần thiết cho mô-đun
+    này?
+  csa_ai_page_faq_answer_02_01: Mô-đun này là duy nhất vì nó liên quan đến việc sử
+    dụng phần mềm của bên thứ ba thay vì các phòng thí nghiệm và công cụ Code.org.
+    [Đọc thêm về cài đặt phần mềm tại đây] (%{accessibility_url}).
+  csa_ai_page_faq_question_03: Làm cách nào tôi có thể hỗ trợ nhu cầu trợ năng trong
+    khi dạy mô-đun này?
+  csa_ai_page_faq_answer_03_01: Phục vụ cho nhu cầu tiếp cận là rất quan trọng đối
+    với một môi trường học tập hòa nhập. [Đọc thêm về các tính năng trợ năng trong
+    phần mềm được sử dụng trong mô-đun này tại đây] (%{install_url}).
+  csa_ai_page_faq_question_04: Làm cách nào để sử dụng Mã VS trên Chromebook?
+  csa_ai_page_faq_answer_04: Sử dụng VS Code trên Chromebook đã trở nên đơn giản hơn,
+    đặc biệt là với khả năng chạy các ứng dụng Linux trên các mẫu Chromebook mới hơn.
+    [Đọc thêm về cách thiết lập Mã VS trên Chromebook tại đây] ()%{chromebook_url}.
+  csa_ai_page_faq_question_05: Làm thế nào tôi có thể có được sự phát triển chuyên
+    nghiệp cho mô-đun này?
+  csa_ai_page_faq_answer_05: Hiện tại không có sự phát triển chuyên môn cụ thể cho
+    khóa học này. Nếu bạn đang muốn hiểu cách tiếp cận Trí tuệ nhân tạo trong lớp
+    học của mình, bạn có thể [khám phá AI 101 dành cho giáo viên] (%{ai_101_url}).
+  csa_ai_page_faq_question_06: Thời gian khuyến nghị để giảng dạy mô-đun này là gì?
+  csa_ai_page_faq_answer_06_01: Mô-đun Kỹ thuật Phần mềm & Tầm nhìn Máy tính được
+    cấu trúc chu đáo để cung cấp việc học toàn diện trong một khung thời gian ngắn
+    gọn. Toàn bộ mô-đun được thiết kế để kéo dài** 2 tuần hướng dẫn**. Hầu hết các
+    bài học được thiết kế cho **45 phút**, trong khi các bài học mà sinh viên đi sâu
+    vào phát triển dự án Java thực hành được thiết kế cho ** 90 phút**. Thời gian
+    kéo dài này đảm bảo sinh viên có nhiều cơ hội để hiểu, thực hiện và khắc phục
+    sự cố khi họ làm việc.
+  csa_ai_page_faq_answer_06_02: 'Ngoài ra còn có sự linh hoạt có chủ ý được tích hợp
+    vào cấu trúc của mô-đun. Tùy thuộc vào sự năng động trong lớp học, sự tham gia
+    của học sinh và độ sâu mà bạn muốn khám phá từng chủ đề, bạn có thể điều chỉnh
+    thời lượng. Ví dụ: bài học Intro to Copilot, được thiết kế như một bài học 45
+    phút, có thể được mở rộng đến 90 phút nếu bạn muốn tìm hiểu sâu hơn về cách các
+    mô hình và công cụ ngôn ngữ lớn như GitHub Copilot và ChatGPT hoạt động.'
+  csa_ai_page_faq_question_07: How can I access answer keys?
+  csa_ai_page_faq_answer_07: Với tài khoản giáo viên đã được phê duyệt, bạn có thể
+    tìm thấy các khóa trả lời trong bảng chỉ dành cho giáo viên màu xanh lam hiển
+    thị trong các bài học và hoạt động trực tuyến.Nếu bạn cần tài khoản giáo viên
+    được phê duyệt, bạn có thể đăng ký quyền truy cập vào các tài liệu chỉ dành cho
+    giáo viên được bảo vệ (khóa trả lời, v.v.) thông qua [biểu mẫu này] ().%{form_url}Xin
+    lưu ý rằng có thể mất 3-5 ngày làm việc để xác minh tài khoản của bạn.
+  csa_ai_page_faq_question_08: Mô-đun này có được ánh xạ theo tiêu chuẩn không?
+  csa_ai_page_faq_answer_08: Có, chương trình giảng dạy Kỹ thuật Phần mềm & Tầm nhìn
+    Máy tính được ánh xạ tới [Tiêu chuẩn CSTA K-12] (%{csta_k12_url}) và AI cho [Hướng
+    dẫn K-12] ().%{k12_url}
+  csa_ai_page_faq_question_09: Chi phí để dạy mô-đun này là bao nhiêu?
+  csa_ai_page_faq_answer_09_01: Chương trình giảng dạy và nền tảng của chúng tôi có
+    sẵn [miễn phí] (%{no_cost_url}) cho bất kỳ ai, ở bất cứ đâu, để giảng dạy!
+  csa_ai_page_faq_answer_09_02: Ngoài ra, phần mềm và công cụ được sử dụng trong mô-đun
+    này là miễn phí. GitHub Copilot miễn phí cho đã được xác minh [teachers](%{teachers_url})
+    và [students]().%{students_url}
+  csa_ai_page_faq_question_10: Tôi phải làm gì nếu cài đặt phần mềm không hoạt động?
+  csa_ai_page_faq_answer_10: Đối mặt với các vấn đề trong quá trình cài đặt phần mềm
+    có thể là phổ biến, nhưng có những bước có hệ thống bạn có thể làm theo để khắc
+    phục sự cố và giải quyết chúng. [Kiểm tra một số mẹo khắc phục sự cố tại đây]
+    (%{troubleshooting_url}).
+  csa_ai_page_faq_question_11: How was the curriculum developed?
+  csa_ai_page_faq_answer_11_01: 'Chương trình giảng dạy Kỹ thuật Phần mềm & Tầm nhìn
+    Máy tính của chúng tôi được thiết kế với các Giá trị Chương trình giảng dạy của
+    chúng tôi. Các mục tiêu sau đây đã hướng dẫn việc tạo ra chương trình giảng dạy
+    này:'
+  csa_ai_page_faq_answer_11_list_01: "** Mục tiêu 1: ** Sử dụng các công cụ AI để
+    tạo, gỡ lỗi và chỉnh sửa mã."
+  csa_ai_page_faq_answer_11_list_02: "** Mục tiêu 2: ** Chuyển đổi từ Java Lab sang
+    các công cụ trong thế giới thực."
+  csa_ai_page_faq_answer_11_list_03: "** Mục tiêu 3: ** Hiểu sâu hơn về cách các mô
+    hình AI được đào tạo và tích hợp vào các chương trình."
+  csa_ai_page_faq_answer_11_02: Để biết thêm thông tin về các giá trị hướng dẫn công
+    việc của chúng tôi, vui lòng xem [giá trị chương trình giảng dạy] của chúng tôi
+    (%{curriculum_values_url}).
+  video_library_page_main_title: Video ngắn giáo dục
+  video_library_page_hero_description: Thư viện video giáo dục đang phát triển của
+    Code.org có sẵn để các nhà giáo dục trên toàn thế giới, trực tuyến hoặc trong
+    lớp học sử dụng lại. Mục tiêu của chúng tôi là khuếch đại những nỗ lực của chúng
+    tôi vượt ra ngoài tầm với của chương trình giảng dạy của chúng tôi.
+  video_library_page_title_ai_works: Cách thức hoạt động của AI
+  video_library_page_description_ai_works: Loạt video ngắn này sẽ giới thiệu cho bạn
+    cách thức hoạt động của trí tuệ nhân tạo và lý do tại sao nó lại quan trọng. Tìm
+    hiểu về mạng nơ-ron hoặc cách AI học hỏi và đi sâu vào các vấn đề như thiên vị
+    thuật toán và đạo đức của việc ra quyết định AI.
+  video_library_page_title_computers_work: Cách máy tính hoạt động
+  video_library_page_description_computers_work: Giải thích điều gì làm cho máy tính
+    trở thành máy tính, cách thông tin kỹ thuật số được biểu diễn trong 1 và 0, cách
+    các mạch máy tính hoạt động để thao tác thông tin kỹ thuật số và cách đơn vị xử
+    lý trung tâm (CPU) và hệ điều hành kiểm soát đầu vào, đầu ra, bộ nhớ và phần cứng
+    của máy tính.
+  video_library_page_title_internet_works: Cách hoạt động của Internet
+  video_library_page_description_internet_works: Với sự tham gia của Vint Cerf, người
+    phát minh ra TCP/IP, David Karp, người sáng lập Tumblr để giải thích HTTP và HTML,
+    Công chúa bảo mật của Google để giải thích SSL và an ninh mạng, và các kỹ sư từ
+    Microsoft, Spotify và Symantec. Loạt video ngắn này giải thích cách thức hoạt
+    động của Internet.
+  video_library_page_title_not_hacked: Làm thế nào để không bị hack
+  video_library_page_description_not_hacked: Internet mở, vì vậy mọi thứ xảy ra trên
+    đó có thể được nhìn thấy trừ khi nó được bảo vệ. Ở các nước hiện đại, mọi người
+    lo lắng về việc bị hack hơn bất kỳ tội phạm nào khác. Tại sao? Bởi vì mọi máy
+    tính hoặc điện thoại trên Internet thường xuyên được kiểm tra các lỗ hổng của
+    bọn tội phạm, khủng bố hoặc thậm chí là các tác nhân nhà nước. Nếu bạn không cẩn
+    thận, ai đó có thể hack thiết bị hoặc tài khoản của bạn và thậm chí đánh cắp danh
+    tính hoặc tiền của bạn.
+  video_library_page_title_blockchain: Cách thức hoạt động của Blockchain
+  video_library_page_description_blockchain: Được hợp tác với Coinbase, loạt bài này
+    có các chuyên gia trong ngành và nhằm mục đích làm sáng tỏ công nghệ này bằng
+    cách khám phá blockchain là gì, cách thức hoạt động và các tác động xã hội tiềm
+    năng của nó - cả tốt và xấu.
+  video_library_page_title_careers: Nghề nghiệp trong CS
+  video_library_page_description_careers: Nghề nghiệp trong khoa học máy tính và công
+    nghệ có thể rất thú vị và bổ ích. Nhưng một người làm việc trong các lĩnh vực
+    này thực sự làm gì? Với rất nhiều công việc và công ty, không chỉ có một câu trả
+    lời cho câu hỏi này. Xem video dưới đây để gặp gỡ một số người đang giải quyết
+    các vấn đề lớn theo những cách sáng tạo.
+  video_library_page_title_inspirational: Truyền cảm hứng
+  video_library_page_description_inspirational: Khoa học máy tính sẽ thay đổi điều
+    gì trong thế giới của chúng ta? Tất cả mọi thứ? Nó dành cho ai? Mọi người! Xem
+    những video này để truyền cảm hứng và thúc đẩy bạn.
+  video_library_page_footer_description: Tìm kiếm một cái gì đó khác? Chúng tôi có
+    rất nhiều video tuyệt vời có sẵn trên kênh Youtube của chúng tôi.
+  video_library_page_footer_cta: Khám phá tất cả video Code.org trên YouTube
+  video_library_page_computer_work_video_title_1: Giới thiệu cách máy tính hoạt động
+  video_library_page_computer_work_video_title_2: Nhị phân và dữ liệu
+  video_library_page_computer_work_video_title_3: CPU, bộ nhớ, đầu vào và đầu ra
+  video_library_page_computer_work_video_title_4: Điều gì tạo nên một máy tính, một
+    máy tính?
+  video_library_page_computer_work_video_title_5: Mạch logic
+  video_library_page_computer_work_video_title_6: Phần cứng và phần mềm
+  video_library_page_internet_work_video_title_1: Internet là gì?
+  video_library_page_internet_work_video_title_2: 'INTERNET: Địa chỉ IP và DNS'
+  video_library_page_internet_work_video_title_3: 'INTERNET: HTTP và HTML'
+  video_library_page_internet_work_video_title_4: 'INTERNET: An ninh mạng & Tội phạm'
+  video_library_page_internet_work_video_title_5: 'INTERNET: Dây, Cáp, & Wifi'
+  video_library_page_internet_work_video_title_6: 'INTERNET: Gói, Định tuyến và Độ
+    tin cậy'
+  video_library_page_internet_work_video_title_7: 'INTERNET: Mã hóa & Khóa công khai'
+  video_library_page_internet_work_video_title_8: 'INTERNET: Cách hoạt động của tìm
+    kiếm'
+  video_library_page_cs_video_title_1: Tên tôi là Jerome và tôi là Kỹ thuật viên thiết
+    kế tại Meow Wolf
+  video_library_page_cs_video_title_2: Tên tôi là Nikesha và tôi là Kỹ sư Hàng không
+    Vũ trụ tại NASA
+  video_library_page_cs_video_title_3: Tên tôi là Brina và tôi là Kỹ sư phần mềm tại
+    Instagram
+  video_library_page_cs_video_title_4: Tên tôi là Kinsley và tôi là Kỹ sư phần mềm
+    tại Facebook
+  video_library_page_cs_video_title_5: Tên tôi là Polina và tôi là một nhà khoa học
+    dữ liệu tại Electronic Arts.
+  video_library_page_cs_video_title_6: Tên tôi là Danelle và tôi là Kỹ sư phần mềm
+    tại MBARI
+  video_library_page_cs_video_title_7: Tên tôi là Christopher và tôi là một nhà phân
+    tích bảo mật tại Tanium
+  video_library_page_cs_video_title_8: Tên tôi là Federico và tôi là Giám đốc Chương
+    trình Kỹ thuật tại Microsoft
+  video_library_page_cs_video_title_9: Tên tôi là Tess và tôi là Kỹ sư phần mềm tại
+    Google
+  video_library_page_inspirational_video_title_1: Thay đổi bộ mặt của khoa học máy
+    tính (3 phút)
+  video_library_page_inspirational_video_title_2: Đẩy mình. Bất cứ ai cũng có thể
+    học. (1 phút)
+  video_library_page_inspirational_video_title_3: Truyền cảm hứng cho một cô gái (2
+    phút)
+  video_library_page_inspirational_video_title_4: Những gì hầu hết các trường không
+    dạy (5 phút)
+  video_library_page_inspirational_video_title_5: Giờ lập trình là đây - Bất cứ ai
+    cũng có thể học (2 phút)
+  video_library_page_inspirational_video_title_6: Tên tôi là Aracely (3 phút)
+  video_library_page_inspirational_video_title_7: Giờ viết mã với Steph Curry (2 phút)
+  video_library_page_inspirational_video_title_8: Khoa học máy tính đang thay đổi
+    mọi thứ (5 phút)
+  video_library_page_inspirational_video_title_9: Giới thiệu Khoa học Máy tính (1
+    phút)
+  video_library_page_inspirational_video_title_10: Tổng thống Obama về khoa học máy
+    tính (1 phút)
+  video_library_page_inspirational_video_title_11: Bất cứ ai cũng có thể tìm hiểu
+    (1 phút)
+  video_library_page_inspirational_video_title_12: Lo Que Falta En Nuestras Escuelas
+    (2 phút)
+  video_library_page_not_hacked_video_title_1: 'Làm thế nào để không bị hack: Giới
+    thiệu'
+  video_library_page_not_hacked_video_title_2: 'Làm thế nào để không bị hack: Mật
+    khẩu'
+  video_library_page_not_hacked_video_title_3: 'Làm thế nào để không bị hack: Xác
+    thực và khóa thiết bị'
+  video_library_page_not_hacked_video_title_4: 'Làm thế nào để không bị hack: Phishing'
+  video_library_page_not_hacked_video_title_5: 'Làm thế nào để không bị hack: Trang
+    web và Wifi'
+  video_library_page_not_hacked_video_title_6: 'Làm thế nào để không bị hack: Nhắn
+    tin và tải xuống'
+  video_library_page_not_hacked_video_title_7: 'Làm thế nào để không bị hack: Cài
+    đặt bản cập nhật'
   language_code:
     ar: tiếng Ả Rập
     az: Azerbaijani

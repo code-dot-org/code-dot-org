@@ -8,7 +8,8 @@ module I18n
   module Resources
     module Dashboard
       module Standards
-        I18N_SOURCE_DIR_PATH = CDO.dir(File.join(I18N_SOURCE_DIR, 'standards')).freeze
+        DIR_NAME = 'standards'.freeze
+        I18N_SOURCE_DIR_PATH = CDO.dir(I18N_SOURCE_DIR, DIR_NAME).freeze
 
         # Takes strings describing and naming Framework, StandardCategory, and Standard
         # and places them in the source pool to be sent to crowdin.
