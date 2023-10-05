@@ -53,5 +53,6 @@ type EmojiAssociation = {
 };
 
 export type PaletteMap = {
-  [key: string]: EmojiAssociation;
+  emojiAssociations: {[key: string]: EmojiAssociation};
+  palettes: string[];
 };

@@ -2,28 +2,6 @@ import UntypedCachedPalettes from '@cdo/static/dance/ai/model/cachedpalettemap.j
 import {PaletteMap} from './types';
 
 const CachedPalettes: PaletteMap = UntypedCachedPalettes;
-const palettes: string[] = [
-  'cool',
-  'black and white',
-  'electronic',
-  'ice cream',
-  'light',
-  'neon',
-  'tropical',
-  'vintage',
-  'warm',
-  'autumn',
-  'dawn',
-  'dusk',
-  'grey',
-  'ocean',
-  'rainbow',
-  'roses',
-  'sky',
-  'spring',
-  'winter',
-  'summer',
-];
 
 // Output: JSON containing {backgroundColor:string, backgroundEffect:string, foregroundEffect:string}
 // ToDo: Break down into helper functions for each step rather than repeat code for each field
@@ -32,10 +10,11 @@ export default function cachedAi(input: string) {
   const trimmedInput: string[] = inputWords.map(value => value.trim());
   const individualPaletteMap: {[key: string]: any} = {};
 
+  const {emojiAssociations, palettes} = CachedPalettes;
   // Trim input json for emoji keywords
   trimmedInput.forEach(value => {
-    if (Object.prototype.hasOwnProperty.call(CachedPalettes, value)) {
-      individualPaletteMap[value] = CachedPalettes[value];
+    if (Object.prototype.hasOwnProperty.call(emojiAssociations, value)) {
+      individualPaletteMap[value] = emojiAssociations[value];
     }
   });
 
