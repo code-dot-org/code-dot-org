@@ -20,7 +20,7 @@ export function setUpBlocklyForDanceLab(
   blocksModule.install(Blockly);
   const blocksByCategory = blockUtils.installCustomBlocks({
     blockly: Blockly,
-    blockDefinitions: levelProperties.sharedBlocks,
+    blockDefinitions: levelProperties?.sharedBlocks,
     customInputTypes: blocksModule.customInputTypes,
   });
   console.log('blocksByCategory', blocksByCategory); // TODO: use when implementing pathway for toolbox editing for levelbuilders
