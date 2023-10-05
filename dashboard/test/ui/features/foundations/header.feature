@@ -60,7 +60,7 @@ Scenario: Signed out user in Spanish should see 7 header links
   And I see "#header-projects"
   And element "#header-projects" has "es" text from key "nav.header.project_gallery"
   And I see "#header-incubator"
-  And element "#heade-incubator" has "es" text from key "nav.header.incubator"
+  And element "#header-incubator" has "es" text from key "nav.header.incubator"
   And I see "#header-about"
   And element "#header-about" has "es" text from key "nav.header.about"
 
