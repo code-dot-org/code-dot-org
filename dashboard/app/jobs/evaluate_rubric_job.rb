@@ -22,13 +22,20 @@ class EvaluateRubricJob < ApplicationJob
     }
   }
 
-  def perform(user_id:, script_level_id:, lesson_s3_name:)
+  def perform(user_id:, script_level_id:)
     user = User.find(user_id)
     script_level = ScriptLevel.find(script_level_id)
+    lesson_s3_name = EvaluateRubricJob.get_lesson_s3_name(script_level)
     puts "Evaluating rubric for user #{user.id} on script level #{script_level.id} with lesson_s3_name: #{lesson_s3_name.inspect}"
 
     raise 'CDO.openai_evaluate_rubric_api_key required' if CDO.openai_evaluate_rubric_api_key.blank?
 
     puts "TODO: Implement the rest of this job"
+  end
+
+  # returns the path suffix of the location in S3 which contains the config
+  # needed to evaluate the rubric for the given script level.
+  def self.get_lesson_s3_name(script_level)
+    UNIT_AND_LEVEL_TO_LESSON_S3_NAME[script_level&.script&.name].try(:[], script_level&.level&.name)
   end
 end
