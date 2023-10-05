@@ -23,6 +23,6 @@ export function setUpBlocklyForDanceLab(
     blockDefinitions: levelProperties?.sharedBlocks,
     customInputTypes: blocksModule.customInputTypes,
   });
-  console.log('blocksByCategory', blocksByCategory); // TODO: use when implementing pathway for toolbox editing for levelbuilders
   Blockly.setInfiniteLoopTrap();
+  return blocksByCategory; // TODO: use when implementing pathway for toolbox editing for levelbuilders
 }
