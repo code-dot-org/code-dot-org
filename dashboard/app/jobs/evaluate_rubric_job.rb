@@ -34,6 +34,10 @@ class EvaluateRubricJob < ApplicationJob
     puts "TODO: Implement the rest of this job"
   end
 
+  def self.ai_enabled?(script_level)
+    !!get_lesson_s3_name(script_level)
+  end
+
   # returns the path suffix of the location in S3 which contains the config
   # needed to evaluate the rubric for the given script level.
   def self.get_lesson_s3_name(script_level)

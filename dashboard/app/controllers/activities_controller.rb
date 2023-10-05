@@ -50,9 +50,8 @@ class ActivitiesController < ApplicationController
     end
 
     # If a student is submitting work on an AI-evaluation-enabled level, trigger the AI evaluation job.
-    lesson_s3_name = EvaluateRubricJob.get_lesson_s3_name(@script_level)
-    if lesson_s3_name && params[:submitted] == 'true'
-      EvaluateRubricJob.perform_later(user_id: current_user.id, script_level_id: @script_level.id, lesson_s3_name: lesson_s3_name)
+    if EvaluateRubricJob.ai_enabled?(@script_level) && params[:submitted] == 'true'
+      EvaluateRubricJob.perform_later(user_id: current_user.id, script_level_id: @script_level.id)
     end
 
     sharing_allowed = Gatekeeper.allows('shareEnabled', where: {script_name: script_name}, default: true)
