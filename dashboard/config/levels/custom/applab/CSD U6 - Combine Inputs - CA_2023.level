@@ -50,7 +50,7 @@
     "fail_on_lint_errors": "false",
     "debugger_disabled": "false",
     "makerlab_enabled": "circuitPlayground",
-    "start_blocks": "//1) Turning on the LED\r\nonBoardEvent(toggleSwitch, \"open\", function() {\r\n  var LEDtype = getProperty(\"ledDropdown\", \"value\");\r\n  var LEDinterval = getProperty(\"speedSlider\", \"value\");\r\n  if (LEDtype == \"on\") {\r\n    led.on();\r\n  }\r\n  if (LEDtype == \"Blink\") {\r\n    led.blink(LEDinterval);\r\n  }\r\n  if (LEDtype == \"pulse\") {\r\n    led.pulse(LEDinterval);\r\n  }\r\n});\r\n\r\n//2) Turning off the LED\r\nonBoardEvent(toggleSwitch, \"change\", function() {\r\n  led.off();\r\n});\r\n\r\n//3) Controlling the Buzzer\r\nonBoardEvent(buttonL, \"press\", function() {\r\n  var duration = getProperty(\"frequencySlider\", \"value\");\r\n  var frequency = getProperty(\"durationSlider\", \"value\");\r\n  buzzer.frequency(duration, frequency);\r\n});\r\n\r\n\r\n",
+    "start_blocks": "//1) Turning on the LED\r\nonBoardEvent(toggleSwitch, \"open\", function() {\r\n  var LEDtype = getProperty(\"ledDropdown\", \"value\");\r\n  var LEDinterval = getProperty(\"speedSlider\", \"value\");\r\n  if (LEDtype == \"on\") {\r\n    led.on();\r\n  }\r\n  if (LEDtype == \"Blink\") {\r\n    led.blink(LEDinterval);\r\n  }\r\n  if (LEDtype == \"pulse\") {\r\n    led.pulse(LEDinterval);\r\n  }\r\n});\r\n\r\n//2) Turning off the LED\r\nonBoardEvent(toggleSwitch, \"change\", function() {\r\n  led.off();\r\n});\r\n\r\n//3) Controlling the Buzzer\r\nonBoardEvent(buttonL, \"press\", function() {\r\n  var duration = getProperty(\"frequencySlider\", \"value\");\r\n  var frequency = getProperty(\"durationSlider\", \"value\");\r\n  buzzer.frequency(frequency, duration);\r\n});\r\n\r\n\r\n",
     "top_level_procedure_autopopulate": "false",
     "parent_level_id": 20443,
     "name_suffix": "_2023",
@@ -74,7 +74,7 @@
     "preload_asset_list": null
   },
   "notes": "",
-  "audit_log": "[{\"changed_at\":\"2022-09-21T13:15:10.255+00:00\",\"changed\":[\"cloned from \\\"CSD U6 - Combine Inputs - CA_2022\\\"\"],\"cloned_from\":\"CSD U6 - Combine Inputs - CA_2022\"},{\"changed_at\":\"2023-08-16 18:55:01 +0000\",\"changed\":[\"code_functions\",\"makerlab_enabled\",\"encrypted_examples\",\"reference_links\",\"preload_asset_list\",\"contained_level_names\"],\"changed_by_id\":14639,\"changed_by_email\":\"dan+teacher@code.org\"}]"
+  "audit_log": "[{\"changed_at\":\"2022-09-21T13:15:10.255+00:00\",\"changed\":[\"cloned from \\\"CSD U6 - Combine Inputs - CA_2022\\\"\"],\"cloned_from\":\"CSD U6 - Combine Inputs - CA_2022\"},{\"changed_at\":\"2023-08-16 18:55:01 +0000\",\"changed\":[\"code_functions\",\"makerlab_enabled\",\"encrypted_examples\",\"reference_links\",\"preload_asset_list\",\"contained_level_names\"],\"changed_by_id\":14639,\"changed_by_email\":\"dan+teacher@code.org\"},{\"changed_at\":\"2023-10-04 16:37:03 +0000\",\"changed\":[\"code_functions\",\"start_blocks\",\"encrypted_examples\",\"preload_asset_list\",\"contained_level_names\"],\"changed_by_id\":18602,\"changed_by_email\":\"angelina+levelbuilder@code.org\"}]"
 }]]></config>
   <blocks/>
 </Applab>
