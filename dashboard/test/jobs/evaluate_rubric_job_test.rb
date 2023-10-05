@@ -2,8 +2,6 @@ require "test_helper"
 
 class EvaluateRubricJobTest < ActiveJob::TestCase
   test "job succeeds on ai-enabled level" do
-    CDO.stubs(:openai_evaluate_rubric_api_key).returns('fake-key')
-
     user = create :user
     script_level = create :script_level
     EvaluateRubricJob.stubs(:get_lesson_s3_name).with(script_level).returns('fake-lesson-s3-name')
@@ -14,8 +12,6 @@ class EvaluateRubricJobTest < ActiveJob::TestCase
   end
 
   test "job fails on non-ai level" do
-    CDO.stubs(:openai_evaluate_rubric_api_key).returns('fake-key')
-
     user = create :user
     script_level = create :script_level
     EvaluateRubricJob.stubs(:get_lesson_s3_name).with(script_level).returns(nil)
