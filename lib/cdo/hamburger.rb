@@ -44,6 +44,8 @@ class Hamburger
       # options in the hamburger.
       if options[:language] == "en"
         show_pegasus_options = SHOW_ALWAYS
+      elsif options[:user_type].nil?
+        show_pegasus_options = SHOW_MOBILE
       end
 
     else
