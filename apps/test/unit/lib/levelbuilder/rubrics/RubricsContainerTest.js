@@ -4,13 +4,14 @@ import {expect} from '../../../../util/reconfiguredChai';
 import RubricsContainer from '@cdo/apps/lib/levelbuilder/rubrics/RubricsContainer';
 import * as rubricHelper from '@cdo/apps/lib/levelbuilder/rubrics/rubricHelper';
 import LearningGoalItem from '@cdo/apps/lib/levelbuilder/rubrics/LearningGoalItem';
+import RubricEditor from '@cdo/apps/lib/levelbuilder/rubrics/RubricEditor';
 import Button from '@cdo/apps/templates/Button';
 import {RubricUnderstandingLevels} from '@cdo/apps/util/sharedConstants';
 import sinon from 'sinon';
 
 describe('RubricsContainerTest', () => {
   const defaultProps = {
-    levels: [
+    submittableLevels: [
       {id: 1, name: 'level 1'},
       {id: 2, name: 'level 2'},
       {id: 3, name: 'level 3'},
@@ -86,8 +87,10 @@ describe('RubricsContainerTest', () => {
     const wrapper = mount(<RubricsContainer {...defaultProps} />);
     expect(wrapper.find('Heading1').text()).to.equal('Create your rubric');
     expect(wrapper.find('select#rubric_level_id option')).to.have.length(
-      defaultProps.levels.length
+      defaultProps.submittableLevels.length
     );
+    expect(wrapper.find(RubricEditor)).to.have.length(1);
+    expect(wrapper.find('Button[text="Delete key concept"]')).to.have.length(1);
     expect(wrapper.find(LearningGoalItem)).to.have.length(1);
     expect(wrapper.find('Button[text="Save your rubric"]')).to.have.length(1);
   });
@@ -97,7 +100,7 @@ describe('RubricsContainerTest', () => {
     const wrapper = mount(<RubricsContainer {...props} />);
     expect(wrapper.find('Heading1').text()).to.equal('Modify your rubric');
     expect(wrapper.find('select#rubric_level_id option')).to.have.length(
-      props.levels.length
+      defaultProps.submittableLevels.length
     );
     expect(wrapper.find(LearningGoalItem)).to.have.length(
       rubricInfo.learningGoals.length
@@ -117,15 +120,31 @@ describe('RubricsContainerTest', () => {
     expect(afterAddLearningGoalItems).to.equal(initialLearningGoalItems + 1);
   });
 
+  it('adds a deletes learning goal on "Delete Key Concept" button click', () => {
+    const wrapper = mount(<RubricsContainer {...defaultProps} />);
+    const initialLearningGoalItems = wrapper.find('LearningGoalItem').length;
+    const deleteButton = wrapper
+      .find(Button)
+      .findWhere(n => n.props().text === 'Delete key concept');
+    expect(deleteButton).to.have.length(1);
+    deleteButton.simulate('click');
+    const afterAddDeletingGoalItems = wrapper.find('LearningGoalItem').length;
+    expect(afterAddDeletingGoalItems).to.equal(initialLearningGoalItems - 1);
+  });
+
   it('changes the selected level for assessment when the dropdown is changed', () => {
     const wrapper = shallow(<RubricsContainer {...defaultProps} />);
     let dropdown = wrapper.find('select#rubric_level_id');
     const dropdownValue = dropdown.prop('value');
-    expect(dropdownValue).to.equal(defaultProps.levels[0].id);
+    expect(dropdownValue).to.equal(defaultProps.submittableLevels[0].id);
 
-    dropdown.simulate('change', {target: {value: defaultProps.levels[1].id}});
+    dropdown.simulate('change', {
+      target: {value: defaultProps.submittableLevels[1].id},
+    });
     dropdown = wrapper.find('select#rubric_level_id');
-    expect(dropdown.prop('value')).to.equal(defaultProps.levels[1].id);
+    expect(dropdown.prop('value')).to.equal(
+      defaultProps.submittableLevels[1].id
+    );
   });
 
   it('changes the saveNotificationText and disables the save Button when saving rubric', async () => {
@@ -180,7 +199,6 @@ describe('RubricsContainerTest', () => {
     expect(saveButton.props().disabled).to.be.false;
     saveButton.simulate('click');
     sinon.assert.calledWith(mockSave);
-
     sinon.restore();
   });
 });

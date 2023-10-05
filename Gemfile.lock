@@ -323,6 +323,10 @@ GEM
     dalli (2.7.6)
     dalli-elasticache (1.0.1)
       dalli (>= 2.0.0)
+    database_cleaner-active_record (2.1.0)
+      activerecord (>= 5.a)
+      database_cleaner-core (~> 2.0.0)
+    database_cleaner-core (2.0.1)
     datapackage (1.1.1)
       colorize
       json-schema
@@ -346,6 +350,7 @@ GEM
       actionmailer (>= 5.0)
       devise (>= 4.6)
     diff-lcs (1.5.0)
+    docile (1.4.0)
     domain_name (0.5.20180417)
       unf (>= 0.0.5, < 1.0.0)
     dotiw (4.0.1)
@@ -814,6 +819,12 @@ GEM
       faraday (>= 0.17.5, < 3.a)
       jwt (>= 1.5, < 3.0)
       multi_json (~> 1.10)
+    simplecov (0.22.0)
+      docile (~> 1.1)
+      simplecov-html (~> 0.11)
+      simplecov_json_formatter (~> 0.1)
+    simplecov-html (0.12.3)
+    simplecov_json_formatter (0.1.4)
     sinatra (2.2.3)
       mustermann (~> 2.0)
       rack (~> 2.2)
@@ -966,6 +977,7 @@ DEPENDENCIES
   daemons
   dalli
   dalli-elasticache
+  database_cleaner-active_record (~> 2.1.0)
   datapackage
   delayed_job_active_record (~> 4.1)
   devise (~> 4.7.0)
@@ -1077,6 +1089,7 @@ DEPENDENCIES
   selenium-webdriver (~> 4.0)
   sequel (~> 5.29)
   shotgun
+  simplecov (~> 0.22.0)
   sinatra (= 2.2.3)
   sort_alphabetical!
   sorted_set

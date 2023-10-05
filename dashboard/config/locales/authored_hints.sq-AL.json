@@ -2191,6 +2191,12 @@
           "courseC_PlayLab_events_challenge_b": "Provoni të përdorni \"vendos aktorin 1 në pozicionin e mesit majtas\" kur ai prek njërin nga aktorët e tjerë. Kjo do të rivendosë lojën në mënyrë që lojtari të vazhdojë të përpiqet!",
           "courseC_PlayLab_events_challenge_c": "Ju gjithashtu mund të dëshironi të provoni të ndryshoni shpejtësinë e aktorëve të ndryshëm për ta bërë lojën më të lehtë ose më sfiduese!\n\n<xml>  <block type=\"studio_setSpriteSpeed\">\n    <title name=\"SPRITE\">0</title>\n    <title name=\"VALUE\">Studio.SpriteSpeed.FAST</title>\n  </block></xml>"
         },
+        "courseC_artist_loop1_2019": {
+          "": "[empty string]"
+        },
+        "courseC_artist_loop1_2020": {
+          "": "[empty string]"
+        },
         "courseC_artist_loops1a2022": {
           "courseC_artist_loops1a_a": "Ky është blloku i parë që do t'ju duhet:\n\n<xml>\n  <block type=\"jump_to\">\n    <title name=\"VALUE\">13</title>\n  </block>\n</xml>",
           "courseC_artist_loops1a_b": "Përdoreni këtë bllok për të vizatuar stikera!\n\n<xml>\n<block type=\"sticker\">\n    <title name=\"VALUE\">Bird</title>\n  </block>\n</xml>"
@@ -3408,7 +3414,7 @@
           "courseB_iceage_loops10_c": "Kjo është një enigmë e gjatë! Ndiqni këtë rrugë."
         },
         "courseD_iceage_loops10_2021": {
-          "courseB_iceage_loops10_a": "Kujdes, akulli i thyer! Scrat do të bjerë në ujë!",
+          "courseB_iceage_loops10_a": "Kujdes, akulli i thyer! Scrati do të bjerë në ujë!",
           "courseB_iceage_loops10_b": "Provo të thuash hapat me zë të lartë ose t'i shkruash ato në një copë letër. A sheh ndonjë model?",
           "courseB_iceage_loops10_c": "Ky është një enigmë e gjatë! Ndiqe këtë rrugë."
         },
@@ -3417,13 +3423,13 @@
           "courseB_iceage_loops10_c": "Kjo është një enigmë e gjatë! Ndiqni këtë rrugë."
         },
         "courseD_iceage_loops1_2021": {
-          "courseD_iceage_loops1_a": "Kujdes, akulli i thyer! Scrat do të bjerë drejtë në të!",
+          "courseD_iceage_loops1_a": "Kujdes, akulli i thyer! Scrati do të bjerë drejtë në të!",
           "courseD_iceage_loops1_b": "Do të të duhet t'a përdorësh këtë bllok:\n\n<xml><block type=\"maze_moveForward\"/></xml>"
         },
         "courseD_iceage_loops2_2021": {
           "courseD_iceage_loops2_a": "Ndaje këtë enigmë në dy pjesë, një para këndit dhe një pas këndit.",
           "courseD_iceage_loops2_b": "Nëse ngec, provo të thuash hapat me zë të lartë.",
-          "courseD_iceage_loops2_c": "Ndiqe këtë rrugë për t'a dërguar Scrat në acorn."
+          "courseD_iceage_loops2_c": "Ndiqe këtë rrugë për t'a dërguar Scratin te lajthia."
         },
         "courseD_iceage_loops3_2021": {
           "courseB_iceage_loops3_a": "Përdor këtë bllok të ri!\n\n <xml><block type=\"controls_repeat_dropdown\">\n    <title name=\"TIMES\" config=\"2-10\">5</title>\n  </block></xml>",
@@ -3442,9 +3448,9 @@
           "courseD_iceage_loops4_c": "Kjo është rruga që Scrat duhet të marrë."
         },
         "courseD_iceage_loops4_2021": {
-          "courseD_iceage_loops4_a": "Mos ke frikë të ekzekutosh kodin tënd dhe shiko se çfarë ndodh!",
-          "courseD_iceage_loops4_b": "Provo të shkruash hapat që Scrat do të ndërmarrë për të arritur në acorn. A sheh një model?",
-          "courseD_iceage_loops4_c": "Kjo është rruga që Scrat duhet të marrë."
+          "courseD_iceage_loops4_a": "Mos kini frikë të ekzekutoni kodin tuaj dhe të shihni se çfarë ndodh!",
+          "courseD_iceage_loops4_b": "Provo të shkruash hapat që Scrati do të ndërmarrë për të arritur në lajthia. A shihni ndonjë model?",
+          "courseD_iceage_loops4_c": "Kjo është rruga që Scrati duhet të ndjek."
         },
         "courseD_iceage_loops4_2023": {
           "courseD_iceage_loops4_c": "Kjo është rruga që Scrat duhet të marrë."
@@ -3455,13 +3461,13 @@
           "courseD_iceage_loops6_c": "Rruga jote përfundimtare duhet të duket kështu."
         },
         "courseD_iceage_loops7_2021": {
-          "courseB_iceage_loops7_a": "Nëse ngec, provo të shkruani hapat poshtë në një copë letër. A sheh një model?",
-          "courseB_iceage_loops7_b": "Kjo është rruga që duhet të marrë Scrat për të arritur në acorn."
+          "courseB_iceage_loops7_a": "Nëse ngecni, provoni të shkruani hapat poshtë në një copë letër. A shihni ndonjë model?",
+          "courseB_iceage_loops7_b": "Kjo është rruga që duhet të marrë Scrat për të arritur te lajthia."
         },
         "courseD_iceage_loops8_2021": {
           "courseD_iceage_loops8_a": "A janë blloqet e “kthesës” në rregull? Çfarë tjetër mund të ndryshoni?",
           "courseD_iceage_loops8_b": "Loop i parë duhet të përsëritet **3** herë, e dyta duhet të përsëritet **5** herë, loop i tretë duhet të përsëritet**4** herë dhe loop i fundit duhet të përsëritet**4** herë.",
-          "courseD_iceage_loops8_c": "Përdor loops për të ndihmuar Scrat të ndjekë këtë rrugë."
+          "courseD_iceage_loops8_c": "Përdor loops për të ndihmuar Scratin të ndjekë këtë rrugë."
         },
         "courseD_iceage_loops9": {
           "courseD_iceage_loops9_b": "Kodi juaj përfundimtar duhet të ketë **4** loops."
@@ -3476,9 +3482,9 @@
           "courseD_iceage_loops9_b": "Kodi juaj përfundimtar duhet të ketë **4** loops."
         },
         "courseD_iceage_loops9_2021": {
-          "courseD_iceage_loops9_a": "Keni probleme? Provoni ta thyeni këtë enigmë në copa më të vogla. Mos keni frikë të ekzekutoni enigmën tuaj ndërsa kodoni!",
+          "courseD_iceage_loops9_a": "Keni probleme? Provoni ta ndani këtë enigmë në pjesë më të vogla. Mos kini frikë të ekzekutoni enigmën tuaj ndërsa kodoni!",
           "courseD_iceage_loops9_b": "Kodi juaj përfundimtar duhet të ketë **4** loops.",
-          "courseD_iceage_loops9_c": "Scrat duhet të ndjekë këtë rrugë për të arritë tek acorn."
+          "courseD_iceage_loops9_c": "Scrati duhet të ndjekë këtë rrugë për të arritur tek lajthia."
         },
         "courseD_iceage_loops9_2023": {
           "courseD_iceage_loops9_b": "Kodi juaj përfundimtar duhet të ketë **4** loops."

@@ -1,0 +1,117 @@
+{
+  "script": {
+    "name": "virtual-pl-csp-summer-day2",
+    "wrapup_video_id": null,
+    "login_required": false,
+    "properties": {
+      "is_migrated": true
+    },
+    "new_name": null,
+    "family_name": null,
+    "serialized_at": "2023-10-03 17:27:58 UTC",
+    "published_state": null,
+    "instruction_type": null,
+    "instructor_audience": null,
+    "participant_audience": null,
+    "seeding_key": {
+      "script.name": "virtual-pl-csp-summer-day2"
+    }
+  },
+  "lesson_groups": [
+    {
+      "key": "",
+      "user_facing": false,
+      "position": 1,
+      "properties": {
+      },
+      "seeding_key": {
+        "lesson_group.key": "",
+        "script.name": "virtual-pl-csp-summer-day2"
+      }
+    }
+  ],
+  "lessons": [
+
+  ],
+  "lesson_activities": [
+
+  ],
+  "activity_sections": [
+
+  ],
+  "script_levels": [
+
+  ],
+  "levels_script_levels": [
+
+  ],
+  "resources": [
+    {
+      "name": "2023 Virtual CSP Summer Workshop - Day 2 Agenda",
+      "url": "https://docs.google.com/document/d/19RSKZcfkeviA5ZkPvap8TXCOSYjFn-T5u1chyz4f7bA/edit?usp=share_link",
+      "key": "2023_virtual_csp_summer_workshop_-_day_2_agenda",
+      "properties": {
+      },
+      "seeding_key": {
+        "resource.key": "2023_virtual_csp_summer_workshop_-_day_2_agenda"
+      }
+    },
+    {
+      "name": "2023 Virtual CSP Summer Workshop - Day 2 Slides",
+      "url": "https://docs.google.com/presentation/d/10WGKPbt7k4pfeNcsejn7PfJ8U-iigv78KXk_88qpmVs/edit",
+      "key": "2023_virtual_csp_summer_workshop_-_day_2_slides",
+      "properties": {
+      },
+      "seeding_key": {
+        "resource.key": "2023_virtual_csp_summer_workshop_-_day_2_slides"
+      }
+    }
+  ],
+  "lessons_resources": [
+
+  ],
+  "scripts_resources": [
+    {
+      "seeding_key": {
+        "resource.key": "2023_virtual_csp_summer_workshop_-_day_2_agenda",
+        "script.name": "virtual-pl-csp-summer-day2"
+      }
+    },
+    {
+      "seeding_key": {
+        "resource.key": "2023_virtual_csp_summer_workshop_-_day_2_slides",
+        "script.name": "virtual-pl-csp-summer-day2"
+      }
+    }
+  ],
+  "scripts_student_resources": [
+
+  ],
+  "vocabularies": [
+
+  ],
+  "lessons_vocabularies": [
+
+  ],
+  "lessons_programming_expressions": [
+
+  ],
+  "objectives": [
+
+  ],
+  "lessons_standards": [
+
+  ],
+  "lessons_opportunity_standards": [
+
+  ],
+  "rubrics": [
+
+  ],
+  "learning_goals": [
+
+  ],
+  "learning_goal_evidence_levels": [
+
+  ]
+}
