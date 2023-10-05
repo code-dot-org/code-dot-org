@@ -17,7 +17,7 @@
     },
     "new_name": null,
     "family_name": null,
-    "serialized_at": "2023-08-15 19:24:14 UTC",
+    "serialized_at": "2023-08-22 17:50:54 UTC",
     "published_state": null,
     "instruction_type": null,
     "instructor_audience": null,
@@ -116,6 +116,7 @@
       "has_lesson_plan": true,
       "relative_position": 2,
       "properties": {
+        "assessment_opportunities": "### AP Classroom Topic Questions\n\nTo assign questions from the AP Classroom Question Bank that align with this lesson, create a custom quiz in AP Classroom by searching the Question Bank for the Essential Knowledge statements listed at the top of this lesson plan. You can find instructions and video demonstrations to do this on [**AP Central**](https://apcentral.collegeboard.org/instructional-resources/ap-classroom).\n\nThe following Topic Questions in AP Classroom can be assigned as a formative assessment for this lesson:\n\n* Topic Questions 5.7\n\n**Note:** *Some Learning Objectives and Essential Knowledge statements in the suggested Topic Questions are covered in later units.*",
         "overview": "**Why would I use static variables and methods?**\n\nStudents have written instance variables and methods that require an object to be created. In this lesson, students learn about the `static` keyword and how it can be used to define values and methods that are shared by all instances of a class or to represent helper methods. Students explore the functionality of static variables and methods, then practice using these to solve problems.",
         "preparation": "* **(Optional)** Print copies of the U4L2 Guided Notes (one for each student)\n* Preview the *Static Variables* and *Static Methods* videos\n* Check the [**Teacher's Lounge**](https://forum.code.org/t/csa-4-2-static-variables-and-methods/37898) for verified teachers on the CSA Forum to find additional strategies or resources shared by fellow teachers",
         "student_overview": "**Why would I use static variables and methods?**\n\nYou have written instance variables and methods that require an object to be created. In this lesson, you learn about the `static` keyword and how it can be used to define values and methods that are shared by all instances of a class or to represent helper methods. You explore the functionality of static variables and methods, then practice using these to solve problems."
@@ -134,6 +135,7 @@
       "has_lesson_plan": true,
       "relative_position": 3,
       "properties": {
+        "assessment_opportunities": "### AP Classroom Topic Questions\n\nTo assign questions from the AP Classroom Question Bank that align with this lesson, create a custom quiz in AP Classroom by searching the Question Bank for the Essential Knowledge statements listed at the top of this lesson plan. You can find instructions and video demonstrations to do this on [**AP Central**](https://apcentral.collegeboard.org/instructional-resources/ap-classroom).\n\nThe following Topic Questions in AP Classroom can be assigned as a formative assessment for this lesson:\n\n* Topic Questions 1.2\n\n**Note:** *Some Learning Objectives and Essential Knowledge statements in the suggested Topic Questions are covered in later units.*",
         "overview": "**What can I do with the `Math` class?**\n\nStudents have used classes like `Scanner` and `Object` from the Java API as well as classes from The Neighborhood and The Theater. In this lesson, students learn about the `Math` class and how the `static` keyword can be used with the `final` keyword to create constants. They explore the documentation for the `Math` class to identify its methods and learn about their functionalities. Students then practice creating and using constants and calling methods in the `Math` class.",
         "preparation": "* **(Optional)** Print copies of the U4L3 Guided Notes (one for each student)\n* Preview the *Constants* video\n* Print copies of The Math Class handout (one for each student)\n* Print copies of the Math Class Graphic Organizer handout (one for each student)\n* Check the [**Teacher's Lounge**](https://forum.code.org/t/csa-4-3-the-math-class/37899) for verified teachers on the CSA Forum to find additional strategies or resources shared by fellow teachers",
         "student_overview": "**What can I do with the `Math` class?**\n\nYou have used classes like `Scanner` and `Object` from the Java API as well as classes from The Neighborhood and The Theater. In this lesson, you learn about the `Math` class and how the `static` keyword can be used with the `final` keyword to create constants. You explore the documentation for the `Math` class to identify its methods and learn about their functionalities. You then practice creating and using constants and calling methods in the `Math` class."
@@ -152,6 +154,7 @@
       "has_lesson_plan": true,
       "relative_position": 4,
       "properties": {
+        "assessment_opportunities": "### AP Classroom Topic Questions\n\nTo assign questions from the AP Classroom Question Bank that align with this lesson, create a custom quiz in AP Classroom by searching the Question Bank for the Essential Knowledge statements listed at the top of this lesson plan. You can find instructions and video demonstrations to do this on [**AP Central**](https://apcentral.collegeboard.org/instructional-resources/ap-classroom).\n\nThe following Topic Questions in AP Classroom can be assigned as a formative assessment for this lesson:\n\n* Topic Questions 1.5\n\n**Note:** *Some Learning Objectives and Essential Knowledge statements in the suggested Topic Questions are covered in later units.*",
         "overview": "**What is casting useful for in a program?**\n\nStudents have previously learned that dividing two `int` values results in an `int` value and that Java treats a value based on the declared data type. In this lesson, students learn about casting operators and how they can be used to temporarily convert a value to a different type. They explore the effect of using the `(int)` and `(double)` casting operators on a value and expression and experiment with using these operators to return a value of a desired data type. Students also learn how to use casting operators to round a `double` value to the nearest integer.",
         "preparation": "* **(Optional)** Print copies of the U4L4 Guided Notes (one for each student)\n* Preview the *Casting* video\n* Print copies of the Investigating Casting handout (one for each student)\n* Print copies of the Dataset Summaries handout (one for each student)\n* Check the [**Teacher's Lounge**](https://forum.code.org/t/csa-4-4-casting-and-rounding/37900) for verified teachers on the CSA Forum to find additional strategies or resources shared by fellow teachers",
         "student_overview": "**What is casting useful for in a program?**\n\nYou have previously learned that dividing two `int` values results in an `int` value and that Java treats a value based on the declared data type. In this lesson, you learn about casting operators and how they can be used to temporarily convert a value to a different type. You explore the effect of using the `(int)` and `(double)` casting operators on a value and expression and experiment with using these operators to return a value of a desired data type. You also learn how to use casting operators to round a `double` value to the nearest integer."
@@ -170,6 +173,7 @@
       "has_lesson_plan": true,
       "relative_position": 5,
       "properties": {
+        "assessment_opportunities": "### AP Classroom Topic Questions\n\nTo assign questions from the AP Classroom Question Bank that align with this lesson, create a custom quiz in AP Classroom by searching the Question Bank for the Essential Knowledge statements listed at the top of this lesson plan. You can find instructions and video demonstrations to do this on [**AP Central**](https://apcentral.collegeboard.org/instructional-resources/ap-classroom).\n\nThe following Topic Questions in AP Classroom can be assigned as a formative assessment for this lesson:\n\n* Topic Questions 2.9\n\n**Note:** *Some Learning Objectives and Essential Knowledge statements in the suggested Topic Questions are covered in later units.*",
         "overview": "**How can I generate and use random numbers?**\n\nStudents learned about the `Math` class in the previous lesson and explored using some of its methods to perform calculations. In this lesson, students learn about the functionality of `Math.random()` and discover its benefits and limitations. Students consider how they can use `Math.random()` with casting operators to generate random numbers within a specific range and consider how random is used in programs they use every day. They then practice generating and using random numbers within specified ranges and retrieving random elements from a 1D array.",
         "preparation": "* **(Optional)** Print copies of the U4L5 Guided Notes (one for each student)\n* Preview the *Random Numbers* video\n* Gather the Dataset Summaries handouts collected in Lesson 4\n* Check the [**Teacher's Lounge**](https://forum.code.org/t/csa-4-5-random/37901) for verified teachers on the CSA Forum to find additional strategies or resources shared by fellow teachers",
         "student_overview": "**How can I generate and use random numbers?**\n\nYou learned about the `Math` class in the previous lesson and explored using some of its methods to perform calculations. In this lesson, you learn about the functionality of `Math.random()` and discover its benefits and limitations. You consider how you can use `Math.random()` with casting operators to generate random numbers within a specific range and consider how random is used in programs you use every day. You then practice generating and using random numbers within specified ranges and retrieving random elements from a 1D array."
@@ -188,6 +192,7 @@
       "has_lesson_plan": true,
       "relative_position": 6,
       "properties": {
+        "assessment_opportunities": "### AP Classroom Topic Questions\n\nTo assign questions from the AP Classroom Question Bank that align with this lesson, create a custom quiz in AP Classroom by searching the Question Bank for the Essential Knowledge statements listed at the top of this lesson plan. You can find instructions and video demonstrations to do this on [**AP Central**](https://apcentral.collegeboard.org/instructional-resources/ap-classroom).\n\nThe following Topic Questions in AP Classroom can be assigned as a formative assessment for this lesson:\n\n* Topic Questions 3.7\n\n**Note:** *Some Learning Objectives and Essential Knowledge statements in the suggested Topic Questions are covered in later units.*",
         "overview": "**How can I check if two objects are equal?**\n\nIn this lesson, students discover the difference between comparing primitive values and object references. Students learn that two object references are considered aliases when they both reference the same object and how to identify aliases or `null` values using the `==` and `!=` operators. They revisit the `Object` class and learn how to override the `equals()` method to determine whether two instances of a class are equivalent. Students then practice overriding the `equals()` method in a class and comparing objects for equality.",
         "preparation": "* **(Optional)** Print copies of the U4L6 Guided Notes (one for each student)\n* Preview the *Aliasing* and *The equals() Method* videos\n* Check the [**Teacher's Lounge**](https://forum.code.org/t/csa-4-6-object-aliases-and-equality/37902) for verified teachers on the CSA Forum to find additional strategies or resources shared by fellow teachers",
         "student_overview": "**How can I check if two objects are equal?**\n\nIn this lesson, you discover the difference between comparing primitive values and object references. You learn that two object references are considered aliases when they both reference the same object and how to identify aliases or `null` values using the `==` and `!=` operators. You revisit the `Object` class and learn how to override the `equals()` method to determine whether two instances of a class are equivalent. You then practice overriding the `equals()` method in a class and comparing objects for equality."
@@ -206,6 +211,7 @@
       "has_lesson_plan": true,
       "relative_position": 7,
       "properties": {
+        "assessment_opportunities": "### AP Classroom Topic Questions\n\nTo assign questions from the AP Classroom Question Bank that align with this lesson, create a custom quiz in AP Classroom by searching the Question Bank for the Essential Knowledge statements listed at the top of this lesson plan. You can find instructions and video demonstrations to do this on [**AP Central**](https://apcentral.collegeboard.org/instructional-resources/ap-classroom).",
         "overview": "**How can I test a combination of conditions before executing a specific action?**\n\nStudents have used `if` and `if-else` statements to execute blocks of code based on a condition. In this lesson, students explore the functionality of nested `if` statements and learn to use these to test a combination of conditions. They also learn how to use the `length()` method in the `String` class to find the length of a `String` object. Students consider scenarios where they would need to test multiple conditions and practice evaluating nested `if` statements to determine the output of a code segment. They then plan and implement an algorithm using nested `if` statements to test a combination of conditions.",
         "preparation": "* **(Optional)** Print copies of the U4L7 Guided Notes (one for each student)\n* Print copies of the Writing Algorithms handout (one for each student)\n* Check the [**Teacher's Lounge**](https://forum.code.org/t/csa-4-7-nested-if-statements/37903) for verified teachers on the CSA Forum to find additional strategies or resources shared by fellow teachers",
         "student_overview": "**How can I test a combination of conditions before executing a specific action?**\n\nYou have used `if` and `if-else` statements to execute blocks of code based on a condition. In this lesson, you explore the functionality of nested `if` statements and learn how to use these to test a combination of conditions. You also learn how to use the `length()` method in the `String` class to find the length of a `String` object. You consider scenarios where you would need to test multiple conditions and practice evaluating nested `if` statements to determine the output of a code segment. You then plan and implement an algorithm using nested `if` statements to test a combination of conditions."
@@ -224,6 +230,7 @@
       "has_lesson_plan": true,
       "relative_position": 8,
       "properties": {
+        "assessment_opportunities": "### AP Classroom Topic Questions\n\nTo assign questions from the AP Classroom Question Bank that align with this lesson, create a custom quiz in AP Classroom by searching the Question Bank for the Essential Knowledge statements listed at the top of this lesson plan. You can find instructions and video demonstrations to do this on [**AP Central**](https://apcentral.collegeboard.org/instructional-resources/ap-classroom).\n\nThe following Topic Questions in AP Classroom can be assigned as a formative assessment for this lesson:\n\n* Topic Questions 3.5\n\n**Note:** *Some Learning Objectives and Essential Knowledge statements in the suggested Topic Questions are covered in later units.*",
         "overview": "**How can logical operators be used to evaluate multiple conditions?**\n\nStudents have previously learned to use the NOT ( `!` ) operator to reverse the outcome of a Boolean expression. In this lesson, they explore the use of the AND ( `&&` ) and OR ( `||` ) operators and how these can be used instead of nested `if` statements to test multiple conditions. Students learn about short-circuit evaluation and practice using truth tables to evaluate a Boolean expression involving logical operators.",
         "preparation": "* **(Optional)** Print copies of the U4L8 Guided Notes (one for each student)\n* Print copies of the Truth Tables handout (one for each student)\n* Gather the Dataset Summaries handouts collected in Lesson 5\n* Print copies of the Finding Patterns handout (one for each student)\n* Check the [**Teacher's Lounge**](https://forum.code.org/t/csa-4-8-logical-operators/37904) for verified teachers on the CSA Forum to find additional strategies or resources shared by fellow teachers",
         "student_overview": "**How can logical operators be used to evaluate multiple conditions?**\n\nYou have previously learned to use the NOT ( `!` ) operator to reverse the outcome of a Boolean expression. In this lesson, you explore the use of the AND ( `&&` ) and OR ( `||` ) operators and how these can be used instead of nested `if` statements to test multiple conditions. You learn about short-circuited evaluation and practice using truth tables to evaluate a Boolean expression involving logical operators."
@@ -242,6 +249,7 @@
       "has_lesson_plan": true,
       "relative_position": 9,
       "properties": {
+        "assessment_opportunities": "### AP Classroom Topic Questions\n\nTo assign questions from the AP Classroom Question Bank that align with this lesson, create a custom quiz in AP Classroom by searching the Question Bank for the Essential Knowledge statements listed at the top of this lesson plan. You can find instructions and video demonstrations to do this on [**AP Central**](https://apcentral.collegeboard.org/instructional-resources/ap-classroom).\n\nThe following Topic Questions in AP Classroom can be assigned as a formative assessment for this lesson:\n\n* Topic Questions 3.6\n\n**Note:** *Some Learning Objectives and Essential Knowledge statements in the suggested Topic Questions are covered in later units.*",
         "overview": "**What are De Morgan's Laws?**\n\nIn this lesson, students learn about De Morgan's Laws and how they are applied to Boolean expressions. They explore how equivalent Boolean expressions evaluate to the same value in all cases. Students then use truth tables to evaluate compound Boolean expressions and prove De Morgan's Laws.",
         "preparation": "* **(Optional)** Print copies of the U4L9 Guided Notes (one for each student)\n* Print copies of the De Morgan's Laws handout (one for each student)\n* Print the De Morgan's Laws Stations resource\n* Create stations around the classroom as indicated on the De Morgan's Laws Stations resource\n* Check the [**Teacher's Lounge**](https://forum.code.org/t/csa-4-9-de-morgans-laws/37905) for verified teachers on the CSA Forum to find additional strategies or resources shared by fellow teachers",
         "student_overview": "**What are De Morgan's Laws?**\n\nYou have learned to use logical operators to create compound Boolean expressions. In this lesson, you learn about De Morgan's Laws and how they are applied to Boolean expressions. You explore how equivalent Boolean expressions evaluate to the same value in all cases. You then use truth tables to evaluate compound Boolean expressions and prove De Morgan's Laws."
@@ -260,6 +268,7 @@
       "has_lesson_plan": true,
       "relative_position": 10,
       "properties": {
+        "assessment_opportunities": "### AP Classroom Topic Questions\n\nTo assign questions from the AP Classroom Question Bank that align with this lesson, create a custom quiz in AP Classroom by searching the Question Bank for the Essential Knowledge statements listed at the top of this lesson plan. You can find instructions and video demonstrations to do this on [**AP Central**](https://apcentral.collegeboard.org/instructional-resources/ap-classroom).\n\nThe following Topic Questions in AP Classroom can be assigned as a formative assessment for this lesson:\n\n* Topic Questions 3.4\n\n**Note:** *Some Learning Objectives and Essential Knowledge statements in the suggested Topic Questions are covered in later units.*",
         "overview": "**How can I specify different outcomes for different conditions?**\n\nIn this lesson, students expand their knowledge of selection statements to evaluate and implement multi-selection statements. They explore the functionality of multi-selection statements and learn to use these to test a combination of conditions. Students then practice writing algorithms using multi-selection statements to solve problems.",
         "preparation": "* **(Optional)** Print copies of the U4L10 Guided Notes (one for each student)\n* Preview the *Multi-Selection Statements* video\n* Print copies of the Unit 4 Study Guide (one for each student)\n* Check the [**Teacher's Lounge**](https://forum.code.org/t/csa-4-10-multi-selection-statements/37906) for verified teachers on the CSA Forum to find additional strategies or resources shared by fellow teachers",
         "student_overview": "**How can I specify different outcomes for different conditions?**\n\nIn this lesson, you expand your knowledge of selection statements to evaluate and implement multi-selection statements. You explore the functionality of multi-selection statements and learn to use these to test a combination of conditions. You then practice writing algorithms using multi-selection statements to solve problems."
@@ -1609,18 +1618,6 @@
       }
     },
     {
-      "key": "a1dd856c-325c-42a2-824e-d09ed678b535",
-      "position": 7,
-      "properties": {
-        "description": "To assign questions from the AP Classroom Question Bank that align with this lesson, create a custom quiz in AP Classroom by searching the Question Bank for the Essential Knowledge statements listed at the top of this lesson plan. You can find instructions and video demonstrations to do this on [**AP Central**](https://apcentral.collegeboard.org/instructional-resources/ap-classroom).\n\nThe following Topic Questions in AP Classroom can be assigned as a formative assessment for this lesson:\n\n* Topic Questions 5.7\n\n**Note:** *Some Learning Objectives and Essential Knowledge statements in the suggested Topic Questions are covered in later units.*",
-        "name": "AP Classroom Topic Questions"
-      },
-      "seeding_key": {
-        "activity_section.key": "a1dd856c-325c-42a2-824e-d09ed678b535",
-        "lesson_activity.key": "1c683b64-8dcf-4c2f-9e71-0f6ac59fefe0"
-      }
-    },
-    {
       "key": "d8dfee33-3555-4cfd-9d25-a771dfd8a141",
       "position": 1,
       "properties": {
@@ -1935,18 +1932,6 @@
       }
     },
     {
-      "key": "945cb879-4ce8-49c5-a3d8-d2c6673be5ae",
-      "position": 6,
-      "properties": {
-        "description": "To assign questions from the AP Classroom Question Bank that align with this lesson, create a custom quiz in AP Classroom by searching the Question Bank for the Essential Knowledge statements listed at the top of this lesson plan. You can find instructions and video demonstrations to do this on [**AP Central**](https://apcentral.collegeboard.org/instructional-resources/ap-classroom).\n\nThe following Topic Questions in AP Classroom can be assigned as a formative assessment for this lesson:\n\n* Topic Questions 1.2\n\n**Note:** *Some Learning Objectives and Essential Knowledge statements in the suggested Topic Questions are covered in later units.*",
-        "name": "AP Classroom Topic Questions"
-      },
-      "seeding_key": {
-        "activity_section.key": "945cb879-4ce8-49c5-a3d8-d2c6673be5ae",
-        "lesson_activity.key": "3a5a461a-d1b9-4a29-8ffe-779df8c74575"
-      }
-    },
-    {
       "key": "1d7b6781-8f9b-4070-9d9b-797b0123c5e1",
       "position": 1,
       "properties": {
@@ -2246,18 +2231,6 @@
       },
       "seeding_key": {
         "activity_section.key": "6a4f7573-3017-4f41-8e17-fd3574b0c4cc",
-        "lesson_activity.key": "aeb3363f-1343-40c7-ac5d-2860545bee09"
-      }
-    },
-    {
-      "key": "316e821a-6634-4506-be69-08d3c7068f27",
-      "position": 8,
-      "properties": {
-        "description": "To assign questions from the AP Classroom Question Bank that align with this lesson, create a custom quiz in AP Classroom by searching the Question Bank for the Essential Knowledge statements listed at the top of this lesson plan. You can find instructions and video demonstrations to do this on [**AP Central**](https://apcentral.collegeboard.org/instructional-resources/ap-classroom).\n\nThe following Topic Questions in AP Classroom can be assigned as a formative assessment for this lesson:\n\n* Topic Questions 1.5\n\n**Note:** *Some Learning Objectives and Essential Knowledge statements in the suggested Topic Questions are covered in later units.*",
-        "name": "AP Classroom Topic Questions"
-      },
-      "seeding_key": {
-        "activity_section.key": "316e821a-6634-4506-be69-08d3c7068f27",
         "lesson_activity.key": "aeb3363f-1343-40c7-ac5d-2860545bee09"
       }
     },
@@ -2570,18 +2543,6 @@
       }
     },
     {
-      "key": "f23f2b3a-bcbe-4c4b-b8dc-6576a9dba246",
-      "position": 7,
-      "properties": {
-        "description": "To assign questions from the AP Classroom Question Bank that align with this lesson, create a custom quiz in AP Classroom by searching the Question Bank for the Essential Knowledge statements listed at the top of this lesson plan. You can find instructions and video demonstrations to do this on [**AP Central**](https://apcentral.collegeboard.org/instructional-resources/ap-classroom).\n\nThe following Topic Questions in AP Classroom can be assigned as a formative assessment for this lesson:\n\n* Topic Questions 2.9\n\n**Note:** *Some Learning Objectives and Essential Knowledge statements in the suggested Topic Questions are covered in later units.*",
-        "name": "AP Classroom Topic Questions"
-      },
-      "seeding_key": {
-        "activity_section.key": "f23f2b3a-bcbe-4c4b-b8dc-6576a9dba246",
-        "lesson_activity.key": "5f23beae-afcd-42b4-930a-c28ebf1dcb78"
-      }
-    },
-    {
       "key": "4a3d089e-319e-4626-a0bc-782f63aecb0d",
       "position": 1,
       "properties": {
@@ -2873,18 +2834,6 @@
       }
     },
     {
-      "key": "3e8513f7-e6c7-40be-b9fe-45902e56567b",
-      "position": 7,
-      "properties": {
-        "description": "To assign questions from the AP Classroom Question Bank that align with this lesson, create a custom quiz in AP Classroom by searching the Question Bank for the Essential Knowledge statements listed at the top of this lesson plan. You can find instructions and video demonstrations to do this on [**AP Central**](https://apcentral.collegeboard.org/instructional-resources/ap-classroom).\n\nThe following Topic Questions in AP Classroom can be assigned as a formative assessment for this lesson:\n\n* Topic Questions 3.7\n\n**Note:** *Some Learning Objectives and Essential Knowledge statements in the suggested Topic Questions are covered in later units.*",
-        "name": "AP Classroom Topic Questions"
-      },
-      "seeding_key": {
-        "activity_section.key": "3e8513f7-e6c7-40be-b9fe-45902e56567b",
-        "lesson_activity.key": "d98d5bf3-ef68-4764-b9a0-a9503c701e36"
-      }
-    },
-    {
       "key": "3c6b28cb-327b-4660-bb3a-a7ca39e3db9f",
       "position": 1,
       "properties": {
@@ -3121,18 +3070,6 @@
       },
       "seeding_key": {
         "activity_section.key": "cb3a6393-bdf2-43e8-8bbf-fefb06d04856",
-        "lesson_activity.key": "494e273c-da1d-46ae-b5bf-3fa6eb347145"
-      }
-    },
-    {
-      "key": "0d08704c-3876-47f2-a75c-14dc9e2110f3",
-      "position": 6,
-      "properties": {
-        "description": "To assign questions from the AP Classroom Question Bank that align with this lesson, create a custom quiz in AP Classroom by searching the Question Bank for the Essential Knowledge statements listed at the top of this lesson plan. You can find instructions and video demonstrations to do this on [**AP Central**](https://apcentral.collegeboard.org/instructional-resources/ap-classroom).",
-        "name": "AP Classroom Topic Questions"
-      },
-      "seeding_key": {
-        "activity_section.key": "0d08704c-3876-47f2-a75c-14dc9e2110f3",
         "lesson_activity.key": "494e273c-da1d-46ae-b5bf-3fa6eb347145"
       }
     },
@@ -3422,18 +3359,6 @@
       }
     },
     {
-      "key": "ea79620e-41d6-4a92-9808-1f0ff7fe543e",
-      "position": 8,
-      "properties": {
-        "description": "To assign questions from the AP Classroom Question Bank that align with this lesson, create a custom quiz in AP Classroom by searching the Question Bank for the Essential Knowledge statements listed at the top of this lesson plan. You can find instructions and video demonstrations to do this on [**AP Central**](https://apcentral.collegeboard.org/instructional-resources/ap-classroom).\n\nThe following Topic Questions in AP Classroom can be assigned as a formative assessment for this lesson:\n\n* Topic Questions 3.5\n\n**Note:** *Some Learning Objectives and Essential Knowledge statements in the suggested Topic Questions are covered in later units.*",
-        "name": "AP Classroom Topic Questions"
-      },
-      "seeding_key": {
-        "activity_section.key": "ea79620e-41d6-4a92-9808-1f0ff7fe543e",
-        "lesson_activity.key": "3df641ba-872c-4d2d-b4a9-98e1e539e467"
-      }
-    },
-    {
       "key": "dfec1400-bc5e-42d3-af20-3f2f93bbc873",
       "position": 1,
       "properties": {
@@ -3672,18 +3597,6 @@
       },
       "seeding_key": {
         "activity_section.key": "7b50fcfe-508c-4f84-b258-3e93f7acb312",
-        "lesson_activity.key": "d42124c1-0888-4500-a85d-71fca9d9ccd4"
-      }
-    },
-    {
-      "key": "5a6b029b-e876-41e0-979a-60b11fa95427",
-      "position": 6,
-      "properties": {
-        "description": "To assign questions from the AP Classroom Question Bank that align with this lesson, create a custom quiz in AP Classroom by searching the Question Bank for the Essential Knowledge statements listed at the top of this lesson plan. You can find instructions and video demonstrations to do this on [**AP Central**](https://apcentral.collegeboard.org/instructional-resources/ap-classroom).\n\nThe following Topic Questions in AP Classroom can be assigned as a formative assessment for this lesson:\n\n* Topic Questions 3.6\n\n**Note:** *Some Learning Objectives and Essential Knowledge statements in the suggested Topic Questions are covered in later units.*",
-        "name": "AP Classroom Topic Questions"
-      },
-      "seeding_key": {
-        "activity_section.key": "5a6b029b-e876-41e0-979a-60b11fa95427",
         "lesson_activity.key": "d42124c1-0888-4500-a85d-71fca9d9ccd4"
       }
     },
@@ -3929,18 +3842,6 @@
       },
       "seeding_key": {
         "activity_section.key": "7ecd756f-5552-49cd-9a43-26cc3873377f",
-        "lesson_activity.key": "a453b1f2-e1ef-4f6c-a936-322ffdc9c67f"
-      }
-    },
-    {
-      "key": "4a47e2a5-eb04-470d-b867-c59bb2c8be7c",
-      "position": 6,
-      "properties": {
-        "description": "To assign questions from the AP Classroom Question Bank that align with this lesson, create a custom quiz in AP Classroom by searching the Question Bank for the Essential Knowledge statements listed at the top of this lesson plan. You can find instructions and video demonstrations to do this on [**AP Central**](https://apcentral.collegeboard.org/instructional-resources/ap-classroom).\n\nThe following Topic Questions in AP Classroom can be assigned as a formative assessment for this lesson:\n\n* Topic Questions 3.4\n\n**Note:** *Some Learning Objectives and Essential Knowledge statements in the suggested Topic Questions are covered in later units.*",
-        "name": "AP Classroom Topic Questions"
-      },
-      "seeding_key": {
-        "activity_section.key": "4a47e2a5-eb04-470d-b867-c59bb2c8be7c",
         "lesson_activity.key": "a453b1f2-e1ef-4f6c-a936-322ffdc9c67f"
       }
     },
@@ -6574,6 +6475,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSA 2023 Console Sandbox"
+        ]
       },
       "bonus": false,
       "seeding_key": {
@@ -6595,6 +6499,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSA 2023 Neighborhood Sandbox"
+        ],
         "progression": "With Paint Bucket"
       },
       "bonus": false,
@@ -6617,6 +6524,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSA 2023 Neighborhood - No Bucket Sandbox"
+        ],
         "progression": "No Paint Bucket"
       },
       "bonus": false,
@@ -6639,6 +6549,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSA 2023 Theater Sandbox"
+        ]
       },
       "bonus": false,
       "seeding_key": {

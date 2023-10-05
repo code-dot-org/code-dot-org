@@ -76,7 +76,8 @@
     "ai_enabled": "false",
     "reference_links": [
       "/courses/csd-2022/guides/variables",
-      "/courses/csd-2022/guides/counter-patterns-with-event"
+      "/courses/csd-2022/guides/counter-patterns-with-event",
+      "/maker/setup"
     ],
     "start_blocks": "var yPosition = 170;\r\n\r\nonBoardEvent(buttonA, \"down\", function() {\r\n  //1) Subtract one from the `yPosition` variable\r\n  \r\n  setProperty(\"birdIcon\", \"y\", yPosition);\r\n});\r\n\r\nonBoardEvent(buttonB, \"down\", function() {\r\n  //2) Add one to the `yPosition` variable\r\n  \r\n  setProperty(\"birdIcon\", \"y\", yPosition);\r\n});\r\n",
     "start_html": "<div id=\"designModeViz\" class=\"appModern\" tabindex=\"1\" data-radium=\"true\" style=\"display: none; width: 320px; height: 450px;\"><div class=\"screen\" tabindex=\"1\" data-theme=\"default\" id=\"screen1\" style=\"display: block; height: 450px; width: 320px; left: 0px; top: 0px; position: absolute; z-index: 0; background-color: rgb(255, 255, 255);\"><img data-canonical-image-url=\"icon://fa-twitter\" data-image-type=\"icon\" data-object-fit=\"contain\" id=\"birdIcon\" style=\"height: 125px; width: 125px; border-style: solid; border-width: 0px; border-color: rgb(0, 0, 0); border-radius: 0px; position: absolute; left: 100px; top: 170px; margin: 0px;\" data-icon-color=\"#01cbff\"></div></div>",
@@ -85,7 +86,7 @@
     "preload_asset_list": null
   },
   "notes": "",
-  "audit_log": "[{\"changed_at\":\"2023-02-01T10:47:08.279+00:00\",\"changed\":[\"cloned from \\\"CSD U6 - If Variables - SB5_2222\\\"\"],\"cloned_from\":\"CSD U6 - If Variables - SB5_2222\"},{\"changed_at\":\"2023-02-07 18:10:59 +0000\",\"changed\":[\"code_functions\",\"makerlab_enabled\",\"long_instructions\",\"reference_links\",\"start_blocks\",\"encrypted_examples\",\"preload_asset_list\",\"contained_level_names\"],\"changed_by_id\":14639,\"changed_by_email\":\"dan+teacher@code.org\"},{\"changed_at\":\"2023-03-29 16:01:26 +0000\",\"changed\":[\"code_functions\",\"never_autoplay_video\",\"hide_design_mode\",\"preload_asset_list\",\"contained_level_names\"],\"changed_by_id\":14639,\"changed_by_email\":\"dan+teacher@code.org\"},{\"changed_at\":\"2023-07-17 23:19:34 +0000\",\"changed\":[\"code_functions\",\"show_debug_watch\",\"encrypted_examples\",\"preload_asset_list\",\"contained_level_names\"],\"changed_by_id\":18602,\"changed_by_email\":\"angelina+levelbuilder@code.org\"}]"
+  "audit_log": "[{\"changed_at\":\"2023-02-01T10:47:08.279+00:00\",\"changed\":[\"cloned from \\\"CSD U6 - If Variables - SB5_2222\\\"\"],\"cloned_from\":\"CSD U6 - If Variables - SB5_2222\"},{\"changed_at\":\"2023-02-07 18:10:59 +0000\",\"changed\":[\"code_functions\",\"makerlab_enabled\",\"long_instructions\",\"reference_links\",\"start_blocks\",\"encrypted_examples\",\"preload_asset_list\",\"contained_level_names\"],\"changed_by_id\":14639,\"changed_by_email\":\"dan+teacher@code.org\"},{\"changed_at\":\"2023-03-29 16:01:26 +0000\",\"changed\":[\"code_functions\",\"never_autoplay_video\",\"hide_design_mode\",\"preload_asset_list\",\"contained_level_names\"],\"changed_by_id\":14639,\"changed_by_email\":\"dan+teacher@code.org\"},{\"changed_at\":\"2023-07-17 23:19:34 +0000\",\"changed\":[\"code_functions\",\"show_debug_watch\",\"encrypted_examples\",\"preload_asset_list\",\"contained_level_names\"],\"changed_by_id\":18602,\"changed_by_email\":\"angelina+levelbuilder@code.org\"},{\"changed_at\":\"2023-08-21 23:02:05 +0000\",\"changed\":[\"code_functions\",\"reference_links\",\"encrypted_examples\",\"preload_asset_list\",\"contained_level_names\"],\"changed_by_id\":14639,\"changed_by_email\":\"dan+teacher@code.org\"}]"
 }]]></config>
   <blocks/>
 </Applab>

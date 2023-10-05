@@ -73,8 +73,4 @@ Dashboard::Application.configure do
 
   # don't act like a levelbuilder by default
   config.levelbuilder_mode = CDO.with_default(false).levelbuilder_mode
-
-  # Whether or not to skip script preloading. Setting this to true
-  # significantly speeds up server startup time
-  config.skip_script_preload = false
 end

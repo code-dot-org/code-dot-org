@@ -11,6 +11,8 @@ import {enqueueHints, showNextHint} from '@cdo/apps/redux/authoredHints';
 import isRtl, {setRtlFromDOM} from '@cdo/apps/code-studio/isRtlRedux';
 import {setPageConstants} from '@cdo/apps/redux/pageConstants';
 import InstructionsCSF from './InstructionsCSF';
+import SmallStaticAvatar from '@cdo/static/skins/bee/small_static_avatar.png';
+import FailureAvatar from '@cdo/static/skins/bee/failure_avatar.png';
 
 export default {
   title: 'InstructionsCSF',
@@ -91,12 +93,11 @@ const createCommonStore = function (options = {}) {
   }
 
   if (options.avatar) {
-    pageConstants.smallStaticAvatar =
-      '/blockly/media/skins/bee/small_static_avatar.png';
+    pageConstants.smallStaticAvatar = SmallStaticAvatar;
   }
 
   if (options.failureAvatar) {
-    pageConstants.failureAvatar = '/blockly/media/skins/bee/failure_avatar.png';
+    pageConstants.failureAvatar = FailureAvatar;
   }
 
   if (options.feedback) {

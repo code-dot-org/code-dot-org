@@ -497,6 +497,7 @@ export default {
       ]
     ));
 
+    Blockly.customBlocks.installBehaviorBlocks(behaviorEditor);
     Blockly.Blocks.sprite_variables_get = {
       // Variable getter.
       init: function () {
@@ -521,6 +522,10 @@ export default {
           .appendField(Blockly.Msg.VARIABLES_GET_TAIL);
         this.setStrictOutput(true, Blockly.BlockValueType.SPRITE);
         this.setTooltip(Blockly.Msg.VARIABLES_GET_TOOLTIP);
+        // setStyle is undefined for CDO Blockly
+        if (typeof this.setStyle === 'function') {
+          this.setStyle('sprite_blocks');
+        }
       },
       getVars: function () {
         return Blockly.Variables.getVars.bind(this)(
@@ -545,183 +550,6 @@ export default {
     Blockly.Variables.registerGetter(
       Blockly.BlockValueType.SPRITE,
       'sprite_variables_get'
-    );
-
-    Blockly.Blocks.sprite_parameter_get = {
-      init() {
-        var fieldLabel = new Blockly.FieldLabel(Blockly.Msg.VARIABLES_GET_ITEM);
-        // Must be marked EDITABLE so that cloned blocks share the same var name
-        fieldLabel.EDITABLE = true;
-        this.setHelpUrl(Blockly.Msg.VARIABLES_GET_HELPURL);
-        this.appendDummyInput()
-          .appendField(Blockly.Msg.VARIABLES_GET_TITLE)
-          .appendField(fieldLabel, 'VAR')
-          .appendField(Blockly.Msg.VARIABLES_GET_TAIL);
-        this.setStrictOutput(true, Blockly.BlockValueType.SPRITE);
-        this.setTooltip(Blockly.Msg.VARIABLES_GET_TOOLTIP);
-      },
-      renameVar(oldName, newName) {
-        if (behaviorEditor.isOpen()) {
-          behaviorEditor.renameParameter(oldName, newName);
-          behaviorEditor.refreshParamsEverywhere();
-        }
-      },
-      removeVar: Blockly.Blocks.variables_get.removeVar,
-    };
-    generator.sprite_parameter_get = generator.variables_get;
-
-    Blockly.Blocks.gamelab_behavior_get = {
-      init() {
-        var fieldLabel = new Blockly.FieldLabel(Blockly.Msg.VARIABLES_GET_ITEM);
-        // Must be marked EDITABLE so that cloned blocks share the same var name
-        fieldLabel.EDITABLE = true;
-        this.setHelpUrl(Blockly.Msg.VARIABLES_GET_HELPURL);
-        Blockly.cdoUtils.setHSV(this, 136, 0.84, 0.8);
-        const mainTitle = this.appendDummyInput()
-          .appendField(fieldLabel, 'VAR')
-          .appendField(Blockly.Msg.VARIABLES_GET_TAIL);
-
-        let allowBehaviorEditing = Blockly.useModalFunctionEditor;
-
-        // If there is a toolbox with no categories and the level allows editing
-        // blocks, disallow editing the behavior, because renaming the behavior
-        // can break things.
-        if (
-          window.appOptions && // global appOptions is not available on level edit page
-          appOptions.level.toolbox &&
-          !appOptions.readonlyWorkspace &&
-          !Blockly.hasCategories
-        ) {
-          allowBehaviorEditing = false;
-        }
-
-        if (allowBehaviorEditing) {
-          var editLabel = new Blockly.FieldIcon(Blockly.Msg.FUNCTION_EDIT);
-          Blockly.cdoUtils.bindBrowserEvent(
-            editLabel.fieldGroup_,
-            'mousedown',
-            this,
-            this.openEditor
-          );
-          mainTitle.appendField(editLabel);
-        }
-
-        this.setStrictOutput(true, Blockly.BlockValueType.BEHAVIOR);
-        this.setTooltip(Blockly.Msg.VARIABLES_GET_TOOLTIP);
-        this.currentParameterNames_ = [];
-      },
-
-      openEditor(e) {
-        e.stopPropagation();
-        behaviorEditor.openEditorForFunction(this, this.getTitle_('VAR').id);
-      },
-
-      getVars() {
-        return {};
-      },
-
-      renameVar(oldName, newName) {
-        if (Blockly.Names.equals(oldName, this.getFieldValue('VAR'))) {
-          this.setTitleValue(newName, 'VAR');
-        }
-      },
-
-      renameProcedure(oldName, newName, userCreated) {
-        if (Blockly.Names.equals(oldName, this.getFieldValue('VAR'))) {
-          this.setTitleValue(newName, 'VAR');
-          if (userCreated) {
-            this.getTitle_('VAR').id = newName;
-          }
-        }
-      },
-
-      getCallName() {
-        return this.getFieldValue('VAR');
-      },
-
-      setProcedureParameters(paramNames, paramIds, typeNames) {
-        Blockly.Blocks.procedures_callnoreturn.setProcedureParameters.call(
-          this,
-          paramNames.slice(1),
-          paramIds && paramIds.slice(1),
-          typeNames && typeNames.slice(1)
-        );
-      },
-
-      mutationToDom() {
-        const container = document.createElement('mutation');
-        for (let x = 0; x < this.currentParameterNames_.length; x++) {
-          const parameter = document.createElement('arg');
-          parameter.setAttribute('name', this.currentParameterNames_[x]);
-          if (this.currentParameterTypes_[x]) {
-            parameter.setAttribute('type', this.currentParameterTypes_[x]);
-          }
-          container.appendChild(parameter);
-        }
-        return container;
-      },
-
-      domToMutation(xmlElement) {
-        this.currentParameterNames_ = [];
-        this.currentParameterTypes_ = [];
-        for (let childNode of xmlElement.childNodes) {
-          if (childNode.nodeName.toLowerCase() === 'arg') {
-            this.currentParameterNames_.push(childNode.getAttribute('name'));
-            this.currentParameterTypes_.push(childNode.getAttribute('type'));
-          }
-        }
-        // Use parameter names as dummy IDs during initialization. Add dummy
-        // "this_sprite" param.
-        this.setProcedureParameters(
-          [null].concat(this.currentParameterNames_),
-          [null].concat(this.currentParameterNames_),
-          [null].concat(this.currentParameterTypes_)
-        );
-      },
-    };
-
-    generator.gamelab_behavior_get = function () {
-      const name = Blockly.JavaScript.variableDB_.getName(
-        this.getTitle_('VAR').id,
-        Blockly.Procedures.NAME_TYPE
-      );
-      const extraArgs = [];
-      for (let x = 0; x < this.currentParameterNames_.length; x++) {
-        extraArgs[x] =
-          Blockly.JavaScript.valueToCode(
-            this,
-            'ARG' + x,
-            Blockly.JavaScript.ORDER_COMMA
-          ) || 'null';
-      }
-      return [
-        `new Behavior(${name}, [${extraArgs.join(', ')}])`,
-        Blockly.JavaScript.ORDER_ATOMIC,
-      ];
-    };
-
-    Blockly.Blocks.behavior_definition =
-      Blockly.Block.createProcedureDefinitionBlock({
-        initPostScript(block) {
-          block.setHSV(136, 0.84, 0.8);
-          block.parameterNames_ = [i18n.thisSprite()];
-          block.parameterTypes_ = [Blockly.BlockValueType.SPRITE];
-          block.setUserVisible(false);
-        },
-        overrides: {
-          getVars(category) {
-            return {};
-          },
-          callType_: 'gamelab_behavior_get',
-        },
-      });
-
-    generator.behavior_definition = generator.procedures_defnoreturn;
-
-    Blockly.Procedures.DEFINITION_BLOCK_TYPES.push('behavior_definition');
-    Blockly.Variables.registerGetter(
-      Blockly.BlockValueType.BEHAVIOR,
-      'gamelab_behavior_get'
     );
 
     // NOTE: On the page where behaviors are created (the functions/#/edit page)

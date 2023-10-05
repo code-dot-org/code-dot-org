@@ -61,6 +61,7 @@ def get_social_metadata_for_page(request)
     ai: {path: "/shared/images/social-media/ai-social.png", width: 1200, height: 630},
     ai_101: {path: "/shared/images/social-media/ai-101-social.png", width: 1200, height: 630},
     ai_how_ai_works: {path: "/shared/images/social-media/ai-how-ai-works-social.png", width: 1200, height: 630},
+    hoc_2023_social: {path: "/shared/images/social-media/hoc2023_social.png", width: 1200, height: 630},
   }
 
   # Important:
@@ -76,9 +77,9 @@ def get_social_metadata_for_page(request)
     },
     "hourofcode.com" => {
       "default" => {
-        title: hoc_s(:social_hoc_anybody),
-        description: hoc_s(:social_hoc2022_explore_play_create),
-        image: images[:hoc_2022_social]
+        title: hoc_s(:hoc2023_social_creativity_with_ai_title),
+        description: hoc_s(:hoc2023_social_creativity_with_ai_desc),
+        image: images[:hoc_2023_social]
       }
     },
     "challenge" => {
@@ -150,9 +151,9 @@ def get_social_metadata_for_page(request)
     },
     "learn" => {
       "default" => {
-        title: hoc_s(:social_hoc_anybody),
-        description: hoc_s(:social_hoc2022_explore_play_create),
-        image: images[:hoc_2022_social]
+        title: hoc_s(:hoc2023_social_creativity_with_ai_title),
+        description: hoc_s(:hoc2023_social_creativity_with_ai_desc),
+        image: images[:hoc_2023_social]
       }
     },
     "hoc-overview" => {

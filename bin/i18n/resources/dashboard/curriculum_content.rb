@@ -1,10 +1,13 @@
-require_relative 'curriculum_content/sync_in'
+require_relative '../../i18n_script_utils'
+
+Dir[File.expand_path('../curriculum_content/**/*.rb', __FILE__)].sort.each {|file| require file}
 
 module I18n
   module Resources
     module Dashboard
       module CurriculumContent
-        I18N_SOURCE_FILE_PATH = CDO.dir(File.join(I18N_SOURCE_DIR, 'curriculum_content')).freeze
+        DIR_NAME = 'curriculum_content'.freeze
+        I18N_SOURCE_DIR_PATH = CDO.dir(I18N_SOURCE_DIR, DIR_NAME).freeze
         REDACT_RESTORE_PLUGINS = %w[resourceLink vocabularyDefinition].freeze
 
         def self.sync_in

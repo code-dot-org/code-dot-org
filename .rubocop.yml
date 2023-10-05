@@ -43,6 +43,12 @@ Layout/FirstParameterIndentation:
 Layout/MultilineMethodCallBraceLayout:
   EnforcedStyle: new_line
 
+Layout/MultilineMethodCallIndentation:
+  EnforcedStyle: indented
+
+Layout/MultilineOperationIndentation:
+  EnforcedStyle: indented
+
 Layout/ParameterAlignment:
   EnforcedStyle: with_fixed_indentation
 
@@ -65,6 +71,9 @@ Rails/AssertNot:
 
 Rails/Date:
   EnforcedStyle: strict
+
+Rails/RefuteMethods:
+  EnforcedStyle: refute
 
 Style/AccessModifierDeclarations:
   EnforcedStyle: inline

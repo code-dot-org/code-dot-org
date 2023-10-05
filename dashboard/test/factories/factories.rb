@@ -1518,16 +1518,6 @@ FactoryBot.define do
     school_type {SchoolInfo::SCHOOL_TYPE_PUBLIC}
     name {"A seattle public school"}
     with_district
-
-    state_school_id {School.construct_state_school_id(state, school_district.try(:id), id)}
-
-    trait :without_state_school_id do
-      state_school_id {nil}
-    end
-
-    trait :with_invalid_state_school_id do
-      state_school_id {"123456789"}
-    end
   end
 
   factory :private_school, parent: :school_common do
@@ -1783,6 +1773,28 @@ FactoryBot.define do
   factory :rubric do
     association :lesson
     association :level
+
+    trait :with_teacher_evaluations do
+      transient do
+        num_learning_goals {1}
+        num_evaluations_per_goal {1}
+        teacher {create :teacher}
+        student {create :student}
+      end
+
+      after(:create) do |rubric, evaluator|
+        evaluator.num_learning_goals.times do
+          create(
+            :learning_goal,
+            :with_teacher_evaluations,
+            rubric: rubric,
+            num_evaluations: evaluator.num_evaluations_per_goal,
+            teacher: evaluator.teacher,
+            student: evaluator.student
+          )
+        end
+      end
+    end
   end
 
   factory :learning_goal do
@@ -1790,11 +1802,40 @@ FactoryBot.define do
     position {0}
     learning_goal {"Test Learning Goal"}
     ai_enabled {false}
+
+    trait :with_teacher_evaluations do
+      transient do
+        num_evaluations {1}
+        teacher {create :teacher}
+        student {create :student}
+      end
+
+      after(:create) do |learning_goal, evaluator|
+        evaluator.num_evaluations.times do
+          create(
+            :learning_goal_evaluation,
+            learning_goal: learning_goal,
+            teacher: evaluator.teacher,
+            user: evaluator.student
+          )
+        end
+      end
+    end
   end
 
   factory :learning_goal_evidence_level do
     association :learning_goal
     understanding {0}
     teacher_description {"Description for teacher"}
+  end
+
+  factory :learning_goal_evaluation do
+    association :learning_goal
+  end
+
+  factory :learning_goal_ai_evaluation do
+    association :learning_goal
+    association :user, factory: :student
+    understanding {0}
   end
 end

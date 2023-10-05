@@ -11,7 +11,7 @@ video_player: true
 .tools-banner
   .tools-img-box
     %img.tools-img.tools-img-gamelab{src: CDO.code_org_url("/shared/images/courses/logo_gamelab_square.png")}
-  .tools-info.green{style: "max-width: 738px;"}
+  .tools-info.green{style: "max-width: 715px;"}
     .tools-title-bar.green
       %h1.tools-title Sprite Lab
     .tools-description
@@ -24,8 +24,8 @@ video_player: true
 
 
 #challenges
-  %h1 Sample Projects
-  %h2 Explore these sample projects or change the code to make them your own.
+  %h2 Sample Projects
+  %h3.heading-sm Explore these sample projects or change the code to make them your own.
   .highlights-content
     - cta = "Remix the project"
     = view :highlight_item, item: {image: "spritelab/rikki", title: "About Me", desc: "Click the sprites to learn more about me.", cta: cta, url: 'https://studio.code.org/s/coursee-2022/lessons/5/levels/1'}
@@ -35,7 +35,7 @@ video_player: true
   .clear
 
 #videos
-  %h1 Video library
+  %h2 Video library
   These videos appear in
   %a{href: "/curriculum/csf/"}
     CS Fundamentals
@@ -58,20 +58,19 @@ video_player: true
       = view :display_video_thumbnail, id: video[:id],  video_code:video[:code], caption: video[:caption], play_button: 'center', download_path: video[:download_path], letterbox: 'false'
       - unless video[:studio_stage].nil_or_empty?
         %a{href: CDO.studio_url(video[:studio_stage])} Try it now
-        .clear
-
+  .clear
 
 #resources
-  %h1 Resources
-  %h2 Try the Computer Science Fundamentals courses that introduce Sprite Lab
+  %h2 Resources
+  %h3.heading-sm Try the Computer Science Fundamentals courses that introduce Sprite Lab
 
 <div class="col-50" style="padding-right: 20px;">
-<div style="height:50px;padding-left: 20px; background-image: url('/images/458x70/blue.png');border-radius: 5% 5% 0% 0%;">
-<h2 style="color:white;line-height: 50px;"> Course E </h2>
+<div style="background: #0393ca; padding: 0.05rem 1rem; margin: 1rem 0;">
+<h4 style="color:white;"> Course E </h4>
 
 </div>
 
-<div style="border-width:1px;"">
+<div style="border-width:1px;">
 
 <p><strong>Grade:</strong> 4th</p>
 In the first part of this course, students will learn to make fun, interactive projects that reinforce what they’ll learn about online safety.
@@ -84,8 +83,8 @@ In the first part of this course, students will learn to make fun, interactive p
 </div>
 
 <div class="col-50" style="padding-right: 20px;">
-<div style="height:50px;padding-left: 20px; background-image: url('/images/458x70/purple.png');border-radius: 5% 5% 0% 0%;">
-<h2 style="color:white;line-height: 50px;"> Course F </h2>
+<div style="background: #7663a0; padding: 0.05rem 1rem; margin: 1rem 0;">
+<h4 style="color:white;"> Course F </h4>
 </div>
 
 <div>

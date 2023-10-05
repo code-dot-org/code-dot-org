@@ -1038,11 +1038,11 @@ StudioApp.prototype.addChangeHandler = function (newHandler) {
   this.changeHandlers.push(newHandler);
 };
 
-StudioApp.prototype.runChangeHandlers = function () {
+StudioApp.prototype.runChangeHandlers = function (e) {
   if (!this.changeHandlers) {
     return;
   }
-  this.changeHandlers.forEach(handler => handler());
+  this.changeHandlers.forEach(handler => handler(e));
 };
 
 StudioApp.prototype.setupChangeHandlers = function () {
@@ -1242,9 +1242,14 @@ StudioApp.prototype.initReadonly = function (options) {
 /**
  * Load the editor with blocks.
  * @param {string} source Text representation of blocks (XML or JSON).
+ * @param {string | undefined} hiddenDefinitions Text representation of hidden procedure definitions (JSON)
  */
-StudioApp.prototype.loadBlocks = function (source) {
-  Blockly.cdoUtils.loadBlocksToWorkspace(Blockly.mainBlockSpace, source);
+StudioApp.prototype.loadBlocks = function (source, hiddenDefinitions) {
+  Blockly.cdoUtils.loadBlocksToWorkspace(
+    Blockly.mainBlockSpace,
+    source,
+    hiddenDefinitions
+  );
 };
 
 /**
@@ -2114,7 +2119,6 @@ StudioApp.prototype.configureDom = function (config) {
       // Modify the arrangement of toolbox blocks so categories align left
       if (config.level.edit_blocks === TOOLBOX_EDIT_MODE) {
         this.blockYCoordinateInterval = 80;
-        config.blockArrangement = {category: {x: 20}};
       }
       // Enable if/else, param & var editing in levelbuilder, regardless of level setting
       config.level.disableIfElseEditing = false;
@@ -2733,8 +2737,12 @@ StudioApp.prototype.setStartBlocks_ = function (config, loadLastAttempt) {
     loadLastAttempt = false;
   }
   var startBlocks = config.level.startBlocks || '';
+  // TODO: When we start using json in levelbuilder, we will need to pull this from the level config.
+  // For now, if we aren't loading last attempt hidden definitions will always be undefined.
+  let startHiddenDefinitions = undefined;
   if (loadLastAttempt && config.levelGameName !== 'Jigsaw') {
     startBlocks = config.level.lastAttempt || startBlocks;
+    startHiddenDefinitions = config.level.hiddenDefinitions;
   }
 
   let isXml = stringIsXml(startBlocks);
@@ -2763,7 +2771,7 @@ StudioApp.prototype.setStartBlocks_ = function (config, loadLastAttempt) {
     );
   }
   try {
-    this.loadBlocks(startBlocks);
+    this.loadBlocks(startBlocks, startHiddenDefinitions);
   } catch (e) {
     if (loadLastAttempt) {
       try {
@@ -2833,6 +2841,7 @@ StudioApp.prototype.handleUsingBlockly_ = function (config) {
   }
 
   var div = document.getElementById('codeWorkspace');
+  // TODO: How many of these options apply to modal function editor?
   var options = {
     toolbox: config.level.toolbox,
     disableIfElseEditing: utils.valueOr(

@@ -7,7 +7,7 @@ require 'cdo/cookie_helpers'
 require 'cdo/language_dir'
 require_relative './helpers/analytics_constants'
 
-def avatar_image(name, width=320, square_photo=false)
+def avatar_image(name, width = 320, square_photo = false)
   basename = name.downcase.gsub(/\W/, '_').squeeze('_')
   path = resolve_image("images/avatars/#{basename}")
   return nil unless path
@@ -16,7 +16,7 @@ def avatar_image(name, width=320, square_photo=false)
   "/images/#{dimensions}/avatars/#{File.basename(path)}"
 end
 
-def authentication_required!(url=request.url)
+def authentication_required!(url = request.url)
   dont_cache
   return if dashboard_user_helper
   redirect((request.scheme || 'http') + ':' + CDO.studio_url("/users/sign_in?user_return_to=#{url}"), 302)
@@ -26,7 +26,7 @@ def dont_cache
   cache_control(:private, :must_revalidate, max_age: 0)
 end
 
-def cache_for(seconds, proxy_seconds=nil)
+def cache_for(seconds, proxy_seconds = nil)
   proxy_seconds ||= seconds / 2
   cache_control(:public, :must_revalidate, max_age: seconds, s_maxage: proxy_seconds)
 end

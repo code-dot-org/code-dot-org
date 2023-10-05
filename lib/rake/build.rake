@@ -14,8 +14,8 @@ namespace :build do
       # Only rebuild if any of the apps_build_trigger_paths have changed since last build.
       commit_hash = apps_dir('build/commit_hash')
       if !RakeUtils.git_staged_changes?(*apps_build_trigger_paths) &&
-        File.exist?(commit_hash) &&
-        File.read(commit_hash) == calculate_apps_commit_hash
+          File.exist?(commit_hash) &&
+          File.read(commit_hash) == calculate_apps_commit_hash
 
         ChatClient.log '<b>apps</b> unchanged since last build, skipping.'
         next
@@ -105,12 +105,12 @@ namespace :build do
           RakeUtils.git_push
         end
 
-        if rack_env?(:staging)
-          # This step will only complete successfully if we succeed in
-          # generating all curriculum PDFs.
-          ChatClient.log "Generating missing pdfs..."
-          RakeUtils.rake_stream_output 'curriculum_pdfs:generate_missing_pdfs'
-        end
+        # if rack_env?(:staging)
+        #  This step will only complete successfully if we succeed in
+        #  generating all curriculum PDFs.
+        #  ChatClient.log "Generating missing pdfs..."
+        #  RakeUtils.rake_stream_output 'curriculum_pdfs:generate_missing_pdfs'
+        # end
       end
 
       # Skip asset precompile in development.

@@ -27,7 +27,7 @@ describe('EvidenceLevels', () => {
     );
     expect(wrapper.find('Heading6').length).to.equal(0);
     expect(wrapper.find('Memo(RadioButton)').length).to.equal(0);
-    expect(wrapper.find('BodyTwoText').length).to.equal(2);
-    expect(wrapper.find('BodyThreeText').length).to.equal(2);
+    // Two BodyThreeText per evidence level
+    expect(wrapper.find('BodyThreeText').length).to.equal(4);
   });
 });

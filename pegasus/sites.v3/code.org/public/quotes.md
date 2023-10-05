@@ -3,21 +3,38 @@ title: Quotes on computer science - What leaders and trendsetters have to say
 theme: responsive
 style_min: true
 ---
+
+<style>
+  h3 {
+    font-family: var(--gotham-bold);
+    font-size: 1.25rem;
+    line-height: 1.40;
+    margin-bottom: 0.5em;
+  }
+
+  h4 {
+    font-family: var(--gotham-bold);
+    font-size: 1rem;
+    line-height: 1.48;
+    margin-bottom: 0.5em;
+  }
+</style>
+
 <div id="clear" style="clear:both"></div>
 
 <div class="container_responsive">
 <h1>Leaders and trendsetters all agree on one thing</h1>
 <p>
-<h3>See what world leaders, celebrities, politicians, business titans, and more have to say about the importance of computer science.</h3>
+<h2 class="heading-sm">See what world leaders, celebrities, politicians, business titans, and more have to say about the importance of computer science.</h2>
 <p>
 <p style="text-align:center">
-<img src="/images/people/quote-malala.jpg" width="420" style="float: left; margin-right: 1%; margin-bottom: 0.5em;"> 
-<img src="/images/people/quote-obama.jpg" width="420" style="float: left; margin-right: 1%; margin-bottom: 0.5em;"> 
+<img src="/images/people/quote-malala.jpg" width="420" style="float: left; margin-right: 1%; margin-bottom: 0.5em;">
+<img src="/images/people/quote-obama.jpg" width="420" style="float: left; margin-right: 1%; margin-bottom: 0.5em;">
 <p>
-<img src="/images/people/quote-steph.jpg" width="420" style="float: left; margin-right: 1%; margin-bottom: 0.5em;"> 
-<img src="/images/people/quote-karlie.jpg" width="420" style="float: left; margin-right: 1%; margin-bottom: 0.5em;"> 
+<img src="/images/people/quote-steph.jpg" width="420" style="float: left; margin-right: 1%; margin-bottom: 0.5em;">
+<img src="/images/people/quote-karlie.jpg" width="420" style="float: left; margin-right: 1%; margin-bottom: 0.5em;">
 <p style="clear: both;">
-<p><h3>Check out quotes from: <a href="#Celebrities">Celebrities, Artists, and Athletes</a> | <a href="#Business">Technology and Business Experts</a> | <a href="#Education">Education and Science Leaders</a> | <a href="#Politicians">Politicians</a></h3></p>
+<p class="body-one">Check out quotes from: <a href="#Celebrities">Celebrities, Artists, and Athletes</a> | <a href="#Business">Technology and Business Experts</a> | <a href="#Education">Education and Science Leaders</a> | <a href="#Politicians">Politicians</a></p>
 <h2 id="Celebrities">Celebrities, Artists, and Athletes</h2>
 <div class="row" style="margin-bottom: 20px;"></div>
 <div class="col-50 left" id="block" style=" width: 50%; margin-bottom: 10px;">
@@ -62,10 +79,10 @@ Any machine that you're using has code that was developed by human beings. If yo
 Steph Curry
 </h3>
 <h4 style="margin-top: 2px; margin-bottom: 5px; font-weight: 400; padding: 1px;">
-Three-time NBA Champion 
+Three-time NBA Champion
 </h4>
 <p style="padding-right:10px;">
-If you want to create and be a visionary, you're probably going to be working with technology in some way. 
+If you want to create and be a visionary, you're probably going to be working with technology in some way.
 </p>
 </div>
 </div>

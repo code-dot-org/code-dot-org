@@ -31,7 +31,7 @@
     },
     "new_name": null,
     "family_name": "coursef",
-    "serialized_at": "2023-07-25 23:05:54 UTC",
+    "serialized_at": "2023-09-14 18:37:45 UTC",
     "published_state": "stable",
     "instruction_type": "teacher_led",
     "instructor_audience": "teacher",
@@ -9860,6 +9860,15 @@
     }
   ],
   "lessons_opportunity_standards": [
+
+  ],
+  "rubrics": [
+
+  ],
+  "learning_goals": [
+
+  ],
+  "learning_goal_evidence_levels": [
 
   ]
 }

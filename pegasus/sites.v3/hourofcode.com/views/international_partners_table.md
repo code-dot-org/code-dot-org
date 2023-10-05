@@ -5,8 +5,10 @@
 |Antigua and Barbuda|iLabGlobal & Caribbean Tech Genius Foundation|Makŏ Williams|mako@iLabGlobal.com<br>https://ilabglobal.com/<br>http://techgenius.edu.ag/|
 |Argentina|NUCBA|Luciano D'Amico|info@nucba.com.ar<br>http://www.nucba.com.ar|
 |Australia|Grok Academy|Lisette Tennant|https://groklearning.com|
+|Botswana|CSEdBotswana|Dr. Ethel Tshukudu|ethel.tshukudu01@gmail.com<br>https://www.csedbotswana.org/|
 |Brazil|Codifica Ed Tech||contato@codificaedu.com.br<br>http://www.codificaedu.com.br/|
 |Brazil|Fundação Telefônica Vivo - Programaê!||http://programae.org.br/horadocodigo/|
+|Bulgaria|Creators Labs|Kristian Georgiev|hello@creatorslab.org<br>https://creatorslabs.org/|
 |Cambodia|Kawsang||https://www.kawsang.com/|
 |Canada|Actua||teachers@actua.ca<br>http://www.actua.ca|
 |Canada|Canada Learning Code||https://www.canadalearningcode.ca|
@@ -26,6 +28,7 @@
 |Hong Kong|IAMAI Academy (Hong Kong) Ltd|Johnson Chu|johnson.chu@iamai.hk<br>http://www.iamai.hk|
 |Hong Kong|Idea Maker HK|Henry Lee|henrylee@i3dprinter.com.hk<br>http://www.ideamakerhk.com|
 |India|Asha for Education, Chennai Chapter|Rajaraman Krishnan|chennai@ashanet.org<br>https://chennai.ashanet.org/|
+|India|Aveti Learning|Sibabrata Choudhury|siba@shikhya.org<br>https://avetilearning.com/|
 |India|Be Cre8v||sandeep@becre8v.com<br>http://www.becre8v.com|
 |India|CodeTigers|Sandeep Sheokand|sandeep@codetigers.com<br>https://www.codetigers.com|
 |India|Developer Circle Indore|Mrinal Jain|jain.mrinal140@gmail.com<br>https://www.facebook.com/groups/DevCIndore/|
@@ -34,7 +37,9 @@
 |India|NatureNurture||info@naturenurture.in<br>https://www.naturenurture.in|
 |India|Nirmaan|Swati Vempati|contact@nirmaan.org<br>https://www.nirmaan.org|
 |India|Pi Jam Foundation|Shoaib Dar|shoaib.dar@thepijam.org<br>http://www.thepijam.org|
+|India|upEducators|Ankush Bhandari|ankushb@upeducators.com<br>https://www.upeducators.com/|
 |Indonesia|Coding Bee Academy|Eko Haripin|hello@codingbee.org<br>http://www.codingbee.org|
+|Indonesia|Diginusa Kompas Gramedia||marketingdiginusa@gmail.com<br>www.diginusa.com|
 |Iraq|ABCode|Batool Hussain|ABcode.global@gmail.com|
 |Israel|Wix|Yossi Hayut|yossih@wix.com<br>http://www.wix.com|
 |Italy|Programma il Futuro|Enrico Nardelli|didattica@programmailfuturo.it<br>https://programmailfuturo.it|
@@ -42,13 +47,14 @@
 |Japan|特定非営利活動法人みんなのコード (Code for Everyone)|利根川 裕太 (Yuta Tonegawa)|info@code.or.jp|
 |Kenya|Uzima Aid|Gideon Ochieng'|gideon.ochieng@uzimaid.org<br>http://www.uzimaid.org/|
 |Latin America|Eidos Global|Marina Puente Pistarini|marina@eidosglobal.org<br>https://www.eidosglobal.org/|
+|Malaysia|Chumbaka|Nigel Sim|nigel@chumbaka.asia<br>www.chumbaka.asia|
 |Malaysia|Malaysia Digital Economy Corporation (MDEC)|Sofia Akmal Abu Bakar|sofia@mdec.com.my<br>https://mdec.my/|
 |Malaysia|Telebort|Chong Wei|mytelebort@gmail.com<br>https://www.telebort.com/|
 |Maldives|Women in Tech Maldives|Aishath Adnan|info@womenintechmv.org<br>https://www.womenintechmv.org/|
 |Mexico|Colegio Nikola Tesla|Larisa Hinojosa|http://nikolatesla.edu.mx|
 |México|Cuantrix - Fundación Televisa|Ilse Alvarez|ilse.alvarez@fundaciontelevisa.org<br>www.cuantrix.mx|
 |Mongolia|Codercub|Zolbayar Magsar|info@computerscience.mn<br>http://www.computerscience.mn/|
-|Myanmar|Thate Pan Hub|Min Aung Thu|strategic@thatepanhub.org<br>https://www.thatepanhub.org|
+|Myanmar|Thate Pan Hub|Min Aung Thu|strategic@thatepanhub.org<br>https://thatepanhub.org/|
 |Nepal|Adhyayan School|Sandeep Sharma|sandeep.sharma@adhyayan.edu.np<br>http://adhyayan.edu.np|
 |New Zealand (Aotearoa)|OMGTech!|Education Team @ OMGTech!|schools@omgtech.co.nz<br>https://omgtech.co.nz|
 |New Zealand|Ara Institute of Canterbury|Amitrajit Sarkar|sarkara@cpit.ac.nz<br>http://www.ara.ac.nz|
@@ -74,6 +80,7 @@
 |South Korea|Korea Information Science Education Federation|Soohwan Kim|hwankim92@gmail.com<br>http://kcode.kr|
 |Spain|Asociación Andaluza de Profesores de Informática|Santiago Fernández-Cabaleiro|santiagocabaleiro@gmail.com<br>http://www.aapri.es|
 |Spain|Informatics Faculty - University of the Basque Country (UPV/EHU)|Edurne Larraza Mendiluze|edurne.larraza@ehu.eus<br>https://www.ehu.eus/en/web/informatika-fakultatea/home|
+|Sri Lanka|Spectrum Institute of Science & Technology|Dinu Ravindra|dinu@spectrumcampus.edu.lk<br>https://www.spectrumcampus.edu.lk/|
 |Sri Lanka|STEMUP Educational Foundation|Prabhath Mannapperuma|prabhath@stemup.foundation<br>http://stemup.lk|
 |Taiwan|Junyi Academy|Ray Lu|support@junyiacademy.org<br>https://www.junyiacademy.org|
 |Taiwan|Women Who Code Taipei|Jane Shih|janeshih@womenwhocode.com<br>https://www.womenwhocode.com/taipei|

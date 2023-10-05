@@ -10,7 +10,7 @@ class ProjectCommitsControllerTest < ActionController::TestCase
       post :create, params: {storage_id: 'abcdef', version_id: 'fghj', comment: 'This is a comment'}
     end
     project_commit = ProjectCommit.find_by(project_id: 654, object_version_id: 'fghj')
-    assert_not_nil project_commit
+    refute_nil project_commit
     assert_equal 'This is a comment', project_commit.comment
   end
 
@@ -33,7 +33,7 @@ class ProjectCommitsControllerTest < ActionController::TestCase
 
     returned_commits = JSON.parse(@response.body)
     assert_equal 3, returned_commits.length
-    assert_equal ['First comment', 'Second comment', 'Third comment'], returned_commits.map {|c| c['comment']}
+    assert_equal(['First comment', 'Second comment', 'Third comment'], returned_commits.map {|c| c['comment']})
   end
 
   test "can fetch project commits and blank comments are filtered out" do
@@ -55,7 +55,7 @@ class ProjectCommitsControllerTest < ActionController::TestCase
 
     returned_commits = JSON.parse(@response.body)
     assert_equal 2, returned_commits.length
-    assert_equal ['First comment', 'Third comment'], returned_commits.map {|c| c['comment']}
+    assert_equal(['First comment', 'Third comment'], returned_commits.map {|c| c['comment']})
   end
 
   test "can fetch project commits of students project if their teacher" do
