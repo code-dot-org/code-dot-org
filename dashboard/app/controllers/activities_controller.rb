@@ -33,8 +33,10 @@ class ActivitiesController < ApplicationController
       @level = Unit.cache_find_level(params[:level_id].to_i)
     end
 
-    if ai_eval_enabled?(@script_level) && params[:submitted] == 'true'
-      EvaluateRubricJob.perform_later(user_id: current_user.id, script_level_id: @script_level.id)
+    # If a student is submitting work on an AI-evaluation-enabled level, trigger the AI evaluation job.
+    lesson_s3_name = EvaluateRubricJob::UNIT_AND_LEVEL_TO_LESSON_S3_NAME[@script_level&.script&.name].try(:[], @script_level&.level&.name)
+    if lesson_s3_name && params[:submitted] == 'true'
+      EvaluateRubricJob.perform_later(user_id: current_user.id, script_level_id: @script_level.id, lesson_s3_name: lesson_s3_name)
     end
 
     # Immediately return with a "Service Unavailable" status if milestone posts are
@@ -247,10 +249,5 @@ class ActivitiesController < ApplicationController
     log_string += "\t#{request.user_agent}"
 
     milestone_logger.info log_string
-  end
-
-  private def ai_eval_enabled?(script_level)
-    # CSD 2023, Unit 3, Lesson 18, final project level
-    script_level && script_level.script.name == 'csd3-2023' && script_level.level.name == 'CSD U3 Interactive Card Final_2023'
   end
 end
