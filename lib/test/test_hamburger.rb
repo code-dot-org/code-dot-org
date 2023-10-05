@@ -184,6 +184,6 @@ class HamburgerTest < Minitest::Test
 
   def test_header_content_nobody_nonen
     contents = Hamburger.get_header_contents({user_type: nil, language: "fr"})
-    assert_includes_id contents, "header-non-en-projects"
+    assert_includes_id contents, "header-projects"
   end
 end

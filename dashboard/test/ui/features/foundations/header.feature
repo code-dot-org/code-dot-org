@@ -85,5 +85,5 @@ Scenario: Teacher in Spanish should see 5 header links
   And element "#header-teacher-courses" has "es" text from key "nav.header.course_catalog"
   And I see "#header-teacher-projects"
   And element "#header-teacher-projects" has "es" text from key "nav.header.project_gallery"
-  And I see "#header-about"
-  And element "#header-about" has "es" text from key "nav.header.about"
+  And I see "#header-non-en-about"
+  And element "#header-non-en-about" has "es" text from key "nav.header.about"
