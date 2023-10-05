@@ -271,13 +271,17 @@ export const blocks = {
     return {
       addInput(blockly, block, inputConfig, currentInputRow) {
         {
+          const dropdownField = new Blockly.FieldDropdown(
+            getAllBehaviorOptions
+          );
+          const behaviorsFound =
+            dropdownField.getOptions().length > 1 ||
+            dropdownField.getOptions()[0][1] !== NO_OPTIONS_MESSAGE;
           currentInputRow
             .appendField(inputConfig.label)
-            .appendField(
-              new Blockly.FieldDropdown(getAllBehaviors, undefined, undefined),
-              inputConfig.name
-            );
+            .appendField(dropdownField, inputConfig.name);
           if (
+            behaviorsFound &&
             window.appOptions && // global appOptions is not available on level edit page
             appOptions.level.toolbox &&
             !appOptions.readonlyWorkspace &&
@@ -285,13 +289,13 @@ export const blocks = {
             block.inputList.length &&
             !block.workspace.isFlyout
           ) {
-            const button = new Blockly.FieldButton({
+            const editButton = new Blockly.FieldButton({
               value: msg.edit(),
               onClick: editButtonHandler,
               colorOverrides: {button: 'blue', text: 'white'},
             });
             block.inputList[block.inputList.length - 1].appendField(
-              button,
+              editButton,
               'EDIT'
             );
           }
@@ -352,15 +356,17 @@ function onBlockImageSourceChange(event, block) {
 }
 // Get a list of behavior options for a dropdown field, based on
 // blocks found on the main workspace.
-function getAllBehaviors() {
-  let allowBehaviorEditing = Blockly.useModalFunctionEditor;
-  const noBehaviorLabel = allowBehaviorEditing
-    ? `${msg.createBlocklyBehavior()}\u2026`
-    : msg.behaviorsNotFound();
+function getAllBehaviorOptions() {
+  const noBehaviorLabel = msg.behaviorsNotFound();
   const behaviorBlocks = [];
   Blockly.Workspace.getAll().forEach(workspace => {
     behaviorBlocks.push(
-      ...workspace.getTopBlocks().filter(block => block.behaviorId)
+      ...workspace
+        .getTopBlocks()
+        .filter(
+          block =>
+            block.type === 'behavior_definition' && !block.workspace.isFlyout
+        )
     );
   });
   const behaviorOptions = behaviorBlocks.map(block => [
@@ -368,8 +374,8 @@ function getAllBehaviors() {
     block.getProcedureModel().name,
   ]);
   behaviorOptions.sort();
-  // Add a "Create a behavior" or "No behaviors found" option
-  if (allowBehaviorEditing || behaviorOptions.length === 0) {
+  // Add a "No behaviors found" option, if needed
+  if (behaviorOptions.length === 0) {
     behaviorOptions.push([noBehaviorLabel, NO_OPTIONS_MESSAGE]);
   }
   return behaviorOptions;
