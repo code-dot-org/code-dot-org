@@ -134,12 +134,7 @@ const Notification = ({
             <FontAwesome icon={icons[type]} style={styles.icon} />
           </div>
         )}
-        <div
-          style={{
-            ...styles.contentBox,
-            width: dismissible ? 'calc( 100% - 100px)' : 'calc( 100% - 72px)',
-          }}
-        >
+        <div style={styles.contentBox}>
           <div style={styles.wordBox}>
             <div style={{...colorStyles, ...styles.notice}}>
               {notice}
@@ -171,7 +166,11 @@ const Notification = ({
               )}
             </div>
           </div>
-          <div style={desktop ? buttonsStyles : styles.buttonsMobile}>
+          <div
+            style={
+              desktop ? buttonsStyles : {...styles.buttonsMobile, buttonsStyles}
+            }
+          >
             {buttonText && buttonLink && (
               <Button
                 __useDeprecatedTag
