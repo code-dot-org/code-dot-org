@@ -102,7 +102,7 @@ const customInputTypes = {
 
 export default {
   customInputTypes,
-  install(blockly, blockInstallOptions) {
+  install(blockly) {
     Blockly.cdoUtils.registerCustomProcedureBlocks();
     // Legacy style block definitions :(
     const generator = blockly.getGenerator();

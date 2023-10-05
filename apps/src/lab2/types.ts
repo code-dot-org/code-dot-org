@@ -101,6 +101,7 @@ export interface LevelProperties {
   isK1?: boolean;
   skin?: string;
   toolboxBlocks?: string;
+  sharedBlocks?: any[]; // TODO: define this type
 }
 
 // Level configuration data used by project-backed labs that don't require

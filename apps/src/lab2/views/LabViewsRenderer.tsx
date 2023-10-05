@@ -6,7 +6,6 @@
 import AichatView from '@cdo/apps/aichat/views/AichatView';
 import DanceView from '@cdo/apps/dance/lab2/views/DanceView';
 import {setUpBlocklyForMusicLab} from '@cdo/apps/music/blockly/setup';
-import {setUpBlocklyForDanceLab} from '@cdo/apps/dance/blockly/setup';
 import MusicView from '@cdo/apps/music/views/MusicView';
 import StandaloneVideo from '@cdo/apps/standaloneVideo/StandaloneVideo';
 import classNames from 'classnames';
@@ -62,7 +61,6 @@ const appsProperties: {[appName in AppName]?: AppProperties} = {
     backgroundMode: false,
     node: <DanceView />,
     theme: Theme.LIGHT,
-    setupFunction: setUpBlocklyForDanceLab,
   },
 };
 
