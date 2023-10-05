@@ -1,0 +1,111 @@
+{
+  "art": {
+    "association": [3, 3, 2, 2, 3, 2, 2, 2, 2, 1, 2, 2, 2, 2, 2, 3, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2],
+    "explanation": "The word 'art' is closely associated with 'circles,' 'colors,' and 'paint splatter' backgrounds, which often feature artistic and vibrant patterns."
+  },
+  "astronaut": {
+    "association": [2, 2, 2, 3, 2, 2, 2, 2, 2, 3, 2, 2, 2, 2, 3, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2],
+    "explanation": "The word 'astronaut' is associated with 'circles,' 'colors,' and 'paint splatter' backgrounds, reflecting a futuristic and colorful space theme."
+  },
+  "atom": {
+    "association": [2, 2, 2, 3, 2, 2, 2, 2, 2, 3, 2, 2, 2, 2, 3, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2],
+    "explanation": "The word 'atom' is closely linked with 'circles,' 'colors,' and 'paint splatter' backgrounds, indicating a scientific and colorful pattern theme."
+  },
+  "bear": {
+    "association": [2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2],
+    "explanation": "The word 'bear' is associated with various backgrounds, but there's no strong association with any particular background."
+  },
+  "cactus": {
+    "association": [2, 2, 2, 3, 2, 2, 2, 2, 2, 3, 2, 2, 2, 2, 3, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2],
+    "explanation": "The word 'cactus' is associated with 'circles,' 'colors,' and 'paint splatter' backgrounds, representing a vibrant and colorful desert landscape."
+  },
+  "cloud": {
+    "association": [2, 2, 2, 2, 3, 2, 2, 2, 2, 3, 2, 2, 2, 2, 3, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2],
+    "explanation": "The word 'cloud' is closely linked with 'colors,' 'paint splatter,' and 'fireworks' backgrounds, symbolizing a combination of calm and vibrant patterns."
+  },
+  "cry": {
+    "association": [2, 2, 2, 2, 2, 2, 2, 2, 2, 3, 3, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2],
+    "explanation": "The word 'cry' is associated with 'circles,' 'colors,' and 'paint splatter' backgrounds, expressing emotional and vibrant feelings."
+  },
+  "cupcake": {
+    "association": [2, 2, 2, 3, 2, 3, 2, 2, 2, 3, 3, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2],
+    "explanation": "The word 'cupcake' is associated with 'circles,' 'colors,' and 'paint splatter' backgrounds, reflecting a colorful and sweet dessert theme."
+  },
+  "demon": {
+    "association": [2, 2, 2, 2, 2, 2, 2, 2, 2, 3, 3, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2],
+    "explanation": "The word 'demon' is associated with 'circles,' 'colors,' and 'paint splatter' backgrounds, representing a mix of dark and vibrant elements."
+  },
+  "diamond": {
+    "association": [2, 2, 2, 3, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2],
+    "explanation": "The word 'diamond' is associated with 'circles,' 'colors,' and 'paint splatter' backgrounds, symbolizing a combination of luxury and vibrant patterns."
+  },
+  "dog": {
+    "association": [2, 2, 2, 3, 2, 2, 2, 2, 2, 3, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2],
+    "explanation": "The word 'dog' is associated with 'circles,' 'colors,' and 'paint splatter' backgrounds, expressing a friendly and colorful atmosphere."
+  },
+  "flower": {
+    "association": [2, 2, 2, 3, 2, 2, 2, 2, 2, 3, 2, 2, 2, 2, 3, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2],
+    "explanation": "The word 'flower' is associated with 'circles,' 'colors,' and 'paint splatter' backgrounds, symbolizing a mix of nature and vibrant patterns."
+  },
+  "guitar": {
+    "association": [2, 2, 2, 3, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2],
+    "explanation": "The word 'guitar' is associated with 'circles,' 'colors,' and 'paint splatter' backgrounds, reflecting a combination of music and vibrant patterns."
+  },
+  "heart": {
+    "association": [3, 3, 2, 3, 3, 2, 3, 2, 2, 1, 3, 2, 3, 2, 2, 3, 2, 2, 2, 2, 3, 3, 2, 2, 3, 2, 2],
+    "explanation": "The word 'heart' is associated with 'circles,' 'colors,' 'fireworks,' and 'stars' backgrounds, symbolizing emotions and vibrant patterns."
+  },
+  "laugh": {
+    "association": [2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2],
+    "explanation": "The word 'laugh' is associated with various backgrounds, but there's no strong association with any particular background."
+  },
+  "lightning": {
+    "association": [2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2],
+    "explanation": "The word 'lightning' is associated with various backgrounds, but there's no strong association with any particular background."
+  },
+  "lion": {
+    "association": [2, 2, 2, 3, 2, 2, 2, 2, 2, 3, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2],
+    "explanation": "The word 'lion' is associated with 'circles,' 'colors,' and 'paint splatter' backgrounds, reflecting a combination of strength and vibrant patterns."
+  },
+  "owl": {
+    "association": [2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2],
+    "explanation": "The word 'owl' is associated with various backgrounds, but there's no strong association with any particular background."
+  },
+  "piano": {
+    "association": [2, 2, 2, 3, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2],
+    "explanation": "The word 'piano' is associated with 'circles,' 'colors,' and 'paint splatter' backgrounds, symbolizing a combination of music and vibrant patterns."
+  },
+  "planet": {
+    "association": [2, 2, 2, 3, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2],
+    "explanation": "The word 'planet' is associated with 'circles,' 'colors,' and 'paint splatter' backgrounds, symbolizing a sense of cosmic exploration and vibrant patterns."
+  },
+  "rabbit": {
+    "association": [2, 2, 2, 3, 2, 2, 2, 2, 2, 3, 2, 2, 2, 2, 3, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2],
+    "explanation": "The word 'rabbit' is associated with 'circles,' 'colors,' and 'paint splatter' backgrounds, reflecting a playful and colorful theme."
+  },
+  "rainbow": {
+    "association": [3, 3, 2, 3, 3, 2, 3, 3, 2, 1, 3, 2, 3, 2, 1, 3, 2, 2, 2, 2, 3, 3, 2, 2, 3, 2, 2],
+    "explanation": "The word 'rainbow' is associated with 'circles,' 'colors,' 'fireworks,' and 'stars' backgrounds, symbolizing a wide range of vibrant patterns."
+  },
+  "scared": {
+    "association": [2, 2, 2, 2, 2, 2, 2, 2, 2, 3, 3, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2],
+    "explanation": "The word 'scared' is associated with 'circles,' 'colors,' and 'paint splatter' backgrounds, expressing a mix of fear and vibrant patterns."
+  },
+  "seashell": {
+    "association": [2, 2, 2, 3, 2, 2, 2, 2, 2, 3, 2, 2, 2, 2, 3, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2],
+    "explanation": "The word 'seashell' is associated with 'circles,' 'colors,' and 'paint splatter' backgrounds, symbolizing a beachy and colorful theme."
+  },
+  "unicorn": {
+    "association": [3, 3, 2, 3, 3, 2, 3, 3, 2, 1, 3, 2, 3, 2, 1, 3, 2, 2, 2, 2, 3, 3, 2, 2, 3, 2, 2],
+    "explanation": "The word 'unicorn' is associated with 'circles,' 'colors,' 'fireworks,' and 'stars' backgrounds, representing a magical and vibrant theme."
+  },
+  "vampire": {
+    "association": [2, 2, 2, 2, 2, 2, 2, 2, 2, 3, 3, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2],
+    "explanation": "The word 'vampire' is associated with 'circles,' 'colors,' and 'paint splatter' backgrounds, expressing a blend of darkness and vibrant patterns."
+  },
+  "wolf": {
+    "association": [2, 2, 2, 3, 2, 2, 2, 2, 2, 3, 2, 2, 2, 2, 3, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2],
+    "explanation": "The word 'wolf' is associated with 'circles,' 'colors,' and 'paint splatter' backgrounds, symbolizing a combination of wildness and vibrant patterns."
+  },
+  "backgroundmap": ["circles", "angles", "colors", "diamonds", "disco ball", "fireworks", "flowers", "stars", "higher power", "hypno", "kaleidoscope", "laser dance floor", "paint splatter", "rainbow", "raindrops", "ripples", "snow", "song names", "squiggles", "space", "sparkles", "spiral", "squares", "waves"]
+}
