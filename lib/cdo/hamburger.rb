@@ -289,7 +289,7 @@ class Hamburger
       {title: I18n.t("#{loc_prefix}stats"), url: CDO.code_org_url("/promote"), id: "header-stats"},
       {title: I18n.t("#{loc_prefix}help_us"), url: CDO.code_org_url("/help"), id: "header-help"},
       {title: I18n.t("#{loc_prefix}incubator"), url: CDO.studio_url("/incubator"), id: "header-incubator"},
-      {title: I18n.t("#{loc_prefix}about"), url: CDO.code_org_url("/about"), id: "header-en-about"}
+      {title: I18n.t("#{loc_prefix}about"), url: CDO.code_org_url("/about"), id: "header-about"}
     ]
 
     about_intl = [
