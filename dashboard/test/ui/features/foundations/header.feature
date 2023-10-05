@@ -90,5 +90,5 @@ Scenario: Teacher in Spanish should see 5 header links
   And I see "#header-teacher-professional-learning"
   And element "#header-teacher-professional-learning" has "es" text from key "nav.header.professional_learning"
   And I see "#header-teacher-incubator"
-  And element "#header-teacher-incubator" has "es" text from key "nav.header.incubator
+  And element "#header-teacher-incubator" has "es" text from key "nav.header.incubator"
   
