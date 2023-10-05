@@ -216,15 +216,13 @@ class Hamburger
       id: "learn"
     }
 
-    if options[:language] == "en"
-      entries << {
-        type: "expander",
-        title: I18n.t("#{loc_prefix}teach"),
-        id: "educate_entries",
-        subentries: educate_entries.each {|e| e[:class] = visibility[:show_pegasus_options]},
-        class: visibility[:show_pegasus_options]
-      }
-    end
+    entries << {
+      type: "expander",
+      title: I18n.t("#{loc_prefix}teach"),
+      id: "educate_entries",
+      subentries: educate_entries.each {|e| e[:class] = visibility[:show_pegasus_options]},
+      class: visibility[:show_pegasus_options]
+    }
 
     entries << {
       title: I18n.t("#{loc_prefix}stats"),
