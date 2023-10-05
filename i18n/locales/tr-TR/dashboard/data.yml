@@ -726,6 +726,8 @@ tr:
         csa_sorting_algorithms: 'CSA: Sıralama Algoritmaları'
         star_quilts_intro_to_artist: 'Yıldız Yorganlar: Sanatçıya Giriş'
         upload_sprites_backgrounds: Özel Sprite ve Arka Planlar Yükleme
+        what-is-creativity: Yaratıcılık nedir?
+        code-break: Kodlamaya biraz ara verin
     callout:
       text:
         drag_blocks: '"taşı" bloğunu tutup diğer bloğun altına yapıştırın'

@@ -109,7 +109,7 @@ describe('TeacherHomepage', () => {
     );
   });
 
-  it('renders a MarketingAnnouncementBanner if isEnglish and specialAnnouncement exists', () => {
+  it('renders a MarketingAnnouncementBanner specialAnnouncement exists', () => {
     const specialAnnouncement = {
       title: 'An announcement',
       image: '/image',
@@ -118,7 +118,6 @@ describe('TeacherHomepage', () => {
       buttonText: 'press me',
     };
     const wrapper = setUp({
-      isEnglish: true,
       specialAnnouncement,
     });
     assert(wrapper.find('MarketingAnnouncementBanner').exists());
@@ -140,19 +139,19 @@ describe('TeacherHomepage', () => {
     assert(!wrapper.find('Notification').exists());
   });
 
+  it('renders CensusTeacherBanner if showCensusBanner is true', () => {
+    const wrapper = setUp({showCensusBanner: true});
+    assert(wrapper.find('CensusTeacherBanner').exists());
+  });
+
   /*
-    We have disabled the Census Banner on the Teacher Homepage (March 2023) to conserve
+    We have disabled the AFE Banner on the Teacher Homepage (September 2023) to conserve
     space. If we decide to show the banner again this test will need to be updated. See
     TeacherHomepage.jsx to make the banner show.
    */
-  it('does not render a CensusTeacherBanner even if showCensusBanner is true', () => {
-    const wrapper = setUp({showCensusBanner: true});
-    assert.equal(wrapper.find('CensusTeacherBanner').length, 0);
-  });
-
-  it('renders a DonorTeacherBanner if isEnglish and afeEligible is true', () => {
+  it('does not render a DonorTeacherBanner even if isEnglish and afeEligible are true', () => {
     const wrapper = setUp({isEnglish: true, afeEligible: true});
-    assert(wrapper.find('DonorTeacherBanner').exists());
+    assert(!wrapper.find('DonorTeacherBanner').exists());
   });
 
   it('renders a TeacherSections component', () => {

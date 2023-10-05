@@ -111,19 +111,19 @@ mk:
     свет.
   oceans_landing_videos: Видеа за АИ и Машинско учење
   oceans_behind_the_scenes: 'АИ за океаните: Зад сцената'
-  oceans_behind_the_scenes_1: Levels 2-4 use a pretrained model provided by the <a
-    href="https://www.tensorflow.org/" >TensorFlow</a> <a href="https://github.com/tensorflow/models/blob/master/research/slim/nets/mobilenet_v1.md">
-    MobileNet </a> project. A MobileNet model is a <a href="https://developers.google.com/machine-learning/practica/image-classification/convolutional-neural-networks">convolutional
-    neural network</a> that has been trained on <a href="http://www.image-net.org/">ImageNet</a>,
-    a dataset of over 14 million images hand-annotated with words such as "balloon"
-    or "strawberry". In order to customize this model with the labeled training data
-    the student generates in this activity, we use a technique called <a href="https://en.wikipedia.org/wiki/Transfer_learning">Transfer
-    Learning</a>. Each image in the training dataset is fed to MobileNet, as pixels,
-    to obtain a list of annotations that are most likely to apply to it. Then, for
-    a new image, we feed it to MobileNet and compare its resulting list of annotations
-    to those from the training dataset. We classify the new image with the same label
-    (such as "fish" or "not fish") as the images from the training set with the most
-    similar results.
+  oceans_behind_the_scenes_1: Нивоата 2-4 користат преквалификуван модел обезбеден
+    од проектот <a href="https://www.tensorflow.org/" >TensorFlow</a> <a href="https://github.com/tensorflow/models/blob/master/research/slim/nets/mobilenet_v1.md">
+    MobileNet. </a> Моделот MobileNet е <a href="https://developers.google.com/machine-learning/practica/image-classification/convolutional-neural-networks">конволуционална
+    нервна мрежа</a> која е обучена на <a href="http://www.image-net.org/">ImageNet</a>,
+    податочен сет од над 14 милиони слики рачно анотирани со зборови како “балон”
+    или “јагода”. Со цел да го прилагодиме овој модел со означените податоци за обука
+    кои ученикот ги генерира во оваа активност, користиме техника наречена <a href="https://en.wikipedia.org/wiki/Transfer_learning">Transfer
+    Learning.</a>Секоја слика во податочниот сет за обука се напојува на MobileNet,
+    како пиксели, за да се добие листа на прибелешки кои најверојатно ќе се применат
+    на него. Потоа, за нова слика, ја храниме со MobileNet и ја споредуваме нејзината
+    добиена листа на прибелешки со оние од податочниот сет за обука. Новата слика
+    ја класифицираме со истата етикета (како “риба” или “не риба”) како сликите од
+    тренинг сетот со најслични резултати.
   oceans_behind_the_scenes_1_markdown: Нивоата 2-4 користат преквалификуван модел
     обезбеден од проектот [TensorFlow](https://www.tensorflow.org/) [MobileNet](https://github.com/tensorflow/models/blob/master/research/slim/nets/mobilenet_v1.md).
     Моделот MobileNet е [конволуционална невронска мрежа] (https://developers.google.com/machine-learning/practica/image-classification/convolutional-neural-networks)
@@ -137,13 +137,13 @@ mk:
     на прибелешки со оние од податочниот сет за обука. Новата слика ја класифицираме
     со истата етикета (како “риба” или “не риба”) како сликите од тренинг сетот со
     најслични резултати.
-  oceans_behind_the_scenes_2: Levels 6-8 use a <a href="https://en.wikipedia.org/wiki/Support-vector_machine">Support-Vector
-    Machine</a> (SVM). We look at each component of the fish (such as eyes, mouth,
-    body) and assemble all of the metadata for the components (such as number of teeth,
-    body shape) into a vector of numbers for each fish. We use these vectors to train
-    the SVM. Based on the training data, the SVM separates the "space" of all possible
-    fish into two parts, which correspond to the classes we are trying to learn (such
-    as "blue" or "not blue").
+  oceans_behind_the_scenes_2: Нивоа 6-8 користат <a href="https://en.wikipedia.org/wiki/Support-vector_machine">поддршка
+    вектор машина (SVM).</a> Гледаме во секоја компонента на рибата (како што се очите,
+    устата, телото) и ги собираме сите метаподатоци за компонентите (како што се бројот
+    на забите, обликот на телото) во вектор на броеви за секоја риба. Ние ги користиме
+    овие вектори за обука на SVM. Врз основа на податоците од обуката, СВМ го одвојува
+    “просторот” на сите можни риби на два дела, кои одговараат на часовите што се
+    обидуваме да ги научиме (како “сино” или “не сино”).
   oceans_behind_the_scenes_2_markdown: Нивоа 6-8 користат [Поддршка-векторска машина]
     (https://en.wikipedia.org/wiki/Support-vector_machine) (SVM). Гледаме во секоја
     компонента на рибата (како што се очите, устата, телото) и ги собираме сите метаподатоци
@@ -190,6 +190,16 @@ mk:
   grade_level_label_elementary: Основно училиште
   grade_level_label_middle: Средно училиште
   grade_level_label_high: Средно училиште
+  curricula_title_elementary: Наставни програми за основно училиште
+  curricula_desc_elementary: Прелистајте ги забавните, бесплатни курсеви и активности
+    кои ве покануваат да истражувате компјутерски науки со вашите основци.
+  curricula_title_middle: Средно училиште Наставни програми
+  curricula_desc_middle: Прелистајте ги ангажирачките придонеси кои ви овозможуваат
+    на вас и вашите ученици од средното училиште да истражуваат компјутерски науки
+    заедно.
+  curricula_title_high: Средношколски наставни програми
+  curricula_desc_high: Прелистајте ги привлечните курсеви и активности кои ве покануваат
+    вас и вашите средношколци да копате подлабоко во компјутерските науки.
   students_label: Студенти
   teachers_label: Наставници
   teacher_label_csf: CS Основи наставник
@@ -199,6 +209,7 @@ mk:
   teacher_label_csa: AP® Computer Science A Teacher
   required_materials: 'Потребни материјали:'
   optional_materials: 'Факултативни материјали:'
+  call_to_action_explore_roles: Истражете ги отворените улоги
   call_to_action_learn_more: Научите повеќе
   call_to_action_watch_now: Гледајте сега
   call_to_action_try_activity: Пробајте активност
@@ -216,6 +227,15 @@ mk:
   call_to_action_explore_choice_level: Истражете го нивото на избор на пример
   call_to_action_explore_collection: Истражете ја колекцијата
   call_to_action_explore_unplugged_lesson: Истражете ги исклучените лекции
+  call_to_action_explore_csf: Истражете ги основите на CS
+  call_to_action_explore_csd: Истражете ги откритијата на CS
+  call_to_action_explore_csp: Истражете ги принципите на CS
+  call_to_action_explore_csc: Истражете CS врски
+  call_to_action_explore_csa: Истражете AP® компјутерски науки А
+  call_to_action_explore_csa_short: Истражете АП® АДС
+  call_to_action_explore_maker: Истражете ги наставните програми на создателот
+  call_to_action_explore_hoc: Истражете ги упатствата за час на кодот
+  call_to_action_explore_hoc_short: Истражете го Часот на кодот
   call_to_action_try_app_lab: Обидете се со лабораторија за апликации
   call_to_action_view_lesson_plan: Погледнете го планот за лекција
   call_to_action_self_paced_pl: Започнете само-темпо професионално учење
@@ -239,6 +259,7 @@ mk:
   call_to_action_resources_tools: Пробајте ги алатките за програмирање
   call_to_action_sign_up_free: Пријавете се бесплатно
   call_to_action_explore_ai_resources: Истражете ги ресурсите на АИ
+  call_to_action_explore_ai_curricula: Истражете ги наставните програми на АИ
   call_to_action_explore_curriculum_catalog: Истражете го каталогот за наставни програми
   call_to_action_see_full_curriculum_catalog: Погледнете го целосниот каталог на наставни
     програми
@@ -259,6 +280,13 @@ mk:
   call_to_action_learn_about_approach: Дознајте повеќе за нашиот пристап
   call_to_action_try_java_lab: Обидете Јава Лабораторија
   call_to_action_notify_available: Извести ме кога е достапен
+  call_to_action_register_early_access: Регистрирај се за ран пристап
+  call_to_action_open_positions: Прикажи ги отворените позиции
+  call_to_action_get_guide: Добијте го водичот
+  call_to_action_donate_to_cdo: Донирајте на Code.org
+  call_to_action_start_fundraiser: Започнете прибирање финансиски средства
+  call_to_action_view_donation_policy: Погледнете ја политиката за донирање
+  call_to_action_view_donate_bitpay: Донирајте со BitPay
   aria_label_call_to_action_afe: Дознајте повеќе за инженерот за иднината на Амазон
   aria_label_call_to_action_teaching_csf: Започнете со наставата компјутерски науки
     Основи професионално учење програма
@@ -368,8 +396,11 @@ mk:
   curriculum_name_csp: Компјутерски науки принципи
   curriculum_name_csc: Компјутерски науки врски
   curriculum_name_csa: АП® Компјутерски науки А
+  curriculum_name_csa_ai: Софтверско инженерство и компјутерска визија
   curriculum_name_csc_02: Секој модул за врски со CS
   curriculum_name_ai: АИ и машинско учење
+  curriculum_name_artificial_intelligence: Вештачка интелигенција (АИ)
+  curriculum_name_maker: создателот
   curriculum_name_maker_cp: Креирање апликации со уреди (коло игралиште)
   curriculum_name_maker_microbit: Креирање апликации со уреди (микро:бит)
   curriculum_name_creating_apps_with_devices: Креирање апликации со уреди
@@ -380,6 +411,8 @@ mk:
   curriculum_name_interactive_animations_games: Интерактивни анимации и игри
   curriculum_name_design_process: Процесот на дизајнирање
   curriculum_name_data_society: Податоци и општество
+  curriculum_desc_csf: Слободен сет на основни наставни програми кои ги воведува студентите
+    во основните концепти на компјутерски науки.
   curriculum_desc_csf_express: Научете како да креирате компјутерски програми, да
     развивате вештини за решавање проблеми и да работите преку забавни предизвици!
     Направете игри и креативни проекти за споделување со пријателите, семејството
@@ -428,6 +461,27 @@ mk:
   curriculum_desc_creating_apps_with_devices: Истражете ја улогата на физичките уреди
     во компјутерите. Развивање на програми кои користат хардверски влезови и излези.
     Постои верзија на оваа единица и за микро:бит и коло игралиште.
+  curriculum_desc_csa: Воведување на студентите во софтверското инженерство и објектно-ориентираниот
+    дизајн додека тие го учат Јава програмскиот јазик во оваа бесплатна наставна програма
+    за AP® Computer Science A (AP® CSA).
+  curriculum_desc_maker: Образованието на создателот го зема STEM (наука, технологија,
+    инженерство, математика) чекор понатаму со поканување практично искуство и соработка
+    во училницата за да помогне во предавањето на решавање на проблеми и критичко
+    размислување.
+  curriculum_desc_maker_short: Создателот образование поканува практично искуство
+    и соработка во училницата за да им помогне на учат решавање на проблеми и критичко
+    размислување.
+  curriculum_desc_csd: Флексибилни разбира, дозволувајќи им на секоја единица да се
+    предава сам или во комбинација. Ги запознава студентите со градење на веб-страници,
+    апликации, анимации, игри и физички компјутерски системи.
+  curriculum_desc_csp: Слободен, AP® CSP одобрен, средношколски воведен курс кој ги
+    запознава студентите со основните концепти на компјутерските науки.
+  curriculum_desc_csa_ai_long: 'Овој две поглавја пост-АП АДС модул им нуди на средношколците
+    практично искуство со професионални алатки за развој на софтвер, вклучувајќи GitHub
+    и GitHub Copilot, и им дава вештини од реалниот свет за да развијат програма за
+    компјутерска визија. '
+  curriculum_desc_csa_ai_short: Овој модул Post-AP® CSA им нуди на средношколците
+    практично искуство со професионални алатки за развој на софтвер.
   collection_hardware: Фокусирајте се на хардвер
   collection_hardware_desc: Оспособува учениците да користат податоци и физички уреди
     за решавање на проблемите.
@@ -460,6 +514,7 @@ mk:
   module_label_professional_learning: 'Професионално учење:'
   module_label_languages: 'Поддржани јазици:'
   module_label_accessibility_features: 'Пристапност:'
+  module_label_accessibility_features_full: 'Карактеристики за пристапност:'
   module_label_educator_tool: Едукатор алатка
   module_label_educator_course: Курс за едукатор
   module_label_student_tool: Студентска алатка
@@ -467,6 +522,7 @@ mk:
   module_label_student_content_resources: Содржина и ресурси
   module_label_new: Нов
   module_label_coming_soon: Наскоро
+  module_label_available_now: Достапно сега
   module_label_video_series: Видео серија
   module_label_self_paced: Само-темпо модул
   module_ages_5_10: 5-10
@@ -477,6 +533,8 @@ mk:
   module_grade_2_5: 2-5
   module_grade_3_5: 3-5
   module_grade_3_8: 3-8
+  module_grade_k_12: К-12
+  module_grade_3_12: 3-12
   module_grade_6_12: 6-12
   module_grade_6_10: 6-10
   module_grade_9_12: 9-12
@@ -491,11 +549,14 @@ mk:
   module_grade_9_12_teachers: 9-12 Наставници
   module_level_beginner: Почетник
   module_level_intermediate: Средно
+  module_level_advanced: Напредно
   module_duration_45_mins: 45 минути
+  module_duration_2_weeks: 2 недели
   module_duration_1_hr: 1 час
   module_duration_2_hrs: 2 часа
   module_duration_3_hrs: 3 часа
   module_duration_5_hrs: 5 часа
+  module_duration_5_hrs_plus: 5+ часа
   module_duration_8_hrs: 8 часа
   module_duration_20_hrs: 20 часа
   module_duration_35_hrs: 35 часа
@@ -507,6 +568,7 @@ mk:
   module_duration_school_year: Училишна година
   module_duration_month_quarter: Месец или квартал
   module_duration_month_semester_year: Месец, семестар или година
+  module_duration_varies: Варира
   module_prerequisites_none: Никој
   module_prerequisites_maker_cp: Пристап до коло Игралиште
   module_prerequisites_maker_microbit: Пристап до микро:бит
@@ -572,6 +634,9 @@ mk:
   heading_java_lab: Јава Лабораторија
   heading_objects_first: Објекти прво
   heading_these_lessons_will: 'Овие лекции ќе:'
+  heading_explore_curriculum_catalog: Истражете ги сите наши курсеви во Каталогот
+    за наставни програми
+  heading_csa_ai: Барате работи што треба да ги направите по испитот AP®?
   professional_learning_section_desc: Добијте поддршка што ви треба додека се подготвувате
     да предавате. Наставниците го сакаат, со над 90% го рангираат најдобриот професионален
     развој досега!
@@ -605,6 +670,24 @@ mk:
     на сите прашања што може да ги имате за започнување на наставата со Code.org.
     Можете исто така да прашате други наставници за нивното искуство на нашите форуми
     за наставници.
+  subscribe_form_section_title: Претплатете се за ажурирања
+  subscribe_form_section_desc_csa: Пријавете се за да добивате месечни пораки за AP®
+    Computer Science A на Code.org и добијте корисни потсетници, совети и ажурирања
+    испратени веднаш до вашето сандаче.
+  subscribe_form_section_desc_csc: Пријавете се за да добивате месечни пораки за Computer
+    Science Connections на Code.org и добијте корисни потсетници, совети и ажурирања
+    испратени веднаш до вашето сандаче.
+  subscribe_form_section_desc_csd: Пријавете се за да добивате месечни пораки за откритијата
+    за компјутерски науки на Code.org и добијте корисни потсетници, совети и ажурирања
+    испратени веднаш до вашето сандаче.
+  subscribe_form_section_desc_csf: Пријавете се за да добивате месечни пораки за Основи
+    на компјутерски науки на Code.org и добијте корисни потсетници, совети и ажурирања
+    испратени веднаш до вашето сандаче.
+  subscribe_form_section_desc_csp: Пријавете се за да добивате месечни пораки за принципите
+    за компјутерски науки на Code.org и добијте корисни потсетници, совети и ажурирања
+    испратени веднаш до вашето сандаче.
+  subscribe_form_section_unsubscribe: Можете да се откажете од претплатата во секое
+    време.
   blockchain_hero_heading: Како работи блокчејн
   blockchain_hero_desc: Нурнете во светот на блокчејн со “Како работи блокчејн”, нашата
     нова видео серија и придружни лекции!
@@ -711,6 +794,9 @@ mk:
     Секоја лекција е спарена со едно видео од серијата, нуркање-подлабоко во концептите
     воведени во видеата.
   ai_curriculum_btn_aria_label_04: Истражете како работи лекциите за АИ
+  ai_curriculum_grades_05: 'Одделение нивоа: 9-12'
+  ai_curriculum_btn_aria_label_05: Истражете го модулот за софтверско инженерство
+    и компјутерска визија
   ai_carousel_heading: 'Што велат наставниците за АИ со Code.org:'
   ai_carousel_quote_01: Оваа лекција, исто така, им даде можност на моите ученици
     да видат дека постои елемент на мислење во системите за класификација. Подоцна,
@@ -840,6 +926,12 @@ mk:
     (како ChatGPT) и Generative AI. Слушнете како овие нови технологии работат директно
     од експертите: Мира Мурати, CTO на OpenAI и Кристобал Валенсуела, извршен директор
     на RunWayML.'
+  ai_pl_101_llm_slides_title: Голем јазичен модел прашува за едукаторите
+  ai_pl_101_llm_slides_desc: Алатки за добивање на најдобар можен излез од LLMs како
+    ChatGPT, од почетник до напредни. Вклучува стартер поттикнува за оние само брцнувајќи
+    нивните прсти во, како и напредни алатки за оние кои бараат да се зголеми нивниот
+    потенцијал.
+  ai_pl_101_resources_3: АИ поттикнува за трансформирање на учењето на учениците
   how_ai_works_hero_heading: Како работи АИ
   how_ai_works_hero_desc: Нурнете се во светот на АИ со “Како работи АИ”, нашата видео
     серија и придружни лекции!
@@ -1178,20 +1270,18 @@ mk:
   teach_page_free_curriculum_desc: Ние сакаме да се донесе компјутерски науки во вашето
     училиште без да се грижите за трошоците. Затоа се обврзавме нашите наставни програми
     да бидат бесплатни засекогаш!
-  teach_page_free_curriculum_list_heading_01: Ангажирање на наставната програма за
-    секое одделение
   teach_page_free_curriculum_list_desc_01: Бесплатна, флексибилна и забавна наставна
     програма со придонеси на повеќе од 67 јазици.
-  teach_page_free_curriculum_list_heading_02: Прилагодлив, иновативен наставен план
   teach_page_free_curriculum_list_desc_02: Code.org нуди сè, од целогодишни наставни
     програми до активности со една единица. Плус, ние ги ажурираме нашите наставни
     програми годишно за да ги поддржиме најдобрите практики и области на фокус и да
     создадеме нови придонеси кои ги учат тековните теми на барање.
-  teach_page_free_curriculum_list_heading_03: Структуриран курикулум мапиран според
-    националните стандарди
   teach_page_free_curriculum_list_desc_03: Секоја наставна програма е мапирана на
     најмалку еден сет на национални стандарди, вклучувајќи CSTA, следната генерација
     наука стандарди, и Заеднички јадро.
+  teach_page_free_curriculum_list_desc_04: Понуди на повеќе од 67 јазици
+  teach_page_free_curriculum_list_desc_05: Мапирани на најмалку еден сет на национални
+    стандарди (вклучувајќи CSTA, NGSS, и Заеднички јадро)
   teach_page_free_curriculum_heading_02: 'Истражуваат нашите наставни програми придонеси
     за различни нивоа одделение:'
   teach_page_resources_heading: Ресурси кои ве поддржуваат на секој чекор од патот
@@ -1254,8 +1344,8 @@ mk:
     Animation
   csp_page_curriculum_glance_devices: Laptop, Chromebook
   csp_page_curriculum_glance_tools: Лабораторија за апликации
-  csp_page_curriculum_glance_professional_learning: Facilitator-led Workshops, Self-paced
-    Modules
+  csp_page_curriculum_glance_professional_learning: Работилници предводени од фасилитатор,
+    модули со само-темпо
   csp_page_curriculum_glance_professional_languages: Mакедонски
   csp_page_curriculum_glance_professional_accessibility_features: Text-to-speech,
     Closed captioning, Immersive reader
@@ -1384,8 +1474,8 @@ mk:
   csd_page_curriculum_glance_devices: Laptop, Chromebook
   csd_page_curriculum_glance_tools: Лабораторија за апликации, Лабораторија за игри,
     лабораторија за АИ, Веб лабораторија
-  csd_page_curriculum_glance_professional_learning: Facilitator-led Workshops, Self-paced
-    Modules
+  csd_page_curriculum_glance_professional_learning: Работилници предводени од фасилитатор,
+    модули со само-темпо
   csd_page_curriculum_glance_professional_languages: Mакедонски
   csd_page_curriculum_glance_professional_accessibility_features: Text-to-speech,
     Closed captioning, Immersive reader
@@ -1405,11 +1495,11 @@ mk:
   csd_page_courses_collections_desc: Нурнете подлабоко во една област со збир на единици
     фокусирани на одредена тема.
   csd_page_faq_question_01: Дали откритијата на CS се одбележан со стандардите?
-  csd_page_faq_answer_01: CS Discoveries was written using both the K-12 Framework
-    for Computer Science and the 2017 CSTA standards as guidance. Currently, every
-    lesson in CS Discoveries contains mappings to the relevant 2017 CSTA standards.
-    [A summary of standards mappings can be found here](%{mappings_url}). A Google
-    Sheets version of the standards can be found at [CSD Standards](%{csd_standards_url}).
+  csd_page_faq_answer_01: CS откритија беше напишана со користење на К-12 рамка за
+    компјутерски науки и 2017 CSTA стандарди како насоки. Во моментов, секоја лекција
+    во CS Откритија содржи мапирања на релевантните 2017 CSTA стандарди. [Резиме на
+    мапирања на стандарди може да се најде тука] ().%{mappings_url}Верзија на стандардите
+    на Google Sheets може да се најде на [Стандарди на CSD] (%{csd_standards_url}).
   csd_page_faq_question_02: Како/Каде можам да добијам професионален развој за овој
     курс?
   csd_page_faq_answer_02: Нашата програма за професионално учење нуди поддршка во
@@ -1454,10 +1544,10 @@ mk:
     пени може да се заменат со некој друг вид тежина со иста големина). Алтернативни
     активности се достапни ако немате пристап до овие материјали.
   csd_page_faq_answer_04_06: Креирање апликации со уреди (Опција А и Опција Б)
-  csd_page_faq_answer_04_07: 'Option A: Classroom set of Circuit Playgrounds. Check
-    out [code.org/maker/circuitplayground](%{url}) for more details.'
-  csd_page_faq_answer_04_08: 'Option B: Classroom set of micro:bit devices. Check
-    out [code.org/maker/microbit](%{url}) for more details.'
+  csd_page_faq_answer_04_07: 'Опција А: Училница сет на коло игралишта. Проверете
+    [code.org/maker/circuitplayground] () за повеќе детали.%{url}'
+  csd_page_faq_answer_04_08: 'Опција Б: Училница сет на микро: битни уреди. Проверете
+    [code.org/maker/microbit] () за повеќе детали.%{url}'
   csd_page_faq_answer_04_09: Создателот резерви, како што се празни ткиво кутии или
     картонски ролни или гребење хартија
   csd_page_faq_answer_04_10: "*Забелешка: Единицата Креирање апликации со уреди има
@@ -1529,8 +1619,8 @@ mk:
     и дизајн, Дизајн на апликации
   csf_page_curriculum_glance_devices: Лаптоп, Chromebook, таблет
   csf_page_curriculum_glance_tools: Спрајт лабораторија, игра лабораторија
-  csf_page_curriculum_glance_professional_learning: Facilitator-led Workshops, Self-paced
-    Modules
+  csf_page_curriculum_glance_professional_learning: Работилници предводени од фасилитатор,
+    модули со само-темпо
   csf_page_curriculum_glance_languages: арапски јазик, индонезиски, каталонски, Кинески
     поедноставен, Кинески традиционални, Чешка, француската, германски, хинди, италијански,
     Јапонски, Кореја, Каннада, Malay, марати, монголски, полскиот, Portuguese-BR,
@@ -1597,9 +1687,10 @@ mk:
     да бидат искусни во унисон додека часовите за градење вештини можат да ги завршат
     учениците со свое темпо.
   csf_page_faq_question_06: Кои материјали ми се потребни за CS Основи?
-  csf_page_faq_answer_06: Many lessons have handouts that guide students through activities.
-    These resources can be printed or assigned digitally. Some lessons call for typical
-    classroom supplies and manipulatives. [Visit the CSF Syllabus to learn more](%{syllabus_url}).
+  csf_page_faq_answer_06: Многу лекции имаат прирачници кои ги водат учениците низ
+    активности. Овие ресурси можат да бидат испечатени или доделени дигитално. Некои
+    лекции повикуваат на типични материјали во училницата и манипулативи. [Посетете
+    ја наставната програма за CSF за да дознаете повеќе] ().%{syllabus_url}
   csa_page_top_desc: Introduce students to software engineering and object-oriented
     design while they learn the Java programming language in this free curriculum
     for [AP® Computer Science A (AP® CSA)](%{csa_url}).
@@ -1670,6 +1761,39 @@ mk:
   csa_page_faq_answer_08_02: For more information about the values that guided our
     work, please see our [curriculum values](%{curriculum_values_url}) and our [professional
     learning values](%{pl_values_url}).
+  donate_page_top_heading: Помогнете да ја финансирате нашата мисија
+  donate_page_top_desc: Секоја донација ја подгрева мисијата на Code.org за проширување
+    на пристапот до образование за компјутерски науки. Ние нудиме неколку начини за
+    да донирате и да направите разлика.
+  donate_page_fundraise_title: Прибирање финансиски средства за Code.org
+  donate_page_fundraise_desc: Помогнете да соберете пари за Code.org! Секој ученик
+    во секое училиште треба да има можност да учи компјутерски науки.
+  donate_page_other_ways_title: Други начини да се даде
+  donate_page_other_ways_desc: Истражете разновидни методи за да придонесете, и пронајдете
+    ја опцијата која најмногу ви одговара. Секој гест, голем или мал, ја движи нашата
+    мисија напред.
+  donate_page_501c3: Code.org е регистрирана како јавна 501 (c) (3) непрофитна организација.
+    Придонесите кон Code.org се одбиваат од данок до степен дозволен со закон. Даночниот
+    идентификациски број на Code.org е 46-0858543.
+  donate_page_donation_policy_title: Разбирање на нашата политика за донирање
+  donate_page_donation_policy_desc: Дознајте за тоа како се справуваме и ги распределуваме
+    вашите придонеси.
+  donate_tabs_tab_label_daf_direct: DAF Директен
+  donate_tabs_tab_label_amazon: Амазон
+  donate_tabs_tab_label_bitpay: BitPay
+  donate_tabs_tab_label_employee_match: Вработен натпревар
+  donate_tabs_daf_direct_title: Донирајте преку ДАФ Директен
+  donate_tabs_daf_direct_desc: Донирајте преку вашиот донаторски советуван фонд со
+    Fidelity Charitable, Schwab Charitable или BNY Mellon и направете ја вашата препорака
+    за грант до Code.org преку онлајн формуларот DAF Direct.
+  donate_tabs_amazon_title: Донирајте преку Амазон
+  donate_tabs_amazon_desc: Донирајте директно користејќи ја вашата сметка на Амазон.
+    Со само неколку кликања, беспрекорно да придонесе за мисијата Code.org е и зајакнување
+    на иднината на компјутерски науки образование.
+  donate_tabs_bitpay_title: Донирајте со крипто преку BitPay
+  donate_tabs_bitpay_desc: Прегратка на иднината на давање со cryptocurrency. Преку
+    BitPay, вашата дигитална валута може директно да ги поддржи потфати Code.org е
+    во проширување на компјутерски науки образование.
   hoc_live: Час на кодот во живо
   hoc_live_sign_up_title: Пријавете се за час на кодот во живо
   hoc_live_learn_title: Научете со час на кодот во живо
@@ -1748,8 +1872,8 @@ mk:
   ai_activity_zooniverse: Zooniverse - Слика планина Зебра
   ai_activity_zooniverse_desc: Помогне да се заштити загрозените Кејп Планина Зебра
     со идентификување на различни животни во сликите.
-  codeorg_homepage_hoc2018_curriculum: Go further with <a href="%{studio_url}/courses"
-    class="hoc2018-curriculum-link">Code.org courses</a>
+  codeorg_homepage_hoc2018_curriculum: Одете понатаму со <a href="%{studio_url}/courses"
+    class="hoc2018-curriculum-link">курсевите Code.org</a>
   codeorg_homepage_hoc2018_dance_heading: Направете свој <span class="highlight-word">Танц&nbsp;партија</span>
   codeorg_homepage_hoc2018_header_line1: Часот на кодот доаѓа...
   codeorg_homepage_hoc2018_header_line2_desktop: Што ќе создадете <span class="hoc2018-highlight-word">?</span>
@@ -2092,6 +2216,12 @@ mk:
     курсевите Code.org, локални можности или други вести за компјутерски науки?
   signup_email_preference_privacy: "(Погледнете ја нашата политика за приватност)"
   signup_email_preference_yes: Да
+  signup_email_preference_yes_elementary: Да - Испратете ми новости за Ресурси за
+    основно училиште
+  signup_email_preference_yes_middle: Да - Испратете ми ажурирања за Средно училиште
+    ресурси
+  signup_email_preference_yes_high: Да - Испратете ми ажурирања за Средношколски ресурси
+  signup_email_preference_yes_general: Да - Испратете ми општи надградби
   signup_email_preference_no: Не
   signup_email_preference_error: Потребна е предност по е-пошта
   signup_multiple_event_warning: Ние ќе го ставиме вашето име на училиштето и градот
@@ -2209,12 +2339,13 @@ mk:
     Науки се одржува годишно во знак на признание за роденденот на компјутерскиот
     пионер <a href='%{grace_hopper}'>Адмирал Grace Murray Hopper</a> (9 Декември,
     1906).
-  hoc_faq_when_is_hoc_a_markdown: The Hour of Code takes place each year during [Computer
-    Science Education Week](%{csedweek_url}). The %{campaign_date_year} Computer Science
-    Education Week will be %{campaign_date_full}, but you can host an Hour of Code
-    all year-round. Computer Science Education Week is held annually in recognition
-    of the birthday of computing pioneer [Admiral Grace Murray Hopper](%{grace_hopper})
-    (December 9, 1906).
+  hoc_faq_when_is_hoc_a_markdown: Часот на законик се одржува секоја година за време
+    на [Недела за образование по компјутерски науки] (%{csedweek_url}). Неделата за
+    образование за %{campaign_date_year} компјутерски науки ќе биде %{campaign_date_full},
+    но можете да бидете домаќини на Час на законик во текот на целата година. Неделата
+    за образование по компјутерски науки се одржува секоја година во знак на признание
+    за роденденот на компјутерскиот пионер [адмирал Грејс Мареј Хопер] (%{grace_hopper})
+    (9 декември 1906).
   hoc_faq_why_cs_q: Зошто компјутерски науки?
   hoc_faq_why_cs_a: "<i>Секој</i> студент треба да има можност да учи компјутерски
     науки. Тоа помага да се негуваат вештините за решавање на проблеми, логика и креативност.
@@ -2263,11 +2394,12 @@ mk:
     за nonCode.org може да се најдат на <a href='%{codeorg_url}/learn'>%{partner_url}/учат</a>
     во конкретниот опис на туториалот. Не заборавајте дека исто така нудиме <a href='%{unplugged_url}'>исклучени
     активности</a> ако вашето училиште не може да се приспособи на туторијалите!
-  hoc_faq_devices_a_markdown: Code.org tutorials work on all devices and browsers.
-    You can see more information about Code.org's tutorial tech needs [here](%{codeorg_url}/educate/it).
-    Tech needs for non-Code.org tutorials can be found on [%{partner_url}/learn](%{codeorg_url}/learn)
-    in the tutorial specific description. Don't forget we also offer [unplugged activities](%{unplugged_url})
-    if your school can't accommodate the tutorials!
+  hoc_faq_devices_a_markdown: Упатствата за Code.org работат на сите уреди и прелистувачи.
+    Можете да видите повеќе информации за туториал технолошки потреби [here]Code.org
+    е (/едуцираат/тоа).%{codeorg_url}Технички потреби за не-Code.org упатства може
+    да се најде на [%{partner_url}/learn] (/learn) во упатството специфичен%{codeorg_url}опис.
+    Не заборавајте ние исто така нудиме [unplugged активности] (%{unplugged_url})
+    ако вашето училиште не може да ги смести упатствата!
   hoc_faq_need_computers_q: Дали ми требаат компјутери за секој учесник?
   hoc_faq_need_computers_a: Не. Ние имаме туторијали за Hour of Code кои работат на
     компјутери, паметни телефони, таблети, а некои кои не бараат никаков компјутер!
@@ -2281,13 +2413,13 @@ mk:
     одговарање на прашања. <li><b>Одете исклучен.</b> Ние нудиме <a href='%{unplugged_url}'>
     туротијали за кои нема потреба од компјутер</a>воопшто.</ul>
   hoc_faq_need_computers_a_markdown: |-
-    No. We have Hour of Code tutorials that work on PCs, smartphones, tablets, and some that require no computer at all! You can join wherever you are, with whatever you have.
+    Бр. Имаме Hour of Code туторијали кои работат на компјутери, паметни телефони, таблети и некои за кои воопшто не е потребен компјутер! Можете да се придружите каде и да сте, со што и да имате.
 
-    _Here are a few options:_
+    _Еве неколку опции:_
 
-    - **Work in pairs.** [Research shows](%{pair_programming_research}) students learn best with [pair programming](%{pair_programming_video}), sharing a computer and working together. Encourage your students to double up.
-    - **Use a projected screen.** If you have a projector and screen for a Web-connected computer, your entire group can do an Hour of Code together. Watch video portions together and take turns solving puzzles or answering questions.
-    - **Go unplugged.** We offer [tutorials that require no computer](%{unplugged_url}) at all.
+    - **Работа во парови.** [Истражувањата покажуваат] (%{pair_programming_research}) учениците најдобро учат со [пар програмирање] (%{pair_programming_video}), споделување на компјутер и заедничка работа. Охрабрете ги вашите студенти да се удвои.
+    - **Користете проектиран екран.** Ако имате проектор и екран за WEB-поврзан компјутер, целата ваша група може да направи Hour of Code заедно. Гледајте видео делови заедно и се врти решавање на загатки или одговарање на прашања.
+    - **Go unplugged.** Нудиме [упатства за кои не е потребен компјутер] () воопшто.%{unplugged_url}
   hoc_faq_international_q: Јас сум во <country>. Како можам да учествувам на меѓународното
     ниво?
   hoc_faq_international_a: Секој може да организира настан на Hour of Code, насекаде
@@ -2593,10 +2725,10 @@ mk:
     подалеку од еден час</a>
   learn_banner_beyond_markdown: Сакате да продолжите да учите? [Оди подалеку од еден
     час] (%{url})
-  learn_banner_teachers: 'Teachers: <a id=''teacher_banner_host''>Host an hour</a>
-    or <a id=''teacher_banner_howto''>read the How-To Guide</a>'
-  learn_banner_teachers_markdown: 'Teachers: [Host an hour](%{host_url}) or [read
-    the How-To Guide](%{howto_url})'
+  learn_banner_teachers: 'Наставници: <a id=''teacher_banner_host''>Домаќин еден час</a>
+    или <a id=''teacher_banner_howto''>прочитајте го Водичот за како-да</a>'
+  learn_banner_teachers_markdown: 'Наставници: [Домаќин час] (%{host_url}) или [прочитајте
+    го Водичот за како-да] ()%{howto_url}'
   tutorial_dance2019_name: Танц партија
   tutorial_danceparty_name: Танц партија
   tutorial_chibitronics_name: 'Чибитроника: Осветлена приказна'
@@ -5553,11 +5685,11 @@ mk:
     Steve на авантура низ овој Minecraft свет.
   tutorial_minecraft-2016_longdescription: Изградете Minecraft игра. Креирајте ваши
     сопствени верзии на кокошка, овци, полжави, зомби и повеќе.
-  tutorial_thinkersmith-es_longdescription: Mediante el uso de un "Vocabulario Robot"
-    predefinido, los estudiantes descubrir&aacute;n como guiarse de modo tal de llevar
-    a cabo tareas espec&iacute;ficas sin ser estas discutidas previamente. Este segmento
-    ense&ntilde;a a los estudiantes la conexi&oacute;n entre s&iacute;mbolos y acciones
-    as&iacute; como la valiosa habilidad de depuraci&oacute;n.
+  tutorial_thinkersmith-es_longdescription: Медиант на употреба на “Вокабуларио робот”
+    предодредено, Лос естудианти дескубрира n како водич на модо тал де llevar a cabo
+    tareas espec&aacute;измислен грев на ова дискутидас претходно.&iacute;Есте сегменто
+    енсе&ntilde;а лос естудијантес ла конекси&oacute;n entre s&iacute;mbolos y acciones
+    како como la valiosa habilidad de depuraci n.&iacute;&oacute;
   tutorial_pixie_longdescription: Hour of Code туторијал со Pixie
   tutorial_play_longdescription: Креирајте приказна или направете игра со Play Lab!
     Направете животни, пирати, зомби, нинџи и многу други карактери да се движат,
@@ -12735,12 +12867,12 @@ mk:
   tutorial_googlename _longdescription: Изберете име и доведете ги буквите од зборот
     во живот користејќи код. Изберете прекар, име на домашно милениче, животно, спорт,
     место или хоби.
-  tutorial_carnegiezillah_longdescription: Zillah City is thriving, and music is in
-    the air. Rumor has it, the famed Gargantua bot is online and sending the last
-    Toxibots to trash the city block by block…. Grab your cobot hoverboard and get
-    ready to groove, move, and finish off what you started! Players program their
-    cobot hoverbots to change lanes, avoid obstacles, and take out many Toxibots in
-    this rhythm-styled game.
+  tutorial_carnegiezillah_longdescription: Zillah Сити е просперитетна, и музиката
+    е во воздухот. Гласини го има, фамозниот бот Гаргантуа е онлајн и ги испраќа последните
+    Токсиботи да го ѓубрето градскиот блок по блок.…Земи вашиот cobot hoverboard и
+    да се подготвени да ритам, се движат, и да го заврши она што го започна! Играчите
+    ги програмираат своите cobot hoverbots да ги менуваат лентите, да ги избегнат
+    пречките и да извадат многу Токсиботи во оваа игра со стил на ритми.
   tutorial_nasachspacejam_longdescription: Создадете сончев систем кој навистина карпи!
     Дознајте за музиката, астрономијата и кодирањето во оваа само-водена активност
     (не е потребно искуство со кодирање). Програма планети да се направи музика, создавање
@@ -13462,6 +13594,454 @@ mk:
   accessibility_card_text_10: Адаптација на наставната програма AP Computer Science
     Principles на Code.org со користење на Кворум, јазик базиран на докази првично
     дизајниран да обезбеди пристапност за слепи или визуелно оштетени ученици.
+  engineering_hero_heading: Придружете се на нашиот инженерски тим!
+  engineering_hero_desc: Додека продолжуваме да го прошируваме нашиот инженерски тим,
+    сакавме да споделиме повеќе за нашата инженерска организација на Code.org и некои
+    од уникатните аспекти на работа тука. Ако сте заинтересирани да аплицирате за
+    некоја од нашите улоги, би сакале да слушнеме од вас!
+  engineering_team_title: Запознајте го инженерскиот тим на Code.org
+  engineering_team_card_text_1: Ова е (повеќето од) нас во нашата во-лице се заедно
+    во текот на летото на 2023 година! Оваа толпа е поделена на четири под-тимови
+    во рамките на нашиот инженерски тим кои работат заедно за да ја изградат и служат
+    платформата за сите наши ученици и наставници.
+  engineering_team_card_text_2: Ако сте заинтересирани да аплицирате за некоја од
+    нашите улоги, би сакале да слушнеме од вас! Можете да најдете листа на отворени
+    позиции на нашата страница Кариери.
+  engineering_our_team_title: Нашиот инженерски тим
+  engineering_our_team_desc: 'Инженерскиот тим во Code.org е поделен на четири под-тимови
+    кои градат и поддржуваат различни области на нашата платформа:'
+  engineering_our_team_sub_title_1: Тим за учење на студентите
+  engineering_our_team_text_1: Нашиот тим за учење на студенти ги поседува сите наши
+    активности (ние ги нарекуваме лаборатории) кои нашите студенти ги користат секој
+    ден. Овој тим работи претежно на front-end tech (ние користиме React и многу сопствени
+    JS) и имаме одличен работен однос со многу партнери и проекти со отворен код.
+    На пример, ние ги користиме [Google е Blockly] (%{youtube_url}) за сите наши блок-базирани
+    програмирање. Ние ги поддржуваме учениците во нивното патување за учење на целиот
+    пат од Детска градинка до 12-то одделение.
+  engineering_our_team_sub_title_2: Тим за искуство на наставници
+  engineering_our_team_text_2: Нашиот тим за искуство со наставници ги гради алатките
+    што привлекуваат нови наставници во Code.org (ние ги нарекуваме овие производи
+    за стекнување) и ја развива платформата која ги овластува нашите постоечки наставници
+    да ја предаваат нашата наставна програма (нашите алатки за наставници). Како и
+    со нашите студентски алатки, ние се потпираме на React за да ги изградиме нашите
+    front-end и нашите компоненти од страна на серверот се служат со користење на
+    Ruby on Rails.
+  engineering_our_team_sub_title_3: Платформа тим
+  engineering_our_team_text_3: Нашиот тим за платформа поседува основни компоненти
+    кои им служат на потребите на нашите студентски и наставнички тимови (на пример,
+    автентикација и кориснички профил) и исто така има мисија да стигне до студенти
+    кои сè уште не можеме да ги достигнеме. Ова вклучува градење интеграции кои нè
+    поврзуваат со училиштата кои користат различни системи за управување со учењето
+    (LMS) и пакување на нашата наставна програма за да може да се користи во оддалечени
+    училишта кои немаат пристап до сигурен интернет.
+  engineering_our_team_sub_title_4: Инфраструктура тим
+  engineering_our_team_text_4: Нашиот Инфраструктурен тим го обезбедува 'рбетот за
+    платформата која ги поддржува нашите ученици и наставници. Ова ја вклучува нашата
+    хостинг инфраструктура и сродни услуги (ние користиме AWS), управување со податоци,
+    безбедносни програми, услуги за програмери и распоредување и многу повеќе. Овој
+    тим исто така ги поседува нашите системи за скалирање и обезбедување, кои се критични
+    за време на Hour of Code, каде што го покануваме секој студент во светот да заврши
+    еден час кодирање со нас.
+  engineering_faq_question_1: Што прави Code.org?
+  engineering_faq_answer_1_a: Code.org е образование иновации непрофитна посветен
+    на визијата дека секој ученик во секое училиште има можност да учат компјутерски
+    науки, како дел од нивните основни К-12 образование.
+  engineering_faq_answer_1_b: Го прошируваме пристапот до компјутерски науки во училиштата,
+    со фокус на зголемување на учеството од страна на млади жени и ученици од други
+    недоволно застапени групи. Водечкиот провајдер на наставната програма за компјутерски
+    науки К-12 во најголемите училишни окрузи во САД, Code.org ја организира и годишната
+    кампања Hour of Code, која има ангажирано повеќе од 15% од сите ученици во светот.
+  engineering_faq_answer_1_c: Code.org е поддржан од дарежливи донатори вклучувајќи
+    Мајкрософт, Амазон, Гугл и многу други.
+  engineering_faq_question_2: Што е искуството на програмерите и алатките на Code.org?
+  engineering_faq_answer_2: Нашето искуство со програмери може да биде различно од
+    она што сте го виделе во вашите минати улоги. Тесно соработувајќи со нашиот тим
+    на производи, ние брод до производство секој работен ден и имаме различни каденци
+    - понекогаш пишувате код кој оди во живо тој ден; други пати сте на подолгорочни
+    проекти - и додека ние го следиме 2-неделни спринтови, ние го правиме тоа на лесен
+    начин. Ние индекс кон добивање на правото работи направено на вистински начин
+    наспроти преземање на пуристички поглед на било која одредена методологија. [Сите
+    наши код] (%{code_url}) е со отворен код и ние ги користиме JIRA и GitHub повлече
+    барања да ги пратите сите на нашата работа предмети. Ние исто така се грижиме
+    многу за квалитетот и тестирањето и имаме среќа да имаме неверојатна поддршка
+    од [SauceLabs](%{saucelabs_url}), кои ни помагаат да го водиме нашиот пакет на
+    UI тестови на разни студентски уреди (на пример, iPads) во нивната фарма за облак
+    уреди.
+  engineering_faq_question_3: Која е ротацијата на инженерот на повик на Code.org?
+  engineering_faq_answer_3: Нашиот 30+ инженерски тим ги споделува одговорностите
+    на повик. Секој инженер опфаќа 24-часовна смена и ги користи нашите патеки за
+    ескалација и книги за игри за да одговори на испади на страницата или други проблеми
+    во живо. Горди сме на сигурноста на нашата страница - во просек, секој инженер
+    се буди само еднаш годишно за прашања кои обично се брзи за решавање. Наместо
+    тоа, “Инвеститорот на денот” обично поминува дел од нивниот работен ден управувајќи
+    со распоредувањето на производството и трибирајќи помалку итни прашања.
+  engineering_faq_question_4: Дали сте далечинска пријателска/WFH организација?
+  engineering_faq_answer_4_a: Да! Во 2019 година, непосредно пред пандемијата, Code.org
+    стана организација од далечина. Денес, имаме инженери во секоја временска зона
+    во САД и соодветно се приспособуваме на работното време. Повеќето од нашите состаноци
+    се случуваат помеѓу часовите на 10am и 3pm PT.
+  engineering_faq_answer_4_b: Ние, исто така, ја препознаваме вредноста на времето
+    во лице, и секој квартал се собираме лично, типично во Сиетл. Два од овие настани
+    (ние ги нарекуваме Kick-off week и “Codechella”) ги носат сите во организацијата
+    заедно во јануари и јуни - а тимовите за инженерство и производи се среќаваат
+    одделно во април и октомври.
+  engineering_faq_answer_4_c: Ние силно веруваме во трошење време со нашите ученици
+    и наставници, така што многу од овие во-лице настани вклучуваат патувања во училиштата
+    и училниците за да се соберат повратни информации или да играат-тест нашите производи
+  engineering_faq_question_5: Што го прави инженерскиот тим во Code.org уникатен?
+  engineering_faq_answer_5_a: 'Надвор од решавање на предизвикувачки технички проблеми,
+    имаме неколку работи што го прават нашиот инженерски орг различен од другите во
+    кои можеби сте работеле:'
+  engineering_faq_answer_5_b_1: Сите ја споделуваме нашата страст за нашата мисија.
+  engineering_faq_answer_5_b_2: Секој од нас е тука за да ја поддржи мисијата за проширување
+    на пристапот до компјутерски науки за секој студент низ целиот свет. Сите ние
+    ја имаме нашата уникатна приказна и перспектива за тоа што нè тера кон оваа мисија.
+  engineering_faq_answer_5_c_1: Ние длабоко се грижиме едни за други.
+  engineering_faq_answer_5_c_2: Кога инженерите се борат со проблем, ние стапуваме
+    и помагаме. Еден од нашите принципи е дека ние сме тешко на проблемите, но љубезни
+    едни кон други. Редовно ги промовираме инженерите, но не пропишуваме над-инженерски
+    решенија само за да поддржиме нечиј пат за промоција. Наместо тоа, ние инвестираме
+    во нашите инженери со дарежлив буџет за професионален развој и пристап до други
+    можности за учење.
+  engineering_faq_answer_5_d_1: Работиме напорно, но поставуваме јасни граници.
+  engineering_faq_answer_5_d_2: Додека ние ги поддржуваме учениците низ целиот свет,
+    ние се држиме одговорни за јасни граници помеѓу работата и домашниот живот. Уживаме
+    без состаноци среда, земајќи ги нашите PTO (5 недели вкупно, која вклучува орг-широк
+    2-недела канцеларија затворање на крајот на годината ака зимска пауза), половина
+    работен ден во петок во текот на летото ака лето петок, и други дарежлив бенефиции.
+  careers_hero_title: Кариери
+  careers_hero_description: Code.org е непрофитна организација посветена на проширување
+    на пристапот до компјутерски науки во училиштата. Особено сме фокусирани на зголемување
+    на учеството кај младите жени и недоволно застапените студенти.
+  careers_hero_description_under: Помогнете ни да го промениме светот, еден студент
+    во исто време!
+  careers_vision_title: Нашата визија
+  careers_vision_decsription: Нашата визија е дека секој ученик во секое училиште
+    треба да имаат можност да учат компјутерски науки, како дел од нивните основни
+    К-12 образование.
+  careers_vision_description_under: Дојдете придружете се на нашиот тим за да помогнете
+    оваа визија да стане реалност!
+  careers_values_title: Нашите основни вредности
+  careers_values_first_column_text_1: Ние веруваме дека компјутерските науки се основни
+    за сите студенти
+  careers_values_first_column_text_2: Ние сме посветени на капиталот, пристапот и
+    можноста
+  careers_values_first_column_text_3: Ние веруваме во моќта на заедничката образовна
+    заедница
+  careers_values_second_column_text_1: Ние сме агилни и одговора на повратни информации
+  careers_values_second_column_text_2: Ние дејствуваме со интегритет и транспарентност
+  careers_values_second_column_text_3: Ние веруваме дека широкото влијание бара размислување
+    големо и дејствување холистички
+  careers_approach_section_title: Нашиот обединувачки пристап
+  careers_approach_section_description: Глобалната улога на Code.org во движењето
+    за компјутерски науки К-12 е можна само затоа што користиме обединувачки пристап
+    низ разновидни и често поделени засегнати страни. Во време на зголемување на поларизацијата,
+    идејата за зголемување на можноста за студентите ги обединува луѓето од целиот
+    политички спектар. Членовите на тимот на Code.org, учениците, наставниците и поддржувачите
+    имаат разновидни и различни гледишта, и сите тие се добредојдени во нашата мисија.
+  careers_aproach_section_description_link: Прочитајте повеќе за пристапот на Code.org
+    кон единството.
+  careers_approach_section_button: Истражете ги отворените улоги
+  careers_principle_section_title: Нашите културни принципи
+  careers_principle_title_1: Нашите ученици и наставници се нашата Северна ѕвезда
+  careers_principle_description_1: Ние ги користиме нашите подароци, време и енергија
+    за да ги донесеме компјутерските науки на оние на кои им е најпотребна. Тоа е
+    она што нè обединува. Ова е нашиот најважен принцип.
+  careers_principle_title_2: Тешко сме на проблемите и љубезни едни кон други
+  careers_principle_description_2: Ние остануваме фокусирани на предизвикот да ги
+    донесеме компјутерските науки на учениците и наставниците на глобално ниво. Ние
+    признаваме дека секој од нас го носи најдоброто од нашите намери да ја поддржи
+    нашата мисија и да даде благодат кога правиме грешки.
+  careers_principle_title_3: Бараат решенија, а не консензус
+  careers_principle_description_3: Ние поседуваме одлуки, без разлика дали преземаме
+    мали чекори или големи скокови кон исходите што ги бараме. Сопствениците бараат
+    и слушаат, но не се парализирани од повратни информации. Ние ги прифаќаме и поддржуваме
+    одлуките на сопствениците, дури и ако не се согласуваме.
+  careers_principle_title_4: Усвојување менталитет на основачот
+  careers_principle_description_4: Ние опседнуваме за исходите и ги фокусираме нашите
+    постапки на нивно возење. Ние се нурнеме во деталите и работиме напорно. Ние сме
+    искрени, се потпреме на агилност и постојано проценуваме дали сме на вистинскиот
+    пат; не се плашиме да се вртиме. Промената на светот го бара тоа.
+  careers_principle_title_5: Шампион иновации
+  careers_principle_description_5: Мислиме големи, преземаме ризици и не се плашиме
+    да не успееме. Ако гледаме подобар начин да ги оствариме нашите цели, го правиме
+    тоа и ги охрабруваме другите да го сторат тоа исто така. Инкременталните решенија
+    нема да помогнат да се промени светот.
+  careers_principle_title_6: Сидро одлуки во факти
+  careers_principle_description_6: Ние користиме податоци за да го разбереме нашиот
+    бизнис, да воспоставиме посакувани исходи и да го водиме донесувањето одлуки.
+    Ние се балансираат ова со признавање ние не секогаш ќе имаат податоци што ни се
+    потребни со цел да се дејствува.
+  careers_principle_title_7: Нам на размислување за раст нè поттикнува
+  careers_principle_description_7: На секој предизвик му пристапуваме со љубопитност.
+    Ние даваме повратни информации љубезно и искрено; ние добиваме повратни информации
+    отворено. Учиме од нашите грешки и бараме начини да го зголемиме досегот и влијанието
+    на нашата работа.
+  careers_balance_section_title: Нашата рамнотежа помеѓу работата и животот
+  careers_balance_section_description: Ние се грижиме за нашите вработени и сме посветени
+    на поддршка на сите како на работа, така и надвор од работата. Знаеме дека секој
+    има различни потреби, кој е зошто ние нудиме холистички бенефиции пакет кој ќе
+    се осигура дека вие (и вашето семејство) се згрижени.
+  careers_balance_first_column_text_1: Здравствени придобивки за вас и вашето семејство
+  careers_balance_first_column_text_2: Дарежлив платено време надвор и да ја напушти
+    планови
+  careers_balance_second_column_text_1: Флексибилно, поддржувачко работно опкружување
+  careers_balance_second_column_text_2: Раст и можности за професионално учење
+  careers_openroles_section_title: Отворени улоги
+  careers_openroles_section_description: Code.org е со седиште во Сиетл, но многу
+    од нашите членови на тимот се оддалечени. Далечинските кандидати се добредојдени
+    и охрабрени да аплицираат.
+  careers_more_info_text: За повеќе информации за Code.org, проверете ги нашите [Најчесто
+    поставувани прашања] (%{support_url}) или дознајте за [други начини да се вклучите
+    во нашата мисија] ().%{help_url}
+  careers_approach_section_title2: Нашиот пристап кон разновидноста
+  careers_approach_section_description_1: Ние прифаќаме разновидни перспективи, идеи
+    и позадини на Code.org. Посветени сме да обезбедиме еднаква можност на сите вработени
+    и апликанти. Ние не дискриминираме врз основа на раса, религија, боја, национално
+    потекло, пол, сексуална ориентација, возраст, брачен статус, статус на ветеран,
+    или инвалидитет (ментален и физички) статус.
+  careers_approach_section_description_2: Ќе обезбедиме на лицата со попреченост да
+    им се обезбеди разумно сместување за да учествуваат во процесот на аплицирање
+    за работа или интервју, да извршуваат суштински работни функции и да добијат други
+    бенефиции и привилегии за вработување. Доколку имате индивидуални потреби поврзани
+    со попреченост, Ве молиме да се обратите до accommodations@code.org.
+  csa_ai_page_hero_title: Софтверско инженерство и компјутерска визија
+  csa_ai_page_hero_description: 'Овој две поглавја пост-АП АДС модул им нуди на средношколците
+    практично искуство со професионални алатки за развој на софтвер, вклучувајќи GitHub
+    и GitHub Copilot, и им дава вештини од реалниот свет за да развијат програма за
+    компјутерска визија. '
+  csa_ai_page_video_section_title: Чекор надвор од светот на програмските средини
+    Code.org
+  csa_ai_page_video_section_li_1: Дознајте за АИ и неговите апликации
+  csa_ai_page_video_section_li_2: Рачно искуство со професионални алатки за развој
+    на софтвер
+  csa_ai_page_video_section_li_3: Запознајте се со индустриски стандардни практики
+  csa_ai_page_video_section_li_4: Се посветам на критичко размислување
+  csa_ai_page_programming_tools: 'Алатки за програмирање: Github, Github копилот,
+    VSCode, TensorFlow '
+  csa_ai_page_professional_learning: Никој
+  csa_ai_page_curriculum_topics: 'Теми: Програмирање, Податоци, Арт и дизајн, Игри
+    и анимација'
+  csa_ai_page_curriculum_accessibility_features: Погледнете го делот Најчесто поставувани
+    прашања за детали
+  csa_ai_page_curriculum_languages_support: Mакедонски
+  csa_ai_page_article_title_1: Изградба со Copilot
+  csa_ai_page_article_description_1: Студентите учат како да го користат GitHub Copilot
+    како програмер на парови за да го објаснат постоечкиот код, да пронајдат и поправат
+    грешки и да генерираат решенија за нови проблеми.
+  csa_ai_page_article_link_1: Дознајте повеќе за Copilot
+  csa_ai_page_article_title_2: Изградете свој модел на АИ
+  csa_ai_page_article_description_2: Студентите ги обучуваат сопствените модели на
+    АИ користејќи Teachable Machine за да препознаат слики и гестови формираат веб
+    камера и да размислат како компјутерската визија влијае на начинот на кој корисниците
+    комуницираат со апликациите.
+  csa_ai_page_article_link_2: Истражете го планот за лекции
+  csa_ai_page_article_title_3: Истражете ја компјутерската визија
+  csa_ai_page_article_description_3: Студентите ги имплементираат моделите на АИ што
+    ги создадоа со Teachable Machine во Java апликација, користејќи GitHub Copilot
+    за да им помогнат да ги модифицираат постојните верзии на апликациите за да работат
+    со различните влезови.
+  csa_ai_page_article_link_3: Погледнете пример
+  csa_ai_page_learn_more_section_title: Дознајте повеќе за вештачката интелигенција
+  csa_ai_page_learn_more_title: Истражете AI 101 за наставници
+  csa_ai_page_learn_more_description: Откријте го овој свет на вештачката интелигенција
+    (АИ) и нејзиниот трансформативен потенцијал во образованието со нашата сеопфатна
+    серија за учење преку Интернет за наставници.
+  csa_ai_page_learn_more_link: Погледнете ја серијата AI 101 за наставници
+  csa_ai_page_faq_question_01: Кои се предусловите за овој модул?
+  csa_ai_page_faq_answer_01_01: 'Пред нуркање во овој модул, студентите треба да поседуваат
+    познавање на влез на ниво на Јава. Поточно, тие треба да се сфати на:'
+  csa_ai_page_faq_answer_01_list_01: "**Часови и објекти: ** Учениците треба да бидат
+    запознаени со дефинирање и користење на часовите, како и креирање и манипулирање
+    со објекти."
+  csa_ai_page_faq_answer_01_list_02: "**Методи за пишување и повикување: ** Учениците
+    треба да бидат способни да дефинираат методи во рамките на една класа, да ги разберат
+    параметрите на методот и типовите на враќање и да повикуваат методи од објекти
+    или други методи."
+  csa_ai_page_faq_answer_01_list_03: "**1D Низи и низи: ** Тие треба да бидат умешни
+    во прогласување, иницијализирање и манипулирање со еднодимензионални низи и низи,
+    вклучувајќи итерација преку нив."
+  csa_ai_page_faq_answer_01_list_04: "**Избор и итерација: ** Солидна основа во условните
+    искази и петелки е клучна."
+  csa_ai_page_faq_question_01_02: Идеално, студентите кои имаат завршено АП компјутерски
+    науки А или курс на слична длабочина и строгост би биле добро подготвени за овој
+    модул.
+  csa_ai_page_faq_question_02: Како да го инсталирам софтверот потребен за овој модул?
+  csa_ai_page_faq_answer_02_01: Овој модул е уникатен, бидејќи вклучува употреба на
+    софтвер од трети страни, а не Code.org лаборатории и алатки. [Прочитајте повеќе
+    за инсталирање на софтверот овде] (%{accessibility_url}).
+  csa_ai_page_faq_question_03: Како можам да ги поддржам потребите за пристапност
+    додека го предавам овој модул?
+  csa_ai_page_faq_answer_03_01: Угостителството за потребите за пристапност е од клучно
+    значење за инклузивна средина за учење. [Прочитајте повеќе за карактеристиките
+    за пристапност во софтверот што се користи во овој модул овде] ()%{install_url}.
+  csa_ai_page_faq_question_04: Како да го користам VS кодот на Chromebook?
+  csa_ai_page_faq_answer_04: Користењето на VS Code на Chromebook стана поедноставно,
+    особено со можноста да се стартуваат апликации за Linux на поновите модели на
+    Chromebook. [Прочитајте повеќе за поставување VS код на Chromebook тука] ()%{chromebook_url}.
+  csa_ai_page_faq_question_05: Како можам да добијам професионален развој за овој
+    модул?
+  csa_ai_page_faq_answer_05: Во моментов не постои специфичен професионален развој
+    за овој курс. Ако барате да разберете како да пристапите кон вештачката интелигенција
+    во вашата училница, можете [да истражувате AI 101 за наставници] (%{ai_101_url}).
+  csa_ai_page_faq_question_06: Кој е препорачаниот тајминг за предавање на овој модул?
+  csa_ai_page_faq_answer_06_01: Модулот Софтверско инженерство и компјутерска визија
+    е смислено структуриран за да обезбеди сеопфатно учење во концизна временска рамка.
+    Целиот модул е дизајниран да опфата**2 недели на настава**. Повеќето лекции се
+    прилагодени за **45 минути**, додека лекциите каде што учениците истражувам во
+    рацете на Java развој на проектот се дизајнирани за **90 минути**. Ова продолжено
+    време обезбедува студентите да имаат доволно можност да разберат, имплементираат
+    и смена на проблеми додека работат.
+  csa_ai_page_faq_answer_06_02: Исто така, постои намерна флексибилност вградена во
+    структурата на модулот. Во зависност од динамиката во училницата, ангажманот на
+    учениците и длабочината на која сакате да ја истражувате секоја тема, можете да
+    го прилагодите времетраењето. На пример, лекцијата Intro to Copilot, дизајнирана
+    како лекција од 45 минути, може да се прошири на 90 минути ако сакате да нурнете
+    подлабоко во тоа колку големи јазични модели и алатки како GitHub Copilot и ChatGPT
+    работат.
+  csa_ai_page_faq_question_07: How can I access answer keys?
+  csa_ai_page_faq_answer_07: Со одобрена сметка на наставник, можете да најдете клучеви
+    за одговор во сино панел “Учител” Само што покажува во онлајн лекциите и активности.Ако
+    ви треба одобрена сметка за наставник, можете да аплицирате за пристап до заштитени
+    материјали само за наставници (клучеви за одговор и сл.) преку [оваа форма] ().%{form_url}Ве
+    молиме имајте на ум дека може да потрае 3-5 работни дена за да ја потврдите вашата
+    сметка.
+  csa_ai_page_faq_question_08: Дали овој модул е одбележан со стандардите?
+  csa_ai_page_faq_answer_08: Да, наставната програма за софтверско инженерство и компјутерска
+    визија е мапирана на [CSTA K-12 стандарди] (%{csta_k12_url}) и AI за [K-12 насоки]
+    ().%{k12_url}
+  csa_ai_page_faq_question_09: Колку чини да се научи овој модул?
+  csa_ai_page_faq_answer_09_01: Нашата наставна програма и платформа се достапни на
+    [без трошоци] (%{no_cost_url}) за секој, насекаде, да предава!
+  csa_ai_page_faq_answer_09_02: Дополнително, софтверот и алатките кои се користат
+    во овој модул се бесплатни. GitHub Copilot е бесплатен за потврдени [teachers]()
+    и ()%{teachers_url}. [students]%{students_url}
+  csa_ai_page_faq_question_10: Што да направам ако инсталацијата на софтверот не работи?
+  csa_ai_page_faq_answer_10: Соочувањето со проблеми за време на инсталацијата на
+    софтверот може да биде вообичаено, но постојат систематски чекори што можете да
+    ги следите за смена на проблеми и да ги решите. [Проверете некои совети за решавање
+    проблеми тука] ().%{troubleshooting_url}
+  csa_ai_page_faq_question_11: How was the curriculum developed?
+  csa_ai_page_faq_answer_11_01: 'Нашата софтверско инженерство и компјутерска визија
+    наставна програма беше дизајнирана со нашите вредности на наставната програма
+    во умот. Следниве цели водени создавањето на оваа наставна програма:'
+  csa_ai_page_faq_answer_11_list_01: "**Цел 1: ** Користете AI алатки за генерирање,
+    дебагирање и уредување на код."
+  csa_ai_page_faq_answer_11_list_02: "**Цел 2: ** Транзиција од Java Lab на реалниот
+    свет алатки."
+  csa_ai_page_faq_answer_11_list_03: "**Цел 3: ** Продлабочете го разбирањето за тоа
+    како моделите на АИ се обучуваат и интегрираат во програмите."
+  csa_ai_page_faq_answer_11_02: За повеќе информации за вредностите кои ја водеа нашата
+    работа, ве молиме погледнете ги нашите [наставни вредности] ()%{curriculum_values_url}.
+  video_library_page_main_title: Едукативни кратки видеа
+  video_library_page_hero_description: Растечката библиотека на едукативни видеа на
+    Code.org е достапна за повторна употреба од страна на едукаторите ширум светот,
+    онлајн или во училниците. Нашата цел е да ги засилиме нашите напори надвор од
+    дофатот на нашата сопствена наставна програма.
+  video_library_page_title_ai_works: Како работи АИ
+  video_library_page_description_ai_works: Оваа серија кратки видеа ќе ве запознае
+    со тоа како функционира вештачката интелигенција и зошто е тоа важно. Дознајте
+    за невронските мрежи или како АИ учи и истражувајте во прашања како алгоритамска
+    пристрасност и етика на донесување одлуки за АИ.
+  video_library_page_title_computers_work: Како работат компјутерите
+  video_library_page_description_computers_work: Објаснува што го прави компјутерот
+    компјутер, како дигиталните информации се претставени во 1s и 0s, како компјутерските
+    кола работат за манипулирање со дигитални информации и како централната процесорска
+    единица (процесорот) и оперативниот систем ги контролираат влезовите, излезите,
+    меморијата и хардверот на компјутерот.
+  video_library_page_title_internet_works: Како функционира интернетот
+  video_library_page_description_internet_works: Одликувајќи се со Винт Церф, пронаоѓачот
+    на TCP/IP, Дејвид Карп основачот на Tumblr за да ги објасни HTTP и HTML, Безбедносната
+    принцеза на Google за објаснување на SSL и сајбер-безбедноста и инженери од Microsoft,
+    Spotify и Symantec. Оваа серија на кратки видеа објаснувајќи Како функционира
+    интернетот.
+  video_library_page_title_not_hacked: Како да не се пробиени
+  video_library_page_description_not_hacked: Интернетот е отворен, па се што се случува
+    на него може да се види освен ако не е заштитено. Во современите земји, луѓето
+    се повеќе загрижени за добивање пробиени отколку за било кој друг криминал. Зошто?
+    Бидејќи секој компјутер или телефон на интернет редовно се тестира за пропусти
+    од страна на криминалци, терористи, па дури и државни актери. Ако не сте внимателни,
+    некој може да го пробие вашиот уред или сметки, па дури и да го украде вашиот
+    идентитет или вашите пари.
+  video_library_page_title_blockchain: Како работи блокчејн
+  video_library_page_description_blockchain: Направени во партнерство со Coinbase,
+    оваа серија карактеристики индустрија експерти и има за цел да демистифицира оваа
+    технологија со истражување на она што blockchain е, како тоа функционира, и нејзините
+    потенцијални општествени импликации - и добри и лоши.
+  video_library_page_title_careers: Кариери во CS
+  video_library_page_description_careers: Кариери во компјутерски науки и технологија
+    може да биде забавно и наградува. Но, она што навистина го прави лицето кое работи
+    во овие полиња? Со огромна разновидност на работни места и компании, нема само
+    еден одговор на ова прашање. Погледнете ги видеата подолу за да запознаете некои
+    од луѓето кои се справуваат со големи проблеми на креативни начини.
+  video_library_page_title_inspirational: Инспиративни
+  video_library_page_description_inspirational: Што ќе се промени компјутерската наука
+    во нашиот свет? Сè? За кого е? Сите! Погледнете ги овие видеа за да ве инспирираат
+    и мотивираат.
+  video_library_page_footer_description: Барате нешто друго? Имаме толку многу одлични
+    видеа достапни на нашиот канал на YouTube.
+  video_library_page_footer_cta: Истражете ги сите видеа на Code.org на YouTube
+  video_library_page_computer_work_video_title_1: Воведување на тоа како работат компјутерите
+  video_library_page_computer_work_video_title_2: Бинарни и податоци
+  video_library_page_computer_work_video_title_3: Процесор, меморија, влез и излез
+  video_library_page_computer_work_video_title_4: Што прави компјутер, компјутер?
+  video_library_page_computer_work_video_title_5: Логика кола
+  video_library_page_computer_work_video_title_6: Хардвер и софтвер
+  video_library_page_internet_work_video_title_1: Што е интернет?
+  video_library_page_internet_work_video_title_2: 'ИНТЕРНЕТ: IP адреси и DNS'
+  video_library_page_internet_work_video_title_3: 'ИНТЕРНЕТ: HTTP и HTML'
+  video_library_page_internet_work_video_title_4: 'ИНТЕРНЕТ: Сајбер-безбедност и криминал'
+  video_library_page_internet_work_video_title_5: 'ИНТЕРНЕТ: Жици, кабли и Wifi'
+  video_library_page_internet_work_video_title_6: 'ИНТЕРНЕТ: Пакети, рутирање и сигурност'
+  video_library_page_internet_work_video_title_7: 'ИНТЕРНЕТ: Енкрипција и јавни клучеви'
+  video_library_page_internet_work_video_title_8: 'ИНТЕРНЕТ: Како работи пребарувањето'
+  video_library_page_cs_video_title_1: Моето име е Џером и јас сум технолог за дизајн
+    во Meow Wolf
+  video_library_page_cs_video_title_2: Моето име е Никеша и јас сум воздухопловен
+    инженер во НАСА
+  video_library_page_cs_video_title_3: Моето име е Брина и јас сум софтверски инженер
+    во Instagram
+  video_library_page_cs_video_title_4: Моето име е Кинсли и јас сум софтверски инженер
+    на Фејсбук
+  video_library_page_cs_video_title_5: Моето име е Полина и јас сум научник за податоци
+    во електронските уметности
+  video_library_page_cs_video_title_6: Моето име е Данеле и јас сум софтверски инженер
+    во МБАРИ
+  video_library_page_cs_video_title_7: Моето име е Кристофер и јас сум аналитичар
+    за безбедност во Tanium
+  video_library_page_cs_video_title_8: Моето име е Федерико и јас сум технички програмски
+    менаџер во Мајкрософт
+  video_library_page_cs_video_title_9: Моето име е Тес и јас сум софтверски инженер
+    во Google
+  video_library_page_inspirational_video_title_1: Промена на лицето на компјутерски
+    науки (3 мин)
+  video_library_page_inspirational_video_title_2: Притисни себе. Секој може да научи.
+    (1 мин)
+  video_library_page_inspirational_video_title_3: Инспирирај девојка (2 мин)
+  video_library_page_inspirational_video_title_4: Што повеќето училишта не учат (5
+    мин)
+  video_library_page_inspirational_video_title_5: Часот на кодот е тука - Секој може
+    да научи (2 мин)
+  video_library_page_inspirational_video_title_6: Моето име е Арасели (3 мин)
+  video_library_page_inspirational_video_title_7: Час на код со Стеф Кари (2 мин)
+  video_library_page_inspirational_video_title_8: Компјутерски науки се менува сè
+    (5 мин)
+  video_library_page_inspirational_video_title_9: Компјутерски науки интро (1 мин)
+  video_library_page_inspirational_video_title_10: Претседателот Обама за компјутерски
+    науки (1 мин)
+  video_library_page_inspirational_video_title_11: Секој може да научи (1 мин)
+  video_library_page_inspirational_video_title_12: Ло Ке Фалта Ен Нуестрас Ескуелас
+    (2 мин)
+  video_library_page_not_hacked_video_title_1: 'Како да не се пробиени: Вовед'
+  video_library_page_not_hacked_video_title_2: 'Како да не се пробиени: Лозинки'
+  video_library_page_not_hacked_video_title_3: 'Како да не се пробие: Автентикација
+    и заклучување на уредот'
+  video_library_page_not_hacked_video_title_4: 'Како да не се пробиени: Фишинг'
+  video_library_page_not_hacked_video_title_5: 'Како да не се пробие: Веб-страници
+    и Wifi'
+  video_library_page_not_hacked_video_title_6: 'Како да не се пробиени: Пораки и преземања'
+  video_library_page_not_hacked_video_title_7: 'Како да не се пробие: Инсталирајте
+    ажурирања'
   language_code:
     ar: арапски
     az: Азербејџански

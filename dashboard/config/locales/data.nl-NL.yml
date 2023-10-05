@@ -772,6 +772,7 @@ nl:
         applab_hoc_share: AppLab Hour of Code - Delen
         applab_hoc_welcome: App Lab Hour of Code - Welkom
         artist_intro: Artiest Intro
+        code-break: Neem een codepauze
         csd_applab_arrays: Inleiding tot Arrays
         csd_applab_parameters: Functies met Parameters
         csd_concept_binary_data: 'Hoe Computers Werken: Binair & Data'
@@ -884,4 +885,5 @@ nl:
         starwars_intro: 'Star Wars: Bouw een Heelal met Code - Inleiding'
         starwars_typing: 'Star Wars: Bouw een Heelal met Code - JavaScript'
         tutorial_puzzle_challenge: Handleiding voor de Puzzel Opdracht
+        what-is-creativity: Wat is creativiteit?
         writing_first_program: Schrijf je eerste computerprogramma!

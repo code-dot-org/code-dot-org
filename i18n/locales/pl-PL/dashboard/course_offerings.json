@@ -331,7 +331,6 @@
   "contagion-guided-practice-1": "contagion-guided-practice-1",
   "csa5-exemplars": "csa5-exemplars",
   "dance-extras-gallery": "dance-extras-gallery",
-  "self-paced-pl-csd6-2021": "self-paced-pl-csd6-2021",
   "cspunit4": "cspunit4",
   "allthesurveys": "wszystkie ankiety",
   "cs-discoveries-facilitator-in-training": "cs-discoveries-facilitator-in-training",
@@ -355,7 +354,6 @@
   "csa-labs": "csa-labs",
   "csa-draft-pl": "csa-draft-pl",
   "dlp-csd-mod4": "dlp-csd-mod4",
-  "vpl-csa": "CSA Wirtualne profesjonalne uczenie się",
   "katie-practice": "katie-practice",
   "soccer": "piłka nożna",
   "csa-data-lab": "AP CSA Data Lab",
@@ -435,5 +433,6 @@
   "tesspltest23": "tesspltest23",
   "test-nv-coursea": "test-nv-coursea",
   "aichat": "aichat",
-  "how-ai-works": "Jak działa AI"
+  "how-ai-works": "Jak działa AI",
+  "draft-hoc-dp": "draft-hoc-dp"
 }

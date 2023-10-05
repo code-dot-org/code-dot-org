@@ -617,6 +617,7 @@ ko:
         artist_intro: 예술가 퍼즐 소개
         c_and_c_digital_sharing: 디지털 공유
         c_and_c_great_to_create: 창작과 페어 플레이는 멋진 일입니다.
+        code-break: 코드 브레이크 선택
         codebreak_e01: '코드 브레이크 1.0: 힐 하퍼 알고리즘'
         codebreak_e02: 코드 브레이크 2.0 - 마크 큐반 및 린제이 스콧 프로토타입
         codebreak_e03: '코드 브레이크 3.0: 애쉬튼 커쳐와 미아 길 엡손 암호화'
@@ -828,6 +829,7 @@ ko:
         u5-traversals-get-list-explanation: Code.org [levelbuilder] - 파일럿 비디오 - 데이터
           블록
         u7-libraries-explanation: '앱 랩: 자신만의 블록 만들기 - 라이브러리 이용 방법'
+        what-is-creativity: 창의력이란?
         what_is_an_event: 이벤트란?
         what_is_cs: 컴퓨터 과학이란?
         why-should-teach-unplugged-activities: 'FAQ: "언플러그드" 활동을 가르쳐야 하는 이유는?'

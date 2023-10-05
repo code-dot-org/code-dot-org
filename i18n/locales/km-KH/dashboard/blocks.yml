@@ -2,6 +2,14 @@
 km:
   data:
     blocks:
+      AmysBlocks_makeNumSprites:
+        text: បង្កើត​ {NUM} ថ្មី {ANIMATION_NAME} sprites {LOCATION}
+      AmysBlocks_playerBehaviors:
+        options:
+          BEHAVIOR:
+            new Behavior(moving_with_arrow_keys, []): ផ្លាស់ទីដោយប្រើគ្រាប់ ចុចព្រួញ
+      AmysBlocks_spriteSayVar:
+        text: "{SPRITE}និយាយ{TEXT1}"
       BadGuys_makeNewBadGuysSprite:
         text: បង្កើត ថ្មី {ANIMATION_NAME} sprite នៅ {LOCATION}
       BadGuys_setSizeAll_dropdown:
@@ -32,7 +40,7 @@ km:
           MOVE1:
             MOVES.Roll: ក្រឡេងខ្លួន
             MOVES.ClapHigh: ទេះដៃខ្ពស់
-            MOVES.Drop: ទម្លាក់
+            MOVES.Drop: ទម្លាក់ (Drop)
             MOVES.Fresh: ស្រស់ស្រាយ
             MOVES.Kick: ផ្កាយ
             MOVES.ThisOrThat: នេះ ឬនោះ
@@ -40,7 +48,7 @@ km:
           MOVE2:
             MOVES.Roll: ក្រឡេងខ្លួន
             MOVES.ClapHigh: ទេះដៃខ្ពស់
-            MOVES.Drop: ទម្លាក់
+            MOVES.Drop: ទម្លាក់ (Drop)
             MOVES.Fresh: ស្រស់ស្រាយ
             MOVES.Kick: ផ្កាយ
             MOVES.ThisOrThat: នេះ ឬនោះ
@@ -72,7 +80,7 @@ km:
             '"rand"': ចៃដន្យ
             MOVES.Roll: ក្រឡេងខ្លួន
             MOVES.ClapHigh: ទេះដៃខ្ពស់
-            MOVES.Drop: ទម្លាក់
+            MOVES.Drop: ទម្លាក់ (Drop)
             MOVES.Fresh: ស្រស់ស្រាយ
             MOVES.Kick: ផ្កាយ
             MOVES.ThisOrThat: នេះ ឬនោះ
@@ -84,7 +92,7 @@ km:
             '"rand"': ចៃដន្យ
             MOVES.Roll: ក្រឡេងខ្លួន
             MOVES.ClapHigh: ទេះដៃខ្ពស់
-            MOVES.Drop: ទម្លាក់
+            MOVES.Drop: ទម្លាក់ (Drop)
             MOVES.Fresh: ស្រស់ស្រាយ
             MOVES.Kick: ផ្កាយ
             MOVES.ThisOrThat: នេះ ឬនោះ
@@ -143,7 +151,7 @@ km:
             MOVES.XClapSide: ទេះដៃ
             MOVES.ClapHigh: ទេះដៃខ្ពស់
             MOVES.XFever: ឌីស្កូ
-            MOVES.Drop: ទម្លាក់
+            MOVES.Drop: ទម្លាក់ (Drop)
             MOVES.Fresh: ស្រស់ស្រាយ
             MOVES.XHop: លោត
             MOVES.XHighKick: ទាត់
@@ -162,7 +170,7 @@ km:
             MOVES.XClapSide: ទេះដៃ
             MOVES.ClapHigh: ទេះដៃខ្ពស់
             MOVES.XFever: ឌីស្កូ
-            MOVES.Drop: ទម្លាក់
+            MOVES.Drop: ទម្លាក់ (Drop)
             MOVES.Fresh: ស្រស់ស្រាយ
             MOVES.XHop: លោត
             MOVES.XHighKick: ទាត់
@@ -202,7 +210,7 @@ km:
         options:
           DANCE:
             MOVES.ClapHigh: ទេះដៃខ្ពស់
-            MOVES.Drop: ទម្លាក់
+            MOVES.Drop: ទម្លាក់ (Drop)
             MOVES.Fresh: ស្រស់ស្រាយ
             MOVES.Roll: ក្រឡេងខ្លួន
             MOVES.Kick: ផ្កាយ
@@ -226,7 +234,7 @@ km:
             "{x: 300, y: 100}": ខាងលើស្ដាំ
             "{x: 100, y: 300}": បាតក្រោមខាងឆ្វេង
             "{x: 300, y: 300}": បាតក្រោមខាងស្ដាំ
-            "{x: randomNumber(50, 350), y: randomNumber(50, 350)}": ចៃដន្យ
+            "{x: randomNumber(50, 350), y: randomNumber(50, 350)}": ចៃដន្យ (ឆ្លាស់)
       Dancelab_jumpToEach:
         text: លោត {GROUP} ទៅ {LOCATION}
         options:
@@ -252,7 +260,7 @@ km:
             "{x: 300, y: 100}": ខាងលើស្ដាំ
             "{x: 100, y: 300}": បាតក្រោមខាងឆ្វេង
             "{x: 300, y: 300}": បាតក្រោមខាងស្ដាំ
-            "{x: randomNumber(60, 340), y: randomNumber(60, 340)}": ចៃដន្យ
+            "{x: randomNumber(60, 340), y: randomNumber(60, 340)}": ចៃដន្យ (ឆ្លាស់)
       Dancelab_layoutSprites:
         text: ប្លង់រាំ {GROUP} ជា {FORMAT}
         options:
@@ -284,17 +292,21 @@ km:
             '"plus"': សញ្ញាបូក
             '"spiral"': រាងគូទខ្យង
             '"infinity"': បន្ទាត់គ្មានកំណត់
-            '"random"': ចៃដន្យ
+            '"random"': ចៃដន្យ (ឆ្លាស់)
       Dancelab_makeAnonymousDanceSprite:
         text: បង្កើតថ្មី  {COSTUME} នៅ {LOCATION}
         options:
           COSTUME:
             '"ALIEN"': មនុស្សក្រៅភព
+            '"BEAR"': ខ្លាឃ្មុំ
             '"CAT"': ឆ្មា
             '"DOG"': ឆ្កែ
             '"DUCK"': ទា
+            '"FROG"': កង្កែប
             '"PINEAPPLE"': ផ្លែម្នាស់
             '"ROBOT"': robot
+            '"SHARK"': ត្រីឆ្លាម
+            '"SLOTH"': ស្លូត (sloth)
             '"UNICORN"': សេះដុះស្នែង
           LOCATION:
             "{x: 200, y: 100}": ខាងលើ
@@ -306,16 +318,23 @@ km:
             "{x: 300, y: 100}": ខាងលើស្ដាំ
             "{x: 100, y: 300}": បាតក្រោមខាងឆ្វេង
             "{x: 300, y: 300}": បាតក្រោមខាងស្ដាំ
-            "{x: randomNumber(50, 350), y: randomNumber(50, 350)}": ចៃដន្យ
+            "{x: randomNumber(50, 350), y: randomNumber(50, 350)}": ចៃដន្យ (ឆ្លាស់)
       Dancelab_makeNewDanceSprite:
+        text: |-
+          បង្កើតថ្មី  {COSTUME}
+          ហៅ {NAME} នៅ {LOCATION}
         options:
           COSTUME:
             '"ALIEN"': មនុស្សក្រៅភព
+            '"BEAR"': ខ្លាឃ្មុំ
             '"CAT"': ឆ្មា
             '"DOG"': ឆ្កែ
             '"DUCK"': ទា
+            '"FROG"': កង្កែប
             '"PINEAPPLE"': ផ្លែម្នាស់
             '"ROBOT"': robot
+            '"SHARK"': ត្រីឆ្លាម
+            '"SLOTH"': ស្លូត (sloth)
             '"UNICORN"': សេះដុះស្នែង
           LOCATION:
             "{x: 200, y: 100}": ខាងលើ
@@ -327,8 +346,9 @@ km:
             "{x: 300, y: 100}": ខាងលើស្ដាំ
             "{x: 100, y: 300}": បាតក្រោមខាងឆ្វេង
             "{x: 300, y: 300}": បាតក្រោមខាងស្ដាំ
-            "{x: randomNumber(50, 350), y: randomNumber(50, 350)}": ចៃដន្យ
+            "{x: randomNumber(50, 350), y: randomNumber(50, 350)}": ចៃដន្យ (ឆ្លាស់)
       Dancelab_makeNewDanceSpriteGroup:
+        text: បង្កើត {N} ថ្មី {COSTUME} នៅក្នុងរាង {LAYOUT}
         options:
           COSTUME:
             '"ALIEN"': មនុស្សភពក្រៅ
@@ -358,7 +378,7 @@ km:
             '"plus"': សញ្ញាបូក
             '"spiral"': រាងគូទខ្យង
             '"infinity"': បន្ទាត់គ្មានកំណត់
-            '"random"': ចៃដន្យ
+            '"random"': ចៃដន្យ (ឆ្លាស់)
       Dancelab_mixColors:
         text: លាយ {COLOR1} និង {COLOR2}
       Dancelab_nMeasures:
@@ -381,7 +401,7 @@ km:
             '"fireworks"': កាំជ្រួច
             '"snowflakes"': ព្រិល
             '"text"': ឈ្មោះបទចម្រៀង
-            '"galaxy"': លំហ
+            '"galaxy"': space key
             '"sparkles"': ផ្កាភ្លើង
             '"spiral"': រាងគូទខ្យង
             '"disco"': ការ៉េ
@@ -416,7 +436,7 @@ km:
             '"ripples"': រលកកណ្ដាល
             '"snowflakes"': ព្រិល
             '"text"': ឈ្មោះបទចម្រៀង
-            '"galaxy"': លំហ
+            '"galaxy"': space key
             '"sparkles"': ផ្កាភ្លើង
             '"spiral"': រាងគូទខ្យង
             '"disco"': ការ៉េ
@@ -731,7 +751,7 @@ km:
             '"left"': ឆ្វេង
             '"down"': ចុះ
             '"right"': ស្តាំ
-            '"space"': លំហ​អាកាស
+            '"space"': space key
             '"x"': x
             '"y"': 'y'
       Dancelab_whenPeak:
@@ -751,6 +771,10 @@ km:
             '"hearts"': បេះដូង
             '"rain"': ភ្លៀង
             '"starburst"': ផ្កាយផ្ទុះចេញ
+      FunctionBlocks_makeManipulative2:
+        text: បង្កើត​ {NUM} ថ្មី {ANIMATION_NAME} sprites {BEHAVIOR}
+      FunctionBlocks_spriteSayVar:
+        text: "{SPRITE}និយាយ{TEXT1}"
       gamelab_addBehaviorSimple:
         text: sprite {SPRITE} ចាប់ផ្តើម {BEHAVIOR}
       gamelab_atTime:
@@ -795,6 +819,8 @@ km:
             new Behavior(moving_south_and_looping, []): ផ្លាស់ទីទៅខាងត្បូង ហើយ looping
       gamelab_comment:
         text: 'កំណត់សម្គាល់: {COMMENT}'
+      gamelab_createNewSprite:
+        text: "បង្កើត sprite ថ្មី\n ហៅ {NAME} \n ជាមួយ costume {COSTUME} \n នៅ {LOCATION}"
       gamelab_destroy:
         text: ដកចេញ {THIS}
       gamelab_draggable:
@@ -821,6 +847,8 @@ km:
         options:
           UNIT:
             '"seconds"': វិ​នាទី
+      gamelab_hideTitleScreen:
+        text: លាក់ចំណងជើងនៅលើអេក្រង់
       gamelab_isKeyPressed:
         options:
           KEY:
@@ -828,7 +856,7 @@ km:
             '"down"': ចុះ
             '"left"': ឆ្វេង
             '"right"': ស្តាំ
-            '"space"': លំហ​អាកាស
+            '"space"': space key
             '"x"': x
             '"y"': 'y'
       gamelab_jumpTo:
@@ -844,7 +872,7 @@ km:
             '"down"': ចុះ
             '"left"': ឆ្វេង
             '"right"': ស្តាំ
-            '"space"': លំហ​អាកាស
+            '"space"': space key
             '"x"': x
             '"y"': 'y'
       gamelab_layoutSprites:
@@ -863,6 +891,7 @@ km:
       gamelab_locationMouse:
         text: ទីតាំង ទស្សន៍ទ្រនិច
       gamelab_makeBurst:
+        text: បង្កើត {EFFECT} លម្អជាមួយ {NUM} {ANIMATION_NAME} sprites
         options:
           EFFECT:
             '"rain"': ភ្លៀង
@@ -882,6 +911,10 @@ km:
             '"left"': ជួរឈរខាងឆ្វេង
             '"column"': ជួរឈរ
             '"right"': ជួរឈរខាងស្ដាំ
+      gamelab_makeNumSprites:
+        text: បង្កើត​ {NUM} ថ្មី {ANIMATION_NAME} sprites
+      gamelab_makeNumSpritesNear:
+        text: បង្កើត​ {NUM} ថ្មី {ANIMATION_NAME} sprites ក្បែ {LOCATION}
       gamelab_makeProjectile:
         options:
           DIRECTION:
@@ -890,6 +923,7 @@ km:
             '180': ឆ្វេង
             '270': ឡើង
       gamelab_makeSpritesWithSize:
+        text: បង្កើត {NUM} ថ្មី {SIZE} {COSTUME} sprites
         options:
           SIZE:
             '50': មធ្យម
@@ -901,19 +935,26 @@ km:
             '"left"': ឆ្វេង
       gamelab_mouseLocation:
         text: ទីតាំង ទស្សន៍ទ្រនិច
+      gamelab_moveBackward:
+        text: ផ្លាស់ទី {SPRITE} {DISTANCE} ភីកសែល ថយក្រោយ
+      gamelab_moveForward:
+        text: ផ្លាស់ទី {SPRITE} {DISTANCE} ភីកសែល ទៅមុខ
       gamelab_moveInDirection:
         text: ផ្លាស់ទី {SPRITE} {DISTANCE} ភីកសែល {DIRECTION}
+      gamelab_moveToward:
+        text: ផ្លាស់ទី {SPRITE} ភីកសែល {DISTANCE} ទៅកាន់ {TARGET}
       gamelab_newSpritePointer:
         text: "{SPRITE}"
       gamelab_objectSpritePointer:
         text: "{SPRITE}"
       gamelab_playSound:
-        text: ចាក់សំឡេង {SOUND}
+        text: លេងសំឡេង {SOUND}
       gamelab_playSoundOptions:
-        text: ចាក់សំឡេង {SOUND}
+        text: លេងសំឡេង {SOUND}
         options:
           SOUND:
             "'sound://category_collect/clicky_crunch.mp3'": ខាំ
+            "'sound://category_animals/bear.mp3'": ខ្លាឃ្មុំ
             "'sound://category_animals/cat.mp3'": ឆ្មា
             "'sound://category_animals/cow.mp3'": មេគោ
             "'sound://category_animals/sheep.mp3'": ចៀម
@@ -922,9 +963,9 @@ km:
             "'sound://category_animals/dog.mp3'": ឆ្កែ
             "'sound://category_digital/jump_7.mp3'": លោត
       gamelab_playSoundOptionsSoccer:
-        text: ចាក់សំឡេង {SOUND}
+        text: លេងសំឡេង {SOUND}
       gamelab_playSoundOptionsSpace:
-        text: ចាក់សំឡេង {SOUND}
+        text: លេងសំឡេង {SOUND}
       gamelab_playerBehaviors:
         options:
           BEHAVIOR:
@@ -933,6 +974,8 @@ km:
             draggable(): អាចអូសបាន
       gamelab_pointInDirection:
         text: ចង្អុល {SPRITE} {DIRECTION}
+      gamelab_printText:
+        text: បង្ហាញ{TEXT}
       gamelab_randColor:
         text: ពណ៌​ព្រាវ
       gamelab_randomColor:
@@ -997,12 +1040,18 @@ km:
             '7': លឿន
       gamelab_setTint:
         text: ផ្លាស់ប្តូរពណ៌ {THIS} ទៅជា {COLOR}
+      gamelab_showTitleScreen:
+        text: បង្ហាញចំណងជើងលើអេក្រង់ {BREAK} ចំណងជើង {TITLE} ចំណងជើងរង {SUBTITLE}
       gamelab_spriteClicked:
         text: "{CONDITION} {SPRITE} ចុច"
         options:
           CONDITION:
             '"when"': នៅ​ពេល
             '"while"': ខណៈពេល
+      gamelab_spriteSay:
+        text: "{SPRITE}និយាយ{SPEECH}"
+      gamelab_spriteSayTime:
+        text: "{SPRITE}និយាយ{TEXT1}សម្រាប់{NUM}វិនាទី"
       gamelab_subjectSpritePointer:
         text: "{SPRITE}"
       gamelab_turn:
@@ -1011,6 +1060,8 @@ km:
           DIRECTION:
             '"right"': ស្តាំ
             '"left"': ឆ្វេង
+      gamelab_updateTitleWithColor:
+        text: បង្ហាញចំណងជើងលើអេក្រង់ {BREAK} ចំណងជើង {TITLE} ពណ៌ {COLOR}
       gamelab_whenDownArrow:
         text: នៅពេលចុចព្រួញចុះក្រោម
       gamelab_whenKey:
@@ -1021,7 +1072,7 @@ km:
             '"down"': ចុះ
             '"left"': ឆ្វេង
             '"right"': ស្តាំ
-            '"space"': លំហ​អាកាស
+            '"space"': space key
       gamelab_whenLeftArrow:
         text: នៅពេលចុចព្រួញខាងឆ្វេង
       gamelab_whenRightArrow:
@@ -1035,7 +1086,11 @@ km:
             '"down"': ចុះ
             '"left"': ឆ្វេង
             '"right"': ស្តាំ
-            '"space"': លំហ​អាកាស
+            '"space"': space key
+      KatiesBlocks_makeNumSpritesNear:
+        text: បង្កើត​ {NUM} ថ្មី {ANIMATION_NAME} sprites ក្បែ {LOCATION}
+      KatiesBlocks_spriteBirdSay:
+        text: "{SPRITE}និយាយ{SPEECH}"
       Mikelab_addBehaviorSimple:
         text: sprite {SPRITE} ចាប់ផ្តើម {BEHAVIOR}
       Mikelab_addTrainingData:
@@ -1147,7 +1202,7 @@ km:
         options:
           DANCE:
             MOVES.ClapHigh: ទេះដៃខ្ពស់
-            MOVES.Drop: ទម្លាក់
+            MOVES.Drop: ទម្លាក់ (Drop)
             MOVES.Fresh: ស្រស់ស្រាយ
             MOVES.Roll: ក្រឡេងខ្លួន
             MOVES.Kick: ផ្កាយ
@@ -1247,23 +1302,26 @@ km:
             '"iceCream"': ការ៉េម
             '"rainbow"': ឥន្ទធនូ
       Poetry_makeBurst:
+        text: បង្កើត {EFFECT} លម្អជាមួយ {NUM} {ANIMATION_NAME} sprites
         options:
           EFFECT:
             '"rain"': ភ្លៀង
             '"spiral"': រាងគូទខ្យង
       Poetry_makeNewSpriteAnon:
         text: បង្កើត ថ្មី {ANIMATION_NAME} sprite នៅ {LOCATION}
+      Poetry_makeNumSprites:
+        text: បង្កើត​ {NUM} ថ្មី {ANIMATION_NAME} sprites
       Poetry_playMusic:
         options:
           SOUND:
             '"sound://category_nature/summer_night_loop.mp3"': យប់
       Poetry_playSound:
-        text: ចាក់សំឡេង {SOUND}
+        text: លេងសំឡេង {SOUND}
         options:
           SOUND:
             '"sound://category_jump/vibrant_game_jumping_up_1.mp3"': លោត
       Poetry_playSoundOptionsSpace:
-        text: ចាក់សំឡេង {SOUND}
+        text: លេងសំឡេង {SOUND}
       Poetry_setBackground:
         text: កំណត់ពណ៌ផ្ទៃខាងក្រោយ  {COLOR}
       Poetry_setBackgroundEffect:
@@ -1325,7 +1383,7 @@ km:
             '"grid"': ក្រឡាចត្រង្គ
             '"border"': នៅគេម
             '"row"': ជួរ
-            '"random"': ចៃដន្យ
+            '"random"': ចៃដន្យ (ឆ្លាស់)
       aalab_someGraduallyStartIntervention:
         options:
           PORTION:
@@ -1334,6 +1392,8 @@ km:
         options:
           PORTION:
             '1': ទាំងអស់
+      aalab_spriteSayChoices:
+        text: "{SPRITE}និយាយ{SPEECH}"
       adaptations_adaptationBehaviors:
         options:
           BEHAVIOR:
@@ -1344,9 +1404,14 @@ km:
             new Behavior(wobbling, []): អង្រួន
             new Behavior(wandering, []): វង្វេង
             new Behavior(patrolling, []): ដើរល្បាត
+      adaptations_makeNumSpritesNear:
+        text: បង្កើត​ {NUM} ថ្មី {ANIMATION_NAME} sprites ក្បែ {LOCATION}
+      adaptations_spriteBirdSay:
+        text: "{SPRITE}និយាយ{SPEECH}"
       binary_goTo:
         text: លោតទៅ {LOC}
       binary_move:
+        text: ផ្លាស់ទី {DIR}
         options:
           DIR:
             '"up"': ឡើង
@@ -1361,7 +1426,7 @@ km:
             '"down"': ចុះ
             '"left"': ឆ្វេង
             '"right"': ស្តាំ
-            '"space"': លំហ​អាកាស
+            '"space"': space key
       craft_ifPath:
         text: |-
           ប្រសិនបើមានផ្លូវ  {DIR}
@@ -1451,6 +1516,14 @@ km:
           DIR:
             right: ស្ដាំ ↻
             left: ឆ្វេង ↺
+      ecosystems_makeNewSpriteBetween:
+        text: 'បង្កើត {N} ថ្មី {GROUP} រវាងទីតាំង x: {X} y: {Y}'
+      ecosystems_makeNumSpritesAtLocation:
+        text: បង្កើត {NUM} ថ្មី {ANIMATION_NAME} sprites នៅ {LOCATION_GENERATOR}
+      ecosystems_makeNumSpritesWithinRange:
+        text: បង្កើត {NUM} ថ្មី {ANIMATION_NAME} sprites នៅ{RANGE}
+      storylab_printText:
+        text: បង្ហាញ{TEXT}
       storylab_setForegroundEffect2:
         options:
           EFFECT:

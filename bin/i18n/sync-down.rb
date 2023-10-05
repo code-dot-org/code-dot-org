@@ -3,17 +3,15 @@
 # Downloads all translations from Crowdin Code.org, Code.org-Markdown, and
 # Hourofcode projects to i18n/locales.
 # https://crowdin.com/project/codeorg
-
+require_relative 'metrics'
 require_relative 'i18n_script_utils'
 
 require 'cdo/crowdin/legacy_utils'
 require 'cdo/crowdin/project'
 
 def with_elapsed
-  before = Time.now
-  yield
-  after = Time.now
-  return Time.at(after - before).utc.strftime('%H:%M:%S')
+  runtime = Benchmark.realtime {yield}
+  return Time.at(runtime).utc.strftime('%H:%M:%S')
 end
 
 def sync_down
@@ -50,8 +48,10 @@ def sync_down
       puts "Files downloaded in #{elapsed}"
     end
 
+    I18n::Metrics.report_status(true, 'sync-down', 'Sync down completed successfully')
     puts "Sync down completed successfully"
   rescue => exception
+    I18n::Metrics.report_status(false, 'sync-down', "Sync down failed from the error: #{exception}")
     puts "Sync down failed from the error: #{exception}"
     raise exception
   end

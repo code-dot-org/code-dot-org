@@ -104,16 +104,17 @@ Cosa ti serve:
 * Nome ed email del contatto principale che rappresenta l'attività inviata
 * Nome attività (non è possibile includere "Ora del Codice" nel nome)
 * URL di collegamento all'attività
+* Questa attività include l'intelligenza artificiale: Sì o No
 * Descrizione breve (massimo 400 caratteri) 
-    * Si prega di specificare nella descrizione dell'attività se è pensata per essere gestita dallo studente o se è necessaria la guida di un insegnante. Inoltre, alcune scuole sono interessate a sapere se le attività proposte per l'Ora del Codice rispecchiano gli standard "Competenze comuni" o "Scienza di nuova generazione". Se l'attività aderisce a standard specifici, prendi in considerazione l'inclusione di queste informazioni.
+    * Si prega di specificare nella descrizione dell'attività se è pensata per essere gestita dallo studente o se è necessaria la guida di un insegnante. Inoltre, alcune scuole sono interessate a sapere se le attività proposte per l'Ora del Codice rispecchiano gli standard "Common Core" o "Next Generation Science". Se l'attività aderisce a standard specifici, prendi in considerazione di includere queste informazioni.
 * Livello/i consigliato/i per gli utenti finali. Puoi fare riferimento a \[Computer Science Teachers’ Association’s K-12 Standards\] (https://k12cs.org/framework-statements-by-grade-band/) per concetti di informatica adeguati al grado scolastico. I livelli scolastici di esempio includono: 
     * Scuola dell'infanzia - Classe 1 (età 4-6)
     * Classi 2-5 (età 7-10)
     * Prima e seconda media (età 7-10)
     * Dalla terza media (più di 14 anni)
-* Un elenco delle aree tematiche coperte dalla tua attività (oltre all'informatica). Ad esempio, se un insegnante di matematica può utilizzare la tua attività per insegnare angoli o parabole, elencala come matematica. Se hai un'attività con giochi di parole che insegna verbi/nomi/ecc. scegli le arti del linguaggio.
-* Un elenco di linguaggi di programmazione insegnati dalla tua attività. Ad esempio C/C++, Java, JavaScript, ecc. o indipendente dalla lingua (per programmi di lezione che possono essere insegnati in più lingue)
-* Un elenco di lingue supportate. Nota: Il rilevamento della lingua è compito di chi fornisce il corso, noi ci limiteremo a reindirizzare tutti gli utenti al singolo URL fornito.
+* Un elenco di linguaggi di programmazione insegnati dalla tua attività. Ad esempio C/C++, Java, JavaScript, ecc. o indipendente dalla lingua (per programmi di lezione che possono essere insegnati in più lingue) scegli le arti del linguaggio.
+* Un elenco di lingue supportate. Nota: Il rilevamento della lingua è compito di chi fornisce il corso, noi ci limiteremo a reindirizzare tutti gli utenti al singolo URL fornito. o indipendente dalla lingua (per programmi di lezione che possono essere insegnati in più lingue)
+* Quale livello di esperienza dovrebbe avere un educatore per utilizzare la tua attività? (es. Principiante o Intermedio). E quale livello di esperienza dovrebbero avere gli studenti?
 * Quale livello di esperienza dovrebbe avere un educatore per utilizzare la tua attività? (es. Principiante o Intermedio). E quale livello di esperienza dovrebbero avere gli studenti? Se desideri preparare un'attività per l'Ora del Codice™ di livello Intermedio o Avanzato, specifica le conoscenze preliminari necessarie nella descrizione della tua attività.
 * La durata della tua attività 
     * Solo 1 ora
@@ -167,9 +168,11 @@ Cosa ti serve:
 
 ## In che modo saranno valutate le attività
 
-Un comitato diversificato di docenti di informatica classificherà i corsi proposti sulla base di misure sia qualitative che quantitative. Verranno elencate tutte le attività che soddisfano i criteri di base. Gli insegnanti potranno filtrarle e ordinarle per trovare le migliori attività per la loro classe.
+Un comitato diversificato di docenti di informatica classificherà i corsi proposti sulla base di misure sia qualitative che quantitative. Verranno elencate tutte le attività che soddisfano i criteri di base.
 
-La rubrica per la valutazione delle attività e dei programmi delle lezioni cercherà i seguenti criteri su tutte le attività e le classificherà di conseguenza:
+Per le tradizionali attività di programmazione, un comitato eterogeneo di docenti di informatica classificherà le candidature in base a criteri qualitativi e quantitativi. Verranno elencate tutte le attività che soddisfano i criteri di base. Gli insegnanti potranno filtrarle e ordinarle per trovare le migliori attività per la loro classe.
+
+Se il comitato di revisione valuta l'attività a zero in termini di qualità della produzione (a causa di errori o istruzioni che ne rendono molto difficile l'uso), nel promuovere l'apprendimento in gruppi sottorappresentati (a causa di materiale razzista/sessista), nel valore educativo (non insegna Concetti informatici), o divertente/coinvolgente (poiché è difficile/scoraggiante da elaborare per gli studenti), l'attività non verrà elencata.
 
 - Alta qualità di produzione
 - Promuovono l'apprendimento di tutti i gruppi demografici (specialmente degli studenti sottorappresentati in informatica, come giovani donne, studenti appartenenti a gruppi razziali ed etnici emarginati e studenti con disabilità)
@@ -177,9 +180,9 @@ La rubrica per la valutazione delle attività e dei programmi delle lezioni cerc
 - Divertente e coinvolgente
 - Incoraggia gli studenti a creare qualcosa di unico da condividere (Per studenti più giovani: con genitori e compagni di classe. Per studenti più anziani: su Internet)
 
-Se il comitato di revisione valuta l'attività a zero in termini di qualità della produzione (a causa di errori o istruzioni che ne rendono molto difficile l'uso), nel promuovere l'apprendimento in gruppi sottorappresentati (a causa di materiale razzista/sessista), nel valore educativo (non insegna Concetti informatici), o divertente/coinvolgente (poiché è difficile/scoraggiante da elaborare per gli studenti), l'attività non verrà elencata.
-
 Inoltre, per essere elencate, tutte le attività devono:
+
+Per quanto riguarda le attività autonome destinate a nuovi insegnanti e studenti, il comitato di revisione verificherà se:
 
 - Essere appropriato per un'aula di una scuola pubblica (niente armi, nessun contenuto esplicito/maturo, nessun contenuto religioso, ecc.)
 - Non richiedono l'iscrizione
@@ -205,20 +208,22 @@ Insegnanti e studenti potranno cercare e filtrare il nostro elenco di attività 
 
 ## Linee guida per la presentazione di una revisione qualitativa anticipata (NOVITÀ)
 
-Puoi includere il [logo dell'Ora del Codice](https://hourofcode.com/us/promote/resources#logo) nel tuo tutorial, ma questo non è obbligatorio. Se si utilizza il logo Hour of Code vedere le linee guida del marchio qui sotto. <u>In nessun caso è possibile utilizzare il logo e il nome Code.org.</u> Entrambi sono marchi registrati e non possono essere combinati con un marchio di terze parti senza espressa autorizzazione scritta.
-
-Nota: queste sono le linee guida generali per fornire un commento. La revisione anticipata della tua attività può includere commenti su tutte queste categorie oppure può includere commenti solo in una o due.
+Le attività non devono necessariamente includere l'intelligenza artificiale, anche se stiamo cercando di offrire altre attività relative all'IA.
 
 **Includi le note per l'insegnante.** La maggior parte delle attività dovrebbe essere autogestita dagli studenti, ma se un'attività deve essere guidata o gestita da un insegnante ti preghiamo di includere delle indicazioni chiare e semplici per l'insegnante, in forma di note disponibili ad un URL separato da inviare unitamente alla tua attività. Non sono solo gli studenti ad essere principianti, lo sono anche alcuni degli insegnanti. Includi le informazioni utili come:
+
+Tutte le attività inviate per una revisione anticipata riceveranno un riscontro entro il 1 settembre. Forniremo anche un collegamento a un modulo che puoi utilizzare per spiegare modifiche specifiche apportate a un'attività in risposta ai commenti.
+
+Ogni attività inviata prima del 1° ottobre riceverà una revisione standard, indipendentemente dal fatto che riceva una revisione anticipata o meno. Durante il periodo di revisione standard (settembre-ottobre), i revisori si concentreranno sulla valutazione delle attività secondo i criteri descritti nella sezione "Come verranno valutate le attività" sopra. A meno che non si notino modifiche specifiche a un'attività, i revisori possono e probabilmente faranno affidamento sui commenti delle revisioni anticipate per valutare le attività.
 
 - Su quali piattaforme e browser funziona meglio il tutorial?
 - Funziona sugli smartphone? Sui Tablet?
 - Si consiglia la programmazione in coppia?
 - Considerazioni per l'uso in una classe? Per esempio, se ci sono video, consiglia agli insegnanti di mostrare i video su uno schermo proiettato affinché l'intera classe possa vederli insieme
 
-Tutte le attività inviate per una revisione anticipata riceveranno un riscontro entro il 1 settembre. Forniremo anche un collegamento a un modulo che puoi utilizzare per spiegare modifiche specifiche apportate a un'attività in risposta ai commenti.
+**Aggiungi un feedback alla fine dell'attività.** (Per esempio: "Hai completato 10 livelli e hai imparato cosa sono i cicli! Ben fatto!")
 
-Ogni attività inviata prima del 1° ottobre riceverà una revisione standard, indipendentemente dal fatto che riceva una revisione anticipata o meno. Durante il periodo di revisione standard (settembre-ottobre), i revisori si concentreranno sulla valutazione delle attività secondo i criteri descritti nella sezione "Come verranno valutate le attività" sopra. A meno che non si notino modifiche specifiche a un'attività, i revisori possono e probabilmente faranno affidamento sui commenti delle revisioni anticipate per valutare le attività. @Scratch." Utilizza l'hashtag **#HourOfCode** (con lettere H, O e C maiuscole)
+**Incoraggia gli studenti a condividere quanto fatto sui social media (se appropriato) quando hanno finito.** Ad esempio "ho fatto un'Ora di Codice con ________ E tu? #HourOfCode" oppure "Ho fatto #HourOfCode prendendo parte alla #CSEdWeek. E tu? @Scratch." Utilizza l'hashtag **#HourOfCode** (con lettere H, O e C maiuscole)
 
 **Crea la tua attività in Italiano o altre lingue oltre l'Inglese.**
 
@@ -232,7 +237,7 @@ Ogni attività inviata prima del 1° ottobre riceverà una revisione standard, i
 
 ## Suggerimenti per la progettazione di tutorial autoguidati di un'ora
 
-**Aggiungi un feedback alla fine dell'attività.** (Per esempio: "Hai completato 10 livelli e hai imparato cosa sono i cicli! Ben fatto!") Non vogliamo impedire questo utilizzo, ma vogliamo assicurarci che l'utilizzo rientri in alcuni limiti:
+Hour of Code® e Hora del Código® sono marchi registrati di Code.org. Molti dei nostri partner per i tutorial hanno utilizzato i nostri marchi «L'Ora del Codice» sui loro siti web in relazione alle loro attività relative all'Ora del Codice. Non vogliamo impedire questo utilizzo, ma vogliamo assicurarci che l'utilizzo rientri in alcuni limiti:
 
 1. Usa «Hour of Code» solo in relazione alle attività non commerciali di CS Education nel contesto della campagna Hour of Code e per nessun altro scopo.
 2. Qualsiasi riferimento a "Hour of Code" ("Ora del codice") deve essere fatto in modo che non suggerisca che sia un tuo marchio, ma piuttosto si riferisca all'Ora del Codice come un movimento di gente comune. Buon esempio: «Partecipa all'Ora del Codice® su AcmeCorp.com». Un esempio di uso sbagliato: "Prova l'Ora del Codice di ACME Corp".
@@ -248,13 +253,13 @@ Ogni attività inviata prima del 1° ottobre riceverà una revisione standard, i
 
 ## Linee guida sui Marchi Registrati
 
-Per monitorare in modo più accurato la partecipazione, chiediamo a ogni partner del tutorial di includere un'immagine di monitoraggio di 1 pixel nella prima pagina dei tutorial dell'Ora del Codice. L'immagine pixel deve essere solo sulla pagina iniziale. Non includerla in nessuna pagina provvisoria del tuo tutorial.
+Se il tuo corso viene approvato e incluso nell'elenco finale dei corsi, Code.org ti fornirà uno specifico pixel di tracciamento che potrai integrare nel tuo corso. Vedi l'esempio in basso. Non includerla in nessuna pagina provvisoria del tuo tutorial.
 
 Questo ci consentirà di contare gli utenti che seguono il tuo tutorial sull'Ora del Codice. Porterà a conteggi di partecipazione più accurati per il tuo tutorial.
 
 Se il tuo corso viene approvato e incluso nell'elenco finale dei corsi, Code.org ti fornirà uno specifico pixel di tracciamento che potrai integrare nel tuo corso. Vedi l'esempio in basso.
 
-Nota: non è importante farlo per le applicazioni installabili (app iOS/Android, o app da installare sul PC)
+IMG SRC = <http://code.org/api/hour/begin_dance.png>
 
 Pixel di monitoraggio di esempio per Dance Party:
 
@@ -267,7 +272,7 @@ IMG SRC = <http://code.org/api/hour/begin_dance.png>
 
 ## Pixel di Tracciamento
 
-Questo ci consentirà di contare gli utenti che seguono il tuo tutorial sull'Ora del Codice. Porterà a conteggi di partecipazione più accurati per il tuo tutorial. I tuoi utenti saranno molto più propensi ad iniziare l'attività ricevendo da te una messaggio di posta elettronica riguardante i tuoi corsi. Utilizza la campagna internazionale dell'Ora del Codice per la Settimana dell'Educazione Informatica come un pretesto per incoraggiare gli utenti a invitare altri a partecipare, aiutaci a raggiungere più studenti.
+Promuovi la tua attività nella tua rete! Indirizzali alla tua pagina dell'Ora del Codice. I tuoi utenti saranno molto più propensi ad iniziare l'attività ricevendo da te una messaggio di posta elettronica riguardante i tuoi corsi. Utilizza la campagna internazionale dell'Ora del Codice per la Settimana dell'Educazione Informatica come un pretesto per incoraggiare gli utenti a invitare altri a partecipare, aiutaci a raggiungere più studenti.
 
 - Presenta l'Ora del Codice e la settimana dell'insegnamento dell'informatica sul tuo sito web. Esempio: <http://www.tynker.com/hour-of-code>
 - Promuovi l'Ora del Codice utilizzando i sociali network, i media tradizionali, le mailing list, ecc, usando l'hashtag #HourOfCode (con le lettere H, O e C maiuscole)
@@ -276,4 +281,4 @@ Questo ci consentirà di contare gli utenti che seguono il tuo tutorial sull'Ora
 
 [**Torna all'inizio**](#top)
 
-NOTA: questo non è importante per le app installabili (app iOS/Android o app installate sul desktop)
+{{ signup_button }}

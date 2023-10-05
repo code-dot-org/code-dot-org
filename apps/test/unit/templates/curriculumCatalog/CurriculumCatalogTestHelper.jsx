@@ -16,6 +16,7 @@ const makerCurriculum = {
   video: null,
   published_date: null,
   self_paced_pl_course_offering_path: null,
+  marketing_initiative: 'CSD',
 };
 
 const countingCurriculum = {
@@ -36,6 +37,7 @@ const countingCurriculum = {
   video: null,
   published_date: null,
   self_paced_pl_course_offering_path: null,
+  marketing_initiative: 'CSC',
 };
 
 const poemArtCurriculum = {
@@ -56,6 +58,7 @@ const poemArtCurriculum = {
   video: null,
   published_date: null,
   self_paced_pl_course_offering_path: null,
+  marketing_initiative: 'HOC',
 };
 
 const danceUnpluggedCurriculum = {
@@ -77,6 +80,7 @@ const danceUnpluggedCurriculum = {
   video: null,
   published_date: null,
   self_paced_pl_course_offering_path: null,
+  marketing_initiative: 'HOC',
 };
 
 const course1Curriculum = {
@@ -249,6 +253,12 @@ const tabletAndNoDeviceShownCurricula = [
   course4Curriculum,
 ];
 
+const csdAndHocShownCurricula = [
+  makerCurriculum,
+  poemArtCurriculum,
+  danceUnpluggedCurriculum,
+];
+
 const translatedCurricula = [
   course1Curriculum,
   course2Curriculum,
@@ -265,10 +275,6 @@ const allFiltersAppliedShownCurricula = [
   countingCurriculum,
   poemArtCurriculum,
   danceUnpluggedCurriculum,
-  course1Curriculum,
-  course2Curriculum,
-  course3Curriculum,
-  course4Curriculum,
 ];
 
 export default {
@@ -279,6 +285,7 @@ export default {
   physicalCompShownCurricula,
   nonNullSchoolSubjectShownCurricula,
   tabletAndNoDeviceShownCurricula,
+  csdAndHocShownCurricula,
   translatedCurricula,
   multipleFiltersAppliedShownCurricula,
   allFiltersAppliedShownCurricula,

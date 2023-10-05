@@ -55,6 +55,8 @@ pl:
             '2.00': duży
             '3.00': bardzo duży
         text: ustaw {SPRITE} woelkość na {SIZE}
+      Dancelab_ai:
+        text: użyj AI do {VALUE}
       Dancelab_alternateMoves:
         options:
           GROUP:
@@ -1049,6 +1051,8 @@ pl:
             '"macklemore90"': Macklemore - Nie może nas zatrzymać
             '"peas"': The Black Eyed Peas - Mam przeczucie
         text: 'ustaw {SONG} '
+      DansBlocks_borderGPT:
+        text: Generuj obramowanie {DESCRIPTION}
       DansBlocks_getMicroscope:
         options:
           INPUT1:

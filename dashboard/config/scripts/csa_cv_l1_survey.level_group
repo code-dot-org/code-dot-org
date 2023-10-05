@@ -5,6 +5,9 @@ anonymous 'true'
 
 page
 text 'CSA SE Student End of Lesson Survey'
-level 'CSA-CV-L1-Survey-Q01'
-level 'CSA-CV-L1-Survey-Q02'
-level 'CSA-CV-L1-Survey-Q03'
+level 'CSA-SE-CV-SC2L1-01'
+level 'CSA-SE-CV-SC2L1-02'
+level 'CSA-SE-CV-SC2L1-03'
+level 'CSA-SE-CV-SC2L1-04'
+level 'CSA-SE-CV-SC2L1-05'
+level 'CSA-SE-CV-SC2L1-06'

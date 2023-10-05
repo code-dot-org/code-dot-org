@@ -43,6 +43,7 @@ uk:
       'App: Story Creator': Помічник зі створення історій
       'App: The Fastest Finger': 'Застосунок: Найшвидший палець'
       'App: Where Should I Live?': 'Застосунок: Де я маю жити?'
+      Arrays: Масиви
       Artist Intro with JR Hildebrand: Художник Вступ з JR Хільдебранд
       Artist Intro with JR Hildebrande: Художник Вступ з JR Хільдебранде
       Artist Project: Проект Художника
@@ -59,7 +60,7 @@ uk:
       Binary Numbers: Двійкові Числа
       Binary and Data: Двійкова система і дані
       Board Events: Події плати
-      Board Input and Output: Вхід і вивід дошки
+      Board Input and Output: Вхід і вивід плати
       Book Recommender App: Застосунок Рекомендатор книг
       Book Recommender Model Card: Картка моделі Рекомендатор книг
       Boolean Comparison: Логічне порівняння
@@ -88,7 +89,9 @@ uk:
       Challenges: Виклики
       Change: Змінити
       Changing Screens: Зміна екранів
+      Changing Sensor Scale: Зміна шкали датчика
       Check Your Work: Перевірка своєї роботи
+      Check for Understanding: Перевірка на розуміння
       Check-In Survey: Вхідне опитування
       Checking for a Winner: Перевірка переможця
       'Choice Levels: Customize Your App': 'Рівні вибору: Налаштування свого застосунку'
@@ -104,6 +107,7 @@ uk:
       Color LEDs: Кольорові LEDи
       Combining Projects: Об'єднання проектів
       Combining Representations: Поєднання типів кодування
+      Conditionals with Cards - Unplugged Activity: Умови з картами - Безмашинна вправа
       'Conditionals: If Statements': 'Умовні умови: Якщо заяви'
       Control Your Player: Керування гравцем
       Course E Artist Project: Курс E Виконавець проекту
@@ -130,9 +134,11 @@ uk:
       Debugging: Налагодження
       Debugging with Watchers: Налагодження з спостерігачами
       Debugging with the Step Button: Налагодження за допомогою кнопки кроку
+      Demo - Bug Grab: Демо - Bug Grab
       'Demo App: Interactive Card': 'Демо-застосунок: Інтерактивна листівка'
       Demo Apps: Демо додаток
-      Design Mode: Режим проектування
+      Design Mode: Режим конструктора
+      Design Mode Elements: Елементи режиму конструктора
       Design Your Prototype: Створення свого прототипу
       Design a Screen for your App: Створення екрану застосунка
       Design an AI App - AI Lab: Розробка Застосунка ШІ - Лабораторія ШІ
@@ -170,6 +176,8 @@ uk:
       Explore HTML: Досліджуємо HTML
       Exploring more CSS: Вивчення більш CSS
       Extra: Додатково
+      Extra Challenge: Додаткове завдання
+      'Extra Challenge: Sound Board': 'Додаткове завдання: звукова плата'
       Finish a Screen: Завершення екрана
       Finish the Prototype: Закінчити прототип
       Finishing Functions: Завершення функцій
@@ -185,6 +193,8 @@ uk:
       Formatting HTML: Форматування HTML
       Free Play: Вільна гра
       'Free Play: Make a Scene': 'Вільна гра: Створення сцени'
+      'Free Play: Make an Interactive Scene': 'Вільна гра: Створюємо інтерактивну
+        сцену'
       Fruit and Veggie Explorer: Дослідник фруктів та овочів
       Functions: Функції
       Functions with Parameters: Функції з параметрами
@@ -217,13 +227,14 @@ uk:
       Input with If-Else: Введення за допомогою if-Else
       Inspiration!: Натхнення!
       Interactive Card: Інтерактивна картка
-      Intro to Design Mode: Введення в Режим дизайну
+      Intro to Design Mode: Знайомство з режимом конструктора
       Intro to Flyer Game: Вступ до гри Літун
       Intro to For Loops: Вступ до циклів
       Intro to Side Scrollers: Знайомство з сайд-скролером
       Intro to Sprites: Вступ до спрайтів
       Intro to Variables: Вступ до змінних
       Introducing Sprite Lab: Представляємо Спрайт Лабораторію
+      Introduction: Вступ
       Introduction to Arrays: Вступ до масивів
       Introduction to Game Lab: Знайомство з Ігровою Лабораторією
       Introduction to Variables: Знайомство зі змінними
@@ -276,7 +287,7 @@ uk:
         користувачем'
       'Mini-Project: Virtual Pet': 'Міні-проект: Віртуальний вихованець'
       'Mini-project: Chase Game': 'Міні-проект: гра "Квач"'
-      'Mini-project: Flappy Game': 'Міні-проект: Flappy гра'
+      'Mini-project: Flappy Game': 'Міні-проєкт: гра "Пурх"'
       'Mini-project: Interactive Poster': 'Міні-проект: Інтерактивний плакат'
       'Mini-project: Jorge the Dog': 'Міні-проект: Собака Хорхе'
       'Mini-project: Sticker Art': 'Міні-проєкт: Дизайн наліпки'
@@ -291,6 +302,7 @@ uk:
       Move It Move it Video  - Unplugged Activity: 'Відео: Рухайся, рухайся - Безмашинна
         вправа'
       Movement with the Counter Pattern: Рух з лічильником візерунком
+      Multi-Screen Apps: Багатоекранні програми
       Multiframe Animations: Багаторамкові анімації
       Musical Arrays: Музичні масиви
       My Loopy Robotic Friends - Unplugged Activity: Мої друзі-роботи та цикли - Безмашинна
@@ -336,7 +348,7 @@ uk:
       RGB Exploration: Дослідження RGB
       Random Numbers: Випадкові числа
       Raspado Recommender: Рекомендатор десерту
-      Reading Sensors: Датчики читання
+      Reading Sensors: Зчитування датчиків
       Recognizing Expressions: Розпізнавання виразів
       Recognizing Fish: Розпізнавання риб
       Recognizing Fish Features: Розпізнавання особливостей риб
@@ -348,6 +360,7 @@ uk:
       Repeat Blocks with BB-8: Повторіть блоки з BB-8
       Repeat Blocks with the Artist: Повторіть блоки з виконавцем
       Representing Images: Кодування зображень
+      Responding to User Input: Відповідь на введення користувача
       Review: Огляд
       Review Your Animated Scene: Перевірка своєї анімованої сцени
       Review Your App: Перевірка застосунка
@@ -368,16 +381,19 @@ uk:
       Sample Personal Web Pages: Приклади персональних вебсторінок
       Sample Personal Websites: Приклади персональних вебсторінок
       Sample Platform Jumper Game: Приклад гри "Стрибунець"
+      Sample Program: Приклад програми
       Sample Programs: Приклади програм
       Sample Web Page: Приклад вебсторінки
       Sample Website: Приклад вебсайту
       Scoring & Scoreboard: Бали та табло
       Screen Design: Дизайн екрана
       Sensor Events: Сенсорні події
+      Sensor Experiment: Сенсорний експеримент
       Sensors to Colors: Датчики до кольорів
       Set Up Sprites: Налаштування спрайтів
       Setting Properties: Задавання властивостей
       Shapes and Parameters: Фігури та параметри
+      Share Out: Представлення
       Share Your App: Поділіться своїм додатком
       Share Your Pages: Обмін сторінками
       Share Your Stylesheets: Обмін аркушами стилів
@@ -388,7 +404,7 @@ uk:
       Skill Building: Розвиток навичок
       Skill-Building: Розвиток навичок
       Sliders: Слайдери
-      Smart Bike - Blinkers: Розумний велосипед - Blinkers
+      Smart Bike - Blinkers: Розумний велосипед - Мигалки
       Social Sleuth: Соціальний детектив
       Songwriting - Functions Unplugged Activity: Написання пісень - Функції з безмашинними
         вправами
@@ -398,9 +414,10 @@ uk:
       Sprite Movement: Переміщення спрайтів
       Sprite Properties: Властивості спрайтів
       Sprite Scenes: Сцени спрайтів
-      Star Chaser: Зірка Chaser
+      Star Chaser: Спіймай Зірку
       Teach A.I. a new word: Навчаємо ШІ новому слову
       Text Compression: Стиснення тексту
+      The Accelerometer: Акселерометр
       The Animation Tab: Анімація
       The Big Event - Unplugged Activity: Велика подія - Безмашинна вправа
       The Buzzer: Зумер
@@ -416,9 +433,11 @@ uk:
       Train AI to Clean the Ocean: Навчаємо ШІ для очищення океану
       Train a Model in AI Lab: Тренування моделі в Лабораторії ШІ
       Ultimate Shoe Recommender: Остаточний рекомендатор взуття
+      Unplugged Activity: Безмашинна вправа
       Updating Your Prototype: Оновлення прототипу
       Upload Your Images: Завантаження зображень
       User Interface: Інтерфейс користувача
+      Using Arrays: Використання масивів
       Using HTML Tags: Використання тегів HTML
       Using Training Data: Використання навчальних даних
       Using the Grid: Використання сітки
@@ -490,6 +509,7 @@ uk:
       'Video: Intro to Web Lab - Part 2': 'Відео: Вступ до Веб Лабораторії - частина
         2'
       'Video: Introducing Sprite Lab': 'Відео: Представляємо Спрайт Лабораторію'
+      'Video: Introduction to Arrays': 'Відео: Вступ до масивів'
       'Video: Introduction to Play Lab': 'Відео: Вступ до Ігрової студії'
       'Video: Introduction to Sprites': 'Відео: Знайомство зі спрайтами'
       'Video: Introduction to Variables': 'Відео: Знайомство зі змінними'

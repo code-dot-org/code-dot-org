@@ -20,7 +20,7 @@
     },
     "new_name": null,
     "family_name": "express",
-    "serialized_at": "2023-06-28 15:27:43 UTC",
+    "serialized_at": "2023-08-22 18:51:31 UTC",
     "published_state": "stable",
     "instruction_type": "teacher_led",
     "instructor_audience": "teacher",
@@ -19195,6 +19195,19 @@
       }
     },
     {
+      "name": "CSF Express Course Slides ",
+      "url": "https://docs.google.com/presentation/d/1IVGGGdxNfOAyVa2NgPIraL0F910e2WkLDhVkozNV-3g/template/preview",
+      "key": "csf_-_express_course_-_slides",
+      "properties": {
+        "audience": "Teacher",
+        "download_url": "https://docs.google.com/presentation/d/1IVGGGdxNfOAyVa2NgPIraL0F910e2WkLDhVkozNV-3g/export/pdf",
+        "type": "Slides"
+      },
+      "seeding_key": {
+        "resource.key": "csf_-_express_course_-_slides"
+      }
+    },
+    {
       "name": "CSF Express End of Course Project Planning Guide",
       "url": "https://docs.google.com/document/d/1k_TQ5juruh79PiqGE4t1j9X3siaBRNFaKxODsytTj64/edit?usp=sharing",
       "key": "csf_express_end_of_course_project_planning_guide",
@@ -19425,13 +19438,37 @@
     {
       "seeding_key": {
         "lesson.key": "Collecting Treasure with Laurel",
+        "resource.key": "csf_-_express_course_-_slides"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Collecting Treasure with Laurel",
         "resource.key": "unplugged_blocks_courses_c-f_"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Conditionals in Minecraft: Voyage Aquatic",
+        "resource.key": "csf_-_express_course_-_slides"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Counting with Variables",
+        "resource.key": "csf_-_express_course_-_slides"
       }
     },
     {
       "seeding_key": {
         "lesson.key": "Creating Art with Code",
         "resource.key": "artist_introduction"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Creating Art with Code",
+        "resource.key": "csf_-_express_course_-_slides"
       }
     },
     {
@@ -19444,6 +19481,12 @@
       "seeding_key": {
         "lesson.key": "Creating Art with Code",
         "resource.key": "turns_angles_1"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Dance Party",
+        "resource.key": "csf_-_express_course_-_slides"
       }
     },
     {
@@ -19467,6 +19510,12 @@
     {
       "seeding_key": {
         "lesson.key": "Debugging in Maze",
+        "resource.key": "csf_-_express_course_-_slides"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Debugging in Maze",
         "resource.key": "pair_programming"
       }
     },
@@ -19474,6 +19523,12 @@
       "seeding_key": {
         "lesson.key": "End of Course Project",
         "resource.key": "cs_fundamentals_final_project"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "End of Course Project",
+        "resource.key": "csf_-_express_course_-_slides"
       }
     },
     {
@@ -19490,8 +19545,26 @@
     },
     {
       "seeding_key": {
+        "lesson.key": "For Loops with Artist",
+        "resource.key": "csf_-_express_course_-_slides"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "For Loops with Bee",
+        "resource.key": "csf_-_express_course_-_slides"
+      }
+    },
+    {
+      "seeding_key": {
         "lesson.key": "For Loops with Bee",
         "resource.key": "unplugged_blocks_courses_c-f_"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Functions in Minecraft",
+        "resource.key": "csf_-_express_course_-_slides"
       }
     },
     {
@@ -19503,13 +19576,49 @@
     {
       "seeding_key": {
         "lesson.key": "Functions with Artist",
+        "resource.key": "csf_-_express_course_-_slides"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Functions with Artist",
         "resource.key": "unplugged_blocks_courses_c-f__1"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Functions with Harvester",
+        "resource.key": "csf_-_express_course_-_slides"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Harvesting with Conditionals",
+        "resource.key": "csf_-_express_course_-_slides"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "If/Else with Bee",
+        "resource.key": "csf_-_express_course_-_slides"
       }
     },
     {
       "seeding_key": {
         "lesson.key": "If/Else with Bee",
         "resource.key": "unplugged_blocks_courses_c-f_"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Looking Ahead with Minecraft",
+        "resource.key": "csf_-_express_course_-_slides"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Loops with Rey and BB-8",
+        "resource.key": "csf_-_express_course_-_slides"
       }
     },
     {
@@ -19527,7 +19636,31 @@
     {
       "seeding_key": {
         "lesson.key": "Making Sprites",
+        "resource.key": "csf_-_express_course_-_slides"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Making Sprites",
         "resource.key": "sprite_lab_documentation"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Mini-Project: Sticker Art",
+        "resource.key": "csf_-_express_course_-_slides"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Nested Loops in Maze",
+        "resource.key": "csf_-_express_course_-_slides"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Programming with Angry Birds",
+        "resource.key": "csf_-_express_course_-_slides"
       }
     },
     {
@@ -19538,8 +19671,26 @@
     },
     {
       "seeding_key": {
+        "lesson.key": "Snowflakes with Anna and Elsa",
+        "resource.key": "csf_-_express_course_-_slides"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Sprites in Action",
+        "resource.key": "csf_-_express_course_-_slides"
+      }
+    },
+    {
+      "seeding_key": {
         "lesson.key": "Sprites in Action",
         "resource.key": "sprites_in_action"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Swimming Fish in Sprite Lab",
+        "resource.key": "csf_-_express_course_-_slides"
       }
     },
     {
@@ -19557,6 +19708,12 @@
     {
       "seeding_key": {
         "lesson.key": "Text and Prompts",
+        "resource.key": "csf_-_express_course_-_slides"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Text and Prompts",
         "resource.key": "sprite_lab_documentation"
       }
     },
@@ -19568,8 +19725,32 @@
     },
     {
       "seeding_key": {
+        "lesson.key": "Until Loops in Maze",
+        "resource.key": "csf_-_express_course_-_slides"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Using Variables with the Artist",
+        "resource.key": "csf_-_express_course_-_slides"
+      }
+    },
+    {
+      "seeding_key": {
         "lesson.key": "Using Variables with the Artist",
         "resource.key": "variables"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Variables with the Bee",
+        "resource.key": "csf_-_express_course_-_slides"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Virtual Pet with Sprite Lab",
+        "resource.key": "csf_-_express_course_-_slides"
       }
     },
     {
@@ -19582,6 +19763,12 @@
       "seeding_key": {
         "lesson.key": "Virtual Pet with Sprite Lab",
         "resource.key": "sprite_lab_documentation"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "While Loops in Farmer",
+        "resource.key": "csf_-_express_course_-_slides"
       }
     },
     {
@@ -21336,6 +21523,15 @@
     }
   ],
   "lessons_opportunity_standards": [
+
+  ],
+  "rubrics": [
+
+  ],
+  "learning_goals": [
+
+  ],
+  "learning_goal_evidence_levels": [
 
   ]
 }

@@ -9,31 +9,31 @@ sk:
   campaign_date_start_long: 5. december
   campaign_date_short: 5.-11. dec
   campaign_date_full: 5. až 11. december
-  campaign_date_year: '2022'
-  campaign_date_full_year: 5.-11. December 2022
+  campaign_date_year: '2016'
+  campaign_date_full_year: 5.-11. December 2016
   nonus_campaign_date_start_short: 1. október
   nonus_campaign_date_start_long: 1. október
   nonus_campaign_date_short: 1. október - 18. december
   nonus_campaign_date_full: 1. októbra – 18. decembra
-  nonus_campaign_date_year: '2022'
+  nonus_campaign_date_year: '2016'
   nonus_campaign_date_full_year: 1. októbra 2022  – 18. decembra 2022
   latam_campaign_date_start_short: 1. október
   latam_campaign_date_start_long: 1. október
   latam_campaign_date_short: 1. október - 18. december
   latam_campaign_date_full: 1. októbra – 18. decembra
-  latam_campaign_date_year: '2022'
+  latam_campaign_date_year: '2016'
   latam_campaign_date_full_year: 1. októbra 2022  – 18. decembra 2022
   europe_campaign_date_start_short: 10. október
   europe_campaign_date_start_long: 10. október
   europe_campaign_date_short: 10. - 25. október
   europe_campaign_date_full: 10. - 25. október
-  europe_campaign_date_year: '2022'
+  europe_campaign_date_year: '2016'
   europe_campaign_date_full_year: 10. - 25. október 2020
   africa_campaign_date_start_short: 1. október
   africa_campaign_date_start_long: 1. október
   africa_campaign_date_short: 1. - 31. október
   africa_campaign_date_full: 1. - 31. október
-  africa_campaign_date_year: '2022'
+  africa_campaign_date_year: '2016'
   africa_campaign_date_full_year: 1. - 31. október 2020
   hoc2022_header: Skúmajte, hrajte sa, tvorte!
   social_hoc2022_explore_play_create: Využite informatiku na objavovanie, hranie sa
@@ -107,19 +107,19 @@ sk:
     ktorú by počítačová veda mohla zohrávať pri vytváraní spravodlivejšieho sveta.
   oceans_landing_videos: Videá o umelej inteligencii a strojovom učení
   oceans_behind_the_scenes: 'AI pomáha oceánom: ako program funguje'
-  oceans_behind_the_scenes_1: Levels 2-4 use a pretrained model provided by the <a
-    href="https://www.tensorflow.org/" >TensorFlow</a> <a href="https://github.com/tensorflow/models/blob/master/research/slim/nets/mobilenet_v1.md">
-    MobileNet </a> project. A MobileNet model is a <a href="https://developers.google.com/machine-learning/practica/image-classification/convolutional-neural-networks">convolutional
-    neural network</a> that has been trained on <a href="http://www.image-net.org/">ImageNet</a>,
-    a dataset of over 14 million images hand-annotated with words such as "balloon"
-    or "strawberry". In order to customize this model with the labeled training data
-    the student generates in this activity, we use a technique called <a href="https://en.wikipedia.org/wiki/Transfer_learning">Transfer
-    Learning</a>. Each image in the training dataset is fed to MobileNet, as pixels,
-    to obtain a list of annotations that are most likely to apply to it. Then, for
-    a new image, we feed it to MobileNet and compare its resulting list of annotations
-    to those from the training dataset. We classify the new image with the same label
-    (such as "fish" or "not fish") as the images from the training set with the most
-    similar results.
+  oceans_behind_the_scenes_1: Úrovne 2-4 používajú predtrénovaný model poskytnutý
+    projektom <a href="https://www.tensorflow.org/" ></a> <a href="https://github.com/tensorflow/models/blob/master/research/slim/nets/mobilenet_v1.md">
+    TensorFlow MobileNet. </a> Model MobileNet je <a href="https://developers.google.com/machine-learning/practica/image-classification/convolutional-neural-networks">konvolučná
+    neurónová sieť,</a> ktorá bola vyškolená na <a href="http://www.image-net.org/">ImageNet</a>,
+    súbore údajov s viac ako 14 miliónmi obrázkov ručne anotovaných slovami ako „balón“
+    alebo „jahoda“. Aby sme tento model prispôsobili označeným tréningovým údajom,
+    ktoré študent generuje v tejto aktivite, používame techniku s názvom <a href="https://en.wikipedia.org/wiki/Transfer_learning">Transfer
+    Learning.</a>Každý obrázok v tréningovom súbore údajov sa privádza do MobileNet
+    ako pixely, aby sa získal zoznam anotácií, ktoré sa naň s najväčšou pravdepodobnosťou
+    vzťahujú. Potom, pre nový obrázok, ho privedeme do MobileNet a porovnáme jeho
+    výsledný zoznam anotácií s tými z tréningového súboru údajov. Nový obrázok klasifikujeme
+    rovnakým štítkom (napríklad „ryba“ alebo „nie ryba“) ako obrázky z tréningovej
+    sady s najpodobnejšími výsledkami.
   oceans_behind_the_scenes_1_markdown: Úrovne 2-4 používajú predtrénovaný model poskytnutý
     projektom [TensorFlow](https://www.tensorflow.org/) [MobileNet](https://github.com/tensorflow/models/blob/master/research/slim/nets/mobilenet_v1.md).
     Model MobileNet je [konvolučná neurónová sieť] (https://developers.google.com/machine-learning/practica/image-classification/convolutional-neural-networks),
@@ -133,13 +133,13 @@ sk:
     anotácií s tými z tréningového súboru údajov. Nový obrázok klasifikujeme rovnakým
     štítkom (napríklad „ryba“ alebo „nie ryba“) ako obrázky z tréningovej sady s najpodobnejšími
     výsledkami.
-  oceans_behind_the_scenes_2: Levels 6-8 use a <a href="https://en.wikipedia.org/wiki/Support-vector_machine">Support-Vector
-    Machine</a> (SVM). We look at each component of the fish (such as eyes, mouth,
-    body) and assemble all of the metadata for the components (such as number of teeth,
-    body shape) into a vector of numbers for each fish. We use these vectors to train
-    the SVM. Based on the training data, the SVM separates the "space" of all possible
-    fish into two parts, which correspond to the classes we are trying to learn (such
-    as "blue" or "not blue").
+  oceans_behind_the_scenes_2: Úrovne 6-8 používajú <a href="https://en.wikipedia.org/wiki/Support-vector_machine">podporný
+    vektorový stroj</a> (SVM). Pozeráme sa na každú zložku rýb (ako sú oči, ústa,
+    telo) a zostavíme všetky metaúdaje pre komponenty (ako je počet zubov, tvar tela)
+    do vektora čísel pre každú rybu. Tieto vektory používame na trénovanie SVM. Na
+    základe tréningových údajov SVM rozdeľuje „priestor“ všetkých možných rýb na dve
+    časti, ktoré zodpovedajú triedam, ktoré sa snažíme naučiť (napríklad „modrá“ alebo
+    „nie modrá“).
   oceans_behind_the_scenes_2_markdown: Úrovne 6-8 používajú [Support-Vector Machine]
     (https://en.wikipedia.org/wiki/Support-vector_machine) (SVM). Pozeráme sa na každú
     zložku rýb (ako sú oči, ústa, telo) a zostavíme všetky metaúdaje pre komponenty
@@ -184,6 +184,15 @@ sk:
   grade_level_label_elementary: Základná škola
   grade_level_label_middle: 2. stupeň ZŠ
   grade_level_label_high: Stredná škola
+  curricula_title_elementary: Učebné osnovy základnej školy
+  curricula_desc_elementary: Prezrite si zábavné, bezplatné kurzy a aktivity, ktoré
+    vás pozývajú na objavovanie informatiky so študentmi základných škôl.
+  curricula_title_middle: Učebné osnovy strednej školy
+  curricula_desc_middle: Prezrite si pútavé ponuky, ktoré vám a vašim študentom stredných
+    škôl umožnia spoločne skúmať informatiku.
+  curricula_title_high: Učebné osnovy pre stredné školy
+  curricula_desc_high: Prezrite si presvedčivé kurzy a aktivity, ktoré vás a vašich
+    študentov stredných škôl pozývajú hlbšie sa venovať informatike.
   students_label: Študenti
   teachers_label: Učitelia
   teacher_label_csf: 'Základy informatiky: učiteľ'
@@ -193,6 +202,7 @@ sk:
   teacher_label_csa: 'AP® Informatika A: učiteľ'
   required_materials: 'Potrebné materiály:'
   optional_materials: 'Nepovinné materiály:'
+  call_to_action_explore_roles: Preskúmajte otvorené role
   call_to_action_learn_more: Viac info
   call_to_action_watch_now: Pozerať teraz
   call_to_action_try_activity: Vyskúšajte aktivitu
@@ -210,6 +220,15 @@ sk:
   call_to_action_explore_choice_level: Preskúmajte vzorovú úroveň s výberom možností
   call_to_action_explore_collection: Preskúmajte kolekciu
   call_to_action_explore_unplugged_lesson: Preskúmajte lekcie bez počítača
+  call_to_action_explore_csf: Preskúmajte základy CS
+  call_to_action_explore_csd: Preskúmajte CS Discoveries
+  call_to_action_explore_csp: Preskúmajte princípy CS
+  call_to_action_explore_csc: Preskúmajte CS Connections
+  call_to_action_explore_csa: Preskúmajte AP® Computer Science A
+  call_to_action_explore_csa_short: Preskúmať AP® CSA
+  call_to_action_explore_maker: Preskúmajte učebné osnovy Maker
+  call_to_action_explore_hoc: Preskúmajte návody Hodina kódu
+  call_to_action_explore_hoc_short: Preskúmajte Hodinu kódu
   call_to_action_try_app_lab: Vyskúšajte si App Lab
   call_to_action_view_lesson_plan: Zobraziť plán lekcií
   call_to_action_self_paced_pl: Začnite profesionálne vzdelávanie s vlastným tempom
@@ -233,6 +252,7 @@ sk:
   call_to_action_resources_tools: Vyskúšajte si programovacie nástroje
   call_to_action_sign_up_free: zaregistrovať
   call_to_action_explore_ai_resources: Preskúmajte zdroje umelej inteligencie
+  call_to_action_explore_ai_curricula: Preskúmajte učebné osnovy AI
   call_to_action_explore_curriculum_catalog: Preskúmajte katalóg učebných osnov
   call_to_action_see_full_curriculum_catalog: Pozrite si celý katalóg učebných osnov
   call_to_action_find_self_paced_modules: Vyhľadajte moduly na samoštúdium
@@ -252,6 +272,13 @@ sk:
   call_to_action_learn_about_approach: Zistite viac o našom prístupe
   call_to_action_try_java_lab: Vyskúšajte si Java Lab
   call_to_action_notify_available: Upozorniť ma, keď je k dispozícii
+  call_to_action_register_early_access: Zaregistrujte sa na včasný prístup
+  call_to_action_open_positions: Zobraziť otvorené pozície
+  call_to_action_get_guide: Získajte sprievodcu
+  call_to_action_donate_to_cdo: Prispejte na Code.org
+  call_to_action_start_fundraiser: Spustite zbierku
+  call_to_action_view_donation_policy: Zobraziť pravidlá darovania
+  call_to_action_view_donate_bitpay: Darujte pomocou BitPay
   aria_label_call_to_action_afe: Získajte viac informácií o Amazon Future Engineer
   aria_label_call_to_action_teaching_csf: Spustite program odborného vzdelávania Teaching
     Computer Science Fundamentals
@@ -358,8 +385,11 @@ sk:
   curriculum_name_csp: Princípy informatiky
   curriculum_name_csc: Medzipredmetové vzťahy v informatike
   curriculum_name_csa: AP® Počítačová veda A
+  curriculum_name_csa_ai: Softvérové inžinierstvo a počítačové videnie
   curriculum_name_csc_02: Akýkoľvek modul CS Connections
   curriculum_name_ai: Umelá inteligencia a strojové učenie
+  curriculum_name_artificial_intelligence: Umelá inteligencia (AI)
+  curriculum_name_maker: výrobca
   curriculum_name_maker_cp: Vytváranie aplikácií pomocou zariadení (Circuit Playground)
   curriculum_name_maker_microbit: Vytváranie aplikácií pomocou zariadení (micro:bit)
   curriculum_name_creating_apps_with_devices: Aplikácie a hardvér
@@ -370,6 +400,8 @@ sk:
   curriculum_name_interactive_animations_games: Interaktívne animácie a hry
   curriculum_name_design_process: Proces návrhu
   curriculum_name_data_society: Dáta a spoločnosť
+  curriculum_desc_csf: Voľný súbor základných učebných osnov, ktoré zoznamujú študentov
+    so základnými konceptmi informatiky.
   curriculum_desc_csf_express: Nauč sa vytvárať počítačové programy, rozvíjať si schopnosť
     riešiť problémy a pracuj na zábavných výzvach! Vytváraj hry a kreatívne projekty,
     o ktoré sa budeš môcť podeliť s priateľmi, rodinou a učiteľmi.
@@ -417,6 +449,25 @@ sk:
     vo výpočtovej technike. Vytvárajte programy, ktoré využívajú hardvérové vstupy
     a výstupy. Tento tematický celok existuje aj vo verzii pre zariadenia micro:bit
     a Circuit Playground.
+  curriculum_desc_csa: Predstavte študentom softvérové inžinierstvo a objektovo orientovaný
+    dizajn, zatiaľ čo sa učia programovací jazyk Java v tomto bezplatnom učebnom pláne
+    pre AP® Computer Science A (AP® CSA).
+  curriculum_desc_maker: Vzdelávanie tvorcov posúva STEM (veda, technológia, inžinierstvo,
+    matematika) o krok ďalej tým, že pozýva praktické skúsenosti a spoluprácu do triedy,
+    aby pomohlo učiť riešenie problémov a kritické myslenie.
+  curriculum_desc_maker_short: Maker education pozýva praktické skúsenosti a spoluprácu
+    do triedy, aby pomohlo učiť riešenie problémov a kritické myslenie.
+  curriculum_desc_csd: Flexibilný kurz, ktorý umožňuje, aby sa každá jednotka vyučovala
+    samostatne alebo kombinovane. Oboznámi študentov s vytváraním webových stránok,
+    aplikácií, animácií, hier a fyzických počítačových systémov.
+  curriculum_desc_csp: Bezplatný stredoškolský úvodný kurz schválený AP® CSP, ktorý
+    študentov oboznámi so základnými konceptmi informatiky.
+  curriculum_desc_csa_ai_long: 'Tento dvojkapitolový modul CSA po AP ponúka študentom
+    stredných škôl praktické skúsenosti s profesionálnymi nástrojmi na vývoj softvéru,
+    vrátane GitHub a GitHub Copilot, a dodáva im zručnosti v reálnom svete na vývoj
+    programu počítačového videnia. '
+  curriculum_desc_csa_ai_short: Tento modul Post-AP® CSA ponúka študentom stredných
+    škôl praktické skúsenosti s profesionálnymi nástrojmi na vývoj softvéru.
   collection_hardware: Zamerané na hardvér
   collection_hardware_desc: Motivuje žiakov k tomu, aby riešili úlohy pomocou dát
     a fyzických zariadení.
@@ -448,6 +499,7 @@ sk:
   module_label_professional_learning: 'Profesijný rozvoj:'
   module_label_languages: 'Podporované jazyky:'
   module_label_accessibility_features: 'Zjednodušenie prístupu:'
+  module_label_accessibility_features_full: 'Funkcie prístupnosti:'
   module_label_educator_tool: Nástroj pre pedagógov
   module_label_educator_course: Kurz pre pedagógov
   module_label_student_tool: Nástroj pre žiakov
@@ -455,6 +507,7 @@ sk:
   module_label_student_content_resources: Obsah a zdroje
   module_label_new: Nový
   module_label_coming_soon: Už čoskoro
+  module_label_available_now: Teraz k dispozícii
   module_label_video_series: Video séria
   module_label_self_paced: Modul s vlastným tempom
   module_ages_5_10: 5 – 10
@@ -465,6 +518,8 @@ sk:
   module_grade_2_5: 2. – 5. ročník
   module_grade_3_5: 3. – 5. ročník
   module_grade_3_8: 3 – 8
+  module_grade_k_12: 5-18 rokov
+  module_grade_3_12: 3-12
   module_grade_6_12: 6 – 12
   module_grade_6_10: 6. – 9. ročník
   module_grade_9_12: 9-12
@@ -479,11 +534,14 @@ sk:
   module_grade_9_12_teachers: Učitelia stredných škôl
   module_level_beginner: Začiatočník
   module_level_intermediate: Mierne pokročilý
+  module_level_advanced: Pokročilé
   module_duration_45_mins: 45 minút
+  module_duration_2_weeks: 2 týždne
   module_duration_1_hr: 1 hodina
   module_duration_2_hrs: 2 hodiny
   module_duration_3_hrs: 3 hodiny
   module_duration_5_hrs: 5 hodín
+  module_duration_5_hrs_plus: 5+ hodín
   module_duration_8_hrs: 8 hodín
   module_duration_20_hrs: 20 hodín
   module_duration_35_hrs: 35 hodín
@@ -495,6 +553,7 @@ sk:
   module_duration_school_year: Školský rok
   module_duration_month_quarter: Mesiac alebo štvrťrok
   module_duration_month_semester_year: Mesiac, polrok alebo rok
+  module_duration_varies: Líši sa
   module_prerequisites_none: Žiadne
   module_prerequisites_maker_cp: Prístup na okruhové ihrisko
   module_prerequisites_maker_microbit: Prístup k micro:bit
@@ -561,6 +620,9 @@ sk:
   heading_java_lab: Java Lab
   heading_objects_first: Najprv objekty
   heading_these_lessons_will: 'Tieto lekcie budú:'
+  heading_explore_curriculum_catalog: Preskúmajte všetky naše kurzy v katalógu učebných
+    osnov
+  heading_csa_ai: Hľadáte veci, ktoré by ste mali robiť po skúške AP®?
   professional_learning_section_desc: Získajte pri príprave na vyučovanie potrebnú
     podporu. Učitelia tento kurz obľubujú a až 90 % z nich ho hodnotí ako najlepší
     program profesijného rozvoja, aký kedy absolvovali. 
@@ -595,6 +657,23 @@ sk:
   support_and_questions_section_desc: Náš tím podpory vám rád odpovie na všetky otázky,
     keď budete začínať s vyučovaním pomocou Code.org. Na našich učiteľských fórach
     stretnete aj iných učiteľov, ktorých sa môžete opýtať na ich skúsenosti.
+  subscribe_form_section_title: Prihláste sa na odber aktualizácií
+  subscribe_form_section_desc_csa: Prihláste sa na odber mesačných e-mailov o AP®
+    Computer Science A spoločnosti Code.org a získajte užitočné pripomenutia, tipy
+    a aktualizácie zasielané priamo do vašej doručenej pošty.
+  subscribe_form_section_desc_csc: Prihláste sa na odber mesačných e-mailov o Code.org
+    Computer Science Connections a získajte užitočné pripomenutia, tipy a aktualizácie
+    zasielané priamo do vašej doručenej pošty.
+  subscribe_form_section_desc_csd: Prihláste sa na odber mesačných e-mailov o objavoch
+    informatiky Code.org a získajte užitočné pripomenutia, tipy a aktualizácie zasielané
+    priamo do vašej doručenej pošty.
+  subscribe_form_section_desc_csf: Prihláste sa na odber mesačných e-mailov o Computer
+    Science Fundamentals spoločnosti Code.org a získajte užitočné pripomenutia, tipy
+    a aktualizácie zasielané priamo do vašej doručenej pošty.
+  subscribe_form_section_desc_csp: Prihláste sa na odber mesačných e-mailov o zásadách
+    informatiky Code.org a získajte užitočné pripomenutia, tipy a aktualizácie zasielané
+    priamo do vašej doručenej pošty.
+  subscribe_form_section_unsubscribe: Z odberu sa môžete kedykoľvek odhlásiť.
   blockchain_hero_heading: Ako funguje blockchain
   blockchain_hero_desc: Ponorte sa do sveta blockchainu pomocou našej novej série
     videí a sprievodných lekcií „Ako funguje blockchain“!
@@ -698,6 +777,9 @@ sk:
     je spárovaná s jedným videom zo série, ktoré sa ponorí hlbšie do konceptov zavedených
     vo videách.
   ai_curriculum_btn_aria_label_04: Preskúmajte, ako funguje AI lekcie
+  ai_curriculum_grades_05: 'Úrovne triedy: 9-12'
+  ai_curriculum_btn_aria_label_05: Preskúmajte modul Softvérové inžinierstvo a počítačové
+    videnie
   ai_carousel_heading: 'Čo hovoria učitelia o AI s Code.org:'
   ai_carousel_quote_01: Táto lekcia tiež dala mojim študentom príležitosť vidieť,
     že v klasifikačných systémoch existuje prvok názoru. Neskôr, keď sme začali vidieť,
@@ -822,6 +904,12 @@ sk:
     modeloch (napríklad ChatGPT) a Generative AI. Vypočujte si, ako tieto nové technológie
     fungujú priamo od odborníkov: Mira Murati, CTO OpenAI, a Cristóbal Valenzuela,
     generálny riaditeľ spoločnosti RunwayML.'
+  ai_pl_101_llm_slides_title: Výzva k veľkému jazykovému modelu pre pedagógov
+  ai_pl_101_llm_slides_desc: Nástroje na získanie najlepšieho možného výstupu z LLM,
+    ako je ChatGPT, od začiatočníkov po pokročilých. Zahŕňa štartovacie výzvy pre
+    tých, ktorí si len namáčajú prsty na nohách, ako aj pokročilé nástroje pre tých,
+    ktorí chcú maximalizovať svoj potenciál.
+  ai_pl_101_resources_3: Výzva AI na transformáciu učenia študentov
   how_ai_works_hero_heading: Ako funguje umelá inteligencia
   how_ai_works_hero_desc: Ponorte sa do sveta AI pomocou našej série videí a sprievodných
     lekcií „Ako funguje AI“!
@@ -1136,19 +1224,17 @@ sk:
   teach_page_free_curriculum_heading: Kompletné a 100% bezplatné učebné osnovy
   teach_page_free_curriculum_desc: Zaviazali sme sa ponúkať naše materiály bez nákladov
     na rozšírenie prístupu k informatike.
-  teach_page_free_curriculum_list_heading_01: Kompletné učebné osnovy pre každý školský
-    rok
   teach_page_free_curriculum_list_desc_01: Toto učebné osnovy sú úplne zadarmo a zábavné.
     Niektoré materiály sú k dispozícii v 67 jazykoch.
-  teach_page_free_curriculum_list_heading_02: Učebné osnovy prispôsobiteľné e innovador
   teach_page_free_curriculum_list_desc_02: Code.org ponúka životopisy na školský rok
     a Hodinu Kódu. Okrem toho každý rok aktualizujeme životopisy, aby sme pridali
     nové témy a zlepšili sa na základe komentárov našich používateľov.
-  teach_page_free_curriculum_list_heading_03: Učebné osnovy navrhnuté na základe národných
-    požiadaviek
   teach_page_free_curriculum_list_desc_03: Každé učebné osnovy spĺňajú požiadavky
     aspoň jedného z národných štandardov Spojených štátov, ako sú CSTA, vedecké štandardy
     novej generácie a spoločné jadro.
+  teach_page_free_curriculum_list_desc_04: Ponuky vo viac ako 67 jazykoch
+  teach_page_free_curriculum_list_desc_05: Mapované na aspoň jeden súbor národných
+    noriem (vrátane CSTA, NGSS a Common Core)
   teach_page_free_curriculum_heading_02: Prehľad životopisov pre každý školský rok
   teach_page_resources_heading: Zdroje, ktoré vám pomôžu na každom kroku
   teach_page_resources_desc: Registrovať sa Code.org ak chcete získať prístup ku všetkým
@@ -1205,8 +1291,8 @@ sk:
     Animation
   csp_page_curriculum_glance_devices: Laptop, Chromebook
   csp_page_curriculum_glance_tools: App Lab
-  csp_page_curriculum_glance_professional_learning: Facilitator-led Workshops, Self-paced
-    Modules
+  csp_page_curriculum_glance_professional_learning: Workshopy vedené inštruktorom,
+    Moduly na samoštúdium
   csp_page_curriculum_glance_professional_languages: Angličtina
   csp_page_curriculum_glance_professional_accessibility_features: Text-to-speech,
     Closed captioning, Immersive reader
@@ -1333,8 +1419,8 @@ sk:
     výpočtová technika, Dizajn aplikácií, Hry a animácie, Umenie a dizajn, Programovanie
   csd_page_curriculum_glance_devices: Laptop, Chromebook
   csd_page_curriculum_glance_tools: App Lab, Game Lab, AI Lab, Web Lab
-  csd_page_curriculum_glance_professional_learning: Facilitator-led Workshops, Self-paced
-    Modules
+  csd_page_curriculum_glance_professional_learning: Workshopy vedené inštruktorom,
+    Moduly na samoštúdium
   csd_page_curriculum_glance_professional_languages: Angličtina
   csd_page_curriculum_glance_professional_accessibility_features: Text-to-speech,
     Closed captioning, Immersive reader
@@ -1631,6 +1717,37 @@ sk:
   csa_page_faq_answer_08_02: For more information about the values that guided our
     work, please see our [curriculum values](%{curriculum_values_url}) and our [professional
     learning values](%{pl_values_url}).
+  donate_page_top_heading: Pomôžte financovať naše poslanie
+  donate_page_top_desc: Každý dar podporuje poslanie Code.org rozšíriť prístup k vzdelávaniu
+    v oblasti informatiky. Ponúkame vám niekoľko spôsobov, ako darovať a urobiť rozdiel.
+  donate_page_fundraise_title: Fundraise pre Code.org
+  donate_page_fundraise_desc: Pomôžte získať peniaze pre Code.org! Každý študent v
+    každej škole by mal mať možnosť naučiť sa informatiku.
+  donate_page_other_ways_title: Iné spôsoby, ako dať
+  donate_page_other_ways_desc: Preskúmajte rôzne metódy, ako prispieť, a nájdite možnosť,
+    ktorá vám najviac vyhovuje. Každé gesto, veľké alebo malé, poháňa našu misiu vpred.
+  donate_page_501c3: Code.org je registrovaná ako verejná nezisková organizácia 501
+    (c) (3). Príspevky do Code.org sú daňovo odpočítateľné v rozsahu povolenom zákonom.
+    Daňové identifikačné číslo Code.org je 46-0858543.
+  donate_page_donation_policy_title: Pochopenie našej politiky darovania
+  donate_page_donation_policy_desc: Získajte informácie o tom, ako spracúvame a prideľujeme
+    vaše príspevky.
+  donate_tabs_tab_label_daf_direct: DAF Direct
+  donate_tabs_tab_label_amazon: Amazonka
+  donate_tabs_tab_label_bitpay: BitPay
+  donate_tabs_tab_label_employee_match: Zápas zamestnancov
+  donate_tabs_daf_direct_title: Prispejte prostredníctvom DAF Direct
+  donate_tabs_daf_direct_desc: Darujte prostredníctvom svojho darcovského fondu prostredníctvom
+    Fidelity Charitable, Schwab Charitable alebo BNY Mellon a prostredníctvom online
+    formulára DAF Direct poskytnite svoje odporúčanie grantu Code.org.
+  donate_tabs_amazon_title: Darujte prostredníctvom Amazonu
+  donate_tabs_amazon_desc: Darujte priamo pomocou svojho účtu Amazon. Len niekoľkými
+    kliknutiami bezproblémovo prispievajte k poslaniu Code.org a posilňujte budúcnosť
+    vzdelávania v oblasti informatiky.
+  donate_tabs_bitpay_title: Darujte pomocou Crypto cez BitPay
+  donate_tabs_bitpay_desc: Prijmite budúcnosť dávania pomocou kryptomeny. Prostredníctvom
+    BitPay môže vaša digitálna mena priamo podporovať úsilie Code.org o rozširovanie
+    vzdelávania v oblasti informatiky.
   hoc_live: Hodina kódu naživo
   hoc_live_sign_up_title: Zaregistrujte sa na Hour of Code Live
   hoc_live_learn_title: Učte sa s Hour of Code Live
@@ -1709,8 +1826,8 @@ sk:
   ai_activity_zooniverse: Zooniverse - Snapshot Mountain Zebra
   ai_activity_zooniverse_desc: Pomôžte chrániť ohrozenú Cape Mountain Zebra identifikáciou
     rôznych zvierat na obrázkoch.
-  codeorg_homepage_hoc2018_curriculum: Go further with <a href="%{studio_url}/courses"
-    class="hoc2018-curriculum-link">Code.org courses</a>
+  codeorg_homepage_hoc2018_curriculum: Choďte ďalej s kurzami <a href="%{studio_url}/courses"
+    class="hoc2018-curriculum-link">Code.org</a>
   codeorg_homepage_hoc2018_dance_heading: Vytvorte si vlastný <span class="highlight-word">Dance&nbsp;Party</span>
   codeorg_homepage_hoc2018_header_line1: Hodina Kódu sa blíži...
   codeorg_homepage_hoc2018_header_line2_desktop: Čo vytvoríte vy <span class="hoc2018-highlight-word">?</span>
@@ -2047,6 +2164,13 @@ sk:
     Code.org, miestnych príležitostiach alebo iných novinkách v oblasti informatiky?
   signup_email_preference_privacy: "(Pozrite si naše zásady ochrany osobných údajov)"
   signup_email_preference_yes: Áno
+  signup_email_preference_yes_elementary: Áno - Pošlite mi aktuálne informácie o zdrojoch
+    pre základnú školu
+  signup_email_preference_yes_middle: Áno - Pošlite mi aktuálne informácie o zdrojoch
+    strednej školy
+  signup_email_preference_yes_high: Áno - pošlite mi aktuálne informácie o zdrojoch
+    pre stredné školy
+  signup_email_preference_yes_general: Áno - Pošlite mi všeobecné aktualizácie
   signup_email_preference_no: Nie
   signup_email_preference_error: Vyžaduje sa predvoľba e-mailu
   signup_multiple_event_warning: Meno školy a mesto zverejníme na mape po registrácií.
@@ -5393,11 +5517,11 @@ sk:
     dobrodružstvo cez tento svet Minecraftu.
   tutorial_minecraft-2016_longdescription: Zostavte hru Minecraft. Vytvorte si vlastné
     verzie kurčiat, oviec, popínavých rastlín, zombie a ďalších.
-  tutorial_thinkersmith-es_longdescription: Mediante el uso de un "Vocabulario Robot"
-    predefinido, los estudiantes descubrir&aacute;n como guiarse de modo tal de llevar
-    a cabo tareas espec&iacute;ficas sin ser estas discutidas previamente. Este segmento
+  tutorial_thinkersmith-es_longdescription: Mediante el uso de un „Vocabulario Robot“
+    preddefinido, los estudiantes descubrir&aacute;n como guiarse de modo tal de llevar
+    a cabo tareas espec ficas sin ser estas discutidas previamente.&iacute;Este segmento
     ense&ntilde;a a los estudiantes la conexi&oacute;n entre s&iacute;mbolos y acciones
-    as&iacute; como la valiosa habilidad de depuraci&oacute;n.
+    ako como la valiosa habilidad de depuraci n.&iacute;&oacute;
   tutorial_pixie_longdescription: Výukový program Hodina kódu s Pixie
   tutorial_play_longdescription: Vytvor si v Play Labe príbeh alebo hru! Naprogramuj
     zvieratá, pirátov, zombíkov, ninjov a veľa ďalších postáv tak, aby sa hýbali,
@@ -12393,12 +12517,12 @@ sk:
   tutorial_googlename _longdescription: Vyberte meno a oživte písmená slova pomocou
     kódu. Vyberte si prezývku, meno domáceho maznáčika, zviera, šport, miesto alebo
     koníček.
-  tutorial_carnegiezillah_longdescription: Zillah City is thriving, and music is in
-    the air. Rumor has it, the famed Gargantua bot is online and sending the last
-    Toxibots to trash the city block by block…. Grab your cobot hoverboard and get
-    ready to groove, move, and finish off what you started! Players program their
-    cobot hoverbots to change lanes, avoid obstacles, and take out many Toxibots in
-    this rhythm-styled game.
+  tutorial_carnegiezillah_longdescription: Mesto Zillah prosperuje a hudba je vo vzduchu.
+    Hovorí sa, že slávny robot Gargantua je online a posiela posledných Toxibotov,
+    aby zabili mestský blok po bloku.…Chyťte svoj cobot hoverboard a pripravte sa
+    na drážkovanie, pohyb a dokončenie toho, čo ste začali! Hráči programujú svoje
+    kobotové hoverboty tak, aby zmenili jazdné pruhy, vyhýbali sa prekážkam a odstránili
+    veľa Toxibotov v tejto hre v štýle rytmu.
   tutorial_nasachspacejam_longdescription: Vytvorte slnečnú sústavu, ktorá skutočne
     skába! Dozviete sa viac o hudbe, astronómii a kódovaní v tejto činnosti s vlastným
     vedením (nie sú potrebné žiadne skúsenosti s kódovaním). Naprogramujte planéty
@@ -13105,6 +13229,432 @@ sk:
   accessibility_card_text_10: Upravené učebné osnovy AP Princípy informatiky od Code.org
     s použitím jazyka Quorum, ktorý bol pôvodne navrhnutý na zabezpečenie prístupnosti
     pre nevidiacich alebo zrakovo postihnutých žiakov.
+  engineering_hero_heading: Pripojte sa k nášmu inžinierskému tímu!
+  engineering_hero_desc: Ako pokračujeme v rozširovaní nášho inžinierskeho tímu, chceli
+    sme sa podeliť o viac informácií o našej inžinierskej organizácii na Code.org
+    a niektorých jedinečných aspektoch práce tu. Ak máte záujem uchádzať sa o niektorú
+    z našich úloh, radi by sme vás počuli!
+  engineering_team_title: Zoznámte sa s inžinierskym tímom na Code.org
+  engineering_team_card_text_1: Toto je (väčšina) nás na našom osobnom stretávaní
+    v lete 2023! Tento dav je rozdelený do štyroch podtímov v rámci nášho inžinierskeho
+    tímu, ktoré spolupracujú na budovaní a poskytovaní platformy pre všetkých našich
+    študentov a učiteľov.
+  engineering_team_card_text_2: Ak máte záujem uchádzať sa o niektorú z našich úloh,
+    radi by sme vás počuli! Zoznam voľných pozícií nájdete na našej stránke Kariéra.
+  engineering_our_team_title: Náš inžiniersky tím
+  engineering_our_team_desc: 'Inžiniersky tím na Code.org je rozdelený do štyroch
+    podtímov, ktoré budujú a podporujú rôzne oblasti našej platformy:'
+  engineering_our_team_sub_title_1: Študentský vzdelávací tím
+  engineering_our_team_text_1: Náš študentský vzdelávací tím vlastní všetky naše aktivity
+    (nazývame ich laboratóriá), ktoré naši študenti používajú každý deň. Tento tím
+    pracuje prevažne na front-end technológiách (používame React a veľa vlastných
+    JS) a máme skvelý pracovný vzťah s mnohými partnermi a open source projektmi.
+    Napríklad používame [Google Blockly] (%{youtube_url}) pre všetky naše blokové
+    programovanie. Podporujeme študentov na ich vzdelávacej ceste od materskej školy
+    až po 12. ročník.
+  engineering_our_team_sub_title_2: Tím skúseností učiteľov
+  engineering_our_team_text_2: Náš tím pre učiteľov vytvára nástroje, ktoré priťahujú
+    nových učiteľov na Code.org (nazývame tieto akvizičné produkty) a vyvíja platformu,
+    ktorá umožňuje našim existujúcim učiteľom učiť naše učebné osnovy (naše učiteľské
+    nástroje). Rovnako ako u našich študentských nástrojov sa spoliehame na React
+    pri zostavovaní nášho front-endového rozhrania a naše komponenty na strane servera
+    sú obsluhované pomocou Ruby on Rails.
+  engineering_our_team_sub_title_3: Platformový tím
+  engineering_our_team_text_3: Náš tím platformy vlastní kľúčové komponenty, ktoré
+    slúžia potrebám našich študentských a učiteľských tímov (napríklad autentifikácia
+    a užívateľský profil) a má tiež poslanie osloviť študentov, ktorých ešte nemôžeme
+    osloviť. To zahŕňa budovanie integrácií, ktoré nás spájajú so školami, ktoré používajú
+    rôzne systémy riadenia vzdelávania (LMS), a balenie našich učebných osnov tak,
+    aby ich bolo možné použiť na vzdialených školách, ktoré nemajú prístup k spoľahlivému
+    internetu.
+  engineering_our_team_sub_title_4: Tím infraštruktúry
+  engineering_our_team_text_4: Náš tím pre infraštruktúru poskytuje chrbticu pre platformu,
+    ktorá podporuje našich študentov a učiteľov. To zahŕňa našu hostingovú infraštruktúru
+    a súvisiace služby (používame AWS), správu údajov, bezpečnostné programy, vývojárske
+    a nasadené služby a mnoho ďalšieho. Tento tím tiež vlastní naše škálovacie a zabezpečovacie
+    systémy, ktoré sú kritické počas Hodiny kódu, kde pozývame každého študenta na
+    svete, aby s nami dokončil hodinu kódovania.
+  engineering_faq_question_1: Čo robí Code.org?
+  engineering_faq_answer_1_a: Code.org je vzdelávacia inovačná nezisková organizácia
+    zameraná na víziu, že každý študent v každej škole má možnosť učiť sa informatiku
+    ako súčasť svojho základného vzdelania K-12.
+  engineering_faq_answer_1_b: Rozširujeme prístup k informatike na školách so zameraním
+    na zvýšenie účasti mladých žien a študentov z iných nedostatočne zastúpených skupín.
+    Code.org, popredný poskytovateľ učebných osnov počítačových vied K-12 v najväčších
+    školských obvodoch v Spojených štátoch, organizuje aj každoročnú kampaň Hodina
+    kódu, do ktorej sa zapojilo viac ako 15% všetkých študentov na svete.
+  engineering_faq_answer_1_c: Code.org je podporovaný veľkorysými darcami vrátane
+    spoločností Microsoft, Amazon, Google a mnohých ďalších.
+  engineering_faq_question_2: Aké sú skúsenosti a nástroje vývojára Code.org?
+  engineering_faq_answer_2: Naše skúsenosti s vývojármi sa môžu líšiť od toho, čo
+    ste videli vo svojich minulých rolách. V úzkej spolupráci s naším produktovým
+    tímom dodávame do výroby každý pracovný deň a máme rôzne kadencie - niekedy píšete
+    kód, ktorý bude uvedený do prevádzky v ten deň; inokedy ste na dlhodobejších projektoch
+    - a hoci sledujeme 2-týždenné šprinty, robíme to ľahkým spôsobom. Indexujeme smerovanie
+    k tomu, aby sa správne veci robili správnym spôsobom vs. puristický pohľad na
+    akúkoľvek konkrétnu metodológiu. [Celý náš kód] (%{code_url}) je open source a
+    na sledovanie všetkých našich pracovných položiek používame požiadavky na vytiahnutie
+    JIRA a GitHub. Veľmi nám záleží aj na kvalite a testovaní a máme šťastie, že máme
+    neuveriteľnú podporu od [SauceLabs](%{saucelabs_url}), ktorí nám pomáhajú spustiť
+    našu sadu testov používateľského rozhrania na rôznych študentských zariadeniach
+    (napr. iPadoch) v ich farme cloudových zariadení.
+  engineering_faq_question_3: Čo je to rotácia inžiniera v pohotovej hovore na Code.org?
+  engineering_faq_answer_3: Náš 30+ inžiniersky tím zdieľa zodpovednosť za pohotovú
+    pohotovú službu. Každý inžinier pokrýva 24-hodinovú zmenu a používa naše eskalačné
+    cesty a príručky, aby reagoval na výpadky stránok alebo iné problémy so živými
+    stránkami. Sme hrdí na spoľahlivosť našich stránok - v priemere je každý inžinier
+    prebudený iba raz ročne kvôli problémom, ktoré sa zvyčajne rýchlo vyriešia. Namiesto
+    toho „Developer of the Day“ zvyčajne trávi časť svojho pracovného dňa riadením
+    nasadenia výroby a triedením menej naliehavých problémov.
+  engineering_faq_question_4: Ste organizácia WFH priateľská k diaľkovým/WFH?
+  engineering_faq_answer_4_a: Áno! V roku 2019, krátko pred pandémiou, sa Code.org
+    stala organizáciou na diaľku. Dnes máme inžinierov v každom americkom časovom
+    pásme a zodpovedajúcim spôsobom prispôsobujeme pracovný čas. Väčšina našich stretnutí
+    sa koná medzi 10:00 a 15:00 PT.
+  engineering_faq_answer_4_b: Uznávame tiež hodnotu osobného času a každý štvrťrok
+    sa stretávame osobne, zvyčajne v Seattli. Dve z týchto podujatí (nazývame ich
+    Kick-off week a „Codechella“) spájajú všetkých v organizácii v januári a júni
+    - a inžinierske a produktové tímy sa stretávajú osobitne v apríli a októbri.
+  engineering_faq_answer_4_c: Pevne veríme, že trávime čas s našimi študentmi a učiteľmi,
+    takže mnohé z týchto osobných podujatí zahŕňajú výlety do škôl a tried, aby sme
+    získali spätnú väzbu alebo otestovali naše produkty
+  engineering_faq_question_5: Čo robí inžiniersky tím na Code.org jedinečným?
+  engineering_faq_answer_5_a: 'Okrem riešenia náročných technických problémov máme
+    niekoľko vecí, vďaka ktorým sa náš inžiniersky orgán líši od ostatných, v ktorých
+    ste mohli pracovať:'
+  engineering_faq_answer_5_b_1: Všetci zdieľame našu vášeň pre naše poslanie.
+  engineering_faq_answer_5_b_2: Každý z nás je tu, aby podporil misiu rozšíriť prístup
+    k informatike pre každého študenta na celom svete. Všetci máme svoj jedinečný
+    príbeh a perspektívu o tom, čo nás vedie k tejto misii.
+  engineering_faq_answer_5_c_1: Hlboko sa o seba staráme.
+  engineering_faq_answer_5_c_2: Keď inžinieri zápasia s problémom, vstúpime do toho
+    a pomôžeme. Jedným z našich princípov je, že sme ťažkí na problémy, ale láskaví
+    k sebe navzájom. Inžinierov pravidelne propagujeme, ale nepredpisujeme príliš
+    navrhnuté riešenia len na podporu niekoho propagačnej cesty. Namiesto toho investujeme
+    do našich inžinierov s veľkorysým rozpočtom na profesionálny rozvoj a prístupom
+    k ďalším vzdelávacím príležitostiam.
+  engineering_faq_answer_5_d_1: Tvrdo pracujeme, ale stanovujeme jasné hranice.
+  engineering_faq_answer_5_d_2: Aj keď podporujeme študentov na celom svete, nesieme
+    zodpovednosť za jasné hranice medzi pracovným a domácim životom. V stredu si užívame
+    nestretnutia, pričom si vezmeme náš PTO (celkom 5 týždňov, čo zahŕňa celoorganizačnú
+    2-týždňovú zatvorenie kancelárie na konci roka alias Zimná prestávka), pol pracovného
+    dňa v piatok počas leta alias Letné piatky a ďalšie veľkorysé výhody.
+  careers_hero_title: Kariéra
+  careers_hero_description: Code.org je nezisková organizácia, ktorá sa venuje rozširovaniu
+    prístupu k informatike na školách. Zameriavame sa najmä na zvýšenie účasti mladých
+    žien a nedostatočne zastúpených študentov.
+  careers_hero_description_under: Pomôžte nám zmeniť svet, jeden študent naraz!
+  careers_vision_title: Naša vízia
+  careers_vision_decsription: Našou víziou je, že každý študent v každej škole by
+    mal mať možnosť učiť sa informatiku ako súčasť svojho základného vzdelania K-12.
+  careers_vision_description_under: Pripojte sa k nášmu tímu a pomôžte premeniť túto
+    víziu na skutočnosť!
+  careers_values_title: Naše základné hodnoty
+  careers_values_first_column_text_1: Veríme, že informatika je základom pre všetkých
+    študentov
+  careers_values_first_column_text_2: Zaviazali sme sa k spravodlivosti, prístupu
+    a príležitostiam
+  careers_values_first_column_text_3: Veríme v silu spoločnej vzdelávacej komunity
+  careers_values_second_column_text_1: Sme agilní a reagujeme na spätnú väzbu
+  careers_values_second_column_text_2: Konáme bezúhonne a transparentne
+  careers_values_second_column_text_3: Veríme, že široký vplyv si vyžaduje veľké myslenie
+    a holistické konanie
+  careers_approach_section_title: Náš zjednocujúci prístup
+  careers_approach_section_description: Globálna úloha Code.org v hnutí počítačových
+    vied K-12 je možná len preto, že používame zjednocujúci prístup medzi rôznymi
+    a často rozdelenými zainteresovanými stranami. V čase rastúcej polarizácie spája
+    myšlienka zvyšovania príležitostí pre študentov ľudí z celého politického spektra.
+    Členovia tímu Code.org, študenti, učitelia a priaznivci majú rôzne a odlišné názory
+    a všetci sú vítaní v našej misii.
+  careers_aproach_section_description_link: Prečítajte si viac o prístupe Code.org
+    k jednote.
+  careers_approach_section_button: Preskúmajte otvorené role
+  careers_principle_section_title: Naše kultúrne princípy
+  careers_principle_title_1: Naši študenti a učitelia sú našou severnou hviezdou
+  careers_principle_description_1: Naše dary, čas a energiu využívame na to, aby sme
+    informatiku priniesli tým, ktorí to najviac potrebujú. To je to, čo nás spája.
+    Toto je náš najdôležitejší princíp.
+  careers_principle_title_2: Sme ťažkí na problémy a láskaví k sebe
+  careers_principle_description_2: Zostávame zameraní na výzvu priniesť informatiku
+    študentom a učiteľom na celom svete. Uvedomujeme si, že každý z nás prináša to
+    najlepšie zo svojich zámerov podporiť naše poslanie a dať milosť, keď robíme chyby.
+  careers_principle_title_3: Hľadajte riešenia, nie konsenzus
+  careers_principle_description_3: Vlastníme rozhodnutia, či už robíme malé kroky
+    alebo veľké skoky smerom k výsledkom, ktoré hľadáme. Majitelia žiadajú a počúvajú,
+    ale nie sú paralyzovaní spätnou väzbou. Prijímame a podporujeme rozhodnutia vlastníkov,
+    aj keď s tým nesúhlasíme.
+  careers_principle_title_4: Prijať mentalitu zakladateľa
+  careers_principle_description_4: Sme posadnutí výsledkami a zameriavame svoje kroky
+    na ich riadenie. Ponoríme sa do detailov a tvrdo pracujeme. Sme úprimní, nakláňame
+    sa k obratnosti a neustále hodnotíme, či sme na dobrej ceste; nebojíme sa otočiť.
+    Zmena sveta si to vyžaduje.
+  careers_principle_title_5: Šampión inovácií
+  careers_principle_description_5: Myslíme vo veľkom, riskujeme a nebojíme sa zlyhať.
+    Ak vidíme lepší spôsob, ako dosiahnuť naše ciele, robíme to a povzbudzujeme k
+    tomu aj ostatných. Prírastkové riešenia nepomôžu zmeniť svet.
+  careers_principle_title_6: Ukotvenie rozhodnutí vo faktoch
+  careers_principle_description_6: Údaje používame na pochopenie nášho podnikania,
+    dosiahnutie požadovaných výsledkov a usmernenie rozhodovania. Vyvažujeme to tým,
+    že uznávame, že nebudeme mať vždy údaje, ktoré potrebujeme, aby sme mohli konať.
+  careers_principle_title_7: Rastové myslenie nás poháňa
+  careers_principle_description_7: Každú výzvu pristupujeme so zvedavosťou. Poskytujeme
+    spätnú väzbu láskavo a úprimne; spätnú väzbu dostávame otvorene. Učíme sa z našich
+    chýb a hľadáme spôsoby, ako zvýšiť dosah a vplyv našej práce.
+  careers_balance_section_title: Naša rovnováha medzi pracovným a súkromným životom
+  careers_balance_section_description: Záleží nám na našich zamestnancoch a venujeme
+    sa podpore každého v práci aj mimo práce. Vieme, že každý má iné potreby, a preto
+    ponúkame komplexný balík výhod, ktorý zabezpečí, že sa o vás (a vašu rodinu) postaráme.
+  careers_balance_first_column_text_1: Zdravotné prínosy pre vás a vašu rodinu
+  careers_balance_first_column_text_2: Veľkorysé platené voľno a plány dovolenky
+  careers_balance_second_column_text_1: Flexibilné a podporné pracovné prostredie
+  careers_balance_second_column_text_2: Možnosti rastu a profesionálneho vzdelávania
+  careers_openroles_section_title: Otvorené role
+  careers_openroles_section_description: Code.org sídli v Seattli, ale mnohí členovia
+    nášho tímu sú vzdialení. Vzdialení kandidáti sú vítaní a odporúča sa, aby sa prihlásili.
+  careers_more_info_text: Ďalšie informácie o Code.org nájdete v našom [Často kladené
+    otázky] (%{support_url}) alebo sa dozviete viac o [iných spôsoboch, ako sa zapojiť
+    do našej misie] (%{help_url}).
+  careers_approach_section_title2: Náš prístup k rozmanitosti
+  careers_approach_section_description_1: Prijímame rôzne perspektívy, nápady a pozadia
+    na Code.org. Zaviazali sme sa poskytovať rovnaké príležitosti všetkým zamestnancom
+    a uchádzačom. Nediskriminujeme na základe rasy, náboženstva, farby pleti, národnostného
+    pôvodu, pohlavia, sexuálnej orientácie, veku, rodinného stavu, stavu veterána
+    alebo zdravotného postihnutia (duševného a fyzického) stavu.
+  careers_approach_section_description_2: Zabezpečíme, aby jednotlivcom so zdravotným
+    postihnutím bolo poskytnuté primerané prispôsobenie na účasť na procese žiadosti
+    o zamestnanie alebo pohovore, na vykonávanie základných pracovných funkcií a na
+    získanie ďalších výhod a privilégií zamestnania. Ak máte individuálne potreby
+    súvisiace so zdravotným postihnutím, obráťte sa na accommodations@code.org.
+  csa_ai_page_hero_title: Softvérové inžinierstvo a počítačové videnie
+  csa_ai_page_hero_description: 'Tento dvojkapitolový modul CSA po AP ponúka študentom
+    stredných škôl praktické skúsenosti s profesionálnymi nástrojmi na vývoj softvéru,
+    vrátane GitHub a GitHub Copilot, a dodáva im zručnosti v reálnom svete na vývoj
+    programu počítačového videnia. '
+  csa_ai_page_video_section_title: Krok za svet programovacích prostredí Code.org
+  csa_ai_page_video_section_li_1: Získajte informácie o umelej inteligencii a jej
+    aplikáciách
+  csa_ai_page_video_section_li_2: Praktické skúsenosti s profesionálnymi nástrojmi
+    na vývoj softvéru
+  csa_ai_page_video_section_li_3: Naučte sa štandardne priemyselné postupy
+  csa_ai_page_video_section_li_4: Kultivujte kritické myslenie
+  csa_ai_page_programming_tools: 'Programovacie nástroje: Github, Github Copilot,
+    VSCode, TensorFlow '
+  csa_ai_page_professional_learning: Žiadne
+  csa_ai_page_curriculum_topics: 'Témy: Programovanie, Dáta, Umenie a dizajn, Hry
+    a animácie'
+  csa_ai_page_curriculum_accessibility_features: Podrobnosti nájdete v sekcii FAQ
+  csa_ai_page_curriculum_languages_support: Angličtina
+  csa_ai_page_article_title_1: Stavajte s Copilotom
+  csa_ai_page_article_description_1: Študenti sa naučia používať GitHub Copilot ako
+    párový programátor na vysvetlenie existujúceho kódu, nájdenie a opravu chýb a
+    generovanie riešení nových problémov.
+  csa_ai_page_article_link_1: Prečítajte si viac o Copilot
+  csa_ai_page_article_title_2: Zostavte si vlastný model AI
+  csa_ai_page_article_description_2: Študenti trénujú svoje vlastné modely AI pomocou
+    Teachable Machine, aby rozpoznali obrázky a gestá z webovej kamery a zvážili,
+    ako počítačové videnie ovplyvňuje spôsob, akým používatelia interagujú s aplikáciami.
+  csa_ai_page_article_link_2: Preskúmajte plán lekcií
+  csa_ai_page_article_title_3: Preskúmajte počítačové videnie
+  csa_ai_page_article_description_3: Študenti implementujú modely AI, ktoré vytvorili
+    pomocou aplikácie Teachable Machine, do aplikácie Java pomocou aplikácie GitHub
+    Copilot, ktorý im pomôže upraviť existujúce verzie aplikácií tak, aby pracovali
+    s rôznymi vstupmi.
+  csa_ai_page_article_link_3: Pozrite si príklad
+  csa_ai_page_learn_more_section_title: Prečítajte si viac o umelej inteligencii
+  csa_ai_page_learn_more_title: Preskúmajte AI 101 pre učiteľov
+  csa_ai_page_learn_more_description: Objavte prelomový svet umelej inteligencie (AI)
+    a jej transformačný potenciál vo vzdelávaní pomocou našej komplexnej online učebnej
+    série pre učiteľov.
+  csa_ai_page_learn_more_link: Pozrite si sériu AI 101 pre učiteľov
+  csa_ai_page_faq_question_01: Aké sú predpoklady pre tento modul?
+  csa_ai_page_faq_answer_01_01: 'Pred ponorením sa do tohto modulu by študenti mali
+    mať základné znalosti o jazyku Java. Konkrétne by mali pochopiť:'
+  csa_ai_page_faq_answer_01_list_01: "**Triedy a objekty: ** Študenti by mali byť
+    oboznámení s definovaním a používaním tried, ako aj s vytváraním a manipuláciou
+    s objektmi."
+  csa_ai_page_faq_answer_01_list_02: "**Metódy písania a volania: ** Študenti by mali
+    byť schopní definovať metódy v rámci triedy, porozumieť parametrom metódy a typom
+    návratu a volať metódy z objektov alebo iných metód."
+  csa_ai_page_faq_answer_01_list_03: "**1D polia a zoznamy polí: ** Mali by byť zdatní
+    v deklarovaní, inicializácii a manipulácii s jednorozmernými poliami a zoznamami
+    polí vrátane ich iterácie."
+  csa_ai_page_faq_answer_01_list_04: "**Výber a iterácia: ** Pevný základ v podmienených
+    vyhláseniach a slučkách je rozhodujúci."
+  csa_ai_page_faq_question_01_02: V ideálnom prípade by študenti, ktorí absolvovali
+    AP Computer Science A alebo kurz podobnej hĺbky a prísnosti, boli na tento modul
+    dobre pripravení.
+  csa_ai_page_faq_question_02: Ako môžem nainštalovať softvér potrebný pre tento modul?
+  csa_ai_page_faq_answer_02_01: Tento modul je jedinečný, pretože zahŕňa použitie
+    softvéru tretích strán namiesto laboratórií a nástrojov Code.org. [Prečítajte
+    si viac o inštalácii softvéru tu] (%{accessibility_url}).
+  csa_ai_page_faq_question_03: Ako môžem podporiť potreby prístupnosti pri výučbe
+    tohto modulu?
+  csa_ai_page_faq_answer_03_01: Stravovanie potrieb prístupnosti je rozhodujúce pre
+    inkluzívne vzdelávacie prostredie. [Prečítajte si viac o funkciách prístupnosti
+    v softvéri použitom v tomto module tu] (%{install_url}).
+  csa_ai_page_faq_question_04: Ako môžem použiť VS kód na Chromebookoch?
+  csa_ai_page_faq_answer_04: Používanie kódu VS na Chromebooku sa stalo jednoduchším,
+    najmä vďaka možnosti spúšťať aplikácie Linux na novších modeloch Chromebookov.
+    [Prečítajte si viac o nastavení kódu VS na Chromebookoch tu] ()%{chromebook_url}.
+  csa_ai_page_faq_question_05: Ako môžem získať profesionálny rozvoj pre tento modul?
+  csa_ai_page_faq_answer_05: V súčasnosti pre tento kurz neexistuje špecifický profesionálny
+    rozvoj. Ak chcete pochopiť, ako pristupovať k umelej inteligencii vo svojej triede,
+    môžete [preskúmať AI 101 pre učiteľov] (%{ai_101_url}).
+  csa_ai_page_faq_question_06: Aké je odporúčané načasovanie výučby tohto modulu?
+  csa_ai_page_faq_answer_06_01: Modul softvérového inžinierstva a počítačového videnia
+    je premyslene štruktúrovaný tak, aby poskytoval komplexné vzdelávanie v stručnom
+    časovom rámci. Celý modul je navrhnutý tak, aby trval **2 týždne inštrukcie**.
+    Väčšina lekcií je prispôsobená na **45 minút**, zatiaľ čo hodiny, kde sa študenti
+    ponoria do praktického vývoja projektu Java, sú navrhnuté na **90 minút**. Tento
+    predĺžený čas zaisťuje, že študenti majú dostatok príležitostí porozumieť, implementovať
+    a riešiť problémy pri práci.
+  csa_ai_page_faq_answer_06_02: V štruktúre modulu je zabudovaná aj zámerná flexibilita.
+    V závislosti od dynamiky triedy, zapojenia študentov a hĺbky, do ktorej by ste
+    chceli preskúmať jednotlivé témy, môžete upraviť trvanie. Napríklad lekcia Intro
+    to Copilot, navrhnutá ako 45 minútová lekcia, sa dá rozšíriť na 90 minút, ak sa
+    chcete ponoriť hlbšie do toho, ako fungujú veľké jazykové modely a nástroje ako
+    GitHub Copilot a ChatGPT.
+  csa_ai_page_faq_question_07: How can I access answer keys?
+  csa_ai_page_faq_answer_07: So schváleným účtom učiteľa nájdete kľúče odpovedí v
+    modrom paneli „Učiteľ“ Iba na paneli, ktorý sa zobrazuje v online lekciách a aktivitách.
+    Ak potrebujete schválený účet učiteľa, môžete požiadať o prístup k chráneným materiálom
+    iba pre učiteľov (kľúče odpovedí atď.) prostredníctvom [tohto formulára] ().%{form_url}Majte
+    na pamäti, že overenie vášho účtu môže trvať 3-5 pracovných dní.
+  csa_ai_page_faq_question_08: Je tento modul mapovaný podľa štandardov?
+  csa_ai_page_faq_answer_08: Áno, učebné osnovy softvérového inžinierstva a počítačového
+    videnia sú mapované na [štandardy CSTA K-12] (%{csta_k12_url}) a AI pre [Pokyny
+    K-12] ().%{k12_url}
+  csa_ai_page_faq_question_09: Koľko stojí výučba tohto modulu?
+  csa_ai_page_faq_answer_09_01: Naše učebné osnovy a platforma sú k dispozícii za
+    [bez nákladov] (%{no_cost_url}) pre kohokoľvek a kdekoľvek, na výučbu!
+  csa_ai_page_faq_answer_09_02: Softvér a nástroje používané v tomto module sú navyše
+    bezplatné. GitHub Copilot je zadarmo na overenie [teachers](%{teachers_url}) a
+    [students]().%{students_url}
+  csa_ai_page_faq_question_10: Čo mám robiť, ak inštalácia softvéru nefunguje?
+  csa_ai_page_faq_answer_10: Problémy pri inštalácii softvéru môžu byť bežné, ale
+    existujú systematické kroky, ktoré môžete vykonať pri ich riešení a riešení. [Pozrite
+    si niekoľko tipov na riešenie problémov tu] ()%{troubleshooting_url}.
+  csa_ai_page_faq_question_11: How was the curriculum developed?
+  csa_ai_page_faq_answer_11_01: 'Naše učebné osnovy softvérového inžinierstva a počítačového
+    videnia boli navrhnuté s ohľadom na naše hodnoty učebných osnov. Nasledujúce ciele
+    viedli k vytvoreniu tohto učebného plánu:'
+  csa_ai_page_faq_answer_11_list_01: "**Cieľ 1: ** Na generovanie, ladenie a úpravu
+    kódu použite nástroje AI."
+  csa_ai_page_faq_answer_11_list_02: "**Cieľ 2: ** Prechod z Java Lab na nástroje
+    v reálnom svete."
+  csa_ai_page_faq_answer_11_list_03: "**Cieľ 3: ** Prehlbovať pochopenie toho, ako
+    sú modely AI trénované a integrované do programov."
+  csa_ai_page_faq_answer_11_02: Viac informácií o hodnotách, ktoré viedli našu prácu,
+    nájdete v našom [hodnoty učebných osnov] ()%{curriculum_values_url}.
+  video_library_page_main_title: Vzdelávacie krátke videá
+  video_library_page_hero_description: Rozrastajúca sa knižnica vzdelávacích videí
+    Code.org je k dispozícii na opätovné použitie pedagógmi na celom svete, online
+    alebo v triedach. Naším cieľom je zosilniť naše úsilie mimo dosahu našich vlastných
+    učebných osnov.
+  video_library_page_title_ai_works: Ako funguje umelá inteligencia
+  video_library_page_description_ai_works: Táto séria krátkych videí vám predstaví,
+    ako funguje umelá inteligencia a prečo na tom záleží. Získajte informácie o neurónových
+    sieťach alebo o tom, ako sa AI učí, a ponorte sa do problémov, ako je algoritmická
+    zaujatosť a etika rozhodovania o AI.
+  video_library_page_title_computers_work: Ako fungujú počítače
+  video_library_page_description_computers_work: Vysvetľuje, čo robí počítač počítačom,
+    ako sú digitálne informácie reprezentované v 1s a 0s, ako počítačové obvody pracujú
+    pri manipulácii s digitálnymi informáciami a ako centrálna procesorová jednotka
+    (CPU) a operačný systém riadia vstupy, výstupy, pamäť a hardvér počítača.
+  video_library_page_title_internet_works: Ako funguje Internet
+  video_library_page_description_internet_works: S Vintom Cerfom, vynálezcom TCP/IP,
+    Davidom Karpom, zakladateľom spoločnosti Tumblr, ktorý vysvetľuje HTTP a HTML,
+    princeznú zabezpečenia spoločnosti Google na vysvetlenie SSL a kybernetickej bezpečnosti
+    a inžinierov zo spoločností Microsoft, Spotify a Symantec. Táto séria krátkych
+    videí vysvetľujúcich, ako funguje internet.
+  video_library_page_title_not_hacked: Ako sa nenechať hacknúť
+  video_library_page_description_not_hacked: Internet je otvorený, takže všetko, čo
+    sa na ňom deje, je možné vidieť, pokiaľ nie je chránený. V moderných krajinách
+    sa ľudia viac obávajú hackovania ako akéhokoľvek iného zločinu. Prečo? Pretože
+    každý počítač alebo telefón na internete je pravidelne testovaný na zraniteľné
+    miesta zločincami, teroristami alebo dokonca štátnymi aktérmi. Ak si nedáte pozor,
+    niekto by mohol hacknúť vaše zariadenie alebo účty a dokonca ukradnúť vašu identitu
+    alebo vaše peniaze.
+  video_library_page_title_blockchain: Ako funguje blockchain
+  video_library_page_description_blockchain: Táto séria, vyrobená v spolupráci s Coinbase,
+    obsahuje odborníkov z odvetvia a jej cieľom je demystifikovať túto technológiu
+    skúmaním toho, čo je blockchain, ako funguje a aké sú jeho potenciálne spoločenské
+    dôsledky - dobré aj zlé.
+  video_library_page_title_careers: Kariéra v CS
+  video_library_page_description_careers: Kariéra v oblasti informatiky a techniky
+    môže byť zábavná a obohacujúca. Čo však človek pracujúci v týchto oblastiach skutočne
+    robí? Vďaka širokej škále pracovných miest a spoločností neexistuje len jedna
+    odpoveď na túto otázku. Pozrite si videá nižšie, aby ste sa stretli s niektorými
+    ľuďmi, ktorí riešia veľké problémy kreatívnym spôsobom.
+  video_library_page_title_inspirational: Inšpiratívne
+  video_library_page_description_inspirational: Čo zmení informatika v našom svete?
+    Všetko? Pre koho je určený? Všetci! Pozrite si tieto videá, ktoré vás inšpirujú
+    a motivujú.
+  video_library_page_footer_description: Hľadáte niečo iné? Na našom Youtube kanáli
+    máme k dispozícii toľko skvelých videí.
+  video_library_page_footer_cta: Preskúmajte všetky videá Code.org na YouTube
+  video_library_page_computer_work_video_title_1: Predstavujeme, ako fungujú počítače
+  video_library_page_computer_work_video_title_2: Binárne a dátové
+  video_library_page_computer_work_video_title_3: CPU, pamäť, vstup a výstup
+  video_library_page_computer_work_video_title_4: Čo robí počítač, počítač?
+  video_library_page_computer_work_video_title_5: Logika obvodov
+  video_library_page_computer_work_video_title_6: Hardvér a softvér
+  video_library_page_internet_work_video_title_1: Čo je internet?
+  video_library_page_internet_work_video_title_2: 'INTERNET: IP adresy a DNS'
+  video_library_page_internet_work_video_title_3: 'INTERNET: HTTP a HTML'
+  video_library_page_internet_work_video_title_4: 'INTERNET: Kybernetická bezpečnosť
+    a kriminalita'
+  video_library_page_internet_work_video_title_5: 'INTERNET: Drôty, káble a Wifi'
+  video_library_page_internet_work_video_title_6: 'INTERNET: Pakety, smerovanie a
+    spoľahlivosť'
+  video_library_page_internet_work_video_title_7: 'INTERNET: Šifrovanie a verejné
+    kľúče'
+  video_library_page_internet_work_video_title_8: 'INTERNET: Ako funguje vyhľadávanie'
+  video_library_page_cs_video_title_1: Volám sa Jerome a som dizajnérsky technológ
+    v Meow Wolf
+  video_library_page_cs_video_title_2: Volám sa Nikesha a som letecký inžinier v NASA
+  video_library_page_cs_video_title_3: Volám sa Brina a som softvérový inžinier na
+    Instagrame
+  video_library_page_cs_video_title_4: Volám sa Kinsley a som softvérový inžinier
+    na Facebooku
+  video_library_page_cs_video_title_5: Volám sa Polina a som dátový vedec v Electronic
+    Arts
+  video_library_page_cs_video_title_6: Volám sa Danelle a som softvérový inžinier
+    v MBARI
+  video_library_page_cs_video_title_7: Volám sa Christopher a som bezpečnostný analytik
+    v spoločnosti Tanium
+  video_library_page_cs_video_title_8: Volám sa Federico a som technický programový
+    manažér v spoločnosti Microsoft
+  video_library_page_cs_video_title_9: Volám sa Tess a som softvérový inžinier v spoločnosti
+    Google
+  video_library_page_inspirational_video_title_1: Zmena tváre informatiky (3 min)
+  video_library_page_inspirational_video_title_2: Zatlačte sa. Každý sa môže učiť.
+    (1 min)
+  video_library_page_inspirational_video_title_3: Inšpirovať dievča (2 min)
+  video_library_page_inspirational_video_title_4: Čo školy najčastejšie nevyučujú
+    (5 min)
+  video_library_page_inspirational_video_title_5: Hodina kódu je tu - každý sa môže
+    učiť (2 min)
+  video_library_page_inspirational_video_title_6: Volám sa Aracely (3 min)
+  video_library_page_inspirational_video_title_7: Hodina kódu s Steph Curry (2 min)
+  video_library_page_inspirational_video_title_8: Informatika mení všetko (5 min)
+  video_library_page_inspirational_video_title_9: Úvod do informatiky (1 min)
+  video_library_page_inspirational_video_title_10: Prezident Obama o informatike (1
+    min)
+  video_library_page_inspirational_video_title_11: Každý sa môže učiť (1 min)
+  video_library_page_inspirational_video_title_12: Lo Que Falta En Nuestras Escuelas
+    (2 min)
+  video_library_page_not_hacked_video_title_1: 'Ako sa nenechať hacknúť: Úvod'
+  video_library_page_not_hacked_video_title_2: 'Ako sa nenechať hacknúť: Heslá'
+  video_library_page_not_hacked_video_title_3: 'Ako sa nenechať napadnúť: Autentifikácia
+    a zámky zariadení'
+  video_library_page_not_hacked_video_title_4: 'Ako sa nenechať napadnúť: Phishing'
+  video_library_page_not_hacked_video_title_5: 'Ako sa nenechať hacknúť: Webové stránky
+    a Wifi'
+  video_library_page_not_hacked_video_title_6: 'Ako sa nenechať napadnúť: Správy a
+    sťahovanie'
+  video_library_page_not_hacked_video_title_7: 'Ako sa nenechať hacknúť: Nainštalujte
+    aktualizácie'
   language_code:
     ar: arabčina
     az: azerbajdžančina

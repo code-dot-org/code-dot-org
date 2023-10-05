@@ -13,14 +13,14 @@ hu:
   campaign_date_full_year: 2022. december 5-11.
   nonus_campaign_date_start_short: Okt. 1.
   nonus_campaign_date_start_long: Október 1.
-  nonus_campaign_date_short: Okt. 1. - dec. 18.
-  nonus_campaign_date_full: Október 1. - december 18.
+  nonus_campaign_date_short: Okt. 1. - dec. 12.
+  nonus_campaign_date_full: Október 1. - december 12.
   nonus_campaign_date_year: '2022.'
   nonus_campaign_date_full_year: 2022. október 1. - 2022. december 18.
   latam_campaign_date_start_short: Okt. 1.
   latam_campaign_date_start_long: Október 1.
-  latam_campaign_date_short: Okt. 1. - dec. 18.
-  latam_campaign_date_full: Október 1. - december 18.
+  latam_campaign_date_short: Okt. 1. - dec. 12.
+  latam_campaign_date_full: Október 1. - december 12.
   latam_campaign_date_year: '2022.'
   latam_campaign_date_full_year: 2022. október 1. - 2022. december 18.
   europe_campaign_date_start_short: 'Okt. 10.
@@ -198,6 +198,16 @@ hu:
   grade_level_label_elementary: Általános Iskola
   grade_level_label_middle: Középiskola
   grade_level_label_high: Gimnázium
+  curricula_title_elementary: Általános iskolai tantervek
+  curricula_desc_elementary: Böngésszen a szórakozás között, ingyenes tanfolyamok
+    és tevékenységek, amelyek meghívják Önt, hogy fedezze fel a számítástechnikát
+    általános iskolásokkal.
+  curricula_title_middle: Középiskolai tantervek
+  curricula_desc_middle: Böngésszen a vonzó ajánlatok között, amelyek lehetővé teszik
+    Ön és középiskolás diákjai számára, hogy együtt fedezzék fel a számítástechnikát.
+  curricula_title_high: Középiskolai tantervek
+  curricula_desc_high: Böngésszen a lenyűgöző kurzusok és tevékenységek között, amelyek
+    meghívják Önt és középiskolás diákjait, hogy mélyebbre ássanak a számítástechnikában.
   students_label: Diákok
   teachers_label: Tanárok
   teacher_label_csf: CS Fundamentals tanár
@@ -207,6 +217,7 @@ hu:
   teacher_label_csa: AP® Computer Science A Teacher
   required_materials: 'Szükséges anyagok:'
   optional_materials: 'Opcionális anyagok:'
+  call_to_action_explore_roles: Fedezze fel a nyitott szerepeket
   call_to_action_learn_more: Tudj meg többet
   call_to_action_watch_now: Nézd meg most
   call_to_action_try_activity: Próbálja ki a tevékenységet
@@ -224,6 +235,15 @@ hu:
   call_to_action_explore_choice_level: Fedezze fel a választási szintet
   call_to_action_explore_collection: Fedezze fel a gyűjteményt
   call_to_action_explore_unplugged_lesson: Fedezze fel az unplugged leckéket
+  call_to_action_explore_csf: Fedezze fel a CS alapjait
+  call_to_action_explore_csd: Fedezze fel a CS felfedezéseket
+  call_to_action_explore_csp: Fedezze fel a CS alapelveket
+  call_to_action_explore_csc: Fedezze fel a CS kapcsolatokat
+  call_to_action_explore_csa: Fedezze fel az AP® Computer Science A-t
+  call_to_action_explore_csa_short: Fedezze fel az AP® CSA-t
+  call_to_action_explore_maker: Fedezze fel a Maker tanterveit
+  call_to_action_explore_hoc: Fedezze fel a Kódolás órája oktatóanyagokat
+  call_to_action_explore_hoc_short: Fedezze fel a Kódolás óráját
   call_to_action_try_app_lab: Próbálja ki az App Lab-ot
   call_to_action_view_lesson_plan: Óraterv megtekintése
   call_to_action_self_paced_pl: Indítsa el az önálló tempójú szakmai tanulást
@@ -247,6 +267,7 @@ hu:
   call_to_action_resources_tools: Próbálja ki a programozási eszközöket
   call_to_action_sign_up_free: Iratkozzon fel ingyen
   call_to_action_explore_ai_resources: Fedezze fel az AI-erőforrásokat
+  call_to_action_explore_ai_curricula: Fedezze fel az AI tanterveket
   call_to_action_explore_curriculum_catalog: Fedezze fel a tantervi katalógust
   call_to_action_see_full_curriculum_catalog: Tekintse meg a teljes tantervi katalógust
   call_to_action_find_self_paced_modules: Keressen saját tempójú modulokat
@@ -266,6 +287,13 @@ hu:
   call_to_action_learn_about_approach: Tudjon meg többet megközelítésünkről
   call_to_action_try_java_lab: Próbálja ki a Java Lab-ot
   call_to_action_notify_available: Értesítsen, ha elérhető
+  call_to_action_register_early_access: Regisztráljon a korai hozzáféréshez
+  call_to_action_open_positions: Nyitott pozíciók megtekintése
+  call_to_action_get_guide: Szerezd meg az útmutatót
+  call_to_action_donate_to_cdo: Adomány a Code.org számára
+  call_to_action_start_fundraiser: Indítson adománygyűjtést
+  call_to_action_view_donation_policy: Adományozási irányelvek megtekintése
+  call_to_action_view_donate_bitpay: Adományozzon a BitPay segítségével
   aria_label_call_to_action_afe: Tudjon meg többet az Amazon Future Engineer-ről
   aria_label_call_to_action_teaching_csf: Indítsa el a Számítástudomány alapjainak
     oktatása szakmai tanulási programot
@@ -371,8 +399,11 @@ hu:
   curriculum_name_csp: Számítástechnika alapelvei
   curriculum_name_csc: Számítástechnikai kapcsolatok
   curriculum_name_csa: AP® Számítástechnika A
+  curriculum_name_csa_ai: Szoftverfejlesztés és számítógépes látás
   curriculum_name_csc_02: Bármely CS csatlakozási modul
   curriculum_name_ai: MI és gépi tanulás
+  curriculum_name_artificial_intelligence: Mesterséges intelligencia (AI)
+  curriculum_name_maker: Készítő
   curriculum_name_maker_cp: Alkalmazások létrehozása eszközökkel (Circuit Playground)
   curriculum_name_maker_microbit: Alkalmazások létrehozása eszközökkel (micro:bit)
   curriculum_name_creating_apps_with_devices: Alkalmazások létrehozása eszközökkel
@@ -383,6 +414,8 @@ hu:
   curriculum_name_interactive_animations_games: Interaktív animációk és játékok
   curriculum_name_design_process: A tervezési folyamat
   curriculum_name_data_society: Adat & Társadalom
+  curriculum_desc_csf: Ingyenes elemi tantervek, amelyek megismerteti a hallgatókat
+    a számítástechnika alapfogalmaival.
   curriculum_desc_csf_express: Tanuljon meg számítógépes programokat létrehozni, fejleszteni
     a problémamegoldó készségeket, és dolgozzon át szórakoztató kihívásokon! Készítsen
     játékokat és kreatív projekteket, amelyeket megoszthat barátaival, családjával
@@ -433,6 +466,27 @@ hu:
     a számítástechnikában. Olyan programok kifejlesztése, amelyek hardveres bemeneteket
     és kimeneteket használnak. Ennek az egységnek van egy változata mind a micro:bit,
     mind a Circuit Playground számára.
+  curriculum_desc_csa: Mutassa be a hallgatókat a szoftverfejlesztésnek és az objektumorientált
+    tervezésnek, miközben megtanulják a Java programozási nyelvet ebben az ingyenes
+    tantervben az AP® Computer Science A (AP® CSA) számára.
+  curriculum_desc_maker: A készítői oktatás egy lépéssel tovább viszi a STEM (Science,
+    Technology, Engineering, Matematika) azáltal, hogy gyakorlati tapasztalatokat
+    és együttműködést hív fel az osztályterembe, hogy segítsen tanítani a problémamegoldást
+    és a kritikus gondolkodást.
+  curriculum_desc_maker_short: A készítői oktatás gyakorlati tapasztalatokat és együttműködést
+    hív fel az osztályterembe, hogy segítsen tanítani a problémamegoldást és a kritikus
+    gondolkodást.
+  curriculum_desc_csd: Rugalmas tanfolyam, amely lehetővé teszi, hogy minden egységet
+    egyedül vagy kombinálva tanítsanak. Bemutatja a hallgatókat weboldalak, alkalmazások,
+    animációk, játékok és fizikai számítástechnikai rendszerek építésében.
+  curriculum_desc_csp: Ingyenes, AP® CSP által jóváhagyott, középiskolai bevezető
+    tanfolyam, amely bemutatja a diákokat a számítástechnika alapfogalmainak.
+  curriculum_desc_csa_ai_long: 'Ez a két fejezetből álló Post-AP CSA modul gyakorlati
+    tapasztalatokat kínál a középiskolásoknak a professzionális szoftverfejlesztő
+    eszközökkel kapcsolatban, beleértve a GitHub és a GitHub Copilot, és átveszi őket
+    a valós készségekkel egy számítógépes látásprogram kidolgozásához. '
+  curriculum_desc_csa_ai_short: Ez a Post-AP® CSA modul a középiskolásoknak gyakorlati
+    tapasztalatokat kínál professzionális szoftverfejlesztő eszközökkel.
   collection_hardware: Fókuszban a hardver
   collection_hardware_desc: Felhatalmazza a tanulókat arra, hogy adatokat és fizikai
     eszközöket használjanak a problémák megoldására.
@@ -466,6 +520,7 @@ hu:
   module_label_professional_learning: 'Szakmai tanulás:'
   module_label_languages: 'Támogatott nyelvek:'
   module_label_accessibility_features: 'Megközelíthetőség:'
+  module_label_accessibility_features_full: 'Kisegítő lehetőségek:'
   module_label_educator_tool: Oktató eszköz
   module_label_educator_course: Pedagógus tanfolyam
   module_label_student_tool: Hallgatói eszköz
@@ -473,6 +528,7 @@ hu:
   module_label_student_content_resources: Tartalom és források
   module_label_new: Új
   module_label_coming_soon: Hamarosan
+  module_label_available_now: Most elérhető
   module_label_video_series: Videó sorozat
   module_label_self_paced: Saját tempójú modul
   module_ages_5_10: 5-10
@@ -483,6 +539,8 @@ hu:
   module_grade_2_5: 2-5
   module_grade_3_5: 3-5
   module_grade_3_8: 3-8
+  module_grade_k_12: K-12
+  module_grade_3_12: 3-12
   module_grade_6_12: 6-12
   module_grade_6_10: 6-10
   module_grade_9_12: 9-12
@@ -497,11 +555,14 @@ hu:
   module_grade_9_12_teachers: 9-12 Tanárok
   module_level_beginner: Kezdő
   module_level_intermediate: Közbenső
+  module_level_advanced: Haladó
   module_duration_45_mins: 45 percek
+  module_duration_2_weeks: 2 hét
   module_duration_1_hr: 1 óra
   module_duration_2_hrs: 2 óra
   module_duration_3_hrs: 3 óra
   module_duration_5_hrs: 5 óra
+  module_duration_5_hrs_plus: 5+ óra
   module_duration_8_hrs: 8 óra
   module_duration_20_hrs: 20 óra
   module_duration_35_hrs: 35 óra
@@ -513,6 +574,7 @@ hu:
   module_duration_school_year: Tanév
   module_duration_month_quarter: Hónap vagy negyedév
   module_duration_month_semester_year: Hónap, félév vagy év
+  module_duration_varies: Változik
   module_prerequisites_none: Egyik sem
   module_prerequisites_maker_cp: Hozzáférés egy áramköri játszótérhez
   module_prerequisites_maker_microbit: Hozzáférés a micro:bit-hez
@@ -581,6 +643,9 @@ hu:
   heading_java_lab: Java Lab
   heading_objects_first: Objektumok először
   heading_these_lessons_will: 'Ezek a leckék:'
+  heading_explore_curriculum_catalog: Fedezze fel az összes tanfolyamunkat a tantervi
+    katalógusban
+  heading_csa_ai: Tennivalókat keres az AP® vizsga után?
   professional_learning_section_desc: Szerezd meg a szükséges támogatást, amikor felkészülsz
     a tanításra. A tanárok imádják, több mint 90% -uk rangsorolja a valaha volt legjobb
     szakmai fejlődést!
@@ -613,6 +678,23 @@ hu:
   support_and_questions_section_desc: Támogató csapatunk itt van, hogy megválaszolja
     a Code.org segítségével történő tanítás megkezdésével kapcsolatos kérdéseit. Tanári
     fórumainkon más tanárokat is megkérdezhet tapasztalataikról.
+  subscribe_form_section_title: Feliratkozás a frissítésekre
+  subscribe_form_section_desc_csa: Iratkozzon fel, hogy havi e-maileket kapjon a Code.org
+    AP® Computer Science A-ról, és hasznos emlékeztetőket, tippeket és frissítéseket
+    kaphat közvetlenül a postaládájába.
+  subscribe_form_section_desc_csc: Iratkozzon fel, hogy havi e-maileket kapjon a Code.org
+    Computer Science Connections szolgáltatásairól, és hasznos emlékeztetőket, tippeket
+    és frissítéseket kaphat közvetlenül a postaládájába.
+  subscribe_form_section_desc_csd: Iratkozzon fel, hogy havi e-maileket kapjon a Code.org
+    Computer Science felfedezéseiről, és hasznos emlékeztetőket, tippeket és frissítéseket
+    kaphat közvetlenül a postaládájába.
+  subscribe_form_section_desc_csf: Iratkozzon fel, hogy havi e-maileket kapjon a Code.org
+    Computer Science Fundamentals programjáról, és hasznos emlékeztetőket, tippeket
+    és frissítéseket kapjon közvetlenül a postaládájába.
+  subscribe_form_section_desc_csp: Iratkozzon fel, hogy havi e-maileket kapjon a Code.org
+    számítástechnikai alapelveiről, és hasznos emlékeztetőket, tippeket és frissítéseket
+    kapjon közvetlenül a postaládájába.
+  subscribe_form_section_unsubscribe: Bármikor leiratkozhat.
   blockchain_hero_heading: Hogyan működik a Blockchain
   blockchain_hero_desc: Merüljön el a blokklánc világában a „How Blockchain Works”,
     új videósorozatunk és a kísérő leckék segítségével!
@@ -718,6 +800,9 @@ hu:
     Minden lecke a sorozat egyetlen videójával párosul, mélyebben belemerülve a videókban
     bemutatott fogalmakba.
   ai_curriculum_btn_aria_label_04: Fedezze fel, hogyan működik az AI leckéi
+  ai_curriculum_grades_05: 'Fokozat szintek: 9-12'
+  ai_curriculum_btn_aria_label_05: Fedezze fel a Software Engineering & Computer Vision
+    modult
   ai_carousel_heading: 'Amit a tanárok mondanak az AI-ról a Code.org segítségével:'
   ai_carousel_quote_01: Ez a lecke lehetőséget adott hallgatóimnak is, hogy lássák,
     van-e véleményelem az osztályozási rendszerekben. Később, amikor elkezdtük látni,
@@ -843,6 +928,12 @@ hu:
     a Generative AI. Hallgassa meg, hogyan működnek ezek az új technológiák közvetlenül
     a szakértőktől: Mira Murati, az OpenAI műszaki igazgatója és Cristóbal Valenzuela,
     a RunwayML vezérigazgatója.'
+  ai_pl_101_llm_slides_title: Nagyméretű nyelvi modellkérések oktatók számára
+  ai_pl_101_llm_slides_desc: Eszközök a lehető legjobb kimenet megszerzéséhez olyan
+    LLM-ekből, mint a ChatGPT, kezdőtől haladóig. Tartalmazza az indító utasításokat
+    azok számára, akik csak belemerítik a lábujjaikat, valamint fejlett eszközöket
+    azok számára, akik maximalizálni akarják potenciáljukat.
+  ai_pl_101_resources_3: AI felszólítások a hallgatói tanulás átalakításához
   how_ai_works_hero_heading: Hogyan működik az AI
   how_ai_works_hero_desc: Merüljön el az AI világában a „Hogyan működik az AI” című
     videósorozatunkkal és a kísérő leckékkel!
@@ -1177,19 +1268,18 @@ hu:
   teach_page_free_curriculum_desc: Azt akarjuk, hogy hozza a számítástechnikát az
     iskolájába anélkül, hogy aggódna a költségek miatt. Ezért elköteleztük magunkat
     amellett, hogy tantervi kínálatunk örökre ingyenes legyen!
-  teach_page_free_curriculum_list_heading_01: Vonzó tanterv minden évfolyamhoz
   teach_page_free_curriculum_list_desc_01: Ingyenes, rugalmas és szórakoztató tanterv
     több mint 67 nyelven.
-  teach_page_free_curriculum_list_heading_02: Alkalmazkodó, innovatív tanterv
   teach_page_free_curriculum_list_desc_02: A Code.org mindent kínál az egész éves
     tantervektől az egyszemélyes tevékenységekig. Plusz, évente frissítjük tanterveinket
     a bevált gyakorlatok és a fókuszterületek támogatása érdekében, és új ajánlatokat
     hozhat létre, amelyek megtanítják az aktuális keresleti témákat.
-  teach_page_free_curriculum_list_heading_03: A nemzeti szabványokhoz igazított strukturált
-    tanterv
   teach_page_free_curriculum_list_desc_03: Minden tanterv legalább egy nemzeti szabványkészlethez
     van hozzárendelve, beleértve a CSTA -t, a Next Generation Science Standards és
     a Common Core -t.
+  teach_page_free_curriculum_list_desc_04: Ajánlatok több mint 67 nyelven
+  teach_page_free_curriculum_list_desc_05: Legalább egy nemzeti szabványkészlethez
+    leképezve (beleértve a CSTA, az NGSS és a Common Core szabványokat)
   teach_page_free_curriculum_heading_02: 'Fedezze fel tantervi kínálatunkat különböző
     évfolyamokra:'
   teach_page_resources_heading: Erőforrások, amelyek támogatják Önt az út minden lépésében
@@ -1251,8 +1341,8 @@ hu:
     Animation
   csp_page_curriculum_glance_devices: Laptop, Chromebook
   csp_page_curriculum_glance_tools: App Lab
-  csp_page_curriculum_glance_professional_learning: Facilitator-led Workshops, Self-paced
-    Modules
+  csp_page_curriculum_glance_professional_learning: Facilitátor által vezetett műhelyek,
+    saját tempójú modulok
   csp_page_curriculum_glance_professional_languages: Magyar
   csp_page_curriculum_glance_professional_accessibility_features: Text-to-speech,
     Closed captioning, Immersive reader
@@ -1379,8 +1469,8 @@ hu:
     Programozás
   csd_page_curriculum_glance_devices: Laptop, Chromebook
   csd_page_curriculum_glance_tools: App Lab, Game Lab, AI Lab, Web Lab
-  csd_page_curriculum_glance_professional_learning: Facilitator-led Workshops, Self-paced
-    Modules
+  csd_page_curriculum_glance_professional_learning: Facilitátor által vezetett műhelyek,
+    saját tempójú modulok
   csd_page_curriculum_glance_professional_languages: Magyar
   csd_page_curriculum_glance_professional_accessibility_features: Text-to-speech,
     Closed captioning, Immersive reader
@@ -1527,8 +1617,8 @@ hu:
     és design, App Design
   csf_page_curriculum_glance_devices: Laptop, Chromebook, Tablet
   csf_page_curriculum_glance_tools: Sprite Lab, Play Lab
-  csf_page_curriculum_glance_professional_learning: Facilitator-led Workshops, Self-paced
-    Modules
+  csf_page_curriculum_glance_professional_learning: Facilitátor által vezetett műhelyek,
+    saját tempójú modulok
   csf_page_curriculum_glance_languages: Arab, Spanyol indonéz, katalán, egyszerűsített
     kínai, hagyományos kínai, cseh, francia, német, hindi, olasz, japán, koreai, kannada,
     maláj, marathi, mongol, lengyel, portugál-BR, román, orosz, szlovák, tagalog,
@@ -1670,6 +1760,40 @@ hu:
   csa_page_faq_answer_08_02: For more information about the values that guided our
     work, please see our [curriculum values](%{curriculum_values_url}) and our [professional
     learning values](%{pl_values_url}).
+  donate_page_top_heading: Segítsen finanszírozni küldetésünket
+  donate_page_top_desc: Minden adomány táplálja a Code.org küldetését, hogy bővítse
+    a hozzáférést a számítástechnikai oktatáshoz. Számos lehetőséget kínálunk az adományozásra
+    és a változásra.
+  donate_page_fundraise_title: Adománygyűjtés a Code.org számára
+  donate_page_fundraise_desc: Segítsen pénzt gyűjteni a Code.org számára! Minden iskola
+    minden tanulójának lehetőséget kell biztosítani a számítástechnika elsajátítására.
+  donate_page_other_ways_title: Egyéb módja annak, hogy adjon
+  donate_page_other_ways_desc: Fedezze fel a hozzájárulás különféle módszereit, és
+    keresse meg az Önnek legmegfelelőbb lehetőséget. Minden gesztus, legyen az kicsi
+    vagy nagy, előremozdítja küldetésünket.
+  donate_page_501c3: A Code.org nyilvános 501 (c) (3) nonprofit szervezetként van
+    bejegyezve. A Code.org hozzájárulásai a törvény által megengedett mértékben levonhatók
+    az adóból. A Code.org adóazonosító száma 46-0858543.
+  donate_page_donation_policy_title: Adományozási politikánk megértése
+  donate_page_donation_policy_desc: Tudjon meg többet arról, hogyan kezeljük és osztjuk
+    el hozzájárulásait.
+  donate_tabs_tab_label_daf_direct: DAF Direct
+  donate_tabs_tab_label_amazon: Amazonas
+  donate_tabs_tab_label_bitpay: BitPay
+  donate_tabs_tab_label_employee_match: Munkavállalói mérkőzés
+  donate_tabs_daf_direct_title: Adományozás a DAF Direct segítségével
+  donate_tabs_daf_direct_desc: Adományozzon az adományozó által ajánlott alapon keresztül
+    a Fidelity Charitable, a Schwab Charitable vagy a BNY Mellon segítségével, és
+    tegye meg támogatási ajánlását a Code.org számára a DAF Direct online űrlapján
+    keresztül.
+  donate_tabs_amazon_title: Adományozzon az Amazonon keresztül
+  donate_tabs_amazon_desc: Adományozzon közvetlenül az Amazon-fiókjával. Néhány kattintással
+    zökkenőmentesen hozzájárulhat a Code.org küldetéséhez, és felhatalmazza a számítástechnikai
+    oktatás jövőjét.
+  donate_tabs_bitpay_title: Adományozzon Crypto-val a BitPay-en keresztül
+  donate_tabs_bitpay_desc: Ölelje át az adakozás jövőjét a kriptovalutával. A BitPay
+    segítségével digitális pénzneme közvetlenül támogathatja a Code.org törekvéseit
+    a számítástechnikai oktatás bővítésében.
   hoc_live: Élő kódolás órája
   hoc_live_sign_up_title: Iratkozzon fel a Hour of Code Live szolgáltatásra
   hoc_live_learn_title: Tanulj a Hour of Code Live segítségével
@@ -2089,6 +2213,11 @@ hu:
     helyi lehetőségekkel és egyéb számítástechnikai hírekkel kapcsolatban?
   signup_email_preference_privacy: "(Tekintsd át adatvédelmi irányelveinket)"
   signup_email_preference_yes: Igen
+  signup_email_preference_yes_elementary: Igen - Küldj frissítéseket a Elementary
+    School Resources
+  signup_email_preference_yes_middle: Igen - Küldj frissítéseket a Middle School Resources
+  signup_email_preference_yes_high: Igen - Küldjön frissítéseket a High School Resources
+  signup_email_preference_yes_general: Igen - Küldjön általános frissítéseket
   signup_email_preference_no: Nem
   signup_email_preference_error: Kérlek adj meg email preferenciát
   signup_multiple_event_warning: Ha több eseményt szervezel, akkor adj egyedi nevet
@@ -13408,6 +13537,447 @@ hu:
     adaptációja a Quorum használatával, egy bizonyítékokon alapuló nyelv, amelyet
     eredetileg a vak vagy látássérült hallgatók hozzáférhetőségének biztosítására
     terveztek.
+  engineering_hero_heading: Csatlakozzon mérnöki csapatunkhoz!
+  engineering_hero_desc: Ahogy tovább bővítjük mérnöki csapatunkat, szerettünk volna
+    többet megosztani a Code.org mérnöki szervezetünkről és az itt végzett munka néhány
+    egyedi aspektusáról. Ha érdekel, hogy jelentkezzen valamelyik szerepünkre, szívesen
+    hallanánk rólad!
+  engineering_team_title: Ismerje meg a mérnöki csapatot a Code.org oldalon
+  engineering_team_card_text_1: Ez (legtöbben) a személyes találkozónkon 2023 nyarán!
+    Ez a tömeg négy alcsoportra oszlik mérnöki csapatunkon belül, akik együtt dolgoznak
+    azon, hogy felépítsék és kiszolgálják a platformot minden hallgatónk és tanárunk
+    számára.
+  engineering_team_card_text_2: Ha érdekel, hogy jelentkezzen valamelyik szerepünkre,
+    szívesen hallanánk rólad! A nyitott pozíciók listáját a Karrier oldalon találja.
+  engineering_our_team_title: Mérnöki csapatunk
+  engineering_our_team_desc: 'A Code.org mérnöki csapata négy alcsoportra oszlik,
+    amelyek platformunk különböző területeit építik és támogatják:'
+  engineering_our_team_sub_title_1: Hallgatói tanulási csapat
+  engineering_our_team_text_1: Hallgatói tanulási csapatunk birtokolja minden tevékenységünket
+    (laboratóriumoknak hívjuk őket), amelyeket diákjaink minden nap használnak. Ez
+    a csapat többnyire front-end technológián dolgozik (React-et és sok egyedi JS-t
+    használunk), és nagyszerű munkakapcsolatot ápolunk számos partnerrel és nyílt
+    forráskódú projekttel. Például a [Google's Blockly] (%{youtube_url}) -t használjuk
+    minden blokk alapú programozásunkhoz. Támogatjuk a tanulókat tanulási útjukban
+    az óvodától a 12. osztályig.
+  engineering_our_team_sub_title_2: Tanári tapasztalati csapat
+  engineering_our_team_text_2: Tanári tapasztalati csapatunk felépíti azokat az eszközöket,
+    amelyek új tanárokat vonzanak a Code.org-hoz (ezeket beszerzési termékeknek nevezzük),
+    és kifejleszti azt a platformot, amely felhatalmazza meglévő tanárainkat tantervünk
+    (tanári eszközeink) tanítására. Mint a hallgatói eszközeinknél, a React-re támaszkodunk
+    a front-end felépítésében, és szerveroldali komponenseinket a Ruby on Rails segítségével
+    szolgálják fel.
+  engineering_our_team_sub_title_3: Platform csapat
+  engineering_our_team_text_3: Platform csapatunk olyan alapvető összetevőkkel rendelkezik,
+    amelyek kiszolgálják hallgatói és tanáraink igényeit (például hitelesítés és felhasználói
+    profil), és küldetése az is, hogy elérje azokat a hallgatókat, akiket még nem
+    tudunk elérni. Ez magában foglalja az olyan integrációk építését, amelyek összekapcsolnak
+    minket a különböző tanulási menedzsment rendszereket (LMS) használó iskolákkal,
+    és csomagolják tantervünket, hogy távoli iskolákban is használható legyen, akik
+    nem férnek hozzá megbízható internethez.
+  engineering_our_team_sub_title_4: Infrastruktúra csapat
+  engineering_our_team_text_4: Infrastruktúra csapatunk biztosítja a gerincét annak
+    a platformnak, amely támogatja hallgatóinkat és tanárainkat. Ez magában foglalja
+    a tárhely-infrastruktúránkat és a kapcsolódó szolgáltatásokat (az AWS-t használjuk),
+    az adatkezelést, a biztonsági programokat, a fejlesztői és telepítési szolgáltatásokat
+    és még sok minden mást. Ez a csapat birtokolja skálázási és ellátási rendszereinket
+    is, amelyek kritikusak a Kódolás Órája során, ahol meghívjuk a világ minden hallgatóját,
+    hogy töltsön be egy órás kódolást velünk.
+  engineering_faq_question_1: Mit csinál a Code.org?
+  engineering_faq_answer_1_a: A Code.org egy oktatási innovációs nonprofit szervezet,
+    amely arra a vízióra törekszik, hogy minden iskolában minden tanulónak lehetősége
+    legyen számítástechnikát tanulni a K-12 alapoktatás részeként.
+  engineering_faq_answer_1_b: Bővítjük a számítástechnikához való hozzáférést az iskolákban,
+    különös tekintettel a fiatal nők és más alulreprezentált csoportok diákjainak
+    növekvő részvételére. A K-12 számítástechnikai tanterv vezető szolgáltatója az
+    Egyesült Államok legnagyobb iskolai körzeteiben, a Code.org szervezi az éves Kódolás
+    Órája kampányt is, amely a világ összes hallgatójának több mint 15% -át foglalkoztatta.
+  engineering_faq_answer_1_c: A Code.org-ot nagylelkű adományozók támogatják, köztük
+    a Microsoft, az Amazon, a Google és még sokan mások.
+  engineering_faq_question_2: Mi a Code.org fejlesztői tapasztalata és eszközei?
+  engineering_faq_answer_2: Fejlesztői tapasztalatunk eltérhet attól, amit a korábbi
+    szerepeiben látott. Szorosan együttműködve termékcsapatunkkal, minden hétköznap
+    szállítunk a gyártásba, és különféle kadenciáink vannak - néha olyan kódot ír,
+    amely aznap életbe lép; máskor hosszabb távú projekteken vesz részt - és bár követjük
+    a heti 2 heti sprintet, ezt könnyű módon tesszük. Arra mutatunk, hogy a helyes
+    dolgokat a megfelelő módon végezzük el, szemben az adott módszertan purista nézetével.
+    [Minden kódunk] (%{code_url}) nyílt forráskódú, és JIRA és GitHub pull kéréseket
+    használunk az összes munkadarab nyomon követésére. Sokat törődünk a minőséggel
+    és a teszteléssel is, és szerencsések vagyunk, hogy hihetetlen támogatást kapunk
+    az [SauceLabs](%{saucelabs_url}) -től, akik segítenek nekünk a felhasználói felület
+    tesztcsomagjának futtatásában különböző hallgatói eszközökön (pl. iPads) a felhőeszköz-farmjukon.
+  engineering_faq_question_3: Mi a mérnök ügyeleti rotációja a Code.org-on?
+  engineering_faq_answer_3: 30+ mérnöki csapatunk megosztja az ügyeleti feladatokat.
+    Minden mérnök 24 órás műszakot fed le, és eszkalációs útjainkat és játékkönyveinket
+    használja a webhely leállására vagy más élő webhely problémákra való reagáláshoz.
+    Büszkék vagyunk webhelyünk megbízhatóságára - átlagosan minden mérnököt évente
+    csak egyszer ébresztenek fel olyan problémák miatt, amelyek általában gyorsan
+    megoldhatók. Helyette, a „Nap Fejlesztője” általában munkanapjának egy részét
+    a termelés telepítésének irányításával és a kevésbé sürgős kérdések osztályozásával
+    tölti.
+  engineering_faq_question_4: Ön egy távoli barát/WFH szervezet?
+  engineering_faq_answer_4_a: Igen! 2019-ben, röviddel a járvány előtt, a Code.org
+    távoli szervezet lett. Ma minden amerikai időzónában mérnökeink vannak, és ennek
+    megfelelően fogadják el a munkaidőt. Találkozóink többsége PT 10 és 15 óra között
+    zajlik.
+  engineering_faq_answer_4_b: Felismerjük a személyes idő értékét is, és minden negyedévben
+    személyesen gyűlünk össze, jellemzően Seattle-ben. Ezen események közül kettő
+    (Kick-off Week és „Codechella”) januárban és júniusban mindenkit összehoz a szervezetben
+    - és a mérnöki és termékcsapatok külön találkoznak áprilisban és októberben.
+  engineering_faq_answer_4_c: Határozottan hiszünk abban, hogy időt töltünk diákjainkkal
+    és tanárainkkal, sok ilyen személyes esemény magában foglalja az iskolákba és
+    az osztálytermekbe tett kirándulásokat, hogy visszajelzéseket gyűjtsenek vagy
+    teszteljék termékeinket
+  engineering_faq_question_5: Mi teszi egyedivé a Code.org mérnöki csapatát?
+  engineering_faq_answer_5_a: 'A kihívást jelentő technikai problémák megoldásán túl,
+    van néhány dolog, ami különbözővé teszi mérnöki szervezetünket másoktól, amelyekben
+    esetleg dolgozott:'
+  engineering_faq_answer_5_b_1: Mindannyian osztozunk küldetésünk iránti szenvedélyünkben.
+  engineering_faq_answer_5_b_2: Mindannyian azért vagyunk itt, hogy támogassuk azt
+    a küldetést, hogy kiterjesszük a számítástechnikához való hozzáférést minden hallgató
+    számára szerte a világon. Mindannyiunknak megvan az egyedi története és perspektívája
+    arról, hogy mi vezet minket e küldetés felé.
+  engineering_faq_answer_5_c_1: Mélyen törődünk egymással.
+  engineering_faq_answer_5_c_2: Amikor a mérnökök egy problémával küzdenek, lépünk
+    és segítünk. Az egyik alapelvünk az, hogy kemények vagyunk a problémákkal, de
+    kedvesek egymáshoz. Rendszeresen népszerűsítjük a mérnököket, de nem írunk elő
+    túltervezett megoldásokat csak azért, hogy támogassuk valaki promóciós útját.
+    Ehelyett mérnökeinkbe fektetünk nagyvonalú szakmai fejlesztési költségvetéssel
+    és más tanulási lehetőségekhez való hozzáféréssel.
+  engineering_faq_answer_5_d_1: Keményen dolgozunk, de világos határokat szabunk.
+  engineering_faq_answer_5_d_2: Miközben támogatjuk a diákokat szerte a világon, felelősségre
+    vonjuk magunkat a munka és az otthoni élet közötti egyértelmű határokért. Élvezzük
+    a megbeszélések nélküli szerdákat, a PTO (összesen 5 hét, amely magában foglalja
+    az egész org-szintű 2 hetes irodabezárást az év végén, más néven téli szünetet),
+    fél munkanap pénteken nyáron, más néven nyári péntek, és egyéb nagylelkű előnyök.
+  careers_hero_title: Karrier
+  careers_hero_description: A Code.org egy nonprofit szervezet, amelynek célja az
+    iskolai számítástechnikához való hozzáférés bővítése. Különösen a fiatal nők és
+    az alulreprezentált hallgatók részvételének növelésére összpontosítunk.
+  careers_hero_description_under: Segítsen nekünk megváltoztatni a világot, egyszerre
+    csak egy diák!
+  careers_vision_title: A jövőképünk
+  careers_vision_decsription: Víziónk az, hogy minden iskola minden tanulójának lehetőséget
+    kell kapnia arra, hogy informatikát tanuljon a K-12 alapoktatás részeként.
+  careers_vision_description_under: Csatlakozzon csapatunkhoz, hogy segítsen megvalósítani
+    ezt a jövőképet!
+  careers_values_title: Alapvető értékeink
+  careers_values_first_column_text_1: Hisszük, hogy a számítástechnika minden hallgató
+    számára alapvető
+  careers_values_first_column_text_2: Elkötelezettek vagyunk a méltányosság, a hozzáférés
+    és a lehetőségek iránt
+  careers_values_first_column_text_3: Hiszünk az együttműködő oktatási közösség erejében
+  careers_values_second_column_text_1: Agilisak vagyunk és reagálunk a visszajelzésekre
+  careers_values_second_column_text_2: Tisztességesen és átláthatóan járunk el
+  careers_values_second_column_text_3: Hisszük, hogy a széles körű hatás megköveteli
+    a nagy gondolkodást és a holisztikus cselekvést
+  careers_approach_section_title: Egyesítő megközelítésünk
+  careers_approach_section_description: A Code.org globális szerepe a K-12 számítástechnikai
+    mozgalomban csak azért lehetséges, mert egységesítő megközelítést alkalmazunk
+    a különböző és gyakran megosztott érdekelt felek között. A növekvő polarizáció
+    idején, a hallgatók lehetőségeinek növelésének gondolata egyesíti az embereket
+    a politikai spektrum minden részéről. A Code.org csapattagjainak, diákjainak,
+    tanárainak és támogatóinak sokrétű és eltérő nézőpontjuk van, és mindannyian szívesen
+    látjuk küldetésünkben.
+  careers_aproach_section_description_link: További információ a Code.org egységhez
+    való megközelítéséről.
+  careers_approach_section_button: Fedezze fel a nyitott szerepeket
+  careers_principle_section_title: Kulturális alapelveink
+  careers_principle_title_1: Diákjaink és tanáraink a mi északi csillagunk
+  careers_principle_description_1: Ajándékainkat, időnket és energiánkat arra használjuk,
+    hogy a számítástechnikát eljuttassuk azokhoz, akiknek a legnagyobb szükségük van
+    rá. Ez az, ami egyesít minket. Ez a legfontosabb elvünk.
+  careers_principle_title_2: Kemények vagyunk a problémákkal és kedvesek vagyunk egymáshoz
+  careers_principle_description_2: Arra a kihívásra összpontosítunk, hogy a számítástechnikát
+    világszerte eljuttassák a diákokhoz és a tanárokhoz. Felismerjük, hogy mindannyian
+    a legjobb szándékunkat hozjuk, hogy támogassuk küldetésünket és kegyelmet adjunk,
+    amikor hibákat követünk el.
+  careers_principle_title_3: Megoldások keresése, nem konszenzus
+  careers_principle_description_3: Saját döntéseink vannak, akár kis lépéseket teszünk,
+    akár nagy ugrásokat teszünk a keresett eredmények felé. A tulajdonosok kérnek
+    és hallgatnak, de nem bénítják meg a visszajelzéseket. Elfogadjuk és támogatjuk
+    a tulajdonosok döntéseit, még akkor is, ha nem értünk egyet.
+  careers_principle_title_4: Fogadja el az alapító mentalitását
+  careers_principle_description_4: Megszállottak vagyunk az eredmények iránt, és cselekedeteinket
+    azok vezetésére összpontosítjuk. Belemerülünk a részletekbe és keményen dolgozunk.
+    Őszinték vagyunk, hajolunk az agilitásra, és folyamatosan felmérjük, hogy jó úton
+    haladunk-e; nem félünk elfordulni. A világ megváltoztatása megköveteli.
+  careers_principle_title_5: Champion innováció
+  careers_principle_description_5: Nagyban gondolkodunk, kockáztatunk, és nem félünk
+    kudarcot vallani. Ha jobb módot látunk céljaink elérésére, akkor ezt megtesszük,
+    és másokat is bátorítunk erre. Az inkrementális megoldások nem segítenek megváltoztatni
+    a világot.
+  careers_principle_title_6: Horgonyzó döntések tényekben
+  careers_principle_description_6: Az adatokat arra használjuk, hogy megértsük üzleti
+    tevékenységünket, megállapítsuk a kívánt eredményeket, és irányítsuk a döntéshozatalt.
+    Ezt egyensúlyba hozzuk azzal, hogy felismerjük, hogy nem mindig lesznek olyan
+    adatok, amelyekre szükségünk van a cselekvéshez.
+  careers_principle_title_7: A növekedési gondolkodásmód táplál minket
+  careers_principle_description_7: Minden kihívást kíváncsisággal közelítünk meg.
+    Visszajelzést adunk kedvesen és őszintén; visszajelzést kapunk nyíltan. Tanulunk
+    a hibáinkból, és keressük a módját, hogy növeljük munkánk elérhetőségét és hatását.
+  careers_balance_section_title: Munka és magánélet egyensúlya
+  careers_balance_section_description: Törődünk alkalmazottainkkal, és elkötelezettek
+    vagyunk amellett, hogy mindenkit támogasson mind a munkahelyen, mind a munkán
+    kívül. Tudjuk, hogy mindenkinek különböző igényei vannak, ezért kínálunk egy holisztikus
+    juttatási csomagot, amely biztosítja, hogy Ön (és családja) gondoskodjon rólad.
+  careers_balance_first_column_text_1: Egészségügyi előnyök az Ön és családja számára
+  careers_balance_first_column_text_2: Nagyvonalú fizetett szabadidő és szabadság
+    tervek
+  careers_balance_second_column_text_1: Rugalmas, támogató munkakörnyezet
+  careers_balance_second_column_text_2: Növekedési és szakmai tanulási lehetőségek
+  careers_openroles_section_title: Nyitott szerepek
+  careers_openroles_section_description: A Code.org székhelye Seattle-ben található,
+    de csapatunk sok tagja távoli. A távoli jelölteket szívesen látjuk, és ösztönözzük
+    a jelentkezést.
+  careers_more_info_text: További információ a Code.org-ról, nézd meg a [Gyakran Ismételt
+    Kérdések] (%{support_url}) vagy ismerje meg a [küldetésünkbe való bekapcsolódás
+    egyéb módjait] (%{help_url}).
+  careers_approach_section_title2: Megközelítésünk a sokszínűséghez
+  careers_approach_section_description_1: Sokféle perspektívát, ötletet és hátteret
+    ölelünk fel a Code.org webhelyen. Elkötelezettek vagyunk amellett, hogy egyenlő
+    esélyeket biztosítsunk minden alkalmazottnak és jelentkezőnek. Nem teszünk különbséget
+    faj, vallás, szín, nemzeti származás, nem, szexuális irányultság, életkor, családi
+    állapot, veterán állapot vagy fogyatékosság (mentális és fizikai) állapot alapján.
+  careers_approach_section_description_2: Gondoskodunk arról, hogy a fogyatékossággal
+    élő személyek ésszerű alkalmazkodást kapjanak az álláspályázati vagy interjú folyamatában
+    való részvételhez, az alapvető munkaköri funkciók ellátásához, valamint a foglalkoztatás
+    egyéb juttatásaihoz és kiváltságaihoz. Ha fogyatékossággal kapcsolatos egyéni
+    igényei vannak, kérjük, vegye fel a kapcsolatot a accommodations@code.org e-mail
+    címen.
+  csa_ai_page_hero_title: Szoftverfejlesztés és számítógépes látás
+  csa_ai_page_hero_description: 'Ez a két fejezetből álló Post-AP CSA modul gyakorlati
+    tapasztalatokat kínál a középiskolásoknak a professzionális szoftverfejlesztő
+    eszközökkel kapcsolatban, beleértve a GitHub és a GitHub Copilot, és átveszi őket
+    a valós készségekkel egy számítógépes látásprogram kidolgozásához. '
+  csa_ai_page_video_section_title: Lépj túl a Code.org programozási környezetek világán
+  csa_ai_page_video_section_li_1: Tudjon meg többet a mesterséges intelligenciáról
+    és alkalmazásairól
+  csa_ai_page_video_section_li_2: Gyakorlati tapasztalat professzionális szoftverfejlesztő
+    eszközökkel
+  csa_ai_page_video_section_li_3: Ismerje meg az iparági szabványokat
+  csa_ai_page_video_section_li_4: Ápolja a kritikus gondolkodást
+  csa_ai_page_programming_tools: 'Programozási eszközök: Github, Github Copilot, VSCode,
+    TensorFlow '
+  csa_ai_page_professional_learning: Egyik sem
+  csa_ai_page_curriculum_topics: 'Témakörök: Programozás, Adat, Művészet és design,
+    Játékok és animáció'
+  csa_ai_page_curriculum_accessibility_features: Lásd a GYIK részt a részletekért
+  csa_ai_page_curriculum_languages_support: Magyar
+  csa_ai_page_article_title_1: Építsen a Copilot segítségével
+  csa_ai_page_article_description_1: A diákok megtanulják, hogyan kell a GitHub Copilotot
+    páros programozóként használni a meglévő kód magyarázatához, a hibák megkereséséhez
+    és kijavításához, valamint az új problémák megoldásához.
+  csa_ai_page_article_link_1: Tudjon meg többet a Copilotról
+  csa_ai_page_article_title_2: Készítse el saját AI modelljét
+  csa_ai_page_article_description_2: A diákok saját AI-modelljeiket képezik a Teachable
+    Machine segítségével, hogy felismerjék a webkamerát alkotó képeket és gesztusokat,
+    és mérlegeljék, hogy a számítógépes látás hogyan befolyásolja a felhasználók interakcióját
+    az alkalmazásokkal.
+  csa_ai_page_article_link_2: Fedezze fel az óratervet
+  csa_ai_page_article_title_3: Fedezze fel a számítógépes látást
+  csa_ai_page_article_description_3: A diákok a Teachable Machine segítségével létrehozott
+    AI modelleket egy Java alkalmazásba valósítják meg, a GitHub Copilot segítségével,
+    hogy segítsenek nekik módosítani az alkalmazások meglévő verzióit, hogy működjenek
+    a különböző bemenetekkel.
+  csa_ai_page_article_link_3: Lásd egy példát
+  csa_ai_page_learn_more_section_title: Tudjon meg többet a mesterséges intelligenciáról
+  csa_ai_page_learn_more_title: Fedezze fel az AI 101 tanároknak
+  csa_ai_page_learn_more_description: Fedezze fel a mesterséges intelligencia (AI)
+    úttörő világát és átalakító potenciálját az oktatásban a tanároknak szóló átfogó
+    online tanulási sorozatunkkal.
+  csa_ai_page_learn_more_link: Nézze meg az AI 101 tanároknak sorozatot
+  csa_ai_page_faq_question_01: Milyen előfeltételei vannak ennek a modulnak?
+  csa_ai_page_faq_answer_01_01: 'Mielőtt belemerülne ebbe a modulba, a hallgatóknak
+    rendelkezniük kell a Java belépő szintű ismeretekkel. Pontosabban, meg kell érteniük:'
+  csa_ai_page_faq_answer_01_list_01: "**Osztályok és objektumok: ** A hallgatóknak
+    ismerniük kell az osztályok meghatározását és használatát, valamint az objektumok
+    létrehozását és manipulálását."
+  csa_ai_page_faq_answer_01_list_02: "**Írási és hívási módszerek: ** A hallgatóknak
+    képesnek kell lenniük az osztályon belüli módszerek meghatározására, a metódusparaméterek
+    és a visszatérési típusok megértésére, valamint az objektumokból vagy más módszerekből
+    származó hívási módszerek meghatározására."
+  csa_ai_page_faq_answer_01_list_03: "**1D tömbök és tömblisták: ** Jártasnak kell
+    lenniük az egydimenziós tömbök és tömblisták deklarálásában, inicializálásában
+    és manipulálásában, beleértve a rajtuk keresztüli iterálást is."
+  csa_ai_page_faq_answer_01_list_04: "**Kiválasztás és iteráció: ** A feltételes utasítások
+    és hurkok szilárd alapja elengedhetetlen."
+  csa_ai_page_faq_question_01_02: Ideális esetben azok a hallgatók, akik befejezték
+    az AP Computer Science A-t vagy hasonló mélységű és szigorú tanfolyamot, jól felkészültek
+    lennének erre a modulra.
+  csa_ai_page_faq_question_02: Hogyan telepíthetem a modulhoz szükséges szoftvert?
+  csa_ai_page_faq_answer_02_01: Ez a modul egyedülálló, mert magában foglalja a harmadik
+    féltől származó szoftverek használatát a Code.org laboratóriumok és eszközök helyett.
+    [További információ a szoftver telepítéséről itt] (%{accessibility_url}).
+  csa_ai_page_faq_question_03: Hogyan támogathatom az akadálymentesítési igényeket
+    a modul oktatása közben?
+  csa_ai_page_faq_answer_03_01: Az akadálymentesítési igények kielégítése elengedhetetlen
+    az inkluzív tanulási környezet szempontjából. [A modulban használt szoftver kisegítő
+    lehetőségeiről itt olvashat bővebben] (%{install_url}).
+  csa_ai_page_faq_question_04: Hogyan használhatom a VS kódot Chromebookokon?
+  csa_ai_page_faq_answer_04: A VS Code használata Chromebookon egyszerűbbé vált, különösen
+    azzal a képességgel, hogy Linux alkalmazásokat futtathat újabb Chromebook modelleken.
+    [A VS kód Chromebookokon történő beállításáról itt olvashat bővebben] ()%{chromebook_url}.
+  csa_ai_page_faq_question_05: Hogyan szerezhetek szakmai fejlődést ehhez a modulhoz?
+  csa_ai_page_faq_answer_05: Jelenleg nincs konkrét szakmai fejlődés erre a kurzusra.
+    Ha meg akarja érteni, hogyan kell megközelíteni a mesterséges intelligenciát az
+    osztálytermében, akkor [fedezze fel az AI 101 tanároknak] (%{ai_101_url}).
+  csa_ai_page_faq_question_06: Mi az ajánlott időzítés ennek a modulnak a tanításához?
+  csa_ai_page_faq_answer_06_01: A Software Engineering & Computer Vision modul átgondoltan
+    van felépítve, hogy átfogó tanulást biztosítson tömör időkeretben. A teljes modult
+    úgy tervezték, hogy átfogja a**2 hetes oktatás**. A legtöbb leckét **45 percre
+    szabják**, míg az órákat, ahol a hallgatók a gyakorlati Java projektfejlesztésbe
+    merülnek, **90 percre tervezik**. Ez a meghosszabbított idő biztosítja, hogy a
+    hallgatóknak bőséges lehetőségük legyen megérteni, megvalósítani és hibaelhárítani
+    munka közben.
+  csa_ai_page_faq_answer_06_02: Szándékos rugalmasság is beépítve van a modul felépítésébe.
+    Az osztálytermi dinamikától, a diákok elkötelezettségétől és az egyes témák feltárásának
+    mélységétől függően beállíthatja az időtartamot. Például, az Intro to Copilot
+    lecke, amelyet 45 perces leckének terveztek, kibővíthető 90 percre, ha mélyebbre
+    szeretne merülni abban, hogy milyen nagy nyelvi modellek és eszközök működnek,
+    mint például a GitHub Copilot és a ChatGPT.
+  csa_ai_page_faq_question_07: How can I access answer keys?
+  csa_ai_page_faq_answer_07: Jóváhagyott tanári fiókkal, a válaszkulcsokat egy kék
+    „Tanár” panelen találhatja meg, amely az online órákban és tevékenységekben jelenik
+    meg.Ha jóváhagyott tanári fiókra van szüksége, kérheti a hozzáférést a csak tanároknak
+    védett anyagokhoz (válaszkulcsok stb.) az [ezen az űrlapon] () keresztül.%{form_url}Kérjük,
+    ne feledje, hogy fiókjának igazolása 3-5 munkanapot vehet igénybe.
+  csa_ai_page_faq_question_08: Ez a modul szabványokhoz van hozzárendelve?
+  csa_ai_page_faq_answer_08: Igen, a Software Engineering & Computer Vision tanterv
+    a [CSTA K-12 szabványok] (%{csta_k12_url}) és az AI [K-12 irányelvek] () szerint
+    van leképezve.%{k12_url}
+  csa_ai_page_faq_question_09: Mennyibe kerül ennek a modulnak a tanítása?
+  csa_ai_page_faq_answer_09_01: Tantervünk és platformunk elérhető [költség nélkül]
+    (%{no_cost_url}) bárki számára, bárhol, tanítani!
+  csa_ai_page_faq_answer_09_02: Ezenkívül az ebben a modulban használt szoftverek
+    és eszközök ingyenesek. A GitHub Copilot ingyenesen ellenőrizhető [teachers](%{teachers_url})
+    és (). [students]%{students_url}
+  csa_ai_page_faq_question_10: Mit tegyek, ha a szoftver telepítése nem működik?
+  csa_ai_page_faq_answer_10: A szoftvertelepítés során felmerülő problémák gyakoriak
+    lehetnek, de vannak szisztematikus lépések, amelyeket követhet a hibaelhárításhoz
+    és azok megoldásához. [Nézzen meg néhány hibaelhárítási tippet itt] (%{troubleshooting_url}).
+  csa_ai_page_faq_question_11: How was the curriculum developed?
+  csa_ai_page_faq_answer_11_01: 'Szoftvermérnöki és számítógépes látás tantervünket
+    a tantervi értékeink szem előtt tartásával terveztük. A következő célok irányították
+    a tanterv létrehozását:'
+  csa_ai_page_faq_answer_11_list_01: "**1. cél: ** AI eszközökkel generálhat, hibakereshet
+    és szerkeszthet kódot."
+  csa_ai_page_faq_answer_11_list_02: "**2. cél: ** Átmenet a Java Lab-ról a valós
+    eszközökre."
+  csa_ai_page_faq_answer_11_list_03: "**3. cél: ** Mélyítse el annak megértését, hogyan
+    képzik és integrálják az AI modelleket a programokba."
+  csa_ai_page_faq_answer_11_02: További információ a munkánkat irányított értékekről,
+    kérjük, olvassa el a [tantervi értékek] ()%{curriculum_values_url}.
+  video_library_page_main_title: Oktatási rövid videók
+  video_library_page_hero_description: A Code.org oktatási videóinak növekvő könyvtára
+    világszerte elérhető az oktatók számára, online vagy tantermekben. Célunk, hogy
+    erőfeszítéseinket a saját tantervünk elérésén túl is erősítsük.
+  video_library_page_title_ai_works: Hogyan működik az AI
+  video_library_page_description_ai_works: Ez a rövid videósorozat bemutatja, hogyan
+    működik a mesterséges intelligencia és miért számít. Ismerje meg az ideghálózatokat,
+    vagy hogyan tanul az AI, és mélyüljön el olyan kérdésekben, mint az algoritmikus
+    elfogultság és az AI döntéshozatalának etikája.
+  video_library_page_title_computers_work: Hogyan működnek a számítógépek
+  video_library_page_description_computers_work: Elmagyarázza, mi teszi a számítógépet
+    számítógéppé, hogyan jelenik meg a digitális információ 1s és 0 -ban, hogyan működnek
+    a számítógépes áramkörök a digitális információk manipulálására, és hogyan vezérli
+    a központi feldolgozó egység (CPU) és az operációs rendszer a számítógép bemeneteit,
+    kimeneteit, memóriáját és hardverét.
+  video_library_page_title_internet_works: Hogyan működik az Internet
+  video_library_page_description_internet_works: Vint Cerf, a TCP/IP feltalálója,
+    David Karp, a Tumblr alapítója elmagyarázza a HTTP-t és a HTML-t, a Google Security
+    Princess elmagyarázza az SSL-t és a kiberbiztonságot, valamint a Microsoft, a
+    Spotify és a Symantec mérnökei. Ez a rövid videósorozat elmagyarázza, hogyan működik
+    az internet.
+  video_library_page_title_not_hacked: Hogyan ne hackeljenek
+  video_library_page_description_not_hacked: Az internet nyitva van, így minden, ami
+    rajta történik, látható, hacsak nem védett. A modern országokban az emberek jobban
+    aggódnak a hackelés miatt, mint bármely más bűncselekmény miatt. Miért? Mivel
+    az interneten minden számítógépet vagy telefont rendszeresen tesztelnek a bűnözők,
+    terroristák vagy akár állami szereplők sebezhetőségére. Ha nem vigyázol, valaki
+    feltörheti készülékét vagy számláit, sőt ellophatja személyazonosságát vagy pénzét.
+  video_library_page_title_blockchain: Hogyan működik a Blockchain
+  video_library_page_description_blockchain: A Coinbase-szel együttműködésben készült
+    sorozat iparági szakértőket tartalmaz, és célja ennek a technológiának a demisztifikálása
+    azáltal, hogy feltárja, mi a blokklánc, hogyan működik, és annak lehetséges társadalmi
+    következményei — jó és rossz egyaránt.
+  video_library_page_title_careers: Karrier CS-ben
+  video_library_page_description_careers: A számítástechnika és a technológia karrierje
+    szórakoztató és kifizetődő lehet. De mit csinál valójában egy ezeken a területeken
+    dolgozó ember? A munkahelyek és a vállalatok széles választékával nem csak egy
+    válasz van erre a kérdésre. Nézze meg az alábbi videókat, hogy találkozzon néhány
+    olyan emberrel, akik kreatív módon kezelik a nagy problémákat.
+  video_library_page_title_inspirational: Inspiráló
+  video_library_page_description_inspirational: Mit fog megváltoztatni a számítástechnika
+    a világunkban? Mindent? Kinek való? Mindenki! Nézze meg ezeket a videókat, hogy
+    inspiráljon és motiváljon.
+  video_library_page_footer_description: Valami mást keres? Annyi nagyszerű videó
+    érhető el Youtube csatornánkon.
+  video_library_page_footer_cta: Fedezze fel az összes Code.org videót a YouTube-on
+  video_library_page_computer_work_video_title_1: Bemutatjuk, hogyan működnek a számítógépek
+  video_library_page_computer_work_video_title_2: Bináris és adat
+  video_library_page_computer_work_video_title_3: CPU, memória, bemenet és kimenet
+  video_library_page_computer_work_video_title_4: Mitől lesz egy számítógép, egy számítógép?
+  video_library_page_computer_work_video_title_5: Logikai áramkörök
+  video_library_page_computer_work_video_title_6: Hardver és szoftver
+  video_library_page_internet_work_video_title_1: Mi az internet?
+  video_library_page_internet_work_video_title_2: 'INTERNET: IP-címek és DNS'
+  video_library_page_internet_work_video_title_3: 'INTERNET: HTTP és HTML'
+  video_library_page_internet_work_video_title_4: 'INTERNET: Kiberbiztonság & Bűnözés'
+  video_library_page_internet_work_video_title_5: 'INTERNET: Vezetékek, Kábelek, &
+    Wifi'
+  video_library_page_internet_work_video_title_6: 'INTERNET: Csomagok, útválasztás
+    és megbízhatóság'
+  video_library_page_internet_work_video_title_7: 'INTERNET: Titkosítás és nyilvános
+    kulcsok'
+  video_library_page_internet_work_video_title_8: 'INTERNET: Hogyan működik a keresés'
+  video_library_page_cs_video_title_1: A nevem Jerome, és a Meow Wolf tervezőmérnöke
+    vagyok
+  video_library_page_cs_video_title_2: A nevem Nikesha és repülőgépmérnök vagyok a
+    NASA-nál
+  video_library_page_cs_video_title_3: A nevem Brina és szoftvermérnök vagyok az Instagram-on
+  video_library_page_cs_video_title_4: A nevem Kinsley és szoftvermérnök vagyok a
+    Facebookon
+  video_library_page_cs_video_title_5: A nevem Polina, és az Electronic Arts adatkutatója
+    vagyok
+  video_library_page_cs_video_title_6: A nevem Danelle és szoftvermérnök vagyok az
+    MBARI-nál
+  video_library_page_cs_video_title_7: A nevem Christopher, és a Tanium biztonsági
+    elemzője vagyok
+  video_library_page_cs_video_title_8: A nevem Federico, és technikai programmenedzser
+    vagyok a Microsoftnál
+  video_library_page_cs_video_title_9: A nevem Tess és szoftvermérnök vagyok a Google-nál
+  video_library_page_inspirational_video_title_1: A számítástechnika arcának megváltoztatása
+    (3 perc)
+  video_library_page_inspirational_video_title_2: Nyomja meg magát. Bárki tanulhat.
+    (1 perc)
+  video_library_page_inspirational_video_title_3: Inspiráljon egy lányt (2 perc)
+  video_library_page_inspirational_video_title_4: Amit a legtöbb iskola nem tanít
+    (5 perc)
+  video_library_page_inspirational_video_title_5: Itt a kódolás órája - bárki tanulhat
+    (2 perc)
+  video_library_page_inspirational_video_title_6: A nevem Aracely (3 perc)
+  video_library_page_inspirational_video_title_7: Kódolás órája Steph Curryvel (2
+    perc)
+  video_library_page_inspirational_video_title_8: A számítástechnika mindent megváltoztat
+    (5 perc)
+  video_library_page_inspirational_video_title_9: Számítástudományi bevezető (1 perc)
+  video_library_page_inspirational_video_title_10: Obama elnök a számítástechnikáról
+    (1 perc)
+  video_library_page_inspirational_video_title_11: Bárki Tanulhat (1 perc)
+  video_library_page_inspirational_video_title_12: Lo Que Falta En Nuestras Escuelas
+    (2 perc)
+  video_library_page_not_hacked_video_title_1: 'Hogyan ne hackeljenek fel: Bevezetés'
+  video_library_page_not_hacked_video_title_2: 'Hogyan ne törjék fel: Jelszavak'
+  video_library_page_not_hacked_video_title_3: 'Hogyan ne törjék fel: Hitelesítés
+    és eszközzárolások'
+  video_library_page_not_hacked_video_title_4: 'Hogyan ne törjék fel: Adathalászat'
+  video_library_page_not_hacked_video_title_5: 'Hogyan ne törjék fel: Weboldalak és
+    Wifi'
+  video_library_page_not_hacked_video_title_6: 'Hogyan ne törjék fel: Üzenetek és
+    letöltések'
+  video_library_page_not_hacked_video_title_7: 'Hogyan ne törjék fel: Telepítse a
+    frissítéseket'
   language_code:
     ar: arab
     az: azerbajdzsáni

@@ -188,6 +188,15 @@ ca:
   grade_level_label_elementary: Escola primària
   grade_level_label_middle: ESO
   grade_level_label_high: Institut
+  curricula_title_elementary: Escola primària Curricula
+  curricula_desc_elementary: Navegueu pels cursos i activitats divertides i gratuïtes
+    que us conviden a explorar la informàtica amb els vostres estudiants de primària.
+  curricula_title_middle: Curricula de l'escola mitjana
+  curricula_desc_middle: Navegueu per les ofertes atractives que us permeten a vosaltres
+    i als vostres estudiants de secundària explorar la informàtica junts.
+  curricula_title_high: Curricula de secundària
+  curricula_desc_high: Navegueu pels cursos i activitats convincents que us conviden
+    a vosaltres i als vostres estudiants de secundària a aprofundir en la informàtica.
   students_label: Estudiants
   teachers_label: Professors
   teacher_label_csf: CS Fonaments Professor
@@ -197,6 +206,7 @@ ca:
   teacher_label_csa: AP® Computer Science A Teacher
   required_materials: 'Materials necessaris:'
   optional_materials: 'Materials opcionals:'
+  call_to_action_explore_roles: Explora rols oberts
   call_to_action_learn_more: Saber-ne més
   call_to_action_watch_now: Veure ara
   call_to_action_try_activity: Prova l'activitat
@@ -214,6 +224,15 @@ ca:
   call_to_action_explore_choice_level: Explora el nivell d'elecció d'exemple
   call_to_action_explore_collection: Explora la col·lecció
   call_to_action_explore_unplugged_lesson: Explora lliçons desconnectades
+  call_to_action_explore_csf: Explora Fonaments CS
+  call_to_action_explore_csd: Explora CS Descobriments
+  call_to_action_explore_csp: Explora els principis CS
+  call_to_action_explore_csc: Explora Connexions CS
+  call_to_action_explore_csa: Explorar AP® Computer Science A
+  call_to_action_explore_csa_short: Explora AP® CSA
+  call_to_action_explore_maker: Explora els currículums del fabricant
+  call_to_action_explore_hoc: Explora els tutorials de l'Hora del Codi
+  call_to_action_explore_hoc_short: Explora Hora del Codi
   call_to_action_try_app_lab: Prova App Lab
   call_to_action_view_lesson_plan: Veure unitat didàctica
   call_to_action_self_paced_pl: Començar aprenentatge professional al teu ritme
@@ -237,6 +256,7 @@ ca:
   call_to_action_resources_tools: Prova les eines de programació
   call_to_action_sign_up_free: Creeu un compte gratuïtament
   call_to_action_explore_ai_resources: Explora recursos IA
+  call_to_action_explore_ai_curricula: Explora els currículums d'IA
   call_to_action_explore_curriculum_catalog: 'Explora el Catàleg del Currículum '
   call_to_action_see_full_curriculum_catalog: Visualitza el Catàleg del Currículum
     complet
@@ -257,6 +277,13 @@ ca:
   call_to_action_learn_about_approach: Obteniu més informació sobre el nostre enfocament
   call_to_action_try_java_lab: Prova Java Lab
   call_to_action_notify_available: Aviseu-me quan estigui disponible
+  call_to_action_register_early_access: Registrar-se per a l'accés anticipat
+  call_to_action_open_positions: Veure posicions obertes
+  call_to_action_get_guide: Aconsegueix la guia
+  call_to_action_donate_to_cdo: Fes una donació a Code.org
+  call_to_action_start_fundraiser: Iniciar una recaptació de fons
+  call_to_action_view_donation_policy: Veure política de donacions
+  call_to_action_view_donate_bitpay: Fes una donació amb BitPay
   aria_label_call_to_action_afe: Sabeu més sobre Amazon Future Engineer
   aria_label_call_to_action_teaching_csf: 'Comença el programa d''aprenentatge professional
     d''''Ensenyament de Fonaments de Ciències Informàtiques '
@@ -366,8 +393,11 @@ ca:
   curriculum_name_csp: Principis de la Informàtica
   curriculum_name_csc: Connexions Informàtiques
   curriculum_name_csa: Ciències Informàtiques A
+  curriculum_name_csa_ai: Enginyeria del Programari i Visió per Computador
   curriculum_name_csc_02: Qualsevol Mòdul de Connexió CS
   curriculum_name_ai: AI i aprenentatge automàtic
+  curriculum_name_artificial_intelligence: Intel·ligència Artificial (IA)
+  curriculum_name_maker: Fabricant
   curriculum_name_maker_cp: Creació d'Apps amb Dispositius (Circuit Playground)
   curriculum_name_maker_microbit: Crear Apps amb Devices (micro:bit)
   curriculum_name_creating_apps_with_devices: Creació d'Apps amb Dispositius
@@ -378,6 +408,8 @@ ca:
   curriculum_name_interactive_animations_games: Animacions i jocs interactius
   curriculum_name_design_process: El procés de disseny
   curriculum_name_data_society: Dades i societat
+  curriculum_desc_csf: Conjunt gratuït de currículums elementals que introdueix l'alumne
+    en els conceptes fundacionals de la informàtica.
   curriculum_desc_csf_express: Aprendre a crear programes informàtics, desenvolupar
     habilitats de resolució de problemes i treballar a través de desafiaments divertits!
     Fer jocs i projectes creatius per compartir amb amics, familiars i professors.
@@ -428,6 +460,27 @@ ca:
     en la informàtica. Desenvolupar programes que utilitzin entrades i sortides de
     maquinari. Hi ha una versió d'aquesta unitat tant per al micro:bit com per al
     Circuit Playground.
+  curriculum_desc_csa: Introduir els estudiants en l'enginyeria del programari i el
+    disseny orientat a objectes mentre aprenen el llenguatge de programació Java en
+    aquest pla d'estudis gratuït per a AP® Computer Science A (AP® CSA).
+  curriculum_desc_maker: L'educació Maker porta STEM (Science, Technology, Engineering,
+    Mathematics) un pas més enllà convidant l'experiència pràctica i la col·laboració
+    a l'aula per ajudar a ensenyar la resolució de problemes i el pensament crític.
+  curriculum_desc_maker_short: Maker education convida a l'experiència pràctica i
+    la col·laboració a l'aula per ajudar a ensenyar la resolució de problemes i el
+    pensament crític.
+  curriculum_desc_csd: Curs flexible, que permet impartir cada unitat sola o combinada.
+    Introdueix als estudiants a la construcció de llocs web, aplicacions, animacions,
+    jocs i sistemes de computació física.
+  curriculum_desc_csp: Gratuït, aprovat per AP® CSP, curs d'introducció a l'escola
+    secundària que introdueix els estudiants en els conceptes fundacionals de la informàtica.
+  curriculum_desc_csa_ai_long: 'Aquest mòdul CSA post-AP de dos capítols ofereix als
+    estudiants de secundària experiència pràctica amb eines professionals de desenvolupament
+    de programari, incloent GitHub i GitHub Copilot, i els imparteix amb les habilitats
+    del món real per desenvolupar un programa de visió per computador. '
+  curriculum_desc_csa_ai_short: Aquest mòdul Post-AP® CSA ofereix als estudiants de
+    secundària experiència pràctica amb eines professionals de desenvolupament de
+    programari.
   collection_hardware: Centrar-se en el maquinari
   collection_hardware_desc: Capta els estudiants a utilitzar dades i dispositius físics
     per resoldre problemes.
@@ -460,6 +513,7 @@ ca:
   module_label_professional_learning: 'Aprenentatge Professional:'
   module_label_languages: 'Idiomes compatibles:'
   module_label_accessibility_features: 'Accessibilitat:'
+  module_label_accessibility_features_full: 'Característiques d''accessibilitat:'
   module_label_educator_tool: Eina educadora
   module_label_educator_course: Curs d'educador
   module_label_student_tool: Eina per a estudiants
@@ -467,6 +521,7 @@ ca:
   module_label_student_content_resources: Contingut i recursos
   module_label_new: Nou
   module_label_coming_soon: Properament
+  module_label_available_now: Disponible ara
   module_label_video_series: Sèrie de vídeos
   module_label_self_paced: Mòdul auto-ritme
   module_ages_5_10: 5-10
@@ -477,6 +532,8 @@ ca:
   module_grade_2_5: 2-5
   module_grade_3_5: 3-5
   module_grade_3_8: 3-8
+  module_grade_k_12: K-12
+  module_grade_3_12: 3-12
   module_grade_6_12: 6-12
   module_grade_6_10: 6-10
   module_grade_9_12: 9-12
@@ -491,11 +548,14 @@ ca:
   module_grade_9_12_teachers: Professors 9-12
   module_level_beginner: Principiant
   module_level_intermediate: Intermedi
+  module_level_advanced: Avançat
   module_duration_45_mins: 45 minuts
+  module_duration_2_weeks: 2 setmanes
   module_duration_1_hr: 1 hora
   module_duration_2_hrs: 2 hores
   module_duration_3_hrs: 3 hores
   module_duration_5_hrs: 5 hores
+  module_duration_5_hrs_plus: 5+ hores
   module_duration_8_hrs: 8 hores
   module_duration_20_hrs: 20 hores
   module_duration_35_hrs: 35 hores
@@ -507,6 +567,7 @@ ca:
   module_duration_school_year: Any Escolar
   module_duration_month_quarter: Mes o Trimestre
   module_duration_month_semester_year: Mes, semestre o any
+  module_duration_varies: Varia
   module_prerequisites_none: Cap
   module_prerequisites_maker_cp: Accés a Circuit Playground
   module_prerequisites_maker_microbit: Accés a mirco:bit
@@ -576,6 +637,8 @@ ca:
   heading_java_lab: Java Lab
   heading_objects_first: Objectes primer
   heading_these_lessons_will: 'Aquestes lliçons seran:'
+  heading_explore_curriculum_catalog: Explora tots els nostres cursos al Catàleg Curricular
+  heading_csa_ai: Busques coses a fer després de l'examen AP®?
   professional_learning_section_desc: Obteniu el suport que necessiteu mentre us prepareu
     per ensenyar. Als professors els encanta, amb més del 90% que el classifica el
     millor desenvolupament professional de la història!
@@ -608,6 +671,23 @@ ca:
     a qualsevol pregunta que pugueu tenir sobre començar a ensenyar amb Code.org.
     També podeu preguntar a altres professors sobre la seva experiència en els nostres
     fòrums de professors.
+  subscribe_form_section_title: Subscriu-te per actualitzacions
+  subscribe_form_section_desc_csa: Registreu-vos per rebre correus electrònics mensuals
+    sobre AP® Computer Science A de Code.org i obteniu recordatoris útils, consells
+    i actualitzacions enviades directament a la safata d'entrada.
+  subscribe_form_section_desc_csc: Registreu-vos per rebre correus electrònics mensuals
+    sobre les connexions informàtiques de Code.org i obteniu recordatoris útils, consells
+    i actualitzacions enviades a la vostra safata d'entrada.
+  subscribe_form_section_desc_csd: Registreu-vos per rebre correus electrònics mensuals
+    sobre els descobriments de ciències de la computació de Code.org i obteniu recordatoris
+    útils, consells i actualitzacions enviats directament a la safata d'entrada.
+  subscribe_form_section_desc_csf: Registreu-vos per rebre correus electrònics mensuals
+    sobre els fonaments de ciències de la computació de Code.org i obteniu recordatoris
+    útils, consells i actualitzacions enviats directament a la safata d'entrada.
+  subscribe_form_section_desc_csp: Registreu-vos per rebre correus electrònics mensuals
+    sobre els principis de Ciències de la Computació de Code.org i obteniu recordatoris
+    útils, consells i actualitzacions enviades directament a la safata d'entrada.
+  subscribe_form_section_unsubscribe: Pots donar-te de baixa en qualsevol moment.
   blockchain_hero_heading: Com funciona la Cadena de blocs
   blockchain_hero_desc: Submergeix-te en el món de la cadena de blocs amb "Com funciona
     la Cadena de blocs", la nostra nova sèrie de vídeos i les lliçons que l'acompanyen!
@@ -713,6 +793,9 @@ ca:
     Cada lliçó es combina amb un sol vídeo de la sèrie, aprofundint en els conceptes
     introduïts en els vídeos.
   ai_curriculum_btn_aria_label_04: Explora Com funciona la IA lliçons
+  ai_curriculum_grades_05: 'Nivells de grau: 9-12'
+  ai_curriculum_btn_aria_label_05: Explora el mòdul d'Enginyeria del Programari i
+    Visió per Computador
   ai_carousel_heading: 'Què diuen els professors sobre IA amb Code.org:'
   ai_carousel_quote_01: Aquesta lliçó també va donar als meus estudiants l'oportunitat
     de veure que hi ha un element d'opinió en els sistemes de classificació. Més tard,
@@ -844,6 +927,12 @@ ca:
     els grans canvis en la IA, amb dos nous vídeos sobre Models de Llengua Gran (com
     ChatGPT) i Generative AI. Escolta com funcionen aquestes noves tecnologies directament
     dels experts: Mira Murati, CTO d''OpenAI, i Cristóbal Valenzuela, CEO de RunwayML.'
+  ai_pl_101_llm_slides_title: Sol·licitud de models de llengua gran per a educadors
+  ai_pl_101_llm_slides_desc: Eines per obtenir la millor sortida possible des de LLM
+    com ChatGPT, des de principiant fins avançat. Inclou indicacions d'arrencada per
+    a aquells que acaben de submergir els dits dels peus, així com eines avançades
+    per a aquells que busquen maximitzar el seu potencial.
+  ai_pl_101_resources_3: AI demana per transformar l'aprenentatge dels estudiants
   how_ai_works_hero_heading: Com funciona la IA
   how_ai_works_hero_desc: Submergeix-te en el món de la IA amb “How AI Works”, la
     nostra sèrie de vídeos i lliçons d'acompanyament!
@@ -1188,19 +1277,18 @@ ca:
   teach_page_free_curriculum_desc: Volem que porteu les Ciències Informàtiques a la
     vostra escola sense preocupar-vos pel cost. És per això que ens hem compromès
     a què les nostres ofertes de currículum siguin gratuïtes per sempre!
-  teach_page_free_curriculum_list_heading_01: Currículum atractiu per a cada nivell
   teach_page_free_curriculum_list_desc_01: Currículum gratuït, flexible i divertit
     amb ofertes de més de 67 idiomes.
-  teach_page_free_curriculum_list_heading_02: Currículum adaptable i innovador
   teach_page_free_curriculum_list_desc_02: Code.org ofereix des de currículums d'un
     curs complet fins a activitats d'una sola unitat. A més, actualitzem els nostres
     currículums anualment per donar suport a les millors pràctiques i àrees d'interès,
     i crear noves ofertes que ensenyin temes actuals de demanda.
-  teach_page_free_curriculum_list_heading_03: Currículum estructurat formulat amb
-    estàndards nacionals
   teach_page_free_curriculum_list_desc_03: Cada currículum s'assigna com a mínim a
     un conjunt d'estàndards nacionals, com ara CSTA, Next Generation Science Standards
     i Common Core.
+  teach_page_free_curriculum_list_desc_04: Ofertes en més de 67 idiomes
+  teach_page_free_curriculum_list_desc_05: Atrapat a almenys un conjunt d'estàndards
+    nacionals (inclosos CSTA, NGSS i Common Core)
   teach_page_free_curriculum_heading_02: Explora la nostra oferta de currículum per
     a diferents nivells.
   teach_page_resources_heading: Recursos que us donen suport en cada pas del camí
@@ -1263,8 +1351,8 @@ ca:
     Animation
   csp_page_curriculum_glance_devices: Laptop, Chromebook
   csp_page_curriculum_glance_tools: App Lab
-  csp_page_curriculum_glance_professional_learning: Facilitator-led Workshops, Self-paced
-    Modules
+  csp_page_curriculum_glance_professional_learning: Tallers dirigits per facilitadors,
+    mòduls auto-ritme
   csp_page_curriculum_glance_professional_languages: Català
   csp_page_curriculum_glance_professional_accessibility_features: Text-to-speech,
     Closed captioning, Immersive reader
@@ -1392,8 +1480,8 @@ ca:
   csd_page_curriculum_glance_devices: Laptop, Chromebook
   csd_page_curriculum_glance_tools: Laboratori d'aplicacions, Laboratori de jocs,
     AI Lab, Laboratori web
-  csd_page_curriculum_glance_professional_learning: Facilitator-led Workshops, Self-paced
-    Modules
+  csd_page_curriculum_glance_professional_learning: Tallers dirigits per facilitadors,
+    mòduls auto-ritme
   csd_page_curriculum_glance_professional_languages: Català
   csd_page_curriculum_glance_professional_accessibility_features: Text-to-speech,
     Closed captioning, Immersive reader
@@ -1465,10 +1553,10 @@ ca:
     la mateixa mida). Les activitats alternatives estan disponibles si no teniu accés
     a aquests subministraments.
   csd_page_faq_answer_04_06: Creació d'Apps amb Dispositius (Opció A i Opció B)
-  csd_page_faq_answer_04_07: 'Option A: Classroom set of Circuit Playgrounds. Check
-    out [code.org/maker/circuitplayground](%{url}) for more details.'
-  csd_page_faq_answer_04_08: 'Option B: Classroom set of micro:bit devices. Check
-    out [code.org/maker/microbit](%{url}) for more details.'
+  csd_page_faq_answer_04_07: 'Opció A: Aula de joc de Parcs Infantils. Fes una ullada
+    a [code.org/maker/circuitplayground] () per a més detalls.%{url}'
+  csd_page_faq_answer_04_08: 'Opció B: Conjunt d''aula de dispositius micro:bits.
+    Fes una ullada a [code.org/maker/microbit] () per a més detalls.%{url}'
   csd_page_faq_answer_04_09: Subministraments de fabricant, com ara caixes de teixit
     buides o rotllos de cartró o paper ratllat
   csd_page_faq_answer_04_10: "* Nota: La unitat Creació d'aplicacions amb dispositius
@@ -1545,8 +1633,8 @@ ca:
     Disseny, Disseny d'Apps
   csf_page_curriculum_glance_devices: portàtil, Chromebook, tauleta
   csf_page_curriculum_glance_tools: Sprite Lab, Play Lab
-  csf_page_curriculum_glance_professional_learning: Facilitator-led Workshops, Self-paced
-    Modules
+  csf_page_curriculum_glance_professional_learning: Tallers dirigits per facilitadors,
+    mòduls auto-ritme
   csf_page_curriculum_glance_languages: àrab, indonesi, català, xinès simplificat,
     xinès tradicional, txec, francès, alemany, hindi, italià, japonès, coreà, kannada,
     malai, marathi, mongol, polonès, portuguès-br, romanès, rus, eslovac, tagalog,
@@ -1614,9 +1702,10 @@ ca:
     de construcció d'habilitats poden ser completades pels estudiants al seu propi
     ritme.
   csf_page_faq_question_06: Quins materials necessito per CS Fonaments?
-  csf_page_faq_answer_06: Many lessons have handouts that guide students through activities.
-    These resources can be printed or assigned digitally. Some lessons call for typical
-    classroom supplies and manipulatives. [Visit the CSF Syllabus to learn more](%{syllabus_url}).
+  csf_page_faq_answer_06: Moltes lliçons tenen manuals que guien els estudiants a
+    través de les activitats. Aquests recursos es poden imprimir o assignar digitalment.
+    Algunes lliçons demanen subministraments i manipuladors típics de l'aula. [Visiteu
+    el pla d'estudis CSF per obtenir més informació] ().%{syllabus_url}
   csa_page_top_desc: Introduce students to software engineering and object-oriented
     design while they learn the Java programming language in this free curriculum
     for [AP® Computer Science A (AP® CSA)](%{csa_url}).
@@ -1687,6 +1776,38 @@ ca:
   csa_page_faq_answer_08_02: For more information about the values that guided our
     work, please see our [curriculum values](%{curriculum_values_url}) and our [professional
     learning values](%{pl_values_url}).
+  donate_page_top_heading: Ajudeu a finançar la nostra missió
+  donate_page_top_desc: Cada donació alimenta la missió de Code.org d'ampliar l'accés
+    a l'educació en ciències de la computació. T'oferim diverses maneres de fer donacions
+    i marcar la diferència.
+  donate_page_fundraise_title: Fundraise per Code.org
+  donate_page_fundraise_desc: Ajuda a recaptar diners per Code.org! Tots els estudiants
+    de totes les escoles han de tenir l'oportunitat d'aprendre ciències de la computació.
+  donate_page_other_ways_title: Altres formes de donar
+  donate_page_other_ways_desc: Explora diversos mètodes per contribuir, i troba l'opció
+    que més et convingui. Cada gest, gran o petit, impulsa la nostra missió cap endavant.
+  donate_page_501c3: Code.org està registrat com una organització pública 501 (c)
+    (3) sense ànim de lucre. Les contribucions a Code.org són fiscalment deduïbles
+    en la mesura permesa per la llei. El número d'identificació fiscal de Code.org
+    és 46-0858543.
+  donate_page_donation_policy_title: Comprendre la nostra política de donacions
+  donate_page_donation_policy_desc: Coneix com gestionem i destinem les teves aportacions.
+  donate_tabs_tab_label_daf_direct: DAF Directe
+  donate_tabs_tab_label_amazon: Amazon
+  donate_tabs_tab_label_bitpay: BitPay
+  donate_tabs_tab_label_employee_match: Partit de l'empleat
+  donate_tabs_daf_direct_title: Donar a través de DAF Direct
+  donate_tabs_daf_direct_desc: Fes una donació a través del teu fons aconsellat per
+    donants amb Fidelity Charitable, Schwab Charitable o BNY Mellon i fes la teva
+    recomanació de subvenció a Code.org a través del formulari en línia DAF Direct.
+  donate_tabs_amazon_title: Fes una donació a través d'Amazon
+  donate_tabs_amazon_desc: Fes una donació directament amb el teu compte d'Amazon.
+    Amb només uns pocs clics, contribuir perfectament a la missió de Code.org i potenciar
+    el futur de l'educació en ciències de la computació.
+  donate_tabs_bitpay_title: Fes una donació amb Crypto a través de BitPay
+  donate_tabs_bitpay_desc: Abraçar el futur de donar amb moneda digital. A través
+    de BitPay, la seva moneda digital pot donar suport directament als esforços de
+    Code.org en l'expansió de l'educació en ciències de la computació.
   hoc_live: Hora de Codi en viu
   hoc_live_sign_up_title: Registra't per Hora de Codi en viu
   hoc_live_learn_title: Aprèn amb Hour of Code Live
@@ -1766,8 +1887,8 @@ ca:
   ai_activity_zooniverse: Zooniverse - Instantània Zebra Muntanya
   ai_activity_zooniverse_desc: Ajudeu a protegir la Zebra del Cap Muntanya en perill
     d'extinció identificant els diferents animals de les imatges.
-  codeorg_homepage_hoc2018_curriculum: Go further with <a href="%{studio_url}/courses"
-    class="hoc2018-curriculum-link">Code.org courses</a>
+  codeorg_homepage_hoc2018_curriculum: Aneu més enllà amb els cursos <a href="%{studio_url}/courses"
+    class="hoc2018-curriculum-link">de Code.org</a>
   codeorg_homepage_hoc2018_dance_heading: Crea el teu propi <span class="highlight-word">Dance&nbsp;Party</span>
   codeorg_homepage_hoc2018_header_line1: L'Hora del Codi s'acosta...
   codeorg_homepage_hoc2018_header_line2_desktop: Què crearàs <span class="hoc2018-highlight-word">?</span>
@@ -1983,9 +2104,9 @@ ca:
   whats_next_how_to_promote: "<a href='/promote/resources'>Com promoure l'Hora del
     Codi</a>"
   whats_next_how_to_promote_link: "<a href='/promote'>Com promoure l'Hora del Codi</a>"
-  whats_next_try: "<a href='%{learn_url}'>Try tutorials</a>"
+  whats_next_try: "<a href='%{learn_url}'>Proveu els tutorials</a>"
   whats_next_try_button: Proveu els tutorials
-  n_have_learned_an_hoc: "<h1>Try an</h1><h2>Hour of Code</h2><h3># served</h3>"
+  n_have_learned_an_hoc: "<h1>Proveu una</h1><h2>hora de codi</h2><h3># servit</h3>"
   anybody_can_learn: Qualsevol pot aprendre.
   get_started: Començar
   beyond_an_hour: Més enllà d'una hora de codi
@@ -2005,9 +2126,9 @@ ca:
     fent-ho!
   front_join_us_volunteer_header: Voluntaris per a l'Hora del Codi
   front_join_us_tutorials: Tria el teu tutorial de l'Hora del Codi!
-  front_join_us_tutorials_link: Filter and browse <i>over 200 tutorials and lesson
-    plans</i>! Find activities for different subject areas, multiple hardware needs,
-    and students at any experience level.
+  front_join_us_tutorials_link: Filtra i navega per <i>més de 200 tutorials i plans
+    de lliçons!</i>Trobar activitats per a diferents àrees temàtiques, múltiples necessitats
+    de maquinari i estudiants a qualsevol nivell d'experiència.
   front_join_us_robotics: Guanya robots o circuits!
   front_join_us_robotics_link: Vols un conjunt de robots o kits de computació física
     per utilitzar amb els teus alumnes? Els nostres generosos socis donen jocs a 75
@@ -2042,7 +2163,7 @@ ca:
   front_join_us_sign_up: Registra't
   front_join_us_host: Acolleix-ho
   front_join_us_support: Donar-li suport
-  front_join_us_more_info: For more information, please visit <a href='https://code.org'>code.org</a>.
+  front_join_us_more_info: Per obtenir més informació, visiteu <a href='https://code.org'>code.org</a>.
   front_join_us_code_info: Per a més informació, visiteu code.org
   front_join_us_n_students_served: "# servit."
   front_join_us_challenge: Guanya un xat de vídeo per a la teva aula amb una celebritat!
@@ -2114,6 +2235,13 @@ ca:
     de cursos de Code.org, oportunitats locals o altres notícies d'informàtica?
   signup_email_preference_privacy: "(Consulteu la nostra política de privacitat)"
   signup_email_preference_yes: Sí
+  signup_email_preference_yes_elementary: Sí - Envia'm actualitzacions sobre Recursos
+    de primària
+  signup_email_preference_yes_middle: Sí - Envia'm actualitzacions sobre Recursos
+    de l'Escola Mitjana
+  signup_email_preference_yes_high: Sí - Envia'm actualitzacions sobre Recursos de
+    Secundària
+  signup_email_preference_yes_general: Sí - Envia'm actualitzacions generals
   signup_email_preference_no: 'No'
   signup_email_preference_error: Es requereix preferència de correu electrònic
   signup_multiple_event_warning: Posarem el nom de l'escola i la ciutat al mapa quan
@@ -2635,10 +2763,10 @@ ca:
     enllà d'una hora</a>
   learn_banner_beyond_markdown: Vols seguir aprenent? [Anar més enllà d'una hora]
     (%{url})
-  learn_banner_teachers: 'Teachers: <a id=''teacher_banner_host''>Host an hour</a>
-    or <a id=''teacher_banner_howto''>read the How-To Guide</a>'
-  learn_banner_teachers_markdown: 'Teachers: [Host an hour](%{host_url}) or [read
-    the How-To Guide](%{howto_url})'
+  learn_banner_teachers: 'Professors: <a id=''teacher_banner_host''>Acolliu una hora</a>
+    o <a id=''teacher_banner_howto''>llegiu la Guia How-To</a>'
+  learn_banner_teachers_markdown: 'Professors: [Acull una hora] (%{host_url}) o [llegiu
+    la Guia How-To] ()%{howto_url}'
   tutorial_dance2019_name: Festa de ball
   tutorial_danceparty_name: Festa de ball
   tutorial_chibitronics_name: 'Chibitronics: Història il·luminada'
@@ -5632,11 +5760,11 @@ ca:
     una aventura a través d'aquest món Minecraft.
   tutorial_minecraft-2016_longdescription: Construir un joc de Minecraft. Crea les
     teves pròpies versions de pollastre, ovelles, enfiladisses, zombies i molt més.
-  tutorial_thinkersmith-es_longdescription: Mediante el uso de un "Vocabulario Robot"
+  tutorial_thinkersmith-es_longdescription: Mediante el uso de un “Vocabulario Robot”
     predefinido, los estudiantes descubrir&aacute;n como guiarse de modo tal de llevar
-    a cabo tareas espec&iacute;ficas sin ser estas discutidas previamente. Este segmento
-    ense&ntilde;a a los estudiantes la conexi&oacute;n entre s&iacute;mbolos y acciones
-    as&iacute; como la valiosa habilidad de depuraci&oacute;n.
+    a cabo tareas espec ficas sin ser estas discutidas previamente.&iacute;Este segmento
+    ense&ntilde;a los estudiantes la conexi&oacute;n entre s&iacute;mbolos y acciones
+    como&iacute; la valiosa habilidad de depuraci n.&oacute;
   tutorial_pixie_longdescription: Tutorial de l'Hora del Codi amb Pixie
   tutorial_play_longdescription: Crea una història o fes un joc amb Play Lab! Fer
     animals, pirates, zombies, ninjes, i molts més personatges es mouen, fer sons,
@@ -12898,12 +13026,12 @@ ca:
   tutorial_googlename _longdescription: Tria un nom i porta les lletres de la paraula
     a la vida utilitzant el codi. Trieu un sobrenom, un nom de mascota, un animal,
     un esport, un lloc o un hobby.
-  tutorial_carnegiezillah_longdescription: Zillah City is thriving, and music is in
-    the air. Rumor has it, the famed Gargantua bot is online and sending the last
-    Toxibots to trash the city block by block…. Grab your cobot hoverboard and get
-    ready to groove, move, and finish off what you started! Players program their
-    cobot hoverbots to change lanes, avoid obstacles, and take out many Toxibots in
-    this rhythm-styled game.
+  tutorial_carnegiezillah_longdescription: Zillah City està prosperant i la música
+    està en l'aire. El rumor ho té, el famós bot de Gargantua està en línia i enviant
+    els últims Toxibots a escombrar la ciutat bloc per bloc.…Agafa el teu aerotabla
+    cobot i prepara't per solcar, moure, i acabar amb el que vas començar! Els jugadors
+    programen els seus hoverbots cobot per canviar de carril, evitar obstacles i treure
+    molts toxibots en aquest joc d'estil ritme.
   tutorial_nasachspacejam_longdescription: Crear un sistema solar que realment s'enroca!
     Apreneu sobre música, astronomia i codificació en aquesta activitat autoguiada
     (no cal experiència de codificació). Programa planetes per fer música, creant
@@ -13623,6 +13751,464 @@ ca:
     Principles de Code.org utilitzant Quorum, un llenguatge basat en l'evidència dissenyat
     originalment per proporcionar accessibilitat a estudiants cecs o amb discapacitat
     visual.
+  engineering_hero_heading: Uneix-te al nostre equip d'enginyeria!
+  engineering_hero_desc: A mesura que continuem ampliant el nostre equip d'enginyeria,
+    volíem compartir més sobre la nostra organització d'enginyeria a Code.org i alguns
+    dels aspectes únics de treballar aquí. Si esteu interessats en sol·licitar un
+    dels nostres rols, ens encantaria saber de vosaltres!
+  engineering_team_title: Coneix l'equip d'enginyeria a Code.org
+  engineering_team_card_text_1: Això és (la majoria) de nosaltres en la nostra trobada
+    presencial durant l'estiu de 2023! Aquesta multitud es divideix en quatre subequips
+    dins del nostre equip d'enginyeria que treballen junts per construir i servir
+    la plataforma per a tots els nostres estudiants i professors.
+  engineering_team_card_text_2: Si esteu interessats en sol·licitar un dels nostres
+    rols, ens encantaria saber de vosaltres! Podeu trobar una llista de posicions
+    obertes a la nostra pàgina de Carreres Professionals.
+  engineering_our_team_title: El nostre equip d'enginyeria
+  engineering_our_team_desc: 'L''equip d''enginyeria de Code.org es divideix en quatre
+    sub-equips que construeixen i donen suport a diferents àrees de la nostra plataforma:'
+  engineering_our_team_sub_title_1: Equip d'Aprenentatge d'Estudiants
+  engineering_our_team_text_1: El nostre Equip d'Aprenentatge d'Estudiants posseeix
+    totes les nostres activitats (els anomenem laboratoris) que els nostres estudiants
+    utilitzen cada dia. Aquest equip treballa principalment en tecnologia frontal
+    (utilitzem React i molts JS personalitzats) i tenim una gran relació de treball
+    amb molts socis i projectes de codi obert. Per exemple, utilitzem [Google's Blockly]
+    (%{youtube_url}) per a tota la nostra programació basada en blocs. Donem suport
+    als estudiants en el seu viatge d'aprenentatge tot el camí des de Kindergarten
+    fins a 12è grau.
+  engineering_our_team_sub_title_2: Equip d'Experiència Docent
+  engineering_our_team_text_2: El nostre Team Team Experience construeix les eines
+    que atrauen nous professors a Code.org (anomenem aquests productes d'adquisició)
+    i desenvolupa la plataforma que capacita als nostres professors existents per
+    ensenyar el nostre currículum (les nostres eines per a professors). Igual que
+    amb les nostres eines per a estudiants, confiem en React per construir el nostre
+    front-end i els nostres components del costat del servidor es serveixen utilitzant
+    Ruby on Rails.
+  engineering_our_team_sub_title_3: Equip de plataforma
+  engineering_our_team_text_3: El nostre equip de plataformes posseeix components
+    bàsics que serveixen a les necessitats dels nostres equips d'estudiants i professors
+    (per exemple, autenticació i perfil d'usuari) i també té la missió d'arribar a
+    estudiants als quals encara no podem arribar. Això inclou la construcció d'integracions
+    que ens connecten amb escoles que utilitzen diferents sistemes de gestió de l'aprenentatge
+    (LMS) i empaquetar el nostre currículum perquè pugui ser utilitzat en escoles
+    remotes que no tenen accés a internet fiable.
+  engineering_our_team_sub_title_4: Equip d'Infraestructura
+  engineering_our_team_text_4: El nostre Equip d'Infraestructures proporciona la columna
+    vertebral de la plataforma que dóna suport als nostres estudiants i professors.
+    Això inclou la nostra infraestructura d'allotjament i serveis relacionats (utilitzem
+    AWS), gestió de dades, programes de seguretat, desenvolupadors i serveis de desplegament
+    i molt més. Aquest equip també posseeix els nostres sistemes d'escalat i aprovisionament,
+    que són crítics durant l'Hour of Code, on convidem a tots els estudiants del món
+    a completar una hora de codificació amb nosaltres.
+  engineering_faq_question_1: Què fa Code.org?
+  engineering_faq_answer_1_a: Code.org és una innovació educativa sense ànim de lucre
+    dedicada a la visió que tots els estudiants de cada escola tenen l'oportunitat
+    d'aprendre ciències de la computació com a part de la seva educació bàsica K-12.
+  engineering_faq_answer_1_b: Ampliem l'accés a la informàtica a les escoles, amb
+    un enfocament en l'augment de la participació de dones joves i estudiants d'altres
+    grups poc representats. El principal proveïdor de currículum de ciències de la
+    computació K-12 als districtes escolars més grans dels Estats Units, Code.org
+    també organitza la campanya anual de l'Hora del Codi, que ha involucrat més del
+    15% de tots els estudiants del món.
+  engineering_faq_answer_1_c: Code.org és recolzat per generosos donants, inclosos
+    Microsoft, Amazon, Google i molts altres.
+  engineering_faq_question_2: Què és l'experiència i l'utillatge per a desenvolupadors
+    de Code.org?
+  engineering_faq_answer_2: La nostra experiència de desenvolupador pot ser diferent
+    a la que heu vist en els vostres rols passats. Treballant estretament amb el nostre
+    equip de productes, enviem a la producció cada dia laborable i tenim una varietat
+    de cadències, de vegades escriviu un codi que viu aquell dia; altres vegades esteu
+    en projectes a més llarg termini i, mentre seguim sprints setmanals 2, ho fem
+    d'una manera lleugera. Indexem cap a aconseguir les coses correctes de la manera
+    correcta vs. prendre una visió purista de qualsevol metodologia en particular.
+    [Tot el nostre codi] (%{code_url}) és de codi obert i fem servir JIRA i GitHub
+    pull requests per fer un seguiment de tots els nostres elements de treball. També
+    ens preocupem molt per la qualitat i les proves i tenim la sort de tenir un suport
+    increïble de [SauceLabs](%{saucelabs_url}), que ens ajuden a executar la nostra
+    suite de proves d'interfície d'usuari en diversos dispositius d'estudiants (per
+    exemple, iPads) a la seva granja de dispositius en el núvol.
+  engineering_faq_question_3: Què és l'enginyer de rotació de trucades a Code.org?
+  engineering_faq_answer_3: 'El nostre equip d''enginyeria més de 30 anys comparteix
+    responsabilitats a la trucada. Cada enginyer cobreix un torn de 24 hores i utilitza
+    els nostres camins d''escalada i llibres de joc per respondre a les interrupcions
+    del lloc o altres problemes del lloc en directe. Estem orgullosos de la fiabilitat
+    del nostre lloc: de mitjana, cada enginyer només es desperta una vegada a l''any
+    per problemes que solen ser ràpids de resoldre. En canvi, el “Desenvolupador del
+    Dia” sol passar una part de la seva jornada laboral gestionant el desplegament
+    de producció i triant problemes menys urgents.'
+  engineering_faq_question_4: Ets una organització remota o WFH?
+  engineering_faq_answer_4_a: Sí! El 2019, poc abans de la pandèmia, Code.org es va
+    convertir en una organització de primera distància. Avui en dia, tenim enginyers
+    a totes les zones horàries dels Estats Units i s'adapten a les hores de treball
+    en conseqüència. La majoria de les nostres reunions succeeixen entre les hores
+    de 10am i 3pm PT.
+  engineering_faq_answer_4_b: També reconeixem el valor del temps presencial, i cada
+    trimestre ens reunim en persona, normalment a Seattle. Dos d'aquests esdeveniments
+    (els anomenem Kick-off week i “Codechella”) reuneixen a tots els de l'organització
+    al gener i al juny, i els equips d'enginyeria i producte es reuneixen per separat
+    a l'abril i l'octubre.
+  engineering_faq_answer_4_c: Creiem fermament en passar temps amb els nostres estudiants
+    i professors, de manera que molts d'aquests esdeveniments presencials inclouen
+    viatges a escoles i aules per recollir comentaris o jugar a provar els nostres
+    productes
+  engineering_faq_question_5: Què fa que l'equip d'enginyeria de Code.org sigui únic?
+  engineering_faq_answer_5_a: 'Més enllà de resoldre problemes tècnics difícils, tenim
+    algunes coses que fan que el nostre org d''enginyeria sigui diferent d''altres
+    en què podeu haver treballat:'
+  engineering_faq_answer_5_b_1: Tots compartim la nostra passió per la nostra missió.
+  engineering_faq_answer_5_b_2: Cadascun de nosaltres és aquí per donar suport a la
+    missió d'ampliar l'accés a la informàtica per a tots els estudiants de tot el
+    món. Tots tenim la nostra història i perspectiva úniques sobre el que ens impulsa
+    cap a aquesta missió.
+  engineering_faq_answer_5_c_1: Ens preocupem profundament els uns dels altres.
+  engineering_faq_answer_5_c_2: Quan els enginyers lluiten amb un problema, fem un
+    pas i ajudem. Un dels nostres principis és que som durs en problemes, però amables
+    entre nosaltres. Promovem enginyers regularment, però no prescrivim solucions
+    sobre-enginyades només per donar suport al camí de promoció d'algú. En canvi,
+    invertim en els nostres enginyers amb un pressupost generós de desenvolupament
+    professional i accés a altres oportunitats d'aprenentatge.
+  engineering_faq_answer_5_d_1: Treballem dur, però establim límits clars.
+  engineering_faq_answer_5_d_2: Mentre donem suport als estudiants de tot el món,
+    ens responsabilitzem dels límits clars entre el treball i la vida a la llar. Gaudim
+    dels dimecres sense reunions, prenent la nostra presa de força (5 setmanes totals,
+    que inclou un tancament d'oficina de 2 setmanes org-wide al final de l'any aka
+    Winter Break), mig dia laborable els divendres durant l'estiu aka Summer Fridays,
+    i altres beneficis generosos.
+  careers_hero_title: Carreres professionals
+  careers_hero_description: Code.org és una organització sense ànim de lucre dedicada
+    a ampliar l'accés a la informàtica a les escoles. Estem especialment enfocats
+    a augmentar la participació entre dones joves i estudiants poc representats.
+  careers_hero_description_under: Ajuda'ns a canviar el món, un estudiant a la vegada!
+  careers_vision_title: La nostra visió
+  careers_vision_decsription: La nostra visió és que tots els estudiants de totes
+    les escoles han de tenir l'oportunitat d'aprendre ciències de la computació com
+    a part de la seva educació bàsica K-12.
+  careers_vision_description_under: Vine a formar part del nostre equip per ajudar
+    a fer realitat aquesta visió!
+  careers_values_title: Els nostres valors bàsics
+  careers_values_first_column_text_1: Creiem que les ciències informàtiques són fonamentals
+    per a tots els alumnes
+  careers_values_first_column_text_2: Estem compromesos en l'equitat, accés i oportunitat
+  careers_values_first_column_text_3: Creiem en el poder de l'educació col·laborativa
+    comunitària
+  careers_values_second_column_text_1: Som àgils i responem als comentaris
+  careers_values_second_column_text_2: " Actuem amb integritat i transparència"
+  careers_values_second_column_text_3: Creiem que l'impacte ampli requereix pensar
+    en gran i actuar de forma integral
+  careers_approach_section_title: El nostre enfocament unificador
+  careers_approach_section_description: El paper global de Code.org en el moviment
+    de les ciències de la computació K-12 només és possible perquè utilitzem un enfocament
+    unificador entre grups d'interès diversos i sovint dividits. En un moment d'augment
+    de la polarització, la idea d'augmentar l'oportunitat per als estudiants uneix
+    persones de tot l'espectre polític. Els membres de l'equip, estudiants, professors
+    i simpatitzants de Code.org tenen punts de vista diversos i divergents, i tots
+    són benvinguts en la nostra missió.
+  careers_aproach_section_description_link: Llegiu més sobre l'enfocament de Code.org
+    a la unitat.
+  careers_approach_section_button: Explora rols oberts
+  careers_principle_section_title: Els nostres principis culturals
+  careers_principle_title_1: Els nostres alumnes i professors són la nostra Estrella
+    del Nord
+  careers_principle_description_1: Utilitzem els nostres regals, temps i energia per
+    apropar la informàtica als que més ho necessiten. Això és el que ens uneix. Aquest
+    és el nostre principi més important.
+  careers_principle_title_2: Som difícils de problemes i amables entre si
+  careers_principle_description_2: Ens mantenim centrats en el repte d'apropar la
+    informàtica a estudiants i professors a nivell mundial. Reconeixem que cada un
+    de nosaltres aporta la millor de les nostres intencions per donar suport a la
+    nostra missió i donar gràcia quan cometem errors.
+  careers_principle_title_3: Buscar solucions, no consens
+  careers_principle_description_3: Som propietaris de decisions, ja sigui fent petits
+    passos o grans salts cap als resultats que busquem. Els propietaris demanen i
+    escolten, però no es paralitzen pels comentaris. Acceptem i donem suport a les
+    decisions dels propietaris, encara que no estiguem d'acord.
+  careers_principle_title_4: Adoptar la mentalitat d'un fundador
+  careers_principle_description_4: Ens obsessionem amb els resultats i centrem les
+    nostres accions en impulsar-los. Ens submergim en els detalls i treballem dur.
+    Som honestos, ens inclinem en l'agilitat i avaluem contínuament si estem en pista;
+    no tenim por de pivotar. Canviar el món ho exigeix.
+  careers_principle_title_5: Innovació campiona
+  careers_principle_description_5: Pensem en gran, arrisquem i no tenim por de fallar.
+    Si veiem una millor manera d'aconseguir els nostres objectius, ho fem i animem
+    els altres a fer-ho també. Les solucions incrementals no ajudaran a canviar el
+    món.
+  careers_principle_title_6: Decisions d'ancoratge en fets
+  careers_principle_description_6: Utilitzem les dades per entendre el nostre negoci,
+    establir els resultats desitjats i orientar la presa de decisions. Ho equilibrem
+    reconeixent que no sempre tindrem les dades que necessitem per actuar.
+  careers_principle_title_7: Una mentalitat de creixement ens alimenta
+  careers_principle_description_7: Abordem cada repte amb curiositat. Donem comentaris
+    amablement i càndidament; rebem comentaris obertament. Aprenem dels nostres errors
+    i busquem maneres d'augmentar l'abast i l'impacte del nostre treball.
+  careers_balance_section_title: El nostre equilibri entre treball i vida
+  careers_balance_section_description: Ens preocupem pels nostres empleats i ens dediquem
+    a donar suport a tothom tant a la feina com fora de la feina. Sabem que tothom
+    té necessitats diferents, és per això que oferim un paquet de beneficis holístics
+    que garantirà que vostè (i la seva família) siguin atesos.
+  careers_balance_first_column_text_1: Beneficis per a la salut per a tu i la teva
+    família
+  careers_balance_first_column_text_2: Generós temps pagat i deixar plans
+  careers_balance_second_column_text_1: Entorn de treball flexible i solidari
+  careers_balance_second_column_text_2: Creixement i oportunitats d'aprenentatge professional
+  careers_openroles_section_title: Obrir rols
+  careers_openroles_section_description: Code.org té la seva seu a Seattle, però molts
+    dels membres del nostre equip són remots. Els candidats a distància són benvinguts
+    i se'ls anima a aplicar.
+  careers_more_info_text: Per obtenir més informació sobre Code.org, consulteu les
+    nostres [Preguntes freqüents] (%{support_url}) o obteniu informació sobre [altres
+    maneres d'implicar-vos amb la nostra missió] (%{help_url}).
+  careers_approach_section_title2: La nostra aproximació a la diversitat
+  careers_approach_section_description_1: Abraçem diverses perspectives, idees i antecedents
+    a Code.org. Ens comprometem a oferir una igualtat d'oportunitats a tots els empleats
+    i sol·licitants. No discriminem per raó de raça, religió, color, origen nacional,
+    gènere, orientació sexual, edat, estat civil, estat de veterà o estat de discapacitat
+    (mental i física).
+  careers_approach_section_description_2: Ens assegurarem que les persones amb discapacitat
+    tinguin un allotjament raonable per participar en el procés de sol·licitud de
+    feina o entrevista, per exercir funcions essencials del treball i per rebre altres
+    beneficis i privilegis d'ocupació. Si teniu necessitats individuals relacionades
+    amb una discapacitat, poseu-vos en contacte amb accommodations@code.org.
+  csa_ai_page_hero_title: Enginyeria del Programari i Visió per Computador
+  csa_ai_page_hero_description: 'Aquest mòdul CSA post-AP de dos capítols ofereix
+    als estudiants de secundària experiència pràctica amb eines professionals de desenvolupament
+    de programari, incloent GitHub i GitHub Copilot, i els imparteix amb les habilitats
+    del món real per desenvolupar un programa de visió per computador. '
+  csa_ai_page_video_section_title: Pas més enllà del món dels entorns de programació
+    de Code.org
+  csa_ai_page_video_section_li_1: Coneix la IA i les seves aplicacions
+  csa_ai_page_video_section_li_2: Experiència pràctica amb eines professionals de
+    desenvolupament de programari
+  csa_ai_page_video_section_li_3: Aprendre pràctiques estàndard de la indústria
+  csa_ai_page_video_section_li_4: Cultivar el pensament crític
+  csa_ai_page_programming_tools: 'Eines de programació: Github, Github Copilot, VSCode,
+    TensorFlow '
+  csa_ai_page_professional_learning: Cap
+  csa_ai_page_curriculum_topics: 'Temes: Programació, Dades, Art i Disseny, Jocs i
+    Animació'
+  csa_ai_page_curriculum_accessibility_features: Vegeu la secció de preguntes freqüents
+    per a més detalls
+  csa_ai_page_curriculum_languages_support: Català
+  csa_ai_page_article_title_1: Construir amb Copilot
+  csa_ai_page_article_description_1: Els estudiants aprenen a utilitzar GitHub Copilot
+    com a programador parell per explicar codi existent, trobar i corregir errors
+    i generar solucions a nous problemes.
+  csa_ai_page_article_link_1: Obteniu més informació sobre Copilot
+  csa_ai_page_article_title_2: Construeix el teu propi model d'IA
+  csa_ai_page_article_description_2: Els estudiants entrenen els seus propis models
+    d'IA utilitzant Teachable Machine per reconèixer imatges i gestos que formen una
+    càmera web i considerar com la visió per computador afecta la manera en què els
+    usuaris interactuen amb les aplicacions.
+  csa_ai_page_article_link_2: Explora el pla de lliçons
+  csa_ai_page_article_title_3: Explora la visió per ordinador
+  csa_ai_page_article_description_3: Els estudiants implementen els models d'IA que
+    van crear amb Teachable Machine en una app Java, utilitzant GitHub Copilot per
+    ajudar-los a modificar les versions existents de les apps per treballar amb les
+    diferents entrades.
+  csa_ai_page_article_link_3: Vegeu un exemple
+  csa_ai_page_learn_more_section_title: Més informació sobre Intel·ligència Artificial
+  csa_ai_page_learn_more_title: Explora AI 101 per a professors
+  csa_ai_page_learn_more_description: Descobreix el món innovador de la Intel·ligència
+    Artificial (IA) i el seu potencial transformador en educació amb la nostra completa
+    sèrie d'aprenentatge en línia per a professors.
+  csa_ai_page_learn_more_link: Mireu la sèrie AI 101 for Teachers
+  csa_ai_page_faq_question_01: Quins són els requisits previs per a aquest mòdul?
+  csa_ai_page_faq_answer_01_01: 'Abans de submergir-se en aquest mòdul, els estudiants
+    han de tenir un coneixement d''entrada de Java. Específicament, haurien de comprendre:'
+  csa_ai_page_faq_answer_01_list_01: "**Classes i objectes: ** Els alumnes han d'estar
+    familiaritzats amb la definició i l'ús de les classes, així com la creació i manipulació
+    d'objectes."
+  csa_ai_page_faq_answer_01_list_02: "**Mètodes d'escriptura i crida: ** Els estudiants
+    han de ser capaços de definir mètodes dins d'una classe, entendre paràmetres de
+    mètode i tipus de retorn, i cridar mètodes d'objectes o altres mètodes."
+  csa_ai_page_faq_answer_01_list_03: "**1D Arrays i arrayLists: ** Han de ser competents
+    en la declaració, inicialització i manipulació de matrius unidimensionals i arrayLists,
+    incloent iterar a través d'ells."
+  csa_ai_page_faq_answer_01_list_04: "**Selecció i iteració: ** Una base sòlida en
+    sentències i bucles condicionals és crucial."
+  csa_ai_page_faq_question_01_02: L'ideal seria que els estudiants que hagin cursat
+    AP Informàtica A o un curs d'aprofundiment i rigor similars estarien ben preparats
+    per a aquest mòdul.
+  csa_ai_page_faq_question_02: Com puc instal·lar el programari necessari per a aquest
+    mòdul?
+  csa_ai_page_faq_answer_02_01: Aquest mòdul és únic perquè implica l'ús de programari
+    de tercers en lloc de laboratoris i eines de Code.org. [Llegiu més sobre la instal·lació
+    del programari aquí] (%{accessibility_url}).
+  csa_ai_page_faq_question_03: Com puc donar suport a les necessitats d'accessibilitat
+    durant la docència d'aquest mòdul?
+  csa_ai_page_faq_answer_03_01: Adequar les necessitats d'accessibilitat és crucial
+    per a un entorn d'aprenentatge inclusiu. [Llegeix més sobre les característiques
+    d'accessibilitat en el programari utilitzat en aquest mòdul aquí] (%{install_url}).
+  csa_ai_page_faq_question_04: Com puc utilitzar VS Code en Chromebooks?
+  csa_ai_page_faq_answer_04: L'ús de codi VS en un Chromebook s'ha tornat més senzill,
+    sobretot amb la capacitat d'executar aplicacions Linux en models Chromebook més
+    nous. [Llegiu més sobre la configuració del codi VS als Chromebooks aquí] ()%{chromebook_url}.
+  csa_ai_page_faq_question_05: Com puc aconseguir un desenvolupament professional
+    per a aquest mòdul?
+  csa_ai_page_faq_answer_05: Actualment no hi ha un desenvolupament professional específic
+    per a aquest curs. Si voleu entendre com abordar la Intel·ligència Artificial
+    a la vostra aula, podeu [explorar AI 101 per a professors] (%{ai_101_url}).
+  csa_ai_page_faq_question_06: Quina és la temporització recomanada per impartir aquest
+    mòdul?
+  csa_ai_page_faq_answer_06_01: El mòdul d'Enginyeria de Programari i Visió per Computador
+    està estructurat amb cura per proporcionar un aprenentatge integral en un període
+    de temps concís. Tot el mòdul està dissenyat per abastar**2 setmanes d'instrucció**.
+    La majoria de les lliçons s'adapten a **45 minuts**, mentre que les lliçons on
+    els estudiants aprofundeixen en el desenvolupament pràctic de projectes Java estan
+    dissenyades durant **90 minuts**. Aquest temps prolongat garanteix que els estudiants
+    tinguin una àmplia oportunitat d'entendre, implementar i solucionar problemes
+    a mesura que treballen.
+  csa_ai_page_faq_answer_06_02: També hi ha flexibilitat intencional integrada en
+    l'estructura del mòdul. Depenent de la dinàmica de l'aula, el compromís dels estudiants
+    i la profunditat a la qual vulgueu explorar cada tema, podeu ajustar la durada.
+    Per exemple, la lliçó d'Intro to Copilot, dissenyada com una lliçó de 45 minuts,
+    es pot ampliar a 90 minuts si voleu aprofundir en el funcionament de models i
+    eines de llenguatge grans com GitHub Copilot i ChatGPT.
+  csa_ai_page_faq_question_07: How can I access answer keys?
+  csa_ai_page_faq_answer_07: Amb un compte de professor aprovat, podeu trobar les
+    claus de resposta en un panell blau “Professor” Només que es mostra a les lliçons
+    i activitats en línia.Si necessiteu un compte de professor aprovat, podeu sol·licitar
+    l'accés a materials protegits només per a professors (claus de resposta, etc.)
+    a través de [aquest formulari] ().%{form_url}Tingueu en compte que pot trigar
+    3-5 dies hàbils a verificar el vostre compte.
+  csa_ai_page_faq_question_08: Aquest mòdul està mapejat amb estàndards?
+  csa_ai_page_faq_answer_08: Sí, el pla d'estudis d'Enginyeria de Programari i Visió
+    per Computador està assignat a les [Normes CSTA K-12] (%{csta_k12_url}) i la IA
+    per a [K-12 Guidelines] ().%{k12_url}
+  csa_ai_page_faq_question_09: Quant costa impartir aquest mòdul?
+  csa_ai_page_faq_answer_09_01: El nostre currículum i la nostra plataforma estan
+    disponibles a [sense cost] (%{no_cost_url}) per a qualsevol persona, en qualsevol
+    lloc, per ensenyar!
+  csa_ai_page_faq_answer_09_02: Addicionalment, el programari i les eines utilitzades
+    en aquest mòdul són gratuïts. GitHub Copilot és gratuït per verificat [teachers](%{teachers_url})
+    i [students]().%{students_url}
+  csa_ai_page_faq_question_10: Què faig si la instal·lació de programari no funciona?
+  csa_ai_page_faq_answer_10: Afrontar problemes durant la instal·lació de programari
+    pot ser comú, però hi ha passos sistemàtics que podeu seguir per solucionar-los
+    i resoldre'ls. [Consulteu alguns consells per a la resolució de problemes aquí]
+    ().%{troubleshooting_url}
+  csa_ai_page_faq_question_11: How was the curriculum developed?
+  csa_ai_page_faq_answer_11_01: 'El nostre pla d''estudis d''Enginyeria de Programari
+    i Visió per Computador es va dissenyar pensant en els nostres valors curriculars.
+    Els objectius següents van guiar la creació d''aquest pla d''estudis:'
+  csa_ai_page_faq_answer_11_list_01: "**Objectiu 1: ** Utilitzeu eines AI per generar,
+    depurar i editar codi."
+  csa_ai_page_faq_answer_11_list_02: "**Objectiu 2: ** Transició de Java Lab a eines
+    del món real."
+  csa_ai_page_faq_answer_11_list_03: "**Objectiu 3: ** Aprofundir en la comprensió
+    de com s'entrenen i s'integren els models d'IA en els programes."
+  csa_ai_page_faq_answer_11_02: Per obtenir més informació sobre els valors que han
+    guiat el nostre treball, consulteu els nostres [valors curriculars] (%{curriculum_values_url}).
+  video_library_page_main_title: Vídeos curts educatius
+  video_library_page_hero_description: La creixent biblioteca de vídeos educatius
+    de Code.org està disponible per a la seva reutilització per educadors de tot el
+    món, en línia o a les aules. El nostre objectiu és amplificar els nostres esforços
+    més enllà de l'abast del nostre propi currículum.
+  video_library_page_title_ai_works: Com funciona la IA
+  video_library_page_description_ai_works: Aquesta sèrie de vídeos curts et donarà
+    a conèixer com funciona la intel·ligència artificial i per què importa. Coneix
+    les xarxes neuronals o com s'aprèn la IA i aprofundeix en qüestions com el biaix
+    algorítmic i l'ètica de la presa de decisions de la IA.
+  video_library_page_title_computers_work: Com funcionen els ordinadors
+  video_library_page_description_computers_work: Explica què fa que un ordinador sigui
+    un ordinador, com es representa la informació digital en 1s i 0s, com funcionen
+    els circuits informàtics per manipular informació digital i com una unitat central
+    de processament (CPU) i un sistema operatiu controlen les entrades, sortides,
+    memòria i maquinari d'un ordinador.
+  video_library_page_title_internet_works: Com funciona Internet
+  video_library_page_description_internet_works: Amb Vint Cerf, l'inventor de TCP/IP,
+    David Karp fundador de Tumblr per explicar HTTP i HTML, Security Princess de Google
+    per explicar SSL i ciberseguretat, i enginyers de Microsoft, Spotify i Symantec.
+    Aquesta sèrie de vídeos curts que expliquen Com funciona Internet.
+  video_library_page_title_not_hacked: Com no ser hackejat
+  video_library_page_description_not_hacked: Internet està obert, de manera que tot
+    el que passa en ell es pot veure a menys que estigui protegit. Als països moderns,
+    la gent està més preocupada per ser piratejada que per qualsevol altre delicte.
+    Per què? Perquè tots els ordinadors o telèfons d'Internet estan sent provats regularment
+    de vulnerabilitats per criminals, terroristes o fins i tot actors estatals. Si
+    no teniu cura, algú podria hackejar el dispositiu o els comptes, i fins i tot
+    robar-vos la vostra identitat o els vostres diners.
+  video_library_page_title_blockchain: Com funciona la Cadena de blocs
+  video_library_page_description_blockchain: Fet en col·laboració amb Coinbase, aquesta
+    sèrie compta amb experts de la indústria i té com a objectiu desmitificar aquesta
+    tecnologia explorant què és blockchain, com funciona i les seves possibles implicacions
+    socials - tant bones com dolentes.
+  video_library_page_title_careers: Carreres professionals en CS
+  video_library_page_description_careers: Les carreres en informàtica i tecnologia
+    poden ser divertides i gratificants. Però, què fa realment una persona que treballa
+    en aquests camps? Amb una gran varietat de llocs de treball i empreses, no només
+    hi ha una resposta a aquesta pregunta. Mireu els vídeos següents per conèixer
+    algunes de les persones que aborden grans problemes de manera creativa.
+  video_library_page_title_inspirational: Inspirador
+  video_library_page_description_inspirational: Què canviarà la informàtica en el
+    nostre món? Tot? Per a qui serveix? Tothom! Mira aquests vídeos per inspirar-te
+    i motivar-te.
+  video_library_page_footer_description: Busques alguna cosa més? Tenim tants vídeos
+    fantàstics disponibles al nostre canal de Youtube.
+  video_library_page_footer_cta: Exploreu tots els vídeos de Code.org a YouTube
+  video_library_page_computer_work_video_title_1: Presentació de Com funcionen els
+    ordinadors
+  video_library_page_computer_work_video_title_2: Binari i dades
+  video_library_page_computer_work_video_title_3: CPU, memòria, entrada i sortida
+  video_library_page_computer_work_video_title_4: Què fa que un ordinador, un ordinador?
+  video_library_page_computer_work_video_title_5: Circuits lògics
+  video_library_page_computer_work_video_title_6: Maquinari i Programari
+  video_library_page_internet_work_video_title_1: Què és internet?
+  video_library_page_internet_work_video_title_2: 'INTERNET: Adreces IP i DNS'
+  video_library_page_internet_work_video_title_3: 'INTERNET: HTTP i HTML'
+  video_library_page_internet_work_video_title_4: 'INTERNET: Ciberseguretat i Crim'
+  video_library_page_internet_work_video_title_5: 'INTERNET: cables, cables i Wifi'
+  video_library_page_internet_work_video_title_6: 'INTERNET: Paquets, encaminament
+    i fiabilitat'
+  video_library_page_internet_work_video_title_7: 'INTERNET: Xifrat i claus públiques'
+  video_library_page_internet_work_video_title_8: 'INTERNET: Com funciona la cerca'
+  video_library_page_cs_video_title_1: Em dic Jerome i sóc tecnòleg de disseny a Meow
+    Wolf
+  video_library_page_cs_video_title_2: Em dic Nikesha i sóc enginyer aeroespacial
+    a la NASA
+  video_library_page_cs_video_title_3: Em dic Brina i sóc enginyer de programari a
+    Instagram
+  video_library_page_cs_video_title_4: Em dic Kinsley i sóc enginyer de programari
+    a Facebook
+  video_library_page_cs_video_title_5: Em dic Polina i sóc científica de dades a Electronic
+    Arts
+  video_library_page_cs_video_title_6: Em dic Danelle i sóc enginyer de programari
+    a MBARI
+  video_library_page_cs_video_title_7: Em dic Christopher i sóc analista de seguretat
+    a Tanium
+  video_library_page_cs_video_title_8: Em dic Federico i sóc Technical Program Manager
+    a Microsoft
+  video_library_page_cs_video_title_9: Em dic Tess i sóc enginyer de programari a
+    Google
+  video_library_page_inspirational_video_title_1: Canviar la cara de la informàtica
+    (3 min)
+  video_library_page_inspirational_video_title_2: Empènyer a si mateix. Qualsevol
+    pot aprendre. (1 min)
+  video_library_page_inspirational_video_title_3: Inspireu a una noia (2 min)
+  video_library_page_inspirational_video_title_4: El que la majoria de les escoles
+    no ensenyen (5 min)
+  video_library_page_inspirational_video_title_5: 'Hora del codi és aquí: ningú pot
+    aprendre (2 min)'
+  video_library_page_inspirational_video_title_6: El meu nom és Aracely (3 min)
+  video_library_page_inspirational_video_title_7: Hora de codi amb Steph Curry (2
+    min)
+  video_library_page_inspirational_video_title_8: La informàtica ho està canviant
+    tot (5 min)
+  video_library_page_inspirational_video_title_9: Introducció de Ciències de la Computació
+    (1 min)
+  video_library_page_inspirational_video_title_10: President Obama sobre ciències
+    de la computació (1 min)
+  video_library_page_inspirational_video_title_11: Qualsevol pot aprendre (1 min)
+  video_library_page_inspirational_video_title_12: Lo Que Falta En Nuestras Escuelas
+    (2 min)
+  video_library_page_not_hacked_video_title_1: 'Com no ser hackejat: Introducció'
+  video_library_page_not_hacked_video_title_2: 'Com no ser hackejat: contrasenyes'
+  video_library_page_not_hacked_video_title_3: 'Com no ser hackejat: autenticació
+    i panys de dispositius'
+  video_library_page_not_hacked_video_title_4: 'Com no ser hackejat: Phishing'
+  video_library_page_not_hacked_video_title_5: 'Com no ser hackejat: llocs web i Wifi'
+  video_library_page_not_hacked_video_title_6: 'Com no ser hackejat: missatgeria i
+    descàrregues'
+  video_library_page_not_hacked_video_title_7: 'Com no ser hackejat: instal·lar actualitzacions'
   language_code:
     ar: Àrab
     az: Àzeri

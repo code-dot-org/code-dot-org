@@ -53,6 +53,7 @@ fa:
         gender: 'جنسیت'
         edit_header: 'ویرایش اطلاعات کاربری'
         finish_sign_up_header: 'ساخت حساب کاربری خود را تمام کنید'
+        finish_sign_up_header_error: 'لطفا خطاهای زیر را درست کنید:'
         finish_sign_up_subheader: 'اطلاعات زیر را پر کنید تا ایجاد یک حساب Code.org برای <strong>%{email}</strong> به پایان برسد.'
         finish_sign_up_subheader_markdown: 'اطلاعات زیر را پر کنید تا ایجاد یک حساب Code.org برای **%{email}** به پایان برسد.'
         finish_sign_up_subheader_provider: 'اطلاعات زیر را پر کنید تا ایجاد یک حساب Code.org با <strong>%{provider}</strong> برای <strong>%{email}</strong> تکمیل شود.'
@@ -60,6 +61,7 @@ fa:
         reset_password_token: "پیوند بازنشانی رمز عبوری که دنبال کرده اید"
         error:
           future: نمیتوان در آینده بود
+        user_type: 'نوع حساب کاربری'
         us_state: 'وضعیت'
   beta: "بتا"
   hello: "سلام دنیا"
@@ -96,7 +98,7 @@ fa:
   courses_page:
     title_student: "در استودیو ی کد یاد بگیرید"
     title_teacher: "آموزش علوم کامپیوتر"
-  unplugged_activity: 'فعالیت کلاسی'
+  unplugged_activity: 'فعالیت بدون کامپیوتر'
   of: "از"
   more: "بیشتر"
   less: "کمتر"
@@ -345,7 +347,7 @@ fa:
       professional_learning: "یادگیری پیشرفته"
       documentation: "مستندات"
       tutorials: "آموزش‌ها"
-      sprite_lab_documentation: "مستندات آزمایشگاه اسپرایت"
+      sprite_lab_documentation: "مستندات لابراتوار اسپرایت"
       web_lab_documentation: "مستندات آزمایشگاه وب"
       educate_overview: "مروری بر مربی"
       educate_elementary: "مدرسه ابتدایی"
@@ -398,7 +400,7 @@ fa:
       basketball: 'بسکتبال'
       bounce: 'پریدن'
       calc: 'کالک'
-      dance: 'جشن و رقص'
+      dance: 'مهمانی رقص'
       eval: 'اِوال'
       flappy: 'فلاپی'
       frozen: 'منجمد'
@@ -661,9 +663,9 @@ fa:
     aquatic:
       title: "ماینکرفت"
     dance-2019:
-      title: 'جشن و رقص'
+      title: 'مهمانی رقص'
     dance:
-      title: 'جشن و رقص'
+      title: 'مهمانی رقص'
     flappy:
       title: 'کدنویسی Flappy'
       body: 'می‌خواهی بازی خودت را در کمتر از 10 دقیقه بسازی؟ آموزش کدنویسی Flappy ما را امتحان کن!'
@@ -678,6 +680,7 @@ fa:
       audience: "سنین سیزده به بالا"
       cta: "یادبگیر چگونه"
     hello-world:
+      title: 'سلام دنیا!'
       body: 'یکی از چهار تم جالب را انتخاب کنید تا کاراکترهای واکنشگر را در دنیایی که خودتان ایجاد کرده‌اید کدنویسی کنید.'
     hero:
       title: "ماینکرفت"
@@ -735,7 +738,7 @@ fa:
   landing:
     prerelease_tutorial: "این آموزش در مرحله آزمایشی قرار دارد. با دریافت نظرات و بازخوردها جهت بهبود آن تغییراتی در ان خواهیم داد. "
     report_bug: "گزارش اشکال"
-    support: "کمک گرفتن"
+    support: "کمک بگیرید"
     support_url: "support.code.org"
     help_resources: "کمک و منابع"
     help_support: "راهنمایی و پشتیبانی"
@@ -1113,6 +1116,7 @@ fa:
   course_offering:
     headers:
       minecraft: 'ماینکرفت'
+      hello_world: 'سلام دنیا!'
       sports: 'ورزش'
       csf: 'مبانی cs'
       csc: 'اتصالهای cs'

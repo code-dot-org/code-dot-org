@@ -5,10 +5,10 @@ ms:
   language: Bahasa Inggeris
   front_title: Sertai acara pembelajaran yang terbesar dalam sejarah, %{campaign_date}
   coming_soon: Akan Datang
-  campaign_date_start_short: 5 Disember
-  campaign_date_start_long: 5 Disember
-  campaign_date_short: 5-11 Disember
-  campaign_date_full: 5-11 Disember
+  campaign_date_start_short: 7 Dis.
+  campaign_date_start_long: 7 Disember
+  campaign_date_short: 7-13 Dis.
+  campaign_date_full: 7-13 Disember
   campaign_date_year: '2020'
   campaign_date_full_year: 5-11 Disember 2022
   nonus_campaign_date_start_short: 1 Okt.
@@ -195,6 +195,17 @@ ms:
   grade_level_label_elementary: Sekolah Rendah
   grade_level_label_middle: Sekolah Menengah
   grade_level_label_high: Sekolah Menengah
+  curricula_title_elementary: Kurikulum Sekolah Rendah
+  curricula_desc_elementary: Semak imbas kursus dan aktiviti percuma yang menyeronokkan
+    yang menjemput anda untuk meneroka sains komputer dengan pelajar sekolah rendah
+    anda.
+  curricula_title_middle: Kurikulum Sekolah Menengah
+  curricula_desc_middle: Semak imbas tawaran menarik yang membolehkan anda dan pelajar
+    sekolah menengah anda meneroka sains komputer bersama-sama.
+  curricula_title_high: Kurikulum Sekolah Menengah
+  curricula_desc_high: Semak imbas kursus dan aktiviti menarik yang menjemput anda
+    dan pelajar sekolah menengah anda untuk menggali lebih mendalam ke dalam sains
+    komputer.
   students_label: Pelajar
   teachers_label: Guru
   teacher_label_csf: Guru Asas CS
@@ -204,6 +215,7 @@ ms:
   teacher_label_csa: AP® Computer Science A Teacher
   required_materials: 'Bahan yang Diperlukan:'
   optional_materials: 'Bahan Pilihan:'
+  call_to_action_explore_roles: Terokai peranan terbuka
   call_to_action_learn_more: Ketahui lebih lanjut
   call_to_action_watch_now: Tonton sekarang
   call_to_action_try_activity: Cuba aktiviti
@@ -221,6 +233,15 @@ ms:
   call_to_action_explore_choice_level: Terokai contoh tahap pilihan
   call_to_action_explore_collection: Terokai koleksi
   call_to_action_explore_unplugged_lesson: Terokai pelajaran secara tradisional
+  call_to_action_explore_csf: Terokai Asas CS
+  call_to_action_explore_csd: Terokai CS Discoveries
+  call_to_action_explore_csp: Terokai Prinsip CS
+  call_to_action_explore_csc: Terokai CS Connections
+  call_to_action_explore_csa: Terokai AP® Sains Komputer A
+  call_to_action_explore_csa_short: Terokai AP® CSA
+  call_to_action_explore_maker: Terokai kurikulum Maker
+  call_to_action_explore_hoc: Terokai tutorial Hour of Code
+  call_to_action_explore_hoc_short: Terokai Hour of Code
   call_to_action_try_app_lab: Cuba App Lab
   call_to_action_view_lesson_plan: Lihat rancangan pelajaran
   call_to_action_self_paced_pl: Mulakan pembelajaran profesional kendiri
@@ -244,6 +265,7 @@ ms:
   call_to_action_resources_tools: Cuba alat pengaturcaraan
   call_to_action_sign_up_free: Daftar secara percuma
   call_to_action_explore_ai_resources: Terokai sumber AI
+  call_to_action_explore_ai_curricula: Terokai kurikulum AI
   call_to_action_explore_curriculum_catalog: Terokai Katalog Kurikulum
   call_to_action_see_full_curriculum_catalog: Lihat Katalog Kurikulum penuh
   call_to_action_find_self_paced_modules: Cari modul kendiri
@@ -263,6 +285,13 @@ ms:
   call_to_action_learn_about_approach: Ketahui lebih lanjut tentang pendekatan kami
   call_to_action_try_java_lab: Cuba Java Lab
   call_to_action_notify_available: Beritahu saya apabila tersedia
+  call_to_action_register_early_access: Daftar untuk akses awal
+  call_to_action_open_positions: Lihat kedudukan terbuka
+  call_to_action_get_guide: Dapatkan panduan
+  call_to_action_donate_to_cdo: Derma kepada Code.org
+  call_to_action_start_fundraiser: Mulakan pengumpulan dana
+  call_to_action_view_donation_policy: Lihat dasar derma
+  call_to_action_view_donate_bitpay: Derma dengan BitPay
   aria_label_call_to_action_afe: Ketahui lebih lanjut mengenai Jurutera Masa Depan
     Amazon
   aria_label_call_to_action_teaching_csf: Mulakan program pembelajaran profesional
@@ -363,8 +392,11 @@ ms:
   curriculum_name_csp: Prinsip Sains Komputer
   curriculum_name_csc: Rangkaian Sains Komputer
   curriculum_name_csa: Sains Komputer A
+  curriculum_name_csa_ai: Kejuruteraan Perisian & Visi Komputer
   curriculum_name_csc_02: Mana-mana Modul Rangkaian CS
   curriculum_name_ai: "  AI dan Pembelajaran Mesin  "
+  curriculum_name_artificial_intelligence: Kecerdasan Buatan (AI)
+  curriculum_name_maker: Pembuat
   curriculum_name_maker_cp: Mewujudkan Apl dengan Peranti (Taman Permainan Litar)
   curriculum_name_maker_microbit: 'Mewujudkan Apl dengan Peranti (mikro: bit)'
   curriculum_name_creating_apps_with_devices: Mewujudkan Apl dengan Peranti
@@ -375,6 +407,8 @@ ms:
   curriculum_name_interactive_animations_games: Interaktif Animasi & Permainan
   curriculum_name_design_process: Proses Reka Bentuk
   curriculum_name_data_society: Data & Masyarakat
+  curriculum_desc_csf: Set kurikulum asas percuma yang memperkenalkan pelajar kepada
+    konsep asas sains komputer.
   curriculum_desc_csf_express: Belajar untuk membuat program komputer, membangunkan
     kemahiran menyelesaikan masalah, dan bekerja melalui cabaran yang menyeronokkan!
     Buat permainan dan projek kreatif untuk dikongsi dengan rakan, keluarga, dan guru.
@@ -422,6 +456,27 @@ ms:
   curriculum_desc_creating_apps_with_devices: Terokai peranan peranti fizikal dalam
     pengkomputeran. Membangunkan program yang menggunakan input dan output perkakasan.
     Terdapat versi unit ini untuk kedua-dua micro:bit dan Circuit Playground.
+  curriculum_desc_csa: Memperkenalkan pelajar kepada kejuruteraan perisian dan reka
+    bentuk berorientasikan objek semasa mereka mempelajari bahasa pengaturcaraan Java
+    dalam kurikulum percuma ini untuk AP® Sains Komputer A (AP® CSA).
+  curriculum_desc_maker: Pendidikan Maker mengambil STEM (Sains, Teknologi, Kejuruteraan,
+    Matematik) selangkah lebih maju dengan menjemput pengalaman langsung dan kerjasama
+    ke dalam bilik darjah untuk membantu mengajar penyelesaian masalah dan pemikiran
+    kritis.
+  curriculum_desc_maker_short: Pendidikan pembuat menjemput pengalaman dan kerjasama
+    langsung ke dalam bilik darjah untuk membantu mengajar penyelesaian masalah dan
+    pemikiran kritis.
+  curriculum_desc_csd: Kursus fleksibel, membolehkan setiap unit diajar secara bersendirian
+    atau digabungkan. Memperkenalkan pelajar untuk membina laman web, aplikasi, animasi,
+    permainan, dan sistem pengkomputeran fizikal.
+  curriculum_desc_csp: Percuma, AP® CSP disokong, kursus pengenalan sekolah menengah
+    yang memperkenalkan pelajar kepada konsep asas sains komputer.
+  curriculum_desc_csa_ai_long: 'Modul Post-AP CSA dua bab ini menawarkan pengalaman
+    langsung kepada pelajar sekolah menengah dengan alat pengembangan perisian profesional,
+    termasuk GitHub dan GitHub Copilot, dan memberikan mereka kemahiran dunia nyata
+    untuk mengembangkan program penglihatan komputer. '
+  curriculum_desc_csa_ai_short: Modul Post-AP® CSA ini menawarkan pengalaman langsung
+    kepada pelajar sekolah menengah dengan alat pembangunan perisian profesional.
   collection_hardware: Fokus pada Perkakasan
   collection_hardware_desc: Memberi kuasa kepada pelajar untuk menggunakan data dan
     peranti fizikal untuk menyelesaikan masalah.
@@ -455,6 +510,7 @@ ms:
   module_label_professional_learning: 'Pembelajaran Profesional:'
   module_label_languages: 'Bahasa yang Disokong:'
   module_label_accessibility_features: 'Kebolehcapaian:'
+  module_label_accessibility_features_full: 'Ciri Kebolehcapaian:'
   module_label_educator_tool: Alat pendidik
   module_label_educator_course: Kursus pendidik
   module_label_student_tool: Alat pelajar
@@ -462,6 +518,7 @@ ms:
   module_label_student_content_resources: Kandungan & sumber
   module_label_new: Baru
   module_label_coming_soon: Akan datang tidak lama lagi
+  module_label_available_now: Tersedia Sekarang
   module_label_video_series: Siri video
   module_label_self_paced: Modul kendiri
   module_ages_5_10: 5-10
@@ -472,6 +529,8 @@ ms:
   module_grade_2_5: 2-5
   module_grade_3_5: 3-5
   module_grade_3_8: 3-8
+  module_grade_k_12: K-12
+  module_grade_3_12: 3-12
   module_grade_6_12: 6-12
   module_grade_6_10: 6-10
   module_grade_9_12: 9-12
@@ -486,11 +545,14 @@ ms:
   module_grade_9_12_teachers: Guru 9-12
   module_level_beginner: Pemula
   module_level_intermediate: Perantaraan
+  module_level_advanced: Advanced
   module_duration_45_mins: 45 minit
+  module_duration_2_weeks: 2 minggu
   module_duration_1_hr: 1 jam
   module_duration_2_hrs: 2 jam
   module_duration_3_hrs: 3 jam
   module_duration_5_hrs: 5 jam
+  module_duration_5_hrs_plus: 5+ jam
   module_duration_8_hrs: 8 jam
   module_duration_20_hrs: 20 jam
   module_duration_35_hrs: 35 jam
@@ -502,6 +564,7 @@ ms:
   module_duration_school_year: Tahun Sekolah
   module_duration_month_quarter: Bulan atau Suku
   module_duration_month_semester_year: Bulan, Semester, atau Tahun
+  module_duration_varies: Berbeza-beza
   module_prerequisites_none: Tiada
   module_prerequisites_maker_cp: Akses ke Taman Permainan Litar
   module_prerequisites_maker_microbit: Akses kepada mikro:bit
@@ -569,6 +632,8 @@ ms:
   heading_java_lab: Makmal Java
   heading_objects_first: Objek pertama
   heading_these_lessons_will: 'Pelajaran ini akan:'
+  heading_explore_curriculum_catalog: Terokai semua kursus kami dalam Katalog Kurikulum
+  heading_csa_ai: Mencari perkara yang perlu dilakukan selepas peperiksaan AP®?
   professional_learning_section_desc: Dapatkan sokongan yang anda perlukan semasa
     anda bersedia untuk mengajar. Guru menyukainya, dengan lebih daripada 90% kedudukannya
     sebagai pembangunan profesional terbaik yang pernah ada!
@@ -602,6 +667,24 @@ ms:
     sebarang soalan yang anda ada tentang memulakan pengajaran dengan Code.org. Anda
     juga boleh bertanya kepada guru lain mengenai pengalaman mereka di forum guru
     kami.
+  subscribe_form_section_title: Langgan kemas kini
+  subscribe_form_section_desc_csa: Daftar untuk menerima e-mel bulanan mengenai AP®
+    Computer Science A Code.org dan dapatkan peringatan, petua, dan kemas kini yang
+    berguna yang dihantar terus ke peti masuk anda.
+  subscribe_form_section_desc_csc: Daftar untuk menerima e-mel bulanan mengenai Sambungan
+    Sains Komputer Code.org dan dapatkan peringatan, petua, dan kemas kini yang berguna
+    yang dihantar terus ke peti masuk anda.
+  subscribe_form_section_desc_csd: Daftar untuk menerima e-mel bulanan mengenai Penemuan
+    Sains Komputer Code.org dan dapatkan peringatan, petua, dan kemas kini yang berguna
+    yang dihantar terus ke peti masuk anda.
+  subscribe_form_section_desc_csf: Daftar untuk menerima e-mel bulanan mengenai Asas
+    Sains Komputer Code.org dan dapatkan peringatan, petua, dan kemas kini yang berguna
+    yang dihantar terus ke peti masuk anda.
+  subscribe_form_section_desc_csp: Daftar untuk menerima e-mel bulanan mengenai Prinsip
+    Sains Komputer Code.org dan dapatkan peringatan, petua, dan kemas kini yang berguna
+    yang dihantar terus ke peti masuk anda.
+  subscribe_form_section_unsubscribe: Anda boleh berhenti melanggan pada bila-bila
+    masa.
   blockchain_hero_heading: Bagaimana Blockchain Berfungsi
   blockchain_hero_desc: Selami dunia blockchain dengan “How Blockchain Works,” siri
     video baru kami dan pelajaran yang disertakan!
@@ -705,6 +788,8 @@ ms:
     pelajaran dipasangkan dengan satu video dari siri ini, menyelam lebih mendalam
     ke dalam konsep yang diperkenalkan dalam video.
   ai_curriculum_btn_aria_label_04: Terokai pelajaran Bagaimana AI Berfungsi
+  ai_curriculum_grades_05: 'Tahap Gred: 9-12'
+  ai_curriculum_btn_aria_label_05: Terokai modul Kejuruteraan Perisian & Visi Komputer
   ai_carousel_heading: 'Apa yang guru katakan mengenai AI dengan Code.org:'
   ai_carousel_quote_01: Pelajaran ini juga memberi peluang kepada pelajar saya untuk
     melihat bahawa terdapat unsur pendapat dalam sistem klasifikasi. Kemudian, ketika
@@ -830,6 +915,12 @@ ms:
     (seperti ChatGPT) dan Generative AI. Dengar bagaimana teknologi baru ini berfungsi
     secara langsung dari pakar: Mira Murati, CTO OpenAI, dan Cristóbal Valenzuela,
     Ketua Pegawai Eksekutif RunwayML.'
+  ai_pl_101_llm_slides_title: Model Bahasa Besar Prompts untuk Pendidik
+  ai_pl_101_llm_slides_desc: Alat untuk mendapatkan output terbaik dari LLM seperti
+    ChatGPT, dari pemula hingga maju. Termasuk arahan permulaan bagi mereka yang hanya
+    mencelupkan jari kaki mereka, serta alat canggih bagi mereka yang ingin memaksimumkan
+    potensi mereka.
+  ai_pl_101_resources_3: AI Prompts untuk Mengubah Pembelajaran Pelajar
   how_ai_works_hero_heading: Bagaimana AI Berfungsi
   how_ai_works_hero_desc: Selami dunia AI dengan “How AI Works,” siri video kami dan
     pelajaran yang menyertainya!
@@ -1172,21 +1263,18 @@ ms:
   teach_page_free_curriculum_desc: Kami mahu anda membawa Sains Komputer ke sekolah
     anda tanpa perlu risau tentang kosnya. Itulah sebabnya kami telah komited untuk
     tawaran kurikulum kami adalah percuma selama-lamanya!
-  teach_page_free_curriculum_list_heading_01: Kurikulum yang menarik untuk setiap
-    peringkat gred
   teach_page_free_curriculum_list_desc_01: Kurikulum percuma, fleksibel dan menyeronokkan
     dengan tawaran dalam lebih 67 bahasa.
-  teach_page_free_curriculum_list_heading_02: Kurikulum yang boleh disesuaikan dan
-    berinovatif
   teach_page_free_curriculum_list_desc_02: Code.org menawarkan segala-galanya daripada
     kurikulum untuk setahun kepada aktiviti unit tunggal. Selain itu, kami mengemas
     kini kurikulum kami setiap tahun untuk menyokong amalan terbaik dan bidang tumpuan
     serta mencipta tawaran baharu yang mengajar topik dalam permintaan semasa.
-  teach_page_free_curriculum_list_heading_03: Kurikulum berstruktur dipetakan mengikut
-    piawaian kebangsaan
   teach_page_free_curriculum_list_desc_03: Setiap kurikulum dipetakan kepada sekurang-kurangnya
     satu set standard kebangsaan, termasuk CSTA, Piawaian Sains Generasi Seterusnya
     dan Teras Biasa.
+  teach_page_free_curriculum_list_desc_04: Tawaran dalam lebih daripada 67 bahasa
+  teach_page_free_curriculum_list_desc_05: Dipetakan kepada sekurang-kurangnya satu
+    set piawaian kebangsaan (termasuk CSTA, NGSS, dan Common Core)
   teach_page_free_curriculum_heading_02: 'Terokai tawaran kurikulum kami untuk tahap
     gred yang berbeza:'
   teach_page_resources_heading: Sumber yang menyokong anda setiap langkah
@@ -1246,8 +1334,8 @@ ms:
     Animation
   csp_page_curriculum_glance_devices: Laptop, Chromebook
   csp_page_curriculum_glance_tools: Makmal Aplikasi
-  csp_page_curriculum_glance_professional_learning: Facilitator-led Workshops, Self-paced
-    Modules
+  csp_page_curriculum_glance_professional_learning: Bengkel yang diketuai fasilitator,
+    Modul Sendiri
   csp_page_curriculum_glance_professional_languages: Bahasa Inggeris
   csp_page_curriculum_glance_professional_accessibility_features: Text-to-speech,
     Closed captioning, Immersive reader
@@ -1375,8 +1463,8 @@ ms:
   csd_page_curriculum_glance_devices: Laptop, Chromebook
   csd_page_curriculum_glance_tools: Makmal Aplikasi, Makmal Permainan, Makmal AI,
     Makmal Web
-  csd_page_curriculum_glance_professional_learning: Facilitator-led Workshops, Self-paced
-    Modules
+  csd_page_curriculum_glance_professional_learning: Bengkel yang diketuai fasilitator,
+    Modul Sendiri
   csd_page_curriculum_glance_professional_languages: Bahasa Inggeris
   csd_page_curriculum_glance_professional_accessibility_features: Text-to-speech,
     Closed captioning, Immersive reader
@@ -1527,8 +1615,8 @@ ms:
     Seni Reka Bentuk, Reka Bentuk Aplikasi
   csf_page_curriculum_glance_devices: Komputer riba, Chromebook, Tablet
   csf_page_curriculum_glance_tools: Makmal Sprite, Main Makmal
-  csf_page_curriculum_glance_professional_learning: Facilitator-led Workshops, Self-paced
-    Modules
+  csf_page_curriculum_glance_professional_learning: Bengkel yang diketuai fasilitator,
+    Modul Sendiri
   csf_page_curriculum_glance_languages: Bahasa Arab, Bahasa Indonesia, Catalán, Cina
     Ringkas, Cina Tradisional, Czech, Perancis, Jerman, Hindi, Itali, Jepun, Korea,
     Kannada, Melayu, Marathi, Mongolia, Poland, Portugis-BR, Romania, Rusia, Slovak,
@@ -1584,10 +1672,10 @@ ms:
     di dalam bilik darjah anda. Rakan Serantau kami menawarkan bengkel Code.org berkualiti
     tinggi satu hari untuk guru individu atau untuk PD di seluruh sekolah. [Daftar
     untuk bengkel pembangunan profesional berhampiran anda] (%{sign_up_url})!
-  csf_page_faq_answer_04_02: Join over 100,000 teachers who have participated in our
-    workshops. The majority of our workshop attendees say, 'It's the best professional
-    development I've ever attended.' In fact, [90% of attendees would recommend our
-    program to other teachers](%{rec_url})!
+  csf_page_faq_answer_04_02: Sertai lebih 100,000 guru yang telah mengambil bahagian
+    dalam bengkel kami. Majoriti peserta bengkel kami berkata, 'Ia adalah pembangunan
+    profesional terbaik yang pernah saya hadiri. ' Malah, [90% peserta akan mengesyorkan
+    program kami kepada guru lain] ()!%{rec_url}
   csf_page_faq_question_05: Apakah masa yang disyorkan untuk mengajar CS Fundamentals?
   csf_page_faq_answer_05: Setiap kursus CSF termasuk 13-17 pelajaran yang direka untuk
     tempoh 45 minit. Kami mengesyorkan semua pelajar berpindah dari pelajaran ke pelajaran
@@ -1595,9 +1683,10 @@ ms:
     oleh guru yang dirancang untuk dialami secara serentak sementara pelajaran membina
     kemahiran dapat diselesaikan oleh pelajar mengikut kadar mereka sendiri.
   csf_page_faq_question_06: Apakah bahan yang saya perlukan untuk CS Fundamentals?
-  csf_page_faq_answer_06: Many lessons have handouts that guide students through activities.
-    These resources can be printed or assigned digitally. Some lessons call for typical
-    classroom supplies and manipulatives. [Visit the CSF Syllabus to learn more](%{syllabus_url}).
+  csf_page_faq_answer_06: Banyak pelajaran mempunyai pemberian yang membimbing pelajar
+    melalui aktiviti. Sumber-sumber ini boleh dicetak atau diberikan secara digital.
+    Beberapa pelajaran memerlukan bekalan dan manipulatif bilik darjah yang biasa.
+    [Lawati Sukatan Pelajaran CSF untuk mengetahui lebih lanjut] ().%{syllabus_url}
   csa_page_top_desc: Introduce students to software engineering and object-oriented
     design while they learn the Java programming language in this free curriculum
     for [AP® Computer Science A (AP® CSA)](%{csa_url}).
@@ -1668,6 +1757,39 @@ ms:
   csa_page_faq_answer_08_02: For more information about the values that guided our
     work, please see our [curriculum values](%{curriculum_values_url}) and our [professional
     learning values](%{pl_values_url}).
+  donate_page_top_heading: Membantu membiayai misi kami
+  donate_page_top_desc: Setiap sumbangan mendorong misi Code.org untuk memperluas
+    akses ke pendidikan sains komputer. Kami menawarkan beberapa cara untuk anda menderma
+    dan membuat perbezaan.
+  donate_page_fundraise_title: Pengumpulan dana untuk Code.org
+  donate_page_fundraise_desc: Bantu mengumpulkan wang untuk Code.org! Setiap pelajar
+    di setiap sekolah harus mempunyai peluang untuk belajar sains komputer.
+  donate_page_other_ways_title: Cara lain untuk memberi
+  donate_page_other_ways_desc: Terokai pelbagai kaedah untuk menyumbang, dan cari
+    pilihan yang paling sesuai dengan anda. Setiap isyarat, besar atau kecil, mendorong
+    misi kami ke hadapan.
+  donate_page_501c3: Code.org didaftarkan sebagai organisasi bukan untung 501 (c)
+    (3) awam. Sumbangan kepada Code.org boleh ditolak cukai setakat yang dibenarkan
+    oleh undang-undang. Nombor pengenalan cukai Code.org adalah 46-0858543.
+  donate_page_donation_policy_title: Memahami Dasar Derma kami
+  donate_page_donation_policy_desc: Ketahui tentang cara kami mengendalikan dan memperuntukkan
+    sumbangan anda.
+  donate_tabs_tab_label_daf_direct: DAF Terus
+  donate_tabs_tab_label_amazon: Amazon
+  donate_tabs_tab_label_bitpay: BitPay
+  donate_tabs_tab_label_employee_match: Perlawanan Pekerja
+  donate_tabs_daf_direct_title: Derma melalui DAF Direct
+  donate_tabs_daf_direct_desc: Derma melalui dana yang dinasihatkan penderma anda
+    dengan Fidelity Charitable, Schwab Charitable, atau BNY Mellon dan buat cadangan
+    pemberian anda kepada Code.org melalui borang dalam talian DAF Direct.
+  donate_tabs_amazon_title: Derma melalui Amazon
+  donate_tabs_amazon_desc: Derma terus menggunakan akaun Amazon anda. Dengan hanya
+    beberapa klik, menyumbang dengan lancar kepada misi Code.org dan memperkasakan
+    masa depan pendidikan sains komputer.
+  donate_tabs_bitpay_title: Derma dengan Crypto melalui BitPay
+  donate_tabs_bitpay_desc: Merangkul masa depan memberi dengan cryptocurrency. Melalui
+    BitPay, mata wang digital anda boleh terus menyokong usaha Code.org dalam mengembangkan
+    pendidikan sains komputer.
   hoc_live: Siaran Langsung Acara Jam Kod
   hoc_live_sign_up_title: Sila daftar untuk Siaran Langsung Jam Kod
   hoc_live_learn_title: Belajar dengan Siaran Langsung Acara Jam Kod
@@ -2101,6 +2223,13 @@ ms:
     lain?
   signup_email_preference_privacy: "(Lihat dasar privasi kami)"
   signup_email_preference_yes: Ya
+  signup_email_preference_yes_elementary: Ya - Hantarkan saya kemas kini mengenai
+    Sumber Sekolah Rendah
+  signup_email_preference_yes_middle: Ya - Hantarkan saya kemas kini mengenai Sumber
+    Sekolah Menengah
+  signup_email_preference_yes_high: Ya - Hantarkan saya kemas kini mengenai Sumber
+    Sekolah Menengah
+  signup_email_preference_yes_general: Ya - Hantarkan saya kemas kini umum
   signup_email_preference_no: Tidak
   signup_email_preference_error: Keutamaan e-mel diperlukan
   signup_multiple_event_warning: Kami akan meletakkan nama sekolah dan bandar anda
@@ -12957,12 +13086,13 @@ ms:
   tutorial_googlename _longdescription: Pilih nama dan hidupkan huruf perkataan dengan
     menggunakan kod. Pilih nama samaran, nama haiwan peliharaan, haiwan, sukan, tempat
     atau hobi.
-  tutorial_carnegiezillah_longdescription: Zillah City is thriving, and music is in
-    the air. Rumor has it, the famed Gargantua bot is online and sending the last
-    Toxibots to trash the city block by block…. Grab your cobot hoverboard and get
-    ready to groove, move, and finish off what you started! Players program their
-    cobot hoverbots to change lanes, avoid obstacles, and take out many Toxibots in
-    this rhythm-styled game.
+  tutorial_carnegiezillah_longdescription: Bandar Zillah berkembang maju, dan muzik
+    ada di udara. Khabar angin mengatakan, bot Gargantua yang terkenal sedang dalam
+    talian dan menghantar Toxibots terakhir untuk membuang blok bandar demi blok.…Dapatkan
+    hoverboard cobot anda dan bersiaplah untuk alur, bergerak, dan selesaikan apa
+    yang anda mulakan! Pemain memprogramkan hoverbots cobot mereka untuk menukar lorong,
+    mengelakkan halangan, dan mengeluarkan banyak Toxibots dalam permainan gaya irama
+    ini.
   tutorial_nasachspacejam_longdescription: Buat sistem suria yang benar-benar batu!
     Ketahui mengenai muzik, astronomi, dan pengekodan dalam aktiviti berpandukan diri
     ini (tidak diperlukan pengalaman pengekodan). Planet program untuk membuat muzik,
@@ -13676,6 +13806,466 @@ ms:
   accessibility_card_text_10: Penyesuaian kurikulum Prinsip Sains Komputer AP Code.org
     menggunakan Quorum, bahasa berasaskan bukti yang pada asalnya direka untuk menyediakan
     akses kepada pelajar buta atau cacat penglihatan.
+  engineering_hero_heading: Sertai pasukan kejuruteraan kami!
+  engineering_hero_desc: Semasa kami terus mengembangkan pasukan kejuruteraan kami,
+    kami ingin berkongsi lebih lanjut mengenai organisasi kejuruteraan kami di Code.org
+    dan beberapa aspek unik bekerja di sini. Jika anda berminat untuk memohon salah
+    satu peranan kami, kami ingin mendengar daripada anda!
+  engineering_team_title: Temui pasukan kejuruteraan di Code.org
+  engineering_team_card_text_1: Ini adalah (kebanyakan) kita berkumpul secara peribadi
+    pada musim panas 2023! Orang ramai ini dibahagikan kepada empat sub-pasukan dalam
+    pasukan kejuruteraan kami yang bekerjasama untuk membina dan melayani platform
+    untuk semua pelajar dan guru kami.
+  engineering_team_card_text_2: Jika anda berminat untuk memohon salah satu peranan
+    kami, kami ingin mendengar daripada anda! Anda boleh mendapatkan senarai jawatan
+    terbuka di halaman Kerjaya kami.
+  engineering_our_team_title: Pasukan kejuruteraan kami
+  engineering_our_team_desc: 'Pasukan kejuruteraan di Code.org dibahagikan kepada
+    empat sub-pasukan yang membina dan menyokong pelbagai bidang platform kami:'
+  engineering_our_team_sub_title_1: Pasukan Pembelajaran Pelajar
+  engineering_our_team_text_1: Pasukan Pembelajaran Pelajar kami memiliki semua aktiviti
+    kami (kami memanggil mereka makmal) yang digunakan oleh pelajar kami setiap hari.
+    Pasukan ini bekerja kebanyakannya pada teknologi front-end (kami menggunakan React
+    dan banyak JS adat) dan kami mempunyai hubungan kerja yang hebat dengan banyak
+    rakan kongsi dan projek sumber terbuka. Sebagai contoh, kami menggunakan [Google
+    Blockly] (%{youtube_url}) untuk semua pengaturcaraan berasaskan blok kami. Kami
+    menyokong pelajar dalam perjalanan pembelajaran mereka dari Tadika hingga gred
+    12.
+  engineering_our_team_sub_title_2: Teacher Experience Team
+  engineering_our_team_text_2: Pasukan Pengalaman Guru kami membina alat yang menarik
+    guru baru ke Code.org (kami memanggil produk pemerolehan ini) dan mengembangkan
+    platform yang memberi kuasa kepada guru kami yang ada untuk mengajar kurikulum
+    kami (alat guru kami). Seperti alat pelajar kami, kami bergantung pada React untuk
+    membina bahagian depan kami dan komponen sisi pelayan kami dihidangkan menggunakan
+    Ruby on Rails.
+  engineering_our_team_sub_title_3: Pasukan Platform
+  engineering_our_team_text_3: Pasukan Platform kami memiliki komponen teras yang
+    memenuhi keperluan pasukan pelajar dan guru kami (contohnya, pengesahan dan profil
+    pengguna) dan juga mempunyai misi untuk menjangkau pelajar yang belum dapat kami
+    jangkau. Ini termasuk membina integrasi yang menghubungkan kami dengan sekolah
+    yang menggunakan Sistem Pengurusan Pembelajaran (LMS) yang berbeza dan mengemas
+    kurikulum kami sehingga dapat digunakan di sekolah terpencil yang tidak mempunyai
+    akses ke internet yang boleh dipercayai.
+  engineering_our_team_sub_title_4: Pasukan Infrastruktur
+  engineering_our_team_text_4: Pasukan Infrastruktur kami menyediakan tulang belakang
+    untuk platform yang menyokong pelajar dan guru kami. Ini termasuk infrastruktur
+    hosting kami dan perkhidmatan yang berkaitan (kami menggunakan AWS), pengurusan
+    data, program keselamatan, perkhidmatan pemaju dan penggunaan dan banyak lagi.
+    Pasukan ini juga memiliki sistem penskalaan dan peruntukan kami, yang sangat penting
+    semasa Hour of Code, di mana kami menjemput setiap pelajar di dunia untuk menyelesaikan
+    satu jam pengekodan dengan kami.
+  engineering_faq_question_1: Apa yang Code.org lakukan?
+  engineering_faq_answer_1_a: Code.org adalah inovasi pendidikan bukan keuntungan
+    khusus untuk visi bahawa setiap pelajar di setiap sekolah mempunyai peluang untuk
+    belajar sains komputer sebagai sebahagian daripada pendidikan K-12 teras mereka.
+  engineering_faq_answer_1_b: Kami memperluas akses kepada sains komputer di sekolah,
+    dengan fokus pada peningkatan penyertaan oleh wanita muda dan pelajar dari kumpulan
+    lain yang kurang diwakili. Pembekal utama kurikulum sains komputer K-12 di daerah
+    sekolah terbesar di Amerika Syarikat, Code.org juga menganjurkan kempen Hour of
+    Code tahunan, yang telah melibatkan lebih daripada 15% daripada semua pelajar
+    di dunia.
+  engineering_faq_answer_1_c: Code.org disokong oleh penderma murah hati termasuk
+    Microsoft, Amazon, Google dan banyak lagi.
+  engineering_faq_question_2: Apakah pengalaman dan perkakas pemaju Code.org?
+  engineering_faq_answer_2: Pengalaman pembangun kami mungkin berbeza dengan apa yang
+    anda lihat dalam peranan masa lalu anda. Bekerja rapat dengan pasukan produk kami,
+    kami menghantar ke pengeluaran setiap hari bekerja dan kami mempunyai pelbagai
+    irama - kadangkala anda menulis kod yang disiarkan pada hari itu; pada masa lain
+    anda berada dalam projek jangka panjang - dan semasa kami mengikuti pecut 2 minggu,
+    kami melakukannya dengan cara yang ringan. Kami mengindeks ke arah mendapatkan
+    perkara yang betul dilakukan dengan cara yang betul berbanding mengambil pandangan
+    murni mengenai sebarang metodologi tertentu. [Semua kod kami] (%{code_url}) adalah
+    sumber terbuka dan kami menggunakan permintaan tarik JIRA dan GitHub untuk mengesan
+    semua item kerja kami. Kami juga mengambil berat tentang kualiti dan ujian dan
+    bernasib baik kerana mendapat sokongan yang luar biasa dari [SauceLabs](%{saucelabs_url}),
+    yang membantu kami menjalankan rangkaian ujian UI kami pada pelbagai peranti pelajar
+    (contohnya, iPad) di ladang peranti awan mereka.
+  engineering_faq_question_3: Apakah putaran panggilan jurutera di Code.org?
+  engineering_faq_answer_3: 30+ pasukan kejuruteraan kami berkongsi tanggungjawab
+    semasa panggilan. Setiap jurutera meliputi peralihan 24 jam dan menggunakan laluan
+    peningkatan dan buku permainan kami untuk bertindak balas terhadap gangguan tapak
+    atau isu tapak langsung yang lain. Kami berbangga dengan kebolehpercayaan laman
+    web kami - rata-rata, setiap jurutera hanya bangun sekali setahun untuk masalah
+    yang biasanya cepat diselesaikan. Sebaliknya, “Pembangun Hari” biasanya membelanjakan
+    sebahagian daripada hari kerja mereka menguruskan penggunaan pengeluaran dan triaging
+    isu-isu yang kurang mendesak.
+  engineering_faq_question_4: Adakah anda organisasi mesra jauh/WFH?
+  engineering_faq_answer_4_a: Ya! Pada tahun 2019, tidak lama sebelum wabak itu, Code.org
+    menjadi organisasi jarak jauh. Hari ini, kami mempunyai jurutera di setiap zon
+    waktu AS dan menampung waktu bekerja dengan sewajarnya. Kebanyakan mesyuarat kami
+    berlaku antara jam 10 pagi dan 3 petang PT.
+  engineering_faq_answer_4_b: Kami juga menyedari nilai masa secara peribadi, dan
+    setiap suku tahun kami berkumpul secara peribadi, biasanya di Seattle. Dua daripada
+    peristiwa ini (kami memanggilnya Minggu Kick-off dan “Codechella”) membawa semua
+    orang dalam organisasi bersama-sama pada bulan Januari dan Jun - dan pasukan kejuruteraan
+    dan produk bertemu secara berasingan pada bulan April dan Oktober.
+  engineering_faq_answer_4_c: Kami sangat percaya untuk meluangkan masa bersama pelajar
+    dan guru kami, begitu banyak acara bersemuka ini termasuk perjalanan ke sekolah
+    dan bilik darjah untuk mengumpulkan maklum balas atau menguji produk kami
+  engineering_faq_question_5: Apa yang menjadikan pasukan kejuruteraan di Code.org
+    unik?
+  engineering_faq_answer_5_a: 'Selain menyelesaikan masalah teknikal yang mencabar,
+    kami mempunyai beberapa perkara yang menjadikan organisasi kejuruteraan kami berbeza
+    daripada yang lain yang mungkin pernah anda kerjakan:'
+  engineering_faq_answer_5_b_1: Kami semua berkongsi semangat kami untuk misi kami.
+  engineering_faq_answer_5_b_2: Setiap daripada kita berada di sini untuk menyokong
+    misi untuk mengembangkan akses kepada sains komputer untuk setiap pelajar di seluruh
+    dunia. Kita semua mempunyai kisah dan perspektif unik tentang apa yang mendorong
+    kita ke arah misi ini.
+  engineering_faq_answer_5_c_1: Kami sangat peduli antara satu sama lain.
+  engineering_faq_answer_5_c_2: Apabila jurutera bergelut dengan masalah, kami melangkah
+    masuk dan kami membantu. Salah satu prinsip kami ialah kami sukar menghadapi masalah,
+    tetapi baik antara satu sama lain. Kami mempromosikan jurutera secara berkala,
+    tetapi kami tidak menetapkan penyelesaian yang terlalu banyak kejuruteraan hanya
+    untuk menyokong jalan promosi seseorang. Sebaliknya, kami melabur dalam jurutera
+    kami dengan bajet pembangunan profesional yang murah hati dan akses kepada peluang
+    pembelajaran yang lain.
+  engineering_faq_answer_5_d_1: Kami bekerja keras, tetapi kami menetapkan sempadan
+    yang jelas.
+  engineering_faq_answer_5_d_2: Walaupun kami menyokong pelajar di seluruh dunia,
+    kami bertanggungjawab untuk sempadan yang jelas antara kerja dan kehidupan rumah.
+    Kami menikmati hari Rabu tanpa mesyuarat, mengambil PTO kami (jumlah minggu 5,
+    yang merangkumi penutupan pejabat 2 minggu di seluruh dunia pada akhir tahun aka
+    Cuti Musim Sejuk), separuh hari bekerja pada hari Jumaat semasa musim panas aka
+    Jumaat Musim Panas, dan faedah lain yang murah hati.
+  careers_hero_title: Kerjaya
+  careers_hero_description: Code.org adalah organisasi bukan untung yang berdedikasi
+    untuk memperluas akses ke sains komputer di sekolah. Kami memberi tumpuan terutamanya
+    kepada peningkatan penyertaan di kalangan wanita muda dan pelajar yang kurang
+    diwakili.
+  careers_hero_description_under: Bantu kami mengubah dunia, seorang pelajar pada
+    satu masa!
+  careers_vision_title: Visi kami
+  careers_vision_decsription: Visi kami adalah bahawa setiap pelajar di setiap sekolah
+    harus mempunyai peluang untuk belajar sains komputer sebagai sebahagian daripada
+    pendidikan K-12 teras mereka.
+  careers_vision_description_under: Mari sertai pasukan kami untuk membantu merealisasikan
+    visi ini!
+  careers_values_title: Nilai teras kami
+  careers_values_first_column_text_1: Kami percaya sains komputer adalah asas untuk
+    semua pelajar
+  careers_values_first_column_text_2: Kami komited terhadap ekuiti, akses, dan peluang
+  careers_values_first_column_text_3: Kami percaya kepada kuasa komuniti pendidikan
+    kolaboratif
+  careers_values_second_column_text_1: Kami tangkas dan responsif terhadap maklum
+    balas
+  careers_values_second_column_text_2: Kami bertindak dengan integriti dan ketelusan
+  careers_values_second_column_text_3: Kami percaya impak luas memerlukan pemikiran
+    besar dan bertindak secara holistik
+  careers_approach_section_title: Pendekatan penyatuan kami
+  careers_approach_section_description: Peranan global Code.org dalam pergerakan sains
+    komputer K-12 hanya mungkin kerana kami menggunakan pendekatan penyatuan di antara
+    pihak berkepentingan yang pelbagai dan sering dibahagikan. Pada masa polarisasi
+    yang semakin meningkat, idea untuk meningkatkan peluang untuk pelajar menyatukan
+    orang dari seluruh spektrum politik. Ahli pasukan Code.org, pelajar, guru, dan
+    penyokong mempunyai sudut pandangan yang pelbagai dan berbeza, dan mereka semua
+    dialu-alukan dalam misi kami.
+  careers_aproach_section_description_link: Baca lebih lanjut mengenai pendekatan
+    Code.org untuk perpaduan.
+  careers_approach_section_button: Terokai peranan terbuka
+  careers_principle_section_title: Prinsip budaya kita
+  careers_principle_title_1: Pelajar dan guru kami adalah Bintang Utara kami
+  careers_principle_description_1: Kami menggunakan hadiah, masa dan tenaga kami untuk
+    membawa sains komputer kepada mereka yang paling memerlukannya. Inilah yang menyatukan
+    kita. Inilah prinsip kami yang paling penting.
+  careers_principle_title_2: Kami sukar menghadapi masalah dan baik antara satu sama
+    lain
+  careers_principle_description_2: Kami tetap fokus pada cabaran membawa sains komputer
+    kepada pelajar dan guru di seluruh dunia. Kami menyedari bahawa setiap daripada
+    kita membawa yang terbaik dari niat kita untuk menyokong misi kita dan memberi
+    rahmat apabila kita membuat kesilapan.
+  careers_principle_title_3: Cari penyelesaian, bukan konsensus
+  careers_principle_description_3: Kami memiliki keputusan, sama ada mengambil langkah
+    kecil atau lompatan besar ke arah hasil yang kami cari. Pemilik meminta dan mendengar,
+    tetapi tidak lumpuh oleh maklum balas. Kami menerima dan menyokong keputusan pemilik,
+    walaupun kami tidak bersetuju.
+  careers_principle_title_4: Mengamalkan mentaliti pengasas
+  careers_principle_description_4: Kami terobsesi dengan hasil dan memfokuskan tindakan
+    kami untuk memacu mereka. Kami menyelami butiran dan bekerja keras. Kami jujur,
+    bersandar pada ketangkasan, dan terus menilai jika kami berada di landasan yang
+    betul; kami tidak takut untuk berputar. Mengubah dunia menuntutnya.
+  careers_principle_title_5: Inovasi juara
+  careers_principle_description_5: Kami berfikir besar, mengambil risiko, dan tidak
+    takut gagal. Jika kita melihat cara yang lebih baik untuk mencapai matlamat kita,
+    kita melakukannya dan menggalakkan orang lain untuk melakukannya juga. Penyelesaian
+    tambahan tidak akan membantu mengubah dunia.
+  careers_principle_title_6: Keputusan utama dalam fakta
+  careers_principle_description_6: Kami menggunakan data untuk memahami perniagaan
+    kami, mewujudkan hasil yang diingini, dan membimbing membuat keputusan. Kami mengimbangi
+    ini dengan menyedari bahawa kami tidak akan selalu mempunyai data yang kami perlukan
+    untuk bertindak.
+  careers_principle_title_7: Mindset pertumbuhan mendorong kita
+  careers_principle_description_7: Kami mendekati setiap cabaran dengan rasa ingin
+    tahu. Kami memberi maklum balas dengan baik dan terus terang; kami menerima maklum
+    balas secara terbuka. Kami belajar daripada kesilapan kami dan mencari cara untuk
+    meningkatkan jangkauan dan kesan kerja kami.
+  careers_balance_section_title: Keseimbangan kerja-kehidupan kami
+  careers_balance_section_description: Kami mengambil berat tentang pekerja kami dan
+    berdedikasi untuk menyokong semua orang di tempat kerja dan di luar tempat kerja.
+    Kami tahu bahawa setiap orang mempunyai keperluan yang berbeza, itulah sebabnya
+    kami menawarkan pakej faedah holistik yang akan memastikan bahawa anda (dan keluarga
+    anda) dijaga.
+  careers_balance_first_column_text_1: Faedah kesihatan untuk anda dan keluarga anda
+  careers_balance_first_column_text_2: Masa berbayar yang murah hati dan meninggalkan
+    rancangan
+  careers_balance_second_column_text_1: Persekitaran kerja yang fleksibel dan menyokong
+  careers_balance_second_column_text_2: Pertumbuhan dan peluang pembelajaran profesional
+  careers_openroles_section_title: Peranan terbuka
+  careers_openroles_section_description: Code.org berpusat di Seattle, tetapi banyak
+    ahli pasukan kami jauh. Calon jauh dialu-alukan dan digalakkan untuk memohon.
+  careers_more_info_text: Untuk maklumat lebih lanjut mengenai Code.org, lihat [Soalan
+    Lazim] (%{support_url}) kami atau pelajari tentang [cara lain untuk terlibat dengan
+    misi kami] (%{help_url}).
+  careers_approach_section_title2: Pendekatan kami terhadap kepelbagaian
+  careers_approach_section_description_1: Kami menerima pelbagai perspektif, idea
+    dan latar belakang di Code.org. Kami komited untuk menyediakan peluang yang sama
+    kepada semua pekerja dan pemohon. Kami tidak mendiskriminasi berdasarkan bangsa,
+    agama, warna kulit, asal negara, jantina, orientasi seksual, umur, status perkahwinan,
+    status veteran, atau status kecacatan (mental dan fizikal).
+  careers_approach_section_description_2: Kami akan memastikan bahawa individu kurang
+    upaya disediakan penginapan yang munasabah untuk mengambil bahagian dalam permohonan
+    kerja atau proses temu duga, untuk melaksanakan fungsi pekerjaan penting, dan
+    untuk menerima faedah dan keistimewaan pekerjaan lain. Jika anda mempunyai keperluan
+    individu yang berkaitan dengan kecacatan, sila hubungi accommodations@code.org.
+  csa_ai_page_hero_title: Kejuruteraan Perisian & Visi Komputer
+  csa_ai_page_hero_description: 'Modul Post-AP CSA dua bab ini menawarkan pengalaman
+    langsung kepada pelajar sekolah menengah dengan alat pengembangan perisian profesional,
+    termasuk GitHub dan GitHub Copilot, dan memberikan mereka kemahiran dunia nyata
+    untuk mengembangkan program penglihatan komputer. '
+  csa_ai_page_video_section_title: Melangkaui dunia persekitaran pengaturcaraan Code.org
+  csa_ai_page_video_section_li_1: Ketahui mengenai AI dan aplikasinya
+  csa_ai_page_video_section_li_2: Pengalaman praktikal dengan alat pembangunan perisian
+    profesional
+  csa_ai_page_video_section_li_3: Ketahui amalan standard industri
+  csa_ai_page_video_section_li_4: Memupuk pemikiran kritis
+  csa_ai_page_programming_tools: 'Alat Pengaturcaraan: Github, Github Copilot, VSCode,
+    TensorFlow '
+  csa_ai_page_professional_learning: Tiada
+  csa_ai_page_curriculum_topics: 'Topik: Pengaturcaraan, Data, Seni dan Reka Bentuk,
+    Permainan dan Animasi'
+  csa_ai_page_curriculum_accessibility_features: Lihat bahagian Soalan Lazim untuk
+    maklumat lanjut
+  csa_ai_page_curriculum_languages_support: Bahasa Inggeris
+  csa_ai_page_article_title_1: Membina dengan Copilot
+  csa_ai_page_article_description_1: Pelajar belajar bagaimana menggunakan GitHub
+    Copilot sebagai pengaturcara pasangan untuk menerangkan kod sedia ada, mencari
+    dan membetulkan ralat, dan menjana penyelesaian kepada masalah baharu.
+  csa_ai_page_article_link_1: Ketahui lebih lanjut mengenai Copilot
+  csa_ai_page_article_title_2: Bina model AI anda sendiri
+  csa_ai_page_article_description_2: Pelajar melatih model AI mereka sendiri menggunakan
+    Teachable Machine untuk mengenali gambar dan gerak isyarat membentuk kamera web
+    dan mempertimbangkan bagaimana penglihatan komputer mempengaruhi cara pengguna
+    berinteraksi dengan aplikasi.
+  csa_ai_page_article_link_2: Terokai rancangan pelajaran
+  csa_ai_page_article_title_3: Terokai penglihatan komputer
+  csa_ai_page_article_description_3: Pelajar menerapkan model AI yang mereka buat
+    dengan Teachable Machine ke dalam aplikasi Java, menggunakan GitHub Copilot untuk
+    membantu mereka mengubah versi aplikasi yang ada untuk berfungsi dengan input
+    yang berbeza.
+  csa_ai_page_article_link_3: Lihat contoh
+  csa_ai_page_learn_more_section_title: Ketahui lebih lanjut mengenai Kecerdasan Buatan
+  csa_ai_page_learn_more_title: Terokai AI 101 untuk Guru
+  csa_ai_page_learn_more_description: Temui dunia Artificial Intelligence (AI) yang
+    inovatif dan potensi transformatifnya dalam pendidikan dengan siri pembelajaran
+    dalam talian komprehensif kami untuk guru.
+  csa_ai_page_learn_more_link: Tonton siri AI 101 untuk Guru
+  csa_ai_page_faq_question_01: Apakah prasyarat untuk modul ini?
+  csa_ai_page_faq_answer_01_01: 'Sebelum menyelam ke dalam modul ini, pelajar harus
+    memiliki pengetahuan peringkat kemasukan Jawa. Khususnya, mereka harus memahami:'
+  csa_ai_page_faq_answer_01_list_01: "**Kelas dan Objek: ** Pelajar harus biasa dengan
+    menentukan dan menggunakan kelas, serta membuat dan memanipulasi objek."
+  csa_ai_page_faq_answer_01_list_02: "**Kaedah Penulisan dan Panggilan: ** Pelajar
+    harus dapat menentukan kaedah dalam kelas, memahami parameter kaedah dan jenis
+    pengembalian, dan kaedah panggilan dari objek atau kaedah lain."
+  csa_ai_page_faq_answer_01_list_03: "**1D Array dan ArrayLists: ** Mereka harus mahir
+    dalam mengisytiharkan, memulakan, dan memanipulasi tatasusunan satu dimensi dan
+    ArrayLists, termasuk melelar melalui mereka."
+  csa_ai_page_faq_answer_01_list_04: "**Pemilihan dan Pengulangan: ** Asas yang kukuh
+    dalam pernyataan dan gelung bersyarat adalah penting."
+  csa_ai_page_faq_question_01_02: Sebaik-baiknya, pelajar yang telah menamatkan AP
+    Sains Komputer A atau kursus kedalaman dan ketegasan yang serupa akan bersedia
+    untuk modul ini.
+  csa_ai_page_faq_question_02: Bagaimana saya memasang perisian yang diperlukan untuk
+    modul ini?
+  csa_ai_page_faq_answer_02_01: Modul ini unik kerana melibatkan penggunaan perisian
+    pihak ketiga dan bukannya makmal dan alat Code.org. [Baca lebih lanjut mengenai
+    memasang perisian di sini] (%{accessibility_url}).
+  csa_ai_page_faq_question_03: Bagaimanakah saya boleh menyokong keperluan kebolehcapaian
+    semasa mengajar modul ini?
+  csa_ai_page_faq_answer_03_01: Melayan keperluan aksesibilitas sangat penting untuk
+    persekitaran pembelajaran yang inklusif. [Baca lebih lanjut mengenai ciri kebolehcapaian
+    dalam perisian yang digunakan dalam modul ini di sini] (%{install_url}).
+  csa_ai_page_faq_question_04: Bagaimana saya menggunakan Kod VS pada Chromebook?
+  csa_ai_page_faq_answer_04: Menggunakan Kod VS pada Chromebook telah menjadi lebih
+    mudah, terutamanya dengan keupayaan untuk menjalankan aplikasi Linux pada model
+    Chromebook yang lebih baru. [Baca lebih lanjut mengenai menyediakan Kod VS pada
+    Chromebook di sini] ()%{chromebook_url}.
+  csa_ai_page_faq_question_05: Bagaimanakah saya boleh mendapatkan pembangunan profesional
+    untuk modul ini?
+  csa_ai_page_faq_answer_05: Tidak ada perkembangan profesional khusus untuk kursus
+    ini pada masa ini. Sekiranya anda ingin memahami cara mendekati Kecerdasan Buatan
+    di bilik darjah anda, anda boleh [meneroka AI 101 untuk Guru] (%{ai_101_url}).
+  csa_ai_page_faq_question_06: Apakah masa yang disyorkan untuk mengajar modul ini?
+  csa_ai_page_faq_answer_06_01: Modul Kejuruteraan Perisian & Visi Komputer disusun
+    dengan teliti untuk menyediakan pembelajaran komprehensif dalam jangka masa yang
+    ringkas. Keseluruhan modul direka untuk merangkumi **2 minggu arahan**. Kebanyakan
+    pelajaran disesuaikan untuk **45 minit**, manakala pelajaran di mana pelajar menyelidiki
+    pembangunan projek Java secara langsung direka untuk **90 minit**. Masa lanjutan
+    ini memastikan pelajar mempunyai peluang yang mencukupi untuk memahami, melaksanakan,
+    dan menyelesaikan masalah semasa mereka bekerja.
+  csa_ai_page_faq_answer_06_02: Terdapat juga fleksibiliti yang disengajakan yang
+    dibina ke dalam struktur modul. Bergantung pada dinamika kelas, penglibatan pelajar,
+    dan kedalaman yang ingin anda terokai setiap topik, anda boleh menyesuaikan tempohnya.
+    Sebagai contoh, pelajaran Pengenalan kepada Copilot, yang direka sebagai pelajaran
+    45 minit, boleh diperluaskan kepada 90 minit jika anda ingin menyelam lebih mendalam
+    tentang bagaimana model dan alat bahasa besar seperti GitHub Copilot dan ChatGPT
+    berfungsi.
+  csa_ai_page_faq_question_07: How can I access answer keys?
+  csa_ai_page_faq_answer_07: Dengan akaun guru yang diluluskan, anda boleh mencari
+    kunci jawapan dalam panel “Guru” Hanya biru yang menunjukkan dalam pelajaran dan
+    aktiviti dalam talian.Sekiranya anda memerlukan akaun guru yang diluluskan, anda
+    boleh memohon akses kepada bahan guru yang dilindungi sahaja (kunci jawapan, dll)
+    melalui [borang ini] ().%{form_url}Sila ambil perhatian bahawa ia mungkin mengambil
+    masa 3-5 hari bekerja untuk mengesahkan akaun anda.
+  csa_ai_page_faq_question_08: Adakah modul ini dipetakan kepada piawaian?
+  csa_ai_page_faq_answer_08: Ya, kurikulum Kejuruteraan Perisian & Visi Komputer dipetakan
+    ke [Piawaian CSTA K-12] (%{csta_k12_url}) dan AI untuk [Garis Panduan K-12] ().%{k12_url}
+  csa_ai_page_faq_question_09: Berapa kos untuk mengajar modul ini?
+  csa_ai_page_faq_answer_09_01: Kurikulum dan platform kami boleh didapati di [tanpa
+    kos] (%{no_cost_url}) untuk sesiapa sahaja, di mana sahaja, untuk mengajar!
+  csa_ai_page_faq_answer_09_02: Selain itu, perisian dan alat yang digunakan dalam
+    modul ini adalah percuma. GitHub Copilot adalah percuma untuk disahkan [teachers](%{teachers_url})
+    dan (). [students]%{students_url}
+  csa_ai_page_faq_question_10: apa yang perlu saya lakukan jika pemasangan perisian
+    tidak berfungsi?
+  csa_ai_page_faq_answer_10: Menghadapi masalah semasa pemasangan perisian boleh menjadi
+    perkara biasa, tetapi terdapat langkah-langkah sistematik yang boleh anda ikuti
+    untuk menyelesaikan masalah dan menyelesaikannya. [Lihat beberapa petua penyelesaian
+    masalah di sini] (%{troubleshooting_url}).
+  csa_ai_page_faq_question_11: How was the curriculum developed?
+  csa_ai_page_faq_answer_11_01: 'Kurikulum Kejuruteraan Perisian & Visi Komputer kami
+    direka dengan mengambil kira Nilai Kurikulum kami. Matlamat berikut membimbing
+    penciptaan kurikulum ini:'
+  csa_ai_page_faq_answer_11_list_01: "**Matlamat 1: ** Gunakan alat AI untuk menjana,
+    menyahpepijat dan mengedit kod."
+  csa_ai_page_faq_answer_11_list_02: "**Matlamat 2: ** Peralihan dari Makmal Java
+    ke alat dunia nyata."
+  csa_ai_page_faq_answer_11_list_03: "**Matlamat 3: ** Memperdalam pemahaman tentang
+    bagaimana model AI dilatih dan disepadukan ke dalam program."
+  csa_ai_page_faq_answer_11_02: Untuk maklumat lebih lanjut mengenai nilai-nilai yang
+    membimbing kerja kami, sila lihat [nilai kurikulum] kami (%{curriculum_values_url}).
+  video_library_page_main_title: Video pendek pendidikan
+  video_library_page_hero_description: Perpustakaan video pendidikan Code.org yang
+    semakin meningkat tersedia untuk digunakan semula oleh pendidik di seluruh dunia,
+    dalam talian atau di bilik darjah. Matlamat kami adalah untuk memperkuat usaha
+    kami di luar jangkauan kurikulum kami sendiri.
+  video_library_page_title_ai_works: Bagaimana AI Berfungsi
+  video_library_page_description_ai_works: Siri video pendek ini akan memperkenalkan
+    anda bagaimana kecerdasan buatan berfungsi dan mengapa ia penting. Ketahui mengenai
+    rangkaian saraf, atau bagaimana AI belajar, dan menyelidiki isu-isu seperti bias
+    algoritma dan etika membuat keputusan AI.
+  video_library_page_title_computers_work: Bagaimana Komputer Berfungsi
+  video_library_page_description_computers_work: Menjelaskan apa yang menjadikan komputer
+    komputer, bagaimana maklumat digital diwakili dalam 1s dan 0s, bagaimana litar
+    komputer berfungsi untuk memanipulasi maklumat digital, dan bagaimana unit pemprosesan
+    pusat (CPU) dan sistem operasi mengawal input, output, memori, dan perkakasan
+    komputer.
+  video_library_page_title_internet_works: Cara Internet Berfungsi
+  video_library_page_description_internet_works: Menampilkan Vint Cerf, pencipta TCP/IP,
+    David Karp pengasas Tumblr untuk menjelaskan HTTP dan HTML, Puteri Keselamatan
+    Google untuk menjelaskan SSL dan keselamatan siber, dan jurutera dari Microsoft,
+    Spotify, dan Symantec. Siri video pendek ini menerangkan Bagaimana Internet Berfungsi.
+  video_library_page_title_not_hacked: Bagaimana untuk tidak digodam
+  video_library_page_description_not_hacked: Internet terbuka, jadi semua yang berlaku
+    di atasnya dapat dilihat kecuali ia dilindungi. Di negara-negara moden, orang
+    lebih bimbang untuk digodam daripada jenayah lain. Kenapa? Kerana setiap komputer
+    atau telefon di Internet selalu diuji untuk kelemahan oleh penjenayah, pengganas,
+    atau bahkan pelaku negara. Jika anda tidak berhati-hati, seseorang boleh menggodam
+    peranti atau akaun anda, dan juga mencuri identiti atau wang anda.
+  video_library_page_title_blockchain: Bagaimana Blockchain Berfungsi
+  video_library_page_description_blockchain: Dibuat dengan kerjasama Coinbase, siri
+    ini menampilkan pakar industri dan bertujuan untuk menyahstifikasi teknologi ini
+    dengan meneroka apa itu blockchain, bagaimana ia berfungsi, dan potensi implikasi
+    masyarakatnya - baik dan buruk.
+  video_library_page_title_careers: Kerjaya dalam CS
+  video_library_page_description_careers: Kerjaya dalam sains komputer dan teknologi
+    boleh menjadi menyeronokkan dan bermanfaat. Tetapi apa yang sebenarnya dilakukan
+    oleh seseorang yang bekerja di bidang ini? Dengan pelbagai jenis pekerjaan dan
+    syarikat, tidak ada satu jawapan untuk soalan ini. Tonton video di bawah untuk
+    bertemu dengan beberapa orang yang menangani masalah besar dengan cara yang kreatif.
+  video_library_page_title_inspirational: Inspirasi
+  video_library_page_description_inspirational: Apa yang akan berubah sains komputer
+    di dunia kita? Segala-galanya? Untuk siapa? Semua orang! Tonton video ini untuk
+    memberi inspirasi dan motivasi kepada anda.
+  video_library_page_footer_description: Mencari sesuatu yang lain? Kami mempunyai
+    begitu banyak video hebat yang terdapat di saluran Youtube kami.
+  video_library_page_footer_cta: Terokai semua video Code.org di YouTube
+  video_library_page_computer_work_video_title_1: Memperkenalkan Bagaimana Komputer
+    Berfungsi
+  video_library_page_computer_work_video_title_2: Binari dan Data
+  video_library_page_computer_work_video_title_3: CPU, Memori, Input, dan Output
+  video_library_page_computer_work_video_title_4: Apa yang Membuat Komputer, Komputer?
+  video_library_page_computer_work_video_title_5: Litar Logik
+  video_library_page_computer_work_video_title_6: Perkakasan dan Perisian
+  video_library_page_internet_work_video_title_1: Apa itu internet?
+  video_library_page_internet_work_video_title_2: 'INTERNET: Alamat IP dan DNS'
+  video_library_page_internet_work_video_title_3: 'INTERNET: HTTP dan HTML'
+  video_library_page_internet_work_video_title_4: 'INTERNET: Keselamatan Siber & Jenayah'
+  video_library_page_internet_work_video_title_5: 'INTERNET: Wayar, Kabel, & Wifi'
+  video_library_page_internet_work_video_title_6: 'INTERNET: Paket, Penghalaan dan
+    Kebolehpercayaan'
+  video_library_page_internet_work_video_title_7: 'INTERNET: Penyulitan & Kunci Awam'
+  video_library_page_internet_work_video_title_8: 'INTERNET: Bagaimana Carian Berfungsi'
+  video_library_page_cs_video_title_1: Nama saya Jerome dan saya seorang Teknolog
+    Reka Bentuk di Meow Wolf
+  video_library_page_cs_video_title_2: Nama saya Nikesha dan saya seorang Jurutera
+    Aeroangkasa di NASA
+  video_library_page_cs_video_title_3: Nama saya Brina dan saya seorang Jurutera Perisian
+    di Instagram
+  video_library_page_cs_video_title_4: Nama saya Kinsley dan saya seorang Jurutera
+    Perisian di Facebook
+  video_library_page_cs_video_title_5: Nama saya Polina dan saya seorang Saintis Data
+    di Electronic Arts
+  video_library_page_cs_video_title_6: Nama saya Danelle dan saya seorang Jurutera
+    Perisian di MBARI
+  video_library_page_cs_video_title_7: Nama saya Christopher dan saya seorang Penganalisis
+    Keselamatan di Tanium
+  video_library_page_cs_video_title_8: Nama saya Federico dan saya seorang Pengurus
+    Program Teknikal di Microsoft
+  video_library_page_cs_video_title_9: Nama saya Tess dan saya seorang Jurutera Perisian
+    di Google
+  video_library_page_inspirational_video_title_1: Tukar Wajah Sains Komputer (3 min)
+  video_library_page_inspirational_video_title_2: Tolak diri anda. Sesiapa sahaja
+    boleh belajar. (1 minit)
+  video_library_page_inspirational_video_title_3: Memberi inspirasi kepada seorang
+    gadis (2 min)
+  video_library_page_inspirational_video_title_4: Apakah perkara yang Tidak Diajar
+    oleh Kebanyakan Sekolah (5 minit)
+  video_library_page_inspirational_video_title_5: Jam Kod Ada Di Sini - Sesiapa sahaja
+    Boleh Belajar (2 min)
+  video_library_page_inspirational_video_title_6: Nama Saya Aracely (3 min)
+  video_library_page_inspirational_video_title_7: Jam Kod dengan Steph Curry (2 minit)
+  video_library_page_inspirational_video_title_8: Sains Komputer Mengubah Segala-galanya
+    (5 min)
+  video_library_page_inspirational_video_title_9: Pengenalan Sains Komputer (1 min)
+  video_library_page_inspirational_video_title_10: Presiden Obama mengenai sains komputer
+    (1 minit)
+  video_library_page_inspirational_video_title_11: Sesiapa sahaja boleh belajat (1
+    minit)
+  video_library_page_inspirational_video_title_12: Lo Que Falta En Nuestras Escuelas
+    (2 min)
+  video_library_page_not_hacked_video_title_1: 'Bagaimana Untuk Tidak Digodam: Pengenalan'
+  video_library_page_not_hacked_video_title_2: 'Bagaimana Untuk Tidak Digodam: Kata
+    Laluan'
+  video_library_page_not_hacked_video_title_3: 'Bagaimana Untuk Tidak Digodam: Pengesahan
+    dan Kunci Peranti'
+  video_library_page_not_hacked_video_title_4: 'Bagaimana Untuk Tidak Digodam: Phishing'
+  video_library_page_not_hacked_video_title_5: 'Bagaimana Untuk Tidak Digodam: Laman
+    Web dan Wifi'
+  video_library_page_not_hacked_video_title_6: 'Bagaimana Untuk Tidak Digodam: Pemesejan
+    dan Muat Turun'
+  video_library_page_not_hacked_video_title_7: 'Bagaimana Untuk Tidak Digodam: Pasang
+    Kemas Kini'
   language_code:
     ar: Bahasa Arab
     az: Azerbaijan

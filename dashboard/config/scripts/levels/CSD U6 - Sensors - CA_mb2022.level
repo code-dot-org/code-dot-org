@@ -1,5 +1,10 @@
 <Applab>
   <config><![CDATA[{
+  "published": true,
+  "game_id": 41,
+  "created_at": "2023-02-01T10:51:01.000Z",
+  "level_num": "custom",
+  "user_id": 1,
   "properties": {
     "skin": "applab",
     "code_functions": {
@@ -95,7 +100,6 @@
     "bubble_choice_description": "Learn to use the threshold block with the sound sensor",
     "thumbnail_url": "https://images.code.org/7f8fca3bef40cd07285bdab6b8858b1a-mb-Challenge.png",
     "start_html": "<div id=\"designModeViz\" class=\"appModern\" tabindex=\"1\" data-radium=\"true\" style=\"display: none; width: 320px; height: 450px;\"><div class=\"screen\" tabindex=\"1\" data-theme=\"default\" id=\"screen1\" style=\"display: block; height: 450px; width: 320px; left: 0px; top: 0px; position: absolute; z-index: 0; background-color: rgb(255, 255, 255);\"></div></div>",
-    "preload_asset_list": null,
     "encrypted_examples": "NOg0cq6eCHRzlHQuup7h524FCiPYy9bon9UFyvdrGN4i97f6f/PYHmlYl8hv\nJ+tlbpBVpwvd1uUZaJecPzVDKw==\n",
     "reference_links": [
       "/courses/csd-2022/guides/microbit-sensors",
@@ -104,16 +108,13 @@
       "/courses/csd-2022/guides/board-events",
       "/courses/csd-2022/guides/microbit-physical-input",
       "/courses/csd-2022/guides/microbit-display",
-      "/courses/csd-2022/guides/microbit-overview"
-    ]
+      "/courses/csd-2022/guides/microbit-overview",
+      "/maker/setup"
+    ],
+    "preload_asset_list": null
   },
-  "game_id": 41,
-  "published": true,
-  "created_at": "2023-02-01T10:51:01.000Z",
-  "level_num": "custom",
-  "user_id": 1,
   "notes": "",
-  "audit_log": "[{\"changed_at\":\"2023-02-01T10:51:01.179+00:00\",\"changed\":[\"cloned from \\\"CSD U6 - Sensors - CA_2222\\\"\"],\"cloned_from\":\"CSD U6 - Sensors - CA_2222\"},{\"changed_at\":\"2023-02-09 22:39:18 +0000\",\"changed\":[\"code_functions\",\"makerlab_enabled\",\"long_instructions\",\"start_blocks\",\"encrypted_examples\",\"reference_links\",\"map_reference\",\"preload_asset_list\",\"contained_level_names\"],\"changed_by_id\":14639,\"changed_by_email\":\"dan+teacher@code.org\"},{\"changed_at\":\"2023-02-09 22:43:31 +0000\",\"changed\":[\"code_functions\",\"encrypted_examples\",\"thumbnail_url\",\"preload_asset_list\"],\"changed_by_id\":14639,\"changed_by_email\":\"dan+teacher@code.org\"},{\"changed_at\":\"2023-03-29 22:35:23 +0000\",\"changed\":[\"code_functions\",\"preload_asset_list\",\"contained_level_names\"],\"changed_by_id\":14639,\"changed_by_email\":\"dan+teacher@code.org\"}]"
+  "audit_log": "[{\"changed_at\":\"2023-02-01T10:51:01.179+00:00\",\"changed\":[\"cloned from \\\"CSD U6 - Sensors - CA_2222\\\"\"],\"cloned_from\":\"CSD U6 - Sensors - CA_2222\"},{\"changed_at\":\"2023-02-09 22:39:18 +0000\",\"changed\":[\"code_functions\",\"makerlab_enabled\",\"long_instructions\",\"start_blocks\",\"encrypted_examples\",\"reference_links\",\"map_reference\",\"preload_asset_list\",\"contained_level_names\"],\"changed_by_id\":14639,\"changed_by_email\":\"dan+teacher@code.org\"},{\"changed_at\":\"2023-02-09 22:43:31 +0000\",\"changed\":[\"code_functions\",\"encrypted_examples\",\"thumbnail_url\",\"preload_asset_list\"],\"changed_by_id\":14639,\"changed_by_email\":\"dan+teacher@code.org\"},{\"changed_at\":\"2023-03-29 22:35:23 +0000\",\"changed\":[\"code_functions\",\"preload_asset_list\",\"contained_level_names\"],\"changed_by_id\":14639,\"changed_by_email\":\"dan+teacher@code.org\"},{\"changed_at\":\"2023-08-21 23:10:14 +0000\",\"changed\":[\"code_functions\",\"encrypted_examples\",\"reference_links\",\"preload_asset_list\",\"contained_level_names\"],\"changed_by_id\":14639,\"changed_by_email\":\"dan+teacher@code.org\"}]"
 }]]></config>
   <blocks/>
 </Applab>

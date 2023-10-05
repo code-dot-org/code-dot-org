@@ -84,8 +84,8 @@ class ActivitiesControllerTest < ActionController::TestCase
 
   def studio_program_with_text(text)
     '<xml><block type="when_run" deletable="false"><next><block type="studio_showTitleScreen"><title name="TITLE">' +
-        text +
-        '</title><title name="TEXT">type text here</title></block></next></block>'
+      text +
+      '</title><title name="TEXT">type text here</title></block></next></block>'
   end
 
   def build_expected_response(options = {})
@@ -336,12 +336,12 @@ class ActivitiesControllerTest < ActionController::TestCase
     end
     assert_equal original_activity_count + 1, Activity.count
     assert_equal original_user_level_count + 1, UserLevel.count
-    assert_not_nil UserLevel.where(
+    refute_nil UserLevel.where(
       user_id: @user,
       level_id: @script_level.level_id,
       script_id: @script_level.script_id
     ).first
-    assert_not_nil UserScript.where(user_id: @user, script_id: @script_level.script_id).first
+    refute_nil UserScript.where(user_id: @user, script_id: @script_level.script_id).first
 
     assert_response :success
 

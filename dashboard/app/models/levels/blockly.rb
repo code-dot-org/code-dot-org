@@ -102,7 +102,7 @@ class Blockly < Level
     %w(initialization_blocks start_blocks toolbox_blocks required_blocks recommended_blocks solution_blocks)
   end
 
-  def to_xml(options={})
+  def to_xml(options = {})
     xml_node = Nokogiri::XML(super(options))
     Nokogiri::XML::Builder.with(xml_node.at(type)) do |xml|
       xml.blocks do
@@ -427,9 +427,9 @@ class Blockly < Level
 
       # Blockly requires these fields to be objects not strings
       %w(map initialDirt serializedMaze goal softButtons inputOutputTable scale).
-          concat(NetSim.json_object_attrs).
-          concat(Craft.json_object_attrs).
-          each do |x|
+        concat(NetSim.json_object_attrs).
+        concat(Craft.json_object_attrs).
+        each do |x|
         level_prop[x] = JSON.parse(level_prop[x]) if level_prop[x].is_a? String
       end
 

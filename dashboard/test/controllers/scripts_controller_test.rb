@@ -27,7 +27,7 @@ class ScriptsControllerTest < ActionController::TestCase
     sign_in(create(:levelbuilder))
     get :index
     assert_response :success
-    assert_not_nil assigns(:scripts)
+    refute_nil assigns(:scripts)
     assert_equal Unit.all, assigns(:scripts)
   end
 
@@ -860,7 +860,7 @@ class ScriptsControllerTest < ActionController::TestCase
       is_migrated: true,
       last_updated_at: unit.updated_at.to_s,
     }
-    assert_equal teacher_resources.map(&:key), Unit.find_by_name(unit.name).resources.map {|r| r[:key]}
+    assert_equal(teacher_resources.map(&:key), Unit.find_by_name(unit.name).resources.map {|r| r[:key]})
   end
 
   test 'updates migrated student resources' do
@@ -885,7 +885,7 @@ class ScriptsControllerTest < ActionController::TestCase
       is_migrated: true,
       last_updated_at: unit.updated_at.to_s,
     }
-    assert_equal student_resources.map(&:key), Unit.find_by_name(unit.name).student_resources.map {|r| r[:key]}
+    assert_equal(student_resources.map(&:key), Unit.find_by_name(unit.name).student_resources.map {|r| r[:key]})
   end
 
   test 'updates pilot_experiment' do
@@ -1168,7 +1168,7 @@ class ScriptsControllerTest < ActionController::TestCase
     }
     assert_response :success
     assert_equal 'lesson 1', JSON.parse(@response.body)['lesson_groups'][0]['lessons'][0]['name']
-    assert_not_nil JSON.parse(@response.body)['lesson_groups'][0]['lessons'][0]['id']
+    refute_nil JSON.parse(@response.body)['lesson_groups'][0]['lessons'][0]['id']
 
     unit.reload
     assert_equal 'lesson 1', unit.lessons.first.name
@@ -1210,7 +1210,7 @@ class ScriptsControllerTest < ActionController::TestCase
     lesson_group_data = JSON.parse(@response.body)['lesson_groups'][0]
     assert_equal 'lesson group 1', lesson_group_data['display_name']
     assert lesson_group_data['user_facing']
-    assert_not_nil lesson_group_data['id']
+    refute_nil lesson_group_data['id']
     assert_empty lesson_group_data['lessons']
     assert_equal 'Big Questions', lesson_group_data['big_questions']
     assert_equal 'Description', lesson_group_data['description']
@@ -1753,7 +1753,7 @@ class ScriptsControllerTest < ActionController::TestCase
     assert_response :success
     response_body = JSON.parse(@response.body)
     assert_equal 4, response_body.length
-    assert_equal ['All Code', 'All Resources', 'All Standards', 'All Vocabulary'], response_body.map {|r| r['name']}
+    assert_equal(['All Code', 'All Resources', 'All Standards', 'All Vocabulary'], response_body.map {|r| r['name']})
   end
 
   test "get_rollup_resources doesn't return rollups if no lesson in a unit has the associated object" do
@@ -1771,7 +1771,7 @@ class ScriptsControllerTest < ActionController::TestCase
     assert_response :success
     response_body = JSON.parse(@response.body)
     assert_equal 2, response_body.length
-    assert_equal ['All Resources', 'All Standards'], response_body.map {|r| r['name']}
+    assert_equal(['All Resources', 'All Standards'], response_body.map {|r| r['name']})
   end
 
   test "get_unit bypasses cache for edit route" do

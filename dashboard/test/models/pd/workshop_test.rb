@@ -188,7 +188,7 @@ class Pd::WorkshopTest < ActiveSupport::TestCase
     workshop.end!
     assert_equal 'Ended', workshop.state
     assert_equal 'Ended', workshop.state
-    assert_not_nil workshop.sessions.first.code
+    refute_nil workshop.sessions.first.code
   end
 
   test 'start is idempotent' do
@@ -625,9 +625,9 @@ class Pd::WorkshopTest < ActiveSupport::TestCase
     # save out of order
     workshops.shuffle.each(&:save!)
 
-    assert_equal [0, 0, 1, 2], Pd::Workshop.order_by_enrollment_count.map {|w| w.enrollments.count}
-    assert_equal [0, 0, 1, 2], Pd::Workshop.order_by_enrollment_count(desc: false).map {|w| w.enrollments.count}
-    assert_equal [2, 1, 0, 0], Pd::Workshop.order_by_enrollment_count(desc: true).map {|w| w.enrollments.count}
+    assert_equal([0, 0, 1, 2], Pd::Workshop.order_by_enrollment_count.map {|w| w.enrollments.count})
+    assert_equal([0, 0, 1, 2], Pd::Workshop.order_by_enrollment_count(desc: false).map {|w| w.enrollments.count})
+    assert_equal([2, 1, 0, 0], Pd::Workshop.order_by_enrollment_count(desc: true).map {|w| w.enrollments.count})
   end
 
   test 'order_by_enrollment_count with duplicates' do
@@ -640,8 +640,8 @@ class Pd::WorkshopTest < ActiveSupport::TestCase
     # save out of order
     workshops.shuffle.each(&:save!)
 
-    assert_equal [0, 0, 0, 1], Pd::Workshop.order_by_enrollment_count(desc: false).map {|w| w.enrollments.count}
-    assert_equal [1, 0, 0, 0], Pd::Workshop.order_by_enrollment_count(desc: true).map {|w| w.enrollments.count}
+    assert_equal([0, 0, 0, 1], Pd::Workshop.order_by_enrollment_count(desc: false).map {|w| w.enrollments.count})
+    assert_equal([1, 0, 0, 0], Pd::Workshop.order_by_enrollment_count(desc: true).map {|w| w.enrollments.count})
   end
 
   test 'order_by_state' do
@@ -838,7 +838,7 @@ class Pd::WorkshopTest < ActiveSupport::TestCase
     Pd::Workshop.send_reminder_for_upcoming_in_days(10)
   end
 
-  test '10 day reminder for csf workshop does not send pre email to facilitators' do
+  test '10 day reminder for csf workshop sends pre email to facilitators' do
     mock_mail = stub
     mock_mail.stubs(:deliver_now).returns(nil)
 
@@ -846,7 +846,7 @@ class Pd::WorkshopTest < ActiveSupport::TestCase
     create_list :pd_enrollment, 3, workshop: workshop
     Pd::Workshop.expects(:scheduled_start_in_days).returns([workshop])
 
-    Pd::WorkshopMailer.expects(:facilitator_pre_workshop).returns(mock_mail).never
+    Pd::WorkshopMailer.expects(:facilitator_pre_workshop).returns(mock_mail).times(2)
     Pd::Workshop.send_reminder_for_upcoming_in_days(10)
   end
 
@@ -1520,9 +1520,9 @@ class Pd::WorkshopTest < ActiveSupport::TestCase
     assert workshop.require_application?
   end
 
-  test 'CSD academic year workshop must require teacher application' do
+  test 'CSD academic year workshop must not require teacher application' do
     workshop = create :csd_academic_year_workshop, regional_partner: @regional_partner
-    assert workshop.require_application?
+    refute workshop.require_application?
   end
 
   test 'CSA summer workshop must require teacher application' do

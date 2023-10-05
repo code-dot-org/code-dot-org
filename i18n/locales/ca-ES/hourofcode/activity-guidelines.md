@@ -45,7 +45,7 @@ Alguns consells:
 
 Aquestes activitats estan pensades perquè els alumnes s'autodirigeixin a través d'un tutorial. No requereixen molta instrucció d'un treball de preparació de professor o professor.
 
-**Teacher Facilitated lesson ([example](https://studio.code.org/s/course1/lessons/2/levels/1), [template](https://docs.google.com/document/d/1DhaLNd6uim9rRPkHrglnOvVcgzGc8axKIzv8YI56JGA))**
+**Professor Lliçó facilitada ([exemple](https://studio.code.org/s/course1/lessons/2/levels/1), [plantilla](https://docs.google.com/document/d/1DhaLNd6uim9rRPkHrglnOvVcgzGc8axKIzv8YI56JGA))**
 
 Ara que centenars de milers d'educadors han provat l'Hora del Codi, moltes aules estan preparades per a activitats més creatives que ensenyin els fonaments de la informàtica. Per ajudar els professors més avançats a trobar inspiració, recollim i comissariem lliçons i plans d'activitats “dirigits per professors” per als veterans de l'Hour of Code.
 
@@ -84,7 +84,7 @@ L'objectiu d'una Hora del Codi és donar als principiants un primer tast accessi
 
 Les activitats han d'ensenyar un concepte d'informàtica com bucles, condicionals, xifrat, o com funciona Internet. Una activitat també pot ensenyar sobre com la informàtica es connecta amb ocupacions, esdeveniments o història del món real. Per exemple, ensenyar disseny UX per fer aplicacions que siguin significatives per a un públic o causa. Desaconsellem les activitats que se centren en la sintaxi de la programació més que en els conceptes. Per exemple, llistarem, però no ressaltarem, les activitats que ensenyen HTML. De la mateixa manera, desaconsellem les lliçons de programació de blocs que se centren en configurar/canviar les opcions de configuració en lloc d'aprendre a modelar un algoritme o procés.
 
-*Technical requirements:* Because of the wide variety of school and classroom technology setups, the best activities are Web-based or smartphone-friendly, or otherwise unplugged-style activities that teach computer science concepts without the use of a computer (see <http://csunplugged.com/>). Les activitats que requereixen una aplicació d'instal·lació, aplicació d'escriptori o experiències de consola de jocs estan bé però no són ideals. No llistarem les activitats que requereixin inscripció o pagament. (Les activitats de robòtica poden requerir la compra de robòtica).
+*Requisits tècnics:* A causa de la gran varietat d'instal · lacions de tecnologia escolar i d'aula, les millors activitats són basades en web o telèfons intel·ligents, o d'una altra manera activitats d'estil no connectades que ensenyen conceptes d'informàtica sense l'ús d'un ordinador (vegeu http://csunplugged.com/). [](http://csunplugged.com/) Les activitats que requereixen una aplicació d'instal·lació, aplicació d'escriptori o experiències de consola de jocs estan bé però no són ideals. No llistarem les activitats que requereixin inscripció o pagament. (Les activitats de robòtica poden requerir la compra de robòtica).
 
 *Format dirigit per l'estudiant (Autoguiat):* L'Hora del Codi original es va basar majoritàriament en l'èxit de les tutories o lliçons autoguiades, facilitades opcionalment pel professor. Hi ha un munt d'opcions existents, però si voleu crear-ne una de nova, aquestes activitats han de ser dissenyades perquè puguin ser divertides per a un estudiant que treballi sol, o en una aula el professor tingui un mínim de preparació o antecedents CS. Haurien de proporcionar indicacions per als estudiants en contraposició a un repte obert d'una hora de durada. Idealment, les instruccions i tutorials estan integrats directament en la plataforma de programació, per evitar la commutació de pestanyes o finestres entre la classe i la plataforma de programació.
 
@@ -103,6 +103,7 @@ El que necessitaràs:
 * Nom i correu electrònic del contacte principal que representa l'activitat presentada
 * Nom de l'activitat (no es pot incloure “Hora del Codi” al nom)
 * Enllaç URL a l'activitat
+* Aquesta activitat inclou IA: Sí o No
 * Una descripció de l'activitat (recompte màxim de caràcters: 400) 
     * Si us plau, inclogui a la descripció si es tracta principalment de guiat per l'estudiant o facilitat per al professorat. A més, algunes escoles estan interessades a saber si les activitats de l'Hora del Codi aborden els estàndards de ciències comuns o de pròxima generació. Si l'activitat s'adreça a estàndards específics, considereu incloure aquesta informació.
 * Nivell (s) de qualificació recomanat per a usuaris destinats. Podeu referir-vos als \[Estàndards K-12 de la Computer Science Teachers' Association\] (https://k12cs.org/framework-statements-by-grade-band/) per obtenir conceptes de ciències de la computació apropiats. Els nivells de qualificació d'exemple inclouen: 
@@ -110,9 +111,9 @@ El que necessitaràs:
     * Graus 2-5 (edats 7-10)
     * Graus 6-8 (edats 11-13)
     * Graus 9+ (majors de 14 anys)
-* Una llista d'àrees temàtiques que cobreix la teva activitat (a més d'Informàtica). Per exemple, si un professor de matemàtiques pot utilitzar la vostra activitat per ensenyar sobre angles o paràboles, llista com matemàtiques. Si vostè té una activitat de libs boig que ensenya verbs/nouns/etc. triar les arts del llenguatge.
-* Una llista de llenguatges de programació que ensenya la vostra activitat. És a dir, C/C++, Java, JavaScript, etc. o independent de l'idioma (per a plans de lliçons que es poden ensenyar en diversos idiomes)
-* Una llista de llenguatges naturals suportats. Nota: La detecció d'idiomes és responsabilitat del proveïdor d'activitats; redirigirem tots els usuaris a la URL única proporcionada.
+* Una llista de llenguatges de programació que ensenya la vostra activitat. És a dir, C/C++, Java, JavaScript, etc. o independent de l'idioma (per a plans de lliçons que es poden ensenyar en diversos idiomes) triar les arts del llenguatge.
+* Una llista de llenguatges naturals suportats. Nota: La detecció d'idiomes és responsabilitat del proveïdor d'activitats; redirigirem tots els usuaris a la URL única proporcionada. o independent de l'idioma (per a plans de lliçons que es poden ensenyar en diversos idiomes)
+* Quin nivell d'experiència ha de tenir un educador per utilitzar la seva activitat? (per exemple, principiant o còmode.) I quin nivell d'experiència han de tenir els alumnes?
 * Quin nivell d'experiència ha de tenir un educador per utilitzar la seva activitat? (per exemple, principiant o còmode.) I quin nivell d'experiència han de tenir els alumnes? Si voleu preparar activitats més avançades de l'Hora del Codi™, incloeu els coneixements previs necessaris a la descripció de la vostra activitat.
 * La durada de la teva activitat 
     * Només 1 hora
@@ -140,11 +141,11 @@ El que necessitaràs:
     * Unplugged
 * Captura de pantalla o imatge de màrqueting de l'activitat de l'Hora del Codi. Si us plau, envieu almenys una imatge amb 4:3 dimensions. Hauria de ser almenys 520px per 390px. Aquesta imatge no hauria de tenir cap text (que no sigui el vostre logotip), per tal de fer-la més accessible per als no anglòfons. Si no es proporciona una imatge adequada, podem fer la nostra pròpia captura de pantalla del vostre tutorial o podem optar per no enumerar-la. Totes les imatges s'han d'enviar com a enllaç URL a un.jpg, .jpeg o .png.
 * Per tal de fer un seguiment més precís de la participació, els socis tutorials de tercers han d'incloure imatges de seguiment d'1 píxel a la primera pàgina dels seus tutorials de l'Hora del Codi. Vegeu la secció [Pixel de seguiment](#pixel) a continuació per obtenir més detalls.
-* Upon finishing your activity, users should be directed to [code.org/api/hour/finish](https://code.org/api/hour/finish) where they will be able to: 
+* En acabar la vostra activitat, els usuaris han de ser dirigits a [](https://code.org/api/hour/finish) codi.org/api/hora/finish on podran: 
     * Comparteix a les xarxes socials que van completar l'Hora del Codi
     * Rebre un certificat que han completat l'Hora del Codi
     * Vegeu taules de classificació sobre quins països/ciutats tenen els índexs de participació més alts en les activitats de l'Hora del Codi
-    * For users who spend an hour on your activity and don’t complete it, please include a button on your activity that says “I’m finished with my Hour of Code” which links back to [code.org/api/hour/finish](https://code.org/api/hour/finish) as well.
+    * Per als usuaris que dediqueu una hora a la vostra activitat i no la completeu, incloeu un botó a la vostra activitat que digui “He acabat amb la meva Hora de Codi” que enllaça de nou a [](https://code.org/api/hour/finish) code.org/api/hora/finish també.
 * (Opcional) Podem fer un seguiment amb un enllaç d'enquesta/formulari en línia demanant un informe de les següents mètriques d'activitat: 
     * Per a activitats en línia (especialment aplicacions per a telèfons intel·ligents/tauletes): 
         * Nombre d'usuaris
@@ -166,9 +167,11 @@ El que necessitaràs:
 
 ## Com s'avaluaran les activitats
 
-Un comitè divers d'educadors en ciències de la computació classificarà les trameses en funció de criteris qualitatius i quantitatius. Es llistaran totes les activitats que s'ajustin als criteris bàsics. Els professors podran filtrar i ordenar per trobar les millors activitats per a la seva aula.
+Un comitè divers d'educadors en ciències de la computació classificarà les trameses en funció de criteris qualitatius i quantitatius. Es llistaran totes les activitats que s'ajustin als criteris bàsics.
 
-La rúbrica per avaluar les activitats i els plans de lliçons buscarà els criteris següents sobre totes les activitats i classificar-los en conseqüència:
+Per a les activitats de codificació tradicionals, un comitè divers d'educadors d'informàtica classificarà les presentacions basades en criteris qualitatius i quantitatius. Es llistaran totes les activitats que s'ajustin als criteris bàsics. Els professors podran filtrar i ordenar per trobar les millors activitats per a la seva aula.
+
+Si el comitè avaluador qualifica l'activitat d'un zero en qualitat de producció (a causa d'errors dolents o instruccions que fan que sigui molt difícil d'utilitzar), en la promoció de l'aprenentatge en grups poc representats (a causa de material racista/sexista), en valor educatiu (no ensenya conceptes CS), o divertit/atractiu (a causa de ser difícil/descoratjador per als estudiants a treballar), l'activitat no es llistarà.
 
 - Alta qualitat de producció
 - Promoure l'aprenentatge per part de tots els grups demogràfics (esp. estudiants subrepresentats en CS, com dones joves, estudiants de grups racials i ètnics marginats, i estudiants amb discapacitat)
@@ -176,9 +179,9 @@ La rúbrica per avaluar les activitats i els plans de lliçons buscarà els crit
 - Divertit i atractiu
 - Anima els estudiants a crear alguna cosa única que puguin compartir (Per als estudiants més petits: amb els pares i companys de classe. Per a estudiants més grans: a Internet)
 
-Si el comitè avaluador qualifica l'activitat d'un zero en qualitat de producció (a causa d'errors dolents o instruccions que fan que sigui molt difícil d'utilitzar), en la promoció de l'aprenentatge en grups poc representats (a causa de material racista/sexista), en valor educatiu (no ensenya conceptes CS), o divertit/atractiu (a causa de ser difícil/descoratjador per als estudiants a treballar), l'activitat no es llistarà.
-
 A més, per poder ser enumerades, totes les activitats han de:
+
+Per a les activitats autodirigides per a nous professors i estudiants, el comitè avaluador buscarà si:
 
 - Ser apropiat per a una aula de l'escola pública (sense pistoles, sense contingut explícit/maduratiu, sense contingut religiós, etc.)
 - Requereix no registrar-se
@@ -204,11 +207,13 @@ Professors i alumnes podran buscar i filtrar la nostra llista d'activitats en fu
 
 ## Suggeriments per dissenyar tutorials autoguiats d'una hora
 
-Podeu incloure el logotip [Hour of Code](https://hourofcode.com/us/promote/resources#logo) en el vostre tutorial, però això no és obligatori. Si utilitzeu el logotip de l'Hora del Codi, consulteu les directrius de la marca registrada a continuació. <u>En cap cas es pot utilitzar el logotip i el nom de Code.org.</u> Tots dos són de marca registrada i no es poden barrejar amb un nom de marca de tercers sense permís exprés i per escrit.
-
-**Assegureu-vos que l'estudiant mitjà pot acabar còmodament en una hora.** Penseu en afegir una activitat oberta al final per als estudiants que es mouen més ràpidament per la lliçó. Recordeu que la majoria dels nens seran principiants absoluts a la informàtica i la codificació.
+Les activitats no han d'incloure IA, tot i que estem buscant oferir més activitats relacionades amb la IA.
 
 **Incloure notes del professor.** La majoria de les activitats han d'estar dirigides als estudiants, però si una activitat és facilitada o gestionada per un professor, si us plau, inclogui indicacions clares i senzilles per al professor en forma de notes del professor en un URL separat enviat amb la vostra activitat. No només els estudiants són novells, alguns dels professors també ho són. Incloure informació com:
+
+**Incorporar feedback al final de l'activitat.** (per exemple, “Heu acabat 10 nivells i heu après sobre bucles! Gran treball!”)
+
+**Animeu els estudiants a publicar a les xarxes socials (si escau) quan hagin acabat.** Per exemple “He fet una Hora de Codi amb ________ Tens? #HourOfCode” o “He fet un #HourOfCode com a part de #CSEdWeek. Tens?
 
 - En quines plataformes i navegadors funciona millor el tutorial?
 - Falta en telèfons intel·ligents? Pastilles?
@@ -247,7 +252,7 @@ Hour of Code® i Hora del Código® són marques registrades de Code.org. Molts 
 
 ## Seguiment de píxels
 
-Per tal de fer un seguiment més precís de la participació, demanem a tots els socis tutorials que incloguin una imatge de seguiment d'1 píxel a la primera pàgina dels seus tutorials de l'Hora del Codi. La imatge de píxels només ha d'estar a la pàgina d'inici. No inclogui en cap pàgina provisional del seu tutorial.
+Si el vostre tutorial està aprovat i inclòs a la pàgina final del tutorial, Code.org us proporcionarà un píxel de seguiment únic perquè pugueu integrar-vos al vostre tutorial. Vegeu l'exemple següent. No inclogui en cap pàgina provisional del seu tutorial.
 
 Això ens permetrà comptar els usuaris que fan el teu tutorial de l'Hora del Codi. Es donarà lloc a recomptes de participació més precisos per al vostre tutorial.
 
@@ -257,7 +262,7 @@ NOTA: això no és important fer-ho per a aplicacions instal·lables (aplicacion
 
 Exemple de seguiment de píxels per a Dance Party:
 
-IMG SRC = <http://code.org/api/hour/begin_dance.png>   
+IMG SRC = http://code.org/api/hour/begin_dance.png [](http://code.org/api/hour/begin_dance.png)   
 
 
 [**Tornar a dalt**](#top)

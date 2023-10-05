@@ -51,7 +51,8 @@ import {UNKNOWN_BLOCK} from './addons/unknownBlock';
 import {registerAllContextMenuItems} from './addons/contextMenu';
 import BlockSvgUnused, {onBlockClickDragDelete} from './addons/blockSvgUnused';
 import {ToolboxType, Themes, Renderers} from './constants';
-import {flyoutCategory as functionsFlyoutCategory} from './addons/functionEditor.js';
+import {flyoutCategory as functionsFlyoutCategory} from './customBlocks/googleBlockly/proceduresBlocks';
+import {flyoutCategory as behaviorsFlyoutCategory} from './customBlocks/googleBlockly/behaviorBlocks';
 import CdoBlockSerializer from './addons/cdoBlockSerializer.js';
 import customBlocks from './customBlocks/googleBlockly/index.js';
 import CdoFieldImage from './addons/cdoFieldImage';
@@ -60,6 +61,7 @@ import {
   ObservableProcedureModel,
   ObservableParameterModel,
 } from '@blockly/block-shareable-procedures';
+import experiments from '@cdo/apps/util/experiments';
 
 const options = {
   contextMenu: true,
@@ -85,6 +87,7 @@ const INFINITE_LOOP_TRAP =
 const BlocklyWrapper = function (blocklyInstance) {
   this.version = BlocklyVersion.GOOGLE;
   this.blockly_ = blocklyInstance;
+  this.mainWorkspace = undefined;
 
   this.wrapReadOnlyProperty = function (propertyName) {
     Object.defineProperty(this, propertyName, {
@@ -151,7 +154,15 @@ function initializeBlocklyWrapper(blocklyInstance) {
 
   blocklyWrapper.loopHighlight = function () {}; // TODO
   blocklyWrapper.getWorkspaceCode = function () {
-    return Blockly.JavaScript.workspaceToCode(Blockly.mainBlockSpace);
+    let workspaceCode = Blockly.JavaScript.workspaceToCode(
+      Blockly.mainBlockSpace
+    );
+    if (this.getHiddenDefinitionWorkspace()) {
+      workspaceCode += Blockly.JavaScript.workspaceToCode(
+        this.getHiddenDefinitionWorkspace()
+      );
+    }
+    return workspaceCode;
   };
 
   blocklyWrapper.wrapReadOnlyProperty('ALIGN_CENTRE');
@@ -194,9 +205,7 @@ function initializeBlocklyWrapper(blocklyInstance) {
   blocklyWrapper.wrapReadOnlyProperty('FunctionalBlockUtils');
   blocklyWrapper.wrapReadOnlyProperty('FunctionalTypeColors');
   blocklyWrapper.wrapReadOnlyProperty('FunctionEditor');
-  blocklyWrapper.wrapReadOnlyProperty('functionEditor');
   blocklyWrapper.wrapReadOnlyProperty('gamelab_locale');
-  blocklyWrapper.wrapReadOnlyProperty('getMainWorkspace');
   blocklyWrapper.wrapReadOnlyProperty('Generator');
   blocklyWrapper.wrapReadOnlyProperty('geras');
   blocklyWrapper.wrapReadOnlyProperty('thrasos');
@@ -226,7 +235,6 @@ function initializeBlocklyWrapper(blocklyInstance) {
   blocklyWrapper.wrapReadOnlyProperty('svgResize');
   blocklyWrapper.wrapReadOnlyProperty('tutorialExplorer_locale');
   blocklyWrapper.wrapReadOnlyProperty('useContractEditor');
-  blocklyWrapper.wrapReadOnlyProperty('useModalFunctionEditor');
   blocklyWrapper.wrapReadOnlyProperty('utils');
   blocklyWrapper.wrapReadOnlyProperty('Toolbox');
   blocklyWrapper.wrapReadOnlyProperty('Touch');
@@ -324,12 +332,12 @@ function initializeBlocklyWrapper(blocklyInstance) {
   // because the alias name is not the same as the underlying property name.
   Object.defineProperty(blocklyWrapper, 'mainBlockSpace', {
     get: function () {
-      return this.blockly_.getMainWorkspace();
+      return this.mainWorkspace || this.blockly_.getMainWorkspace();
     },
   });
   Object.defineProperty(blocklyWrapper, 'mainBlockSpaceEditor', {
     get: function () {
-      return this.blockly_.getMainWorkspace();
+      return this.mainWorkspace || this.blockly_.getMainWorkspace();
     },
   });
   Object.defineProperty(blocklyWrapper, 'SVG_NS', {
@@ -435,6 +443,17 @@ function initializeBlocklyWrapper(blocklyInstance) {
   };
   blocklyWrapper.Block.prototype.setStrictOutput = function (isOutput, check) {
     return this.setOutput(isOutput, check);
+  };
+
+  const originalSetOutput = blocklyWrapper.Block.prototype.setOutput;
+  // Replaces the original setOutput method with a custom version that will handle the case when "None" is passed appropriately
+  // See: https://github.com/code-dot-org/code-dot-org/blob/9d63cbcbfd84b8179ae2519adbb5869cbc319643/apps/src/blocklyAddons/cdoConstants.js#L9
+  blocklyWrapper.Block.prototype.setOutput = function (isOutput, check) {
+    if (check === 'None') {
+      return originalSetOutput.call(this, isOutput, null);
+    } else {
+      return originalSetOutput.call(this, isOutput, check);
+    }
   };
 
   // Block fields are referred to as titles in CDO Blockly.
@@ -638,6 +657,7 @@ function initializeBlocklyWrapper(blocklyInstance) {
       container.style.height = `calc(100% - ${styleConstants['workspace-headers-height']}px)`;
     }
     blocklyWrapper.isStartMode = !!opt_options.editBlocks;
+    blocklyWrapper.toolboxBlocks = options.toolbox;
     const workspace = blocklyWrapper.blockly_.inject(container, options);
 
     if (options.noFunctionBlockFrame) {
@@ -661,12 +681,32 @@ function initializeBlocklyWrapper(blocklyInstance) {
     const trashcan = new CdoTrashcan(workspace);
     trashcan.init();
 
-    if (options.useModalFunctionEditor) {
-      // Customize auto-populated Functions toolbox category.
-      workspace.registerToolboxCategoryCallback(
-        'PROCEDURE',
-        functionsFlyoutCategory
-      );
+    blocklyWrapper.setMainWorkspace(workspace);
+
+    // Same flyout callbacks are used for both main workspace categories
+    // and categories when modal function editor is enabled.
+    workspace.registerToolboxCategoryCallback(
+      'PROCEDURE',
+      functionsFlyoutCategory
+    );
+    workspace.registerToolboxCategoryCallback(
+      'Behavior',
+      behaviorsFlyoutCategory
+    );
+
+    // Hidden workspace where we can put function definitions.
+    const hiddenDefinitionWorkspace = new Blockly.Workspace();
+    blocklyWrapper.setHiddenDefinitionWorkspace(hiddenDefinitionWorkspace);
+    blocklyWrapper.useModalFunctionEditor = options.useModalFunctionEditor;
+
+    if (
+      options.useModalFunctionEditor &&
+      experiments.isEnabled(experiments.MODAL_FUNCTION_EDITOR)
+    ) {
+      // If the modal function editor is enabled for this level and
+      // the dcdo flag is on, initialize the modal function editor.
+      blocklyWrapper.functionEditor = new FunctionEditor();
+      blocklyWrapper.functionEditor.init(opt_options);
     }
 
     return workspace;
@@ -675,8 +715,26 @@ function initializeBlocklyWrapper(blocklyInstance) {
   // Used by StudioApp to tell Blockly to resize for Mobile Safari.
   blocklyWrapper.fireUiEvent = function (element, eventName, opt_properties) {
     if (eventName === 'resize') {
-      blocklyWrapper.svgResize(blocklyWrapper.getMainWorkspace());
+      blocklyWrapper.svgResize(blocklyWrapper.mainBlockSpace);
     }
+  };
+
+  blocklyWrapper.setMainWorkspace = function (mainWorkspace) {
+    this.mainWorkspace = mainWorkspace;
+  };
+
+  blocklyWrapper.setHiddenDefinitionWorkspace = function (
+    hiddenDefinitionWorkspace
+  ) {
+    this.hiddenDefinitionWorkspace = hiddenDefinitionWorkspace;
+  };
+
+  blocklyWrapper.getHiddenDefinitionWorkspace = function () {
+    return this.hiddenDefinitionWorkspace;
+  };
+
+  blocklyWrapper.getMainWorkspace = function () {
+    return blocklyWrapper.mainBlockSpace;
   };
 
   initializeBlocklyXml(blocklyWrapper);

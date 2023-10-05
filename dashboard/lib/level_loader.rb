@@ -48,13 +48,13 @@ class LevelLoader
       # level_concept_difficulty) when we bulk-load the level properties.
       new_level_names = level_file_names.
         reject {|name| existing_level_names.include? name}
-      Level.import! new_level_names.map {|name| {name: name}}
+      Level.import!(new_level_names.map {|name| {name: name}})
 
       # Load level properties from disk and build a collection of levels that
       # have changed.
       changed_levels = level_file_paths.
-          filter_map {|path| Services::LevelFiles.load_custom_level(path, level_md5s_by_name)}.
-          select(&:changed?)
+        filter_map {|path| Services::LevelFiles.load_custom_level(path, level_md5s_by_name)}.
+        select(&:changed?)
 
       if [:development, :adhoc].include?(rack_env) && !CDO.properties_encryption_key
         puts "WARNING: skipping seeding encrypted levels because CDO.properties_encryption_key is not defined"

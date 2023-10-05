@@ -60,7 +60,8 @@
       "/courses/csd-2022/guides/design-mode-elements",
       "/courses/csd-2022/guides/if-statements-2",
       "/courses/csd-2022/guides/booleans-and-comparison-operators",
-      "/courses/csd-2022/guides/variables"
+      "/courses/csd-2022/guides/variables",
+      "/maker/setup"
     ],
     "widget_mode": "false",
     "libraries_enabled": "false",
@@ -73,7 +74,7 @@
     ]
   },
   "notes": "",
-  "audit_log": "[{\"changed_at\":\"2023-02-01T10:47:35.899+00:00\",\"changed\":[\"cloned from \\\"CSD U6 - On The Go - Review_2222\\\"\"],\"cloned_from\":\"CSD U6 - On The Go - Review_2222\"},{\"changed_at\":\"2023-02-07 23:18:15 +0000\",\"changed\":[\"makerlab_enabled\",\"reference_links\",\"encrypted_examples\",\"preload_asset_list\",\"contained_level_names\"],\"changed_by_id\":14639,\"changed_by_email\":\"dan+teacher@code.org\"},{\"changed_at\":\"2023-03-29 17:28:22 +0000\",\"changed\":[\"long_instructions\",\"preload_asset_list\",\"contained_level_names\"],\"changed_by_id\":14639,\"changed_by_email\":\"dan+teacher@code.org\"},{\"changed_at\":\"2023-03-29 17:32:54 +0000\",\"changed\":[\"preload_asset_list\",\"encrypted_examples\"],\"changed_by_id\":14639,\"changed_by_email\":\"dan+teacher@code.org\"},{\"changed_at\":\"2023-07-31 19:30:41 +0000\",\"changed\":[\"long_instructions\",\"preload_asset_list\",\"contained_level_names\"],\"changed_by_id\":10559,\"changed_by_email\":\"aryanna@code.org\"}]"
+  "audit_log": "[{\"changed_at\":\"2023-02-01T10:47:35.899+00:00\",\"changed\":[\"cloned from \\\"CSD U6 - On The Go - Review_2222\\\"\"],\"cloned_from\":\"CSD U6 - On The Go - Review_2222\"},{\"changed_at\":\"2023-02-07 23:18:15 +0000\",\"changed\":[\"makerlab_enabled\",\"reference_links\",\"encrypted_examples\",\"preload_asset_list\",\"contained_level_names\"],\"changed_by_id\":14639,\"changed_by_email\":\"dan+teacher@code.org\"},{\"changed_at\":\"2023-03-29 17:28:22 +0000\",\"changed\":[\"long_instructions\",\"preload_asset_list\",\"contained_level_names\"],\"changed_by_id\":14639,\"changed_by_email\":\"dan+teacher@code.org\"},{\"changed_at\":\"2023-03-29 17:32:54 +0000\",\"changed\":[\"preload_asset_list\",\"encrypted_examples\"],\"changed_by_id\":14639,\"changed_by_email\":\"dan+teacher@code.org\"},{\"changed_at\":\"2023-07-31 19:30:41 +0000\",\"changed\":[\"long_instructions\",\"preload_asset_list\",\"contained_level_names\"],\"changed_by_id\":10559,\"changed_by_email\":\"aryanna@code.org\"},{\"changed_at\":\"2023-08-21 23:04:15 +0000\",\"changed\":[\"reference_links\",\"preload_asset_list\",\"contained_level_names\"],\"changed_by_id\":14639,\"changed_by_email\":\"dan+teacher@code.org\"}]"
 }]]></config>
   <blocks/>
 </Applab>

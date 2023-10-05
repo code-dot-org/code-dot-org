@@ -4,10 +4,10 @@ import {connect} from 'react-redux';
 import Radium from 'radium'; // eslint-disable-line no-restricted-imports
 import color from '@cdo/apps/util/color';
 import i18n from '@cdo/locale';
-import DCDO from '@cdo/apps/dcdo';
 import ProgressBubble from '@cdo/apps/templates/progress/ProgressBubble';
 import FontAwesome from '@cdo/apps/templates/FontAwesome';
 import {levelWithProgress, studentShape} from './types';
+import stringKeyComparator from '@cdo/apps/util/stringKeyComparator';
 
 class StudentTable extends React.Component {
   static propTypes = {
@@ -42,20 +42,27 @@ class StudentTable extends React.Component {
     return isSelected ? [styles.tr, styles.selected] : styles.tr;
   };
 
-  render() {
-    const {
-      students,
-      onSelectUser,
-      selectedUserId,
-      levelsWithProgress,
-      isSortedByFamilyName,
-    } = this.props;
+  componentDidMount() {
+    this.sortStudents();
+  }
 
-    // Sort students, in-place.
-    const collator = new Intl.Collator();
+  componentDidUpdate(prevProps) {
+    if (prevProps.isSortedByFamilyName !== this.props.isSortedByFamilyName) {
+      this.sortStudents();
+    }
+  }
+
+  sortStudents() {
+    const {students, isSortedByFamilyName} = this.props;
     isSortedByFamilyName
-      ? students.sort((a, b) => collator.compare(a.familyName, b.familyName))
-      : students.sort((a, b) => collator.compare(a.name, b.name));
+      ? students.sort(stringKeyComparator(['familyName', 'name']))
+      : students.sort(stringKeyComparator(['name', 'familyName']));
+    this.setState({students});
+  }
+
+  render() {
+    const {students, onSelectUser, selectedUserId, levelsWithProgress} =
+      this.props;
 
     return (
       <table style={styles.table} className="student-table">
@@ -85,9 +92,7 @@ class StudentTable extends React.Component {
                     />
                   )}
                   <div style={styles.name}>
-                    {student.name}
-                    {!!DCDO.get('family-name-features', false) &&
-                      ` ${student.familyName || ''}`}
+                    {`${student.name} ${student.familyName || ''}`}
                     <a
                       href={this.getRowLink(student.id)}
                       target="_blank"

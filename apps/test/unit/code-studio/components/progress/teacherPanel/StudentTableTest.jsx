@@ -1,5 +1,4 @@
 import React from 'react';
-import DCDO from '@cdo/apps/dcdo';
 import {shallow} from 'enzyme';
 import {expect} from '../../../../../util/reconfiguredChai';
 import {UnconnectedStudentTable as StudentTable} from '@cdo/apps/code-studio/components/progress/teacherPanel/StudentTable';
@@ -90,26 +89,18 @@ describe('StudentTable', () => {
   });
 
   it('sorts by family name if toggled', () => {
-    DCDO.reset();
-    DCDO.set('family-name-features', true);
-
     const wrapper = setUp({isSortedByFamilyName: true});
 
     const firstStudentRow = wrapper.find('tr').at(1);
     expect(firstStudentRow.text()).to.match(/^Student 2 FamNameA/);
-
-    DCDO.reset();
   });
 
   it('sorts null family names last', () => {
-    DCDO.reset();
-    DCDO.set('family-name-features', true);
-
     const wrapper = setUp({
       students: [
         {id: 1, name: 'Student 1', familyName: 'FamNameB'},
         {id: 2, name: 'Student 2'},
-        {id: 3, name: 'Student 3', familyName: 'FamNameA'},
+        {id: 3, name: 'Student 3', familyName: 'ZFamNameA'},
       ],
       isSortedByFamilyName: true,
     });
@@ -118,7 +109,39 @@ describe('StudentTable', () => {
     expect(lastStudentRow.text()).to.match(/^Student 2/);
     expect(lastStudentRow.text()).to.not.match(/null/);
     expect(lastStudentRow.text()).to.not.match(/undefined/);
+  });
 
-    DCDO.reset();
+  it('includes non-alphabetic characters in sorting', () => {
+    const wrapper = setUp({
+      students: [
+        {id: 1, name: 'Student 1', familyName: '2Brown'},
+        {id: 2, name: 'Student 2', familyName: 'Delta'},
+        {id: 3, name: 'Student 3', familyName: '1Adams'},
+        {id: 4, name: 'Student 4', familyName: '!Charles'},
+      ],
+      isSortedByFamilyName: true,
+    });
+
+    const studentRows = wrapper.find('tr');
+    expect(studentRows.at(1).text()).to.match(/^Student 4/);
+    expect(studentRows.at(2).text()).to.match(/^Student 3/);
+    expect(studentRows.at(3).text()).to.match(/^Student 1/);
+    expect(studentRows.at(4).text()).to.match(/^Student 2/);
+  });
+
+  it('sorts by name when family names are equivalent', () => {
+    const wrapper = setUp({
+      students: [
+        {id: 1, name: 'Eve', familyName: 'Carlson'},
+        {id: 2, name: 'Alice', familyName: 'Carlson'},
+        {id: 3, name: 'Bob', familyName: 'Carlson'},
+      ],
+      isSortedByFamilyName: true,
+    });
+
+    const studentRows = wrapper.find('tr');
+    expect(studentRows.at(1).text()).to.match(/^Alice/);
+    expect(studentRows.at(2).text()).to.match(/^Bob/);
+    expect(studentRows.at(3).text()).to.match(/^Eve/);
   });
 });

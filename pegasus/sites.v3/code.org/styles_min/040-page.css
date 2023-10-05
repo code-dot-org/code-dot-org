@@ -1,4 +1,9 @@
-/* Uses color variables from 050-theme.css */
+/*
+  Uses color and typography variables from /styles_min/050-theme.css
+
+  See shared/css/typography.scss for more info on how typography
+  styles are used.
+*/
 
 /* for homepage 2.0.. */
 #homepage .clear {
@@ -7,53 +12,127 @@
 /* ..end homepage 2.0 */
 
 body {
-  font-family: 'Gotham 4r', sans-serif;
+  font-family: var(--gotham-regular);
   font-size: 14px;
-  line-height: 22px;
-  font-weight: normal;
   color: var(--neutral_dark);
   margin: 0;
 }
 
-h1 {
-  font-size: 32px;
-  font-family: 'Gotham 7r', sans-serif;
-  margin-top: 50px;
-  margin-bottom: 30px;
-  line-height: 1.2em;
+h1,
+.heading-xxl {
+  font-family: var(--barlowSemiCondensed-semibold);
+  font-size: 3rem;
+  line-height: 1.16;
+  margin: 1em 0 0.5em 0;
 }
 
-h2 {
-  font-size: 22px;
-  font-family: 'Gotham 5r', sans-serif;
-  margin-top:45px;
-  margin-bottom:25px;
-  line-height: 1.2em;
+h2,
+.heading-xl {
+  font-family: var(--barlowSemiCondensed-semibold);
+  font-size: 2.125rem;
+  line-height: 1.24;
+  margin: 1em 0 0.5em 0;
 }
 
-h3 {
-  font-size: 18px;
-  font-family: 'Gotham 4r', sans-serif;
-  margin-top:25px;
-  margin-bottom:12px;
-  line-height: 1.2em;
+h3,
+.heading-lg {
+  font-family: var(--barlowSemiCondensed-semibold);
+  font-size: 1.75rem;
+  line-height: 1.28;
+  margin-bottom: 0.5em;
 }
 
-h4 {
-  font-size: 14px;
-  font-family: 'Gotham 5r', sans-serif;
-  line-height: 1.2em;
+h4,
+.heading-md {
+  font-family: var(--barlowSemiCondensed-medium);
+  font-size: 1.5rem;
+  line-height: 1.32;
+  margin-bottom: 0.5em;
 }
 
-h1, h2, h3, h4, h5, h6, .h1, .h2, .h3, .h4, .h5, .h6 {
-  font-weight: normal;
+h5,
+.heading-sm {
+  font-family: var(--gotham-bold);
+  font-size: 1.25rem;
+  line-height: 1.40;
+  margin-bottom: 0.5em;
 }
 
-a {
-  font-family: 'Gotham 7r', sans-serif;
+h6,
+.heading-xs {
+  font-family: var(--gotham-bold);
+  font-size: 1rem;
+  line-height: 1.48;
+  margin-bottom: 0.5em;
 }
 
+p {
+  line-height: 1.48;
+  margin-bottom: 1em;
+}
+
+.body-one {
+  font-size: 1.25rem;
+  line-height: 1.4;
+  margin-bottom: 1em;
+}
+
+.body-two {
+  font-size: 1rem;
+  line-height: 1.48;
+  margin-bottom: 1em;
+}
+
+.body-three {
+  font-size: 0.875rem;
+  line-height: 1.54;
+  margin-bottom: 1em;
+}
+
+.body-four {
+  font-size: 0.75rem;
+  line-height: 1.64;
+  margin-bottom: 1em;
+}
+
+figcaption,
+.video_caption_link {
+  font-family: var(--gotham-bold);
+  font-size: 0.875rem;
+  margin: 0.5em 0 1em;
+  line-height: 1.4;
+}
+
+.overline-one {
+  font-family: var(--gotham-bold), sans-serif;
+  text-transform: uppercase;
+  letter-spacing: 0.04rem;
+  font-size: 0.875rem;
+  line-height: 1.6;
+  color: var(--brand_primary_default);
+}
+
+.overline-two {
+  font-family: var(--gotham-bold), sans-serif;
+  text-transform: uppercase;
+  letter-spacing: 0.04rem;
+  font-size: 0.75rem;
+  line-height: 1.64;
+  color: var(--brand_primary_default);
+}
+
+.overline-three {
+  font-family: var(--gotham-bold), sans-serif;
+  text-transform: uppercase;
+  letter-spacing: 0.04rem;
+  font-size: 0.625rem;
+  line-height: 1.76;
+  color: var(--brand_primary_default);
+}
+
+a,
 a:link {
+  font-family: var(--gotham-bold);
   color: var(--brand_secondary_default);
   text-decoration: underline;
   transition: color ease-in-out .2s;
@@ -63,18 +142,21 @@ a:visited {
   color: var(--brand_secondary_default);
 }
 
-a:hover, a:active {
+a:hover,
+a:active {
   color: var(--brand_secondary_dark);
 }
 
+a:link:has(*) {
+  text-decoration: none;
+}
+
 strong {
-  font-family: 'Gotham 7r', sans-serif;
-  font-weight: normal;
+  font-family: var(--gotham-bold);
 }
 
 em {
-  font-family: 'Gotham 4i', sans-serif;
-  font-style: normal;
+  font-family: var(--gotham-italics);
 }
 
 li > ul {
@@ -149,7 +231,7 @@ td {
 }
 
 #petition_form a {
-  font-family: 'Gotham 4r', sans-serif;
+  font-family: var(--gotham-regular);
 }
 
 #petition_form a:link, #petition_form a:visited {
@@ -163,7 +245,7 @@ td {
 }
 
 .listed_supporter{
-  font-family: 'Gotham 7r', sans-serif;
+  font-family: var(--gotham-extra-bold);
   font-weight: normal;
 }
 
@@ -176,17 +258,17 @@ td {
 }
 
 #about_nav {
-  margin: 50px 0 0 0;
+  margin: 3.5rem 0 0 0;
 }
 
 .about_list_item_selected {
   color: var(--brand_secondary_default);
-  font-family: 'Gotham 7r', sans-serif;
+  font-family: var(--gotham-extra-bold);
 }
 
 a.about_list_item {
   color: var(--neutral_dark60);
-  font-family: 'Gotham 5r', sans-serif;
+  font-family: var(--gotham-bold);
   text-decoration: none;
 }
 
@@ -228,7 +310,7 @@ button {
   color: var(--neutral_white);
   cursor: pointer;
   display: inline-block;
-  font-family: 'Gotham 4r', sans-serif;
+  font-family: var(--gotham-regular);
   font-size: 14px;
   font-weight: normal;
   height: 34px;
@@ -299,10 +381,6 @@ button {
 }
 
 label {
-  font-family: 'Gotham 5r', sans-serif;
+  font-family: var(--gotham-bold);
   font-weight: normal;
-}
-
-.video_caption_link {
-  font-family: 'Gotham 4r', sans-serif;
 }

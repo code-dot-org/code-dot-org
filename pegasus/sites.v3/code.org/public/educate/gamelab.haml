@@ -11,7 +11,7 @@ video_player: true
 .tools-banner
   .tools-img-box
     %img.tools-img.tools-img-gamelab{src: CDO.code_org_url("/shared/images/courses/logo_gamelab_square.png")}
-  .tools-info.green{style: "max-width: 738px;"}
+  .tools-info.green{style: "max-width: 718px;"}
     .tools-title-bar.green
       %h1.tools-title Game Lab
     .tools-description
@@ -23,18 +23,19 @@ video_player: true
 .clear
 
 #resources
-  %h1 Resources
-  %h2 Try the Computer Science Discoveries unit that introduces Game Lab
-  %h3= I18n.t("csd3_name")
-  %h4 Grades 7 - 9
+  %h2 Resources
+  %h3.heading-md Try the Computer Science Discoveries unit that introduces Game Lab
+  %h4.heading-sm= I18n.t("csd3_name")
+  %p
+    %strong Grades 7 - 9
   .smalltext In Unit 3, students build on their coding experience as they create programmatic images, animations, interactive art, and games. Starting off with simple, primitive shapes and building up to more sophisticated sprite-based games, students become familiar with the programming concepts and the design process computer scientists use daily. They then learn how these simpler constructs can be combined to create more complex programs. In the final project, students develop a personalized, interactive program. Along the way, they practice design, testing, and iteration, as they come to see that failure and debugging are an expected and valuable part of the programming process.
   %a{:href=>CDO.studio_url("/s/csd3-2023")}
     %button{style: "margin-top: 20px;"}= I18n.t(:view_unit)
 .clear
 
 #challenges
-  %h1 Sample Projects
-  %h2 Explore these sample projects and take the challenge to make them even better
+  %h2 Sample Projects
+  %h3.heading-md Explore these sample projects and take the challenge to make them even better
   .highlights-content
     - cta = "Remix the project"
     = view :highlight_item, item: {image: "game-lab/example-sunset", title: "Sunset shapes", desc: "Watch the sun set. Challenge: Make the sky go dark once the sun has set.", cta: cta, url: 'https://studio.code.org/projects/gamelab/Z9QRSmJBfNY25T3ViLp0MTy4uAuXNNXpZrmhPsUdEro/remix'}
@@ -44,7 +45,7 @@ video_player: true
   .clear
 
 #videos
-  %h1 Video library
+  %h2 Video library
   Some of these videos appear in Unit 3 (Animations and Games) of the
   %a{href: "/educate/csd"}
     CS Discoveries course

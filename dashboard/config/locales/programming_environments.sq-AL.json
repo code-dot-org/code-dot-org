@@ -4,6 +4,21 @@
       "programming_environments": {
         "applab": {
           "categories": {
+            "advanced": {
+              "expressions": {
+                "setStyle": {
+                  "palette_params": {
+                    "css": {
+                      "type": "String"
+                    },
+                    "id": {
+                      "type": "String"
+                    }
+                  }
+                }
+              },
+              "name": "E avancuar"
+            },
             "canvas": {
               "expressions": {
                 "circle": {
@@ -137,6 +152,13 @@
                   },
                   "short_description": "Vendos sasinë e blu (duke filluar nga 0 në 255) në ngjyrën e pikselit të vendosur në pozicionin e dhënë x dhe y në të dhënat e imazhit të dhënë në sasinë e hyrjes BlueVlue."
                 },
+                "setFillColor": {
+                  "palette_params": {
+                    "color": {
+                      "type": "String"
+                    }
+                  }
+                },
                 "setGreen": {
                   "palette_params": {
                     "greenValue": {
@@ -186,8 +208,47 @@
                     }
                   },
                   "short_description": "Vendos sasinë e kuqe (duke filluar nga 0 në 255) në ngjyrën e pikselit të vendosur në pozicionin e dhënë x dhe y në të dhënat e imazhit të dhënë në sasinë e hyrjes RedValue."
+                },
+                "setStrokeColor": {
+                  "palette_params": {
+                    "color": {
+                      "type": "String"
+                    }
+                  }
                 }
               }
+            },
+            "circuit": {
+              "expressions": {
+                "buzzer.play": {
+                  "palette_params": {
+                    "tempo": {
+                      "type": "Numri"
+                    }
+                  }
+                },
+                "buzzer.playNotes": {
+                  "palette_params": {
+                    "tempo": {
+                      "type": "Numri"
+                    }
+                  }
+                },
+                "buzzer.playSong": {
+                  "palette_params": {
+                    "tempo": {
+                      "type": "Numri"
+                    }
+                  }
+                },
+                "isPressed": {
+                  "return_value": "Logjike"
+                },
+                "toggleSwitch.isOpen": {
+                  "return_value": "Logjike"
+                }
+              },
+              "name": "Qark"
             },
             "control": {
               "expressions": {
@@ -212,10 +273,20 @@
                     }
                   }
                 },
+                "stopTimedLoop": {
+                  "palette_params": {
+                    "loop": {
+                      "type": "Numri"
+                    }
+                  }
+                },
                 "timedLoop": {
                   "palette_params": {
                     "callback": {
                       "type": "Funksion"
+                    },
+                    "ms": {
+                      "type": "Numri"
                     }
                   }
                 }
@@ -223,10 +294,27 @@
             },
             "data": {
               "expressions": {
+                "createRecordSync": {
+                  "palette_params": {
+                    "table": {
+                      "type": "String"
+                    }
+                  }
+                },
                 "drawChartFromRecords": {
                   "palette_params": {
                     "tableName": {
                       "description": "Emri i tabelës për të tërhequr të dhënat nga."
+                    }
+                  }
+                },
+                "getColumn": {
+                  "palette_params": {
+                    "column": {
+                      "type": "String"
+                    },
+                    "table": {
+                      "type": "String"
                     }
                   }
                 },
@@ -241,6 +329,12 @@
                   "palette_params": {
                     "callback": {
                       "type": "Funksion"
+                    },
+                    "id": {
+                      "type": "String"
+                    },
+                    "name": {
+                      "type": "String"
                     }
                   }
                 },
@@ -251,6 +345,13 @@
                   "palette_params": {
                     "table": {
                       "description": "Emri i tabelës në të cilën zbatohet ky mbajtës i ngjarjes."
+                    }
+                  }
+                },
+                "readRecordsSync": {
+                  "palette_params": {
+                    "table": {
+                      "type": "String"
                     }
                   }
                 },
@@ -278,8 +379,49 @@
             "functions": {
               "name": "funksione"
             },
+            "maker": {
+              "expressions": {
+                "pinMode": {
+                  "palette_params": {
+                    "mode": {
+                      "type": "String"
+                    },
+                    "pin": {
+                      "type": "Numri"
+                    }
+                  }
+                }
+              }
+            },
             "math": {
               "expressions": {
+                "mathPow": {
+                  "palette_params": {
+                    "x": {
+                      "type": "Numri"
+                    },
+                    "y": {
+                      "type": "Numri"
+                    }
+                  }
+                },
+                "mathSqrt": {
+                  "palette_params": {
+                    "x": {
+                      "type": "Numri"
+                    }
+                  }
+                },
+                "moduloOperator": {
+                  "palette_params": {
+                    "x": {
+                      "type": "Numri"
+                    },
+                    "y": {
+                      "type": "Numri"
+                    }
+                  }
+                },
                 "randomNumber": {
                   "palette_params": {
                     "max": {
@@ -302,6 +444,59 @@
                 }
               },
               "name": "Matematikë"
+            },
+            "micro_bit": {
+              "expressions": {
+                "ledScreen.off": {
+                  "palette_params": {
+                    "x": {
+                      "type": "Numri"
+                    },
+                    "y": {
+                      "type": "Numri"
+                    }
+                  }
+                },
+                "ledScreen.on": {
+                  "examples": {
+                    "Four Corners": {
+                      "name": "Katër Këndet"
+                    }
+                  },
+                  "palette_params": {
+                    "x": {
+                      "type": "Numri"
+                    },
+                    "y": {
+                      "type": "Numri"
+                    }
+                  }
+                },
+                "ledScreen.scrollNumber": {
+                  "palette_params": {
+                    "number": {
+                      "type": "Numri"
+                    }
+                  }
+                },
+                "ledScreen.scrollString": {
+                  "palette_params": {
+                    "String": {
+                      "type": "String"
+                    }
+                  }
+                },
+                "ledScreen.toggle": {
+                  "palette_params": {
+                    "x": {
+                      "type": "Numri"
+                    },
+                    "y": {
+                      "type": "Numri"
+                    }
+                  }
+                }
+              }
             },
             "turtle": {
               "expressions": {
@@ -337,12 +532,22 @@
                   "short_description": "Lëviz breshkën në një pozicion specifik (x, y) në ekran."
                 },
                 "penColor": {
+                  "palette_params": {
+                    "color": {
+                      "type": "String"
+                    }
+                  },
                   "short_description": "Vendos ngjyrën e stilolapsit të përdorur nga breshkë për vizatimin e linjave dhe pikave."
                 },
                 "penDown": {
                   "short_description": "Vendos stilolapsin poshtë kështu që breshka tërheq një vijë pas saj ndërsa lëviz."
                 },
                 "penRGB": {
+                  "palette_params": {
+                    "r": {
+                      "type": "Numri"
+                    }
+                  },
                   "short_description": "Duke përdorur vlerat RGBA, përcakton ngjyrën e stilolapsit të përdorur nga breshkë për vizatimin e linjave dhe pikave."
                 },
                 "penUp": {
@@ -373,17 +578,78 @@
                 "button": {
                   "short_description": "Krijon një buton në ekran që shfaq tekstin e dhënë dhe referuar nga id dhënë në vendndodhjen e paracaktuar (0,0)."
                 },
+                "getProperty": {
+                  "palette_params": {
+                    "id": {
+                      "type": "String"
+                    },
+                    "property": {
+                      "type": "String"
+                    }
+                  }
+                },
                 "onEvent": {
+                  "examples": {
+                    "Shrink and Grow": {
+                      "name": "Tkurru dhe rritu"
+                    }
+                  },
                   "palette_params": {
                     "callback": {
                       "type": "Funksion"
+                    },
+                    "id": {
+                      "type": "String"
+                    },
+                    "type": {
+                      "type": "String"
+                    }
+                  }
+                },
+                "playSound": {
+                  "palette_params": {
+                    "loop": {
+                      "type": "Logjike"
+                    }
+                  }
+                },
+                "playSpeech": {
+                  "palette_params": {
+                    "gender": {
+                      "type": "String"
+                    },
+                    "language": {
+                      "type": "String"
+                    },
+                    "text": {
+                      "type": "String"
+                    }
+                  }
+                },
+                "rgb": {
+                  "palette_params": {
+                    "a": {
+                      "type": "Numri"
+                    },
+                    "b": {
+                      "type": "Numri"
+                    },
+                    "g": {
+                      "type": "Numri"
+                    },
+                    "r": {
+                      "type": "Numri"
                     }
                   }
                 },
                 "setProperty": {
                   "palette_params": {
+                    "id": {
+                      "type": "String"
+                    },
                     "property": {
-                      "description": "Prona për të ndryshuar."
+                      "description": "Prona për të ndryshuar.",
+                      "type": "String"
                     }
                   },
                   "short_description": "Vendos një pronë në një vlerë të re për elementin e specifikuar."
@@ -402,6 +668,11 @@
             "variables": {
               "expressions": {
                 "addPair": {
+                  "palette_params": {
+                    "key": {
+                      "type": "String"
+                    }
+                  },
                   "return_value": "Asnjë"
                 },
                 "declareAssign_list_123": {
@@ -412,6 +683,13 @@
                 },
                 "declareNoAssign_x": {
                   "short_description": "Deklaron një variabël dhe emrin përkatës"
+                },
+                "getValue": {
+                  "palette_params": {
+                    "key": {
+                      "type": "String"
+                    }
+                  }
                 },
                 "includes": {
                   "palette_params": {
@@ -457,23 +735,462 @@
                 }
               }
             },
+            "drawing": {
+              "expressions": {
+                "arc": {
+                  "palette_params": {
+                    "h": {
+                      "type": "Numri"
+                    },
+                    "start": {
+                      "type": "Numri"
+                    },
+                    "stop": {
+                      "type": "Numri"
+                    },
+                    "w": {
+                      "type": "Numri"
+                    },
+                    "x": {
+                      "type": "Numri"
+                    },
+                    "y": {
+                      "type": "Numri"
+                    }
+                  }
+                },
+                "background": {
+                  "examples": {
+                    "RGB Colors": {
+                      "name": "Ngjyrat RGB"
+                    }
+                  },
+                  "palette_params": {
+                    "color": {
+                      "type": "String"
+                    }
+                  }
+                },
+                "ellipse": {
+                  "palette_params": {
+                    "h": {
+                      "type": "Numri"
+                    },
+                    "w": {
+                      "type": "Numri"
+                    },
+                    "x": {
+                      "type": "Numri"
+                    },
+                    "y": {
+                      "type": "Numri"
+                    }
+                  }
+                },
+                "fill": {
+                  "palette_params": {
+                    "color": {
+                      "type": "String"
+                    }
+                  }
+                },
+                "line": {
+                  "palette_params": {
+                    "x1": {
+                      "type": "Numri"
+                    },
+                    "x2": {
+                      "type": "Numri"
+                    },
+                    "y1": {
+                      "type": "Numri"
+                    },
+                    "y2": {
+                      "type": "Numri"
+                    }
+                  }
+                },
+                "point": {
+                  "palette_params": {
+                    "x": {
+                      "type": "Numri"
+                    },
+                    "y": {
+                      "type": "Numri"
+                    }
+                  }
+                },
+                "rect": {
+                  "palette_params": {
+                    "h": {
+                      "type": "Numri"
+                    },
+                    "w": {
+                      "type": "Numri"
+                    },
+                    "x": {
+                      "type": "Numri"
+                    },
+                    "y": {
+                      "type": "Numri"
+                    }
+                  }
+                },
+                "regularPolygon": {
+                  "palette_params": {
+                    "sides": {
+                      "type": "Numri"
+                    },
+                    "size": {
+                      "type": "Numri"
+                    },
+                    "x": {
+                      "type": "Numri"
+                    },
+                    "y": {
+                      "type": "Numri"
+                    }
+                  }
+                },
+                "rgb": {
+                  "palette_params": {
+                    "a": {
+                      "type": "Numri"
+                    },
+                    "b": {
+                      "type": "Numri"
+                    },
+                    "g": {
+                      "type": "Numri"
+                    },
+                    "r": {
+                      "type": "Numri"
+                    }
+                  }
+                },
+                "shape": {
+                  "palette_params": {
+                    "x1": {
+                      "type": "Numri"
+                    },
+                    "x2": {
+                      "type": "Numri"
+                    },
+                    "y1": {
+                      "type": "Numri"
+                    },
+                    "y2": {
+                      "type": "Numri"
+                    }
+                  }
+                },
+                "stroke": {
+                  "palette_params": {
+                    "color": {
+                      "type": "String"
+                    }
+                  }
+                },
+                "strokeWeight": {
+                  "palette_params": {
+                    "size": {
+                      "type": "Numri"
+                    }
+                  }
+                },
+                "text": {
+                  "palette_params": {
+                    "height": {
+                      "type": "Numri"
+                    },
+                    "str": {
+                      "type": "String"
+                    },
+                    "width": {
+                      "type": "Numri"
+                    },
+                    "x": {
+                      "type": "Numri"
+                    },
+                    "y": {
+                      "type": "Numri"
+                    }
+                  }
+                },
+                "textAlign": {
+                  "palette_params": {
+                    "horiz": {
+                      "type": "String"
+                    },
+                    "vert": {
+                      "type": "String"
+                    }
+                  }
+                },
+                "textFont": {
+                  "palette_params": {
+                    "font": {
+                      "type": "String"
+                    }
+                  }
+                },
+                "textSize": {
+                  "palette_params": {
+                    "pixels": {
+                      "type": "Numri"
+                    }
+                  }
+                }
+              }
+            },
             "functions": {
               "name": "funksione"
             },
             "game_lab": {
               "expressions": {
+                "keyDown": {
+                  "palette_params": {
+                    "code": {
+                      "type": "String"
+                    }
+                  }
+                },
+                "keyWentDown": {
+                  "palette_params": {
+                    "code": {
+                      "type": "String"
+                    }
+                  }
+                },
+                "keyWentUp": {
+                  "palette_params": {
+                    "code": {
+                      "type": "String"
+                    }
+                  }
+                },
+                "mouseDown": {
+                  "palette_params": {
+                    "button": {
+                      "type": "String"
+                    }
+                  }
+                },
+                "mouseIsOver": {
+                  "palette_params": {
+                    "sprite": {
+                      "type": "Sprite"
+                    }
+                  }
+                },
+                "mousePressedOver": {
+                  "palette_params": {
+                    "sprite": {
+                      "type": "Sprite"
+                    }
+                  }
+                },
+                "mouseWentDown": {
+                  "palette_params": {
+                    "button": {
+                      "type": "String"
+                    }
+                  }
+                },
+                "mouseWentUp": {
+                  "palette_params": {
+                    "button": {
+                      "type": "String"
+                    }
+                  }
+                },
+                "playSound": {
+                  "palette_params": {
+                    "loop": {
+                      "type": "Logjike"
+                    },
+                    "url": {
+                      "type": "String"
+                    }
+                  }
+                },
+                "playSpeech": {
+                  "palette_params": {
+                    "gender": {
+                      "type": "String"
+                    },
+                    "language": {
+                      "type": "String"
+                    },
+                    "text": {
+                      "type": "String"
+                    }
+                  }
+                },
                 "showMobileControls": {
                   "content": "Ndryshon kontrollet celular të dukshme nën hapësirën e luajtjes.",
+                  "palette_params": {
+                    "dpadFourWay": {
+                      "type": "Logjike"
+                    },
+                    "dpadVisible": {
+                      "type": "Logjike"
+                    },
+                    "mobileOnly": {
+                      "type": "Logjike"
+                    },
+                    "spaceButtonVisible": {
+                      "type": "Logjike"
+                    }
+                  },
                   "short_description": "Ndryshon kontrollet celular të dukshme nën hapësirën e luajtjes."
+                },
+                "stopSound": {
+                  "palette_params": {
+                    "url": {
+                      "type": "String"
+                    }
+                  }
                 }
-              }
+              },
+              "name": "Game Lab"
             },
             "groups": {
               "expressions": {
+                "add": {
+                  "palette_params": {
+                    "sprite": {
+                      "type": "Sprite"
+                    }
+                  }
+                },
+                "contains": {
+                  "palette_params": {
+                    "sprite": {
+                      "type": "Sprite"
+                    }
+                  }
+                },
+                "get": {
+                  "palette_params": {
+                    "i": {
+                      "type": "Numri"
+                    }
+                  }
+                },
+                "pointToEach": {
+                  "palette_params": {
+                    "x": {
+                      "type": "Numri"
+                    },
+                    "y": {
+                      "type": "Numri"
+                    }
+                  }
+                },
+                "remove": {
+                  "palette_params": {
+                    "sprite": {
+                      "type": "Sprite"
+                    }
+                  }
+                },
+                "setAnimationEach": {
+                  "palette_params": {
+                    "label": {
+                      "type": "String"
+                    }
+                  }
+                },
+                "setColliderEach": {
+                  "palette_params": {
+                    "height": {
+                      "type": "Numri"
+                    },
+                    "rotationOffset": {
+                      "type": "Numri"
+                    },
+                    "type": {
+                      "type": "String"
+                    },
+                    "width/radius": {
+                      "type": "Numri"
+                    },
+                    "yOffset": {
+                      "type": "Numri"
+                    }
+                  }
+                },
                 "setColorEach": {
                   "palette_params": {
                     "color": {
                       "type": "Ngjyra"
+                    }
+                  }
+                },
+                "setHeightEach": {
+                  "palette_params": {
+                    "height": {
+                      "type": "Numri"
+                    }
+                  }
+                },
+                "setLifetimeEach": {
+                  "palette_params": {
+                    "lifetime": {
+                      "type": "Numri"
+                    }
+                  }
+                },
+                "setMirrorXEach": {
+                  "palette_params": {
+                    "dir": {
+                      "type": "Numri"
+                    }
+                  }
+                },
+                "setMirrorYEach": {
+                  "palette_params": {
+                    "dir": {
+                      "type": "Numri"
+                    }
+                  }
+                },
+                "setRotateToDirectionEach": {
+                  "palette_params": {
+                    "bool": {
+                      "type": "Logjike"
+                    }
+                  }
+                },
+                "setRotationEach": {
+                  "palette_params": {
+                    "angle": {
+                      "type": "Numri"
+                    }
+                  }
+                },
+                "setRotationSpeedEach": {
+                  "palette_params": {
+                    "speed": {
+                      "type": "Numri"
+                    }
+                  }
+                },
+                "setScaleEach": {
+                  "palette_params": {
+                    "scale": {
+                      "type": "Numri"
+                    }
+                  }
+                },
+                "setSpeedAndDirectionEach": {
+                  "palette_params": {
+                    "angle": {
+                      "type": "Numri"
+                    },
+                    "speed": {
+                      "type": "Numri"
                     }
                   }
                 },
@@ -483,11 +1200,67 @@
                       "type": "Ngjyra"
                     }
                   }
+                },
+                "setVelocityEach": {
+                  "palette_params": {
+                    "x": {
+                      "type": "Numri"
+                    },
+                    "y": {
+                      "type": "Numri"
+                    }
+                  }
+                },
+                "setVelocityXEach": {
+                  "palette_params": {
+                    "velocity": {
+                      "type": "Numri"
+                    }
+                  }
+                },
+                "setVelocityYEach": {
+                  "palette_params": {
+                    "velocity": {
+                      "type": "Numri"
+                    }
+                  }
+                },
+                "setVisibleEach": {
+                  "palette_params": {
+                    "bool": {
+                      "type": "Logjike"
+                    }
+                  }
+                },
+                "setWidthEach": {
+                  "palette_params": {
+                    "width": {
+                      "type": "Numri"
+                    }
+                  }
                 }
-              }
+              },
+              "name": "Grupet"
             },
             "math": {
               "expressions": {
+                "mathSqrt": {
+                  "palette_params": {
+                    "x": {
+                      "type": "Numri"
+                    }
+                  }
+                },
+                "moduloOperator": {
+                  "palette_params": {
+                    "value1": {
+                      "type": "Numri"
+                    },
+                    "value2": {
+                      "type": "Numri"
+                    }
+                  }
+                },
                 "randomNumber": {
                   "palette_params": {
                     "max": {
@@ -513,6 +1286,102 @@
             },
             "sprites": {
               "expressions": {
+                "createSprite": {
+                  "palette_params": {
+                    "height": {
+                      "type": "Numri"
+                    },
+                    "width": {
+                      "type": "Numri"
+                    },
+                    "x": {
+                      "type": "Numri"
+                    },
+                    "y": {
+                      "type": "Numri"
+                    }
+                  }
+                },
+                "mirrorX": {
+                  "palette_params": {
+                    "dir": {
+                      "type": "Numri"
+                    }
+                  }
+                },
+                "mirrorY": {
+                  "palette_params": {
+                    "dir": {
+                      "type": "Numri"
+                    }
+                  }
+                },
+                "pointTo": {
+                  "palette_params": {
+                    "x": {
+                      "type": "Numri"
+                    },
+                    "y": {
+                      "type": "Numri"
+                    }
+                  }
+                },
+                "setAnimation": {
+                  "palette_params": {
+                    "label": {
+                      "type": "String"
+                    }
+                  }
+                },
+                "setCollider": {
+                  "palette_params": {
+                    "height": {
+                      "type": "Numri"
+                    },
+                    "rotationOffset": {
+                      "type": "Numri"
+                    },
+                    "type": {
+                      "type": "String"
+                    },
+                    "width/radius": {
+                      "type": "Numri"
+                    },
+                    "xOffset": {
+                      "type": "Numri"
+                    },
+                    "yOffset": {
+                      "type": "Numri"
+                    }
+                  }
+                },
+                "setFrame": {
+                  "palette_params": {
+                    "frame": {
+                      "type": "Numri"
+                    }
+                  }
+                },
+                "setSpeedAndDirection": {
+                  "palette_params": {
+                    "angle": {
+                      "type": "Numri"
+                    },
+                    "speed": {
+                      "type": "Numri"
+                    }
+                  }
+                },
+                "setVelocity": {
+                  "palette_params": {
+                    "x": {
+                      "type": "Numri"
+                    },
+                    "y": {
+                      "type": "Numri"
+                    }
+                  }
+                },
                 "sprite.height": {
                   "return_value": "Lartësia e sprite."
                 },
@@ -553,7 +1422,8 @@
               },
               "name": "variabla"
             }
-          }
+          },
+          "name": "Game Lab"
         },
         "spritelab": {
           "categories": {
@@ -580,6 +1450,28 @@
             },
             "variables": {
               "name": "variabla"
+            }
+          }
+        },
+        "weblab": {
+          "categories": {
+            "html_tags": {
+              "expressions": {
+                "style": {
+                  "examples": {
+                    "Style": {
+                      "name": "Stili"
+                    }
+                  }
+                },
+                "title": {
+                  "examples": {
+                    "Title": {
+                      "name": "Titulli"
+                    }
+                  }
+                }
+              }
             }
           }
         }

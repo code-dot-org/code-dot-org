@@ -20,7 +20,7 @@
     },
     "new_name": null,
     "family_name": "coursee",
-    "serialized_at": "2023-08-08 17:54:31 UTC",
+    "serialized_at": "2023-08-29 20:25:43 UTC",
     "published_state": "stable",
     "instruction_type": "teacher_led",
     "instructor_audience": "teacher",
@@ -3997,15 +3997,12 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
-        "level_keys": [
-          "coursee_helloworld_introtosprites_2023"
-        ],
         "progression": "Video: Hello World: Welcome to Sprite Lab"
       },
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
-          "coursee_helloworld_introtosprites_2023"
+          "CourseE_video_introSpriteLab_2023"
         ],
         "lesson.key": "Hello World",
         "lesson_group.key": "csf_sprites",
@@ -4013,7 +4010,7 @@
         "activity_section.key": "78d3474c-3d24-4a0d-bd7a-13e545346178"
       },
       "level_keys": [
-        "coursee_helloworld_introtosprites_2023"
+        "CourseE_video_introSpriteLab_2023"
       ]
     },
     {
@@ -7304,9 +7301,9 @@
     },
     {
       "seeding_key": {
-        "level.key": "coursee_helloworld_introtosprites_2023",
+        "level.key": "CourseE_video_introSpriteLab_2023",
         "script_level.level_keys": [
-          "coursee_helloworld_introtosprites_2023"
+          "CourseE_video_introSpriteLab_2023"
         ],
         "lesson.key": "Hello World",
         "lesson_group.key": "csf_sprites",
