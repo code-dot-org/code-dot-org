@@ -13,7 +13,7 @@ import React, {useContext, useEffect, useState} from 'react';
 import {useSelector} from 'react-redux';
 import {LabState} from '../lab2Redux';
 import ProgressContainer from '../progress/ProgressContainer';
-import {AppName, LevelProperties} from '../types';
+import {AppName} from '../types';
 import moduleStyles from './lab-views-renderer.module.scss';
 import {DEFAULT_THEME, Theme, ThemeContext} from './ThemeWrapper';
 
@@ -38,7 +38,7 @@ interface AppProperties {
    * Optional function to run when the lab is first mounted. This is useful
    * for any one-time setup actions such as setting up Blockly.
    */
-  setupFunction?: (levelProperties: LevelProperties | undefined) => void;
+  setupFunction?: () => void;
 }
 
 const appsProperties: {[appName in AppName]?: AppProperties} = {
@@ -69,19 +69,16 @@ const LabViewsRenderer: React.FunctionComponent = () => {
     (state: {lab: LabState}) => state.lab.levelProperties?.appName
   );
 
-  const levelProperties = useSelector(
-    (state: {lab: LabState}) => state.lab.levelProperties
-  );
   const [appsToRender, setAppsToRender] = useState<AppName[]>([]);
 
   // When navigating to a new app type, add it to the list of apps to render.
   useEffect(() => {
     if (currentAppName && !appsToRender.includes(currentAppName)) {
       // Run the setup function for the Lab if it has one.
-      appsProperties[currentAppName]?.setupFunction?.(levelProperties);
+      appsProperties[currentAppName]?.setupFunction?.();
       setAppsToRender([...appsToRender, currentAppName]);
     }
-  }, [currentAppName, appsToRender, levelProperties]);
+  }, [currentAppName, appsToRender]);
 
   // Set the theme for the current app.
   const {setTheme} = useContext(ThemeContext);
