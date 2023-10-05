@@ -55,7 +55,14 @@ const doAi = async (input: string) => {
 // Output: JSON containing {backgroundColor:string, backgroundEffect:string, foregroundEffect:string}
 // ToDo: Break down into helper functions for each step rather than repeat code for each field
 const cachedAi = async (input: string) => {
+  //ToDo: Reference from apps/static/ai/cachedAIresponses instead of fetching from S3 for prototype
   const cachedPalettes: {[key: string]: any} = (
+    await fetch('cdo-ai/hoc2023/cachedpalettemap.json')
+  ).json();
+  const cachedBackgrounds: {[key: string]: any} = (
+    await fetch('cdo-ai/hoc2023/cachedpalettemap.json')
+  ).json();
+  const cachedForegrounds: {[key: string]: any} = (
     await fetch('cdo-ai/hoc2023/cachedpalettemap.json')
   ).json();
   const inputWords: string[] = input.split(',');
@@ -70,6 +77,7 @@ const cachedAi = async (input: string) => {
   });
 
   // Sum word-association vectors of all input words
+  // Convert into function to reduce code length bloat
   const palettesLength = cachedPalettes['palettemap'].length;
   const paletteAssociation: number[] = new Array(palettesLength).fill(0);
   for (const key in individualPaletteMap) {
