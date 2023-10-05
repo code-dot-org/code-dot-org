@@ -1,3 +1,4 @@
+import {BlockDefinition} from '@cdo/apps/types/blocklyTypes';
 // TODO: other channel properties mentioned in project.js:
 // level, frozen, hidden, thumbnailUrl, migratedToS3, sharedWith, libraryName, libraryDescription,
 // latestLibraryVersion, publishLibrary, libraryPublishedAt
@@ -101,7 +102,7 @@ export interface LevelProperties {
   isK1?: boolean;
   skin?: string;
   toolboxBlocks?: string;
-  sharedBlocks?: any[]; // TODO: define this type
+  sharedBlocks?: BlockDefinition[];
 }
 
 // Level configuration data used by project-backed labs that don't require
