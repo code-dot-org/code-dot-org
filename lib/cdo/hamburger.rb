@@ -290,14 +290,7 @@ class Hamburger
       {title: I18n.t("#{loc_prefix}stats"), url: CDO.code_org_url("/promote"), id: "header-stats"},
       {title: I18n.t("#{loc_prefix}help_us"), url: CDO.code_org_url("/help"), id: "header-help"},
       {title: I18n.t("#{loc_prefix}incubator"), url: CDO.studio_url("/incubator"), id: "header-incubator"},
-    ]
-
-    about = [
       {title: I18n.t("#{loc_prefix}about"), url: CDO.code_org_url("/about"), id: "header-en-about"}
-    ]
-
-    about_intl = [
-      {title: I18n.t("#{loc_prefix}about"), url: CDO.code_org_url("/international/about"), id: "header-non-en-about"}
     ]
 
     if options[:user_type] == "teacher"
@@ -311,11 +304,6 @@ class Hamburger
       end
     else
       header_links = signed_out_links
-      if options[:language] == "en"
-        header_links.concat(about)
-      else
-        header_links.concat(about_intl)
-      end
     end
     header_links
   end
