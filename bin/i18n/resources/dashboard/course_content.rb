@@ -1,4 +1,5 @@
 require_relative '../../i18n_script_utils'
+require_relative '../dashboard'
 
 Dir[File.expand_path('../course_content/**/*.rb', __FILE__)].sort.each {|file| require file}
 
@@ -7,8 +8,8 @@ module I18n
     module Dashboard
       module CourseContent
         DIR_NAME = 'course_content'.freeze
-        DASHBOARD_DIR_NAME = 'dashboard'.freeze
         I18N_SOURCE_DIR_PATH = CDO.dir(I18N_SOURCE_DIR, DIR_NAME).freeze
+        I18N_BACKUP_DIR_PATH = CDO.dir(I18N_ORIGINAL_DIR, DIR_NAME).freeze
 
         BLOCK_CATEGORIES_TYPE = 'block_categories'.freeze
         PROGRESSIONS_TYPE = 'progressions'.freeze
