@@ -43,10 +43,11 @@ const CoteacherInviteNotification = () => {
 
 export default CoteacherInviteNotification;
 
+// The Notification object uses styles instead of className for legacy reasons.
 const styles = {
   acceptButton: {
     marginLeft: '20px',
-    marginRight: '20px',
+    marginRight: '0px',
     lineHeight: '100%',
     display: 'flex',
     alignItems: 'center',
