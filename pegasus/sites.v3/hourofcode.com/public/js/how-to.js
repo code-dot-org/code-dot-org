@@ -23,7 +23,7 @@ document.body.addEventListener("click", (event) => {
 // Sticky scroller styles on steps section navigation
 window.addEventListener("DOMContentLoaded", () => {
   const options = {
-    rootMargin: "-10% 0px -75%",
+    rootMargin: "-20% 0px -80%",
   };
 
   const observer = new IntersectionObserver((entries) => {
