@@ -1,110 +1,113 @@
 {
-  "art": {
-    "association": [3, 2, 1, 1, 2, 1, 2, 2, 3, 1, 2, 1, 1, 1, 2, 2, 2, 2, 1, 1],
-    "explanation": "The word 'art' is closely associated with 'cool' and 'warm' palettes, which often feature artistic and contrasting color schemes."
+  "emojiAssociations": {
+    "art": {
+      "association": [3, 2, 1, 1, 2, 1, 2, 2, 3, 1, 2, 1, 1, 1, 2, 2, 2, 2, 1, 1],
+      "explanation": "The word 'art' is closely associated with 'cool' and 'warm' palettes, which often feature artistic and contrasting color schemes."
+    },
+    "astronaut": {
+      "association": [2, 1, 4, 1, 2, 3, 1, 1, 2, 1, 3, 1, 1, 1, 1, 3, 1, 1, 1, 1],
+      "explanation": "The word 'astronaut' is associated with 'electronic' and 'neon' palettes, reflecting a futuristic and high-tech theme."
+    },
+    "atom": {
+      "association": [3, 1, 4, 1, 3, 4, 1, 2, 3, 1, 3, 1, 2, 1, 2, 3, 1, 1, 1, 1],
+      "explanation": "The word 'atom' is closely linked with 'electronic,' 'neon,' and 'vintage' palettes, indicating a blend of science and retro aesthetics."
+    },
+    "bear": {
+      "association": [2, 3, 2, 2, 1, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 3, 2, 2, 2, 2],
+      "explanation": "The word 'bear' is associated with 'black and white' and 'winter' palettes, reflecting a monochromatic and cold environment."
+    },
+    "cactus": {
+      "association": [2, 1, 2, 2, 1, 2, 3, 2, 2, 2, 2, 2, 2, 2, 2, 2, 3, 2, 2, 2],
+      "explanation": "The word 'cactus' is associated with 'black and white,' 'neon,' and 'tropical' palettes, representing a vibrant and contrasting desert landscape."
+    },
+    "cloud": {
+      "association": [2, 1, 2, 1, 1, 2, 3, 3, 2, 3, 3, 2, 2, 2, 3, 1, 1, 2, 3, 3],
+      "explanation": "The word 'cloud' is closely linked with 'black and white,' 'tropical,' and 'vintage' palettes, symbolizing a combination of calm and retro vibes."
+    },
+    "cry": {
+      "association": [2, 1, 2, 1, 2, 2, 1, 2, 2, 3, 3, 2, 2, 2, 2, 2, 2, 1, 2, 3],
+      "explanation": "The word 'cry' is associated with 'black and white,' 'electronic,' and 'rainbows' palettes, expressing emotional and vibrant feelings."
+    },
+    "cupcake": {
+      "association": [2, 1, 1, 2, 1, 3, 3, 2, 2, 2, 3, 2, 2, 2, 2, 2, 2, 1, 2, 3],
+      "explanation": "The word 'cupcake' is associated with 'electronic,' 'neon,' and 'rainbows' palettes, reflecting a colorful and sweet dessert theme."
+    },
+    "demon": {
+      "association": [1, 1, 2, 2, 1, 2, 2, 2, 2, 3, 2, 2, 2, 1, 2, 2, 2, 1, 2, 3],
+      "explanation": "The word 'demon' is linked with 'electronic,' 'neon,' and 'rainbows' palettes, representing a mix of dark and vibrant elements."
+    },
+    "diamond": {
+      "association": [3, 3, 2, 5, 3, 2, 2, 3, 2, 2, 2, 3, 3, 2, 3, 2, 2, 3, 2, 2],
+      "explanation": "The word 'diamond' is closely associated with 'black and white' and 'rainbows' palettes, symbolizing a combination of luxury and vibrant colors."
+    },
+    "dog": {
+      "association": [2, 1, 1, 2, 1, 2, 1, 3, 2, 3, 2, 1, 1, 1, 2, 2, 1, 1, 1, 1],
+      "explanation": "The word 'dog' is associated with 'electronic' and 'warm' palettes, expressing a friendly and comfortable atmosphere."
+    },
+    "flower": {
+      "association": [3, 1, 3, 3, 2, 3, 4, 3, 2, 4, 4, 3, 3, 3, 3, 2, 1, 3, 3, 3],
+      "explanation": "The word 'flower' is closely linked with 'electronic,' 'tropical,' and 'vintage' palettes, symbolizing a mix of nature and retro aesthetics."
+    },
+    "guitar": {
+      "association": [2, 1, 2, 2, 1, 2, 1, 3, 1, 1, 1, 2, 2, 1, 1, 2, 1, 1, 1, 1],
+      "explanation": "The word 'guitar' is associated with 'electronic' and 'warm' palettes, reflecting a combination of music and comfort."
+    },
+    "heart": {
+      "association": [5, 4, 2, 5, 3, 2, 4, 3, 2, 2, 2, 1, 4, 3, 2, 2, 2, 2, 1, 4],
+      "explanation": "The word 'heart' is closely linked with 'cool,' 'ice cream,' 'neon,' and 'roses' palettes, symbolizing emotions and romance."
+    },
+    "laugh": {
+      "association": [2, 2, 2, 2, 2, 2, 2, 1, 1, 2, 2, 2, 2, 2, 2, 2, 2, 1, 2, 2],
+      "explanation": "The word 'laugh' is associated with 'black and white,' 'electronic,' and 'rainbows' palettes, expressing happiness and vibrancy."
+    },
+    "lightning": {
+      "association": [2, 2, 2, 2, 2, 2, 2, 1, 1, 2, 2, 2, 2, 2, 2, 2, 2, 1, 2, 2],
+      "explanation": "The word 'lightning' is associated with 'black and white,' 'electronic,' and 'rainbows' palettes, symbolizing energy and vibrancy."
+    },
+    "lion": {
+      "association": [2, 1, 1, 2, 1, 2, 1, 3, 1, 1, 1, 2, 2, 1, 1, 2, 1, 1, 1, 1],
+      "explanation": "The word 'lion' is associated with 'electronic' and 'warm' palettes, reflecting a combination of strength and comfort."
+    },
+    "owl": {
+      "association": [3, 2, 2, 2, 2, 2, 2, 1, 1, 1, 2, 2, 1, 1, 1, 2, 2, 1, 1, 2],
+      "explanation": "The word 'owl' is closely linked with 'cool,' 'neon,' and 'spring' palettes, symbolizing a combination of mystique and vibrancy."
+    },
+    "piano": {
+      "association": [2, 1, 2, 2, 1, 2, 2, 1, 1, 1, 1, 2, 2, 1, 1, 1, 1, 1, 1, 1],
+      "explanation": "The word 'piano' is associated with 'electronic' and 'cool' palettes, reflecting a combination of music and style."
+    },
+    "planet": {
+      "association": [2, 1, 1, 2, 1, 2, 2, 1, 1, 1, 1, 2, 2, 1, 1, 1, 1, 1, 1, 1],
+      "explanation": "The word 'planet' is associated with 'electronic' and 'cool' palettes, symbolizing a sense of cosmic exploration and style."
+    },
+    "rabbit": {
+      "association": [2, 1, 2, 2, 1, 2, 2, 2, 2, 1, 2, 2, 2, 2, 2, 2, 2, 1, 2, 2],
+      "explanation": "The word 'rabbit' is associated with 'electronic,' 'neon,' and 'rainbows' palettes, reflecting a combination of playfulness and vibrancy."
+    },
+    "rainbow": {
+      "association": [4, 3, 4, 5, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 5, 4, 4, 3, 4, 4],
+      "explanation": "The word 'rainbow' is closely associated with various palettes, especially 'ice cream,' 'neon,' and 'roses,' symbolizing a wide range of vibrant colors."
+    },
+    "scared": {
+      "association": [2, 1, 2, 1, 2, 2, 1, 2, 2, 3, 3, 2, 2, 1, 2, 2, 2, 1, 2, 3],
+      "explanation": "The word 'scared' is associated with 'black and white,' 'electronic,' and 'rainbows' palettes, expressing a mix of fear and vibrancy."
+    },
+    "seashell": {
+      "association": [3, 3, 2, 3, 1, 2, 4, 4, 3, 4, 4, 3, 3, 3, 3, 2, 1, 3, 3, 3],
+      "explanation": "The word 'seashell' is closely linked with 'electronic,' 'tropical,' and 'vintage' palettes, symbolizing a combination of beachy and retro aesthetics."
+    },
+    "unicorn": {
+      "association": [3, 4, 4, 2, 4, 3, 4, 3, 2, 3, 4, 3, 2, 5, 4, 4, 4, 1, 4, 4],
+      "explanation": "The word 'unicorn' is associated with various palettes, especially 'ice cream,' 'neon,' and 'smiles,' representing a magical and colorful theme."
+    },
+    "vampire": {
+      "association": [2, 1, 2, 2, 1, 2, 2, 2, 2, 3, 3, 2, 2, 2, 2, 2, 2, 1, 2, 3],
+      "explanation": "The word 'vampire' is associated with 'electronic,' 'neon,' and 'rainbows' palettes, expressing a blend of darkness and vibrancy."
+    },
+    "wolf": {
+      "association": [2, 1, 2, 2, 1, 2, 2, 2, 2, 3, 3, 2, 2, 2, 2, 2, 2, 1, 2, 3],
+      "explanation": "The word 'wolf' is associated with 'electronic,' 'neon,' and 'rainbows' palettes, symbolizing a mix of wildness and vibrancy."
+    }
   },
-  "astronaut": {
-    "association": [2, 1, 4, 1, 2, 3, 1, 1, 2, 1, 3, 1, 1, 1, 1, 3, 1, 1, 1, 1],
-    "explanation": "The word 'astronaut' is associated with 'electronic' and 'neon' palettes, reflecting a futuristic and high-tech theme."
-  },
-  "atom": {
-    "association": [3, 1, 4, 1, 3, 4, 1, 2, 3, 1, 3, 1, 2, 1, 2, 3, 1, 1, 1, 1],
-    "explanation": "The word 'atom' is closely linked with 'electronic,' 'neon,' and 'vintage' palettes, indicating a blend of science and retro aesthetics."
-  },
-  "bear": {
-    "association": [2, 3, 2, 2, 1, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 3, 2, 2, 2, 2],
-    "explanation": "The word 'bear' is associated with 'black and white' and 'winter' palettes, reflecting a monochromatic and cold environment."
-  },
-  "cactus": {
-    "association": [2, 1, 2, 2, 1, 2, 3, 2, 2, 2, 2, 2, 2, 2, 2, 2, 3, 2, 2, 2],
-    "explanation": "The word 'cactus' is associated with 'black and white,' 'neon,' and 'tropical' palettes, representing a vibrant and contrasting desert landscape."
-  },
-  "cloud": {
-    "association": [2, 1, 2, 1, 1, 2, 3, 3, 2, 3, 3, 2, 2, 2, 3, 1, 1, 2, 3, 3],
-    "explanation": "The word 'cloud' is closely linked with 'black and white,' 'tropical,' and 'vintage' palettes, symbolizing a combination of calm and retro vibes."
-  },
-  "cry": {
-    "association": [2, 1, 2, 1, 2, 2, 1, 2, 2, 3, 3, 2, 2, 2, 2, 2, 2, 1, 2, 3],
-    "explanation": "The word 'cry' is associated with 'black and white,' 'electronic,' and 'rainbows' palettes, expressing emotional and vibrant feelings."
-  },
-  "cupcake": {
-    "association": [2, 1, 1, 2, 1, 3, 3, 2, 2, 2, 3, 2, 2, 2, 2, 2, 2, 1, 2, 3],
-    "explanation": "The word 'cupcake' is associated with 'electronic,' 'neon,' and 'rainbows' palettes, reflecting a colorful and sweet dessert theme."
-  },
-  "demon": {
-    "association": [1, 1, 2, 2, 1, 2, 2, 2, 2, 3, 2, 2, 2, 1, 2, 2, 2, 1, 2, 3],
-    "explanation": "The word 'demon' is linked with 'electronic,' 'neon,' and 'rainbows' palettes, representing a mix of dark and vibrant elements."
-  },
-  "diamond": {
-    "association": [3, 3, 2, 5, 3, 2, 2, 3, 2, 2, 2, 3, 3, 2, 3, 2, 2, 3, 2, 2],
-    "explanation": "The word 'diamond' is closely associated with 'black and white' and 'rainbows' palettes, symbolizing a combination of luxury and vibrant colors."
-  },
-  "dog": {
-    "association": [2, 1, 1, 2, 1, 2, 1, 3, 2, 3, 2, 1, 1, 1, 2, 2, 1, 1, 1, 1],
-    "explanation": "The word 'dog' is associated with 'electronic' and 'warm' palettes, expressing a friendly and comfortable atmosphere."
-  },
-  "flower": {
-    "association": [3, 1, 3, 3, 2, 3, 4, 3, 2, 4, 4, 3, 3, 3, 3, 2, 1, 3, 3, 3],
-    "explanation": "The word 'flower' is closely linked with 'electronic,' 'tropical,' and 'vintage' palettes, symbolizing a mix of nature and retro aesthetics."
-  },
-  "guitar": {
-    "association": [2, 1, 2, 2, 1, 2, 1, 3, 1, 1, 1, 2, 2, 1, 1, 2, 1, 1, 1, 1],
-    "explanation": "The word 'guitar' is associated with 'electronic' and 'warm' palettes, reflecting a combination of music and comfort."
-  },
-  "heart": {
-    "association": [5, 4, 2, 5, 3, 2, 4, 3, 2, 2, 2, 1, 4, 3, 2, 2, 2, 2, 1, 4],
-    "explanation": "The word 'heart' is closely linked with 'cool,' 'ice cream,' 'neon,' and 'roses' palettes, symbolizing emotions and romance."
-  },
-  "laugh": {
-    "association": [2, 2, 2, 2, 2, 2, 2, 1, 1, 2, 2, 2, 2, 2, 2, 2, 2, 1, 2, 2],
-    "explanation": "The word 'laugh' is associated with 'black and white,' 'electronic,' and 'rainbows' palettes, expressing happiness and vibrancy."
-  },
-  "lightning": {
-    "association": [2, 2, 2, 2, 2, 2, 2, 1, 1, 2, 2, 2, 2, 2, 2, 2, 2, 1, 2, 2],
-    "explanation": "The word 'lightning' is associated with 'black and white,' 'electronic,' and 'rainbows' palettes, symbolizing energy and vibrancy."
-  },
-  "lion": {
-    "association": [2, 1, 1, 2, 1, 2, 1, 3, 1, 1, 1, 2, 2, 1, 1, 2, 1, 1, 1, 1],
-    "explanation": "The word 'lion' is associated with 'electronic' and 'warm' palettes, reflecting a combination of strength and comfort."
-  },
-  "owl": {
-    "association": [3, 2, 2, 2, 2, 2, 2, 1, 1, 1, 2, 2, 1, 1, 1, 2, 2, 1, 1, 2],
-    "explanation": "The word 'owl' is closely linked with 'cool,' 'neon,' and 'spring' palettes, symbolizing a combination of mystique and vibrancy."
-  },
-  "piano": {
-    "association": [2, 1, 2, 2, 1, 2, 2, 1, 1, 1, 1, 2, 2, 1, 1, 1, 1, 1, 1, 1],
-    "explanation": "The word 'piano' is associated with 'electronic' and 'cool' palettes, reflecting a combination of music and style."
-  },
-  "planet": {
-    "association": [2, 1, 1, 2, 1, 2, 2, 1, 1, 1, 1, 2, 2, 1, 1, 1, 1, 1, 1, 1],
-    "explanation": "The word 'planet' is associated with 'electronic' and 'cool' palettes, symbolizing a sense of cosmic exploration and style."
-  },
-  "rabbit": {
-    "association": [2, 1, 2, 2, 1, 2, 2, 2, 2, 1, 2, 2, 2, 2, 2, 2, 2, 1, 2, 2],
-    "explanation": "The word 'rabbit' is associated with 'electronic,' 'neon,' and 'rainbows' palettes, reflecting a combination of playfulness and vibrancy."
-  },
-  "rainbow": {
-    "association": [4, 3, 4, 5, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 5, 4, 4, 3, 4, 4],
-    "explanation": "The word 'rainbow' is closely associated with various palettes, especially 'ice cream,' 'neon,' and 'roses,' symbolizing a wide range of vibrant colors."
-  },
-  "scared": {
-    "association": [2, 1, 2, 1, 2, 2, 1, 2, 2, 3, 3, 2, 2, 1, 2, 2, 2, 1, 2, 3],
-    "explanation": "The word 'scared' is associated with 'black and white,' 'electronic,' and 'rainbows' palettes, expressing a mix of fear and vibrancy."
-  },
-  "seashell": {
-    "association": [3, 3, 2, 3, 1, 2, 4, 4, 3, 4, 4, 3, 3, 3, 3, 2, 1, 3, 3, 3],
-    "explanation": "The word 'seashell' is closely linked with 'electronic,' 'tropical,' and 'vintage' palettes, symbolizing a combination of beachy and retro aesthetics."
-  },
-  "unicorn": {
-    "association": [3, 4, 4, 2, 4, 3, 4, 3, 2, 3, 4, 3, 2, 5, 4, 4, 4, 1, 4, 4],
-    "explanation": "The word 'unicorn' is associated with various palettes, especially 'ice cream,' 'neon,' and 'smiles,' representing a magical and colorful theme."
-  },
-  "vampire": {
-    "association": [2, 1, 2, 2, 1, 2, 2, 2, 2, 3, 3, 2, 2, 2, 2, 2, 2, 1, 2, 3],
-    "explanation": "The word 'vampire' is associated with 'electronic,' 'neon,' and 'rainbows' palettes, expressing a blend of darkness and vibrancy."
-  },
-  "wolf": {
-    "association": [2, 1, 2, 2, 1, 2, 2, 2, 2, 3, 3, 2, 2, 2, 2, 2, 2, 1, 2, 3],
-    "explanation": "The word 'wolf' is associated with 'electronic,' 'neon,' and 'rainbows' palettes, symbolizing a mix of wildness and vibrancy."
-  }
+  "palettes": ["cool", "black and white", "electronic", "ice cream", "light", "neon", "tropical", "vintage", "warm", "autumn", "dawn", "dusk", "grey", "ocean", "rainbow", "roses", "sky", "spring", "winter", "summer"]
 }
