@@ -8337,7 +8337,7 @@
   hoc_how_to_nav_sidebar_aria_label: "Sidebar navigation"
 
   hoc_how_to_educators_intro_heading: "How to plan your Hour of Code"
-  hoc_how_to_educators_intro_desc: "The Hour of Code is a one-hour introduction to computer science designed to demystify \"code\", show that anybody can learn the basics, and to broaden participation in the field of computer science. You can help raise awareness of the computer science movement and volunteer to inspire more students to try computer science, particularly young women."
+  hoc_how_to_educators_intro_desc: "The Hour of Code is a one-hour introduction to computer science, using fun tutorials to show that anybody can learn the basics.  This year, we're taking Hour of Code to new heights by offering coding opportunities that encompass both artificial intelligence (AI) and non-AI components. Whether you or your students are experienced coders or you all are setting out on your very first computer science expedition, this Hour of Code promises an extraordinary voyage."
 
   hoc_how_to_faq_question_prerequisites: "What are the prerequisites for doing an Hour of Code?"
   hoc_how_to_faq_answer_prerequisites: "The Hour of Code is simple to run — even for beginners. You don't need experience in computer science or teaching in order to inspire students to explore, create, and learn something new."
@@ -8382,7 +8382,7 @@
   hoc_how_to_step_05_educators_desc_01: "Get your students excited for the event by sharing [inspirational videos](%{videos_url}) highlighting diverse people and creative ways that computer science can be used in the real world."
   hoc_how_to_step_05_educators_desc_02: "Share your Hour of Code plans with other teachers who may want to join in on the fun! This is also a great opportunity to reach out to your school's Parent Teacher Student Association or share in parent newsletters, letting them know what their children are learning."
   hoc_how_to_step_06_educators_desc_01: "Direct your students to the activity, maybe by sharing the link on the board or through your classroom's learning management system. Your students may encounter challenges—that's okay! Learning to program is like learning a new language; you won't be fluent right away. If you don't know the answer, you can figure it out together."
-  hoc_how_to_step_07_educators_desc_01: "Direct your students to the activity, maybe by sharing the link on the board or through your classroom's learning management system. Your students may encounter challenges—that's okay! Learning to program is like learning a new language; you won't be fluent right away. If you don't know the answer, you can figure it out together."
+  hoc_how_to_step_07_educators_desc_01: "Be sure to celebrate success! Share photos and videos of your Hour of Code event on social media. Use #HourOfCode and @codeorg so we can highlight your success, too!"
   hoc_how_to_step_07_educators_desc_02: "You can also print certificates for your students to show off their achievement!"
 
   team_page_full_team_alt_text: "Nearly 100 Code.org employees in matching blue and yellow t-shirts pose in a hotel conference room for the company's summer 2022 Codechella event."

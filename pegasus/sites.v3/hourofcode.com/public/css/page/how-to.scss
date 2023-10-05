@@ -170,7 +170,7 @@ section.banner {
 section.intro {
 
   p {
-    max-width: 750px;
+    max-width: 810px;
     margin: 0 auto
   }
 
@@ -307,7 +307,7 @@ section.steps {
       }
 
       &:last-child {
-        padding-bottom: 0;
+        padding-bottom: 0.25rem;
         margin-bottom: 0;
       }
     }
