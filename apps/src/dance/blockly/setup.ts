@@ -5,7 +5,9 @@ import {LevelProperties} from '@cdo/apps/lab2/types';
 const blockUtils = require('@cdo/apps/block_utils');
 
 // Set up the global Blockly environment for Dance Party Lab2.
-export function setUpBlocklyForDanceLab(levelProperties: LevelProperties) {
+export function setUpBlocklyForDanceLab(
+  levelProperties: LevelProperties | undefined
+) {
   const blocksModule = danceBlocks;
   const skin = levelProperties?.skin || undefined;
   const isK1 = levelProperties?.isK1 || undefined;
