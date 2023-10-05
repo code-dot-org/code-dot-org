@@ -9,5 +9,5 @@
       %ul.menu-list{style: "display: none"}
         - nav_index.times do |index|
           %li
-            %a{href: resolve_url(nav_url[index])}
+            %a{href: resolve_url(nav_url[index]), "aria-label": nav_aria_label[index]}
               = nav_label[index]
