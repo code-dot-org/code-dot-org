@@ -50,9 +50,9 @@ class ActivitiesController < ApplicationController
     end
 
     # If a student in the pilot is submitting work on an AI-enabled level, trigger the AI evaluation job.
-    if Experiment.enabled?(user: current_user, experiment_name: 'ai-rubric') &&
-        EvaluateRubricJob.ai_enabled?(@script_level) &&
-        params[:submitted] == 'true'
+    is_ai_experiment_enabled = current_user && Experiment.enabled?(user: current_user, experiment_name: 'ai-rubric')
+    is_level_ai_enabled = EvaluateRubricJob.ai_enabled?(@script_level)
+    if is_ai_experiment_enabled && is_level_ai_enabled && params[:submitted] == 'true'
       EvaluateRubricJob.perform_later(user_id: current_user.id, script_level_id: @script_level.id)
     end
 
