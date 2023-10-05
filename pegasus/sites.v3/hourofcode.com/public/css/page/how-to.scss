@@ -107,6 +107,10 @@ section.banner {
         justify-content: space-between;
         gap: 0.5rem;
 
+        @media screen and (max-width: $width-sm) {
+          max-width: 320px;
+        }
+
         span {
           pointer-events: none;
           overflow: hidden;
@@ -160,6 +164,18 @@ section.banner {
         }
       }
     }
+  }
+}
+
+section.intro {
+
+  p {
+    max-width: 750px;
+    margin: 0 auto
+  }
+
+  hr {
+    margin: 4rem 0 0;
   }
 }
 

@@ -39,7 +39,7 @@ h1,
   font-family: var(--main-font-extra-bold);
   font-size: 2rem;
   line-height: 1.16;
-  margin: 1em 0 0.5em 0;
+  margin: 1.75em 0 0.5em 0;
 }
 
 h2,
@@ -494,11 +494,11 @@ button {
   cursor: pointer;
   display: inline-block;
   font-family: 'Gotham 5r', sans-serif;
-  font-size: 16px;
+  font-size: 1rem;
   font-weight: normal;
   letter-spacing: normal;
   margin: 0;
-  padding: 8px 24px;
+  padding: 0.5rem 1rem;
   text-decoration: none;
   text-transform: none;
   vertical-align: middle;
