@@ -296,6 +296,10 @@ class Hamburger
       {title: I18n.t("#{loc_prefix}about"), url: CDO.code_org_url("/about"), id: "header-en-about"}
     ]
 
+    about_intl = [
+      {title: I18n.t("#{loc_prefix}about"), url: CDO.code_org_url("/international/about"), id: "header-non-en-about"}
+    ]
+
     if options[:user_type] == "teacher"
       header_links = any_teacher_links
       if options[:language] == "en"
