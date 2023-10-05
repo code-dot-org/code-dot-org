@@ -11,6 +11,7 @@ import {StrongText, Heading5} from '@cdo/apps/componentLibrary/typography';
 import classNames from 'classnames';
 import FontAwesome from '@cdo/apps/templates/FontAwesome';
 import {AiModalItem, AiModalReturnedItem} from './types';
+import DanceAiClient from './DanceAiClient';
 import {BlockSvg} from 'blockly/core';
 const Typist = require('react-typist').default;
 
@@ -64,6 +65,7 @@ interface DanceAiProps {
 }
 
 const DanceAiModal: React.FunctionComponent<DanceAiProps> = ({onClose}) => {
+  console.log(DanceAiClient('cupcake,cry,demon'));
   const dispatch = useAppDispatch();
 
   const SLOT_COUNT = 3;

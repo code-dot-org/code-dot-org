@@ -46,3 +46,12 @@ export type AiModalReturnedItem = {
   name: string;
   url: string;
 };
+
+type EmojiAssociation = {
+  association: number[];
+  explanation: string;
+};
+
+export type PaletteMap = {
+  [key: string]: EmojiAssociation;
+};
