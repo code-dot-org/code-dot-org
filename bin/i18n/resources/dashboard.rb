@@ -18,6 +18,7 @@ module I18n
         Scripts.sync_in
         SharedFunctions.sync_in
         Standards.sync_in
+        MarketingAnnouncements.sync_in
 
         I18nScriptUtils.copy_file CDO.dir('dashboard/config/locales/en.yml'), File.join(I18N_SOURCE_DIR_PATH, 'base.yml')
         I18nScriptUtils.copy_file CDO.dir('dashboard/config/locales/data.en.yml'), File.join(I18N_SOURCE_DIR_PATH, 'data.yml')
@@ -31,6 +32,7 @@ module I18n
         Blocks.sync_out
         CourseContent.sync_out
         CourseOfferings.sync_out
+        MarketingAnnouncements.sync_out
       end
     end
   end
