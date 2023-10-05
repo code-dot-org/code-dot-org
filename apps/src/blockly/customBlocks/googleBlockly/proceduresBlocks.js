@@ -22,7 +22,7 @@ const modalFunctionEditorExperimentEnabled = experiments.isEnabled(
 export const blocks = GoogleBlockly.common.createBlockDefinitionsFromJsonArray([
   {
     // Block for defining a function (aka procedure) with no return value.
-    // When using the modal function editor, the name field is an uneditable label.
+    // When we migrated Sprite Lab, When using the modal function editor, the name field is an uneditable label.
     type: 'procedures_defnoreturn',
     message0: '%1 %2 %3 %4',
     message1: '%1',
@@ -32,10 +32,7 @@ export const blocks = GoogleBlockly.common.createBlockDefinitionsFromJsonArray([
         text: ' ',
       },
       {
-        type:
-          useModalFunctionEditor && modalFunctionEditorExperimentEnabled
-            ? 'field_label'
-            : 'field_input',
+        type: 'field_input',
         name: 'NAME',
         text: '',
         spellcheck: false,
@@ -70,6 +67,7 @@ export const blocks = GoogleBlockly.common.createBlockDefinitionsFromJsonArray([
       'procedure_defnoreturn_set_comment_helper',
       'procedure_def_set_no_return_helper',
       'procedures_block_frame',
+      // 'modal_procedures_mini_toolbox',
       'modal_procedures_no_destroy',
     ],
     mutator: 'procedure_def_mutator',
@@ -141,6 +139,26 @@ const editButton = function () {
 };
 
 GoogleBlockly.Extensions.register('procedures_edit_button', editButton);
+
+// This extension renders a mini toolbox for the modal function editor.
+const modalProceduresMiniToolbox = function () {
+  const miniToolboxBlocks = [];
+  const flyoutToggleButton =
+    Blockly.customBlocks.initializeMiniToolbox.bind(this)(miniToolboxBlocks);
+  Blockly.customBlocks.appendMiniToolboxToggle.bind(this)(
+    miniToolboxBlocks,
+    flyoutToggleButton
+  );
+};
+
+// GoogleBlockly.Extensions.register(
+//   'modal_procedures_mini_toolbox',
+//   modalProceduresMiniToolbox
+// );
+GoogleBlockly.Extensions.registerMutator(
+  'modal_procedures_mini_toolbox',
+  modalProceduresMiniToolbox
+);
 
 // This extension adds an SVG frame around procedures definition blocks.
 // Not used in Music Lab or wherever the modal function is enabled.

@@ -1,6 +1,5 @@
 import * as GoogleBlockly from 'blockly/core';
 import msg from '@cdo/locale';
-import experiments from '@cdo/apps/util/experiments';
 import {nameComparator} from '@cdo/apps/util/sort';
 import BlockSvgFrame from '../../addons/blockSvgFrame';
 import {createAndCenterDefinitionBlock} from './proceduresBlocks';
@@ -11,9 +10,6 @@ import {behaviorGetMutator} from './mutators/behaviorGetMutator';
 // In Lab2, the level properties are in Redux, not appOptions. To make this work in Lab2,
 // we would need to send that property from the backend and save it in lab2Redux.
 const useModalFunctionEditor = window.appOptions?.level?.useModalFunctionEditor;
-const modalFunctionEditorExperimentEnabled = experiments.isEnabled(
-  experiments.MODAL_FUNCTION_EDITOR
-);
 
 /**
  * A dictionary of our custom procedure block definitions, used across labs.
@@ -33,10 +29,7 @@ export const blocks = GoogleBlockly.common.createBlockDefinitionsFromJsonArray([
         text: ' ',
       },
       {
-        type:
-          useModalFunctionEditor && modalFunctionEditorExperimentEnabled
-            ? 'field_label'
-            : 'field_input',
+        type: 'field_input',
         name: 'NAME',
         text: '',
         spellcheck: false,
@@ -99,6 +92,7 @@ export const blocks = GoogleBlockly.common.createBlockDefinitionsFromJsonArray([
       'procedure_caller_context_menu_mixin',
       'procedure_caller_onchange_mixin',
       'procedure_callernoreturn_get_def_block_mixin',
+      'modal_procedures_mini_toolbox',
     ],
     mutator: 'behavior_get_mutator',
   },
