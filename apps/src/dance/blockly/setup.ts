@@ -1,9 +1,11 @@
 import danceBlocks from '@cdo/apps/dance/blockly/blocks';
 import * as commonBlocks from '@cdo/apps/blocksCommon';
-import {installCustomBlocks} from '@cdo/apps/block_utils';
+import {LevelProperties} from '@cdo/apps/lab2/types';
+
+const blockUtils = require('@cdo/apps/block_utils');
 
 // Set up the global Blockly environment for Dance Party Lab2.
-export function setUpBlocklyForDanceLab(levelProperties) {
+export function setUpBlocklyForDanceLab(levelProperties: LevelProperties) {
   const blocksModule = danceBlocks;
   const skin = levelProperties?.skin || undefined;
   const isK1 = levelProperties?.isK1 || undefined;
@@ -14,7 +16,7 @@ export function setUpBlocklyForDanceLab(levelProperties) {
   };
   commonBlocks.install(Blockly, blockInstallOptions);
   blocksModule.install(Blockly);
-  const blocksByCategory = installCustomBlocks({
+  const blocksByCategory = blockUtils.installCustomBlocks({
     blockly: Blockly,
     blockDefinitions: levelProperties.sharedBlocks,
     customInputTypes: blocksModule.customInputTypes,
