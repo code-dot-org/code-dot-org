@@ -60,7 +60,7 @@ const DanceAiModal: React.FunctionComponent<DanceAiProps> = ({onClose}) => {
 
   useEffect(() => {
     const currentValue = currentAiModalField?.getValue();
-    console.log(currentValue);
+    console.log(`currentValue: ${currentValue}`);
 
     if (currentValue) {
       setMode(Mode.RESULTS_FINAL);
@@ -102,8 +102,19 @@ const DanceAiModal: React.FunctionComponent<DanceAiProps> = ({onClose}) => {
     }
   };
 
+  let workspace: any;
   const handleGeneratingClick = () => {
     setMode(Mode.RESULTS);
+
+    const container = document.getElementById('blockly-preview');
+    const blockXml = Blockly.Xml.textToDom('<xml></xml>');
+    workspace = Blockly.BlockSpace.createReadOnlyBlockSpace(
+      container,
+      blockXml,
+      {}
+    );
+    console.log(workspace);
+    renderBlocks();
   };
 
   const handleGenerateClick = () => {
@@ -137,6 +148,40 @@ const DanceAiModal: React.FunctionComponent<DanceAiProps> = ({onClose}) => {
 
     // The user will see this explanation.
     setResponseExplanation(response.explanation);
+  };
+
+  const renderBlocks = () => {
+    // this seems like it sometimes fails to find type in dancers (ie, maybe params is undefined), need to check on timing
+    // not sure why this would be, seems like responseJson should be non-empty by the time this is called
+    const params = JSON.parse(responseJson);
+
+    const blocksSvg = [
+      workspace.newBlock('Dancelab_setForegroundEffect') as BlockSvg,
+      workspace.newBlock('Dancelab_setBackgroundEffectWithPalette') as BlockSvg,
+      workspace.newBlock('Dancelab_makeNewDanceSpriteGroup') as BlockSvg,
+    ];
+    console.log(blocksSvg);
+
+    // Foreground block.
+    blocksSvg[0].setFieldValue(params.foregroundEffect, 'EFFECT');
+
+    // Background block.
+    blocksSvg[1].setFieldValue(params.backgroundEffect, 'EFFECT');
+    blocksSvg[1].setFieldValue(params.backgroundColor, 'PALETTE');
+
+    // Dancers block.
+    blocksSvg[2].setFieldValue(params.dancers.type.toUpperCase(), 'COSTUME');
+    blocksSvg[2].setFieldValue(params.dancers.count.toString(), 'N');
+    blocksSvg[2].setFieldValue(params.dancers.layout, 'LAYOUT');
+
+    blocksSvg[0].nextConnection.connect(blocksSvg[1].previousConnection);
+    blocksSvg[1].nextConnection.connect(blocksSvg[2].previousConnection);
+
+    blocksSvg.forEach(blockSvg => {
+      blockSvg.initSvg();
+      blockSvg.render();
+    });
+    Blockly.svgResize(workspace);
   };
 
   const convertBlocks = () => {
@@ -388,20 +433,21 @@ const DanceAiModal: React.FunctionComponent<DanceAiProps> = ({onClose}) => {
               mode === Mode.RESULTS || mode === Mode.RESULTS_FINAL ? 1 : 0,
           }}
         >
-          {mode === Mode.RESULTS && (
-            <Typist
-              startDelay={1500}
-              avgTypingDelay={20}
-              cursor={{show: false}}
-              onTypingDone={() => {
-                setTypingDone(true);
-                currentAiModalField?.setValue(responseJson);
-              }}
-            >
-              {resultsComponent}
-            </Typist>
-          )}
+          {/*{mode === Mode.RESULTS && (*/}
+          {/*  <Typist*/}
+          {/*    startDelay={1500}*/}
+          {/*    avgTypingDelay={20}*/}
+          {/*    cursor={{show: false}}*/}
+          {/*    onTypingDone={() => {*/}
+          {/*      setTypingDone(true);*/}
+          {/*      currentAiModalField?.setValue(responseJson);*/}
+          {/*    }}*/}
+          {/*  >*/}
+          {/*    {resultsComponent}*/}
+          {/*  </Typist>*/}
+          {/*)}*/}
           {mode === Mode.RESULTS_FINAL && resultsComponent}
+          <div id="blockly-preview" style={{height: 400, width: 400}} />
         </div>
 
         <div className={moduleStyles.buttonsArea}>
