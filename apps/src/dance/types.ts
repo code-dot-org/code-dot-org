@@ -45,4 +45,5 @@ export type AiModalReturnedItem = {
   id: string;
   name: string;
   url: string;
+  available: boolean;
 };
