@@ -1,5 +1,9 @@
 <GamelabJr>
   <config><![CDATA[{
+  "game_id": 64,
+  "created_at": "2022-10-28T22:35:30.000Z",
+  "level_num": "custom",
+  "user_id": 1196,
   "properties": {
     "encrypted": "false",
     "skin": "gamelab",
@@ -45,23 +49,104 @@
     ],
     "name_suffix": "_-particles",
     "validation_code": "//validation",
-    "preload_asset_list": null,
-    "encrypted_examples": [
-
-    ]
+    "preload_asset_list": null
   },
-  "game_id": 64,
   "published": true,
-  "created_at": "2022-10-28T22:35:30.000Z",
-  "level_num": "custom",
-  "user_id": 1196,
-  "audit_log": "[{\"changed_at\":\"2022-10-28T22:35:30.604+00:00\",\"changed\":[\"cloned from \\\"csc_Paricles_StatesOfMatter_Predict\\\"\"],\"cloned_from\":\"csc_Paricles_StatesOfMatter_Predict\"},{\"changed_at\":\"2022-10-28 22:44:39 +0000\",\"changed\":[\"toolbox_blocks\",\"embed\",\"start_blocks\",\"preload_asset_list\"],\"changed_by_id\":1196,\"changed_by_email\":\"amy.woodman@code.org\"},{\"changed_at\":\"2022-10-28 22:54:49 +0000\",\"changed\":[\"start_blocks\"],\"changed_by_id\":1196,\"changed_by_email\":\"amy.woodman@code.org\"},{\"changed_at\":\"2022-10-28 23:07:35 +0000\",\"changed\":[\"start_blocks\"],\"changed_by_id\":1196,\"changed_by_email\":\"amy.woodman@code.org\"},{\"changed_at\":\"2022-10-28 23:09:05 +0000\",\"changed\":[\"start_blocks\"],\"changed_by_id\":1196,\"changed_by_email\":\"amy.woodman@code.org\"},{\"changed_at\":\"2022-10-31 19:02:57 +0000\",\"changed\":[\"start_blocks\",\"toolbox_blocks\",\"preload_asset_list\"],\"changed_by_id\":18602,\"changed_by_email\":\"angelina+levelbuilder@code.org\"},{\"changed_at\":\"2022-11-07 18:32:04 +0000\",\"changed\":[\"start_blocks\",\"toolbox_blocks\",\"preload_asset_list\"],\"changed_by_id\":18605,\"changed_by_email\":\"katie.frank+levelbuilder@code.org\"}]",
+  "audit_log": "[{\"changed_at\":\"2022-10-28T22:35:30.604+00:00\",\"changed\":[\"cloned from \\\"csc_Paricles_StatesOfMatter_Predict\\\"\"],\"cloned_from\":\"csc_Paricles_StatesOfMatter_Predict\"},{\"changed_at\":\"2022-10-28 22:44:39 +0000\",\"changed\":[\"toolbox_blocks\",\"embed\",\"start_blocks\",\"preload_asset_list\"],\"changed_by_id\":1196,\"changed_by_email\":\"amy.woodman@code.org\"},{\"changed_at\":\"2022-10-28 22:54:49 +0000\",\"changed\":[\"start_blocks\"],\"changed_by_id\":1196,\"changed_by_email\":\"amy.woodman@code.org\"},{\"changed_at\":\"2022-10-28 23:07:35 +0000\",\"changed\":[\"start_blocks\"],\"changed_by_id\":1196,\"changed_by_email\":\"amy.woodman@code.org\"},{\"changed_at\":\"2022-10-28 23:09:05 +0000\",\"changed\":[\"start_blocks\"],\"changed_by_id\":1196,\"changed_by_email\":\"amy.woodman@code.org\"},{\"changed_at\":\"2022-10-31 19:02:57 +0000\",\"changed\":[\"start_blocks\",\"toolbox_blocks\",\"preload_asset_list\"],\"changed_by_id\":18602,\"changed_by_email\":\"angelina+levelbuilder@code.org\"},{\"changed_at\":\"2022-11-07 18:32:04 +0000\",\"changed\":[\"start_blocks\",\"toolbox_blocks\",\"preload_asset_list\"],\"changed_by_id\":18605,\"changed_by_email\":\"katie.frank+levelbuilder@code.org\"},{\"changed_at\":\"2023-10-05 20:08:18 +0000\",\"changed\":[\"start_blocks\"],\"changed_by_id\":1196,\"changed_by_email\":\"amy.woodman@code.org\"}]",
   "level_concept_difficulty": {
   }
 }]]></config>
   <blocks>
     <start_blocks>
       <xml>
+        <block type="procedures_defnoreturn" editable="false" usercreated="true">
+          <mutation>
+            <description>Clear the lab space and set up sprites at beginning locations.</description>
+          </mutation>
+          <field name="NAME" id="LabSetup">LabSetup</field>
+          <statement name="STACK">
+            <block type="gamelab_setBackgroundImageAs">
+              <field name="IMG">"background_science_lab_small-01"</field>
+              <next>
+                <block type="gamelab_destroy">
+                  <value name="THIS">
+                    <block type="gamelab_getAllSprites"/>
+                  </value>
+                  <next>
+                    <block type="gamelab_makeNewSpriteAnon">
+                      <field name="ANIMATION_NAME">"scientist_1"</field>
+                      <value name="LOCATION">
+                        <block type="gamelab_location_picker">
+                          <field name="LOCATION">{"x":67,"y":308}</field>
+                        </block>
+                      </value>
+                      <next>
+                        <block type="gamelab_changePropBy">
+                          <field name="PROPERTY">"scale"</field>
+                          <value name="SPRITE">
+                            <block type="gamelab_allSpritesWithAnimation">
+                              <field name="ANIMATION">"scientist_1"</field>
+                            </block>
+                          </value>
+                          <value name="VAL">
+                            <block type="math_number">
+                              <field name="NUM">30</field>
+                            </block>
+                          </value>
+                          <next>
+                            <block type="gamelab_makeNewSpriteAnon">
+                              <field name="ANIMATION_NAME">"science_microscope"</field>
+                              <value name="LOCATION">
+                                <block type="gamelab_location_picker">
+                                  <field name="LOCATION">{"x":282,"y":210}</field>
+                                </block>
+                              </value>
+                              <next>
+                                <block type="gamelab_makeNewSpriteAnon">
+                                  <field name="ANIMATION_NAME">"water_glass"</field>
+                                  <value name="LOCATION">
+                                    <block type="gamelab_location_picker">
+                                      <field name="LOCATION">{"x":165,"y":145}</field>
+                                    </block>
+                                  </value>
+                                  <next>
+                                    <block type="gamelab_changePropBy">
+                                      <field name="PROPERTY">"scale"</field>
+                                      <value name="SPRITE">
+                                        <block type="gamelab_allSpritesWithAnimation">
+                                          <field name="ANIMATION">"water_glass"</field>
+                                        </block>
+                                      </value>
+                                      <value name="VAL">
+                                        <block type="math_number">
+                                          <field name="NUM">-50</field>
+                                        </block>
+                                      </value>
+                                      <next>
+                                        <block type="gamelab_addBehaviorSimple">
+                                          <value name="SPRITE">
+                                            <block type="gamelab_getAllSprites"/>
+                                          </value>
+                                          <value name="BEHAVIOR">
+                                            <block type="gamelab_draggable"/>
+                                          </value>
+                                        </block>
+                                      </next>
+                                    </block>
+                                  </next>
+                                </block>
+                              </next>
+                            </block>
+                          </next>
+                        </block>
+                      </next>
+                    </block>
+                  </next>
+                </block>
+              </next>
+            </block>
+          </statement>
+        </block>
         <block type="when_run" deletable="false" movable="false">
           <next>
             <block type="gamelab_setBackgroundImageAs" movable="false">
@@ -260,94 +345,6 @@
               </next>
             </block>
           </next>
-        </block>
-        <block type="procedures_defnoreturn" editable="false" usercreated="true">
-          <mutation>
-            <description>Clear the lab space and set up sprites at beginning locations.</description>
-          </mutation>
-          <field name="NAME" id="LabSetup">LabSetup</field>
-          <statement name="STACK">
-            <block type="gamelab_setBackgroundImageAs">
-              <field name="IMG">"background_science_lab_small-01"</field>
-              <next>
-                <block type="gamelab_destroy">
-                  <value name="THIS">
-                    <block type="gamelab_getAllSprites"/>
-                  </value>
-                  <next>
-                    <block type="gamelab_makeNewSpriteAnon">
-                      <field name="ANIMATION_NAME">"scientist_1"</field>
-                      <value name="LOCATION">
-                        <block type="gamelab_location_picker">
-                          <field name="LOCATION">{"x":67,"y":308}</field>
-                        </block>
-                      </value>
-                      <next>
-                        <block type="gamelab_changePropBy">
-                          <field name="PROPERTY">"scale"</field>
-                          <value name="SPRITE">
-                            <block type="gamelab_allSpritesWithAnimation">
-                              <field name="ANIMATION">"scientist_1"</field>
-                            </block>
-                          </value>
-                          <value name="VAL">
-                            <block type="math_number">
-                              <field name="NUM">30</field>
-                            </block>
-                          </value>
-                          <next>
-                            <block type="gamelab_makeNewSpriteAnon">
-                              <field name="ANIMATION_NAME">"science_microscope"</field>
-                              <value name="LOCATION">
-                                <block type="gamelab_location_picker">
-                                  <field name="LOCATION">{"x":282,"y":210}</field>
-                                </block>
-                              </value>
-                              <next>
-                                <block type="gamelab_makeNewSpriteAnon">
-                                  <field name="ANIMATION_NAME">"water_glass"</field>
-                                  <value name="LOCATION">
-                                    <block type="gamelab_location_picker">
-                                      <field name="LOCATION">{"x":165,"y":145}</field>
-                                    </block>
-                                  </value>
-                                  <next>
-                                    <block type="gamelab_changePropBy">
-                                      <field name="PROPERTY">"scale"</field>
-                                      <value name="SPRITE">
-                                        <block type="gamelab_allSpritesWithAnimation">
-                                          <field name="ANIMATION">"water_glass"</field>
-                                        </block>
-                                      </value>
-                                      <value name="VAL">
-                                        <block type="math_number">
-                                          <field name="NUM">-50</field>
-                                        </block>
-                                      </value>
-                                      <next>
-                                        <block type="gamelab_addBehaviorSimple">
-                                          <value name="SPRITE">
-                                            <block type="gamelab_getAllSprites"/>
-                                          </value>
-                                          <value name="BEHAVIOR">
-                                            <block type="gamelab_draggable"/>
-                                          </value>
-                                        </block>
-                                      </next>
-                                    </block>
-                                  </next>
-                                </block>
-                              </next>
-                            </block>
-                          </next>
-                        </block>
-                      </next>
-                    </block>
-                  </next>
-                </block>
-              </next>
-            </block>
-          </statement>
         </block>
         <block type="procedures_defnoreturn" editable="false" usercreated="true">
           <mutation>
