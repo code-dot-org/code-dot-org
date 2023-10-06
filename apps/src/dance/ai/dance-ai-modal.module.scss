@@ -75,7 +75,12 @@
           height: 40px;
           margin: 8px;
           float: left;
-          cursor: pointer;
+          opacity: 0.3;
+
+          &Available {
+            cursor: pointer;
+            opacity: 1;
+          }
         }
       }
     }

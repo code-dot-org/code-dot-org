@@ -13,7 +13,7 @@ import {BlockSvg} from 'blockly/core';
 import {doAi} from './utils';
 const Typist = require('react-typist').default;
 
-const aiBotBorder = require('@cdo/static/dance/ai-bot-border.png');
+const aiBotBorder = require('@cdo/static/dance/ai/ai-bot-border.png');
 
 const promptString = 'Generate a scene using this mood:';
 
@@ -34,7 +34,7 @@ const DanceAiModal: React.FunctionComponent<DanceAiProps> = ({onClose}) => {
   const SLOT_COUNT = 3;
 
   const inputLibraryFilename = 'ai-inputs';
-  const inputLibrary = require(`@cdo/static/dance/${inputLibraryFilename}.json`);
+  const inputLibrary = require(`@cdo/static/dance/ai/${inputLibraryFilename}.json`);
 
   const [mode, setMode] = useState(Mode.SELECT_INPUTS);
   const [currentInputSlot, setCurrentInputSlot] = useState(0);
@@ -60,7 +60,7 @@ const DanceAiModal: React.FunctionComponent<DanceAiProps> = ({onClose}) => {
   }, [currentAiModalField]);
 
   const getImageUrl = (id: string) => {
-    return `/blockly/media/dance/ai/${id}.png`;
+    return `/blockly/media/dance/ai/emoji/${id}.svg`;
   };
 
   const getAllItems = (slotIndex: number) => {
@@ -68,14 +68,12 @@ const DanceAiModal: React.FunctionComponent<DanceAiProps> = ({onClose}) => {
       return [];
     }
 
-    return inputLibrary.options[slotIndex].map((option: string) => {
-      const item = inputLibrary.items.find(
-        (item: AiModalItem) => item.id === option
-      );
+    return inputLibrary.items.map((item: AiModalItem) => {
       return {
         id: item.id,
         name: item.name,
         url: getImageUrl(item.id),
+        available: !inputs.includes(item.id),
       };
     });
   };
@@ -276,9 +274,14 @@ const DanceAiModal: React.FunctionComponent<DanceAiProps> = ({onClose}) => {
                         index === 0 && currentInputSlot === 0 ? 0 : undefined
                       }
                       key={item.id}
-                      onClick={() => handleItemClick(item.id)}
-                      style={{backgroundImage: `url(${item.url})`}}
-                      className={moduleStyles.item}
+                      onClick={() => item.available && handleItemClick(item.id)}
+                      style={{
+                        backgroundImage: `url(${item.url})`,
+                      }}
+                      className={classNames(
+                        moduleStyles.item,
+                        item.available && moduleStyles.itemAvailable
+                      )}
                       title={item.name}
                     />
                   );
