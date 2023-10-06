@@ -128,7 +128,7 @@ export default class FunctionEditor {
    * the procedure workspace if it already exists, or create a new block.
    * @param {Procedure} procedure The procedure to show.
    */
-  showForFunction(procedure) {
+  showForFunction(procedure, procedureType) {
     // We disable events while clearing the workspace in order to skip
     // propogating those events to the other workspaces. We would be propogating
     // delete events, but we aren't actually deleting the blocks, just removing them
@@ -146,6 +146,7 @@ export default class FunctionEditor {
       procedure.getName(),
       Blockly.getHiddenDefinitionWorkspace()
     );
+    console.log({existingProcedureBlock});
 
     if (existingProcedureBlock) {
       // If we already have stored data about the procedure, use that.
@@ -164,8 +165,7 @@ export default class FunctionEditor {
       // Otherwise, we need to create a new block from scratch.
       const newDefinitionBlock = {
         kind: 'block',
-        // TODO: could be behavior now.
-        type: 'procedures_defnoreturn',
+        type: procedureType,
         extraState: {
           procedureId: procedure.getId(),
         },
@@ -208,7 +208,7 @@ export default class FunctionEditor {
     return name;
   }
 
-  newProcedureCallback = () => {
+  newProcedureCallback = procedureType => {
     const name = this.getNameForNewFunction();
     const hiddenProcedure = new ObservableProcedureModel(
       Blockly.getHiddenDefinitionWorkspace(),
@@ -244,7 +244,7 @@ export default class FunctionEditor {
     this.editorWorkspace.getProcedureMap().add(editorProcedureModel);
     Blockly.Events.enable();
 
-    this.showForFunction(hiddenProcedure);
+    this.showForFunction(hiddenProcedure, procedureType);
   };
 
   handleDelete() {

@@ -173,6 +173,7 @@ const editButtonHandler = function () {
   if (modalFunctionEditorExperimentEnabled) {
     const procedure = this.getSourceBlock().getProcedureModel();
     if (procedure) {
+      console.log({procedure});
       Blockly.functionEditor.showForFunction(procedure);
     }
   } else {
@@ -213,9 +214,8 @@ export function flyoutCategory(workspace, functionEditorOpen = false) {
   };
 
   const createNewBehavior = function () {
-    createAndCenterDefinitionBlock(behaviorDefinitionBlock);
     if (modalFunctionEditorExperimentEnabled) {
-      Blockly.functionEditor.newProcedureCallback();
+      Blockly.functionEditor.newProcedureCallback('behavior_definition');
     } else {
       createAndCenterDefinitionBlock(behaviorDefinitionBlock);
     }

@@ -259,7 +259,8 @@ const getNewFunctionButtonWithCallback = (
   let callbackKey, callback;
   if (modalFunctionEditorExperimentEnabled) {
     callbackKey = 'newProcedureCallback';
-    callback = Blockly.functionEditor.newProcedureCallback;
+    callback = () =>
+      Blockly.functionEditor.newProcedureCallback('procedures_defnoreturn');
   } else {
     callbackKey = 'createAndCenterFunctionDefinitionBlock';
     // Everything here is place-holder code that should be replaced with a
