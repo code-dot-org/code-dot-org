@@ -36,7 +36,7 @@ class EvaluateRubricJob < ApplicationJob
 
     rubric = Rubric.find_by!(lesson_id: script_level.lesson.id, level_id: script_level.level.id)
 
-    ai_evaluations = get_fake_openai_evaluations(rubric)
+    ai_evaluations = get_fake_openai_evaluations(rubric, grade: 'Extensive Evidence')
 
     write_ai_evaluations(user, ai_evaluations, rubric, channel_id, project_version)
   end
@@ -73,11 +73,11 @@ class EvaluateRubricJob < ApplicationJob
     [code, version]
   end
 
-  private def get_fake_openai_evaluations(rubric)
+  private def get_fake_openai_evaluations(rubric, grade: 'Extensive Evidence')
     rubric.learning_goals.map do |learning_goal|
       {
         'Key Concept' => learning_goal.learning_goal,
-        'Grade' => 'Extensive Evidence'
+        'Grade' => grade
       }
     end
   end
