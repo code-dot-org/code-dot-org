@@ -29,14 +29,14 @@ class Api::V1::SectionInstructorsController < Api::V1::JSONApiController
     # for a total of 6)
     return head :bad_request if section.instructors.length >= 6
 
-    instructor = User.find_by(params.require(:email))
+    instructor = User.find_by(email: params.require(:email))
     return head :not_found if instructor.blank?
     return head :bad_request unless instructor.teacher?
 
     si = SectionInstructor.with_deleted.find_by(instructor: instructor, section: section)
 
     # Actually delete the instructor if they were soft-deleted so they can be re-invited.
-    if si.deleted_at.present?
+    if si&.deleted_at.present?
       si.really_destroy!
     # Can't re-add someone who is already an instructor (or invited/declined)
     elsif si.present?
@@ -66,30 +66,27 @@ class Api::V1::SectionInstructorsController < Api::V1::JSONApiController
     si.save!
     si.destroy!
 
-    head :ok
+    head :no_content
   end
 
   # Accept one's own pending co-instructor invitation
   # PUT /section_instructors/:id/accept
   def accept
-    si = SectionInstructor.find(params.require(:id))
-    return head :forbidden if si.instructor_id != current_user.id
-    return head :bad_request unless si.status == :invited
-
-    si.status = :active
-    si.save!
-
-    render json: si, serializer: Api::V1::SectionInstructorSerializer
+    resolve_invitation params.require(:id), :active
   end
 
   # Decline one's own pending co-instructor invitation
   # PUT /section_instructors/:id/decline
   def decline
-    si = SectionInstructor.find(params.require(:id))
-    return head :forbidden if si.instructor_id != current_user.id
-    return head :bad_request unless si.status == :invited
+    resolve_invitation params.require(:id), :declined
+  end
 
-    si.status = :declined
+  private def resolve_invitation(invitation_id, new_status)
+    si = SectionInstructor.find(invitation_id)
+    return head :forbidden if si.instructor_id != current_user.id
+    return head :bad_request unless si.status == 'invited'
+
+    si.status = new_status
     si.save!
 
     render json: si, serializer: Api::V1::SectionInstructorSerializer
