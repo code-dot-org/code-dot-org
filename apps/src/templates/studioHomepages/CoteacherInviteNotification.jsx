@@ -1,19 +1,35 @@
+import PropTypes from 'prop-types';
 import React from 'react';
+import {connect} from 'react-redux';
 import Notification, {NotificationType} from '@cdo/apps/templates/Notification';
+import {asyncLoadCoteacherInvite} from '@cdo/apps/templates/teacherDashboard/teacherSectionsRedux';
 import Button from '../Button';
 import {BodyTwoText, StrongText} from '@cdo/apps/componentLibrary/typography';
 
-const CoteacherInviteNotification = () => {
+const CoteacherInviteNotification = ({
+  asyncLoadCoteacherInvite,
+  coteacherInvite,
+}) => {
+  React.useEffect(() => {
+    asyncLoadCoteacherInvite();
+  }, [asyncLoadCoteacherInvite]);
+
+  if (!coteacherInvite) {
+    return null;
+  }
+
   return (
     <Notification
       type={NotificationType.collaborate}
       iconStyles={styles.icon}
-      notice={'Debra invited you to be a co-teacher'}
+      notice={
+        coteacherInvite.invited_by_name + ' invited you to be a co-teacher'
+      }
       details={
         <BodyTwoText style={{marginBottom: 0}}>
-          d.zadinsky@cshoolname.org has invited you to co-teach
+          {coteacherInvite.invited_by_email} has invited you to co-teach
           <br />
-          <StrongText>Intermediate CS - Block 3</StrongText>
+          <StrongText>{coteacherInvite.section_name}</StrongText>
         </BodyTwoText>
       }
       dismissible={false}
@@ -41,7 +57,19 @@ const CoteacherInviteNotification = () => {
   );
 };
 
-export default CoteacherInviteNotification;
+export default connect(
+  state => ({
+    coteacherInvite: state.teacherSections.coteacherInvite,
+  }),
+  {
+    asyncLoadCoteacherInvite,
+  }
+)(CoteacherInviteNotification);
+
+CoteacherInviteNotification.propTypes = {
+  asyncLoadCoteacherInvite: PropTypes.func.isRequired,
+  coteacherInvite: PropTypes.object,
+};
 
 // The Notification object uses styles instead of className for legacy reasons.
 const styles = {

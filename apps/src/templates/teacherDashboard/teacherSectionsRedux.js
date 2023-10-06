@@ -63,6 +63,7 @@ const SET_SHOW_LOCK_SECTION_FIELD =
 /** Sets teacher's current authentication providers */
 const SET_AUTH_PROVIDERS = 'teacherDashboard/SET_AUTH_PROVIDERS';
 const SET_SECTIONS = 'teacherDashboard/SET_SECTIONS';
+const SET_COTEACHER_INVITE = 'teacherDashboard/SET_COTEACHER_INVITE';
 export const SELECT_SECTION = 'teacherDashboard/SELECT_SECTION';
 const REMOVE_SECTION = 'teacherDashboard/REMOVE_SECTION';
 const TOGGLE_SECTION_HIDDEN = 'teacherSections/TOGGLE_SECTION_HIDDEN';
@@ -173,6 +174,10 @@ export const pageTypes = {
  * @param sections
  */
 export const setSections = sections => ({type: SET_SECTIONS, sections});
+export const setCoteacherInvite = coteacherInvite => ({
+  type: SET_COTEACHER_INVITE,
+  coteacherInvite,
+});
 export const selectSection = sectionId => ({type: SELECT_SECTION, sectionId});
 export const removeSection = sectionId => ({type: REMOVE_SECTION, sectionId});
 
@@ -437,6 +442,22 @@ export const asyncLoadSectionData = id => dispatch => {
     })
     .then(() => {
       dispatch({type: ASYNC_LOAD_END});
+    });
+};
+
+export const asyncLoadCoteacherInvite = () => dispatch => {
+  fetchJSON('/api/v1/section_instructors')
+    .then(sectionInstructors => {
+      // Filter to only include sections with open invitations.
+      const coteacherInvite = _.findLast(
+        sectionInstructors,
+        instructor => instructor.status === 'invited'
+      );
+
+      dispatch(setCoteacherInvite(coteacherInvite));
+    })
+    .catch(err => {
+      console.error(err.message);
     });
 };
 
@@ -724,6 +745,13 @@ export default function teacherSections(state = initialState, action) {
         ...state.sections,
         ..._.keyBy(sections, 'id'),
       },
+    };
+  }
+
+  if (action.type === SET_COTEACHER_INVITE) {
+    return {
+      ...state,
+      coteacherInvite: action.coteacherInvite,
     };
   }
 

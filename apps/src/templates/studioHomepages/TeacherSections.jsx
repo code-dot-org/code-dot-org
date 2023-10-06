@@ -46,9 +46,9 @@ class TeacherSections extends Component {
             <Spinner size="large" style={styles.spinner} />
           )}
         </ContentContainer>
+        <CoteacherInviteNotification />
         {this.props.studentSectionIds?.length > 0 && (
           <ContentContainer heading={i18n.sectionsTitle()}>
-            <CoteacherInviteNotification />
             <OwnedSections
               sectionIds={studentSectionIds}
               hiddenSectionIds={hiddenStudentSectionIds}
