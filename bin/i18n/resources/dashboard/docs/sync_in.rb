@@ -11,12 +11,6 @@ module I18n
     module Dashboard
       module Docs
         class SyncIn < I18n::Utils::SyncInBase
-          # TODO: Adding spritelab and Javalab to translation pipeline
-          # Currently supporting translations for applab, gamelab and weblab. NOT translating javalab and spritelab.
-          # Javalab documentations exists in a different table because it has a different structure, more align with java.
-          # Spritelab uses translatable block names, unlike JavaScript blocks.
-          TRANSLATABLE_PROGRAMMING_ENVS = %w[applab gamelab weblab].freeze
-
           def process
             progress_bar.total += programming_envs.size
 
