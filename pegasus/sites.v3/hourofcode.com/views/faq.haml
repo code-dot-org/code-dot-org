@@ -4,12 +4,6 @@
   %summary#about= hoc_s(:hoc_faq_what_is_hoc_q)
   %p!= hoc_s(:hoc_faq_what_is_hoc_a_markdown, markdown: :inline, locals: {tutorials: resolve_url('/learn'), partners: resolve_url('/partners')})
 
--# Hide signup buttons during Hour of Code
-  %br/
-  %a{onclick: "adjustScroll('join');"}
-    %button
-    =hoc_s(:signup_host_an_hour)
-
 %details
   %summary= hoc_s(:hoc_faq_when_is_hoc_q)
   %p!= hoc_s(:hoc_faq_when_is_hoc_a_markdown, markdown: :inline, locals: {csedweek_url: 'https://csedweek.org', campaign_date_year: campaign_date('year'), campaign_date_full: campaign_date('full'), grace_hopper: 'http://en.wikipedia.org/wiki/Grace_Hopper'})
