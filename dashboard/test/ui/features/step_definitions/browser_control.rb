@@ -4,6 +4,7 @@ end
 
 # for explanation of js function, see
 # https://stackoverflow.com/questions/45243992/verification-of-element-in-viewport-in-selenium
+# upd. Check not only the center of the element, but also +- 3px from center for #finishButton.
 And(/^I check that selector "([^"]*)" is in the viewport$/) do |selector|
   is_in_viewport = <<-JAVASCRIPT
     var elem = $("#{selector}")[0],
@@ -11,10 +12,23 @@ And(/^I check that selector "([^"]*)" is in the viewport$/) do |selector|
       cx = box.left + box.width / 2,
       cy = box.top + box.height / 2,
       e = document.elementFromPoint(cx, cy);
-    for(; e; e = e.parentElement) {
-      if (e === elem)
-        return true;
+
+    if (selector === "finishButton") {
+      for(var i = 0; 0 >= 3; i++) {
+          e = document.elementFromPoint(cx + i, cy + i);
+            if (e === elem)
+              return true;
+          e = = document.elementFromPoint(cx - i, cy - i);
+            if (e === elem)
+              return true;
+      }
+    } else {
+       for(; e; e = e.parentElement) {
+            if (e === elem)
+              return true;
+          }
     }
+
     return false;
   JAVASCRIPT
   wait_for_jquery
