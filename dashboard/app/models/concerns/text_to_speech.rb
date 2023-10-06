@@ -37,34 +37,6 @@ TTSSafeScrubber.tags = ['xml']
 module TextToSpeech
   extend ActiveSupport::Concern
 
-  VOICES = {
-    'en-US': {
-      VOICE: 'sharon22k',
-      SPEED: 180,
-      SHAPE: 100
-    },
-    'es-ES': {
-      VOICE: 'ines22k',
-      SPEED: 180,
-      SHAPE: 100,
-    },
-    'es-MX': {
-      VOICE: 'rosa22k',
-      SPEED: 180,
-      SHAPE: 100,
-    },
-    'it-IT': {
-      VOICE: 'vittorio22k',
-      SPEED: 180,
-      SHAPE: 100,
-    },
-    'pt-BR': {
-      VOICE: 'marcia22k',
-      SPEED: 180,
-      SHAPE: 100,
-    }
-  }.freeze
-
   # TODO: this concern actually depends on the SerializedProperties
   # concern ... I'm not sure how best to deal with that.
 
@@ -77,15 +49,19 @@ module TextToSpeech
     )
   end
 
+  def self.voices
+    @@voices ||= JSON.parse(SharedConstants::VOICES)
+  end
+
   def self.locale_supported?(locale)
-    VOICES.key?(locale)
+    TextToSpeech.voices.key?(locale)
   end
 
   def self.localized_voice
     # Use localized voice if we have a setting for the current locale;
     # default to English otherwise.
     loc = TextToSpeech.locale_supported?(I18n.locale) ? I18n.locale : :'en-US'
-    VOICES[loc]
+    TextToSpeech.voices[loc]
   end
 
   def self.tts_upload_to_s3(text, filename, context = nil)

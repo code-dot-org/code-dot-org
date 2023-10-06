@@ -624,4 +624,34 @@ module SharedConstants
       PERMISSION_GRANTED: 'g'
     }
   ).freeze
+
+  VOICES = <<-JSON.freeze
+    {
+      "en_us": {
+        VOICE: "sharon22k",
+        SPEED: 180,
+        SHAPE: 100
+      },
+      "es_es": {
+        VOICE: "ines22k",
+        SPEED: 180,
+        SHAPE: 100
+      },
+      "es_mx": {
+        VOICE: "rosa22k",
+        SPEED: 180,
+        SHAPE: 100
+      },
+      "it_it": {
+        VOICE: "vittorio22k",
+        SPEED: 180,
+        SHAPE: 100
+      },
+      "pt_br": {
+        VOICE: "marcia22k",
+        SPEED: 180,
+        SHAPE: 100
+      }
+    }
+  JSON
 end
