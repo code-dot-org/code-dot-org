@@ -11,6 +11,9 @@
         "CourseD_Dance_2020_01_2021": {
           "dance_callout_01": "Изабери тип плесача овде."
         },
+        "CourseD_Dance_2020_01_2023": {
+          "dance_callout_01": "Изабери тип плесача овде."
+        },
         "CourseD_Dance_2020_02": {
           "arrow_buttons": "Притисни тастер стрелице за контролу плесача.",
           "dance_callout_11_a": "Додај овај блок у свој програм."
@@ -23,6 +26,10 @@
           "arrow_buttons": "Притисни тастер стрелице за контролу плесача.",
           "dance_callout_11_a": "Додај овај блок у свој програм."
         },
+        "CourseD_Dance_2020_02_2023": {
+          "arrow_buttons": "Притисни тастер стрелице за контролу плесача.",
+          "dance_callout_11_a": "Додај овај блок у свој програм."
+        },
         "CourseD_Dance_2020_04": {
           "dance_callout_02": "Додај овај блок у свој програм!"
         },
@@ -30,6 +37,9 @@
           "dance_callout_02": "Додај овај блок у свој програм!"
         },
         "CourseD_Dance_2020_04_2021": {
+          "dance_callout_02": "Додај овај блок у свој програм!"
+        },
+        "CourseD_Dance_2020_04_2023": {
           "dance_callout_02": "Додај овај блок у свој програм!"
         },
         "CourseD_Dance_2020_06": {
@@ -41,6 +51,9 @@
         "CourseD_Dance_2020_06_2021": {
           "dance_party_11_5_groups": "Нови блок!"
         },
+        "CourseD_Dance_2020_06_2023": {
+          "dance_party_11_5_groups": "Нови блок!"
+        },
         "CourseD_Dance_2020_07": {
           "setprop_hint": "Нови блок!"
         },
@@ -48,6 +61,9 @@
           "setprop_hint": "Нови блок!"
         },
         "CourseD_Dance_2020_07_2021": {
+          "setprop_hint": "Нови блок!"
+        },
+        "CourseD_Dance_2020_07_2023": {
           "setprop_hint": "Нови блок!"
         },
         "CourseD_Dance_2020_09": {
@@ -59,6 +75,10 @@
           "new_block_4": "Нови блок!"
         },
         "CourseD_Dance_2020_09_2021": {
+          "new_block_3": "Нови блок!",
+          "new_block_4": "Нови блок!"
+        },
+        "CourseD_Dance_2020_09_2023": {
           "new_block_3": "Нови блок!",
           "new_block_4": "Нови блок!"
         },
@@ -135,6 +155,9 @@
         "Overworld Chop Trees_2021": {
           "craft_callout_preplaced": "Неки блокови су већ постављени за почетак"
         },
+        "Overworld Chop Trees_2023": {
+          "craft_callout_preplaced": "Неки блокови су већ постављени за почетак"
+        },
         "Overworld House Frame Chosen": {
           "craft_callout_preplaced_house": "Овај кôд ће започети изградњу твоје куће. Можеш ли га довршити?"
         },
@@ -148,6 +171,9 @@
           "craft_callout_preplaced_house": "Овај кôд ће започети изградњу твоје куће. Можеш ли га довршити?"
         },
         "Overworld House Frame Chosen_2021": {
+          "craft_callout_preplaced_house": "Овај кôд ће започети изградњу твоје куће. Можеш ли га довршити?"
+        },
+        "Overworld House Frame Chosen_2023": {
           "craft_callout_preplaced_house": "Овај кôд ће започети изградњу твоје куће. Можеш ли га довршити?"
         },
         "Overworld Move to Sheep": {
@@ -165,6 +191,9 @@
         "Overworld Move to Sheep_2021": {
           "craft_run_button_callout": "Притисни \"Изврши\" дугме да покренеш програм"
         },
+        "Overworld Move to Sheep_2023": {
+          "craft_run_button_callout": "Притисни \"Изврши\" дугме да покренеш програм"
+        },
         "Overworld Place Wall": {
           "craft_inside_repeat": "Понови команде постављањем блокова овде"
         },
@@ -178,6 +207,9 @@
           "craft_inside_repeat": "Понови команде постављањем блокова овде"
         },
         "Overworld Place Wall_2021": {
+          "craft_inside_repeat": "Понови команде постављањем блокова овде"
+        },
+        "Overworld Place Wall_2023": {
           "craft_inside_repeat": "Понови команде постављањем блокова овде"
         },
         "Underground Avoiding Lava": {
@@ -195,6 +227,9 @@
         "Underground Avoiding Lava_2021": {
           "craft_callout_moveforward": "Овај кôд ће проверити да ли има лаве, можеш ли додати команду да се помери напред?"
         },
+        "Underground Avoiding Lava_2023": {
+          "craft_callout_moveforward": "Овај кôд ће проверити да ли има лаве, можеш ли додати команду да се помери напред?"
+        },
         "Underground Iron": {
           "craft_what_is_iron": "Ископај ово гвожђе!"
         },
@@ -208,6 +243,9 @@
           "craft_what_is_iron": "Ископај ово гвожђе!"
         },
         "Underground Iron_2021": {
+          "craft_what_is_iron": "Ископај ово гвожђе!"
+        },
+        "Underground Iron_2023": {
           "craft_what_is_iron": "Ископај ово гвожђе!"
         },
         "courseA_maze_seq1": {
@@ -228,10 +266,16 @@
         "courseA_maze_seq1_2021": {
           "courseA_maze_seq1_1": "Кликни сијалицу када ти треба савет!"
         },
+        "courseA_maze_seq1_2023": {
+          "courseA_maze_seq1_1": "Кликни сијалицу када ти треба савет!"
+        },
         "courseA_playLab_events4": {
           "courseA_playlab_events4_callout1": "Ово је облачић"
         },
         "courseA_playLab_events42022": {
+          "courseA_playlab_events4_callout1": "Ово је облачић"
+        },
+        "courseA_playLab_events42022_2023": {
           "courseA_playlab_events4_callout1": "Ово је облачић"
         },
         "courseA_playLab_events4_2018": {
@@ -262,6 +306,9 @@
           "courseB_maze_seq1": "Кликни сијалицу када ти треба савет!"
         },
         "courseB_maze_seq1_2021": {
+          "courseB_maze_seq1": "Кликни сијалицу када ти треба савет!"
+        },
+        "courseB_maze_seq1_2023": {
           "courseB_maze_seq1": "Кликни сијалицу када ти треба савет!"
         },
         "frozen circle function with parameter": {
@@ -304,6 +351,9 @@
         "helloworld_food_costumes": {
           "hello_world_new": "Нови блок!"
         },
+        "helloworld_food_costumes_2023": {
+          "hello_world_new": "Нови блок!"
+        },
         "helloworld_food_costumes_soccer-2022": {
           "hello_world_new": "Нови блок!"
         },
@@ -311,6 +361,10 @@
           "hello_world_new": "Нови блок!"
         },
         "helloworld_food_sizes": {
+          "hello_world_new": "Нови блок!",
+          "hello_world_new_block": "Нови блок!"
+        },
+        "helloworld_food_sizes_2023": {
           "hello_world_new": "Нови блок!",
           "hello_world_new_block": "Нови блок!"
         },
@@ -323,6 +377,9 @@
           "hello_world_new_block": "Нови блок!"
         },
         "helloworld_food_sounds": {
+          "hello_world_new": "Нови блок!"
+        },
+        "helloworld_food_sounds_2023": {
           "hello_world_new": "Нови блок!"
         },
         "helloworld_food_sounds_soccer-2022": {
@@ -344,17 +401,34 @@
         "poetry_hoc_addSprites": {
           "poetry_sprite": "Нови блок!"
         },
+        "poetry_hoc_addSprites_2023": {
+          "poetry_sprite": "Нови блок!"
+        },
         "poetry_hoc_backgroundEffects": {
+          "run_button": "Tестирај своју анимацију помоћу овог дугмета."
+        },
+        "poetry_hoc_backgroundEffects_2023": {
           "run_button": "Tестирај своју анимацију помоћу овог дугмета."
         },
         "poetry_hoc_events1": {
           "poetry_event": "Нови блок!",
           "poetry_foreground": "Нови блок!"
         },
+        "poetry_hoc_events1_2023": {
+          "poetry_event": "Нови блок!",
+          "poetry_foreground": "Нови блок!"
+        },
         "poetry_hoc_freeplay": {
           "poetry_new_block": "Нови блок!"
         },
+        "poetry_hoc_freeplay_2023": {
+          "poetry_new_block": "Нови блок!"
+        },
         "poetry_hoc_sounds": {
+          "poetry_music": "Нови блок!",
+          "poetry_sound": "Нови блок!"
+        },
+        "poetry_hoc_sounds_2023": {
           "poetry_music": "Нови блок!",
           "poetry_sound": "Нови блок!"
         },
@@ -362,7 +436,15 @@
           "poetry_sprite_begins": "Нови блок!",
           "poetry_sprite_stops": "Нови блок!"
         },
+        "poetry_hoc_spriteBehaviors_2023": {
+          "poetry_sprite_begins": "Нови блок!",
+          "poetry_sprite_stops": "Нови блок!"
+        },
         "poetry_hoc_spriteSizes": {
+          "poetry_remove_sprite": "Нови блок!",
+          "poetry_set_sprite": "Нови блок!"
+        },
+        "poetry_hoc_spriteSizes_2023": {
           "poetry_remove_sprite": "Нови блок!",
           "poetry_set_sprite": "Нови блок!"
         }

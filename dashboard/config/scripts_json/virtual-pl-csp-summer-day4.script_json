@@ -1,0 +1,117 @@
+{
+  "script": {
+    "name": "virtual-pl-csp-summer-day4",
+    "wrapup_video_id": null,
+    "login_required": false,
+    "properties": {
+      "is_migrated": true
+    },
+    "new_name": null,
+    "family_name": null,
+    "serialized_at": "2023-10-03 17:30:38 UTC",
+    "published_state": null,
+    "instruction_type": null,
+    "instructor_audience": null,
+    "participant_audience": null,
+    "seeding_key": {
+      "script.name": "virtual-pl-csp-summer-day4"
+    }
+  },
+  "lesson_groups": [
+    {
+      "key": "",
+      "user_facing": false,
+      "position": 1,
+      "properties": {
+      },
+      "seeding_key": {
+        "lesson_group.key": "",
+        "script.name": "virtual-pl-csp-summer-day4"
+      }
+    }
+  ],
+  "lessons": [
+
+  ],
+  "lesson_activities": [
+
+  ],
+  "activity_sections": [
+
+  ],
+  "script_levels": [
+
+  ],
+  "levels_script_levels": [
+
+  ],
+  "resources": [
+    {
+      "name": "2023 Virtual CSP Summer Workshop - Day 4 Agenda",
+      "url": "https://docs.google.com/document/d/1j1J02ytlQsNTb-fPTaCNwC8En-7tmAV3bqQj5p-AChE/edit#heading=h.z84jwpltvqnh",
+      "key": "2023_virtual_csp_summer_workshop_-_day_4_agenda",
+      "properties": {
+      },
+      "seeding_key": {
+        "resource.key": "2023_virtual_csp_summer_workshop_-_day_4_agenda"
+      }
+    },
+    {
+      "name": "2023 Virtual CSP Summer Workshop - Day 4 Slides",
+      "url": "https://docs.google.com/presentation/d/1nltDv_qC-99TmxeHO0Zc5en-mnrJuakWVM1zBIedQ-g/edit#slide=id.gb686bce692_0_151",
+      "key": "2023_virtual_csp_summer_workshop_-_day_4_slides",
+      "properties": {
+      },
+      "seeding_key": {
+        "resource.key": "2023_virtual_csp_summer_workshop_-_day_4_slides"
+      }
+    }
+  ],
+  "lessons_resources": [
+
+  ],
+  "scripts_resources": [
+    {
+      "seeding_key": {
+        "resource.key": "2023_virtual_csp_summer_workshop_-_day_4_agenda",
+        "script.name": "virtual-pl-csp-summer-day4"
+      }
+    },
+    {
+      "seeding_key": {
+        "resource.key": "2023_virtual_csp_summer_workshop_-_day_4_slides",
+        "script.name": "virtual-pl-csp-summer-day4"
+      }
+    }
+  ],
+  "scripts_student_resources": [
+
+  ],
+  "vocabularies": [
+
+  ],
+  "lessons_vocabularies": [
+
+  ],
+  "lessons_programming_expressions": [
+
+  ],
+  "objectives": [
+
+  ],
+  "lessons_standards": [
+
+  ],
+  "lessons_opportunity_standards": [
+
+  ],
+  "rubrics": [
+
+  ],
+  "learning_goals": [
+
+  ],
+  "learning_goal_evidence_levels": [
+
+  ]
+}

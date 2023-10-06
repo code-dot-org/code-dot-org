@@ -12,7 +12,7 @@
                 "timedLoop": {
                   "palette_params": {
                     "callback": {
-                      "type": "អនុគមន៍"
+                      "type": "អនុគមន៍ (Function)"
                     }
                   }
                 }
@@ -23,7 +23,7 @@
                 "getPrediction": {
                   "palette_params": {
                     "callback": {
-                      "type": "អនុគមន៍"
+                      "type": "អនុគមន៍ (Function)"
                     }
                   }
                 }
@@ -62,7 +62,7 @@
                 "onEvent": {
                   "palette_params": {
                     "callback": {
-                      "type": "អនុគមន៍"
+                      "type": "អនុគមន៍ (Function)"
                     }
                   }
                 },

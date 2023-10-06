@@ -295,6 +295,11 @@
             "name": "මගේ ශ්‍රිතය"
           }
         },
+        "Course E: Artist Project_examples_2023": {
+          "my function": {
+            "name": "මගේ ශ්‍රිතය"
+          }
+        },
         "Course E: Frozen Project_examples2022": {
           "draw a circle": {
             "description": "දී ඇති අරයෙහි රවුමක් අඳින්න",
@@ -347,6 +352,57 @@
           }
         },
         "Course E: Frozen Project_examples_2021": {
+          "draw a circle": {
+            "description": "දී ඇති අරයෙහි රවුමක් අඳින්න",
+            "name": "රවුමක් අඳින්න",
+            "parameters": {
+              "radius": "අරය"
+            }
+          },
+          "draw a house": {
+            "name": "ගෙයක් අඳින්න",
+            "parameters": {
+              "length": "දිග"
+            }
+          },
+          "draw a pinwheel": {
+            "name": "පින් වීල් එකක් අඳින්න",
+            "parameters": {
+              "length": "දිග",
+              "repeat": "repeat",
+              "sides": "පැති"
+            }
+          },
+          "draw a shape": {
+            "name": "හැඩයක් අඳින්න",
+            "parameters": {
+              "length": "දිග",
+              "sides": "පැති"
+            }
+          },
+          "draw a square": {
+            "name": "සමචතුරස්‍රයක් අඳින්න",
+            "parameters": {
+              "length": "දිග",
+              "sides": "පැති"
+            }
+          },
+          "draw a star": {
+            "description": "දී ඇති ලකුණු හා දී ඇති දිග සමඟ තාරකාවක් අඳින්න ",
+            "name": "තරුවක් අඳින්න",
+            "parameters": {
+              "length": "දිග",
+              "points": "ලකුණු"
+            }
+          },
+          "draw a triangle": {
+            "name": "ත්‍රිකොණයක් අඳින්න",
+            "parameters": {
+              "length": "දිග"
+            }
+          }
+        },
+        "Course E: Frozen Project_examples_2023": {
           "draw a circle": {
             "description": "දී ඇති අරයෙහි රවුමක් අඳින්න",
             "name": "රවුමක් අඳින්න",
@@ -602,6 +658,56 @@
             }
           }
         },
+        "CourseD_EOC_artist_2023": {
+          "draw a circle": {
+            "description": "දී ඇති අරයෙහි රවුමක් අඳින්න",
+            "name": "රවුමක් අඳින්න",
+            "parameters": {
+              "radius": "අරය"
+            }
+          },
+          "draw a house": {
+            "name": "ගෙයක් අඳින්න",
+            "parameters": {
+              "length": "දිග"
+            }
+          },
+          "draw a pinwheel": {
+            "name": "පින් වීල් එකක් අඳින්න",
+            "parameters": {
+              "length": "දිග",
+              "repeat": "repeat",
+              "sides": "පැති"
+            }
+          },
+          "draw a shape": {
+            "name": "හැඩයක් අඳින්න",
+            "parameters": {
+              "length": "දිග",
+              "sides": "පැති"
+            }
+          },
+          "draw a square": {
+            "name": "සමචතුරස්‍රයක් අඳින්න",
+            "parameters": {
+              "length": "දිග"
+            }
+          },
+          "draw a star": {
+            "description": "දී ඇති ලකුණු හා දී ඇති දිග සමඟ තාරකාවක් අඳින්න ",
+            "name": "තරුවක් අඳින්න",
+            "parameters": {
+              "length": "දිග",
+              "points": "ලකුණු"
+            }
+          },
+          "draw a triangle": {
+            "name": "ත්‍රිකොණයක් අඳින්න",
+            "parameters": {
+              "length": "දිග"
+            }
+          }
+        },
         "CourseD_EOC_artist_example2021": {
           "draw a circle": {
             "description": "දී ඇති අරයෙහි රවුමක් අඳින්න",
@@ -653,6 +759,56 @@
           }
         },
         "CourseD_EOC_artist_example20212022": {
+          "draw a circle": {
+            "description": "දී ඇති අරයෙහි රවුමක් අඳින්න",
+            "name": "රවුමක් අඳින්න",
+            "parameters": {
+              "radius": "අරය"
+            }
+          },
+          "draw a house": {
+            "name": "ගෙයක් අඳින්න",
+            "parameters": {
+              "length": "දිග"
+            }
+          },
+          "draw a pinwheel": {
+            "name": "පින් වීල් එකක් අඳින්න",
+            "parameters": {
+              "length": "දිග",
+              "repeat": "repeat",
+              "sides": "පැති"
+            }
+          },
+          "draw a shape": {
+            "name": "හැඩයක් අඳින්න",
+            "parameters": {
+              "length": "දිග",
+              "sides": "පැති"
+            }
+          },
+          "draw a square": {
+            "name": "සමචතුරස්‍රයක් අඳින්න",
+            "parameters": {
+              "length": "දිග"
+            }
+          },
+          "draw a star": {
+            "description": "දී ඇති ලකුණු හා දී ඇති දිග සමඟ තාරකාවක් අඳින්න ",
+            "name": "තරුවක් අඳින්න",
+            "parameters": {
+              "length": "දිග",
+              "points": "ලකුණු"
+            }
+          },
+          "draw a triangle": {
+            "name": "ත්‍රිකොණයක් අඳින්න",
+            "parameters": {
+              "length": "දිග"
+            }
+          }
+        },
+        "CourseD_EOC_artist_example2021_2023": {
           "draw a circle": {
             "description": "දී ඇති අරයෙහි රවුමක් අඳින්න",
             "name": "රවුමක් අඳින්න",
@@ -797,6 +953,14 @@
           }
         },
         "MC_HOC_2017_FP20x20_2021": {
+          "function 1": {
+            "name": "ශ්‍රිතය 1"
+          },
+          "function 2": {
+            "name": "ශ්‍රිතය 2"
+          }
+        },
+        "MC_HOC_2017_FP20x20_2023": {
           "function 1": {
             "name": "ශ්‍රිතය 1"
           },
@@ -1271,6 +1435,11 @@
             "name": "යමක් කරන්න"
           }
         },
+        "courseC_data wizard_2023": {
+          "do something": {
+            "name": "යමක් කරන්න"
+          }
+        },
         "courseD_artist_binary1": {
           "draw": {
             "parameters": {
@@ -1649,6 +1818,11 @@
             "name": "යමක් කරන්න"
           }
         },
+        "courseE_artist_functions10_2023": {
+          "do something": {
+            "name": "යමක් කරන්න"
+          }
+        },
         "courseE_artist_functions2": {
           "draw a square": {
             "name": "සමචතුරස්‍රයක් අඳින්න"
@@ -1675,6 +1849,11 @@
           }
         },
         "courseE_artist_functions2_2021": {
+          "draw a square": {
+            "name": "සමචතුරස්‍රයක් අඳින්න"
+          }
+        },
+        "courseE_artist_functions2_2023": {
           "draw a square": {
             "name": "සමචතුරස්‍රයක් අඳින්න"
           }
@@ -1710,6 +1889,11 @@
           }
         },
         "courseE_artist_functions3_2021": {
+          "draw a star": {
+            "name": "තරුවක් අඳින්න"
+          }
+        },
+        "courseE_artist_functions3_2023": {
           "draw a star": {
             "name": "තරුවක් අඳින්න"
           }
@@ -1755,6 +1939,11 @@
           }
         },
         "courseE_artist_functions5_2021": {
+          "draw a star": {
+            "name": "තරුවක් අඳින්න"
+          }
+        },
+        "courseE_artist_functions5_2023": {
           "draw a star": {
             "name": "තරුවක් අඳින්න"
           }
@@ -1814,6 +2003,11 @@
             "name": "යමක් කරන්න"
           }
         },
+        "courseE_artist_functions8_2023": {
+          "do something": {
+            "name": "යමක් කරන්න"
+          }
+        },
         "courseE_artist_functions8a2022": {
           "do something": {
             "name": "යමක් කරන්න"
@@ -1854,6 +2048,14 @@
             "name": "සමචතුරස්‍රයක් අඳින්න"
           }
         },
+        "courseE_artist_functions8a_2023": {
+          "do something": {
+            "name": "යමක් කරන්න"
+          },
+          "draw a square": {
+            "name": "සමචතුරස්‍රයක් අඳින්න"
+          }
+        },
         "courseE_artist_functions8b2022": {
           "do something": {
             "name": "යමක් කරන්න"
@@ -1879,6 +2081,11 @@
             "name": "යමක් කරන්න"
           }
         },
+        "courseE_artist_functions8b_2023": {
+          "do something": {
+            "name": "යමක් කරන්න"
+          }
+        },
         "courseE_artist_functions8c2022": {
           "do something": {
             "name": "යමක් කරන්න"
@@ -1900,6 +2107,11 @@
           }
         },
         "courseE_artist_functions8c_2021": {
+          "do something": {
+            "name": "යමක් කරන්න"
+          }
+        },
+        "courseE_artist_functions8c_2023": {
           "do something": {
             "name": "යමක් කරන්න"
           }
@@ -1934,6 +2146,11 @@
             "name": "යමක් කරන්න"
           }
         },
+        "courseE_artist_functions9_2023": {
+          "do something": {
+            "name": "යමක් කරන්න"
+          }
+        },
         "courseE_artist_functions_challenge1": {
           "do something": {
             "name": "යමක් කරන්න"
@@ -1960,6 +2177,11 @@
           }
         },
         "courseE_artist_functions_challenge1_2021": {
+          "do something": {
+            "name": "යමක් කරන්න"
+          }
+        },
+        "courseE_artist_functions_challenge1_2023": {
           "do something": {
             "name": "යමක් කරන්න"
           }
@@ -1994,6 +2216,11 @@
             "name": "යමක් කරන්න"
           }
         },
+        "courseE_artist_functions_challenge2_2023": {
+          "do something": {
+            "name": "යමක් කරන්න"
+          }
+        },
         "courseE_artist_functions_predict1": {
           "draw a square": {
             "name": "සමචතුරස්‍රයක් අඳින්න"
@@ -2020,6 +2247,11 @@
           }
         },
         "courseE_artist_functions_predict1_2021": {
+          "draw a square": {
+            "name": "සමචතුරස්‍රයක් අඳින්න"
+          }
+        },
+        "courseE_artist_functions_predict1_2023": {
           "draw a square": {
             "name": "සමචතුරස්‍රයක් අඳින්න"
           }
@@ -2060,6 +2292,11 @@
           }
         },
         "courseE_artist_functions_predict2_2021": {
+          "do something": {
+            "name": "යමක් කරන්න"
+          }
+        },
+        "courseE_artist_functions_predict2_2023": {
           "do something": {
             "name": "යමක් කරන්න"
           }
@@ -2125,6 +2362,11 @@
           }
         },
         "courseF_apps_collector_-2022-2": {
+          "end game": {
+            "name": "ක්‍රීඩාව අවසන් කරන්න"
+          }
+        },
+        "courseF_apps_collector_2023": {
           "end game": {
             "name": "ක්‍රීඩාව අවසන් කරන්න"
           }

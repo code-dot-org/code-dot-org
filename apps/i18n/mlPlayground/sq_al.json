@@ -1,312 +1,3398 @@
 {
+  "addFeatureButton": "Shto veçori",
+  "aiBotAltText": "AI bot",
+  "aiBotBeamAltText": "A.I bot rreze skaner",
+  "aiBotBodyAltText": "Trupi i bot AI",
+  "aiBotHeadAltText": "Koka e bot AI",
+  "animationDescriptionsHeader": "Përshkrimi i animacionit",
+  "animationDescriptionsTesting": "AI bot skanon rreshtat hyrëse të të dhënave të pa etiketuara nga grupi i të dhënave të provës. Ndërsa çdo rresht lëviz nën rreze të botit AI, AI bën një parashikim duke shtuar një vlerë në kolonën e etiketës.",
+  "animationDescriptionsTraining": "Rreshtat e etiketuar nga grupi i të dhënave të trajnimit shkojnë në kokën e hapur të botit të A.I.",
+  "columnDetailsInformation": "Informacioni i kolonës",
   "columnDetailsMaximumValue": "Maksimum",
   "columnDetailsMinimumValue": "minimum",
+  "columnDetailsNumericalTypeError": "Kolonat numerike nuk mund të përmbajnë vargje.",
+  "columnDetailsTooManyLabels": "{labelCount} vlerat u gjetën në këtë kolonë. Një grafik shfaqet vetëm kur ka {maxLabelCount} ose më pak.",
+  "columnDetailsValueRange": "diapazon",
+  "columnInspectorDataType": "Lloji i të dhënave",
   "columnInspectorDescription": "Përshkrimi",
+  "columnType_categorical": "kategorike",
+  "columnType_numerical": "numerike",
   "correctAnswer": "E saktë",
+  "crossTabRelationshipHeader": "Informacion mbi marrëdhëniet",
+  "crossTabTooMuchData": "Të dhënat e zgjedhura aktualisht janë shumë të mëdha për t'u shfaqur në një tabelë.",
+  "dataCardDefaultHeader": "Detajet",
+  "dataCardLastUpdated": "Përditësuar së fundmi",
+  "dataCardPotentialMisuses": "Keqpërdorime të mundshme",
+  "dataCardPotentialUses": "Përdorimet e mundshme",
+  "dataCardRemovedRows": "{rowCount} {rowCount, plural, one {rresht} other {rreshtat}} hequr sepse {rowCount, plural, one {ajo} other {ata}} përmbante qeliza boshe.",
+  "dataCardRowCount": "Rreshtat e të dhënave",
+  "dataCardSource": "Burimi",
+  "dataCardWarningLargeDataset": "Paralajmërim: Setet e të dhënave me më shumë se {rowCount} rreshta do të ngadalësojnë përvojën e përdoruesit.",
+  "dataDisplayRowCount": "Ka {rowCount} rreshta të të dhënave.",
+  "dataDisplayRowCountTruncated": "Ka {rowCount} rreshta të të dhënave. (Duke treguar {rowLimit} rreshtat e parë)",
+  "datasetDescriptionLabel": "Rreth të dhënave",
+  "datasetDescriptionPlaceholder": "Si u mblodhën të dhënat? Kush i mblodhi? Kur u mblodhën?",
   "datasets": {
     "abalone": {
+      "card": {
+        "context": {
+          "potentialMisuses": "[empty string]",
+          "potentialUses": "Përcaktoni moshën e kërmillit të detit."
+        },
+        "description": "Ky grup i të dhënave përmban atribute të ndryshme kërmijsh të ndryshëm, një lloj kërmijsh detarë. Qëllimi është të parashikohet numri i unazave në guaskën e kërmillit, i cili është një tregues i moshës së tij."
+      },
       "fields": {
+        "Diameter": {
+          "description": "Diametri i saj në milimetra.",
+          "id": "Diametri"
+        },
+        "Height": {
+          "description": "Gjatësia e kërmillit në guaskë në milimetra.",
+          "id": "Gjatësia"
+        },
         "Length": {
+          "description": "Gjatësia e saj në pikën më të gjatë në milimetra.",
           "id": "Gjatësi"
+        },
+        "Rings": {
+          "description": "Mosha në vite.",
+          "id": "Unazat"
+        },
+        "Sex": {
+          "description": "Gjinia e kërmillit të detit: M, F, ose F (Foshnje).",
+          "id": "Gjinia"
+        },
+        "Shell weight": {
+          "description": "Pesha e guaskës pasi të jetë tharë, në gram.",
+          "id": "Pesha e guaskës"
+        },
+        "Shucked weight": {
+          "description": "Pesha e kërmillit të detit me guaskën e hequr në gram.",
+          "id": "Pesha e kërmillit pa guaskë"
+        },
+        "Viscera weight": {
+          "description": "Pesha e organeve, në gram.",
+          "id": "Pesha e organeve"
+        },
+        "Whole weight": {
+          "description": "Pesha e gjithë kërmillit të detit në gram.",
+          "id": "Pesha e guaskës"
+        }
+      },
+      "name": "Kërmill i detit"
+    },
+    "auto_mpg": {
+      "card": {
+        "context": {
+          "potentialMisuses": "Meqenëse është 30 vjeç, mund të mos pasqyrojë përparimet në teknologji - mos e blini makinën tuaj bazuar në këtë!",
+          "potentialUses": "Përcaktoni KPL-në e një makine bazuar në karakteristika të ndryshme si pesha dhe kuaj-fuqia."
+        },
+        "description": "Një grup i vogël i të dhënave të statistikave të ndryshme të makinave, me origjinë nga viti 1983, përdoret për të parashikuar KPL-në e tyre (kilometër për litër). Ky grup të dhënash nuk ka gjasa të marrë rezultate të shkëlqyera saktësie në një regresion KNN, por megjithatë mund të jetë një model i dobishëm: si mund të merrni një model të përgjithshëm në model dhe ta përdorni atë për të përcaktuar se cilat veçori kontribuojnë në kilometra më të larta për litër? Si mund ta ndryshoni grupin e të dhënave për të marrë një model më të saktë - për shembull, duke ndryshuar KPL-në nga një kolonë numerike në një kategori me intervale prej 5 KPL?"
+      },
+      "fields": {
+        "acceleration": {
+          "description": "Nxitimi i makinës.",
+          "id": "nxitimi"
+        },
+        "car name": {
+          "description": "Emri i makinës: të gjitha vlerat unike.",
+          "id": "emri i makinës"
+        },
+        "cylinders": {
+          "description": "Numri i cilindrave në motor.",
+          "id": "cilindra"
+        },
+        "displacement": {
+          "description": "Masa e vëllimit të cilindrit.",
+          "id": "zhvendosje"
+        },
+        "horsepower": {
+          "description": "Fuqia e makinës",
+          "id": "kuaj-fuqi"
+        },
+        "model year": {
+          "description": "Viti kur u lëshua makina.",
+          "id": "modeli i vitit"
+        },
+        "mpg": {
+          "description": "Kilometër për litër",
+          "id": "kpl"
+        },
+        "weight": {
+          "description": "Pesha e makinës në kilogramë",
+          "id": "Pesha"
         }
       }
+    },
+    "basketball_shots": {
+      "card": {
+        "context": {
+          "potentialMisuses": "[empty string]",
+          "potentialUses": "Parashikoni nëse një goditje me 3 pikë është bërë ose humbur."
+        },
+        "description": "Ky grup të dhënash përmban çdo përpjekje me 3 pikë të realizuar gjatë turneut NCAA 2017. Me këto të dhëna është e mundur të parashikohet nëse gjuajtja është bërë apo është humbur."
+      },
+      "fields": {
+        "Away team alias": {
+          "description": "Shkurtimi i emrit të ekipit mysafir.",
+          "id": "Pseudonimi i ekipit mysafir"
+        },
+        "Home team alias": {
+          "description": "Shkurtimi e emrit të ekipit vendas.",
+          "id": "Pseudonimi i ekipit vendas"
+        },
+        "Inches from bottom sideline": {
+          "description": "Distanca nga vija anësore e poshtme (vija përgjatë gjatësisë së fushës).",
+          "id": "Centimetrat nga vija anësore e poshtme"
+        },
+        "Inches from left baseline": {
+          "description": "Largësia nga vija bazë e majtë (vija pas një koshi).",
+          "id": "\nDistanca në cm nga vija bazë e majtë."
+        },
+        "Jersey number": {
+          "description": "Numri i lojtarit që bëri gjuajtjen.",
+          "id": "Numri i fanellës"
+        },
+        "Made or miss": {
+          "description": "Nëse gjuajtja me 3 pikë është bërë apo është humbur.",
+          "id": "E bërë ose e humbur"
+        },
+        "Time in seconds": {
+          "description": "Koha e kaluar në orën e lojës, në sekonda.",
+          "id": "Koha në sekonda"
+        }
+      },
+      "name": "Përpjekje me 3 pikë NCAA"
     },
     "bike_sharing": {
+      "card": {
+        "context": {
+          "potentialMisuses": "[empty string]",
+          "potentialUses": "Parashikoni sa biçikleta do të merren me qira në bazë të kushteve të motit ose periudhës së vitit."
+        },
+        "description": "Të dhënat ditore të qirasë nga Uashingtoni, D.C. ' S Sistemi Capital Bikeshare nga 2011 dhe 2012, së bashku me të dhënat e motit për ato ditë."
+      },
       "fields": {
+        "Average \"Feels Like\" Temperature": {
+          "description": "Temperatura mesatare \"ndjehet si\" në Celsius, e normalizuar në një shkallë 0 deri në 1 ku 0 = -16 gradë celsius dhe 1 është e barabartë me 50 gradë celsius.",
+          "id": "Temperatura mesatare “Ndjehet si”"
+        },
+        "Average Temperature (Celsius)": {
+          "description": "Temperatura mesatare në Celsius, normalizuar në një shkallë 0 deri në 1 ku 0 = -8 gradë Celsius dhe 1 është e barabartë me 39 gradë Celsius.",
+          "id": "Temperatura mesatare (Celsius)"
+        },
+        "Date": {
+          "description": "Data e marrjes së të dhënave.",
+          "id": "Data"
+        },
+        "Day of Week": {
+          "description": "Dita e javës: 0 (e diel) deri në 6 (e shtunë).",
+          "id": "Dita e Javës"
+        },
+        "Holiday": {
+          "description": "Pavarësisht nëse është një ditë pushimi.",
+          "id": "Pushime"
+        },
+        "Humidity (0 - 1)": {
+          "description": "Lagështia, e normalizuar në 0 (lagështia 0%) në 1 (lagështia 100%).",
+          "id": "Lagështia (0 - 1)"
+        },
+        "Month": {
+          "description": "Muaji: 1 (janar) deri në 12 (dhjetor).",
+          "id": "Muaj"
+        },
+        "Number of Casual Users": {
+          "description": "Numri i përdoruesve pa llogari",
+          "id": "Numri i përdoruesve të rastësishëm"
+        },
+        "Number of Registered Users": {
+          "description": "Numri i përdoruesve pa llogari",
+          "id": "Numri i përdoruesve të regjistruar"
+        },
+        "Season": {
+          "description": "Stinë: pranverë, verë, dimër ose vjeshtë.",
+          "id": "Sezoni"
+        },
+        "Total Users": {
+          "description": "Numri i përgjithshëm i përdoruesve.",
+          "id": "Përdoruesit e përgjithshëm"
+        },
+        "Weather Description": {
+          "description": "Një përshkrim i motit të ditës, duke filluar nga disa re në borë të lehtë ose shi.",
+          "id": "Përshkrimi i motit"
+        },
+        "Wind Speed": {
+          "description": "Shpejtësia e erës.",
+          "id": "Shpejtësia e erës"
+        },
+        "Workday": {
+          "description": "Pavarësisht nëse është një ditë pushimi.",
+          "id": "Dita e punës"
+        },
+        "Year": {
+          "description": "Viti (2011 ose 2012).",
+          "id": "Viti"
+        },
         "index": {
+          "description": "Indeksi ose çelësi unik i rekordit. Kjo nuk duhet të përdoret si një tipar.",
           "id": "indeks"
         }
-      }
+      },
+      "name": "Ndarja e biçikletave"
     },
     "billionaires": {
+      "card": {
+        "context": {
+          "potentialMisuses": "Për shembull, përcaktimi nëse burrat janë 'më të mirë' për t'u bërë miliarderë sesa gratë. Gratë janë të nënpërfaqësuara në mesin e miliarderëve, por ka shumë arsye për këtë që të dhënat nuk reflektojnë.",
+          "potentialUses": "Parashikoni llojin e pasurisë së një miliarderi bazuar në veçori të tjera."
+        },
+        "description": "Të dhëna shumë dekadash për miliarderët individualë, të renditura për çdo vit, me karakteristika si mosha, industria, pasuria e familjes dhe lloji i pasurisë (p.sh. themeluesi i kompanisë në industrinë e financave)."
+      },
       "fields": {
         "Age": {
+          "description": "Mosha e tyre.",
           "id": "Mosha"
         },
+        "Citizenship": {
+          "description": "Vendi ku ata janë shtetas zyrtar.",
+          "id": "Shtetësia"
+        },
+        "Company Founding Year": {
+          "description": "Viti i themelimit të kompanisë së tyre.",
+          "id": "Viti i themelimit të kompanisë"
+        },
+        "Company Name": {
+          "description": "Emri i kompanisë së tyre.",
+          "id": "Emri i Kompanisë"
+        },
+        "Company Relationship": {
+          "description": "Marrëdhënia e tyre me kompaninë: p.sh. “themelues”, “CEO”, “kryetar”).",
+          "id": "Marrëdhëniet me kompaninë"
+        },
+        "Company Sector": {
+          "description": "Sektori në të cilin është kompania e tyre, p.sh. \"Financa\" ose \"Softuer\".",
+          "id": "Sektori i kompanisë"
+        },
+        "Company Type": {
+          "description": "Lloji i kompanisë: nëse është e re, kompani e privatizuar apo e blerë.",
+          "id": "Lloji i kompanisë"
+        },
+        "Country of Residence": {
+          "description": "Vendi ku ata banojnë.",
+          "id": "Vendi i Rezidencës"
+        },
         "Gender": {
+          "description": "Gjinia e tyre",
           "id": "Gjinia"
+        },
+        "Net Worth In Billions": {
+          "description": "Vlera e tyre neto është në miliarda dollarë.",
+          "id": "Vlera neto në miliarda"
+        },
+        "Rank": {
+          "description": "Renditja e pasurisë së tyre për vitin e këtij rekordi.",
+          "id": "Renditja"
+        },
+        "Region": {
+          "description": "Rajoni ku ndodhet vendi i tyre i banimit, p.sh. “Amerika e Veriut” ose “Azia Lindore”",
+          "id": "Rajoni"
+        },
+        "Type Of Wealth": {
+          "description": "Lloji i tyre i pasurisë, p.sh.: “themelues jo-financiar”, “i trashëguar”, “financat e vetë-bëra”",
+          "id": "Lloji i Pasurisë"
+        },
+        "Wealth Category": {
+          "description": "Kategoria e tyre e pasurisë, p.sh. “Financiare”, “të patregtueshëm”, ose “Sektorët e Tregtuar”.",
+          "id": "Kategoria e Pasurisë"
+        },
+        "Wealth Industry": {
+          "description": "Industria në të cilën ndodhet pasuria e tyre.",
+          "id": "Industria e Pasurisë"
+        },
+        "Wealth Inherited": {
+          "description": "Nëse pasuria e tyre ishte e trashëguar dhe nga, p.sh. “jo e trashëguar”, “babai”, “brezi i 3-të”.",
+          "id": "Pasuria e trashëguar"
+        },
+        "Year": {
+          "description": "Viti i renditjes (1996, 2001 ose 2014).",
+          "id": "Viti"
         }
-      }
+      },
+      "name": "Miliarderët"
     },
     "boba_toy": {
+      "card": {
+        "context": {
+          "potentialMisuses": "Çdo gjë tjetër përveç rekomandimeve për bubble tea.",
+          "potentialUses": "Ndihmoni në bërjen e rekomandimeve se çfarë lloj bubble tea duhet të porosisë një klient i ri."
+        },
+        "description": "Sondazhi i klientëve në një bubble tea nëse ata pëlqejnë apo jo kombinime të caktuara të bubble tea."
+      },
       "fields": {
         "banana": {
+          "description": "A ka bubble tea përzierje të bananes?",
           "id": "Banane"
+        },
+        "crystal boba": {
+          "description": "A ka bubble tea përzierje të kristaleve të boba-ve?",
+          "id": "kristal boba"
+        },
+        "herbal": {
+          "description": "A ka bubble tea përzierje bimore?",
+          "id": "bimore"
+        },
+        "lychee": {
+          "description": "A ka bubble tea përzierje të liçi?",
+          "id": "liçi"
+        },
+        "mango jelly": {
+          "description": "A ka bubble tea përzierje jelly mangos?",
+          "id": "Jelly mango"
+        },
+        "preference": {
+          "description": "Ju pëlqeu apo nuk ju pëlqeu?",
+          "id": "preferencë"
+        },
+        "red beans": {
+          "description": "A ka bubble tea përzierje të fasuleve të kuqe?",
+          "id": "fasule të kuqe"
+        },
+        "regular boba": {
+          "description": "A ka bubble tea përzierje të boba-ve të rregullt?",
+          "id": "boba e rregullt"
+        },
+        "sea salt cream": {
+          "description": "A ka bubble tea përzierje të krem kripë deti?",
+          "id": "krem kripë deti"
+        },
+        "vanilla": {
+          "description": "A ka bubble tea përzierje të vaniljes?",
+          "id": "vanillë"
         }
-      }
+      },
+      "name": "Bubble Tea"
+    },
+    "car_evaluation": {
+      "card": {
+        "context": {
+          "potentialMisuses": "Ju mund të keni kritere të ndryshme të makinave nga ky sistem vlerësimi - ky nuk mund të marrë një vendim më të mirë për blerjen e makinës sesa mundeni! Edhe pse mund t'ju ndihmojë në kërkimin tuaj.",
+          "potentialUses": "Përcaktoni vlerësimin e pranueshmërisë së një makine bazuar në veçori të caktuara."
+        },
+        "description": "Një grup të dhënash makinash të renditura sipas 'pranueshmërisë', bazuar në veçori si çmimi, siguria dhe numri i pasagjerëve. Renditja vjen nga një model vendimi i hartuar nga Marko Bohanec."
+      },
+      "fields": {
+        "Boot Size": {
+          "description": "Madhësia e çizmës (trungu): e vogël, e mesme ose e madhe.",
+          "id": "Madhësia e çizmeve"
+        },
+        "Buying Price": {
+          "description": "Çmimi i blerjes së makinës, nga një shumë e lartë në të ulët.",
+          "id": "Çmimi i blerjes"
+        },
+        "Car Acceptability": {
+          "description": "Vlerësimi i pranueshmërisë së makinës: i papranueshëm, i pranueshëm, i mirë ose shumë i mirë.",
+          "id": "Pranueshmëria e makinës"
+        },
+        "Maintenance Cost": {
+          "description": "Kostoja e mirëmbajtjes së makinës, nga një shumë e lartë në të ulët.",
+          "id": "Kostoja e mirëmbajtjes"
+        },
+        "Number Of Doors": {
+          "description": "Numri i dyerve, nga 2 në 5 ose më shumë.",
+          "id": "Numri i dyerve"
+        },
+        "Number of Passengers": {
+          "description": "Numri i udhëtarëve: 2, 4 ose më shumë.",
+          "id": "Numri i pasagjerëve"
+        },
+        "Safety Rating": {
+          "description": "Vlerësimi i sigurisë: i lartë, i mesëm ose i ulët.",
+          "id": "Vlerësimi i sigurisë"
+        }
+      },
+      "name": "Vlerësimi i makinave"
     },
     "census_part": {
+      "card": {
+        "context": {
+          "potentialMisuses": "Përdorimi i kësaj për diçka si përcaktimi nëse do t'i jepni dikujt një hua ose jo mund të jetë thellësisht e padrejtë.",
+          "potentialUses": "Parashikoni nëse të ardhurat e një personi janë mbi ose nën 50,000 dollarë, bazuar në nivelin e tyre arsimor dhe moshën. Demonstroni pabarazi racore dhe të të ardhurave me bazë gjinore."
+        },
+        "description": "Të dhëna nga regjistrimi i 1994 në SHBA, me të ardhurat, të dhënat personale dhe të punës. Përdoret për të parashikuar nëse të ardhurat e një personi janë mbi 50,000 dollarë."
+      },
       "fields": {
         "age": {
+          "description": "Mosha e personit.",
           "id": "mosha"
+        },
+        "capital gains": {
+          "description": "Fitimet e tyre kapitale të raportuara për vitin (këto janë fitime monetare nga gjëra të tilla si shitja e aksioneve në vend të të ardhurave nga një punë).",
+          "id": "fitimet kapitale"
+        },
+        "capital losses": {
+          "description": "Humbjet e tyre të raportuara të kapitalit (për shembull, nëse ata shitën një aksion që u humbi para).",
+          "id": "humbjet kapitale"
+        },
+        "education level": {
+          "description": "Niveli i tyre i edukimit.",
+          "id": "niveli i edukimit"
+        },
+        "estimated number of people represented": {
+          "description": "Vlerësimi për sa njerëz në SHBA përfaqëson ky person.",
+          "id": "Numri i njerëzve të përfaqësuar"
+        },
+        "gender": {
+          "description": "Gjinia (përdor opsionet e regjistrimit të vitit 1994, të cilat janë binare).",
+          "id": "gjinia"
+        },
+        "hours of work per week": {
+          "description": "Orët që punojnë në javë.",
+          "id": "orët e punës për javë"
+        },
+        "income": {
+          "description": "Të ardhurat e tyre: binare për më shumë se ose më pak se 50,000 dollarë.",
+          "id": "të ardhura"
+        },
+        "marital status": {
+          "description": "Statusi martesor (i martuar, beqar, i divorcuar).",
+          "id": "statusi martesor"
+        },
+        "native-country": {
+          "description": "Vendi i tyre i origjinës.",
+          "id": "vendlindja-vend"
+        },
+        "occupation": {
+          "description": "Çfarë bëjnë ata për të jetuar.",
+          "id": "profesioni"
+        },
+        "race": {
+          "description": "Raca (përdor kategoritë racore të vitit 1994, e cila përjashton një sërë dallimesh).",
+          "id": "racë"
+        },
+        "relationship": {
+          "description": "Përshkrimi i marrëdhënies së statusit të tyre martesor.",
+          "id": "marrëdhënie"
+        },
+        "type of employment": {
+          "description": "Lloji i punësimit: qeveritar, privat, vetë.",
+          "id": "lloji i punësimit"
         }
       }
     },
-    "club_random_toy": {
+    "club_biased_toy": {
+      "card": {
+        "context": {
+          "potentialMisuses": "Të dhënat erdhën vetëm nga njerëz në shkollën dhe komunitetin tonë - kini kujdes për përdorimin e tyre në shkolla të ndryshme.",
+          "potentialUses": "Pyetjet mund të ndihmojnë në rekomandimin e një klubi për t'u bashkuar bazuar në interesat dhe personalitetin tuaj."
+        },
+        "description": "Babai i Nico-s është në një grup dhe u dërgoi një email të gjithëve në listën e emaileve të klubit të tyre të fansave. Shumica e njerëzve në listën e postës elektronike plotësuan formularin."
+      },
       "fields": {
+        "activity": {
+          "description": "Cila nga këto aktivitete ju pëlqen më shumë?",
+          "id": "aktivitet"
+        },
+        "club": {
+          "description": "Cili është një klub që dëshironi të bashkoheni ose jeni tashmë pjesë?",
+          "id": "klub"
+        },
+        "element": {
+          "description": "Cili nga këto elemente është i preferuari juaj?",
+          "id": "element"
+        },
+        "free time": {
+          "description": "Sa kohë të lirë keni pas shkollës?",
+          "id": "koha e lirë"
+        },
+        "make build": {
+          "description": "Si ndiheni për deklaratën e mëposhtme: “Më pëlqen të bëj dhe ndërtoj gjërat me duart e mia”",
+          "id": "bëj ndërtesa"
+        },
+        "meet people": {
+          "description": "Si ndiheni për deklaratën e mëposhtme: “Më pëlqen të mësoj gjëra të reja dhe të takoj njerëz të rinj”",
+          "id": "tako njerëz"
+        },
+        "personality": {
+          "description": "Si ju pëlqen të kaloni kohën tuaj?",
+          "id": "personaliteti"
+        },
+        "school minutes": {
+          "description": "Sa kohë ju duhet për të shkuar në shkollë?",
+          "id": "minuta shkollore"
+        }
+      },
+      "name": "Sondazhi i Klubit të Nicos"
+    },
+    "club_random_toy": {
+      "card": {
+        "context": {
+          "potentialMisuses": "Të dhënat erdhën vetëm nga njerëz në shkollën dhe komunitetin tonë - kini kujdes për përdorimin e tyre në shkolla të ndryshme.",
+          "potentialUses": "Pyetjet mund të ndihmojnë në rekomandimin e një klubi për t'u bashkuar bazuar në interesat dhe personalitetin tuaj."
+        },
+        "description": "Isaku dhe katër vëllezërit e motrat e tij kërkuan nga të gjithë në klasat e tyre të plotësonin anketën. Kjo çoi në shumë të dhëna nga njerëz në shumë grupe të ndryshme."
+      },
+      "fields": {
+        "club": {
+          "description": "Cili është një klub që dëshironi të bashkoheni ose jeni tashmë pjesë?",
+          "id": "klub"
+        },
         "color": {
+          "description": "Cila nga këto ngjyra ju pëlqen më shumë?",
           "id": "ngjyra"
         },
         "food": {
+          "description": "Cila nga këto lloje të ushqimeve ju pëlqen më shumë?",
           "id": "ushqim"
         },
         "music": {
+          "description": "Cila nga këto lloje të muzikës ju pëlqen më shumë?",
           "id": "muzikë"
+        },
+        "read vs tv": {
+          "description": "Si ndiheni për deklaratën e mëposhtme: \"Më mirë të lexoj sesa të shikoj TV\"",
+          "id": "lexoni kundrejt tv"
+        }
+      },
+      "name": "Sondazhi i Klubit të Isakut"
+    },
+    "club_sparse_toy": {
+      "card": {
+        "context": {
+          "potentialMisuses": "Të dhënat erdhën vetëm nga njerëz në shkollën dhe komunitetin tonë - kini kujdes për përdorimin e tyre në shkolla të ndryshme.",
+          "potentialUses": "Pyetjet mund të ndihmojnë në rekomandimin e një klubi për t'u bashkuar bazuar në interesat dhe personalitetin tuaj."
+        },
+        "description": "Zoi u kërkoi të gjithëve në klasën e saj të anglishtes për të përfunduar sondazhin dhe të gjithë e bënë!"
+      },
+      "fields": {
+        "activity": {
+          "description": "Cila nga këto aktivitete ju pëlqen më shumë?",
+          "id": "aktivitet"
+        },
+        "club": {
+          "description": "Cili është një klub që dëshironi të bashkoheni ose jeni tashmë pjesë?",
+          "id": "klub"
+        },
+        "element": {
+          "description": "Cili nga këto elemente është i preferuari juaj?",
+          "id": "element"
+        },
+        "make build": {
+          "description": "Si ndiheni për deklaratën e mëposhtme: “Më pëlqen të bëj dhe ndërtoj gjërat me duart e mia”",
+          "id": "bëj ndërtesa"
+        },
+        "meet people": {
+          "description": "Si ndiheni për deklaratën e mëposhtme: “Më pëlqen të mësoj gjëra të reja dhe të takoj njerëz të rinj”",
+          "id": "tako njerëz"
+        },
+        "personality": {
+          "description": "Si ju pëlqen të kaloni kohën tuaj?",
+          "id": "personaliteti"
+        }
+      },
+      "name": "Anketa e Klubit të Zoit"
+    },
+    "club_specific_toy": {
+      "card": {
+        "context": {
+          "potentialMisuses": "Të dhënat erdhën vetëm nga njerëz në shkollën dhe komunitetin tonë - kini kujdes për përdorimin e tyre në shkolla të ndryshme.",
+          "potentialUses": "Pyetjet mund të ndihmojnë në rekomandimin e një klubi për t'u bashkuar bazuar në interesat dhe personalitetin tuaj."
+        },
+        "description": "Kim e pyeti motrën e saj më të madhe se çfarë pyetjesh duhet të bënte në sondazh, pastaj ia dërgoi sondazhin në një email miqve të motrës së saj në universitetin privat ku shkon në shkollë."
+      },
+      "fields": {
+        "activity": {
+          "description": "Cila nga këto aktivitete ju pëlqen më shumë?",
+          "id": "aktivitet"
+        },
+        "club": {
+          "description": "Cili është një klub që dëshironi të bashkoheni ose jeni tashmë pjesë?",
+          "id": "klub"
+        },
+        "favorite movie": {
+          "description": "Cili nga këta filma ju pëlqen më shumë?",
+          "id": "filmi i preferuar"
+        },
+        "lunch food": {
+          "description": "Cilin nga këto ushqime do të hani për drekë?",
+          "id": "ushqimi i  drekës"
+        },
+        "pet you own": {
+          "description": "Cilën nga këto kafshë shtëpiake keni ju?",
+          "id": "kafshë shtëpiake që zotëroni"
+        }
+      },
+      "name": "Anketa e Kim's klubit"
+    },
+    "cookies_toy": {
+      "card": {
+        "context": {
+          "potentialMisuses": "Çdo gjë tjetër përveç rekomandimeve për biskota.",
+          "potentialUses": "Ndihmoni në bërjen e rekomandimeve se çfarë lloj biskota duhet të blejë një klient i ri."
+        },
+        "description": "Anketa e klientëve në një dyqan biskotash nëse u pëlqejnë apo jo disa kombinime të biskotave."
+      },
+      "fields": {
+        "chocolate chips": {
+          "description": "A ka biskota copa çokollatë?",
+          "id": "Copa çokollate"
+        },
+        "frosting": {
+          "description": "A ka biskota krem?",
+          "id": "krem"
+        },
+        "ice cream on top": {
+          "description": "Ju pëlqejnë apo nuk ju pëlqejnë biskota?",
+          "id": "akullore sipër"
+        },
+        "m and ms": {
+          "description": "A ka biskota m&ms?",
+          "id": "m & ms"
+        },
+        "oatmeal": {
+          "description": "A ka biskota tërshërë?",
+          "id": "tërshërë"
+        },
+        "preference": {
+          "description": "A ju pëlqen ose nuk ju pëlqen biskotat?",
+          "id": "preferencë"
+        },
+        "raisins": {
+          "description": "A ka biskota rrush të thatë?",
+          "id": "rrush të thatë"
+        }
+      },
+      "name": "Biskota"
+    },
+    "exoplanets": {
+      "card": {
+        "context": {
+          "potentialMisuses": "Duke u përpjekur për të bërë supozime nëse një planet mund të mbështesë jetën.",
+          "potentialUses": "Vlerësoni madhësinë ose masën e një ekzoplaneti bazuar në madhësinë, moshën ose aspektet e tjera të yllit që orbiton."
+        },
+        "description": "Ky grup i të dhënave është një listë e ekzoplaneteve, të cilat janë planetë që rrotullohen rreth yjeve të tjerë. Me këto të dhëna, është e mundur të vlerësohet madhësia e një ekzoplaneti, si dhe karakteristika të tjera."
+      },
+      "fields": {
+        "Discovery year": {
+          "description": "Viti kur u zbulua ky ekzoplanet.",
+          "id": "Viti i zbulimit"
+        },
+        "Mass in earths": {
+          "description": "Masa relative e këtij ekzoplaneti në krahasim me tokën.",
+          "id": "Masa në tokë"
+        },
+        "Number of planets": {
+          "description": "Numri i planeteve në sistemin e ekzoplanetit",
+          "id": "Numri i planeteve"
+        },
+        "Number of stars": {
+          "description": "Numri i yjeve në sistemin e ekzoplanetit",
+          "id": "Numri i yjeve"
+        },
+        "Orbit length in earth days": {
+          "description": "Sa kohë i duhet këtij planeti për të bërë një orbitë të plotë rreth yllit të tij pritës, të matur në ditët e tokës.",
+          "id": "Gjatësia e orbitës në ditët e tokës"
+        },
+        "Size in earths": {
+          "description": "Madhësia relative e këtij ekzoplaneti në krahasim me tokën.",
+          "id": "Madhësia në tokë"
+        },
+        "Star age in billions of years": {
+          "description": "Mosha e yllit pritës.",
+          "id": "Mosha e yjeve në miliarda vjet"
+        },
+        "Star host name": {
+          "description": "Emri i fillimit të këtij ekzoplaneti është në orbitë.",
+          "id": "Emri i hostit me yll"
+        },
+        "Star mass in suns": {
+          "description": "Masa relative e yllit pritës në krahasim me diellin.",
+          "id": "Masa e yjeve në diell"
+        },
+        "Star size in suns": {
+          "description": "Madhësia relative e yllit pritës në krahasim me diellin.",
+          "id": "Madhësia e yjeve në diell"
+        },
+        "Star temperature in kelvin": {
+          "description": "Temperatura e yllit pritës në kelvin.",
+          "id": "Temperatura e yllit në kelvin"
+        }
+      },
+      "name": "Ekzoplanetët"
+    },
+    "global_happiness_raw": {
+      "card": {
+        "context": {
+          "potentialMisuses": "Parashikimi i renditjes është i vështirë. Kjo gjithashtu nuk duhet të përdoret si një metrikë objektive se cilat vende janë 'më të mirat' - cilët faktorë mund të kontribuojnë në këto rezultate që nuk mbulohen nga të dhënat?",
+          "potentialUses": "Parashikoni rezultatin e lumturisë së një vendi bazuar në karakteristika të tjera si PBB për frymë dhe liria për të bërë zgjedhje të jetës."
+        },
+        "description": "Renditja e raportit të Lumturisë Globale 2019, ku vendet vlerësohen sipas atributeve të ndryshme që kontribuojnë në një rezultat total të lumturisë, më pas renditen. Veçoritë në këtë grup të dhënash janë marrë nga vitet 2008 deri në 2018, të cilat janë mesatarizuar së bashku që raporti të krijojë pikë. Këto të dhëna \"të papërpunuara\" përmbajnë më shumë rreshta se grupi i të dhënave \"Global Happiness 2019\", por mund të japin rezultate të ndryshme."
+      },
+      "fields": {
+        "Country name": {
+          "description": "Emri i vendit ose rajonit.",
+          "id": "Emri i vendit"
+        },
+        "Freedom to make life choices": {
+          "description": "Mesatarja kombëtare e një përgjigjeje 0 (jo) me 1 (po) në pyetjen \"A jeni i kënaqur apo i pakënaqur me lirinë tuaj për të zgjedhur atë që bëni me jetën tuaj?\"",
+          "id": "Liria për të bërë zgjedhjet e jetës"
+        },
+        "GDP per capita": {
+          "description": "PBB-ja e vendit për frymë në dollarë.",
+          "id": "PBB për frymë"
+        },
+        "Generosity": {
+          "description": "Mesatarja kombëtare e një përgjigjeje në pyetjen \"A keni dhuruar para për një bamirësi muajin e kaluar?\"",
+          "id": "Bujaria"
+        },
+        "Healthy life expectancy at birth": {
+          "description": "Jetëgjatësia e shëndetshme në lindje, bazuar në të dhënat e Observatorit Global të Shëndetit të Organizatës Botërore të Shëndetësisë.",
+          "id": "Jetëgjatësia e shëndetshme në lindje"
+        },
+        "Life Ladder": {
+          "description": "Rezultati subjektiv i mirëqenies, si mesatarja e përgjigjes ndaj një pyetjeje të vlerësimit të jetës: \"Ju lutemi imagjinoni një shkallë, me hapa të numëruar nga 0 në fund deri në 10 në krye. Pjesa e sipërme e shkallës përfaqëson jetën më të mirë të mundshme për ju dhe fundi i shkallës përfaqëson jetën më të keqe të mundshme për ju. Në cilën shkallë të shkallës do të thoshit se ju personalisht ndjeni se qëndroni në këtë kohë?\"",
+          "id": "Shkallët e jetës"
+        },
+        "Negative affect": {
+          "description": "Mesatarja e tre matjeve negative, duke pyetur se sa shpesh të anketuarit ndiejnë shqetësim, trishtim ose zemërim.",
+          "id": "Ndikim negativ"
+        },
+        "Perceptions of corruption": {
+          "description": "Mesatarja kombëtare e përgjigjes për dy pyetjet 0-1: \"A është i përhapur korrupsioni në të gjithë qeverinë apo jo\" dhe \"A është i përhapur korrupsioni brenda bizneseve apo jo\"?",
+          "id": "Perceptimi i korrupsionit"
+        },
+        "Positive affect": {
+          "description": "Mesatarja e tre matjeve pozitive, duke pyetur të anketuarit se sa shpesh përjetojnë lumturinë, sa shpesh përjetojnë kënaqësi dhe sa shpesh buzëqeshin ose qeshin.",
+          "id": "Ndikimi pozitiv"
+        },
+        "Social support": {
+          "description": "Kjo është mesatarja kombëtare e një përgjigjeje 0 (jo) ose 1 (po) në pyetjen \"Nëse keni qenë në telashe, a keni të afërm apo shokë ku mund të mbështeteni për t'ju ndihmuar sa herë që keni nevojë për ta?\"",
+          "id": "Mbështetje sociale"
+        },
+        "Year": {
+          "description": "Viti i rezultateve të sondazhit.",
+          "id": "Viti"
         }
       }
     },
     "heart": {
+      "card": {
+        "context": {
+          "potentialMisuses": "[empty string]",
+          "potentialUses": "Diagnostifikoni nëse dikush mund të jetë në rrezik për sëmundje të zemrës bazuar në faktorë të ndryshëm."
+        },
+        "description": "Një grup i të dhënave të rezultateve të testeve për pacientët me sëmundje të zemrës, i përdorur për të parashikuar nëse dikush mund të ketë apo jo sëmundje të zemrës."
+      },
       "fields": {
         "Age": {
+          "description": "Mosha e pacientit",
           "id": "Mosha"
+        },
+        "Chest Pain Type": {
+          "description": "Lloji i dhimbjes së gjoksit.",
+          "id": "Lloji i dhimbjes së gjoksit"
+        },
+        "Cholesterol": {
+          "description": "Kolesteroli në gjak.",
+          "id": "Kolesteroli"
+        },
+        "Diagnosis of Heart Disease": {
+          "description": "Nëse pacienti ka apo jo sëmundje të zemrës.",
+          "id": "Diagnoza e sëmundjeve të zemrës"
+        },
+        "Exercise Induced Angina": {
+          "description": "Nëse ushtrimi ka shkaktuar anginë te pacienti ose jo.",
+          "id": "Angina e shkaktuar nga ushtrimet"
+        },
+        "Fasting Blood Sugar > 120mg/dl": {
+          "description": "\nNëse sheqeri në gjakun e tyre në agjërim është i lartë (mbi 120) ose jo.",
+          "id": "Sheqeri në gjak në agjërim > 120mg/dl"
+        },
+        "Maximum Heart Rate Achieved": {
+          "description": "Gjatë një testi ushtrimit, rrahjet më të larta të zemrës së pacientit arritën.",
+          "id": "Rrahjet maksimale të zemrës së arritur"
+        },
+        "Number of Major Vessels Colored by Flourosopy": {
+          "description": "Fluoroskopia është një proces i hartimit të arterieve në zemër: kjo tregon sa enë gjaku ishin shumë të dukshme në proces. Një numër i ulët ose i lartë mund të korrespondojë me sëmundjen e zemrës.",
+          "id": "Numri i enëve kryesore të ngjyrosur me fluoroskopi."
+        },
+        "Resting Blood Pressure": {
+          "description": "Nëse kanë dhimbje në gjoks, nëse është kështu, është anginale: një ndjenjë sikur zemra juaj është duke u shtrydhur.",
+          "id": "Presioni i gjakut në pushim"
+        },
+        "Resting ECG Results": {
+          "description": "Rezultatet e një ekikardiogrami: nëse ka anomali të zbuluara në zemrën e tyre.",
+          "id": "Rezultatet e ECG-së në pushim"
+        },
+        "ST Depression Induced By Exercise Relative To Rest": {
+          "description": "Shkalla e depresionit ST (çështjet e arterieve) të shkaktuara nga stërvitja, një tregues i problemeve të zemrës.",
+          "id": "Depresioni ST i shkaktuar nga ushtrimi në lidhje me pushimin"
+        },
+        "Sex": {
+          "description": "Gjinia biologjike e pacientit.",
+          "id": "Gjinia"
+        },
+        "Slope of Peak Exercise ST Segment": {
+          "description": "Këndi i segmentit të ST (arteria që po matet) gjatë ushtrimit.",
+          "id": "\nKëndi i segmentit të ST në kulmin e ushtrimit."
+        }
+      },
+      "name": "Shëndeti i zemrës"
+    },
+    "housing_data": {
+      "card": {
+        "context": {
+          "potentialMisuses": "Ky është një grup të dhënash të vjetra, kështu që nuk ka gjasa të pasqyrojë vlerat bashkëkohore të shtëpisë. Ky është gjithashtu një grup të dhënash që pasqyron paragjykimet racore dhe ekonomike: a është e drejtë që vlerat e shtëpive të priren të jenë më të larta në zonat ku popullsia ishte më e pasur apo me më pak të zi?",
+          "potentialUses": "Parashikoni vlerën mesatare të shtëpisë bazuar në popullsinë e zezë dhe raportin e mësimdhënës/prindër."
+        },
+        "description": "Një grup i vogël i të dhënave të përdorura gjerësisht për strehimin në zonën e Bostonit, Masaquts."
+      },
+      "fields": {
+        "% of buildings pre-1940": {
+          "description": "Përqindja e njësive të okupuara nga pronarët të ndërtuara para vitit 1940.",
+          "id": "% e ndërtesave para vitit 1940"
+        },
+        "Accessibility to highways": {
+          "description": "Një masë e matur e qasshmërisë në autostradat kryesore.",
+          "id": "Qasshmëria në autostrada"
+        },
+        "Bounds Charles River?": {
+          "description": "1 nëse toka është pranë lumit Charles, 0 ndryshe. Disa qytete kanë një 'NA' ku përgjigja është e pasigurt.",
+          "id": "Kufizon lumin Charles?"
+        },
+        "Distance to employment centers": {
+          "description": "Distanca e peshuar në 5 qendrat kryesore të punësimit në Boston.",
+          "id": "Distanca nga qendrat e punësimit"
+        },
+        "Lower status population": {
+          "description": "Përqindja e popullsisë e përcaktuar si 'status më i ulët'.",
+          "id": "Popullsia me status më të ulët"
+        },
+        "Median home value": {
+          "description": "Vlera mesatare e shtëpisë në 1000 dollarë.",
+          "id": "Vlera mesatare e shtëpisë"
+        },
+        "Nitric Oxide Concentration (PPM)": {
+          "description": "Përqendrimi i oksidit nitrik në pjesë për 10 milion.",
+          "id": "Përqendrimi i oksidit nitrik (PPM)"
+        },
+        "Per Capita Crime Rate": {
+          "description": "Shkalla e krimit për kokë banori sipas qytetit.",
+          "id": "Shkalla e Krimit për kokë banori"
+        },
+        "Property tax": {
+          "description": "Shkalla e tatimit në pronë për $10,000.",
+          "id": "Tatimi në pronë"
+        },
+        "Proportion of Residental Land Zoned for >25Kft": {
+          "description": "Përqindja e tokës së banimit të zonës për sipërfaqe mbi 25,000 metra katrorë.",
+          "id": "Përqindja e Tokës Rezidenciale e Zonuar për >25 Kft"
+        },
+        "Proportion of non-retail business acres": {
+          "description": "Përqindja e hektarëve të biznesit pa pakicë për qytet.",
+          "id": "Përqindja e hektarëve të bizneseve me pakicë"
+        },
+        "Rooms per dwelling": {
+          "description": "Numri mesatar i dhomave për vendbanim.",
+          "id": "Dhoma për vendbanim"
+        },
+        "Student-teacher ratio": {
+          "description": "Raporti mesatar i nxënësit ndaj mësuesit sipas qytetit.",
+          "id": "Raporti nxënës-mësues"
+        },
+        "Weighted black population": {
+          "description": "Një masë e matur e popullsisë së zezë për qytet.",
+          "id": "Popullsia e matur e zezë "
+        }
+      }
+    },
+    "icecream_toppings_toy": {
+      "card": {
+        "context": {
+          "potentialMisuses": "Çdo gjë tjetër përveç rekomandimeve për akullore.",
+          "potentialUses": "Ndihmoni të bëni rekomandime se çfarë lloj akulloreje duhet të blejë një klient i ri."
+        },
+        "description": "Anketa e klientëve në një dyqan akulloresh nëse u pëlqejnë apo jo disa kombinime akulloresh."
+      },
+      "fields": {
+        "Cherry": {
+          "description": "A kishte një qershi?",
+          "id": "Qershi"
+        },
+        "Hot Fudge": {
+          "description": "A kishte karamel të nxehtë?",
+          "id": "Karamel i nxehtë"
+        },
+        "Preference": {
+          "description": "A ju pëlqen korneti i akullores?",
+          "id": "Preferencë"
+        },
+        "Sprinkles": {
+          "description": "A kishte sprinkles?",
+          "id": "Sprinkles"
+        },
+        "Waffle Cone": {
+          "description": "A kishte një kornet?",
+          "id": "Kornet"
+        },
+        "Whipped Cream": {
+          "description": "A kishte krem whipped?",
+          "id": "Krem whipped"
         }
       }
     },
     "insurance_cost": {
+      "card": {
+        "context": {
+          "potentialMisuses": "[empty string]",
+          "potentialUses": "Mund të përdoret për të parashikuar nëse dikush është duhanpirës bazuar në informacione të tjera të sigurimit"
+        },
+        "description": "Kostot e sigurimit së bashku me faktorë si numri i fëmijëve, vendndodhja, statusi i duhanpirësit/jo-duhanpirësit, mosha, gjinia, BMI."
+      },
       "fields": {
         "age": {
+          "description": "mosha e përfituesit primar.",
           "id": "mosha"
+        },
+        "bmi": {
+          "description": "Indeksi i masës trupore.",
+          "id": "bmi"
+        },
+        "charges": {
+          "description": "Shpenzimet individuale mjekësore të faturuara nga sigurimi shëndetësor.",
+          "id": "tarifat"
+        },
+        "children": {
+          "description": "Numri i fëmijëve të mbuluar nga sigurimi shëndetësor",
+          "id": "fëmijë"
+        },
+        "region": {
+          "description": "zona rezidenciale e përfituesit në SHBA, verilindje, juglindje, jugperëndim, veriperëndim.",
+          "id": "rajoni"
+        },
+        "sex": {
+          "description": "gjinia e kontraktorit të sigurimit: femër, mashkull.",
+          "id": "gjinia"
+        },
+        "smoker": {
+          "description": "Nëse personi pi duhan apo jo.",
+          "id": "duhanpirës"
         }
       }
+    },
+    "jeans": {
+      "card": {
+        "context": {
+          "potentialMisuses": "[empty string]",
+          "potentialUses": "Parashikoni çmimin e një palë xhinse bazuar në atë për kë janë, madhësinë e xhepave, etj."
+        },
+        "description": "Ky grup të dhënash përmban të dhëna matëse për markat e njohura të xhinseve."
+      },
+      "fields": {
+        "Brand": {
+          "description": "Marka e farmerkave.",
+          "id": "Marka"
+        },
+        "Cotton contents": {
+          "description": "Sasia e pambukut në pëlhurë, ku 0 do të thotë pa pambuk fare dhe 1 do të thotë 100% pambuk.",
+          "id": "Përmbajtja pambuku"
+        },
+        "Front rivet height": {
+          "description": "Hapjet e xhepit të përparmë përkulen drejt anës së këmbës, duke përfunduar me thumba. Ky numër mat distancën nga maja e xhepit në atë thumba.",
+          "id": "lartësia e çelësit të përparëm"
+        },
+        "Max height of back pocket": {
+          "description": "Lartësia e xhepit të pasmë nga pjesa më e thellë e tij.",
+          "id": "Lartësia maksimale e xhepit të pasmë"
+        },
+        "Max height of front pocket": {
+          "description": "Lartësia e xhepit të përparmë nga pjesa e tij më e thellë.",
+          "id": "Lartësia maksimale e xhepit të përparmë"
+        },
+        "Max width of back pocket": {
+          "description": "Gjerësia e xhepit të pasmë nga pjesa më e gjerë e tij.",
+          "id": "Gjerësia maksimale e xhepit të pasmë"
+        },
+        "Max width of front pocket": {
+          "description": "Gjerësia e xhepit të përparmë nga pjesa më e gjerë e tij.",
+          "id": "Gjerësia maksimale e xhepit para"
+        },
+        "Mens or womens": {
+          "description": "Nëse xhinset u shitën për të targetuar burra apo gra.",
+          "id": "Meshkuj apo femra"
+        },
+        "Min height of back pocket": {
+          "description": "Lartësia e xhepit të pasmë nga pjesa e saj më e cekët.",
+          "id": "Lartësia minimale e xhepit të pasmë"
+        },
+        "Min height of front pocket": {
+          "description": "Lartësia e xhepit të përparmë nga pjesa e tij më e thellë.",
+          "id": "Lartësia minimale e xhepit të përparmë"
+        },
+        "Min width of back pocket": {
+          "description": "Gjerësia e xhepit të pasmë nga pjesa më e ngushtë e saj.",
+          "id": "Gjerësia minimale e xhepit të pasmë"
+        },
+        "Min width of front pocket": {
+          "description": "Gjerësia e xhepit të përparmë nga pjesa më e ngushtë e tij.",
+          "id": "Gjerësia minimale e xhepit të përparmë"
+        },
+        "Price in dollars": {
+          "description": "Çmimi i xhinseve në dollarë amerikanë.",
+          "id": "Çmimi në euro"
+        },
+        "Style": {
+          "description": "Përshtatja ose stili i xhinseve, p.sh. prerja e dobët ose e çizmeve.",
+          "id": "Stili"
+        }
+      },
+      "name": "Matjet e xhinseve"
     },
     "loneliness_interests": {
+      "card": {
+        "context": {
+          "potentialMisuses": "Përdorimi i informacionit demografik nga një grup të dhënash të kufizuar për të bërë supozime rreth nëngrupeve të njerëzve: për shembull, duke kërkuar parashikime se cilat gjini kanë më shumë gjasa të kenë cilat frika.",
+          "potentialUses": "Për shembull, parashikoni tiparet e personalitetit të dikujt bazuar në tipare të tjera."
+        },
+        "description": "Një grup i të dhënave të përgjigjeve të sondazhit të mbledhur nga studentët sllovakë të moshës 18-21 vjeç në FSEV MB. Shumica e përgjigjeve janë renditje në një shkallë nga 1 deri në 5. Për shembull, 'Renditja nga 1 (nuk pajtohem plotësisht) në 5 (plotësisht dakord): Unë shpesh studioj ose punoj edhe në kohën time të lirë'. Ky është një nëngrup i të dhënave më të mëdha që fokusohet vetëm në interesat personale"
+      },
       "fields": {
+        "Active sport": {
+          "description": "Më pëlqejnë sportet aktive",
+          "id": "Sportet aktive"
+        },
+        "Adrenaline sports": {
+          "description": "Më pëlqejnë sportet adrenaline",
+          "id": "Sportet e adrenalinës"
+        },
+        "Art exhibitions": {
+          "description": "Më pëlqen ekspozitat e artit",
+          "id": "Ekspozita arti"
+        },
+        "Biology": {
+          "description": "Më pëlqen biologjia",
+          "id": "Biologji"
+        },
+        "Cars": {
+          "description": "Më pëlqejnë makinat",
+          "id": "Makina"
+        },
+        "Celebrities": {
+          "description": "Më pëlqejnë të famshmit",
+          "id": "Të famshmit"
+        },
+        "Chemistry": {
+          "description": "Më pëlqen kimia",
+          "id": "Kimi"
+        },
+        "Countryside, outdoors": {
+          "description": "Më pëlqen fshati, jashtë",
+          "id": "Fshat, jashtë"
+        },
+        "Dancing": {
+          "description": "Më pëlqen vallëzimi",
+          "id": "Vallëzim"
+        },
+        "Economy Management": {
+          "description": "Më pëlqen menaxhimi ekonomik",
+          "id": "Menaxhimi Ekonomik"
+        },
+        "Foreign languages": {
+          "description": "Më pëlqejnë gjuhët e huaja",
+          "id": "Gjuhë të huaja"
+        },
+        "Fun with friends": {
+          "description": "Më pëlqen të argëtohem me shokët",
+          "id": "Argëtim me shokët"
+        },
+        "Gardening": {
+          "description": "Më pëlqen kopshtari",
+          "id": "Kopshtari"
+        },
+        "Geography": {
+          "description": "Më pëlqen gjeografia",
+          "id": "Gjeografi"
+        },
+        "History": {
+          "description": "Më pëlqen historia",
+          "id": "Histori"
+        },
         "Internet": {
+          "description": "Më pëlqen të përdor internetin",
           "id": "Internet"
+        },
+        "Law": {
+          "description": "Më pëlqen juridiku",
+          "id": "Juridiku"
+        },
+        "Loneliness": {
+          "description": "Ndihem i vetmuar në jetë.",
+          "id": "Vetmia"
+        },
+        "Mathematics": {
+          "description": "Më pëlqen matematika",
+          "id": "Matematikë"
+        },
+        "Medicine": {
+          "description": "Më pëlqen mjekësia",
+          "id": "Mjekësia"
+        },
+        "Musical instruments": {
+          "description": "Më pëlqejnë instrumentet muzikore",
+          "id": "Instrumente muzikore"
+        },
+        "PC": {
+          "description": "Më pëlqen të përdor PC-në",
+          "id": "PC"
+        },
+        "Passive sport": {
+          "description": "Më pëlqejnë sportet pasive",
+          "id": "Sport pasiv"
+        },
+        "Pets": {
+          "description": "Më pëlqejnë kafshët shtëpiake",
+          "id": "Kafshët shtëpiake"
+        },
+        "Physics": {
+          "description": "Më pëlqen fizika",
+          "id": "Fizikë"
+        },
+        "Politics": {
+          "description": "Më pëlqen politika",
+          "id": "Politika"
+        },
+        "Psychology": {
+          "description": "Më pëlqen psikologjia",
+          "id": "Psikologji"
+        },
+        "Reading": {
+          "description": "Më pëlqen të lexoj",
+          "id": "Lexim"
+        },
+        "Religion": {
+          "description": "Më pëlqen feja",
+          "id": "Feja"
+        },
+        "Science and technology": {
+          "description": "Më pëlqen shkenca dhe teknologjia",
+          "id": "Shkencë dhe teknologji"
+        },
+        "Shopping": {
+          "description": "Më pëlqen të bëj pazar",
+          "id": "Blerje"
+        },
+        "Theatre": {
+          "description": "Më pëlqen teatri",
+          "id": "Teatri"
+        },
+        "Writing": {
+          "description": "Më pëlqen të shkruaj",
+          "id": "Shkrimi"
         }
-      }
+      },
+      "name": "Anketa e Studentëve - Interesat Personale"
+    },
+    "loneliness_movies": {
+      "card": {
+        "context": {
+          "potentialMisuses": "Përdorimi i informacionit demografik nga një grup të dhënash të kufizuar për të bërë supozime rreth nëngrupeve të njerëzve: për shembull, duke kërkuar parashikime se cilat gjini kanë më shumë gjasa të kenë cilat frika.",
+          "potentialUses": "Për shembull, parashikoni tiparet e personalitetit të dikujt bazuar në tipare të tjera."
+        },
+        "description": "Një grup i të dhënave të përgjigjeve të sondazhit të mbledhur nga studentët sllovakë të moshës 18-21 vjeç në FSEV MB. Shumica e përgjigjeve janë renditje në një shkallë nga 1 deri në 5. Për shembull, 'Renditja nga 1 (nuk pajtohem plotësisht) në 5 (plotësisht dakord): Unë shpesh studioj ose punoj edhe në kohën time të lirë'. Ky është një nëngrup i të dhënave më të mëdha që fokusohet vetëm në filma."
+      },
+      "fields": {
+        "Action": {
+          "description": "Më pëlqejnë filmat e aksionit",
+          "id": "Aksion"
+        },
+        "Animated": {
+          "description": "Më pëlqejnë filmat e animuar",
+          "id": "Animuar"
+        },
+        "Comedy": {
+          "description": "Më pëlqejnë filmat komik",
+          "id": "Komedi"
+        },
+        "Documentary": {
+          "description": "Më pëlqejnë filmat dokumentarë",
+          "id": "Dokumentar"
+        },
+        "Fantasy/Fairy tales": {
+          "description": "Më pëlqejnë filmat fantastik/përrallat zanash",
+          "id": "Fantazi/Përralla"
+        },
+        "Horror": {
+          "description": "Më pëlqejnë filmat e frikshëm",
+          "id": "Frikshëm"
+        },
+        "Loneliness": {
+          "description": "Ndihem i vetmuar në jetë.",
+          "id": "Vetmia"
+        },
+        "Movies": {
+          "description": "Më pëlqen të shikoj filma",
+          "id": "Filma"
+        },
+        "Romantic": {
+          "description": "Më pëlqejnë filmat komik",
+          "id": "Romantik"
+        },
+        "Sci-fi": {
+          "description": "Më pëlqejnë filmat shkencorë",
+          "id": "Sci-Fi"
+        },
+        "Thriller": {
+          "description": "Më pëlqejnë filmat Triller",
+          "id": "Triller"
+        },
+        "War": {
+          "description": "Më pëlqen filmat e luftës",
+          "id": "Lufta"
+        },
+        "Western": {
+          "description": "Më pëlqen filmat perëndimorë",
+          "id": "perëndimor"
+        }
+      },
+      "name": "Anketa e Studentëve - Filma"
     },
     "loneliness_music": {
+      "card": {
+        "context": {
+          "potentialMisuses": "Përdorimi i informacionit demografik nga një grup i kufizuar i të dhënave për të bërë supozime rreth nëngrupeve të njerëzve: për shembull, duke kërkuar parashikime se cilat gjini kanë më shumë gjasa të kenë frikë.",
+          "potentialUses": "Për shembull, parashikoni tiparet e personalitetit të dikujt bazuar në tipare të tjera."
+        },
+        "description": "Një grup i të dhënave të përgjigjeve të sondazhit të mbledhur nga studentë sllovakë të moshës 18-21 vjeç në FSEV MB. Shumica e përgjigjeve janë renditje në një shkallë nga 1 deri në 5. Për shembull, 'Renditja nga 1 (nuk pajtohem plotësisht) në 5 (plotësisht dakord): Unë shpesh studioj ose punoj edhe në kohën time të lirë'. Ky është një nëngrup i grupit të të dhënave më të mëdha që fokusohet vetëm në muzikë."
+      },
       "fields": {
+        "Alternative": {
+          "description": "Më pëlqen muzika alternative",
+          "id": "Alternativë"
+        },
+        "Classical music": {
+          "description": "Më pëlqen muzika klasike",
+          "id": "Muzikë klasike"
+        },
         "Country": {
+          "description": "Më pëlqen muzika e vendit",
           "id": "Shteti"
+        },
+        "Dance": {
+          "description": "Më pëlqen muzika e vallëzimit",
+          "id": "Vallëzimi"
+        },
+        "Folk": {
+          "description": "Më pëlqen muzika popullore",
+          "id": "Popullore"
+        },
+        "Hiphop, Rap": {
+          "description": "Më pëlqen muzika Hiphop ose Rap",
+          "id": "Hiphop, Rap"
+        },
+        "Latino": {
+          "description": "Më pëlqen muzika latine",
+          "id": "Latino"
+        },
+        "Loneliness": {
+          "description": "Ndihem i vetmuar në jetë.",
+          "id": "Vetmia"
+        },
+        "Metal or Hardrock": {
+          "description": "Më pëlqen muzika metalike ose hardrock",
+          "id": "Metal ose Hardrock"
+        },
+        "Music": {
+          "description": "Më pëlqen të dëgjoj muzikë",
+          "id": "Muzika"
+        },
+        "Musical": {
+          "description": "Më pëlqen muzika muzikore",
+          "id": "Muzikore"
+        },
+        "Opera": {
+          "description": "Më pëlqen muzika e operës",
+          "id": "Opera"
+        },
+        "Pop": {
+          "description": "Më pëlqen muzika pop",
+          "id": "Pop"
+        },
+        "Punk": {
+          "description": "Më pëlqen muzika punk",
+          "id": "Punk"
+        },
+        "Reggae, Ska": {
+          "description": "Më pëlqen muzika Reggae ose Ska"
+        },
+        "Rock": {
+          "description": "Më pëlqen muzika rock",
+          "id": "Rock"
+        },
+        "Rock n roll": {
+          "description": "Më pëlqen muzika rock n roll",
+          "id": "Rock n roll"
+        },
+        "Slow songs or fast songs": {
+          "description": "Unë preferoj muzikën fast-paced",
+          "id": "Këngë të ngadalta ose këngë të shpejta"
+        },
+        "Swing, Jazz": {
+          "description": "Më pëlqen muzika Swing ose Jazz",
+          "id": "Swing, Xhaz"
+        },
+        "Techno, Trance": {
+          "description": "Më pëlqen muzika Tekno ose Trance",
+          "id": "Tekno, Trance"
         }
-      }
+      },
+      "name": "Anketa e Studentëve - Muzikë"
+    },
+    "loneliness_personality": {
+      "card": {
+        "context": {
+          "potentialMisuses": "Përdorimi i informacionit demografik nga një grup i kufizuar i të dhënave për të bërë supozime rreth nëngrupeve të njerëzve: për shembull, duke kërkuar parashikime se cilat gjini kanë më shumë gjasa të kenë frikë.",
+          "potentialUses": "Për shembull, parashikoni tiparet e personalitetit të dikujt bazuar në tipare të tjera."
+        },
+        "description": "Një grup i të dhënave të përgjigjeve të sondazhit të mbledhura nga studentët sllovakë të moshës 18-21 në FSEV UK. Shumica e përgjigjeve janë renditje në një shkallë nga 1 në 5. Për shembull, 'Renditja nga 1 (nuk pajtohem fort) në 5 (pajtohem fort): Unë shpesh studioj ose punoj edhe në kohën time të lirë'. Ky është një nëngrup i grupit të të dhënave më të mëdha që fokusohet vetëm në deklaratat e personalitetit."
+      },
+      "fields": {
+        "Assertiveness": {
+          "description": "Nuk kam frikë të jap mendimin tim nëse ndihem i sigurtë për diçka.",
+          "id": "Vetëbesimi"
+        },
+        "Friends versus money": {
+          "description": "Më mirë të kisha shumë shokë sesa shumë para.",
+          "id": "Miqtë VS. pareve"
+        },
+        "Funniness": {
+          "description": "Gjithmonë përpiqem të jem më qesharake.",
+          "id": "Qesharake"
+        },
+        "Judgment calls": {
+          "description": "Mund të them nëse njerëzit më dëgjojnë apo jo kur flas me ta.",
+          "id": "Thirrje gjykimi"
+        },
+        "Loneliness": {
+          "description": "Ndihem i vetmuar në jetë.",
+          "id": "Vetmia"
+        },
+        "Number of friends": {
+          "description": "Kam shumë shokë.",
+          "id": "Numri i shokëve"
+        },
+        "Prioritising workload": {
+          "description": "Unë përpiqem të bëj detyra sa më shpejt të jetë e mundur dhe të mos i lë ato deri në minutën e fundit",
+          "id": "Prioritizimi i ngarkesës së punës"
+        },
+        "Reliability": {
+          "description": "Unë jam i besueshëm në punë dhe gjithmonë i kryej të gjitha detyrat që më janë dhënë.",
+          "id": "Besueshmëria"
+        },
+        "Socializing": {
+          "description": "Më pëlqen të takoj njerëz të rinj.",
+          "id": "Socializimi"
+        },
+        "Waiting": {
+          "description": "Unë jam shumë i durueshëm.",
+          "id": "Në pritje"
+        },
+        "Workaholism": {
+          "description": "Unë shpesh studioj ose punoj edhe në kohën time të lirë.",
+          "id": "I dhënë pas punës"
+        }
+      },
+      "name": "Anketa e Studentëve - Personalitet"
+    },
+    "loneliness_phobias": {
+      "card": {
+        "context": {
+          "potentialMisuses": "Përdorimi i informacionit demografik nga një grup i kufizuar i të dhënave për të bërë supozime rreth nëngrupeve të njerëzve: për shembull, duke kërkuar parashikime se cilat gjini kanë më shumë gjasa të kenë frikë.",
+          "potentialUses": "Për shembull, parashikoni tiparet e personalitetit të dikujt bazuar në tipare të tjera."
+        },
+        "description": "Një grup i të dhënave të përgjigjeve të sondazhit të mbledhura nga studentët sllovakë të moshës 18-21 në FSEV UK. Shumica e përgjigjeve janë renditje në një shkallë nga 1 në 5. Për shembull, 'Renditja nga 1 (nuk pajtohem fort) në 5 (pajtohem fort): Unë shpesh studioj ose punoj edhe në kohën time të lirë'. Ky është një nëngrup i të dhënave më të mëdha që fokusohet vetëm në muzikë."
+      },
+      "fields": {
+        "Ageing": {
+          "description": "Kam frikë nga plakja",
+          "id": "Plakja"
+        },
+        "Dangerous dogs": {
+          "description": "Kam frikë nga qentë e rrezikshëm",
+          "id": "Qentë e rrezikshëm"
+        },
+        "Darkness": {
+          "description": "Kam frikë nga errësira",
+          "id": "Errësirë"
+        },
+        "Fear of public speaking": {
+          "description": "Kam frikë nga të folurit publik",
+          "id": "Frika nga të folurit publik"
+        },
+        "Flying": {
+          "description": "Kam frikë të fluturoj",
+          "id": "Fluturues"
+        },
+        "Heights": {
+          "description": "Kam frikë nga lartësitë",
+          "id": "Lartësitë"
+        },
+        "Loneliness": {
+          "description": "Ndihem i vetmuar në jetë.",
+          "id": "Vetmia"
+        },
+        "Rats": {
+          "description": "Kam frikë nga minjtë",
+          "id": "Minjtë"
+        },
+        "Snakes": {
+          "description": "Kam frikë nga gjarpërinjtë",
+          "id": "Gjarpërinjtë"
+        },
+        "Spiders": {
+          "description": "Kam frikë nga merimangat",
+          "id": "Merimangat"
+        },
+        "Storm": {
+          "description": "Kam frikë nga stuhitë",
+          "id": "Stuhi"
+        }
+      },
+      "name": "Anketa e Studentëve - Fobitë"
     },
     "medical_priority": {
+      "card": {
+        "context": {
+          "potentialMisuses": "Ky model nuk duhet të përdoret në një mënyrë që të zvogëlojë kujdesin për njerëzit që hyjnë në një dhomë urgjence.",
+          "potentialUses": "Ndihmoni të përcaktoni përparësinë për njerëzit që hyjnë në një dhomë urgjence në mënyrë që mjekët dhe infermierët të ndihmojnë më mirë njerëzit me lëndime potencialisht serioze."
+        },
+        "description": "Të dhënat e mbledhura nga një spital për të gjithë pacientët që hynë në një dhomë urgjence gjatë një muaji."
+      },
       "fields": {
         "age": {
+          "description": "Mosha e pacientit",
           "id": "mosha"
+        },
+        "area_of_pain": {
+          "description": "Aty ku gjendet dhimbja",
+          "id": "zona_e_dhimbjes"
+        },
+        "bleeding": {
+          "description": "Nëse pacienti kishte apo jo gjakderdhje.",
+          "id": "gjakderdhje"
+        },
+        "decision": {
+          "description": "Sa shpejt pacienti mori trajtimin.",
+          "id": "vendim"
+        },
+        "gender": {
+          "description": "Gjinia e pacientit.",
+          "id": "gjinia"
+        },
+        "race": {
+          "description": "Informacion racor për pacientin.",
+          "id": "racë"
+        },
+        "shortness_of_breath": {
+          "description": "Nëse pacienti kishte apo jo ndërprerje të frymarrjes.",
+          "id": "ndërprerje_të_frymëmarrjes"
+        },
+        "weight": {
+          "description": "Diapazoni i peshës së pacientit.",
+          "id": "Pesha"
         }
-      }
+      },
+      "name": "Prioriteti mjekësor"
     },
     "movies": {
+      "card": {
+        "context": {
+          "potentialMisuses": "[empty string]",
+          "potentialUses": "Për shembull, përcaktoni arkën e një filmi sipas buxhetit ose zhanrit të tij."
+        },
+        "description": "Një grup të dhënash filmash të publikuar nga 1986-2016, me numra të arkëtarëve, vlerësime, rezultate në IMDB dhe më shumë."
+      },
       "fields": {
+        "Budget": {
+          "description": "Buxheti i filmit në EURO. Filmat pa të dhëna buxhetore kanë 0 këtu.",
+          "id": "Buxheti"
+        },
+        "Company": {
+          "description": "Kompania e prodhimit.",
+          "id": "Kompania"
+        },
         "Country": {
+          "description": "Vendi i origjinës së filmit.",
           "id": "Shteti"
         },
+        "Director": {
+          "description": "Regjisori i filmit.",
+          "id": "Regjisori"
+        },
+        "Genre": {
+          "description": "Zhanri i filmit.",
+          "id": "Zhanri"
+        },
+        "Gross": {
+          "description": "Të ardhurat e filmit në EURO.",
+          "id": "Bruto"
+        },
         "Name": {
+          "description": "Emri i filmit.",
           "id": "Emri"
         },
+        "Rating": {
+          "description": "Vlerësimi MPAA, nga G (të gjitha moshat) në NC-17 (pa fëmijë nën 17 vjeç).",
+          "id": "Vlerësimi"
+        },
+        "Released": {
+          "description": "Muaji  në të cilin u publikua.",
+          "id": "Publikuar"
+        },
+        "Runtime": {
+          "description": "Sa i gjatë është filmi në minuta.",
+          "id": "Koha e ekzekutimit"
+        },
         "Score": {
+          "description": "Vlerësimi i përdoruesit IMDb për filmin.",
           "id": "rezultati"
+        },
+        "Star": {
+          "description": "Aktori kryesor ose aktorja.",
+          "id": "Yll"
+        },
+        "Votes": {
+          "description": "Numri i votave që filmi mori në IMDB.",
+          "id": "Votat"
+        },
+        "Writer": {
+          "description": "Shkrimtari i filmit",
+          "id": "Shkrimtari"
+        },
+        "Year": {
+          "description": "Viti në të cilin u publikua.",
+          "id": "Viti"
         }
-      }
+      },
+      "name": "Statistikat e filmit"
     },
     "naan_toy": {
+      "card": {
+        "context": {
+          "potentialMisuses": "Çdo gjë tjetër përveç rekomandimeve.",
+          "potentialUses": "Ndihmoni në bërjen e rekomandimeve se çfarë lloj pogaqe duhet të porositë një klient i ri."
+        },
+        "description": "Sondazhi i konsumatorëve në një restorant indian nëse janë apo jo ata si kombinime të caktuara për pogaqen."
+      },
       "fields": {
         "cheese": {
+          "description": "A ka djathë të pjekur në pogaqe?",
           "id": "djathë"
         },
+        "cherries": {
+          "description": "A ka qershi të pjekura në pogaqe?",
+          "id": "vishnje"
+        },
         "chicken": {
+          "description": "A ka pulë të pjekur në pogaqe?",
           "id": "pulë"
         },
+        "garlic": {
+          "description": "A ka hudhër të pjekur në pogaqe?",
+          "id": "hudhër"
+        },
         "lamb": {
+          "description": "A ka qengj të pjekur në pogaqe?\n",
           "id": "qengji"
         },
+        "nuts": {
+          "description": "A ka arra të pjekura në pogaqe?",
+          "id": "arra"
+        },
         "onion": {
+          "description": "A ka qepë të pjekur në pogaqe?",
           "id": "qepë"
+        },
+        "potatoes": {
+          "description": "A ka patate të pjekura në pogaqe?",
+          "id": "patate"
+        },
+        "preference": {
+          "description": "A ju pëlqen apo nuk ju pëlqen pogaqja?",
+          "id": "preferencë"
+        },
+        "shaved coconut": {
+          "description": "A ka kokos të qëruar të pjekur në pogaqe? ",
+          "id": "kokos i qëruar "
         }
-      }
+      },
+      "name": "Pogaqe"
     },
     "nutrition": {
+      "card": {
+        "context": {
+          "potentialMisuses": "[empty string]",
+          "potentialUses": "Për shembull, përcaktoni sa kalori ka një ushqim nga përmbajtja e tij ushqyese."
+        },
+        "description": "Një grup të dhënash i përpiluar nga USDA për përmbajtje të ndryshme ushqimore dhe përmbajtjen e tyre ushqyese: kalori, minerale, vitamina dhe shumë më tepër."
+      },
       "fields": {
+        "Ash": {
+          "description": "Përmbajtja e hirit përfaqëson përmbajtjen totale të mineraleve në ushqime. Matur në gram (g).",
+          "id": "Hi"
+        },
+        "Beta Carotene": {
+          "description": "Një lloj molekule lipide, e matur në miligram (mg).",
+          "id": "Beta Carotene"
+        },
+        "Carbohydrate": {
+          "description": "Fibra dietike ose ushqimi i papërpunuar është pjesa e patretshme e ushqimit që rrjedh nga bimët. Ajo ka dy përbërës kryesorë: fibër të tretshme dhe fibër të patretshme. Matur në gram (g).",
+          "id": "Karbohidrate"
+        },
+        "Category": {
+          "description": "Kategoria e përgjithshme e ushqimit të cilit i përket artikulli.",
+          "id": "Kategoria"
+        },
+        "Cholesterol": {
+          "description": "Numri i përgjithshëm i kilokalorive në këtë përmbajtje ushqimore. Një kilokaloriështë një njësi energjie prej 1000 kalorive (e barabartë me 1 kalori të madhe).",
+          "id": "Kolesteroli"
+        },
         "Description": {
+          "description": "Një përshkrim i plotë i përmbajtjes.",
           "id": "Përshkrimi"
+        },
+        "Fat: Monosaturated Fat": {
+          "id": "Yndyrë: Yndyrë e monosaturuar"
+        },
+        "Fat: Polysaturated Fat": {
+          "id": "Yndyra: Yndyrë e polisaturuar"
+        },
+        "Fat: Saturated Fat": {
+          "id": "Yndyra: Yndyra e saturuar"
+        },
+        "Fat: Total Lipid": {
+          "id": "Yndyrë: Total Lipid"
+        },
+        "Fiber": {
+          "id": "Fibra"
+        },
+        "Kilocalories": {
+          "id": "Kilokaloritë"
+        },
+        "Lutein and Zeaxanthin": {
+          "id": "Lutein dhe Zeaxanthin"
+        },
+        "Lycopene": {
+          "id": "Likopen"
+        },
+        "Major Minerals: Calcium": {
+          "id": "Mineralet kryesore: Kalcium"
+        },
+        "Major Minerals: Copper": {
+          "id": "Mineralet kryesore: Bakri"
+        },
+        "Major Minerals: Iron": {
+          "id": "Mineralet kryesore: Hekuri"
+        },
+        "Major Minerals: Magnesium": {
+          "id": "Mineralet kryesore: Magnezi"
+        },
+        "Major Minerals: Phosphorus": {
+          "id": "Mineralet kryesore: Fosfori"
+        },
+        "Major Minerals: Potassium": {
+          "id": "Mineralet kryesore: Kaliumi"
+        },
+        "Major Minerals: Sodium": {
+          "id": "Mineralet kryesore: Natriumi"
+        },
+        "Major Minerals: Zinc": {
+          "id": "Mineralet kryesore: Zinku"
+        },
+        "Manganese": {
+          "id": "Magnez"
+        },
+        "Niacin": {
+          "id": "Niacin"
+        },
+        "Protein": {
+          "id": "Proteina"
+        },
+        "Retinol": {
+          "id": "Retinol"
+        },
+        "Riboflavin": {
+          "id": "Riboflavina"
+        },
+        "Selenium": {
+          "id": "Selenium"
+        },
+        "Sugar Total": {
+          "id": "Sheqeri Total"
+        },
+        "Thiamin": {
+          "id": "Tiaminë"
+        },
+        "Vitamins: Vitamin A - IU": {
+          "id": "Vitaminat: Vitamina A - IU"
+        },
+        "Vitamins: Vitamin A - RAE": {
+          "id": "Vitamina: Vitamina A - RAE"
+        },
+        "Vitamins: Vitamin B12": {
+          "id": "Vitaminat: Vitamina B12"
+        },
+        "Vitamins: Vitamin B6": {
+          "id": "Vitaminat: Vitamina B6"
+        },
+        "Vitamins: Vitamin C": {
+          "id": "Vitamina: Vitamina C"
+        },
+        "Vitamins: Vitamin E": {
+          "id": "Vitamina: Vitamina E"
+        },
+        "Vitamins: Vitamin K": {
+          "id": "Vitaminat: Vitamina K"
+        },
+        "Water": {
+          "id": "Ujë"
+        }
+      },
+      "name": "Ushqyerja"
+    },
+    "pizza_toppings_toy": {
+      "card": {
+        "context": {
+          "potentialMisuses": "Çdo gjë tjetër përveç rekomandimeve për pica.",
+          "potentialUses": "Ndihmoni të bëni rekomandime për llojin e picës që duhet të blejë një klient i ri."
+        },
+        "description": "Anketo klientët në një lokal picash nëse u pëlqejnë apo jo disa kombinime picash."
+      },
+      "fields": {
+        "Anchovies": {
+          "description": "A kishte pica sardine?",
+          "id": "Sardine"
+        },
+        "Bacon": {
+          "description": "A kishte pica mish derri?",
+          "id": "mish derri"
+        },
+        "Broccoli": {
+          "description": "A kishte pica brokoli?",
+          "id": "Brokoli"
+        },
+        "Extra Cheese": {
+          "description": "A kishte pica djathë shtesë?",
+          "id": "Djathë shtesë"
+        },
+        "Fried Chicken": {
+          "description": "A kishte pica pulë të skuqur?",
+          "id": "Pulë e skuqur"
+        },
+        "Ham": {
+          "description": "A kishte pica proshutë?",
+          "id": "Proshutë"
+        },
+        "Olives": {
+          "description": "A kishte pica ullinjë?",
+          "id": "Ullinj"
+        },
+        "Pepperoni": {
+          "description": "A kishte pica peperoni?",
+          "id": "Peperoni"
+        },
+        "Peppers": {
+          "description": "A kishte pica speca?",
+          "id": "Speca"
+        },
+        "Preference": {
+          "description": "Si ju pëlqen pica?",
+          "id": "Preferencë"
+        },
+        "Sausage": {
+          "description": "A kishte pica suxhuk?",
+          "id": "Suxhuk"
         }
       }
     },
     "poke_toy": {
+      "card": {
+        "context": {
+          "potentialMisuses": "Çdo gjë tjetër përveç rekomandimeve.",
+          "potentialUses": "Ndihmoni të bëni rekomandime për llojin e pjatës së peshkut që duhet të blejë një klient i ri."
+        },
+        "description": "Anketo klientët në një dyqan ku servohet pjata e peshkut nëse u pëlqejnë apo jo disa kombinime të pjatave të peshkut."
+      },
       "fields": {
         "avocado": {
+          "description": "A ka pjata e peshkut avokado të përzier në të?",
           "id": "avokado"
         },
+        "chili": {
+          "description": "A ka pjata e peshkut djegës të përzier në të?",
+          "id": "djegës"
+        },
+        "furikake": {
+          "description": "A ka pjata e peshkut furikake të përzier në të?",
+          "id": "furikake"
+        },
         "ginger": {
+          "description": "A ka pjata e peshkut xhenxhefil të përzier në të?",
           "id": "xhenxhefil"
         },
+        "masago": {
+          "description": "A ka pjata e peshkut masago në të?",
+          "id": "masago"
+        },
         "onion": {
+          "description": "A ka pjata e peshkut qepë të përzier në të?",
           "id": "qepë"
+        },
+        "preference": {
+          "description": "A ju pëlqen apo nuk ju pëlqen pjata e peshkut?",
+          "id": "preferencë"
+        },
+        "seaweed": {
+          "description": "A ka pjata e peshkut alga deti të përziera në të?",
+          "id": "alga deti"
+        },
+        "surimi": {
+          "description": "A ka pjata e peshkut surimi të përzier në të?",
+          "id": "surimi"
+        },
+        "wasabi": {
+          "description": "A ka pjata e peshkut wasabi të përzier në të?",
+          "id": "wasabi"
         }
-      }
+      },
+      "name": "Pjatë peshku"
     },
     "poutine_toy": {
+      "card": {
+        "context": {
+          "potentialMisuses": "Çdo gjë tjetër përveç rekomandimeve.",
+          "potentialUses": "Ndihmoni në bërjen e rekomandimeve se çfarë lloj ushqimi duhet të porosisë një klient i ri."
+        },
+        "description": "Anketo klientët në një restorant nëse u pëlqejnë apo jo disa kombinime të pjatave me patate të skuqura."
+      },
       "fields": {
         "bacon": {
+          "description": "A ka përshutë derri në pjatën me patate të skuqura?",
           "id": "proshutë"
         },
+        "bell peppers": {
+          "description": "A ka spec në pjatën e patateve të skuqura?",
+          "id": "speca "
+        },
         "cheese": {
+          "description": "A ka djath në pjatën e patateve të skuqura?",
           "id": "djathë"
         },
+        "gravy": {
+          "description": "A ka lëng mishi në pjatën e patateve të skuqura?",
+          "id": "lëng mishi"
+        },
         "lobster": {
-          "id": "karavidhe"
+          "description": "A ka lobster në pjatën me patate të skuqura?",
+          "id": "lobster"
         },
         "meat": {
+          "description": "A ka mish në pjatën e patateve të skuqura?",
           "id": "mish"
         },
         "mushrooms": {
+          "description": "A ka kërpudha në pjatën me patate të skuqura?",
           "id": "kërpudha"
+        },
+        "pork": {
+          "description": "A ka mish derri në pjatën me patate të skuqura?",
+          "id": "mish derri"
+        },
+        "preference": {
+          "description": "A ju pëlqen apo nuk ju pëlqen pjata e patateve të skuqura?",
+          "id": "preferencë"
+        },
+        "scallions": {
+          "description": "A ka qepë në pjatën e patateve të skuqura?",
+          "id": "qepë"
         }
-      }
+      },
+      "name": "Pjatë me patate të skuqura"
     },
     "raspado_toy": {
+      "card": {
+        "context": {
+          "potentialMisuses": "Çdo gjë tjetër përveç rekomandimeve.",
+          "potentialUses": "Ndihmoni në bërjen e rekomandimeve se çfarë lloj raspado duhet të porosisë një klient i ri."
+        },
+        "description": "Sondazhi i klientëve në një dyqan raspado nëse ata pëlqejnë apo jo kombinime të caktuara raspado."
+      },
       "fields": {
+        "chili en polbo": {
+          "description": "A përfshin raspado përzierje të djegëst en polbo?",
+          "id": "djegës en polbo"
+        },
+        "coconut": {
+          "description": "A përfshin raspado përzierje me kokës?",
+          "id": "arrë kokosi"
+        },
+        "lechera": {
+          "description": "A përfshin raspado përzierje me lechera?",
+          "id": "lechera"
+        },
         "lime": {
+          "description": "A përfshin raspado përzierje me limon?",
           "id": "gëlqere"
         },
+        "mango": {
+          "description": "A përfshin raspado përzierje me mango?",
+          "id": "mango"
+        },
+        "pecan": {
+          "description": "A përfshin raspado përzierje me pecan?",
+          "id": "pecan"
+        },
+        "preference": {
+          "description": "A ju pëlqen apo nuk ju pëlqen raspado?",
+          "id": "preferencë"
+        },
         "strawberry": {
+          "description": "A përfshin raspado përzierje me dredhëza?",
           "id": "luleshtrydhe"
+        },
+        "vanilla": {
+          "description": "A përfshin raspado përzierjen me vanill?",
+          "id": "vanillë"
         }
-      }
+      },
+      "name": "Raspado"
     },
     "safari_toy": {
+      "card": {
+        "context": {
+          "potentialMisuses": "Gjurmohen vetëm disa lloje kafshësh, ndaj shmangni përfundimet e shpejta për kafshët që nuk janë pjesë e këtij grupi (si zebrat ose hipopotami).",
+          "potentialUses": "Mund të përdoret për të përcaktuar kohën më të mirë për të vizituar safarin për t'u siguruar që të shihni sa më shumë kafshë të egra."
+        },
+        "description": "Të dhënat e mbledhura nga 'African Safari Tours', një kompani që ofron turne në fushat e Serengeti në Afrikë."
+      },
       "fields": {
         "alligator": {
+          "description": "Numri i aligatorëve që patë gjatë një vizite.",
           "id": "aligator"
         },
+        "antelope": {
+          "description": "Numri i antilopëve që patë gjatë një vizite.",
+          "id": "antilopë"
+        },
+        "dayOfMonth": {
+          "description": "Dita e muajit (1-31) e vizitës.",
+          "id": "Dita e Muajit"
+        },
         "elephant": {
+          "description": "Numri i elefantëve që patë gjatë një vizite",
           "id": "elefant"
         },
+        "lions": {
+          "description": "Numri i luanëve që patë gjatë një vizite",
+          "id": "luanët"
+        },
+        "mosquitos": {
+          "description": "Numri i mushkonjave që patë gjatë vizitës.",
+          "id": "mushkonjat"
+        },
+        "overgrowthPercent": {
+          "description": "Përqindja e tokës që ka bar dhe tufa lulesh dhe shkurre gjatë një vizite.",
+          "id": "Përqindja e rritjes së tepërt"
+        },
         "people": {
+          "description": "Numri total e njerëzve në shkretëtirë gjatë një vizite.",
           "id": "njerëzit"
         },
         "rhino": {
-          "id": "rinoceront"
+          "description": "Numri i rinoçerontëve që patë gjatë një vizite.",
+          "id": "rinoçeront"
+        },
+        "temperature": {
+          "description": "Temperatura gjatë një vizite.",
+          "id": "temperaturë"
+        },
+        "ticketRevenue": {
+          "description": "Fitimi i kompanisë së shkretëtirës në ditën e një vizite.",
+          "id": "Të ardhurat e biletave"
         },
         "trees": {
-          "id": "pemë"
+          "description": "Numri i rritjes së tepërt dhe pemëve që ofrojnë hije që patë gjatë vizitës.",
+          "id": "pemët"
         }
-      }
+      },
+      "name": "Shkretëtira"
     },
     "salad_toy": {
+      "card": {
+        "context": {
+          "potentialMisuses": "Çdo gjë tjetër përveç rekomandimeve.",
+          "potentialUses": "Ndihmoni të bëni rekomandime për llojin e sallatës që duhet të porositë një klient i ri."
+        },
+        "description": "Anketo klientët në një restorant nëse u pëlqejnë apo jo kombinimet e sallatave."
+      },
       "fields": {
         "avocado": {
+          "description": "A ka avokado në sallatë?",
           "id": "avokado"
         },
         "beans": {
+          "description": "A ka fasule në sallatë?",
           "id": "fasule"
         },
         "cheese": {
-          "id": "djathë"
+          "description": "A ka djath në sallatë?",
+          "id": "djath"
         },
         "chicken": {
+          "description": "A ka pulë në sallatë?",
           "id": "pulë"
         },
         "fruit": {
-          "id": "frutë"
+          "description": "A ka fruta në sallatë?",
+          "id": "frut"
+        },
+        "italian dressing": {
+          "description": "A ka salcë italiane në sallatë?",
+          "id": "salcë italiane"
+        },
+        "preference": {
+          "description": "A ju pëlqen apo nuk ju pëlqen sallata?",
+          "id": "preferencë"
+        },
+        "ranch": {
+          "description": "A ka sos në sallatë?",
+          "id": "sos"
+        },
+        "seeds": {
+          "description": "A ka fara në sallatë?",
+          "id": "fara"
         },
         "tomato": {
+          "description": "A ka domate në sallatë?",
           "id": "domate"
         }
-      }
+      },
+      "name": "Sallatë"
     },
     "salsa_toy": {
+      "card": {
+        "context": {
+          "potentialMisuses": "Çdo gjë tjetër përveç rekomandimeve për salca.",
+          "potentialUses": "Ndihmoni në bërjen e rekomandimeve se çfarë lloj salce duhet të porosisë një klient i ri."
+        },
+        "description": "Anketo klientët në një dyqan të taco-ve nëse u pëlqejnë apo jo disa kombinime të salcave"
+      },
       "fields": {
         "avocado": {
+          "description": "A përmban salca avokado?",
           "id": "avokado"
         },
         "beans": {
+          "description": "A përmban salca fasule?",
           "id": "fasule"
         },
+        "cilantro": {
+          "description": "A përmban salca mjdanoz?",
+          "id": "majdanoz"
+        },
         "corn": {
+          "description": "A përmban salca misër?",
           "id": "misër"
         },
+        "cumin": {
+          "description": "A përmban salca erëza pikante?",
+          "id": "erëza pikante"
+        },
+        "garlic": {
+          "description": "A përmban salca hudhër?",
+          "id": "hudhër"
+        },
         "lime": {
-          "id": "gëlqere"
+          "description": "A përmban salca limon?",
+          "id": "limon"
         },
         "onion": {
+          "description": "A përmban salca qepë?",
           "id": "qepë"
+        },
+        "preference": {
+          "description": "A ju pëlqen apo nuk ju pëlqen salca?",
+          "id": "preferencë"
+        },
+        "vinegar": {
+          "description": "A përmban salca uthull?",
+          "id": "uthull"
         }
-      }
+      },
+      "name": "Salcë"
     },
     "shapes_v1_toy": {
+      "card": {
+        "context": {
+          "potentialMisuses": "Çdo gjë tjetër përveç qëllimit të mësipërm.",
+          "potentialUses": "Përdoret për të trajnuar AI Bot se si të klasifikohen format."
+        },
+        "description": "Karakteristikat e nxjerra nga një grup i të dhënave vizuale që tregojnë forma të ndryshme."
+      },
       "fields": {
+        "background color": {
+          "description": "Ngjyra e prapavijës pas formës",
+          "id": "ngjyra e prapavijës"
+        },
+        "border color": {
+          "description": "Ngjyra e skicës së formës",
+          "id": "ngjyra e kufirit"
+        },
+        "fill color": {
+          "description": "Ngjyra e brendshme e formës",
+          "id": "mbushni ngjyrën"
+        },
+        "shape": {
+          "description": "Lloji i formës",
+          "id": "formë"
+        },
+        "sides": {
+          "description": "Numri i brinjëve që një formë ka",
+          "id": "brinjtë"
+        },
         "size": {
+          "description": "Ose e madhe ose e vogël",
           "id": "madhësia"
         }
-      }
+      },
+      "name": "Forma V1"
     },
     "shapes_v2_toy": {
+      "card": {
+        "context": {
+          "potentialMisuses": "Çdo gjë tjetër përveç qëllimit të mësipërm.",
+          "potentialUses": "Përdoret për të trajnuar AI Bot se si të klasifikohen format."
+        },
+        "description": "Karakteristikat e nxjerra nga një grup i të dhënave vizuale që tregojnë forma të ndryshme."
+      },
       "fields": {
+        "background color": {
+          "description": "Ngjyra e prapavijës pas formës",
+          "id": "ngjyra e prapavijës"
+        },
+        "border color": {
+          "description": "Ngjyra e skicës së formës",
+          "id": "ngjyra e kufirit"
+        },
+        "equal angles": {
+          "description": "A ka forma të gjitha këndet e barabarta?",
+          "id": "kënde të barabarta"
+        },
+        "equal sides": {
+          "description": "A ka forma të gjitha brinjtë e barabarta?",
+          "id": "brinjtë të barabarta"
+        },
+        "fill color": {
+          "description": "Ngjyra e brendshme e formës",
+          "id": "mbushni ngjyrën"
+        },
+        "has corners": {
+          "description": "A ka forma qoshe?",
+          "id": "ka qoshe"
+        },
+        "shape": {
+          "description": "Lloji i formës",
+          "id": "formë"
+        },
+        "sides": {
+          "description": "Numri i brinjëve që një formë ka",
+          "id": "brinjtë"
+        },
         "size": {
+          "description": "Ose e madhe ose e vogël",
           "id": "madhësia"
+        },
+        "symmetry": {
+          "description": "A është forma simetrike (si rrotullimi në vend dhe të jetë prap e njëjta formë)",
+          "id": "simetri"
         }
-      }
+      },
+      "name": "Format V2"
     },
     "shoe_survey_toy": {
+      "card": {
+        "context": {
+          "potentialMisuses": "Çdo gjë tjetër përveç përdorimit të synuar.",
+          "potentialUses": "Rekomandoni një palë këpucë bazuar në pyetjet personale."
+        },
+        "description": "Anketë rreth preferencave tuaja për të ndihmuar të rekomandoni se çfarë lloj këpucësh duhet të vishni."
+      },
       "fields": {
         "day": {
+          "description": "Si do ta përshkruanit ditën tënde sot?",
           "id": "ditë"
         },
+        "notice shoes": {
+          "description": "A ju intereson nëse njerëzit vërejnë këpucët tuaja?",
+          "id": "vëreni këpucët"
+        },
         "shoe": {
-          "id": "mbath"
+          "description": "Çfarë lloj këpucësh po planifikoni të vishni sot?",
+          "id": "mbathje"
+        },
+        "socks": {
+          "description": "A do të vishni çorape?",
+          "id": "çorape"
+        },
+        "spend time": {
+          "description": "Ku do ta kaloni pjesën më të madhe të kohës sot?",
+          "id": "kaloni kohë"
+        },
+        "weather": {
+          "description": "Si është moti sot?",
+          "id": "Moti"
         }
-      }
+      },
+      "name": "Anketa e këpucëve"
     },
     "songs": {
+      "card": {
+        "context": {
+          "potentialMisuses": "[empty string]",
+          "potentialUses": "Parashikoni sa hit i madh ishte një këngë bazuar në zhanrin e saj dhe faktorë të tjerë."
+        },
+        "description": "Një përzgjedhje e rastësishme e këngëve të njohura me informacione të tabelës Billboard Top 100, si dhe karakteristika të tjera."
+      },
       "fields": {
         "Artist": {
+          "description": "Emri i artistit.",
           "id": "Artisti"
+        },
+        "Billboard rank peak": {
+          "description": "Pozicioni më i lartë që kënga arriti në Billboard Top 100.",
+          "id": "Kulmi i renditjes së Billboard-it"
+        },
+        "Duration in seconds": {
+          "description": "Gjatësia e këngës në sekonda.",
+          "id": "Kohëzgjatja në sekonda"
+        },
+        "Genre": {
+          "description": "Zhanri i këngës.",
+          "id": "Zhanri"
+        },
+        "Loudness score": {
+          "description": "Një rezultat i zërit të këngës, ku numrat e ulët negativ si -13 nënkuptojnë relativisht zë të ulët dhe numrat e lartë negativ si -5 nënkuptojnë zë të lartë.",
+          "id": "Rezultati i zërit"
+        },
+        "Tempo in beats per minute": {
+          "description": "Tempo e këngës në beats për minutë (BPM). Numrat më të lartë nënkuptojnë këngë më të shpejta dhe më energjike.",
+          "id": "Tempo në beats në minutë"
+        },
+        "Title": {
+          "description": "Titulli i këngës.",
+          "id": "Titulli"
+        },
+        "Weeks on the Billboard Top 100": {
+          "description": "Numri i përgjithshëm i javëve të këngëve u rendit në Billboard Top 100.",
+          "id": "Javët në 100-shën më të mirë të Billboard"
+        },
+        "Year": {
+          "description": "Vitin kur u publikua kënga.",
+          "id": "Viti"
         }
-      }
+      },
+      "name": "Top këngët"
     },
     "student_alcohol_consumption": {
+      "card": {
+        "context": {
+          "potentialMisuses": "[empty string]",
+          "potentialUses": "[empty string]"
+        },
+        "description": "Përmban përgjigje individuale ndaj një studimi social të nxënësve të shkollave të mesme portugeze, duke ndjekur informacionin social, gjinor dhe studimor."
+      },
       "fields": {
+        "G1": {
+          "description": "Klasa për semestrin e parë.",
+          "id": "K1"
+        },
+        "G2": {
+          "description": "Klasa për semestrin e dytë.",
+          "id": "K2"
+        },
+        "G3": {
+          "description": "Nota përfundimtare",
+          "id": "K3"
+        },
+        "absences": {
+          "description": "Numri i mungesave në shkollë",
+          "id": "mungesat"
+        },
+        "activities": {
+          "description": "Aktivitetet ekstra-kurrikulare.",
+          "id": "Aktivitetet"
+        },
+        "address": {
+          "description": "Lloji i adresës së shtëpisë së nxënësit: U (urbane) ose R (rurale).",
+          "id": "Adresë"
+        },
         "age": {
+          "description": "Mosha e nxënësit",
           "id": "mosha"
         },
+        "daily alcohol": {
+          "description": "Konsumi i alkoolit gjatë ditës së javës: 1 (shumë i ulët) deri në 5 (shumë i lartë).",
+          "id": "alkooli i përditshëm"
+        },
+        "failures": {
+          "description": "Numri i dështimeve të klasës së kaluar (0 deri në 4).",
+          "id": "dështimet"
+        },
+        "family relationships": {
+          "description": "Cilësia e marrëdhënieve familjare: 1 (shumë e keqe) deri në 5 (e shkëlqyeshme).",
+          "id": "marrëdhëniet familjare"
+        },
+        "family size": {
+          "description": "Madhësia e familjes: LE3 (më pak se ose e barabartë me 3) dhe GT3 (më e madhe se 3)",
+          "id": "madhësia e familjes"
+        },
+        "family support": {
+          "description": "Mbështetje ekstra edukative nga familja",
+          "id": "mbështetje familjare"
+        },
+        "father's education": {
+          "description": "Edukimi i babait nga 0 (asnjë) në 4 (arsimi i lartë)",
+          "id": "Edukimi i babait"
+        },
+        "father's job": {
+          "description": "Lloji i punës së babait.",
+          "id": "puna e babait"
+        },
+        "freetime": {
+          "description": "Koha e lirë pas shkollës: 1 (shumë e ulët) deri në 5 (shumë e lartë).",
+          "id": "koha e lirë"
+        },
+        "go out": {
+          "description": "Sa shpesh nxënësit dalin me shokët: 1 (shumë rrallë) deri në 5 (shumë shpesh).",
+          "id": "dilni jashtë"
+        },
+        "guardian": {
+          "description": "Kujdestari i nxënësit\n",
+          "id": "kujdestari"
+        },
         "health": {
+          "description": "Gjendja shëndetësore: 1 (shumë keq) deri në 5 (shumë mirë)",
           "id": "dolli"
         },
+        "higher": {
+          "description": "Dëshiron të ndjekë arsimin e lartë.",
+          "id": "më i lartë"
+        },
+        "internet": {
+          "description": "Qasje në internet në shtëpi.",
+          "id": "internet"
+        },
+        "mother's education": {
+          "description": "Edukimi i nënës nga 0 (asnjë) në 4 (arsimi i lartë).",
+          "id": "Edukimi i nënës"
+        },
+        "mother's job": {
+          "description": "Lloji i punës së nënës",
+          "id": "Puna e nënës"
+        },
+        "nursery": {
+          "description": "Ka vijuar nivelin parashkollor.",
+          "id": "çerdhe"
+        },
+        "paid": {
+          "description": "Klasa shtesë të paguara.",
+          "id": "i paguar"
+        },
+        "parent cohabitation status": {
+          "description": "Nëse prindërit e tyre jetojnë së bashku (T) ose të ndarë (A)",
+          "id": "statusi i bashkëjetesës prindërore"
+        },
+        "reason": {
+          "description": "Arsyeja për zgjedhjen e kësaj shkolle",
+          "id": "Arsyeja"
+        },
+        "romantic": {
+          "description": "Në një marrëdhënie romantike",
+          "id": "romantik"
+        },
         "school": {
+          "description": "Shkurtesa e shkollës së tyre, GP ose MS.",
           "id": "shkollë"
+        },
+        "school support": {
+          "description": "Mbështetje shtesë arsimore nga shkolla.",
+          "id": "mbështetje shkollore"
+        },
+        "sex": {
+          "description": "Gjinia e nxënësit (binar).",
+          "id": "gjinia"
+        },
+        "studytime": {
+          "description": "Koha javore e studimit të nxënësit, 1 deri në 10 orë.",
+          "id": "koha e studimit"
+        },
+        "traveltime": {
+          "description": "Koha e udhëtimit të nxënësit për në shkollë, në orë.",
+          "id": "koha e udhëtimit"
+        },
+        "weekend alcohol": {
+          "description": "Konsumi i alkoolit në fundjavë: 1 (shumë i ulët) deri në 5 (shumë i lartë)",
+          "id": "alkool në fundjavë"
         }
       }
     },
     "student_survey": {
+      "card": {
+        "context": {
+          "potentialMisuses": "Përdorimi i informacionit demografik nga një grup i kufizuar i të dhënave për të bërë supozime rreth nëngrupeve të njerëzve: për shembull, duke kërkuar parashikime se cilat gjini kanë më shumë gjasa të kenë frikë.",
+          "potentialUses": "Për shembull, përcaktoni nëse dikush mund të pëlqejë një lloj të caktuar muzike bazuar në shijet e tyre të tjera."
+        },
+        "description": "Një grup i të dhënave të përgjigjeve të sondazhit të mbledhur nga nxënësit sllovakë në FSEV MB. U bënë pyetje në lidhje me muzikën, kulturën, fobitë e tyre dhe informacionin demografik të tyre. Shumica e përgjigjeve janë renditje në një shkallë nga 1 në 5. Për shembull, pyetja \"A ju pëlqen të dëgjoni muzikë?\" ofroi një shkallë nga 1 (Nuk pajtohem plotësisht) në 5 (Jam dakord plotësisht). Ky grup të dhënash ka një sasi të madhe pyetjesh për të eksploruar."
+      },
       "fields": {
         "Achievements": {
+          "description": "Unë gjithmonë u bëj të ditur njerëzve të tjerë për arritjet e mia.",
           "id": "Arritjet"
+        },
+        "Action": {
+          "description": "Më pëlqejnë filmat e aksionit",
+          "id": "Aksion"
+        },
+        "Active sport": {
+          "description": "Më pëlqejnë sportet aktive",
+          "id": "Sportet aktive"
+        },
+        "Adrenaline sports": {
+          "description": "Më pëlqejnë sportet adrenaline",
+          "id": "Sportet e adrenalinës"
         },
         "Age": {
           "description": "Mosha",
           "id": "Mosha"
         },
+        "Ageing": {
+          "description": "Kam frikë nga plakja",
+          "id": "Plakja"
+        },
+        "Alcohol": {
+          "description": "Zakonet e pirjes",
+          "id": "Alkooli"
+        },
+        "Alternative": {
+          "description": "Më pëlqen muzika alternative",
+          "id": "Alternativë"
+        },
+        "Animated": {
+          "description": "Më pëlqejnë filmat e animuar",
+          "id": "Animuar"
+        },
+        "Appearence and gestures": {
+          "description": "Unë jam i sjellshëm dhe kujdeset për paraqitjen time.",
+          "id": "Paraqitja dhe gjestet"
+        },
+        "Art exhibitions": {
+          "description": "Më pëlqen ekspozitat e artit",
+          "id": "Ekspozita arti"
+        },
+        "Assertiveness": {
+          "description": "Nuk kam frikë të jap mendimin tim nëse ndihem i sigurtë për diçka.",
+          "id": "Vetëbesimi"
+        },
+        "Biology": {
+          "description": "Më pëlqen biologjia",
+          "id": "Biologji"
+        },
+        "Borrowed stuff": {
+          "description": "Unë kujdesem për gjërat që kam huazuar nga të tjerët.",
+          "id": "Sende të huazuara"
+        },
+        "Branded clothing": {
+          "description": "Unë preferoj veshje të markës sesa jo të markës.",
+          "id": "Veshje të markës"
+        },
+        "Cars": {
+          "description": "Më pëlqejnë makinat",
+          "id": "Makina"
+        },
+        "Celebrities": {
+          "description": "Më pëlqejnë të famshmit",
+          "id": "Të famshmit"
+        },
+        "Changing the past": {
+          "description": "Do të doja ta ndryshoja të kaluarën për shkak të gjërave që kam bërë.",
+          "id": "Duke ndryshuar të kaluarën"
+        },
+        "Charity": {
+          "description": "Unë gjithmonë jap për bamirësi.",
+          "id": "Bamirësi"
+        },
+        "Cheating in school": {
+          "description": "Unë kopjoja në shkollë.",
+          "id": "Kopjimi në shkollë"
+        },
+        "Chemistry": {
+          "description": "Më pëlqen kimia",
+          "id": "Kimi"
+        },
+        "Children": {
+          "description": "Më pëlqen shoqëria e fëmijëve.",
+          "id": "Fëmijë"
+        },
+        "Classical music": {
+          "description": "Më pëlqen muzika klasike",
+          "id": "Muzikë klasike"
+        },
+        "Comedy": {
+          "description": "Më pëlqejnë filmat komik",
+          "id": "Komedi"
+        },
+        "Compassion to animals": {
+          "description": "Nuk më pëlqen të shoh kafshët që vuajnë.",
+          "id": "Dhembshuri për kafshët"
+        },
         "Country": {
+          "description": "Më pëlqen muzika e vendit",
           "id": "Shteti"
+        },
+        "Countryside, outdoors": {
+          "description": "Më pëlqen fshati, jashtë",
+          "id": "Fshat, jashtë"
+        },
+        "Criminal damage": {
+          "description": "I kam dëmtuar gjërat në të kaluarën kur jam zemëruar.",
+          "id": "dëmtim penal"
+        },
+        "Daily events": {
+          "description": "Unë marr parasysh atë që ndodh rreth meje.",
+          "id": "Ngjarjet ditore"
+        },
+        "Dance": {
+          "description": "Më pëlqen muzika e vallëzimit",
+          "id": "Vallëzimi"
+        },
+        "Dancing": {
+          "description": "Më pëlqen vallëzimi",
+          "id": "Vallëzim"
+        },
+        "Dangerous dogs": {
+          "description": "Kam frikë nga qentë e rrezikshëm",
+          "id": "Qentë e rrezikshëm"
+        },
+        "Darkness": {
+          "description": "Kam frikë nga errësira",
+          "id": "Errësirë"
+        },
+        "Decision making": {
+          "description": "Unë marr kohën time për të marrë vendime.",
+          "id": "Vendimmarrja"
+        },
+        "Documentary": {
+          "description": "Më pëlqejnë filmat dokumentarë",
+          "id": "Dokumentar"
+        },
+        "Dreams": {
+          "description": "Gjithmonë kam ëndrra të mira.",
+          "id": "Ëndrrat"
+        },
+        "Eating to survive": {
+          "description": "Unë ha sepse duhet. Unë nuk e shijoj ushqimin dhe ha sa më shpejt që të mundem.",
+          "id": "Ushqim për të mbijetuar"
+        },
+        "Economy Management": {
+          "description": "Më pëlqen menaxhimi ekonomik",
+          "id": "Menaxhimi Ekonomik"
+        },
+        "Education": {
+          "description": "Arsimi më i lartë i arritur:",
+          "id": "Edukimi"
+        },
+        "Elections": {
+          "description": "Unë gjithmonë përpiqem të votoj në zgjedhje.",
+          "id": "Zgjedhjet"
+        },
+        "Empathy": {
+          "description": "Unë jam një person empatik.",
+          "id": "Ndjeshmëria"
+        },
+        "Energy levels": {
+          "description": "Unë jam gjithmonë plot jetë dhe energji.",
+          "id": "Nivelet e energjisë"
+        },
+        "Entertainment spending": {
+          "description": "Unë shpenzoj shumë para për të festuar dhe shoqëruar.",
+          "id": "Shpenzimet argëtuese"
+        },
+        "Fake": {
+          "description": "Ndonjëherë mund të jem me dy fytyra.",
+          "id": "Fallco"
+        },
+        "Fantasy/Fairy tales": {
+          "description": "Më pëlqejnë filmat fantastik/përrallat zanash",
+          "id": "Fantazi/Përralla"
+        },
+        "Fear of public speaking": {
+          "description": "Kam frikë nga të folurit publik",
+          "id": "Frika nga të folurit publik"
+        },
+        "Final judgement": {
+          "description": "Unë besoj se njerëzit e këqij do të vuajnë një ditë dhe njerëzit e mirë do të shpërblehen.",
+          "id": "Gjykimi përfundimtar"
+        },
+        "Finances": {
+          "description": "Unë kursej të gjitha paratë që mundem.",
+          "id": "Financa"
+        },
+        "Finding lost valuables": {
+          "description": "Nëse gjej diçka që nuk më përket mua, do ta dorëzoj.",
+          "id": "Gjetja e vlerave të humbura"
+        },
+        "Flying": {
+          "description": "Kam frikë të fluturoj",
+          "id": "Fluturues"
+        },
+        "Folk": {
+          "description": "Më pëlqen muzika popullore",
+          "id": "Popullore"
+        },
+        "Foreign languages": {
+          "description": "Më pëlqejnë gjuhët e huaja",
+          "id": "Gjuhë të huaja"
+        },
+        "Friends versus money": {
+          "description": "Më mirë do të kisha shumë miq se sa shumë para.",
+          "id": "Miqtë kundrejt parave"
+        },
+        "Fun with friends": {
+          "description": "Më pëlqen të argëtohem me shokët",
+          "id": "Argëtim me shokët"
+        },
+        "Funniness": {
+          "description": "Gjithmonë përpiqem të jem më qesharake.",
+          "id": "Qesharake"
+        },
+        "Gardening": {
+          "description": "Më pëlqen kopshtari",
+          "id": "Kopshtari"
         },
         "Gender": {
           "description": "Gjinia",
           "id": "Gjinia"
         },
+        "Geography": {
+          "description": "Më pëlqen gjeografia",
+          "id": "Gjeografi"
+        },
+        "Getting angry": {
+          "description": "Unë mund të zemërohem shumë lehtë.",
+          "id": "Duke u zemëruar"
+        },
+        "Getting up": {
+          "description": "E kam shumë të vështirë të zgjohem në mëngjes."
+        },
+        "Giving": {
+          "description": "Unë përpiqem t'u jap sa më shumë njerëzve të tjerë në Krishtlindje.",
+          "id": "Dhënia"
+        },
+        "God": {
+          "description": "Unë besoj në Zot.",
+          "id": "Zoti"
+        },
+        "Happiness in life": {
+          "description": "Jam 100% e kënaqur me jetën time.",
+          "id": "Lumturia në jetë"
+        },
+        "Health": {
+          "description": "Unë shqetësohem për shëndetin tim.",
+          "id": "Shëndeti"
+        },
+        "Healthy eating": {
+          "description": "Unë bëj një mënyrë jetese shumë të shëndetshme",
+          "id": "Ushqimi i shëndetshëm"
+        },
+        "Height": {
+          "description": "Gjatësia",
+          "id": "Gjatësia"
+        },
+        "Heights": {
+          "description": "Kam frikë nga lartësitë",
+          "id": "Lartësitë"
+        },
+        "Hiphop, Rap": {
+          "description": "Më pëlqen muzika Hiphop ose Rap",
+          "id": "Hiphop, Rap"
+        },
+        "History": {
+          "description": "Më pëlqen historia",
+          "id": "Histori"
+        },
+        "Horror": {
+          "description": "Më pëlqejnë filmat e frikshëm",
+          "id": "Frikshëm"
+        },
+        "House - block of flats": {
+          "description": "Kam jetuar shumicën e fëmijërisë sime në një: shtëpi ose bllok banesash (apartamente).",
+          "id": "Shtëpia - bllok banesash"
+        },
+        "Hypochondria": {
+          "description": "Unë jam hipokondriak.",
+          "id": "Hipokondria"
+        },
+        "Interests or hobbies": {
+          "description": "Kam shumë hobi dhe interesa të ndryshme.",
+          "id": "Interesat ose hobit"
+        },
         "Internet": {
+          "description": "Më pëlqen të përdor internetin",
           "id": "Internet"
+        },
+        "Internet usage": {
+          "description": "Sa kohë shpenzoni online?",
+          "id": "Përdorimi i internetit"
+        },
+        "Judgment calls": {
+          "description": "Mund të dalloj nëse njerëzit më dëgjojnë apo jo kur flas me ta.",
+          "id": "Thirrje gjykimi"
+        },
+        "Keeping promises": {
+          "description": "Unë gjithmonë i mbaj premtimet e mia.",
+          "id": "Mbajtja e premtimeve"
+        },
+        "Knowing the right people": {
+          "description": "Unë gjithmonë sigurohem që të lidhem me njerëzit e duhur.",
+          "id": "Njohja e njerëzve të duhur"
+        },
+        "Latino": {
+          "description": "Më pëlqen muzika latine",
+          "id": "Latino"
+        },
+        "Law": {
+          "description": "Më pëlqen juridiku",
+          "id": "Juridiku"
+        },
+        "Left - right handed": {
+          "description": "Majtas - djathtas",
+          "id": "Majtas - djathtas"
+        },
+        "Life struggles": {
+          "description": "Unë qaj kur ndihem i mërzitur ose kur gjërat nuk shkojnë siç duhet.",
+          "id": "Sfidat e jetës"
+        },
+        "Loneliness": {
+          "description": "Ndihem i vetmuar në jetë.",
+          "id": "Vetmia"
+        },
+        "Loss of interest": {
+          "description": "Mund të bie në dashuri me dikë shumë shpejt dhe më pas të humbas plotësisht interesin.",
+          "id": "Humbja e interesit"
+        },
+        "Lying": {
+          "description": "A i gënjeni të tjerët?",
+          "id": "Gënjeshtra"
+        },
+        "Mathematics": {
+          "description": "Më pëlqen matematika",
+          "id": "Matematikë"
+        },
+        "Medicine": {
+          "description": "Më pëlqen mjekësia",
+          "id": "Mjekësia"
+        },
+        "Metal or Hardrock": {
+          "description": "Më pëlqen muzika metalike ose hardrock",
+          "id": "Metal ose Hardrock"
+        },
+        "Mood swings": {
+          "description": "Humori im ndryshon shpejt.",
+          "id": "Luhatje humori"
+        },
+        "Movies": {
+          "description": "Më pëlqen të shikoj filma",
+          "id": "Filma"
+        },
+        "Music": {
+          "description": "Më pëlqen të dëgjoj muzikë",
+          "id": "Muzika"
+        },
+        "Musical": {
+          "description": "Më pëlqen muzika muzikore",
+          "id": "Muzikore"
+        },
+        "Musical instruments": {
+          "description": "Më pëlqejnë instrumentet muzikore",
+          "id": "Instrumente muzikore"
+        },
+        "New environment": {
+          "description": "Unë mund të përshtatem shpejt me një mjedis të ri.",
+          "id": "Mjedisi i ri"
+        },
+        "Number of friends": {
+          "description": "Kam shumë shokë.",
+          "id": "Numri i shokëve"
+        },
+        "Number of siblings": {
+          "description": "Numri i vëllezërve dhe motrave",
+          "id": "Numri i vëllezërve dhe motrave"
+        },
+        "Only child": {
+          "description": "Unë jam fëmija i vetëm",
+          "id": "Fëmija i vetëm"
+        },
+        "Opera": {
+          "description": "Më pëlqen muzika e operës",
+          "id": "Opera"
+        },
+        "PC": {
+          "description": "Më pëlqen të përdor PC-në",
+          "id": "PC"
+        },
+        "Parents' advice": {
+          "description": "Unë gjithmonë dëgjoj këshillat e prindërve të mi.",
+          "id": "Këshilla e prindërve"
+        },
+        "Passive sport": {
+          "description": "Më pëlqejnë sportet pasive",
+          "id": "Sport pasiv"
+        },
+        "Personality": {
+          "description": "Unë besoj se të gjitha tiparet e personalitetit tim janë pozitive.",
+          "id": "Personaliteti"
+        },
+        "Pets": {
+          "description": "Më pëlqejnë kafshët shtëpiake",
+          "id": "Kafshët shtëpiake"
+        },
+        "Physics": {
+          "description": "Më pëlqen fizika",
+          "id": "Fizikë"
+        },
+        "Politics": {
+          "description": "Më pëlqen politika",
+          "id": "Politika"
+        },
+        "Pop": {
+          "description": "Më pëlqen muzika pop",
+          "id": "Pop"
+        },
+        "Prioritising workload": {
+          "description": "Unë përpiqem të bëj detyra sa më shpejt të jetë e mundur dhe të mos i lë ato deri në minutën e fundit.",
+          "id": "Prioritizimi i ngarkesës së punës"
+        },
+        "Psychology": {
+          "description": "Më pëlqen psikologjia",
+          "id": "Psikologji"
+        },
+        "Public speaking": {
+          "description": "Duhet të jem i përgatitur mirë para se të flas në publik.",
+          "id": "Të folurit në publik"
+        },
+        "Punctuality": {
+          "description": "Mbajtja e kohës.",
+          "id": "Përpikmëria"
+        },
+        "Punk": {
+          "description": "Më pëlqen muzika punk",
+          "id": "Punk"
+        },
+        "Questionnaires or polls": {
+          "description": "Më pëlqen të marr pjesë në sondazhe.",
+          "id": "Pyetësorët ose sondazhet"
+        },
+        "Rats": {
+          "description": "Kam frikë nga minjtë",
+          "id": "Minjtë"
+        },
+        "Reading": {
+          "description": "Më pëlqen të lexoj",
+          "id": "Lexim"
+        },
+        "Reggae, Ska": {
+          "description": "Më pëlqen muzika Reggae ose Ska"
+        },
+        "Reliability": {
+          "description": "Jam i besueshëm në punë dhe i kryej gjithmonë të gjitha detyrat që më jepen.",
+          "id": "Besueshmëria"
+        },
+        "Religion": {
+          "description": "Më pëlqen feja",
+          "id": "Feja"
+        },
+        "Responding to a serious letter": {
+          "description": "Unë mendoj me kujdes para se t'i përgjigjem ndonjë letre të rëndësishme.",
+          "id": "Duke iu përgjigjur një letre serioze"
+        },
+        "Rock": {
+          "description": "Më pëlqen muzika rock",
+          "id": "Rock"
+        },
+        "Rock n roll": {
+          "description": "Më pëlqen muzika rock n roll",
+          "id": "Rock n roll"
+        },
+        "Romantic": {
+          "description": "Më pëlqejnë filmat komik",
+          "id": "Romantik"
+        },
+        "Sci-fi": {
+          "description": "Më pëlqejnë filmat shkencorë",
+          "id": "Sci-Fi"
+        },
+        "Science and technology": {
+          "description": "Më pëlqen shkenca dhe teknologjia",
+          "id": "Shkencë dhe teknologji"
+        },
+        "Self-criticism": {
+          "description": "Shpesh mendoj dhe pendohem për vendimet që marr.",
+          "id": "Vetë-kritika"
+        },
+        "Shopping": {
+          "description": "Më pëlqen të bëj pazar",
+          "id": "Blerje"
+        },
+        "Shopping centres": {
+          "description": "Më pëlqen të shkoj në qendra të mëdha tregtare.",
+          "id": "Qendër tregtare"
+        },
+        "Slow songs or fast songs": {
+          "description": "Unë preferoj muzikën fast-paced",
+          "id": "Këngë të ngadalta ose këngë të shpejta"
+        },
+        "Small - big dogs": {
+          "description": "UUnë preferoj qentë e mëdhenj të rrezikshëm sesa qentë më të vegjël e më të qetë.",
+          "id": "Qentë e vegjël - të mëdhenj"
+        },
+        "Smoking": {
+          "description": "Zakonet e duhanpirjes",
+          "id": "Duhanpirja"
+        },
+        "Snakes": {
+          "description": "Kam frikë nga gjarpërinjtë",
+          "id": "Gjarpërinjtë"
+        },
+        "Socializing": {
+          "description": "Më pëlqen të takoj njerëz të rinj.",
+          "id": "Socializimi"
+        },
+        "Spending on gadgets": {
+          "description": "Unë shpenzoj shumë para në pajisje.",
+          "id": "Shpenzimet për pajisje"
+        },
+        "Spending on healthy eating": {
+          "description": "Me kënaqësi do të paguaj më shumë para për ushqim të mirë, cilësor ose të shëndetshëm.",
+          "id": "Shpenzimet për ushqim të shëndetshëm"
+        },
+        "Spending on looks": {
+          "description": "Kam shpenzuar shumë para për pamjen time.",
+          "id": "Shpenzimet në pamje"
+        },
+        "Spiders": {
+          "description": "Kam frikë nga merimangat",
+          "id": "Merimangat"
+        },
+        "Storm": {
+          "description": "Kam frikë nga stuhitë",
+          "id": "Stuhi"
+        },
+        "Swing, Jazz": {
+          "description": "Më pëlqen muzika Swing ose Jazz",
+          "id": "Swing, Xhaz"
+        },
+        "Techno, Trance": {
+          "description": "Më pëlqen muzika Tekno ose Trance",
+          "id": "Tekno, Trance"
+        },
+        "Theatre": {
+          "description": "Më pëlqen teatri",
+          "id": "Teatri"
+        },
+        "Thinking ahead": {
+          "description": "Unë i shikoj gjërat nga të gjitha këndet e ndryshme para se të shkoj përpara.",
+          "id": "Mendo paraprakisht"
+        },
+        "Thriller": {
+          "description": "Më pëlqejnë filmat Triller",
+          "id": "Triller"
+        },
+        "Unpopularity": {
+          "description": "Unë do të gjej një faj në veten time nëse njerëzit nuk më pëlqejnë.",
+          "id": "Jopopullariteti"
+        },
+        "Village - town": {
+          "description": "Pjesën më të madhe të fëmijërisë kam kaluar në një: qytet apo fshat.",
+          "id": "Fshati - qyteti"
+        },
+        "Waiting": {
+          "description": "Unë jam shumë i durueshëm.",
+          "id": "Në pritje"
+        },
+        "War": {
+          "description": "Më pëlqen filmat e luftës",
+          "id": "Lufta"
+        },
+        "Weight": {
+          "description": "Pesha",
+          "id": "Pesha"
+        },
+        "Western": {
+          "description": "Më pëlqen filmat perëndimorë",
+          "id": "perëndimor"
+        },
+        "Workaholism": {
+          "description": "Unë shpesh studioj ose punoj edhe në kohën time të lirë.",
+          "id": "I dhënë pas punës"
+        },
+        "Writing": {
+          "description": "Më pëlqen të shkruaj",
+          "id": "Shkrimi"
+        },
+        "Writing notes": {
+          "description": "Unë gjithmonë bëj një listë, kështu që nuk harroj asgjë.",
+          "id": "Shkrimi i shënimeve"
+        }
+      },
+      "name": "Sondazhi i stilit të jetesës së nxënëse"
+    },
+    "taco_toppings_toy": {
+      "card": {
+        "context": {
+          "potentialMisuses": "Çdo gjë tjetër përveç rekomandimeve Taco.",
+          "potentialUses": "Ndihmoni të bëni rekomandime për atë lloj taco që duhet të blejë një klient i ri."
+        },
+        "description": "Anketo klientët në një dyqan të taco-ve nëse u pëlqejnë apo jo disa kombinime të tacove"
+      },
+      "fields": {
+        "Cheese": {
+          "description": "A kishte djath taco?",
+          "id": "Djath"
+        },
+        "Chicken": {
+          "description": "A kishte taco pulë?",
+          "id": "Pulë"
+        },
+        "Ground Beef": {
+          "description": "A ka taco mish të bluar të viçit?",
+          "id": "Mish i bluar i viçit"
+        },
+        "Hot Sauce": {
+          "description": "A kishte taco salcë pikante?",
+          "id": "Salcë pikante"
+        },
+        "Preference": {
+          "description": "A ju pëlqen taco?",
+          "id": "Preferencë"
+        },
+        "Sour Cream": {
+          "description": "A kishte taco krem kosi?",
+          "id": "Salcë kosi"
         }
       }
     },
-    "zoo": {
+    "thanksgiving": {
+      "card": {
+        "context": {
+          "potentialMisuses": "Përpiquni të mendoni se nga cili rajon është dikush, bazuar vetëm në ushqimet që hanë në Ditën e Falënderimeve.",
+          "potentialUses": "Parashikoni nëse dikush do të ketë një ushqim specifik për Ditën e Falënderimeve, bazuar në rajonin e vendit nga ata janë."
+        },
+        "description": "Një anketë nga FiveThrityEight, duke pyetur njerëzit në të gjithë Shtetet e Bashkuara se çfarë ushqimesh kanë për darkën e Falënderimeve."
+      },
       "fields": {
-        "Aquatic": {
-          "id": "Ujor"
+        "Apple cobbler": {
+          "description": "Me ose pa, ëmbëlsira e nxehtë me mollë u shërbye si desert.",
+          "id": "Ëmbëlsirë e nxehtë me mollë"
+        },
+        "Apple pie": {
+          "description": "Me ose pa, ëmbëlsira me mollë u shërbye si desert.",
+          "id": "Ëmbëlsirë me mollë"
+        },
+        "Blondies": {
+          "description": "Me ose pa, blondies u shërbye si desert.",
+          "id": "Blondies"
+        },
+        "Brownies": {
+          "description": "Me ose pa, brownies u shërbye si desert.",
+          "id": "Brownies"
+        },
+        "Brussel sprouts": {
+          "description": "Me ose pa, lakra u shërbye me ushqim.",
+          "id": "Lakër "
+        },
+        "Buttermilk pie": {
+          "description": "Me ose pa, ëmbëlsira me gjalpë u shërbye si desert.",
+          "id": "Ëmbëlsirë me gjalpë"
+        },
+        "Carrot cake": {
+          "description": "Me ose pa, torta me karrotë është shërbyer si desert.",
+          "id": "Tortë me karrota"
+        },
+        "Carrots": {
+          "description": "Me ose pa, karrotat u shërbyen me ushqim.",
+          "id": "Karrota"
+        },
+        "Cauliflower": {
+          "description": "Me ose pa, lulelakra u shërbye me ushqim.",
+          "id": "Lulelakër"
+        },
+        "Cheesecake": {
+          "description": "Me ose pa, ëmbëlsira Cheesecake u shërbye si desert.",
+          "id": "Cheesecake"
+        },
+        "Cherry pie": {
+          "description": "Me ose pa, ëmbëlsira me vishnje u shërbye si desert.",
+          "id": "Ëmbëlsirë me vishnje"
+        },
+        "Chocolate pie": {
+          "description": "Me ose pa, ëmbëlsira me qokollatë u shërbye si desert.",
+          "id": "Ëmbëlsirë me qokollatë"
+        },
+        "Coconut cream pie": {
+          "description": "Me ose pa, ëmbëlsira me krem kokosi u shërbye si desert.",
+          "id": "Ëmbëlsirë me krem kokosi"
+        },
+        "Cookies": {
+          "description": "Me ose pa, biskotat u shërbyen si desert.",
+          "id": "Biskota"
+        },
+        "Corn": {
+          "description": "Me ose pa, misri u shërbye me ushqim.",
+          "id": "Misër"
+        },
+        "Cornbread": {
+          "description": "Me ose pa, bukë misri u shërbye me ushqim.",
+          "id": "Bukë misri"
+        },
+        "Cranberry sauce": {
+          "description": "Lloji i salcës me boronicë të shërbyer.",
+          "id": "Salcë boronice"
+        },
+        "Fruit salad": {
+          "description": "Me ose pa, sallata me fruta u shërbye me ushqim.",
+          "id": "Sallatë frutash"
+        },
+        "Fudge": {
+          "description": "Me ose pa, kremi u shërbye si desert.",
+          "id": "Krem"
+        },
+        "Gravy": {
+          "description": "Me ose pa, lëngu i mishit u shërbye me ushqim.",
+          "id": "Lëng mishi"
+        },
+        "Green beans/green bean casserole": {
+          "description": "Me ose pa, pjata me fasule të gjelbra u shërbye me ushqim.",
+          "id": "Fasule jeshile/tavë me fasule jeshile"
+        },
+        "Ice cream": {
+          "description": "Me ose pa, akullorja u shërbye si desert.",
+          "id": "Akullore"
+        },
+        "Key lime pie": {
+          "description": "Me ose pa, ëmbëlsira me limon u shërbye si desert.",
+          "id": "Ëmbëlsirë me limon"
+        },
+        "Mac and cheese": {
+          "description": "Me ose pa, makaronat me djath u shërbyen me ushqim.",
+          "id": "Makarona me djath"
+        },
+        "Main dish": {
+          "description": "Pjata kryesore e shërbyer në ushqim. Me shumë gjasë gjeldeti.",
+          "id": "Pjatë kryesore"
+        },
+        "Main dish cooking method": {
+          "description": "Si u gatua pjata kryesore, p.sh. pjekur, skuqur, fërguar.",
+          "id": "Metoda e gatimit të pjatës kryesore"
+        },
+        "Mashed potatoes": {
+          "description": "Me ose pa, pureja me patate u shërbye me ushqim.",
+          "id": "Pure patatesh"
+        },
+        "Peach cobbler": {
+          "description": "Me ose pa, ëmbëlsira e nxehtë me pjeshkë u shërbye si desert.",
+          "id": "Ëmbëlsirë e nxehtë me pjeshkë"
+        },
+        "Peach pie": {
+          "description": "Me ose pa, ëmbëlsira me pjeshkë u shërbye si desert.",
+          "id": "Ëmbëlsirë me pjeshkë"
+        },
+        "Pecan pie": {
+          "description": "Me ose pa, ëmbëlsira me akullore u shërbye si desert.",
+          "id": "Ëmbëlsira me pekan"
+        },
+        "Pumpkin pie": {
+          "description": "Me ose pa, ëmbëlsira me kungull u shërbye si desert.",
+          "id": "Ëmbëlsirë me kungull"
+        },
+        "Rolls/biscuits": {
+          "description": "Me ose pa, rolls apo biskotat u shërbyen me ushqim.",
+          "id": "Rolls/biskota"
+        },
+        "Squash": {
+          "description": "Me ose pa, kungulli u shërbye me ushqim.",
+          "id": "Kunguj"
+        },
+        "Stuffing base": {
+          "description": "Nëse shërbehej mbushja, cili ishte përbërësi kryesor i tij, ose asnjë nëse nuk shërbehej mbushja.",
+          "id": "Baza e mbushjes"
+        },
+        "Sweet potato pie": {
+          "description": "Me ose pa, ëmbëlsira me patate të ëmbël u shërbye si desert.",
+          "id": "Ëmbëlsirë me patate të ëmbël"
+        },
+        "US region": {
+          "description": "Pjesa e vendit nga ishte pjesëmarrësi.",
+          "id": "Rajoni i SHBA"
+        },
+        "Vegetable salad": {
+          "description": "Me ose pa, sallata me perime u shërbye me ushqim.",
+          "id": "Sallatë me perime"
+        },
+        "Yams/sweet potato casserole": {
+          "description": "Me ose pa, tava ëmbëlsirash ose tava me patate të ëmbël u shërbye me ushqim.",
+          "id": "Reçel/tavë me patate të ëmbël"
         }
-      }
+      },
+      "name": "Anketa Rajonale e Ushqimit të Ditës së Falënderimeve"
+    },
+    "zoo": {
+      "card": {
+        "context": {
+          "potentialMisuses": "Ky është një grup të dhënash prej vetëm 100 kafshësh, kështu që mund të ketë shumë kafshë që nuk pasqyrohen nga të dhënat. Merreni me një kokërr kripë!",
+          "potentialUses": "Ka shumë etiketa të mundshme këtu, por një hulumtim i lehtë për të filluar është të përpiqeni të gjeni se cilat veçori kanë tendencë të lidhen me një kafshë helmuese."
+        },
+        "description": "Një grup i vogël i të dhënave të atributeve të ndryshme të kafshëve (pavarësisht nëse kanë qime, pupla, dhëmbë apo më shumë) të përdorura për qëllime klasifikimi. Pothuajse të gjitha tiparet janë Po/Jo, përveç emrit të kafshës, llojit dhe numrit të këmbëve."
+      },
+      "fields": {
+        "Airborne": {
+          "description": "A fluturon kafsha?",
+          "id": "Ajrore"
+        },
+        "Animal Name": {
+          "description": "Emri i kafshës",
+          "id": "Emri i kafshëve"
+        },
+        "Aquatic": {
+          "description": "A jeton kafsha në ujë?",
+          "id": "Ujor"
+        },
+        "Backbone": {
+          "description": "A ka kafsha shtyllë kurrizore?",
+          "id": "Shtylla kurrizore"
+        },
+        "Breathes": {
+          "description": "A merr frymë kafsha?",
+          "id": "Merr frymë"
+        },
+        "Catsize": {
+          "description": "A është kafsha rreth madhësisë së një mace?",
+          "id": "Madhësia e maces"
+        },
+        "Class": {
+          "description": "Çfarë lloj kafshe është ajo?",
+          "id": "Lloji"
+        },
+        "Domestic": {
+          "description": "A është kafsha shtëpiake?",
+          "id": "Shtëpiake"
+        },
+        "Eggs": {
+          "description": "A lë kafsha vezë?",
+          "id": "Vezë"
+        },
+        "Feathers": {
+          "description": "A ka kafsha pupla?",
+          "id": "Puplat"
+        },
+        "Fins": {
+          "description": "A ka kafsha pendë?",
+          "id": "Pendët"
+        },
+        "Hair": {
+          "description": "A ka kafsha flokë?",
+          "id": "Flokët"
+        },
+        "Legs": {
+          "description": "Sa këmbë ka kafsha?",
+          "id": "Këmbët"
+        },
+        "Milk": {
+          "description": "A prodhon kafsha qumësht?",
+          "id": "Qumësht"
+        },
+        "Predator": {
+          "description": "A është kafsha një grabitqar?",
+          "id": "Grabitqar"
+        },
+        "Tail": {
+          "description": "A ka kafsha bisht?",
+          "id": "Bishti"
+        },
+        "Toothed": {
+          "description": "A ka kafsha dhëmbë?",
+          "id": "Me dhëmbë"
+        },
+        "Venomous": {
+          "description": "A është kafsha helmuese?",
+          "id": "Helmues"
+        }
+      },
+      "name": "Kopshti zoologjik"
     }
   },
-  "modelCardPossibleValuesMaximum": "Maksimum",
-  "modelCardPossibleValuesMinimum": "minimum",
+  "generateResultsHeader": "Testimi i modelit",
+  "incorrectAnswer": "E pasaktë",
+  "modelCardAccuracy": "Saktësia",
+  "modelCardDatasetDetails": "Rreth të dhënave",
+  "modelCardDatasetDetailsSize": "Madhësia e setit të të dhënave",
+  "modelCardDatasetDetailsSizeCount": "{rowCount} rreshtat",
+  "modelCardFeatures": "Veçoritë",
+  "modelCardFeaturesAndLabel": "Karakteristikat dhe emërtimet",
+  "modelCardIntendedUse": "Përdorimi i synuar",
+  "modelCardLabel": "Emërtimi",
+  "modelCardLimitations": "Kufizimet dhe paralajmërimet",
+  "modelCardPossibleValues": "Vlerat e mundshme",
+  "modelCardPossibleValuesMaximum": "maks",
+  "modelCardPossibleValuesMinimum": "min",
+  "modelNameLabel": "Emri i modelit",
   "navigateBack": "Kthehu",
   "navigateDone": "Përfundo",
   "navigateForward": "Vazhdo ",
-  "saveProgress": "Ruaj",
+  "potentialMisusesDescription": "Përshkruani çdo kufizim në mënyrën se si u krijua ky model ose si duhet të përdoret. Ju mund të thoni gjëra të tilla si \"Shmangni përdorimin e këtij modeli për...\" ose \"Kini kujdes me...\".\nPyetjet e rëndësishme për t'u marrë parasysh janë:",
+  "potentialMisusesDescriptionEnough": "A keni mbledhur të dhëna të mjaftueshme për të qenë të sigurt në saktësinë e modelit?",
+  "potentialMisusesDescriptionRepresent": "A përfaqësojnë të dhënat të gjithë përdoruesit dhe skenarët e mundshëm?",
+  "potentialMisusesDescriptionSituations": "A ka situata ku ky model definitivisht nuk duhet të përdoret?",
+  "potentialMisusesLabel": "Kufizimet dhe paralajmërimet",
+  "potentialMisusesPlaceholder": "Shkruani një përshkrim të shkurtër",
+  "potentialUsesDescription": "Përshkruani problemin që mendoni se ky model mund të ndihmojë ta zgjidhni, ose një aplikacion potencial që dikush mund të bëjë me këtë model.",
+  "potentialUsesLabel": "Përdorimi i synuar",
+  "potentialUsesPlaceholder": "Shkruani një përshkrim të shkurtër",
+  "predictAIBotPredicts": "AI parashikon",
+  "predictHeader": "Provoni!",
+  "predictPlaceholder": "min {minimum}, max {maximum}",
+  "predictionStatement": "Parashikoni {output} bazuar në {inputs}",
+  "resultsAccuracy": "Saktësia",
+  "resultsDetailsButton": "Detajet",
+  "resultsHeader": "Rezultati",
+  "resultsPreviousResults": "Rezultatet e mëparshme",
+  "resultsTableActualValueHeader": "Aktuale",
+  "resultsTableFeatureHeader": "Karakteristikat",
+  "resultsTablePredictedValueHeader": "Parashikimi i A.I.",
+  "resultsTablePredictionRange": "Parashikimet janë +/- {percentage}% e diapazonit",
+  "saveModelColumnCountLabel": "Përshkrimet e kolonës",
+  "saveModelColumnTypeFeature": "veçori",
+  "saveModelColumnTypeLabel": "emërtimi",
+  "saveModelFieldRequired": "e domosdoshme",
+  "saveProgress": "Ruaj ",
+  "saveStatus_failure": "Ka pasur një gabim. Modeli juaj nuk është ruajtur. Ju lutem provoni përsëri.",
+  "saveStatus_piiProfanity": "Modeli juaj nuk mund të ruhej sepse përmban blasfemi ose informacione identifikuese personale (p.sh. email, adresën, numrin e telefonit).",
+  "saveStatus_success": "Modeli juaj është ruajtur!",
+  "scatterPlotLabel": "Informacion mbi marrëdhëniet",
+  "selectDatasetErrorTooFewColumns": "Ju lutemi ngarkoni një {fileType} me të paktën {count} kolona.",
+  "selectDatasetErrorTooFewRows": "Ju lutemi ngarkoni një {fileType} me të paktën {count} rreshta.",
+  "selectDatasetUploadFileButton": "Ngarko {fileType}",
+  "selectLabelButton": "Përzgjidhni etiketën",
+  "trainModelButtonText": "Tren",
+  "trainModelHeading": "Trajnimi",
   "tryAgain": "Provo përsëri",
+  "uniqueOptionsWarningMessage": "Kolonat kategorike me më shumë se vlera {valueCount} unike nuk mund të zgjidhen si etiketë ose veçori.",
   "uniqueOptionsWarningNotice": "Shënim"
 }

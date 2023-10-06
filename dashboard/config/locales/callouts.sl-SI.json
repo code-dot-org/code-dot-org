@@ -68,6 +68,9 @@
         "Overworld Move to Sheep_2021": {
           "craft_run_button_callout": "Klikni \"Zaženi\" in preizkusi"
         },
+        "Overworld Move to Sheep_2023": {
+          "craft_run_button_callout": "Klikni \"Zaženi\" in preizkusi"
+        },
         "course2_bee_conditionals_challenge2": {
           "courseD_bee_conditionals_challenge2_1": "S to zanko zberete ves nektar (ali med) iz enega cveta (ali satja)."
         },
@@ -92,6 +95,9 @@
         "courseC_artist_loops1b_2021": {
           "sticker2": "Dodaj to v sredino programa."
         },
+        "courseC_artist_loops1b_2023": {
+          "sticker2": "Dodaj to v sredino programa."
+        },
         "courseC_harvester_loops1_2021": {
           "courseC_harvester_loops1_callout1": "Številka štiri na buči vam pove, da so na voljo štiri buče."
         },
@@ -114,6 +120,9 @@
           "courseD_bee_conditionals_challenge2_1": "S to zanko zberete ves nektar (ali med) iz enega cveta (ali satja)."
         },
         "courseD_bee_conditionals_challenge2_2021": {
+          "courseD_bee_conditionals_challenge2_1": "S to zanko zberete ves nektar (ali med) iz enega cveta (ali satja)."
+        },
+        "courseD_bee_conditionals_challenge2_2023": {
           "courseD_bee_conditionals_challenge2_1": "S to zanko zberete ves nektar (ali med) iz enega cveta (ali satja)."
         },
         "frozen circle function with parameter": {

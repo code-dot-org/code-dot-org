@@ -389,6 +389,11 @@
             "name": "min funktion"
           }
         },
+        "Course E: Artist Project_examples_2023": {
+          "my function": {
+            "name": "min funktion"
+          }
+        },
         "Course E: Frozen Project_examples2022": {
           "draw a circle": {
             "name": "rita en circel",
@@ -440,6 +445,56 @@
           }
         },
         "Course E: Frozen Project_examples_2021": {
+          "draw a circle": {
+            "name": "rita en circel",
+            "parameters": {
+              "radius": "radie"
+            }
+          },
+          "draw a house": {
+            "name": "rita ett hus",
+            "parameters": {
+              "length": "längd"
+            }
+          },
+          "draw a pinwheel": {
+            "parameters": {
+              "length": "längd",
+              "repeat": "upprepa",
+              "sides": "sidor"
+            }
+          },
+          "draw a shape": {
+            "parameters": {
+              "length": "längd",
+              "sides": "sidor"
+            }
+          },
+          "draw a square": {
+            "name": "rita en kvadrat",
+            "parameters": {
+              "length": "längd",
+              "sides": "sidor"
+            }
+          },
+          "draw a star": {
+            "name": "rita en stjärna",
+            "parameters": {
+              "length": "längd",
+              "points": "poäng"
+            }
+          },
+          "draw a triangle": {
+            "name": "rita en triangel",
+            "parameters": {
+              "length": "längd"
+            }
+          },
+          "small flower": {
+            "name": "liten blomma"
+          }
+        },
+        "Course E: Frozen Project_examples_2023": {
           "draw a circle": {
             "name": "rita en circel",
             "parameters": {
@@ -678,6 +733,52 @@
             }
           }
         },
+        "CourseD_EOC_artist_2023": {
+          "draw a circle": {
+            "name": "rita en circel",
+            "parameters": {
+              "radius": "radie"
+            }
+          },
+          "draw a house": {
+            "name": "rita ett hus",
+            "parameters": {
+              "length": "längd"
+            }
+          },
+          "draw a pinwheel": {
+            "parameters": {
+              "length": "längd",
+              "repeat": "upprepa",
+              "sides": "sidor"
+            }
+          },
+          "draw a shape": {
+            "parameters": {
+              "length": "längd",
+              "sides": "sidor"
+            }
+          },
+          "draw a square": {
+            "name": "rita en kvadrat",
+            "parameters": {
+              "length": "längd"
+            }
+          },
+          "draw a star": {
+            "name": "rita en stjärna",
+            "parameters": {
+              "length": "längd",
+              "points": "poäng"
+            }
+          },
+          "draw a triangle": {
+            "name": "rita en triangel",
+            "parameters": {
+              "length": "längd"
+            }
+          }
+        },
         "CourseD_EOC_artist_example2021": {
           "draw a circle": {
             "name": "rita en circel",
@@ -770,6 +871,52 @@
             }
           }
         },
+        "CourseD_EOC_artist_example2021_2023": {
+          "draw a circle": {
+            "name": "rita en circel",
+            "parameters": {
+              "radius": "radie"
+            }
+          },
+          "draw a house": {
+            "name": "rita ett hus",
+            "parameters": {
+              "length": "längd"
+            }
+          },
+          "draw a pinwheel": {
+            "parameters": {
+              "length": "längd",
+              "repeat": "upprepa",
+              "sides": "sidor"
+            }
+          },
+          "draw a shape": {
+            "parameters": {
+              "length": "längd",
+              "sides": "sidor"
+            }
+          },
+          "draw a square": {
+            "name": "rita en kvadrat",
+            "parameters": {
+              "length": "längd"
+            }
+          },
+          "draw a star": {
+            "name": "rita en stjärna",
+            "parameters": {
+              "length": "längd",
+              "points": "poäng"
+            }
+          },
+          "draw a triangle": {
+            "name": "rita en triangel",
+            "parameters": {
+              "length": "längd"
+            }
+          }
+        },
         "Find the Wizard": {
           "do something": {
             "name": "gör någonting"
@@ -803,6 +950,11 @@
           }
         },
         "Function intro Ryan_2021": {
+          "build bridge": {
+            "name": "bygg bro"
+          }
+        },
+        "Function intro Ryan_2023": {
           "build bridge": {
             "name": "bygg bro"
           }
@@ -945,6 +1097,11 @@
             "name": "rensa väg"
           }
         },
+        "MC_HOC_2017_07_Cole_2023": {
+          "clear path": {
+            "name": "rensa väg"
+          }
+        },
         "MC_HOC_2017_10_RETRY": {
           "fix long path": {
             "name": "ordna lång väg"
@@ -978,6 +1135,14 @@
           }
         },
         "MC_HOC_2017_10_RETRY_2021": {
+          "fix long path": {
+            "name": "ordna lång väg"
+          },
+          "fix short path": {
+            "name": "ordna kort väg"
+          }
+        },
+        "MC_HOC_2017_10_RETRY_2023": {
           "fix long path": {
             "name": "ordna lång väg"
           },
@@ -1025,6 +1190,14 @@
             "name": "bygg kort bro"
           }
         },
+        "MC_HOC_2017_Ali_2023": {
+          "build long bridge": {
+            "name": "bygg lång bro"
+          },
+          "build short bridge": {
+            "name": "bygg kort bro"
+          }
+        },
         "MC_HOC_2017_FP20x20": {
           "function 1": {
             "name": "funktion 1"
@@ -1058,6 +1231,14 @@
           }
         },
         "MC_HOC_2017_FP20x20_2021": {
+          "function 1": {
+            "name": "funktion 1"
+          },
+          "function 2": {
+            "name": "funktion 2"
+          }
+        },
+        "MC_HOC_2017_FP20x20_2023": {
           "function 1": {
             "name": "funktion 1"
           },
@@ -1573,6 +1754,11 @@
             "name": "gör någonting"
           }
         },
+        "courseC_data wizard_2023": {
+          "do something": {
+            "name": "gör någonting"
+          }
+        },
         "courseD_artist_binary1": {
           "draw": {
             "name": "rita",
@@ -2001,6 +2187,11 @@
             "name": "gör någonting"
           }
         },
+        "courseE_artist_functions10_2023": {
+          "do something": {
+            "name": "gör någonting"
+          }
+        },
         "courseE_artist_functions2": {
           "draw a square": {
             "name": "rita en kvadrat"
@@ -2027,6 +2218,11 @@
           }
         },
         "courseE_artist_functions2_2021": {
+          "draw a square": {
+            "name": "rita en kvadrat"
+          }
+        },
+        "courseE_artist_functions2_2023": {
           "draw a square": {
             "name": "rita en kvadrat"
           }
@@ -2062,6 +2258,11 @@
           }
         },
         "courseE_artist_functions3_2021": {
+          "draw a star": {
+            "name": "rita en stjärna"
+          }
+        },
+        "courseE_artist_functions3_2023": {
           "draw a star": {
             "name": "rita en stjärna"
           }
@@ -2107,6 +2308,11 @@
           }
         },
         "courseE_artist_functions5_2021": {
+          "draw a star": {
+            "name": "rita en stjärna"
+          }
+        },
+        "courseE_artist_functions5_2023": {
           "draw a star": {
             "name": "rita en stjärna"
           }
@@ -2160,6 +2366,11 @@
             "name": "rita ett fönster"
           }
         },
+        "courseE_artist_functions7_2023": {
+          "draw a window": {
+            "name": "rita ett fönster"
+          }
+        },
         "courseE_artist_functions8": {
           "do something": {
             "name": "gör någonting"
@@ -2208,6 +2419,14 @@
             "name": "rita en kvadrat"
           }
         },
+        "courseE_artist_functions8_2023": {
+          "do something": {
+            "name": "gör någonting"
+          },
+          "draw square": {
+            "name": "rita en kvadrat"
+          }
+        },
         "courseE_artist_functions8a2022": {
           "do something": {
             "name": "gör någonting"
@@ -2241,6 +2460,14 @@
           }
         },
         "courseE_artist_functions8a_2021": {
+          "do something": {
+            "name": "gör någonting"
+          },
+          "draw a square": {
+            "name": "rita en kvadrat"
+          }
+        },
+        "courseE_artist_functions8a_2023": {
           "do something": {
             "name": "gör någonting"
           },
@@ -2288,6 +2515,14 @@
             "name": "rita en kvadrat"
           }
         },
+        "courseE_artist_functions8b_2023": {
+          "do something": {
+            "name": "gör någonting"
+          },
+          "draw square": {
+            "name": "rita en kvadrat"
+          }
+        },
         "courseE_artist_functions8c2022": {
           "do something": {
             "name": "gör någonting"
@@ -2321,6 +2556,14 @@
           }
         },
         "courseE_artist_functions8c_2021": {
+          "do something": {
+            "name": "gör någonting"
+          },
+          "draw square": {
+            "name": "rita en kvadrat"
+          }
+        },
+        "courseE_artist_functions8c_2023": {
           "do something": {
             "name": "gör någonting"
           },
@@ -2376,6 +2619,14 @@
             "name": "rita triangel"
           }
         },
+        "courseE_artist_functions9_2023": {
+          "do something": {
+            "name": "gör någonting"
+          },
+          "draw triangle": {
+            "name": "rita triangel"
+          }
+        },
         "courseE_artist_functionsProj2022": {
           "draw square": {
             "name": "rita en kvadrat"
@@ -2397,6 +2648,11 @@
           }
         },
         "courseE_artist_functionsProj_2021": {
+          "draw square": {
+            "name": "rita en kvadrat"
+          }
+        },
+        "courseE_artist_functionsProj_2023": {
           "draw square": {
             "name": "rita en kvadrat"
           }
@@ -2442,6 +2698,14 @@
           }
         },
         "courseE_artist_functions_challenge1_2021": {
+          "do something": {
+            "name": "gör någonting"
+          },
+          "my design": {
+            "name": "min design"
+          }
+        },
+        "courseE_artist_functions_challenge1_2023": {
           "do something": {
             "name": "gör någonting"
           },
@@ -2497,6 +2761,14 @@
             "name": "min design"
           }
         },
+        "courseE_artist_functions_challenge2_2023": {
+          "do something": {
+            "name": "gör någonting"
+          },
+          "my design": {
+            "name": "min design"
+          }
+        },
         "courseE_artist_functions_predict1": {
           "draw a square": {
             "name": "rita en kvadrat"
@@ -2523,6 +2795,11 @@
           }
         },
         "courseE_artist_functions_predict1_2021": {
+          "draw a square": {
+            "name": "rita en kvadrat"
+          }
+        },
+        "courseE_artist_functions_predict1_2023": {
           "draw a square": {
             "name": "rita en kvadrat"
           }
@@ -2578,6 +2855,14 @@
           }
         },
         "courseE_artist_functions_predict2_2021": {
+          "do something": {
+            "name": "gör någonting"
+          },
+          "draw polygon": {
+            "name": "rita polygon"
+          }
+        },
+        "courseE_artist_functions_predict2_2023": {
           "do something": {
             "name": "gör någonting"
           },
@@ -2659,6 +2944,11 @@
           }
         },
         "courseF_apps_collector_-2022-2": {
+          "end game": {
+            "name": "avsluta spelet"
+          }
+        },
+        "courseF_apps_collector_2023": {
           "end game": {
             "name": "avsluta spelet"
           }

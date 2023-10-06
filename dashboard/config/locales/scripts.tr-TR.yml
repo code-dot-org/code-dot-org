@@ -363,6 +363,10 @@ tr:
           student_description: Seçtiğiniz bir Yapay Zeka (AI) alanındaki etik tuzakları
             ortaya çıkaran makaleler ve videolar kullanarak araştırma yapın.
           title: Yapay Zeka Etik Kurallarımız
+        ai-ethics-2023:
+          lessons:
+            lesson-1:
+              name: Yapay Zeka Etik Kurallarımız
         ai-lab:
           name: ai-lab (yapay zeka laboratuarı)
           student_description: AI Lab'ı( Yapay Zeka Laboratuarını) keşfetmek ve diğer

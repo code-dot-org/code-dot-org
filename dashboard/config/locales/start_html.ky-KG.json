@@ -10,11 +10,19 @@
           "No": "Жок",
           "Yes": "Ооба"
         },
+        "CSD U1 IO Pet Chooser 2_2023": {
+          "No": "Жок",
+          "Yes": "Ооба"
+        },
         "CSD U1 IO Pet Chooser_2021": {
           "No": "Жок",
           "Yes": "Ооба"
         },
         "CSD U1 IO Pet Chooser_2022": {
+          "No": "Жок",
+          "Yes": "Ооба"
+        },
+        "CSD U1 IO Pet Chooser_2023": {
           "No": "Жок",
           "Yes": "Ооба"
         },
@@ -30,16 +38,33 @@
           "Name": "Аты",
           "text": "Тексттер"
         },
+        "CSD U1 IO Story_2023": {
+          "City": "шаар",
+          "Color": "Түс",
+          "Name": "Аты",
+          "text": "Тексттер"
+        },
         "CSD U1 processing guess_2021": {
           "text": "Тексттер"
         },
         "CSD U1 processing guess_2022": {
           "text": "Тексттер"
         },
+        "CSD U1 processing guess_2023": {
+          "text": "Тексттер"
+        },
+        "CSD U1 processing live_2023": {
+          "cat": "мышык",
+          "chicken": "тоок",
+          "dog": "ит"
+        },
         "CSD U1 processing npark_2021": {
           "Sorry!": "Кечир!"
         },
         "CSD U1 processing npark_2022": {
+          "Sorry!": "Кечир!"
+        },
+        "CSD U1 processing npark_2023": {
           "Sorry!": "Кечир!"
         },
         "CSD U1 storage movies_2021": {
@@ -52,6 +77,11 @@
           "Yes": "Ооба",
           "text": "Тексттер"
         },
+        "CSD U1 storage movies_2023": {
+          "No": "Жок",
+          "Yes": "Ооба",
+          "text": "Тексттер"
+        },
         "CSD U1 storage outfit_2021": {
           "black": "кара",
           "green": "жашыл"
@@ -60,41 +90,113 @@
           "black": "кара",
           "green": "жашыл"
         },
+        "CSD U1 storage outfit_2023": {
+          "black": "кара",
+          "green": "жашыл"
+        },
+        "CSD U6 - Accelerometer - PD_2023": {
+          "You did it!": "Бүтүрдүңөр!"
+        },
         "CSD U6 - Accelerometer - PD_2222": {
           "You did it!": "Бүтүрдүңөр!"
         },
+        "CSD U6 - Accelerometer - SB2_mb2022": {
+          "Success!": "Ийгилик!"
+        },
+        "CSD U6 - Board Inputs - P_2023": {
+          "Success!": "Ийгилик!"
+        },
+        "CSD U6 - Board Inputs - PracC_mb2022": {
+          "Success!": "Ийгилик!"
+        },
+        "CSD U6 - Board Inputs - SB1_2023": {
+          "Success!": "Ийгилик!"
+        },
         "CSD U6 - Board Inputs - SB1_2222": {
+          "Success!": "Ийгилик!"
+        },
+        "CSD U6 - Board Inputs - SB1_mb2022": {
+          "Success!": "Ийгилик!"
+        },
+        "CSD U6 - Board Inputs - SB2_2023": {
           "Success!": "Ийгилик!"
         },
         "CSD U6 - Board Inputs - SB2_2222": {
           "Success!": "Ийгилик!"
         },
+        "CSD U6 - Board Inputs - SB2_mb2022": {
+          "Success!": "Ийгилик!"
+        },
+        "CSD U6 - Board Inputs - SB3_2023": {
+          "Success!": "Ийгилик!"
+        },
         "CSD U6 - Board Inputs - SB3_2222": {
+          "Success!": "Ийгилик!"
+        },
+        "CSD U6 - Board Outputs - A_mb2022": {
+          "Age": "Жашы",
+          "Name": "Аты"
+        },
+        "CSD U6 - Board Outputs - ChalC_mb2022": {
+          "No": "Жок",
+          "Yes": "Ооба"
+        },
+        "CSD U6 - Board Outputs - P_2023": {
           "Success!": "Ийгилик!"
         },
         "CSD U6 - Board Outputs - P_2222": {
           "Success!": "Ийгилик!"
         },
+        "CSD U6 - Board Outputs - SB1_2023": {
+          "Success!": "Ийгилик!"
+        },
         "CSD U6 - Board Outputs - SB1_2222": {
+          "Success!": "Ийгилик!"
+        },
+        "CSD U6 - Board Outputs - SB2_2023": {
           "Success!": "Ийгилик!"
         },
         "CSD U6 - Board Outputs - SB2_2222": {
           "Success!": "Ийгилик!"
         },
+        "CSD U6 - Board Outputs - Setup_2023": {
+          "Success!": "Ийгилик!"
+        },
         "CSD U6 - Board Outputs - Setup_2222": {
+          "Success!": "Ийгилик!"
+        },
+        "CSD U6 - Board Outputs - Setup_mb2022": {
+          "Success!": "Ийгилик!"
+        },
+        "CSD U6 - Color LEDs - PracA_2023": {
           "Success!": "Ийгилик!"
         },
         "CSD U6 - Color LEDs - PracA_2222": {
           "Success!": "Ийгилик!"
         },
+        "CSD U6 - Color LEDs - SB2_2023": {
+          "Success!": "Ийгилик!"
+        },
         "CSD U6 - Color LEDs - SB2_2222": {
+          "Success!": "Ийгилик!"
+        },
+        "CSD U6 - Color LEDs - SB3_2023": {
           "Success!": "Ийгилик!"
         },
         "CSD U6 - Color LEDs - SB3_2222": {
           "Success!": "Ийгилик!"
         },
+        "CSD U6 - Color LEDs - SB4_2023": {
+          "Medium": "Орто"
+        },
         "CSD U6 - Color LEDs - SB4_2222": {
           "Medium": "Орто"
+        },
+        "CSD U6 - Combine Inputs - A_2023": {
+          "green": "жашыл",
+          "left": "солго",
+          "red": "кызыл",
+          "right": "оңго"
         },
         "CSD U6 - Combine Inputs - A_2222": {
           "green": "жашыл",
@@ -102,19 +204,43 @@
           "red": "кызыл",
           "right": "оңго"
         },
+        "CSD U6 - Combine Inputs - A_mb2022": {
+          "left": "солго",
+          "right": "оңго"
+        },
         "CSD U6 - Combine Inputs - CA_2022": {
           "long": "узак",
           "short": "кыска"
+        },
+        "CSD U6 - Combine Inputs - CA_2023": {
+          "long": "узак",
+          "short": "кыска"
+        },
+        "CSD U6 - Combine Inputs - PracA_2023": {
+          "left": "солго",
+          "right": "оңго"
         },
         "CSD U6 - Combine Inputs - PracA_2222": {
           "left": "солго",
           "right": "оңго"
         },
+        "CSD U6 - Combine Inputs - PracC_2023": {
+          "blue": "көк",
+          "green": "жашыл"
+        },
         "CSD U6 - Combine Inputs - PracC_2222": {
           "blue": "көк",
           "green": "жашыл"
         },
+        "CSD U6 - Combine Inputs - SB2_2023": {
+          "long": "узак",
+          "short": "кыска"
+        },
         "CSD U6 - Combine Inputs - SB2_2222": {
+          "long": "узак",
+          "short": "кыска"
+        },
+        "CSD U6 - Combine Inputs - SB3_2023": {
           "long": "узак",
           "short": "кыска"
         },
@@ -122,18 +248,54 @@
           "long": "узак",
           "short": "кыска"
         },
+        "CSD U6 - Combine Inputs - SB4_2023": {
+          "long": "узак",
+          "short": "кыска"
+        },
         "CSD U6 - Combine Inputs - SB4_2222": {
           "long": "узак",
           "short": "кыска"
+        },
+        "CSD U6 - If Variables - ChalD_2023": {
+          "+": "+",
+          "-": "-"
         },
         "CSD U6 - If Variables - ChalD_2222": {
           "+": "+",
           "-": "-"
         },
+        "CSD U6 - If Variables - ChalD_mb2022": {
+          "+": "+",
+          "-": "-"
+        },
+        "CSD U6 - If Variables - SB3_2023": {
+          "Name": "Аты"
+        },
         "CSD U6 - If Variables - SB3_2222": {
           "Name": "Аты"
         },
+        "CSD U6 - If Variables - SB3_mb2022": {
+          "Name": "Аты"
+        },
+        "CSD U6 - Music - ChalD_2023": {
+          "A": "A",
+          "B": "B",
+          "C": "C",
+          "D": "D",
+          "E": "Ч",
+          "F": "F",
+          "G": "G"
+        },
         "CSD U6 - Music - ChalD_2222": {
+          "A": "A",
+          "B": "B",
+          "C": "C",
+          "D": "D",
+          "E": "Ч",
+          "F": "F",
+          "G": "G"
+        },
+        "CSD U6 - Music - Piano_2023": {
           "A": "A",
           "B": "B",
           "C": "C",
@@ -151,7 +313,25 @@
           "F": "F",
           "G": "G"
         },
+        "CSD U6 - Music - SB1_2023": {
+          "A": "A",
+          "B": "B",
+          "C": "C",
+          "D": "D",
+          "E": "Ч",
+          "F": "F",
+          "G": "G"
+        },
         "CSD U6 - Music - SB1_2222": {
+          "A": "A",
+          "B": "B",
+          "C": "C",
+          "D": "D",
+          "E": "Ч",
+          "F": "F",
+          "G": "G"
+        },
+        "CSD U6 - Music - SB2.5_2023": {
           "A": "A",
           "B": "B",
           "C": "C",
@@ -169,6 +349,15 @@
           "F": "F",
           "G": "G"
         },
+        "CSD U6 - Music - SB3_2023": {
+          "A": "A",
+          "B": "B",
+          "C": "C",
+          "D": "D",
+          "E": "Ч",
+          "F": "F",
+          "G": "G"
+        },
         "CSD U6 - Music - SB3_2222": {
           "A": "A",
           "B": "B",
@@ -178,65 +367,185 @@
           "F": "F",
           "G": "G"
         },
+        "CSD U6 - Music - SB4_2023": {
+          "Success!": "Ийгилик!"
+        },
         "CSD U6 - Music - SB4_2222": {
+          "Success!": "Ийгилик!"
+        },
+        "CSD U6 - Physical Input - ChalA_2023": {
           "Success!": "Ийгилик!"
         },
         "CSD U6 - Physical Input - ChalA_2222": {
           "Success!": "Ийгилик!"
         },
+        "CSD U6 - Physical Input - ChalA_mb2022": {
+          "Success!": "Ийгилик!"
+        },
+        "CSD U6 - Physical Input - ChalB_2023": {
+          "Success!": "Ийгилик!"
+        },
         "CSD U6 - Physical Input - ChalB_2222": {
+          "Success!": "Ийгилик!"
+        },
+        "CSD U6 - Physical Input - ChalB_mb2022": {
+          "Success!": "Ийгилик!"
+        },
+        "CSD U6 - Physical Input - ChalC_2023": {
           "Success!": "Ийгилик!"
         },
         "CSD U6 - Physical Input - ChalC_2222": {
           "Success!": "Ийгилик!"
         },
+        "CSD U6 - Physical Input - ChalC_mb2022": {
+          "Success!": "Ийгилик!"
+        },
+        "CSD U6 - Physical Input - PA_2023": {
+          "Score": "Эсеп"
+        },
         "CSD U6 - Physical Input - PA_2222": {
           "Score": "Эсеп"
         },
+        "CSD U6 - Physical Input - PA_mb2022": {
+          "Score": "Эсеп"
+        },
+        "CSD U6 - Physical Input - PC_2023": {
+          "Success!": "Ийгилик!"
+        },
         "CSD U6 - Physical Input - PC_2222": {
+          "Success!": "Ийгилик!"
+        },
+        "CSD U6 - Physical Input - PD_2023": {
           "Success!": "Ийгилик!"
         },
         "CSD U6 - Physical Input - PD_2222": {
           "Success!": "Ийгилик!"
         },
+        "CSD U6 - Physical Input - PD_mb2022": {
+          "Success!": "Ийгилик!"
+        },
+        "CSD U6 - Physical Input - SB1_2023": {
+          "Success!": "Ийгилик!"
+        },
         "CSD U6 - Physical Input - SB1_2222": {
+          "Success!": "Ийгилик!"
+        },
+        "CSD U6 - Physical Input - SB1_mb2022": {
+          "Success!": "Ийгилик!"
+        },
+        "CSD U6 - Physical Output - ChalA_2023": {
           "Success!": "Ийгилик!"
         },
         "CSD U6 - Physical Output - ChalA_2222": {
           "Success!": "Ийгилик!"
         },
+        "CSD U6 - Physical Output - ChalA_mb2022": {
+          "Success!": "Ийгилик!"
+        },
+        "CSD U6 - Physical Output - ChalB_2023": {
+          "Success!": "Ийгилик!"
+        },
         "CSD U6 - Physical Output - ChalB_2222": {
+          "Success!": "Ийгилик!"
+        },
+        "CSD U6 - Physical Output - ChalB_mb2022": {
+          "Success!": "Ийгилик!"
+        },
+        "CSD U6 - Physical Output - ChalC_2023": {
           "Success!": "Ийгилик!"
         },
         "CSD U6 - Physical Output - ChalC_2222": {
           "Success!": "Ийгилик!"
         },
+        "CSD U6 - Physical Output - ChalC_mb2022": {
+          "Success!": "Ийгилик!"
+        },
+        "CSD U6 - Physical Output - PB_2023": {
+          "Success!": "Ийгилик!"
+        },
         "CSD U6 - Physical Output - PB_2222": {
+          "Success!": "Ийгилик!"
+        },
+        "CSD U6 - Physical Output - PB_mb2022": {
+          "Success!": "Ийгилик!"
+        },
+        "CSD U6 - Physical Output - PC_2023": {
           "Success!": "Ийгилик!"
         },
         "CSD U6 - Physical Output - PC_2222": {
           "Success!": "Ийгилик!"
         },
+        "CSD U6 - Physical Output - PC_mb2022": {
+          "Success!": "Ийгилик!"
+        },
+        "CSD U6 - Physical Output - P_2023": {
+          "Success!": "Ийгилик!"
+        },
         "CSD U6 - Physical Output - P_2222": {
+          "Success!": "Ийгилик!"
+        },
+        "CSD U6 - Physical Output - P_mb2022": {
+          "Success!": "Ийгилик!"
+        },
+        "CSD U6 - Physical Output - SB1_2023": {
           "Success!": "Ийгилик!"
         },
         "CSD U6 - Physical Output - SB1_2222": {
           "Success!": "Ийгилик!"
         },
+        "CSD U6 - Physical Output - SB1_mb2022": {
+          "Success!": "Ийгилик!"
+        },
+        "CSD U6 - Physical Output - SB2.2_2023": {
+          "Success!": "Ийгилик!"
+        },
         "CSD U6 - Physical Output - SB2.2_2222": {
+          "Success!": "Ийгилик!"
+        },
+        "CSD U6 - Physical Output - SB2.2_mb2022": {
+          "Success!": "Ийгилик!"
+        },
+        "CSD U6 - Physical Output - SB2_2023": {
           "Success!": "Ийгилик!"
         },
         "CSD U6 - Physical Output - SB2_2222": {
           "Success!": "Ийгилик!"
         },
+        "CSD U6 - Physical Output - SB2_mb2022": {
+          "Success!": "Ийгилик!"
+        },
         "CSD U6 - Screen Inputs - SB2.1_2022": {
+          "black": "кара"
+        },
+        "CSD U6 - Screen Inputs - SB2.1_2023": {
+          "black": "кара"
+        },
+        "CSD U6 - Screen Inputs - SB2.1_mb2022": {
           "black": "кара"
         },
         "CSD U6 - Screen Inputs - SB2.2_2022": {
           "black": "кара"
         },
+        "CSD U6 - Screen Inputs - SB2.2_2023": {
+          "black": "кара"
+        },
+        "CSD U6 - Screen Inputs - SB2.2_mb2022": {
+          "black": "кара"
+        },
+        "CSD U6 - Screen Outputs - P_2023": {
+          "title": "титул"
+        },
         "CSD U6 - Screen Outputs - P_2222": {
           "title": "титул"
+        },
+        "CSD U6 - Screen Outputs - P_mb2022": {
+          "title": "титул"
+        },
+        "CSD U6 - Screen Outputs - PracB_2023": {
+          "down": "ылдый",
+          "left": "солго",
+          "right": "оңго",
+          "up": "өйдө"
         },
         "CSD U6 - Screen Outputs - PracB_2222": {
           "down": "ылдый",
@@ -244,10 +553,28 @@
           "right": "оңго",
           "up": "өйдө"
         },
+        "CSD U6 - Screen Outputs - PracB_mb2022": {
+          "down": "ылдый",
+          "left": "солго",
+          "right": "оңго",
+          "up": "өйдө"
+        },
+        "CSD U6 - Screen Outputs - SB1.1_2023": {
+          "name": "аты"
+        },
         "CSD U6 - Screen Outputs - SB1.1_2222": {
           "name": "аты"
         },
+        "CSD U6 - Screen Outputs - SB1.1_mb2022": {
+          "name": "аты"
+        },
+        "CSD U6 - Sensors - P_2023": {
+          "text": "Тексттер"
+        },
         "CSD U6 - Sensors - P_2222": {
+          "text": "Тексттер"
+        },
+        "CSD U6 - Sensors - P_mb2022": {
           "text": "Тексттер"
         },
         "CSD U6 Driver pt 2": {
@@ -569,7 +896,13 @@
         "CSDU6 Circuit Playground Test_2021": {
           "Success!": "Ийгилик!"
         },
+        "CSDU6 Circuit Playground Test_2023": {
+          "Success!": "Ийгилик!"
+        },
         "CSDU6 Circuit Playground Test_2222": {
+          "Success!": "Ийгилик!"
+        },
+        "CSDU6 Circuit Playground Test_mb2022": {
           "Success!": "Ийгилик!"
         },
         "CSDU6 circuit playground piano": {
@@ -644,6 +977,9 @@
           "F": "F",
           "G": "G"
         },
+        "U9L5 Cropping Widget_ai2023": {
+          "Reset": "Кайрадан"
+        },
         "allthethings design mode elements": {
           "text": "Тексттер"
         },
@@ -659,10 +995,16 @@
         "csd u5 recommender sample_2022": {
           "Start": "Башта"
         },
+        "csd u5 recommender sample_2023": {
+          "Start": "Башта"
+        },
         "csd-explore ui-4": {
           "Sorry!": "Кечир!"
         },
         "csd-explore ui-4_2022": {
+          "Sorry!": "Кечир!"
+        },
+        "csd-explore ui-4_2023": {
           "Sorry!": "Кечир!"
         },
         "ml-customize-raspado-2021": {
@@ -673,10 +1015,17 @@
           "no": "жок",
           "yes": "ооба"
         },
+        "ml-customize-raspado_2023": {
+          "no": "жок",
+          "yes": "ооба"
+        },
         "ml-intro ai lab- fruit veggie widget": {
           "Continue": "Улантуу"
         },
         "ml-intro ai lab- fruit veggie widget_2022": {
+          "Continue": "Улантуу"
+        },
+        "ml-intro ai lab- fruit veggie widget_2023": {
           "Continue": "Улантуу"
         },
         "ml-model card-medical app v2 2021-2": {
@@ -686,6 +1035,12 @@
           "yes": "ооба"
         },
         "ml-model card-medical app v2 2021-2_2022": {
+          "A": "A",
+          "W": "Б",
+          "no": "жок",
+          "yes": "ооба"
+        },
+        "ml-model card-medical app v2 2021-2_2023": {
           "A": "A",
           "W": "Б",
           "no": "жок",
@@ -701,11 +1056,20 @@
           "No": "Жок",
           "Yes": "Ооба"
         },
+        "ml-models in applab-zoo assessment_2023": {
+          "B": "B",
+          "No": "Жок",
+          "Yes": "Ооба"
+        },
         "ml-models in applab-zoo model embed": {
           "No": "Жок",
           "Yes": "Ооба"
         },
         "ml-models in applab-zoo model embed_2022": {
+          "No": "Жок",
+          "Yes": "Ооба"
+        },
+        "ml-models in applab-zoo model embed_2023": {
           "No": "Жок",
           "Yes": "Ооба"
         },
@@ -715,6 +1079,11 @@
           "rain": "жаан"
         },
         "ml-use model card-example3A_2022": {
+          "cloudy": "булуттуу",
+          "night": "түн",
+          "rain": "жаан"
+        },
+        "ml-use model card-example3A_2023": {
           "cloudy": "булуттуу",
           "night": "түн",
           "rain": "жаан"
