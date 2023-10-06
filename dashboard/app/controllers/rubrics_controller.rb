@@ -36,6 +36,7 @@ class RubricsController < ApplicationController
     @rubric = Rubric.find(params[:id])
     @lesson = @rubric.lesson
     if @rubric.update(rubric_params)
+      @rubric.lesson.script.write_script_json
       render json: @rubric
     else
       render action: 'edit'
