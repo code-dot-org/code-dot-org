@@ -31,7 +31,9 @@ class EvaluateRubricJob < ApplicationJob
     raise "lesson_s3_name not found for script_level_id: #{script_level.id}" if lesson_s3_name.blank?
 
     channel_id = get_channel_id(user, script_level)
-    puts "channel_id: #{channel_id.inspect}"
+    code, project_version = read_user_code(channel_id)
+    puts "code: #{code.inspect}"
+    puts "project_version: #{project_version.inspect}"
   end
 
   def self.ai_enabled?(script_level)
@@ -56,5 +58,13 @@ class EvaluateRubricJob < ApplicationJob
       script_level.script_id
     )
     channel_token.channel
+  end
+
+  private def read_user_code(channel_id)
+    # fetch the user's code from S3
+    source_data = SourceBucket.new.get(channel_id, "main.json")
+    code = JSON.parse(source_data[:body].string)['source']
+    version = source_data[:version_id]
+    [code, version]
   end
 end
