@@ -22,7 +22,7 @@ class LearningGoal < ApplicationRecord
 
   before_create :generate_key
 
-  accepts_nested_attributes_for :learning_goal_evidence_levels
+  # accepts_nested_attributes_for :learning_goal_evidence_levels
 
   def summarize
     {

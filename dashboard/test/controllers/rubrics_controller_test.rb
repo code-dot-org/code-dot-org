@@ -19,13 +19,19 @@ class RubricsControllerTest < ActionController::TestCase
   test "create Rubric and Learning Goals with valid params" do
     sign_in @levelbuilder
 
+    unit_name = @lesson.script.name
+    File.stubs(:write).with do |filename, contents|
+      filename == "#{Rails.root}/config/scripts_json/#{unit_name}.script_json" && contents.include?('learning goal example 1')
+    end.once
+    Rails.application.config.stubs(:levelbuilder_mode).returns true
+
     assert_creates(Rubric) do
       post :create, params: {
         level_id: @level.id,
         lesson_id: @lesson.id,
         learning_goals_attributes: [
-          {learning_goal: 'learning goal example 1', ai_enabled: true, position: 1},
-          {learning_goal: 'learning goal example 2', ai_enabled: false, position: 2}
+          {learning_goal: 'learning goal example 1', ai_enabled: true, position: 1, learning_goal_evidence_levels_attributes: [{understanding: 1, teacher_description: 'description 1'}]},
+          {learning_goal: 'learning goal example 2', ai_enabled: false, position: 2, learning_goal_evidence_levels_attributes: []},
         ]
       }
     end
@@ -38,6 +44,28 @@ class RubricsControllerTest < ActionController::TestCase
     assert_equal @level.id, rubric.level_id
     assert_equal @lesson.id, rubric.lesson_id
     assert_equal 2, learning_goals.length
+    refute_nil 1, @lesson.rubric
+  end
+
+  test 'updates rubric and learning goals with valid params' do
+    sign_in @levelbuilder
+
+    rubric = create :rubric
+    learning_goal = create :learning_goal, rubric: rubric
+    unit_name = rubric.lesson.script.name
+    File.stubs(:write).with do |filename, contents|
+      filename == "#{Rails.root}/config/scripts_json/#{unit_name}.script_json" && contents.include?(learning_goal.key)
+    end.once
+    Rails.application.config.stubs(:levelbuilder_mode).returns true
+
+    post :update, params: {
+      id: rubric.id,
+      learning_goals_attributes: [
+        {id: learning_goal.id, learning_goal: 'updated learning goal', ai_enabled: true, position: 0},
+      ]
+    }
+    learning_goal.reload
+    assert_equal 'updated learning goal', learning_goal.learning_goal
   end
 
   test 'submits rubric evaluations of a student' do

@@ -3,10 +3,10 @@ class RubricsController < ApplicationController
 
   before_action :require_levelbuilder_mode_or_test_env, except: [:submit_evaluations, :get_ai_evaluations]
   load_and_authorize_resource except: [:submit_evaluations, :get_ai_evaluations]
+  skip_load_resource only: [:create, :submit_evaluations, :get_ai_evaluations]
 
   # GET /rubrics/:rubric_id/edit
   def edit
-    @rubric = Rubric.find_by(id: params[:id])
     @lesson = @rubric.lesson
   end
 
@@ -18,7 +18,16 @@ class RubricsController < ApplicationController
 
   # POST /rubrics
   def create
-    @rubric = Rubric.new(rubric_params)
+    puts "in the create action"
+    puts rubric_params.except(:learning_goals_attributes).inspect
+    @rubric = Rubric.create!(rubric_params.except(:learning_goals_attributes))
+    rubric_params[:learning_goals_attributes].map do |lg_params|
+      puts lg_params.inspect
+      learning_goal = LearningGoal.create!(lg_params.except(:learning_goal_evidence_levels_attributes).merge(rubric_id: @rubric.id))
+      learning_goal.learning_goal_evidence_levels = (lg_params[:learning_goal_evidence_levels_attributes] || []).map do |lge_params|
+        LearningGoalEvidenceLevel.new(lge_params)
+      end
+    end
     @lesson = @rubric.lesson
     if @rubric.save
       @rubric.lesson.script.write_script_json
@@ -32,9 +41,18 @@ class RubricsController < ApplicationController
   # TODO(KT) [AITT-163]: add notice that rubric was successfully updated
   # PATCH /rubrics/:rubric_id
   def update
-    @rubric = Rubric.find(params[:id])
-    @lesson = @rubric.lesson
+    # @lesson = @rubric.lesson
     if @rubric.update(rubric_params)
+      @rubric.save!
+      @rubric.reload
+      puts @rubric.inspect
+      #puts @rubric.learning_goals.inspect
+      # @lesson.reload
+      puts @rubric.lesson.inspect
+      @rubric.lesson.script.reload
+      puts @rubric.lesson.script.inspect
+      puts @rubric.lesson.script.lessons.filter_map(&:rubric).count
+      #@rubric.lesson.script.write_script_json
       render json: @rubric
     else
       render action: 'edit'
