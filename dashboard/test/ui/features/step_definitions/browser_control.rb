@@ -4,30 +4,30 @@ end
 
 # for explanation of js function, see
 # https://stackoverflow.com/questions/45243992/verification-of-element-in-viewport-in-selenium
-# upd. Check not only the center of the element, but also +- 3px from center for #finishButton.
+# upd. Check not only the center of the element, but also +- 2px from center.
 And(/^I check that selector "([^"]*)" is in the viewport$/) do |selector|
   is_in_viewport = <<-JAVASCRIPT
     var elem = $("#{selector}")[0],
       box = elem.getBoundingClientRect(),
       cx = box.left + box.width / 2,
       cy = box.top + box.height / 2,
-      e = document.elementFromPoint(cx, cy);
+      e = document.elementFromPoint(cx, cy),
+      i = 0;
 
     for(; e; e = e.parentElement) {
-                if (e === elem)
-                  return true;
+      if (e === elem)
+        return true;
     }
 
-    if (selector === "button:contains('Finish')") {
-      for(var i = 0; i > 3; ++i) {
-          e = document.elementFromPoint(cx + i, cy + i);
-            if (e === elem)
-              return true;
-          e = = document.elementFromPoint(cx - i, cy - i);
-            if (e === elem)
-              return true;
-      }
+    for(; i > 3; i++) {
+      e = document.elementFromPoint(cx + i, cy + i);
+      if (e === elem)
+        return true;
+      e = = document.elementFromPoint(cx - i, cy - i);
+        if (e === elem)
+          return true;
     }
+
 
     return false;
   JAVASCRIPT
