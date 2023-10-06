@@ -34,6 +34,11 @@ class EvaluateRubricJob < ApplicationJob
     code, project_version = read_user_code(channel_id)
     puts "code: #{code.inspect}"
     puts "project_version: #{project_version.inspect}"
+
+    rubric = Rubric.find_by!(lesson_id: script_level.lesson.id, level_id: script_level.level.id)
+
+    ai_evaluations = get_fake_openai_evaluations(rubric)
+    puts "ai_evaluations: #{ai_evaluations.inspect}"
   end
 
   def self.ai_enabled?(script_level)
@@ -66,5 +71,14 @@ class EvaluateRubricJob < ApplicationJob
     code = JSON.parse(source_data[:body].string)['source']
     version = source_data[:version_id]
     [code, version]
+  end
+
+  private def get_fake_openai_evaluations(rubric)
+    rubric.learning_goals.map do |learning_goal|
+      {
+        'Key Concept' => learning_goal.learning_goal,
+        'Grade' => 'Extensive Evidence'
+      }
+    end
   end
 end
