@@ -12,6 +12,7 @@ And(/^I check that selector "([^"]*)" is in the viewport$/) do |selector|
       cx = box.left + box.width / 2,
       cy = box.top + box.height / 2,
       e = document.elementFromPoint(cx, cy),
+      e2 = document.elementFromPoint(cx, cy - 2),
       i = 0;
 
     for(; e; e = e.parentElement) {
@@ -19,15 +20,10 @@ And(/^I check that selector "([^"]*)" is in the viewport$/) do |selector|
         return true;
     }
 
-    for(; i > 3; i++) {
-      e = document.elementFromPoint(cx + i, cy + i);
+    for(; e2; e2 = e2.parentElement) {
       if (e === elem)
         return true;
-      e = = document.elementFromPoint(cx - i, cy - i);
-        if (e === elem)
-          return true;
     }
-
 
     return false;
   JAVASCRIPT
