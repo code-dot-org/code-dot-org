@@ -22,6 +22,7 @@ import EvidenceLevels from './EvidenceLevels';
 import SafeMarkdown from '@cdo/apps/templates/SafeMarkdown';
 import AiAssessment from './AiAssessment';
 import HttpClient from '@cdo/apps/util/HttpClient';
+import {UNDERSTANDING_LEVEL_STRINGS} from './rubricHelpers';
 
 export default function LearningGoal({
   learningGoal,
@@ -205,6 +206,11 @@ export default function LearningGoal({
           {/*TODO: Display status of feedback*/}
           {canProvideFeedback && (
             <BodyThreeText>{i18n.needsApproval()}</BodyThreeText>
+          )}
+          {submittedEvaluation?.understanding && (
+            <BodyThreeText>
+              {UNDERSTANDING_LEVEL_STRINGS[submittedEvaluation.understanding]}
+            </BodyThreeText>
           )}
         </div>
       </summary>

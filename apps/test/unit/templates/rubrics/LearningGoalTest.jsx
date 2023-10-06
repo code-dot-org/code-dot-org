@@ -4,6 +4,7 @@ import {shallow} from 'enzyme';
 import sinon from 'sinon';
 import analyticsReporter from '@cdo/apps/lib/util/AnalyticsReporter';
 import {EVENTS} from '@cdo/apps/lib/util/AnalyticsConstants';
+import {RubricUnderstandingLevels} from '@cdo/apps/util/sharedConstants';
 import LearningGoal from '@cdo/apps/templates/rubrics/LearningGoal';
 
 describe('LearningGoal', () => {
@@ -181,5 +182,23 @@ describe('LearningGoal', () => {
     );
     expect(wrapper.find('textarea').props().value).to.equal('test feedback');
     expect(wrapper.find('textarea').props().disabled).to.equal(true);
+  });
+
+  it('shows understanding in header if submittedEvaluation contains understand', () => {
+    const wrapper = shallow(
+      <LearningGoal
+        learningGoal={{
+          learningGoal: 'Testing',
+          evidenceLevels: [],
+        }}
+        submittedEvaluation={{
+          feedback: 'test feedback',
+          understanding: RubricUnderstandingLevels.LIMITED,
+        }}
+      />
+    );
+    expect(wrapper.find('BodyThreeText').props().children).to.equal(
+      'Limited Evidence'
+    );
   });
 });
