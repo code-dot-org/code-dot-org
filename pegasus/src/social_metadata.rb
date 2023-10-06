@@ -15,6 +15,7 @@
 #   code.org/ai
 #   code.org/ai/pl/101
 #   code.org/ai/how-ai-works
+#   code.org/videos
 #
 #   hourofcode.com/
 #   hourofcode.com/learn
@@ -62,6 +63,7 @@ def get_social_metadata_for_page(request)
     ai_101: {path: "/shared/images/social-media/ai-101-social.png", width: 1200, height: 630},
     ai_how_ai_works: {path: "/shared/images/social-media/ai-how-ai-works-social.png", width: 1200, height: 630},
     hoc_2023_social: {path: "/shared/images/social-media/hoc2023_social.png", width: 1200, height: 630},
+    videos: {path: "/shared/images/social-media/videos-page.png", width: 1200, height: 630},
   }
 
   # Important:
@@ -219,6 +221,12 @@ def get_social_metadata_for_page(request)
         image: images[:ai_how_ai_works]
       }
     },
+    "videos" => {
+      "default" => {
+        title: hoc_s(:video_library_page_main_title),
+        image: images[:ai_how_ai_works]
+      }
+    },
   }
 
   if request.path == "/challenge" && request.site == "code.org"
@@ -255,6 +263,8 @@ def get_social_metadata_for_page(request)
     page = "ai_101"
   elsif request.path == "/ai/how-ai-works" && request.site == "code.org"
     page = "ai_how_ai_works"
+  elsif request.path == "/resources/videos" && request.site == "code.org"
+    page = "videos"
   else
     return {}
   end
