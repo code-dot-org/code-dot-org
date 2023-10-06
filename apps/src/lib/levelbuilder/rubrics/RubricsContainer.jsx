@@ -143,6 +143,7 @@ export default function RubricsContainer({
       setSaveNotificationText,
       rubric,
       learningGoalList,
+      setLearningGoalList,
       selectedLevelForAssessment,
       lessonId
     );
