@@ -146,7 +146,6 @@ export default class FunctionEditor {
       procedure.getName(),
       Blockly.getHiddenDefinitionWorkspace()
     );
-    console.log({existingProcedureBlock});
 
     if (existingProcedureBlock) {
       // If we already have stored data about the procedure, use that.

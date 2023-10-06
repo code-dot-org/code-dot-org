@@ -75,6 +75,7 @@ export const blocks = GoogleBlockly.common.createBlockDefinitionsFromJsonArray([
       'procedure_defnoreturn_set_comment_helper',
       'procedure_def_set_no_return_helper',
       'behaviors_block_frame',
+      'modal_procedures_no_destroy',
     ],
     mutator: 'behavior_def_mutator',
   },
@@ -99,6 +100,7 @@ export const blocks = GoogleBlockly.common.createBlockDefinitionsFromJsonArray([
       'procedure_caller_context_menu_mixin',
       'procedure_caller_onchange_mixin',
       'procedure_callernoreturn_get_def_block_mixin',
+      'modal_procedures_no_destroy',
     ],
     mutator: 'behavior_get_mutator',
   },
@@ -173,7 +175,6 @@ const editButtonHandler = function () {
   if (modalFunctionEditorExperimentEnabled) {
     const procedure = this.getSourceBlock().getProcedureModel();
     if (procedure) {
-      console.log({procedure});
       Blockly.functionEditor.showForFunction(procedure);
     }
   } else {
