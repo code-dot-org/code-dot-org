@@ -92,7 +92,7 @@ export const blocks = GoogleBlockly.common.createBlockDefinitionsFromJsonArray([
     style: 'behavior_blocks',
     helpUrl: '%{BKY_PROCEDURES_CALLNORETURN_HELPURL}',
     extensions: [
-      'procedures_edit_button',
+      'behaviors_edit_button',
       'procedure_caller_get_def_mixin',
       'procedure_caller_var_mixin',
       'procedure_caller_update_shape_mixin',
@@ -149,6 +149,45 @@ GoogleBlockly.Extensions.registerMutator(
   behaviorGetMutator
 );
 
+// This extension adds an edit button to the end of a procedure call block.
+const editButton = function () {
+  // Edit buttons are used to open the modal editor. The button is appended to the last input.
+  if (
+    useModalFunctionEditor &&
+    this.inputList.length &&
+    !this.workspace.isFlyout
+  ) {
+    const button = new Blockly.FieldButton({
+      value: msg.edit(),
+      onClick: editButtonHandler,
+      colorOverrides: {button: 'blue', text: 'white'},
+    });
+    this.inputList[this.inputList.length - 1].appendField(button, 'EDIT');
+  }
+};
+
+GoogleBlockly.Extensions.register('behaviors_edit_button', editButton);
+
+// Respond to the click of a call block's edit button
+const editButtonHandler = function () {
+  if (modalFunctionEditorExperimentEnabled) {
+    const procedure = this.getSourceBlock().getProcedureModel();
+    if (procedure) {
+      Blockly.functionEditor.showForFunction(procedure);
+    }
+  } else {
+    // If we aren't using the new modal function editor yet, just center the block that
+    // was clicked.
+    const workspace = this.getSourceBlock().workspace;
+    const name = this.getSourceBlock().getFieldValue('NAME');
+    const definition = GoogleBlockly.Procedures.getDefinition(name, workspace);
+    if (definition) {
+      workspace.centerOnBlock(definition.id);
+      definition.select();
+    }
+  }
+};
+
 /**
  * Constructs the blocks required by the flyout for the procedure category.
  * Modeled after core Blockly procedures flyout category, but excludes unwanted blocks.
@@ -173,9 +212,14 @@ export function flyoutCategory(workspace, functionEditorOpen = false) {
     },
   };
 
-  // TODO: Replace this with a call to open the behavior editor with a new block
-  const createNewBehavior = () =>
+  const createNewBehavior = function () {
     createAndCenterDefinitionBlock(behaviorDefinitionBlock);
+    if (modalFunctionEditorExperimentEnabled) {
+      Blockly.functionEditor.newProcedureCallback();
+    } else {
+      createAndCenterDefinitionBlock(behaviorDefinitionBlock);
+    }
+  };
 
   // If the modal function editor is enabled, we render a button to open the editor
   // Otherwise, we render a "blank" behavior definition block
