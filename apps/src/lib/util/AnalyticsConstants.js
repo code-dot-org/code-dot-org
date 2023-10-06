@@ -82,6 +82,8 @@ const EVENTS = {
   RUBRIC_CLOSED_FROM_FAB_EVENT: 'Rubric Closed From FAB',
   RUBRIC_LEARNING_GOAL_EXPANDED_EVENT: 'Rubric Learning Goal Expanded',
   RUBRIC_LEARNING_GOAL_COLLAPSED_EVENT: 'Rubric Learning Goal Collapsed',
+
+  AGE_21_SELECTED_EVENT: 'Age 21+ Selected',
 };
 
 export {EVENTS};

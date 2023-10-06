@@ -25,7 +25,7 @@ Mencuba Satu Jam Kod ialah cara yang mudah dan menyeronokkan untuk memperkenal p
 
 <a id="how-to-video"></a>
 
-## 1. Sila tonton video panduan cara melakukan Hour of Code <iframe width="500" height="255" src="//www.youtube.com/embed/SrnvvWDm73k" frameborder="0" allowfullscreen></iframe> 
+## 1. Sila tonton video panduan cara melakukan Hour of Code <iframe width="500" height="255" src="https://www.youtube-nocookie.com/embed/SrnvvWDm73k" frameborder="0" allowfullscreen></iframe> 
 
 * * *
 
@@ -111,7 +111,7 @@ Tidak menjadi masalah jika anda dan pelajar anda masih baharu kepada sains kompu
 
 Memberikan panduan kepada pelajar mengenai aktiviti
 
-- Write the tutorial link on a whiteboard. Find the link listed on the [information for your selected tutorial]({{ urls/learn }}).
+- Tulis pautan tutorial di papan putih. Cari pautan yang disenaraikan pada [maklumat untuk tutorial pilihan anda]({{ urls/learn }}).
 
 Apabila pelajar anda mengalami kesukaran, tidak menjadi masalah untuk menjawab:
 
@@ -151,6 +151,6 @@ Bagaimanakah jika pelajar selesai lebih awal?
 
 ### Apakah yang seterusnya selepas Jam Kod?
 
-Computer science doesn’t have to end with the Hour of Code! [Learn how](/beyond) to bring CS to your school and students.
+Sains komputer tidak perlu berakhir dengan Hour of Code! [Ketahui](/beyond) cara membawa CS ke sekolah dan pelajar anda.
 
 {{ signup_button }}

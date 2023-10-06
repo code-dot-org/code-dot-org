@@ -26,6 +26,7 @@ class LearningGoal < ApplicationRecord
 
   def summarize
     {
+      id: id,
       key: key,
       learningGoal: learning_goal,
       aiEnabled: ai_enabled,

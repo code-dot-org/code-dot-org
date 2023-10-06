@@ -461,6 +461,11 @@ az-AZ:
           **Müəllimlər üçün Bölmə Sonu Sorğuları:** Tələbələriniz sorğunu tamamlasa da, qısa müddətdə müəllim sorğusunu tamamladığınız üçün sizə təşəkkür edirik
 
           ## [Müəllim Sorğusu üçün Bura Klikləyin](https://studio.code.org/form/teacher_csd_unit_survey?survey_data%5Bunit_number%5D=1)
+      CSD End of Unit Survey - Unit 1 - IntroMD_2023:
+        teacher_markdown: |-
+          **Müəllimlər üçün Bölmə Sonu Sorğuları:** Tələbələriniz sorğunu tamamlasa da, qısa müddətdə müəllim sorğusunu tamamladığınız üçün sizə təşəkkür edirik
+
+          ## [Müəllim Sorğusu üçün Bura Klikləyin](https://studio.code.org/form/teacher_csd_unit_survey?survey_data%5Bunit_number%5D=1)
       CSD Games Properties multi predict_2021:
         answers:
         - {}
@@ -479,9 +484,20 @@ az-AZ:
         - {}
         questions:
         - {}
+      CSD Games Properties multi predict_2023:
+        answers:
+        - {}
+        - {}
+        - {}
+        - {}
+        - {}
+        questions:
+        - {}
       CSD Games Properties practice_2021:
         display_name: Sprite Xüsusiyyətləri
       CSD Games Properties practice_2022:
+        display_name: Sprite Xüsusiyyətləri
+      CSD Games Properties practice_2023:
         display_name: Sprite Xüsusiyyətləri
       CSD Header Size MC:
         answers:
@@ -605,6 +621,30 @@ az-AZ:
           **Səviyyə növləri:** Tələbələrdən HTML başlıqlarının veb-səhifədə necə göstəriləcəyini seçməyi xahiş edən bu çox seçimli sual. Siz həmin səviyyəyə keçməklə və sağ tərəfdən Müəllim Panelini çıxarmaqla hansı tələbələrin suala düzgün cavab verdiyini görə bilərsiniz. Suala uğurla cavab verən şagirdlərdə yaşıl bir baloncuk olacaq. Şagirdlərin düzgün cavab vermək istədikləri qədər şansı var, buna görə də təxmin etmək və yoxlamaq da düzgün cavaba səbəb ola bilər.
           <div class="clear"></div>
         title: Başlıqları sürətli yoxlayın
+      CSD Header Size MC_2018_2019_pilot_2023:
+        answers:
+        - text: https://images.code.org/a4e973cc13db380ca1e1efeb4263974f-image-1473432905067.53.47
+            AM.png
+        - text: https://images.code.org/1c660b4e54a3e835250597cb261d8e17-image-1473432905068.54.08
+            AM.png
+        - text: https://images.code.org/22e9ae6a04afd8251b29939a6fa63411-image-1473432905069.54.25
+            AM.png
+        - text: https://images.code.org/0eee565202089d44a6bb5633603c45e0-image-1473432905069.54.50
+            AM.png
+        content1: Aşağıdakı koda bax və başlığın necə görünəcəyini təxmin et. Sağdakı
+          seçimlərdən birini seç.
+        markdown: |-
+          <pre>
+          &lt;h3&gt; Yumurta &lt;/h3&gt;
+          &lt;h1&gt; Donuz Bastırması &lt;/h1&gt;
+          &lt;h6&gt; Vafli &lt;/h6&gt;
+          </pre>
+        teacher_markdown: |
+          <img src="https://cdo-curriculum.s3.amazonaws.com/media/uploads/Screen-Shot-2017-04-27-at-10.38.03-AM.png" style="width:200px; float:right">
+
+          **Səviyyə növləri:** Tələbələrdən HTML başlıqlarının veb-səhifədə necə göstəriləcəyini seçməyi xahiş edən bu çox seçimli sual. Siz həmin səviyyəyə keçməklə və sağ tərəfdən Müəllim Panelini çıxarmaqla hansı tələbələrin suala düzgün cavab verdiyini görə bilərsiniz. Suala uğurla cavab verən şagirdlərdə yaşıl bir baloncuk olacaq. Şagirdlərin düzgün cavab vermək istədikləri qədər şansı var, buna görə də təxmin etmək və yoxlamaq da düzgün cavaba səbəb ola bilər.
+          <div class="clear"></div>
+        title: Başlıqları sürətli yoxlayın
       CSD Physical Computing Post-Project Test:
         title: Layihədən sonrakı Fiziki Hesablama Testi
       CSD Physical Computing Post-Project Test_2021:
@@ -612,6 +652,8 @@ az-AZ:
       CSD Physical Computing Post-Project Test_2022:
         title: Layihədən sonrakı Fiziki Hesablama Testi
       CSD Student End of Unit Survey - Unit 1_2022:
+        title: CS Discoveries Semestr Sonu Sorğusu!
+      CSD Student End of Unit Survey - Unit 1_2023:
         title: CS Discoveries Semestr Sonu Sorğusu!
       CSD U1 IOSP match:
         answers:
@@ -721,6 +763,60 @@ az-AZ:
           * [Tətbiqlər və Problemlərin Həll olunması](https://docs.google.com/document/d/1hm5wWoVqDhFHbs4MfN0gcAnskZ5a6a5KdO7N3Y0GLoA/edit) - Qiymətləndirmə Nümunəsi ([PDF](https://docs.google.com/document/d/1hm5wWoVqDhFHbs4MfN0gcAnskZ5a6a5KdO7N3Y0GLoA/export?format=pdf) | [DOCX](https://docs.google.com/document/d/1hm5wWoVqDhFHbs4MfN0gcAnskZ5a6a5KdO7N3Y0GLoA/export?format=doc))
 
 
+      CSD U1 MC Q1_2023:
+        answers:
+        - {}
+        - {}
+        - {}
+        - {}
+        - {}
+      CSD U1 MC Q2_2023:
+        answers:
+        - {}
+        - {}
+        - {}
+        - {}
+        - {}
+        questions:
+        - {}
+      CSD U1 MC Q3_2023:
+        answers:
+        - {}
+        - {}
+        - text: Musiqi
+        - text: Yer
+        - {}
+        questions:
+        - {}
+      CSD U1 MC Q4_2023:
+        answers:
+        - {}
+        - {}
+        - {}
+        - {}
+        - {}
+        questions:
+        - {}
+      CSD U1 Match Q5_2023:
+        answers:
+        - text: Giriş
+        - text: Yaddaş
+        - {}
+        questions:
+        - {}
+        - {}
+        - {}
+      CSD U1 Match Q6_2023:
+        answers:
+        - {}
+        - {}
+        - {}
+        - {}
+        questions:
+        - {}
+        - {}
+        - {}
+        - text: Təyin et
       CSD U1 Test:
         title: 'Kompüterlər və Problemin Həlli Layihə Sonrası Test '
       CSD U1 Test PSP match:
@@ -810,6 +906,8 @@ az-AZ:
       CSD U1 Test_2021:
         title: 'Kompüterlər və Problemin Həlli Layihə Sonrası Test '
       CSD U1 Test_2022:
+        title: 'Kompüterlər və Problemin Həlli Layihə Sonrası Test '
+      CSD U1 Test_2023:
         title: 'Kompüterlər və Problemin Həlli Layihə Sonrası Test '
       CSD U2 Design Project:
         content1: Burada təsvir edin
@@ -938,9 +1036,13 @@ az-AZ:
         display_name: Şəkillər əlavə etmək
       CSD U2 Image challenge_pilot_2022:
         display_name: Şəkillər əlavə etmək
+      CSD U2 Image challenge_pilot_2023:
+        display_name: Şəkillər əlavə etmək
       CSD U2 Image practice_pilot_2021:
         display_name: Şəkillər əlavə etmək
       CSD U2 Image practice_pilot_2022:
+        display_name: Şəkillər əlavə etmək
+      CSD U2 Image practice_pilot_2023:
         display_name: Şəkillər əlavə etmək
       CSD U2 L1 Overview:
         content1: Burada təsvir edin
@@ -1128,6 +1230,95 @@ az-AZ:
         teacher_markdown: |-
           * [Şəxsi Veb səhifə] (https://docs.google.com/document/d/1mPwjeBMewyblcHU1fGLQD-og5f2U-cBwYduBG55TgIY/edit) - Layihə Bələdçisi Nümunə ([PDF] (https://docs.google.com/document/d / 1mPwjeBMewyblcHU1fGLQD-og5f2U-cBwYduBG55TgIY / export? Format = pdf) | [DOCX] (https://docs.google.com/document/d/1mPwjeBMewyblcHU1fGLQD-CT )/f5)
           * [Şəxsi Veb səhifə] (https://docs.google.com/document/d/1OXAJvxuygTJyfvSUnrajhEbC34O_J26VQswwPsfnLZw/edit) - Peer Review Exemplar ([PDF] (https://docs.google.com/docJJVVO/Vo/Vo/Vo/Vs/V1/1/1) ? format = pdf) | [DOCX] (https://docs.google.com/document/d/1OXAJvxuygTJyfvSUnrajhEbC34O_J26VQswwPsfnLZw/export?format=doc))
+      CSD U2 MC Q10_2023:
+        answers:
+        - text: Sənin doğum günün
+        - text: Ünvanın
+        - {}
+        - text: Adınız
+        - {}
+        questions:
+        - {}
+      CSD U2 MC Q11_2023:
+        answers:
+        - {}
+        - {}
+        - {}
+        - {}
+        questions:
+        - {}
+      CSD U2 MC Q1_2023:
+        answers:
+        - {}
+        - {}
+        - {}
+        - {}
+        - {}
+        questions:
+        - {}
+      CSD U2 MC Q2_2023:
+        answers:
+        - {}
+        - {}
+        - {}
+        - {}
+        - {}
+        questions:
+        - {}
+      CSD U2 MC Q3_2023:
+        answers:
+        - {}
+        - {}
+        - {}
+        - {}
+        - {}
+        questions:
+        - {}
+      CSD U2 MC Q4_2023:
+        answers:
+        - {}
+        - {}
+        - {}
+        - {}
+        - {}
+        questions:
+        - {}
+      CSD U2 MC Q6_2023:
+        answers:
+        - {}
+        - {}
+        - {}
+        - {}
+        - {}
+        questions:
+        - {}
+      CSD U2 MC Q7_2023:
+        answers:
+        - {}
+        - {}
+        - {}
+        - {}
+        - {}
+        questions:
+        - {}
+      CSD U2 MC Q8_2023:
+        answers:
+        - {}
+        - {}
+        - {}
+        - {}
+        - {}
+        questions:
+        - {}
+      CSD U2 Match Q1_2023:
+        answers:
+        - {}
+        - {}
+        - {}
+        questions:
+        - text: rəng
+        - {}
+        - {}
       CSD U2 PSP Programming:
         markdown: |-
           # Proqramlaşdırma üçün Problemin Həlli Prosesi
@@ -1564,6 +1755,19 @@ az-AZ:
         - {}
         - {}
         - text: 'Faylın adında boşluq (space) var '
+      CSD U2 image debug match_2023:
+        answers:
+        - {}
+        - {}
+        - {}
+        - {}
+        - {}
+        questions:
+        - {}
+        - {}
+        - {}
+        - {}
+        - text: 'Faylın adında boşluq (space) var '
       CSD U2 image debug match_pilot_2021:
         answers:
         - {}
@@ -1752,6 +1956,14 @@ az-AZ:
           # Planlaşdırma Nəzarəti
 
           Qalan səviyyələrdə davam etmələrinə icazə verməzdən əvvəl tələbə planlarını yoxlayın.
+      CSD U2 project guide_2018_2019_pilot_2023:
+        content1: Burada təsvir edin
+        teacher_markdown: |-
+          # Planlaşdırma Nəzarəti
+
+          Qalan səviyyələrdə davam etmələrinə icazə verməzdən əvvəl tələbə planlarını yoxlayın.
+      CSD U2L2 - Chal_2023:
+        display_name: Çağırış Səviyyələri
       CSD U3 - conditionals - Matching:
         answers:
         - {}
@@ -1825,6 +2037,24 @@ az-AZ:
         - {}
         - {}
       CSD U3 - conditionals - Matching_2018_2019_pilot_2022:
+        answers:
+        - {}
+        - {}
+        - {}
+        - {}
+        - {}
+        content1: 'Boolean ifadəsini ingiliscə təsvirə uyğunlaşdırın.
+
+          '
+        questions:
+        - text: 'Köpək spritinin fırlanması pişik spritinin fırlanmasından azdır?
+
+            '
+        - {}
+        - {}
+        - {}
+        - {}
+      CSD U3 - conditionals - Matching_2018_2019_pilot_2023:
         answers:
         - {}
         - {}
@@ -1927,6 +2157,27 @@ az-AZ:
         - text: Bu proqram ilə konsolda hansı nəticə çap olunacaq?
         title: başlıq
       CSD U3 Boolean MC_2018_2019_pilot_2022:
+        answers:
+        - text: |-
+            doğru
+            yanlış
+            doğru
+        - text: |-
+            0
+            200
+            100
+        - text: |-
+            doğru
+            xəta
+            doğru
+        - text: |-
+            yanlış
+            doğru
+            yanlış
+        questions:
+        - text: Bu proqram ilə konsolda hansı nəticə çap olunacaq?
+        title: başlıq
+      CSD U3 Boolean MC_2018_2019_pilot_2023:
         answers:
         - text: |-
             doğru
@@ -2091,6 +2342,12 @@ az-AZ:
         - {}
         - {}
       CSD U3 Functions Prediction define first_2018_2019_pilot_2022:
+        answers:
+        - {}
+        - {}
+        - {}
+        - {}
+      CSD U3 Functions Prediction define first_2018_2019_pilot_2023:
         answers:
         - {}
         - {}
@@ -2355,6 +2612,137 @@ az-AZ:
           # Baxış
 
           Draw Loop və Counter Pattern-i birləşdirərək sinif spritləri ekrana keçirən və digər sprite xüsusiyyətlərini canlandıran proqramlar yazır.
+      CSD U3 MC Q10_2023:
+        answers:
+        - {}
+        - {}
+        - {}
+        - {}
+        questions:
+        - {}
+      CSD U3 MC Q11_2023:
+        answers:
+        - {}
+        - {}
+        - {}
+        - {}
+        questions:
+        - {}
+      CSD U3 MC Q12_2023:
+        answers:
+        - {}
+        - {}
+        - {}
+        - {}
+        - {}
+        questions:
+        - {}
+      CSD U3 MC Q13_2023:
+        answers:
+        - {}
+        - {}
+        - {}
+        - {}
+        - {}
+        questions:
+        - {}
+      CSD U3 MC Q14_2023:
+        answers:
+        - text: '0'
+        - {}
+        - text: '5'
+        - text: '6'
+        - {}
+        questions:
+        - {}
+      CSD U3 MC Q1_2023:
+        answers:
+        - {}
+        - {}
+        - {}
+        - {}
+        - {}
+        questions:
+        - {}
+      CSD U3 MC Q2_2023:
+        answers:
+        - {}
+        - {}
+        - {}
+        - {}
+        - {}
+        questions:
+        - {}
+      CSD U3 MC Q4_2023:
+        answers:
+        - {}
+        - {}
+        - {}
+        - {}
+        - {}
+        questions:
+        - {}
+      CSD U3 MC Q5_2023:
+        answers:
+        - {}
+        - {}
+        - {}
+        - {}
+        - {}
+        questions:
+        - {}
+      CSD U3 MC Q6_2023:
+        answers:
+        - {}
+        - {}
+        - {}
+        - {}
+        questions:
+        - {}
+      CSD U3 MC Q8_2023:
+        answers:
+        - {}
+        - {}
+        - {}
+        - {}
+        - {}
+        questions:
+        - {}
+      CSD U3 Match Q1_2023:
+        answers:
+        - {}
+        - {}
+        - {}
+        - {}
+        questions:
+        - {}
+        - {}
+        - {}
+        - {}
+      CSD U3 Match Q2_2023:
+        answers:
+        - text: x
+        - text: y
+        - text: enlik
+        - text: hündürlük
+        questions:
+        - {}
+        - {}
+        - {}
+        - {}
+      CSD U3 Match Q3_2023:
+        answers:
+        - {}
+        - {}
+        - {}
+        - {}
+        - {}
+        questions:
+        - {}
+        - {}
+        - {}
+        - {}
+        - {}
       CSD U3 Movement Challenges:
         markdown: |-
           # Çağırışlar
@@ -2428,6 +2816,15 @@ az-AZ:
         - text: 'Proqramı oxuyun və bu animasiyalardan hansının canlanacağını təxmin
             edin. '
       CSD U3 Sprite Movement Predict Multi_2018_2019_pilot_2022:
+        answers:
+        - text: "![](https://images.code.org/649915789345f5958475cd2b91e0630c-image-1491939133180.gif)"
+        - text: "![](https://images.code.org/2f5e7773ae2f99d6217929bd58490393-image-1491939162998.gif)"
+        - text: "![](https://images.code.org/7c43fbce8cbbe7c15614203290f806e7-image-1491939169414.gif)"
+        - text: "![](https://images.code.org/c62dbed9a37b03958cb056bf493bd59c-image-1491939175575.gif)"
+        questions:
+        - text: 'Proqramı oxuyun və bu animasiyalardan hansının canlanacağını təxmin
+            edin. '
+      CSD U3 Sprite Movement Predict Multi_2018_2019_pilot_2023:
         answers:
         - text: "![](https://images.code.org/649915789345f5958475cd2b91e0630c-image-1491939133180.gif)"
         - text: "![](https://images.code.org/2f5e7773ae2f99d6217929bd58490393-image-1491939162998.gif)"
@@ -2756,9 +3153,30 @@ az-AZ:
             AM.png
         - text: https://images.code.org/7465035fc6701dcb91731fe9d160b638-image-1523902103481.58.28
             AM.png
+      CSD U3 drawSprites placement match_2023:
+        answers:
+        - text: https://images.code.org/cd11d762b2cb3e36c3d45157b965c968-image-1523901253224.59.08
+            AM.png
+        - text: https://images.code.org/653dff2d49f07341b2f2552747212b34-image-1523901253222.59.21
+            AM.png
+        - text: https://images.code.org/db71e0cde6861faabc0b5a55d67c739e-image-1523901253227.58.12
+            AM.png
+        - text: https://images.code.org/15d6014329fa3da9b73016af9f1d0d74-image-1523901253226.58.34
+            AM.png
+        questions:
+        - text: https://images.code.org/131282b44fe34cd619a9a21bc68888da-image-1523902103487.58.48
+            AM.png,300px
+        - text: https://images.code.org/2fbe4029dc47f6f048e7c9f90ac99cac-image-1523902103485.25.09
+            AM.png
+        - text: https://images.code.org/c4cb49e00f7087765865da87cff37549-image-1523902103477.58.00
+            AM.png
+        - text: https://images.code.org/7465035fc6701dcb91731fe9d160b638-image-1523902103481.58.28
+            AM.png
       CSD U3 drawing practice choice_2021:
         display_name: Praktika
       CSD U3 drawing practice choice_2022:
+        display_name: Praktika
+      CSD U3 drawing practice choice_2023:
         display_name: Praktika
       CSD U3 game intro:
         content1: Burada təsvir edin
@@ -2778,6 +3196,67 @@ az-AZ:
         content1: Burada təsvir edin
       CSD U3 platform intro_2018_2019_pilot_2022:
         content1: Burada təsvir edin
+      CSD U3 platform intro_2018_2019_pilot_2023:
+        content1: Burada təsvir edin
+      CSD U4 MC Q1_2023:
+        answers:
+        - {}
+        - {}
+        - {}
+        - {}
+        questions:
+        - {}
+      CSD U4 MC Q2_2023:
+        answers:
+        - {}
+        - {}
+        - {}
+        - {}
+        questions:
+        - {}
+      CSD U4 MC Q3_2023:
+        answers:
+        - {}
+        - {}
+        - {}
+        - {}
+        questions:
+        - {}
+      CSD U4 MC Q4_2023:
+        answers:
+        - {}
+        - {}
+        - {}
+        - {}
+        - {}
+        questions:
+        - {}
+      CSD U4 MC Q5_2023:
+        answers:
+        - {}
+        - {}
+        - {}
+        - {}
+        - {}
+        questions:
+        - {}
+      CSD U4 MC Q8_2023:
+        answers:
+        - {}
+        - {}
+        - {}
+        - {}
+        questions:
+        - {}
+      CSD U4 MC Q9_2023:
+        answers:
+        - {}
+        - {}
+        - {}
+        - {}
+        - text: Rəy verin
+        questions:
+        - {}
       CSD U4 test feature match:
         answers:
         - {}
@@ -3111,6 +3590,84 @@ az-AZ:
           * [Verilən Təfsir] (https://docs.google.com/document/d/1JZJ5-kZoHb6xI7B4Ua5EHwaS1UiLoeM8i6YUNAAbaEM/export?format=pdf) - Fəaliyyət Kılavuzu
           * [Verilənləri şərh etmək] (https://docs.google.com/document/d/1YCqOxw4u8m142zaIVdUk4eBn8VnJBpkMzr4uEaDq2pM/export?format=pdf) - Mənbə
         teacher_markdown: "* Verilənlərin təfsiri - Nümunə ([PDF] (https://docs.google.com/document/d/1WFjiEP9-V2v9IIjsqn0MI-o-Xyn19pg_6apNL-a1gGw/export?format=pdf))"
+      CSD U5 MC Q1_2023:
+        answers:
+        - {}
+        - {}
+        - {}
+        - {}
+        - {}
+        questions:
+        - {}
+      CSD U5 MC Q2_2023:
+        answers:
+        - {}
+        - {}
+        - {}
+        - {}
+        - {}
+        questions:
+        - {}
+      CSD U5 MC Q3_2023:
+        answers:
+        - {}
+        - {}
+        questions:
+        - {}
+      CSD U5 MC Q4_2023:
+        answers:
+        - {}
+        - {}
+        - {}
+        - {}
+        - {}
+        questions:
+        - {}
+      CSD U5 MC Q5_2023:
+        answers:
+        - {}
+        - {}
+        - {}
+        - {}
+        - {}
+        questions:
+        - {}
+      CSD U5 MC Q6_2023:
+        answers:
+        - {}
+        - {}
+        - {}
+        - {}
+        - {}
+        questions:
+        - {}
+      CSD U5 MC Q7_2023:
+        answers:
+        - {}
+        - {}
+        - {}
+        - {}
+        - {}
+        questions:
+        - {}
+      CSD U5 MC Q8_2023:
+        answers:
+        - {}
+        - {}
+        - {}
+        - {}
+        - {}
+        questions:
+        - {}
+      CSD U5 MC Q9_2023:
+        answers:
+        - {}
+        - {}
+        - {}
+        - {}
+        - {}
+        questions:
+        - {}
       CSD U5 crosstab warmup:
         content1: Burada təsvir edin
         markdown: |-
@@ -3396,29 +3953,73 @@ az-AZ:
         - {}
         questions:
         - {}
+      CSD U6 - Accelerometer - Chal_2023a_2023:
+        display_name: Çağırış Səviyyələri
       CSD U6 - Accelerometer - Chal_2222:
+        display_name: Çağırış Səviyyələri
+      CSD U6 - Accelerometer - Chal_mb2022:
+        display_name: Çağırış Səviyyələri
+      CSD U6 - Board Inputs - Chal_2023:
         display_name: Çağırış Səviyyələri
       CSD U6 - Board Inputs - Chal_2222:
         display_name: Çağırış Səviyyələri
+      CSD U6 - Board Inputs - Chal_mb2022:
+        display_name: Çağırış Səviyyələri
+      CSD U6 - Board Outputs - Chal_2023:
+        display_name: Çağırış Səviyyələri
       CSD U6 - Board Outputs - Chal_2222:
+        display_name: Çağırış Səviyyələri
+      CSD U6 - Board Outputs - Chal_mb2022:
+        display_name: Çağırış Səviyyələri
+      CSD U6 - Color LEDs - Chal_2023a_2023:
         display_name: Çağırış Səviyyələri
       CSD U6 - Color LEDs - Chal_2222:
         display_name: Çağırış Səviyyələri
+      CSD U6 - Combine Inputs - Chal_2023a_2023:
+        display_name: Çağırış Səviyyələri
       CSD U6 - Combine Inputs - Chal_2222:
+        display_name: Çağırış Səviyyələri
+      CSD U6 - Combine Inputs - Chal_mb2022:
+        display_name: Çağırış Səviyyələri
+      CSD U6 - If Variables - Chal_2023:
         display_name: Çağırış Səviyyələri
       CSD U6 - If Variables - Chal_2222:
         display_name: Çağırış Səviyyələri
+      CSD U6 - If Variables - Chal_mb2022:
+        display_name: Çağırış Səviyyələri
+      CSD U6 - Music - Chal_2023:
+        display_name: Çağırış Səviyyələri
       CSD U6 - Music - Chal_2222:
+        display_name: Çağırış Səviyyələri
+      CSD U6 - Physical Input - Chal_2023:
         display_name: Çağırış Səviyyələri
       CSD U6 - Physical Input - Chal_2222:
         display_name: Çağırış Səviyyələri
+      CSD U6 - Physical Input - Chal_mb2022:
+        display_name: Çağırış Səviyyələri
+      CSD U6 - Physical Output - Chal_2023:
+        display_name: Çağırış Səviyyələri
       CSD U6 - Physical Output - Chal_2222:
+        display_name: Çağırış Səviyyələri
+      CSD U6 - Physical Output - Chal_mb2022:
+        display_name: Çağırış Səviyyələri
+      CSD U6 - Screen Inputs - Chal_2023:
         display_name: Çağırış Səviyyələri
       CSD U6 - Screen Inputs - Chal_2222:
         display_name: Çağırış Səviyyələri
+      CSD U6 - Screen Inputs - Chal_mb2022:
+        display_name: Çağırış Səviyyələri
+      CSD U6 - Screen Outputs - Chal_2023:
+        display_name: Çağırış Səviyyələri
       CSD U6 - Screen Outputs - Chal_2222:
         display_name: Çağırış Səviyyələri
+      CSD U6 - Screen Outputs - Chal_mb2022:
+        display_name: Çağırış Səviyyələri
+      CSD U6 - Sensors - Chal_2023a_2023:
+        display_name: Çağırış Səviyyələri
       CSD U6 - Sensors - Chal_2222:
+        display_name: Çağırış Səviyyələri
+      CSD U6 - Sensors - Chal_mb2022:
         display_name: Çağırış Səviyyələri
       CSD U6 LED create intro:
         content1: Burada təsvir edin
@@ -3452,6 +4053,130 @@ az-AZ:
           Son səviyyədə siz ekranda müxtəlif düymələrlə LED-i idarə etmək üçün tətbiq yaratdınız. Növbəti iki səviyyədə siz bir neçə başqa tətbiq nümunəsini görəcəksiniz, sonra özünüzün birini yaratmaq şansınız olacaq.
 
           Nümunələrə baxarkən, sizin və komanda yoldaşınızla yaratmaq istədiyiniz tətbiq üçün hansı kodun faydalı ola biləcəyini düşünün.
+      CSD U6 MC Q1_2023:
+        answers:
+        - {}
+        - {}
+        - {}
+        - {}
+        - {}
+        questions:
+        - {}
+      CSD U6 MC Q1_6b2023:
+        answers:
+        - {}
+        - {}
+        - {}
+        - {}
+        - {}
+        questions:
+        - {}
+      CSD U6 MC Q2_2023:
+        answers:
+        - {}
+        - {}
+        - {}
+        - {}
+        - {}
+        questions:
+        - {}
+      CSD U6 MC Q2_6b2023:
+        answers:
+        - {}
+        - {}
+        - {}
+        - {}
+        - text: Işıq
+        questions:
+        - {}
+      CSD U6 MC Q3_2023:
+        answers:
+        - {}
+        - {}
+        - {}
+        - {}
+        questions:
+        - {}
+      CSD U6 MC Q3_6b2023:
+        answers:
+        - {}
+        - {}
+        - {}
+        - {}
+        questions:
+        - {}
+      CSD U6 MC Q4_2023:
+        answers:
+        - {}
+        - {}
+        - {}
+        - {}
+        - {}
+        questions:
+        - {}
+      CSD U6 MC Q4_6b2023:
+        answers:
+        - {}
+        - {}
+        - {}
+        - {}
+        - {}
+        questions:
+        - {}
+      CSD U6 MC Q5_2023:
+        answers:
+        - {}
+        - {}
+        - {}
+        - {}
+        - {}
+        questions:
+        - {}
+      CSD U6 MC Q5_6b2023:
+        answers:
+        - {}
+        - {}
+        - {}
+        - {}
+        - {}
+        questions:
+        - {}
+      CSD U6 MC Q6_2023:
+        answers:
+        - {}
+        - {}
+        - {}
+        - {}
+        - {}
+        questions:
+        - {}
+      CSD U6 MC Q6_6b2023:
+        answers:
+        - {}
+        - {}
+        - {}
+        - {}
+        - {}
+        questions:
+        - {}
+      CSD U6 MC Q7_2023:
+        answers:
+        - {}
+        - {}
+        - {}
+        - {}
+        - {}
+        questions:
+        - {}
+      CSD U6 MC Q7_6b2023:
+        answers:
+        - {}
+        - {}
+        - {}
+        - {}
+        - {}
+        questions:
+        - {}
       CSD U6 array multi:
         answers:
         - text: https://images.code.org/fc497646edb1fc92a4dfdca09030f294-image-1512686800362.42.54
@@ -3564,7 +4289,25 @@ az-AZ:
         questions:
         - text: 'Kodu oxuyun və bu proqram işləyərkən necə görünəcəyini təxmin edin. '
         title: Proqnoz verin
+      CSD U6 setProperty predict multi_2023:
+        answers:
+        - text: "![](https://images.code.org/1e226012bfa76c84938097e1ff117150-image-1579828841757.png)"
+        - text: "![](https://images.code.org/dc9e1f761ff6a95542f283e2c700f9f1-image-1579828841754.png)"
+        - text: "![](https://images.code.org/f89441dfc9260030feac9de3af2b7d3a-image-1579828841748.png)"
+        - text: "![](https://images.code.org/b82461e6219e023280c4e22df59071d4-image-1579828841751.png)"
+        questions:
+        - text: 'Kodu oxuyun və bu proqram işləyərkən necə görünəcəyini təxmin edin. '
+        title: Proqnoz verin
       CSD U6 setProperty predict multi_2222:
+        answers:
+        - text: "![](https://images.code.org/1e226012bfa76c84938097e1ff117150-image-1579828841757.png)"
+        - text: "![](https://images.code.org/dc9e1f761ff6a95542f283e2c700f9f1-image-1579828841754.png)"
+        - text: "![](https://images.code.org/f89441dfc9260030feac9de3af2b7d3a-image-1579828841748.png)"
+        - text: "![](https://images.code.org/b82461e6219e023280c4e22df59071d4-image-1579828841751.png)"
+        questions:
+        - text: 'Kodu oxuyun və bu proqram işləyərkən necə görünəcəyini təxmin edin. '
+        title: Proqnoz verin
+      CSD U6 setProperty predict multi_mb2022:
         answers:
         - text: "![](https://images.code.org/1e226012bfa76c84938097e1ff117150-image-1579828841757.png)"
         - text: "![](https://images.code.org/dc9e1f761ff6a95542f283e2c700f9f1-image-1579828841754.png)"
@@ -3703,21 +4446,31 @@ az-AZ:
         display_name: Əngəllər
       CSD games cake challenge choice_2022:
         display_name: Əngəllər
+      CSD games cake challenge choice_2023:
+        display_name: Əngəllər
       CSD games platform challenge choice_2021:
         display_name: Əngəllər
       CSD games platform challenge choice_2022:
+        display_name: Əngəllər
+      CSD games platform challenge choice_2023:
         display_name: Əngəllər
       CSD web draw loop practice choice_2021:
         display_name: Praktika
       CSD web draw loop practice choice_2022:
         display_name: Praktika
+      CSD web draw loop practice choice_2023:
+        display_name: Praktika
       CSD web movement practice choice_2021:
         display_name: Praktika
       CSD web movement practice choice_2022:
         display_name: Praktika
+      CSD web movement practice choice_2023:
+        display_name: Praktika
       CSD web text practice choice_2021:
         display_name: Praktika
       CSD web text practice choice_2022:
+        display_name: Praktika
+      CSD web text practice choice_2023:
         display_name: Praktika
       CSD-U5-SFLP ASCII and Binary Representation:
         markdown: |-
@@ -4128,6 +4881,11 @@ az-AZ:
           # Kartlarla  Şərtlər
 
           Kart oyunu oynayın və "Qırmızı kart çəksəm, bir xal alacağam" və "Qara kart çəksəm, bir xal alacaqsınız" kimi qaydalar yaradın.
+      ConditionalsWithCards-Unplugged2022_2023:
+        markdown: |-
+          # Kartlarla  Şərtlər
+
+          Kart oyunu oynayın və "Qırmızı kart çəksəm, bir xal alacağam" və "Qara kart çəksəm, bir xal alacaqsınız" kimi qaydalar yaradın.
       ConditionalsWithCards-Unplugged_2020:
         markdown: |-
           # Kartlarla  Şərtlər
@@ -4142,11 +4900,23 @@ az-AZ:
         description: İndiyə qədər böyük iş! Sizin növbəti sessiya seçin. Mümkün qədər
           çox doldurun. Loop və rəssam ilə təcrübə saxlamağa davam edin!
         display_name: Sənətçi təcrübəsi
+      CourseE_Artist_Practice_2023:
+        description: İndiyə qədər böyük iş! Sizin növbəti sessiya seçin. Mümkün qədər
+          çox doldurun. Loop və rəssam ilə təcrübə saxlamağa davam edin!
+        display_name: Sənətçi təcrübəsi
       CourseE_Lesson_11_Artist_Practice_2022:
         description: İndiyə qədər əla iş! Növbəti fəaliyyətinizi seçin. Bacardığınız
           qədər tamamlayın. Funksiyalar və Rəssamla məşq etməyə davam edin!
         display_name: Sənətçi təcrübəsi
+      CourseE_Lesson_11_Artist_Practice_2023:
+        description: İndiyə qədər əla iş! Növbəti fəaliyyətinizi seçin. Bacardığınız
+          qədər tamamlayın. Funksiyalar və Rəssamla məşq etməyə davam edin!
+        display_name: Sənətçi təcrübəsi
       CourseE_Lesson_7_Artist_Practice_2022:
+        description: İndiyə qədər əla iş! Növbəti fəaliyyətinizi seçin. Bacardığınız
+          qədər tamamlayın. İç-içə döngələr və Rəssamla məşq etməyə davam edin!
+        display_name: Sənətçi təcrübəsi
+      CourseE_Lesson_7_Artist_Practice_2023:
         description: İndiyə qədər əla iş! Növbəti fəaliyyətinizi seçin. Bacardığınız
           qədər tamamlayın. İç-içə döngələr və Rəssamla məşq etməyə davam edin!
         display_name: Sənətçi təcrübəsi
@@ -4156,7 +4926,11 @@ az-AZ:
         content1: Burada təsvir edin
       CourseF_outbreak_story2022_2022_pilot_-2022-2:
         content1: Burada təsvir edin
+      CourseF_outbreak_story2022_2022_pilot_-2022-2_2023:
+        content1: Burada təsvir edin
       CourseF_outbreak_story22022_2022_pilot_-2022-2:
+        content1: Burada təsvir edin
+      CourseF_outbreak_story22022_2022_pilot_-2022-2_2023:
         content1: Burada təsvir edin
       Dance_Party_extras_intro:
         markdown: |
@@ -4232,6 +5006,16 @@ az-AZ:
 
           </div>
       DesigningForAccessibilityMarkdownLevel2022:
+        markdown: |-
+          # Əlçatanlıq üçün dizayn
+
+          *Kompüter elmləri dünyasında ** əlçatanlıq ** əlillər üçün texnologiya yaratmaqdır.
+          * Əlilliyə fiziki, eşitmə, vizual və digərləri daxildir.
+          *Əlillik müxtəlifdir və insanlara ** smartfon tətbiqləri ** kimi texnologiyadan necə istifadə etdikləri də daxil olmaqla müxtəlif yollarla təsir edir.
+          * Əlilliyi olan insanlar üçün əlçatan olan proqramların layihələndirilməsi həmin proqramları hamı üçün daha yaxşı edir!
+
+          ![](https://images.code.org/0c670d0d9078657a870df0ca799492cb-image-1557166420066.png)
+      DesigningForAccessibilityMarkdownLevel2022_2023:
         markdown: |-
           # Əlçatanlıq üçün dizayn
 
@@ -4332,6 +5116,11 @@ az-AZ:
           # Dövr Etmək
 
           Bu dərs sizə rəqs fəaliyyəti vasitəsilə programalaşdırmada dövr etmək konsepsiyasını təqdim edir.
+      GettingLoopy-Unplugged2022_2023:
+        markdown: |-
+          # Dövr Etmək
+
+          Bu dərs sizə rəqs fəaliyyəti vasitəsilə programalaşdırmada dövr etmək konsepsiyasını təqdim edir.
       GettingLoopy-Unplugged_2020:
         markdown: |-
           # Dövr Etmək
@@ -4353,6 +5142,9 @@ az-AZ:
       GraphPaperProgramming-Unplugged2022:
         markdown: Sinif yoldaşlarınızın şəkil çəkmək üçün istifadə edə biləcəyi alqoritmlər
           yazın.
+      GraphPaperProgramming-Unplugged2022_2023:
+        markdown: Sinif yoldaşlarınızın şəkil çəkmək üçün istifadə edə biləcəyi alqoritmlər
+          yazın.
       GraphPaperProgramming-Unplugged_2020:
         markdown: Sinif yoldaşlarınızın şəkil çəkmək üçün istifadə edə biləcəyi alqoritmlər
           yazın.
@@ -4365,6 +5157,11 @@ az-AZ:
 
           Bir xarakteri labirentdən keçmək üçün bir alqoritm yaradın.
       HappyMaps-Unplugged2022:
+        markdown: |-
+          # Xoş Xəritələr
+
+          Bir xarakteri labirentdən keçmək üçün bir alqoritm yaradın.
+      HappyMaps-Unplugged2022_2023:
         markdown: |-
           # Xoş Xəritələr
 
@@ -4606,6 +5403,11 @@ az-AZ:
           # Hərəkət etdirin, hərəkət etdirin
 
           Xəritədən istifadə edin və məqsədə çatmaq üçün əmrlər verin.
+      MoveItMoveIt-Unplugged2022_2023:
+        markdown: |-
+          # Hərəkət etdirin, hərəkət etdirin
+
+          Xəritədən istifadə edin və məqsədə çatmaq üçün əmrlər verin.
       MoveItMoveIt-Unplugged_2020:
         markdown: |-
           # Hərəkət etdirin, hərəkət etdirin
@@ -4792,6 +5594,10 @@ az-AZ:
         markdown: |-
           # Şəxsi Məlumat
           ## What information about you is OK to share online?
+      PrivatePersonalInformation-Unplugged2022_2023:
+        markdown: |-
+          # Şəxsi Məlumat
+          ## What information about you is OK to share online?
       PrivatePersonalInformation-Unplugged_2020:
         markdown: |-
           # Şəxsi Məlumat
@@ -4804,6 +5610,9 @@ az-AZ:
         markdown: Komandalara bölün və şəkillər çəkən proqramlar yazmaq üçün birlikdə
           işləyin.
       RelayProgramming-Unplugged2022:
+        markdown: Komandalara bölün və şəkillər çəkən proqramlar yazmaq üçün birlikdə
+          işləyin.
+      RelayProgramming-Unplugged2022_2023:
         markdown: Komandalara bölün və şəkillər çəkən proqramlar yazmaq üçün birlikdə
           işləyin.
       RelayProgramming-Unplugged_2020:
@@ -4833,6 +5642,11 @@ az-AZ:
           # Mahnı yazmaq
 
           Funksiyaların təyin edilməsi və çağırılması haqqında məlumat əldə etmək üçün mahnıda xor anlayışından istifadə edin.
+      Songwriting-Unplugged2022_2023:
+        markdown: |
+          # Mahnı yazmaq
+
+          Funksiyaların təyin edilməsi və çağırılması haqqında məlumat əldə etmək üçün mahnıda xor anlayışından istifadə edin.
       Songwriting-Unplugged_2020:
         markdown: |
           # Mahnı yazmaq
@@ -4852,7 +5666,147 @@ az-AZ:
         - {}
         questions:
         - {}
+      Student End of Unit Survey - Q1_2023:
+        answers:
+        - {}
+        - {}
+        - {}
+        - {}
+        - {}
+        questions:
+        - {}
+      Student End of Unit Survey - Q1_copy1_2023:
+        answers:
+        - {}
+        - {}
+        - {}
+        - {}
+        - {}
+        questions:
+        - {}
+      Student End of Unit Survey - Q1_copy2_2023:
+        answers:
+        - {}
+        - {}
+        - {}
+        - {}
+        - {}
+        questions:
+        - {}
+      Student End of Unit Survey - Q1_copy3_2023:
+        answers:
+        - {}
+        - {}
+        - {}
+        - {}
+        - {}
+        questions:
+        - {}
+      Student End of Unit Survey - Q1_copy4_2023:
+        answers:
+        - {}
+        - {}
+        - {}
+        - {}
+        - {}
+        questions:
+        - {}
+      Student End of Unit Survey - Q1_copy5_2023:
+        answers:
+        - {}
+        - {}
+        - {}
+        - {}
+        - {}
+        questions:
+        - {}
+      Student End of Unit Survey - Q1_copy6_2023:
+        answers:
+        - {}
+        - {}
+        - {}
+        - {}
+        - {}
+        questions:
+        - {}
       Student End of Unit Survey - Q2_2022:
+        answers:
+        - {}
+        - {}
+        - {}
+        - {}
+        - {}
+        - {}
+        - {}
+        questions:
+        - {}
+      Student End of Unit Survey - Q2_2023:
+        answers:
+        - {}
+        - {}
+        - {}
+        - {}
+        - {}
+        - {}
+        - {}
+        questions:
+        - {}
+      Student End of Unit Survey - Q2_copy1_2023:
+        answers:
+        - {}
+        - {}
+        - {}
+        - {}
+        - {}
+        - {}
+        - {}
+        questions:
+        - {}
+      Student End of Unit Survey - Q2_copy2_2023:
+        answers:
+        - {}
+        - {}
+        - {}
+        - {}
+        - {}
+        - {}
+        - {}
+        questions:
+        - {}
+      Student End of Unit Survey - Q2_copy3_2023:
+        answers:
+        - {}
+        - {}
+        - {}
+        - {}
+        - {}
+        - {}
+        - {}
+        questions:
+        - {}
+      Student End of Unit Survey - Q2_copy4_2023:
+        answers:
+        - {}
+        - {}
+        - {}
+        - {}
+        - {}
+        - {}
+        - {}
+        questions:
+        - {}
+      Student End of Unit Survey - Q2_copy5_2023:
+        answers:
+        - {}
+        - {}
+        - {}
+        - {}
+        - {}
+        - {}
+        - {}
+        questions:
+        - {}
+      Student End of Unit Survey - Q2_copy6_2023:
         answers:
         - {}
         - {}
@@ -4947,6 +5901,12 @@ az-AZ:
         questions:
         - {}
       TheRightAppMarkdownLevel2022:
+        markdown: "# Doğru Tətbiq\n\n*Gündəlik həyatımızda hərkəs kompüterlərdən,
+          xüsusilədə smartfonlardan istifadə edir.\n*Smartfon tətbiqləri insanlara
+          dostları ilə danışmaq, musiqi dinləmək, alış-veriş etmək və ya internetə
+          \n  axtarış etmək kimi işləri görməyə kömək edir.\n*Proqramçıların başqalarının
+          ehtiyaclarını anlaması və tətbiqləri nəzərə alaraq dizayn etməsi vacibdir!\n\n![](https://images.code.org/fb17eeb9238d2f26c6ab40c9841517a7-image-1555611687284.png)"
+      TheRightAppMarkdownLevel2022_2023:
         markdown: "# Doğru Tətbiq\n\n*Gündəlik həyatımızda hərkəs kompüterlərdən,
           xüsusilədə smartfonlardan istifadə edir.\n*Smartfon tətbiqləri insanlara
           dostları ilə danışmaq, musiqi dinləmək, alış-veriş etmək və ya internetə
@@ -5109,6 +6069,17 @@ az-AZ:
         - {}
         questions:
         - {}
+      aiml-ch1-pulse-survey-q1_2023:
+        answers:
+        - {}
+        - {}
+        - {}
+        - {}
+        - {}
+        - {}
+        - {}
+        questions:
+        - {}
       aiml-ch1-pulse-survey-q2_2021:
         answers:
         - {}
@@ -5121,6 +6092,17 @@ az-AZ:
         questions:
         - {}
       aiml-ch1-pulse-survey-q2_2022:
+        answers:
+        - {}
+        - {}
+        - {}
+        - {}
+        - {}
+        - {}
+        - {}
+        questions:
+        - {}
+      aiml-ch1-pulse-survey-q2_2023:
         answers:
         - {}
         - {}
@@ -5153,6 +6135,17 @@ az-AZ:
         - {}
         questions:
         - {}
+      aiml-ch1-pulse-survey-q3_2023:
+        answers:
+        - {}
+        - {}
+        - {}
+        - {}
+        - {}
+        - {}
+        - {}
+        questions:
+        - {}
       aiml-ch1-pulse-survey-q4_2021:
         answers:
         - {}
@@ -5165,6 +6158,17 @@ az-AZ:
         questions:
         - {}
       aiml-ch1-pulse-survey-q4_2022:
+        answers:
+        - {}
+        - {}
+        - {}
+        - {}
+        - {}
+        - {}
+        - {}
+        questions:
+        - {}
+      aiml-ch1-pulse-survey-q4_2023:
         answers:
         - {}
         - {}
@@ -5197,6 +6201,17 @@ az-AZ:
         - {}
         questions:
         - {}
+      aiml-ch1-pulse-survey-q5_2023:
+        answers:
+        - {}
+        - {}
+        - {}
+        - {}
+        - {}
+        - {}
+        - {}
+        questions:
+        - {}
       aiml-intro-pulse-survey-q1_2021:
         answers:
         - {}
@@ -5205,6 +6220,13 @@ az-AZ:
         questions:
         - {}
       aiml-intro-pulse-survey-q1_2022:
+        answers:
+        - {}
+        - {}
+        - {}
+        questions:
+        - {}
+      aiml-intro-pulse-survey-q1_2023:
         answers:
         - {}
         - {}
@@ -5225,6 +6247,13 @@ az-AZ:
         - {}
         questions:
         - {}
+      aiml-intro-pulse-survey-q2_2023:
+        answers:
+        - {}
+        - {}
+        - {}
+        questions:
+        - {}
       aiml-intro-pulse-survey-q3_2021:
         answers:
         - {}
@@ -5237,6 +6266,17 @@ az-AZ:
         questions:
         - {}
       aiml-intro-pulse-survey-q3_2022:
+        answers:
+        - {}
+        - {}
+        - {}
+        - {}
+        - {}
+        - {}
+        - {}
+        questions:
+        - {}
+      aiml-intro-pulse-survey-q3_2023:
         answers:
         - {}
         - {}
@@ -5269,6 +6309,17 @@ az-AZ:
         - {}
         questions:
         - {}
+      aiml-intro-pulse-survey-q4_2023:
+        answers:
+        - {}
+        - {}
+        - {}
+        - {}
+        - {}
+        - {}
+        - {}
+        questions:
+        - {}
       aiml-intro-pulse-survey-q5_2021:
         answers:
         - {}
@@ -5281,6 +6332,17 @@ az-AZ:
         questions:
         - {}
       aiml-intro-pulse-survey-q5_2022:
+        answers:
+        - {}
+        - {}
+        - {}
+        - {}
+        - {}
+        - {}
+        - {}
+        questions:
+        - {}
+      aiml-intro-pulse-survey-q5_2023:
         answers:
         - {}
         - {}
@@ -5370,6 +6432,17 @@ az-AZ:
         - {}
         questions:
         - {}
+      be-myself-in-cs_mb2022:
+        answers:
+        - {}
+        - {}
+        - {}
+        - {}
+        - {}
+        - {}
+        - {}
+        questions:
+        - {}
       behaviors 1 predict:
         answers:
         - feedback: Yanlış
@@ -5431,6 +6504,17 @@ az-AZ:
         - {}
         questions:
         - {}
+      comfortable-in-cs-class_mb2022:
+        answers:
+        - {}
+        - {}
+        - {}
+        - {}
+        - {}
+        - {}
+        - {}
+        questions:
+        - {}
       confident-ability-to-learn:
         answers:
         - {}
@@ -5443,6 +6527,28 @@ az-AZ:
         questions:
         - text: Əminəm ki, kompüter elmlərini öyrənmək bacarığım var.
       confident-ability-to-learn_2022:
+        answers:
+        - {}
+        - {}
+        - {}
+        - {}
+        - {}
+        - {}
+        - {}
+        questions:
+        - text: Əminəm ki, kompüter elmlərini öyrənmək bacarığım var.
+      confident-ability-to-learn_2023:
+        answers:
+        - {}
+        - {}
+        - {}
+        - {}
+        - {}
+        - {}
+        - {}
+        questions:
+        - text: Əminəm ki, kompüter elmlərini öyrənmək bacarığım var.
+      confident-ability-to-learn_mb2022:
         answers:
         - {}
         - {}
@@ -5497,13 +6603,26 @@ az-AZ:
         questions:
         - text: Məktəbdə məsləhətçi və ya məsləhətçi sizi bu dərsi keçməyə təşviq
             etdi?
+      counselor_encourage_2023:
+        answers:
+        - text: bəli
+        - text: xeyr
+        questions:
+        - text: Məktəbdə məsləhətçi və ya məsləhətçi sizi bu dərsi keçməyə təşviq
+            etdi?
       courseAB_EOC2022:
+        description: "Siz son dərsə çatmısiz! Yaratmaq üçün bir layihə seçin. \n"
+        display_name: Kurs layihələrinin sonu!
+      courseAB_EOC2022_2023:
         description: "Siz son dərsə çatmısiz! Yaratmaq üçün bir layihə seçin. \n"
         display_name: Kurs layihələrinin sonu!
       courseAB_EOC_2021:
         description: "Siz son dərsə çatmısiz! Yaratmaq üçün bir layihə seçin. \n"
         display_name: Kurs Layihəsinin Sonu
       courseB_EOC2022:
+        description: "Siz son dərsə çatmısiz! Yaratmaq üçün bir layihə seçin. \n"
+        display_name: Kurs layihələrinin sonu!
+      courseB_EOC2022_2023:
         description: "Siz son dərsə çatmısiz! Yaratmaq üçün bir layihə seçin. \n"
         display_name: Kurs layihələrinin sonu!
       courseB_EOC_2021:
@@ -5522,6 +6641,18 @@ az-AZ:
         questions:
         - text: Aşağıdakı koda diqqətlə baxın. "Başda" düyməsini basanda nə baş verəcək?
       courseC_multi_artist_prog6_predict12022:
+        answers:
+        - feedback: Yanlış. Rəssam kvadrat çəkir.
+          text: Rəssam üç tərəfi bərabər olan bir üçbucaq çəkəcək.
+        - feedback: Yanlış. Rəssam kvadrat çəkir.
+          text: Rəssam tək xətt çəkəcək.
+        - feedback: Düzgün!
+          text: Artist dördbucaqlı çəkəcək.
+        - feedback: Səhvdir. Rəssam kvadrat çəkir.
+          text: Rəssam beşbucaqlı cəkəcək
+        questions:
+        - text: Aşağıdakı koda diqqətlə baxın. "Başda" düyməsini basanda nə baş verəcək?
+      courseC_multi_artist_prog6_predict12022_2023:
         answers:
         - feedback: Yanlış. Rəssam kvadrat çəkir.
           text: Rəssam üç tərəfi bərabər olan bir üçbucaq çəkəcək.
@@ -5598,6 +6729,22 @@ az-AZ:
         - text: Aşağıdakı kodu diqqətlə nəzərdən keçirin. "Çalıştır" düyməsini vurduqdan
             sonra fermer neçə balqabaq yığacaq?
       courseC_multi_harvester_loops11_predict12022:
+        answers:
+        - feedback: Yanlış. Fermer 3 dövrün hər birində 4 balqabaq yığacaq. 4 dəfə
+            3 12-dir!
+          text: '4'
+        - feedback: Düzgün!
+          text: on iki
+        - feedback: Yanlış. Fermer 3 dövrün hər birində 4 balqabaq yığacaq. 4 dəfə
+            3 12-dir!
+          text: on beş
+        - feedback: Yanlış. Fermer 3 dövrün hər birində 4 balqabaq yığacaq. 4 dəfə
+            3 12-dir!
+          text: iyirmi
+        questions:
+        - text: Aşağıdakı kodu diqqətlə nəzərdən keçirin. "Çalıştır" düyməsini vurduqdan
+            sonra fermer neçə balqabaq yığacaq?
+      courseC_multi_harvester_loops11_predict12022_2023:
         answers:
         - feedback: Yanlış. Fermer 3 dövrün hər birində 4 balqabaq yığacaq. 4 dəfə
             3 12-dir!
@@ -5694,6 +6841,17 @@ az-AZ:
         questions:
         - text: Bu kodda səhvləri axtarın. Scrat palıd qozasına çatacaq, yoxsa bir
             problem var?
+      courseC_multi_maze_debugging8_predict12022_2023:
+        answers:
+        - text: Scrat palıd qozasına çatacaq. Kodda heç bir səhv yoxdur.
+        - text: Scrat palıd qozasına çatmayacaq çünki o səhv yola dönür.
+        - text: Scrat palıd qozasına çatmayacaq, çünki kifayət qədər "irəli hərəkət
+            et" blokları yoxdur.
+        - feedback: Scrat palıd qozasına çatmayacaq çünki o səhv yola dönür.
+          text: Scrat birinci blokdan hərəkət etməyəcək.
+        questions:
+        - text: Bu kodda səhvləri axtarın. Scrat palıd qozasına çatacaq, yoxsa bir
+            problem var?
       courseC_multi_maze_debugging8_predict1_2018:
         answers:
         - {}
@@ -5774,6 +6932,19 @@ az-AZ:
         questions:
         - text: 'Aşağıdakı kodu çox diqqətlə oxuyun. "İcra et" düyməsini kliklədikdə
             nə olacaq? '
+      courseC_multi_maze_programming8_predict12022_2023:
+        answers:
+        - feedback: 'Səhv. Bu kod quşu donuza mükəmməl şəkildə çatdırır. '
+          text: Quş donuzdan bir addım geridə qalacaq.
+        - feedback: Düzgün!
+          text: Quş donuza kimi edəcək.
+        - feedback: 'Səhv. Bu kod quşu donuza mükəmməl şəkildə çatdırır. '
+          text: Quş TNT-nin üzərinə uçacaq.
+        - feedback: 'Səhv. Bu kod quşu donuza mükəmməl şəkildə çatdırır. '
+          text: 'Quş divarın içində qaçacaq. '
+        questions:
+        - text: 'Aşağıdakı kodu çox diqqətlə oxuyun. "İcra et" düyməsini kliklədikdə
+            nə olacaq? '
       courseC_multi_maze_programming8_predict1_2018:
         answers:
         - feedback: 'Səhv. Bu kod quşu donuza mükəmməl şəkildə çatdırır. '
@@ -5840,6 +7011,18 @@ az-AZ:
         questions:
         - text: '"İcra Et"-i kliklədikdə sizcə nə baş verəcək?'
       courseC_multi_starWars_predict12022:
+        answers:
+        - feedback: 'Yanlış. Təkrarla bloku BB-8-i 5 dəfə irəli aparacaq. '
+          text: BB-8 hərəkət etməyəcək.
+        - feedback: 'Yanlış. Təkrarla bloku BB-8-i 5 dəfə irəli aparacaq. '
+          text: BB-8 yalnız bir yerə hərəkət edəcək
+        - feedback: Düzgün!
+          text: BB-8 5 dəfə hərəkət edəcək və bütün metal qırıntılarını alacaq
+        - feedback: 'Yanlış. Təkrarla bloku BB-8-i 5 dəfə irəli aparacaq. '
+          text: BB-8 cəmi 3 boşluq hərəkət edəcək.
+        questions:
+        - text: '"İcra Et"-i kliklədikdə sizcə nə baş verəcək?'
+      courseC_multi_starWars_predict12022_2023:
         answers:
         - feedback: 'Yanlış. Təkrarla bloku BB-8-i 5 dəfə irəli aparacaq. '
           text: BB-8 hərəkət etməyəcək.
@@ -5933,6 +7116,22 @@ az-AZ:
         questions:
         - text: 'Aşağıdakı kodu diqqətlə nəzərdən keçir. "İcra et" düyməsini basdıqda
             nə baş verəcək? '
+      courseC_multi_starWars_predict22022_2023:
+        answers:
+        - feedback: Yanlış. İlk döngə, BB-8-in 3 boşluq irəli getməsi lazım olduqda
+            yalnız 2 boşluq irəli getməsinə imkan verir.
+          text: BB-8 ilk dövrədə çox uzaqlara gedəcək.
+        - feedback: Düzgün!
+          text: BB-8 bütün metal qırıntılarını əldə etmək üçün ilk dövrədə kifayət
+            qədər uzaqlaşmayacaq.
+        - feedback: Yanlış. İlk döngə, BB-8-in 3 boşluq irəli getməsi lazım olduqda
+            yalnız 2 boşluq irəli getməsinə imkan verir.
+          text: BB-8 heç bir problem olmadan bütün metal qırıntılarını yığacaq.
+        - feedback: Yanlış. İlk döngə, BB-8-in 3 boşluq irəli getməsi lazım olduqda
+            yalnız 2 boşluq irəli getməsinə imkan verir.
+        questions:
+        - text: 'Aşağıdakı kodu diqqətlə nəzərdən keçir. "İcra et" düyməsini basdıqda
+            nə baş verəcək? '
       courseC_multi_starWars_predict2_2018:
         answers:
         - feedback: Yanlış. İlk döngə, BB-8-in 3 boşluq irəli getməsi lazım olduqda
@@ -6005,6 +7204,9 @@ az-AZ:
       courseD_EOC2022:
         description: Siz D Kursunun sonu dərsinə çatdınız! Yaratmaq üçün layihə seçin.
         display_name: Kurs layihələrinin sonu!
+      courseD_EOC2022_2023:
+        description: Siz D Kursunun sonu dərsinə çatdınız! Yaratmaq üçün layihə seçin.
+        display_name: Kurs layihələrinin sonu!
       courseD_EOC_2020:
         description: Siz D Kursunun sonu dərsinə çatdınız! Yaratmaq üçün layihə seçin.
         display_name: Kurs layihələrinin sonu!
@@ -6012,6 +7214,8 @@ az-AZ:
         description: Siz D Kursunun sonu dərsinə çatdınız! Yaratmaq üçün layihə seçin.
         display_name: Kurs layihələrinin sonu!
       courseD_EOC_examples2022:
+        display_name: Layihə Nümunələri
+      courseD_EOC_examples2022_2023:
         display_name: Layihə Nümunələri
       courseD_EOC_examples_2021:
         display_name: Layihə Nümunələri
@@ -6081,6 +7285,15 @@ az-AZ:
         - text: Yuxarıdakılardan heç biri
         questions:
         - {}
+      courseD_multi_artist_nestedLoops9_predict12022_2023:
+        answers:
+        - feedback: Düzgün!
+          text: 'A '
+        - text: 'B '
+        - text: 'C '
+        - text: Yuxarıdakılardan heç biri
+        questions:
+        - {}
       courseD_multi_artist_nestedLoops9_predict1_2018:
         answers:
         - feedback: Düzgün!
@@ -6127,6 +7340,14 @@ az-AZ:
         questions:
         - {}
       courseD_multi_bee_conditionals1_predict12022:
+        answers:
+        - {}
+        - feedback: Düzgün!
+        - {}
+        - {}
+        questions:
+        - {}
+      courseD_multi_bee_conditionals1_predict12022_2023:
         answers:
         - {}
         - feedback: Düzgün!
@@ -6199,6 +7420,20 @@ az-AZ:
         questions:
         - {}
       courseD_multi_bee_conditionals7_predict22022:
+        answers:
+        - feedback: Düzgün!
+          text: Arı hər çiçəyin nektarını alacaq və hər pətəkdən bal hazırlayacaq.
+        - feedback: Yanlış. "Çiçəklənmə" bloku, arının hər çiçəyə nektar almasına
+            və hər bir pətəkdən bal hazırlamasına imkan verir.
+        - feedback: Yanlış. Yanlış. "Çiçəklənmə" bloku, arının hər çiçəyin yanında
+            nektar almasına və hər bir pətəkdən bal hazırlamasına imkan verir.
+        - feedback: Yanlış. Yanlış. "Çiçəklənmə" bloku, arının hər çiçəyin yanında
+            nektar almasına və hər bir pətəkdən bal hazırlamasına imkan verir.
+        questions:
+        - text: 'Aşağıdakı koda diqqətlə baxın. Sizcə "Çalış" düyməsini basdıqdan
+            sonra nə olacaq? Unutmayın: hər buludun arxasında yalnız * bir * bal pətəyi
+            və ya * bir * çiçək olacaq.'
+      courseD_multi_bee_conditionals7_predict22022_2023:
         answers:
         - feedback: Düzgün!
           text: Arı hər çiçəyin nektarını alacaq və hər pətəkdən bal hazırlayacaq.
@@ -6288,6 +7523,16 @@ az-AZ:
         questions:
         - text: Aşağıdakı yuvalı döngələrə diqqətlə baxın. "Çalış" düyməsini basdıqda
             nə olacaq?
+      courseD_multi_bee_nestedLoops2_predict12022_2023:
+        answers:
+        - text: Arı yalnız bir dəfə irəliləyəcək və nektar əldə edəcək.
+        - text: Arı cəmi 2 vahid nektar alacaq.
+        - feedback: Düzgün!
+          text: Arı bütün nektarı alacaq.
+        - {}
+        questions:
+        - text: Aşağıdakı yuvalı döngələrə diqqətlə baxın. "Çalış" düyməsini basdıqda
+            nə olacaq?
       courseD_multi_bee_nestedLoops2_predict1_2018:
         answers:
         - text: Arı yalnız bir dəfə irəliləyəcək və nektar əldə edəcək.
@@ -6345,6 +7590,15 @@ az-AZ:
         questions:
         - {}
       courseD_multi_bee_nestedLoops9_predict22022:
+        answers:
+        - text: '4'
+        - feedback: Düzgün!
+          text: '8'
+        - text: '10'
+        - text: on iki
+        questions:
+        - {}
+      courseD_multi_bee_nestedLoops9_predict22022_2023:
         answers:
         - text: '4'
         - feedback: Düzgün!
@@ -6443,6 +7697,14 @@ az-AZ:
         - {}
         questions:
         - {}
+      courseD_multi_farmer_condLoops9_predict12022_2023:
+        answers:
+        - {}
+        - {}
+        - feedback: Düzgün!
+        - {}
+        questions:
+        - {}
       courseD_multi_farmer_condLoops9_predict1_2018:
         answers:
         - {}
@@ -6512,6 +7774,14 @@ az-AZ:
         - {}
         questions:
         - {}
+      courseD_multi_farmer_while10_predict22022_2023:
+        answers:
+        - {}
+        - feedback: Düzgün!
+        - {}
+        - {}
+        questions:
+        - {}
       courseD_multi_farmer_while10_predict2_2018:
         answers:
         - {}
@@ -6558,6 +7828,19 @@ az-AZ:
         questions:
         - {}
       courseD_multi_farmer_while4_predict12022:
+        answers:
+        - feedback: Səhv. Fermer bir qalaq olduğu müddətcə kirdən təmizlənəcək, sonra
+            yığın yox olanda dayanacaq
+          text: 'Heç nə baş verməyəcək. '
+        - feedback: Səhv. Fermer bir qalaq olduğu müddətcə kirdən təmizlənəcək, sonra
+            yığın yox olanda dayanacaq
+          text: Fermer heç vaxt çirki təmizləməyi dayandırmayacaq.
+        - feedback: Düzgün!
+        - feedback: Səhv. Fermer bir qalaq olduğu müddətcə kirdən təmizlənəcək, sonra
+            yığın yox olanda dayanacaq
+        questions:
+        - {}
+      courseD_multi_farmer_while4_predict12022_2023:
         answers:
         - feedback: Səhv. Fermer bir qalaq olduğu müddətcə kirdən təmizlənəcək, sonra
             yığın yox olanda dayanacaq
@@ -6641,6 +7924,14 @@ az-AZ:
         - {}
         questions:
         - {}
+      courseD_multi_maze_until10_predict22022_2023:
+        answers:
+        - feedback: Düzgün!
+        - {}
+        - {}
+        - {}
+        questions:
+        - {}
       courseD_multi_maze_until10_predict2_2018:
         answers:
         - feedback: Düzgün!
@@ -6684,6 +7975,15 @@ az-AZ:
         questions:
         - {}
       courseD_multi_maze_until2_predict12022:
+        answers:
+        - text: Quş heç hərəkət etməyəcək.
+        - feedback: Düzgün!
+          text: Quş donuza kimi edəcək.
+        - {}
+        - {}
+        questions:
+        - {}
+      courseD_multi_maze_until2_predict12022_2023:
         answers:
         - text: Quş heç hərəkət etməyəcək.
         - feedback: Düzgün!
@@ -6751,6 +8051,9 @@ az-AZ:
       courseE_EOC2022:
         description: Siz E Kursunun sonuna çatdınız! Yaratmaq üçün layihə seçin.
         display_name: Kurs layihələrinin sonu!
+      courseE_EOC2022_2023:
+        description: Siz E Kursunun sonuna çatdınız! Yaratmaq üçün layihə seçin.
+        display_name: Kurs layihələrinin sonu!
       courseE_EOC_2020:
         description: Siz E Kursunun sonuna çatdınız! Yaratmaq üçün layihə seçin.
         display_name: Kurs layihələrinin sonu!
@@ -6758,6 +8061,9 @@ az-AZ:
         description: Siz E Kursunun sonuna çatdınız! Yaratmaq üçün layihə seçin.
         display_name: Kurs layihələrinin sonu!
       courseE_EOC_examples2022:
+        description: Siz E Kursunun sonuna çatdınız! Yaratmaq üçün layihə seçin.
+        display_name: Kurs layihələrinin sonu!
+      courseE_EOC_examples2022_2023:
         description: Siz E Kursunun sonuna çatdınız! Yaratmaq üçün layihə seçin.
         display_name: Kurs layihələrinin sonu!
       courseE_EOC_examples_2021:
@@ -6804,6 +8110,21 @@ az-AZ:
         questions:
         - text: Aşağıda müəyyən edilmiş funksiyalara baxın. Kombayn nə seçəcək?
       courseE_multi_farmer_functions11_predict2022:
+        answers:
+        - feedback: Səhv. Kombayn yolun sonuna qədər irəli gedir, sonra dönüb kahı
+            götürənə qədər geri çəkilir.
+          text: Kombayn iki balqabaq yığacaq.
+        - feedback: Səhv. Kombayn yolun sonuna qədər irəli gedir, sonra dönüb kahı
+            götürənə qədər geri çəkilir.
+          text: Kombayn bütün balqabaqları yığacaq.
+        - feedback: Düzgün!
+          text: Kombayn kahı yığacaq.
+        - feedback: Səhv. Kombayn yolun sonuna qədər irəli gedir, sonra dönüb kahı
+            götürənə qədər geri çəkilir.
+          text: Kombayn qarğıdalı yığacaq.
+        questions:
+        - text: Aşağıda müəyyən edilmiş funksiyalara baxın. Kombayn nə seçəcək?
+      courseE_multi_farmer_functions11_predict2022_2023:
         answers:
         - feedback: Səhv. Kombayn yolun sonuna qədər irəli gedir, sonra dönüb kahı
             götürənə qədər geri çəkilir.
@@ -6895,6 +8216,14 @@ az-AZ:
         - {}
         questions:
         - {}
+      courseE_prediction_artistFunction12022_2023:
+        answers:
+        - {}
+        - {}
+        - {}
+        - {}
+        questions:
+        - {}
       courseE_prediction_artistFunction1_2018:
         answers:
         - {}
@@ -6959,6 +8288,18 @@ az-AZ:
           text: Çöp otu yanıb sönəcək.
         questions:
         - {}
+      courseE_swim_fish_behavior_predict12022_2023:
+        answers:
+        - feedback: Yanlış. Çöp otu yuvarlanmağa başlayacaq
+          text: 'Heç nə baş verməyəcək. '
+        - feedback: Yanlış. Çöp otu yuvarlanmağa başlayacaq
+          text: Tumbleweed ekranın yuxarı hissəsinə üzəcəkdir
+        - feedback: Düzgün!
+          text: Çöp otu yuvarlanmağa başlayacaq
+        - feedback: Yanlış. Çöp otu yuvarlanmağa başlayacaq
+          text: Çöp otu yanıb sönəcək.
+        questions:
+        - {}
       courseE_swim_fish_behavior_predict1_2021:
         answers:
         - feedback: Yanlış. Çöp otu yuvarlanmağa başlayacaq
@@ -6987,10 +8328,14 @@ az-AZ:
         display_name: Kurs layihələrinin sonu!
       courseF_EOC_examples2022_2022_pilot_-2022-2:
         display_name: Kurs layihələrinin sonu!
+      courseF_EOC_examples2022_2022_pilot_-2022-2_2023:
+        display_name: Kurs layihələrinin sonu!
       courseF_EOC_examples_2021:
         description: Siz F Kursunun sonuna çatdınız! Yaratmaq üçün layihə seçin.
         display_name: Kurs layihələrinin sonu!
       courseF_EOC_samples2022:
+        display_name: Kurs layihələrinin sonu!
+      courseF_EOC_samples2022_2023:
         display_name: Kurs layihələrinin sonu!
       courseF_EOC_samples_2021:
         display_name: Kurs layihələrinin sonu!
@@ -7032,6 +8377,11 @@ az-AZ:
           göstərilən layihələrin nümunələri ilə tanış olun. Öz proqram planlaşdırma
           başlamaq üçün hazır olduğunuzda "Finish" düyməsinə basın.
         display_name: Tədqiqat - Nümunə Proqramlar
+      courseF_collector_samples_2022_pilot_-2022-2_2023:
+        description: Siz kolleksiyası oyun yaratmaq olacaq. Başlamadan əvvəl aşağıda
+          göstərilən layihələrin nümunələri ilə tanış olun. Öz proqram planlaşdırma
+          başlamaq üçün hazır olduğunuzda "Finish" düyməsinə basın.
+        display_name: Tədqiqat - Nümunə Proqramlar
       courseF_events_practice:
         description: İndiyə qədər böyük iş! Sizin növbəti sessiya seçin. Mümkün qədər
           çox doldurun. Hadisələrlə təcrübə etməyə davam edin!
@@ -7047,6 +8397,10 @@ az-AZ:
           | ***Type*** |**Review**|**Debug**|**Debug**|**Debug**|**Optional Content**|**Optional Content**
           | ***Concept***|*events, behaviors*|*events, behaviors*|*events, behaviors*|*events, behaviors*|*when/while events*|*when/while events*|
       courseF_events_practice2022_2022_pilot_-2022-2:
+        description: İndiyə qədər böyük iş! Sizin növbəti sessiya seçin. Mümkün qədər
+          çox doldurun. Hadisələrlə təcrübə etməyə davam edin!
+        display_name: Tədbirlərin keçirilməsi praktikası
+      courseF_events_practice2022_2022_pilot_-2022-2_2023:
         description: İndiyə qədər böyük iş! Sizin növbəti sessiya seçin. Mümkün qədər
           çox doldurun. Hadisələrlə təcrübə etməyə davam edin!
         display_name: Tədbirlərin keçirilməsi praktikası
@@ -7079,6 +8433,20 @@ az-AZ:
           text: Birincisi, sprite fırlanıb və sonra hərəkət edəcək.
         questions:
         - text: Kodu oxuyun, sonra proqnoz verin.
+      courseF_events_predict_multi2022_2022_pilot_-2022-2_2023:
+        answers:
+        - feedback: Səhv. Sprite də şərqə doğru hərəkət edəcək.
+          text: Sprite yalnız düzgün dönüşümlü olacaq.
+        - feedback: Səhv. Sprite fırlanmağı dayandırmadı, belə ki, həm də eyni zamanda
+            bunu edəcək.
+          text: Sprite yalnız şərqə gedəcək.
+        - feedback: Doğru! Hər iki davranış eyni zamanda baş verəcək.
+          text: Sprite dönüşümlü və eyni zamanda hərəkət edəcək.
+        - feedback: Səhv. Sprite Lab-də əlaqəli bloklar hər sonuncudan dərhal sonra
+            baş verir, buna görə də hər iki davranış eyni vaxtda baş verəcəkdir.
+          text: Birincisi, sprite fırlanıb və sonra hərəkət edəcək.
+        questions:
+        - text: Kodu oxuyun, sonra proqnoz verin.
       courseF_external_variableConstant:
         markdown: |-
           <h2>Değişkenler Hakkında Daha Fazlası</h2>
@@ -7092,11 +8460,32 @@ az-AZ:
         description: İndi istədiyiniz hər şeyi etmək üçün öyrəndiklərinizi istifadə
           edə bilərsiniz! Sprites bir çox interaktiv proqram yaradın!
         display_name: Sprites çox-pulsuz oyun
+      courseF_groups_freeplay_2022_pilot_-2022-2_2023:
+        description: İndi istədiyiniz hər şeyi etmək üçün öyrəndiklərinizi istifadə
+          edə bilərsiniz! Sprites bir çox interaktiv proqram yaradın!
+        display_name: Sprites çox-pulsuz oyun
       courseF_groups_practice_2022_pilot_-2022-2:
         description: Bu günə qədər böyük iş! Növbəti dərsinizi seçin. Mümkün qədər
           tamamlayın. Hadisələr və sprites qrupları ilə təcrübə saxlamaq!
         display_name: Sprites Çox Tətbiq Olunur
+      courseF_groups_practice_2022_pilot_-2022-2_2023:
+        description: Bu günə qədər böyük iş! Növbəti dərsinizi seçin. Mümkün qədər
+          tamamlayın. Hadisələr və sprites qrupları ilə təcrübə saxlamaq!
+        display_name: Sprites Çox Tətbiq Olunur
       courseF_groups_predict_multi_2022_pilot_-2022-2:
+        answers:
+        - feedback: Doğru! Basdığınız sprite daha böyük olacaq.
+          text: Basdığınız pəri daha çox olacaq
+        - feedback: Yanlış. Basdığınız sprite daha böyük olacaq.
+          text: Basdığınız sprite daha az olacaq.
+        - feedback: Yanlış. Basdığınız sprite daha böyük olacaq.
+          text: Bütün sprites daha çox olacaq.
+        - feedback: Yanlış. Basdığınız sprite daha böyük olacaq.
+          text: Bütün qrafik-obyekt az olacaq.
+        questions:
+        - text: 'Proqnoz verin: Run düyməsini basdıqdan sonra, spritlərdən birinə
+            basdığınız zaman nə olacaq?'
+      courseF_groups_predict_multi_2022_pilot_-2022-2_2023:
         answers:
         - feedback: Doğru! Basdığınız sprite daha böyük olacaq.
           text: Basdığınız pəri daha çox olacaq
@@ -7126,6 +8515,13 @@ az-AZ:
 
           '
         display_name: Sprite Lab Tətbiqləri
+      courseF_intro_apps2022_2022_pilot_-2022-2_2023:
+        description: 'Bu layihələrin hamısı Sprite Lab ilə yaradılmışdır. Nəyin mümkün
+          olduğunu görmək üçün onları indi sınayın. Bu kursun sonunda siz bu kimi
+          öz layihələrinizi edə biləcəksiniz... və daha çoxunu!
+
+          '
+        display_name: Sprite Lab Tətbiqləri
       courseF_labels_predict_multi:
         answers:
         - {}
@@ -7136,6 +8532,15 @@ az-AZ:
         questions:
         - {}
       courseF_labels_predict_multi2022_2022_pilot_-2022-2:
+        answers:
+        - {}
+        - {}
+        - {}
+        - {}
+        - text: Heçnə çap olunmayacaq.
+        questions:
+        - {}
+      courseF_labels_predict_multi2022_2022_pilot_-2022-2_2023:
         answers:
         - {}
         - {}
@@ -7306,6 +8711,14 @@ az-AZ:
         - text: Kompüter istifadəçidən nömrəni tələb edəcək.
         questions:
         - {}
+      courseF_multi_artist_variables3a_predict12022_2023:
+        answers:
+        - feedback: Düzgün!
+        - {}
+        - {}
+        - text: Kompüter istifadəçidən nömrəni tələb edəcək.
+        questions:
+        - {}
       courseF_multi_artist_variables3a_predict1_2018:
         answers:
         - feedback: Düzgün!
@@ -7378,6 +8791,14 @@ az-AZ:
         questions:
         - {}
       courseF_multi_bee_for3_predict12022:
+        answers:
+        - {}
+        - feedback: Düzgün!
+        - {}
+        - {}
+        questions:
+        - {}
+      courseF_multi_bee_for3_predict12022_2023:
         answers:
         - {}
         - feedback: Düzgün!
@@ -7471,6 +8892,10 @@ az-AZ:
         description: Hələ ki əla iş! Sıradaki fəaliyyətini seç. Bacara bildiyin qədər
           çox tamamla. Sprite-larla və davranışlarla təcrübə aparmağa davam edin.
         display_name: Sprite-lar təcrübəsi
+      courseF_sprites_practice2022_2022_pilot_-2022-2_2023:
+        description: Hələ ki əla iş! Sıradaki fəaliyyətini seç. Bacara bildiyin qədər
+          çox tamamla. Sprite-larla və davranışlarla təcrübə aparmağa davam edin.
+        display_name: Sprite-lar təcrübəsi
       courseF_sprites_predict_multi:
         answers:
         - feedback: Səhv. Bu sprites Onlar dayandırmaq demək qədər fəaliyyət davam
@@ -7487,6 +8912,20 @@ az-AZ:
         questions:
         - text: Kodu oxuyun, sonra proqnoz verin.
       courseF_sprites_predict_multi2022_2022_pilot_-2022-2:
+        answers:
+        - feedback: Səhv. Bu sprites Onlar dayandırmaq demək qədər fəaliyyət davam
+            edən bir "davranış" var.
+          text: Hər iki təyyarə grid boyunca bir yerə hərəkət edəcək və sonra dayandırılacaq.
+        - feedback: Doğru! Bu davranış təyyarələr hərəkət başlamaq və hərəkət davam
+            deyir.
+          text: Hər iki təyyarə hərəkət etməyə başlayacaq və dayanmayacaq.
+        - feedback: Səhv. Sprite Lab-də kodun hər bir bloku növbəti dəfə dərhal başlayır.
+          text: Bir təyyarə birinci, digəri isə daha sonra hərəkət edəcək.
+        - feedback: Yalnış. Təyyarələr bir-birinə toxunacaq vəziyyətdə yerləşdirilməyib.
+          text: Təyyarələr qırılacaq.
+        questions:
+        - text: Kodu oxuyun, sonra proqnoz verin.
+      courseF_sprites_predict_multi2022_2022_pilot_-2022-2_2023:
         answers:
         - feedback: Səhv. Bu sprites Onlar dayandırmaq demək qədər fəaliyyət davam
             edən bir "davranış" var.
@@ -7518,6 +8957,10 @@ az-AZ:
         description: İndiyə qədər böyük iş! Sizin növbəti sessiya seçin. Mümkün qədər
           çox doldurun. Mətn və göstərişlər ilə təcrübə aparmağı davam edin!
         display_name: Mətn və təcrübə göstərişlər
+      courseF_text_practice2022_2022_pilot_-2022-2_2023:
+        description: İndiyə qədər böyük iş! Sizin növbəti sessiya seçin. Mümkün qədər
+          çox doldurun. Mətn və göstərişlər ilə təcrübə aparmağı davam edin!
+        display_name: Mətn və təcrübə göstərişlər
       courseF_variables2_predict2_multi2022_-2022-2:
         answers:
         - {}
@@ -7526,7 +8969,23 @@ az-AZ:
         - {}
         questions:
         - {}
+      courseF_variables2_predict2_multi2022_-2022-2_2023:
+        answers:
+        - {}
+        - {}
+        - {}
+        - {}
+        questions:
+        - {}
       courseF_variables2_predict_multi2022_2022_pilot_-2022-2:
+        answers:
+        - {}
+        - {}
+        - {}
+        - {}
+        questions:
+        - {}
+      courseF_variables2_predict_multi2022_2022_pilot_-2022-2_2023:
         answers:
         - {}
         - {}
@@ -7550,17 +9009,31 @@ az-AZ:
         - text: Kompüter başqa sual soruşacaq.
         questions:
         - {}
+      courseF_variables_predict_multi2022_2022_pilot_-2022-2_2023:
+        answers:
+        - {}
+        - {}
+        - feedback: Yanlış. Mətn ekrana çap olunur.
+        - text: Kompüter başqa sual soruşacaq.
+        questions:
+        - {}
       courseF_variables_projects:
         display_name: Bir layihə seçin
       courseF_variables_projects2022_2022_pilot_-2022-2:
+        display_name: Bir layihə seçin
+      courseF_variables_projects2022_2022_pilot_-2022-2_2023:
         display_name: Bir layihə seçin
       courseF_variables_samples:
         display_name: Tədqiqat - Nümunə Proqramlar
       courseF_variables_samples2022_2022_pilot_-2022-2:
         display_name: Tədqiqat - Nümunə Proqramlar
+      courseF_variables_samples2022_2022_pilot_-2022-2_2023:
+        display_name: Tədqiqat - Nümunə Proqramlar
       courseF_variables_stop:
         content1: Burada təsvir edin
       courseF_variables_stop2022_2022_pilot_-2022-2:
+        content1: Burada təsvir edin
+      courseF_variables_stop2022_2022_pilot_-2022-2_2023:
         content1: Burada təsvir edin
       coursee_prediction_artistfunction2:
         answers:
@@ -7576,6 +9049,19 @@ az-AZ:
         questions:
         - text: '"Çalış" düyməsini basdığınız zaman nə baş verəcək?'
       coursee_prediction_artistfunction22022:
+        answers:
+        - feedback: Səhv. Döngədə "çoxbucaqlıların xəttini çəkmək" əvəzinə "çoxbucaqlı
+            çəkmək" istifadə olunur.
+          text: Rəssam tapmacanı düzgün həll edəcək.
+        - feedback: Düzgün!
+          text: Rəssam pəncərə naxışında dörd kvadrat çəkəcək.
+        - feedback: Səhv. Proqram "çoxbucaqlıların xəttini çək" adlandırmır.
+          text: Rəssam yalnız bir kvadrat xətti çəkəcək.
+        - feedback: Səhv. Döngə "poliqon çəkmək" çağırışları arasında 90 dərəcə çevrilir.
+          text: Rəssam bir-birinin üstünə dörd kvadrat çəkəcək.
+        questions:
+        - text: '"Çalış" düyməsini basdığınız zaman nə baş verəcək?'
+      coursee_prediction_artistfunction22022_2023:
         answers:
         - feedback: Səhv. Döngədə "çoxbucaqlıların xəttini çəkmək" əvəzinə "çoxbucaqlı
             çəkmək" istifadə olunur.
@@ -7641,6 +9127,41 @@ az-AZ:
           text: Rəssam bir-birinin üstünə dörd kvadrat çəkəcək.
         questions:
         - text: '"Çalış" düyməsini basdığınız zaman nə baş verəcək?'
+      csc_animal_adaptations_predict:
+        answers:
+        - {}
+        - feedback: Düzgün!
+        - text: Sprite hərəkət edəcək.
+        - text: Sprite rəngləri dəyişəcək.
+        questions:
+        - {}
+      csc_ecosystems_matching_cfu:
+        answers:
+        - {}
+        - {}
+        - {}
+        questions:
+        - {}
+        - {}
+        - {}
+      csc_ecosystems_matching_conditionals:
+        answers:
+        - {}
+        - {}
+        - {}
+        questions:
+        - {}
+        - {}
+        - {}
+      csc_ecosystems_matching_events:
+        answers:
+        - {}
+        - {}
+        questions:
+        - {}
+        - {}
+      csc_timecapsule_info_2023:
+        content1: Burada təsvir edin
       csd-post-survey-2017-q11_2018:
         answers:
         - {}
@@ -8150,6 +9671,28 @@ az-AZ:
         - {}
         questions:
         - {}
+      csd-post-survey-confidence-cs_mb2022:
+        answers:
+        - {}
+        - {}
+        - {}
+        - {}
+        - {}
+        - {}
+        - {}
+        questions:
+        - {}
+      csd-post-survey-interested-cs_mb2022:
+        answers:
+        - {}
+        - {}
+        - {}
+        - {}
+        - {}
+        - {}
+        - {}
+        questions:
+        - {}
       csd-post-survey-intro-2019:
         markdown: |-
           # CS Discoveries Kursdan Sonra Sorğu
@@ -8299,6 +9842,34 @@ az-AZ:
         - {}
         questions:
         - {}
+      csd-post-survey-show-friend_mb2022:
+        answers:
+        - text: Bəli
+        - text: Xeyr
+        questions:
+        - {}
+      csd-post-survey-solve-real-world_mb2022:
+        answers:
+        - {}
+        - {}
+        - {}
+        - {}
+        - {}
+        - {}
+        - {}
+        questions:
+        - {}
+      csd-post-survey-take-more-classes_mb2022:
+        answers:
+        - {}
+        - {}
+        - {}
+        - {}
+        - {}
+        - {}
+        - {}
+        questions:
+        - {}
       csd-post-survey-unit1-preamble:
         content1: Burada təsvir edin
       csd-post-survey-unit2-preamble:
@@ -8409,6 +9980,17 @@ az-AZ:
         - {}
         questions:
         - {}
+      csd-pulse-check-survey-1-q1 U2Ch1_2019_pilot_2023:
+        answers:
+        - {}
+        - {}
+        - {}
+        - {}
+        - {}
+        - {}
+        - {}
+        questions:
+        - {}
       csd-pulse-check-survey-1-q1 U2Ch2:
         answers:
         - {}
@@ -8476,6 +10058,17 @@ az-AZ:
         questions:
         - {}
       csd-pulse-check-survey-1-q1 U3Ch1_2019_pilot_2022:
+        answers:
+        - {}
+        - {}
+        - {}
+        - {}
+        - {}
+        - {}
+        - {}
+        questions:
+        - {}
+      csd-pulse-check-survey-1-q1 U3Ch1_2019_pilot_2023:
         answers:
         - {}
         - {}
@@ -8564,6 +10157,17 @@ az-AZ:
         questions:
         - {}
       csd-pulse-check-survey-1-q1 U4Ch1_2022:
+        answers:
+        - {}
+        - {}
+        - {}
+        - {}
+        - {}
+        - {}
+        - {}
+        questions:
+        - {}
+      csd-pulse-check-survey-1-q1 U4Ch1_2023:
         answers:
         - {}
         - {}
@@ -8673,6 +10277,17 @@ az-AZ:
         - {}
         questions:
         - {}
+      csd-pulse-check-survey-1-q1 U5Ch1_2023:
+        answers:
+        - {}
+        - {}
+        - {}
+        - {}
+        - {}
+        - {}
+        - {}
+        questions:
+        - {}
       csd-pulse-check-survey-1-q1 U5Ch2:
         answers:
         - {}
@@ -8761,7 +10376,29 @@ az-AZ:
         - {}
         questions:
         - {}
+      csd-pulse-check-survey-1-q1 U6Ch1_2023a_2023:
+        answers:
+        - {}
+        - {}
+        - {}
+        - {}
+        - {}
+        - {}
+        - {}
+        questions:
+        - {}
       csd-pulse-check-survey-1-q1 U6Ch1_2222:
+        answers:
+        - {}
+        - {}
+        - {}
+        - {}
+        - {}
+        - {}
+        - {}
+        questions:
+        - {}
+      csd-pulse-check-survey-1-q1 U6Ch1_mb2022:
         answers:
         - {}
         - {}
@@ -8904,6 +10541,17 @@ az-AZ:
         - {}
         questions:
         - {}
+      csd-pulse-check-survey-1-q2 U2Ch1_2019_pilot_2023:
+        answers:
+        - {}
+        - {}
+        - {}
+        - {}
+        - {}
+        - {}
+        - {}
+        questions:
+        - {}
       csd-pulse-check-survey-1-q2 U2Ch2:
         answers:
         - {}
@@ -8971,6 +10619,17 @@ az-AZ:
         questions:
         - {}
       csd-pulse-check-survey-1-q2 U3Ch1_2019_pilot_2022:
+        answers:
+        - {}
+        - {}
+        - {}
+        - {}
+        - {}
+        - {}
+        - {}
+        questions:
+        - {}
+      csd-pulse-check-survey-1-q2 U3Ch1_2019_pilot_2023:
         answers:
         - {}
         - {}
@@ -9059,6 +10718,17 @@ az-AZ:
         questions:
         - {}
       csd-pulse-check-survey-1-q2 U4Ch1_2022:
+        answers:
+        - {}
+        - {}
+        - {}
+        - {}
+        - {}
+        - {}
+        - {}
+        questions:
+        - {}
+      csd-pulse-check-survey-1-q2 U4Ch1_2023:
         answers:
         - {}
         - {}
@@ -9168,6 +10838,17 @@ az-AZ:
         - {}
         questions:
         - {}
+      csd-pulse-check-survey-1-q2 U5Ch1_2023:
+        answers:
+        - {}
+        - {}
+        - {}
+        - {}
+        - {}
+        - {}
+        - {}
+        questions:
+        - {}
       csd-pulse-check-survey-1-q2 U5Ch2:
         answers:
         - {}
@@ -9256,7 +10937,29 @@ az-AZ:
         - {}
         questions:
         - {}
+      csd-pulse-check-survey-1-q2 U6Ch1_2023a_2023:
+        answers:
+        - {}
+        - {}
+        - {}
+        - {}
+        - {}
+        - {}
+        - {}
+        questions:
+        - {}
       csd-pulse-check-survey-1-q2 U6Ch1_2222:
+        answers:
+        - {}
+        - {}
+        - {}
+        - {}
+        - {}
+        - {}
+        - {}
+        questions:
+        - {}
+      csd-pulse-check-survey-1-q2 U6Ch1_mb2022:
         answers:
         - {}
         - {}
@@ -9399,6 +11102,17 @@ az-AZ:
         - {}
         questions:
         - {}
+      csd-pulse-check-survey-1-q3 U2Ch1_2019_pilot_2023:
+        answers:
+        - {}
+        - {}
+        - {}
+        - {}
+        - {}
+        - {}
+        - {}
+        questions:
+        - {}
       csd-pulse-check-survey-1-q3 U2Ch2:
         answers:
         - {}
@@ -9466,6 +11180,17 @@ az-AZ:
         questions:
         - {}
       csd-pulse-check-survey-1-q3 U3Ch1_2019_pilot_2022:
+        answers:
+        - {}
+        - {}
+        - {}
+        - {}
+        - {}
+        - {}
+        - {}
+        questions:
+        - {}
+      csd-pulse-check-survey-1-q3 U3Ch1_2019_pilot_2023:
         answers:
         - {}
         - {}
@@ -9554,6 +11279,17 @@ az-AZ:
         questions:
         - {}
       csd-pulse-check-survey-1-q3 U4Ch1_2022:
+        answers:
+        - {}
+        - {}
+        - {}
+        - {}
+        - {}
+        - {}
+        - {}
+        questions:
+        - {}
+      csd-pulse-check-survey-1-q3 U4Ch1_2023:
         answers:
         - {}
         - {}
@@ -9663,6 +11399,17 @@ az-AZ:
         - {}
         questions:
         - {}
+      csd-pulse-check-survey-1-q3 U5Ch1_2023:
+        answers:
+        - {}
+        - {}
+        - {}
+        - {}
+        - {}
+        - {}
+        - {}
+        questions:
+        - {}
       csd-pulse-check-survey-1-q3 U5Ch2:
         answers:
         - {}
@@ -9751,7 +11498,29 @@ az-AZ:
         - {}
         questions:
         - {}
+      csd-pulse-check-survey-1-q3 U6Ch1_2023a_2023:
+        answers:
+        - {}
+        - {}
+        - {}
+        - {}
+        - {}
+        - {}
+        - {}
+        questions:
+        - {}
       csd-pulse-check-survey-1-q3 U6Ch1_2222:
+        answers:
+        - {}
+        - {}
+        - {}
+        - {}
+        - {}
+        - {}
+        - {}
+        questions:
+        - {}
+      csd-pulse-check-survey-1-q3 U6Ch1_mb2022:
         answers:
         - {}
         - {}
@@ -9894,6 +11663,17 @@ az-AZ:
         - {}
         questions:
         - {}
+      csd-pulse-check-survey-1-q4 U2Ch1_2019_pilot_2023:
+        answers:
+        - {}
+        - {}
+        - {}
+        - {}
+        - {}
+        - {}
+        - {}
+        questions:
+        - {}
       csd-pulse-check-survey-1-q4 U2Ch2:
         answers:
         - {}
@@ -9961,6 +11741,17 @@ az-AZ:
         questions:
         - {}
       csd-pulse-check-survey-1-q4 U3Ch1_2019_pilot_2022:
+        answers:
+        - {}
+        - {}
+        - {}
+        - {}
+        - {}
+        - {}
+        - {}
+        questions:
+        - {}
+      csd-pulse-check-survey-1-q4 U3Ch1_2019_pilot_2023:
         answers:
         - {}
         - {}
@@ -10049,6 +11840,17 @@ az-AZ:
         questions:
         - {}
       csd-pulse-check-survey-1-q4 U4Ch1_2022:
+        answers:
+        - {}
+        - {}
+        - {}
+        - {}
+        - {}
+        - {}
+        - {}
+        questions:
+        - {}
+      csd-pulse-check-survey-1-q4 U4Ch1_2023:
         answers:
         - {}
         - {}
@@ -10158,6 +11960,17 @@ az-AZ:
         - {}
         questions:
         - {}
+      csd-pulse-check-survey-1-q4 U5Ch1_2023:
+        answers:
+        - {}
+        - {}
+        - {}
+        - {}
+        - {}
+        - {}
+        - {}
+        questions:
+        - {}
       csd-pulse-check-survey-1-q4 U5Ch2:
         answers:
         - {}
@@ -10246,7 +12059,29 @@ az-AZ:
         - {}
         questions:
         - {}
+      csd-pulse-check-survey-1-q4 U6Ch1_2023a_2023:
+        answers:
+        - {}
+        - {}
+        - {}
+        - {}
+        - {}
+        - {}
+        - {}
+        questions:
+        - {}
       csd-pulse-check-survey-1-q4 U6Ch1_2222:
+        answers:
+        - {}
+        - {}
+        - {}
+        - {}
+        - {}
+        - {}
+        - {}
+        questions:
+        - {}
+      csd-pulse-check-survey-1-q4 U6Ch1_mb2022:
         answers:
         - {}
         - {}
@@ -10389,6 +12224,17 @@ az-AZ:
         - {}
         questions:
         - {}
+      csd-pulse-check-survey-1-q5 U2Ch1_2019_pilot_2023:
+        answers:
+        - {}
+        - {}
+        - {}
+        - {}
+        - {}
+        - {}
+        - {}
+        questions:
+        - {}
       csd-pulse-check-survey-1-q5 U2Ch2:
         answers:
         - {}
@@ -10456,6 +12302,17 @@ az-AZ:
         questions:
         - {}
       csd-pulse-check-survey-1-q5 U3Ch1_2019_pilot_2022:
+        answers:
+        - {}
+        - {}
+        - {}
+        - {}
+        - {}
+        - {}
+        - {}
+        questions:
+        - {}
+      csd-pulse-check-survey-1-q5 U3Ch1_2019_pilot_2023:
         answers:
         - {}
         - {}
@@ -10544,6 +12401,17 @@ az-AZ:
         questions:
         - {}
       csd-pulse-check-survey-1-q5 U4Ch1_2022:
+        answers:
+        - {}
+        - {}
+        - {}
+        - {}
+        - {}
+        - {}
+        - {}
+        questions:
+        - {}
+      csd-pulse-check-survey-1-q5 U4Ch1_2023:
         answers:
         - {}
         - {}
@@ -10653,6 +12521,17 @@ az-AZ:
         - {}
         questions:
         - {}
+      csd-pulse-check-survey-1-q5 U5Ch1_2023:
+        answers:
+        - {}
+        - {}
+        - {}
+        - {}
+        - {}
+        - {}
+        - {}
+        questions:
+        - {}
       csd-pulse-check-survey-1-q5 U5Ch2:
         answers:
         - {}
@@ -10741,7 +12620,29 @@ az-AZ:
         - {}
         questions:
         - {}
+      csd-pulse-check-survey-1-q5 U6Ch1_2023a_2023:
+        answers:
+        - {}
+        - {}
+        - {}
+        - {}
+        - {}
+        - {}
+        - {}
+        questions:
+        - {}
       csd-pulse-check-survey-1-q5 U6Ch1_2222:
+        answers:
+        - {}
+        - {}
+        - {}
+        - {}
+        - {}
+        - {}
+        - {}
+        questions:
+        - {}
+      csd-pulse-check-survey-1-q5 U6Ch1_mb2022:
         answers:
         - {}
         - {}
@@ -10806,6 +12707,11 @@ az-AZ:
         markdown: |
           # Super Rəqəmsal Vətəndaş
           ## Kiber sataşmasını gördükcə necə ayağa qalxa bilərik?
+      csf_be_a_super_digital_citizen2022_2023:
+        content1: Burada təsvir edin
+        markdown: |
+          # Super Rəqəmsal Vətəndaş
+          ## Kiber sataşmasını gördükcə necə ayağa qalxa bilərik?
       csf_be_a_super_digital_citizen_2021:
         content1: Burada təsvir edin
         markdown: |
@@ -10817,6 +12723,11 @@ az-AZ:
 
           ## What information is OK to have in your digital footprint?
       csf_digital_trails2022:
+        markdown: |-
+          # Rəqəmsal Cığırı izləyin
+
+          ## What information is OK to have in your digital footprint?
+      csf_digital_trails2022_2023:
         markdown: |-
           # Rəqəmsal Cığırı izləyin
 
@@ -10839,6 +12750,18 @@ az-AZ:
           * Ən azı **səkkiz** simvoldan ibarət parollar yaradın.
           * Parolunuzda hərflər, rəqəmlər və **simvollardan** istifadə edin.
       csf_password_power-up2022:
+        content1: Burada təsvir edin
+        markdown: |-
+          # Şifrənizi Gücləndirin
+
+          ## Xatırlamaq üçün Şifrə Məsləhətləri
+
+          * Unudulmaz **ifadə** ilə başlayın.
+          * Şifrənizi yalnız **valideynləriniz** bilməlidir.
+          * Heç vaxt parolunuzda heç bir **şəxsi** şəxsiyyət məlumatından istifadə etməyin.
+          * Ən azı **səkkiz** simvoldan ibarət parollar yaradın.
+          * Parolunuzda hərflər, rəqəmlər və **simvollardan** istifadə edin.
+      csf_password_power-up2022_2023:
         content1: Burada təsvir edin
         markdown: |-
           # Şifrənizi Gücləndirin
@@ -10886,6 +12809,17 @@ az-AZ:
           * **E**tibarlı böyüklərə deyin.
           * **O**K saytlar əvvəlcə.
           * **P**ause və onlayn düşünün.
+      csf_putting_a_stop_to_online_meanness2022_2023:
+        content1: Burada təsvir edin
+        markdown: |
+          # Mənalılığı STOP
+
+          ## İnternetdə kimsə sizin üçün pis davranırsa, nə etməli?
+
+          * **U**zaqlaş.
+          * **E**tibarlı böyüklərə deyin.
+          * **O**K saytlar əvvəlcə.
+          * **P**ause və onlayn düşünün.
       csf_putting_a_stop_to_online_meanness_2021:
         content1: Burada təsvir edin
         markdown: |
@@ -10903,6 +12837,11 @@ az-AZ:
 
           ## How do you go places safely online?
       csf_safety_in_my_online_neighborhood2022:
+        markdown: |-
+          # Onlayn Qonşuluğum
+
+          ## How do you go places safely online?
+      csf_safety_in_my_online_neighborhood2022_2023:
         markdown: |-
           # Onlayn Qonşuluğum
 
@@ -11123,6 +13062,17 @@ az-AZ:
         questions:
         - {}
       csp-post-survey-2017-q22_2019:
+        answers:
+        - {}
+        - {}
+        - {}
+        - {}
+        - {}
+        - {}
+        - {}
+        questions:
+        - {}
+      csp-post-survey-2017-q22_mb2022:
         answers:
         - {}
         - {}
@@ -11456,6 +13406,27 @@ az-AZ:
           * Bu kursun əsas məqsədi kompüter elmində iştirakın genişləndirilməsidir.
           * Tələbələrin kompüter elmlərinə münasibət və inanclarının kursdan əvvəl və sonrakı sorğular vasitəsilə necə dəyişə biləcəyini ölçməyə çalışırıq.
           * Onu tamamlamaq həm də müəllim və tələbə təcrübəsini təkmilləşdirmək üçün kurrikulumda edə biləcəyimiz mühüm təkmilləşdirmələri anlamağa kömək edir.
+      csp-pre-survey-2017 preamble 1_2023:
+        markdown: |-
+          ### **Bu sorğu anonimdir**
+
+          * Bu qısa sorğunun tamamlanması **10 dəqiqə və ya daha az** çəkməlidir.
+          * Code.org məxfiliyinizə çox ciddi yanaşır.
+          * Buradakı cavablarınız **anonim** saxlanılacaq.
+
+          Müəlliminiz bütün sinif üçün ümumi cavabları görəcək, lakin sizin fərdi cavablarınızı müəyyən edə bilməyəcək/ nBiz bunu edirik, çünki sizdən **mümkün qədər açıq və dürüst olmanızı istəyirik** . Kursdakı təcrübənizə əhəmiyyət veririk və dediklərinizə əsasən təkmilləşdirmələr edirik.
+
+          ***
+          ### Ümumilikdə məktəb###
+        teacher_markdown: |-
+          Ən yaxşı təcrübə tələbələrə hər hansı sinif fəaliyyəti ilə məşğul olmamışdan **əvvəl** bu sorğunu doldurmaq imkanı verməkdir. Əksər müəllimlər bunu ilkin sinif texnologiyasının qurulması gününün bir hissəsi kimi edirlər.
+
+          Siz tələbələriniz üçün sorğunun anonim nəticələrini görə biləcəksiniz.
+
+          Bu sorğu niyə buradadır?
+          * Bu kursun əsas məqsədi kompüter elmində iştirakın genişləndirilməsidir.
+          * Tələbələrin kompüter elmlərinə münasibət və inanclarının kursdan əvvəl və sonrakı sorğular vasitəsilə necə dəyişə biləcəyini ölçməyə çalışırıq.
+          * Onu tamamlamaq həm də müəllim və tələbə təcrübəsini təkmilləşdirmək üçün kurrikulumda edə biləcəyimiz mühüm təkmilləşdirmələri anlamağa kömək edir.
       csp-pre-survey-2017 preamble 2 cs in general_2018:
         markdown: |-
           # Ümumilikdə Kompüter Elmləri
@@ -11466,6 +13437,8 @@ az-AZ:
       csp-pre-survey-2017 preamble 2 cs in general_2021:
         markdown: "## Ümumilikdə Kompüter Elmləri"
       csp-pre-survey-2017 preamble 2 cs in general_2022:
+        markdown: "## Ümumilikdə Kompüter Elmləri"
+      csp-pre-survey-2017 preamble 2 cs in general_copy2_2023:
         markdown: "## Ümumilikdə Kompüter Elmləri"
       csp-pre-survey-2017 preamble 3 this class:
         markdown: |-
@@ -11492,6 +13465,8 @@ az-AZ:
         markdown: "### Kompüter Elmində gələcəyiniz"
       csp-pre-survey-2017 preamble 3 this class_2022:
         markdown: "### Kompüter Elmində gələcəyiniz"
+      csp-pre-survey-2017 preamble 3 this class_copy2_2023:
+        markdown: "### Kompüter Elmində gələcəyiniz"
       csp-pre-survey-2017 preamble 4 the future:
         markdown: |-
           ### 4-cü hissə: Sizin gələcəyiniz və başqaları
@@ -11510,6 +13485,8 @@ az-AZ:
         markdown: "### Kompüter Elmində gələcəyiniz"
       csp-pre-survey-2017 preamble 4 the future_2022:
         markdown: "### Kompüter Elmində gələcəyiniz"
+      csp-pre-survey-2017 preamble 4 the future_2023:
+        markdown: "### Kompüter Elmində gələcəyiniz"
       csp-pre-survey-2017 preamble 5 demographics:
         markdown: |-
           ### 5-ci Hissə: Bitirmə
@@ -11527,6 +13504,10 @@ az-AZ:
       csp-pre-survey-2017 preamble 5 demographics_2021:
         markdown: "### Kompüter elmində keçmişiniz"
       csp-pre-survey-2017 preamble 5 demographics_2022:
+        markdown: "### Kompüter elmində keçmişiniz"
+      csp-pre-survey-2017 preamble 5 demographics_2023:
+        markdown: "### Kompüter elmində keçmişiniz"
+      csp-pre-survey-2017 preamble 5 demographics_mb2022:
         markdown: "### Kompüter elmində keçmişiniz"
       csp-pre-survey-2017-q1:
         answers:
@@ -11573,6 +13554,17 @@ az-AZ:
         questions:
         - {}
       csp-pre-survey-2017-q10_2022:
+        answers:
+        - {}
+        - {}
+        - {}
+        - {}
+        - {}
+        - {}
+        - {}
+        questions:
+        - {}
+      csp-pre-survey-2017-q10_copy2_2023:
         answers:
         - {}
         - {}
@@ -11675,6 +13667,18 @@ az-AZ:
         questions:
         - text: 'Fikrimcə, kompyuter elmlərində məktəbdəki digər uşaqlardan daha yaxşı
             olacam. '
+      csp-pre-survey-2017-q13_2023:
+        answers:
+        - {}
+        - {}
+        - {}
+        - {}
+        - {}
+        - {}
+        - {}
+        questions:
+        - text: 'Fikrimcə, kompyuter elmlərində məktəbdəki digər uşaqlardan daha yaxşı
+            olacam. '
       csp-pre-survey-2017-q14:
         answers:
         - {}
@@ -11743,6 +13747,17 @@ az-AZ:
         - {}
         questions:
         - text: Kompüter elmləri sahəsində yaxşı olmaq mənim üçün önəmlidir.
+      csp-pre-survey-2017-q16_copy2_2023:
+        answers:
+        - {}
+        - {}
+        - {}
+        - {}
+        - {}
+        - {}
+        - {}
+        questions:
+        - text: Kompüter elmləri sahəsində yaxşı olmaq mənim üçün önəmlidir.
       csp-pre-survey-2017-q17:
         answers:
         - {}
@@ -11777,6 +13792,17 @@ az-AZ:
         questions:
         - text: Mənim kimi insanlar kompüter elmləri ilə məşğul olurlar.
       csp-pre-survey-2017-q17_2022:
+        answers:
+        - {}
+        - {}
+        - {}
+        - {}
+        - {}
+        - {}
+        - {}
+        questions:
+        - text: Mənim kimi insanlar kompüter elmləri ilə məşğul olurlar.
+      csp-pre-survey-2017-q17_copy2_2023:
         answers:
         - {}
         - {}
@@ -11843,6 +13869,17 @@ az-AZ:
         questions:
         - text: Bu informatika dərsini bəyənəcəm.
       csp-pre-survey-2017-q19_2022:
+        answers:
+        - {}
+        - {}
+        - {}
+        - {}
+        - {}
+        - {}
+        - {}
+        questions:
+        - text: Bu informatika dərsini bəyənəcəm.
+      csp-pre-survey-2017-q19_2023:
         answers:
         - {}
         - {}
@@ -11920,6 +13957,28 @@ az-AZ:
         - {}
         questions:
         - text: Bu informatika dərsində özümü rahat hiss edəcəm.
+      csp-pre-survey-2017-q20_2023:
+        answers:
+        - {}
+        - {}
+        - {}
+        - {}
+        - {}
+        - {}
+        - {}
+        questions:
+        - text: Bu informatika dərsində özümü rahat hiss edəcəm.
+      csp-pre-survey-2017-q20_mb2022:
+        answers:
+        - {}
+        - {}
+        - {}
+        - {}
+        - {}
+        - {}
+        - {}
+        questions:
+        - text: Bu informatika dərsində özümü rahat hiss edəcəm.
       csp-pre-survey-2017-q21:
         answers:
         - {}
@@ -11978,6 +14037,28 @@ az-AZ:
         questions:
         - text: Gözləyirəm ki, bəzən bu sinfə aid olub-olmadığıma əmin olacağam.
       csp-pre-survey-2017-q22_2022:
+        answers:
+        - {}
+        - {}
+        - {}
+        - {}
+        - {}
+        - {}
+        - {}
+        questions:
+        - text: Gözləyirəm ki, bəzən bu sinfə aid olub-olmadığıma əmin olacağam.
+      csp-pre-survey-2017-q22_2023:
+        answers:
+        - {}
+        - {}
+        - {}
+        - {}
+        - {}
+        - {}
+        - {}
+        questions:
+        - text: Gözləyirəm ki, bəzən bu sinfə aid olub-olmadığıma əmin olacağam.
+      csp-pre-survey-2017-q22_mb2022:
         answers:
         - {}
         - {}
@@ -12213,6 +14294,17 @@ az-AZ:
         - {}
         questions:
         - text: İşimdə kompüter elmindən istifadə edəcəyimi gözləyirəm.
+      csp-pre-survey-2017-q30_2023:
+        answers:
+        - {}
+        - {}
+        - {}
+        - {}
+        - {}
+        - {}
+        - {}
+        questions:
+        - text: İşimdə kompüter elmindən istifadə edəcəyimi gözləyirəm.
       csp-pre-survey-2017-q31:
         answers:
         - {}
@@ -12247,6 +14339,28 @@ az-AZ:
         questions:
         - {}
       csp-pre-survey-2017-q31_2022:
+        answers:
+        - {}
+        - {}
+        - {}
+        - {}
+        - {}
+        - {}
+        - {}
+        questions:
+        - {}
+      csp-pre-survey-2017-q31_2023:
+        answers:
+        - {}
+        - {}
+        - {}
+        - {}
+        - {}
+        - {}
+        - {}
+        questions:
+        - {}
+      csp-pre-survey-2017-q31_mb2022:
         answers:
         - {}
         - {}
@@ -12372,6 +14486,17 @@ az-AZ:
         - {}
         questions:
         - text: Mənim fikrimcə, məktəb işlərim maraqlıdır.
+      csp-pre-survey-2017-q3_copy2_2023:
+        answers:
+        - {}
+        - {}
+        - {}
+        - {}
+        - {}
+        - {}
+        - {}
+        questions:
+        - text: Mənim fikrimcə, məktəb işlərim maraqlıdır.
       csp-pre-survey-2017-q4:
         answers:
         - {}
@@ -12432,6 +14557,39 @@ az-AZ:
         questions:
         - text: Məktəb tapşırıqlarında yaxşı olmaq mənim üçün vacibdir.
       csp-pre-survey-2017-q4_2022:
+        answers:
+        - {}
+        - {}
+        - {}
+        - {}
+        - {}
+        - {}
+        - {}
+        questions:
+        - text: Məktəb tapşırıqlarında yaxşı olmaq mənim üçün vacibdir.
+      csp-pre-survey-2017-q4_copy1_mb2022:
+        answers:
+        - {}
+        - {}
+        - {}
+        - {}
+        - {}
+        - {}
+        - {}
+        questions:
+        - text: Məktəb tapşırıqlarında yaxşı olmaq mənim üçün vacibdir.
+      csp-pre-survey-2017-q4_copy2_2023:
+        answers:
+        - {}
+        - {}
+        - {}
+        - {}
+        - {}
+        - {}
+        - {}
+        questions:
+        - text: Məktəb tapşırıqlarında yaxşı olmaq mənim üçün vacibdir.
+      csp-pre-survey-2017-q4_mb2022:
         answers:
         - {}
         - {}
@@ -12574,9 +14732,29 @@ az-AZ:
         - {}
         questions:
         - text: Məktəbdə əsil özüm ola bilirəm.
+      csp-pre-survey-2017-q9_copy2_2023:
+        answers:
+        - {}
+        - {}
+        - {}
+        - {}
+        - {}
+        - {}
+        - {}
+        questions:
+        - text: Məktəbdə əsil özüm ola bilirəm.
       csp_unit_assessment_overview:
         content1: Burada təsvir edin
       curriculum-how-challenging:
+        answers:
+        - {}
+        - {}
+        - {}
+        - {}
+        - {}
+        questions:
+        - {}
+      curriculum-how-challenging_mb2022:
         answers:
         - {}
         - {}
@@ -12620,7 +14798,33 @@ az-AZ:
         questions:
         - text: Əvvəllər heç <em>məktəbdən kənar</em> hər hansı kompüter elmini öyrənmisiniz?
             (əgər belədirsə, ən son təcrübənizi seçin)
+      ever-learned-cs-outside-school_2023:
+        answers:
+        - text: Bəli, məktəbdən sonra proqram
+        - text: Bəli, müstəqil onlayn fəaliyyətlər
+        - text: Bəli, düşərgə və ya yay proqramı
+        - text: Xeyr, mən heç vaxt məktəbdən kənar kompüter elmləri ilə məşğul olmamışam
+        questions:
+        - text: Əvvəllər heç <em>məktəbdən kənar</em> hər hansı kompüter elmini öyrənmisiniz?
+            (əgər belədirsə, ən son təcrübənizi seçin)
+      ever-learned-cs-outside-school_mb2022:
+        answers:
+        - text: Bəli, məktəbdən sonra proqram
+        - text: Bəli, müstəqil onlayn fəaliyyətlər
+        - text: Bəli, düşərgə və ya yay proqramı
+        - text: Xeyr, mən heç vaxt məktəbdən kənar kompüter elmləri ilə məşğul olmamışam
+        questions:
+        - text: Əvvəllər heç <em>məktəbdən kənar</em> hər hansı kompüter elmini öyrənmisiniz?
+            (əgər belədirsə, ən son təcrübənizi seçin)
       ever-learned-cs_2022:
+        answers:
+        - text: Bəli, dərs aldım
+        - text: Bəli, bəzi fəaliyyətlər, lakin tam sinif deyil
+        - text: Əmin deyiləm
+        - text: Qətiyyən yox
+        questions:
+        - text: Əvvəllər heç <em>məktəbdə</em> kompüter elmlərini öyrənmisiniz?
+      ever-learned-cs_2023:
         answers:
         - text: Bəli, dərs aldım
         - text: Bəli, bəzi fəaliyyətlər, lakin tam sinif deyil
@@ -12631,10 +14835,15 @@ az-AZ:
       express_EOC2022:
         description: Siz E Kursunun sonuna çatdınız! Yaratmaq üçün layihə seçin.
         display_name: Kurs layihələrinin sonu!
+      express_EOC2022_2023:
+        description: Siz E Kursunun sonuna çatdınız! Yaratmaq üçün layihə seçin.
+        display_name: Kurs layihələrinin sonu!
       express_EOC_2021:
         description: Siz E Kursunun sonuna çatdınız! Yaratmaq üçün layihə seçin.
         display_name: Kurs layihələrinin sonu!
       express_EOC_examples2022:
+        display_name: Layihə Nümunələri
+      express_EOC_examples2022_2023:
         display_name: Layihə Nümunələri
       express_EOC_examples_2021:
         display_name: Layihə Nümunələri
@@ -12646,6 +14855,13 @@ az-AZ:
         - text: Valideyn, bacı və ya əmisi oğlu kimi bir ailə üzvü sizi bu dərsi keçməyə
             təşviq etdi?
       family_encourage_2022:
+        answers:
+        - text: bəli
+        - text: xeyr
+        questions:
+        - text: Valideyn, bacı və ya əmisi oğlu kimi bir ailə üzvü sizi bu dərsi keçməyə
+            təşviq etdi?
+      family_encourage_2023:
         answers:
         - text: bəli
         - text: xeyr
@@ -12668,6 +14884,20 @@ az-AZ:
         - text: Aşağıdakı koda diqqətlə baxın. Kod sonuna qədər işləyəcəksə (səhvlərə
             məhəl qoymadan) Laurel neçə xəzinə parçası toplayar?
       grade2_multi_collector_A_predict12022:
+        answers:
+        - feedback: Doğru deyil. Laurel xəzinə olmayan yerdən xəzinəni toplamağa çalışır
+            və bu xətaya səbəb olur.
+          text: Laurel bu kodu istifadə edərək 4 parça xəzinə yığacaq.
+        - feedback: Düzgün!
+          text: Laurel xəzinə olmayan yerdə onu axtaracaq və bu xətaya səbəb olacaq.
+        - feedback: Doğru deyil. Laurel xəzinə olmayan yerdən xəzinəni toplamağa çalışır
+            və bu xətaya səbəb olur.
+          text: Laurel bütün xəzinəni toplayacaq.
+        - feedback: Doğru deyil. Laurel xəzinə olmayan yerdən xəzinəni toplamağa çalışır
+            və bu xətaya səbəb olur.
+        questions:
+        - text: Koda diqqətlə bax.Səncə, proqramı işə saldıqda nə baş verəcək ?
+      grade2_multi_collector_A_predict12022_2023:
         answers:
         - feedback: Doğru deyil. Laurel xəzinə olmayan yerdən xəzinəni toplamağa çalışır
             və bu xətaya səbəb olur.
@@ -12867,6 +15097,310 @@ az-AZ:
         - {}
         questions:
         - text: Kompüter elmlərini öyrənməkdə maraqlıyam.
+      interested-in-learning-cs_2023:
+        answers:
+        - {}
+        - {}
+        - {}
+        - {}
+        - {}
+        - {}
+        - {}
+        questions:
+        - text: Kompüter elmlərini öyrənməkdə maraqlıyam.
+      interested-in-learning-cs_mb2022:
+        answers:
+        - {}
+        - {}
+        - {}
+        - {}
+        - {}
+        - {}
+        - {}
+        questions:
+        - text: Kompüter elmlərini öyrənməkdə maraqlıyam.
+      intro-pulse-survey-q1_csd1_2023:
+        answers:
+        - {}
+        - {}
+        - {}
+        questions:
+        - {}
+      intro-pulse-survey-q1_csd2_2023:
+        answers:
+        - {}
+        - {}
+        - {}
+        questions:
+        - {}
+      intro-pulse-survey-q1_csd3_2023:
+        answers:
+        - {}
+        - {}
+        - {}
+        questions:
+        - {}
+      intro-pulse-survey-q1_csd4_2023:
+        answers:
+        - {}
+        - {}
+        - {}
+        questions:
+        - {}
+      intro-pulse-survey-q1_csd5_2023:
+        answers:
+        - {}
+        - {}
+        - {}
+        questions:
+        - {}
+      intro-pulse-survey-q1_csd6_2023:
+        answers:
+        - {}
+        - {}
+        - {}
+        questions:
+        - {}
+      intro-pulse-survey-q2_csd1_2023:
+        answers:
+        - {}
+        - {}
+        - {}
+        questions:
+        - {}
+      intro-pulse-survey-q2_csd2_2023:
+        answers:
+        - {}
+        - {}
+        - {}
+        questions:
+        - {}
+      intro-pulse-survey-q2_csd3_2023:
+        answers:
+        - {}
+        - {}
+        - {}
+        questions:
+        - {}
+      intro-pulse-survey-q2_csd4_2023:
+        answers:
+        - {}
+        - {}
+        - {}
+        questions:
+        - {}
+      intro-pulse-survey-q2_csd5_2023:
+        answers:
+        - {}
+        - {}
+        - {}
+        questions:
+        - {}
+      intro-pulse-survey-q2_csd6_2023:
+        answers:
+        - {}
+        - {}
+        - {}
+        questions:
+        - {}
+      intro-pulse-survey-q3_csd1_2023:
+        answers:
+        - {}
+        - {}
+        - {}
+        - {}
+        - {}
+        - {}
+        - {}
+        questions:
+        - {}
+      intro-pulse-survey-q3_csd2_2023:
+        answers:
+        - {}
+        - {}
+        - {}
+        - {}
+        - {}
+        - {}
+        - {}
+        questions:
+        - {}
+      intro-pulse-survey-q3_csd3_2023:
+        answers:
+        - {}
+        - {}
+        - {}
+        - {}
+        - {}
+        - {}
+        - {}
+        questions:
+        - {}
+      intro-pulse-survey-q3_csd4_2023:
+        answers:
+        - {}
+        - {}
+        - {}
+        - {}
+        - {}
+        - {}
+        - {}
+        questions:
+        - {}
+      intro-pulse-survey-q3_csd5_2023:
+        answers:
+        - {}
+        - {}
+        - {}
+        - {}
+        - {}
+        - {}
+        - {}
+        questions:
+        - {}
+      intro-pulse-survey-q3_csd6_2023:
+        answers:
+        - {}
+        - {}
+        - {}
+        - {}
+        - {}
+        - {}
+        - {}
+        questions:
+        - {}
+      intro-pulse-survey-q4_csd1_2023:
+        answers:
+        - {}
+        - {}
+        - {}
+        - {}
+        - {}
+        - {}
+        - {}
+        questions:
+        - {}
+      intro-pulse-survey-q4_csd2_2023:
+        answers:
+        - {}
+        - {}
+        - {}
+        - {}
+        - {}
+        - {}
+        - {}
+        questions:
+        - {}
+      intro-pulse-survey-q4_csd3_2023:
+        answers:
+        - {}
+        - {}
+        - {}
+        - {}
+        - {}
+        - {}
+        - {}
+        questions:
+        - {}
+      intro-pulse-survey-q4_csd4_2023:
+        answers:
+        - {}
+        - {}
+        - {}
+        - {}
+        - {}
+        - {}
+        - {}
+        questions:
+        - {}
+      intro-pulse-survey-q4_csd5_2023:
+        answers:
+        - {}
+        - {}
+        - {}
+        - {}
+        - {}
+        - {}
+        - {}
+        questions:
+        - {}
+      intro-pulse-survey-q4_csd6_2023:
+        answers:
+        - {}
+        - {}
+        - {}
+        - {}
+        - {}
+        - {}
+        - {}
+        questions:
+        - {}
+      intro-pulse-survey-q5_csd1_2023:
+        answers:
+        - {}
+        - {}
+        - {}
+        - {}
+        - {}
+        - {}
+        - {}
+        questions:
+        - {}
+      intro-pulse-survey-q5_csd2_2023:
+        answers:
+        - {}
+        - {}
+        - {}
+        - {}
+        - {}
+        - {}
+        - {}
+        questions:
+        - {}
+      intro-pulse-survey-q5_csd3_2023:
+        answers:
+        - {}
+        - {}
+        - {}
+        - {}
+        - {}
+        - {}
+        - {}
+        questions:
+        - {}
+      intro-pulse-survey-q5_csd4_2023:
+        answers:
+        - {}
+        - {}
+        - {}
+        - {}
+        - {}
+        - {}
+        - {}
+        questions:
+        - {}
+      intro-pulse-survey-q5_csd5_2023:
+        answers:
+        - {}
+        - {}
+        - {}
+        - {}
+        - {}
+        - {}
+        - {}
+        questions:
+        - {}
+      intro-pulse-survey-q5_csd6_2023:
+        answers:
+        - {}
+        - {}
+        - {}
+        - {}
+        - {}
+        - {}
+        - {}
+        questions:
+        - {}
       made-choices-about-assignments:
         answers:
         - text: Heç vaxt
@@ -12880,9 +15414,13 @@ az-AZ:
         display_name: Tətbiqinizi özəlləşdirin
       ml-club app-choice parent_2022:
         display_name: Tətbiqinizi özəlləşdirin
+      ml-club app-choice parent_2023:
+        display_name: Tətbiqinizi özəlləşdirin
       ml-intro app lab-book recommender 5-2021:
         display_name: Tətbiqinizi özəlləşdirin
       ml-intro app lab-book recommender 5_2022:
+        display_name: Tətbiqinizi özəlləşdirin
+      ml-intro app lab-book recommender 5_2023:
         display_name: Tətbiqinizi özəlləşdirin
       naturally-better-at-cs:
         answers:
@@ -12917,6 +15455,17 @@ az-AZ:
         - {}
         questions:
         - {}
+      naturally-better-at-cs_copy2_2023:
+        answers:
+        - {}
+        - {}
+        - {}
+        - {}
+        - {}
+        - {}
+        - {}
+        questions:
+        - {}
       outbreak_freeplay_choice:
         display_name: Azad Oyna
       outside-school-cs:
@@ -12928,6 +15477,17 @@ az-AZ:
         questions:
         - {}
       post-assessment survey q31-a-2017b:
+        answers:
+        - {}
+        - {}
+        - {}
+        - {}
+        - {}
+        - {}
+        - {}
+        questions:
+        - {}
+      post-assessment survey q31-a-2017b_mb2022:
         answers:
         - {}
         - {}
@@ -13271,6 +15831,18 @@ az-AZ:
         - text: Digər səbəblər qeyd edilməyib
         questions:
         - text: Bu dərsi götürməyinizə əsas iki səbəb nədir? (ikiyə qədər seçin).
+      reasons-took-course-csd_2023:
+        answers:
+        - text: Onu götürən dostlarım var idi
+        - text: Müəllimi çox bəyənirəm
+        - text: Əyləncəli olacağını düşündüm
+        - text: Kompüter elmləri haqqında daha çox öyrənmək istədim
+        - text: Asan olacağını düşündüm
+        - text: Bunun çətin olacağını düşündüm
+        - text: Tələb olunur, yoxsa mən ona yerləşdirilmişəm.
+        - text: Digər səbəblər qeyd edilməyib
+        questions:
+        - text: Bu dərsi götürməyinizə əsas iki səbəb nədir? (ikiyə qədər seçin).
       same-ability:
         answers:
         - {}
@@ -13289,6 +15861,12 @@ az-AZ:
         questions:
         - text: Məktəbdə başqa biri sizi bu sinfə getməyə təşviq etdi?
       someone_else_encourage_2022:
+        answers:
+        - text: bəli
+        - text: xeyr
+        questions:
+        - text: Məktəbdə başqa biri sizi bu sinfə getməyə təşviq etdi?
+      someone_else_encourage_2023:
         answers:
         - text: bəli
         - text: xeyr
@@ -13316,6 +15894,12 @@ az-AZ:
         questions:
         - text: Məktəbdə müəllim sizi bu dərsi keçməyə təşviq etdi?
       teacher_encourage_2022:
+        answers:
+        - text: bəli
+        - text: xeyr
+        questions:
+        - text: Məktəbdə müəllim sizi bu dərsi keçməyə təşviq etdi?
+      teacher_encourage_2023:
         answers:
         - text: bəli
         - text: xeyr
@@ -13390,6 +15974,28 @@ az-AZ:
         - {}
         questions:
         - text: Bu informatika dərsində həqiqətən də özüm ola biləcəyəm.
+      will-be-myself-in-cs_2023:
+        answers:
+        - {}
+        - {}
+        - {}
+        - {}
+        - {}
+        - {}
+        - {}
+        questions:
+        - text: Bu informatika dərsində həqiqətən də özüm ola biləcəyəm.
+      will-be-myself-in-cs_mb2022:
+        answers:
+        - {}
+        - {}
+        - {}
+        - {}
+        - {}
+        - {}
+        - {}
+        questions:
+        - text: Bu informatika dərsində həqiqətən də özüm ola biləcəyəm.
       worried-less-capable:
         answers:
         - {}
@@ -13414,6 +16020,17 @@ az-AZ:
         questions:
         - text: Bu sinifdə başqaları tərəfindən daha az bacarıqlı görünəcəyimdən narahatam.
       worried-seen-incapable_2022:
+        answers:
+        - {}
+        - {}
+        - {}
+        - {}
+        - {}
+        - {}
+        - {}
+        questions:
+        - text: Bu sinifdə başqaları tərəfindən daha az bacarıqlı görünəcəyimdən narahatam.
+      worried-seen-incapable_2023:
         answers:
         - {}
         - {}

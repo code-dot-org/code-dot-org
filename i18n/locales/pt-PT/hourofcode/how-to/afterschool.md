@@ -6,7 +6,7 @@ title: Hour of Code How-to Guide for After-school
 
 # Como ensinar uma Hora de Código em atividades extracurriculares ou em clubes
 
-### Join the movement and introduce your students to computer science with these steps.
+### Participe do movimento e apresente seus alunos à ciência da computação com essas etapas.
 
 Computational thinking helps nurture problem-solving skills, logic, and creativity. And technology is transforming every industry on the planet. Students today should learn how to create technology, not just use it. By starting early, they’ll have a foundation for success in any 21st-century career path.
 

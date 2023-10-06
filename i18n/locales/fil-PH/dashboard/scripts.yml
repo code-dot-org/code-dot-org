@@ -3637,3 +3637,7 @@ fil:
           description_short: Alamin ang lahat ng mga konsepto sa mga Pangunahing Kaalaman sa Computer Science at maglikha ng iyong sariling sining, kuwento o laro.
         how-ai-works-2023:
           title: Paano Gumagana ang AI
+        ai-ethics-2023:
+          lessons:
+            lesson-1:
+              name: Ang aming Kodigo ng Etika sa AI.

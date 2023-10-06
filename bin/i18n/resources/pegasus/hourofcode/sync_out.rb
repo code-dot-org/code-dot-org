@@ -2,11 +2,10 @@
 
 require 'fileutils'
 require 'yaml'
-require 'tempfile'
 
 require_relative '../../../../../dashboard/config/environment'
-require_relative '../../../../../pegasus/helpers/pegasus_languages'
 require_relative '../../../i18n_script_utils'
+require_relative '../../../utils/pegasus_markdown'
 require_relative '../hourofcode'
 
 module I18n
@@ -75,39 +74,24 @@ module I18n
             FileUtils.rm(crowdin_en_file_path)
           end
 
-          # In the sync in, we slice the YAML headers of the files we upload to crowdin
-          # down to just the part we want to translate (ie, the title). Here, we
-          # reinflate the header with all the values from the source file.
-          def restore_sanitized_headers(file_name, hoc_markdown_i18n_file_path)
-            hoc_markdown_file_path = File.join(ORIGIN_DIR_PATH, MARKDOWN_DIR_NAME, file_name)
-            # Because we give _all_ files coming from crowdin the partial
-            # extension, we can't know for sure whether or not the origin also uses
-            # that extension unless we check both with and without.
-            hoc_markdown_file_path += PARTIAL_EXTNAME unless File.exist?(hoc_markdown_file_path)
-
-            return unless File.exist?(hoc_markdown_file_path)
-
-            header, _content, _line = Documents.new.helpers.parse_yaml_header(hoc_markdown_file_path)
-            i18n_header, i18n_content, _i18n_line = Documents.new.helpers.parse_yaml_header(hoc_markdown_i18n_file_path)
-
-            sanitized_i18n_header = I18nScriptUtils.sanitize_markdown_header(i18n_header)
-            restored_header = header.merge(sanitized_i18n_header)
-
-            I18nScriptUtils.write_markdown_with_header(i18n_content, restored_header, hoc_markdown_i18n_file_path)
-          end
-
           # Copy the markdown files representing individual page content
           def distribute_markdown_files(unique_language_code, crowdin_locale_dir)
             Dir.glob(File.join(crowdin_locale_dir, '**/*.md')) do |crowdin_file_path|
               file_name = crowdin_file_path.delete_prefix(crowdin_locale_dir)
+
+              hoc_markdown_file_path = File.join(ORIGIN_DIR_PATH, MARKDOWN_DIR_NAME, file_name)
+              # Because we give _all_ files coming from crowdin the partial
+              # extension, we can't know for sure whether or not the origin also uses
+              # that extension unless we check both with and without.
+              hoc_markdown_file_path += PARTIAL_EXTNAME unless File.exist?(hoc_markdown_file_path)
+              next unless File.exist?(hoc_markdown_file_path)
 
               hoc_markdown_i18n_file_path = File.join(
                 ORIGIN_I18N_DIR_PATH, MARKDOWN_DIR_NAME, unique_language_code, "#{file_name}#{PARTIAL_EXTNAME}"
               )
 
               I18nScriptUtils.copy_file(crowdin_file_path, hoc_markdown_i18n_file_path)
-
-              restore_sanitized_headers(file_name, hoc_markdown_i18n_file_path)
+              I18n::Utils::PegasusMarkdown.restore_file_header(hoc_markdown_file_path, hoc_markdown_i18n_file_path)
             end
           end
         end

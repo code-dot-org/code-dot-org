@@ -25,7 +25,7 @@ title: Руководство по проведению Часа кода
 
 <a id="how-to-video"></a>
 
-## 1. Просмотрите видеоруководство по Часу кода <iframe width="500" height="255" src="//www.youtube.com/embed/SrnvvWDm73k" frameborder="0" allowfullscreen></iframe> 
+## 1. Просмотрите видеоруководство по Часу кода <iframe width="500" height="255" src="https://www.youtube-nocookie.com/embed/SrnvvWDm73k" frameborder="0" allowfullscreen></iframe> 
 
 * * *
 
@@ -111,7 +111,7 @@ title: Руководство по проведению Часа кода
 
 Объясните ученикам, как начать
 
-- Write the tutorial link on a whiteboard. Find the link listed on the [information for your selected tutorial]({{ urls/learn }}).
+- Напишите ссылку на учебное пособие на доске. Найдите ссылку, указанную в [информации к выбранному учебному]({{ urls/learn }})пособию.
 
 Если ваши ученики сталкиваются с трудностями, будет правильно ответить:
 
@@ -151,6 +151,6 @@ title: Руководство по проведению Часа кода
 
 ### Час Кода: а что дальше?
 
-Computer science doesn’t have to end with the Hour of Code! [Learn how](/beyond) to bring CS to your school and students.
+Информатика не должна заканчиваться Часом кода! [Узнайте](/beyond) , как использовать CS в своей школе и учениках.
 
 {{ signup_button }}

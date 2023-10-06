@@ -19,7 +19,7 @@ fa:
         Farmer2: کشاورز 2
         Unplug8: انتزاع
         Artist4: هنرمند 4
-        Unplug9: برنامه نویسی دست به دست
+        Unplug9: برنامه نویسی رله
         Farmer3: کشاورز 3
         Unplug10: اینترنت
         Artist5: هنرمند 5
@@ -311,8 +311,8 @@ fa:
         C2_playlab_createstory: آزمایشگاه بازی - یک بازی بسازید
         C2_graph_paper: برنامه نویسی روی کاغذ شطرنجی 
         C2_conditionals_with_cards: مشروط
-        C2_binary_bracelets: دستبند دودویی
-        C2_relay_programming: برنامه نویسی دست به دست
+        C2_binary_bracelets: دستبندهای دودویی
+        C2_relay_programming: برنامه نویسی رله
         C2_paper_airplanes: هواپیماهای کاغذی
         C2_digital_footprint: ردپای دیجیتالی شما
         C2_digital_footprint_v2: ردپای دیجیتالی شما
@@ -371,7 +371,7 @@ fa:
         CSF_unspotted_bugs: باگ‌های دیده‌نشده
         CSF_zuck_loops_short: حلقه‌های تکرار
         frozen_intro: معرفی ساعت کدزنی
-        frozen_loops: معرفی حلقه ها
+        frozen_loops: معرفی حلقه‌ها
         frozen_functions: معرفی تابع ها
         playlab_intro: معرفی آزمایشگاه بازی
         playlab_events: رویداد های آزمایشگاه بازی
@@ -497,7 +497,7 @@ fa:
         csd_gamelab_booleans: عبارات بولی
         csd_gamelab_conditional_statements: گزاره‌های شرطی
         csd_gamelab_if_else: گزاره‌های If/Else
-        CSF_SpriteLabIntro_CDEF: این Sprite Lab است
+        CSF_SpriteLabIntro_CDEF: اينجا لابراتوار اسپرايت است
         CSF_Spritelab_MakeSprite_CDEF: نحوه ساخت اسپرایت در Sprite Lab
         CDEF_Video_SpritesInAction: اسپرایت‌ها در عمل
         CSF_SpriteLab_SpritesInAction_CDEF: اسپرایت‌ها در عمل
@@ -506,7 +506,7 @@ fa:
         MC_2018_loops: 'ماینکرافت: Voyage Aquatic تکرار کن تا زمانی که'
         mc_2018_conditionals: 'ماینکرافت: شرطی‌های Voyage Aquatic'
         mc_2018_closing: 'ماینکرافت: تبریک Voyage Aquatic'
-        hoc_dance_warmup: مهمانی رقص - گرم کردن
+        hoc_dance_warmup: مهمانی رقص - آماده شدن
         hoc_dance_congrats: مهمانی رقص - برقص!
         c_and_c_great_to_create: عالی خواهد بود که بتوانیم چیزی خلق کنیم و جوانمردانه بازی کنیم
         c_and_c_digital_sharing: اشتراک گذاری دیجیتال
@@ -530,8 +530,8 @@ fa:
         csd_applab_loops: حلقه‌ها در ‏App Lab
         csd_problem_solving_process: فرایند حل مسئله
         CSF_Going_Places_Safely: محله برخط من
-        CSF_SpriteLab_Intro_v2: آشنایی با آزمایشگاه اسپرایت
-        CSF_Spritelab_MakeSprite_v2: نحوه ساخت اسپرایت
+        CSF_SpriteLab_Intro_v2: آشنایی با لابراتوار اسپرایت
+        CSF_Spritelab_MakeSprite_v2: چگونه یک اسپرایت درست کنیم
         CSF_SpriteLab_SpritesInAction_v2: اسپرایت‌ها در عمل
         csd_debugging: رفع اشکال
         csd_applab_designmode_short: حالت طراحی App Lab
@@ -546,7 +546,7 @@ fa:
         oceans_training_data: داده‌های آموزشی
         oceans_societal_implications: پیامدهای اجتماعی
         hoc_dance_congrats_2019: مهمانی رقص - برقص!
-        hoc_dance_warmup_2019: مهمانی رقص - گرم کردن
+        hoc_dance_warmup_2019: مهمانی رقص - آماده شدن
         hoc_dance_measures_2019: مهمانی رقص - اقدامات
         csd_what_computers_do: کامپیوترها چه کاری انجام می‌دهند؟
         csf_my_online_neighborhood_2020: محله برخط من
@@ -699,7 +699,7 @@ fa:
     callout:
       text:
         drag_blocks: یک بلوک "حرکت" را بکش و آن را زیر بلوک دیگری بچسبان
-        run: '"اجرا" را بزن تا برنامه‌ات اجرا بشه'
+        run: '«اجرا» را بزنید تا برنامه خود را امتحان کنید'
         watch_again: برای تماشای دوباره این ویدیو اینجا را کلیک کنید 
         gray_block_explanation: بلوک های خاکستری را نمی توان پاک کرد. با این وجود می توانید معما را حل کنید?
         show_code_explanation: اینجا را کلیک کن تا کد برنامه‌ای که می‌سازی را ببینی
@@ -767,7 +767,7 @@ fa:
         Infinity_move_directions_callout_arrow: برای هدایت کردن از این فلش ها استفاده کنید
         Infinity_move_collide_callout: پخش صدا هنگامی که این رویداد رخ می دهد.
         Infinity_repeat_callout: بلوک های حرکت را داخل اینجا قرار دهید
-        craft_run_button_callout: '"اجرا" را بزن تا برنامه‌ات اجرا بشه'
+        craft_run_button_callout: '«اجرا» را بزنید تا برنامه خود را امتحان کنید'
         craft_drag_block_callout: یک بلوک "moveForward();" را بکشانید و آن را زیر بلوک دیگر بچسبانید
         craft_callout_preplaced: چند بلوک در اینجا قرار داده‌ایم تا شروع کنید
         craft_inside_repeat: با قرار دادن بلوک‌ها در اینجا، حرکات را تکرار کنید

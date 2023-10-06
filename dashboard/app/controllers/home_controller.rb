@@ -85,13 +85,13 @@ class HomeController < ApplicationController
   # false (redirect to student homepage) - otherwise.
   private def should_redirect_to_script_overview?
     current_user.student? &&
-    current_user.can_access_most_recently_assigned_script? &&
-    current_user.most_recent_assigned_script_in_live_section? &&
-    (
-      !current_user.user_script_with_most_recent_progress ||
-      current_user.most_recent_progress_in_recently_assigned_script? ||
-      current_user.last_assignment_after_most_recent_progress?
-    )
+      current_user.can_access_most_recently_assigned_script? &&
+      current_user.most_recent_assigned_script_in_live_section? &&
+      (
+        !current_user.user_script_with_most_recent_progress ||
+        current_user.most_recent_progress_in_recently_assigned_script? ||
+        current_user.last_assignment_after_most_recent_progress?
+      )
   end
 
   # Set all local variables needed to render the signed-in homepage.
@@ -192,7 +192,7 @@ class HomeController < ApplicationController
       @homepage_data[:showFinishTeacherApplication] = has_incomplete_open_application?
       @homepage_data[:showReturnToReopenedTeacherApplication] = has_reopened_application?
       @homepage_data[:afeEligible] = afe_eligible
-      @homepage_data[:specialAnnouncement] = Announcements.get_announcement_for_page("/home")
+      @homepage_data[:specialAnnouncement] = Announcements.get_localized_announcement_for_page("/home")
       @homepage_data[:showIncubatorBanner] = show_incubator_banner?
 
       if show_census_banner

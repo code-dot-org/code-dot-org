@@ -10,6 +10,7 @@ zh-CN:
         error:
           future: 不能选择将来的时间
         finish_sign_up_header: 完成创建帐户
+        finish_sign_up_header_error: 请更正以下错误：
         finish_sign_up_subheader: 填写以下信息为 <strong>%{email}</strong> 创建 Code.org 帐户。
         finish_sign_up_subheader_markdown: 填写以下信息为 **%{email}** 创建 Code.org 帐户。
         finish_sign_up_subheader_provider: 填写信息，来使用 <strong>%{provider}</strong> 的
@@ -27,6 +28,7 @@ zh-CN:
         personal_email_markdown: 个人电子邮箱地址 [（没有电子邮箱请点击这里）](%{url})
         reset_password_token: 重置密码链接
         us_state: 省/直辖市/自治区
+        user_type: 帐户类型
         username: 用户名
         verified_teacher: 经过验证的老师
     errors:

@@ -9,18 +9,21 @@ pl:
           description_short: Kurs 1 jest przeznaczony dla początkujących.
           description_audience: W wieku 4-6
           student_description: Kurs 1 umożliwia początkującym tworzenie programów komputerowych, które pomogą im nauczyć się współpracować z innymi, rozwijać umiejętności rozwiązywania problemów i wytrwać przy rozwiązywaniu trudnych zadań. Przy końcu tego kursu uczniowie tworzą własne gry lub historyjki, którymi mogą podzielić się z innymi. Zalecany dla przedszkola i pierwszej klasy.
+          name: course1
         course2:
           title: Kurs 2
           description: Kurs 2 jest przeznaczony dla uczniów, którzy umieją czytać, ale nie mają doświadczenia w programowaniu. W tym kursie uczniowie będą tworzyć programy do rozwiązywania problemów oraz interaktywne gry lub historyjki, którymi będą mogli dzielić się z innymi. Zalecane dla klas 2-5.
           description_short: Wprowadzenie do informatyki dla uczniów, którzy potrafią czytać.
           description_audience: Powyżej 6 lat (wymagana umiejętność czytania)
           student_description: Kurs 2 jest przeznaczony dla uczniów, którzy umieją czytać, ale nie mają doświadczenia w programowaniu. W tym kursie uczniowie będą tworzyć programy do rozwiązywania problemów oraz interaktywne gry lub historyjki, którymi będą mogli dzielić się z innymi. Zalecane dla klas 2-5.
+          name: course2
         course3:
           title: Kurs 3
           description: Kurs 3 jest przeznaczony dla uczniów, którzy ukończyli Kurs 2. Uczniowie będą wnikać głębiej w zagadnienia programowania wprowadzone w poprzednich kursach, aby tworzyć elastyczne rozwiązania dla bardziej złożonych problemów. Kończąc kurs, uczniowie będą tworzyć interaktywne opowiadania i gry, którymi mogą się dzielić z innymi. Zalecany dla klas 4-5.
           description_short: Zagłębiaj się w programowanie, tworząc gry i interaktywne historie. To jest kontynuacja Kursu 2.
           description_audience: W wieku 8-18
           student_description: Kurs 3 jest przeznaczony dla uczniów, którzy ukończyli Kurs 2. Uczniowie będą wnikać głębiej w zagadnienia programowania wprowadzone w poprzednich kursach, aby tworzyć elastyczne rozwiązania dla bardziej złożonych problemów. Kończąc kurs, uczniowie będą tworzyć interaktywne opowiadania i gry, którymi mogą się dzielić z innymi. Zalecany dla klas 4-5.
+          name: course3
         playlab:
           title: Lab Gier
           description: Utwórz historyjkę lub grę z Play Lab!
@@ -151,6 +154,8 @@ pl:
               name: Czat AI
             lesson-51:
               name: Rubryki AI
+            lesson-52:
+              name: Dance Lab2
         algebraPD2b:
           description: 'Faza 2 Online: Mieszane letnie studia'
           description_short: 'Faza 2 Online: Mieszane letnie studia'
@@ -2892,6 +2897,7 @@ pl:
             cspSurvey:
               display_name: Treści
           student_description: Będziesz programować animacje, sztukę interaktywną i gry w Game Lab.Zacznij od prostych kształtów i buduj bardziej wyszukane animacje i gry oparte na duszku, używając tych samych koncepcji programowania i procesu projektowania, którego informatycy używają w codziennej pracy. W ramach projektu finałowego będziesz opracowywać spersonalizowany program interaktywny.
+          name: csd3-virtual
         ui-test-script-in-course-2017:
           lesson_groups:
             lg_1:
@@ -4883,6 +4889,8 @@ pl:
           name: csa-pl-standalone-code-2022
           title: Projekty CSA Profesjonalnego kodowania edukacyjnego
           description: Uczestnicy warsztatów będą mogli zobaczyć przykładowe projekty i kod podczas PL z sąsiedztwa, konsoli i teatru.
+        csc-ecosystems:
+          name: csc-ecosystems
         dlp-csd-overview-2022:
           title: Odkrycia informatyki Omówienie głębszego uczenia się
           description: Witamy w programie Głębsze uczenie 2021 dla zaczynających moderatorów Odkryć informatyki.
@@ -7375,12 +7383,20 @@ pl:
           lessons:
             lesson-2:
               name: Moduł CSD 3 Synchroniczny
+            lesson-3:
+              name: 'Sesja synchroniczna 2: Lekcja modelu'
+            lesson-6:
+              name: 'Sesja synchroniczna 5: Podsumowanie'
           name: vpl-csd-2023-m3
           title: Moduł 3
         vpl-csd-2023-m4:
           lessons:
             lesson-2:
               name: Moduł CSD 4 Synchroniczny
+            lesson-5:
+              name: 'Sesja synchroniczna 4: Badanie programu nauczania'
+            lesson-6:
+              name: 'Sesja synchroniczna 5: Podsumowanie'
           name: vpl-csd-2023-m4
           title: Moduł 4
         vpl-csd-2023-m5:
@@ -7407,3 +7423,15 @@ pl:
               name: Moduł CSD 8 Synchroniczny
           name: vpl-csd-2023-m8
           title: Moduł 8
+        ai-ethics-2023:
+          lessons:
+            lesson-1:
+              name: Godzina kodowania - Etyka AI
+            lesson-2:
+              name: Społeczne oddziaływanie generatywnej sztucznej inteligencji
+          name: ai-ethics-2023
+          title: Etyka AI
+          description: Lekcje te wprowadzają uczniów w kwestie etyczne dotyczące sztucznej inteligencji. Uczniowie badają różne tematy i bieżące wydarzenia związane z technologiami sztucznej inteligencji, a następnie proszeni są o refleksję i zajęcie stanowiska na temat tego, jak uważają, że te technologie powinny być wykorzystywane w społeczeństwie.
+        draft-hoc-dp:
+          name: draft-hoc-dp
+          title: Potańcówka (szkic)
