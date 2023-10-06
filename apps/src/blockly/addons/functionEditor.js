@@ -44,6 +44,7 @@ export default class FunctionEditor {
 
     // Customize auto-populated Functions toolbox category.
     this.editorWorkspace = Blockly.blockly_.inject(modalEditor, {
+      ...Blockly.getMainWorkspace().options,
       toolbox: options.toolbox,
       theme: Blockly.cdoUtils.getUserTheme(options.theme),
       move: {
@@ -56,6 +57,10 @@ export default class FunctionEditor {
       },
       trashcan: false, // Don't use default trashcan.
     });
+
+    // Disable blocks that aren't attached. We don't want these to generate
+    // code in the hidden workspace.
+    this.editorWorkspace.addChangeListener(Blockly.Events.disableOrphans);
 
     // Close handler
     document
@@ -129,13 +134,7 @@ export default class FunctionEditor {
    * @param {Procedure} procedure The procedure to show.
    */
   showForFunction(procedure) {
-    // We disable events while clearing the workspace in order to skip
-    // propogating those events to the other workspaces. We would be propogating
-    // delete events, but we aren't actually deleting the blocks, just removing them
-    // from the editor workspace.
-    Blockly.Events.disable();
-    this.editorWorkspace.clear();
-    Blockly.Events.enable();
+    this.clearEditorWorkspace();
 
     this.nameInput.value = procedure.getName();
 
@@ -373,5 +372,31 @@ export default class FunctionEditor {
     if (blockToUpdate) {
       blockToUpdate.description = this.block.description;
     }
+  }
+
+  clearEditorWorkspace() {
+    // Dispose of all top blocks. We do this manually because we want
+    // to propogate the delete event to the hidden workspace for every block
+    // except the procedure definition. Therefore, we delete all blocks, but for
+    // the procedure definition delete we disable events.
+    while (this.editorWorkspace.getTopBlocks().length) {
+      let isProcedureBlock = false;
+      const topBlock = this.editorWorkspace.getTopBlocks()[0];
+      if (topBlock.id === this.block.id) {
+        isProcedureBlock = true;
+      }
+      if (isProcedureBlock) {
+        Blockly.Events.disable();
+      }
+      topBlock.dispose(false);
+      if (isProcedureBlock) {
+        Blockly.Events.enable();
+      }
+    }
+    // Now call clear() to have Blockly handle the rest of the workspace clearing.
+    // Also disable events here to ensure we don't delete the procedure model
+    Blockly.Events.disable();
+    this.editorWorkspace.clear();
+    Blockly.Events.enable();
   }
 }
