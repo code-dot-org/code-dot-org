@@ -33,12 +33,12 @@ class EvaluateRubricJob < ApplicationJob
     channel_id = get_channel_id(user, script_level)
     code, project_version = read_user_code(channel_id)
     puts "code: #{code.inspect}"
-    puts "project_version: #{project_version.inspect}"
 
     rubric = Rubric.find_by!(lesson_id: script_level.lesson.id, level_id: script_level.level.id)
 
     ai_evaluations = get_fake_openai_evaluations(rubric)
-    puts "ai_evaluations: #{ai_evaluations.inspect}"
+
+    write_ai_evaluations(user, ai_evaluations, rubric, channel_id, project_version)
   end
 
   def self.ai_enabled?(script_level)
@@ -79,6 +79,40 @@ class EvaluateRubricJob < ApplicationJob
         'Key Concept' => learning_goal.learning_goal,
         'Grade' => 'Extensive Evidence'
       }
+    end
+  end
+
+  private def write_ai_evaluations(user, ai_evaluations, rubric, channel_id, project_version)
+    _owner_id, project_id = storage_decrypt_channel_id(channel_id)
+
+    # record the ai evaluations to the database
+    ActiveRecord::Base.transaction do
+      ai_evaluations.each do |evaluation|
+        learning_goal = rubric.learning_goals.all.find {|lg| lg.learning_goal == evaluation['Key Concept']}
+        understanding = grade_to_understanding(evaluation['Grade'])
+        LearningGoalAiEvaluation.create!(
+          user_id: user.id,
+          learning_goal_id: learning_goal.id,
+          project_id: project_id,
+          project_version: project_version,
+          understanding: understanding
+        )
+      end
+    end
+  end
+
+  private def grade_to_understanding(grade)
+    case grade
+    when 'Extensive Evidence'
+      SharedConstants::RUBRIC_UNDERSTANDING_LEVELS.EXTENSIVE
+    when 'Convincing Evidence'
+      SharedConstants::RUBRIC_UNDERSTANDING_LEVELS.CONVINCING
+    when 'Limited Evidence'
+      SharedConstants::RUBRIC_UNDERSTANDING_LEVELS.LIMITED
+    when 'No Evidence'
+      SharedConstants::RUBRIC_UNDERSTANDING_LEVELS.NONE
+    else
+      raise "Unexpected grade: #{grade}"
     end
   end
 end
