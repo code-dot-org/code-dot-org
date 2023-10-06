@@ -49,7 +49,7 @@ class PairedUserLevel < ApplicationRecord
   #   3 => Set[]
   # }
   def self.pairs_by_user(users)
-    initial_hash = Hash[users.map {|user| [user.id, Set.new]}]
+    initial_hash = users.map {|user| [user.id, Set.new]}.to_h
     user_ids = users.map(&:id)
     drivers = PairedUserLevel.
       joins(:driver_user_level).
