@@ -8,7 +8,7 @@
 #  learning_goal_id :integer          not null
 #  project_id       :integer
 #  project_version  :string(255)
-#  understanding    :integer          not null
+#  understanding    :integer
 #  feedback         :text(65535)
 #  submitted_at     :datetime
 #  created_at       :datetime         not null

@@ -3869,6 +3869,10 @@
           "purpose": "Dalam aktiviti dalam talian ini, pelajar akan mempelajari cara menggunakan peristiwa di dalam Makmal Mainan. Mereka akan mulakan dengan melatih kesatria untuk bergerak apabila kekunci anak panah ditekan, kemudian ditamatkan dengan peluang mempamerkan kemahiran lain yang mereka pelajari sepanjang kursus ini, termasuk jujukan dan penggelungan, sebagai sebahagian daripada teka-teki permainan bebas terakhir.",
           "student_overview": "Gunakan acara untuk mencipta cerita atau membuat permainan berinteraktif."
         },
+        "ai-ethics-2023/lesson-1": {
+          "name": "Kod Etika AI kami",
+          "student_overview": "Penyelidikan secara kolaboratif mengenai etika AI dan buat kod tingkah laku yang boleh dikongsi."
+        },
         "csc-adaptations-2023/Modeling Animal Adaptations (pilot)": {
           "name": "Pengenalan Adaptasi Haiwan",
           "overview": "Dalam pelajaran**bangunan kemahiran** ini, pelajar akan belajar membuat dan menghidupkan sprite dan menggunakan acara untuk menjadikannya interaktif. \n\nPelajar akan mengekodkan model sebab-akibat berasaskan peristiwa di Sprite Lab untuk menunjukkan bagaimana spesies bertahan dengan menyesuaikan diri dengan persekitaran mereka dari semasa ke semasa. Model dan simulasi interaktif digunakan di dunia nyata untuk membantu jurutera dan saintis mengenal pasti corak, memahami alam semula jadi, membuat ramalan mengenai perubahan masa depan, dan merancang penyelesaian untuk mempersiapkan dan/atau memerangi gangguan besar. \n\nPelajar akan meneroka contoh evolusi, penyesuaian, penghijrahan, pemilihan semula jadi, dan kelangsungan hidup dalam kumpulan. ",
@@ -4026,6 +4030,81 @@
           "preparation": "-   Sediakan satu komputer bagi setiap pelajar.\n-   Sediakan satu salinan edaran **<a href=\"https://docs.google.com/document/d/1kO4SNEIVyM0GrxxJb6NzVYauXXpi6rzQkDIfrzQf1Ls/template/preview\" target=\"_blank\">Kongsi Apl</a>Anda** bagi setiap pelajar.\n-   Pastikan pelajar mempunyai salinan puisi asal mereka yang berguna untuk pelajaran ini.  \n-   Bahagikan kelas menjadi pasangan untuk aktiviti Poetry Pair-Share.\n-   Pertimbangkan pilihan pelanjutan yang berkaitan ini ([link](https://studio.code.org/s/poetry-2023/lessons/4#activity-4365336)) untuk diterokai selepas pelajaran ini.\n\n##### Pilihan\n\n-   Terutama untuk pengajaran jarak jauh: Tentukan sama ada anda perlu menyediakan dokumen digital atau ruang dalam talian yang dikongsi untuk menyiarkan URL aplikasi setiap pelajar (lihat templat guru dalam “Pautan”). ",
           "purpose": "Berkongsi projek seni puisi mereka dengan rakan sebaya adalah aspek penting dalam proses kreatif. Ia membolehkan pelajar menerima maklum balas, bekerjasama dengan orang lain, merenungkan kerja mereka sendiri, dan meraikan pencapaian mereka. Dengan berkongsi kerja mereka dengan orang lain, pelajar dapat berkembang dan bertambah baik sebagai pemikir kreatif dan mengembangkan kemahiran komunikasi dan interpersonal yang penting.",
           "student_overview": "Kongsi aplikasi puisi baru anda dengan rakan-rakan anda! "
+        },
+        "csd1-2023/The Problem Solving Process": {
+          "name": "Proses Penyelesaian Masalah"
+        },
+        "csd1-2023/What is a Computer?": {
+          "name": "Apa itu komputer?"
+        },
+        "csd2-2023/Linking Pages": {
+          "name": "Memautkan Halaman"
+        },
+        "csd3-2023/Variables": {
+          "name": "Pemboleh ubah"
+        },
+        "csd3-2023/Sprites": {
+          "name": "Jin"
+        },
+        "csd3-2023/Sprite Properties": {
+          "name": "Sifat Peperi"
+        },
+        "csd3-2023/Text": {
+          "name": "teks"
+        },
+        "csd3-2023/Conditionals": {
+          "name": "Bersyarat"
+        },
+        "csd3-2023/Keyboard Input": {
+          "name": "Input Papan Kekunci"
+        },
+        "csd3-2023/Velocity": {
+          "name": "Halaju"
+        },
+        "csd3-2023/Collisions": {
+          "name": "Perlanggaran"
+        },
+        "csd3-2023/Functions": {
+          "name": "Fungsi"
+        },
+        "csd5-2023/Representing Images": {
+          "name": "Mewakili Imej"
+        },
+        "csd5-2023/Combining Representations": {
+          "name": "Menggabungkan Perwakilan"
+        },
+        "csd5-2023/Keeping Data Secret": {
+          "name": "Menyimpan Rahsia Data"
+        },
+        "csd6a-2023/Intro to App Lab": {
+          "name": "Pengenalan kepada Makmal Aplikasi"
+        },
+        "csd6a-2023/Board Events": {
+          "name": "Acara Papan"
+        },
+        "csd6a-2023/Color LEDs": {
+          "name": "LED berwarna"
+        },
+        "csd6a-2023/Functions": {
+          "name": "Fungsi"
+        },
+        "csd6b-2023/Intro to App Lab": {
+          "name": "Pengenalan kepada Makmal Aplikasi"
+        },
+        "csd6b-2023/Board Events": {
+          "name": "Acara Papan"
+        },
+        "csd6b-2023/Functions": {
+          "name": "Fungsi"
+        },
+        "csd7-2023/Intro to App Lab": {
+          "name": "Pengenalan kepada Makmal Aplikasi"
+        },
+        "csd7-2023/Introduction to AI Lab": {
+          "name": "Pengenalan kepada Makmal AI"
+        },
+        "csd7-2023/Numerical Data in AI Lab": {
+          "name": "Data Berangka di Makmal AI"
         },
         "coursea-2023/Safety in My Online Neighborhood": {
           "name": "Keselamatan di Kejiranan dalam Talian Saya",

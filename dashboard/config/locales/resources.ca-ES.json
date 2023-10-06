@@ -5328,6 +5328,37 @@
           "url": "https://www.youtube.com/watch?v=rgbZAWnOWOo",
           "type": "Vídeo"
         },
+        "_template_ai_code_of_ethics/ai-ethics/2023": {
+          "type": "Diapositives"
+        },
+        "ai_code_of_ethics/ai-ethics/2023": {
+          "type": "Diapositives"
+        },
+        "ethics_and_ai_privacy_the_future_of_work/ai-ethics/2023": {
+          "type": "Vídeo"
+        },
+        "character_card_individual_docs_/ai-ethics/2023": {
+          "type": "Recurs"
+        },
+        "character_cards/ai-ethics/2023": {
+          "type": "Recurs"
+        },
+        "generative_ai_activity_instructions/ai-ethics/2023": {
+          "type": "Recurs"
+        },
+        "generative_ai_news_articles/ai-ethics/2023": {
+          "type": "Recurs"
+        },
+        "group_scenarios/ai-ethics/2023": {
+          "type": "Recurs"
+        },
+        "how_ai_works_large_language_models/ai-ethics/2023": {
+          "url": "https://www.youtube.com/watch?v=X-AWdfSFCHQ",
+          "type": "Vídeo"
+        },
+        "societal_impact_of_generative_ai/ai-ethics/2023": {
+          "type": "Diapositives"
+        },
         "cs_connections_landing_page/csc-adaptations/2023": {
           "name": "Connexions CS pàgina de destinació",
           "url": "https://code.org/educate/csc",
@@ -5870,6 +5901,1233 @@
         "poem_app_example/poetry/2023": {
           "name": "Poema App Exemple",
           "url": "https://studio.code.org/projects/poetry_hoc/j3TXDXNhz0XEsH4Xjk_rT9buBHYCplirIKtY_Pg_bYo",
+          "type": "Recurs"
+        },
+        "teacher_forum/csd/2023": {
+          "name": "Fòrum del professor"
+        },
+        "the_problem_solving_process_2/csd/2023": {
+          "name": "El procés de resolució de problemes"
+        },
+        "intro_to_problem_solving/csd/2023": {
+          "type": "Diapositives"
+        },
+        "problem_solving_process_1/csd/2023": {
+          "type": "Vídeo"
+        },
+        "the_problem_solving_process/csd/2023": {
+          "type": "Vídeo"
+        },
+        "the_problem_solving_process_1/csd/2023": {
+          "name": "El procés de resolució de problemes",
+          "type": "Diapositives"
+        },
+        "the_problem_solving_process_5/csd/2023": {
+          "name": "El procés de resolució de problemes"
+        },
+        "exploring_problem_solving/csd/2023": {
+          "type": "Diapositives"
+        },
+        "solving_problems/csd/2023": {
+          "type": "Respostes"
+        },
+        "what_is_a_computer/csd/2023": {
+          "type": "Vídeo"
+        },
+        "what_is_a_computer_/csd/2023": {
+          "name": "Què és un ordinador?"
+        },
+        "what_is_a_computer_1/csd/2023": {
+          "type": "Diapositives"
+        },
+        "input_and_output_2/csd/2023": {
+          "type": "Diapositives"
+        },
+        "apps_with_processing_2/csd/2023": {
+          "type": "Diapositives"
+        },
+        "apps_with_storage_2/csd/2023": {
+          "type": "Diapositives"
+        },
+        "what_do_computers_do/csd/2023": {
+          "type": "Vídeo"
+        },
+        "apps_and_problem_solving_-_student_checklist/csd/2023": {
+          "type": "Recurs"
+        },
+        "apps_and_problem_solving_1/csd/2023": {
+          "type": "Revisió per part dels companys"
+        },
+        "apps_and_problem_solving_2/csd/2023": {
+          "type": "Rúbrica"
+        },
+        "computer_science_practices/csd/2023": {
+          "type": "Reflexió"
+        },
+        "project_-_propose_an_app/csd/2023": {
+          "type": "Diapositives"
+        },
+        "intro_to_problem_solving_newspapers_/csd/2023": {
+          "type": "Diapositives"
+        },
+        "intro_to_problem_solving_spaghetti_/csd/2023": {
+          "type": "Diapositives"
+        },
+        "intro_to_problem_solving_paper_towels_/csd/2023": {
+          "type": "Diapositives"
+        },
+        "exploring_problem_solving_animals_/csd/2023": {
+          "type": "Diapositives"
+        },
+        "tangrams/csd/2023": {
+          "type": "Recurs"
+        },
+        "exploring_problem_solving_games_/csd/2023": {
+          "type": "Diapositives"
+        },
+        "_key_warm_up_word_search/csd/2023": {
+          "type": "Respostes"
+        },
+        "_key_web_design_for_users/csd/2023": {
+          "type": "Respostes"
+        },
+        "exploring_web_pages_2/csd/2023": {
+          "type": "Diapositives"
+        },
+        "problem_solving_and_design/csd/2023": {
+          "type": "Recurs"
+        },
+        "web_design_template/csd/2023": {
+          "type": "Recurs"
+        },
+        "html_tags/csd/2023": {
+          "type": "Recurs"
+        },
+        "intro_to_html/csd/2023": {
+          "type": "Diapositives"
+        },
+        "intro_to_web_lab_part_2/csd/2023": {
+          "type": "Vídeo"
+        },
+        "pair_programming/csd/2023": {
+          "name": "Programació per parelles",
+          "type": "Vídeo"
+        },
+        "video_intro_to_web_lab_part_1/csd/2023": {
+          "type": "Vídeo"
+        },
+        "formatting_html/csd/2023": {
+          "type": "Recurs"
+        },
+        "headings/csd/2023": {
+          "type": "Diapositives"
+        },
+        "headings_and_paragraphs/csd/2023": {
+          "type": "Recurs"
+        },
+        "lists/csd/2023": {
+          "name": "Llistes",
+          "type": "Recurs"
+        },
+        "video_debugging/csd/2023": {
+          "name": "Vídeo: Depuració",
+          "type": "Vídeo"
+        },
+        "video_pair_programming/csd/2023": {
+          "name": "Vídeo: Programació per parelles",
+          "type": "Vídeo"
+        },
+        "html_web_page/csd/2023": {
+          "type": "Rúbrica"
+        },
+        "html_web_page_1/csd/2023": {
+          "type": "Revisió per part dels companys"
+        },
+        "html_web_page_2/csd/2023": {
+          "type": "Guia del projecte"
+        },
+        "mini-project_html_web_page/csd/2023": {
+          "type": "Diapositives"
+        },
+        "problem_solving_process_with_programming/csd/2023": {
+          "name": "Procés de resolució de problemes amb programació",
+          "type": "Recurs"
+        },
+        "digital_footprint/csd/2023": {
+          "type": "Diapositives"
+        },
+        "social_sleuth/csd/2023": {
+          "name": "Investigador social"
+        },
+        "social_sleuth_1/csd/2023": {
+          "name": "Investigador social"
+        },
+        "intro_to_css_-_part_1/csd/2023": {
+          "name": "Introducció al CSS - Part 1",
+          "type": "Vídeo"
+        },
+        "intro_to_css_-_part_2/csd/2023": {
+          "name": "Introducció al CSS - Part 2",
+          "type": "Vídeo"
+        },
+        "style_sheets/csd/2023": {
+          "type": "Recurs"
+        },
+        "styling_text_with_css/csd/2023": {
+          "type": "Diapositives"
+        },
+        "text_properties/csd/2023": {
+          "type": "Recurs"
+        },
+        "mini-project_your_personal_style/csd/2023": {
+          "type": "Diapositives"
+        },
+        "your_personal_style/csd/2023": {
+          "type": "Rúbrica"
+        },
+        "your_personal_style_1/csd/2023": {
+          "type": "Revisió per part dels companys"
+        },
+        "your_personal_style_2/csd/2023": {
+          "type": "Guia del projecte"
+        },
+        "creative_commons_overview/csd/2023": {
+          "type": "Vídeo"
+        },
+        "intellectual_property/csd/2023": {
+          "type": "Diapositives"
+        },
+        "creative_commons_search/csd/2023": {
+          "type": "Recurs"
+        },
+        "images_in_html/csd/2023": {
+          "type": "Recurs"
+        },
+        "using_images/csd/2023": {
+          "type": "Diapositives"
+        },
+        "websites_for_expression/csd/2023": {
+          "type": "Diapositives"
+        },
+        "styling_elements_with_css/csd/2023": {
+          "type": "Diapositives"
+        },
+        "personal_web_page_-_prepare/csd/2023": {
+          "type": "Guia del projecte"
+        },
+        "your_web_page_prepare/csd/2023": {
+          "type": "Diapositives"
+        },
+        "personal_web_page/csd/2023": {
+          "type": "Revisió per part dels companys"
+        },
+        "personal_web_page_-_reflect/csd/2023": {
+          "type": "Guia del projecte"
+        },
+        "personal_web_page_-_student_checklist/csd/2023": {
+          "type": "Recurs"
+        },
+        "personal_web_page_1/csd/2023": {
+          "type": "Rúbrica"
+        },
+        "project_-_personal_web_page/csd/2023": {
+          "type": "Diapositives"
+        },
+        "publishing_your_website/csd/2023": {
+          "name": "Publica la teva web",
+          "type": "Vídeo"
+        },
+        "websites_for_a_purpose_2/csd/2023": {
+          "type": "Diapositives"
+        },
+        "team_problem_solving/csd/2023": {
+          "type": "Diapositives"
+        },
+        "video_managing_disagreement/csd/2023": {
+          "name": "Vídeo: La gestió del desacord",
+          "type": "Vídeo"
+        },
+        "video_teamwork/csd/2023": {
+          "name": "Vídeo: Treball en equip",
+          "type": "Vídeo"
+        },
+        "sources_and_research/csd/2023": {
+          "type": "Diapositives"
+        },
+        "video_how_search_works/csd/2023": {
+          "name": "Com funciona la cerca",
+          "type": "Vídeo"
+        },
+        "classes/csd/2023": {
+          "type": "Recurs"
+        },
+        "css_classes/csd/2023": {
+          "type": "Diapositives"
+        },
+        "plan_a_multi-page_website/csd/2023": {
+          "type": "Guia del projecte"
+        },
+        "planning_a_multi-page_site/csd/2023": {
+          "type": "Diapositives"
+        },
+        "website_for_a_purpose/csd/2023": {
+          "type": "Rúbrica"
+        },
+        "hyperlinks/csd/2023": {
+          "type": "Recurs"
+        },
+        "linking_pages/csd/2023": {
+          "name": "Enllaçar pàgines",
+          "type": "Diapositives"
+        },
+        "project_-_website_for_a_purpose/csd/2023": {
+          "type": "Diapositives"
+        },
+        "peer_review_and_final_touches/csd/2023": {
+          "type": "Diapositives"
+        },
+        "website_for_a_purpose_-_reflect/csd/2023": {
+          "type": "Guia del projecte"
+        },
+        "website_for_a_purpose_1/csd/2023": {
+          "type": "Revisió per part dels companys"
+        },
+        "_warm_up_word_search_key_/csd/2023": {
+          "type": "Respostes"
+        },
+        "programming_for_a_purpose/csd/2023": {
+          "type": "Diapositives"
+        },
+        "animation_and_game_design_template/csd/2023": {
+          "type": "Recurs"
+        },
+        "plotting_shapes/csd/2023": {
+          "type": "Diapositives"
+        },
+        "drawing_in_game_lab/csd/2023": {
+          "type": "Diapositives"
+        },
+        "drawing_in_game_lab_-_part_1/csd/2023": {
+          "type": "Vídeo"
+        },
+        "drawing_in_game_lab_-_part_2/csd/2023": {
+          "type": "Vídeo"
+        },
+        "drawing_shapes_1/csd/2023": {
+          "type": "Recurs"
+        },
+        "shapes_and_parameters/csd/2023": {
+          "type": "Recurs"
+        },
+        "shapes_and_parameters_1/csd/2023": {
+          "type": "Diapositives"
+        },
+        "introduction_to_variables/csd/2023": {
+          "type": "Vídeo"
+        },
+        "naming_variables/csd/2023": {
+          "type": "Recurs"
+        },
+        "variables/csd/2023": {
+          "name": "Variables",
+          "type": "Recurs"
+        },
+        "variables_1/csd/2023": {
+          "name": "Variables",
+          "type": "Vídeo"
+        },
+        "variables_2/csd/2023": {
+          "name": "Variables",
+          "type": "Diapositives"
+        },
+        "random_numbers/csd/2023": {
+          "type": "Recurs"
+        },
+        "random_numbers_1/csd/2023": {
+          "type": "Diapositives"
+        },
+        "mini-project_-_robot_faces/csd/2023": {
+          "type": "Diapositives"
+        },
+        "problem_solving_with_programming/csd/2023": {
+          "type": "Recurs"
+        },
+        "robot_faces/csd/2023": {
+          "type": "Rúbrica"
+        },
+        "animation_tab/csd/2023": {
+          "type": "Recurs"
+        },
+        "introduction_to_sprites/csd/2023": {
+          "type": "Vídeo"
+        },
+        "sprites/csd/2023": {
+          "name": "Sprites",
+          "type": "Recurs"
+        },
+        "sprites_1/csd/2023": {
+          "name": "Sprites",
+          "type": "Diapositives"
+        },
+        "the_animation_tab/csd/2023": {
+          "name": "La pestanya Animació",
+          "type": "Vídeo"
+        },
+        "sprite_properties/csd/2023": {
+          "name": "Propietats de l'sprite",
+          "type": "Recurs"
+        },
+        "sprite_properties_1/csd/2023": {
+          "name": "Propietats de l'sprite",
+          "type": "Diapositives"
+        },
+        "sprite_properties_needs_updating_/csd/2023": {
+          "name": "Propietats de l'sprite",
+          "type": "Vídeo"
+        },
+        "text/csd/2023": {
+          "name": "Text",
+          "type": "Diapositives"
+        },
+        "captioned_scenes/csd/2023": {
+          "type": "Rúbrica"
+        },
+        "mini-project_-_captioned_scenes/csd/2023": {
+          "type": "Diapositives"
+        },
+        "flipbook_example_-_by_marnic_bos/csd/2023": {
+          "type": "Vídeo"
+        },
+        "introduction_to_the_draw_loop/csd/2023": {
+          "type": "Vídeo"
+        },
+        "the_draw_loop/csd/2023": {
+          "type": "Recurs"
+        },
+        "the_draw_loop_1/csd/2023": {
+          "type": "Diapositives"
+        },
+        "sprite_movement/csd/2023": {
+          "name": "Moviment d'sprites",
+          "type": "Vídeo"
+        },
+        "sprite_movement_1/csd/2023": {
+          "name": "Moviment d'sprites",
+          "type": "Diapositives"
+        },
+        "animated_scene/csd/2023": {
+          "type": "Rúbrica"
+        },
+        "mini-project_-_animation/csd/2023": {
+          "type": "Diapositives"
+        },
+        "boolean_expressions/csd/2023": {
+          "name": "Expressions booleanes",
+          "type": "Vídeo"
+        },
+        "booleans_and_comparison_operators/csd/2023": {
+          "type": "Recurs"
+        },
+        "conditional_statements/csd/2023": {
+          "name": "Declaracions Condicionals",
+          "type": "Vídeo"
+        },
+        "conditionals/csd/2023": {
+          "name": "Condicionals",
+          "type": "Diapositives"
+        },
+        "if_statements/csd/2023": {
+          "type": "Recurs"
+        },
+        "keyboard_input/csd/2023": {
+          "name": "Entrada de teclat",
+          "type": "Diapositives"
+        },
+        "if-else_statements/csd/2023": {
+          "type": "Recurs"
+        },
+        "if_else_statements/csd/2023": {
+          "name": "Declaracions si/Else",
+          "type": "Vídeo"
+        },
+        "mouse_input/csd/2023": {
+          "type": "Diapositives"
+        },
+        "extra_code_in_challenge_levels/csd/2023": {
+          "type": "Recurs"
+        },
+        "interactive_card_-_student_checklist/csd/2023": {
+          "type": "Recurs"
+        },
+        "interactive_card_3/csd/2023": {
+          "type": "Rúbrica"
+        },
+        "project_-_interactive_card/csd/2023": {
+          "type": "Diapositives"
+        },
+        "velocity/csd/2023": {
+          "name": "Velocitat",
+          "type": "Vídeo"
+        },
+        "velocity_1/csd/2023": {
+          "name": "Velocitat",
+          "type": "Recurs"
+        },
+        "velocity_2/csd/2023": {
+          "name": "Velocitat",
+          "type": "Diapositives"
+        },
+        "collision_detection_1/csd/2023": {
+          "type": "Recurs"
+        },
+        "collision_detection_2/csd/2023": {
+          "type": "Diapositives"
+        },
+        "mini-project_-_side_scroller/csd/2023": {
+          "type": "Diapositives"
+        },
+        "side_scroller/csd/2023": {
+          "name": "Desplaçador lateral",
+          "type": "Rúbrica"
+        },
+        "side_scroller_1/csd/2023": {
+          "name": "Desplaçador lateral"
+        },
+        "complex_sprite_movement/csd/2023": {
+          "type": "Diapositives"
+        },
+        "velocity_and_the_counter_pattern/csd/2023": {
+          "name": "La velocitat i el patró de comptador",
+          "type": "Recurs"
+        },
+        "collisions/csd/2023": {
+          "name": "Col·lisions",
+          "type": "Diapositives"
+        },
+        "flyer_game/csd/2023": {
+          "name": "Joc de volants",
+          "type": "Rúbrica"
+        },
+        "flyer_game_1/csd/2023": {
+          "name": "Joc de volants"
+        },
+        "mini-project_-_flyer_game/csd/2023": {
+          "type": "Diapositives"
+        },
+        "functions/csd/2023": {
+          "name": "Funcions",
+          "type": "Vídeo"
+        },
+        "functions_1/csd/2023": {
+          "name": "Funcions",
+          "type": "Recurs"
+        },
+        "functions_2/csd/2023": {
+          "name": "Funcions",
+          "type": "Diapositives"
+        },
+        "the_game_design_process/csd/2023": {
+          "type": "Diapositives"
+        },
+        "using_the_game_design_process/csd/2023": {
+          "type": "Diapositives"
+        },
+        "make_your_own_game_-_student_checklist/csd/2023": {
+          "type": "Recurs"
+        },
+        "make_your_own_game_3/csd/2023": {
+          "type": "Rúbrica"
+        },
+        "project_-_design_a_game/csd/2023": {
+          "type": "Diapositives"
+        },
+        "designing_with_empathy_2/csd/2023": {
+          "type": "Diapositives"
+        },
+        "understanding_your_user/csd/2023": {
+          "type": "Diapositives"
+        },
+        "the_design_thinking_process/csd/2023": {
+          "type": "Vídeo"
+        },
+        "user_centered_design_-_define_and_prepare/csd/2023": {
+          "type": "Diapositives"
+        },
+        "user_centered_design_-_try_and_reflect/csd/2023": {
+          "type": "Diapositives"
+        },
+        "user_interface_screens/csd/2023": {
+          "type": "Recurs"
+        },
+        "user_interfaces/csd/2023": {
+          "type": "Diapositives"
+        },
+        "feedback_and_testing/csd/2023": {
+          "type": "Diapositives"
+        },
+        "prototype_feedback/csd/2023": {
+          "type": "Recurs"
+        },
+        "example_user_interviews/csd/2023": {
+          "type": "Recurs"
+        },
+        "identifying_user_needs/csd/2023": {
+          "type": "Diapositives"
+        },
+        "paper_prototypes/csd/2023": {
+          "type": "Rúbrica"
+        },
+        "project_-_paper_prototype/csd/2023": {
+          "type": "Diapositives"
+        },
+        "designing_apps_for_good/csd/2023": {
+          "type": "Diapositives"
+        },
+        "market_research_-_research_areas/csd/2023": {
+          "type": "Recurs"
+        },
+        "market_research_2/csd/2023": {
+          "type": "Diapositives"
+        },
+        "exploring_ui_elements/csd/2023": {
+          "type": "Diapositives"
+        },
+        "build_a_paper_prototype/csd/2023": {
+          "type": "Diapositives"
+        },
+        "design_mode/csd/2023": {
+          "name": "Mode de disseny",
+          "type": "Recurs"
+        },
+        "design_mode_elements/csd/2023": {
+          "type": "Recurs"
+        },
+        "prototype_testing/csd/2023": {
+          "type": "Diapositives"
+        },
+        "what_s_for_lunch_testing/csd/2023": {
+          "type": "Vídeo"
+        },
+        "design_mode_in_app_lab/csd/2023": {
+          "type": "Diapositives"
+        },
+        "intro_to_design_mode/csd/2023": {
+          "type": "Vídeo"
+        },
+        "model_screen_design/csd/2023": {
+          "type": "Recurs"
+        },
+        "build_a_digital_prototype/csd/2023": {
+          "type": "Diapositives"
+        },
+        "events_in_app_lab/csd/2023": {
+          "type": "Vídeo"
+        },
+        "events_in_app_lab_1/csd/2023": {
+          "type": "Vídeo"
+        },
+        "events_in_app_lab_2/csd/2023": {
+          "type": "Diapositives"
+        },
+        "changing_screens/csd/2023": {
+          "type": "Recurs"
+        },
+        "importing_screens/csd/2023": {
+          "type": "Recurs"
+        },
+        "linking_prototype_screens/csd/2023": {
+          "type": "Diapositives"
+        },
+        "multi-screen_apps/csd/2023": {
+          "type": "Recurs"
+        },
+        "responding_to_user_input/csd/2023": {
+          "type": "Recurs"
+        },
+        "testing_the_app/csd/2023": {
+          "type": "Diapositives"
+        },
+        "bugs_and_features_2/csd/2023": {
+          "type": "Diapositives"
+        },
+        "updating_your_prototype/csd/2023": {
+          "name": "Actualitzant el teu prototip"
+        },
+        "updating_your_prototype_1/csd/2023": {
+          "name": "Actualitzant el teu prototip",
+          "type": "Diapositives"
+        },
+        "app_presentation/csd/2023": {
+          "type": "Rúbrica"
+        },
+        "app_presentation_template/csd/2023": {
+          "type": "Diapositives"
+        },
+        "project_-_app_presentation/csd/2023": {
+          "type": "Diapositives"
+        },
+        "meals_data/csd/2023": {
+          "type": "Recurs"
+        },
+        "representation_matters_2/csd/2023": {
+          "type": "Diapositives"
+        },
+        "patterns_and_representation/csd/2023": {
+          "type": "Diapositives"
+        },
+        "ascii_and_binary_representation/csd/2023": {
+          "type": "Diapositives"
+        },
+        "ascii_challenges_1/csd/2023": {
+          "type": "Respostes"
+        },
+        "ascii_text/csd/2023": {
+          "type": "Recurs"
+        },
+        "representing_images/csd/2023": {
+          "name": "Representant imatges",
+          "type": "Diapositives"
+        },
+        "binary_and_data/csd/2023": {
+          "type": "Vídeo"
+        },
+        "representing_numbers_1/csd/2023": {
+          "type": "Diapositives"
+        },
+        "combining_representations/csd/2023": {
+          "name": "Combinar representacions",
+          "type": "Diapositives"
+        },
+        "keeping_data_secret/csd/2023": {
+          "name": "Mantenir les dades en secret",
+          "type": "Diapositives"
+        },
+        "medical_records_1/csd/2023": {
+          "type": "Respostes"
+        },
+        "create_a_representation_2/csd/2023": {
+          "type": "Rúbrica"
+        },
+        "create_a_representation_3/csd/2023": {
+          "type": "Diapositives"
+        },
+        "problem_solving_with_data_2/csd/2023": {
+          "type": "Diapositives"
+        },
+        "structuring_data_1/csd/2023": {
+          "type": "Diapositives"
+        },
+        "interpreting_data_2/csd/2023": {
+          "type": "Recurs"
+        },
+        "interpreting_data_3/csd/2023": {
+          "type": "Diapositives"
+        },
+        "making_decisions_with_data_2/csd/2023": {
+          "type": "Diapositives"
+        },
+        "problem_solving_process_with_data/csd/2023": {
+          "type": "Recurs"
+        },
+        "automating_data_decisions_1/csd/2023": {
+          "type": "Recurs"
+        },
+        "automating_data_decisions_3/csd/2023": {
+          "type": "Diapositives"
+        },
+        "amazon_and_data/csd/2023": {
+          "type": "Vídeo"
+        },
+        "netflix_and_data/csd/2023": {
+          "type": "Vídeo"
+        },
+        "problem_solving_with_big_data/csd/2023": {
+          "type": "Diapositives"
+        },
+        "waze_and_data/csd/2023": {
+          "type": "Vídeo"
+        },
+        "data_and_machine_learning/csd/2023": {
+          "type": "Diapositives"
+        },
+        "video_impact_on_society/csd/2023": {
+          "name": "Vídeo: Impacte en la societat",
+          "type": "Vídeo"
+        },
+        "video_machine_learning/csd/2023": {
+          "name": "Vídeo: Aprenentatge automàtic",
+          "url": "https://www.youtube.com/watch?v=OeU5m6vRyCk",
+          "type": "Vídeo"
+        },
+        "video_training_data_and_bias/csd/2023": {
+          "name": "Vídeo: Dades d'entrenament i biaixos",
+          "type": "Vídeo"
+        },
+        "make_a_recommendation/csd/2023": {
+          "type": "Revisió per part dels companys"
+        },
+        "make_a_recommendation_1/csd/2023": {
+          "type": "Rúbrica"
+        },
+        "make_a_recommendation_2/csd/2023": {
+          "type": "Guia del projecte"
+        },
+        "project_-_make_a_recommendation/csd/2023": {
+          "type": "Diapositives"
+        },
+        "physical_design_template/csd/2023": {
+          "type": "Recurs"
+        },
+        "physical_designs_1/csd/2023": {
+          "type": "Diapositives"
+        },
+        "circuit_playground/csd/2023": {
+          "type": "Recurs"
+        },
+        "circuits_and_logic/csd/2023": {
+          "type": "Vídeo"
+        },
+        "physical_output/csd/2023": {
+          "type": "Recurs"
+        },
+        "the_circuit_playground/csd/2023": {
+          "type": "Diapositives"
+        },
+        "designing_screens_with_code/csd/2023": {
+          "type": "Recurs"
+        },
+        "updating_screen_elements/csd/2023": {
+          "type": "Diapositives"
+        },
+        "board_events/csd/2023": {
+          "name": "Esdeveniments amb placa",
+          "type": "Recurs"
+        },
+        "board_events_1/csd/2023": {
+          "name": "Esdeveniments amb placa",
+          "type": "Diapositives"
+        },
+        "physical_input/csd/2023": {
+          "type": "Recurs"
+        },
+        "the_counter_pattern/csd/2023": {
+          "type": "Vídeo"
+        },
+        "if_statements_1/csd/2023": {
+          "type": "Vídeo"
+        },
+        "the_counter_pattern_1/csd/2023": {
+          "type": "Recurs"
+        },
+        "variables_and_if_statements/csd/2023": {
+          "type": "Diapositives"
+        },
+        "mini-project_field_collector_app/csd/2023": {
+          "type": "Diapositives"
+        },
+        "rubric_-_field_collector_app/csd/2023": {
+          "type": "Rúbrica"
+        },
+        "color_leds/csd/2023": {
+          "name": "LED de colors",
+          "type": "Diapositives"
+        },
+        "color_lights/csd/2023": {
+          "type": "Recurs"
+        },
+        "getting_screen_inputs/csd/2023": {
+          "type": "Diapositives"
+        },
+        "taking_input_with_getproperty/csd/2023": {
+          "type": "Recurs"
+        },
+        "combining_inputs_and_outputs/csd/2023": {
+          "type": "Diapositives"
+        },
+        "input_output_devices/csd/2023": {
+          "type": "Vídeo"
+        },
+        "peer_review_-_human_device_interaction/csd/2023": {
+          "type": "Recurs"
+        },
+        "project_human_device_interaction/csd/2023": {
+          "type": "Diapositives"
+        },
+        "rubric_-_human_device_interaction/csd/2023": {
+          "type": "Rúbrica"
+        },
+        "analog_sensors/csd/2023": {
+          "type": "Recurs"
+        },
+        "board_sensors/csd/2023": {
+          "type": "Diapositives"
+        },
+        "changing_sensor_scale/csd/2023": {
+          "type": "Recurs"
+        },
+        "date_and_change_events/csd/2023": {
+          "type": "Recurs"
+        },
+        "accelerometer/csd/2023": {
+          "type": "Diapositives"
+        },
+        "accelerometer_events/csd/2023": {
+          "name": "Esdeveniments d'acceleròmetre",
+          "type": "Recurs"
+        },
+        "the_accelerometer/csd/2023": {
+          "type": "Recurs"
+        },
+        "arrays/csd/2023": {
+          "type": "Recurs"
+        },
+        "introduction_to_arrays/csd/2023": {
+          "name": "Introducció a les matrius",
+          "type": "Vídeo"
+        },
+        "making_music/csd/2023": {
+          "type": "Diapositives"
+        },
+        "modifying_arrays/csd/2023": {
+          "type": "Recurs"
+        },
+        "playing_notes/csd/2023": {
+          "name": "Reproduir notes",
+          "type": "Recurs"
+        },
+        "producing_output/csd/2023": {
+          "type": "Recurs"
+        },
+        "functions_with_parameters/csd/2023": {
+          "name": "Funcions amb Paràmetres",
+          "type": "Vídeo"
+        },
+        "mini-project_interactive_art/csd/2023": {
+          "type": "Diapositives"
+        },
+        "student_example_projects/csd/2023": {
+          "type": "Recurs"
+        },
+        "student_rubric_-_interactive_art/csd/2023": {
+          "type": "Rúbrica"
+        },
+        "circuits_and_leds/csd/2023": {
+          "type": "Recurs"
+        },
+        "physical_outputs_and_leds/csd/2023": {
+          "type": "Diapositives"
+        },
+        "circuits_and_buttons/csd/2023": {
+          "type": "Recurs"
+        },
+        "physical_inputs_and_buttons/csd/2023": {
+          "type": "Diapositives"
+        },
+        "project_prototype_an_innovation/csd/2023": {
+          "type": "Diapositives"
+        },
+        "prototype_an_innovation/csd/2023": {
+          "type": "Rúbrica"
+        },
+        "teacher_forum_1/csd/2023": {
+          "name": "Fòrum del professor"
+        },
+        "physical_designs_2/csd/2023": {
+          "type": "Diapositives"
+        },
+        "introducing_the_micro_bit/csd/2023": {
+          "type": "Diapositives"
+        },
+        "led_planning_sheet/csd/2023": {
+          "type": "Recurs"
+        },
+        "the_micro_bit_led_display/csd/2023": {
+          "type": "Recurs"
+        },
+        "the_micro_bit_overview/csd/2023": {
+          "type": "Recurs"
+        },
+        "updating_screen_elements_1/csd/2023": {
+          "type": "Diapositives"
+        },
+        "board_events_2/csd/2023": {
+          "name": "Esdeveniments amb placa",
+          "type": "Diapositives"
+        },
+        "board_events_3/csd/2023": {
+          "name": "Esdeveniments amb placa",
+          "type": "Recurs"
+        },
+        "micro_bit_inputs/csd/2023": {
+          "type": "Recurs"
+        },
+        "the_counter_pattern_2/csd/2023": {
+          "type": "Vídeo"
+        },
+        "variables_and_if_statements_1/csd/2023": {
+          "type": "Diapositives"
+        },
+        "mini-project_field_collector_app_1/csd/2023": {
+          "type": "Diapositives"
+        },
+        "rubric_-_field_collector_app_1/csd/2023": {
+          "type": "Rúbrica"
+        },
+        "getting_screen_inputs_1/csd/2023": {
+          "type": "Diapositives"
+        },
+        "combining_inputs_and_outputs_1/csd/2023": {
+          "type": "Diapositives"
+        },
+        "peer_review_-_human_device_interaction_1/csd/2023": {
+          "type": "Recurs"
+        },
+        "project_human_device_interaction_1/csd/2023": {
+          "type": "Diapositives"
+        },
+        "rubric_-_human_device_interaction_1/csd/2023": {
+          "type": "Rúbrica"
+        },
+        "board_sensors_1/csd/2023": {
+          "type": "Diapositives"
+        },
+        "data_change_events/csd/2023": {
+          "type": "Recurs"
+        },
+        "setting_sensor_scale/csd/2023": {
+          "type": "Recurs"
+        },
+        "the_micro_bit_sensors/csd/2023": {
+          "type": "Recurs"
+        },
+        "accelerometer_1/csd/2023": {
+          "type": "Diapositives"
+        },
+        "accelerometer_events_1/csd/2023": {
+          "name": "Esdeveniments d'acceleròmetre",
+          "type": "Recurs"
+        },
+        "the_micro_bit_accelerometer/csd/2023": {
+          "type": "Recurs"
+        },
+        "functions_3/csd/2023": {
+          "name": "Funcions",
+          "type": "Diapositives"
+        },
+        "mini-project_interactive_pet/csd/2023": {
+          "type": "Diapositives"
+        },
+        "student_rubric_-_interactive_pet/csd/2023": {
+          "type": "Rúbrica"
+        },
+        "external_leds_on_a_micro_bit/csd/2023": {
+          "type": "Recurs"
+        },
+        "physical_outputs_and_leds_1/csd/2023": {
+          "type": "Diapositives"
+        },
+        "external_buttons_on_a_micro_bit/csd/2023": {
+          "type": "Recurs"
+        },
+        "physical_inputs_and_buttons_1/csd/2023": {
+          "type": "Diapositives"
+        },
+        "project_prototype_an_innovation_1/csd/2023": {
+          "type": "Diapositives"
+        },
+        "prototype_an_innovation_2/csd/2023": {
+          "type": "Rúbrica"
+        },
+        "the_problem_solving_process_4/csd/2023": {
+          "name": "El procés de resolució de problemes"
+        },
+        "ai_what_is_machine_learning_/csd/2023": {
+          "url": "https://www.youtube.com/watch?v=OeU5m6vRyCk",
+          "type": "Vídeo"
+        },
+        "introduction_to_machine_learning/csd/2023": {
+          "type": "Diapositives"
+        },
+        "types_of_machine_learning/csd/2023": {
+          "type": "Diapositives"
+        },
+        "types_of_machine_learning_2/csd/2023": {
+          "type": "Respostes"
+        },
+        "innovations_in_ai/csd/2023": {
+          "type": "Diapositives"
+        },
+        "innovations_in_ai_research_areas_-_student_resource/csd/2023": {
+          "type": "Recurs"
+        },
+        "seeing_ai/csd/2023": {
+          "type": "Vídeo"
+        },
+        "_key_patterns_in_data/csd/2023": {
+          "type": "Respostes"
+        },
+        "finding_patterns_in_data/csd/2023": {
+          "type": "Vídeo"
+        },
+        "patterns_in_data/csd/2023": {
+          "type": "Diapositives"
+        },
+        "shoe_survey/csd/2023": {
+          "type": "Recurs"
+        },
+        "_key_classification_models/csd/2023": {
+          "type": "Respostes"
+        },
+        "classification_models_1/csd/2023": {
+          "type": "Diapositives"
+        },
+        "fruit_veggie_cards/csd/2023": {
+          "type": "Recurs"
+        },
+        "_key_training_a_model_in_ai_lab/csd/2023": {
+          "type": "Respostes"
+        },
+        "accuracy_in_ai_lab/csd/2023": {
+          "type": "Recurs"
+        },
+        "introduction_to_ai_lab/csd/2023": {
+          "name": "Introducció a AI Lab",
+          "type": "Diapositives"
+        },
+        "introduction_to_ai_lab_1/csd/2023": {
+          "name": "Introducció a AI Lab",
+          "type": "Vídeo"
+        },
+        "selecting_features/csd/2023": {
+          "type": "Recurs"
+        },
+        "training_and_testing_in_ai_lab/csd/2023": {
+          "name": "Formació i proves en AI Lab",
+          "type": "Vídeo"
+        },
+        "using_data_with_categorical_features/csd/2023": {
+          "type": "Recurs"
+        },
+        "importing_a_model_in_app_lab/csd/2023": {
+          "type": "Recurs"
+        },
+        "importing_models_in_app_lab/csd/2023": {
+          "type": "Diapositives"
+        },
+        "ai_training_data_bias/csd/2023": {
+          "name": "IA: Dades d'entrenament i biaixos",
+          "url": "https://youtu.be/x2mRoFNm22g",
+          "type": "Vídeo"
+        },
+        "model_cards/csd/2023": {
+          "type": "Diapositives"
+        },
+        "_key_zoo_models/csd/2023": {
+          "type": "Respostes"
+        },
+        "model_cards_in_ai_lab/csd/2023": {
+          "name": "Targetes de model en AI Lab",
+          "type": "Vídeo"
+        },
+        "saving_models_in_ai_lab/csd/2023": {
+          "type": "Diapositives"
+        },
+        "selecting_a_label/csd/2023": {
+          "type": "Recurs"
+        },
+        "if-statements_in_app_lab/csd/2023": {
+          "type": "Vídeo"
+        },
+        "model_cards_in_app_lab/csd/2023": {
+          "type": "Diapositives"
+        },
+        "printable_model_cards/csd/2023": {
+          "type": "Recurs"
+        },
+        "_key_numerical_accuracy/csd/2023": {
+          "type": "Respostes"
+        },
+        "_key_zombie_prediction/csd/2023": {
+          "type": "Respostes"
+        },
+        "numerical_models/csd/2023": {
+          "type": "Diapositives"
+        },
+        "_key_-_numerical_data_in_ai_lab/csd/2023": {
+          "type": "Respostes"
+        },
+        "numerical_data_in_ai_lab/csd/2023": {
+          "name": "Dades numèriques en AI Lab",
+          "type": "Diapositives"
+        },
+        "numerical_data_in_ai_lab_1/csd/2023": {
+          "name": "Dades numèriques en AI Lab"
+        },
+        "numerical_data_in_ai_lab_2/csd/2023": {
+          "name": "Dades numèriques en AI Lab",
+          "type": "Vídeo"
+        },
+        "using_data_with_numerical_features/csd/2023": {
+          "type": "Recurs"
+        },
+        "customizing_apps/csd/2023": {
+          "type": "Diapositives"
+        },
+        "ai_code_of_ethics/csd/2023": {
+          "type": "Diapositives"
+        },
+        "ethics_ai_equal_access_and_algorithmic_bias/csd/2023": {
+          "type": "Vídeo"
+        },
+        "our_ai_code_of_ethics_template_/csd/2023": {
+          "type": "Diapositives"
+        },
+        "create_an_ml_app/csd/2023": {
+          "type": "Rúbrica"
+        },
+        "make_a_machine_learning_app/csd/2023": {
+          "type": "Diapositives"
+        },
+        "issue_statements/csd/2023": {
+          "type": "Diapositives"
+        },
+        "creating_a_survey/csd/2023": {
+          "type": "Recurs"
+        },
+        "creating_a_survey_in_google_forms/csd/2023": {
+          "type": "Vídeo"
+        },
+        "survey_planning/csd/2023": {
+          "type": "Diapositives"
+        },
+        "cleaning_survey_data/csd/2023": {
+          "type": "Vídeo"
+        },
+        "survey_data_in_ai_lab/csd/2023": {
+          "type": "Diapositives"
+        },
+        "view_and_download_survey_data/csd/2023": {
+          "type": "Vídeo"
+        },
+        "troubleshooting_models/csd/2023": {
+          "type": "Diapositives"
+        },
+        "creating_an_app/csd/2023": {
+          "type": "Diapositives"
+        },
+        "_template_5_why_s/csd/2023": {
+          "type": "Recurs"
+        },
+        "design_an_ai_app/csd/2023": {
+          "type": "Diapositives"
+        },
+        "design_an_ai_app_1/csd/2023": {
+          "type": "Rúbrica"
+        },
+        "model_card_-_digital_template/csd/2023": {
+          "type": "Recurs"
+        },
+        "model_card_-_printable_template/csd/2023": {
           "type": "Recurs"
         },
         "all_resources/coursea/2023": {

@@ -53,6 +53,7 @@ az:
         gender: 'Cins'
         edit_header: 'Hesab Detallarına düzəliş edin'
         finish_sign_up_header: 'Hesabınızı yaratmağı başa çatdırın'
+        finish_sign_up_header_error: 'Aşağıdakı səhfləri düzəldin:'
         finish_sign_up_subheader: '<strong>%{email} </strong> Code.org hesabı yaratmağı bitirmək üçün aşağıdakı məlumatları doldurun.'
         finish_sign_up_subheader_markdown: '**%{email} ** üçün bir Code.org hesabı yaratmağı bitirmək üçün aşağıdakı məlumatları doldurun.'
         finish_sign_up_subheader_provider: '<strong>%{provider}</strong> for <strong>%{email}</strong> üçün bir Code.org hesabı yaratmağı sona çatdırmaq üçün aşağıdakı məlumatları doldurun.'
@@ -60,6 +61,7 @@ az:
         reset_password_token: "İzlədiyiniz parolun sıfırlanması bağlantısı"
         error:
           future: gələcəkdə ola bilməz
+        user_type: 'Hesab Növü'
         us_state: 'dövlət'
   beta: "beta versiya"
   hello: "Salam, dünya"

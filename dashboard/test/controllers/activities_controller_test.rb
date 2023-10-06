@@ -336,12 +336,12 @@ class ActivitiesControllerTest < ActionController::TestCase
     end
     assert_equal original_activity_count + 1, Activity.count
     assert_equal original_user_level_count + 1, UserLevel.count
-    assert_not_nil UserLevel.where(
+    refute_nil UserLevel.where(
       user_id: @user,
       level_id: @script_level.level_id,
       script_id: @script_level.script_id
     ).first
-    assert_not_nil UserScript.where(user_id: @user, script_id: @script_level.script_id).first
+    refute_nil UserScript.where(user_id: @user, script_id: @script_level.script_id).first
 
     assert_response :success
 

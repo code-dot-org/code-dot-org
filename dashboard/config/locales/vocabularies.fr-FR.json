@@ -1179,6 +1179,9 @@
           "word": "Évènement",
           "definition": "Action qui provoque quelque chose."
         },
+        "artificial_intelligence/ai-ethics/2023": {
+          "word": "Intelligence artificielle"
+        },
         "adaptation/csc-adaptations/2023": {
           "word": "Adaptation",
           "definition": "Modification d'un organisme pour mieux survivre à son environnement"
@@ -1397,6 +1400,73 @@
         "poetry_circle/poetry/2023": {
           "word": "Cercle de poésie",
           "definition": "Un espace sûr et créatif pour tester de nouveaux poèmes et obtenir des commentaires constructifs des autres"
+        },
+        "computer/csd/2023": {
+          "word": "Ordinateur"
+        },
+        "input/csd/2023": {
+          "word": "Entrée"
+        },
+        "processing/csd/2023": {
+          "word": "Le Traitement"
+        },
+        "html/csd/2023": {
+          "word": "HTML"
+        },
+        "html_tag/csd/2023": {
+          "word": "Balise HTML"
+        },
+        "digital_footprint/csd/2023": {
+          "word": "L'Empreinte Numérique"
+        },
+        "css/csd/2023": {
+          "word": "CSS"
+        },
+        "copyright/csd/2023": {
+          "word": "Copyright",
+          "definition": "le droit légal exclusif d'imprimer, de publier, d'interpréter, de filmer ou d'enregistrer des œuvres littéraires, artistiques ou musicales, et d'autoriser d'autres personnes à en faire de même"
+        },
+        "relevant/csd/2023": {
+          "word": "Pertinent"
+        },
+        "bug/csd/2023": {
+          "word": "Bug",
+          "definition": "Partie d'un programme qui ne fonctionne pas correctement."
+        },
+        "debugging/csd/2023": {
+          "word": "Le Débogage",
+          "definition": "Trouver et corriger les problèmes dans un algorithme ou un programme."
+        },
+        "program/csd/2023": {
+          "word": "Programme",
+          "definition": "Algorithme qui a été codé dans quelque chose qui peut être exécuté par une machine."
+        },
+        "variable/csd/2023": {
+          "word": "Variable",
+          "definition": "Une étiquette pour un morceau d'information qui s'utilise dans un programme."
+        },
+        "sprite/csd/2023": {
+          "word": "Sprite"
+        },
+        "condition/csd/2023": {
+          "word": "Condition"
+        },
+        "conditionals/csd/2023": {
+          "word": "Instructions conditionnelles"
+        },
+        "abstraction/csd/2023": {
+          "word": "Abstraction"
+        },
+        "function/csd/2023": {
+          "word": "Fonction"
+        },
+        "user/csd/2023": {
+          "word": "Utilisateur",
+          "definition": "Quelqu'un qui utilise un objet, dont des logiciels et du matériel. "
+        },
+        "machine_learning/csd/2023": {
+          "word": "L'Apprentissage Automatique",
+          "definition": "Comment les ordinateurs reconnaissent des modèles et prennent des décisions sans être explicitement programmés"
         },
         "algorithm/coursea/2023": {
           "word": "Algorithme",

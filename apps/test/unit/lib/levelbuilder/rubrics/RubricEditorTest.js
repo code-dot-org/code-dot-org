@@ -14,16 +14,15 @@ describe('RubricEditorTest ', () => {
     {id: 2, learningGoal: 'Goal 2', aiEnabled: false},
     {id: 3, learningGoal: 'Goal 3', aiEnabled: true},
   ];
+  const defaultProps = {
+    learningGoalList: sampleLearningGoalList,
+    addNewConcept: addNewConceptSpy,
+    deleteItem: () => {},
+    updateLearningGoal: () => {},
+  };
 
   beforeEach(() => {
-    wrapper = shallow(
-      <RubricEditor
-        learningGoalList={sampleLearningGoalList}
-        addNewConcept={addNewConceptSpy}
-        deleteItem={() => {}}
-        updateLearningGoal={() => {}}
-      />
-    );
+    wrapper = shallow(<RubricEditor {...defaultProps} />);
   });
 
   it('renders correct number of LearningGoalItem components', () => {
@@ -32,7 +31,7 @@ describe('RubricEditorTest ', () => {
     );
   });
 
-  it('renders the "Add new Key Concept" button and it can be clicked', () => {
+  it('renders the "Add new Key Concept" button and it can be clicked when submittable levels are available', () => {
     const addButton = wrapper
       .find(Button)
       .findWhere(n => n.props().text === 'Add new Key Concept');

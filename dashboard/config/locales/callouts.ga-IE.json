@@ -17,8 +17,43 @@
         "AppLab Intro 7 - Change Screen Color": {
           "applab_hoc_finish": "Ar iompaigh an scáileán uaine? Má tá sé uaine, cliceáil 'Críochnaigh'. Mura bhfuil, cliceáil 'Athshocraigh', athraigh an cód, agus cliceáil 'Rith' arís."
         },
+        "AppLab Intro 7 - Change Screen Color_2023": {
+          "applab_hoc_finish": "Ar iompaigh an scáileán uaine? Má tá sé uaine, cliceáil 'Críochnaigh'. Mura bhfuil, cliceáil 'Athshocraigh', athraigh an cód, agus cliceáil 'Rith' arís."
+        },
+        "AppLab Intro 7 - Change Screen Color_mb2022": {
+          "applab_hoc_finish": "Ar iompaigh an scáileán uaine? Má tá sé uaine, cliceáil 'Críochnaigh'. Mura bhfuil, cliceáil 'Athshocraigh', athraigh an cód, agus cliceáil 'Rith' arís."
+        },
         "AppLab Intro 7 - thisOrThatAddButton": {
           "AppLabHoCFinal11": "Tá tú sa Mód Deartha anois."
+        },
+        "AppLab Intro 7 - thisOrThatAddButton_2023": {
+          "AppLabHoCFinal11": "Tá tú sa Mód Deartha anois."
+        },
+        "AppLab Intro 7 - thisOrThatAddButton_mb2022": {
+          "AppLabHoCFinal11": "Tá tú sa Mód Deartha anois."
+        },
+        "CSD U3 L18 Predict_2023": {
+          "CSD_U3_L11_S4_C1": "Cuir do bhloc anseo."
+        },
+        "CSD U3 L7 review arc_2023": {
+          "CSD_U3_rect_c1": "Seo é an cód",
+          "CSD_U3_rect_c2": "Tarraing an bloc seo go dtí an cód."
+        },
+        "CSD U3 L7 review line_2023": {
+          "CSD_U3_rect_c1": "Seo é an cód",
+          "CSD_U3_rect_c2": "Tarraing an bloc seo go dtí an cód."
+        },
+        "CSD U3 L7 review point_2023": {
+          "CSD_U3_rect_c1": "Seo é an cód",
+          "CSD_U3_rect_c2": "Tarraing an bloc seo go dtí an cód."
+        },
+        "CSD U3 L7 review shapes_2023": {
+          "CSD_U3_rect_c1": "Seo é an cód",
+          "CSD_U3_rect_c2": "Tarraing an bloc seo go dtí an cód."
+        },
+        "CSD U3 L7 shapes review polygon_2023": {
+          "CSD_U3_rect_c1": "Seo é an cód",
+          "CSD_U3_rect_c2": "Tarraing an bloc seo go dtí an cód."
         },
         "CSD U3 Variables Predict Where X": {
           "CSD_U3_variables": "Athraigh an uimhir anseo"
@@ -36,6 +71,9 @@
           "grid": "Cliceáil anseo chun an greille a thaispeáint."
         },
         "CSD U3 Variables Predict Where XY_2022": {
+          "grid": "Cliceáil anseo chun an greille a thaispeáint."
+        },
+        "CSD U3 Variables Predict Where XY_2023": {
           "grid": "Cliceáil anseo chun an greille a thaispeáint."
         },
         "CSD U3 Variables Predict Where X_2018": {
@@ -65,6 +103,9 @@
         "CSD U3 abstraction accelerateX_2022": {
           "CSD_U3_L11_S6_C1": "Cuir do chuid cóid anseo."
         },
+        "CSD U3 abstraction accelerateX_2023": {
+          "CSD_U3_L11_S6_C1": "Cuir do chuid cóid anseo."
+        },
         "CSD U3 abstraction accelerateY": {
           "CSD_U3_L11_S7_C1": "Cuir do chuid cóid anseo."
         },
@@ -78,6 +119,9 @@
           "CSD_U3_L11_S7_C1": "Cuir do chuid cóid anseo."
         },
         "CSD U3 abstraction accelerateY_2022": {
+          "CSD_U3_L11_S7_C1": "Cuir do chuid cóid anseo."
+        },
+        "CSD U3 abstraction accelerateY_2023": {
           "CSD_U3_L11_S7_C1": "Cuir do chuid cóid anseo."
         },
         "CSD U3 abstraction velocityX": {
@@ -95,6 +139,9 @@
         "CSD U3 abstraction velocityX_2022": {
           "CSD_U3_L11_S4_C1": "Cuir do bhloc anseo."
         },
+        "CSD U3 abstraction velocityX_2023": {
+          "CSD_U3_L11_S4_C1": "Cuir do bhloc anseo."
+        },
         "CSD U3 abstraction velocityY": {
           "CSD_U3_L11_S5_C1": "Cuir do bhloc anseo."
         },
@@ -108,6 +155,9 @@
           "CSD_U3_L11_S5_C1": "Cuir do bhloc anseo."
         },
         "CSD U3 abstraction velocityY_2022": {
+          "CSD_U3_L11_S5_C1": "Cuir do bhloc anseo."
+        },
+        "CSD U3 abstraction velocityY_2023": {
           "CSD_U3_L11_S5_C1": "Cuir do bhloc anseo."
         },
         "CSD U3 collisions isTouching intro": {
@@ -125,6 +175,9 @@
         "CSD U3 collisions isTouching intro_2022": {
           "CSD_U3_L12_S2_C1": "Cuir do bhloc anseo."
         },
+        "CSD U3 collisions isTouching intro_2023": {
+          "CSD_U3_L12_S2_C1": "Cuir do bhloc anseo."
+        },
         "CSD U3 collisions types": {
           "CSD_U3_L13_S6_C1": "Cuir do chuid cóid anseo."
         },
@@ -134,16 +187,25 @@
         "CSD U3 collisions types2_2022": {
           "CSD_U3_L13_S6_C1": "Cuir do chuid cóid anseo."
         },
+        "CSD U3 collisions types2_2023": {
+          "CSD_U3_L13_S6_C1": "Cuir do chuid cóid anseo."
+        },
         "CSD U3 collisions types3_2021": {
           "CSD_U3_L13_S6_C1": "Cuir do chuid cóid anseo."
         },
         "CSD U3 collisions types3_2022": {
           "CSD_U3_L13_S6_C1": "Cuir do chuid cóid anseo."
         },
+        "CSD U3 collisions types3_2023": {
+          "CSD_U3_L13_S6_C1": "Cuir do chuid cóid anseo."
+        },
         "CSD U3 collisions types4_2021": {
           "CSD_U3_L13_S6_C1": "Cuir do chuid cóid anseo."
         },
         "CSD U3 collisions types4_2022": {
+          "CSD_U3_L13_S6_C1": "Cuir do chuid cóid anseo."
+        },
+        "CSD U3 collisions types4_2023": {
           "CSD_U3_L13_S6_C1": "Cuir do chuid cóid anseo."
         },
         "CSD U3 collisions types_2018": {
@@ -156,6 +218,9 @@
           "CSD_U3_L13_S6_C1": "Cuir do chuid cóid anseo."
         },
         "CSD U3 collisions types_2022": {
+          "CSD_U3_L13_S6_C1": "Cuir do chuid cóid anseo."
+        },
+        "CSD U3 collisions types_2023": {
           "CSD_U3_L13_S6_C1": "Cuir do chuid cóid anseo."
         },
         "CSD U3 debug": {
@@ -178,11 +243,19 @@
           "CSD_U3_rect_c1": "Seo é an cód",
           "CSD_U3_rect_c2": "Tarraing an bloc seo go dtí an cód."
         },
+        "CSD U3 debug_2023": {
+          "CSD_U3_rect_c1": "Seo é an cód",
+          "CSD_U3_rect_c2": "Tarraing an bloc seo go dtí an cód."
+        },
         "CSD U3 drawing challenge 2_2021": {
           "CSD_U3_rect_c1": "Seo é an cód",
           "CSD_U3_rect_c2": "Tarraing an bloc seo go dtí an cód."
         },
         "CSD U3 drawing challenge 2_2022": {
+          "CSD_U3_rect_c1": "Seo é an cód",
+          "CSD_U3_rect_c2": "Tarraing an bloc seo go dtí an cód."
+        },
+        "CSD U3 drawing challenge 2_2023": {
           "CSD_U3_rect_c1": "Seo é an cód",
           "CSD_U3_rect_c2": "Tarraing an bloc seo go dtí an cód."
         },
@@ -194,11 +267,19 @@
           "CSD_U3_rect_c1": "Seo é an cód",
           "CSD_U3_rect_c2": "Tarraing an bloc seo go dtí an cód."
         },
+        "CSD U3 drawing challenge 3_2023": {
+          "CSD_U3_rect_c1": "Seo é an cód",
+          "CSD_U3_rect_c2": "Tarraing an bloc seo go dtí an cód."
+        },
         "CSD U3 drawing practice 1_2021": {
           "CSD_U3_rect_c1": "Seo é an cód",
           "CSD_U3_rect_c2": "Tarraing an bloc seo go dtí an cód."
         },
         "CSD U3 drawing practice 1_2022": {
+          "CSD_U3_rect_c1": "Seo é an cód",
+          "CSD_U3_rect_c2": "Tarraing an bloc seo go dtí an cód."
+        },
+        "CSD U3 drawing practice 1_2023": {
           "CSD_U3_rect_c1": "Seo é an cód",
           "CSD_U3_rect_c2": "Tarraing an bloc seo go dtí an cód."
         },
@@ -210,11 +291,19 @@
           "CSD_U3_rect_c1": "Seo é an cód",
           "CSD_U3_rect_c2": "Tarraing an bloc seo go dtí an cód."
         },
+        "CSD U3 drawing practice 2_2023": {
+          "CSD_U3_rect_c1": "Seo é an cód",
+          "CSD_U3_rect_c2": "Tarraing an bloc seo go dtí an cód."
+        },
         "CSD U3 drawing practice 3_2021": {
           "CSD_U3_rect_c1": "Seo é an cód",
           "CSD_U3_rect_c2": "Tarraing an bloc seo go dtí an cód."
         },
         "CSD U3 drawing practice 3_2022": {
+          "CSD_U3_rect_c1": "Seo é an cód",
+          "CSD_U3_rect_c2": "Tarraing an bloc seo go dtí an cód."
+        },
+        "CSD U3 drawing practice 3_2023": {
           "CSD_U3_rect_c1": "Seo é an cód",
           "CSD_U3_rect_c2": "Tarraing an bloc seo go dtí an cód."
         },
@@ -258,6 +347,10 @@
           "CSD_U3_rect_c1": "Seo é an cód",
           "CSD_U3_rect_c2": "Tarraing an bloc seo go dtí an cód."
         },
+        "CSD U3 fill_2023": {
+          "CSD_U3_rect_c1": "Seo é an cód",
+          "CSD_U3_rect_c2": "Tarraing an bloc seo go dtí an cód."
+        },
         "CSD U3 properties depth_2021": {
           "CSD_U3_rect_c1": "Seo é an cód",
           "CSD_U3_rect_c2": "Tarraing an bloc seo go dtí an cód."
@@ -266,11 +359,19 @@
           "CSD_U3_rect_c1": "Seo é an cód",
           "CSD_U3_rect_c2": "Tarraing an bloc seo go dtí an cód."
         },
+        "CSD U3 properties depth_2023": {
+          "CSD_U3_rect_c1": "Seo é an cód",
+          "CSD_U3_rect_c2": "Tarraing an bloc seo go dtí an cód."
+        },
         "CSD U3 properties tint_2021": {
           "CSD_U3_rect_c1": "Seo é an cód",
           "CSD_U3_rect_c2": "Tarraing an bloc seo go dtí an cód."
         },
         "CSD U3 properties tint_2022": {
+          "CSD_U3_rect_c1": "Seo é an cód",
+          "CSD_U3_rect_c2": "Tarraing an bloc seo go dtí an cód."
+        },
+        "CSD U3 properties tint_2023": {
           "CSD_U3_rect_c1": "Seo é an cód",
           "CSD_U3_rect_c2": "Tarraing an bloc seo go dtí an cód."
         },
@@ -318,11 +419,19 @@
           "CSD_U3_rect_c1": "Seo é an cód",
           "CSD_U3_rect_c2": "Tarraing an bloc seo go dtí an cód."
         },
+        "CSD U3 shapes arc_2023": {
+          "CSD_U3_rect_c1": "Seo é an cód",
+          "CSD_U3_rect_c2": "Tarraing an bloc seo go dtí an cód."
+        },
         "CSD U3 shapes behind_2021": {
           "CSD_U3_rect_c1": "Seo é an cód",
           "CSD_U3_rect_c2": "Tarraing an bloc seo go dtí an cód."
         },
         "CSD U3 shapes behind_2022": {
+          "CSD_U3_rect_c1": "Seo é an cód",
+          "CSD_U3_rect_c2": "Tarraing an bloc seo go dtí an cód."
+        },
+        "CSD U3 shapes behind_2023": {
           "CSD_U3_rect_c1": "Seo é an cód",
           "CSD_U3_rect_c2": "Tarraing an bloc seo go dtí an cód."
         },
@@ -334,11 +443,19 @@
           "CSD_U3_rect_c1": "Seo é an cód",
           "CSD_U3_rect_c2": "Tarraing an bloc seo go dtí an cód."
         },
+        "CSD U3 shapes line_2023": {
+          "CSD_U3_rect_c1": "Seo é an cód",
+          "CSD_U3_rect_c2": "Tarraing an bloc seo go dtí an cód."
+        },
         "CSD U3 shapes missing_2021": {
           "CSD_U3_rect_c1": "Seo é an cód",
           "CSD_U3_rect_c2": "Tarraing an bloc seo go dtí an cód."
         },
         "CSD U3 shapes missing_2022": {
+          "CSD_U3_rect_c1": "Seo é an cód",
+          "CSD_U3_rect_c2": "Tarraing an bloc seo go dtí an cód."
+        },
+        "CSD U3 shapes missing_2023": {
           "CSD_U3_rect_c1": "Seo é an cód",
           "CSD_U3_rect_c2": "Tarraing an bloc seo go dtí an cód."
         },
@@ -350,11 +467,19 @@
           "CSD_U3_rect_c1": "Seo é an cód",
           "CSD_U3_rect_c2": "Tarraing an bloc seo go dtí an cód."
         },
+        "CSD U3 shapes polygon_2023": {
+          "CSD_U3_rect_c1": "Seo é an cód",
+          "CSD_U3_rect_c2": "Tarraing an bloc seo go dtí an cód."
+        },
         "CSD U3 shapes scene_2021": {
           "CSD_U3_rect_c1": "Seo é an cód",
           "CSD_U3_rect_c2": "Tarraing an bloc seo go dtí an cód."
         },
         "CSD U3 shapes scene_2022": {
+          "CSD_U3_rect_c1": "Seo é an cód",
+          "CSD_U3_rect_c2": "Tarraing an bloc seo go dtí an cód."
+        },
+        "CSD U3 shapes scene_2023": {
           "CSD_U3_rect_c1": "Seo é an cód",
           "CSD_U3_rect_c2": "Tarraing an bloc seo go dtí an cód."
         },
@@ -365,6 +490,19 @@
         "CSD U3 shapes_2022": {
           "CSD_U3_rect_c1": "Seo é an cód",
           "CSD_U3_rect_c2": "Tarraing an bloc seo go dtí an cód."
+        },
+        "CSD U3 shapes_2023": {
+          "CSD_U3_rect_c1": "Seo é an cód",
+          "CSD_U3_rect_c2": "Tarraing an bloc seo go dtí an cód."
+        },
+        "CSD U3L16 Prac D_2023": {
+          "CSD U3L16.7 - start": "Cuir do chuid cóid anseo"
+        },
+        "CSD U3L3 rect_2023": {
+          "CSD_U3_rect_c1": "Seo é an cód"
+        },
+        "CSD U6 - Color LEDs - SB4_2023": {
+          "CSDU6L10_rainbow": "Cuir do chuid cóid anseo"
         },
         "CSD U6 - Color LEDs - SB4_2222": {
           "CSDU6L10_rainbow": "Cuir do chuid cóid anseo"
@@ -445,6 +583,9 @@
           "CSD_U3_variables": "Athraigh an uimhir anseo"
         },
         "CSD web text explore_2022": {
+          "CSD_U3_variables": "Athraigh an uimhir anseo"
+        },
+        "CSD web text explore_2023": {
           "CSD_U3_variables": "Athraigh an uimhir anseo"
         },
         "Course 4 Artist 4": {

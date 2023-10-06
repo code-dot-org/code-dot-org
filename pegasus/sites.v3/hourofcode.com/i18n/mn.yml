@@ -290,6 +290,10 @@ mn:
   call_to_action_register_early_access: Эрт нэвтрэхийн тулд бүртгүүлэх
   call_to_action_open_positions: Нээлттэй байрлалыг харах
   call_to_action_get_guide: Гарын авлагыг авах
+  call_to_action_donate_to_cdo: Code.org руу хандив өгөх
+  call_to_action_start_fundraiser: нь хандивын арга эхлэх
+  call_to_action_view_donation_policy: Хандивын бодлогыг харах
+  call_to_action_view_donate_bitpay: BitPay нь хандивлах
   aria_label_call_to_action_afe: Амазоны ирээдүйн инженер талаар илүү ихийг олж мэдэх
   aria_label_call_to_action_teaching_csf: Заах Компьютерийн шинжлэх ухааны үндэс мэргэжлийн
     сургалтын хөтөлбөрийг эхлүүлэх
@@ -396,6 +400,7 @@ mn:
   curriculum_name_csp: Компьютерийн шинжлэх ухааны зарчим
   curriculum_name_csc: Компьютерийн шинжлэх ухааны холболтууд
   curriculum_name_csa: AP® Компьютерийн шинжлэх ухаан A
+  curriculum_name_csa_ai: Програм хангамжийн инженерчлэл ба компьютерийн алсын хараа
   curriculum_name_csc_02: Аливаа CS холболтуудын модуль
   curriculum_name_ai: AI & Машины сургалтын
   curriculum_name_artificial_intelligence: Хиймэл оюун ухаан (AI)
@@ -472,6 +477,12 @@ mn:
     системийг бий болгодог.
   curriculum_desc_csp: Үнэгүй, AP® CSP нь оюутнуудад компьютерийн шинжлэх ухааны үндсэн
     ойлголтуудыг танилцуулдаг ахлах сургуулийн танилцуулах сургалт.
+  curriculum_desc_csa_ai_long: 'Энэхүү хоёр бүлгийн дараах AP-ийн CSA модуль нь ахлах
+    сургуулийн сурагчдад GitHub, GitHub Copilot зэрэг мэргэжлийн програм хангамж хөгжүүлэх
+    хэрэгслүүдтэй туршлага хуримтлуулж, компьютерийн алсын хараатай програм хөгжүүлэх
+    бодит ур чадварыг өгдөг. '
+  curriculum_desc_csa_ai_short: Энэхүү POST-AP® CSA модуль нь ахлах ангийн сурагчдад
+    мэргэжлийн програм хангамж хөгжүүлэх хэрэгслээр туршлага хуримтлуулдаг.
   collection_hardware: Тоног төхөөрөмж дээр анхаарлаа төвлөрүүл
   collection_hardware_desc: Оюутнуудад асуудлыг шийдвэрлэхийн тулд өгөгдөл, физик
     төхөөрөмж ашиглах боломжийг олгодог.
@@ -546,6 +557,7 @@ mn:
   module_duration_2_hrs: 2 цаг
   module_duration_3_hrs: 3 цаг
   module_duration_5_hrs: 5 цаг
+  module_duration_5_hrs_plus: 5+ цаг
   module_duration_8_hrs: 8 цаг
   module_duration_20_hrs: 20 цаг
   module_duration_35_hrs: 35 цаг
@@ -624,6 +636,7 @@ mn:
   heading_these_lessons_will: 'Эдгээр хичээлүүд нь:'
   heading_explore_curriculum_catalog: Сургалтын хөтөлбөрийн каталогид манай бүх хичээлийг
     судлаарай
+  heading_csa_ai: AP® шалгалтын дараа хийх зүйлийг хайж байна уу?
   professional_learning_section_desc: Заах бэлтгэлээ базааж байхдаа хэрэгтэй дэмжлэгээ
     аваарай. Багш нар үүнийг хайрладаг бөгөөд 90% -иас дээш нь хамгийн сайн мэргэжлийн
     хөгжлийг эрэмбэлдэг!
@@ -656,6 +669,20 @@ mn:
   support_and_questions_section_desc: Манай дэмжлэгийн баг Code.org-ээс багшилж эхлэх
     талаар асууж болох бүх асуултанд хариулахаар ирлээ. Та бусад багш нараас манай
     багш нарын форум дээр туршлагын талаар асууж болно.
+  subscribe_form_section_title: Шинэчлэлтүүдийг захиалах
+  subscribe_form_section_desc_csa: Code.org-ийн AP® Computer Science A-ийн талаар
+    сар бүр имэйл хүлээн авахын тулд гарын үсэг зурж, таны ирсэн мэйлд зөв илгээгдсэн
+    сануулга, зөвлөмж, шинэчлэлтүүдийг аваарай.
+  subscribe_form_section_desc_csc: Code.org-ийн Computer Science Connections-ийн талаар
+    сар бүр имэйл хүлээн авахын тулд бүртгүүлнэ үү.
+  subscribe_form_section_desc_csd: Code.org-ийн Компьютерийн шинжлэх ухааны нээлтүүдийн
+    талаар сар бүр имэйл хүлээн авахын тулд бүртгүүлнэ үү.
+  subscribe_form_section_desc_csf: Code.org-ийн Computer Science Fundamentals-ийн
+    талаар сар бүр имэйл хүлээн авахын тулд бүртгүүлнэ үү.
+  subscribe_form_section_desc_csp: Code.org-ийн Компьютерийн шинжлэх ухааны зарчмуудын
+    талаар сар бүр имэйл хүлээн авахын тулд гарын үсэг зурж, таны ирсэн мэйлд зөв
+    илгээсэн сануулга, зөвлөмж, шинэчлэлтүүдийг аваарай.
+  subscribe_form_section_unsubscribe: Та ямар ч үед бүртгэлээс хасах боломжтой.
   blockchain_hero_heading: Блокчейн хэрхэн ажилладаг
   blockchain_hero_desc: нь blockchain ертөнцөд шумбах “Хэрхэн Blockchain ажил,” Манай
     шинэ видео цуврал болон дагалдах хичээл!
@@ -762,6 +789,9 @@ mn:
     цувралыг нэмэгдүүлдэг. Хичээл бүрийг цувралаас нэг видеотой хослуулж, видеонууд
     дээр танилцуулсан ойлголтуудыг гүнзгийрүүлэн судлах болно.
   ai_curriculum_btn_aria_label_04: AI хичээл хэрхэн ажилладаг талаар судлах
+  ai_curriculum_grades_05: 'Ангийн түвшин: 9-12'
+  ai_curriculum_btn_aria_label_05: Програм хангамжийн инженерчлэл ба компьютерийн
+    алсын хараатай модулийг судлах
   ai_carousel_heading: 'Багш нар Code.org-тай AI-ийн талаар юу гэж хэлдэг вэ:'
   ai_carousel_quote_01: Энэ хичээл нь миний оюутнуудад ангиллын системд үзэл бодлын
     элемент байгааг харах боломжийг олгосон юм. Хожим нь бид AI дээр хэвийх утгыг
@@ -889,6 +919,7 @@ mn:
     эхлэн суралцагчаас дэвшилтэт хүртэл. Зөвхөн хөлийнхөө хурууг дүрэх хүмүүст зориулсан
     гарааны сануулгыг багтаасан болно, түүнчлэн тэдний боломжийг нэмэгдүүлэхийн тулд
     хайж буй хүмүүст зориулсан дэвшилтэт хэрэгслүүд.
+  ai_pl_101_resources_3: Оюутны сургалтыг өөрчлөх хиймэл оюун ухааны сануулга
   how_ai_works_hero_heading: AI хэрхэн ажилладаг вэ
   how_ai_works_hero_desc: "“AI хэрхэн ажилладаг вэ”, манай видео цуврал болон дагалдах
     хичээлүүдээр хиймэл оюун ухааны ертөнцөд шумбах!"
@@ -1302,8 +1333,8 @@ mn:
     Animation
   csp_page_curriculum_glance_devices: Laptop, Chromebook
   csp_page_curriculum_glance_tools: Апп Лаб
-  csp_page_curriculum_glance_professional_learning: Facilitator-led Workshops, Self-paced
-    Modules
+  csp_page_curriculum_glance_professional_learning: Сургагч багшийн удирдсан семинар,
+    өөрөө хурдтай модулиуд
   csp_page_curriculum_glance_professional_languages: Англи хэл
   csp_page_curriculum_glance_professional_accessibility_features: Text-to-speech,
     Closed captioning, Immersive reader
@@ -1431,8 +1462,8 @@ mn:
   csd_page_curriculum_glance_devices: Laptop, Chromebook
   csd_page_curriculum_glance_tools: Апп лаборатори, Тоглоомын лаборатори, AI лаборатори,
     Вэб лаборатори
-  csd_page_curriculum_glance_professional_learning: Facilitator-led Workshops, Self-paced
-    Modules
+  csd_page_curriculum_glance_professional_learning: Сургагч багшийн удирдсан семинар,
+    өөрөө хурдтай модулиуд
   csd_page_curriculum_glance_professional_languages: Англи хэл
   csd_page_curriculum_glance_professional_accessibility_features: Text-to-speech,
     Closed captioning, Immersive reader
@@ -1576,8 +1607,8 @@ mn:
     ба Дизайн, Апп дизайн
   csf_page_curriculum_glance_devices: Зөөврийн компьютер, Chromebook, Таблет
   csf_page_curriculum_glance_tools: Спрайт Лаб, Тоглоомын лаборатори
-  csf_page_curriculum_glance_professional_learning: Facilitator-led Workshops, Self-paced
-    Modules
+  csf_page_curriculum_glance_professional_learning: Сургагч багшийн удирдсан семинар,
+    өөрөө хурдтай модулиуд
   csf_page_curriculum_glance_languages: Араб хэл, Индонезийн Bahasa, Catalan, БНХАУ-ын
     хялбаршуулсан, Хятадын уламжлалт, Чех, Францын, Германы, Хинди хэл, Италийн, Япон,
     БНСУ-ын, Каннада, Малай хэл, Марати хэл, Монгол Улсын, Польшийн, Португаль-BR,
@@ -1713,6 +1744,39 @@ mn:
   csa_page_faq_answer_08_02: For more information about the values that guided our
     work, please see our [curriculum values](%{curriculum_values_url}) and our [professional
     learning values](%{pl_values_url}).
+  donate_page_top_heading: Бидний эрхэм зорилгыг санхүүжүүлэхэд тусална уу
+  donate_page_top_desc: Хандив бүр Code.org-ийн компьютерийн шинжлэх ухааны боловсролын
+    хүртээмжийг өргөжүүлэхэд чиглэгддэг. Бид танд хандив өгч, өөрчлөлт хийх хэд хэдэн
+    арга замыг санал болгож байна.
+  donate_page_fundraise_title: Code.org-д зориулсан хөрөнгө босгох
+  donate_page_fundraise_desc: Code.org-д мөнгө босгоход тусална уу! Сургууль бүрийн
+    оюутан бүр компьютерийн шинжлэх ухааныг сурах боломжтой байх ёстой.
+  donate_page_other_ways_title: Өгөх бусад арга замууд
+  donate_page_other_ways_desc: Хувь нэмэр оруулах янз бүрийн аргыг судалж, хамгийн
+    сайн тохирсон сонголтыг олоорой. Том эсвэл жижиг дохио зангаа бүр бидний эрхэм
+    зорилгыг урагшлуулдаг.
+  donate_page_501c3: Code.org нь олон нийтийн 501 (c) (3) ашгийн бус байгууллагаар
+    бүртгэгдсэн байдаг. Code.org-д оруулсан хувь нэмэр нь хуулиар зөвшөөрөгдсөн хэмжээгээр
+    татвараас хасагдана. Code.org-ийн татварын дугаар 46-0858543 байна.
+  donate_page_donation_policy_title: Хандивын бодлогыг ойлгох нь
+  donate_page_donation_policy_desc: Бид таны оруулсан хувь нэмрийг хэрхэн зохицуулж,
+    хуваарилах талаар олж мэдээрэй.
+  donate_tabs_tab_label_daf_direct: Шууд DAF
+  donate_tabs_tab_label_amazon: Амазоны
+  donate_tabs_tab_label_bitpay: BitPay
+  donate_tabs_tab_label_employee_match: Ажилчдын тоглолт
+  donate_tabs_daf_direct_title: DAF Шууд дамжуулан Хандивлах
+  donate_tabs_daf_direct_desc: Хандивлагчийн зөвлөсөн сангаараа дамжуулан хандив өргөж,
+    Fidelity Charitable, Schwab Charitable, BNY Mellon зэрэг DAF Direct онлайн хэлбэрээр
+    дамжуулан Code.org-т буцалтгүй тусламжийн зөвлөмжийг гаргана уу.
+  donate_tabs_amazon_title: Амазоноор дамжуулан хандив өгөх
+  donate_tabs_amazon_desc: Амазоны дансаа ашиглан шууд хандивлаарай. Хэдхэн товшилтоор
+    Code.org-ийн эрхэм зорилгод хувь нэмрээ оруулж, компьютерийн шинжлэх ухааны боловсролын
+    ирээдүйг хүчирхэгжүүлэх болно.
+  donate_tabs_bitpay_title: BitPay-ээр дамжуулан криптогоор хандив өргөөрэй
+  donate_tabs_bitpay_desc: cryptocurrency нь өгөх ирээдүйг баяртайгаар хүлээн авах.
+    BitPay-ээр дамжуулан таны дижитал валют нь Code.org-ийн компьютерийн шинжлэх ухааны
+    боловсролыг өргөжүүлэхэд чиглэсэн үйл ажиллагааг шууд дэмжиж чадна.
   hoc_live: Амьд кодын цаг
   hoc_live_sign_up_title: Шууд кодын цагт бүртгүүлнэ үү
   hoc_live_learn_title: Код Live цагийн хамт суралц

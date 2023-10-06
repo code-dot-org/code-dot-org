@@ -13,7 +13,7 @@ import {saveRubricToTable, SAVING_TEXT, styles} from './rubricHelper';
 export default function RubricsContainer({
   unitName,
   lessonNumber,
-  levels,
+  submittableLevels,
   rubric,
   lessonId,
 }) {
@@ -22,6 +22,7 @@ export default function RubricsContainer({
   );
 
   const [saveNotificationText, setSaveNotificationText] = useState('');
+  const hasSubmittableLevels = submittableLevels.length > 0;
 
   const generateLearningGoalKey = () => {
     let learningGoalNumber = learningGoalList.length + 1;
@@ -131,7 +132,9 @@ export default function RubricsContainer({
   };
 
   // TODO-AITT-168: Check that there is at least one submittable programming level here
-  const initialLevelForAssessment = !!rubric ? rubric.levelId : levels[0].id;
+  const initialLevelForAssessment = !!rubric
+    ? rubric.levelId
+    : submittableLevels[0].id;
   const [selectedLevelForAssessment, setSelectedLevelForAssessment] = useState(
     initialLevelForAssessment
   );
@@ -148,6 +151,15 @@ export default function RubricsContainer({
     );
   };
 
+  function renderOptions() {
+    const selectOptions = submittableLevels.map(level => (
+      <option key={level.id} value={level.id}>
+        {level.name}
+      </option>
+    ));
+    return selectOptions;
+  }
+
   const handleDropdownChange = event => {
     setSelectedLevelForAssessment(event.target.value);
   };
@@ -157,45 +169,54 @@ export default function RubricsContainer({
   return (
     <div>
       <Heading1>{pageHeader}</Heading1>
-      <BodyTwoText>
-        This rubric will be used for {unitName}, lesson {lessonNumber}.
-      </BodyTwoText>
-
-      <div style={styles.containerStyle}>
-        <label>Choose a level for this rubric to be evaluated on</label>
-        <select
-          id="rubric_level_id"
-          required={true}
-          onChange={handleDropdownChange}
-          value={selectedLevelForAssessment}
-        >
-          {levels.map(level => (
-            <option key={level.id} value={level.id}>
-              {level.name}
-            </option>
-          ))}
-        </select>
-      </div>
-
-      <RubricEditor
-        learningGoalList={learningGoalList}
-        addNewConcept={addNewConceptHandler}
-        deleteLearningGoal={deleteLearningGoal}
-        updateLearningGoal={updateLearningGoal}
-      />
-      <div style={styles.bottomRow}>
-        <Button
-          className="ui-test-save-button"
-          color={Button.ButtonColor.brandSecondaryDefault}
-          text="Save your rubric"
-          onClick={saveRubric}
-          size={Button.ButtonSize.narrow}
-          disabled={saveNotificationText === SAVING_TEXT}
-        />
-      </div>
-      <div style={styles.bottomRow}>
-        <BodyThreeText>{saveNotificationText}</BodyThreeText>
-      </div>
+      {hasSubmittableLevels && (
+        <div>
+          <BodyTwoText>
+            This rubric will be used for {unitName}, lesson {lessonNumber}.
+          </BodyTwoText>
+          <div style={styles.containerStyle}>
+            <label>Choose a level for this rubric to be evaluated on</label>
+            <select
+              id="rubric_level_id"
+              required={true}
+              onChange={handleDropdownChange}
+              value={selectedLevelForAssessment}
+            >
+              {renderOptions()}
+            </select>
+          </div>
+          <RubricEditor
+            learningGoalList={learningGoalList}
+            addNewConcept={addNewConceptHandler}
+            deleteLearningGoal={deleteLearningGoal}
+            updateLearningGoal={updateLearningGoal}
+          />
+          <div style={styles.bottomRow}>
+            <Button
+              className="ui-test-save-button"
+              color={Button.ButtonColor.brandSecondaryDefault}
+              text="Save your rubric"
+              onClick={saveRubric}
+              size={Button.ButtonSize.narrow}
+              disabled={saveNotificationText === SAVING_TEXT}
+            />
+          </div>
+          <div style={styles.bottomRow}>
+            <BodyThreeText>{saveNotificationText}</BodyThreeText>
+          </div>
+        </div>
+      )}
+      {!hasSubmittableLevels && (
+        <div>
+          <BodyTwoText>
+            {unitName}, lesson {lessonNumber} currently has no submittable
+            levels. To create or modify a rubric, there must be a submittable
+            level connected to the rubric. Go back to the lesson landing page
+            and either add a new submittable level or modify an existing level
+            to be submittable.
+          </BodyTwoText>
+        </div>
+      )}
     </div>
   );
 }
@@ -203,8 +224,11 @@ export default function RubricsContainer({
 RubricsContainer.propTypes = {
   unitName: PropTypes.string,
   lessonNumber: PropTypes.number,
-  levels: PropTypes.arrayOf(
-    PropTypes.shape({id: PropTypes.number, name: PropTypes.string})
+  submittableLevels: PropTypes.arrayOf(
+    PropTypes.shape({
+      id: PropTypes.number,
+      name: PropTypes.string,
+    })
   ),
   rubric: PropTypes.object,
   lessonId: PropTypes.number,

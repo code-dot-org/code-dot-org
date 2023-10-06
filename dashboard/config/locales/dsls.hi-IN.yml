@@ -458,13 +458,26 @@ hi-IN:
         - {}
         questions:
         - {}
+      CSD Games Properties multi predict_2023:
+        answers:
+        - {}
+        - correct: true
+        - {}
+        - {}
+        - {}
+        questions:
+        - {}
       CSD Games Properties practice_2021:
         display_name: स्प्राइट्स की विशेषताएं
       CSD Games Properties practice_2022:
         display_name: स्प्राइट्स की विशेषताएं
+      CSD Games Properties practice_2023:
+        display_name: स्प्राइट्स की विशेषताएं
       CSD Games variables practice_2021:
         display_name: वेरिएबल्स का अभ्यास
       CSD Games variables practice_2022:
+        display_name: वेरिएबल्स का अभ्यास
+      CSD Games variables practice_2023:
         display_name: वेरिएबल्स का अभ्यास
       CSD Header Size MC:
         answers:
@@ -491,6 +504,12 @@ hi-IN:
         - {}
         - {}
       CSD Header Size MC_2018_2019_pilot_2022:
+        answers:
+        - {}
+        - correct: true
+        - {}
+        - {}
+      CSD Header Size MC_2018_2019_pilot_2023:
         answers:
         - {}
         - correct: true
@@ -529,6 +548,60 @@ hi-IN:
         - {}
         - text: स्टोरेज
         - text: प्रोसेसिंग
+      CSD U1 MC Q1_2023:
+        answers:
+        - correct: true
+        - correct: true
+        - {}
+        - {}
+        - {}
+      CSD U1 MC Q2_2023:
+        answers:
+        - {}
+        - {}
+        - {}
+        - {}
+        - correct: true
+        questions:
+        - {}
+      CSD U1 MC Q3_2023:
+        answers:
+        - {}
+        - {}
+        - text: संगीत
+        - text: स्थान
+        - correct: true
+        questions:
+        - {}
+      CSD U1 MC Q4_2023:
+        answers:
+        - {}
+        - {}
+        - {}
+        - correct: true
+        - correct: true
+        questions:
+        - {}
+      CSD U1 Match Q5_2023:
+        answers:
+        - text: इनपुट
+        - text: स्टोरेज
+        - text: प्रोसेसिंग
+        questions:
+        - {}
+        - {}
+        - {}
+      CSD U1 Match Q6_2023:
+        answers:
+        - {}
+        - {}
+        - {}
+        - {}
+        questions:
+        - text: तैयारी करना
+        - text: दर्शाना
+        - text: प्रयास करें
+        - text: परिभाषित करें
       CSD U1 Test:
         title: कंप्यूटर और प्रॉब्लम सॉल्विंग पोस्ट-प्रोजेक्ट टेस्ट
       CSD U1 Test PSP match:
@@ -619,9 +692,13 @@ hi-IN:
         title: कंप्यूटर और प्रॉब्लम सॉल्विंग पोस्ट-प्रोजेक्ट टेस्ट
       CSD U1 Test_2022:
         title: कंप्यूटर और प्रॉब्लम सॉल्विंग पोस्ट-प्रोजेक्ट टेस्ट
+      CSD U1 Test_2023:
+        title: कंप्यूटर और प्रॉब्लम सॉल्विंग पोस्ट-प्रोजेक्ट टेस्ट
       CSD U2 CSS practice_pilot_2021:
         display_name: CSS के साथ स्टाइलिंग टेक्सट
       CSD U2 CSS practice_pilot_2022:
+        display_name: CSS के साथ स्टाइलिंग टेक्सट
+      CSD U2 CSS practice_pilot_2023:
         display_name: CSS के साथ स्टाइलिंग टेक्सट
       CSD U2 Design Project:
         content1: यहां वर्णन करें
@@ -633,9 +710,13 @@ hi-IN:
         display_name: चित्र शामिल करना
       CSD U2 Image challenge_pilot_2022:
         display_name: चित्र शामिल करना
+      CSD U2 Image challenge_pilot_2023:
+        display_name: चित्र शामिल करना
       CSD U2 Image practice_pilot_2021:
         display_name: चित्र शामिल करना
       CSD U2 Image practice_pilot_2022:
+        display_name: चित्र शामिल करना
+      CSD U2 Image practice_pilot_2023:
         display_name: चित्र शामिल करना
       CSD U2 L1 Overview:
         content1: यहां वर्णन करें
@@ -651,6 +732,95 @@ hi-IN:
         content1: यहां वर्णन करें
       CSD U2 Lesson 6 Overview:
         content1: यहां वर्णन करें
+      CSD U2 MC Q10_2023:
+        answers:
+        - {}
+        - {}
+        - {}
+        - text: आपका नाम
+        - correct: true
+        questions:
+        - {}
+      CSD U2 MC Q11_2023:
+        answers:
+        - {}
+        - {}
+        - {}
+        - correct: true
+        questions:
+        - {}
+      CSD U2 MC Q1_2023:
+        answers:
+        - {}
+        - correct: true
+        - {}
+        - {}
+        - {}
+        questions:
+        - {}
+      CSD U2 MC Q2_2023:
+        answers:
+        - correct: true
+        - {}
+        - {}
+        - correct: true
+        - {}
+        questions:
+        - {}
+      CSD U2 MC Q3_2023:
+        answers:
+        - correct: true
+        - {}
+        - correct: true
+        - {}
+        - {}
+        questions:
+        - {}
+      CSD U2 MC Q4_2023:
+        answers:
+        - {}
+        - correct: true
+        - {}
+        - {}
+        - {}
+        questions:
+        - {}
+      CSD U2 MC Q6_2023:
+        answers:
+        - correct: true
+        - {}
+        - {}
+        - {}
+        - {}
+        questions:
+        - {}
+      CSD U2 MC Q7_2023:
+        answers:
+        - {}
+        - {}
+        - correct: true
+        - {}
+        - {}
+        questions:
+        - {}
+      CSD U2 MC Q8_2023:
+        answers:
+        - {}
+        - {}
+        - correct: true
+        - {}
+        - {}
+        questions:
+        - {}
+      CSD U2 Match Q1_2023:
+        answers:
+        - {}
+        - {}
+        - {}
+        questions:
+        - text: रंग
+        - {}
+        - {}
       CSD U2 Test Classes:
         answers:
         - {}
@@ -887,6 +1057,26 @@ hi-IN:
             -> dsls -> questions -> 2 -> text"
         - {}
         - text: फ़ाइल के नाम में एक रिक्त स्थान (स्पेस ) है
+      CSD U2 image debug match_2023:
+        answers:
+        - {}
+        - {}
+        - {}
+        - {}
+        - {}
+        questions:
+        - text: |-
+            `src` विशेषता (एट्रिब्युट) को गलत तरीके से लिखा गया है।
+
+            https://studio. code. org/s/csd2-2019/stage/7/puzzle/4 -> dsls -> questions -> 0 -> text
+        - text: |-
+            `src` और` alt` विशेषताएँ (एट्रिब्युटस) स्विच की गयी हैं
+
+            https://studio. code. org/s/csd2-2019/stage/7/puzzle/4 -> dsls -> questions -> 1 -> text
+        - text: "फ़ाइल एक्सटेंशन (.jpg) छवि पते (इमेज एड्रेस) से गायब है\n \nhttps://studio.code.org/s/csd2-2019/stage/7/puzzle/4
+            -> dsls -> questions -> 2 -> text"
+        - {}
+        - text: फ़ाइल के नाम में एक रिक्त स्थान (स्पेस ) है
       CSD U2 image debug match_pilot_2021:
         answers:
         - {}
@@ -967,6 +1157,10 @@ hi-IN:
         content1: यहां वर्णन करें
       CSD U2 project guide_2018_2019_pilot_2022:
         content1: यहां वर्णन करें
+      CSD U2 project guide_2018_2019_pilot_2023:
+        content1: यहां वर्णन करें
+      CSD U2L2 - Chal_2023:
+        display_name: चुनौती स्तर
       CSD U3 - conditionals - Matching:
         answers:
         - {}
@@ -1032,6 +1226,19 @@ hi-IN:
         - {}
         - {}
         - {}
+      CSD U3 - conditionals - Matching_2018_2019_pilot_2023:
+        answers:
+        - {}
+        - {}
+        - {}
+        - {}
+        - {}
+        questions:
+        - {}
+        - {}
+        - {}
+        - {}
+        - {}
       CSD U3 Boolean MC:
         answers:
         - correct: true
@@ -1069,6 +1276,15 @@ hi-IN:
         - {}
         title: शीर्षक
       CSD U3 Boolean MC_2018_2019_pilot_2022:
+        answers:
+        - correct: true
+        - {}
+        - {}
+        - {}
+        questions:
+        - {}
+        title: शीर्षक
+      CSD U3 Boolean MC_2018_2019_pilot_2023:
         answers:
         - correct: true
         - {}
@@ -1115,6 +1331,12 @@ hi-IN:
         - correct: true
         - {}
       CSD U3 Functions Prediction define first_2018_2019_pilot_2022:
+        answers:
+        - {}
+        - {}
+        - correct: true
+        - {}
+      CSD U3 Functions Prediction define first_2018_2019_pilot_2023:
         answers:
         - {}
         - {}
@@ -1170,6 +1392,138 @@ hi-IN:
           बहुत ही बुनियादी विवरण के साथ पाठ शुरू करती है। बाद में, कक्षा एक रैंडम  संख्या
           को सहेजने  के लिए वेरिएबल का उपयोग करती है, जिससे प्रोग्राम एक ही रैंडम
           संख्या को कई बार उपयोग कर सकते हैं।
+      CSD U3 MC Q10_2023:
+        answers:
+        - correct: true
+        - correct: true
+        - {}
+        - {}
+        questions:
+        - {}
+      CSD U3 MC Q11_2023:
+        answers:
+        - {}
+        - correct: true
+        - {}
+        - {}
+        questions:
+        - {}
+      CSD U3 MC Q12_2023:
+        answers:
+        - {}
+        - {}
+        - correct: true
+        - {}
+        - {}
+        questions:
+        - {}
+      CSD U3 MC Q13_2023:
+        answers:
+        - {}
+        - {}
+        - {}
+        - correct: true
+        - {}
+        questions:
+        - {}
+      CSD U3 MC Q14_2023:
+        answers:
+        - text: '0'
+        - text: १
+        - text: '5'
+        - correct: true
+          text: '6'
+        - {}
+        questions:
+        - {}
+      CSD U3 MC Q1_2023:
+        answers:
+        - {}
+        - correct: true
+        - {}
+        - {}
+        - {}
+        questions:
+        - {}
+      CSD U3 MC Q2_2023:
+        answers:
+        - {}
+        - correct: true
+        - {}
+        - {}
+        - {}
+        questions:
+        - {}
+      CSD U3 MC Q4_2023:
+        answers:
+        - {}
+        - {}
+        - {}
+        - correct: true
+        - {}
+        questions:
+        - {}
+      CSD U3 MC Q5_2023:
+        answers:
+        - {}
+        - {}
+        - correct: true
+        - {}
+        - {}
+        questions:
+        - {}
+      CSD U3 MC Q6_2023:
+        answers:
+        - {}
+        - {}
+        - correct: true
+        - {}
+        questions:
+        - {}
+      CSD U3 MC Q8_2023:
+        answers:
+        - {}
+        - correct: true
+        - {}
+        - {}
+        - {}
+        questions:
+        - {}
+      CSD U3 Match Q1_2023:
+        answers:
+        - {}
+        - {}
+        - {}
+        - {}
+        questions:
+        - {}
+        - {}
+        - {}
+        - {}
+      CSD U3 Match Q2_2023:
+        answers:
+        - text: x
+        - text: y
+        - text: चौड़ाई
+        - text: ऊंचाई
+        questions:
+        - {}
+        - {}
+        - {}
+        - {}
+      CSD U3 Match Q3_2023:
+        answers:
+        - {}
+        - {}
+        - {}
+        - {}
+        - {}
+        questions:
+        - {}
+        - {}
+        - {}
+        - {}
+        - {}
       CSD U3 Sprite Movement Predict Multi:
         answers:
         - {}
@@ -1203,6 +1557,14 @@ hi-IN:
         questions:
         - {}
       CSD U3 Sprite Movement Predict Multi_2018_2019_pilot_2022:
+        answers:
+        - {}
+        - {}
+        - correct: true
+        - {}
+        questions:
+        - {}
+      CSD U3 Sprite Movement Predict Multi_2018_2019_pilot_2023:
         answers:
         - {}
         - {}
@@ -1453,9 +1815,22 @@ hi-IN:
         - {}
         - {}
         - {}
+      CSD U3 drawSprites placement match_2023:
+        answers:
+        - {}
+        - {}
+        - {}
+        - {}
+        questions:
+        - {}
+        - {}
+        - {}
+        - {}
       CSD U3 drawing practice choice_2021:
         display_name: अभ्यास
       CSD U3 drawing practice choice_2022:
+        display_name: अभ्यास
+      CSD U3 drawing practice choice_2023:
         display_name: अभ्यास
       CSD U3 game intro:
         content1: यहां वर्णन करें
@@ -1475,6 +1850,67 @@ hi-IN:
         content1: यहां वर्णन करें
       CSD U3 platform intro_2018_2019_pilot_2022:
         content1: यहां वर्णन करें
+      CSD U3 platform intro_2018_2019_pilot_2023:
+        content1: यहां वर्णन करें
+      CSD U4 MC Q1_2023:
+        answers:
+        - {}
+        - correct: true
+        - {}
+        - correct: true
+        questions:
+        - {}
+      CSD U4 MC Q2_2023:
+        answers:
+        - {}
+        - correct: true
+        - {}
+        - correct: true
+        questions:
+        - {}
+      CSD U4 MC Q3_2023:
+        answers:
+        - {}
+        - {}
+        - {}
+        - correct: true
+        questions:
+        - {}
+      CSD U4 MC Q4_2023:
+        answers:
+        - {}
+        - correct: true
+        - {}
+        - {}
+        - {}
+        questions:
+        - {}
+      CSD U4 MC Q5_2023:
+        answers:
+        - {}
+        - correct: true
+        - {}
+        - correct: true
+        - {}
+        questions:
+        - {}
+      CSD U4 MC Q8_2023:
+        answers:
+        - {}
+        - correct: true
+        - {}
+        - correct: true
+        questions:
+        - {}
+      CSD U4 MC Q9_2023:
+        answers:
+        - correct: true
+        - {}
+        - {}
+        - correct: true
+        - text: प्रतिक्रिया प्रदान करें
+        questions:
+        - {}
       CSD U4 test feature match:
         answers:
         - {}
@@ -1636,6 +2072,84 @@ hi-IN:
         content1: यहां वर्णन करें
       CSD U5 L13 SFLP Interpreting Data:
         content1: यहां वर्णन करें
+      CSD U5 MC Q1_2023:
+        answers:
+        - {}
+        - {}
+        - {}
+        - correct: true
+        - {}
+        questions:
+        - {}
+      CSD U5 MC Q2_2023:
+        answers:
+        - {}
+        - correct: true
+        - correct: true
+        - {}
+        - {}
+        questions:
+        - {}
+      CSD U5 MC Q3_2023:
+        answers:
+        - {}
+        - correct: true
+        questions:
+        - {}
+      CSD U5 MC Q4_2023:
+        answers:
+        - {}
+        - {}
+        - correct: true
+        - {}
+        - {}
+        questions:
+        - {}
+      CSD U5 MC Q5_2023:
+        answers:
+        - {}
+        - {}
+        - {}
+        - correct: true
+        - {}
+        questions:
+        - {}
+      CSD U5 MC Q6_2023:
+        answers:
+        - {}
+        - correct: true
+        - {}
+        - {}
+        - {}
+        questions:
+        - {}
+      CSD U5 MC Q7_2023:
+        answers:
+        - {}
+        - correct: true
+        - {}
+        - {}
+        - {}
+        questions:
+        - {}
+      CSD U5 MC Q8_2023:
+        answers:
+        - {}
+        - correct: true
+        - {}
+        - {}
+        - {}
+        questions:
+        - {}
+      CSD U5 MC Q9_2023:
+        answers:
+        - {}
+        - {}
+        - {}
+        - {}
+        - correct: true
+        questions:
+        - {}
       CSD U5 crosstab warmup:
         content1: यहां वर्णन करें
       CSD U5 crosstab warmup_2018:
@@ -1795,29 +2309,73 @@ hi-IN:
         - {}
         questions:
         - {}
+      CSD U6 - Accelerometer - Chal_2023a_2023:
+        display_name: चुनौती स्तर
       CSD U6 - Accelerometer - Chal_2222:
+        display_name: चुनौती स्तर
+      CSD U6 - Accelerometer - Chal_mb2022:
+        display_name: चुनौती स्तर
+      CSD U6 - Board Inputs - Chal_2023:
         display_name: चुनौती स्तर
       CSD U6 - Board Inputs - Chal_2222:
         display_name: चुनौती स्तर
+      CSD U6 - Board Inputs - Chal_mb2022:
+        display_name: चुनौती स्तर
+      CSD U6 - Board Outputs - Chal_2023:
+        display_name: चुनौती स्तर
       CSD U6 - Board Outputs - Chal_2222:
+        display_name: चुनौती स्तर
+      CSD U6 - Board Outputs - Chal_mb2022:
+        display_name: चुनौती स्तर
+      CSD U6 - Color LEDs - Chal_2023a_2023:
         display_name: चुनौती स्तर
       CSD U6 - Color LEDs - Chal_2222:
         display_name: चुनौती स्तर
+      CSD U6 - Combine Inputs - Chal_2023a_2023:
+        display_name: चुनौती स्तर
       CSD U6 - Combine Inputs - Chal_2222:
+        display_name: चुनौती स्तर
+      CSD U6 - Combine Inputs - Chal_mb2022:
+        display_name: चुनौती स्तर
+      CSD U6 - If Variables - Chal_2023:
         display_name: चुनौती स्तर
       CSD U6 - If Variables - Chal_2222:
         display_name: चुनौती स्तर
+      CSD U6 - If Variables - Chal_mb2022:
+        display_name: चुनौती स्तर
+      CSD U6 - Music - Chal_2023:
+        display_name: चुनौती स्तर
       CSD U6 - Music - Chal_2222:
+        display_name: चुनौती स्तर
+      CSD U6 - Physical Input - Chal_2023:
         display_name: चुनौती स्तर
       CSD U6 - Physical Input - Chal_2222:
         display_name: चुनौती स्तर
+      CSD U6 - Physical Input - Chal_mb2022:
+        display_name: चुनौती स्तर
+      CSD U6 - Physical Output - Chal_2023:
+        display_name: चुनौती स्तर
       CSD U6 - Physical Output - Chal_2222:
+        display_name: चुनौती स्तर
+      CSD U6 - Physical Output - Chal_mb2022:
+        display_name: चुनौती स्तर
+      CSD U6 - Screen Inputs - Chal_2023:
         display_name: चुनौती स्तर
       CSD U6 - Screen Inputs - Chal_2222:
         display_name: चुनौती स्तर
+      CSD U6 - Screen Inputs - Chal_mb2022:
+        display_name: चुनौती स्तर
+      CSD U6 - Screen Outputs - Chal_2023:
+        display_name: चुनौती स्तर
       CSD U6 - Screen Outputs - Chal_2222:
         display_name: चुनौती स्तर
+      CSD U6 - Screen Outputs - Chal_mb2022:
+        display_name: चुनौती स्तर
+      CSD U6 - Sensors - Chal_2023a_2023:
+        display_name: चुनौती स्तर
       CSD U6 - Sensors - Chal_2222:
+        display_name: चुनौती स्तर
+      CSD U6 - Sensors - Chal_mb2022:
         display_name: चुनौती स्तर
       CSD U6 LED create intro:
         content1: यहां वर्णन करें
@@ -1827,6 +2385,132 @@ hi-IN:
         content1: यहां वर्णन करें
       CSD U6 LED create intro_2021:
         content1: यहां वर्णन करें
+      CSD U6 MC Q1_2023:
+        answers:
+        - {}
+        - correct: true
+        - {}
+        - correct: true
+        - {}
+        questions:
+        - {}
+      CSD U6 MC Q1_6b2023:
+        answers:
+        - correct: true
+        - {}
+        - correct: true
+        - {}
+        - {}
+        questions:
+        - {}
+      CSD U6 MC Q2_2023:
+        answers:
+        - {}
+        - {}
+        - {}
+        - correct: true
+          text: त्वरणमापी
+        - {}
+        questions:
+        - {}
+      CSD U6 MC Q2_6b2023:
+        answers:
+        - {}
+        - {}
+        - {}
+        - correct: true
+          text: त्वरणमापी
+        - text: प्रकाश
+        questions:
+        - {}
+      CSD U6 MC Q3_2023:
+        answers:
+        - {}
+        - {}
+        - {}
+        - correct: true
+        questions:
+        - {}
+      CSD U6 MC Q3_6b2023:
+        answers:
+        - {}
+        - {}
+        - {}
+        - correct: true
+        questions:
+        - {}
+      CSD U6 MC Q4_2023:
+        answers:
+        - {}
+        - {}
+        - correct: true
+        - {}
+        - {}
+        questions:
+        - {}
+      CSD U6 MC Q4_6b2023:
+        answers:
+        - {}
+        - {}
+        - correct: true
+        - {}
+        - {}
+        questions:
+        - {}
+      CSD U6 MC Q5_2023:
+        answers:
+        - {}
+        - {}
+        - correct: true
+        - {}
+        - {}
+        questions:
+        - {}
+      CSD U6 MC Q5_6b2023:
+        answers:
+        - {}
+        - {}
+        - correct: true
+        - {}
+        - {}
+        questions:
+        - {}
+      CSD U6 MC Q6_2023:
+        answers:
+        - {}
+        - correct: true
+        - {}
+        - correct: true
+        - {}
+        questions:
+        - {}
+      CSD U6 MC Q6_6b2023:
+        answers:
+        - {}
+        - correct: true
+        - {}
+        - correct: true
+        - {}
+        questions:
+        - {}
+      CSD U6 MC Q7_2023:
+        answers:
+        - {}
+        - {}
+        - {}
+        - correct: true
+        - {}
+        questions:
+        - {}
+      CSD U6 MC Q7_6b2023:
+        answers:
+        - {}
+        - {}
+        - {}
+        - correct: true
+        - {}
+        questions:
+        - {}
       CSD U6 array multi:
         answers:
         - {}
@@ -1903,7 +2587,25 @@ hi-IN:
         questions:
         - {}
         title: अनुमान लगाएं
+      CSD U6 setProperty predict multi_2023:
+        answers:
+        - {}
+        - {}
+        - {}
+        - correct: true
+        questions:
+        - {}
+        title: अनुमान लगाएं
       CSD U6 setProperty predict multi_2222:
+        answers:
+        - {}
+        - {}
+        - {}
+        - correct: true
+        questions:
+        - {}
+        title: अनुमान लगाएं
+      CSD U6 setProperty predict multi_mb2022:
         answers:
         - {}
         - {}
@@ -2044,33 +2746,49 @@ hi-IN:
         title: वेब डेवलपमेंट पोस्ट-प्रोजेक्ट टेस्ट
       CSD Web Development Post-Project Test_pilot_2022:
         title: वेब डेवलपमेंट पोस्ट-प्रोजेक्ट टेस्ट
+      CSD Web Development Post-Project Test_pilot_2023:
+        title: वेब डेवलपमेंट पोस्ट-प्रोजेक्ट टेस्ट
       CSD games cake challenge choice_2021:
         display_name: चुनौतियां
       CSD games cake challenge choice_2022:
+        display_name: चुनौतियां
+      CSD games cake challenge choice_2023:
         display_name: चुनौतियां
       CSD games functions practice choice_2021:
         display_name: फंक्शन्स का अभ्यास
       CSD games functions practice choice_2022:
         display_name: फंक्शन्स का अभ्यास
+      CSD games functions practice choice_2023:
+        display_name: फंक्शन्स का अभ्यास
       CSD games platform challenge choice_2021:
         display_name: चुनौतियां
       CSD games platform challenge choice_2022:
+        display_name: चुनौतियां
+      CSD games platform challenge choice_2023:
         display_name: चुनौतियां
       CSD web conditionals practice choice_2021:
         display_name: सापेक्षों का अभ्यास
       CSD web conditionals practice choice_2022:
         display_name: सापेक्षों का अभ्यास
+      CSD web conditionals practice choice_2023:
+        display_name: सापेक्षों का अभ्यास
       CSD web draw loop practice choice_2021:
         display_name: अभ्यास
       CSD web draw loop practice choice_2022:
+        display_name: अभ्यास
+      CSD web draw loop practice choice_2023:
         display_name: अभ्यास
       CSD web movement practice choice_2021:
         display_name: अभ्यास
       CSD web movement practice choice_2022:
         display_name: अभ्यास
+      CSD web movement practice choice_2023:
+        display_name: अभ्यास
       CSD web text practice choice_2021:
         display_name: अभ्यास
       CSD web text practice choice_2022:
+        display_name: अभ्यास
+      CSD web text practice choice_2023:
         display_name: अभ्यास
       CSP PD Example Question 1:
         answers:
@@ -6127,7 +6845,147 @@ hi-IN:
         - correct: true
         questions:
         - {}
+      Student End of Unit Survey - Q1_2023:
+        answers:
+        - correct: true
+        - correct: true
+        - correct: true
+        - correct: true
+        - correct: true
+        questions:
+        - {}
+      Student End of Unit Survey - Q1_copy1_2023:
+        answers:
+        - correct: true
+        - correct: true
+        - correct: true
+        - correct: true
+        - correct: true
+        questions:
+        - {}
+      Student End of Unit Survey - Q1_copy2_2023:
+        answers:
+        - correct: true
+        - correct: true
+        - correct: true
+        - correct: true
+        - correct: true
+        questions:
+        - {}
+      Student End of Unit Survey - Q1_copy3_2023:
+        answers:
+        - correct: true
+        - correct: true
+        - correct: true
+        - correct: true
+        - correct: true
+        questions:
+        - {}
+      Student End of Unit Survey - Q1_copy4_2023:
+        answers:
+        - correct: true
+        - correct: true
+        - correct: true
+        - correct: true
+        - correct: true
+        questions:
+        - {}
+      Student End of Unit Survey - Q1_copy5_2023:
+        answers:
+        - correct: true
+        - correct: true
+        - correct: true
+        - correct: true
+        - correct: true
+        questions:
+        - {}
+      Student End of Unit Survey - Q1_copy6_2023:
+        answers:
+        - correct: true
+        - correct: true
+        - correct: true
+        - correct: true
+        - correct: true
+        questions:
+        - {}
       Student End of Unit Survey - Q2_2022:
+        answers:
+        - correct: true
+        - correct: true
+        - correct: true
+        - correct: true
+        - correct: true
+        - correct: true
+        - correct: true
+        questions:
+        - {}
+      Student End of Unit Survey - Q2_2023:
+        answers:
+        - correct: true
+        - correct: true
+        - correct: true
+        - correct: true
+        - correct: true
+        - correct: true
+        - correct: true
+        questions:
+        - {}
+      Student End of Unit Survey - Q2_copy1_2023:
+        answers:
+        - correct: true
+        - correct: true
+        - correct: true
+        - correct: true
+        - correct: true
+        - correct: true
+        - correct: true
+        questions:
+        - {}
+      Student End of Unit Survey - Q2_copy2_2023:
+        answers:
+        - correct: true
+        - correct: true
+        - correct: true
+        - correct: true
+        - correct: true
+        - correct: true
+        - correct: true
+        questions:
+        - {}
+      Student End of Unit Survey - Q2_copy3_2023:
+        answers:
+        - correct: true
+        - correct: true
+        - correct: true
+        - correct: true
+        - correct: true
+        - correct: true
+        - correct: true
+        questions:
+        - {}
+      Student End of Unit Survey - Q2_copy4_2023:
+        answers:
+        - correct: true
+        - correct: true
+        - correct: true
+        - correct: true
+        - correct: true
+        - correct: true
+        - correct: true
+        questions:
+        - {}
+      Student End of Unit Survey - Q2_copy5_2023:
+        answers:
+        - correct: true
+        - correct: true
+        - correct: true
+        - correct: true
+        - correct: true
+        - correct: true
+        - correct: true
+        questions:
+        - {}
+      Student End of Unit Survey - Q2_copy6_2023:
         answers:
         - correct: true
         - correct: true
@@ -6222,6 +7080,17 @@ hi-IN:
         - correct: true
         questions:
         - {}
+      aiml-ch1-pulse-survey-q1_2023:
+        answers:
+        - correct: true
+        - correct: true
+        - correct: true
+        - correct: true
+        - correct: true
+        - correct: true
+        - correct: true
+        questions:
+        - {}
       aiml-ch1-pulse-survey-q2_2021:
         answers:
         - correct: true
@@ -6234,6 +7103,17 @@ hi-IN:
         questions:
         - {}
       aiml-ch1-pulse-survey-q2_2022:
+        answers:
+        - correct: true
+        - correct: true
+        - correct: true
+        - correct: true
+        - correct: true
+        - correct: true
+        - correct: true
+        questions:
+        - {}
+      aiml-ch1-pulse-survey-q2_2023:
         answers:
         - correct: true
         - correct: true
@@ -6266,6 +7146,17 @@ hi-IN:
         - correct: true
         questions:
         - {}
+      aiml-ch1-pulse-survey-q3_2023:
+        answers:
+        - correct: true
+        - correct: true
+        - correct: true
+        - correct: true
+        - correct: true
+        - correct: true
+        - correct: true
+        questions:
+        - {}
       aiml-ch1-pulse-survey-q4_2021:
         answers:
         - correct: true
@@ -6278,6 +7169,17 @@ hi-IN:
         questions:
         - {}
       aiml-ch1-pulse-survey-q4_2022:
+        answers:
+        - correct: true
+        - correct: true
+        - correct: true
+        - correct: true
+        - correct: true
+        - correct: true
+        - correct: true
+        questions:
+        - {}
+      aiml-ch1-pulse-survey-q4_2023:
         answers:
         - correct: true
         - correct: true
@@ -6310,6 +7212,17 @@ hi-IN:
         - correct: true
         questions:
         - {}
+      aiml-ch1-pulse-survey-q5_2023:
+        answers:
+        - correct: true
+        - correct: true
+        - correct: true
+        - correct: true
+        - correct: true
+        - correct: true
+        - correct: true
+        questions:
+        - {}
       aiml-intro-pulse-survey-q1_2021:
         answers:
         - correct: true
@@ -6318,6 +7231,13 @@ hi-IN:
         questions:
         - {}
       aiml-intro-pulse-survey-q1_2022:
+        answers:
+        - correct: true
+        - correct: true
+        - correct: true
+        questions:
+        - {}
+      aiml-intro-pulse-survey-q1_2023:
         answers:
         - correct: true
         - correct: true
@@ -6338,6 +7258,13 @@ hi-IN:
         - correct: true
         questions:
         - {}
+      aiml-intro-pulse-survey-q2_2023:
+        answers:
+        - correct: true
+        - correct: true
+        - correct: true
+        questions:
+        - {}
       aiml-intro-pulse-survey-q3_2021:
         answers:
         - correct: true
@@ -6350,6 +7277,17 @@ hi-IN:
         questions:
         - {}
       aiml-intro-pulse-survey-q3_2022:
+        answers:
+        - correct: true
+        - correct: true
+        - correct: true
+        - correct: true
+        - correct: true
+        - correct: true
+        - correct: true
+        questions:
+        - {}
+      aiml-intro-pulse-survey-q3_2023:
         answers:
         - correct: true
         - correct: true
@@ -6382,6 +7320,17 @@ hi-IN:
         - correct: true
         questions:
         - {}
+      aiml-intro-pulse-survey-q4_2023:
+        answers:
+        - correct: true
+        - correct: true
+        - correct: true
+        - correct: true
+        - correct: true
+        - correct: true
+        - correct: true
+        questions:
+        - {}
       aiml-intro-pulse-survey-q5_2021:
         answers:
         - correct: true
@@ -6394,6 +7343,17 @@ hi-IN:
         questions:
         - {}
       aiml-intro-pulse-survey-q5_2022:
+        answers:
+        - correct: true
+        - correct: true
+        - correct: true
+        - correct: true
+        - correct: true
+        - correct: true
+        - correct: true
+        questions:
+        - {}
+      aiml-intro-pulse-survey-q5_2023:
         answers:
         - correct: true
         - correct: true
@@ -6483,6 +7443,17 @@ hi-IN:
         - correct: true
         questions:
         - {}
+      be-myself-in-cs_mb2022:
+        answers:
+        - correct: true
+        - correct: true
+        - correct: true
+        - correct: true
+        - correct: true
+        - correct: true
+        - correct: true
+        questions:
+        - {}
       behaviors 1 predict:
         answers:
         - feedback: ग़लत.
@@ -6530,6 +7501,17 @@ hi-IN:
         - correct: true
         questions:
         - {}
+      comfortable-in-cs-class_mb2022:
+        answers:
+        - correct: true
+        - correct: true
+        - correct: true
+        - correct: true
+        - correct: true
+        - correct: true
+        - correct: true
+        questions:
+        - {}
       confident-ability-to-learn:
         answers:
         - correct: true
@@ -6542,6 +7524,28 @@ hi-IN:
         questions:
         - {}
       confident-ability-to-learn_2022:
+        answers:
+        - correct: true
+        - correct: true
+        - correct: true
+        - correct: true
+        - correct: true
+        - correct: true
+        - correct: true
+        questions:
+        - {}
+      confident-ability-to-learn_2023:
+        answers:
+        - correct: true
+        - correct: true
+        - correct: true
+        - correct: true
+        - correct: true
+        - correct: true
+        - correct: true
+        questions:
+        - {}
+      confident-ability-to-learn_mb2022:
         answers:
         - correct: true
         - correct: true
@@ -6585,6 +7589,14 @@ hi-IN:
         questions:
         - {}
       counselor_encourage_2022:
+        answers:
+        - correct: true
+          text: हां
+        - correct: true
+          text: नहीं
+        questions:
+        - {}
+      counselor_encourage_2023:
         answers:
         - correct: true
           text: हां
@@ -10185,139 +11197,137 @@ hi-IN:
           हैं? ** अपने साथी के साथ फ़ीडबैक साझा</a> करने के लिए <a href=\"https://docs.google.com/document/d/1b6w_lOnibUHyDLYCP3rAWED5iElGm6LOQAJwG-hlih0/template/preview\"
           target=\"_blank\">इस संसाधन का उपयोग करें।\n\n"
       csc_ecosystemes_foodchain_info:
-        markdown: "\n##**सभी पारिस्थितिक तंत्रों में एक _नाजुक संतुलित_ खाद्य\nश्रृंखला**
-          ## #The समुद्री पारिस्थितिकी तंत्र खाद्य श्रृंखला होती है: >## #1.\n\n\n\n<img
-          src=\"https://images.code.org/2270cbb4656875db210e9871883a7d45-image-1683677265473.jpg\"
-          style= \"width:80%\">\n<div style= \"width: 80%\"> \n\nशैवाल में प्रकाश
-          संश्लेषण के लिए सूर्य ऊर्जा प्रदान करता है।\n>## #2। शैवाल मछलियों द्वारा
-          खाया जाता है।\n>## #3। मछलियाँ मनुष्यों द्वारा पकड़ी और खाई जाती हैं, जो
-          जाल के साथ मछली पकड़ने वाली नौकाओं का उपयोग करते हैं। \n\n</div>\n\n\n##**यदि
-          खाद्य श्रृंखला में एक जीव बहुत अधिक या बहुत कम है, तो पूरे पारिस्थितिकी
-          तंत्र पर प्रभाव पड़ता है.**\n"
+        markdown: "\n##**सभी पारिस्थितिक तंत्रों में एक _नाजुक संतुलित_ फूड चेन है**\n###समुद्री
+          पारिस्थितिकी तंत्र फूड चेन:\n\n\n\n<img src=\"https://images.code.org/2270cbb4656875db210e9871883a7d45-image-1683677265473.jpg\"
+          style= \"width:80%\">\n<div style= \"width: 80%\"> \n\n>###1. सूर्य शैवाल
+          में प्रकाश संश्लेषण के होने के लिए ऊर्जा देता है।\n>###2. मछलियां शैवाल
+          खाती है।\n>###3. मछलियां मनुष्यों द्वारा पकड़ी और खाई जाती हैं, जो जाल के
+          साथ मछलियां पकड़ने वाली नावों का उपयोग करते हैं। \n\n</div>\n\n\n##**यदि
+          फूड चेन में कोई जीव बहुत अधिक या बहुत कम है, तो पूरे पारिस्थितिकी तंत्र
+          पर प्रभाव पड़ता है।**"
       csc_ecosystems_choice_freeplay_2023:
-        description: इनमें से प्रत्येक इकोसिस्टम सिमुलेशन को समायोजित करने की आवश्यकता
-          है। एक इकोसिस्टम चुनें, समस्या का निरीक्षण करने के लिए सिमुलेशन चलाएं, और
-          इसे ठीक करने के लिए कोड को समायोजित करें।
-        display_name: एक इकोसिस्टम चुनें!
+        description: इनमें से प्रत्येक पारिस्थितिकी तंत्र की अनुरूपताओं को समायोजित
+          करने की आवश्यकता है। एक पारिस्थितिकी तंत्र चुनें, समस्या का निरीक्षण करने
+          के लिए अनुरूपता चलाएं, और इसे ठीक करने के लिए कोड को समायोजित करें।
+        display_name: एक पारिस्थितिकी तंत्र चुनें!
       csc_ecosystems_conditionals_overview:
-        markdown: "#Cause और प्रभाव की शर्तें \n\n</div>\n\n## इसके बाद आप यह देखने
-          के लिए कोड जोड़ेंगे कि पानी में शैवाल कितना है <br>\n<img src=\"https://images.code.org/8be316d4e408466b4300c614712fd652-image-1684798211348.jpg\"
+        markdown: "#कारण और प्रभाव कंडीशनल्स \n\n</div>\n\n## इसके बाद आप यह देखने
+          की जांच करने के लिए कोड जोड़ेंगे कि पानी में कितना शैवाल है <br>\n<img src=\"https://images.code.org/8be316d4e408466b4300c614712fd652-image-1684798211348.jpg\"
           \ width=50% style=\"margin-right: 10px; float: right\">\n<br> <br>\n\n-
-          सबसे पहले, कंप्यूटर यह देखने के लिए जाँच करता है कि क्या कोई स्थिति सही
-          है या गलत।\n\n- अगर यह सच है, तो यह अंदर के ब्लॉक चलाएगा।\n- अगर यह गलत
-          है, तो यह कुछ भी नहीं करेगा।\n\n<br>\n<br>\n<br>\n\n## यदि बहुत अधिक शैवाल
-          है, तो मूंगा बीमार हो जाता है\n\n<br>\n\n<img src=\"https://images.code.org/4d8aaa9c6562e0ca0b3d92ff7aed1d03-image-1681847951794.png\"
+          सबसे पहले, कंप्यूटर यह देखने के लिए जांच करता है कि क्या कोई शर्त सही है
+          या गलत है।\n\n- यदि यह सही है तो यह ब्लॉक्स को अंदर चला देगा।\n- यदि यह
+          गलत है तो यह कुछ नहीं करेगा।\n\n<br>\n<br>\n<br>\n\n## यदि शैवाल बहुत अधिक
+          हो तो मूंगा बीमार हो जाता है\n\n<br>\n\n<img src=\"https://images.code.org/4d8aaa9c6562e0ca0b3d92ff7aed1d03-image-1681847951794.png\"
           \ width=20% style=\"margin-right: 10px; float: left\">\n<img src=\"https://images.code.org/941774921f367566bef36cb712cf2bfb-image-1681840836607.png\"
           \ width=30% style=\" margin-right: 10px; float: left\">\n\n<br>\n<br>\n<br>\n<br>\n<br>\n<br>\n<br>\n<br>\n\n***\n\n\n\n##
-          अगर बहुत कम शैवाल है, तो मछली निकल जाएगी\n<img src=\"https://images.code.org/6869f418200edfb88190c0a1e4e5cd10-image-1681838202310.png\"
+          यदि शैवाल बहुत कम है, तो मछलियाँ चली जाएँगी\n<img src=\"https://images.code.org/6869f418200edfb88190c0a1e4e5cd10-image-1681838202310.png\"
           \ width=20% style=\"margin-right: 10px; float: left\">\n\n\n<img src=\"https://images.code.org/233178645539bc7966f55af47865096d-image-1681840833690.png\"
           \ width=20% style=\" margin-right: 10px; float: left\">\n\n<br>\n<br>\n<br>\n<br>\n<br>\n<br>\n<br>\n<br>\n<br>\n\n\n***\n\n\n\n##
-          अगर पर्याप्त शैवाल है, तो इकोसिस्टम स्वस्थ है\n\n<img src=\"https://images.code.org/8bb9247c35d7d167611b02764beaeff3-image-1681838011797.png\"
+          यदि शैवाल पर्याप्त है, तो पारिस्थितिकी तंत्र स्वस्थ होता है\n\n<img src=\"https://images.code.org/8bb9247c35d7d167611b02764beaeff3-image-1681838011797.png\"
           \ width=20% style=\"margin-right: 30px; float: left\">\n<img src=\"https://images.code.org/b1ed2f5c135f9637fd7a9c5778db2b0c-image-1681840830929.png\"
           \ width=30% style=\"margin-left: 10px;float: left\">\n<br>\n<br>\n<br>\n<br>\n\n"
       csc_ecosystems_matching_cfu:
         answers:
-        - text: "! [] (https://images.code.org/284e3b6e09f5d58052a8840e756644c5-image-1683752491112.png)"
-        - text: "! [] (https://images.code.org/d466f0912cd0cadb3d655263c71c072f-image-1683752857648.jpg)"
-        - text: "! [] (https://images.code.org/de2ab3c63bc2cf7cb319be86d5dcdec0-image-1683752570051.png)"
+        - text: "![](https://images.code.org/284e3b6e09f5d58052a8840e756644c5-image-1683752491112.png)"
+        - text: "![](https://images.code.org/d466f0912cd0cadb3d655263c71c072f-image-1683752857648.jpg)"
+        - text: "![](https://images.code.org/de2ab3c63bc2cf7cb319be86d5dcdec0-image-1683752570051.png)"
         markdown: |+
-          ## मछली पकड़ने की तीन स्थायी प्रथाओं को देखें कोड को मेल खाने वाली छवि पर
+          ## मछलियां पकड़ने की तीन स्थायी कार्यप्रणालियों को देखें मेल
 
-          खींचें।
+          कोड को मेल खाती छवि पर खींचें।
 
         questions:
-        - text: नावों के लिए मछली पकड़ने का क्षेत्र बनाएं! [] (https://images.code.org/5f5e0640a82242d632db10b872280e18-image-1683753001613.gif)
+        - text: नावों के लिए मछलियां पकड़ने का क्षेत्र बनाएं ![](https://images.code.org/5f5e0640a82242d632db10b872280e18-image-1683753001613.gif)
         - text: |-
-            मछली पकड़ने का मौसम शुरू करें और मछली पकड़ने का कोई मौसम न हो
-            ! [] (https://images.code.org/becad47fd19a4d0e938a0cd10c404e41-image-1683838684289.gif)
-        - text: मछली पकड़ने की सीमा निर्धारित करें! [] (https://images.code.org/f8bbd98ff6199af5d3ad23d64f39629d-image-1683753402925.gif)
-        title: कोड को इमेज से मिलाएं
+            मछलियां पकड़ने का सीजन शुरू करें और मछलियां नहीं पकड़ने का सीजन शुरू करें
+            ![](https://images.code.org/becad47fd19a4d0e938a0cd10c404e41-image-1683838684289.gif)
+        - text: मछलियां पकड़ने की सीमाएं निर्धारित करें ![](https://images.code.org/f8bbd98ff6199af5d3ad23d64f39629d-image-1683753402925.gif)
+        title: कोड को छवि से मिलाएं
       csc_ecosystems_matching_conditionals:
         answers:
-        - text: "! [] (https://images.code.org/db1db479bec9b40c6e0574ade394d32b-image-1680118613718.36.41
+        - text: "![](https://images.code.org/db1db479bec9b40c6e0574ade394d32b-image-1680118613718.36.41
             PM.png)"
-        - text: "! [] (https://images.code.org/7c9171ab2ee2e833e5ff60d5519d8728-image-1680118617438.31.00
+        - text: "![](https://images.code.org/7c9171ab2ee2e833e5ff60d5519d8728-image-1680118617438.31.00
             PM.png)"
-        - text: "! [] (https://images.code.org/412968ba617ef19d2049e0e63d271937-image-1680118620636.30.50
+        - text: "![](https://images.code.org/412968ba617ef19d2049e0e63d271937-image-1680118620636.30.50
             PM.png)"
         markdown: |
           ## तीन पारिस्थितिक तंत्रों को देखें,
 
-          एक पारिस्थितिकी तंत्र संतुलित है और अन्य दो अलग-अलग तरीकों से असंतुलित हैं। कोड को मैचिंग इमेज पर ड्रैग करें।
+          एक पारिस्थितिकी तंत्र संतुलित है और अन्य दो अलग-अलग तरीकों में असंतुलित हैं। कोड को मेल खाती छवि पर खींचें।
         questions:
-        - text: बहुत कम शैवाल मछली को छोड़ देता है।! [] (https://images.code.org/c0a28473307b7e9b0e827532d2a6ddda-image-1680212227032.png)
+        - text: बहुत कम शैवाल के कारण मछली चली जाती है। ![](https://images.code.org/c0a28473307b7e9b0e827532d2a6ddda-image-1680212227032.png)
         - text: |-
             बहुत अधिक शैवाल कोरल को बीमार कर देता है। <br>
-            ! [] (https://images.code.org/1230fd96832b692b0c8ab88e77957f33-image-1680212254888.png)
-        - text: शैवाल की सही मात्रा बीमार मूंगा को ठीक करने की अनुमति देती है और मछली
-            को भी स्वस्थ रखती है।! [] (https://images.code.org/3dd061538a7a73285aa0916fdde34e77-image-1680212284869.png)
-        title: कोड को इमेज से मिलाएं
+            ![](https://images.code.org/1230fd96832b692b0c8ab88e77957f33-image-1680212254888.png)
+        - text: शैवाल की सही मात्रा बीमार मूंगे को ठीक करती है और मछली को भी स्वस्थ
+            रखती है। ![](https://images.code.org/3dd061538a7a73285aa0916fdde34e77-image-1680212284869.png)
+        title: कोड को छवि से मिलाएं
       csc_ecosystems_matching_events:
         answers:
-        - text: "! [] (https://images.code.org/bf70d0664e68690f2359a48365e50ccc-image-1680556679495.16.33
+        - text: "![](https://images.code.org/bf70d0664e68690f2359a48365e50ccc-image-1680556679495.16.33
             PM.png)"
-        - text: "! [] (https://images.code.org/fe4d2803162186a8e53ec0027f27a206-image-1680556683660.36.04
+        - text: "![](https://images.code.org/fe4d2803162186a8e53ec0027f27a206-image-1680556683660.36.04
             PM.png)"
         markdown: |+
-          देखो क्या होता है जब स्प्राइट्स दोनों एनिमेशन में स्पर्श करते हैं। फिर कोड की प्रत्येक तस्वीर को उसकी मेल खाने वाली छवि पर खींचें।
+          देखो कि जब स्प्राइट्स दोनों एनिमेशन्स में छूते हैं, तो क्या होता है। फिर कोड की प्रत्येक तस्वीर को उसकी मेल खाती छवि पर खींचें।
 
 
         questions:
-        - text: नाव मछली पकड़ती है।! [] (https://images.code.org/bcdefefdd1787330e3ad72558b5b492d-image-1680556053866.gif)
-        - text: मछलियाँ शैवाल खाती हैं।! [] (https://images.code.org/73febc58a3d23fbf4c66e693abec9e3d-image-1680556608027.gif)
+        - text: नाव मछलियों को पकड़ती है। ![](https://images.code.org/bcdefefdd1787330e3ad72558b5b492d-image-1680556053866.gif)
+        - text: मछलियां शैवाल खाती हैं। ![](https://images.code.org/73febc58a3d23fbf4c66e693abec9e3d-image-1680556608027.gif)
         title: कोड को एनीमेशन से मिलाएं
       csc_ecosystems_overfishing_solution2_overview:
-        markdown: "> #Sustainable मछली पकड़ने का अभ्यास #2:\n>># #Create एक मछली पकड़ने
-          का मौसम <img src=\"https://images.code.org/123dd5c82e4c03dcbc32b775fd16ec60-image-1681937158113.png\"
-          \ width=400 style=\"margin-right: 30px; float: left\">\n**लोग कब मछली पकड़
-          सकते हैं इसकी सीमा निर्धारित करें। जब मछली पकड़ने का मौसम नहीं होता है तो
-          पारिस्थितिकी तंत्र के पास ठीक होने का समय होता है.** #Save हमारे समुद्र!
-          \n<br>\n\n \n<img src=\"https://images.code.org/f3f55eddff9891464c8fb5a5405c31c3-image-1681781301257.png\"
+        markdown: ">#स्थायी मछलियां पकड़ने की कार्यप्रणाली #2:\n>>##मछलियां पकड़ने
+          का सीजन बनाएं <img src=\"https://images.code.org/123dd5c82e4c03dcbc32b775fd16ec60-image-1681937158113.png\"
+          \ width=400 style=\"margin-right: 30px; float: left\">\n**लोग कब मछलियां
+          पकड़ सकते हैं, इसकी सीमा निर्धारित करें। जब मछलियां पकड़ने का सीजन नहीं
+          होता है तो पारिस्थितिकी तंत्र के पास ठीक होने का समय होता है।** \n<br>\n\n#हमारे
+          समुद्रों को बचाएं! \n<img src=\"https://images.code.org/f3f55eddff9891464c8fb5a5405c31c3-image-1681781301257.png\"
           width=250 style=\"margin-left: 30px; margin-bottom: 30px; float: right\">\n<img
           src=\"https://images.code.org/cbccfc42b7e1fe329ac7c9c37dfcb6b5-image-1681781296669.png\"
           width=250 style=\"margin-left: 30px; margin-bottom: 30px; float: right\">\n\n</div>\n\n###
-          ओवरफिशिंग एक ऐसी समस्या है जो समुद्री जीवन के पारिस्थितिक तंत्र और उन पर
-          भरोसा करने वाले लोगों को नुकसान पहुंचा सकती है। इन पारिस्थितिक तंत्रों की
-          सुरक्षा में मदद करने और यह सुनिश्चित करने के लिए कि मछलियों की आबादी स्वस्थ
-          बनी रहे, टिकाऊ मछली पकड़ने का अभ्यास करना महत्वपूर्ण है।\n\n\n\n<br>\n<br>\n<br>\n"
+          अत्यधिक मछलियां पकड़ना एक ऐसी समस्या है जो समुद्री जीवन के पारिस्थितिकी
+          तंत्रों और उन पर निर्भर लोगों को नुकसान पहुंचा सकती है। इन पारिस्थितिक तंत्रों
+          की सुरक्षा में मदद करने और यह सुनिश्चित करने के लिए कि मछलियों की आबादी
+          स्वस्थ रहे, स्थायी मछलियां पकड़ने की कार्यप्रणाली महत्वपूर्ण है।\n\n\n\n<br>\n<br>\n<br>\n"
       csc_ecosystems_overfishing_solution3_overview:
-        markdown: "> #Sustainable मछली पकड़ने का अभ्यास #3:\n>># #Set मछली पकड़ने
-          की <img src=\"https://images.code.org/58d4ca52deba39a990c3165ba16e284b-image-1681747630352.png\"
-          \ width=300 style=\"margin-right: 30px; float: left\">\nसीमाएं**वैज्ञानिक
-          यह पता लगाने में मदद कर सकते हैं कि समुद्र को नुकसान पहुंचाए बिना कितनी
-          मछलियाँ पकड़ी जा सकती हैं। तब मछुआरों को पता चलेगा कि केवल इतनी सारी मछलियाँ
-          \n<br>\n<br>\n<br>\n\nपकड़ना है.** #Save हमारे समुद्र! \n<img src=\"https://images.code.org/35e557d27c4bdb5f546da560716dc10b-image-1681756387784.jpg\"
+        markdown: ">#स्थायी मछलियां पकड़ने की कार्यप्रणाली #3:\n>>##मछलियां पकड़ने
+          की सीमाएं निर्धारित करें <img src=\"https://images.code.org/58d4ca52deba39a990c3165ba16e284b-image-1681747630352.png\"
+          \ width=300 style=\"margin-right: 30px; float: left\">\n**वैज्ञानिक यह पता
+          लगाने में मदद कर सकते हैं कि समुद्र को नुकसान पहुँचाए बिना कितनी मछलियां
+          पकड़ी जा सकती हैं। फिर मछुआरे केवल उतनी ही मछलियां पकड़ना जानेंगे।** \n<br>\n<br>\n<br>\n\n#हमारे
+          समुद्रों को बचाएं! \n<img src=\"https://images.code.org/35e557d27c4bdb5f546da560716dc10b-image-1681756387784.jpg\"
           width=400 style=\"margin-left: 30px; margin-bottom: 30px; float: right\">\n</div>\n\n###
-          एक साथ काम करके, हम आने वाली पीढ़ियों के लिए अपने महासागरों को जीवन से भरपूर
-          रखने में मदद कर सकते हैं!\n\n\n\n<br>\n<br>\n<br>\n\n"
+          एक साथ मिलकर काम करके, हम आने वाली पीढ़ियों के लिए अपने समुद्रों को जीवन
+          से भरपूर बनाए रखने में मदद कर सकते हैं!\n\n\n\n<br>\n<br>\n<br>\n\n"
       csc_ecosystems_overfishing_solutions_overview:
-        markdown: "#Save हमारे समुद्र! \n<img src=\"https://images.code.org/d4267a1de975b8ea46468f74187eb95c-image-1681756621010.jpg\"
+        markdown: "#हमारे समुद्रों को बचाएं! \n<img src=\"https://images.code.org/d4267a1de975b8ea46468f74187eb95c-image-1681756621010.jpg\"
           width=400 style=\"margin-left: 30px; margin-bottom: 30px; float: right\">\n</div>\n\n###
-          समुद्र में बहुत सारी मछलियाँ हैं, लेकिन कभी-कभी लोग बहुत अधिक मछलियाँ पकड़
+          समुद्र में बहुत सारी मछलियां हैं, लेकिन कभी-कभी लोग बहुत अधिक मछलियां पकड़
           लेते हैं और यह पारिस्थितिकी तंत्र के लिए बुरा हो सकता है। निम्नलिखित स्तरों
-          में आप हमारे समुद्री पारिस्थितिक तंत्र की सुरक्षा में मदद करने के लिए **तीन
-          अलग-अलग टिकाऊ मछली पकड़ने की पद्धति** को कोड करेंगे।\n\n<br>\n\n## #To हमारे
-          महासागरों के लिए स्थायी समाधानों के बारे में और पढ़ें: यहां क्लिक करें >
-          #Sustainable मछली पकड़ना <a href=\"https://www.seafoodwatch.org/seafood-basics/sustainable-solutions/avoid-overfishing\"
-          target=\"_blank\"></a>\n<br>\n<br>\n\n#1:\n>> # #Fishing ज़ोन का अभ्यास
-          करें <img src=\"https://images.code.org/c33e46309c5335dc557c67c34310e723-image-1681511054034.png\"
-          \ width=300 style=\"margin-right: 30px; float: left\">\n**मछली पकड़ने वाली
-          नौकाएं केवल निर्दिष्ट क्षेत्रों में ही मछली पकड़ सकती हैं। मछली पकड़ने वाली
-          नौकाओं के लिए कुछ क्षेत्र सीमा से बाहर हैं ताकि पारिस्थितिकी तंत्र ठीक हो
-          सके। ** \n<br>\n<br>\n\n\n"
+          में आप हमारे समुद्री पारिस्थितिकी तंत्रों की रक्षा करने में मदद करने के
+          लिए **तीन अलग-अलग स्थायी मछलियां पकड़ने की कार्यप्रणालियों** को कोड करेंगे।\n\n<br>\n\n###हमारे
+          समुद्रों के लिए स्थायी समाधानों के बारे में और अधिक पढ़ने के लिए: <a href=\"https://www.seafoodwatch.org/seafood-basics/sustainable-solutions/avoid-overfishing\"
+          target=\"_blank\">यहां क्लिक करें</a>\n<br>\n<br>\n\n>#स्थायी मछलियां पकड़ने
+          की कार्यप्रणाली #1:\n>> ##मछलियां पकड़ने के क्षेत्र <img src=\"https://images.code.org/c33e46309c5335dc557c67c34310e723-image-1681511054034.png\"
+          \ width=300 style=\"margin-right: 30px; float: left\">\n**मछलियां पकड़ने
+          वाली नावें केवल निर्दिष्ट क्षेत्रों में ही मछलियां पकड़ सकती हैं। कुछ क्षेत्रों
+          में मछलियां पकड़ने वाली नौकाओं की आवाजाही बंद कर दी गई है ताकि पारिस्थितिकी
+          तंत्र ठीक हो सके।** \n<br>\n<br>\n\n\n"
       csc_ecosystems_planning:
-        markdown: "# #Share आपका इकोसिस्टम सिमुलेशन!\n<img src=\"https://images.code.org/c480c5c42d9c02e154943f49bbed87ff-image-1675984438344.13.53
-          PM.png\" style= \"width:50%\">\n<div style= \"width: 60%\"> \n\n###**पारिस्थितिकीविद!
-          अपने शोध को साझा करने का समय आ गया है! **\n\n## #Explain आपके द्वारा किए
-          गए निम्नलिखित अवलोकन:\n\n>1। अपने इकोसिस्टम में फ़ूड चेन के बारे में बताएं
-          और आपने इसे कैसे कोड किया है।\n>2। क्या कोई जीव बहुत ज्यादा था या बहुत कम
-          था?\n>3। सिमुलेशन में आपके द्वारा किए गए संशोधनों के बारे में बताएं। \n>4।
-          मान बदलने के बाद आपने क्या नोटिस किया?\n</div>\n\n<div style=\"background-color:
-          #a6e3e8; border-radius: 10px; color: #000000; width: 95%; padding: 0.5px
-          20px 1px 20px;\">\n\n<p style=\"line-height: 1.5; margin-left: 10px; margin-right:
-          10px; margin-top: 20px; margin-bottom: 20px; font-size: 18px; \">\n\n###**और
-          कोडिंग के लिए तैयार हैं? ** अपनी \nगति से और अधिक कंप्यूटर विज्ञान सीखने
-          के लिए code.org का [Express Course] (https://studio.code.org/s/express-2022)
+        markdown: "##अपने पारिस्थितिकी तंत्र नि अनुरूपता साझा करें!\n<img src=\"https://images.code.org/c480c5c42d9c02e154943f49bbed87ff-image-1675984438344.13.53
+          PM.png\" style= \"width:50%\">\n<div style= \"width: 60%\"> \n\n###**पारिस्थितिकीविज्ञानी!
+          अब आपकी खोज साझा करने का समय आ गया है!**\n\n###आपके द्वारा किए गए निम्नलिखित
+          निरीक्षणों को स्पष्ट करें:\n\n>1. अपने पारिस्थितिकी तंत्र में फूड चेन की
+          व्याख्या करें और आपने इसे कैसे कोड किया।\n>2. क्या किसी जीव की मात्रा बहुत
+          अधिक थी या बहुत कम थी?\n>3. अनुरूपता में आपके द्वारा किए गए संशोधनों की
+          व्याख्या करें।\n>4. आपके मूल्य बदलने के बाद आपने क्या देखा?\n</div>\n\n<div
+          style=\"background-color: #a6e3e8; border-radius: 10px; color: #000000;
+          width: 95%; padding: 0.5px 20px 1px 20px;\">\n\n<p style=\"line-height:
+          1.5; margin-left: 10px; margin-right: 10px; margin-top: 20px; margin-bottom:
+          20px; font-size: 18px; \">\n\n###**और अधिक कोडिंग के लिए तैयार हैं?** \nअपनी
+          गति पर कंप्यूटर विज्ञान संबंधी अधिक सीखने के लिए code.org का [Express Course](https://studio.code.org/s/express-2022)
           आज़माएं।   \n<br>\n</p></div>\n"
       csc_mappinglandmarks_markdown_lesson_2:
         markdown: |+
@@ -10953,6 +11963,28 @@ hi-IN:
         - correct: true
         questions:
         - {}
+      csd-post-survey-confidence-cs_mb2022:
+        answers:
+        - correct: true
+        - correct: true
+        - correct: true
+        - correct: true
+        - correct: true
+        - correct: true
+        - correct: true
+        questions:
+        - {}
+      csd-post-survey-interested-cs_mb2022:
+        answers:
+        - correct: true
+        - correct: true
+        - correct: true
+        - correct: true
+        - correct: true
+        - correct: true
+        - correct: true
+        questions:
+        - {}
       csd-post-survey-q26:
         answers:
         - correct: true
@@ -11092,6 +12124,36 @@ hi-IN:
         - correct: true
         questions:
         - {}
+      csd-post-survey-show-friend_mb2022:
+        answers:
+        - correct: true
+          text: हां
+        - correct: true
+          text: नहीं
+        questions:
+        - {}
+      csd-post-survey-solve-real-world_mb2022:
+        answers:
+        - correct: true
+        - correct: true
+        - correct: true
+        - correct: true
+        - correct: true
+        - correct: true
+        - correct: true
+        questions:
+        - {}
+      csd-post-survey-take-more-classes_mb2022:
+        answers:
+        - correct: true
+        - correct: true
+        - correct: true
+        - correct: true
+        - correct: true
+        - correct: true
+        - correct: true
+        questions:
+        - {}
       csd-post-survey-unit1-preamble:
         content1: यहां वर्णन करें
       csd-post-survey-unit2-preamble:
@@ -11192,6 +12254,17 @@ hi-IN:
         - correct: true
         questions:
         - {}
+      csd-pulse-check-survey-1-q1 U2Ch1_2019_pilot_2023:
+        answers:
+        - correct: true
+        - correct: true
+        - correct: true
+        - correct: true
+        - correct: true
+        - correct: true
+        - correct: true
+        questions:
+        - {}
       csd-pulse-check-survey-1-q1 U2Ch2:
         answers:
         - correct: true
@@ -11259,6 +12332,17 @@ hi-IN:
         questions:
         - {}
       csd-pulse-check-survey-1-q1 U3Ch1_2019_pilot_2022:
+        answers:
+        - correct: true
+        - correct: true
+        - correct: true
+        - correct: true
+        - correct: true
+        - correct: true
+        - correct: true
+        questions:
+        - {}
+      csd-pulse-check-survey-1-q1 U3Ch1_2019_pilot_2023:
         answers:
         - correct: true
         - correct: true
@@ -11347,6 +12431,17 @@ hi-IN:
         questions:
         - {}
       csd-pulse-check-survey-1-q1 U4Ch1_2022:
+        answers:
+        - correct: true
+        - correct: true
+        - correct: true
+        - correct: true
+        - correct: true
+        - correct: true
+        - correct: true
+        questions:
+        - {}
+      csd-pulse-check-survey-1-q1 U4Ch1_2023:
         answers:
         - correct: true
         - correct: true
@@ -11456,6 +12551,17 @@ hi-IN:
         - correct: true
         questions:
         - {}
+      csd-pulse-check-survey-1-q1 U5Ch1_2023:
+        answers:
+        - correct: true
+        - correct: true
+        - correct: true
+        - correct: true
+        - correct: true
+        - correct: true
+        - correct: true
+        questions:
+        - {}
       csd-pulse-check-survey-1-q1 U5Ch2:
         answers:
         - correct: true
@@ -11544,7 +12650,29 @@ hi-IN:
         - correct: true
         questions:
         - {}
+      csd-pulse-check-survey-1-q1 U6Ch1_2023a_2023:
+        answers:
+        - correct: true
+        - correct: true
+        - correct: true
+        - correct: true
+        - correct: true
+        - correct: true
+        - correct: true
+        questions:
+        - {}
       csd-pulse-check-survey-1-q1 U6Ch1_2222:
+        answers:
+        - correct: true
+        - correct: true
+        - correct: true
+        - correct: true
+        - correct: true
+        - correct: true
+        - correct: true
+        questions:
+        - {}
+      csd-pulse-check-survey-1-q1 U6Ch1_mb2022:
         answers:
         - correct: true
         - correct: true
@@ -11687,6 +12815,17 @@ hi-IN:
         - correct: true
         questions:
         - {}
+      csd-pulse-check-survey-1-q2 U2Ch1_2019_pilot_2023:
+        answers:
+        - correct: true
+        - correct: true
+        - correct: true
+        - correct: true
+        - correct: true
+        - correct: true
+        - correct: true
+        questions:
+        - {}
       csd-pulse-check-survey-1-q2 U2Ch2:
         answers:
         - correct: true
@@ -11754,6 +12893,17 @@ hi-IN:
         questions:
         - {}
       csd-pulse-check-survey-1-q2 U3Ch1_2019_pilot_2022:
+        answers:
+        - correct: true
+        - correct: true
+        - correct: true
+        - correct: true
+        - correct: true
+        - correct: true
+        - correct: true
+        questions:
+        - {}
+      csd-pulse-check-survey-1-q2 U3Ch1_2019_pilot_2023:
         answers:
         - correct: true
         - correct: true
@@ -11842,6 +12992,17 @@ hi-IN:
         questions:
         - {}
       csd-pulse-check-survey-1-q2 U4Ch1_2022:
+        answers:
+        - correct: true
+        - correct: true
+        - correct: true
+        - correct: true
+        - correct: true
+        - correct: true
+        - correct: true
+        questions:
+        - {}
+      csd-pulse-check-survey-1-q2 U4Ch1_2023:
         answers:
         - correct: true
         - correct: true
@@ -11951,6 +13112,17 @@ hi-IN:
         - correct: true
         questions:
         - {}
+      csd-pulse-check-survey-1-q2 U5Ch1_2023:
+        answers:
+        - correct: true
+        - correct: true
+        - correct: true
+        - correct: true
+        - correct: true
+        - correct: true
+        - correct: true
+        questions:
+        - {}
       csd-pulse-check-survey-1-q2 U5Ch2:
         answers:
         - correct: true
@@ -12039,7 +13211,29 @@ hi-IN:
         - correct: true
         questions:
         - {}
+      csd-pulse-check-survey-1-q2 U6Ch1_2023a_2023:
+        answers:
+        - correct: true
+        - correct: true
+        - correct: true
+        - correct: true
+        - correct: true
+        - correct: true
+        - correct: true
+        questions:
+        - {}
       csd-pulse-check-survey-1-q2 U6Ch1_2222:
+        answers:
+        - correct: true
+        - correct: true
+        - correct: true
+        - correct: true
+        - correct: true
+        - correct: true
+        - correct: true
+        questions:
+        - {}
+      csd-pulse-check-survey-1-q2 U6Ch1_mb2022:
         answers:
         - correct: true
         - correct: true
@@ -12182,6 +13376,17 @@ hi-IN:
         - correct: true
         questions:
         - {}
+      csd-pulse-check-survey-1-q3 U2Ch1_2019_pilot_2023:
+        answers:
+        - correct: true
+        - correct: true
+        - correct: true
+        - correct: true
+        - correct: true
+        - correct: true
+        - correct: true
+        questions:
+        - {}
       csd-pulse-check-survey-1-q3 U2Ch2:
         answers:
         - correct: true
@@ -12249,6 +13454,17 @@ hi-IN:
         questions:
         - {}
       csd-pulse-check-survey-1-q3 U3Ch1_2019_pilot_2022:
+        answers:
+        - correct: true
+        - correct: true
+        - correct: true
+        - correct: true
+        - correct: true
+        - correct: true
+        - correct: true
+        questions:
+        - {}
+      csd-pulse-check-survey-1-q3 U3Ch1_2019_pilot_2023:
         answers:
         - correct: true
         - correct: true
@@ -12337,6 +13553,17 @@ hi-IN:
         questions:
         - {}
       csd-pulse-check-survey-1-q3 U4Ch1_2022:
+        answers:
+        - correct: true
+        - correct: true
+        - correct: true
+        - correct: true
+        - correct: true
+        - correct: true
+        - correct: true
+        questions:
+        - {}
+      csd-pulse-check-survey-1-q3 U4Ch1_2023:
         answers:
         - correct: true
         - correct: true
@@ -12446,6 +13673,17 @@ hi-IN:
         - correct: true
         questions:
         - {}
+      csd-pulse-check-survey-1-q3 U5Ch1_2023:
+        answers:
+        - correct: true
+        - correct: true
+        - correct: true
+        - correct: true
+        - correct: true
+        - correct: true
+        - correct: true
+        questions:
+        - {}
       csd-pulse-check-survey-1-q3 U5Ch2:
         answers:
         - correct: true
@@ -12534,7 +13772,29 @@ hi-IN:
         - correct: true
         questions:
         - {}
+      csd-pulse-check-survey-1-q3 U6Ch1_2023a_2023:
+        answers:
+        - correct: true
+        - correct: true
+        - correct: true
+        - correct: true
+        - correct: true
+        - correct: true
+        - correct: true
+        questions:
+        - {}
       csd-pulse-check-survey-1-q3 U6Ch1_2222:
+        answers:
+        - correct: true
+        - correct: true
+        - correct: true
+        - correct: true
+        - correct: true
+        - correct: true
+        - correct: true
+        questions:
+        - {}
+      csd-pulse-check-survey-1-q3 U6Ch1_mb2022:
         answers:
         - correct: true
         - correct: true
@@ -12677,6 +13937,17 @@ hi-IN:
         - correct: true
         questions:
         - {}
+      csd-pulse-check-survey-1-q4 U2Ch1_2019_pilot_2023:
+        answers:
+        - correct: true
+        - correct: true
+        - correct: true
+        - correct: true
+        - correct: true
+        - correct: true
+        - correct: true
+        questions:
+        - {}
       csd-pulse-check-survey-1-q4 U2Ch2:
         answers:
         - correct: true
@@ -12744,6 +14015,17 @@ hi-IN:
         questions:
         - {}
       csd-pulse-check-survey-1-q4 U3Ch1_2019_pilot_2022:
+        answers:
+        - correct: true
+        - correct: true
+        - correct: true
+        - correct: true
+        - correct: true
+        - correct: true
+        - correct: true
+        questions:
+        - {}
+      csd-pulse-check-survey-1-q4 U3Ch1_2019_pilot_2023:
         answers:
         - correct: true
         - correct: true
@@ -12832,6 +14114,17 @@ hi-IN:
         questions:
         - {}
       csd-pulse-check-survey-1-q4 U4Ch1_2022:
+        answers:
+        - correct: true
+        - correct: true
+        - correct: true
+        - correct: true
+        - correct: true
+        - correct: true
+        - correct: true
+        questions:
+        - {}
+      csd-pulse-check-survey-1-q4 U4Ch1_2023:
         answers:
         - correct: true
         - correct: true
@@ -12941,6 +14234,17 @@ hi-IN:
         - correct: true
         questions:
         - {}
+      csd-pulse-check-survey-1-q4 U5Ch1_2023:
+        answers:
+        - correct: true
+        - correct: true
+        - correct: true
+        - correct: true
+        - correct: true
+        - correct: true
+        - correct: true
+        questions:
+        - {}
       csd-pulse-check-survey-1-q4 U5Ch2:
         answers:
         - correct: true
@@ -13029,7 +14333,29 @@ hi-IN:
         - correct: true
         questions:
         - {}
+      csd-pulse-check-survey-1-q4 U6Ch1_2023a_2023:
+        answers:
+        - correct: true
+        - correct: true
+        - correct: true
+        - correct: true
+        - correct: true
+        - correct: true
+        - correct: true
+        questions:
+        - {}
       csd-pulse-check-survey-1-q4 U6Ch1_2222:
+        answers:
+        - correct: true
+        - correct: true
+        - correct: true
+        - correct: true
+        - correct: true
+        - correct: true
+        - correct: true
+        questions:
+        - {}
+      csd-pulse-check-survey-1-q4 U6Ch1_mb2022:
         answers:
         - correct: true
         - correct: true
@@ -13172,6 +14498,17 @@ hi-IN:
         - correct: true
         questions:
         - {}
+      csd-pulse-check-survey-1-q5 U2Ch1_2019_pilot_2023:
+        answers:
+        - correct: true
+        - correct: true
+        - correct: true
+        - correct: true
+        - correct: true
+        - correct: true
+        - correct: true
+        questions:
+        - {}
       csd-pulse-check-survey-1-q5 U2Ch2:
         answers:
         - correct: true
@@ -13239,6 +14576,17 @@ hi-IN:
         questions:
         - {}
       csd-pulse-check-survey-1-q5 U3Ch1_2019_pilot_2022:
+        answers:
+        - correct: true
+        - correct: true
+        - correct: true
+        - correct: true
+        - correct: true
+        - correct: true
+        - correct: true
+        questions:
+        - {}
+      csd-pulse-check-survey-1-q5 U3Ch1_2019_pilot_2023:
         answers:
         - correct: true
         - correct: true
@@ -13327,6 +14675,17 @@ hi-IN:
         questions:
         - {}
       csd-pulse-check-survey-1-q5 U4Ch1_2022:
+        answers:
+        - correct: true
+        - correct: true
+        - correct: true
+        - correct: true
+        - correct: true
+        - correct: true
+        - correct: true
+        questions:
+        - {}
+      csd-pulse-check-survey-1-q5 U4Ch1_2023:
         answers:
         - correct: true
         - correct: true
@@ -13436,6 +14795,17 @@ hi-IN:
         - correct: true
         questions:
         - {}
+      csd-pulse-check-survey-1-q5 U5Ch1_2023:
+        answers:
+        - correct: true
+        - correct: true
+        - correct: true
+        - correct: true
+        - correct: true
+        - correct: true
+        - correct: true
+        questions:
+        - {}
       csd-pulse-check-survey-1-q5 U5Ch2:
         answers:
         - correct: true
@@ -13524,7 +14894,29 @@ hi-IN:
         - correct: true
         questions:
         - {}
+      csd-pulse-check-survey-1-q5 U6Ch1_2023a_2023:
+        answers:
+        - correct: true
+        - correct: true
+        - correct: true
+        - correct: true
+        - correct: true
+        - correct: true
+        - correct: true
+        questions:
+        - {}
       csd-pulse-check-survey-1-q5 U6Ch1_2222:
+        answers:
+        - correct: true
+        - correct: true
+        - correct: true
+        - correct: true
+        - correct: true
+        - correct: true
+        - correct: true
+        questions:
+        - {}
+      csd-pulse-check-survey-1-q5 U6Ch1_mb2022:
         answers:
         - correct: true
         - correct: true
@@ -13971,6 +15363,17 @@ hi-IN:
         - correct: true
         questions:
         - {}
+      csp-post-survey-2017-q22_mb2022:
+        answers:
+        - correct: true
+        - correct: true
+        - correct: true
+        - correct: true
+        - correct: true
+        - correct: true
+        - correct: true
+        questions:
+        - {}
       csp-post-survey-2017-q23:
         answers:
         - correct: true
@@ -14248,6 +15651,17 @@ hi-IN:
         - correct: true
         questions:
         - {}
+      csp-pre-survey-2017-q10_copy2_2023:
+        answers:
+        - correct: true
+        - correct: true
+        - correct: true
+        - correct: true
+        - correct: true
+        - correct: true
+        - correct: true
+        questions:
+        - {}
       csp-pre-survey-2017-q11:
         answers:
         - correct: true
@@ -14336,6 +15750,17 @@ hi-IN:
         - correct: true
         questions:
         - {}
+      csp-pre-survey-2017-q13_2023:
+        answers:
+        - correct: true
+        - correct: true
+        - correct: true
+        - correct: true
+        - correct: true
+        - correct: true
+        - correct: true
+        questions:
+        - {}
       csp-pre-survey-2017-q14:
         answers:
         - correct: true
@@ -14402,6 +15827,17 @@ hi-IN:
         - correct: true
         questions:
         - {}
+      csp-pre-survey-2017-q16_copy2_2023:
+        answers:
+        - correct: true
+        - correct: true
+        - correct: true
+        - correct: true
+        - correct: true
+        - correct: true
+        - correct: true
+        questions:
+        - {}
       csp-pre-survey-2017-q17:
         answers:
         - correct: true
@@ -14436,6 +15872,17 @@ hi-IN:
         questions:
         - {}
       csp-pre-survey-2017-q17_2022:
+        answers:
+        - correct: true
+        - correct: true
+        - correct: true
+        - correct: true
+        - correct: true
+        - correct: true
+        - correct: true
+        questions:
+        - {}
+      csp-pre-survey-2017-q17_copy2_2023:
         answers:
         - correct: true
         - correct: true
@@ -14512,6 +15959,17 @@ hi-IN:
         - correct: true
         questions:
         - {}
+      csp-pre-survey-2017-q19_2023:
+        answers:
+        - correct: true
+        - correct: true
+        - correct: true
+        - correct: true
+        - correct: true
+        - correct: true
+        - correct: true
+        questions:
+        - {}
       csp-pre-survey-2017-q1_2018:
         answers:
         - correct: true
@@ -14578,6 +16036,28 @@ hi-IN:
         - correct: true
         questions:
         - {}
+      csp-pre-survey-2017-q20_2023:
+        answers:
+        - correct: true
+        - correct: true
+        - correct: true
+        - correct: true
+        - correct: true
+        - correct: true
+        - correct: true
+        questions:
+        - {}
+      csp-pre-survey-2017-q20_mb2022:
+        answers:
+        - correct: true
+        - correct: true
+        - correct: true
+        - correct: true
+        - correct: true
+        - correct: true
+        - correct: true
+        questions:
+        - {}
       csp-pre-survey-2017-q21:
         answers:
         - correct: true
@@ -14634,6 +16114,28 @@ hi-IN:
         questions:
         - {}
       csp-pre-survey-2017-q22_2022:
+        answers:
+        - correct: true
+        - correct: true
+        - correct: true
+        - correct: true
+        - correct: true
+        - correct: true
+        - correct: true
+        questions:
+        - {}
+      csp-pre-survey-2017-q22_2023:
+        answers:
+        - correct: true
+        - correct: true
+        - correct: true
+        - correct: true
+        - correct: true
+        - correct: true
+        - correct: true
+        questions:
+        - {}
+      csp-pre-survey-2017-q22_mb2022:
         answers:
         - correct: true
         - correct: true
@@ -14864,6 +16366,17 @@ hi-IN:
         - correct: true
         questions:
         - {}
+      csp-pre-survey-2017-q30_2023:
+        answers:
+        - correct: true
+        - correct: true
+        - correct: true
+        - correct: true
+        - correct: true
+        - correct: true
+        - correct: true
+        questions:
+        - {}
       csp-pre-survey-2017-q31:
         answers:
         - correct: true
@@ -14898,6 +16411,28 @@ hi-IN:
         questions:
         - {}
       csp-pre-survey-2017-q31_2022:
+        answers:
+        - correct: true
+        - correct: true
+        - correct: true
+        - correct: true
+        - correct: true
+        - correct: true
+        - correct: true
+        questions:
+        - {}
+      csp-pre-survey-2017-q31_2023:
+        answers:
+        - correct: true
+        - correct: true
+        - correct: true
+        - correct: true
+        - correct: true
+        - correct: true
+        - correct: true
+        questions:
+        - {}
+      csp-pre-survey-2017-q31_mb2022:
         answers:
         - correct: true
         - correct: true
@@ -15009,6 +16544,17 @@ hi-IN:
         - correct: true
         questions:
         - {}
+      csp-pre-survey-2017-q3_copy2_2023:
+        answers:
+        - correct: true
+        - correct: true
+        - correct: true
+        - correct: true
+        - correct: true
+        - correct: true
+        - correct: true
+        questions:
+        - {}
       csp-pre-survey-2017-q4:
         answers:
         - correct: true
@@ -15065,6 +16611,39 @@ hi-IN:
         questions:
         - {}
       csp-pre-survey-2017-q4_2022:
+        answers:
+        - correct: true
+        - correct: true
+        - correct: true
+        - correct: true
+        - correct: true
+        - correct: true
+        - correct: true
+        questions:
+        - {}
+      csp-pre-survey-2017-q4_copy1_mb2022:
+        answers:
+        - correct: true
+        - correct: true
+        - correct: true
+        - correct: true
+        - correct: true
+        - correct: true
+        - correct: true
+        questions:
+        - {}
+      csp-pre-survey-2017-q4_copy2_2023:
+        answers:
+        - correct: true
+        - correct: true
+        - correct: true
+        - correct: true
+        - correct: true
+        - correct: true
+        - correct: true
+        questions:
+        - {}
+      csp-pre-survey-2017-q4_mb2022:
         answers:
         - correct: true
         - correct: true
@@ -15207,6 +16786,17 @@ hi-IN:
         - correct: true
         questions:
         - {}
+      csp-pre-survey-2017-q9_copy2_2023:
+        answers:
+        - correct: true
+        - correct: true
+        - correct: true
+        - correct: true
+        - correct: true
+        - correct: true
+        - correct: true
+        questions:
+        - {}
       csp_unit_assessment_overview:
         content1: यहां वर्णन करें
         teacher_markdown: "### सावधानी: यह मूल्यांकन क्या है और क्या नहीं\n\n* यह
@@ -15263,6 +16853,15 @@ hi-IN:
         - correct: true
         questions:
         - {}
+      curriculum-how-challenging_mb2022:
+        answers:
+        - correct: true
+        - correct: true
+        - correct: true
+        - correct: true
+        - correct: true
+        questions:
+        - {}
       curriculum-how-did-you-like-lessons:
         answers:
         - correct: true
@@ -15296,7 +16895,31 @@ hi-IN:
         - correct: true
         questions:
         - {}
+      ever-learned-cs-outside-school_2023:
+        answers:
+        - correct: true
+        - correct: true
+        - correct: true
+        - correct: true
+        questions:
+        - {}
+      ever-learned-cs-outside-school_mb2022:
+        answers:
+        - correct: true
+        - correct: true
+        - correct: true
+        - correct: true
+        questions:
+        - {}
       ever-learned-cs_2022:
+        answers:
+        - correct: true
+        - correct: true
+        - correct: true
+        - correct: true
+        questions:
+        - {}
+      ever-learned-cs_2023:
         answers:
         - correct: true
         - correct: true
@@ -15337,6 +16960,14 @@ hi-IN:
         questions:
         - {}
       family_encourage_2022:
+        answers:
+        - correct: true
+          text: हां
+        - correct: true
+          text: नहीं
+        questions:
+        - {}
+      family_encourage_2023:
         answers:
         - correct: true
           text: हां
@@ -15593,6 +17224,310 @@ hi-IN:
         - correct: true
         questions:
         - {}
+      interested-in-learning-cs_2023:
+        answers:
+        - correct: true
+        - correct: true
+        - correct: true
+        - correct: true
+        - correct: true
+        - correct: true
+        - correct: true
+        questions:
+        - {}
+      interested-in-learning-cs_mb2022:
+        answers:
+        - correct: true
+        - correct: true
+        - correct: true
+        - correct: true
+        - correct: true
+        - correct: true
+        - correct: true
+        questions:
+        - {}
+      intro-pulse-survey-q1_csd1_2023:
+        answers:
+        - correct: true
+        - correct: true
+        - correct: true
+        questions:
+        - {}
+      intro-pulse-survey-q1_csd2_2023:
+        answers:
+        - correct: true
+        - correct: true
+        - correct: true
+        questions:
+        - {}
+      intro-pulse-survey-q1_csd3_2023:
+        answers:
+        - correct: true
+        - correct: true
+        - correct: true
+        questions:
+        - {}
+      intro-pulse-survey-q1_csd4_2023:
+        answers:
+        - correct: true
+        - correct: true
+        - correct: true
+        questions:
+        - {}
+      intro-pulse-survey-q1_csd5_2023:
+        answers:
+        - correct: true
+        - correct: true
+        - correct: true
+        questions:
+        - {}
+      intro-pulse-survey-q1_csd6_2023:
+        answers:
+        - correct: true
+        - correct: true
+        - correct: true
+        questions:
+        - {}
+      intro-pulse-survey-q2_csd1_2023:
+        answers:
+        - correct: true
+        - correct: true
+        - correct: true
+        questions:
+        - {}
+      intro-pulse-survey-q2_csd2_2023:
+        answers:
+        - correct: true
+        - correct: true
+        - correct: true
+        questions:
+        - {}
+      intro-pulse-survey-q2_csd3_2023:
+        answers:
+        - correct: true
+        - correct: true
+        - correct: true
+        questions:
+        - {}
+      intro-pulse-survey-q2_csd4_2023:
+        answers:
+        - correct: true
+        - correct: true
+        - correct: true
+        questions:
+        - {}
+      intro-pulse-survey-q2_csd5_2023:
+        answers:
+        - correct: true
+        - correct: true
+        - correct: true
+        questions:
+        - {}
+      intro-pulse-survey-q2_csd6_2023:
+        answers:
+        - correct: true
+        - correct: true
+        - correct: true
+        questions:
+        - {}
+      intro-pulse-survey-q3_csd1_2023:
+        answers:
+        - correct: true
+        - correct: true
+        - correct: true
+        - correct: true
+        - correct: true
+        - correct: true
+        - correct: true
+        questions:
+        - {}
+      intro-pulse-survey-q3_csd2_2023:
+        answers:
+        - correct: true
+        - correct: true
+        - correct: true
+        - correct: true
+        - correct: true
+        - correct: true
+        - correct: true
+        questions:
+        - {}
+      intro-pulse-survey-q3_csd3_2023:
+        answers:
+        - correct: true
+        - correct: true
+        - correct: true
+        - correct: true
+        - correct: true
+        - correct: true
+        - correct: true
+        questions:
+        - {}
+      intro-pulse-survey-q3_csd4_2023:
+        answers:
+        - correct: true
+        - correct: true
+        - correct: true
+        - correct: true
+        - correct: true
+        - correct: true
+        - correct: true
+        questions:
+        - {}
+      intro-pulse-survey-q3_csd5_2023:
+        answers:
+        - correct: true
+        - correct: true
+        - correct: true
+        - correct: true
+        - correct: true
+        - correct: true
+        - correct: true
+        questions:
+        - {}
+      intro-pulse-survey-q3_csd6_2023:
+        answers:
+        - correct: true
+        - correct: true
+        - correct: true
+        - correct: true
+        - correct: true
+        - correct: true
+        - correct: true
+        questions:
+        - {}
+      intro-pulse-survey-q4_csd1_2023:
+        answers:
+        - correct: true
+        - correct: true
+        - correct: true
+        - correct: true
+        - correct: true
+        - correct: true
+        - correct: true
+        questions:
+        - {}
+      intro-pulse-survey-q4_csd2_2023:
+        answers:
+        - correct: true
+        - correct: true
+        - correct: true
+        - correct: true
+        - correct: true
+        - correct: true
+        - correct: true
+        questions:
+        - {}
+      intro-pulse-survey-q4_csd3_2023:
+        answers:
+        - correct: true
+        - correct: true
+        - correct: true
+        - correct: true
+        - correct: true
+        - correct: true
+        - correct: true
+        questions:
+        - {}
+      intro-pulse-survey-q4_csd4_2023:
+        answers:
+        - correct: true
+        - correct: true
+        - correct: true
+        - correct: true
+        - correct: true
+        - correct: true
+        - correct: true
+        questions:
+        - {}
+      intro-pulse-survey-q4_csd5_2023:
+        answers:
+        - correct: true
+        - correct: true
+        - correct: true
+        - correct: true
+        - correct: true
+        - correct: true
+        - correct: true
+        questions:
+        - {}
+      intro-pulse-survey-q4_csd6_2023:
+        answers:
+        - correct: true
+        - correct: true
+        - correct: true
+        - correct: true
+        - correct: true
+        - correct: true
+        - correct: true
+        questions:
+        - {}
+      intro-pulse-survey-q5_csd1_2023:
+        answers:
+        - correct: true
+        - correct: true
+        - correct: true
+        - correct: true
+        - correct: true
+        - correct: true
+        - correct: true
+        questions:
+        - {}
+      intro-pulse-survey-q5_csd2_2023:
+        answers:
+        - correct: true
+        - correct: true
+        - correct: true
+        - correct: true
+        - correct: true
+        - correct: true
+        - correct: true
+        questions:
+        - {}
+      intro-pulse-survey-q5_csd3_2023:
+        answers:
+        - correct: true
+        - correct: true
+        - correct: true
+        - correct: true
+        - correct: true
+        - correct: true
+        - correct: true
+        questions:
+        - {}
+      intro-pulse-survey-q5_csd4_2023:
+        answers:
+        - correct: true
+        - correct: true
+        - correct: true
+        - correct: true
+        - correct: true
+        - correct: true
+        - correct: true
+        questions:
+        - {}
+      intro-pulse-survey-q5_csd5_2023:
+        answers:
+        - correct: true
+        - correct: true
+        - correct: true
+        - correct: true
+        - correct: true
+        - correct: true
+        - correct: true
+        questions:
+        - {}
+      intro-pulse-survey-q5_csd6_2023:
+        answers:
+        - correct: true
+        - correct: true
+        - correct: true
+        - correct: true
+        - correct: true
+        - correct: true
+        - correct: true
+        questions:
+        - {}
       made-choices-about-assignments:
         answers:
         - correct: true
@@ -15606,9 +17541,13 @@ hi-IN:
         display_name: अपनी ऐप को अनुकूलित करें
       ml-club app-choice parent_2022:
         display_name: अपनी ऐप को अनुकूलित करें
+      ml-club app-choice parent_2023:
+        display_name: अपनी ऐप को अनुकूलित करें
       ml-intro app lab-book recommender 5-2021:
         display_name: अपनी ऐप को अनुकूलित करें
       ml-intro app lab-book recommender 5_2022:
+        display_name: अपनी ऐप को अनुकूलित करें
+      ml-intro app lab-book recommender 5_2023:
         display_name: अपनी ऐप को अनुकूलित करें
       naturally-better-at-cs:
         answers:
@@ -15633,6 +17572,17 @@ hi-IN:
         questions:
         - {}
       naturally-better-at-cs_2022:
+        answers:
+        - correct: true
+        - correct: true
+        - correct: true
+        - correct: true
+        - correct: true
+        - correct: true
+        - correct: true
+        questions:
+        - {}
+      naturally-better-at-cs_copy2_2023:
         answers:
         - correct: true
         - correct: true
@@ -15766,6 +17716,17 @@ hi-IN:
         questions:
         - {}
       post-assessment survey q31-a-2017b:
+        answers:
+        - correct: true
+        - correct: true
+        - correct: true
+        - correct: true
+        - correct: true
+        - correct: true
+        - correct: true
+        questions:
+        - {}
+      post-assessment survey q31-a-2017b_mb2022:
         answers:
         - correct: true
         - correct: true
@@ -16119,6 +18080,18 @@ hi-IN:
         - correct: true
         questions:
         - {}
+      reasons-took-course-csd_2023:
+        answers:
+        - correct: true
+        - correct: true
+        - correct: true
+        - correct: true
+        - correct: true
+        - correct: true
+        - correct: true
+        - correct: true
+        questions:
+        - {}
       same-ability:
         answers:
         - correct: true
@@ -16139,6 +18112,14 @@ hi-IN:
         questions:
         - {}
       someone_else_encourage_2022:
+        answers:
+        - correct: true
+          text: हां
+        - correct: true
+          text: नहीं
+        questions:
+        - {}
+      someone_else_encourage_2023:
         answers:
         - correct: true
           text: हां
@@ -16174,6 +18155,14 @@ hi-IN:
         questions:
         - {}
       teacher_encourage_2022:
+        answers:
+        - correct: true
+          text: हां
+        - correct: true
+          text: नहीं
+        questions:
+        - {}
+      teacher_encourage_2023:
         answers:
         - correct: true
           text: हां
@@ -16254,6 +18243,28 @@ hi-IN:
         - correct: true
         questions:
         - {}
+      will-be-myself-in-cs_2023:
+        answers:
+        - correct: true
+        - correct: true
+        - correct: true
+        - correct: true
+        - correct: true
+        - correct: true
+        - correct: true
+        questions:
+        - {}
+      will-be-myself-in-cs_mb2022:
+        answers:
+        - correct: true
+        - correct: true
+        - correct: true
+        - correct: true
+        - correct: true
+        - correct: true
+        - correct: true
+        questions:
+        - {}
       worried-less-capable:
         answers:
         - correct: true
@@ -16277,6 +18288,17 @@ hi-IN:
         questions:
         - {}
       worried-seen-incapable_2022:
+        answers:
+        - correct: true
+        - correct: true
+        - correct: true
+        - correct: true
+        - correct: true
+        - correct: true
+        - correct: true
+        questions:
+        - {}
+      worried-seen-incapable_2023:
         answers:
         - correct: true
         - correct: true

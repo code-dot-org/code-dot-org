@@ -25,7 +25,7 @@ title: Керівництво з проведення «Години коду»
 
 <a id="how-to-video"></a>
 
-## 1. Перегляньте наше відеокерівництво щодо проведення «Години коду» <iframe width="500" height="255" src="//www.youtube.com/embed/SrnvvWDm73k" frameborder="0" allowfullscreen></iframe> 
+## 1. Перегляньте наше відеокерівництво щодо проведення «Години коду» <iframe width="500" height="255" src="https://www.youtube-nocookie.com/embed/SrnvvWDm73k" frameborder="0" allowfullscreen></iframe> 
 
 * * *
 

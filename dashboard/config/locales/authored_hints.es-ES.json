@@ -14499,8 +14499,8 @@
           "Hint2": "¡El subtítulo <code style=\"color:black; background-color:#B3B2FB\">establecido</code> agrega al autor a la portada del libro!\n\nAquí también puedes cambiar el texto. "
         },
         "csc_bookcover_widget_2023": {
-          "hint1": "\\*\\* ¡Haz clic en ambos personajes\\*\\* para ver lo que dicen!",
-          "hint2": "Haz clic en la **flecha arriba** para ver el resumen del libro."
+          "hint1": "\\*\\* ¡Pulsa en ambos personajes\\*\\* para ver lo que dicen!",
+          "hint2": "Pulsa la **flecha arriba** para ver el resumen del libro."
         },
         "csc_bookcovers_project_character1": {
           "hint1": "Para cambiar la ubicación de un sprite, haz clic en la marca del bloque de ubicación y, a continuación, haz clic en el lugar donde quieres que vaya.\n\n![](https://images.code.org/e3267d2b50f754befc63744be14287ac-image-1633360873408.gif)"
@@ -14638,7 +14638,7 @@
           "hint1": "Usa el menú desplegable para elegir entre diferentes colores y efectos.\n\n![](<https://images.code.org/b3cd57bafe3e5eb487d61ef846a4715c-image-1660769880438.57.55 PM.png>)"
         },
         "ecosystems_helloworld_say_2023": {
-          "add_sprite": "Haz clic y arrastra un bloque de `crear nuevo sprite` y conéctalo a `cuando se ejecute`. \n\n<xml><block type=\"when_run\" deletable=\"false\"><next><block type=\"gamelab_makeNewSpriteAnon\"><field name=\"ANIMATION_NAME\">\"bunny1_ready\"</field><value name=\"LOCATION\"><block type=\"gamelab_location_picker\" can_disconnect_from_parent=\"false\"><field name=\"LOCATION\">{\"x\":200,\"y\":200}</field></block></value></block></next></block></xml>",
+          "add_sprite": "Pulsa y arrastra un bloque `hacer nuevo sprite` y conéctalo en `al ejecutar`. \n\n<xml><block type=\"when_run\" deletable=\"false\"><next><block type=\"gamelab_makeNewSpriteAnon\"><field name=\"ANIMATION_NAME\">\"bunny1_ready\"</field><value name=\"LOCATION\"><block type=\"gamelab_location_picker\" can_disconnect_from_parent=\"false\"><field name=\"LOCATION\">{\"x\":200,\"y\":200}</field></block></value></block></next></block></xml>",
           "change_location": "Para cambiar la ubicación de un sprite, haz clic en la marca del bloque de ubicación y, a continuación, haz clic en el lugar donde quieres que vaya.\n\n![](https://images.code.org/e3267d2b50f754befc63744be14287ac-image-1633360873408.gif)"
         },
         "grade5_artist_variables_triangles1": {

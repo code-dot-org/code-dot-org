@@ -1149,6 +1149,9 @@
           "word": "Esdeveniment",
           "definition": "Una acció que fa que passi alguna cosa."
         },
+        "artificial_intelligence/ai-ethics/2023": {
+          "word": "Intel·ligència Artificial"
+        },
         "adaptation/csc-adaptations/2023": {
           "word": "Adaptació",
           "definition": "Un canvi en un organisme per sobreviure millor al seu entorn"
@@ -1367,6 +1370,58 @@
         "poetry_circle/poetry/2023": {
           "word": "Cercle de Poesia",
           "definition": "Un espai segur i creatiu per provar nous poemes i obtenir comentaris constructius d'altres"
+        },
+        "computer/csd/2023": {
+          "word": "Ordinador"
+        },
+        "input/csd/2023": {
+          "word": "Entrada"
+        },
+        "copyright/csd/2023": {
+          "word": "Copyright",
+          "definition": "el dret legal exclusiu d'imprimir, publicar, representar, enregistrar o gravar materials literaris, artístics o musicals, i d'autoritzar altres a fer el mateix"
+        },
+        "bug/csd/2023": {
+          "word": "Bug / error",
+          "definition": "Una part del programa que no funciona correctament."
+        },
+        "debugging/csd/2023": {
+          "word": "Depuració",
+          "definition": "Trobar i arreglar els problemes d'un algorisme o programa."
+        },
+        "program/csd/2023": {
+          "word": "Programa",
+          "definition": "Un algorisme que s'ha codificat en alguna cosa que pot ser executada per una màquina."
+        },
+        "variable/csd/2023": {
+          "word": "Variable",
+          "definition": "L'etiqueta d'un fragment d'informació que es fa servir en un programa."
+        },
+        "sprite/csd/2023": {
+          "word": "Sprite"
+        },
+        "condition/csd/2023": {
+          "word": "Condició"
+        },
+        "conditionals/csd/2023": {
+          "word": "Condicionals"
+        },
+        "abstraction/csd/2023": {
+          "word": "Abstracció"
+        },
+        "function/csd/2023": {
+          "word": "Funció"
+        },
+        "user/csd/2023": {
+          "word": "Usuari",
+          "definition": "Algú que utilitza un objecte, inclosos el programari (software) i el maquinari (hardware)."
+        },
+        "user_interface/csd/2023": {
+          "word": "Interfície d'usuari"
+        },
+        "machine_learning/csd/2023": {
+          "word": "Aprenentatge automàtic",
+          "definition": "Com els ordinadors reconeixen patrons i prenen decisions sense ser programats explícitament"
         },
         "algorithm/coursea/2023": {
           "word": "Algorisme",

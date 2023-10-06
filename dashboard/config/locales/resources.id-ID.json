@@ -5570,6 +5570,37 @@
           "url": "https://www.youtube.com/watch?v=rgbZAWnOWOo",
           "type": "Video"
         },
+        "_template_ai_code_of_ethics/ai-ethics/2023": {
+          "type": "Slide"
+        },
+        "ai_code_of_ethics/ai-ethics/2023": {
+          "type": "Slide"
+        },
+        "ethics_and_ai_privacy_the_future_of_work/ai-ethics/2023": {
+          "type": "Video"
+        },
+        "character_card_individual_docs_/ai-ethics/2023": {
+          "type": "Sumber Daya"
+        },
+        "character_cards/ai-ethics/2023": {
+          "type": "Sumber Daya"
+        },
+        "generative_ai_activity_instructions/ai-ethics/2023": {
+          "type": "Sumber Daya"
+        },
+        "generative_ai_news_articles/ai-ethics/2023": {
+          "type": "Sumber Daya"
+        },
+        "group_scenarios/ai-ethics/2023": {
+          "type": "Sumber Daya"
+        },
+        "how_ai_works_large_language_models/ai-ethics/2023": {
+          "url": "https://www.youtube.com/watch?v=X-AWdfSFCHQ",
+          "type": "Video"
+        },
+        "societal_impact_of_generative_ai/ai-ethics/2023": {
+          "type": "Slide"
+        },
         "cs_connections_landing_page/csc-adaptations/2023": {
           "name": "CS Koneksi Halaman Arahan",
           "url": "https://code.org/educate/csc",
@@ -6111,6 +6142,1376 @@
         "poem_app_example/poetry/2023": {
           "name": "Contoh Aplikasi Puisi",
           "url": "https://studio.code.org/projects/poetry_hoc/j3TXDXNhz0XEsH4Xjk_rT9buBHYCplirIKtY_Pg_bYo",
+          "type": "Sumber Daya"
+        },
+        "teacher_forum/csd/2023": {
+          "name": "Forum guru"
+        },
+        "the_problem_solving_process_2/csd/2023": {
+          "name": "Proses Pemecahan Masalah"
+        },
+        "intro_to_problem_solving/csd/2023": {
+          "name": "Pengenalan Pemecahan Masalah",
+          "type": "Slide"
+        },
+        "problem_solving_process/csd/2023": {
+          "name": "Proses Pemecahan Masalah"
+        },
+        "problem_solving_process_1/csd/2023": {
+          "name": "Proses Pemecahan Masalah",
+          "type": "Video"
+        },
+        "problem_solving_process_2/csd/2023": {
+          "name": "Proses Pemecahan Masalah"
+        },
+        "the_problem_solving_process/csd/2023": {
+          "type": "Video"
+        },
+        "the_problem_solving_process_1/csd/2023": {
+          "name": "Proses Pemecahan Masalah",
+          "type": "Slide"
+        },
+        "the_problem_solving_process_5/csd/2023": {
+          "name": "Proses Pemecahan Masalah"
+        },
+        "exploring_problem_solving/csd/2023": {
+          "name": "Eksplorasi Pemecahan Masalah",
+          "type": "Slide"
+        },
+        "solving_problems/csd/2023": {
+          "type": "Kunci Jawaban"
+        },
+        "what_is_a_computer/csd/2023": {
+          "type": "Video"
+        },
+        "what_is_a_computer_/csd/2023": {
+          "name": "Apa itu Komputer?"
+        },
+        "what_is_a_computer_1/csd/2023": {
+          "type": "Slide"
+        },
+        "input_and_output/csd/2023": {
+          "name": "Input dan Output"
+        },
+        "input_and_output_1/csd/2023": {
+          "name": "Input dan Output"
+        },
+        "input_and_output_2/csd/2023": {
+          "name": "Input dan Output",
+          "type": "Slide"
+        },
+        "apps_with_processing_2/csd/2023": {
+          "type": "Slide"
+        },
+        "apps_with_storage_2/csd/2023": {
+          "type": "Slide"
+        },
+        "what_do_computers_do/csd/2023": {
+          "type": "Video"
+        },
+        "apps_and_problem_solving/csd/2023": {
+          "name": "Aplikasi dan Pemecahan Masalah"
+        },
+        "apps_and_problem_solving_-_student_checklist/csd/2023": {
+          "type": "Sumber Daya"
+        },
+        "apps_and_problem_solving_1/csd/2023": {
+          "name": "Aplikasi dan Pemecahan Masalah",
+          "type": "Penelaahan Sejawat"
+        },
+        "apps_and_problem_solving_2/csd/2023": {
+          "name": "Aplikasi dan Pemecahan Masalah",
+          "type": "Rubrik"
+        },
+        "computer_science_practices/csd/2023": {
+          "type": "Bayangan"
+        },
+        "project_-_propose_an_app/csd/2023": {
+          "name": "Proyek - Pengajuan Aplikasi",
+          "type": "Slide"
+        },
+        "intro_to_problem_solving_newspapers_/csd/2023": {
+          "type": "Slide"
+        },
+        "intro_to_problem_solving_spaghetti_/csd/2023": {
+          "type": "Slide"
+        },
+        "intro_to_problem_solving_paper_towels_/csd/2023": {
+          "type": "Slide"
+        },
+        "exploring_problem_solving_animals_/csd/2023": {
+          "type": "Slide"
+        },
+        "tangrams/csd/2023": {
+          "type": "Sumber Daya"
+        },
+        "exploring_problem_solving_games_/csd/2023": {
+          "type": "Slide"
+        },
+        "_key_warm_up_word_search/csd/2023": {
+          "type": "Kunci Jawaban"
+        },
+        "_key_web_design_for_users/csd/2023": {
+          "type": "Kunci Jawaban"
+        },
+        "exploring_web_pages_2/csd/2023": {
+          "name": "Mengeksplorasi Halaman Web",
+          "type": "Slide"
+        },
+        "problem_solving_and_design/csd/2023": {
+          "type": "Sumber Daya"
+        },
+        "web_design_template/csd/2023": {
+          "type": "Sumber Daya"
+        },
+        "html_tags/csd/2023": {
+          "name": "Tag HTML",
+          "type": "Sumber Daya"
+        },
+        "intro_to_html/csd/2023": {
+          "name": "Pengenalan HTML",
+          "type": "Slide"
+        },
+        "intro_to_web_lab_part_2/csd/2023": {
+          "type": "Video"
+        },
+        "pair_programming/csd/2023": {
+          "name": "Pair Programming",
+          "type": "Video"
+        },
+        "video_intro_to_web_lab_part_1/csd/2023": {
+          "type": "Video"
+        },
+        "formatting_html/csd/2023": {
+          "name": "Format HTML",
+          "type": "Sumber Daya"
+        },
+        "headings/csd/2023": {
+          "type": "Slide"
+        },
+        "headings_and_paragraphs/csd/2023": {
+          "name": "Heading dan Paragrap",
+          "type": "Sumber Daya"
+        },
+        "lists/csd/2023": {
+          "name": "List",
+          "type": "Sumber Daya"
+        },
+        "video_debugging/csd/2023": {
+          "name": "Video: Debugging",
+          "type": "Video"
+        },
+        "video_pair_programming/csd/2023": {
+          "name": "Video: Pair Programming",
+          "type": "Video"
+        },
+        "html_web_page/csd/2023": {
+          "type": "Rubrik"
+        },
+        "html_web_page_1/csd/2023": {
+          "type": "Penelaahan Sejawat"
+        },
+        "html_web_page_2/csd/2023": {
+          "type": "Panduan Proyek"
+        },
+        "mini-project_html_web_page/csd/2023": {
+          "name": "Proyek Mini: Halaman Web HTML",
+          "type": "Slide"
+        },
+        "problem_solving_process_with_programming/csd/2023": {
+          "type": "Sumber Daya"
+        },
+        "digital_footprint/csd/2023": {
+          "name": "Jejak Digital",
+          "type": "Slide"
+        },
+        "social_sleuth/csd/2023": {
+          "name": "Social Sleuth"
+        },
+        "social_sleuth_1/csd/2023": {
+          "name": "Social Sleuth"
+        },
+        "intro_to_css_-_part_1/csd/2023": {
+          "name": "Pengantar CSS - Bagian 1",
+          "type": "Video"
+        },
+        "intro_to_css_-_part_2/csd/2023": {
+          "name": "Pengantar CSS - Bagian 2",
+          "type": "Video"
+        },
+        "style_sheets/csd/2023": {
+          "type": "Sumber Daya"
+        },
+        "styling_text_with_css/csd/2023": {
+          "name": "Membuat Gaya Teks dengan CSS",
+          "type": "Slide"
+        },
+        "text_properties/csd/2023": {
+          "type": "Sumber Daya"
+        },
+        "mini-project_your_personal_style/csd/2023": {
+          "name": "Proyek Mini: Gaya Pribadi Anda",
+          "type": "Slide"
+        },
+        "your_personal_style/csd/2023": {
+          "type": "Rubrik"
+        },
+        "your_personal_style_1/csd/2023": {
+          "type": "Penelaahan Sejawat"
+        },
+        "your_personal_style_2/csd/2023": {
+          "type": "Panduan Proyek"
+        },
+        "creative_commons_overview/csd/2023": {
+          "type": "Video"
+        },
+        "intellectual_property/csd/2023": {
+          "name": "Hak milik intelektual",
+          "type": "Slide"
+        },
+        "creative_commons_search/csd/2023": {
+          "name": "Karya kreatif",
+          "type": "Sumber Daya"
+        },
+        "images_in_html/csd/2023": {
+          "name": "Gambar dalam HTML",
+          "type": "Sumber Daya"
+        },
+        "using_images/csd/2023": {
+          "name": "Menggunakan Gambar",
+          "type": "Slide"
+        },
+        "websites_for_expression/csd/2023": {
+          "type": "Slide"
+        },
+        "layout_properties/csd/2023": {
+          "name": "Layout property"
+        },
+        "styling_elements_with_css/csd/2023": {
+          "name": "Membuat Gaya Elemen dengan CSS",
+          "type": "Slide"
+        },
+        "personal_web_page_-_prepare/csd/2023": {
+          "type": "Panduan Proyek"
+        },
+        "your_web_page_prepare/csd/2023": {
+          "type": "Slide"
+        },
+        "personal_web_page/csd/2023": {
+          "type": "Penelaahan Sejawat"
+        },
+        "personal_web_page_-_reflect/csd/2023": {
+          "type": "Panduan Proyek"
+        },
+        "personal_web_page_-_student_checklist/csd/2023": {
+          "type": "Sumber Daya"
+        },
+        "personal_web_page_1/csd/2023": {
+          "type": "Rubrik"
+        },
+        "project_-_personal_web_page/csd/2023": {
+          "name": "Proyek - Halaman Web Pribadi",
+          "type": "Slide"
+        },
+        "publishing_your_website/csd/2023": {
+          "name": "Sedang diterbitkan situs web",
+          "type": "Video"
+        },
+        "websites_for_a_purpose/csd/2023": {
+          "name": "Situs Web untuk suatu Tujuan"
+        },
+        "websites_for_a_purpose_1/csd/2023": {
+          "name": "Situs Web untuk suatu Tujuan"
+        },
+        "websites_for_a_purpose_2/csd/2023": {
+          "name": "Situs Web untuk suatu Tujuan",
+          "type": "Slide"
+        },
+        "team_problem_solving/csd/2023": {
+          "name": "Pemecahan Masalah Tim",
+          "type": "Slide"
+        },
+        "video_managing_disagreement/csd/2023": {
+          "name": "Video: Mengelola Ketidakcocokan",
+          "type": "Video"
+        },
+        "video_teamwork/csd/2023": {
+          "name": "Video: Kerja Tim",
+          "type": "Video"
+        },
+        "sources_and_research/csd/2023": {
+          "name": "Sumber dan Penelitian",
+          "type": "Slide"
+        },
+        "video_how_search_works/csd/2023": {
+          "name": "Cara Kerja Pencarian",
+          "type": "Video"
+        },
+        "classes/csd/2023": {
+          "name": "Kelas",
+          "type": "Sumber Daya"
+        },
+        "css_classes/csd/2023": {
+          "name": "Kelas CSS",
+          "type": "Slide"
+        },
+        "plan_a_multi-page_website/csd/2023": {
+          "type": "Panduan Proyek"
+        },
+        "planning_a_multi-page_site/csd/2023": {
+          "type": "Slide"
+        },
+        "website_for_a_purpose/csd/2023": {
+          "type": "Rubrik"
+        },
+        "hyperlinks/csd/2023": {
+          "name": "Tautan",
+          "type": "Sumber Daya"
+        },
+        "linking_pages/csd/2023": {
+          "name": "Menautkan Halaman",
+          "type": "Slide"
+        },
+        "project_-_website_for_a_purpose/csd/2023": {
+          "name": "Proyek - Situs Web untuk suatu Tujuan",
+          "type": "Slide"
+        },
+        "peer_review_and_final_touches/csd/2023": {
+          "name": "Ulasan Sejawat dan Sentuhan Akhir",
+          "type": "Slide"
+        },
+        "website_for_a_purpose_-_reflect/csd/2023": {
+          "type": "Panduan Proyek"
+        },
+        "website_for_a_purpose_1/csd/2023": {
+          "type": "Penelaahan Sejawat"
+        },
+        "_warm_up_word_search_key_/csd/2023": {
+          "type": "Kunci Jawaban"
+        },
+        "programming_for_a_purpose/csd/2023": {
+          "type": "Slide"
+        },
+        "animation_and_game_design_template/csd/2023": {
+          "type": "Sumber Daya"
+        },
+        "plotting_shapes/csd/2023": {
+          "name": "Merancang Bentuk",
+          "type": "Slide"
+        },
+        "drawing_in_game_lab/csd/2023": {
+          "name": "Menggambar dalam lab permaianan",
+          "type": "Slide"
+        },
+        "drawing_in_game_lab_-_part_1/csd/2023": {
+          "type": "Video"
+        },
+        "drawing_in_game_lab_-_part_2/csd/2023": {
+          "type": "Video"
+        },
+        "drawing_shapes_1/csd/2023": {
+          "type": "Sumber Daya"
+        },
+        "shapes_and_parameters/csd/2023": {
+          "type": "Sumber Daya"
+        },
+        "shapes_and_parameters_1/csd/2023": {
+          "type": "Slide"
+        },
+        "introduction_to_variables/csd/2023": {
+          "type": "Video"
+        },
+        "naming_variables/csd/2023": {
+          "type": "Sumber Daya"
+        },
+        "variables/csd/2023": {
+          "name": "variabel",
+          "type": "Sumber Daya"
+        },
+        "variables_1/csd/2023": {
+          "name": "variabel",
+          "type": "Video"
+        },
+        "variables_2/csd/2023": {
+          "name": "variabel",
+          "type": "Slide"
+        },
+        "random_numbers/csd/2023": {
+          "type": "Sumber Daya"
+        },
+        "random_numbers_1/csd/2023": {
+          "type": "Slide"
+        },
+        "mini-project_-_robot_faces/csd/2023": {
+          "type": "Slide"
+        },
+        "problem_solving_with_programming/csd/2023": {
+          "type": "Sumber Daya"
+        },
+        "robot_faces/csd/2023": {
+          "type": "Rubrik"
+        },
+        "animation_tab/csd/2023": {
+          "type": "Sumber Daya"
+        },
+        "introduction_to_sprites/csd/2023": {
+          "type": "Video"
+        },
+        "sprites/csd/2023": {
+          "name": "Sprites",
+          "type": "Sumber Daya"
+        },
+        "sprites_1/csd/2023": {
+          "name": "Sprites",
+          "type": "Slide"
+        },
+        "the_animation_tab/csd/2023": {
+          "name": "Tab Animasi",
+          "type": "Video"
+        },
+        "sprite_properties/csd/2023": {
+          "name": "Properti Sprite",
+          "type": "Sumber Daya"
+        },
+        "sprite_properties_1/csd/2023": {
+          "name": "Properti Sprite",
+          "type": "Slide"
+        },
+        "sprite_properties_needs_updating_/csd/2023": {
+          "name": "Properti Sprite",
+          "type": "Video"
+        },
+        "text/csd/2023": {
+          "name": "Teks",
+          "type": "Slide"
+        },
+        "captioned_scenes/csd/2023": {
+          "type": "Rubrik"
+        },
+        "mini-project_-_captioned_scenes/csd/2023": {
+          "type": "Slide"
+        },
+        "flipbook_example_-_by_marnic_bos/csd/2023": {
+          "type": "Video"
+        },
+        "introduction_to_the_draw_loop/csd/2023": {
+          "type": "Video"
+        },
+        "the_draw_loop/csd/2023": {
+          "name": "Draw Loop",
+          "type": "Sumber Daya"
+        },
+        "the_draw_loop_1/csd/2023": {
+          "name": "Draw Loop",
+          "type": "Slide"
+        },
+        "sprite_movement/csd/2023": {
+          "name": "Gerakan Sprite",
+          "type": "Video"
+        },
+        "sprite_movement_1/csd/2023": {
+          "name": "Gerakan Sprite",
+          "type": "Slide"
+        },
+        "animated_scene/csd/2023": {
+          "type": "Rubrik"
+        },
+        "mini-project_-_animation/csd/2023": {
+          "type": "Slide"
+        },
+        "boolean_expressions/csd/2023": {
+          "name": "Ekspresi Boolean",
+          "type": "Video"
+        },
+        "booleans_and_comparison_operators/csd/2023": {
+          "type": "Sumber Daya"
+        },
+        "conditional_statements/csd/2023": {
+          "name": "Pernyataan Kondisional",
+          "type": "Video"
+        },
+        "conditionals/csd/2023": {
+          "name": "Kondisi",
+          "type": "Slide"
+        },
+        "if_statements/csd/2023": {
+          "type": "Sumber Daya"
+        },
+        "keyboard_input/csd/2023": {
+          "name": "Input Keyboard",
+          "type": "Slide"
+        },
+        "if-else_statements/csd/2023": {
+          "type": "Sumber Daya"
+        },
+        "if_else_statements/csd/2023": {
+          "name": "Pernyataan If/Else",
+          "type": "Video"
+        },
+        "mouse_input/csd/2023": {
+          "name": "Input Mouse",
+          "type": "Slide"
+        },
+        "extra_code_in_challenge_levels/csd/2023": {
+          "type": "Sumber Daya"
+        },
+        "interactive_card_-_student_checklist/csd/2023": {
+          "type": "Sumber Daya"
+        },
+        "interactive_card_3/csd/2023": {
+          "type": "Rubrik"
+        },
+        "project_-_interactive_card/csd/2023": {
+          "name": "Proyek - kartu interaktif",
+          "type": "Slide"
+        },
+        "velocity/csd/2023": {
+          "name": "Percepatan",
+          "type": "Video"
+        },
+        "velocity_1/csd/2023": {
+          "name": "Percepatan",
+          "type": "Sumber Daya"
+        },
+        "velocity_2/csd/2023": {
+          "name": "Percepatan",
+          "type": "Slide"
+        },
+        "collision_detection/csd/2023": {
+          "name": "Deteksi tumbukan"
+        },
+        "collision_detection_1/csd/2023": {
+          "name": "Deteksi tumbukan",
+          "type": "Sumber Daya"
+        },
+        "collision_detection_2/csd/2023": {
+          "name": "Deteksi tumbukan",
+          "type": "Slide"
+        },
+        "mini-project_-_side_scroller/csd/2023": {
+          "type": "Slide"
+        },
+        "side_scroller/csd/2023": {
+          "name": "Side Scroller",
+          "type": "Rubrik"
+        },
+        "side_scroller_1/csd/2023": {
+          "name": "Side Scroller"
+        },
+        "complex_sprite_movement/csd/2023": {
+          "name": "Gerakan Sprite Kompleks",
+          "type": "Slide"
+        },
+        "velocity_and_the_counter_pattern/csd/2023": {
+          "name": "Percepatan dan Pola Tandingan",
+          "type": "Sumber Daya"
+        },
+        "collisions/csd/2023": {
+          "name": "Tumbukan",
+          "type": "Slide"
+        },
+        "flyer_game/csd/2023": {
+          "name": "Flyer Game",
+          "type": "Rubrik"
+        },
+        "flyer_game_1/csd/2023": {
+          "name": "Flyer Game"
+        },
+        "mini-project_-_flyer_game/csd/2023": {
+          "type": "Slide"
+        },
+        "functions/csd/2023": {
+          "name": "fungsi",
+          "type": "Video"
+        },
+        "functions_1/csd/2023": {
+          "name": "fungsi",
+          "type": "Sumber Daya"
+        },
+        "functions_2/csd/2023": {
+          "name": "fungsi",
+          "type": "Slide"
+        },
+        "the_game_design_process/csd/2023": {
+          "name": "Proses perancangan permainan",
+          "type": "Slide"
+        },
+        "using_the_game_design_process/csd/2023": {
+          "name": "Proses menggunakan desain permainan",
+          "type": "Slide"
+        },
+        "make_your_own_game_-_student_checklist/csd/2023": {
+          "type": "Sumber Daya"
+        },
+        "make_your_own_game_3/csd/2023": {
+          "type": "Rubrik"
+        },
+        "project_-_design_a_game/csd/2023": {
+          "name": "Proyek - merancang sebuah permainan",
+          "type": "Slide"
+        },
+        "designing_with_empathy_2/csd/2023": {
+          "type": "Slide"
+        },
+        "understanding_your_user/csd/2023": {
+          "name": "Memahami pengguna anda",
+          "type": "Slide"
+        },
+        "the_design_thinking_process/csd/2023": {
+          "type": "Video"
+        },
+        "user_centered_design_-_define_and_prepare/csd/2023": {
+          "type": "Slide"
+        },
+        "user_centered_design_-_try_and_reflect/csd/2023": {
+          "type": "Slide"
+        },
+        "user_interface_screens/csd/2023": {
+          "type": "Sumber Daya"
+        },
+        "user_interfaces/csd/2023": {
+          "name": "Antarmuka Pengguna",
+          "type": "Slide"
+        },
+        "feedback_and_testing/csd/2023": {
+          "name": "Umpan balik dan Pengujian",
+          "type": "Slide"
+        },
+        "prototype_feedback/csd/2023": {
+          "type": "Sumber Daya"
+        },
+        "example_user_interviews/csd/2023": {
+          "type": "Sumber Daya"
+        },
+        "identifying_user_needs/csd/2023": {
+          "name": "Mengidentifikasi Kebutuhan Pengguna",
+          "type": "Slide"
+        },
+        "paper_prototypes/csd/2023": {
+          "name": "Prototipe Kertas",
+          "type": "Rubrik"
+        },
+        "project_-_paper_prototype/csd/2023": {
+          "name": "Proyek - Prototipe Kertas",
+          "type": "Slide"
+        },
+        "designing_apps_for_good/csd/2023": {
+          "name": "Merancang aplikasi untuk kebaikan",
+          "type": "Slide"
+        },
+        "market_research/csd/2023": {
+          "name": "Meneliti pasar"
+        },
+        "market_research_-_research_areas/csd/2023": {
+          "type": "Sumber Daya"
+        },
+        "market_research_1/csd/2023": {
+          "name": "Meneliti pasar"
+        },
+        "market_research_2/csd/2023": {
+          "name": "Meneliti pasar",
+          "type": "Slide"
+        },
+        "exploring_ui_elements/csd/2023": {
+          "type": "Slide"
+        },
+        "build_a_paper_prototype/csd/2023": {
+          "type": "Slide"
+        },
+        "design_mode/csd/2023": {
+          "name": "Mode desain",
+          "type": "Sumber Daya"
+        },
+        "design_mode_elements/csd/2023": {
+          "type": "Sumber Daya"
+        },
+        "prototype_testing/csd/2023": {
+          "name": "Pengujian Prototipe",
+          "type": "Slide"
+        },
+        "what_s_for_lunch_testing/csd/2023": {
+          "type": "Video"
+        },
+        "design_mode_in_app_lab/csd/2023": {
+          "type": "Slide"
+        },
+        "intro_to_design_mode/csd/2023": {
+          "type": "Video"
+        },
+        "model_screen_design/csd/2023": {
+          "type": "Sumber Daya"
+        },
+        "build_a_digital_prototype/csd/2023": {
+          "type": "Slide"
+        },
+        "events_in_app_lab/csd/2023": {
+          "type": "Video"
+        },
+        "events_in_app_lab_1/csd/2023": {
+          "type": "Video"
+        },
+        "events_in_app_lab_2/csd/2023": {
+          "type": "Slide"
+        },
+        "changing_screens/csd/2023": {
+          "type": "Sumber Daya"
+        },
+        "importing_screens/csd/2023": {
+          "type": "Sumber Daya"
+        },
+        "linking_prototype_screens/csd/2023": {
+          "type": "Slide"
+        },
+        "multi-screen_apps/csd/2023": {
+          "name": "Aplikasi Multilayar",
+          "type": "Sumber Daya"
+        },
+        "responding_to_user_input/csd/2023": {
+          "type": "Sumber Daya"
+        },
+        "testing_the_app/csd/2023": {
+          "name": "Menguji Aplikasi",
+          "type": "Slide"
+        },
+        "bugs_and_features_2/csd/2023": {
+          "type": "Slide"
+        },
+        "updating_your_prototype_1/csd/2023": {
+          "type": "Slide"
+        },
+        "app_presentation/csd/2023": {
+          "name": "Penyajian aplikasi",
+          "type": "Rubrik"
+        },
+        "app_presentation_1/csd/2023": {
+          "name": "Penyajian aplikasi"
+        },
+        "project_-_app_presentation/csd/2023": {
+          "name": "Proyek - Presentasi Aplikasi",
+          "type": "Slide"
+        },
+        "meals_data/csd/2023": {
+          "type": "Sumber Daya"
+        },
+        "representation_matters/csd/2023": {
+          "name": "Representasi Itu Penting"
+        },
+        "representation_matters_1/csd/2023": {
+          "name": "Representasi Itu Penting"
+        },
+        "representation_matters_2/csd/2023": {
+          "name": "Representasi Itu Penting",
+          "type": "Slide"
+        },
+        "patterns_and_representation/csd/2023": {
+          "name": "Pola dan Representasi",
+          "type": "Slide"
+        },
+        "representing_information/csd/2023": {
+          "name": "Menunjukkan informasi"
+        },
+        "ascii_and_binary_representation/csd/2023": {
+          "name": "ASCII dan Representasi Binary",
+          "type": "Slide"
+        },
+        "ascii_challenges_1/csd/2023": {
+          "type": "Kunci Jawaban"
+        },
+        "ascii_text/csd/2023": {
+          "type": "Sumber Daya"
+        },
+        "representing_images/csd/2023": {
+          "name": "Merepresentasikan Gambar",
+          "type": "Slide"
+        },
+        "binary_and_data/csd/2023": {
+          "name": "Binary dan Data",
+          "type": "Video"
+        },
+        "representing_numbers/csd/2023": {
+          "name": "Merepresentasikan Angka"
+        },
+        "representing_numbers_1/csd/2023": {
+          "name": "Merepresentasikan Angka",
+          "type": "Slide"
+        },
+        "combining_representations/csd/2023": {
+          "name": "Menggabungkan Representasi",
+          "type": "Slide"
+        },
+        "keeping_data_secret/csd/2023": {
+          "name": "Menjaga Kerahasiaan Data",
+          "type": "Slide"
+        },
+        "medical_records_1/csd/2023": {
+          "type": "Kunci Jawaban"
+        },
+        "create_a_representation_2/csd/2023": {
+          "type": "Rubrik"
+        },
+        "create_a_representation_3/csd/2023": {
+          "type": "Slide"
+        },
+        "problem_solving_with_data_2/csd/2023": {
+          "type": "Slide"
+        },
+        "structuring_data/csd/2023": {
+          "name": "Penataan Data"
+        },
+        "structuring_data_1/csd/2023": {
+          "name": "Penataan Data",
+          "type": "Slide"
+        },
+        "interpreting_data/csd/2023": {
+          "name": "Menginterpretasikan Data"
+        },
+        "interpreting_data_1/csd/2023": {
+          "name": "Menginterpretasikan Data"
+        },
+        "interpreting_data_2/csd/2023": {
+          "name": "Menginterpretasikan Data",
+          "type": "Sumber Daya"
+        },
+        "interpreting_data_3/csd/2023": {
+          "name": "Menginterpretasikan Data",
+          "type": "Slide"
+        },
+        "making_decisions_with_data_1/csd/2023": {
+          "name": "Mengambil Keputusan dengan Data"
+        },
+        "making_decisions_with_data_2/csd/2023": {
+          "name": "Mengambil Keputusan dengan Data",
+          "type": "Slide"
+        },
+        "problem_solving_process_with_data/csd/2023": {
+          "type": "Sumber Daya"
+        },
+        "automating_data_decisions/csd/2023": {
+          "name": "Mengotomatisasi Data Keputusan"
+        },
+        "automating_data_decisions_1/csd/2023": {
+          "name": "Mengotomatisasi Data Keputusan",
+          "type": "Sumber Daya"
+        },
+        "automating_data_decisions_2/csd/2023": {
+          "name": "Mengotomatisasi Data Keputusan"
+        },
+        "automating_data_decisions_3/csd/2023": {
+          "name": "Mengotomatisasi Data Keputusan",
+          "type": "Slide"
+        },
+        "amazon_and_data/csd/2023": {
+          "type": "Video"
+        },
+        "data_in_the_real_world/csd/2023": {
+          "name": "Data di Dunia Nyata"
+        },
+        "data_in_the_real_world_1/csd/2023": {
+          "name": "Data di Dunia Nyata"
+        },
+        "netflix_and_data/csd/2023": {
+          "type": "Video"
+        },
+        "problem_solving_with_big_data/csd/2023": {
+          "name": "Pemecahan masalah dengan Data Besar",
+          "type": "Slide"
+        },
+        "waze_and_data/csd/2023": {
+          "type": "Video"
+        },
+        "data_and_machine_learning/csd/2023": {
+          "type": "Slide"
+        },
+        "video_impact_on_society/csd/2023": {
+          "name": "Video: Dampak terhadap Masyarakat",
+          "type": "Video"
+        },
+        "video_machine_learning/csd/2023": {
+          "name": "Video: Pembelajaran Mesin",
+          "url": "https://www.youtube.com/watch?v=OeU5m6vRyCk",
+          "type": "Video"
+        },
+        "video_training_data_and_bias/csd/2023": {
+          "name": "Video: Data Pelatihan dan Bias",
+          "type": "Video"
+        },
+        "make_a_recommendation/csd/2023": {
+          "type": "Penelaahan Sejawat"
+        },
+        "make_a_recommendation_1/csd/2023": {
+          "type": "Rubrik"
+        },
+        "make_a_recommendation_2/csd/2023": {
+          "type": "Panduan Proyek"
+        },
+        "project_-_make_a_recommendation/csd/2023": {
+          "name": "Proyek - Membuat Rekomendasi",
+          "type": "Slide"
+        },
+        "physical_design_template/csd/2023": {
+          "type": "Sumber Daya"
+        },
+        "physical_designs_1/csd/2023": {
+          "type": "Slide"
+        },
+        "circuit_playground/csd/2023": {
+          "type": "Sumber Daya"
+        },
+        "circuits_and_logic/csd/2023": {
+          "type": "Video"
+        },
+        "physical_output/csd/2023": {
+          "type": "Sumber Daya"
+        },
+        "the_circuit_playground/csd/2023": {
+          "name": "Sirkuit Bermain Anak",
+          "type": "Slide"
+        },
+        "designing_screens_with_code/csd/2023": {
+          "name": "Perancangan Layar dengan Kode",
+          "type": "Sumber Daya"
+        },
+        "updating_screen_elements/csd/2023": {
+          "type": "Slide"
+        },
+        "board_events/csd/2023": {
+          "name": "Event Papan",
+          "type": "Sumber Daya"
+        },
+        "board_events_1/csd/2023": {
+          "name": "Event Papan",
+          "type": "Slide"
+        },
+        "physical_input/csd/2023": {
+          "name": "Input Fisik",
+          "type": "Sumber Daya"
+        },
+        "the_counter_pattern/csd/2023": {
+          "type": "Video"
+        },
+        "if_statements_1/csd/2023": {
+          "type": "Video"
+        },
+        "the_counter_pattern_1/csd/2023": {
+          "type": "Sumber Daya"
+        },
+        "variables_and_if_statements/csd/2023": {
+          "type": "Slide"
+        },
+        "mini-project_field_collector_app/csd/2023": {
+          "type": "Slide"
+        },
+        "rubric_-_field_collector_app/csd/2023": {
+          "type": "Rubrik"
+        },
+        "color_leds/csd/2023": {
+          "name": "LED Berwarna",
+          "type": "Slide"
+        },
+        "color_lights/csd/2023": {
+          "type": "Sumber Daya"
+        },
+        "getting_screen_inputs/csd/2023": {
+          "type": "Slide"
+        },
+        "taking_input_with_getproperty/csd/2023": {
+          "type": "Sumber Daya"
+        },
+        "combining_inputs_and_outputs/csd/2023": {
+          "type": "Slide"
+        },
+        "input_output_devices/csd/2023": {
+          "type": "Video"
+        },
+        "peer_review_-_human_device_interaction/csd/2023": {
+          "type": "Sumber Daya"
+        },
+        "project_human_device_interaction/csd/2023": {
+          "type": "Slide"
+        },
+        "rubric_-_human_device_interaction/csd/2023": {
+          "type": "Rubrik"
+        },
+        "analog_sensors/csd/2023": {
+          "type": "Sumber Daya"
+        },
+        "board_sensors/csd/2023": {
+          "type": "Slide"
+        },
+        "changing_sensor_scale/csd/2023": {
+          "type": "Sumber Daya"
+        },
+        "date_and_change_events/csd/2023": {
+          "type": "Sumber Daya"
+        },
+        "accelerometer/csd/2023": {
+          "name": "Akselerometer",
+          "type": "Slide"
+        },
+        "accelerometer_events/csd/2023": {
+          "name": "Accelerometer Event",
+          "type": "Sumber Daya"
+        },
+        "the_accelerometer/csd/2023": {
+          "type": "Sumber Daya"
+        },
+        "arrays/csd/2023": {
+          "name": "Array",
+          "type": "Sumber Daya"
+        },
+        "introduction_to_arrays/csd/2023": {
+          "name": "Pengenalan Array",
+          "type": "Video"
+        },
+        "making_music/csd/2023": {
+          "name": "Membuat musik",
+          "type": "Slide"
+        },
+        "modifying_arrays/csd/2023": {
+          "type": "Sumber Daya"
+        },
+        "playing_notes/csd/2023": {
+          "name": "Catatan Permainan",
+          "type": "Sumber Daya"
+        },
+        "producing_output/csd/2023": {
+          "type": "Sumber Daya"
+        },
+        "functions_with_parameters/csd/2023": {
+          "name": "Fungsi dengan parameter",
+          "type": "Video"
+        },
+        "mini-project_interactive_art/csd/2023": {
+          "type": "Slide"
+        },
+        "student_example_projects/csd/2023": {
+          "type": "Sumber Daya"
+        },
+        "student_rubric_-_interactive_art/csd/2023": {
+          "type": "Rubrik"
+        },
+        "circuits_and_leds/csd/2023": {
+          "type": "Sumber Daya"
+        },
+        "physical_outputs_and_leds/csd/2023": {
+          "type": "Slide"
+        },
+        "circuits_and_buttons/csd/2023": {
+          "type": "Sumber Daya"
+        },
+        "physical_inputs_and_buttons/csd/2023": {
+          "type": "Slide"
+        },
+        "project_prototype_an_innovation/csd/2023": {
+          "name": "Proyek: Buat Prototipe Inovasi",
+          "type": "Slide"
+        },
+        "prototype_an_innovation/csd/2023": {
+          "type": "Rubrik"
+        },
+        "teacher_forum_1/csd/2023": {
+          "name": "Forum guru"
+        },
+        "physical_designs_2/csd/2023": {
+          "type": "Slide"
+        },
+        "introducing_the_micro_bit/csd/2023": {
+          "type": "Slide"
+        },
+        "led_planning_sheet/csd/2023": {
+          "type": "Sumber Daya"
+        },
+        "the_micro_bit_led_display/csd/2023": {
+          "type": "Sumber Daya"
+        },
+        "the_micro_bit_overview/csd/2023": {
+          "type": "Sumber Daya"
+        },
+        "updating_screen_elements_1/csd/2023": {
+          "type": "Slide"
+        },
+        "board_events_2/csd/2023": {
+          "name": "Event Papan",
+          "type": "Slide"
+        },
+        "board_events_3/csd/2023": {
+          "name": "Event Papan",
+          "type": "Sumber Daya"
+        },
+        "micro_bit_inputs/csd/2023": {
+          "type": "Sumber Daya"
+        },
+        "the_counter_pattern_2/csd/2023": {
+          "type": "Video"
+        },
+        "variables_and_if_statements_1/csd/2023": {
+          "type": "Slide"
+        },
+        "mini-project_field_collector_app_1/csd/2023": {
+          "type": "Slide"
+        },
+        "rubric_-_field_collector_app_1/csd/2023": {
+          "type": "Rubrik"
+        },
+        "getting_screen_inputs_1/csd/2023": {
+          "type": "Slide"
+        },
+        "combining_inputs_and_outputs_1/csd/2023": {
+          "type": "Slide"
+        },
+        "peer_review_-_human_device_interaction_1/csd/2023": {
+          "type": "Sumber Daya"
+        },
+        "project_human_device_interaction_1/csd/2023": {
+          "type": "Slide"
+        },
+        "rubric_-_human_device_interaction_1/csd/2023": {
+          "type": "Rubrik"
+        },
+        "board_sensors_1/csd/2023": {
+          "type": "Slide"
+        },
+        "data_change_events/csd/2023": {
+          "type": "Sumber Daya"
+        },
+        "setting_sensor_scale/csd/2023": {
+          "type": "Sumber Daya"
+        },
+        "the_micro_bit_sensors/csd/2023": {
+          "type": "Sumber Daya"
+        },
+        "accelerometer_1/csd/2023": {
+          "name": "Akselerometer",
+          "type": "Slide"
+        },
+        "accelerometer_events_1/csd/2023": {
+          "name": "Accelerometer Event",
+          "type": "Sumber Daya"
+        },
+        "the_micro_bit_accelerometer/csd/2023": {
+          "type": "Sumber Daya"
+        },
+        "functions_3/csd/2023": {
+          "name": "fungsi",
+          "type": "Slide"
+        },
+        "mini-project_interactive_pet/csd/2023": {
+          "type": "Slide"
+        },
+        "student_rubric_-_interactive_pet/csd/2023": {
+          "type": "Rubrik"
+        },
+        "external_leds_on_a_micro_bit/csd/2023": {
+          "type": "Sumber Daya"
+        },
+        "physical_outputs_and_leds_1/csd/2023": {
+          "type": "Slide"
+        },
+        "external_buttons_on_a_micro_bit/csd/2023": {
+          "type": "Sumber Daya"
+        },
+        "physical_inputs_and_buttons_1/csd/2023": {
+          "type": "Slide"
+        },
+        "project_prototype_an_innovation_1/csd/2023": {
+          "name": "Proyek: Buat Prototipe Inovasi",
+          "type": "Slide"
+        },
+        "prototype_an_innovation_2/csd/2023": {
+          "type": "Rubrik"
+        },
+        "the_problem_solving_process_4/csd/2023": {
+          "name": "Proses Pemecahan Masalah"
+        },
+        "ai_what_is_machine_learning_/csd/2023": {
+          "url": "https://www.youtube.com/watch?v=OeU5m6vRyCk",
+          "type": "Video"
+        },
+        "introduction_to_machine_learning/csd/2023": {
+          "type": "Slide"
+        },
+        "types_of_machine_learning/csd/2023": {
+          "type": "Slide"
+        },
+        "types_of_machine_learning_2/csd/2023": {
+          "type": "Kunci Jawaban"
+        },
+        "innovations_in_ai/csd/2023": {
+          "type": "Slide"
+        },
+        "innovations_in_ai_research_areas_-_student_resource/csd/2023": {
+          "type": "Sumber Daya"
+        },
+        "seeing_ai/csd/2023": {
+          "name": "Melihat AI",
+          "type": "Video"
+        },
+        "_key_patterns_in_data/csd/2023": {
+          "type": "Kunci Jawaban"
+        },
+        "finding_patterns_in_data/csd/2023": {
+          "type": "Video"
+        },
+        "patterns_in_data/csd/2023": {
+          "type": "Slide"
+        },
+        "shoe_survey/csd/2023": {
+          "type": "Sumber Daya"
+        },
+        "_key_classification_models/csd/2023": {
+          "type": "Kunci Jawaban"
+        },
+        "classification_models_1/csd/2023": {
+          "type": "Slide"
+        },
+        "fruit_veggie_cards/csd/2023": {
+          "type": "Sumber Daya"
+        },
+        "_key_training_a_model_in_ai_lab/csd/2023": {
+          "type": "Kunci Jawaban"
+        },
+        "accuracy_in_ai_lab/csd/2023": {
+          "type": "Sumber Daya"
+        },
+        "introduction_to_ai_lab/csd/2023": {
+          "name": "Pengantar Lab AI",
+          "type": "Slide"
+        },
+        "introduction_to_ai_lab_1/csd/2023": {
+          "name": "Pengantar Lab AI",
+          "type": "Video"
+        },
+        "selecting_features/csd/2023": {
+          "type": "Sumber Daya"
+        },
+        "training_and_testing_in_ai_lab/csd/2023": {
+          "name": "Pelatihan dan Pengujian di Lab AI",
+          "type": "Video"
+        },
+        "using_data_with_categorical_features/csd/2023": {
+          "type": "Sumber Daya"
+        },
+        "importing_a_model_in_app_lab/csd/2023": {
+          "type": "Sumber Daya"
+        },
+        "importing_models_in_app_lab/csd/2023": {
+          "type": "Slide"
+        },
+        "ai_training_data_bias/csd/2023": {
+          "name": "AI: Data Pelatihan & Bias",
+          "url": "https://youtu.be/x2mRoFNm22g",
+          "type": "Video"
+        },
+        "model_cards/csd/2023": {
+          "type": "Slide"
+        },
+        "_key_zoo_models/csd/2023": {
+          "type": "Kunci Jawaban"
+        },
+        "model_cards_in_ai_lab/csd/2023": {
+          "name": "Model kartu di Lab AI",
+          "type": "Video"
+        },
+        "saving_models_in_ai_lab/csd/2023": {
+          "type": "Slide"
+        },
+        "selecting_a_label/csd/2023": {
+          "type": "Sumber Daya"
+        },
+        "if-statements_in_app_lab/csd/2023": {
+          "type": "Video"
+        },
+        "model_cards_in_app_lab/csd/2023": {
+          "type": "Slide"
+        },
+        "printable_model_cards/csd/2023": {
+          "type": "Sumber Daya"
+        },
+        "_key_numerical_accuracy/csd/2023": {
+          "type": "Kunci Jawaban"
+        },
+        "_key_zombie_prediction/csd/2023": {
+          "type": "Kunci Jawaban"
+        },
+        "numerical_models/csd/2023": {
+          "type": "Slide"
+        },
+        "_key_-_numerical_data_in_ai_lab/csd/2023": {
+          "type": "Kunci Jawaban"
+        },
+        "numerical_data_in_ai_lab/csd/2023": {
+          "name": "Data Numerik di Lab AI",
+          "type": "Slide"
+        },
+        "numerical_data_in_ai_lab_1/csd/2023": {
+          "name": "Data Numerik di Lab AI"
+        },
+        "numerical_data_in_ai_lab_2/csd/2023": {
+          "name": "Data Numerik di Lab AI",
+          "type": "Video"
+        },
+        "using_data_with_numerical_features/csd/2023": {
+          "type": "Sumber Daya"
+        },
+        "customizing_apps/csd/2023": {
+          "type": "Slide"
+        },
+        "ai_code_of_ethics/csd/2023": {
+          "type": "Slide"
+        },
+        "ethics_ai_equal_access_and_algorithmic_bias/csd/2023": {
+          "type": "Video"
+        },
+        "our_ai_code_of_ethics_template_/csd/2023": {
+          "type": "Slide"
+        },
+        "create_an_ml_app/csd/2023": {
+          "type": "Rubrik"
+        },
+        "make_a_machine_learning_app/csd/2023": {
+          "type": "Slide"
+        },
+        "issue_statements/csd/2023": {
+          "type": "Slide"
+        },
+        "creating_a_survey/csd/2023": {
+          "type": "Sumber Daya"
+        },
+        "creating_a_survey_in_google_forms/csd/2023": {
+          "type": "Video"
+        },
+        "survey_planning/csd/2023": {
+          "name": "Merancang Pengumpulan Data",
+          "type": "Slide"
+        },
+        "cleaning_survey_data/csd/2023": {
+          "type": "Video"
+        },
+        "survey_data_in_ai_lab/csd/2023": {
+          "type": "Slide"
+        },
+        "view_and_download_survey_data/csd/2023": {
+          "type": "Video"
+        },
+        "troubleshooting_models/csd/2023": {
+          "type": "Slide"
+        },
+        "creating_an_app/csd/2023": {
+          "type": "Slide"
+        },
+        "_template_5_why_s/csd/2023": {
+          "type": "Sumber Daya"
+        },
+        "design_an_ai_app/csd/2023": {
+          "type": "Slide"
+        },
+        "design_an_ai_app_1/csd/2023": {
+          "type": "Rubrik"
+        },
+        "model_card_-_digital_template/csd/2023": {
+          "type": "Sumber Daya"
+        },
+        "model_card_-_printable_template/csd/2023": {
           "type": "Sumber Daya"
         },
         "all_resources/coursea/2023": {
@@ -7516,12 +8917,12 @@
           "url": "https://docs.google.com/document/d/1gQWtamQ3YBk-gJnmw_z3QWNLfzdrPyaUjS4ZbtfAvEs/view"
         },
         "how_ai_works_-_training_data_and_bias/how-ai-works/2023": {
-          "name": "Bagaimana AI Bekerja - Data Pelatihan dan Bias",
+          "name": "Cara Kerja AI - Data Latihan dan Bias",
           "url": "https://youtu.be/x2mRoFNm22g",
           "type": "Video"
         },
         "how_ai_works_-_what_is_machine_learning_/how-ai-works/2023": {
-          "name": "Bagaimana AI Bekerja - Apa itu Pembelajaran Mesin?",
+          "name": "Cara Kerja AI - Apa itu Machine Learning?",
           "url": "https://www.youtube.com/watch?v=OeU5m6vRyCk",
           "type": "Video"
         },
@@ -7530,11 +8931,11 @@
           "type": "Slide"
         },
         "_example_computer_vision_network/how-ai-works/2023": {
-          "name": "[Example] Jaringan Visi Komputer",
+          "name": "[Example] Computer Vision Network",
           "url": "https://docs.google.com/presentation/d/1zJzbHDel0uQ62usH8g_qBp5KIFMN08tEps5lXSAb3Ag/edit?usp=sharing"
         },
         "computer_vision/how-ai-works/2023": {
-          "name": "Visi Komputer",
+          "name": "Computer Vision",
           "url": "https://docs.google.com/presentation/d/1yWJnyVWPq2ut0GmUc0Z41SHxh1_w2B90qis-mo3d2OY/template/preview",
           "type": "Slide"
         },
@@ -7543,35 +8944,35 @@
           "url": "https://docs.google.com/document/d/1C7ob1lB-zKi0DSC3do9ZVFfXkHlC2xnSDI2yPFAqEY4/edit"
         },
         "how_ai_works_how_computer_vision_works/how-ai-works/2023": {
-          "name": "Bagaimana AI Bekerja: Cara Kerja Computer Vision",
+          "name": "Cara Kerja AI: Cara Kerja Computer Vision",
           "url": "https://youtu.be/2hXG8v8p0KM",
           "type": "Video"
         },
         "seven_segment_display_manipulative/how-ai-works/2023": {
-          "name": "Tampilan Tujuh Segmen Manipulatif",
+          "name": "Manipulatif Layar Seven-Segment",
           "url": "https://docs.google.com/document/d/17QzrodDqCjF2pjZvyo4coWYQbaZxuRwDrPEe20H-yBM/edit"
         },
         "what_a_neural_network_sees/how-ai-works/2023": {
-          "name": "Apa yang Dampak Jaringan Saraf",
+          "name": "Apa yang Dilihat Oleh Neural Network",
           "url": "https://www.youtube.com/watch?v=Gu0MkmynWkw",
           "type": "Video"
         },
         "how_ai_works_how_neural_networks_work/how-ai-works/2023": {
-          "name": "Bagaimana AI Bekerja: Cara Kerja Jaringan Saraf",
+          "name": "Cara Kerja AI: Cara Kerja Neural Network",
           "url": "https://youtu.be/JrXazCEACVo",
           "type": "Video"
         },
         "neural_networks/how-ai-works/2023": {
-          "name": "Jaringan Saraf",
+          "name": "Neural Networks",
           "url": "https://docs.google.com/document/d/1HA_zYssm4-s24-8on8BeL5DbzSfi7G7q-4LlywNBoCw/edit?usp=sharing"
         },
         "neural_networks_1/how-ai-works/2023": {
-          "name": "Jaringan Saraf",
+          "name": "Neural Networks",
           "url": "https://docs.google.com/presentation/d/1lj6Z3egPkfv7jKtTVNmhCSY9RKHkcw5LV7Oq_ryqDVs/template/preview",
           "type": "Slide"
         },
         "wetube_content_creators/how-ai-works/2023": {
-          "name": "Pembuat Konten WeTube",
+          "name": "Kreator Konten WeTube",
           "url": "https://docs.google.com/document/d/1z7ZO-9zKlmn3brqH7euWVMSOuzVTQOdWDgkGGukRkvc/edit?usp=sharing",
           "type": "Sumber Daya"
         },
@@ -7580,7 +8981,7 @@
           "url": "https://docs.google.com/document/d/1IIca15ohoVq2lTLNUAOqQMUT7YgsTLp8yIPfmEnLmXo/edit#heading=h.17wewdcvexo6"
         },
         "generative_llm/how-ai-works/2023": {
-          "name": "LLM generatif",
+          "name": "LLM Generatif",
           "url": "https://docs.google.com/presentation/d/10d_TM6rucYyt8DAuPVoAZ9mgt9v-zzRWcM2A7geDIp0/template/preview",
           "type": "Slide"
         },
@@ -7683,7 +9084,7 @@
           "url": "https://docs.google.com/document/d/1KKCTMHVmaUA6B8wBnzT-nHzYCQ6seJD8z-o22dYBkd8/edit?usp=sharing"
         },
         "how_ai_works_-_privacy_and_future_of_work/how-ai-works/2023": {
-          "name": "Bagaimana AI Bekerja - Privasi dan Masa Depan Pekerjaan",
+          "name": "Cara Kerja AI - Privasi dan Masa Depan Pekerjaan",
           "url": "https://youtu.be/zNxw5gJtHLc",
           "type": "Video"
         },

@@ -5602,6 +5602,37 @@
           "url": "https://www.youtube.com/watch?v=rgbZAWnOWOo",
           "type": "Video"
         },
+        "_template_ai_code_of_ethics/ai-ethics/2023": {
+          "type": "Folien"
+        },
+        "ai_code_of_ethics/ai-ethics/2023": {
+          "type": "Folien"
+        },
+        "ethics_and_ai_privacy_the_future_of_work/ai-ethics/2023": {
+          "type": "Video"
+        },
+        "character_card_individual_docs_/ai-ethics/2023": {
+          "type": "Ressource"
+        },
+        "character_cards/ai-ethics/2023": {
+          "type": "Ressource"
+        },
+        "generative_ai_activity_instructions/ai-ethics/2023": {
+          "type": "Ressource"
+        },
+        "generative_ai_news_articles/ai-ethics/2023": {
+          "type": "Ressource"
+        },
+        "group_scenarios/ai-ethics/2023": {
+          "type": "Ressource"
+        },
+        "how_ai_works_large_language_models/ai-ethics/2023": {
+          "url": "https://www.youtube.com/watch?v=X-AWdfSFCHQ",
+          "type": "Video"
+        },
+        "societal_impact_of_generative_ai/ai-ethics/2023": {
+          "type": "Folien"
+        },
         "cs_connections_landing_page/csc-adaptations/2023": {
           "name": "Landingpage für CS Connections",
           "url": "https://code.org/educate/csc",
@@ -6143,6 +6174,1382 @@
         "poem_app_example/poetry/2023": {
           "name": "Beispiel für eine Poem-App",
           "url": "https://studio.code.org/projects/poetry_hoc/j3TXDXNhz0XEsH4Xjk_rT9buBHYCplirIKtY_Pg_bYo",
+          "type": "Ressource"
+        },
+        "teacher_forum/csd/2023": {
+          "name": "Lehrer Forum"
+        },
+        "the_problem_solving_process_2/csd/2023": {
+          "name": "Der Problemlösungsprozess"
+        },
+        "intro_to_problem_solving/csd/2023": {
+          "name": "Einführung in die Problemlösung",
+          "type": "Folien"
+        },
+        "problem_solving_process/csd/2023": {
+          "name": "Problemlösungsprozess"
+        },
+        "problem_solving_process_1/csd/2023": {
+          "name": "Problemlösungsprozess",
+          "type": "Video"
+        },
+        "problem_solving_process_2/csd/2023": {
+          "name": "Problemlösungsprozess"
+        },
+        "the_problem_solving_process/csd/2023": {
+          "type": "Video"
+        },
+        "the_problem_solving_process_1/csd/2023": {
+          "name": "Der Problemlösungsprozess",
+          "type": "Folien"
+        },
+        "the_problem_solving_process_5/csd/2023": {
+          "name": "Der Problemlösungsprozess"
+        },
+        "exploring_problem_solving/csd/2023": {
+          "name": "Problemlösung erforschen",
+          "type": "Folien"
+        },
+        "solving_problems/csd/2023": {
+          "type": "Antwortschlüssel"
+        },
+        "what_is_a_computer/csd/2023": {
+          "type": "Video"
+        },
+        "what_is_a_computer_/csd/2023": {
+          "name": "Was ist ein Computer?"
+        },
+        "what_is_a_computer_1/csd/2023": {
+          "type": "Folien"
+        },
+        "input_and_output/csd/2023": {
+          "name": "Input und Output"
+        },
+        "input_and_output_1/csd/2023": {
+          "name": "Input und Output"
+        },
+        "input_and_output_2/csd/2023": {
+          "name": "Input und Output",
+          "type": "Folien"
+        },
+        "apps_with_processing_2/csd/2023": {
+          "type": "Folien"
+        },
+        "apps_with_storage_2/csd/2023": {
+          "type": "Folien"
+        },
+        "what_do_computers_do/csd/2023": {
+          "type": "Video"
+        },
+        "apps_and_problem_solving/csd/2023": {
+          "name": "Apps und Problemlösung"
+        },
+        "apps_and_problem_solving_-_student_checklist/csd/2023": {
+          "type": "Ressource"
+        },
+        "apps_and_problem_solving_1/csd/2023": {
+          "name": "Apps und Problemlösung",
+          "type": "Peer Review"
+        },
+        "apps_and_problem_solving_2/csd/2023": {
+          "name": "Apps und Problemlösung",
+          "type": "Bewertungsleitfaden"
+        },
+        "computer_science_practices/csd/2023": {
+          "type": "Reflexion"
+        },
+        "project_-_propose_an_app/csd/2023": {
+          "name": "Projekt - Eine App vorschlagen",
+          "type": "Folien"
+        },
+        "intro_to_problem_solving_newspapers_/csd/2023": {
+          "name": "Einführung in die Problembewältigung (Zeitungen)",
+          "type": "Folien"
+        },
+        "intro_to_problem_solving_spaghetti_/csd/2023": {
+          "name": "Einführung in die Problembewältigung (Spaghetti)",
+          "type": "Folien"
+        },
+        "intro_to_problem_solving_paper_towels_/csd/2023": {
+          "name": "Einführung in die Problembewältigung (Papierhandtücher)",
+          "type": "Folien"
+        },
+        "exploring_problem_solving_animals_/csd/2023": {
+          "name": "Problemlösung erforschen (Tiere)",
+          "type": "Folien"
+        },
+        "tangrams/csd/2023": {
+          "type": "Ressource"
+        },
+        "exploring_problem_solving_games_/csd/2023": {
+          "name": "Problemlösung erforschen (Spiele)",
+          "type": "Folien"
+        },
+        "_key_warm_up_word_search/csd/2023": {
+          "type": "Antwortschlüssel"
+        },
+        "_key_web_design_for_users/csd/2023": {
+          "type": "Antwortschlüssel"
+        },
+        "exploring_web_pages_2/csd/2023": {
+          "name": "Erkundung von Webseiten",
+          "type": "Folien"
+        },
+        "problem_solving_and_design/csd/2023": {
+          "type": "Ressource"
+        },
+        "web_design_template/csd/2023": {
+          "type": "Ressource"
+        },
+        "html_tags/csd/2023": {
+          "name": "HTML-Tags",
+          "type": "Ressource"
+        },
+        "intro_to_html/csd/2023": {
+          "name": "Einführung in HTML",
+          "type": "Folien"
+        },
+        "intro_to_web_lab_part_2/csd/2023": {
+          "type": "Video"
+        },
+        "pair_programming/csd/2023": {
+          "name": "Paarprogrammierung",
+          "type": "Video"
+        },
+        "video_intro_to_web_lab_part_1/csd/2023": {
+          "type": "Video"
+        },
+        "formatting_html/csd/2023": {
+          "name": "HTML-Formatierung",
+          "type": "Ressource"
+        },
+        "headings/csd/2023": {
+          "type": "Folien"
+        },
+        "headings_and_paragraphs/csd/2023": {
+          "name": "Überschriften und Absätze",
+          "type": "Ressource"
+        },
+        "lists/csd/2023": {
+          "name": "Listen",
+          "type": "Ressource"
+        },
+        "video_debugging/csd/2023": {
+          "name": "Video: Fehlersuche",
+          "type": "Video"
+        },
+        "video_pair_programming/csd/2023": {
+          "name": "Video: Paarweise Programmierung",
+          "type": "Video"
+        },
+        "html_web_page/csd/2023": {
+          "type": "Bewertungsleitfaden"
+        },
+        "html_web_page_1/csd/2023": {
+          "type": "Peer Review"
+        },
+        "html_web_page_2/csd/2023": {
+          "type": "Projektleitfaden"
+        },
+        "mini-project_html_web_page/csd/2023": {
+          "name": "Mini-Projekt: HTML-Webseite",
+          "type": "Folien"
+        },
+        "problem_solving_process_with_programming/csd/2023": {
+          "type": "Ressource"
+        },
+        "digital_footprint/csd/2023": {
+          "name": "Digitaler Fußabdruck",
+          "type": "Folien"
+        },
+        "social_sleuth/csd/2023": {
+          "name": "Sozialer Spürhund"
+        },
+        "social_sleuth_1/csd/2023": {
+          "name": "Sozialer Spürhund"
+        },
+        "intro_to_css_-_part_1/csd/2023": {
+          "name": "Einführung in CSS - Teil 1",
+          "type": "Video"
+        },
+        "intro_to_css_-_part_2/csd/2023": {
+          "name": "Einführung in CSS - Teil 2",
+          "type": "Video"
+        },
+        "style_sheets/csd/2023": {
+          "type": "Ressource"
+        },
+        "styling_text_with_css/csd/2023": {
+          "name": "Text mit CSS formatieren",
+          "type": "Folien"
+        },
+        "text_properties/csd/2023": {
+          "type": "Ressource"
+        },
+        "mini-project_your_personal_style/csd/2023": {
+          "name": "Mini-Projekt: Ihr persönlicher Stil",
+          "type": "Folien"
+        },
+        "your_personal_style/csd/2023": {
+          "type": "Bewertungsleitfaden"
+        },
+        "your_personal_style_1/csd/2023": {
+          "type": "Peer Review"
+        },
+        "your_personal_style_2/csd/2023": {
+          "type": "Projektleitfaden"
+        },
+        "creative_commons_overview/csd/2023": {
+          "type": "Video"
+        },
+        "intellectual_property/csd/2023": {
+          "name": "Geistiges Eigentum",
+          "type": "Folien"
+        },
+        "creative_commons_search/csd/2023": {
+          "name": "Creative Commons Suche",
+          "type": "Ressource"
+        },
+        "images_in_html/csd/2023": {
+          "name": "Bilder in HTML",
+          "type": "Ressource"
+        },
+        "using_images/csd/2023": {
+          "type": "Folien"
+        },
+        "websites_for_expression/csd/2023": {
+          "type": "Folien"
+        },
+        "layout_properties/csd/2023": {
+          "name": "Layout-Eigenschaften"
+        },
+        "styling_elements_with_css/csd/2023": {
+          "name": "Stilelemente mit CSS gestalten",
+          "type": "Folien"
+        },
+        "personal_web_page_-_prepare/csd/2023": {
+          "type": "Projektleitfaden"
+        },
+        "your_web_page_prepare/csd/2023": {
+          "type": "Folien"
+        },
+        "personal_web_page/csd/2023": {
+          "type": "Peer Review"
+        },
+        "personal_web_page_-_reflect/csd/2023": {
+          "type": "Projektleitfaden"
+        },
+        "personal_web_page_-_student_checklist/csd/2023": {
+          "type": "Ressource"
+        },
+        "personal_web_page_1/csd/2023": {
+          "type": "Bewertungsleitfaden"
+        },
+        "project_-_personal_web_page/csd/2023": {
+          "type": "Folien"
+        },
+        "publishing_your_website/csd/2023": {
+          "name": "Veröffentlichung deiner Website",
+          "type": "Video"
+        },
+        "websites_for_a_purpose_2/csd/2023": {
+          "type": "Folien"
+        },
+        "team_problem_solving/csd/2023": {
+          "name": "Problemlösung im Team",
+          "type": "Folien"
+        },
+        "video_managing_disagreement/csd/2023": {
+          "name": "Video: Umgang mit Meinungsverschiedenheiten",
+          "type": "Video"
+        },
+        "video_teamwork/csd/2023": {
+          "name": "Video: Teamarbeit",
+          "type": "Video"
+        },
+        "sources_and_research/csd/2023": {
+          "name": "Quellen und Forschung",
+          "type": "Folien"
+        },
+        "video_how_search_works/csd/2023": {
+          "name": "Wie Suche funktioniert",
+          "type": "Video"
+        },
+        "classes/csd/2023": {
+          "name": "Klassen",
+          "type": "Ressource"
+        },
+        "css_classes/csd/2023": {
+          "name": "CSS-Klassen",
+          "type": "Folien"
+        },
+        "plan_a_multi-page_website/csd/2023": {
+          "type": "Projektleitfaden"
+        },
+        "planning_a_multi-page_site/csd/2023": {
+          "type": "Folien"
+        },
+        "website_for_a_purpose/csd/2023": {
+          "type": "Bewertungsleitfaden"
+        },
+        "hyperlinks/csd/2023": {
+          "name": "Hyperlinks",
+          "type": "Ressource"
+        },
+        "linking_pages/csd/2023": {
+          "name": "Verknüpfung von Seiten",
+          "type": "Folien"
+        },
+        "project_-_website_for_a_purpose/csd/2023": {
+          "name": "Projekt - Website für einen Zweck",
+          "type": "Folien"
+        },
+        "peer_review_and_final_touches/csd/2023": {
+          "name": "Beurteilung durch SchulkollegInnen und letzter Schliff",
+          "type": "Folien"
+        },
+        "website_for_a_purpose_-_reflect/csd/2023": {
+          "type": "Projektleitfaden"
+        },
+        "website_for_a_purpose_1/csd/2023": {
+          "type": "Peer Review"
+        },
+        "_warm_up_word_search_key_/csd/2023": {
+          "type": "Antwortschlüssel"
+        },
+        "programming_for_a_purpose/csd/2023": {
+          "type": "Folien"
+        },
+        "animation_and_game_design_template/csd/2023": {
+          "type": "Ressource"
+        },
+        "plotting_shapes/csd/2023": {
+          "name": "Formen plotten",
+          "type": "Folien"
+        },
+        "drawing_in_game_lab/csd/2023": {
+          "name": "Zeichnen im Game Lab",
+          "type": "Folien"
+        },
+        "drawing_in_game_lab_-_part_1/csd/2023": {
+          "type": "Video"
+        },
+        "drawing_in_game_lab_-_part_2/csd/2023": {
+          "type": "Video"
+        },
+        "drawing_shapes_1/csd/2023": {
+          "type": "Ressource"
+        },
+        "shapes_and_parameters/csd/2023": {
+          "type": "Ressource"
+        },
+        "shapes_and_parameters_1/csd/2023": {
+          "type": "Folien"
+        },
+        "introduction_to_variables/csd/2023": {
+          "name": "Einführung in Variablen",
+          "type": "Video"
+        },
+        "naming_variables/csd/2023": {
+          "name": "Benennung von Variablen",
+          "type": "Ressource"
+        },
+        "variables/csd/2023": {
+          "name": "Variablen",
+          "type": "Ressource"
+        },
+        "variables_1/csd/2023": {
+          "name": "Variablen",
+          "type": "Video"
+        },
+        "variables_2/csd/2023": {
+          "name": "Variablen",
+          "type": "Folien"
+        },
+        "random_numbers/csd/2023": {
+          "name": "Zufällige Zahlen",
+          "type": "Ressource"
+        },
+        "random_numbers_1/csd/2023": {
+          "name": "Zufällige Zahlen",
+          "type": "Folien"
+        },
+        "mini-project_-_robot_faces/csd/2023": {
+          "type": "Folien"
+        },
+        "problem_solving_with_programming/csd/2023": {
+          "type": "Ressource"
+        },
+        "robot_faces/csd/2023": {
+          "type": "Bewertungsleitfaden"
+        },
+        "animation_tab/csd/2023": {
+          "type": "Ressource"
+        },
+        "introduction_to_sprites/csd/2023": {
+          "type": "Video"
+        },
+        "sprites/csd/2023": {
+          "name": "Sprites",
+          "type": "Ressource"
+        },
+        "sprites_1/csd/2023": {
+          "name": "Sprites",
+          "type": "Folien"
+        },
+        "the_animation_tab/csd/2023": {
+          "name": "Der Animations Tab",
+          "type": "Video"
+        },
+        "sprite_properties/csd/2023": {
+          "name": "Sprite Eigenschaften",
+          "type": "Ressource"
+        },
+        "sprite_properties_1/csd/2023": {
+          "name": "Sprite Eigenschaften",
+          "type": "Folien"
+        },
+        "sprite_properties_needs_updating_/csd/2023": {
+          "name": "Sprite Eigenschaften",
+          "type": "Video"
+        },
+        "text/csd/2023": {
+          "name": "Text",
+          "type": "Folien"
+        },
+        "captioned_scenes/csd/2023": {
+          "type": "Bewertungsleitfaden"
+        },
+        "mini-project_-_captioned_scenes/csd/2023": {
+          "type": "Folien"
+        },
+        "flipbook_example_-_by_marnic_bos/csd/2023": {
+          "type": "Video"
+        },
+        "introduction_to_the_draw_loop/csd/2023": {
+          "type": "Video"
+        },
+        "the_draw_loop/csd/2023": {
+          "name": "Die Zieh-Schleife",
+          "type": "Ressource"
+        },
+        "the_draw_loop_1/csd/2023": {
+          "name": "Die Zieh-Schleife",
+          "type": "Folien"
+        },
+        "sprite_movement/csd/2023": {
+          "name": "Sprite-Bewegung",
+          "type": "Video"
+        },
+        "sprite_movement_1/csd/2023": {
+          "name": "Sprite-Bewegung",
+          "type": "Folien"
+        },
+        "animated_scene/csd/2023": {
+          "type": "Bewertungsleitfaden"
+        },
+        "mini-project_-_animation/csd/2023": {
+          "type": "Folien"
+        },
+        "boolean_expressions/csd/2023": {
+          "name": "Boolesche Ausdrücke",
+          "type": "Video"
+        },
+        "booleans_and_comparison_operators/csd/2023": {
+          "type": "Ressource"
+        },
+        "conditional_statements/csd/2023": {
+          "name": "Bedingte Anweisungen",
+          "type": "Video"
+        },
+        "conditionals/csd/2023": {
+          "name": "Bedingungen",
+          "type": "Folien"
+        },
+        "if_statements/csd/2023": {
+          "type": "Ressource"
+        },
+        "keyboard_input/csd/2023": {
+          "name": "Tastatur-Eingabe",
+          "type": "Folien"
+        },
+        "if-else_statements/csd/2023": {
+          "type": "Ressource"
+        },
+        "if_else_statements/csd/2023": {
+          "name": "Wenn/Sonst Anweisungen",
+          "type": "Video"
+        },
+        "mouse_input/csd/2023": {
+          "name": "Input mit der Maus",
+          "type": "Folien"
+        },
+        "extra_code_in_challenge_levels/csd/2023": {
+          "type": "Ressource"
+        },
+        "interactive_card_-_student_checklist/csd/2023": {
+          "type": "Ressource"
+        },
+        "interactive_card_3/csd/2023": {
+          "name": "Interaktive Karte",
+          "type": "Bewertungsleitfaden"
+        },
+        "project_-_interactive_card/csd/2023": {
+          "name": "Projekt - Interaktive Karte",
+          "type": "Folien"
+        },
+        "velocity/csd/2023": {
+          "name": "Geschwindigkeit",
+          "type": "Video"
+        },
+        "velocity_1/csd/2023": {
+          "name": "Geschwindigkeit",
+          "type": "Ressource"
+        },
+        "velocity_2/csd/2023": {
+          "name": "Geschwindigkeit",
+          "type": "Folien"
+        },
+        "collision_detection/csd/2023": {
+          "name": "Kollisions-Entdeckung"
+        },
+        "collision_detection_1/csd/2023": {
+          "name": "Kollisions-Entdeckung",
+          "type": "Ressource"
+        },
+        "collision_detection_2/csd/2023": {
+          "name": "Kollisions-Entdeckung",
+          "type": "Folien"
+        },
+        "mini-project_-_side_scroller/csd/2023": {
+          "type": "Folien"
+        },
+        "side_scroller/csd/2023": {
+          "name": "Side-Scroller",
+          "type": "Bewertungsleitfaden"
+        },
+        "side_scroller_1/csd/2023": {
+          "name": "Side-Scroller"
+        },
+        "complex_sprite_movement/csd/2023": {
+          "name": "Komplexe Sprite-Bewegung",
+          "type": "Folien"
+        },
+        "velocity_and_the_counter_pattern/csd/2023": {
+          "name": "Geschwindigkeit und das Zählermuster",
+          "type": "Ressource"
+        },
+        "collisions/csd/2023": {
+          "name": "Kollisionen",
+          "type": "Folien"
+        },
+        "flyer_game/csd/2023": {
+          "name": "Flyer-Spiel",
+          "type": "Bewertungsleitfaden"
+        },
+        "flyer_game_1/csd/2023": {
+          "name": "Flyer-Spiel"
+        },
+        "mini-project_-_flyer_game/csd/2023": {
+          "type": "Folien"
+        },
+        "functions/csd/2023": {
+          "name": "Funktionen",
+          "type": "Video"
+        },
+        "functions_1/csd/2023": {
+          "name": "Funktionen",
+          "type": "Ressource"
+        },
+        "functions_2/csd/2023": {
+          "name": "Funktionen",
+          "type": "Folien"
+        },
+        "the_game_design_process/csd/2023": {
+          "name": "Der Prozess eines Spielentwurfs",
+          "type": "Folien"
+        },
+        "using_the_game_design_process/csd/2023": {
+          "name": "Verwendung des Prozesses eines Spielentwurfs",
+          "type": "Folien"
+        },
+        "make_your_own_game_-_student_checklist/csd/2023": {
+          "type": "Ressource"
+        },
+        "make_your_own_game_3/csd/2023": {
+          "type": "Bewertungsleitfaden"
+        },
+        "project_-_design_a_game/csd/2023": {
+          "name": "Projekt Ein Spiel erstellen",
+          "type": "Folien"
+        },
+        "designing_with_empathy_2/csd/2023": {
+          "type": "Folien"
+        },
+        "understanding_your_user/csd/2023": {
+          "name": "Den Benutzer verstehen",
+          "type": "Folien"
+        },
+        "the_design_thinking_process/csd/2023": {
+          "type": "Video"
+        },
+        "user_centered_design_-_define_and_prepare/csd/2023": {
+          "type": "Folien"
+        },
+        "user_centered_design_-_try_and_reflect/csd/2023": {
+          "type": "Folien"
+        },
+        "user_interface_screens/csd/2023": {
+          "type": "Ressource"
+        },
+        "user_interfaces/csd/2023": {
+          "name": "Benutzeroberflächen",
+          "type": "Folien"
+        },
+        "feedback_and_testing/csd/2023": {
+          "name": "Feedback und Tests",
+          "type": "Folien"
+        },
+        "prototype_feedback/csd/2023": {
+          "type": "Ressource"
+        },
+        "example_user_interviews/csd/2023": {
+          "type": "Ressource"
+        },
+        "identifying_user_needs/csd/2023": {
+          "name": "Identifizieren von Benutzerbedürfnissen",
+          "type": "Folien"
+        },
+        "paper_prototypes/csd/2023": {
+          "name": "Papier-Prototypen",
+          "type": "Bewertungsleitfaden"
+        },
+        "project_-_paper_prototype/csd/2023": {
+          "name": "Projekt - Papier-Prototyp",
+          "type": "Folien"
+        },
+        "designing_apps_for_good/csd/2023": {
+          "name": "Apps für gute Zwecke entwickeln",
+          "type": "Folien"
+        },
+        "market_research/csd/2023": {
+          "name": "Marktforschung"
+        },
+        "market_research_-_research_areas/csd/2023": {
+          "type": "Ressource"
+        },
+        "market_research_1/csd/2023": {
+          "name": "Marktforschung"
+        },
+        "market_research_2/csd/2023": {
+          "name": "Marktforschung",
+          "type": "Folien"
+        },
+        "exploring_ui_elements/csd/2023": {
+          "type": "Folien"
+        },
+        "build_a_paper_prototype/csd/2023": {
+          "type": "Folien"
+        },
+        "design_mode/csd/2023": {
+          "name": "Designmodus",
+          "type": "Ressource"
+        },
+        "design_mode_elements/csd/2023": {
+          "name": "Entwurfsmodus-Elemente",
+          "type": "Ressource"
+        },
+        "prototype_testing/csd/2023": {
+          "name": "Testen von Prototypen",
+          "type": "Folien"
+        },
+        "what_s_for_lunch_testing/csd/2023": {
+          "type": "Video"
+        },
+        "design_mode_in_app_lab/csd/2023": {
+          "type": "Folien"
+        },
+        "intro_to_design_mode/csd/2023": {
+          "name": "Einführung in den Designmodus",
+          "type": "Video"
+        },
+        "model_screen_design/csd/2023": {
+          "type": "Ressource"
+        },
+        "build_a_digital_prototype/csd/2023": {
+          "type": "Folien"
+        },
+        "events_in_app_lab/csd/2023": {
+          "type": "Video"
+        },
+        "events_in_app_lab_1/csd/2023": {
+          "type": "Video"
+        },
+        "events_in_app_lab_2/csd/2023": {
+          "type": "Folien"
+        },
+        "changing_screens/csd/2023": {
+          "type": "Ressource"
+        },
+        "importing_screens/csd/2023": {
+          "name": "Bildschirme Importieren",
+          "type": "Ressource"
+        },
+        "linking_prototype_screens/csd/2023": {
+          "type": "Folien"
+        },
+        "multi-screen_apps/csd/2023": {
+          "name": "Mehrbildschirm-Apps",
+          "type": "Ressource"
+        },
+        "responding_to_user_input/csd/2023": {
+          "type": "Ressource"
+        },
+        "testing_the_app/csd/2023": {
+          "name": "Testen der App",
+          "type": "Folien"
+        },
+        "bugs_and_features_2/csd/2023": {
+          "type": "Folien"
+        },
+        "updating_your_prototype_1/csd/2023": {
+          "type": "Folien"
+        },
+        "app_presentation/csd/2023": {
+          "name": "App-Präsentation",
+          "type": "Bewertungsleitfaden"
+        },
+        "app_presentation_1/csd/2023": {
+          "name": "App-Präsentation"
+        },
+        "project_-_app_presentation/csd/2023": {
+          "name": "Projekt - App-Präsentation",
+          "type": "Folien"
+        },
+        "meals_data/csd/2023": {
+          "type": "Ressource"
+        },
+        "representation_matters/csd/2023": {
+          "name": "Darstellung ist wichtig"
+        },
+        "representation_matters_1/csd/2023": {
+          "name": "Darstellung ist wichtig"
+        },
+        "representation_matters_2/csd/2023": {
+          "name": "Darstellung ist wichtig",
+          "type": "Folien"
+        },
+        "patterns_and_representation/csd/2023": {
+          "name": "Muster und Darstellung",
+          "type": "Folien"
+        },
+        "representing_information/csd/2023": {
+          "name": "Darstellung von Informationen"
+        },
+        "ascii_and_binary_representation/csd/2023": {
+          "name": "ASCII- und Binärdarstellung",
+          "type": "Folien"
+        },
+        "ascii_challenges_1/csd/2023": {
+          "type": "Antwortschlüssel"
+        },
+        "ascii_text/csd/2023": {
+          "type": "Ressource"
+        },
+        "representing_images/csd/2023": {
+          "name": "Darstellung von Bildern",
+          "type": "Folien"
+        },
+        "binary_and_data/csd/2023": {
+          "name": "Binär und Daten",
+          "type": "Video"
+        },
+        "representing_numbers/csd/2023": {
+          "name": "Zahlendarstellung"
+        },
+        "representing_numbers_1/csd/2023": {
+          "name": "Zahlendarstellung",
+          "type": "Folien"
+        },
+        "combining_representations/csd/2023": {
+          "name": "Kombinierte Darstellungen",
+          "type": "Folien"
+        },
+        "keeping_data_secret/csd/2023": {
+          "name": "Daten geheim halten",
+          "type": "Folien"
+        },
+        "medical_records_1/csd/2023": {
+          "type": "Antwortschlüssel"
+        },
+        "create_a_representation_2/csd/2023": {
+          "type": "Bewertungsleitfaden"
+        },
+        "create_a_representation_3/csd/2023": {
+          "type": "Folien"
+        },
+        "problem_solving_with_data_2/csd/2023": {
+          "type": "Folien"
+        },
+        "structuring_data/csd/2023": {
+          "name": "Daten strukturieren"
+        },
+        "structuring_data_1/csd/2023": {
+          "name": "Daten strukturieren",
+          "type": "Folien"
+        },
+        "interpreting_data/csd/2023": {
+          "name": "Daten interpretieren"
+        },
+        "interpreting_data_1/csd/2023": {
+          "name": "Daten interpretieren"
+        },
+        "interpreting_data_2/csd/2023": {
+          "name": "Daten interpretieren",
+          "type": "Ressource"
+        },
+        "interpreting_data_3/csd/2023": {
+          "name": "Daten interpretieren",
+          "type": "Folien"
+        },
+        "making_decisions_with_data_1/csd/2023": {
+          "name": "Entscheidungen mit Daten"
+        },
+        "making_decisions_with_data_2/csd/2023": {
+          "name": "Entscheidungen mit Daten",
+          "type": "Folien"
+        },
+        "problem_solving_process_with_data/csd/2023": {
+          "type": "Ressource"
+        },
+        "automating_data_decisions/csd/2023": {
+          "name": "Automatisierung von Datenentscheidungen"
+        },
+        "automating_data_decisions_1/csd/2023": {
+          "name": "Automatisierung von Datenentscheidungen",
+          "type": "Ressource"
+        },
+        "automating_data_decisions_2/csd/2023": {
+          "name": "Automatisierung von Datenentscheidungen"
+        },
+        "automating_data_decisions_3/csd/2023": {
+          "name": "Automatisierung von Datenentscheidungen",
+          "type": "Folien"
+        },
+        "amazon_and_data/csd/2023": {
+          "type": "Video"
+        },
+        "data_in_the_real_world/csd/2023": {
+          "name": "Daten in der Praxis"
+        },
+        "data_in_the_real_world_1/csd/2023": {
+          "name": "Daten in der Praxis"
+        },
+        "netflix_and_data/csd/2023": {
+          "type": "Video"
+        },
+        "problem_solving_with_big_data/csd/2023": {
+          "name": "Problemlösung mit Big Data",
+          "type": "Folien"
+        },
+        "waze_and_data/csd/2023": {
+          "type": "Video"
+        },
+        "data_and_machine_learning/csd/2023": {
+          "type": "Folien"
+        },
+        "video_impact_on_society/csd/2023": {
+          "name": "Video: Auswirkungen auf die Gesellschaft",
+          "type": "Video"
+        },
+        "video_machine_learning/csd/2023": {
+          "name": "Video: Maschinelles Lernen",
+          "url": "https://www.youtube.com/watch?v=OeU5m6vRyCk",
+          "type": "Video"
+        },
+        "video_training_data_and_bias/csd/2023": {
+          "name": "Video: Trainingsdaten und Verzerrungen",
+          "type": "Video"
+        },
+        "make_a_recommendation/csd/2023": {
+          "type": "Peer Review"
+        },
+        "make_a_recommendation_1/csd/2023": {
+          "type": "Bewertungsleitfaden"
+        },
+        "make_a_recommendation_2/csd/2023": {
+          "type": "Projektleitfaden"
+        },
+        "project_-_make_a_recommendation/csd/2023": {
+          "type": "Folien"
+        },
+        "physical_design_template/csd/2023": {
+          "type": "Ressource"
+        },
+        "physical_designs_1/csd/2023": {
+          "type": "Folien"
+        },
+        "circuit_playground/csd/2023": {
+          "type": "Ressource"
+        },
+        "circuits_and_logic/csd/2023": {
+          "type": "Video"
+        },
+        "physical_output/csd/2023": {
+          "type": "Ressource"
+        },
+        "the_circuit_playground/csd/2023": {
+          "name": "Der Circuit Playground",
+          "type": "Folien"
+        },
+        "designing_screens_with_code/csd/2023": {
+          "name": "Bildschirme mit Code gestalten",
+          "type": "Ressource"
+        },
+        "updating_screen_elements/csd/2023": {
+          "type": "Folien"
+        },
+        "board_events/csd/2023": {
+          "name": "Platinen-Ereignisse",
+          "type": "Ressource"
+        },
+        "board_events_1/csd/2023": {
+          "name": "Platinen-Ereignisse",
+          "type": "Folien"
+        },
+        "physical_input/csd/2023": {
+          "name": "Physischer Input",
+          "type": "Ressource"
+        },
+        "the_counter_pattern/csd/2023": {
+          "type": "Video"
+        },
+        "if_statements_1/csd/2023": {
+          "type": "Video"
+        },
+        "the_counter_pattern_1/csd/2023": {
+          "type": "Ressource"
+        },
+        "variables_and_if_statements/csd/2023": {
+          "type": "Folien"
+        },
+        "mini-project_field_collector_app/csd/2023": {
+          "type": "Folien"
+        },
+        "rubric_-_field_collector_app/csd/2023": {
+          "type": "Bewertungsleitfaden"
+        },
+        "color_leds/csd/2023": {
+          "name": "Farbige LEDs",
+          "type": "Folien"
+        },
+        "color_lights/csd/2023": {
+          "type": "Ressource"
+        },
+        "getting_screen_inputs/csd/2023": {
+          "type": "Folien"
+        },
+        "taking_input_with_getproperty/csd/2023": {
+          "type": "Ressource"
+        },
+        "combining_inputs_and_outputs/csd/2023": {
+          "type": "Folien"
+        },
+        "input_output_devices/csd/2023": {
+          "type": "Video"
+        },
+        "peer_review_-_human_device_interaction/csd/2023": {
+          "type": "Ressource"
+        },
+        "project_human_device_interaction/csd/2023": {
+          "type": "Folien"
+        },
+        "rubric_-_human_device_interaction/csd/2023": {
+          "type": "Bewertungsleitfaden"
+        },
+        "analog_sensors/csd/2023": {
+          "name": "Analoge Sensoren",
+          "type": "Ressource"
+        },
+        "board_sensors/csd/2023": {
+          "type": "Folien"
+        },
+        "changing_sensor_scale/csd/2023": {
+          "type": "Ressource"
+        },
+        "date_and_change_events/csd/2023": {
+          "type": "Ressource"
+        },
+        "accelerometer/csd/2023": {
+          "name": "Beschleunigungssensor",
+          "type": "Folien"
+        },
+        "accelerometer_events/csd/2023": {
+          "name": "Ereignisse mit dem Beschleunigungsmesser",
+          "type": "Ressource"
+        },
+        "the_accelerometer/csd/2023": {
+          "name": "Der Beschleunigungssensor",
+          "type": "Ressource"
+        },
+        "arrays/csd/2023": {
+          "name": "Arrays",
+          "type": "Ressource"
+        },
+        "introduction_to_arrays/csd/2023": {
+          "name": "Einführung in Arrays",
+          "type": "Video"
+        },
+        "making_music/csd/2023": {
+          "name": "Musik machen",
+          "type": "Folien"
+        },
+        "modifying_arrays/csd/2023": {
+          "type": "Ressource"
+        },
+        "playing_notes/csd/2023": {
+          "name": "Noten abspielen",
+          "type": "Ressource"
+        },
+        "producing_output/csd/2023": {
+          "type": "Ressource"
+        },
+        "functions_with_parameters/csd/2023": {
+          "name": "Funktionen mit Parametern",
+          "type": "Video"
+        },
+        "mini-project_interactive_art/csd/2023": {
+          "type": "Folien"
+        },
+        "student_example_projects/csd/2023": {
+          "type": "Ressource"
+        },
+        "student_rubric_-_interactive_art/csd/2023": {
+          "type": "Bewertungsleitfaden"
+        },
+        "circuits_and_leds/csd/2023": {
+          "name": "Schaltungen und LEDs",
+          "type": "Ressource"
+        },
+        "physical_outputs_and_leds/csd/2023": {
+          "type": "Folien"
+        },
+        "circuits_and_buttons/csd/2023": {
+          "type": "Ressource"
+        },
+        "physical_inputs_and_buttons/csd/2023": {
+          "type": "Folien"
+        },
+        "project_prototype_an_innovation/csd/2023": {
+          "name": "Projekt: Prototyp einer Innovation",
+          "type": "Folien"
+        },
+        "prototype_an_innovation/csd/2023": {
+          "type": "Bewertungsleitfaden"
+        },
+        "teacher_forum_1/csd/2023": {
+          "name": "Lehrer Forum"
+        },
+        "physical_designs_2/csd/2023": {
+          "type": "Folien"
+        },
+        "introducing_the_micro_bit/csd/2023": {
+          "type": "Folien"
+        },
+        "led_planning_sheet/csd/2023": {
+          "type": "Ressource"
+        },
+        "the_micro_bit_led_display/csd/2023": {
+          "type": "Ressource"
+        },
+        "the_micro_bit_overview/csd/2023": {
+          "type": "Ressource"
+        },
+        "updating_screen_elements_1/csd/2023": {
+          "type": "Folien"
+        },
+        "board_events_2/csd/2023": {
+          "name": "Platinen-Ereignisse",
+          "type": "Folien"
+        },
+        "board_events_3/csd/2023": {
+          "name": "Platinen-Ereignisse",
+          "type": "Ressource"
+        },
+        "micro_bit_inputs/csd/2023": {
+          "type": "Ressource"
+        },
+        "the_counter_pattern_2/csd/2023": {
+          "type": "Video"
+        },
+        "variables_and_if_statements_1/csd/2023": {
+          "type": "Folien"
+        },
+        "mini-project_field_collector_app_1/csd/2023": {
+          "type": "Folien"
+        },
+        "rubric_-_field_collector_app_1/csd/2023": {
+          "type": "Bewertungsleitfaden"
+        },
+        "getting_screen_inputs_1/csd/2023": {
+          "type": "Folien"
+        },
+        "combining_inputs_and_outputs_1/csd/2023": {
+          "type": "Folien"
+        },
+        "peer_review_-_human_device_interaction_1/csd/2023": {
+          "type": "Ressource"
+        },
+        "project_human_device_interaction_1/csd/2023": {
+          "type": "Folien"
+        },
+        "rubric_-_human_device_interaction_1/csd/2023": {
+          "type": "Bewertungsleitfaden"
+        },
+        "board_sensors_1/csd/2023": {
+          "type": "Folien"
+        },
+        "data_change_events/csd/2023": {
+          "type": "Ressource"
+        },
+        "setting_sensor_scale/csd/2023": {
+          "type": "Ressource"
+        },
+        "the_micro_bit_sensors/csd/2023": {
+          "type": "Ressource"
+        },
+        "accelerometer_1/csd/2023": {
+          "name": "Beschleunigungssensor",
+          "type": "Folien"
+        },
+        "accelerometer_events_1/csd/2023": {
+          "name": "Ereignisse mit dem Beschleunigungsmesser",
+          "type": "Ressource"
+        },
+        "the_micro_bit_accelerometer/csd/2023": {
+          "type": "Ressource"
+        },
+        "functions_3/csd/2023": {
+          "name": "Funktionen",
+          "type": "Folien"
+        },
+        "mini-project_interactive_pet/csd/2023": {
+          "type": "Folien"
+        },
+        "student_rubric_-_interactive_pet/csd/2023": {
+          "type": "Bewertungsleitfaden"
+        },
+        "external_leds_on_a_micro_bit/csd/2023": {
+          "type": "Ressource"
+        },
+        "physical_outputs_and_leds_1/csd/2023": {
+          "type": "Folien"
+        },
+        "external_buttons_on_a_micro_bit/csd/2023": {
+          "type": "Ressource"
+        },
+        "physical_inputs_and_buttons_1/csd/2023": {
+          "type": "Folien"
+        },
+        "project_prototype_an_innovation_1/csd/2023": {
+          "name": "Projekt: Prototyp einer Innovation",
+          "type": "Folien"
+        },
+        "prototype_an_innovation_2/csd/2023": {
+          "type": "Bewertungsleitfaden"
+        },
+        "the_problem_solving_process_4/csd/2023": {
+          "name": "Der Problemlösungsprozess"
+        },
+        "ai_what_is_machine_learning_/csd/2023": {
+          "url": "https://www.youtube.com/watch?v=OeU5m6vRyCk",
+          "type": "Video"
+        },
+        "introduction_to_machine_learning/csd/2023": {
+          "type": "Folien"
+        },
+        "types_of_machine_learning/csd/2023": {
+          "type": "Folien"
+        },
+        "types_of_machine_learning_2/csd/2023": {
+          "type": "Antwortschlüssel"
+        },
+        "innovations_in_ai/csd/2023": {
+          "type": "Folien"
+        },
+        "innovations_in_ai_research_areas_-_student_resource/csd/2023": {
+          "type": "Ressource"
+        },
+        "seeing_ai/csd/2023": {
+          "name": "KI sehen",
+          "type": "Video"
+        },
+        "_key_patterns_in_data/csd/2023": {
+          "type": "Antwortschlüssel"
+        },
+        "finding_patterns_in_data/csd/2023": {
+          "type": "Video"
+        },
+        "patterns_in_data/csd/2023": {
+          "type": "Folien"
+        },
+        "shoe_survey/csd/2023": {
+          "type": "Ressource"
+        },
+        "_key_classification_models/csd/2023": {
+          "type": "Antwortschlüssel"
+        },
+        "classification_models_1/csd/2023": {
+          "type": "Folien"
+        },
+        "fruit_veggie_cards/csd/2023": {
+          "type": "Ressource"
+        },
+        "_key_training_a_model_in_ai_lab/csd/2023": {
+          "type": "Antwortschlüssel"
+        },
+        "accuracy_in_ai_lab/csd/2023": {
+          "type": "Ressource"
+        },
+        "introduction_to_ai_lab/csd/2023": {
+          "name": "Einführung in das KI-Spielelabor",
+          "type": "Folien"
+        },
+        "introduction_to_ai_lab_1/csd/2023": {
+          "name": "Einführung in das KI-Spielelabor",
+          "type": "Video"
+        },
+        "selecting_features/csd/2023": {
+          "type": "Ressource"
+        },
+        "training_and_testing_in_ai_lab/csd/2023": {
+          "name": "Training und Testen im KI-Labor",
+          "type": "Video"
+        },
+        "using_data_with_categorical_features/csd/2023": {
+          "type": "Ressource"
+        },
+        "importing_a_model_in_app_lab/csd/2023": {
+          "type": "Ressource"
+        },
+        "importing_models_in_app_lab/csd/2023": {
+          "type": "Folien"
+        },
+        "ai_training_data_bias/csd/2023": {
+          "name": "AI: Trainingdaten & Voreingenommenheit",
+          "url": "https://youtu.be/x2mRoFNm22g",
+          "type": "Video"
+        },
+        "model_cards/csd/2023": {
+          "type": "Folien"
+        },
+        "_key_zoo_models/csd/2023": {
+          "type": "Antwortschlüssel"
+        },
+        "model_cards_in_ai_lab/csd/2023": {
+          "name": "Modellkarten im KI Labor",
+          "type": "Video"
+        },
+        "saving_models_in_ai_lab/csd/2023": {
+          "type": "Folien"
+        },
+        "selecting_a_label/csd/2023": {
+          "type": "Ressource"
+        },
+        "if-statements_in_app_lab/csd/2023": {
+          "type": "Video"
+        },
+        "model_cards_in_app_lab/csd/2023": {
+          "type": "Folien"
+        },
+        "printable_model_cards/csd/2023": {
+          "type": "Ressource"
+        },
+        "_key_numerical_accuracy/csd/2023": {
+          "type": "Antwortschlüssel"
+        },
+        "_key_zombie_prediction/csd/2023": {
+          "type": "Antwortschlüssel"
+        },
+        "numerical_models/csd/2023": {
+          "type": "Folien"
+        },
+        "_key_-_numerical_data_in_ai_lab/csd/2023": {
+          "type": "Antwortschlüssel"
+        },
+        "numerical_data_in_ai_lab/csd/2023": {
+          "name": "Numerische Daten im KI-Labor",
+          "type": "Folien"
+        },
+        "numerical_data_in_ai_lab_1/csd/2023": {
+          "name": "Numerische Daten im KI-Labor"
+        },
+        "numerical_data_in_ai_lab_2/csd/2023": {
+          "name": "Numerische Daten im KI-Labor",
+          "type": "Video"
+        },
+        "using_data_with_numerical_features/csd/2023": {
+          "type": "Ressource"
+        },
+        "customizing_apps/csd/2023": {
+          "type": "Folien"
+        },
+        "ai_code_of_ethics/csd/2023": {
+          "type": "Folien"
+        },
+        "ethics_ai_equal_access_and_algorithmic_bias/csd/2023": {
+          "type": "Video"
+        },
+        "our_ai_code_of_ethics_template_/csd/2023": {
+          "type": "Folien"
+        },
+        "create_an_ml_app/csd/2023": {
+          "type": "Bewertungsleitfaden"
+        },
+        "make_a_machine_learning_app/csd/2023": {
+          "type": "Folien"
+        },
+        "issue_statements/csd/2023": {
+          "type": "Folien"
+        },
+        "creating_a_survey/csd/2023": {
+          "type": "Ressource"
+        },
+        "creating_a_survey_in_google_forms/csd/2023": {
+          "type": "Video"
+        },
+        "survey_planning/csd/2023": {
+          "name": "Entwurf einer Datenerhebung",
+          "type": "Folien"
+        },
+        "cleaning_survey_data/csd/2023": {
+          "type": "Video"
+        },
+        "survey_data_in_ai_lab/csd/2023": {
+          "type": "Folien"
+        },
+        "view_and_download_survey_data/csd/2023": {
+          "type": "Video"
+        },
+        "troubleshooting_models/csd/2023": {
+          "type": "Folien"
+        },
+        "creating_an_app/csd/2023": {
+          "type": "Folien"
+        },
+        "_template_5_why_s/csd/2023": {
+          "type": "Ressource"
+        },
+        "design_an_ai_app/csd/2023": {
+          "type": "Folien"
+        },
+        "design_an_ai_app_1/csd/2023": {
+          "type": "Bewertungsleitfaden"
+        },
+        "model_card_-_digital_template/csd/2023": {
+          "type": "Ressource"
+        },
+        "model_card_-_printable_template/csd/2023": {
           "type": "Ressource"
         },
         "all_resources/coursea/2023": {

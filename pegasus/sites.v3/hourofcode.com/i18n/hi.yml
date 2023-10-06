@@ -286,6 +286,10 @@ hi:
   call_to_action_register_early_access: जल्दी पहुंचने के लिए रजिस्टर करें
   call_to_action_open_positions: ओपन पोजीशन देखें
   call_to_action_get_guide: गाइड प्राप्त करें
+  call_to_action_donate_to_cdo: Code.org को दान करें
+  call_to_action_start_fundraiser: फ़ंडरेज़र शुरू करें
+  call_to_action_view_donation_policy: दान नीति देखें
+  call_to_action_view_donate_bitpay: BitPay के साथ दान करें
   aria_label_call_to_action_afe: Amazon फ्यूचर इंजीनियर के बारे में और जानें
   aria_label_call_to_action_teaching_csf: टीचिंग कंप्यूटर साइंस फंडामेंटल्स प्रोफेशनल
     लर्निंग प्रोग्राम शुरू करें
@@ -393,6 +397,7 @@ hi:
   curriculum_name_csp: कंप्यूटर विज्ञान के सिद्धांत
   curriculum_name_csc: कंप्यूटर विज्ञान कनेक्शन
   curriculum_name_csa: कंप्यूटर विज्ञान A
+  curriculum_name_csa_ai: सॉफ्टवेयर इंजीनियरिंग और कंप्यूटर विज़न
   curriculum_name_csc_02: कोई भी CS कनेक्शन मॉड्यूल
   curriculum_name_ai: "  कृत्रिम बुद्धि और मशीन प्रशिक्षण  "
   curriculum_name_artificial_intelligence: आर्टिफिशियल इंटेलिजेंस (AI)
@@ -467,6 +472,12 @@ hi:
     सिस्टम बनाने से परिचित कराता है।
   curriculum_desc_csp: 'नि: शुल्क, AP® CSP समर्थित, हाई स्कूल परिचयात्मक पाठ्यक्रम
     जो छात्रों को कंप्यूटर विज्ञान की मूलभूत अवधारणाओं से परिचित कराता है।'
+  curriculum_desc_csa_ai_long: 'यह दो-अध्याय पोस्ट-एपी सीएसए मॉड्यूल हाई स्कूल के
+    छात्रों को GitHub और GitHub Copilot सहित पेशेवर सॉफ़्टवेयर डेवलपमेंट टूल के साथ
+    व्यावहारिक अनुभव प्रदान करता है, और उन्हें कंप्यूटर विज़न प्रोग्राम विकसित करने
+    के लिए वास्तविक दुनिया के कौशल प्रदान करता है। '
+  curriculum_desc_csa_ai_short: यह पोस्ट-AP® CSA मॉड्यूल हाई स्कूल के छात्रों को पेशेवर
+    सॉफ़्टवेयर डेवलपमेंट टूल के साथ व्यावहारिक अनुभव प्रदान करता है।
   collection_hardware: हार्डवेयर पर ध्यान दें
   collection_hardware_desc: समस्याओं को हल करने के लिए छात्रों को डेटा और भौतिक उपकरणों
     का उपयोग करने का अधिकार देता है।
@@ -541,6 +552,7 @@ hi:
   module_duration_2_hrs: 2 घंटे
   module_duration_3_hrs: 3 घंटे
   module_duration_5_hrs: 5 घंटे
+  module_duration_5_hrs_plus: 5+ घंटे
   module_duration_8_hrs: 8 घंटे
   module_duration_20_hrs: 20 घंटे
   module_duration_35_hrs: 35 घंटे
@@ -620,6 +632,7 @@ hi:
   heading_these_lessons_will: 'ये सबक होंगे:'
   heading_explore_curriculum_catalog: पाठ्यचर्या सूची में हमारे सभी पाठ्यक्रमों का
     अन्वेषण करें
+  heading_csa_ai: AP® परीक्षा के बाद करने के लिए चीज़ों की तलाश है?
   professional_learning_section_desc: पढ़ाने की तैयारी के दौरान आपको जो सहायता चाहिए
     वह प्राप्त करें। शिक्षक इसे पसंद करते हैं, 90% से अधिक इसे अब तक का सबसे अच्छा
     व्यावसायिक विकास मानते हैं!
@@ -652,6 +665,23 @@ hi:
   support_and_questions_section_desc: Code.org के साथ शिक्षण शुरू करने के बारे में
     आपके किसी भी प्रश्न का उत्तर देने के लिए हमारी सहायता टीम यहां मौजूद है। आप हमारे
     शिक्षक मंचों पर अन्य शिक्षकों से उनके अनुभव के बारे में भी पूछ सकते हैं।
+  subscribe_form_section_title: अपडेट के लिए सब्सक्राइब करें
+  subscribe_form_section_desc_csa: Code.org के AP® Computer Science A के बारे में
+    मासिक ईमेल प्राप्त करने के लिए साइन अप करें और सीधे अपने इनबॉक्स में भेजे गए उपयोगी
+    रिमाइंडर, टिप्स और अपडेट प्राप्त करें।
+  subscribe_form_section_desc_csc: Code.org के कंप्यूटर साइंस कनेक्शन के बारे में
+    मासिक ईमेल प्राप्त करने के लिए साइन अप करें और सीधे अपने इनबॉक्स में भेजे गए उपयोगी
+    रिमाइंडर, टिप्स और अपडेट प्राप्त करें।
+  subscribe_form_section_desc_csd: Code.org की कंप्यूटर साइंस डिस्कवरी के बारे में
+    मासिक ईमेल प्राप्त करने के लिए साइन अप करें और सीधे अपने इनबॉक्स में भेजे गए उपयोगी
+    रिमाइंडर, टिप्स और अपडेट प्राप्त करें।
+  subscribe_form_section_desc_csf: Code.org के कंप्यूटर साइंस फंडामेंटल्स के बारे
+    में मासिक ईमेल प्राप्त करने के लिए साइन अप करें और सीधे अपने इनबॉक्स में भेजे
+    गए उपयोगी रिमाइंडर, टिप्स और अपडेट प्राप्त करें।
+  subscribe_form_section_desc_csp: Code.org के कंप्यूटर विज्ञान सिद्धांतों के बारे
+    में मासिक ईमेल प्राप्त करने के लिए साइन अप करें और सीधे अपने इनबॉक्स में भेजे
+    गए उपयोगी रिमाइंडर, टिप्स और अपडेट प्राप्त करें।
+  subscribe_form_section_unsubscribe: आप किसी भी समय सदस्यता समाप्त कर सकते हैं।
   blockchain_hero_heading: ब्लॉकचैन कैसे काम करता है
   blockchain_hero_desc: हमारी नई वीडियो श्रृंखला और उससे जुड़े सबक “हाउ ब्लॉकचैन वर्क्स”
     के साथ ब्लॉकचैन की दुनिया में गोता लगाएँ!
@@ -755,6 +785,9 @@ hi:
     पाठ को श्रृंखला के एक वीडियो के साथ जोड़ा जाता है, जो वीडियो में पेश की गई अवधारणाओं
     के बारे में गहराई से बताता है।
   ai_curriculum_btn_aria_label_04: AI के काम करने के तरीके के बारे में जानें
+  ai_curriculum_grades_05: 'ग्रेड स्तर: 9-12'
+  ai_curriculum_btn_aria_label_05: सॉफ़्टवेयर इंजीनियरिंग और कंप्यूटर विज़न मॉड्यूल
+    का अन्वेषण करें
   ai_carousel_heading: 'Code.org के साथ AI के बारे में शिक्षक क्या कहते हैं:'
   ai_carousel_quote_01: इस पाठ ने मेरे छात्रों को यह देखने का अवसर भी दिया कि वर्गीकरण
     प्रणालियों में राय का एक तत्व है। बाद में, जब हमने यह देखना शुरू किया कि एआई में
@@ -882,6 +915,7 @@ hi:
     संभव आउटपुट प्राप्त करने के लिए टूल। इसमें उन लोगों के लिए स्टार्टर प्रॉम्प्ट
     शामिल हैं जो बस अपने पैर की उंगलियों को डुबो रहे हैं, साथ ही उन लोगों के लिए एडवांस
     टूल भी शामिल हैं जो अपनी क्षमता को अधिकतम करना चाहते हैं।
+  ai_pl_101_resources_3: स्टूडेंट लर्निंग को बदलने के लिए AI प्रॉम्प्ट्स
   how_ai_works_hero_heading: AI कैसे काम करता है
   how_ai_works_hero_desc: "“How AI Works”, हमारी वीडियो श्रृंखला और उससे जुड़े पाठों
     के साथ AI की दुनिया में गोता लगाएँ!"
@@ -1287,8 +1321,8 @@ hi:
     Animation
   csp_page_curriculum_glance_devices: Laptop, Chromebook
   csp_page_curriculum_glance_tools: ऐप लैब
-  csp_page_curriculum_glance_professional_learning: Facilitator-led Workshops, Self-paced
-    Modules
+  csp_page_curriculum_glance_professional_learning: फैसिलिटेटर के नेतृत्व वाली कार्यशालाएं,
+    सेल्फ-पेस्ड मॉड्यूल
   csp_page_curriculum_glance_professional_languages: अंग्रेजी
   csp_page_curriculum_glance_professional_accessibility_features: Text-to-speech,
     Closed captioning, Immersive reader
@@ -1415,8 +1449,8 @@ hi:
     कंप्यूटिंग, ऐप डिज़ाइन, गेम्स एंड एनिमेशन, आर्ट एंड डिज़ाइन, प्रोग्रामिंग
   csd_page_curriculum_glance_devices: Laptop, Chromebook
   csd_page_curriculum_glance_tools: ऐप लैब, गेम लैब, एआई लैब, वेब लैब
-  csd_page_curriculum_glance_professional_learning: Facilitator-led Workshops, Self-paced
-    Modules
+  csd_page_curriculum_glance_professional_learning: फैसिलिटेटर के नेतृत्व वाली कार्यशालाएं,
+    सेल्फ-पेस्ड मॉड्यूल
   csd_page_curriculum_glance_professional_languages: अंग्रेजी
   csd_page_curriculum_glance_professional_accessibility_features: Text-to-speech,
     Closed captioning, Immersive reader
@@ -1564,8 +1598,8 @@ hi:
     एंड डिज़ाइन, ऐप डिज़ाइन
   csf_page_curriculum_glance_devices: लैपटॉप, क्रोमबुक, टैबलेट
   csf_page_curriculum_glance_tools: स्प्राइट लैब, प्ले लैब
-  csf_page_curriculum_glance_professional_learning: Facilitator-led Workshops, Self-paced
-    Modules
+  csf_page_curriculum_glance_professional_learning: फैसिलिटेटर के नेतृत्व वाली कार्यशालाएं,
+    सेल्फ-पेस्ड मॉड्यूल
   csf_page_curriculum_glance_languages: अरबी भाषा, इंडोनेशियाई, कैटलन, चीनी सरलीकृत,
     चीनी पारंपरिक, चेक, फ्रेंच, जर्मन, हिंदी, इतालवी, जापानी, कोरियाई, कन्नड़, मलय,
     मराठी, मंगोलियन, पोलिश, पुर्तगाली-बीआर, रोमानियाई, रूसी, स्लोवाक, तागालोग, तमिल,
@@ -1707,6 +1741,39 @@ hi:
   csa_page_faq_answer_08_02: For more information about the values that guided our
     work, please see our [curriculum values](%{curriculum_values_url}) and our [professional
     learning values](%{pl_values_url}).
+  donate_page_top_heading: हमारे मिशन को पूरा करने में मदद करें
+  donate_page_top_desc: हर दान कंप्यूटर विज्ञान शिक्षा तक पहुंच बढ़ाने के लिए Code.org
+    के मिशन को बढ़ावा देता है। हम आपको दान करने और बदलाव लाने के कई तरीके प्रदान करते
+    हैं।
+  donate_page_fundraise_title: Code.org के लिए फ़ंडरेज़
+  donate_page_fundraise_desc: Code.org के लिए पैसे जुटाने में मदद करें! हर स्कूल के
+    हर छात्र को कंप्यूटर साइंस सीखने का अवसर मिलना चाहिए।
+  donate_page_other_ways_title: देने के अन्य तरीके
+  donate_page_other_ways_desc: योगदान करने के लिए विविध तरीकों का पता लगाएं, और वह
+    विकल्प खोजें जो आपके लिए सबसे उपयुक्त हो। हर इशारा, बड़ा या छोटा, हमारे मिशन को
+    आगे ले जाता है।
+  donate_page_501c3: Code.org सार्वजनिक 501 (c) (3) गैर-लाभकारी संगठन के रूप में पंजीकृत
+    है। Code.org में किए गए योगदान कानून द्वारा अनुमत सीमा तक कर-कटौती योग्य हैं।
+    Code.org की कर पहचान संख्या 46-0858543 है।
+  donate_page_donation_policy_title: हमारी दान नीति को समझना
+  donate_page_donation_policy_desc: इस बारे में जानें कि हम आपके योगदानों को कैसे
+    संभालते हैं और उन्हें आवंटित करते हैं।
+  donate_tabs_tab_label_daf_direct: डीएएफ डायरेक्ट
+  donate_tabs_tab_label_amazon: अमेज़न
+  donate_tabs_tab_label_bitpay: बिटपे
+  donate_tabs_tab_label_employee_match: कर्मचारी मैच
+  donate_tabs_daf_direct_title: DAF डायरेक्ट के माध्यम से दान करें
+  donate_tabs_daf_direct_desc: Fidelity Charitable, Schwab Charitable, या BNY Mellon
+    के साथ अपने दाता-सलाह वाले फंड के माध्यम से दान करें और DAF Direct ऑनलाइन फ़ॉर्म
+    के माध्यम से Code.org को अपनी अनुदान अनुशंसा करें।
+  donate_tabs_amazon_title: Amazon के जरिए दान करें
+  donate_tabs_amazon_desc: अपने Amazon अकाउंट का उपयोग करके सीधे दान करें। बस कुछ
+    ही क्लिक के साथ, Code.org के मिशन में निर्बाध रूप से योगदान दें और कंप्यूटर विज्ञान
+    शिक्षा के भविष्य को सशक्त बनाएं।
+  donate_tabs_bitpay_title: BitPay के माध्यम से क्रिप्टो के साथ दान करें
+  donate_tabs_bitpay_desc: क्रिप्टोकुरेंसी के साथ देने के भविष्य को गले लगाओ। BitPay
+    के माध्यम से, आपकी डिजिटल मुद्रा कंप्यूटर विज्ञान शिक्षा के विस्तार में Code.org
+    के प्रयासों का सीधे समर्थन कर सकती है।
   hoc_live: ऑवर ऑफ़ कोड लाइव
   hoc_live_sign_up_title: ऑवर ऑफ़ कोड लाइव के लिए साइन अप करें
   hoc_live_learn_title: ऑवर ऑफ़ कोड लाइव के साथ सीखें

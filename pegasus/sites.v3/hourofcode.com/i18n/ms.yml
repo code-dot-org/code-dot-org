@@ -288,6 +288,10 @@ ms:
   call_to_action_register_early_access: Daftar untuk akses awal
   call_to_action_open_positions: Lihat kedudukan terbuka
   call_to_action_get_guide: Dapatkan panduan
+  call_to_action_donate_to_cdo: Derma kepada Code.org
+  call_to_action_start_fundraiser: Mulakan pengumpulan dana
+  call_to_action_view_donation_policy: Lihat dasar derma
+  call_to_action_view_donate_bitpay: Derma dengan BitPay
   aria_label_call_to_action_afe: Ketahui lebih lanjut mengenai Jurutera Masa Depan
     Amazon
   aria_label_call_to_action_teaching_csf: Mulakan program pembelajaran profesional
@@ -388,6 +392,7 @@ ms:
   curriculum_name_csp: Prinsip Sains Komputer
   curriculum_name_csc: Rangkaian Sains Komputer
   curriculum_name_csa: Sains Komputer A
+  curriculum_name_csa_ai: Kejuruteraan Perisian & Visi Komputer
   curriculum_name_csc_02: Mana-mana Modul Rangkaian CS
   curriculum_name_ai: "  AI dan Pembelajaran Mesin  "
   curriculum_name_artificial_intelligence: Kecerdasan Buatan (AI)
@@ -466,6 +471,12 @@ ms:
     permainan, dan sistem pengkomputeran fizikal.
   curriculum_desc_csp: Percuma, AP® CSP disokong, kursus pengenalan sekolah menengah
     yang memperkenalkan pelajar kepada konsep asas sains komputer.
+  curriculum_desc_csa_ai_long: 'Modul Post-AP CSA dua bab ini menawarkan pengalaman
+    langsung kepada pelajar sekolah menengah dengan alat pengembangan perisian profesional,
+    termasuk GitHub dan GitHub Copilot, dan memberikan mereka kemahiran dunia nyata
+    untuk mengembangkan program penglihatan komputer. '
+  curriculum_desc_csa_ai_short: Modul Post-AP® CSA ini menawarkan pengalaman langsung
+    kepada pelajar sekolah menengah dengan alat pembangunan perisian profesional.
   collection_hardware: Fokus pada Perkakasan
   collection_hardware_desc: Memberi kuasa kepada pelajar untuk menggunakan data dan
     peranti fizikal untuk menyelesaikan masalah.
@@ -541,6 +552,7 @@ ms:
   module_duration_2_hrs: 2 jam
   module_duration_3_hrs: 3 jam
   module_duration_5_hrs: 5 jam
+  module_duration_5_hrs_plus: 5+ jam
   module_duration_8_hrs: 8 jam
   module_duration_20_hrs: 20 jam
   module_duration_35_hrs: 35 jam
@@ -621,6 +633,7 @@ ms:
   heading_objects_first: Objek pertama
   heading_these_lessons_will: 'Pelajaran ini akan:'
   heading_explore_curriculum_catalog: Terokai semua kursus kami dalam Katalog Kurikulum
+  heading_csa_ai: Mencari perkara yang perlu dilakukan selepas peperiksaan AP®?
   professional_learning_section_desc: Dapatkan sokongan yang anda perlukan semasa
     anda bersedia untuk mengajar. Guru menyukainya, dengan lebih daripada 90% kedudukannya
     sebagai pembangunan profesional terbaik yang pernah ada!
@@ -654,6 +667,24 @@ ms:
     sebarang soalan yang anda ada tentang memulakan pengajaran dengan Code.org. Anda
     juga boleh bertanya kepada guru lain mengenai pengalaman mereka di forum guru
     kami.
+  subscribe_form_section_title: Langgan kemas kini
+  subscribe_form_section_desc_csa: Daftar untuk menerima e-mel bulanan mengenai AP®
+    Computer Science A Code.org dan dapatkan peringatan, petua, dan kemas kini yang
+    berguna yang dihantar terus ke peti masuk anda.
+  subscribe_form_section_desc_csc: Daftar untuk menerima e-mel bulanan mengenai Sambungan
+    Sains Komputer Code.org dan dapatkan peringatan, petua, dan kemas kini yang berguna
+    yang dihantar terus ke peti masuk anda.
+  subscribe_form_section_desc_csd: Daftar untuk menerima e-mel bulanan mengenai Penemuan
+    Sains Komputer Code.org dan dapatkan peringatan, petua, dan kemas kini yang berguna
+    yang dihantar terus ke peti masuk anda.
+  subscribe_form_section_desc_csf: Daftar untuk menerima e-mel bulanan mengenai Asas
+    Sains Komputer Code.org dan dapatkan peringatan, petua, dan kemas kini yang berguna
+    yang dihantar terus ke peti masuk anda.
+  subscribe_form_section_desc_csp: Daftar untuk menerima e-mel bulanan mengenai Prinsip
+    Sains Komputer Code.org dan dapatkan peringatan, petua, dan kemas kini yang berguna
+    yang dihantar terus ke peti masuk anda.
+  subscribe_form_section_unsubscribe: Anda boleh berhenti melanggan pada bila-bila
+    masa.
   blockchain_hero_heading: Bagaimana Blockchain Berfungsi
   blockchain_hero_desc: Selami dunia blockchain dengan “How Blockchain Works,” siri
     video baru kami dan pelajaran yang disertakan!
@@ -757,6 +788,8 @@ ms:
     pelajaran dipasangkan dengan satu video dari siri ini, menyelam lebih mendalam
     ke dalam konsep yang diperkenalkan dalam video.
   ai_curriculum_btn_aria_label_04: Terokai pelajaran Bagaimana AI Berfungsi
+  ai_curriculum_grades_05: 'Tahap Gred: 9-12'
+  ai_curriculum_btn_aria_label_05: Terokai modul Kejuruteraan Perisian & Visi Komputer
   ai_carousel_heading: 'Apa yang guru katakan mengenai AI dengan Code.org:'
   ai_carousel_quote_01: Pelajaran ini juga memberi peluang kepada pelajar saya untuk
     melihat bahawa terdapat unsur pendapat dalam sistem klasifikasi. Kemudian, ketika
@@ -887,6 +920,7 @@ ms:
     ChatGPT, dari pemula hingga maju. Termasuk arahan permulaan bagi mereka yang hanya
     mencelupkan jari kaki mereka, serta alat canggih bagi mereka yang ingin memaksimumkan
     potensi mereka.
+  ai_pl_101_resources_3: AI Prompts untuk Mengubah Pembelajaran Pelajar
   how_ai_works_hero_heading: Bagaimana AI Berfungsi
   how_ai_works_hero_desc: Selami dunia AI dengan “How AI Works,” siri video kami dan
     pelajaran yang menyertainya!
@@ -1300,8 +1334,8 @@ ms:
     Animation
   csp_page_curriculum_glance_devices: Laptop, Chromebook
   csp_page_curriculum_glance_tools: Makmal Aplikasi
-  csp_page_curriculum_glance_professional_learning: Facilitator-led Workshops, Self-paced
-    Modules
+  csp_page_curriculum_glance_professional_learning: Bengkel yang diketuai fasilitator,
+    Modul Sendiri
   csp_page_curriculum_glance_professional_languages: Bahasa Inggeris
   csp_page_curriculum_glance_professional_accessibility_features: Text-to-speech,
     Closed captioning, Immersive reader
@@ -1429,8 +1463,8 @@ ms:
   csd_page_curriculum_glance_devices: Laptop, Chromebook
   csd_page_curriculum_glance_tools: Makmal Aplikasi, Makmal Permainan, Makmal AI,
     Makmal Web
-  csd_page_curriculum_glance_professional_learning: Facilitator-led Workshops, Self-paced
-    Modules
+  csd_page_curriculum_glance_professional_learning: Bengkel yang diketuai fasilitator,
+    Modul Sendiri
   csd_page_curriculum_glance_professional_languages: Bahasa Inggeris
   csd_page_curriculum_glance_professional_accessibility_features: Text-to-speech,
     Closed captioning, Immersive reader
@@ -1581,8 +1615,8 @@ ms:
     Seni Reka Bentuk, Reka Bentuk Aplikasi
   csf_page_curriculum_glance_devices: Komputer riba, Chromebook, Tablet
   csf_page_curriculum_glance_tools: Makmal Sprite, Main Makmal
-  csf_page_curriculum_glance_professional_learning: Facilitator-led Workshops, Self-paced
-    Modules
+  csf_page_curriculum_glance_professional_learning: Bengkel yang diketuai fasilitator,
+    Modul Sendiri
   csf_page_curriculum_glance_languages: Bahasa Arab, Bahasa Indonesia, Catalán, Cina
     Ringkas, Cina Tradisional, Czech, Perancis, Jerman, Hindi, Itali, Jepun, Korea,
     Kannada, Melayu, Marathi, Mongolia, Poland, Portugis-BR, Romania, Rusia, Slovak,
@@ -1723,6 +1757,39 @@ ms:
   csa_page_faq_answer_08_02: For more information about the values that guided our
     work, please see our [curriculum values](%{curriculum_values_url}) and our [professional
     learning values](%{pl_values_url}).
+  donate_page_top_heading: Membantu membiayai misi kami
+  donate_page_top_desc: Setiap sumbangan mendorong misi Code.org untuk memperluas
+    akses ke pendidikan sains komputer. Kami menawarkan beberapa cara untuk anda menderma
+    dan membuat perbezaan.
+  donate_page_fundraise_title: Pengumpulan dana untuk Code.org
+  donate_page_fundraise_desc: Bantu mengumpulkan wang untuk Code.org! Setiap pelajar
+    di setiap sekolah harus mempunyai peluang untuk belajar sains komputer.
+  donate_page_other_ways_title: Cara lain untuk memberi
+  donate_page_other_ways_desc: Terokai pelbagai kaedah untuk menyumbang, dan cari
+    pilihan yang paling sesuai dengan anda. Setiap isyarat, besar atau kecil, mendorong
+    misi kami ke hadapan.
+  donate_page_501c3: Code.org didaftarkan sebagai organisasi bukan untung 501 (c)
+    (3) awam. Sumbangan kepada Code.org boleh ditolak cukai setakat yang dibenarkan
+    oleh undang-undang. Nombor pengenalan cukai Code.org adalah 46-0858543.
+  donate_page_donation_policy_title: Memahami Dasar Derma kami
+  donate_page_donation_policy_desc: Ketahui tentang cara kami mengendalikan dan memperuntukkan
+    sumbangan anda.
+  donate_tabs_tab_label_daf_direct: DAF Terus
+  donate_tabs_tab_label_amazon: Amazon
+  donate_tabs_tab_label_bitpay: BitPay
+  donate_tabs_tab_label_employee_match: Perlawanan Pekerja
+  donate_tabs_daf_direct_title: Derma melalui DAF Direct
+  donate_tabs_daf_direct_desc: Derma melalui dana yang dinasihatkan penderma anda
+    dengan Fidelity Charitable, Schwab Charitable, atau BNY Mellon dan buat cadangan
+    pemberian anda kepada Code.org melalui borang dalam talian DAF Direct.
+  donate_tabs_amazon_title: Derma melalui Amazon
+  donate_tabs_amazon_desc: Derma terus menggunakan akaun Amazon anda. Dengan hanya
+    beberapa klik, menyumbang dengan lancar kepada misi Code.org dan memperkasakan
+    masa depan pendidikan sains komputer.
+  donate_tabs_bitpay_title: Derma dengan Crypto melalui BitPay
+  donate_tabs_bitpay_desc: Merangkul masa depan memberi dengan cryptocurrency. Melalui
+    BitPay, mata wang digital anda boleh terus menyokong usaha Code.org dalam mengembangkan
+    pendidikan sains komputer.
   hoc_live: Siaran Langsung Acara Jam Kod
   hoc_live_sign_up_title: Sila daftar untuk Siaran Langsung Jam Kod
   hoc_live_learn_title: Belajar dengan Siaran Langsung Acara Jam Kod

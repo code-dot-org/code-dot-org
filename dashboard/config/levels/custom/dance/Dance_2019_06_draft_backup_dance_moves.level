@@ -1,11 +1,11 @@
 <Dancelab>
   <config><![CDATA[{
-  "published": true,
   "game_id": 63,
   "created_at": "2023-09-21T20:26:08.000Z",
   "level_num": "custom",
   "user_id": 182,
   "properties": {
+    "uses_preview": "true",
     "skin": "dance",
     "helper_libraries": [
       "DanceLab"
@@ -65,40 +65,36 @@
     "short_instructions": "Set up a group of backup dancers around the lead dancer in the middle.",
     "encrypted": "false",
     "mini_rubric": "false",
-    "validation_code": "var foundLead = false;\r\nvar foundBackup = false;\r\n\r\nsprites.forEach(function(sprite) {\r\n  if (sprite.scale == 1) {\r\n    foundLead = true;\r\n  } else {\r\n    foundBackup = true;\r\n  }\r\n});\r\nif (nativeAPI.getTime(\"measures\") > 5.5) {\r\n  if (sprites.length == 0) {\r\n    nativeAPI.fail(\"danceFeedbackNoDancers\");\r\n  } else if (!foundLead) {\r\n    nativeAPI.fail(\"danceFeedbackNeedLead\");\r\n  } else if (!foundBackup) {\r\n    nativeAPI.fail(\"danceFeedbackNeedBackup\");\r\n  }\r\n}\r\n\r\nif (nativeAPI.getTime(\"measures\") > 8){\r\n  nativeAPI.pass();\r\n}\r\n",
     "tts_long_instructions_override": "Use the new block to set up a group of smaller backup dancers around a lead dancer in the middle. Now you can create a bunch of dancers all at once!",
     "validation_enabled": "false",
-    "hide_pause_button": "false",
-    "encrypted_examples": [
-
-    ]
+    "hide_pause_button": "false"
   },
+  "published": true,
   "notes": "",
-  "audit_log": "[{\"changed_at\":\"2023-09-21T20:26:08.278+00:00\",\"changed\":[\"cloned from \\\"Dance_2019_06_draft\\\"\"],\"cloned_from\":\"Dance_2019_06_draft\"},{\"changed_at\":\"2023-09-21 20:26:11 +0000\",\"changed\":[\"start_blocks\",\"toolbox_blocks\"],\"changed_by_id\":16899,\"changed_by_email\":\"emma.wingreen+teacher@code.org\"},{\"changed_at\":\"2023-09-21 20:33:43 +0000\",\"changed\":[\"start_blocks\",\"toolbox_blocks\",\"long_instructions\",\"encrypted_examples\"],\"changed_by_id\":16899,\"changed_by_email\":\"emma.wingreen+teacher@code.org\"},{\"changed_at\":\"2023-09-21 20:36:31 +0000\",\"changed\":[\"toolbox_blocks\"],\"changed_by_id\":16899,\"changed_by_email\":\"emma.wingreen+teacher@code.org\"},{\"changed_at\":\"2023-09-21 20:37:08 +0000\",\"changed\":[\"start_blocks\",\"toolbox_blocks\",\"long_instructions\"],\"changed_by_id\":16899,\"changed_by_email\":\"emma.wingreen+teacher@code.org\"},{\"changed_at\":\"2023-09-21 22:18:43 +0000\",\"changed\":[\"start_blocks\",\"toolbox_blocks\",\"long_instructions\",\"encrypted_examples\"],\"changed_by_id\":16899,\"changed_by_email\":\"emma.wingreen+teacher@code.org\"},{\"changed_at\":\"2023-09-21 22:22:33 +0000\",\"changed\":[\"toolbox_blocks\"],\"changed_by_id\":16899,\"changed_by_email\":\"emma.wingreen+teacher@code.org\"},{\"changed_at\":\"2023-09-21 22:22:40 +0000\",\"changed\":[\"toolbox_blocks\"],\"changed_by_id\":16899,\"changed_by_email\":\"emma.wingreen+teacher@code.org\"},{\"changed_at\":\"2023-09-21 22:34:39 +0000\",\"changed\":[\"start_blocks\",\"toolbox_blocks\",\"long_instructions\"],\"changed_by_id\":16899,\"changed_by_email\":\"emma.wingreen+teacher@code.org\"},{\"changed_at\":\"2023-09-21 22:35:19 +0000\",\"changed\":[\"start_blocks\"],\"changed_by_id\":16899,\"changed_by_email\":\"emma.wingreen+teacher@code.org\"},{\"changed_at\":\"2023-09-21 22:45:01 +0000\",\"changed\":[\"start_blocks\"],\"changed_by_id\":16899,\"changed_by_email\":\"emma.wingreen+teacher@code.org\"},{\"changed_at\":\"2023-09-21 22:45:45 +0000\",\"changed\":[\"toolbox_blocks\"],\"changed_by_id\":16899,\"changed_by_email\":\"emma.wingreen+teacher@code.org\"},{\"changed_at\":\"2023-09-21 22:46:46 +0000\",\"changed\":[\"start_blocks\",\"toolbox_blocks\",\"long_instructions\"],\"changed_by_id\":16899,\"changed_by_email\":\"emma.wingreen+teacher@code.org\"},{\"changed_at\":\"2023-09-25 18:53:22 +0000\",\"changed\":[\"start_blocks\",\"toolbox_blocks\",\"long_instructions\",\"contained_level_names\"],\"changed_by_id\":16899,\"changed_by_email\":\"emma.wingreen+teacher@code.org\"},{\"changed_at\":\"2023-09-25 19:13:39 +0000\",\"changed\":[\"start_blocks\"],\"changed_by_id\":16899,\"changed_by_email\":\"emma.wingreen+teacher@code.org\"},{\"changed_at\":\"2023-09-25 19:14:01 +0000\",\"changed\":[],\"changed_by_id\":16899,\"changed_by_email\":\"emma.wingreen+teacher@code.org\"},{\"changed_at\":\"2023-09-25 19:14:06 +0000\",\"changed\":[],\"changed_by_id\":16899,\"changed_by_email\":\"emma.wingreen+teacher@code.org\"},{\"changed_at\":\"2023-09-25 19:14:10 +0000\",\"changed\":[],\"changed_by_id\":16899,\"changed_by_email\":\"emma.wingreen+teacher@code.org\"},{\"changed_at\":\"2023-09-25 19:14:18 +0000\",\"changed\":[],\"changed_by_id\":16899,\"changed_by_email\":\"emma.wingreen+teacher@code.org\"},{\"changed_at\":\"2023-09-25 19:14:30 +0000\",\"changed\":[],\"changed_by_id\":16899,\"changed_by_email\":\"emma.wingreen+teacher@code.org\"},{\"changed_at\":\"2023-09-25 19:15:32 +0000\",\"changed\":[\"toolbox_blocks\"],\"changed_by_id\":16899,\"changed_by_email\":\"emma.wingreen+teacher@code.org\"},{\"changed_at\":\"2023-09-25 19:16:24 +0000\",\"changed\":[\"toolbox_blocks\",\"default_song\",\"start_blocks\"],\"changed_by_id\":16899,\"changed_by_email\":\"emma.wingreen+teacher@code.org\"},{\"changed_at\":\"2023-09-25 19:17:02 +0000\",\"changed\":[\"toolbox_blocks\",\"long_instructions\",\"start_blocks\",\"encrypted_examples\"],\"changed_by_id\":16899,\"changed_by_email\":\"emma.wingreen+teacher@code.org\"}]",
+  "audit_log": "[{\"changed_at\":\"2023-09-21T20:26:08.278+00:00\",\"changed\":[\"cloned from \\\"Dance_2019_06_draft\\\"\"],\"cloned_from\":\"Dance_2019_06_draft\"},{\"changed_at\":\"2023-09-21 20:26:11 +0000\",\"changed\":[\"start_blocks\",\"toolbox_blocks\"],\"changed_by_id\":16899,\"changed_by_email\":\"emma.wingreen+teacher@code.org\"},{\"changed_at\":\"2023-09-21 20:33:43 +0000\",\"changed\":[\"start_blocks\",\"toolbox_blocks\",\"long_instructions\",\"encrypted_examples\"],\"changed_by_id\":16899,\"changed_by_email\":\"emma.wingreen+teacher@code.org\"},{\"changed_at\":\"2023-09-21 20:36:31 +0000\",\"changed\":[\"toolbox_blocks\"],\"changed_by_id\":16899,\"changed_by_email\":\"emma.wingreen+teacher@code.org\"},{\"changed_at\":\"2023-09-21 20:37:08 +0000\",\"changed\":[\"start_blocks\",\"toolbox_blocks\",\"long_instructions\"],\"changed_by_id\":16899,\"changed_by_email\":\"emma.wingreen+teacher@code.org\"},{\"changed_at\":\"2023-09-21 22:18:43 +0000\",\"changed\":[\"start_blocks\",\"toolbox_blocks\",\"long_instructions\",\"encrypted_examples\"],\"changed_by_id\":16899,\"changed_by_email\":\"emma.wingreen+teacher@code.org\"},{\"changed_at\":\"2023-09-21 22:22:33 +0000\",\"changed\":[\"toolbox_blocks\"],\"changed_by_id\":16899,\"changed_by_email\":\"emma.wingreen+teacher@code.org\"},{\"changed_at\":\"2023-09-21 22:22:40 +0000\",\"changed\":[\"toolbox_blocks\"],\"changed_by_id\":16899,\"changed_by_email\":\"emma.wingreen+teacher@code.org\"},{\"changed_at\":\"2023-09-21 22:34:39 +0000\",\"changed\":[\"start_blocks\",\"toolbox_blocks\",\"long_instructions\"],\"changed_by_id\":16899,\"changed_by_email\":\"emma.wingreen+teacher@code.org\"},{\"changed_at\":\"2023-09-21 22:35:19 +0000\",\"changed\":[\"start_blocks\"],\"changed_by_id\":16899,\"changed_by_email\":\"emma.wingreen+teacher@code.org\"},{\"changed_at\":\"2023-09-21 22:45:01 +0000\",\"changed\":[\"start_blocks\"],\"changed_by_id\":16899,\"changed_by_email\":\"emma.wingreen+teacher@code.org\"},{\"changed_at\":\"2023-09-21 22:45:45 +0000\",\"changed\":[\"toolbox_blocks\"],\"changed_by_id\":16899,\"changed_by_email\":\"emma.wingreen+teacher@code.org\"},{\"changed_at\":\"2023-09-21 22:46:46 +0000\",\"changed\":[\"start_blocks\",\"toolbox_blocks\",\"long_instructions\"],\"changed_by_id\":16899,\"changed_by_email\":\"emma.wingreen+teacher@code.org\"},{\"changed_at\":\"2023-09-25 18:53:22 +0000\",\"changed\":[\"start_blocks\",\"toolbox_blocks\",\"long_instructions\",\"contained_level_names\"],\"changed_by_id\":16899,\"changed_by_email\":\"emma.wingreen+teacher@code.org\"},{\"changed_at\":\"2023-09-25 19:13:39 +0000\",\"changed\":[\"start_blocks\"],\"changed_by_id\":16899,\"changed_by_email\":\"emma.wingreen+teacher@code.org\"},{\"changed_at\":\"2023-09-25 19:14:01 +0000\",\"changed\":[],\"changed_by_id\":16899,\"changed_by_email\":\"emma.wingreen+teacher@code.org\"},{\"changed_at\":\"2023-09-25 19:14:06 +0000\",\"changed\":[],\"changed_by_id\":16899,\"changed_by_email\":\"emma.wingreen+teacher@code.org\"},{\"changed_at\":\"2023-09-25 19:14:10 +0000\",\"changed\":[],\"changed_by_id\":16899,\"changed_by_email\":\"emma.wingreen+teacher@code.org\"},{\"changed_at\":\"2023-09-25 19:14:18 +0000\",\"changed\":[],\"changed_by_id\":16899,\"changed_by_email\":\"emma.wingreen+teacher@code.org\"},{\"changed_at\":\"2023-09-25 19:14:30 +0000\",\"changed\":[],\"changed_by_id\":16899,\"changed_by_email\":\"emma.wingreen+teacher@code.org\"},{\"changed_at\":\"2023-09-25 19:15:32 +0000\",\"changed\":[\"toolbox_blocks\"],\"changed_by_id\":16899,\"changed_by_email\":\"emma.wingreen+teacher@code.org\"},{\"changed_at\":\"2023-09-25 19:16:24 +0000\",\"changed\":[\"toolbox_blocks\",\"default_song\",\"start_blocks\"],\"changed_by_id\":16899,\"changed_by_email\":\"emma.wingreen+teacher@code.org\"},{\"changed_at\":\"2023-09-25 19:17:02 +0000\",\"changed\":[\"toolbox_blocks\",\"long_instructions\",\"start_blocks\",\"encrypted_examples\"],\"changed_by_id\":16899,\"changed_by_email\":\"emma.wingreen+teacher@code.org\"},{\"changed_at\":\"2023-09-26 23:26:32 +0000\",\"changed\":[\"start_blocks\"],\"changed_by_id\":16899,\"changed_by_email\":\"emma.wingreen+teacher@code.org\"},{\"changed_at\":\"2023-09-26 23:31:55 +0000\",\"changed\":[\"start_blocks\"],\"changed_by_id\":16899,\"changed_by_email\":\"emma.wingreen+teacher@code.org\"},{\"changed_at\":\"2023-09-26 23:36:57 +0000\",\"changed\":[\"toolbox_blocks\"],\"changed_by_id\":16899,\"changed_by_email\":\"emma.wingreen+teacher@code.org\"},{\"changed_at\":\"2023-09-28 16:59:17 +0000\",\"changed\":[\"start_blocks\",\"toolbox_blocks\",\"contained_level_names\"],\"changed_by_id\":18605,\"changed_by_email\":\"katie.frank+levelbuilder@code.org\"},{\"changed_at\":\"2023-09-28 16:59:52 +0000\",\"changed\":[\"toolbox_blocks\"],\"changed_by_id\":18605,\"changed_by_email\":\"katie.frank+levelbuilder@code.org\"},{\"changed_at\":\"2023-09-28 17:00:23 +0000\",\"changed\":[\"start_blocks\"],\"changed_by_id\":18605,\"changed_by_email\":\"katie.frank+levelbuilder@code.org\"},{\"changed_at\":\"2023-09-28 17:00:47 +0000\",\"changed\":[\"start_blocks\",\"toolbox_blocks\",\"validation_code\"],\"changed_by_id\":18605,\"changed_by_email\":\"katie.frank+levelbuilder@code.org\"},{\"changed_at\":\"2023-09-28 17:14:39 +0000\",\"changed\":[\"start_blocks\"],\"changed_by_id\":18605,\"changed_by_email\":\"katie.frank+levelbuilder@code.org\"},{\"changed_at\":\"2023-09-28 17:14:42 +0000\",\"changed\":[],\"changed_by_id\":18605,\"changed_by_email\":\"katie.frank+levelbuilder@code.org\"},{\"changed_at\":\"2023-09-28 17:15:38 +0000\",\"changed\":[\"start_blocks\"],\"changed_by_id\":16899,\"changed_by_email\":\"emma.wingreen+teacher@code.org\"},{\"changed_at\":\"2023-09-28 17:15:54 +0000\",\"changed\":[\"start_blocks\"],\"changed_by_id\":16899,\"changed_by_email\":\"emma.wingreen+teacher@code.org\"},{\"changed_at\":\"2023-09-28 17:15:54 +0000\",\"changed\":[\"start_blocks\"],\"changed_by_id\":16899,\"changed_by_email\":\"emma.wingreen+teacher@code.org\"},{\"changed_at\":\"2023-09-28 17:17:11 +0000\",\"changed\":[],\"changed_by_id\":16899,\"changed_by_email\":\"emma.wingreen+teacher@code.org\"},{\"changed_at\":\"2023-09-28 17:17:45 +0000\",\"changed\":[],\"changed_by_id\":16899,\"changed_by_email\":\"emma.wingreen+teacher@code.org\"},{\"changed_at\":\"2023-09-28 17:17:49 +0000\",\"changed\":[],\"changed_by_id\":16899,\"changed_by_email\":\"emma.wingreen+teacher@code.org\"},{\"changed_at\":\"2023-09-28 17:17:52 +0000\",\"changed\":[],\"changed_by_id\":16899,\"changed_by_email\":\"emma.wingreen+teacher@code.org\"}]",
   "level_concept_difficulty": {
   }
 }]]></config>
   <blocks>
     <start_blocks>
       <xml xmlns="https://developers.google.com/blockly/xml">
-        <block type="Dancelab_whenSetup" id="j3DN14mbiXzMgtAJr*F2" deletable="false" movable="false" x="20" y="20">
+        <block type="Dancelab_whenSetup" id="oX=v-kgJZ=kwI.VT-SYw" x="17" y="19">
           <statement name="DO">
-            <block type="Dancelab_setBackgroundEffect" id="Wi:XdM:MHx_dz5PWGqNL" deletable="false" movable="false">
-              <field name="EFFECT">"disco"</field>
-              <field name="PALETTE">"cool"</field>
+            <block type="Dancelab_ai" id="B^Nv!jMt?)RHf8Rg6h0U">
+              <field name="VALUE">{  "backgroundColor": "tropical",  "backgroundEffect": "swirl",  "foregroundEffect": "bubbles",  "explanation": "I chose a tropical background with swirling patterns to create a dreamy atmosphere, and added bubbles in the foreground to give the scene a magical and artistic touch, like floating clouds and seashells."}</field>
               <next>
-                <block type="Dancelab_makeAnonymousDanceSprite" id="@%OD8];Yi)!~d^RiJ9j^" deletable="false" movable="false">
+                <block type="Dancelab_makeAnonymousDanceSprite" id="f(:#UoFeH,$PrG3nTC=)">
                   <field name="COSTUME">"SHARK"</field>
                   <field name="LOCATION">{x: 200, y: 200}</field>
                   <next>
-                    <block type="Dancelab_changeMoveEachLR" id="d4Nd5:R9|s6aO$0$Cd!N" movable="false">
+                    <block type="Dancelab_doMoveEachLR" id="sEBfs2_$#{XtHhTa4~hr">
                       <field name="GROUP">"SHARK"</field>
-                      <field name="MOVE">MOVES.ThisOrThat</field>
+                      <field name="MOVE">MOVES.DoubleJam</field>
                       <field name="DIR">-1</field>
                       <next>
-                        <block type="Dancelab_makeNewDanceSpriteGroup" id="3" movable="false">
+                        <block type="Dancelab_makeNewDanceSpriteGroup" id="R|prb@]i]`BgTvnW5nl@">
                           <field name="N">12</field>
-                          <field name="COSTUME" config="&quot;BEAR&quot;, &quot;CAT&quot;, &quot;FROG&quot;, &quot;PINEAPPLE&quot;, &quot;SHARK&quot;, &quot;UNICORN&quot;, &quot;SLOTH&quot;">"UNICORN"</field>
+                          <field name="COSTUME">"UNICORN"</field>
                           <field name="LAYOUT">"grid"</field>
                         </block>
                       </next>
@@ -113,16 +109,19 @@
     </start_blocks>
     <toolbox_blocks>
       <xml>
-        <block type="Dancelab_makeAnonymousDanceSprite" id="2" x="31" y="17">
+        <block type="Dancelab_ai" id="Ru3$z|81JlKgT/;fMb]K" x="31" y="48">
+          <field name="VALUE"/>
+        </block>
+        <block type="Dancelab_makeAnonymousDanceSprite" id="2" x="34" y="136">
           <field name="COSTUME" config="&quot;BEAR&quot;, &quot;CAT&quot;, &quot;FROG&quot;, &quot;PINEAPPLE&quot;, &quot;SHARK&quot;, &quot;UNICORN&quot;, &quot;SLOTH&quot;">"SHARK"</field>
           <field name="LOCATION">{x: 200, y: 200}</field>
         </block>
-        <block type="Dancelab_makeNewDanceSpriteGroup" id="3" x="40" y="83">
+        <block type="Dancelab_makeNewDanceSpriteGroup" id="3" x="39" y="231">
           <field name="N">12</field>
           <field name="COSTUME" config="&quot;BEAR&quot;, &quot;CAT&quot;, &quot;FROG&quot;, &quot;PINEAPPLE&quot;, &quot;SHARK&quot;, &quot;UNICORN&quot;, &quot;SLOTH&quot;">"UNICORN"</field>
           <field name="LAYOUT">"grid"</field>
         </block>
-        <block type="Dancelab_changeMoveEachLR" id="j-O5AhXM4Q$8N3b-fZha" x="31" y="221">
+        <block type="Dancelab_changeMoveEachLR" id="j-O5AhXM4Q$8N3b-fZha" x="31" y="323">
           <field name="GROUP">"UNICORN"</field>
           <field name="MOVE">MOVES.Drop</field>
           <field name="DIR">-1</field>

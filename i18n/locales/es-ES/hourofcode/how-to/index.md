@@ -25,7 +25,7 @@ Probar una Hora del Código es una forma sencilla y divertida de introducir a lo
 
 <a id="how-to-video"></a>
 
-## Mira el vídeo de la Hora del Código. <iframe width="500" height="255" src="//www.youtube.com/embed/SrnvvWDm73k" frameborder="0" allowfullscreen></iframe> 
+## Mira el vídeo de la Hora del Código. <iframe width="500" height="255" src="https://www.youtube-nocookie.com/embed/SrnvvWDm73k" frameborder="0" allowfullscreen></iframe> 
 
 * * *
 
@@ -111,7 +111,7 @@ No hay ningún problema si tanto tú como tus estudiantes sois nuevos en la Cien
 
 Involucra a los estudiantes en la actividad
 
-- Write the tutorial link on a whiteboard. Find the link listed on the [information for your selected tutorial]({{ urls/learn }}).
+- Escribe el enlace del tutorial en una pizarra. Busque el enlace que aparece en la [información del tutorial]({{ urls/learn }})que haya seleccionado.
 
 Si los estudiantes encuentran dificultades, está bien responder:
 
@@ -151,6 +151,6 @@ Si los estudiantes encuentran dificultades, está bien responder:
 
 ### ¿Qué viene después de la Hora de Código?
 
-Computer science doesn’t have to end with the Hour of Code! [Learn how](/beyond) to bring CS to your school and students.
+¡La informática no tiene por qué terminar con la Hora del Código! [Aprenda](/beyond) a llevar la informática a su escuela y a sus alumnos.
 
 {{ signup_button }}

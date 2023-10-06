@@ -302,23 +302,11 @@ it:
           description_audience: Da 6 a 13 anni
           title: Dopo scuola scollegato
         basketball:
-          description: |-
-            <https://studio.code.org/s/basketball/stage/>
-
-            Scegli la tua squadra e fai una partita di basket
-          description_short: |-
-            <https://studio.code.org/s/basketball/stage/>
-
-            Scegli la tua squadra e fai una partita di basket
+          description: Scegli la tua squadra e fai una partita di basket
+          description_short: Scegli la tua squadra e fai una partita di basket
           name: pallacanestro
-          student_description: |-
-            <https://studio.code.org/s/basketball/stage/>
-
-            Scegli la tua squadra e fai una partita di basket
-          title: |-
-            <https://studio.code.org/s/basketball/stage/>
-
-            Scegli la tua squadra e fai una partita di basket
+          student_description: Scegli la tua squadra e fai una partita di basket
+          title: Scegli la tua squadra e fai una partita di basket
         classic-hoc-impact-study:
           description_short: Prova i fondamenti dell'informatica insieme a tanti personaggi
             divertenti!

@@ -214,6 +214,10 @@ ja:
   call_to_action_register_early_access: 早期アクセスに登録する
   call_to_action_open_positions: オープンポジションを表示
   call_to_action_get_guide: ガイドを入手
+  call_to_action_donate_to_cdo: Code.org に寄付してください
+  call_to_action_start_fundraiser: 募金活動を始める
+  call_to_action_view_donation_policy: 寄付ポリシーを見る
+  call_to_action_view_donate_bitpay: ビットペイで寄付する
   aria_label_call_to_action_afe: Amazon フューチャーエンジニアの詳細はこちら
   aria_label_call_to_action_teaching_csf: コンピュータサイエンスの基礎を教える専門学習プログラムを開始
   aria_label_call_to_action_teaching_csd: ティーチング・コンピュータ・サイエンス・ディスカバリーズの専門学習プログラムを開始
@@ -286,6 +290,7 @@ ja:
   curriculum_name_csp: コンピュータ サイエンス プリンシプル
   curriculum_name_csc: コンピューター・サイエンス・コネクション
   curriculum_name_csa: コンピュータ・サイエンスA
+  curriculum_name_csa_ai: ソフトウェアエンジニアリングとコンピュータービジョン
   curriculum_name_csc_02: 任意のCS接続モジュール
   curriculum_name_ai: "  AIと機械学習  "
   curriculum_name_artificial_intelligence: 人工知能 (AI)
@@ -322,6 +327,8 @@ ja:
   curriculum_desc_maker_short: メーカー教育では、問題解決と批判的思考を教えるのに役立つ実践的な経験とコラボレーションを教えるのに役立ちます。
   curriculum_desc_csd: フレキシブルなコースで、各単元を単独で、または組み合わせて指導できます。Web サイト、アプリ、アニメーション、ゲーム、物理コンピューティングシステムの構築について学生に紹介します。
   curriculum_desc_csp: 学生にコンピュータサイエンスの基本概念を紹介する、AP® CSPが承認した無料の高校入門コース。
+  curriculum_desc_csa_ai_long: 'この2章からなるPost-AP CSAモジュールでは、高校生にGitHubやGitHub Copilotなどのプロフェッショナルなソフトウェア開発ツールを実際に体験してもらい、コンピュータビジョンプログラムを開発するための実際のスキルを学びます。 '
+  curriculum_desc_csa_ai_short: このPost-AP® CSAモジュールは、高校生にプロフェッショナルなソフトウェア開発ツールを実際に体験してもらうものです。
   collection_hardware: ハードウェアに焦点を当てる
   collection_hardware_desc: 生徒がデータや物理的なデバイスを使用して問題を解決できるようにします。
   collection_design_purpose: 目的を持ったデザインに焦点を当てる
@@ -389,6 +396,7 @@ ja:
   module_duration_2_hrs: 2 時間
   module_duration_3_hrs: 3 時間
   module_duration_5_hrs: 5 時間
+  module_duration_5_hrs_plus: 5 時間以上
   module_duration_8_hrs: 8 時間
   module_duration_20_hrs: 20 時間
   module_duration_35_hrs: 35 時間
@@ -454,6 +462,7 @@ ja:
   heading_objects_first: オブジェクトファースト
   heading_these_lessons_will: これらのレッスンでは次のことを行います。
   heading_explore_curriculum_catalog: カリキュラムカタログのすべてのコースをご覧ください
+  heading_csa_ai: AP® 試験後にやることをお探しですか？
   professional_learning_section_desc: 指導準備に必要なサポートを受けましょう。90％以上の教師が、これまでで最高の専門能力開発であると評価しています！
   professional_learning_section_desc_short: 指導準備に必要なサポートを受けましょう。
   professional_learning_section_desc_self_paced: ジャストインタイムのサポートで、あなたのスケジュールに合わせて自信を持って教える準備ができます。
@@ -468,6 +477,13 @@ ja:
   no_devices_section_desc: CS教育は常にスクリーンの前で行われる必要はなく、デバイスへのアクセスがコンピューター・サイエンスの概念を学ぶ障害になるべきではありません。
   support_and_questions_section_subhead: まだ質問がございますか？私たちにご連絡ください！私たちがお手伝いします。
   support_and_questions_section_desc: サポートチームは、Code.orgを使った指導を始めるにあたって、どんな質問にもお答えします。また、教師フォーラムで他の教師の経験について質問することもできます。
+  subscribe_form_section_title: 最新情報を購読する
+  subscribe_form_section_desc_csa: サインアップして、Code.orgのAP® Computer Science Aに関するメールを毎月受信し、役立つリマインダー、ヒント、最新情報を受信トレイに直接送信してください。
+  subscribe_form_section_desc_csc: サインアップすると、Code.orgのComputer Science Connectionsに関するメールを毎月受信し、役立つリマインダー、ヒント、最新情報を受信トレイに直接送信できます。
+  subscribe_form_section_desc_csd: サインアップすると、Code.orgのComputer Science Discoverysに関する毎月のメールを受け取り、役立つリマインダー、ヒント、最新情報を受信トレイに直接送信できます。
+  subscribe_form_section_desc_csf: サインアップすると、Code.orgのコンピュータサイエンスの基礎に関するメールを毎月受信し、役立つリマインダー、ヒント、更新情報を受信トレイに直接送信できます。
+  subscribe_form_section_desc_csp: サインアップすると、Code.orgのコンピュータサイエンス原則に関するメールを毎月受信し、役立つリマインダー、ヒント、更新情報を受信トレイに直接送信できます。
+  subscribe_form_section_unsubscribe: 購読はいつでも解除できます。
   blockchain_hero_heading: ブロックチェーンの仕組み
   blockchain_hero_desc: 新しいビデオシリーズとそれに付随するレッスンである「How Blockchain Works」で、ブロックチェーンの世界に飛び込みましょう！
   blockchain_intro_heading: ブロックチェーンの仕組みを見る
@@ -540,6 +556,8 @@ ja:
   ai_curriculum_title_04: "「AI はどのように機能するか 」"
   ai_curriculum_desc_04: これらのレッスンは、「AI の仕組み」ビデオシリーズを補足するものです。各レッスンは、シリーズの 1 本の動画とペアになっており、動画で紹介されている概念をより深く掘り下げています。
   ai_curriculum_btn_aria_label_04: AI のしくみを探るレッスン
+  ai_curriculum_grades_05: グレードレベル:9-12
+  ai_curriculum_btn_aria_label_05: "「ソフトウェアエンジニアリングとコンピュータビジョン」モジュールをご覧ください"
   ai_carousel_heading: 'Code.orgを使った人工知能についての教師たちの感想:'
   ai_carousel_quote_01: このレッスンは、生徒たちに、分類システムには意見の要素があることを知る機会にもなりました。後になって、AI にバイアスが入り込む可能性が明らかになったとき、私は生徒たちを引き戻して、モデルのトレーニングに使われるデータは選択に基づくものであることを思い出させることができました。
   ai_carousel_quote_02: 私の学生たちは、ほぼ日常的に経験している技術の進歩に関しては、自分たちが単なる消費者である必要はないことを学びました。彼らも実はクリエイターになれるのです！
@@ -611,6 +629,7 @@ ja:
     の CTO であるミラ・ムラティと RunwayML の CEO であるクリストバル・バレンズエラという専門家から直接聞くことができます。
   ai_pl_101_llm_slides_title: 教育者向けの大規模言語モデルプロンプト
   ai_pl_101_llm_slides_desc: 初心者から上級者まで、ChatGPTのようなLLMから可能な限り最高のアウトプットを引き出すためのツール。初心者向けのスタータープロンプトのほか、可能性を最大限に引き出したいユーザー向けの高度なツールも含まれています。
+  ai_pl_101_resources_3: 学生の学習を変革するための AI プロンプト
   how_ai_works_hero_heading: "「AI はどのように機能するか 」"
   how_ai_works_hero_desc: ビデオシリーズとそれに付随するレッスンである「How AI Works」で AI の世界に飛び込みましょう！
   how_ai_works_intro_desc: この一連の短いビデオとそれに付随する教室での授業では、人工知能がどのように機能し、なぜ重要なのかを教員と生徒に紹介します。トピックに基づいて個別のレッスンを選択したり、1つのクラスで一連のトピックをすべて調べたり、7つのレッスンすべてを教えてより深く掘り下げたりすることができます。
@@ -825,8 +844,7 @@ ja:
     Animation
   csp_page_curriculum_glance_devices: Laptop, Chromebook
   csp_page_curriculum_glance_tools: アプリラボ
-  csp_page_curriculum_glance_professional_learning: Facilitator-led Workshops, Self-paced
-    Modules
+  csp_page_curriculum_glance_professional_learning: ファシリテーター主導のワークショップ、自分のペースで進めるモジュール
   csp_page_curriculum_glance_professional_languages: 日本語
   csp_page_curriculum_glance_professional_accessibility_features: Text-to-speech,
     Closed captioning, Immersive reader
@@ -946,8 +964,7 @@ ja:
   csd_page_curriculum_glance_topics: 人工知能、データ、ウェブデザイン、フィジカルコンピューティング、アプリデザイン、ゲームとアニメーション、アートとデザイン、プログラミング
   csd_page_curriculum_glance_devices: Laptop, Chromebook
   csd_page_curriculum_glance_tools: アプリラボ、ゲームラボ、AIラボ、ウェブラボ
-  csd_page_curriculum_glance_professional_learning: Facilitator-led Workshops, Self-paced
-    Modules
+  csd_page_curriculum_glance_professional_learning: ファシリテーター主導のワークショップ、自分のペースで進めるモジュール
   csd_page_curriculum_glance_professional_languages: 日本語
   csd_page_curriculum_glance_professional_accessibility_features: Text-to-speech,
     Closed captioning, Immersive reader
@@ -1022,8 +1039,7 @@ ja:
   csf_page_curriculum_glance_topics: プログラミング、インターネット、ゲーム・アニメーション、アートとデザイン、アプリデザイン
   csf_page_curriculum_glance_devices: ラップトップ, Chromebook, タブレット
   csf_page_curriculum_glance_tools: スプライトラボ、プレイラボ
-  csf_page_curriculum_glance_professional_learning: Facilitator-led Workshops, Self-paced
-    Modules
+  csf_page_curriculum_glance_professional_learning: ファシリテーター主導のワークショップ、自分のペースで進めるモジュール
   csf_page_curriculum_glance_languages: アラビア語、インドネシア語、カタロニア語、中国語簡体字、中国語繁体字、チェコ語、フランス語、ドイツ語、ヒンディー語、イタリア語、日本語、韓国語、カンナダ語、マレー語、マラーティー語、モンゴル語、ポーランド語、ポルトガル語BR、ルーマニア語、ロシア語、スロバキア語、タガログ語、タミル語、タイ語、トルコ語、ウクライナ語、スペイン語ラタム語、ウルドゥー語、スペイン語ES、ウズベク語、ベトナム語
   csf_page_curriculum_glance_accessibility_features: Text-to-speech, Closed captioning,
     Immersive reader
@@ -1125,6 +1141,26 @@ ja:
   csa_page_faq_answer_08_02: For more information about the values that guided our
     work, please see our [curriculum values](%{curriculum_values_url}) and our [professional
     learning values](%{pl_values_url}).
+  donate_page_top_heading: 私たちの使命への資金提供にご協力ください
+  donate_page_top_desc: すべての寄付は、コンピュータサイエンス教育へのアクセスを拡大するというCode.orgの使命を後押しします。私たちは皆さんが寄付をして社会に貢献できるよう、いくつかの方法を提供しています。
+  donate_page_fundraise_title: Code.org のファンドレイズ
+  donate_page_fundraise_desc: Code.orgのために資金を集めるのを手伝ってください！すべての学校のすべての生徒にコンピュータサイエンスを学ぶ機会が与えられるべきです。
+  donate_page_other_ways_title: その他の寄付方法
+  donate_page_other_ways_desc: さまざまな貢献方法を探り、自分に最も適したオプションを見つけてください。大小を問わず、あらゆるジェスチャーが私たちの使命を前進させます。
+  donate_page_501c3: Code.orgは公共の501 (c) (3) 非営利団体として登録されています。Code.org への寄付は、法律で認められている範囲で税控除の対象となります。Code.org
+    の納税者番号は 46-0858543 です。
+  donate_page_donation_policy_title: 寄付ポリシーの理解
+  donate_page_donation_policy_desc: 寄付金の取り扱いと配分方法について学びましょう。
+  donate_tabs_tab_label_daf_direct: DAF ダイレクト
+  donate_tabs_tab_label_amazon: アマゾン
+  donate_tabs_tab_label_bitpay: ビットペイ
+  donate_tabs_tab_label_employee_match: 従業員マッチ
+  donate_tabs_daf_direct_title: DAF ダイレクト経由で寄付
+  donate_tabs_daf_direct_desc: フィデリティ・チャリティー、シュワブ・チャリティー、またはBNYメロンのドナー・アドバイズド・ファンドを通じて寄付し、DAFダイレクトのオンラインフォームからCode.orgに助成金を推薦してください。
+  donate_tabs_amazon_title: アマゾン経由で寄付
+  donate_tabs_amazon_desc: Amazon アカウントを使用して直接寄付してください。数回クリックするだけで、Code.org のミッションにシームレスに貢献し、コンピュータサイエンス教育の未来を後押しできます。
+  donate_tabs_bitpay_title: ビットペイ経由でクリプトを使って寄付する
+  donate_tabs_bitpay_desc: 暗号通貨で寄付の未来を切り開きましょう。BitPayを通じて、デジタル通貨はCode.orgのコンピューターサイエンス教育の拡大に向けた取り組みを直接支援することができます。
   hoc_live: アワー・オブ・コードライブ
   hoc_live_sign_up_title: アワー・オブ・コードライブにサインアップ
   hoc_live_learn_title: アワー・オブ・コードライブで学ぼう

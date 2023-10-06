@@ -80,7 +80,7 @@ body {
 #pagefooter {
   width: 100%;
   padding: 2em 2.5em 2.5em;
-  background-color: #5c3f7f;
+  background-color: var(--neutral_dark);
   box-sizing: border-box;
   overflow: auto;
 }
