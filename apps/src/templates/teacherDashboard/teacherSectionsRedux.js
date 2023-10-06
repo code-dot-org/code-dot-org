@@ -64,6 +64,8 @@ const SET_SHOW_LOCK_SECTION_FIELD =
 const SET_AUTH_PROVIDERS = 'teacherDashboard/SET_AUTH_PROVIDERS';
 const SET_SECTIONS = 'teacherDashboard/SET_SECTIONS';
 const SET_COTEACHER_INVITE = 'teacherDashboard/SET_COTEACHER_INVITE';
+const ACCEPT_COTEACHER_INVITE = 'teacherDashboard/ACCEPT_COTEACHER_INVITE';
+const DECLINE_COTEACHER_INVITE = 'teacherDashboard/DECLINE_COTEACHER_INVITE';
 export const SELECT_SECTION = 'teacherDashboard/SELECT_SECTION';
 const REMOVE_SECTION = 'teacherDashboard/REMOVE_SECTION';
 const TOGGLE_SECTION_HIDDEN = 'teacherSections/TOGGLE_SECTION_HIDDEN';
@@ -174,10 +176,6 @@ export const pageTypes = {
  * @param sections
  */
 export const setSections = sections => ({type: SET_SECTIONS, sections});
-export const setCoteacherInvite = coteacherInvite => ({
-  type: SET_COTEACHER_INVITE,
-  coteacherInvite,
-});
 export const selectSection = sectionId => ({type: SELECT_SECTION, sectionId});
 export const removeSection = sectionId => ({type: REMOVE_SECTION, sectionId});
 
@@ -444,6 +442,15 @@ export const asyncLoadSectionData = id => dispatch => {
       dispatch({type: ASYNC_LOAD_END});
     });
 };
+
+/**
+ * Load coteacher invites
+ */
+
+export const setCoteacherInvite = coteacherInvite => ({
+  type: SET_COTEACHER_INVITE,
+  coteacherInvite,
+});
 
 export const asyncLoadCoteacherInvite = () => dispatch => {
   fetchJSON('/api/v1/section_instructors')
@@ -752,6 +759,20 @@ export default function teacherSections(state = initialState, action) {
     return {
       ...state,
       coteacherInvite: action.coteacherInvite,
+    };
+  }
+
+  if (action.type === ACCEPT_COTEACHER_INVITE) {
+    return {
+      ...state,
+      coteacherInvite: null,
+    };
+  }
+
+  if (action.type === DECLINE_COTEACHER_INVITE) {
+    return {
+      ...state,
+      coteacherInvite: null,
     };
   }
 

@@ -5,6 +5,7 @@ import Notification, {NotificationType} from '@cdo/apps/templates/Notification';
 import {asyncLoadCoteacherInvite} from '@cdo/apps/templates/teacherDashboard/teacherSectionsRedux';
 import Button from '../Button';
 import {BodyTwoText, StrongText} from '@cdo/apps/componentLibrary/typography';
+import HttpClient from '@cdo/apps/util/HttpClient';
 
 const CoteacherInviteNotification = ({
   asyncLoadCoteacherInvite,
@@ -17,6 +18,22 @@ const CoteacherInviteNotification = ({
   if (!coteacherInvite) {
     return null;
   }
+
+  const acceptCoteacherInvite = id => {
+    HttpClient.put(`/api/v1/section_instructors/${id}/accept`, '', true)
+      .then(() => {
+        asyncLoadCoteacherInvite();
+      })
+      .catch(err => console.error(err));
+  };
+
+  const declineCoteacherInvite = id => {
+    HttpClient.put(`/api/v1/section_instructors/${id}/decline`, '', true)
+      .then(() => {
+        asyncLoadCoteacherInvite();
+      })
+      .catch(err => console.error(err));
+  };
 
   return (
     <Notification
@@ -40,15 +57,13 @@ const CoteacherInviteNotification = ({
       buttons={[
         {
           text: 'Decline',
-          link: 'https://google.com',
-          newWindow: true,
+          onClick: () => declineCoteacherInvite(coteacherInvite.id),
           color: Button.ButtonColor.neutralDark,
           style: styles.declineButton,
         },
         {
           text: 'Accept',
-          link: 'https://google.com',
-          newWindow: true,
+          onClick: () => acceptCoteacherInvite(coteacherInvite.id),
           color: Button.ButtonColor.brandSecondaryDefault,
           style: styles.acceptButton,
         },
