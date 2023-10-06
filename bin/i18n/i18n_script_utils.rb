@@ -57,6 +57,7 @@ CROWDIN_TEST_PROJECTS = {
 class I18nScriptUtils
   PROGRESS_BAR_FORMAT = '%t: |%B| %p% %a'.freeze
   PARALLEL_PROCESSES = Parallel.processor_count / 2
+  SOURCE_LOCALE = 'en-US'.freeze
 
   # Because we log many of the i18n operations to slack, we often want to
   # explicitly force stdout to operate synchronously, rather than buffering
@@ -136,7 +137,12 @@ class I18nScriptUtils
 
   # Used by get_level_from_url, for the script_level-specific case.
   def self.get_script_level(route_params, url)
-    script = Unit.get_from_cache(route_params[:script_id])
+    script = begin
+      Unit.get_from_cache(route_params[:script_id])
+    rescue ActiveRecord::RecordNotFound => _exception
+      nil
+    end
+
     unless script.present?
       error_class = 'Could not find script in get_script_level'
       error_message = "unknown script #{route_params[:script_id].inspect} for url #{url.inspect}"
@@ -200,25 +206,6 @@ class I18nScriptUtils
     end
 
     @levels_by_url[url]
-  end
-
-  def self.write_markdown_with_header(markdown, header, path)
-    File.open(path, 'w') do |f|
-      unless header.empty?
-        f.write(I18nScriptUtils.to_crowdin_yaml(header))
-        f.write("---\n\n")
-      end
-      f.write(markdown)
-    end
-  end
-
-  # Reduce the header metadata we include in markdown files down to just the
-  # subset of content we want to allow translators to translate.
-  #
-  # Right now, this is just page titles but it could be expanded to include
-  # any English content (description, social share stuff, etc).
-  def self.sanitize_markdown_header(header)
-    header.slice('title')
   end
 
   # For resources like `course_content` and `curriculum_content`,
@@ -329,6 +316,13 @@ class I18nScriptUtils
     locale.tr('-', '_').downcase
   end
 
+  # Wraps hash in correct format to be loaded by our i18n backend.
+  # This will most likely be JSON file data due to Crowdin only
+  # setting the locale for yml files.
+  def self.to_dashboard_i18n_data(locale, type, i18n_data)
+    {locale => {'data' => {type => i18n_data}}}
+  end
+
   def self.sort_and_sanitize(hash)
     hash.sort_by {|key, _| key}.each_with_object({}) do |(key, value), result|
       case value
@@ -346,32 +340,28 @@ class I18nScriptUtils
     end
   end
 
-  def self.sanitize_data_and_write(data, dest_path)
-    sorted_data = sort_and_sanitize(data)
-
-    dest_data =
-      case File.extname(dest_path)
-      when '.yaml', '.yml'
-        sorted_data.to_yaml
-      when '.json'
-        JSON.pretty_generate(sorted_data)
-      else
-        raise "do not know how to serialize localization data to #{dest_path}"
-      end
-
-    FileUtils.mkdir_p(File.dirname(dest_path))
-    File.write(dest_path, dest_data)
+  def self.json_file?(file_path)
+    %w[.json].include?(File.extname(file_path).downcase)
   end
 
-  def self.parse_file(path)
-    case File.extname(path)
-    when '.yaml', '.yml'
-      YAML.load_file(path)
-    when '.json'
-      JSON.load_file(path)
-    else
-      raise "do not know how to parse file #{path.inspect}"
-    end
+  def self.yaml_file?(file_path)
+    %w[.yaml .yml].include?(File.extname(file_path).downcase)
+  end
+
+  def self.sanitize_data_and_write(data, dest_path)
+    dest_data = sort_and_sanitize(data)
+
+    dest_data = JSON.pretty_generate(dest_data) if json_file?(dest_path)
+    dest_data = YAML.dump(dest_data) if yaml_file?(dest_path)
+
+    write_file(dest_path, dest_data)
+  end
+
+  def self.parse_file(file_path)
+    return JSON.load_file(file_path) if json_file?(file_path)
+    return YAML.load_file(file_path) if yaml_file?(file_path)
+
+    raise "do not know how to parse file #{file_path.inspect}"
   end
 
   def self.sanitize_file_and_write(loc_path, dest_path)
@@ -387,6 +377,15 @@ class I18nScriptUtils
     Parallel.each(data_array, **args, in_threads: PARALLEL_PROCESSES) {|data| yield(data)}
   end
 
+  # Writes file
+  #
+  # @param file_path [String] path to the file
+  # @param content [String] the file content
+  def self.write_file(file_path, content)
+    FileUtils.mkdir_p(File.dirname(file_path))
+    File.write(file_path, content)
+  end
+
   # Copies file
   #
   # @param file_path [String] path to the file
@@ -397,10 +396,20 @@ class I18nScriptUtils
     FileUtils.cp(file_path, dest_path)
   end
 
+  # Moves file
+  #
+  # @param file_path [String] path to the file
+  # @param dest_path [String] destination path
+  def self.move_file(file_path, dest_path)
+    dest_dir = File.extname(dest_path).empty? ? dest_path : File.dirname(dest_path)
+    FileUtils.mkdir_p(dest_dir)
+    FileUtils.mv(file_path, dest_path, force: true)
+  end
+
   # Renames directory
   #
-  # @param [String] from_dir, e.g. `i18n/locales/English/resource`
-  # @param [String] to_dir, e.g. `i18n/locales/en-US/resource`
+  # @param from_dir [String] the original directory path name, e.g. `i18n/locales/English/resource`
+  # @param to_dir [String] the new directory path name, e.g. `i18n/locales/en-US/resource`
   def self.rename_dir(from_dir, to_dir)
     FileUtils.mkdir_p(to_dir)
     FileUtils.cp_r File.join(from_dir, '.'), to_dir
@@ -408,13 +417,21 @@ class I18nScriptUtils
   end
 
   def self.locale_dir(locale, *paths)
-    CDO.dir(File.join(I18N_LOCALES_DIR, locale, *paths))
+    CDO.dir(I18N_LOCALES_DIR, locale, *paths)
   end
 
   def self.remove_empty_dir(dir)
-    return unless File.exist?(dir)
+    return unless File.directory?(dir)
     return unless Dir.empty?(dir)
 
     FileUtils.rm_r(dir)
+  end
+
+  # Checks if the language is the i18n source language
+  #
+  # @param lang [PegasusLanguage] a pegasus language object
+  # @return [true, false]
+  def self.source_lang?(lang)
+    lang[:locale_s] == SOURCE_LOCALE
   end
 end

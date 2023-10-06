@@ -38,8 +38,8 @@ theme: responsive
       </a>
     <div class="tutorial-info" style="background-color: #ffffff; border: 1px solid #696969; border-top: none; border-radius: 0 0 15px 15px; padding: 15px 25px 25px 25px">
       <span>
-        <h3 class="tutorial-info-h" style="text-align: left; margin-top:10px; margin-bottom:10px"><strong>Танц партија</strong></h3>
-        <div class="smalltext" style="text-align: left; margin-bottom: 10px">Код на танц партија да ги споделите со пријателите и семејството. Одликувајќи се со Бијонсе, Хари Стилови, Лизо, Лил Нас Х, Селена Гомез, музика од “Енканто” на Дизни и многу повеќе!</div>
+        <h3 class="tutorial-info-h" style="text-align: left; margin-top:10px; margin-bottom:10px">Танц партија</h3>
+        <div class="smalltext" style="text-align: left; margin-bottom: 10px">законик танц партија да ги споделите со пријателите и семејството. Одликувајќи се со Бијонсе, Хари Стилови, Лизо, Лил Нас Х, Селена Гомез, музика од “Енканто” на Дизни и многу повеќе!</div>
         <a class="linktag" id="danceparty" href="/dance" target="_blank"><button>Обиди се со активност</button></a>
     </span>
   </div>
@@ -53,8 +53,8 @@ theme: responsive
       </a>
     <div class="tutorial-info" style="background-color: #ffffff; border: 1px solid #696969; border-top: none; border-radius: 0 0 15px 15px; padding: 15px 25px 25px 25px">
       <span>
-        <h3 class="tutorial-info-h" style="text-align: left; margin-top:10px; margin-bottom: 10px"><strong>Minecraft Часот на кодот</strong></h3>
-        <div class="smalltext" style="text-align: left; margin-bottom: 10px">Minecraft се враќа за Часот на кодот со сосема нова активност! Патување низ Minecraft со код.</div>
+        <h3 class="tutorial-info-h" style="text-align: left; margin-top:10px; margin-bottom: 10px">Minecraft Часот на кодот</h3>
+        <div class="smalltext" style="text-align: left; margin-bottom: 10px">Minecraft се врати за Часот на кодот со сосема нова активност! Патување низ Minecraft со код.</div>
         <br>
         <a class="linktag" id="minecraft" href="/minecraft" target="_blank"><button>Пробај со активност</button></a>
     </span>
@@ -69,8 +69,8 @@ theme: responsive
       </a>
     <div class="tutorial-info" style="background-color: #ffffff; border: 1px solid #696969; border-top: none; border-radius: 0 0 15px 15px; padding: 15px 25px 25px 25px">
       <span>
-        <h3 class="tutorial-info-h" style="text-align: left; margin-top:10px; margin-bottom:10px"><strong>AI for Oceans</strong></h3>
-        <div class="smalltext" style="text-align: left; margin-bottom: 10px">Помогнете му на А.И. да ги исчисти океаните тренирајќи го за откривање на ѓубрето! Дознајте за податоците за обуката и пристрасноста и како АИ може да ги реши светските проблеми. Прикажи <a class="linktag" id="oceans-lesson" href="https://curriculum.code.org/hoc/plugged/9/" target="_blank">план лекција</a>.</div>
+        <h3 class="tutorial-info-h" style="text-align: left; margin-top:10px; margin-bottom:10px">АИ за океаните</h3>
+        <div class="smalltext" style="text-align: left; margin-bottom: 10px">Помогнете му на А.И. да ги исчисти океаните со тоа што ќе го обучи за откривање на ѓубрето! Дознајте за податоците за обуката и пристрасноста и како АИ може да ги реши светските проблеми. Прикажи <a class="linktag" id="oceans-lesson" href="https://curriculum.code.org/hoc/plugged/9/" target="_blank">план лекција</a>.</div>
         <a class="linktag" id="aiforoceans" href="https://studio.code.org/s/oceans/lessons/1/levels/1" target="_blank"><button>Пробај со активност</button></a>
     </span>
   </div>
@@ -96,7 +96,7 @@ theme: responsive
       </a>
     <div class="tutorial-info" style="background-color: #ffffff; border: 1px solid #696969; border-top: none; border-radius: 0 0 15px 15px; padding: 15px 25px 25px 25px">
       <span>
-        <h3 class="tutorial-info-h" style="text-align: left; margin-top:10px; margin-bottom:10px"><strong>Како функционираат компјутерите</strong></h3>
+        <h3 class="tutorial-info-h" style="text-align: left; margin-top:10px; margin-bottom:10px">Како работат компјутерите</h3>
         <div class="smalltext" style="text-align: left; margin-bottom: 10px">Со вовед од Бил Гејтс, оваа серија од шест кратки видеа објаснува што го прави компјутерот компјутер и како функционираат компјутерските кола.</div>
         <a class="linktag" id="howcomputers" href="https://www.youtube.com/watch?v=OAx_6-wdslM&list=PLzdnOPI1iJNcsRwJhvksEo1tJqjIqWbN-" target="_blank"><button>Погледнете ја видео серијата</button></a>
     </span>
@@ -111,7 +111,7 @@ theme: responsive
       </a>
     <div class="tutorial-info" style="background-color: #ffffff; border: 1px solid #696969; border-top: none; border-radius: 0 0 15px 15px; padding: 15px 25px 25px 25px">
       <span>
-        <h3 class="tutorial-info-h" style="text-align: left; margin-top:10px; margin-bottom: 10px"><strong>Како функционира интернетот</strong></h3>
+        <h3 class="tutorial-info-h" style="text-align: left; margin-top:10px; margin-bottom: 10px">Како функционира интернетот</h3>
         <div class="smalltext" style="text-align: left; margin-bottom: 10px">Во оваа серија од осум кратки видеа, ќе научите како е измислен интернетот, што е HTML и како функционираат пребарувачите како Google.</div>
         <a class="linktag" id="howinternet" href="https://www.youtube.com/watch?v=Dxcc6ycZ73M&list=PLzdnOPI1iJNfMRZm5DDxco3UdsFegvuB7-" target="_blank"><button>Погледнете ја видео серијата</button></a>
     </span>
@@ -126,8 +126,8 @@ theme: responsive
       </a>
     <div class="tutorial-info" style="background-color: #ffffff; border: 1px solid #696969; border-top: none; border-radius: 0 0 15px 15px; padding: 15px 25px 25px 25px">
       <span>
-        <h3 class="tutorial-info-h" style="text-align: left; margin-top:10px; margin-bottom: 10px"><strong>Како работи АИ</strong></h3>
-        <div class="smalltext" style="text-align: left; margin-bottom: 10px">Дознајте за тоа како функционира АИ и зошто е важно со оваа серија кратки видеа. Одликувајќи се со извршниот директор на Мајкрософт, Сатја Надела и разновидна екипа на експерти.</div>
+        <h3 class="tutorial-info-h" style="text-align: left; margin-top:10px; margin-bottom: 10px">Како работи АИ</h3>
+        <div class="smalltext" style="text-align: left; margin-bottom: 10px">Дознајте за тоа како работи АИ и зошто е важно со оваа серија кратки видеа. Одликувајќи се со извршниот директор на Мајкрософт, Сатја Надела и разновидна екипа на експерти.</div>
         <a class="linktag" id="ai-videos" href="/ai#ai-videos" target="_blank"><button>Погледнете ја видео серијата</button></a>
     </span>
   </div>
@@ -136,7 +136,7 @@ theme: responsive
 
 <div style="clear: both"></div>
 
-<p>View more videos, including short inspirational videos featuring celebrities like Steph Curry and Shakira, <a class="linktag" id="all-videos" href="https://code.org/educate/resources/videos" target="_blank">here</a>.</p>
+<p>Погледнете повеќе видеа, вклучувајќи кратки инспиративни видеа во кои има познати личности како Стеф Кари и Шакира, тука. <a class="linktag" id="all-videos" href="https://code.org/educate/resources/videos" target="_blank"></a></p>
 <br>
 <p><a href="#top">[Назад кон врвот]</a></p>
 
@@ -159,13 +159,13 @@ theme: responsive
 
 <div class="col-50" style="padding-right: 20px; padding-bottom:10px">
 
-<a class="linktag" id="prereader-course" href="https://studio.code.org/s/pre-express-2019" target="_blank"><img src="/images/curriculum/course-tile-pre-reader-express.png" style="width: 100%" alt="Пред-читач Експрес курс"></a><br><a class="linktag" id="prereader-course" href="https://studio.code.org/s/pre-express-2019" target="_blank">Express Course for pre-readers</a>
+<a class="linktag" id="prereader-course" href="https://studio.code.org/s/pre-express-2019" target="_blank"><img src="/images/curriculum/course-tile-pre-reader-express.png" style="width: 100%" alt="Пред-читач Експрес курс"></a><br><a class="linktag" id="prereader-course" href="https://studio.code.org/s/pre-express-2019" target="_blank">Експрес курс за пред-читатели</a>
 
 </div>
-<div style="clear: both"></div>
+<div style="clear: both; margin-bottom: 2rem"></div>
 
 <h3>Само-темпо воведи во Game Lab и App Lab</h3>
-<p>Адаптирани од нашите курсеви за CS откритија и CS принципи, овие кратки, само-темпо модули се одличен начин да се научат концепти кои ги опфаќаат сите програмски јазици и алатки. <i>Requires Code.org account to access</i>.</p>
+<p>Адаптирани од нашите курсеви за CS откритија и CS принципи, овие кратки, само-темпо модули се одличен начин да се научат концепти кои ги опфаќаат сите програмски јазици и алатки. <i>Потребна е сметка на Code.org за пристап.</i></p>
 
 <br>
 
@@ -176,8 +176,8 @@ theme: responsive
       </a>
     <div class="tutorial-info" style="background-color: #ffffff; border: 1px solid #696969; border-top: none; border-radius: 0 0 15px 15px; padding: 15px 25px 25px 25px">
       <span>
-        <h3 class="tutorial-info-h" style="text-align: left; margin-top:10px; margin-bottom:10px"><strong>Вовед во Game Lab</strong></h3>
-        <div class="smalltext" style="text-align: left; margin-bottom: 10px">Програма анимации, интерактивна уметност, и игри во Game Lab. Започнете со едноставни форми и да се изгради до повеќе софистицирани sprite-базирани анимации и игри.</div>
+        <h3 class="tutorial-info-h" style="text-align: left; margin-top:10px; margin-bottom:10px">Вовед во Game Lab</h3>
+        <div class="smalltext" style="text-align: left; margin-bottom: 10px">програма анимации, интерактивна уметност, и игри во Game Lab. Започнете со едноставни форми и да се изгради до повеќе софистицирани sprite-базирани анимации и игри.</div>
         <a class="linktag" id="gamelab-intro" href="https://studio.code.org/s/csd3-virtual" target="_blank"><button>Обидете се со модулот</button></a>
     </span>
   </div>
@@ -191,9 +191,9 @@ theme: responsive
       </a>
     <div class="tutorial-info" style="background-color: #ffffff; border: 1px solid #696969; border-top: none; border-radius: 0 0 15px 15px; padding: 15px 25px 25px 25px">
       <span>
-        <h3 class="tutorial-info-h" style="text-align: left; margin-top:10px; margin-bottom: 10px"><strong>Програмирање на желки во App Lab</strong></h3>
-        <div class="smalltext" style="text-align: left; margin-bottom: 10px">Користете едноставни команди за JavaScript за цртање форми и слики користејќи виртуелна “желка”. Дизајнирајте и програмирајте своја дигитална сцена!</div>
-        <a class="linktag" id="turtle-applab" href="https://studio.code.org/s/csp3-virtual" target="_blank"><button>Обидете се со модулот</button></a>
+        <h3 class="tutorial-info-h" style="text-align: left; margin-top:10px; margin-bottom: 10px">Програмирање на желки во App Lab</h3>
+        <div class="smalltext" style="text-align: left; margin-bottom: 10px">Користете едноставни команди за JavaScript за да цртате форми и слики користејќи виртуелна “желка”. Дизајнирајте и програмирајте своја дигитална сцена!</div>
+        <a class="linktag" id="turtle-applab" href="https://studio.code.org/s/csp3-virtual" target="_blank"><button>Пробајте го модулот</button></a>
     </span>
   </div>
 </div>
@@ -206,8 +206,8 @@ theme: responsive
       </a>
     <div class="tutorial-info" style="background-color: #ffffff; border: 1px solid #696969; border-top: none; border-radius: 0 0 15px 15px; padding: 15px 25px 25px 25px">
       <span>
-        <h3 class="tutorial-info-h" style="text-align: left; margin-top:10px; margin-bottom: 10px"><strong>Програмирање управувано од настани во App Lab</strong></h3>
-        <div class="smalltext" style="text-align: left; margin-bottom: 10px">Научете како да дизајнирате апликации кои реагираат на кликања и притискања на копчиња. Создадете серија едноставни апликации (апликации) кои живеат на интернет!</div>
+        <h3 class="tutorial-info-h" style="text-align: left; margin-top:10px; margin-bottom: 10px">Програмирање управувано од настани во App Lab</h3>
+        <div class="smalltext" style="text-align: left; margin-bottom: 10px">Научете како да дизајнирате апликации кои реагираат на кликови и притискања на копчиња. Создадете серија едноставни апликации (апликации) кои живеат на интернет!</div>
         <a class="linktag" id="events-applab" href="https://studio.code.org/s/csp5-virtual" target="_blank"><button>Обидете се со модулот</button></a>
     </span>
   </div>
@@ -230,7 +230,7 @@ theme: responsive
 
 <div class="col-33" style="padding:15px; border-radius:15px; border:10px solid white; background-color:#00adbc">
   <div style="width: 87%; float: left">
-    <a class="linktag" id="applab" href="https://code.org/educate/applab" style="text-decoration:none" target="_blank"><h3 style="color:#ffffff; margin:0; margin-bottom:5px; text-decoration:none"><strong>Лабораторија за апликации</strong></h3></a>
+    <a class="linktag" id="applab" href="https://code.org/educate/applab" style="text-decoration:none" target="_blank"><h3 style="color:#ffffff; margin:0; margin-bottom:5px; text-decoration:none">Лабораторија за апликации</h3></a>
     <p style="color:#ffffff">App Lab е програмска околина каде што можете да направите едноставни апликации. Дизајнирајте апликација, код со блокови или JavaScript за да го направите да работи, а потоа споделете ја вашата апликација во секунди.</p>
     <a class="linktag" id="applab" href="https://code.org/educate/applab" target="_blank"><button style="background-color:#e7e8ea; border-color:#e7e8ea; color:#696969">Изградба на стан</button></a>
   </div>
@@ -239,7 +239,7 @@ theme: responsive
 
 <div class="col-33" style="padding:15px; border-radius:15px; border:10px solid white; background-color:#00adbc">
   <div style="width: 87%; float: left">
-    <a class="linktag" id="gamelab" href="https://code.org/educate/gamelab" style="text-decoration:none" target="_blank"><h3 style="color:#ffffff; margin:0; margin-bottom:5px; text-decoration:none"><strong>Игра Лабораторија</strong></h3></a>
+    <a class="linktag" id="gamelab" href="https://code.org/educate/gamelab" style="text-decoration:none" target="_blank"><h3 style="color:#ffffff; margin:0; margin-bottom:5px; text-decoration:none">Лабораторија за игри</h3></a>
     <p style="color:#ffffff">Game Lab е програмска средина каде што можете да направите едноставни анимации и игри со објекти и ликови кои комуницираат едни со други.</p>
     <br>
     <a class="linktag" id="gamelab" href="https://code.org/educate/gamelab" target="_blank"><button style="background-color:#e7e8ea; border-color:#e7e8ea; color:#696969">Креирај игра</button></a>
@@ -249,7 +249,7 @@ theme: responsive
 
 <div class="col-33" style="padding:15px; border-radius:15px; border:10px solid white; background-color:#00adbc">
   <div style="width: 87%; float: left">
-    <a class="linktag" id="weblab" href="https://code.org/educate/weblab" style="text-decoration:none" target="_blank"><h3 style="color:#ffffff; margin:0; margin-bottom:5px; text-decoration:none"><strong>Веб Лабораторија</strong></h3></a>
+    <a class="linktag" id="weblab" href="https://code.org/educate/weblab" style="text-decoration:none" target="_blank"><h3 style="color:#ffffff; margin:0; margin-bottom:5px; text-decoration:none">Веб Лабораторија</h3></a>
     <p style="color:#ffffff">Web Lab е програмска средина каде што можете да направите едноставни веб страници користејќи HTML и CSS. Дизајнирајте ги вашите веб-страници и споделете ја вашата страница за неколку секунди.</p>
     <br>
     <a class="linktag" id="weblab" href="https://code.org/educate/weblab" target="_blank"><button style="background-color:#e7e8ea; border-color:#e7e8ea; color:#696969">Направете веб-страница</button></a>
@@ -286,16 +286,12 @@ theme: responsive
 
 <h2>Нема компјутер дома? Пробајте CS на вашиот телефон со овие апликации од нашите партнери</h2>
 
-<div class="col-33" style="padding-right: 30px; padding-bottom:40px">
-  <a class="linktag" id="box-island" href="https://boxisland.io/" target="_blank"><img src="images/tutorials/new/boxisland.jpg" style="width: 100%" alt="Остров кутија"></a><br><a class="linktag" id="box-island" href="https://boxisland.io/" target="_blank"><h3 style="color:#7665a0"><strong>Box Island</strong></h3></a>Шармантна мобилна игра за кодирање која ги зема учениците на возбудлива авантура, додека ги подучува основите на кодирањето, како алгоритми, препознавање на шеми, секвенци, петелки и условувања. <i>(за сите возрасти)</i>
+<div class="col-50" style="padding-right: 30px; padding-bottom:40px">
+  <a class="linktag" id="box-island" href="https://boxisland.io/" target="_blank"><img src="images/tutorials/new/boxisland.jpg" style="width: 100%" alt="Остров кутија"></a><br><a class="linktag" id="box-island" href="https://boxisland.io/" target="_blank"><h3 style="margin-top: 1rem;">Box Island</h3></a>Шармантна мобилна игра за кодирање која ги зема учениците на возбудлива авантура, додека ги предава основите на кодирање, како алгоритми, препознавање на модели, секвенци, петелки и условувања. <i>(за сите возрасти)</i>
 </div>
 
-<div class="col-33" style="padding-right: 30px; padding-bottom:40px">
-  <a class="linktag" id="codespark" href="https://accounts.codespark.com/promo?utm_source=codeorg&utm_medium=referral&utm_campaign=schoolsclosed-parents&utm_content=offer&promoCode=schoolclosed" target="_blank"><img src="/images/tutorials/hoc2018/codespark_create.jpg" style="width: 100%" alt="КодовиПарк"></a><br><a class="linktag" id="codespark" href="https://accounts.codespark.com/promo?utm_source=codeorg&utm_medium=referral&utm_campaign=schoolsclosed-parents&utm_content=offer&promoCode=schoolclosed" target="_blank"><h3 style="color:#7665a0"><strong>CodesPark</strong></h3></a>Наградуваната платформа за учење до код за деца на возраст од 5-9 години. Решавајте загатки и создавајте игри со The Fos додека учите да кодирате. <strong>Забелешка: CodeSpark нуди бесплатен 3-месечен пробен период. Parent's email address and credit card information are required at signup.</strong> <i>(for pre-readers through Grade 5)</i>
-</div>
-
-<div class="col-33" style="padding-right: 30px; padding-bottom:40px">
-  <a class="linktag" id="grasshopper" href="https://grasshopper.app/" target="_blank"><img src="/images/athome/grasshopper.png" style="width: 100%" alt="Скакулец"></a><br><a class="linktag" id="grasshopper" href="https://grasshopper.app/" target="_blank"><h3 style="color:#7665a0"><strong>Скакулец</strong></h3></a>Научете кодирање со забавни, брзи лекции на вашиот телефон кои ве учат да пишувате вистински JavaScript. Код со програма на Google. <i>(за средно училиште и нагоре)</i>
+<div class="col-50" style="padding-right: 30px; padding-bottom:40px">
+  <a class="linktag" id="codespark" href="https://accounts.codespark.com/promo?utm_source=codeorg&utm_medium=referral&utm_campaign=schoolsclosed-parents&utm_content=offer&promoCode=schoolclosed" target="_blank"><img src="/images/tutorials/hoc2018/codespark_create.jpg" style="width: 100%" alt="КодовиПарк"></a><br><a class="linktag" id="codespark" href="https://accounts.codespark.com/promo?utm_source=codeorg&utm_medium=referral&utm_campaign=schoolsclosed-parents&utm_content=offer&promoCode=schoolclosed" target="_blank"><h3 style="margin-top: 1rem;">CodeSpark</h3></a>Наградувана платформа за учење до код за деца на возраст од 5-9 години. Решавајте загатки и создавајте игри со The Fos додека учите да кодирате. <strong>Забелешка: CodeSpark нуди бесплатен 3-месечен пробен период. Адресата за е-пошта на родителот и информациите за кредитната картичка се потребни при пријавувањето.</strong> <i>(за пред-читатели преку Одделение 5)</i>
 </div>
 
 <div style="clear: both; margin-bottom: 15px"></div>
@@ -312,7 +308,7 @@ theme: responsive
       </a>
     <div class="tutorial-info" style="background-color: #ffffff; border: 1px solid black; border-top: none; border-radius: 0 0 15px 15px; padding: 15px 25px 25px 25px">
       <span>
-        <h3 class="tutorial-info-h" style="margin-top:10px"><strong>CodeBytes</strong></h3>
+        <h3 class="tutorial-info-h" style="margin-top:10px">CodeBytes</h3>
         <div class="smalltext" style="color: dimgray;">CodeBytes се лесни за варење, 20 минути интерактивни лекции мешање компјутерски науки со реалниот свет теми. Обучете АИ за читање знаковен јазик, дизајнирајте апликација за добро, истражувајте го светот на Minecraft и многу повеќе!</div>
         <br>
         <br>
@@ -329,8 +325,8 @@ theme: responsive
       </a>
     <div class="tutorial-info" style="background-color: #ffffff; border: 1px solid black; border-top: none; border-radius: 0 0 15px 15px; padding: 15px 25px 25px 25px">
       <span>
-        <h3 class="tutorial-info-h" style="margin-top:10px"><strong>Код пауза</strong></h3>
-        <div class="smalltext" style="">Чувајте компјутерски науки забава со преземање на Code Break! Можете да креирате шифра со Ештон Качер, да научите за променливи со Јара Шахиди, па дури и да истражувате како функционира интернетот со вистинскиот пронаоѓач на Интернет, Винт Церф!</div>
+        <h3 class="tutorial-info-h" style="margin-top:10px">Код пауза</h3>
+        <div class="smalltext" style="">Чувајте компјутерски науки забава со преземање на код пауза! Можете да креирате шифра со Ештон Качер, да научите за променливи со Јара Шахиди, па дури и да истражувате како функционира интернетот со вистинскиот пронаоѓач на Интернет, Винт Церф!</div>
         <br>
         <a class="linktag" id="codebreak" href="https://code.org/break" target="_blank"><button>Поврзете се</button></a>
     </span>

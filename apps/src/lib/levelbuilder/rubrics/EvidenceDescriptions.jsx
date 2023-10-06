@@ -3,6 +3,7 @@ import PropTypes from 'prop-types';
 import {Heading6} from '@cdo/apps/componentLibrary/typography';
 import EvidenceDescriptionsRow from './EvidenceDescriptionsRow';
 import {UNDERSTANDING_LEVEL_STRINGS} from '@cdo/apps/templates/rubrics/rubricHelpers';
+import {RubricUnderstandingLevels} from '@cdo/apps/util/sharedConstants';
 
 export default function EvidenceDescriptions({
   learningGoalData,
@@ -21,36 +22,52 @@ export default function EvidenceDescriptions({
       </div>
       <EvidenceDescriptionsRow
         isAiEnabled={learningGoalData.aiEnabled}
-        evidenceLabel={UNDERSTANDING_LEVEL_STRINGS[3]}
+        evidenceLabel={
+          UNDERSTANDING_LEVEL_STRINGS[RubricUnderstandingLevels.EXTENSIVE]
+        }
         evidenceLevelData={
-          learningGoalData.learningGoalEvidenceLevelsAttributes[3]
+          learningGoalData.learningGoalEvidenceLevelsAttributes[
+            RubricUnderstandingLevels.EXTENSIVE
+          ]
         }
         updateLearningGoal={updateLearningGoal}
         learningGoalId={learningGoalData.id}
       />
       <EvidenceDescriptionsRow
         isAiEnabled={learningGoalData.aiEnabled}
-        evidenceLabel={UNDERSTANDING_LEVEL_STRINGS[2]}
+        evidenceLabel={
+          UNDERSTANDING_LEVEL_STRINGS[RubricUnderstandingLevels.CONVINCING]
+        }
         evidenceLevelData={
-          learningGoalData.learningGoalEvidenceLevelsAttributes[2]
+          learningGoalData.learningGoalEvidenceLevelsAttributes[
+            RubricUnderstandingLevels.CONVINCING
+          ]
         }
         updateLearningGoal={updateLearningGoal}
         learningGoalId={learningGoalData.id}
       />
       <EvidenceDescriptionsRow
         isAiEnabled={learningGoalData.aiEnabled}
-        evidenceLabel={UNDERSTANDING_LEVEL_STRINGS[1]}
+        evidenceLabel={
+          UNDERSTANDING_LEVEL_STRINGS[RubricUnderstandingLevels.LIMITED]
+        }
         evidenceLevelData={
-          learningGoalData.learningGoalEvidenceLevelsAttributes[1]
+          learningGoalData.learningGoalEvidenceLevelsAttributes[
+            RubricUnderstandingLevels.LIMITED
+          ]
         }
         updateLearningGoal={updateLearningGoal}
         learningGoalId={learningGoalData.id}
       />
       <EvidenceDescriptionsRow
         isAiEnabled={learningGoalData.aiEnabled}
-        evidenceLabel={UNDERSTANDING_LEVEL_STRINGS[0]}
+        evidenceLabel={
+          UNDERSTANDING_LEVEL_STRINGS[RubricUnderstandingLevels.NONE]
+        }
         evidenceLevelData={
-          learningGoalData.learningGoalEvidenceLevelsAttributes[0]
+          learningGoalData.learningGoalEvidenceLevelsAttributes[
+            RubricUnderstandingLevels.NONE
+          ]
         }
         updateLearningGoal={updateLearningGoal}
         learningGoalId={learningGoalData.id}

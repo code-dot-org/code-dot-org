@@ -28,6 +28,7 @@ const information = {
   details:
     "Seriously, Kansas. Earth's greatest hero is from a tiny called Smallville, if you can believe it.",
   dismissible: true,
+  tooltip: 'Kansas is a state in the United States of America.',
 };
 
 const success = {
@@ -49,6 +50,11 @@ const warning = {
   details:
     'Now is probably not the best time to be in Gotham City. Watch your back.',
   dismissible: true,
+};
+
+const collaborate = {
+  notice: 'Batman invited Superman to collab',
+  details: 'Will the Justice League join forces again?',
 };
 
 const findCourse = {
@@ -295,6 +301,20 @@ describe('Notification', () => {
       )
     );
   });
+  it('renders a collaborate notification', () => {
+    const wrapper = wrapped(
+      <Notification
+        type="collaborate"
+        notice={collaborate.notice}
+        details={collaborate.details}
+        dismissible={false}
+      />
+    );
+    expect(wrapper.find('FontAwesome').length).to.equal(1);
+    expect(wrapper.find('FontAwesome').at(0).props().icon).to.equal('users');
+    expect(wrapper.text()).to.include(collaborate.notice);
+    expect(wrapper.text()).to.include(collaborate.details);
+  });
   it('renders a dismissible notification', () => {
     const wrapper = wrapped(
       <Notification
@@ -309,5 +329,27 @@ describe('Notification', () => {
       'info-circle'
     );
     expect(wrapper.find('FontAwesome').at(1).props().icon).to.equal('times');
+  });
+  it('renders a tooltip', () => {
+    const wrapper = wrapped(
+      <Notification
+        type="information"
+        notice={information.notice}
+        details={information.details}
+        dismissible={false}
+        tooltipText={information.tooltip}
+      />
+    );
+    expect(wrapper.find('FontAwesome').length).to.equal(2);
+    expect(wrapper.find('FontAwesome').at(0).props().icon).to.equal(
+      'info-circle'
+    );
+    expect(wrapper.find('FontAwesome').at(1).props().icon).to.equal(
+      'info-circle'
+    );
+
+    expect(wrapper.text()).to.include(information.notice);
+    expect(wrapper.text()).to.include(information.details);
+    expect(wrapper.text()).to.include(information.tooltip);
   });
 });
