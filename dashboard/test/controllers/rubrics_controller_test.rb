@@ -44,7 +44,7 @@ class RubricsControllerTest < ActionController::TestCase
     assert_equal @level.id, rubric.level_id
     assert_equal @lesson.id, rubric.lesson_id
     assert_equal 2, learning_goals.length
-    refute_nil 1, @lesson.rubric
+    refute_nil @lesson.rubric
   end
 
   test 'updates rubric and learning goals with valid params' do
