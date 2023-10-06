@@ -1210,7 +1210,7 @@ class User < ApplicationRecord
   #   3: {}
   # }
   def self.user_levels_by_user_by_level(users, script)
-    initial_hash = Hash[users.map {|user| [user.id, {}]}]
+    initial_hash = users.map {|user| [user.id, {}]}.to_h
     UserLevel.where(
       script_id: script.id,
       user_id: users.map(&:id)
