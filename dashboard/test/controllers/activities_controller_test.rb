@@ -66,6 +66,7 @@ class ActivitiesControllerTest < ActionController::TestCase
       program: '<hey>'
     }
 
+    # set up params for testing rubric evaluation
     @teacher = create :teacher
     @section = create :section, teacher: @teacher
     @student = create :student
@@ -74,6 +75,7 @@ class ActivitiesControllerTest < ActionController::TestCase
       user_id: @student.id,
       submitted: 'true'
     )
+    EvaluateRubricJob.expects(:perform_later).never
   end
 
   # Ignore any additional keys in 'actual' not found in 'expected'.
