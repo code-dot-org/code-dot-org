@@ -8,7 +8,6 @@ import {setCurrentAiModalField, DanceState} from '../danceRedux';
 import {StrongText, Heading5} from '@cdo/apps/componentLibrary/typography';
 import classNames from 'classnames';
 import FontAwesome from '@cdo/apps/templates/FontAwesome';
-import {AiModalItem, AiModalReturnedItem} from '../types';
 import {BlockSvg} from 'blockly/core';
 import {doAi} from './utils';
 const Typist = require('react-typist').default;
@@ -17,12 +16,24 @@ const aiBotBorder = require('@cdo/static/dance/ai/ai-bot-border.png');
 
 const promptString = 'Generate a scene using this mood:';
 
-export enum Mode {
+enum Mode {
   SELECT_INPUTS = 'selectInputs',
   GENERATING = 'generating',
   RESULTS = 'results',
   RESULTS_FINAL = 'resultsFinal',
 }
+
+type AiModalItem = {
+  id: string;
+  name: string;
+};
+
+type AiModalReturnedItem = {
+  id: string;
+  name: string;
+  url: string;
+  available: boolean;
+};
 
 interface DanceAiProps {
   onClose: () => void;
