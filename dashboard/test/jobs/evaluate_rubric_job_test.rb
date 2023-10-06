@@ -21,10 +21,7 @@ class EvaluateRubricJobTest < ActiveJob::TestCase
     # create a project
     channel_token = ChannelToken.find_or_create_channel_token(@script_level.level, @fake_ip, @storage_id, @script_level.script_id)
 
-    # stub out the calls to fetch project data from S3
-    fake_main_json = {source: 'fake-code'}.to_json
-    fake_source_data = {body: StringIO.new(fake_main_json), version_id: 'fake-version-id'}
-    SourceBucket.any_instance.stubs(:get).with(channel_token.channel, "main.json").returns(fake_source_data)
+    stub_project_source_data(channel_token.channel)
 
     # run the job
     perform_enqueued_jobs do
@@ -48,5 +45,12 @@ class EvaluateRubricJobTest < ActiveJob::TestCase
       EvaluateRubricJob.new.perform(user_id: @student.id, script_level_id: @script_level.id)
     end
     assert_includes exception.message, 'lesson_s3_name not found'
+  end
+
+  # stub out the calls to fetch project data from S3
+  private def stub_project_source_data(channel_id, code: 'fake-code', version_id: 'fake-version-id')
+    fake_main_json = {source: code}.to_json
+    fake_source_data = {body: StringIO.new(fake_main_json), version_id: version_id}
+    SourceBucket.any_instance.stubs(:get).with(channel_id, "main.json").returns(fake_source_data)
   end
 end
