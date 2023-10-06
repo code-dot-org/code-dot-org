@@ -1,6 +1,7 @@
 import PropTypes from 'prop-types';
 import React from 'react';
 import {connect} from 'react-redux';
+import i18n from '@cdo/locale';
 import Notification, {NotificationType} from '@cdo/apps/templates/Notification';
 import {asyncLoadCoteacherInvite} from '@cdo/apps/templates/teacherDashboard/teacherSectionsRedux';
 import Button from '../Button';
@@ -39,21 +40,21 @@ const CoteacherInviteNotification = ({
     <Notification
       type={NotificationType.collaborate}
       iconStyles={styles.icon}
-      notice={
-        coteacherInvite.invited_by_name + ' invited you to be a co-teacher'
-      }
+      notice={i18n.coteacherInvite({
+        invitedByName: coteacherInvite.invited_by_name,
+      })}
       details={
         <BodyTwoText style={{marginBottom: 0}}>
-          {coteacherInvite.invited_by_email} has invited you to co-teach
+          {i18n.coteacherInviteDescription({
+            invitedByEmail: coteacherInvite.invited_by_email,
+          })}
           <br />
           <StrongText>{coteacherInvite.section_name}</StrongText>
         </BodyTwoText>
       }
       dismissible={false}
       buttonsStyles={styles.buttons}
-      tooltipText={
-        'As a co-teacher, you will be able to manage students in the section, view their work, and track their progress.'
-      }
+      tooltipText={i18n.coteacherTooltip()}
       buttons={[
         {
           text: 'Decline',
