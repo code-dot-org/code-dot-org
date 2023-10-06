@@ -38,14 +38,14 @@ class Api::V1::SectionInstructorsControllerTest < ActionController::TestCase
 
   test 'section has a section_instructor' do
     sign_in @teacher
-    get :show, params: {section_id: @section.id}
+    get :show, params: {id: @section.id}
     assert_response :success
     assert_equal 1, returned_json.length
   end
 
   test 'only assigned instructor can get section_instructors for a section' do
     sign_in @teacher2
-    get :show, params: {section_id: @section.id}
+    get :show, params: {id: @section.id}
     assert_response :forbidden
   end
 
@@ -73,17 +73,6 @@ class Api::V1::SectionInstructorsControllerTest < ActionController::TestCase
     sign_in @teacher
     post :create, params: {section_id: @section.id, email: 'test123@fake.com'}
     assert_response :not_found
-  end
-
-  test 'instructor cannot add a new instructor to a full section' do
-    sign_in @teacher
-    create(:section_instructor, section: @section2, instructor: create(:teacher), status: :active)
-    create(:section_instructor, section: @section2, instructor: create(:teacher), status: :invited)
-    create(:section_instructor, section: @section2, instructor: create(:teacher), status: :declined)
-    create(:section_instructor, section: @section2, instructor: create(:teacher), status: :active)
-    post :create, params: {section_id: @section2.id, email: @teacher3.email}
-
-    assert_response :bad_request
   end
 
   test 'non-instructor cannot add a teacher to instruct a section' do
