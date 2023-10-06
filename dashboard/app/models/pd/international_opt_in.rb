@@ -92,7 +92,7 @@ class Pd::InternationalOptIn < ApplicationRecord
     #
     # See the definition of the "Answer" object in
     # apps/src/code-studio/pd/form_components/utils.js
-    entries = Hash[entry_keys.map do |key, values|
+    entries = entry_keys.map do |key, values|
       [key, values.map do |value|
         # Capitalize country values to be consistent with other country strings in our database
         answer = key.to_s == 'schoolCountry' ? value.titleize : value
@@ -101,7 +101,7 @@ class Pd::InternationalOptIn < ApplicationRecord
           answerValue: answer
         }
       end]
-    end]
+    end.to_h
 
     entries[:workshopOrganizer] = INTERNATIONAL_OPT_IN_PARTNERS
 
