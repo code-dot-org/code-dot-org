@@ -9,10 +9,10 @@ describe I18n::Resources::Dashboard::Docs do
     end
   end
 
-  # describe '.sync_out' do
-  #   it 'sync-out Courses resource' do
-  #     I18n::Resources::Dashboard::Docs::SyncOut.expects(:perform).once
-  #     I18n::Resources::Dashboard::Docs.sync_out
-  #   end
-  # end
+  describe '.sync_out' do
+    it 'sync-out Courses resource' do
+      I18n::Resources::Dashboard::Docs::SyncOut.expects(:perform).once
+      I18n::Resources::Dashboard::Docs.sync_out
+    end
+  end
 end
