@@ -4,27 +4,17 @@ end
 
 # for explanation of js function, see
 # https://stackoverflow.com/questions/45243992/verification-of-element-in-viewport-in-selenium
-# upd. Check not only the center of the element, but also +- 2px from center.
 And(/^I check that selector "([^"]*)" is in the viewport$/) do |selector|
   is_in_viewport = <<-JAVASCRIPT
     var elem = $("#{selector}")[0],
       box = elem.getBoundingClientRect(),
       cx = box.left + box.width / 2,
       cy = box.top + box.height / 2,
-      e = document.elementFromPoint(cx, cy),
-      e2 = document.elementFromPoint(cx, cy - 2),
-      i = 0;
-
+      e = document.elementFromPoint(cx, cy);
     for(; e; e = e.parentElement) {
       if (e === elem)
         return true;
     }
-
-    for(; e2; e2 = e2.parentElement) {
-      if (e === elem)
-        return true;
-    }
-
     return false;
   JAVASCRIPT
   wait_for_jquery

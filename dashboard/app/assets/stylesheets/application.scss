@@ -729,6 +729,7 @@ $small-footer-standard-width: 400px;
 /* Override footer position on some pages, but not published project views */
 #page-small-footer .small-footer-base {
   position: fixed;
+  margin-top: 0;
 }
 
 
