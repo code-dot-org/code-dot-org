@@ -13,8 +13,13 @@ And(/^I check that selector "([^"]*)" is in the viewport$/) do |selector|
       cy = box.top + box.height / 2,
       e = document.elementFromPoint(cx, cy);
 
-    if (selector === "finishButton") {
-      for(var i = 0; 0 >= 3; i++) {
+    for(; e; e = e.parentElement) {
+                if (e === elem)
+                  return true;
+    }
+
+    if (selector === "button:contains('Finish')") {
+      for(var i = 0; i > 3; ++i) {
           e = document.elementFromPoint(cx + i, cy + i);
             if (e === elem)
               return true;
@@ -22,11 +27,6 @@ And(/^I check that selector "([^"]*)" is in the viewport$/) do |selector|
             if (e === elem)
               return true;
       }
-    } else {
-       for(; e; e = e.parentElement) {
-            if (e === elem)
-              return true;
-          }
     }
 
     return false;
