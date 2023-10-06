@@ -44,9 +44,9 @@ export default class FunctionEditor {
 
     // Customize auto-populated Functions toolbox category.
     this.editorWorkspace = Blockly.blockly_.inject(modalEditor, {
-      ...Blockly.getMainWorkspace().options,
       toolbox: options.toolbox,
       theme: Blockly.cdoUtils.getUserTheme(options.theme),
+      renderer: Blockly.getMainWorkspace().options.renderer,
       move: {
         drag: false,
         scrollbars: {
@@ -376,26 +376,21 @@ export default class FunctionEditor {
 
   // Clear the editor workspace to prepare for a new function definition.
   clearEditorWorkspace() {
-    // Dispose of all top blocks. We do this manually because we want
-    // to propogate the delete event to the hidden workspace for every block
-    // except the procedure definition. Therefore, we delete all blocks, but for
-    // the procedure definition delete we disable events.
-    while (this.editorWorkspace.getTopBlocks().length) {
-      let isProcedureBlock = false;
-      const topBlock = this.editorWorkspace.getTopBlocks()[0];
-      if (topBlock.id === this.block.id) {
-        isProcedureBlock = true;
-      }
-      if (isProcedureBlock) {
-        Blockly.Events.disable();
-      }
-      topBlock.dispose(false);
-      if (isProcedureBlock) {
-        Blockly.Events.enable();
-      }
+    if (this.block) {
+      const topBlocks = this.editorWorkspace.getTopBlocks();
+      // Find all blocks that are not attached to the procedure definition.
+      const orphanedBlocks = topBlocks.filter(
+        block => block.id !== this.block.id
+      );
+
+      // Dispose of all non-procedure-definition top blocks (aka orphaned blocks)
+      // and propagate the delete event to the hidden workspace.
+      orphanedBlocks.forEach(block => block.dispose(false));
     }
+
     // Now call clear() to have Blockly handle the rest of the workspace clearing.
-    // Also disable events here to ensure we don't delete the procedure model.
+    // Also disable events here to ensure we don't delete the procedure model or the
+    // procedure definition.
     Blockly.Events.disable();
     this.editorWorkspace.clear();
     Blockly.Events.enable();
