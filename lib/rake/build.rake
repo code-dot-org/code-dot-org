@@ -103,7 +103,7 @@ namespace :build do
         # backward compatible (although the job code itself still does).
         #
         # When making breaking changes to a job's api contract, the best
-        # practice is to updated the job (in a backward compatible manner) in a
+        # practice is to update the job (in a backward compatible manner) in a
         # first deploy, then update the code which calls it in a separate
         # deploy, similarly to how we sequence deploys with database migrations
         # or seeding changes.
