@@ -11,7 +11,7 @@
     },
     "new_name": null,
     "family_name": null,
-    "serialized_at": "2023-10-03 15:33:26 UTC",
+    "serialized_at": "2023-10-05 15:34:07 UTC",
     "published_state": null,
     "instruction_type": null,
     "instructor_audience": null,
@@ -22,19 +22,115 @@
   },
   "lesson_groups": [
     {
-      "key": "",
-      "user_facing": false,
+      "key": "lessonGroup-2",
+      "user_facing": true,
       "position": 1,
       "properties": {
+        "display_name": "Synchronous Part 1"
       },
       "seeding_key": {
-        "lesson_group.key": "",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "virtual-pl-csa-summer-day4"
+      }
+    },
+    {
+      "key": "lessonGroup-3",
+      "user_facing": true,
+      "position": 2,
+      "properties": {
+        "display_name": "Asynchronous Part 1"
+      },
+      "seeding_key": {
+        "lesson_group.key": "lessonGroup-3",
+        "script.name": "virtual-pl-csa-summer-day4"
+      }
+    },
+    {
+      "key": "lessonGroup-4",
+      "user_facing": true,
+      "position": 3,
+      "properties": {
+        "display_name": "Synchronous Part 2"
+      },
+      "seeding_key": {
+        "lesson_group.key": "lessonGroup-4",
+        "script.name": "virtual-pl-csa-summer-day4"
+      }
+    },
+    {
+      "key": "lessonGroup-5",
+      "user_facing": true,
+      "position": 4,
+      "properties": {
+        "display_name": "Asynchronous Part 2"
+      },
+      "seeding_key": {
+        "lesson_group.key": "lessonGroup-5",
         "script.name": "virtual-pl-csa-summer-day4"
       }
     }
   ],
   "lessons": [
-
+    {
+      "key": "lesson-1",
+      "name": "Synchronous Part 1",
+      "absolute_position": 1,
+      "lockable": false,
+      "has_lesson_plan": true,
+      "relative_position": 1,
+      "properties": {
+      },
+      "seeding_key": {
+        "lesson.key": "lesson-1",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "virtual-pl-csa-summer-day4"
+      }
+    },
+    {
+      "key": "lesson-2",
+      "name": "Asynchronous Part 1",
+      "absolute_position": 2,
+      "lockable": false,
+      "has_lesson_plan": true,
+      "relative_position": 2,
+      "properties": {
+      },
+      "seeding_key": {
+        "lesson.key": "lesson-2",
+        "lesson_group.key": "lessonGroup-3",
+        "script.name": "virtual-pl-csa-summer-day4"
+      }
+    },
+    {
+      "key": "lesson-3",
+      "name": "Synchronous Part 2",
+      "absolute_position": 3,
+      "lockable": false,
+      "has_lesson_plan": true,
+      "relative_position": 3,
+      "properties": {
+      },
+      "seeding_key": {
+        "lesson.key": "lesson-3",
+        "lesson_group.key": "lessonGroup-4",
+        "script.name": "virtual-pl-csa-summer-day4"
+      }
+    },
+    {
+      "key": "lesson-4",
+      "name": "Asynchronous Part 2",
+      "absolute_position": 4,
+      "lockable": false,
+      "has_lesson_plan": true,
+      "relative_position": 4,
+      "properties": {
+      },
+      "seeding_key": {
+        "lesson.key": "lesson-4",
+        "lesson_group.key": "lessonGroup-5",
+        "script.name": "virtual-pl-csa-summer-day4"
+      }
+    }
   ],
   "lesson_activities": [
 
@@ -49,13 +145,43 @@
 
   ],
   "resources": [
-
+    {
+      "name": "2024 Virtual CSA Summer Workshop - Day 4 Agenda ",
+      "url": "https://docs.google.com/document/d/1m9k6Ehma3ZGyrk4RZxJ_RSS51Co2qYJ5JqpVhy7jDtk/edit?usp=drive_link",
+      "key": "2024_virtual_csa_summer_workshop_-_day_4_agenda",
+      "properties": {
+      },
+      "seeding_key": {
+        "resource.key": "2024_virtual_csa_summer_workshop_-_day_4_agenda"
+      }
+    },
+    {
+      "name": "2024 Virtual CSA Summer Workshop - Day 4 Slides",
+      "url": "https://docs.google.com/presentation/d/13RnttnK7wU3lpceNv6bcb0UOU6lhq3HxoqKPcSl1Sug/edit?usp=drive_link",
+      "key": "2024_virtual_csa_summer_workshop_-_day_4_slides",
+      "properties": {
+      },
+      "seeding_key": {
+        "resource.key": "2024_virtual_csa_summer_workshop_-_day_4_slides"
+      }
+    }
   ],
   "lessons_resources": [
 
   ],
   "scripts_resources": [
-
+    {
+      "seeding_key": {
+        "resource.key": "2024_virtual_csa_summer_workshop_-_day_4_agenda",
+        "script.name": "virtual-pl-csa-summer-day4"
+      }
+    },
+    {
+      "seeding_key": {
+        "resource.key": "2024_virtual_csa_summer_workshop_-_day_4_slides",
+        "script.name": "virtual-pl-csa-summer-day4"
+      }
+    }
   ],
   "scripts_student_resources": [
 
