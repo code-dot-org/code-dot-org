@@ -9,7 +9,7 @@
     },
     "new_name": null,
     "family_name": null,
-    "serialized_at": "2023-10-04 20:46:33 UTC",
+    "serialized_at": "2023-10-05 19:27:31 UTC",
     "published_state": null,
     "instruction_type": null,
     "instructor_audience": null,
@@ -644,28 +644,6 @@
         "activity_section.key": "2c4cc298-2e9b-4177-bb47-9dbf87903ae7",
         "lesson_activity.key": "0a0d6a4b-0b22-4fde-b7c6-29c21c80136f"
       }
-    },
-    {
-      "key": "c79c51fd-90ff-4a6e-8a0b-9476c8018d1b",
-      "position": 3,
-      "properties": {
-        "progression_name": "Assessment"
-      },
-      "seeding_key": {
-        "activity_section.key": "c79c51fd-90ff-4a6e-8a0b-9476c8018d1b",
-        "lesson_activity.key": "0a0d6a4b-0b22-4fde-b7c6-29c21c80136f"
-      }
-    },
-    {
-      "key": "adaaf572-6097-45fb-81e0-41155fa9ce1f",
-      "position": 4,
-      "properties": {
-        "progression_name": "Completing Model Lesson Levels"
-      },
-      "seeding_key": {
-        "activity_section.key": "adaaf572-6097-45fb-81e0-41155fa9ce1f",
-        "lesson_activity.key": "0a0d6a4b-0b22-4fde-b7c6-29c21c80136f"
-      }
     }
   ],
   "script_levels": [
@@ -866,160 +844,6 @@
       "level_keys": [
         "virtual-pl-csd-summer-day2-UsingResources1_1"
       ]
-    },
-    {
-      "chapter": 10,
-      "position": 3,
-      "activity_section_position": 2,
-      "assessment": false,
-      "properties": {
-        "progression": "Using Resources"
-      },
-      "bonus": false,
-      "seeding_key": {
-        "script_level.level_keys": [
-          "virtual-pl-csd-summer-day2-UsingResources2_1"
-        ],
-        "lesson.key": "Asynchronous Part 2",
-        "lesson_group.key": "lessonGroup-5",
-        "script.name": "virtual-pl-csp-summer-day1",
-        "activity_section.key": "2c4cc298-2e9b-4177-bb47-9dbf87903ae7"
-      },
-      "level_keys": [
-        "virtual-pl-csd-summer-day2-UsingResources2_1"
-      ]
-    },
-    {
-      "chapter": 11,
-      "position": 4,
-      "activity_section_position": 3,
-      "assessment": false,
-      "properties": {
-        "progression": "Using Resources"
-      },
-      "bonus": false,
-      "seeding_key": {
-        "script_level.level_keys": [
-          "virtual-pl-csd-summer-day2-UsingResources3_1"
-        ],
-        "lesson.key": "Asynchronous Part 2",
-        "lesson_group.key": "lessonGroup-5",
-        "script.name": "virtual-pl-csp-summer-day1",
-        "activity_section.key": "2c4cc298-2e9b-4177-bb47-9dbf87903ae7"
-      },
-      "level_keys": [
-        "virtual-pl-csd-summer-day2-UsingResources3_1"
-      ]
-    },
-    {
-      "chapter": 12,
-      "position": 5,
-      "activity_section_position": 1,
-      "assessment": false,
-      "properties": {
-        "progression": "Assessment"
-      },
-      "bonus": false,
-      "seeding_key": {
-        "script_level.level_keys": [
-          "virtual-pl-csd-summer-day2-Assessment1_1"
-        ],
-        "lesson.key": "Asynchronous Part 2",
-        "lesson_group.key": "lessonGroup-5",
-        "script.name": "virtual-pl-csp-summer-day1",
-        "activity_section.key": "c79c51fd-90ff-4a6e-8a0b-9476c8018d1b"
-      },
-      "level_keys": [
-        "virtual-pl-csd-summer-day2-Assessment1_1"
-      ]
-    },
-    {
-      "chapter": 13,
-      "position": 6,
-      "activity_section_position": 2,
-      "assessment": false,
-      "properties": {
-        "progression": "Assessment"
-      },
-      "bonus": false,
-      "seeding_key": {
-        "script_level.level_keys": [
-          "virtual-pl-csd-summer-day2-Assessment3_1"
-        ],
-        "lesson.key": "Asynchronous Part 2",
-        "lesson_group.key": "lessonGroup-5",
-        "script.name": "virtual-pl-csp-summer-day1",
-        "activity_section.key": "c79c51fd-90ff-4a6e-8a0b-9476c8018d1b"
-      },
-      "level_keys": [
-        "virtual-pl-csd-summer-day2-Assessment3_1"
-      ]
-    },
-    {
-      "chapter": 14,
-      "position": 7,
-      "activity_section_position": 3,
-      "assessment": false,
-      "properties": {
-        "progression": "Assessment"
-      },
-      "bonus": false,
-      "seeding_key": {
-        "script_level.level_keys": [
-          "virtual-pl-csd-summer-day2-Assessment2_1"
-        ],
-        "lesson.key": "Asynchronous Part 2",
-        "lesson_group.key": "lessonGroup-5",
-        "script.name": "virtual-pl-csp-summer-day1",
-        "activity_section.key": "c79c51fd-90ff-4a6e-8a0b-9476c8018d1b"
-      },
-      "level_keys": [
-        "virtual-pl-csd-summer-day2-Assessment2_1"
-      ]
-    },
-    {
-      "chapter": 15,
-      "position": 8,
-      "activity_section_position": 4,
-      "assessment": false,
-      "properties": {
-        "progression": "Assessment"
-      },
-      "bonus": false,
-      "seeding_key": {
-        "script_level.level_keys": [
-          "virtual-pl-csd-summer-day2-Assessment4_1"
-        ],
-        "lesson.key": "Asynchronous Part 2",
-        "lesson_group.key": "lessonGroup-5",
-        "script.name": "virtual-pl-csp-summer-day1",
-        "activity_section.key": "c79c51fd-90ff-4a6e-8a0b-9476c8018d1b"
-      },
-      "level_keys": [
-        "virtual-pl-csd-summer-day2-Assessment4_1"
-      ]
-    },
-    {
-      "chapter": 16,
-      "position": 9,
-      "activity_section_position": 1,
-      "assessment": false,
-      "properties": {
-        "progression": "Completing Model Lesson Levels"
-      },
-      "bonus": false,
-      "seeding_key": {
-        "script_level.level_keys": [
-          "virtual-pl-csd-summer-day2-Levels_1"
-        ],
-        "lesson.key": "Asynchronous Part 2",
-        "lesson_group.key": "lessonGroup-5",
-        "script.name": "virtual-pl-csp-summer-day1",
-        "activity_section.key": "adaaf572-6097-45fb-81e0-41155fa9ce1f"
-      },
-      "level_keys": [
-        "virtual-pl-csd-summer-day2-Levels_1"
-      ]
     }
   ],
   "levels_script_levels": [
@@ -1129,90 +953,6 @@
         "lesson_group.key": "lessonGroup-5",
         "script.name": "virtual-pl-csp-summer-day1",
         "activity_section.key": "2c4cc298-2e9b-4177-bb47-9dbf87903ae7"
-      }
-    },
-    {
-      "seeding_key": {
-        "level.key": "virtual-pl-csd-summer-day2-UsingResources2_1",
-        "script_level.level_keys": [
-          "virtual-pl-csd-summer-day2-UsingResources2_1"
-        ],
-        "lesson.key": "Asynchronous Part 2",
-        "lesson_group.key": "lessonGroup-5",
-        "script.name": "virtual-pl-csp-summer-day1",
-        "activity_section.key": "2c4cc298-2e9b-4177-bb47-9dbf87903ae7"
-      }
-    },
-    {
-      "seeding_key": {
-        "level.key": "virtual-pl-csd-summer-day2-UsingResources3_1",
-        "script_level.level_keys": [
-          "virtual-pl-csd-summer-day2-UsingResources3_1"
-        ],
-        "lesson.key": "Asynchronous Part 2",
-        "lesson_group.key": "lessonGroup-5",
-        "script.name": "virtual-pl-csp-summer-day1",
-        "activity_section.key": "2c4cc298-2e9b-4177-bb47-9dbf87903ae7"
-      }
-    },
-    {
-      "seeding_key": {
-        "level.key": "virtual-pl-csd-summer-day2-Assessment1_1",
-        "script_level.level_keys": [
-          "virtual-pl-csd-summer-day2-Assessment1_1"
-        ],
-        "lesson.key": "Asynchronous Part 2",
-        "lesson_group.key": "lessonGroup-5",
-        "script.name": "virtual-pl-csp-summer-day1",
-        "activity_section.key": "c79c51fd-90ff-4a6e-8a0b-9476c8018d1b"
-      }
-    },
-    {
-      "seeding_key": {
-        "level.key": "virtual-pl-csd-summer-day2-Assessment3_1",
-        "script_level.level_keys": [
-          "virtual-pl-csd-summer-day2-Assessment3_1"
-        ],
-        "lesson.key": "Asynchronous Part 2",
-        "lesson_group.key": "lessonGroup-5",
-        "script.name": "virtual-pl-csp-summer-day1",
-        "activity_section.key": "c79c51fd-90ff-4a6e-8a0b-9476c8018d1b"
-      }
-    },
-    {
-      "seeding_key": {
-        "level.key": "virtual-pl-csd-summer-day2-Assessment2_1",
-        "script_level.level_keys": [
-          "virtual-pl-csd-summer-day2-Assessment2_1"
-        ],
-        "lesson.key": "Asynchronous Part 2",
-        "lesson_group.key": "lessonGroup-5",
-        "script.name": "virtual-pl-csp-summer-day1",
-        "activity_section.key": "c79c51fd-90ff-4a6e-8a0b-9476c8018d1b"
-      }
-    },
-    {
-      "seeding_key": {
-        "level.key": "virtual-pl-csd-summer-day2-Assessment4_1",
-        "script_level.level_keys": [
-          "virtual-pl-csd-summer-day2-Assessment4_1"
-        ],
-        "lesson.key": "Asynchronous Part 2",
-        "lesson_group.key": "lessonGroup-5",
-        "script.name": "virtual-pl-csp-summer-day1",
-        "activity_section.key": "c79c51fd-90ff-4a6e-8a0b-9476c8018d1b"
-      }
-    },
-    {
-      "seeding_key": {
-        "level.key": "virtual-pl-csd-summer-day2-Levels_1",
-        "script_level.level_keys": [
-          "virtual-pl-csd-summer-day2-Levels_1"
-        ],
-        "lesson.key": "Asynchronous Part 2",
-        "lesson_group.key": "lessonGroup-5",
-        "script.name": "virtual-pl-csp-summer-day1",
-        "activity_section.key": "adaaf572-6097-45fb-81e0-41155fa9ce1f"
       }
     }
   ],
