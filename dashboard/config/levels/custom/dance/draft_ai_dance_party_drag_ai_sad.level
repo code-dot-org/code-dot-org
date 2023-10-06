@@ -53,7 +53,7 @@
     "name_suffix": "_draft",
     "authored_hints": "[{\"hint_class\":\"content\",\"hint_markdown\":\"**How do I pass this level?**\\n* Add the `generate` block inside the `setup` block.\\n* Choose 3 emojis that match the vibe of the song.\\n\\n*This level ends after 4 measures.*\",\"hint_id\":\"validation\",\"hint_type\":\"general\",\"hint_path\":\"\",\"hint_video\":\"\",\"tts_url\":\"https://tts.code.org/sharon22k/180/100/e3263331547f14d81a673267104dc6f0/Dance_2019_generate_block_draft.mp3\"}]",
     "default_song": "thunder_imaginedragons",
-    "long_instructions": "##Use A.I. to generate a stage! \r\n- Listen to the selected song.\r\n- Drag out the <code style=\"color:black; background-color:#D1BDE8\">use AI to</code> block and connect it inside the <xml><block type=\"Dancelab_whenSetup2\" next_connection_disabled=\"true\" block-text=\"setup\"></block></xml> block.\r\n- Prompt the AI by selecting 3 emojis to describe the song you heard. \r\n\r\n- Click <code style=\"color:black; background-color:#D1BDE8\">Process</code>, then <code style=\"color:black; background-color:#D1BDE8\">Generate results</code>.\r\n\r\n- Click <code style=\"color:black; background-color:#D1BDE8\">Done</code> when you have a stage you want to keep.\r\n- Click <code style=\"color:black; background-color:#FFBD46\">Run</code> to start the party. Click <code style=\"color:black; background-color:#FFBD46\">Finish</code> to move on.",
+    "long_instructions": "##Use A.I. to generate a gloomy stage! \r\n![](https://images.code.org/6e3c261ffcfc7cdc0ab289eb7b6d0fbb-image-1696519913324.gif)\r\n- Drag out the <code style=\"color:black; background-color:#D1BDE8\">use AI to</code> block and connect it inside the <xml><block type=\"Dancelab_whenSetup2\" next_connection_disabled=\"true\" block-text=\"setup\"></block></xml> block.\r\n- Prompt the AI by selecting 3 emojis to describe the song you heard. \r\n\r\n- Click <code style=\"color:black; background-color:#D1BDE8\">Process</code>, then <code style=\"color:black; background-color:#D1BDE8\">Generate results</code>.\r\n\r\n- Click <code style=\"color:black; background-color:#D1BDE8\">Done</code> when you have a stage you want to keep.\r\n- Click <code style=\"color:black; background-color:#FFBD46\">Run</code> to start the party. Click <code style=\"color:black; background-color:#FFBD46\">Finish</code> to move on.\r\n\r\n",
     "short_instructions": "Drag out the <img style=\" width:25%\" src=\"https://images.code.org/623a12f1ea619c923b03f31faf77720d-image-1695236519873.01.28 PM.png\" /> block and connect it inside the <xml><block xmlns=\"https://developers.google.com/blockly/xml\" type=\"Dancelab_whenSetup\" id=\"LXzbE_lO4Lwn.`wXpDe2\"></block></xml>\r\n block.",
     "video_key": "hoc_dance_warmup_2019",
     "encrypted": "false",
@@ -70,14 +70,21 @@
     ]
   },
   "notes": "",
-  "audit_log": "[{\"changed_at\":\"2023-10-04T20:05:46.386+00:00\",\"changed\":[\"cloned from \\\"Dance_2019_generate_block_draft\\\"\"],\"cloned_from\":\"Dance_2019_generate_block_draft\"},{\"changed_at\":\"2023-10-04 20:05:50 +0000\",\"changed\":[\"start_blocks\",\"toolbox_blocks\"],\"changed_by_id\":16899,\"changed_by_email\":\"emma.wingreen+teacher@code.org\"},{\"changed_at\":\"2023-10-04 21:26:18 +0000\",\"changed\":[\"start_blocks\",\"toolbox_blocks\",\"default_song\",\"encrypted_examples\"],\"changed_by_id\":16899,\"changed_by_email\":\"emma.wingreen+teacher@code.org\"}]",
+  "audit_log": "[{\"changed_at\":\"2023-10-04T20:05:46.386+00:00\",\"changed\":[\"cloned from \\\"Dance_2019_generate_block_draft\\\"\"],\"cloned_from\":\"Dance_2019_generate_block_draft\"},{\"changed_at\":\"2023-10-04 20:05:50 +0000\",\"changed\":[\"start_blocks\",\"toolbox_blocks\"],\"changed_by_id\":16899,\"changed_by_email\":\"emma.wingreen+teacher@code.org\"},{\"changed_at\":\"2023-10-04 21:26:18 +0000\",\"changed\":[\"start_blocks\",\"toolbox_blocks\",\"default_song\",\"encrypted_examples\"],\"changed_by_id\":16899,\"changed_by_email\":\"emma.wingreen+teacher@code.org\"},{\"changed_at\":\"2023-10-05 15:12:33 +0000\",\"changed\":[\"start_blocks\",\"toolbox_blocks\",\"long_instructions\",\"encrypted_examples\"],\"changed_by_id\":18605,\"changed_by_email\":\"katie.frank+levelbuilder@code.org\"},{\"changed_at\":\"2023-10-05 15:22:32 +0000\",\"changed\":[\"start_blocks\",\"toolbox_blocks\",\"long_instructions\",\"encrypted_examples\"],\"changed_by_id\":18605,\"changed_by_email\":\"katie.frank+levelbuilder@code.org\"},{\"changed_at\":\"2023-10-05 15:29:32 +0000\",\"changed\":[\"start_blocks\"],\"changed_by_id\":18605,\"changed_by_email\":\"katie.frank+levelbuilder@code.org\"},{\"changed_at\":\"2023-10-05 15:33:03 +0000\",\"changed\":[\"start_blocks\",\"toolbox_blocks\",\"long_instructions\"],\"changed_by_id\":18605,\"changed_by_email\":\"katie.frank+levelbuilder@code.org\"},{\"changed_at\":\"2023-10-05 15:34:07 +0000\",\"changed\":[\"start_blocks\",\"toolbox_blocks\",\"long_instructions\",\"encrypted_examples\"],\"changed_by_id\":18605,\"changed_by_email\":\"katie.frank+levelbuilder@code.org\"},{\"changed_at\":\"2023-10-05 16:03:20 +0000\",\"changed\":[\"start_blocks\",\"toolbox_blocks\",\"long_instructions\",\"encrypted_examples\"],\"changed_by_id\":18605,\"changed_by_email\":\"katie.frank+levelbuilder@code.org\"},{\"changed_at\":\"2023-10-05 18:48:45 +0000\",\"changed\":[\"start_blocks\",\"toolbox_blocks\",\"long_instructions\",\"encrypted_examples\"],\"changed_by_id\":18605,\"changed_by_email\":\"katie.frank+levelbuilder@code.org\"},{\"changed_at\":\"2023-10-05 20:32:31 +0000\",\"changed\":[\"start_blocks\",\"toolbox_blocks\",\"encrypted_examples\"],\"changed_by_id\":18605,\"changed_by_email\":\"katie.frank+levelbuilder@code.org\"}]",
   "level_concept_difficulty": {
   }
 }]]></config>
   <blocks>
     <start_blocks>
       <xml xmlns="https://developers.google.com/blockly/xml">
-        <block type="Dancelab_whenSetup" id="LXzbE_lO4Lwn.`wXpDe2" deletable="false" movable="false" x="20" y="20"/>
+        <block type="Dancelab_whenSetup" id="LXzbE_lO4Lwn.`wXpDe2" deletable="false" movable="false" x="20" y="20">
+          <statement name="DO">
+            <block type="Dancelab_makeAnonymousDanceSprite" id=";H],)@7Aw*-dzna)%X;Z">
+              <field name="COSTUME">"ROBOT"</field>
+              <field name="LOCATION">{x: 200, y: 200}</field>
+            </block>
+          </statement>
+        </block>
       </xml>
     </start_blocks>
     <toolbox_blocks>
