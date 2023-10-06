@@ -264,7 +264,7 @@ def get_social_metadata_for_page(request)
     page = "ai_101"
   elsif request.path == "/ai/how-ai-works" && request.site == "code.org"
     page = "ai_how_ai_works"
-  elsif request.path == "/resources/videos" && request.site == "code.org"
+  elsif request.path == "/videos" && request.site == "code.org"
     page = "videos"
   else
     return {}
