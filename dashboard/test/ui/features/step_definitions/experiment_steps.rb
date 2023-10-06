@@ -1,9 +1,3 @@
-def create_pilot(name)
-  require_rails_env
-
-  Pilot.create_with(allow_joining_via_url: true, display_name: name).find_or_create_by(name: name)
-end
-
 When /^I enable the "([^"]*)" course experiment$/ do |experiment_name|
   steps <<-STEPS
     Given I am on "http://studio.code.org/experiments/set_course_experiment/#{experiment_name}"
@@ -16,7 +10,11 @@ end
 
 Given /^there is a pilot called "([^"]*)"$/ do |pilot_name|
   # Create a pilot
-  create_pilot(pilot_name)
+  browser_request(
+    url: '/api/test/create_pilot',
+    method: 'POST',
+    body: {pilot_name: pilot_name}
+  )
 end
 
 And /^I add the current user to the "([^"]*)" pilot$/ do |pilot_name|
