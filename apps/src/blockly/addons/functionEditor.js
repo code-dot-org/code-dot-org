@@ -374,6 +374,7 @@ export default class FunctionEditor {
     }
   }
 
+  // Clear the editor workspace to prepare for a new function definition.
   clearEditorWorkspace() {
     // Dispose of all top blocks. We do this manually because we want
     // to propogate the delete event to the hidden workspace for every block
@@ -394,7 +395,7 @@ export default class FunctionEditor {
       }
     }
     // Now call clear() to have Blockly handle the rest of the workspace clearing.
-    // Also disable events here to ensure we don't delete the procedure model
+    // Also disable events here to ensure we don't delete the procedure model.
     Blockly.Events.disable();
     this.editorWorkspace.clear();
     Blockly.Events.enable();

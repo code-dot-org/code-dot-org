@@ -1050,6 +1050,8 @@ StudioApp.prototype.setupChangeHandlers = function () {
   if (this.isUsingBlockly()) {
     Blockly.addChangeListener(Blockly.mainBlockSpace, runAllHandlers);
     if (Blockly.getHiddenDefinitionWorkspace()) {
+      // If we have a hidden definition workspace, run change listeners on it too.
+      // This ensures code changes in the hidden workspace trigger updates.
       Blockly.addChangeListener(
         Blockly.getHiddenDefinitionWorkspace(),
         runAllHandlers
