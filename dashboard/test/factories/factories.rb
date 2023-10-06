@@ -596,6 +596,12 @@ FactoryBot.define do
     end
   end
 
+  factory :section_instructor do
+    instructor {create(:teacher)}
+    section {create(:section)}
+    status {:active}
+  end
+
   factory :game do
     sequence(:name) {|n| "game#{n}.com"}
     app {"maze"}
