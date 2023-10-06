@@ -30,7 +30,8 @@ class EvaluateRubricJob < ApplicationJob
 
     raise "lesson_s3_name not found for script_level_id: #{script_level.id}" if lesson_s3_name.blank?
 
-    puts "TODO: Implement the rest of this job"
+    channel_id = get_channel_id(user, script_level)
+    puts "channel_id: #{channel_id.inspect}"
   end
 
   def self.ai_enabled?(script_level)
@@ -41,5 +42,19 @@ class EvaluateRubricJob < ApplicationJob
   # needed to evaluate the rubric for the given script level.
   def self.get_lesson_s3_name(script_level)
     UNIT_AND_LEVEL_TO_LESSON_S3_NAME[script_level&.script&.name].try(:[], script_level&.level&.name)
+  end
+
+  # get the channel id of the project which stores the user's code on this script level.
+  private def get_channel_id(user, script_level)
+    # get the user's storage id from the database
+    user_storage_id = storage_id_for_user_id(user.id)
+
+    # get the channel id for this user's level (or project template level) from the database
+    channel_token = ChannelToken.find_channel_token(
+      script_level.level,
+      user_storage_id,
+      script_level.script_id
+    )
+    channel_token.channel
   end
 end
