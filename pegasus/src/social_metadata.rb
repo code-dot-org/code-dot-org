@@ -224,7 +224,8 @@ def get_social_metadata_for_page(request)
     "videos" => {
       "default" => {
         title: hoc_s(:video_library_page_main_title),
-        image: images[:ai_how_ai_works]
+        description: hoc_s(:social_videos_desc),
+        image: images[:videos]
       }
     },
   }

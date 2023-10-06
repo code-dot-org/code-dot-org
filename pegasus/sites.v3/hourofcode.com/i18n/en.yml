@@ -108,6 +108,8 @@
   social_ai_title: "Learn about artificial intelligence (AI) | Code.org"
   social_ai_desc: "Tools to help students and teachers bring AI into the classroom."
 
+  social_videos_desc: "Engaging computer science videos for learners of all ages."
+
   pl_superhero_title: "Help students become superheroes!"
   pl_superhero_desc: "Join our highly supportive Professional Learning Program for middle and high school educators."
 
@@ -8535,7 +8537,7 @@
   video_library_page_not_hacked_video_title_5: "How Not To Get Hacked: Websites and Wifi"
   video_library_page_not_hacked_video_title_6: "How Not To Get Hacked: Messaging and Downloads"
   video_library_page_not_hacked_video_title_7: "How Not To Get Hacked: Install Updates"
-  
+
   about_us_page_title: "About Us"
   about_us_page_hero_description: "Code.org® is an education innovation nonprofit dedicated to the vision that every student in every school has the opportunity to learn computer science as part of their core K-12 education. We expand access to computer science in schools, with a focus on increasing participation by young women and students from other underrepresented groups.  The leading provider of K-12 computer science curriculum in the largest school districts in the United States, Code.org also organizes the annual [Hour of Code](%{hour_url}) campaign, which has engaged more than 15% of all students in the world. Code.org is supported by generous donors including Microsoft, Amazon, Google and [many others.](%{others_url})"
   about_us_page_section_title_1: "Over 80 million students and 2 million teachers on Code.org"
@@ -8590,7 +8592,7 @@
   about_page_section_donors_description_2: "Codes accomplishments (above) demonstrate our ability to leverage those dollars into strong outcomes. But given our nonprofit ambition that every child in every school should have access to computer science — to become literate citizens in today's digital world and to test their interests in exploring CS further as a career — we have a long way to go to meet a fundraising goal that will support that vision."
   about_page_donors_link_1: "Make a donations"
   about_page_donors_link_2: "[see our list of donors](%{donors_url})"
-  
+
 
   language_code:
     ar: "Arabic"
