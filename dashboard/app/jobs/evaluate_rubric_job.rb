@@ -36,7 +36,7 @@ class EvaluateRubricJob < ApplicationJob
 
     rubric = Rubric.find_by!(lesson_id: script_level.lesson.id, level_id: script_level.level.id)
 
-    ai_evaluations = get_fake_openai_evaluations(rubric, grade: 'Extensive Evidence')
+    ai_evaluations = get_fake_openai_evaluations(rubric, understanding_s: 'Extensive Evidence')
 
     write_ai_evaluations(user, ai_evaluations, rubric, channel_id, project_version)
   end
@@ -75,11 +75,11 @@ class EvaluateRubricJob < ApplicationJob
     [code, version]
   end
 
-  private def get_fake_openai_evaluations(rubric, grade: 'Extensive Evidence')
+  private def get_fake_openai_evaluations(rubric, understanding_s: 'Extensive Evidence')
     rubric.learning_goals.map do |learning_goal|
       {
         'Key Concept' => learning_goal.learning_goal,
-        'Grade' => grade
+        'Grade' => understanding_s
       }
     end
   end
@@ -91,7 +91,7 @@ class EvaluateRubricJob < ApplicationJob
     ActiveRecord::Base.transaction do
       ai_evaluations.each do |evaluation|
         learning_goal = rubric.learning_goals.all.find {|lg| lg.learning_goal == evaluation['Key Concept']}
-        understanding = grade_to_understanding(evaluation['Grade'])
+        understanding = understanding_s_to_i(evaluation['Grade'])
         LearningGoalAiEvaluation.create!(
           user_id: user.id,
           learning_goal_id: learning_goal.id,
@@ -103,8 +103,8 @@ class EvaluateRubricJob < ApplicationJob
     end
   end
 
-  private def grade_to_understanding(grade)
-    case grade
+  private def understanding_s_to_i(understanding)
+    case understanding
     when 'Extensive Evidence'
       SharedConstants::RUBRIC_UNDERSTANDING_LEVELS.EXTENSIVE
     when 'Convincing Evidence'
@@ -114,7 +114,7 @@ class EvaluateRubricJob < ApplicationJob
     when 'No Evidence'
       SharedConstants::RUBRIC_UNDERSTANDING_LEVELS.NONE
     else
-      raise "Unexpected grade: #{grade}"
+      raise "Unexpected understanding: #{understanding}"
     end
   end
 end
