@@ -20,22 +20,16 @@ class EvaluateRubricJobTest < ActiveJob::TestCase
 
     # create a project
     channel_token = ChannelToken.find_or_create_channel_token(@script_level.level, @fake_ip, @storage_id, @script_level.script_id)
+    channel_id = channel_token.channel
 
-    stub_project_source_data(channel_token.channel)
+    stub_project_source_data(channel_id)
 
     # run the job
     perform_enqueued_jobs do
       EvaluateRubricJob.perform_later(user_id: @student.id, script_level_id: @script_level.id)
     end
 
-    # verify the job wrote the expected data to the database
-    _owner_id, project_id = storage_decrypt_channel_id(channel_token.channel)
-    @rubric.learning_goals.each do |learning_goal|
-      ai_eval = LearningGoalAiEvaluation.find_by(user_id: @student.id, learning_goal_id: learning_goal.id)
-      assert_equal SharedConstants::RUBRIC_UNDERSTANDING_LEVELS.EXTENSIVE, ai_eval.understanding
-      assert_equal project_id, ai_eval.project_id
-      assert_equal 'fake-version-id', ai_eval.project_version
-    end
+    verify_stored_ai_evaluations(channel_id: channel_id, rubric: @rubric, user: @student)
   end
 
   test "job fails on non-ai level" do
@@ -52,5 +46,22 @@ class EvaluateRubricJobTest < ActiveJob::TestCase
     fake_main_json = {source: code}.to_json
     fake_source_data = {body: StringIO.new(fake_main_json), version_id: version_id}
     SourceBucket.any_instance.stubs(:get).with(channel_id, "main.json").returns(fake_source_data)
+  end
+
+  # verify the job wrote the expected LearningGoalAiEvaluations to the database
+  private def verify_stored_ai_evaluations(
+    channel_id:,
+    rubric:,
+    user:,
+    expected_understanding: SharedConstants::RUBRIC_UNDERSTANDING_LEVELS.EXTENSIVE,
+    version_id: 'fake-version-id'
+  )
+    _owner_id, project_id = storage_decrypt_channel_id(channel_id)
+    rubric.learning_goals.each do |learning_goal|
+      ai_eval = LearningGoalAiEvaluation.find_by(user_id: user.id, learning_goal_id: learning_goal.id)
+      assert_equal expected_understanding, ai_eval.understanding
+      assert_equal project_id, ai_eval.project_id
+      assert_equal version_id, ai_eval.project_version
+    end
   end
 end
