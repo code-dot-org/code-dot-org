@@ -39,6 +39,17 @@ class EvaluateRubricJobTest < ActiveJob::TestCase
       EvaluateRubricJob.new.perform(user_id: @student.id, script_level_id: @script_level.id)
     end
     assert_includes exception.message, 'lesson_s3_name not found'
+    assert_equal 0, LearningGoalAiEvaluation.where(user_id: @student.id).count
+  end
+
+  test "job fails if channel token does not exist" do
+    EvaluateRubricJob.stubs(:get_lesson_s3_name).with(@script_level).returns('fake-lesson-s3-name')
+
+    exception = assert_raises RuntimeError do
+      EvaluateRubricJob.new.perform(user_id: @student.id, script_level_id: @script_level.id)
+    end
+    assert_includes exception.message, 'channel token not found'
+    assert_equal 0, LearningGoalAiEvaluation.where(user_id: @student.id).count
   end
 
   # stub out the calls to fetch project data from S3

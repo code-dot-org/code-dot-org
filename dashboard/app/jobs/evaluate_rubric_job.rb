@@ -62,6 +62,7 @@ class EvaluateRubricJob < ApplicationJob
       user_storage_id,
       script_level.script_id
     )
+    raise "channel token not found for user id #{user.id} and script level id #{script_level.id}" unless channel_token
     channel_token.channel
   end
 
