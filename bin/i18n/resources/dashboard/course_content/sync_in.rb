@@ -156,18 +156,22 @@ module I18n
               end
 
               # start_libraries
-              unless level.start_libraries.blank?
+              # These start libraries are used as short term solution to make Sample Apps translatable.
+              # Student Libraries are required to have a name, a description and at least one function.
+              # Student libraries are stringify when used in a level and stored as start_libraries.
+              # libraries that do not follow those rules will fail to load,and the level wont work.
+              if level.start_libraries.present?
                 level_libraries = JSON.parse(level.start_libraries)
                 level_libraries.each do |library|
-                  next unless /^i18n_/i.match?(library["name"])
                   library_name = library["name"]
+                  next unless /^i18n_/i.match?(library_name)
                   library_source = library["source"]
-                  translation_text = library_source.match(/var TRANSLATIONTEXT = (\{[^}]*});/m).captures
-
-                  i18n_strings['start_libraries'] = Hash.new if i18n_strings['start_libraries'].blank?
+                  translation_json = library_source[/var TRANSLATIONTEXT = (\{[^}]*});/m, 1]
+                  next if translation_json.blank?
+                  i18n_strings['start_libraries'] ||= {}
                   i18n_strings['start_libraries'][library_name] = {}
 
-                  JSON.parse(translation_text[0]).each do |key, value|
+                  JSON.parse(translation_json).each do |key, value|
                     i18n_strings['start_libraries'][library_name][key] = value
                   end
                 end
