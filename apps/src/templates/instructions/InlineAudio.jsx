@@ -7,35 +7,7 @@ import trackEvent from '../../util/trackEvent';
 import firehoseClient from '@cdo/apps/lib/util/firehose';
 import moduleStyles from './inline-audio.module.scss';
 import classNames from 'classnames';
-
-// TODO (elijah): have these constants shared w/dashboard
-const VOICES = {
-  en_us: {
-    VOICE: 'sharon22k',
-    SPEED: 180,
-    SHAPE: 100,
-  },
-  es_es: {
-    VOICE: 'ines22k',
-    SPEED: 180,
-    SHAPE: 100,
-  },
-  es_mx: {
-    VOICE: 'rosa22k',
-    SPEED: 180,
-    SHAPE: 100,
-  },
-  it_it: {
-    VOICE: 'vittorio22k',
-    SPEED: 180,
-    SHAPE: 100,
-  },
-  pt_br: {
-    VOICE: 'marcia22k',
-    SPEED: 180,
-    SHAPE: 100,
-  },
-};
+import {Voices} from '@cdo/apps/util/sharedVoices';
 
 const TTS_URL = 'https://tts.code.org';
 
@@ -167,14 +139,14 @@ class InlineAudio extends React.Component {
   }
 
   isLocaleSupported() {
-    return Object.prototype.hasOwnProperty.call(VOICES, this.props.locale);
+    return Object.prototype.hasOwnProperty.call(Voices, this.props.locale);
   }
 
   getAudioSrc() {
     if (this.props.src) {
       return this.props.src;
-    } else if (this.props.message && VOICES[this.props.locale]) {
-      const voice = VOICES[this.props.locale];
+    } else if (this.props.message && Voices[this.props.locale]) {
+      const voice = Voices[this.props.locale];
       const voicePath = `${voice.VOICE}/${voice.SPEED}/${voice.SHAPE}`;
 
       const message = this.props.message.replace('"???"', 'the question marks');
