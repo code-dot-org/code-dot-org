@@ -9,7 +9,8 @@ module I18n
   module Resources
     module Dashboard
       module Docs
-        I18N_SOURCE_DIR_PATH = CDO.dir(I18N_SOURCE_DIR, 'docs').freeze
+        DIR_NAME = 'docs'.freeze
+        I18N_SOURCE_DIR_PATH = CDO.dir(I18N_SOURCE_DIR, DIR_NAME).freeze
 
         # This function localizes content in studio.code.org/docs
         def self.sync_in

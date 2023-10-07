@@ -13,12 +13,12 @@ class Census::CensusYourSchool2017v4Test < ActiveSupport::TestCase
 
   test "census 2017 v4 submission as teacher without pledge" do
     submission = build(:census_your_school2017v4, :as_teacher)
-    assert_not submission.valid?, submission.errors.full_messages
+    refute submission.valid?, submission.errors.full_messages
   end
 
   test "census 2017 v4 submission missing followup" do
     submission = build(:census_your_school2017v4, :requiring_followup)
-    assert_not submission.valid?, submission.errors.full_messages
+    refute submission.valid?, submission.errors.full_messages
   end
 
   test "census 2017 v4 submission with followup" do

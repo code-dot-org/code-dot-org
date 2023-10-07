@@ -42,7 +42,6 @@ const CurriculumCatalogCard = ({
   topics = [],
   pathToCourse,
   onAssignSuccess,
-  quickViewDisplayed,
   deviceCompatibility,
   description,
   professionalLearningProgram,
@@ -83,7 +82,6 @@ const CurriculumCatalogCard = ({
     translationIconTitle={i18n.courseInYourLanguage()}
     pathToCourse={pathToCourse + '?viewAs=Instructor'}
     onAssignSuccess={onAssignSuccess}
-    quickViewDisplayed={quickViewDisplayed}
     deviceCompatibility={deviceCompatibility}
     description={description}
     professionalLearningProgram={professionalLearningProgram}
@@ -122,7 +120,6 @@ CurriculumCatalogCard.propTypes = {
   scriptId: PropTypes.number,
   isStandAloneUnit: PropTypes.bool,
   onAssignSuccess: PropTypes.func,
-  quickViewDisplayed: PropTypes.bool,
   deviceCompatibility: PropTypes.string,
   description: PropTypes.string,
   professionalLearningProgram: PropTypes.string,
@@ -157,7 +154,6 @@ const CustomizableCurriculumCatalogCard = ({
   isSignedOut,
   onAssignSuccess,
   courseId,
-  quickViewDisplayed,
   deviceCompatibility,
   description,
   professionalLearningProgram,
@@ -265,26 +261,13 @@ const CustomizableCurriculumCatalogCard = ({
                   : style.buttonsContainer_notEnglish
               )}
             >
-              {quickViewDisplayed ? (
-                <Button
-                  color={Button.ButtonColor.neutralDark}
-                  type="button"
-                  onClick={onQuickViewClick}
-                  aria-label={quickViewButtonDescription}
-                  text={'Quick View'}
-                />
-              ) : (
-                <Button
-                  __useDeprecatedTag
-                  color={Button.ButtonColor.neutralDark}
-                  type="button"
-                  href={pathToCourse}
-                  aria-label={i18n.quickViewDescription({
-                    course_name: courseDisplayName,
-                  })}
-                  text={i18n.learnMore()}
-                />
-              )}
+              <Button
+                color={Button.ButtonColor.neutralDark}
+                type="button"
+                onClick={onQuickViewClick}
+                aria-label={quickViewButtonDescription}
+                text={i18n.quickView()}
+              />
               <Button
                 color={Button.ButtonColor.brandSecondaryDefault}
                 type="button"
@@ -351,7 +334,6 @@ CustomizableCurriculumCatalogCard.propTypes = {
   quickViewButtonDescription: PropTypes.string.isRequired,
   assignButtonDescription: PropTypes.string.isRequired,
   // for expanded card
-  quickViewDisplayed: PropTypes.bool,
   deviceCompatibility: PropTypes.string,
   description: PropTypes.string,
   professionalLearningProgram: PropTypes.string,

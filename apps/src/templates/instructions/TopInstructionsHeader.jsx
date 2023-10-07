@@ -119,7 +119,7 @@ function TopInstructionsHeader(props) {
               isRtl={isRtl}
             />
           )}
-          {isCSDorCSP && displayFeedback && (!fetchingData || teacherOnly) && (
+          {displayFeedback && (!fetchingData || teacherOnly) && (
             <InstructionsTab
               className="uitest-feedback"
               onClick={handleCommentTabClick}

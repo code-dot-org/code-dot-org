@@ -187,7 +187,9 @@ class User < ApplicationRecord
     TYPE_STUDENT = 'student'.freeze,
     TYPE_TEACHER = 'teacher'.freeze
   ].freeze
-  validates_inclusion_of :user_type, in: USER_TYPE_OPTIONS
+
+  validates_presence_of :user_type
+  validates_inclusion_of :user_type, in: USER_TYPE_OPTIONS, if: :user_type?
 
   belongs_to :studio_person, optional: true
   has_many :hint_view_requests
@@ -1050,9 +1052,7 @@ class User < ApplicationRecord
 
     # Remove family name, in case it was set on the student account.
     # Must do this before updating user_type, to prevent validation failure.
-    if DCDO.get('family-name-features', false)
-      self.family_name = nil
-    end
+    self.family_name = nil
 
     hashed_email = User.hash_email(email)
     self.user_type = TYPE_TEACHER
@@ -1210,7 +1210,7 @@ class User < ApplicationRecord
   #   3: {}
   # }
   def self.user_levels_by_user_by_level(users, script)
-    initial_hash = Hash[users.map {|user| [user.id, {}]}]
+    initial_hash = users.map {|user| [user.id, {}]}.to_h
     UserLevel.where(
       script_id: script.id,
       user_id: users.map(&:id)
@@ -2078,7 +2078,7 @@ class User < ApplicationRecord
       id: id,
       name: name,
       username: username,
-      family_name: DCDO.get('family-name-features', false) ? family_name : nil,
+      family_name: family_name,
       email: email,
       hashed_email: hashed_email,
       user_type: user_type,
@@ -2217,6 +2217,11 @@ class User < ApplicationRecord
 
   def parent_managed_account?
     student? && parent_email.present? && hashed_email.blank?
+  end
+
+  # Returns true when the parent email matches the account email.
+  def parent_created_account?
+    student? && parent_email.present? && hashed_email == User.hash_email(parent_email)
   end
 
   # Temporary: Allow single-auth students to add a parent email so it's possible
