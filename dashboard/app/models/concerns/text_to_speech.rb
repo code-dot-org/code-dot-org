@@ -49,8 +49,11 @@ module TextToSpeech
     )
   end
 
+  # A dictionary containing metadata about voices available for use.
   def self.voices
-    @@voices ||= JSON.parse(SharedConstants::VOICES)
+    # These are stored in SharedConstants so they are available to the front-end
+    # components that playback the audio.
+    SharedConstants::VOICES
   end
 
   def self.locale_supported?(locale)
