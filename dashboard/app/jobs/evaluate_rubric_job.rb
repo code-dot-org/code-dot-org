@@ -69,6 +69,7 @@ class EvaluateRubricJob < ApplicationJob
   private def read_user_code(channel_id)
     # fetch the user's code from S3
     source_data = SourceBucket.new.get(channel_id, "main.json")
+    raise "main.json not found for channel id #{channel_id}" unless source_data[:status] == 'FOUND'
     code = JSON.parse(source_data[:body].string)['source']
     version = source_data[:version_id]
     [code, version]

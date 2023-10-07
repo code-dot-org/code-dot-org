@@ -52,10 +52,30 @@ class EvaluateRubricJobTest < ActiveJob::TestCase
     assert_equal 0, LearningGoalAiEvaluation.where(user_id: @student.id).count
   end
 
+  test "job fails if project source code not found" do
+    EvaluateRubricJob.stubs(:get_lesson_s3_name).with(@script_level).returns('fake-lesson-s3-name')
+
+    # create a project
+    channel_token = ChannelToken.find_or_create_channel_token(@script_level.level, @fake_ip, @storage_id, @script_level.script_id)
+    channel_id = channel_token.channel
+
+    SourceBucket.any_instance.stubs(:get).with(channel_id, "main.json").returns({status: 'NOT_FOUND'})
+
+    exception = assert_raises RuntimeError do
+      EvaluateRubricJob.new.perform(user_id: @student.id, script_level_id: @script_level.id)
+    end
+    assert_includes exception.message, 'main.json not found'
+    assert_equal 0, LearningGoalAiEvaluation.where(user_id: @student.id).count
+  end
+
   # stub out the calls to fetch project data from S3
   private def stub_project_source_data(channel_id, code: 'fake-code', version_id: 'fake-version-id')
     fake_main_json = {source: code}.to_json
-    fake_source_data = {body: StringIO.new(fake_main_json), version_id: version_id}
+    fake_source_data = {
+      status: 'FOUND',
+      body: StringIO.new(fake_main_json),
+      version_id: version_id
+    }
     SourceBucket.any_instance.stubs(:get).with(channel_id, "main.json").returns(fake_source_data)
   end
 
