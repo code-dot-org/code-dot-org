@@ -175,65 +175,20 @@
     }
   },
   "https://studio.code.org/s/csd7-2021/lessons/2/levels/1": {
-    "long_instructions": "## Looking for Patterns\n\nEach box on the screen has 3 numbers in them. You can click-and-drag each box to move them around the screen.\n\nTry to group boxes together in any way that makes sense to you. You could compare individual rows of numbers to other boxes, or compare numbers within the box itself - whatever makes sense to you.\n\n# Do This\n\n-   Drag the boxes around the screen so you have at least 3 different groups (you can have more if you'd like!)\n-   Once you have your groups, click the \"Next\" button to reveal what each box represents.\n-   Once you've revealed the boxes, see if you can summarize your groups to another person.",
-    "start_html": {
-      "Next": "Next"
-    }
+    "long_instructions": "## Looking for Patterns\n\nEach box on the screen has 3 numbers in them. You can click-and-drag each box to move them around the screen.\n\nTry to group boxes together in any way that makes sense to you. You could compare individual rows of numbers to other boxes, or compare numbers within the box itself - whatever makes sense to you.\n\n# Do This\n\n-   Drag the boxes around the screen so you have at least 3 different groups (you can have more if you'd like!)\n-   Once you have your groups, click the \"Next\" button to reveal what each box represents.\n-   Once you've revealed the boxes, see if you can summarize your groups to another person."
   },
   "https://studio.code.org/s/csd7-2021/lessons/2/levels/2": {
-    "long_instructions": "# Green Glass Door\n\nIn this game, we're trying to learn what words are accepted through the Green Glass Door. See if you can figure out the pattern that determines what words are accepted and what words are rejected.\n\n## Do This\n\n-   Run the app and read the directions\n-   Generate at least 5 example words. You can generate more if you'd like - the more examples you have, the more likely you are to figure out the pattern\n-   You can try some words yourself to test which words are accepted or rejected. You can use this to verify if you've figured out the pattern.",
-    "start_html": {
-      "Green Glass Door": "Green Glass Door",
-      "In this game, we're trying to learn what words are allowed through the Green Glass Door.": "In this game, we're trying to learn what words are allowed through the Green Glass Door.",
-      "Some words are accepted and others are rejected": "Some words are accepted and others are rejected",
-      "In the next screen, a wise wizard will show us how to play the game": "In the next screen, a wise wizard will show us how to play the game",
-      "Then we'll get a chance to play and guess which words are accepted or rejected by the door": "Then we'll get a chance to play and guess which words are accepted or rejected by the door",
-      "Start Playing": "Start Playing",
-      "Word:": "Word:",
-      "Decision:": "Decision:",
-      "New Example Word": "New Example Word",
-      "I'm Ready To Try Myself!": "I'm Ready To Try Myself!",
-      "See All Results": "See All Results",
-      "On this screen, the wizard can show you example words. See if you notice any patterns": "On this screen, the wizard can show you example words. See if you notice any patterns",
-      "Check Your Word": "Check Your Word",
-      "Accepted": "Accepted",
-      "Rejected": "Rejected"
-    }
+    "long_instructions": "# Green Glass Door\n\nIn this game, we're trying to learn what words are accepted through the Green Glass Door. See if you can figure out the pattern that determines what words are accepted and what words are rejected.\n\n## Do This\n\n-   Run the app and read the directions\n-   Generate at least 5 example words. You can generate more if you'd like - the more examples you have, the more likely you are to figure out the pattern\n-   You can try some words yourself to test which words are accepted or rejected. You can use this to verify if you've figured out the pattern."
   },
   "https://studio.code.org/s/csd7-2021/lessons/4/levels/1": {
     "short_instructions": "Draw a 1x1 square above and to the left of the turtle's starting position. Click to see full instructions.",
     "long_instructions": "# Shoe Recommender\n\nThis app uses a computer model to help make a decision about what shoes to wear. There are 4 different recommendations the app can make for what shoes to wear.\n\n## Do This\n\n-   Run the app several times. See if you can get each of the 4 recommendations\n-   **Make a prediction:** how do you think this app is making its decision?",
-    "teacher_markdown": "**Additional Resources:** This level is _not_ intended to be completed independently by students or in a self-paced manner - students should be following along with instructions from a teacher and completing information in an activity guide. [See the lesson plan][0] for more information about how to support students in completing this level.",
-    "start_html": {
-      "Shoe Recommender": "Shoe Recommender",
-      "Recommend Shoes!": "Recommend Shoes!",
-      "Another Recommendation!": "Another Recommendation!",
-      "We Recommend...": "We Recommend..."
-    }
+    "teacher_markdown": "**Additional Resources:** This level is _not_ intended to be completed independently by students or in a self-paced manner - students should be following along with instructions from a teacher and completing information in an activity guide. [See the lesson plan][0] for more information about how to support students in completing this level."
   },
   "https://studio.code.org/s/csd7-2021/lessons/4/levels/2": {
     "short_instructions": "Draw a 1x1 square above and to the left of the turtle's starting position. Click to see full instructions.",
     "long_instructions": "# Improved Shoe Recommender\n\nThis app uses a computer model to help make a decision about what shoes to wear. There are 6 different recommendations the app can make for what shoes to wear.\n\n## Do This\n\n-   Run the app several times. See if you can get each of the 6 recommendations\n-   **Make a prediction:** how do you think this app is making its decision?",
-    "teacher_markdown": "**Additional Resources:** This level is _not_ intended to be completed independently by students or in a self-paced manner - students should be following along with instructions from a teacher and completing information in an activity guide. [See the lesson plan][0] for more information about how to support students in completing this level.",
-    "start_html": {
-      "Improved Shoe Recommender": "Improved Shoe Recommender",
-      "Recommend Shoes!": "Recommend Shoes!",
-      "Another Recommendation!": "Another Recommendation!",
-      "We Recommend...": "We Recommend...",
-      "Is It Raining Outside?": "Is It Raining Outside?",
-      "Yes!": "Yes!",
-      "No!": "No!",
-      "Where Are You Spending Your Day?": "Where Are You Spending Your Day?",
-      "Choose An Option": "Choose An Option",
-      "Indoors": "Indoors",
-      "Outdoors": "Outdoors",
-      "In Bed": "In Bed",
-      "Recommend Shoes": "Recommend Shoes",
-      "What Kind Of Day is Today?": "What Kind Of Day is Today?",
-      "Casual": "Casual",
-      "Fancy": "Fancy",
-      "Sports": "Sports"
-    }
+    "teacher_markdown": "**Additional Resources:** This level is _not_ intended to be completed independently by students or in a self-paced manner - students should be following along with instructions from a teacher and completing information in an activity guide. [See the lesson plan][0] for more information about how to support students in completing this level."
   },
   "https://studio.code.org/s/csd7-2021/lessons/4/levels/3": {
     "dsls": {
@@ -243,55 +198,11 @@
   "https://studio.code.org/s/csd7-2021/lessons/4/levels/4": {
     "short_instructions": "Draw a 1x1 square above and to the left of the turtle's starting position. Click to see full instructions.",
     "long_instructions": "# The _Ultimate_ Shoe Recommender\n\nThis app uses a computer model to help make a decision about what shoes to wear. There are 5 different recommendations the app can make for what shoes to wear.\n\n## Do This\n\n-   Run the app several times and see if you can get the app to recommend shoes that match the patterns we saw in the data\n-   Try to get the app to recommend each type of shoe",
-    "teacher_markdown": "**Additional Resources:** This level is _not_ intended to be completed independently by students or in a self-paced manner - students should be following along with instructions from a teacher and completing information in an activity guide. [See the lesson plan][0] for more information about how to support students in completing this level.",
-    "start_html": {
-      "Ultimate Shoe Recommender": "Ultimate Shoe Recommender",
-      "Recommend Shoes!": "Recommend Shoes!",
-      "Another Recommendation!": "Another Recommendation!",
-      "We Recommend...": "We Recommend...",
-      "Where will you spend most of your time?": "Where will you spend most of your time?",
-      "In Bed": "In Bed",
-      "Indoors": "Indoors",
-      "Outside in a City": "Outside in a City",
-      "Outside in Nature": "Outside in Nature",
-      "What is the weather like?": "What is the weather like?",
-      "Sunny": "Sunny",
-      "Rainy": "Rainy",
-      "Snowy": "Snowy",
-      "Windy": "Windy",
-      "How do you feel about socks?": "How do you feel about socks?",
-      "Yes Socks!": "Yes Socks!",
-      "No Socks!": "No Socks!",
-      "What is your day like?": "What is your day like?",
-      "Casual": "Casual",
-      "Professional": "Professional",
-      "Hard Work": "Hard Work",
-      "Lazy": "Lazy",
-      "Do you care about people noticing your shoes?": "Do you care about people noticing your shoes?",
-      "Yes!": "Yes!",
-      "No!": "No!"
-    }
+    "teacher_markdown": "**Additional Resources:** This level is _not_ intended to be completed independently by students or in a self-paced manner - students should be following along with instructions from a teacher and completing information in an activity guide. [See the lesson plan][0] for more information about how to support students in completing this level."
   },
   "https://studio.code.org/s/csd7-2021/lessons/6/levels/1": {
     "long_instructions": "# Fruit & Veggie Explorer\n\nThis widget has the same fruits and veggies from the previous lesson, but you now have more **features** to play with and more flexibility with how you draw your deciding line.\n\n## How The Widget Works\n\n-   Hover over a dot to see the food it represents. Orange dots are fruits, purple dots are veggies.\n-   Use the dropdowns to change the features used to create the graph. This will reload your data using your new features.\n-   Click in two places to draw a line to separate the data.\n-   Your accuracy is shown at the bottom. This is how many fruits and veggies landed in the correctly shaded part of the graph.\n    -   If you have really low accuracy, try pressing the Flip Colors button to switch the orange vs purple shading\n-   Press the \"Try Your Own Food!\" button to test your own data and see how your model classifies it.\n\n::: details [**Click Here for Feature Explanations**]\n\n-   **Size**: How big the food is. The higher the value, the bigger the food is.\n-   **Hardness**: How hard the food is. The higher the value, the harder the food is (usually because of a rind or shell)\n-   **Easy to Eat**: How easy the food is to eat. The higher the value, the easier it is to just pick up the food and eat it\n-   **Juiciness**: How juicy the food is. The higher the value, the juicier the food is.\n-   **Sweetness**: How sweet the food is. The higher the value, the sweeter the food is.\n-   **Can Smell It**: How fragrant the food is. The higher the value, the more the food smells (like onions)\n-   **Green-ness**: How green the food is on the outside. The higher the value, the greener the food is (like watermelon or limes)\n-   **Stackability**: How easy it is to stack the food into a pile. The higher the value, the easier it is to stack the food on one another without them rolling away or squishing.\n    :::\n\n## Do This\n\nUsing the dropdowns to adjust the features, draw a line that creates a model that correctly classifies at least 80% of the fruits and 80% of the veggies\n\n<img src=\"https://images.code.org/7c501f5e08f2cb06b5ddc5c1aae26f31-image-1625704907103.png\" width=\"200px\">",
-    "teacher_markdown": "**Additional Resources:** This level is _not_ intended to be completed independently by students or in a self-paced manner - students should be following along with instructions from a teacher. [See the lesson plan][0] for more information about how to support students in completing this level.",
-    "start_html": {
-      "Hover over a dot to see its name": "Hover over a dot to see its name",
-      "Try Your Own Food!": "Try Your Own Food!",
-      "x Axis": "x Axis",
-      "y Axis": "y Axis",
-      "Flip Colors": "Flip Colors",
-      "Fruit Accuracy:": "Fruit Accuracy:",
-      "Veggie Accuracy:": "Veggie Accuracy:",
-      "Click in two places to draw a line!": "Click in two places to draw a line!",
-      "What is the nameof your food?": "What is the nameof your food?",
-      "Let's See What The Model Decides": "Let's See What The Model Decides",
-      "On a Scale from 1-10, how would you rate": "On a Scale from 1-10, how would you rate",
-      "Your new food has been added to the graph as a gray square!": "Your new food has been added to the graph as a gray square!",
-      "According to the line you drew, your model thinks this food is a": "According to the line you drew, your model thinks this food is a",
-      "Continue": "Continue",
-      "Loading...": "Loading..."
-    }
+    "teacher_markdown": "**Additional Resources:** This level is _not_ intended to be completed independently by students or in a self-paced manner - students should be following along with instructions from a teacher. [See the lesson plan][0] for more information about how to support students in completing this level."
   },
   "https://studio.code.org/s/csd7-2021/lessons/6/levels/2": {
     "long_instructions": "This level has dynamic instructions that change as you interact with AI Lab.\n\n-   _The instructions for the **Select Feature** screen say:_ Now you can decide what **features** you want to use to train your model. These are the inputs of your machine learning model - it's where AI Bot will look for patterns to help make its decision. **Do This:** Choose a column to investigate as a potential feature.\n\n    -   _The instructions when you click a categorical feature say:_ When you select a column, additional information appears on the right panel. This can help you decide if this is a useful feature for predicting your label. You can learn more in the Help and Tips section of these instructions. **Do This:** Decide if you would like to use this column as a feature. If so, press the \"Add Feature\" button. If not, select a new column to explore. Repeat this until you've chosen several columns to use as features.\n\n-   _The instructions for the **Results** screen say:_ On this screen, you can see how accurate AI Bot when comparing its predictions to the testing data that we already know the answers to.  **Do This:** Keep training your model until you have at least 100% accuracy\n\n    -   _The instructions when you click the details panel say:_ This screen shows you the individual rows AI Bot got correct or incorrect. This can help explain why this model earned the accuracy score that it did. You can learn more about how accuracy is calculated in the Help and Tips panel.",
@@ -353,28 +264,7 @@
     }
   },
   "https://studio.code.org/s/csd7-2021/lessons/7/levels/1": {
-    "long_instructions": "# Book Recommender\n\nRun the app and see what kind of books get recommended based on your answers.",
-    "start_html": {
-      "Class Book Recommender": "Class Book Recommender",
-      "This app can recommend a book to read based on your interests. It's meant for a new student inschool so they can read a book that other people in the school have also read and have something to talk about to make new friends": "This app can recommend a book to read based on your interests. It's meant for a new student inschool so they can read a book that other people in the school have also read and have something to talk about to make new friends",
-      "Which animal do you like the most?": "Which animal do you like the most?",
-      "Wolf": "Wolf",
-      "Dragon": "Dragon",
-      "Cat": "Cat",
-      "Walrus": "Walrus",
-      "How would your friends describe you?": "How would your friends describe you?",
-      "Independent": "Independent",
-      "Silly": "Silly",
-      "Thoughtful": "Thoughtful",
-      "Myterious": "Myterious",
-      "Where do you like to spend time?": "Where do you like to spend time?",
-      "Outdoors": "Outdoors",
-      "Indoors": "Indoors",
-      "How do you like to spendtime?": "How do you like to spendtime?",
-      "By Myself": "By Myself",
-      "With Friends": "With Friends",
-      "Predict": "Predict"
-    }
+    "long_instructions": "# Book Recommender\n\nRun the app and see what kind of books get recommended based on your answers."
   },
   "https://studio.code.org/s/csd7-2021/lessons/7/levels/2": {
     "long_instructions": "# Importing A Machine Learning Model\n\nOur model has already been trained - let's import it into App Lab!\n\n# Do This\n\n-   Press the gear icon above the toolbox to open the extra menu, then select _Manage AI Models_ from the list<br />\n    <img src=\"https://images.code.org/e81c7cead7d106ee5b32f850791c7de8-image-1616919161803.png\" width=\"15%\">\n-   Select \"Class Book Recommender\" from the list, then press the Import button.<br />\n    <img src=\"https://images.code.org/138dd3d42b77e8d68fe27c7bc37f38bc-image-1623885261164.png\" width=\"20%\">\n-   Press the \"Run\" button and test the app to verify that it works.\n\nYou do **not** need to edit any of the code! Throughout the unit we'll learn more about what these blocks do, but you don't need to make any changes right now.\n\n# With A Partner:\n\n-   Can you identify the line where the button press happens?\n-   Can you identify the lines where all of our data is being collected?\n-   Can you identify the line where our prediction happens?"
@@ -442,66 +332,10 @@
   },
   "https://studio.code.org/s/csd7-2021/lessons/8/levels/1": {
     "long_instructions": "## Medical Priority App\n\nA hospital hired a company to create an app to help prioritize patients when they come in.\n\nThe app uses a machine learning model that is 80% accurate.\n\nThe model was trained on data from 1000 people who entered an emergency room in June 2020.\n\nOur job is to test the app and see how it performs when new people enter the hospital.\n\n## Do This\n\n-   Follow the instructions from your teacher on how to test the app and see how it works\n\n## Abbreviations\n\n-   A - Asian\n-   AIAN - American Indian / Alaska Native\n-   BAM - Black and African American\n-   NHPI - Native Hawaiian / Pacific Island\n-   W - White",
-    "teacher_markdown": "**Additional Resources:** This level is _not_ intended to be completed independently by students or in a self-paced manner - students should be following along with instructions from a teacher and completing information in an activity guide. [See the lesson plan][0] for more information about how to support students in completing this level.",
-    "start_html": {
-      "Medical Priority": "Medical Priority",
-      "Please Sign In Below": "Please Sign In Below",
-      "Over 60": "Over 60",
-      "18-34": "18-34",
-      "Under 18": "Under 18",
-      "35-60": "35-60",
-      "Age?": "Age?",
-      "Bleeding?": "Bleeding?",
-      "Race?": "Race?",
-      "W": "W",
-      "BAM": "BAM",
-      "A": "A",
-      "NHPI": "NHPI",
-      "AIAN": "AIAN",
-      "Gender?": "Gender?",
-      "male": "male",
-      "female": "female",
-      "nonbinary (identifies outside gender binary)": "nonbinary (identifies outside gender binary)",
-      "yes": "yes",
-      "no": "no",
-      "Shortness of Breath?": "Shortness of Breath?",
-      "Pain Type": "Pain Type",
-      "Achy": "Achy",
-      "Dull": "Dull",
-      "Sharp": "Sharp",
-      "Stabbing": "Stabbing",
-      "Throbbing": "Throbbing",
-      "Area of Pain?": "Area of Pain?",
-      "stomach": "stomach",
-      "limb": "limb",
-      "chest": "chest",
-      "head": "head",
-      "Sign In": "Sign In"
-    }
+    "teacher_markdown": "**Additional Resources:** This level is _not_ intended to be completed independently by students or in a self-paced manner - students should be following along with instructions from a teacher and completing information in an activity guide. [See the lesson plan][0] for more information about how to support students in completing this level."
   },
   "https://studio.code.org/s/csd7-2021/lessons/8/levels/2": {
-    "long_instructions": "# Book Recommender Model Card\n\nA model card has two pieces. The first piece describes the model overall, including its Intended Uses, Limitations and Warnings, and About the Data. The second piece describes the labels and features used to train the model.\n\nBelow is a partially completed model card for the Book Recommender app from the previous lesson.\n\n## Do This\n\nOn your activity guide, fill in the missing sections of the model card. You can use the app on this screen to remind yourself of how the app worked and the different labels and features.\n\n<img src=\"https://images.code.org/a87f26a8185a6d743c0b9d94dbc7565d-image-1625859989666.png\" style=\"float:left\" width=\"45%\">\n<img src=\"https://images.code.org/b8eccf2086f8d6dcc99b31faebb240b2-image-1625860001157.png\" style=\"float:right\" width=\"45%\">\n\n[][0]",
-    "start_html": {
-      "Class Book Recommender": "Class Book Recommender",
-      "This app can recommend a book to read based on your interests. It's meant for a new student inschool so they can read a book that other people in the school have also read and have something to talk about to make new friends": "This app can recommend a book to read based on your interests. It's meant for a new student inschool so they can read a book that other people in the school have also read and have something to talk about to make new friends",
-      "Which animal do you like the most?": "Which animal do you like the most?",
-      "Wolf": "Wolf",
-      "Dragon": "Dragon",
-      "Cat": "Cat",
-      "Walrus": "Walrus",
-      "How would your friends describe you?": "How would your friends describe you?",
-      "Independent": "Independent",
-      "Silly": "Silly",
-      "Thoughtful": "Thoughtful",
-      "Myterious": "Myterious",
-      "Where do you like to spend time?": "Where do you like to spend time?",
-      "Outdoors": "Outdoors",
-      "Indoors": "Indoors",
-      "How do you like to spendtime?": "How do you like to spendtime?",
-      "By Myself": "By Myself",
-      "With Friends": "With Friends",
-      "Predict": "Predict"
-    }
+    "long_instructions": "# Book Recommender Model Card\n\nA model card has two pieces. The first piece describes the model overall, including its Intended Uses, Limitations and Warnings, and About the Data. The second piece describes the labels and features used to train the model.\n\nBelow is a partially completed model card for the Book Recommender app from the previous lesson.\n\n## Do This\n\nOn your activity guide, fill in the missing sections of the model card. You can use the app on this screen to remind yourself of how the app worked and the different labels and features.\n\n<img src=\"https://images.code.org/a87f26a8185a6d743c0b9d94dbc7565d-image-1625859989666.png\" style=\"float:left\" width=\"45%\">\n<img src=\"https://images.code.org/b8eccf2086f8d6dcc99b31faebb240b2-image-1625860001157.png\" style=\"float:right\" width=\"45%\">\n\n[][0]"
   },
   "https://studio.code.org/s/csd7-2021/lessons/8/levels/3": {
     "dsls": {
@@ -586,31 +420,7 @@
   },
   "https://studio.code.org/s/csd7-2021/lessons/10/levels/1": {
     "long_instructions": "# Zoo Prediction App\n\nRun the app several times to see how it works.",
-    "teacher_markdown": "**Additional Resources:** This level is _not_ intended to be completed independently by students or in a self-paced manner - students should be following along with instructions from a teacher and completing information in an activity guide. [See the lesson plan][0] for more information about how to support students in completing this level.",
-    "start_html": {
-      "Animal Predictor!": "Animal Predictor!",
-      "This app will predict a type of animal based on four questions!": "This app will predict a type of animal based on four questions!",
-      "More Information": "More Information",
-      "Does it have hair?": "Does it have hair?",
-      "Yes": "Yes",
-      "No": "No",
-      "Is it aquatic?": "Is it aquatic?",
-      "Does it have a backbone?": "Does it have a backbone?",
-      "Is it airborne?": "Is it airborne?",
-      "Predict": "Predict",
-      "It's A Reptile!": "It's A Reptile!",
-      "It's A Mammal!": "It's A Mammal!",
-      "It's a Bird!": "It's a Bird!",
-      "It's a Fish!": "It's a Fish!",
-      "It's an Amphibian!": "It's an Amphibian!",
-      "It's a Bug!": "It's a Bug!",
-      "It's a Crustacean!": "It's a Crustacean!",
-      "Intended Uses": "Intended Uses",
-      "This app can be used to identify the type of animal you see in the real world. This can be used in Zoos or Wildlife Sanctuaries to help educate people about the type of animals they are looking at.": "This app can be used to identify the type of animal you see in the real world. This can be used in Zoos or Wildlife Sanctuaries to help educate people about the type of animals they are looking at.",
-      "Next!": "Next!",
-      "Limitations": "Limitations",
-      "This app was trained on a small set of animals and only animals that typically appear in a zoo. This app may not work well with more exotic animals.": "This app was trained on a small set of animals and only animals that typically appear in a zoo. This app may not work well with more exotic animals."
-    }
+    "teacher_markdown": "**Additional Resources:** This level is _not_ intended to be completed independently by students or in a self-paced manner - students should be following along with instructions from a teacher and completing information in an activity guide. [See the lesson plan][0] for more information about how to support students in completing this level."
   },
   "https://studio.code.org/s/csd7-2021/lessons/10/levels/2": {
     "long_instructions": "# Pet Recommender\n\nA pet store has created a machine learning model to help recommend a pet to new customers. They’d like us to build an app based on their model. \n\n# Do This:\n\n-   Click the gear and select “Manage AI Models”\n-   Select Pet Recommender from the list and click Import\n-   Run the app multiple times to test out the app. Try to get all possible pet recommendations.\n    -   _Uhmm.... this app isn't very well organized. It's tough to know what each feature means. Even so: take your best guesses and try different values to see the different pets you can get._\n\n# With a Partner:\n\n-   Some of the features use dropdowns and others use text boxes. What do you think is the difference between these two types of features?",
@@ -649,104 +459,24 @@
         "display_name": "Debug: Predict Screens",
         "bubble_choice_description": "Use your debugging skills to figure out why none of the predict screens are working",
         "long_instructions": "<div markdown=\"1\" style=\"float: right; margin: 10px;\">\r\n\r\nModel Card <br />\r\n\r\n![expandable](https://images.code.org/1fb88a3553f16cd9a576d54afe8757b9-image-1625509299810.png)\r\n\r\n<br/>\r\n\r\nClick to View\r\n\r\n</div>\r\n\r\n# Debug: Predict Screens Not Working\r\n\r\nThis person's app isn't working correctly - can you find the bug and fix it?\r\n\r\nWhat I expected to happen | What happened instead\r\n----------|----------------\r\nThe screen changes when you press predict &nbsp;&nbsp; | The screen stays the same\r\n\r\n\\\r\n*Hint: Try checking the model card and making sure everything is spelled correctly, including capitalization*",
-        "teacher_markdown": "**Solution:** Students need to fix typos with their values so they match the model card. This includes misspellings and capitalization mistakes.",
-        "start_html": {
-          "Temperature": "Temperature",
-          "Free Time": "Free Time",
-          "Playful?": "Playful?",
-          "Sort Of": "Sort Of",
-          "Not At All": "Not At All",
-          "Very": "Very",
-          "Number of Pets?": "Number of Pets?",
-          "3": "3",
-          "2": "2",
-          "1": "1",
-          "4+": "4+",
-          "Pet": "Pet",
-          "Predict": "Predict",
-          "Pet Recommendation: Fish!": "Pet Recommendation: Fish!",
-          "Pet Recommendation: Iguana!": "Pet Recommendation: Iguana!",
-          "Pet Recommendation: Parakeet": "Pet Recommendation: Parakeet",
-          "Pet Recommendation: Dog!": "Pet Recommendation: Dog!"
-        }
+        "teacher_markdown": "**Solution:** Students need to fix typos with their values so they match the model card. This includes misspellings and capitalization mistakes."
       },
       "ml-models in applab-choice if quotes": {
         "display_name": "Debug: If Statements 1",
         "bubble_choice_description": "Use your debugging skills to figure out why there are errors with the if-statements",
         "long_instructions": "# Debug: If Statements 1\r\n\r\nNone of the if-statements are working on this screen - can you fix the bug?\r\n\r\nWhat I expected to happen | What happened instead\r\n----------|----------------\r\nThe screens change when you press predict &nbsp;&nbsp; | The program gives an error when you press predict",
-        "teacher_markdown": "**Solution:** Students need to add quotes inside the if statements - for example, \"Dog\"",
-        "start_html": {
-          "Temperature": "Temperature",
-          "Free Time": "Free Time",
-          "Playful?": "Playful?",
-          "Sort Of": "Sort Of",
-          "Not At All": "Not At All",
-          "Very": "Very",
-          "Number of Pets?": "Number of Pets?",
-          "3": "3",
-          "2": "2",
-          "1": "1",
-          "4+": "4+",
-          "Pet": "Pet",
-          "Predict": "Predict",
-          "Pet Recommendation: Fish!": "Pet Recommendation: Fish!",
-          "Pet Recommendation: Iguana!": "Pet Recommendation: Iguana!",
-          "Pet Recommendation: Parakeet": "Pet Recommendation: Parakeet",
-          "Pet Recommendation: Dog!": "Pet Recommendation: Dog!"
-        }
+        "teacher_markdown": "**Solution:** Students need to add quotes inside the if statements - for example, \"Dog\""
       },
       "ml-models in applab-choice intended warnings": {
         "display_name": "Add Intended Uses",
         "bubble_choice_description": "Use the model card to add the Intended Uses and Limitations to the app",
-        "long_instructions": "<div markdown=\"1\" style=\"float: right; margin: 10px;\">\r\n\r\nModel Card <br />\r\n\r\n![expandable](https://images.code.org/e38768393e3033e60dc9dc2696e3df7d-image-1625085031146.png)\r\n\r\n<br/>\r\n\r\nClick to View\r\n\r\n</div>\r\n\r\n# Add Intended Uses and Limitations\r\n\r\nLet's add some additional to our app from the model card to help keep the user informed of how this app is designed to be used.\r\n\r\n## Do This\r\n\r\n- In Design Mode, switch to the `informationScreen`\r\n- Use the text from the model card to fill in the text of the Intended Uses label\r\n\t- You can view the model card by pressing the gear and selecting \"Manage AI Models\". The model card will appear in this window where you can copy-and-paste the text from the Intended Use section\r\n- Repeat the same process to fill in the text of the Limitations and Warnings label",
-        "start_html": {
-          "Temperature": "Temperature",
-          "Free Time": "Free Time",
-          "Playful?": "Playful?",
-          "Sort Of": "Sort Of",
-          "Not At All": "Not At All",
-          "Very": "Very",
-          "Number of Pets?": "Number of Pets?",
-          "3": "3",
-          "2": "2",
-          "1": "1",
-          "4+": "4+",
-          "Pet": "Pet",
-          "Predict": "Predict",
-          "More Information": "More Information",
-          "Pet Recommendation: Fish!": "Pet Recommendation: Fish!",
-          "Pet Recommendation: Iguana!": "Pet Recommendation: Iguana!",
-          "Pet Recommendation: Parakeet": "Pet Recommendation: Parakeet",
-          "Pet Recommendation: Dog!": "Pet Recommendation: Dog!",
-          "Intended Uses": "Intended Uses",
-          "Limitations and Warnings": "Limitations and Warnings",
-          "Back": "Back"
-        }
+        "long_instructions": "<div markdown=\"1\" style=\"float: right; margin: 10px;\">\r\n\r\nModel Card <br />\r\n\r\n![expandable](https://images.code.org/e38768393e3033e60dc9dc2696e3df7d-image-1625085031146.png)\r\n\r\n<br/>\r\n\r\nClick to View\r\n\r\n</div>\r\n\r\n# Add Intended Uses and Limitations\r\n\r\nLet's add some additional to our app from the model card to help keep the user informed of how this app is designed to be used.\r\n\r\n## Do This\r\n\r\n- In Design Mode, switch to the `informationScreen`\r\n- Use the text from the model card to fill in the text of the Intended Uses label\r\n\t- You can view the model card by pressing the gear and selecting \"Manage AI Models\". The model card will appear in this window where you can copy-and-paste the text from the Intended Use section\r\n- Repeat the same process to fill in the text of the Limitations and Warnings label"
       },
       "ml-models in applab-choice if wrong place": {
         "display_name": "Debug: If Statements 2",
         "bubble_choice_description": "Use your debugging skills to figure out why the if-statements aren't working",
         "long_instructions": "# Debug: If Statement 2\r\n\r\nSomeone has submitted a bug report on this web page.  Can you fix the bug?\r\n\r\nWhat I expected to happen | What happened instead\r\n----------|----------------\r\nWhen you press predict, the screen changes &nbsp;&nbsp; | The screen doesn't change\r\n\\\r\n*Hint: the order of the code matters - make sure the if-statements are in the right place*",
-        "teacher_markdown": "**Solution:** The if-statements need to be moved down inside the `getPrediction()` block.",
-        "start_html": {
-          "Temperature": "Temperature",
-          "Free Time": "Free Time",
-          "Playful?": "Playful?",
-          "Sort Of": "Sort Of",
-          "Not At All": "Not At All",
-          "Very": "Very",
-          "Number of Pets?": "Number of Pets?",
-          "3": "3",
-          "2": "2",
-          "1": "1",
-          "4+": "4+",
-          "Pet": "Pet",
-          "Predict": "Predict",
-          "Pet Recommendation: Fish!": "Pet Recommendation: Fish!",
-          "Pet Recommendation: Iguana!": "Pet Recommendation: Iguana!",
-          "Pet Recommendation: Parakeet": "Pet Recommendation: Parakeet",
-          "Pet Recommendation: Dog!": "Pet Recommendation: Dog!"
-        }
+        "teacher_markdown": "**Solution:** The if-statements need to be moved down inside the `getPrediction()` block."
       }
     }
   },
@@ -758,22 +488,6 @@
       "rubric_performance_level_2": "The predict screen has some full sentences, and some if statements are used to change the screen based on the predicted value - however, the app is incomplete.",
       "rubric_performance_level_3": "The predict screen does not have full sentences or there are errors with the if-statements to change the screen.",
       "rubric_performance_level_4": "The app has not been updated."
-    },
-    "start_html": {
-      "H": "H",
-      "Yes": "Yes",
-      "No": "No",
-      "AQ": "AQ",
-      "B": "B",
-      "AB": "AB",
-      "Predict": "Predict",
-      "It's A Reptile!": "It's A Reptile!",
-      "It's A Mammal!": "It's A Mammal!",
-      "It's a Bird!": "It's a Bird!",
-      "It's a Fish!": "It's a Fish!",
-      "It's an Amphibian!": "It's an Amphibian!",
-      "It's a Bug!": "It's a Bug!",
-      "It's a Crustacean!": "It's a Crustacean!"
     }
   },
   "https://studio.code.org/s/csd7-2021/lessons/10/levels/10": {
@@ -837,54 +551,10 @@
     "long_instructions": "# Importing Your App\n\nLet’s import the model we just created in AI Lab!\n\n# Do This:\n\n-   Click the gear icon and select “Manage AI Models”\n-   Select the model you just saved in AI Lab\n-   Run your code and verify that it works\n-   Continue to customize your app. For example, you could:\n    -   Add a theme\n    -   Add a welcome screen\n    -   Add images or text\n    -   Add information from your model card to other screens on the app"
   },
   "https://studio.code.org/s/csd7-2021/lessons/13/levels/1": {
-    "long_instructions": "# Raspado Recommender\n\nUpdate the data variables to use the new design elements on the second screen.\n\n# Do This\n\n-   Drag out a [`getText()`(#fff176)][0] block to each blank to the right of a variable\n-   Use the drop-down menu to select the appropriate dropdown\n-   Run the app and verify that it works",
-    "start_html": {
-      "pecan:": "pecan:",
-      "yes": "yes",
-      "no": "no",
-      "strawberry:": "strawberry:",
-      "mango:": "mango:",
-      "vanilla:": "vanilla:",
-      "Raspado Recommender": "Raspado Recommender",
-      "lime:": "lime:",
-      "chili en polbo:": "chili en polbo:",
-      "lechera:": "lechera:",
-      "coconut:": "coconut:",
-      "preference": "preference",
-      "Predict": "Predict"
-    }
+    "long_instructions": "# Raspado Recommender\n\nUpdate the data variables to use the new design elements on the second screen.\n\n# Do This\n\n-   Drag out a [`getText()`(#fff176)][0] block to each blank to the right of a variable\n-   Use the drop-down menu to select the appropriate dropdown\n-   Run the app and verify that it works"
   },
   "https://studio.code.org/s/csd7-2021/lessons/13/levels/2": {
-    "long_instructions": "# Driver Alert System\n\nAnother way we can improve the user experience for our apps is separating the questions into their own screen. This lets us add more information about each question, and it’s easier for the user to keep track of their answers.\n\nThis app is used in cars to help alert the driver to dangerous road conditions. When you run the app, you’ll notice that each question appears on its own screen rather than all together.\n\n# Do This:\n\n-   Run this app multiple times. You will see that each question is put on a separate screen rather than all on the same screen.\n-   Pay attention to what design elements are on each screen.\n\n# With a Neighbor:\n\n-   How many features does this app have? What are they?\n-   What is the label for this app? What are the possible outputs?\n\n<hr />\n\n# Model Card\n\n::: details [Click to view model card]\n\n<a href=\"https://images.code.org/c529f10e4705472ed411acf0a06ba52a-image-1625085408035.png\" target=\"_blank\">\n<img src=\"https://images.code.org/c529f10e4705472ed411acf0a06ba52a-image-1625085408035.png\" width=\"45%\" style=\"float:left; margin: 2px;\"></a>\n<a href=\"https://images.code.org/555c117f7a94b91ee05cde30e046c79a-image-1625085429537.png\" target=\"_blank\">\n<img src=\"https://images.code.org/555c117f7a94b91ee05cde30e046c79a-image-1625085429537.png\" width=\"45%\" style=\"float:right; margin: 2px\"></a>\n\n:::",
-    "start_html": {
-      "Driver Alert System": "Driver Alert System",
-      "This app simulates a Car Alert System safety feature. It analyzes the road conditions and gives a rating on how safe it is to be driving right now.": "This app simulates a Car Alert System safety feature. It analyzes the road conditions and gives a rating on how safe it is to be driving right now.",
-      "Note: Normally all of this data would be collected by sensors. For this test, you will need to enter the data yourself": "Note: Normally all of this data would be collected by sensors. For this test, you will need to enter the data yourself",
-      "Get Started": "Get Started",
-      "Weather:": "Weather:",
-      "foggy": "foggy",
-      "rain": "rain",
-      "snow": "snow",
-      "cloudy": "cloudy",
-      "sunny": "sunny",
-      "Time Of Day:": "Time Of Day:",
-      "night": "night",
-      "daylight": "daylight",
-      "dusk": "dusk",
-      "Temperature:": "Temperature:",
-      "Cars:": "Cars:",
-      "Alert": "Alert",
-      "Predict": "Predict",
-      "How Many Other Cars Are On The Road?": "How Many Other Cars Are On The Road?",
-      "This feature determines how many other cars are on the road using a proximity sensor. The more cars there are on the road, the more dangerous driving conditions can be.": "This feature determines how many other cars are on the road using a proximity sensor. The more cars there are on the road, the more dangerous driving conditions can be.",
-      "What Is The Weather Like?": "What Is The Weather Like?",
-      "This feature determines what the weather is like using an atmospheric sensor. Road conditions become more dangerous in snowy or foggy weather. Under certain conditions, the sun can also blind drivers and cause accidents": "This feature determines what the weather is like using an atmospheric sensor. Road conditions become more dangerous in snowy or foggy weather. Under certain conditions, the sun can also blind drivers and cause accidents",
-      "What is the Temperature Outside?": "What is the Temperature Outside?",
-      "This feature determines the current temperature using a temperature sensor. If the weather is too hot, cars can overheat and malfunction. If the weather is too cold, parts of the car can freeze or tighten and malfunction.": "This feature determines the current temperature using a temperature sensor. If the weather is too hot, cars can overheat and malfunction. If the weather is too cold, parts of the car can freeze or tighten and malfunction.",
-      "What time of day is it?": "What time of day is it?",
-      "This feature determines the time of day using a light sensor. Dusk and nighttime driving tend to be more dangerous than daylight driving.": "This feature determines the time of day using a light sensor. Dusk and nighttime driving tend to be more dangerous than daylight driving.",
-      "Predict!": "Predict!"
-    }
+    "long_instructions": "# Driver Alert System\n\nAnother way we can improve the user experience for our apps is separating the questions into their own screen. This lets us add more information about each question, and it’s easier for the user to keep track of their answers.\n\nThis app is used in cars to help alert the driver to dangerous road conditions. When you run the app, you’ll notice that each question appears on its own screen rather than all together.\n\n# Do This:\n\n-   Run this app multiple times. You will see that each question is put on a separate screen rather than all on the same screen.\n-   Pay attention to what design elements are on each screen.\n\n# With a Neighbor:\n\n-   How many features does this app have? What are they?\n-   What is the label for this app? What are the possible outputs?\n\n<hr />\n\n# Model Card\n\n::: details [Click to view model card]\n\n<a href=\"https://images.code.org/c529f10e4705472ed411acf0a06ba52a-image-1625085408035.png\" target=\"_blank\">\n<img src=\"https://images.code.org/c529f10e4705472ed411acf0a06ba52a-image-1625085408035.png\" width=\"45%\" style=\"float:left; margin: 2px;\"></a>\n<a href=\"https://images.code.org/555c117f7a94b91ee05cde30e046c79a-image-1625085429537.png\" target=\"_blank\">\n<img src=\"https://images.code.org/555c117f7a94b91ee05cde30e046c79a-image-1625085429537.png\" width=\"45%\" style=\"float:right; margin: 2px\"></a>\n\n:::"
   },
   "https://studio.code.org/s/csd7-2021/lessons/13/levels/3": {
     "long_instructions": "# Deleting the Defaults\n\nIn order to create our updated app, we need to delete the default elements that were generated when the model was imported. Let's start by deleting these elements and changing the default screen. \n\n# Do This:\n\n-   In Design Mode, click on each element on \"screen1\" then press the red Delete button. <img src=\"https://images.code.org/ba722e6a91e46201912adfa383655aa6-image-1617075862276.png\" width=\"75px\"> \n\n-   Select “homeScreen” from the screen dropdown menu. \n    -   ::: details [**(Show Me How)**]\n        <img src=\"https://images.code.org/6efae94d8544480fb20b59e64ec80a8a-image-1616989901816.png\" width=\"200px\" />\n        :::\n\n-   Select the screen, then press the \"Make Default\" button. <img src=\"https://images.code.org/dbad207518f8222d76ae22d99edc710f-image-1616989970154.png\" width=\"100px\">\n\n-   Run the app and verify the welcome screen loads. You should also be able to click each “Next” arrow to continue through the screens. You won't be able to see the final screen until we adjust the code for our app in the next few levels.\n\nWhen you are finished continue to the next level",
