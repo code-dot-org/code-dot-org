@@ -51,8 +51,8 @@ const DanceAiModal: React.FunctionComponent<DanceAiProps> = ({onClose}) => {
   const [mode, setMode] = useState(Mode.SELECT_INPUTS);
   const [currentInputSlot, setCurrentInputSlot] = useState(0);
   const [inputs, setInputs] = useState<string[]>([]);
-  const [responseJson, setResponseJson] = useState<string>('');
-  const [responseExplanation, setResponseExplanation] = useState<string>('');
+  const [resultJson, setResultJson] = useState<string>('');
+  const [resultExplanation, setResultExplanation] = useState<string>('');
   const [typingDone, setTypingDone] = useState<boolean>(false);
 
   const currentAiModalField = useSelector(
@@ -69,7 +69,7 @@ const DanceAiModal: React.FunctionComponent<DanceAiProps> = ({onClose}) => {
       setMode(Mode.RESULTS_FINAL);
 
       // The block value will be set to this JSON.
-      setResponseJson(currentValue);
+      setResultJson(currentValue);
 
       setShowPreview(true);
     }
@@ -122,37 +122,38 @@ const DanceAiModal: React.FunctionComponent<DanceAiProps> = ({onClose}) => {
   };
 
   const startAi = async (inputs: string[], value: string) => {
-    const responseJsonString = await doAi(value);
-    const response = JSON.parse(responseJsonString);
+    const resultJsonString = await doAi(value);
+    const result = JSON.parse(resultJsonString);
 
     // "Pick" a subset of fields to be used.  Specifically, we exclude the
     // explanation, since we don't want it becoming part of the code.
-    const pickedResponse = (({
-      inputs,
+    const pickedResult = (({
       backgroundEffect,
       backgroundColor,
       foregroundEffect,
     }) => ({
-      inputs,
       backgroundEffect,
       backgroundColor,
       foregroundEffect,
-    }))({inputs, ...response});
-    const pickedResponseJson = JSON.stringify(pickedResponse);
+    }))(result);
+
+    const fullResult = {inputs, ...result};
+
+    const fullResultJson = JSON.stringify(fullResult);
 
     // The block value will be set to this JSON.
-    setResponseJson(pickedResponseJson);
+    setResultJson(fullResultJson);
 
     // The user will see this explanation.
-    setResponseExplanation(response.explanation);
+    setResultExplanation(result.explanation);
   };
 
   /**
-   * Generates blocks from the AI response in the main workspace, and attaches
+   * Generates blocks from the AI result in the main workspace, and attaches
    * them to each other.
    */
-  const generateBlocksFromResponse = (): [BlockSvg, BlockSvg] => {
-    const params = JSON.parse(responseJson);
+  const generateBlocksFromResult = (): [BlockSvg, BlockSvg] => {
+    const params = JSON.parse(resultJson);
 
     const blocksSvg: [BlockSvg, BlockSvg] = [
       Blockly.getMainWorkspace().newBlock(
@@ -177,7 +178,7 @@ const DanceAiModal: React.FunctionComponent<DanceAiProps> = ({onClose}) => {
   };
 
   const convertBlocks = () => {
-    const blocksSvg = generateBlocksFromResponse();
+    const blocksSvg = generateBlocksFromResult();
 
     const origBlock = currentAiModalField?.getSourceBlock();
 
@@ -235,13 +236,13 @@ const DanceAiModal: React.FunctionComponent<DanceAiProps> = ({onClose}) => {
       <Heading5>Code</Heading5>
 
       <pre className={classNames(moduleStyles.pre, moduleStyles.code)}>
-        ai({formatJsonString(responseJson)})
+        ai({formatJsonString(resultJson)})
       </pre>
 
-      <div style={{display: responseExplanation !== '' ? 'block' : 'none'}}>
+      <div style={{display: resultExplanation !== '' ? 'block' : 'none'}}>
         <Heading5>Explanation</Heading5>
         <pre className={classNames(moduleStyles.pre, moduleStyles.explanation)}>
-          {responseExplanation}
+          {resultExplanation}
         </pre>
       </div>
     </div>
@@ -259,9 +260,9 @@ const DanceAiModal: React.FunctionComponent<DanceAiProps> = ({onClose}) => {
             {' '}
             {mode === Mode.SELECT_INPUTS
               ? 'Make a sentence by selecting some emoji.'
-              : mode === Mode.GENERATING && responseJson === ''
+              : mode === Mode.GENERATING && resultJson === ''
               ? 'The AI is processing your sentence.'
-              : mode === Mode.GENERATING && responseJson !== ''
+              : mode === Mode.GENERATING && resultJson !== ''
               ? 'The AI is ready to generate results!'
               : mode === Mode.RESULTS && !typingDone
               ? 'The AI is generating results.'
@@ -314,7 +315,7 @@ const DanceAiModal: React.FunctionComponent<DanceAiProps> = ({onClose}) => {
           }}
         >
           {(mode === Mode.SELECT_INPUTS ||
-            (mode === Mode.GENERATING && responseJson === '')) && (
+            (mode === Mode.GENERATING && resultJson === '')) && (
             <div className={moduleStyles.prompt}>
               {promptString}
               {Array.from(Array(SLOT_COUNT).keys()).map(index => {
@@ -372,7 +373,7 @@ const DanceAiModal: React.FunctionComponent<DanceAiProps> = ({onClose}) => {
               />
             </div>
           )}
-          {mode === Mode.GENERATING && responseJson === '' && (
+          {mode === Mode.GENERATING && resultJson === '' && (
             <div className={moduleStyles.spinner}>
               <FontAwesome
                 title={undefined}
@@ -398,7 +399,7 @@ const DanceAiModal: React.FunctionComponent<DanceAiProps> = ({onClose}) => {
               cursor={{show: false}}
               onTypingDone={() => {
                 setTypingDone(true);
-                currentAiModalField?.setValue(responseJson);
+                currentAiModalField?.setValue(resultJson);
                 setShowPreview(true);
               }}
             >
@@ -410,7 +411,7 @@ const DanceAiModal: React.FunctionComponent<DanceAiProps> = ({onClose}) => {
 
         {showPreview && (
           <div id="preview-area" className={moduleStyles.previewArea}>
-            <AiPreview blocks={generateBlocksFromResponse()} />
+            <AiPreview blocks={generateBlocksFromResult()} />
           </div>
         )}
 
@@ -425,7 +426,7 @@ const DanceAiModal: React.FunctionComponent<DanceAiProps> = ({onClose}) => {
             />
           )}
 
-          {mode === Mode.GENERATING && responseJson !== '' && (
+          {mode === Mode.GENERATING && resultJson !== '' && (
             <Button
               id="done"
               text={'Generate results'}
