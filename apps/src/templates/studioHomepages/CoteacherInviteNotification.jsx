@@ -16,24 +16,23 @@ const CoteacherInviteNotification = ({
     return null;
   }
 
-  const acceptCoteacherInvite = id => {
-    HttpClient.put(`/api/v1/section_instructors/${id}/accept`, '', true)
+  const buttonAction = api => {
+    HttpClient.put(api, '', true)
       .then(() => {
         asyncLoadCoteacherInvite();
       })
       .catch(err => console.error(err));
   };
 
-  const declineCoteacherInvite = id => {
-    HttpClient.put(`/api/v1/section_instructors/${id}/decline`, '', true)
-      .then(() => {
-        asyncLoadCoteacherInvite();
-      })
-      .catch(err => console.error(err));
-  };
+  const acceptCoteacherInvite = id =>
+    buttonAction(`/api/v1/section_instructors/${id}/accept`);
+
+  const declineCoteacherInvite = id =>
+    buttonAction(`/api/v1/section_instructors/${id}/decline`);
 
   return (
     <Notification
+      dismissible={false}
       type={NotificationType.collaborate}
       iconStyles={styles.icon}
       notice={i18n.coteacherInvite({
@@ -48,9 +47,8 @@ const CoteacherInviteNotification = ({
           <StrongText>{coteacherInvite.section_name}</StrongText>
         </BodyTwoText>
       }
-      dismissible={false}
-      buttonsStyles={styles.buttons}
       tooltipText={i18n.coteacherTooltip()}
+      buttonsStyles={styles.buttons}
       buttons={[
         {
           text: 'Decline',

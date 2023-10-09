@@ -21,7 +21,7 @@ describe('CoteacherInviteNotification', () => {
     const wrapper = shallow(
       <CoteacherInviteNotification {...defaultProps} coteacherInvite={null} />
     );
-    expect(wrapper.find(Notification).length, 0);
+    expect(wrapper.find(Notification).length).to.equal(0);
   });
 
   it('renders notification if there is a coteacher invite', () => {
