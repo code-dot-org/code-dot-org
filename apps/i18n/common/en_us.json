@@ -1997,6 +1997,7 @@
   "rubricKeyConceptHeader": "Key Concept",
   "rubricLevelTwoHeader": "Convincing Evidence",
   "rubricLevelFourHeader": "No Evidence",
+  "rubricScores": "Rubric Scores",
   "runNatively": "Run natively (Beta)",
   "runProgram": "Run",
   "runTooltip": "Run the program defined by the blocks in the workspace.",
