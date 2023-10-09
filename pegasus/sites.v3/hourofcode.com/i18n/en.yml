@@ -40,6 +40,10 @@
   africa_campaign_date_year: "2023"
   africa_campaign_date_full_year: "September 5, 2023 - December 17, 2023"
 
+  hoc2023_header: "Creativity with AI"
+  hoc2023_social_creativity_with_ai_title: "Hour of Code - What will you create?"
+  hoc2023_social_creativity_with_ai_desc: "Use computer science to explore and learn about AI!"
+
   hoc2022_header: 'Explore, Play, Create!'
   social_hoc2022_explore_play_create: 'Use computer science to explore, play, and create!'
   codeorg_homepage_hoc2022_body: 'Explore the universe, score a goal, bust a move — there are so many ways to try computer science.'
@@ -115,6 +119,27 @@
 
   in_partnership_with: "In partnership with"
 
+  shop_code_dot_org_heading: "Shop Code.org"
+  shop_code_dot_org_desc: "Support our work and wear the movement with pride. Our hats have been worn by President Obama and celebrities too."
+
+  spread_the_word_heading: "Spread the word"
+  spread_the_word_desc: "Amplify our impact by sharing Code.org with your network. From social media to email updates, discover how you can help us reach more educators, students, and advocates."
+
+  follow_us_heading: "Follow us on social media"
+  follow_us_desc: "Stay up to date with us on social media and share our posts with your network to stay informed and help drive awareness."
+  facebook: "Facebook"
+  twitter: "Twitter"
+  linked_in: "LinkedIn"
+  instagram: "Instagram"
+  tik_tok: "TikTok"
+
+  subscribe_to_emails_heading: "Subscribe to emails"
+  subscribe_to_emails_desc: "Read about what's happening at Code.org and in computer science education through quarterly updates via our mailing list."
+  subscribe_to_emails_intl: "Subscribe to international updates"
+
+  promote_code_dot_org_heading: "Promote Code.org"
+  promote_code_dot_org_desc: "Promote computer science in your area with the help of stats, quotes, and videos."
+
   afe_partnership_logo_alt: "Amazon Future Engineer logo"
   afe_partnership_thanks_desc: "Amazon Future Engineer is a comprehensive childhood-to-career program to inspire, educate, and train low-income and other disadvantaged children and young people to pursue careers in computer science. [Learn about our partnership](%{afe_url})."
 
@@ -130,6 +155,13 @@
   curricula_title_high: "High School Curricula"
   curricula_desc_high: "Browse the compelling courses and activities that invite you and your high school students to dig deeper into computer science."
 
+  for_administrators_heading: "For administrators"
+  for_administrators_desc: "Join the thousands of schools who have already incorporated computer science into their curriculum."
+  for_parents_heading: "For parents"
+  for_parents_desc: "You can help encourage your student's school to offer or expand computer science education."
+  for_educators_heading: "For educators"
+  for_educators_desc: "Start teaching today — no computer science experience necessary — with our professional learning workshops."
+
   students_label: "Students"
   teachers_label: "Teachers"
 
@@ -142,12 +174,13 @@
   required_materials: "Required Materials:"
   optional_materials: "Optional Materials:"
 
-  call_to_action_explore_roles: "Explore open roles"
-  call_to_action_learn_more: 'Learn more'
-  call_to_action_watch_now: 'Watch now'
-  call_to_action_try_activity: 'Try activity'
-  call_to_action_explore_unit: 'Explore unit'
-  call_to_action_explore_curriculum: 'Explore curriculum'
+  call_to_action_hold_an_event: "Hold an event"
+  call_to_action_learn_more: "Learn more"
+  call_to_action_watch_now: "Watch now"
+  call_to_action_try_activity: "Try activity"
+  call_to_action_try_activities: "Try activities"
+  call_to_action_explore_unit: "Explore unit"
+  call_to_action_explore_curriculum: "Explore curriculum"
   call_to_action_explore_curriculum_options: "Explore curriculum options"
   call_to_action_explore_lessons: "Explore lessons"
   call_to_action_explore_modules: "Explore modules"
@@ -215,11 +248,20 @@
   call_to_action_notify_available: "Notify me when available"
   call_to_action_register_early_access: "Register for early access"
   call_to_action_open_positions: "View open positions"
+  call_to_action_explore_roles: "Explore open roles"
   call_to_action_get_guide: "Get the guide"
   call_to_action_donate_to_cdo: "Donate to Code.org"
   call_to_action_start_fundraiser: "Start a fundraiser"
   call_to_action_view_donation_policy: "View donation policy"
   call_to_action_view_donate_bitpay: "Donate with BitPay"
+  call_to_action_make_a_donation: "Make a donation"
+  call_to_action_other_ways_to_give: "Other ways to give"
+  call_to_action_become_partner_usa: "Become a United States partner"
+  call_to_action_become_partner_intl: "Become an international partner"
+  call_to_action_become_a_volunteer: "Become a volunteer"
+  call_to_action_start_translating: "Start translating"
+  call_to_action_learn_about_advocacy: "Learn about our advocacy"
+  call_to_action_visit_store: "Visit the store"
 
   aria_label_call_to_action_afe: "Learn more about Amazon Future Engineer"
   aria_label_call_to_action_teaching_csf: "Start the Teaching Computer Science Fundamentals professional learning program"
@@ -469,6 +511,7 @@
   heading_these_lessons_will: "These lessons will:"
   heading_explore_curriculum_catalog: "Explore all of our courses in the Curriculum Catalog"
   heading_csa_ai: "Looking for things to do after the AP® exam?"
+  heading_bring_cs_to_students: "Bring computer science to students"
 
   professional_learning_section_desc: "Get the support you need as you prepare to teach. Teachers love it, with over 90% ranking it the best professional development ever!"
   professional_learning_section_desc_short: "Get the support you need as you prepare to teach."
@@ -1052,6 +1095,19 @@
   donate_tabs_amazon_desc: "Donate directly using your Amazon account. With just a few clicks, seamlessly contribute to Code.org's mission and empower the future of computer science education."
   donate_tabs_bitpay_title: "Donate with Crypto via BitPay"
   donate_tabs_bitpay_desc: "Embrace the future of giving with cryptocurrency. Through BitPay, your digital currency can directly support Code.org's endeavors in expanding computer science education."
+
+  help_page_top_heading: "How you can help"
+  help_page_top_desc: "Support our mission to make computer science accessible for every child, everywhere. Your efforts help us inspire future innovators and bridge the tech education gap."
+  help_page_top_subhead: "Make a donation to Code.org"
+  help_page_top_desc_02: "We're working to give every student the opportunity to learn computer science — both online AND in schools, where we establish permanent courses and train teachers. For every dollar you donate, one child is introduced to computer science."
+  help_page_partners_heading: "Become a partner"
+  help_page_partners_desc: "Code.org works with other nonprofit organizations as partners to help spread computer science in a local, sustainable fashion. Learn more about our program."
+  help_page_volunteer_heading: "Volunteer in a classroom"
+  help_page_volunteer_desc: "Volunteer to teach the Hour of Code or be a guest speaker in a local classroom. Sign up to hear about opportunities near you."
+  help_page_translate_heading: "Help us translate"
+  help_page_translate_desc: "Volunteers have translated our tutorials in over 45 languages. Help us continue to expand our tutorials for students around the world!"
+  help_page_speak_for_cs_heading: "Speak up for computer science education"
+  help_page_speak_for_cs_desc: "Learn more about Code.org's advocacy work across the U.S. and the ten policies we recommend states adopt to make computer science foundational for all students. Plus, find out how you can drive change in your state."
 
   hoc_live: 'Hour of Code Live'
   hoc_live_sign_up_title: 'Sign up for Hour of Code Live'
@@ -7018,7 +7074,7 @@
   tutorial_milnefunctions_name: "Dash Joins a Dance Circle (with Functions)"
   tutorial_sasmap_name: "Show With Code: Features on a Map"
   tutorial_firstrobotics_name: "FIRST Tech Challenge Simulator"
-  tutorial_sasdata_name: "Building Data Fundamentals"
+  tutorial_sasdata_name: "SAS DataFly"
   tutorial_carnegiesensabot_name: "Sensabot Challenge"
   tutorial_robotical4_name: "Hour of Code Activity 4 - Getting Started with MartyBlocks"
   tutorial_kinderadd_name: "Adding and Subtracting with KIBO"
@@ -8469,6 +8525,9 @@
   video_library_page_inspirational_video_title_10: "President Obama on computer science (1 min)"
   video_library_page_inspirational_video_title_11: "Anybody Can Learn (1 min)"
   video_library_page_inspirational_video_title_12: "Lo Que Falta En Nuestras Escuelas (2 min)"
+  video_library_page_inspirational_video_title_13: "NASA Celebrates Hour of Code (2 min)"
+  video_library_page_inspirational_video_title_14: "It's More Than A Game (1 min)"
+  video_library_page_inspirational_video_title_15: "Create With Computer Science (1 min)"
   video_library_page_not_hacked_video_title_1: "How Not To Get Hacked: Introduction"
   video_library_page_not_hacked_video_title_2: "How Not To Get Hacked: Passwords"
   video_library_page_not_hacked_video_title_3: "How Not To Get Hacked: Authentication and Device Locks"

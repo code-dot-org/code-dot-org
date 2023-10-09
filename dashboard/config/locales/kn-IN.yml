@@ -10,6 +10,7 @@ kn:
         error:
           future: ಭವಿಷ್ಯದಲ್ಲಿ ಸಾಧ್ಯವಿಲ್ಲ
         finish_sign_up_header: ನಿಮ್ಮ ಖಾತೆಯನ್ನು ರಚಿಸುವುದನ್ನು ಪೂರ್ಣಗೊಳಿಸಿ
+        finish_sign_up_header_error: 'ದಯವಿಟ್ಟು ಕೆಳಗಿನ ದೋಷಗಳನ್ನು ಸರಿಪಡಿಸಿ:'
         finish_sign_up_subheader: "<strong>%{email}</strong> ಗಾಗಿ Code.org ಖಾತೆಯನ್ನು
           ರಚಿಸುವುದನ್ನು ಪೂರ್ಣಗೊಳಿಸಲು ಕೆಳಗಿನ ಮಾಹಿತಿಯನ್ನು ಭರ್ತಿ ಮಾಡಿ."
         finish_sign_up_subheader_markdown: "**%{email}** ಗಾಗಿ Code.org ಖಾತೆಯನ್ನು ರಚಿಸುವುದನ್ನು
@@ -33,6 +34,7 @@ kn:
           ಇಲ್ಲಿ ಕ್ಲಿಕ್ ಮಾಡಿ)](%{url})
         reset_password_token: ನೀವು ಅನುಸರಿಸಿದ ಪಾಸ್‌ವರ್ಡ್ ಲಿಂಕ್ ಅನ್ನು ಮರುಹೊಂದಿಸಿ
         us_state: ರಾಜ್ಯ
+        user_type: ಖಾತೆ ವಿಧ
         username: ಬಳಕೆದಾರ ಹೆಸರು
         verified_teacher: ಪರಿಶೀಲಿಸಿದ ಶಿಕ್ಷಕ
     errors:

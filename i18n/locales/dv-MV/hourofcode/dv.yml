@@ -285,6 +285,10 @@ dv:
   call_to_action_register_early_access: Register for early access
   call_to_action_open_positions: View open positions
   call_to_action_get_guide: Get the guide
+  call_to_action_donate_to_cdo: Donate to Code.org
+  call_to_action_start_fundraiser: Start a fundraiser
+  call_to_action_view_donation_policy: View donation policy
+  call_to_action_view_donate_bitpay: Donate with BitPay
   aria_label_call_to_action_afe: Learn more about Amazon Future Engineer
   aria_label_call_to_action_teaching_csf: Start the Teaching Computer Science Fundamentals
     professional learning program
@@ -393,6 +397,7 @@ dv:
   curriculum_name_csp: Computer Science Principles
   curriculum_name_csc: Computer Science Connections
   curriculum_name_csa: AP® Computer Science A
+  curriculum_name_csa_ai: Software Engineering & Computer Vision
   curriculum_name_csc_02: Any CS Connections Module
   curriculum_name_ai: AI & Machine Learning
   curriculum_name_artificial_intelligence: Artificial Intelligence (AI)
@@ -465,6 +470,12 @@ dv:
     computing systems.
   curriculum_desc_csp: Free, AP® CSP endorsed, high school introductory course that
     introduces students to the foundational concepts of computer science.
+  curriculum_desc_csa_ai_long: This two-chapter post-AP® CSA module offers high school
+    students hands-on experience with professional software development tools, including
+    GitHub and GitHub Copilot, and imparts them with the real-world skills to develop
+    a computer vision program.
+  curriculum_desc_csa_ai_short: This post-AP® CSA module offers high school students
+    hands-on experience with professional software development tools.
   collection_hardware: Focus on Hardware
   collection_hardware_desc: Empowers students to use data and physical devices to
     solve problems.
@@ -537,6 +548,7 @@ dv:
   module_duration_2_hrs: 2 hours
   module_duration_3_hrs: 3 hours
   module_duration_5_hrs: 5 hours
+  module_duration_5_hrs_plus: 5+ hours
   module_duration_8_hrs: 8 hours
   module_duration_20_hrs: 20 hours
   module_duration_35_hrs: 35 hours
@@ -611,6 +623,7 @@ dv:
   heading_these_lessons_will: 'These lessons will:'
   heading_explore_curriculum_catalog: Explore all of our courses in the Curriculum
     Catalog
+  heading_csa_ai: Looking for things to do after the AP® exam?
   professional_learning_section_desc: Get the support you need as you prepare to teach.
     Teachers love it, with over 90% ranking it the best professional development ever!
   professional_learning_section_desc_short: Get the support you need as you prepare
@@ -641,6 +654,23 @@ dv:
   support_and_questions_section_desc: Our support team is here to answer any questions
     you may have about starting teaching with Code.org. You can also ask other teachers
     about their experience on our teacher forums.
+  subscribe_form_section_title: Subscribe for updates
+  subscribe_form_section_desc_csa: Sign up to receive monthly emails about Code.org's
+    AP® Computer Science A and get helpful reminders, tips, and updates sent right
+    to your inbox.
+  subscribe_form_section_desc_csc: Sign up to receive monthly emails about Code.org's
+    Computer Science Connections and get helpful reminders, tips, and updates sent
+    right to your inbox.
+  subscribe_form_section_desc_csd: Sign up to receive monthly emails about Code.org's
+    Computer Science Discoveries and get helpful reminders, tips, and updates sent
+    right to your inbox.
+  subscribe_form_section_desc_csf: Sign up to receive monthly emails about Code.org's
+    Computer Science Fundamentals and get helpful reminders, tips, and updates sent
+    right to your inbox.
+  subscribe_form_section_desc_csp: Sign up to receive monthly emails about Code.org's
+    Computer Science Principles and get helpful reminders, tips, and updates sent
+    right to your inbox.
+  subscribe_form_section_unsubscribe: You can unsubscribe at any time.
   blockchain_hero_heading: How Blockchain Works
   blockchain_hero_desc: Dive into the world of blockchain with "How Blockchain Works,"
     our new video series and accompanying lessons!
@@ -745,6 +775,9 @@ dv:
     lesson is paired with a single video from the series, diving-deeper into the concepts
     introduced in the videos.
   ai_curriculum_btn_aria_label_04: Explore How AI Works lessons
+  ai_curriculum_grades_05: 'Grade Levels: 9-12'
+  ai_curriculum_btn_aria_label_05: Explore the Software Engineering & Computer Vision
+    module
   ai_carousel_heading: 'What teachers say about AI with Code.org:'
   ai_carousel_quote_01: This lesson also gave my students the opportunity to see that
     there is an element of opinion in classification systems. Later, when we started
@@ -866,6 +899,7 @@ dv:
     like ChatGPT, from beginner to advanced. Includes starter prompts for those just
     dipping their toes in, as well as advanced tools for those looking to maximize
     their potential.
+  ai_pl_101_resources_3: AI Prompts for Transforming Student Learning
   how_ai_works_hero_heading: How AI Works
   how_ai_works_hero_desc: Dive into the world of AI with "How AI Works," our video
     series and accompanying lessons!
@@ -1655,6 +1689,37 @@ dv:
   csa_page_faq_answer_08_02: For more information about the values that guided our
     work, please see our [curriculum values](%{curriculum_values_url}) and our [professional
     learning values](%{pl_values_url}).
+  donate_page_top_heading: Help fund our mission
+  donate_page_top_desc: Every donation fuels Code.org's mission to expand access to
+    computer science education. We offer several ways for you to donate and make a
+    difference.
+  donate_page_fundraise_title: Fundraise for Code.org
+  donate_page_fundraise_desc: Help raise money for Code.org! Every student in every
+    school should have the opportunity to learn computer science.
+  donate_page_other_ways_title: Other ways to give
+  donate_page_other_ways_desc: Explore diverse methods to contribute, and find the
+    option that suits you best. Every gesture, big or small, propels our mission forward.
+  donate_page_501c3: Code.org is registered as a public 501(c)(3) nonprofit organization.
+    Contributions to Code.org are tax-deductible to the extent permitted by law. Code.org's
+    tax identification number is 46-0858543.
+  donate_page_donation_policy_title: Understanding our Donation Policy
+  donate_page_donation_policy_desc: Learn about how we handle and allocate your contributions.
+  donate_tabs_tab_label_daf_direct: DAF Direct
+  donate_tabs_tab_label_amazon: Amazon
+  donate_tabs_tab_label_bitpay: BitPay
+  donate_tabs_tab_label_employee_match: Employee Match
+  donate_tabs_daf_direct_title: Donate via DAF Direct
+  donate_tabs_daf_direct_desc: Donate through your donor-advised fund with Fidelity
+    Charitable, Schwab Charitable, or BNY Mellon and make your grant recommendation
+    to Code.org through the DAF Direct online form.
+  donate_tabs_amazon_title: Donate via Amazon
+  donate_tabs_amazon_desc: Donate directly using your Amazon account. With just a
+    few clicks, seamlessly contribute to Code.org's mission and empower the future
+    of computer science education.
+  donate_tabs_bitpay_title: Donate with Crypto via BitPay
+  donate_tabs_bitpay_desc: Embrace the future of giving with cryptocurrency. Through
+    BitPay, your digital currency can directly support Code.org's endeavors in expanding
+    computer science education.
   hoc_live: Hour of Code Live
   hoc_live_sign_up_title: Sign up for Hour of Code Live
   hoc_live_learn_title: Learn with Hour of Code Live
@@ -13156,10 +13221,10 @@ dv:
     and privileges of employment. If you have individual needs related to a disability,
     please reach out to accommodations@code.org.
   csa_ai_page_hero_title: Software Engineering & Computer Vision
-  csa_ai_page_hero_description: 'This two-chapter post-AP CSA module offers high school
+  csa_ai_page_hero_description: This two-chapter post-AP® CSA module offers high school
     students hands-on experience with professional software development tools, including
     GitHub and GitHub Copilot, and imparts them with the real-world skills to develop
-    a computer vision program. '
+    a computer vision program.
   csa_ai_page_video_section_title: Step beyond the world of Code.org programming environments
   csa_ai_page_video_section_li_1: Learn about AI and its applications
   csa_ai_page_video_section_li_2: Hands-on experience with professional software development

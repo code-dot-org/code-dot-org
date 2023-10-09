@@ -17,8 +17,35 @@
         "AppLab Intro 7 - Change Screen Color": {
           "applab_hoc_finish": "Екран став зеленим? Якщо так, натисніть \"Кінець\". Якщо ні, натисніть \"Скидання\", змініть свій код і знову натисніть \"Запустити\". "
         },
+        "AppLab Intro 7 - Change Screen Color_2023": {
+          "applab_hoc_finish": "Екран став зеленим? Якщо так, натисніть \"Кінець\". Якщо ні, натисніть \"Скидання\", змініть свій код і знову натисніть \"Запустити\". "
+        },
+        "AppLab Intro 7 - Change Screen Color_mb2022": {
+          "applab_hoc_finish": "Екран став зеленим? Якщо так, натисніть \"Кінець\". Якщо ні, натисніть \"Скидання\", змініть свій код і знову натисніть \"Запустити\". "
+        },
         "AppLab Intro 7 - thisOrThatAddButton": {
           "AppLabHoCFinal11": "Тепер ви в режимі Дизайну."
+        },
+        "AppLab Intro 7 - thisOrThatAddButton_2023": {
+          "AppLabHoCFinal11": "Тепер ви в режимі Дизайну."
+        },
+        "AppLab Intro 7 - thisOrThatAddButton_mb2022": {
+          "AppLabHoCFinal11": "Тепер ви в режимі Дизайну."
+        },
+        "CSD U3 L7 review arc_2023": {
+          "CSD_U3_rect_c1": "Ось код"
+        },
+        "CSD U3 L7 review line_2023": {
+          "CSD_U3_rect_c1": "Ось код"
+        },
+        "CSD U3 L7 review point_2023": {
+          "CSD_U3_rect_c1": "Ось код"
+        },
+        "CSD U3 L7 review shapes_2023": {
+          "CSD_U3_rect_c1": "Ось код"
+        },
+        "CSD U3 L7 shapes review polygon_2023": {
+          "CSD_U3_rect_c1": "Ось код"
         },
         "CSD U3 Random add_2021": {
           "CSD_U3_butterfly": "Уважно переглянь цей код."
@@ -56,10 +83,16 @@
         "CSD U3 debug_2022": {
           "CSD_U3_rect_c1": "Ось код"
         },
+        "CSD U3 debug_2023": {
+          "CSD_U3_rect_c1": "Ось код"
+        },
         "CSD U3 drawing challenge 2_2021": {
           "CSD_U3_rect_c1": "Ось код"
         },
         "CSD U3 drawing challenge 2_2022": {
+          "CSD_U3_rect_c1": "Ось код"
+        },
+        "CSD U3 drawing challenge 2_2023": {
           "CSD_U3_rect_c1": "Ось код"
         },
         "CSD U3 drawing challenge 3_2021": {
@@ -68,10 +101,16 @@
         "CSD U3 drawing challenge 3_2022": {
           "CSD_U3_rect_c1": "Ось код"
         },
+        "CSD U3 drawing challenge 3_2023": {
+          "CSD_U3_rect_c1": "Ось код"
+        },
         "CSD U3 drawing practice 1_2021": {
           "CSD_U3_rect_c1": "Ось код"
         },
         "CSD U3 drawing practice 1_2022": {
+          "CSD_U3_rect_c1": "Ось код"
+        },
+        "CSD U3 drawing practice 1_2023": {
           "CSD_U3_rect_c1": "Ось код"
         },
         "CSD U3 drawing practice 2_2021": {
@@ -80,10 +119,16 @@
         "CSD U3 drawing practice 2_2022": {
           "CSD_U3_rect_c1": "Ось код"
         },
+        "CSD U3 drawing practice 2_2023": {
+          "CSD_U3_rect_c1": "Ось код"
+        },
         "CSD U3 drawing practice 3_2021": {
           "CSD_U3_rect_c1": "Ось код"
         },
         "CSD U3 drawing practice 3_2022": {
+          "CSD_U3_rect_c1": "Ось код"
+        },
+        "CSD U3 drawing practice 3_2023": {
           "CSD_U3_rect_c1": "Ось код"
         },
         "CSD U3 ellipse": {
@@ -116,16 +161,25 @@
         "CSD U3 fill_2022": {
           "CSD_U3_rect_c1": "Ось код"
         },
+        "CSD U3 fill_2023": {
+          "CSD_U3_rect_c1": "Ось код"
+        },
         "CSD U3 properties depth_2021": {
           "CSD_U3_rect_c1": "Ось код"
         },
         "CSD U3 properties depth_2022": {
           "CSD_U3_rect_c1": "Ось код"
         },
+        "CSD U3 properties depth_2023": {
+          "CSD_U3_rect_c1": "Ось код"
+        },
         "CSD U3 properties tint_2021": {
           "CSD_U3_rect_c1": "Ось код"
         },
         "CSD U3 properties tint_2022": {
+          "CSD_U3_rect_c1": "Ось код"
+        },
+        "CSD U3 properties tint_2023": {
           "CSD_U3_rect_c1": "Ось код"
         },
         "CSD U3 rect": {
@@ -164,10 +218,16 @@
         "CSD U3 shapes arc_2022": {
           "CSD_U3_rect_c1": "Ось код"
         },
+        "CSD U3 shapes arc_2023": {
+          "CSD_U3_rect_c1": "Ось код"
+        },
         "CSD U3 shapes behind_2021": {
           "CSD_U3_rect_c1": "Ось код"
         },
         "CSD U3 shapes behind_2022": {
+          "CSD_U3_rect_c1": "Ось код"
+        },
+        "CSD U3 shapes behind_2023": {
           "CSD_U3_rect_c1": "Ось код"
         },
         "CSD U3 shapes line_2021": {
@@ -176,10 +236,16 @@
         "CSD U3 shapes line_2022": {
           "CSD_U3_rect_c1": "Ось код"
         },
+        "CSD U3 shapes line_2023": {
+          "CSD_U3_rect_c1": "Ось код"
+        },
         "CSD U3 shapes missing_2021": {
           "CSD_U3_rect_c1": "Ось код"
         },
         "CSD U3 shapes missing_2022": {
+          "CSD_U3_rect_c1": "Ось код"
+        },
+        "CSD U3 shapes missing_2023": {
           "CSD_U3_rect_c1": "Ось код"
         },
         "CSD U3 shapes polygon_2021": {
@@ -188,10 +254,16 @@
         "CSD U3 shapes polygon_2022": {
           "CSD_U3_rect_c1": "Ось код"
         },
+        "CSD U3 shapes polygon_2023": {
+          "CSD_U3_rect_c1": "Ось код"
+        },
         "CSD U3 shapes scene_2021": {
           "CSD_U3_rect_c1": "Ось код"
         },
         "CSD U3 shapes scene_2022": {
+          "CSD_U3_rect_c1": "Ось код"
+        },
+        "CSD U3 shapes scene_2023": {
           "CSD_U3_rect_c1": "Ось код"
         },
         "CSD U3 shapes_2021": {
@@ -200,11 +272,26 @@
         "CSD U3 shapes_2022": {
           "CSD_U3_rect_c1": "Ось код"
         },
+        "CSD U3 shapes_2023": {
+          "CSD_U3_rect_c1": "Ось код"
+        },
+        "CSD U3L16 Prac D_2023": {
+          "CSD U3L16.7 - start": "Додай свій код тут"
+        },
+        "CSD U3L3 rect_2023": {
+          "CSD_U3_rect_c1": "Ось код"
+        },
+        "CSD U6 - Color LEDs - SB4_2023": {
+          "CSDU6L10_rainbow": "Додай свій код тут"
+        },
         "CSD U6 - Color LEDs - SB4_2222": {
           "CSDU6L10_rainbow": "Додай свій код тут"
         },
         "CSD U6 - Combine Inputs - A_2222": {
           "CSD U6L10.7 - brightnessVar": "Create your variable here"
+        },
+        "CSD U6 - Combine Inputs - PracD_2023": {
+          "CSD U6L9.7 - if-statement": "Додай сюди команду умови "
         },
         "CSD U6 - Combine Inputs - PracD_2222": {
           "CSD U6L9.7 - if-statement": "Додай сюди команду умови "
@@ -218,7 +305,13 @@
         "CSD U6 - Functions - SB6_2222": {
           "CSD U6L14.6 - define": "Add your function here!"
         },
+        "CSD U6 - If Variables - A_2023": {
+          "U6L6.4 - If": "Додай сюди команду умови "
+        },
         "CSD U6 - If Variables - A_2222": {
+          "U6L6.4 - If": "Додай сюди команду умови "
+        },
+        "CSD U6 - If Variables - A_mb2022": {
           "U6L6.4 - If": "Додай сюди команду умови "
         },
         "CSD U6 colorLeds intensity": {
@@ -237,6 +330,9 @@
           "CSD_U3_variables": "Зміни номер тут"
         },
         "CSD web text explore_2022": {
+          "CSD_U3_variables": "Зміни номер тут"
+        },
+        "CSD web text explore_2023": {
           "CSD_U3_variables": "Зміни номер тут"
         },
         "Course 4 Artist 4": {
@@ -1920,10 +2016,16 @@
         "ml-customize apps-choice3_2022": {
           "CSD_AI_L10_predict": "Додай сюди команду умови "
         },
+        "ml-customize apps-choice3_2023": {
+          "CSD_AI_L10_predict": "Додай сюди команду умови "
+        },
         "ml-customize apps-choice5": {
           "CSD_AI_L11_top": "Розмісти блок над цим рядком"
         },
         "ml-customize apps-choice5_2022": {
+          "CSD_AI_L11_top": "Розмісти блок над цим рядком"
+        },
+        "ml-customize apps-choice5_2023": {
           "CSD_AI_L11_top": "Розмісти блок над цим рядком"
         },
         "ml-intro app lab-book recommender 5C-2021": {
@@ -1932,10 +2034,16 @@
         "ml-intro app lab-book recommender 5C_2022": {
           "CSD_AI_L7_event": "Додай сюди блок 'playSound'"
         },
+        "ml-intro app lab-book recommender 5C_2023": {
+          "CSD_AI_L7_event": "Додай сюди блок 'playSound'"
+        },
         "ml-intro app lab-book recommender 5E-2021": {
           "CSD_AI_L7_top": "Розмісти блок над цим рядком"
         },
         "ml-intro app lab-book recommender 5E_2022": {
+          "CSD_AI_L7_top": "Розмісти блок над цим рядком"
+        },
+        "ml-intro app lab-book recommender 5E_2023": {
           "CSD_AI_L7_top": "Розмісти блок над цим рядком"
         },
         "ml-models in applab-screens-1-2021": {
@@ -1944,10 +2052,16 @@
         "ml-models in applab-screens-1_2022": {
           "CSD_AI_L10_ifstatement": "Додай сюди команду умови "
         },
+        "ml-models in applab-screens-1_2023": {
+          "CSD_AI_L10_ifstatement": "Додай сюди команду умови "
+        },
         "ml-models in applab-screens-3-2021": {
           "CSD_AI_L7_ifstatement": "Додай сюди команду умови "
         },
         "ml-models in applab-screens-3_2022": {
+          "CSD_AI_L7_ifstatement": "Додай сюди команду умови "
+        },
+        "ml-models in applab-screens-3_2023": {
           "CSD_AI_L7_ifstatement": "Додай сюди команду умови "
         },
         "ml-use model card-choice3": {
@@ -1956,10 +2070,16 @@
         "ml-use model card-choice3_2022": {
           "CSD_AI_L10_predict": "Додай сюди команду умови "
         },
+        "ml-use model card-choice3_2023": {
+          "CSD_AI_L10_predict": "Додай сюди команду умови "
+        },
         "ml-use model card-choice5": {
           "CSD_AI_L11_top": "Розмісти блок над цим рядком"
         },
         "ml-use model card-choice5_2022": {
+          "CSD_AI_L11_top": "Розмісти блок над цим рядком"
+        },
+        "ml-use model card-choice5_2023": {
           "CSD_AI_L11_top": "Розмісти блок над цим рядком"
         },
         "ml-use model card-example3C-2021": {
@@ -1968,10 +2088,16 @@
         "ml-use model card-example3C_2022": {
           "CSD_AI_L11_temp": "Це функція \"Температура\""
         },
+        "ml-use model card-example3C_2023": {
+          "CSD_AI_L11_temp": "Це функція \"Температура\""
+        },
         "ml-use model card-example3D-2021": {
           "CSD_AI_L11_time": "Це функція \"Час доби\""
         },
         "ml-use model card-example3D_2022": {
+          "CSD_AI_L11_time": "Це функція \"Час доби\""
+        },
+        "ml-use model card-example3D_2023": {
           "CSD_AI_L11_time": "Це функція \"Час доби\""
         },
         "ml-use model card-example3_EditB-2021": {
@@ -1980,10 +2106,16 @@
         "ml-use model card-example3_EditB_2022": {
           "CSD_AI_L11_cars": "Це функція \"Кількість автомобілів\""
         },
+        "ml-use model card-example3_EditB_2023": {
+          "CSD_AI_L11_cars": "Це функція \"Кількість автомобілів\""
+        },
         "ml-use model card-example3_EditC-2021": {
           "CSD_AI_L11_weather": "Це функція \"Погода\""
         },
         "ml-use model card-example3_EditC_2022": {
+          "CSD_AI_L11_weather": "Це функція \"Погода\""
+        },
+        "ml-use model card-example3_EditC_2023": {
           "CSD_AI_L11_weather": "Це функція \"Погода\""
         },
         "outbreak2": {

@@ -356,6 +356,9 @@
         "loop/pre-express/2022": {
           "word": "ციკლი"
         },
+        "artificial_intelligence/ai-ethics/2023": {
+          "word": "ხელოვნური ინტელექტი"
+        },
         "adaptation/csc-adaptations/2023": {
           "word": "ადაპტაცია",
           "definition": "ორგანიზმის ცვლილება, რათა უკეთ გადარჩეს გარემო"
@@ -537,6 +540,42 @@
         },
         "poetry_circle/poetry/2023": {
           "definition": "უსაფრთხო და შემოქმედებითი სივრცე ახალი ლექსების შესამოწმებლად და სხვებისგან კონსტრუქციული უკუკავშირის მისაღებად"
+        },
+        "input/csd/2023": {
+          "word": "შემომავალი ინფორმაცია"
+        },
+        "processing/csd/2023": {
+          "word": "დამუშავება"
+        },
+        "digital_footprint/csd/2023": {
+          "word": "ციფრული ნაკვალევი"
+        },
+        "copyright/csd/2023": {
+          "word": "საავტორო უფლება"
+        },
+        "debugging/csd/2023": {
+          "word": "გამართვა"
+        },
+        "variable/csd/2023": {
+          "word": "ცვლადი"
+        },
+        "sprite/csd/2023": {
+          "word": "სპრაიტი"
+        },
+        "condition/csd/2023": {
+          "word": "პირობა"
+        },
+        "conditionals/csd/2023": {
+          "word": "პირობითი ბრძანებები"
+        },
+        "abstraction/csd/2023": {
+          "word": "აბსტრაქცია"
+        },
+        "function/csd/2023": {
+          "word": "ფუნქცია"
+        },
+        "machine_learning/csd/2023": {
+          "word": "მანქანათმცოდნეობა"
         },
         "debugging/coursea/2023": {
           "word": "გამართვა"

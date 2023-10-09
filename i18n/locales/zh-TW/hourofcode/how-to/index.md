@@ -25,7 +25,7 @@ title: 一小時玩程式指南
 
 <a id="how-to-video"></a>
 
-## 1. 觀看一小時玩程式指引視訊 <iframe width="500" height="255" src="//www.youtube.com/embed/SrnvvWDm73k" frameborder="0" allowfullscreen></iframe> 
+## 1. 觀看一小時玩程式指引視訊 <iframe width="500" height="255" src="https://www.youtube-nocookie.com/embed/SrnvvWDm73k" frameborder="0" allowfullscreen></iframe> 
 
 * * *
 
@@ -111,7 +111,7 @@ Invite a [local volunteer]({{ urls/volunteer_local }}) to inspire your students 
 
 引導學生參與活動
 
-- Write the tutorial link on a whiteboard. Find the link listed on the [information for your selected tutorial]({{ urls/learn }}).
+- 將教程鏈接寫在白板上。尋找所選教學課程 [資訊上列出的連結]({{ urls/learn }})。
 
 當您的學生遭遇困難時，這樣回答也沒關係：
 
@@ -151,6 +151,6 @@ Invite a [local volunteer]({{ urls/volunteer_local }}) to inspire your students 
 
 ### Hour of Code之後有什麼？
 
-Computer science doesn’t have to end with the Hour of Code! [Learn how](/beyond) to bring CS to your school and students.
+計算機科學不一定要以一小時玩程式碼結束！ [了解如](/beyond) 何將 CS 帶到您的學校和學生。
 
 {{ signup_button }}

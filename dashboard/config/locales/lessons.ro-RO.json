@@ -3649,6 +3649,10 @@
           "purpose": "În această activitate online, elevii vor învăța cum să folosească evenimentele în Laboratorul de joacă. Aceștia vor începe prin a-l învăța pe cavaler să se deplaseze atunci când este apăsată o tastă cu săgeată, apoi vor încheia cu oportunitatea de a prezenta restul abilităților pe care le-au deprins pe parcursul acestui curs, inclusiv secvențele și buclele, în cadrul puzzle-ului final din secțiunea de joc liber.",
           "student_overview": "Folosește evenimentele pentru a crea o poveste sau un joc interactiv."
         },
+        "ai-ethics-2023/lesson-1": {
+          "name": "Codul nostru de Etică IA",
+          "student_overview": "Cercetați în colaborare despre etica AI și creați un cod de conduită partajabil."
+        },
         "csc-adaptations-2023/Modeling Animal Adaptations (pilot)": {
           "name": "Introducere adaptări animale",
           "overview": "În această lecție de **construire a competenților**, elevii vor învăța să creeze și să animeze sprite și să folosească evenimente pentru a le face interactive. \n\nElevii vor codifica un model cauză-efect bazat pe evenimente în Sprite Lab pentru a demonstra modul în care speciile supraviețuiesc adaptându-se la mediile lor în timp. Modelele interactive și simulările sunt utilizate în lumea reală pentru a ajuta inginerii și oamenii de știință să identifice tiparele, să înțeleagă natura, să facă predicții despre schimbările viitoare și să proiecteze soluții pentru pregătirea și/sau combaterea perturbărilor majore. \n\nElevii vor explora exemple de evoluție, adaptare, migrație, selecție naturală și supraviețuire în grupuri. ",
@@ -3806,6 +3810,60 @@
           "preparation": "-   Pregătiți un computer pentru fiecare elev.\n-   Pregătiți o copie a fișei **<a href=\"https://docs.google.com/document/d/1kO4SNEIVyM0GrxxJb6NzVYauXXpi6rzQkDIfrzQf1Ls/template/preview\" target=\"_blank\">Partajați</a>aplicația** pentru fiecare student.\n-   Asigurați-vă că elevii au la îndemână o copie a poemului lor original pentru această lecție.  \n-   Împărțiți clasa în perechi pentru activitatea Poetry Pair-Share.\n-   Luați în considerare aceste opțiuni de extensie conexe ([link](https://studio.code.org/s/poetry-2023/lessons/4#activity-4365336)) pentru a explora după această lecție.\n\n##### Opțional\n\n-   Mai ales pentru predarea la distanță: Determinați dacă trebuie să configurați un document digital sau un spațiu online partajat pentru a posta adresa URL a aplicației fiecărui elev (consultați șablonul profesorului din „Link-uri”). ",
           "purpose": "Împărtășirea proiectelor lor de artă poetică cu colegii este un aspect important al procesului creativ. Permite elevilor să primească feedback, să colaboreze cu ceilalți, să reflecteze asupra propriei lor activități și să sărbătorească realizările lor. Împărtășind munca lor cu alții, elevii pot crește și se pot îmbunătăți ca gânditori creativi și pot dezvolta abilități importante de comunicare și interpersonale.",
           "student_overview": "Împărtășește noile aplicații de poezie cu prietenii tăi! "
+        },
+        "csd1-2023/The Problem Solving Process": {
+          "name": "Procesul de Rezolvare a Problemei"
+        },
+        "csd1-2023/What is a Computer?": {
+          "name": "Ce Este un Computer?"
+        },
+        "csd2-2023/Digital Footprint": {
+          "name": "Amprenta digitală"
+        },
+        "csd3-2023/Variables": {
+          "name": "Variabile"
+        },
+        "csd3-2023/Sprites": {
+          "name": "Spiriduși"
+        },
+        "csd3-2023/Sprite Properties": {
+          "name": "Proprietăți spiriduș"
+        },
+        "csd3-2023/Text": {
+          "name": "Text"
+        },
+        "csd3-2023/Conditionals": {
+          "name": "Condiţionale"
+        },
+        "csd3-2023/Velocity": {
+          "name": "Viteza"
+        },
+        "csd3-2023/Collision Detection": {
+          "name": "Detectarea coliziunilor"
+        },
+        "csd3-2023/Functions": {
+          "name": "Funcţii"
+        },
+        "csd6a-2023/Intro to App Lab": {
+          "name": "Introducere în App Lab"
+        },
+        "csd6a-2023/Functions": {
+          "name": "Funcţii"
+        },
+        "csd6b-2023/Intro to App Lab": {
+          "name": "Introducere în App Lab"
+        },
+        "csd6b-2023/Functions": {
+          "name": "Funcţii"
+        },
+        "csd7-2023/Intro to App Lab": {
+          "name": "Introducere în App Lab"
+        },
+        "csd7-2023/Introduction to AI Lab": {
+          "name": "Introducere în AI Lab"
+        },
+        "csd7-2023/Numerical Data in AI Lab": {
+          "name": "Date numerice în laboratorul AI"
         },
         "coursea-2023/Safety in My Online Neighborhood": {
           "name": "Siguranța comunității mele online",

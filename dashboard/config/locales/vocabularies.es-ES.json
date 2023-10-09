@@ -1463,6 +1463,9 @@
           "word": "Evento",
           "definition": "una acción que hace que algo suceda."
         },
+        "artificial_intelligence/ai-ethics/2023": {
+          "word": "Inteligencia Artificial"
+        },
         "adaptation/csc-adaptations/2023": {
           "word": "Adaptación",
           "definition": "Un cambio en un organismo para sobrevivir mejor a su entorno"
@@ -1681,6 +1684,195 @@
         "poetry_circle/poetry/2023": {
           "word": "Círculo de Poesía",
           "definition": "Un espacio seguro y creativo para probar nuevos poemas y obtener comentarios constructivos de otros"
+        },
+        "computer/csd/2023": {
+          "word": "Ordenador",
+          "definition": "Una máquina que trabaja con información."
+        },
+        "input/csd/2023": {
+          "word": "Entrada",
+          "definition": "la información que los ordenadores obtienen de los usuarios, dispositivos u otros ordenadores"
+        },
+        "output/csd/2023": {
+          "word": "Salida",
+          "definition": "la información que los ordenadores dan a los usuarios, dispositivos u otros ordenadores"
+        },
+        "processing/csd/2023": {
+          "word": "Procesamiento",
+          "definition": "El trabajo intelectual que realizan los ordenadores para convertir los datos en resultados."
+        },
+        "storage/csd/2023": {
+          "word": "almacenamiento",
+          "definition": "guardar la información para utilizarla en el futuro"
+        },
+        "html/csd/2023": {
+          "word": "HTML",
+          "definition": "Hypertext Markup Language, (HTML) lenguaje utilizado para crear páginas web"
+        },
+        "html_element/csd/2023": {
+          "word": "Elemento HTML",
+          "definition": "Un fragmento de un sitio web, marcado por una etiqueta de inicio y a menudo cerrado con una etiqueta de fin"
+        },
+        "html_tag/csd/2023": {
+          "word": "Etiqueta HTML",
+          "definition": "El conjunto especial de caracteres que indica el inicio y el final de un elemento HTML y el tipo de ese elemento"
+        },
+        "website_content/csd/2023": {
+          "word": "Contenido del Sitio Web",
+          "definition": "el texto y las imágenes de un sitio web"
+        },
+        "website_structure/csd/2023": {
+          "word": "Estructura del Sitio Web",
+          "definition": "cómo se organiza el contenido de un sitio web"
+        },
+        "heading/csd/2023": {
+          "word": "Cabecera",
+          "definition": "Título o resumen de un documento o sección de un documento."
+        },
+        "digital_footprint/csd/2023": {
+          "word": "Huella digital",
+          "definition": "La información recopilada sobre un individuo en varios sitios web de Internet."
+        },
+        "css/csd/2023": {
+          "word": "CSS",
+          "definition": "Hojas de Estilo en Cascada; lenguaje utilizado para describir el estilo de los elementos HTML"
+        },
+        "css_selector/csd/2023": {
+          "word": "Selector CSS",
+          "definition": "la parte de un conjunto de reglas CSS que define a qué elementos HTML debe aplicarse el estilo"
+        },
+        "copyright/csd/2023": {
+          "word": "Derechos de autor",
+          "definition": "el derecho legal exclusivo de imprimir, publicar, interpretar, filmar o grabar material literario, artístico o musical, y de autorizar a otros a hacer lo mismo"
+        },
+        "relevant/csd/2023": {
+          "word": "Relevante",
+          "definition": "estrechamente relacionado con un tema"
+        },
+        "search_engine/csd/2023": {
+          "word": "Motor de Búsqueda",
+          "definition": "Un programa que busca elementos en la World Wide Web."
+        },
+        "trustworthy/csd/2023": {
+          "word": "De confianza",
+          "definition": "fiable, honesto y veraz "
+        },
+        "css_class/csd/2023": {
+          "word": "Clase CSS",
+          "definition": "Un identificador que permite dar estilo a varios elementos de un documento HTML de la misma manera"
+        },
+        "bug/csd/2023": {
+          "word": "Bug o error",
+          "definition": "parte de un programa que no funciona correctamente."
+        },
+        "debugging/csd/2023": {
+          "word": "Depuración",
+          "definition": "(v) encontrar y solucionar problemas en un algoritmo o programa."
+        },
+        "program/csd/2023": {
+          "word": "Programa",
+          "definition": "un algoritmo que se ha programado como algo que puede ser ejecutado por una máquina."
+        },
+        "parameter/csd/2023": {
+          "word": "Parámetro",
+          "definition": "Información adicional introducida en un bloque para personalizar su funcionalidad"
+        },
+        "variable/csd/2023": {
+          "word": "Variable",
+          "definition": "un marcador de posición para una información que puede cambiar."
+        },
+        "sprite/csd/2023": {
+          "word": "Sprite",
+          "definition": "Un personaje en la pantalla con propiedades que describen su ubicación, movimiento y apariencia."
+        },
+        "dot_notation/csd/2023": {
+          "word": "Notación de Punto",
+          "definition": "la forma en que se utilizan las propiedades de los sprites en el Laboratorio de Juegos, conectando el sprite y la propiedad con un punto."
+        },
+        "property/csd/2023": {
+          "word": "Propiedad",
+          "definition": "Una etiqueta para definir las características de un sprite, como su ubicación y apariencia"
+        },
+        "boolean_expression/csd/2023": {
+          "word": "Expresión Booleana",
+          "definition": "en programación, una expresión que se evalúa como Verdadero o Falso. "
+        },
+        "condition/csd/2023": {
+          "word": "Condición",
+          "definition": "Algo que un programa comprueba para ver si es cierto antes de decidir ejecutar una acción."
+        },
+        "conditionals/csd/2023": {
+          "word": "Condicionales",
+          "definition": "Sentencias que sólo se ejecutan cuando ciertas condiciones son verdaderas."
+        },
+        "abstraction/csd/2023": {
+          "word": "Abstracción",
+          "definition": "una representación simplificada de algo más complejo. Las abstracciones permiten ocultar los detalles para ayudar a gestionar la complejidad, centrarse en los conceptos relevantes y razonar sobre los problemas a un nivel superior."
+        },
+        "function/csd/2023": {
+          "word": "Función",
+          "definition": "Un grupo de instrucciones de programación con nombre."
+        },
+        "empathy/csd/2023": {
+          "word": "Empatía",
+          "definition": "En diseño, prestar atención a los sentimientos y necesidades del usuario al diseñar un producto."
+        },
+        "user/csd/2023": {
+          "word": "Usuario",
+          "definition": "Alguien que utiliza un objeto, incluido software y hardware."
+        },
+        "usability/csd/2023": {
+          "word": "Usabilidad"
+        },
+        "user_interface/csd/2023": {
+          "word": "Pantalla de Usuario"
+        },
+        "decode/csd/2023": {
+          "word": "Decodificar"
+        },
+        "encode/csd/2023": {
+          "word": "Codificar"
+        },
+        "binary_system/csd/2023": {
+          "word": "Sistema Binario"
+        },
+        "bit/csd/2023": {
+          "word": "Bit"
+        },
+        "decrypt/csd/2023": {
+          "word": "Desencriptar"
+        },
+        "encrypt/csd/2023": {
+          "word": "Encriptar"
+        },
+        "circuit/csd/2023": {
+          "word": "Circuito",
+          "definition": "Dispositivo que proporciona un camino para que fluya una corriente eléctrica, a menudo modificando esa corriente. En los ordenadores, los circuitos permiten realizar operaciones lógicas y matemáticas sencillas utilizando la electricidad."
+        },
+        "machine_learning/csd/2023": {
+          "word": "Aprendizaje Automático",
+          "definition": "Cómo las computadoras reconocen patrones y toman decisiones sin ser programadas explícitamente"
+        },
+        "features/csd/2023": {
+          "word": "Características"
+        },
+        "label/csd/2023": {
+          "word": "Etiquetas"
+        },
+        "model/csd/2023": {
+          "word": "Modelo"
+        },
+        "training/csd/2023": {
+          "word": "Entrenamiento"
+        },
+        "categorical_data/csd/2023": {
+          "word": "Datos Categóricos"
+        },
+        "classification/csd/2023": {
+          "word": "Clasificación"
+        },
+        "ethics/csd/2023": {
+          "word": "Ética"
         },
         "algorithm/coursea/2023": {
           "word": "Algoritmo",

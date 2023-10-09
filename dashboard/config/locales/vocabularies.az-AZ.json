@@ -994,6 +994,60 @@
           "word": "Proqram",
           "definition": "Bir maşın tərəfindən idarə edilə bilən bir şeyə kodlaşdırılmış bir sıra addımlar."
         },
+        "input/csd/2023": {
+          "word": "Giriş"
+        },
+        "list/csd/2023": {
+          "word": "Siyahı"
+        },
+        "copyright/csd/2023": {
+          "word": "Müəllif Haqqı"
+        },
+        "bug/csd/2023": {
+          "word": "Səhv",
+          "definition": "Proqramın bir hissəsi düzgün işləmir."
+        },
+        "debugging/csd/2023": {
+          "word": "Sazlama",
+          "definition": "Bir alqoritmdə və ya proqramda problemləri tapmaq və həll etmək."
+        },
+        "program/csd/2023": {
+          "word": "Proqram",
+          "definition": "Bir maşın tərəfindən idarə edilə bilən bir şeyə kodlaşdırılmış bir alqoritm."
+        },
+        "variable/csd/2023": {
+          "word": "Dəyişən",
+          "definition": "Proqramda istifadə olunan məlumat üçün etiket."
+        },
+        "sprite/csd/2023": {
+          "word": "Sprayt"
+        },
+        "condition/csd/2023": {
+          "word": "şərt"
+        },
+        "conditionals/csd/2023": {
+          "word": "Şərti ifadələr"
+        },
+        "abstraction/csd/2023": {
+          "word": "Mücərrədlik"
+        },
+        "function/csd/2023": {
+          "word": "Funksiya"
+        },
+        "user/csd/2023": {
+          "word": "İstifadəçi",
+          "definition": "Proqram və aparat da daxil olmaqla bir obyektdən istifadə edən kimsə."
+        },
+        "user_interface/csd/2023": {
+          "word": "İstifadəçi interfeysi"
+        },
+        "machine_learning/csd/2023": {
+          "word": "Avtomatlaşdırılmış Öyrənmə",
+          "definition": "Kompüterlər açıq şəkildə proqramlaşdırılmadan nümunələri necə tanıyır və qərarlar qəbul edir"
+        },
+        "ethics/csd/2023": {
+          "word": "Etika"
+        },
         "algorithm/coursea/2023": {
           "word": "Alqoritm",
           "definition": "Tapşırığı bitirmək üçün addımların siyahısı."

@@ -639,6 +639,54 @@
         "variables/express/2022": {
           "name": "Променљиве"
         },
+        "lists/csd/2023": {
+          "name": "Листе"
+        },
+        "variables/csd/2023": {
+          "name": "Променљиве"
+        },
+        "variables_1/csd/2023": {
+          "name": "Променљиве"
+        },
+        "variables_2/csd/2023": {
+          "name": "Променљиве"
+        },
+        "text/csd/2023": {
+          "name": "текст"
+        },
+        "conditionals/csd/2023": {
+          "name": "Кондиционали"
+        },
+        "velocity/csd/2023": {
+          "name": "Брзина"
+        },
+        "velocity_1/csd/2023": {
+          "name": "Брзина"
+        },
+        "velocity_2/csd/2023": {
+          "name": "Брзина"
+        },
+        "functions/csd/2023": {
+          "name": "Функције"
+        },
+        "functions_1/csd/2023": {
+          "name": "Функције"
+        },
+        "functions_2/csd/2023": {
+          "name": "Функције"
+        },
+        "design_mode/csd/2023": {
+          "name": "Dizajn mod"
+        },
+        "video_machine_learning/csd/2023": {
+          "name": "Bидео: Mашинско учење"
+        },
+        "functions_with_parameters/csd/2023": {
+          "name": "Функције са параметрима"
+        },
+        "functions_3/csd/2023": {
+          "name": "Функције"
+        },
         "implementation_guide/coursea/2023": {
           "name": "Водич за имплементацију"
         },

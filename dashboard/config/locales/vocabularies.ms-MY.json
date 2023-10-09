@@ -1145,6 +1145,9 @@
           "word": "Acara",
           "definition": "Tindakan yang menyebabkan sesuatu berlaku."
         },
+        "artificial_intelligence/ai-ethics/2023": {
+          "word": "Kecerdasan Buatan"
+        },
         "adaptation/csc-adaptations/2023": {
           "word": "Adaptasi",
           "definition": "Perubahan dalam organisma untuk bertahan dengan lebih baik di persekitarannya"
@@ -1362,6 +1365,58 @@
         },
         "poetry_circle/poetry/2023": {
           "definition": "Ruang yang selamat dan kreatif untuk menguji puisi baru dan mendapatkan maklum balas yang membina daripada orang lain"
+        },
+        "computer/csd/2023": {
+          "word": "Komputer"
+        },
+        "input/csd/2023": {
+          "word": "Input"
+        },
+        "copyright/csd/2023": {
+          "word": "Hak Cipta",
+          "definition": "hak undang-undang eksklusif untuk mencetak, menerbitkan, membuat persembahan, membuat filem, atau merakamkan bahan kesusasteraan, seni, atau muzik dan membenarkan yang lain melakukan perkara yang sama"
+        },
+        "bug/csd/2023": {
+          "word": "Pepijat",
+          "definition": "Sebahagian daripada atur cara tidak berfungsi dengan betul."
+        },
+        "debugging/csd/2023": {
+          "word": "Penyahpepijatan",
+          "definition": "Mencari dan membaiki masalah dalam algoritma atau atur cara."
+        },
+        "program/csd/2023": {
+          "word": "Atur Cara",
+          "definition": "Algoritma yang telah dikodkan kepada sesuatu yang boleh dijalankan oleh mesin."
+        },
+        "variable/csd/2023": {
+          "word": "Pemboleh ubah",
+          "definition": "Label untuk maklumat yang digunakan dalam atur cara."
+        },
+        "sprite/csd/2023": {
+          "word": "Peperi"
+        },
+        "condition/csd/2023": {
+          "word": "Keadaan"
+        },
+        "conditionals/csd/2023": {
+          "word": "Bersyarat"
+        },
+        "abstraction/csd/2023": {
+          "word": "Abstraksi"
+        },
+        "function/csd/2023": {
+          "word": "Fungsi"
+        },
+        "user/csd/2023": {
+          "word": "Pengguna",
+          "definition": "Seseorang individu yang menggunakan objek, termasuk perisian dan perkakasan."
+        },
+        "user_interface/csd/2023": {
+          "word": "Antaramuka Pengguna"
+        },
+        "machine_learning/csd/2023": {
+          "word": "Pembelajaran Mesin",
+          "definition": "Cara komputer mengenali corak dan membuat keputusan tanpa diatur cara secara tidak tersirat"
         },
         "algorithm/coursea/2023": {
           "word": "Algoritma",

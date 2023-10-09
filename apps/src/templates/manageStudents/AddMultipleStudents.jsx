@@ -4,7 +4,6 @@ import {connect} from 'react-redux';
 import {addMultipleAddRows} from './manageStudentsRedux';
 import Button from '../Button';
 import i18n from '@cdo/locale';
-import DCDO from '@cdo/apps/dcdo';
 import BaseDialog from '../BaseDialog';
 import DialogFooter from '../teacherDashboard/DialogFooter';
 import firehoseClient from '@cdo/apps/lib/util/firehose';
@@ -42,14 +41,10 @@ class AddMultipleStudents extends Component {
   add = () => {
     const value = this.refs.studentsTextBox.value;
     const studentDataArray = value.split('\n').map(line => {
-      if (!!DCDO.get('family-name-features', false)) {
-        const parts = line.split(',');
-        const name = parts[0].trim();
-        const familyName = parts.length > 1 ? parts[1].trim() : null;
-        return {name, familyName};
-      } else {
-        return {name: line, familyName: null};
-      }
+      const parts = line.split(',');
+      const name = parts[0].trim();
+      const familyName = parts.length > 1 ? parts[1].trim() : null;
+      return {name, familyName};
     });
     this.props.addMultipleStudents(studentDataArray);
     firehoseClient.putRecord(
@@ -83,11 +78,7 @@ class AddMultipleStudents extends Component {
           handleClose={this.closeDialog}
         >
           <h2>{i18n.addStudentsMultiple()}</h2>
-          <div>
-            {!!DCDO.get('family-name-features', false)
-              ? i18n.addStudentsMultipleWithFamilyNameInstructions()
-              : i18n.addStudentsMultipleInstructions()}
-          </div>
+          <div>{i18n.addStudentsMultipleWithFamilyNameInstructions()}</div>
           <textarea
             rows="15"
             cols="70"

@@ -257,6 +257,9 @@
         "debugging/pre-express/2022": {
           "word": "מציאת טעויות"
         },
+        "artificial_intelligence/ai-ethics/2023": {
+          "word": "בינה מלאכותית"
+        },
         "adaptation/csc-adaptations/2023": {
           "word": "הסתגלות",
           "definition": "שינוי באורגניזם כדי לשרוד טוב יותר את סביבתו"
@@ -438,6 +441,30 @@
         },
         "poetry_circle/poetry/2023": {
           "definition": "מרחב בטוח ויצירתי לבחון שירים חדשים ולקבל משוב בונה מאחרים"
+        },
+        "copyright/csd/2023": {
+          "word": "זכויות יוצרים"
+        },
+        "debugging/csd/2023": {
+          "word": "מציאת טעויות"
+        },
+        "variable/csd/2023": {
+          "word": "משתנה"
+        },
+        "sprite/csd/2023": {
+          "word": "ספרייט"
+        },
+        "conditionals/csd/2023": {
+          "word": "תנאים"
+        },
+        "abstraction/csd/2023": {
+          "word": "הפשטה"
+        },
+        "function/csd/2023": {
+          "word": "פונקציה"
+        },
+        "machine_learning/csd/2023": {
+          "definition": "כיצד מחשבים מזהים תבניות או מקבלים החלטות מבלי שתוכנתו לכך במפורש"
         },
         "debugging/coursea/2023": {
           "word": "מציאת טעויות"
