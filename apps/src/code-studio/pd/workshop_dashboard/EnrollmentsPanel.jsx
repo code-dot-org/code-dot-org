@@ -154,7 +154,7 @@ export default class EnrollmentsPanel extends React.Component {
         this.editEnrollmentRequest = null;
       })
       .fail(() => {
-        this.setState({error: 'Error: unable to rename attendee'});
+        this.setState({error: 'Error: unable to update attendee information'});
         this.handleEnrollmentRefresh();
         this.editEnrollmentRequest = null;
       });
