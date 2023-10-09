@@ -52,7 +52,7 @@ type EmojiAssociation = {
   explanation: string;
 };
 
-export type PaletteMap = {
+export type CachedMapping = {
   emojiAssociations: {[key: string]: EmojiAssociation};
-  palettes: string[];
+  output: string[];
 };

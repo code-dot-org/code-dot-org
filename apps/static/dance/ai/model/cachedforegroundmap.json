@@ -1,111 +1,130 @@
 {
-  "art": {
-    "association": [2, 3, 3, 4, 4, 4, 2, 2, 3, 1, 2, 2, 1, 2, 2],
-    "explanation": "The word 'art' is closely associated with 'hearts,' 'confetti,' and 'smiles,' reflecting a joyful and creative theme."
+  "emojiAssociations": {
+    "art": {
+      "association": [2, 3, 3, 4, 4, 4, 2, 2, 3, 1, 2, 2, 1, 2, 2],
+      "explanation": "The word 'art' is closely associated with 'hearts,' 'confetti,' and 'smiles,' reflecting a joyful and creative theme."
+    },
+    "astronaut": {
+      "association": [1, 2, 3, 1, 3, 2, 1, 2, 2, 1, 1, 1, 1, 1, 1],
+      "explanation": "The word 'astronaut' is associated with 'hearts,' 'music notes,' and 'stage lights,' suggesting a connection between space and music."
+    },
+    "atom": {
+      "association": [1, 2, 4, 1, 3, 3, 1, 2, 2, 1, 1, 1, 1, 1, 1],
+      "explanation": "The word 'atom' is associated with 'hearts,' 'music notes,' and 'stage lights,' representing a blend of science and music."
+    },
+    "bear": {
+      "association": [2, 2, 3, 2, 2, 2, 2, 2, 2, 1, 2, 2, 2, 2, 2],
+      "explanation": "The word 'bear' is closely linked with 'hearts' and 'confetti,' suggesting a connection between bears and joyful celebrations."
+    },
+    "cactus": {
+      "association": [2, 2, 2, 2, 2, 2, 2, 2, 2, 1, 2, 2, 2, 2, 2],
+      "explanation": "The word 'cactus' is associated with 'hearts' and 'confetti,' indicating a connection between cacti and festive occasions."
+    },
+    "cloud": {
+      "association": [2, 2, 2, 2, 2, 2, 2, 2, 2, 1, 2, 2, 2, 2, 2],
+      "explanation": "The word 'cloud' is associated with 'hearts' and 'confetti,' suggesting a link between clouds and joyful celebrations."
+    },
+    "cry": {
+      "association": [2, 2, 3, 2, 3, 3, 2, 2, 2, 1, 2, 2, 1, 2, 2],
+      "explanation": "The word 'cry' is associated with 'hearts,' 'music notes,' and 'smiles,' expressing a mix of emotions and music."
+    },
+    "cupcake": {
+      "association": [2, 3, 4, 3, 4, 4, 2, 2, 2, 1, 3, 3, 1, 2, 3],
+      "explanation": "The word 'cupcake' is closely linked with 'hearts,' 'music notes,' and 'stage lights,' representing a joyful and musical dessert theme."
+    },
+    "demon": {
+      "association": [2, 2, 3, 2, 3, 3, 2, 2, 2, 1, 2, 2, 1, 2, 2],
+      "explanation": "The word 'demon' is associated with 'hearts,' 'music notes,' and 'smiles,' suggesting a connection between demons and joyful occasions."
+    },
+    "diamond": {
+      "association": [2, 4, 4, 4, 3, 4, 2, 2, 3, 1, 4, 4, 1, 2, 3],
+      "explanation": "The word 'diamond' is closely associated with 'confetti,' 'music notes,' and 'smiles,' symbolizing luxury and celebration."
+    },
+    "dog": {
+      "association": [2, 2, 3, 2, 3, 2, 2, 2, 2, 1, 2, 2, 1, 2, 2],
+      "explanation": "The word 'dog' is associated with 'hearts,' 'music notes,' and 'smiles,' reflecting a connection between dogs and cheerful occasions."
+    },
+    "flower": {
+      "association": [2, 3, 4, 3, 4, 4, 2, 2, 2, 1, 3, 3, 1, 2, 3],
+      "explanation": "The word 'flower' is closely linked with 'hearts,' 'music notes,' and 'stage lights,' symbolizing a musical and floral theme."
+    },
+    "guitar": {
+      "association": [2, 2, 3, 2, 3, 2, 2, 2, 2, 1, 2, 2, 1, 2, 2],
+      "explanation": "The word 'guitar' is associated with 'hearts,' 'music notes,' and 'smiles,' reflecting a musical and joyful atmosphere."
+    },
+    "heart": {
+      "association": [4, 5, 5, 5, 4, 5, 4, 4, 4, 2, 4, 4, 2, 3, 4],
+      "explanation": "The word 'heart' is closely associated with 'confetti,' 'emojis,' 'music notes,' and 'smiles,' symbolizing strong emotions and celebrations."
+    },
+    "laugh": {
+      "association": [2, 3, 3, 4, 4, 4, 2, 2, 2, 1, 2, 2, 1, 2, 2],
+      "explanation": "The word 'laugh' is closely linked with 'hearts,' 'confetti,' and 'smiles,' representing joyful and celebratory expressions."
+    },
+    "lightning": {
+      "association": [2, 3, 3, 4, 4, 4, 2, 2, 2, 1, 2, 2, 1, 2, 2],
+      "explanation": "The word 'lightning' is associated with 'hearts,' 'confetti,' and 'smiles,' symbolizing energetic and celebratory moments."
+    },
+    "lion": {
+      "association": [2, 2, 3, 2, 3, 2, 2, 2, 2, 1, 2, 2, 1, 2, 2],
+      "explanation": "The word 'lion' is linked with 'hearts,' 'music notes,' and 'smiles,' indicating a connection between lions and joyful occasions."
+    },
+    "owl": {
+      "association": [2, 3, 3, 4, 4, 4, 2, 2, 2, 1, 2, 2, 1, 2, 2],
+      "explanation": "The word 'owl' is closely associated with 'hearts,' 'confetti,' and 'smiles,' symbolizing a mix of wisdom and celebration."
+    },
+    "piano": {
+      "association": [2, 2, 3, 2, 3, 2, 2, 2, 2, 1, 2, 2, 1, 2, 2],
+      "explanation": "The word 'piano' is associated with 'hearts,' 'music notes,' and 'smiles,' reflecting a musical and joyful theme."
+    },
+    "planet": {
+      "association": [2, 3, 3, 4, 4, 4, 2, 2, 2, 1, 2, 2, 1, 2, 2],
+      "explanation": "The word 'planet' is closely linked with 'hearts,' 'confetti,' and 'smiles,' symbolizing exploration and celebration."
+    },
+    "rabbit": {
+      "association": [2, 2, 3, 2, 3, 2, 2, 2, 2, 1, 2, 2, 1, 2, 2],
+      "explanation": "The word 'rabbit' is associated with 'hearts,' 'music notes,' and 'smiles,' reflecting a joyful and playful theme."
+    },
+    "rainbow": {
+      "association": [4, 4, 5, 5, 5, 5, 4, 4, 4, 2, 4, 4, 2, 4, 4],
+      "explanation": "The word 'rainbow' is closely associated with 'confetti,' 'emojis,' 'music notes,' and 'smiles,' symbolizing a wide range of colorful and celebratory emotions."
+    },
+    "scared": {
+      "association": [2, 2, 3, 2, 3, 2, 2, 2, 2, 1, 2, 2, 1, 2, 2],
+      "explanation": "The word 'scared' is associated with 'hearts,' 'music notes,' and 'smiles,' expressing a mix of emotions and joyful elements."
+    },
+    "seashell": {
+      "association": [2, 3, 3, 4, 4, 4, 2, 2, 2, 1, 2, 2, 1, 2, 2],
+      "explanation": "The word 'seashell' is closely linked with 'hearts,' 'confetti,' and 'smiles,' symbolizing a combination of beachy and celebratory vibes."
+    },
+    "unicorn": {
+      "association": [2, 3, 3, 4, 4, 4, 2, 2, 2, 1, 2, 2, 1, 2, 2],
+      "explanation": "The word 'unicorn' is associated with 'hearts,' 'confetti,' and 'smiles,' representing a joyful and mythical theme."
+    },
+    "vampire": {
+      "association": [2, 2, 3, 2, 3, 2, 2, 2, 2, 1, 2, 2, 1, 2, 2],
+      "explanation": "The word 'vampire' is associated with 'hearts,' 'music notes,' and 'smiles,' indicating a connection between vampires and joyful occasions."
+    },
+    "wolf": {
+      "association": [2, 2, 3, 2, 3, 2, 2, 2, 2, 1, 2, 2, 1, 2, 2],
+      "explanation": "The word 'wolf' is closely linked with 'hearts,' 'music notes,' and 'smiles,' symbolizing a mix of wildness and celebration."
+    }
   },
-  "astronaut": {
-    "association": [1, 2, 3, 1, 3, 2, 1, 2, 2, 1, 1, 1, 1, 1, 1],
-    "explanation": "The word 'astronaut' is associated with 'hearts,' 'music notes,' and 'stage lights,' suggesting a connection between space and music."
-  },
-  "atom": {
-    "association": [1, 2, 4, 1, 3, 3, 1, 2, 2, 1, 1, 1, 1, 1, 1],
-    "explanation": "The word 'atom' is associated with 'hearts,' 'music notes,' and 'stage lights,' representing a blend of science and music."
-  },
-  "bear": {
-    "association": [2, 2, 3, 2, 2, 2, 2, 2, 2, 1, 2, 2, 2, 2, 2],
-    "explanation": "The word 'bear' is closely linked with 'hearts' and 'confetti,' suggesting a connection between bears and joyful celebrations."
-  },
-  "cactus": {
-    "association": [2, 2, 2, 2, 2, 2, 2, 2, 2, 1, 2, 2, 2, 2, 2],
-    "explanation": "The word 'cactus' is associated with 'hearts' and 'confetti,' indicating a connection between cacti and festive occasions."
-  },
-  "cloud": {
-    "association": [2, 2, 2, 2, 2, 2, 2, 2, 2, 1, 2, 2, 2, 2, 2],
-    "explanation": "The word 'cloud' is associated with 'hearts' and 'confetti,' suggesting a link between clouds and joyful celebrations."
-  },
-  "cry": {
-    "association": [2, 2, 3, 2, 3, 3, 2, 2, 2, 1, 2, 2, 1, 2, 2],
-    "explanation": "The word 'cry' is associated with 'hearts,' 'music notes,' and 'smiles,' expressing a mix of emotions and music."
-  },
-  "cupcake": {
-    "association": [2, 3, 4, 3, 4, 4, 2, 2, 2, 1, 3, 3, 1, 2, 3],
-    "explanation": "The word 'cupcake' is closely linked with 'hearts,' 'music notes,' and 'stage lights,' representing a joyful and musical dessert theme."
-  },
-  "demon": {
-    "association": [2, 2, 3, 2, 3, 3, 2, 2, 2, 1, 2, 2, 1, 2, 2],
-    "explanation": "The word 'demon' is associated with 'hearts,' 'music notes,' and 'smiles,' suggesting a connection between demons and joyful occasions."
-  },
-  "diamond": {
-    "association": [2, 4, 4, 4, 3, 4, 2, 2, 3, 1, 4, 4, 1, 2, 3],
-    "explanation": "The word 'diamond' is closely associated with 'confetti,' 'music notes,' and 'smiles,' symbolizing luxury and celebration."
-  },
-  "dog": {
-    "association": [2, 2, 3, 2, 3, 2, 2, 2, 2, 1, 2, 2, 1, 2, 2],
-    "explanation": "The word 'dog' is associated with 'hearts,' 'music notes,' and 'smiles,' reflecting a connection between dogs and cheerful occasions."
-  },
-  "flower": {
-    "association": [2, 3, 4, 3, 4, 4, 2, 2, 2, 1, 3, 3, 1, 2, 3],
-    "explanation": "The word 'flower' is closely linked with 'hearts,' 'music notes,' and 'stage lights,' symbolizing a musical and floral theme."
-  },
-  "guitar": {
-    "association": [2, 2, 3, 2, 3, 2, 2, 2, 2, 1, 2, 2, 1, 2, 2],
-    "explanation": "The word 'guitar' is associated with 'hearts,' 'music notes,' and 'smiles,' reflecting a musical and joyful atmosphere."
-  },
-  "heart": {
-    "association": [4, 5, 5, 5, 4, 5, 4, 4, 4, 2, 4, 4, 2, 3, 4],
-    "explanation": "The word 'heart' is closely associated with 'confetti,' 'emojis,' 'music notes,' and 'smiles,' symbolizing strong emotions and celebrations."
-  },
-  "laugh": {
-    "association": [2, 3, 3, 4, 4, 4, 2, 2, 2, 1, 2, 2, 1, 2, 2],
-    "explanation": "The word 'laugh' is closely linked with 'hearts,' 'confetti,' and 'smiles,' representing joyful and celebratory expressions."
-  },
-  "lightning": {
-    "association": [2, 3, 3, 4, 4, 4, 2, 2, 2, 1, 2, 2, 1, 2, 2],
-    "explanation": "The word 'lightning' is associated with 'hearts,' 'confetti,' and 'smiles,' symbolizing energetic and celebratory moments."
-  },
-  "lion": {
-    "association": [2, 2, 3, 2, 3, 2, 2, 2, 2, 1, 2, 2, 1, 2, 2],
-    "explanation": "The word 'lion' is linked with 'hearts,' 'music notes,' and 'smiles,' indicating a connection between lions and joyful occasions."
-  },
-  "owl": {
-    "association": [2, 3, 3, 4, 4, 4, 2, 2, 2, 1, 2, 2, 1, 2, 2],
-    "explanation": "The word 'owl' is closely associated with 'hearts,' 'confetti,' and 'smiles,' symbolizing a mix of wisdom and celebration."
-  },
-  "piano": {
-    "association": [2, 2, 3, 2, 3, 2, 2, 2, 2, 1, 2, 2, 1, 2, 2],
-    "explanation": "The word 'piano' is associated with 'hearts,' 'music notes,' and 'smiles,' reflecting a musical and joyful theme."
-  },
-  "planet": {
-    "association": [2, 3, 3, 4, 4, 4, 2, 2, 2, 1, 2, 2, 1, 2, 2],
-    "explanation": "The word 'planet' is closely linked with 'hearts,' 'confetti,' and 'smiles,' symbolizing exploration and celebration."
-  },
-  "rabbit": {
-    "association": [2, 2, 3, 2, 3, 2, 2, 2, 2, 1, 2, 2, 1, 2, 2],
-    "explanation": "The word 'rabbit' is associated with 'hearts,' 'music notes,' and 'smiles,' reflecting a joyful and playful theme."
-  },
-  "rainbow": {
-    "association": [4, 4, 5, 5, 5, 5, 4, 4, 4, 2, 4, 4, 2, 4, 4],
-    "explanation": "The word 'rainbow' is closely associated with 'confetti,' 'emojis,' 'music notes,' and 'smiles,' symbolizing a wide range of colorful and celebratory emotions."
-  },
-  "scared": {
-    "association": [2, 2, 3, 2, 3, 2, 2, 2, 2, 1, 2, 2, 1, 2, 2],
-    "explanation": "The word 'scared' is associated with 'hearts,' 'music notes,' and 'smiles,' expressing a mix of emotions and joyful elements."
-  },
-  "seashell": {
-    "association": [2, 3, 3, 4, 4, 4, 2, 2, 2, 1, 2, 2, 1, 2, 2],
-    "explanation": "The word 'seashell' is closely linked with 'hearts,' 'confetti,' and 'smiles,' symbolizing a combination of beachy and celebratory vibes."
-  },
-  "unicorn": {
-    "association": [2, 3, 3, 4, 4, 4, 2, 2, 2, 1, 2, 2, 1, 2, 2],
-    "explanation": "The word 'unicorn' is associated with 'hearts,' 'confetti,' and 'smiles,' representing a joyful and mythical theme."
-  },
-  "vampire": {
-    "association": [2, 2, 3, 2, 3, 2, 2, 2, 2, 1, 2, 2, 1, 2, 2],
-    "explanation": "The word 'vampire' is associated with 'hearts,' 'music notes,' and 'smiles,' indicating a connection between vampires and joyful occasions."
-  },
-  "wolf": {
-    "association": [2, 2, 3, 2, 3, 2, 2, 2, 2, 1, 2, 2, 1, 2, 2],
-    "explanation": "The word 'wolf' is closely linked with 'hearts,' 'music notes,' and 'smiles,' symbolizing a mix of wildness and celebration."
-  },
-  "foregroundmap": ["bubbles", "hearts", "confetti", "emojis", "music notes", "paint drip", "pineapple", "pizzas", "poop", "rain", "rainbows", "smiles", "spotlight", "stage lights", "taco", "starburst"]
+  "output": [
+    "bubbles",
+    "hearts",
+    "confetti",
+    "emojis",
+    "music notes",
+    "paint drip",
+    "pineapple",
+    "pizzas",
+    "poop",
+    "rain",
+    "rainbows",
+    "smiles",
+    "spotlight",
+    "stage lights",
+    "taco",
+    "starburst"
+  ]
 }
