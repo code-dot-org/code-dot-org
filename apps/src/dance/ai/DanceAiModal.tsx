@@ -10,6 +10,7 @@ import classNames from 'classnames';
 import FontAwesome from '@cdo/apps/templates/FontAwesome';
 import {BlockSvg} from 'blockly/core';
 import {doAi} from './utils';
+import AiPreview from './AiPreview';
 const Typist = require('react-typist').default;
 
 const aiBotBorder = require('@cdo/static/dance/ai/ai-bot-border.png');
@@ -58,6 +59,8 @@ const DanceAiModal: React.FunctionComponent<DanceAiProps> = ({onClose}) => {
     (state: {dance: DanceState}) => state.dance.currentAiModalField
   );
 
+  const [showPreview, setShowPreview] = useState<boolean>(false);
+
   useEffect(() => {
     const currentValue = currentAiModalField?.getValue();
     console.log(currentValue);
@@ -67,6 +70,8 @@ const DanceAiModal: React.FunctionComponent<DanceAiProps> = ({onClose}) => {
 
       // The block value will be set to this JSON.
       setResponseJson(currentValue);
+
+      setShowPreview(true);
     }
   }, [currentAiModalField]);
 
@@ -139,10 +144,14 @@ const DanceAiModal: React.FunctionComponent<DanceAiProps> = ({onClose}) => {
     setResponseExplanation(response.explanation);
   };
 
-  const convertBlocks = () => {
+  /**
+   * Generates blocks from the AI response in the main workspace, and attaches
+   * them to each other.
+   */
+  const generateBlocksFromResponse = (): [BlockSvg, BlockSvg, BlockSvg] => {
     const params = JSON.parse(responseJson);
 
-    const blocksSvg = [
+    const blocksSvg: [BlockSvg, BlockSvg, BlockSvg] = [
       Blockly.getMainWorkspace().newBlock(
         'Dancelab_setForegroundEffect'
       ) as BlockSvg,
@@ -166,19 +175,19 @@ const DanceAiModal: React.FunctionComponent<DanceAiProps> = ({onClose}) => {
     blocksSvg[2].setFieldValue(params.dancers.count.toString(), 'N');
     blocksSvg[2].setFieldValue(params.dancers.layout, 'LAYOUT');
 
+    // Connect the blocks.
+    blocksSvg[0].nextConnection.connect(blocksSvg[1].previousConnection);
+    blocksSvg[1].nextConnection.connect(blocksSvg[2].previousConnection);
+
+    return blocksSvg;
+  };
+
+  const convertBlocks = () => {
+    const blocksSvg = generateBlocksFromResponse();
+
     const origBlock = currentAiModalField?.getSourceBlock();
 
-    if (
-      origBlock &&
-      currentAiModalField &&
-      blocksSvg[0].previousConnection &&
-      blocksSvg[1].previousConnection &&
-      blocksSvg[2].previousConnection &&
-      blocksSvg[2].nextConnection
-    ) {
-      blocksSvg[0].nextConnection.connect(blocksSvg[1].previousConnection);
-      blocksSvg[1].nextConnection.connect(blocksSvg[2].previousConnection);
-
+    if (origBlock && currentAiModalField) {
       if (!origBlock.getPreviousBlock()) {
         // This block isn't attached to anything at all.
         const blockXY = origBlock.getRelativeToSurfaceXY();
@@ -396,6 +405,7 @@ const DanceAiModal: React.FunctionComponent<DanceAiProps> = ({onClose}) => {
               onTypingDone={() => {
                 setTypingDone(true);
                 currentAiModalField?.setValue(responseJson);
+                setShowPreview(true);
               }}
             >
               {resultsComponent}
@@ -403,6 +413,12 @@ const DanceAiModal: React.FunctionComponent<DanceAiProps> = ({onClose}) => {
           )}
           {mode === Mode.RESULTS_FINAL && resultsComponent}
         </div>
+
+        {showPreview && (
+          <div id="preview-area" className={moduleStyles.previewArea}>
+            <AiPreview blocks={generateBlocksFromResponse()} />
+          </div>
+        )}
 
         <div className={moduleStyles.buttonsArea}>
           {mode === Mode.SELECT_INPUTS && currentInputSlot >= SLOT_COUNT && (
