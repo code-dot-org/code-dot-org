@@ -72,7 +72,7 @@ export default function RubricContainer({
   };
 
   useEffect(() => {
-    if (!!studentLevelInfo) {
+    if (!!studentLevelInfo && teacherHasEnabledAi) {
       const studentId = studentLevelInfo.user_id;
       const rubricId = rubric.id;
       const dataUrl = `/rubrics/${rubricId}/get_ai_evaluations?student_id=${studentId}`;
@@ -94,17 +94,14 @@ export default function RubricContainer({
           );
         });
     }
-  }, [rubric.id, studentLevelInfo]);
+  }, [rubric.id, studentLevelInfo, teacherHasEnabledAi]);
 
   const getAiUnderstanding = learningGoalId => {
     if (!!aiEvaluation) {
       const aiInfo = aiEvaluation.find(
         item => item.learning_goal_id === learningGoalId
       );
-      if (!!aiInfo) {
-        return aiInfo.understanding ? aiInfo.understanding : null;
-      }
-      return null;
+      return aiInfo?.understanding;
     } else {
       return null;
     }
@@ -115,10 +112,7 @@ export default function RubricContainer({
       const aiInfo = aiEvaluation.find(
         item => item.learning_goal_id === learningGoalId
       );
-      if (!!aiInfo) {
-        return aiInfo.confidence ? aiInfo.confidence : null;
-      }
-      return null;
+      return aiInfo?.confidence;
     } else {
       return null;
     }
