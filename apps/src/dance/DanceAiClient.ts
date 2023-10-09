@@ -31,7 +31,7 @@ export default function cachedAi(input: string) {
     if (Object.prototype.hasOwnProperty.call(backgroundAssociations, value)) {
       inputBackgroundVectors[value] = backgroundAssociations[value];
     }
-    if (Object.prototype.hasOwnProperty.call(paletteAssociations, value)) {
+    if (Object.prototype.hasOwnProperty.call(foregroundAssociations, value)) {
       inputForegroundVectors[value] = foregroundAssociations[value];
     }
   });
@@ -62,7 +62,7 @@ export default function cachedAi(input: string) {
       )
     ];
   const finalForeground: string =
-    palettes[
+    foregrounds[
       sumForegroundAssociation.indexOf(
         Math.max.apply(null, sumForegroundAssociation)
       )
@@ -71,13 +71,13 @@ export default function cachedAi(input: string) {
     backgroundEffect: finalBackground,
     backgroundColor: finalColor,
     foregroundEffect: finalForeground,
-    dancers: Math.floor(Math.random() * 5),
+    dancers: {
+      type: 'frogs',
+      count: Math.floor(Math.random() * 5),
+      layout: 'circle',
+    },
   };
-  console.log(cachedAiResponse);
-  console.log(backgrounds);
-  console.log(backgroundAssociations);
-  console.log(sumBackgroundAssociation);
-  console.log(finalBackground);
+
   return JSON.stringify(cachedAiResponse);
 }
 
