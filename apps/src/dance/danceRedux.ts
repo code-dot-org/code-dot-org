@@ -5,7 +5,7 @@ import {
   PayloadAction,
   ThunkDispatch,
 } from '@reduxjs/toolkit';
-import {SongData, SongMetadata} from './types';
+import {SongData, SongMetadata, AiOutput} from './types';
 import {queryParams} from '../code-studio/utils';
 import {fetchSignedCookies} from '../utils';
 import {
@@ -23,6 +23,7 @@ export interface DanceState {
   songData: SongData;
   runIsStarting: boolean;
   currentAiModalField?: GoogleBlockly.Field;
+  aiOutput?: AiOutput;
   // Fields below are used only by Lab2 Dance
   isRunning: boolean;
   currentSongMetadata: SongMetadata | undefined;
@@ -33,6 +34,7 @@ const initialState: DanceState = {
   songData: {},
   runIsStarting: false,
   currentAiModalField: undefined,
+  aiOutput: AiOutput.BLOCK,
   isRunning: false,
   currentSongMetadata: undefined,
 };
@@ -159,6 +161,9 @@ const danceSlice = createSlice({
     ) => {
       state.currentAiModalField = action.payload;
     },
+    setAiOutput: (state, action: PayloadAction<AiOutput>) => {
+      state.aiOutput = action.payload;
+    },
   },
 });
 
@@ -168,5 +173,6 @@ export const {
   setRunIsStarting,
   setCurrentSongMetadata,
   setCurrentAiModalField,
+  setAiOutput,
 } = danceSlice.actions;
 export const reducers = {dance: danceSlice.reducer};

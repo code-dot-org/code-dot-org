@@ -14,7 +14,13 @@ import DanceParty from '@code-dot-org/dance-party/src/p5.dance';
 import DanceAPI from '@code-dot-org/dance-party/src/api';
 import ResourceLoader from '@code-dot-org/dance-party/src/ResourceLoader';
 import danceMsg from './locale';
-import {reducers, setRunIsStarting, initSongs, setSong} from './danceRedux';
+import {
+  reducers,
+  setRunIsStarting,
+  initSongs,
+  setSong,
+  setAiOutput,
+} from './danceRedux';
 import trackEvent from '../util/trackEvent';
 import {SignInState} from '@cdo/apps/templates/currentUserRedux';
 import logToCloud from '../logToCloud';
@@ -106,6 +112,10 @@ Dance.prototype.init = function (config) {
   this.studioApp_.labUserId = config.labUserId;
   this.level.softButtons = this.level.softButtons || {};
   this.initialThumbnailCapture = true;
+
+  if (config.level.aiOutput) {
+    getStore().dispatch(setAiOutput(config.level.aiOutput));
+  }
 
   config.afterClearPuzzle = function () {
     this.studioApp_.resetButtonClick();
