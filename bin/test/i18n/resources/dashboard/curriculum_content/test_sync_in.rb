@@ -123,7 +123,7 @@ describe I18n::Resources::Dashboard::CurriculumContent::SyncIn do
         in_sequence(execution_sequence).
         returns({'i18n_key' => 'redacted_i18n_val'})
 
-      redacted_i18n_source_file_content = <<-JSON.strip.gsub(/^ {8}/, '')
+      redacted_i18n_source_file_content = <<~JSON.strip
         {
           "i18n_key": "redacted_i18n_val"
         }
@@ -162,7 +162,7 @@ describe I18n::Resources::Dashboard::CurriculumContent::SyncIn do
       }
     end
     let(:expected_i18n_source_file_content) do
-      <<-JSON.strip.gsub(/^ {8}/, '')
+      <<~JSON.strip
         {
           "i18n_key": "i18n_val"
         }

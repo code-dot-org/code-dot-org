@@ -366,7 +366,7 @@ describe I18nScriptUtils do
     let(:data) {{key: {key2: 'val'}}}
 
     it 'writes pretty json content to the file' do
-      expected_file_content = <<-JSON.strip.gsub(/^ {8}/, '')
+      expected_file_content = <<~JSON.strip
         {
           "key": {
             "key2": "val"
