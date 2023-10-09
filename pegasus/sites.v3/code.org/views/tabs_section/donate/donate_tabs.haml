@@ -18,7 +18,7 @@
     = view :"tabs_section/donate/donate_tabs_daf_direct"
   %div#amazon.content
     = view :"tabs_section/donate/donate_tabs_amazon"
-  %div#bitpay.content
+  %div#bitpay.content.has-external-link
     = view :"tabs_section/donate/donate_tabs_bitpay"
   %div#employee-match.content
     = view :"tabs_section/donate/donate_tabs_employee_match"
@@ -31,7 +31,7 @@
   %details.amazon
     %summary=hoc_s(:donate_tabs_tab_label_amazon)
     = view :"tabs_section/donate/donate_tabs_amazon"
-  %details.bitpay
+  %details.bitpay.has-external-link
     %summary=hoc_s(:donate_tabs_tab_label_bitpay)
     = view :"tabs_section/donate/donate_tabs_bitpay"
   %details.employee-match
