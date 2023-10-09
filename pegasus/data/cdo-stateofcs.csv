@@ -1,0 +1,52 @@
+state_code_s!,state_name_s,percent+s,state_plan_s,all_hs_offer_s,grad_requirement_s
+AL,Alabama,95%,Yes,Yes,No
+AK,Alaska,51%,In progress,No,No
+AZ,Arizona,36%,No,No,No
+AR,Arkansas,99%,Yes,Yes,Yes
+CA,California,45%,Yes,No,No
+CO,Colorado,54%,No,No,No
+CT,Connecticut,84%,Yes,Yes,No
+DE,Delaware,40%,No,Yes,No
+DC,District of Columbia,45%,No,No,No
+FL,Florida,40%,No,Yes,No
+GA,Georgia,71%,Yes,Yes,No
+HI,Hawaii,77%,Yes,Yes,No
+ID,Idaho,38%,Yes,Yes,No
+IL,Illinois,54%,No,Yes,No
+IN,Indiana,85%,Yes,Yes,No
+IA,Iowa,83%,Yes,Yes,No
+KS,Kansas,36%,No,Yes,No
+KY,Kentucky,79%,Yes,No,No
+LA,Louisiana,33%,In progress,No,No
+ME,Maine,66%,Yes,No,No
+MD,Maryland,99%,Yes,Yes,No
+MA,Massachusetts,83%,Yes,No,No
+MI,Michigan,55%,No,No,No
+MN,Minnesota,28%,In progress,No,No
+MS,Mississippi,78%,Yes,Yes,No
+MO,Missouri,50%,In progress,Yes,No
+MT,Montana,34%,No,No,No
+NE,Nebraska,50%,In progress,Yes,Yes
+NV,Nevada,96%,Yes,Yes,Yes
+NH,New Hampshire,81%,Yes,Yes,No
+NJ,New Jersey,89%,Yes,Yes,No
+NM,New Mexico,50%,Yes,No,No
+NY,New York,49%,Yes,No,No
+NC,North Carolina,71%,Yes,No,No
+ND,North Dakota,59%,Yes,Yes,Yes
+OH,Ohio,62%,Yes,No,No
+OK,Oklahoma,62%,Yes,Yes,No
+OR,Oregon,64%,In progress,No,No
+PA,Pennsylvania,71%,No,No,No
+RI,Rhode Island,86%,Yes,Yes,Yes
+SC,South Carolina,94%,In progress,Yes,Yes
+SD,South Dakota,42%,No,No,No
+TN,Tennessee,64%,Yes,Yes,Yes
+TX,Texas,54%,No,Yes,No
+UT,Utah,77%,Yes,No,No
+VT,Vermont,76%,No,No,No
+VA,Virginia,75%,No,Yes,No
+WA,Washington,47%,Yes,Yes,No
+WV,West Virginia,78%,Yes,Yes,No
+WI,Wisconsin,56%,No,Other,No
+WY,Wyoming,63%,Yes,Yes,No
