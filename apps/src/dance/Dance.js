@@ -455,6 +455,7 @@ Dance.prototype.reset = function () {
  * image is displayed and sound is NOT played.
  */
 Dance.prototype.preview = async function () {
+  this.nativeAPI.setForegroundEffectsInPreviewMode(true);
   this.nativeAPI.reset();
   const api = new DanceAPI(this.nativeAPI);
   const studentCode = this.studioApp_.getCode();
@@ -474,6 +475,7 @@ Dance.prototype.preview = async function () {
   await this.nativeAPI.ensureSpritesAreLoaded(charactersReferenced);
   this.hooks.find(v => v.name === 'runUserSetup').func();
   this.nativeAPI.p5_.draw();
+  this.nativeAPI.setForegroundEffectsInPreviewMode(false);
 };
 
 Dance.prototype.onPuzzleComplete = function (result, message) {
