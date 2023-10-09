@@ -127,13 +127,11 @@ const DanceAiModal: React.FunctionComponent<DanceAiProps> = ({onClose}) => {
       backgroundEffect,
       backgroundColor,
       foregroundEffect,
-      dancers,
     }) => ({
       inputs,
       backgroundEffect,
       backgroundColor,
       foregroundEffect,
-      dancers,
     }))({inputs, ...response});
     const pickedResponseJson = JSON.stringify(pickedResponse);
 
@@ -154,9 +152,6 @@ const DanceAiModal: React.FunctionComponent<DanceAiProps> = ({onClose}) => {
       Blockly.getMainWorkspace().newBlock(
         'Dancelab_setBackgroundEffectWithPalette'
       ) as BlockSvg,
-      Blockly.getMainWorkspace().newBlock(
-        'Dancelab_makeNewDanceSpriteGroup'
-      ) as BlockSvg,
     ];
 
     // Foreground block.
@@ -166,23 +161,15 @@ const DanceAiModal: React.FunctionComponent<DanceAiProps> = ({onClose}) => {
     blocksSvg[1].setFieldValue(params.backgroundEffect, 'EFFECT');
     blocksSvg[1].setFieldValue(params.backgroundColor, 'PALETTE');
 
-    // Dancers block.
-    blocksSvg[2].setFieldValue(params.dancers.type.toUpperCase(), 'COSTUME');
-    blocksSvg[2].setFieldValue(params.dancers.count.toString(), 'N');
-    blocksSvg[2].setFieldValue(params.dancers.layout, 'LAYOUT');
-
     const origBlock = currentAiModalField?.getSourceBlock();
 
     if (
       origBlock &&
       currentAiModalField &&
       blocksSvg[0].previousConnection &&
-      blocksSvg[1].previousConnection &&
-      blocksSvg[2].previousConnection &&
-      blocksSvg[2].nextConnection
+      blocksSvg[1].previousConnection
     ) {
       blocksSvg[0].nextConnection.connect(blocksSvg[1].previousConnection);
-      blocksSvg[1].nextConnection.connect(blocksSvg[2].previousConnection);
 
       if (!origBlock.getPreviousBlock()) {
         // This block isn't attached to anything at all.
@@ -204,7 +191,7 @@ const DanceAiModal: React.FunctionComponent<DanceAiProps> = ({onClose}) => {
 
       origBlock
         ?.getNextBlock()
-        ?.previousConnection?.connect(blocksSvg[2].nextConnection);
+        ?.previousConnection?.connect(blocksSvg[1].nextConnection);
 
       blocksSvg.forEach(blockSvg => {
         blockSvg.initSvg();
