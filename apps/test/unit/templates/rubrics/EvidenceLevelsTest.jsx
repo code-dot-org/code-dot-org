@@ -17,6 +17,9 @@ describe('EvidenceLevels', () => {
       <EvidenceLevels {...DEFAULT_PROPS} canProvideFeedback />
     );
     expect(wrapper.find('Heading6').length).to.equal(1);
+    expect(wrapper.find('Heading6').props().children).to.equal(
+      'Assign a Rubric Score'
+    );
     expect(wrapper.find('Memo(RadioButton)').length).to.equal(2);
     expect(wrapper.find('BodyThreeText').length).to.equal(2);
   });
@@ -25,7 +28,8 @@ describe('EvidenceLevels', () => {
     const wrapper = shallow(
       <EvidenceLevels {...DEFAULT_PROPS} canProvideFeedback={false} />
     );
-    expect(wrapper.find('Heading6').length).to.equal(0);
+    expect(wrapper.find('Heading6').length).to.equal(1);
+    expect(wrapper.find('Heading6').props().children).to.equal('Rubric Scores');
     expect(wrapper.find('Memo(RadioButton)').length).to.equal(0);
     // Two BodyThreeText per evidence level
     expect(wrapper.find('BodyThreeText').length).to.equal(4);
