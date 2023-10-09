@@ -4,8 +4,9 @@ import color from '@cdo/apps/util/color';
 import {getStore} from '../../redux';
 import {setCurrentAiModalField} from '../danceRedux';
 
-const FIELD_WIDTH = 32;
-const FIELD_HEIGHT = 18;
+const ITEM_WIDTH = 24;
+const ITEM_SPACING = 1;
+const FIELD_HEIGHT = 24;
 const FIELD_PADDING = 2;
 
 class CdoFieldDanceAi extends GoogleBlockly.Field {
@@ -81,39 +82,11 @@ class CdoFieldDanceAi extends GoogleBlockly.Field {
   }
 
   render_() {
-    const FIELD_HEIGHT = 20;
-    const FIELD_PADDING = 2;
-
     if (this.backgroundElement) {
       this.backgroundElement.innerHTML = '';
     }
 
-    const fieldText = 'TBD';
-
-    const constants = this.getConstants();
-
-    // Create the text element so we can measure it.
-    const textElement = GoogleBlockly.utils.dom.createSvgElement('text', {
-      fill: color.neutral_light,
-      x: 1,
-      y: 16,
-      width: 100,
-      height: 20,
-    });
-
-    // Attach the actual text.
-    textElement.appendChild(document.createTextNode(fieldText));
-
-    // Convert our 13px font size to 9.75pt for the measurement.
-    const fontSize = 9.75;
-
-    // Measure the rendered text.
-    const textWidth = GoogleBlockly.utils.dom.getFastTextWidth(
-      textElement,
-      fontSize,
-      constants.FIELD_TEXT_FONTWEIGHT,
-      constants.FIELD_TEXT_FONTFAMILY
-    );
+    const inputs = JSON.parse(this.getValue() || '{}')?.inputs;
 
     // Create the background rectangle and attach it to the background
     // parent.
@@ -123,35 +96,41 @@ class CdoFieldDanceAi extends GoogleBlockly.Field {
         fill: color.neutral_dark90,
         x: 1,
         y: 1,
-        width: textWidth,
-        height: FIELD_HEIGHT,
+        width: 3 * ITEM_WIDTH + 2 * FIELD_PADDING,
+        height: FIELD_HEIGHT + 2,
         rx: 3,
       },
       this.backgroundElement
     );
 
+    inputs?.forEach((input, index) => {
+      GoogleBlockly.utils.dom.createSvgElement(
+        'image',
+        {
+          x: FIELD_PADDING + (ITEM_WIDTH + 1) * index,
+          y: FIELD_PADDING,
+          width: ITEM_WIDTH,
+          href: `/blockly/media/dance/ai/emoji/${input}.svg`,
+        },
+        this.backgroundElement
+      );
+    });
+
     // Now attach the text element to the background parent.  It will
     // render on top of the background rectangle.
-    this.backgroundElement.appendChild(textElement);
+    //this.backgroundElement.appendChild(textElement);
 
     // update size
-    const width = textWidth + 2 * FIELD_PADDING;
-    const height = FIELD_HEIGHT + 2 * FIELD_PADDING;
-
-    this.borderRect_?.setAttribute('width', '' + width);
-    this.borderRect_?.setAttribute('height', '' + height);
-
-    this.size_.width = width;
-    this.size_.height = height;
+    this.updateSize_();
   }
 
   getText() {
-    return this.getValue().kit;
+    return '';
   }
 
   updateSize_() {
-    const width = FIELD_WIDTH + 2 * FIELD_PADDING;
-    const height = FIELD_HEIGHT + 2 * FIELD_PADDING;
+    const width = 3 * ITEM_WIDTH + 2 * FIELD_PADDING + 2 * ITEM_SPACING + 2;
+    const height = FIELD_HEIGHT + 2 * FIELD_PADDING + 2;
 
     this.borderRect_?.setAttribute('width', '' + width);
     this.borderRect_?.setAttribute('height', '' + height);
