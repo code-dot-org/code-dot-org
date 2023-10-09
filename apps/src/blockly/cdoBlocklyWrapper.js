@@ -250,10 +250,6 @@ function initializeBlocklyWrapper(blocklyInstance) {
     loadBlocksToWorkspace(blockSpace, source) {
       const isXml = stringIsXml(source);
       if (!isXml) {
-        console.warn(
-          `Source string was JSON. Use Version History to recover a working version of this project.`,
-          `This likely occurred by opening a project that was last saved with Google Blockly.`
-        );
         getStore().dispatch(setHasIncompatibleSources(true));
         source = '';
       }

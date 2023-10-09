@@ -266,18 +266,27 @@ class CodeWorkspace extends React.Component {
           </ProtectedStatefulDiv>
         )}
         {this.props.displayNotStartedBanner && !inCsfExampleSolution && (
-          <div id="notStartedBanner" style={styles.incompatibleCodeBanner}>
+          <div
+            id="notStartedBanner"
+            style={{...styles.topBanner, ...styles.studentNotStartedWarning}}
+          >
             {i18n.levelNotStartedWarning()}
           </div>
         )}
         {this.props.displayOldVersionBanner && (
-          <div id="oldVersionBanner" style={styles.oldVersionWarning}>
+          <div
+            id="oldVersionBanner"
+            style={{...styles.topBanner, ...styles.oldVersionWarning}}
+          >
             {i18n.oldVersionWarning()}
           </div>
         )}
         {this.props.inStartBlocksMode && (
           <>
-            <div id="startBlocksBanner" style={styles.startBlocksBanner}>
+            <div
+              id="startBlocksBanner"
+              style={{...styles.topBanner, ...styles.startBlocksBanner}}
+            >
               {this.props.isProjectTemplateLevel
                 ? i18n.startBlocksTemplateWarning()
                 : i18n.inStartBlocksMode()}
@@ -317,29 +326,17 @@ const styles = {
     },
   },
   oldVersionWarning: {
-    zIndex: 99,
     backgroundColor: color.lightest_red,
     textAlign: 'center',
     height: 20,
-    padding: 5,
-    opacity: 0.8,
-    position: 'relative',
   },
   studentNotStartedWarning: {
-    zIndex: 99,
     backgroundColor: color.lightest_red,
     height: 20,
-    padding: 5,
-    opacity: 0.9,
-    position: 'relative',
   },
   startBlocksBanner: {
-    zIndex: 99,
     backgroundColor: color.lighter_yellow,
     height: 20,
-    padding: 5,
-    opacity: 0.9,
-    position: 'relative',
   },
   topBanner: {
     zIndex: 99,
