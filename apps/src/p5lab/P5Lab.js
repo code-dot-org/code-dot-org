@@ -55,11 +55,7 @@ import {actions as jsDebugger} from '@cdo/apps/lib/tools/jsdebugger/redux';
 import {addConsoleMessage, clearConsole} from './redux/textConsole';
 import {captureThumbnailFromCanvas} from '@cdo/apps/util/thumbnail';
 import Sounds from '@cdo/apps/Sounds';
-import {
-  TestResults,
-  ResultType,
-  BLOCKLY_EVENTS_TO_LISTEN_FOR,
-} from '@cdo/apps/constants';
+import {TestResults, ResultType} from '@cdo/apps/constants';
 import {showHideWorkspaceCallouts} from '@cdo/apps/code-studio/callouts';
 import wrap from './gamelab/debugger/replay';
 import firehoseClient from '@cdo/apps/lib/util/firehose';
@@ -76,6 +72,7 @@ import project from '@cdo/apps/code-studio/initApp/project';
 import {hasInstructions} from '@cdo/apps/templates/instructions/utils';
 import {setLocaleCode} from '@cdo/apps/redux/localesRedux';
 import {SignInState} from '@cdo/apps/templates/currentUserRedux';
+import {BLOCKLY_EVENTS_TO_LISTEN_FOR} from '@cdo/apps/p5lab/constants';
 
 const defaultMobileControlsConfig = {
   spaceButtonVisible: true,
