@@ -100,16 +100,4 @@ const styles = {
   spinner: {
     marginTop: '10px',
   },
-  acceptButton: {
-    marginLeft: 20,
-    marginRight: 20,
-  },
-  declineButton: {
-    marginRight: 0,
-  },
-  buttonsStyles: {
-    // center vertically
-    display: 'flex',
-    alignItems: 'center',
-  },
 };

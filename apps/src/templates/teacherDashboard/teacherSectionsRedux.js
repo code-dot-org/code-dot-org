@@ -64,8 +64,6 @@ const SET_SHOW_LOCK_SECTION_FIELD =
 const SET_AUTH_PROVIDERS = 'teacherDashboard/SET_AUTH_PROVIDERS';
 const SET_SECTIONS = 'teacherDashboard/SET_SECTIONS';
 const SET_COTEACHER_INVITE = 'teacherDashboard/SET_COTEACHER_INVITE';
-const ACCEPT_COTEACHER_INVITE = 'teacherDashboard/ACCEPT_COTEACHER_INVITE';
-const DECLINE_COTEACHER_INVITE = 'teacherDashboard/DECLINE_COTEACHER_INVITE';
 export const SELECT_SECTION = 'teacherDashboard/SELECT_SECTION';
 const REMOVE_SECTION = 'teacherDashboard/REMOVE_SECTION';
 const TOGGLE_SECTION_HIDDEN = 'teacherSections/TOGGLE_SECTION_HIDDEN';
@@ -455,8 +453,8 @@ export const setCoteacherInvite = coteacherInvite => ({
 export const asyncLoadCoteacherInvite = () => dispatch => {
   fetchJSON('/api/v1/section_instructors')
     .then(sectionInstructors => {
-      // Filter to only include sections with open invitations.
-      const coteacherInvite = _.findLast(
+      // Find the oldest invite.
+      const coteacherInvite = _.find(
         sectionInstructors,
         instructor => instructor.status === 'invited'
       );
@@ -759,20 +757,6 @@ export default function teacherSections(state = initialState, action) {
     return {
       ...state,
       coteacherInvite: action.coteacherInvite,
-    };
-  }
-
-  if (action.type === ACCEPT_COTEACHER_INVITE) {
-    return {
-      ...state,
-      coteacherInvite: null,
-    };
-  }
-
-  if (action.type === DECLINE_COTEACHER_INVITE) {
-    return {
-      ...state,
-      coteacherInvite: null,
     };
   }
 
