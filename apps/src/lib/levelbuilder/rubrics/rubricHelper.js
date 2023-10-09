@@ -47,9 +47,7 @@ export async function saveRubricToTable(
     } else {
       setLearningGoalList(data.learningGoals);
       setSaveNotificationText(SAVE_COMPLETED_TEXT);
-      setTimeout(() => {
-        setSaveNotificationText('');
-      }, 8500);
+      clearNotification(setSaveNotificationText);
     }
   } catch (err) {
     console.error('Error saving rubric:' + err);
@@ -120,6 +118,12 @@ function resetPositionsOfLearningGoals(keyConceptList) {
     }
   });
   return keyConceptList;
+}
+
+function clearNotification(setSaveNotificationText) {
+  setTimeout(() => {
+    setSaveNotificationText('');
+  }, 8500);
 }
 
 export const styles = {
