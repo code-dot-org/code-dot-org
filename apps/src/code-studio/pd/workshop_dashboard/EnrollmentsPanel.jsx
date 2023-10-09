@@ -267,7 +267,7 @@ export default class EnrollmentsPanel extends React.Component {
             onClick={this.handleClickChangeEnrollments}
             name={EDIT_ENROLLMENT_NAME_BUTTON_NAME}
           >
-            Edit name (admin)
+            Edit (admin)
             <EditEnrollmentNameDialog
               show={
                 this.state.enrollmentChangeDialogOpen ===
