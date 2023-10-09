@@ -37,6 +37,10 @@ hu:
   africa_campaign_date_full: Október 1-31.
   africa_campaign_date_year: '2022.'
   africa_campaign_date_full_year: 2020. október 1-31.
+  hoc2023_header: Kreativitás az AI-vel
+  hoc2023_social_creativity_with_ai_title: Kódolás órája - Mit fogsz létrehozni?
+  hoc2023_social_creativity_with_ai_desc: Használja a számítástechnikát az AI felfedezéséhez
+    és megismeréséhez!
   hoc2022_header: Fedezd fel, játssz és alkoss!
   social_hoc2022_explore_play_create: Használd az informatikát a felfedezéshez, a
     játékhoz és az alkotáshoz!
@@ -189,6 +193,29 @@ hu:
     egy új tantervkatalógus és újratervezett Tanítási oldal, amely segít megtalálni
     az egészet!
   in_partnership_with: Partnerségben a
+  shop_code_dot_org_heading: Shop Code.org
+  shop_code_dot_org_desc: Támogassa munkánkat, és büszkén viselje a mozgalmat. A kalapunkat
+    Obama elnök és hírességek is viselték.
+  spread_the_word_heading: Terjeszd az igét
+  spread_the_word_desc: Növelje hatásunkat azáltal, hogy megosztja a Code.org hálózattal.
+    A közösségi médiától az e-mailes frissítésekig, fedezze fel, hogyan segíthet nekünk
+    több oktató elérésében, diákok, és szószólók.
+  follow_us_heading: Kövess minket a közösségi médiában
+  follow_us_desc: Legyen naprakész velünk a közösségi médiában, és ossza meg bejegyzéseinket
+    hálózatával, hogy tájékozódjon és elősegítse a tudatosság növelését.
+  facebook: Facebook
+  twitter: Twitter
+  linked_in: LinkedIn
+  instagram: Instagram
+  tik_tok: TikTok
+  subscribe_to_emails_heading: Feliratkozás e-mailekre
+  subscribe_to_emails_desc: A levelezőlistánkon keresztül negyedéves frissítéseken
+    keresztül olvashat arról, hogy mi történik a Code.org oldalon és a számítástechnikai
+    oktatásban.
+  subscribe_to_emails_intl: Feliratkozás a nemzetközi frissítésekre
+  promote_code_dot_org_heading: A Code.org népszerűsítése
+  promote_code_dot_org_desc: Támogassa a számítástechnikát a környéken statisztikák,
+    idézetek és videók segítségével.
   afe_partnership_logo_alt: Amazon Future Engineer logó
   afe_partnership_thanks_desc: Az Amazon Future Engineer egy átfogó gyermekkor-karrier
     program, amely inspirálja, oktat, és képezze az alacsony jövedelmű és más hátrányos
@@ -208,6 +235,15 @@ hu:
   curricula_title_high: Középiskolai tantervek
   curricula_desc_high: Böngésszen a lenyűgöző kurzusok és tevékenységek között, amelyek
     meghívják Önt és középiskolás diákjait, hogy mélyebbre ássanak a számítástechnikában.
+  for_administrators_heading: Rendszergazdáknak
+  for_administrators_desc: Csatlakozzon az iskolák ezreihez, akik már beépítették
+    a számítástechnikát a tantervükbe.
+  for_parents_heading: Szülőknek
+  for_parents_desc: Segíthet arra ösztönözni diákiskoláját, hogy számítástechnikai
+    oktatást kínáljon vagy bővítsen.
+  for_educators_heading: Oktatóknak
+  for_educators_desc: Kezdje el a tanítást még ma - nincs szükség számítástechnikai
+    tapasztalatra - szakmai tanulási műhelyeinkkel.
   students_label: Diákok
   teachers_label: Tanárok
   teacher_label_csf: CS Fundamentals tanár
@@ -217,10 +253,11 @@ hu:
   teacher_label_csa: AP® Computer Science A Teacher
   required_materials: 'Szükséges anyagok:'
   optional_materials: 'Opcionális anyagok:'
-  call_to_action_explore_roles: Fedezze fel a nyitott szerepeket
+  call_to_action_hold_an_event: Esemény megtartása
   call_to_action_learn_more: Tudj meg többet
   call_to_action_watch_now: Nézd meg most
   call_to_action_try_activity: Próbálja ki a tevékenységet
+  call_to_action_try_activities: Próbálja ki a tevékenységeket
   call_to_action_explore_unit: Fedezze fel az egységet
   call_to_action_explore_curriculum: Fedezze fel a tantervet
   call_to_action_explore_curriculum_options: Fedezze fel a tantervi lehetőségeket
@@ -289,11 +326,20 @@ hu:
   call_to_action_notify_available: Értesítsen, ha elérhető
   call_to_action_register_early_access: Regisztráljon a korai hozzáféréshez
   call_to_action_open_positions: Nyitott pozíciók megtekintése
+  call_to_action_explore_roles: Fedezze fel a nyitott szerepeket
   call_to_action_get_guide: Szerezd meg az útmutatót
   call_to_action_donate_to_cdo: Adomány a Code.org számára
   call_to_action_start_fundraiser: Indítson adománygyűjtést
   call_to_action_view_donation_policy: Adományozási irányelvek megtekintése
   call_to_action_view_donate_bitpay: Adományozzon a BitPay segítségével
+  call_to_action_make_a_donation: Adományozz
+  call_to_action_other_ways_to_give: Egyéb módja annak, hogy adjon
+  call_to_action_become_partner_usa: Legyen az Egyesült Államok partnere
+  call_to_action_become_partner_intl: Legyen nemzetközi partner
+  call_to_action_become_a_volunteer: Legyél önkéntes
+  call_to_action_start_translating: Indítsa el a fordítást
+  call_to_action_learn_about_advocacy: Tudjon meg többet érdekképviseletünkről
+  call_to_action_visit_store: Látogasson el a boltba
   aria_label_call_to_action_afe: Tudjon meg többet az Amazon Future Engineer-ről
   aria_label_call_to_action_teaching_csf: Indítsa el a Számítástudomány alapjainak
     oktatása szakmai tanulási programot
@@ -646,6 +692,7 @@ hu:
   heading_explore_curriculum_catalog: Fedezze fel az összes tanfolyamunkat a tantervi
     katalógusban
   heading_csa_ai: Tennivalókat keres az AP® vizsga után?
+  heading_bring_cs_to_students: Hozd el a számítástechnikát a hallgatóknak
   professional_learning_section_desc: Szerezd meg a szükséges támogatást, amikor felkészülsz
     a tanításra. A tanárok imádják, több mint 90% -uk rangsorolja a valaha volt legjobb
     szakmai fejlődést!
@@ -923,6 +970,8 @@ hu:
     értékeléséhez. Az elmélet gazdag keverékével, gyakorlati példák, és források,
     célja, hogy felhatalmazza az oktatókat az AI tájon való eligazodásra és a diákok
     tanulási tapasztalatainak javítására.
+  ai_pl_101_resources_5: Útmutató a mesterséges intelligencia felelősségteljes megközelítésének
+    biztosításához
   ai_pl_101_video_desc_6: 'Tudjon meg többet az AI nagy változásait előidéző új technológiáról,
     amely két új videót tartalmaz a nagy nyelvi modelleken (például a ChatGPT) és
     a Generative AI. Hallgassa meg, hogyan működnek ezek az új technológiák közvetlenül
@@ -934,6 +983,8 @@ hu:
     azok számára, akik csak belemerítik a lábujjaikat, valamint fejlett eszközöket
     azok számára, akik maximalizálni akarják potenciáljukat.
   ai_pl_101_resources_3: AI felszólítások a hallgatói tanulás átalakításához
+  ai_pl_101_resources_section_title: További módszerek az AI megismerésére
+  ai_pl_101_resources_guide: 'Kísérő útmutató:'
   how_ai_works_hero_heading: Hogyan működik az AI
   how_ai_works_hero_desc: Merüljön el az AI világában a „Hogyan működik az AI” című
     videósorozatunkkal és a kísérő leckékkel!
@@ -1794,6 +1845,30 @@ hu:
   donate_tabs_bitpay_desc: Ölelje át az adakozás jövőjét a kriptovalutával. A BitPay
     segítségével digitális pénzneme közvetlenül támogathatja a Code.org törekvéseit
     a számítástechnikai oktatás bővítésében.
+  help_page_top_heading: Hogyan segíthetsz
+  help_page_top_desc: Támogassa küldetésünket, hogy a számítástechnikát minden gyermek
+    számára elérhetővé tegyük, mindenhol. Erőfeszítései segítenek inspirálni a jövőbeli
+    újítókat és áthidalni a technológiai oktatási szakadékot.
+  help_page_top_subhead: Adományozzon a Code.org számára
+  help_page_top_desc_02: Azon dolgozunk, hogy minden diáknak lehetőséget biztosítsunk
+    a számítástechnika elsajátítására - mind online, mind az iskolákban, ahol állandó
+    tanfolyamokat létesítünk és tanárokat képezünk. Minden adományozott dollárért,
+    egy gyermek megismertetik a számítástechnikával.
+  help_page_partners_heading: Legyen partner
+  help_page_partners_desc: A Code.org partnerként együttműködik más nonprofit szervezetekkel,
+    hogy elősegítse a számítástechnika helyi, fenntartható módon történő terjesztését.
+    Tudjon meg többet programunkról.
+  help_page_volunteer_heading: Önkéntes egy osztályteremben
+  help_page_volunteer_desc: Önként jelentkezzen a Kódolás Órája tanítására, vagy vendégelőadó
+    lehet egy helyi osztályteremben. Iratkozzon fel, hogy értesüljön a közeli lehetőségekről.
+  help_page_translate_heading: Segítsen nekünk lefordítani
+  help_page_translate_desc: Az önkéntesek több mint 45 nyelvre fordították le oktatóanyagainkat.
+    Segítsen nekünk tovább bővíteni oktatóanyagainkat a diákok számára szerte a világon!
+  help_page_speak_for_cs_heading: Beszéljen a számítástechnikai oktatásért
+  help_page_speak_for_cs_desc: Tudjon meg többet a Code.org érdekképviseleti munkájáról
+    az Egyesült Államokban, és arról a tíz politikáról, amelyet az államok javasolunk,
+    hogy az informatika alapja legyen minden hallgató számára. Plusz, megtudhatja,
+    hogyan vezethet változást az állapotában.
   hoc_live: Élő kódolás órája
   hoc_live_sign_up_title: Iratkozzon fel a Hour of Code Live szolgáltatásra
   hoc_live_learn_title: Tanulj a Hour of Code Live segítségével
@@ -13967,6 +14042,10 @@ hu:
   video_library_page_inspirational_video_title_11: Bárki Tanulhat (1 perc)
   video_library_page_inspirational_video_title_12: Lo Que Falta En Nuestras Escuelas
     (2 perc)
+  video_library_page_inspirational_video_title_13: A NASA ünnepli a Kódolás Óráját
+    (2 perc)
+  video_library_page_inspirational_video_title_14: Ez több, mint egy játék (1 perc)
+  video_library_page_inspirational_video_title_15: Alkoss Számítástechnikával (1 perc)
   video_library_page_not_hacked_video_title_1: 'Hogyan ne hackeljenek fel: Bevezetés'
   video_library_page_not_hacked_video_title_2: 'Hogyan ne törjék fel: Jelszavak'
   video_library_page_not_hacked_video_title_3: 'Hogyan ne törjék fel: Hitelesítés

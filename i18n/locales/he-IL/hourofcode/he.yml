@@ -35,6 +35,9 @@ he:
   africa_campaign_date_full: 1 באוקטובר 2022 - 18 בדצמבר 2022
   africa_campaign_date_year: '2022'
   africa_campaign_date_full_year: 1 באוקטובר 2022 - 18 בדצמבר 2022
+  hoc2023_header: יצירתיות עם AI
+  hoc2023_social_creativity_with_ai_title: שעת קוד - מה תיצור?
+  hoc2023_social_creativity_with_ai_desc: השתמש במדעי המחשב כדי לחקור וללמוד על AI!
   hoc2022_header: גלו, שחקו, צרו!
   social_hoc2022_explore_play_create: השתמשו במדעי המחשב כדי לגלות, לשחק וליצור!
   codeorg_homepage_hoc2022_body: גלו את היקום, הבקיעו שער, עשו מהלך - יש כל כך הרבה
@@ -165,6 +168,28 @@ he:
   curriculum_launch_2023_desc: עדכונים ל-CSC, CSP, CSD ועוד - בתוספת קטלוג תכניות
     לימודים חדש ודף Teach שעוצב מחדש כדי לעזור לך למצוא הכל!
   in_partnership_with: בשותפות עם
+  shop_code_dot_org_heading: חנות קוד.org
+  shop_code_dot_org_desc: תמכו בעבודתנו ולבשו את התנועה בגאווה. הכובעים שלנו נלבשו
+    גם על ידי הנשיא אובמה וסלבריטאים.
+  spread_the_word_heading: הפיצו את המידע
+  spread_the_word_desc: הגבר את ההשפעה שלנו על ידי שיתוף Code.org עם הרשת שלך. ממדיה
+    חברתית ועד עדכונים בדוא"ל, גלה כיצד תוכל לעזור לנו להגיע ליותר מחנכים, תלמידים
+    ותומכים.
+  follow_us_heading: עקבו אחרינו ברשתות החברתיות
+  follow_us_desc: הישאר מעודכן איתנו במדיה החברתית ושתף את הפוסטים שלנו עם הרשת שלך
+    כדי להישאר מעודכן ולעזור להגביר את המודעות.
+  facebook: פייסבוק
+  twitter: טוויטר
+  linked_in: LinkedIn
+  instagram: אינסטגרם
+  tik_tok: טיקטוק
+  subscribe_to_emails_heading: הירשם למיילים
+  subscribe_to_emails_desc: קרא על מה שקורה ב- Code.org ובחינוך למדעי המחשב באמצעות
+    עדכונים רבעוניים באמצעות רשימת התפוצה שלנו.
+  subscribe_to_emails_intl: הירשם לעדכונים בינלאומיים
+  promote_code_dot_org_heading: לקדם את Code.org
+  promote_code_dot_org_desc: קדם את מדעי המחשב באזור שלך בעזרת נתונים סטטיסטיים, ציטוטים
+    וסרטונים.
   afe_partnership_logo_alt: לוגו מהנדס העתיד של אמזון
   afe_partnership_thanks_desc: אמזון Future Engineer היא תוכנית מקיפה מילדות לקריירה
     כדי לעורר השראה, לחנך ולהכשיר ילדים וצעירים בעלי הכנסה נמוכה ואחרים מוחלשים להמשיך
@@ -182,6 +207,15 @@ he:
   curricula_title_high: תכניות לימודים בתיכון
   curricula_desc_high: עיין בקורסים ובפעילויות המרתקות שמזמינות אותך ואת תלמידי התיכון
     שלך להעמיק במדעי המחשב.
+  for_administrators_heading: למנהלי מערכת
+  for_administrators_desc: הצטרפו לאלפי בתי הספר שכבר שילבו את מדעי המחשב בתכנית הלימודים
+    שלהם.
+  for_parents_heading: להורים
+  for_parents_desc: אתה יכול לעזור לעודד את בית הספר של התלמיד שלך להציע או להרחיב
+    את החינוך למדעי המחשב.
+  for_educators_heading: למורים
+  for_educators_desc: התחל ללמד עוד היום - ללא צורך בניסיון במדעי המחשב - עם סדנאות
+    הלמידה המקצועיות שלנו.
   students_label: סטודנטים
   teachers_label: מורים
   teacher_label_csf: מורה יסודות במדעי המחשב
@@ -191,10 +225,11 @@ he:
   teacher_label_csa: AP® Computer Science A Teacher
   required_materials: 'חומרים נדרשים:'
   optional_materials: 'חומרים אופציונליים:'
-  call_to_action_explore_roles: חקור תפקידים פתוחים
+  call_to_action_hold_an_event: ערכו אירוע
   call_to_action_learn_more: למד עוד
   call_to_action_watch_now: צפו עכשיו
   call_to_action_try_activity: נסה פעילות
+  call_to_action_try_activities: נסה פעילויות
   call_to_action_explore_unit: חקור את היחידה
   call_to_action_explore_curriculum: חקור את תוכנית הלימודים
   call_to_action_explore_curriculum_options: חקור אפשרויות תכנית לימודים
@@ -263,11 +298,20 @@ he:
   call_to_action_notify_available: הודע לי כאשר זמין
   call_to_action_register_early_access: הירשם לגישה מוקדמת
   call_to_action_open_positions: הצג עמדות פתוחות
+  call_to_action_explore_roles: חקור תפקידים פתוחים
   call_to_action_get_guide: קבל את המדריך
   call_to_action_donate_to_cdo: לתרום לקוד.org
   call_to_action_start_fundraiser: התחל גיוס כספים
   call_to_action_view_donation_policy: צפו במדיניות התרומות
   call_to_action_view_donate_bitpay: תרום באמצעות BitPay
+  call_to_action_make_a_donation: תרום תרומה
+  call_to_action_other_ways_to_give: דרכים אחרות לתת
+  call_to_action_become_partner_usa: להיות שותף בארצות הברית
+  call_to_action_become_partner_intl: להיות שותף בינלאומי
+  call_to_action_become_a_volunteer: להיות מתנדב
+  call_to_action_start_translating: התחל לתרגם
+  call_to_action_learn_about_advocacy: למד על הסנגור שלנו
+  call_to_action_visit_store: בקר בחנות
   aria_label_call_to_action_afe: למידע נוסף על מהנדס העתיד של אמזון
   aria_label_call_to_action_teaching_csf: התחל את תוכנית הלמידה המקצועית של יסודות
     מדעי המחשב
@@ -582,6 +626,7 @@ he:
   heading_these_lessons_will: 'שיעורים אלה יהיו:'
   heading_explore_curriculum_catalog: חקור את כל הקורסים שלנו בקטלוג תכניות הלימודים
   heading_csa_ai: מחפש דברים לעשות לאחר בחינת AP®?
+  heading_bring_cs_to_students: הביאו את מדעי המחשב לסטודנטים
   professional_learning_section_desc: קבל את התמיכה שאתה צריך בזמן שאתה מתכונן ללמד.
     מורים אוהבים את זה, עם למעלה מ -90% מדרגים אותו כהתפתחות המקצועית הטובה ביותר
     אי פעם!
@@ -818,6 +863,7 @@ he:
     של AI, ומינוף AI להערכת תלמידים. עם שילוב עשיר של תיאוריה, דוגמאות מעשיות ומשאבים,
     היא שואפת להעצים אנשי חינוך לנווט בנוף הבינה המלאכותית ולשפר את חוויות הלמידה
     של התלמידים.
+  ai_pl_101_resources_5: מדריך להבטחת גישה אחראית ל- AI
   ai_pl_101_video_desc_6: 'למידע נוסף על הטכנולוגיה החדשה המניעה את השינויים הגדולים
     ב- AI, הכוללת שני סרטונים חדשים במודלים של שפה גדולה (כמו ChatGPT) ו- AI Generative.
     שמע כיצד הטכנולוגיות החדשות הללו עובדות ישירות מהמומחים: מירה מוראטי, CTO של OpenAI,
@@ -827,6 +873,8 @@ he:
     ממתחילים למתקדמים. כולל הנחיות למתחילים למי שרק טובל את בהונותיהם פנימה, כמו גם
     כלים מתקדמים למי שמחפש למקסם את הפוטנציאל שלהם.
   ai_pl_101_resources_3: הנחיות AI לשינוי למידת התלמידים
+  ai_pl_101_resources_section_title: דרכים נוספות ללמוד על AI
+  ai_pl_101_resources_guide: 'מדריך נלווה:'
   how_ai_works_hero_heading: איך AI עובד
   how_ai_works_hero_desc: לצלול לתוך העולם של AI עם "איך AI עובד", סדרת הווידאו שלנו
     ושיעורים נלווים!
@@ -1579,6 +1627,26 @@ he:
   donate_tabs_bitpay_title: תרום עם קריפטו באמצעות BitPay
   donate_tabs_bitpay_desc: לאמץ את העתיד של נתינה עם מטבע מבוזר. באמצעות BitPay, המטבע
     הדיגיטלי שלך יכול לתמוך ישירות במאמצים של Code.org בהרחבת החינוך למדעי המחשב.
+  help_page_top_heading: איך אתה יכול לעזור
+  help_page_top_desc: תמכו במשימה שלנו להנגיש את מדעי המחשב לכל ילד, בכל מקום. המאמצים
+    שלך עוזרים לנו לעורר השראה מחדשים עתידיים ולגשר על פער החינוך הטכנולוגי.
+  help_page_top_subhead: תרמו תרומה ל- Code.org
+  help_page_top_desc_02: אנו פועלים כדי לתת לכל תלמיד את ההזדמנות ללמוד מדעי המחשב
+    - הן באינטרנט והן בבתי ספר, שם אנו מקימים קורסים קבועים ומכשירים מורים. על כל
+    דולר שאתה תורם, ילד אחד מתוודע למדעי המחשב.
+  help_page_partners_heading: להיות שותף
+  help_page_partners_desc: Code.org עובדת עם ארגונים אחרים ללא מטרות רווח כשותפים
+    כדי לסייע בהפצת מדעי המחשב באופן מקומי ובר קיימא. למידע נוסף על התוכנית שלנו.
+  help_page_volunteer_heading: התנדב בכיתה
+  help_page_volunteer_desc: התנדב ללמד את שעת הקוד או להיות דובר אורח בכיתה מקומית.
+    הירשם כדי לשמוע על הזדמנויות בקרבתך.
+  help_page_translate_heading: עזרו לנו לתרגם
+  help_page_translate_desc: מתנדבים תרגמו את ההדרכות שלנו בלמעלה מ- 45 שפות. עזרו
+    לנו להמשיך ולהרחיב את ההדרכות שלנו לסטודנטים ברחבי העולם!
+  help_page_speak_for_cs_heading: דבר בעד חינוך למדעי המחשב
+  help_page_speak_for_cs_desc: למידע נוסף על עבודת הסנגור של Code.org ברחבי ארה"ב
+    ועל עשר המדיניות שאנו ממליצים למדינות לאמץ כדי להפוך את מדעי המחשב לבסיס לכל התלמידים.
+    בנוסף, גלה כיצד תוכל להניע שינוי במצבך.
   hoc_live: שעה של קוד בשידור חי
   hoc_live_sign_up_title: הירשם לשעה של קוד בשידור חי
   hoc_live_learn_title: למד עם שעה של קוד בשידור חי
@@ -12488,6 +12556,9 @@ he:
   video_library_page_inspirational_video_title_11: כל אחד יכול ללמוד (1דקות)
   video_library_page_inspirational_video_title_12: לו קה פאלטה אן נואסטראס אסקואלס
     (2 דקות)
+  video_library_page_inspirational_video_title_13: נאס"א חוגגת את שעת הקוד (2 דקות)
+  video_library_page_inspirational_video_title_14: זה יותר ממשחק (דקה אחת)
+  video_library_page_inspirational_video_title_15: צור עם מדעי המחשב (דקה אחת)
   video_library_page_not_hacked_video_title_1: 'איך לא להיפרץ: מבוא'
   video_library_page_not_hacked_video_title_2: 'איך לא להיפרץ: סיסמאות'
   video_library_page_not_hacked_video_title_3: 'איך לא להיפרץ: אימות ונעילת מכשירים'

@@ -338,7 +338,8 @@
           "wobbling": "tunduese"
         },
         "CourseF_outbreak1": {
-          "wandering": "bredh rreth e rrotull"
+          "recovering": "duke u rikuperuar",
+          "wandering": "duke bredhur"
         },
         "CourseF_outbreak1_-2022-2": {
           "recovering": "duke u rikuperuar",
@@ -348,7 +349,8 @@
           "wandering": "bredh rreth e rrotull"
         },
         "CourseF_outbreak2": {
-          "wandering": "bredh rreth e rrotull"
+          "recovering": "duke u rikuperuar",
+          "wandering": "duke bredhur"
         },
         "CourseF_outbreak2_-2022-2": {
           "recovering": "duke u rikuperuar",
@@ -358,7 +360,8 @@
           "wandering": "bredh rreth e rrotull"
         },
         "CourseF_outbreak3": {
-          "wandering": "bredh rreth e rrotull"
+          "recovering": "duke u rikuperuar",
+          "wandering": "duke bredhur"
         },
         "CourseF_outbreak3_-2022-2": {
           "recovering": "duke u rikuperuar",
@@ -368,19 +371,20 @@
           "wandering": "bredh rreth e rrotull"
         },
         "CourseF_outbreak4": {
-          "growing": "rritet",
-          "jittering": "nervozë",
+          "growing": "në rritje",
+          "jittering": "nervozizëm",
           "moving east": "lëviz nga lindja",
           "moving north": "lëviz nga veriu",
           "moving south": "lëviz nga jugu",
           "moving west": "lëviz nga perëndimi",
-          "moving with arrow keys": "lëviz me tastet e shigjetave",
+          "moving with arrow keys": "duke lëvizur me tastet e shigjetave",
           "patrolling": "patrullim",
-          "shrinking": "tkurret",
+          "recovering": "duke u rikuperuar",
+          "shrinking": "tkurrje",
           "spinning left": "rrotullim në të majtë",
           "spinning right": "rrotullim në të djathtë",
           "swimming left and right": "not majtas dhe djathtas",
-          "wandering": "bredh rreth e rrotull"
+          "wandering": "duke bredhur"
         },
         "CourseF_outbreak4_-2022-2": {
           "growing": "rritet",
@@ -414,7 +418,8 @@
           "wandering": "bredh rreth e rrotull"
         },
         "CourseF_outbreak5": {
-          "wandering": "bredh rreth e rrotull"
+          "recovering": "duke u rikuperuar",
+          "wandering": "duke bredhur"
         },
         "CourseF_outbreak5_-2022-2": {
           "recovering": "duke u rikuperuar",
@@ -424,7 +429,8 @@
           "wandering": "bredh rreth e rrotull"
         },
         "CourseF_outbreak6": {
-          "wandering": "bredh rreth e rrotull"
+          "recovering": "duke u rikuperuar",
+          "wandering": "duke bredhur"
         },
         "CourseF_outbreak6_-2022-2": {
           "recovering": "duke u rikuperuar",
@@ -434,18 +440,20 @@
           "wandering": "bredh rreth e rrotull"
         },
         "CourseF_outbreak7": {
-          "growing": "rritet",
-          "jittering": "nervozë",
+          "growing": "në rritje",
+          "jittering": "nervozizëm",
           "moving east": "lëviz nga lindja",
+          "moving left and right": "lëviz majtas dhe djathtas",
           "moving north": "lëviz nga veriu",
           "moving south": "lëviz nga jugu",
           "moving west": "lëviz nga perëndimi",
-          "moving with arrow keys": "lëviz me tastet e shigjetave",
+          "moving with arrow keys": "duke lëvizur me tastet e shigjetave",
           "patrolling": "patrullim",
-          "shrinking": "tkurret",
+          "recovering": "duke u rikuperuar",
+          "shrinking": "tkurrje",
           "spinning left": "rrotullim në të majtë",
           "spinning right": "rrotullim në të djathtë",
-          "wandering": "bredh rreth e rrotull"
+          "wandering": "duke bredhur"
         },
         "CourseF_outbreak7_-2022-2": {
           "growing": "rritet",
@@ -478,18 +486,20 @@
           "wandering": "bredh rreth e rrotull"
         },
         "CourseF_outbreak8": {
-          "growing": "rritet",
-          "jittering": "nervozë",
+          "growing": "në rritje",
+          "jittering": "nervozizëm",
           "moving east": "lëviz nga lindja",
+          "moving left and right": "lëviz majtas dhe djathtas",
           "moving north": "lëviz nga veriu",
           "moving south": "lëviz nga jugu",
           "moving west": "lëviz nga perëndimi",
-          "moving with arrow keys": "lëviz me tastet e shigjetave",
+          "moving with arrow keys": "duke lëvizur me tastet e shigjetave",
           "patrolling": "patrullim",
-          "shrinking": "tkurret",
+          "recovering": "duke u rikuperuar",
+          "shrinking": "tkurrje",
           "spinning left": "rrotullim në të majtë",
           "spinning right": "rrotullim në të djathtë",
-          "wandering": "bredh rreth e rrotull"
+          "wandering": "duke bredhur"
         },
         "CourseF_outbreak8_-2022-2": {
           "growing": "rritet",
@@ -2129,8 +2139,8 @@
           "spinning right2": "rrotullim në të djathtë2",
           "swimming left and right": "duke notuar majtas dhe djathtas",
           "swimming left and right2": "duke notuar majtas dhe djathtas",
-          "wandering": "duke bredhur",
-          "wandering2": "bredhje 2",
+          "wandering": "bredh rreth e rrotull",
+          "wandering2": "bredhje2",
           "wobbling": "tunduese"
         },
         "courseF_apps_aquarium2022": {
@@ -2402,7 +2412,7 @@
           "driving with arrow keys": "duke vozitur me tastet e shigjetave",
           "driving with arrow keys2": "duke vozitur me shigjeta2",
           "fluttering": "përplasje krahësh",
-          "flying west and looping": "fluturo drejt perëndimit dhe loop",
+          "flying west and looping": "fluturo drejt perëndimit dhe looping",
           "growing": "në rritje",
           "growing2": "në rritje2",
           "jittering": "nervozizëm",
@@ -2433,7 +2443,7 @@
           "driving with arrow keys": "vozitje me tastet e shigjetave",
           "driving with arrow keys2": "duke vozitur me shigjeta2",
           "fluttering": "përplasje krahësh",
-          "flying west and looping": "fluturo drejt perëndimit dhe loop",
+          "flying west and looping": "fluturo drejt perëndimit dhe looping",
           "growing": "rritet",
           "growing2": "rritet2",
           "jittering": "nervozë",
@@ -2464,7 +2474,7 @@
           "driving with arrow keys": "vozitje me tastet e shigjetave",
           "driving with arrow keys2": "duke vozitur me shigjeta2",
           "fluttering": "përplasje krahësh",
-          "flying west and looping": "fluturo drejt perëndimit dhe loop",
+          "flying west and looping": "fluturo drejt perëndimit dhe looping",
           "growing": "rritet",
           "growing2": "rritu2",
           "jittering": "nervozë",
@@ -2495,7 +2505,7 @@
           "driving with arrow keys": "vozitje me tastet e shigjetave",
           "driving with arrow keys2": "duke vozitur me shigjeta2",
           "fluttering": "përplasje krahësh",
-          "flying west and looping": "fluturo drejt perëndimit dhe loop",
+          "flying west and looping": "fluturo drejt perëndimit dhe looping",
           "growing": "rritet",
           "jittering": "nervozë",
           "moving east": "lëviz nga lindja",
@@ -2517,7 +2527,7 @@
           "growing": "rritja",
           "jittering": "nervozizëm",
           "moving east": "lëviz nga lindja",
-          "moving east and looping": "leviz nga lindja dhe looping",
+          "moving east and looping": "lëviz nga lindja dhe looping",
           "moving north": "lëviz nga veriu",
           "moving south": "lëviz nga jugu",
           "moving west": "lëviz nga perëndimi",

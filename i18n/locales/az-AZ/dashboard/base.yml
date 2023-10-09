@@ -203,6 +203,8 @@ az:
     parent_account_email_progress_permission: "Övladınızın tərəqqisi və layihələri haqqında hər hansı bir yeniləmə, kursları və kompüter elmləri ilə bağlı yenilikləri sizə göndərə bilərikmi? [(Məxfilik siyasətimizə baxın)] (%{privacy_policy_url})"
     parent_account_email_label: "Valideyn /Qəyyum E-poçtu"
     us_state: 'dövlət'
+    us_state_dropdown_options:
+      other: "Mən burada qeyd olunmayan yerdə yaşayıram"
   school_info:
     title: 'Təhsil müəssisəsi haqqında məlumat (istəyə görə)'
     school_country: 'Məktəb Ölkəsi'

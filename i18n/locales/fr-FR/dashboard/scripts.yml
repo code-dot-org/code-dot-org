@@ -475,7 +475,7 @@ fr:
           student_description: Apprends à programmer des droïdes et crée ton propre jeu Star Wars dans une galaxie lointaine, très lointaine.
           name: starwarsblocks
         mc:
-          title: Hour of Code Minecraft
+          title: Aventurier de Minecraft
           description: Utilise des blocs de code pour emmener Steve ou Alex vivre une aventure dans le monde de Minecraft.
           description_short: Explore un monde Minecraft à travers son code.
           student_description: Utilise des blocs de code pour emmener Steve ou Alex vivre une aventure dans le monde de Minecraft.
@@ -8259,3 +8259,7 @@ fr:
           lessons:
             lesson-1:
               name: Notre code d'éthique en matière d'IA
+        virtual-pl-csa-summer-2024-day1:
+          title: Jour 1
+        virtual-pl-csa-summer-day2:
+          title: Jour 2

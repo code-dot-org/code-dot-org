@@ -561,26 +561,30 @@ class I18n::Resources::Dashboard::CourseContent::SyncInTest < Minitest::Test
     assert_equal expected_result, sync_in_instance.send(:get_i18n_strings, level)
   end
 
-  def test_i18n_strings_collection_for_level_start_html
+  def test_i18n_strings_collection_for_level_start_libraries
     sync_in_instance = I18n::Resources::Dashboard::CourseContent::SyncIn.new
 
     level = FactoryBot.build(:level)
 
-    level.start_html = <<~HTML.strip
-      <div>
-        <h1>expected_start_html_text_1</h1>
-        <h2>expected_start_html_text_2</h2>
-      </div>
-    HTML
+    level.start_libraries = JSON.generate(
+      [{name: "I18N_library",
+        description: "Test Library that gets translated",
+        source: "var TRANSLATIONTEXT = {\n \"test_key_1\": \"expected_string_1\",\"test_key_2\": \"expected_string_2\"\n};\n\n//This library is translated\nfunction someFunction(key) {\n return TRANSLATIONTEXT[key];\n}\n"},
+       {name: "non_translated_library",
+        description: "Test Library that does not get translated",
+        source: "var TRANSLATIONTEXT = {\n \"not_translated_key\": \"not_translated_string\"\n};\n\n//This library is not translated\nfunction someFunction(key) {\n return TRANSLATIONTEXT[key];\n}\n"}]
+    )
     expected_result = {
-      'start_html' => {
-        'expected_start_html_text_1' => 'expected_start_html_text_1',
-        'expected_start_html_text_2' => 'expected_start_html_text_2',
+      'start_libraries' => {
+        'I18N_library' => {
+          'test_key_1' => 'expected_string_1',
+          'test_key_2' => 'expected_string_2',
+        }
       }
     }
     assert_equal expected_result, sync_in_instance.send(:get_i18n_strings, level)
 
-    level.start_html = ''
+    level.start_libraries = ''
     expected_result = {}
     assert_equal expected_result, sync_in_instance.send(:get_i18n_strings, level)
   end

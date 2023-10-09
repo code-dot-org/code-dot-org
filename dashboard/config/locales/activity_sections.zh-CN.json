@@ -24495,7 +24495,22 @@
             null
           ]
         },
+        "8beb2941-dd64-44f4-9e99-6149c445067a": {
+          "tips": [
+            null
+          ]
+        },
         "500131a4-a22b-4a63-bc0a-d5d4a19c7169": {
+          "tips": [
+            null
+          ]
+        },
+        "a45155ff-19af-43ac-bf11-6ca4001816f4": {
+          "tips": [
+            null
+          ]
+        },
+        "a7d5069b-aa1c-4efa-a8d8-b58bd43a6c7b": {
           "tips": [
             null
           ]
@@ -24510,7 +24525,17 @@
             null
           ]
         },
-        "b2b4b9e6-fe3f-4d2d-a828-1402cc1572e8": {
+        "4ff33db6-6668-4423-8f1d-ad0b25f6da40": {
+          "tips": [
+            null
+          ]
+        },
+        "169c3eed-52d7-4a4b-b7c6-161cf287ed33": {
+          "tips": [
+            null
+          ]
+        },
+        "f1632666-ffc1-457a-832a-c2d3b2d1fc20": {
           "tips": [
             null
           ]
@@ -24525,7 +24550,22 @@
             null
           ]
         },
+        "b2777295-b74f-4240-bb3d-c76b79dde6a9": {
+          "tips": [
+            null
+          ]
+        },
         "9bcab929-d773-4dab-bfb0-d09892056944": {
+          "tips": [
+            null
+          ]
+        },
+        "bedaca2d-4f48-45b4-b6e9-431f6a38cc13": {
+          "tips": [
+            null
+          ]
+        },
+        "221b5029-fcfd-4791-b951-852609cb0198": {
           "tips": [
             null
           ]
@@ -24991,7 +25031,7 @@
         },
         "a62557b9-907c-4a4f-aed3-c43c447de4b9": {
           "name": "因果关系",
-          "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i>**显示**：显示“显示你知道的东西！”幻灯片\n\n**讨论**：使用条件语句来解释平衡和/或不平衡的生态系统。\n\n**讨论目标**：学生将能够阐明他们学到的知识：生态系统中一种生物体对另一种生物体的影响。 "
+          "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i>**显示**：显示“展示你知道的东西！”幻灯片\n\n**讨论**：使用条件语句来解释平衡和/或不平衡的生态系统。\n\n**讨论目标**：学生将能够阐明他们学到的知识：生态系统中一种生物体对另一种生物体的影响。 "
         },
         "1cc29624-e2d1-4065-9043-e1c463b1da82": {
           "description": "我们已经学会了如何使用代码在生态系统中显示因果关系！展示你学到的知识：这个水生生态系统中的生物如何相互平衡以及过度捕捞如何破坏平衡。填写条件语句的空白：如果**\\\\ \\_\\\\ \\_\\\\ \\_\\\\ \\_**那么**\\\\ \\_\\\\ \\_\\\\ \\_\\\\ \\_\\\\ \\_**。词库有一些选项可以帮助你入门，但你也可以使用其他任何你需要的词语。 \n\n例如：如果**藻类太多**，那么**珊瑚就会变得不健康**。如果**吃藻类的鱼太少**，那么**藻类就会过度生长**。"
@@ -25060,7 +25100,7 @@
         },
         "a758b35b-192c-4765-b0f7-f419f9d55a88": {
           "name": "展示你所知道的",
-          "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i>**显示**：显示“显示你知道的东西”幻灯片\n\n**说：** \n\n-   _说出第3课：平衡生态系统中使用的三个代码模块。_ \n-   \\_描述过度捕捞问题的两个解决方案。\n-   _解释本课中你最喜欢的一个部分。_\n\n**这样做**：让学生将答案记录在便签、日记、Google表单或课堂使用的其他内容管理系统上。_可选：扩展阅读和讨论。_"
+          "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i>**显示**：显示“展示你知道的东西”幻灯片\n\n**说：** \n\n-   _说出第3课：平衡生态系统中使用的三个代码模块。_ \n-   \\_描述过度捕捞问题的两个解决方案。\n-   _解释本课中你最喜欢的一个部分。_\n\n**这样做**：让学生将答案记录在便签、日记、Google表单或课堂使用的其他内容管理系统上。_可选：扩展阅读和讨论。_"
         },
         "a9a34da7-fec1-45cb-98d5-ce3ad961fa6b": {
           "description": "通过探索过度捕捞对包含鱼、藻类和珊瑚的生态系统的影响，我们学到了很多关于计算机编程的知识。我们编程了三种不同的解决方案，以帮助珊瑚更长时间地保持健康。你认为哪个是最好的解决方案？解释你的答案。使用来自模拟中的证据。\n\n中总之，请花点时间考虑你在当地生态系统中的角色。想一想人类可能如何影响水生生态系统，我们如何努力保持生态系统的平衡，以便所有生物都能茁壮成长。 "
@@ -25171,7 +25211,7 @@
         },
         "aa9723bf-a22c-4655-8761-a357f2e53e0b": {
           "tips": [
-            "关卡2-9为自定进度而设计。学生的进展速度可能不同。你可以考虑与你知道需要额外支持或集中精力的学生一起设置结对编程。如果你打算让学生结对编程，请与班级一起观看<a href=\"https://www.youtube.com/watch?v=sxToW3ixrwo\" target=\"_blank\">视频</a>。在<a href=\"https://support.code.org/hc/en-us/articles/115002122788-How-does-pair-programming-on-Code-org-work-\" target=\"_blank\">此处</a>了解有关如何设置结对编程的更多信息。 \n\n如果你的学生是第一次使用精灵图实验室，请参阅这个<a href=\"https://docs.google.com/presentation/d/1RSJhxO9ZMtyLrt160kvAVdyekR4wT2fVSgbrPHR4HS0/template/preview\" target=\"_blank\">实用提示</a>资源。 "
+            "关卡2-9为自定进度而设计。学生的进展速度可能不同。你可以考虑与你知道需要额外支持或集中精力的学生一起设置结对编程。如果你打算让学生结对编程，请与班级一起观看<a href=\"https://www.youtube.com/watch?v=sxToW3ixrwo\" target=\"_blank\">视频</a>。在<a href=\"https://support.code.org/hc/en-us/articles/115002122788-How-does-pair-programming-on-Code-org-work-\" target=\"_blank\">此处</a>了解有关如何设置结对编程的更多信息。 \n\n如果你的学生是第一次使用精灵图实验室，请参阅这个<a href=\"https://docs.google.com/presentation/d/1k1bpCeQdh8PPHmh1ztDLyW2_jyuBhWqqRDhy1AKQ3U8/\" target=\"_blank\">实用提示</a>资源。 "
           ],
           "progression_name": "技能建设"
         },

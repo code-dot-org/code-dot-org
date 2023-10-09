@@ -1259,11 +1259,11 @@
         },
         "code/csc-adaptations/2023": {
           "word": "코드",
-          "definition": "(v) 컴퓨터에 대한 지침을 작성하려면"
+          "definition": "(동사) 컴퓨터에 쓰이는 명령문을 작성하다"
         },
         "event/csc-adaptations/2023": {
           "word": "이벤트 ",
-          "definition": "어떤 일이 일어나도록 하는 행동"
+          "definition": "어떤 일이 일어나도록 하는 동작"
         },
         "evolution/csc-adaptations/2023": {
           "word": "진화",
@@ -1319,51 +1319,51 @@
         },
         "code/csc-ecosystems/2023": {
           "word": "코드",
-          "definition": "(v) 컴퓨터에 대한 지침을 작성하려면"
+          "definition": "(동사) 컴퓨터에 쓰이는 명령문을 작성하다"
         },
         "condition/csc-ecosystems/2023": {
           "word": "조건",
-          "definition": "액션을 허용하기 전에 프로그램이 참인지 확인하는 것"
+          "definition": "작업을 실행하기 전에 프로그램이 참과 거짓 여부를 확인하는 것"
         },
         "conditionals/csc-ecosystems/2023": {
-          "word": "조건",
-          "definition": "특정 조건에서만 실행되는 명령문"
+          "word": "조건문",
+          "definition": "특정 조건이 충족되어야 실행하는 명령문"
         },
         "ecosystem/csc-ecosystems/2023": {
           "word": "생태계",
-          "definition": "상호 작용하는 유기체와 환경의 생물학적 공동체"
+          "definition": "상호작용하는 생물과 환경의 생물학적 복합체계"
         },
         "event/csc-ecosystems/2023": {
           "word": "이벤트 ",
-          "definition": "어떤 일이 일어나도록 하는 행동"
+          "definition": "어떤 일이 일어나도록 하는 동작"
         },
         "overfishing/csc-ecosystems/2023": {
           "word": "남획",
-          "definition": "번식 가능한 속도보다 빠른 물고기 제거"
+          "definition": "번식 속도를 능가하는 속도로 물고기를 잡는 것"
         },
         "simulation/csc-ecosystems/2023": {
           "word": "시뮬레이션",
-          "definition": "연구 목적의 컴퓨터 모델."
+          "definition": "연구 목적의 컴퓨터 모델"
         },
         "debug/csc-ecosystems/2023": {
           "word": "디버그",
-          "definition": "코드에서 오류 또는 문제를 찾고 수정합니다."
+          "definition": "코드에서 오류 또는 문제를 찾아 수정함"
         },
         "variable/csc-ecosystems/2023": {
           "word": "변수",
-          "definition": "값을 저장할 수 있는 컨테이너입니다. "
+          "definition": "값을 저장할 수 있는 컨테이너"
         },
         "ecologist/csc-ecosystems/2023": {
           "word": "생태학자",
-          "definition": "동물과 식물이 환경과 어떻게 상호 작용하는지 연구하는 과학자."
+          "definition": "동식물이 환경과 상호 작용하는 방법을 연구하는 과학자"
         },
         "energy/csc-ecosystems/2023": {
           "word": "에너지",
-          "definition": "생산자에서 소비자에게 먹이 그물에 있는 유기체 간에 전달됩니다.유기체는 복잡한 작업을 수행하는 데 에너지를 사용합니다."
+          "definition": "먹이 그물망에서 생산자가 소비자로 전달하는 것. 에너지는 생물이 활동하고 복잡한 작업을 수행하는 데 사용된다."
         },
         "food_chain/csc-ecosystems/2023": {
           "word": "먹이 사슬 ",
-          "definition": "먹는 음식 순서대로, 생산자에서 소비자로, 먹이에서 포식자로 연결된 유기체 그룹."
+          "definition": "생산자에서 소비자로, 먹이에서 포식자 순으로 먹이의 순서대로 연결된 생물"
         },
         "code/csc-mappinglandmarks/2023": {
           "word": "코드",
