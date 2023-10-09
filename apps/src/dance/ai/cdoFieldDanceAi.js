@@ -107,7 +107,7 @@ class CdoFieldDanceAi extends GoogleBlockly.Field {
       GoogleBlockly.utils.dom.createSvgElement(
         'image',
         {
-          x: FIELD_PADDING + (ITEM_WIDTH + 1) * index,
+          x: FIELD_PADDING + (ITEM_WIDTH + ITEM_SPACING) * index,
           y: FIELD_PADDING,
           width: ITEM_WIDTH,
           href: `/blockly/media/dance/ai/emoji/${input}.svg`,
