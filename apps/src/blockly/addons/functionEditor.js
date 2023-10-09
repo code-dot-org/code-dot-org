@@ -42,6 +42,7 @@ export default class FunctionEditor {
 
     // Customize auto-populated Functions toolbox category.
     this.editorWorkspace = Blockly.blockly_.inject(modalEditor, {
+      renderer: options.renderer,
       toolbox: options.toolbox,
       theme: Blockly.cdoUtils.getUserTheme(options.theme),
       move: {

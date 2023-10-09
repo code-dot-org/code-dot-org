@@ -12,113 +12,12 @@ import msg from '@cdo/locale';
 export const blocks = {
   // Creates and returns a toggle button field. This field should be
   // added to the block after other inputs have been created.
-  initializeMiniToolbox2() {
-    // Function to create the flyout
-    const createFlyoutField = function (block) {
-      const flyoutKey = CdoFieldFlyout.getFlyoutId(block);
-      const flyoutField = new Blockly.FieldFlyout(_, {
-        flyoutKey: flyoutKey,
-        sizingBehavior: 'fitContent',
-        name: 'FLYOUT',
-        isFlyoutVisible: true,
-      });
-
-      // TODO: This is gross and there has to be a better way
-      let newInput = block
-        .appendDummyInput('flyout_input')
-        .appendField(flyoutField, flyoutKey);
-      block.inputList.pop();
-      console.log('newInput', newInput);
-
-      let desiredPosition = 1; // Adjust as needed
-      block.inputList.splice(desiredPosition, 0, newInput);
-
-      return flyoutField;
-    };
-
-    // Function to toggle the flyout visibility, which actually creates or
-    // deletes the flyout depending on the current visibility.
-    const toggleFlyout = function () {
-      const block = this.getSourceBlock();
-      console.log('block.inputList', block.inputList);
-      if (!block.getInput('flyout_input')) {
-        const flyoutField = createFlyoutField(block);
-        console.log('flyoutField', flyoutField);
-        flyoutField.showEditor();
-        flyoutField.render_();
-      } else {
-        block.removeInput('flyout_input');
-      }
-    };
-
-    const defaultIcon = document.createElementNS(SVG_NS, 'tspan');
-    defaultIcon.style.fontFamily = 'FontAwesome';
-    defaultIcon.textContent = '\uf067 '; // plus icon
-
-    const alternateIcon = document.createElementNS(SVG_NS, 'tspan');
-    alternateIcon.style.fontFamily = 'FontAwesome';
-    alternateIcon.textContent = '\uf068 '; // minus icon
-
-    const colorOverrides = {
-      icon: Button.ButtonColor.white,
-      button: Button.ButtonColor.blue,
-    };
-
-    const flyoutToggleButton = new Blockly.FieldToggle({
-      onClick: toggleFlyout,
-      defaultIcon,
-      alternateIcon,
-      useDefaultIcon: true,
-      callback: createFlyoutField,
-      colorOverrides,
-    });
-
-    return flyoutToggleButton;
-  },
-
-  // Adds a toggle button field to a block. Requires other inputs to already exist.
-  appendMiniToolboxToggle2(miniToolboxBlocks, flyoutToggleButton) {
-    console.log('apppending mini toolbox toggle 2!');
-    console.log('this in appendMiniToolboxToggle', this);
-    this.setInputsInline(true);
-    // We set the inputs to align left so that if the flyout is larger than the
-    // inputs will be aligned with the left edge of the block.
-    this.inputList.forEach(input => {
-      input.setAlign(Blockly.Input.Align.LEFT);
-    });
-
-    // Insert the toggle field at the beginning for the first input row.
-    const firstInput = this.inputList[0];
-    firstInput.insertFieldAt(0, flyoutToggleButton, `button_${this.type}`);
-
-    // These blocks require a renderer that treats dummy inputs like row separators:
-    // https://github.com/google/blockly-samples/tree/master/plugins/renderer-inline-row-separators
-    const lastInput = this.inputList[this.inputList.length - 1];
-    // Force add a dummy input at the end of the block, if needed.
-    if (lastInput.type !== Blockly.inputTypes.DUMMY) {
-      this.appendDummyInput();
-    }
-
-    if (this.workspace.rendered) {
-      this.workspace.registerToolboxCategoryCallback(
-        CdoFieldFlyout.getFlyoutId(this),
-        function () {
-          let blocks = [];
-          miniToolboxBlocks.forEach(blockType =>
-            blocks.push({
-              kind: 'block',
-              type: blockType,
-            })
-          );
-          return blocks;
-        }
-      );
-    }
-  },
-
-  // Creates and returns a toggle button field. This field should be
-  // added to the block after other inputs have been created.
-  initializeMiniToolbox() {
+  initializeMiniToolbox(
+    miniToolboxBlocks,
+    options = {renderToolboxBeforeStack: false}
+  ) {
+    console.log('initializing mini toolbox!');
+    console.log('this', this);
     // Function to create the flyout
     const createFlyoutField = function (block) {
       const flyoutKey = CdoFieldFlyout.getFlyoutId(block);
@@ -131,6 +30,16 @@ export const blocks = {
       block
         .appendDummyInput('flyout_input')
         .appendField(flyoutField, flyoutKey);
+
+      if (!!options.renderToolboxBeforeStack) {
+        // TODO: Is there a better way?
+        // block.appendDummyInput('row_separator');
+        // block
+        //   .appendDummyInput('flyout_input')
+        //   .appendField(flyoutField, flyoutKey);
+        block.moveInputBefore('flyout_input', 'STACK');
+        // block.moveInputBefore('row_separator', 'flyout_input');
+      }
       return flyoutField;
     };
 
@@ -169,32 +78,10 @@ export const blocks = {
       colorOverrides,
     });
 
-    return flyoutToggleButton;
-  },
-
-  // Adds a toggle button field to a block. Requires other inputs to already exist.
-  appendMiniToolboxToggle(miniToolboxBlocks, flyoutToggleButton) {
-    this.setInputsInline(true);
-    // We set the inputs to align left so that if the flyout is larger than the
-    // inputs will be aligned with the left edge of the block.
-    this.inputList.forEach(input => {
-      input.setAlign(Blockly.Input.Align.LEFT);
-    });
-
-    // Insert the toggle field at the beginning for the first input row.
-    const firstInput = this.inputList[0];
-    firstInput.insertFieldAt(0, flyoutToggleButton, `button_${this.type}`);
-
-    // These blocks require a renderer that treats dummy inputs like row separators:
-    // https://github.com/google/blockly-samples/tree/master/plugins/renderer-inline-row-separators
-    const lastInput = this.inputList[this.inputList.length - 1];
-    // Force add a dummy input at the end of the block, if needed.
-    if (lastInput.type !== Blockly.inputTypes.DUMMY) {
-      this.appendDummyInput();
-    }
-
+    console.log('got here!');
+    console.log('workspace: ', this.workspace);
     if (this.workspace.rendered) {
-      const imageSourceId = this.id;
+      // const imageSourceId = this.id;
       this.workspace.registerToolboxCategoryCallback(
         CdoFieldFlyout.getFlyoutId(this),
         function () {
@@ -203,9 +90,9 @@ export const blocks = {
             blocks.push({
               kind: 'block',
               type: blockType,
-              extraState: {
-                imageSourceId: imageSourceId,
-              },
+              // extraState: {
+              //   imageSourceId: imageSourceId,
+              // },
             })
           );
           return blocks;
@@ -213,38 +100,66 @@ export const blocks = {
       );
     }
 
+    console.log('returning flyout toggle button');
+    return flyoutToggleButton;
+  },
+
+  // Adds a toggle button field to a block. Requires other inputs to already exist.
+  appendMiniToolboxToggle(flyoutToggleButton) {
+    console.log('appending mini toolbox');
+    console.log('this', this);
+    // this.setInputsInline(true);
+    // // We set the inputs to align left so that if the flyout is larger than the
+    // // inputs will be aligned with the left edge of the block.
+    // this.inputList.forEach(input => {
+    //   input.setAlign(Blockly.Input.Align.LEFT);
+    // });
+
+    // Insert the toggle field at the beginning for the first input row.
+    const firstInput = this.inputList[0];
+    firstInput.insertFieldAt(0, flyoutToggleButton, `button_${this.type}`);
+
+    // // These blocks require a renderer that treats dummy inputs like row separators:
+    // // https://github.com/google/blockly-samples/tree/master/plugins/renderer-inline-row-separators
+    // const lastInput = this.inputList[this.inputList.length - 1];
+    // // Force add a dummy input at the end of the block, if needed.
+    // if (lastInput.type !== Blockly.inputTypes.DUMMY) {
+    //   this.appendDummyInput();
+    // }
+
     // Blockly mutators are extensions add custom serialization to a block.
     // Serialize the state of the toggle icon to determine whether a
     // flyout field is needed immediately upon loading the block.
 
-    // JSON serialization hooks
-    this.saveExtraState = function () {
-      // Ex. Add {"extraState": {"useDefaultIcon": false}} to block JSON
-      return {
-        useDefaultIcon: flyoutToggleButton.useDefaultIcon,
-      };
-    };
-    this.loadExtraState = function (state) {
-      const useDefaultIcon = state['useDefaultIcon'];
-      flyoutToggleButton.setIcon(useDefaultIcon);
-    };
+    // // JSON serialization hooks
+    // this.saveExtraState = function () {
+    //   // Ex. Add {"extraState": {"useDefaultIcon": false}} to block JSON
+    //   return {
+    //     useDefaultIcon: flyoutToggleButton.useDefaultIcon,
+    //   };
+    // };
+    // this.loadExtraState = function (state) {
+    //   const useDefaultIcon = state['useDefaultIcon'];
+    //   flyoutToggleButton.setIcon(useDefaultIcon);
+    // };
 
-    // XML serialization hooks
-    this.mutationToDom = function () {
-      var container = Blockly.utils.xml.createElement('mutation');
-      // Ex. add <mutation useDefaultIcon="false"/> to block XML
-      container.setAttribute(
-        'useDefaultIcon',
-        flyoutToggleButton.useDefaultIcon
-      );
-      return container;
-    };
-    this.domToMutation = function (xmlElement) {
-      const useDefaultIcon =
-        // Coerce string to Boolean
-        xmlElement.getAttribute('useDefaultIcon') === 'true';
-      flyoutToggleButton.setIcon(useDefaultIcon);
-    };
+    // // XML serialization hooks
+    // this.mutationToDom = function () {
+    //   var container = Blockly.utils.xml.createElement('mutation');
+    //   // Ex. add <mutation useDefaultIcon="false"/> to block XML
+    //   container.setAttribute(
+    //     'useDefaultIcon',
+    //     flyoutToggleButton.useDefaultIcon
+    //   );
+    //   return container;
+    // };
+    // this.domToMutation = function (xmlElement) {
+    //   const useDefaultIcon =
+    //     // Coerce string to Boolean
+    //     xmlElement.getAttribute('useDefaultIcon') === 'true';
+    //   flyoutToggleButton.setIcon(useDefaultIcon);
+    // };
+    console.log('returning');
   },
 
   // Set up this block to shadow a image source block's image, if needed. This will also

@@ -142,18 +142,14 @@ GoogleBlockly.Extensions.register('procedures_edit_button', function () {
 // This extension renders a mini toolbox for the modal function editor.
 GoogleBlockly.Extensions.register('modal_procedures_mini_toolbox', function () {
   // const miniToolboxBlocks = [];
-  const miniToolboxBlocks = ['gamelab_newSpritePointer'];
-  const flyoutToggleButton =
-    Blockly.customBlocks.initializeMiniToolbox2.bind(this)(miniToolboxBlocks);
-  Blockly.customBlocks.appendMiniToolboxToggle2.bind(this)(
-    miniToolboxBlocks,
-    flyoutToggleButton
-  );
+  const miniToolboxBlocks = ['sprite_parameter_get'];
+  const flyoutToggleButton = Blockly.customBlocks.initializeMiniToolbox.bind(
+    this
+  )(miniToolboxBlocks, {
+    renderToolboxBeforeStack: true,
+  });
+  Blockly.customBlocks.appendMiniToolboxToggle.bind(this)(flyoutToggleButton);
 });
-// GoogleBlockly.Extensions.registerMutator(
-//   'modal_procedures_mini_toolbox',
-//   modalProceduresMiniToolbox
-// );
 
 // This extension adds an SVG frame around procedures definition blocks.
 // Not used in Music Lab or wherever the modal function is enabled.
