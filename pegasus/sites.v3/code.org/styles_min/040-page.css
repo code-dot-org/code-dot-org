@@ -151,6 +151,18 @@ a:link:has(*) {
   text-decoration: none;
 }
 
+.has-external-link a::after,
+a.has-external-link::after {
+  font: var(--fa-font-solid);
+  content: "\f08e";
+  margin: 0 2px 0 4px;
+}
+
+html[dir="rtl"] .has-external-link a::after,
+html[dir="rtl"] a.has-external-link::after {
+  margin: 0 4px 0 2px;
+}
+
 strong {
   font-family: var(--gotham-bold);
 }
