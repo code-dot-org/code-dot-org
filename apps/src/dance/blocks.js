@@ -95,24 +95,7 @@ const customInputTypes = {
         .appendField(newField, 'VALUE');
     },
     generateCode(block, arg) {
-      const valueJsonString = block.getFieldValue(arg.name);
-      const value = JSON.parse(valueJsonString || '{}');
-
-      const pickedValue = (({
-        backgroundEffect,
-        backgroundColor,
-        foregroundEffect,
-        dancers,
-      }) => ({
-        backgroundEffect,
-        backgroundColor,
-        foregroundEffect,
-        dancers,
-      }))(value);
-
-      const pickedValueJsonString = JSON.stringify(pickedValue);
-
-      return pickedValueJsonString;
+      return block.getFieldValue(arg.name);
     },
   },
 };
