@@ -1047,13 +1047,6 @@ Dashboard::Application.routes.draw do
       end
     end
 
-    resources :learning_goal_evaluations, only: [:create, :update] do
-      collection do
-        get :get_evaluation
-        post :get_or_create_evaluation
-      end
-    end
-
     resources :learning_goal_teacher_evaluations, only: [:create, :update] do
       collection do
         get :get_evaluation
