@@ -1,18 +1,16 @@
 import * as GoogleBlockly from 'blockly/core';
 import msg from '@cdo/locale';
-import experiments from '@cdo/apps/util/experiments';
 import {nameComparator} from '@cdo/apps/util/sort';
-import BlockSvgFrame from '../../addons/blockSvgFrame';
+import BlockSvgFrame from '@cdo/apps/blockly/addons/blockSvgFrame';
 import {procedureDefMutator} from './mutators/procedureDefMutator';
+import {BLOCK_TYPES} from '@cdo/apps/blockly/constants';
+import {
+  useModalFunctionEditor,
+  modalFunctionEditorExperimentEnabled,
+  modalFunctionEditButton,
+} from './helpers';
 
 const BLOCK_OFFSET = 16;
-
-// In Lab2, the level properties are in Redux, not appOptions. To make this work in Lab2,
-// we would need to send that property from the backend and save it in lab2Redux.
-const useModalFunctionEditor = window.appOptions?.level?.useModalFunctionEditor;
-const modalFunctionEditorExperimentEnabled = experiments.isEnabled(
-  experiments.MODAL_FUNCTION_EDITOR
-);
 
 /**
  * A dictionary of our custom procedure block definitions, used across labs.
@@ -23,7 +21,7 @@ export const blocks = GoogleBlockly.common.createBlockDefinitionsFromJsonArray([
   {
     // Block for defining a function (aka procedure) with no return value.
     // When using the modal function editor, the name field is an uneditable label.
-    type: 'procedures_defnoreturn',
+    type: BLOCK_TYPES.procedureDefinition,
     message0: '%1 %2 %3 %4',
     message1: '%1',
     args0: [
@@ -76,7 +74,7 @@ export const blocks = GoogleBlockly.common.createBlockDefinitionsFromJsonArray([
   },
   {
     // Block for calling a procedure with no return value.
-    type: 'procedures_callnoreturn',
+    type: BLOCK_TYPES.procedureCall,
     message0: '%1 %2',
     args0: [
       {type: 'field_label', name: 'NAME', text: '%{BKY_UNNAMED_KEY}'},
@@ -123,24 +121,10 @@ export const editButtonHandler = function () {
   }
 };
 
-// This extension adds an edit button to the end of a procedure call block.
-const editButton = function () {
-  // Edit buttons are used to open the modal editor. The button is appended to the last input.
-  if (
-    useModalFunctionEditor &&
-    this.inputList.length &&
-    !this.workspace.isFlyout
-  ) {
-    const button = new Blockly.FieldButton({
-      value: msg.edit(),
-      onClick: editButtonHandler,
-      colorOverrides: {button: 'blue', text: 'white'},
-    });
-    this.inputList[this.inputList.length - 1].appendField(button, 'EDIT');
-  }
-};
-
-GoogleBlockly.Extensions.register('procedures_edit_button', editButton);
+GoogleBlockly.Extensions.register('procedures_edit_button', function () {
+  const createEditButton = modalFunctionEditButton.bind(this);
+  createEditButton(editButtonHandler);
+});
 
 // This extension adds an SVG frame around procedures definition blocks.
 // Not used in Music Lab or wherever the modal function is enabled.
@@ -198,7 +182,7 @@ export function flyoutCategory(workspace, functionEditorOpen = false) {
   // Note: Blockly.Msg was undefined when this code was extracted into global scope
   const functionDefinitionBlock = {
     kind: 'block',
-    type: 'procedures_defnoreturn',
+    type: BLOCK_TYPES.procedureDefinition,
     fields: {
       NAME: Blockly.Msg.PROCEDURES_DEFNORETURN_PROCEDURE,
     },
@@ -226,7 +210,7 @@ export function flyoutCategory(workspace, functionEditorOpen = false) {
   workspaces.forEach(workspace => {
     const procedureBlocks = workspace
       .getTopBlocks()
-      .filter(topBlock => topBlock.type === 'procedures_defnoreturn');
+      .filter(topBlock => topBlock.type === BLOCK_TYPES.procedureDefinition);
     procedureBlocks.forEach(block => {
       allFunctions.push({
         name: block.getFieldValue('NAME'),
@@ -260,7 +244,9 @@ const getNewFunctionButtonWithCallback = (
   if (modalFunctionEditorExperimentEnabled) {
     callbackKey = 'newProcedureCallback';
     callback = () =>
-      Blockly.functionEditor.newProcedureCallback('procedures_defnoreturn');
+      Blockly.functionEditor.newProcedureCallback(
+        BLOCK_TYPES.procedureDefinition
+      );
   } else {
     callbackKey = 'createAndCenterFunctionDefinitionBlock';
     // Everything here is place-holder code that should be replaced with a

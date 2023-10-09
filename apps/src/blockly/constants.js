@@ -75,6 +75,9 @@ export const BLOCK_TYPES = {
   procedureDefinition: 'procedures_defnoreturn',
   whenRun: 'when_run',
   whenSetup: 'Dancelab_whenSetup',
+  behaviorGet: 'gamelab_behavior_get',
+  spriteParameterGet: 'sprite_parameter_get',
+  procedureCall: 'procedures_callnoreturn',
 };
 
 // A list of block types that are procedure definitions. These are sorted
