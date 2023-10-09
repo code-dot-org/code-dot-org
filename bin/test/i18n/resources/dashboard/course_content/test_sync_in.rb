@@ -394,7 +394,7 @@ class I18n::Resources::Dashboard::CourseContent::SyncInTest < Minitest::Test
     level.authored_hints = [
       {
         hint_id:       'expected_level_authored_hint_id',
-        hint_markdown: <<-XML.strip.gsub(/^ {10}/, '')
+        hint_markdown: <<~XML.strip
           <xml>
             <block type="text">
               <title name="TEXT">expected_text</title>
@@ -499,7 +499,7 @@ class I18n::Resources::Dashboard::CourseContent::SyncInTest < Minitest::Test
     sync_in_instance = I18n::Resources::Dashboard::CourseContent::SyncIn.new
 
     level = FactoryBot.build(:level)
-    level.short_instructions = <<-XML.strip.gsub(/^ {6}/, '')
+    level.short_instructions = <<~XML.strip
       <xml>
         <block type="text">
           <title name="TEXT">expected_text</title>
@@ -532,7 +532,7 @@ class I18n::Resources::Dashboard::CourseContent::SyncInTest < Minitest::Test
     sync_in_instance = I18n::Resources::Dashboard::CourseContent::SyncIn.new
 
     level = FactoryBot.build(:level)
-    level.long_instructions = <<-XML.strip.gsub(/^ {6}/, '')
+    level.long_instructions = <<~XML.strip
       <xml>
         <block type="text">
           <title name="TEXT">expected_text</title>
@@ -566,7 +566,7 @@ class I18n::Resources::Dashboard::CourseContent::SyncInTest < Minitest::Test
 
     level = FactoryBot.build(:level)
 
-    level.start_html = <<-HTML.strip.gsub(/^ {6}/, '')
+    level.start_html = <<~HTML.strip
       <div>
         <h1>expected_start_html_text_1</h1>
         <h2>expected_start_html_text_2</h2>
