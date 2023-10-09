@@ -69,6 +69,9 @@ const CoteacherInviteNotification = ({
   );
 };
 
+export const UnconnectedCoteacherInviteNotification =
+  CoteacherInviteNotification;
+
 export default connect(
   state => ({
     coteacherInvite: state.teacherSections.coteacherInvite,
