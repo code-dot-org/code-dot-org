@@ -1,5 +1,6 @@
 require_relative '../../../../test_helper'
 require_relative '../../../../../i18n/resources/dashboard/course_content/sync_in'
+require 'json'
 
 class I18n::Resources::Dashboard::CourseContent::SyncInTest < Minitest::Test
   def setup
@@ -7,30 +8,25 @@ class I18n::Resources::Dashboard::CourseContent::SyncInTest < Minitest::Test
     FileUtils.stubs(:mkdir_p)
   end
 
-  def test_performing
-    sync_in_instance = mock(:execute)
-
-    I18n::Resources::Dashboard::CourseContent::SyncIn.expects(:new).once.returns(sync_in_instance)
-
-    I18n::Resources::Dashboard::CourseContent::SyncIn.perform
+  def test_base_class_inheriting
+    assert_equal I18n::Utils::SyncInBase, I18n::Resources::Dashboard::CourseOfferings::SyncIn.superclass
   end
 
   def test_execution
-    sync_in_instance = I18n::Resources::Dashboard::CourseContent::SyncIn.new
-    exec_seq = sequence('execution')
+    execution_sequence = sequence('execution')
 
-    sync_in_instance.stubs(:variable_strings).returns('expected_variable_strings')
-    sync_in_instance.stubs(:parameter_strings).returns('expected_parameter_strings')
+    I18n::Resources::Dashboard::CourseContent::SyncIn.any_instance.stubs(:variable_strings).returns('expected_variable_strings')
+    I18n::Resources::Dashboard::CourseContent::SyncIn.any_instance.stubs(:parameter_strings).returns('expected_parameter_strings')
 
-    sync_in_instance.expects(:prepare_level_content).in_sequence(exec_seq)
-    sync_in_instance.expects(:prepare_project_content).in_sequence(exec_seq)
+    I18n::Resources::Dashboard::CourseContent::SyncIn.any_instance.expects(:prepare_level_content).in_sequence(execution_sequence)
+    I18n::Resources::Dashboard::CourseContent::SyncIn.any_instance.expects(:prepare_project_content).in_sequence(execution_sequence)
 
-    sync_in_instance.expects(:write_to_yml).with('variable_names', 'expected_variable_strings').in_sequence(exec_seq)
-    sync_in_instance.expects(:write_to_yml).with('parameter_names', 'expected_parameter_strings').in_sequence(exec_seq)
+    I18n::Resources::Dashboard::CourseContent::SyncIn.any_instance.expects(:write_to_yml).with('variable_names', 'expected_variable_strings').in_sequence(execution_sequence)
+    I18n::Resources::Dashboard::CourseContent::SyncIn.any_instance.expects(:write_to_yml).with('parameter_names', 'expected_parameter_strings').in_sequence(execution_sequence)
 
-    sync_in_instance.expects(:redact_level_content).in_sequence(exec_seq)
+    I18n::Resources::Dashboard::CourseContent::SyncIn.any_instance.expects(:redact_level_content).in_sequence(execution_sequence)
 
-    sync_in_instance.execute
+    I18n::Resources::Dashboard::CourseContent::SyncIn.perform
   end
 
   def test_level_content_preparation_of_hoc_script
@@ -566,26 +562,30 @@ class I18n::Resources::Dashboard::CourseContent::SyncInTest < Minitest::Test
     assert_equal expected_result, sync_in_instance.send(:get_i18n_strings, level)
   end
 
-  def test_i18n_strings_collection_for_level_start_html
+  def test_i18n_strings_collection_for_level_start_libraries
     sync_in_instance = I18n::Resources::Dashboard::CourseContent::SyncIn.new
 
     level = FactoryBot.build(:level)
 
-    level.start_html = <<-HTML.strip.gsub(/^ {6}/, '')
-      <div>
-        <h1>expected_start_html_text_1</h1>
-        <h2>expected_start_html_text_2</h2>
-      </div>
-    HTML
+    level.start_libraries = JSON.generate(
+      [{name: "I18N_library",
+        description: "Test Library that gets translated",
+        source: "var TRANSLATIONTEXT = {\n \"test_key_1\": \"expected_string_1\",\"test_key_2\": \"expected_string_2\"\n};\n\n//This library is translated\nfunction someFunction(key) {\n return TRANSLATIONTEXT[key];\n}\n"},
+       {name: "non_translated_library",
+        description: "Test Library that does not get translated",
+        source: "var TRANSLATIONTEXT = {\n \"not_translated_key\": \"not_translated_string\"\n};\n\n//This library is not translated\nfunction someFunction(key) {\n return TRANSLATIONTEXT[key];\n}\n"}]
+    )
     expected_result = {
-      'start_html' => {
-        'expected_start_html_text_1' => 'expected_start_html_text_1',
-        'expected_start_html_text_2' => 'expected_start_html_text_2',
+      'start_libraries' => {
+        'I18N_library' => {
+          'test_key_1' => 'expected_string_1',
+          'test_key_2' => 'expected_string_2',
+        }
       }
     }
     assert_equal expected_result, sync_in_instance.send(:get_i18n_strings, level)
 
-    level.start_html = ''
+    level.start_libraries = ''
     expected_result = {}
     assert_equal expected_result, sync_in_instance.send(:get_i18n_strings, level)
   end

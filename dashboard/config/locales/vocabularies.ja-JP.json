@@ -1166,11 +1166,11 @@
         },
         "code/csc-adaptations/2023": {
           "word": "コード",
-          "definition": "(v) コンピュータに命令を書くこと"
+          "definition": "(v) コンピュータにインストラクションを書くこと"
         },
         "event/csc-adaptations/2023": {
           "word": "イベント",
-          "definition": "何かを起こさせる行動"
+          "definition": "何かを引き起こす行動"
         },
         "evolution/csc-adaptations/2023": {
           "word": "進化",
@@ -1226,27 +1226,27 @@
         },
         "code/csc-ecosystems/2023": {
           "word": "コード",
-          "definition": "(v) コンピュータに命令を書くこと"
+          "definition": "(v) コンピュータにインストラクションを書くこと"
         },
         "condition/csc-ecosystems/2023": {
           "word": "条件",
-          "definition": "アクションを許可する前に、プログラムがそれが正しいかどうかをチェックするもの"
+          "definition": "動作を許可する前に、プログラムがそれが真かどうかをチェックするもの"
         },
         "conditionals/csc-ecosystems/2023": {
           "word": "条件",
-          "definition": "特定の条件下でのみ実行されるステートメント"
+          "definition": "特定の条件下でのみ実行される文"
         },
         "ecosystem/csc-ecosystems/2023": {
-          "word": "エコシステム",
-          "definition": "相互作用する生物とその環境の生物群集"
+          "word": "生態系",
+          "definition": "相互作用する生物とその環境からなる生物群集"
         },
         "event/csc-ecosystems/2023": {
           "word": "イベント",
-          "definition": "何かを起こさせる行動"
+          "definition": "何かを引き起こす行動"
         },
         "overfishing/csc-ecosystems/2023": {
-          "word": "乱釣り",
-          "definition": "繁殖できるよりも早く魚を駆除する"
+          "word": "乱獲",
+          "definition": "繁殖能力を上回るスピードで魚を除去する"
         },
         "simulation/csc-ecosystems/2023": {
           "word": "[シミュレーション]",
@@ -1258,7 +1258,7 @@
         },
         "variable/csc-ecosystems/2023": {
           "word": "変数",
-          "definition": "値を格納できるコンテナ。 "
+          "definition": "値を保存できるコンテナ。 "
         },
         "ecologist/csc-ecosystems/2023": {
           "word": "生態学者",
@@ -1266,11 +1266,11 @@
         },
         "energy/csc-ecosystems/2023": {
           "word": "エネルギー",
-          "definition": "食物網内の生物間で生産者から消費者へと移動します。このエネルギーは、生物が複雑な作業を行うために使用します。"
+          "definition": "食物網の中で、生産者から消費者へと生物間で伝達さ れます。エネルギーは生物が複雑な作業を行うために使用さ れます。"
         },
         "food_chain/csc-ecosystems/2023": {
-          "word": "フードチェーン ",
-          "definition": "生産者から消費者、獲物から捕食者まで、食べる食物の順序でつながっている生物の集まり。"
+          "word": "食物連鎖",
+          "definition": "生産者から消費者、被食者から捕食者へと、食べるものの順番につながった生物のグループ。"
         },
         "code/csc-mappinglandmarks/2023": {
           "word": "コード",

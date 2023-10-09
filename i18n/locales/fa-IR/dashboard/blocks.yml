@@ -52,7 +52,7 @@ fa:
             MOVES.Floss: فلاس - قر دادن (رقص)
             MOVES.Fresh: فِرِش (رقص)
             MOVES.Clown: گنگام (رقص)
-            MOVES.Kick: استار - ستاره (رقص)
+            MOVES.Kick: ستاره
             MOVES.ThisOrThat: دیس اور دت (رقص)
             MOVES.Rest: هیچکدام
           MOVE2:
@@ -107,7 +107,7 @@ fa:
             MOVES.Floss: فلاس - قر دادن (رقص)
             MOVES.Fresh: فِرِش (رقص)
             MOVES.Clown: گنگام (رقص)
-            MOVES.Kick: استار - ستاره (رقص)
+            MOVES.Kick: ستاره
             MOVES.ThisOrThat: دیس اور دت (رقص)
             MOVES.Rest: هیچکدام
       Dancelab_changeMoveLR:
@@ -125,7 +125,7 @@ fa:
             MOVES.Floss: فلاس - قر دادن (رقص)
             MOVES.Fresh: فِرِش (رقص)
             MOVES.Clown: گنگام (رقص)
-            MOVES.Kick: استار - ستاره (رقص)
+            MOVES.Kick: ستاره
             MOVES.ThisOrThat: دیس اور دت (رقص)
             MOVES.Rest: هیچکدام
       Dancelab_changePropBy:
@@ -194,7 +194,7 @@ fa:
             MOVES.XOle: اوله (رقص فلامنکو)
             MOVES.XArmsSide: ریچ (رقص)
             MOVES.XSlide: اسلاید (رقص)
-            MOVES.Kick: استار - ستاره (رقص)
+            MOVES.Kick: ستاره
             MOVES.XArmsUp: کشش دست
             MOVES.ThisOrThat: دیس اور دت (رقص)
             MOVES.Rest: هیچکدام
@@ -222,7 +222,7 @@ fa:
             MOVES.XOle: اوله (رقص فلامنکو)
             MOVES.XArmsSide: ریچ (رقص)
             MOVES.XSlide: اسلاید (رقص)
-            MOVES.Kick: استار - ستاره (رقص)
+            MOVES.Kick: ستاره
             MOVES.XArmsUp: کشش دست
             MOVES.ThisOrThat: دیس اور دت (رقص)
             MOVES.Rest: هیچکدام
@@ -273,7 +273,7 @@ fa:
             MOVES.Floss: فلاس - قر دادن (رقص)
             MOVES.Fresh: فِرِش (رقص)
             MOVES.Roll: بادی رول - خم شدن (رقص)
-            MOVES.Kick: استار - ستاره (رقص)
+            MOVES.Kick: ستاره
             MOVES.ThisOrThat: دیس اور دت (رقص)
             MOVES.Rest: هیچکدام
       Dancelab_ifTime:
@@ -882,6 +882,7 @@ fa:
             '"y"': 'y'
             '"z"': z
             '"0"': '0'
+            '"1"': '1'
             '"2"': '2'
             '"3"': '3'
             '"4"': '4'
@@ -926,6 +927,7 @@ fa:
             '"y"': 'y'
             '"z"': z
             '"0"': '0'
+            '"1"': '1'
             '"2"': '2'
             '"3"': '3'
             '"4"': '4'
@@ -1057,13 +1059,13 @@ fa:
         text: "{BEHAVIOR}"
         options:
           BEHAVIOR:
-            new Behavior(spinning_right, []): چرخش به راست
-            new Behavior(spinning_left, []): چرخش به چپ
+            new Behavior(spinning_right, []): چرخش به سمت راست
+            new Behavior(spinning_left, []): چرخش به سمت چپ
             new Behavior(fluttering, []): بال زدن
             new Behavior(jittering, []): با عصبانیت رفتار کردن
             new Behavior(wobbling, []): تلوتلو خوردن
             new Behavior(wandering, []): گردش کردن
-            new Behavior(patrolling, []): گشت‌زنی
+            new Behavior(patrolling, []): گشت‌ زدن
             new Behavior(moving_west_and_looping, []): حرکت به سمت غرب و درست کردن حلقه‏
             new Behavior(moving_east_and_looping, []): حرکت به سمت شرق و درست کردن حلقه‏
             new Behavior(moving_north_and_looping, []): حرکت به سمت شمال و درست کردن حلقه‏
@@ -1129,6 +1131,7 @@ fa:
         text: "{VALUE}"
         options:
           VALUE:
+            '1': '1'
             '2': '2'
             '3': '3'
             '4': '4'
@@ -1391,7 +1394,7 @@ fa:
         text: "{BEHAVIOR}"
         options:
           BEHAVIOR:
-            new Behavior(moving_with_arrow_keys, []): حرکت با کلیدهای پیکان
+            new Behavior(moving_with_arrow_keys, []): حرکت با کلیدهای جهت‌دار
             new Behavior(driving_with_arrow_keys, []): رانندگی با کلیدهای پیکان
             draggable(): قابل کشیدن باشد
       gamelab_pointInDirection:
@@ -1830,7 +1833,7 @@ fa:
             MOVES.Floss: فلاس - قر دادن (رقص)
             MOVES.Fresh: فِرِش (رقص)
             MOVES.Roll: بادی رول - خم شدن (رقص)
-            MOVES.Kick: استار - ستاره (رقص)
+            MOVES.Kick: ستاره
             MOVES.ThisOrThat: دیس اور دت (رقص)
             MOVES.Rest: هیچکدام
       Mikelab_ifLabel:
@@ -2261,9 +2264,9 @@ fa:
             '"moving_south_and_looping"': حرکت حلقوی به سمت جنوب
             '"moving_east_and_looping"': حرکت حلقوی به سمت شرق
             '"moving_west_and_looping"': حرکت حلقوی به سمت غرب
-            '"shrinking"': منقبض شدن
-            '"spinning_left"': چرخش به چپ
-            '"spinning_right"': چرخش به راست
+            '"shrinking"': کوچک شدن
+            '"spinning_left"': چرخش به سمت چپ
+            '"spinning_right"': چرخش به سمت راست
             '"swimming_left_and_right"': شنا
             '"wandering"': گردش کردن
             '"wobbling"': تلوتلو خوردن
@@ -2278,9 +2281,9 @@ fa:
             '"moving_south_and_looping"': حرکت حلقوی به سمت جنوب
             '"moving_east_and_looping"': حرکت حلقوی به سمت شرق
             '"moving_west_and_looping"': حرکت حلقوی به سمت غرب
-            '"shrinking"': منقبض شدن
-            '"spinning_left"': چرخش به چپ
-            '"spinning_right"': چرخش به راست
+            '"shrinking"': کوچک شدن
+            '"spinning_left"': چرخش به سمت چپ
+            '"spinning_right"': چرخش به سمت راست
             '"swimming_left_and_right"': شنا
             '"wandering"': گردش کردن
             '"wobbling"': تلوتلو خوردن
@@ -2295,6 +2298,7 @@ fa:
         text: وقتی خط {N} نمایش داده شد
         options:
           'N':
+            '1': '1'
             '2': '2'
             '3': '3'
             '4': '4'
@@ -2426,13 +2430,13 @@ fa:
         text: "{BEHAVIOR}"
         options:
           BEHAVIOR:
-            new Behavior(spinning_right, []): چرخش به راست
-            new Behavior(spinning_left, []): چرخش به چپ
+            new Behavior(spinning_right, []): چرخش به سمت راست
+            new Behavior(spinning_left, []): چرخش به سمت چپ
             new Behavior(fluttering, []): بال زدن
             new Behavior(jittering, []): با عصبانیت رفتار کردن
             new Behavior(wobbling, []): تلوتلو خوردن
             new Behavior(wandering, []): گردش کردن
-            new Behavior(patrolling, []): گشت‌زنی
+            new Behavior(patrolling, []): گشت‌ زدن
       adaptations_startFollowing:
         text: "{SPRITE} {TARGET} را دنبال میکند"
       binary_drawBin:
@@ -2581,6 +2585,7 @@ fa:
         text: "{VALUE}"
         options:
           VALUE:
+            '1': '1'
             '2': '2'
             '3': '3'
             '4': '4'
