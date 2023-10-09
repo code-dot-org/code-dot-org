@@ -12,7 +12,7 @@ class Pd::EnrollmentTest < ActiveSupport::TestCase
     refute_equal enrollment1.code, enrollment2.code
   end
 
-  test 'enrollment.for_user using application atlernate email' do
+  test 'enrollment.for_user using application alternate email' do
     user = create :teacher
 
     workshop = create :workshop, course: COURSE_CSD
@@ -27,7 +27,7 @@ class Pd::EnrollmentTest < ActiveSupport::TestCase
     assert_equal Set.new([enrollment1, enrollment2]), Set.new(enrollments)
   end
 
-  test 'enrollment.for_user using user email instead of application atlernate email' do
+  test 'enrollment.for_user using user email instead of application alternate email' do
     user = create :teacher
 
     assert_equal user.email_for_enrollments, user.email
