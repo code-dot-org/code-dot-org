@@ -151,6 +151,9 @@ a:link:has(*) {
   text-decoration: none;
 }
 
+/* Adds an icon to external links
+  - apply this class to container elements or directly onto
+  an "a" tag when a link opens in a new tab or window */
 .has-external-link a::after,
 a.has-external-link::after {
   font: var(--fa-font-solid);
