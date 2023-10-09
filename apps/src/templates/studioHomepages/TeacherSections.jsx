@@ -5,6 +5,7 @@ import i18n from '@cdo/locale';
 import ContentContainer from '../ContentContainer';
 import OwnedSections from '../teacherDashboard/OwnedSections';
 import {
+  asyncLoadCoteacherInvite,
   asyncLoadSectionData,
   hiddenPlSectionIds,
   hiddenStudentSectionIds,
@@ -19,6 +20,8 @@ class TeacherSections extends Component {
   static propTypes = {
     //Redux provided
     asyncLoadSectionData: PropTypes.func.isRequired,
+    asyncLoadCoteacherInvite: PropTypes.func.isRequired,
+    coteacherInvite: PropTypes.object,
     studentSectionIds: PropTypes.array,
     plSectionIds: PropTypes.array,
     hiddenPlSectionIds: PropTypes.arrayOf(PropTypes.number).isRequired,
@@ -28,6 +31,13 @@ class TeacherSections extends Component {
 
   componentDidMount() {
     this.props.asyncLoadSectionData();
+    this.props.asyncLoadCoteacherInvite();
+  }
+
+  shouldRenderSections() {
+    return (
+      this.props.studentSectionIds?.length > 0 || !!this.props.coteacherInvite
+    );
   }
 
   render() {
@@ -46,9 +56,9 @@ class TeacherSections extends Component {
             <Spinner size="large" style={styles.spinner} />
           )}
         </ContentContainer>
-        <CoteacherInviteNotification />
-        {this.props.studentSectionIds?.length > 0 && (
+        {this.shouldRenderSections() && (
           <ContentContainer heading={i18n.sectionsTitle()}>
+            <CoteacherInviteNotification />
             <OwnedSections
               sectionIds={studentSectionIds}
               hiddenSectionIds={hiddenStudentSectionIds}
@@ -73,6 +83,7 @@ class TeacherSections extends Component {
 export const UnconnectedTeacherSections = TeacherSections;
 export default connect(
   state => ({
+    coteacherInvite: state.teacherSections.coteacherInvite,
     studentSectionIds: state.teacherSections.studentSectionIds,
     plSectionIds: state.teacherSections.plSectionIds,
     hiddenPlSectionIds: hiddenPlSectionIds(state),
@@ -80,6 +91,7 @@ export default connect(
     asyncLoadComplete: state.teacherSections.asyncLoadComplete,
   }),
   {
+    asyncLoadCoteacherInvite,
     asyncLoadSectionData,
   }
 )(TeacherSections);

@@ -12,10 +12,6 @@ const CoteacherInviteNotification = ({
   asyncLoadCoteacherInvite,
   coteacherInvite,
 }) => {
-  React.useEffect(() => {
-    asyncLoadCoteacherInvite();
-  }, [asyncLoadCoteacherInvite]);
-
   if (!coteacherInvite) {
     return null;
   }
