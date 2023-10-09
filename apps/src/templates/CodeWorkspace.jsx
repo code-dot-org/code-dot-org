@@ -42,6 +42,7 @@ class CodeWorkspace extends React.Component {
     closeWorkspaceAlert: PropTypes.func,
     workspaceAlert: PropTypes.object,
     isProjectTemplateLevel: PropTypes.bool,
+    hasIncompatibleSources: PropTypes.bool,
   };
 
   shouldComponentUpdate(nextProps) {
@@ -57,7 +58,8 @@ class CodeWorkspace extends React.Component {
         if (
           key === 'isRunning' ||
           key === 'style' ||
-          key === 'workspaceAlert'
+          key === 'workspaceAlert' ||
+          key === 'hasIncompatibleSources'
         ) {
           return;
         }
@@ -170,6 +172,7 @@ class CodeWorkspace extends React.Component {
   // assigned true (implies Droplet, not Blockly). Otherwise, it is displayed at the bottom
   // of the CodeWorkspace
   renderWorkspaceAlert(isBlocklyType) {
+    console.log('rendering workspace alert!');
     return (
       <WorkspaceAlert
         type={this.props.workspaceAlert.type}
@@ -263,7 +266,7 @@ class CodeWorkspace extends React.Component {
           </ProtectedStatefulDiv>
         )}
         {this.props.displayNotStartedBanner && !inCsfExampleSolution && (
-          <div id="notStartedBanner" style={styles.studentNotStartedWarning}>
+          <div id="notStartedBanner" style={styles.incompatibleCodeBanner}>
             {i18n.levelNotStartedWarning()}
           </div>
         )}
@@ -280,6 +283,14 @@ class CodeWorkspace extends React.Component {
                 : i18n.inStartBlocksMode()}
             </div>
           </>
+        )}
+        {this.props.hasIncompatibleSources && (
+          <div
+            id="incompatibleSourcesBanner"
+            style={{...styles.topBanner, ...styles.incompatibleCodeBanner}}
+          >
+            {i18n.jsonInCDOBlockly()}
+          </div>
         )}
         {props.showDebugger && (
           <JsDebugger
@@ -330,6 +341,16 @@ const styles = {
     opacity: 0.9,
     position: 'relative',
   },
+  topBanner: {
+    zIndex: 99,
+    padding: 5,
+    opacity: 0.9,
+    position: 'relative',
+  },
+  incompatibleCodeBanner: {
+    height: 40,
+    backgroundColor: color.lightest_red,
+  },
   chevronButton: {
     padding: 0,
     margin: 0,
@@ -373,6 +394,7 @@ export default connect(
     showMakerToggle: !!state.pageConstants.showMakerToggle,
     workspaceAlert: state.project.workspaceAlert,
     isProjectTemplateLevel: state.pageConstants.isProjectTemplateLevel,
+    hasIncompatibleSources: state.blockly.hasIncompatibleSources,
   }),
   dispatch => ({
     closeWorkspaceAlert: () => dispatch(closeWorkspaceAlert()),

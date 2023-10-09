@@ -3,6 +3,8 @@ import {CLAMPED_NUMBER_REGEX, stringIsXml} from './constants';
 import {APP_HEIGHT} from '@cdo/apps/p5lab/constants';
 import customBlocks from './customBlocks/cdoBlockly/index.js';
 import {parseElement as parseXmlElement} from '../xml';
+import {getStore} from '@cdo/apps/redux';
+import {setHasIncompatibleSources} from '../redux/blockly';
 
 const INFINITE_LOOP_TRAP =
   '  executionInfo.checkTimeout(); if (executionInfo.isTerminated()){return;}\n';
@@ -252,6 +254,7 @@ function initializeBlocklyWrapper(blocklyInstance) {
           `Source string was JSON. Use Version History to recover a working version of this project.`,
           `This likely occurred by opening a project that was last saved with Google Blockly.`
         );
+        getStore().dispatch(setHasIncompatibleSources(true));
         source = '';
       }
       Blockly.Xml.domToBlockSpace(blockSpace, parseXmlElement(source));
