@@ -1,6 +1,8 @@
 import React, {useState} from 'react';
 import PropTypes from 'prop-types';
 import {connect} from 'react-redux';
+import ReactTooltip from 'react-tooltip';
+import _ from 'lodash';
 import color from '@cdo/apps/util/color';
 import FontAwesome from '@cdo/apps/templates/FontAwesome';
 import Button from './Button';
@@ -17,12 +19,14 @@ export const NotificationType = {
   bullhorn: 'bullhorn',
   feedback: 'feedback',
   bullhorn_yellow: 'bullhorn_yellow',
+  collaborate: 'collaborate',
 };
 
 const Notification = ({
   buttonClassName,
   buttonLink,
   buttons,
+  buttonsStyles,
   buttonText,
   children,
   details,
@@ -32,6 +36,7 @@ const Notification = ({
   dismissible,
   firehoseAnalyticsData,
   googleAnalyticsId,
+  iconStyles,
   isRtl,
   newWindow,
   notice,
@@ -39,6 +44,7 @@ const Notification = ({
   onButtonClick,
   responsiveSize,
   type,
+  tooltipText,
   width,
 }) => {
   const [open, setOpen] = useState(true);
@@ -104,6 +110,7 @@ const Notification = ({
     bullhorn: 'bullhorn',
     bullhorn_yellow: 'bullhorn',
     feedback: 'envelope',
+    collaborate: 'users',
   };
 
   const mainStyle = {
@@ -118,17 +125,31 @@ const Notification = ({
 
   const colorStyles = styles.colors[type];
 
+  const tooltipId = _.uniqueId();
+
   return (
     <div className="announcement-notification">
       <div style={{...colorStyles, ...mainStyle}}>
         {type !== NotificationType.course && (
-          <div style={{...styles.iconBox, ...colorStyles}}>
+          <div style={{...styles.iconBox, ...colorStyles, ...iconStyles}}>
             <FontAwesome icon={icons[type]} style={styles.icon} />
           </div>
         )}
         <div style={styles.contentBox}>
           <div style={styles.wordBox}>
-            <div style={{...colorStyles, ...styles.notice}}>{notice}</div>
+            <div style={{...colorStyles, ...styles.notice}}>
+              {notice}
+              {tooltipText ? (
+                <span>
+                  <span data-tip data-for={tooltipId} style={styles.tooltip}>
+                    <FontAwesome icon="info-circle" />
+                  </span>
+                  <ReactTooltip id={tooltipId} effect="solid">
+                    <p style={styles.tooltipText}>{tooltipText}</p>
+                  </ReactTooltip>
+                </span>
+              ) : null}
+            </div>
             <div style={styles.details}>
               {details}
               {detailsLinkText && detailsLink && (
@@ -146,7 +167,11 @@ const Notification = ({
               )}
             </div>
           </div>
-          <div style={desktop ? null : styles.buttonsMobile}>
+          <div
+            style={
+              desktop ? buttonsStyles : {...styles.buttonsMobile, buttonsStyles}
+            }
+          >
             {buttonText && buttonLink && (
               <Button
                 __useDeprecatedTag
@@ -165,9 +190,9 @@ const Notification = ({
                   __useDeprecatedTag
                   key={index}
                   href={button.link}
-                  color={Button.ButtonColor.gray}
+                  color={button.color || Button.ButtonColor.gray}
                   text={button.text}
-                  style={styles.button}
+                  style={{...styles.button, ...button.style}}
                   target={button.newWindow ? '_blank' : null}
                   onClick={button.onClick}
                   className={button.className}
@@ -197,6 +222,7 @@ Notification.propTypes = {
   buttonText: PropTypes.string,
   buttonLink: PropTypes.string,
   dismissible: PropTypes.bool.isRequired,
+  iconStyles: PropTypes.object,
   onDismiss: PropTypes.func,
   newWindow: PropTypes.bool,
   // googleAnalyticsId and firehoseAnalyticsData are only used when a primary button is provided.
@@ -208,7 +234,11 @@ Notification.propTypes = {
   onButtonClick: PropTypes.func,
   buttonClassName: PropTypes.string,
 
+  // Optionally can provide a tooltip after the title with text on hover.
+  tooltipText: PropTypes.string,
+
   // Optionally can provide an array of buttons.
+  buttonsStyles: PropTypes.object,
   buttons: PropTypes.arrayOf(
     PropTypes.shape({
       text: PropTypes.string,
@@ -216,6 +246,8 @@ Notification.propTypes = {
       newWindow: PropTypes.bool,
       onClick: PropTypes.func,
       className: PropTypes.string,
+      color: PropTypes.oneOf(Object.keys(Button.ButtonColor)),
+      style: PropTypes.object,
     })
   ),
 
@@ -339,9 +371,26 @@ const styles = {
       color: color.purple,
       backgroundColor: color.purple,
     },
+    [NotificationType.collaborate]: {
+      borderColor: color.light_secondary_500,
+      color: color.light_secondary_500,
+      backgroundColor: color.light_secondary_500,
+    },
   },
   clear: {
     clear: 'both',
+  },
+  tooltip: {
+    cursor: 'pointer',
+    marginLeft: '5px',
+    marginRight: '5px',
+    fontSize: '14px',
+    verticalAlign: 'middle',
+    color: color.light_gray_500,
+  },
+  tooltipText: {
+    color: color.white,
+    margin: 0,
   },
 };
 
