@@ -35,6 +35,10 @@ lt:
   africa_campaign_date_full: Spalio 1 d. - gruodžio 18 d
   africa_campaign_date_year: '2022'
   africa_campaign_date_full_year: 2022 m. Spalio 1 d. - 2022 m. Gruodžio 18 d
+  hoc2023_header: Kūrybiškumas su AI
+  hoc2023_social_creativity_with_ai_title: Kodo valanda - ką sukursite?
+  hoc2023_social_creativity_with_ai_desc: Naudokite kompiuterių mokslą, kad galėtumėte
+    tyrinėti ir sužinoti apie AI!
   hoc2022_header: Naršyti, žaisti, kurti!
   social_hoc2022_explore_play_create: Naudokite kompiuterių mokslą, kad galėtumėte
     tyrinėti, žaisti ir kurti!
@@ -180,6 +184,28 @@ lt:
     mokymo programų katalogas ir pertvarkytas “Teach” puslapis, kuris padės jums viską
     rasti!
   in_partnership_with: Bendradarbiaujant su
+  shop_code_dot_org_heading: Parduotuvė Code.org
+  shop_code_dot_org_desc: Palaikykite mūsų darbą ir dėvėkite judėjimą su pasididžiavimu.
+    Mūsų skrybėles dėvėjo prezidentas Obama ir įžymybės.
+  spread_the_word_heading: Skleiskite žodį
+  spread_the_word_desc: Sustiprinkite mūsų poveikį bendrindami Code.org su savo tinklu.
+    Nuo socialinės žiniasklaidos iki el. pašto atnaujinimų sužinokite, kaip galite
+    padėti mums pasiekti daugiau pedagogų, studentų ir advokatų.
+  follow_us_heading: Sekite mus socialiniuose tinkluose
+  follow_us_desc: Būkite atnaujinta su mumis socialinėje žiniasklaidoje ir pasidalykite
+    mūsų įrašais su savo tinklu, kad būtumėte informuojami ir padėtumėte informuoti.
+  facebook: Facebook
+  twitter: "„Twitter“"
+  linked_in: "„LinkedIn“"
+  instagram: "„Instagram“"
+  tik_tok: TikTok
+  subscribe_to_emails_heading: Prenumeruoti el. Laiškus
+  subscribe_to_emails_desc: Skaitykite apie tai, kas vyksta Code.org ir informatikos
+    švietimo per ketvirčio atnaujinimus per mūsų adresų sąrašą.
+  subscribe_to_emails_intl: Prenumeruoti tarptautinius atnaujinimus
+  promote_code_dot_org_heading: Skatinti Code.org
+  promote_code_dot_org_desc: Reklamuokite kompiuterių mokslą savo vietovėje naudodamiesi
+    statistika, citatomis ir vaizdo įrašais.
   afe_partnership_logo_alt: "“Amazon” ateities inžinieriaus logotipas"
   afe_partnership_thanks_desc: "“Amazon Future Engineer” yra išsami vaikystės iki
     karjeros programa, skirta įkvėpti, šviesti ir mokyti mažas pajamas gaunančius
@@ -198,6 +224,15 @@ lt:
   curricula_title_high: Vidurinės mokyklos mokymo programos
   curricula_desc_high: Naršykite įtikinamus kursus ir veiklą, kviečiančią jus ir jūsų
     aukštųjų mokyklų studentus gilintis į informatiką.
+  for_administrators_heading: Administratoriams
+  for_administrators_desc: Prisijunkite prie tūkstančių mokyklų, kurios jau įtraukė
+    kompiuterių mokslą į savo mokymo programą.
+  for_parents_heading: Tėvams
+  for_parents_desc: Galite padėti paskatinti savo mokinio mokyklą pasiūlyti ar išplėsti
+    informatikos išsilavinimą.
+  for_educators_heading: Pedagogams
+  for_educators_desc: Pradėkite mokyti šiandien - nereikia informatikos patirties
+    - naudodamiesi mūsų profesionaliais mokymosi seminarais.
   students_label: Moksleiviams
   teachers_label: Mokytojams
   teacher_label_csf: CS Pagrindai Mokytojas
@@ -207,10 +242,11 @@ lt:
   teacher_label_csa: AP® Computer Science A Teacher
   required_materials: 'Reikalingos medžiagos:'
   optional_materials: 'Pasirenkamos medžiagos:'
-  call_to_action_explore_roles: Naršykite atvirus vaidmenis
+  call_to_action_hold_an_event: Surengti renginį
   call_to_action_learn_more: Sužinokite daugiau
   call_to_action_watch_now: Žiūrėti dabar
   call_to_action_try_activity: Pabandykite veiklą
+  call_to_action_try_activities: Išbandykite veiklą
   call_to_action_explore_unit: Naršyti vienetą
   call_to_action_explore_curriculum: Naršyti mokymo programą
   call_to_action_explore_curriculum_options: Naršyti mokymo programos galimybes
@@ -279,11 +315,20 @@ lt:
   call_to_action_notify_available: Praneškite man, kai bus
   call_to_action_register_early_access: Registruotis ankstyvai prieigai
   call_to_action_open_positions: Peržiūrėti atviras pozicijas
+  call_to_action_explore_roles: Naršykite atvirus vaidmenis
   call_to_action_get_guide: Gaukite vadovą
   call_to_action_donate_to_cdo: Paaukokite Code.org
   call_to_action_start_fundraiser: Pradėkite lėšų rinkėją
   call_to_action_view_donation_policy: Peržiūrėti donorystės politiką
   call_to_action_view_donate_bitpay: Paaukokite naudodami “BitPay”
+  call_to_action_make_a_donation: Padaryti donorystę
+  call_to_action_other_ways_to_give: Kiti būdai duoti
+  call_to_action_become_partner_usa: Tapkite Jungtinių Valstijų partneriu
+  call_to_action_become_partner_intl: Tapkite tarptautiniu partneriu
+  call_to_action_become_a_volunteer: Tapk savanoriu
+  call_to_action_start_translating: Pradėkite versti
+  call_to_action_learn_about_advocacy: Sužinokite apie mūsų propagavimą
+  call_to_action_visit_store: Apsilankykite parduotuvėje
   aria_label_call_to_action_afe: Sužinokite daugiau apie “Amazon Future Engineer”
   aria_label_call_to_action_teaching_csf: Pradėkite “Teaching Computer Science Fundamentals”
     profesinio mokymosi programą
@@ -627,6 +672,7 @@ lt:
   heading_explore_curriculum_catalog: Išnagrinėkite visus mūsų kursus mokymo programų
     kataloge
   heading_csa_ai: Ieškote dalykų, kuriuos reikia padaryti po AP® egzamino?
+  heading_bring_cs_to_students: Atneškite kompiuterių mokslą studentams
   professional_learning_section_desc: Gaukite reikiamą paramą, kai ruošiatės mokyti.
     Mokytojai mėgsta tai, su daugiau nei 90% reitingą tai geriausias profesinis tobulėjimas
     kada nors!
@@ -901,6 +947,7 @@ lt:
     vertinimui. Turėdamas turtingą teorijos, praktinių pavyzdžių ir išteklių mišinį,
     juo siekiama suteikti pedagogams galimybes naršyti AI kraštovaizdį ir pagerinti
     studentų mokymosi patirtį.
+  ai_pl_101_resources_5: Atsakingo požiūrio į AI užtikrinimo vadovas
   ai_pl_101_video_desc_6: 'Sužinokite daugiau apie naują technologiją, kuri skatina
     didelius AI pokyčius, kuriuose yra du nauji vaizdo įrašai dideliuose kalbų modeliuose
     (pvz., “ChatGPT”) ir “Generative AI”. Išgirskite, kaip šios naujos technologijos
@@ -912,6 +959,8 @@ lt:
     kurie tiesiog panardina kojų pirštus, taip pat pažangias priemones tiems, kurie
     nori maksimaliai padidinti savo potencialą.
   ai_pl_101_resources_3: AI paragina pertvarkyti studentų mokymąsi
+  ai_pl_101_resources_section_title: Daugiau būdų sužinoti apie AI
+  ai_pl_101_resources_guide: 'Kompaniono vadovas:'
   how_ai_works_hero_heading: Kaip veikia dirbtinis intelektas
   how_ai_works_hero_desc: Pasinerkite į AI pasaulį naudodami “Kaip veikia AI”, mūsų
     vaizdo įrašų seriją ir papildomas pamokas!
@@ -1746,6 +1795,31 @@ lt:
   donate_tabs_bitpay_desc: Apkabinti duoti ateitį su cryptocurrency. Per “BitPay”
     jūsų skaitmeninė valiuta gali tiesiogiai palaikyti “Code.org” pastangas plėsti
     informatikos išsilavinimą.
+  help_page_top_heading: Kaip galite padėti
+  help_page_top_desc: Palaikykite mūsų misiją, kad kompiuterių mokslas būtų prieinamas
+    kiekvienam vaikui visur. Jūsų pastangos padeda mums įkvėpti būsimus novatorius
+    ir panaikinti technologijų švietimo spragą.
+  help_page_top_subhead: Padarykite auką Code.org
+  help_page_top_desc_02: Mes siekiame suteikti kiekvienam mokiniui galimybę mokytis
+    informatikos — tiek internete, tiek mokyklose, kur steigiame nuolatinius kursus
+    ir rengiame mokytojus. Už kiekvieną jūsų paaukojamą dolerį vienas vaikas supažindinamas
+    su informatika.
+  help_page_partners_heading: Tapti partneriu
+  help_page_partners_desc: Code.org bendradarbiauja su kitomis ne pelno organizacijomis
+    kaip partnerėmis, kad padėtų skleisti kompiuterių mokslą vietiniu, tvariu mada.
+    Sužinokite daugiau apie mūsų programą.
+  help_page_volunteer_heading: Savanoris klasėje
+  help_page_volunteer_desc: Savanoris mokyti Kodekso valandą arba būti kviestiniu
+    pranešėju vietos klasėje. Užsiregistruokite, kad išgirstumėte apie galimybes šalia
+    jūsų.
+  help_page_translate_heading: Padėkite mums išversti
+  help_page_translate_desc: Savanoriai išvertė mūsų vadovėlius daugiau nei 45 kalbomis.
+    Padėkite mums toliau plėsti savo vadovėlius studentams visame pasaulyje!
+  help_page_speak_for_cs_heading: Kalbėkite už informatikos švietimą
+  help_page_speak_for_cs_desc: Sužinokite daugiau apie “Code.org” propagavimo darbą
+    visoje JAV ir dešimt politikos sričių, kurias rekomenduojame valstybėms priimti,
+    kad kompiuterių mokslas taptų pagrindiniu visiems studentams. Be to, sužinokite,
+    kaip galite paskatinti pokyčius savo būsenoje.
   hoc_live: Valanda Code Live
   hoc_live_sign_up_title: Užsiregistruokite “Hour of Code Live”
   hoc_live_learn_title: Sužinokite su “Code Live” valanda
@@ -13782,6 +13856,10 @@ lt:
   video_library_page_inspirational_video_title_11: Kiekvienas gali išmokti (1 min.)
   video_library_page_inspirational_video_title_12: Lo Que Falta En Nuestras Escuelas
     (2 min.)
+  video_library_page_inspirational_video_title_13: NASA švenčia Kodo valandą (2 min.)
+  video_library_page_inspirational_video_title_14: Tai daugiau nei žaidimas (1 min.)
+  video_library_page_inspirational_video_title_15: Kurti naudojant kompiuterių mokslą
+    (1 min.)
   video_library_page_not_hacked_video_title_1: 'Kaip ne įsilaužti: Įvadas'
   video_library_page_not_hacked_video_title_2: 'Kaip ne įsilaužti: slaptažodžiai'
   video_library_page_not_hacked_video_title_3: 'Kaip neįsilaužti: autentifikavimas
