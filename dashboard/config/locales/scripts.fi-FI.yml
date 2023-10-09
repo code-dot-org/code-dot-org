@@ -1849,7 +1849,7 @@ fi:
           description_short: Tutki Minecraft-maailmaa koodin kautta
           student_description: Käytä koodipalikoita viedäksesi Steven tai Alexin seikkailulle
             läpi Minecraft-maailman
-          title: Minecraft Koodaustunti
+          title: Minecraft seikkailija
         microbit-2022:
           lesson_groups:
             lessonGroup-4:
