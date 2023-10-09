@@ -2,8 +2,6 @@ require 'test_helper'
 require_relative '../../../lib/clients/lti_advantage_client'
 
 class LtiAdvantageClientTest < ActiveSupport::TestCase
-  # include LtiAccessToken
-
   setup do
     @lti_client = LtiAdvantageClient.new('client_id', 'issuer')
     @lti_client.stubs(:get_access_token).returns('fake_access_token')
@@ -11,6 +9,7 @@ class LtiAdvantageClientTest < ActiveSupport::TestCase
 
   test 'throws an error if the API returns a non-200 response' do
     HTTParty.stubs(:get).returns(OpenStruct.new({code: 400}))
+    @lti_client.expects(:sign_jwt).never # should not be called since the get_access_token method is stubbed
     assert_raises RuntimeError do
       @lti_client.get_context_membership('https://foolms.com/api/sections/1')
     end
