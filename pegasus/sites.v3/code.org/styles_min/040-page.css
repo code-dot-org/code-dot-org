@@ -166,6 +166,17 @@ html[dir="rtl"] a.has-external-link::after {
   margin: 0 4px 0 2px;
 }
 
+.has-external-link a.link-button::after,
+a.link-button.has-external-link::after {
+  margin: 0 0 0 4px;
+}
+
+html[dir="rtl"] .has-external-link a.link-button::after,
+html[dir="rtl"] a.link-button.has-external-link::after {
+  margin: 0 4px 0 0;
+}
+
+
 strong {
   font-family: var(--gotham-bold);
 }
