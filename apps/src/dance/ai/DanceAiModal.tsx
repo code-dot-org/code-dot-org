@@ -137,7 +137,7 @@ const DanceAiModal: React.FunctionComponent<DanceAiProps> = ({onClose}) => {
       foregroundEffect,
     }))(result);
 
-    const fullResult = {inputs, ...result};
+    const fullResult = {inputs, ...pickedResult};
 
     const fullResultJson = JSON.stringify(fullResult);
 
