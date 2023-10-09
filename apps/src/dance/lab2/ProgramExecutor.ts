@@ -31,11 +31,13 @@ const allEvents: {[name in HookName]: Handler} = {
 export default class ProgramExecutor {
   private readonly nativeAPI: typeof DanceParty;
   private hooks: {[name in HookName]?: (args?: unknown[]) => unknown};
+  private getCode: () => string;
   private validationCode?: string;
   private onEventsChanged?: () => void;
 
   constructor(
     container: string,
+    getCode: () => string,
     onPuzzleComplete: (result: boolean, message: string) => void,
     isReadOnlyWorkspace: boolean,
     recordReplayLog: boolean,
@@ -64,6 +66,7 @@ export default class ProgramExecutor {
       });
     this.validationCode = validationCode;
     this.onEventsChanged = onEventsChanged;
+    this.getCode = getCode;
   }
 
   /**
@@ -174,11 +177,6 @@ export default class ProgramExecutor {
     });
 
     return hooks;
-  }
-
-  // Temporary test code. TODO: Replace with code from Blockly workspace.
-  private getCode(): string {
-    return 'whenSetup(function () {\n  setBackgroundEffectWithPalette("kaleidoscope", "electronic");\n  setForegroundEffectExtended("raining_tacos");\n  makeNewDanceSpriteGroup(12, "ALIEN", "circle");\n  makeAnonymousDanceSprite("CAT", {x: 200, y: 200});\n});\n\natTimestamp(4, "measures", function () {\n  setBackgroundEffectWithPalette("disco_ball", "neon");\n  setForegroundEffectExtended("color_lights");\n  changeMoveEachLR(sprites, MOVES.Drop, -1);\n});\n';
   }
 
   private async init(

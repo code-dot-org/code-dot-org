@@ -1829,10 +1829,6 @@ FactoryBot.define do
     teacher_description {"Description for teacher"}
   end
 
-  factory :learning_goal_evaluation do
-    association :learning_goal
-  end
-
   factory :learning_goal_teacher_evaluation do
     association :learning_goal
     association :teacher, factory: :teacher
