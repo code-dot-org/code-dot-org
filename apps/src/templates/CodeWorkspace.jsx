@@ -172,7 +172,6 @@ class CodeWorkspace extends React.Component {
   // assigned true (implies Droplet, not Blockly). Otherwise, it is displayed at the bottom
   // of the CodeWorkspace
   renderWorkspaceAlert(isBlocklyType) {
-    console.log('rendering workspace alert!');
     return (
       <WorkspaceAlert
         type={this.props.workspaceAlert.type}
@@ -328,24 +327,21 @@ const styles = {
   oldVersionWarning: {
     backgroundColor: color.lightest_red,
     textAlign: 'center',
-    height: 20,
   },
   studentNotStartedWarning: {
     backgroundColor: color.lightest_red,
-    height: 20,
   },
   startBlocksBanner: {
     backgroundColor: color.lighter_yellow,
-    height: 20,
   },
   topBanner: {
     zIndex: 99,
     padding: 5,
     opacity: 0.9,
     position: 'relative',
+    height: 'fit-content',
   },
   incompatibleCodeBanner: {
-    height: 40,
     backgroundColor: color.lightest_red,
   },
   chevronButton: {
