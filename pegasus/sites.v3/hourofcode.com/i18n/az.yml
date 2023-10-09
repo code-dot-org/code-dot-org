@@ -35,6 +35,10 @@ az:
   africa_campaign_date_full: 1-31 Oktyabr
   africa_campaign_date_year: '2022'
   africa_campaign_date_full_year: 1-31 Oktyabr, 2020
+  hoc2023_header: AI ilə yaradıcılıq
+  hoc2023_social_creativity_with_ai_title: Kod Saatı - Nə yaradacaqsınız?
+  hoc2023_social_creativity_with_ai_desc: AI haqqında araşdırmaq və öyrənmək üçün
+    kompüter elmindən istifadə edin!
   hoc2022_header: Kəşf et, oyna, yarat!
   social_hoc2022_explore_play_create: İnformatikanı kəşf etmək, oynamaq və yaratmaq
     üçün istifadə edin!
@@ -183,6 +187,28 @@ az:
     Kurikulum Kataloqu və hamısını tapmağınıza kömək etmək üçün yenidən işlənmiş Öyrətmə
     səhifəsi!
   in_partnership_with: İlə ortaqlıqda
+  shop_code_dot_org_heading: Mağaza Code.org
+  shop_code_dot_org_desc: İşimizə dəstək olun və hərəkəti qürurla geyin. Şapkalarımızı
+    prezident Obama və məşhurlar da taxdılar.
+  spread_the_word_heading: Hərkəsə səsimizi yayın
+  spread_the_word_desc: Code.org -u şəbəkənizlə paylaşaraq təsirimizi artırın. Sosial
+    mediadan tutmuş e-poçt yeniləmələrinə qədər daha çox müəllim, tələbə və vəkilə
+    çatmağımıza necə kömək edə biləcəyinizi kəşf edin.
+  follow_us_heading: Bizi sosial mediada izləyə
+  follow_us_desc: Sosial mediada bizimlə bu günə qədər xəbərdar olun və məlumatlı
+    olmaq və məlumatlılığı artırmaq üçün yazılarımızı şəbəkənizlə paylaşın.
+  facebook: Facebook
+  twitter: Twitter
+  linked_in: LinkedIn
+  instagram: Instagram
+  tik_tok: TikTok
+  subscribe_to_emails_heading: E-poçtlara abunə olun
+  subscribe_to_emails_desc: Code.org saytında və kompüter elmləri təhsilində baş verənlər
+    haqqında oxuyun rüblük yenilikləri poçt siyahımız vasitəsilə.
+  subscribe_to_emails_intl: Beynəlxalq yeniləmələrə abunə olun
+  promote_code_dot_org_heading: Code.org təşviq
+  promote_code_dot_org_desc: Statistikalar, sitatlar və videoların köməyi ilə bölgənizdə
+    kompüter elmlərini təşviq edin.
   afe_partnership_logo_alt: Amazon Future Engineer loqosu
   afe_partnership_thanks_desc: Amazon Future Engineer, aşağı gəlirli və digər əlverişsiz
     uşaqları və gəncləri kompüter elmləri sahəsində karyera qurmağa ruhlandırmaq,
@@ -201,6 +227,15 @@ az:
   curricula_title_high: Lisey Kurikulumları
   curricula_desc_high: Sizi və lisey şagirdlərinizi kompüter elmlərini daha dərindən
     araşdırmağa dəvət edən cəlbedici kurslara və fəaliyyətlərə göz atın.
+  for_administrators_heading: Administratorlar üçün
+  for_administrators_desc: Kompüter elmlərini tədris proqramına daxil etmiş minlərlə
+    məktəbə qoşulun.
+  for_parents_heading: Valideynlər üçün
+  for_parents_desc: Şagirdinizin məktəbini kompüter elmləri təhsili təklif etməyə
+    və ya genişləndirməyə təşviq edə bilərsiniz.
+  for_educators_heading: Təlimçilər üçün
+  for_educators_desc: Peşəkar öyrənmə seminarlarımızla bu gün tədrisə başlayın - kompüter
+    elmləri təcrübəsi lazım deyil.
   students_label: Şagirdlər
   teachers_label: Müəllimlər
   teacher_label_csf: CS Əsasları Müəllim
@@ -210,10 +245,11 @@ az:
   teacher_label_csa: AP® Computer Science A Teacher
   required_materials: 'Tələb olunan materiallar:'
   optional_materials: 'Könüllü materiallar:'
-  call_to_action_explore_roles: Açıq rolları araşdırın
+  call_to_action_hold_an_event: Tədbir keçirin
   call_to_action_learn_more: Daha ətraflı
   call_to_action_watch_now: İndi baxın
   call_to_action_try_activity: Fəaliyyəti sınayın
+  call_to_action_try_activities: Fəaliyyətləri sınayın
   call_to_action_explore_unit: Bölməni araşdırın
   call_to_action_explore_curriculum: Kurikulumu araşdırın
   call_to_action_explore_curriculum_options: Kurikulum seçimlərini araşdırın
@@ -283,11 +319,20 @@ az:
   call_to_action_notify_available: Mövcud olduqda mənə bildirin
   call_to_action_register_early_access: Erkən giriş üçün qeydiyyatdan keçin
   call_to_action_open_positions: Açıq mövqelərə baxın
+  call_to_action_explore_roles: Açıq rolları araşdırın
   call_to_action_get_guide: Bələdçi alın
   call_to_action_donate_to_cdo: Code.org saytına ianə edin
   call_to_action_start_fundraiser: Bir fandreyzerə başlayın
   call_to_action_view_donation_policy: Bağış siyasətinə baxın
   call_to_action_view_donate_bitpay: BitPay ilə ianə edin
+  call_to_action_make_a_donation: Bağış edin
+  call_to_action_other_ways_to_give: Verməyin digər yolları
+  call_to_action_become_partner_usa: Amerika Birləşmiş Ştatları tərəfdaşı ol
+  call_to_action_become_partner_intl: Beynəlxalq tərəfdaş ol
+  call_to_action_become_a_volunteer: Könüllü ol
+  call_to_action_start_translating: Tərcümə etməyə başlayın
+  call_to_action_learn_about_advocacy: Vəkilliyimiz haqqında məlumat əldə edin
+  call_to_action_visit_store: Mağazanı ziyarət edin
   aria_label_call_to_action_afe: Amazon Future Engineer haqqında daha çox məlumat
     əldə edin
   aria_label_call_to_action_teaching_csf: Tədris Kompüter Elmlərinin Əsasları peşəkar
@@ -636,6 +681,7 @@ az:
   heading_these_lessons_will: 'Bu dərslər:'
   heading_explore_curriculum_catalog: Kurikulum Kataloqunda bütün kurslarımızı araşdırın
   heading_csa_ai: AP® imtahanından sonra ediləcək işlər axtarırsınız?
+  heading_bring_cs_to_students: Şagirdlərə kompüter elmləri gətirin
   professional_learning_section_desc: Öyrətməyə hazırlaşarkən sizə lazım olan dəstəyi
     alın. Müəllimlər bunu sevirlər, 90% -dən çoxu bu günə qədər ən yaxşı peşəkar inkişafdır!
   professional_learning_section_desc_short: Öyrətməyə hazırlaşarkən sizə lazım olan
@@ -916,6 +962,8 @@ az:
     və resursların zəngin qarışığı ilə o, pedaqoqlara süni intellekt mənzərəsində
     naviqasiya etmək və tələbə öyrənmə təcrübələrini artırmaq üçün səlahiyyət verməyi
     hədəfləyir.
+  ai_pl_101_resources_5: Süni intellektə məsuliyyətli yanaşmanın təmin edilməsi üçün
+    təlimat
   ai_pl_101_video_desc_6: 'Böyük Dil Modelləri (ChatGPT kimi) və Generative AI -də
     iki yeni video təqdim edən süni intellektdəki böyük dəyişiklikləri idarə edən
     yeni texnologiya haqqında daha çox məlumat əldə edin. Bu yeni texnologiyaların
@@ -928,6 +976,9 @@ az:
     üçün qabaqcıl alətlər daxildir.
   ai_pl_101_resources_3: Tələbə öyrənməsini dəyişdirmək üçün süni intellekt təklif
     edir
+  ai_pl_101_resources_section_title: Süni intellekt haqqında məlumat əldə etməyin
+    daha çox yolu
+  ai_pl_101_resources_guide: 'Yoldaş bələdçisi:'
   how_ai_works_hero_heading: AI necə işləyir
   how_ai_works_hero_desc: "“AI necə işləyir”, video seriyamız və müşayiət olunan dərslərimizlə
     AI dünyasına dalın!"
@@ -1778,6 +1829,30 @@ az:
   donate_tabs_bitpay_desc: kriptovalyutası ilə verilməsi gələcəyini əhatə. BitPay
     vasitəsilə rəqəmsal valyutanız Code.org-un kompüter elmləri təhsilini genişləndirmək
     səylərini birbaşa dəstəkləyə bilər.
+  help_page_top_heading: Necə kömək edə bilərsən
+  help_page_top_desc: Kompüter elmini hər bir uşaq üçün, hər yerdə əlçatan etmək missiyamızı
+    dəstəkləyirik. Səyləriniz gələcək yenilikçiləri ruhlandırmağa və texnoloji təhsil
+    boşluğunu aradan qaldırmağa kömək edir.
+  help_page_top_subhead: Code.org saytına ianə edin
+  help_page_top_desc_02: Hər bir tələbəyə kompüter elmlərini öyrənmək imkanı vermək
+    üçün çalışırıq - həm onlayn, həm də məktəblərdə, burada daimi kurslar qururuq
+    və müəllim hazırlayırıq. Bağışladığınız hər dollar üçün bir uşaq kompüter elmləri
+    ilə tanış olur.
+  help_page_partners_heading: Tərəfdaş ol
+  help_page_partners_desc: Code.org, kompüter elminin yerli, davamlı bir şəkildə yayılmasına
+    kömək etmək üçün tərəfdaş olaraq digər qeyri-kommersiya təşkilatları ilə işləyir.
+    Proqramımız haqqında daha çox məlumat əldə edin.
+  help_page_volunteer_heading: Sinifdə könüllü
+  help_page_volunteer_desc: Kod Saatını öyrətmək və ya yerli sinifdə qonaq natiq olmaq
+    üçün könüllü olun. Yaxınlıqdakı imkanlar haqqında eşitmək üçün qeydiyyatdan keçin.
+  help_page_translate_heading: Tərcümə etməyimizə kömək edin
+  help_page_translate_desc: Könüllülər dərsliklərimizi 45-dən çox dilə tərcümə ediblər.
+    Dünyadakı tələbələr üçün dərslərimizi genişləndirməyə davam etməyimizə kömək edin!
+  help_page_speak_for_cs_heading: Kompüter elmləri təhsili üçün danışın
+  help_page_speak_for_cs_desc: Code.org-un ABŞ -da vəkillik işləri və dövlətlərin
+    kompüter elmini bütün tələbələr üçün təməl halına gətirmək üçün qəbul etmələrini
+    tövsiyə etdiyimiz on siyasət haqqında daha çox məlumat əldə edin. Üstəlik, vəziyyətinizdə
+    dəyişikliyi necə idarə edə biləcəyinizi öyrənin.
   hoc_live: Kod Saatı Canlı
   hoc_live_sign_up_title: Canlı Kod Saatı üçün qeydiyyatdan keçin
   hoc_live_learn_title: Kod Saatı Canlı ilə məlumat əldə edin
@@ -13889,6 +13964,9 @@ az:
   video_library_page_inspirational_video_title_11: Hər kəs öyrənə bilər (1 dəqiqə)
   video_library_page_inspirational_video_title_12: Lo Que Falta En Nuestras Escuelas
     (2 dəq)
+  video_library_page_inspirational_video_title_13: NASA Kod Saatını qeyd edir (2 dəq)
+  video_library_page_inspirational_video_title_14: Bir oyundan daha çoxdur (1 dəq)
+  video_library_page_inspirational_video_title_15: Kompüter Elmləri ilə Yarat (1 dəq)
   video_library_page_not_hacked_video_title_1: 'Hacked almaq üçün necə: Giriş'
   video_library_page_not_hacked_video_title_2: 'Hacked almaq üçün necə: Şifrələr'
   video_library_page_not_hacked_video_title_3: 'Hacked almaq üçün necə: Authentication

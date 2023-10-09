@@ -19,7 +19,7 @@ km:
         step:
           title: ជំហាន
         mc:
-          title: Minecraft Hour of Code
+          title: Minecraft Adventurer
           description: ប្រើប្លក់នៃកូដ នាំ Steve ឬ Alex ធ្វើដំណើរផ្សងព្រេងឆ្លងកាត់ពិភព Minecraft នេះ។
           student_description: ប្រើប្លក់នៃកូដ នាំ Steve ឬ Alex ធ្វើដំណើរផ្សងព្រេងឆ្លងកាត់ពិភព Minecraft នេះ។
         CSDU3-Draft:
@@ -60,6 +60,8 @@ km:
           lesson_groups:
             required:
               display_name: ទិដ្ឋភាពទូទៅ
+        minecraft:
+          title: Minecraft Designer
         coursee-draft:
           lesson_groups:
             end_of_course_project:
@@ -934,6 +936,8 @@ km:
           lesson_groups:
             lessonGroup-2:
               display_name: មេរៀន
+        dance-unplugged:
+          title: Dance Party Unplugged
         ai-ethics-2021:
           description_audience: ថ្នាក់ទី ៦ដល់ទី១២
         2022drafting:

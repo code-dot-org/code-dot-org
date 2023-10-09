@@ -220,6 +220,11 @@ pt:
             lesson-1:
               name: Nosso Código de Ética em I.A.
         ai-temp:
+          lessons:
+            lesson-6:
+              name: "[Lição Visão Computacional]"
+          student_description: Aprenda como a IA funciona participando de diferentes
+            experiências e assistindo à série de vídeos [Como a IA funciona](https://www.youtube.com/playlist?list=PLzdnOPI1iJNeehd1RXhnVMBFi1WhWLx_Y)!
           title: Como funciona a IA
         aiml-2021:
           description: |-
@@ -507,6 +512,10 @@ pt:
           name: bola de basquete
           student_description: Escolha seu time e faça um jogo de basquete
           title: Escolha seu time e faça um jogo de basquete
+        blockchain-2023:
+          student_description: Aprenda como o Blockchain funciona participando de
+            diferentes experiências imersivas e assistindo à série de vídeos [Como
+            o Blockchain funciona](https://www.youtube.com/playlist?list=PLzdnOPI1iJNdzDlGJxd6B22G1bCDnPzkf)!
         classic-hoc-impact-study:
           description_short: Conheça os conceitos básicos da ciência da computação
             com a ajuda de vários personagens divertidos!
@@ -1573,6 +1582,16 @@ pt:
               display_name: Navegação no Code.org
           name: csa-self-paced-pl
           title: Navegação pelo Code.org para professores-piloto do CSA
+        csa-software-engineering:
+          lesson_groups:
+            lessonGroup-3:
+              display_name: 'Capítulo 2: Visão Computacional'
+          lessons:
+            lesson-7:
+              name: Pré-pesquisa Engenharia de Software e Visão Computacional
+            lesson-8:
+              name: Pós-pesquisa Engenharia de Software e Visão Computacional
+          title: Engenharia de Software e Visão Computacional
         csa-u6-dev:
           lesson_groups:
             lessonGroup-2:
@@ -5797,7 +5816,7 @@ pt:
             com seus amigos! (Esta versão é para conexões lentas)
           title: Festa de Dança (Baixa Largura de Banda)
         dance-unplugged:
-          title: Hour of Code - Festa Dançante - Desconectado
+          title: Hora do Código - Festa Dançante - Desconectado
         dani-june-2020-test:
           lesson_groups:
             csp5_1:
@@ -8052,6 +8071,10 @@ pt:
             Era do Gelo!
           title: Labirinto clássico
         how-ai-works-2023:
+          student_description: |-
+            Aprenda como a IA funciona participando de diferentes experiências e assistindo à série de vídeos [Como a IA funciona](https://www.youtube.com/playlist?list=PLzdnOPI1iJNeehd1RXhnVMBFi1WhWLx_Y)!
+
+            \*\*Quer lecionar essas lições? \*\* [Clique aqui para ver os planos de aula dessas lições](/s/how-ai-works-2023?viewAs=Instructor)
           title: Como funciona a IA
         iceage:
           description: Crie uma história ou faça um jogo com o Laboratório da Era
@@ -8200,7 +8223,7 @@ pt:
           description_short: Explore o mundo de Minecraft usando códigos.
           student_description: Use blocos de código para levar Steve ou Alex a uma
             aventura pelo mundo do Minecraft.
-          title: Hora do Código Minecraft
+          title: Aventureiro de Minecraft
         microbit-2022:
           lesson_groups:
             lessonGroup-3:
@@ -9285,6 +9308,10 @@ pt:
               display_name: Conteúdo
             csd3_2:
               display_name: 'Capítulo 2: Construindo Jogos'
+        virtual-pl-csa-summer-2024-day1:
+          title: Dia 1
+        virtual-pl-csa-summer-day2:
+          title: Dia 2
         virtual-pl-csd-summer-day1:
           lessons:
             lesson-1:

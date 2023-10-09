@@ -230,7 +230,7 @@ pl:
           description_short: Dowiedz się, jak programować droidy i utwórz własną grę Star Wars w galaktyce daleko, daleko.
           student_description: Dowiedz się, jak programować droidy i utwórz własną grę Star Wars w galaktyce daleko, daleko.
         mc:
-          title: Godzina Kodowania z Minecraft
+          title: Poszukiwacz przygód z Minecraftem
           description: Użyj bloków kodu, by zabrać Steva lub Alexa na przygodę w świecie gry Minecraft.
           description_short: Odkrywaj świat Minecraft poprzez kodowanie.
           student_description: Użyj bloków kodu, by zabrać Steva lub Alexa na przygodę w świecie gry Minecraft.
@@ -7435,3 +7435,26 @@ pl:
         draft-hoc-dp:
           name: draft-hoc-dp
           title: Potańcówka (szkic)
+        genai-temp:
+          lessons:
+            lesson-1:
+              name: Tymczasowa lekcja dla Ali
+          name: genai-temp
+          title: "[Temp] Generatywna AI"
+          description: Jednostka tymczasowa do pracy z generatywną AI
+        virtual-pl-csp-summer-day1-2024:
+          name: virtual-pl-csp-summer-day1-2024
+        virtual-pl-csa-summer-2024-day1:
+          name: virtual-pl-csa-summer-2024-day1
+          title: Dzień 1
+        virtual-pl-csp-summer-day2:
+          name: virtual-pl-csp-summer-day2
+        virtual-pl-csp-summer-day3:
+          name: virtual-pl-csp-summer-day3
+        virtual-pl-csp-summer-day4:
+          name: virtual-pl-csp-summer-day4
+        virtual-pl-csp-summer-day5:
+          name: virtual-pl-csp-summer-day5
+        virtual-pl-csa-summer-day2:
+          name: virtual-pl-csa-summer-day2
+          title: Dzień 2
