@@ -28,3 +28,9 @@ export const EMPTY_IMAGE =
   'data:image/gif;base64,R0lGODlhAQABAIAAAP///wAAACH5BAEAAAAALAAAAAABAAEAAAICRAEAOw==';
 
 export const PlayBehavior = utils.makeEnum('ALWAYS_PLAY', 'NEVER_PLAY');
+
+export const BLOCKLY_EVENTS_TO_LISTEN_FOR = [
+  'move', // Google Blockly - events listed here: https://github.com/google/blockly/blob/9089661f9d2209fe783a54c058e1ecaa7b8bcf7f/core/events/events.ts#L99-L129
+  'change', // Google Blockly
+  'blocklyBlockSpaceChange', // CDO Blockly
+];
