@@ -145,7 +145,7 @@ const DanceAiModal: React.FunctionComponent<DanceAiProps> = ({onClose}) => {
   };
 
   const startAi = async (value: string) => {
-    const responseJsonString = await doAi(value);
+    const responseJsonString = DanceAiClient(value);
     const response = JSON.parse(responseJsonString);
 
     // "Pick" a subset of fields to be used.  Specifically, we exclude the
