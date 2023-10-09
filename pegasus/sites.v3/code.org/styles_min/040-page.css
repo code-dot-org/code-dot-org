@@ -176,7 +176,6 @@ html[dir="rtl"] a.link-button.has-external-link::after {
   margin: 0 4px 0 0;
 }
 
-
 strong {
   font-family: var(--gotham-bold);
 }
