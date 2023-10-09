@@ -1,15 +1,14 @@
 #!/usr/bin/env ruby
 
 require_relative '../../../i18n_script_utils'
-require_relative '../../../redact_restore_utils'
 require_relative '../../../utils/sync_out_base'
-require_relative '../../../utils/malformed_i18n_reporter'
-require_relative '../courses'
+require_relative '../../../redact_restore_utils'
+require_relative '../scripts'
 
 module I18n
   module Resources
     module Dashboard
-      module Courses
+      module Scripts
         class SyncOut < I18n::Utils::SyncOutBase
           def process(language)
             crowdin_file_path = crowdin_file_path_of(language)
@@ -17,7 +16,6 @@ module I18n
 
             unless I18nScriptUtils.source_lang?(language)
               restore_localization(language)
-              fix_localization_urls(language)
               report_malformed_i18n(language)
               distribute_localization(language)
             end
@@ -44,25 +42,6 @@ module I18n
             )
           end
 
-          # We provide URLs to the translators for Resources only; because
-          # the sync has a side effect of applying Markdown formatting to
-          # everything it encounters, we want to make sure to un-Markdownify
-          # these URLs
-          def fix_localization_urls(language)
-            i18n_data = YAML.load_file(crowdin_file_path_of(language))
-
-            lang_code = i18n_data.keys.first
-            i18n_data.dig(lang_code, 'data', 'resources')&.each do |_key, resource|
-              next unless resource['url']
-
-              resource['url'].strip!
-              resource['url'].delete_prefix!('<')
-              resource['url'].delete_suffix!('>')
-            end
-
-            I18nScriptUtils.write_file(crowdin_file_path_of(language), I18nScriptUtils.to_crowdin_yaml(i18n_data))
-          end
-
           def report_malformed_i18n(language)
             malformed_i18n_reporter = I18n::Utils::MalformedI18nReporter.new(language[:locale_s])
             malformed_i18n_reporter.process_file(crowdin_file_path_of(language))
@@ -70,7 +49,7 @@ module I18n
           end
 
           def distribute_localization(language)
-            target_i18n_file_path = File.join(ORIGIN_I18N_DIR_PATH, "courses.#{language[:locale_s]}.yml")
+            target_i18n_file_path = File.join(ORIGIN_I18N_DIR_PATH, "scripts.#{language[:locale_s]}.yml")
             I18nScriptUtils.sanitize_file_and_write(crowdin_file_path_of(language), target_i18n_file_path)
           end
         end
@@ -79,4 +58,4 @@ module I18n
   end
 end
 
-I18n::Resources::Dashboard::Courses::SyncOut.perform if __FILE__ == $0
+I18n::Resources::Dashboard::Scripts::SyncOut.perform if __FILE__ == $0

@@ -388,7 +388,7 @@ describe I18nScriptUtils do
     let(:data) {{key: {'key2' => 'val'}}}
 
     it 'writes pretty json content to the file' do
-      expected_file_content = <<-YAML.gsub(/^ {8}/, '')
+      expected_file_content = <<~YAML
         ---
         :key:
           key2: val

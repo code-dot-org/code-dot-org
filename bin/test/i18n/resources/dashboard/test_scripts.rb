@@ -9,10 +9,10 @@ describe I18n::Resources::Dashboard::Scripts do
     end
   end
 
-  # describe '.sync_out' do
-  #   it 'sync-out Scripts resource' do
-  #     I18n::Resources::Dashboard::Scripts::SyncOut.expects(:perform).once
-  #     I18n::Resources::Dashboard::Scripts.sync_out
-  #   end
-  # end
+  describe '.sync_out' do
+    it 'sync-out Scripts resource' do
+      I18n::Resources::Dashboard::Scripts::SyncOut.expects(:perform).once
+      I18n::Resources::Dashboard::Scripts.sync_out
+    end
+  end
 end
