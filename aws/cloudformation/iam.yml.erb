@@ -549,7 +549,7 @@ roles.each do |name, config| %>
               - s3:ListBucketVersions
             Resource:
               - arn:aws:s3:::cdo-animation-library
-          - Sid: AllowReadOnlyToAnimationLibraryBucket
+          - Sid: AllowReadOnlyToLibraryBuckets
             Effect: Allow
             Action:
               - s3:GetObject
@@ -560,6 +560,7 @@ roles.each do |name, config| %>
               - s3:GetObjectVersionTagging
             Resource:
               - arn:aws:s3:::cdo-animation-library/*
+              - arn:aws:s3:::cdo-sound-library/*
 
   DenySecretsPolicy:
     Type: AWS::IAM::ManagedPolicy
