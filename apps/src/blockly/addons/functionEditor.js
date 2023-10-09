@@ -167,12 +167,12 @@ export default class FunctionEditor {
         deletable: false,
         movable: false,
       };
+      const block = this.addEditorWorkspaceBlockConfig(newDefinitionBlock);
       this.block = Blockly.serialization.blocks.append(
-        this.addEditorWorkspaceBlockConfig(newDefinitionBlock),
+        block,
         this.editorWorkspace
       );
     }
-    // this.functionDescriptionInput.value = this.block.description || '';
   }
 
   /**

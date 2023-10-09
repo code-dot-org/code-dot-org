@@ -113,7 +113,14 @@ export default class CdoBlockFlyout extends GoogleBlockly.HorizontalFlyout {
    * @override
    */
   position() {
-    this.isVisible() && this.positionAt_(this.width_, this.height_, 0, 0);
+    if (this.isVisible()) {
+      // TODO: I think this moved the block flyout without moving the entire toolbox
+      // const blockY = this.sourceBlock_.getHeightWidth().height;
+      // const newY = blockY - this.height_;
+      const newY = 0;
+      this.positionAt_(this.width_, this.height_, 0, newY);
+    }
+    // this.isVisible() && this.positionAt_(this.width_, this.height_, 0, 0);
   }
 
   /**

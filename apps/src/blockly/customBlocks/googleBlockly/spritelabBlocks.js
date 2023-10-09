@@ -12,6 +12,112 @@ import msg from '@cdo/locale';
 export const blocks = {
   // Creates and returns a toggle button field. This field should be
   // added to the block after other inputs have been created.
+  initializeMiniToolbox2() {
+    // Function to create the flyout
+    const createFlyoutField = function (block) {
+      const flyoutKey = CdoFieldFlyout.getFlyoutId(block);
+      const flyoutField = new Blockly.FieldFlyout(_, {
+        flyoutKey: flyoutKey,
+        sizingBehavior: 'fitContent',
+        name: 'FLYOUT',
+        isFlyoutVisible: true,
+      });
+
+      // TODO: This is gross and there has to be a better way
+      let newInput = block
+        .appendDummyInput('flyout_input')
+        .appendField(flyoutField, flyoutKey);
+      block.inputList.pop();
+      console.log('newInput', newInput);
+
+      let desiredPosition = 1; // Adjust as needed
+      block.inputList.splice(desiredPosition, 0, newInput);
+
+      return flyoutField;
+    };
+
+    // Function to toggle the flyout visibility, which actually creates or
+    // deletes the flyout depending on the current visibility.
+    const toggleFlyout = function () {
+      const block = this.getSourceBlock();
+      console.log('block.inputList', block.inputList);
+      if (!block.getInput('flyout_input')) {
+        const flyoutField = createFlyoutField(block);
+        console.log('flyoutField', flyoutField);
+        flyoutField.showEditor();
+        flyoutField.render_();
+      } else {
+        block.removeInput('flyout_input');
+      }
+    };
+
+    const defaultIcon = document.createElementNS(SVG_NS, 'tspan');
+    defaultIcon.style.fontFamily = 'FontAwesome';
+    defaultIcon.textContent = '\uf067 '; // plus icon
+
+    const alternateIcon = document.createElementNS(SVG_NS, 'tspan');
+    alternateIcon.style.fontFamily = 'FontAwesome';
+    alternateIcon.textContent = '\uf068 '; // minus icon
+
+    const colorOverrides = {
+      icon: Button.ButtonColor.white,
+      button: Button.ButtonColor.blue,
+    };
+
+    const flyoutToggleButton = new Blockly.FieldToggle({
+      onClick: toggleFlyout,
+      defaultIcon,
+      alternateIcon,
+      useDefaultIcon: true,
+      callback: createFlyoutField,
+      colorOverrides,
+    });
+
+    return flyoutToggleButton;
+  },
+
+  // Adds a toggle button field to a block. Requires other inputs to already exist.
+  appendMiniToolboxToggle2(miniToolboxBlocks, flyoutToggleButton) {
+    console.log('apppending mini toolbox toggle 2!');
+    console.log('this in appendMiniToolboxToggle', this);
+    this.setInputsInline(true);
+    // We set the inputs to align left so that if the flyout is larger than the
+    // inputs will be aligned with the left edge of the block.
+    this.inputList.forEach(input => {
+      input.setAlign(Blockly.Input.Align.LEFT);
+    });
+
+    // Insert the toggle field at the beginning for the first input row.
+    const firstInput = this.inputList[0];
+    firstInput.insertFieldAt(0, flyoutToggleButton, `button_${this.type}`);
+
+    // These blocks require a renderer that treats dummy inputs like row separators:
+    // https://github.com/google/blockly-samples/tree/master/plugins/renderer-inline-row-separators
+    const lastInput = this.inputList[this.inputList.length - 1];
+    // Force add a dummy input at the end of the block, if needed.
+    if (lastInput.type !== Blockly.inputTypes.DUMMY) {
+      this.appendDummyInput();
+    }
+
+    if (this.workspace.rendered) {
+      this.workspace.registerToolboxCategoryCallback(
+        CdoFieldFlyout.getFlyoutId(this),
+        function () {
+          let blocks = [];
+          miniToolboxBlocks.forEach(blockType =>
+            blocks.push({
+              kind: 'block',
+              type: blockType,
+            })
+          );
+          return blocks;
+        }
+      );
+    }
+  },
+
+  // Creates and returns a toggle button field. This field should be
+  // added to the block after other inputs have been created.
   initializeMiniToolbox() {
     // Function to create the flyout
     const createFlyoutField = function (block) {
@@ -91,7 +197,7 @@ export const blocks = {
       const imageSourceId = this.id;
       this.workspace.registerToolboxCategoryCallback(
         CdoFieldFlyout.getFlyoutId(this),
-        function (workspace) {
+        function () {
           let blocks = [];
           miniToolboxBlocks.forEach(blockType =>
             blocks.push({

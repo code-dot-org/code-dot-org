@@ -67,7 +67,7 @@ export const blocks = GoogleBlockly.common.createBlockDefinitionsFromJsonArray([
       'procedure_defnoreturn_set_comment_helper',
       'procedure_def_set_no_return_helper',
       'procedures_block_frame',
-      // 'modal_procedures_mini_toolbox',
+      'modal_procedures_mini_toolbox',
       'modal_procedures_no_destroy',
     ],
     mutator: 'procedure_def_mutator',
@@ -122,7 +122,8 @@ export const editButtonHandler = function () {
 };
 
 // This extension adds an edit button to the end of a procedure call block.
-const editButton = function () {
+GoogleBlockly.Extensions.register('procedures_edit_button', function () {
+  console.log('this', this);
   // Edit buttons are used to open the modal editor. The button is appended to the last input.
   if (
     useModalFunctionEditor &&
@@ -136,29 +137,23 @@ const editButton = function () {
     });
     this.inputList[this.inputList.length - 1].appendField(button, 'EDIT');
   }
-};
-
-GoogleBlockly.Extensions.register('procedures_edit_button', editButton);
+});
 
 // This extension renders a mini toolbox for the modal function editor.
-const modalProceduresMiniToolbox = function () {
-  const miniToolboxBlocks = [];
+GoogleBlockly.Extensions.register('modal_procedures_mini_toolbox', function () {
+  // const miniToolboxBlocks = [];
+  const miniToolboxBlocks = ['gamelab_newSpritePointer'];
   const flyoutToggleButton =
-    Blockly.customBlocks.initializeMiniToolbox.bind(this)(miniToolboxBlocks);
-  Blockly.customBlocks.appendMiniToolboxToggle.bind(this)(
+    Blockly.customBlocks.initializeMiniToolbox2.bind(this)(miniToolboxBlocks);
+  Blockly.customBlocks.appendMiniToolboxToggle2.bind(this)(
     miniToolboxBlocks,
     flyoutToggleButton
   );
-};
-
-// GoogleBlockly.Extensions.register(
+});
+// GoogleBlockly.Extensions.registerMutator(
 //   'modal_procedures_mini_toolbox',
 //   modalProceduresMiniToolbox
 // );
-GoogleBlockly.Extensions.registerMutator(
-  'modal_procedures_mini_toolbox',
-  modalProceduresMiniToolbox
-);
 
 // This extension adds an SVG frame around procedures definition blocks.
 // Not used in Music Lab or wherever the modal function is enabled.
