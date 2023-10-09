@@ -112,24 +112,29 @@ const DanceAiModal: React.FunctionComponent<DanceAiProps> = ({onClose}) => {
         inputLibrary.items.find((item: AiModalItem) => item.id === input).name
     );
     const request = `${promptString} ${inputNames.join(', ')}.`;
-    startAi(request);
+    startAi(inputs, request);
     setMode(Mode.GENERATING);
   };
 
-  const startAi = async (value: string) => {
+  const startAi = async (inputs: string[], value: string) => {
     const responseJsonString = await doAi(value);
     const response = JSON.parse(responseJsonString);
 
     // "Pick" a subset of fields to be used.  Specifically, we exclude the
     // explanation, since we don't want it becoming part of the code.
     const pickedResponse = (({
+      inputs,
       backgroundEffect,
       backgroundColor,
       foregroundEffect,
       dancers,
-    }) => ({backgroundEffect, backgroundColor, foregroundEffect, dancers}))(
-      response
-    );
+    }) => ({
+      inputs,
+      backgroundEffect,
+      backgroundColor,
+      foregroundEffect,
+      dancers,
+    }))({inputs, ...response});
     const pickedResponseJson = JSON.stringify(pickedResponse);
 
     // The block value will be set to this JSON.
