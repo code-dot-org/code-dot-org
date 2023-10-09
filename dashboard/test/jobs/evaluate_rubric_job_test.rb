@@ -13,6 +13,9 @@ class EvaluateRubricJobTest < ActiveJob::TestCase
     create :learning_goal, rubric: @rubric, learning_goal: 'learning-goal-1'
     create :learning_goal, rubric: @rubric, learning_goal: 'learning-goal-2'
     assert_equal 2, @rubric.learning_goals.count
+
+    # Don't actually talk to S3
+    AWS::S3.stubs :create_client
   end
 
   test "job succeeds on ai-enabled level" do
