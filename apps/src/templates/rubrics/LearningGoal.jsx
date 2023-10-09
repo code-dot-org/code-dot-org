@@ -40,7 +40,7 @@ export default function LearningGoal({
   const teacherFeedback = useRef('');
 
   const aiEnabled = learningGoal.aiEnabled && teacherHasEnabledAi;
-  const base_endpoint = '/learning_goal_evaluations';
+  const base_teacher_evaluation_endpoint = '/learning_goal_teacher_evaluations';
 
   // Timer variabls for autosaving
   const autosaveTimer = useRef();
@@ -81,9 +81,14 @@ export default function LearningGoal({
       feedback: teacherFeedback.current,
       understanding: understandingLevel.current,
     });
-    HttpClient.put(`${base_endpoint}/${learningGoalEval.id}`, bodyData, true, {
-      'Content-Type': 'application/json',
-    })
+    HttpClient.put(
+      `${base_teacher_evaluation_endpoint}/${learningGoalEval.id}`,
+      bodyData,
+      true,
+      {
+        'Content-Type': 'application/json',
+      }
+    )
       .then(() => {
         setIsAutosaving(false);
         setAutosaved(true);
@@ -102,9 +107,14 @@ export default function LearningGoal({
         userId: studentLevelInfo.user_id,
         learningGoalId: learningGoal.id,
       });
-      HttpClient.post(`${base_endpoint}/get_or_create_evaluation`, body, true, {
-        'Content-Type': 'application/json',
-      })
+      HttpClient.post(
+        `${base_teacher_evaluation_endpoint}/get_or_create_evaluation`,
+        body,
+        true,
+        {
+          'Content-Type': 'application/json',
+        }
+      )
         .then(response => response.json())
         .then(json => {
           setLearningGoalEval(json);
