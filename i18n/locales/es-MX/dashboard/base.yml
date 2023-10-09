@@ -803,6 +803,8 @@ es-MX:
     submit-incomplete-body: "No has respondido algunas preguntas. No podrás editar tu evaluación luego de enviarla. ¿Estás seguro?"
     submit-complete-title: "Enviar tu evaluación"
     submit-complete-body: "No podrás editar tu evaluación luego de enviarla. ¿Estás seguro?"
+  level_summary:
+    correct_answer: "Respuesta correcta"
   match:
     wrong_title: "Solución incorrecta"
     wrong_body: "La solución ingresada no es la correcta. ¡Intenta nuevamente!"

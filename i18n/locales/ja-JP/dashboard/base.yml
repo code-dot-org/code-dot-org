@@ -111,7 +111,7 @@ ja:
   prize: '受賞'
   more_info: 'もっと見る'
   auth:
-    continue_with: '%{provider} で続きます'
+    continue_with: '%{provider} を使用してサインインする'
     sign_in_with: '%{provider} を使用してサインインする'
     signed_in: 'サインイン！'
     signed_out_markdown: '### [Code.org](%{url})からサインアウトしました。'

@@ -913,6 +913,7 @@
           "type": "Recurso"
         },
         "introduction_to_sprites/csd/2021": {
+          "name": "Introdução aos Sprites",
           "type": "Vídeo"
         },
         "the_animation_tab/csd/2021": {
@@ -920,6 +921,7 @@
           "type": "Vídeo"
         },
         "animation_tab/csd/2021": {
+          "name": "Aba de Animação",
           "type": "Recurso"
         },
         "sprites_1/csd/2021": {
@@ -3869,6 +3871,7 @@
           "type": "Slides"
         },
         "animation_tab/csd/2022": {
+          "name": "Aba de Animação",
           "type": "Recurso"
         },
         "introduction_to_sprites/csd/2022": {
@@ -7506,9 +7509,11 @@
           "type": "Rubrica"
         },
         "animation_tab/csd/2023": {
+          "name": "Aba de Animação",
           "type": "Recurso"
         },
         "introduction_to_sprites/csd/2023": {
+          "name": "Introdução aos Sprites",
           "type": "Vídeo"
         },
         "sprites/csd/2023": {

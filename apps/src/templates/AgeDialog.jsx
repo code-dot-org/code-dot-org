@@ -77,6 +77,7 @@ class AgeDialog extends Component {
     if (age >= 21) {
       analyticsReporter.sendEvent(EVENTS.AGE_21_SELECTED_EVENT, {
         unit_name: this.props.unitName,
+        current_path: document.location.pathname,
       });
     }
   };

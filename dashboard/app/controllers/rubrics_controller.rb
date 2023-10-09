@@ -47,9 +47,9 @@ class RubricsController < ApplicationController
     return head :forbidden unless current_user&.teacher?
     permitted_params = params.permit(:id, :student_id)
     learning_goal_ids = LearningGoal.where(rubric_id: permitted_params[:id]).pluck(:id)
-    learning_goal_evaluations = LearningGoalEvaluation.where(user_id: permitted_params[:student_id], learning_goal_id: learning_goal_ids, teacher_id: current_user.id)
+    evaluations = LearningGoalTeacherEvaluation.where(user_id: permitted_params[:student_id], learning_goal_id: learning_goal_ids, teacher_id: current_user.id)
     submitted_at = Time.now
-    if learning_goal_evaluations.update_all(submitted_at: submitted_at)
+    if evaluations.update_all(submitted_at: submitted_at)
       render json: {submittedAt: submitted_at}
     else
       return head :bad_request

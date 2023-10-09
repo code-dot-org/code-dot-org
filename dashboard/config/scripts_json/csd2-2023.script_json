@@ -17,7 +17,7 @@
     },
     "new_name": null,
     "family_name": null,
-    "serialized_at": "2023-09-25 20:23:18 UTC",
+    "serialized_at": "2023-10-03 18:35:18 UTC",
     "published_state": null,
     "instruction_type": null,
     "instructor_audience": null,
@@ -2319,7 +2319,7 @@
       "key": "45de1f5a-e699-4d78-9c45-49a6bf212ea8",
       "position": 3,
       "properties": {
-        "description": "**Circulate**: Give students time to explore the headings and discuss the questions on the level with their partner. \n\n**Prompt**: When would you use each of these headings? For example, which heading would you use for a web page title ... when might you use the H6 heading?\n\n**Discussion Goal**: Students should notice the H6 is the largest heading tag and should therefore be used for web page titles. The remaining heading tags are used for sub-titles and section/subsection titles. \n\n**Code Studio**: Have students continue to the next level in Code Studio",
+        "description": "**Circulate**: Give students time to explore the headings and discuss the questions on the level with their partner. \n\n**Prompt**: When would you use each of these headings? For example, which heading would you use for a web page title ... when might you use the H6 heading?\n\n**Discussion Goal**: Students should notice the H1 is the largest heading tag and should therefore be used for web page titles. The remaining heading tags are used for sub-titles and section/subsection titles. \n\n**Code Studio**: Have students continue to the next level in Code Studio",
         "progression_name": "Explore"
       },
       "seeding_key": {
