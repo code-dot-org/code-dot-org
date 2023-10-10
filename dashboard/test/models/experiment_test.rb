@@ -153,6 +153,15 @@ class ExperimentTest < ActiveSupport::TestCase
     refute Experiment.enabled?(experiment_name: experiment.name, user: @student)
   end
 
+  test "creating experiments does not break get_all_enabled for signed out user" do
+    Honeybadger.stubs(:notify).raises('HoneyBadger.notify called')
+    create :user_based_experiment
+    create :teacher_based_experiment
+    create :single_user_experiment
+    create :single_section_experiment
+    Experiment.get_all_enabled
+  end
+
   test "teacher is included in single-section experiment" do
     experiment = create :single_section_experiment
     assert Experiment.enabled?(experiment_name: experiment.name, user: experiment.section.user)
