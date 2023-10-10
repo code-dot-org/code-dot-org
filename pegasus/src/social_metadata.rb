@@ -310,7 +310,7 @@ def get_social_metadata_for_page(request)
     case name
     when :image
       output["og:image"] = "https://#{request.host}#{value[:path]}"
-      output["twitter:image:src"] = "https://#{request.host}#{value[:path]}"
+      output["twitter:image:src"] = "https://#{request.host}#{value[:path]}" unless social_tag_set.include?(:image_twitter)
       output["og:image:width"] = value[:width]
       output["og:image:height"] = value[:height]
       output["twitter:card"] = "photo"
