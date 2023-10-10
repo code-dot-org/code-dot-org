@@ -259,7 +259,7 @@ describe('RubricContainer', () => {
     await act(async () => {
       await Promise.resolve();
     });
-    wrapper.update(); // Apply the state update
+    wrapper.update();
 
     const learningGoal2Wrapper = wrapper.find('LearningGoal').at(1);
     expect(learningGoal2Wrapper.prop('aiUnderstanding')).to.equal(
@@ -272,7 +272,7 @@ describe('RubricContainer', () => {
     sinon.restore();
   });
 
-  it('does not pass down LearningGoal', () => {
+  it('does not pass down AI analysis to components when teacher has disabled AI', () => {
     const wrapper = mount(
       <RubricContainer
         {...defaultProps}
