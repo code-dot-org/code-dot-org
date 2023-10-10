@@ -64,5 +64,9 @@ Scenario: Signed out courses, non-english
   Given I am on "http://studio.code.org/home/lang/es"
   Then I wait until I am on "http://studio.code.org/users/sign_in"
   And I wait to see ".headerlinks"
-  And I wait until I don't see selector "#header-courses"
+  And I see "#header-courses"
+  And I press "header-courses"
+  Then I am on "http://studio.code.org/courses"
+  And I wait to see "#uitest-course-blocks-tools"
+  And I see no difference for "signed-out courses page, non-english"
   And I close my eyes
