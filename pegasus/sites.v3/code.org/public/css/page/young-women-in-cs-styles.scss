@@ -32,6 +32,10 @@
       background-size: contain, 580px;
       z-index: 2;
 
+      html[dir="rtl"] & {
+        transform: scaleX(-1);
+      }
+
       @media screen and (min-width: $width-xl) {
         background-position: center, 70% bottom;
       }
