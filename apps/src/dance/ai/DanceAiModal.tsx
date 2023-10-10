@@ -10,6 +10,8 @@ import classNames from 'classnames';
 import FontAwesome from '@cdo/apps/templates/FontAwesome';
 import {BlockSvg} from 'blockly/core';
 import {doAi} from './utils';
+import {queryParams} from '@cdo/apps/code-studio/utils';
+import DanceAiClient from '../DanceAiClient';
 const Typist = require('react-typist').default;
 
 const aiBotBorder = require('@cdo/static/dance/ai/ai-bot-border.png');
@@ -117,7 +119,13 @@ const DanceAiModal: React.FunctionComponent<DanceAiProps> = ({onClose}) => {
   };
 
   const startAi = async (value: string) => {
-    const responseJsonString = await doAi(value);
+    let responseJsonString: any;
+    // Default to using cached response, otherwise contact OpenAI directly
+    if (queryParams('ai-model') === 'llm') {
+      responseJsonString = await doAi(value);
+    } else {
+      responseJsonString = DanceAiClient(value);
+    }
     const response = JSON.parse(responseJsonString);
 
     // "Pick" a subset of fields to be used.  Specifically, we exclude the

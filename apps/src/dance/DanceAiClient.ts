@@ -1,7 +1,17 @@
 import UntypedCachedPalettes from '@cdo/static/dance/ai/model/cachedpalettemap.json';
 import UntypedCachedBackgrounds from '@cdo/static/dance/ai/model/cachedbackgroundmap.json';
 import UntypedCachedForegrounds from '@cdo/static/dance/ai/model/cachedforegroundmap.json';
-import {CachedMapping} from './types';
+
+// Custom types for vector mapping JSONs to play nice with Typescript
+type EmojiAssociation = {
+  association: number[];
+  explanation: string;
+};
+
+type CachedMapping = {
+  emojiAssociations: {[key: string]: EmojiAssociation};
+  output: string[];
+};
 
 const CachedPalettes: CachedMapping = UntypedCachedPalettes;
 const CachedBackgrounds: CachedMapping = UntypedCachedBackgrounds;
@@ -23,7 +33,7 @@ export default function cachedAi(input: string) {
   const {emojiAssociations: foregroundAssociations, output: foregrounds} =
     CachedForegrounds;
 
-  //Pull individual association vectors for each input emoji
+  // Pull individual association vectors for each input emoji
   trimmedInput.forEach(value => {
     if (Object.prototype.hasOwnProperty.call(paletteAssociations, value)) {
       inputPaletteVectors[value] = paletteAssociations[value];

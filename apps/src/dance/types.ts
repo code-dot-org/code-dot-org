@@ -35,13 +35,3 @@ export interface DanceLevelProperties extends LevelProperties {
   defaultSong?: string;
   useRestrictedSongs?: boolean;
 }
-
-type EmojiAssociation = {
-  association: number[];
-  explanation: string;
-};
-
-export type CachedMapping = {
-  emojiAssociations: {[key: string]: EmojiAssociation};
-  output: string[];
-};
