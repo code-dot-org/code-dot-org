@@ -30,7 +30,6 @@ import i18n from '@cdo/tutorialExplorer/locale';
 import _ from 'lodash';
 import queryString from 'query-string';
 import {StickyContainer} from 'react-sticky';
-import fontConstants from '@cdo/apps/fontConstants';
 
 export default class TutorialExplorer extends React.Component {
   static propTypes = {
@@ -670,7 +669,7 @@ const styles = {
     clear: 'both',
   },
   bottomLinksLink: {
-    ...fontConstants['main-font-semi-bold'],
+    fontFamily: '"Gotham 5r", sans-serif',
   },
   bottomLinksLinkFirst: {
     paddingBottom: 10,

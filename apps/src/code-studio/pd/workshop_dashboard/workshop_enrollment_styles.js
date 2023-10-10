@@ -1,11 +1,9 @@
-import fontConstants from '@cdo/apps/fontConstants';
-
 export const workshopEnrollmentStyles = {
   th: {
     backgroundImage: 'none',
     padding: 0,
     backgroundColor: 'white',
-    ...fontConstants['main-font-regular'],
+    fontFamily: '"Gotham 4r"',
     fontSize: 14,
   },
   clickTarget: {

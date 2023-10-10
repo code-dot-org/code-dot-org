@@ -3,11 +3,10 @@ import PropTypes from 'prop-types';
 import React from 'react';
 import color from '../util/color';
 import {AnyChildren} from './types';
-import fontConstants from '@cdo/apps/fontConstants';
 
 const style = {
   header: {
-    ...fontConstants['main-font-semi-bold'],
+    fontFamily: `"Gotham 5r", sans-serif`,
     fontSize: 16,
     color: color.charcoal,
     borderBottomStyle: 'solid',

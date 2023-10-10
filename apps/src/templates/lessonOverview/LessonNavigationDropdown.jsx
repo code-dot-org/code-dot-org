@@ -7,7 +7,6 @@ import color from '@cdo/apps/util/color';
 import {navigationLessonShape} from '@cdo/apps/templates/lessonOverview/lessonPlanShapes';
 import {linkWithQueryParams, navigateToHref} from '@cdo/apps/utils';
 import firehoseClient from '@cdo/apps/lib/util/firehose';
-import fontConstants from '@cdo/apps/fontConstants';
 
 /*
  Component used to navigate between lesson plans. List
@@ -145,15 +144,15 @@ const styles = {
     display: 'inline-block',
   },
   boldText: {
-    ...fontConstants['main-font-bold'],
+    fontFamily: '"Gotham 7r", sans-serif',
   },
   section: {
     width: 300,
-    ...fontConstants['main-font-regular'],
+    fontFamily: '"Gotham 4r", sans-serif',
     backgroundColor: color.lightest_purple,
   },
   lesson: {
     width: 300,
-    ...fontConstants['main-font-regular'],
+    fontFamily: '"Gotham 4r", sans-serif',
   },
 };

@@ -1,4 +1,5 @@
-@import 'color', 'font';
+@import 'color.scss';
+@import 'font';
 
 #cookie-banner {
   position: fixed;
@@ -19,7 +20,7 @@
   z-index: 2000000200;
 
   a, a:visited {
-    @include main-font-bold;
+    font-family: $gotham-extra-bold;
     color: white;
     text-decoration: underline;
   }
@@ -38,7 +39,6 @@
     text-align: center;
 
     button {
-      @include main-font-regular;
       margin-right: 20px;
       align-items: flex-start;
       background-color: #ffa400;
@@ -65,7 +65,9 @@
       color: #fff;
       cursor: pointer;
       display: inline-block;
+      font-family: 'Gotham 4r', sans-serif;
       font-size: 14px;
+      font-weight: normal;
       height: 34px;
       letter-spacing: normal;
       line-height: 20px;

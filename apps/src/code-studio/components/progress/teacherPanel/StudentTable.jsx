@@ -8,7 +8,6 @@ import ProgressBubble from '@cdo/apps/templates/progress/ProgressBubble';
 import FontAwesome from '@cdo/apps/templates/FontAwesome';
 import {levelWithProgress, studentShape} from './types';
 import stringKeyComparator from '@cdo/apps/util/stringKeyComparator';
-import fontConstants from '@cdo/apps/fontConstants';
 
 class StudentTable extends React.Component {
   static propTypes = {
@@ -132,7 +131,7 @@ const styles = {
     padding: 1,
   },
   selected: {
-    ...fontConstants['main-font-bold'],
+    fontFamily: '"Gotham 7r", sans-serif',
     color: color.white,
     backgroundColor: color.light_cyan,
   },

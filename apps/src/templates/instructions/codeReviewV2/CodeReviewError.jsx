@@ -3,7 +3,6 @@ import PropTypes from 'prop-types';
 import color from '@cdo/apps/util/color';
 import javalabMsg from '@cdo/javalab/locale';
 import FontAwesome from '@cdo/apps/templates/FontAwesome';
-import fontConstants from '@cdo/apps/fontConstants';
 
 const CodeReviewError = ({messageTitle, messageText, style = {}}) => {
   const title = messageTitle || javalabMsg.genericError();
@@ -30,7 +29,7 @@ const styles = {
     marginRight: 10,
   },
   messageTitle: {
-    ...fontConstants['main-font-semi-bold'],
+    fontFamily: '"Gotham 5r", sans-serif',
     fontSize: 14,
     marginBottom: 0,
     color: color.dark_charcoal,

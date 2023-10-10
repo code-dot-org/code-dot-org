@@ -55,7 +55,6 @@ import {teacherDashboardUrl} from '@cdo/apps/templates/teacherDashboard/urlHelpe
 import firehoseClient from '@cdo/apps/lib/util/firehose';
 import SafeMarkdown from '../SafeMarkdown';
 import {setSortByFamilyName} from '@cdo/apps/templates/currentUserRedux';
-import fontConstants from '@cdo/apps/fontConstants';
 
 const LOGIN_TYPES_WITH_PASSWORD_COLUMN = [
   SectionLoginType.word,
@@ -988,7 +987,7 @@ const styles = {
   sectionCode: {
     marginLeft: 5,
     color: color.teal,
-    ...fontConstants['main-font-bold'],
+    fontFamily: '"Gotham 7r", sans-serif',
     cursor: 'copy',
   },
   noSectionCode: {
@@ -997,7 +996,7 @@ const styles = {
     cursor: 'pointer',
   },
   sectionCodeNotApplicable: {
-    ...fontConstants['main-font-bold'],
+    fontFamily: '"Gotham 7r", sans-serif',
   },
 };
 

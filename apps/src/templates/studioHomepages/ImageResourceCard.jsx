@@ -1,7 +1,6 @@
 import PropTypes from 'prop-types';
 import React, {Component} from 'react';
 import {connect} from 'react-redux';
-import fontConstants from '@cdo/apps/fontConstants';
 import Button from '../Button';
 import color from '../../util/color';
 
@@ -87,7 +86,7 @@ const styles = {
   title: {
     fontSize: 24,
     paddingBottom: 10,
-    ...fontConstants['main-font-bold'],
+    fontFamily: '"Gotham 7r", sans-serif',
     whiteSpace: 'nowrap',
   },
   callout: {
@@ -95,13 +94,13 @@ const styles = {
     fontSize: 14,
     paddingBottom: 10,
     margin: '0px 8px',
-    ...fontConstants['main-font-semi-bold'],
+    fontFamily: '"Gotham 5r", sans-serif',
     color: color.white,
   },
   description: {
     fontSize: 14,
     lineHeight: '21px',
-    ...fontConstants['main-font-regular'],
+    fontFamily: '"Gotham 4r", sans-serif',
     height: 80,
   },
   button: {
