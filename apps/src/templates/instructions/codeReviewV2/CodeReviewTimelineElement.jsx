@@ -7,6 +7,7 @@ import color from '@cdo/apps/util/color';
 import javalabMsg from '@cdo/javalab/locale';
 import {stringifyQueryParams} from '@cdo/apps/utils';
 import {queryParams} from '@cdo/apps/code-studio/utils';
+import fontConstants from '@cdo/apps/fontConstants';
 
 export const codeReviewTimelineElementType = {
   CREATED: 'created',
@@ -182,8 +183,7 @@ const styles = {
     paddingTop: '2px',
   },
   createdText: {
-    fontFamily: '"Gotham 5r", sans-serif',
-    fontStyle: 'italic',
+    ...fontConstants['main-font-semi-bold-italic'],
   },
   commitChild: {
     padding: '0 0 25px 20px',
