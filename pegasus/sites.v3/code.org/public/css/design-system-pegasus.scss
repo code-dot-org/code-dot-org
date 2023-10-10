@@ -459,11 +459,23 @@ ol.steps-list {
   padding: unset;
 
   &.four-col {
-    li { width: 20%; }
+    li {
+      width: 20%;
+
+      @media screen and (max-width: $width-sm) {
+        width: 100%;
+      }
+    }
   }
 
   &.three-col {
-    li { width: 28%; }
+    li {
+      width: 28%;
+
+      @media screen and (max-width: $width-sm) {
+        width: 100%;
+      }
+    }
   }
 
   li {
@@ -474,10 +486,6 @@ ol.steps-list {
     flex-wrap: wrap;
     text-align: center;
     margin: 3rem 0 2.5rem;
-
-    @media screen and (max-width: $width-sm) {
-      width: 100%;
-    }
 
     a.link-button,
     button,
