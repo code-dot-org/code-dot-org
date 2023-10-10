@@ -120,7 +120,7 @@ section.banner {
   a {
     color: $neutral-white;
     text-decoration: underline;
-    font-family: $gotham-bold;
+    @include main-font-semi-bold;
 
     &.ctabuttonatag {
       text-decoration: none;
