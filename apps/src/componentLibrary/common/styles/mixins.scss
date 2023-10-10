@@ -2,7 +2,7 @@
 
 // Typography - Label styles
 @mixin label-common {
-  @include main-font-semi-bold;
+  font-family: $gotham-bold;
   margin-bottom: 0.5rem;
 }
 
@@ -32,7 +32,7 @@
 
 // Typography - Link styles (Link Body styles)
 @mixin link-body-common {
-  @include main-font-semi-bold;
+  font-family: $gotham-bold;
   text-decoration: underline;
 }
 
@@ -62,7 +62,7 @@
 
 // Typography Button text styles
 @mixin button-text-common {
-  @include main-font-semi-bold;
+  font-family: $gotham-bold;
   margin-bottom: 0.5rem;
 }
 

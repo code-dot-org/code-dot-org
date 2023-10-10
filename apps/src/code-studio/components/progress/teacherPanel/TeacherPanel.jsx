@@ -33,7 +33,6 @@ import {
   queryLockStatus,
 } from '@cdo/apps/code-studio/components/progress/teacherPanel/teacherPanelData';
 import SortByNameDropdown from '@cdo/apps/templates/SortByNameDropdown';
-import fontConstants from '@cdo/apps/fontConstants';
 
 const TEACHER_PANEL = 'TeacherPanel';
 
@@ -285,7 +284,7 @@ const styles = {
     display: 'inline',
     marginLeft: 10,
     fontSize: 16,
-    ...fontConstants['main-font-bold'],
+    fontFamily: '"Gotham 7r", sans-serif',
   },
   sectionHeader: {
     margin: 10,

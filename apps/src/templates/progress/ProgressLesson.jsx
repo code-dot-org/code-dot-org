@@ -18,7 +18,6 @@ import FocusAreaIndicator from './FocusAreaIndicator';
 import ReactTooltip from 'react-tooltip';
 import _ from 'lodash';
 import Button from '../Button';
-import fontConstants from '@cdo/apps/fontConstants';
 
 class ProgressLesson extends React.Component {
   static propTypes = {
@@ -260,7 +259,7 @@ const styles = {
   },
   heading: {
     fontSize: 18,
-    ...fontConstants['main-font-semi-bold'],
+    fontFamily: '"Gotham 5r", sans-serif',
     display: 'flex',
     alignItems: 'center',
   },
@@ -298,7 +297,8 @@ const styles = {
   },
   notAuthorizedWarning: {
     color: color.red,
-    ...fontConstants['main-font-semi-bold-italic'],
+    fontFamily: '"Gotham 5r", sans-serif',
+    fontStyle: 'italic',
     marginTop: 10,
   },
   learnMoreLink: {

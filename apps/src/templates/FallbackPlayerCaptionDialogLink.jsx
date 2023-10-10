@@ -5,7 +5,6 @@ import i18n from '@cdo/locale';
 import BaseDialog from './BaseDialog';
 import DialogFooter from './teacherDashboard/DialogFooter';
 import {pegasus} from '@cdo/apps/lib/util/urlHelpers';
-import fontConstants from '@cdo/apps/fontConstants';
 
 export default class FallbackPlayerCaptionDialogLink extends React.Component {
   static propTypes = {
@@ -87,7 +86,7 @@ const styles = {
     paddingRight: 20,
     paddingBottom: 20,
     textAlign: 'left',
-    ...fontConstants['main-font-regular'],
+    fontFamily: '"Gotham 4r", sans-serif',
   },
   dialogLinkContainer: {
     marginTop: 20,

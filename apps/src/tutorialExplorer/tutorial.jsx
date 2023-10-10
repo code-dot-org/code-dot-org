@@ -8,7 +8,6 @@ import {getTutorialDetailString} from './util';
 import {getResponsiveValue} from './responsive';
 import Image from './image';
 import LazyLoad from 'react-lazy-load';
-import fontConstants from '@cdo/apps/fontConstants';
 
 export default class Tutorial extends React.Component {
   static propTypes = {
@@ -89,7 +88,7 @@ const styles = {
     border: '1px solid rgb(162, 162, 162)',
   },
   tutorialName: {
-    ...fontConstants['main-font-semi-bold'],
+    fontFamily: '"Gotham 5r", sans-serif',
     fontSize: 15,
     textOverflow: 'ellipsis',
     whiteSpace: 'nowrap',
@@ -99,7 +98,7 @@ const styles = {
     padding: '8px 10px 0',
   },
   tutorialSub: {
-    ...fontConstants['main-font-regular'],
+    fontFamily: '"Gotham 4r", sans-serif',
     fontSize: 12,
     lineHeight: '16px',
     height: 28,

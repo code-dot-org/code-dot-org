@@ -1,5 +1,4 @@
 import color from '@cdo/apps/util/color';
-import fontConstants from '@cdo/apps/fontConstants';
 import {LevelStatus, LevelKind} from '@cdo/apps/util/sharedConstants';
 
 /**
@@ -48,7 +47,7 @@ export const marginTopBottom = margin => {
  */
 
 export const font = {
-  ...fontConstants['main-font-semi-bold'],
+  fontFamily: '"Gotham 5r", sans-serif',
 };
 
 export const hoverStyle = {

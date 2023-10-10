@@ -8,7 +8,6 @@ import SchoolAutocompleteDropdownWithLabel from '@cdo/apps/templates/census2017/
 import FieldGroup from '../../code-studio/pd/form_components/FieldGroup';
 import SingleCheckbox from '../../code-studio/pd/form_components/SingleCheckbox';
 import color from '@cdo/apps/util/color';
-import fontConstants from '@cdo/apps/fontConstants';
 import {isEmail} from '@cdo/apps/util/formatValidation';
 import {STATES} from '@cdo/apps/geographyConstants';
 import DCDO from '@cdo/apps/dcdo';
@@ -421,7 +420,7 @@ const styles = {
   },
   descriptiveText: {
     display: 'block',
-    ...fontConstants['main-font-regular'],
+    fontFamily: '"Gotham 4r", sans-serif',
     fontWeight: 'bold',
     fontSize: 14,
     border: 'none',

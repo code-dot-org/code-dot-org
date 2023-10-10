@@ -5,7 +5,6 @@ import {connect} from 'react-redux';
 import StudioAppWrapper from '../templates/StudioAppWrapper';
 import CodeWorkspaceContainer from '../templates/CodeWorkspaceContainer';
 import _ from 'lodash';
-import fontConstants from '@cdo/apps/fontConstants';
 
 /**
  * Top-level React wrapper for Fish
@@ -159,7 +158,7 @@ const styles = {
     width: '100%',
     margin: '0 auto',
     userSelect: 'none',
-    ...fontConstants['main-font-regular'],
+    fontFamily: '"Gotham 4r", arial, sans-serif',
     color: 'rgb(30,30,30)',
     lineHeight: 1.3,
   },

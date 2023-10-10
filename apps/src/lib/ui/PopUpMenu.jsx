@@ -6,7 +6,6 @@ import Radium from 'radium'; // eslint-disable-line no-restricted-imports
 import {PortalWithState} from 'react-portal';
 import msg from '@cdo/locale';
 import color from '../../util/color';
-import fontConstants from '@cdo/apps/fontConstants';
 
 const TAIL_WIDTH = 14;
 const TAIL_HEIGHT = 12;
@@ -159,7 +158,6 @@ class MenuBubbleUnwrapped extends Component {
     );
   }
 }
-
 export const MenuBubble = Radium(MenuBubbleUnwrapped);
 
 export class MenuBreak extends Component {
@@ -233,7 +231,7 @@ class Item extends Component {
     const textStyle = {
       color: this.props.color ? this.props.color : color.dark_charcoal,
       textDecoration: 'none', // Remove underline from anchor tags
-      ...fontConstants['main-font-regular'],
+      fontFamily: "'Gotham 4r', sans-serif",
     };
 
     const target = openInNewTab ? '_blank' : '';

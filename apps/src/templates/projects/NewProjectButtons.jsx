@@ -2,7 +2,6 @@ import React from 'react';
 import {connect} from 'react-redux';
 import i18n from '@cdo/locale';
 import styleConstants from '../../styleConstants';
-import fontConstants from '@cdo/apps/fontConstants';
 import color from '../../util/color';
 import PropTypes from 'prop-types';
 import Radium from 'radium'; // eslint-disable-line no-restricted-imports
@@ -210,7 +209,7 @@ const styles = {
     paddingRight: 10,
     paddingBottom: 10,
     fontSize: 14,
-    ...fontConstants['main-font-semi-bold'],
+    fontFamily: '"Gotham 5r"',
     color: color.neutral_dark,
   },
 };

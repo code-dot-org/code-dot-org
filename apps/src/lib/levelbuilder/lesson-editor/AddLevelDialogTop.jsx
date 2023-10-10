@@ -8,7 +8,6 @@ import $ from 'jquery';
 import queryString from 'query-string';
 import FontAwesome from '@cdo/apps/templates/FontAwesome';
 import {connect} from 'react-redux';
-import fontConstants from '@cdo/apps/fontConstants';
 
 function AddLevelDialogTop(props) {
   const [methodOfAddingLevel, setMethodOfAddingLevel] = useState('Find Level');
@@ -131,7 +130,7 @@ const styles = {
     paddingRight: 20,
     paddingBottom: 20,
     width: 1100,
-    ...fontConstants['main-font-regular'],
+    fontFamily: '"Gotham 4r", sans-serif, sans-serif',
     marginLeft: -600,
   },
   dialogContent: {

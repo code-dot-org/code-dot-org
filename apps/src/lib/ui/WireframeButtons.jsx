@@ -4,7 +4,6 @@ import React from 'react';
 import i18n from '@cdo/locale';
 import SendToPhone from '../../code-studio/components/SendToPhone';
 import project from '../../code-studio/initApp/project';
-import fontConstants from '@cdo/apps/fontConstants';
 
 /**
  * List of app types for which we should show a "View code" button here. Other
@@ -133,13 +132,11 @@ SendToPhoneControls.propTypes = _.pick(WireframeButtons.propTypes, [
 
 const styles = {
   main: {
-    fontSize: '12pt',
-    ...fontConstants['main-font-semi-bold'],
+    font: '12pt "Gotham 5r", sans-serif',
   },
   sendToPhone: {
     label: {
-      fontSize: '12pt',
-      ...fontConstants['main-font-semi-bold'],
+      font: '12pt "Gotham 5r", sans-serif',
       lineHeight: 'normal',
       cursor: 'default',
     },
