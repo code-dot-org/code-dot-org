@@ -1245,7 +1245,7 @@
   "joinText": "join",
   "joinTextTooltip": "Create a piece of text by joining together multiple items.",
   "joinUs": "Join us",
-  "jsonInCDOBlockly": "Due to a system upgrade, your code could not be loaded. Please use Version History to recover a working version of this project, or to start over.",
+  "jsonInCdoBlockly": "Due to a system upgrade, your code could not be loaded. Please use Version History to recover a working version of this project, or to start over.",
   "jump": "jump",
   "jumpToLesson": "Jump to lesson",
   "justDidHourOfCode": "I just did the #HourOfCode - check it out! @codeorg",

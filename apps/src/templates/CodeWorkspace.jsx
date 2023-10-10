@@ -55,6 +55,9 @@ class CodeWorkspace extends React.Component {
         // isRunning and style only affect style, and can be updated
         // workspaceAlert is involved in displaying or closing workspace alert
         // therefore this key can be updated
+        // hasIncompatibleSources is involved in displaying an alert for invalid Blockly
+        // sources. This key can be updated because it will only be set once, and it will
+        // be set after the initial render.
         if (
           key === 'isRunning' ||
           key === 'style' ||
@@ -297,7 +300,7 @@ class CodeWorkspace extends React.Component {
             id="incompatibleSourcesBanner"
             style={{...styles.topBanner, ...styles.incompatibleCodeBanner}}
           >
-            {i18n.jsonInCDOBlockly()}
+            {i18n.jsonInCdoBlockly()}
           </div>
         )}
         {props.showDebugger && (

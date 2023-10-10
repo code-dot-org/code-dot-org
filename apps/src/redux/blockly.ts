@@ -5,6 +5,8 @@ interface BlocklyState {
 }
 
 const initialState: BlocklyState = {
+  // hasIncompatibleSources is set to true if we try to load json sources in
+  // CDO Blockly, which only supports xml.
   hasIncompatibleSources: false,
 };
 
