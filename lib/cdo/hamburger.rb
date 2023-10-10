@@ -39,11 +39,9 @@ class Hamburger
         show_signed_out_options = SHOW_ALWAYS
       end
 
-      # Regardless of user type, if they are English, then they also need the pegasus
+      # Regardless of user type, then they also need the pegasus
       # options in the hamburger.
-      if options[:language] == "en"
-        show_pegasus_options = SHOW_ALWAYS
-      end
+      show_pegasus_options = SHOW_ALWAYS
 
     else
 
@@ -58,12 +56,10 @@ class Hamburger
         show_signed_out_options = SHOW_MOBILE
       end
 
-      if options[:language] == "en"
-        # We want to show the pegasus options.  They're in the hamburger for desktop
-        # if they didn't fit on the header, or they're just in it for mobile if they did.
-        show_pegasus_options =
-          (options[:user_type] == "teacher" || options[:user_type] == "student") ? SHOW_ALWAYS : SHOW_MOBILE
-      end
+      # We want to show the pegasus options.  They're in the hamburger for desktop
+      # if they didn't fit on the header, or they're just in it for mobile if they did.
+      show_pegasus_options =
+        (options[:user_type] == "teacher" || options[:user_type] == "student") ? SHOW_ALWAYS : SHOW_MOBILE
     end
 
     # Do we show hamburger on all widths, only mobile, or not at all?
@@ -96,6 +92,8 @@ class Hamburger
       {title: "my_dashboard", url: CDO.studio_url("/home")},
       {title: "course_catalog", url: CDO.studio_url("/catalog")},
       {title: "project_gallery", url: CDO.studio_url("/projects")},
+      {title: I18n.t("#{loc_prefix}professional_learning"), url: CDO.studio_url("/my-professional-learning")},
+      {title: I18n.t("#{loc_prefix}incubator"), url: CDO.studio_url("/incubator")}
     ].each do |entry|
       entry[:title] = I18n.t("#{loc_prefix}#{entry[:title]}")
     end
@@ -103,42 +101,18 @@ class Hamburger
     student_entries = [
       {title: "my_dashboard", url: CDO.studio_url("/home"), id: "hamburger-student-home"},
       {title: "course_catalog", url: CDO.studio_url("/courses")},
-      {title: "project_gallery", url: CDO.studio_url("/projects"), id: "hamburger-student-projects"}
+      {title: "project_gallery", url: CDO.studio_url("/projects"), id: "hamburger-student-projects"},
+      {title: I18n.t("#{loc_prefix}incubator"), url: CDO.studio_url("/incubator")}
     ].each do |entry|
       entry[:title] = I18n.t("#{loc_prefix}#{entry[:title]}")
     end
 
     signed_out_entries = [
       {title: "course_catalog", url: CDO.studio_url("/catalog")},
-      {title: "project_gallery", url: CDO.studio_url("/projects/public"), id: "hamburger-signed-out-projects"}
+      {title: "project_gallery", url: CDO.studio_url("/projects/public"), id: "hamburger-signed-out-projects"},
+      {title: I18n.t("#{loc_prefix}incubator"), url: CDO.studio_url("/incubator")}
     ].each do |entry|
       entry[:title] = I18n.t("#{loc_prefix}#{entry[:title]}")
-    end
-
-    if options[:language] == "en"
-      if options[:user_type] == "teacher"
-        teacher_entries << {
-          title: I18n.t("#{loc_prefix}professional_learning"),
-          url: CDO.studio_url("/my-professional-learning"),
-        }
-      end
-
-      entries = [teacher_entries, student_entries, signed_out_entries]
-      entries.each do |entry|
-        entry << {
-          title: I18n.t("#{loc_prefix}incubator"),
-          url: CDO.studio_url("/incubator"),
-        }
-      end
-    else
-      entries = [teacher_entries, student_entries, signed_out_entries]
-      entries.each do |entry|
-        entry << {
-          title: I18n.t("#{loc_prefix}about"),
-          url: CDO.code_org_url("/international/about"),
-          id: "header-intl-about"
-        }
-      end
     end
 
     educate_entries = [
@@ -215,15 +189,13 @@ class Hamburger
       id: "learn"
     }
 
-    if options[:language] == "en"
-      entries << {
-        type: "expander",
-        title: I18n.t("#{loc_prefix}teach"),
-        id: "educate_entries",
-        subentries: educate_entries.each {|e| e[:class] = visibility[:show_pegasus_options]},
-        class: visibility[:show_pegasus_options]
-      }
-    end
+    entries << {
+      type: "expander",
+      title: I18n.t("#{loc_prefix}teach"),
+      id: "educate_entries",
+      subentries: educate_entries.each {|e| e[:class] = visibility[:show_pegasus_options]},
+      class: visibility[:show_pegasus_options]
+    }
 
     entries << {
       title: I18n.t("#{loc_prefix}stats"),
@@ -239,15 +211,13 @@ class Hamburger
       id: "help-us"
     }
 
-    if options[:language] == "en"
-      entries << {
-        type: "expander",
-        title: I18n.t("#{loc_prefix}about"),
-        id: "about_entries",
-        subentries: about_entries.each {|e| e[:class] = visibility[:show_pegasus_options]},
-        class: visibility[:show_pegasus_options]
-      }
-    end
+    entries << {
+      type: "expander",
+      title: I18n.t("#{loc_prefix}about"),
+      id: "about_entries",
+      subentries: about_entries.each {|e| e[:class] = visibility[:show_pegasus_options]},
+      class: visibility[:show_pegasus_options]
+    }
 
     entries << {
       type: "expander",
