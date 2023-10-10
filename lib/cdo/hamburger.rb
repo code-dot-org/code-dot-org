@@ -268,11 +268,8 @@ class Hamburger
       {title: I18n.t("#{loc_prefix}my_dashboard"), url: CDO.studio_url("/home"), id: "header-teacher-home"},
       {title: I18n.t("#{loc_prefix}course_catalog"), url: CDO.studio_url("/catalog"), id: "header-teacher-courses"},
       {title: I18n.t("#{loc_prefix}project_gallery"), url: CDO.studio_url("/projects"), id: "header-teacher-projects"},
-    ]
-
-    en_teacher = [
       {title: I18n.t("#{loc_prefix}professional_learning"), url: CDO.studio_url("/my-professional-learning"), id: "header-teacher-professional-learning"},
-      {title: I18n.t("#{loc_prefix}incubator"), url: CDO.studio_url("/incubator"), id: "header-incubator"},
+      {title: I18n.t("#{loc_prefix}incubator"), url: CDO.studio_url("/incubator"), id: "header-teacher-incubator"},
     ]
 
     any_student_links = [
@@ -302,11 +299,6 @@ class Hamburger
 
     if options[:user_type] == "teacher"
       header_links = any_teacher_links
-      if options[:language] == "en"
-        header_links.concat(en_teacher)
-      else
-        header_links.concat(about_intl)
-      end
     elsif options[:user_type] == "student"
       header_links = any_student_links
       if options[:language] == "en"
