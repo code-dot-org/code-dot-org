@@ -28,7 +28,6 @@ class I18n::SyncOutTest < Minitest::Test
     I18n::Resources::Dashboard.stubs(:sync_out).raises(expected_error)
     I18n::Resources::Pegasus.stubs(:sync_out).raises(expected_error)
     I18n::SyncOut.stubs(:rename_from_crowdin_name_to_locale).raises(expected_error)
-    I18n::SyncOut.stubs(:rename_from_crowdin_name_to_locale).raises(expected_error)
     I18n::SyncOut.stubs(:restore_redacted_files).raises(expected_error)
     I18n::SyncOut.stubs(:distribute_translations).raises(expected_error)
     Services::I18n::CurriculumSyncUtils.stubs(:sync_out).raises(expected_error)

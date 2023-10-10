@@ -202,7 +202,12 @@ const MultipleSectionsAssigner = ({
       </div>
       <div className={moduleStyle.sectionList}>
         <Heading5>{i18n.yourSectionsList()}</Heading5>
-        <div className={moduleStyle.sectionListOptionsContainer}>
+        <div
+          role="region"
+          aria-label={i18n.sectionSelectionLabel()}
+          className={moduleStyle.sectionListOptionsContainer}
+          tabIndex="0"
+        >
           {sections &&
             sections.map(
               section =>

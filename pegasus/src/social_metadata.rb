@@ -15,6 +15,7 @@
 #   code.org/ai
 #   code.org/ai/pl/101
 #   code.org/ai/how-ai-works
+#   code.org/videos
 #
 #   hourofcode.com/
 #   hourofcode.com/learn
@@ -62,6 +63,7 @@ def get_social_metadata_for_page(request)
     ai_101: {path: "/shared/images/social-media/ai-101-social.png", width: 1200, height: 630},
     ai_how_ai_works: {path: "/shared/images/social-media/ai-how-ai-works-social.png", width: 1200, height: 630},
     hoc_2023_social: {path: "/shared/images/social-media/hoc2023_social.png", width: 1200, height: 630},
+    videos_page: {path: "/shared/images/social-media/videos-page.png", width: 1200, height: 630},
   }
 
   # Important:
@@ -151,9 +153,9 @@ def get_social_metadata_for_page(request)
     },
     "learn" => {
       "default" => {
-        title: hoc_s(:social_hoc_anybody),
-        description: hoc_s(:social_hoc2022_explore_play_create),
-        image: images[:hoc_2022_social]
+        title: hoc_s(:hoc2023_social_creativity_with_ai_title),
+        description: hoc_s(:hoc2023_social_creativity_with_ai_desc),
+        image: images[:hoc_2023_social]
       }
     },
     "hoc-overview" => {
@@ -219,6 +221,13 @@ def get_social_metadata_for_page(request)
         image: images[:ai_how_ai_works]
       }
     },
+    "videos_page" => {
+      "default" => {
+        title: hoc_s(:video_library_page_main_title),
+        description: hoc_s(:social_videos_desc),
+        image: images[:videos_page]
+      }
+    },
   }
 
   if request.path == "/challenge" && request.site == "code.org"
@@ -255,6 +264,8 @@ def get_social_metadata_for_page(request)
     page = "ai_101"
   elsif request.path == "/ai/how-ai-works" && request.site == "code.org"
     page = "ai_how_ai_works"
+  elsif request.path == "/educate/resources/videos" && request.site == "code.org"
+    page = "videos_page"
   else
     return {}
   end
