@@ -1236,7 +1236,6 @@ StudioApp.prototype.initReadonly = function (options) {
     rtl: getStore().getState().isRtl,
     scrollbars: false,
   });
-
   this.loadBlocks(options.blocks);
 };
 
