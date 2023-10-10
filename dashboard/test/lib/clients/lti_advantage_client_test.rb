@@ -27,7 +27,6 @@ class LtiAdvantageClientTest < ActiveSupport::TestCase
 
     actual_error = assert_raises(RuntimeError) {@lti_client.get_context_membership(url)}
     assert_equal "Error getting context membership: #{response_code} #{response_body}", actual_error.message
-    
   end
 
   test 'throws an error if no client_id or issuer is provided' do
