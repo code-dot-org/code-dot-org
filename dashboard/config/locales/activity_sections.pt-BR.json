@@ -7271,6 +7271,9 @@
             null
           ]
         },
+        "3051c3a3-5ddc-4d4c-85c0-502d2a2e1f70": {
+          "description": "Não importa se estamos tratando de filmes, música, arte, jogos ou qualquer outra atividade, o fato é que temos diversos tipos de entretenimento à nossa disposição. Hoje, veremos como a ciência da computação desempenha seu papel em alguns desses diferentes campos."
+        },
         "f348d317-252e-4581-b489-fe1bbe700f67": {
           "tips": [
             null
@@ -7329,7 +7332,7 @@
         "3c78bafa-e216-4280-a965-d982d319d15a": {
           "description": "\\*\\*Faça o Seu Próprio Desenho: \\*\\* Se o tempo permitir, deixe que aos alunos criem seus próprios desenhos para dar as coordenadas ao parceiro.",
           "tips": [
-            null
+            "**Quando Seguir em Frente:** Decida se essa última atividade vale a pena ser realizada, considerando seu cronograma. Permitir que os alunos criaem e comuniquem seus próprios desenhos pode ajudá-los a reforçarem seus conhecimentos, mas se os alunos estão alcançando os objetivos de aprendizagem da aula, você também pode simplesmente ir até o final para sintetizar o aprendizado."
           ]
         },
         "7ccd003e-0694-42bc-ad0a-9240ca8e9c34": {
@@ -7354,7 +7357,7 @@
           "description": "\\*\\*Prompt: \\*\\* Com base no que você sabe sobre computadores, o que você acha que será diferente entre descrever uma imagem a uma pessoa e descrevê-la a um computador ?"
         },
         "0a01de04-3b8f-4025-864a-8a2f48f9fd09": {
-          "description": "\\*\\*Compartilhe: \\*\\* Dê aos alunos tempo para pensarem individualmente e discutirem com um parceiro, depois reúna a turma e escreva suas ideias no quadro.",
+          "description": "**Compartilhe:** Dê aos alunos tempo para pensarem individualmente e discutirem com um parceiro, depois reúna a turma e escreva suas ideias no quadro.",
           "tips": [
             null
           ]
@@ -7422,6 +7425,7 @@
           ]
         },
         "69985cec-7330-4730-a85a-a49cb816af3e": {
+          "name": "Compartilhe os Desenhos",
           "description": "**Compartilhe:** Depois que os alunos concluírem seus desenhos, peça-lhes que os compartilhem com a classe. Uma maneira de fazer isso é com uma caminhada pela galeria."
         },
         "07dbb2a7-3649-46e9-b5c2-435b34ffbef7": {
@@ -7480,6 +7484,7 @@
           "description": "**Prompt:** No início do curso, aprendemos que entrada, saída, armazenamento e processamento eram comuns a todos os computadores. Onde você vê a entrada, a saída, o armazenamento e o processamento no Game Lab?"
         },
         "9e754b3d-83a4-4fb3-bdf5-331c02667465": {
+          "description": "**Compartilhe:** Permita que os alunos compartilhem suas respostas.",
           "tips": [
             null
           ]
@@ -7587,17 +7592,33 @@
             "A discussão objetiva fazer com que os alunos pensem sobre as implicações mais amplas da aleatoriedade em jogos e outros programas. Embora não haja nenhum bloqueio para dados aleatórios gerais além dos números, nas aulas posteriores, os alunos aprenderão técnicas que lhes permitirão usar números aleatórios para escolher aleatoriamente entre uma variedade de comportamentos.    "
           ]
         },
+        "3777c89a-bcc9-4f6b-9be4-6b657ccaf34c": {
+          "name": "Quanta Informação?",
+          "description": "**Revisão:** Até agora, escrevemos programas que colocam formas simples na tela. Faça uma lista de todas as diferentes informações que você usou para controlar _como_ essas formas são desenhadas. \n\n**Aviso:** Se você quiser criar programas com imagens mais detalhadas, talvez até mesmo caracteres com os quais você possa interagir, de quais outras informações você poderia precisar em seu código?"
+        },
         "04061607-035b-48a3-ad8e-33fed692aa2b": {
+          "description": "**Compartilhe:** Permita que os alunos compartilhem suas listas.",
           "tips": [
-            null
+            "O objetivo aqui é fazer com que os alunos pensem em todos os diferentes valores necessários para desenharem uma única forma na tela e de quantos valores adicionais eles podem precisar para controlar um caractere mais detalhado em um programa. Se os alunos estiverem sem ideias, você pode usar algumas das seguintes instruções para auxiliá-los:\n\n-   Como você diz a uma forma para onde ir na tela?\n-   Como você diz a uma forma qual o tamanho que ela precisa ter?\n-   Como você diz a uma forma qual a cor que ela deve ter? E quanto ao seu esboço?\n-   E se você quisesse alterar qualquer um desses valores durante o programa ou controlar outras coisas, como a rotação, como você o faria?"
           ]
+        },
+        "397fc3c4-e325-4fe6-85e1-98a0f95a3479": {
+          "description": "Hoje, aprenderemos a criar caracteres em nossas animações chamados **sprites**. Esses sprites nos ajudarão a acompanhar todas as informações de que precisaremos em nossos programas."
+        },
+        "602a49a8-c954-428c-aad5-92ab7e86451a": {
+          "description": "\\*\\*Pergunta do Dia: Como podemos usar sprites para nos ajudar a acompanhar um grande volume de informações em nossos programas? \\*\\*"
+        },
+        "91cc3ea7-fcef-4b80-a8a3-bee9c71f2fc1": {
+          "name": "Introdução aos Sprites",
+          "description": "**Transição:** Oriente que os alunos acessem o Code Studio"
         },
         "068fe268-da1d-49ed-8628-408960971d4a": {
           "progression_name": "Exploração"
         },
         "f52c22d8-72a7-44d1-91d2-66aacf92c1a8": {
+          "description": "**Perguntas a serem consideradas a partir do Vídeo:**\n\n-   O que é um sprite?\n-   O que são propriedades?\n-   Que tipo de problema os sprites resolvem?",
           "tips": [
-            null
+            "**Vocabulário-Chave:**\n\n-   **Sprite** - Um caractere na tela com propriedades que descrevem sua localização, movimento e aparência.\n-   **Propriedade** - Um rótulo para uma característica de um sprite, como sua localização e aparência.\n-   **Notação de pontos** - a forma como as propriedades dos sprites são usadas no Game Lab, conectando o sprite e a propriedade a um ponto.\n\nSprites são um conceito muito complexo e os alunos podem ter dificuldade em entender exatamente o que são. O aspecto mais importante que os alunos devem entender é que os sprites permitem que eles organizem muitas informações sobre algo que desejam desenhar na tela.\n\nOs alunos devem fazer a conexão entre propriedades e variáveis, que contêm as informações de que seu programa precisa para ser executado. As propriedades são acessadas por meio de seus sprites, e os sprites do Game Lab já têm propriedades específicas que são criadas automaticamente quando os alunos criam cada sprite, como uma determinada posição, altura e rotação.\n\nOs sprites resolvem o problema de organizar muitas informações sobre como algo deve ser desenhado em uma tela. Em vez de criar novas variáveis para armazenar todas essas informações, os sprites usam propriedades para armazenar todas as informações sobre algo desenhado na tela.\n\n**Canto do Conteúdo:** O sprite é um tipo de dado chamado objeto. Embora ainda não estejamos introduzindo explicitamente o conceito de objetos, os alunos precisam entender que um sprite é um tipo de valor diferente dos que vimos antes, que pode conter referências a muitos outros valores."
           ],
           "progression_name": "Vídeo: Introdução a Sprites"
         },
@@ -7605,8 +7626,9 @@
           "progression_name": "Desenvolvimento de Habilidades"
         },
         "8f56a7b9-e17b-4173-bae9-c996824270b4": {
+          "description": "\\*\\*Perguntas a serem Consideradas a partir do Vídeo: \\*\\*\n\n-   Quais são as etapas a serem seguidas para adicionar uma imagem a um sprite?\n-   Quais são as diferentes formas de se obter uma imagem?",
           "tips": [
-            null
+            "Certifique-se de que os alunos entendam que precisarão criar a imagem (ou animação) na Aba de Animação e depois adicionar a animação ao sprite usando o bloco [`determineAnimação` (#f78183)].[0] Os alunos podem se confundir com o uso da palavra “animação” para imagens únicas, mas no Game Lab, imagens estáticas são consideradas “animações” com apenas um quadro.\n\nOs alunos podem usar uma animação que já está na biblioteca de abas de animação, fazer upload de uma do computador ou criar a sua própria usando as ferramentas de desenho fornecidas. Além disso, os alunos podem usar as ferramentas de desenho para modificar as imagens que escolheram da biblioteca ou que enviaram de seus arquivos.\n\n**Alerta de Erro!**\nMuitos estudantes agora podem confundir os conceitos de um sprite, sua animação e a imagem que ele desenha na tela. Nas próximas lições, fique atento a esse equívoco e reforce a ideia de que a animação de um sprite é apenas uma de suas propriedades, aquela que controla qual imagem é desenhada na tela. Lembre aos alunos que um único sprite pode ter animações diferentes ao longo do programa, assim como outras propriedades podem mudar, e que dois ou mais sprites podem compartilhar a mesma animação."
           ],
           "progression_name": "Vídeo: A guia de Animação"
         },
@@ -7628,17 +7650,30 @@
         "2057627a-c665-4a63-8aed-c1123ce9796a": {
           "name": "Desafios",
           "tips": [
-            null
+            "**Nível 11e - Encontrar uma imagem online**: como não sabemos quais sites podem estar bloqueados em seu distrito, evitamos direcionar os alunos para um mecanismo de pesquisa específico. Nem todos os mecanismos de pesquisa facilitam a configuração dos filtros do Creative Commons. Alguns dos mais fáceis incluem:\n\n-   [Pesquisa Creative Commons] - [Pesquisa avançada de imagens do Google](https://search.creativecommons.org/)\n-   [Wikimedia Commons](https://www.google.com/advanced_image_search)\n-   [Flickr Creative Commons](https://commons.wikimedia.org/wiki/Main_Page)\n    [3]"
           ],
           "progression_name": "Desafios"
+        },
+        "60981e3b-2e60-4bd0-9708-372bf36d6a5e": {
+          "description": "**Vocabulário-Chave:**\n\n-   **Sprite** - Um personagem na tela com propriedades que descrevem sua localização, movimento e aparência.\n-   **Propriedade** - Um rótulo para uma característica de um sprite, como sua localização e aparência.\n-   **Notação de pontos** - a forma como as propriedades dos sprites são usadas no Game Lab, conectando o sprite e a propriedade com um ponto."
         },
         "7fe0e935-1853-4c68-a62c-332e86840c6d": {
           "name": "Diário"
         },
         "5989291d-e9d4-4f14-bdf6-399b69b96cec": {
+          "description": "**Compartilhe:** Permita que os alunos compartilhem suas ideias.",
           "tips": [
-            null
+            "Essa discussão faz com que os alunos pensem sobre as diferentes propriedades que um sprite pode ter e os prepara para a próxima lição, que aborda explicitamente as propriedades do sprite."
           ]
+        },
+        "4d7800ef-fda9-4e2f-9094-742ad082214e": {
+          "description": "**Prompt:** Qual é a sua definição de sprite? Quais propriedades do sprite você sabe usar? Quais outras propriedades do sprite podem ser úteis?\n\nPermita que os alunos reflitam sozinhos e depois com um parceiro antes de compartilharem com todo o grupo. Não há problemas se os alunos não tiverem uma definição canônica de um sprite, mas eles devem reconhecer que um sprite é uma parte do programa que tem várias propriedades diferentes que controlam sua localização e aparência."
+        },
+        "5d2ffe80-c763-4ae6-8632-703e41f4f0ee": {
+          "description": "Até agora, só conseguimos controlar a localização e a animação do nosso sprite, mas hoje vamos aprender a como atualizar outras propriedades do sprite para que possamos criar programas ainda melhores."
+        },
+        "eba90858-374c-49fd-8bf7-391446b7b506": {
+          "description": "**Pergunta do Dia: Como podemos usar as propriedades dos sprites para alterar sua aparência na tela?**"
         },
         "08b6ad2a-7ff0-429d-bc3b-e83030e2fcbc": {
           "progression_name": "Previsão"
@@ -7658,13 +7693,26 @@
         "9925febf-964d-468b-8ad0-b76a389d4498": {
           "progression_name": "Desafios"
         },
+        "f287b9b0-8bd6-4b3c-9ce1-d660ec302b13": {
+          "description": "**Pergunta do Dia: Como podemos usar as propriedades dos sprites para alterar sua aparência na tela?**\n\n**Aviso do diário:** O que significa que as propriedades unidirecionais dos sprites sejam iguais às variáveis? De que forma as propriedades dos sprites são diferentes das variáveis?"
+        },
         "f455bf72-f2c8-4bf2-970f-af533ef80342": {
+          "description": "**Discuta:** Permita que os alunos discutam em duplas ou em pequenos grupos antes de compartilharem suas ideias com todo o grupo.",
           "tips": [
-            null
+            "Os alunos podem observar que as propriedades e variáveis do sprite são semelhantes, pois ambas armazenam informações. São diferentes porque as variáveis podem ser qualquer coisa, mas os sprites têm propriedades específicas que são usadas de certas maneiras na tela."
           ]
         },
         "bc610d8b-c45e-48e4-a5de-63a7f8bf5a3b": {
           "name": "Diário"
+        },
+        "21269f39-79c8-4b91-8ae8-48a13a3da5fd": {
+          "description": "Nós nos divertimos muito desenhando coisas e usando nossos sprites, mas falta uma coisa nas imagens do Game Lab: texto! Hoje vamos aprender como adicionar texto aos projetos do Game Lab."
+        },
+        "621ef750-87ee-4947-a0d7-4bf1964b1fbd": {
+          "description": "**Pergunta do Dia: Como podemos usar texto para melhorar nossas cenas e animações?**"
+        },
+        "6c15b25f-3b31-4a86-a747-1599391da0c2": {
+          "description": "**Transição** Direcione os alunos ao Code Studio."
         },
         "de715c3f-0860-4e19-acb1-ebcb230a19a8": {
           "progression_name": "Previsão"
@@ -7684,18 +7732,34 @@
         "06559d3f-7ebd-4356-a06d-c16cdeaebde5": {
           "progression_name": "Desafios"
         },
+        "d437ce8a-62d4-422b-9626-0f7ef6f4603f": {
+          "name": "Diário",
+          "description": "**Pergunta do Dia: Como podemos usar texto para melhorar nossas cenas e animações?**\n\n**Prompt:** Você desenhou com texto e formas na tela.\n\n-   Quais são as duas maneiras pelas quais desenhar com texto é semelhante ao desenho de formas?\n-   De que maneira desenhar com texto é diferente de desenhar com formas?"
+        },
         "7e2e7a3e-fd91-4ab5-8b46-f8ae96c91169": {
+          "description": "**Compartilhe:** Se houver tempo, permita que os alunos compartilhem suas respostas.",
           "tips": [
-            null
+            "As respostas dos alunos à pergunta podem variar, mas algumas semelhanças são que ambos usam o plano cartesiano e são desenhados automaticamente, ao contrário dos sprites, que devem usar o comando [`drawSprites` (#fff176)].[0] Uma possível diferença é que é mais difícil controlar o tamanho exato do texto, já que a quantidade de texto e o tamanho da fonte não são tão específicos quanto os parâmetros de altura e largura."
           ]
         },
         "67d8c4d5-fda2-47c0-a7a3-164eb669718f": {
-          "name": "Revisar"
+          "name": "Revisar",
+          "description": "**Prompt:** Anote quantos blocos você conseguir lembrar do Game Lab. Certifique-se de que sabe o que cada um faz, especialmente as entradas ou parâmetros de cada um dos blocos."
         },
         "0b250aa0-f3fa-4530-bef8-e328e4d93620": {
+          "description": "**Compartilhe:** Permita que os alunos compartilhem o que eles lembram em uma avaliação em grupos.",
           "tips": [
-            null
+            "O objetivo dessa discussão é revisar os diferentes blocos e habilidades que os alunos aprenderam. Enquanto os alunos falam sobre os diferentes blocos, tente orientar a conversa sobre como eles podem ser usados de forma criativa, para se conectar ao tópico principal do dia."
           ]
+        },
+        "1fc3fa43-7278-4924-92ed-ff3231846092": {
+          "description": "Você já aprendeu a fazer coisas realmente bacanas no Game Lab. Hoje você terá a chance de juntá-los para criar uma cena interessante para ser compartilhada com os outros. Isso significa que, em vez de tentar recriar a ideia de outra pessoa, você terá suas próprias ideias, então é hora de ser criativo!"
+        },
+        "fcdd3f31-ae71-41fb-8ba3-d989576ec372": {
+          "description": "**Pergunta do Dia: Como podemos usar os recursos do Game Lab para expressar nossa criatividade?**"
+        },
+        "20942849-9b2e-42e1-8259-e38ee03e01f6": {
+          "description": "**Distribua:** (opcional) distribua cópias do guia de atividades. Os alunos podem usar essa folha para planejar a cena que deverão criar no final desta lição, mas o planejamento também pode ser feito em papel de rascunho.\n\n**Transição** Direcione os alunos ao Code Studio."
         },
         "d4865d33-6382-4b57-b532-6949d5621973": {
           "progression_name": "Cenas com Sprite"
@@ -7713,16 +7777,20 @@
           "progression_name": "Revise sua Cena"
         },
         "fe60d6bf-420e-474d-8b50-0ff252e6c6bf": {
+          "name": "Caminhada pela Galeria",
+          "description": "Permita que os alunos andem pela sala e vejam as gravuras que cada um de seus colegas codificou. Comemore todas as ideias diferentes que os alunos conseguiram implementar a partir do mesmo código básico.",
           "tips": [
-            null
+            "Você pode optar por formalizar esse processo pedido que cada aluno anote uma qualidade positiva de cada projeto ou fazendo com que os alunos “sorteiem nomes” para comentar sobre o trabalho de um colega em particular."
           ]
         },
         "4638c8d2-4376-4673-979e-66a86d260573": {
-          "name": "Diário"
+          "name": "Diário",
+          "description": "**Pergunta do Dia: Como podemos usar o Game Lab para expressar nossa criatividade?**\n\n**Prompt:** Qual foi a maneira mais criativa pela qual outra pessoa usou os blocos hoje?"
         },
         "760b0216-8c5d-4954-ac35-fd42c527ac66": {
+          "description": "**Compartilhe:** Peça aos alunos que compartilhem o que gostaram nos projetos de seus colegas. Talvez você queira fazer isso em estilo “pipoca”, com cada aluno que responde escolhendo a próxima pessoa para compartilhar.",
           "tips": [
-            null
+            "Essa discussão deve servir como uma celebração do que os alunos realizaram. À medida que os alunos contarem o que viram, incentive-os a aprender uns com os outros e a fazer perguntas caso não tenham certeza de como fazer algo. Destaque como os alunos conseguiram fazer coisas muito diferentes a partir da mesma ferramenta."
           ]
         },
         "c490c403-c5dc-4755-a03b-1532565b1119": {
@@ -7817,6 +7885,7 @@
           "name": "Revisar"
         },
         "a5361b9b-6e15-4bba-9b35-ae31a1e1b525": {
+          "description": "**Compartilhe:** Permita que os alunos compartilhem o que eles lembram em uma avaliação em grupos.",
           "tips": [
             null
           ]
@@ -7843,14 +7912,17 @@
           "progression_name": "Revise sua Cena animada"
         },
         "fa1f1ad4-aadd-49d1-9138-887450893813": {
+          "name": "Caminhada pela Galeria",
+          "description": "Permita que os alunos andem pela sala e vejam as gravuras que cada um de seus colegas codificou. Comemore todas as ideias diferentes que os alunos conseguiram implementar a partir do mesmo código básico.",
           "tips": [
-            null
+            "Você pode optar por formalizar esse processo pedido que cada aluno anote uma qualidade positiva de cada projeto ou fazendo com que os alunos “sorteiem nomes” para comentar sobre o trabalho de um colega em particular."
           ]
         },
         "8ad6136f-ee41-4b14-8866-2d4d8b0d9779": {
           "name": "Diário"
         },
         "f54152bb-4d02-459d-beea-ceeb422be02a": {
+          "description": "**Compartilhe:** Peça aos alunos que compartilhem o que gostaram nos projetos de seus colegas. Talvez você queira fazer isso em estilo “pipoca”, com cada aluno que responde escolhendo a próxima pessoa para compartilhar.",
           "tips": [
             null
           ]
@@ -8156,6 +8228,7 @@
           "progression_name": "Previsão de código"
         },
         "29881c8e-82cb-4886-8e1f-7f101c91bae9": {
+          "description": "**Compartilhe:** Permita que os alunos compartilhem suas ideias.",
           "tips": [
             null
           ]
@@ -8328,6 +8401,7 @@
           "name": "Diário"
         },
         "7e64a6bf-73b9-4cd3-be58-402b3da57768": {
+          "description": "**Compartilhe:** Permita que os alunos compartilhem suas ideias.",
           "tips": [
             null
           ]
@@ -9555,6 +9629,7 @@
           ]
         },
         "46bfc542-d2d8-4124-a4cd-d7e53fff618e": {
+          "name": "Diário",
           "tips": [
             null
           ]
@@ -10023,6 +10098,7 @@
           "progression_name": "Extra"
         },
         "eb895db7-aeb1-4efe-9eb8-c314cd7a2621": {
+          "name": "Diário",
           "tips": [
             null
           ]
@@ -10187,8 +10263,11 @@
             null
           ]
         },
+        "382c1a61-60c6-481f-962a-ececae1298de": {
+          "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Vídeo:** Assista ao vídeo IA: O que é Machine Learning? nos slides\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Vocabulário:** Exiba o seguinte vocabulário\n\n-   **Machine Learning:** Como os computadores reconhecem padrões e tomam decisões sem serem programados explicitamente"
+        },
         "42738b6d-fc16-4de9-b190-d6253f5e2c67": {
-          "progression_name": "Reconhecendo peixes"
+          "progression_name": "Reconhecendo Peixes"
         },
         "aa866b7f-747f-49e4-9578-f937dbef61e4": {
           "tips": [
@@ -10196,7 +10275,7 @@
           ]
         },
         "0cd5acdb-155e-4161-aba7-610f3869ec29": {
-          "progression_name": "Reconhecendo as características dos peixes"
+          "progression_name": "Reconhecendo as Características dos Peixes"
         },
         "8c5b9e26-3b22-4a68-a10d-2e8f3d24a9b0": {
           "tips": [
@@ -10204,7 +10283,7 @@
           ]
         },
         "1ce2130f-e735-4060-811f-b8c87e6f74b0": {
-          "progression_name": "Reconhecendo expressões"
+          "progression_name": "Reconhecendo Expressões"
         },
         "01e90cb3-4a6f-46ed-9a4e-4e7524589e47": {
           "tips": [
@@ -10483,6 +10562,9 @@
             null
           ]
         },
+        "a78fb652-de9d-4d40-9024-8e6c4d15ee18": {
+          "name": "Diário"
+        },
         "30e5080a-05d0-4193-82e4-f7c81f1adb5c": {
           "name": "Cartões modelo no AI Lab",
           "tips": [
@@ -10509,6 +10591,12 @@
         },
         "1503235c-6a46-401d-85f0-1fa291901771": {
           "progression_name": "Personalizando seu aplicativo"
+        },
+        "fab00d1e-0bf0-4f6c-866f-388441b6505d": {
+          "name": "Diário"
+        },
+        "3227657f-0bd2-4f06-970c-445432836588": {
+          "name": "Diário"
         },
         "42abdf12-61c8-48a4-8118-6f0b713e28dc": {
           "progression_name": "Exemplo de aplicativo: Classificação de zoológicos"
@@ -10593,6 +10681,9 @@
           ]
         },
         "cf7fec91-b8c2-4b68-8e78-f10c536c2d3f": {
+          "name": "Diário"
+        },
+        "bcdd8b8e-db28-42f7-9ddf-d24579e170d5": {
           "name": "Diário"
         },
         "221c0911-a3eb-4409-be91-e665b43e3fc9": {
@@ -16874,7 +16965,7 @@
         },
         "8600f333-fd3e-46ab-81ab-764018ab6813": {
           "tips": [
-            null
+            "**Miniprojetos Facilitadores:** Os miniprojetos atuam como pontos de verificação nos currículos e abrangem o subconjunto de habilidades que os alunos observaram até agora na unidade. Eles foram projetados para 1 a 2 dias de implementação como uma forma de verificar se os alunos entenderam bem o conteúdo do curso até o momento. Você pode decidir estender esses projetos como uma forma de apoiar ou desafiar os alunos, o que pode permitir que você revise conceitos difíceis ou apoie alunos que podem ter perdido as aulas e estão tentando recuperar o que perderam. No entanto, recomendamos que você decida isso com antecedência e seja firme com os alunos sobre quanto tempo eles têm para cada projeto. Caso contrário, os projetos facilmente se estenderão por vários dias e que o trabalho do aluno ultrapasse o escopo deste projeto."
           ]
         },
         "347a163d-847a-47cd-aa36-7fe36784752f": {
@@ -16890,7 +16981,7 @@
         },
         "4337c14f-b8d6-42b7-88c9-8bb6d6a68f15": {
           "tips": [
-            null
+            "**Estratégias de Depuração:** À medida que os alunos projetam e implementam suas próprias ideias de projeto, eles podem se deparar com novos erros que precisarão ser resolvidos e você pode se deparar com um código completamente desconhecido enquanto os alunos procuram ajuda para solucionar seus erros. Para ajudar a facilitar a experiência de depuração, considere as seguintes estratégias:\n\n-   Consulte o [Guia de depuração do professor] para ver algumas perguntas e estratégias comuns[0] que podem ajudar os alunos a depurarem seu código\n-   Peça aos alunos que sigam as etapas do [Guia do aluno para depuração] e usem as [Planilhas trimestrais do relatório de erros] como uma etapa [1](https://docs.google.com/document/d/1M6mnq73DfyvzasucVAwfL-gjl2JqVPzjy_fRx5j4j7c/preview) inicial do processo de depuração. Isso ajuda os alunos a se prepararem e comunicarem o problema antes de pedirem ajuda.\n-   Se os alunos ainda não o viram, exiba o [Vídeo de depuração](https://www.youtube.com/watch?v=auv10y-dN4s) à turma para reforçar as melhores práticas de depuração.\n\n**Aprofundando:** Considere fornecer aos alunos um objeto com quem conversar como parte do processo de depuração. Isso às vezes é conhecido como Rubber Duck Debugging - você pode aprender mais no site <https://rubberduckdebugging.com/>"
           ],
           "progression_name": "Codifique sua página"
         },
@@ -17021,7 +17112,7 @@
         },
         "64552bfc-d25b-4850-921a-2bc32d6d450d": {
           "tips": [
-            null
+            "**Estratégias de Depuração:** À medida que os alunos projetam e implementam suas próprias ideias de projeto, eles podem se deparar com novos erros que precisarão ser resolvidos e você pode se deparar com um código completamente desconhecido enquanto os alunos procuram ajuda para solucionar seus erros. Para ajudar a facilitar a experiência de depuração, considere as seguintes estratégias:\n\n-   Consulte o [Guia de depuração do professor] para ver algumas perguntas e estratégias comuns[0] que podem ajudar os alunos a depurarem seu código\n-   Peça aos alunos que sigam as etapas do [Guia do aluno para depuração] e usem as [Planilhas trimestrais do relatório de erros] como uma etapa [1](https://docs.google.com/document/d/1M6mnq73DfyvzasucVAwfL-gjl2JqVPzjy_fRx5j4j7c/preview) inicial do processo de depuração. Isso ajuda os alunos a se prepararem e comunicarem o problema antes de pedirem ajuda.\n-   Se os alunos ainda não o viram, exiba o [Vídeo de depuração](https://www.youtube.com/watch?v=auv10y-dN4s) à turma para reforçar as melhores práticas de depuração.\n\n**Aprofundando:** Considere fornecer aos alunos um objeto com quem conversar como parte do processo de depuração. Isso às vezes é conhecido como Rubber Duck Debugging - você pode aprender mais no site <https://rubberduckdebugging.com/>"
           ],
           "progression_name": "Adicione Conteúdo e Estrutura à sua Página"
         },
@@ -17190,7 +17281,7 @@
         },
         "523e9cfe-861d-487e-b922-43f06047aa06": {
           "tips": [
-            null
+            "**Estratégias de Depuração:** À medida que os alunos projetam e implementam suas próprias ideias de projeto, eles podem se deparar com novos erros que precisarão ser resolvidos e você pode se deparar com um código completamente desconhecido enquanto os alunos procuram ajuda para solucionar seus erros. Para ajudar a facilitar a experiência de depuração, considere as seguintes estratégias:\n\n-   Consulte o [Guia de depuração do professor] para ver algumas perguntas e estratégias comuns[0] que podem ajudar os alunos a depurarem seu código\n-   Peça aos alunos que sigam as etapas do [Guia do aluno para depuração] e usem as [Planilhas trimestrais do relatório de erros] como uma etapa [1](https://docs.google.com/document/d/1M6mnq73DfyvzasucVAwfL-gjl2JqVPzjy_fRx5j4j7c/preview) inicial do processo de depuração. Isso ajuda os alunos a se prepararem e comunicarem o problema antes de pedirem ajuda.\n-   Se os alunos ainda não o viram, exiba o [Vídeo de depuração](https://www.youtube.com/watch?v=auv10y-dN4s) à turma para reforçar as melhores práticas de depuração.\n\n**Aprofundando:** Considere fornecer aos alunos um objeto com quem conversar como parte do processo de depuração. Isso às vezes é conhecido como Rubber Duck Debugging - você pode aprender mais no site <https://rubberduckdebugging.com/>"
           ],
           "progression_name": "Projeto do SIte"
         },
@@ -17420,7 +17511,7 @@
         },
         "3a14abd4-7d6f-4742-be18-b32c2faaf3b4": {
           "tips": [
-            null
+            "**Estratégias de Depuração:** À medida que os alunos projetam e implementam suas próprias ideias de projeto, eles podem se deparar com novos erros que precisarão ser resolvidos e você pode se deparar com um código completamente desconhecido enquanto os alunos procuram ajuda para solucionar seus erros. Para ajudar a facilitar a experiência de depuração, considere as seguintes estratégias:\n\n-   Consulte o [Guia de depuração do professor] para ver algumas perguntas e estratégias comuns[0] que podem ajudar os alunos a depurarem seu código\n-   Peça aos alunos que sigam as etapas do [Guia do aluno para depuração] e usem as [Planilhas trimestrais do relatório de erros] como uma etapa [1](https://docs.google.com/document/d/1M6mnq73DfyvzasucVAwfL-gjl2JqVPzjy_fRx5j4j7c/preview) inicial do processo de depuração. Isso ajuda os alunos a se prepararem e comunicarem o problema antes de pedirem ajuda.\n-   Se os alunos ainda não o viram, exiba o [Vídeo de depuração](https://www.youtube.com/watch?v=auv10y-dN4s) à turma para reforçar as melhores práticas de depuração.\n\n**Aprofundando:** Considere fornecer aos alunos um objeto com quem conversar como parte do processo de depuração. Isso às vezes é conhecido como Rubber Duck Debugging - você pode aprender mais no site <https://rubberduckdebugging.com/>"
           ],
           "progression_name": "Adicione Conteúdo e HTML"
         },
@@ -17489,16 +17580,16 @@
         },
         "16665617-63d6-466e-a02b-9f15215ceb4b": {
           "name": "CC no entretenimento",
-          "description": "Quer se trate de filmes, música, arte, jogos ou qualquer outra opção, há vários tipos de entretenimento disponíveis. Hoje, veremos como a Ciência da Computação desempenha um papel em alguns desses diferentes campos."
+          "description": "Não importa se estamos tratando de filmes, música, arte, jogos ou qualquer outra atividade, o fato é que temos diversos tipos de entretenimento à nossa disposição. Hoje, veremos como a ciência da computação desempenha seu papel em alguns desses diferentes campos."
         },
         "56d3bbbd-9eec-4102-8e92-91724e9cdf52": {
-          "description": "\\*\\*Grupo: \\*\\* Organize os alunos em grupos de três. Permita que os alunos se agrupem com base em interesses comuns, pois cada grupo explorará juntos um campo de entretenimento.\n\n\\*\\*Distribuir: \\*\\* Dê a cada grupo uma cópia do guia de atividades.",
+          "description": "**Em grupos:** Organize os alunos em grupos de três. Permita que eles se agrupem com base em seus interesses comuns, pois cada grupo explorará um campo de entretenimento.\n\n**Distribua:** Dê a cada grupo uma cópia do guia de atividades.",
           "tips": [
-            "\\*\\*Chaves de Resposta e Exemplos: \\*\\* Uma chave de resposta ou exemplo é fornecida para professores verificados como parte dos recursos deste plano de aula. Se você não encontrar uma chave de resposta ou um exemplar listado como recurso, [siga estas etapas](https://support.code.org/hc/en-us/articles/115001550131-Becoming-a-verified-teacher-CS-Principles-and-CS-Discoveries-only-) para se tornar um professor autorizado."
+            "**Chaves de Resposta e Exemplos:** Uma chave de resposta ou exemplo é fornecida para professores verificados como parte dos recursos deste plano de aula. Se você não encontrar uma chave de resposta ou um exemplar listado como recurso, [siga estas etapas](https://support.code.org/hc/en-us/articles/115001550131-Becoming-a-verified-teacher-CS-Principles-and-CS-Discoveries-only-) para se tornar um professor autorizado."
           ]
         },
         "a6630e9d-312a-4f4d-8674-ff84ae43cd2c": {
-          "description": "#### Exploração do entretenimento\n\nDurante esta atividade, os grupos farão algumas pesquisas iniciais sobre o papel que a computação e a programação desempenham em vários campos do entretenimento. O objetivo principal desta atividade é ampliar as perspectivas dos alunos sobre como a programação pode ser usada para criar coisas divertidas e interessantes. Alguns dos campos que os alunos poderiam pesquisar (como arte, animação e jogos) podem ser diretamente conectados aos programas que eles escreverão posteriormente nesta unidade, enquanto outros podem servir mais como inspiração para como as habilidades que eles estão aprendendo aqui podem ser aplicadas em diferentes domínios.\n\n#### Tópicos\n\nNo guia de atividades, há vários campos potenciais para pesquisa. Esses campos específicos foram escolhidos de acordo com os recursos fornecidos no Code Studio, mas você pode fazer com que os alunos explorem outras áreas, se quiserem."
+          "description": "#### Exploração do entretenimento\n\nDurante esta atividade, os grupos realizarão algumas pesquisas preliminares sobre o papel que a computação e a programação desempenham em várias áreas de entretenimento. O objetivo principal desta atividade é ampliar as perspectivas dos alunos sobre como a programação pode ser utilizada para criar coisas divertidas e interessantes. Alguns dos campos que os alunos poderiam explorar (como arte, animação e jogos) podem ser diretamente conectados aos programas que eles escreverão posteriormente nesta unidade, enquanto outros podem servir mais como inspiração para como as habilidades sendo aprendidadas podem ser aplicadas em diferentes domínios.\n\n#### Tópicos\n\nNo guia de atividades, há vários campos potenciais para pesquisa. Esses campos específicos foram escolhidos de acordo com os recursos fornecidos no Code Studio, mas você pode fazer com que os alunos explorem outras áreas, se assim desejarem."
         },
         "ed04f320-0cda-418a-a633-200cc4862c9f": {
           "name": "Pesquisando seu Tópico",
@@ -17580,7 +17671,7 @@
         "ab42adf1-c807-4ea4-9d9d-32b3065c36d6": {
           "description": "\\*\\*Faça o Seu Próprio Desenho: \\*\\* Se o tempo permitir, deixe que aos alunos criem seus próprios desenhos para dar as coordenadas ao parceiro.",
           "tips": [
-            null
+            "**Quando Seguir em Frente:** Decida se essa última atividade vale a pena ser realizada, considerando seu cronograma. Permitir que os alunos criaem e comuniquem seus próprios desenhos pode ajudá-los a reforçarem seus conhecimentos, mas se os alunos estão alcançando os objetivos de aprendizagem da aula, você também pode simplesmente ir até o final para sintetizar o aprendizado."
           ]
         },
         "497db913-ab6a-41cf-9fae-d93bfa518228": {
@@ -17604,7 +17695,7 @@
         },
         "f6525e30-6eb8-4f1a-84f6-91df78840004": {
           "name": "Imagens de Programação",
-          "description": "\\*\\*Prompt: \\*\\* Com base no que você sabe sobre computadores, o que você acha que será diferente entre descrever uma imagem a uma pessoa e descrevê-la a um computador ?"
+          "description": "**Prompt:** Com base no que você sabe sobre computadores, o que você acha que será diferente entre descrever uma imagem a uma pessoa e descrevê-la a um computador ?"
         },
         "11eec8ff-c9ac-49fd-ab5a-816ead35f2f6": {
           "description": "\\*\\*Compartilhe: \\*\\* Dê aos alunos tempo para pensarem individualmente e discutirem com um parceiro, depois reúna a turma e escreva suas ideias no quadro.",
@@ -17679,6 +17770,7 @@
           "progression_name": "Desafios"
         },
         "8fdd09d2-1840-4a54-aa83-eed630d5b65a": {
+          "name": "Compartilhe os Desenhos",
           "description": "**Compartilhe:** Depois que os alunos concluírem seus desenhos, peça-lhes que os compartilhem com a classe. Uma maneira de fazer isso é com uma caminhada pela galeria."
         },
         "4368fffa-9be9-4221-a2f3-710c0c72387a": {
@@ -17740,6 +17832,7 @@
           "description": "**Prompt:** No início do curso, aprendemos que entrada, saída, armazenamento e processamento eram comuns a todos os computadores. Onde você vê a entrada, a saída, o armazenamento e o processamento no Game Lab?"
         },
         "de1129c2-dd57-441d-8703-cfad937ab506": {
+          "description": "**Compartilhe:** Permita que os alunos compartilhem suas respostas.",
           "tips": [
             "Permita que os alunos compartilhem suas diferentes ideias, mas retome a discussão sobre o armazenamento para vinculá-la ao tópico das variáveis da aula. As respostas dos alunos podem incluir:\n\n-   entrada: valores passados como parâmetros, digitação na área de trabalho do Game Lab\n-   saída: formas mostradas na tela do Game Lab\n-   armazenamento: memorização do código\n-   processamento: o if/then e a correspondência que transforma o código nas imagens na tela"
           ]
@@ -17748,7 +17841,7 @@
           "description": "Hoje vamos nos concentrar no armazenamento. Vamos analisar variáveis, que são uma forma muito comum de os computadores armazenarem informações em um programa."
         },
         "649425e6-b789-4125-aed7-3f20cfdf8ce3": {
-          "description": "\\*\\*Vocabulário-Chave: \\*\\* variável - um rótulo para uma informação usada em um programa\n\n\\*\\*Pergunta do Dia: Como podemos usar variáveis para armazenar informações em nossos programas? \\*\\*"
+          "description": "**Vocabulário-Chave:** variável - um rótulo para uma informação usada em um programa\n\n**Pergunta do Dia: Como podemos usar variáveis para armazenar informações em nossos programas?**"
         },
         "e7468f3b-3e70-492a-9749-a45d6df1c3f7": {
           "name": "Programação com Variáveis",
@@ -17764,7 +17857,7 @@
           "progression_name": "Previsão"
         },
         "f4cd99ba-c2ae-43dd-a4d2-132f33b8aff4": {
-          "description": "\\*\\*Perguntas a serem consideradas a partir do vídeo: \\*\\*\n\n-   Com que finalidade as variáveis são usadas?\n-   Como você cria uma variável e atribui um valor a ela?\n-   O que pode entrar em uma variável?",
+          "description": "**Perguntas a serem consideradas a partir do vídeo:**\n\n-   Com que finalidade as variáveis são usadas?\n-   Como você cria uma variável e atribui um valor a ela?\n-   O que pode entrar em uma variável?",
           "tips": [
             "**Objetivo:**\n\nOs alunos devem entender que as variáveis contêm informações e que podem ser acessadas usando seus rótulos. Com desenhos simples, os alunos talvez não consigam ver o poder das variáveis, então você pode querer que eles pensem em alguns aplicativos diferentes e quais informações precisam ser armazenadas para que o aplicativo funcione, ou que pensem em um programa mais complexo para o qual eles queiram usar variáveis.\n\nNúmeros, texto e cores podem ser transformados em variáveis, bem como em estruturas de dados mais complicadas que os alunos verão mais tarde no curso."
           ],
@@ -17805,7 +17898,7 @@
           "description": "**Prompt:** Até agora, nossos programas têm feito a mesma coisa toda vez que os executamos. Há momentos em que você gostaria que um programa fizesse algo diferente a cada vez que fosse executado?"
         },
         "7826369e-acab-4eb4-9bec-ae4ae31ff5f7": {
-          "description": "\\*\\*Discussão: \\*\\* Dê aos alunos tempo para que escrevam algumas ideias e para que depois as discutam em grupo.",
+          "description": "**Discussão:** Dê aos alunos tempo para que escrevam algumas ideias e para que depois as discutam em grupo.",
           "tips": [
             "O objetivo desta discussão é definir o contexto para a introdução de números aleatórios. Os alunos podem ter várias ideias relacionadas à interação do usuário ou à coleta de informações de outras fontes. Permita que eles discutam as diferentes ideias que surgirem, mas, eventualmente, direcione a discussão à ideia de aleatoriedade."
           ]
@@ -17856,12 +17949,25 @@
             "A discussão objetiva fazer com que os alunos pensem sobre as implicações mais amplas da aleatoriedade em jogos e outros programas. Embora não haja nenhum bloqueio para dados aleatórios gerais além dos números, nas aulas posteriores, os alunos aprenderão técnicas que lhes permitirão usar números aleatórios para escolher aleatoriamente entre uma variedade de comportamentos.    "
           ]
         },
+        "7aa927c9-5a25-4376-9001-161cdd0e3761": {
+          "name": "Quanta Informação?",
+          "description": "**Revisão:** Até agora, escrevemos programas que colocam formas simples na tela. Faça uma lista de todas as diferentes informações que você usou para controlar _como_ essas formas são desenhadas. \n\n**Aviso:** Se você quiser criar programas com imagens mais detalhadas, talvez até mesmo caracteres com os quais você possa interagir, de quais outras informações você poderia precisar em seu código?"
+        },
         "b5100bff-91b6-4d88-9b64-9c5f9f373ff0": {
+          "description": "**Compartilhe:** Permita que os alunos compartilhem suas listas.",
           "tips": [
-            null
+            "O objetivo aqui é fazer com que os alunos pensem em todos os diferentes valores necessários para desenhar uma única forma na tela e de quantos valores adicionais eles podem precisar para controlar um personagem mais detalhado em um programa. Se os alunos não estiverem conseguindo propor ideias, você pode usar algumas das seguintes instruções:\n\n-   Como você diz a uma forma para onde ir na tela?\n-   Como você diz a uma forma qual o tamanho que ela precisa ter?\n-   Como você diz a uma forma qual a cor que ela deve ter? E quanto ao seu esboço?\n-   E se você quisesse alterar qualquer um desses valores durante o programa ou controlar outras coisas, como rotação, como você o faria?"
           ]
         },
+        "df9ce4b2-63d4-4eae-845c-c6dd0d3c1d22": {
+          "description": "Hoje, aprenderemos a criar caracteres em nossas animações chamados **sprites**. Esses sprites nos ajudarão a acompanhar todas as informações de que precisaremos em nossos programas."
+        },
+        "8d490065-8e06-4e00-a62b-ca4e9c17d3d3": {
+          "description": "**Pergunta do Dia: Como podemos usar sprites para nos ajudar a acompanhar um grande volume de informações em nossos programas?**"
+        },
         "a84eba1a-65fd-4b4f-8d51-ef8d0f9f3041": {
+          "name": "Introdução aos Sprites",
+          "description": "**Transição:** Oriente que os alunos acessem o Code Studio",
           "tips": [
             "**Guia para os Níveis de Programação:** Orientações adicionais para os níveis de programação são fornecidas no [CSD Guia para os Níveis de Programação](https://docs.google.com/document/d/1WGywQ25khB6-FB20x6wO9dGVO9_qJlWkuLVLREJS4Jo/preview). Esse documento inclui estratégias e práticas recomendadas para facilitar a programação de níveis com os alunos."
           ]
@@ -17870,8 +17976,9 @@
           "progression_name": "Exploração"
         },
         "2316d41b-d99d-4130-bdb5-5170bec21044": {
+          "description": "**Perguntas a serem consideradas a partir do vídeo:**\n\n-   O que é um sprite?\n-   O que são propriedades?\n-   Que tipo de problema os sprites resolvem?",
           "tips": [
-            null
+            "**Vocabulário-Chave:**\n\n-   **Sprite** - Um caractere na tela com propriedades que descrevem sua localização, movimento e aparência.\n-   **Propriedade** - Um rótulo para uma característica de um sprite, como sua localização e aparência.\n-   **Notação de pontos** - a forma como as propriedades dos sprites são usadas no Game Lab, conectando o sprite e a propriedade a um ponto.\n\nSprites são um conceito muito complexo e os alunos podem ter dificuldade em entender exatamente o que são. O aspecto mais importante que os alunos devem entender é que os sprites permitem que eles organizem muitas informações sobre algo que desejam desenhar na tela.\n\nOs alunos devem fazer a conexão entre propriedades e variáveis, que contêm as informações de que seu programa precisa para ser executado. As propriedades são acessadas por meio de seus sprites, e os sprites do Game Lab já têm propriedades específicas que são criadas automaticamente quando os alunos criam cada sprite, como uma determinada posição, altura e rotação.\n\nOs sprites resolvem o problema de organizar muitas informações sobre como algo deve ser desenhado em uma tela. Em vez de criar novas variáveis para armazenar todas essas informações, os sprites usam propriedades para armazenar todas as informações sobre algo desenhado na tela.\n\n**Canto do Conteúdo:** O sprite é um tipo de dado chamado objeto. Embora ainda não estejamos introduzindo explicitamente o conceito de objetos, os alunos precisam entender que um sprite é um tipo de valor diferente dos que vimos antes, que pode conter referências a muitos outros valores."
           ],
           "progression_name": "Vídeo: Introdução a Sprites"
         },
@@ -17879,8 +17986,9 @@
           "progression_name": "Desenvolvimento de Habilidades"
         },
         "b4a96bd4-10b7-422b-b6da-c47207c5dfab": {
+          "description": "**Perguntas a serem Consideradas a partir do Vídeo:**\n\n-   Quais são as etapas a serem seguidas para adicionar uma imagem a um sprite?\n-   Quais são as diferentes formas de se obter uma imagem?",
           "tips": [
-            null
+            "Certifique-se de que os alunos entendam que precisarão criar a imagem (ou animação) na Aba de Animação e depois adicionar a animação ao sprite usando o bloco [`determineAnimação` (#f78183)].[0] Os alunos podem se confundir com o uso da palavra “animação” para imagens únicas, mas no Game Lab, imagens estáticas são consideradas “animações” com apenas um quadro.\n\nOs alunos podem usar uma animação que já está na biblioteca de abas de animação, fazer upload de uma do computador ou criar a sua própria usando as ferramentas de desenho fornecidas. Além disso, os alunos podem usar as ferramentas de desenho para modificar as imagens que escolheram da biblioteca ou que enviaram de seus arquivos.\n\n**Alerta de Erro!**\nMuitos estudantes agora podem confundir os conceitos de um sprite, sua animação e a imagem que ele desenha na tela. Nas próximas lições, fique atento a esse equívoco e reforce a ideia de que a animação de um sprite é apenas uma de suas propriedades, aquela que controla qual imagem é desenhada na tela. Lembre aos alunos que um único sprite pode ter animações diferentes ao longo do programa, assim como outras propriedades podem mudar, e que dois ou mais sprites podem compartilhar a mesma animação."
           ],
           "progression_name": "Vídeo: A guia de Animação"
         },
@@ -17902,17 +18010,31 @@
         "f0ba6339-f4c5-4949-a07d-6eeeb3a7a283": {
           "name": "Desafios",
           "tips": [
-            null
+            "**Nível 11e - Encontrar uma imagem online**: como não sabemos quais sites podem estar bloqueados em seu distrito, evitamos direcionar os alunos para um mecanismo de pesquisa específico. Nem todos os mecanismos de pesquisa facilitam a configuração dos filtros do Creative Commons. Alguns dos mais fáceis incluem:\n\n-   [Pesquisa Creative Commons] - [Pesquisa avançada de imagens do Google](https://search.creativecommons.org/)\n-   [Wikimedia Commons](https://www.google.com/advanced_image_search)\n-   [Flickr Creative Commons](https://commons.wikimedia.org/wiki/Main_Page)\n    [3]"
           ],
           "progression_name": "Desafios"
         },
+        "fcffc807-fa6f-4460-87a7-d90176bea766": {
+          "description": "**Vocabulário-Chave:**\n\n-   **Sprite** - Um personagem na tela com propriedades que descrevem sua localização, movimento e aparência.\n-   **Propriedade** - Um rótulo para uma característica de um sprite, como sua localização e aparência.\n-   **Notação de pontos** - a forma como as propriedades dos sprites são usadas no Game Lab, conectando o sprite e a propriedade com um ponto."
+        },
         "372e8871-7995-4ac8-939b-1010b9fe065c": {
-          "name": "Diário"
+          "name": "Diário",
+          "description": "**Pergunta do Dia: Como podemos usar sprites para nos ajudar a acompanhar um grande volume de informações em nossos programas?**\n\n**Prompt:** Até agora, conseguimos alterar a localização e a imagem de um sprite. O que mais você pode querer mudar em seus sprites?"
         },
         "89554ea0-87be-41f1-abc5-89af821069b3": {
+          "description": "**Compartilhe:** Permita que os alunos compartilhem suas ideias.",
           "tips": [
-            null
+            "Essa discussão faz com que os alunos pensem sobre as diferentes propriedades que um sprite pode ter e os prepara para a próxima lição, que aborda explicitamente as propriedades do sprite."
           ]
+        },
+        "f13801f4-b2c0-405c-a2b3-c7f3f846287c": {
+          "description": "**Prompt:** Qual é a sua definição de sprite? Quais propriedades do sprite você sabe usar? Quais outras propriedades do sprite podem ser úteis?\n\nPermita que os alunos reflitam sozinhos e depois com um parceiro antes de compartilharem com todo o grupo. Não há problemas se os alunos não tiverem uma definição canônica de um sprite, mas eles devem reconhecer que um sprite é uma parte do programa que tem várias propriedades diferentes que controlam sua localização e aparência."
+        },
+        "76c5ef3a-11f9-4a65-93e3-da5ce5b44036": {
+          "description": "Até agora, só conseguimos controlar a localização e a animação do nosso sprite, mas hoje vamos aprender a como atualizar outras propriedades do sprite para que possamos criar programas ainda melhores."
+        },
+        "430ce76b-c12b-45ff-8ef7-37ce4833bf2f": {
+          "description": "**Pergunta do Dia: Como podemos usar as propriedades dos sprites para alterar sua aparência na tela?**"
         },
         "a748f14d-ac72-4518-affc-f8afdbd5f545": {
           "description": "**Transição:** Encaminhe os alunos para o Code Studio.",
@@ -17938,15 +18060,27 @@
         "e3094f44-0792-4a47-9bb3-116d2d6d3c59": {
           "progression_name": "Desafios"
         },
+        "c6ef4ead-0165-40b0-a78b-deee5cebe52a": {
+          "description": "**Pergunta do Dia: Como podemos usar as propriedades dos sprites para alterar sua aparência na tela?**\n\n**Aviso do diário:** O que significa que as propriedades unidirecionais dos sprites sejam iguais às variáveis? De que forma as propriedades dos sprites são diferentes das variáveis?"
+        },
         "432c556b-4ab9-4f93-893c-8791fc2da4ee": {
+          "description": "**Discuta:** Permita que os alunos discutam em duplas ou em pequenos grupos antes de compartilharem suas ideias com todo o grupo.",
           "tips": [
-            null
+            "Os alunos podem observar que as propriedades e variáveis do sprite são semelhantes, pois ambas armazenam informações. São diferentes porque as variáveis podem ser qualquer coisa, mas os sprites têm propriedades específicas que são usadas de certas maneiras na tela."
           ]
         },
         "a1b6c071-7374-44ea-86f5-4edfcf34e891": {
-          "name": "Diário"
+          "name": "Diário",
+          "description": "![Uma cena bidimensional com um robô em forma de pêssego e um alienígena roxo no chão e um alienígena rosa agachado em uma rocha flutuante acima deles. O alienígena rosa tem um balão de fala vazio próximo à sua cabeça, como se fosse começar a falar, mas o balão está vazio](https://curriculum.code.org/media/uploads/Screen-Shot-2020-04-01-at-3.51.06-AM.png)\n\n**Exibição:** Mostre o desenho animado para os alunos verem.\n\n**Prompt:** Veja o desenho animado que foi feito no Game Lab. O que você acha que o alienígena deveria dizer?\n\n**Compartilhe:** Permita que os voluntários compartilhem suas ideias."
+        },
+        "7dd7eab6-5bb3-4df8-a6be-b3b0338028d4": {
+          "description": "Nós nos divertimos muito desenhando coisas e usando nossos sprites, mas falta uma coisa nas imagens do Game Lab: texto! Hoje vamos aprender como adicionar texto aos projetos do Game Lab."
+        },
+        "10227012-294f-4761-90bc-27f1135fdd47": {
+          "description": "**Pergunta do Dia: Como podemos usar texto para melhorar nossas cenas e animações?**"
         },
         "143eb56e-c445-4fde-a1f6-845371db821c": {
+          "description": "**Transição** Direcione os alunos ao Code Studio.",
           "tips": [
             "**Guia para os Níveis de Programação:** Orientações adicionais para os níveis de programação são fornecidas no [CSD Guia para os Níveis de Programação](https://docs.google.com/document/d/1WGywQ25khB6-FB20x6wO9dGVO9_qJlWkuLVLREJS4Jo/preview). Esse documento inclui estratégias e práticas recomendadas para facilitar a programação de níveis com os alunos."
           ]
@@ -17969,27 +18103,39 @@
         "d1e52b76-3fa0-482e-a33b-40d5b838e345": {
           "progression_name": "Desafios"
         },
+        "28f996fb-791f-418c-a658-5bb9f61a6046": {
+          "name": "Diário",
+          "description": "**Pergunta do Dia: Como podemos usar texto para melhorar nossas cenas e animações?**\n\n**Prompt:** Você desenhou com texto e formas na tela.\n\n-   Quais são as duas maneiras pelas quais desenhar com texto é semelhante ao desenho de formas?\n-   De que maneira desenhar com texto é diferente de desenhar com formas?"
+        },
         "b55f48f2-da20-4402-a7c6-6f15c513bab3": {
+          "description": "**Compartilhe:** Se houver tempo, permita que os alunos compartilhem suas respostas.",
           "tips": [
-            null
+            "As respostas dos alunos à pergunta podem variar, mas algumas semelhanças são que ambos usam o plano cartesiano e são desenhados automaticamente, ao contrário dos sprites, que devem usar o comando [`drawSprites` (#fff176)].[0] Uma possível diferença é que é mais difícil controlar o tamanho exato do texto, já que a quantidade de texto e o tamanho da fonte não são tão específicos quanto os parâmetros de altura e largura."
           ]
         },
         "46b4635e-6be9-405b-8908-45fb42051125": {
-          "name": "Revisar"
+          "name": "Revisar",
+          "description": "**Prompt:** Anote quantos blocos você conseguir lembrar do Game Lab. Certifique-se de que sabe o que cada um faz, especialmente as entradas ou parâmetros de cada um dos blocos."
         },
         "ac7201df-9190-4002-9d03-fb5d0f2cfd83": {
+          "description": "**Compartilhe:** Permita que os alunos compartilhem o que eles lembram em uma avaliação em grupos.",
           "tips": [
-            null
+            "O objetivo dessa discussão é revisar os diferentes blocos e habilidades que os alunos aprenderam. Enquanto os alunos falam sobre os diferentes blocos, tente orientar a conversa sobre como eles podem ser usados de forma criativa, para se conectar ao tópico principal do dia."
           ]
         },
+        "21ce55df-c56d-42ba-ba86-79a61d651acb": {
+          "description": "Você já aprendeu a fazer coisas realmente bacanas no Game Lab. Hoje você terá a chance de juntá-los para criar uma cena interessante para ser compartilhada com os outros. Isso significa que, em vez de tentar recriar a ideia de outra pessoa, você terá suas próprias ideias, então é hora de ser criativo!"
+        },
         "773f3c7e-a2a9-4c2d-8a88-5050f38d0d1f": {
+          "description": "**Pergunta do Dia: Como podemos usar os recursos do Game Lab para expressar nossa criatividade?**",
           "tips": [
-            null
+            "**Miniprojetos Facilitadores:** Os miniprojetos atuam como pontos de verificação nos currículos e abrangem o subconjunto de habilidades que os alunos observaram até agora na unidade. Eles foram projetados para 1 a 2 dias de implementação como uma forma de verificar se os alunos entenderam bem o conteúdo do curso até o momento. Você pode decidir estender esses projetos como uma forma de apoiar ou desafiar os alunos, o que pode permitir que você revise conceitos difíceis ou apoie alunos que podem ter perdido as aulas e estão tentando recuperar o que perderam. No entanto, recomendamos que você decida isso com antecedência e seja firme com os alunos sobre quanto tempo eles têm para cada projeto. Caso contrário, os projetos facilmente se estenderão por vários dias e que o trabalho do aluno ultrapasse o escopo deste projeto."
           ]
         },
         "576907fe-bf93-4136-b9cb-e36310bca046": {
+          "description": "**Distribua:** (opcional) distribua cópias do guia de atividades. Os alunos podem usar essa folha para planejar a cena que deverão criar no final desta lição, mas o planejamento também pode ser feito em papel de rascunho.\n\n**Transição** Direcione os alunos ao Code Studio.",
           "tips": [
-            null
+            "**Facilitando os projetos em grupo:** Se os alunos estiverem trabalhando em duplas ou em pequenas equipes para concluirem seus projetos, mostre estes dois vídeos para a turma:\n\n-   [Como funciona o trabalho em equipe](https://www.youtube.com/watch?v=qkw4pDV5Lec)\n-   [Lidando com divergências](https://www.youtube.com/watch?v=6GgrUeVT-xs)\n\nDependendo de seus objetivos com este projeto, faça com que as equipes concluam um [Guia do aluno sobre planejamento em equipes](https://docs.google.com/document/d/1pfwrtSLjj1LCqneR_lmyUfw2z0UkkWSXTq48AxuIhyo/edit#), que reforça a mensagem no vídeo"
           ]
         },
         "5c31da5c-733b-43cc-8b0c-912ffc8cd98f": {
@@ -17997,7 +18143,7 @@
         },
         "449a73b9-9e17-4a54-bbc6-8eacad2cfd30": {
           "tips": [
-            null
+            "**Estratégias de Depuração:** À medida que os alunos projetam e implementam suas próprias ideias de projeto, eles podem se deparar com novos erros que precisarão ser resolvidos e você pode se deparar com um código completamente desconhecido enquanto os alunos procuram ajuda para solucionar seus erros. Para ajudar a facilitar a experiência de depuração, considere as seguintes estratégias:\n\n-   Consulte o [Guia de depuração do professor] para ver algumas perguntas e estratégias comuns[0] que podem ajudar os alunos a depurarem seu código\n-   Peça aos alunos que sigam as etapas do [Guia do aluno para depuração] e usem as [Planilhas trimestrais do relatório de erros] como uma etapa [1](https://docs.google.com/document/d/1M6mnq73DfyvzasucVAwfL-gjl2JqVPzjy_fRx5j4j7c/preview) inicial do processo de depuração. Isso ajuda os alunos a se prepararem e comunicarem o problema antes de pedirem ajuda.\n-   Se os alunos ainda não o viram, exiba o [Vídeo de depuração](https://www.youtube.com/watch?v=auv10y-dN4s) à turma para reforçar as melhores práticas de depuração.\n\n**Aprofundando:** Considere fornecer aos alunos um objeto com quem conversar como parte do processo de depuração. Isso às vezes é conhecido como Rubber Duck Debugging - você pode aprender mais no site <https://rubberduckdebugging.com/>"
           ],
           "progression_name": "Crie um Plano de Fundo"
         },
@@ -18011,16 +18157,20 @@
           "progression_name": "Revise sua Cena"
         },
         "a3005adc-9fdc-44c5-b692-236229a2d521": {
+          "name": "Caminhada pela Galeria",
+          "description": "Permita que os alunos andem pela sala e vejam as gravuras que cada um de seus colegas codificou. Comemore todas as ideias diferentes que os alunos conseguiram implementar a partir do mesmo código básico.",
           "tips": [
-            null
+            "Você pode optar por formalizar esse processo pedido que cada aluno anote uma qualidade positiva de cada projeto ou fazendo com que os alunos “sorteiem nomes” para comentar sobre o trabalho de um colega em particular."
           ]
         },
         "e8a0d208-1976-4956-88a3-fca1973867ed": {
-          "name": "Diário"
+          "name": "Diário",
+          "description": "**Pergunta do Dia: Como podemos usar o Game Lab para expressar nossa criatividade?**\n\n**Prompt:** Qual foi a maneira mais criativa pela qual outra pessoa usou os blocos hoje?"
         },
         "3ab2ab8d-202d-414b-b9d8-6ea7e07be33d": {
+          "description": "**Compartilhe:** Peça aos alunos que compartilhem o que gostaram nos projetos de seus colegas. Talvez você queira fazer isso em estilo “pipoca”, com cada aluno que responde escolhendo a próxima pessoa para compartilhar.",
           "tips": [
-            null
+            "Essa discussão deve servir como uma celebração do que os alunos realizaram. À medida que os alunos contarem o que viram, incentive-os a aprender uns com os outros e a fazer perguntas caso não tenham certeza de como fazer algo. Destaque como os alunos conseguiram fazer coisas muito diferentes a partir da mesma ferramenta."
           ]
         },
         "f2a585b2-ec25-4b7c-aef8-c1b5e342e9d5": {
@@ -18116,21 +18266,23 @@
           "name": "Revisar"
         },
         "f6edd2f9-b7be-443d-9fd6-9dc806356400": {
+          "description": "**Compartilhe:** Permita que os alunos compartilhem o que eles lembram em uma avaliação em grupos.",
           "tips": [
             null
           ]
         },
         "d4023790-1810-4ddd-a510-133df9586856": {
           "tips": [
-            null
+            "**Miniprojetos Facilitadores:** Os miniprojetos atuam como pontos de verificação nos currículos e abrangem o subconjunto de habilidades que os alunos observaram até agora na unidade. Eles foram projetados para 1 a 2 dias de implementação como uma forma de verificar se os alunos entenderam bem o conteúdo do curso até o momento. Você pode decidir estender esses projetos como uma forma de apoiar ou desafiar os alunos, o que pode permitir que você revise conceitos difíceis ou apoie alunos que podem ter perdido as aulas e estão tentando recuperar o que perderam. No entanto, recomendamos que você decida isso com antecedência e seja firme com os alunos sobre quanto tempo eles têm para cada projeto. Caso contrário, os projetos facilmente se estenderão por vários dias e que o trabalho do aluno ultrapasse o escopo deste projeto."
           ]
         },
         "539b36c9-fdb1-4f96-af81-fe2ceda35ba6": {
           "tips": [
-            null
+            "**Facilitando os projetos em grupo:** Se os alunos estiverem trabalhando em duplas ou em pequenas equipes para concluirem seus projetos, mostre estes dois vídeos para a turma:\n\n-   [Como funciona o trabalho em equipe](https://www.youtube.com/watch?v=qkw4pDV5Lec)\n-   [Lidando com divergências](https://www.youtube.com/watch?v=6GgrUeVT-xs)\n\nDependendo de seus objetivos com este projeto, faça com que as equipes concluam um [Guia do aluno sobre planejamento em equipes](https://docs.google.com/document/d/1pfwrtSLjj1LCqneR_lmyUfw2z0UkkWSXTq48AxuIhyo/edit#), que reforça a mensagem no vídeo"
           ]
         },
         "a85e603b-4d97-46a4-9c91-de765391646f": {
+          "description": "**Transição** Direcione os alunos ao Code Studio.",
           "progression_name": "Exemplo de Cena Animada"
         },
         "37116129-33c9-43a6-be07-a81b0bf2f8b5": {
@@ -18144,7 +18296,7 @@
         },
         "4d82a10e-f3f1-4e52-a97a-d0ec605c3a84": {
           "tips": [
-            null
+            "**Estratégias de Depuração:** À medida que os alunos projetam e implementam suas próprias ideias de projeto, eles podem se deparar com novos erros que precisarão ser resolvidos e você pode se deparar com um código completamente desconhecido enquanto os alunos procuram ajuda para solucionar seus erros. Para ajudar a facilitar a experiência de depuração, considere as seguintes estratégias:\n\n-   Consulte o [Guia de depuração do professor] para ver algumas perguntas e estratégias comuns[0] que podem ajudar os alunos a depurarem seu código\n-   Peça aos alunos que sigam as etapas do [Guia do aluno para depuração] e usem as [Planilhas trimestrais do relatório de erros] como uma etapa [1](https://docs.google.com/document/d/1M6mnq73DfyvzasucVAwfL-gjl2JqVPzjy_fRx5j4j7c/preview) inicial do processo de depuração. Isso ajuda os alunos a se prepararem e comunicarem o problema antes de pedirem ajuda.\n-   Se os alunos ainda não o viram, exiba o [Vídeo de depuração](https://www.youtube.com/watch?v=auv10y-dN4s) à turma para reforçar as melhores práticas de depuração.\n\n**Aprofundando:** Considere fornecer aos alunos um objeto com quem conversar como parte do processo de depuração. Isso às vezes é conhecido como Rubber Duck Debugging - você pode aprender mais no site <https://rubberduckdebugging.com/>"
           ],
           "progression_name": "Adicionar Sprites"
         },
@@ -18158,14 +18310,17 @@
           "progression_name": "Revise sua Cena animada"
         },
         "40657117-7d56-4a65-b054-6e21c1ee2d40": {
+          "name": "Caminhada pela Galeria",
+          "description": "Permita que os alunos andem pela sala e vejam as gravuras que cada um de seus colegas codificou. Comemore todas as ideias diferentes que os alunos conseguiram implementar a partir do mesmo código básico.",
           "tips": [
-            null
+            "Você pode optar por formalizar esse processo pedido que cada aluno anote uma qualidade positiva de cada projeto ou fazendo com que os alunos “sorteiem nomes” para comentar sobre o trabalho de um colega em particular."
           ]
         },
         "c8eafe87-b709-4147-8f9e-5d9d761cf63e": {
           "name": "Diário"
         },
         "53b7a2ec-d562-4eb3-b2f1-394197fca053": {
+          "description": "**Compartilhe:** Peça aos alunos que compartilhem o que gostaram nos projetos de seus colegas. Talvez você queira fazer isso em estilo “pipoca”, com cada aluno que responde escolhendo a próxima pessoa para compartilhar.",
           "tips": [
             null
           ]
@@ -18324,7 +18479,7 @@
         },
         "4e0723c7-38ba-4d47-82fa-957aed03bab9": {
           "tips": [
-            null
+            "**Estratégias de Depuração:** À medida que os alunos projetam e implementam suas próprias ideias de projeto, eles podem se deparar com novos erros que precisarão ser resolvidos e você pode se deparar com um código completamente desconhecido enquanto os alunos procuram ajuda para solucionar seus erros. Para ajudar a facilitar a experiência de depuração, considere as seguintes estratégias:\n\n-   Consulte o [Guia de depuração do professor] para ver algumas perguntas e estratégias comuns[0] que podem ajudar os alunos a depurarem seu código\n-   Peça aos alunos que sigam as etapas do [Guia do aluno para depuração] e usem as [Planilhas trimestrais do relatório de erros] como uma etapa [1](https://docs.google.com/document/d/1M6mnq73DfyvzasucVAwfL-gjl2JqVPzjy_fRx5j4j7c/preview) inicial do processo de depuração. Isso ajuda os alunos a se prepararem e comunicarem o problema antes de pedirem ajuda.\n-   Se os alunos ainda não o viram, exiba o [Vídeo de depuração](https://www.youtube.com/watch?v=auv10y-dN4s) à turma para reforçar as melhores práticas de depuração.\n\n**Aprofundando:** Considere fornecer aos alunos um objeto com quem conversar como parte do processo de depuração. Isso às vezes é conhecido como Rubber Duck Debugging - você pode aprender mais no site <https://rubberduckdebugging.com/>"
           ],
           "progression_name": "Projeto de trabalho"
         },
@@ -18427,12 +18582,12 @@
         },
         "4d0e1b05-6764-45b5-85f0-d956e11f0704": {
           "tips": [
-            null
+            "**Miniprojetos Facilitadores:** Os miniprojetos atuam como pontos de verificação nos currículos e abrangem o subconjunto de habilidades que os alunos observaram até agora na unidade. Eles foram projetados para 1 a 2 dias de implementação como uma forma de verificar se os alunos entenderam bem o conteúdo do curso até o momento. Você pode decidir estender esses projetos como uma forma de apoiar ou desafiar os alunos, o que pode permitir que você revise conceitos difíceis ou apoie alunos que podem ter perdido as aulas e estão tentando recuperar o que perderam. No entanto, recomendamos que você decida isso com antecedência e seja firme com os alunos sobre quanto tempo eles têm para cada projeto. Caso contrário, os projetos facilmente se estenderão por vários dias e que o trabalho do aluno ultrapasse o escopo deste projeto."
           ]
         },
         "847ce2b1-b2de-4932-af9c-ad5b8ca0499b": {
           "tips": [
-            null
+            "**Estratégias de Depuração:** À medida que os alunos projetam e implementam suas próprias ideias de projeto, eles podem se deparar com novos erros que precisarão ser resolvidos e você pode se deparar com um código completamente desconhecido enquanto os alunos procuram ajuda para solucionar seus erros. Para ajudar a facilitar a experiência de depuração, considere as seguintes estratégias:\n\n-   Consulte o [Guia de depuração do professor] para ver algumas perguntas e estratégias comuns[0] que podem ajudar os alunos a depurarem seu código\n-   Peça aos alunos que sigam as etapas do [Guia do aluno para depuração] e usem as [Planilhas trimestrais do relatório de erros] como uma etapa [1](https://docs.google.com/document/d/1M6mnq73DfyvzasucVAwfL-gjl2JqVPzjy_fRx5j4j7c/preview) inicial do processo de depuração. Isso ajuda os alunos a se prepararem e comunicarem o problema antes de pedirem ajuda.\n-   Se os alunos ainda não o viram, exiba o [Vídeo de depuração](https://www.youtube.com/watch?v=auv10y-dN4s) à turma para reforçar as melhores práticas de depuração.\n\n**Aprofundando:** Considere fornecer aos alunos um objeto com quem conversar como parte do processo de depuração. Isso às vezes é conhecido como Rubber Duck Debugging - você pode aprender mais no site <https://rubberduckdebugging.com/>"
           ]
         },
         "1e49d8c1-a9ea-489d-ac88-fd9f334b8118": {
@@ -18504,6 +18659,7 @@
           "progression_name": "Previsão de código"
         },
         "23d7a87f-664b-4fb0-b2e9-d2e1acbee2d8": {
+          "description": "**Compartilhe:** Permita que os alunos compartilhem suas ideias.",
           "tips": [
             null
           ]
@@ -18540,12 +18696,12 @@
         },
         "19ffef2d-aa7f-40fd-bb4b-b075ac7306c4": {
           "tips": [
-            null
+            "**Miniprojetos Facilitadores:** Os miniprojetos atuam como pontos de verificação nos currículos e abrangem o subconjunto de habilidades que os alunos observaram até agora na unidade. Eles foram projetados para 1 a 2 dias de implementação como uma forma de verificar se os alunos entenderam bem o conteúdo do curso até o momento. Você pode decidir estender esses projetos como uma forma de apoiar ou desafiar os alunos, o que pode permitir que você revise conceitos difíceis ou apoie alunos que podem ter perdido as aulas e estão tentando recuperar o que perderam. No entanto, recomendamos que você decida isso com antecedência e seja firme com os alunos sobre quanto tempo eles têm para cada projeto. Caso contrário, os projetos facilmente se estenderão por vários dias e que o trabalho do aluno ultrapasse o escopo deste projeto."
           ]
         },
         "1acd883d-261b-4c22-8a50-167d3ab9832f": {
           "tips": [
-            null
+            "**Estratégias de Depuração:** À medida que os alunos projetam e implementam suas próprias ideias de projeto, eles podem se deparar com novos erros que precisarão ser resolvidos e você pode se deparar com um código completamente desconhecido enquanto os alunos procuram ajuda para solucionar seus erros. Para ajudar a facilitar a experiência de depuração, considere as seguintes estratégias:\n\n-   Consulte o [Guia de depuração do professor] para ver algumas perguntas e estratégias comuns[0] que podem ajudar os alunos a depurarem seu código\n-   Peça aos alunos que sigam as etapas do [Guia do aluno para depuração] e usem as [Planilhas trimestrais do relatório de erros] como uma etapa [1](https://docs.google.com/document/d/1M6mnq73DfyvzasucVAwfL-gjl2JqVPzjy_fRx5j4j7c/preview) inicial do processo de depuração. Isso ajuda os alunos a se prepararem e comunicarem o problema antes de pedirem ajuda.\n-   Se os alunos ainda não o viram, exiba o [Vídeo de depuração](https://www.youtube.com/watch?v=auv10y-dN4s) à turma para reforçar as melhores práticas de depuração.\n\n**Aprofundando:** Considere fornecer aos alunos um objeto com quem conversar como parte do processo de depuração. Isso às vezes é conhecido como Rubber Duck Debugging - você pode aprender mais no site <https://rubberduckdebugging.com/>"
           ]
         },
         "85a46b73-ffbc-44e4-b2aa-dd717a558478": {
@@ -18686,13 +18842,14 @@
           "name": "Diário"
         },
         "e6250418-b491-436b-993c-02db6b0115bc": {
+          "description": "**Compartilhe:** Permita que os alunos compartilhem suas ideias.",
           "tips": [
             null
           ]
         },
         "4cedbe11-f01d-4877-8772-99baae5c7d46": {
           "tips": [
-            null
+            "**Facilitando os projetos em grupo:** Se os alunos estiverem trabalhando em duplas ou em pequenas equipes para concluirem seus projetos, mostre estes dois vídeos para a turma:\n\n-   [Como funciona o trabalho em equipe](https://www.youtube.com/watch?v=qkw4pDV5Lec)\n-   [Lidando com divergências](https://www.youtube.com/watch?v=6GgrUeVT-xs)\n\nDependendo de seus objetivos com este projeto, faça com que as equipes concluam um [Guia do aluno sobre planejamento em equipes](https://docs.google.com/document/d/1pfwrtSLjj1LCqneR_lmyUfw2z0UkkWSXTq48AxuIhyo/edit#), que reforça a mensagem no vídeo"
           ]
         },
         "2f874f2f-5f9e-4d5a-a84f-61151378280c": {
@@ -18713,7 +18870,7 @@
         },
         "0296c25a-c7e0-4f70-9254-e3742c469a84": {
           "tips": [
-            null
+            "**Estratégias de Depuração:** À medida que os alunos projetam e implementam suas próprias ideias de projeto, eles podem se deparar com novos erros que precisarão ser resolvidos e você pode se deparar com um código completamente desconhecido enquanto os alunos procuram ajuda para solucionar seus erros. Para ajudar a facilitar a experiência de depuração, considere as seguintes estratégias:\n\n-   Consulte o [Guia de depuração do professor] para ver algumas perguntas e estratégias comuns[0] que podem ajudar os alunos a depurarem seu código\n-   Peça aos alunos que sigam as etapas do [Guia do aluno para depuração] e usem as [Planilhas trimestrais do relatório de erros] como uma etapa [1](https://docs.google.com/document/d/1M6mnq73DfyvzasucVAwfL-gjl2JqVPzjy_fRx5j4j7c/preview) inicial do processo de depuração. Isso ajuda os alunos a se prepararem e comunicarem o problema antes de pedirem ajuda.\n-   Se os alunos ainda não o viram, exiba o [Vídeo de depuração](https://www.youtube.com/watch?v=auv10y-dN4s) à turma para reforçar as melhores práticas de depuração.\n\n**Aprofundando:** Considere fornecer aos alunos um objeto com quem conversar como parte do processo de depuração. Isso às vezes é conhecido como Rubber Duck Debugging - você pode aprender mais no site <https://rubberduckdebugging.com/>"
           ],
           "progression_name": "Projeto - Histórico e Variáveis"
         },
@@ -19877,7 +20034,7 @@
         },
         "436698db-a532-4140-a499-439275b977cf": {
           "tips": [
-            null
+            "**Facilitando os projetos em grupo:** Se os alunos estiverem trabalhando em duplas ou em pequenas equipes para concluirem seus projetos, mostre estes dois vídeos para a turma:\n\n-   [Como funciona o trabalho em equipe](https://www.youtube.com/watch?v=qkw4pDV5Lec)\n-   [Lidando com divergências](https://www.youtube.com/watch?v=6GgrUeVT-xs)\n\nDependendo de seus objetivos com este projeto, faça com que as equipes concluam um [Guia do aluno sobre planejamento em equipes](https://docs.google.com/document/d/1pfwrtSLjj1LCqneR_lmyUfw2z0UkkWSXTq48AxuIhyo/edit#), que reforça a mensagem no vídeo"
           ]
         },
         "4465daca-68f4-43e3-b1f3-be0a5e9cd954": {
@@ -19990,6 +20147,7 @@
           ]
         },
         "5867d6b2-c6ff-4ffc-929a-55fc6363cfab": {
+          "name": "Diário",
           "tips": [
             null
           ]
@@ -20133,7 +20291,7 @@
         },
         "3f9bd4ac-771a-469d-bc19-c1cf2d53f6d2": {
           "tips": [
-            null
+            "**Facilitando os projetos em grupo:** Se os alunos estiverem trabalhando em duplas ou em pequenas equipes para concluirem seus projetos, mostre estes dois vídeos para a turma:\n\n-   [Como funciona o trabalho em equipe](https://www.youtube.com/watch?v=qkw4pDV5Lec)\n-   [Lidando com divergências](https://www.youtube.com/watch?v=6GgrUeVT-xs)\n\nDependendo de seus objetivos com este projeto, faça com que as equipes concluam um [Guia do aluno sobre planejamento em equipes](https://docs.google.com/document/d/1pfwrtSLjj1LCqneR_lmyUfw2z0UkkWSXTq48AxuIhyo/edit#), que reforça a mensagem no vídeo"
           ]
         },
         "9faf6871-9df9-4b23-8908-7457317068af": {
@@ -20398,13 +20556,13 @@
         },
         "1ae47ba4-9015-40e9-93fd-605c972cdf5d": {
           "tips": [
-            null
+            "**Miniprojetos Facilitadores:** Os miniprojetos atuam como pontos de verificação nos currículos e abrangem o subconjunto de habilidades que os alunos observaram até agora na unidade. Eles foram projetados para 1 a 2 dias de implementação como uma forma de verificar se os alunos entenderam bem o conteúdo do curso até o momento. Você pode decidir estender esses projetos como uma forma de apoiar ou desafiar os alunos, o que pode permitir que você revise conceitos difíceis ou apoie alunos que podem ter perdido as aulas e estão tentando recuperar o que perderam. No entanto, recomendamos que você decida isso com antecedência e seja firme com os alunos sobre quanto tempo eles têm para cada projeto. Caso contrário, os projetos facilmente se estenderão por vários dias e que o trabalho do aluno ultrapasse o escopo deste projeto."
           ]
         },
         "68996d30-3dce-47d9-86e1-678c8164023b": {
           "name": "Introdução",
           "tips": [
-            null
+            "**Facilitando os projetos em grupo:** Se os alunos estiverem trabalhando em duplas ou em pequenas equipes para concluirem seus projetos, mostre estes dois vídeos para a turma:\n\n-   [Como funciona o trabalho em equipe](https://www.youtube.com/watch?v=qkw4pDV5Lec)\n-   [Lidando com divergências](https://www.youtube.com/watch?v=6GgrUeVT-xs)\n\nDependendo de seus objetivos com este projeto, faça com que as equipes concluam um [Guia do aluno sobre planejamento em equipes](https://docs.google.com/document/d/1pfwrtSLjj1LCqneR_lmyUfw2z0UkkWSXTq48AxuIhyo/edit#), que reforça a mensagem no vídeo"
           ]
         },
         "d9a7fab9-6627-440f-b25d-e3449cf96b97": {
@@ -20420,7 +20578,7 @@
         },
         "cdba4023-5235-4505-8c9e-903e45be9ca4": {
           "tips": [
-            null
+            "Você pode optar por formalizar esse processo pedido que cada aluno anote uma qualidade positiva de cada projeto ou fazendo com que os alunos “sorteiem nomes” para comentar sobre o trabalho de um colega em particular."
           ]
         },
         "d517677e-a0c5-48b5-9198-340f9de4b197": {
@@ -20528,7 +20686,7 @@
         "836b29e0-6e20-434b-a5b4-556abfb94d2b": {
           "name": "Apresente o Projeto",
           "tips": [
-            null
+            "**Facilitando os projetos em grupo:** Se os alunos estiverem trabalhando em duplas ou em pequenas equipes para concluirem seus projetos, mostre estes dois vídeos para a turma:\n\n-   [Como funciona o trabalho em equipe](https://www.youtube.com/watch?v=qkw4pDV5Lec)\n-   [Lidando com divergências](https://www.youtube.com/watch?v=6GgrUeVT-xs)\n\nDependendo de seus objetivos com este projeto, faça com que as equipes concluam um [Guia do aluno sobre planejamento em equipes](https://docs.google.com/document/d/1pfwrtSLjj1LCqneR_lmyUfw2z0UkkWSXTq48AxuIhyo/edit#), que reforça a mensagem no vídeo"
           ]
         },
         "e9b6aa89-e596-4ee6-bf0c-280d32403047": {
@@ -20560,6 +20718,9 @@
           "tips": [
             null
           ]
+        },
+        "1370ac6b-ceff-421e-b3b7-1b710bfcfb48": {
+          "description": "**Estratégias de Depuração:** À medida que os alunos projetam e implementam suas próprias ideias de projeto, eles podem se deparar com novos erros que precisarão ser resolvidos e você pode se deparar com um código completamente desconhecido enquanto os alunos procuram ajuda para solucionar seus erros. Para ajudar a facilitar a experiência de depuração, considere as seguintes estratégias:\n\n-   Consulte o [Guia de depuração do professor] para ver algumas perguntas e estratégias comuns[0] que podem ajudar os alunos a depurarem seu código\n-   Peça aos alunos que sigam as etapas do [Guia do aluno para depuração] e usem as [Planilhas trimestrais do relatório de erros] como uma etapa [1](https://docs.google.com/document/d/1M6mnq73DfyvzasucVAwfL-gjl2JqVPzjy_fRx5j4j7c/preview) inicial do processo de depuração. Isso ajuda os alunos a se prepararem e comunicarem o problema antes de pedirem ajuda.\n-   Se os alunos ainda não o viram, exiba o [Vídeo de depuração](https://www.youtube.com/watch?v=auv10y-dN4s) à turma para reforçar as melhores práticas de depuração.\n\n**Aprofundando:** Considere fornecer aos alunos um objeto com quem conversar como parte do processo de depuração. Isso às vezes é conhecido como Rubber Duck Debugging - você pode aprender mais no site <https://rubberduckdebugging.com/>"
         },
         "2e59bfde-65a5-450d-9701-426f7353a617": {
           "name": "Fechamento"
@@ -20680,6 +20841,9 @@
         "da15bf04-3bad-47cc-8315-caf65137e15c": {
           "progression_name": "Desafio"
         },
+        "eb5e220c-7b46-48e3-a1a3-37e1b101cfbe": {
+          "name": "Diário"
+        },
         "db3d71d9-35eb-4f9d-bcde-2f799683ab8b": {
           "tips": [
             null
@@ -20745,12 +20909,12 @@
         },
         "e5f4b521-ba78-4410-9629-f6a72ecb4114": {
           "tips": [
-            null
+            "**Miniprojetos Facilitadores:** Os miniprojetos atuam como pontos de verificação nos currículos e abrangem o subconjunto de habilidades que os alunos observaram até agora na unidade. Eles foram projetados para 1 a 2 dias de implementação como uma forma de verificar se os alunos entenderam bem o conteúdo do curso até o momento. Você pode decidir estender esses projetos como uma forma de apoiar ou desafiar os alunos, o que pode permitir que você revise conceitos difíceis ou apoie alunos que podem ter perdido as aulas e estão tentando recuperar o que perderam. No entanto, recomendamos que você decida isso com antecedência e seja firme com os alunos sobre quanto tempo eles têm para cada projeto. Caso contrário, os projetos facilmente se estenderão por vários dias e que o trabalho do aluno ultrapasse o escopo deste projeto."
           ]
         },
         "13377864-9faa-4893-b0c2-262903a7710e": {
           "tips": [
-            null
+            "**Facilitando os projetos em grupo:** Se os alunos estiverem trabalhando em duplas ou em pequenas equipes para concluirem seus projetos, mostre estes dois vídeos para a turma:\n\n-   [Como funciona o trabalho em equipe](https://www.youtube.com/watch?v=qkw4pDV5Lec)\n-   [Lidando com divergências](https://www.youtube.com/watch?v=6GgrUeVT-xs)\n\nDependendo de seus objetivos com este projeto, faça com que as equipes concluam um [Guia do aluno sobre planejamento em equipes](https://docs.google.com/document/d/1pfwrtSLjj1LCqneR_lmyUfw2z0UkkWSXTq48AxuIhyo/edit#), que reforça a mensagem no vídeo"
           ]
         },
         "228be993-4e4a-4861-a78b-056cd0055159": {
@@ -20760,7 +20924,7 @@
         },
         "48b11d9f-9819-4e81-86c0-5d57b093334b": {
           "tips": [
-            null
+            "**Estratégias de Depuração:** À medida que os alunos projetam e implementam suas próprias ideias de projeto, eles podem se deparar com novos erros que precisarão ser resolvidos e você pode se deparar com um código completamente desconhecido enquanto os alunos procuram ajuda para solucionar seus erros. Para ajudar a facilitar a experiência de depuração, considere as seguintes estratégias:\n\n-   Consulte o [Guia de depuração do professor] para ver algumas perguntas e estratégias comuns[0] que podem ajudar os alunos a depurarem seu código\n-   Peça aos alunos que sigam as etapas do [Guia do aluno para depuração] e usem as [Planilhas trimestrais do relatório de erros] como uma etapa [1](https://docs.google.com/document/d/1M6mnq73DfyvzasucVAwfL-gjl2JqVPzjy_fRx5j4j7c/preview) inicial do processo de depuração. Isso ajuda os alunos a se prepararem e comunicarem o problema antes de pedirem ajuda.\n-   Se os alunos ainda não o viram, exiba o [Vídeo de depuração](https://www.youtube.com/watch?v=auv10y-dN4s) à turma para reforçar as melhores práticas de depuração.\n\n**Aprofundando:** Considere fornecer aos alunos um objeto com quem conversar como parte do processo de depuração. Isso às vezes é conhecido como Rubber Duck Debugging - você pode aprender mais no site <https://rubberduckdebugging.com/>"
           ]
         },
         "04f9d7e1-c590-4d22-ab74-069209762be4": {
@@ -20814,7 +20978,7 @@
         },
         "b06fecf3-f666-4d47-97ed-0f43e2bd6781": {
           "tips": [
-            null
+            "**Facilitando os projetos em grupo:** Se os alunos estiverem trabalhando em duplas ou em pequenas equipes para concluirem seus projetos, mostre estes dois vídeos para a turma:\n\n-   [Como funciona o trabalho em equipe](https://www.youtube.com/watch?v=qkw4pDV5Lec)\n-   [Lidando com divergências](https://www.youtube.com/watch?v=6GgrUeVT-xs)\n\nDependendo de seus objetivos com este projeto, faça com que as equipes concluam um [Guia do aluno sobre planejamento em equipes](https://docs.google.com/document/d/1pfwrtSLjj1LCqneR_lmyUfw2z0UkkWSXTq48AxuIhyo/edit#), que reforça a mensagem no vídeo"
           ]
         },
         "d85819c8-89bd-4bb9-9be5-a76d07025949": {
@@ -20824,7 +20988,7 @@
         },
         "5be532a8-3a04-478b-8840-962b2c499894": {
           "tips": [
-            null
+            "**Estratégias de Depuração:** À medida que os alunos projetam e implementam suas próprias ideias de projeto, eles podem se deparar com novos erros que precisarão ser resolvidos e você pode se deparar com um código completamente desconhecido enquanto os alunos procuram ajuda para solucionar seus erros. Para ajudar a facilitar a experiência de depuração, considere as seguintes estratégias:\n\n-   Consulte o [Guia de depuração do professor] para ver algumas perguntas e estratégias comuns[0] que podem ajudar os alunos a depurarem seu código\n-   Peça aos alunos que sigam as etapas do [Guia do aluno para depuração] e usem as [Planilhas trimestrais do relatório de erros] como uma etapa [1](https://docs.google.com/document/d/1M6mnq73DfyvzasucVAwfL-gjl2JqVPzjy_fRx5j4j7c/preview) inicial do processo de depuração. Isso ajuda os alunos a se prepararem e comunicarem o problema antes de pedirem ajuda.\n-   Se os alunos ainda não o viram, exiba o [Vídeo de depuração](https://www.youtube.com/watch?v=auv10y-dN4s) à turma para reforçar as melhores práticas de depuração.\n\n**Aprofundando:** Considere fornecer aos alunos um objeto com quem conversar como parte do processo de depuração. Isso às vezes é conhecido como Rubber Duck Debugging - você pode aprender mais no site <https://rubberduckdebugging.com/>"
           ]
         },
         "7388bea7-d580-4ea6-bbc2-3e43b0686080": {
@@ -20862,8 +21026,11 @@
             null
           ]
         },
+        "b0efe0ca-2ddf-47cd-b5e4-c24fe1f96471": {
+          "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Vídeo:** Assista ao vídeo IA: O que é Machine Learning? nos slides\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Vocabulário:** Exiba o seguinte vocabulário\n\n-   **Machine Learning:** Como os computadores reconhecem padrões e tomam decisões sem serem programados explicitamente"
+        },
         "9ff3e329-8841-4909-813d-c4b83b4fa2d5": {
-          "progression_name": "Reconhecendo peixes"
+          "progression_name": "Reconhecendo Peixes"
         },
         "861ba0ea-3d12-44d8-8114-da49c3d65081": {
           "tips": [
@@ -20871,7 +21038,7 @@
           ]
         },
         "5471d717-ebc3-4f44-91b5-61c6cebe964d": {
-          "progression_name": "Reconhecendo as características dos peixes"
+          "progression_name": "Reconhecendo as Características dos Peixes"
         },
         "0fc5594e-5acc-46b7-b061-532e27fce958": {
           "tips": [
@@ -20879,7 +21046,7 @@
           ]
         },
         "514d167e-9739-4856-9308-39bce3beb983": {
-          "progression_name": "Reconhecendo expressões"
+          "progression_name": "Reconhecendo Expressões"
         },
         "a6f7adf9-fc91-4fb7-88c5-e87b81a0842e": {
           "tips": [
@@ -21181,6 +21348,9 @@
             null
           ]
         },
+        "e0abed0a-6d09-4bcb-93bf-fccce54e1134": {
+          "name": "Diário"
+        },
         "73c2cb42-e6a3-4317-8aab-7196411578ab": {
           "name": "Cartões modelo no AI Lab",
           "tips": [
@@ -21210,6 +21380,12 @@
         },
         "6a504836-fcfe-40f8-b4a9-939ed5297fab": {
           "progression_name": "Personalizando seu aplicativo"
+        },
+        "bf7d70a4-6c11-4059-b69f-7b3a7d157c91": {
+          "name": "Diário"
+        },
+        "d6aa981d-743a-422b-a499-123636259667": {
+          "name": "Diário"
         },
         "fece7415-7347-404a-b632-72882bdd9667": {
           "progression_name": "Exemplo de aplicativo: Classificação de zoológicos"
@@ -21297,6 +21473,9 @@
           ]
         },
         "127924e5-b78f-482e-ba37-5bc31dea28e6": {
+          "name": "Diário"
+        },
+        "48946537-7e1a-4b55-9ea6-3a7da44e2cae": {
           "name": "Diário"
         },
         "ced9350a-0ee3-4e2c-9cff-f60a54cc04b5": {
@@ -21514,7 +21693,7 @@
         "8e488c36-f0eb-4c5a-8eda-c42d20cf5e19": {
           "name": "Atividade",
           "tips": [
-            null
+            "**Facilitando os projetos em grupo:** Se os alunos estiverem trabalhando em duplas ou em pequenas equipes para concluirem seus projetos, mostre estes dois vídeos para a turma:\n\n-   [Como funciona o trabalho em equipe](https://www.youtube.com/watch?v=qkw4pDV5Lec)\n-   [Lidando com divergências](https://www.youtube.com/watch?v=6GgrUeVT-xs)\n\nDependendo de seus objetivos com este projeto, faça com que as equipes concluam um [Guia do aluno sobre planejamento em equipes](https://docs.google.com/document/d/1pfwrtSLjj1LCqneR_lmyUfw2z0UkkWSXTq48AxuIhyo/edit#), que reforça a mensagem no vídeo"
           ]
         },
         "4d128db2-a3e5-4d49-bb69-5f2619848f34": {
@@ -24364,6 +24543,9 @@
         "bcf8a087-827a-435a-9ea1-1b5708a800c2": {
           "name": "Promova o entusiasmo!"
         },
+        "883e5553-79b4-416f-9c8d-4e835e5c2503": {
+          "description": "#### Vocabulário\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Exibição:** Mostre o slide “Vocabulário” \n\n-   **Machine Learning** - Como os computadores reconhecem padrões e tomam decisões sem serem programados explicitamente."
+        },
         "9630adaa-f7c1-4efa-8f7e-5d3ceb155b0b": {
           "name": "IA para oceanos",
           "tips": [
@@ -24405,6 +24587,9 @@
           "tips": [
             null
           ]
+        },
+        "45b761d5-5401-47c9-b4b4-82d27e1e4255": {
+          "description": "Esta lição tem várias palavras novas e importantes:\n\n-   **Endereço IP** - Um número atribuído a qualquer item conectado à Internet \n\n-   **DNS (Serviço de Nomes de Domínio)** - O serviço que traduz URLs em Endereços IP \n\n-   **URL (Universal Resource Locator)** - Um endereço fácil de lembrar para chamar uma página da web (como www.code.org)\n\n-   **Internet** - Um grupo de computadores e servidores que estão conectados entre si\n\n-   **Servidores** - Computadores que existem apenas para fornecer coisas a outras pessoas\n\n-   **Cabo de Fibra Óptica** - Uma conexão que usa luz para transmitir informações \n\n-   **Wi-Fi** - Um método sem fio de enviar informações usando ondas de rádio\n\n-   **DSL/Cabo** - Um método de enviar informações usando cabos telefônicos ou de televisão\n\n-   **Pacotes** - Pequenos blocos de informações que foram cuidadosamente formados a partir de blocos maiores de informações"
         },
         "1b0d023d-bf54-4703-af7e-5d9fd45d755d": {
           "tips": [
@@ -25773,7 +25958,25 @@
             null
           ]
         },
+        "8beb2941-dd64-44f4-9e99-6149c445067a": {
+          "tips": [
+            null
+          ]
+        },
         "500131a4-a22b-4a63-bc0a-d5d4a19c7169": {
+          "tips": [
+            null
+          ]
+        },
+        "a867ec36-73ea-4ba9-b3ab-98c7e45f6619": {
+          "description": "<i class=\"fa fa-lightbulb-o\" aria-hidden=\"true\"></i> **Objetivo da Discussão:** As respostas podem incluir exemplos de filmes e televisão, como robôs como WALL-E ou R2D2. Eles também podem incluir exemplos pessoais, como a Siri em um telefone ou filtros do TikTok que podem detectar características faciais. Tente apresentar exemplos que podem não ser imediatamente aparentes, mas que ainda governam as formas como interagimos com o mundo, como algoritmos de recomendação em mídias sociais, reconhecimento facial ou momentos em que um computador toma uma decisão."
+        },
+        "a45155ff-19af-43ac-bf11-6ca4001816f4": {
+          "tips": [
+            null
+          ]
+        },
+        "a7d5069b-aa1c-4efa-a8d8-b58bd43a6c7b": {
           "tips": [
             null
           ]
@@ -25788,7 +25991,17 @@
             null
           ]
         },
-        "b2b4b9e6-fe3f-4d2d-a828-1402cc1572e8": {
+        "4ff33db6-6668-4423-8f1d-ad0b25f6da40": {
+          "tips": [
+            null
+          ]
+        },
+        "169c3eed-52d7-4a4b-b7c6-161cf287ed33": {
+          "tips": [
+            null
+          ]
+        },
+        "f1632666-ffc1-457a-832a-c2d3b2d1fc20": {
           "tips": [
             null
           ]
@@ -25803,7 +26016,22 @@
             null
           ]
         },
+        "b2777295-b74f-4240-bb3d-c76b79dde6a9": {
+          "tips": [
+            null
+          ]
+        },
         "9bcab929-d773-4dab-bfb0-d09892056944": {
+          "tips": [
+            null
+          ]
+        },
+        "bedaca2d-4f48-45b4-b6e9-431f6a38cc13": {
+          "tips": [
+            null
+          ]
+        },
+        "221b5029-fcfd-4791-b951-852609cb0198": {
           "tips": [
             null
           ]
@@ -26608,6 +26836,7 @@
           ]
         },
         "3f90277d-7951-428b-9655-728af3ec0bec": {
+          "name": "Caminhada pela Galeria",
           "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> \\*\\*Exibição: \\*\\* Slide “Gallery Walk”"
         },
         "a11385f8-ce3b-4f98-a384-0e5240709c67": {
@@ -28524,7 +28753,7 @@
         },
         "25e78957-a583-4ccf-95c4-afbdd5343058": {
           "tips": [
-            null
+            "**Miniprojetos Facilitadores:** Os miniprojetos atuam como pontos de verificação nos currículos e abrangem o subconjunto de habilidades que os alunos observaram até agora na unidade. Eles foram projetados para 1 a 2 dias de implementação como uma forma de verificar se os alunos entenderam bem o conteúdo do curso até o momento. Você pode decidir estender esses projetos como uma forma de apoiar ou desafiar os alunos, o que pode permitir que você revise conceitos difíceis ou apoie alunos que podem ter perdido as aulas e estão tentando recuperar o que perderam. No entanto, recomendamos que você decida isso com antecedência e seja firme com os alunos sobre quanto tempo eles têm para cada projeto. Caso contrário, os projetos facilmente se estenderão por vários dias e que o trabalho do aluno ultrapasse o escopo deste projeto."
           ]
         },
         "c549ac36-f55a-4c2e-b193-9eaffb25f5bc": {
@@ -28540,7 +28769,7 @@
         },
         "19bcd800-fd77-490b-9aba-bc79c141b93d": {
           "tips": [
-            null
+            "**Estratégias de Depuração:** À medida que os alunos projetam e implementam suas próprias ideias de projeto, eles podem se deparar com novos erros que precisarão ser resolvidos e você pode se deparar com um código completamente desconhecido enquanto os alunos procuram ajuda para solucionar seus erros. Para ajudar a facilitar a experiência de depuração, considere as seguintes estratégias:\n\n-   Consulte o [Guia de depuração do professor] para ver algumas perguntas e estratégias comuns[0] que podem ajudar os alunos a depurarem seu código\n-   Peça aos alunos que sigam as etapas do [Guia do aluno para depuração] e usem as [Planilhas trimestrais do relatório de erros] como uma etapa [1](https://docs.google.com/document/d/1M6mnq73DfyvzasucVAwfL-gjl2JqVPzjy_fRx5j4j7c/preview) inicial do processo de depuração. Isso ajuda os alunos a se prepararem e comunicarem o problema antes de pedirem ajuda.\n-   Se os alunos ainda não o viram, exiba o [Vídeo de depuração](https://www.youtube.com/watch?v=auv10y-dN4s) à turma para reforçar as melhores práticas de depuração.\n\n**Aprofundando:** Considere fornecer aos alunos um objeto com quem conversar como parte do processo de depuração. Isso às vezes é conhecido como Rubber Duck Debugging - você pode aprender mais no site <https://rubberduckdebugging.com/>"
           ]
         },
         "fbf994dd-d94d-4ce3-8ef4-b93078c88c50": {
@@ -29023,7 +29252,7 @@
         },
         "4860ef5b-aedc-4828-ae25-0d22347b4ae3": {
           "tips": [
-            null
+            "**Estratégias de Depuração:** À medida que os alunos projetam e implementam suas próprias ideias de projeto, eles podem se deparar com novos erros que precisarão ser resolvidos e você pode se deparar com um código completamente desconhecido enquanto os alunos procuram ajuda para solucionar seus erros. Para ajudar a facilitar a experiência de depuração, considere as seguintes estratégias:\n\n-   Consulte o [Guia de depuração do professor] para ver algumas perguntas e estratégias comuns[0] que podem ajudar os alunos a depurarem seu código\n-   Peça aos alunos que sigam as etapas do [Guia do aluno para depuração] e usem as [Planilhas trimestrais do relatório de erros] como uma etapa [1](https://docs.google.com/document/d/1M6mnq73DfyvzasucVAwfL-gjl2JqVPzjy_fRx5j4j7c/preview) inicial do processo de depuração. Isso ajuda os alunos a se prepararem e comunicarem o problema antes de pedirem ajuda.\n-   Se os alunos ainda não o viram, exiba o [Vídeo de depuração](https://www.youtube.com/watch?v=auv10y-dN4s) à turma para reforçar as melhores práticas de depuração.\n\n**Aprofundando:** Considere fornecer aos alunos um objeto com quem conversar como parte do processo de depuração. Isso às vezes é conhecido como Rubber Duck Debugging - você pode aprender mais no site <https://rubberduckdebugging.com/>"
           ],
           "progression_name": "Adicione Conteúdo e HTML"
         },
@@ -29166,7 +29395,7 @@
         "dd2d120c-2375-4dd5-a0cc-2d399b792638": {
           "description": "\\*\\*Faça o Seu Próprio Desenho: \\*\\* Se o tempo permitir, deixe que aos alunos criem seus próprios desenhos para dar as coordenadas ao parceiro.",
           "tips": [
-            null
+            "**Quando Seguir em Frente:** Decida se essa última atividade vale a pena ser realizada, considerando seu cronograma. Permitir que os alunos criaem e comuniquem seus próprios desenhos pode ajudá-los a reforçarem seus conhecimentos, mas se os alunos estão alcançando os objetivos de aprendizagem da aula, você também pode simplesmente ir até o final para sintetizar o aprendizado."
           ]
         },
         "46d824cf-b84d-4998-94cb-ed8fcbf46d09": {
@@ -29253,6 +29482,7 @@
           "progression_name": "Desafios"
         },
         "af528304-71d4-40f8-b611-eb3bab25c387": {
+          "name": "Compartilhe os Desenhos",
           "description": "**Compartilhe:** Depois que os alunos concluírem seus desenhos, peça-lhes que os compartilhem com a classe. Uma maneira de fazer isso é com uma caminhada pela galeria."
         },
         "4156ac4d-5e34-49d6-8faa-b18068c6c0df": {
@@ -29428,15 +29658,28 @@
           ]
         },
         "9ccac27e-7ede-449d-80e8-2e1451d6f8e8": {
+          "name": "Caminhada pela Galeria",
           "tips": [
-            null,
+            "Você pode optar por formalizar esse processo pedido que cada aluno anote uma qualidade positiva de cada projeto ou fazendo com que os alunos “sorteiem nomes” para comentar sobre o trabalho de um colega em particular.",
             null
           ]
         },
         "1fbb6201-1556-4b41-9a14-4ae07fff50fc": {
           "name": "Diário"
         },
+        "fcddd65f-b400-4750-8dc4-dd422c5e514f": {
+          "name": "Quanta Informação?",
+          "description": "**Revisão:** Até agora, escrevemos programas que colocam formas simples na tela. Faça uma lista de todas as diferentes informações que você usou para controlar _como_ essas formas são desenhadas. \n\n**Aviso:** Se você quiser criar programas com imagens mais detalhadas, talvez até mesmo caracteres com os quais você possa interagir, de quais outras informações você poderia precisar em seu código?"
+        },
+        "e3700930-a0a6-487f-aae0-534d7138ab06": {
+          "description": "Hoje, aprenderemos a criar caracteres em nossas animações chamados **sprites**. Esses sprites nos ajudarão a acompanhar todas as informações de que precisaremos em nossos programas."
+        },
+        "69fd73fb-2e5b-4fc1-8c0e-dd4b5dbd38f8": {
+          "description": "\\*\\*Pergunta do Dia: Como podemos usar sprites para nos ajudar a acompanhar um grande volume de informações em nossos programas? \\*\\*"
+        },
         "77bc3876-90b1-4d58-a025-c4a6dbd382a0": {
+          "name": "Introdução aos Sprites",
+          "description": "**Transição:** Oriente que os alunos acessem o Code Studio",
           "tips": [
             null
           ]
@@ -29490,6 +29733,15 @@
         "6c98b63d-9ef3-4494-8c0a-3c069a1e4a3c": {
           "name": "Diário"
         },
+        "8bcf4724-72bc-45c4-947f-123d853bbd01": {
+          "description": "**Prompt:** Qual é a sua definição de sprite? Quais propriedades do sprite você sabe usar? Quais outras propriedades do sprite podem ser úteis?\n\nPermita que os alunos reflitam sozinhos e depois com um parceiro antes de compartilharem com todo o grupo. Não há problemas se os alunos não tiverem uma definição canônica de um sprite, mas eles devem reconhecer que um sprite é uma parte do programa que tem várias propriedades diferentes que controlam sua localização e aparência."
+        },
+        "8efe01f5-60aa-4d6f-a268-80b7e4756949": {
+          "description": "Até agora, só conseguimos controlar a localização e a animação do nosso sprite, mas hoje vamos aprender a como atualizar outras propriedades do sprite para que possamos criar programas ainda melhores."
+        },
+        "712e67ee-7cab-44a4-ba8b-177cbdfd1715": {
+          "description": "**Pergunta do Dia: Como podemos usar as propriedades dos sprites para alterar sua aparência na tela?**"
+        },
         "0712c045-56fe-49ac-a03b-0e7b0d571658": {
           "description": "**Transição:** Encaminhe os alunos para o Code Studio.",
           "tips": [
@@ -29519,10 +29771,21 @@
         "c9cb7767-98ce-4e02-9d64-56927deb319e": {
           "progression_name": "Desafios"
         },
+        "a0af825a-7fc6-4973-b145-4577098d8e20": {
+          "description": "**Pergunta do Dia: Como podemos usar as propriedades dos sprites para alterar sua aparência na tela?**\n\n**Aviso do diário:** O que significa que as propriedades unidirecionais dos sprites sejam iguais às variáveis? De que forma as propriedades dos sprites são diferentes das variáveis?"
+        },
         "4e887768-be6c-4936-b544-c7c808fddb88": {
-          "name": "Diário"
+          "name": "Diário",
+          "description": "![Uma cena bidimensional com um robô em forma de pêssego e um alienígena roxo no chão e um alienígena rosa agachado em uma rocha flutuante acima deles. O alienígena rosa tem um balão de fala vazio próximo à sua cabeça, como se fosse começar a falar, mas o balão está vazio](https://curriculum.code.org/media/uploads/Screen-Shot-2020-04-01-at-3.51.06-AM.png)\n\n**Exibição:** Mostre o desenho animado para os alunos verem.\n\n**Prompt:** Veja o desenho animado que foi feito no Game Lab. O que você acha que o alienígena deveria dizer?\n\n**Compartilhe:** Permita que os voluntários compartilhem suas ideias."
+        },
+        "2ed4be8c-3eef-4433-bd21-ded7015bb89f": {
+          "description": "Nós nos divertimos muito desenhando coisas e usando nossos sprites, mas falta uma coisa nas imagens do Game Lab: texto! Hoje vamos aprender como adicionar texto aos projetos do Game Lab."
+        },
+        "cf2a6242-e8fe-48ac-aa67-1df6f8d783a8": {
+          "description": "**Pergunta do Dia: Como podemos usar texto para melhorar nossas cenas e animações?**"
         },
         "8b5f1e8d-f5d9-4a46-bc96-51e8fcb159fe": {
+          "description": "**Transição** Direcione os alunos ao Code Studio.",
           "tips": [
             null
           ]
@@ -29545,17 +29808,23 @@
         "e7754777-fba0-4bbe-ac0d-b445c5d8b614": {
           "progression_name": "Desafios"
         },
+        "66f3fc21-6bc7-460e-8be2-fc833b565418": {
+          "name": "Diário",
+          "description": "**Pergunta do Dia: Como podemos usar texto para melhorar nossas cenas e animações?**\n\n**Prompt:** Você desenhou com texto e formas na tela.\n\n-   Quais são as duas maneiras pelas quais desenhar com texto é semelhante ao desenho de formas?\n-   De que maneira desenhar com texto é diferente de desenhar com formas?"
+        },
         "15074e76-ff77-420c-9fbb-b923641fd1e6": {
-          "name": "Revisar"
+          "name": "Revisar",
+          "description": "**Prompt:** Anote quantos blocos você conseguir lembrar do Game Lab. Certifique-se de que sabe o que cada um faz, especialmente as entradas ou parâmetros de cada um dos blocos."
         },
         "13bd9594-e5de-4730-bbf7-4326e76008a5": {
+          "description": "**Pergunta do Dia: Como podemos usar os recursos do Game Lab para expressar nossa criatividade?**",
           "tips": [
-            null
+            "**Miniprojetos Facilitadores:** Os miniprojetos atuam como pontos de verificação nos currículos e abrangem o subconjunto de habilidades que os alunos observaram até agora na unidade. Eles foram projetados para 1 a 2 dias de implementação como uma forma de verificar se os alunos entenderam bem o conteúdo do curso até o momento. Você pode decidir estender esses projetos como uma forma de apoiar ou desafiar os alunos, o que pode permitir que você revise conceitos difíceis ou apoie alunos que podem ter perdido as aulas e estão tentando recuperar o que perderam. No entanto, recomendamos que você decida isso com antecedência e seja firme com os alunos sobre quanto tempo eles têm para cada projeto. Caso contrário, os projetos facilmente se estenderão por vários dias e que o trabalho do aluno ultrapasse o escopo deste projeto."
           ]
         },
         "5b65c9a6-26fd-43fb-a193-130f47faa6d3": {
           "tips": [
-            null
+            "**Facilitando os projetos em grupo:** Se os alunos estiverem trabalhando em duplas ou em pequenas equipes para concluirem seus projetos, mostre estes dois vídeos para a turma:\n\n-   [Como funciona o trabalho em equipe](https://www.youtube.com/watch?v=qkw4pDV5Lec)\n-   [Lidando com divergências](https://www.youtube.com/watch?v=6GgrUeVT-xs)\n\nDependendo de seus objetivos com este projeto, faça com que as equipes concluam um [Guia do aluno sobre planejamento em equipes](https://docs.google.com/document/d/1pfwrtSLjj1LCqneR_lmyUfw2z0UkkWSXTq48AxuIhyo/edit#), que reforça a mensagem no vídeo"
           ]
         },
         "9905f777-4587-4aba-b905-43bf06786bc0": {
@@ -29579,7 +29848,7 @@
         },
         "ddae81ff-4e39-4051-bbaa-388b45171400": {
           "tips": [
-            null
+            "**Estratégias de Depuração:** À medida que os alunos projetam e implementam suas próprias ideias de projeto, eles podem se deparar com novos erros que precisarão ser resolvidos e você pode se deparar com um código completamente desconhecido enquanto os alunos procuram ajuda para solucionar seus erros. Para ajudar a facilitar a experiência de depuração, considere as seguintes estratégias:\n\n-   Consulte o [Guia de depuração do professor] para ver algumas perguntas e estratégias comuns[0] que podem ajudar os alunos a depurarem seu código\n-   Peça aos alunos que sigam as etapas do [Guia do aluno para depuração] e usem as [Planilhas trimestrais do relatório de erros] como uma etapa [1](https://docs.google.com/document/d/1M6mnq73DfyvzasucVAwfL-gjl2JqVPzjy_fRx5j4j7c/preview) inicial do processo de depuração. Isso ajuda os alunos a se prepararem e comunicarem o problema antes de pedirem ajuda.\n-   Se os alunos ainda não o viram, exiba o [Vídeo de depuração](https://www.youtube.com/watch?v=auv10y-dN4s) à turma para reforçar as melhores práticas de depuração.\n\n**Aprofundando:** Considere fornecer aos alunos um objeto com quem conversar como parte do processo de depuração. Isso às vezes é conhecido como Rubber Duck Debugging - você pode aprender mais no site <https://rubberduckdebugging.com/>"
           ],
           "progression_name": "Adicionar Sprites"
         },
@@ -29590,13 +29859,16 @@
           "progression_name": "Revise sua Cena"
         },
         "579f7363-c17e-4501-8177-f3c62df87e67": {
+          "name": "Caminhada pela Galeria",
+          "description": "Permita que os alunos andem pela sala e vejam as gravuras que cada um de seus colegas codificou. Comemore todas as ideias diferentes que os alunos conseguiram implementar a partir do mesmo código básico.",
           "tips": [
-            null,
+            "Você pode optar por formalizar esse processo pedido que cada aluno anote uma qualidade positiva de cada projeto ou fazendo com que os alunos “sorteiem nomes” para comentar sobre o trabalho de um colega em particular.",
             null
           ]
         },
         "ed07e87c-c4ba-4f60-b0e1-3c92caba8e21": {
-          "name": "Diário"
+          "name": "Diário",
+          "description": "**Pergunta do Dia: Como podemos usar o Game Lab para expressar nossa criatividade?**\n\n**Prompt:** Qual foi a maneira mais criativa pela qual outra pessoa usou os blocos hoje?"
         },
         "91af4e95-88e2-457c-b6df-1d704404f2c8": {
           "tips": [
@@ -29678,12 +29950,12 @@
         },
         "2ee73350-ed46-4715-9744-030b9b0bba52": {
           "tips": [
-            null
+            "**Miniprojetos Facilitadores:** Os miniprojetos atuam como pontos de verificação nos currículos e abrangem o subconjunto de habilidades que os alunos observaram até agora na unidade. Eles foram projetados para 1 a 2 dias de implementação como uma forma de verificar se os alunos entenderam bem o conteúdo do curso até o momento. Você pode decidir estender esses projetos como uma forma de apoiar ou desafiar os alunos, o que pode permitir que você revise conceitos difíceis ou apoie alunos que podem ter perdido as aulas e estão tentando recuperar o que perderam. No entanto, recomendamos que você decida isso com antecedência e seja firme com os alunos sobre quanto tempo eles têm para cada projeto. Caso contrário, os projetos facilmente se estenderão por vários dias e que o trabalho do aluno ultrapasse o escopo deste projeto."
           ]
         },
         "dd8a51ba-e183-4b42-a3ce-b89ce885fb5a": {
           "tips": [
-            null
+            "**Facilitando os projetos em grupo:** Se os alunos estiverem trabalhando em duplas ou em pequenas equipes para concluirem seus projetos, mostre estes dois vídeos para a turma:\n\n-   [Como funciona o trabalho em equipe](https://www.youtube.com/watch?v=qkw4pDV5Lec)\n-   [Lidando com divergências](https://www.youtube.com/watch?v=6GgrUeVT-xs)\n\nDependendo de seus objetivos com este projeto, faça com que as equipes concluam um [Guia do aluno sobre planejamento em equipes](https://docs.google.com/document/d/1pfwrtSLjj1LCqneR_lmyUfw2z0UkkWSXTq48AxuIhyo/edit#), que reforça a mensagem no vídeo"
           ]
         },
         "2858c3f2-a4f7-429b-829d-0fee29b43329": {
@@ -29710,7 +29982,7 @@
         },
         "8f67d3bb-a00a-4378-99ae-83077d3ed3ad": {
           "tips": [
-            null
+            "**Estratégias de Depuração:** À medida que os alunos projetam e implementam suas próprias ideias de projeto, eles podem se deparar com novos erros que precisarão ser resolvidos e você pode se deparar com um código completamente desconhecido enquanto os alunos procuram ajuda para solucionar seus erros. Para ajudar a facilitar a experiência de depuração, considere as seguintes estratégias:\n\n-   Consulte o [Guia de depuração do professor] para ver algumas perguntas e estratégias comuns[0] que podem ajudar os alunos a depurarem seu código\n-   Peça aos alunos que sigam as etapas do [Guia do aluno para depuração] e usem as [Planilhas trimestrais do relatório de erros] como uma etapa [1](https://docs.google.com/document/d/1M6mnq73DfyvzasucVAwfL-gjl2JqVPzjy_fRx5j4j7c/preview) inicial do processo de depuração. Isso ajuda os alunos a se prepararem e comunicarem o problema antes de pedirem ajuda.\n-   Se os alunos ainda não o viram, exiba o [Vídeo de depuração](https://www.youtube.com/watch?v=auv10y-dN4s) à turma para reforçar as melhores práticas de depuração.\n\n**Aprofundando:** Considere fornecer aos alunos um objeto com quem conversar como parte do processo de depuração. Isso às vezes é conhecido como Rubber Duck Debugging - você pode aprender mais no site <https://rubberduckdebugging.com/>"
           ],
           "progression_name": "Adicionar Sprites"
         },
@@ -29724,8 +29996,10 @@
           "progression_name": "Revise sua Cena animada"
         },
         "feb6082c-662f-40ee-9fef-b203da98f901": {
+          "name": "Caminhada pela Galeria",
+          "description": "Permita que os alunos andem pela sala e vejam as gravuras que cada um de seus colegas codificou. Comemore todas as ideias diferentes que os alunos conseguiram implementar a partir do mesmo código básico.",
           "tips": [
-            null,
+            "Você pode optar por formalizar esse processo pedido que cada aluno anote uma qualidade positiva de cada projeto ou fazendo com que os alunos “sorteiem nomes” para comentar sobre o trabalho de um colega em particular.",
             null
           ]
         },
@@ -29869,7 +30143,7 @@
         },
         "178315a2-ed7f-41bf-a55d-88724e865ce5": {
           "tips": [
-            null
+            "**Estratégias de Depuração:** À medida que os alunos projetam e implementam suas próprias ideias de projeto, eles podem se deparar com novos erros que precisarão ser resolvidos e você pode se deparar com um código completamente desconhecido enquanto os alunos procuram ajuda para solucionar seus erros. Para ajudar a facilitar a experiência de depuração, considere as seguintes estratégias:\n\n-   Consulte o [Guia de depuração do professor] para ver algumas perguntas e estratégias comuns[0] que podem ajudar os alunos a depurarem seu código\n-   Peça aos alunos que sigam as etapas do [Guia do aluno para depuração] e usem as [Planilhas trimestrais do relatório de erros] como uma etapa [1](https://docs.google.com/document/d/1M6mnq73DfyvzasucVAwfL-gjl2JqVPzjy_fRx5j4j7c/preview) inicial do processo de depuração. Isso ajuda os alunos a se prepararem e comunicarem o problema antes de pedirem ajuda.\n-   Se os alunos ainda não o viram, exiba o [Vídeo de depuração](https://www.youtube.com/watch?v=auv10y-dN4s) à turma para reforçar as melhores práticas de depuração.\n\n**Aprofundando:** Considere fornecer aos alunos um objeto com quem conversar como parte do processo de depuração. Isso às vezes é conhecido como Rubber Duck Debugging - você pode aprender mais no site <https://rubberduckdebugging.com/>"
           ],
           "progression_name": "Projeto de trabalho"
         },
@@ -29961,7 +30235,7 @@
         },
         "ad08b4f7-1f1b-4112-8c51-94b245e4339c": {
           "tips": [
-            null
+            "**Miniprojetos Facilitadores:** Os miniprojetos atuam como pontos de verificação nos currículos e abrangem o subconjunto de habilidades que os alunos observaram até agora na unidade. Eles foram projetados para 1 a 2 dias de implementação como uma forma de verificar se os alunos entenderam bem o conteúdo do curso até o momento. Você pode decidir estender esses projetos como uma forma de apoiar ou desafiar os alunos, o que pode permitir que você revise conceitos difíceis ou apoie alunos que podem ter perdido as aulas e estão tentando recuperar o que perderam. No entanto, recomendamos que você decida isso com antecedência e seja firme com os alunos sobre quanto tempo eles têm para cada projeto. Caso contrário, os projetos facilmente se estenderão por vários dias e que o trabalho do aluno ultrapasse o escopo deste projeto."
           ]
         },
         "47f81bf9-27d2-4354-ad62-9c52c1213106": {
@@ -29975,7 +30249,7 @@
         },
         "cab43fe2-4162-4c38-ae96-c14d216eb2ac": {
           "tips": [
-            null
+            "**Estratégias de Depuração:** À medida que os alunos projetam e implementam suas próprias ideias de projeto, eles podem se deparar com novos erros que precisarão ser resolvidos e você pode se deparar com um código completamente desconhecido enquanto os alunos procuram ajuda para solucionar seus erros. Para ajudar a facilitar a experiência de depuração, considere as seguintes estratégias:\n\n-   Consulte o [Guia de depuração do professor] para ver algumas perguntas e estratégias comuns[0] que podem ajudar os alunos a depurarem seu código\n-   Peça aos alunos que sigam as etapas do [Guia do aluno para depuração] e usem as [Planilhas trimestrais do relatório de erros] como uma etapa [1](https://docs.google.com/document/d/1M6mnq73DfyvzasucVAwfL-gjl2JqVPzjy_fRx5j4j7c/preview) inicial do processo de depuração. Isso ajuda os alunos a se prepararem e comunicarem o problema antes de pedirem ajuda.\n-   Se os alunos ainda não o viram, exiba o [Vídeo de depuração](https://www.youtube.com/watch?v=auv10y-dN4s) à turma para reforçar as melhores práticas de depuração.\n\n**Aprofundando:** Considere fornecer aos alunos um objeto com quem conversar como parte do processo de depuração. Isso às vezes é conhecido como Rubber Duck Debugging - você pode aprender mais no site <https://rubberduckdebugging.com/>"
           ],
           "progression_name": "Crie seus Sprites"
         },
@@ -30066,7 +30340,7 @@
         },
         "66089c68-0883-4590-8caf-64e0d210a4d8": {
           "tips": [
-            null
+            "**Miniprojetos Facilitadores:** Os miniprojetos atuam como pontos de verificação nos currículos e abrangem o subconjunto de habilidades que os alunos observaram até agora na unidade. Eles foram projetados para 1 a 2 dias de implementação como uma forma de verificar se os alunos entenderam bem o conteúdo do curso até o momento. Você pode decidir estender esses projetos como uma forma de apoiar ou desafiar os alunos, o que pode permitir que você revise conceitos difíceis ou apoie alunos que podem ter perdido as aulas e estão tentando recuperar o que perderam. No entanto, recomendamos que você decida isso com antecedência e seja firme com os alunos sobre quanto tempo eles têm para cada projeto. Caso contrário, os projetos facilmente se estenderão por vários dias e que o trabalho do aluno ultrapasse o escopo deste projeto."
           ]
         },
         "9c27acba-ecaa-4c7b-93a5-810026e5864c": {
@@ -30080,7 +30354,7 @@
         },
         "cf39e34c-9f1e-46c7-95aa-ec47f091b8e7": {
           "tips": [
-            null
+            "**Estratégias de Depuração:** À medida que os alunos projetam e implementam suas próprias ideias de projeto, eles podem se deparar com novos erros que precisarão ser resolvidos e você pode se deparar com um código completamente desconhecido enquanto os alunos procuram ajuda para solucionar seus erros. Para ajudar a facilitar a experiência de depuração, considere as seguintes estratégias:\n\n-   Consulte o [Guia de depuração do professor] para ver algumas perguntas e estratégias comuns[0] que podem ajudar os alunos a depurarem seu código\n-   Peça aos alunos que sigam as etapas do [Guia do aluno para depuração] e usem as [Planilhas trimestrais do relatório de erros] como uma etapa [1](https://docs.google.com/document/d/1M6mnq73DfyvzasucVAwfL-gjl2JqVPzjy_fRx5j4j7c/preview) inicial do processo de depuração. Isso ajuda os alunos a se prepararem e comunicarem o problema antes de pedirem ajuda.\n-   Se os alunos ainda não o viram, exiba o [Vídeo de depuração](https://www.youtube.com/watch?v=auv10y-dN4s) à turma para reforçar as melhores práticas de depuração.\n\n**Aprofundando:** Considere fornecer aos alunos um objeto com quem conversar como parte do processo de depuração. Isso às vezes é conhecido como Rubber Duck Debugging - você pode aprender mais no site <https://rubberduckdebugging.com/>"
           ],
           "progression_name": "Controles do Jogador"
         },
@@ -30216,7 +30490,7 @@
         },
         "78e453da-9611-415c-8420-364562611c4c": {
           "tips": [
-            null
+            "**Facilitando os projetos em grupo:** Se os alunos estiverem trabalhando em duplas ou em pequenas equipes para concluirem seus projetos, mostre estes dois vídeos para a turma:\n\n-   [Como funciona o trabalho em equipe](https://www.youtube.com/watch?v=qkw4pDV5Lec)\n-   [Lidando com divergências](https://www.youtube.com/watch?v=6GgrUeVT-xs)\n\nDependendo de seus objetivos com este projeto, faça com que as equipes concluam um [Guia do aluno sobre planejamento em equipes](https://docs.google.com/document/d/1pfwrtSLjj1LCqneR_lmyUfw2z0UkkWSXTq48AxuIhyo/edit#), que reforça a mensagem no vídeo"
           ]
         },
         "9f4c5568-488e-4c3d-a482-9b54d36523ce": {
@@ -30237,7 +30511,7 @@
         },
         "41bb4f61-1aae-4f97-9f4a-bd8bc162da2a": {
           "tips": [
-            null
+            "**Estratégias de Depuração:** À medida que os alunos projetam e implementam suas próprias ideias de projeto, eles podem se deparar com novos erros que precisarão ser resolvidos e você pode se deparar com um código completamente desconhecido enquanto os alunos procuram ajuda para solucionar seus erros. Para ajudar a facilitar a experiência de depuração, considere as seguintes estratégias:\n\n-   Consulte o [Guia de depuração do professor] para ver algumas perguntas e estratégias comuns[0] que podem ajudar os alunos a depurarem seu código\n-   Peça aos alunos que sigam as etapas do [Guia do aluno para depuração] e usem as [Planilhas trimestrais do relatório de erros] como uma etapa [1](https://docs.google.com/document/d/1M6mnq73DfyvzasucVAwfL-gjl2JqVPzjy_fRx5j4j7c/preview) inicial do processo de depuração. Isso ajuda os alunos a se prepararem e comunicarem o problema antes de pedirem ajuda.\n-   Se os alunos ainda não o viram, exiba o [Vídeo de depuração](https://www.youtube.com/watch?v=auv10y-dN4s) à turma para reforçar as melhores práticas de depuração.\n\n**Aprofundando:** Considere fornecer aos alunos um objeto com quem conversar como parte do processo de depuração. Isso às vezes é conhecido como Rubber Duck Debugging - você pode aprender mais no site <https://rubberduckdebugging.com/>"
           ],
           "progression_name": "Projeto - Histórico e Variáveis"
         },
@@ -31203,7 +31477,7 @@
         },
         "107a4007-41fb-4ec7-9f1c-5fdb50d3f05d": {
           "tips": [
-            null
+            "**Facilitando os projetos em grupo:** Se os alunos estiverem trabalhando em duplas ou em pequenas equipes para concluirem seus projetos, mostre estes dois vídeos para a turma:\n\n-   [Como funciona o trabalho em equipe](https://www.youtube.com/watch?v=qkw4pDV5Lec)\n-   [Lidando com divergências](https://www.youtube.com/watch?v=6GgrUeVT-xs)\n\nDependendo de seus objetivos com este projeto, faça com que as equipes concluam um [Guia do aluno sobre planejamento em equipes](https://docs.google.com/document/d/1pfwrtSLjj1LCqneR_lmyUfw2z0UkkWSXTq48AxuIhyo/edit#), que reforça a mensagem no vídeo"
           ]
         },
         "e55254e2-5a0c-4194-9db9-689d238f8ebb": {
@@ -31279,6 +31553,7 @@
           ]
         },
         "df6a981a-35d0-473e-b86e-e95e694c5ca0": {
+          "name": "Diário",
           "tips": [
             null
           ]
@@ -31380,7 +31655,7 @@
         },
         "81634f33-782f-49e5-9157-f31d0c9347e4": {
           "tips": [
-            null
+            "**Facilitando os projetos em grupo:** Se os alunos estiverem trabalhando em duplas ou em pequenas equipes para concluirem seus projetos, mostre estes dois vídeos para a turma:\n\n-   [Como funciona o trabalho em equipe](https://www.youtube.com/watch?v=qkw4pDV5Lec)\n-   [Lidando com divergências](https://www.youtube.com/watch?v=6GgrUeVT-xs)\n\nDependendo de seus objetivos com este projeto, faça com que as equipes concluam um [Guia do aluno sobre planejamento em equipes](https://docs.google.com/document/d/1pfwrtSLjj1LCqneR_lmyUfw2z0UkkWSXTq48AxuIhyo/edit#), que reforça a mensagem no vídeo"
           ]
         },
         "8019946d-ea78-40e7-9166-eebc564679d4": {
@@ -31705,13 +31980,13 @@
         },
         "7f5572c4-561d-4710-aa5d-e238069d946e": {
           "tips": [
-            null
+            "**Miniprojetos Facilitadores:** Os miniprojetos atuam como pontos de verificação nos currículos e abrangem o subconjunto de habilidades que os alunos observaram até agora na unidade. Eles foram projetados para 1 a 2 dias de implementação como uma forma de verificar se os alunos entenderam bem o conteúdo do curso até o momento. Você pode decidir estender esses projetos como uma forma de apoiar ou desafiar os alunos, o que pode permitir que você revise conceitos difíceis ou apoie alunos que podem ter perdido as aulas e estão tentando recuperar o que perderam. No entanto, recomendamos que você decida isso com antecedência e seja firme com os alunos sobre quanto tempo eles têm para cada projeto. Caso contrário, os projetos facilmente se estenderão por vários dias e que o trabalho do aluno ultrapasse o escopo deste projeto."
           ]
         },
         "715944f3-d89d-4fbe-be8d-2cdcbc59a01c": {
           "name": "Introdução",
           "tips": [
-            null
+            "**Facilitando os projetos em grupo:** Se os alunos estiverem trabalhando em duplas ou em pequenas equipes para concluirem seus projetos, mostre estes dois vídeos para a turma:\n\n-   [Como funciona o trabalho em equipe](https://www.youtube.com/watch?v=qkw4pDV5Lec)\n-   [Lidando com divergências](https://www.youtube.com/watch?v=6GgrUeVT-xs)\n\nDependendo de seus objetivos com este projeto, faça com que as equipes concluam um [Guia do aluno sobre planejamento em equipes](https://docs.google.com/document/d/1pfwrtSLjj1LCqneR_lmyUfw2z0UkkWSXTq48AxuIhyo/edit#), que reforça a mensagem no vídeo"
           ]
         },
         "07a3dd86-2dce-45a4-9a12-cba06670d4f4": {
@@ -31728,7 +32003,7 @@
         },
         "3fe1b724-415f-47c5-abaf-e425a18b75e3": {
           "tips": [
-            null
+            "Você pode optar por formalizar esse processo pedido que cada aluno anote uma qualidade positiva de cada projeto ou fazendo com que os alunos “sorteiem nomes” para comentar sobre o trabalho de um colega em particular."
           ]
         },
         "1659014b-d786-45ca-b447-cc98e41f1867": {
@@ -31841,7 +32116,7 @@
         "6f970a76-708b-4d65-9f07-5f5e6906fc71": {
           "name": "Apresente o Projeto",
           "tips": [
-            null
+            "**Facilitando os projetos em grupo:** Se os alunos estiverem trabalhando em duplas ou em pequenas equipes para concluirem seus projetos, mostre estes dois vídeos para a turma:\n\n-   [Como funciona o trabalho em equipe](https://www.youtube.com/watch?v=qkw4pDV5Lec)\n-   [Lidando com divergências](https://www.youtube.com/watch?v=6GgrUeVT-xs)\n\nDependendo de seus objetivos com este projeto, faça com que as equipes concluam um [Guia do aluno sobre planejamento em equipes](https://docs.google.com/document/d/1pfwrtSLjj1LCqneR_lmyUfw2z0UkkWSXTq48AxuIhyo/edit#), que reforça a mensagem no vídeo"
           ]
         },
         "4cad1279-ede9-4b69-8e8a-845ae1cf7885": {
@@ -31981,6 +32256,9 @@
         "fbe22cc0-d0a8-4609-848f-ab19467ea99e": {
           "progression_name": "Desafio"
         },
+        "0129a3a4-e560-4485-8177-f37b39df83df": {
+          "name": "Diário"
+        },
         "91c4d8da-edd3-4c1a-80ef-4b9984f38247": {
           "tips": [
             null
@@ -32040,12 +32318,12 @@
         },
         "a587b271-751f-4a8e-bf77-119d5296c056": {
           "tips": [
-            null
+            "**Miniprojetos Facilitadores:** Os miniprojetos atuam como pontos de verificação nos currículos e abrangem o subconjunto de habilidades que os alunos observaram até agora na unidade. Eles foram projetados para 1 a 2 dias de implementação como uma forma de verificar se os alunos entenderam bem o conteúdo do curso até o momento. Você pode decidir estender esses projetos como uma forma de apoiar ou desafiar os alunos, o que pode permitir que você revise conceitos difíceis ou apoie alunos que podem ter perdido as aulas e estão tentando recuperar o que perderam. No entanto, recomendamos que você decida isso com antecedência e seja firme com os alunos sobre quanto tempo eles têm para cada projeto. Caso contrário, os projetos facilmente se estenderão por vários dias e que o trabalho do aluno ultrapasse o escopo deste projeto."
           ]
         },
         "34b9f7f0-af9b-415f-82b7-0d966ac0c087": {
           "tips": [
-            null
+            "**Facilitando os projetos em grupo:** Se os alunos estiverem trabalhando em duplas ou em pequenas equipes para concluirem seus projetos, mostre estes dois vídeos para a turma:\n\n-   [Como funciona o trabalho em equipe](https://www.youtube.com/watch?v=qkw4pDV5Lec)\n-   [Lidando com divergências](https://www.youtube.com/watch?v=6GgrUeVT-xs)\n\nDependendo de seus objetivos com este projeto, faça com que as equipes concluam um [Guia do aluno sobre planejamento em equipes](https://docs.google.com/document/d/1pfwrtSLjj1LCqneR_lmyUfw2z0UkkWSXTq48AxuIhyo/edit#), que reforça a mensagem no vídeo"
           ]
         },
         "d88dfc34-b35c-4a22-931a-46cd5ca66d87": {
@@ -32104,7 +32382,7 @@
         },
         "5555bb81-13ac-4165-981c-96a15712f660": {
           "tips": [
-            null
+            "**Facilitando os projetos em grupo:** Se os alunos estiverem trabalhando em duplas ou em pequenas equipes para concluirem seus projetos, mostre estes dois vídeos para a turma:\n\n-   [Como funciona o trabalho em equipe](https://www.youtube.com/watch?v=qkw4pDV5Lec)\n-   [Lidando com divergências](https://www.youtube.com/watch?v=6GgrUeVT-xs)\n\nDependendo de seus objetivos com este projeto, faça com que as equipes concluam um [Guia do aluno sobre planejamento em equipes](https://docs.google.com/document/d/1pfwrtSLjj1LCqneR_lmyUfw2z0UkkWSXTq48AxuIhyo/edit#), que reforça a mensagem no vídeo"
           ]
         },
         "643759ad-1d9a-40cd-a828-5b9665ab521c": {
@@ -32114,7 +32392,7 @@
         },
         "c5ecbc50-012a-4b3d-aaac-6bae072631be": {
           "tips": [
-            null
+            "**Estratégias de Depuração:** À medida que os alunos projetam e implementam suas próprias ideias de projeto, eles podem se deparar com novos erros que precisarão ser resolvidos e você pode se deparar com um código completamente desconhecido enquanto os alunos procuram ajuda para solucionar seus erros. Para ajudar a facilitar a experiência de depuração, considere as seguintes estratégias:\n\n-   Consulte o [Guia de depuração do professor] para ver algumas perguntas e estratégias comuns[0] que podem ajudar os alunos a depurarem seu código\n-   Peça aos alunos que sigam as etapas do [Guia do aluno para depuração] e usem as [Planilhas trimestrais do relatório de erros] como uma etapa [1](https://docs.google.com/document/d/1M6mnq73DfyvzasucVAwfL-gjl2JqVPzjy_fRx5j4j7c/preview) inicial do processo de depuração. Isso ajuda os alunos a se prepararem e comunicarem o problema antes de pedirem ajuda.\n-   Se os alunos ainda não o viram, exiba o [Vídeo de depuração](https://www.youtube.com/watch?v=auv10y-dN4s) à turma para reforçar as melhores práticas de depuração.\n\n**Aprofundando:** Considere fornecer aos alunos um objeto com quem conversar como parte do processo de depuração. Isso às vezes é conhecido como Rubber Duck Debugging - você pode aprender mais no site <https://rubberduckdebugging.com/>"
           ]
         },
         "a3fa35ef-cc95-4288-8631-83c7d3e9a032": {
@@ -32415,12 +32693,12 @@
         },
         "1cd5eb8f-135e-4b41-9575-6caaa73a245d": {
           "tips": [
-            null
+            "**Miniprojetos Facilitadores:** Os miniprojetos atuam como pontos de verificação nos currículos e abrangem o subconjunto de habilidades que os alunos observaram até agora na unidade. Eles foram projetados para 1 a 2 dias de implementação como uma forma de verificar se os alunos entenderam bem o conteúdo do curso até o momento. Você pode decidir estender esses projetos como uma forma de apoiar ou desafiar os alunos, o que pode permitir que você revise conceitos difíceis ou apoie alunos que podem ter perdido as aulas e estão tentando recuperar o que perderam. No entanto, recomendamos que você decida isso com antecedência e seja firme com os alunos sobre quanto tempo eles têm para cada projeto. Caso contrário, os projetos facilmente se estenderão por vários dias e que o trabalho do aluno ultrapasse o escopo deste projeto."
           ]
         },
         "a5c47c8a-ffc6-4598-a3e5-b5ae53ac4a42": {
           "tips": [
-            null
+            "**Facilitando os projetos em grupo:** Se os alunos estiverem trabalhando em duplas ou em pequenas equipes para concluirem seus projetos, mostre estes dois vídeos para a turma:\n\n-   [Como funciona o trabalho em equipe](https://www.youtube.com/watch?v=qkw4pDV5Lec)\n-   [Lidando com divergências](https://www.youtube.com/watch?v=6GgrUeVT-xs)\n\nDependendo de seus objetivos com este projeto, faça com que as equipes concluam um [Guia do aluno sobre planejamento em equipes](https://docs.google.com/document/d/1pfwrtSLjj1LCqneR_lmyUfw2z0UkkWSXTq48AxuIhyo/edit#), que reforça a mensagem no vídeo"
           ]
         },
         "494989ad-69f6-47ba-8a6d-f656d844da2e": {
@@ -32438,7 +32716,7 @@
         },
         "76c38ecd-5296-4a2a-b164-042763b63eab": {
           "tips": [
-            null
+            "Você pode optar por formalizar esse processo pedido que cada aluno anote uma qualidade positiva de cada projeto ou fazendo com que os alunos “sorteiem nomes” para comentar sobre o trabalho de um colega em particular."
           ]
         },
         "392d0af6-7107-4bbc-bec5-f67d7ee51779": {
@@ -32512,7 +32790,7 @@
         "02662708-cc39-423e-b0b7-1006e1cd6b23": {
           "name": "Apresente o Projeto",
           "tips": [
-            null
+            "**Facilitando os projetos em grupo:** Se os alunos estiverem trabalhando em duplas ou em pequenas equipes para concluirem seus projetos, mostre estes dois vídeos para a turma:\n\n-   [Como funciona o trabalho em equipe](https://www.youtube.com/watch?v=qkw4pDV5Lec)\n-   [Lidando com divergências](https://www.youtube.com/watch?v=6GgrUeVT-xs)\n\nDependendo de seus objetivos com este projeto, faça com que as equipes concluam um [Guia do aluno sobre planejamento em equipes](https://docs.google.com/document/d/1pfwrtSLjj1LCqneR_lmyUfw2z0UkkWSXTq48AxuIhyo/edit#), que reforça a mensagem no vídeo"
           ]
         },
         "0a843200-c21c-4e7b-8ad1-22479197b91c": {
@@ -32671,12 +32949,12 @@
         },
         "8e1194f7-45d6-4ced-bebd-f3e1b72d6f4c": {
           "tips": [
-            null
+            "**Miniprojetos Facilitadores:** Os miniprojetos atuam como pontos de verificação nos currículos e abrangem o subconjunto de habilidades que os alunos observaram até agora na unidade. Eles foram projetados para 1 a 2 dias de implementação como uma forma de verificar se os alunos entenderam bem o conteúdo do curso até o momento. Você pode decidir estender esses projetos como uma forma de apoiar ou desafiar os alunos, o que pode permitir que você revise conceitos difíceis ou apoie alunos que podem ter perdido as aulas e estão tentando recuperar o que perderam. No entanto, recomendamos que você decida isso com antecedência e seja firme com os alunos sobre quanto tempo eles têm para cada projeto. Caso contrário, os projetos facilmente se estenderão por vários dias e que o trabalho do aluno ultrapasse o escopo deste projeto."
           ]
         },
         "f17e15e9-7eec-4dae-a0b2-16d08304289a": {
           "tips": [
-            null
+            "**Facilitando os projetos em grupo:** Se os alunos estiverem trabalhando em duplas ou em pequenas equipes para concluirem seus projetos, mostre estes dois vídeos para a turma:\n\n-   [Como funciona o trabalho em equipe](https://www.youtube.com/watch?v=qkw4pDV5Lec)\n-   [Lidando com divergências](https://www.youtube.com/watch?v=6GgrUeVT-xs)\n\nDependendo de seus objetivos com este projeto, faça com que as equipes concluam um [Guia do aluno sobre planejamento em equipes](https://docs.google.com/document/d/1pfwrtSLjj1LCqneR_lmyUfw2z0UkkWSXTq48AxuIhyo/edit#), que reforça a mensagem no vídeo"
           ]
         },
         "6aa13112-f135-4a97-a678-735e94f1cebb": {
@@ -32686,7 +32964,7 @@
         },
         "853780f9-47d7-41c6-94f7-81c3bff4898a": {
           "tips": [
-            null
+            "**Estratégias de Depuração:** À medida que os alunos projetam e implementam suas próprias ideias de projeto, eles podem se deparar com novos erros que precisarão ser resolvidos e você pode se deparar com um código completamente desconhecido enquanto os alunos procuram ajuda para solucionar seus erros. Para ajudar a facilitar a experiência de depuração, considere as seguintes estratégias:\n\n-   Consulte o [Guia de depuração do professor] para ver algumas perguntas e estratégias comuns[0] que podem ajudar os alunos a depurarem seu código\n-   Peça aos alunos que sigam as etapas do [Guia do aluno para depuração] e usem as [Planilhas trimestrais do relatório de erros] como uma etapa [1](https://docs.google.com/document/d/1M6mnq73DfyvzasucVAwfL-gjl2JqVPzjy_fRx5j4j7c/preview) inicial do processo de depuração. Isso ajuda os alunos a se prepararem e comunicarem o problema antes de pedirem ajuda.\n-   Se os alunos ainda não o viram, exiba o [Vídeo de depuração](https://www.youtube.com/watch?v=auv10y-dN4s) à turma para reforçar as melhores práticas de depuração.\n\n**Aprofundando:** Considere fornecer aos alunos um objeto com quem conversar como parte do processo de depuração. Isso às vezes é conhecido como Rubber Duck Debugging - você pode aprender mais no site <https://rubberduckdebugging.com/>"
           ]
         },
         "da0333d8-220a-4ccf-a1c8-52847cc9acc9": {
@@ -32740,7 +33018,7 @@
         },
         "e29082fa-b91f-498e-bb89-7d19104676e9": {
           "tips": [
-            null
+            "**Facilitando os projetos em grupo:** Se os alunos estiverem trabalhando em duplas ou em pequenas equipes para concluirem seus projetos, mostre estes dois vídeos para a turma:\n\n-   [Como funciona o trabalho em equipe](https://www.youtube.com/watch?v=qkw4pDV5Lec)\n-   [Lidando com divergências](https://www.youtube.com/watch?v=6GgrUeVT-xs)\n\nDependendo de seus objetivos com este projeto, faça com que as equipes concluam um [Guia do aluno sobre planejamento em equipes](https://docs.google.com/document/d/1pfwrtSLjj1LCqneR_lmyUfw2z0UkkWSXTq48AxuIhyo/edit#), que reforça a mensagem no vídeo"
           ]
         },
         "b0fe60b1-277f-47c5-b3b4-074a0d02f25f": {
@@ -32750,7 +33028,7 @@
         },
         "09c364b4-ceac-4155-8b8c-78e5d33fb913": {
           "tips": [
-            null
+            "**Estratégias de Depuração:** À medida que os alunos projetam e implementam suas próprias ideias de projeto, eles podem se deparar com novos erros que precisarão ser resolvidos e você pode se deparar com um código completamente desconhecido enquanto os alunos procuram ajuda para solucionar seus erros. Para ajudar a facilitar a experiência de depuração, considere as seguintes estratégias:\n\n-   Consulte o [Guia de depuração do professor] para ver algumas perguntas e estratégias comuns[0] que podem ajudar os alunos a depurarem seu código\n-   Peça aos alunos que sigam as etapas do [Guia do aluno para depuração] e usem as [Planilhas trimestrais do relatório de erros] como uma etapa [1](https://docs.google.com/document/d/1M6mnq73DfyvzasucVAwfL-gjl2JqVPzjy_fRx5j4j7c/preview) inicial do processo de depuração. Isso ajuda os alunos a se prepararem e comunicarem o problema antes de pedirem ajuda.\n-   Se os alunos ainda não o viram, exiba o [Vídeo de depuração](https://www.youtube.com/watch?v=auv10y-dN4s) à turma para reforçar as melhores práticas de depuração.\n\n**Aprofundando:** Considere fornecer aos alunos um objeto com quem conversar como parte do processo de depuração. Isso às vezes é conhecido como Rubber Duck Debugging - você pode aprender mais no site <https://rubberduckdebugging.com/>"
           ]
         },
         "5ad50734-14f5-4ec9-8ad5-e1ebbc32858b": {
@@ -32818,13 +33096,16 @@
             "Os vídeos são usados em todo o currículo para estimular discussões, complementar conceitos-chave com explicações e exemplos adicionais e expor os alunos às várias funções e experiências de indivíduos em ciência da computação.\n\nAo interagir com o vídeo, ative as legendas ocultas para que os alunos também possam ler enquanto assistem.\n\nPara incentivar o engajamento ativo e a reflexão, use uma ou mais das estratégias discutidas no \\*\\* [Guia de vídeos do currículo](https://docs.google.com/document/d/1c2hF3CaTJacvwDy4y_9-m1jSkSPmK__F6pDPetXVvy4/view)\\*\\*."
           ]
         },
+        "5eb7862c-6c7f-4adc-9962-75cffce63f79": {
+          "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Vocabulário:** Exiba o seguinte vocabulário\n\n-   **Machine Learning:** Como os computadores reconhecem padrões e tomam decisões sem serem programados explicitamente"
+        },
         "dc13d057-ef08-4f18-af39-32a4d669b0f6": {
           "tips": [
             null
           ]
         },
         "3bce0225-ae36-43d5-bb4f-b07f8cf488b9": {
-          "progression_name": "Reconhecendo peixes"
+          "progression_name": "Reconhecendo Peixes"
         },
         "b9550869-c938-4e46-aa10-d95a64a1fa8f": {
           "tips": [
@@ -32832,7 +33113,7 @@
           ]
         },
         "eb8e9aa4-a4de-4f36-8261-e00843ac6b71": {
-          "progression_name": "Reconhecendo as características dos peixes"
+          "progression_name": "Reconhecendo as Características dos Peixes"
         },
         "bdf9afd7-823c-407e-8e9f-eea74384188a": {
           "tips": [
@@ -32840,7 +33121,7 @@
           ]
         },
         "27899869-a1cb-4149-8f28-9c3ccd3cd804": {
-          "progression_name": "Reconhecendo expressões"
+          "progression_name": "Reconhecendo Expressões"
         },
         "ef83e957-038a-4d2c-8a3f-09b8e0e9db6b": {
           "tips": [
@@ -33164,6 +33445,9 @@
             null
           ]
         },
+        "8dc2b682-3c4c-4abd-b58a-5c066b56323c": {
+          "name": "Diário"
+        },
         "ee6678ed-b811-49c4-bf7f-649420290f0d": {
           "name": "Cartões modelo no AI Lab",
           "tips": [
@@ -33194,6 +33478,12 @@
         },
         "bb6a6fc6-4a2b-420d-808d-d5f5a6fe4681": {
           "progression_name": "Personalizando seu aplicativo"
+        },
+        "a5398677-0a7b-4b9e-9454-deb0e6d62153": {
+          "name": "Diário"
+        },
+        "e85615d1-8d02-47a8-a487-57e770eb7f0e": {
+          "name": "Diário"
         },
         "069191e6-39f0-4a2e-85ce-fff6bc0135c7": {
           "progression_name": "Exemplo de aplicativo: Classificação de zoológicos"
@@ -33291,6 +33581,9 @@
           ]
         },
         "8827a19f-a816-4402-b822-bdf065c62dab": {
+          "name": "Diário"
+        },
+        "c87e3988-3097-46cc-8c89-d80511da5c58": {
           "name": "Diário"
         },
         "2b2c3c49-4b05-4d27-890e-f87305fb4b00": {
@@ -33551,7 +33844,7 @@
         "7f0599a5-4928-4442-b5df-079fc6d939ca": {
           "name": "Atividade",
           "tips": [
-            null
+            "**Facilitando os projetos em grupo:** Se os alunos estiverem trabalhando em duplas ou em pequenas equipes para concluirem seus projetos, mostre estes dois vídeos para a turma:\n\n-   [Como funciona o trabalho em equipe](https://www.youtube.com/watch?v=qkw4pDV5Lec)\n-   [Lidando com divergências](https://www.youtube.com/watch?v=6GgrUeVT-xs)\n\nDependendo de seus objetivos com este projeto, faça com que as equipes concluam um [Guia do aluno sobre planejamento em equipes](https://docs.google.com/document/d/1pfwrtSLjj1LCqneR_lmyUfw2z0UkkWSXTq48AxuIhyo/edit#), que reforça a mensagem no vídeo"
           ]
         },
         "bf9bfd4a-0b2b-4ac7-812c-d99ed30d9bc3": {
@@ -36395,6 +36688,9 @@
         "ad861756-6e6a-417d-919e-445bfcd55307": {
           "name": "Promova o entusiasmo!"
         },
+        "ba51dfa8-9abb-49bb-b6ea-f37499273bf1": {
+          "description": "#### Vocabulário\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Exibição:** Mostre o slide “Vocabulário” \n\n-   **Machine Learning** - Como os computadores reconhecem padrões e tomam decisões sem serem programados explicitamente."
+        },
         "528582d6-1f56-409d-ae46-e9d061d182f4": {
           "name": "IA para oceanos",
           "tips": [
@@ -36436,6 +36732,9 @@
           "tips": [
             null
           ]
+        },
+        "57e34c75-7b48-4470-9ad4-cf3a062ff95d": {
+          "description": "Esta lição tem várias palavras novas e importantes:\n\n-   **Endereço IP** - Um número atribuído a qualquer item conectado à Internet \n\n-   **DNS (Serviço de Nomes de Domínio)** - O serviço que traduz URLs em Endereços IP \n\n-   **URL (Universal Resource Locator)** - Um endereço fácil de lembrar para chamar uma página da web (como www.code.org)\n\n-   **Internet** - Um grupo de computadores e servidores que estão conectados entre si\n\n-   **Servidores** - Computadores que existem apenas para fornecer coisas a outras pessoas\n\n-   **Cabo de Fibra Óptica** - Uma conexão que usa luz para transmitir informações \n\n-   **Wi-Fi** - Um método sem fio de enviar informações usando ondas de rádio\n\n-   **DSL/Cabo** - Um método de enviar informações usando cabos telefônicos ou de televisão\n\n-   **Pacotes** - Pequenos blocos de informações que foram cuidadosamente formados a partir de blocos maiores de informações"
         },
         "9fe5f2c4-c9ca-4aeb-abba-e9b3fd1f18e9": {
           "tips": [
@@ -37819,7 +38118,7 @@
           ]
         },
         "0548094b-ad2c-41df-aa25-e4d93f4a97e6": {
-          "description": "<i class=\"fa fa-pencil\" aria-hidden=\"true\"></i> \\*\\*Vocabulário: \\*\\* Exiba o seguinte vocabulário\n\n-   \\*\\*Aprendizado de máquina: \\*\\* Como os computadores reconhecem padrões e tomam decisões sem serem programados explicitamente"
+          "description": "<i class=\"fa fa-pencil\" aria-hidden=\"true\"></i> **Vocabulário:** Exiba o seguinte vocabulário\n\n-   **Machine Learning:** Como os computadores reconhecem padrões e tomam decisões sem serem programados explicitamente"
         },
         "12d0f69c-7866-4c96-8184-c4594b4c43ae": {
           "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> \\*\\*Exibição: \\*\\* Mostre o slide com o processo de solução de problemas. Leia as linhas adicionais que representam como o processo se conecta ao Machine Learning."
@@ -37835,7 +38134,7 @@
         },
         "a581f885-a92d-41de-9374-13c535486b65": {
           "description": "<i class=\"fa fa-desktop\" aria-hidden=\"true\"></i> \\*\\*Code Studio: \\*\\* Em frente à sala de aula, navegue até o Nível 1 no Code Studio - Recognizing Fish.",
-          "progression_name": "Reconhecendo peixes"
+          "progression_name": "Reconhecendo Peixes"
         },
         "2b5a9d68-715b-4dbb-824a-be1ecb4e4f14": {
           "description": "<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> \\*\\*Faça isso: \\*\\* Como classe, passe por este nível que o orienta no processo de treinamento do A.I. Bot para reconhecer peixes. Ao fazer isso, preencha a primeira parte do guia de atividades em classe. Considere as seguintes estratégias em diferentes estágios do nível:",
@@ -37851,7 +38150,7 @@
         },
         "2fc00a32-32af-4ecf-85cf-73b7b2122249": {
           "description": "<i class=\"fa fa-desktop\" aria-hidden=\"true\"></i> \\*\\*Code Studio: \\*\\* Peça aos alunos que naveguem até o Code Studio Nível 2 - Reconhecendo as características dos peixes. Esse nível permite que os alunos treinem o A.I. Bot para reconhecer um peixe por sua cor ou tipo de corpo. ",
-          "progression_name": "Reconhecendo as características dos peixes"
+          "progression_name": "Reconhecendo as Características dos Peixes"
         },
         "1f9affc2-abd2-4fe6-b52e-8b76569169ad": {
           "description": "<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> \\*\\*Faça isso: \\*\\* Peça aos alunos que escolham uma palavra que queiram treinar o A.I. Bot para reconhecer e registrem essas informações no Guia de Atividades. Os alunos devem progredir no nível por conta própria, registrando as informações em seu guia de atividades.\n\n<i class=\"fa fa-refresh\" aria-hidden=\"true\"></i> \\*\\*Circule: \\*\\* Verifique se os alunos estão preenchendo o guia de atividades à medida que concluem as etapas. Depois de entrar em contato brevemente com cada aluno, conclua essa etapa você mesmo em frente à sala e faça uma pausa na última tela.",
@@ -37867,7 +38166,7 @@
         },
         "0f6e6799-38e4-4aa4-bd78-2952fb060a8c": {
           "description": "<i class=\"fa fa-desktop\" aria-hidden=\"true\"></i> \\*\\*Code Studio: \\*\\* Peça aos alunos que naveguem até o Code Studio Nível 3 - Reconhecendo expressões de peixes. Esse nível permite que os alunos treinem o A.I. Bot para reconhecer um peixe por sua expressão, como “tolo”, “sério” ou “zangado”.",
-          "progression_name": "Reconhecendo expressões"
+          "progression_name": "Reconhecendo Expressões"
         },
         "1c5c052b-a7af-4a05-9806-90b1df4a5a4f": {
           "description": "<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> \\*\\*Faça isso: \\*\\* Peça aos alunos que escolham uma expressão que queiram treinar o A.I. Bot para reconhecer e registrem essas informações no Guia de Atividades. Os alunos devem progredir no nível por conta própria, registrando as informações em seu guia de atividades. Na tela final, peça aos alunos que pressionem o ícone de informações e registrem os recursos que o A.I. Bot aprendeu serem os mais importantes.\n\n<i class=\"fa fa-refresh\" aria-hidden=\"true\"></i> \\*\\*Circule: \\*\\* Verifique se os alunos estão preenchendo o guia de atividades à medida que concluem as etapas. Pergunte aos alunos quais características eles estão analisando para determinar se um peixe atende aos critérios. Os alunos provavelmente dirão que usam principalmente os olhos e a boca para ajudar a determinar a expressão, mas quando clicam no ícone Informações na tela final, o A.I. Bot pode estar usando recursos adicionais, como cor e corpo, para tomar sua decisão. Peça aos alunos que pensem em como se sentem em relação a isso e comparem isso com sua experiência pessoal — por exemplo, se alguém achasse que estava “boba” ou “irritada” principalmente com base em suas roupas.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> \\*\\*Exibição: \\*\\* Mostre o slide do A.I. Bot aprendendo a identificar peixes como “irritados”. Peça aos alunos que discutam a pergunta na tela: \\_Olhando para esta tela, por que você acha que a cor apareceu como a segunda característica mais importante? \\_\n\n<i class=\"fa fa-lightbulb-o\" aria-hidden=\"true\"></i> \\*\\*Objetivo da discussão: \\*\\* Os alunos devem observar que, embora os olhos e a boca tendam a parecer “irritados” em todos os peixes, também parece haver muitos peixes roxos na tela. Como resultado, A.I. Bot pode começar a pensar que a cor “roxa” é outra forma de saber se um peixe está com raiva ou não."
@@ -37885,7 +38184,7 @@
           "description": "Mesmo com um pequeno exemplo como esse, vemos que o aprendizado de máquina pode ter problemas e aprender algo falso sobre um determinado tipo de peixe. Ter mais dados e garantir que eles representem todos os tipos de peixes pode ajudar a resolver esse problema. Esses tipos de exemplos também acontecem na vida real e podem ter consequências graves, como se você recebe ou não assistência médica ou recebe uma oferta de emprego. À medida que aprendemos a usar o aprendizado de máquina para resolver problemas, precisamos sempre pensar em: Qual é o impacto e quem está sendo incluído ou excluído?"
         },
         "9ba16cf2-8e9c-4d77-b668-6aa7ed4a5347": {
-          "description": "<i class=\"fa fa-video-camera\" aria-hidden=\"true\"></i> \\*\\*Vídeo: \\*\\* Mostre aos alunos o vídeo nos slides\n[r how_ai_works_-_training_data_and_bias/how-ai-works/2023]"
+          "description": "<i class=\"fa fa-video-camera\" aria-hidden=\"true\"></i> **Vídeo:** Mostre aos alunos o vídeo nos slides\n[r how_ai_works_-_training_data_and_bias/how-ai-works/2023]"
         },
         "e781b2a2-1f5f-4cf5-97de-6e064a67e7c2": {
           "name": "Diário",
@@ -37948,10 +38247,10 @@
           "description": "<i class=\"fa fa-pencil\" aria-hidden=\"true\"></i> \\*\\*Vocabulário: \\*\\* Mostre o slide com o vocabulário da lição de hoje"
         },
         "6b3d0a2a-474a-4205-bb58-ca2f818a023e": {
-          "description": "-   **Algoritmo** - uma série de etapas para resolver um problema ou tomar uma decisão\n-   **Rede** - Uma coleção de itens conectados entre si. Seguir essas conexões pode representar as etapas em um algoritmo, como um fluxograma."
+          "description": "-   **Algoritmo** - Uma série de etapas para resolver um problema ou tomar uma decisão\n-   **Rede** - Uma coleção de itens conectados entre si. Seguir essas conexões pode representar as etapas em um algoritmo, como um fluxograma."
         },
         "d2f9b793-92df-4ef6-9200-00a07d1c6e9f": {
-          "description": "Hoje vamos criar nosso próprio **algoritmo** de reconhecimento de imagem**. Um algoritmo é uma série de etapas para resolver um problema ou tomar uma decisão. Vamos criar um algoritmo que usa uma \\*\\*rede** para tomar uma decisão, assim como no vídeo"
+          "description": "Hoje vamos criar nosso próprio **algoritmo** de reconhecimento de imagem. Um algoritmo é uma série de etapas para resolver um problema ou tomar uma decisão. Vamos criar um algoritmo que usa uma **rede** para tomar uma decisão, assim como no vídeo"
         },
         "9b2135d2-d3ba-4513-9932-da5d72abf04e": {
           "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> \\*\\*Exibição: \\*\\* Mostre o slide com um placar de um jogo de beisebol"
@@ -37966,7 +38265,7 @@
           "description": "À medida que os alunos estão esboçando suas respostas, comece a distribuir o guia de atividades."
         },
         "9e2464a2-5662-4766-b1c2-2b986f03ba33": {
-          "description": "<i class=\"fa fa-file-text-o\" aria-hidden=\"true\"></i> \\*\\*Distribua: \\*\\* Distribua o guia de\natividades [r computer_vision_network/how-ai-works/2023]",
+          "description": "<i class=\"fa fa-file-text-o\" aria-hidden=\"true\"></i> **Distribua:** Distribua o guia de\natividades [r computer_vision_network/how-ai-works/2023]",
           "tips": [
             "\\*\\*Going Big: \\*\\* Considere imprimir cópias dos manipuladores de 7 segmentos e fazer com que os alunos trabalhem em quadros brancos, papel de pôster, rolos de papel de açougueiro ou até mesmo colocar itens individuais e conectá-los com barbante ou fio."
           ]
@@ -38030,7 +38329,7 @@
           ]
         },
         "f3bdd69c-6238-4198-8757-a8b099f873d1": {
-          "description": "\\*\\* Extensão (opcional): \\*\\* Considere assistir ao[0] vídeo [what\\ _a\\ _neural\\ _network\\ _sees] na página [Experiments with Google].[1] O pequeno vídeo dá um exemplo ao vivo de como a classificação de imagens funciona como uma rede neural, onde você pode ver as entradas e as camadas ocultas. "
+          "description": "\\*\\* Extensão (opcional):\\*\\* Considere assistir ao vídeo [r what_a_neural_network_sees/how-ai-works/2023] na página [Experiments with Google](https://experiments.withgoogle.com/what-neural-nets-see). O pequeno vídeo dá um exemplo ao vivo de como a classificação de imagens funciona como uma rede neural, onde você pode ver as entradas e as camadas ocultas. "
         },
         "b8fc8bcd-f477-431a-9586-9c2ad827f9da": {
           "description": "Adoraríamos aprender mais sobre as pessoas que ensinam essas aulas e a experiência em sala de aula. Informe-nos nesta [Pesquisa de professores sobre como a IA funciona](https://docs.google.com/forms/d/e/1FAIpQLSd5Usml_xrjQQ8DdBmZjQc771LcB13FKukCYc3NGLKfVwIneg/viewform)."
@@ -38487,7 +38786,7 @@
           ]
         },
         "37fb1603-43e5-4354-a5a8-853867267291": {
-          "description": "<i class=\"fa fa-comments\" aria-hidden=\"true\"></i> \\*\\*Discuta: \\*\\* Como o algoritmo de recorte do Twitter foi treinado? De acordo com o vídeo, onde está uma fonte potencial de preconceito ao treinar algoritmos de corte semelhantes?\n\n<i class=\"fa fa-lightbulb-o\" aria-hidden=\"true\"></i> \\*\\*Objetivo da discussão: \\*\\* A coisa mais importante para os alunos saírem dessa discussão é o fato de que a máquina não é “racista”, mas é tendenciosa para faces mais claras por causa dos conjuntos de dados usados para treiná-la. Use essa discussão para garantir que os alunos entendam como o modelo usou os conjuntos de dados de saliência discutidos no vídeo e como alguns desses conjuntos de dados foram treinados em bibliotecas de fotos contendo imagens que não representam a população como um todo."
+          "description": "<i class=\"fa fa-comments\" aria-hidden=\"true\"></i> **Discuta:** Como o algoritmo de recorte do Twitter foi treinado? De acordo com o vídeo, onde está uma fonte em potencial de viés ao treinar algoritmos de corte semelhantes?\n\n<i class=\"fa fa-lightbulb-o\" aria-hidden=\"true\"></i> **Objetivo da Discussão:** A coisa mais importante para os alunos tirarem dessa discussão é o fato de que a máquina não é “racista”, mas é tendenciosa para faces mais claras por causa dos conjuntos de dados usados para treiná-la. Use essa discussão para garantir que os alunos entendam como o modelo usou os conjuntos de dados de saliência discutidos no vídeo e como alguns desses conjuntos de dados foram treinados em bibliotecas de fotos contendo imagens que não representam a população como um todo."
         },
         "b2cf690a-2a3e-4980-85b7-2ce709725725": {
           "description": "<i class=\"fa fa-comments\" aria-hidden=\"true\"></i> \\*\\*Aviso: \\*\\* Se você fosse o CEO do Twitter e encontrasse evidências desse viés em seu algoritmo de recorte, como você reagiria? Quais medidas você tomaria?\n\nVocê pode optar por pedir aos alunos que compartilhem suas respostas se houver tempo, caso contrário, passe a ler o artigo."
@@ -38502,7 +38801,7 @@
           ]
         },
         "075092df-edb2-44a8-ae7e-37674d875fcc": {
-          "description": "<i class=\"fa fa-comments\" aria-hidden=\"true\"></i> \\*\\*Discuta: \\*\\* Peça aos alunos que discutam suas reações às citações de Rumman Chowdry, diretor de engenharia de software da equipe de ética, transparência e responsabilidade em aprendizado de máquina do Twitter. \n\n-   Você acha que a resposta do Twitter foi apropriada?\n-   Quais são os riscos e possíveis danos de sistemas, como plataformas de mídia social como o Twitter, se tornarem muito dependentes do aprendizado de máquina?"
+          "description": "<i class=\"fa fa-comments\" aria-hidden=\"true\"></i> **Discuta:** Peça aos alunos que discutam suas reações às citações de Rumman Chowdry, diretor de engenharia de software da equipe de ética, transparência e responsabilidade em machine learning do Twitter. \n\n-   Você acha que a resposta do Twitter foi apropriada?\n-   Quais são os riscos e possíveis danos de sistemas, como plataformas de mídia social como o Twitter, de se tornarem muito dependentes do machine learning?"
         },
         "47a7416a-0a6c-4dbf-b1f7-e2d1f6b724b4": {
           "description": "A história do Twitter e seu algoritmo de recorte de fotos mostra como algo criado com uma intenção, neste caso para destacar melhor as fotos, pode levar a efeitos não intencionais, neste caso, preconceito de rostos brancos sobre rostos negros, o que também pode ter impactos prejudiciais na sociedade ou na cultura. E esse caso fornece um exemplo de uma empresa de software que tomou medidas práticas para lidar com o viés algorítmico ao estabelecer essa equipe (equipe de ética, transparência e responsabilidade de aprendizado de máquina) liderada por Rumman Chowdry.",
@@ -38595,7 +38894,7 @@
           "description": "<i class=\"fa fa-comments\" aria-hidden=\"true\"></i> \\*\\*Aviso: \\*\\* Qual é um exemplo de IA em sua vida pessoal ou que você já viu em um filme ou livro?"
         },
         "a77cab4b-13d3-47d9-ac09-4afe2c6a58ab": {
-          "description": "<i class=\"fa fa-video-camera\" aria-hidden=\"true\"></i> \\*\\*Vídeo: \\*\\* Assista ao vídeo [how\\ _ai\\ _works\\ _training\\ _data\\ _and\\ _bias] em classe.[0] Os alunos devem ouvir os termos do vocabulário que correspondam em seu anotador."
+          "description": "<i class=\"fa fa-video-camera\" aria-hidden=\"true\"></i> **Vídeo:** Assista ao vídeo [how\\ _ai\\ _works\\ _training\\ _data\\ _and\\ _bias] em turma.[0] Os alunos devem ouvir os termos de vocabulário e correspondê-los aos termos em suas anotações."
         },
         "95e90c7d-c0d6-4b84-9de7-2cc6fa179ab9": {
           "description": "<i class=\"fa fa-comments\" aria-hidden=\"true\"></i> \\*\\*Aviso: \\*\\* Como aprender sobre o preconceito humano no aprendizado de máquina muda sua opinião sobre a IA?"

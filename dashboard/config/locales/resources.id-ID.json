@@ -8917,12 +8917,12 @@
           "url": "https://docs.google.com/document/d/1gQWtamQ3YBk-gJnmw_z3QWNLfzdrPyaUjS4ZbtfAvEs/view"
         },
         "how_ai_works_-_training_data_and_bias/how-ai-works/2023": {
-          "name": "Bagaimana AI Bekerja - Data Pelatihan dan Bias",
+          "name": "Cara Kerja AI - Data Latihan dan Bias",
           "url": "https://youtu.be/x2mRoFNm22g",
           "type": "Video"
         },
         "how_ai_works_-_what_is_machine_learning_/how-ai-works/2023": {
-          "name": "Bagaimana AI Bekerja - Apa itu Pembelajaran Mesin?",
+          "name": "Cara Kerja AI - Apa itu Machine Learning?",
           "url": "https://www.youtube.com/watch?v=OeU5m6vRyCk",
           "type": "Video"
         },
@@ -8931,11 +8931,11 @@
           "type": "Slide"
         },
         "_example_computer_vision_network/how-ai-works/2023": {
-          "name": "[Example] Jaringan Visi Komputer",
+          "name": "[Example] Computer Vision Network",
           "url": "https://docs.google.com/presentation/d/1zJzbHDel0uQ62usH8g_qBp5KIFMN08tEps5lXSAb3Ag/edit?usp=sharing"
         },
         "computer_vision/how-ai-works/2023": {
-          "name": "Visi Komputer",
+          "name": "Computer Vision",
           "url": "https://docs.google.com/presentation/d/1yWJnyVWPq2ut0GmUc0Z41SHxh1_w2B90qis-mo3d2OY/template/preview",
           "type": "Slide"
         },
@@ -8944,59 +8944,59 @@
           "url": "https://docs.google.com/document/d/1C7ob1lB-zKi0DSC3do9ZVFfXkHlC2xnSDI2yPFAqEY4/edit"
         },
         "how_ai_works_how_computer_vision_works/how-ai-works/2023": {
-          "name": "Bagaimana AI Bekerja: Cara Kerja Computer Vision",
+          "name": "Cara Kerja AI: Cara Kerja Computer Vision",
           "url": "https://youtu.be/2hXG8v8p0KM",
           "type": "Video"
         },
         "seven_segment_display_manipulative/how-ai-works/2023": {
-          "name": "Tampilan Tujuh Segmen Manipulatif",
+          "name": "Manipulatif Layar Seven-Segment",
           "url": "https://docs.google.com/document/d/17QzrodDqCjF2pjZvyo4coWYQbaZxuRwDrPEe20H-yBM/edit"
         },
         "what_a_neural_network_sees/how-ai-works/2023": {
-          "name": "Apa yang Dampak Jaringan Saraf",
+          "name": "Apa yang Dilihat Oleh Neural Network",
           "url": "https://www.youtube.com/watch?v=Gu0MkmynWkw",
           "type": "Video"
         },
         "how_ai_works_how_neural_networks_work/how-ai-works/2023": {
-          "name": "Bagaimana AI Bekerja: Cara Kerja Jaringan Saraf",
+          "name": "Cara Kerja AI: Cara Kerja Neural Network",
           "url": "https://youtu.be/JrXazCEACVo",
           "type": "Video"
         },
         "neural_networks/how-ai-works/2023": {
-          "name": "Jaringan Saraf",
+          "name": "Neural Networks",
           "url": "https://docs.google.com/document/d/1HA_zYssm4-s24-8on8BeL5DbzSfi7G7q-4LlywNBoCw/edit?usp=sharing"
         },
         "neural_networks_1/how-ai-works/2023": {
-          "name": "Jaringan Saraf",
+          "name": "Neural Networks",
           "url": "https://docs.google.com/presentation/d/1lj6Z3egPkfv7jKtTVNmhCSY9RKHkcw5LV7Oq_ryqDVs/template/preview",
           "type": "Slide"
         },
         "wetube_content_creators/how-ai-works/2023": {
-          "name": "Pembuat Konten WeTube",
+          "name": "Kreator Konten WeTube",
           "url": "https://docs.google.com/document/d/1z7ZO-9zKlmn3brqH7euWVMSOuzVTQOdWDgkGGukRkvc/edit?usp=sharing",
           "type": "Sumber Daya"
         },
         "eliza_activity_guide/how-ai-works/2023": {
-          "name": "(Opsional) Panduan Aktivitas Eliza",
+          "name": "(Opsional) Panduan Kegiatan Eliza",
           "url": "https://docs.google.com/document/d/1IIca15ohoVq2lTLNUAOqQMUT7YgsTLp8yIPfmEnLmXo/edit#heading=h.17wewdcvexo6"
         },
         "generative_llm/how-ai-works/2023": {
-          "name": "LLM generatif",
+          "name": "LLM Generatif",
           "url": "https://docs.google.com/presentation/d/10d_TM6rucYyt8DAuPVoAZ9mgt9v-zzRWcM2A7geDIp0/template/preview",
           "type": "Slide"
         },
         "how_ai_works_chatbots_and_large_language_models_part_1_/how-ai-works/2023": {
-          "name": "Cara Kerja AI: Chatbots dan Model Bahasa Besar (Bagian 1)",
+          "name": "Cara Kerja AI: Chatbot dan Large Language Model (Bagian 1)",
           "url": "https://www.youtube.com/watch?v=kWougDgtE3E",
           "type": "Video"
         },
         "how_ai_works_chatbots_and_large_language_models_part_2_/how-ai-works/2023": {
-          "name": "Cara Kerja AI: Chatbots dan Model Bahasa Besar (Bagian 2)",
+          "name": "Cara Kerja AI: Chatbot dan Large Language Model (Bagian 2)",
           "url": "https://www.youtube.com/watch?v=7Jn9UrnMWK8",
           "type": "Video"
         },
         "llm_vocab_and_video_guide_answer_key/how-ai-works/2023": {
-          "name": "[Key] Panduan Vocab Dan Video",
+          "name": "[Key] Kosa Kata dan Panduan Video",
           "url": "https://docs.google.com/document/d/1kSVppQd3WBVwvejrJ4ffgCNJEkYbhDzQs88tbQ3rfD0/edit",
           "type": "Kunci Jawaban"
         },
@@ -9005,20 +9005,20 @@
           "url": "https://docs.google.com/document/d/1zPGOdJ1rcdF7e7CzGXHb4JaWYFMEPX9aeZf4DtbQhNI/edit#heading=h.l82l1gv9gtj4"
         },
         "written_voice_simulator_activity_guide_exemplar/how-ai-works/2023": {
-          "name": "[Exemplar] Panduan Aktivitas Simulator Suara Tertulis",
+          "name": "[Exemplar] Panduan Kegiatan Written Voice Simulator",
           "url": "https://docs.google.com/document/d/1nZhObuoPc5781ygHgA8P_a0aHItrKkW4mqqJ73XP8Hw/"
         },
         "written_voice_simulator_guide/how-ai-works/2023": {
-          "name": "Panduan Simulator Suara Tertulis",
+          "name": "Panduan Written Voice Simulator",
           "url": "https://docs.google.com/document/d/1pebKlY2-pFCw-Zo_nI8cLXYT_eyfn3AKzkwvEmkjo2c/edit#heading=h.sa1769guz3cn"
         },
         "written_voice_simulator_user_guide/how-ai-works/2023": {
-          "name": "Panduan Pengguna Simulator Suara Tertulis",
+          "name": "Panduan Pengguna Written Voice Simulator",
           "url": "https://docs.google.com/presentation/d/1N3l7kEskuT5MFjarekKlJVoz3Gl-z53kjCuQ6bz94m4/edit",
           "type": "Sumber Daya"
         },
         "_optional_gan_game_activity_guide/how-ai-works/2023": {
-          "name": "(Opsional) Panduan Aktivitas Game GAN",
+          "name": "(Opsional) Panduan Kegiatan Game GAN",
           "url": "https://docs.google.com/document/d/1XJ16vDcCDz1_cI8T9d554n_cxqEPT2EVCNh6ZLe1OwI/edit"
         },
         "generative_images/how-ai-works/2023": {
@@ -9027,25 +9027,26 @@
           "type": "Slide"
         },
         "generative_images_activity_guide/how-ai-works/2023": {
-          "name": "[Key] Panduan Aktivitas Gambar Generatif",
+          "name": "[Key] Panduan Kegiatan Gambar Generatif",
           "url": "https://docs.google.com/document/d/1f9K9TA6gjNM5SYZB-yCovGA-agtWJdl-ATbUg9c4K_s/edit",
           "type": "Kunci Jawaban"
         },
         "how_ai_works_creativity_and_imagination/how-ai-works/2023": {
-          "name": "Bagaimana AI Bekerja: Kreativitas dan Imajinasi",
+          "name": "Cara Kerja AI: Kreativitas dan Imajinasi",
           "url": "https://www.youtube.com/watch?v=X994dDnmRmY",
           "type": "Video"
         },
         "noisy_image_activity_exemplar/how-ai-works/2023": {
-          "name": "[Exemplar] Aktivitas Gambar Berisik",
+          "name": "[Exemplar] Kegiatan Gambar Noise",
           "url": "https://docs.google.com/document/d/1TkzwTBscbPo7fZl-21ggTqSECFdQ35dxoBrBSdX-0yw/"
         },
         "noisy_image_widget_activity_guide/how-ai-works/2023": {
-          "name": "Panduan Aktivitas Widget Gambar Berisik",
-          "url": "https://docs.google.com/document/d/1rxB-NpxulH6SUyweHwGTxatqYAQc5Qt8ZQN9Dkgi6sE/"
+          "name": "Panduan Kegiatan Noisy Image Widget",
+          "url": "https://docs.google.com/document/d/1rxB-NpxulH6SUyweHwGTxatqYAQc5Qt8ZQN9Dkgi6sE/",
+          "type": "Panduan Kegiatan"
         },
         "user_guide_noise_image_widget/how-ai-works/2023": {
-          "name": "Panduan Pengguna: Widget Gambar Kebisingan",
+          "name": "Panduan Pengguna: Widget Gambar Noise",
           "url": "https://docs.google.com/presentation/d/1l3Ide0B-4k_IEhWYiCVz6OnyAL4fCmg-ROqogyqnVCo/view",
           "type": "Sumber Daya"
         },
@@ -9054,22 +9055,22 @@
           "url": "https://docs.google.com/document/d/1GtTFgGzPcoyokR3KsJ43ZjvgJnwUCWdZXvtrXoa78rQ/edit?usp=sharing"
         },
         "algorithmic_bias/how-ai-works/2023": {
-          "name": "Bias Algoritmik",
+          "name": "Bias Algoritma",
           "url": "https://docs.google.com/presentation/d/1N_sFSTNrP2jpnQPdIAaIDPhQYroSiV5EYxSP3dZ-bHc/template/preview",
           "type": "Slide"
         },
         "how_ai_works_-_societal_impact/how-ai-works/2023": {
-          "name": "Bagaimana AI Bekerja - Dampak Masyarakat",
+          "name": "Cara Kerja AI - Dampak di Masyarakat",
           "url": "https://youtu.be/tJQSyzBUAew",
           "type": "Video"
         },
         "sharing_learnings_about_our_image_cropping_algorithm_twitter_/how-ai-works/2023": {
-          "name": "Berbagi pembelajaran tentang algoritma pemotongan gambar kami (Twitter)",
+          "name": "Berbagi pembelajaran tentang algoritma pemotongan gambar kita (Twitter)",
           "url": "https://blog.twitter.com/engineering/en_us/topics/insights/2021/sharing-learnings-about-our-image-cropping-algorithm",
           "type": "Sumber Daya"
         },
         "twitter_says_its_image-cropping_algorithm_was_biased_so_it_s_ditching_it_cnn_/how-ai-works/2023": {
-          "name": "Twitter mengatakan algoritme pemangkasan gambarnya bias, jadi itu membuangnya (CNN)",
+          "name": "Twitter menyebutkan algoritma pemotongan gambarnya bias, karena itu mereka menghapusnya (CNN)",
           "url": "https://www.cnn.com/2021/05/19/tech/twitter-image-cropping-algorithm-bias/index.html",
           "type": "Sumber Daya"
         },
@@ -9084,7 +9085,7 @@
           "url": "https://docs.google.com/document/d/1KKCTMHVmaUA6B8wBnzT-nHzYCQ6seJD8z-o22dYBkd8/edit?usp=sharing"
         },
         "how_ai_works_-_privacy_and_future_of_work/how-ai-works/2023": {
-          "name": "Bagaimana AI Bekerja - Privasi dan Masa Depan Pekerjaan",
+          "name": "Cara Kerja AI - Privasi dan Masa Depan Pekerjaan",
           "url": "https://youtu.be/zNxw5gJtHLc",
           "type": "Video"
         },
@@ -9101,17 +9102,17 @@
           "type": "Slide"
         },
         "how_ai_works_ethics_ai_equal_access_and_algorithmic_bias/how-ai-works/2023": {
-          "name": "Cara Kerja AI: Etika & AI: Akses Setara dan Bias Algoritma",
+          "name": "Cara Kerja AI: Etika & AI: Akses yang Setara dan Bias Algoritma",
           "url": "https://youtu.be/tJQSyzBUAew",
           "type": "Video"
         },
         "how_ai_works_ethics_ai_privacy_the_future_of_work/how-ai-works/2023": {
-          "name": "Bagaimana AI Bekerja: Etika & AI: Privasi & Masa Depan Pekerjaan",
+          "name": "Cara Kerja AI: Etika & AI: Privasi & Masa Depan Pekerjaan",
           "url": "https://youtu.be/zNxw5gJtHLc",
           "type": "Video"
         },
         "how_ai_works_introduction/how-ai-works/2023": {
-          "name": "Bagaimana AI Bekerja: Pendahuluan",
+          "name": "Cara Kerja AI: Pendahuluan",
           "url": "https://youtu.be/Ok-xpKjKp2g",
           "type": "Video"
         },
@@ -9121,7 +9122,7 @@
           "type": "Video"
         },
         "how_ai_works_what_is_machine_learning_/how-ai-works/2023": {
-          "name": "Bagaimana AI Bekerja: Apa itu Pembelajaran Mesin?",
+          "name": "Cara Kerja AI: Apa itu Machine Learning?",
           "url": "https://youtu.be/KHbwOetbmbs",
           "type": "Video"
         },

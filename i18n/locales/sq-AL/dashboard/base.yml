@@ -341,7 +341,7 @@ sq:
       finished_hoc: "Unë e mbarova Orën e Kodimit"
       sign_in_to_save: 'Logohu për të ruajtur ecurinë tënde'
       my_dashboard: "Paneli im"
-      course_catalog: "Katalogu i kursit"
+      course_catalog: "Katalogu i kurseve"
       project_gallery: "Projektet"
       sections: "Seksionet"
       help_support: "Ndihmë dhe mbështetje"
@@ -398,7 +398,7 @@ sq:
       driver: 'Përdorues'
       navigator: 'Lundrues'
       create: 'Krijo'
-      applab: 'Laboratori i Aplikacioneve'
+      applab: 'App Lab'
       artist: 'Artisti'
       bounce: 'Hidhu'
       calc: 'Llogarit'
@@ -618,7 +618,7 @@ sq:
       link: "Mëso më shumë"
       applab_unsupported_tablet: "App Lab punon më së miri në një kompjuter desktop ose laptop me një mouse dhe tastierë. Mund të hasni probleme duke përdorur këtë mjet në pajisjen tuaj aktuale."
       gamelab_unsupported_tablet: "Loja Lab punon më së miri në një kompjuter desktop ose laptop me një mouse dhe tastierë. Mund të hasni probleme duke përdorur këtë mjet në pajisjen tuaj aktuale."
-      weblab_unsupported_locale_storage: "Ju mund të hasni probleme duke përdorur Web Lab në modalitetin e Shfletimit Privat. Ju lutemi ringarkoni projektin tuaj në gjendje normal. Na vjen keq për shqetësimin."
+      weblab_unsupported_locale_storage: "Ju mund të hasni probleme duke përdorur Web Lab në modalitetin e shfletimit privat. Ju lutemi ringarkoni projektin tuaj në gjendje normal. Na vjen keq për shqetësimin."
   deprecation:
     algebra_lab: " Sjkencat Kompjuterike në kurrikulën dhe përmbajtjen e Algjebër po zhvlerësohet. Brenda disa muajve të ardhshëm, ky laborator nuk do të jetë më i disponueshëm. Ju lutem shikoni [Bootstrap: Algjebra] ()%{bootstrap_algebra_url}në vend të kësaj. [Mëso më shumë] (%{cs_algebra_url})."
   slow_loading: 'Kjo po zgjat më shumë seç duhet...'

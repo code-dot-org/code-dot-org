@@ -146,6 +146,7 @@ def main
         ACTIVE_COURSES_WITH_SURVEYS
         WORKSHOP_TYPES
         NOT_FUNDED_SUBJECTS
+        CSD_CUSTOM_WORKSHOP_MODULES
       ),
       source_module: Pd::SharedWorkshopConstants,
       transform_keys: false

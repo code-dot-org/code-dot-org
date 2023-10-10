@@ -61,7 +61,7 @@ class BlockTest < ActiveSupport::TestCase
     Block.load_records('config/blocks/fakeLevelType/*.json')
 
     assert_nil Block.find_by(name: old_block.name)
-    assert_not_nil Block.find_by(name: new_block.name)
+    refute_nil Block.find_by(name: new_block.name)
   end
 
   test 'Renaming a block deletes the old files' do

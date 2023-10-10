@@ -980,6 +980,7 @@ pt:
         csd_gamelab_drawloop: Introdução ao Draw Loop
         csd_gamelab_functions: Chamando e Definindo Funções
         csd_gamelab_if_else: Declarações Se/Senão
+        csd_gamelab_sprites_1: Introdução aos Sprites
         csd_gamelab_velocity: Velocidade
         csd_how_teamwork_works: Como funciona o trabalho em equipe
         csd_ml_ethics_ai: 'Ética e IA '
@@ -1140,6 +1141,8 @@ pt:
         rough_poemart_events: v1Eventos de Arte de Poema
         rough_poemart_imagery: v1 Imagens de Arte de Poema
         rough_poemart_intro: v1 Introdução à Arte de Poema
+        se-cv-intro-to-lessons: 'Engenharia de Software e Visão Computacional: Introdução
+          às Lições'
         songwriting_with_functions: Lição offline em Ação - Composição de músicas
           com funções
         star_quilts_intro_to_artist: 'Star Quilts: Introdução ao artista'

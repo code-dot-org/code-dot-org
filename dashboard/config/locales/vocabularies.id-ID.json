@@ -1955,19 +1955,19 @@
         },
         "network/how-ai-works/2023": {
           "word": "Jaringan",
-          "definition": "Kumpulan item yang terhubung bersama. Mengikuti koneksi ini dapat mewakili langkah-langkah dalam algoritma, seperti diagram alur."
+          "definition": "Kumpulan item yang terhubung bersama. Mengikuti koneksi ini dapat menggambarkan langkah-langkah dalam algoritma, seperti diagram alur."
         },
         "large_language_model_llm_/how-ai-works/2023": {
           "word": "Model Bahasa Besar (LLM)",
-          "definition": "bentuk tujuan umum AI yang dilatih pada pengetahuan yang sangat, sangat besar"
+          "definition": "AI dengan tujuan umum yang dilatih berdasarkan kumpulan ilmu pengetahuan yang sangat, sangat luas"
         },
         "diffusion_ai/how-ai-works/2023": {
-          "word": "Difusi AI",
-          "definition": "mengubah gambar menjadi noise, dan melatih AI untuk membalikkan proses"
+          "word": "Diffusion AI",
+          "definition": "mengubah gambar menjadi noise, dan melatih AI untuk membalikkan prosesnya"
         },
         "gan_generative_adversarial_network_/how-ai-works/2023": {
-          "word": "GAN (Jaringan Permusuhan Generatif)",
-          "definition": "cara menggunakan dua model AI yang bersaing untuk menghasilkan sesuatu"
+          "word": "GAN (Generative Adversarial Network)",
+          "definition": "cara menggunakan dua model AI yang berlawanan untuk menghasilkan sesuatu"
         },
         "artificial_intelligence/how-ai-works/2023": {
           "word": "Kecerdasan Buatan",

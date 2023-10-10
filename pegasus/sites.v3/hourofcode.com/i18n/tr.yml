@@ -5,36 +5,40 @@ tr:
   language: İngilizce
   front_title: Tarihteki en büyük eğitim etkinliğine katıl, %{campaign_date}
   coming_soon: Çok Yakında
-  campaign_date_start_short: 7 Ara.
-  campaign_date_start_long: 7 Aralık
-  campaign_date_short: 7-13 Aralık
-  campaign_date_full: 7-13 Aralık
-  campaign_date_year: '2020'
-  campaign_date_full_year: 7-13 Aralık, 2020
+  campaign_date_start_short: 4 Ara.
+  campaign_date_start_long: 4 Aralık
+  campaign_date_short: 4-10 Aralık
+  campaign_date_full: 4-10 Aralık
+  campaign_date_year: '2023'
+  campaign_date_full_year: 4-10 Aralık, 2023
   nonus_campaign_date_start_short: 1 Eki.
   nonus_campaign_date_start_long: 1 Ekim
   nonus_campaign_date_short: 1 Eki. - 18 Ara.
   nonus_campaign_date_full: 1 Ekim - 18 Aralık
-  nonus_campaign_date_year: '2020'
+  nonus_campaign_date_year: '2023'
   nonus_campaign_date_full_year: 1 Ekim 2020 - 18 Aralık 2020
   latam_campaign_date_start_short: 1 Eki.
   latam_campaign_date_start_long: 1 Ekim
   latam_campaign_date_short: 1 Eki. - 18 Ara.
   latam_campaign_date_full: 1 Ekim - 18 Aralık
-  latam_campaign_date_year: '2020'
+  latam_campaign_date_year: '2023'
   latam_campaign_date_full_year: 1 Ekim 2020 - 18 Aralık 2020
   europe_campaign_date_start_short: 10 Eki.
   europe_campaign_date_start_long: 10 Ekim
   europe_campaign_date_short: 10-25 Eki.
   europe_campaign_date_full: 10-25 Ekim
-  europe_campaign_date_year: '2020'
+  europe_campaign_date_year: '2023'
   europe_campaign_date_full_year: 10-25 Ekim 2020
   africa_campaign_date_start_short: 1 Eki.
   africa_campaign_date_start_long: 1 Ekim
   africa_campaign_date_short: 1-31 Eki.
   africa_campaign_date_full: 1-31 Ekim
-  africa_campaign_date_year: '2020'
+  africa_campaign_date_year: '2023'
   africa_campaign_date_full_year: 1-31 Ekim 2020
+  hoc2023_header: Yapay Zeka ile Yaratıcılık
+  hoc2023_social_creativity_with_ai_title: Hour of Code - Ne yaratacaksınız?
+  hoc2023_social_creativity_with_ai_desc: Yapay zekayı keşfetmek ve öğrenmek için
+    bilgisayar bilimini kullanın!
   hoc2022_header: Keşfet, Oyna, Yarat!
   social_hoc2022_explore_play_create: Keşfetmek, oynamak ve yaratmak için bilgisayar
     bilimini kullanın!
@@ -185,6 +189,28 @@ tr:
     bir Müfredat Kataloğu ve hepsini bulmanıza yardımcı olmak için yeniden tasarlanmış
     Öğretim sayfası!
   in_partnership_with: Ile ortaklaşa
+  shop_code_dot_org_heading: Mağaza Code.org
+  shop_code_dot_org_desc: İşimizi destekleyin ve hareketi gururla giyin. Şapkalarımız
+    Başkan Obama ve ünlüler tarafından da giyildi.
+  spread_the_word_heading: Herkese duyurun
+  spread_the_word_desc: Code.org'u ağınızla paylaşarak etkimizi artırın. Sosyal medyadan
+    e-posta güncellemelerine kadar daha fazla eğitimciye, öğrenciye ve savunucuya
+    ulaşmamıza nasıl yardımcı olabileceğinizi keşfedin.
+  follow_us_heading: Bizi sosyal medyada takip edin
+  follow_us_desc: Sosyal medyada bizimle güncel kalın ve haberdar olmak ve farkındalığı
+    artırmaya yardımcı olmak için yayınlarımızı ağınızla paylaşın.
+  facebook: Facebook
+  twitter: Twitter
+  linked_in: LinkedIn
+  instagram: Instagram
+  tik_tok: TikTok
+  subscribe_to_emails_heading: E-postalara abone olun
+  subscribe_to_emails_desc: Posta listemiz aracılığıyla üç aylık güncellemeler aracılığıyla
+    Code.org'da ve bilgisayar bilimi eğitiminde neler olup bittiğini okuyun.
+  subscribe_to_emails_intl: Uluslararası güncellemelere abone olun
+  promote_code_dot_org_heading: Code.org'u tanıtın
+  promote_code_dot_org_desc: İstatistikler, alıntılar ve videolar yardımıyla bölgenizdeki
+    bilgisayar bilimini tanıtın.
   afe_partnership_logo_alt: Amazon Geleceğin Mühendisi logosu
   afe_partnership_thanks_desc: Amazon Future Engineer, düşük gelirli ve diğer dezavantajlı
     çocuklara ve gençlere bilgisayar bilimlerinde kariyer yapmaları için ilham vermek,
@@ -203,6 +229,15 @@ tr:
   curricula_title_high: Lise Müfredatı
   curricula_desc_high: Sizi ve lise öğrencilerinizi bilgisayar bilimlerinin derinliklerine
     inmeye davet eden ilgi çekici kurslara ve etkinliklere göz atın.
+  for_administrators_heading: Yöneticiler için
+  for_administrators_desc: Bilgisayar bilimlerini müfredatlarına zaten dahil etmiş
+    binlerce okula katılın.
+  for_parents_heading: Ebeveynler için
+  for_parents_desc: Öğrencinizin okulunu bilgisayar bilimleri eğitimi sunmaya veya
+    genişletmeye teşvik etmeye yardımcı olabilirsiniz.
+  for_educators_heading: Eğitmenler için
+  for_educators_desc: Profesyonel öğrenme atölyelerimizle bugün öğretmeye başlayın
+    - bilgisayar bilimi deneyimi gerekmez -.
   students_label: Öğrenciler
   teachers_label: Öğretmenler
   teacher_label_csf: CS Temelleri Öğretmeni
@@ -212,10 +247,11 @@ tr:
   teacher_label_csa: AP® Computer Science A Teacher
   required_materials: 'Gerekli Malzemeler:'
   optional_materials: 'Opsiyonel Malzemeler:'
-  call_to_action_explore_roles: Açık rolleri keşfedin
+  call_to_action_hold_an_event: Bir etkinlik düzenleyin
   call_to_action_learn_more: Daha fazla bilgi edinin
   call_to_action_watch_now: Şimdi izle
   call_to_action_try_activity: Aktiviteyi deneyin
+  call_to_action_try_activities: Aktiviteleri deneyin
   call_to_action_explore_unit: Üniteyi keşfedin
   call_to_action_explore_curriculum: Müfredatı keşfedin
   call_to_action_explore_curriculum_options: Müfredat seçeneklerini keşfedin
@@ -285,11 +321,20 @@ tr:
   call_to_action_notify_available: Uygun olduğunda bana haber ver
   call_to_action_register_early_access: Erken erişim için kaydolun
   call_to_action_open_positions: Açık pozisyonları görüntüleyin
+  call_to_action_explore_roles: Açık rolleri keşfedin
   call_to_action_get_guide: Kılavuzu edinin
   call_to_action_donate_to_cdo: Code.org'a Bağış Yapın
   call_to_action_start_fundraiser: Bir bağış toplama etkinliği başlatın
   call_to_action_view_donation_policy: Bağış politikasını görüntüleyin
   call_to_action_view_donate_bitpay: BitPay ile Bağış Yapın
+  call_to_action_make_a_donation: Bağış yap
+  call_to_action_other_ways_to_give: Vermenin diğer yolları
+  call_to_action_become_partner_usa: Amerika Birleşik Devletleri ortağı olun
+  call_to_action_become_partner_intl: Uluslararası bir ortak olun
+  call_to_action_become_a_volunteer: Gönüllü ol
+  call_to_action_start_translating: Çevirmeye başla
+  call_to_action_learn_about_advocacy: Savunuculuğumuz hakkında bilgi edinin
+  call_to_action_visit_store: Mağazayı ziyaret edin
   aria_label_call_to_action_afe: Amazon Future Engineer hakkında daha fazla bilgi
     edinin
   aria_label_call_to_action_teaching_csf: Bilgisayar Bilimi Temelleri Öğretimi profesyonel
@@ -634,6 +679,7 @@ tr:
   heading_these_lessons_will: 'Bu dersler:'
   heading_explore_curriculum_catalog: Müfredat Kataloğu'ndaki tüm kurslarımızı keşfedin
   heading_csa_ai: AP® sınavından sonra yapılacak şeyler mi arıyorsunuz?
+  heading_bring_cs_to_students: Bilgisayar bilimini öğrencilere kazandırmak
   professional_learning_section_desc: Öğretmeye hazırlanırken ihtiyacınız olan desteği
     alın. Öğretmenler onu seviyor,% 90'dan fazlası onu şimdiye kadarki en iyi mesleki
     gelişim olarak sıralıyor!
@@ -905,6 +951,7 @@ tr:
     odaklanmaktadır. Teori, pratik örnekler ve kaynakların zengin bir karışımıyla,
     eğitimcileri AI ortamında gezinmeleri ve öğrenci öğrenme deneyimlerini geliştirmeleri
     için güçlendirmeyi amaçlamaktadır.
+  ai_pl_101_resources_5: Yapay Zekaya Sorumlu Bir Yaklaşım Sağlama Rehberi
   ai_pl_101_video_desc_6: 'Büyük Dil Modelleri (ChatGPT gibi) ve Üretken Yapay Zeka
     hakkında iki yeni video içeren yapay zekadaki büyük değişiklikleri yönlendiren
     yeni teknoloji hakkında daha fazla bilgi edinin. Bu yeni teknolojilerin nasıl
@@ -916,6 +963,9 @@ tr:
     batıranlar için başlangıç istemleri içerir, potansiyellerini en üst düzeye çıkarmak
     isteyenler için gelişmiş araçların yanı sıra.
   ai_pl_101_resources_3: Öğrenci Öğrenimini Dönüştürmek İçin Yapay Zeka İstemleri
+  ai_pl_101_resources_section_title: AI hakkında daha fazla bilgi edinmek için daha
+    fazla yol
+  ai_pl_101_resources_guide: 'Refakatçi rehberi:'
   how_ai_works_hero_heading: Yapay Zeka Nasıl Çalışır
   how_ai_works_hero_desc: Video serimiz ve beraberindeki derslerimiz “AI Nasıl Çalışır”
     ile AI dünyasına dalın!
@@ -1759,6 +1809,31 @@ tr:
   donate_tabs_bitpay_desc: Kripto para birimi ile vermenin geleceğini kucaklayın.
     BitPay aracılığıyla, dijital para biriminiz Code.org'un bilgisayar bilimleri eğitimini
     genişletme çabalarını doğrudan destekleyebilir.
+  help_page_top_heading: Nasıl yardımcı olabilirsiniz
+  help_page_top_desc: Bilgisayar bilimlerini her çocuk için erişilebilir hale getirme
+    misyonumuzu destekleyin, her yerde. Çabalarınız gelecekteki yenilikçilere ilham
+    vermemize ve teknoloji eğitimi açığını kapatmamıza yardımcı oluyor.
+  help_page_top_subhead: Code.org'a bağış yapın
+  help_page_top_desc_02: Her öğrenciye bilgisayar bilimi öğrenme fırsatı vermek için
+    çalışıyoruz - hem çevrimiçi hem de okullarda, kalıcı kurslar kurduğumuz ve öğretmenleri
+    eğittiğimiz yerlerde. Bağışladığınız her dolar için, bir çocuk bilgisayar bilimine
+    tanıtıldı.
+  help_page_partners_heading: Ortak ol
+  help_page_partners_desc: Code.org, bilgisayar biliminin yerel ve sürdürülebilir
+    bir şekilde yayılmasına yardımcı olmak için diğer kar amacı gütmeyen kuruluşlarla
+    ortak olarak çalışır. Programımız hakkında daha fazla bilgi edinin.
+  help_page_volunteer_heading: Bir sınıfta gönüllü olun
+  help_page_volunteer_desc: Kodlar Saati"ni öğretmek veya yerel bir sınıfta konuk
+    konuşmacı olmak için gönüllü olun. Yakınınızdaki fırsatları duymak için kaydolun.
+  help_page_translate_heading: Tercüme etmemize yardım edin
+  help_page_translate_desc: Gönüllüler eğitimlerimizi 45'ten fazla dile çevirdi. Dünyanın
+    dört bir yanındaki öğrenciler için eğitimlerimizi genişletmeye devam etmemize
+    yardımcı olun!
+  help_page_speak_for_cs_heading: Bilgisayar bilimleri eğitimi için konuşun
+  help_page_speak_for_cs_desc: Code.org'un ABD genelindeki savunuculuk çalışmaları
+    ve eyaletlerin bilgisayar bilimini tüm öğrenciler için temel haline getirmek için
+    benimsemelerini önerdiğimiz on politika hakkında daha fazla bilgi edinin. Artı,
+    eyaletinizde değişikliği nasıl sürdüğünüzü öğrenin.
   hoc_live: Kodlama Saati Canlı Yayın
   hoc_live_sign_up_title: Kodlama Saati Canlı Yayın için kayıt ol
   hoc_live_learn_title: Canlı Kodlama Saati ile öğrenin
@@ -13911,6 +13986,11 @@ tr:
   video_library_page_inspirational_video_title_11: Herkes öğrenebilir (1 dakika)
   video_library_page_inspirational_video_title_12: Lo Que Falta En Nuestras Escuelas
     (2 dk)
+  video_library_page_inspirational_video_title_13: NASA Kodlama Saatini Kutluyor (2
+    dk)
+  video_library_page_inspirational_video_title_14: Bir oyundan daha fazlası (1 dk)
+  video_library_page_inspirational_video_title_15: Bilgisayar Bilimi ile Oluşturun
+    (1 dk)
   video_library_page_not_hacked_video_title_1: 'Nasıl Saldırıya Uğramaz: Giriş'
   video_library_page_not_hacked_video_title_2: 'Nasıl Saldırıya Uğramaz: Şifreler'
   video_library_page_not_hacked_video_title_3: 'Nasıl Saldırıya Uğramaz: Kimlik Doğrulama

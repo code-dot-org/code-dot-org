@@ -93,6 +93,6 @@ Hour of Code este un eveniment global, iar familia ta merită să sărbătoreasc
 
 <h2>Ce urmeaza dupa Hour of Code?</h2>
 
-Studiul științei calculatoarelor nu trebuie să se încheie cu evenimentul Hour of Code! În timp ce 90% dintre părinți doresc ca copiii lor să învețe informatică, multe scoli încă nu o predau. Pentru a ajuta, curiculul nostru se bazează întotdeauna pe web și utilizarea gratuită. [Află cum](https://code.org/yourschool) poți să aduci ȘC în școala copilului tău chiar astăzi.
+Studiul tehnologiei nu trebuie să se încheie cu evenimentul Hour of Code! În timp ce 90% dintre părinți doresc ca copiii lor să învețe informatică, multe scoli încă nu o predau. Pentru a ajuta, curiculul nostru se bazează întotdeauna pe web și utilizarea gratuită. [Află cum](https://code.org/yourschool) poți să aduci ȘC în școala copilului tău chiar astăzi.
 
 [<button>Consultă ghidul PDF</button>]({{ localized_files/hourofcode_parent_how_to }})

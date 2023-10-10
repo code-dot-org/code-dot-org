@@ -1486,7 +1486,9 @@ hy:
           description_short: Explore a Minecraft world through code
           student_description: Use blocks of code to take Steve or Alex on an adventure
             through this Minecraft world
-          title: Minecraft Hour of Code
+          title: Արկածներ Minecraft-ի հետ
+        minecraft:
+          title: Minecraft Ոճաբան
         netsim:
           title: Ինտերնետ Simulator
         nevada-standards-aligned-fifth-grade-2023:
