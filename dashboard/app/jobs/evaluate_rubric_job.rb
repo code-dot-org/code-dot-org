@@ -36,7 +36,9 @@ class EvaluateRubricJob < ApplicationJob
     raise "lesson_s3_name not found for script_level_id: #{script_level.id}" if lesson_s3_name.blank?
 
     channel_id = get_channel_id(user, script_level)
-    _code, project_version = read_user_code(channel_id)
+    code, project_version = read_user_code(channel_id)
+    prompt = read_file_from_s3(lesson_s3_name, 'system_prompt.txt')
+    ai_rubric = read_file_from_s3(lesson_s3_name, 'standard_rubric.csv')
 
     rubric = Rubric.find_by!(lesson_id: script_level.lesson.id, level_id: script_level.level.id)
 
@@ -77,6 +79,12 @@ class EvaluateRubricJob < ApplicationJob
     code = JSON.parse(source_data[:body].string)['source']
     version = source_data[:version_id]
     [code, version]
+  end
+
+  private def read_file_from_s3(lesson_s3_name, key_suffix)
+    bucket = 'cdo-ai'
+    key = "teaching_assistant/lessons/#{lesson_s3_name}/#{key_suffix}"
+    AWS::S3.create_client.get_object(bucket: bucket, key: key)[:body].read
   end
 
   private def get_fake_openai_evaluations(rubric, understanding_s: 'Extensive Evidence')
