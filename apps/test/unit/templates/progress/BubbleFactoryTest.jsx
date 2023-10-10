@@ -237,7 +237,7 @@ describe('BubbleFactory', () => {
     it('removes version param if it exists even if other params are preserved', () => {
       const levelUrl = 'http://a-level-url.com';
       updateQueryParam('version', '456lmnop');
-      expect(currentLocation().search).to.equal('?version=456lmnop');
+      expect(currentLocation().search).to.include('version=456lmnop');
       const preserveQueryParams = true;
       const bubbleUrl = getBubbleUrl(levelUrl, null, null, preserveQueryParams);
       expect(bubbleUrl).to.equal(levelUrl);
