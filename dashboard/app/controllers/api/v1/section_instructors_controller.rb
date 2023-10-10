@@ -27,7 +27,9 @@ class Api::V1::SectionInstructorsController < Api::V1::JSONApiController
 
     # Enforce maximum co-instructor count (the limit is 5 plus the main teacher
     # for a total of 6)
-    return head :bad_request if SectionInstructor.where(section: section).count >= 6
+    if SectionInstructor.where(section: section).count >= 6
+      return render json: {error: 'section full'}, status: :bad_request
+    end
 
     instructor = User.find_by(email: params.require(:email), user_type: :teacher)
     return head :not_found if instructor.blank?
@@ -39,7 +41,7 @@ class Api::V1::SectionInstructorsController < Api::V1::JSONApiController
       si.really_destroy!
     # Can't re-add someone who is already an instructor (or invited/declined)
     elsif si.present?
-      return head :bad_request
+      return render json: {error: 'already invited'}, status: :bad_request
     end
 
     si = SectionInstructor.create!(
