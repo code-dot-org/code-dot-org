@@ -1673,6 +1673,8 @@ sv:
           student_description: Med ytterligare projektidéer kan du fortsätta efter
             den första timmen.
           title: Fortsätt att dansa
+        dance-unplugged:
+          title: Dansparty akustiskt
         dani-june-2020-test:
           lesson_groups:
             lesson group:
@@ -2031,7 +2033,6 @@ sv:
           description_short: Utforska en Minecraft-värld genom kod
           student_description: Använd block av kod för att ta Steve eller Alex på
             ett äventyr genom denna Minecraft-värld.
-          title: Minecraft Hour of Code
         minecraft:
           description: Programmera djur och andra Minecraft varelser i din egen version
             av Minecraft.
@@ -2324,6 +2325,10 @@ sv:
               display_name: Innehåll
             csd3_2:
               display_name: 'Kapitel 2: Bygga Spel'
+        virtual-pl-csa-summer-2024-day1:
+          title: Dag 1
+        virtual-pl-csa-summer-day2:
+          title: Dag 2
         virtual-pl-csd-summer-day1:
           lessons:
             lesson-1:
