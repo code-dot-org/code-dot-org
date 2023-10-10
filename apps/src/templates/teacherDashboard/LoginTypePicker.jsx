@@ -194,9 +194,7 @@ class LoginTypePicker extends Component {
           <p style={{...style.mediumText, ...style.emailPolicyNote}}>
             {i18n.note()}
             {' ' + i18n.emailAddressPolicy() + ' '}
-            <a href="http://blog.code.org/post/147756946588/codeorgs-new-login-approach-to-student-privacy">
-              {i18n.moreInfo()}
-            </a>
+            <a href="https://code.org/privacy">]{i18n.moreInfo()}</a>
           </p>
           <Button
             onClick={this.cancel}
