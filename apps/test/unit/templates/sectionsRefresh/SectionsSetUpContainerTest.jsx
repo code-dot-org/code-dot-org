@@ -17,8 +17,8 @@ describe('SectionsSetUpContainer', () => {
     const wrapper = shallow(<SectionsSetUpContainer />);
 
     expect(wrapper.find('Heading1').length).to.equal(1);
-    expect(wrapper.find('Button').length).to.equal(3);
-    expect(wrapper.find('Button').at(2).props().text).to.equal(
+    expect(wrapper.find('Button').length).to.equal(4);
+    expect(wrapper.find('Button').last().props().text).to.equal(
       'Finish creating sections'
     );
   });
@@ -27,8 +27,8 @@ describe('SectionsSetUpContainer', () => {
     const wrapper = shallow(<SectionsSetUpContainer sectionToBeEdited={{}} />);
 
     expect(wrapper.find('Heading1').length).to.equal(1);
-    expect(wrapper.find('Button').length).to.equal(2);
-    expect(wrapper.find('Button').at(1).props().text).to.equal('Save');
+    expect(wrapper.find('Button').length).to.equal(3);
+    expect(wrapper.find('Button').last().props().text).to.equal('Save');
   });
 
   it('renders curriculum quick assign', () => {
@@ -37,12 +37,23 @@ describe('SectionsSetUpContainer', () => {
     expect(wrapper.find('CurriculumQuickAssign').length).to.equal(1);
   });
 
-  it('renders advanced settings', () => {
+  it('renders coteacher settings', () => {
     const wrapper = shallow(<SectionsSetUpContainer />);
 
     wrapper
       .find('Button')
       .at(0)
+      .simulate('click', {preventDefault: () => {}});
+
+    expect(wrapper.find('TODO:ADD_COTEACHER').length).to.equal(1);
+  });
+
+  it('renders advanced settings', () => {
+    const wrapper = shallow(<SectionsSetUpContainer />);
+
+    wrapper
+      .find('Button')
+      .at(1)
       .simulate('click', {preventDefault: () => {}});
 
     expect(wrapper.find('AdvancedSettingToggles').length).to.equal(1);

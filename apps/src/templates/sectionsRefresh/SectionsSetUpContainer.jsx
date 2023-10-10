@@ -258,7 +258,7 @@ export default function SectionsSetUpContainer({
         >
           <Heading3>{sectionTitle}</Heading3>
         </Button>
-        <div>{isOpen && sectionContent}</div>
+        <div>{isOpen && sectionContent()}</div>
       </div>
     );
   };
@@ -266,13 +266,15 @@ export default function SectionsSetUpContainer({
   const renderAdvancedSettings = () => {
     return renderExpandableSection(
       i18n.advancedSettings(),
-      <AdvancedSettingToggles
-        updateSection={(key, val) => updateSection(0, key, val)}
-        section={sections[0]}
-        hasLessonExtras={sections[0].course.hasLessonExtras}
-        hasTextToSpeech={sections[0].course.hasTextToSpeech}
-        label={i18n.pairProgramming()}
-      />,
+      () => (
+        <AdvancedSettingToggles
+          updateSection={(key, val) => updateSection(0, key, val)}
+          section={sections[0]}
+          hasLessonExtras={sections[0].course.hasLessonExtras}
+          hasTextToSpeech={sections[0].course.hasTextToSpeech}
+          label={i18n.pairProgramming()}
+        />
+      ),
       advancedSettingsOpen,
       toggleAdvancedSettingsOpen
     );
@@ -281,13 +283,7 @@ export default function SectionsSetUpContainer({
   const renderCoteacherSection = () => {
     return renderExpandableSection(
       'Coteachers',
-      <AdvancedSettingToggles
-        updateSection={(key, val) => updateSection(0, key, val)}
-        section={sections[0]}
-        hasLessonExtras={sections[0].course.hasLessonExtras}
-        hasTextToSpeech={sections[0].course.hasTextToSpeech}
-        label={i18n.pairProgramming()}
-      />,
+      () => <div>coteacher stuff here</div>,
       isCoteacherOpen,
       toggleIsCoteacherOpen
     );
