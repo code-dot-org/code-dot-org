@@ -7,7 +7,6 @@ import {vocabularyShape} from '@cdo/apps/lib/levelbuilder/shapes';
 import $ from 'jquery';
 import Select from 'react-select';
 import 'react-select/dist/react-select.css';
-import fontConstants from '@cdo/apps/fontConstants';
 
 const initialState = {
   word: '',
@@ -199,7 +198,7 @@ const styles = {
     paddingLeft: 20,
     paddingRight: 20,
     paddingBottom: 20,
-    ...fontConstants['main-font-regular'],
+    fontFamily: '"Gotham 4r", sans-serif, sans-serif',
   },
   container: {
     display: 'flex',
@@ -224,7 +223,8 @@ const styles = {
     borderColor: color.orange,
     borderRadius: 3,
     fontSize: 12,
-    ...fontConstants['main-font-regular'],
+    fontFamily: '"Gotham 4r", sans-serif',
+    fontWeight: 'bold',
     paddingLeft: 20,
     paddingRight: 20,
     paddingTop: 5,

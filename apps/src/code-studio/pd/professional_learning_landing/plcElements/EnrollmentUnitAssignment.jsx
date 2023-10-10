@@ -1,6 +1,5 @@
 import PropTypes from 'prop-types';
 import React from 'react';
-import fontConstants from '@cdo/apps/fontConstants';
 import color from '../../../../util/color';
 import ModuleAssignment from './ModuleAssignment';
 
@@ -49,7 +48,7 @@ const styles = {
   },
   courseUnitSectionHeader: {
     color: color.dark_charcoal,
-    ...fontConstants['main-font-regular'],
+    fontFamily: '"Gotham 4r"',
     fontSize: '18px',
   },
   comingSoonMessage: {

@@ -4,7 +4,6 @@ import {connect} from 'react-redux';
 import cookies from 'js-cookie';
 import BaseDialog from '@cdo/apps/templates/BaseDialog';
 import color from '@cdo/apps/util/color';
-import fontConstants from '@cdo/apps/fontConstants';
 import Button from '@cdo/apps/templates/Button';
 import AgeDropdown from '@cdo/apps/templates/AgeDropdown';
 import {SignInState} from '@cdo/apps/templates/currentUserRedux';
@@ -145,7 +144,7 @@ const styles = {
   },
   heading: {
     fontSize: 16,
-    ...fontConstants['main-font-semi-bold'],
+    fontFamily: "'Gotham 5r', sans-serif",
   },
   middle: {
     marginTop: 20,

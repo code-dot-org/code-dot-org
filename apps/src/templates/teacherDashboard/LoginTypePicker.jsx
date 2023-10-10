@@ -18,7 +18,6 @@ import styleConstants from '../../styleConstants';
 import analyticsReporter from '@cdo/apps/lib/util/AnalyticsReporter';
 import color from '@cdo/apps/util/color';
 import experiments from '@cdo/apps/util/experiments';
-import fontConstants from '@cdo/apps/fontConstants';
 
 const LOGIN_TYPE_SELECTED_EVENT = 'Login Type Selected';
 const CANCELLED_EVENT = 'Section Setup Cancelled';
@@ -118,7 +117,7 @@ class LoginTypePicker extends Component {
       mediumText: {
         fontSize: '.75em',
         color: color.neutral_dark,
-        ...fontConstants['main-font-semi-bold'],
+        fontFamily: '"Gotham 5r", sans-serif',
       },
       learnHow: {
         marginTop: '12px',
@@ -210,7 +209,6 @@ class LoginTypePicker extends Component {
     );
   }
 }
-
 export const UnconnectedLoginTypePicker = LoginTypePicker;
 export default connect(state => ({
   providers: state.teacherSections.providers,

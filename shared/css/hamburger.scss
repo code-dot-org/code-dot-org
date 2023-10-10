@@ -100,7 +100,7 @@
         margin-right: 0;
       }
       a {
-        @include main-font-regular;
+        font-family: $gotham-regular;
         color: $white;
         text-decoration: none;
         html[dir=rtl], .rtl & {
@@ -109,13 +109,13 @@
       }
 
       #about-more {
-        @include main-font-regular;
+        font-family: $gotham-regular;
         color: $white;
         text-decoration: none;
         cursor: pointer;
       }
       #educate-more {
-        @include main-font-regular;
+        font-family: $gotham-regular;
         color: $white;
         text-decoration: none;
         cursor: pointer;

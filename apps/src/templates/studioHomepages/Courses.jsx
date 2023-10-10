@@ -11,7 +11,6 @@ import Button from '@cdo/apps/templates/Button';
 import i18n from '@cdo/locale';
 import styleConstants from '@cdo/apps/styleConstants';
 import color from '../../util/color';
-import fontConstants from '@cdo/apps/fontConstants';
 
 class Courses extends Component {
   static propTypes = {
@@ -109,7 +108,7 @@ const styles = {
     backgroundColor: color.white,
     borderColor: color.white,
     color: color.neutral_dark,
-    ...fontConstants['main-font-semi-bold'],
+    fontFamily: `"Gotham 5r", sans-serif`,
     width: 'fit-content',
   },
 };

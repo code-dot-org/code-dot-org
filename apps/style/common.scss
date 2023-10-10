@@ -17,7 +17,8 @@ $common-root: "/blockly/media/common_images/";
 }
 
 @mixin font {
-  @include main-font-regular;
+  font-family: $gotham-regular, sans-serif;
+  font-weight: normal;
 }
 
 @mixin no-transform {
@@ -57,11 +58,13 @@ body {
   margin-top: 0;
 }
 h1 {
-  @include main-font-bold;
+  font-family: $gotham-extra-bold, sans-serif;
+  font-weight: normal;
   font-size: 140%;
 }
 h2 {
-  @include main-font-semi-bold;
+  font-family: $gotham-bold, sans-serif;
+  font-weight: normal;
 }
 a {
   color: $link_color;
@@ -71,16 +74,18 @@ a {
   }
 }
 strong {
-  @include main-font-bold;
+  font-family: $gotham-extra-bold, sans-serif;
+  font-weight: normal;
 }
 
 em {
-  @include main-font-regular-italic;
+  font-family: $gotham-italics, sans-serif;
+  font-style: normal;
 }
 
 strong em,
 em strong {
-  @include main-font-bold-italic;
+  font-family: $gotham-extra-bold-italics, sans-serif;
 }
 
 .clear {
@@ -808,11 +813,12 @@ input[type="radio"] {
   min-width: 4em;
 }
 .feedback {
-  @include main-font-bold;
   font-size: 30px;
   margin: 20px 0 20px 0;
   line-height: 28px;
   color: #7e5ba0;
+  font-family: $gotham-extra-bold;
+  font-weight: normal;
 }
 #show-code {
   margin-bottom: 5px;
@@ -932,13 +938,14 @@ html[dir="RTL"] .prompt-icon-cell {
 
 .qtip.cdo-qtips.qtip-authored-hint {
   .qtip-content {
-    @include main-font-regular;
+    font-family: $gotham-regular;
     padding: 10px 10px 0 10px;
     color: $charcoal;
 
     h3 {
-      @include main-font-bold;
       margin-top: 0;
+      font-family: $gotham-extra-bold;
+      font-weight: normal;
       font-size: 18px;
       line-height: 20px;
     }
@@ -1022,7 +1029,6 @@ html[dir="RTL"] .prompt-icon-cell {
 $workspace-header-button-height: 24px;
 $workspace-header-button-margin: ($workspace-headers-height - $workspace-header-button-height) * 0.5;
 .workspace-header-button {
-  @include main-font-semi-bold;
   cursor: pointer;
   float: right;
   overflow: hidden;
@@ -1033,6 +1039,7 @@ $workspace-header-button-margin: ($workspace-headers-height - $workspace-header-
   margin-left: 0;
   height: $workspace-header-button-height;
   border-radius: 4px; // TODO: Make mixin
+  font-family: $gotham-bold;
   &:hover {
     background-color: $cyan;
   }
@@ -1179,7 +1186,7 @@ $workspace-header-button-margin: ($workspace-headers-height - $workspace-header-
   }
 
   .template-level-warning {
-    @include main-font-bold;
+    font-family: "Gotham 7r", sans-serif;
     color: $red;
     line-height: normal;
     margin-top: 10px;
@@ -1223,8 +1230,8 @@ $workspace-header-button-margin: ($workspace-headers-height - $workspace-header-
 .modal-content {
   .show-code {
     summary {
-      @include main-font-semi-bold;
       color: $neutral_dark;
+      font-family: $gotham-bold;
     }
 
     .generated-code-container {
@@ -1259,11 +1266,12 @@ $workspace-header-button-margin: ($workspace-headers-height - $workspace-header-
       margin-bottom: 10px;
 
       &.caption-text {
-        @include main-font-semi-bold;
+        font-family: $gotham-bold;
       }
 
       a {
-        @include main-font-regular;
+        font-family: $gotham-regular;
+        font-weight: normal;
         color: $brand_secondary_default;
         text-decoration: underline;
         &:hover {
@@ -1477,7 +1485,7 @@ $workspace-header-button-margin: ($workspace-headers-height - $workspace-header-
   }
 
   button.saved-to-gallery {
-    @include main-font-regular-italic;
+    font-family: "Gotham 4i", sans-serif;
   }
 
   #sharing-input-container {
@@ -1594,8 +1602,9 @@ $text-color: $white;
 $tooltip-border-radius: 14px;
 $tooltip-shadow-color: $shadow;
 $see-examples-font-weight: bold;
-$tooltip-font: $main-font;
+$tooltip-font: $gotham-regular;
 $function-name-font: $code-font;
+$examples-link-font: $gotham-extra-bold;
 $see-examples-thick-underline-color: $yellow;
 
 .tooltip-example-link,
@@ -1612,9 +1621,9 @@ $see-examples-thick-underline-color: $yellow;
   &:link,
   &:active,
   &:visited {
-    @include main-font-semi-bold;
     border-bottom: 3px solid $see-examples-thick-underline-color;
     color: white;
+    font-family: $gotham-bold;
   }
 }
 
@@ -1646,11 +1655,11 @@ $see-examples-thick-underline-color: $yellow;
 
 .droplet-block-tooltipster .tooltipster-content {
   font-family: $tooltip-font;
-  font-weight: $regular-font-weight;
   font-size: 12px;
   line-height: 16px;
   padding: 8px 10px;
   overflow: hidden;
+  font-weight: normal;
 }
 
 .droplet-hover-div {

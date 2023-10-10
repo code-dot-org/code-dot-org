@@ -4,7 +4,6 @@ import i18n from '@cdo/locale';
 import {KeepWorkingBadge} from '@cdo/apps/templates/progress/BubbleBadge';
 import {ReviewStates} from '@cdo/apps/templates/feedback/types';
 import color from '@cdo/apps/util/color';
-import fontConstants from '@cdo/apps/fontConstants';
 
 class ReadOnlyReviewState extends React.Component {
   static propTypes = {
@@ -57,7 +56,8 @@ const styles = {
     alignItems: 'center',
     color: color.dimgray,
     fontSize: 12,
-    ...fontConstants['main-font-semi-bold'],
+    fontFamily: '"Gotham 5r", sans-serif',
+    fontWeight: 'bold',
   },
   keepWorkingBadge: {
     fontSize: 8,

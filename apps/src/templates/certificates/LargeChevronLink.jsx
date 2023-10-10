@@ -1,7 +1,6 @@
 import PropTypes from 'prop-types';
 import React, {Component} from 'react';
 import {connect} from 'react-redux';
-import fontConstants from '@cdo/apps/fontConstants';
 import FontAwesome from '../FontAwesome';
 import color from '../../util/color';
 
@@ -43,7 +42,7 @@ const styles = {
   linkText: {
     fontSize: 20,
     lineHeight: '22px',
-    ...fontConstants['main-font-semi-bold'],
+    fontFamily: 'Gotham 5r',
     color: color.teal,
     clear: 'both',
     display: 'inline',

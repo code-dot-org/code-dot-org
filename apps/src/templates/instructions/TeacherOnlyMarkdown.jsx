@@ -4,7 +4,6 @@ import React, {Component} from 'react';
 import SafeMarkdown from '@cdo/apps/templates/SafeMarkdown';
 import color from '../../util/color';
 import i18n from '@cdo/locale';
-import fontConstants from '@cdo/apps/fontConstants';
 
 export default class TeacherOnlyMarkdown extends Component {
   static propTypes = {
@@ -43,7 +42,7 @@ const styles = {
     backgroundColor: color.cyan,
     padding: 5,
     fontSize: 18,
-    ...fontConstants['main-font-bold'],
+    fontFamily: '"Gotham 7r", sans-serif',
   },
   content: {
     padding: 10,
