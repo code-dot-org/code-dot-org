@@ -1,6 +1,8 @@
 class EvaluateRubricJob < ApplicationJob
   queue_as :default
 
+  self.queue_adapter = :delayed_job
+
   rescue_from(StandardError) do |exception|
     if rack_env?(:development)
       puts "EvaluateRubricJob Error: #{exception.full_message}"
