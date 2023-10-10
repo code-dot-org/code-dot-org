@@ -56,6 +56,8 @@ pl:
             '3.00': bardzo duży
       Dancelab_ai:
         text: użyj AI do {VALUE}
+      Dancelab_aiText:
+        text: użyj AI do {VALUE}
       Dancelab_alternateMoves:
         text: "{GROUP} zmienia się co {N} takty \nmiędzy {MOVE1} i {MOVE2}"
         options:

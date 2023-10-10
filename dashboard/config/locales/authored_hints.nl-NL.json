@@ -3580,7 +3580,7 @@
         "courseC_starWars_loops8": {
           "course_starWars_loops8_a": "Bekijk het probleem eens in kleine stapjes.  Neem er de tijd voor.  Je hoeft het niet allemaal in de eerste poging op te lossen!",
           "course_starWars_loops8_b": "Bekijk de eerste helft van dit probleem als een trap probleem. Hoe heb je dat de vorige keer opgelost?",
-          "course_starWars_loops8_c": "Bekijk deze route eens.\n\n[][0]"
+          "course_starWars_loops8_c": "Bekijk deze route eens.\n\n![](https://images.code.org/7d696dd3b1e6984a1d6041f366d5c96b-image-1510198804955.37.04.png)"
         },
         "courseC_starWars_loops82022": {
           "course_starWars_loops8_a": "Bekijk het probleem eens in kleine stapjes.  Neem er de tijd voor.  Je hoeft het niet allemaal in de eerste poging op te lossen!",
@@ -4282,7 +4282,7 @@
           "courseD_bee_conditionals3_hintVid2": "Kijk naar deze video voor hulp bij deze puzzle."
         },
         "courseD_bee_conditionals4": {
-          "courseD_bee_conditionals4_c": "Met het [blockly block][0] blok, moet je vooruit bewegen en kijken of er bloemen zijn. Als er een bloem is, wat zou de bloem dan moeten doen?",
+          "courseD_bee_conditionals4_c": "Met het <xml><block type=\"maze_untilBlocked\"/></xml> blok, moet je vooruit bewegen en kijken of er bloemen zijn. Als er een bloem is, wat zou de bloem dan moeten doen?",
           "courseD_bee_conditionals4_hintVid1": "Heb je hulp nodig om op gang te komen?  Kijk naar de video!",
           "courseD_bee_conditionals4_hintVid2": "Kijk naar deze video voor hulp bij deze puzzle."
         },

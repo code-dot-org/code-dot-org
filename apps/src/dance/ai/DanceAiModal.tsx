@@ -52,8 +52,8 @@ const DanceAiModal: React.FunctionComponent<DanceAiProps> = ({onClose}) => {
   const [mode, setMode] = useState(Mode.SELECT_INPUTS);
   const [currentInputSlot, setCurrentInputSlot] = useState(0);
   const [inputs, setInputs] = useState<string[]>([]);
-  const [responseJson, setResponseJson] = useState<string>('');
-  const [responseExplanation, setResponseExplanation] = useState<string>('');
+  const [resultJson, setResultJson] = useState<string>('');
+  const [resultExplanation, setResultExplanation] = useState<string>('');
   const [typingDone, setTypingDone] = useState<boolean>(false);
 
   const currentAiModalField = useSelector(
@@ -70,7 +70,7 @@ const DanceAiModal: React.FunctionComponent<DanceAiProps> = ({onClose}) => {
       setMode(Mode.RESULTS_FINAL);
 
       // The block value will be set to this JSON.
-      setResponseJson(currentValue);
+      setResultJson(currentValue);
 
       setShowPreview(true);
     }
@@ -118,46 +118,49 @@ const DanceAiModal: React.FunctionComponent<DanceAiProps> = ({onClose}) => {
         inputLibrary.items.find((item: AiModalItem) => item.id === input).name
     );
     const request = `${promptString} ${inputNames.join(', ')}.`;
-    startAi(request);
+    startAi(inputs, request);
     setMode(Mode.GENERATING);
   };
 
-  const startAi = async (value: string) => {
-    const responseJsonString = await doAi(value);
-    const response = JSON.parse(responseJsonString);
+  const startAi = async (inputs: string[], value: string) => {
+    const resultJsonString = await doAi(value);
+    const result = JSON.parse(resultJsonString);
 
     // "Pick" a subset of fields to be used.  Specifically, we exclude the
     // explanation, since we don't want it becoming part of the code.
-    const pickedResponse = (({
+    const pickedResult = (({
       backgroundEffect,
       backgroundColor,
       foregroundEffect,
-      dancers,
-    }) => ({backgroundEffect, backgroundColor, foregroundEffect, dancers}))(
-      response
-    );
-    const pickedResponseJson = JSON.stringify(pickedResponse);
+    }) => ({
+      backgroundEffect,
+      backgroundColor,
+      foregroundEffect,
+    }))(result);
+
+    const fullResult = {inputs, ...pickedResult};
+
+    const fullResultJson = JSON.stringify(fullResult);
 
     // The block value will be set to this JSON.
-    setResponseJson(pickedResponseJson);
+    setResultJson(fullResultJson);
 
     // The user will see this explanation.
-    setResponseExplanation(response.explanation);
+    setResultExplanation(result.explanation);
   };
 
   /**
-   * Generates blocks from the AI response in the main workspace, and attaches
+   * Generates blocks from the AI result in the main workspace, and attaches
    * them to each other.
    */
-  const generateBlocksFromResponse = (
+  const generateBlocksFromResult = (
     workspace: Workspace
-  ): [BlockSvg, BlockSvg, BlockSvg] => {
-    const params = JSON.parse(responseJson);
+  ): [BlockSvg, BlockSvg] => {
+    const params = JSON.parse(resultJson);
 
-    const blocksSvg: [BlockSvg, BlockSvg, BlockSvg] = [
+    const blocksSvg: [BlockSvg, BlockSvg] = [
       workspace.newBlock('Dancelab_setForegroundEffect') as BlockSvg,
       workspace.newBlock('Dancelab_setBackgroundEffectWithPalette') as BlockSvg,
-      workspace.newBlock('Dancelab_makeNewDanceSpriteGroup') as BlockSvg,
     ];
 
     // Foreground block.
@@ -167,20 +170,14 @@ const DanceAiModal: React.FunctionComponent<DanceAiProps> = ({onClose}) => {
     blocksSvg[1].setFieldValue(params.backgroundEffect, 'EFFECT');
     blocksSvg[1].setFieldValue(params.backgroundColor, 'PALETTE');
 
-    // Dancers block.
-    blocksSvg[2].setFieldValue(params.dancers.type.toUpperCase(), 'COSTUME');
-    blocksSvg[2].setFieldValue(params.dancers.count.toString(), 'N');
-    blocksSvg[2].setFieldValue(params.dancers.layout, 'LAYOUT');
-
     // Connect the blocks.
     blocksSvg[0].nextConnection.connect(blocksSvg[1].previousConnection);
-    blocksSvg[1].nextConnection.connect(blocksSvg[2].previousConnection);
 
     return blocksSvg;
   };
 
   const convertBlocks = () => {
-    const blocksSvg = generateBlocksFromResponse(Blockly.getMainWorkspace());
+    const blocksSvg = generateBlocksFromResult(Blockly.getMainWorkspace());
 
     const origBlock = currentAiModalField?.getSourceBlock();
 
@@ -205,7 +202,7 @@ const DanceAiModal: React.FunctionComponent<DanceAiProps> = ({onClose}) => {
 
       origBlock
         ?.getNextBlock()
-        ?.previousConnection?.connect(blocksSvg[2].nextConnection);
+        ?.previousConnection?.connect(blocksSvg[1].nextConnection);
 
       blocksSvg.forEach(blockSvg => {
         blockSvg.initSvg();
@@ -238,13 +235,13 @@ const DanceAiModal: React.FunctionComponent<DanceAiProps> = ({onClose}) => {
       <Heading5>Code</Heading5>
 
       <pre className={classNames(moduleStyles.pre, moduleStyles.code)}>
-        ai({formatJsonString(responseJson)})
+        ai({formatJsonString(resultJson)})
       </pre>
 
-      <div style={{display: responseExplanation !== '' ? 'block' : 'none'}}>
+      <div style={{display: resultExplanation !== '' ? 'block' : 'none'}}>
         <Heading5>Explanation</Heading5>
         <pre className={classNames(moduleStyles.pre, moduleStyles.explanation)}>
-          {responseExplanation}
+          {resultExplanation}
         </pre>
       </div>
     </div>
@@ -262,9 +259,9 @@ const DanceAiModal: React.FunctionComponent<DanceAiProps> = ({onClose}) => {
             {' '}
             {mode === Mode.SELECT_INPUTS
               ? 'Make a sentence by selecting some emoji.'
-              : mode === Mode.GENERATING && responseJson === ''
+              : mode === Mode.GENERATING && resultJson === ''
               ? 'The AI is processing your sentence.'
-              : mode === Mode.GENERATING && responseJson !== ''
+              : mode === Mode.GENERATING && resultJson !== ''
               ? 'The AI is ready to generate results!'
               : mode === Mode.RESULTS && !typingDone
               ? 'The AI is generating results.'
@@ -317,7 +314,7 @@ const DanceAiModal: React.FunctionComponent<DanceAiProps> = ({onClose}) => {
           }}
         >
           {(mode === Mode.SELECT_INPUTS ||
-            (mode === Mode.GENERATING && responseJson === '')) && (
+            (mode === Mode.GENERATING && resultJson === '')) && (
             <div className={moduleStyles.prompt}>
               {promptString}
               {Array.from(Array(SLOT_COUNT).keys()).map(index => {
@@ -375,7 +372,7 @@ const DanceAiModal: React.FunctionComponent<DanceAiProps> = ({onClose}) => {
               />
             </div>
           )}
-          {mode === Mode.GENERATING && responseJson === '' && (
+          {mode === Mode.GENERATING && resultJson === '' && (
             <div className={moduleStyles.spinner}>
               <FontAwesome
                 title={undefined}
@@ -401,7 +398,7 @@ const DanceAiModal: React.FunctionComponent<DanceAiProps> = ({onClose}) => {
               cursor={{show: false}}
               onTypingDone={() => {
                 setTypingDone(true);
-                currentAiModalField?.setValue(responseJson);
+                currentAiModalField?.setValue(resultJson);
                 setShowPreview(true);
               }}
             >
@@ -414,10 +411,10 @@ const DanceAiModal: React.FunctionComponent<DanceAiProps> = ({onClose}) => {
         {showPreview && (
           <div id="preview-area" className={moduleStyles.previewArea}>
             <AiVisualizationPreview
-              blocks={generateBlocksFromResponse(Blockly.getMainWorkspace())}
+              blocks={generateBlocksFromResult(Blockly.getMainWorkspace())}
             />
             <AiBlockPreview
-              generateBlocksFromResponse={generateBlocksFromResponse}
+              generateBlocksFromResult={generateBlocksFromResult}
             />
           </div>
         )}
@@ -433,7 +430,7 @@ const DanceAiModal: React.FunctionComponent<DanceAiProps> = ({onClose}) => {
             />
           )}
 
-          {mode === Mode.GENERATING && responseJson !== '' && (
+          {mode === Mode.GENERATING && resultJson !== '' && (
             <Button
               id="done"
               text={'Generate results'}
