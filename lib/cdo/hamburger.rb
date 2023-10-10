@@ -59,7 +59,7 @@ class Hamburger
       # We want to show the pegasus options.  They're in the hamburger for desktop
       # if they didn't fit on the header, or they're just in it for mobile if they did.
       show_pegasus_options =
-        (options[:user_type] == "teacher" || options[:user_type] == "student" || options[:user_type].nil?) ? SHOW_ALWAYS : SHOW_MOBILE
+        (options[:user_type] == "teacher" || options[:user_type] == "student") ? SHOW_ALWAYS : SHOW_MOBILE
     end
 
     # Do we show hamburger on all widths, only mobile, or not at all?
