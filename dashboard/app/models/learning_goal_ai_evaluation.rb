@@ -24,6 +24,7 @@ class LearningGoalAiEvaluation < ApplicationRecord
     {
       id: id,
       understanding: understanding,
+      learning_goal_id: learning_goal_id,
     }
   end
 end

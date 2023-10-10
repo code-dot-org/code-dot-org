@@ -40,6 +40,8 @@ Scenario: Teacher in English should see 5 header links
   And element "#header-teacher-projects" contains text "Projects"
   And I see "#header-teacher-professional-learning"
   And element "#header-teacher-professional-learning" contains text "Professional Learning"
+  And I see "#header-teacher-incubator"
+  And element "#header-teacher-incubator" contains text "Incubator"
 
 Scenario: Signed out user in Spanish should see 7 header links
   Given I am on "http://code.org/lang/es"
@@ -85,5 +87,8 @@ Scenario: Teacher in Spanish should see 5 header links
   And element "#header-teacher-courses" has "es" text from key "nav.header.course_catalog"
   And I see "#header-teacher-projects"
   And element "#header-teacher-projects" has "es" text from key "nav.header.project_gallery"
-  And I see "#header-non-en-about"
-  And element "#header-non-en-about" has "es" text from key "nav.header.about"
+  And I see "#header-teacher-professional-learning"
+  And element "#header-teacher-professional-learning" has "es" text from key "nav.header.professional_learning"
+  And I see "#header-teacher-incubator"
+  And element "#header-teacher-incubator" has "es" text from key "nav.header.incubator"
+  
