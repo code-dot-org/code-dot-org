@@ -38,14 +38,14 @@ class Api::V1::SectionInstructorsControllerTest < ActionController::TestCase
 
   test 'section has a section_instructor' do
     sign_in @teacher
-    get :show, params: {id: @section.id}
+    get :show, params: {section_id: @section.id}
     assert_response :success
     assert_equal 1, returned_json.length
   end
 
   test 'only assigned instructor can get section_instructors for a section' do
     sign_in @teacher2
-    get :show, params: {id: @section.id}
+    get :show, params: {section_id: @section.id}
     assert_response :forbidden
   end
 

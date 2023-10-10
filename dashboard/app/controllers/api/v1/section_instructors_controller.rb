@@ -10,9 +10,9 @@ class Api::V1::SectionInstructorsController < Api::V1::JSONApiController
   end
 
   # Returns SectionInstructor records for the given section
-  # GET /section_instructors/:id
+  # GET /section_instructors/:section_id
   def show
-    section = Section.find(params.require(:id))
+    section = Section.find(params.require(:section_id))
     authorize! :manage, section
     section_instructors = SectionInstructor.where(section: section)
 
