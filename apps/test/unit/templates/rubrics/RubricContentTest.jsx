@@ -3,19 +3,22 @@ import {expect} from '../../../util/reconfiguredChai';
 import {mount, shallow} from 'enzyme';
 import sinon from 'sinon';
 import HttpClient from '@cdo/apps/util/HttpClient';
-import RubricContainer from '@cdo/apps/templates/rubrics/RubricContainer';
+import RubricContent from '@cdo/apps/templates/rubrics/RubricContent';
+import {act} from 'react-dom/test-utils';
 
-describe('RubricContainer', () => {
+describe('RubricContent', () => {
   const defaultRubric = {
     learningGoals: [
       {
-        key: 'goal1',
+        id: 1,
+        key: '1',
         learningGoal: 'goal 1',
         aiEnabled: false,
         evidenceLevels: [],
       },
       {
-        key: 'goal2',
+        id: 2,
+        key: '2',
         learningGoal: 'goal 2',
         aiEnabled: true,
         evidenceLevels: [],
@@ -42,7 +45,7 @@ describe('RubricContainer', () => {
 
   it('shows learning goals with correct props when viewing student work on assessment level', () => {
     const wrapper = shallow(
-      <RubricContainer
+      <RubricContent
         {...defaultProps}
         studentLevelInfo={{name: 'Grace Hopper', timeSpent: 706}}
       />
@@ -65,7 +68,7 @@ describe('RubricContainer', () => {
 
   it('shows learning goals with correct props when viewing student work on non assessment level', () => {
     const wrapper = shallow(
-      <RubricContainer
+      <RubricContent
         {...defaultProps}
         studentLevelInfo={{name: 'Grace Hopper', timeSpent: 706}}
         currentLevelName="non_assessment_level"
@@ -89,7 +92,7 @@ describe('RubricContainer', () => {
 
   it('shows learning goals with correct props when not viewing student work', () => {
     const wrapper = shallow(
-      <RubricContainer {...defaultProps} studentLevelInfo={null} />
+      <RubricContent {...defaultProps} studentLevelInfo={null} />
     );
     const renderedLearningGoals = wrapper.find('LearningGoal');
     expect(renderedLearningGoals).to.have.lengthOf(2);
@@ -110,7 +113,7 @@ describe('RubricContainer', () => {
   it('shows level title', () => {
     // mount is needed in order for text() to work
     const wrapper = mount(
-      <RubricContainer
+      <RubricContent
         {...defaultProps}
         studentLevelInfo={{
           name: 'Grace Hopper',
@@ -123,7 +126,7 @@ describe('RubricContainer', () => {
   it('shows student data if provided', () => {
     // mount is needed in order for text() to work
     const wrapper = mount(
-      <RubricContainer
+      <RubricContent
         {...defaultProps}
         studentLevelInfo={{
           name: 'Grace Hopper',
@@ -142,7 +145,7 @@ describe('RubricContainer', () => {
   it('handles missing student data', () => {
     // mount is needed in order for text() to work
     const wrapper = mount(
-      <RubricContainer
+      <RubricContent
         {...defaultProps}
         studentLevelInfo={{
           name: 'Grace Hopper',
@@ -158,7 +161,7 @@ describe('RubricContainer', () => {
   it('doesnt show student level data if not on level for evaluation', () => {
     // mount is needed in order for text() to work
     const wrapper = mount(
-      <RubricContainer
+      <RubricContent
         {...defaultProps}
         studentLevelInfo={{
           name: 'Grace Hopper',
@@ -174,7 +177,7 @@ describe('RubricContainer', () => {
 
   it('shows submit button if has student data and on level for evaluation', () => {
     const wrapper = shallow(
-      <RubricContainer
+      <RubricContent
         rubric={defaultRubric}
         currentLevelName="test_level"
         studentLevelInfo={{name: 'Grace Hopper'}}
@@ -186,7 +189,7 @@ describe('RubricContainer', () => {
 
   it('handles successful submit button click', async () => {
     const wrapper = shallow(
-      <RubricContainer
+      <RubricContent
         rubric={defaultRubric}
         teacherHasEnabledAi
         currentLevelName="test_level"
@@ -214,7 +217,7 @@ describe('RubricContainer', () => {
 
   it('handles error on submit button click', async () => {
     const wrapper = shallow(
-      <RubricContainer
+      <RubricContent
         rubric={defaultRubric}
         teacherHasEnabledAi
         studentLevelInfo={{name: 'Grace Hopper'}}
@@ -230,5 +233,61 @@ describe('RubricContainer', () => {
     expect(wrapper.find('BodyThreeText').at(1).props().children).to.equal(
       'Error submitting feedback to student.'
     );
+  });
+
+  it('passes down aiUnderstanding and aiConfidence to the LearningGoal', async () => {
+    const mockFetch = sinon.stub(global, 'fetch');
+    const aiEvaluationsMock = [
+      {learning_goal_id: 2, understanding: 2, confidence: 70},
+    ];
+    mockFetch.returns(
+      Promise.resolve(new Response(JSON.stringify(aiEvaluationsMock)))
+    );
+
+    const wrapper = mount(
+      <RubricContent
+        {...defaultProps}
+        studentLevelInfo={{
+          name: 'Grace Hopper',
+          timeSpent: 305,
+          lastAttempt: '1980-07-31T00:00:00.000Z',
+          attempts: 6,
+        }}
+      />
+    );
+
+    await act(async () => {
+      await Promise.resolve();
+    });
+    wrapper.update();
+
+    const learningGoal2Wrapper = wrapper.find('LearningGoal').at(1);
+    expect(learningGoal2Wrapper.prop('aiUnderstanding')).to.equal(
+      aiEvaluationsMock[0].understanding
+    );
+    expect(learningGoal2Wrapper.prop('aiConfidence')).to.equal(
+      aiEvaluationsMock[0].confidence
+    );
+
+    sinon.restore();
+  });
+
+  it('does not pass down AI analysis to components when teacher has disabled AI', () => {
+    const wrapper = mount(
+      <RubricContent
+        {...defaultProps}
+        teacherHasEnabledAi={false}
+        studentLevelInfo={{
+          name: 'Grace Hopper',
+          timeSpent: 305,
+          lastAttempt: '1980-07-31T00:00:00.000Z',
+          attempts: 6,
+        }}
+      />
+    );
+
+    const learningGoal1Wrapper = wrapper.find('LearningGoal').at(0);
+    expect(learningGoal1Wrapper.prop('aiUnderstanding')).to.equal(null);
+    expect(learningGoal1Wrapper.prop('aiConfidence')).to.equal(null);
   });
 });
