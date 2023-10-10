@@ -37,7 +37,7 @@ export interface DanceLevelProperties extends LevelProperties {
 }
 
 export enum AiOutput {
-  BLOCK = 'block',
-  BLOCKS = 'blocks',
+  AI_BLOCK = 'ai_block',
+  GENERATED_BLOCKS = 'generated_blocks',
   BOTH = 'both',
 }
