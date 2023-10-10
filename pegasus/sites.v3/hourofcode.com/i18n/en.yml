@@ -560,6 +560,12 @@
   cs_ambassador_do_heading: "What do CS Ambassadors do?"
   cs_ambassador_do_desc: "CS Ambassadors encourage young women to explore the subject, and lift each other up as they reclaim their place in computer science. CS Ambassadors connect with their peers to share their excitement and love of computer science. They visit classrooms, host tables at lunch, and speak at assemblies and club meetings. CS Ambassadors work with teachers and school administrators to breakdown stereotypes that hold young women back."
   cs_ambassador_steps_heading: "What do I need to become a CS Ambassador?"
+  cs_ambassador_steps_list_title_01: "Passion"
+  cs_ambassador_steps_list_title_02: "Experience in a CS Course"
+  cs_ambassador_steps_list_title_03: "School that offers CS"
+  cs_ambassador_steps_list_desc_01: "A passion for encouraging young women at your school to take computer science classes"
+  cs_ambassador_steps_list_desc_02: "Have taken a year-long computer science class in the 2022-23 school year or earlier (recommended: CS Principles or AP® CSA)"
+  cs_ambassador_steps_list_desc_03: "Attend a high school that regularly offers a year-long computer science course (recommended: CS Principles or AP® CSA)"
 
   cs_ambassador_benefits_heading: "Program benefits"
   cs_ambassador_benefits_list_title_01: "National community"
