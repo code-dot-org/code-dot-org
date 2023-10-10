@@ -41,19 +41,16 @@
     "name_suffix": "_draft",
     "skip_autosave": true,
     "default_song": "breakmysoul_beyonce",
-    "long_instructions": "Get your groove on! Create a dance of your own to share with your friends.",
+    "long_instructions": "###**Nice work!** \r\nUse AI Bot to code a dance party of your own using what you learned",
     "soft_buttons": [
       "leftButton",
       "rightButton",
       "upButton",
       "downButton"
     ],
-    "short_instructions": "Get your groove on! Create a dance of your own to share with your friends.",
     "video_key": "hoc_dance_events_2019",
     "encrypted": "false",
     "mini_rubric": "false",
-    "tts_short_instructions_override": "Get your groove on! Create a dance of your own to share with your friends.",
-    "tts_long_instructions_override": "Get your groove on! Create a dance of your own to share with your friends.",
     "validation_enabled": "false",
     "hide_pause_button": "false",
     "preload_asset_list": null,
@@ -62,7 +59,7 @@
     ]
   },
   "notes": "",
-  "audit_log": "[{\"changed_at\":\"2023-10-04T21:23:44.489+00:00\",\"changed\":[\"cloned from \\\"Dance_2019_10_draft\\\"\"],\"cloned_from\":\"Dance_2019_10_draft\"},{\"changed_at\":\"2023-10-04 21:23:47 +0000\",\"changed\":[\"start_blocks\",\"toolbox_blocks\",\"preload_asset_list\"],\"changed_by_id\":16899,\"changed_by_email\":\"emma.wingreen+teacher@code.org\"}]",
+  "audit_log": "[{\"changed_at\":\"2023-10-04T21:23:44.489+00:00\",\"changed\":[\"cloned from \\\"Dance_2019_10_draft\\\"\"],\"cloned_from\":\"Dance_2019_10_draft\"},{\"changed_at\":\"2023-10-04 21:23:47 +0000\",\"changed\":[\"start_blocks\",\"toolbox_blocks\",\"preload_asset_list\"],\"changed_by_id\":16899,\"changed_by_email\":\"emma.wingreen+teacher@code.org\"},{\"changed_at\":\"2023-10-06 22:01:52 +0000\",\"changed\":[\"start_blocks\",\"toolbox_blocks\",\"long_instructions\",\"short_instructions\",\"tts_short_instructions_override\",\"tts_long_instructions_override\",\"preload_asset_list\",\"encrypted_examples\"],\"changed_by_id\":18605,\"changed_by_email\":\"katie.frank+levelbuilder@code.org\"}]",
   "level_concept_difficulty": {
   }
 }]]></config>
