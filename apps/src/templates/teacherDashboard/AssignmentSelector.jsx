@@ -9,6 +9,7 @@ import {
   ParticipantAudiencesByType,
 } from '@cdo/apps/generated/curriculum/sharedCourseConstants';
 import {translatedCourseOfferingCategories} from './AssignmentSelectorHelpers';
+import fontConstants from '@cdo/apps/fontConstants';
 
 const noAssignment = '__noAssignment__';
 //Additional valid option in dropdown - no associated course
@@ -320,6 +321,6 @@ const styles = {
     marginTop: 6,
   },
   dropdownLabel: {
-    fontFamily: '"Gotham 5r", sans-serif',
+    ...fontConstants['main-font-semi-bold'],
   },
 };
