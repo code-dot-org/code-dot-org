@@ -182,7 +182,7 @@ const DanceAiModal: React.FunctionComponent<DanceAiProps> = ({onClose}) => {
     return blocksSvg;
   };
 
-  const convertBlocks = () => {
+  const handleConvertBlocks = () => {
     const blocksSvg = generateBlocksFromResult();
 
     const origBlock = currentAiModalField?.getSourceBlock();
@@ -444,16 +444,18 @@ const DanceAiModal: React.FunctionComponent<DanceAiProps> = ({onClose}) => {
           {((mode === Mode.RESULTS && typingDone) ||
             mode === Mode.RESULTS_FINAL) && (
             <div>
-              {(aiOutput === AiOutput.BLOCKS || aiOutput === AiOutput.BOTH) && (
+              {(aiOutput === AiOutput.GENERATED_BLOCKS ||
+                aiOutput === AiOutput.BOTH) && (
                 <Button
                   id="convert"
                   text={'Convert'}
-                  onClick={convertBlocks}
+                  onClick={handleConvertBlocks}
                   color={Button.ButtonColor.brandSecondaryDefault}
                   className={moduleStyles.button}
                 />
               )}
-              {(aiOutput === AiOutput.BLOCK || aiOutput === AiOutput.BOTH) && (
+              {(aiOutput === AiOutput.AI_BLOCK ||
+                aiOutput === AiOutput.BOTH) && (
                 <Button
                   id="use"
                   text={'Use'}
