@@ -1,0 +1,19 @@
+---
+title: Young Women in CS
+theme: responsive_full_width
+---
+
+- apply_url = "https://docs.google.com/forms/d/e/1FAIpQLScKoT8ttOeWU3mWp_fDaFV0qQ5niXk3tSi1INALHhGWFQtVjw/viewform"
+
+%link{href: "/css/generated/design-system-pegasus.css", rel: "stylesheet"}
+%link{href: "/css/generated/page/young-women-in-cs-styles.css", rel: "stylesheet"}
+
+%section.hero-banner-basic.overlay
+  .wrapper.flex-container.justify-space-between.align-items-center.wrap
+    .text-wrapper
+      %h1{style: "color: white"}
+        =hoc_s(:yw_page_top_heading)
+      %p.body-one{style: "color: white"}
+        =hoc_s(:yw_page_top_desc)
+      %a.link-button.white.has-external-link{href: apply_url}
+        =hoc_s(:call_to_action_applications_open)

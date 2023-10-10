@@ -290,6 +290,7 @@
   call_to_action_learn_about_advocacy: "Learn about our advocacy"
   call_to_action_visit_store: "Visit the store"
   call_to_action_view_faqs: "View more FAQs"
+  call_to_action_applications_open: "Applications now open"
 
   aria_label_call_to_action_hoc_how_to_educators: "View how-to guide for Educators"
   aria_label_call_to_action_hoc_how_to_companies: "View how-to guide for Companies"
@@ -1144,6 +1145,9 @@
   help_page_translate_desc: "Volunteers have translated our tutorials in over 45 languages. Help us continue to expand our tutorials for students around the world!"
   help_page_speak_for_cs_heading: "Speak up for computer science education"
   help_page_speak_for_cs_desc: "Learn more about Code.org's advocacy work across the U.S. and the ten policies we recommend states adopt to make computer science foundational for all students. Plus, find out how you can drive change in your state."
+
+  yw_page_top_heading: "Young Women in Computer Science"
+  yw_page_top_desc: "Become a CS Ambassador and be a part of closing the gender gap in computer science."
 
   hoc_live: 'Hour of Code Live'
   hoc_live_sign_up_title: 'Sign up for Hour of Code Live'

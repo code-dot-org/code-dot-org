@@ -1,0 +1,77 @@
+@import 'color', 'font', 'typography', 'breakpoints', 'barlow-semi-condensed-font';
+
+// Hero banner
+.hero-banner-basic {
+
+  &.overlay {
+    position: relative;
+    width: 100%;
+    height: 100%;
+
+    &::before {
+      content: "";
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background: linear-gradient(95deg, #005E69 0%, #008999 104.75%);
+      z-index: 1;
+    }
+
+    &::after {
+      content: "";
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background-image: url("/images/banners/banner-bg-mesh-dots-light.png"), url("/images/yw-page-top.png");
+      background-position: center, 90% bottom;
+      background-repeat: repeat, no-repeat;
+      background-size: contain, 580px;
+      z-index: 2;
+
+      @media screen and (min-width: $width-xl) {
+        background-position: center, 70% bottom;
+      }
+
+      @media screen and (max-width: $width-md) {
+        background-size: contain, 330px;
+      }
+
+      @media screen and (max-width: $width-sm) {
+        background-position: center, center bottom;
+      }
+    }
+  }
+
+  @media screen and (max-width: $width-sm) {
+    padding-bottom: 12rem;
+  }
+
+  .wrapper {
+    position: relative;
+    z-index: 10;
+  }
+
+  .text-wrapper {
+    width: 48%;
+
+    @media screen and (max-width: $width-md) {
+      width: 100%;
+    }
+  }
+
+  figure {
+    width: 35%;
+
+    @media screen and (max-width: $width-sm) {
+      display: none;
+    }
+
+    img {
+      width: 100%;
+    }
+  }
+}
