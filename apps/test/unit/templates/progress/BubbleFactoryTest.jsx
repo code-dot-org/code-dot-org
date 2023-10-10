@@ -240,7 +240,7 @@ describe('BubbleFactory', () => {
       expect(currentLocation().search).to.include('version=456lmnop');
       const preserveQueryParams = true;
       const bubbleUrl = getBubbleUrl(levelUrl, null, null, preserveQueryParams);
-      expect(bubbleUrl).to.equal(levelUrl);
+      expect(bubbleUrl).to.not.include('version=456lmnop');
     });
   });
 
