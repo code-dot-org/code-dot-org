@@ -34,7 +34,7 @@ const initialState: DanceState = {
   songData: {},
   runIsStarting: false,
   currentAiModalField: undefined,
-  aiOutput: AiOutput.BLOCK,
+  aiOutput: AiOutput.AI_BLOCK,
   isRunning: false,
   currentSongMetadata: undefined,
 };
