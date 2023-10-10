@@ -1043,11 +1043,12 @@ Dashboard::Application.routes.draw do
     resources :rubrics, only: [:create, :edit, :new, :update] do
       member do
         get 'get_ai_evaluations'
+        get 'get_teacher_evaluations'
         post 'submit_evaluations'
       end
     end
 
-    resources :learning_goal_evaluations, only: [:create, :update] do
+    resources :learning_goal_teacher_evaluations, only: [:create, :update] do
       collection do
         get :get_evaluation
         post :get_or_create_evaluation

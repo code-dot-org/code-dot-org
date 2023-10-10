@@ -1,6 +1,12 @@
 class EvaluateRubricJob < ApplicationJob
   queue_as :default
 
+  # To make this job get run in development, you have two options:
+  # 1. switch the queue_adapter value here to :async, or
+  # 2. leave the value as :delayed_job, and run the delayed job worker locally
+  #    via `dashboard/bin/delayed_job restart` or rake build
+  self.queue_adapter = :delayed_job
+
   rescue_from(StandardError) do |exception|
     if rack_env?(:development)
       puts "EvaluateRubricJob Error: #{exception.full_message}"
@@ -26,6 +32,9 @@ class EvaluateRubricJob < ApplicationJob
     user = User.find(user_id)
     script_level = ScriptLevel.find(script_level_id)
     lesson_s3_name = EvaluateRubricJob.get_lesson_s3_name(script_level)
+    if rack_env?(:development)
+      puts "Evaluating rubric for user #{user.id} on script level #{script_level.id} with lesson_s3_name: #{lesson_s3_name.inspect}"
+    end
 
     raise "lesson_s3_name not found for script_level_id: #{script_level.id}" if lesson_s3_name.blank?
 
