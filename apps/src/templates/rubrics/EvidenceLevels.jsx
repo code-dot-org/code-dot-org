@@ -53,7 +53,7 @@ export default function EvidenceLevels({
     return (
       <div className={style.evidenceLevelSet}>
         <Heading6>{i18n.rubricScores()}</Heading6>
-        {evidenceLevels.map(evidenceLevel => (
+        {evidenceLevels.toReversed().map(evidenceLevel => (
           <div
             key={evidenceLevel.id}
             className={classNames(style.evidenceLevelOption, {
