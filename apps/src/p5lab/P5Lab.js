@@ -4,7 +4,11 @@ import React from 'react';
 import ReactDOM from 'react-dom';
 import {changeInterfaceMode, viewAnimationJson} from './actions';
 import {startInAnimationTab} from './stateQueries';
-import {P5LabInterfaceMode, APP_WIDTH} from './constants';
+import {
+  P5LabInterfaceMode,
+  APP_WIDTH,
+  //BLOCKLY_CODE_CHANGE_EVENTS,
+} from './constants';
 import {
   SpritelabReservedWords,
   valueTypeTabShapeMap,
@@ -401,7 +405,10 @@ export default class P5Lab {
 
       if (this.isBlockly) {
         this.currentCode = Blockly.getWorkspaceCode();
-        this.studioApp_.addChangeHandler(() => {
+        this.studioApp_.addChangeHandler(e => {
+          if (!Blockly.shouldGenerateCodeForEvent(e)) {
+            return;
+          }
           const newCode = Blockly.getWorkspaceCode();
           if (newCode !== this.currentCode) {
             this.currentCode = newCode;
