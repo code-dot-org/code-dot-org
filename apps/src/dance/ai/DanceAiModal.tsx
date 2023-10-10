@@ -8,9 +8,10 @@ import {setCurrentAiModalField, DanceState} from '../danceRedux';
 import {StrongText, Heading5} from '@cdo/apps/componentLibrary/typography';
 import classNames from 'classnames';
 import FontAwesome from '@cdo/apps/templates/FontAwesome';
-import {BlockSvg} from 'blockly/core';
+import {BlockSvg, Workspace} from 'blockly/core';
 import {doAi} from './utils';
-import AiPreview from './AiPreview';
+import AiVisualizationPreview from './AiVisualizationPreview';
+import AiBlockPreview from './AiBlockPreview';
 const Typist = require('react-typist').default;
 
 const aiBotBorder = require('@cdo/static/dance/ai/ai-bot-border.png');
@@ -148,19 +149,15 @@ const DanceAiModal: React.FunctionComponent<DanceAiProps> = ({onClose}) => {
    * Generates blocks from the AI response in the main workspace, and attaches
    * them to each other.
    */
-  const generateBlocksFromResponse = (): [BlockSvg, BlockSvg, BlockSvg] => {
+  const generateBlocksFromResponse = (
+    workspace: Workspace
+  ): [BlockSvg, BlockSvg, BlockSvg] => {
     const params = JSON.parse(responseJson);
 
     const blocksSvg: [BlockSvg, BlockSvg, BlockSvg] = [
-      Blockly.getMainWorkspace().newBlock(
-        'Dancelab_setForegroundEffect'
-      ) as BlockSvg,
-      Blockly.getMainWorkspace().newBlock(
-        'Dancelab_setBackgroundEffectWithPalette'
-      ) as BlockSvg,
-      Blockly.getMainWorkspace().newBlock(
-        'Dancelab_makeNewDanceSpriteGroup'
-      ) as BlockSvg,
+      workspace.newBlock('Dancelab_setForegroundEffect') as BlockSvg,
+      workspace.newBlock('Dancelab_setBackgroundEffectWithPalette') as BlockSvg,
+      workspace.newBlock('Dancelab_makeNewDanceSpriteGroup') as BlockSvg,
     ];
 
     // Foreground block.
@@ -183,7 +180,7 @@ const DanceAiModal: React.FunctionComponent<DanceAiProps> = ({onClose}) => {
   };
 
   const convertBlocks = () => {
-    const blocksSvg = generateBlocksFromResponse();
+    const blocksSvg = generateBlocksFromResponse(Blockly.getMainWorkspace());
 
     const origBlock = currentAiModalField?.getSourceBlock();
 
@@ -416,7 +413,12 @@ const DanceAiModal: React.FunctionComponent<DanceAiProps> = ({onClose}) => {
 
         {showPreview && (
           <div id="preview-area" className={moduleStyles.previewArea}>
-            <AiPreview blocks={generateBlocksFromResponse()} />
+            <AiVisualizationPreview
+              blocks={generateBlocksFromResponse(Blockly.getMainWorkspace())}
+            />
+            <AiBlockPreview
+              generateBlocksFromResponse={generateBlocksFromResponse}
+            />
           </div>
         )}
 
