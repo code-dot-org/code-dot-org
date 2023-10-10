@@ -18,7 +18,4 @@
 #  submitted_at     :datetime
 #
 class LearningGoalEvaluation < ApplicationRecord
-  belongs_to :learning_goal
-  belongs_to :user
-  belongs_to :teacher, class_name: 'User'
 end

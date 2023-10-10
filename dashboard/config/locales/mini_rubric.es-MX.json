@@ -88,6 +88,8 @@
         },
         "CSD U2 Heading Test_2023": {
           "rubric_key_concept": "Utilizar el lenguaje HTML para crear una página web que incluya encabezados jerárquicos, párrafos, listas e imágenes.\n\nComprender la necesidad de precisión al utilizar lenguajes informáticos y utilizar la sintaxis adecuada.\n",
+          "rubric_performance_level_1": "Todo el contenido está dentro de etiquetas, utiliza etiquetas de párrafo, cabeceras de varios tamaños y al menos una lista de forma lógicamente coherente.",
+          "rubric_performance_level_2": "Todo el contenido está dentro de etiquetas, utiliza párrafo, etiquetas de cabecera y una lista de forma razonable.",
           "rubric_performance_level_3": "La mayor parte del contenido está contenido en etiquetas.  Se utiliza al menos una etiqueta de cabecera.",
           "rubric_performance_level_4": "Las etiquetas tienen poco o ningún contenido."
         },

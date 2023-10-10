@@ -2763,6 +2763,8 @@ is:
           student_description: Halda áfram eftir fyrstu klukkustundina með fleiri
             hugmyndir að verkefnum.
           title: Halda áfram að dansa
+        dance-unplugged:
+          title: Danspartý án tölvu
         dani-june-2020-test:
           lesson_groups:
             csp5_1:
@@ -3318,7 +3320,7 @@ is:
           description_short: Kannaðu Minecraft heim með kóða
           student_description: Notaðu kubba með kóða til að fara með Steve eða Alex
             í ævintýraferð um þennan Minecraft heim.
-          title: Klukkustund kóðunar með Minecraft
+          title: Minecraft Könnuður
         microbit-2022:
           lesson_groups:
             lessonGroup-3:

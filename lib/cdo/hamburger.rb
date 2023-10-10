@@ -285,20 +285,15 @@ class Hamburger
       {title: I18n.t("#{loc_prefix}incubator"), url: CDO.studio_url("/incubator"), id: "header-incubator"},
     ]
 
-    en_signed_out_links = [
-      # When signed out, "Learn" will take an English user to the student view of /courses.
-      {title: I18n.t("#{loc_prefix}learn"), url: CDO.studio_url("/courses"), id: "header-en-learn"},
-      {title: I18n.t("#{loc_prefix}teach"), url: CDO.code_org_url("/teach"), id: "header-en-teach"},
-      {title: I18n.t("#{loc_prefix}project_gallery"), url: CDO.studio_url("/projects/public"), id: "header-en-projects"},
-      {title: I18n.t("#{loc_prefix}stats"), url: CDO.code_org_url("/promote"), id: "header-en-stats"},
-      {title: I18n.t("#{loc_prefix}help_us"), url: CDO.code_org_url("/help"), id: "header-en-help"},
-      {title: I18n.t("#{loc_prefix}incubator"), url: CDO.studio_url("/incubator"), id: "header-en-incubator"},
-      {title: I18n.t("#{loc_prefix}about"), url: CDO.code_org_url("/about"), id: "header-en-about"},
-    ]
-
-    non_en_signed_out_links = [
-      {title: I18n.t("#{loc_prefix}course_catalog"), url: CDO.studio_url("/catalog"), id: "header-non-en-courses"},
-      {title: I18n.t("#{loc_prefix}project_gallery"), url: CDO.studio_url("/projects/public"), id: "header-non-en-projects"},
+    signed_out_links = [
+      # When signed out, "Learn" will take all users to the student view of /courses.
+      {title: I18n.t("#{loc_prefix}learn"), url: CDO.studio_url("/courses"), id: "header-learn"},
+      {title: I18n.t("#{loc_prefix}teach"), url: CDO.code_org_url("/teach"), id: "header-teach"},
+      {title: I18n.t("#{loc_prefix}project_gallery"), url: CDO.studio_url("/projects/public"), id: "header-projects"},
+      {title: I18n.t("#{loc_prefix}stats"), url: CDO.code_org_url("/promote"), id: "header-stats"},
+      {title: I18n.t("#{loc_prefix}help_us"), url: CDO.code_org_url("/help"), id: "header-help"},
+      {title: I18n.t("#{loc_prefix}incubator"), url: CDO.studio_url("/incubator"), id: "header-incubator"},
+      {title: I18n.t("#{loc_prefix}about"), url: CDO.code_org_url("/about"), id: "header-about"}
     ]
 
     about_intl = [
@@ -320,11 +315,7 @@ class Hamburger
         header_links.concat(about_intl)
       end
     else
-      if options[:language] == "en"
-        header_links = en_signed_out_links
-      else
-        header_links.concat(non_en_signed_out_links).concat(about_intl)
-      end
+      header_links = signed_out_links
     end
     header_links
   end
