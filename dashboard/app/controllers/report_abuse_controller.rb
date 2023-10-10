@@ -171,7 +171,7 @@ class ReportAbuseController < ApplicationController
   end
 
   private def send_abuse_report(name, email, age, abuse_url)
-    unless Rails.env.test?
+    unless Rails.env.development? || Rails.env.test?
       subject = FeaturedProject.featured_channel_id?(params[:channel_id]) ?
         'Featured Project: Abuse Reported' :
         'Abuse Reported'
