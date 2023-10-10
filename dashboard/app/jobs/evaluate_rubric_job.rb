@@ -42,7 +42,12 @@ class EvaluateRubricJob < ApplicationJob
 
     rubric = Rubric.find_by!(lesson_id: script_level.lesson.id, level_id: script_level.level.id)
 
-    ai_evaluations = get_fake_openai_evaluations(rubric, understanding_s: 'Extensive Evidence')
+    ai_evaluations =
+      CDO.ai_proxy_url.present? ?
+        get_openai_evaluations(code, prompt, ai_rubric) :
+        get_fake_openai_evaluations(rubric, understanding_s: 'Extensive Evidence')
+
+    validate_evaluations(ai_evaluations, rubric)
 
     write_ai_evaluations(user, ai_evaluations, rubric, channel_id, project_version)
   end
@@ -85,6 +90,39 @@ class EvaluateRubricJob < ApplicationJob
     bucket = 'cdo-ai'
     key = "teaching_assistant/lessons/#{lesson_s3_name}/#{key_suffix}"
     AWS::S3.create_client.get_object(bucket: bucket, key: key)[:body].read
+  end
+
+  private def get_openai_evaluations(code, prompt, rubric)
+    uri = URI.parse("#{CDO.ai_proxy_url}/assessment")
+    form_data = {
+      "model" => "gpt-4-0613",
+      "code" => code,
+      "prompt" => prompt,
+      "rubric" => rubric,
+      "remove-comments" => "1",
+      "num-responses" => "3",
+      "num-passing-grades" => "2",
+      "temperature" => "0.2"
+    }
+    response = HTTParty.post(
+      uri,
+      body: URI.encode_www_form(form_data),
+      headers: {'Content-Type' => 'application/x-www-form-urlencoded'},
+      timeout: 120
+    )
+
+    raise "ERROR: #{response.code} #{response.message} #{response.body}" unless response.success?
+
+    JSON.parse(response.body)['data']
+  end
+
+  private def validate_evaluations(evaluations, rubric)
+    expected_learning_goals = rubric.learning_goals.map(&:learning_goal)
+    actual_learning_goals = evaluations.map {|evaluation| evaluation['Key Concept']}
+    unexpected_learning_goals = actual_learning_goals - expected_learning_goals
+    unless unexpected_learning_goals.empty?
+      raise "Unexpected learning goals: #{unexpected_learning_goals.inspect}"
+    end
   end
 
   private def get_fake_openai_evaluations(rubric, understanding_s: 'Extensive Evidence')
