@@ -1,5 +1,8 @@
 import React from 'react';
 import {Meta, Story} from '@storybook/react';
+
+import {Chips, ChipsProps} from './index';
+
 //
 // import {
 //   RadioButton,
@@ -8,38 +11,45 @@ import {Meta, Story} from '@storybook/react';
 //   RadioButtonsGroupProps,
 // } from './index';
 //
-// export default {
-//   title: 'DesignSystem/Radio Button Component',
-//   /**
-//    * Storybook Docs Generation doesn't work properly (as of 07.19.2023).
-//    * This workaround (component: Component.type instead of component: Component) is taken from
-//    * https://github.com/storybookjs/storybook/issues/18136#issue-1225692751
-//    * Feel free to remove this workaround when storybook fixes this issue.
-//    */
-//   // eslint-disable-next-line @typescript-eslint/ban-ts-comment
-//   // @ts-ignore-next-line
-//   component: RadioButton.type,
-// } as Meta;
+export default {
+  title: 'DesignSystem/Chips Component',
+  /**
+   * Storybook Docs Generation doesn't work properly (as of 07.19.2023).
+   * This workaround (component: Component.type instead of component: Component) is taken from
+   * https://github.com/storybookjs/storybook/issues/18136#issue-1225692751
+   * Feel free to remove this workaround when storybook fixes this issue.
+   */
+  // eslint-disable-next-line @typescript-eslint/ban-ts-comment
+  // @ts-ignore-next-line
+  component: Chips.type,
+} as Meta;
+
 //
-// //
-// // TEMPLATE
-// //
-// // This is needed to fix children type error (passing string instead of React.ReactNode type)
-// // eslint-disable-next-line
-// const SingleTemplate:Story<RadioButtonProps> = (args) => <RadioButton {...args} />;
+// TEMPLATE
 //
+// This is needed to fix children type error (passing string instead of React.ReactNode type)
+// eslint-disable-next-line
+const SingleTemplate: Story<ChipsProps> = args => <Chips {...args} />;
+
 // const MultipleTemplate: Story<RadioButtonsGroupProps> = args => (
 //   <>
 //     <RadioButtonsGroup {...args} />
 //   </>
 // );
-//
-// export const DefaultRadioButton = SingleTemplate.bind({});
-// DefaultRadioButton.args = {
-//   name: 'radio1',
-//   label: 'RadioButton 1',
-//   value: 'radio1',
-// };
+
+export const DefaultChips = SingleTemplate.bind({});
+DefaultChips.args = {
+  label: 'Chips label',
+  name: 'test-chips',
+  required: true,
+  options: [
+    {value: 'chip1', label: 'Chip1'},
+    {value: 'chip1', label: 'Chip1'},
+  ],
+  values: [],
+  setValues: () => null,
+  invalidMessage: 'test',
+};
 //
 // export const DefaultRadioButtonGroup = MultipleTemplate.bind({});
 // DefaultRadioButtonGroup.args = {
