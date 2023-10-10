@@ -550,6 +550,9 @@
           "word": "Esemény",
           "definition": "Olyan művelet, amely valaminek a bekövetkezését okozza."
         },
+        "artificial_intelligence/ai-ethics/2023": {
+          "word": "Mesterséges intelligencia"
+        },
         "adaptation/csc-adaptations/2023": {
           "word": "Alkalmazkodás",
           "definition": "Változás egy szervezetben a környezet jobb túlélése érdekében"
@@ -755,6 +758,44 @@
         },
         "poetry_circle/poetry/2023": {
           "definition": "Biztonságos és kreatív tér új versek kipróbálására és konstruktív visszajelzések megszerzésére másoktól"
+        },
+        "input/csd/2023": {
+          "word": "Bemenet"
+        },
+        "processing/csd/2023": {
+          "word": "Feldolgozás"
+        },
+        "digital_footprint/csd/2023": {
+          "word": "Digitális Lábnyom"
+        },
+        "copyright/csd/2023": {
+          "word": "Szerzői jog"
+        },
+        "bug/csd/2023": {
+          "word": "Hiba",
+          "definition": "Egy program azon része, amely nem működik megfelelően."
+        },
+        "debugging/csd/2023": {
+          "word": "Hibakeresés"
+        },
+        "program/csd/2023": {
+          "word": "Program",
+          "definition": "Olyan algoritmus, amelyet gépen végrehajtható formában kódoltak."
+        },
+        "variable/csd/2023": {
+          "word": "Változó"
+        },
+        "conditionals/csd/2023": {
+          "word": "Feltételek"
+        },
+        "abstraction/csd/2023": {
+          "word": "Absztrakció"
+        },
+        "function/csd/2023": {
+          "word": "Függvény"
+        },
+        "user_interface/csd/2023": {
+          "word": "Felhasználói felület"
         },
         "algorithm/coursea/2023": {
           "definition": "A feladat befejezéséhez szükséges lépések listája. "

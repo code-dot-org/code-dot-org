@@ -282,6 +282,10 @@ nl:
   call_to_action_register_early_access: Registreer voor vroege toegang
   call_to_action_open_positions: Bekijk openstaande vacatures
   call_to_action_get_guide: Verkrijg de gids
+  call_to_action_donate_to_cdo: Doneer aan Code.org
+  call_to_action_start_fundraiser: Een inzamelingsactie starten
+  call_to_action_view_donation_policy: Donatiebeleid bekijken
+  call_to_action_view_donate_bitpay: Doneer met BitPay
   aria_label_call_to_action_afe: Meer informatie over Amazon Future Engineer
   aria_label_call_to_action_teaching_csf: Start het professionele leerprogramma Teaching
     Computer Science Fundamentals
@@ -385,6 +389,7 @@ nl:
   curriculum_name_csp: Principes van de informatica
   curriculum_name_csc: Verbindingen op het gebied van informatica
   curriculum_name_csa: AP® Informatica A
+  curriculum_name_csa_ai: Software-engineering en computervisie
   curriculum_name_csc_02: Elke CS-verbindingsmodule
   curriculum_name_ai: "  AI en machine learning  "
   curriculum_name_artificial_intelligence: Kunstmatige intelligentie (AI)
@@ -462,6 +467,12 @@ nl:
     animaties, games en fysieke computersystemen.
   curriculum_desc_csp: Gratis, door AP® CSP goedgekeurde introductiecursus op de middelbare
     school die studenten kennis laat maken met de basisconcepten van de informatica.
+  curriculum_desc_csa_ai_long: 'Deze post-AP CSA-module van twee hoofdstukken biedt
+    middelbare scholieren praktische ervaring met professionele softwareontwikkelingstools,
+    waaronder GitHub en GitHub Copilot, en geeft hen de praktische vaardigheden om
+    een computervisieprogramma te ontwikkelen. '
+  curriculum_desc_csa_ai_short: Deze Post-AP® CSA-module biedt middelbare scholieren
+    praktijkervaring met professionele tools voor softwareontwikkeling.
   collection_hardware: Focus op hardware
   collection_hardware_desc: Stelt leerlingen in staat om data en fysieke apparaten
     te gebruiken om problemen op te lossen.
@@ -537,6 +548,7 @@ nl:
   module_duration_2_hrs: 2 uur
   module_duration_3_hrs: 3 uur
   module_duration_5_hrs: 5 uur
+  module_duration_5_hrs_plus: 5+ uur
   module_duration_8_hrs: 8 uur
   module_duration_20_hrs: 20 uur
   module_duration_35_hrs: 35 uur
@@ -616,6 +628,7 @@ nl:
   heading_objects_first: Objecten eerst
   heading_these_lessons_will: 'Deze lessen zullen:'
   heading_explore_curriculum_catalog: Bekijk al onze cursussen in de Curriculumcatalogus
+  heading_csa_ai: Op zoek naar dingen om te doen na het AP® -examen?
   professional_learning_section_desc: Krijg de ondersteuning die je nodig hebt terwijl
     je je voorbereidt om les te geven. Leraren vinden het geweldig, meer dan 90% vindt
     het de beste professionele ontwikkeling ooit!
@@ -648,6 +661,23 @@ nl:
   support_and_questions_section_desc: Ons ondersteuningsteam is er om al je vragen
     te beantwoorden over het starten met lesgeven met Code.org. Je kunt ook andere
     docenten vragen naar hun ervaringen op onze docentenforums.
+  subscribe_form_section_title: Schrijf je in voor updates
+  subscribe_form_section_desc_csa: Meld u aan om maandelijkse e-mails over AP® Computer
+    Science A van Code.org te ontvangen en nuttige herinneringen, tips en updates
+    rechtstreeks in uw inbox te ontvangen.
+  subscribe_form_section_desc_csc: Meld u aan om maandelijkse e-mails over Computer
+    Science Connections van Code.org te ontvangen en nuttige herinneringen, tips en
+    updates rechtstreeks in uw inbox te ontvangen.
+  subscribe_form_section_desc_csd: Meld u aan om maandelijkse e-mails over Computer
+    Science Discoveries van Code.org te ontvangen en nuttige herinneringen, tips en
+    updates rechtstreeks in uw inbox te ontvangen.
+  subscribe_form_section_desc_csf: Meld u aan om maandelijkse e-mails over Computer
+    Science Fundamentals van Code.org te ontvangen en nuttige herinneringen, tips
+    en updates rechtstreeks in uw inbox te ontvangen.
+  subscribe_form_section_desc_csp: Meld u aan om maandelijkse e-mails over de Computer
+    Science Principles van Code.org te ontvangen en nuttige herinneringen, tips en
+    updates rechtstreeks in uw inbox te ontvangen.
+  subscribe_form_section_unsubscribe: Je kunt je op elk moment uitschrijven.
   blockchain_hero_heading: Hoe Blockchain werkt
   blockchain_hero_desc: Duik in de wereld van blockchain met „How Blockchain Works”,
     onze nieuwe videoserie en bijbehorende lessen!
@@ -752,6 +782,9 @@ nl:
     Works. Elke les is gekoppeld aan een enkele video uit de serie, waarin dieper
     wordt ingegaan op de concepten die in de video's zijn geïntroduceerd.
   ai_curriculum_btn_aria_label_04: Ontdek de lessen over hoe AI werkt
+  ai_curriculum_grades_05: 'Graadniveaus: 9-12'
+  ai_curriculum_btn_aria_label_05: Ontdek de module Software Engineering & Computer
+    Vision
   ai_carousel_heading: 'Wat docenten zeggen over AI met Code.org:'
   ai_carousel_quote_01: Deze les gaf mijn leerlingen ook de kans om te zien dat er
     een element van mening schuilt in classificatiesystemen. Later, toen we begonnen
@@ -884,6 +917,7 @@ nl:
     zoals ChatGPT, van beginner tot gevorderd. Bevat starterprompts voor degenen die
     net hun tenen erin hebben gestoken, evenals geavanceerde tools voor diegenen die
     hun potentieel willen maximaliseren.
+  ai_pl_101_resources_3: AI-vragen om het leren van studenten te transformeren
   how_ai_works_hero_heading: Hoe AI werkt
   how_ai_works_hero_desc: Duik in de wereld van AI met „How AI Works”, onze videoserie
     en bijbehorende lessen!
@@ -1298,8 +1332,8 @@ nl:
     Animation
   csp_page_curriculum_glance_devices: Laptop, Chromebook
   csp_page_curriculum_glance_tools: App Lab
-  csp_page_curriculum_glance_professional_learning: Facilitator-led Workshops, Self-paced
-    Modules
+  csp_page_curriculum_glance_professional_learning: Workshops onder leiding van een
+    facilitator, modules in eigen tempo
   csp_page_curriculum_glance_professional_languages: Nederlands
   csp_page_curriculum_glance_professional_accessibility_features: Text-to-speech,
     Closed captioning, Immersive reader
@@ -1426,8 +1460,8 @@ nl:
     computergebruik, app-ontwerp, games en animaties, kunst en design, programmeren
   csd_page_curriculum_glance_devices: Laptop, Chromebook
   csd_page_curriculum_glance_tools: App-lab, gamelab, AI-lab, weblab
-  csd_page_curriculum_glance_professional_learning: Facilitator-led Workshops, Self-paced
-    Modules
+  csd_page_curriculum_glance_professional_learning: Workshops onder leiding van een
+    facilitator, modules in eigen tempo
   csd_page_curriculum_glance_professional_languages: Nederlands
   csd_page_curriculum_glance_professional_accessibility_features: Text-to-speech,
     Closed captioning, Immersive reader
@@ -1575,8 +1609,8 @@ nl:
     en design, App-ontwerp
   csf_page_curriculum_glance_devices: Laptop, Chromebook, tablet
   csf_page_curriculum_glance_tools: Sprite Lab, Play Lab
-  csf_page_curriculum_glance_professional_learning: Facilitator-led Workshops, Self-paced
-    Modules
+  csf_page_curriculum_glance_professional_learning: Workshops onder leiding van een
+    facilitator, modules in eigen tempo
   csf_page_curriculum_glance_languages: Arabisch, Bahasa Indonesisch, Catalaans, Chinees
     vereenvoudigd, Chinees traditioneel, Tsjechisch, Frans, Duits, Hindi, Italiaans,
     Japans, Koreaans, Kannada, Maleis, Marathi, Mongools, Pools, Portugees-BR, Roemeens,
@@ -1720,6 +1754,39 @@ nl:
   csa_page_faq_answer_08_02: For more information about the values that guided our
     work, please see our [curriculum values](%{curriculum_values_url}) and our [professional
     learning values](%{pl_values_url}).
+  donate_page_top_heading: Help onze missie te financieren
+  donate_page_top_desc: Elke donatie ondersteunt de missie van Code.org om de toegang
+    tot informaticaonderwijs uit te breiden. We bieden verschillende manieren om te
+    doneren en een verschil te maken.
+  donate_page_fundraise_title: Fondsenwerving voor Code.org
+  donate_page_fundraise_desc: Help mee om geld in te zamelen voor Code.org! Elke student
+    op elke school zou de kans moeten hebben om informatica te leren.
+  donate_page_other_ways_title: Andere manieren om te geven
+  donate_page_other_ways_desc: Ontdek verschillende manieren om bij te dragen en vind
+    de optie die het beste bij je past. Elk gebaar, groot of klein, stuwt onze missie
+    vooruit.
+  donate_page_501c3: Code.org is geregistreerd als een openbare 501 (c) (3) non-profitorganisatie.
+    Bijdragen aan Code.org zijn fiscaal aftrekbaar voor zover wettelijk toegestaan.
+    Het belastingidentificatienummer van Code.org is 46-0858543.
+  donate_page_donation_policy_title: Ons donatiebeleid begrijpen
+  donate_page_donation_policy_desc: Lees meer over hoe we uw bijdragen behandelen
+    en verdelen.
+  donate_tabs_tab_label_daf_direct: DAF Direct
+  donate_tabs_tab_label_amazon: Amazone
+  donate_tabs_tab_label_bitpay: BitPay
+  donate_tabs_tab_label_employee_match: Match tussen werknemers
+  donate_tabs_daf_direct_title: Doneer via DAF Direct
+  donate_tabs_daf_direct_desc: Doneer via uw donorfonds bij Fidelity Charitable, Schwab
+    Charitable of BNY Mellon en doe uw subsidieaanbeveling aan Code.org via het online
+    formulier van DAF Direct.
+  donate_tabs_amazon_title: Doneer via Amazon
+  donate_tabs_amazon_desc: Doneer rechtstreeks via je Amazon-account. Met slechts
+    een paar klikken kunt u naadloos bijdragen aan de missie van Code.org en de toekomst
+    van informaticaonderwijs versterken.
+  donate_tabs_bitpay_title: Doneer met Crypto via BitPay
+  donate_tabs_bitpay_desc: Omarm de toekomst van doneren met cryptocurrency. Via BitPay
+    kan uw digitale valuta rechtstreeks de inspanningen van Code.org ondersteunen
+    om het informaticaonderwijs uit te breiden.
   hoc_live: Hour of Code live
   hoc_live_sign_up_title: Meld je aan voor Hour of Code Live
   hoc_live_learn_title: Leer met Hour of Code Live

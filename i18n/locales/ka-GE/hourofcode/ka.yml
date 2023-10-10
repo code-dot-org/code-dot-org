@@ -284,6 +284,10 @@ ka:
   call_to_action_register_early_access: დარეგისტრირდით ადრეული წვდომისთვის
   call_to_action_open_positions: ღია პოზიციების ნახვა
   call_to_action_get_guide: მიიღეთ სახელმძღვანელო
+  call_to_action_donate_to_cdo: შემოწირეთ Code.org
+  call_to_action_start_fundraiser: დაიწყეთ ფონდის შეგროვება
+  call_to_action_view_donation_policy: იხილეთ შემოწირულობის პოლიტიკა
+  call_to_action_view_donate_bitpay: შემოწირულობა BitPay— ით
   aria_label_call_to_action_afe: შეიტყვეთ მეტი ამაზონის მომავალი ინჟინრის შესახებ
   aria_label_call_to_action_teaching_csf: დაიწყეთ კომპიუტერული მეცნიერების საფუძვლების
     სწავლების პროფესიული სასწავლო პროგრამა
@@ -393,6 +397,7 @@ ka:
   curriculum_name_csp: კომპიუტერული მეცნიერების პრინციპები
   curriculum_name_csc: კომპიუტერულ მეცნიერებათა კავშირები
   curriculum_name_csa: AP® კომპიუტერული მეცნიერება A
+  curriculum_name_csa_ai: პროგრამული ინჟინერია და კომპიუტერული ხედვა
   curriculum_name_csc_02: ნებისმიერი CS კავშირის მოდული
   curriculum_name_ai: AI & მანქანური სწავლება
   curriculum_name_artificial_intelligence: ხელოვნური ინტელექტი (AI)
@@ -471,6 +476,13 @@ ka:
     და ფიზიკური გამოთვლითი სისტემების შექმნას.
   curriculum_desc_csp: უფასო, AP® CSP მოწონებული, საშუალო სკოლის შესავალი კურსი, რომელიც
     სტუდენტებს აცნობს კომპიუტერული მეცნიერების ფუნდამენტურ კონცეფციებს.
+  curriculum_desc_csa_ai_long: 'ეს ორთავიანი პოსტ-AP CSA მოდული საშუალო სკოლის მოსწავლეებს
+    სთავაზობს პრაქტიკულ გამოცდილებას პროგრამული უზრუნველყოფის შემუშავების პროფესიონალური
+    ინსტრუმენტებით, მათ შორის GitHub და GitHub Copilot, და აძლევს მათ რეალურ სამყაროში
+    არსებულ უნარებს კომპიუტერული ხედვის პროგრამის შემუშავებისთვის. '
+  curriculum_desc_csa_ai_short: ეს Post-AP® CSA მოდული საშუალო სკოლის მოსწავლეებს
+    სთავაზობს პრაქტიკულ გამოცდილებას პროგრამული უზრუნველყოფის შემუშავების პროფესიონალური
+    ინსტრუმენტებით.
   collection_hardware: ფოკუსირება აპარატურაზე
   collection_hardware_desc: აძლევს სტუდენტებს უფლებას გამოიყენონ მონაცემები და ფიზიკური
     მოწყობილობები პრობლემების გადასაჭრელად.
@@ -544,6 +556,7 @@ ka:
   module_duration_2_hrs: 2 საათი
   module_duration_3_hrs: 3 საათი
   module_duration_5_hrs: 5 საათი
+  module_duration_5_hrs_plus: 5+ საათი
   module_duration_8_hrs: 8 საათი
   module_duration_20_hrs: 20 საათი
   module_duration_35_hrs: 35 საათი
@@ -627,6 +640,7 @@ ka:
   heading_these_lessons_will: 'ეს გაკვეთილები იქნება:'
   heading_explore_curriculum_catalog: გამოიკვლიეთ ჩვენი ყველა კურსი სასწავლო გეგმების
     კატალოგში
+  heading_csa_ai: ეძებთ საქმეებს AP® გამოცდის შემდეგ?
   professional_learning_section_desc: მიიღეთ საჭირო მხარდაჭერა, როდესაც სწავლებისთვის
     ემზადებით. მასწავლებლებს უყვართ ის, 90% -ზე მეტი კი მას საუკეთესო პროფესიულ განვითარებად
     აფასებს ოდესმე!
@@ -660,6 +674,23 @@ ka:
     ნებისმიერ შეკითხვას, რომელიც შეიძლება გქონდეთ Code.org— ით სწავლების დაწყების
     შესახებ. თქვენ ასევე შეგიძლიათ ჰკითხოთ სხვა მასწავლებლებს მათი გამოცდილების შესახებ
     ჩვენს მასწავლებელთა ფორუმებზე.
+  subscribe_form_section_title: გამოიწერეთ განახლებები
+  subscribe_form_section_desc_csa: დარეგისტრირდით, რომ მიიღოთ ყოველთვიური ელ. წერილი
+    Code.org— ის AP® კომპიუტერული მეცნიერების A— ს შესახებ და მიიღეთ სასარგებლო შეხსენებები,
+    რჩევები და განახლებები პირდაპირ თქვენს შემოსულებში.
+  subscribe_form_section_desc_csc: დარეგისტრირდით, რომ მიიღოთ ყოველთვიური ელ. წერილი
+    Code.org— ის კომპიუტერული მეცნიერების კავშირების შესახებ და მიიღოთ სასარგებლო
+    შეხსენებები, რჩევები და განახლებები პირდაპირ თქვენს შემოსულებში.
+  subscribe_form_section_desc_csd: დარეგისტრირდით, რომ მიიღოთ ყოველთვიური ელ. წერილი
+    Code.org— ის კომპიუტერული მეცნიერების აღმოჩენების შესახებ და მიიღეთ სასარგებლო
+    შეხსენებები, რჩევები და განახლებები პირდაპირ თქვენს შემოსულებში.
+  subscribe_form_section_desc_csf: დარეგისტრირდით, რომ მიიღოთ ყოველთვიური ელ. წერილი
+    Code.org— ის კომპიუტერული მეცნიერების საფუძვლების შესახებ და მიიღეთ სასარგებლო
+    შეხსენებები, რჩევები და განახლებები პირდაპირ თქვენს შემოსულებში.
+  subscribe_form_section_desc_csp: დარეგისტრირდით, რომ მიიღოთ ყოველთვიური ელ. წერილი
+    Code.org— ის კომპიუტერული მეცნიერების პრინციპების შესახებ და მიიღოთ სასარგებლო
+    შეხსენებები, რჩევები და განახლებები პირდაპირ თქვენს შემოსულებში.
+  subscribe_form_section_unsubscribe: ნებისმიერ დროს შეგიძლიათ გააუქმოთ გამოწერა.
   blockchain_hero_heading: როგორ მუშაობს ბლოკჩეინი
   blockchain_hero_desc: ჩაყვინთეთ ბლოკჩეინის სამყაროში „როგორ მუშაობს ბლოკჩეინი“,
     ჩვენი ახალი ვიდეო სერიით და თანმხლები გაკვეთილებით!
@@ -766,6 +797,9 @@ ka:
     გაკვეთილი დაწყვილებულია სერიიდან ერთ ვიდეოსთან, რომელიც უფრო ღრმად იძირება ვიდეოებში
     დანერგილ კონცეფციებში.
   ai_curriculum_btn_aria_label_04: გამოიკვლიეთ როგორ მუშაობს AI გაკვეთილები
+  ai_curriculum_grades_05: 'კლასის დონეები: 9-12'
+  ai_curriculum_btn_aria_label_05: გამოიკვლიეთ პროგრამული ინჟინერიისა და კომპიუტერული
+    ხედვის მოდული
   ai_carousel_heading: 'რას ამბობენ მასწავლებლები AI— ს შესახებ Code.org— ით:'
   ai_carousel_quote_01: ამ გაკვეთილმა ასევე მისცა ჩემს სტუდენტებს შესაძლებლობა დაენახათ,
     რომ კლასიფიკაციის სისტემებში არსებობს აზრის ელემენტი. მოგვიანებით, როდესაც ჩვენ
@@ -896,6 +930,7 @@ ka:
     როგორიცაა ChatGPT, დამწყებიდან მოწინავემდე. მოიცავს დამწყებ მოთხოვნებს მათთვის,
     ვინც უბრალოდ თითების თითებს იჭერს, ასევე მოწინავე ინსტრუმენტებს მათთვის, ვინც
     ცდილობს მაქსიმალურად გაზარდოს თავისი პოტენციალი.
+  ai_pl_101_resources_3: AI მოთხოვნა სტუდენტის სწავლის გარდაქმნისთვის
   how_ai_works_hero_heading: როგორ მუშაობს AI
   how_ai_works_hero_desc: ჩაყვინთეთ ხელოვნური ინტელექტის სამყაროში „როგორ მუშაობს
     AI“, ჩვენი ვიდეო სერიებით და თანმხლები გაკვეთილებით!
@@ -1308,8 +1343,8 @@ ka:
     Animation
   csp_page_curriculum_glance_devices: Laptop, Chromebook
   csp_page_curriculum_glance_tools: აპლიკაციის ლაბორატორია
-  csp_page_curriculum_glance_professional_learning: Facilitator-led Workshops, Self-paced
-    Modules
+  csp_page_curriculum_glance_professional_learning: ფასილიტატორის ხელმძღვანელობით
+    სემინარები, თვითნაკეთი მოდულები
   csp_page_curriculum_glance_professional_languages: ქართული
   csp_page_curriculum_glance_professional_accessibility_features: Text-to-speech,
     Closed captioning, Immersive reader
@@ -1438,8 +1473,8 @@ ka:
   csd_page_curriculum_glance_devices: Laptop, Chromebook
   csd_page_curriculum_glance_tools: აპლიკაციის ლაბორატორია, თამაშის ლაბორატორია, AI
     ლაბორატორია, ვებ ლაბორატორია
-  csd_page_curriculum_glance_professional_learning: Facilitator-led Workshops, Self-paced
-    Modules
+  csd_page_curriculum_glance_professional_learning: ფასილიტატორის ხელმძღვანელობით
+    სემინარები, თვითნაკეთი მოდულები
   csd_page_curriculum_glance_professional_languages: ქართული
   csd_page_curriculum_glance_professional_accessibility_features: Text-to-speech,
     Closed captioning, Immersive reader
@@ -1584,8 +1619,8 @@ ka:
     ხელოვნება და დიზაინი, აპლიკაციის დიზაინი
   csf_page_curriculum_glance_devices: ლეპტოპი, Chromebook, ტაბლეტი
   csf_page_curriculum_glance_tools: Sprite ლაბორატორია, თამაში ლაბორატორია
-  csf_page_curriculum_glance_professional_learning: Facilitator-led Workshops, Self-paced
-    Modules
+  csf_page_curriculum_glance_professional_learning: ფასილიტატორის ხელმძღვანელობით
+    სემინარები, თვითნაკეთი მოდულები
   csf_page_curriculum_glance_languages: არაბული, Bahasa Indonesian, Catalán, ჩინური
     გამარტივებული, ჩინური ტრადიციული, ჩეხური, ფრანგული, გერმანული, ჰინდი, იტალიური,
     იაპონური, კორეული, კანადა, Malay, Marathi, Mongolian, პოლონური, პორტუგალიური-BR,
@@ -1727,6 +1762,39 @@ ka:
   csa_page_faq_answer_08_02: For more information about the values that guided our
     work, please see our [curriculum values](%{curriculum_values_url}) and our [professional
     learning values](%{pl_values_url}).
+  donate_page_top_heading: დახმარება დააფინანსოს ჩვენი მისია
+  donate_page_top_desc: ყოველი შემოწირულობა ხელს უწყობს Code.org-ის მისიას გააფართოვოს
+    წვდომა კომპიუტერულ მეცნიერებათა განათლებაზე. ჩვენ გთავაზობთ რამდენიმე გზას შემოწირულობისა
+    და განსხვავების შესაქმნელად.
+  donate_page_fundraise_title: ფონდების მოძიება Code.org— სთვის
+  donate_page_fundraise_desc: დახმარება ამაღლება ფული Code.org! ყველა სკოლაში ყველა
+    მოსწავლეს უნდა ჰქონდეს შესაძლებლობა ისწავლოს კომპიუტერული მეცნიერება.
+  donate_page_other_ways_title: სხვა გზები მისცეს
+  donate_page_other_ways_desc: გამოიკვლიეთ მრავალფეროვანი მეთოდები წვლილის შეტანისთვის
+    და იპოვეთ თქვენთვის შესაფერისი ვარიანტი. ყველა ჟესტი, დიდი თუ პატარა, წინ მიიწევს
+    ჩვენს მისიას.
+  donate_page_501c3: Code.org რეგისტრირებულია როგორც საჯარო 501 (გ) (3) არაკომერციული
+    ორგანიზაცია. Code.org— ში შენატანები გამოიქვითება გადასახადებით კანონით ნებადართული
+    ზომით. Code.org— ის საგადასახადო საიდენტიფიკაციო ნომერია 46-0858543.
+  donate_page_donation_policy_title: ჩვენი შემოწირულობის პოლიტიკის გააზრება
+  donate_page_donation_policy_desc: შეიტყვეთ იმის შესახებ, თუ როგორ ვამუშავებთ და
+    გამოვყოფთ თქვენს წვლილს.
+  donate_tabs_tab_label_daf_direct: DAF პირდაპირი
+  donate_tabs_tab_label_amazon: ამაზონი
+  donate_tabs_tab_label_bitpay: BitPay
+  donate_tabs_tab_label_employee_match: თანამშრომელთა მატჩი
+  donate_tabs_daf_direct_title: შემოწირულობა DAF Direct— ის საშუალებით
+  donate_tabs_daf_direct_desc: შემოწირეთ თქვენი დონორების მიერ შემოთავაზებული ფონდის
+    მეშვეობით Fidelity Charitable, Schwab Charitable ან BNY Mellon და გააკეთეთ თქვენი
+    საგრანტო რეკომენდაცია Code.org— ზე DAF Direct ონლაინ ფორმის საშუალებით.
+  donate_tabs_amazon_title: შემოწირულობა ამაზონის საშუალებით
+  donate_tabs_amazon_desc: შემოწირეთ პირდაპირ თქვენი Amazon ანგარიშის გამოყენებით.
+    მხოლოდ რამდენიმე დაწკაპუნებით, შეუფერხებლად შეუწყეთ ხელი Code.org— ის მისიას და
+    გააძლიერეთ კომპიუტერული მეცნიერების განათლების მომავალი.
+  donate_tabs_bitpay_title: შემოწირულობა Crypto-ით BitPay-ის საშუალებით
+  donate_tabs_bitpay_desc: მიიღეთ კრიპტოვალუტით გაცემის მომავალი. BitPay-ის საშუალებით
+    თქვენს ციფრულ ვალუტას შეუძლია პირდაპირ მხარი დაუჭიროს Code.org-ის მცდელობებს კომპიუტერული
+    მეცნიერების განათლების გაფართოებაში.
   hoc_live: კოდის ერთი საათი Live
   hoc_live_sign_up_title: დარეგისტრირდით კოდის ერთი საათის პირდაპირ ეთერში
   hoc_live_learn_title: ისწავლეთ კოდის ერთი საათით პირდაპირ ეთერში

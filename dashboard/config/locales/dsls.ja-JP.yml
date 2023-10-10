@@ -582,13 +582,26 @@ ja-JP:
         - {}
         questions:
         - {}
+      CSD Games Properties multi predict_2023:
+        answers:
+        - {}
+        - correct: true
+        - {}
+        - {}
+        - {}
+        questions:
+        - {}
       CSD Games Properties practice_2021:
         display_name: スプライトのプロパティ
       CSD Games Properties practice_2022:
         display_name: スプライトのプロパティ
+      CSD Games Properties practice_2023:
+        display_name: スプライトのプロパティ
       CSD Games variables practice_2021:
         display_name: 変数 練習
       CSD Games variables practice_2022:
+        display_name: 変数 練習
+      CSD Games variables practice_2023:
         display_name: 変数 練習
       CSD Header Size MC:
         answers:
@@ -615,6 +628,12 @@ ja-JP:
         - {}
         - {}
       CSD Header Size MC_2018_2019_pilot_2022:
+        answers:
+        - {}
+        - correct: true
+        - {}
+        - {}
+      CSD Header Size MC_2018_2019_pilot_2023:
         answers:
         - {}
         - correct: true
@@ -653,6 +672,60 @@ ja-JP:
         - {}
         - text: ストレージ
         - text: 処理
+      CSD U1 MC Q1_2023:
+        answers:
+        - correct: true
+        - correct: true
+        - {}
+        - {}
+        - {}
+      CSD U1 MC Q2_2023:
+        answers:
+        - {}
+        - {}
+        - {}
+        - {}
+        - correct: true
+        questions:
+        - {}
+      CSD U1 MC Q3_2023:
+        answers:
+        - {}
+        - {}
+        - text: 音楽
+        - text: ロケーション
+        - correct: true
+        questions:
+        - {}
+      CSD U1 MC Q4_2023:
+        answers:
+        - {}
+        - {}
+        - {}
+        - correct: true
+        - correct: true
+        questions:
+        - {}
+      CSD U1 Match Q5_2023:
+        answers:
+        - text: 入力
+        - text: ストレージ
+        - text: 処理
+        questions:
+        - {}
+        - {}
+        - {}
+      CSD U1 Match Q6_2023:
+        answers:
+        - {}
+        - {}
+        - {}
+        - {}
+        questions:
+        - text: 準備
+        - text: リフレクト
+        - text: 試してみる
+        - text: 定義
       CSD U1 Test PSP match:
         answers:
         - {}
@@ -741,6 +814,8 @@ ja-JP:
         display_name: CSSを使用したテキストのスタイル設定
       CSD U2 CSS practice_pilot_2022:
         display_name: CSSを使用したテキストのスタイル設定
+      CSD U2 CSS practice_pilot_2023:
+        display_name: CSSを使用したテキストのスタイル設定
       CSD U2 Design Project:
         content1: 説明
       CSD U2 Design Project_2018:
@@ -751,9 +826,13 @@ ja-JP:
         display_name: 画像の追加
       CSD U2 Image challenge_pilot_2022:
         display_name: 画像の追加
+      CSD U2 Image challenge_pilot_2023:
+        display_name: 画像の追加
       CSD U2 Image practice_pilot_2021:
         display_name: 画像の追加
       CSD U2 Image practice_pilot_2022:
+        display_name: 画像の追加
+      CSD U2 Image practice_pilot_2023:
         display_name: 画像の追加
       CSD U2 L1 Overview:
         content1: 説明
@@ -769,6 +848,95 @@ ja-JP:
         content1: 説明
       CSD U2 Lesson 6 Overview:
         content1: 説明
+      CSD U2 MC Q10_2023:
+        answers:
+        - text: あなたの誕生日
+        - text: あなたの住所
+        - {}
+        - text: 名前
+        - correct: true
+        questions:
+        - {}
+      CSD U2 MC Q11_2023:
+        answers:
+        - {}
+        - {}
+        - {}
+        - correct: true
+        questions:
+        - {}
+      CSD U2 MC Q1_2023:
+        answers:
+        - {}
+        - correct: true
+        - {}
+        - {}
+        - {}
+        questions:
+        - {}
+      CSD U2 MC Q2_2023:
+        answers:
+        - correct: true
+        - {}
+        - {}
+        - correct: true
+        - {}
+        questions:
+        - {}
+      CSD U2 MC Q3_2023:
+        answers:
+        - correct: true
+        - {}
+        - correct: true
+        - {}
+        - {}
+        questions:
+        - {}
+      CSD U2 MC Q4_2023:
+        answers:
+        - {}
+        - correct: true
+        - {}
+        - {}
+        - {}
+        questions:
+        - {}
+      CSD U2 MC Q6_2023:
+        answers:
+        - correct: true
+        - {}
+        - {}
+        - {}
+        - {}
+        questions:
+        - {}
+      CSD U2 MC Q7_2023:
+        answers:
+        - {}
+        - {}
+        - correct: true
+        - {}
+        - {}
+        questions:
+        - {}
+      CSD U2 MC Q8_2023:
+        answers:
+        - {}
+        - {}
+        - correct: true
+        - {}
+        - {}
+        questions:
+        - {}
+      CSD U2 Match Q1_2023:
+        answers:
+        - {}
+        - {}
+        - {}
+        questions:
+        - text: 色
+        - {}
+        - {}
       CSD U2 Test Classes:
         answers:
         - {}
@@ -978,6 +1146,19 @@ ja-JP:
         - {}
         - {}
         - {}
+      CSD U2 image debug match_2023:
+        answers:
+        - {}
+        - {}
+        - {}
+        - {}
+        - {}
+        questions:
+        - {}
+        - {}
+        - {}
+        - {}
+        - {}
       CSD U2 image debug match_pilot_2021:
         answers:
         - {}
@@ -1040,6 +1221,10 @@ ja-JP:
         content1: 説明
       CSD U2 project guide_2018_2019_pilot_2022:
         content1: 説明
+      CSD U2 project guide_2018_2019_pilot_2023:
+        content1: 説明
+      CSD U2L2 - Chal_2023:
+        display_name: チャレンジレベル
       CSD U3 - conditionals - Matching:
         answers:
         - {}
@@ -1105,6 +1290,19 @@ ja-JP:
         - {}
         - {}
         - {}
+      CSD U3 - conditionals - Matching_2018_2019_pilot_2023:
+        answers:
+        - {}
+        - {}
+        - {}
+        - {}
+        - {}
+        questions:
+        - {}
+        - {}
+        - {}
+        - {}
+        - {}
       CSD U3 Boolean MC:
         answers:
         - correct: true
@@ -1142,6 +1340,15 @@ ja-JP:
         - {}
         title: タイトル
       CSD U3 Boolean MC_2018_2019_pilot_2022:
+        answers:
+        - correct: true
+        - {}
+        - {}
+        - {}
+        questions:
+        - {}
+        title: タイトル
+      CSD U3 Boolean MC_2018_2019_pilot_2023:
         answers:
         - correct: true
         - {}
@@ -1198,6 +1405,12 @@ ja-JP:
         - correct: true
         - {}
       CSD U3 Functions Prediction define first_2018_2019_pilot_2022:
+        answers:
+        - {}
+        - {}
+        - correct: true
+        - {}
+      CSD U3 Functions Prediction define first_2018_2019_pilot_2023:
         answers:
         - {}
         - {}
@@ -1273,6 +1486,138 @@ ja-JP:
           ## リソース
 
           * [変数入門](https://youtu.be/G41G_PEWFjE) - Video ([download](https://videos.code.org/2015/csp/applab/variables_1.mp4))
+      CSD U3 MC Q10_2023:
+        answers:
+        - correct: true
+        - correct: true
+        - {}
+        - {}
+        questions:
+        - {}
+      CSD U3 MC Q11_2023:
+        answers:
+        - {}
+        - correct: true
+        - {}
+        - {}
+        questions:
+        - {}
+      CSD U3 MC Q12_2023:
+        answers:
+        - {}
+        - {}
+        - correct: true
+        - {}
+        - {}
+        questions:
+        - {}
+      CSD U3 MC Q13_2023:
+        answers:
+        - {}
+        - {}
+        - {}
+        - correct: true
+        - {}
+        questions:
+        - {}
+      CSD U3 MC Q14_2023:
+        answers:
+        - text: '0'
+        - text: '1'
+        - text: '5'
+        - correct: true
+          text: '6'
+        - {}
+        questions:
+        - {}
+      CSD U3 MC Q1_2023:
+        answers:
+        - {}
+        - correct: true
+        - {}
+        - {}
+        - {}
+        questions:
+        - {}
+      CSD U3 MC Q2_2023:
+        answers:
+        - {}
+        - correct: true
+        - {}
+        - {}
+        - {}
+        questions:
+        - {}
+      CSD U3 MC Q4_2023:
+        answers:
+        - {}
+        - {}
+        - {}
+        - correct: true
+        - {}
+        questions:
+        - {}
+      CSD U3 MC Q5_2023:
+        answers:
+        - {}
+        - {}
+        - correct: true
+        - {}
+        - {}
+        questions:
+        - {}
+      CSD U3 MC Q6_2023:
+        answers:
+        - {}
+        - {}
+        - correct: true
+        - {}
+        questions:
+        - {}
+      CSD U3 MC Q8_2023:
+        answers:
+        - {}
+        - correct: true
+        - {}
+        - {}
+        - {}
+        questions:
+        - {}
+      CSD U3 Match Q1_2023:
+        answers:
+        - {}
+        - {}
+        - {}
+        - {}
+        questions:
+        - {}
+        - {}
+        - {}
+        - {}
+      CSD U3 Match Q2_2023:
+        answers:
+        - text: x
+        - text: y
+        - text: 幅
+        - text: 高さ
+        questions:
+        - {}
+        - {}
+        - {}
+        - {}
+      CSD U3 Match Q3_2023:
+        answers:
+        - {}
+        - {}
+        - {}
+        - {}
+        - {}
+        questions:
+        - {}
+        - {}
+        - {}
+        - {}
+        - {}
       CSD U3 Sprite Movement Predict Multi:
         answers:
         - {}
@@ -1306,6 +1651,14 @@ ja-JP:
         questions:
         - {}
       CSD U3 Sprite Movement Predict Multi_2018_2019_pilot_2022:
+        answers:
+        - {}
+        - {}
+        - correct: true
+        - {}
+        questions:
+        - {}
+      CSD U3 Sprite Movement Predict Multi_2018_2019_pilot_2023:
         answers:
         - {}
         - {}
@@ -1555,9 +1908,22 @@ ja-JP:
         - {}
         - {}
         - {}
+      CSD U3 drawSprites placement match_2023:
+        answers:
+        - {}
+        - {}
+        - {}
+        - {}
+        questions:
+        - {}
+        - {}
+        - {}
+        - {}
       CSD U3 drawing practice choice_2021:
         display_name: 練習
       CSD U3 drawing practice choice_2022:
+        display_name: 練習
+      CSD U3 drawing practice choice_2023:
         display_name: 練習
       CSD U3 game intro:
         content1: 説明
@@ -1577,6 +1943,67 @@ ja-JP:
         content1: 説明
       CSD U3 platform intro_2018_2019_pilot_2022:
         content1: 説明
+      CSD U3 platform intro_2018_2019_pilot_2023:
+        content1: 説明
+      CSD U4 MC Q1_2023:
+        answers:
+        - {}
+        - correct: true
+        - {}
+        - correct: true
+        questions:
+        - {}
+      CSD U4 MC Q2_2023:
+        answers:
+        - {}
+        - correct: true
+        - {}
+        - correct: true
+        questions:
+        - {}
+      CSD U4 MC Q3_2023:
+        answers:
+        - {}
+        - {}
+        - {}
+        - correct: true
+        questions:
+        - {}
+      CSD U4 MC Q4_2023:
+        answers:
+        - {}
+        - correct: true
+        - {}
+        - {}
+        - {}
+        questions:
+        - {}
+      CSD U4 MC Q5_2023:
+        answers:
+        - {}
+        - correct: true
+        - {}
+        - correct: true
+        - {}
+        questions:
+        - {}
+      CSD U4 MC Q8_2023:
+        answers:
+        - {}
+        - correct: true
+        - {}
+        - correct: true
+        questions:
+        - {}
+      CSD U4 MC Q9_2023:
+        answers:
+        - correct: true
+        - {}
+        - {}
+        - correct: true
+        - text: フィードバックする
+        questions:
+        - {}
       CSD U4 test feature match:
         answers:
         - {}
@@ -1738,6 +2165,84 @@ ja-JP:
         content1: 説明
       CSD U5 L13 SFLP Interpreting Data:
         content1: 説明
+      CSD U5 MC Q1_2023:
+        answers:
+        - {}
+        - {}
+        - {}
+        - correct: true
+        - {}
+        questions:
+        - {}
+      CSD U5 MC Q2_2023:
+        answers:
+        - {}
+        - correct: true
+        - correct: true
+        - {}
+        - {}
+        questions:
+        - {}
+      CSD U5 MC Q3_2023:
+        answers:
+        - {}
+        - correct: true
+        questions:
+        - {}
+      CSD U5 MC Q4_2023:
+        answers:
+        - {}
+        - {}
+        - correct: true
+        - {}
+        - {}
+        questions:
+        - {}
+      CSD U5 MC Q5_2023:
+        answers:
+        - {}
+        - {}
+        - {}
+        - correct: true
+        - {}
+        questions:
+        - {}
+      CSD U5 MC Q6_2023:
+        answers:
+        - {}
+        - correct: true
+        - {}
+        - {}
+        - {}
+        questions:
+        - {}
+      CSD U5 MC Q7_2023:
+        answers:
+        - {}
+        - correct: true
+        - {}
+        - {}
+        - {}
+        questions:
+        - {}
+      CSD U5 MC Q8_2023:
+        answers:
+        - {}
+        - correct: true
+        - {}
+        - {}
+        - {}
+        questions:
+        - {}
+      CSD U5 MC Q9_2023:
+        answers:
+        - {}
+        - {}
+        - {}
+        - {}
+        - correct: true
+        questions:
+        - {}
       CSD U5 crosstab warmup:
         content1: 説明
       CSD U5 crosstab warmup_2018:
@@ -1897,29 +2402,73 @@ ja-JP:
         - {}
         questions:
         - {}
+      CSD U6 - Accelerometer - Chal_2023a_2023:
+        display_name: チャレンジレベル
       CSD U6 - Accelerometer - Chal_2222:
+        display_name: チャレンジレベル
+      CSD U6 - Accelerometer - Chal_mb2022:
+        display_name: チャレンジレベル
+      CSD U6 - Board Inputs - Chal_2023:
         display_name: チャレンジレベル
       CSD U6 - Board Inputs - Chal_2222:
         display_name: チャレンジレベル
+      CSD U6 - Board Inputs - Chal_mb2022:
+        display_name: チャレンジレベル
+      CSD U6 - Board Outputs - Chal_2023:
+        display_name: チャレンジレベル
       CSD U6 - Board Outputs - Chal_2222:
+        display_name: チャレンジレベル
+      CSD U6 - Board Outputs - Chal_mb2022:
+        display_name: チャレンジレベル
+      CSD U6 - Color LEDs - Chal_2023a_2023:
         display_name: チャレンジレベル
       CSD U6 - Color LEDs - Chal_2222:
         display_name: チャレンジレベル
+      CSD U6 - Combine Inputs - Chal_2023a_2023:
+        display_name: チャレンジレベル
       CSD U6 - Combine Inputs - Chal_2222:
+        display_name: チャレンジレベル
+      CSD U6 - Combine Inputs - Chal_mb2022:
+        display_name: チャレンジレベル
+      CSD U6 - If Variables - Chal_2023:
         display_name: チャレンジレベル
       CSD U6 - If Variables - Chal_2222:
         display_name: チャレンジレベル
+      CSD U6 - If Variables - Chal_mb2022:
+        display_name: チャレンジレベル
+      CSD U6 - Music - Chal_2023:
+        display_name: チャレンジレベル
       CSD U6 - Music - Chal_2222:
+        display_name: チャレンジレベル
+      CSD U6 - Physical Input - Chal_2023:
         display_name: チャレンジレベル
       CSD U6 - Physical Input - Chal_2222:
         display_name: チャレンジレベル
+      CSD U6 - Physical Input - Chal_mb2022:
+        display_name: チャレンジレベル
+      CSD U6 - Physical Output - Chal_2023:
+        display_name: チャレンジレベル
       CSD U6 - Physical Output - Chal_2222:
+        display_name: チャレンジレベル
+      CSD U6 - Physical Output - Chal_mb2022:
+        display_name: チャレンジレベル
+      CSD U6 - Screen Inputs - Chal_2023:
         display_name: チャレンジレベル
       CSD U6 - Screen Inputs - Chal_2222:
         display_name: チャレンジレベル
+      CSD U6 - Screen Inputs - Chal_mb2022:
+        display_name: チャレンジレベル
+      CSD U6 - Screen Outputs - Chal_2023:
+        display_name: チャレンジレベル
       CSD U6 - Screen Outputs - Chal_2222:
         display_name: チャレンジレベル
+      CSD U6 - Screen Outputs - Chal_mb2022:
+        display_name: チャレンジレベル
+      CSD U6 - Sensors - Chal_2023a_2023:
+        display_name: チャレンジレベル
       CSD U6 - Sensors - Chal_2222:
+        display_name: チャレンジレベル
+      CSD U6 - Sensors - Chal_mb2022:
         display_name: チャレンジレベル
       CSD U6 LED create intro:
         content1: 説明
@@ -1929,6 +2478,132 @@ ja-JP:
         content1: 説明
       CSD U6 LED create intro_2021:
         content1: 説明
+      CSD U6 MC Q1_2023:
+        answers:
+        - {}
+        - correct: true
+        - {}
+        - correct: true
+        - {}
+        questions:
+        - {}
+      CSD U6 MC Q1_6b2023:
+        answers:
+        - correct: true
+        - {}
+        - correct: true
+        - {}
+        - {}
+        questions:
+        - {}
+      CSD U6 MC Q2_2023:
+        answers:
+        - {}
+        - {}
+        - {}
+        - correct: true
+          text: 加速度計
+        - {}
+        questions:
+        - {}
+      CSD U6 MC Q2_6b2023:
+        answers:
+        - {}
+        - {}
+        - {}
+        - correct: true
+          text: 加速度計
+        - text: 光
+        questions:
+        - {}
+      CSD U6 MC Q3_2023:
+        answers:
+        - {}
+        - {}
+        - {}
+        - correct: true
+        questions:
+        - {}
+      CSD U6 MC Q3_6b2023:
+        answers:
+        - {}
+        - {}
+        - {}
+        - correct: true
+        questions:
+        - {}
+      CSD U6 MC Q4_2023:
+        answers:
+        - {}
+        - {}
+        - correct: true
+        - {}
+        - {}
+        questions:
+        - {}
+      CSD U6 MC Q4_6b2023:
+        answers:
+        - {}
+        - {}
+        - correct: true
+        - {}
+        - {}
+        questions:
+        - {}
+      CSD U6 MC Q5_2023:
+        answers:
+        - {}
+        - {}
+        - correct: true
+        - {}
+        - {}
+        questions:
+        - {}
+      CSD U6 MC Q5_6b2023:
+        answers:
+        - {}
+        - {}
+        - correct: true
+        - {}
+        - {}
+        questions:
+        - {}
+      CSD U6 MC Q6_2023:
+        answers:
+        - {}
+        - correct: true
+        - {}
+        - correct: true
+        - {}
+        questions:
+        - {}
+      CSD U6 MC Q6_6b2023:
+        answers:
+        - {}
+        - correct: true
+        - {}
+        - correct: true
+        - {}
+        questions:
+        - {}
+      CSD U6 MC Q7_2023:
+        answers:
+        - {}
+        - {}
+        - {}
+        - correct: true
+        - {}
+        questions:
+        - {}
+      CSD U6 MC Q7_6b2023:
+        answers:
+        - {}
+        - {}
+        - {}
+        - correct: true
+        - {}
+        questions:
+        - {}
       CSD U6 array multi:
         answers:
         - {}
@@ -2005,7 +2680,25 @@ ja-JP:
         questions:
         - {}
         title: 予測する
+      CSD U6 setProperty predict multi_2023:
+        answers:
+        - {}
+        - {}
+        - {}
+        - correct: true
+        questions:
+        - {}
+        title: 予測する
       CSD U6 setProperty predict multi_2222:
+        answers:
+        - {}
+        - {}
+        - {}
+        - correct: true
+        questions:
+        - {}
+        title: 予測する
+      CSD U6 setProperty predict multi_mb2022:
         answers:
         - {}
         - {}
@@ -2144,29 +2837,43 @@ ja-JP:
         display_name: チャレンジ
       CSD games cake challenge choice_2022:
         display_name: チャレンジ
+      CSD games cake challenge choice_2023:
+        display_name: チャレンジ
       CSD games functions practice choice_2021:
         display_name: 関数 練習
       CSD games functions practice choice_2022:
+        display_name: 関数 練習
+      CSD games functions practice choice_2023:
         display_name: 関数 練習
       CSD games platform challenge choice_2021:
         display_name: チャレンジ
       CSD games platform challenge choice_2022:
         display_name: チャレンジ
+      CSD games platform challenge choice_2023:
+        display_name: チャレンジ
       CSD web conditionals practice choice_2021:
         display_name: 条件文 練習
       CSD web conditionals practice choice_2022:
+        display_name: 条件文 練習
+      CSD web conditionals practice choice_2023:
         display_name: 条件文 練習
       CSD web draw loop practice choice_2021:
         display_name: 練習
       CSD web draw loop practice choice_2022:
         display_name: 練習
+      CSD web draw loop practice choice_2023:
+        display_name: 練習
       CSD web movement practice choice_2021:
         display_name: 練習
       CSD web movement practice choice_2022:
         display_name: 練習
+      CSD web movement practice choice_2023:
+        display_name: 練習
       CSD web text practice choice_2021:
         display_name: 練習
       CSD web text practice choice_2022:
+        display_name: 練習
+      CSD web text practice choice_2023:
         display_name: 練習
       CSP PD Example Question 1:
         answers:
@@ -6340,7 +7047,147 @@ ja-JP:
         - correct: true
         questions:
         - {}
+      Student End of Unit Survey - Q1_2023:
+        answers:
+        - correct: true
+        - correct: true
+        - correct: true
+        - correct: true
+        - correct: true
+        questions:
+        - {}
+      Student End of Unit Survey - Q1_copy1_2023:
+        answers:
+        - correct: true
+        - correct: true
+        - correct: true
+        - correct: true
+        - correct: true
+        questions:
+        - {}
+      Student End of Unit Survey - Q1_copy2_2023:
+        answers:
+        - correct: true
+        - correct: true
+        - correct: true
+        - correct: true
+        - correct: true
+        questions:
+        - {}
+      Student End of Unit Survey - Q1_copy3_2023:
+        answers:
+        - correct: true
+        - correct: true
+        - correct: true
+        - correct: true
+        - correct: true
+        questions:
+        - {}
+      Student End of Unit Survey - Q1_copy4_2023:
+        answers:
+        - correct: true
+        - correct: true
+        - correct: true
+        - correct: true
+        - correct: true
+        questions:
+        - {}
+      Student End of Unit Survey - Q1_copy5_2023:
+        answers:
+        - correct: true
+        - correct: true
+        - correct: true
+        - correct: true
+        - correct: true
+        questions:
+        - {}
+      Student End of Unit Survey - Q1_copy6_2023:
+        answers:
+        - correct: true
+        - correct: true
+        - correct: true
+        - correct: true
+        - correct: true
+        questions:
+        - {}
       Student End of Unit Survey - Q2_2022:
+        answers:
+        - correct: true
+        - correct: true
+        - correct: true
+        - correct: true
+        - correct: true
+        - correct: true
+        - correct: true
+        questions:
+        - {}
+      Student End of Unit Survey - Q2_2023:
+        answers:
+        - correct: true
+        - correct: true
+        - correct: true
+        - correct: true
+        - correct: true
+        - correct: true
+        - correct: true
+        questions:
+        - {}
+      Student End of Unit Survey - Q2_copy1_2023:
+        answers:
+        - correct: true
+        - correct: true
+        - correct: true
+        - correct: true
+        - correct: true
+        - correct: true
+        - correct: true
+        questions:
+        - {}
+      Student End of Unit Survey - Q2_copy2_2023:
+        answers:
+        - correct: true
+        - correct: true
+        - correct: true
+        - correct: true
+        - correct: true
+        - correct: true
+        - correct: true
+        questions:
+        - {}
+      Student End of Unit Survey - Q2_copy3_2023:
+        answers:
+        - correct: true
+        - correct: true
+        - correct: true
+        - correct: true
+        - correct: true
+        - correct: true
+        - correct: true
+        questions:
+        - {}
+      Student End of Unit Survey - Q2_copy4_2023:
+        answers:
+        - correct: true
+        - correct: true
+        - correct: true
+        - correct: true
+        - correct: true
+        - correct: true
+        - correct: true
+        questions:
+        - {}
+      Student End of Unit Survey - Q2_copy5_2023:
+        answers:
+        - correct: true
+        - correct: true
+        - correct: true
+        - correct: true
+        - correct: true
+        - correct: true
+        - correct: true
+        questions:
+        - {}
+      Student End of Unit Survey - Q2_copy6_2023:
         answers:
         - correct: true
         - correct: true
@@ -6450,6 +7297,17 @@ ja-JP:
         - correct: true
         questions:
         - {}
+      aiml-ch1-pulse-survey-q1_2023:
+        answers:
+        - correct: true
+        - correct: true
+        - correct: true
+        - correct: true
+        - correct: true
+        - correct: true
+        - correct: true
+        questions:
+        - {}
       aiml-ch1-pulse-survey-q2_2021:
         answers:
         - correct: true
@@ -6462,6 +7320,17 @@ ja-JP:
         questions:
         - {}
       aiml-ch1-pulse-survey-q2_2022:
+        answers:
+        - correct: true
+        - correct: true
+        - correct: true
+        - correct: true
+        - correct: true
+        - correct: true
+        - correct: true
+        questions:
+        - {}
+      aiml-ch1-pulse-survey-q2_2023:
         answers:
         - correct: true
         - correct: true
@@ -6494,6 +7363,17 @@ ja-JP:
         - correct: true
         questions:
         - {}
+      aiml-ch1-pulse-survey-q3_2023:
+        answers:
+        - correct: true
+        - correct: true
+        - correct: true
+        - correct: true
+        - correct: true
+        - correct: true
+        - correct: true
+        questions:
+        - {}
       aiml-ch1-pulse-survey-q4_2021:
         answers:
         - correct: true
@@ -6506,6 +7386,17 @@ ja-JP:
         questions:
         - {}
       aiml-ch1-pulse-survey-q4_2022:
+        answers:
+        - correct: true
+        - correct: true
+        - correct: true
+        - correct: true
+        - correct: true
+        - correct: true
+        - correct: true
+        questions:
+        - {}
+      aiml-ch1-pulse-survey-q4_2023:
         answers:
         - correct: true
         - correct: true
@@ -6538,6 +7429,17 @@ ja-JP:
         - correct: true
         questions:
         - {}
+      aiml-ch1-pulse-survey-q5_2023:
+        answers:
+        - correct: true
+        - correct: true
+        - correct: true
+        - correct: true
+        - correct: true
+        - correct: true
+        - correct: true
+        questions:
+        - {}
       aiml-intro-pulse-survey-q1_2021:
         answers:
         - correct: true
@@ -6546,6 +7448,13 @@ ja-JP:
         questions:
         - {}
       aiml-intro-pulse-survey-q1_2022:
+        answers:
+        - correct: true
+        - correct: true
+        - correct: true
+        questions:
+        - {}
+      aiml-intro-pulse-survey-q1_2023:
         answers:
         - correct: true
         - correct: true
@@ -6566,6 +7475,13 @@ ja-JP:
         - correct: true
         questions:
         - {}
+      aiml-intro-pulse-survey-q2_2023:
+        answers:
+        - correct: true
+        - correct: true
+        - correct: true
+        questions:
+        - {}
       aiml-intro-pulse-survey-q3_2021:
         answers:
         - correct: true
@@ -6578,6 +7494,17 @@ ja-JP:
         questions:
         - {}
       aiml-intro-pulse-survey-q3_2022:
+        answers:
+        - correct: true
+        - correct: true
+        - correct: true
+        - correct: true
+        - correct: true
+        - correct: true
+        - correct: true
+        questions:
+        - {}
+      aiml-intro-pulse-survey-q3_2023:
         answers:
         - correct: true
         - correct: true
@@ -6610,6 +7537,17 @@ ja-JP:
         - correct: true
         questions:
         - {}
+      aiml-intro-pulse-survey-q4_2023:
+        answers:
+        - correct: true
+        - correct: true
+        - correct: true
+        - correct: true
+        - correct: true
+        - correct: true
+        - correct: true
+        questions:
+        - {}
       aiml-intro-pulse-survey-q5_2021:
         answers:
         - correct: true
@@ -6622,6 +7560,17 @@ ja-JP:
         questions:
         - {}
       aiml-intro-pulse-survey-q5_2022:
+        answers:
+        - correct: true
+        - correct: true
+        - correct: true
+        - correct: true
+        - correct: true
+        - correct: true
+        - correct: true
+        questions:
+        - {}
+      aiml-intro-pulse-survey-q5_2023:
         answers:
         - correct: true
         - correct: true
@@ -6711,6 +7660,17 @@ ja-JP:
         - correct: true
         questions:
         - {}
+      be-myself-in-cs_mb2022:
+        answers:
+        - correct: true
+        - correct: true
+        - correct: true
+        - correct: true
+        - correct: true
+        - correct: true
+        - correct: true
+        questions:
+        - {}
       behaviors 1 predict:
         answers:
         - feedback: ふせいかい
@@ -6774,6 +7734,17 @@ ja-JP:
         - correct: true
         questions:
         - {}
+      comfortable-in-cs-class_mb2022:
+        answers:
+        - correct: true
+        - correct: true
+        - correct: true
+        - correct: true
+        - correct: true
+        - correct: true
+        - correct: true
+        questions:
+        - {}
       confident-ability-to-learn:
         answers:
         - correct: true
@@ -6786,6 +7757,28 @@ ja-JP:
         questions:
         - {}
       confident-ability-to-learn_2022:
+        answers:
+        - correct: true
+        - correct: true
+        - correct: true
+        - correct: true
+        - correct: true
+        - correct: true
+        - correct: true
+        questions:
+        - {}
+      confident-ability-to-learn_2023:
+        answers:
+        - correct: true
+        - correct: true
+        - correct: true
+        - correct: true
+        - correct: true
+        - correct: true
+        - correct: true
+        questions:
+        - {}
+      confident-ability-to-learn_mb2022:
         answers:
         - correct: true
         - correct: true
@@ -6830,6 +7823,14 @@ ja-JP:
         questions:
         - {}
       counselor_encourage_2022:
+        answers:
+        - correct: true
+          text: はい
+        - correct: true
+          text: ちがいます
+        questions:
+        - {}
+      counselor_encourage_2023:
         answers:
         - correct: true
           text: はい
@@ -10156,25 +11157,25 @@ ja-JP:
           <a href=\"https://docs.google.com/document/d/1b6w_lOnibUHyDLYCP3rAWED5iElGm6LOQAJwG-hlih0/template/preview\"
           target=\"_blank\"></a> このリソースを使用して、パートナーとフィードバックを共有してください。\n\n"
       csc_ecosystemes_foodchain_info:
-        markdown: "\n##**すべての生態系には_微妙にバランスのとれた_食物連鎖があります** ## #The 海洋生態系の食物連鎖\n:>##
-          #1\n\n\n\n<img src=\"https://images.code.org/2270cbb4656875db210e9871883a7d45-image-1683677265473.jpg\"
-          style= \"width:80%\">\n<div style= \"width: 80%\"> \n\n太陽は藻類が光合成を行うためのエネルギーを供給します。\n>##
-          #2.藻は魚に食べられます。\n>## #3.魚は網のついた漁船を使う人間が捕まえて食べます。 \n\n</div>\n\n\n##**食物連鎖に含まれる1つの生物が多すぎたり少なすぎたりすると、生態系全体に影響を及ぼします。**\n"
+        markdown: "\n##**すべての生態系には、_絶妙にバランスのとれた_食物連鎖があります。**\n###海洋生態系の食物連鎖\n\n\n\n<img
+          src=\"https://images.code.org/2270cbb4656875db210e9871883a7d45-image-1683677265473.jpg\"
+          style= \"width:80%\">\n<div style= \"width: 80%\"> \n\n>###1. 太陽は藻に光合成を起こすためのエネルギーを供給する。\n>###2.
+          藻は魚に食べられる。\n>###3. 魚は、網を持った漁船を使う人間によって捕らえられ、食べられる。\n\n</div>\n\n\n##**食物連鎖の中で、ある生物が多すぎても少なすぎても、生態系全体に影響が出ます。**\n"
       csc_ecosystems_choice_freeplay_2023:
-        description: これらの生態系シミュレーションはそれぞれ調整する必要があります。エコシステムを選択し、シミュレーションを実行して問題を観察し、コードを調整して修正します。
-        display_name: エコシステムを選択してください！
+        description: これらの生態系シミュレーションはそれぞれ調整する必要があります。生態系を選び、シミュレーションを実行して問題を観察し、コードを調整して問題を解決しましょう。
+        display_name: 生態系を選んでください！
       csc_ecosystems_conditionals_overview:
-        markdown: "#Cause & Effect Conditionals \n\n</div>\n\n## 次に、水中の藻類の量を確認するコードを追加します
-          <br>\n<img src=\"https://images.code.org/8be316d4e408466b4300c614712fd652-image-1684798211348.jpg\"
-          \ width=50% style=\"margin-right: 10px; float: right\">\n<br> <br>\n\n-まず、コンピューターが条件が正しいか間違っているかを確認します。\n\n-真であれば、内部のブロックを実行します。\n-false
-          の場合、何も実行されません。\n\n<br>\n<br>\n<br>\n\n## 藻類が多すぎるとサンゴが病気になる\n\n<br>\n\n<img
-          src=\"https://images.code.org/4d8aaa9c6562e0ca0b3d92ff7aed1d03-image-1681847951794.png\"
+        markdown: "#原因と結果の条件 \n\n</div>\n\n## 次に、水の中に藻がどれくらいあるかをチェックするコードを追加します <br>\n<img
+          src=\"https://images.code.org/8be316d4e408466b4300c614712fd652-image-1684798211348.jpg\"
+          \ width=50% style=\"margin-right: 10px; float: right\">\n<br> <br>\n\n-
+          まず、コンピュータは条件が真か偽かをチェックします。\n\n- もし真なら、中のブロックを実行します。\n- もし偽なら、何もしません。\n\n<br>\n<br>\n<br>\n\n##
+          もし藻が多ければ、サンゴは病気になります。\n\n<br>\n\n<img src=\"https://images.code.org/4d8aaa9c6562e0ca0b3d92ff7aed1d03-image-1681847951794.png\"
           \ width=20% style=\"margin-right: 10px; float: left\">\n<img src=\"https://images.code.org/941774921f367566bef36cb712cf2bfb-image-1681840836607.png\"
           \ width=30% style=\" margin-right: 10px; float: left\">\n\n<br>\n<br>\n<br>\n<br>\n<br>\n<br>\n<br>\n<br>\n\n***\n\n\n\n##
-          藻類が少なすぎると魚は出て行ってしまう\n<img src=\"https://images.code.org/6869f418200edfb88190c0a1e4e5cd10-image-1681838202310.png\"
+          藻が少なすぎると、魚は出て行ってしまう\n<img src=\"https://images.code.org/6869f418200edfb88190c0a1e4e5cd10-image-1681838202310.png\"
           \ width=20% style=\"margin-right: 10px; float: left\">\n\n\n<img src=\"https://images.code.org/233178645539bc7966f55af47865096d-image-1681840833690.png\"
           \ width=20% style=\" margin-right: 10px; float: left\">\n\n<br>\n<br>\n<br>\n<br>\n<br>\n<br>\n<br>\n<br>\n<br>\n\n\n***\n\n\n\n##
-          藻類が十分にあれば生態系は健全だ。\n\n<img src=\"https://images.code.org/8bb9247c35d7d167611b02764beaeff3-image-1681838011797.png\"
+          もし藻が十分にあれば、生態系は健全です。\n\n<img src=\"https://images.code.org/8bb9247c35d7d167611b02764beaeff3-image-1681838011797.png\"
           \ width=20% style=\"margin-right: 30px; float: left\">\n<img src=\"https://images.code.org/b1ed2f5c135f9637fd7a9c5778db2b0c-image-1681840830929.png\"
           \ width=30% style=\"margin-left: 10px;float: left\">\n<br>\n<br>\n<br>\n<br>\n\n"
       csc_ecosystems_matching_cfu:
@@ -10183,17 +11184,17 @@ ja-JP:
         - text: "![] (https://images.code.org/d466f0912cd0cadb3d655263c71c072f-image-1683752857648.jpg)"
         - text: "![] (https://images.code.org/de2ab3c63bc2cf7cb319be86d5dcdec0-image-1683752570051.png)"
         markdown: |+
-          ##
+          ## 持続可能な3つの漁業を見てください
 
-          持続可能な漁業の3つの方法を見てみてくださいコードをマッチする画像にドラッグしてください。
+          コードを一致する画像にドラッグしてください。
 
         questions:
-        - text: ボート用のフィッシングゾーンを作ろう！[] (https://images.code.org/5f5e0640a82242d632db10b872280e18-image-1683753001613.gif)
+        - text: 船のための漁業区域を作ろう！[] (https://images.code.org/5f5e0640a82242d632db10b872280e18-image-1683753001613.gif)
         - text: |2-
 
-            釣りシーズンとノーフィッシングシーズンを始めましょう！[] (https://images.code.org/becad47fd19a4d0e938a0cd10c404e41-image-1683838684289.gif)
-        - text: 釣りの制限を設定してください！[] (https://images.code.org/f8bbd98ff6199af5d3ad23d64f39629d-image-1683753402925.gif)
-        title: コードを画像に合わせる
+            漁期と禁漁期の開始！[] (https://images.code.org/becad47fd19a4d0e938a0cd10c404e41-image-1683838684289.gif)
+        - text: 漁獲制限を設定してください！[] (https://images.code.org/f8bbd98ff6199af5d3ad23d64f39629d-image-1683753402925.gif)
+        title: コードを画像を一致させます
       csc_ecosystems_matching_conditionals:
         answers:
         - text: "![] (https://images.code.org/db1db479bec9b40c6e0574ade394d32b-image-1680118613718.36.41
@@ -10203,62 +11204,94 @@ ja-JP:
         - text: "![] (https://images.code.org/412968ba617ef19d2049e0e63d271937-image-1680118620636.30.50
             PM.png)"
         markdown: |
-          ## 3つの生態系を見てみましょう
+          ## 3つの生態系を見ましょう
 
-          1つの生態系はバランスが取れており、他の2つはそれぞれバランスが取れていて不均衡です。コードを一致する画像にドラッグします。
+          ひとつの生態系はバランスが取れており、他の2つの生態系はそれぞれ異なる形でバランスが崩れています。コードを一致する画像にドラッグしてください。
         questions:
-        - text: 藻が少なすぎると魚が逃げてしまいます。![] (https://images.code.org/c0a28473307b7e9b0e827532d2a6ddda-image-1680212227032.png)
+        - text: 藻が少なすぎたら、魚が出て行ってしまう。![] (https://images.code.org/c0a28473307b7e9b0e827532d2a6ddda-image-1680212227032.png)
         - text: |-
-            藻類が多すぎるとサンゴが病気になります。 <br>
+            藻類が多すぎたらサンゴが病気になります。 <br>
             ![] (https://images.code.org/1230fd96832b692b0c8ab88e77957f33-image-1680212254888.png)
-        - text: ちょうどいい量の藻類は、病気のサンゴを癒し、魚も健康に保ちます。[] (https://images.code.org/3dd061538a7a73285aa0916fdde34e77-image-1680212284869.png)
-        title: コードを画像に合わせる
+        - text: 適度な量の藻は、病気のサンゴを回復させ、魚の健康も保ちます。[] (https://images.code.org/3dd061538a7a73285aa0916fdde34e77-image-1680212284869.png)
+        title: コードを画像を一致させます
       csc_ecosystems_matching_events:
         answers:
         - text: "![] (https://images.code.org/bf70d0664e68690f2359a48365e50ccc-image-1680556679495.16.33
             PM.png)"
         - text: "![] (https://images.code.org/fe4d2803162186a8e53ec0027f27a206-image-1680556683660.36.04
             PM.png)"
-        markdown: |+
-          両方のアニメーションでスプライトが接触するとどうなるか見てみましょう。次に、コードの各画像を対応する画像にドラッグします。
-
-
+        markdown: "両方のアニメーションでスプライトが触れたときに何が起こるか見てみましょう。次に、それぞれのコードの絵を、対応する画像にドラッグしてください。\n\n"
         questions:
-        - text: ボートが魚を捕まえます。![] (https://images.code.org/bcdefefdd1787330e3ad72558b5b492d-image-1680556053866.gif)
-        - text: 魚は藻を食べます。![] (https://images.code.org/73febc58a3d23fbf4c66e693abec9e3d-image-1680556608027.gif)
-        title: コードをアニメーションに合わせる
+        - text: 船が魚を捕まえます。![] (https://images.code.org/bcdefefdd1787330e3ad72558b5b492d-image-1680556053866.gif)
+        - text: 魚が藻を食べます。![] (https://images.code.org/73febc58a3d23fbf4c66e693abec9e3d-image-1680556608027.gif)
+        title: コードをアニメーションに一致させます
       csc_ecosystems_overfishing_solution2_overview:
-        markdown: "> #Sustainable フィッシング・プラクティス #2:\n>># #Create 釣りシーズン <img src=\"https://images.code.org/123dd5c82e4c03dcbc32b775fd16ec60-image-1681937158113.png\"
-          \ width=400 style=\"margin-right: 30px; float: left\">\n**人が魚を釣れる時間に制限を設けてください。漁期でなければ、
-          \n<br>\n\n生態系は回復する時間があります。** #Save our Seas! \n<img src=\"https://images.code.org/f3f55eddff9891464c8fb5a5405c31c3-image-1681781301257.png\"
-          width=250 style=\"margin-left: 30px; margin-bottom: 30px; float: right\">\n<img
-          src=\"https://images.code.org/cbccfc42b7e1fe329ac7c9c37dfcb6b5-image-1681781296669.png\"
-          width=250 style=\"margin-left: 30px; margin-bottom: 30px; float: right\">\n\n</div>\n\n###
-          乱獲は、海洋生物の生態系やそれに依存する人々に害を及ぼす恐れのある問題です。これらの生態系を保護し、魚の個体数を健康に保つためには、持続可能な漁業を実践することが重要です。\n\n\n\n<br>\n<br>\n<br>\n"
+        markdown: |
+          背景の下で、漁業区域でのみ釣りを始めるを>#持続可能な漁業の実践#2に接続します：
+          >>##漁期を設定する。
+          **人々が魚を獲れる時期に制限を設ける。漁期でないときは生態系が回復する時間があります。
+          <br>
+
+          #海を救おう！
+          <img src="https://images.code.org/f3f55eddff9891464c8fb5a5405c31c3-image-1681781301257.png" width=250 style="margin-left: 30px; margin-bottom: 30px; float: right">
+          <img src="https://images.code.org/cbccfc42b7e1fe329ac7c9c37dfcb6b5-image-1681781296669.png" width=250 style="margin-left: 30px; margin-bottom: 30px; float: right">
+
+          </div>
+
+          ### 乱獲は、海洋生物の生態系とそれに依存する人々に害を与える問題です。これらの生態系を保護し、魚の個体数を健全に保つためには、持続可能な漁業を実践することが重要です。
+
+
+          <br>
+          <br>
+          <br>
       csc_ecosystems_overfishing_solution3_overview:
-        markdown: "> #Sustainable 釣り慣行 #3:\n>># #Set 釣りの限界 <img src=\"https://images.code.org/58d4ca52deba39a990c3165ba16e284b-image-1681747630352.png\"
-          \ width=300 style=\"margin-right: 30px; float: left\">\n**科学者は、海に害を及ぼさずに何匹の魚を捕まえることができるかを調べるのを手伝ってくれます。そうすれば、漁師はその数の魚しか釣れないことを知るでしょう。**
-          #Save our Seas! \n<br>\n<br>\n<br>\n\n \n<img src=\"https://images.code.org/35e557d27c4bdb5f546da560716dc10b-image-1681756387784.jpg\"
-          width=400 style=\"margin-left: 30px; margin-bottom: 30px; float: right\">\n</div>\n\n###
-          力を合わせることで、何世代にもわたって海を生き生きとさせ続けることができるのです！\n\n\n\n<br>\n<br>\n<br>\n\n"
+        markdown: |+
+          >#持続可能な漁業の実践#3：
+          >>##漁獲制限の設定 <0
+          **科学者は、海に害を与えることなく漁獲できる魚の数を割り出すことができます。そうすれば、漁師はその数しか獲ってはいけないことがわかります。
+          <br>
+          <br>
+          <br>
+
+          #海を救おう！
+          <img src="https://images.code.org/35e557d27c4bdb5f546da560716dc10b-image-1681756387784.jpg" width=400 style="margin-left: 30px; margin-bottom: 30px; float: right">
+          </div>
+
+          ### みんなで協力することで、海を何世代にもわたって生命でいっぱいに保つことができます！
+
+          <br>
+          <br>
+          <br>
+
       csc_ecosystems_overfishing_solutions_overview:
-        markdown: "#Save 我らの海！ \n<img src=\"https://images.code.org/d4267a1de975b8ea46468f74187eb95c-image-1681756621010.jpg\"
-          width=400 style=\"margin-left: 30px; margin-bottom: 30px; float: right\">\n</div>\n\n##
-          #海にはたくさんの魚がいますが、魚を捕まえすぎると生態系に悪影響を及ぼすこともあります。次のレベルでは、海洋生態系の保護に役立つ**持続可能な漁業慣行**をコーディングします。\n\n<br>\n\n##
-          #To 海洋の持続可能な解決策についてもっと読む:ここをクリック > #Sustainable Fishing <a href=\"https://www.seafoodwatch.org/seafood-basics/sustainable-solutions/avoid-overfishing\"
-          target=\"_blank\"></a>\n<br>\n<br>\n\n練習 #1:\n>> # #Fishing ゾーン <img src=\"https://images.code.org/c33e46309c5335dc557c67c34310e723-image-1681511054034.png\"
-          \ width=300 style=\"margin-right: 30px; float: left\">\n**漁船は指定されたエリアでのみ釣りをすることができます。生態系の回復のため、漁船の立ち入りが禁止されている地域もあります。**
-          \n<br>\n<br>\n\n\n"
+        markdown: |+
+          #海を救おう
+          <img src="https://images.code.org/d4267a1de975b8ea46468f74187eb95c-image-1681756621010.jpg" width=400 style="margin-left: 30px; margin-bottom: 30px; float: right">
+          </div>
+
+          ### 海にはたくさんの魚がいますが、時々人々は魚を捕りすぎて生態系に悪影響を及ぼすことがあります。次からのレベルでは、海の生態系を守るための**3つの異なる持続可能な漁業**をコーディングします。
+
+          <br>
+
+          ###海のための持続可能な解決策についてもっと読むには： <a href="https://www.seafoodwatch.org/seafood-basics/sustainable-solutions/avoid-overfishing" target="_blank">ここをクリック</3
+          <br>
+          <br>
+
+          >#持続可能な漁業の実践その1：
+          >> ##漁業区域 <4
+          **漁船は指定された区域でのみ漁ができる。生態系を回復させるため、漁船が立ち入れない区域もある。
+          <br>
+          <br>
+
+
       csc_ecosystems_planning:
-        markdown: "# #Share あなたの生態系シミュレーション！\n<img src=\"https://images.code.org/c480c5c42d9c02e154943f49bbed87ff-image-1675984438344.13.53
-          PM.png\" style= \"width:50%\">\n<div style= \"width: 60%\"> \n\n###**エコロジスト！今こそ研究を分かち合う時です！**\n\n##
-          #Explain 以下の観察結果をごらんください:\n\n>1.生態系内の食物連鎖と、それをどのようにコーディングしたかを説明してください。\n>2.生物は多すぎたのか、少なすぎたのか？\n>3。シミュレーションに加えた変更を説明してください。
-          \n>4.値を変えて気づいたことはありますか？\n</div>\n\n<div style=\"background-color: #a6e3e8;
-          border-radius: 10px; color: #000000; width: 95%; padding: 0.5px 20px 1px
-          20px;\">\n\n<p style=\"line-height: 1.5; margin-left: 10px; margin-right:
-          10px; margin-top: 20px; margin-bottom: 20px; font-size: 18px; \">\n\n###**さらにコーディングする準備はできていますか？**
-          code.org の [エクスプレス・コース] (https://studio.code.org/s/express-2022) \nを試して、自分のペースでコンピュータ・サイエンスをもっと学びましょう。
-          \  \n<br>\n</p></div>\n"
+        markdown: "#生態系シミュレーションを共有しよう！\n<img src=\"https://images.code.org/c480c5c42d9c02e154943f49bbed87ff-image-1675984438344.13.53
+          PM.png\" style= \"width:50%\">\n<div style= \"width: 60%\"> \n\n###**生態学者の皆さん！あなたの研究を共有する時が来ました！***。\n\n###あなたが行った以下の観察について説明してください：\n\n>1.
+          あなたの生態系における食物連鎖と、それをどのようにコード化したか説明してください。\n>2.生物は多すぎましたか、それとも少なすぎましたか？\n>3.シミュレーションに加えた修正を説明してください。\n>4.数値を変更した後、どのようなことに気づきましたか？\n</div>\n\n<div
+          style=\"background-color: #a6e3e8; border-radius: 10px; color: #000000;
+          width: 95%; padding: 0.5px 20px 1px 20px;\">\n\n<p style=\"line-height:
+          1.5; margin-left: 10px; margin-right: 10px; margin-top: 20px; margin-bottom:
+          20px; font-size: 18px; \">\n\n###**コーディングの準備はできましたか？\ncode.orgの[エクスプレスコース](https://studio.code.org/s/express-2022)を試して、自分のペースでコンピューターサイエンスを学びましょう。\n<br>\n</p></div>\n"
       csc_mappinglandmarks_markdown_lesson_2:
         markdown: |+
           # #Plan
@@ -10858,6 +11891,28 @@ ja-JP:
         - correct: true
         questions:
         - {}
+      csd-post-survey-confidence-cs_mb2022:
+        answers:
+        - correct: true
+        - correct: true
+        - correct: true
+        - correct: true
+        - correct: true
+        - correct: true
+        - correct: true
+        questions:
+        - {}
+      csd-post-survey-interested-cs_mb2022:
+        answers:
+        - correct: true
+        - correct: true
+        - correct: true
+        - correct: true
+        - correct: true
+        - correct: true
+        - correct: true
+        questions:
+        - {}
       csd-post-survey-levelgroup-2018:
         title: CS発見期末アンケート
       csd-post-survey-q26:
@@ -10999,6 +12054,36 @@ ja-JP:
         - correct: true
         questions:
         - {}
+      csd-post-survey-show-friend_mb2022:
+        answers:
+        - correct: true
+          text: はい
+        - correct: true
+          text: いいえ
+        questions:
+        - {}
+      csd-post-survey-solve-real-world_mb2022:
+        answers:
+        - correct: true
+        - correct: true
+        - correct: true
+        - correct: true
+        - correct: true
+        - correct: true
+        - correct: true
+        questions:
+        - {}
+      csd-post-survey-take-more-classes_mb2022:
+        answers:
+        - correct: true
+        - correct: true
+        - correct: true
+        - correct: true
+        - correct: true
+        - correct: true
+        - correct: true
+        questions:
+        - {}
       csd-post-survey-unit1-preamble:
         content1: 説明
       csd-post-survey-unit2-preamble:
@@ -11099,6 +12184,17 @@ ja-JP:
         - correct: true
         questions:
         - {}
+      csd-pulse-check-survey-1-q1 U2Ch1_2019_pilot_2023:
+        answers:
+        - correct: true
+        - correct: true
+        - correct: true
+        - correct: true
+        - correct: true
+        - correct: true
+        - correct: true
+        questions:
+        - {}
       csd-pulse-check-survey-1-q1 U2Ch2:
         answers:
         - correct: true
@@ -11166,6 +12262,17 @@ ja-JP:
         questions:
         - {}
       csd-pulse-check-survey-1-q1 U3Ch1_2019_pilot_2022:
+        answers:
+        - correct: true
+        - correct: true
+        - correct: true
+        - correct: true
+        - correct: true
+        - correct: true
+        - correct: true
+        questions:
+        - {}
+      csd-pulse-check-survey-1-q1 U3Ch1_2019_pilot_2023:
         answers:
         - correct: true
         - correct: true
@@ -11254,6 +12361,17 @@ ja-JP:
         questions:
         - {}
       csd-pulse-check-survey-1-q1 U4Ch1_2022:
+        answers:
+        - correct: true
+        - correct: true
+        - correct: true
+        - correct: true
+        - correct: true
+        - correct: true
+        - correct: true
+        questions:
+        - {}
+      csd-pulse-check-survey-1-q1 U4Ch1_2023:
         answers:
         - correct: true
         - correct: true
@@ -11363,6 +12481,17 @@ ja-JP:
         - correct: true
         questions:
         - {}
+      csd-pulse-check-survey-1-q1 U5Ch1_2023:
+        answers:
+        - correct: true
+        - correct: true
+        - correct: true
+        - correct: true
+        - correct: true
+        - correct: true
+        - correct: true
+        questions:
+        - {}
       csd-pulse-check-survey-1-q1 U5Ch2:
         answers:
         - correct: true
@@ -11451,7 +12580,29 @@ ja-JP:
         - correct: true
         questions:
         - {}
+      csd-pulse-check-survey-1-q1 U6Ch1_2023a_2023:
+        answers:
+        - correct: true
+        - correct: true
+        - correct: true
+        - correct: true
+        - correct: true
+        - correct: true
+        - correct: true
+        questions:
+        - {}
       csd-pulse-check-survey-1-q1 U6Ch1_2222:
+        answers:
+        - correct: true
+        - correct: true
+        - correct: true
+        - correct: true
+        - correct: true
+        - correct: true
+        - correct: true
+        questions:
+        - {}
+      csd-pulse-check-survey-1-q1 U6Ch1_mb2022:
         answers:
         - correct: true
         - correct: true
@@ -11594,6 +12745,17 @@ ja-JP:
         - correct: true
         questions:
         - {}
+      csd-pulse-check-survey-1-q2 U2Ch1_2019_pilot_2023:
+        answers:
+        - correct: true
+        - correct: true
+        - correct: true
+        - correct: true
+        - correct: true
+        - correct: true
+        - correct: true
+        questions:
+        - {}
       csd-pulse-check-survey-1-q2 U2Ch2:
         answers:
         - correct: true
@@ -11661,6 +12823,17 @@ ja-JP:
         questions:
         - {}
       csd-pulse-check-survey-1-q2 U3Ch1_2019_pilot_2022:
+        answers:
+        - correct: true
+        - correct: true
+        - correct: true
+        - correct: true
+        - correct: true
+        - correct: true
+        - correct: true
+        questions:
+        - {}
+      csd-pulse-check-survey-1-q2 U3Ch1_2019_pilot_2023:
         answers:
         - correct: true
         - correct: true
@@ -11749,6 +12922,17 @@ ja-JP:
         questions:
         - {}
       csd-pulse-check-survey-1-q2 U4Ch1_2022:
+        answers:
+        - correct: true
+        - correct: true
+        - correct: true
+        - correct: true
+        - correct: true
+        - correct: true
+        - correct: true
+        questions:
+        - {}
+      csd-pulse-check-survey-1-q2 U4Ch1_2023:
         answers:
         - correct: true
         - correct: true
@@ -11858,6 +13042,17 @@ ja-JP:
         - correct: true
         questions:
         - {}
+      csd-pulse-check-survey-1-q2 U5Ch1_2023:
+        answers:
+        - correct: true
+        - correct: true
+        - correct: true
+        - correct: true
+        - correct: true
+        - correct: true
+        - correct: true
+        questions:
+        - {}
       csd-pulse-check-survey-1-q2 U5Ch2:
         answers:
         - correct: true
@@ -11946,7 +13141,29 @@ ja-JP:
         - correct: true
         questions:
         - {}
+      csd-pulse-check-survey-1-q2 U6Ch1_2023a_2023:
+        answers:
+        - correct: true
+        - correct: true
+        - correct: true
+        - correct: true
+        - correct: true
+        - correct: true
+        - correct: true
+        questions:
+        - {}
       csd-pulse-check-survey-1-q2 U6Ch1_2222:
+        answers:
+        - correct: true
+        - correct: true
+        - correct: true
+        - correct: true
+        - correct: true
+        - correct: true
+        - correct: true
+        questions:
+        - {}
+      csd-pulse-check-survey-1-q2 U6Ch1_mb2022:
         answers:
         - correct: true
         - correct: true
@@ -12089,6 +13306,17 @@ ja-JP:
         - correct: true
         questions:
         - {}
+      csd-pulse-check-survey-1-q3 U2Ch1_2019_pilot_2023:
+        answers:
+        - correct: true
+        - correct: true
+        - correct: true
+        - correct: true
+        - correct: true
+        - correct: true
+        - correct: true
+        questions:
+        - {}
       csd-pulse-check-survey-1-q3 U2Ch2:
         answers:
         - correct: true
@@ -12156,6 +13384,17 @@ ja-JP:
         questions:
         - {}
       csd-pulse-check-survey-1-q3 U3Ch1_2019_pilot_2022:
+        answers:
+        - correct: true
+        - correct: true
+        - correct: true
+        - correct: true
+        - correct: true
+        - correct: true
+        - correct: true
+        questions:
+        - {}
+      csd-pulse-check-survey-1-q3 U3Ch1_2019_pilot_2023:
         answers:
         - correct: true
         - correct: true
@@ -12244,6 +13483,17 @@ ja-JP:
         questions:
         - {}
       csd-pulse-check-survey-1-q3 U4Ch1_2022:
+        answers:
+        - correct: true
+        - correct: true
+        - correct: true
+        - correct: true
+        - correct: true
+        - correct: true
+        - correct: true
+        questions:
+        - {}
+      csd-pulse-check-survey-1-q3 U4Ch1_2023:
         answers:
         - correct: true
         - correct: true
@@ -12353,6 +13603,17 @@ ja-JP:
         - correct: true
         questions:
         - {}
+      csd-pulse-check-survey-1-q3 U5Ch1_2023:
+        answers:
+        - correct: true
+        - correct: true
+        - correct: true
+        - correct: true
+        - correct: true
+        - correct: true
+        - correct: true
+        questions:
+        - {}
       csd-pulse-check-survey-1-q3 U5Ch2:
         answers:
         - correct: true
@@ -12441,7 +13702,29 @@ ja-JP:
         - correct: true
         questions:
         - {}
+      csd-pulse-check-survey-1-q3 U6Ch1_2023a_2023:
+        answers:
+        - correct: true
+        - correct: true
+        - correct: true
+        - correct: true
+        - correct: true
+        - correct: true
+        - correct: true
+        questions:
+        - {}
       csd-pulse-check-survey-1-q3 U6Ch1_2222:
+        answers:
+        - correct: true
+        - correct: true
+        - correct: true
+        - correct: true
+        - correct: true
+        - correct: true
+        - correct: true
+        questions:
+        - {}
+      csd-pulse-check-survey-1-q3 U6Ch1_mb2022:
         answers:
         - correct: true
         - correct: true
@@ -12584,6 +13867,17 @@ ja-JP:
         - correct: true
         questions:
         - {}
+      csd-pulse-check-survey-1-q4 U2Ch1_2019_pilot_2023:
+        answers:
+        - correct: true
+        - correct: true
+        - correct: true
+        - correct: true
+        - correct: true
+        - correct: true
+        - correct: true
+        questions:
+        - {}
       csd-pulse-check-survey-1-q4 U2Ch2:
         answers:
         - correct: true
@@ -12651,6 +13945,17 @@ ja-JP:
         questions:
         - {}
       csd-pulse-check-survey-1-q4 U3Ch1_2019_pilot_2022:
+        answers:
+        - correct: true
+        - correct: true
+        - correct: true
+        - correct: true
+        - correct: true
+        - correct: true
+        - correct: true
+        questions:
+        - {}
+      csd-pulse-check-survey-1-q4 U3Ch1_2019_pilot_2023:
         answers:
         - correct: true
         - correct: true
@@ -12739,6 +14044,17 @@ ja-JP:
         questions:
         - {}
       csd-pulse-check-survey-1-q4 U4Ch1_2022:
+        answers:
+        - correct: true
+        - correct: true
+        - correct: true
+        - correct: true
+        - correct: true
+        - correct: true
+        - correct: true
+        questions:
+        - {}
+      csd-pulse-check-survey-1-q4 U4Ch1_2023:
         answers:
         - correct: true
         - correct: true
@@ -12848,6 +14164,17 @@ ja-JP:
         - correct: true
         questions:
         - {}
+      csd-pulse-check-survey-1-q4 U5Ch1_2023:
+        answers:
+        - correct: true
+        - correct: true
+        - correct: true
+        - correct: true
+        - correct: true
+        - correct: true
+        - correct: true
+        questions:
+        - {}
       csd-pulse-check-survey-1-q4 U5Ch2:
         answers:
         - correct: true
@@ -12936,7 +14263,29 @@ ja-JP:
         - correct: true
         questions:
         - {}
+      csd-pulse-check-survey-1-q4 U6Ch1_2023a_2023:
+        answers:
+        - correct: true
+        - correct: true
+        - correct: true
+        - correct: true
+        - correct: true
+        - correct: true
+        - correct: true
+        questions:
+        - {}
       csd-pulse-check-survey-1-q4 U6Ch1_2222:
+        answers:
+        - correct: true
+        - correct: true
+        - correct: true
+        - correct: true
+        - correct: true
+        - correct: true
+        - correct: true
+        questions:
+        - {}
+      csd-pulse-check-survey-1-q4 U6Ch1_mb2022:
         answers:
         - correct: true
         - correct: true
@@ -13079,6 +14428,17 @@ ja-JP:
         - correct: true
         questions:
         - {}
+      csd-pulse-check-survey-1-q5 U2Ch1_2019_pilot_2023:
+        answers:
+        - correct: true
+        - correct: true
+        - correct: true
+        - correct: true
+        - correct: true
+        - correct: true
+        - correct: true
+        questions:
+        - {}
       csd-pulse-check-survey-1-q5 U2Ch2:
         answers:
         - correct: true
@@ -13146,6 +14506,17 @@ ja-JP:
         questions:
         - {}
       csd-pulse-check-survey-1-q5 U3Ch1_2019_pilot_2022:
+        answers:
+        - correct: true
+        - correct: true
+        - correct: true
+        - correct: true
+        - correct: true
+        - correct: true
+        - correct: true
+        questions:
+        - {}
+      csd-pulse-check-survey-1-q5 U3Ch1_2019_pilot_2023:
         answers:
         - correct: true
         - correct: true
@@ -13234,6 +14605,17 @@ ja-JP:
         questions:
         - {}
       csd-pulse-check-survey-1-q5 U4Ch1_2022:
+        answers:
+        - correct: true
+        - correct: true
+        - correct: true
+        - correct: true
+        - correct: true
+        - correct: true
+        - correct: true
+        questions:
+        - {}
+      csd-pulse-check-survey-1-q5 U4Ch1_2023:
         answers:
         - correct: true
         - correct: true
@@ -13343,6 +14725,17 @@ ja-JP:
         - correct: true
         questions:
         - {}
+      csd-pulse-check-survey-1-q5 U5Ch1_2023:
+        answers:
+        - correct: true
+        - correct: true
+        - correct: true
+        - correct: true
+        - correct: true
+        - correct: true
+        - correct: true
+        questions:
+        - {}
       csd-pulse-check-survey-1-q5 U5Ch2:
         answers:
         - correct: true
@@ -13431,7 +14824,29 @@ ja-JP:
         - correct: true
         questions:
         - {}
+      csd-pulse-check-survey-1-q5 U6Ch1_2023a_2023:
+        answers:
+        - correct: true
+        - correct: true
+        - correct: true
+        - correct: true
+        - correct: true
+        - correct: true
+        - correct: true
+        questions:
+        - {}
       csd-pulse-check-survey-1-q5 U6Ch1_2222:
+        answers:
+        - correct: true
+        - correct: true
+        - correct: true
+        - correct: true
+        - correct: true
+        - correct: true
+        - correct: true
+        questions:
+        - {}
+      csd-pulse-check-survey-1-q5 U6Ch1_mb2022:
         answers:
         - correct: true
         - correct: true
@@ -13878,6 +15293,17 @@ ja-JP:
         - correct: true
         questions:
         - {}
+      csp-post-survey-2017-q22_mb2022:
+        answers:
+        - correct: true
+        - correct: true
+        - correct: true
+        - correct: true
+        - correct: true
+        - correct: true
+        - correct: true
+        questions:
+        - {}
       csp-post-survey-2017-q23:
         answers:
         - correct: true
@@ -14155,6 +15581,17 @@ ja-JP:
         - correct: true
         questions:
         - {}
+      csp-pre-survey-2017-q10_copy2_2023:
+        answers:
+        - correct: true
+        - correct: true
+        - correct: true
+        - correct: true
+        - correct: true
+        - correct: true
+        - correct: true
+        questions:
+        - {}
       csp-pre-survey-2017-q11:
         answers:
         - correct: true
@@ -14243,6 +15680,17 @@ ja-JP:
         - correct: true
         questions:
         - {}
+      csp-pre-survey-2017-q13_2023:
+        answers:
+        - correct: true
+        - correct: true
+        - correct: true
+        - correct: true
+        - correct: true
+        - correct: true
+        - correct: true
+        questions:
+        - {}
       csp-pre-survey-2017-q14:
         answers:
         - correct: true
@@ -14309,6 +15757,17 @@ ja-JP:
         - correct: true
         questions:
         - {}
+      csp-pre-survey-2017-q16_copy2_2023:
+        answers:
+        - correct: true
+        - correct: true
+        - correct: true
+        - correct: true
+        - correct: true
+        - correct: true
+        - correct: true
+        questions:
+        - {}
       csp-pre-survey-2017-q17:
         answers:
         - correct: true
@@ -14343,6 +15802,17 @@ ja-JP:
         questions:
         - {}
       csp-pre-survey-2017-q17_2022:
+        answers:
+        - correct: true
+        - correct: true
+        - correct: true
+        - correct: true
+        - correct: true
+        - correct: true
+        - correct: true
+        questions:
+        - {}
+      csp-pre-survey-2017-q17_copy2_2023:
         answers:
         - correct: true
         - correct: true
@@ -14419,6 +15889,17 @@ ja-JP:
         - correct: true
         questions:
         - {}
+      csp-pre-survey-2017-q19_2023:
+        answers:
+        - correct: true
+        - correct: true
+        - correct: true
+        - correct: true
+        - correct: true
+        - correct: true
+        - correct: true
+        questions:
+        - {}
       csp-pre-survey-2017-q1_2018:
         answers:
         - correct: true
@@ -14485,6 +15966,28 @@ ja-JP:
         - correct: true
         questions:
         - {}
+      csp-pre-survey-2017-q20_2023:
+        answers:
+        - correct: true
+        - correct: true
+        - correct: true
+        - correct: true
+        - correct: true
+        - correct: true
+        - correct: true
+        questions:
+        - {}
+      csp-pre-survey-2017-q20_mb2022:
+        answers:
+        - correct: true
+        - correct: true
+        - correct: true
+        - correct: true
+        - correct: true
+        - correct: true
+        - correct: true
+        questions:
+        - {}
       csp-pre-survey-2017-q21:
         answers:
         - correct: true
@@ -14541,6 +16044,28 @@ ja-JP:
         questions:
         - {}
       csp-pre-survey-2017-q22_2022:
+        answers:
+        - correct: true
+        - correct: true
+        - correct: true
+        - correct: true
+        - correct: true
+        - correct: true
+        - correct: true
+        questions:
+        - {}
+      csp-pre-survey-2017-q22_2023:
+        answers:
+        - correct: true
+        - correct: true
+        - correct: true
+        - correct: true
+        - correct: true
+        - correct: true
+        - correct: true
+        questions:
+        - {}
+      csp-pre-survey-2017-q22_mb2022:
         answers:
         - correct: true
         - correct: true
@@ -14771,6 +16296,17 @@ ja-JP:
         - correct: true
         questions:
         - {}
+      csp-pre-survey-2017-q30_2023:
+        answers:
+        - correct: true
+        - correct: true
+        - correct: true
+        - correct: true
+        - correct: true
+        - correct: true
+        - correct: true
+        questions:
+        - {}
       csp-pre-survey-2017-q31:
         answers:
         - correct: true
@@ -14805,6 +16341,28 @@ ja-JP:
         questions:
         - {}
       csp-pre-survey-2017-q31_2022:
+        answers:
+        - correct: true
+        - correct: true
+        - correct: true
+        - correct: true
+        - correct: true
+        - correct: true
+        - correct: true
+        questions:
+        - {}
+      csp-pre-survey-2017-q31_2023:
+        answers:
+        - correct: true
+        - correct: true
+        - correct: true
+        - correct: true
+        - correct: true
+        - correct: true
+        - correct: true
+        questions:
+        - {}
+      csp-pre-survey-2017-q31_mb2022:
         answers:
         - correct: true
         - correct: true
@@ -14916,6 +16474,17 @@ ja-JP:
         - correct: true
         questions:
         - {}
+      csp-pre-survey-2017-q3_copy2_2023:
+        answers:
+        - correct: true
+        - correct: true
+        - correct: true
+        - correct: true
+        - correct: true
+        - correct: true
+        - correct: true
+        questions:
+        - {}
       csp-pre-survey-2017-q4:
         answers:
         - correct: true
@@ -14972,6 +16541,39 @@ ja-JP:
         questions:
         - {}
       csp-pre-survey-2017-q4_2022:
+        answers:
+        - correct: true
+        - correct: true
+        - correct: true
+        - correct: true
+        - correct: true
+        - correct: true
+        - correct: true
+        questions:
+        - {}
+      csp-pre-survey-2017-q4_copy1_mb2022:
+        answers:
+        - correct: true
+        - correct: true
+        - correct: true
+        - correct: true
+        - correct: true
+        - correct: true
+        - correct: true
+        questions:
+        - {}
+      csp-pre-survey-2017-q4_copy2_2023:
+        answers:
+        - correct: true
+        - correct: true
+        - correct: true
+        - correct: true
+        - correct: true
+        - correct: true
+        - correct: true
+        questions:
+        - {}
+      csp-pre-survey-2017-q4_mb2022:
         answers:
         - correct: true
         - correct: true
@@ -15114,6 +16716,17 @@ ja-JP:
         - correct: true
         questions:
         - {}
+      csp-pre-survey-2017-q9_copy2_2023:
+        answers:
+        - correct: true
+        - correct: true
+        - correct: true
+        - correct: true
+        - correct: true
+        - correct: true
+        - correct: true
+        questions:
+        - {}
       csp_unit_assessment_overview:
         content1: 説明
         teacher_markdown: "### 注意：この評価は何であり、何ではないか。\n\n* この評価は、AP**の多肢選択式評価の「スタイル」になるように設計されています。\n\n*
@@ -15132,6 +16745,15 @@ ja-JP:
           提出取り消しに関する注意事項:**)\n\nテスト提出の取り消しについて、生徒と明確なルールを決めておかなければなりません。学生は、テストが終わった後に答えを変更する（つまり、カンニングする）良い方法だと思うかもしれませんが、学生がテストを提出した時のタイムスタンプが表示されます。
           \n\n特定の時間以降に提出されたテストについては、採点または評定を行わないことを設定することをお勧めします。 指定された期限までに提出されなかった場合は、受け取っていないのと同じです。"
       curriculum-how-challenging:
+        answers:
+        - correct: true
+        - correct: true
+        - correct: true
+        - correct: true
+        - correct: true
+        questions:
+        - {}
+      curriculum-how-challenging_mb2022:
         answers:
         - correct: true
         - correct: true
@@ -15173,7 +16795,31 @@ ja-JP:
         - correct: true
         questions:
         - {}
+      ever-learned-cs-outside-school_2023:
+        answers:
+        - correct: true
+        - correct: true
+        - correct: true
+        - correct: true
+        questions:
+        - {}
+      ever-learned-cs-outside-school_mb2022:
+        answers:
+        - correct: true
+        - correct: true
+        - correct: true
+        - correct: true
+        questions:
+        - {}
       ever-learned-cs_2022:
+        answers:
+        - correct: true
+        - correct: true
+        - correct: true
+        - correct: true
+        questions:
+        - {}
+      ever-learned-cs_2023:
         answers:
         - correct: true
         - correct: true
@@ -15208,6 +16854,14 @@ ja-JP:
         questions:
         - {}
       family_encourage_2022:
+        answers:
+        - correct: true
+          text: はい
+        - correct: true
+          text: ちがいます
+        questions:
+        - {}
+      family_encourage_2023:
         answers:
         - correct: true
           text: はい
@@ -15433,6 +17087,310 @@ ja-JP:
         - correct: true
         questions:
         - {}
+      interested-in-learning-cs_2023:
+        answers:
+        - correct: true
+        - correct: true
+        - correct: true
+        - correct: true
+        - correct: true
+        - correct: true
+        - correct: true
+        questions:
+        - {}
+      interested-in-learning-cs_mb2022:
+        answers:
+        - correct: true
+        - correct: true
+        - correct: true
+        - correct: true
+        - correct: true
+        - correct: true
+        - correct: true
+        questions:
+        - {}
+      intro-pulse-survey-q1_csd1_2023:
+        answers:
+        - correct: true
+        - correct: true
+        - correct: true
+        questions:
+        - {}
+      intro-pulse-survey-q1_csd2_2023:
+        answers:
+        - correct: true
+        - correct: true
+        - correct: true
+        questions:
+        - {}
+      intro-pulse-survey-q1_csd3_2023:
+        answers:
+        - correct: true
+        - correct: true
+        - correct: true
+        questions:
+        - {}
+      intro-pulse-survey-q1_csd4_2023:
+        answers:
+        - correct: true
+        - correct: true
+        - correct: true
+        questions:
+        - {}
+      intro-pulse-survey-q1_csd5_2023:
+        answers:
+        - correct: true
+        - correct: true
+        - correct: true
+        questions:
+        - {}
+      intro-pulse-survey-q1_csd6_2023:
+        answers:
+        - correct: true
+        - correct: true
+        - correct: true
+        questions:
+        - {}
+      intro-pulse-survey-q2_csd1_2023:
+        answers:
+        - correct: true
+        - correct: true
+        - correct: true
+        questions:
+        - {}
+      intro-pulse-survey-q2_csd2_2023:
+        answers:
+        - correct: true
+        - correct: true
+        - correct: true
+        questions:
+        - {}
+      intro-pulse-survey-q2_csd3_2023:
+        answers:
+        - correct: true
+        - correct: true
+        - correct: true
+        questions:
+        - {}
+      intro-pulse-survey-q2_csd4_2023:
+        answers:
+        - correct: true
+        - correct: true
+        - correct: true
+        questions:
+        - {}
+      intro-pulse-survey-q2_csd5_2023:
+        answers:
+        - correct: true
+        - correct: true
+        - correct: true
+        questions:
+        - {}
+      intro-pulse-survey-q2_csd6_2023:
+        answers:
+        - correct: true
+        - correct: true
+        - correct: true
+        questions:
+        - {}
+      intro-pulse-survey-q3_csd1_2023:
+        answers:
+        - correct: true
+        - correct: true
+        - correct: true
+        - correct: true
+        - correct: true
+        - correct: true
+        - correct: true
+        questions:
+        - {}
+      intro-pulse-survey-q3_csd2_2023:
+        answers:
+        - correct: true
+        - correct: true
+        - correct: true
+        - correct: true
+        - correct: true
+        - correct: true
+        - correct: true
+        questions:
+        - {}
+      intro-pulse-survey-q3_csd3_2023:
+        answers:
+        - correct: true
+        - correct: true
+        - correct: true
+        - correct: true
+        - correct: true
+        - correct: true
+        - correct: true
+        questions:
+        - {}
+      intro-pulse-survey-q3_csd4_2023:
+        answers:
+        - correct: true
+        - correct: true
+        - correct: true
+        - correct: true
+        - correct: true
+        - correct: true
+        - correct: true
+        questions:
+        - {}
+      intro-pulse-survey-q3_csd5_2023:
+        answers:
+        - correct: true
+        - correct: true
+        - correct: true
+        - correct: true
+        - correct: true
+        - correct: true
+        - correct: true
+        questions:
+        - {}
+      intro-pulse-survey-q3_csd6_2023:
+        answers:
+        - correct: true
+        - correct: true
+        - correct: true
+        - correct: true
+        - correct: true
+        - correct: true
+        - correct: true
+        questions:
+        - {}
+      intro-pulse-survey-q4_csd1_2023:
+        answers:
+        - correct: true
+        - correct: true
+        - correct: true
+        - correct: true
+        - correct: true
+        - correct: true
+        - correct: true
+        questions:
+        - {}
+      intro-pulse-survey-q4_csd2_2023:
+        answers:
+        - correct: true
+        - correct: true
+        - correct: true
+        - correct: true
+        - correct: true
+        - correct: true
+        - correct: true
+        questions:
+        - {}
+      intro-pulse-survey-q4_csd3_2023:
+        answers:
+        - correct: true
+        - correct: true
+        - correct: true
+        - correct: true
+        - correct: true
+        - correct: true
+        - correct: true
+        questions:
+        - {}
+      intro-pulse-survey-q4_csd4_2023:
+        answers:
+        - correct: true
+        - correct: true
+        - correct: true
+        - correct: true
+        - correct: true
+        - correct: true
+        - correct: true
+        questions:
+        - {}
+      intro-pulse-survey-q4_csd5_2023:
+        answers:
+        - correct: true
+        - correct: true
+        - correct: true
+        - correct: true
+        - correct: true
+        - correct: true
+        - correct: true
+        questions:
+        - {}
+      intro-pulse-survey-q4_csd6_2023:
+        answers:
+        - correct: true
+        - correct: true
+        - correct: true
+        - correct: true
+        - correct: true
+        - correct: true
+        - correct: true
+        questions:
+        - {}
+      intro-pulse-survey-q5_csd1_2023:
+        answers:
+        - correct: true
+        - correct: true
+        - correct: true
+        - correct: true
+        - correct: true
+        - correct: true
+        - correct: true
+        questions:
+        - {}
+      intro-pulse-survey-q5_csd2_2023:
+        answers:
+        - correct: true
+        - correct: true
+        - correct: true
+        - correct: true
+        - correct: true
+        - correct: true
+        - correct: true
+        questions:
+        - {}
+      intro-pulse-survey-q5_csd3_2023:
+        answers:
+        - correct: true
+        - correct: true
+        - correct: true
+        - correct: true
+        - correct: true
+        - correct: true
+        - correct: true
+        questions:
+        - {}
+      intro-pulse-survey-q5_csd4_2023:
+        answers:
+        - correct: true
+        - correct: true
+        - correct: true
+        - correct: true
+        - correct: true
+        - correct: true
+        - correct: true
+        questions:
+        - {}
+      intro-pulse-survey-q5_csd5_2023:
+        answers:
+        - correct: true
+        - correct: true
+        - correct: true
+        - correct: true
+        - correct: true
+        - correct: true
+        - correct: true
+        questions:
+        - {}
+      intro-pulse-survey-q5_csd6_2023:
+        answers:
+        - correct: true
+        - correct: true
+        - correct: true
+        - correct: true
+        - correct: true
+        - correct: true
+        - correct: true
+        questions:
+        - {}
       made-choices-about-assignments:
         answers:
         - correct: true
@@ -15446,9 +17404,13 @@ ja-JP:
         display_name: あなたのアプリをカスタマイズ
       ml-club app-choice parent_2022:
         display_name: あなたのアプリをカスタマイズ
+      ml-club app-choice parent_2023:
+        display_name: あなたのアプリをカスタマイズ
       ml-intro app lab-book recommender 5-2021:
         display_name: あなたのアプリをカスタマイズ
       ml-intro app lab-book recommender 5_2022:
+        display_name: あなたのアプリをカスタマイズ
+      ml-intro app lab-book recommender 5_2023:
         display_name: あなたのアプリをカスタマイズ
       naturally-better-at-cs:
         answers:
@@ -15483,6 +17445,17 @@ ja-JP:
         - correct: true
         questions:
         - {}
+      naturally-better-at-cs_copy2_2023:
+        answers:
+        - correct: true
+        - correct: true
+        - correct: true
+        - correct: true
+        - correct: true
+        - correct: true
+        - correct: true
+        questions:
+        - {}
       outbreak_story:
         content1: 説明
       outbreak_story2:
@@ -15496,6 +17469,17 @@ ja-JP:
         questions:
         - {}
       post-assessment survey q31-a-2017b:
+        answers:
+        - correct: true
+        - correct: true
+        - correct: true
+        - correct: true
+        - correct: true
+        - correct: true
+        - correct: true
+        questions:
+        - {}
+      post-assessment survey q31-a-2017b_mb2022:
         answers:
         - correct: true
         - correct: true
@@ -15851,6 +17835,18 @@ ja-JP:
         - correct: true
         questions:
         - {}
+      reasons-took-course-csd_2023:
+        answers:
+        - correct: true
+        - correct: true
+        - correct: true
+        - correct: true
+        - correct: true
+        - correct: true
+        - correct: true
+        - correct: true
+        questions:
+        - {}
       same-ability:
         answers:
         - correct: true
@@ -15871,6 +17867,14 @@ ja-JP:
         questions:
         - {}
       someone_else_encourage_2022:
+        answers:
+        - correct: true
+          text: はい
+        - correct: true
+          text: ちがいます
+        questions:
+        - {}
+      someone_else_encourage_2023:
         answers:
         - correct: true
           text: はい
@@ -15906,6 +17910,14 @@ ja-JP:
         questions:
         - {}
       teacher_encourage_2022:
+        answers:
+        - correct: true
+          text: はい
+        - correct: true
+          text: ちがいます
+        questions:
+        - {}
+      teacher_encourage_2023:
         answers:
         - correct: true
           text: はい
@@ -15985,6 +17997,28 @@ ja-JP:
         - correct: true
         questions:
         - {}
+      will-be-myself-in-cs_2023:
+        answers:
+        - correct: true
+        - correct: true
+        - correct: true
+        - correct: true
+        - correct: true
+        - correct: true
+        - correct: true
+        questions:
+        - {}
+      will-be-myself-in-cs_mb2022:
+        answers:
+        - correct: true
+        - correct: true
+        - correct: true
+        - correct: true
+        - correct: true
+        - correct: true
+        - correct: true
+        questions:
+        - {}
       worried-less-capable:
         answers:
         - correct: true
@@ -16008,6 +18042,17 @@ ja-JP:
         questions:
         - {}
       worried-seen-incapable_2022:
+        answers:
+        - correct: true
+        - correct: true
+        - correct: true
+        - correct: true
+        - correct: true
+        - correct: true
+        - correct: true
+        questions:
+        - {}
+      worried-seen-incapable_2023:
         answers:
         - correct: true
         - correct: true

@@ -264,6 +264,10 @@ he:
   call_to_action_register_early_access: הירשם לגישה מוקדמת
   call_to_action_open_positions: הצג עמדות פתוחות
   call_to_action_get_guide: קבל את המדריך
+  call_to_action_donate_to_cdo: לתרום לקוד.org
+  call_to_action_start_fundraiser: התחל גיוס כספים
+  call_to_action_view_donation_policy: צפו במדיניות התרומות
+  call_to_action_view_donate_bitpay: תרום באמצעות BitPay
   aria_label_call_to_action_afe: למידע נוסף על מהנדס העתיד של אמזון
   aria_label_call_to_action_teaching_csf: התחל את תוכנית הלמידה המקצועית של יסודות
     מדעי המחשב
@@ -359,6 +363,7 @@ he:
   curriculum_name_csp: עקרונות מדעי המחשב
   curriculum_name_csc: חיבורי מדעי המחשב
   curriculum_name_csa: AP® מדעי המחשב א
+  curriculum_name_csa_ai: הנדסת תוכנה וראייה ממוחשבת
   curriculum_name_csc_02: כל מודול חיבורי CS
   curriculum_name_ai: בינה מלאכותית ולמידת מכונה
   curriculum_name_artificial_intelligence: בינה מלאכותית (AI)
@@ -426,6 +431,11 @@ he:
     בניית אתרים, אפליקציות, אנימציות, משחקים ומערכות מחשוב פיזיות.
   curriculum_desc_csp: חינם, AP® CSP מאושר, קורס מבוא בתיכון המציג לתלמידים את המושגים
     הבסיסיים של מדעי המחשב.
+  curriculum_desc_csa_ai_long: 'מודול CSA זה בן שני פרקים לאחר AP מציע לתלמידי תיכון
+    ניסיון מעשי בכלים מקצועיים לפיתוח תוכנה, כולל GitHub ו- GitHub Copilot, ומקנה
+    להם את הכישורים בעולם האמיתי לפיתוח תוכנית ראייה ממוחשבת. '
+  curriculum_desc_csa_ai_short: מודול CSA Post-AP® זה מציע לתלמידי תיכון ניסיון מעשי
+    בכלים מקצועיים לפיתוח תוכנה.
   collection_hardware: דגש על חומרה
   collection_hardware_desc: מאפשר לתלמידים להשתמש בנתונים ובמכשירים פיזיים כדי לפתור
     בעיות.
@@ -498,6 +508,7 @@ he:
   module_duration_2_hrs: 2 שעות
   module_duration_3_hrs: 3 שעות
   module_duration_5_hrs: 5 שעות
+  module_duration_5_hrs_plus: 5+ שעות
   module_duration_8_hrs: 8 שעות
   module_duration_20_hrs: 20 שעות
   module_duration_35_hrs: 35 שעות
@@ -570,6 +581,7 @@ he:
   heading_objects_first: אובייקטים ראשונים
   heading_these_lessons_will: 'שיעורים אלה יהיו:'
   heading_explore_curriculum_catalog: חקור את כל הקורסים שלנו בקטלוג תכניות הלימודים
+  heading_csa_ai: מחפש דברים לעשות לאחר בחינת AP®?
   professional_learning_section_desc: קבל את התמיכה שאתה צריך בזמן שאתה מתכונן ללמד.
     מורים אוהבים את זה, עם למעלה מ -90% מדרגים אותו כהתפתחות המקצועית הטובה ביותר
     אי פעם!
@@ -599,6 +611,23 @@ he:
   support_and_questions_section_desc: צוות התמיכה שלנו כאן כדי לענות על כל שאלה שיש
     לך לגבי התחלת הוראה עם Code.org. אתה יכול גם לשאול מורים אחרים על החוויה שלהם
     בפורומי המורים שלנו.
+  subscribe_form_section_title: הירשם לקבלת עדכונים
+  subscribe_form_section_desc_csa: הירשם לקבלת הודעות דוא"ל חודשיות אודות AP® מדעי
+    המחשב A של Code.org וקבל תזכורות, טיפים ועדכונים מועילים שנשלחו ישירות לתיבת הדואר
+    הנכנס שלך.
+  subscribe_form_section_desc_csc: הירשם לקבלת הודעות דוא"ל חודשיות אודות חיבורי מדעי
+    המחשב של Code.org וקבל תזכורות מועילות, טיפים ועדכונים שנשלחו ישירות לתיבת הדואר
+    הנכנס שלך.
+  subscribe_form_section_desc_csd: הירשם לקבלת הודעות דוא"ל חודשיות אודות תגליות מדעי
+    המחשב של Code.org וקבל תזכורות, טיפים ועדכונים מועילים שנשלחו ישירות לתיבת הדואר
+    הנכנס שלך.
+  subscribe_form_section_desc_csf: הירשם לקבלת הודעות דוא"ל חודשיות אודות יסודות מדעי
+    המחשב של Code.org וקבל תזכורות מועילות, טיפים ועדכונים שנשלחו ישירות לתיבת הדואר
+    הנכנס שלך.
+  subscribe_form_section_desc_csp: הירשם לקבלת הודעות דוא"ל חודשיות אודות עקרונות
+    מדעי המחשב של Code.org וקבל תזכורות מועילות, טיפים ועדכונים הנשלחים ישירות לתיבת
+    הדואר הנכנס שלך.
+  subscribe_form_section_unsubscribe: אתה יכול לבטל את המנוי בכל עת.
   blockchain_hero_heading: איך עובד בלוקצ'יין
   blockchain_hero_desc: לצלול לתוך העולם של blockchain עם "איך Blockchain עובד", סדרת
     הווידאו החדשה שלנו ושיעורים נלווים!
@@ -689,6 +718,8 @@ he:
   ai_curriculum_desc_04: שיעורים אלה משלימים את סדרת הווידיאו כיצד AI עובד. כל שיעור
     משויך לסרטון יחיד מהסדרה, צולל עמוק יותר לתוך המושגים שהוצגו בסרטונים.
   ai_curriculum_btn_aria_label_04: גלה כיצד AI עובד שיעורים
+  ai_curriculum_grades_05: 'רמות כיתה: 9-12'
+  ai_curriculum_btn_aria_label_05: חקור את מודול הנדסת תוכנה וראיית מחשב
   ai_carousel_heading: 'מה המורים אומרים על AI עם Code.org:'
   ai_carousel_quote_01: שיעור זה גם נתן לתלמידים שלי את ההזדמנות לראות שיש אלמנט של
     דעה במערכות סיווג. מאוחר יותר, כשהתחלנו לראות כיצד הטיה יכולה להסתיים ב- AI, הצלחתי
@@ -795,6 +826,7 @@ he:
   ai_pl_101_llm_slides_desc: כלים להשגת הפלט הטוב ביותר האפשרי מ- LLMs כמו ChatGPT,
     ממתחילים למתקדמים. כולל הנחיות למתחילים למי שרק טובל את בהונותיהם פנימה, כמו גם
     כלים מתקדמים למי שמחפש למקסם את הפוטנציאל שלהם.
+  ai_pl_101_resources_3: הנחיות AI לשינוי למידת התלמידים
   how_ai_works_hero_heading: איך AI עובד
   how_ai_works_hero_desc: לצלול לתוך העולם של AI עם "איך AI עובד", סדרת הווידאו שלנו
     ושיעורים נלווים!
@@ -1139,8 +1171,8 @@ he:
     Animation
   csp_page_curriculum_glance_devices: Laptop, Chromebook
   csp_page_curriculum_glance_tools: מעבדת אפליקציות
-  csp_page_curriculum_glance_professional_learning: Facilitator-led Workshops, Self-paced
-    Modules
+  csp_page_curriculum_glance_professional_learning: סדנאות בהנחיית מנחה, מודולים בקצב
+    עצמי
   csp_page_curriculum_glance_professional_languages: עברית
   csp_page_curriculum_glance_professional_accessibility_features: Text-to-speech,
     Closed captioning, Immersive reader
@@ -1265,8 +1297,8 @@ he:
   csd_page_curriculum_glance_devices: Laptop, Chromebook
   csd_page_curriculum_glance_tools: מעבדת אפליקציות, מעבדת משחקים, מעבדת AI, מעבדת
     אינטרנט
-  csd_page_curriculum_glance_professional_learning: Facilitator-led Workshops, Self-paced
-    Modules
+  csd_page_curriculum_glance_professional_learning: סדנאות בהנחיית מנחה, מודולים בקצב
+    עצמי
   csd_page_curriculum_glance_professional_languages: עברית
   csd_page_curriculum_glance_professional_accessibility_features: Text-to-speech,
     Closed captioning, Immersive reader
@@ -1391,8 +1423,8 @@ he:
     עיצוב אפליקציות
   csf_page_curriculum_glance_devices: מחשב נייד, כרומבוק, טאבלט
   csf_page_curriculum_glance_tools: מעבדת ספרייט, מעבדת Play
-  csf_page_curriculum_glance_professional_learning: Facilitator-led Workshops, Self-paced
-    Modules
+  csf_page_curriculum_glance_professional_learning: סדנאות בהנחיית מנחה, מודולים בקצב
+    עצמי
   csf_page_curriculum_glance_languages: ערבית, בהאסה אינדונזית, קטלאנית, סינית פשוטה,
     סינית מסורתית, צ'כית, צרפתית, גרמנית, הינדי, איטלקית, יפנית, קוריאנית, קנאדה,
     מלאית, מראתי, מונגולית, פולנית, פורטוגזית-BR, רומנית, רוסית, סלובקית, טגלוגית,
@@ -1519,6 +1551,34 @@ he:
   csa_page_faq_answer_08_02: For more information about the values that guided our
     work, please see our [curriculum values](%{curriculum_values_url}) and our [professional
     learning values](%{pl_values_url}).
+  donate_page_top_heading: עזור לממן את המשימה שלנו
+  donate_page_top_desc: כל תרומה מזינה את המשימה של Code.org להרחיב את הגישה לחינוך
+    במדעי המחשב. אנו מציעים מספר דרכים לתרום ולעשות את ההבדל.
+  donate_page_fundraise_title: גיוס כספים עבור Code.org
+  donate_page_fundraise_desc: עזרה לגייס כסף עבור Code.org! לכל תלמיד בכל בית ספר
+    צריכה להיות הזדמנות ללמוד מדעי המחשב.
+  donate_page_other_ways_title: דרכים אחרות לתת
+  donate_page_other_ways_desc: חקור שיטות מגוונות לתרום, ומצא את האפשרות המתאימה לך
+    ביותר. כל מחווה, גדולה או קטנה, דוחפת את משימתנו קדימה.
+  donate_page_501c3: Code.org רשום כארגון ציבורי 501 (c) (3) ללא מטרות רווח. תרומות
+    ל- Code.org ניתנות לניכוי מס במידה המותרת בחוק. מספר זיהוי המס של Code.org הוא
+    46-0858543.
+  donate_page_donation_policy_title: הבנת מדיניות התרומות שלנו
+  donate_page_donation_policy_desc: למד כיצד אנו מטפלים ומקצים את התרומות שלך.
+  donate_tabs_tab_label_daf_direct: DAF ישיר
+  donate_tabs_tab_label_amazon: אמזון
+  donate_tabs_tab_label_bitpay: BitPay
+  donate_tabs_tab_label_employee_match: התאמת עובדים
+  donate_tabs_daf_direct_title: תרום באמצעות DAF ישיר
+  donate_tabs_daf_direct_desc: תרום באמצעות הקרן המומלצת על ידי תורמים באמצעות Fidelity
+    Charitabity, Schwab Charitable או BNY מלון והציע את המלצת המענק שלך ל- Code.org
+    באמצעות הטופס המקוון של DAF Direct.
+  donate_tabs_amazon_title: תרום דרך אמזון
+  donate_tabs_amazon_desc: תרום ישירות באמצעות חשבון אמזון שלך. בכמה לחיצות בלבד,
+    תרמו בצורה חלקה למשימה של Code.org והעצימו את עתיד החינוך למדעי המחשב.
+  donate_tabs_bitpay_title: תרום עם קריפטו באמצעות BitPay
+  donate_tabs_bitpay_desc: לאמץ את העתיד של נתינה עם מטבע מבוזר. באמצעות BitPay, המטבע
+    הדיגיטלי שלך יכול לתמוך ישירות במאמצים של Code.org בהרחבת החינוך למדעי המחשב.
   hoc_live: שעה של קוד בשידור חי
   hoc_live_sign_up_title: הירשם לשעה של קוד בשידור חי
   hoc_live_learn_title: למד עם שעה של קוד בשידור חי

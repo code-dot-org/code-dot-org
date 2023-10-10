@@ -107,6 +107,15 @@
         "364c4d7c-4f39-4cef-95ed-9a5b7d7a2e9e": {
           "description": "Identifique os motivos pelos quais alguém pode visitar um determinado site"
         },
+        "a3d13dc7-ae60-458e-aefc-0e6399f6b074": {
+          "description": "Explique que o HTML permite que um programador indique como o conteúdo deve ser estruturado em uma página da web"
+        },
+        "0227f8e9-e8ad-40b5-bc8f-ea0fae00241a": {
+          "description": "Escrever um documento HTML simples que use tags de abertura e de fechamento para estruturar seu conteúdo"
+        },
+        "c783566f-9577-4876-96f7-594f4dccd8aa": {
+          "description": "Entender como usar os recursos de aula disponíveis no Web Lab"
+        },
         "4682c681-72e1-43df-8443-27ba6ff068de": {
           "description": "Comunicar-se e colaborar com os colegas a fim de solucionar um problema"
         },
@@ -127,6 +136,18 @@
         },
         "e09ca0a1-6d0c-4177-9bcb-b97ab36faeca": {
           "description": "Usar variáveis em um programa para armazenar uma informação usada várias vezes"
+        },
+        "40bde7b5-fc47-455e-9d21-5dc53330e8e8": {
+          "description": "Criar e usar um sprite"
+        },
+        "c61f1e5d-d728-499d-9729-a1ff2db8de64": {
+          "description": "Colocar o texto na tela usando um plano de coordenadas."
+        },
+        "b40e994c-3d1e-4ba8-9cf1-8674567bb26c": {
+          "description": "Usar argumentos para controlar como o texto é exibido na tela."
+        },
+        "d6709c2c-76b3-495d-bb07-af8a4c772363": {
+          "description": "Usar um processo estruturado para planejar e desenvolver um programa."
         },
         "ad6a4213-49c3-49e2-ace9-5a7d36daa458": {
           "description": "Avaliar criticamente um objeto para verificar se seu design atende a um determinado conjunto de necessidades"
@@ -1250,6 +1271,15 @@
         "65d72158-3fc1-4b35-abd8-03a25397aa01": {
           "description": "Identifique os motivos pelos quais alguém pode criar um determinado site"
         },
+        "1a0addf8-42c2-4ad7-b5f3-d77c9c637bdc": {
+          "description": "Escrever um documento HTML simples que use tags de abertura e de fechamento para estruturar seu conteúdo"
+        },
+        "3a63f603-f360-4e86-bf30-64fcebf7237f": {
+          "description": "Entender como usar os recursos de aula disponíveis no Web Lab"
+        },
+        "d67ce2ef-26e5-41f7-9387-c0a06bbc73c9": {
+          "description": "Explicar que o HTML permite que um programador indique como o conteúdo deve ser estruturado em uma página da web"
+        },
         "b50c5885-deac-4218-b87d-7a128401353d": {
           "description": "Comunicar-se e colaborar com os colegas a fim de solucionar um problema"
         },
@@ -1276,6 +1306,21 @@
         },
         "c25b3f0d-dcfb-415a-a97f-89b4e89311a5": {
           "description": "Usar variáveis em um programa para armazenar uma informação usada várias vezes"
+        },
+        "f94d8eca-cf05-40a8-acf0-8c5b1ed3868f": {
+          "description": "Criar e usar um sprite"
+        },
+        "9d865e75-6b5a-43d4-a145-17de9aee4ad3": {
+          "description": "Usar a notação de pontos para atualizar as propriedades de um sprite"
+        },
+        "411f894a-c802-41df-822e-41c4b8dd9a9d": {
+          "description": "Colocar o texto na tela usando um plano de coordenadas."
+        },
+        "72496109-18f7-4a09-84eb-3aabcc22ae92": {
+          "description": "Usar argumentos para controlar como o texto é exibido na tela."
+        },
+        "36566c25-03d9-4b33-9269-bf4155649445": {
+          "description": "Usar um processo estruturado para planejar e desenvolver um programa."
         },
         "608b3d15-c429-49e9-84e0-26c7e151143c": {
           "description": "Identificar-se de maneira empática com o usuário como um componente importante do processo de design"
@@ -2476,6 +2521,189 @@
         },
         "a4fa2434-b9c5-4e36-819b-50398d230730": {
           "description": "Compartilhe seus aplicativos uns com os outros"
+        },
+        "31c2522e-3835-49c6-b5f1-2493d8766486": {
+          "description": "Identificar diferentes estratégias utilizadas para resolver um problema"
+        },
+        "b654246e-f312-49d1-bc48-e9a9f54dd90a": {
+          "description": "Comunicar-se e colaborar com os colegas a fim de solucionar um problema"
+        },
+        "bc806e5d-e63a-4c3e-b0e3-4fd8397e382a": {
+          "description": "Melhorar a solução para um problema gradativamente"
+        },
+        "55cea0d8-ea3b-4798-8e17-3be051ca8ad6": {
+          "description": "Identificar estratégias úteis em cada etapa do processo de resolução de problemas"
+        },
+        "648f023b-2ddc-4c03-bf2a-7efea78a9c10": {
+          "description": "Diante de um dado problema, identificar as ações individuais que se enquadrariam em cada etapa do processo de solução desse problema"
+        },
+        "05f52eb3-60c9-43eb-a1d8-c297406493c7": {
+          "description": "Aplicar o processo de resolução de problemas para abordar uma variedade de problemas"
+        },
+        "526f0d9c-d813-4e1a-bcde-c81d8a8fb7ce": {
+          "description": "Avaliar se um problema está bem definido e aplicar estratégias para definir o problema com mais precisão"
+        },
+        "1fdd6a54-bd02-4d6c-8a87-6983253f4dd6": {
+          "description": "Escolha problemas que podem ser resolvidos com a computação e justifique essas escolhas."
+        },
+        "6f0ea3f1-eed6-4b91-b905-a1bfcf8e3f19": {
+          "description": "Identificar um computador como uma máquina que trabalha com informações"
+        },
+        "ecb2f62b-3575-4c8e-ba0b-9fecef8020d1": {
+          "description": "Analisar se determinados objetos são ou não computadores."
+        },
+        "10ed6743-bd65-4c05-85a8-df07cae02495": {
+          "description": "Selecionar as entradas e saídas usadas para realizar tarefas comuns de computação."
+        },
+        "d7280644-79b9-47f7-8e31-2f380d107a7c": {
+          "description": "Explicar a função que a entrada e a saída desempenham quando os computadores são usados para resolver problemas de informação."
+        },
+        "82058fdb-9daf-476d-8689-2df5199f5470": {
+          "description": "Determinar quais tipos de processamento são apropriados para um problema de computação específico."
+        },
+        "8b227cfd-93ac-4efd-a8b4-7a8265fd9c24": {
+          "description": "Identificar vários tipos comuns de processamento usados na computação."
+        },
+        "8c085209-3865-43b3-8106-68d18efeb5d5": {
+          "description": "Definir processamento como o trabalho realizado (possivelmente por um computador) para transformar uma entrada em uma saída"
+        },
+        "2aa90874-67de-48e4-801a-6f72cfd0d75d": {
+          "description": "Determinar quais informações em um problema de computação devem ser armazenadas para uso posterior."
+        },
+        "51b1c205-86a5-424f-bb91-b3434f30f0a5": {
+          "description": "Usar o modelo de entrada-saída-armazenamento-processamento para descrever um processo de computação."
+        },
+        "d03ba916-a64d-4485-ad36-52bf1084616a": {
+          "description": "Identificar diretrizes sobre quais informações devem e quais não devem ser armazenadas como parte do processo de computação."
+        },
+        "5b1459b9-1ab0-409a-ad4d-8a9a2107cd11": {
+          "description": "Fornecer e incorporar feedback direcionado de colegas para melhorar um artefato de computação"
+        },
+        "6ead7fad-7ba3-46e9-8d63-dbe9f2a805e3": {
+          "description": "Identifique e defina um problema que poderia ser resolvido usando a computação"
+        },
+        "ac55ea81-e464-49cb-92a1-3d0c9fdf589d": {
+          "description": "Crie um aplicativo que insira, produza, armazene e processe informações para resolver um problema"
+        },
+        "0fa2d910-7d6c-4f3d-8bf4-37138d571383": {
+          "description": "Comunicar-se e colaborar com os colegas a fim de solucionar um problema"
+        },
+        "18d6b95b-6269-42a9-bbcd-c0c5b1ce6c98": {
+          "description": "Melhorar a solução para um problema gradativamente"
+        },
+        "d6bda502-5a63-49d6-b3b6-c5c10256f9fe": {
+          "description": "Identificar diferentes estratégias utilizadas para resolver um problema"
+        },
+        "19a88644-264d-4320-9ce5-b0c0332771a7": {
+          "description": "Comunicar-se e colaborar com os colegas a fim de solucionar um problema"
+        },
+        "8b1c7740-2ae0-4365-b453-21088d4b31a5": {
+          "description": "Identificar diferentes estratégias utilizadas para resolver um problema"
+        },
+        "b1bd6af1-7d5c-4c9c-8268-7b0d2ceba450": {
+          "description": "Melhorar a solução para um problema gradativamente"
+        },
+        "082e1f9b-b974-4901-9c4c-6d451aa87de5": {
+          "description": "Comunicar-se e colaborar com os colegas a fim de solucionar um problema"
+        },
+        "bdf277e8-97c0-4333-a1d6-f6e2fa82ee42": {
+          "description": "Melhorar a solução para um problema gradativamente"
+        },
+        "de97cb31-b410-455a-b8e2-3d66c782422b": {
+          "description": "Identificar diferentes estratégias utilizadas para resolver um problema"
+        },
+        "660df950-b29b-49a7-b3c5-dd0bf49593cd": {
+          "description": "Avaliar se um problema está bem definido e aplicar estratégias para definir o problema com mais precisão"
+        },
+        "d0f2019f-b09e-4483-b8f0-c99ed7889acf": {
+          "description": "Aplicar o processo de resolução de problemas para abordar uma variedade de problemas"
+        },
+        "c53b1121-5a26-44ad-b845-03beb2f94493": {
+          "description": "Aplicar o processo de resolução de problemas para abordar uma variedade de problemas"
+        },
+        "ed2fbe41-2a5d-43c7-8d66-1da58d686e33": {
+          "description": "Avaliar se um problema está bem definido e aplicar estratégias para definir o problema com mais precisão"
+        },
+        "13317ce5-4372-4b0b-abf1-b9f81859cc3c": {
+          "description": "Escrever um documento HTML simples que use tags de abertura e de fechamento para estruturar seu conteúdo"
+        },
+        "7e4d3be8-a80a-42bc-af2c-f1a093c3565c": {
+          "description": "Explique que o HTML permite que um programador indique como o conteúdo deve ser estruturado em uma página da web"
+        },
+        "f260476d-fd85-4b06-8c41-12494598630a": {
+          "description": "Entender como usar os recursos de aula disponíveis no Web Lab"
+        },
+        "d2b026b0-8de2-4f0e-9014-e3a33d5c4896": {
+          "description": "Comunicar-se e colaborar com os colegas a fim de solucionar um problema"
+        },
+        "bb0518da-49ef-462c-8ba3-861489893fd9": {
+          "description": "Usar um sistema de coordenadas para inserir elementos na tela."
+        },
+        "cd7e6131-748c-4205-b2bd-4dff0b04e562": {
+          "description": "Sequenciar o código corretamente para sobrepor formas."
+        },
+        "e9f7548b-280a-4191-8376-d8562cb6edcd": {
+          "description": "Praticar e raciocinar sobre comandos de desenho com vários parâmetros"
+        },
+        "a30e4dc9-31e0-4299-826c-a79c68100aa0": {
+          "description": "Usar variáveis em um programa para armazenar uma informação usada várias vezes"
+        },
+        "fb1c91cd-2242-42e6-8157-6678425bc95e": {
+          "description": "Identificar uma variável como uma forma de rotular e referenciar um valor em um programa"
+        },
+        "03acfea1-e135-4363-970e-ae24d3a8aef0": {
+          "description": "Usar um processo estruturado para planejar e desenvolver um programa."
+        },
+        "91c9026d-5107-4a92-80d7-440d6e3540c5": {
+          "description": "Criar e usar um sprite"
+        },
+        "a09ea05c-bb1b-40d3-8928-51241a53d441": {
+          "description": "Colocar o texto na tela usando um plano de coordenadas."
+        },
+        "f7045a46-2926-497c-975d-8a54fb9e9486": {
+          "description": "Usar argumentos para controlar como o texto é exibido na tela."
+        },
+        "859f9c2e-f9fa-4344-8c73-3fe3035b5fc9": {
+          "description": "Usar um processo estruturado para planejar e desenvolver um programa."
+        },
+        "64f02372-bdc0-41d2-8504-1ad016a794d4": {
+          "description": "Identificar-se de maneira empática com o usuário como um componente importante do processo de design"
+        },
+        "e23e2085-4f1d-4ec3-93bd-757e1c0330dc": {
+          "description": "Avaliar criticamente um objeto para verificar se seu design atende a um determinado conjunto de necessidades"
+        },
+        "250da4cc-6b20-4e32-90f0-66f5c98b8603": {
+          "description": " Aprimorar o design de um produto com base em um perfil de usuário."
+        },
+        "cbd93ec7-5d1d-4dd9-b7e3-479131ae90cd": {
+          "description": " Criticar um design pela perspectiva de um perfil de usuário."
+        },
+        "1689c358-40d5-4279-880a-bc2d404be50a": {
+          "description": "Gerir várias estratégias para atender às necessidades do usuário."
+        },
+        "cdc9e841-969b-4444-9edc-8b6b5e086f37": {
+          "description": "Organizar ideias e estratégias em categorias significativas."
+        },
+        "6d28d0e7-da03-4b34-94e1-f3646871c0d3": {
+          "description": "Apresentar informações técnicas de forma clara para usuários não técnicos"
+        },
+        "9d709580-5531-4091-b287-3a48c529dfb6": {
+          "description": "Refletir sobre o desenvolvimento de um projeto em andamento"
+        },
+        "114f32b8-86b0-4ffe-9078-63eb13745f4e": {
+          "description": "Treinar e testar um modelo de aprendizado de máquina."
+        },
+        "4ddcd0e5-9848-44c2-b44e-534be14ec029": {
+          "description": "Raciocinar sobre o papel do viés humano no aprendizado de máquina."
+        },
+        "706d588e-1af3-44f0-b4d8-7bffa52d45e8": {
+          "description": "Criar e compartilhar seus próprios aplicativos no App Lab usando recursos como botões, textos, imagens, sons e telas."
+        },
+        "9462a1ca-276f-44b6-8693-898f8b970b8f": {
+          "description": "Criar e compartilhar seus próprios aplicativos no App Lab usando recursos como botões, textos, imagens, sons e telas."
+        },
+        "550d0aba-fcca-4adf-985c-2955df143802": {
+          "description": "Criar e compartilhar seus próprios aplicativos no App Lab usando recursos como botões, textos, imagens, sons e telas."
         },
         "08121200-84b5-4a5a-bba6-4b562022d2dd": {
           "description": "Explique as regras para viajar com segurança pela internet."

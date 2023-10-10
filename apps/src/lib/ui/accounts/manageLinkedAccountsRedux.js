@@ -9,6 +9,7 @@ export const initialState = {
   userHasPassword: false,
   isGoogleClassroomStudent: false,
   isCleverStudent: false,
+  personalAccountLinkingEnabled: false,
 };
 
 const INITIALIZE_STATE = 'manageLinkedAccounts/INITIALIZE_STATE';
@@ -22,6 +23,7 @@ export default function manageLinkedAccounts(state = initialState, action) {
       userHasPassword,
       isGoogleClassroomStudent,
       isCleverStudent,
+      personalAccountLinkingEnabled,
     } = action.state;
     return {
       ...state,
@@ -29,6 +31,7 @@ export default function manageLinkedAccounts(state = initialState, action) {
       userHasPassword,
       isGoogleClassroomStudent,
       isCleverStudent,
+      personalAccountLinkingEnabled,
     };
   }
 

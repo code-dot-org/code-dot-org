@@ -43,7 +43,6 @@ module.exports = {
     inlineAttach: 'readonly',
     Jigsaw: 'readonly',
     jQuery: 'readonly',
-    LEVEL_TYPE: 'readonly',
     MapboxGeocoder: 'readonly',
     mapboxgl: 'readonly',
     Maze: 'readonly',

@@ -1309,7 +1309,7 @@
   "https://studio.code.org/s/csd3-2023/lessons/13/levels/7": {
     "display_name": "Fish Animation",
     "bubble_choice_description": "Make the fish move at different speeds using the counter pattern.",
-    "long_instructions": "<img src=\"https://images.code.org/7852ab38a8222ee827edeff2767e8efd-image-1492037897236.gif\" style=\"float: right; margin-left: 20px;\">\n\n# Fish Animation\n\nUsing the counter pattern, make all three of the fish move as in the image to the right. The blue fish should move the fastest, and the green fish should move the slowest.\n\n# Do This\n\n1.  Use the counter pattern to make the blue fish move to the right faster than the other fish.\n2.  Use the counter pattern to make the green fish move to the right slower than the other fish.",
+    "long_instructions": "<img src=\"https://images.code.org/7852ab38a8222ee827edeff2767e8efd-image-1492037897236.gif\" style=\"float: right; margin-left: 20px;\">\n\n# Fish Animation\n\nUsing the counter pattern, make all three of the fish move left across the screen as they do in the image to the right. The blue fish should move the fastest, and the green fish should move the slowest.\n\n# Do This\n\n1.  Use the counter pattern to make the blue fish move across the screen faster than the other fish.\n2.  Use the counter pattern to make the green fish move across the screen slower than the other fish.",
     "mini_rubric": {
       "rubric_key_concept": "Use the counter pattern to increment or decrement sprite properties.",
       "rubric_performance_level_1": "The student's animation is identical to the example provided in the instructions.",
@@ -3425,7 +3425,7 @@
               "text": "Is the panda sprite's x velocity greater than 0?"
             },
             {
-              "text": "Is the rhino sprite's x scale greater than 1?"
+              "text": "Is the rhino sprite's scale greater than 1?"
             },
             {
               "text": "Is the panda sprite's height equal to the rhino sprite's height?"

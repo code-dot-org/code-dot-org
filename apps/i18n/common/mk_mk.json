@@ -498,6 +498,7 @@
   "makerNewProjectButton": "Креирај проект",
   "manageLinkedAccounts_actions": "Акции",
   "marketingInitiativeCSF": "Основи на CS",
+  "migrateToMutiAuth_buttonText_v2": "Овозможи",
   "name": "Име",
   "nextLevel": "Честитки! Ти ја заврши загатка {puzzleNumber}.",
   "nextLevelTrophies": "Честитки! Ти ја  заврши загатка {puzzleNumber} и го освои {numTrophies, plural, one {трофеј} other {# трофеи}}.",
