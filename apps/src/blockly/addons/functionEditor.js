@@ -62,15 +62,6 @@ export default class FunctionEditor {
       .getElementById(MODAL_EDITOR_CLOSE_ID)
       .addEventListener('click', () => this.hide());
 
-    // // Description handler
-    // this.functionDescriptionInput = document.getElementById(
-    //   MODAL_EDITOR_DESCRIPTION_INPUT_ID
-    // );
-    // this.functionDescriptionInput.addEventListener('input', e => {
-    //   this.block.description = e.target.value;
-    //   this.updateHiddenDefinitionDescription();
-    // });
-
     // Delete handler
     document
       .getElementById(MODAL_EDITOR_DELETE_ID)
@@ -131,8 +122,6 @@ export default class FunctionEditor {
     this.editorWorkspace.clear();
     Blockly.Events.enable();
 
-    // this.nameInput.value = procedure.getName();
-
     this.dom.style.display = 'block';
     Blockly.common.svgResize(this.editorWorkspace);
 
@@ -168,9 +157,8 @@ export default class FunctionEditor {
         deletable: false,
         movable: false,
       };
-      const block = this.addEditorWorkspaceBlockConfig(newDefinitionBlock);
       this.block = Blockly.serialization.blocks.append(
-        block,
+        this.addEditorWorkspaceBlockConfig(newDefinitionBlock),
         this.editorWorkspace
       );
     }
