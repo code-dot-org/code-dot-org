@@ -8,7 +8,6 @@ import FontAwesome from '@cdo/apps/templates/FontAwesome';
 import ProgressBubble from '@cdo/apps/templates/progress/ProgressBubble';
 import SelectedStudentPairing from '@cdo/apps/code-studio/components/progress/teacherPanel/SelectedStudentPairing';
 import {studentShape, levelWithProgress} from './types';
-import fontConstants from '@cdo/apps/fontConstants';
 
 const RadiumFontAwesome = Radium(FontAwesome);
 
@@ -204,11 +203,13 @@ const styles = {
     marginLeft: 0,
   },
   name: {
-    ...fontConstants['main-font-semi-bold'],
+    fontFamily: '"Gotham 5r", sans-serif',
+    fontWeight: 'bold',
     fontSize: 15,
   },
   timeHeader: {
-    ...fontConstants['main-font-semi-bold'],
+    fontFamily: '"Gotham 5r", sans-serif',
+    fontWeight: 'bold',
   },
   arrow: {
     fontSize: 40,

@@ -6,7 +6,6 @@ import {levelWithProgressType} from './progressTypes';
 import {progressionsFromLevels} from '@cdo/apps/code-studio/progressReduxSelectors';
 import SafeMarkdown from '@cdo/apps/templates/SafeMarkdown';
 import i18n from '@cdo/locale';
-import fontConstants from '@cdo/apps/fontConstants';
 
 export default class ProgressLessonContent extends React.Component {
   static propTypes = {
@@ -68,7 +67,7 @@ const styles = {
     marginTop: 20,
     marginBottom: 30,
     fontSize: 14,
-    ...fontConstants['main-font-regular'],
+    fontFamily: '"Gotham 4r", sans-serif',
   },
   noLevelsWarning: {
     fontSize: 13,

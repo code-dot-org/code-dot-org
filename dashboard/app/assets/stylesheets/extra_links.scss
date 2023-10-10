@@ -12,7 +12,8 @@
   left: 0;
   h4 {
     font-size: 14px;
-    @include main-font-bold;
+    font-family: $gotham-extra-bold;
+    font-weight: normal;
     margin: 0 0 5px 0;
   }
   opacity: 0.98;

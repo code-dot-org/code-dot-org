@@ -4,7 +4,6 @@ import msg from '@cdo/locale';
 import color from '../util/color';
 import {getStore} from '@cdo/apps/redux';
 import BaseDialog from '@cdo/apps/templates/BaseDialog.jsx';
-import fontConstants from '@cdo/apps/fontConstants';
 
 export const ParamType = {
   TABLE: 'TABLE',
@@ -85,12 +84,12 @@ export default class GetColumnParamPicker extends React.Component {
 const styles = {
   title: {
     paddingLeft: '15px',
-    ...fontConstants['main-font-bold'],
+    fontFamily: "'Gotham 7r', sans-serif",
     color: color.teal,
   },
   option: {
     paddingLeft: '30px',
-    ...fontConstants['main-font-bold'],
+    fontFamily: "'Gotham 7r', sans-serif",
     color: color.purple,
   },
   error: {

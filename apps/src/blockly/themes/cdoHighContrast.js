@@ -1,6 +1,5 @@
 import GoogleBlockly from 'blockly/core';
 import HighContrastTheme from '@blockly/theme-highcontrast';
-import fontConstants from '@cdo/apps/fontConstants';
 import {Themes} from '../constants';
 
 // Intentionally overriden styles from Google Blockly.
@@ -75,8 +74,7 @@ export default GoogleBlockly.Theme.defineTheme(Themes.HIGH_CONTRAST, {
     toolboxBackgroundColour: '#DDDDDD',
   },
   fontStyle: {
-    family: fontConstants['main-font'],
-    weight: fontConstants['regular-font-weight'],
+    family: '"Gotham 4r", sans-serif',
   },
   startHats: null,
 });
