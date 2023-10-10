@@ -1,4 +1,4 @@
-@import 'color', 'font', 'typography', 'breakpoints', 'barlow-semi-condensed-font';
+@import 'breakpoints';
 
 // Hero banner
 .hero-banner-basic {
@@ -62,16 +62,52 @@
       width: 100%;
     }
   }
+}
 
-  figure {
-    width: 35%;
+figure.img-wrapper {
+  height: auto;
 
-    @media screen and (max-width: $width-sm) {
-      display: none;
-    }
+  @media screen and (max-width: $width-md) {
+    margin-top: 1rem;
+    height: 22rem;
+  }
 
-    img {
-      width: 100%;
+  @media screen and (max-width: $width-sm) {
+    height: 12rem;
+  }
+}
+
+section.intro {
+
+  figure.img-wrapper {
+    background: url("/images/yw-page-intro.png") center no-repeat;
+    background-size: cover;
+  }
+
+  .flex-container:nth-of-type(2) {
+    background: var(--neutral_light);
+    border: 1px solid var(--neutral_dark20);
+    padding: 1.5rem;
+    margin: 3rem 0 0;
+
+    a.link-button {
+      margin-right: 2rem;
+
+      @media screen and (max-width: $width-sm) {
+        margin: 0;
+      }
     }
   }
+}
+
+section.cs-amb-do {
+
+  figure.img-wrapper {
+    background: url("/images/yw-page-cs-amb-do.png") center no-repeat;
+    background-size: cover;
+  }
+}
+
+ul.icon-bullet-list p {
+  font-size: 1rem !important;
 }
