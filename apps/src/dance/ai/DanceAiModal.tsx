@@ -10,6 +10,7 @@ import classNames from 'classnames';
 import FontAwesome from '@cdo/apps/templates/FontAwesome';
 import {BlockSvg} from 'blockly/core';
 import {doAi} from './utils';
+import {AiOutput} from '../types';
 import AiPreview from './AiPreview';
 const Typist = require('react-typist').default;
 
@@ -57,6 +58,10 @@ const DanceAiModal: React.FunctionComponent<DanceAiProps> = ({onClose}) => {
 
   const currentAiModalField = useSelector(
     (state: {dance: DanceState}) => state.dance.currentAiModalField
+  );
+
+  const aiOutput = useSelector(
+    (state: {dance: DanceState}) => state.dance.aiOutput
   );
 
   const [showPreview, setShowPreview] = useState<boolean>(false);
@@ -177,7 +182,7 @@ const DanceAiModal: React.FunctionComponent<DanceAiProps> = ({onClose}) => {
     return blocksSvg;
   };
 
-  const convertBlocks = () => {
+  const handleConvertBlocks = () => {
     const blocksSvg = generateBlocksFromResult();
 
     const origBlock = currentAiModalField?.getSourceBlock();
@@ -217,7 +222,7 @@ const DanceAiModal: React.FunctionComponent<DanceAiProps> = ({onClose}) => {
     }
   };
 
-  const handleDoneClick = () => {
+  const handleUseClick = () => {
     dispatch(setCurrentAiModalField(undefined));
   };
 
@@ -439,20 +444,26 @@ const DanceAiModal: React.FunctionComponent<DanceAiProps> = ({onClose}) => {
           {((mode === Mode.RESULTS && typingDone) ||
             mode === Mode.RESULTS_FINAL) && (
             <div>
-              <Button
-                id="convert"
-                text={'Convert'}
-                onClick={convertBlocks}
-                color={Button.ButtonColor.brandSecondaryDefault}
-                className={moduleStyles.button}
-              />
-              <Button
-                id="done"
-                text={'Use'}
-                onClick={handleDoneClick}
-                color={Button.ButtonColor.brandSecondaryDefault}
-                className={moduleStyles.button}
-              />
+              {(aiOutput === AiOutput.GENERATED_BLOCKS ||
+                aiOutput === AiOutput.BOTH) && (
+                <Button
+                  id="convert"
+                  text={'Convert'}
+                  onClick={handleConvertBlocks}
+                  color={Button.ButtonColor.brandSecondaryDefault}
+                  className={moduleStyles.button}
+                />
+              )}
+              {(aiOutput === AiOutput.AI_BLOCK ||
+                aiOutput === AiOutput.BOTH) && (
+                <Button
+                  id="use"
+                  text={'Use'}
+                  onClick={handleUseClick}
+                  color={Button.ButtonColor.brandSecondaryDefault}
+                  className={moduleStyles.button}
+                />
+              )}
             </div>
           )}
         </div>
