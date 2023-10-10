@@ -458,6 +458,14 @@ ol.steps-list {
   margin: unset;
   padding: unset;
 
+  &.four-col {
+    li { width: 20%; }
+  }
+
+  &.three-col {
+    li { width: 28%; }
+  }
+
   li {
     padding-left: 0 !important;
     text-indent: 0 !important;
@@ -465,7 +473,6 @@ ol.steps-list {
     justify-content: center;
     flex-wrap: wrap;
     text-align: center;
-    width: 20%;
     margin: 3rem 0 2.5rem;
 
     @media screen and (max-width: $width-sm) {
