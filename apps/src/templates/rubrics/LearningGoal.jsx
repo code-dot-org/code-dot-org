@@ -153,7 +153,7 @@ export default function LearningGoal({
             name="teacherFeedback"
             value={displayFeedback}
             onChange={handleFeedbackChange}
-            disabled={!studentLevelInfo}
+            disabled={!canProvideFeedback}
           />
         </label>
         {isAutosaving ? (
