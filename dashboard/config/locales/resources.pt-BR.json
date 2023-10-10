@@ -862,7 +862,7 @@
           "name": "Fórum do professor"
         },
         "cs-entertainment-activity/csd/2021": {
-          "type": "Guia de atividades"
+          "type": "Guia de Atividades"
         },
         "csd_unit_3_-_interactive_animations_and_games/csd/2021": {
           "type": "Slides"
@@ -871,10 +871,10 @@
           "name": "Desenhando Formas"
         },
         "drawing_shapes_version_b_/csd/2021": {
-          "type": "Guia de atividades"
+          "type": "Guia de Atividades"
         },
         "drawing_shapes_version_a_/csd/2021": {
-          "type": "Guia de atividades"
+          "type": "Guia de Atividades"
         },
         "drawing_in_game_lab_-_part_1/csd/2021": {
           "name": "Desenho no Game Lab - Parte 1",
@@ -937,7 +937,7 @@
         },
         "sprite-scene-planning/csd/2021": {
           "name": "Planejamento de Cenas de Sprite",
-          "type": "Guia de atividades"
+          "type": "Guia de Atividades"
         },
         "youtube-flipbook/csd/2021": {
           "type": "Vídeo"
@@ -964,7 +964,7 @@
         },
         "animated-scene/csd/2021": {
           "name": "Cena Animada",
-          "type": "Guia de atividades"
+          "type": "Guia de Atividades"
         },
         "boolean_expressions/csd/2021": {
           "name": "Expressões Booleanas",
@@ -1023,10 +1023,10 @@
           "name": "Detecção de Colisão"
         },
         "collision_detection_version_b_/csd/2021": {
-          "type": "Guia de atividades"
+          "type": "Guia de Atividades"
         },
         "collision_detection_version_a_/csd/2021": {
-          "type": "Guia de atividades"
+          "type": "Guia de Atividades"
         },
         "collision_detection/csd/2021": {
           "name": "Detecção de Colisão",
@@ -1078,13 +1078,13 @@
         },
         "designing_with_empathy/csd/2021": {
           "name": "Projetando com Empatia",
-          "type": "Guia de atividades"
+          "type": "Guia de Atividades"
         },
         "designing_with_empathy_1/csd/2021": {
           "name": "Projetando com Empatia"
         },
         "reacting-as-your-user/csd/2021": {
-          "type": "Guia de atividades"
+          "type": "Guia de Atividades"
         },
         "profile-1/csd/2021": {
           "name": "Perfil 1",
@@ -1104,7 +1104,7 @@
         },
         "user-centered-design-2021/csd/2021": {
           "name": "Design Centrado no Usuário (Definir e Preparar) 2021",
-          "type": "Guia de atividades"
+          "type": "Guia de Atividades"
         },
         "the-design-thinking-process/csd/2021": {
           "name": "O Processo de Design Thinking",
@@ -1112,7 +1112,7 @@
         },
         "user-centered-design-reflect-2021/csd/2021": {
           "name": "Design Centrado no Usuário (Experimente & Reflita) 2021",
-          "type": "Guia de atividades"
+          "type": "Guia de Atividades"
         },
         "user-interface-screens/csd/2021": {
           "name": "Telas de Interface do Usuário",
@@ -1120,11 +1120,11 @@
         },
         "user-experience-computer/csd/2021": {
           "name": "Teste do Usuário (Computador)",
-          "type": "Guia de atividades"
+          "type": "Guia de Atividades"
         },
         "user-experience-user/csd/2021": {
           "name": "Teste do Usuário (Usuário)",
-          "type": "Guia de atividades"
+          "type": "Guia de Atividades"
         },
         "improve-a-screen-exemplar-19/csd/2021": {
           "name": "Melhore uma Tela"
@@ -1135,11 +1135,11 @@
         },
         "improve-a-screen/csd/2021": {
           "name": "Melhore uma Tela",
-          "type": "Guia de atividades"
+          "type": "Guia de Atividades"
         },
         "user-interviews-1/csd/2021": {
           "name": "Entrevistas com Usuários",
-          "type": "Guia de atividades"
+          "type": "Guia de Atividades"
         },
         "user-interviews/csd/2021": {
           "name": "Exemplos de Entrevistas com Usuários",
@@ -1157,28 +1157,28 @@
         },
         "app-design-kickoff-2019/csd/2021": {
           "name": "Pontapé para o Design de Aplicativos",
-          "type": "Guia de atividades"
+          "type": "Guia de Atividades"
         },
         "app_design_kickoff/csd/2021": {
           "name": "Pontapé para o Design de Aplicativos"
         },
         "market-research/csd/2021": {
           "name": "Pesquisa de mercado",
-          "type": "Guia de atividades"
+          "type": "Guia de Atividades"
         },
         "market_research/csd/2021": {
           "name": "Pesquisa de mercado"
         },
         "explore-ui-elements/csd/2021": {
           "name": "Explore os Elementos de Interface com o Usuário (IU)",
-          "type": "Guia de atividades"
+          "type": "Guia de Atividades"
         },
         "explore_ui_elements/csd/2021": {
           "name": "Explore os Elementos de Interface com o Usuário (IU)"
         },
         "paper-prototype-planning/csd/2021": {
           "name": "Planejamento do Protótipo em Papel",
-          "type": "Guia de atividades"
+          "type": "Guia de Atividades"
         },
         "phone-paper-prototype/csd/2021": {
           "name": "Protótipo de Telefone em Papel"
@@ -1196,11 +1196,11 @@
         },
         "user-test-cases/csd/2021": {
           "name": "Casos de Testes de Usuários",
-          "type": "Guia de atividades"
+          "type": "Guia de Atividades"
         },
         "paper-prototype-user-testing-1-2/csd/2021": {
           "name": "Teste de Usuários dos Protótipos em Papel",
-          "type": "Guia de atividades"
+          "type": "Guia de Atividades"
         },
         "whats-for-lunch-testing/csd/2021": {
           "name": "Teste do \"O que tem para o almoço\"",
@@ -1214,11 +1214,11 @@
         },
         "screen-ownership-2021/csd/2021": {
           "name": "Propriedade da Tela (2021)",
-          "type": "Guia de atividades"
+          "type": "Guia de Atividades"
         },
         "screen-design-1/csd/2021": {
           "name": "Design de Tela (2021)",
-          "type": "Guia de atividades"
+          "type": "Guia de Atividades"
         },
         "model-screen-design/csd/2021": {
           "name": "Design de Tela do Modelo",
@@ -1254,18 +1254,18 @@
         },
         "digital-prototype-user-testing/csd/2021": {
           "name": "Teste do Usuário do Protótipo Digital",
-          "type": "Guia de atividades"
+          "type": "Guia de Atividades"
         },
         "bugs-and-features-planning/csd/2021": {
           "name": "Erros e Recursos",
-          "type": "Guia de atividades"
+          "type": "Guia de Atividades"
         },
         "bugs_and_features/csd/2021": {
           "name": "Erros e Recursos"
         },
         "updating-your-prototype/csd/2021": {
           "name": "Atualizando seu Protótipo",
-          "type": "Guia de atividades"
+          "type": "Guia de Atividades"
         },
         "app-presentation/csd/2021": {
           "name": "Apresentação do Aplicativo",
@@ -1291,17 +1291,17 @@
         },
         "representation-matters/csd/2021": {
           "name": "Representação Importa",
-          "type": "Guia de atividades"
+          "type": "Guia de Atividades"
         },
         "representing-information-1/csd/2021": {
           "name": "Representando informação",
-          "type": "Guia de atividades"
+          "type": "Guia de Atividades"
         },
         "ascii-text/csd/2021": {
           "type": "Recurso"
         },
         "ascii-challenges/csd/2021": {
-          "type": "Guia de atividades"
+          "type": "Guia de Atividades"
         },
         "ascii_challenges/csd/2021": {
           "type": "Chave de resposta"
@@ -1311,22 +1311,22 @@
           "type": "Vídeo"
         },
         "representing-numbers-2021/csd/2021": {
-          "type": "Guia de atividades"
+          "type": "Guia de Atividades"
         },
         "representing-numbers-exemplar-2019/csd/2021": {
           "name": "Representando Números"
         },
         "activity-guide-pet-records/csd/2021": {
-          "type": "Guia de atividades"
+          "type": "Guia de Atividades"
         },
         "keeping-data-secret/csd/2021": {
-          "type": "Guia de atividades"
+          "type": "Guia de Atividades"
         },
         "unit_5_data_society/csd/2021": {
           "type": "Slides"
         },
         "secret_messages_2021/csd/2021": {
-          "type": "Guia de atividades"
+          "type": "Guia de Atividades"
         },
         "medical_records/csd/2021": {
           "type": "Chave de resposta"
@@ -1338,10 +1338,10 @@
           "type": "Rubrica"
         },
         "problem-solving-with-data/csd/2021": {
-          "type": "Guia de atividades"
+          "type": "Guia de Atividades"
         },
         "structuring-data-2021/csd/2021": {
-          "type": "Guia de atividades"
+          "type": "Guia de Atividades"
         },
         "structuring_data/csd/2021": {
           "name": "Estruturação de dados"
@@ -1351,7 +1351,7 @@
         },
         "interpreting-data/csd/2021": {
           "name": "Interpretando Dados",
-          "type": "Guia de atividades"
+          "type": "Guia de Atividades"
         },
         "interpreting-data-1/csd/2021": {
           "name": "Interpretando Dados",
@@ -1359,7 +1359,7 @@
         },
         "making-decisions-with-data/csd/2021": {
           "name": "Tomando Decisões com Dados",
-          "type": "Guia de atividades"
+          "type": "Guia de Atividades"
         },
         "problem-solving-process-with-data/csd/2021": {
           "type": "Recurso"
@@ -1373,7 +1373,7 @@
         },
         "automating-data-decisions-1/csd/2021": {
           "name": "Automatizando decisões de dados",
-          "type": "Guia de atividades"
+          "type": "Guia de Atividades"
         },
         "how-big-data-is-used-in-amazon-recommendation-systems/csd/2021": {
           "type": "Vídeo"
@@ -1389,7 +1389,7 @@
         },
         "data-in-the-real-world/csd/2021": {
           "name": "Dados no Mundo Real",
-          "type": "Guia de atividades"
+          "type": "Guia de Atividades"
         },
         "video_impact_on_society/csd/2021": {
           "type": "Vídeo"
@@ -1561,7 +1561,9 @@
           "type": "Guia do projeto"
         },
         "classifying_fish/csd/2021": {
-          "type": "Guia de atividades"
+          "name": "Classificando Peixes",
+          "url": "https://docs.google.com/document/d/1Vfp8rokk4JzTGhkUw3LkhyHAD5gLm0hct5N6CDjkNSI/view",
+          "type": "Guia de Atividades"
         },
         "introduction_to_machine_learning/csd/2021": {
           "name": "Introdução ao Machine Learning",
@@ -1577,7 +1579,7 @@
         },
         "types_of_machine_learning_1/csd/2021": {
           "name": "Tipos de Machine Learning",
-          "type": "Guia de atividades"
+          "type": "Guia de Atividades"
         },
         "types_of_machine_learning_2/csd/2021": {
           "name": "Tipos de Machine Learning",
@@ -1597,7 +1599,7 @@
           "type": "Slides"
         },
         "patterns_in_data_1/csd/2021": {
-          "type": "Guia de atividades"
+          "type": "Guia de Atividades"
         },
         "shoe_survey/csd/2021": {
           "type": "Recurso"
@@ -1609,7 +1611,7 @@
           "type": "Chave de resposta"
         },
         "classification_models/csd/2021": {
-          "type": "Guia de atividades"
+          "type": "Guia de Atividades"
         },
         "classification_models_1/csd/2021": {
           "type": "Slides"
@@ -1626,7 +1628,7 @@
           "type": "Vídeo"
         },
         "training_a_model_in_ai_lab/csd/2021": {
-          "type": "Guia de atividades"
+          "type": "Guia de Atividades"
         },
         "training_and_testing_in_ai_lab/csd/2021": {
           "name": "Treinamento e testes no AI Lab",
@@ -1662,7 +1664,7 @@
         },
         "model_cards_1/csd/2021": {
           "name": "Cartões modelo",
-          "type": "Guia de atividades"
+          "type": "Guia de Atividades"
         },
         "model_cards_in_ai_lab/csd/2021": {
           "name": "Cartões modelo no AI Lab",
@@ -1672,7 +1674,7 @@
           "type": "Slides"
         },
         "zoo_models/csd/2021": {
-          "type": "Guia de atividades"
+          "type": "Guia de Atividades"
         },
         "_key_zoo_models/csd/2021": {
           "type": "Chave de resposta"
@@ -1687,13 +1689,13 @@
           "type": "Slides"
         },
         "numerical_accuracy_-_activity_guide/csd/2021": {
-          "type": "Guia de atividades"
+          "type": "Guia de Atividades"
         },
         "numerical_models/csd/2021": {
           "type": "Slides"
         },
         "zombie_prediction_-_activity_guide/csd/2021": {
-          "type": "Guia de atividades"
+          "type": "Guia de Atividades"
         },
         "zombie_prediction_-_answer_key/csd/2021": {
           "type": "Chave de resposta"
@@ -1707,7 +1709,7 @@
         },
         "numerical_data_in_ai_lab_1/csd/2021": {
           "name": "Dados numéricos no AI Lab",
-          "type": "Guia de atividades"
+          "type": "Guia de Atividades"
         },
         "numerical_data_in_ai_lab_2/csd/2021": {
           "name": "Dados numéricos no AI Lab",
@@ -3034,7 +3036,7 @@
         "blank_space_stories_-_worksheet/coursef/2021": {
           "name": "Histórias do espaço em branco",
           "url": "https://docs.google.com/document/d/1fJNyI0WQTi-Q-XMZDn9sIgD_o6KjGHwZesQRa93ko5E/template/preview",
-          "type": "Guia de atividades"
+          "type": "Guia de Atividades"
         },
         "variables_blank_space_stories/coursef/2021": {
           "name": "Variáveis: Histórias de espaços em branco",
@@ -3064,7 +3066,7 @@
         "user_input_programs/coursef/2021": {
           "name": "Programas de entrada do usuário",
           "url": "https://docs.google.com/document/d/1FZAVAVabeADxUlDZACeZojuPK1gBN7g0_UfYfvxzah4/template/preview",
-          "type": "Guia de atividades"
+          "type": "Guia de Atividades"
         },
         "pause_and_think_online/coursef/2021": {
           "name": "Pare e pense on-line",
@@ -4423,14 +4425,14 @@
         },
         "representing_information/csd/2022": {
           "name": "Representando informação",
-          "type": "Guia de atividades"
+          "type": "Guia de Atividades"
         },
         "patterns_and_representation/csd/2022": {
           "name": "Padrões e Representações",
           "type": "Slides"
         },
         "ascii_challenges/csd/2022": {
-          "type": "Guia de atividades"
+          "type": "Guia de Atividades"
         },
         "ascii_challenges_1/csd/2022": {
           "type": "Chave de resposta"
@@ -4454,27 +4456,27 @@
           "name": "Representando Números"
         },
         "representing_numbers_2021/csd/2022": {
-          "type": "Guia de atividades"
+          "type": "Guia de Atividades"
         },
         "representing_numbers_1/csd/2022": {
           "name": "Representando Números",
           "type": "Slides"
         },
         "activity_guide_-_pet_records/csd/2022": {
-          "type": "Guia de atividades"
+          "type": "Guia de Atividades"
         },
         "combining_representations/csd/2022": {
           "name": "Combinando Representações",
           "type": "Slides"
         },
         "medical_records/csd/2022": {
-          "type": "Guia de atividades"
+          "type": "Guia de Atividades"
         },
         "medical_records_1/csd/2022": {
           "type": "Chave de resposta"
         },
         "secret_messages_2021/csd/2022": {
-          "type": "Guia de atividades"
+          "type": "Guia de Atividades"
         },
         "keeping_data_secret_1/csd/2022": {
           "name": "Mantendo o segredo dos dados",
@@ -4487,7 +4489,7 @@
           "type": "Slides"
         },
         "problem_solving_with_data_1/csd/2022": {
-          "type": "Guia de atividades"
+          "type": "Guia de Atividades"
         },
         "problem_solving_and_data/csd/2022": {
           "name": "Resolução de Problemas com Dados",
@@ -4497,7 +4499,7 @@
           "name": "Estruturação de dados"
         },
         "structuring_data_2021/csd/2022": {
-          "type": "Guia de atividades"
+          "type": "Guia de Atividades"
         },
         "structuring_data_1/csd/2022": {
           "name": "Estruturação de dados",
@@ -4508,7 +4510,7 @@
         },
         "interpreting_data_1/csd/2022": {
           "name": "Interpretando Dados",
-          "type": "Guia de atividades"
+          "type": "Guia de Atividades"
         },
         "interpreting_data_2/csd/2022": {
           "name": "Interpretando Dados",
@@ -4520,7 +4522,7 @@
         },
         "making_decisions_with_data_1/csd/2022": {
           "name": "Tomando Decisões com Dados",
-          "type": "Guia de atividades"
+          "type": "Guia de Atividades"
         },
         "problem_solving_process_with_data/csd/2022": {
           "type": "Recurso"
@@ -4538,7 +4540,7 @@
         },
         "automating_data_decisions_2/csd/2022": {
           "name": "Automatizando decisões de dados",
-          "type": "Guia de atividades"
+          "type": "Guia de Atividades"
         },
         "automating_data_decisions_3/csd/2022": {
           "name": "Automatizando decisões de dados",
@@ -4552,7 +4554,7 @@
         },
         "data_in_the_real_world_1/csd/2022": {
           "name": "Dados no Mundo Real",
-          "type": "Guia de atividades"
+          "type": "Guia de Atividades"
         },
         "netflix_and_data/csd/2022": {
           "type": "Vídeo"
@@ -4818,7 +4820,9 @@
           "type": "Vídeo"
         },
         "classifying_fish/csd/2022": {
-          "type": "Guia de atividades"
+          "name": "Classificando Peixes",
+          "url": "https://docs.google.com/document/d/1Vfp8rokk4JzTGhkUw3LkhyHAD5gLm0hct5N6CDjkNSI/view",
+          "type": "Guia de Atividades"
         },
         "introduction_to_machine_learning/csd/2022": {
           "name": "Introdução ao Machine Learning",
@@ -4898,7 +4902,7 @@
           "type": "Recurso"
         },
         "training_a_model_in_ai_lab/csd/2022": {
-          "type": "Guia de atividades"
+          "type": "Guia de Atividades"
         },
         "training_and_testing_in_ai_lab/csd/2022": {
           "name": "Treinamento e testes no AI Lab",
@@ -4925,7 +4929,7 @@
         },
         "model_cards_1/csd/2022": {
           "name": "Cartões modelo",
-          "type": "Guia de atividades"
+          "type": "Guia de Atividades"
         },
         "_key_zoo_models/csd/2022": {
           "type": "Chave de resposta"
@@ -4941,7 +4945,7 @@
           "type": "Recurso"
         },
         "zoo_models/csd/2022": {
-          "type": "Guia de atividades"
+          "type": "Guia de Atividades"
         },
         "if-statements_in_app_lab/csd/2022": {
           "type": "Vídeo"
@@ -4978,7 +4982,7 @@
         },
         "numerical_data_in_ai_lab_1/csd/2022": {
           "name": "Dados numéricos no AI Lab",
-          "type": "Guia de atividades"
+          "type": "Guia de Atividades"
         },
         "numerical_data_in_ai_lab_2/csd/2022": {
           "name": "Dados numéricos no AI Lab",
@@ -6164,7 +6168,7 @@
         "blank_space_stories/coursef/2022": {
           "name": "Histórias do espaço em branco",
           "url": "https://docs.google.com/document/d/1fJNyI0WQTi-Q-XMZDn9sIgD_o6KjGHwZesQRa93ko5E/template/preview",
-          "type": "Guia de atividades"
+          "type": "Guia de Atividades"
         },
         "blank_space_stories_1/coursef/2022": {
           "name": "Histórias do espaço em branco",
@@ -6189,7 +6193,7 @@
         "user_input_programs/coursef/2022": {
           "name": "Programas de entrada do usuário",
           "url": "https://docs.google.com/document/d/1FZAVAVabeADxUlDZACeZojuPK1gBN7g0_UfYfvxzah4/template/preview",
-          "type": "Guia de atividades"
+          "type": "Guia de Atividades"
         },
         "running_simulations/coursef/2022": {
           "name": "Executar simulações",
@@ -6242,7 +6246,7 @@
         },
         "final_project_design_1/coursef/2022": {
           "name": "Guia do projeto de fim de curso",
-          "type": "Guia de atividades"
+          "type": "Guia de Atividades"
         },
         "debugging_guide/express/2022": {
           "name": "Guia de depuração",
@@ -6390,19 +6394,19 @@
           "type": "Slides"
         },
         "ai_research_areas/ai-ethics/2023": {
-          "type": "Guia de atividades"
+          "type": "Guia de Atividades"
         },
         "create_a_manifesto/ai-ethics/2023": {
-          "type": "Guia de atividades"
+          "type": "Guia de Atividades"
         },
         "ethics_and_ai_privacy_the_future_of_work/ai-ethics/2023": {
           "type": "Vídeo"
         },
         "imagine_your_world/ai-ethics/2023": {
-          "type": "Guia de atividades"
+          "type": "Guia de Atividades"
         },
         "research_reflection_guide/ai-ethics/2023": {
-          "type": "Guia de atividades"
+          "type": "Guia de Atividades"
         },
         "character_card_individual_docs_/ai-ethics/2023": {
           "type": "Recurso"
@@ -8054,7 +8058,7 @@
         },
         "representation_matters_1/csd/2023": {
           "name": "Representação Importa",
-          "type": "Guia de atividades"
+          "type": "Guia de Atividades"
         },
         "representation_matters_2/csd/2023": {
           "name": "Representação Importa",
@@ -8066,14 +8070,14 @@
         },
         "representing_information/csd/2023": {
           "name": "Representando informação",
-          "type": "Guia de atividades"
+          "type": "Guia de Atividades"
         },
         "ascii_and_binary_representation/csd/2023": {
           "name": "ASCII e Representações Binárias",
           "type": "Slides"
         },
         "ascii_challenges/csd/2023": {
-          "type": "Guia de atividades"
+          "type": "Guia de Atividades"
         },
         "ascii_challenges_1/csd/2023": {
           "type": "Chave de resposta"
@@ -8097,10 +8101,10 @@
           "type": "Slides"
         },
         "representing_numbers_2021/csd/2023": {
-          "type": "Guia de atividades"
+          "type": "Guia de Atividades"
         },
         "activity_guide_-_pet_records/csd/2023": {
-          "type": "Guia de atividades"
+          "type": "Guia de Atividades"
         },
         "combining_representations/csd/2023": {
           "name": "Combinando Representações",
@@ -8111,13 +8115,13 @@
           "type": "Slides"
         },
         "medical_records/csd/2023": {
-          "type": "Guia de atividades"
+          "type": "Guia de Atividades"
         },
         "medical_records_1/csd/2023": {
           "type": "Chave de resposta"
         },
         "secret_messages_2021/csd/2023": {
-          "type": "Guia de atividades"
+          "type": "Guia de Atividades"
         },
         "create_a_representation_2/csd/2023": {
           "type": "Rubrica"
@@ -8126,7 +8130,7 @@
           "type": "Slides"
         },
         "problem_solving_with_data_1/csd/2023": {
-          "type": "Guia de atividades"
+          "type": "Guia de Atividades"
         },
         "problem_solving_with_data_2/csd/2023": {
           "name": "Resolução de Problemas com Dados",
@@ -8140,14 +8144,14 @@
           "type": "Slides"
         },
         "structuring_data_2021/csd/2023": {
-          "type": "Guia de atividades"
+          "type": "Guia de Atividades"
         },
         "interpreting_data/csd/2023": {
           "name": "Interpretando Dados"
         },
         "interpreting_data_1/csd/2023": {
           "name": "Interpretando Dados",
-          "type": "Guia de atividades"
+          "type": "Guia de Atividades"
         },
         "interpreting_data_2/csd/2023": {
           "name": "Interpretando Dados",
@@ -8159,7 +8163,7 @@
         },
         "making_decisions_with_data_1/csd/2023": {
           "name": "Tomando Decisões com Dados",
-          "type": "Guia de atividades"
+          "type": "Guia de Atividades"
         },
         "making_decisions_with_data_2/csd/2023": {
           "name": "Tomando Decisões com Dados",
@@ -8177,7 +8181,7 @@
         },
         "automating_data_decisions_2/csd/2023": {
           "name": "Automatizando decisões de dados",
-          "type": "Guia de atividades"
+          "type": "Guia de Atividades"
         },
         "automating_data_decisions_3/csd/2023": {
           "name": "Automatizando decisões de dados",
@@ -8191,7 +8195,7 @@
         },
         "data_in_the_real_world_1/csd/2023": {
           "name": "Dados no Mundo Real",
-          "type": "Guia de atividades"
+          "type": "Guia de Atividades"
         },
         "netflix_and_data/csd/2023": {
           "type": "Vídeo"
@@ -8550,7 +8554,9 @@
           "type": "Vídeo"
         },
         "classifying_fish/csd/2023": {
-          "type": "Guia de atividades"
+          "name": "Classificando Peixes",
+          "url": "https://docs.google.com/document/d/1ZCRVbRA6XLj1tRCzPed5fSGfqGjJ2I1ImES-BTo3GmY/view",
+          "type": "Guia de Atividades"
         },
         "introduction_to_machine_learning/csd/2023": {
           "name": "Introdução ao Machine Learning",
@@ -8562,7 +8568,7 @@
         },
         "types_of_machine_learning_1/csd/2023": {
           "name": "Tipos de Machine Learning",
-          "type": "Guia de atividades"
+          "type": "Guia de Atividades"
         },
         "types_of_machine_learning_2/csd/2023": {
           "name": "Tipos de Machine Learning",
@@ -8572,7 +8578,7 @@
           "type": "Slides"
         },
         "innovations_in_ai_-_activity_guide/csd/2023": {
-          "type": "Guia de atividades"
+          "type": "Guia de Atividades"
         },
         "innovations_in_ai_research_areas_-_student_resource/csd/2023": {
           "type": "Recurso"
@@ -8591,7 +8597,7 @@
           "type": "Slides"
         },
         "patterns_in_data_1/csd/2023": {
-          "type": "Guia de atividades"
+          "type": "Guia de Atividades"
         },
         "shoe_survey/csd/2023": {
           "type": "Recurso"
@@ -8600,7 +8606,7 @@
           "type": "Chave de resposta"
         },
         "classification_models/csd/2023": {
-          "type": "Guia de atividades"
+          "type": "Guia de Atividades"
         },
         "classification_models_1/csd/2023": {
           "type": "Slides"
@@ -8626,7 +8632,7 @@
           "type": "Recurso"
         },
         "training_a_model_in_ai_lab/csd/2023": {
-          "type": "Guia de atividades"
+          "type": "Guia de Atividades"
         },
         "training_and_testing_in_ai_lab/csd/2023": {
           "name": "Treinamento e testes no AI Lab",
@@ -8653,7 +8659,7 @@
         },
         "model_cards_1/csd/2023": {
           "name": "Cartões modelo",
-          "type": "Guia de atividades"
+          "type": "Guia de Atividades"
         },
         "_key_zoo_models/csd/2023": {
           "type": "Chave de resposta"
@@ -8669,7 +8675,7 @@
           "type": "Recurso"
         },
         "zoo_models/csd/2023": {
-          "type": "Guia de atividades"
+          "type": "Guia de Atividades"
         },
         "if-statements_in_app_lab/csd/2023": {
           "type": "Vídeo"
@@ -8687,13 +8693,13 @@
           "type": "Chave de resposta"
         },
         "numerical_accuracy/csd/2023": {
-          "type": "Guia de atividades"
+          "type": "Guia de Atividades"
         },
         "numerical_models/csd/2023": {
           "type": "Slides"
         },
         "zombie_prediction/csd/2023": {
-          "type": "Guia de atividades"
+          "type": "Guia de Atividades"
         },
         "_key_-_numerical_data_in_ai_lab/csd/2023": {
           "type": "Chave de resposta"
@@ -8704,7 +8710,7 @@
         },
         "numerical_data_in_ai_lab_1/csd/2023": {
           "name": "Dados numéricos no AI Lab",
-          "type": "Guia de atividades"
+          "type": "Guia de Atividades"
         },
         "numerical_data_in_ai_lab_2/csd/2023": {
           "name": "Dados numéricos no AI Lab",
@@ -8720,7 +8726,7 @@
           "type": "Slides"
         },
         "ai_ethics_research_areas/csd/2023": {
-          "type": "Guia de atividades"
+          "type": "Guia de Atividades"
         },
         "ethics_ai_equal_access_and_algorithmic_bias/csd/2023": {
           "type": "Vídeo"
@@ -9951,7 +9957,7 @@
         "blank_space_stories/coursef/2023": {
           "name": "Histórias do espaço em branco",
           "url": "https://docs.google.com/document/d/1fJNyI0WQTi-Q-XMZDn9sIgD_o6KjGHwZesQRa93ko5E/template/preview",
-          "type": "Guia de atividades"
+          "type": "Guia de Atividades"
         },
         "blank_space_stories_1/coursef/2023": {
           "name": "Histórias do espaço em branco",
@@ -9976,7 +9982,7 @@
         "user_input_programs/coursef/2023": {
           "name": "Programas de entrada do usuário",
           "url": "https://docs.google.com/document/d/1FZAVAVabeADxUlDZACeZojuPK1gBN7g0_UfYfvxzah4/template/preview",
-          "type": "Guia de atividades"
+          "type": "Guia de Atividades"
         },
         "running_simulations/coursef/2023": {
           "name": "Executar simulações",
@@ -10029,7 +10035,7 @@
         },
         "end_of_course_project_guide/coursef/2023": {
           "name": "Guia do projeto de fim de curso",
-          "type": "Guia de atividades"
+          "type": "Guia de Atividades"
         },
         "debugging_guide/express/2023": {
           "name": "Guia de depuração",
@@ -10181,16 +10187,17 @@
           "type": "Vídeo"
         },
         "classifying_fish/how-ai-works/2023": {
+          "name": "Classificando Peixes",
           "url": "https://docs.google.com/document/d/1gQWtamQ3YBk-gJnmw_z3QWNLfzdrPyaUjS4ZbtfAvEs/view",
-          "type": "Guia de atividades"
+          "type": "Guia de Atividades"
         },
         "how_ai_works_-_training_data_and_bias/how-ai-works/2023": {
-          "name": "Como a IA funciona — dados de treinamento e preconceitos",
+          "name": "Como a IA funciona — Dados de Treinamento e Vieses",
           "url": "https://youtu.be/x2mRoFNm22g",
           "type": "Vídeo"
         },
         "how_ai_works_-_what_is_machine_learning_/how-ai-works/2023": {
-          "name": "Como a IA funciona - O que é aprendizado de máquina?",
+          "name": "Como a IA funciona - O que é Machine Learning?",
           "url": "https://www.youtube.com/watch?v=OeU5m6vRyCk",
           "type": "Vídeo"
         },
@@ -10204,27 +10211,27 @@
           "url": "https://docs.google.com/presentation/d/1zJzbHDel0uQ62usH8g_qBp5KIFMN08tEps5lXSAb3Ag/edit?usp=sharing"
         },
         "computer_vision/how-ai-works/2023": {
-          "name": "Visão computacional",
+          "name": "Visão Computacional",
           "url": "https://docs.google.com/presentation/d/1yWJnyVWPq2ut0GmUc0Z41SHxh1_w2B90qis-mo3d2OY/template/preview",
           "type": "Slides"
         },
         "computer_vision_network/how-ai-works/2023": {
           "name": "Rede de visão computacional",
           "url": "https://docs.google.com/document/d/1C7ob1lB-zKi0DSC3do9ZVFfXkHlC2xnSDI2yPFAqEY4/edit",
-          "type": "Guia de atividades"
+          "type": "Guia de Atividades"
         },
         "how_ai_works_how_computer_vision_works/how-ai-works/2023": {
-          "name": "Como a IA funciona: como funciona a visão computacional",
+          "name": "Como a IA funciona: Como a Visão Computacional Funciona",
           "url": "https://youtu.be/2hXG8v8p0KM",
           "type": "Vídeo"
         },
         "seven_segment_display_manipulative/how-ai-works/2023": {
-          "name": "Display de sete segmentos manipulativo",
+          "name": "Display Manipulativo de Sete Segmentos ",
           "url": "https://docs.google.com/document/d/17QzrodDqCjF2pjZvyo4coWYQbaZxuRwDrPEe20H-yBM/edit",
-          "type": "Guia de atividades"
+          "type": "Guia de Atividades"
         },
         "what_a_neural_network_sees/how-ai-works/2023": {
-          "name": "O que uma rede neural vê",
+          "name": "O que uma Rede Neural Vê",
           "url": "https://www.youtube.com/watch?v=Gu0MkmynWkw",
           "type": "Vídeo"
         },
@@ -10234,12 +10241,12 @@
           "type": "Vídeo"
         },
         "neural_networks/how-ai-works/2023": {
-          "name": "Redes neurais",
+          "name": "Redes Neurais",
           "url": "https://docs.google.com/document/d/1HA_zYssm4-s24-8on8BeL5DbzSfi7G7q-4LlywNBoCw/edit?usp=sharing",
-          "type": "Guia de atividades"
+          "type": "Guia de Atividades"
         },
         "neural_networks_1/how-ai-works/2023": {
-          "name": "Redes neurais",
+          "name": "Redes Neurais",
           "url": "https://docs.google.com/presentation/d/1lj6Z3egPkfv7jKtTVNmhCSY9RKHkcw5LV7Oq_ryqDVs/template/preview",
           "type": "Slides"
         },
@@ -10251,7 +10258,7 @@
         "eliza_activity_guide/how-ai-works/2023": {
           "name": "(Opcional) Guia de atividades de Eliza",
           "url": "https://docs.google.com/document/d/1IIca15ohoVq2lTLNUAOqQMUT7YgsTLp8yIPfmEnLmXo/edit#heading=h.17wewdcvexo6",
-          "type": "Guia de atividades"
+          "type": "Guia de Atividades"
         },
         "generative_llm/how-ai-works/2023": {
           "name": "LLM generativo",
@@ -10276,7 +10283,7 @@
         "video_and_vocabulary_guide/how-ai-works/2023": {
           "name": "Guia de vídeo e vocabulário",
           "url": "https://docs.google.com/document/d/1zPGOdJ1rcdF7e7CzGXHb4JaWYFMEPX9aeZf4DtbQhNI/edit#heading=h.l82l1gv9gtj4",
-          "type": "Guia de atividades"
+          "type": "Guia de Atividades"
         },
         "written_voice_simulator_activity_guide_exemplar/how-ai-works/2023": {
           "name": "[Exemplar] Guia escrito de atividades do simulador de voz",
@@ -10285,7 +10292,7 @@
         "written_voice_simulator_guide/how-ai-works/2023": {
           "name": "Guia escrito do simulador de voz",
           "url": "https://docs.google.com/document/d/1pebKlY2-pFCw-Zo_nI8cLXYT_eyfn3AKzkwvEmkjo2c/edit#heading=h.sa1769guz3cn",
-          "type": "Guia de atividades"
+          "type": "Guia de Atividades"
         },
         "written_voice_simulator_user_guide/how-ai-works/2023": {
           "name": "Guia do usuário do simulador de voz escrito",
@@ -10295,10 +10302,10 @@
         "_optional_gan_game_activity_guide/how-ai-works/2023": {
           "name": "(Opcional) Guia de atividades do jogo GAN",
           "url": "https://docs.google.com/document/d/1XJ16vDcCDz1_cI8T9d554n_cxqEPT2EVCNh6ZLe1OwI/edit",
-          "type": "Guia de atividades"
+          "type": "Guia de Atividades"
         },
         "generative_images/how-ai-works/2023": {
-          "name": "Imagens generativas",
+          "name": "Imagens Generativas",
           "url": "https://docs.google.com/presentation/d/1de7JbrVRXFg-eLUFCWUFTN5q7DAbpYzxU_oi6Ur37oM/template/preview",
           "type": "Slides"
         },
@@ -10319,7 +10326,7 @@
         "noisy_image_widget_activity_guide/how-ai-works/2023": {
           "name": "Guia de atividades do Noisy Image Widget",
           "url": "https://docs.google.com/document/d/1rxB-NpxulH6SUyweHwGTxatqYAQc5Qt8ZQN9Dkgi6sE/",
-          "type": "Guia de atividades"
+          "type": "Guia de Atividades"
         },
         "user_guide_noise_image_widget/how-ai-works/2023": {
           "name": "Guia do usuário: Noise Image Widget",
@@ -10329,10 +10336,10 @@
         "video_and_vocabulary_guide_1/how-ai-works/2023": {
           "name": "Guia de vídeo e vocabulário",
           "url": "https://docs.google.com/document/d/1GtTFgGzPcoyokR3KsJ43ZjvgJnwUCWdZXvtrXoa78rQ/edit?usp=sharing",
-          "type": "Guia de atividades"
+          "type": "Guia de Atividades"
         },
         "algorithmic_bias/how-ai-works/2023": {
-          "name": "Viés algorítmico",
+          "name": "Viés Algorítmico",
           "url": "https://docs.google.com/presentation/d/1N_sFSTNrP2jpnQPdIAaIDPhQYroSiV5EYxSP3dZ-bHc/template/preview",
           "type": "Slides"
         },
@@ -10394,12 +10401,12 @@
           "type": "Vídeo"
         },
         "how_ai_works_training_data_and_bias/how-ai-works/2023": {
-          "name": "Como a IA funciona: dados de treinamento e preconceitos",
+          "name": "Como a IA funciona: Dados de Treinamento e Vieses",
           "url": "https://youtu.be/x2mRoFNm22g",
           "type": "Vídeo"
         },
         "how_ai_works_what_is_machine_learning_/how-ai-works/2023": {
-          "name": "Como a IA funciona: o que é aprendizado de máquina?",
+          "name": "Como a IA funciona: O que é Machine Learning?",
           "url": "https://youtu.be/KHbwOetbmbs",
           "type": "Vídeo"
         },
@@ -10410,7 +10417,7 @@
         "vocabulary_matching/how-ai-works/2023": {
           "name": "Correspondência de vocabulário",
           "url": "https://docs.google.com/document/d/1Tbz8ULln11yU1hpD73OzgRUnujWjdpdOi8fKQsOAiIk/edit",
-          "type": "Guia de atividades"
+          "type": "Guia de Atividades"
         },
         "_key_vocabulary_matching/how-ai-works/2023": {
           "name": "[Key] Correspondência de vocabulário",

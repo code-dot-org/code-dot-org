@@ -1212,6 +1212,10 @@
         "artificial_intelligence/ai-ethics/2023": {
           "word": "Sztuczna inteligencja"
         },
+        "generative_ai/ai-ethics/2023": {
+          "word": "Generatywna AI",
+          "definition": "Rodzaj sztucznej inteligencji (AI), która wykorzystuje wzorce z istniejących treści do tworzenia nowych treści, takich jak nowy tekst lub nowe obrazy."
+        },
         "adaptation/csc-adaptations/2023": {
           "word": "adaptacja",
           "definition": "Zmiana w organizmie, aby lepiej przetrwać jego środowisko"

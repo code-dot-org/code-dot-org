@@ -1,0 +1,13 @@
+@import 'color.scss';
+
+$preview-size: 200px;
+
+.previewVisualization {
+  width: $preview-size;
+  height: $preview-size;
+  background-color: $neutral_white;
+}
+
+:export {
+  previewSize: $preview-size;
+}

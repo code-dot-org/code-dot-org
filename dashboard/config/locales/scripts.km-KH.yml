@@ -858,6 +858,8 @@ km:
           description: បន្តលើសពីមួយម៉ោងដំបូង ជាមួយនឹងគំនិតគម្រោងបន្ថែមទៀត។
           student_description: បន្តលើសពីមួយម៉ោងដំបូង ជាមួយនឹងគំនិតគម្រោងបន្ថែមទៀត។
           title: បន្តបង្កើតក្បាច់រាំ
+        dance-unplugged:
+          title: Dance Party Unplugged
         dlp19-csd-mod-fit:
           lesson_groups:
             required:
@@ -1110,7 +1112,9 @@ km:
             Minecraft នេះ។
           student_description: ប្រើប្លក់នៃកូដ នាំ Steve ឬ Alex ធ្វើដំណើរផ្សងព្រេងឆ្លងកាត់ពិភព
             Minecraft នេះ។
-          title: Minecraft Hour of Code
+          title: Minecraft Adventurer
+        minecraft:
+          title: Minecraft Designer
         nevada-standards-aligned-fifth-grade-2023:
           description_short: សិក្សាអំពីក្បួនទាំងអស់ នៅក្នុងមូលដ្ឋានគ្រឹះនៃវិទ្យាសាស្ដ្រកុំព្យូទ័រ
             និងបង្កើតសិល្បៈផ្ទាល់ខ្លួន រួមទាំងរឿងរ៉ាវ ឬហ្គេម។

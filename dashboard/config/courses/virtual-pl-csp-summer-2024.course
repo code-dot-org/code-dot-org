@@ -1,7 +1,7 @@
 {
   "name": "virtual-pl-csp-summer-2024",
   "script_names": [
-    "virtual-pl-csp-summer-day1-2024",
+    "virtual-pl-csp-summer-day1",
     "virtual-pl-csp-summer-day2",
     "virtual-pl-csp-summer-day3",
     "virtual-pl-csp-summer-day4",
@@ -17,7 +17,86 @@
     "version_year": "2024"
   },
   "resources": [
-
+    {
+      "name": "Activity Packet",
+      "url": "https://docs.google.com/document/d/1W2bH5-ypWFODE1ZNbjm6LnSyjzoX8mLQ5UIisrb-lJM/edit#heading=h.z65n4zpg0yuy",
+      "key": "activity_packet",
+      "properties": {
+      },
+      "seeding_key": {
+        "resource.key": "activity_packet"
+      }
+    },
+    {
+      "name": "Course and Exam Description",
+      "url": "https://apcentral.collegeboard.org/media/pdf/ap-computer-science-principles-course-and-exam-description.pdf?course=ap-computer-science-principles",
+      "key": "course_and_exam_description",
+      "properties": {
+      },
+      "seeding_key": {
+        "resource.key": "course_and_exam_description"
+      }
+    },
+    {
+      "name": "Equity Overview",
+      "url": "https://docs.google.com/document/d/1Yc7biBBI13gTKdJ71CQe0jOe-VdrTm77mZhFwERHjCY/edit",
+      "key": "equity_overview",
+      "properties": {
+      },
+      "seeding_key": {
+        "resource.key": "equity_overview"
+      }
+    },
+    {
+      "name": "Essential Content",
+      "url": "https://docs.google.com/document/d/1VmgH6AN6unhFboZmcwa2Y6n-lj-ItdtBMOpomvmzrlA/edit",
+      "key": "essential_content",
+      "properties": {
+      },
+      "seeding_key": {
+        "resource.key": "essential_content"
+      }
+    },
+    {
+      "name": "Goals and Objectives",
+      "url": "https://docs.google.com/document/d/1g0EwOhYUizP19H4huLZjH9Tp3-8dpieiTgc7tK9K8z4/edit",
+      "key": "goals_and_objectives",
+      "properties": {
+      },
+      "seeding_key": {
+        "resource.key": "goals_and_objectives"
+      }
+    },
+    {
+      "name": "High Level Agenda",
+      "url": "https://docs.google.com/spreadsheets/d/1z1i5Im57lN-d1OAf4ENyBWZZhzAYcRMMygq6vw27DfM/edit#gid=611964491",
+      "key": "high_level_agenda",
+      "properties": {
+      },
+      "seeding_key": {
+        "resource.key": "high_level_agenda"
+      }
+    },
+    {
+      "name": "Resource Packet",
+      "url": "https://docs.google.com/document/d/1vsFvW53Xmc6HPmTOoxX_02t1B7dcT7zvjQXw2ZuBEFw/edit#heading=h.2faqsy2yzubh",
+      "key": "resource_packet",
+      "properties": {
+      },
+      "seeding_key": {
+        "resource.key": "resource_packet"
+      }
+    },
+    {
+      "name": "Workshop Overview",
+      "url": "https://docs.google.com/document/d/1DhR64Uor-U1vkVYVR1fN_ZozYeNuYf_qK3TDXy_LqM0/edit",
+      "key": "workshop_overview",
+      "properties": {
+      },
+      "seeding_key": {
+        "resource.key": "workshop_overview"
+      }
+    }
   ],
   "student_resources": [
 
