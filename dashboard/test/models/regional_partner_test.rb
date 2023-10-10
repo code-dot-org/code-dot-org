@@ -43,7 +43,7 @@ class RegionalPartnerTest < ActiveSupport::TestCase
     end
     assert regional_partner.valid?
     assert_includes regional_partner.pl_programs_offered, "Fish"
-    assert_not_includes regional_partner.pl_programs_offered, ""
+    refute_includes regional_partner.pl_programs_offered, ""
   end
 
   test 'state must be in list' do
