@@ -36,17 +36,6 @@ export interface DanceLevelProperties extends LevelProperties {
   useRestrictedSongs?: boolean;
 }
 
-export type AiModalItem = {
-  id: string;
-  name: string;
-};
-
-export type AiModalReturnedItem = {
-  id: string;
-  name: string;
-  url: string;
-};
-
 type EmojiAssociation = {
   association: number[];
   explanation: string;
