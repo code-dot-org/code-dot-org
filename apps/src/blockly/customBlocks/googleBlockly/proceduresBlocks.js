@@ -123,7 +123,6 @@ export const editButtonHandler = function () {
 
 // This extension adds an edit button to the end of a procedure call block.
 GoogleBlockly.Extensions.register('procedures_edit_button', function () {
-  console.log('this', this);
   // Edit buttons are used to open the modal editor. The button is appended to the last input.
   if (
     useModalFunctionEditor &&
@@ -141,14 +140,18 @@ GoogleBlockly.Extensions.register('procedures_edit_button', function () {
 
 // This extension renders a mini toolbox for the modal function editor.
 GoogleBlockly.Extensions.register('modal_procedures_mini_toolbox', function () {
-  // const miniToolboxBlocks = [];
-  const miniToolboxBlocks = ['sprite_parameter_get'];
-  const flyoutToggleButton = Blockly.customBlocks.initializeMiniToolbox.bind(
-    this
-  )(miniToolboxBlocks, {
-    renderToolboxBeforeStack: true,
-  });
-  Blockly.customBlocks.appendMiniToolboxToggle.bind(this)(flyoutToggleButton);
+  const flyoutToggleButton =
+    Blockly.customBlocks.initializeMiniToolbox.bind(this)();
+
+  const miniToolboxBlocks = ['gamelab_comment'];
+  if (this.type === 'behavior_definition') {
+    miniToolboxBlocks.push('sprite_parameter_get');
+  }
+  Blockly.customBlocks.appendMiniToolboxToggle.bind(this)(
+    miniToolboxBlocks,
+    flyoutToggleButton,
+    true
+  );
 });
 
 // This extension adds an SVG frame around procedures definition blocks.
