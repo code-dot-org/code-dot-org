@@ -13243,13 +13243,25 @@ en:
         virtual-pl-csa-summer-day2:
           lessons:
             lesson-1:
-              name: Synchronous Part 1
+              name: Async Debrief
             lesson-2:
               name: Asynchronous Part 1
             lesson-3:
-              name: Synchronous Part 2
+              name: 'Model Lesson 4: U1L16 - SpiralPainter FRQ'
             lesson-4:
               name: Asynchronous Part 2
+            lesson-5:
+              name: 'Lesson Exploration: U1L8 - Inheritance'
+            lesson-6:
+              name: 'High-level Overview: Writing Methods'
+            lesson-7:
+              name: Identity as a Software Engineer
+            lesson-8:
+              name: 'Model Lesson 3: U1L10 - Programming Style and Feedback'
+            lesson-9:
+              name: Async Debrief
+            lesson-10:
+              name: Transition to Asyncronous
           lesson_groups:
             lessonGroup-2:
               display_name: Synchronous Part 1
@@ -13268,13 +13280,25 @@ en:
         virtual-pl-csa-summer-day3:
           lessons:
             lesson-1:
-              name: Synchronous Part 1
+              name: Introduction
             lesson-2:
               name: Asynchronous Part 1
             lesson-3:
-              name: Synchronous Part 2
+              name: Asynchronous Debrief
             lesson-4:
               name: Asynchronous Part 2
+            lesson-5:
+              name: Asynchronous Debrief
+            lesson-6:
+              name: 'Model Lesson 5: U2L1'
+            lesson-7:
+              name: 'Model Lesson 6: U2L2'
+            lesson-8:
+              name: 'Looking at Student Work '
+            lesson-9:
+              name: Introduction to Assessments
+            lesson-10:
+              name: Transisition to Asynchronous
           lesson_groups:
             lessonGroup-2:
               display_name: Synchronous Part 1
@@ -13293,13 +13317,25 @@ en:
         virtual-pl-csa-summer-day4:
           lessons:
             lesson-1:
-              name: Synchronous Part 1
+              name: Asynchronous Debrief
             lesson-2:
               name: Asynchronous Part 1
             lesson-3:
-              name: Synchronous Part 2
+              name: Asynchronous Debrief
             lesson-4:
               name: Asynchronous Part 2
+            lesson-5:
+              name: Workshop Opener
+            lesson-6:
+              name: Lesson Investigation Jigsaw
+            lesson-7:
+              name: 'Model Lesson 7: U2L9 Mutator Methods '
+            lesson-8:
+              name: 'High-Level Overview: Structure of a Class'
+            lesson-9:
+              name: Practice with the Unit 2 Project
+            lesson-10:
+              name: Transition to Asynchronous
           lesson_groups:
             lessonGroup-2:
               display_name: Synchronous Part 1
@@ -13318,13 +13354,37 @@ en:
         virtual-pl-csa-summer-day5:
           lessons:
             lesson-1:
-              name: Synchronous Part 1
+              name: Workshop Opener
             lesson-2:
-              name: Asychronous Part 1
+              name: Asynchronous Part 1
             lesson-3:
-              name: Synchronous Part 2
+              name: Asyncronous Debrief
             lesson-4:
               name: Asynchronous Part 2
+            lesson-6:
+              name: Asynchronous Debrief
+            lesson-5:
+              name: Introduction to Unit 3
+            lesson-7:
+              name: Practice Using Arrays
+            lesson-8:
+              name: Completing the Audit and AP Central
+            lesson-9:
+              name: High-level Overview of the Year
+            lesson-10:
+              name: Transition to Asynchronous
+            lesson-11:
+              name: 'High-level Overview: Enhanced For Loops'
+            lesson-12:
+              name: 'Lead Learner: Planning Your Role in the Classroom'
+            lesson-13:
+              name: Closing Ceremonies
+            lesson-14:
+              name: 'High-level Overview: Enhanced For Loops'
+            lesson-15:
+              name: 'Lead Learner: Planning Your Role in the Classroom'
+            lesson-16:
+              name: Closing Ceremonies
           lesson_groups:
             lessonGroup-2:
               display_name: Synchronous Part 1
@@ -13343,13 +13403,25 @@ en:
         virtual-pl-csa-summer-day1:
           lessons:
             lesson-1:
-              name: Synchronous Part 1
+              name: Async Debrief
             lesson-2:
               name: Asynchronous Part 1
             lesson-3:
-              name: Synchronous Part 2
+              name: 'Model Lesson 2: Methods and Parameters'
             lesson-4:
               name: Asynchronous Part 2
+            lesson-7:
+              name: Introduction
+            lesson-5:
+              name: Access and Diversity in CSA
+            lesson-6:
+              name: 'High-level Overview: Starting Unit 1'
+            lesson-8:
+              name: Workshop Opener
+            lesson-9:
+              name: 'Model Lesson 1: Instantiating Objects '
+            lesson-10:
+              name: Intro to Async
           lesson_groups:
             lessonGroup-2:
               display_name: Synchronous Part 1
@@ -13359,6 +13431,8 @@ en:
               display_name: Synchronous Part 2
             lessonGroup-5:
               display_name: Asynchronous Part 2
+            lessonGroup-7:
+              display_name: Introduction
           name: virtual-pl-csa-summer-day1
           title: Day 1
           description_audience: ''

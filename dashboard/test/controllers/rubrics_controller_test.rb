@@ -127,4 +127,43 @@ class RubricsControllerTest < ActionController::TestCase
     assert_equal 1, json_response.length
     assert_equal 2, json_response[0]['understanding']
   end
+
+  test "gets teacher evaluations for current user" do
+    student = create :student
+    sign_in student
+
+    rubric = create :rubric
+    learning_goal1 = create :learning_goal, rubric: rubric
+    learning_goal2 = create :learning_goal, rubric: rubric
+    teacher_evaluation1 = create :learning_goal_teacher_evaluation, learning_goal: learning_goal1, user: student, submitted_at: Time.now, feedback: 'feedback1'
+    teacher_evaluation2 = create :learning_goal_teacher_evaluation, learning_goal: learning_goal2, user: student, submitted_at: Time.now, feedback: 'feedback2'
+
+    get :get_teacher_evaluations, params: {
+      id: rubric.id,
+    }
+
+    assert_response :success
+    assert_equal 2, json_response.length
+    assert_equal teacher_evaluation1.feedback, json_response[0]['feedback']
+    assert_equal teacher_evaluation2.feedback, json_response[1]['feedback']
+  end
+
+  test "does not get unsubmmitted teacher evaluations for current user" do
+    student = create :student
+    sign_in student
+
+    rubric = create :rubric
+    learning_goal1 = create :learning_goal, rubric: rubric
+    learning_goal2 = create :learning_goal, rubric: rubric
+    create :learning_goal_teacher_evaluation, learning_goal: learning_goal1, user: student, submitted_at: nil, feedback: 'feedback1'
+    submitted_teacher_evaluation = create :learning_goal_teacher_evaluation, learning_goal: learning_goal2, user: student, submitted_at: Time.now, feedback: 'feedback2'
+
+    get :get_teacher_evaluations, params: {
+      id: rubric.id,
+    }
+
+    assert_response :success
+    assert_equal 1, json_response.length
+    assert_equal submitted_teacher_evaluation.feedback, json_response[0]['feedback']
+  end
 end
