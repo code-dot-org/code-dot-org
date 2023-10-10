@@ -3,6 +3,7 @@ import React from 'react';
 import {studentsShape} from './types';
 import i18n from '@cdo/locale';
 import color from '@cdo/apps/util/color';
+import fontConstants from '@cdo/apps/fontConstants';
 
 /**
  * A component for selecting one or more students in a section.
@@ -109,7 +110,7 @@ const styles = {
   },
   warning: {
     color: 'red',
-    fontFamily: "'Gotham 4r', sans-serif",
+    ...fontConstants['main-font-regular'],
     fontSize: '12px',
     paddingTop: '5px',
   },
