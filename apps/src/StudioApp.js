@@ -1237,8 +1237,7 @@ StudioApp.prototype.initReadonly = function (options) {
     scrollbars: false,
   });
 
-  const startHiddenDefinitions = options.level?.hiddenDefinitions;
-  this.loadBlocks(options.blocks, startHiddenDefinitions);
+  this.loadBlocks(options.blocks);
 };
 
 /**
