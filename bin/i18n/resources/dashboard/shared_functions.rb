@@ -14,6 +14,10 @@ module I18n
         def self.sync_in
           SyncIn.perform
         end
+
+        def self.sync_out
+          SyncOut.perform
+        end
       end
     end
   end

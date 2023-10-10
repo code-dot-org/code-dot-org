@@ -9,10 +9,10 @@ describe I18n::Resources::Dashboard::SharedFunctions do
     end
   end
 
-  # describe '.sync_out' do
-  #   it 'sync-out SharedFunctions resource' do
-  #     I18n::Resources::Dashboard::SharedFunctions::SyncOut.expects(:perform).once
-  #     I18n::Resources::Dashboard::SharedFunctions.sync_out
-  #   end
-  # end
+  describe '.sync_out' do
+    it 'sync-out SharedFunctions resource' do
+      I18n::Resources::Dashboard::SharedFunctions::SyncOut.expects(:perform).once
+      I18n::Resources::Dashboard::SharedFunctions.sync_out
+    end
+  end
 end
