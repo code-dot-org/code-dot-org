@@ -146,7 +146,7 @@ describe('LearningGoal', () => {
     );
     wrapper.find('summary').simulate('click');
     expect(sendEventSpy).to.have.been.calledWith(
-      EVENTS.RUBRIC_LEARNING_GOAL_EXPANDED_EVENT,
+      EVENTS.TA_RUBRIC_LEARNING_GOAL_EXPANDED_EVENT,
       {
         unitName: 'test-2023',
         levelName: 'test-level',
@@ -156,7 +156,7 @@ describe('LearningGoal', () => {
     );
     wrapper.find('summary').simulate('click');
     expect(sendEventSpy).to.have.been.calledWith(
-      EVENTS.RUBRIC_LEARNING_GOAL_COLLAPSED_EVENT,
+      EVENTS.TA_RUBRIC_LEARNING_GOAL_COLLAPSED_EVENT,
       {
         unitName: 'test-2023',
         levelName: 'test-level',
