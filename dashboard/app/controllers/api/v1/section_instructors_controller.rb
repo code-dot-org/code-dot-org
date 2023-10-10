@@ -27,7 +27,11 @@ class Api::V1::SectionInstructorsController < Api::V1::JSONApiController
 
     # Enforce maximum co-instructor count (the limit is 5 plus the main teacher
     # for a total of 6)
-    return head :bad_request if section.instructors.length >= 6
+    puts "ERIC inside method #{section.reload.instructors.reload.length}"
+    section.instructors.each do |instructor|
+      puts instructor.inspect
+    end
+    return head :bad_request if SectionInstructor.where(section: section).count >= 6
 
     instructor = User.find_by(email: params.require(:email))
     return head :not_found if instructor.blank?
