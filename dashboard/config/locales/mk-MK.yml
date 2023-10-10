@@ -1,5 +1,9 @@
 ---
 mk:
+  activerecord:
+    attributes:
+      user:
+        finish_sign_up_header_error: 'Ве молиме поправете ги следните грешки:'
   cancel: Откажи
   continue: Продолжи
   copy: копирај

@@ -5,36 +5,40 @@ fa:
   language: فارسی
   front_title: به بزرگترین رویداد یادگیری در تاریخ بپیوندید، %{campaign_date}
   coming_soon: به زودي
-  campaign_date_start_short: 5 دسامبر
-  campaign_date_start_long: ۴ دسامبر
-  campaign_date_short: ۴ تا ۱۰ دسامبر
+  campaign_date_start_short: 4 دسامبر
+  campaign_date_start_long: 4 دسامبر
+  campaign_date_short: 4 تا 10 دسامبر
   campaign_date_full: ۴ تا ۱۰ دسامبر
-  campaign_date_year: '2022'
-  campaign_date_full_year: 5 تا 11 دسامبر 2022
+  campaign_date_year: '2023'
+  campaign_date_full_year: 4 تا 10 دسامبر 2023
   nonus_campaign_date_start_short: 1 اکتبر
   nonus_campaign_date_start_long: اکتبر 1
   nonus_campaign_date_short: اول اکتبر تا 18 دسامبر
   nonus_campaign_date_full: 1 اکتبر  - 18 دسامبر
-  nonus_campaign_date_year: '2022'
+  nonus_campaign_date_year: '2023'
   nonus_campaign_date_full_year: 1 اکتبر 2022 - 18 دسامبر 2022
   latam_campaign_date_start_short: 1 اکتبر
   latam_campaign_date_start_long: اکتبر 1
   latam_campaign_date_short: اول اکتبر تا 18 دسامبر
   latam_campaign_date_full: 1 اکتبر  - 18 دسامبر
-  latam_campaign_date_year: '2022'
+  latam_campaign_date_year: '2023'
   latam_campaign_date_full_year: 1 اکتبر 2022 - 18 دسامبر 2022
   europe_campaign_date_start_short: 1 اکتبر
   europe_campaign_date_start_long: اکتبر 1
   europe_campaign_date_short: اول اکتبر تا 18 دسامبر
   europe_campaign_date_full: 1 اکتبر  - 18 دسامبر
-  europe_campaign_date_year: '2022'
+  europe_campaign_date_year: '2023'
   europe_campaign_date_full_year: 1 اکتبر 2022 - 18 دسامبر 2022
   africa_campaign_date_start_short: 1 اکتبر
   africa_campaign_date_start_long: اکتبر 1
   africa_campaign_date_short: اول اکتبر تا 18 دسامبر
   africa_campaign_date_full: 1 اکتبر  - 18 دسامبر
-  africa_campaign_date_year: '2022'
+  africa_campaign_date_year: '2023'
   africa_campaign_date_full_year: 1 اکتبر 2022 - 18 دسامبر 2022
+  hoc2023_header: خلاقیت با هوش مصنوعی
+  hoc2023_social_creativity_with_ai_title: ساعت کد - چه چیزی ایجاد می کنید؟
+  hoc2023_social_creativity_with_ai_desc: استفاده از علم کامپیوتر برای کشف و یادگیری
+    در مورد AI!
   hoc2022_header: بگرد، بازی کن و خلق کن!
   social_hoc2022_explore_play_create: با کمک علوم کامپیوتر بگرد، بازی کن و خلق کن!
   codeorg_homepage_hoc2022_body: جهان را بگرد، امتیاز کسب کن، حرکت ایجاد کن - راه‌های
@@ -175,6 +179,28 @@ fa:
     یک کاتالوگ برنامه درسی جدید و صفحه آموزش دوباره طراحی‌شده برای کمک به شما در یافتن
     همه چیز!
   in_partnership_with: با مشارکت
+  shop_code_dot_org_heading: فروشگاه Code.org
+  shop_code_dot_org_desc: از کار ما حمایت کنید و جنبش را با افتخار بپوشید. کلاه های
+    ما توسط رئیس جمهور اوباما و افراد مشهور نیز پوشیده شده است.
+  spread_the_word_heading: این مفهوم را گسترش دهید
+  spread_the_word_desc: با به اشتراک گذاشتن Code.org با شبکه خود، تأثیر ما را تقویت
+    کنید. از رسانه های اجتماعی گرفته تا به روزرسانی های ایمیل، کشف کنید که چگونه می
+    توانید به ما در دستیابی به مربیان، دانش آموزان و طرفداران بیشتر کمک کنید.
+  follow_us_heading: ما را در شبکه های اجتماعی دنبال کنید
+  follow_us_desc: با ما در رسانه های اجتماعی به روز باشید و پست های ما را با شبکه
+    خود به اشتراک بگذارید تا مطلع شوید و به آگاهی رسانی کمک کنید.
+  facebook: فیس بوک
+  twitter: توييتر
+  linked_in: لینکدین
+  instagram: اینستاگرام
+  tik_tok: تیک‌تاک
+  subscribe_to_emails_heading: مشترک شدن در ایمیل
+  subscribe_to_emails_desc: در مورد آنچه اتفاق می افتد در Code.org و در آموزش علوم
+    کامپیوتر از طریق به روز رسانی های سه ماهه از طریق لیست پستی ما بخوانید.
+  subscribe_to_emails_intl: مشترک شدن در به روزرسانی های بین المللی
+  promote_code_dot_org_heading: Code.org را تبلیغ کنید
+  promote_code_dot_org_desc: با کمک آمار، نقل قول ها و فیلم ها، علوم کامپیوتر را در
+    منطقه خود ارتقا دهید.
   afe_partnership_logo_alt: لوگو مهندس آینده آمازون
   afe_partnership_thanks_desc: مهندس آینده آمازون یک برنامه جامع از کودکی به بازار
     کار است که برای الهام بخشیدن، آموزش و تعلیم کودکان و جوانان کم‌درآمد و سایر افراد
@@ -192,6 +218,15 @@ fa:
   curricula_title_high: برنامه های درسی دبیرستان
   curricula_desc_high: دوره ها و فعالیت های قانع کننده ای را مرور کنید که از شما و
     دانش آموزان دبیرستانی شما دعوت می کند تا عمیق تر به علوم کامپیوتر بپردازید.
+  for_administrators_heading: برای مدیران
+  for_administrators_desc: پیوستن به هزاران مدرسه ای که قبلا علوم کامپیوتر را به برنامه
+    درسی خود اضافه کرده اند.
+  for_parents_heading: برای اولیا
+  for_parents_desc: شما می توانید به تشویق مدرسه دانش آموز خود برای ارائه یا گسترش
+    آموزش علوم کامپیوتر کمک کنید.
+  for_educators_heading: برای آموزگاران
+  for_educators_desc: شروع به تدریس امروز - بدون تجربه علوم کامپیوتر لازم - با کارگاه
+    های آموزشی حرفه ای ما.
   students_label: دانش آموزان
   teachers_label: معلمان
   teacher_label_csf: معلم مبانی علوم کامپیوتر
@@ -201,10 +236,11 @@ fa:
   teacher_label_csa: AP® Computer Science A Teacher
   required_materials: 'مواد مورد نیاز:'
   optional_materials: 'مواد اختیاری:'
-  call_to_action_explore_roles: نقش های باز را کاوش کنید
+  call_to_action_hold_an_event: برگزاری یک رویداد
   call_to_action_learn_more: بیشتر بدانید
   call_to_action_watch_now: اکنون تماشا کنید
   call_to_action_try_activity: فعالیت را امتحان کنید
+  call_to_action_try_activities: فعالیت ها را امتحان کنید
   call_to_action_explore_unit: کاوش واحد
   call_to_action_explore_curriculum: برنامه درسی را کاوش کنید
   call_to_action_explore_curriculum_options: گزینه‌های برنامه درسی را کاوش کنید
@@ -273,7 +309,20 @@ fa:
   call_to_action_notify_available: در صورت موجود بودن به من اطلاع دهید
   call_to_action_register_early_access: برای دسترسی زودهنگام ثبت نام کنید
   call_to_action_open_positions: مشاهده پوزیشن های باز
+  call_to_action_explore_roles: نقش های باز را کاوش کنید
   call_to_action_get_guide: راهنما را دریافت کنید
+  call_to_action_donate_to_cdo: به Code.org کمک مالی کنید
+  call_to_action_start_fundraiser: شروع یک جمع آوری کمک مالی
+  call_to_action_view_donation_policy: مشاهده سیاست کمک مالی
+  call_to_action_view_donate_bitpay: با BitPay اهدا کنید
+  call_to_action_make_a_donation: کمک مالی کنید
+  call_to_action_other_ways_to_give: راه های دیگر برای دادن
+  call_to_action_become_partner_usa: تبدیل شدن به یک شریک ایالات متحده
+  call_to_action_become_partner_intl: تبدیل شدن به یک شریک بین المللی
+  call_to_action_become_a_volunteer: تبدیل شدن به یک داوطلب
+  call_to_action_start_translating: شروع به ترجمه کنید
+  call_to_action_learn_about_advocacy: درباره وکالت ما اطلاعات کسب کنید
+  call_to_action_visit_store: از فروشگاه دیدن کنید
   aria_label_call_to_action_afe: درباره مهندس آینده آمازون بیشتر بدانید
   aria_label_call_to_action_teaching_csf: برنامه آموزش حرفه ای مبانی علوم کامپیوتر
     را شروع کنید
@@ -379,6 +428,7 @@ fa:
   curriculum_name_csp: اصول علوم کامپیوتر
   curriculum_name_csc: پیوند با علوم کامپیوتر
   curriculum_name_csa: علوم کامپیوتر A
+  curriculum_name_csa_ai: مهندسی نرم افزار و بینایی کامپیوتر
   curriculum_name_csc_02: هر نوع ماژول پیوند با علوم کامپیوتر
   curriculum_name_ai: هوش مصنوعی و یادگیری ماشین
   curriculum_name_artificial_intelligence: هوش مصنوعی (AI)
@@ -449,6 +499,12 @@ fa:
     ها و سیستم های محاسبات فیزیکی معرفی می کند.
   curriculum_desc_csp: رایگان، AP® CSP تایید شده، دوره مقدماتی دبیرستان که دانش آموزان
     را به مفاهیم پایه علوم کامپیوتر معرفی می کند.
+  curriculum_desc_csa_ai_long: 'این ماژول دو فصل Post-AP CSA دانش آموزان دبیرستانی
+    را با استفاده از ابزارهای حرفه ای توسعه نرم افزار، از جمله GitHub و GitHub Copilot،
+    تجربه می کند و آنها را با مهارت های دنیای واقعی برای توسعه یک برنامه بینایی کامپیوتری
+    به ارمغان می آورد. '
+  curriculum_desc_csa_ai_short: این ماژول Post-AP® CSA دانش آموزان دبیرستانی را با
+    استفاده از ابزارهای حرفه ای توسعه نرم افزار تجربه می کند.
   collection_hardware: تمرکز روی سخت‌افزار
   collection_hardware_desc: دانش‌آموزان را قادر می‌سازد تا از داده‌ها و دستگاه‌های
     فیزیکی برای حل مشکلات استفاده کنند.
@@ -523,6 +579,7 @@ fa:
   module_duration_2_hrs: 2 ساعت
   module_duration_3_hrs: 3 ساعت
   module_duration_5_hrs: 5 ساعت
+  module_duration_5_hrs_plus: 5+ ساعت
   module_duration_8_hrs: 8 ساعت
   module_duration_20_hrs: 20 ساعت ها
   module_duration_35_hrs: 35 ساعت ها
@@ -600,6 +657,8 @@ fa:
   heading_these_lessons_will: 'این درسها:'
   heading_explore_curriculum_catalog: تمام دوره های ما را در کاتالوگ برنامه درسی کاوش
     کنید
+  heading_csa_ai: آیا به دنبال کارهایی هستید که بعد از آزمون AP® انجام دهید؟
+  heading_bring_cs_to_students: علوم کامپیوتر را به دانش آموزان بیاورید
   professional_learning_section_desc: همانطور که برای تدریس آماده می‌شوید، پشتیبانی
     لازم را دریافت کنید. معلمان آن را دوست دارند، و بیش از 90% آنها آن را بهترین پیشرفت
     حرفه‌ای در طول تاریخ دانسته‌اند.
@@ -630,6 +689,23 @@ fa:
   support_and_questions_section_desc: تیم پشتیبانی ما اینجاست تا به هر سوالی که ممکن
     است در مورد شروع تدریس با Code.org داشته باشید پاسخ دهد. همچنین می‌توانید از سایر
     معلمان در مورد تجربه آنها در انجمن معلمان ما بپرسید.
+  subscribe_form_section_title: مشترک شدن برای به روز رسانی
+  subscribe_form_section_desc_csa: برای دریافت ایمیل های ماهانه در مورد Code.org AP®
+    Computer Science A ثبت نام کنید و یادآوری ها، نکات و به روزرسانی های مفید را مستقیماً
+    به صندوق ورودی خود ارسال کنید.
+  subscribe_form_section_desc_csc: برای دریافت ایمیل های ماهانه در مورد اتصالات علوم
+    کامپیوتر Code.org ثبت نام کنید و یادآوری ها، نکات و به روزرسانی های مفید را مستقیماً
+    به صندوق ورودی خود ارسال کنید.
+  subscribe_form_section_desc_csd: برای دریافت ایمیل های ماهانه در مورد اکتشافات علوم
+    کامپیوتر Code.org ثبت نام کنید و یادآوری ها، نکات و به روزرسانی های مفید را مستقیماً
+    به صندوق ورودی خود ارسال کنید.
+  subscribe_form_section_desc_csf: برای دریافت ایمیل های ماهانه در مورد اصول علوم
+    کامپیوتر Code.org ثبت نام کنید و یادآوری ها، نکات و به روزرسانی های مفید را مستقیماً
+    به صندوق ورودی خود ارسال کنید.
+  subscribe_form_section_desc_csp: برای دریافت ایمیل های ماهانه در مورد اصول علوم
+    کامپیوتر Code.org ثبت نام کنید و یادآوری ها، نکات و به روزرسانی های مفید را مستقیماً
+    به صندوق ورودی خود ارسال کنید.
+  subscribe_form_section_unsubscribe: در هر زمان می توانید اشتراک خود را لغو کنید.
   blockchain_hero_heading: بلاکچین چگونه کار می کند
   blockchain_hero_desc: با «Blockchain چگونه کار می کند»، سری ویدیوی جدید ما و درس
     های همراه آن، به دنیای بلاک چین شیرجه بزنید!
@@ -734,6 +810,8 @@ fa:
     درس با یک ویدیوی واحد از این مجموعه جفت می شود و عمیق تر به مفاهیم معرفی شده در
     فیلم ها می پردازد.
   ai_curriculum_btn_aria_label_04: کاوش در درس های هوش مصنوعی چگونه کار می کند
+  ai_curriculum_grades_05: 'سطح درجه: 9-12'
+  ai_curriculum_btn_aria_label_05: کاوش در مهندسی نرم افزار و ماژول بینایی کامپیوتر
   ai_carousel_heading: 'آنچه معلمان در مورد هوش مصنوعی با Code.org می گویند:'
   ai_carousel_quote_01: این درس همچنین به دانش آموزان من این فرصت را داد تا ببینند
     که یک عنصر از نظر در سیستم های طبقه بندی وجود دارد. بعدها، زمانی که ما شروع کردیم
@@ -850,6 +928,7 @@ fa:
     تمرکز دارد. با ترکیبی غنی از تئوری، نمونه های عملی و منابع، هدف آن توانمند سازی
     مربیان برای حرکت در چشم انداز هوش مصنوعی و افزایش تجربیات یادگیری دانش آموزان
     است.
+  ai_pl_101_resources_5: راهنمای اطمینان از رویکرد مسئولانه به هوش مصنوعی
   ai_pl_101_video_desc_6: 'در مورد فناوری جدیدی که تغییرات بزرگی را در AI ایجاد می
     کند، بیشتر بدانید، شامل دو فیلم جدید در مدل های زبان بزرگ (مانند ChatGPT) و Generative
     AI. بشنوید که چگونه این فن آوری های جدید به طور مستقیم از کارشناسان کار می کنند:
@@ -859,6 +938,9 @@ fa:
     ChatGPT، از مبتدی تا پیشرفته. شامل دستورالعمل های استارتر برای کسانی که فقط انگشتان
     خود را در آن فرو می برند، و همچنین ابزارهای پیشرفته برای کسانی که به دنبال به
     حداکثر رساندن پتانسیل خود هستند.
+  ai_pl_101_resources_3: دستورالعمل های هوش مصنوعی برای تبدیل یادگیری دانش آموزان
+  ai_pl_101_resources_section_title: راه های بیشتر برای یادگیری در مورد AI
+  ai_pl_101_resources_guide: 'راهنمای همراه:'
   how_ai_works_hero_heading: هوش مصنوعی چگونه کار می کند
   how_ai_works_hero_desc: با «هوش مصنوعی چگونه کار می کند»، مجموعه ویدیویی ما و درس
     های همراه آن، به دنیای هوش مصنوعی شیرجه بزنید!
@@ -1662,6 +1744,62 @@ fa:
   csa_page_faq_answer_08_02: For more information about the values that guided our
     work, please see our [curriculum values](%{curriculum_values_url}) and our [professional
     learning values](%{pl_values_url}).
+  donate_page_top_heading: کمک مالی به ماموریت ما
+  donate_page_top_desc: هر کمک مالی به ماموریت Code.org برای گسترش دسترسی به آموزش
+    علوم کامپیوتر کمک می کند. ما راه های مختلفی را برای شما ارائه می دهیم تا کمک مالی
+    کنید و تفاوت ایجاد کنید.
+  donate_page_fundraise_title: جمع آوری کمک مالی برای Code.org
+  donate_page_fundraise_desc: کمک به جمع آوری پول برای Code.org! هر دانش آموز در هر
+    مدرسه باید فرصت یادگیری علوم کامپیوتر را داشته باشد.
+  donate_page_other_ways_title: راه های دیگر برای دادن
+  donate_page_other_ways_desc: روش های متنوعی را برای مشارکت کاوش کنید و گزینه ای
+    را پیدا کنید که مناسب شما باشد. هر حرکت، بزرگ یا کوچک، ماموریت ما را به جلو می
+    برد.
+  donate_page_501c3: Code.org به عنوان یک سازمان غیرانتفاعی 501 (c) (3) عمومی ثبت
+    شده است. مشارکت در Code.org تا حدی که توسط قانون مجاز است، از مالیات کسر می شود.
+    شماره شناسایی مالیاتی Code.org 46-0858543 است.
+  donate_page_donation_policy_title: درک سیاست کمک مالی ما
+  donate_page_donation_policy_desc: در مورد نحوه مدیریت و تخصیص مشارکت های خود بیاموزید.
+  donate_tabs_tab_label_daf_direct: DAF مستقیم
+  donate_tabs_tab_label_amazon: آمازون
+  donate_tabs_tab_label_bitpay: بیت پی
+  donate_tabs_tab_label_employee_match: مسابقه کارمند
+  donate_tabs_daf_direct_title: کمک مالی از طریق DAF مستقیم
+  donate_tabs_daf_direct_desc: از طریق صندوق توصیه شده توسط اهدا کننده خود با Fidelity
+    Charitive، Schwab Charitive یا BNY Mellon اهدا کنید و توصیه کمک مالی خود را از
+    طریق فرم آنلاین DAF Direct به Code.org ارائه دهید.
+  donate_tabs_amazon_title: کمک مالی از طریق آمازون
+  donate_tabs_amazon_desc: با استفاده از حساب آمازون خود مستقیماً اهدا کنید. تنها
+    با چند کلیک، به طور یکپارچه به ماموریت Code.org کمک می کند و آینده آموزش علوم
+    کامپیوتر را تقویت می کند.
+  donate_tabs_bitpay_title: از طریق BitPay با رمزنگاری کمک مالی کنید
+  donate_tabs_bitpay_desc: آینده دادن با ارز رمزنگاری شده را در آغوش بگیرید. از طریق
+    BitPay، ارز دیجیتال شما می تواند به طور مستقیم از تلاش های Code.org در گسترش آموزش
+    علوم کامپیوتر پشتیبانی کند.
+  help_page_top_heading: چگونه می توانید کمک کنید
+  help_page_top_desc: از ماموریت ما برای دسترسی به علم کامپیوتر برای هر کودک، در همه
+    جا حمایت کنید. تلاش های شما به ما کمک می کند تا نوآوران آینده را الهام بخشیم و
+    شکاف آموزش فناوری را برطرف کنیم.
+  help_page_top_subhead: به Code.org کمک مالی کنید
+  help_page_top_desc_02: ما در حال تلاش هستیم تا هر دانش آموز فرصتی برای یادگیری علوم
+    کامپیوتر - هر دو آنلاین و در مدارس، جایی که ما دوره های دائمی را ایجاد می کنیم
+    و معلمان را آموزش می دهیم. به ازای هر دلاری که اهدا میکنید، یک کودک با علم کامپیوتر
+    آشنا میشود.
+  help_page_partners_heading: تبدیل شدن به یک شریک
+  help_page_partners_desc: Code.org با سایر سازمان های غیر انتفاعی به عنوان شریک کار
+    می کند تا به گسترش علوم کامپیوتر به صورت محلی و پایدار کمک کند. درباره برنامه
+    ما بیشتر بدانید
+  help_page_volunteer_heading: داوطلب در کلاس درس
+  help_page_volunteer_desc: داوطلب شوید تا ساعت کد را تدریس کنید یا یک سخنران مهمان
+    در یک کلاس محلی باشید. ثبت نام کنید تا از فرصت های نزدیک خود مطلع شوید.
+  help_page_translate_heading: به ما در ترجمه کمک کنید
+  help_page_translate_desc: داوطلبان آموزش های ما را به بیش از 45 زبان ترجمه کرده
+    اند. به ما کمک کنید تا آموزش های خود را برای دانش آموزان در سراسر جهان گسترش دهیم!
+  help_page_speak_for_cs_heading: برای آموزش علوم کامپیوتر صحبت کنید
+  help_page_speak_for_cs_desc: در مورد فعالیت های حمایتی Code.org در سراسر ایالات
+    متحده و ده سیاستی که ما به ایالت ها توصیه می کنیم برای ایجاد پایه و اساس علوم
+    رایانه برای همه دانش آموزان، بیشتر بدانید. به علاوه، دریابید که چگونه می توانید
+    در ایالت خود تغییر ایجاد کنید.
   hoc_live: ساعت کد زنده
   hoc_live_sign_up_title: ثبت نام برای ساعت کد زنده
   hoc_live_learn_title: یادگیری با ساعت کد زنده
@@ -13578,6 +13716,10 @@ fa:
   video_library_page_inspirational_video_title_11: هر کس می تواند یاد بگیرد (1 دقیقه)
   video_library_page_inspirational_video_title_12: لو کو فالتا و تغذیه اسکوئلاس (2
     دقیقه)
+  video_library_page_inspirational_video_title_13: ناسا ساعت کد را جشن می گیرد (2
+    دقیقه)
+  video_library_page_inspirational_video_title_14: بیشتر از یک بازی (1 دقیقه)
+  video_library_page_inspirational_video_title_15: ایجاد با علوم کامپیوتر (1 دقیقه)
   video_library_page_not_hacked_video_title_1: چگونه هک نشم:مقدمه
   video_library_page_not_hacked_video_title_2: چگونه هک نشم:کلمات عبور
   video_library_page_not_hacked_video_title_3: چگونه هک نشم:احراز هویت و قفل دستگاه

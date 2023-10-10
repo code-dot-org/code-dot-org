@@ -17,7 +17,19 @@
         "AppLab Intro 7 - Change Screen Color": {
           "applab_hoc_finish": "Zmenila sa farba obrazovky na zelenú? Ak áno, vyber možnosť Dokončiť. Ak nie, vyber možnosť Obnoviť, zmeň svoj kód a znova klikni na Spustiť."
         },
+        "AppLab Intro 7 - Change Screen Color_2023": {
+          "applab_hoc_finish": "Zmenila sa farba obrazovky na zelenú? Ak áno, vyber možnosť Dokončiť. Ak nie, vyber možnosť Obnoviť, zmeň svoj kód a znova klikni na Spustiť."
+        },
+        "AppLab Intro 7 - Change Screen Color_mb2022": {
+          "applab_hoc_finish": "Zmenila sa farba obrazovky na zelenú? Ak áno, vyber možnosť Dokončiť. Ak nie, vyber možnosť Obnoviť, zmeň svoj kód a znova klikni na Spustiť."
+        },
         "AppLab Intro 7 - thisOrThatAddButton": {
+          "AppLabHoCFinal11": "Teraz si v dizajnovom móde."
+        },
+        "AppLab Intro 7 - thisOrThatAddButton_2023": {
+          "AppLabHoCFinal11": "Teraz si v dizajnovom móde."
+        },
+        "AppLab Intro 7 - thisOrThatAddButton_mb2022": {
           "AppLabHoCFinal11": "Teraz si v dizajnovom móde."
         },
         "CSD U3 - conditionals - transition": {
@@ -50,6 +62,29 @@
         "CSD U3 Boolean Predict_2022": {
           "": "Tento program vypíše výsledok sem"
         },
+        "CSD U3 Boolean Predict_2023": {
+          "": "Tento program vypíše výsledok sem"
+        },
+        "CSD U3 L7 review arc_2023": {
+          "CSD_U3_rect_c1": "Tu je kód",
+          "CSD_U3_rect_c2": "Presuň tento blok do oblasti kódu."
+        },
+        "CSD U3 L7 review line_2023": {
+          "CSD_U3_rect_c1": "Tu je kód",
+          "CSD_U3_rect_c2": "Presuň tento blok do oblasti kódu."
+        },
+        "CSD U3 L7 review point_2023": {
+          "CSD_U3_rect_c1": "Tu je kód",
+          "CSD_U3_rect_c2": "Presuň tento blok do oblasti kódu."
+        },
+        "CSD U3 L7 review shapes_2023": {
+          "CSD_U3_rect_c1": "Tu je kód",
+          "CSD_U3_rect_c2": "Presuň tento blok do oblasti kódu."
+        },
+        "CSD U3 L7 shapes review polygon_2023": {
+          "CSD_U3_rect_c1": "Tu je kód",
+          "CSD_U3_rect_c2": "Presuň tento blok do oblasti kódu."
+        },
         "CSD U3 Random add_2021": {
           "CSD_U3_butterfly": "Pozorne si preštuduj tento kód."
         },
@@ -72,6 +107,9 @@
           "grid": "Pre zobrazenie mriežky klikni sem."
         },
         "CSD U3 Variables Predict Where XY_2022": {
+          "grid": "Pre zobrazenie mriežky klikni sem."
+        },
+        "CSD U3 Variables Predict Where XY_2023": {
           "grid": "Pre zobrazenie mriežky klikni sem."
         },
         "CSD U3 Variables Predict Where X_2018": {
@@ -106,11 +144,19 @@
           "CSD_U3_rect_c1": "Tu je kód",
           "CSD_U3_rect_c2": "Presuň tento blok do oblasti kódu."
         },
+        "CSD U3 debug_2023": {
+          "CSD_U3_rect_c1": "Tu je kód",
+          "CSD_U3_rect_c2": "Presuň tento blok do oblasti kódu."
+        },
         "CSD U3 drawing challenge 2_2021": {
           "CSD_U3_rect_c1": "Tu je kód",
           "CSD_U3_rect_c2": "Presuň tento blok do oblasti kódu."
         },
         "CSD U3 drawing challenge 2_2022": {
+          "CSD_U3_rect_c1": "Tu je kód",
+          "CSD_U3_rect_c2": "Presuň tento blok do oblasti kódu."
+        },
+        "CSD U3 drawing challenge 2_2023": {
           "CSD_U3_rect_c1": "Tu je kód",
           "CSD_U3_rect_c2": "Presuň tento blok do oblasti kódu."
         },
@@ -122,11 +168,19 @@
           "CSD_U3_rect_c1": "Tu je kód",
           "CSD_U3_rect_c2": "Presuň tento blok do oblasti kódu."
         },
+        "CSD U3 drawing challenge 3_2023": {
+          "CSD_U3_rect_c1": "Tu je kód",
+          "CSD_U3_rect_c2": "Presuň tento blok do oblasti kódu."
+        },
         "CSD U3 drawing practice 1_2021": {
           "CSD_U3_rect_c1": "Tu je kód",
           "CSD_U3_rect_c2": "Presuň tento blok do oblasti kódu."
         },
         "CSD U3 drawing practice 1_2022": {
+          "CSD_U3_rect_c1": "Tu je kód",
+          "CSD_U3_rect_c2": "Presuň tento blok do oblasti kódu."
+        },
+        "CSD U3 drawing practice 1_2023": {
           "CSD_U3_rect_c1": "Tu je kód",
           "CSD_U3_rect_c2": "Presuň tento blok do oblasti kódu."
         },
@@ -138,11 +192,19 @@
           "CSD_U3_rect_c1": "Tu je kód",
           "CSD_U3_rect_c2": "Presuň tento blok do oblasti kódu."
         },
+        "CSD U3 drawing practice 2_2023": {
+          "CSD_U3_rect_c1": "Tu je kód",
+          "CSD_U3_rect_c2": "Presuň tento blok do oblasti kódu."
+        },
         "CSD U3 drawing practice 3_2021": {
           "CSD_U3_rect_c1": "Tu je kód",
           "CSD_U3_rect_c2": "Presuň tento blok do oblasti kódu."
         },
         "CSD U3 drawing practice 3_2022": {
+          "CSD_U3_rect_c1": "Tu je kód",
+          "CSD_U3_rect_c2": "Presuň tento blok do oblasti kódu."
+        },
+        "CSD U3 drawing practice 3_2023": {
           "CSD_U3_rect_c1": "Tu je kód",
           "CSD_U3_rect_c2": "Presuň tento blok do oblasti kódu."
         },
@@ -186,6 +248,10 @@
           "CSD_U3_rect_c1": "Tu je kód",
           "CSD_U3_rect_c2": "Presuň tento blok do oblasti kódu."
         },
+        "CSD U3 fill_2023": {
+          "CSD_U3_rect_c1": "Tu je kód",
+          "CSD_U3_rect_c2": "Presuň tento blok do oblasti kódu."
+        },
         "CSD U3 properties depth_2021": {
           "CSD_U3_rect_c1": "Tu je kód",
           "CSD_U3_rect_c2": "Presuň tento blok do oblasti kódu."
@@ -194,11 +260,19 @@
           "CSD_U3_rect_c1": "Tu je kód",
           "CSD_U3_rect_c2": "Presuň tento blok do oblasti kódu."
         },
+        "CSD U3 properties depth_2023": {
+          "CSD_U3_rect_c1": "Tu je kód",
+          "CSD_U3_rect_c2": "Presuň tento blok do oblasti kódu."
+        },
         "CSD U3 properties tint_2021": {
           "CSD_U3_rect_c1": "Tu je kód",
           "CSD_U3_rect_c2": "Presuň tento blok do oblasti kódu."
         },
         "CSD U3 properties tint_2022": {
+          "CSD_U3_rect_c1": "Tu je kód",
+          "CSD_U3_rect_c2": "Presuň tento blok do oblasti kódu."
+        },
+        "CSD U3 properties tint_2023": {
           "CSD_U3_rect_c1": "Tu je kód",
           "CSD_U3_rect_c2": "Presuň tento blok do oblasti kódu."
         },
@@ -246,11 +320,19 @@
           "CSD_U3_rect_c1": "Tu je kód",
           "CSD_U3_rect_c2": "Presuň tento blok do oblasti kódu."
         },
+        "CSD U3 shapes arc_2023": {
+          "CSD_U3_rect_c1": "Tu je kód",
+          "CSD_U3_rect_c2": "Presuň tento blok do oblasti kódu."
+        },
         "CSD U3 shapes behind_2021": {
           "CSD_U3_rect_c1": "Tu je kód",
           "CSD_U3_rect_c2": "Presuň tento blok do oblasti kódu."
         },
         "CSD U3 shapes behind_2022": {
+          "CSD_U3_rect_c1": "Tu je kód",
+          "CSD_U3_rect_c2": "Presuň tento blok do oblasti kódu."
+        },
+        "CSD U3 shapes behind_2023": {
           "CSD_U3_rect_c1": "Tu je kód",
           "CSD_U3_rect_c2": "Presuň tento blok do oblasti kódu."
         },
@@ -262,11 +344,19 @@
           "CSD_U3_rect_c1": "Tu je kód",
           "CSD_U3_rect_c2": "Presuň tento blok do oblasti kódu."
         },
+        "CSD U3 shapes line_2023": {
+          "CSD_U3_rect_c1": "Tu je kód",
+          "CSD_U3_rect_c2": "Presuň tento blok do oblasti kódu."
+        },
         "CSD U3 shapes missing_2021": {
           "CSD_U3_rect_c1": "Tu je kód",
           "CSD_U3_rect_c2": "Presuň tento blok do oblasti kódu."
         },
         "CSD U3 shapes missing_2022": {
+          "CSD_U3_rect_c1": "Tu je kód",
+          "CSD_U3_rect_c2": "Presuň tento blok do oblasti kódu."
+        },
+        "CSD U3 shapes missing_2023": {
           "CSD_U3_rect_c1": "Tu je kód",
           "CSD_U3_rect_c2": "Presuň tento blok do oblasti kódu."
         },
@@ -278,11 +368,19 @@
           "CSD_U3_rect_c1": "Tu je kód",
           "CSD_U3_rect_c2": "Presuň tento blok do oblasti kódu."
         },
+        "CSD U3 shapes polygon_2023": {
+          "CSD_U3_rect_c1": "Tu je kód",
+          "CSD_U3_rect_c2": "Presuň tento blok do oblasti kódu."
+        },
         "CSD U3 shapes scene_2021": {
           "CSD_U3_rect_c1": "Tu je kód",
           "CSD_U3_rect_c2": "Presuň tento blok do oblasti kódu."
         },
         "CSD U3 shapes scene_2022": {
+          "CSD_U3_rect_c1": "Tu je kód",
+          "CSD_U3_rect_c2": "Presuň tento blok do oblasti kódu."
+        },
+        "CSD U3 shapes scene_2023": {
           "CSD_U3_rect_c1": "Tu je kód",
           "CSD_U3_rect_c2": "Presuň tento blok do oblasti kódu."
         },
@@ -294,13 +392,35 @@
           "CSD_U3_rect_c1": "Tu je kód",
           "CSD_U3_rect_c2": "Presuň tento blok do oblasti kódu."
         },
+        "CSD U3 shapes_2023": {
+          "CSD_U3_rect_c1": "Tu je kód",
+          "CSD_U3_rect_c2": "Presuň tento blok do oblasti kódu."
+        },
+        "CSD U3L16 Prac D_2023": {
+          "CSD U3L16.7 - start": "Pridajte váš kód sem"
+        },
+        "CSD U3L3 rect_2023": {
+          "CSD_U3_rect_c1": "Tu je kód"
+        },
+        "CSD U6 - Color LEDs - SB4_2023": {
+          "CSDU6L10_rainbow": "Pridajte váš kód sem"
+        },
         "CSD U6 - Color LEDs - SB4_2222": {
           "CSDU6L10_rainbow": "Pridajte váš kód sem"
+        },
+        "CSD U6 - Combine Inputs - PracD_2023": {
+          "CSD U6L9.7 - if-statement": "Sem pridaj svoj príkaz if"
         },
         "CSD U6 - Combine Inputs - PracD_2222": {
           "CSD U6L9.7 - if-statement": "Sem pridaj svoj príkaz if"
         },
+        "CSD U6 - If Variables - A_2023": {
+          "U6L6.4 - If": "Sem pridaj svoj príkaz if"
+        },
         "CSD U6 - If Variables - A_2222": {
+          "U6L6.4 - If": "Sem pridaj svoj príkaz if"
+        },
+        "CSD U6 - If Variables - A_mb2022": {
           "U6L6.4 - If": "Sem pridaj svoj príkaz if"
         },
         "CSD U6 colorLeds intensity": {
@@ -367,6 +487,9 @@
           "CSD_U3_variables": "Zmeňte číslo tu"
         },
         "CSD web text explore_2022": {
+          "CSD_U3_variables": "Zmeňte číslo tu"
+        },
+        "CSD web text explore_2023": {
           "CSD_U3_variables": "Zmeňte číslo tu"
         },
         "CSDU4 - Design Mode - 3": {
@@ -3152,10 +3275,16 @@
         "ml-customize apps-choice3_2022": {
           "CSD_AI_L10_predict": "Sem pridaj svoj príkaz if"
         },
+        "ml-customize apps-choice3_2023": {
+          "CSD_AI_L10_predict": "Sem pridaj svoj príkaz if"
+        },
         "ml-customize apps-choice5": {
           "CSD_AI_L11_top": "Blok potiahni nad túto čiaru"
         },
         "ml-customize apps-choice5_2022": {
+          "CSD_AI_L11_top": "Blok potiahni nad túto čiaru"
+        },
+        "ml-customize apps-choice5_2023": {
           "CSD_AI_L11_top": "Blok potiahni nad túto čiaru"
         },
         "ml-intro app lab-book recommender 5C-2021": {
@@ -3164,10 +3293,16 @@
         "ml-intro app lab-book recommender 5C_2022": {
           "CSD_AI_L7_event": "Sem pridaj blok „playSound“"
         },
+        "ml-intro app lab-book recommender 5C_2023": {
+          "CSD_AI_L7_event": "Sem pridaj blok „playSound“"
+        },
         "ml-intro app lab-book recommender 5E-2021": {
           "CSD_AI_L7_top": "Blok potiahni nad túto čiaru"
         },
         "ml-intro app lab-book recommender 5E_2022": {
+          "CSD_AI_L7_top": "Blok potiahni nad túto čiaru"
+        },
+        "ml-intro app lab-book recommender 5E_2023": {
           "CSD_AI_L7_top": "Blok potiahni nad túto čiaru"
         },
         "ml-models in applab-screens-1-2021": {
@@ -3176,10 +3311,16 @@
         "ml-models in applab-screens-1_2022": {
           "CSD_AI_L10_ifstatement": "Sem pridaj svoj príkaz if"
         },
+        "ml-models in applab-screens-1_2023": {
+          "CSD_AI_L10_ifstatement": "Sem pridaj svoj príkaz if"
+        },
         "ml-models in applab-screens-3-2021": {
           "CSD_AI_L7_ifstatement": "Sem pridaj svoj príkaz if"
         },
         "ml-models in applab-screens-3_2022": {
+          "CSD_AI_L7_ifstatement": "Sem pridaj svoj príkaz if"
+        },
+        "ml-models in applab-screens-3_2023": {
           "CSD_AI_L7_ifstatement": "Sem pridaj svoj príkaz if"
         },
         "ml-use model card-choice3": {
@@ -3188,10 +3329,16 @@
         "ml-use model card-choice3_2022": {
           "CSD_AI_L10_predict": "Sem pridaj svoj príkaz if"
         },
+        "ml-use model card-choice3_2023": {
+          "CSD_AI_L10_predict": "Sem pridaj svoj príkaz if"
+        },
         "ml-use model card-choice5": {
           "CSD_AI_L11_top": "Blok potiahni nad túto čiaru"
         },
         "ml-use model card-choice5_2022": {
+          "CSD_AI_L11_top": "Blok potiahni nad túto čiaru"
+        },
+        "ml-use model card-choice5_2023": {
           "CSD_AI_L11_top": "Blok potiahni nad túto čiaru"
         },
         "ml-use model card-example3C-2021": {
@@ -3200,10 +3347,16 @@
         "ml-use model card-example3C_2022": {
           "CSD_AI_L11_temp": "Toto je vlastnosť teploty"
         },
+        "ml-use model card-example3C_2023": {
+          "CSD_AI_L11_temp": "Toto je vlastnosť teploty"
+        },
         "ml-use model card-example3D-2021": {
           "CSD_AI_L11_time": "Toto je vlastnosť času dňa"
         },
         "ml-use model card-example3D_2022": {
+          "CSD_AI_L11_time": "Toto je vlastnosť času dňa"
+        },
+        "ml-use model card-example3D_2023": {
           "CSD_AI_L11_time": "Toto je vlastnosť času dňa"
         },
         "ml-use model card-example3_EditB-2021": {
@@ -3212,10 +3365,16 @@
         "ml-use model card-example3_EditB_2022": {
           "CSD_AI_L11_cars": "Toto je vlastnosť počtu áut"
         },
+        "ml-use model card-example3_EditB_2023": {
+          "CSD_AI_L11_cars": "Toto je vlastnosť počtu áut"
+        },
         "ml-use model card-example3_EditC-2021": {
           "CSD_AI_L11_weather": "Toto je vlastnosť počasia"
         },
         "ml-use model card-example3_EditC_2022": {
+          "CSD_AI_L11_weather": "Toto je vlastnosť počasia"
+        },
+        "ml-use model card-example3_EditC_2023": {
           "CSD_AI_L11_weather": "Toto je vlastnosť počasia"
         },
         "outbreak2": {

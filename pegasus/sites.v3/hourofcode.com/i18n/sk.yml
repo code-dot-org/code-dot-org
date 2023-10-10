@@ -5,36 +5,40 @@ sk:
   language: Angličtina
   front_title: Pripojte sa k najväčšiemu vzdelávaciemu podujatiu v dejinách, už %{campaign_date}
   coming_soon: Už čoskoro
-  campaign_date_start_short: 5. december
-  campaign_date_start_long: 5. december
-  campaign_date_short: 5.-11. dec
-  campaign_date_full: 5. až 11. december
-  campaign_date_year: '2016'
-  campaign_date_full_year: 5.-11. December 2016
-  nonus_campaign_date_start_short: 1. október
-  nonus_campaign_date_start_long: 1. október
-  nonus_campaign_date_short: 1. október - 18. december
-  nonus_campaign_date_full: 1. októbra – 18. decembra
-  nonus_campaign_date_year: '2016'
-  nonus_campaign_date_full_year: 1. októbra 2022  – 18. decembra 2022
-  latam_campaign_date_start_short: 1. október
-  latam_campaign_date_start_long: 1. október
-  latam_campaign_date_short: 1. október - 18. december
-  latam_campaign_date_full: 1. októbra – 18. decembra
-  latam_campaign_date_year: '2016'
-  latam_campaign_date_full_year: 1. októbra 2022  – 18. decembra 2022
+  campaign_date_start_short: 4. dec
+  campaign_date_start_long: 4. decembra
+  campaign_date_short: 4. - 10. dec
+  campaign_date_full: 4 - 10. decembra
+  campaign_date_year: '2023'
+  campaign_date_full_year: 4. - 10. decembra 2023
+  nonus_campaign_date_start_short: 5. septembra
+  nonus_campaign_date_start_long: 5. septembra
+  nonus_campaign_date_short: 5. sept. - 17. dec.
+  nonus_campaign_date_full: 5. septembra - 17. decembra
+  nonus_campaign_date_year: '2023'
+  nonus_campaign_date_full_year: 5. septembra 2023 – 17. decembra 2023
+  latam_campaign_date_start_short: 5. septembra
+  latam_campaign_date_start_long: 5. septembra
+  latam_campaign_date_short: 5. sept. - 17. dec.
+  latam_campaign_date_full: 5. septembra - 17. decembra
+  latam_campaign_date_year: '2023'
+  latam_campaign_date_full_year: 5. septembra 2023 – 17. decembra 2023
   europe_campaign_date_start_short: 10. október
   europe_campaign_date_start_long: 10. október
   europe_campaign_date_short: 10. - 25. október
   europe_campaign_date_full: 10. - 25. október
-  europe_campaign_date_year: '2016'
+  europe_campaign_date_year: '2023'
   europe_campaign_date_full_year: 10. - 25. október 2020
-  africa_campaign_date_start_short: 1. október
-  africa_campaign_date_start_long: 1. október
+  africa_campaign_date_start_short: 5. septembra
+  africa_campaign_date_start_long: 5. septembra
   africa_campaign_date_short: 1. - 31. október
   africa_campaign_date_full: 1. - 31. október
-  africa_campaign_date_year: '2016'
+  africa_campaign_date_year: '2023'
   africa_campaign_date_full_year: 1. - 31. október 2020
+  hoc2023_header: Kreativita s AI
+  hoc2023_social_creativity_with_ai_title: Hodina kódu - Čo vytvoríte?
+  hoc2023_social_creativity_with_ai_desc: Použite informatiku na objavovanie a učenie
+    sa o AI!
   hoc2022_header: Skúmajte, hrajte sa, tvorte!
   social_hoc2022_explore_play_create: Využite informatiku na objavovanie, hranie sa
     a tvorenie!
@@ -172,9 +176,32 @@ sk:
   curriculum_launch_2023_title: Do našich učebných plánov pribudli úžasné novinky
   curriculum_launch_2023_desc: Aktualizovali sme kurzy Medzipredmetové vzťahy v informatike,
     Princípy informatiky, Objavujeme informatiku  a mnohé ďalšie. Navyše na náš web
-    pribudol aj nový katalóg kurzov a upravili sme stránku Vyučovanie, aby sa dali
-    všetky kurzy ľahko nájsť.
+    pribudol aj nový katalóg kurzov a upravili sme stránku code.org/teach, aby ste
+    všetky kurzy ľahko našli.
   in_partnership_with: V spolupráci s
+  shop_code_dot_org_heading: Nakupujte Code.org
+  shop_code_dot_org_desc: Podporte našu prácu a noste hnutie s hrdosťou. Naše klobúky
+    nosili aj prezident Obama a celebrity.
+  spread_the_word_heading: Informujte ostatných
+  spread_the_word_desc: 'Zdieľajte informácie o Code.org s priateľmi a ľudmi vo vašom
+    okolí. Na sociálnych sieťach, či emailom - pomôžte nám osloviť viac pedagógov,
+    študentov a podporovateľov. '
+  follow_us_heading: Sledujte nás na sociálnych sieťach
+  follow_us_desc: 'Spojte sa s nami na sociálnych sieťach, odoberajte naše novinky
+    a zdieľajte naše príspevky so svojimi priateľmi na zvýšenie povedomia o dôležitosti
+    informatiky. '
+  facebook: Facebook
+  twitter: Twitter
+  linked_in: LinkedIn
+  instagram: Instagram
+  tik_tok: TikTok
+  subscribe_to_emails_heading: Prihláste sa na odber e-mailov
+  subscribe_to_emails_desc: 'Odoberajte novinky o dianí v Code.org a vo vzdelávaní
+    v oblasti informatiky v našom štvrťročnom informačnom bulletíne. '
+  subscribe_to_emails_intl: Prihláste sa na odber medzinárodných noviniek
+  promote_code_dot_org_heading: Propagujte Code.org
+  promote_code_dot_org_desc: Propagujte informatiku vo vašej oblasti pomocou štatistík,
+    citácií a videí.
   afe_partnership_logo_alt: Logo Amazon Future Engineer
   afe_partnership_thanks_desc: Amazon Future Engineer je komplexný program pre deti
     a mladých ľudí z nízkopríjmových alebo inak znevýhodnených skupín. Jeho cieľom
@@ -193,6 +220,15 @@ sk:
   curricula_title_high: Učebné osnovy pre stredné školy
   curricula_desc_high: Prezrite si presvedčivé kurzy a aktivity, ktoré vás a vašich
     študentov stredných škôl pozývajú hlbšie sa venovať informatike.
+  for_administrators_heading: Pre administrátorov
+  for_administrators_desc: Pripojte sa k tisíckam škôl, ktoré už do svojich učebných
+    osnov začlenili informatiku.
+  for_parents_heading: Pre rodičov
+  for_parents_desc: Môžete pomôcť povzbudiť školu svojho študenta, aby ponúkala alebo
+    rozšírila vzdelávanie v oblasti informatiky.
+  for_educators_heading: Pre učiteľov
+  for_educators_desc: Začnite učiť dnes - nie sú potrebné žiadne skúsenosti s informatikou
+    - s našimi odbornými vzdelávacími seminármi.
   students_label: Študenti
   teachers_label: Učitelia
   teacher_label_csf: 'Základy informatiky: učiteľ'
@@ -202,10 +238,11 @@ sk:
   teacher_label_csa: 'AP® Informatika A: učiteľ'
   required_materials: 'Potrebné materiály:'
   optional_materials: 'Nepovinné materiály:'
-  call_to_action_explore_roles: Preskúmajte otvorené role
+  call_to_action_hold_an_event: Ukonajte udalosť
   call_to_action_learn_more: Viac info
   call_to_action_watch_now: Pozerať teraz
   call_to_action_try_activity: Vyskúšajte aktivitu
+  call_to_action_try_activities: Vyskúšajte aktivity
   call_to_action_explore_unit: Preskúmať jednotku
   call_to_action_explore_curriculum: Preskúmajte učebné osnovy
   call_to_action_explore_curriculum_options: Preskúmajte možnosti učebného plánu
@@ -238,7 +275,7 @@ sk:
   call_to_action_explore_website: Preskúmať webovú stránku
   call_to_action_read_more: Čítať viac
   call_to_action_donate_online: Darujte online
-  call_to_action_get_updates: Získať aktualizácie
+  call_to_action_get_updates: Odoberať novinky
   call_to_action_special_announcement: Pozri špeciálne oznámenie
   call_to_action_learning_opportunity: Nová profesionálna vzdelávacia príležitosť
   call_to_action_start_pl: Začnite profesionálne vzdelávanie
@@ -274,7 +311,20 @@ sk:
   call_to_action_notify_available: Upozorniť ma, keď je k dispozícii
   call_to_action_register_early_access: Zaregistrujte sa na včasný prístup
   call_to_action_open_positions: Zobraziť otvorené pozície
+  call_to_action_explore_roles: Preskúmajte otvorené role
   call_to_action_get_guide: Získajte sprievodcu
+  call_to_action_donate_to_cdo: Prispejte na Code.org
+  call_to_action_start_fundraiser: Spustite zbierku
+  call_to_action_view_donation_policy: Zobraziť pravidlá darovania
+  call_to_action_view_donate_bitpay: Darujte pomocou BitPay
+  call_to_action_make_a_donation: Urobte dar
+  call_to_action_other_ways_to_give: Iné spôsoby, ako dať
+  call_to_action_become_partner_usa: Staňte sa partnerom USA
+  call_to_action_become_partner_intl: Staňte sa medzinárodným partnerom
+  call_to_action_become_a_volunteer: Staňte sa dobrovoľníkom
+  call_to_action_start_translating: Začnite prekladať
+  call_to_action_learn_about_advocacy: Prečítajte si viac o našej advokácii
+  call_to_action_visit_store: Navštívte obchod
   aria_label_call_to_action_afe: Získajte viac informácií o Amazon Future Engineer
   aria_label_call_to_action_teaching_csf: Spustite program odborného vzdelávania Teaching
     Computer Science Fundamentals
@@ -381,6 +431,7 @@ sk:
   curriculum_name_csp: Princípy informatiky
   curriculum_name_csc: Medzipredmetové vzťahy v informatike
   curriculum_name_csa: AP® Počítačová veda A
+  curriculum_name_csa_ai: Softvérové inžinierstvo a počítačové videnie
   curriculum_name_csc_02: Akýkoľvek modul CS Connections
   curriculum_name_ai: Umelá inteligencia a strojové učenie
   curriculum_name_artificial_intelligence: Umelá inteligencia (AI)
@@ -457,6 +508,12 @@ sk:
     aplikácií, animácií, hier a fyzických počítačových systémov.
   curriculum_desc_csp: Bezplatný stredoškolský úvodný kurz schválený AP® CSP, ktorý
     študentov oboznámi so základnými konceptmi informatiky.
+  curriculum_desc_csa_ai_long: 'Tento dvojkapitolový modul CSA po AP ponúka študentom
+    stredných škôl praktické skúsenosti s profesionálnymi nástrojmi na vývoj softvéru,
+    vrátane GitHub a GitHub Copilot, a dodáva im zručnosti v reálnom svete na vývoj
+    programu počítačového videnia. '
+  curriculum_desc_csa_ai_short: Tento modul Post-AP® CSA ponúka študentom stredných
+    škôl praktické skúsenosti s profesionálnymi nástrojmi na vývoj softvéru.
   collection_hardware: Zamerané na hardvér
   collection_hardware_desc: Motivuje žiakov k tomu, aby riešili úlohy pomocou dát
     a fyzických zariadení.
@@ -530,6 +587,7 @@ sk:
   module_duration_2_hrs: 2 hodiny
   module_duration_3_hrs: 3 hodiny
   module_duration_5_hrs: 5 hodín
+  module_duration_5_hrs_plus: 5+ hodín
   module_duration_8_hrs: 8 hodín
   module_duration_20_hrs: 20 hodín
   module_duration_35_hrs: 35 hodín
@@ -610,6 +668,8 @@ sk:
   heading_these_lessons_will: 'Tieto lekcie budú:'
   heading_explore_curriculum_catalog: Preskúmajte všetky naše kurzy v katalógu učebných
     osnov
+  heading_csa_ai: Hľadáte veci, ktoré by ste mali robiť po skúške AP®?
+  heading_bring_cs_to_students: Prineste počítačovú vedu študentom
   professional_learning_section_desc: Získajte pri príprave na vyučovanie potrebnú
     podporu. Učitelia tento kurz obľubujú a až 90 % z nich ho hodnotí ako najlepší
     program profesijného rozvoja, aký kedy absolvovali. 
@@ -644,6 +704,23 @@ sk:
   support_and_questions_section_desc: Náš tím podpory vám rád odpovie na všetky otázky,
     keď budete začínať s vyučovaním pomocou Code.org. Na našich učiteľských fórach
     stretnete aj iných učiteľov, ktorých sa môžete opýtať na ich skúsenosti.
+  subscribe_form_section_title: Prihláste sa na odber noviniek
+  subscribe_form_section_desc_csa: Prihláste sa na odber noviniek o kurze AP® Computer
+    Science A od Code.org a každý mesiac dostanete email plný nápadov a užitočných
+    rád.
+  subscribe_form_section_desc_csc: Prihláste sa na odber noviniek o kurzoch CS Connections
+    ktoré prepájajú informatiku s inými predmetmi a každý mesiac dostanete email plný
+    nápadov a užitočných rád.
+  subscribe_form_section_desc_csd: 'Prihláste sa na odber noviniek o kurze Objavujeme
+    informatiku (CS Discoveries) od Code.org a každý mesiac dostanete email plný nápadov
+    a užitočných rád. '
+  subscribe_form_section_desc_csf: Prihláste sa na odber noviniek o kurzoch Základy
+    informatiky (CS Fundamentals) a každý mesiac dostanete email plný nápadov a užitočných
+    rád.
+  subscribe_form_section_desc_csp: Prihláste sa na odber noviniek o kurze Princípy
+    informatiky (CS Principles) od Code.org a každý mesiac dostanete email plný nápadov
+    a užitočných rád.
+  subscribe_form_section_unsubscribe: Z odberu sa môžete kedykoľvek odhlásiť.
   blockchain_hero_heading: Ako funguje blockchain
   blockchain_hero_desc: Ponorte sa do sveta blockchainu pomocou našej novej série
     videí a sprievodných lekcií „Ako funguje blockchain“!
@@ -668,9 +745,9 @@ sk:
   blockchain_resources_desc: Máte záujem dozvedieť sa viac o blockchaine? Tu je niekoľko
     ďalších zdrojov, ktoré môžu pomôcť rozšíriť učenie vašich študentov.
   blockchain_resources_01_heading: Coinbase Naučte sa
-  blockchain_resources_01_desc: Zodpovedané otázky týkajúce sa kryptomien, príručky
-    pre začiatočníkov, praktické tipy a aktualizácie trhu pre nováčikov, skúsených
-    investorov a všetkých medzi tým.
+  blockchain_resources_01_desc: Odpovede na otázky týkajúce sa kryptomien, príručka
+    pre začiatočníkov, praktické tipy či novinky pre nováčikov, skúsených investorov
+    aj všetkých medzi tým.
   blockchain_resources_01_button_label: Navštívte webovú stránku Coinbase Learn
   blockchain_resources_02_heading: Krypto tabuľa
   blockchain_resources_02_desc: Pozrite si videá z kanála YouTube spoločnosti Whiteboard
@@ -747,6 +824,9 @@ sk:
     je spárovaná s jedným videom zo série, ktoré sa ponorí hlbšie do konceptov zavedených
     vo videách.
   ai_curriculum_btn_aria_label_04: Preskúmajte, ako funguje AI lekcie
+  ai_curriculum_grades_05: 'Úrovne triedy: 9-12'
+  ai_curriculum_btn_aria_label_05: Preskúmajte modul Softvérové inžinierstvo a počítačové
+    videnie
   ai_carousel_heading: 'Čo hovoria učitelia o AI s Code.org:'
   ai_carousel_quote_01: Táto lekcia tiež dala mojim študentom príležitosť vidieť,
     že v klasifikačných systémoch existuje prvok názoru. Neskôr, keď sme začali vidieť,
@@ -809,9 +889,9 @@ sk:
   ai_pl_101_partnership_between: Spolupráca medzi
   ai_pl_101_join_email_title: Zaregistrujte sa na skorý prístup do kurzu Základy umelej
     inteligencie pre učiteľov
-  ai_pl_101_pro_join_email_desc: Získavajte informácie o nových stretnutiach medzi
-    prvými. Získate tiež prístup k novinkám o umelej inteligencii od Code.org, ETS,
-    ISTE a Khan Academy.
+  ai_pl_101_pro_join_email_desc: Ako prví získajte informácie o nových podujatiach.
+    Získate tiež prístup k novinkám o umelej inteligencii od Code.org, ETS, ISTE a
+    Khan Academy.
   ai_pl_101_explore_title: Zdroje zamerané na umelú inteligenciu
   ai_pl_101_explore_desc: Máme pre vás rôzne ďalšie zdroje od Code.org, ETS, ISTE
     a Khan Academy, ktoré pomôžu učiteľom v tejto novej a rozvíjajúcej sa oblasti.
@@ -866,6 +946,7 @@ sk:
     vzdelávacích nástrojov AI a využívanie AI na hodnotenie študentov. Vďaka bohatej
     zmesi teórie, praktických príkladov a zdrojov si kladie za cieľ umožniť pedagógom
     orientovať sa v prostredí AI a zlepšovať vzdelávacie skúsenosti študentov.
+  ai_pl_101_resources_5: Sprievodca zabezpečením zodpovedného prístupu k AI
   ai_pl_101_video_desc_6: 'Získajte viac informácií o novej technológii, ktorá vedie
     k veľkým zmenám v umelej inteligencii. Obsahuje dve nové videá o veľkých jazykových
     modeloch (napríklad ChatGPT) a Generative AI. Vypočujte si, ako tieto nové technológie
@@ -876,6 +957,9 @@ sk:
     ako je ChatGPT, od začiatočníkov po pokročilých. Zahŕňa štartovacie výzvy pre
     tých, ktorí si len namáčajú prsty na nohách, ako aj pokročilé nástroje pre tých,
     ktorí chcú maximalizovať svoj potenciál.
+  ai_pl_101_resources_3: Výzva AI na transformáciu učenia študentov
+  ai_pl_101_resources_section_title: Viac spôsobov, ako sa dozvedieť o AI
+  ai_pl_101_resources_guide: 'Sprievodca sprievodcom:'
   how_ai_works_hero_heading: Ako funguje umelá inteligencia
   how_ai_works_hero_desc: Ponorte sa do sveta AI pomocou našej série videí a sprievodných
     lekcií „Ako funguje AI“!
@@ -1109,9 +1193,8 @@ sk:
     na svete s viac ako 80 miliónmi študentov v 180 krajinách.
   farsi_page_support_heading: Vaša podpora a váš hlas
   farsi_page_support_heading_02: Ďakujeme za váš záujem o Code.org v perzskom perzskom.
-  farsi_page_support_get_updates: "[Zaregistrujte sa] (%{form_url}), aby ste sa dozvedeli
-    viac o tomto konkrétnom projekte a získali informácie o jeho inscenovaných dátumoch
-    vydania."
+  farsi_page_support_get_updates: "[Zaregistrujte sa na] (%{form_url}), aby ste dostali
+    informácie o tomto projekte a budúcich novinkách."
   farsi_page_support_contact_us: Ak by ste chceli podporiť túto iniciatívu alebo sa
     dozvedieť viac, prosím [kontaktujte nás] (%{contact_link}) alebo darujte nižšie.
   farsi_page_compliance_heading: Súlad na podporu prekladov z perzštiny
@@ -1192,9 +1275,7 @@ sk:
     na rozšírenie prístupu k informatike.
   teach_page_free_curriculum_list_desc_01: Toto učebné osnovy sú úplne zadarmo a zábavné.
     Niektoré materiály sú k dispozícii v 67 jazykoch.
-  teach_page_free_curriculum_list_desc_02: Code.org ponúka životopisy na školský rok
-    a Hodinu Kódu. Okrem toho každý rok aktualizujeme životopisy, aby sme pridali
-    nové témy a zlepšili sa na základe komentárov našich používateľov.
+  teach_page_free_curriculum_list_desc_02: Aktualizované každý rok
   teach_page_free_curriculum_list_desc_03: Každé učebné osnovy spĺňajú požiadavky
     aspoň jedného z národných štandardov Spojených štátov, ako sú CSTA, vedecké štandardy
     novej generácie a spoločné jadro.
@@ -1257,8 +1338,8 @@ sk:
     Animation
   csp_page_curriculum_glance_devices: Laptop, Chromebook
   csp_page_curriculum_glance_tools: App Lab
-  csp_page_curriculum_glance_professional_learning: Facilitator-led Workshops, Self-paced
-    Modules
+  csp_page_curriculum_glance_professional_learning: Workshopy vedené inštruktorom,
+    Moduly na samoštúdium
   csp_page_curriculum_glance_professional_languages: Angličtina
   csp_page_curriculum_glance_professional_accessibility_features: Text-to-speech,
     Closed captioning, Immersive reader
@@ -1385,8 +1466,8 @@ sk:
     výpočtová technika, Dizajn aplikácií, Hry a animácie, Umenie a dizajn, Programovanie
   csd_page_curriculum_glance_devices: Laptop, Chromebook
   csd_page_curriculum_glance_tools: App Lab, Game Lab, AI Lab, Web Lab
-  csd_page_curriculum_glance_professional_learning: Facilitator-led Workshops, Self-paced
-    Modules
+  csd_page_curriculum_glance_professional_learning: Workshopy vedené inštruktorom,
+    Moduly na samoštúdium
   csd_page_curriculum_glance_professional_languages: Angličtina
   csd_page_curriculum_glance_professional_accessibility_features: Text-to-speech,
     Closed captioning, Immersive reader
@@ -1683,6 +1764,61 @@ sk:
   csa_page_faq_answer_08_02: For more information about the values that guided our
     work, please see our [curriculum values](%{curriculum_values_url}) and our [professional
     learning values](%{pl_values_url}).
+  donate_page_top_heading: Pomôžte financovať naše poslanie
+  donate_page_top_desc: Každý dar podporuje poslanie Code.org rozšíriť prístup k vzdelávaniu
+    v oblasti informatiky. Ponúkame vám niekoľko spôsobov, ako darovať a urobiť rozdiel.
+  donate_page_fundraise_title: Fundraise pre Code.org
+  donate_page_fundraise_desc: Pomôžte získať peniaze pre Code.org! Každý študent v
+    každej škole by mal mať možnosť naučiť sa informatiku.
+  donate_page_other_ways_title: Iné spôsoby, ako dať
+  donate_page_other_ways_desc: Preskúmajte rôzne metódy, ako prispieť, a nájdite možnosť,
+    ktorá vám najviac vyhovuje. Každé gesto, veľké alebo malé, poháňa našu misiu vpred.
+  donate_page_501c3: Code.org je registrovaná ako verejná nezisková organizácia 501
+    (c) (3). Príspevky do Code.org sú daňovo odpočítateľné v rozsahu povolenom zákonom.
+    Daňové identifikačné číslo Code.org je 46-0858543.
+  donate_page_donation_policy_title: Pochopenie našej politiky darovania
+  donate_page_donation_policy_desc: Získajte informácie o tom, ako spracúvame a prideľujeme
+    vaše príspevky.
+  donate_tabs_tab_label_daf_direct: DAF Direct
+  donate_tabs_tab_label_amazon: Amazonka
+  donate_tabs_tab_label_bitpay: BitPay
+  donate_tabs_tab_label_employee_match: Zápas zamestnancov
+  donate_tabs_daf_direct_title: Prispejte prostredníctvom DAF Direct
+  donate_tabs_daf_direct_desc: Darujte prostredníctvom svojho darcovského fondu prostredníctvom
+    Fidelity Charitable, Schwab Charitable alebo BNY Mellon a prostredníctvom online
+    formulára DAF Direct poskytnite svoje odporúčanie grantu Code.org.
+  donate_tabs_amazon_title: Darujte prostredníctvom Amazonu
+  donate_tabs_amazon_desc: Darujte priamo pomocou svojho účtu Amazon. Len niekoľkými
+    kliknutiami bezproblémovo prispievajte k poslaniu Code.org a posilňujte budúcnosť
+    vzdelávania v oblasti informatiky.
+  donate_tabs_bitpay_title: Darujte pomocou Crypto cez BitPay
+  donate_tabs_bitpay_desc: Prijmite budúcnosť dávania pomocou kryptomeny. Prostredníctvom
+    BitPay môže vaša digitálna mena priamo podporovať úsilie Code.org o rozširovanie
+    vzdelávania v oblasti informatiky.
+  help_page_top_heading: Ako môžete pomôcť
+  help_page_top_desc: Podporte naše poslanie sprístupniť počítačovú vedu každému dieťaťu
+    a všade. Vaše úsilie nám pomáha inšpirovať budúcich inovátorov a preklenúť medzeru
+    v oblasti technologického vzdelávania.
+  help_page_top_subhead: Darujte na Code.org
+  help_page_top_desc_02: Pracujeme na tom, aby sme každému študentovi poskytli príležitosť
+    učiť sa informatiku — online aj v školách, kde zriaďujeme trvalé kurzy a školíme
+    učiteľov. Za každý darovaný dolár sa jedno dieťa zoznámi s informatikou.
+  help_page_partners_heading: Staňte sa partnerom
+  help_page_partners_desc: Code.org spolupracuje s inými neziskovými organizáciami
+    ako partnermi, aby pomohol šíriť informatiku miestnym a udržateľným spôsobom.
+    Prečítajte si viac o našom programe.
+  help_page_volunteer_heading: Dobrovoľník v triede
+  help_page_volunteer_desc: Dobrovoľne vyučujte Hodinu Kódu alebo buďte hosťujúcim
+    rečníkom v miestnej triede. Zaregistrujte sa a dozviete sa o príležitostiach vo
+    vašom okolí.
+  help_page_translate_heading: Pomôžte nám preložiť
+  help_page_translate_desc: Dobrovoľníci preložili naše návody do viac ako 45 jazykov.
+    Pomôžte nám pokračovať v rozširovaní našich návodov pre študentov z celého sveta!
+  help_page_speak_for_cs_heading: Hovorte o vzdelávaní v oblasti informatiky
+  help_page_speak_for_cs_desc: Získajte viac informácií o advokačnej práci Code.org
+    v USA a desiatich zásadách, ktoré štátom odporúčame prijať, aby sa informatika
+    stala základom pre všetkých študentov. Navyše zistite, ako môžete riadiť zmeny
+    vo svojom stave.
   hoc_live: Hodina kódu naživo
   hoc_live_sign_up_title: Zaregistrujte sa na Hour of Code Live
   hoc_live_learn_title: Učte sa s Hour of Code Live
@@ -2095,17 +2231,16 @@ sk:
   signup_host_an_hour: Zorganizovať Hodinu kódu
   signup_match_volunteer: Pomôžte mi nájsť softvérových inžinierov z okolia pre inšpiráciu
     študentov
-  signup_email_preference_opt_in: Môžeme vám poslať e-mail o aktualizáciách kurzov
-    Code.org, miestnych príležitostiach alebo iných novinkách v oblasti informatiky?
+  signup_email_preference_opt_in: Môžeme vám posielať e-maily o aktualizáciách kurzov
+    od Code.org alebo iných novinkách v oblasti informatiky?
   signup_email_preference_privacy: "(Pozrite si naše zásady ochrany osobných údajov)"
   signup_email_preference_yes: Áno
-  signup_email_preference_yes_elementary: Áno - Pošlite mi aktuálne informácie o zdrojoch
-    pre základnú školu
-  signup_email_preference_yes_middle: Áno - Pošlite mi aktuálne informácie o zdrojoch
-    strednej školy
-  signup_email_preference_yes_high: Áno - pošlite mi aktuálne informácie o zdrojoch
-    pre stredné školy
-  signup_email_preference_yes_general: Áno - Pošlite mi všeobecné aktualizácie
+  signup_email_preference_yes_elementary: Áno - posielajte mi novinky pre základné
+    školy
+  signup_email_preference_yes_middle: Áno - posielajte mi novinky pre druhý stupeň
+    ZŠ
+  signup_email_preference_yes_high: Áno - posielajte mi novinky pre stredné školy
+  signup_email_preference_yes_general: Áno - posielajte mi všeobecné novinky
   signup_email_preference_no: Nie
   signup_email_preference_error: Vyžaduje sa predvoľba e-mailu
   signup_multiple_event_warning: Meno školy a mesto zverejníme na mape po registrácií.
@@ -5720,9 +5855,9 @@ sk:
     scény z filmu pomocou Blockly, úvodného kódovacieho jazyka, ktorý pomôže Wonder
     Woman navigovať prekážky a dosiahnuť svoj cieľ. Využijete silu sekvencií, premenných,
     slučiek a kondicionálov, aby ste pomohli Diane trénovať proti svojim súperom.
-  tutorial_codehsjsapp_longdescription: CodeHS je kompatibilný so všetkými aktuálnymi
+  tutorial_codehsjsapp_longdescription: 'CodeHS je kompatibilný so všetkými aktuálnymi
     prehliadačmi okrem Internet Explorer. Chrome je náš preferovaný/odporúčaný prehliadač,
-    ale Firefox a Safari by mali fungovať dobre aj za predpokladu, že sú aktuálne.
+    ale Firefox a Safari by mali fungovať dobre za predpokladu, že ich máte aktualizované. '
   tutorial_gfmihi_longdescription: Kia ora! V tejto aktivite budete kódovať svoju
     vlastnú mini-hru a naučíte sa, ako sa predstaviť v Te Reo Maori - pôvodnom jazyku
     Nového Zélandu. Mihi Maker je zábavná ľahko použiteľná aktivita, ktorá kombinuje
@@ -5740,9 +5875,9 @@ sk:
   tutorial_techfaa_longdescription: Tento interaktívny tutoriál vám predstaví „Flocking“,
     typ algoritmu, ktorý je určený na simuláciu živého správania autonómnych agentov
     v skupine. Vložený prehliadač vám uľahčí zobrazenie vykresľovania kódu.
-  tutorial_codehsjsgraph_longdescription: CodeHS je kompatibilný so všetkými aktuálnymi
+  tutorial_codehsjsgraph_longdescription: 'CodeHS je kompatibilný so všetkými aktuálnymi
     prehliadačmi okrem Internet Explorer. Chrome je náš preferovaný/odporúčaný prehliadač,
-    ale Firefox a Safari by mali fungovať dobre aj za predpokladu, že sú aktuálne.
+    ale Firefox a Safari by mali fungovať dobre za predpokladu, že ich máte aktualizované. '
   tutorial_thunkable_longdescription: Pomocou jazyka blokov sa naučte, ako zostaviť
     10 jednoduchých aplikácií za 1 hodinu. Táto zábavná séria tutoriálov vás naštartuje
     na vašej ceste stať sa vývojárom mobilných aplikácií!
@@ -5937,9 +6072,9 @@ sk:
     ako vytvoriť svoje prvé skutočné mobilné aplikácie a ako ich otestovať v telefóne
     pomocou React Native. Ak chcete spúšťať aplikácie v telefóne so smartfónom, študenti
     si budú musieť stiahnuť aplikáciu Expo. Viac informácií o Expo nájdete na https://expo.io/.
-  tutorial_codehswd_longdescription: CodeHS je kompatibilný so všetkými aktuálnymi
+  tutorial_codehswd_longdescription: 'CodeHS je kompatibilný so všetkými aktuálnymi
     prehliadačmi okrem Internet Explorer. Chrome je náš preferovaný/odporúčaný prehliadač,
-    ale Firefox a Safari by mali fungovať dobre aj za predpokladu, že sú aktuálne.
+    ale Firefox a Safari by mali fungovať dobre za predpokladu, že ich máte aktualizované. '
   tutorial_turtlerobot_longdescription: Prevzatie stolovej hry Robot Turtles, ktorá
     umožňuje študentovi cvičiť bez pomoci učiteľa.
   tutorial_ozoevo_longdescription: Evo by Osobot je nabitý množstvom skvelých technológií,
@@ -7121,10 +7256,9 @@ sk:
     aby vás viedli k kódovania vašej vlastnej webovej stránky o ochrane našich vôd.
   tutorial_itchplatformer_longdescription: Ľahko sledovateľný návod, ako vytvoriť
     jednoduchú plošinovku pomocou Scratch.
-  tutorial_codejika_longdescription: Skvelý úvod do kódovania pomocou HTML a CSS.
-    Kódujte niekoľko riadkov, pozrite si okamžitý výstup bez toho, aby ste sa chytili
-    do Hows and Whys vytvorením peknej vstupnej stránky s dvojfarebným prechodovým
-    pozadím, názvom a dátumom spustenia webovej stránky.
+  tutorial_codejika_longdescription: "Skvelý úvod do kódovania pomocou HTML a CSS.
+    \nNakódujte niekoľko riadkov a vytvorte si peknú stránku s dvojfarebným pozadím,
+    názvom a dátumom je spustenia bez toho, aby ste sa zamotali do technických detailov. "
   tutorial_gamefrootclicker_longdescription: Študenti kódujú svoju vlastnú hru Clicker
     a počas tohto procesu sa dozvedia o premenných, rôznych typoch údajov, podmienenej
     logike, porovnávacích operátoroch a získajú cenné poznatky o tom, ako profesionálni
@@ -13242,10 +13376,10 @@ sk:
     toho „Developer of the Day“ zvyčajne trávi časť svojho pracovného dňa riadením
     nasadenia výroby a triedením menej naliehavých problémov.
   engineering_faq_question_4: Ste organizácia WFH priateľská k diaľkovým/WFH?
-  engineering_faq_answer_4_a: Áno! V roku 2019, krátko pred pandémiou, sa Code.org
-    stala organizáciou na diaľku. Dnes máme inžinierov v každom americkom časovom
-    pásme a zodpovedajúcim spôsobom prispôsobujeme pracovný čas. Väčšina našich stretnutí
-    sa koná medzi 10:00 a 15:00 PT.
+  engineering_faq_answer_4_a: 'V roku 2019, krátko pred pandémiou sme v Code.org začali
+    pracovať nadiaľku. Dnes máme vývojárov v každej časovej zóne v USA a podľa toho
+    upravujeme aj pracovnú dobu. Väčšina našich stretnutí sa koná medzi 10:00 a 15:00
+    Pacifickej časovej zóny. '
   engineering_faq_answer_4_b: Uznávame tiež hodnotu osobného času a každý štvrťrok
     sa stretávame osobne, zvyčajne v Seattli. Dve z týchto podujatí (nazývame ich
     Kick-off week a „Codechella“) spájajú všetkých v organizácii v januári a júni
@@ -13345,7 +13479,8 @@ sk:
   careers_balance_second_column_text_2: Možnosti rastu a profesionálneho vzdelávania
   careers_openroles_section_title: Otvorené role
   careers_openroles_section_description: Code.org sídli v Seattli, ale mnohí členovia
-    nášho tímu sú vzdialení. Vzdialení kandidáti sú vítaní a odporúča sa, aby sa prihlásili.
+    nášho tímu pracujú nadiaľku. Vítame kandidátov z iných miest a budeme radi, ak
+    sa prihlásia.
   careers_more_info_text: Ďalšie informácie o Code.org nájdete v našom [Často kladené
     otázky] (%{support_url}) alebo sa dozviete viac o [iných spôsoboch, ako sa zapojiť
     do našej misie] (%{help_url}).
@@ -13579,6 +13714,10 @@ sk:
   video_library_page_inspirational_video_title_11: Každý sa môže učiť (1 min)
   video_library_page_inspirational_video_title_12: Lo Que Falta En Nuestras Escuelas
     (2 min)
+  video_library_page_inspirational_video_title_13: NASA oslavuje Hodinu kódu (2 minúty)
+  video_library_page_inspirational_video_title_14: Je to viac ako hra (1 min)
+  video_library_page_inspirational_video_title_15: Vytvoriť pomocou informatiky (1
+    min)
   video_library_page_not_hacked_video_title_1: 'Ako sa nenechať hacknúť: Úvod'
   video_library_page_not_hacked_video_title_2: 'Ako sa nenechať hacknúť: Heslá'
   video_library_page_not_hacked_video_title_3: 'Ako sa nenechať napadnúť: Autentifikácia

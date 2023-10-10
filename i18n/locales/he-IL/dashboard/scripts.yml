@@ -1982,6 +1982,8 @@ he:
           title: 'שלום, עולם: רטרו'
         hello-world-batman: {}
         csa4-exemplars: {}
+        dance-unplugged:
+          title: מסיבת ריקודים ללא מחשב
         csc-things: {}
         poetry-hoc2: {}
         poetry-hoc3:
@@ -2924,3 +2926,12 @@ he:
         vpl-csd-2023-m7: {}
         vpl-csd-2023-m8: {}
         ai-ethics-2023: {}
+        draft-hoc-dp: {}
+        genai-temp: {}
+        virtual-pl-csp-summer-day1-2024: {}
+        virtual-pl-csa-summer-2024-day1: {}
+        virtual-pl-csp-summer-day2: {}
+        virtual-pl-csp-summer-day3: {}
+        virtual-pl-csp-summer-day4: {}
+        virtual-pl-csp-summer-day5: {}
+        virtual-pl-csa-summer-day2: {}

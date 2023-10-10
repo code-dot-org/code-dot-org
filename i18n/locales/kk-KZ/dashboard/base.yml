@@ -37,8 +37,10 @@ kk:
         age: 'Жасы'
         gender: 'Жынысы'
         edit_header: 'Жеке парақша мәліметтерін өзгерту'
+        finish_sign_up_header_error: 'Өтінеміз көрсетілген қателерді түзетіңіз:'
         error:
           future: болашақта болуы мүмкін емес
+        user_type: 'Аккаунт Түрі'
   beta: "бета"
   hello: "Сәлем, әлем"
   welcome_back: "Қайта оралуыңызбен, %{name}"

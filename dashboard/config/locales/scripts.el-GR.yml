@@ -2138,6 +2138,8 @@ el:
           student_description: Πηγαίνετε πέρα από την πρώτη ώρα με πολλές ιδέες για
             πρότζεκτ.
           title: Συνεχίστε να Χορεύετε
+        dance-unplugged:
+          title: Πάρτι Χορού χωρίς υπολογιστή
         dani-june-2020-test:
           lesson_groups:
             cspSurvey:
@@ -2531,7 +2533,7 @@ el:
           description_short: Εξερεύνησε έναν κόσμο του Minecraft μέσω κώδικα
           student_description: Χρησιμοποίησε μπλοκ κώδικα για να οδηγήσεις τον Steve
             ή την Alex σε μία περιπέτεια μέσα από αυτόν τον κόσμο του Minecraft
-          title: Η Ώρα του Κώδικα με το Minecraft
+          title: Ζήστε μια περιπέτεια στο Minecraft
         microbit-2023:
           lesson_groups:
             lessonGroup-5:
@@ -2547,6 +2549,7 @@ el:
             δικιά σου έκδοση του Minecraft.
           student_description: Προγραμμάτισε ζώα και άλλα πλάσματα του Minecraft στην
             δικιά σου έκδοση του Minecraft.
+          title: Σχεδιαστής Minecraft
         netsim:
           title: Προσομοιωτής Διαδικτύου
         nevada-standards-aligned-fifth-grade-2023:

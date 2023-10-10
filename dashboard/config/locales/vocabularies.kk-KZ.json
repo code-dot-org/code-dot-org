@@ -209,6 +209,24 @@
         "code/poetry/2023": {
           "word": "Код"
         },
+        "copyright/csd/2023": {
+          "word": "Авторлық құқық"
+        },
+        "debugging/csd/2023": {
+          "word": "Бағдарламаны дұрыстау"
+        },
+        "variable/csd/2023": {
+          "word": "Айнымалы"
+        },
+        "conditionals/csd/2023": {
+          "word": "Шарттар"
+        },
+        "abstraction/csd/2023": {
+          "word": "Абстракция"
+        },
+        "function/csd/2023": {
+          "word": "Функция"
+        },
         "debugging/coursea/2023": {
           "word": "Бағдарламаны дұрыстау"
         },

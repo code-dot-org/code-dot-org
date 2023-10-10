@@ -914,6 +914,87 @@
         "coursef-2022/AI For Oceans": {
           "name": "AI Mearaide"
         },
+        "csd1-2023/Intro to Problem Solving": {
+          "name": "Láidehus ČuolbmaČoavdimii"
+        },
+        "csd1-2023/Exploring Problem Solving": {
+          "name": "Vásihit ČuolbmaČoavdima"
+        },
+        "csd1-2023/Input and Output": {
+          "name": "Input ja Output"
+        },
+        "csd1-2023/Processing": {
+          "name": "Gieđahallan"
+        },
+        "csd1-2023/Storage": {
+          "name": "Vuorká"
+        },
+        "csd1-2023/Project - Propose an App": {
+          "name": "Prošeakta - Evttohit App:a"
+        },
+        "csd2-2023/Intro to HTML": {
+          "name": "Láidehus HTML:ii"
+        },
+        "csd2-2023/Digital Footprint": {
+          "name": "Digitála Luodda"
+        },
+        "csd2-2023/Styling Text with CSS": {
+          "name": "Stylet Teavstta CSS:ain"
+        },
+        "csd2-2023/Styling Elements with CSS": {
+          "name": "Stylet Elemeanttaid CSS:ain"
+        },
+        "csd3-2023/Plotting Shapes": {
+          "name": "Plottet Hámiid"
+        },
+        "csd3-2023/Drawing in Game Lab": {
+          "name": "Tevdnet SpeallanLáb:as"
+        },
+        "csd3-2023/Sprites": {
+          "name": "Sprite:at"
+        },
+        "csd3-2023/Sprite Movement": {
+          "name": "Sprite Lihkadeapmi"
+        },
+        "csd3-2023/Keyboard Input": {
+          "name": "Boallobeavddi Input"
+        },
+        "csd3-2023/Project - Interactive Card": {
+          "name": "Prošeakta  - Interaktiivva Koarta"
+        },
+        "csd3-2023/Complex Sprite Movement": {
+          "name": "Kompleaksa Sprite Lihkastagat"
+        },
+        "csd3-2023/Collisions": {
+          "name": "Oktiibeaškkeheamit"
+        },
+        "csd3-2023/The Game Design Process": {
+          "name": "Spealu Designa Proseassa"
+        },
+        "csd3-2023/Using the Game Design Process": {
+          "name": "Geavat Spealu Designa Proseassa"
+        },
+        "csd3-2023/Project - Design a Game": {
+          "name": "Prošeakta  - Designe Spealu"
+        },
+        "csd4-2023/Understanding Your User": {
+          "name": "Ipmirdit Du Geavaheaddji"
+        },
+        "csd4-2023/Designing Apps for Good": {
+          "name": "Designet App:aid Buorrin"
+        },
+        "csd4-2023/Market Research": {
+          "name": "MárkanIskkadeapmi"
+        },
+        "csd4-2023/Prototype Testing": {
+          "name": "Prototyhpa Teasten"
+        },
+        "csd6a-2023/Making Music": {
+          "name": "Ráhkat Musihka"
+        },
+        "csd7-2023/Survey Planning": {
+          "name": "Designe Data Čoakkaldaga"
+        },
         "coursea-2023/Happy Maps": {
           "name": "Movttegis Kárttat"
         },

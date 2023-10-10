@@ -3663,6 +3663,12 @@
           "url": "https://www.youtube.com/watch?v=rgbZAWnOWOo",
           "type": "व्हिडीओ"
         },
+        "ethics_and_ai_privacy_the_future_of_work/ai-ethics/2023": {
+          "type": "व्हिडीओ"
+        },
+        "how_ai_works_large_language_models/ai-ethics/2023": {
+          "type": "व्हिडीओ"
+        },
         "book_cover_rubric/csc-bookcovers/2023": {
           "type": "नियम"
         },
@@ -3752,6 +3758,420 @@
         },
         "poem_art_video_optional_/poetry/2023": {
           "type": "व्हिडीओ"
+        },
+        "teacher_forum/csd/2023": {
+          "name": "शिक्षक फोरम"
+        },
+        "problem_solving_process_1/csd/2023": {
+          "type": "व्हिडीओ"
+        },
+        "the_problem_solving_process/csd/2023": {
+          "type": "व्हिडीओ"
+        },
+        "what_is_a_computer/csd/2023": {
+          "type": "व्हिडीओ"
+        },
+        "what_do_computers_do/csd/2023": {
+          "type": "व्हिडीओ"
+        },
+        "apps_and_problem_solving_1/csd/2023": {
+          "type": "पीअर रिव्ह्यू"
+        },
+        "apps_and_problem_solving_2/csd/2023": {
+          "type": "नियम"
+        },
+        "computer_science_practices/csd/2023": {
+          "type": "प्रतिबिंब"
+        },
+        "intro_to_web_lab_part_2/csd/2023": {
+          "type": "व्हिडीओ"
+        },
+        "pair_programming/csd/2023": {
+          "name": "पेअर प्रोग्रामिंग",
+          "type": "व्हिडीओ"
+        },
+        "video_intro_to_web_lab_part_1/csd/2023": {
+          "type": "व्हिडीओ"
+        },
+        "lists/csd/2023": {
+          "name": "याद्या"
+        },
+        "video_debugging/csd/2023": {
+          "name": "व्हिडिओ: डीबगिंग",
+          "type": "व्हिडीओ"
+        },
+        "video_pair_programming/csd/2023": {
+          "name": "व्हिडिओ: पेअर प्रोग्रामिंग",
+          "type": "व्हिडीओ"
+        },
+        "html_web_page/csd/2023": {
+          "type": "नियम"
+        },
+        "html_web_page_1/csd/2023": {
+          "type": "पीअर रिव्ह्यू"
+        },
+        "html_web_page_2/csd/2023": {
+          "type": "प्रकल्प मार्गदर्शक"
+        },
+        "social_sleuth/csd/2023": {
+          "name": "सोशल स्लीथ"
+        },
+        "social_sleuth_1/csd/2023": {
+          "name": "सोशल स्लीथ"
+        },
+        "intro_to_css_-_part_1/csd/2023": {
+          "type": "व्हिडीओ"
+        },
+        "intro_to_css_-_part_2/csd/2023": {
+          "type": "व्हिडीओ"
+        },
+        "your_personal_style/csd/2023": {
+          "type": "नियम"
+        },
+        "your_personal_style_1/csd/2023": {
+          "type": "पीअर रिव्ह्यू"
+        },
+        "your_personal_style_2/csd/2023": {
+          "type": "प्रकल्प मार्गदर्शक"
+        },
+        "creative_commons_overview/csd/2023": {
+          "type": "व्हिडीओ"
+        },
+        "personal_web_page_-_prepare/csd/2023": {
+          "type": "प्रकल्प मार्गदर्शक"
+        },
+        "personal_web_page/csd/2023": {
+          "type": "पीअर रिव्ह्यू"
+        },
+        "personal_web_page_-_reflect/csd/2023": {
+          "type": "प्रकल्प मार्गदर्शक"
+        },
+        "personal_web_page_1/csd/2023": {
+          "type": "नियम"
+        },
+        "publishing_your_website/csd/2023": {
+          "name": "आपली वेबसाइट प्रकाशित करणे",
+          "type": "व्हिडीओ"
+        },
+        "video_managing_disagreement/csd/2023": {
+          "name": "व्हिडिओ: असहमती व्यवस्थापित करणे",
+          "type": "व्हिडीओ"
+        },
+        "video_teamwork/csd/2023": {
+          "name": "व्हिडिओ: टीमवर्क",
+          "type": "व्हिडीओ"
+        },
+        "video_how_search_works/csd/2023": {
+          "type": "व्हिडीओ"
+        },
+        "plan_a_multi-page_website/csd/2023": {
+          "type": "प्रकल्प मार्गदर्शक"
+        },
+        "website_for_a_purpose/csd/2023": {
+          "type": "नियम"
+        },
+        "linking_pages/csd/2023": {
+          "name": "लिंकिंग पेजेस "
+        },
+        "website_for_a_purpose_-_reflect/csd/2023": {
+          "type": "प्रकल्प मार्गदर्शक"
+        },
+        "website_for_a_purpose_1/csd/2023": {
+          "type": "पीअर रिव्ह्यू"
+        },
+        "drawing_in_game_lab_-_part_1/csd/2023": {
+          "type": "व्हिडीओ"
+        },
+        "drawing_in_game_lab_-_part_2/csd/2023": {
+          "type": "व्हिडीओ"
+        },
+        "introduction_to_variables/csd/2023": {
+          "type": "व्हिडीओ"
+        },
+        "variables/csd/2023": {
+          "name": "व्हेरीएबल्स"
+        },
+        "variables_1/csd/2023": {
+          "name": "व्हेरीएबल्स",
+          "type": "व्हिडीओ"
+        },
+        "variables_2/csd/2023": {
+          "name": "व्हेरीएबल्स"
+        },
+        "robot_faces/csd/2023": {
+          "type": "नियम"
+        },
+        "introduction_to_sprites/csd/2023": {
+          "type": "व्हिडीओ"
+        },
+        "the_animation_tab/csd/2023": {
+          "type": "व्हिडीओ"
+        },
+        "sprite_properties/csd/2023": {
+          "name": "स्प्राईट प्रॉपर्टीज"
+        },
+        "sprite_properties_1/csd/2023": {
+          "name": "स्प्राईट प्रॉपर्टीज"
+        },
+        "sprite_properties_needs_updating_/csd/2023": {
+          "name": "स्प्राईट प्रॉपर्टीज",
+          "type": "व्हिडीओ"
+        },
+        "text/csd/2023": {
+          "name": "टेक्स्ट"
+        },
+        "captioned_scenes/csd/2023": {
+          "type": "नियम"
+        },
+        "flipbook_example_-_by_marnic_bos/csd/2023": {
+          "type": "व्हिडीओ"
+        },
+        "introduction_to_the_draw_loop/csd/2023": {
+          "type": "व्हिडीओ"
+        },
+        "sprite_movement/csd/2023": {
+          "type": "व्हिडीओ"
+        },
+        "animated_scene/csd/2023": {
+          "type": "नियम"
+        },
+        "boolean_expressions/csd/2023": {
+          "type": "व्हिडीओ"
+        },
+        "conditional_statements/csd/2023": {
+          "type": "व्हिडीओ"
+        },
+        "conditionals/csd/2023": {
+          "name": "कंडीशनल्स "
+        },
+        "keyboard_input/csd/2023": {
+          "name": "कीबोर्ड इनपुट"
+        },
+        "if_else_statements/csd/2023": {
+          "type": "व्हिडीओ"
+        },
+        "interactive_card_3/csd/2023": {
+          "type": "नियम"
+        },
+        "velocity/csd/2023": {
+          "type": "व्हिडीओ"
+        },
+        "side_scroller/csd/2023": {
+          "name": "साइड स्क्रोलर",
+          "type": "नियम"
+        },
+        "side_scroller_1/csd/2023": {
+          "name": "साइड स्क्रोलर"
+        },
+        "velocity_and_the_counter_pattern/csd/2023": {
+          "name": "वेग आणि काउंटर पॅटर्न"
+        },
+        "collisions/csd/2023": {
+          "name": "कोलिषन /टक्कर"
+        },
+        "flyer_game/csd/2023": {
+          "name": "फ्लायर गेम",
+          "type": "नियम"
+        },
+        "flyer_game_1/csd/2023": {
+          "name": "फ्लायर गेम"
+        },
+        "functions/csd/2023": {
+          "type": "व्हिडीओ"
+        },
+        "make_your_own_game_3/csd/2023": {
+          "type": "नियम"
+        },
+        "the_design_thinking_process/csd/2023": {
+          "type": "व्हिडीओ"
+        },
+        "paper_prototypes/csd/2023": {
+          "type": "नियम"
+        },
+        "design_mode/csd/2023": {
+          "name": "डिझाइन मोड"
+        },
+        "what_s_for_lunch_testing/csd/2023": {
+          "type": "व्हिडीओ"
+        },
+        "intro_to_design_mode/csd/2023": {
+          "type": "व्हिडीओ"
+        },
+        "events_in_app_lab/csd/2023": {
+          "type": "व्हिडीओ"
+        },
+        "events_in_app_lab_1/csd/2023": {
+          "type": "व्हिडीओ"
+        },
+        "app_presentation/csd/2023": {
+          "type": "नियम"
+        },
+        "representing_images/csd/2023": {
+          "name": "प्रतिमांचे प्रतिनिधित्व करणे"
+        },
+        "binary_and_data/csd/2023": {
+          "type": "व्हिडीओ"
+        },
+        "combining_representations/csd/2023": {
+          "name": "एकत्रित प्रतिनिधित्व"
+        },
+        "keeping_data_secret/csd/2023": {
+          "name": "डेटा गोपनीय ठेवणे"
+        },
+        "create_a_representation_2/csd/2023": {
+          "type": "नियम"
+        },
+        "amazon_and_data/csd/2023": {
+          "type": "व्हिडीओ"
+        },
+        "netflix_and_data/csd/2023": {
+          "type": "व्हिडीओ"
+        },
+        "waze_and_data/csd/2023": {
+          "type": "व्हिडीओ"
+        },
+        "video_impact_on_society/csd/2023": {
+          "name": "व्हिडिओ: समाजावर परिणाम",
+          "type": "व्हिडीओ"
+        },
+        "video_machine_learning/csd/2023": {
+          "name": "व्हिडिओ: मशीन अभ्यास",
+          "url": "https://www.youtube.com/watch?v=OeU5m6vRyCk",
+          "type": "व्हिडीओ"
+        },
+        "video_training_data_and_bias/csd/2023": {
+          "name": "व्हिडिओ: प्रशिक्षण डेटा आणि पूर्वाग्रह",
+          "type": "व्हिडीओ"
+        },
+        "make_a_recommendation/csd/2023": {
+          "type": "पीअर रिव्ह्यू"
+        },
+        "make_a_recommendation_1/csd/2023": {
+          "type": "नियम"
+        },
+        "make_a_recommendation_2/csd/2023": {
+          "type": "प्रकल्प मार्गदर्शक"
+        },
+        "circuits_and_logic/csd/2023": {
+          "type": "व्हिडीओ"
+        },
+        "board_events/csd/2023": {
+          "name": "बोर्ड इव्हेंट्स"
+        },
+        "board_events_1/csd/2023": {
+          "name": "बोर्ड इव्हेंट्स"
+        },
+        "the_counter_pattern/csd/2023": {
+          "type": "व्हिडीओ"
+        },
+        "if_statements_1/csd/2023": {
+          "type": "व्हिडीओ"
+        },
+        "rubric_-_field_collector_app/csd/2023": {
+          "type": "नियम"
+        },
+        "color_leds/csd/2023": {
+          "name": "रंगीत LEDs"
+        },
+        "input_output_devices/csd/2023": {
+          "type": "व्हिडीओ"
+        },
+        "rubric_-_human_device_interaction/csd/2023": {
+          "type": "नियम"
+        },
+        "accelerometer_events/csd/2023": {
+          "name": "एक्सीलरोमीटर इव्हेंट्स"
+        },
+        "introduction_to_arrays/csd/2023": {
+          "type": "व्हिडीओ"
+        },
+        "playing_notes/csd/2023": {
+          "name": "प्लेइंग नोट्स "
+        },
+        "functions_with_parameters/csd/2023": {
+          "type": "व्हिडीओ"
+        },
+        "student_rubric_-_interactive_art/csd/2023": {
+          "type": "नियम"
+        },
+        "prototype_an_innovation/csd/2023": {
+          "type": "नियम"
+        },
+        "teacher_forum_1/csd/2023": {
+          "name": "शिक्षक फोरम"
+        },
+        "board_events_2/csd/2023": {
+          "name": "बोर्ड इव्हेंट्स"
+        },
+        "board_events_3/csd/2023": {
+          "name": "बोर्ड इव्हेंट्स"
+        },
+        "the_counter_pattern_2/csd/2023": {
+          "type": "व्हिडीओ"
+        },
+        "rubric_-_field_collector_app_1/csd/2023": {
+          "type": "नियम"
+        },
+        "rubric_-_human_device_interaction_1/csd/2023": {
+          "type": "नियम"
+        },
+        "accelerometer_events_1/csd/2023": {
+          "name": "एक्सीलरोमीटर इव्हेंट्स"
+        },
+        "student_rubric_-_interactive_pet/csd/2023": {
+          "type": "नियम"
+        },
+        "prototype_an_innovation_2/csd/2023": {
+          "type": "नियम"
+        },
+        "ai_what_is_machine_learning_/csd/2023": {
+          "url": "https://www.youtube.com/watch?v=OeU5m6vRyCk",
+          "type": "व्हिडीओ"
+        },
+        "seeing_ai/csd/2023": {
+          "name": "AI पाहणे",
+          "type": "व्हिडीओ"
+        },
+        "finding_patterns_in_data/csd/2023": {
+          "type": "व्हिडीओ"
+        },
+        "introduction_to_ai_lab_1/csd/2023": {
+          "type": "व्हिडीओ"
+        },
+        "training_and_testing_in_ai_lab/csd/2023": {
+          "type": "व्हिडीओ"
+        },
+        "ai_training_data_bias/csd/2023": {
+          "name": "AI: डेटा ट्रेनिंग करणे आणि पूर्वग्रह",
+          "url": "https://youtu.be/x2mRoFNm22g",
+          "type": "व्हिडीओ"
+        },
+        "model_cards_in_ai_lab/csd/2023": {
+          "type": "व्हिडीओ"
+        },
+        "if-statements_in_app_lab/csd/2023": {
+          "type": "व्हिडीओ"
+        },
+        "numerical_data_in_ai_lab_2/csd/2023": {
+          "type": "व्हिडीओ"
+        },
+        "ethics_ai_equal_access_and_algorithmic_bias/csd/2023": {
+          "type": "व्हिडीओ"
+        },
+        "create_an_ml_app/csd/2023": {
+          "type": "नियम"
+        },
+        "creating_a_survey_in_google_forms/csd/2023": {
+          "type": "व्हिडीओ"
+        },
+        "cleaning_survey_data/csd/2023": {
+          "type": "व्हिडीओ"
+        },
+        "view_and_download_survey_data/csd/2023": {
+          "type": "व्हिडीओ"
+        },
+        "design_an_ai_app_1/csd/2023": {
+          "type": "नियम"
         },
         "common_core_and_ngss_guidance/coursea/2023": {
           "name": "सामान्य कोर आणि NGSS मार्गदर्शन",

@@ -9,7 +9,7 @@ var dom = require('../dom');
 import DanceVisualizationColumn from './DanceVisualizationColumn';
 import Sounds from '../Sounds';
 import {TestResults} from '../constants';
-import {DancelabReservedWords} from './constants';
+import {ASSET_BASE, DancelabReservedWords} from './constants';
 import DanceParty from '@code-dot-org/dance-party/src/p5.dance';
 import DanceAPI from '@code-dot-org/dance-party/src/api';
 import ResourceLoader from '@code-dot-org/dance-party/src/ResourceLoader';
@@ -31,6 +31,7 @@ import {showArrowButtons} from '@cdo/apps/templates/arrowDisplayRedux';
 import danceCode from '@code-dot-org/dance-party/src/p5.dance.interpreted.js';
 import HttpClient from '@cdo/apps/util/HttpClient';
 import {CHAT_COMPLETION_URL} from '@cdo/apps/aichat/constants';
+import utils from './utils';
 
 const ButtonState = {
   UP: 0,
@@ -93,6 +94,7 @@ Dance.prototype.init = function (config) {
   }
 
   this.level = config.level;
+  this.usesPreview = !!config.level.usesPreview;
   this.skin = config.skin;
   this.share = config.share;
   this.studioAppInitPromise = new Promise(resolve => {
@@ -118,6 +120,28 @@ Dance.prototype.init = function (config) {
     config.valueTypeTabShapeMap = {[Blockly.BlockValueType.SPRITE]: 'angle'};
 
     this.studioApp_.init(config);
+    this.currentCode = this.studioApp_.getCode();
+    if (this.usesPreview) {
+      this.studioApp_.addChangeHandler(e => {
+        // We want to check if the workspace code changed only when a block has been moved or
+        // if a block has changed.
+        // A move event is fired when a block is dragged and then dropped.
+        if (
+          e.type !== Blockly.Events.BLOCK_MOVE &&
+          e.type !== Blockly.Events.BLOCK_CHANGE
+        ) {
+          return;
+        }
+
+        const newCode = Blockly.getWorkspaceCode();
+        // Only execute preview if the student code has changed and we are not running the program.
+        if (newCode !== this.currentCode && !this.studioApp_.isRunning()) {
+          this.currentCode = newCode;
+          this.preview();
+        }
+      });
+    }
+
     this.studioAppInitPromiseResolve();
 
     const finishButton = document.getElementById('finishButton');
@@ -345,7 +369,7 @@ Dance.prototype.afterInject_ = function () {
         // student code can't change. This way, we can start fetching assets while
         // waiting for the user to press the Run button.
         await this.studioAppInitPromise;
-        const charactersReferenced = this.computeCharactersReferenced(
+        const charactersReferenced = utils.computeCharactersReferenced(
           this.studioApp_.getCode()
         );
         await nativeAPI.ensureSpritesAreLoaded(charactersReferenced);
@@ -367,9 +391,7 @@ Dance.prototype.afterInject_ = function () {
     container: 'divDance',
     i18n: danceMsg,
     doAi: this.doAi.bind(this),
-    resourceLoader: new ResourceLoader(
-      'https://curriculum.code.org/images/sprites/dance_20191106/'
-    ),
+    resourceLoader: new ResourceLoader(ASSET_BASE),
   });
 
   // Expose an interface for testing
@@ -421,6 +443,37 @@ Dance.prototype.reset = function () {
     getStore().dispatch(showArrowButtons());
     $('#soft-buttons').addClass('soft-buttons-' + softButtonCount);
   }
+  if (this.usesPreview) {
+    this.preview();
+  }
+};
+
+/**
+ * This function is called when `this.usesPreview` is set to true - only blocks
+ * included in the `setup` block are drawn in the visulization column.
+ * Unlike `execute`, `draw` is called only once (not in a loop) so that a static
+ * image is displayed and sound is NOT played.
+ */
+Dance.prototype.preview = async function () {
+  this.nativeAPI.reset();
+  const api = new DanceAPI(this.nativeAPI);
+  const studentCode = this.studioApp_.getCode();
+  const code = danceCode + studentCode;
+
+  const event = {
+    runUserSetup: {code: 'runUserSetup();'},
+  };
+
+  this.hooks = CustomMarshalingInterpreter.evalWithEvents(
+    api,
+    event,
+    code
+  ).hooks;
+
+  const charactersReferenced = utils.computeCharactersReferenced(studentCode);
+  await this.nativeAPI.ensureSpritesAreLoaded(charactersReferenced);
+  this.hooks.find(v => v.name === 'runUserSetup').func();
+  this.nativeAPI.p5_.draw();
 };
 
 Dance.prototype.onPuzzleComplete = function (result, message) {
@@ -480,6 +533,9 @@ Dance.prototype.onReportComplete = function (response) {
  * Click the run button.  Start the program.
  */
 Dance.prototype.runButtonClick = async function () {
+  if (this.usesPreview) {
+    this.nativeAPI.reset();
+  }
   var clickToRunImage = document.getElementById('danceClickToRun');
   if (clickToRunImage) {
     clickToRunImage.style.display = 'none';
@@ -552,14 +608,9 @@ Dance.prototype.execute = async function () {
   const timestamps = this.hooks.find(v => v.name === 'getCueList').func();
   this.nativeAPI.addCues(timestamps);
 
-  const validationCallback = new Function(
-    'World',
-    'nativeAPI',
-    'sprites',
-    'events',
-    this.level.validationCode
+  this.nativeAPI.registerValidation(
+    utils.getValidationCallback(this.level.validationCode)
   );
-  this.nativeAPI.registerValidation(validationCallback);
 
   // songMetadataPromise will resolve immediately if the request which populates
   // it has not yet been initiated. Therefore we must first wait for song init
@@ -596,23 +647,7 @@ Dance.prototype.initInterpreter = function () {
     code
   ).hooks;
 
-  return this.computeCharactersReferenced(studentCode);
-};
-
-Dance.prototype.computeCharactersReferenced = function (studentCode) {
-  // Process studentCode to determine which characters are referenced and create
-  // charactersReferencedSet with the results:
-  const charactersReferencedSet = new Set();
-  const charactersRegExp = new RegExp(
-    /^.*make(Anonymous|New)DanceSprite(?:Group)?\([^"]*"([^"]*)[^\r\n]*/,
-    'gm'
-  );
-  let match;
-  while ((match = charactersRegExp.exec(studentCode))) {
-    const characterName = match[2];
-    charactersReferencedSet.add(characterName);
-  }
-  return Array.from(charactersReferencedSet);
+  return utils.computeCharactersReferenced(studentCode);
 };
 
 Dance.prototype.shouldShowSharing = function () {

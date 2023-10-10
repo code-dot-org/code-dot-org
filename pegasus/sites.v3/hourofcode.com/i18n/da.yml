@@ -36,6 +36,10 @@ da:
   africa_campaign_date_full: 1. oktober - 18. december
   africa_campaign_date_year: '2016'
   africa_campaign_date_full_year: Oktober 1, 2022 - 18. december 2022
+  hoc2023_header: Kreativitet med AI
+  hoc2023_social_creativity_with_ai_title: Hour of Code - Hvad vil du oprette?
+  hoc2023_social_creativity_with_ai_desc: Brug datalogi til at udforske og lære om
+    AI!
   hoc2022_header: Udforsk, Spil, Opret!
   social_hoc2022_explore_play_create: Brug datalogi til at udforske, lege og skabe!
   codeorg_homepage_hoc2022_body: Udforsk universet, score et mål, bryde et træk -
@@ -175,6 +179,28 @@ da:
     Curriculum Catalog og redesignet Teach-side for at hjælpe dig med at finde det
     hele!
   in_partnership_with: I partnerskab med
+  shop_code_dot_org_heading: Shop Code.org
+  shop_code_dot_org_desc: Støt vores arbejde og bær bevægelsen med stolthed. Vores
+    hatte er også blevet båret af præsident Obama og berømtheder.
+  spread_the_word_heading: Spred budskabet
+  spread_the_word_desc: Forstærk vores indflydelse ved at dele Code.org med dit netværk.
+    Fra sociale medier til e-mail-opdateringer, find ud af, hvordan du kan hjælpe
+    os med at nå ud til flere undervisere, studerende, og fortalere.
+  follow_us_heading: Følg os på sociale medier
+  follow_us_desc: Hold dig opdateret med os på sociale medier, og del vores indlæg
+    med dit netværk for at holde dig informeret og hjælpe med at skabe opmærksomhed.
+  facebook: Facebook
+  twitter: Twitter
+  linked_in: LinkedIn
+  instagram: Instagram
+  tik_tok: TikTok
+  subscribe_to_emails_heading: Abonner på e-mails
+  subscribe_to_emails_desc: Læs om, hvad der sker på Code.org og i datalogi uddannelse
+    gennem kvartalsvise opdateringer via vores mailingliste.
+  subscribe_to_emails_intl: Abonner på internationale opdateringer
+  promote_code_dot_org_heading: Fremme Code.org
+  promote_code_dot_org_desc: Fremme datalogi i dit område ved hjælp af statistik,
+    citater, og videoer.
   afe_partnership_logo_alt: Amazon Future Engineer-logo
   afe_partnership_thanks_desc: Amazon Future Engineer er et omfattende barndom-til-karriere-program
     til at inspirere, uddanne og træne lavindkomst og andre dårligt stillede børn
@@ -193,6 +219,15 @@ da:
   curricula_title_high: High School læseplaner
   curricula_desc_high: Gennemse de overbevisende kurser og aktiviteter, der inviterer
     dig og dine gymnasieelever til at grave dybere ned i datalogi.
+  for_administrators_heading: For administratorer
+  for_administrators_desc: Deltag i de tusinder af skoler, der allerede har indarbejdet
+    datalogi i deres læseplan.
+  for_parents_heading: Til forældre
+  for_parents_desc: Du kan hjælpe med at opmuntre din studerendes skole til at tilbyde
+    eller udvide datalogiuddannelse.
+  for_educators_heading: For lærere
+  for_educators_desc: Begynd at undervise i dag - ingen datalogisk erfaring nødvendig
+    - med vores professionelle læringsworkshops.
   students_label: Elever
   teachers_label: Lærere
   teacher_label_csf: CS Fundamentals Lærer
@@ -202,10 +237,11 @@ da:
   teacher_label_csa: AP® Computer Science A Teacher
   required_materials: 'Nødvendige materialer:'
   optional_materials: 'Valgfrie materialer:'
-  call_to_action_explore_roles: Udforsk åbne roller
+  call_to_action_hold_an_event: Afhold en begivenhed
   call_to_action_learn_more: Læs mere
   call_to_action_watch_now: Se nu
   call_to_action_try_activity: Prøv aktivitet
+  call_to_action_try_activities: Prøv aktiviteter
   call_to_action_explore_unit: Udforsk enhed
   call_to_action_explore_curriculum: Udforsk læseplan
   call_to_action_explore_curriculum_options: Udforsk muligheder for læseplaner
@@ -274,7 +310,20 @@ da:
   call_to_action_notify_available: Giv mig besked, når det er tilgængeligt
   call_to_action_register_early_access: Tilmeld dig for tidlig adgang
   call_to_action_open_positions: Se åbne positioner
+  call_to_action_explore_roles: Udforsk åbne roller
   call_to_action_get_guide: Få guiden
+  call_to_action_donate_to_cdo: Doner til Code.org
+  call_to_action_start_fundraiser: Start en indsamling
+  call_to_action_view_donation_policy: Se politik for donation
+  call_to_action_view_donate_bitpay: Doner med BitPay
+  call_to_action_make_a_donation: Giv en donation
+  call_to_action_other_ways_to_give: Andre måder at give
+  call_to_action_become_partner_usa: Bliv partner i USA
+  call_to_action_become_partner_intl: Bliv en international partner
+  call_to_action_become_a_volunteer: Bliv frivillig
+  call_to_action_start_translating: Begynd at oversætte
+  call_to_action_learn_about_advocacy: Få mere at vide om vores fortalervirksomhed
+  call_to_action_visit_store: Besøg butikken
   aria_label_call_to_action_afe: Læs mere om Amazon Future Engineer
   aria_label_call_to_action_teaching_csf: Start Teaching Computer Science Fundamentals
     professionelle læringsprogram
@@ -377,6 +426,7 @@ da:
   curriculum_name_csp: Principper for datalogi
   curriculum_name_csc: Datalogi forbindelser
   curriculum_name_csa: AP® Datalogi A
+  curriculum_name_csa_ai: Software Engineering & Computer Vision
   curriculum_name_csc_02: Enhver CS-forbindelsesmodul
   curriculum_name_ai: AI og maskinlæring
   curriculum_name_artificial_intelligence: Kunstig intelligens (AI)
@@ -449,6 +499,11 @@ da:
     apps, animationer, spil, og fysiske computersystemer.
   curriculum_desc_csp: Gratis, AP® CSP godkendt introduktionskursus i gymnasiet, der
     introducerer eleverne til de grundlæggende begreber inden for datalogi.
+  curriculum_desc_csa_ai_long: 'Dette to-kapitels post-AP CSA-modul tilbyder gymnasieelever
+    praktisk erfaring med professionelle softwareudviklingsværktøjer, inklusive GitHub
+    og GitHub Copilot, og giver dem de virkelige færdigheder til at udvikle et computervisionsprogram. '
+  curriculum_desc_csa_ai_short: Dette post-AP® CSA-modul tilbyder gymnasieelever praktisk
+    erfaring med professionelle softwareudviklingsværktøjer.
   collection_hardware: Fokus på hardware
   collection_hardware_desc: Giv eleverne mulighed for at bruge data og fysiske enheder
     til at løse problemer.
@@ -521,6 +576,7 @@ da:
   module_duration_2_hrs: 2 timer
   module_duration_3_hrs: 3 timer
   module_duration_5_hrs: 5 timer
+  module_duration_5_hrs_plus: 5+ timer
   module_duration_8_hrs: 8 timer
   module_duration_20_hrs: 20 timer
   module_duration_35_hrs: 35 timer
@@ -599,6 +655,8 @@ da:
   heading_objects_first: Objekter først
   heading_these_lessons_will: 'Disse lektioner vil:'
   heading_explore_curriculum_catalog: Udforsk alle vores kurser i Curriculum Catalog
+  heading_csa_ai: Leder du efter ting at lave efter AP® eksamen?
+  heading_bring_cs_to_students: Bring datalogi til studerende
   professional_learning_section_desc: Få den støtte, du har brug for, når du forbereder
     dig på at undervise. Lærere elsker det, med over 90%, der placerer det som den
     bedste faglige udvikling nogensinde!
@@ -630,6 +688,23 @@ da:
   support_and_questions_section_desc: Vores supportteam er her for at besvare eventuelle
     spørgsmål, du måtte have om at begynde at undervise med Code.org. Du kan også
     spørge andre lærere om deres oplevelse på vores lærerfora.
+  subscribe_form_section_title: Abonner på opdateringer
+  subscribe_form_section_desc_csa: Tilmeld dig for at modtage månedlige e-mails om
+    Code.orgs AP® Computer Science A og få nyttige påmindelser, tips og opdateringer
+    sendt direkte til din indbakke.
+  subscribe_form_section_desc_csc: Tilmeld dig for at modtage månedlige e-mails om
+    Code.org's Computer Science Connections og få nyttige påmindelser, tip og opdateringer
+    sendt direkte til din indbakke.
+  subscribe_form_section_desc_csd: Tilmeld dig for at modtage månedlige e-mails om
+    Code.org's Computer Science Discoveries og få nyttige påmindelser, tip og opdateringer
+    sendt direkte til din indbakke.
+  subscribe_form_section_desc_csf: Tilmeld dig for at modtage månedlige e-mails om
+    Code.org's Computer Science Fundamentals og få nyttige påmindelser, tip og opdateringer
+    sendt direkte til din indbakke.
+  subscribe_form_section_desc_csp: Tilmeld dig for at modtage månedlige e-mails om
+    Code.org's Computer Science Principles og få nyttige påmindelser, tips og opdateringer
+    sendt direkte til din indbakke.
+  subscribe_form_section_unsubscribe: Du kan til enhver tid afmelde dig.
   blockchain_hero_heading: Sådan fungerer Blockchain
   blockchain_hero_desc: Dyk ned i blockchain-verdenen med „Sådan fungerer Blockchain“,
     vores nye videoserie og ledsagende lektioner!
@@ -731,6 +806,8 @@ da:
     lektion er parret med en enkelt video fra serien, dykker dybere ned i de koncepter,
     der introduceres i videoerne.
   ai_curriculum_btn_aria_label_04: Udforsk, hvordan AI fungerer lektioner
+  ai_curriculum_grades_05: 'Grad Niveauer: 9-12'
+  ai_curriculum_btn_aria_label_05: Udforsk Software Engineering & Computer Vision-modulet
   ai_carousel_heading: 'Hvad lærere siger om AI med Code.org:'
   ai_carousel_quote_01: Denne lektion gav også mine elever mulighed for at se, at
     der er et element af mening i klassificeringssystemer. Senere, da vi begyndte
@@ -850,6 +927,7 @@ da:
     Med en rig blanding af teori, praktiske eksempler og ressourcer sigter det mod
     at give undervisere mulighed for at navigere i AI-landskabet og forbedre elevernes
     læringsoplevelser.
+  ai_pl_101_resources_5: Vejledning til at sikre en ansvarlig tilgang til AI
   ai_pl_101_video_desc_6: 'Lær mere om den nye teknologi, der driver de store ændringer
     i AI, med to nye videoer om Large Language Models (som ChatGPT) og Generative
     AI. Hør, hvordan disse nye teknologier fungerer direkte fra eksperterne: Mira
@@ -860,6 +938,9 @@ da:
     som ChatGPT, fra begynder til avanceret. Inkluderer startmeddelelser til dem,
     der bare dypper tæerne i, samt avancerede værktøjer til dem, der ønsker at maksimere
     deres potentiale.
+  ai_pl_101_resources_3: AI-opfordringer til at transformere studerendes læring
+  ai_pl_101_resources_section_title: Flere måder at lære om AI
+  ai_pl_101_resources_guide: 'Ledsagende guide:'
   how_ai_works_hero_heading: Sådan fungerer AI
   how_ai_works_hero_desc: Dyk ned i AI-verdenen med „Sådan fungerer AI“, vores videoserie
     og ledsagende lektioner!
@@ -1255,8 +1336,8 @@ da:
     Animation
   csp_page_curriculum_glance_devices: Laptop, Chromebook
   csp_page_curriculum_glance_tools: App-laboratorium
-  csp_page_curriculum_glance_professional_learning: Facilitator-led Workshops, Self-paced
-    Modules
+  csp_page_curriculum_glance_professional_learning: Facilitator-ledede workshops,
+    Moduler i eget tempo
   csp_page_curriculum_glance_professional_languages: Dansk
   csp_page_curriculum_glance_professional_accessibility_features: Text-to-speech,
     Closed captioning, Immersive reader
@@ -1382,8 +1463,8 @@ da:
     databehandling, App Design, Spil og animationer, Kunst og design, Programmering
   csd_page_curriculum_glance_devices: Laptop, Chromebook
   csd_page_curriculum_glance_tools: App Lab, Game Lab, AI Lab, Web Lab
-  csd_page_curriculum_glance_professional_learning: Facilitator-led Workshops, Self-paced
-    Modules
+  csd_page_curriculum_glance_professional_learning: Facilitator-ledede workshops,
+    Moduler i eget tempo
   csd_page_curriculum_glance_professional_languages: Dansk
   csd_page_curriculum_glance_professional_accessibility_features: Text-to-speech,
     Closed captioning, Immersive reader
@@ -1524,8 +1605,8 @@ da:
     og design, App Design
   csf_page_curriculum_glance_devices: Bærbar computer, Chromebook, Tablet
   csf_page_curriculum_glance_tools: Sprite Lab, Play Lab
-  csf_page_curriculum_glance_professional_learning: Facilitator-led Workshops, Self-paced
-    Modules
+  csf_page_curriculum_glance_professional_learning: Facilitator-ledede workshops,
+    Moduler i eget tempo
   csf_page_curriculum_glance_languages: Arabisk, Indonesisk Bahasa, Catalán, Kinesisk
     forenklet, Kinesisk Traditionel, Tjekkisk, Fransk, Tysk, Hindi, Italiensk, Japansk,
     Koreansk, Kannada, Malajisk, Marathi, Mongolsk, Polsk, Portugisisk-BR, Rumænsk,
@@ -1664,6 +1745,62 @@ da:
   csa_page_faq_answer_08_02: For more information about the values that guided our
     work, please see our [curriculum values](%{curriculum_values_url}) and our [professional
     learning values](%{pl_values_url}).
+  donate_page_top_heading: Hjælp med at finansiere vores mission
+  donate_page_top_desc: Hver donation fremmer Code.orgs mission om at udvide adgangen
+    til datalogiuddannelse. Vi tilbyder flere måder, hvorpå du kan donere og gøre
+    en forskel.
+  donate_page_fundraise_title: Fundraise til Code.org
+  donate_page_fundraise_desc: Hjælp med at skaffe penge til Code.org! Hver elev i
+    hver skole skal have mulighed for at lære datalogi.
+  donate_page_other_ways_title: Andre måder at give
+  donate_page_other_ways_desc: Udforsk forskellige metoder til at bidrage, og find
+    den mulighed, der passer dig bedst. Hver gestus, stor som lille, driver vores
+    mission fremad.
+  donate_page_501c3: Code.org er registreret som en offentlig 501 (c) (3) nonprofit
+    organisation. Bidrag til Code.org er fradragsberettigede i det omfang loven tillader
+    det. Code.org s skatteidentifikationsnummer er 46-0858543.
+  donate_page_donation_policy_title: Forståelse af vores donationspolitik
+  donate_page_donation_policy_desc: Få mere at vide om, hvordan vi håndterer og fordeler
+    dine bidrag.
+  donate_tabs_tab_label_daf_direct: DAF Direkte
+  donate_tabs_tab_label_amazon: Amazon
+  donate_tabs_tab_label_bitpay: BitPay
+  donate_tabs_tab_label_employee_match: Medarbejder Match
+  donate_tabs_daf_direct_title: Donér via DAF Direct
+  donate_tabs_daf_direct_desc: Doner gennem din donorrådgivne fond med Fidelity Charitable,
+    Schwab Charitable eller BNY Mellon og lav din tilskudsanbefaling til Code.org
+    gennem DAF Direct online-formularen.
+  donate_tabs_amazon_title: Doner via Amazon
+  donate_tabs_amazon_desc: Doner direkte ved hjælp af din Amazon-konto. Med blot et
+    par klik bidrager problemfrit til Code.orgs mission og styrker fremtiden for datalogiuddannelse.
+  donate_tabs_bitpay_title: Doner med Crypto via BitPay
+  donate_tabs_bitpay_desc: Omfavn fremtiden for at give med kryptokurrency. Gennem
+    BitPay kan din digitale valuta direkte understøtte Code.orgs bestræbelser på at
+    udvide datalogiuddannelse.
+  help_page_top_heading: Hvordan du kan hjælpe
+  help_page_top_desc: Støt vores mission om at gøre datalogi tilgængelig for alle
+    børn, overalt. Din indsats hjælper os med at inspirere fremtidige innovatører
+    og bygge bro over teknologiuddannelseskløften.
+  help_page_top_subhead: Giv et bidrag til Code.org
+  help_page_top_desc_02: Vi arbejder på at give alle studerende mulighed for at lære
+    datalogi - både online OG i skoler, hvor vi etablerer permanente kurser og uddanner
+    lærere. For hver dollar, du donerer, introduceres et barn til datalogi.
+  help_page_partners_heading: Bliv partner
+  help_page_partners_desc: Code.org arbejder sammen med andre nonprofitorganisationer
+    som partnere for at hjælpe med at sprede datalogi på en lokal, bæredygtig måde.
+    Lær mere om vores program.
+  help_page_volunteer_heading: Frivillig i et klasseværelse
+  help_page_volunteer_desc: Bliv frivillig til at undervise i Hour of Code eller være
+    gæstetaler i et lokalt klasseværelse. Tilmeld dig for at høre om muligheder i
+    nærheden af dig.
+  help_page_translate_heading: Hjælp os med at oversætte
+  help_page_translate_desc: Frivillige har oversat vores tutorials til over 45 sprog.
+    Hjælp os med at fortsætte med at udvide vores tutorials for studerende over hele
+    verden!
+  help_page_speak_for_cs_heading: Tal op for datalogisk uddannelse
+  help_page_speak_for_cs_desc: Lær mere om Code.orgs fortalervirksomhed i hele USA
+    og de ti politikker, vi anbefaler stater vedtager for at gøre datalogi grundlæggende
+    for alle studerende. Plus, find ud af, hvordan du kan skabe ændringer i din tilstand.
   hoc_live: Time of Code Live
   hoc_live_sign_up_title: Tilmeld dig Hour of Code Live
   hoc_live_learn_title: Lær med Hour of Code Live
@@ -13527,6 +13664,9 @@ da:
   video_library_page_inspirational_video_title_11: Alle kan Lære (1 min)
   video_library_page_inspirational_video_title_12: Lo Que Falta En Nuestras Escuelas
     (2 min)
+  video_library_page_inspirational_video_title_13: NASA fejrer Hour of Code (2 min)
+  video_library_page_inspirational_video_title_14: Det er mere end et spil (1 min)
+  video_library_page_inspirational_video_title_15: Opret med datalogi (1 min)
   video_library_page_not_hacked_video_title_1: 'Hvordan man ikke bliver hacket: Introduktion'
   video_library_page_not_hacked_video_title_2: 'Hvordan Man Ikke Bliver Hacket: Adgangskoder'
   video_library_page_not_hacked_video_title_3: 'Hvordan man ikke bliver hacket: Godkendelse

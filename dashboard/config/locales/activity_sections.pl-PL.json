@@ -21089,7 +21089,7 @@
         },
         "3dcc5ff1-9cad-46cc-985e-e92e1989a304": {
           "name": "Lekcje rozszerzeń z mikro:bitem",
-          "description": "Aby wykorzystać umiejętności, których nauczyłeś się w Kursie d Podstaw Informatyki kliknij [here](https://code.org/maker/csf-microbit), aby sprawdzić rozszerzone lekcje z micro:bitem. Te [4 lekcje z micro:bitem](https://code.org/maker/assets/CSF-Booklet-Course-D-v4.pdf) obejmują następujące tematy: Poznaj swój micro:bit, Pętle, Instrukcje warunkowe (jeśli ... to ... w przeciwnycm razie), Wejścia i Wyjścia, Zadarzenia i Zmienne."
+          "description": "Aby wykorzystać umiejętności, których nauczyłeś się w Kursie d Podstaw Informatyki kliknij [here](https://code.org/maker/csf-microbit), aby sprawdzić rozszerzone lekcje z micro:bitem. Te [4 lekcje z micro:bitem](https://code.org/maker/assets/CSF-Booklet-Course-D-July23.pdf) obejmują następujące tematy: Poznaj swój micro:bit, Pętle, Instrukcje warunkowe (jeśli ... to ... w przeciwnycm razie), Wejścia i Wyjścia, Zadarzenia i Zmienne."
         },
         "b01367f6-8c61-4417-9d29-193fd67ddac0": {
           "name": "Słownictwo kluczowe"
@@ -23505,6 +23505,91 @@
         "2c09883a-7c60-446a-ace5-d896370d3d71": {
           "description": "Użyj tych ćwiczeń, aby urozmaicić naukę uczniów. Można je wykorzystać do zajęć pozalekcyjnych albo w ramach urozmaicenia innego rodzaju.\n\n**Zajrzyj pod maskę**\n\nGdy udostępniasz link do swojej historii, udostępniasz również cały kod, który się za nim kryje. To jest świetny sposób nauki uczniów wzajemnie od siebie. \n\n-   Zamieść linki do kompletnych historii online.\n    -   Spraw, by historia stała się również Twoją historią, którą udostępnisz!\n-   Gdy uczniowie ładują link, niech klikną przycisk \"Jak to działa\", aby zobaczyć kod kryjący się za tą historią.\n-   Omów, jako grupa, różne sposoby, w jakie Twoi koledzy z klasy kodują swoje historie.\n-   Co Cię zaskoczyło?\n    -   Co chciałbyś wypróbować?\n-   Wybierz historię kogoś innego i kliknij \"Remiksuj\", aby na niej budować (Nie martw się, oryginalna historia będzie bezpieczna)."
         },
+        "24da4d9a-3535-4e33-9cc7-dd723720e098": {
+          "tips": [
+            null
+          ]
+        },
+        "8beb2941-dd64-44f4-9e99-6149c445067a": {
+          "tips": [
+            null
+          ]
+        },
+        "500131a4-a22b-4a63-bc0a-d5d4a19c7169": {
+          "tips": [
+            null
+          ]
+        },
+        "a45155ff-19af-43ac-bf11-6ca4001816f4": {
+          "tips": [
+            null
+          ]
+        },
+        "a7d5069b-aa1c-4efa-a8d8-b58bd43a6c7b": {
+          "tips": [
+            null
+          ]
+        },
+        "871eb332-b63a-430f-958a-075cbe3bf544": {
+          "tips": [
+            null
+          ]
+        },
+        "8be6b726-ddca-4424-aa12-21bc80c263bc": {
+          "tips": [
+            null
+          ]
+        },
+        "4ff33db6-6668-4423-8f1d-ad0b25f6da40": {
+          "tips": [
+            null
+          ]
+        },
+        "169c3eed-52d7-4a4b-b7c6-161cf287ed33": {
+          "tips": [
+            null
+          ]
+        },
+        "f1632666-ffc1-457a-832a-c2d3b2d1fc20": {
+          "tips": [
+            null
+          ]
+        },
+        "fe23f1b5-9b09-44a1-a698-e741fbf05dbb": {
+          "tips": [
+            null
+          ]
+        },
+        "41d1eda8-9490-4327-b931-c4760e5bebef": {
+          "name": "Gra oparta na współpracy",
+          "tips": [
+            null
+          ]
+        },
+        "b2777295-b74f-4240-bb3d-c76b79dde6a9": {
+          "tips": [
+            null
+          ]
+        },
+        "75c2be17-6096-46dd-8550-4ae4928da3b0": {
+          "description": "<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> \\*\\*Wykonaj to: \\*\\* Przeczytaj kartę indywidualnie. Karta ma również kilka pustych miejsc-możesz je wypełnić dodatkowymi informacjami o swojej fałszywej postaci, aby uczynić je własnymi!"
+        },
+        "9bcab929-d773-4dab-bfb0-d09892056944": {
+          "tips": [
+            null
+          ]
+        },
+        "bedaca2d-4f48-45b4-b6e9-431f6a38cc13": {
+          "tips": [
+            "\\*\\*Poszerzanie wpływu: \\*\\* Uczniowie mogą z pasją odbierać zalety i wady generatywnej sztucznej inteligencji, a niektórzy mog być bardziej pod jej wpływem niż inni. Przypomnij uczniom, że są to _bieżące_ problemy, które muszą być jeszcze rozwiązane, i że ich opinie mają znaczenie. Możesz umożliwić uczniom napisanie do swoich ustawodawców o tym, czego się nauczyli."
+          ]
+        },
+        "221b5029-fcfd-4791-b951-852609cb0198": {
+          "description": "-   Jakie było największe wyzwanie, które pomyślnie rozwiązałeś?\n-   Czyje potrzeby były najłatwiejsze do spełnienia?\n-   Z jakiego kompromisu jesteś najbardziej dumny?\n-   Wymień to, co uważałeś za najważniejsze obawy/potrzeby, które trzeba było zaspokoić.\n-   Jakie są Twoje największe obawy związane z rozwojem generatywnej sztucznej inteligencji?\n-   Jaka jest Twoja najbardziej ekscytująca nadzieja na rozwój generatywnej sztucznej inteligencji?\n-   W liście napisz porady dla firm i organizacji, aby współpracowały w kwestiach AI. Skorzystaj z tego, czego się dzisiaj nauczyłeś, i dołącz jeden artykuł.",
+          "tips": [
+            "\\*\\*Przedłużanie lekcji: \\*\\* Uczniowie mogą wrócić do domu i zajmować się generatywnymi narzędziami sztucznej inteligencji, testować swoje teorie lub eksperymentować z tym, czego się nauczyli. Zachęcaj uczniów do rozmów z rodziną i przyjaciółmi z podejściem zorientowanym na rozwiązania. Możesz poprowadzić uczniów pasjonatów w kierunku wielu karier w technologii AI!"
+          ]
+        },
         "04e8f7f8-668f-4eba-865e-6fe94028acd0": {
           "tips": [
             "\\*\\*Nauka: \\*\\* Uczniowie będą symulować kilka adaptacji zwierząt. Aby zbudować znajomość adaptacji, zalecamy ten film o zmianie <a href=\"https://www.youtube.com/watch?v=xDSFlRunlrU&list=PLdG-lk1eEmZnq4ZO2CzERCv6jZkYIHCbR&index=4\" target=\"_blank\">żywych stworzeń</a>  (4:36 minut). \n\n\\*\\*Informatyka: \\*\\* W tym module uczniowie będą dużo pracować ze duszkami, w tym zmieniać ich lokalizację i rozmiar oraz inicjować zachowania. <a href=\"https://studio.code.org/s/coursef-2023/lessons/3\" target=\"_blank\">CSF Making Sprites</a> to świetne wprowadzenie do dwóch koncepcji leżących u podstaw tego wszystkiego: duszków i zachowań."
@@ -25108,6 +25193,5117 @@
           "tips": [
             "\\*\\*ELA Treść: \\*\\*\\\nPrzeczytaj książkę, aby dalej rozwijać zrozumienie nastroju i języka figuratywnego:\n\n-   <a href=\"https://www.amazon.com/My-Blue-Happy-Jessica-Young/dp/0763651257\" target=\"_blank\">„Mój niebieski jest szczęśliwy” Książka</a> obrazkowa, która wyjaśnia, w jaki sposób uczucia mogą być powiązane z różnymi kolorami i jak różni ludzie mogą mieć różne perspektywy na temat tego samego koloru.\n-   <a href=\"https://www.amazon.com/s?k=feelings+in+color&crid=3CGPI36E1RPV8&sprefix=feelings+in+color%2Caps%2C667&ref=nb_sb_noss_1\" target=\"_blank\">„Uczucia w kolorze”</a> to tomik poezji podzielony na sekcje kolorów. Każdy kolor reprezentuje uczucie, a ta sekcja zawiera wiersze o określonym temacie.\n-   <a href=\"https://www.amazon.com/Red-Sings-Treetops-Colors-Sidman/dp/0547014945/ref=sr_1_1?crid=H9ZK0W8DBKC5&keywords=red+sings+from+treetops&qid=1685390186&sprefix=red+sings+%2Caps%2C296&sr=8-1\" target=\"_blank\">„Red Sings From Treetops”</a> to książka obrazkowa autorstwa Joyce Sidman (wielokrotnie nagradzanej poety), która łączy kolory różnych pór roku z naszymi zmysłami.\n\n\\*\\*Koncepcje informatyki: \\*\\*  \n\n-   Aby kontynuować odkrywanie wydarzeń, uczniowie mogą  <a href=\"https://studio.code.org/s/coursed-2023/lessons/7\" target=\"_blank\">zbudować grę Star Wars.</a> \n    \\-</a> Moduł   <a href=\"http://studio.code.org/s/csc-bookcovers-2023\" target=\"_blank\">CSC Book Covers łączy również informatykę ze standardami ELA. Uczniowie zakodują interaktywną okładkę książki, koncentrując się na postaciach i otoczeniu. \n-   </a>Moduł   <a href=\"http://studio.code.org/s/csc-timecapsule-2023\" target=\"_blank\">CSC Time Capsule wykorzystuje poezję i informatykę do łączenia się z naukami społecznymi. Uczniowie będą kodować krótkie wiersze, które reprezentują określony moment w czasie, jak kapsuła czasu."
           ]
+        },
+        "a9138347-c3ac-46c8-9258-f5dbd9e57563": {
+          "tips": [
+            null
+          ]
+        },
+        "48a75fe7-c7cd-4da6-a286-3bd40e855aa1": {
+          "tips": [
+            null
+          ]
+        },
+        "251ed1f3-a9e0-4d10-a44c-d269d339b61a": {
+          "tips": [
+            null
+          ]
+        },
+        "8c27a47d-06ea-4cb9-b833-1030297d9fcd": {
+          "tips": [
+            null
+          ]
+        },
+        "892b3add-9193-49eb-9ae5-81a1a9a9bff0": {
+          "tips": [
+            null
+          ]
+        },
+        "2b68a97c-8609-431d-8a21-0f37c2e64481": {
+          "tips": [
+            null
+          ]
+        },
+        "8be23190-a616-490c-a6ef-f0a5337846b6": {
+          "tips": [
+            null
+          ]
+        },
+        "b27170b9-6a3d-4cdd-b2ef-22202a8fcafc": {
+          "tips": [
+            null
+          ]
+        },
+        "8f715583-104c-4ad8-9130-1fa691004a78": {
+          "tips": [
+            null
+          ]
+        },
+        "e2c9fd7f-f196-4ed5-af46-0398fda3df01": {
+          "name": "Refleksja"
+        },
+        "c085b90e-fdfe-40c2-bf51-b58ddd1b35b5": {
+          "tips": [
+            null
+          ]
+        },
+        "9b54904f-66a6-4d2c-b41c-e9077a419c6a": {
+          "name": "Proces rozwiązywania problemów",
+          "tips": [
+            "Filmy wideo są wykorzystywane w całym programie nauczania, aby wywołać dyskusje, uzupełnić kluczowe koncepcje dodatkowymi wyjaśnieniami i przykładami oraz przedstawić uczniom różne role i pochodzenie osób w informatyce.\n\nPodczas interakcji z filmem włącz napisy zamknięte, aby uczniowie mogli również czytać podczas oglądania.\n\nAby zachęcić do aktywnego zaangażowania i refleksji, skorzystaj z jednej lub więcej strategii omówionych w \\*\\* [Przewodnik po programach nauczania](https://docs.google.com/document/d/1c2hF3CaTJacvwDy4y_9-m1jSkSPmK__F6pDPetXVvy4/view)\\*\\*."
+          ],
+          "progression_name": "Nagranie: Proces Rozwiązywania Problemów"
+        },
+        "352011c5-d3ef-49f6-a6c7-260f06904331": {
+          "name": "Jak to wygląda"
+        },
+        "d26a7dab-fdd0-4a40-93a2-e202f937e9b4": {
+          "tips": [
+            null
+          ]
+        },
+        "8904f195-7297-4597-aa1c-75a51f571f13": {
+          "tips": [
+            null
+          ]
+        },
+        "f0f1d600-c2e2-46e6-a21c-c13098c29ba6": {
+          "tips": [
+            null
+          ]
+        },
+        "c0fa11b5-aa79-4309-80bd-a021e6ec01d2": {
+          "tips": [
+            null
+          ]
+        },
+        "deef70e3-a8d2-4021-b973-0f8f72126350": {
+          "tips": [
+            null
+          ]
+        },
+        "99ecf74d-5581-4480-b94f-ffb75213bb42": {
+          "tips": [
+            null
+          ]
+        },
+        "ae3a507f-552e-4aa2-b1c9-72c66cdc0f67": {
+          "tips": [
+            null
+          ]
+        },
+        "9a86e42c-694b-4e57-8d85-d544a933afa2": {
+          "description": "![](https://images.code.org/e5a08f29a9c4e306de5553dafca9fb5d-image-1467913845542.gif)"
+        },
+        "3ecefbf8-819e-4ae8-af67-cd45c836f890": {
+          "tips": [
+            null
+          ]
+        },
+        "fed69bde-e65e-4e73-a928-5ef383c34318": {
+          "tips": [
+            null
+          ]
+        },
+        "267b68c1-3ba9-4c65-bc81-092a7f3204fb": {
+          "tips": [
+            null
+          ]
+        },
+        "7dd50f9a-e8a7-4b4e-97fb-48e6c0d387c8": {
+          "tips": [
+            null
+          ]
+        },
+        "affe52e5-e02c-4e4e-9812-3f3937a325cf": {
+          "progression_name": "Wideo: Co czyni komputer komputerem?"
+        },
+        "e47f7283-db73-4453-8de1-9a7ab4df1a2e": {
+          "tips": [
+            null
+          ]
+        },
+        "4caa343d-2f2b-4ccb-b19b-0bf34cf8292f": {
+          "name": "Dziennik",
+          "tips": [
+            null,
+            null
+          ]
+        },
+        "aa751d4f-54c1-46ef-a137-93c5684bd9d2": {
+          "name": "Wejścia i wyjścia"
+        },
+        "ee3f802b-5cf9-4923-b250-fb62f1b70041": {
+          "tips": [
+            null
+          ]
+        },
+        "61ed9614-b05e-4a03-82e1-555ef4189943": {
+          "tips": [
+            null
+          ]
+        },
+        "da48979a-dd8b-4b86-8807-fec8df453f84": {
+          "tips": [
+            null
+          ]
+        },
+        "1a4ca5a7-53ea-4ff7-b3ee-7258968cd135": {
+          "tips": [
+            null
+          ]
+        },
+        "b5da7ae3-9000-4363-bae8-c2f0b54f5c02": {
+          "tips": [
+            null
+          ]
+        },
+        "b227d949-9620-4853-a59f-0a03a5d6c6d6": {
+          "tips": [
+            null
+          ]
+        },
+        "060f8892-1f8f-4bfa-a1b7-53cab375c984": {
+          "tips": [
+            null
+          ]
+        },
+        "83970ec9-f7b7-4406-8c81-cc3e87fb0fe3": {
+          "tips": [
+            null
+          ]
+        },
+        "f3ce94b4-2e13-4fa7-a461-4d95189740a0": {
+          "tips": [
+            null
+          ]
+        },
+        "11fc3a21-6d66-4eaf-8406-df8abbaec75e": {
+          "tips": [
+            null
+          ]
+        },
+        "eadc69af-9529-4890-8ae4-70a70eca77ce": {
+          "tips": [
+            null
+          ]
+        },
+        "c2f89a1d-8699-4430-8bd4-dbf17d51514c": {
+          "tips": [
+            null
+          ]
+        },
+        "4c197f35-1ec6-418c-8d5c-d8ae95318330": {
+          "name": "Dziennik"
+        },
+        "75d8e562-b72e-495d-a559-59a425e4be3e": {
+          "name": "Przewodnik projektu"
+        },
+        "3592c9b9-0afc-4d74-b2f7-2128639949a7": {
+          "tips": [
+            null
+          ]
+        },
+        "d2a1373b-9e88-4925-b7bf-c644e90ac5a5": {
+          "tips": [
+            null
+          ]
+        },
+        "6f2b0bb4-ae25-4cf3-b211-0f97037654b4": {
+          "tips": [
+            null
+          ]
+        },
+        "96f34877-9fd3-42cf-8d3a-ddaf0cef156a": {
+          "tips": [
+            null
+          ]
+        },
+        "71f728a6-8e24-4b3c-b506-6539e6990fd4": {
+          "tips": [
+            null,
+            null
+          ]
+        },
+        "5e4c9d30-4bec-4d76-b46f-ec42e98801c7": {
+          "name": "Refleksja"
+        },
+        "457235d7-3695-41ae-a6fd-00e3378fc530": {
+          "tips": [
+            null
+          ]
+        },
+        "9dd221ac-50ab-49d5-922f-61a7ecfc9acd": {
+          "tips": [
+            null
+          ]
+        },
+        "1035aa5a-6c2b-4e78-b5db-c5a9e6e4411d": {
+          "tips": [
+            null
+          ]
+        },
+        "9b6f8de9-9473-4a1c-b82b-183296e10726": {
+          "tips": [
+            null
+          ]
+        },
+        "f41af80d-2a5f-4c1f-b24f-0a26ba905374": {
+          "tips": [
+            null
+          ]
+        },
+        "12959b4f-dc4a-4d78-aae5-7189b7e26df0": {
+          "tips": [
+            null
+          ]
+        },
+        "05b03e18-f177-4408-a10c-a019a6a7c836": {
+          "tips": [
+            null
+          ]
+        },
+        "c0ef9534-e760-4ec0-bbcc-c3adba386d40": {
+          "tips": [
+            null
+          ]
+        },
+        "873907a3-502d-4682-b265-1a5f16e6d288": {
+          "tips": [
+            null
+          ]
+        },
+        "60b694ba-ab48-4308-b864-9b25b1f42574": {
+          "tips": [
+            null
+          ]
+        },
+        "3652b579-91ec-459a-9152-384f61aadcee": {
+          "tips": [
+            null
+          ]
+        },
+        "3dfa7821-cd38-4b72-91e0-ff5241a781d2": {
+          "tips": [
+            null
+          ]
+        },
+        "af12f554-ffc0-4fc2-873a-16bad766da8a": {
+          "tips": [
+            null
+          ]
+        },
+        "65f9c1fe-5d79-44da-958c-0b975c451cd8": {
+          "tips": [
+            null
+          ]
+        },
+        "ee216503-674e-4c8d-a2cb-46bb91dec05f": {
+          "tips": [
+            null
+          ]
+        },
+        "1ded201e-df00-4cc9-90b1-493586cdf1a4": {
+          "name": "Przemyśl"
+        },
+        "137ebcf5-5887-4aff-bce7-308bcf162013": {
+          "tips": [
+            null
+          ]
+        },
+        "8ebb5d32-e884-496b-b2e8-7fcf5810a48c": {
+          "tips": [
+            null
+          ]
+        },
+        "ba895a83-b7e6-4408-92e7-c597508008bf": {
+          "tips": [
+            null
+          ]
+        },
+        "c08958f2-22a7-4b33-8cbf-1e9a72621451": {
+          "tips": [
+            null
+          ]
+        },
+        "7d6a49e0-3761-4667-8796-9cae42e698bc": {
+          "tips": [
+            null
+          ]
+        },
+        "b6243813-2137-4604-a1f0-f3b357f65b6b": {
+          "tips": [
+            null
+          ]
+        },
+        "95923b7b-36b3-4c35-b594-16f3f2cc49d5": {
+          "tips": [
+            null
+          ]
+        },
+        "e175b822-1fa6-41ee-acf7-4365ec85972c": {
+          "tips": [
+            null
+          ]
+        },
+        "820a180d-f6f4-4bd6-b24b-8cff7182f29b": {
+          "tips": [
+            null
+          ]
+        },
+        "0d50443a-c99f-465c-a6bc-edc7c250b51e": {
+          "tips": [
+            null
+          ]
+        },
+        "48e8f914-11c9-41e7-a93c-4cf24defc9eb": {
+          "tips": [
+            null
+          ]
+        },
+        "c3864e25-5c81-4e30-b2ae-890be574fc31": {
+          "tips": [
+            null
+          ]
+        },
+        "564ef6e5-7009-4124-afc1-cb53616d7dfb": {
+          "tips": [
+            null
+          ]
+        },
+        "2972868c-dfc0-41d4-b0ea-2f4b038609c8": {
+          "tips": [
+            null
+          ]
+        },
+        "bcc31a30-6b92-4a82-84fe-13616ea3e234": {
+          "tips": [
+            null
+          ]
+        },
+        "d8b78544-f801-4ce8-9172-cd3fc4cff504": {
+          "tips": [
+            null
+          ]
+        },
+        "3a499d3c-4272-48d7-a7d9-ae90bc7f3584": {
+          "tips": [
+            null
+          ]
+        },
+        "2d091572-d54e-4a4d-b9a8-fde3e646f8cb": {
+          "tips": [
+            null
+          ]
+        },
+        "41b10c88-2203-4df2-b9cc-99706e0a1c72": {
+          "tips": [
+            null
+          ]
+        },
+        "77429d97-f86a-451e-9eb0-c478a534c7c7": {
+          "tips": [
+            null
+          ]
+        },
+        "3e82967b-8d4f-401c-9dc5-21b4afa88d5b": {
+          "name": "Proces rozwiązywania problemów",
+          "tips": [
+            "Filmy wideo są wykorzystywane w całym programie nauczania, aby wywołać dyskusje, uzupełnić kluczowe koncepcje dodatkowymi wyjaśnieniami i przykładami oraz przedstawić uczniom różne role i pochodzenie osób w informatyce.\n\nPodczas interakcji z filmem włącz napisy zamknięte, aby uczniowie mogli również czytać podczas oglądania.\n\nAby zachęcić do aktywnego zaangażowania i refleksji, skorzystaj z jednej lub więcej strategii omówionych w \\*\\* [Przewodnik po programach nauczania](https://docs.google.com/document/d/1c2hF3CaTJacvwDy4y_9-m1jSkSPmK__F6pDPetXVvy4/view)\\*\\*."
+          ]
+        },
+        "6cc5f029-731d-433e-9468-a600321dc4e1": {
+          "tips": [
+            null
+          ]
+        },
+        "c9174999-b4dc-4280-aaa8-99156f1412ae": {
+          "tips": [
+            null
+          ]
+        },
+        "a0212ac3-fb3d-4d8c-9aa6-12d638bfd76d": {
+          "tips": [
+            null
+          ]
+        },
+        "82054fb4-f288-4bac-9d26-3e6673de54ee": {
+          "tips": [
+            null
+          ]
+        },
+        "af2ab7ed-ffa5-42ba-967c-b621e258591d": {
+          "tips": [
+            null
+          ]
+        },
+        "20ff45fc-855e-4cdd-a9db-6001cbafd618": {
+          "tips": [
+            null
+          ]
+        },
+        "5a8761ea-662e-410d-b4d4-88bccaf3e1d6": {
+          "tips": [
+            null
+          ]
+        },
+        "b002b53f-2547-42e5-88a4-467e2c144e58": {
+          "name": "Refleksja"
+        },
+        "7f46781c-6e78-44e0-b7f8-87ad85918803": {
+          "tips": [
+            null
+          ]
+        },
+        "01af5a34-9197-42d1-9034-2374918a4a4f": {
+          "name": "Programowanie w parach"
+        },
+        "bb7c079f-129c-4ef3-b3eb-111c99d8a495": {
+          "tips": [
+            "Filmy wideo są wykorzystywane w całym programie nauczania, aby wywołać dyskusje, uzupełnić kluczowe koncepcje dodatkowymi wyjaśnieniami i przykładami oraz przedstawić uczniom różne role i pochodzenie osób w informatyce.\n\nPodczas interakcji z filmem włącz napisy zamknięte, aby uczniowie mogli również czytać podczas oglądania.\n\nAby zachęcić do aktywnego zaangażowania i refleksji, skorzystaj z jednej lub więcej strategii omówionych w \\*\\* [Przewodnik po programach nauczania](https://docs.google.com/document/d/1c2hF3CaTJacvwDy4y_9-m1jSkSPmK__F6pDPetXVvy4/view)\\*\\*."
+          ]
+        },
+        "1ae0269d-ecf5-408f-8f4b-844ce9838dcb": {
+          "tips": [
+            null
+          ]
+        },
+        "7d2fffa8-fb0c-493a-9702-ca241df5b060": {
+          "tips": [
+            null
+          ],
+          "progression_name": "Eksploracja"
+        },
+        "f566ffca-771e-42b0-9e36-aad04730db21": {
+          "tips": [
+            null
+          ],
+          "progression_name": "Wideo: Wprowadzenie do Web Lab - Część 1"
+        },
+        "6758df16-305f-431b-bef0-b0c3da052aa6": {
+          "tips": [
+            null
+          ],
+          "progression_name": "Eksploracja"
+        },
+        "6c66b77f-61b1-44cd-a5e4-409a807afd47": {
+          "progression_name": "Wideo: Wprowadzenie do Web Lab - Część 2"
+        },
+        "5aa43305-98ce-4ef1-bc5c-f54a562c0a38": {
+          "tips": [
+            null
+          ],
+          "progression_name": "Budowanie umiejętności"
+        },
+        "53a2f460-4450-48b4-a15e-74b8141d422e": {
+          "tips": [
+            null
+          ],
+          "progression_name": "Ćwiczenia"
+        },
+        "84875e12-ae6b-4d81-9365-2f4cade92339": {
+          "tips": [
+            null,
+            null
+          ],
+          "progression_name": "Ocena"
+        },
+        "56319b33-dca5-4f3f-bf34-381802fb6120": {
+          "tips": [
+            null
+          ],
+          "progression_name": "Wyzwanie"
+        },
+        "bed62e43-f4d5-4228-afba-86cb1ee5602a": {
+          "name": "Refleksja"
+        },
+        "0a075254-d352-4a07-90a4-7c7e4591f320": {
+          "tips": [
+            null
+          ]
+        },
+        "bb303f96-f450-49d9-963f-5c7e80c5844b": {
+          "tips": [
+            null
+          ]
+        },
+        "27a87773-bb61-4c01-93fe-59ccc3c353e1": {
+          "tips": [
+            null
+          ]
+        },
+        "25a4e227-0041-4a68-a32f-85d2523e2da4": {
+          "tips": [
+            null
+          ]
+        },
+        "afe46f61-6673-4498-966b-597a29da1dda": {
+          "progression_name": "Eksploracja"
+        },
+        "45de1f5a-e699-4d78-9c45-49a6bf212ea8": {
+          "progression_name": "Odkrywaj"
+        },
+        "d20748e3-2ffd-4381-917d-0bac076ad0f5": {
+          "progression_name": "Budowanie umiejętności"
+        },
+        "15eab3ae-f9e0-4acd-aa16-589c8c84aafb": {
+          "tips": [
+            null,
+            null
+          ]
+        },
+        "77f6c421-a274-4a17-852e-4ed11e2bd99e": {
+          "progression_name": "Budowanie umiejętności"
+        },
+        "4c803233-659d-40e0-a0a7-6e2410e48f21": {
+          "progression_name": "Budowanie umiejętności"
+        },
+        "05a83d63-0813-410e-8ede-4d9baecaff3d": {
+          "tips": [
+            null,
+            null
+          ]
+        },
+        "b280185e-dda4-455b-aed4-9d00447e1f23": {
+          "progression_name": "Ćwiczenia"
+        },
+        "ae73a380-4248-472d-b5cc-dea8d31c0ecb": {
+          "tips": [
+            null
+          ],
+          "progression_name": "Ocena"
+        },
+        "c1eedb45-70a6-418c-b591-b8aa31154f82": {
+          "progression_name": "Wyzwania"
+        },
+        "feb8738d-5c03-4f35-8fd3-ecdf6449077a": {
+          "name": "Dziennik"
+        },
+        "67a2c30b-8f9a-4c86-81ab-2ecf92bfa900": {
+          "tips": [
+            null
+          ]
+        },
+        "4acfbe6c-db98-4ca0-b659-f4e72067eb8e": {
+          "name": "Dziennik"
+        },
+        "25e78957-a583-4ccf-95c4-afbdd5343058": {
+          "tips": [
+            null
+          ]
+        },
+        "c549ac36-f55a-4c2e-b193-9eaffb25f5bc": {
+          "tips": [
+            null
+          ]
+        },
+        "07f440b9-35bc-4fa0-b8e4-54ec1153908b": {
+          "progression_name": "Recenzja: HTML"
+        },
+        "d8282b6e-949f-4472-9d97-6f1b5ef8824e": {
+          "progression_name": "Koduj swoją stronę"
+        },
+        "19bcd800-fd77-490b-9aba-bc79c141b93d": {
+          "tips": [
+            null
+          ]
+        },
+        "4e1a8180-2c1c-4cee-a486-c22bdd6f8e09": {
+          "progression_name": "Przejrzyj swoją stronę"
+        },
+        "8acbd974-5694-4288-a43a-086f1ed13685": {
+          "tips": [
+            null
+          ]
+        },
+        "0333361c-f660-4c41-b637-1dd751c16cc2": {
+          "name": "Dziennik"
+        },
+        "2a7a8e31-e066-4cf4-a3e5-661cbb045251": {
+          "name": "Twój cyfrowy ślad",
+          "tips": [
+            null
+          ]
+        },
+        "3d303d98-938e-4b9a-b7bc-57a699989ed4": {
+          "progression_name": "Społeczny detektyw"
+        },
+        "35267ad7-e429-4623-9464-dae68860e165": {
+          "tips": [
+            null
+          ],
+          "progression_name": "Społeczny detektyw"
+        },
+        "13f13537-5a2f-4fb4-bf76-fb1604f5f5e7": {
+          "tips": [
+            null
+          ]
+        },
+        "05ec0224-8289-41a7-a85c-6f099f670c47": {
+          "progression_name": "Przykładowa strona internetowa"
+        },
+        "c2b1dd4e-f46e-4646-a28a-84e3b06bd6d9": {
+          "tips": [
+            null
+          ],
+          "progression_name": "Przykładowa strona internetowa"
+        },
+        "0e4162ba-90a6-48a0-8ae5-910f8c763b2f": {
+          "tips": [
+            null
+          ],
+          "progression_name": "Eksploracja"
+        },
+        "638ecf6c-33ff-4f35-8742-58e1fec1dfd5": {
+          "tips": [
+            null
+          ]
+        },
+        "b479d1c6-1f8e-4e48-9188-2bdcae7746c4": {
+          "tips": [
+            null
+          ]
+        },
+        "b0edd2db-5428-4723-8b2f-444795e9769f": {
+          "tips": [
+            null
+          ],
+          "progression_name": "Budowanie umiejętności"
+        },
+        "f36731cc-ff71-4a98-b01f-79c2455f01b7": {
+          "progression_name": "Budowanie umiejętności"
+        },
+        "6b13e51b-71c5-4824-9bcf-cc8251f7c1f6": {
+          "progression_name": "Ćwiczenia"
+        },
+        "513d8424-913c-4fb6-8ef0-550510a32287": {
+          "tips": [
+            null
+          ],
+          "progression_name": "Ocena"
+        },
+        "a7dc12c8-f2f0-4aa4-af6c-82eb2ab19b59": {
+          "tips": [
+            null
+          ],
+          "progression_name": "Wyzwania"
+        },
+        "5b7fa2ec-6ddd-4eaa-a388-8f96ffce030b": {
+          "tips": [
+            null
+          ]
+        },
+        "24cd774c-236e-4b51-9e1c-f482d13268e3": {
+          "tips": [
+            null
+          ]
+        },
+        "33096252-65cd-4549-a36d-50a49bb5337e": {
+          "name": "Dziennik"
+        },
+        "acea0522-ba22-47ed-9a4e-e53bc0266cc8": {
+          "tips": [
+            null
+          ]
+        },
+        "3e141dcb-6885-4ed1-9588-52802dc04973": {
+          "tips": [
+            null
+          ]
+        },
+        "fce29c1f-edae-43dd-96aa-3ac8835d66f2": {
+          "tips": [
+            null
+          ]
+        },
+        "b70a9cf7-8b55-45f2-8604-65cab2c84621": {
+          "progression_name": "Recenzja: CSS"
+        },
+        "7aa3a1a8-3fe5-4e82-ad83-0bc7aff94325": {
+          "tips": [
+            null
+          ]
+        },
+        "43ee1323-2464-4081-a740-cdf6397fc3e4": {
+          "progression_name": "Dodaj styl do swojej strony"
+        },
+        "cc5f8106-ee5d-4aae-9100-2bae1cd76a58": {
+          "progression_name": "Przejrzyj swoją stronę"
+        },
+        "9e2fe888-81d4-48b2-8533-b7be0ba1f118": {
+          "tips": [
+            null
+          ]
+        },
+        "c7827a9e-fe94-4469-8aa4-94f378f3f9d0": {
+          "name": "Wzajemne opinie"
+        },
+        "03f16d88-407c-4c40-86a9-901d0b0ad268": {
+          "name": "Dziennik"
+        },
+        "fca1f45d-347b-46f7-b08b-b319707a853e": {
+          "tips": [
+            null
+          ]
+        },
+        "defee76c-2589-4644-9f10-87089825f834": {
+          "tips": [
+            null
+          ]
+        },
+        "20d41cac-3f8c-43b2-8b0e-7c35b3f47cfd": {
+          "tips": [
+            null
+          ]
+        },
+        "2e117303-9658-4818-8e74-ce066a54ccfa": {
+          "tips": [
+            null
+          ]
+        },
+        "b9130b97-6557-4ba3-b0f3-7286e144c6ab": {
+          "tips": [
+            null
+          ]
+        },
+        "ad7fc03e-a022-4a6a-907e-d8ca286da27d": {
+          "tips": [
+            null
+          ]
+        },
+        "60607014-a855-4842-b6f9-4fd8bfb58fa6": {
+          "name": "Korzystając z obrazów"
+        },
+        "03b58baa-5a49-4115-b822-57d78d758bf5": {
+          "name": "Dodawanie obrazów",
+          "tips": [
+            null
+          ]
+        },
+        "7cbb1057-5d76-4825-8334-f9e38fa8903f": {
+          "progression_name": "Eksploracja"
+        },
+        "d2c743a7-71e6-46a6-b0a5-b94f32403c98": {
+          "progression_name": "Budowanie umiejętności"
+        },
+        "f9e3995b-53f4-4dbd-90f8-181281dfd851": {
+          "tips": [
+            null
+          ],
+          "progression_name": "Ćwiczenia"
+        },
+        "36729c68-30e9-4147-a58c-7b68d6dbff44": {
+          "tips": [
+            null
+          ],
+          "progression_name": "Ocena"
+        },
+        "82ce65a1-e154-4d98-b5a3-cf2ccb6bdf24": {
+          "progression_name": "Wyzwania"
+        },
+        "45c4d5a9-f94d-4938-bae7-d615b30289bc": {
+          "name": "Korzystając z obrazów"
+        },
+        "7c6f05d5-c671-46e3-b178-3c69ef28e559": {
+          "tips": [
+            null
+          ]
+        },
+        "283df1f1-4d40-42ec-aa9b-8cda6c6b2593": {
+          "progression_name": "Przykładowe osobiste strony internetowe"
+        },
+        "b7c667d5-7f29-4838-a4c5-7f236dfe9561": {
+          "tips": [
+            null
+          ]
+        },
+        "28421d6d-d0d8-41f2-8fb4-6ef89b43b176": {
+          "tips": [
+            null
+          ]
+        },
+        "dcdd4828-3248-471d-939a-edd4f8124d4d": {
+          "progression_name": "Przykładowa strona internetowa"
+        },
+        "d68458f1-1af3-4c4f-a953-bb339f0327f2": {
+          "tips": [
+            null
+          ]
+        },
+        "1660229b-38eb-4f0e-b337-75d8f1b1fd73": {
+          "progression_name": "Eksploracja"
+        },
+        "f34c5761-faf3-48a9-89df-980141afdd41": {
+          "progression_name": "Budowanie umiejętności"
+        },
+        "262f7584-b3f8-4068-91d9-0b8e672ee9a1": {
+          "progression_name": "Ćwiczenia"
+        },
+        "a8c4b0c0-84d5-4ef7-8795-0f08ddc610a7": {
+          "tips": [
+            null
+          ],
+          "progression_name": "Ocena"
+        },
+        "153a2ceb-989c-4aa4-9abe-252d5c466739": {
+          "progression_name": "Wyzwania"
+        },
+        "7e0bca09-9f54-411b-a66a-359c174dbdd0": {
+          "tips": [
+            null
+          ]
+        },
+        "7f1e0f74-2122-4f4a-bd00-379a7aae15d1": {
+          "tips": [
+            null
+          ]
+        },
+        "48e44656-501b-4643-8668-d818810ea110": {
+          "tips": [
+            null
+          ]
+        },
+        "b48e8bd2-0138-482b-b210-dd25d28d16a4": {
+          "tips": [
+            null
+          ]
+        },
+        "f8d5c70e-520a-489e-9ca1-349c4519fb3b": {
+          "tips": [
+            null
+          ],
+          "progression_name": "Przewodnik projektu"
+        },
+        "0800d863-7d73-438e-84db-e8ecf059c224": {
+          "tips": [
+            null
+          ],
+          "progression_name": "Projekt Strony internetowej"
+        },
+        "0b65c931-ec29-410f-b2af-94c3f760a26b": {
+          "tips": [
+            null
+          ]
+        },
+        "8bda1197-e575-42de-8f84-8357522ea7e6": {
+          "progression_name": "Publikowanie Twojej witryny "
+        },
+        "d4481852-7db3-4d84-b2ee-885c49f2527b": {
+          "name": "Wzajemne recenzje"
+        },
+        "07a9967f-5bd3-4a8a-ba2c-dd798557222d": {
+          "tips": [
+            null
+          ]
+        },
+        "378f47ba-c2af-4e30-8053-fb3cad056d84": {
+          "progression_name": "Refleksja"
+        },
+        "5a3e01f9-8503-4d61-b93f-4025a5ee9f8b": {
+          "tips": [
+            null
+          ]
+        },
+        "2c07bca1-6112-459f-a70e-1324cc92e676": {
+          "progression_name": "Top Strony"
+        },
+        "d8504bd0-409d-4826-a849-99165a054253": {
+          "name": "Odkrywanie stron"
+        },
+        "b96c4340-e0fa-4adc-a9fb-4445907e612a": {
+          "tips": [
+            null
+          ]
+        },
+        "e66a8173-7449-408b-a2d8-cf80e5c9f9e1": {
+          "tips": [
+            null
+          ]
+        },
+        "b5945daf-8e9e-4215-902d-62ee77a561c1": {
+          "tips": [
+            null
+          ]
+        },
+        "1fd1ee2b-d6e9-4f6c-ae86-ed381753564b": {
+          "tips": [
+            null
+          ]
+        },
+        "0f4d1407-ccbb-40bf-ba00-9fdb47be9d5b": {
+          "tips": [
+            null
+          ]
+        },
+        "c996d60a-a392-471d-a18f-840999c170c0": {
+          "tips": [
+            null
+          ]
+        },
+        "ac729fd4-743b-4f2d-b6de-c06a854af2c3": {
+          "tips": [
+            null
+          ]
+        },
+        "75a3986a-f2d5-40c6-b892-ae2316af009d": {
+          "tips": [
+            null
+          ]
+        },
+        "fa75a0d1-b391-4bb2-8c15-8a1f8e86db59": {
+          "tips": [
+            null
+          ]
+        },
+        "5a2841f8-4835-4535-b7cb-faafe4fcc7c5": {
+          "tips": [
+            null
+          ]
+        },
+        "2f2f5947-26a3-4f56-ad26-aaa7752749ed": {
+          "tips": [
+            null
+          ]
+        },
+        "909654ed-e8dd-4764-869a-2247139e7413": {
+          "tips": [
+            null
+          ]
+        },
+        "2e46a23f-f977-4e3e-9abd-e74c2eb6f6b3": {
+          "tips": [
+            null
+          ]
+        },
+        "e4d2d9c4-7f75-482d-ad0d-52b087d18a0a": {
+          "name": "Dziennik"
+        },
+        "81687506-95ee-4e97-983a-3917c21e84fe": {
+          "name": "Klasy",
+          "tips": [
+            null
+          ]
+        },
+        "f73d0a71-26d5-41db-a567-f78dfbe8ef7b": {
+          "progression_name": "Przykładowa strona internetowa"
+        },
+        "f181b67e-a802-4c56-a07e-6cdc083a8b83": {
+          "progression_name": "Eksploracja"
+        },
+        "8ee9d453-3063-443a-ac0d-75bb21080ca0": {
+          "progression_name": "Budowanie umiejętności"
+        },
+        "2ddbccfc-23f6-45e3-b079-7d8dd428e476": {
+          "progression_name": "Ćwiczenia"
+        },
+        "8d1b6e09-e7e8-4874-bc15-cd97d8c0a366": {
+          "tips": [
+            null
+          ],
+          "progression_name": "Ocena"
+        },
+        "3d19fd99-3a69-4bb6-8c80-939e23da6613": {
+          "progression_name": "Wyzwania"
+        },
+        "fc5a7481-651e-4bd1-9901-257ad6d058b7": {
+          "name": "Dziennik"
+        },
+        "72c1d31f-0055-4503-b065-95f3e1981aa5": {
+          "name": "Streszczenie"
+        },
+        "af59d0b5-eb21-4822-93b4-661529f5500e": {
+          "tips": [
+            null
+          ]
+        },
+        "36ec23da-8dcd-471f-80cf-50e094c16003": {
+          "name": "Dziennik"
+        },
+        "14ebc1cd-29fb-4536-9b6d-d403ed39a06f": {
+          "tips": [
+            null
+          ]
+        },
+        "d74d5f03-eaee-4411-bbb2-8e0693d6011d": {
+          "tips": [
+            null
+          ]
+        },
+        "08c01b0a-e95f-4b59-9af2-d8319a3916ed": {
+          "name": "Web Lab",
+          "tips": [
+            null
+          ]
+        },
+        "3d8b8977-457c-4fa0-875e-8980de61a597": {
+          "progression_name": "Eksploracja"
+        },
+        "fe918c8b-2b7a-452d-b0a9-1e821f512512": {
+          "progression_name": "Budowanie umiejętności"
+        },
+        "f9b4a79c-8ed0-458f-97ce-fe2006992287": {
+          "progression_name": "Ćwiczenia"
+        },
+        "5d3c8ce4-a052-4628-b8a6-33f33296bbae": {
+          "tips": [
+            null
+          ],
+          "progression_name": "Dodawanie stron"
+        },
+        "322adc02-dc76-475b-ba23-d7f8b35bff1c": {
+          "progression_name": "Wyzwania"
+        },
+        "aba70e57-df7c-48fc-9d42-f318dce36de6": {
+          "name": "Dziennik"
+        },
+        "dcc4ed36-782d-4475-81ec-5daf10e31cdb": {
+          "tips": [
+            null
+          ]
+        },
+        "47d672f1-a038-462a-ac6c-42eb3f88f1aa": {
+          "name": "Web Lab"
+        },
+        "fc7e5533-5b8f-4022-8d0c-5489d8b7ecc3": {
+          "tips": [
+            null
+          ]
+        },
+        "4860ef5b-aedc-4828-ae25-0d22347b4ae3": {
+          "tips": [
+            null
+          ]
+        },
+        "d331a5e4-050f-40fb-a895-45db32b5ac22": {
+          "tips": [
+            null
+          ]
+        },
+        "a40a4ff4-42fc-458f-acf4-9290be93df10": {
+          "progression_name": "Dodaj Styl"
+        },
+        "ecbb467f-0e49-4dfd-a427-689c8b6477bd": {
+          "tips": [
+            null,
+            null
+          ],
+          "progression_name": "Sprawdź swoją pracę"
+        },
+        "deaf5c65-b8d3-4665-905e-77d9411d9fa5": {
+          "tips": [
+            null,
+            null
+          ]
+        },
+        "6598f84e-c071-4fd6-a13f-155072b87954": {
+          "name": "Testy po realizacji projektu"
+        },
+        "0da339bb-26d7-495a-8660-4a697cce770a": {
+          "tips": [
+            null
+          ]
+        },
+        "64c5abe6-12f3-492f-a248-d0cd37dd88f7": {
+          "tips": [
+            null
+          ]
+        },
+        "7b5f053b-a61a-437d-a9a3-718b9222ae3d": {
+          "tips": [
+            null
+          ]
+        },
+        "122ed1c3-ec23-4041-ba57-4f6ad839c7ec": {
+          "name": "Proces rozwiązywania problemów",
+          "tips": [
+            "Filmy wideo są wykorzystywane w całym programie nauczania, aby wywołać dyskusje, uzupełnić kluczowe koncepcje dodatkowymi wyjaśnieniami i przykładami oraz przedstawić uczniom różne role i pochodzenie osób w informatyce.\n\nPodczas interakcji z filmem włącz napisy zamknięte, aby uczniowie mogli również czytać podczas oglądania.\n\nAby zachęcić do aktywnego zaangażowania i refleksji, skorzystaj z jednej lub więcej strategii omówionych w \\*\\* [Przewodnik po programach nauczania](https://docs.google.com/document/d/1c2hF3CaTJacvwDy4y_9-m1jSkSPmK__F6pDPetXVvy4/view)\\*\\*."
+          ]
+        },
+        "c515a3ba-82d1-4f38-a53a-098b21fe1a1c": {
+          "tips": [
+            null
+          ]
+        },
+        "4e059912-6281-4c30-90e0-e7a72698f1da": {
+          "tips": [
+            null
+          ]
+        },
+        "691d3e87-b63b-4010-886e-9df4e9d7e2fd": {
+          "tips": [
+            null
+          ]
+        },
+        "11c537ee-7543-4422-b6ce-ac3a31cb5662": {
+          "tips": [
+            null
+          ],
+          "progression_name": "Animacja i szablony gier"
+        },
+        "700cff86-e325-4b4b-858a-2fd8b7912603": {
+          "tips": [
+            null
+          ]
+        },
+        "e60cec32-198f-4215-b92a-58eb39e4a7a2": {
+          "tips": [
+            null
+          ]
+        },
+        "94b8272d-94f8-4376-bdd6-24382bcc2f5c": {
+          "tips": [
+            null
+          ]
+        },
+        "e92c0c58-b850-44dc-90e5-0916bb630442": {
+          "tips": [
+            null
+          ]
+        },
+        "2cea4eb2-5c80-455e-b4f8-236ef11232c3": {
+          "name": "Refleksja"
+        },
+        "ee47634d-d5b6-4c7b-a45d-4066960b6091": {
+          "name": "Rysowanie za pomocą komputera"
+        },
+        "51ea47cc-c0d1-41de-abc5-73909f5c8ee8": {
+          "tips": [
+            null
+          ]
+        },
+        "dd2d120c-2375-4dd5-a0cc-2d399b792638": {
+          "tips": [
+            null
+          ]
+        },
+        "488ef3d4-9509-47d4-8737-2d55272ac4ef": {
+          "tips": [
+            null
+          ]
+        },
+        "61f55c6c-1d66-4450-9731-66b605fbfaab": {
+          "tips": [
+            null
+          ]
+        },
+        "06a8e7d0-bcf6-462e-ad1c-811252e94962": {
+          "tips": [
+            null
+          ]
+        },
+        "2ef19cd2-87ef-4290-a62a-8026acca3296": {
+          "tips": [
+            "Filmy wideo są wykorzystywane w całym programie nauczania, aby wywołać dyskusje, uzupełnić kluczowe koncepcje dodatkowymi wyjaśnieniami i przykładami oraz przedstawić uczniom różne role i pochodzenie osób w informatyce.\n\nPodczas interakcji z filmem włącz napisy zamknięte, aby uczniowie mogli również czytać podczas oglądania.\n\nAby zachęcić do aktywnego zaangażowania i refleksji, skorzystaj z jednej lub więcej strategii omówionych w \\*\\* [Przewodnik po programach nauczania](https://docs.google.com/document/d/1c2hF3CaTJacvwDy4y_9-m1jSkSPmK__F6pDPetXVvy4/view)\\*\\*."
+          ]
+        },
+        "e9a9c705-2850-44bc-a210-dc4b3466a353": {
+          "tips": [
+            null
+          ]
+        },
+        "43092a5a-ca50-4794-8818-894953630692": {
+          "tips": [
+            null
+          ],
+          "progression_name": "Budowanie umiejętności"
+        },
+        "cc4314cc-601c-4bc7-ba2c-6be8a445814a": {
+          "tips": [
+            null
+          ],
+          "progression_name": "Budowanie umiejętności"
+        },
+        "782c502a-6195-4c3f-8019-0d82460a1c8a": {
+          "tips": [
+            null
+          ],
+          "progression_name": "Ćwiczenia"
+        },
+        "7d43db9c-6c40-4846-bb22-e01e9b1532f3": {
+          "tips": [
+            null,
+            null
+          ],
+          "progression_name": "Ocena"
+        },
+        "c556208c-2fe3-45ed-a6eb-3b0cea37ae75": {
+          "tips": [
+            null
+          ],
+          "progression_name": "Wyzwania"
+        },
+        "0ad7fd67-efd9-489b-b4b6-fda641db7e51": {
+          "name": "Kształty różnych rozmiarów"
+        },
+        "0f272003-8dc1-4e9f-81c8-f979c7825014": {
+          "name": "Programowanie z parametrami",
+          "tips": [
+            null
+          ]
+        },
+        "2f5f4995-5f86-4bc9-a25d-7d62f81703d7": {
+          "tips": [
+            null
+          ],
+          "progression_name": "Budowanie umiejętności"
+        },
+        "e1fc5845-ca47-475e-b067-8a0fe7571167": {
+          "progression_name": "Ćwiczenia"
+        },
+        "428e4d6f-dcf7-4c2c-a00d-9e2fac4de54e": {
+          "tips": [
+            null
+          ],
+          "progression_name": "Ocena"
+        },
+        "a2e99d3a-3918-40b0-bd9b-3a6c0418b0fc": {
+          "progression_name": "Wyzwania"
+        },
+        "7b896a76-b6bf-4717-b0b3-d827e17cb46a": {
+          "name": "Dziennik"
+        },
+        "a827f281-0b65-44fb-a6e0-2a582cfab70a": {
+          "tips": [
+            null
+          ]
+        },
+        "03e35e32-cc32-4107-abf8-b3532f722d2b": {
+          "name": "Programowanie ze zmiennymi",
+          "tips": [
+            null
+          ]
+        },
+        "2bcc9458-d216-47ec-844e-1d1bae3790a6": {
+          "progression_name": "Przewidywanie"
+        },
+        "c4ffb29d-cce7-4fcb-a503-1ac238f6b1d7": {
+          "tips": [
+            null
+          ]
+        },
+        "7856e9bd-4a6a-4eeb-98d4-d63b7a8069ee": {
+          "tips": [
+            null
+          ],
+          "progression_name": "Budowanie umiejętności"
+        },
+        "2da379e9-eaf5-49ea-8c8e-6d355805b694": {
+          "progression_name": "Ćwiczenia"
+        },
+        "0664e5dc-78b3-4098-beba-846c965b6eb5": {
+          "tips": [
+            null
+          ],
+          "progression_name": "Ocena"
+        },
+        "5474ff2c-8de3-4cdc-8e86-4b57b11c4742": {
+          "progression_name": "Wyzwania"
+        },
+        "651f7eac-0885-4223-a192-c069d9abca2c": {
+          "name": "Refleksja"
+        },
+        "4c232f85-ffdf-49b7-b3ae-34b870186006": {
+          "tips": [
+            null
+          ]
+        },
+        "9e10cfa9-fac2-4f26-b162-e757cb90435d": {
+          "tips": [
+            null
+          ]
+        },
+        "5e4227d1-bd74-4769-87a1-49d5c696326a": {
+          "progression_name": "Budowanie umiejętności"
+        },
+        "147fc50f-f7ee-4812-a04f-e28df2ee19f5": {
+          "progression_name": "Ćwiczenia"
+        },
+        "786e71a4-53fe-49ab-bc97-838022a6c76a": {
+          "tips": [
+            null
+          ],
+          "progression_name": "Ocena"
+        },
+        "d22d84cc-f379-48f6-ab9b-1c7d3ef8e704": {
+          "progression_name": "Wyzwania"
+        },
+        "47d27ccf-6d83-46d4-8939-1f7517061c95": {
+          "name": "Przejrzyj"
+        },
+        "465e8b5f-bd51-4885-9b9d-5fe2d49f7d9f": {
+          "tips": [
+            null
+          ]
+        },
+        "9339beae-6aac-4958-9c4d-e7b577d07aee": {
+          "tips": [
+            null
+          ]
+        },
+        "c0e2c624-f4ec-4fce-9e45-ed73d1070b78": {
+          "tips": [
+            null
+          ]
+        },
+        "92f66cc4-5fba-49ae-85be-36973c4e5cbf": {
+          "tips": [
+            null
+          ]
+        },
+        "9ccac27e-7ede-449d-80e8-2e1451d6f8e8": {
+          "tips": [
+            null,
+            null
+          ]
+        },
+        "1fbb6201-1556-4b41-9a14-4ae07fff50fc": {
+          "name": "Dziennik"
+        },
+        "77bc3876-90b1-4d58-a025-c4a6dbd382a0": {
+          "tips": [
+            null
+          ]
+        },
+        "1cf25bad-898f-4920-9419-15d582df7747": {
+          "tips": [
+            null
+          ]
+        },
+        "1adc1c2c-01c6-4023-b3fe-290da7c63ea0": {
+          "tips": [
+            null
+          ]
+        },
+        "3161543e-f64c-473c-bfe6-5a8d377da346": {
+          "progression_name": "Budowanie umiejętności"
+        },
+        "25bcbbd2-7a2f-4c98-9f61-a99686d91397": {
+          "tips": [
+            null
+          ]
+        },
+        "7ff679e2-cec8-43dd-8f77-96ed68b65cd9": {
+          "name": "Budowanie umiejętności",
+          "progression_name": "Budowanie umiejętności"
+        },
+        "bd0a55c5-79fa-4e66-b9ed-f7acde1cca34": {
+          "name": "Sprawdź zrozumienie",
+          "progression_name": "Sprawdź zrozumienie"
+        },
+        "b6ae6fab-2cb3-46e1-a0d9-d38c0dbf9dee": {
+          "name": "Ćwiczenia",
+          "progression_name": "Ćwiczenia"
+        },
+        "f8c13dc6-af62-4cb6-afb2-62d1fb99f35b": {
+          "name": "Ocena",
+          "tips": [
+            null
+          ],
+          "progression_name": "Ocena"
+        },
+        "aedcf92f-9a8c-451c-b17c-2b9d4cef55fe": {
+          "name": "Wyzwania",
+          "progression_name": "Wyzwania"
+        },
+        "6c98b63d-9ef3-4494-8c0a-3c069a1e4a3c": {
+          "name": "Dziennik"
+        },
+        "0712c045-56fe-49ac-a03b-0e7b0d571658": {
+          "tips": [
+            null
+          ]
+        },
+        "c3bc1cd4-99e5-4071-9c50-5b377ca7873d": {
+          "progression_name": "Przewidywanie"
+        },
+        "018269af-e160-4502-9b18-15c10310dd92": {
+          "tips": [
+            null
+          ]
+        },
+        "d86c69ad-d7d1-4015-bb86-0d34ade76e5e": {
+          "progression_name": "Budowanie umiejętności"
+        },
+        "e0cbb128-fcb7-464f-a506-7d78fd66a6f0": {
+          "progression_name": "Ćwiczenia"
+        },
+        "779e2809-80da-45b8-ba9b-44cc55386338": {
+          "tips": [
+            null
+          ],
+          "progression_name": "Ocena"
+        },
+        "c9cb7767-98ce-4e02-9d64-56927deb319e": {
+          "progression_name": "Wyzwania"
+        },
+        "4e887768-be6c-4936-b544-c7c808fddb88": {
+          "name": "Dziennik"
+        },
+        "8b5f1e8d-f5d9-4a46-bc96-51e8fcb159fe": {
+          "tips": [
+            null
+          ]
+        },
+        "79b94b50-88be-4329-85af-9846e89bdf77": {
+          "progression_name": "Przewidywanie"
+        },
+        "838ef620-9efa-481f-aabd-50c7491c82d1": {
+          "progression_name": "Budowanie umiejętności"
+        },
+        "687e2ae1-7586-4850-b280-7cfe906427e4": {
+          "progression_name": "Ćwiczenia"
+        },
+        "167e223a-296e-4970-9bf9-831c4cb4048b": {
+          "tips": [
+            null
+          ],
+          "progression_name": "Ocena"
+        },
+        "e7754777-fba0-4bbe-ac0d-b445c5d8b614": {
+          "progression_name": "Wyzwania"
+        },
+        "66f3fc21-6bc7-460e-8be2-fc833b565418": {
+          "name": "Dziennik "
+        },
+        "15074e76-ff77-420c-9fbb-b923641fd1e6": {
+          "name": "Przejrzyj"
+        },
+        "13bd9594-e5de-4730-bbf7-4326e76008a5": {
+          "tips": [
+            null
+          ]
+        },
+        "5b65c9a6-26fd-43fb-a193-130f47faa6d3": {
+          "tips": [
+            null
+          ]
+        },
+        "9905f777-4587-4aba-b905-43bf06786bc0": {
+          "tips": [
+            null
+          ]
+        },
+        "cdcb79f2-7ba2-4f5f-9977-358fb177d4a5": {
+          "tips": [
+            null
+          ]
+        },
+        "4d0925fc-7ba5-4641-9379-87c8f18cb254": {
+          "tips": [
+            null
+          ],
+          "progression_name": "Utwórz tło"
+        },
+        "ddae81ff-4e39-4051-bbaa-388b45171400": {
+          "tips": [
+            null
+          ],
+          "progression_name": "Dodaj duszki"
+        },
+        "18e00ca9-a736-49d8-b83d-969a9d6d59ff": {
+          "progression_name": "Dodaj tekst"
+        },
+        "81cf6d6b-6cba-44a4-a426-badda315b89d": {
+          "progression_name": "Przejrzyj swoją scenę"
+        },
+        "579f7363-c17e-4501-8177-f3c62df87e67": {
+          "tips": [
+            null,
+            null
+          ]
+        },
+        "ed07e87c-c4ba-4f60-b0e1-3c92caba8e21": {
+          "name": "Dziennik"
+        },
+        "91af4e95-88e2-457c-b6df-1d704404f2c8": {
+          "tips": [
+            null
+          ]
+        },
+        "da217e24-6e2b-49a8-9e43-a6e3938fde30": {
+          "tips": [
+            null
+          ]
+        },
+        "1844ac49-1062-4756-83fe-f8397e56eae7": {
+          "progression_name": "Budowanie umiejętności"
+        },
+        "5b1985f6-d193-4456-865e-344495f2d52d": {
+          "tips": [
+            null
+          ]
+        },
+        "8083e58f-ad7c-45e1-8602-35bc008dd04c": {
+          "progression_name": "Budowanie umiejętności"
+        },
+        "de1820ef-acb4-48ac-9c14-5f12b3587292": {
+          "progression_name": "Ćwiczenia"
+        },
+        "fff1f4fb-b53b-4a96-b791-b4520cd48d19": {
+          "tips": [
+            null
+          ],
+          "progression_name": "Ocena"
+        },
+        "bc9e1eae-5a43-44de-9eff-76977597cec3": {
+          "progression_name": "Wyzwania"
+        },
+        "8a504b62-533e-49f1-a0a5-0c8c9265435d": {
+          "tips": [
+            null
+          ]
+        },
+        "7b84c6ef-d993-400a-bca9-e2c66c824dc1": {
+          "tips": [
+            null
+          ]
+        },
+        "6f17e31d-631c-4262-b853-f0556c4f20d5": {
+          "progression_name": "Przewidywanie"
+        },
+        "edb20353-f050-4cb3-99f4-ddd66a421ce9": {
+          "tips": [
+            null
+          ]
+        },
+        "5674cab2-158c-4664-b9b4-26406edfaaca": {
+          "progression_name": "Budowanie umiejętności"
+        },
+        "d73ccc18-34c2-4fcc-9c31-b96821773a58": {
+          "progression_name": "Ćwiczenia"
+        },
+        "63ba5b2f-c777-4d9a-b3ea-dda021f3cc33": {
+          "tips": [
+            null
+          ],
+          "progression_name": "Ocena"
+        },
+        "cc48678f-8c9a-4ee4-82b7-71f64e57ba83": {
+          "progression_name": "Wyzwania"
+        },
+        "e72a277a-d392-437e-a5e6-6bd2ea45bcc6": {
+          "name": "Dziennik"
+        },
+        "6a6d85fa-09bf-483d-81f1-561b8820795e": {
+          "name": "Przejrzyj"
+        },
+        "2ee73350-ed46-4715-9744-030b9b0bba52": {
+          "tips": [
+            null
+          ]
+        },
+        "dd8a51ba-e183-4b42-a3ce-b89ce885fb5a": {
+          "tips": [
+            null
+          ]
+        },
+        "2858c3f2-a4f7-429b-829d-0fee29b43329": {
+          "progression_name": "Przykładowa animowana scena"
+        },
+        "f2966304-a582-4fc1-81b9-1f171c3f87ee": {
+          "tips": [
+            null
+          ]
+        },
+        "98112b16-adcb-48db-8aea-b650606ed7c6": {
+          "progression_name": "Zaplanuj swoją scenę"
+        },
+        "b28fae22-403d-4a11-a924-cc1261b4d2ee": {
+          "tips": [
+            null
+          ]
+        },
+        "acea648c-4d2c-4b65-9d06-812308ecad74": {
+          "tips": [
+            null
+          ],
+          "progression_name": "Narysuj tło"
+        },
+        "8f67d3bb-a00a-4378-99ae-83077d3ed3ad": {
+          "tips": [
+            null
+          ],
+          "progression_name": "Dodaj duszki"
+        },
+        "f83ffcee-0b2b-4bf7-b68d-fc00600f1e11": {
+          "progression_name": "Dodaj tekst"
+        },
+        "ba152368-fe2b-49c9-9075-e94ae4b97ad8": {
+          "progression_name": "Przejrzyj swoją animowaną scenę"
+        },
+        "feb6082c-662f-40ee-9fef-b203da98f901": {
+          "tips": [
+            null,
+            null
+          ]
+        },
+        "fbfd8557-8467-4077-bcfb-40991ea679b3": {
+          "name": "Dziennik"
+        },
+        "bcc371a0-b97f-4e0a-92f5-f27a15472014": {
+          "tips": [
+            null
+          ]
+        },
+        "433cfae4-53f9-431f-aef8-50ec22b9a745": {
+          "name": "Zdania z warunkami",
+          "tips": [
+            null
+          ]
+        },
+        "c3ac8880-175b-48b9-9262-a2a10841d4b7": {
+          "progression_name": "Przewidywanie"
+        },
+        "529ce195-5758-4385-8d85-76a4554d6201": {
+          "tips": [
+            null
+          ]
+        },
+        "51e62f99-3a45-4c5a-ae5d-497b2fa80fda": {
+          "progression_name": "Budowanie umiejętności"
+        },
+        "87a43710-2d57-4737-9558-391256ad0dff": {
+          "progression_name": "Budowanie umiejętności"
+        },
+        "05960f57-abb3-49d9-b863-efff268df7f3": {
+          "progression_name": "Ćwiczenia"
+        },
+        "fa173d6c-bb83-4e25-8ee9-41863f73267c": {
+          "tips": [
+            null
+          ],
+          "progression_name": "Ocena"
+        },
+        "412d441d-82b0-4b0d-ad9b-98d5938d5ab8": {
+          "progression_name": "Wyzwania"
+        },
+        "a38f07a0-3b54-4ec0-882a-47601d6b565d": {
+          "name": "Pobieranie wejścia"
+        },
+        "e012ada1-86a4-4331-992f-0c48363384be": {
+          "name": "Wejście z klawiatury",
+          "tips": [
+            null
+          ]
+        },
+        "c4189906-e83d-45b9-99c7-d310450608e2": {
+          "progression_name": "Przewidywanie"
+        },
+        "ee4fe12f-70f9-4526-b7e3-519557e8e6d7": {
+          "progression_name": "Budowanie umiejętności"
+        },
+        "6a79e545-5bd4-4963-876e-54dc4329a6c2": {
+          "progression_name": "Ćwiczenia"
+        },
+        "72ebdac4-76f9-4174-b358-13bc45c56f82": {
+          "tips": [
+            null
+          ],
+          "progression_name": "Ocena"
+        },
+        "241d9405-dd1a-4dc2-832d-6a42fcfbbfc8": {
+          "progression_name": "Wyzwania"
+        },
+        "470dbc5f-9c73-4bf2-aae0-047afb9f2db4": {
+          "tips": [
+            null
+          ]
+        },
+        "ac20ce6e-2b90-439c-8387-d4075fb63710": {
+          "progression_name": "Przewidywanie"
+        },
+        "286ee182-4df3-4f7d-bef6-1011fcf1b56a": {
+          "tips": [
+            null
+          ]
+        },
+        "37e99532-82df-48f8-9ef1-d066e8125b8d": {
+          "progression_name": "Budowanie umiejętności"
+        },
+        "0d87ba04-d0b6-4a2f-ae9e-17f8cd485d9c": {
+          "progression_name": "Ćwiczenia"
+        },
+        "a5d9d609-e585-4cde-bd83-e99589c3edb7": {
+          "tips": [
+            null
+          ],
+          "progression_name": "Ocena"
+        },
+        "6cdbe394-dd8d-414f-9c39-0f84be8ee6fb": {
+          "progression_name": "Wyzwania"
+        },
+        "e7342db1-f422-47bb-ac25-dd542d859e7d": {
+          "name": "Zakończenie"
+        },
+        "6d312ecc-2f0a-4e83-b2a4-996999cf2935": {
+          "tips": [
+            null
+          ]
+        },
+        "2f680890-6220-4e2b-accb-86473b7f27ba": {
+          "name": "Dziennik"
+        },
+        "a7382d57-4a04-4bea-86eb-89e8a1312f1f": {
+          "tips": [
+            null
+          ]
+        },
+        "5faa298a-e312-4a56-a942-a7eb8a626687": {
+          "tips": [
+            null
+          ]
+        },
+        "cfe7d63e-fa10-41cc-baaa-b540e001c2cb": {
+          "tips": [
+            null
+          ],
+          "progression_name": "Stwórz interaktywną kartę"
+        },
+        "178315a2-ed7f-41bf-a55d-88724e865ce5": {
+          "tips": [
+            null
+          ],
+          "progression_name": "Praca Projektowa"
+        },
+        "326592f7-390a-4c2f-8fce-6a9d4c4fe27e": {
+          "name": "Wzajemne recenzje"
+        },
+        "ad65cd05-d6a1-498f-a09e-8c668d0a01a6": {
+          "tips": [
+            null
+          ]
+        },
+        "7c0523e9-60fb-46ca-822b-639b7f0a1feb": {
+          "tips": [
+            null
+          ],
+          "progression_name": "Refleksja"
+        },
+        "06b39acd-7031-492c-b87e-eeed1bbdff6a": {
+          "name": "Refleksja"
+        },
+        "abb8365c-303e-410d-a30b-a54115599db1": {
+          "tips": [
+            null
+          ],
+          "progression_name": "Budowanie umiejętności"
+        },
+        "345c6438-5484-47f2-a8ba-2d8c0a02773b": {
+          "tips": [
+            null,
+            null
+          ],
+          "progression_name": "Budowanie umiejętności"
+        },
+        "9867c292-f5b7-4715-9f48-39076f5d3e89": {
+          "progression_name": "Ćwiczenia"
+        },
+        "307a035c-d198-4afc-9cdd-a375c7a92357": {
+          "tips": [
+            null
+          ],
+          "progression_name": "Ocena"
+        },
+        "93f4f2ef-c47a-4a00-8693-f66a8017e924": {
+          "progression_name": "Wyzwania"
+        },
+        "b9465289-dd48-477b-8b37-30309e9b00c7": {
+          "name": "Dziennik",
+          "tips": [
+            null
+          ]
+        },
+        "39a10a2e-fcf5-4f9e-ae6b-e1ccb70dba6c": {
+          "tips": [
+            null
+          ]
+        },
+        "3e4daf78-07e6-4a64-8524-78d4e634156a": {
+          "tips": [
+            null
+          ],
+          "progression_name": "Budowanie umiejętności"
+        },
+        "c703f895-c710-4e15-857c-330430f8b610": {
+          "progression_name": "Ćwiczenia"
+        },
+        "b3863b62-40b4-45d9-998e-ab6854dbf797": {
+          "tips": [
+            null
+          ],
+          "progression_name": "Ocena"
+        },
+        "0075c5fe-150c-4f1a-acb1-f6729546a68e": {
+          "progression_name": "Wyzwania"
+        },
+        "8c1c60f1-b7b1-4e62-97f5-c5d4cbdbba62": {
+          "tips": [
+            null
+          ]
+        },
+        "ad08b4f7-1f1b-4112-8c51-94b245e4339c": {
+          "tips": [
+            null
+          ]
+        },
+        "81ec9172-9243-4727-8eb1-91c9261cd682": {
+          "tips": [
+            null
+          ],
+          "progression_name": "Narysuj swoje tło"
+        },
+        "cab43fe2-4162-4c38-ae96-c14d216eb2ac": {
+          "tips": [
+            null
+          ],
+          "progression_name": "Stwórz swoje duszki"
+        },
+        "2f4d7386-2ead-4655-8393-ec856d6ba1ff": {
+          "tips": [
+            null
+          ],
+          "progression_name": "Przejrzyj swoją grę"
+        },
+        "354f67e2-877f-48e7-8dfd-bc4fb76ea0bb": {
+          "tips": [
+            null
+          ]
+        },
+        "b5564331-20a6-4fe1-b113-405707944e55": {
+          "tips": [
+            null
+          ],
+          "progression_name": "Przewidywanie"
+        },
+        "e535734b-5258-4428-a73c-08bcd485efa9": {
+          "progression_name": "Budowanie umiejętności"
+        },
+        "e54e6bcf-56ff-43d8-955e-8a34d6bc25ce": {
+          "progression_name": "Ćwiczenia"
+        },
+        "7295dac5-ad53-403d-9df4-16ae06edee45": {
+          "tips": [
+            null
+          ],
+          "progression_name": "Ocena"
+        },
+        "b5b1e0eb-62c7-4c4e-a92e-951bbe2cba57": {
+          "progression_name": "Wyzwania"
+        },
+        "72fa0639-323d-42a7-aec6-8cfe8ac06547": {
+          "tips": [
+            null
+          ]
+        },
+        "e349ea5e-6b0a-4027-a88e-b3f88fd24c20": {
+          "tips": [
+            null
+          ]
+        },
+        "2f064ef6-493e-43c1-ad4c-7ef6773fc013": {
+          "tips": [
+            null
+          ]
+        },
+        "78c05816-0e2f-48a6-91a1-40edc89a48a8": {
+          "tips": [
+            null
+          ],
+          "progression_name": "Budowanie umiejętności"
+        },
+        "b6c7d504-1530-4ba5-944d-3a48cc279b8d": {
+          "progression_name": "Ćwiczenia"
+        },
+        "089403d5-9fad-4c00-8607-cd631c6f2801": {
+          "tips": [
+            null
+          ],
+          "progression_name": "Ocena"
+        },
+        "e9f9ca78-2be6-4c1e-a713-edfee412da74": {
+          "progression_name": "Wyzwania"
+        },
+        "72b3c4b6-ff19-43aa-963b-5ca08bfd0195": {
+          "tips": [
+            null
+          ]
+        },
+        "66089c68-0883-4590-8caf-64e0d210a4d8": {
+          "tips": [
+            null
+          ]
+        },
+        "c81e2265-ff17-420a-9def-e2c71a004da1": {
+          "tips": [
+            null
+          ],
+          "progression_name": "Zrób swoje duszki"
+        },
+        "cf39e34c-9f1e-46c7-95aa-ec47f091b8e7": {
+          "tips": [
+            null
+          ]
+        },
+        "9f59f303-4fc6-4e21-a68f-7bb84427a90e": {
+          "progression_name": "Ruch duszka"
+        },
+        "8132afd2-391e-4945-804c-75dc8a2a62d0": {
+          "tips": [
+            null
+          ],
+          "progression_name": "Przejrzyj swoją grę"
+        },
+        "1693c6a1-f3db-4262-a4ba-99e228c5a39d": {
+          "tips": [
+            null
+          ]
+        },
+        "c596e167-e8d2-4747-a7f2-1e1709c4d83c": {
+          "progression_name": "Film: Funkcje"
+        },
+        "d11d117e-695b-4e36-bb74-e0a13e6bcf51": {
+          "tips": [
+            null
+          ]
+        },
+        "6e07750a-04dc-4de5-86dd-a840e18a36d2": {
+          "tips": [
+            null
+          ],
+          "progression_name": "Budowanie umiejętności"
+        },
+        "c7fce9a0-de92-4137-aa81-06129f0620fe": {
+          "tips": [
+            null
+          ],
+          "progression_name": "Ćwiczenia"
+        },
+        "7039da6c-5a5b-4daf-a691-4e6879886527": {
+          "tips": [
+            null,
+            null
+          ],
+          "progression_name": "Gra Kolekcjonerska"
+        },
+        "7c0a28d4-c595-473f-9ba7-16d3ea417161": {
+          "progression_name": "Wyzwania"
+        },
+        "b7ee1e8a-d621-4ad2-b4be-8eb1d3ad0c60": {
+          "tips": [
+            null
+          ]
+        },
+        "121ae19d-d28c-477e-8bc9-4077edb22ce4": {
+          "tips": [
+            null
+          ]
+        },
+        "2393354e-41d2-4456-a0cf-7b5095b93491": {
+          "progression_name": "Zaplanuj swój projekt"
+        },
+        "cc97e6a9-28bf-4535-8d63-a0213ee684f3": {
+          "progression_name": "Kontroluj swojego gracza"
+        },
+        "99cd86be-4a3e-4ae1-a6be-af1fca62d57d": {
+          "tips": [
+            null
+          ],
+          "progression_name": "Wyzwania"
+        },
+        "51f669b7-12c2-4ad5-b069-d8a01d3aa773": {
+          "tips": [
+            null
+          ]
+        },
+        "d4be4b63-fed5-4ded-b3e6-863987384d81": {
+          "tips": [
+            null
+          ]
+        },
+        "ed34e76f-b346-44ac-b3b6-8f32fac98cd9": {
+          "tips": [
+            null
+          ]
+        },
+        "ec7e0cc6-5736-4664-bd72-355a0ac3713e": {
+          "progression_name": "Buduj Platformę Jumper"
+        },
+        "4393afff-74f3-47d1-ab2a-9c32ccd80a5d": {
+          "progression_name": "Skoczek - tło i zmienne"
+        },
+        "5516cbd5-21fe-4fb1-b3b8-a8ebd2029bb0": {
+          "progression_name": "Skoczek - platformy"
+        },
+        "608c8b10-6de7-48be-a379-e7e4ec0ecd4b": {
+          "progression_name": "Skoczek - elementy"
+        },
+        "03488848-8923-4990-b06f-5479f2c88c2f": {
+          "progression_name": "Skoczek - gracz"
+        },
+        "710d5103-270a-40e6-b75f-933e5f018935": {
+          "tips": [
+            null
+          ]
+        },
+        "418c2470-b544-4252-a1e0-bdb9ba5ef726": {
+          "progression_name": "Wyzwania"
+        },
+        "d449738b-032b-41a6-b541-73af24606e19": {
+          "name": "Dziennik"
+        },
+        "78e453da-9611-415c-8420-364562611c4c": {
+          "tips": [
+            null
+          ]
+        },
+        "9f4c5568-488e-4c3d-a482-9b54d36523ce": {
+          "tips": [
+            null
+          ],
+          "progression_name": "Przykładowe Gry"
+        },
+        "48b8d790-edaf-45e0-8765-ed7127adfc7a": {
+          "tips": [
+            null
+          ]
+        },
+        "a55e3691-9685-4192-89b5-0ee62a4c1c15": {
+          "tips": [
+            null
+          ]
+        },
+        "41bb4f61-1aae-4f97-9f4a-bd8bc162da2a": {
+          "tips": [
+            null
+          ],
+          "progression_name": "Projekt - Tło i Zmienne"
+        },
+        "d5cc5068-e9de-47c8-be9e-7d7ca558a873": {
+          "progression_name": "Projekt - Duszki i Interakcje"
+        },
+        "6aa453f6-fe6d-4c89-beee-a70f6d4c9dd6": {
+          "progression_name": "Przejrzyj swoją grę"
+        },
+        "beb11136-6ed3-4efd-a31f-ffb212bc8f33": {
+          "tips": [
+            null,
+            null
+          ]
+        },
+        "8f680292-f542-47ed-9c99-afa8eb129106": {
+          "name": "Udostępnij"
+        },
+        "93cd7e3b-b859-473f-b498-dcdf363b424a": {
+          "name": "Dziennik"
+        },
+        "1400867f-9dca-49ce-be9b-edbc452271b7": {
+          "name": "Przemyśl"
+        },
+        "d0e4ab72-97ea-42f5-a35a-821e53038da5": {
+          "name": "Testy po realizacji projektu"
+        },
+        "9d8e9318-55f7-47cf-8984-3689f48aacce": {
+          "tips": [
+            null
+          ]
+        },
+        "bf32abb3-e3bb-4e9b-843e-f66de8264584": {
+          "tips": [
+            null
+          ]
+        },
+        "4f5fece0-c80c-4cd2-b58e-f8a10e7f47e5": {
+          "tips": [
+            null
+          ]
+        },
+        "0b5049fd-f918-4a21-ab58-4fdef48aa237": {
+          "tips": [
+            null
+          ]
+        },
+        "b619525a-e303-458a-a1c7-2e86871d45ec": {
+          "name": "Dziennik"
+        },
+        "9bfaef53-4ea2-4808-9a2c-0c1dd8d5ab8c": {
+          "name": "Refleksja"
+        },
+        "7571ea51-b14b-47ad-b0d5-6041f530639f": {
+          "name": "Dziennik"
+        },
+        "59d0a38e-6c37-4ade-b338-8a0d536c3768": {
+          "tips": [
+            null
+          ]
+        },
+        "d54b0e3d-4bdb-44e4-8ff8-e11da3c7c163": {
+          "tips": [
+            null
+          ]
+        },
+        "1fea07e1-eae0-41d3-ae12-970748f5d122": {
+          "tips": [
+            null
+          ]
+        },
+        "243f79fd-7d33-469b-8a5b-af97a2473699": {
+          "tips": [
+            null
+          ]
+        },
+        "e272157a-8e31-4d5e-930a-ae0452e93f5d": {
+          "name": "Dziennik"
+        },
+        "f78e3722-b89e-4297-9f3b-3a3fca80e3bf": {
+          "name": "Dziennik"
+        },
+        "d29b9554-5efb-4071-b8c4-bab2a3decabe": {
+          "tips": [
+            "Filmy wideo są wykorzystywane w całym programie nauczania, aby wywołać dyskusje, uzupełnić kluczowe koncepcje dodatkowymi wyjaśnieniami i przykładami oraz przedstawić uczniom różne role i pochodzenie osób w informatyce.\n\nPodczas interakcji z filmem włącz napisy zamknięte, aby uczniowie mogli również czytać podczas oglądania.\n\nAby zachęcić do aktywnego zaangażowania i refleksji, skorzystaj z jednej lub więcej strategii omówionych w \\*\\* [Przewodnik po programach nauczania](https://docs.google.com/document/d/1c2hF3CaTJacvwDy4y_9-m1jSkSPmK__F6pDPetXVvy4/view)\\*\\*."
+          ]
+        },
+        "9edfdc5d-b944-4084-9b53-237d7b9a6dd0": {
+          "tips": [
+            null
+          ]
+        },
+        "7e238b95-4448-4c9b-b611-75e5cdf93bcc": {
+          "tips": [
+            null
+          ]
+        },
+        "c2b35831-481c-4a40-94c0-c2e3ac2a18ee": {
+          "tips": [
+            null
+          ]
+        },
+        "7d70f314-8b8a-476e-99fb-af5995ecff7c": {
+          "name": "Zdefiniuj",
+          "tips": [
+            null
+          ]
+        },
+        "2160190e-45d0-4300-b381-1fde82901781": {
+          "tips": [
+            null
+          ]
+        },
+        "91016fd4-34b8-4b21-8239-eb28d47ccd40": {
+          "tips": [
+            null
+          ]
+        },
+        "b970113d-4118-4919-9c7b-8c8ebb7c3f23": {
+          "name": "Przygotuj"
+        },
+        "c650328b-0bdd-4d21-9e12-dc349303107e": {
+          "tips": [
+            null
+          ]
+        },
+        "7738fabd-e344-446b-b0a4-93c4e7d253ca": {
+          "tips": [
+            null
+          ]
+        },
+        "0cabc257-19f6-4027-a210-6f165580a029": {
+          "name": "Dziennik"
+        },
+        "00867e01-dd38-4470-a273-528e615e176a": {
+          "name": "Dziennik"
+        },
+        "9c4f976b-d905-4ad2-a7fc-0aafa7224656": {
+          "tips": [
+            null
+          ]
+        },
+        "ac3902da-8c9f-412c-8d73-9cd5b6d4ca9a": {
+          "name": "Spróbuj"
+        },
+        "8f191079-75b9-46a5-96b6-efe624e51c6b": {
+          "name": "Przemyśl",
+          "tips": [
+            null
+          ]
+        },
+        "ad89431e-0d65-473c-908d-d69e5aa42ca0": {
+          "name": "Dziennik"
+        },
+        "b899ff01-5947-4a20-85c1-4a0c55e8a98b": {
+          "name": "Dziennik"
+        },
+        "ad59925e-fae1-4da6-8fc1-b3a7369ea10d": {
+          "name": "Prototypy na papierze"
+        },
+        "da5b7fd8-805e-433d-9a3d-90a24b452bf7": {
+          "tips": [
+            null
+          ]
+        },
+        "5a8e7a27-8780-44f1-95d9-219ef159dfe9": {
+          "tips": [
+            null
+          ]
+        },
+        "312fdd23-ce37-49b3-9a79-ab403dc8fc67": {
+          "tips": [
+            null
+          ]
+        },
+        "277a6ecc-7dd1-4511-b7e9-a11f8e0f94c7": {
+          "name": "Dziennik",
+          "tips": [
+            null
+          ]
+        },
+        "2b1f972e-9f36-4367-8839-339f9da31501": {
+          "name": "Dziennik"
+        },
+        "6211d9c0-525f-404b-803e-1fb8c4bd4c62": {
+          "tips": [
+            null
+          ]
+        },
+        "72e65375-942e-4c50-8bb6-3e0d0728c959": {
+          "tips": [
+            null
+          ]
+        },
+        "eaf2312f-f3a1-4d8e-9e9f-dec26b2ef9a4": {
+          "tips": [
+            null
+          ]
+        },
+        "eb34af75-ea6f-40e7-96b9-d44cffe90593": {
+          "name": "Dziennik"
+        },
+        "1d938704-ddff-42c9-bac5-c8b5e8f932db": {
+          "name": "Dziennik"
+        },
+        "77c12ec0-b8e1-4671-80ba-7ea978dd47f4": {
+          "tips": [
+            null
+          ]
+        },
+        "7f3d1be5-4899-44e9-a7de-516379513f05": {
+          "tips": [
+            null
+          ]
+        },
+        "a46c49c1-03f6-4ad0-a990-9273ba7ec210": {
+          "tips": [
+            null
+          ]
+        },
+        "2e8b3df6-c6f5-4b8d-bdd5-0b24a4fb09df": {
+          "name": "Dziennik"
+        },
+        "3c6e61f2-383d-4d5b-90cf-e0a761006eed": {
+          "name": "Dziennik"
+        },
+        "37c89440-b43c-435c-aa62-a3668ce2e52e": {
+          "name": "Pierwsze kroki",
+          "tips": [
+            null
+          ]
+        },
+        "cb92f054-25f5-49db-a1ea-79f201884b15": {
+          "tips": [
+            null
+          ]
+        },
+        "66b34e6a-d454-4e08-8633-e132158805d2": {
+          "tips": [
+            null
+          ]
+        },
+        "e30a6d56-5bfe-461c-abf8-3a25f6827ac8": {
+          "name": "Zakończenie"
+        },
+        "97538c28-3985-4a5d-a5e4-a92e1bf22be9": {
+          "name": "Rozgrzewka"
+        },
+        "a7df3e9a-7fc7-4521-8419-52c524b09205": {
+          "name": "Testowanie prototypu"
+        },
+        "fc79058b-bbae-444a-8595-d9f3bbbe0efe": {
+          "tips": [
+            null
+          ]
+        },
+        "9d79ace1-9fa9-452d-ac9d-c0a402cbec18": {
+          "name": "Przemyśl"
+        },
+        "70b8dfe0-5ec8-47dc-952b-db694d8acb8c": {
+          "tips": [
+            null
+          ]
+        },
+        "c43e354f-c702-4aff-b785-764284e89b9b": {
+          "tips": [
+            null,
+            null
+          ]
+        },
+        "fdefefa4-27d6-4692-90fd-b6eff8cf6289": {
+          "name": "Dziennik"
+        },
+        "45daf083-5487-4e33-82af-d910a7920ee1": {
+          "progression_name": "Refleksja"
+        },
+        "a9101326-b1e8-454d-a7f7-8bda2f0d5a91": {
+          "name": "Patrząc w przyszłość"
+        },
+        "39b0ee12-4d1f-46c5-ba10-3928586ed88a": {
+          "name": "Dziennik"
+        },
+        "f4d652ea-1006-473c-a442-8b09013a31d2": {
+          "tips": [
+            null
+          ]
+        },
+        "925f79d8-3f69-45a4-8e88-4bc828edd765": {
+          "tips": [
+            null
+          ]
+        },
+        "98bbb84b-faf0-4273-9236-ac9fb0aacda5": {
+          "tips": [
+            null
+          ]
+        },
+        "8b355afa-bed1-493a-bac2-5ab46de20cd9": {
+          "tips": [
+            null
+          ]
+        },
+        "d18ea0b2-8fd4-4f3e-a5ed-f20116827dec": {
+          "tips": [
+            null
+          ]
+        },
+        "d322ab7f-62c3-4760-91f9-f2ae0c4a984c": {
+          "tips": [
+            null
+          ]
+        },
+        "c40b680b-3ddb-4991-9e1b-ea5681813a0a": {
+          "name": "Dziennik"
+        },
+        "eb107063-f16f-4150-a3cf-5cd1ea4879b6": {
+          "name": "Dziennik"
+        },
+        "a171bbb4-18d0-4299-a585-f640e3706b36": {
+          "tips": [
+            null
+          ]
+        },
+        "3468b86e-dac9-4540-9df7-720a4cc64083": {
+          "tips": [
+            null
+          ]
+        },
+        "2bbec57f-98d4-4bee-a108-93ae21b93d2f": {
+          "tips": [
+            null
+          ]
+        },
+        "54b43dc7-2faf-44e1-8f2e-26ceaf6d2af4": {
+          "name": "Dziennik"
+        },
+        "f3f6ac57-6f74-4420-877d-df8ccf0604a0": {
+          "name": "Dziennik"
+        },
+        "ebe064e9-1a5d-44d6-b926-e0b59c024768": {
+          "progression_name": "Przykładowe aplikacje"
+        },
+        "14492d67-c3d8-43f6-944d-9bf8a29bb3e4": {
+          "tips": [
+            null
+          ]
+        },
+        "9847af13-c240-4067-a9e8-7519a2a11c07": {
+          "tips": [
+            null
+          ]
+        },
+        "3a3bfd57-9e44-4219-bbff-b2c1a8958e86": {
+          "tips": [
+            null
+          ]
+        },
+        "9cbd2049-fa2a-4d34-8bf8-770cb21e6934": {
+          "name": "Dziennik"
+        },
+        "8615ea4f-9e99-4a18-b545-c580a91a55d6": {
+          "name": "Dziennik"
+        },
+        "81075dda-cc93-4062-98fd-a2362f3bcbc2": {
+          "tips": [
+            null
+          ]
+        },
+        "f909581c-8347-477f-8941-ac1718d98e2f": {
+          "tips": [
+            null
+          ]
+        },
+        "5d6a27f3-50b5-4bdc-9e19-17526903524c": {
+          "tips": [
+            null
+          ]
+        },
+        "9de3c602-6eb4-445f-b9ec-769d769c9d38": {
+          "name": "Dziennik"
+        },
+        "90c03622-4771-4660-8c57-c38aa3e03cdd": {
+          "tips": [
+            null
+          ]
+        },
+        "32a97c5b-62c9-46c5-b430-a99d7644edba": {
+          "tips": [
+            null
+          ]
+        },
+        "2db81ff8-34e1-4a9f-bbea-840cf5a40a19": {
+          "tips": [
+            null,
+            null
+          ]
+        },
+        "60f0ecec-73af-4afe-ac46-00f07dc6fa9e": {
+          "name": "Dziennik"
+        },
+        "3287288c-903a-4e1a-8169-45bf7ac965e3": {
+          "name": "Dziennik"
+        },
+        "072b8b4e-3063-4d54-aeab-bd0d22f0b11b": {
+          "tips": [
+            null
+          ]
+        },
+        "84638691-4aee-4d95-ba06-e802993a02d9": {
+          "tips": [
+            null
+          ]
+        },
+        "1dc9512f-57bd-4b4f-a1ef-33a8a69fdbf7": {
+          "tips": [
+            null
+          ],
+          "progression_name": "Zbuduj ekran"
+        },
+        "cf5a0fab-8ddc-4005-bd63-de3125584c99": {
+          "tips": [
+            null,
+            null
+          ],
+          "progression_name": "Ukończ Ekran"
+        },
+        "35d5b599-cdff-4eaa-9540-630d78887c39": {
+          "tips": [
+            null
+          ]
+        },
+        "ae8e6c93-34b8-49c0-bd54-8799736c46b3": {
+          "tips": [
+            null
+          ]
+        },
+        "c66092da-d589-4f8c-8dbc-d9b9fe28c285": {
+          "progression_name": "Zaprojektuj ekran dla swojej aplikacji"
+        },
+        "d25f72dc-2e7b-44a9-a89c-51b9e74ac934": {
+          "tips": [
+            null,
+            null
+          ],
+          "progression_name": "Projekt aplikacji: Projekt ekranu "
+        },
+        "b4174adb-d91c-448f-873c-44c7c6f46a5d": {
+          "name": "Dziennik"
+        },
+        "810812f1-c934-45ba-ab4e-2367e163fb86": {
+          "name": "Dziennik"
+        },
+        "a825d3ec-41aa-46d7-a8b1-ae7cf48017db": {
+          "tips": [
+            null
+          ]
+        },
+        "b427a419-bca7-48ea-ac3d-1dec29addba6": {
+          "name": "Zdarzenia w AppLab"
+        },
+        "cf8dfbdf-31f2-4000-950b-f735194ab4de": {
+          "tips": [
+            null
+          ],
+          "progression_name": "Dodawanie Ekranów"
+        },
+        "c79ec162-2a77-4c18-9eb8-e2769ee68f48": {
+          "tips": [
+            null
+          ],
+          "progression_name": "Zdarzenia i Ekrany z linkami"
+        },
+        "897c1581-3e47-494c-aac8-22d085cd408d": {
+          "tips": [
+            null
+          ]
+        },
+        "b62ea960-8b7b-427e-abd7-2b3ce42fec1f": {
+          "name": "Dziennik"
+        },
+        "6cc7882a-0f68-497d-92e8-112c3dae9133": {
+          "name": "Dziennik"
+        },
+        "6523e969-5506-452a-91db-c697f58e6203": {
+          "tips": [
+            null
+          ],
+          "progression_name": "Łączenie projektów"
+        },
+        "01fe48d8-78e6-443b-8efe-260ad8af3e69": {
+          "tips": [
+            null
+          ]
+        },
+        "0d916fa4-e95e-460b-856e-eb71d663c3a4": {
+          "tips": [
+            null
+          ]
+        },
+        "6514b7bf-24bd-4a93-a6d6-52b708b86a88": {
+          "name": "Dziennik"
+        },
+        "b77002c1-984f-4990-9d85-3ada3314a554": {
+          "tips": [
+            null
+          ]
+        },
+        "fb0c31a4-b2b2-43a5-a63f-1a187c065979": {
+          "tips": [
+            null
+          ]
+        },
+        "cc09b7d8-b6af-4c41-b915-6052728cf430": {
+          "tips": [
+            null,
+            null
+          ]
+        },
+        "bfd56fb7-5487-4390-9171-e20318f4ceab": {
+          "name": "Dziennik"
+        },
+        "f1cd8b36-cd4d-4a37-9206-8015b66acf5a": {
+          "name": "Dziennik"
+        },
+        "b6f35ae0-e874-43b8-a412-4a3b9f15d1f8": {
+          "tips": [
+            null
+          ]
+        },
+        "c081d5d5-a13d-4b88-b396-b2f1bc392ee4": {
+          "tips": [
+            null
+          ]
+        },
+        "31857d8c-a0c7-4cee-a138-8bd3c2801441": {
+          "tips": [
+            null
+          ]
+        },
+        "8e42b6b4-0329-464d-b33c-37c28eeb579e": {
+          "tips": [
+            null
+          ]
+        },
+        "0d9c9ee5-574a-4dd4-9489-bf0cfb46ef55": {
+          "tips": [
+            null
+          ]
+        },
+        "0c5f77f7-8d1a-47a9-95a2-14121401f843": {
+          "name": "Dziennik"
+        },
+        "207a50f9-c168-4dce-86cb-4586dea95ad4": {
+          "name": "Dziennik"
+        },
+        "84e7e2ff-e9e2-4293-a447-8996f66591b9": {
+          "progression_name": "Aktualizacja Twojego prototypu"
+        },
+        "e3017add-db25-4f9a-9183-3945396df051": {
+          "tips": [
+            null,
+            null
+          ]
+        },
+        "f7c06c4a-9839-4089-af8c-764f6ef2d287": {
+          "name": "Dziennik"
+        },
+        "cd38168d-a01a-4322-875e-38a6e0df852c": {
+          "name": "Dziennik"
+        },
+        "e7de44b4-6e12-4c17-b1ad-fef74a69dcb0": {
+          "tips": [
+            null
+          ]
+        },
+        "d53714c8-fa0b-4ba6-895a-9e28b50fb49c": {
+          "tips": [
+            null
+          ]
+        },
+        "bf64a114-7e61-4df5-84a9-95d5347719a8": {
+          "tips": [
+            null
+          ]
+        },
+        "50161eda-744e-4b96-9630-416ae215afe9": {
+          "name": "Rozgrzewka"
+        },
+        "adc6cfae-7cdd-4839-8a8b-faa66ccb14ff": {
+          "tips": [
+            null,
+            null
+          ]
+        },
+        "744c8609-33ca-4ebe-a5c4-1b24c9963c18": {
+          "name": "Testy po realizacji projektu"
+        },
+        "dd2ba4c7-3b1b-4fea-a89a-67593019a4aa": {
+          "name": "Dziennik",
+          "tips": [
+            null
+          ]
+        },
+        "55c9e1d7-47ad-425c-afaa-bd8172500b58": {
+          "tips": [
+            null
+          ]
+        },
+        "0fbe66c6-ce17-4fba-a834-2921a3f1de55": {
+          "tips": [
+            null
+          ]
+        },
+        "09abc64e-0118-43e3-94aa-9e23dd03ff02": {
+          "description": "#### Reprezentacja ma znaczenie"
+        },
+        "41c87c2e-4312-489f-b583-06de482a175f": {
+          "name": "Osoba 1",
+          "description": "**„Jestem uczulony na jajka.”**"
+        },
+        "2c641c1e-36bc-4b8d-90ae-22a246c47e9a": {
+          "tips": [
+            null
+          ]
+        },
+        "c1c02c2d-d18b-480f-80fc-4b37a94a1404": {
+          "name": "Osoba 2"
+        },
+        "dcf08dea-0d98-4e48-91f5-9c1c4d2f5110": {
+          "name": "Osoba 3",
+          "description": "**„Staram się oszczędzać pieniądze.”**"
+        },
+        "254a3acc-fb2a-4004-9b4f-26630ed582e3": {
+          "tips": [
+            null
+          ]
+        },
+        "62a9d00e-ece3-4793-901c-c3595661eac3": {
+          "name": "Osoba 4"
+        },
+        "55976f9c-b811-408e-9104-da136031379a": {
+          "name": "Refleksja"
+        },
+        "93bd8051-bd0f-4cb9-8628-36a42979d88b": {
+          "tips": [
+            null
+          ]
+        },
+        "6ec26c33-2a46-47be-9c48-e00ae71c4960": {
+          "name": "Dziennik"
+        },
+        "8af2da4c-4ffd-45af-a037-b33f23c1b346": {
+          "name": "Refleksja"
+        },
+        "dbb7c7dd-fe3f-47f0-9141-8e985244c12d": {
+          "name": "Dziennik"
+        },
+        "5727db49-d918-48da-a385-7bea0a132f6e": {
+          "tips": [
+            null
+          ]
+        },
+        "496a432d-b3d6-4d31-947c-de6afe2f6ff7": {
+          "tips": [
+            null,
+            null
+          ]
+        },
+        "c0d3364c-ee41-41d3-890b-65580bffc182": {
+          "tips": [
+            null
+          ]
+        },
+        "3ac00835-ceac-4002-9336-2d37f1f93ceb": {
+          "name": "Dziennik",
+          "tips": [
+            null
+          ]
+        },
+        "42b51347-0f12-4c90-9461-5266c9f0057f": {
+          "name": "Dziennik"
+        },
+        "9a7f42e3-b7af-41b7-be36-cd27922bee51": {
+          "tips": [
+            null
+          ]
+        },
+        "b242d4af-22da-474d-8562-3f669eb0cd37": {
+          "tips": [
+            null
+          ]
+        },
+        "4d366bca-a746-4a64-94f5-e30de630185c": {
+          "tips": [
+            null
+          ]
+        },
+        "72d9d393-ef91-4bfa-89af-ccb79421838b": {
+          "tips": [
+            null
+          ]
+        },
+        "087c4fee-38c2-4325-ab7b-895ea6792a0f": {
+          "name": "Dziennik"
+        },
+        "f6ed2ca4-a4ff-4fe0-b2a3-f10bf64cac00": {
+          "name": "Gadżet pikselacyjny",
+          "progression_name": "Reprezentowanie obrazów"
+        },
+        "0c9a8f1f-7bc8-490c-9647-cf65fb02de96": {
+          "tips": [
+            null
+          ]
+        },
+        "d1684eb5-0f00-417c-b710-6aa370d4b2cb": {
+          "tips": [
+            null
+          ]
+        },
+        "f57a19a6-e06f-4a66-82cd-b1ba27ac921f": {
+          "tips": [
+            null
+          ]
+        },
+        "7796b654-5f18-4334-820a-3cc07631edb9": {
+          "name": "Dziennik"
+        },
+        "958c4dff-7989-47f2-b312-06dce4aea63f": {
+          "tips": [
+            null
+          ]
+        },
+        "81cdf36f-a140-4c4d-a6ef-d37ee74bab5f": {
+          "name": "Dziennik"
+        },
+        "a4f65378-4a31-400f-a705-a9ff832d39d4": {
+          "tips": [
+            null
+          ]
+        },
+        "78ee50b2-949b-4de3-aaae-61460fdcc187": {
+          "tips": [
+            null
+          ]
+        },
+        "38132c52-00ea-4b1d-814f-12c0bfbd5d1f": {
+          "tips": [
+            null
+          ]
+        },
+        "f203bf80-a5b0-4f3a-a127-21388aebf211": {
+          "tips": [
+            "Filmy wideo są wykorzystywane w całym programie nauczania, aby wywołać dyskusje, uzupełnić kluczowe koncepcje dodatkowymi wyjaśnieniami i przykładami oraz przedstawić uczniom różne role i pochodzenie osób w informatyce.\n\nPodczas interakcji z filmem włącz napisy zamknięte, aby uczniowie mogli również czytać podczas oglądania.\n\nAby zachęcić do aktywnego zaangażowania i refleksji, skorzystaj z jednej lub więcej strategii omówionych w \\*\\* [Przewodnik po programach nauczania](https://docs.google.com/document/d/1c2hF3CaTJacvwDy4y_9-m1jSkSPmK__F6pDPetXVvy4/view)\\*\\*."
+          ]
+        },
+        "cac1a425-b5dc-4cb6-a212-325b4ffcc05f": {
+          "name": "Dziennik"
+        },
+        "9b3005a7-f457-42c8-9d11-ffec10f6943f": {
+          "tips": [
+            null
+          ]
+        },
+        "db3268d8-a101-4adc-b5b3-1b107ca08cb7": {
+          "tips": [
+            null
+          ]
+        },
+        "55665a35-85da-4dc8-b27f-2668a9c3f069": {
+          "tips": [
+            null
+          ]
+        },
+        "8a460781-9b34-4111-a936-13bd56030bc8": {
+          "name": "Dziennik"
+        },
+        "475695d9-2050-4c19-88b9-053c4bcc402b": {
+          "name": "Dziennik"
+        },
+        "155ac505-2b62-41b2-bc7d-34dca660ba7d": {
+          "tips": [
+            null
+          ]
+        },
+        "2f47162c-95e8-4694-a70b-bea416f41e4e": {
+          "tips": [
+            null,
+            null
+          ]
+        },
+        "6bcc2707-302f-4333-82b3-5828403e7efb": {
+          "tips": [
+            null
+          ]
+        },
+        "83b391e7-286a-4ade-b955-8ead0e5113d9": {
+          "tips": [
+            null
+          ]
+        },
+        "3fc481b0-433f-42f0-9412-34497de4082d": {
+          "name": "Dziennik"
+        },
+        "64d67add-cb3f-4bf3-aea2-fb5fe4f1506a": {
+          "name": "Dziennik"
+        },
+        "107a4007-41fb-4ec7-9f1c-5fdb50d3f05d": {
+          "tips": [
+            null
+          ]
+        },
+        "e55254e2-5a0c-4194-9db9-689d238f8ebb": {
+          "tips": [
+            null
+          ]
+        },
+        "1133b218-3bf3-4ef4-ae52-814dafe41fca": {
+          "tips": [
+            null,
+            null
+          ]
+        },
+        "9782dc31-a4a9-4293-bce4-caa9cac13422": {
+          "progression_name": "Refleksja"
+        },
+        "56dda092-1e94-4b4d-a6d7-3918316d1906": {
+          "tips": [
+            null
+          ]
+        },
+        "a88eed04-e269-4b4b-8efe-5d905abe160c": {
+          "name": "Zdefiniuj"
+        },
+        "d7a546cd-67f7-4929-8435-3fb1ed3ce202": {
+          "name": "Przygotuj"
+        },
+        "afc92e62-6403-4504-9c27-9ca581af81e8": {
+          "tips": [
+            null,
+            null
+          ]
+        },
+        "0444ed41-564e-42ee-b0ca-b5f024a01747": {
+          "name": "Spróbuj"
+        },
+        "a5f630e2-cf3b-4667-86c1-7b9c0d60fb60": {
+          "tips": [
+            null
+          ]
+        },
+        "2f925359-1bbf-4aec-8276-f326e80089ac": {
+          "name": "Przemyśl"
+        },
+        "22d330a9-89af-417d-828e-c7c5b8a71a65": {
+          "name": "Dziennik"
+        },
+        "c4fd8dd7-0a56-4047-97bd-315eee6fa7d2": {
+          "tips": [
+            null
+          ]
+        },
+        "2c86c1ce-4964-4a27-84b7-e0de0921f4db": {
+          "tips": [
+            null
+          ]
+        },
+        "998982df-d5a5-4c5f-b235-0db0894a5f10": {
+          "name": "Dziennik"
+        },
+        "dfc79516-6127-49f6-a307-03a0a21d1535": {
+          "name": "Dziennik"
+        },
+        "4dfae819-c976-4495-b2ec-2dc38eeb3ac2": {
+          "tips": [
+            null
+          ]
+        },
+        "111283bb-bcd2-4b86-8453-ec9f5b4b7924": {
+          "tips": [
+            null,
+            null
+          ]
+        },
+        "df6a981a-35d0-473e-b86e-e95e694c5ca0": {
+          "name": "Dziennik ",
+          "tips": [
+            null
+          ]
+        },
+        "4c7a93d0-e74e-4efd-8fd3-233cb16ac37b": {
+          "name": "Dziennik"
+        },
+        "18ce4b8a-01a9-4e16-8d14-00ccc408e1a1": {
+          "tips": [
+            null
+          ]
+        },
+        "3b1a5a6c-c133-431f-9af1-169ef06f6f41": {
+          "tips": [
+            null
+          ]
+        },
+        "9cf8dc49-a9a7-4895-b96c-bb8eea46e44f": {
+          "tips": [
+            null
+          ]
+        },
+        "4cb1aa28-1bb5-4b6d-b1f5-e5f1ad85e00e": {
+          "tips": [
+            null
+          ]
+        },
+        "344604eb-01c8-437c-9b3e-c0fb76d0bf27": {
+          "name": "Dziennik"
+        },
+        "38a5ab92-addf-46ba-9ca0-a9daae70875a": {
+          "tips": [
+            null
+          ]
+        },
+        "c3b72729-ae46-403b-8c95-804639148542": {
+          "name": "Dziennik"
+        },
+        "34d86094-59df-4c97-8e25-91c224df0c0c": {
+          "tips": [
+            null
+          ]
+        },
+        "63aaa5cd-270e-4ee4-8bd0-05d46338520e": {
+          "tips": [
+            null
+          ]
+        },
+        "67a71032-b577-4643-bc20-b766e0b8c1ca": {
+          "name": "Dziennik"
+        },
+        "91cbbd3d-4b95-4f21-a652-00c8ef3e52ec": {
+          "tips": [
+            null
+          ]
+        },
+        "38fa3d1e-d92d-4674-9f6d-38c0e869f55f": {
+          "name": "Refleksja"
+        },
+        "98d3dadc-96d7-436b-b5d4-da78971a329b": {
+          "tips": [
+            null
+          ]
+        },
+        "1aed60d7-c2c3-4b08-ad43-cd8eb27d6493": {
+          "name": "Dziennik"
+        },
+        "73c9a62c-824a-4981-bd1c-c86f6b54bde5": {
+          "name": "Dziennik"
+        },
+        "5f34a7ba-cca4-44ac-a233-5445f00c8d37": {
+          "tips": [
+            null
+          ]
+        },
+        "f22b4e3e-3fcd-495f-94ba-10ae93f4c1d9": {
+          "tips": [
+            null
+          ]
+        },
+        "ae57a4a8-0aae-41d5-b85a-3148084362e1": {
+          "tips": [
+            null
+          ],
+          "progression_name": "AI dla oceanów: ryby kontra nie ryby"
+        },
+        "44188a44-7688-4ca9-ae82-c09cdf0fca40": {
+          "tips": [
+            "Ryby w tym samouczku są generowane losowo w oparciu o niektóre wstępnie zdefiniowane elementy, w tym usta, ogony, oczy, łuski i płetwy, z losowo wybranym kolorem, kształtem i rozmiarem ciała. Zamiast patrzeć na rzeczywiste dane obrazu, sztuczna inteligencja szuka teraz wzorców w tych elementach na podstawie tego, jak uczeń klasyfikuje każdą rybę. Bardziej prawdopodobne jest oznaczenie ryby w taki sam sposób, jak uczeń to zrobił, jeśli ma ona przystające cechy."
+          ]
+        },
+        "f6fb84a1-68af-4d90-99e5-bc98383c3813": {
+          "progression_name": "AI dla oceanów: rodzaje ryb"
+        },
+        "9d865e33-47bf-4923-bf6e-df38ce390d4d": {
+          "name": "Dziennik",
+          "tips": [
+            "Możesz opowiedzieć te historie w swojej klasie, aby pomóc jej zrozumieć, jak sztuczna inteligencja będzie oddziaływać na przyszłość.\n\n-   [Marnowanie żywności stanowi poważny problem. Sztuczna inteligencja stara się go rozwiazać](https://singularityhub.com/2019/11/03/food-waste-is-a-serious-problem-ai-is-trying-to-solve-it/)\n-   [Technologia sztucznej inteligencji jest w stanie zidentyfikować zaburzenia genetyczne na podstawie ludzkiej twarzy](https://mashable.com/video/ai-identify-genetic-disorders-photo/?)\n-   [W jaki sposób sztuczna inteligencja zaprojektowała kandydata na nowy lek zaledwie w 46 dni](https://singularityhub.com/2019/09/09/how-an-ai-startup-designed-a-drug-candidate-in-just-46-days/)\n-   [Sztuczna inteligencja uczelni MIT AI jest w stanie prognozować raka piersi z piecioletnim wyprzedzeniem](https://techcrunch.com/2019/06/26/mit-ai-tool-can-predict-breast-cancer-up-to-5-years-early-works-equally-well-for-white-and-black-patients/)\n-   [Wojsko przyspiesza tempo pojazdów samobieżnych](https://www.axios.com/us-army-military-casualties-autonomous-vehicles-1ff51e01-3b16-4a1c-9587-ce55dee74788.html?)\n-   [W San Francisco mówi się o korzystaniu ze sztucznej inteligencji w celu wyeliminowania uprzedzeń przy oskarżaniu ludzi o przestępstwa](https://www.theverge.com/2019/6/12/18663093/ai-sf-district-attorney-police-bias-race-charge-crime)\n-   [AI is helping scholars restore ancient Greek texts on stone tablets](https://techcrunch.com/2019/10/18/ai-is-helping-scholars-restore-ancient-greek-texts-on-stone-tablets/)"
+          ]
+        },
+        "65b4f45f-509d-4849-aab0-5cbd0de3d173": {
+          "name": "Dziennik"
+        },
+        "81634f33-782f-49e5-9157-f31d0c9347e4": {
+          "tips": [
+            null
+          ]
+        },
+        "8019946d-ea78-40e7-9166-eebc564679d4": {
+          "tips": [
+            null
+          ]
+        },
+        "2abc621b-a06d-43d9-9741-af4b6f3e707f": {
+          "tips": [
+            null
+          ]
+        },
+        "fd0b2ebd-65fe-483c-8e05-c250293fd259": {
+          "tips": [
+            null
+          ]
+        },
+        "9049d648-77b8-4e88-a835-c085b51a9b42": {
+          "tips": [
+            null
+          ]
+        },
+        "0b0f9672-c922-4080-8951-1e02172dc960": {
+          "tips": [
+            null
+          ]
+        },
+        "6ae09ab2-2114-44bb-82fd-933808eec381": {
+          "tips": [
+            null
+          ]
+        },
+        "e54fbfc0-7585-4d29-b3b8-cca770d0c711": {
+          "name": "Testy po realizacji projektu"
+        },
+        "bd7bf7b5-18c5-48d9-b686-7fcb75afc5d4": {
+          "name": "Wstęp",
+          "tips": [
+            null
+          ]
+        },
+        "a3c2e05a-1b39-43f0-b32b-edd26cd92eca": {
+          "progression_name": "App Lab wprowadzenie - Film"
+        },
+        "f71c8649-6da2-4f45-965f-a87e4be37944": {
+          "name": "Wprowadzenie do App Lab",
+          "description": "**Wsparcie ogólne:** Jako nauczyciel masz zasadniczo nieść wsparcie swoim uczniom w trakcie przechodzenia przez samouczek. Oto kilka wskazówek, które mogą pomóc uczniom bez względu na to, na jakim poziomie pracują\n\n-   **Sprawdzanie poprawności:** W ramach tego samouczka uczniowie nie będą otrzymywali informacji, czy ukończyli poziom poprawnie. Zachęcaj uczniów, aby korzystali z obrazów i kierunków docelowych podanych w każdym poziomie aby dowiedzieć się, czy idą właściwą drogą. Jeśli uczniowie chcą ominąć szczególnie trudny poziom mogą po prostu kliknąć \"Zakończ\" i kontynuować. \n-   **Współpracuj z sąsiadami:** Zachęcaj uczniów, aby kontaktowali się z sąsiadem, gdy utkną. Ten samouczek obejmuje filmy wideo, więc uczniowie będą mieć założone suchawki i mogą łatwo \"zamknąć się w bańce\". Pomóż w przełamywaniu tych barier, aktywnie łącząc uczniów w pary, jeśli odniesiesz wrażenie, że mogą potrzebować pomocy. \n-   **Czytaj instrukcje:** Instrukcje zwykle zawierają praktyczne porady, jak przejść określony poziom. Przed przejściem poziomu przez ucznia dopilnuj, aby uważnie przyjrzał się obrazkowi docelowemu i przeczytał cały, znajdujący się w nim tekst. \n-   **Utknąłeś? Kliknij tutaj:** Każdy poziom zawiera GIF pokazujący, jak przejść poziom. Jeśli uczniowie chcą pomocy, mogą i powinni korzystać z GIFó. Jeśli chcą posłużyć się nimi tylko na zasadzie wskazówki nakaż, by je zamknęli, gdy już zobaczą pierwszą część. \n-   **Idź dalej i wracaj:** Czasami uczniowie będą korzystać bardzie z powrotu na trudny poziom. Z wyjątkiem sekwencji \"Tryb projektowania\" wszystkie poziomy są od siebie niezależne, chociaż korzystają do pewnego stopnia z koncepcji wprowadzonych uprzednio."
+        },
+        "828ccfe7-7dad-4140-91eb-02dd01e21f6b": {
+          "description": "#### Ustawianie właściwości - Poziomy 2-4\n\nTe poziomy są w całości poświęcone nauce używania bloku `setProperty()`. Rozwijane listy w tym bloku ułatwiają poznanie tego, co możemy zmodyfikować. Oto kilka wskazówek, które mogą pomóc\n\n-   **Kiedy używać Podwójnych Cudzysłowów:** Blok `setProperty()` automatycznie zmienia końcową listę rozwijaną, gdy wybierzesz jakie właściwości chcesz zmienić, w tym czy używają one podwójnych cudzysłowów. W razie wątpliwości, uczniowie powinni najpierw zmienić pierwsze dwie rozwijane listy, a następnie użyć ostatniego jako model dla tego, jakie wartości tam występują. Najczęstszym błędem jest nieużywanie podwójnych cudzysłowów wokół nazwy koloru.\n-   **Najedź Kursorem, aby Odczytać Dane Identyfikacyjne (ID):** Po najechaniu na element w aplikacji możesz odczytać jego ID. Pomoże to uczniom, gdy będą próbowali zmienić wiele elementów na swoim ekranie.",
+          "progression_name": "Ustawianie Właściwości"
+        },
+        "c22b6c8a-0207-4a8c-bee1-df9e584840a1": {
+          "description": "#### Zrób To Interaktywnie - Poziomy 5-7\n\nTa sekwencja wprowadza blok `onEvent()`. Oto kilka pomocnych wskazówek, jeśli uczniowie utkną na jakimś etapie zadania.\n\n-   **onEvents Nie Mogą Być Umieszczone Wewnątrz Siebie:** Uczniowie, którzy dopiero zaczynają, mogą próbować umieścić jeden blok wewnątrz innych. Takie działanie nigdy nie jest zamierzone według samouczka . Nawet jeśli jest to wspomniane w filmach, szybkie przypomnienie może pomóc dzieciom się pójść krok dalej.\n-   **Sprawdź swoje ID:** Musisz zmienić właściwość `\"id\"` w `onEvent()`, tak aby wykrywała zdarzenia z właściwym elementem.\n-   **Możesz używać wielu bloków w `onEvent()`:** Jeśli chcesz, aby wiele rzeczy działo się po kliknięciu tego samego przycisku, po prostu dodaj więcej bloków do tego samego `onEvent()`. Nigdy nie powinieneś mieć programu, który ma dwa bloki `onEvent()` dla kombinacji elementu (np. \"button1\") i typu zdarzenia (np. \"kliknij\").",
+          "tips": [
+            "**Znajdowanie obrazów:** Uczniowie nie muszą szukać obrazów ani dźwięków online, aby przerobić tę lekcję, ale mogą mieć ochotę to zrobić. Z dużym prawdopodobieństwem będziesz chciał przygotować się z wyprzedzeniem do polecania odpowiedzialnego i odpowiedniego wyszukiwania obrazów."
+          ],
+          "progression_name": "Uczyń to interaktywnym "
+        },
+        "5f1f1d45-47dd-4765-bb52-08a713824321": {
+          "description": "W tej części znajduje się jeden poziom, w którym uczniowie dodają zwierzę do tablicy dźwiękowej. Jest on nieco bardziej skomplikowany niż poprzednie, więc przygotuj się, że uczniowie będą musieli albo ponownie obejrzeć film, albo uważnie przeczytać instrukcje, aby wykonać wszystkie kroki.\n\n#### Obrazy i Dźwięki - Poziomy 8-9\n\n-   **Wykorzystywanie `setProprety()` w obrazach:** Aby dodać obraz do elementu ekranu uczniowie mogą użyć właściwości `\"image\"`. Nie ma żadnego nowego bloku.\n-   **Link do obrazów:** Studenci mogą skopiować adresy URL obrazów, które znajdą bezpośrednio do bloku `setProperty()`, aby dodać je do swoich aplikacji. Nie ma potrzeby pobierania ich na swoje komputery i przesyłania do App Lab, jeśli tego nie chcą.",
+          "progression_name": "Obrazki i Dźwięki"
+        },
+        "ce15e5ba-0fe4-4734-8400-e1c44717fc21": {
+          "description": "#### Tryb projektowania - poziomy 10-13\n\nW ostatniej sekwencji uczniowie pracują nad tym samym projektem przez trzy poziomy z rzędu. Uczą się teraz dodawać elementy ekranu samodzielnie, co oznacza, że liczba rzeczy, które mogą zrobić w App Labie bardzo się powiększyła. Założ, że niektórzy uczniowie spędzą w tym momencie trochę czasu na zgłębianiu wiedzy, ponieważ wypróbowują wszystkie nowe narzędzia.\n\n-   **Używanie dobrych identyfikatorów:** Ważną częścią programowania w App Lab jest nadawanie elementom dobrych ID. Do tej pory uczniowie mieli swoje ID stworzone dla nich, więc nie mieli okazji przećwiczyć tej umiejętności. Jest to więc okazja do przypomnienia nauczycielowi, aby mógł utrwalić tę umiejętność w tej sekcji.",
+          "progression_name": "Tryb projektowania"
+        },
+        "c813aba9-d4bd-421f-ac90-f5d1bb9f8b9a": {
+          "description": "#### Podziel Się Swoją Aplikacją - Poziomy 14-15\n\nTa część ma otwarte zakończenie. Samouczek został zaprojektowany tak, aby dać uczniom dużo czasu na kontynuowanie pracy nad tym projektem, na stworzenie \"Wybierz Swoją Przygodę\" lub zaprojektowanie własnej aplikacji.\n\n-   **Wypróbuj Przykładowe Aplikacje:** Uczniowie otrzymują 3 przykładowe aplikacje, które powinny pomóc im w burzy mózgów nad ich własnymi aplikacjami.\n-   **Zachęcaj do Współpracy:** Jeśli uczniowie mają telefony komórkowe z dostępem do internetu, mogą szybko przesłać linka do swojego projektu na swój własny telefon lub telefon kolegi. Jeśli zasady obowiązujące w Twojej szkole na to pozwalają, zachęć ich do tego.\n-   **Rozbudź Kreatywność:**W porównaniu z innymi zadaniami w tej lekcji, ta część wymaga od uczniów dużo więcej kreatywności. Poproś uczniów, aby pomyśleli \"o czym będzie ich historia\" lub zrób szybką grupową burzę mózgów, aby koledzy z klasy mogli usłyszeć pomysły od siebie nawzajem.",
+          "progression_name": "Podziel się swoją aplikacją"
+        },
+        "3aa306fa-216c-46c9-bcac-a4e7b45a16c7": {
+          "name": "Świętuj i nie przestawaj pracować!"
+        },
+        "65f4f9b8-bafc-4306-a4d9-876008590587": {
+          "tips": [
+            null
+          ]
+        },
+        "0d62c625-28df-4fee-85df-b59e93f8dcbe": {
+          "tips": [
+            null
+          ]
+        },
+        "8ca5b62f-94e9-4658-a83c-f0fc8b0ab19f": {
+          "tips": [
+            null
+          ]
+        },
+        "3fb5992a-83e6-4ab7-80db-e8cc02010860": {
+          "name": "Proces rozwiązywania problemów",
+          "tips": [
+            "Filmy wideo są wykorzystywane w całym programie nauczania, aby wywołać dyskusje, uzupełnić kluczowe koncepcje dodatkowymi wyjaśnieniami i przykładami oraz przedstawić uczniom różne role i pochodzenie osób w informatyce.\n\nPodczas interakcji z filmem włącz napisy zamknięte, aby uczniowie mogli również czytać podczas oglądania.\n\nAby zachęcić do aktywnego zaangażowania i refleksji, skorzystaj z jednej lub więcej strategii omówionych w \\*\\* [Przewodnik po programach nauczania](https://docs.google.com/document/d/1c2hF3CaTJacvwDy4y_9-m1jSkSPmK__F6pDPetXVvy4/view)\\*\\*."
+          ]
+        },
+        "daad0e2e-a100-4b48-bd3e-fff61f208aaf": {
+          "tips": [
+            null
+          ]
+        },
+        "fe47480f-80a5-4da7-af36-621432f4bdbd": {
+          "tips": [
+            null
+          ]
+        },
+        "c7b3d760-da17-407f-b930-dfa7dcfc11bc": {
+          "tips": [
+            null
+          ]
+        },
+        "d06e532f-a9da-4e50-ac05-5970152575e4": {
+          "tips": [
+            null
+          ]
+        },
+        "0a248b1b-6472-4cac-a3ac-b269afdba838": {
+          "tips": [
+            null
+          ]
+        },
+        "83cf9bbe-dc3b-40fa-86e3-c1fe15f307a4": {
+          "tips": [
+            null
+          ]
+        },
+        "9f503378-be88-40d5-8f39-bee98a7e8906": {
+          "tips": [
+            null
+          ]
+        },
+        "5f3cb65f-1d0b-46c5-ad1f-05f326902790": {
+          "tips": [
+            null
+          ]
+        },
+        "49ad223b-9ea2-43f0-8bb0-fb6ef0264e05": {
+          "name": "Refleksja"
+        },
+        "ab6a47ee-2009-4094-9f2f-2f0a090aba7d": {
+          "tips": [
+            null
+          ]
+        },
+        "c53c203f-65b6-4d13-9dee-1e3798a1389c": {
+          "tips": [
+            null
+          ]
+        },
+        "d2c104a2-1aa6-471a-a33e-9f6afa583324": {
+          "tips": [
+            null
+          ],
+          "progression_name": "Budowanie umiejętności"
+        },
+        "07614d59-a244-42b0-8335-c28b9f80404a": {
+          "tips": [
+            null
+          ],
+          "progression_name": "Budowanie umiejętności"
+        },
+        "93354c1b-0384-49b2-985f-9144d1554e44": {
+          "tips": [
+            null
+          ],
+          "progression_name": "Ćwiczenia"
+        },
+        "a49741a1-34c8-4865-9e87-fb5603f1e004": {
+          "tips": [
+            null,
+            null
+          ],
+          "progression_name": "Ocena"
+        },
+        "be7d5831-8f61-474e-8ea9-3b3d6acaa7ad": {
+          "tips": [
+            null
+          ],
+          "progression_name": "Wyzwanie"
+        },
+        "746da228-bcc0-4fa6-bb5f-954b0bbd5429": {
+          "tips": [
+            null
+          ]
+        },
+        "b3e159ee-317c-4bd3-8beb-c801892b5260": {
+          "tips": [
+            null
+          ]
+        },
+        "157df150-e925-4f88-a423-c66d6a5b0f61": {
+          "tips": [
+            null
+          ],
+          "progression_name": "Budowanie umiejętności"
+        },
+        "e7b6ec58-7dfb-4b03-b6d2-9b2721d503c1": {
+          "progression_name": "Ćwiczenia"
+        },
+        "d2ceb7b1-2e83-47d0-8a47-27aa7f7ee87a": {
+          "tips": [
+            null
+          ],
+          "progression_name": "Ocena"
+        },
+        "7e5a85f6-2c2a-47de-87cc-b7d49350cd46": {
+          "progression_name": "Wyzwanie"
+        },
+        "ac8d0c00-e07a-4e72-9f84-8b4d2b3c3dbd": {
+          "tips": [
+            null
+          ]
+        },
+        "01167681-59a8-47fb-9f68-80feac3d6726": {
+          "progression_name": "Budowanie umiejętności"
+        },
+        "210430e9-18d5-4fc4-9bb1-a8e82c7f9736": {
+          "progression_name": "Ćwiczenia"
+        },
+        "787bb7ad-4658-4f9a-bcb8-9550675d783d": {
+          "tips": [
+            null
+          ],
+          "progression_name": "Ocena"
+        },
+        "e9a35399-f8a1-443d-b4d5-a0a23107a2ce": {
+          "progression_name": "Wyzwanie"
+        },
+        "b7f62f1f-7b9c-453c-9ab5-3d95719724da": {
+          "tips": [
+            null
+          ]
+        },
+        "d4cda0ec-e1cf-492d-b3c7-893645cc574c": {
+          "tips": [
+            null
+          ]
+        },
+        "d8bfcb77-84e9-4894-9651-a0e99774d8b4": {
+          "progression_name": "Budowanie umiejętności"
+        },
+        "08ae23e7-34e4-4b90-902e-acef4c6eb847": {
+          "tips": [
+            null
+          ]
+        },
+        "87d2513a-6b67-474b-91a7-54d701d962b8": {
+          "progression_name": "Budowanie umiejętności"
+        },
+        "9bc44928-71d3-4ed5-a23e-5323d26cef67": {
+          "tips": [
+            null
+          ]
+        },
+        "db54941b-f163-47f5-804b-3dcbc10eb4a2": {
+          "progression_name": "Budowanie umiejętności"
+        },
+        "d94c2f65-620e-49f5-ba84-33625f2fe987": {
+          "tips": [
+            null
+          ]
+        },
+        "5f768f18-6fb2-4af6-a46c-e6905ded548c": {
+          "progression_name": "Budowanie umiejętności"
+        },
+        "d6fe7700-8ef0-45ee-9df9-17bf9d908b19": {
+          "tips": [
+            null
+          ],
+          "progression_name": "Ocena"
+        },
+        "799b4199-4b7f-423b-b68d-87f9bbfaee2b": {
+          "progression_name": "Wyzwanie"
+        },
+        "ef240ada-cf1b-4ff5-85e5-6df71040451e": {
+          "name": "Dziennik",
+          "tips": [
+            null
+          ]
+        },
+        "3df86ce1-a75a-4818-af26-dde31aeeccaa": {
+          "name": "Dziennik"
+        },
+        "dafd8f78-9f78-4a6e-89b0-0cafa0d710d2": {
+          "tips": [
+            null
+          ]
+        },
+        "7f5572c4-561d-4710-aa5d-e238069d946e": {
+          "tips": [
+            null
+          ]
+        },
+        "715944f3-d89d-4fbe-be8d-2cdcbc59a01c": {
+          "name": "Wstęp",
+          "tips": [
+            null
+          ]
+        },
+        "07a3dd86-2dce-45a4-9a12-cba06670d4f4": {
+          "tips": [
+            null
+          ]
+        },
+        "3fa52a33-e955-4cf1-a8ae-f723dcdf960b": {
+          "name": "Studio Kodowania (Code Studio)",
+          "tips": [
+            null,
+            null
+          ]
+        },
+        "3fe1b724-415f-47c5-abaf-e425a18b75e3": {
+          "tips": [
+            null
+          ]
+        },
+        "1659014b-d786-45ca-b447-cc98e41f1867": {
+          "name": "Refleksja"
+        },
+        "e7dbbb8e-8c5c-4759-94d6-637309a4f369": {
+          "name": "Dziennik"
+        },
+        "6327f422-3886-4a16-b975-e968b19673b2": {
+          "tips": [
+            null
+          ]
+        },
+        "6faa027f-ba29-44b7-b1e2-32b17dfabadd": {
+          "tips": [
+            null
+          ]
+        },
+        "9c0eea84-c2b5-45f2-a52e-d1b27021230e": {
+          "progression_name": "Budowanie umiejętności"
+        },
+        "b7d66099-4dfe-4b78-ade8-9e0974178382": {
+          "progression_name": "Ćwiczenia"
+        },
+        "0686ac7a-80d9-4ee2-9000-737298763ed2": {
+          "tips": [
+            null
+          ],
+          "progression_name": "Ocena"
+        },
+        "3fea9586-9d56-4291-9e18-fdf1bf88f45a": {
+          "progression_name": "Wyzwanie"
+        },
+        "25d535bc-7d9c-485f-9901-1360d2ff0016": {
+          "name": "Dziennik"
+        },
+        "f8d87ae3-e7c5-439d-9ed4-d4d08de911b0": {
+          "name": "Dziennik"
+        },
+        "dae9fa58-9454-4954-aeb2-3f549931d2af": {
+          "tips": [
+            null
+          ]
+        },
+        "64f948d5-957f-41f0-af87-956739b7a9c5": {
+          "progression_name": "Budowanie umiejętności"
+        },
+        "323ef1a6-a582-4745-91d1-48d525b07161": {
+          "progression_name": "Ćwiczenia"
+        },
+        "70cee742-518d-4086-8153-0d61918f6075": {
+          "tips": [
+            null
+          ],
+          "progression_name": "Ocena"
+        },
+        "b21a4de7-2eb9-476f-ab64-453fb5a747f8": {
+          "progression_name": "Wyzwanie"
+        },
+        "163ac2f0-e752-4ce6-a988-93a42e08f641": {
+          "description": "![](https://images.code.org/e5a08f29a9c4e306de5553dafca9fb5d-image-1467913845542.gif)"
+        },
+        "ccd2be32-3bb2-4a45-9a49-de6e23f4f20a": {
+          "tips": [
+            null
+          ]
+        },
+        "61c1ca50-3033-40e3-91f2-124fa4baea8d": {
+          "tips": [
+            null
+          ]
+        },
+        "78294285-1aec-4e73-8fee-c4be3db328f6": {
+          "tips": [
+            null
+          ]
+        },
+        "549e684d-7de3-4603-8111-dbcadb67e828": {
+          "progression_name": "Budowanie umiejętności"
+        },
+        "56cfae6d-548c-422a-b631-2089ad8a8508": {
+          "progression_name": "Ćwiczenia"
+        },
+        "425ce40f-aca0-4997-8228-9b09843c5621": {
+          "tips": [
+            null
+          ],
+          "progression_name": "Ocena"
+        },
+        "b0d66e1a-3d75-46df-ab54-c96e16af18ae": {
+          "progression_name": "Wyzwanie"
+        },
+        "7c2efa40-e26d-4506-ae4e-e1d5816393f9": {
+          "name": "Rozgrzewka"
+        },
+        "2db1beed-4676-47f9-8fd7-9d346e9db02b": {
+          "tips": [
+            null
+          ]
+        },
+        "6f970a76-708b-4d65-9f07-5f5e6906fc71": {
+          "tips": [
+            null
+          ]
+        },
+        "4cad1279-ede9-4b69-8e8a-845ae1cf7885": {
+          "tips": [
+            null
+          ]
+        },
+        "43b061d5-2c4f-4316-badc-020d40f02f1f": {
+          "name": "Zakończenie"
+        },
+        "6c6f3790-b847-4ec5-ad8c-4f10aa75c927": {
+          "name": "Rozgrzewka",
+          "tips": [
+            null
+          ]
+        },
+        "1d3c4e96-99cc-49ac-8853-41c864207531": {
+          "name": "Zakończenie"
+        },
+        "7953a85f-bfa7-4fc5-8abd-274da6d56fea": {
+          "name": "Rozgrzewka"
+        },
+        "a85e02f3-939c-40a5-93e6-cf7996c6f109": {
+          "tips": [
+            null
+          ]
+        },
+        "f40d0b1e-e326-4397-b20b-ae12d201f0d7": {
+          "tips": [
+            null
+          ]
+        },
+        "ede74a17-e301-40f2-8d7a-5f7316087161": {
+          "name": "Zakończenie"
+        },
+        "675e646d-088f-47bf-9c5e-736b12184050": {
+          "name": "Rozgrzewka"
+        },
+        "509576b9-ebb1-41e9-bc90-7dadc02b4756": {
+          "name": "Zakończenie",
+          "tips": [
+            null
+          ]
+        },
+        "d570f1ca-b143-43bb-97ab-e445ea2f05bf": {
+          "name": "Rozgrzewka"
+        },
+        "b5248589-0918-4208-a38e-fc5d2af87b48": {
+          "name": "Zakończenie",
+          "progression_name": "Refleksja"
+        },
+        "8bfc6341-2d53-413e-ac31-75141316fdb4": {
+          "tips": [
+            null
+          ]
+        },
+        "fcc87c3c-4793-4696-9625-145a841ec310": {
+          "progression_name": "Budowanie umiejętności"
+        },
+        "7a05b542-25e7-4dbf-93f8-2c7fffcc97ce": {
+          "progression_name": "Budowanie umiejętności"
+        },
+        "68758bfd-713d-4019-86f4-8c35295e5e6a": {
+          "progression_name": "Ćwiczenia"
+        },
+        "7998d31c-eef9-47de-9fb7-f985132f2946": {
+          "tips": [
+            null
+          ],
+          "progression_name": "Ocena"
+        },
+        "5cf6c4b4-7ec9-4fa5-b079-d829b7ae4ac7": {
+          "progression_name": "Wyzwanie"
+        },
+        "7b9bb1c1-0f15-483a-aeab-b1e04099368c": {
+          "tips": [
+            null
+          ]
+        },
+        "42173d40-2af0-4471-bf0b-d02449b8fde7": {
+          "progression_name": "Budowanie umiejętności"
+        },
+        "edc34e4b-11b1-4380-9d9a-b3bb2f8d0401": {
+          "progression_name": "Ćwiczenia"
+        },
+        "11fc2cb8-c971-478a-abb7-67c7ee141dbc": {
+          "tips": [
+            null
+          ],
+          "progression_name": "Ocena"
+        },
+        "779af206-9bd5-4173-bf58-42c598884e33": {
+          "progression_name": "Wyzwanie"
+        },
+        "6612bd8d-62c9-43a0-84a7-b87fb61cb52f": {
+          "name": "Dziennik"
+        },
+        "e8ed125e-9f0f-4722-b653-0c6309a6a6ac": {
+          "name": "Tworzenie muzyki",
+          "tips": [
+            null
+          ]
+        },
+        "1ccc419c-5832-4d3a-adfb-612af3b483ce": {
+          "progression_name": "Budowanie umiejętności"
+        },
+        "bc12f667-90ef-44be-bf84-f388defd1de4": {
+          "tips": [
+            null
+          ]
+        },
+        "47807c13-94f3-4b74-b9c4-ee62688a26ac": {
+          "progression_name": "Budowanie umiejętności"
+        },
+        "9ac7c303-4db4-402f-bd0d-db7a0e865fb0": {
+          "tips": [
+            null
+          ],
+          "progression_name": "Ocena"
+        },
+        "fbe22cc0-d0a8-4609-848f-ab19467ea99e": {
+          "progression_name": "Wyzwanie"
+        },
+        "0129a3a4-e560-4485-8177-f37b39df83df": {
+          "name": "Dziennik "
+        },
+        "91c4d8da-edd3-4c1a-80ef-4b9984f38247": {
+          "tips": [
+            null
+          ]
+        },
+        "2c8043df-5cb9-4ab3-9e2f-27890e1ed6e7": {
+          "tips": [
+            null
+          ]
+        },
+        "c64b506a-ab25-42d8-a3bc-f58cd5272d18": {
+          "tips": [
+            null
+          ]
+        },
+        "f53c2069-5fde-4ee7-9b12-3f837cd925e2": {
+          "progression_name": "Budowanie umiejętności"
+        },
+        "2f8f91ca-ec5f-4fa1-999d-0ae29af0666f": {
+          "tips": [
+            null
+          ]
+        },
+        "e2924b71-c428-4055-a322-192ef7d495e9": {
+          "progression_name": "Budowanie umiejętności"
+        },
+        "9b6fb8cf-b4b6-4cfd-87d1-12cf08c7e444": {
+          "progression_name": "Ćwiczenia"
+        },
+        "75b827aa-963d-4e73-8825-f09b052855c4": {
+          "tips": [
+            null
+          ],
+          "progression_name": "Ocena"
+        },
+        "58dd6ef0-4f88-4d65-a29e-abab255eff63": {
+          "name": "Dziennik"
+        },
+        "b3edbd77-cf1f-404a-a320-4a93ba03ec1e": {
+          "name": "Dziennik"
+        },
+        "f267d36c-2f92-470e-80ae-82582e072a05": {
+          "tips": [
+            null
+          ]
+        },
+        "1a97f38f-5ef9-491e-8c1c-84297aa693d3": {
+          "tips": [
+            null
+          ]
+        },
+        "a587b271-751f-4a8e-bf77-119d5296c056": {
+          "tips": [
+            null
+          ]
+        },
+        "34b9f7f0-af9b-415f-82b7-0d966ac0c087": {
+          "tips": [
+            null
+          ]
+        },
+        "d88dfc34-b35c-4a22-931a-46cd5ca66d87": {
+          "tips": [
+            null
+          ]
+        },
+        "f75c6890-4c1e-4870-bfb8-7c72ba752fbe": {
+          "name": "Refleksja"
+        },
+        "2dd53a36-f0df-4c4c-a810-120ca85df33a": {
+          "tips": [
+            null
+          ]
+        },
+        "52a764eb-2d21-44e2-ae54-88cb365c8bd9": {
+          "tips": [
+            null
+          ]
+        },
+        "846829aa-c56e-44c7-a678-d34c840e6fa3": {
+          "progression_name": "Budowanie umiejętności"
+        },
+        "9394e7ba-002e-494e-8305-dd521c6f26e6": {
+          "progression_name": "Ćwiczenia"
+        },
+        "8cab0435-0ca8-447a-80c6-c652e3897c85": {
+          "tips": [
+            null
+          ],
+          "progression_name": "Ocena"
+        },
+        "59d3f43e-e345-4ec3-a61c-916aa3e3cf4e": {
+          "progression_name": "Wyzwanie"
+        },
+        "91666fb6-20d1-42dc-9c04-3854d5b7fa63": {
+          "tips": [
+            null
+          ]
+        },
+        "b121249c-2fa1-4e66-8ccf-14c4a4362a65": {
+          "progression_name": "Budowanie umiejętności"
+        },
+        "09fae27a-f1cd-49e7-b711-d5f14cfa3fde": {
+          "progression_name": "Ćwiczenia"
+        },
+        "8b581187-4754-4084-a788-e7771feebb6d": {
+          "tips": [
+            null
+          ],
+          "progression_name": "Ocena"
+        },
+        "1cc7b976-afa6-4981-a7d6-676b18f22d49": {
+          "progression_name": "Wyzwanie"
+        },
+        "5555bb81-13ac-4165-981c-96a15712f660": {
+          "tips": [
+            null
+          ]
+        },
+        "643759ad-1d9a-40cd-a828-5b9665ab521c": {
+          "tips": [
+            null
+          ]
+        },
+        "c5ecbc50-012a-4b3d-aaac-6bae072631be": {
+          "tips": [
+            null
+          ]
+        },
+        "a3fa35ef-cc95-4288-8631-83c7d3e9a032": {
+          "tips": [
+            null
+          ]
+        },
+        "8863ade9-5e42-48f8-b7e2-e8802773c167": {
+          "name": "Udostępnij",
+          "tips": [
+            null
+          ]
+        },
+        "5b8012bf-0fa1-475a-9dde-c47a73eaf204": {
+          "name": "Testy po realizacji projektu"
+        },
+        "746cc558-96cf-41a5-9460-325d992f4425": {
+          "name": "Wstęp",
+          "tips": [
+            null
+          ]
+        },
+        "fdaa241b-52fe-404c-b9f3-fd723a541610": {
+          "progression_name": "App Lab wprowadzenie - Film"
+        },
+        "e5cd72c8-d360-4d85-be5f-57312f1ee6f0": {
+          "name": "Wprowadzenie do App Lab",
+          "description": "**Wsparcie ogólne:** Jako nauczyciel masz zasadniczo nieść wsparcie swoim uczniom w trakcie przechodzenia przez samouczek. Oto kilka wskazówek, które mogą pomóc uczniom bez względu na to, na jakim poziomie pracują\n\n-   **Sprawdzanie poprawności:** W ramach tego samouczka uczniowie nie będą otrzymywali informacji, czy ukończyli poziom poprawnie. Zachęcaj uczniów, aby korzystali z obrazów i kierunków docelowych podanych w każdym poziomie aby dowiedzieć się, czy idą właściwą drogą. Jeśli uczniowie chcą ominąć szczególnie trudny poziom mogą po prostu kliknąć \"Zakończ\" i kontynuować. \n-   **Współpracuj z sąsiadami:** Zachęcaj uczniów, aby kontaktowali się z sąsiadem, gdy utkną. Ten samouczek obejmuje filmy wideo, więc uczniowie będą mieć założone suchawki i mogą łatwo \"zamknąć się w bańce\". Pomóż w przełamywaniu tych barier, aktywnie łącząc uczniów w pary, jeśli odniesiesz wrażenie, że mogą potrzebować pomocy. \n-   **Czytaj instrukcje:** Instrukcje zwykle zawierają praktyczne porady, jak przejść określony poziom. Przed przejściem poziomu przez ucznia dopilnuj, aby uważnie przyjrzał się obrazkowi docelowemu i przeczytał cały, znajdujący się w nim tekst. \n-   **Utknąłeś? Kliknij tutaj:** Każdy poziom zawiera GIF pokazujący, jak przejść poziom. Jeśli uczniowie chcą pomocy, mogą i powinni korzystać z GIFó. Jeśli chcą posłużyć się nimi tylko na zasadzie wskazówki nakaż, by je zamknęli, gdy już zobaczą pierwszą część. \n-   **Idź dalej i wracaj:** Czasami uczniowie będą korzystać bardzie z powrotu na trudny poziom. Z wyjątkiem sekwencji \"Tryb projektowania\" wszystkie poziomy są od siebie niezależne, chociaż korzystają do pewnego stopnia z koncepcji wprowadzonych uprzednio."
+        },
+        "7b3b63e8-8e68-4454-8246-993f9b1dec8e": {
+          "description": "#### Ustawianie właściwości - Poziomy 2-4\n\nTe poziomy są w całości poświęcone nauce używania bloku `setProperty()`. Rozwijane listy w tym bloku ułatwiają poznanie tego, co możemy zmodyfikować. Oto kilka wskazówek, które mogą pomóc\n\n-   **Kiedy używać Podwójnych Cudzysłowów:** Blok `setProperty()` automatycznie zmienia końcową listę rozwijaną, gdy wybierzesz jakie właściwości chcesz zmienić, w tym czy używają one podwójnych cudzysłowów. W razie wątpliwości, uczniowie powinni najpierw zmienić pierwsze dwie rozwijane listy, a następnie użyć ostatniego jako model dla tego, jakie wartości tam występują. Najczęstszym błędem jest nieużywanie podwójnych cudzysłowów wokół nazwy koloru.\n-   **Najedź Kursorem, aby Odczytać Dane Identyfikacyjne (ID):** Po najechaniu na element w aplikacji możesz odczytać jego ID. Pomoże to uczniom, gdy będą próbowali zmienić wiele elementów na swoim ekranie.",
+          "progression_name": "Ustawianie Właściwości"
+        },
+        "a69c2c1b-fd4e-4c6e-8a9b-3753ed52066b": {
+          "description": "#### Zrób To Interaktywnie - Poziomy 5-7\n\nTa sekwencja wprowadza blok `onEvent()`. Oto kilka pomocnych wskazówek, jeśli uczniowie utkną na jakimś etapie zadania.\n\n-   **onEvents Nie Mogą Być Umieszczone Wewnątrz Siebie:** Uczniowie, którzy dopiero zaczynają, mogą próbować umieścić jeden blok wewnątrz innych. Takie działanie nigdy nie jest zamierzone według samouczka . Nawet jeśli jest to wspomniane w filmach, szybkie przypomnienie może pomóc dzieciom się pójść krok dalej.\n-   **Sprawdź swoje ID:** Musisz zmienić właściwość `\"id\"` w `onEvent()`, tak aby wykrywała zdarzenia z właściwym elementem.\n-   **Możesz używać wielu bloków w `onEvent()`:** Jeśli chcesz, aby wiele rzeczy działo się po kliknięciu tego samego przycisku, po prostu dodaj więcej bloków do tego samego `onEvent()`. Nigdy nie powinieneś mieć programu, który ma dwa bloki `onEvent()` dla kombinacji elementu (np. \"button1\") i typu zdarzenia (np. \"kliknij\").",
+          "tips": [
+            "**Znajdowanie obrazów:** Uczniowie nie muszą szukać obrazów ani dźwięków online, aby przerobić tę lekcję, ale mogą mieć ochotę to zrobić. Z dużym prawdopodobieństwem będziesz chciał przygotować się z wyprzedzeniem do polecania odpowiedzialnego i odpowiedniego wyszukiwania obrazów."
+          ],
+          "progression_name": "Uczyń to interaktywnym "
+        },
+        "1337edcf-c627-4f56-a664-ba06699b1d8e": {
+          "description": "W tej części znajduje się jeden poziom, w którym uczniowie dodają zwierzę do tablicy dźwiękowej. Jest on nieco bardziej skomplikowany niż poprzednie, więc przygotuj się, że uczniowie będą musieli albo ponownie obejrzeć film, albo uważnie przeczytać instrukcje, aby wykonać wszystkie kroki.\n\n#### Obrazy i Dźwięki - Poziomy 8-9\n\n-   **Wykorzystywanie `setProprety()` w obrazach:** Aby dodać obraz do elementu ekranu uczniowie mogą użyć właściwości `\"image\"`. Nie ma żadnego nowego bloku.\n-   **Link do obrazów:** Studenci mogą skopiować adresy URL obrazów, które znajdą bezpośrednio do bloku `setProperty()`, aby dodać je do swoich aplikacji. Nie ma potrzeby pobierania ich na swoje komputery i przesyłania do App Lab, jeśli tego nie chcą.",
+          "progression_name": "Obrazki i Dźwięki"
+        },
+        "2eff7ad4-db18-4f3f-bb7a-2d8fa12d1d38": {
+          "description": "#### Tryb projektowania - poziomy 10-13\n\nW ostatniej sekwencji uczniowie pracują nad tym samym projektem przez trzy poziomy z rzędu. Uczą się teraz dodawać elementy ekranu samodzielnie, co oznacza, że liczba rzeczy, które mogą zrobić w App Labie bardzo się powiększyła. Założ, że niektórzy uczniowie spędzą w tym momencie trochę czasu na zgłębianiu wiedzy, ponieważ wypróbowują wszystkie nowe narzędzia.\n\n-   **Używanie dobrych identyfikatorów:** Ważną częścią programowania w App Lab jest nadawanie elementom dobrych ID. Do tej pory uczniowie mieli swoje ID stworzone dla nich, więc nie mieli okazji przećwiczyć tej umiejętności. Jest to więc okazja do przypomnienia nauczycielowi, aby mógł utrwalić tę umiejętność w tej sekcji.",
+          "progression_name": "Tryb projektowania"
+        },
+        "b44aa481-74bf-459c-83fe-a34ba7eb5bf1": {
+          "description": "#### Podziel Się Swoją Aplikacją - Poziomy 14-15\n\nTa część ma otwarte zakończenie. Samouczek został zaprojektowany tak, aby dać uczniom dużo czasu na kontynuowanie pracy nad tym projektem, na stworzenie \"Wybierz Swoją Przygodę\" lub zaprojektowanie własnej aplikacji.\n\n-   **Wypróbuj Przykładowe Aplikacje:** Uczniowie otrzymują 3 przykładowe aplikacje, które powinny pomóc im w burzy mózgów nad ich własnymi aplikacjami.\n-   **Zachęcaj do Współpracy:** Jeśli uczniowie mają telefony komórkowe z dostępem do internetu, mogą szybko przesłać linka do swojego projektu na swój własny telefon lub telefon kolegi. Jeśli zasady obowiązujące w Twojej szkole na to pozwalają, zachęć ich do tego.\n-   **Rozbudź Kreatywność:**W porównaniu z innymi zadaniami w tej lekcji, ta część wymaga od uczniów dużo więcej kreatywności. Poproś uczniów, aby pomyśleli \"o czym będzie ich historia\" lub zrób szybką grupową burzę mózgów, aby koledzy z klasy mogli usłyszeć pomysły od siebie nawzajem.",
+          "progression_name": "Podziel się swoją aplikacją"
+        },
+        "39ad354d-4184-43fd-a319-d8ef11ec42db": {
+          "name": "Świętuj i nie przestawaj pracować!"
+        },
+        "32e8c1bc-9cd4-4c58-8eff-fba1502dd07a": {
+          "tips": [
+            null
+          ]
+        },
+        "b36d756c-298b-458c-9fec-ef393caa606e": {
+          "tips": [
+            null
+          ]
+        },
+        "068c9652-8817-4676-9fd7-e34fc9931380": {
+          "tips": [
+            null
+          ]
+        },
+        "70af4533-8479-48d5-b6b0-63f46537ffc6": {
+          "name": "Proces rozwiązywania problemów",
+          "tips": [
+            "Filmy wideo są wykorzystywane w całym programie nauczania, aby wywołać dyskusje, uzupełnić kluczowe koncepcje dodatkowymi wyjaśnieniami i przykładami oraz przedstawić uczniom różne role i pochodzenie osób w informatyce.\n\nPodczas interakcji z filmem włącz napisy zamknięte, aby uczniowie mogli również czytać podczas oglądania.\n\nAby zachęcić do aktywnego zaangażowania i refleksji, skorzystaj z jednej lub więcej strategii omówionych w \\*\\* [Przewodnik po programach nauczania](https://docs.google.com/document/d/1c2hF3CaTJacvwDy4y_9-m1jSkSPmK__F6pDPetXVvy4/view)\\*\\*."
+          ]
+        },
+        "516394ef-4827-4c51-885d-5434df4aba8d": {
+          "tips": [
+            null
+          ]
+        },
+        "b3770cb5-b404-4b89-9c8b-92fcd3f76303": {
+          "tips": [
+            null
+          ]
+        },
+        "b81fdf5f-a910-4c21-889e-2793a9ed2d29": {
+          "tips": [
+            null
+          ]
+        },
+        "0dd8ed47-218c-4810-b282-3b40631973aa": {
+          "tips": [
+            null
+          ]
+        },
+        "56d0eed7-cb4f-4b18-a7f3-c427db4b0c72": {
+          "tips": [
+            null
+          ]
+        },
+        "24d5ede1-2fd3-4482-bf06-168913ff18ff": {
+          "tips": [
+            null
+          ]
+        },
+        "4a5cfaf7-d6bd-4184-8dab-f5cb06089a7e": {
+          "tips": [
+            null
+          ]
+        },
+        "812cc28d-3ac5-4ecb-8cfd-b8834f3df718": {
+          "tips": [
+            null
+          ]
+        },
+        "7cd80c55-b4bf-4a70-8016-fc3957817ac6": {
+          "name": "Refleksja"
+        },
+        "e7c8efd6-cf5f-4e2e-b83b-457f65d3618a": {
+          "tips": [
+            null
+          ]
+        },
+        "3f8c2145-10eb-4b18-91f6-562a3fe5d3b5": {
+          "tips": [
+            null
+          ]
+        },
+        "a518bd06-04f3-4694-bdf1-167b164375d7": {
+          "tips": [
+            null
+          ],
+          "progression_name": "Budowanie umiejętności"
+        },
+        "83342c89-6c75-40cc-a5b2-82f59ca8ebab": {
+          "tips": [
+            null
+          ],
+          "progression_name": "Budowanie umiejętności"
+        },
+        "b1500222-c273-4746-bea6-9d23ec2d2257": {
+          "tips": [
+            null
+          ],
+          "progression_name": "Ćwiczenia"
+        },
+        "60172c06-c6a8-47d7-87e4-4a338b51edb1": {
+          "tips": [
+            null
+          ],
+          "progression_name": "Ocena"
+        },
+        "c5f6bfb8-e4af-4a34-83c1-4e5827947b8c": {
+          "tips": [
+            null
+          ],
+          "progression_name": "Wyzwanie"
+        },
+        "df6cf699-04d3-41cd-879e-406ccc9102d3": {
+          "tips": [
+            null
+          ]
+        },
+        "2aa06268-02e0-43d0-984a-cb0ecc067983": {
+          "tips": [
+            null
+          ]
+        },
+        "ab7b07c7-8ffa-414d-bfaf-3428dbc80a57": {
+          "tips": [
+            null
+          ],
+          "progression_name": "Budowanie umiejętności"
+        },
+        "b3ef74d0-b2ae-478d-b0da-4469274d05f3": {
+          "progression_name": "Ćwiczenia"
+        },
+        "b93f7df6-f3c0-457a-93ab-1afd32a5e776": {
+          "tips": [
+            null
+          ],
+          "progression_name": "Ocena"
+        },
+        "b9f7d613-b5fd-4017-904d-64beb0f8965b": {
+          "progression_name": "Wyzwanie"
+        },
+        "eb8f89c7-8b46-45cb-a244-70d0549771da": {
+          "tips": [
+            null
+          ]
+        },
+        "dbfd1123-498f-4ef0-a855-709231ce8e5f": {
+          "progression_name": "Budowanie umiejętności"
+        },
+        "4b93e3dc-6580-439f-8d16-4bb762936980": {
+          "progression_name": "Ćwiczenia"
+        },
+        "a15050de-f82e-4aca-b3ac-f72470be4c4d": {
+          "tips": [
+            null
+          ],
+          "progression_name": "Ocena"
+        },
+        "07f37e40-d86c-49f4-8582-a5f9d9f5fc22": {
+          "progression_name": "Wyzwanie"
+        },
+        "1b1be133-656f-4d6e-b339-d97446c52903": {
+          "tips": [
+            null
+          ]
+        },
+        "2f2039cf-7501-47f2-ae0d-5517c35061f9": {
+          "tips": [
+            null
+          ]
+        },
+        "e11bc741-9752-4735-ac0b-78d1f850041d": {
+          "progression_name": "Budowanie umiejętności"
+        },
+        "452a6fe0-8fd7-44a1-81f1-a727f5b12967": {
+          "tips": [
+            null
+          ]
+        },
+        "daad8f94-a787-4870-bb55-494759417ab6": {
+          "progression_name": "Budowanie umiejętności"
+        },
+        "180aa250-28b3-451b-95c9-5b54e502d893": {
+          "tips": [
+            null
+          ]
+        },
+        "64144393-0b5f-49e7-8336-367a06d6472c": {
+          "progression_name": "Budowanie umiejętności"
+        },
+        "208fd590-f3a9-48a5-9e98-a06d1b347324": {
+          "tips": [
+            null
+          ]
+        },
+        "d132ecdd-a42a-4a20-9ca0-de8592dc975c": {
+          "progression_name": "Budowanie umiejętności"
+        },
+        "7fddd9bc-2b55-4863-b4dc-613b368f08f6": {
+          "tips": [
+            null
+          ],
+          "progression_name": "Ocena"
+        },
+        "8be51b1d-bec8-4eac-9404-54f9e9e08fa6": {
+          "progression_name": "Wyzwanie"
+        },
+        "e58e3180-217b-4bf7-b557-190e48be2720": {
+          "name": "Dziennik",
+          "tips": [
+            null
+          ]
+        },
+        "5e6580c3-e94e-4d4c-ad90-13b892c23b00": {
+          "name": "Dziennik"
+        },
+        "774a46df-9c6b-4233-82bd-d03dcd8ed524": {
+          "tips": [
+            null
+          ]
+        },
+        "1cd5eb8f-135e-4b41-9575-6caaa73a245d": {
+          "tips": [
+            null
+          ]
+        },
+        "a5c47c8a-ffc6-4598-a3e5-b5ae53ac4a42": {
+          "tips": [
+            null
+          ]
+        },
+        "494989ad-69f6-47ba-8a6d-f656d844da2e": {
+          "tips": [
+            null
+          ]
+        },
+        "6cbf987a-731e-4469-ac0f-77c28fddb04e": {
+          "name": "Studio Kodowania (Code Studio)"
+        },
+        "c593396b-3045-4ecd-840c-43f10a61be20": {
+          "tips": [
+            null
+          ]
+        },
+        "76c38ecd-5296-4a2a-b164-042763b63eab": {
+          "tips": [
+            null
+          ]
+        },
+        "392d0af6-7107-4bbc-bec5-f67d7ee51779": {
+          "name": "Refleksja"
+        },
+        "319b3504-fb0e-4eb3-a591-480b202b816e": {
+          "name": "Dziennik"
+        },
+        "7e80783a-46b4-4662-a34a-d411a940baa7": {
+          "tips": [
+            null
+          ]
+        },
+        "221aabf5-59de-48c5-952c-5d7aa9277a1c": {
+          "progression_name": "Budowanie umiejętności"
+        },
+        "a9b0e843-6888-4925-adbf-e216c0d2ba2b": {
+          "progression_name": "Ćwiczenia"
+        },
+        "aeeac173-024f-4d8b-8b63-7e5b0c31c31d": {
+          "tips": [
+            null
+          ],
+          "progression_name": "Ocena"
+        },
+        "4d4675e6-b3d3-40e2-8e2c-b9191aa291a3": {
+          "progression_name": "Wyzwanie"
+        },
+        "0c6d5dd2-8453-4c94-b6c0-e653cfd5ef16": {
+          "description": "![](https://images.code.org/e5a08f29a9c4e306de5553dafca9fb5d-image-1467913845542.gif)"
+        },
+        "c3dd34a4-de8c-427d-8b59-6fe87c8e08cf": {
+          "tips": [
+            null
+          ]
+        },
+        "9bb7781b-6761-4525-8da8-385833625721": {
+          "tips": [
+            null
+          ]
+        },
+        "c9152875-945c-42d4-94bf-54792f3b86e9": {
+          "progression_name": "Budowanie umiejętności"
+        },
+        "66680bd4-821e-4b27-ab5a-6fb31503708a": {
+          "progression_name": "Ćwiczenia"
+        },
+        "9637360e-b496-4c0d-bf75-427f63dd75e5": {
+          "tips": [
+            null
+          ],
+          "progression_name": "Ocena"
+        },
+        "bc7f3575-2576-48dd-9d3f-538d323808c3": {
+          "progression_name": "Wyzwanie"
+        },
+        "bfe0457b-e929-42c0-96a1-d009678e3956": {
+          "name": "Rozgrzewka"
+        },
+        "61d6c752-a2cd-45fc-af0e-24f599883690": {
+          "tips": [
+            null
+          ]
+        },
+        "02662708-cc39-423e-b0b7-1006e1cd6b23": {
+          "tips": [
+            null
+          ]
+        },
+        "0a843200-c21c-4e7b-8ad1-22479197b91c": {
+          "tips": [
+            null
+          ]
+        },
+        "a9816599-1f7f-47f1-a462-d691e19e2770": {
+          "name": "Zakończenie"
+        },
+        "5768be3d-35c8-4d21-98b7-4861dccbc736": {
+          "name": "Rozgrzewka",
+          "tips": [
+            null
+          ]
+        },
+        "4af9ebfe-4948-42df-904d-d0f3e102e362": {
+          "name": "Zakończenie"
+        },
+        "b0349563-9228-4682-9fd8-7a4d8a447e63": {
+          "name": "Rozgrzewka"
+        },
+        "520ec73f-fe88-492a-a271-208746f29f2d": {
+          "tips": [
+            null
+          ]
+        },
+        "3f4fd147-e9b9-423d-9e20-e09c3c796a29": {
+          "name": "Zakończenie"
+        },
+        "88021f3d-fffb-4b26-a44c-e4244749cfac": {
+          "name": "Rozgrzewka"
+        },
+        "784a55e6-979f-4bc9-952b-3b392ffee82e": {
+          "name": "Zakończenie",
+          "tips": [
+            null
+          ]
+        },
+        "4abca980-7862-46fd-b87e-a96717d9524a": {
+          "name": "Rozgrzewka"
+        },
+        "f87698da-adc5-41e6-a695-0a6b20c4f9f2": {
+          "name": "Zakończenie",
+          "progression_name": "Refleksja"
+        },
+        "940d203d-25cd-4e5a-8e8b-f83c4a14a025": {
+          "tips": [
+            null
+          ]
+        },
+        "75b37e1a-f080-4165-aeb6-0dd19c9f0c8e": {
+          "progression_name": "Budowanie umiejętności"
+        },
+        "1f86fc0f-4de7-4ffa-afea-790be3ba94c4": {
+          "progression_name": "Budowanie umiejętności"
+        },
+        "d83e556c-79e2-4d93-b9e4-f083999af5ed": {
+          "progression_name": "Ćwiczenia"
+        },
+        "a481bf54-5626-4bef-8c3c-4a469044a59b": {
+          "tips": [
+            null
+          ],
+          "progression_name": "Ocena"
+        },
+        "b40ca83c-0d5a-4b45-87a3-f43c865b90ea": {
+          "progression_name": "Wyzwanie"
+        },
+        "49f3750a-8117-48f9-af84-c36aa7d7e193": {
+          "tips": [
+            null
+          ]
+        },
+        "109abdaa-1d1f-48ff-b3cd-288e2776e09b": {
+          "progression_name": "Budowanie umiejętności"
+        },
+        "0c7107c1-063d-4c0d-914a-5506fc7fc7f8": {
+          "progression_name": "Ćwiczenia"
+        },
+        "6f148447-ecd5-43fd-ad11-fbfd1b6e49d3": {
+          "tips": [
+            null
+          ],
+          "progression_name": "Ocena"
+        },
+        "0fd138cc-d5a9-45bc-bfe5-7f0905fa8903": {
+          "progression_name": "Wyzwanie"
+        },
+        "46ea6971-4b5b-41db-81e4-253aa99549e0": {
+          "name": "Dziennik"
+        },
+        "f7da91d4-033b-4bce-8e01-fdc95bcfa660": {
+          "tips": [
+            null
+          ]
+        },
+        "c052ad02-b6b2-4499-95bd-578cbca96830": {
+          "tips": [
+            null
+          ]
+        },
+        "d32e0d48-6ce9-4c7f-9401-c0dd883fedc1": {
+          "tips": [
+            null
+          ]
+        },
+        "7bc7c82c-d9aa-4ac1-85dd-a50584f221b4": {
+          "progression_name": "Budowanie umiejętności"
+        },
+        "06c8f705-61b5-4bc8-9bc7-a00a2990a218": {
+          "tips": [
+            null
+          ]
+        },
+        "5b013d42-e37f-46f8-a07e-a545a04017d7": {
+          "progression_name": "Budowanie umiejętności"
+        },
+        "d5240f0a-7da1-4ecf-980d-b1575dedbd5c": {
+          "progression_name": "Ćwiczenia"
+        },
+        "ad02d621-0eee-41d9-8de1-cb244b5f2482": {
+          "tips": [
+            null
+          ],
+          "progression_name": "Ocena"
+        },
+        "e0ce1125-a59c-4065-a927-c2ec2a455524": {
+          "name": "Dziennik"
+        },
+        "8ab1b1ff-bb7d-4ebd-b47c-afc4a5365d3c": {
+          "tips": [
+            null
+          ]
+        },
+        "a0becdf3-f7c0-4f93-af30-5512f0e1d862": {
+          "tips": [
+            null
+          ]
+        },
+        "8e1194f7-45d6-4ced-bebd-f3e1b72d6f4c": {
+          "tips": [
+            null
+          ]
+        },
+        "f17e15e9-7eec-4dae-a0b2-16d08304289a": {
+          "tips": [
+            null
+          ]
+        },
+        "6aa13112-f135-4a97-a678-735e94f1cebb": {
+          "tips": [
+            null
+          ]
+        },
+        "853780f9-47d7-41c6-94f7-81c3bff4898a": {
+          "tips": [
+            null
+          ]
+        },
+        "da0333d8-220a-4ccf-a1c8-52847cc9acc9": {
+          "name": "Refleksja"
+        },
+        "821bee53-ae73-4faa-917a-178194ef0c61": {
+          "tips": [
+            null
+          ]
+        },
+        "fd9c142f-d893-4ba1-a0cc-9d92760982d3": {
+          "tips": [
+            null
+          ]
+        },
+        "b21b14e8-b168-4a94-87a7-508dc03aab58": {
+          "progression_name": "Budowanie umiejętności"
+        },
+        "1a8997d8-affe-4912-820d-fd1ffde68fed": {
+          "progression_name": "Ćwiczenia"
+        },
+        "58ed9287-db82-4e05-b7f4-d47cf176f3d8": {
+          "tips": [
+            null
+          ],
+          "progression_name": "Ocena"
+        },
+        "02a36683-12c9-4e2c-bd88-300e2e599b01": {
+          "progression_name": "Wyzwanie"
+        },
+        "66d5f77c-ea10-47fc-a950-a25105cd0f17": {
+          "tips": [
+            null
+          ]
+        },
+        "30c5c31d-233f-440f-b9ec-ceada8e284c8": {
+          "progression_name": "Budowanie umiejętności"
+        },
+        "69f8d818-3bb5-4fdb-aba7-895aa6dd686e": {
+          "progression_name": "Ćwiczenia"
+        },
+        "4fc63f22-dfe2-445f-b904-af41c89eb8f0": {
+          "tips": [
+            null
+          ],
+          "progression_name": "Ocena"
+        },
+        "2e5dbc41-b8d9-461e-b2c8-6550b771070e": {
+          "progression_name": "Wyzwanie"
+        },
+        "e29082fa-b91f-498e-bb89-7d19104676e9": {
+          "tips": [
+            null
+          ]
+        },
+        "b0fe60b1-277f-47c5-b3b4-074a0d02f25f": {
+          "tips": [
+            null
+          ]
+        },
+        "09c364b4-ceac-4155-8b8c-78e5d33fb913": {
+          "tips": [
+            null
+          ]
+        },
+        "5ad50734-14f5-4ec9-8ad5-e1ebbc32858b": {
+          "name": "Udostępnij",
+          "tips": [
+            null
+          ]
+        },
+        "049d4e54-45f1-4414-8d05-a2c91b46f9ba": {
+          "name": "Wstęp",
+          "tips": [
+            null
+          ]
+        },
+        "a20a41ba-4428-454c-93d8-4ca66de5d2d3": {
+          "progression_name": "App Lab wprowadzenie - Film"
+        },
+        "9731b795-89e0-4dcd-b57b-f7718cef0623": {
+          "name": "Wprowadzenie do App Lab",
+          "description": "**Wsparcie ogólne:** Jako nauczyciel masz zasadniczo nieść wsparcie swoim uczniom w trakcie przechodzenia przez samouczek. Oto kilka wskazówek, które mogą pomóc uczniom bez względu na to, na jakim poziomie pracują\n\n-   **Sprawdzanie poprawności:** W ramach tego samouczka uczniowie nie będą otrzymywali informacji, czy ukończyli poziom poprawnie. Zachęcaj uczniów, aby korzystali z obrazów i kierunków docelowych podanych w każdym poziomie aby dowiedzieć się, czy idą właściwą drogą. Jeśli uczniowie chcą ominąć szczególnie trudny poziom mogą po prostu kliknąć \"Zakończ\" i kontynuować. \n-   **Współpracuj z sąsiadami:** Zachęcaj uczniów, aby kontaktowali się z sąsiadem, gdy utkną. Ten samouczek obejmuje filmy wideo, więc uczniowie będą mieć założone suchawki i mogą łatwo \"zamknąć się w bańce\". Pomóż w przełamywaniu tych barier, aktywnie łącząc uczniów w pary, jeśli odniesiesz wrażenie, że mogą potrzebować pomocy. \n-   **Czytaj instrukcje:** Instrukcje zwykle zawierają praktyczne porady, jak przejść określony poziom. Przed przejściem poziomu przez ucznia dopilnuj, aby uważnie przyjrzał się obrazkowi docelowemu i przeczytał cały, znajdujący się w nim tekst. \n-   **Utknąłeś? Kliknij tutaj:** Każdy poziom zawiera GIF pokazujący, jak przejść poziom. Jeśli uczniowie chcą pomocy, mogą i powinni korzystać z GIFó. Jeśli chcą posłużyć się nimi tylko na zasadzie wskazówki nakaż, by je zamknęli, gdy już zobaczą pierwszą część. \n-   **Idź dalej i wracaj:** Czasami uczniowie będą korzystać bardzie z powrotu na trudny poziom. Z wyjątkiem sekwencji \"Tryb projektowania\" wszystkie poziomy są od siebie niezależne, chociaż korzystają do pewnego stopnia z koncepcji wprowadzonych uprzednio."
+        },
+        "b42547f8-0c61-4804-aebf-4074d2307f69": {
+          "description": "#### Ustawianie właściwości - Poziomy 2-4\n\nTe poziomy są w całości poświęcone nauce używania bloku `setProperty()`. Rozwijane listy w tym bloku ułatwiają poznanie tego, co możemy zmodyfikować. Oto kilka wskazówek, które mogą pomóc\n\n-   **Kiedy używać Podwójnych Cudzysłowów:** Blok `setProperty()` automatycznie zmienia końcową listę rozwijaną, gdy wybierzesz jakie właściwości chcesz zmienić, w tym czy używają one podwójnych cudzysłowów. W razie wątpliwości, uczniowie powinni najpierw zmienić pierwsze dwie rozwijane listy, a następnie użyć ostatniego jako model dla tego, jakie wartości tam występują. Najczęstszym błędem jest nieużywanie podwójnych cudzysłowów wokół nazwy koloru.\n-   **Najedź Kursorem, aby Odczytać Dane Identyfikacyjne (ID):** Po najechaniu na element w aplikacji możesz odczytać jego ID. Pomoże to uczniom, gdy będą próbowali zmienić wiele elementów na swoim ekranie.",
+          "progression_name": "Ustawianie Właściwości"
+        },
+        "09438694-f962-4bb7-ac2c-89dc47a1fa9f": {
+          "description": "#### Zrób To Interaktywnie - Poziomy 5-7\n\nTa sekwencja wprowadza blok `onEvent()`. Oto kilka pomocnych wskazówek, jeśli uczniowie utkną na jakimś etapie zadania.\n\n-   **onEvents Nie Mogą Być Umieszczone Wewnątrz Siebie:** Uczniowie, którzy dopiero zaczynają, mogą próbować umieścić jeden blok wewnątrz innych. Takie działanie nigdy nie jest zamierzone według samouczka . Nawet jeśli jest to wspomniane w filmach, szybkie przypomnienie może pomóc dzieciom się pójść krok dalej.\n-   **Sprawdź swoje ID:** Musisz zmienić właściwość `\"id\"` w `onEvent()`, tak aby wykrywała zdarzenia z właściwym elementem.\n-   **Możesz używać wielu bloków w `onEvent()`:** Jeśli chcesz, aby wiele rzeczy działo się po kliknięciu tego samego przycisku, po prostu dodaj więcej bloków do tego samego `onEvent()`. Nigdy nie powinieneś mieć programu, który ma dwa bloki `onEvent()` dla kombinacji elementu (np. \"button1\") i typu zdarzenia (np. \"kliknij\").",
+          "tips": [
+            "**Znajdowanie obrazów:** Uczniowie nie muszą szukać obrazów ani dźwięków online, aby przerobić tę lekcję, ale mogą mieć ochotę to zrobić. Z dużym prawdopodobieństwem będziesz chciał przygotować się z wyprzedzeniem do polecania odpowiedzialnego i odpowiedniego wyszukiwania obrazów."
+          ],
+          "progression_name": "Uczyń to interaktywnym "
+        },
+        "d9aaa040-67c1-4748-82ef-11f03fc99565": {
+          "description": "W tej części znajduje się jeden poziom, w którym uczniowie dodają zwierzę do tablicy dźwiękowej. Jest on nieco bardziej skomplikowany niż poprzednie, więc przygotuj się, że uczniowie będą musieli albo ponownie obejrzeć film, albo uważnie przeczytać instrukcje, aby wykonać wszystkie kroki.\n\n#### Obrazy i Dźwięki - Poziomy 8-9\n\n-   **Wykorzystywanie `setProprety()` w obrazach:** Aby dodać obraz do elementu ekranu uczniowie mogą użyć właściwości `\"image\"`. Nie ma żadnego nowego bloku.\n-   **Link do obrazów:** Studenci mogą skopiować adresy URL obrazów, które znajdą bezpośrednio do bloku `setProperty()`, aby dodać je do swoich aplikacji. Nie ma potrzeby pobierania ich na swoje komputery i przesyłania do App Lab, jeśli tego nie chcą.",
+          "progression_name": "Obrazki i Dźwięki"
+        },
+        "f2b1b458-1062-49e9-ae93-8723987335b4": {
+          "description": "#### Tryb projektowania - poziomy 10-13\n\nW ostatniej sekwencji uczniowie pracują nad tym samym projektem przez trzy poziomy z rzędu. Uczą się teraz dodawać elementy ekranu samodzielnie, co oznacza, że liczba rzeczy, które mogą zrobić w App Labie bardzo się powiększyła. Założ, że niektórzy uczniowie spędzą w tym momencie trochę czasu na zgłębianiu wiedzy, ponieważ wypróbowują wszystkie nowe narzędzia.\n\n-   **Używanie dobrych identyfikatorów:** Ważną częścią programowania w App Lab jest nadawanie elementom dobrych ID. Do tej pory uczniowie mieli swoje ID stworzone dla nich, więc nie mieli okazji przećwiczyć tej umiejętności. Jest to więc okazja do przypomnienia nauczycielowi, aby mógł utrwalić tę umiejętność w tej sekcji.",
+          "progression_name": "Tryb projektowania"
+        },
+        "39ede729-16ed-453b-8472-025035e91ce0": {
+          "description": "#### Podziel Się Swoją Aplikacją - Poziomy 14-15\n\nTa część ma otwarte zakończenie. Samouczek został zaprojektowany tak, aby dać uczniom dużo czasu na kontynuowanie pracy nad tym projektem, na stworzenie \"Wybierz Swoją Przygodę\" lub zaprojektowanie własnej aplikacji.\n\n-   **Wypróbuj Przykładowe Aplikacje:** Uczniowie otrzymują 3 przykładowe aplikacje, które powinny pomóc im w burzy mózgów nad ich własnymi aplikacjami.\n-   **Zachęcaj do Współpracy:** Jeśli uczniowie mają telefony komórkowe z dostępem do internetu, mogą szybko przesłać linka do swojego projektu na swój własny telefon lub telefon kolegi. Jeśli zasady obowiązujące w Twojej szkole na to pozwalają, zachęć ich do tego.\n-   **Rozbudź Kreatywność:**W porównaniu z innymi zadaniami w tej lekcji, ta część wymaga od uczniów dużo więcej kreatywności. Poproś uczniów, aby pomyśleli \"o czym będzie ich historia\" lub zrób szybką grupową burzę mózgów, aby koledzy z klasy mogli usłyszeć pomysły od siebie nawzajem.",
+          "progression_name": "Podziel się swoją aplikacją"
+        },
+        "054207fa-3724-4e8b-949e-9288ce440496": {
+          "name": "Świętuj i nie przestawaj pracować!"
+        },
+        "b1a1b930-826f-4624-a5b3-e0f0c2691e4f": {
+          "name": "Dziennik",
+          "tips": [
+            null
+          ]
+        },
+        "53c187a6-d9c3-48f4-bcc3-64fd77c43b7a": {
+          "tips": [
+            "Filmy wideo są wykorzystywane w całym programie nauczania, aby wywołać dyskusje, uzupełnić kluczowe koncepcje dodatkowymi wyjaśnieniami i przykładami oraz przedstawić uczniom różne role i pochodzenie osób w informatyce.\n\nPodczas interakcji z filmem włącz napisy zamknięte, aby uczniowie mogli również czytać podczas oglądania.\n\nAby zachęcić do aktywnego zaangażowania i refleksji, skorzystaj z jednej lub więcej strategii omówionych w \\*\\* [Przewodnik po programach nauczania](https://docs.google.com/document/d/1c2hF3CaTJacvwDy4y_9-m1jSkSPmK__F6pDPetXVvy4/view)\\*\\*."
+          ]
+        },
+        "dc13d057-ef08-4f18-af39-32a4d669b0f6": {
+          "tips": [
+            null
+          ]
+        },
+        "3bce0225-ae36-43d5-bb4f-b07f8cf488b9": {
+          "progression_name": "Rozpoznawanie ryb"
+        },
+        "b9550869-c938-4e46-aa10-d95a64a1fa8f": {
+          "tips": [
+            null
+          ]
+        },
+        "eb8e9aa4-a4de-4f36-8261-e00843ac6b71": {
+          "progression_name": "Rozpoznawanie cech ryb"
+        },
+        "bdf9afd7-823c-407e-8e9f-eea74384188a": {
+          "tips": [
+            null
+          ]
+        },
+        "27899869-a1cb-4149-8f28-9c3ccd3cd804": {
+          "progression_name": "Rozpoznawanie wyrażeń"
+        },
+        "ef83e957-038a-4d2c-8a3f-09b8e0e9db6b": {
+          "tips": [
+            null
+          ]
+        },
+        "9c270d71-ae7c-4118-8576-b6239373b588": {
+          "name": "Refleksja"
+        },
+        "499180ff-d095-474d-91ed-1e642efc1e4a": {
+          "name": "Dziennik"
+        },
+        "cf796d3a-e829-447a-8f81-d2d66ab28246": {
+          "tips": [
+            null
+          ]
+        },
+        "bda2805e-b242-41e7-9cb7-5908c4f3ca81": {
+          "tips": [
+            null,
+            null
+          ]
+        },
+        "ef269562-81c5-42a5-9ae1-7ccf8f099dca": {
+          "tips": [
+            null
+          ]
+        },
+        "3834f20c-1434-4c8e-a5bc-23274ba4ea76": {
+          "tips": [
+            null
+          ]
+        },
+        "1137900f-9d28-4f8f-b1ce-bddee3909c72": {
+          "tips": [
+            null
+          ]
+        },
+        "99f0d2d6-d8a5-427b-be5e-fc2015a9aa35": {
+          "name": "Dziennik",
+          "tips": [
+            null
+          ]
+        },
+        "e1e98059-43a5-4566-8256-0aeeaa45ab5e": {
+          "name": "Dziennik"
+        },
+        "b52c7111-c3ec-4f03-b2f3-a3236d0bef66": {
+          "tips": [
+            null
+          ]
+        },
+        "39366d7e-e93e-4c6f-b328-e1daa019bbef": {
+          "tips": [
+            null
+          ]
+        },
+        "1c876711-fcaf-4ca0-9dc6-37f4ca035176": {
+          "name": "Dziennik"
+        },
+        "25a6fadb-4e63-4ba5-b695-f191547dcbbf": {
+          "tips": [
+            null
+          ]
+        },
+        "bbc0c1b6-17cd-44d0-883d-c937539be55a": {
+          "tips": [
+            null
+          ]
+        },
+        "2e7fc7ac-7f2c-4e89-aca3-65269e994aae": {
+          "tips": [
+            null
+          ]
+        },
+        "98b78b3d-1bca-4e0c-9084-7a1c471759f6": {
+          "tips": [
+            null
+          ]
+        },
+        "ee936de6-53eb-47b4-84f9-ad0b8e66d4c8": {
+          "name": "Dziennik"
+        },
+        "9f32400e-a287-4236-b6ff-5b258aa26bbb": {
+          "name": "Dziennik"
+        },
+        "685de918-dafa-438b-8bcb-41247b9ad7bb": {
+          "tips": [
+            null,
+            null
+          ]
+        },
+        "fe943c89-d891-4fd1-ba49-4ef2d54ede07": {
+          "tips": [
+            null
+          ]
+        },
+        "ed0eda12-9b14-480b-a299-609f7ae9f786": {
+          "tips": [
+            null
+          ]
+        },
+        "59e4e7fa-8c74-4a7a-8c34-e92ce5b2278f": {
+          "tips": [
+            null
+          ]
+        },
+        "2be71b9a-8bca-4b3e-860d-dc6e52e1312c": {
+          "tips": [
+            null
+          ]
+        },
+        "f374e66a-7357-4d9b-bdc8-805d675bb407": {
+          "name": "Dziennik"
+        },
+        "c5ec9ab1-0019-4ea8-873e-968b09ec8d1d": {
+          "name": "Dziennik"
+        },
+        "53f83c03-931e-4f38-b96c-b911e5f7dcd9": {
+          "tips": [
+            null
+          ]
+        },
+        "6e466188-746d-43fa-9162-010474817f55": {
+          "tips": [
+            null
+          ]
+        },
+        "7a5c744d-cdbc-44c0-9255-3b932debebb5": {
+          "name": "Rozpoznawanie kształtów"
+        },
+        "224ff10a-dd14-4631-8ba8-3c7e2d785105": {
+          "tips": [
+            null
+          ]
+        },
+        "9f841049-e653-47e0-ab45-780054283ead": {
+          "progression_name": "Rozpoznawanie kształtów"
+        },
+        "ca8c7c22-43b2-4d68-a73e-73f551b75328": {
+          "tips": [
+            null
+          ]
+        },
+        "a545e48c-96a3-4424-97c9-dc3b68174274": {
+          "tips": [
+            null
+          ]
+        },
+        "e5eb7c68-0ae9-408f-b220-da587122cf08": {
+          "tips": [
+            null
+          ]
+        },
+        "ec304bf8-d588-49a9-9c2e-1b09b650a00a": {
+          "tips": [
+            null
+          ]
+        },
+        "f035a377-26fc-4a00-9143-6c3ad8e3bfb7": {
+          "tips": [
+            null
+          ]
+        },
+        "da37d28c-23d5-470c-adc2-5cdab1a5c502": {
+          "tips": [
+            null
+          ]
+        },
+        "f575eff0-882b-4ddf-99eb-0e312e36a579": {
+          "name": "Dziennik"
+        },
+        "183d377d-0c2c-4382-b6ea-9e926ab0e41a": {
+          "name": "Dziennik"
+        },
+        "15af1236-6422-4f3a-ab0b-4ac862421d95": {
+          "tips": [
+            null
+          ]
+        },
+        "64edecf9-67e8-4a0c-96b1-b9d0f7efe7c0": {
+          "progression_name": "Aplikacja polecająca książki"
+        },
+        "b63e8501-ec71-4226-a078-0b2a12ccdd3f": {
+          "tips": [
+            null
+          ]
+        },
+        "c18865d2-36d5-4853-88aa-784e4a8b1827": {
+          "tips": [
+            null
+          ]
+        },
+        "13ecb1ab-11bb-4f28-a534-3bca316f6275": {
+          "tips": [
+            null
+          ]
+        },
+        "3c9e7685-6e90-484b-9066-7e9f28d8f6fd": {
+          "tips": [
+            null
+          ],
+          "progression_name": "Importuj model"
+        },
+        "40f01248-c7fb-43fd-829c-0f1c31c52a98": {
+          "tips": [
+            null
+          ]
+        },
+        "9ecde5cc-fa62-4846-ac40-4af033aeed15": {
+          "tips": [
+            null
+          ]
+        },
+        "8b70fb47-f93e-4d2d-9072-9ed5586597cd": {
+          "tips": [
+            null
+          ]
+        },
+        "7f19fc3d-a0fe-40df-bbf8-bad1b0b6d068": {
+          "tips": [
+            null
+          ]
+        },
+        "b520b3ad-58dd-432a-b80e-625ee8f1267c": {
+          "name": "Dziennik",
+          "tips": [
+            null
+          ]
+        },
+        "050397a6-2e67-4897-891c-7a84fe3d7af9": {
+          "name": "Dziennik",
+          "tips": [
+            null
+          ]
+        },
+        "7833bfaa-d744-4205-b3b5-9930a35776c9": {
+          "tips": [
+            null
+          ]
+        },
+        "031083ca-001f-4b8d-ae05-b1aec5d0188d": {
+          "tips": [
+            null
+          ]
+        },
+        "72a3bba5-636b-4a56-8ae9-0ce7f7c0771b": {
+          "tips": [
+            null
+          ]
+        },
+        "7d86b193-0a1a-4179-b5dc-9f3834fffbd9": {
+          "tips": [
+            null
+          ]
+        },
+        "677bb702-2acb-460d-aefc-3884ad1f8fa6": {
+          "tips": [
+            null
+          ]
+        },
+        "0d486d2c-da2f-4c17-bcb0-497796e22c42": {
+          "tips": [
+            null
+          ]
+        },
+        "cdefe42a-9002-407d-a092-2e279c4cd696": {
+          "tips": [
+            null
+          ]
+        },
+        "32e97e83-51a8-49c6-829d-cab68cdfd1f8": {
+          "name": "Dziennik",
+          "tips": [
+            null
+          ]
+        },
+        "8dc2b682-3c4c-4abd-b58a-5c066b56323c": {
+          "name": "Dziennik "
+        },
+        "ee6678ed-b811-49c4-bf7f-649420290f0d": {
+          "name": "Karty modeli w AI Lab",
+          "tips": [
+            null
+          ]
+        },
+        "a145f030-dae8-4234-85eb-6c6e4f122e4b": {
+          "tips": [
+            null
+          ]
+        },
+        "ef586a37-8058-4e7f-8965-0e7fe2e086fd": {
+          "name": "Importowanie Twojego modelu",
+          "tips": [
+            null
+          ]
+        },
+        "348330ea-6ba4-4432-8f02-ae4c885017f6": {
+          "tips": [
+            null,
+            null
+          ],
+          "progression_name": "Importowanie Twojego modelu"
+        },
+        "a5398677-0a7b-4b9e-9454-deb0e6d62153": {
+          "name": "Dziennik "
+        },
+        "e85615d1-8d02-47a8-a487-57e770eb7f0e": {
+          "name": "Dziennik "
+        },
+        "069191e6-39f0-4a2e-85ce-fff6bc0135c7": {
+          "progression_name": "Przykładowa aplikacja: Klasyfikacja zoo"
+        },
+        "e949af1c-b1ac-4766-b6e7-5f2aa4b7ebf4": {
+          "tips": [
+            null
+          ]
+        },
+        "c1d5766a-89ca-47d5-b0ec-8ac4d082ed8a": {
+          "tips": [
+            null
+          ]
+        },
+        "c4099370-0405-4a9b-b626-367920dc8233": {
+          "tips": [
+            null
+          ]
+        },
+        "343325f8-4730-44e5-a4e9-829569d7bd4c": {
+          "tips": [
+            null
+          ]
+        },
+        "ec0ff3e7-5828-4ec9-9fa5-b09fc792b453": {
+          "tips": [
+            null
+          ]
+        },
+        "ce7e27ba-0141-40bb-8c46-cafb8590152e": {
+          "tips": [
+            null
+          ],
+          "progression_name": "Dodawanie nowych ekranów"
+        },
+        "49b27025-1e8f-483d-bca1-b51069f71891": {
+          "tips": [
+            null
+          ],
+          "progression_name": "Ćwiczenia"
+        },
+        "c753e1b0-491b-47a4-b5ec-955f17723145": {
+          "tips": [
+            null
+          ],
+          "progression_name": "Ocena"
+        },
+        "25baffd7-af20-4fdc-9196-dbb0e00c019b": {
+          "tips": [
+            null
+          ]
+        },
+        "b0af771f-35bd-4d10-b78a-aed2a133ad99": {
+          "progression_name": "Wyzwanie"
+        },
+        "80a66500-5543-4eff-97c4-33c1e2932fec": {
+          "name": "Dziennik"
+        },
+        "042d27e8-48d1-4205-b2ed-cae33b607743": {
+          "name": "Dziennik"
+        },
+        "92851ec1-81e7-430b-89f0-c6153c03c4fe": {
+          "tips": [
+            null
+          ]
+        },
+        "97bdc7bd-5e6b-4290-8bcd-416cbb6b54aa": {
+          "tips": [
+            null
+          ]
+        },
+        "e6df51e5-c4ad-4e8e-9308-ad8094570177": {
+          "tips": [
+            null
+          ]
+        },
+        "d3c71625-2f22-4f74-af43-4f45137a38ff": {
+          "tips": [
+            null
+          ]
+        },
+        "543d2b21-3275-45f0-9f03-6fb0e7128a49": {
+          "tips": [
+            null
+          ]
+        },
+        "3735d23b-2ab9-4905-b6e7-38b8e9f09591": {
+          "tips": [
+            null
+          ]
+        },
+        "8827a19f-a816-4402-b822-bdf065c62dab": {
+          "name": "Dziennik"
+        },
+        "c87e3988-3097-46cc-8c89-d80511da5c58": {
+          "name": "Dziennik "
+        },
+        "2b2c3c49-4b05-4d27-890e-f87305fb4b00": {
+          "tips": [
+            null
+          ]
+        },
+        "1252d395-a94d-4da3-b791-53166b69774e": {
+          "progression_name": "Model Safari"
+        },
+        "ab7f46b9-587d-4db0-8f71-9db920625b54": {
+          "tips": [
+            null
+          ]
+        },
+        "57c146a1-62b7-4ca9-9227-17dd77a83bff": {
+          "tips": [
+            null
+          ]
+        },
+        "0cd7c08c-3b5e-474d-b969-09379b280eb7": {
+          "tips": [
+            null,
+            null
+          ]
+        },
+        "a97a0429-7513-4033-981a-5083e53cb5fa": {
+          "progression_name": "Aplikacja Safari"
+        },
+        "5f23032e-57ac-4348-83a5-11f51f7fb0ae": {
+          "name": "Dziennik"
+        },
+        "480bd8ce-63b7-4e7a-b3b8-4ca537a92404": {
+          "name": "Dziennik"
+        },
+        "39b4d2d4-3669-4a4d-95c6-5b0e22787419": {
+          "name": "System ostrzegania kierowcy"
+        },
+        "b80a8ef4-5582-4800-af10-4e6b47ed3d31": {
+          "tips": [
+            null
+          ]
+        },
+        "ff446722-775a-4c2d-8559-5a2972d5b7ef": {
+          "progression_name": "System ostrzegania kierowcy"
+        },
+        "5a3bc922-3c92-4210-bdc2-c7345b013322": {
+          "tips": [
+            null
+          ],
+          "progression_name": "System ostrzegania kierowcy"
+        },
+        "b30afc3a-5149-4385-a41a-9b0cd7294f72": {
+          "tips": [
+            null
+          ]
+        },
+        "1a4ee80d-1c87-434b-9981-17a8cf843181": {
+          "name": "Dziennik"
+        },
+        "0055af8b-3b0c-4d6c-8002-49ac987e4ef1": {
+          "name": "Dziennik"
+        },
+        "eae60534-cb15-4ca3-9c9b-00af3cf271cd": {
+          "tips": [
+            null
+          ]
+        },
+        "0a70d48a-473d-487f-a621-714ce2feefef": {
+          "tips": [
+            null
+          ]
+        },
+        "cabf7e38-67aa-4a2f-8d67-840855c025cf": {
+          "name": "Dziennik"
+        },
+        "e305f61c-4e35-4683-80eb-7fb3dd08e18a": {
+          "tips": [
+            null
+          ]
+        },
+        "51ebcc76-7c9e-4069-8d92-40d11ca16ff9": {
+          "tips": [
+            null
+          ]
+        },
+        "4416fdaf-83d3-4c57-890c-b3ddfe397637": {
+          "tips": [
+            null
+          ]
+        },
+        "658927aa-b10e-43dc-92c9-a374ccf0dda0": {
+          "tips": [
+            null
+          ]
+        },
+        "88e85890-e724-421e-8ae0-989503735679": {
+          "name": "Refleksja",
+          "progression_name": "Refleksja"
+        },
+        "e7abc5db-65ec-4126-86f3-e459d71b7cad": {
+          "name": "Dziennik"
+        },
+        "550c665e-3d6e-4577-b7e6-bb87fb215b93": {
+          "tips": [
+            null
+          ]
+        },
+        "6d0d899c-5b42-43c6-912d-8aa6e4ad2785": {
+          "tips": [
+            null
+          ]
+        },
+        "b808093d-9c94-4153-98f9-511651225aa4": {
+          "tips": [
+            null
+          ]
+        },
+        "b2e94e92-77e9-4c38-818a-4164c0e3f406": {
+          "tips": [
+            null
+          ]
+        },
+        "f470451d-f4f9-41b9-a06d-dd55a03aa562": {
+          "name": "Dziennik"
+        },
+        "16102c75-7060-4363-a923-2a8edb5f4ddb": {
+          "name": "Dziennik"
+        },
+        "cff87b19-e779-4a36-8476-bee0a4167aa7": {
+          "tips": [
+            null
+          ]
+        },
+        "d4f5b3ab-179d-4896-9402-31a70876c7fc": {
+          "tips": [
+            null
+          ],
+          "progression_name": "Utwórz formularz Google"
+        },
+        "1357a167-3772-4593-aaa2-6b64d7242014": {
+          "tips": [
+            null
+          ]
+        },
+        "b1bffebb-4791-4755-9603-d5853905c9db": {
+          "tips": [
+            null
+          ]
+        },
+        "a5a96c72-9c25-45b4-9496-526932765644": {
+          "tips": [
+            null,
+            null
+          ]
+        },
+        "1bbebd3b-08f1-4833-954c-c2697e631786": {
+          "name": "Ankieta",
+          "progression_name": "Ankieta Kima"
+        },
+        "14221559-e6bb-4acb-b4b8-eef4cbf48f09": {
+          "tips": [
+            null
+          ]
+        },
+        "71e374ca-dda6-42e3-9364-a3b32196d5f8": {
+          "tips": [
+            null
+          ]
+        },
+        "1c67b264-7169-45f5-b0b4-7dc904d39c52": {
+          "tips": [
+            null
+          ]
+        },
+        "860a70be-6e28-4256-8976-9ccdd594592e": {
+          "tips": [
+            null
+          ]
+        },
+        "d27188ad-3471-4e15-839c-bd73d6a26b74": {
+          "tips": [
+            null,
+            null
+          ]
+        },
+        "7a6bc17e-4ad8-4aa4-9d09-e8ff23be6a5e": {
+          "name": "Dziennik"
+        },
+        "4d12300d-c18a-42f1-bfed-7a855f3c0f5f": {
+          "tips": [
+            null
+          ]
+        },
+        "3de8e38f-66cb-4b94-aef1-fded16f9ce6c": {
+          "tips": [
+            null
+          ]
+        },
+        "aa222f85-01e8-4156-a57c-d5be7c160e9c": {
+          "tips": [
+            null
+          ]
+        },
+        "2f9dc1a2-b9fa-405e-b594-4595c5b9d10e": {
+          "tips": [
+            null
+          ]
+        },
+        "3f8db9a6-9885-43b9-b0f7-2726d05c42cf": {
+          "name": "Dziennik"
+        },
+        "c35d126b-513b-4fb4-adef-a08411e166c0": {
+          "name": "Dziennik"
+        },
+        "05d48211-550e-4c37-9ae7-b31446e040ce": {
+          "progression_name": "Importuj swój model"
+        },
+        "302fcae2-5d15-44c3-9729-a13d48214a8c": {
+          "progression_name": "Dodaj powitalny ekran"
+        },
+        "8ef11c70-b2d1-4ec9-9529-4c2bf833cf8d": {
+          "tips": [
+            null
+          ]
+        },
+        "52844a86-ed14-44a9-8a71-ba6c8372524d": {
+          "tips": [
+            null
+          ],
+          "progression_name": "Przejrzyj swoją aplikację"
+        },
+        "eefa6214-7e21-4844-9919-624622292b93": {
+          "name": "Dziennik"
+        },
+        "5bbf798d-9127-46d6-a87a-ae121efa79a2": {
+          "name": "Rozgrzewka"
+        },
+        "7f0599a5-4928-4442-b5df-079fc6d939ca": {
+          "name": "Aktywność",
+          "tips": [
+            null
+          ]
+        },
+        "bf9bfd4a-0b2b-4ac7-812c-d99ed30d9bc3": {
+          "tips": [
+            null
+          ]
+        },
+        "d2097779-03e7-4676-9b35-42feab931a34": {
+          "tips": [
+            null
+          ]
+        },
+        "3d59c017-0b5c-4790-8d9e-fe06731f7554": {
+          "name": "Zakończenie"
+        },
+        "ce1c9f53-0977-4309-9aaa-7902a4cf0d77": {
+          "name": "Rozgrzewka"
+        },
+        "07b875ec-ae94-42a9-8b61-7a91a3f21df9": {
+          "tips": [
+            null
+          ]
+        },
+        "2cddc44b-d3c0-47a9-a2cf-c380e5610ac1": {
+          "name": "Zakończenie"
+        },
+        "add92510-35c9-4480-b48f-12f2a8d1d7a6": {
+          "name": "Rozgrzewka"
+        },
+        "81721b30-4107-4abf-8fbb-8498115ca4a8": {
+          "tips": [
+            null
+          ]
+        },
+        "8ba91ee3-acf5-4281-9689-4ca7827a4790": {
+          "name": "Zakończenie"
+        },
+        "ff532a24-4f4b-4a1b-806f-41b0553a16e7": {
+          "name": "Rozgrzewka"
+        },
+        "6aeb8f69-4e5b-45e9-b1df-aba34951bc33": {
+          "tips": [
+            null
+          ]
+        },
+        "1e8be560-c645-4608-9895-13a6ff693036": {
+          "name": "Zakończenie"
+        },
+        "36e30436-296a-4cb6-a49d-bf51cb67e315": {
+          "name": "Rozgrzewka"
+        },
+        "7e247c47-7b81-48c1-ba14-c522a22d4ae4": {
+          "tips": [
+            null
+          ]
+        },
+        "9d9c0e6c-7eff-41fa-bdd9-0c91966520b4": {
+          "name": "Zakończenie"
+        },
+        "3dbd941c-5a39-4567-95a6-94813b2a6cab": {
+          "name": "Refleksja"
         },
         "a2ad8ae1-c5e2-4fca-a60f-08e20863a9b8": {
           "progression_name": "Moje internetowe sąsiedztwo"
@@ -29761,7 +34957,7 @@
           "description": "<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> \\*\\*Zrób to: \\*\\* Poleć uczniom wybrać wyrażenie, które chcą wyszkolić AI Bota, aby rozpoznawał, i zapisali te informacje w swoim Przewodniku po ćwiczeniach. Uczniowie powinni samodzielnie przechodzić przez poziom, rejestrując informacje w swoim przewodniku po aktywności. Na ostatnim ekranie poproś uczniów o naciśnięcie ikony informacji i zapisanie funkcji, których nauczył się AI Bot, były najważniejsze.\n\n<i class=\"fa fa-refresh\" aria-hidden=\"true\"></i> \\*\\*Krążyć: \\*\\* Sprawdź, czy uczniowie wypełniają swój przewodnik po ćwiczeniach, gdy kończą etapy. Zapytaj uczniów, na jakie funkcje patrzą, aby ustalić, czy ryba spełnia ich kryteria. Uczniowie prawdopodobnie powiedzą, że używają przede wszystkim oczu i ust do określenia ekspresji, ale kiedy klikną ikonę Informacje na ostatnim ekranie, AI Bot może używać dodatkowych funkcji, takich jak kolor i ciało, aby podjąć decyzję. Zachęcaj uczniów, aby zastanowili się, co o tym myślą i porównali to z ich osobistymi doświadczeniami - Na przykład, jeśli ktoś myślał, że jest „głupi” lub „zły” głównie na podstawie ich ubrania.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> \\*\\*Wyświetlanie: \\*\\* Pokaż slajd AI Bot ucząc się rozpoznawać ryby jako „Zły”. Poproś uczniów o omówienie monitu na ekranie: \\_Patrząc na ten ekran, jak myślisz, dlaczego kolor pojawił się jako druga najważniejsza funkcja? \\_\n\n<i class=\"fa fa-lightbulb-o\" aria-hidden=\"true\"></i> \\*\\*Cel dyskusji: \\*\\* Uczniowie powinni zauważyć, że chociaż oczy i usta wydają się „wściekłe” na każdej rybie, na ekranie pojawia się również dużo fioletowych ryb. W rezultacie AI Bot może zacząć myśleć, że kolor „fioletowy” to kolejny sposób na stwierdzenie, czy ryba jest zła, czy nie."
         },
         "5b8653c5-26ef-405b-a0ae-b8839027a4b8": {
-          "description": "<i class=\"fa fa-comments\" aria-hidden=\"true\"></i> \\*\\*Omów: \\*\\* \\_Czy uważasz, że można uznać rybę za „złą” ze względu na jej kolor? \\_"
+          "description": "<i class=\"fa fa-comments\" aria-hidden=\"true\"></i> **Przedyskutuj:** _Czy uważasz, że można uważać rybę za „złą” ze względu na jej kolor?_"
         },
         "a70f681d-ab68-4296-a56c-30117dbee4c3": {
           "description": "<i class=\"fa fa-lightbulb-o\" aria-hidden=\"true\"></i> \\*\\*Cel dyskusji: \\*\\* W pierwszej części pytania poproś uczniów, aby zauważyli, że na ekranie jest dużo fioletowych ryb, więc AI Bot może pomyśleć, że fioletowe ryby są bardziej narażone na gniew niż inne ryby.",
@@ -29784,11 +34980,11 @@
           "description": "Chcielibyśmy dowiedzieć się więcej o ludziach ucząc tych lekcji i doświadczeniach w klasie. Daj nam znać w tym [Jak działa AI Works Teacher Survey](https://docs.google.com/forms/d/e/1FAIpQLSd5Usml_xrjQQ8DdBmZjQc771LcB13FKukCYc3NGLKfVwIneg/viewform)."
         },
         "316385e5-2df8-4e34-b964-6ee28ecc3e7f": {
-          "name": "Lekcje dodatkowe",
+          "name": "Dodatkowe lekcje",
           "description": "Jeśli chcesz uczyć dodatkowych lekcji z serii filmów How AI Works, [kliknij tutaj, aby zapoznać się z dodatkowymi zasobami](https://code.org/ai/how-ai-works)"
         },
         "eb99e343-c072-48cd-84dd-49b6e56e8108": {
-          "name": "Sztuczna inteligencja i uczenie maszynowe",
+          "name": "Jednostka Sztuczna inteligencja i uczenie maszynowe",
           "description": "Jeśli chcesz jeszcze głębiej zagłębić się w sztuczną inteligencję i uczenie maszynowe, rozważ zapoznanie się z naszą 5-tygodniową jednostką na temat sztucznej inteligencji i uczenia maszynowego. [Kliknij tutaj, aby wyświetlić jednostkę i dowiedzieć się więcej](https://studio.code.org/s/aiml-2023?viewAs=Instructor)"
         },
         "a7c37a28-46be-4a1a-b767-99482e8cf353": {
@@ -29926,11 +35122,11 @@
           "description": "Chcielibyśmy dowiedzieć się więcej o ludziach ucząc tych lekcji i doświadczeniach w klasie. Daj nam znać w tym [Jak działa AI Works Teacher Survey](https://docs.google.com/forms/d/e/1FAIpQLSd5Usml_xrjQQ8DdBmZjQc771LcB13FKukCYc3NGLKfVwIneg/viewform)."
         },
         "17a1b7e1-7b2b-47ae-baa2-d3053ddea5dd": {
-          "name": "Lekcje dodatkowe",
+          "name": "Dodatkowe lekcje",
           "description": "Jeśli chcesz uczyć dodatkowych lekcji z serii filmów How AI Works, [kliknij tutaj, aby zapoznać się z dodatkowymi zasobami](https://code.org/ai/how-ai-works)"
         },
         "38017a5c-eb05-4397-b122-8711c1559789": {
-          "name": "Sztuczna inteligencja i uczenie maszynowe",
+          "name": "Jednostka Sztuczna inteligencja i uczenie maszynowe",
           "description": "Jeśli chcesz jeszcze głębiej zagłębić się w sztuczną inteligencję i uczenie maszynowe, rozważ zapoznanie się z naszą 5-tygodniową jednostką na temat sztucznej inteligencji i uczenia maszynowego. [Kliknij tutaj, aby wyświetlić jednostkę i dowiedzieć się więcej](https://studio.code.org/s/aiml-2023?viewAs=Instructor)"
         },
         "5a1c68ad-e858-4aa4-8a9d-b9edaef7dfde": {
@@ -30065,11 +35261,11 @@
           "description": "Chcielibyśmy dowiedzieć się więcej o ludziach ucząc tych lekcji i doświadczeniach w klasie. Daj nam znać w tym [Jak działa AI Works Teacher Survey](https://docs.google.com/forms/d/e/1FAIpQLSd5Usml_xrjQQ8DdBmZjQc771LcB13FKukCYc3NGLKfVwIneg/viewform)."
         },
         "96703b12-be00-4549-add6-28fffea6e76f": {
-          "name": "Lekcje dodatkowe",
+          "name": "Dodatkowe lekcje",
           "description": "Jeśli chcesz uczyć dodatkowych lekcji z serii filmów How AI Works, [kliknij tutaj, aby zapoznać się z dodatkowymi zasobami](https://code.org/ai/how-ai-works)"
         },
         "fde8393e-139e-40ef-b275-1d93b32daf61": {
-          "name": "Sztuczna inteligencja i uczenie maszynowe",
+          "name": "Jednostka Sztuczna inteligencja i uczenie maszynowe",
           "description": "Jeśli chcesz jeszcze głębiej zagłębić się w sztuczną inteligencję i uczenie maszynowe, rozważ zapoznanie się z naszą 5-tygodniową jednostką na temat sztucznej inteligencji i uczenia maszynowego. [Kliknij tutaj, aby wyświetlić jednostkę i dowiedzieć się więcej](https://studio.code.org/s/aiml-2023?viewAs=Instructor)"
         },
         "2913480b-0273-4c5a-95c8-23b002a842a0": {
@@ -30196,11 +35392,11 @@
           "description": "Chcielibyśmy dowiedzieć się więcej o ludziach ucząc tych lekcji i doświadczeniach w klasie. Daj nam znać w tym [Jak działa AI Works Teacher Survey](https://docs.google.com/forms/d/e/1FAIpQLSd5Usml_xrjQQ8DdBmZjQc771LcB13FKukCYc3NGLKfVwIneg/viewform)."
         },
         "e1924cec-7b85-408e-b577-211abaf1f02f": {
-          "name": "Lekcje dodatkowe",
+          "name": "Dodatkowe lekcje",
           "description": "Jeśli chcesz uczyć dodatkowych lekcji z serii filmów How AI Works, [kliknij tutaj, aby zapoznać się z dodatkowymi zasobami](https://code.org/ai/how-ai-works)"
         },
         "e22c70e5-cc6f-4d97-9eff-5736cbb0031a": {
-          "name": "Sztuczna inteligencja i uczenie maszynowe",
+          "name": "Jednostka Sztuczna inteligencja i uczenie maszynowe",
           "description": "Jeśli chcesz jeszcze głębiej zagłębić się w sztuczną inteligencję i uczenie maszynowe, rozważ zapoznanie się z naszą 5-tygodniową jednostką na temat sztucznej inteligencji i uczenia maszynowego. [Kliknij tutaj, aby wyświetlić jednostkę i dowiedzieć się więcej](https://studio.code.org/s/aiml-2023?viewAs=Instructor)"
         },
         "57b4147e-478a-451f-8931-a3b624c15095": {
@@ -30298,11 +35494,11 @@
           "description": "Chcielibyśmy dowiedzieć się więcej o ludziach ucząc tych lekcji i doświadczeniach w klasie. Daj nam znać w tym [Jak działa AI Works Teacher Survey](https://docs.google.com/forms/d/e/1FAIpQLSd5Usml_xrjQQ8DdBmZjQc771LcB13FKukCYc3NGLKfVwIneg/viewform)."
         },
         "5563b254-81f3-4d70-aa2a-c1551f9b8342": {
-          "name": "Lekcje dodatkowe",
+          "name": "Dodatkowe lekcje",
           "description": "Jeśli chcesz uczyć dodatkowych lekcji z serii filmów How AI Works, [kliknij tutaj, aby zapoznać się z dodatkowymi zasobami](https://code.org/ai/how-ai-works)"
         },
         "5da9894d-da25-4e52-9baa-3da9650a59b5": {
-          "name": "Sztuczna inteligencja i uczenie maszynowe",
+          "name": "Jednostka Sztuczna inteligencja i uczenie maszynowe",
           "description": "Jeśli chcesz jeszcze głębiej zagłębić się w sztuczną inteligencję i uczenie maszynowe, rozważ zapoznanie się z naszą 5-tygodniową jednostką na temat sztucznej inteligencji i uczenia maszynowego. [Kliknij tutaj, aby wyświetlić jednostkę i dowiedzieć się więcej](https://studio.code.org/s/aiml-2023?viewAs=Instructor)"
         },
         "b4aa3386-cb77-4253-89c8-2c255a7d620f": {
@@ -30415,11 +35611,11 @@
           "description": "Chcielibyśmy dowiedzieć się więcej o ludziach ucząc tych lekcji i doświadczeniach w klasie. Daj nam znać w tym [Jak działa AI Works Teacher Survey](https://docs.google.com/forms/d/e/1FAIpQLSd5Usml_xrjQQ8DdBmZjQc771LcB13FKukCYc3NGLKfVwIneg/viewform)."
         },
         "8eec1224-f52f-468c-95ef-a7bcb08099ca": {
-          "name": "Lekcje dodatkowe",
+          "name": "Dodatkowe lekcje",
           "description": "Jeśli chcesz uczyć dodatkowych lekcji z serii filmów How AI Works, [kliknij tutaj, aby zapoznać się z dodatkowymi zasobami](https://code.org/ai/how-ai-works)"
         },
         "3b11d58b-5f61-4c4e-8ba2-576cbf7d6c45": {
-          "name": "Sztuczna inteligencja i uczenie maszynowe",
+          "name": "Jednostka Sztuczna inteligencja i uczenie maszynowe",
           "description": "Jeśli chcesz jeszcze głębiej zagłębić się w sztuczną inteligencję i uczenie maszynowe, rozważ zapoznanie się z naszą 5-tygodniową jednostką na temat sztucznej inteligencji i uczenia maszynowego. [Kliknij tutaj, aby wyświetlić jednostkę i dowiedzieć się więcej](https://studio.code.org/s/aiml-2023?viewAs=Instructor)"
         },
         "17bd5635-8ba9-4318-96e4-d1e3bedf918b": {
@@ -30468,11 +35664,11 @@
           "description": "Chcielibyśmy dowiedzieć się więcej o ludziach ucząc tych lekcji i doświadczeniach w klasie. Daj nam znać w tym [Jak działa AI Works Teacher Survey](https://docs.google.com/forms/d/e/1FAIpQLSd5Usml_xrjQQ8DdBmZjQc771LcB13FKukCYc3NGLKfVwIneg/viewform)."
         },
         "086a57eb-d6b8-46d9-860c-cc3cd0dc9c52": {
-          "name": "Lekcje dodatkowe",
+          "name": "Dodatkowe lekcje",
           "description": "Jeśli chcesz uczyć dodatkowych lekcji z serii filmów How AI Works, [kliknij tutaj, aby zapoznać się z dodatkowymi zasobami](https://code.org/ai/how-ai-works)"
         },
         "8c9e0a32-aa02-41bc-b26d-131dea4ceac6": {
-          "name": "Sztuczna inteligencja i uczenie maszynowe",
+          "name": "Jednostka Sztuczna inteligencja i uczenie maszynowe",
           "description": "Jeśli chcesz jeszcze głębiej zagłębić się w sztuczną inteligencję i uczenie maszynowe, rozważ zapoznanie się z naszą 5-tygodniową jednostką na temat sztucznej inteligencji i uczenia maszynowego. [Kliknij tutaj, aby wyświetlić jednostkę i dowiedzieć się więcej](https://studio.code.org/s/aiml-2023?viewAs=Instructor)"
         },
         "1b97cdf1-c60b-4103-9144-5414aa7a2183": {
@@ -30540,11 +35736,11 @@
           "description": "Chcielibyśmy dowiedzieć się więcej o ludziach ucząc tych lekcji i doświadczeniach w klasie. Daj nam znać w tym [Jak działa AI Works Teacher Survey](https://docs.google.com/forms/d/e/1FAIpQLSd5Usml_xrjQQ8DdBmZjQc771LcB13FKukCYc3NGLKfVwIneg/viewform)."
         },
         "9f7f1bb2-91d4-4640-b226-7e511cd54e9b": {
-          "name": "Lekcje dodatkowe",
+          "name": "Dodatkowe lekcje",
           "description": "Jeśli chcesz uczyć dodatkowych lekcji z serii filmów How AI Works, [kliknij tutaj, aby zapoznać się z dodatkowymi zasobami](https://code.org/ai/how-ai-works)"
         },
         "6fcccbbf-5b1b-4d65-98bd-8c37c03da53b": {
-          "name": "Sztuczna inteligencja i uczenie maszynowe",
+          "name": "Jednostka Sztuczna inteligencja i uczenie maszynowe",
           "description": "Jeśli chcesz jeszcze głębiej zagłębić się w sztuczną inteligencję i uczenie maszynowe, rozważ zapoznanie się z naszą 5-tygodniową jednostką na temat sztucznej inteligencji i uczenia maszynowego. [Kliknij tutaj, aby wyświetlić jednostkę i dowiedzieć się więcej](https://studio.code.org/s/aiml-2023?viewAs=Instructor)"
         },
         "bdbf2184-a699-461e-b766-8b3e35e1a5e8": {

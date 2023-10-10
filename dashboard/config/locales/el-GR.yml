@@ -10,6 +10,7 @@ el:
         error:
           future: δεν μπορεί να είναι στο μέλλον
         finish_sign_up_header: Ολοκληρώστε τη δημιουργία του λογαριασμού σας
+        finish_sign_up_header_error: 'Παρακαλώ διορθώστε τα ακόλουθα σφάλματα:'
         finish_sign_up_subheader: Συμπληρώστε τις παρακάτω πληροφορίες για να ολοκληρώσετε
           τη δημιουργία λογαριασμού Code.org μέσω <strong>%{email}</strong>.
         finish_sign_up_subheader_markdown: Συμπληρώστε τις παρακάτω πληροφορίες για
@@ -33,6 +34,7 @@ el:
           κλικ εδώ αν δεν έχετε διεύθυνση ηλεκτρονικού ταχυδρομείου)](%{url})
         reset_password_token: Ο σύνδεσμος επαναφοράς κωδικού πρόσβασης που ακολουθήσατε
         us_state: Νομός
+        user_type: Τύπος λογαριασμού
         username: 'όνομα χρήστη '
         verified_teacher: Επαληθευμένος Δάσκαλος
     errors:

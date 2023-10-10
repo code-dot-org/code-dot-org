@@ -10,6 +10,7 @@ sq:
         error:
           future: nuk mund të jetë në të ardhmen
         finish_sign_up_header: Përfundo krijimin e llogarisë
+        finish_sign_up_header_error: 'Të lutem korrigjo gabimet që vijojnë:'
         finish_sign_up_subheader: Plotëso informacionin e mëposhtëm për të përfunduar
           krijimin e një llogarie në Code.org <strong>%{email}</strong>.
         finish_sign_up_subheader_markdown: Plotëso informacionin e mëposhtëm për të
@@ -33,6 +34,7 @@ sq:
           një adresë email-i)](%{url})
         reset_password_token: Linku i rivendosjes së fjalëkalimit që keni ndjekur
         us_state: Shteti
+        user_type: Lloji i llogarisë
         username: Emri i përdoruesit
         verified_teacher: Mësimdhënës i verifikuar
     errors:
@@ -135,7 +137,7 @@ sq:
         nga shfletuesit që suportohen</a>. Ju mund të provoni ta shikoni faqen, por
         mundet që të mos funksionojë.
       weblab_unsupported_locale_storage: Ju mund të hasni probleme duke përdorur Web
-        Lab në modalitetin e Shfletimit Privat. Ju lutemi ringarkoni projektin tuaj
+        Lab në modalitetin e shfletimit privat. Ju lutemi ringarkoni projektin tuaj
         në gjendje normal. Na vjen keq për shqetësimin.
   confirm: Konfirmo
   continue: Vazhdo
@@ -497,7 +499,7 @@ sq:
       about_partners: Partnerët
       about_team: Ekipi i plotë
       about_us: Rreth nesh
-      course_catalog: Katalogu i kursit
+      course_catalog: Katalogu i kurseve
       educate_beyond: Përtej Code.org
       educate_community: Komuniteti Online
       educate_elementary: Shkolla Fillore
@@ -542,7 +544,7 @@ sq:
       puzzle_map: Fazat
     user:
       already_registered: Jeni i rregistruar?
-      applab: Laboratori i Aplikacioneve
+      applab: App Lab
       artist: Artisti
       bounce: Hidhu
       calc: Llogarit

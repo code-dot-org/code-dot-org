@@ -35,6 +35,10 @@ ga:
   africa_campaign_date_full: Deireadh Fómhair 1 - Nollaig 18
   africa_campaign_date_year: '2022'
   africa_campaign_date_full_year: Deireadh Fómhair 1, 2022 - Nollaig 18, 2022
+  hoc2023_header: Cruthaitheacht le AI
+  hoc2023_social_creativity_with_ai_title: Uair an Chóid - Cad a chruthóidh tú?
+  hoc2023_social_creativity_with_ai_desc: Bain úsáid as ríomheolaíocht chun iniúchadh
+    a dhéanamh agus foghlaim faoi AI!
   hoc2022_header: Déan iniúchadh, Play, Cruthaigh!
   social_hoc2022_explore_play_create: Bain úsáid as ríomheolaíocht chun iniúchadh,
     imirt, agus a chruthú!
@@ -189,6 +193,28 @@ ga:
     maith le Catalog Curaclaim nua agus athdheartha Leathanach Teach chun cabhrú leat
     é a fháil ar fad!
   in_partnership_with: I gcomhpháirtíocht le
+  shop_code_dot_org_heading: Siopa Code.org
+  shop_code_dot_org_desc: Tacaigh lenár gcuid oibre agus caith an ghluaiseacht le
+    bród. Ár hataí a bheith caite ag an Uachtarán Obama agus cáiliúla freisin.
+  spread_the_word_heading: Scaip an focal
+  spread_the_word_desc: Amplify ár dtionchar trí roinnt Code.org le do líonra. Ó na
+    meáin shóisialta go nuashonruithe ríomhphoist, faigh amach conas is féidir leat
+    cabhrú linn níos mó oideachasóirí, mac léinn agus abhcóidí a bhaint amach.
+  follow_us_heading: Lean muid ar na meáin shóisialta
+  follow_us_desc: Fan suas chun dáta linn ar na meáin shóisialta agus ár bpoist a
+    roinnt le do líonra chun fanacht ar an eolas agus chun cabhrú le feasacht a spreagadh.
+  facebook: Facebook
+  twitter: Twitter
+  linked_in: LinkedIn
+  instagram: Instagram
+  tik_tok: TikTok
+  subscribe_to_emails_heading: Liostáil le ríomhphoist
+  subscribe_to_emails_desc: Léigh faoi na rudaí atá ag tarlú ag Code.org agus in oideachas
+    eolaíochta ríomhaireachta trí nuashonruithe ráithiúla trínár liosta seoltaí.
+  subscribe_to_emails_intl: Liostáil le nuashonruithe idirnáisiúnta
+  promote_code_dot_org_heading: Code.org a chur chun cinn
+  promote_code_dot_org_desc: eolaíocht ríomhaireachta a chur chun cinn i do cheantar
+    le cabhair ó stats, Sleachta, agus físeáin.
   afe_partnership_logo_alt: Lógó Innealtóir Todhchaí Amazon
   afe_partnership_thanks_desc: Is clár cuimsitheach leanaí-go-gairme é Amazon Future
     Engineer chun leanaí agus daoine óga ar ioncam íseal agus daoine óga faoi mhíbhuntáiste
@@ -209,6 +235,15 @@ ga:
   curricula_desc_high: Brabhsáil na cúrsaí agus na gníomhaíochtaí láidre a thugann
     cuireadh duit féin agus do dhaltaí scoile ard chun tochailt níos doimhne san eolaíocht
     ríomhaireachta.
+  for_administrators_heading: Do riarthóirí
+  for_administrators_desc: Bí ar na mílte scoileanna a bhfuil eolaíocht ríomhaireachta
+    ionchorpraithe acu ina gcuraclam cheana féin.
+  for_parents_heading: Do thuismitheoirí
+  for_parents_desc: Is féidir leat cabhrú le scoil do mhic léinn a spreagadh chun
+    oideachas eolaíochta ríomhaireachta a thairiscint nó a leathnú.
+  for_educators_heading: Do oideachasóirí
+  for_educators_desc: Tosaigh ag múineadh inniu - níl aon taithí eolaíochta ríomhaireachta
+    riachtanach - lenár gceardlanna foghlama gairmiúla.
   students_label: Mic Léinn
   teachers_label: Múinteoirí
   teacher_label_csf: CS Bunúsacha Múinteoir
@@ -218,10 +253,11 @@ ga:
   teacher_label_csa: AP® Computer Science A Teacher
   required_materials: 'Ábhair Riachtanacha:'
   optional_materials: 'Ábhair Roghnach:'
-  call_to_action_explore_roles: Déan iniúchadh ar róil oscailte
+  call_to_action_hold_an_event: Coinnigh ócáid
   call_to_action_learn_more: Níos mó a fhoghlaim
   call_to_action_watch_now: Bí ag faire anois
   call_to_action_try_activity: Bain triail as gníomhaíocht
+  call_to_action_try_activities: Bain triail as gníomhaíochtaí
   call_to_action_explore_unit: Déan iniúchadh ar an aonad
   call_to_action_explore_curriculum: Fiosraigh an
   call_to_action_explore_curriculum_options: Féach ar roghanna curaclaim
@@ -290,7 +326,20 @@ ga:
   call_to_action_notify_available: Cuir in iúl dom nuair atá sé ar fáil
   call_to_action_register_early_access: Cláraigh le haghaidh rochtain luath
   call_to_action_open_positions: Féach ar phoist oscailte
+  call_to_action_explore_roles: Déan iniúchadh ar róil oscailte
   call_to_action_get_guide: Faigh an treoir
+  call_to_action_donate_to_cdo: Síntiúis do Code.org
+  call_to_action_start_fundraiser: Tosaigh tiomsaitheoir airgid
+  call_to_action_view_donation_policy: Féach ar an mbeartas síntiús
+  call_to_action_view_donate_bitpay: Síntiúis le BitPay
+  call_to_action_make_a_donation: Déan síntiús
+  call_to_action_other_ways_to_give: Bealaí eile le tabhairt
+  call_to_action_become_partner_usa: Bí i do chomhpháirtí de chuid na Stát Aontaithe
+  call_to_action_become_partner_intl: Bí i do chomhpháirtí idirnáisiúnta
+  call_to_action_become_a_volunteer: Bí i do oibrí deonach
+  call_to_action_start_translating: Tosaigh ag aistriú
+  call_to_action_learn_about_advocacy: Foghlaim faoinár n-abhcóideacht
+  call_to_action_visit_store: Tabhair cuairt ar an siopa
   aria_label_call_to_action_afe: Níos mó a fhoghlaim faoi Innealtóir Todhchaí Amazon
   aria_label_call_to_action_teaching_csf: Tosaigh an Teagasc Eolaíocht Ríomhaireachta
     Bunúsaigh clár foghlama gairmiúla
@@ -400,6 +449,7 @@ ga:
   curriculum_name_csp: Prionsabail na Ríomheolaíochta
   curriculum_name_csc: Naisc Eolaíocht Ríomhaireachta
   curriculum_name_csa: AP® Eolaíocht Ríomhaireachta A
+  curriculum_name_csa_ai: Innealtóireacht Bogearraí & Fís Ríomhaireachta
   curriculum_name_csc_02: Aon Modúl CS Connections
   curriculum_name_ai: AI & Meaisín Foghlama
   curriculum_name_artificial_intelligence: Intleacht Shaorga (AI)
@@ -479,6 +529,12 @@ ga:
     cluichí agus córais ríomhaireachta fisiciúla a thógáil.
   curriculum_desc_csp: Saor in aisce, AP® CSP formhuinithe, cúrsa tosaigh scoil ard
     a tugtar isteach do mhic léinn na coincheapa foundational na heolaíochta ríomhaireachta.
+  curriculum_desc_csa_ai_long: 'Tugann an modúl CSA iar-AP dhá chaibidil seo taithí
+    phraiticiúil do mhic léinn ardscoile le huirlisí forbartha bogearraí gairmiúla,
+    lena n-áirítear GitHub agus GitHub Copilot, agus tugann sé scileanna an domhain
+    dóibh chun clár fís ríomhaire a fhorbairt. '
+  curriculum_desc_csa_ai_short: Tugann an modúl CSA Iar-AP® seo taithí phraiticiúil
+    do dhaltaí scoile ard le huirlisí forbartha bogearraí gairmiúla.
   collection_hardware: Fócas ar Crua-earraí
   collection_hardware_desc: Cumhachtaíonn sé do mhic léinn sonraí agus gairis fhisiciúla
     a úsáid chun fadhbanna a réiteach.
@@ -555,6 +611,7 @@ ga:
   module_duration_2_hrs: 2 uair an chloig
   module_duration_3_hrs: 3 uair an chloig
   module_duration_5_hrs: 5 uair an chloig
+  module_duration_5_hrs_plus: 5+ uair an chloig
   module_duration_8_hrs: 8 n-uair an chloig
   module_duration_20_hrs: 20 uair an chloig
   module_duration_35_hrs: 35 uair an chloig
@@ -636,6 +693,8 @@ ga:
   heading_objects_first: Cuspóirí ar dtús
   heading_these_lessons_will: 'Déanfaidh na ceachtanna seo:'
   heading_explore_curriculum_catalog: Fiosraigh ár gcúrsaí go léir sa Chatalóg Churaclaim
+  heading_csa_ai: Ag féachaint do rudaí a dhéanamh tar éis an scrúdú AP®?
+  heading_bring_cs_to_students: An eolaíocht ríomhaireachta a thabhairt do mhic léinn
   professional_learning_section_desc: Faigh an tacaíocht atá uait agus tú ag ullmhú
     chun múineadh. Is breá le múinteoirí é, agus níos mó ná 90% á rangú mar an fhorbairt
     ghairmiúil is fearr riamh!
@@ -669,6 +728,23 @@ ga:
     a d'fhéadfadh a bheith agat maidir le tosú ag teagasc le Code.org a fhreagairt.
     Is féidir leat ceist a chur ar mhúinteoirí eile freisin faoina dtaithí ar ár bhfóraim
     múinteoirí.
+  subscribe_form_section_title: Liostáil le haghaidh nuashonruithe
+  subscribe_form_section_desc_csa: Cláraigh a fháil r-phoist míosúil faoi Code.org
+    ar AP® Eolaíocht Ríomhaireachta A agus a fháil cabhrach meabhrúcháin, leideanna,
+    agus nuashonruithe a sheoladh ceart chun do bhosca.
+  subscribe_form_section_desc_csc: Cláraigh a fháil r-phoist míosúil faoi Code.org
+    ar Naisc Eolaíocht Ríomhaireachta agus meabhrúcháin cabhrach, leideanna, agus
+    nuashonruithe a sheoladh ceart chun do bhosca a fháil.
+  subscribe_form_section_desc_csd: Cláraigh chun ríomhphoist mhíosúla a fháil faoi
+    Fionnachtana Eolaíochta Ríomhaireachta Code.org agus faigh meabhrúcháin chabhracha,
+    leideanna agus nuashonruithe a sheoltar ceart chuig do bhosca isteach.
+  subscribe_form_section_desc_csf: Cláraigh a fháil r-phoist míosúil faoi Bunúsaigh
+    Eolaíocht Ríomhaireachta Code.org agus a fháil meabhrúcháin cabhrach, leideanna,
+    agus nuashonruithe a sheoladh ceart chun do bhosca.
+  subscribe_form_section_desc_csp: Cláraigh a fháil r-phoist míosúil faoi Prionsabail
+    Eolaíocht Ríomhaireachta Code.org agus meabhrúcháin cabhrach, leideanna, agus
+    nuashonruithe a sheoladh ceart chun do bhosca a fháil.
+  subscribe_form_section_unsubscribe: Is féidir leat díliostáil ag am ar bith.
   blockchain_hero_heading: Conas a Oibríonn Blockchain
   blockchain_hero_desc: Léim isteach i saol na blockchain le “Conas a Oibríonn Blockchain,”
     ár sraith físeán nua agus ceachtanna a ghabhann leis!
@@ -779,6 +855,9 @@ ga:
     Tá gach ceacht péireáilte le físeán amháin ón tsraith, ag tumadh níos doimhne
     isteach sna coincheapa a tugadh isteach sna físeáin.
   ai_curriculum_btn_aria_label_04: Déan iniúchadh ar an gcaoi a n-oibríonn AI ceachtanna
+  ai_curriculum_grades_05: 'Leibhéil Grád: 9-12'
+  ai_curriculum_btn_aria_label_05: Déan iniúchadh ar an modúl Innealtóireachta Bogearraí
+    & Fís Ríomhaireachta
   ai_carousel_heading: 'Cad a deir múinteoirí faoi AI le Code.org:'
   ai_carousel_quote_01: Thug an ceacht seo deis do mo mhic léinn a fheiceáil go bhfuil
     gné tuairime i gcórais aicmithe. Níos déanaí, nuair a thosaíomar ag feiceáil conas
@@ -906,6 +985,7 @@ ga:
     meascán saibhir teoirice, samplaí praiticiúla, agus acmhainní, tá sé mar aidhm
     aige oideachasóirí a chumasú le nascleanúint a dhéanamh ar thírdhreach AI agus
     eispéiris foghlama na mac léinn a fheabhsú.
+  ai_pl_101_resources_5: Treoir maidir le Cur Chuige Freagrach i leith AI a Chinntiú
   ai_pl_101_video_desc_6: 'Níos mó a fhoghlaim faoin teicneolaíocht nua atá ag tiomáint
     na n-athruithe móra in AI, ina bhfuil dhá fhíseán nua ar Mhúnlaí Teanga Móra (cosúil
     le ChatGPT) agus AI Giniúnach. Éist leis an gcaoi a n-oibríonn na teicneolaíochtaí
@@ -916,6 +996,9 @@ ga:
     LLManna cosúil le ChatGPT, ó thosaitheoirí go hardleibhéal. San áireamh tá leideanna
     tosaithe dóibh siúd atá ag tumadh a gcuid toes isteach, chomh maith le huirlisí
     chun cinn dóibh siúd atá ag iarraidh a gcumas a uasmhéadú.
+  ai_pl_101_resources_3: Leideanna AI chun Foghlaim na Mac Léinn a Athrú
+  ai_pl_101_resources_section_title: Tuilleadh bealaí le foghlaim faoi AI
+  ai_pl_101_resources_guide: 'Treoir chompánach:'
   how_ai_works_hero_heading: Conas a Oibríonn AI
   how_ai_works_hero_desc: Léim isteach i saol AI le “How AI Works,” ár sraith físe
     agus na ceachtanna tionlacain!
@@ -1344,8 +1427,8 @@ ga:
     Animation
   csp_page_curriculum_glance_devices: Laptop, Chromebook
   csp_page_curriculum_glance_tools: App Lab
-  csp_page_curriculum_glance_professional_learning: Facilitator-led Workshops, Self-paced
-    Modules
+  csp_page_curriculum_glance_professional_learning: Ceardlanna faoi stiúir Éascaitheora,
+    Modúil Féin-paced
   csp_page_curriculum_glance_professional_languages: Gaeilge
   csp_page_curriculum_glance_professional_accessibility_features: Text-to-speech,
     Closed captioning, Immersive reader
@@ -1473,8 +1556,8 @@ ga:
     Dearadh, Clárú
   csd_page_curriculum_glance_devices: Laptop, Chromebook
   csd_page_curriculum_glance_tools: App Lab, Cluiche Lab, AI Lab, Web Lab
-  csd_page_curriculum_glance_professional_learning: Facilitator-led Workshops, Self-paced
-    Modules
+  csd_page_curriculum_glance_professional_learning: Ceardlanna faoi stiúir Éascaitheora,
+    Modúil Féin-paced
   csd_page_curriculum_glance_professional_languages: Gaeilge
   csd_page_curriculum_glance_professional_accessibility_features: Text-to-speech,
     Closed captioning, Immersive reader
@@ -1626,8 +1709,8 @@ ga:
     agus Dearadh, Dearadh App
   csf_page_curriculum_glance_devices: Glúine, Chromebook, Tablet
   csf_page_curriculum_glance_tools: Sprite Lab, Play Lab
-  csf_page_curriculum_glance_professional_learning: Facilitator-led Workshops, Self-paced
-    Modules
+  csf_page_curriculum_glance_professional_learning: Ceardlanna faoi stiúir Éascaitheora,
+    Modúil Féin-paced
   csf_page_curriculum_glance_languages: Arabic, Bahasa Indonesian, Catalán, Sínis
     Simplithe, Chinese Traditional, Czech, Fraincis, Gearmáinis, Hiondúis, italian,
     Seapánach, Cóiréis, Cannabis, Malay, Maraitis, Mongóilis, Polainnis, Portaingéilis-BR,
@@ -1771,6 +1854,64 @@ ga:
   csa_page_faq_answer_08_02: For more information about the values that guided our
     work, please see our [curriculum values](%{curriculum_values_url}) and our [professional
     learning values](%{pl_values_url}).
+  donate_page_top_heading: Cuidigh lenár misean a mhaoiniú
+  donate_page_top_desc: Breoslaíonn gach síntiús misean Code.org chun rochtain ar
+    oideachas eolaíochta ríomhaireachta a leathnú. Cuirimid roinnt bealaí ar fáil
+    chun tú a bhronnadh agus difríocht a dhéanamh.
+  donate_page_fundraise_title: Tiomsú Airgid do Code.org
+  donate_page_fundraise_desc: Cabhair airgead a bhailiú le haghaidh Code.org! Ba chóir
+    go mbeadh an deis ag gach dalta i ngach scoil eolaíocht ríomhaireachta a fhoghlaim.
+  donate_page_other_ways_title: Bealaí eile le tabhairt
+  donate_page_other_ways_desc: Déan iniúchadh ar mhodhanna éagsúla chun cur leis,
+    agus faigh an rogha is fearr a oireann duit. Cuireann gach gotha, mór nó beag,
+    ár misean ar aghaidh.
+  donate_page_501c3: Code.org cláraithe mar poiblí 501 (c) (3) eagraíocht neamhbhrabúis.
+    Tá ranníocaíochtaí le Code.org inasbhainte ó thaobh cánach de a mhéid a cheadaítear
+    le dlí. Is uimhir aitheantais cánach Code.org ar 46-0858543.
+  donate_page_donation_policy_title: Tuiscint a fháil ar ár bPolasaí Síntiúis
+  donate_page_donation_policy_desc: Faigh amach faoin gcaoi a ndéanaimid do chuid
+    ranníocaíochtaí a láimhseáil agus a leithdháileadh.
+  donate_tabs_tab_label_daf_direct: DAF Díreach
+  donate_tabs_tab_label_amazon: Amazon
+  donate_tabs_tab_label_bitpay: BitPay
+  donate_tabs_tab_label_employee_match: Cluiche Fostaí
+  donate_tabs_daf_direct_title: Síntiúis via DAF Díreach
+  donate_tabs_daf_direct_desc: Síntiúis trí do chiste deontóir-comhairle le Fidelity
+    Carthanachta, Schwab Carthanachta, nó BNY Mellon agus do mholadh deontais a Code.org
+    tríd an bhfoirm DAF Direct ar líne.
+  donate_tabs_amazon_title: Síntiúis via Amazon
+  donate_tabs_amazon_desc: Síntiúis go díreach ag baint úsáide as do chuntas Amazon.
+    Le ach cúpla cad a tharlaíonn, cur seamlessly le misean Code.org agus cumhacht
+    a thabhairt don todhchaí an oideachais eolaíochta ríomhaireachta.
+  donate_tabs_bitpay_title: Síntiúis le Crypto via BitPay
+  donate_tabs_bitpay_desc: Glacadh leis an todhchaí a thabhairt le cryptocurrency.
+    Trí BitPay, Is féidir le d'airgeadra digiteach tacaíocht dhíreach iarrachtaí Code.org
+    i leathnú oideachas eolaíocht ríomhaireachta.
+  help_page_top_heading: Conas is féidir leat cabhrú
+  help_page_top_desc: Tacú lenár misean eolaíocht ríomhaireachta a dhéanamh inrochtana
+    do gach leanbh, i ngach áit. Cuidíonn d'iarrachtaí linn nuálaithe sa todhchaí
+    a spreagadh agus an bhearna oideachais ardteicneolaíochta a dhúnadh.
+  help_page_top_subhead: Déan síntiús a Code.org
+  help_page_top_desc_02: Táimid ag obair chun deis a thabhairt do gach mac léinn ríomheolaíocht
+    a fhoghlaim - ar líne AGUS i scoileanna araon, áit a mbunaímid cúrsaí buana agus
+    traenáil a chur ar mhúinteoirí. I gcás gach dollar a bhronnann tú, tugtar leanbh
+    amháin isteach san eolaíocht ríomhaireachta.
+  help_page_partners_heading: Bí i do pháirtí
+  help_page_partners_desc: Oibríonn Code.org le heagraíochtaí neamhbhrabúis eile mar
+    chomhpháirtithe chun cabhrú le eolaíocht ríomhaireachta a scaipeadh ar bhealach
+    áitiúil, inbhuanaithe. Níos mó a fhoghlaim faoi ár gclár.
+  help_page_volunteer_heading: Oibrí Deonach i seomra ranga
+  help_page_volunteer_desc: Deonach a mhúineadh an Uair an Chóid nó a bheith ina aoichainteoir
+    i seomra ranga áitiúil. Cláraigh le cloisteáil faoi dheiseanna in aice leat.
+  help_page_translate_heading: Cabhraigh linn aistriú
+  help_page_translate_desc: D'aistrigh oibrithe deonacha ár ranganna teagaisc i mbreis
+    agus 45 teanga. Cuidigh linn leanúint ar aghaidh ag leathnú ár ranganna teagaisc
+    do mhic léinn ar fud an domhain!
+  help_page_speak_for_cs_heading: Labhair suas le haghaidh oideachas eolaíochta ríomhaireachta
+  help_page_speak_for_cs_desc: Níos mó a fhoghlaim faoi obair abhcóideachta Code.org
+    ar fud na Stáit Aontaithe agus na deich polasaithe molaimid stáit a ghlacadh a
+    dhéanamh eolaíocht ríomhaireachta foundational do gach mac léinn. Plus, a fháil
+    amach conas is féidir leat tiomáint athrú i do stáit.
   hoc_live: Uair an Chóid Beo
   hoc_live_sign_up_title: Cláraigh le haghaidh Uair an Chóid Beo
   hoc_live_learn_title: Foghlaim le Uair an Chóid Beo
@@ -14268,6 +14409,11 @@ ga:
     (1 nóiméad)
   video_library_page_inspirational_video_title_12: Lo Que Falta En Núicstras Escuelas
     (2 min)
+  video_library_page_inspirational_video_title_13: Ceiliúrann NASA Uair an Chóid (2
+    nóiméad)
+  video_library_page_inspirational_video_title_14: Tá sé Níos Mó ná Cluiche (1 nóiméad)
+  video_library_page_inspirational_video_title_15: Cruthaigh Le Eolaíocht Ríomhaireachta
+    (1 nóiméad)
   video_library_page_not_hacked_video_title_1: 'Conas Gan a Faigh Hacked: Réamhrá'
   video_library_page_not_hacked_video_title_2: 'Conas Gan a Faigh Hacked: Pasfhocail'
   video_library_page_not_hacked_video_title_3: 'Conas Gan a Faigh Hacked: Fíordheimhniú

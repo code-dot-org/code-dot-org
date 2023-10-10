@@ -27,7 +27,7 @@ export default function RubricEditor({
       {renderLearningGoalItems}
       <Button
         color={Button.ButtonColor.gray}
-        text="Add new Key Concept"
+        text={'Add new Key Concept'}
         onClick={addNewConcept}
         size={Button.ButtonSize.narrow}
         icon="plus-circle"

@@ -12,12 +12,22 @@
           "saveModel": "[șir gol]",
           "uploadedDataset": "[șir gol]"
         },
+        "ml-bad data-club investigations_2023": {
+          "modelSummary": "[șir gol]",
+          "saveModel": "[șir gol]",
+          "uploadedDataset": "[șir gol]"
+        },
         "ml-bad data-loneliness all": {
           "modelSummary": "[șir gol]",
           "saveModel": "[șir gol]",
           "uploadedDataset": "[șir gol]"
         },
         "ml-bad data-loneliness all_2022": {
+          "modelSummary": "[șir gol]",
+          "saveModel": "[șir gol]",
+          "uploadedDataset": "[șir gol]"
+        },
+        "ml-bad data-loneliness all_2023": {
           "modelSummary": "[șir gol]",
           "saveModel": "[șir gol]",
           "uploadedDataset": "[șir gol]"
@@ -29,6 +39,12 @@
           "uploadedDataset": "[șir gol]"
         },
         "ml-data decisions-zoo1_2022": {
+          "selectDataset": "[șir gol]",
+          "selectedDataset": "[șir gol]",
+          "selectedFeatureNumerical": "[șir gol]",
+          "uploadedDataset": "[șir gol]"
+        },
+        "ml-data decisions-zoo1_2023": {
           "selectDataset": "[șir gol]",
           "selectedDataset": "[șir gol]",
           "selectedFeatureNumerical": "[șir gol]",
@@ -46,6 +62,12 @@
           "selectedFeatureNumerical": "[șir gol]",
           "uploadedDataset": "[șir gol]"
         },
+        "ml-data decisions-zoo2_2023": {
+          "selectDataset": "[șir gol]",
+          "selectedDataset": "[șir gol]",
+          "selectedFeatureNumerical": "[șir gol]",
+          "uploadedDataset": "[șir gol]"
+        },
         "ml-data decisions-zoo3-2021": {
           "selectDataset": "[șir gol]",
           "selectedDataset": "[șir gol]",
@@ -58,11 +80,21 @@
           "selectedFeatureNumerical": "[șir gol]",
           "uploadedDataset": "[șir gol]"
         },
+        "ml-data decisions-zoo3_2023": {
+          "selectDataset": "[șir gol]",
+          "selectedDataset": "[șir gol]",
+          "selectedFeatureNumerical": "[șir gol]",
+          "uploadedDataset": "[șir gol]"
+        },
         "ml-good data-upload isaac csv": {
           "modelSummary": "[șir gol]",
           "saveModel": "[șir gol]"
         },
         "ml-good data-upload isaac csv_2022": {
+          "modelSummary": "[șir gol]",
+          "saveModel": "[șir gol]"
+        },
+        "ml-good data-upload isaac csv_2023": {
           "modelSummary": "[șir gol]",
           "saveModel": "[șir gol]"
         },
@@ -84,6 +116,15 @@
           "selectedFeatureNumerical": "[șir gol]",
           "uploadedDataset": "[șir gol]"
         },
+        "ml-intro ai lab-shapes v1_2023": {
+          "dataDisplayLabel": "[șir gol]",
+          "modelSummary": "[șir gol]",
+          "saveModel": "[șir gol]",
+          "selectDataset": "[șir gol]",
+          "selectedDataset": "[șir gol]",
+          "selectedFeatureNumerical": "[șir gol]",
+          "uploadedDataset": "[șir gol]"
+        },
         "ml-intro categorical-food choices-2021": {
           "dataDisplayLabel": "[șir gol]",
           "modelSummary": "[șir gol]",
@@ -92,6 +133,13 @@
           "uploadedDataset": "[șir gol]"
         },
         "ml-intro categorical-food choices_2022": {
+          "dataDisplayLabel": "[șir gol]",
+          "modelSummary": "[șir gol]",
+          "saveModel": "[șir gol]",
+          "selectedFeatureNumerical": "[șir gol]",
+          "uploadedDataset": "[șir gol]"
+        },
+        "ml-intro categorical-food choices_2023": {
           "dataDisplayLabel": "[șir gol]",
           "modelSummary": "[șir gol]",
           "saveModel": "[șir gol]",
@@ -116,10 +164,22 @@
           "selectedFeatureNumerical": "[șir gol]",
           "uploadedDataset": "[șir gol]"
         },
+        "ml-intro categorical-pizza_2023": {
+          "dataDisplayLabel": "[șir gol]",
+          "modelSummary": "[șir gol]",
+          "saveModel": "[șir gol]",
+          "selectDataset": "[șir gol]",
+          "selectedDataset": "[șir gol]",
+          "selectedFeatureNumerical": "[șir gol]",
+          "uploadedDataset": "[șir gol]"
+        },
         "ml-mini project-ai lab 2": {
           "uploadedDataset": "[șir gol]"
         },
         "ml-mini project-ai lab 2_2022": {
+          "uploadedDataset": "[șir gol]"
+        },
+        "ml-mini project-ai lab 2_2023": {
           "uploadedDataset": "[șir gol]"
         },
         "ml-numerical ai lab-safari 1-2021": {
@@ -129,6 +189,12 @@
           "uploadedDataset": "[șir gol]"
         },
         "ml-numerical ai lab-safari 1_2022": {
+          "dataDisplayLabel": "[șir gol]",
+          "selectDataset": "[șir gol]",
+          "selectedDataset": "[șir gol]",
+          "uploadedDataset": "[șir gol]"
+        },
+        "ml-numerical ai lab-safari 1_2023": {
           "dataDisplayLabel": "[șir gol]",
           "selectDataset": "[șir gol]",
           "selectedDataset": "[șir gol]",

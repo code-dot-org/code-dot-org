@@ -4,18 +4,21 @@ import {mount, shallow} from 'enzyme';
 import sinon from 'sinon';
 import HttpClient from '@cdo/apps/util/HttpClient';
 import RubricContainer from '@cdo/apps/templates/rubrics/RubricContainer';
+import {act} from 'react-dom/test-utils';
 
 describe('RubricContainer', () => {
   const defaultRubric = {
     learningGoals: [
       {
-        key: 'goal1',
+        id: 1,
+        key: '1',
         learningGoal: 'goal 1',
         aiEnabled: false,
         evidenceLevels: [],
       },
       {
-        key: 'goal2',
+        id: 2,
+        key: '2',
         learningGoal: 'goal 2',
         aiEnabled: true,
         evidenceLevels: [],
@@ -230,5 +233,61 @@ describe('RubricContainer', () => {
     expect(wrapper.find('BodyThreeText').at(1).props().children).to.equal(
       'Error submitting feedback to student.'
     );
+  });
+
+  it('passes down aiUnderstanding and aiConfidence to the LearningGoal', async () => {
+    const mockFetch = sinon.stub(global, 'fetch');
+    const aiEvaluationsMock = [
+      {learning_goal_id: 2, understanding: 2, confidence: 70},
+    ];
+    mockFetch.returns(
+      Promise.resolve(new Response(JSON.stringify(aiEvaluationsMock)))
+    );
+
+    const wrapper = mount(
+      <RubricContainer
+        {...defaultProps}
+        studentLevelInfo={{
+          name: 'Grace Hopper',
+          timeSpent: 305,
+          lastAttempt: '1980-07-31T00:00:00.000Z',
+          attempts: 6,
+        }}
+      />
+    );
+
+    await act(async () => {
+      await Promise.resolve();
+    });
+    wrapper.update();
+
+    const learningGoal2Wrapper = wrapper.find('LearningGoal').at(1);
+    expect(learningGoal2Wrapper.prop('aiUnderstanding')).to.equal(
+      aiEvaluationsMock[0].understanding
+    );
+    expect(learningGoal2Wrapper.prop('aiConfidence')).to.equal(
+      aiEvaluationsMock[0].confidence
+    );
+
+    sinon.restore();
+  });
+
+  it('does not pass down AI analysis to components when teacher has disabled AI', () => {
+    const wrapper = mount(
+      <RubricContainer
+        {...defaultProps}
+        teacherHasEnabledAi={false}
+        studentLevelInfo={{
+          name: 'Grace Hopper',
+          timeSpent: 305,
+          lastAttempt: '1980-07-31T00:00:00.000Z',
+          attempts: 6,
+        }}
+      />
+    );
+
+    const learningGoal1Wrapper = wrapper.find('LearningGoal').at(0);
+    expect(learningGoal1Wrapper.prop('aiUnderstanding')).to.equal(null);
+    expect(learningGoal1Wrapper.prop('aiConfidence')).to.equal(null);
   });
 });

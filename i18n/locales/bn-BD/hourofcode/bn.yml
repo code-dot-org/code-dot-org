@@ -3,38 +3,42 @@ bn:
   site_name: HOUR of CODE
   hour_of_code: Hour of Code
   language: ইংরেজী
-  front_title: ইতিহাসের সর্ববৃহৎ শেখার আয়োজনে যোগ দিন, ডিসে. ৭-১৩, ২০১৫
+  front_title: ইতিহাসের সর্ববৃহৎ শেখার আয়োজনে যোগ দিন, %{campaign_date}
   coming_soon: শীঘ্রই আসছে
-  campaign_date_start_short: Dec. 6
-  campaign_date_start_long: December 7
-  campaign_date_short: Dec. 7-13
-  campaign_date_full: December 7-13
-  campaign_date_year: '2021'
-  campaign_date_full_year: ৪-১০ ডিসেম্বর, ২০১৭
+  campaign_date_start_short: Dec. 4
+  campaign_date_start_long: December 4
+  campaign_date_short: Dec. 4-10
+  campaign_date_full: December 4-10
+  campaign_date_year: '2023'
+  campaign_date_full_year: ৪-১০ ডিসেম্বর, ২০২৩
   nonus_campaign_date_start_short: ১ অক্টোবর
   nonus_campaign_date_start_long: ১ অক্টোবর
   nonus_campaign_date_short: অক্টোবর 1 - ডিসেম্বর 18
   nonus_campaign_date_full: ১ অক্টোবর - ১৮ ডিসেম্বর
-  nonus_campaign_date_year: '2021'
+  nonus_campaign_date_year: '2023'
   nonus_campaign_date_full_year: অক্টোবর ১, ২০২২ - ডিসেম্বর ১৮, ২০২২
   latam_campaign_date_start_short: ১ অক্টোবর
   latam_campaign_date_start_long: ১ অক্টোবর
   latam_campaign_date_short: অক্টোবর 1 - ডিসেম্বর 18
   latam_campaign_date_full: ১ অক্টোবর - ১৮ ডিসেম্বর
-  latam_campaign_date_year: '2021'
+  latam_campaign_date_year: '2023'
   latam_campaign_date_full_year: অক্টোবর ১, ২০২২ - ডিসেম্বর ১৮, ২০২২
   europe_campaign_date_start_short: ১ অক্টোবর
   europe_campaign_date_start_long: ১ অক্টোবর
   europe_campaign_date_short: অক্টোবর 1 - ডিসেম্বর 18
   europe_campaign_date_full: ১ অক্টোবর - ১৮ ডিসেম্বর
-  europe_campaign_date_year: '2021'
+  europe_campaign_date_year: '2023'
   europe_campaign_date_full_year: অক্টোবর ১, ২০২২ - ডিসেম্বর ১৮, ২০২২
   africa_campaign_date_start_short: ১ অক্টোবর
   africa_campaign_date_start_long: ১ অক্টোবর
   africa_campaign_date_short: অক্টোবর 1 - ডিসেম্বর 18
   africa_campaign_date_full: ১ অক্টোবর - ১৮ ডিসেম্বর
-  africa_campaign_date_year: '2021'
+  africa_campaign_date_year: '2023'
   africa_campaign_date_full_year: অক্টোবর ১, ২০২২ - ডিসেম্বর ১৮, ২০২২
+  hoc2023_header: এআই সঙ্গে সৃজনশীলতা
+  hoc2023_social_creativity_with_ai_title: কোড ঘন্টা - আপনি কি তৈরি করবেন?
+  hoc2023_social_creativity_with_ai_desc: এআই সম্পর্কে অন্বেষণ এবং শিখতে কম্পিউটার
+    বিজ্ঞান ব্যবহার করুন!
   hoc2022_header: এক্সপ্লোর করুন, খেলুন, তৈরি করুন!
   social_hoc2022_explore_play_create: কম্পিউটার বিজ্ঞান ব্যবহার করুন অন্বেষণ, খেলা,
     এবং তৈরি!
@@ -177,6 +181,28 @@ bn:
     একটি নতুন পাঠ্যক্রম ক্যাটালগ এবং পুনরায় ডিজাইন করা শেখান পৃষ্ঠাটি আপনাকে এটি
     খুঁজে পেতে সহায়তা করে!
   in_partnership_with: অংশীদারিত্বের সাথে
+  shop_code_dot_org_heading: দোকান কোড।
+  shop_code_dot_org_desc: আমাদের কাজ সমর্থন এবং গর্ব সঙ্গে আন্দোলন পরেন। আমাদের টুপি
+    প্রেসিডেন্ট ওবামা এবং সেলিব্রেটিদের দ্বারাও ধৃত হয়েছে।
+  spread_the_word_heading: শব্দ ছড়িয়ে দিন
+  spread_the_word_desc: আপনার নেটওয়ার্কের সাথে Code.org ভাগ করে আমাদের প্রভাব বাড়ান।
+    সামাজিক মিডিয়া থেকে ইমেইল হালনাগাদ, আবিষ্কার করুন কিভাবে আপনি আমাদের আরো শিক্ষানুরাগী,
+    ছাত্র এবং সমর্থকদের কাছে পৌঁছাতে সাহায্য করতে পারেন।
+  follow_us_heading: সোশ্যাল মিডিয়ায় আমাদের অনুসরণ করুন
+  follow_us_desc: সোশ্যাল মিডিয়াতে আমাদের সাথে আপ টু ডেট থাকুন এবং সচেতনতা সৃষ্টির
+    জন্য আপনার নেটওয়ার্কের সাথে আমাদের পোস্টগুলি ভাগ করুন।
+  facebook: ফেসবুক
+  twitter: টুইটার
+  linked_in: লিঙ্কডইন
+  instagram: ইনস্টাগ্রাম
+  tik_tok: TikTok
+  subscribe_to_emails_heading: ইমেইলে সাবস্ক্রাইব করুন
+  subscribe_to_emails_desc: Code.org এ এবং কম্পিউটার বিজ্ঞান শিক্ষায় ত্রৈমাসিক আপডেটের
+    মাধ্যমে আমাদের মেইলিং লিস্টের মাধ্যমে কী ঘটছে সে সম্পর্কে পড়ুন।
+  subscribe_to_emails_intl: আন্তর্জাতিক আপডেটে সাবস্ক্রাইব করুন
+  promote_code_dot_org_heading: কোড. অর্গ প্রচার করুন
+  promote_code_dot_org_desc: পরিসংখ্যান, উদ্ধৃতি এবং ভিডিওর সাহায্যে আপনার এলাকায়
+    কম্পিউটার বিজ্ঞান প্রচার করুন।
   afe_partnership_logo_alt: আমাজন ফিউচার ইঞ্জিনিয়ার লোগো
   afe_partnership_thanks_desc: আমাজন ফিউচার ইঞ্জিনিয়ার একটি ব্যাপক শৈশব-থেকে-ক্যারিয়ার
     প্রোগ্রাম যা কম্পিউটার বিজ্ঞানে ক্যারিয়ার খোঁজার জন্য কম আয়ের এবং অন্যান্য অনগ্রসর
@@ -197,6 +223,15 @@ bn:
   curricula_desc_high: বাধ্যতামূলক কোর্স এবং ক্রিয়াকলাপগুলি ব্রাউজ করুন যা আপনাকে
     এবং আপনার উচ্চ বিদ্যালয়ের শিক্ষার্থীদের কম্পিউটার বিজ্ঞানের গভীরতর খনন করার জন্য
     আমন্ত্রণ জানায়।
+  for_administrators_heading: অ্যাডমিনিস্ট্রেটরদের জন্য
+  for_administrators_desc: ইতিমধ্যে তাদের পাঠ্যক্রম মধ্যে কম্পিউটার বিজ্ঞান অন্তর্ভুক্ত
+    করা হয়েছে যারা হাজার হাজার স্কুল যোগদান।
+  for_parents_heading: অভিভাবকের জন্য
+  for_parents_desc: আপনি আপনার ছাত্র এর স্কুল প্রস্তাব বা কম্পিউটার বিজ্ঞান শিক্ষা
+    প্রসারিত করতে উত্সাহিত করতে সাহায্য করতে পারেন।
+  for_educators_heading: শিক্ষকদের জন্য
+  for_educators_desc: আজ শিক্ষা শুরু করুন - আমাদের পেশাদার শেখার কর্মশালার সাথে -
+    কোনও কম্পিউটার বিজ্ঞানের অভিজ্ঞতা প্রয়োজন নেই।
   students_label: ছাত্র-ছাত্রী
   teachers_label: শিক্ষকবৃন্দ
   teacher_label_csf: সি এস মৌলিক শিক্ষক
@@ -206,10 +241,11 @@ bn:
   teacher_label_csa: AP® Computer Science A Teacher
   required_materials: 'প্রয়োজনীয় উপকরণ:'
   optional_materials: 'ঐচ্ছিক উপকরণ:'
-  call_to_action_explore_roles: খোলা ভূমিকা অন্বেষণ
+  call_to_action_hold_an_event: একটি ইভেন্ট ধরুন
   call_to_action_learn_more: আরও জানুন
   call_to_action_watch_now: এখন দেখুন
   call_to_action_try_activity: অ্যাক্টিভিটি চেষ্টা করুন
+  call_to_action_try_activities: ক্রিয়াকলাপ চেষ্টা করুন
   call_to_action_explore_unit: ইউনিট এক্সপ্লোর
   call_to_action_explore_curriculum: পাঠ্যক্রম এক্সপ্লোর
   call_to_action_explore_curriculum_options: পাঠ্যক্রমের বিকল্পগুলি অনুসন্ধান করুন
@@ -278,7 +314,20 @@ bn:
   call_to_action_notify_available: উপলভ্য হলে আমাকে অবহিত করুন
   call_to_action_register_early_access: প্রারম্ভিক অ্যাক্সেসের জন্য নিবন্ধন করুন
   call_to_action_open_positions: ওপেন পজিশন দেখুন
+  call_to_action_explore_roles: খোলা ভূমিকা অন্বেষণ
   call_to_action_get_guide: গাইড পান
+  call_to_action_donate_to_cdo: Code.org এ দান করুন
+  call_to_action_start_fundraiser: একটি তহবিল সংগ্রহকারী শুরু করুন
+  call_to_action_view_donation_policy: দান নীতি দেখুন
+  call_to_action_view_donate_bitpay: বিটপেই দিয়ে দান করুন
+  call_to_action_make_a_donation: একটি দান করুন
+  call_to_action_other_ways_to_give: দিতে অন্যান্য উপায়
+  call_to_action_become_partner_usa: একটি মার্কিন যুক্তরাষ্ট্র অংশীদার হন
+  call_to_action_become_partner_intl: আন্তর্জাতিক অংশীদার হন
+  call_to_action_become_a_volunteer: একজন স্বেচ্ছাসেবক হন
+  call_to_action_start_translating: অনুবাদ শুরু করুন
+  call_to_action_learn_about_advocacy: আমাদের এডভোকেসি সম্পর্কে জানুন
+  call_to_action_visit_store: দোকানে ভিজিট করুন
   aria_label_call_to_action_afe: আমাজন ফিউচার ইঞ্জিনিয়ার সম্পর্কে আরও জানুন
   aria_label_call_to_action_teaching_csf: শিক্ষণ কম্পিউটার বিজ্ঞান মৌলিক পেশাদার লার্নিং
     প্রোগ্রাম শুরু করুন
@@ -381,6 +430,7 @@ bn:
   curriculum_name_csp: কম্পিউটার বিজ্ঞানের মূলনীতি
   curriculum_name_csc: কম্পিউটার বিজ্ঞান সংযোগ
   curriculum_name_csa: এপি® কম্পিউটার বিজ্ঞান এ
+  curriculum_name_csa_ai: সফটওয়্যার ইঞ্জিনিয়ারিং ও কম্পিউটার ভিশন
   curriculum_name_csc_02: কোন CS সংযোগ মডিউল
   curriculum_name_ai: এআই এবং মেশিন লার্নিং
   curriculum_name_artificial_intelligence: কৃত্রিম বুদ্ধিমত্তা (এআই)
@@ -453,6 +503,12 @@ bn:
     নির্মাণের প্রবর্তন করে।
   curriculum_desc_csp: ফ্রি, এপি® সিএসপি অনুমোদন করেছে, হাই স্কুল পরিচায়ক কোর্স যা
     শিক্ষার্থীদের কম্পিউটার বিজ্ঞানের ভিত্তিগত ধারণাগুলির সাথে পরিচয় করিয়ে দেয়।
+  curriculum_desc_csa_ai_long: 'এই দুটি অধ্যায়ের পোস্ট-এপি সিএসএ মডিউল উচ্চ বিদ্যালয়
+    শিক্ষার্থীদের GitHub এবং GitHub Copilot সহ পেশাদার সফ্টওয়্যার ডেভেলপমেন্ট সরঞ্জামগুলির
+    সাথে হাতে-অভিজ্ঞতা প্রদান করে এবং একটি কম্পিউটার ভিশন প্রোগ্রাম বিকাশের জন্য তাদের
+    বাস্তব বিশ্বের দক্ষতা প্রদান করে। '
+  curriculum_desc_csa_ai_short: এই পোস্ট-এপি সিএসএ মডিউল উচ্চ বিদ্যালয়ের শিক্ষার্থীদের
+    পেশাদারী সফটওয়্যার ডেভেলপমেন্ট সরঞ্জামগুলির সাথে হাতে-কলমে অভিজ্ঞতা প্রদান করে।
   collection_hardware: হার্ডওয়্যার- এর উপর ফোকাস
   collection_hardware_desc: শিক্ষার্থীদের সমস্যা সমাধানের জন্য ডেটা এবং শারীরিক ডিভাইস
     ব্যবহার করার ক্ষমতায়ন করে।
@@ -528,6 +584,7 @@ bn:
   module_duration_2_hrs: 2 ঘন্টা
   module_duration_3_hrs: 3 ঘন্টা
   module_duration_5_hrs: 5 ঘন্টা
+  module_duration_5_hrs_plus: 5+ ঘন্টা
   module_duration_8_hrs: 8 ঘন্টা
   module_duration_20_hrs: 20 ঘন্টা
   module_duration_35_hrs: 35 ঘন্টা
@@ -605,6 +662,8 @@ bn:
   heading_these_lessons_will: 'এই পাঠগুলি হবে:'
   heading_explore_curriculum_catalog: পাঠ্যক্রম ক্যাটালগে আমাদের সমস্ত কোর্স এক্সপ্লোর
     করুন
+  heading_csa_ai: এপি® পরীক্ষার পর কি করতে হবে তা খুঁজছেন?
+  heading_bring_cs_to_students: শিক্ষার্থীদের কম্পিউটার বিজ্ঞান আনুন
   professional_learning_section_desc: আপনি শেখার জন্য প্রস্তুত হিসাবে আপনি প্রয়োজন
     সমর্থন পান। শিক্ষকরা এটি পছন্দ করেন, 90% এর বেশি র্যাংকিং এটি সর্বকালের সেরা পেশাগত
     উন্নয়ন!
@@ -635,6 +694,23 @@ bn:
   support_and_questions_section_desc: Code.org এর সাথে শিক্ষণ শুরু করার বিষয়ে আপনার
     যে কোনও প্রশ্নের উত্তর দিতে আমাদের সহায়তা টিম এখানে রয়েছে। আপনি আমাদের শিক্ষক
     ফোরামে তাদের অভিজ্ঞতা সম্পর্কে অন্যান্য শিক্ষকদের জিজ্ঞাসা করতে পারেন।
+  subscribe_form_section_title: আপডেটের জন্য সাবস্ক্রাইব করুন
+  subscribe_form_section_desc_csa: Code.org এর AP® Computer Science A সম্পর্কে মাসিক
+    ইমেল পেতে সাইন আপ করুন এবং আপনার ইনবক্সে সরাসরি পাঠানো সহায়ক অনুস্মারক, টিপস
+    এবং আপডেটগুলি পান।
+  subscribe_form_section_desc_csc: Code.org এর কম্পিউটার বিজ্ঞান সংযোগ সম্পর্কে মাসিক
+    ইমেল পেতে সাইন আপ করুন এবং আপনার ইনবক্সে সরাসরি পাঠানো সহায়ক অনুস্মারক, টিপস
+    এবং আপডেটগুলি পান।
+  subscribe_form_section_desc_csd: Code.org এর কম্পিউটার বিজ্ঞান আবিষ্কার সম্পর্কে
+    মাসিক ইমেল পেতে সাইন আপ করুন এবং আপনার ইনবক্সে সরাসরি পাঠানো সহায়ক অনুস্মারক,
+    টিপস এবং আপডেটগুলি পান।
+  subscribe_form_section_desc_csf: Code.org এর কম্পিউটার বিজ্ঞান মৌলিক সম্পর্কে মাসিক
+    ইমেল পেতে সাইন আপ করুন এবং আপনার ইনবক্সে সরাসরি পাঠানো সহায়ক অনুস্মারক, টিপস
+    এবং আপডেটগুলি পান।
+  subscribe_form_section_desc_csp: Code.org এর কম্পিউটার বিজ্ঞান নীতি সম্পর্কে মাসিক
+    ইমেল পেতে সাইন আপ করুন এবং আপনার ইনবক্সে সরাসরি পাঠানো সহায়ক অনুস্মারক, টিপস
+    এবং আপডেটগুলি পান।
+  subscribe_form_section_unsubscribe: আপনি যে কোন সময় আনসাবস্ক্রাইব করতে পারেন।
   blockchain_hero_heading: ব্লকচাইন কিভাবে কাজ করে
   blockchain_hero_desc: ব্লকচাইনের জগতে ডুব দিন & ldquo; কিভাবে ব্লকচাইন কাজ করে,
     & rdquo; আমাদের নতুন ভিডিও সিরিজ এবং সহগামী পাঠ!
@@ -733,6 +809,9 @@ bn:
   ai_curriculum_desc_04: এই পাঠ কিভাবে এআই কাজ করে ভিডিও সিরিজ সম্পূরক। প্রতিটি পাঠ
     সিরিজ থেকে একক ভিডিওর সাথে যুক্ত করা হয়, ভিডিওগুলিতে চালু ধারণাগুলির মধ্যে ডাইভিং-গভীরভাবে।
   ai_curriculum_btn_aria_label_04: এক্সপ্লোর কিভাবে এআই কাজ করে পাঠ
+  ai_curriculum_grades_05: 'গ্রেড স্তর: 9-12'
+  ai_curriculum_btn_aria_label_05: সফ্টওয়্যার ইঞ্জিনিয়ারিং এবং কম্পিউটার ভিশন মডিউল
+    এক্সপ্লোর করুন
   ai_carousel_heading: 'কোডঅর্গ এর সাথে এআই সম্পর্কে শিক্ষকরা কি বলে:'
   ai_carousel_quote_01: এই পাঠটি আমার ছাত্রদের শ্রেণীবিন্যাস পদ্ধতিতে মতামত একটি উপাদান
     আছে তা দেখার সুযোগ দিয়েছে। পরে, যখন আমরা দেখতে শুরু কিভাবে পক্ষপাত করতে পারেন,
@@ -849,6 +928,7 @@ bn:
     নিবদ্ধ করে। তত্ত্ব, বাস্তব উদাহরণ এবং সম্পদগুলির একটি সমৃদ্ধ মিশ্রণের সাথে, এটি
     এআই আড়াআড়ি নেভিগেট এবং ছাত্র শেখার অভিজ্ঞতা উন্নত করার জন্য শিক্ষাবিদদের ক্ষমতায়ন
     করার লক্ষ্য রাখে।
+  ai_pl_101_resources_5: এআই একটি দায়িত্বশীল দৃষ্টিভঙ্গি নিশ্চিত করার জন্য গাইড
   ai_pl_101_video_desc_6: 'বড় ভাষা মডেল (চ্যাটজিপিটি) এবং জেনারেটিভ এআইতে দুটি নতুন
     ভিডিও সমন্বিত এআইতে বড় পরিবর্তন চালানোর নতুন প্রযুক্তি সম্পর্কে আরও জানুন। এই
     নতুন প্রযুক্তিগুলি বিশেষজ্ঞদের কাছ থেকে সরাসরি কীভাবে কাজ করে তা শুনুন: মিরা মুরাতি,
@@ -857,6 +937,9 @@ bn:
   ai_pl_101_llm_slides_desc: চ্যাটজিপিটি এর মত এলএলএম থেকে সেরা সম্ভাব্য আউটপুট পাওয়ার
     জন্য সরঞ্জামগুলি, শুরু থেকে উন্নত পর্যন্ত। স্টার্টার তাদের পায়ের আঙ্গুল ডুবানোর
     জন্য অনুরোধ করে, সেইসাথে তাদের সম্ভাব্য সর্বাধিক খুঁজছেন যারা উন্নত সরঞ্জাম অন্তর্ভুক্ত।
+  ai_pl_101_resources_3: ছাত্র লার্নিং রূপান্তর জন্য এআই প্রম্পট
+  ai_pl_101_resources_section_title: আরো উপায় সম্পর্কে জানতে এআই
+  ai_pl_101_resources_guide: 'সহচর নির্দেশিকা:'
   how_ai_works_hero_heading: কিভাবে এআই কাজ করে
   how_ai_works_hero_desc: "“কিভাবে এআই কাজ করে,” আমাদের ভিডিও সিরিজ এবং সহগামী পাঠ
     সঙ্গে এআই বিশ্বের মধ্যে ডুব!"
@@ -1255,8 +1338,8 @@ bn:
     Animation
   csp_page_curriculum_glance_devices: Laptop, Chromebook
   csp_page_curriculum_glance_tools: অ্যাপ ল্যাব
-  csp_page_curriculum_glance_professional_learning: Facilitator-led Workshops, Self-paced
-    Modules
+  csp_page_curriculum_glance_professional_learning: সহায়তাকারী-নেতৃত্বাধীন কর্মশালা,
+    স্ব-গতিসম্পন্ন মডিউল
   csp_page_curriculum_glance_professional_languages: ইংরেজী
   csp_page_curriculum_glance_professional_accessibility_features: Text-to-speech,
     Closed captioning, Immersive reader
@@ -1381,8 +1464,8 @@ bn:
     কম্পিউটিং, অ্যাপ ডিজাইন, গেমস এবং অ্যানিমেশন, আর্ট অ্যান্ড ডিজাইন, প্রোগ্রামিং
   csd_page_curriculum_glance_devices: Laptop, Chromebook
   csd_page_curriculum_glance_tools: অ্যাপ ল্যাব, গেম ল্যাব, এআই ল্যাব, ওয়েব ল্যাব
-  csd_page_curriculum_glance_professional_learning: Facilitator-led Workshops, Self-paced
-    Modules
+  csd_page_curriculum_glance_professional_learning: সহায়তাকারী-নেতৃত্বাধীন কর্মশালা,
+    স্ব-গতিসম্পন্ন মডিউল
   csd_page_curriculum_glance_professional_languages: ইংরেজী
   csd_page_curriculum_glance_professional_accessibility_features: Text-to-speech,
     Closed captioning, Immersive reader
@@ -1528,8 +1611,8 @@ bn:
     আর্ট অ্যান্ড ডিজাইন, অ্যাপ ডিজাইন
   csf_page_curriculum_glance_devices: ল্যাপটপ, ক্রোমবুক, ট্যাবলেট
   csf_page_curriculum_glance_tools: স্প্রিট ল্যাব, প্লে ল্যাব
-  csf_page_curriculum_glance_professional_learning: Facilitator-led Workshops, Self-paced
-    Modules
+  csf_page_curriculum_glance_professional_learning: সহায়তাকারী-নেতৃত্বাধীন কর্মশালা,
+    স্ব-গতিসম্পন্ন মডিউল
   csf_page_curriculum_glance_languages: আরবি, বাহাসা ইন্দোনেশিয়ান, কাতালান, চীনা
     সরলীকৃত, চীনা ঐতিহ্যবাহী, চেক, ফরাসি, জার্মান, হিন্দি, ইতালীয়, জাপানি, কোরিয়ান,
     কন্নড়, মালয়, মারাঠি, মঙ্গোলীয়, পোলিশ, পর্তুগীজ-বিআর, রোমানিয়ান, রাশিয়ান,
@@ -1670,6 +1753,64 @@ bn:
   csa_page_faq_answer_08_02: For more information about the values that guided our
     work, please see our [curriculum values](%{curriculum_values_url}) and our [professional
     learning values](%{pl_values_url}).
+  donate_page_top_heading: আমাদের মিশন তহবিল সাহায্য
+  donate_page_top_desc: প্রতিটি দান কম্পিউটার বিজ্ঞান শিক্ষা অ্যাক্সেস প্রসারিত করার
+    জন্য Code.org এর মিশন জ্বালানী। আমরা আপনাকে দান এবং একটি পার্থক্য করতে বিভিন্ন
+    উপায় অফার।
+  donate_page_fundraise_title: অর্গ এর জন্য তহবিল সংগ্রহ
+  donate_page_fundraise_desc: Code.org এর জন্য অর্থ বাড়াতে সহায়তা করুন! প্রত্যেক
+    বিদ্যালয়ের প্রত্যেক শিক্ষার্থীর কম্পিউটার বিজ্ঞান শেখার সুযোগ থাকা উচিত।
+  donate_page_other_ways_title: দিতে অন্যান্য উপায়
+  donate_page_other_ways_desc: অবদান রাখার জন্য বিভিন্ন পদ্ধতি অন্বেষণ করুন, এবং আপনার
+    পক্ষে উপযুক্ত বিকল্পটি খুঁজে বের করুন। প্রতিটি অঙ্গভঙ্গি, বড় বা ছোট, আমাদের মিশন
+    এগিয়ে propels।
+  donate_page_501c3: Code.org একটি পাবলিক ৫০১ (সি) (৩) অলাভজনক প্রতিষ্ঠান হিসেবে নিবন্ধিত।
+    Code.org এ অবদানগুলি আইন দ্বারা অনুমোদিত পরিমাণে কর-আদায় করা যাবে। Code.org এর
+    কর সনাক্তকরণ নম্বর হল ৪৬-০৮৫৮৫৪৩।
+  donate_page_donation_policy_title: আমাদের দান নীতি বোঝা
+  donate_page_donation_policy_desc: আমরা কিভাবে আপনার অবদান পরিচালনা এবং বরাদ্দ সম্পর্কে
+    জানুন।
+  donate_tabs_tab_label_daf_direct: ডিএএফ ডাইরেক্ট
+  donate_tabs_tab_label_amazon: নারী-সৈনিক
+  donate_tabs_tab_label_bitpay: বিটপেই
+  donate_tabs_tab_label_employee_match: কর্মচারী ম্যাচ
+  donate_tabs_daf_direct_title: DAF ডাইরেক্ট এর মাধ্যমে দান করুন
+  donate_tabs_daf_direct_desc: ফিডেলিটি চ্যারিটেবল, শ্ওয়াব দাতব্য, বা BNY মেলনের
+    সাথে আপনার দাতা-পরামর্শ তহবিলের মাধ্যমে দান করুন এবং DAF সরাসরি অনলাইন ফর্মের
+    মাধ্যমে Code.org এ আপনার অনুদানের সুপারিশ করুন।
+  donate_tabs_amazon_title: আমাজনের মাধ্যমে দান করুন
+  donate_tabs_amazon_desc: আপনার আমাজন অ্যাকাউন্ট ব্যবহার করে সরাসরি দান করুন। মাত্র
+    কয়েক ক্লিকের মাধ্যমে, Code.org এর মিশনে অবিচ্ছিন্নভাবে অবদান রাখুন এবং কম্পিউটার
+    বিজ্ঞান শিক্ষার ভবিষ্যৎ ক্ষমতায়ন করুন।
+  donate_tabs_bitpay_title: BitPay এর মাধ্যমে ক্রিপ্টো দিয়ে দান করুন
+  donate_tabs_bitpay_desc: ক্রিপ্টোকুরেন্সের সাথে প্রদানের ভবিষ্যতকে আলিঙ্গন করুন।
+    BitPay এর মাধ্যমে, আপনার ডিজিটাল মুদ্রা সরাসরি কম্পিউটার বিজ্ঞান শিক্ষা প্রসারিত
+    করার জন্য Code.org এর প্রচেষ্টা সমর্থন করতে পারে।
+  help_page_top_heading: আপনি কিভাবে সাহায্য করতে পারেন
+  help_page_top_desc: কম্পিউটার বিজ্ঞান প্রতিটি সন্তানের জন্য সর্বত্র অ্যাক্সেসযোগ্য
+    করতে আমাদের মিশন সমর্থন করুন। আপনার প্রচেষ্টাগুলি আমাদের ভবিষ্যতের উদ্ভাবকদের
+    অনুপ্রাণিত করতে এবং কারিগরি শিক্ষার ব্যবধানকে সেতুতে সহায়তা করে।
+  help_page_top_subhead: Code.org এ একটি দান করুন
+  help_page_top_desc_02: আমরা প্রত্যেক শিক্ষার্থীকে কম্পিউটার বিজ্ঞান শেখার সুযোগ
+    দেবার জন্য কাজ করছি - উভয় অনলাইন এবং স্কুলে, যেখানে আমরা স্থায়ী কোর্স স্থাপন
+    করি এবং শিক্ষকদের প্রশিক্ষণ দিই। প্রতি ডলারের জন্য আপনি দান করেন, একটি শিশুকে
+    কম্পিউটার বিজ্ঞানের সাথে পরিচয় করিয়ে দেওয়া হয়।
+  help_page_partners_heading: অংশীদার হন
+  help_page_partners_desc: Code.org কম্পিউটার বিজ্ঞান স্থানীয়, টেকসই ফ্যাশন ছড়িয়ে
+    দিতে সাহায্য করার জন্য অংশীদার হিসাবে অন্যান্য অলাভজনক প্রতিষ্ঠানের সাথে কাজ করে।
+    আমাদের প্রোগ্রাম সম্পর্কে আরও জানুন।
+  help_page_volunteer_heading: একটি শ্রেণীকক্ষে স্বেচ্ছাসেবক
+  help_page_volunteer_desc: স্বেচ্ছাসেবক আওয়ার অফ কোড শেখানো বা স্থানীয় শ্রেণীকক্ষে
+    অতিথি বক্তা হতে হবে। আপনার কাছাকাছি সুযোগ সম্পর্কে শুনতে সাইন আপ করুন।
+  help_page_translate_heading: অনুবাদ করতে আমাদের সাহায্য করুন
+  help_page_translate_desc: স্বেচ্ছাসেবকেরা ৪৫টিরও বেশি ভাষায় আমাদের টিউটোরিয়াল
+    অনুবাদ করেছেন। বিশ্বজুড়ে শিক্ষার্থীদের জন্য আমাদের টিউটোরিয়ালগুলি প্রসারিত করতে
+    আমাদের সহায়তা করুন!
+  help_page_speak_for_cs_heading: কম্পিউটার বিজ্ঞান শিক্ষার জন্য কথা বলুন
+  help_page_speak_for_cs_desc: Code.org এর এডভোকেসির কাজ সম্পর্কে আরও জানুন এবং আমরা
+    যে দশটি নীতিমালা সুপারিশ করি তা সকল ছাত্রদের জন্য কম্পিউটার বিজ্ঞান ভিত্তিপ্রস্তর
+    তৈরি করতে রাজ্যগুলিকে গ্রহণ করার পরামর্শ দিচ্ছি। প্লাস, আপনি আপনার রাষ্ট্র পরিবর্তন
+    ড্রাইভ করতে পারেন কিভাবে খুঁজে বের করুন।
   hoc_live: লাইভ কোড ঘন্টা
   hoc_live_sign_up_title: আওয়ার অফ কোড লাইভ জন্য সাইন আপ
   hoc_live_learn_title: আওয়ার অফ কোড লাইভ সঙ্গে জানুন
@@ -1790,7 +1931,7 @@ bn:
     কম্পিউটার বা ডিভাইসে কুকিজ সংরক্ষণের সাথে সম্মত হন।
   cookie_banner_more_information: Code.org এর গোপনীয়তা নীতি দেখুন।
   cookie_banner_accept: আমি একমত
-  front_header_banner: ইতিহাসের সর্ববৃহৎ শেখার আয়োজনে যোগ দিন, ডিসে. ৭-১৩, ২০১৫
+  front_header_banner: ইতিহাসের সর্ববৃহৎ শেখার আয়োজনে যোগ দিন, %{campaign_date}
   front_intro_default: আওয়ার অফ কোড একটি বিশ্বব্যাপী উদ্যোগ যেখানে ১৮০ টিরও বেশি দেশ
     থেকে লক্ষ লক্ষ শিক্ষার্থী অংশ নিয়ে থাকে। যেকোন স্থান থেকে যে কেউ একটি আওয়ার অফ
     কোড ইভেন্ট আয়োজন করে ফেলতে পারেন। ইভেন্টের জন্য এক ঘন্টার একটি টিউটোরিয়াল ৪৫ টি
@@ -1808,7 +1949,7 @@ bn:
   header_menu_activities: কার্যকলাপসমূহ
   not_found_title: পাতাটি পাওয়া যাচ্ছে না
   not_found_desc: যে পাতাটি খুঁজছেন সেটি পাওয়া যায়নি
-  not_found_instructions: 'ওয়েব ঠিকানাটি ঠিক করুন অথবা নিচের লিংকগুলো থেকে পছন্দ করুন:'
+  not_found_instructions: ওয়েব ঠিকানাটি ঠিক করুন অথবা নিচের লিংকগুলো থেকে পছন্দ করুন।
   company_code_dot_org: কোড. অর্গ
   company_4-H: 4-এইচ যুব উন্নয়ন
   company_asa: বিদ্যালয়ের পরবর্তী জোট
@@ -13652,6 +13793,11 @@ bn:
   video_library_page_inspirational_video_title_11: যে কেউ শিখতে পারে (1 মিনিট)
   video_library_page_inspirational_video_title_12: লো কুয়ে ফাল্টা এন নিউয়েস্ট্রাস
     এস্কুয়েলাস (2 মিনিট)
+  video_library_page_inspirational_video_title_13: নাসা কোডের ঘন্টা উদযাপন করছে (২
+    মিনিট)
+  video_library_page_inspirational_video_title_14: এটি একটি খেলার চেয়ে বেশি (1 মিনিট)
+  video_library_page_inspirational_video_title_15: কম্পিউটার বিজ্ঞান দিয়ে তৈরি করুন
+    (1 মিনিট)
   video_library_page_not_hacked_video_title_1: 'কিভাবে হ্যাক পেতে না: ভূমিকা'
   video_library_page_not_hacked_video_title_2: 'হ্যাক করা না কিভাবে: পাসওয়ার্ড'
   video_library_page_not_hacked_video_title_3: 'হ্যাক করা না কিভাবে: প্রমাণীকরণ এবং

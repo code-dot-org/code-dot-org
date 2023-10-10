@@ -5532,22 +5532,53 @@
           "url": "https://www.youtube.com/watch?v=rgbZAWnOWOo",
           "type": "वीडीयो"
         },
+        "_template_ai_code_of_ethics/ai-ethics/2023": {
+          "type": "स्लाइड्स"
+        },
+        "ai_code_of_ethics/ai-ethics/2023": {
+          "type": "स्लाइड्स"
+        },
+        "ethics_and_ai_privacy_the_future_of_work/ai-ethics/2023": {
+          "type": "वीडीयो"
+        },
+        "character_card_individual_docs_/ai-ethics/2023": {
+          "type": "रिसोर्स"
+        },
+        "character_cards/ai-ethics/2023": {
+          "type": "रिसोर्स"
+        },
+        "generative_ai_activity_instructions/ai-ethics/2023": {
+          "type": "रिसोर्स"
+        },
+        "generative_ai_news_articles/ai-ethics/2023": {
+          "type": "रिसोर्स"
+        },
+        "group_scenarios/ai-ethics/2023": {
+          "type": "रिसोर्स"
+        },
+        "how_ai_works_large_language_models/ai-ethics/2023": {
+          "url": "https://www.youtube.com/watch?v=X-AWdfSFCHQ",
+          "type": "वीडीयो"
+        },
+        "societal_impact_of_generative_ai/ai-ethics/2023": {
+          "type": "स्लाइड्स"
+        },
         "cs_connections_landing_page/csc-adaptations/2023": {
-          "name": "CS कनेक्शन लैंडिंग पृष्ठ",
+          "name": "सी.एस. कनेक्शन्स लैंडिंग पृष्ठ",
           "url": "https://code.org/educate/csc",
           "type": "रिसोर्स"
         },
         "csc_extended_connections_book_list/csc-adaptations/2023": {
-          "name": "CSC विस्तारित कनेक्शन बुक सूची",
+          "name": "सी.एस.सी. विस्तारित कनेक्शन्स बुक लिस्ट",
           "url": "https://docs.google.com/document/d/14azofBAy5Riq109ruUPi8BbZRvJ1KIthqA3mH7t428Y/template/preview",
           "type": "रिसोर्स"
         },
         "helpful_hints_for_teachers_and_learners/csc-adaptations/2023": {
           "name": "शिक्षकों और शिक्षार्थियों के लिए उपयोगी संकेत",
-          "url": "https://docs.google.com/presentation/d/1RSJhxO9ZMtyLrt160kvAVdyekR4wT2fVSgbrPHR4HS0/template/preview"
+          "url": "https://docs.google.com/presentation/d/1g12LUb6QvBp7g5aX18FMxmtm5EMAqvLm71WdqN5mEqw/"
         },
         "resource_list_for_all_lessons/csc-adaptations/2023": {
-          "name": "सभी पाठों के लिए संसाधन सूची",
+          "name": "सभी पाठों की संसाधन सूची",
           "url": "/s/csc-अनुकूलन-2023/संसाधन",
           "type": "रिसोर्स"
         },
@@ -5567,31 +5598,31 @@
         },
         "helpful_hints_1/csc-adaptations/2023": {
           "name": "मददगार संकेत",
-          "url": "https://docs.google.com/presentation/d/1RSJhxO9ZMtyLrt160kvAVdyekR4wT2fVSgbrPHR4HS0/template/preview",
+          "url": "https://docs.google.com/presentation/d/1g12LUb6QvBp7g5aX18FMxmtm5EMAqvLm71WdqN5mEqw/",
           "type": "स्लाइड्स"
         },
         "helpful_hints/csc-adaptations/2023": {
           "name": "मददगार संकेत",
-          "url": "https://docs.google.com/presentation/d/1RSJhxO9ZMtyLrt160kvAVdyekR4wT2fVSgbrPHR4HS0/template/preview",
+          "url": "https://docs.google.com/presentation/d/1g12LUb6QvBp7g5aX18FMxmtm5EMAqvLm71WdqN5mEqw/",
           "type": "स्लाइड्स"
         },
         "helpful_hints_2/csc-adaptations/2023": {
           "name": "मददगार संकेत",
-          "url": "https://docs.google.com/presentation/d/1RSJhxO9ZMtyLrt160kvAVdyekR4wT2fVSgbrPHR4HS0/template/preview",
+          "url": "https://docs.google.com/presentation/d/1g12LUb6QvBp7g5aX18FMxmtm5EMAqvLm71WdqN5mEqw/",
           "type": "स्लाइड्स"
         },
         "cs_connections_landing_page/csc-bookcovers/2023": {
-          "name": "CS कनेक्शन लैंडिंग पृष्ठ",
+          "name": "सी.एस. कनेक्शन्स लैंडिंग पृष्ठ",
           "url": "https://code.org/educate/csc",
           "type": "रिसोर्स"
         },
         "helpful_hints_for_teachers_and_learners/csc-bookcovers/2023": {
           "name": "शिक्षकों और शिक्षार्थियों के लिए उपयोगी संकेत",
-          "url": "https://docs.google.com/presentation/d/1RSJhxO9ZMtyLrt160kvAVdyekR4wT2fVSgbrPHR4HS0/template/preview",
+          "url": "https://docs.google.com/presentation/d/1g12LUb6QvBp7g5aX18FMxmtm5EMAqvLm71WdqN5mEqw/",
           "type": "रिसोर्स"
         },
         "resource_list_for_all_lessons/csc-bookcovers/2023": {
-          "name": "सभी पाठों के लिए संसाधन सूची",
+          "name": "सभी पाठों की संसाधन सूची",
           "url": "/s/csc-बुककवर-2023/संसाधन",
           "type": "रिसोर्स"
         },
@@ -5617,7 +5648,7 @@
         },
         "helpful_hints/csc-bookcovers/2023": {
           "name": "मददगार संकेत",
-          "url": "https://docs.google.com/presentation/d/1RSJhxO9ZMtyLrt160kvAVdyekR4wT2fVSgbrPHR4HS0/template/preview",
+          "url": "https://docs.google.com/presentation/d/1g12LUb6QvBp7g5aX18FMxmtm5EMAqvLm71WdqN5mEqw/",
           "type": "स्लाइड्स"
         },
         "create_your_own_book_cover/csc-bookcovers/2023": {
@@ -5667,66 +5698,66 @@
         },
         "helpful_hints_1/csc-bookcovers/2023": {
           "name": "मददगार संकेत",
-          "url": "https://docs.google.com/presentation/d/1RSJhxO9ZMtyLrt160kvAVdyekR4wT2fVSgbrPHR4HS0/template/preview",
+          "url": "https://docs.google.com/presentation/d/1g12LUb6QvBp7g5aX18FMxmtm5EMAqvLm71WdqN5mEqw/",
           "type": "स्लाइड्स"
         },
         "cs_connections_landing_page/csc-ecosystems/2023": {
-          "name": "CS कनेक्शन लैंडिंग पृष्ठ",
+          "name": "सी.एस. कनेक्शन्स लैंडिंग पृष्ठ",
           "url": "https://code.org/educate/csc",
           "type": "रिसोर्स"
         },
         "csc_extended_connections_book_list/csc-ecosystems/2023": {
-          "name": "CSC विस्तारित कनेक्शन बुक सूची",
+          "name": "सी.एस.सी. विस्तारित कनेक्शन्स बुक लिस्ट",
           "url": "https://docs.google.com/document/d/14azofBAy5Riq109ruUPi8BbZRvJ1KIthqA3mH7t428Y/template/preview",
           "type": "रिसोर्स"
         },
         "helpful_hints_for_teachers_and_learners/csc-ecosystems/2023": {
-          "name": "शिक्षकों और शिक्षार्थियों के लिए उपयोगी संकेत\t",
-          "url": "https://docs.google.com/presentation/d/1RSJhxO9ZMtyLrt160kvAVdyekR4wT2fVSgbrPHR4HS0/template/preview",
+          "name": "शिक्षकों और शिक्षार्थियों के लिए उपयोगी सुझाव",
+          "url": "https://docs.google.com/presentation/d/1g12LUb6QvBp7g5aX18FMxmtm5EMAqvLm71WdqN5mEqw/",
           "type": "रिसोर्स"
         },
         "resource_list_for_all_lessons/csc-ecosystems/2023": {
-          "name": "सभी पाठों के लिए संसाधन सूची"
+          "name": "सभी पाठों की संसाधन सूची"
         },
         "standards_in_simulating_a_marine_ecosystem/csc-ecosystems/2023": {
-          "name": "समुद्री पारिस्थितिकी तंत्र का अनुकरण करने में मानक ",
+          "name": "समुद्री पारिस्थितिकी तंत्र की अनुरूपता बनाने में मानक ",
           "type": "रिसोर्स"
         },
         "vocabulary_in_simulating_a_marine_ecosystem/csc-ecosystems/2023": {
-          "name": "समुद्री पारिस्थितिकी तंत्र का अनुकरण करने में शब्दावली",
+          "name": "समुद्री पारिस्थितिकी तंत्र की अनुरूपता बनाने में शब्दावली",
           "type": "रिसोर्स"
         },
         "ecosystems/csc-ecosystems/2023": {
           "name": "समुद्री पारिस्थितिकी तंत्र का अनुकरण",
-          "url": "https://docs.google.com/presentation/d/1LtXP3ssc5-kOV1DgccN3957oAyF1cf-VaghZJsL7Vtk/template/preview",
+          "url": "https://docs.google.com/presentation/d/1IvZ2M0NbshIRNx5Tu5gRDarH9TmlX6Jk-3OTNYfP0G8/",
           "type": "स्लाइड्स"
         },
         "understanding_overfishing_article/csc-ecosystems/2023": {
-          "name": "ओवरफिशिंग आर्टिकल को समझना",
+          "name": "अत्यधिक मछलियां पकड़ने के लेख को समझना",
           "url": "https://www.seafoodwatch.org/seafood-basics/sustainable-solutions/avoid-overfishing",
           "type": "रिसोर्स"
         },
         "ecologist_s_notebook/csc-ecosystems/2023": {
-          "name": "इकोलॉजिस्ट की नोटबुक",
+          "name": "पारिस्थितिकीविज्ञानी की नोटबुक",
           "url": "https://docs.google.com/document/d/1_xi5PFs5TJyO3-8Hz7ftZxCNRPpd5yQBCwhm8IuysY8/template/preview"
         },
         "cs_connections_landing_page/csc-mappinglandmarks/2023": {
-          "name": "CS कनेक्शन लैंडिंग पृष्ठ",
+          "name": "सी.एस. कनेक्शन्स लैंडिंग पृष्ठ",
           "url": "https://code.org/educate/csc",
           "type": "रिसोर्स"
         },
         "csc_extended_connections_book_list/csc-mappinglandmarks/2023": {
-          "name": "CSC विस्तारित कनेक्शन बुक सूची",
+          "name": "सी.एस.सी. विस्तारित कनेक्शन्स बुक लिस्ट",
           "url": "https://docs.google.com/document/d/14azofBAy5Riq109ruUPi8BbZRvJ1KIthqA3mH7t428Y/template/preview",
           "type": "रिसोर्स"
         },
         "helpful_hints_for_teachers_and_learners/csc-mappinglandmarks/2023": {
-          "name": "शिक्षकों और शिक्षार्थियों के लिए उपयोगी संकेत\t",
-          "url": "https://docs.google.com/presentation/d/1RSJhxO9ZMtyLrt160kvAVdyekR4wT2fVSgbrPHR4HS0/template/preview",
+          "name": "शिक्षकों और शिक्षार्थियों के लिए उपयोगी सुझाव",
+          "url": "https://docs.google.com/presentation/d/1g12LUb6QvBp7g5aX18FMxmtm5EMAqvLm71WdqN5mEqw/",
           "type": "रिसोर्स"
         },
         "resource_list_for_all_lessons/csc-mappinglandmarks/2023": {
-          "name": "सभी पाठों के लिए संसाधन सूची",
+          "name": "सभी पाठों की संसाधन सूची",
           "url": "/s/csc-मैपिंगलैंडमार्क-2023/संसाधन"
         },
         "standards_in_mapping_landmarks/csc-mappinglandmarks/2023": {
@@ -5744,7 +5775,7 @@
         },
         "helpful_hints/csc-mappinglandmarks/2023": {
           "name": "मददगार संकेत",
-          "url": "https://docs.google.com/presentation/d/1RSJhxO9ZMtyLrt160kvAVdyekR4wT2fVSgbrPHR4HS0/template/preview",
+          "url": "https://docs.google.com/presentation/d/1g12LUb6QvBp7g5aX18FMxmtm5EMAqvLm71WdqN5mEqw/",
           "type": "स्लाइड्स"
         },
         "list_of_books_about_maps/csc-mappinglandmarks/2023": {
@@ -5776,18 +5807,18 @@
           "type": "रिसोर्स"
         },
         "cs_connections_landing_page/csc-starquilts/2023": {
-          "name": "CS कनेक्शन लैंडिंग पृष्ठ",
+          "name": "सी.एस. कनेक्शन्स लैंडिंग पृष्ठ",
           "url": "https://code.org/educate/csc",
           "type": "रिसोर्स"
         },
         "csc_extended_connections_book_list/csc-starquilts/2023": {
-          "name": "CSC विस्तारित कनेक्शन बुक सूची",
+          "name": "सी.एस.सी. विस्तारित कनेक्शन्स बुक लिस्ट",
           "url": "https://docs.google.com/document/d/14azofBAy5Riq109ruUPi8BbZRvJ1KIthqA3mH7t428Y/template/preview",
           "type": "रिसोर्स"
         },
         "helpful_hints_for_teachers_and_learners/csc-starquilts/2023": {
           "name": "शिक्षकों और शिक्षार्थियों के लिए उपयोगी संकेत",
-          "url": "https://docs.google.com/presentation/d/1RSJhxO9ZMtyLrt160kvAVdyekR4wT2fVSgbrPHR4HS0/template/preview",
+          "url": "https://docs.google.com/presentation/d/1g12LUb6QvBp7g5aX18FMxmtm5EMAqvLm71WdqN5mEqw/",
           "type": "रिसोर्स"
         },
         "resource_list_for_all_lessons/csc-starquilts/2023": {
@@ -5832,12 +5863,12 @@
         },
         "helpful_hints/csc-starquilts/2023": {
           "name": "मददगार संकेत",
-          "url": "https://docs.google.com/presentation/d/1RSJhxO9ZMtyLrt160kvAVdyekR4wT2fVSgbrPHR4HS0/template/preview",
+          "url": "https://docs.google.com/presentation/d/1g12LUb6QvBp7g5aX18FMxmtm5EMAqvLm71WdqN5mEqw/",
           "type": "स्लाइड्स"
         },
         "helpful_hints_1/csc-starquilts/2023": {
           "name": "मददगार संकेत",
-          "url": "https://docs.google.com/presentation/d/1RSJhxO9ZMtyLrt160kvAVdyekR4wT2fVSgbrPHR4HS0/template/preview",
+          "url": "https://docs.google.com/presentation/d/1g12LUb6QvBp7g5aX18FMxmtm5EMAqvLm71WdqN5mEqw/",
           "type": "स्लाइड्स"
         },
         "virtual_pattern_blocks/csc-starquilts/2023": {
@@ -5847,11 +5878,11 @@
         },
         "helpful_hints_2/csc-starquilts/2023": {
           "name": "मददगार संकेत",
-          "url": "https://docs.google.com/presentation/d/1RSJhxO9ZMtyLrt160kvAVdyekR4wT2fVSgbrPHR4HS0/template/preview",
+          "url": "https://docs.google.com/presentation/d/1g12LUb6QvBp7g5aX18FMxmtm5EMAqvLm71WdqN5mEqw/",
           "type": "स्लाइड्स"
         },
         "all_resources/csc-timecapsule/2023": {
-          "name": "सभी पाठों के लिए संसाधन सूची",
+          "name": "सभी पाठों की संसाधन सूची",
           "url": "/s/csc-time capsule-2023/संसाधन",
           "type": "रिसोर्स"
         },
@@ -5864,12 +5895,12 @@
           "url": "/s/csc-time capsule-2023/vocab"
         },
         "cs_connections_landing_page/csc-timecapsule/2023": {
-          "name": "CS कनेक्शन लैंडिंग पृष्ठ",
+          "name": "सी.एस. कनेक्शन्स लैंडिंग पृष्ठ",
           "url": "https://code.org/educate/csc",
           "type": "रिसोर्स"
         },
         "csc_extended_connections_book_list/csc-timecapsule/2023": {
-          "name": "CSC विस्तारित कनेक्शन बुक सूची",
+          "name": "सी.एस.सी. विस्तारित कनेक्शन्स बुक लिस्ट",
           "url": "https://docs.google.com/document/d/14azofBAy5Riq109ruUPi8BbZRvJ1KIthqA3mH7t428Y/template/preview",
           "type": "रिसोर्स"
         },
@@ -5967,18 +5998,18 @@
           "url": "https://studio.code.org/s/poetry-2023/vocab"
         },
         "cs_connections_landing_page/poetry/2023": {
-          "name": "CS कनेक्शन लैंडिंग पृष्ठ",
+          "name": "सी.एस. कनेक्शन्स लैंडिंग पृष्ठ",
           "url": "https://code.org/educate/csc",
           "type": "रिसोर्स"
         },
         "csc_extended_connections_book_list/poetry/2023": {
-          "name": "CSC विस्तारित कनेक्शन बुक सूची",
+          "name": "सी.एस.सी. विस्तारित कनेक्शन्स बुक लिस्ट",
           "url": "https://docs.google.com/document/d/14azofBAy5Riq109ruUPi8BbZRvJ1KIthqA3mH7t428Y/template/preview",
           "type": "रिसोर्स"
         },
         "helpful_hints_for_teachers_and_learners/poetry/2023": {
           "name": "शिक्षकों और शिक्षार्थियों के लिए उपयोगी संकेत",
-          "url": "https://docs.google.com/presentation/d/1RSJhxO9ZMtyLrt160kvAVdyekR4wT2fVSgbrPHR4HS0/template/preview",
+          "url": "https://docs.google.com/presentation/d/1g12LUb6QvBp7g5aX18FMxmtm5EMAqvLm71WdqN5mEqw/",
           "type": "रिसोर्स"
         },
         "resource_list_for_all_lessons/poetry/2023": {
@@ -6012,12 +6043,12 @@
         },
         "helpful_hints_1/poetry/2023": {
           "name": "मददगार संकेत",
-          "url": "https://docs.google.com/presentation/d/1RSJhxO9ZMtyLrt160kvAVdyekR4wT2fVSgbrPHR4HS0/template/preview",
+          "url": "https://docs.google.com/presentation/d/1g12LUb6QvBp7g5aX18FMxmtm5EMAqvLm71WdqN5mEqw/",
           "type": "स्लाइड्स"
         },
         "helpful_hints/poetry/2023": {
           "name": "मददगार संकेत",
-          "url": "https://docs.google.com/presentation/d/1RSJhxO9ZMtyLrt160kvAVdyekR4wT2fVSgbrPHR4HS0/template/preview",
+          "url": "https://docs.google.com/presentation/d/1g12LUb6QvBp7g5aX18FMxmtm5EMAqvLm71WdqN5mEqw/",
           "type": "स्लाइड्स"
         },
         "write_your_own_poem/poetry/2023": {
@@ -6073,6 +6104,1353 @@
         "poem_app_example/poetry/2023": {
           "name": "कविता ऐप का उदाहरण",
           "url": "https://studio.code.org/projects/poetry_hoc/j3TXDXNhz0XEsH4Xjk_rT9buBHYCplirIKtY_Pg_bYo",
+          "type": "रिसोर्स"
+        },
+        "teacher_forum/csd/2023": {
+          "name": "अध्यापक फोरम"
+        },
+        "the_problem_solving_process_2/csd/2023": {
+          "name": "सवाल हल करने की प्रक्रिया"
+        },
+        "intro_to_problem_solving/csd/2023": {
+          "name": "सवाल हल करना का परिचय",
+          "type": "स्लाइड्स"
+        },
+        "problem_solving_process/csd/2023": {
+          "name": "सवाल हल करने की प्रक्रिया"
+        },
+        "problem_solving_process_1/csd/2023": {
+          "name": "सवाल हल करने की प्रक्रिया",
+          "type": "वीडीयो"
+        },
+        "problem_solving_process_2/csd/2023": {
+          "name": "सवाल हल करने की प्रक्रिया"
+        },
+        "the_problem_solving_process/csd/2023": {
+          "type": "वीडीयो"
+        },
+        "the_problem_solving_process_1/csd/2023": {
+          "name": "सवाल हल करने की प्रक्रिया",
+          "type": "स्लाइड्स"
+        },
+        "the_problem_solving_process_5/csd/2023": {
+          "name": "सवाल हल करने की प्रक्रिया"
+        },
+        "exploring_problem_solving/csd/2023": {
+          "name": "सवाल हल करना की पड़ताल करना",
+          "type": "स्लाइड्स"
+        },
+        "solving_problems/csd/2023": {
+          "type": "उत्तर कुंजी"
+        },
+        "what_is_a_computer/csd/2023": {
+          "type": "वीडीयो"
+        },
+        "what_is_a_computer_/csd/2023": {
+          "name": "कंप्यूटर क्या है?"
+        },
+        "what_is_a_computer_1/csd/2023": {
+          "type": "स्लाइड्स"
+        },
+        "input_and_output/csd/2023": {
+          "name": "इनपुट और आउटपुट"
+        },
+        "input_and_output_1/csd/2023": {
+          "name": "इनपुट और आउटपुट"
+        },
+        "input_and_output_2/csd/2023": {
+          "name": "इनपुट और आउटपुट",
+          "type": "स्लाइड्स"
+        },
+        "apps_with_processing_2/csd/2023": {
+          "type": "स्लाइड्स"
+        },
+        "apps_with_storage_2/csd/2023": {
+          "type": "स्लाइड्स"
+        },
+        "what_do_computers_do/csd/2023": {
+          "type": "वीडीयो"
+        },
+        "apps_and_problem_solving/csd/2023": {
+          "name": "ऐप्स और सवाल हल करना"
+        },
+        "apps_and_problem_solving_-_student_checklist/csd/2023": {
+          "type": "रिसोर्स"
+        },
+        "apps_and_problem_solving_1/csd/2023": {
+          "name": "ऐप्स और सवाल हल करना",
+          "type": "सहकर्मी की समीक्षा"
+        },
+        "apps_and_problem_solving_2/csd/2023": {
+          "name": "ऐप्स और सवाल हल करना",
+          "type": "शीर्षक"
+        },
+        "computer_science_practices/csd/2023": {
+          "type": "प्रतिबिंब"
+        },
+        "project_-_propose_an_app/csd/2023": {
+          "name": "प्रोजेक्ट: ऐप का प्रस्ताव रखना",
+          "type": "स्लाइड्स"
+        },
+        "intro_to_problem_solving_newspapers_/csd/2023": {
+          "type": "स्लाइड्स"
+        },
+        "intro_to_problem_solving_spaghetti_/csd/2023": {
+          "type": "स्लाइड्स"
+        },
+        "intro_to_problem_solving_paper_towels_/csd/2023": {
+          "type": "स्लाइड्स"
+        },
+        "exploring_problem_solving_animals_/csd/2023": {
+          "type": "स्लाइड्स"
+        },
+        "tangrams/csd/2023": {
+          "type": "रिसोर्स"
+        },
+        "exploring_problem_solving_games_/csd/2023": {
+          "type": "स्लाइड्स"
+        },
+        "_key_warm_up_word_search/csd/2023": {
+          "type": "उत्तर कुंजी"
+        },
+        "_key_web_design_for_users/csd/2023": {
+          "type": "उत्तर कुंजी"
+        },
+        "exploring_web_pages_2/csd/2023": {
+          "name": "वेब पृष्ठों की पड़ताल करना",
+          "type": "स्लाइड्स"
+        },
+        "problem_solving_and_design/csd/2023": {
+          "type": "रिसोर्स"
+        },
+        "web_design_template/csd/2023": {
+          "type": "रिसोर्स"
+        },
+        "html_tags/csd/2023": {
+          "type": "रिसोर्स"
+        },
+        "intro_to_html/csd/2023": {
+          "name": "HTML का परिचय",
+          "type": "स्लाइड्स"
+        },
+        "intro_to_web_lab_part_2/csd/2023": {
+          "type": "वीडीयो"
+        },
+        "pair_programming/csd/2023": {
+          "name": "जोड़ी प्रोग्रामिंग",
+          "type": "वीडीयो"
+        },
+        "video_intro_to_web_lab_part_1/csd/2023": {
+          "type": "वीडीयो"
+        },
+        "formatting_html/csd/2023": {
+          "type": "रिसोर्स"
+        },
+        "headings/csd/2023": {
+          "type": "स्लाइड्स"
+        },
+        "headings_and_paragraphs/csd/2023": {
+          "type": "रिसोर्स"
+        },
+        "lists/csd/2023": {
+          "name": "सूचियाँ",
+          "type": "रिसोर्स"
+        },
+        "video_debugging/csd/2023": {
+          "name": "वीडियो: डीबगिंग",
+          "type": "वीडीयो"
+        },
+        "video_pair_programming/csd/2023": {
+          "name": "वीडियो: जोड़ी प्रोग्रामिंग",
+          "type": "वीडीयो"
+        },
+        "html_web_page/csd/2023": {
+          "type": "शीर्षक"
+        },
+        "html_web_page_1/csd/2023": {
+          "type": "सहकर्मी की समीक्षा"
+        },
+        "html_web_page_2/csd/2023": {
+          "type": "प्रोजेक्ट गाइड"
+        },
+        "mini-project_html_web_page/csd/2023": {
+          "type": "स्लाइड्स"
+        },
+        "problem_solving_process_with_programming/csd/2023": {
+          "type": "रिसोर्स"
+        },
+        "digital_footprint/csd/2023": {
+          "name": "डिजीटल फुटप्रिंट",
+          "type": "स्लाइड्स"
+        },
+        "social_sleuth/csd/2023": {
+          "name": "सामाजिक गुप्तचर"
+        },
+        "social_sleuth_1/csd/2023": {
+          "name": "सामाजिक गुप्तचर"
+        },
+        "intro_to_css_-_part_1/csd/2023": {
+          "name": "CSS का परिचय - भाग 1",
+          "type": "वीडीयो"
+        },
+        "intro_to_css_-_part_2/csd/2023": {
+          "name": "CSS का परिचय - भाग 2",
+          "type": "वीडीयो"
+        },
+        "style_sheets/csd/2023": {
+          "type": "रिसोर्स"
+        },
+        "styling_text_with_css/csd/2023": {
+          "name": "CSS के साथ स्टाइलिंग टेक्सट",
+          "type": "स्लाइड्स"
+        },
+        "text_properties/csd/2023": {
+          "type": "रिसोर्स"
+        },
+        "mini-project_your_personal_style/csd/2023": {
+          "type": "स्लाइड्स"
+        },
+        "your_personal_style/csd/2023": {
+          "type": "शीर्षक"
+        },
+        "your_personal_style_1/csd/2023": {
+          "type": "सहकर्मी की समीक्षा"
+        },
+        "your_personal_style_2/csd/2023": {
+          "type": "प्रोजेक्ट गाइड"
+        },
+        "creative_commons_overview/csd/2023": {
+          "type": "वीडीयो"
+        },
+        "intellectual_property/csd/2023": {
+          "name": "बौद्धिक विशेषता",
+          "type": "स्लाइड्स"
+        },
+        "creative_commons_search/csd/2023": {
+          "type": "रिसोर्स"
+        },
+        "images_in_html/csd/2023": {
+          "name": "HTML में चित्र",
+          "type": "रिसोर्स"
+        },
+        "using_images/csd/2023": {
+          "type": "स्लाइड्स"
+        },
+        "websites_for_expression/csd/2023": {
+          "type": "स्लाइड्स"
+        },
+        "styling_elements_with_css/csd/2023": {
+          "name": "CSS के साथ स्टाइलिंग एलिमेंट्स",
+          "type": "स्लाइड्स"
+        },
+        "personal_web_page_-_prepare/csd/2023": {
+          "type": "प्रोजेक्ट गाइड"
+        },
+        "your_web_page_prepare/csd/2023": {
+          "type": "स्लाइड्स"
+        },
+        "personal_web_page/csd/2023": {
+          "type": "सहकर्मी की समीक्षा"
+        },
+        "personal_web_page_-_reflect/csd/2023": {
+          "type": "प्रोजेक्ट गाइड"
+        },
+        "personal_web_page_-_student_checklist/csd/2023": {
+          "type": "रिसोर्स"
+        },
+        "personal_web_page_1/csd/2023": {
+          "type": "शीर्षक"
+        },
+        "project_-_personal_web_page/csd/2023": {
+          "type": "स्लाइड्स"
+        },
+        "publishing_your_website/csd/2023": {
+          "name": "आपकी वेबसाइट का प्रकाशन",
+          "type": "वीडीयो"
+        },
+        "websites_for_a_purpose_2/csd/2023": {
+          "type": "स्लाइड्स"
+        },
+        "team_problem_solving/csd/2023": {
+          "name": "टीम में सवाल हल करना",
+          "type": "स्लाइड्स"
+        },
+        "video_managing_disagreement/csd/2023": {
+          "name": "वीडियो: असहमति का प्रबंधन",
+          "type": "वीडीयो"
+        },
+        "video_teamwork/csd/2023": {
+          "name": "वीडियो: टीमवर्क",
+          "type": "वीडीयो"
+        },
+        "sources_and_research/csd/2023": {
+          "name": "स्रोत और शोध",
+          "type": "स्लाइड्स"
+        },
+        "video_how_search_works/csd/2023": {
+          "name": "खोज कैसे काम करती है",
+          "type": "वीडीयो"
+        },
+        "classes/csd/2023": {
+          "name": "कक्षाएं",
+          "type": "रिसोर्स"
+        },
+        "css_classes/csd/2023": {
+          "type": "स्लाइड्स"
+        },
+        "plan_a_multi-page_website/csd/2023": {
+          "type": "प्रोजेक्ट गाइड"
+        },
+        "planning_a_multi-page_site/csd/2023": {
+          "type": "स्लाइड्स"
+        },
+        "website_for_a_purpose/csd/2023": {
+          "type": "शीर्षक"
+        },
+        "hyperlinks/csd/2023": {
+          "type": "रिसोर्स"
+        },
+        "linking_pages/csd/2023": {
+          "name": "पृष्ठों को लिंक करना",
+          "type": "स्लाइड्स"
+        },
+        "project_-_website_for_a_purpose/csd/2023": {
+          "name": "प्रोजेक्ट - किसी उद्देश्य के लिए वेबसाइट",
+          "type": "स्लाइड्स"
+        },
+        "peer_review_and_final_touches/csd/2023": {
+          "name": "सहपाठी समीक्षा और अंतिम कार्य करना",
+          "type": "स्लाइड्स"
+        },
+        "website_for_a_purpose_-_reflect/csd/2023": {
+          "type": "प्रोजेक्ट गाइड"
+        },
+        "website_for_a_purpose_1/csd/2023": {
+          "type": "सहकर्मी की समीक्षा"
+        },
+        "_warm_up_word_search_key_/csd/2023": {
+          "type": "उत्तर कुंजी"
+        },
+        "programming_for_a_purpose/csd/2023": {
+          "type": "स्लाइड्स"
+        },
+        "animation_and_game_design_template/csd/2023": {
+          "type": "रिसोर्स"
+        },
+        "plotting_shapes/csd/2023": {
+          "name": "प्लॉटिंग आकृतियां",
+          "type": "स्लाइड्स"
+        },
+        "drawing_in_game_lab/csd/2023": {
+          "name": "गेम लैब में चित्रित करना",
+          "type": "स्लाइड्स"
+        },
+        "drawing_in_game_lab_-_part_1/csd/2023": {
+          "type": "वीडीयो"
+        },
+        "drawing_in_game_lab_-_part_2/csd/2023": {
+          "type": "वीडीयो"
+        },
+        "drawing_shapes_1/csd/2023": {
+          "type": "रिसोर्स"
+        },
+        "shapes_and_parameters/csd/2023": {
+          "type": "रिसोर्स"
+        },
+        "shapes_and_parameters_1/csd/2023": {
+          "type": "स्लाइड्स"
+        },
+        "introduction_to_variables/csd/2023": {
+          "type": "वीडीयो"
+        },
+        "naming_variables/csd/2023": {
+          "type": "रिसोर्स"
+        },
+        "variables/csd/2023": {
+          "name": "चर",
+          "type": "रिसोर्स"
+        },
+        "variables_1/csd/2023": {
+          "name": "चर",
+          "type": "वीडीयो"
+        },
+        "variables_2/csd/2023": {
+          "name": "चर",
+          "type": "स्लाइड्स"
+        },
+        "random_numbers/csd/2023": {
+          "type": "रिसोर्स"
+        },
+        "random_numbers_1/csd/2023": {
+          "type": "स्लाइड्स"
+        },
+        "mini-project_-_robot_faces/csd/2023": {
+          "type": "स्लाइड्स"
+        },
+        "problem_solving_with_programming/csd/2023": {
+          "type": "रिसोर्स"
+        },
+        "robot_faces/csd/2023": {
+          "type": "शीर्षक"
+        },
+        "animation_tab/csd/2023": {
+          "type": "रिसोर्स"
+        },
+        "introduction_to_sprites/csd/2023": {
+          "type": "वीडीयो"
+        },
+        "sprites/csd/2023": {
+          "name": "स्प्राइट्स",
+          "type": "रिसोर्स"
+        },
+        "sprites_1/csd/2023": {
+          "name": "स्प्राइट्स",
+          "type": "स्लाइड्स"
+        },
+        "the_animation_tab/csd/2023": {
+          "name": "ऐनिमेशन लैब",
+          "type": "वीडीयो"
+        },
+        "sprite_properties/csd/2023": {
+          "name": "स्प्राइट्स की विशेषताएं",
+          "type": "रिसोर्स"
+        },
+        "sprite_properties_1/csd/2023": {
+          "name": "स्प्राइट्स की विशेषताएं",
+          "type": "स्लाइड्स"
+        },
+        "sprite_properties_needs_updating_/csd/2023": {
+          "name": "स्प्राइट्स की विशेषताएं",
+          "type": "वीडीयो"
+        },
+        "text/csd/2023": {
+          "name": "पाठ",
+          "type": "स्लाइड्स"
+        },
+        "captioned_scenes/csd/2023": {
+          "type": "शीर्षक"
+        },
+        "mini-project_-_captioned_scenes/csd/2023": {
+          "type": "स्लाइड्स"
+        },
+        "flipbook_example_-_by_marnic_bos/csd/2023": {
+          "type": "वीडीयो"
+        },
+        "introduction_to_the_draw_loop/csd/2023": {
+          "type": "वीडीयो"
+        },
+        "the_draw_loop/csd/2023": {
+          "name": "ड्रा लूप",
+          "type": "रिसोर्स"
+        },
+        "the_draw_loop_1/csd/2023": {
+          "name": "ड्रा लूप",
+          "type": "स्लाइड्स"
+        },
+        "sprite_movement/csd/2023": {
+          "name": "स्प्राइट गतिविधि",
+          "type": "वीडीयो"
+        },
+        "sprite_movement_1/csd/2023": {
+          "name": "स्प्राइट गतिविधि",
+          "type": "स्लाइड्स"
+        },
+        "animated_scene/csd/2023": {
+          "type": "शीर्षक"
+        },
+        "mini-project_-_animation/csd/2023": {
+          "type": "स्लाइड्स"
+        },
+        "boolean_expressions/csd/2023": {
+          "name": "बूलियन अभिव्यंजनाएं",
+          "type": "वीडीयो"
+        },
+        "booleans_and_comparison_operators/csd/2023": {
+          "type": "रिसोर्स"
+        },
+        "conditional_statements/csd/2023": {
+          "name": "सापेक्ष स्टेटमेंट्स",
+          "type": "वीडीयो"
+        },
+        "conditionals/csd/2023": {
+          "name": "कंडीशनल्स",
+          "type": "स्लाइड्स"
+        },
+        "if_statements/csd/2023": {
+          "type": "रिसोर्स"
+        },
+        "keyboard_input/csd/2023": {
+          "name": "कीबोर्ड इनपुट",
+          "type": "स्लाइड्स"
+        },
+        "if-else_statements/csd/2023": {
+          "type": "रिसोर्स"
+        },
+        "if_else_statements/csd/2023": {
+          "name": "इफ/एल्स स्टेटमेंट्स",
+          "type": "वीडीयो"
+        },
+        "mouse_input/csd/2023": {
+          "type": "स्लाइड्स"
+        },
+        "extra_code_in_challenge_levels/csd/2023": {
+          "type": "रिसोर्स"
+        },
+        "interactive_card_-_student_checklist/csd/2023": {
+          "type": "रिसोर्स"
+        },
+        "interactive_card_3/csd/2023": {
+          "type": "शीर्षक"
+        },
+        "project_-_interactive_card/csd/2023": {
+          "name": "प्रोजेक्ट - संवादात्मक कार्ड",
+          "type": "स्लाइड्स"
+        },
+        "velocity/csd/2023": {
+          "name": "वेग",
+          "type": "वीडीयो"
+        },
+        "velocity_1/csd/2023": {
+          "name": "वेग",
+          "type": "रिसोर्स"
+        },
+        "velocity_2/csd/2023": {
+          "name": "वेग",
+          "type": "स्लाइड्स"
+        },
+        "collision_detection/csd/2023": {
+          "name": "संघट्टन अभिज्ञान"
+        },
+        "collision_detection_1/csd/2023": {
+          "name": "संघट्टन अभिज्ञान",
+          "type": "रिसोर्स"
+        },
+        "collision_detection_2/csd/2023": {
+          "name": "संघट्टन अभिज्ञान",
+          "type": "स्लाइड्स"
+        },
+        "mini-project_-_side_scroller/csd/2023": {
+          "type": "स्लाइड्स"
+        },
+        "side_scroller/csd/2023": {
+          "name": "साइड स्क्रॉलर",
+          "type": "शीर्षक"
+        },
+        "side_scroller_1/csd/2023": {
+          "name": "साइड स्क्रॉलर"
+        },
+        "complex_sprite_movement/csd/2023": {
+          "name": "जटिल स्प्राइट गतिविधि",
+          "type": "स्लाइड्स"
+        },
+        "velocity_and_the_counter_pattern/csd/2023": {
+          "name": "वेग और काउंटर पैटर्न",
+          "type": "रिसोर्स"
+        },
+        "collisions/csd/2023": {
+          "name": "संघट्टन",
+          "type": "स्लाइड्स"
+        },
+        "flyer_game/csd/2023": {
+          "name": "फ्लायर गेम",
+          "type": "शीर्षक"
+        },
+        "flyer_game_1/csd/2023": {
+          "name": "फ्लायर गेम"
+        },
+        "mini-project_-_flyer_game/csd/2023": {
+          "type": "स्लाइड्स"
+        },
+        "functions/csd/2023": {
+          "name": "कार्य",
+          "type": "वीडीयो"
+        },
+        "functions_1/csd/2023": {
+          "name": "कार्य",
+          "type": "रिसोर्स"
+        },
+        "functions_2/csd/2023": {
+          "name": "कार्य",
+          "type": "स्लाइड्स"
+        },
+        "the_game_design_process/csd/2023": {
+          "name": "गेम डिज़ाइन की प्रक्रिया",
+          "type": "स्लाइड्स"
+        },
+        "using_the_game_design_process/csd/2023": {
+          "name": "गेम डिज़ाइन प्रक्रिया का उपयोग करना",
+          "type": "स्लाइड्स"
+        },
+        "make_your_own_game_-_student_checklist/csd/2023": {
+          "type": "रिसोर्स"
+        },
+        "make_your_own_game_3/csd/2023": {
+          "type": "शीर्षक"
+        },
+        "project_-_design_a_game/csd/2023": {
+          "name": "प्रोजेक्ट - गेम डिज़ाइन करें",
+          "type": "स्लाइड्स"
+        },
+        "designing_with_empathy_2/csd/2023": {
+          "type": "स्लाइड्स"
+        },
+        "understanding_your_user/csd/2023": {
+          "name": "आपके उपयोगकर्ता को समझना",
+          "type": "स्लाइड्स"
+        },
+        "the_design_thinking_process/csd/2023": {
+          "type": "वीडीयो"
+        },
+        "user_centered_design_-_define_and_prepare/csd/2023": {
+          "type": "स्लाइड्स"
+        },
+        "user_centered_design_-_try_and_reflect/csd/2023": {
+          "type": "स्लाइड्स"
+        },
+        "user_interface_screens/csd/2023": {
+          "type": "रिसोर्स"
+        },
+        "user_interfaces/csd/2023": {
+          "name": "उपयोगकर्ता इंटरफ़ेस",
+          "type": "स्लाइड्स"
+        },
+        "feedback_and_testing/csd/2023": {
+          "name": "फीडबैक और परीक्षण",
+          "type": "स्लाइड्स"
+        },
+        "prototype_feedback/csd/2023": {
+          "type": "रिसोर्स"
+        },
+        "example_user_interviews/csd/2023": {
+          "type": "रिसोर्स"
+        },
+        "identifying_user_needs/csd/2023": {
+          "name": "उपयोगकर्ता की जरूरतों को पहचानना",
+          "type": "स्लाइड्स"
+        },
+        "paper_prototypes/csd/2023": {
+          "name": "पेपर प्रतिमान",
+          "type": "शीर्षक"
+        },
+        "project_-_paper_prototype/csd/2023": {
+          "name": "प्रोजेक्ट - पेपर प्रतिमान",
+          "type": "स्लाइड्स"
+        },
+        "designing_apps_for_good/csd/2023": {
+          "name": "हित के लिए ऐप्स डिज़ाइन करना",
+          "type": "स्लाइड्स"
+        },
+        "market_research/csd/2023": {
+          "name": "मार्किट शोध"
+        },
+        "market_research_-_research_areas/csd/2023": {
+          "type": "रिसोर्स"
+        },
+        "market_research_1/csd/2023": {
+          "name": "मार्किट शोध"
+        },
+        "market_research_2/csd/2023": {
+          "name": "मार्किट शोध",
+          "type": "स्लाइड्स"
+        },
+        "exploring_ui_elements/csd/2023": {
+          "type": "स्लाइड्स"
+        },
+        "build_a_paper_prototype/csd/2023": {
+          "type": "स्लाइड्स"
+        },
+        "design_mode/csd/2023": {
+          "name": "डिजाइन मोड",
+          "type": "रिसोर्स"
+        },
+        "design_mode_elements/csd/2023": {
+          "type": "रिसोर्स"
+        },
+        "prototype_testing/csd/2023": {
+          "name": "प्रतिमान परीक्षण",
+          "type": "स्लाइड्स"
+        },
+        "what_s_for_lunch_testing/csd/2023": {
+          "type": "वीडीयो"
+        },
+        "design_mode_in_app_lab/csd/2023": {
+          "type": "स्लाइड्स"
+        },
+        "intro_to_design_mode/csd/2023": {
+          "type": "वीडीयो"
+        },
+        "model_screen_design/csd/2023": {
+          "type": "रिसोर्स"
+        },
+        "build_a_digital_prototype/csd/2023": {
+          "type": "स्लाइड्स"
+        },
+        "events_in_app_lab/csd/2023": {
+          "type": "वीडीयो"
+        },
+        "events_in_app_lab_1/csd/2023": {
+          "type": "वीडीयो"
+        },
+        "events_in_app_lab_2/csd/2023": {
+          "type": "स्लाइड्स"
+        },
+        "changing_screens/csd/2023": {
+          "type": "रिसोर्स"
+        },
+        "importing_screens/csd/2023": {
+          "type": "रिसोर्स"
+        },
+        "linking_prototype_screens/csd/2023": {
+          "type": "स्लाइड्स"
+        },
+        "multi-screen_apps/csd/2023": {
+          "name": "मल्टी-स्क्रीन ऐप्स",
+          "type": "रिसोर्स"
+        },
+        "responding_to_user_input/csd/2023": {
+          "type": "रिसोर्स"
+        },
+        "testing_the_app/csd/2023": {
+          "name": "ऐप का परीक्षण करना",
+          "type": "स्लाइड्स"
+        },
+        "bugs_and_features_2/csd/2023": {
+          "type": "स्लाइड्स"
+        },
+        "updating_your_prototype_1/csd/2023": {
+          "type": "स्लाइड्स"
+        },
+        "app_presentation/csd/2023": {
+          "name": "ऐप प्रस्तुति",
+          "type": "शीर्षक"
+        },
+        "app_presentation_1/csd/2023": {
+          "name": "ऐप प्रस्तुति"
+        },
+        "project_-_app_presentation/csd/2023": {
+          "name": "प्रोजेक्ट - ऐप प्रस्तुति",
+          "type": "स्लाइड्स"
+        },
+        "meals_data/csd/2023": {
+          "type": "रिसोर्स"
+        },
+        "representation_matters/csd/2023": {
+          "name": "प्रस्तुतिकरण विषय"
+        },
+        "representation_matters_1/csd/2023": {
+          "name": "प्रस्तुतिकरण विषय"
+        },
+        "representation_matters_2/csd/2023": {
+          "name": "प्रस्तुतिकरण विषय",
+          "type": "स्लाइड्स"
+        },
+        "patterns_and_representation/csd/2023": {
+          "name": "पैटर्न और प्रस्तुति",
+          "type": "स्लाइड्स"
+        },
+        "representing_information/csd/2023": {
+          "name": "जानकारी प्रस्तुत करना"
+        },
+        "ascii_and_binary_representation/csd/2023": {
+          "name": "ASCII और युग्मक प्रस्तुति",
+          "type": "स्लाइड्स"
+        },
+        "ascii_challenges_1/csd/2023": {
+          "type": "उत्तर कुंजी"
+        },
+        "ascii_text/csd/2023": {
+          "type": "रिसोर्स"
+        },
+        "representing_images/csd/2023": {
+          "name": "चित्र प्रस्तुत करना",
+          "type": "स्लाइड्स"
+        },
+        "binary_and_data/csd/2023": {
+          "type": "वीडीयो"
+        },
+        "representing_numbers/csd/2023": {
+          "name": "संख्याएं प्रस्तुत करना"
+        },
+        "representing_numbers_1/csd/2023": {
+          "name": "संख्याएं प्रस्तुत करना",
+          "type": "स्लाइड्स"
+        },
+        "combining_representations/csd/2023": {
+          "name": "प्रस्तुतियों को संयोजित करना",
+          "type": "स्लाइड्स"
+        },
+        "keeping_data_secret/csd/2023": {
+          "name": "डेटा को गोपनीय रखना",
+          "type": "स्लाइड्स"
+        },
+        "medical_records_1/csd/2023": {
+          "type": "उत्तर कुंजी"
+        },
+        "create_a_representation_2/csd/2023": {
+          "type": "शीर्षक"
+        },
+        "create_a_representation_3/csd/2023": {
+          "type": "स्लाइड्स"
+        },
+        "problem_solving_with_data_2/csd/2023": {
+          "type": "स्लाइड्स"
+        },
+        "structuring_data/csd/2023": {
+          "name": "डेटे की संरचना करना"
+        },
+        "structuring_data_1/csd/2023": {
+          "name": "डेटे की संरचना करना",
+          "type": "स्लाइड्स"
+        },
+        "interpreting_data/csd/2023": {
+          "name": "डेटे की व्याख्या करना"
+        },
+        "interpreting_data_1/csd/2023": {
+          "name": "डेटे की व्याख्या करना"
+        },
+        "interpreting_data_2/csd/2023": {
+          "name": "डेटे की व्याख्या करना",
+          "type": "रिसोर्स"
+        },
+        "interpreting_data_3/csd/2023": {
+          "name": "डेटे की व्याख्या करना",
+          "type": "स्लाइड्स"
+        },
+        "making_decisions_with_data_1/csd/2023": {
+          "name": "डेटे से निर्णय लेना"
+        },
+        "making_decisions_with_data_2/csd/2023": {
+          "name": "डेटे से निर्णय लेना",
+          "type": "स्लाइड्स"
+        },
+        "problem_solving_process_with_data/csd/2023": {
+          "type": "रिसोर्स"
+        },
+        "automating_data_decisions/csd/2023": {
+          "name": "डेटा निर्णयों को ऑटोमैटिक करना"
+        },
+        "automating_data_decisions_1/csd/2023": {
+          "name": "डेटा निर्णयों को ऑटोमैटिक करना",
+          "type": "रिसोर्स"
+        },
+        "automating_data_decisions_2/csd/2023": {
+          "name": "डेटा निर्णयों को ऑटोमैटिक करना"
+        },
+        "automating_data_decisions_3/csd/2023": {
+          "name": "डेटा निर्णयों को ऑटोमैटिक करना",
+          "type": "स्लाइड्स"
+        },
+        "amazon_and_data/csd/2023": {
+          "type": "वीडीयो"
+        },
+        "data_in_the_real_world/csd/2023": {
+          "name": "वास्तविक दुनिया में डेटा"
+        },
+        "data_in_the_real_world_1/csd/2023": {
+          "name": "वास्तविक दुनिया में डेटा"
+        },
+        "netflix_and_data/csd/2023": {
+          "type": "वीडीयो"
+        },
+        "problem_solving_with_big_data/csd/2023": {
+          "name": "विशाल डेटे के साथ सवाल हल करना",
+          "type": "स्लाइड्स"
+        },
+        "waze_and_data/csd/2023": {
+          "type": "वीडीयो"
+        },
+        "data_and_machine_learning/csd/2023": {
+          "type": "स्लाइड्स"
+        },
+        "video_impact_on_society/csd/2023": {
+          "name": "वीडियो: समाज पर प्रभाव",
+          "type": "वीडीयो"
+        },
+        "video_machine_learning/csd/2023": {
+          "name": "वीडियो: मशीन प्रशिक्षण",
+          "url": "https://www.youtube.com/watch?v=OeU5m6vRyCk",
+          "type": "वीडीयो"
+        },
+        "video_training_data_and_bias/csd/2023": {
+          "name": "वीडियो: प्रशिक्षण डेटा और पूर्वाग्रह",
+          "type": "वीडीयो"
+        },
+        "make_a_recommendation/csd/2023": {
+          "type": "सहकर्मी की समीक्षा"
+        },
+        "make_a_recommendation_1/csd/2023": {
+          "type": "शीर्षक"
+        },
+        "make_a_recommendation_2/csd/2023": {
+          "type": "प्रोजेक्ट गाइड"
+        },
+        "project_-_make_a_recommendation/csd/2023": {
+          "type": "स्लाइड्स"
+        },
+        "physical_design_template/csd/2023": {
+          "type": "रिसोर्स"
+        },
+        "physical_designs_1/csd/2023": {
+          "type": "स्लाइड्स"
+        },
+        "circuit_playground/csd/2023": {
+          "type": "रिसोर्स"
+        },
+        "circuits_and_logic/csd/2023": {
+          "type": "वीडीयो"
+        },
+        "physical_output/csd/2023": {
+          "type": "रिसोर्स"
+        },
+        "the_circuit_playground/csd/2023": {
+          "name": "Circuit Playgrounds",
+          "type": "स्लाइड्स"
+        },
+        "designing_screens_with_code/csd/2023": {
+          "name": "कोड के साथ स्क्रीन डिजाइन करना",
+          "type": "रिसोर्स"
+        },
+        "updating_screen_elements/csd/2023": {
+          "type": "स्लाइड्स"
+        },
+        "board_events/csd/2023": {
+          "name": "बोर्ड इवेंट्स",
+          "type": "रिसोर्स"
+        },
+        "board_events_1/csd/2023": {
+          "name": "बोर्ड इवेंट्स",
+          "type": "स्लाइड्स"
+        },
+        "physical_input/csd/2023": {
+          "name": "भौतिक इनपुट",
+          "type": "रिसोर्स"
+        },
+        "the_counter_pattern/csd/2023": {
+          "type": "वीडीयो"
+        },
+        "if_statements_1/csd/2023": {
+          "type": "वीडीयो"
+        },
+        "the_counter_pattern_1/csd/2023": {
+          "type": "रिसोर्स"
+        },
+        "variables_and_if_statements/csd/2023": {
+          "type": "स्लाइड्स"
+        },
+        "mini-project_field_collector_app/csd/2023": {
+          "type": "स्लाइड्स"
+        },
+        "rubric_-_field_collector_app/csd/2023": {
+          "type": "शीर्षक"
+        },
+        "color_leds/csd/2023": {
+          "name": "रंगीन LED",
+          "type": "स्लाइड्स"
+        },
+        "color_lights/csd/2023": {
+          "type": "रिसोर्स"
+        },
+        "getting_screen_inputs/csd/2023": {
+          "type": "स्लाइड्स"
+        },
+        "taking_input_with_getproperty/csd/2023": {
+          "type": "रिसोर्स"
+        },
+        "combining_inputs_and_outputs/csd/2023": {
+          "type": "स्लाइड्स"
+        },
+        "input_output_devices/csd/2023": {
+          "type": "वीडीयो"
+        },
+        "peer_review_-_human_device_interaction/csd/2023": {
+          "type": "रिसोर्स"
+        },
+        "project_human_device_interaction/csd/2023": {
+          "type": "स्लाइड्स"
+        },
+        "rubric_-_human_device_interaction/csd/2023": {
+          "type": "शीर्षक"
+        },
+        "analog_sensors/csd/2023": {
+          "type": "रिसोर्स"
+        },
+        "board_sensors/csd/2023": {
+          "type": "स्लाइड्स"
+        },
+        "changing_sensor_scale/csd/2023": {
+          "type": "रिसोर्स"
+        },
+        "date_and_change_events/csd/2023": {
+          "type": "रिसोर्स"
+        },
+        "accelerometer/csd/2023": {
+          "name": "त्वरणमापी",
+          "type": "स्लाइड्स"
+        },
+        "accelerometer_events/csd/2023": {
+          "name": "त्वरणमापी इवेंट्स",
+          "type": "रिसोर्स"
+        },
+        "the_accelerometer/csd/2023": {
+          "type": "रिसोर्स"
+        },
+        "arrays/csd/2023": {
+          "name": "श्रृंखला समूह",
+          "type": "रिसोर्स"
+        },
+        "introduction_to_arrays/csd/2023": {
+          "name": "श्रृंखला समूहों का परिचय",
+          "type": "वीडीयो"
+        },
+        "making_music/csd/2023": {
+          "name": "संगीत बनाना",
+          "type": "स्लाइड्स"
+        },
+        "modifying_arrays/csd/2023": {
+          "type": "रिसोर्स"
+        },
+        "playing_notes/csd/2023": {
+          "name": "नोट्स प्ले करना",
+          "type": "रिसोर्स"
+        },
+        "producing_output/csd/2023": {
+          "type": "रिसोर्स"
+        },
+        "functions_with_parameters/csd/2023": {
+          "name": "मापदंडों के साथ फंक्शन",
+          "type": "वीडीयो"
+        },
+        "mini-project_interactive_art/csd/2023": {
+          "type": "स्लाइड्स"
+        },
+        "student_example_projects/csd/2023": {
+          "type": "रिसोर्स"
+        },
+        "student_rubric_-_interactive_art/csd/2023": {
+          "type": "शीर्षक"
+        },
+        "circuits_and_leds/csd/2023": {
+          "type": "रिसोर्स"
+        },
+        "physical_outputs_and_leds/csd/2023": {
+          "type": "स्लाइड्स"
+        },
+        "circuits_and_buttons/csd/2023": {
+          "type": "रिसोर्स"
+        },
+        "physical_inputs_and_buttons/csd/2023": {
+          "type": "स्लाइड्स"
+        },
+        "project_prototype_an_innovation/csd/2023": {
+          "name": "प्रोजेक्ट: अन्वेषण का प्रतिमान बनाएं",
+          "type": "स्लाइड्स"
+        },
+        "prototype_an_innovation/csd/2023": {
+          "type": "शीर्षक"
+        },
+        "teacher_forum_1/csd/2023": {
+          "name": "अध्यापक फोरम"
+        },
+        "physical_designs_2/csd/2023": {
+          "type": "स्लाइड्स"
+        },
+        "introducing_the_micro_bit/csd/2023": {
+          "type": "स्लाइड्स"
+        },
+        "led_planning_sheet/csd/2023": {
+          "type": "रिसोर्स"
+        },
+        "the_micro_bit_led_display/csd/2023": {
+          "type": "रिसोर्स"
+        },
+        "the_micro_bit_overview/csd/2023": {
+          "type": "रिसोर्स"
+        },
+        "updating_screen_elements_1/csd/2023": {
+          "type": "स्लाइड्स"
+        },
+        "board_events_2/csd/2023": {
+          "name": "बोर्ड इवेंट्स",
+          "type": "स्लाइड्स"
+        },
+        "board_events_3/csd/2023": {
+          "name": "बोर्ड इवेंट्स",
+          "type": "रिसोर्स"
+        },
+        "micro_bit_inputs/csd/2023": {
+          "type": "रिसोर्स"
+        },
+        "the_counter_pattern_2/csd/2023": {
+          "type": "वीडीयो"
+        },
+        "variables_and_if_statements_1/csd/2023": {
+          "type": "स्लाइड्स"
+        },
+        "mini-project_field_collector_app_1/csd/2023": {
+          "type": "स्लाइड्स"
+        },
+        "rubric_-_field_collector_app_1/csd/2023": {
+          "type": "शीर्षक"
+        },
+        "getting_screen_inputs_1/csd/2023": {
+          "type": "स्लाइड्स"
+        },
+        "combining_inputs_and_outputs_1/csd/2023": {
+          "type": "स्लाइड्स"
+        },
+        "peer_review_-_human_device_interaction_1/csd/2023": {
+          "type": "रिसोर्स"
+        },
+        "project_human_device_interaction_1/csd/2023": {
+          "type": "स्लाइड्स"
+        },
+        "rubric_-_human_device_interaction_1/csd/2023": {
+          "type": "शीर्षक"
+        },
+        "board_sensors_1/csd/2023": {
+          "type": "स्लाइड्स"
+        },
+        "data_change_events/csd/2023": {
+          "type": "रिसोर्स"
+        },
+        "setting_sensor_scale/csd/2023": {
+          "type": "रिसोर्स"
+        },
+        "the_micro_bit_sensors/csd/2023": {
+          "type": "रिसोर्स"
+        },
+        "accelerometer_1/csd/2023": {
+          "name": "त्वरणमापी",
+          "type": "स्लाइड्स"
+        },
+        "accelerometer_events_1/csd/2023": {
+          "name": "त्वरणमापी इवेंट्स",
+          "type": "रिसोर्स"
+        },
+        "the_micro_bit_accelerometer/csd/2023": {
+          "type": "रिसोर्स"
+        },
+        "functions_3/csd/2023": {
+          "name": "कार्य",
+          "type": "स्लाइड्स"
+        },
+        "mini-project_interactive_pet/csd/2023": {
+          "type": "स्लाइड्स"
+        },
+        "student_rubric_-_interactive_pet/csd/2023": {
+          "type": "शीर्षक"
+        },
+        "external_leds_on_a_micro_bit/csd/2023": {
+          "type": "रिसोर्स"
+        },
+        "physical_outputs_and_leds_1/csd/2023": {
+          "type": "स्लाइड्स"
+        },
+        "external_buttons_on_a_micro_bit/csd/2023": {
+          "type": "रिसोर्स"
+        },
+        "physical_inputs_and_buttons_1/csd/2023": {
+          "type": "स्लाइड्स"
+        },
+        "project_prototype_an_innovation_1/csd/2023": {
+          "name": "प्रोजेक्ट: अन्वेषण का प्रतिमान बनाएं",
+          "type": "स्लाइड्स"
+        },
+        "prototype_an_innovation_2/csd/2023": {
+          "type": "शीर्षक"
+        },
+        "the_problem_solving_process_4/csd/2023": {
+          "name": "सवाल हल करने की प्रक्रिया"
+        },
+        "ai_what_is_machine_learning_/csd/2023": {
+          "url": "https://www.youtube.com/watch?v=OeU5m6vRyCk",
+          "type": "वीडीयो"
+        },
+        "introduction_to_machine_learning/csd/2023": {
+          "type": "स्लाइड्स"
+        },
+        "types_of_machine_learning/csd/2023": {
+          "type": "स्लाइड्स"
+        },
+        "types_of_machine_learning_2/csd/2023": {
+          "type": "उत्तर कुंजी"
+        },
+        "innovations_in_ai/csd/2023": {
+          "type": "स्लाइड्स"
+        },
+        "innovations_in_ai_research_areas_-_student_resource/csd/2023": {
+          "type": "रिसोर्स"
+        },
+        "seeing_ai/csd/2023": {
+          "name": "एआई को देखकर",
+          "type": "वीडीयो"
+        },
+        "_key_patterns_in_data/csd/2023": {
+          "type": "उत्तर कुंजी"
+        },
+        "finding_patterns_in_data/csd/2023": {
+          "type": "वीडीयो"
+        },
+        "patterns_in_data/csd/2023": {
+          "type": "स्लाइड्स"
+        },
+        "shoe_survey/csd/2023": {
+          "type": "रिसोर्स"
+        },
+        "_key_classification_models/csd/2023": {
+          "type": "उत्तर कुंजी"
+        },
+        "classification_models_1/csd/2023": {
+          "type": "स्लाइड्स"
+        },
+        "fruit_veggie_cards/csd/2023": {
+          "type": "रिसोर्स"
+        },
+        "_key_training_a_model_in_ai_lab/csd/2023": {
+          "type": "उत्तर कुंजी"
+        },
+        "accuracy_in_ai_lab/csd/2023": {
+          "type": "रिसोर्स"
+        },
+        "introduction_to_ai_lab/csd/2023": {
+          "name": "AI लैब का परिचय",
+          "type": "स्लाइड्स"
+        },
+        "introduction_to_ai_lab_1/csd/2023": {
+          "name": "AI लैब का परिचय",
+          "type": "वीडीयो"
+        },
+        "selecting_features/csd/2023": {
+          "type": "रिसोर्स"
+        },
+        "training_and_testing_in_ai_lab/csd/2023": {
+          "name": "एआई लैब में प्रशिक्षण और परीक्षण",
+          "type": "वीडीयो"
+        },
+        "using_data_with_categorical_features/csd/2023": {
+          "type": "रिसोर्स"
+        },
+        "importing_a_model_in_app_lab/csd/2023": {
+          "type": "रिसोर्स"
+        },
+        "importing_models_in_app_lab/csd/2023": {
+          "type": "स्लाइड्स"
+        },
+        "ai_training_data_bias/csd/2023": {
+          "name": "AI: प्रशिक्षण डेटा और पक्षपात",
+          "url": "https://youtu.be/x2mRoFNm22g",
+          "type": "वीडीयो"
+        },
+        "model_cards/csd/2023": {
+          "type": "स्लाइड्स"
+        },
+        "_key_zoo_models/csd/2023": {
+          "type": "उत्तर कुंजी"
+        },
+        "model_cards_in_ai_lab/csd/2023": {
+          "name": "AI लैब में मॉडल कार्ड",
+          "type": "वीडीयो"
+        },
+        "saving_models_in_ai_lab/csd/2023": {
+          "type": "स्लाइड्स"
+        },
+        "selecting_a_label/csd/2023": {
+          "type": "रिसोर्स"
+        },
+        "if-statements_in_app_lab/csd/2023": {
+          "type": "वीडीयो"
+        },
+        "model_cards_in_app_lab/csd/2023": {
+          "type": "स्लाइड्स"
+        },
+        "printable_model_cards/csd/2023": {
+          "type": "रिसोर्स"
+        },
+        "_key_numerical_accuracy/csd/2023": {
+          "type": "उत्तर कुंजी"
+        },
+        "_key_zombie_prediction/csd/2023": {
+          "type": "उत्तर कुंजी"
+        },
+        "numerical_models/csd/2023": {
+          "type": "स्लाइड्स"
+        },
+        "_key_-_numerical_data_in_ai_lab/csd/2023": {
+          "type": "उत्तर कुंजी"
+        },
+        "numerical_data_in_ai_lab/csd/2023": {
+          "name": "AI लैब में संख्यात्मक डेटा",
+          "type": "स्लाइड्स"
+        },
+        "numerical_data_in_ai_lab_1/csd/2023": {
+          "name": "AI लैब में संख्यात्मक डेटा"
+        },
+        "numerical_data_in_ai_lab_2/csd/2023": {
+          "name": "AI लैब में संख्यात्मक डेटा",
+          "type": "वीडीयो"
+        },
+        "using_data_with_numerical_features/csd/2023": {
+          "type": "रिसोर्स"
+        },
+        "customizing_apps/csd/2023": {
+          "type": "स्लाइड्स"
+        },
+        "ai_code_of_ethics/csd/2023": {
+          "type": "स्लाइड्स"
+        },
+        "ethics_ai_equal_access_and_algorithmic_bias/csd/2023": {
+          "type": "वीडीयो"
+        },
+        "our_ai_code_of_ethics_template_/csd/2023": {
+          "type": "स्लाइड्स"
+        },
+        "create_an_ml_app/csd/2023": {
+          "type": "शीर्षक"
+        },
+        "make_a_machine_learning_app/csd/2023": {
+          "type": "स्लाइड्स"
+        },
+        "issue_statements/csd/2023": {
+          "type": "स्लाइड्स"
+        },
+        "creating_a_survey/csd/2023": {
+          "type": "रिसोर्स"
+        },
+        "creating_a_survey_in_google_forms/csd/2023": {
+          "type": "वीडीयो"
+        },
+        "survey_planning/csd/2023": {
+          "name": "डेटा संकलन डिज़ाइन करना",
+          "type": "स्लाइड्स"
+        },
+        "cleaning_survey_data/csd/2023": {
+          "type": "वीडीयो"
+        },
+        "survey_data_in_ai_lab/csd/2023": {
+          "type": "स्लाइड्स"
+        },
+        "view_and_download_survey_data/csd/2023": {
+          "type": "वीडीयो"
+        },
+        "troubleshooting_models/csd/2023": {
+          "type": "स्लाइड्स"
+        },
+        "creating_an_app/csd/2023": {
+          "type": "स्लाइड्स"
+        },
+        "_template_5_why_s/csd/2023": {
+          "type": "रिसोर्स"
+        },
+        "design_an_ai_app/csd/2023": {
+          "type": "स्लाइड्स"
+        },
+        "design_an_ai_app_1/csd/2023": {
+          "type": "शीर्षक"
+        },
+        "model_card_-_digital_template/csd/2023": {
+          "type": "रिसोर्स"
+        },
+        "model_card_-_printable_template/csd/2023": {
           "type": "रिसोर्स"
         },
         "all_resources/coursea/2023": {
@@ -7478,12 +8856,12 @@
           "url": "https://docs.google.com/document/d/1gQWtamQ3YBk-gJnmw_z3QWNLfzdrPyaUjS4ZbtfAvEs/view"
         },
         "how_ai_works_-_training_data_and_bias/how-ai-works/2023": {
-          "name": "AI कैसे काम करता है - प्रशिक्षण डेटा और पूर्वाग्रह",
+          "name": "ए.आई. कैसे काम करता है - प्रशिक्षण डेटा और पक्षपात",
           "url": "https://youtu.be/x2mRoFNm22g",
           "type": "वीडीयो"
         },
         "how_ai_works_-_what_is_machine_learning_/how-ai-works/2023": {
-          "name": "AI कैसे काम करता है - मशीन लर्निंग क्या है?",
+          "name": "ए.आई. कैसे काम करता है - मशीन लर्निंग क्या है?",
           "url": "https://www.youtube.com/watch?v=OeU5m6vRyCk",
           "type": "वीडीयो"
         },
@@ -7492,7 +8870,7 @@
           "type": "स्लाइड्स"
         },
         "_example_computer_vision_network/how-ai-works/2023": {
-          "name": "[Example] कंप्यूटर विज़न नेटवर्क",
+          "name": "[उदाहरण] कंप्यूटर विज़न नेटवर्क",
           "url": "https://docs.google.com/presentation/d/1zJzbHDel0uQ62usH8g_qBp5KIFMN08tEps5lXSAb3Ag/edit?usp=sharing"
         },
         "computer_vision/how-ai-works/2023": {
@@ -7505,35 +8883,35 @@
           "url": "https://docs.google.com/document/d/1C7ob1lB-zKi0DSC3do9ZVFfXkHlC2xnSDI2yPFAqEY4/edit"
         },
         "how_ai_works_how_computer_vision_works/how-ai-works/2023": {
-          "name": "AI कैसे काम करता है: कंप्यूटर विज़न कैसे काम करता है",
+          "name": "ए.आई. कैसे काम करता है: कंप्यूटर विज़न कैसे काम करता है",
           "url": "https://youtu.be/2hXG8v8p0KM",
           "type": "वीडीयो"
         },
         "seven_segment_display_manipulative/how-ai-works/2023": {
-          "name": "सात सेगमेंट डिस्प्ले मैनिपुलेटिव",
+          "name": "सेवेन सेगमेंट डिस्प्ले मैनिपुलेटिव",
           "url": "https://docs.google.com/document/d/17QzrodDqCjF2pjZvyo4coWYQbaZxuRwDrPEe20H-yBM/edit"
         },
         "what_a_neural_network_sees/how-ai-works/2023": {
-          "name": "एक तंत्रिका नेटवर्क क्या देखता है",
+          "name": "न्यूरल नेटवर्क क्या देखता है",
           "url": "https://www.youtube.com/watch?v=Gu0MkmynWkw",
           "type": "वीडीयो"
         },
         "how_ai_works_how_neural_networks_work/how-ai-works/2023": {
-          "name": "AI कैसे काम करता है: तंत्रिका नेटवर्क कैसे काम करते हैं",
+          "name": "ए.आई. कैसे काम करता है: न्यूरल नेटवर्क्स कैसे काम करते हैं",
           "url": "https://youtu.be/JrXazCEACVo",
           "type": "वीडीयो"
         },
         "neural_networks/how-ai-works/2023": {
-          "name": "तंत्रिका नेटवर्क",
+          "name": "न्यूरल नेटवर्क",
           "url": "https://docs.google.com/document/d/1HA_zYssm4-s24-8on8BeL5DbzSfi7G7q-4LlywNBoCw/edit?usp=sharing"
         },
         "neural_networks_1/how-ai-works/2023": {
-          "name": "तंत्रिका नेटवर्क",
+          "name": "न्यूरल नेटवर्क",
           "url": "https://docs.google.com/presentation/d/1lj6Z3egPkfv7jKtTVNmhCSY9RKHkcw5LV7Oq_ryqDVs/template/preview",
           "type": "स्लाइड्स"
         },
         "wetube_content_creators/how-ai-works/2023": {
-          "name": "WeTube कंटेंट क्रिएटर्स",
+          "name": "WeTube सामग्री निर्माता",
           "url": "https://docs.google.com/document/d/1z7ZO-9zKlmn3brqH7euWVMSOuzVTQOdWDgkGGukRkvc/edit?usp=sharing",
           "type": "रिसोर्स"
         },

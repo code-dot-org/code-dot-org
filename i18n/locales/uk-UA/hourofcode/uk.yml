@@ -9,13 +9,13 @@ uk:
   campaign_date_start_long: 4 грудня
   campaign_date_short: 4-10 грудня
   campaign_date_full: 4-10 грудня
-  campaign_date_year: '2022'
-  campaign_date_full_year: 5-11 грудня 2022 року
+  campaign_date_year: '2023'
+  campaign_date_full_year: 4-10 грудня 2023 року
   nonus_campaign_date_start_short: Жов. 1
   nonus_campaign_date_start_long: 1 Жовтня
   nonus_campaign_date_short: 1 жовтня – 18 грудня
   nonus_campaign_date_full: 1 жовтня - 18 грудня
-  nonus_campaign_date_year: '2022'
+  nonus_campaign_date_year: '2023'
   nonus_campaign_date_full_year: 1 жовтня 2022 року - 18 грудня 2022 року
   latam_campaign_date_start_short: Жов. 1
   latam_campaign_date_start_long: 1 Жовтня
@@ -27,14 +27,18 @@ uk:
   europe_campaign_date_start_long: 1 Жовтня
   europe_campaign_date_short: 1 жовтня – 18 грудня
   europe_campaign_date_full: 10-25 жовтня
-  europe_campaign_date_year: '2022'
+  europe_campaign_date_year: '2023'
   europe_campaign_date_full_year: 10-25 жовтня 2020
   africa_campaign_date_start_short: Жов. 1
   africa_campaign_date_start_long: 1 Жовтня
   africa_campaign_date_short: 1 жовтня – 18 грудня
   africa_campaign_date_full: 1 жовтня - 18 грудня
-  africa_campaign_date_year: '2022'
+  africa_campaign_date_year: '2023'
   africa_campaign_date_full_year: 1 жовтня 2022 року - 18 грудня 2022 року
+  hoc2023_header: Творчість з AI
+  hoc2023_social_creativity_with_ai_title: Година коду - що ви створите?
+  hoc2023_social_creativity_with_ai_desc: Використовуйте інформатику, щоб досліджувати
+    та дізнаватися про AI!
   hoc2022_header: Вчись, грай, твори!
   social_hoc2022_explore_play_create: Інформатика допомагає вчитися, грати й творити!
   codeorg_homepage_hoc2022_body: Досліджуйте всесвіт, досягайте результатів, рухайтеся
@@ -180,6 +184,28 @@ uk:
     каталог навчальних програм s перероблена сторінка Teach, яка допоможе вам все
     це знайти!
   in_partnership_with: 'Партнер:'
+  shop_code_dot_org_heading: Магазин Code.org
+  shop_code_dot_org_desc: Підтримуйте нашу роботу і носите рух з гордістю. Наші капелюхи
+    носили президент Обама і знаменитості.
+  spread_the_word_heading: Поширюйте інформацію
+  spread_the_word_desc: Посилюйте наш вплив, поділившись Code.org зі своєю мережею.
+    Від соціальних мереж до оновлень електронною поштою дізнайтеся, як ви можете допомогти
+    нам охопити більше викладачів, студентів та адвокатів.
+  follow_us_heading: Слідкуйте за нами в соціальних мережах
+  follow_us_desc: Будьте в курсі подій з нами в соціальних мережах та діліться нашими
+    публікаціями зі своєю мережею, щоб бути в курсі та сприяти підвищенню обізнаності.
+  facebook: Pseudoloc-Фасеебоокк
+  twitter: Pseudoloc-Твітттер
+  linked_in: LinkedIn
+  instagram: Instagram
+  tik_tok: TikTok
+  subscribe_to_emails_heading: Підпишіться на електронні листи
+  subscribe_to_emails_desc: Читайте про те, що відбувається на Code.org та в освіті
+    з інформатики через щоквартальні оновлення через наш список розсилки.
+  subscribe_to_emails_intl: Підпишіться на міжнародні оновлення
+  promote_code_dot_org_heading: Просування Code.org
+  promote_code_dot_org_desc: Просувайте інформатику у вашому регіоні за допомогою
+    статистики, цитат та відео.
   afe_partnership_logo_alt: Логотип Amazon Future Engineer
   afe_partnership_thanks_desc: Amazon Future Engineer — це комплексна програма, яка
     супроводжує користувачів від дитинства до початку кар'єри. Вона надихає, навчає
@@ -199,6 +225,15 @@ uk:
   curricula_title_high: Навчальні програми середньої школи
   curricula_desc_high: Перегляньте переконливі курси та заходи, які запрошують вас
     та ваших старшокласників глибше заглибитися в інформатику.
+  for_administrators_heading: Для адміністраторів
+  for_administrators_desc: Приєднуйтесь до тисяч шкіл, які вже включили інформатику
+    у свою навчальну програму.
+  for_parents_heading: Для батьків
+  for_parents_desc: Ви можете допомогти заохотити школу вашого учня пропонувати або
+    розширювати освіту з інформатики.
+  for_educators_heading: Для освітян
+  for_educators_desc: Почніть викладати сьогодні - досвід інформатики не потрібен
+    - з наших професійних навчальних семінарів.
   students_label: Учні
   teachers_label: Вчителі
   teacher_label_csf: Викладач основ інформатики
@@ -208,10 +243,11 @@ uk:
   teacher_label_csa: AP® Computer Science A Teacher
   required_materials: 'Необхідні матеріали:'
   optional_materials: 'Додаткові матеріали:'
-  call_to_action_explore_roles: Досліджуйте відкриті ролі
+  call_to_action_hold_an_event: Провести захід
   call_to_action_learn_more: Дізнатися більше
   call_to_action_watch_now: Дивитися зараз
   call_to_action_try_activity: Спробуйте активність
+  call_to_action_try_activities: Спробуйте заходи
   call_to_action_explore_unit: Досліджуйте одиницю
   call_to_action_explore_curriculum: Дослідіть навчальну програму
   call_to_action_explore_curriculum_options: Дізнайтесь про інші варіанти навчальних
@@ -281,7 +317,20 @@ uk:
   call_to_action_notify_available: Повідомте мене, коли буде доступно
   call_to_action_register_early_access: Реєстрація для раннього доступу
   call_to_action_open_positions: Перегляд відкритих позицій
+  call_to_action_explore_roles: Досліджуйте відкриті ролі
   call_to_action_get_guide: Отримайте довідник
+  call_to_action_donate_to_cdo: Зробити пожертвування для Code.org
+  call_to_action_start_fundraiser: Почніть збір коштів
+  call_to_action_view_donation_policy: Переглянути політику пожертвування
+  call_to_action_view_donate_bitpay: Пожертвуйте за допомогою BitPay
+  call_to_action_make_a_donation: Зробити пожертву
+  call_to_action_other_ways_to_give: Інші способи подарувати
+  call_to_action_become_partner_usa: Стати партнером США
+  call_to_action_become_partner_intl: Стати міжнародним партнером
+  call_to_action_become_a_volunteer: Стати волонтером
+  call_to_action_start_translating: Почніть перекладати
+  call_to_action_learn_about_advocacy: Дізнайтеся про нашу адвокатську діяльність
+  call_to_action_visit_store: Відвідайте магазин
   aria_label_call_to_action_afe: Дізнайтеся більше про майбутні інженери Amazon
   aria_label_call_to_action_teaching_csf: Почніть програму професійного навчання «Основи
     інформатики»
@@ -389,6 +438,7 @@ uk:
   curriculum_name_csp: Принципи інформатики
   curriculum_name_csc: Зв'язки в інформатиці
   curriculum_name_csa: 'Інформатика A '
+  curriculum_name_csa_ai: Pseudoloc-Софттварее Eнджджінеееріндждж & CCомпюютер  Вісііон
   curriculum_name_csc_02: Будь-який модуль "Зв'язки в інформатиці"
   curriculum_name_ai: AI та машинне навчання
   curriculum_name_artificial_intelligence: Штучний інтелект (AI)
@@ -465,6 +515,12 @@ uk:
     ігор та фізичних обчислювальних систем.
   curriculum_desc_csp: Безкоштовний, схвалений AP® CSP, вступний курс середньої школи,
     який знайомить учнів з основоположними концепціями інформатики.
+  curriculum_desc_csa_ai_long: 'Цей модуль CSA з двох розділів після AP пропонує старшокласникам
+    практичний досвід роботи з професійними інструментами розробки програмного забезпечення,
+    включаючи GitHub та GitHub Copilot, і надає їм реальні навички для розробки програми
+    комп''ютерного зору. '
+  curriculum_desc_csa_ai_short: Цей модуль Post-AP® CSA пропонує старшокласникам практичний
+    досвід роботи з професійними інструментами розробки програмного забезпечення.
   collection_hardware: Зосередження на «Апаратному обладнанні»
   collection_hardware_desc: Дає учням можливість використовувати дані й фізичні пристрої
     для вирішення проблем.
@@ -537,6 +593,7 @@ uk:
   module_duration_2_hrs: 2 години
   module_duration_3_hrs: 3 годин
   module_duration_5_hrs: 5 годин
+  module_duration_5_hrs_plus: 5+ годин
   module_duration_8_hrs: 8 годин
   module_duration_20_hrs: 20 годин
   module_duration_35_hrs: 35 годин
@@ -617,6 +674,8 @@ uk:
   heading_these_lessons_will: 'Ці уроки будуть:'
   heading_explore_curriculum_catalog: Ознайомтеся з усіма нашими курсами в каталозі
     навчальних програм
+  heading_csa_ai: Шукаєте, чим зайнятися після іспиту AP®?
+  heading_bring_cs_to_students: Принесіть інформатику студентам
   professional_learning_section_desc: Отримайте необхідну підтримку під час підготовки
     до викладання. 90 % викладачів оцінюють це рішення як найкраще з можливих!
   professional_learning_section_desc_short: Отримайте необхідну підтримку під час
@@ -649,6 +708,24 @@ uk:
   support_and_questions_section_desc: Наша команда підтримки відповість на будь-які
     запитання щодо початку викладання з Code.org. Ви також можете запитати інших педагогів
     про їхній досвід на наших форумах викладачів.
+  subscribe_form_section_title: Підпишіться на оновлення
+  subscribe_form_section_desc_csa: Зареєструйтеся, щоб отримувати щомісячні електронні
+    листи про AP® Computer Science A від Code.org та отримувати корисні нагадування,
+    поради та оновлення, які надсилаються прямо на вашу поштову скриньку.
+  subscribe_form_section_desc_csc: Зареєструйтесь, щоб отримувати щомісячні електронні
+    листи про Computer Science Connections Code.org та отримувати корисні нагадування,
+    поради та оновлення, які надсилаються прямо на вашу поштову скриньку.
+  subscribe_form_section_desc_csd: Зареєструйтеся, щоб отримувати щомісячні електронні
+    листи про відкриття комп'ютерних наук Code.org та отримувати корисні нагадування,
+    поради та оновлення, які надсилаються прямо на вашу поштову скриньку.
+  subscribe_form_section_desc_csf: Зареєструйтеся, щоб отримувати щомісячні електронні
+    листи про основи комп'ютерних наук Code.org та отримувати корисні нагадування,
+    поради та оновлення, які надсилаються прямо на вашу поштову скриньку.
+  subscribe_form_section_desc_csp: Зареєструйтеся, щоб отримувати щомісячні електронні
+    листи про Принципи комп'ютерних наук Code.org та отримувати корисні нагадування,
+    поради та оновлення, які надсилаються прямо на вашу поштову скриньку.
+  subscribe_form_section_unsubscribe: Ви можете відмовитися від підписки в будь-який
+    час.
   blockchain_hero_heading: Як працює блокчейн
   blockchain_hero_desc: Пориньте у світ блокчейну з нашою новою серією відео та супутніми
     уроками «Як працює блокчейн»!
@@ -754,6 +831,9 @@ uk:
     Кожен урок поєднується з одним відео із серії, занурюючись глибше в концепції,
     представлені у відео.
   ai_curriculum_btn_aria_label_04: Дізнайтеся, як працює штучний інтелект
+  ai_curriculum_grades_05: 'Рівні класу: 9-12'
+  ai_curriculum_btn_aria_label_05: Ознайомтеся з модулем «Програмна інженерія та комп'ютерний
+    зір»
   ai_carousel_heading: 'Що кажуть вчителі про AI з Code.org:'
   ai_carousel_quote_01: Цей урок також дав моїм учням можливість побачити, що в системах
     класифікації є елемент думки. Пізніше, коли ми почали бачити, як упередження може
@@ -873,6 +953,8 @@ uk:
     оцінювання студентів. Завдяки багатому поєднанню теорії, практичних прикладів
     та ресурсів, він має на меті дати можливість викладачам орієнтуватися в ландшафті
     штучного інтелекту та покращувати досвід навчання студентів.
+  ai_pl_101_resources_5: Посібник із забезпечення відповідального підходу до штучного
+    інтелекту
   ai_pl_101_video_desc_6: 'Дізнайтеся більше про нову технологію, яка спричиняє великі
     зміни в штучному інтелекті, де представлені два нових відео про моделі великих
     мов (наприклад, ChatGPT) та генеративний штучний інтелект. Почуйте, як працюють
@@ -883,6 +965,9 @@ uk:
     від LLM, таких як ChatGPT, від початківця до просунутого. Включає початкові підказки
     для тих, хто просто занурює пальці ніг, а також вдосконалені інструменти для тих,
     хто прагне максимізувати свій потенціал.
+  ai_pl_101_resources_3: Підказки штучного інтелекту для трансформації навчання студентів
+  ai_pl_101_resources_section_title: Більше способів дізнатися про AI
+  ai_pl_101_resources_guide: 'Супутник посібника:'
   how_ai_works_hero_heading: Як працює AI
   how_ai_works_hero_desc: Пориньте у світ AI з нашою серією відео та супутніми уроками
     «Як працює AI»!
@@ -1285,8 +1370,8 @@ uk:
     Animation
   csp_page_curriculum_glance_devices: Laptop, Chromebook
   csp_page_curriculum_glance_tools: Лабораторія застосунків
-  csp_page_curriculum_glance_professional_learning: Facilitator-led Workshops, Self-paced
-    Modules
+  csp_page_curriculum_glance_professional_learning: Семінари під керівництвом фасилітатора,
+    модулі для самостійного прокладання
   csp_page_curriculum_glance_professional_languages: Англійською
   csp_page_curriculum_glance_professional_accessibility_features: Text-to-speech,
     Closed captioning, Immersive reader
@@ -1413,8 +1498,8 @@ uk:
   csd_page_curriculum_glance_devices: Laptop, Chromebook
   csd_page_curriculum_glance_tools: Лабораторія застосунків, Ігрова лабораторія, Лабораторія
     ШІ, Веб-лабораторія
-  csd_page_curriculum_glance_professional_learning: Facilitator-led Workshops, Self-paced
-    Modules
+  csd_page_curriculum_glance_professional_learning: Семінари під керівництвом фасилітатора,
+    модулі для самостійного прокладання
   csd_page_curriculum_glance_professional_languages: Англійською
   csd_page_curriculum_glance_professional_accessibility_features: Text-to-speech,
     Closed captioning, Immersive reader
@@ -1558,8 +1643,8 @@ uk:
     і дизайн, проєктування застосунків
   csf_page_curriculum_glance_devices: Ноутбук, Chromebook, планшет
   csf_page_curriculum_glance_tools: Спрайт-Лабораторія, Лабораторія ігор
-  csf_page_curriculum_glance_professional_learning: Facilitator-led Workshops, Self-paced
-    Modules
+  csf_page_curriculum_glance_professional_learning: Семінари під керівництвом фасилітатора,
+    модулі для самостійного прокладання
   csf_page_curriculum_glance_languages: Арабська, індонезійська, каталонська, китайська
     спрощена, китайська традиційна, чеська, французька, німецька, хінді, італійська,
     японська, корейська, каннада, малайська, маратхі, монгольська, польська, португальська
@@ -1702,6 +1787,65 @@ uk:
   csa_page_faq_answer_08_02: For more information about the values that guided our
     work, please see our [curriculum values](%{curriculum_values_url}) and our [professional
     learning values](%{pl_values_url}).
+  donate_page_top_heading: Допоможіть фінансувати нашу місію
+  donate_page_top_desc: Кожна пожертва підживлює місію Code.org щодо розширення доступу
+    до освіти з інформатики. Ми пропонуємо вам кілька способів пожертвувати та змінити
+    ситуацію.
+  donate_page_fundraise_title: Збір коштів для Code.org
+  donate_page_fundraise_desc: Допоможіть зібрати гроші для Code.org! Кожен учень кожної
+    школи повинен мати можливість вивчати інформатику.
+  donate_page_other_ways_title: Інші способи подарувати
+  donate_page_other_ways_desc: Вивчіть різноманітні методи, щоб внести свій внесок,
+    і знайдіть варіант, який вам найбільше підходить. Кожен жест, великий чи маленький,
+    просуває нашу місію вперед.
+  donate_page_501c3: Code.org зареєстрований як публічна некомерційна організація
+    501 (c) (3). Внески на Code.org не підлягають оподаткуванню в тій мірі, в якій
+    це дозволено законом. Ідентифікаційний номер платника податку Code.org - 46-0858543.
+  donate_page_donation_policy_title: Розуміння нашої політики пожертвувань
+  donate_page_donation_policy_desc: Дізнайтеся про те, як ми обробляємо та розподіляємо
+    ваші внески.
+  donate_tabs_tab_label_daf_direct: DAF Прямий
+  donate_tabs_tab_label_amazon: Амазонка
+  donate_tabs_tab_label_bitpay: БітPay
+  donate_tabs_tab_label_employee_match: Матч співробітників
+  donate_tabs_daf_direct_title: Зробити пожертвування через DAF Direct
+  donate_tabs_daf_direct_desc: Пожертвуйте через свій фонд, який консультували донори,
+    у Fidelity Charitable, Schwab Charitable або BNY Mellon і надайте рекомендації
+    щодо гранту Code.org через онлайн-форму DAF Direct.
+  donate_tabs_amazon_title: Пожертвуйте через Amazon
+  donate_tabs_amazon_desc: Пожертвуйте безпосередньо за допомогою свого облікового
+    запису Amazon. Всього кількома клацаннями миші безперешкодно внесіть свій внесок
+    у місію Code.org та розширюйте можливості майбутнього інформатичної освіти.
+  donate_tabs_bitpay_title: Пожертвуйте за допомогою Crypto через BitPay
+  donate_tabs_bitpay_desc: Прийміть майбутнє дарування за допомогою криптовалюти.
+    Через BitPay ваша цифрова валюта може безпосередньо підтримувати зусилля Code.org
+    щодо розширення освіти в галузі інформатики.
+  help_page_top_heading: Як ви можете допомогти
+  help_page_top_desc: Підтримайте нашу місію зробити інформатику доступною для кожної
+    дитини, скрізь. Ваші зусилля допомагають нам надихнути майбутніх новаторів та
+    подолати розрив у технічній освіті.
+  help_page_top_subhead: Зробіть пожертву на Code.org
+  help_page_top_desc_02: Ми працюємо над тим, щоб дати кожному студенту можливість
+    вивчати інформатику — як онлайн, так і в школах, де ми створюємо постійні курси
+    та готуємо викладачів. За кожен долар, який ви пожертвуєте, одна дитина знайомиться
+    з інформатикою.
+  help_page_partners_heading: Стати партнером
+  help_page_partners_desc: Code.org співпрацює з іншими некомерційними організаціями
+    як партнери, щоб допомогти поширювати інформатику на місцевому, стійкому рівні.
+    Дізнайтеся більше про нашу програму.
+  help_page_volunteer_heading: Волонтер у класі
+  help_page_volunteer_desc: Станьте волонтером, щоб викладати Годину коду або бути
+    запрошеним доповідачем у місцевому класі. Зареєструйтеся, щоб дізнатись про можливості
+    поблизу вас.
+  help_page_translate_heading: Допоможіть нам перекласти
+  help_page_translate_desc: Волонтери переклали наші навчальні посібники більш ніж
+    45 мовами. Допоможіть нам продовжувати розширювати наші навчальні посібники для
+    студентів у всьому світі!
+  help_page_speak_for_cs_heading: Говоріть про освіту в галузі інформатики
+  help_page_speak_for_cs_desc: Дізнайтеся більше про адвокатську роботу Code.org у
+    США та десять політик, які ми рекомендуємо державам прийняти, щоб зробити інформатику
+    основою для всіх студентів. Крім того, дізнайтеся, як ви можете стимулювати зміни
+    у своєму штаті.
   hoc_live: Година коду в прямому ефірі
   hoc_live_sign_up_title: Підпишіться на Година коду в прямому ефірі
   hoc_live_learn_title: Навчіться за допомогою Години коду в прямому ефірі
@@ -13618,6 +13762,10 @@ uk:
   video_library_page_inspirational_video_title_11: Навчитись може кожен (1 хв)
   video_library_page_inspirational_video_title_12: Ло Кве Фальта в Нуестрас Ескуелас
     (2 хв)
+  video_library_page_inspirational_video_title_13: NASA святкує Годину коду (2 хв)
+  video_library_page_inspirational_video_title_14: Це більше, ніж гра (1 хв)
+  video_library_page_inspirational_video_title_15: Створити за допомогою інформатики
+    (1 хв)
   video_library_page_not_hacked_video_title_1: 'Як не зламати: Вступ'
   video_library_page_not_hacked_video_title_2: 'Як не зламати: паролі'
   video_library_page_not_hacked_video_title_3: 'Як не зламати: автентифікація та блокування

@@ -5173,6 +5173,10 @@
           "purpose": "Bu çevrimiçi aktivitede öğrenciler, Play Lab'deki etkinlikleri nasıl kullanacaklarını öğrenecekler.  Bir ok tuşuna basıldığında şövalyeyi hareket etmesi için eğiterek başlayacaklar, ardından son serbest oyun bulmacasının bir parçası olarak sıralama ve döngü dahil olmak üzere bu kurs boyunca öğrendikleri becerilerin geri kalanını sergileme fırsatı ile sona erecekler.",
           "student_overview": "Bir hikaye oluşturmak veya etkileşimli bir oyun yapmak için olayları kullanın."
         },
+        "ai-ethics-2023/lesson-1": {
+          "name": "Yapay Zeka Etik Kurallarımız",
+          "student_overview": "Yapay zeka etiği hakkında işbirliği içinde araştırma yapın ve paylaşılabilir bir davranış kuralları oluşturun."
+        },
         "csc-adaptations-2023/Modeling Animal Adaptations (pilot)": {
           "name": "Hayvan Uyarlamaları Giriş",
           "overview": "Bu **beceri geliştirme** dersinde, öğrenciler sprite oluşturmayı ve canlandırmayı ve olayları etkileşimli hale getirmek için kullanmayı öğrenecekler. \n\nÖğrenciler, türlerin zaman içinde çevrelerine uyum sağlayarak nasıl hayatta kaldığını göstermek için Sprite Lab'de olaya dayalı bir neden-sonuç modelini kodlayacaklar. Etkileşimli modeller ve simülasyonlar, mühendislerin ve bilim adamlarının kalıpları tanımlamasına, doğayı anlamalarına, gelecekteki değişiklikler hakkında tahminlerde bulunmalarına ve büyük aksaklıklara hazırlanmak ve/veya bunlarla mücadele etmek için çözümler tasarlamalarına yardımcı olmak için gerçek dünyada kullanılır. \n\nÖğrenciler gruplar halinde evrim, adaptasyon, göç, doğal seçilim ve hayatta kalma örneklerini keşfedeceklerdir. ",
@@ -5331,6 +5335,296 @@
           "preparation": "-   Öğrenci başına bir bilgisayar hazırlayın.\n-   Öğrenci başına\\*\\* Uygulamanızı<a href=\"https://docs.google.com/document/d/1kO4SNEIVyM0GrxxJb6NzVYauXXpi6rzQkDIfrzQf1Ls/template/preview\" target=\"_blank\"></a>Paylaş\\*\\* broşurunun bir kopyasını hazırlayın.\n-   Öğrencilerin bu ders için orijinal şiirlerinin bir kopyasına sahip olduklarından emin olun.  \n-   Şiir Çift-Paylaşım etkinliği için sınıfı çiftlere ayırın.\n-   Bu dersten sonra keşfetmek için bu ilgili uzantı seçeneklerini ([link](https://studio.code.org/s/poetry-2023/lessons/4#activity-4365336)) göz önünde bulundurun.\n\n##### İsteğe bağlı\n\n-   Özellikle uzaktan öğretim için: Her öğrencinin uygulama URL'sini göndermek için dijital bir belge veya paylaşılan çevrimiçi alan oluşturmanız gerekip gerekmediğini belirleyin (“Bağlantılar” bölümünde öğretmen şablonuna bakın). ",
           "purpose": "Şiir sanat projelerini akranlarıyla paylaşmak, yaratıcı sürecin önemli bir yönüdür. Öğrencilerin geri bildirim almalarına, başkalarıyla işbirliği yapmalarına, kendi çalışmaları üzerinde düşünmelerine ve başarılarını kutlamalarına olanak tanır. Çalışmalarını başkalarıyla paylaşarak, öğrenciler yaratıcı düşünürler olarak büyüyebilir ve gelişebilir ve önemli iletişim ve kişilerarası beceriler geliştirebilirler.",
           "student_overview": "Yeni şiir uygulamalarınızı arkadaşlarınızla paylaşın! "
+        },
+        "csd1-2023/Intro to Problem Solving": {
+          "name": "Problem çözme tanıtımı",
+          "preparation": "**Her grup için**\n\n-   Her biri 13x13 cm uzunluğunda 2 yaprak alüminyum folyo\n-   8-12 cm su tutabilen 1 kap\n-   Kabın altına yerleştirilebilecek birkaç kağıt havlu veya paçavra\n-   15 tane kuruş\n-   Etkinlik kılavuzunun bir kopyası\n\n**öğretmen için**\n\n-   8-12 cm su tutabilen 1 kap\n-   50 adet kuruş\n-   Ekstra kağıt havlu veya paçavra\n-   Diğer öğretmenler tarafından paylaşılan ek stratejiler veya kaynaklar bulmak için doğrulanmış öğretmenler için [\"Teacher's Lounge\"](https://forum.code.org/t/resource-hub-problem-solving-and-computing-chapter-1-lessons-1-3/36188) forumunu kontrol edin\n-   Sanal olarak öğretiyorsanız, [Sanal Ders Değişikliklerimizi](https://docs.google.com/document/d/1420LdkGrISwhKjHu7i4XCbi60ahmCRnQoYf1_JosdgA/preview) kontrol etmeyi düşünün."
+        },
+        "csd1-2023/The Problem Solving Process": {
+          "name": "Problem çözme süreci",
+          "preparation": "Her öğrenci için\n\n-   Etkinlik Kılavuzunun bir kopyasını yazdırın\n\nsınıf için\n\n-   Poster kağıdı\n-   İşaretleyiciler/renkli kalemler\n\nÖğretmen için\n\n-   Diğer öğretmenler tarafından paylaşılan ek stratejiler veya kaynaklar bulmak için doğrulanmış öğretmenler için [\"Teacher's Lounge\"](https://forum.code.org/t/resource-hub-problem-solving-and-computing-chapter-1-lessons-1-3/36188) forumunu kontrol edin\n-   Sanal olarak öğretiyorsanız, [Sanal Ders Değişikliklerimizi](https://docs.google.com/document/d/1420LdkGrISwhKjHu7i4XCbi60ahmCRnQoYf1_JosdgA/preview) kontrol etmeyi düşünün."
+        },
+        "csd1-2023/Exploring Problem Solving": {
+          "name": "Problem çözmeyi keşfetme",
+          "preparation": "-   Her öğrenci için etkinlik kılavuzunu yazdırın\n-   Doğum Günü Partisi problemi için karalama kağıdı\n-   Sonuç tartışmasında sorunları tanımlamaya yönelik stratejileri kaydetmek için poster\n-   Diğer öğretmenler tarafından paylaşılan ek stratejiler veya kaynaklar bulmak için doğrulanmış öğretmenler için [\"Teacher's Lounge\"](https://forum.code.org/t/resource-hub-problem-solving-and-computing-chapter-1-lessons-1-3/36188) forumunu kontrol edin\n-   Sanal olarak öğretiyorsanız, [Sanal Ders Değişikliklerimizi](https://docs.google.com/document/d/1420LdkGrISwhKjHu7i4XCbi60ahmCRnQoYf1_JosdgA/preview) kontrol etmeyi düşünün."
+        },
+        "csd1-2023/What is a Computer?": {
+          "name": "Bilgisayar nedir?",
+          "preparation": "**Her grup için**\n\n-   Etkinlik kılavuzunun kopyalarını yazdırın. İki set resim olduğunu unutmayın, ancak her grubun yalnızca tek bir sete ihtiyacı vardır.\n-   Makas (Dersten önce resimleri kesecek vaktiniz yoksa)\n-   Poster kağıdı\n-   İşaretleyiciler veya renkli kalemler\n-   Resimleri yapıştırmak için yapıştırıcı veya bant\n\n**Öğretmen için**\n\n-   Diğer öğretmenler tarafından paylaşılan ek stratejiler veya kaynaklar bulmak için doğrulanmış öğretmenler için [\"Teacher's Lounge\"](https://forum.code.org/t/resource-hub-problem-solving-and-computing-chapter-2-lessons-4-8/36189) forumunu kontrol edin\n-   Sanal olarak öğretiyorsanız, [Sanal Ders Değişikliklerimizi](https://docs.google.com/document/d/1420LdkGrISwhKjHu7i4XCbi60ahmCRnQoYf1_JosdgA/preview) kontrol etmeyi düşünün."
+        },
+        "csd1-2023/Input and Output": {
+          "name": "Girdiler ve çıktılar"
+        },
+        "csd1-2023/Processing": {
+          "name": "İşleme"
+        },
+        "csd1-2023/Storage": {
+          "name": "Depolama"
+        },
+        "csd1-2023/Project - Propose an App": {
+          "name": "Proje - bir uygulama önermek"
+        },
+        "csd1-2023/Intro to Problem Solving - Newspaper Table (Alternate Lesson 1)": {
+          "name": "Problem Çözmeye Giriş - Gazete Tablosu (Alternatif Ders 1)"
+        },
+        "csd1-2023/Intro to Problem Solving - Spaghetti Bridge (Alternate Lesson 1)": {
+          "name": "Problem Çözmeye Giriş - Spagetti Köprüsü (Alternatif Ders 1)"
+        },
+        "csd1-2023/Intro to Problem Solving - Paper Tower (Alternate Lesson 1)": {
+          "name": "Problem Çözmeye Giriş - Kağıt Kule (Alternatif Ders 1)"
+        },
+        "csd1-2023/Exploring Problem Solving - Animals Theme (Alternate Lesson 3)": {
+          "name": "Problem Çözmeyi Keşfetme - Hayvan Teması (Alternatif Ders 3)",
+          "assessment_opportunities": "1.  **Çeşitli problemlere yaklaşmak için problem çözme sürecini uygulayın**\n\n     Etkinlik Kılavuzunun 5. sayfasında, öğrencilerin her problem için makul adımlar attığından emin olmak için tabloyu kontrol edin.\n\n2.  **Bir sorunun ne kadar iyi tanımlandığını değerlendirin ve sorunu daha kesin bir şekilde tanımlamak için stratejiler kullanın**\n\n     Etkinlik Kılavuzu'nun 5. sayfasındaki son soru için, öğrencilerin bir sorunu daha iyi tanımlamanın etkili bir yolu olacak en az bir sorusu veya stratejisi olduğundan emin olun."
+        },
+        "csd1-2023/Exploring Problem Solving - Games Theme (Alternate Lesson 3)": {
+          "name": "Problem Çözmeyi Keşfetme - Oyun Teması (Alternatif Ders 3)"
+        },
+        "csd2-2023/Exploring Web Pages": {
+          "name": "Web Sayfalarını Keşfetme"
+        },
+        "csd2-2023/Intro to HTML": {
+          "name": "HTML' ye Giriş"
+        },
+        "csd2-2023/Mini-Project: HTML Web Page": {
+          "name": "Mini-Proje: HTML Web Sayfası"
+        },
+        "csd2-2023/Digital Footprint": {
+          "name": "Dijital Ayak İzi"
+        },
+        "csd2-2023/Styling Text with CSS": {
+          "name": "CSS ile Metin Biçimlendirme"
+        },
+        "csd2-2023/Mini-Project: Your Personal Style": {
+          "name": "Mini-Proje: Kişisel Stiliniz"
+        },
+        "csd2-2023/Intellectual Property": {
+          "name": "Fikri Mülkiyet"
+        },
+        "csd2-2023/Using Images": {
+          "name": "Resimleri Kullanma"
+        },
+        "csd2-2023/Styling Elements with CSS": {
+          "name": "CSS ile Stil Öğeleri"
+        },
+        "csd2-2023/Your Web Page - Prepare": {
+          "name": "Web Sayfanız - Hazırla"
+        },
+        "csd2-2023/Project - Personal Web Page": {
+          "name": "Proje - Kişisel Web Sayfası"
+        },
+        "csd2-2023/Websites for a Purpose": {
+          "name": "Bir Amaca yönelik Web Siteleri"
+        },
+        "csd2-2023/Team Problem Solving": {
+          "name": "Takım Problem Çözme"
+        },
+        "csd2-2023/Sources and Research": {
+          "name": "Kaynaklar ve Araştırma"
+        },
+        "csd2-2023/CSS Classes": {
+          "name": "CSS Sınıfları"
+        },
+        "csd2-2023/Linking Pages": {
+          "name": "Sayfaları Bağlama"
+        },
+        "csd2-2023/Project - Website for a Purpose": {
+          "name": "Proje - Bir Amaca yönelik Web Sitesi"
+        },
+        "csd2-2023/Peer Review and Final Touches": {
+          "name": "Akran İncelemesi ve Son Rötuşlar"
+        },
+        "csd3-2023/Plotting Shapes": {
+          "name": "Şekiller çizme"
+        },
+        "csd3-2023/Drawing in Game Lab": {
+          "name": "Game Lab' da Çizim"
+        },
+        "csd3-2023/Shapes and Parameters": {
+          "name": "Şekiller ve Parametreler"
+        },
+        "csd3-2023/Variables": {
+          "name": "Değişkenler"
+        },
+        "csd3-2023/Random Numbers": {
+          "name": "Rastgele Sayılar"
+        },
+        "csd3-2023/Sprites": {
+          "name": "Hareketli Nesneler"
+        },
+        "csd3-2023/Sprite Properties": {
+          "name": "Nesne özellikleri"
+        },
+        "csd3-2023/Text": {
+          "name": "yazı"
+        },
+        "csd3-2023/The Draw Loop": {
+          "name": "Döngü çiz"
+        },
+        "csd3-2023/Sprite Movement": {
+          "name": "Hareketli Nesnelerin Hareketi"
+        },
+        "csd3-2023/Conditionals": {
+          "name": "Koşullar"
+        },
+        "csd3-2023/Keyboard Input": {
+          "name": "Klavye girişi"
+        },
+        "csd3-2023/Mouse Input": {
+          "name": "Fare Girdisi"
+        },
+        "csd3-2023/Project - Interactive Card": {
+          "name": "Proje - interaktif kart"
+        },
+        "csd3-2023/Velocity": {
+          "name": "Hız"
+        },
+        "csd3-2023/Collision Detection": {
+          "name": "Çarpışmanın algılanması"
+        },
+        "csd3-2023/Complex Sprite Movement": {
+          "name": "Karmaşık Hareketli Nesne Hareketi"
+        },
+        "csd3-2023/Collisions": {
+          "name": "Çarpışmalar"
+        },
+        "csd3-2023/Functions": {
+          "name": "Fonksiyonlar"
+        },
+        "csd3-2023/The Game Design Process": {
+          "name": "Oyun tasarım süreci"
+        },
+        "csd3-2023/Using the Game Design Process": {
+          "name": "Oyun tasarım süreci kullanarak"
+        },
+        "csd3-2023/Project - Design a Game": {
+          "name": "Proje - Bir oyun tasarla"
+        },
+        "csd4-2023/Understanding Your User": {
+          "name": "Kullanıcınızı anlama"
+        },
+        "csd4-2023/User Interfaces": {
+          "name": "Kullanıcı Arayüzleri"
+        },
+        "csd4-2023/Feedback and Testing": {
+          "name": "Geri bildirim ve Test"
+        },
+        "csd4-2023/Identifying User Needs": {
+          "name": "Kullanıcı İhtiyaçlarını Tanımlama"
+        },
+        "csd4-2023/Project - Paper Prototype": {
+          "name": "Proje - Kağıt Modeli"
+        },
+        "csd4-2023/Designing Apps for Good": {
+          "name": "Yararlı uygulamalar tasarlama"
+        },
+        "csd4-2023/Market Research": {
+          "name": "Pazar araştırması"
+        },
+        "csd4-2023/Prototype Testing": {
+          "name": "Prototip testi"
+        },
+        "csd4-2023/Testing the App": {
+          "name": "Uygulamayı Test Etmek"
+        },
+        "csd4-2023/Updating Your Prototype": {
+          "name": "Prototipinizi Güncelleme"
+        },
+        "csd4-2023/Project - App Presentation": {
+          "name": "Proje - Uygulama Sunumu"
+        },
+        "csd5-2023/Representation Matters": {
+          "name": "Konuları ifade etme"
+        },
+        "csd5-2023/Patterns and Representation": {
+          "name": "Desen ve gösterimi"
+        },
+        "csd5-2023/ASCII and Binary Representation": {
+          "name": "ASCII ve ikili gösterimi"
+        },
+        "csd5-2023/Representing Images": {
+          "name": "Görüntüleri ifade etme"
+        },
+        "csd5-2023/Representing Numbers": {
+          "name": "Numaraları temsil eden"
+        },
+        "csd5-2023/Combining Representations": {
+          "name": "Temsillerin Birleştirilmesi"
+        },
+        "csd5-2023/Keeping Data Secret": {
+          "name": "Verileri Gizli Tutmak"
+        },
+        "csd5-2023/Project - Create a Representation": {
+          "name": "Proje - bir ifade oluşturun"
+        },
+        "csd5-2023/Structuring Data": {
+          "name": "Verilerin Yapılandırılması"
+        },
+        "csd5-2023/Interpreting Data": {
+          "name": "Veri Yorumlama"
+        },
+        "csd5-2023/Making Decisions with Data": {
+          "name": "Veri ile karar verme"
+        },
+        "csd5-2023/Automating Data Decisions": {
+          "name": "Veri ile kararları otomatikleştirme"
+        },
+        "csd5-2023/Problem Solving with Big Data": {
+          "name": "Büyük veri ile Problem çözme"
+        },
+        "csd5-2023/Project - Make a Recommendation": {
+          "name": "Proje - Bir Öneri Yapın"
+        },
+        "csd6a-2023/Intro to App Lab": {
+          "name": "Uygulama Labına Giriş"
+        },
+        "csd6a-2023/The Circuit Playground": {
+          "name": "Çember Oyun Alanı"
+        },
+        "csd6a-2023/Board Events": {
+          "name": "Devre kartı Etkinlikleri"
+        },
+        "csd6a-2023/Color LEDs": {
+          "name": "Renkli LED'ler"
+        },
+        "csd6a-2023/Accelerometer": {
+          "name": "İvme Ölçer"
+        },
+        "csd6a-2023/Making Music": {
+          "name": "Müzik yapma"
+        },
+        "csd6a-2023/Functions": {
+          "name": "Fonksiyonlar"
+        },
+        "csd6a-2023/Project - Prototype an Innovation": {
+          "overview": "Kursun bu son projesinde, öğrenci ekibi Devre Oyun Alanına dayalı yenilikçi bilgisayar cihazı için bir prototip geliştirir ve test eder. Panodaki mevcut giriş ve çıkışları kullanarak, gruplar ilginç ve özgün kullanıcı etkileşimleri sağlayan programlar oluşturacaklardır. "
+        },
+        "csd6b-2023/Intro to App Lab": {
+          "name": "Uygulama Labına Giriş"
+        },
+        "csd6b-2023/Board Events": {
+          "name": "Devre kartı Etkinlikleri"
+        },
+        "csd6b-2023/Accelerometer": {
+          "name": "İvme Ölçer"
+        },
+        "csd6b-2023/Functions": {
+          "name": "Fonksiyonlar"
+        },
+        "csd7-2023/Intro to App Lab": {
+          "name": "Uygulama Labına Giriş"
+        },
+        "csd7-2023/Introduction to AI Lab": {
+          "name": "AI (Artırılmış Gerçeklik) Laboratuarı'na Giriş "
+        },
+        "csd7-2023/Numerical Models": {
+          "overview": "Bu derste öğrenciler, bir zombi salgınını simüle eden bilgisayarsız bir etkinliğe katılırlar. Öğrenciler, komşu kasabadaki verileri kullanarak şehrin hangi bölgelerinde en az sayıda zombi olduğunu tahmin etmelidir. Öğrenciler, belirli bir yerdeki zombilerin sayısı hakkında tahminlerde bulunmak için benzerlik derecelerini ve ortalamaları kullanacaklardır. Ardından, öğrenciler, sayısal veriler için doğruluğun kategorik verilere kıyasla ne kadar farklı olduğunu tartışmak amacıyla tahminlerini gerçek sayılarla karşılaştırma imkanı elde ederler.\n\n**Günün Sorusu:** Bilgisayarlar sayısal verilerle tahmin yapmayı nasıl öğrenir?"
+        },
+        "csd7-2023/Numerical Data in AI Lab": {
+          "name": "AI Laboratuvarında Sayısal Veriler"
+        },
+        "csd7-2023/Survey Planning": {
+          "name": "Veri toplama tasarımı"
         },
         "coursea-2023/Safety in My Online Neighborhood": {
           "name": "Çevrimiçi Mahallemde Güvenlik",

@@ -2256,6 +2256,14 @@ uk:
         text: |-
           якщо {NUM}% ймовірність
           {STATEMENT}
+      gamelab_withPercentChanceDropdown:
+        options:
+          NUM:
+            '10': дуже низька
+            '90': дуже висока
+        text: |2-
+           {NUM} ймовірність
+           {STATEMENT}
       gamelab_xLocationOf:
         text: x координата {SPRITE}
       gamelab_yLocationOf:

@@ -10,6 +10,7 @@ az:
         error:
           future: gələcəkdə ola bilməz
         finish_sign_up_header: Hesabınızı yaratmağı başa çatdırın
+        finish_sign_up_header_error: 'Aşağıdakı səhfləri düzəldin:'
         finish_sign_up_subheader: "<strong>%{email} </strong> Code.org hesabı yaratmağı
           bitirmək üçün aşağıdakı məlumatları doldurun."
         finish_sign_up_subheader_markdown: "**%{email} ** üçün bir Code.org hesabı
@@ -34,6 +35,7 @@ az:
           '
         reset_password_token: İzlədiyiniz parolun sıfırlanması bağlantısı
         us_state: dövlət
+        user_type: Hesab Növü
         username: istifadəçi adı
         verified_teacher: Doğrulanmış Müəllim
     errors:
@@ -1168,6 +1170,8 @@ az:
     teacher_educator_guide: Təhsil işçisi üçün göstərişlərə baxın
     title: Code.org da qeydiyyatdan keçin
     us_state: dövlət
+    us_state_dropdown_options:
+      other: Mən burada qeyd olunmayan yerdə yaşayıram
     user_type: Siz tələbə yoxsa müəllimsiniz?
     user_type_button: Hesab növünü yeniləyin
     user_type_label: Hesab Növü
