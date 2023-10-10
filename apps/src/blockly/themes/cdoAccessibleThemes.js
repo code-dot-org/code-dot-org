@@ -1,5 +1,4 @@
 import GoogleBlockly from 'blockly/core';
-import fontConstants from '@cdo/apps/fontConstants';
 import {Themes} from '../constants';
 import {
   deuteranopiaBlockStyles,
@@ -17,8 +16,7 @@ export const CdoProtanopiaTheme = GoogleBlockly.Theme.defineTheme(
       toolboxBackgroundColour: '#DDDDDD',
     },
     fontStyle: {
-      family: fontConstants['main-font'],
-      weight: fontConstants['regular-font-weight'],
+      family: '"Gotham 4r", sans-serif',
     },
     startHats: null,
   }
@@ -34,8 +32,7 @@ export const CdoDeuteranopiaTheme = GoogleBlockly.Theme.defineTheme(
       toolboxBackgroundColour: '#DDDDDD',
     },
     fontStyle: {
-      family: fontConstants['main-font'],
-      weight: fontConstants['regular-font-weight'],
+      family: '"Gotham 4r", sans-serif',
     },
     startHats: null,
   }
@@ -51,8 +48,7 @@ export const CdoTritanopiaTheme = GoogleBlockly.Theme.defineTheme(
       toolboxBackgroundColour: '#DDDDDD',
     },
     fontStyle: {
-      family: fontConstants['main-font'],
-      weight: fontConstants['regular-font-weight'],
+      family: '"Gotham 4r", sans-serif',
     },
     startHats: null,
   }

@@ -4,22 +4,24 @@ import _ from 'lodash';
 import {standardShape} from './lessonPlanShapes';
 import color from '@cdo/apps/util/color';
 import Radium from 'radium'; // eslint-disable-line no-restricted-imports
-import fontConstants from '@cdo/apps/fontConstants';
 
 export const styles = {
   frameworkName: {
-    ...fontConstants['main-font-semi-bold'],
+    fontFamily: "'Gotham 5r', sans-serif",
+    fontWeight: 'bold',
     color: color.dark_charcoal,
   },
   categoryShortcode: {
-    ...fontConstants['main-font-bold'],
+    fontFamily: "'Gotham 7r', sans-serif",
+    fontWeight: 'bold',
     color: color.link_color,
     ':hover': {
       textDecoration: 'underline',
     },
   },
   standardShortcode: {
-    ...fontConstants['main-font-semi-bold'],
+    fontFamily: "'Gotham 5r', sans-serif",
+    fontWeight: 'bold',
     color: color.dark_charcoal,
   },
   summary: {
@@ -131,7 +133,6 @@ class Framework extends PureComponent {
     );
   }
 }
-
 Framework.propTypes = {
   name: PropTypes.string.isRequired,
   standards: PropTypes.arrayOf(standardShape).isRequired,
@@ -179,7 +180,6 @@ class UnconnectedParentCategory extends PureComponent {
     );
   }
 }
-
 UnconnectedParentCategory.propTypes = {
   shortcode: PropTypes.string.isRequired,
   standards: PropTypes.arrayOf(standardShape).isRequired,
@@ -210,7 +210,6 @@ class UnconnectedCategory extends PureComponent {
     );
   }
 }
-
 UnconnectedCategory.propTypes = {
   shortcode: PropTypes.string.isRequired,
   standards: PropTypes.arrayOf(standardShape).isRequired,
@@ -230,5 +229,4 @@ class Standard extends PureComponent {
     );
   }
 }
-
 Standard.propTypes = {standard: standardShape.isRequired};

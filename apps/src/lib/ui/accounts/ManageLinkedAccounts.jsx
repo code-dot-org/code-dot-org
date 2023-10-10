@@ -9,7 +9,6 @@ import BootstrapButton from './BootstrapButton';
 import {connect} from 'react-redux';
 import RailsAuthenticityToken from '../../util/RailsAuthenticityToken';
 import {OAuthProviders} from '@cdo/apps/lib/ui/accounts/constants';
-import fontConstants from '@cdo/apps/fontConstants';
 
 export const ENCRYPTED = `*** ${i18n.encrypted()} ***`;
 const authOptionPropType = PropTypes.shape({
@@ -333,7 +332,7 @@ const styles = {
   },
   button: {
     width: BUTTON_WIDTH,
-    ...fontConstants['main-font-semi-bold'],
+    fontFamily: '"Gotham 5r", sans-serif',
     color: color.charcoal,
     padding: BUTTON_PADDING,
   },

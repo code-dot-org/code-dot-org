@@ -9,7 +9,6 @@ import PropTypes from 'prop-types';
 import React from 'react';
 import moment from 'moment';
 import {FormControl, InputGroup, Dropdown, MenuItem} from 'react-bootstrap'; // eslint-disable-line no-restricted-imports
-import fontConstants from '@cdo/apps/fontConstants';
 import FontAwesome from '@cdo/apps/templates/FontAwesome';
 import {TIME_FORMAT} from '../workshopConstants';
 
@@ -132,10 +131,10 @@ const styles = {
     width: '100%',
   },
   input: {
-    ...fontConstants['main-font-regular'],
+    fontFamily: '"Gotham 4r"',
   },
   readOnlyInput: {
-    ...fontConstants['main-font-regular'],
+    fontFamily: '"Gotham 4r"',
     backgroundColor: 'inherit',
     cursor: 'default',
     border: 'none',

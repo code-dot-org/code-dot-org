@@ -2,7 +2,6 @@ import PropTypes from 'prop-types';
 import React, {Component} from 'react';
 import color from '@cdo/apps/util/color';
 import FontAwesome from '@cdo/apps/templates/FontAwesome';
-import fontConstants from '@cdo/apps/fontConstants';
 
 function calculateOpacity(answered) {
   return (answered + 10) / 100;
@@ -79,7 +78,7 @@ const styles = {
   },
   value: {
     color: color.charcoal,
-    ...fontConstants['main-font-semi-bold'],
+    fontFamily: '"Gotham 5r", sans-serif',
   },
 };
 

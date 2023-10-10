@@ -18,7 +18,6 @@ import ToggleGroup from '../templates/ToggleGroup';
 import {createStore, combineReducers} from 'redux';
 import isRtl from '@cdo/apps/code-studio/isRtlRedux';
 import responsive from '@cdo/apps/code-studio/responsiveRedux';
-import fontConstants from '@cdo/apps/fontConstants';
 import {Provider} from 'react-redux';
 
 // Magic strings for view modes
@@ -29,7 +28,7 @@ const ALL_VIEW = 'all';
 
 const style = {
   root: {
-    ...fontConstants['main-font-regular'],
+    fontFamily: `"Gotham 4r", sans-serif`,
     marginTop: 10,
   },
   characterViewWrapper: {

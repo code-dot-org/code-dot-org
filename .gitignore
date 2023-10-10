@@ -40,7 +40,6 @@ npm-debug.log
 /apps/src/applab/sharedApplabGoalBlocks.js
 /apps/src/p5lab/gamelab/sharedGamelabBlocks.js
 /apps/src/styleConstants.js
-/apps/src/fontConstants.js
 /apps/storybook-deploy
 /apps/yarn-error.log
 /aws/.code-studio-built

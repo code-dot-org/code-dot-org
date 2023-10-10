@@ -4,7 +4,6 @@ import color from '@cdo/apps/util/color';
 import i18n from '@cdo/locale';
 import RubricField from '@cdo/apps/templates/instructions/teacherFeedback/RubricField';
 import {rubricShape} from '@cdo/apps/templates/instructions/teacherFeedback/types';
-import fontConstants from '@cdo/apps/fontConstants';
 
 const rubricLevels = [
   'performanceLevel1',
@@ -78,7 +77,8 @@ const styles = {
     color: color.charcoal,
     fontSize: 18,
     lineHeight: '18px',
-    ...fontConstants['main-font-semi-bold'],
+    fontFamily: '"Gotham 5r", sans-serif',
+    fontWeight: 'normal',
   },
   keyConcepts: {
     fontSize: 12,

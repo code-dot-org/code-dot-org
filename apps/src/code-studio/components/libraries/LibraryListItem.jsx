@@ -6,7 +6,6 @@ import color from '@cdo/apps/util/color';
 import i18n from '@cdo/locale';
 import InlineMarkdown from '@cdo/apps/templates/InlineMarkdown';
 import Tooltip from '@cdo/apps/templates/Tooltip';
-import fontConstants from '@cdo/apps/fontConstants';
 
 export class LibraryListItem extends React.Component {
   static propTypes = {
@@ -110,7 +109,7 @@ const styles = {
     lineHeight: 1.5,
   },
   libraryTitle: {
-    ...fontConstants['main-font-semi-bold'],
+    fontFamily: "'Gotham 5r', sans-serif",
     fontSize: 16,
     cursor: 'pointer',
     color: color.link_color,
@@ -155,7 +154,7 @@ const styles = {
     },
   },
   updateText: {
-    ...fontConstants['main-font-semi-bold'],
+    fontFamily: "'Gotham 5r', sans-serif",
     paddingLeft: 5,
     fontSize: 16,
   },

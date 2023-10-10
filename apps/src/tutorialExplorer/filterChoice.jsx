@@ -4,7 +4,6 @@
 
 import PropTypes from 'prop-types';
 import React from 'react';
-import fontConstants from '@cdo/apps/fontConstants';
 
 export default class FilterChoice extends React.Component {
   static propTypes = {
@@ -51,7 +50,7 @@ const styles = {
     MsUserSelect: 'none',
   },
   filterChoiceLabel: {
-    ...fontConstants['main-font-regular'],
+    fontFamily: '"Gotham 4r", sans-serif',
     fontSize: 13,
     paddingBottom: 0,
     marginBottom: 0,

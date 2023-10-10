@@ -2,7 +2,6 @@ import PropTypes from 'prop-types';
 import React, {Component} from 'react';
 import i18n from '@cdo/locale';
 import color from '@cdo/apps/util/color';
-import fontConstants from '@cdo/apps/fontConstants';
 
 export default class StandardsReportHeader extends Component {
   static propTypes = {
@@ -63,7 +62,7 @@ const styles = {
   headerRightColumnItems: {
     display: 'flex',
     flexDirection: 'column',
-    ...fontConstants['main-font-bold'],
+    fontFamily: '"Gotham 7r", sans-serif',
     alignItems: 'flex-start',
     paddingRight: 25,
   },
