@@ -6073,12 +6073,12 @@
           "type": "슬라이드"
         },
         "cs_connections_landing_page/csc-adaptations/2023": {
-          "name": "CS 연결 랜딩 페이지",
+          "name": "컴퓨터 과학 융합 랜딩 페이지",
           "url": "https://code.org/educate/csc",
           "type": "자료"
         },
         "csc_extended_connections_book_list/csc-adaptations/2023": {
-          "name": "CSC 익스텐디드 커넥션 북 목록",
+          "name": "컴퓨터 과학 융합 확장 도서 목록",
           "url": "https://docs.google.com/document/d/14azofBAy5Riq109ruUPi8BbZRvJ1KIthqA3mH7t428Y/template/preview",
           "type": "자료"
         },
@@ -6087,7 +6087,7 @@
           "url": "https://docs.google.com/presentation/d/1RSJhxO9ZMtyLrt160kvAVdyekR4wT2fVSgbrPHR4HS0/template/preview"
         },
         "resource_list_for_all_lessons/csc-adaptations/2023": {
-          "name": "모든 수업에 대한 리소스 목록",
+          "name": "수업 전체에 대한 자료 목록",
           "url": "/s/csc-어댑테이션-2023/리소스",
           "type": "자료"
         },
@@ -6121,7 +6121,7 @@
           "type": "슬라이드"
         },
         "cs_connections_landing_page/csc-bookcovers/2023": {
-          "name": "CS 연결 랜딩 페이지",
+          "name": "컴퓨터 과학 융합 랜딩 페이지",
           "url": "https://code.org/educate/csc",
           "type": "자료"
         },
@@ -6131,7 +6131,7 @@
           "type": "자료"
         },
         "resource_list_for_all_lessons/csc-bookcovers/2023": {
-          "name": "모든 수업에 대한 리소스 목록",
+          "name": "수업 전체에 대한 자료 목록",
           "url": "/s/csc-북커버-2023/리소스",
           "type": "자료"
         },
@@ -6211,62 +6211,66 @@
           "type": "슬라이드"
         },
         "cs_connections_landing_page/csc-ecosystems/2023": {
-          "name": "CS 연결 랜딩 페이지",
+          "name": "컴퓨터 과학 융합 랜딩 페이지",
           "url": "https://code.org/educate/csc",
           "type": "자료"
         },
         "csc_extended_connections_book_list/csc-ecosystems/2023": {
-          "name": "CSC 익스텐디드 커넥션 북 목록",
+          "name": "컴퓨터 과학 융합 확장 도서 목록",
           "url": "https://docs.google.com/document/d/14azofBAy5Riq109ruUPi8BbZRvJ1KIthqA3mH7t428Y/template/preview",
           "type": "자료"
         },
         "helpful_hints_for_teachers_and_learners/csc-ecosystems/2023": {
-          "name": "교사와 학습자를 위한 유용한 힌트\t",
+          "name": "교사와 학생을 위한 유용한 팁",
           "url": "https://docs.google.com/presentation/d/1RSJhxO9ZMtyLrt160kvAVdyekR4wT2fVSgbrPHR4HS0/template/preview",
           "type": "자료"
         },
         "resource_list_for_all_lessons/csc-ecosystems/2023": {
-          "name": "모든 수업에 대한 리소스 목록"
+          "name": "수업 전체에 대한 자료 목록",
+          "url": "/s/csc-ecosystems-2023/resources"
         },
         "standards_in_simulating_a_marine_ecosystem/csc-ecosystems/2023": {
-          "name": "해양 생태계 시뮬레이션 표준 ",
+          "name": "해양생태계 시뮬레이션 기준",
+          "url": "/s/csc-ecosystems-2023/standards",
           "type": "자료"
         },
         "vocabulary_in_simulating_a_marine_ecosystem/csc-ecosystems/2023": {
-          "name": "해양 생태계 시뮬레이션의 어휘",
+          "name": "해양생태계 시뮬레이션 어휘",
+          "url": "/s/csc-ecosystems-2023/vocab",
           "type": "자료"
         },
         "ecosystems/csc-ecosystems/2023": {
-          "name": "해양생태계 시뮬레이션",
+          "name": "해양 생태계 시뮬레이션",
           "url": "https://docs.google.com/presentation/d/1LtXP3ssc5-kOV1DgccN3957oAyF1cf-VaghZJsL7Vtk/template/preview",
           "type": "슬라이드"
         },
         "understanding_overfishing_article/csc-ecosystems/2023": {
-          "name": "남획에 대한 이해 기사",
+          "name": "남획의 이해 자료",
           "url": "https://www.seafoodwatch.org/seafood-basics/sustainable-solutions/avoid-overfishing",
           "type": "자료"
         },
         "ecologist_s_notebook/csc-ecosystems/2023": {
           "name": "생태학자 노트",
-          "url": "https://docs.google.com/document/d/1_xi5PFs5TJyO3-8Hz7ftZxCNRPpd5yQBCwhm8IuysY8/template/preview"
+          "url": "https://docs.google.com/document/d/1_xi5PFs5TJyO3-8Hz7ftZxCNRPpd5yQBCwhm8IuysY8/template/preview",
+          "type": "활동 가이드"
         },
         "cs_connections_landing_page/csc-mappinglandmarks/2023": {
-          "name": "CS 연결 랜딩 페이지",
+          "name": "컴퓨터 과학 융합 랜딩 페이지",
           "url": "https://code.org/educate/csc",
           "type": "자료"
         },
         "csc_extended_connections_book_list/csc-mappinglandmarks/2023": {
-          "name": "CSC 익스텐디드 커넥션 북 목록",
+          "name": "컴퓨터 과학 융합 확장 도서 목록",
           "url": "https://docs.google.com/document/d/14azofBAy5Riq109ruUPi8BbZRvJ1KIthqA3mH7t428Y/template/preview",
           "type": "자료"
         },
         "helpful_hints_for_teachers_and_learners/csc-mappinglandmarks/2023": {
-          "name": "교사와 학습자를 위한 유용한 힌트\t",
+          "name": "교사와 학생을 위한 유용한 팁",
           "url": "https://docs.google.com/presentation/d/1RSJhxO9ZMtyLrt160kvAVdyekR4wT2fVSgbrPHR4HS0/template/preview",
           "type": "자료"
         },
         "resource_list_for_all_lessons/csc-mappinglandmarks/2023": {
-          "name": "모든 수업에 대한 리소스 목록",
+          "name": "수업 전체에 대한 자료 목록",
           "url": "/s/csc - 랜드마크 매핑 - 2023/리소스"
         },
         "standards_in_mapping_landmarks/csc-mappinglandmarks/2023": {
@@ -6316,12 +6320,12 @@
           "type": "자료"
         },
         "cs_connections_landing_page/csc-starquilts/2023": {
-          "name": "CS 연결 랜딩 페이지",
+          "name": "컴퓨터 과학 융합 랜딩 페이지",
           "url": "https://code.org/educate/csc",
           "type": "자료"
         },
         "csc_extended_connections_book_list/csc-starquilts/2023": {
-          "name": "CSC 익스텐디드 커넥션 북 목록",
+          "name": "컴퓨터 과학 융합 확장 도서 목록",
           "url": "https://docs.google.com/document/d/14azofBAy5Riq109ruUPi8BbZRvJ1KIthqA3mH7t428Y/template/preview",
           "type": "자료"
         },
@@ -6391,7 +6395,7 @@
           "type": "슬라이드"
         },
         "all_resources/csc-timecapsule/2023": {
-          "name": "모든 수업에 대한 리소스 목록",
+          "name": "수업 전체에 대한 자료 목록",
           "url": "/s/csc-타임캡슐-2023/리소스",
           "type": "자료"
         },
@@ -6404,12 +6408,12 @@
           "url": "/s/csc-타임캡슐-2023/어휘"
         },
         "cs_connections_landing_page/csc-timecapsule/2023": {
-          "name": "CS 연결 랜딩 페이지",
+          "name": "컴퓨터 과학 융합 랜딩 페이지",
           "url": "https://code.org/educate/csc",
           "type": "자료"
         },
         "csc_extended_connections_book_list/csc-timecapsule/2023": {
-          "name": "CSC 익스텐디드 커넥션 북 목록",
+          "name": "컴퓨터 과학 융합 확장 도서 목록",
           "url": "https://docs.google.com/document/d/14azofBAy5Riq109ruUPi8BbZRvJ1KIthqA3mH7t428Y/template/preview",
           "type": "자료"
         },
@@ -6506,12 +6510,12 @@
           "url": "https://studio.code.org/s/poetry-2023/vocab"
         },
         "cs_connections_landing_page/poetry/2023": {
-          "name": "CS 연결 랜딩 페이지",
+          "name": "컴퓨터 과학 융합 랜딩 페이지",
           "url": "https://code.org/educate/csc",
           "type": "자료"
         },
         "csc_extended_connections_book_list/poetry/2023": {
-          "name": "CSC 익스텐디드 커넥션 북 목록",
+          "name": "컴퓨터 과학 융합 확장 도서 목록",
           "url": "https://docs.google.com/document/d/14azofBAy5Riq109ruUPi8BbZRvJ1KIthqA3mH7t428Y/template/preview",
           "type": "자료"
         },

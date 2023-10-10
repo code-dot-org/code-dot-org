@@ -21,11 +21,13 @@ A számítástechnika a modern kultúra szerves része és átalakítja, ahogy e
 
 A számítástechnika átalakítja az ipart, új kereskedelmi területeket teremt, a tudomány minden terén serkenti az innovációt és már létesített gazdasági területeken növeli a termelékenységet;
 
-Számítástechnika a gazdaságunk informatika szektorának alapján szolgál, amely a legnagyobb összetevője az ország gazdasági teljesítményének;
+mivel a számítástechnika területe olyan alapvető téma, amely megalapozza gazdaságunk informatikai ágazatát, amely jelentős mértékben hozzájárul az Egyesült Államok gazdasági teljesítményéhez;
 
-A számítástechnika a digitális kor alapvető tudománya;
+mivel a mesterséges intelligencia műveltsége a mesterséges intelligencia működésével kapcsolatos ismeretekre, készségekre és attitűdökre utal, beleértve a számítástechnika alapvető fogalmait, valamint a mesterséges intelligencia biztonságos, felelősségteljes és etikus felhasználásának módját;
 
-Az IT szektor egyedi pozícióban van a gazdasági felerősödés támogatására új innováció kutatása és fejlesztése révén;
+mivel a számítástechnika területe, beleértve a mesterséges intelligenciát is, olyan technológiák, amelyek képesek alapvetően átalakítani az Egyesült Államok gazdaságának szinte valamennyi ágazatát;
+
+mivel a számítástechnika minden területén, beleértve a mesterséges intelligenciát is, a technológiai vezető szerep gazdasági és nemzetbiztonsági követelmény;
 
 Számítástechnika munkahelyek kilátása szerint 500,000 új pozíció szabad az országban;
 
@@ -33,11 +35,11 @@ Diákoknak magas minőségű számítástechnikai tevékenységekben való rész
 
 Minden diák megérdemel egy alapos felkészítést a számítástechnikai oktatáshoz, beleértve a képesítéssel rendelkező tanárokhoz, technologiához és kornak megfelelő oktatási tervhez való hozzáférést, amelyek lehetővé teszik a számítástechnika oktatást általános és középiskolás oktatásban;
 
-A számítástechnika oktatásnak több kihívásra is válaszolnia kell, beleértve a számítástechnika órák figyelembevételét középiskola elvégzési feltételekben és számítástechnika tanárok szakmai fejlődésének biztosítását;
+mivel a számítástechnikai oktatásnak kihívásokkal kell szembenéznie, beleértve a számítástechnikai tanfolyamokhoz való hozzáférés javítását minden hallgató számára, valamint a számítástechnikai tanárok szakmai fejlődésének biztosítását;
 
 Kódolás Órájában való részvétel a Computer Science Education Week alatt a számítástechnika terület körüli mítoszokat feloszlathatja és több diákot is bátorítani tud, hogy továbbtanuljon számítástechnika területén;
 
-A számítástechnikában jelentős korlátokat kell kezelni, beleértve több női és alulreprezentált csoportok bevonzását minden szinten és minden ágazatba;
+mivel a számítástechnika területén jelentős egyenlőségi akadályok állnak szemben, beleértve a faji, etnikai és nemi szempontból különböző jelöltek körének vonzását és megtartását minden szinten és ágazatban;
 
 Grace Murray Hopper, aki a számítástechnika tudomány egyik első női tagja volt, új programozó nyelveket hozott létre és számítástechnikai rendszerekkel kapcsolatos elveket fektetett le elsőként, amelyek a tudomány fejlődésének alapjául szolgáltak
 
@@ -51,8 +53,6 @@ Elkötelezett, miszerint az (adott létesítmény) --
 
 (3) bátorítja az iskolákat, tanárokat, kutatókat, egyetemeket, üzleti vezetőket és döntéshozókat azon eszközök beazonosításában, amelyek lehetővé teszik tanárok élvonalbeli fejlődését ahhoz, hogy fenntartható tanulási tapasztalatot tudjanak biztosítani a számítástechnikában minden képzettségi szinten és bíztatja a diákokat a számítástechnikai elvekkel való találkozásra;
 
-(4) bátorítja a döntéshozókat abban, hogy töröljék azokat a megkötéseket, miszerint számítástechnikai órák nem számítanak matematikai és tudományok egyetemi felvételi pontszámításában;
-
-(5) lehetőségeket bátorít, beleértve a már létező programokat nők és számítástechnikában kisebbségi csoportok számára.
+(4) ösztönzi a lehetőségeket, többek között a meglévő programok révén, a számítástechnikában alulreprezentált faji és etnikai csoportok diákjai számára.
 
 {{ signup_button }}

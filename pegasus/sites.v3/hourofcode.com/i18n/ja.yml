@@ -5,36 +5,39 @@ ja:
   language: 日本語
   front_title: "%{campaign_date} は、史上最大の学習イベントに参加しよう"
   coming_soon: 近日公開
-  campaign_date_start_short: 12月5日
-  campaign_date_start_long: 12月5日
-  campaign_date_short: 12月5日～11日
-  campaign_date_full: 12月5日～11日
-  campaign_date_year: '2022'
-  campaign_date_full_year: 2022年12月5日～11 日
+  campaign_date_start_short: 12月4日
+  campaign_date_start_long: 12月4日
+  campaign_date_short: 12月4日～10日
+  campaign_date_full: 12月4日～10日
+  campaign_date_year: '2023'
+  campaign_date_full_year: 2023年12月4日～10日
   nonus_campaign_date_start_short: 10 月 1 日
   nonus_campaign_date_start_long: 10 月 1 日
   nonus_campaign_date_short: 10月1日～12月18日
   nonus_campaign_date_full: 10月1日～12月18日
-  nonus_campaign_date_year: '2022'
+  nonus_campaign_date_year: '2023'
   nonus_campaign_date_full_year: 2022年10月1日～2022年12月18日
   latam_campaign_date_start_short: 10 月 1 日
   latam_campaign_date_start_long: 10 月 1 日
   latam_campaign_date_short: 10月1日～12月18日
   latam_campaign_date_full: 10月1日～12月18日
-  latam_campaign_date_year: '2022'
+  latam_campaign_date_year: '2023'
   latam_campaign_date_full_year: 2022年10月1日～2022年12月18日
   europe_campaign_date_start_short: 10 月 1 日
   europe_campaign_date_start_long: 10 月 1 日
   europe_campaign_date_short: 10月1日～12月18日
   europe_campaign_date_full: 10月1日～12月18日
-  europe_campaign_date_year: '2022'
+  europe_campaign_date_year: '2023'
   europe_campaign_date_full_year: 2022年10月1日～2022年12月18日
   africa_campaign_date_start_short: 10 月 1 日
   africa_campaign_date_start_long: 10 月 1 日
   africa_campaign_date_short: 10月1日～12月18日
   africa_campaign_date_full: 10月1日～12月18日
-  africa_campaign_date_year: '2022'
+  africa_campaign_date_year: '2023'
   africa_campaign_date_full_year: 2022年10月1日～2022年12月18日
+  hoc2023_header: AI による創造性
+  hoc2023_social_creativity_with_ai_title: "『アワー・オブ・コード』-あなたなら何を作りますか？"
+  hoc2023_social_creativity_with_ai_desc: コンピュータサイエンスを使ってAIを探求し、学びましょう！
   hoc2022_header: 探って、遊んで、作ろう！
   social_hoc2022_explore_play_create: コンピューターサイエンスで、探って、遊んで、作ろう！
   codeorg_homepage_hoc2022_body: 宇宙を探検してゴールを決め、ダンスをしましょう。コンピューターサイエンスを試す方法はたくさんあります。
@@ -120,6 +123,22 @@ ja:
   curriculum_launch_2023_title: カリキュラムの驚くべきアップデートをご紹介
   curriculum_launch_2023_desc: CSC、CSP、CSD などのアップデートに加えて、すべてを見つけるのに役立つ新しいカリキュラム カタログとリニューアルされた指導ページも追加されました。
   in_partnership_with: パートナーシップ
+  shop_code_dot_org_heading: ショップコード.org
+  shop_code_dot_org_desc: 私たちの仕事をサポートし、誇りを持ってムーブメントを着用してください。私たちの帽子はオバマ大統領や有名人にも着用されています。
+  spread_the_word_heading: みんなに広めよう
+  spread_the_word_desc: Code.orgをネットワークと共有して、私たちの影響力を拡大してください。ソーシャルメディアからメール更新まで、私たちがより多くの教育者、学生、支持者にリーチするのをどのように支援できるかをご覧ください。
+  follow_us_heading: ソーシャルメディアでフォローしてください
+  follow_us_desc: ソーシャルメディアで最新情報を入手したり、投稿をネットワークと共有したりして、最新情報を入手して認知度を高めましょう。
+  facebook: フェイスブック
+  twitter: ツイッター
+  linked_in: LinkedIn
+  instagram: インスタグラム
+  tik_tok: TikTok
+  subscribe_to_emails_heading: メールを購読する
+  subscribe_to_emails_desc: Code.orgとコンピュータサイエンス教育で何が起こっているかをメーリングリストで四半期ごとに更新して読んでください。
+  subscribe_to_emails_intl: 国際アップデートを購読する
+  promote_code_dot_org_heading: コード.orgをプロモート
+  promote_code_dot_org_desc: 統計、引用、動画を活用して、お住まいの地域のコンピューターサイエンスを宣伝しましょう。
   afe_partnership_logo_alt: Amazon Future Engineerのロゴ
   afe_partnership_thanks_desc: Amazon Future Engineer は、低所得層やその他の困難な状況に置かれている子供や若者がコンピューター・サイエンスのキャリアを追求できるよう、インスピレーションを与え、教育し、訓練するための包括的な幼少期からキャリアまでのプログラムです。[パートナーシップについて詳しくはこちら](%{afe_url})。
   grade_level: 学年レベル
@@ -132,6 +151,12 @@ ja:
   curricula_desc_middle: あなたと中学生が一緒にコンピュータサイエンスを探求できるようにする魅力的なサービスをご覧ください。
   curricula_title_high: 高校カリキュラム
   curricula_desc_high: あなたと高校生がコンピュータサイエンスをより深く掘り下げることができる魅力的なコースやアクティビティをご覧ください。
+  for_administrators_heading: 管理者向け
+  for_administrators_desc: すでにコンピュータサイエンスをカリキュラムに取り入れている何千もの学校に参加してください。
+  for_parents_heading: 保護者向け
+  for_parents_desc: 生徒の学校にコンピュータサイエンス教育を提供または拡大するよう奨励することができます。
+  for_educators_heading: 教育関係者向け
+  for_educators_desc: コンピュータサイエンスの経験がなくても、プロフェッショナルな学習ワークショップで今すぐ授業を始めましょう。
   students_label: 生徒
   teachers_label: 先生方
   teacher_label_csf: CS基礎教師
@@ -141,10 +166,11 @@ ja:
   teacher_label_csa: AP® Computer Science A Teacher
   required_materials: 必要な教材：
   optional_materials: オプションの教材：
-  call_to_action_explore_roles: 募集中の職種を見る
+  call_to_action_hold_an_event: イベントを開催
   call_to_action_learn_more: もっと詳しく知る
   call_to_action_watch_now: 今すぐ見る
   call_to_action_try_activity: アクティビティを試す
+  call_to_action_try_activities: アクティビティを試す
   call_to_action_explore_unit: エクスプロアユニット
   call_to_action_explore_curriculum: カリキュラムを見る
   call_to_action_explore_curriculum_options: カリキュラムの選択肢を探索
@@ -213,11 +239,20 @@ ja:
   call_to_action_notify_available: 利用可能になったら通知する
   call_to_action_register_early_access: 早期アクセスに登録する
   call_to_action_open_positions: オープンポジションを表示
+  call_to_action_explore_roles: 募集中の職種を見る
   call_to_action_get_guide: ガイドを入手
   call_to_action_donate_to_cdo: Code.org に寄付してください
   call_to_action_start_fundraiser: 募金活動を始める
   call_to_action_view_donation_policy: 寄付ポリシーを見る
   call_to_action_view_donate_bitpay: ビットペイで寄付する
+  call_to_action_make_a_donation: 寄付をする
+  call_to_action_other_ways_to_give: その他の寄付方法
+  call_to_action_become_partner_usa: 米国のパートナーになりましょう
+  call_to_action_become_partner_intl: 国際パートナーになりましょう
+  call_to_action_become_a_volunteer: ボランティアになりましょう
+  call_to_action_start_translating: 翻訳を始める
+  call_to_action_learn_about_advocacy: アドボカシーについて知る
+  call_to_action_visit_store: ストアを訪ねる
   aria_label_call_to_action_afe: Amazon フューチャーエンジニアの詳細はこちら
   aria_label_call_to_action_teaching_csf: コンピュータサイエンスの基礎を教える専門学習プログラムを開始
   aria_label_call_to_action_teaching_csd: ティーチング・コンピュータ・サイエンス・ディスカバリーズの専門学習プログラムを開始
@@ -463,6 +498,7 @@ ja:
   heading_these_lessons_will: これらのレッスンでは次のことを行います。
   heading_explore_curriculum_catalog: カリキュラムカタログのすべてのコースをご覧ください
   heading_csa_ai: AP® 試験後にやることをお探しですか？
+  heading_bring_cs_to_students: 学生にコンピュータサイエンスをもたらす
   professional_learning_section_desc: 指導準備に必要なサポートを受けましょう。90％以上の教師が、これまでで最高の専門能力開発であると評価しています！
   professional_learning_section_desc_short: 指導準備に必要なサポートを受けましょう。
   professional_learning_section_desc_self_paced: ジャストインタイムのサポートで、あなたのスケジュールに合わせて自信を持って教える準備ができます。
@@ -625,11 +661,14 @@ ja:
   ai_pl_101_video_title_5: AI を教室にもたらす
   ai_pl_101_video_desc_5: このセッションでは、AIに関する教育、AI教育ツールの評価と活用、学生の評価におけるAIの活用に焦点を当てます。理論、実践例、リソースを豊富に組み合わせることで、教育者が
     AI の世界をナビゲートし、学生の学習体験を向上させることができるようにすることを目的としています。
+  ai_pl_101_resources_5: AI への責任あるアプローチを確保するためのガイド
   ai_pl_101_video_desc_6: 大規模言語モデル（ChatGPTなど）とジェネレーティブAIに関する2つの新しいビデオを特集して、AIに大きな変化をもたらす新しいテクノロジーについて詳しく学んでください。これらの新しいテクノロジーがどのように機能するかを、OpenAI
     の CTO であるミラ・ムラティと RunwayML の CEO であるクリストバル・バレンズエラという専門家から直接聞くことができます。
   ai_pl_101_llm_slides_title: 教育者向けの大規模言語モデルプロンプト
   ai_pl_101_llm_slides_desc: 初心者から上級者まで、ChatGPTのようなLLMから可能な限り最高のアウトプットを引き出すためのツール。初心者向けのスタータープロンプトのほか、可能性を最大限に引き出したいユーザー向けの高度なツールも含まれています。
   ai_pl_101_resources_3: 学生の学習を変革するための AI プロンプト
+  ai_pl_101_resources_section_title: AI について学ぶその他の方法
+  ai_pl_101_resources_guide: 'コンパニオンガイド:'
   how_ai_works_hero_heading: "「AI はどのように機能するか 」"
   how_ai_works_hero_desc: ビデオシリーズとそれに付随するレッスンである「How AI Works」で AI の世界に飛び込みましょう！
   how_ai_works_intro_desc: この一連の短いビデオとそれに付随する教室での授業では、人工知能がどのように機能し、なぜ重要なのかを教員と生徒に紹介します。トピックに基づいて個別のレッスンを選択したり、1つのクラスで一連のトピックをすべて調べたり、7つのレッスンすべてを教えてより深く掘り下げたりすることができます。
@@ -1161,6 +1200,18 @@ ja:
   donate_tabs_amazon_desc: Amazon アカウントを使用して直接寄付してください。数回クリックするだけで、Code.org のミッションにシームレスに貢献し、コンピュータサイエンス教育の未来を後押しできます。
   donate_tabs_bitpay_title: ビットペイ経由でクリプトを使って寄付する
   donate_tabs_bitpay_desc: 暗号通貨で寄付の未来を切り開きましょう。BitPayを通じて、デジタル通貨はCode.orgのコンピューターサイエンス教育の拡大に向けた取り組みを直接支援することができます。
+  help_page_top_heading: どのように支援できるか
+  help_page_top_desc: すべての子どもがどこからでもコンピュータサイエンスを利用できるようにするという私たちの使命を支援してください。皆さんの努力は、私たちが将来のイノベーターを鼓舞し、テクノロジー教育のギャップを埋めるのに役立ちます。
+  help_page_top_subhead: Code.org に寄付をしてください
+  help_page_top_desc_02: 私たちは、オンラインと学校の両方で、すべての学生にコンピュータサイエンスを学ぶ機会を提供するよう努めています。学校では、常設コースを開設し、教師を養成しています。1ドル寄付するごとに、1人の子どもにコンピュータサイエンスを紹介してもらいます。
+  help_page_partners_heading: パートナーになる
+  help_page_partners_desc: Code.orgは、他の非営利団体とパートナーとして協力して、地域的で持続可能な方法でコンピュータサイエンスを広める手助けをしています。プログラムの詳細をご覧ください。
+  help_page_volunteer_heading: 教室でのボランティア
+  help_page_volunteer_desc: ボランティアでHour of Codeを教えたり、地元の教室でゲストスピーカーになったりしてください。サインアップして、お近くの機会について聞いてみましょう。
+  help_page_translate_heading: 翻訳にご協力ください
+  help_page_translate_desc: ボランティアはチュートリアルを45以上の言語に翻訳しています。今後も世界中の学生向けにチュートリアルを広げていくのにご協力ください！
+  help_page_speak_for_cs_heading: コンピュータサイエンス教育のために声を上げて
+  help_page_speak_for_cs_desc: Code.orgが全米で行っているアドボカシー活動と、コンピュータサイエンスをすべての学生にとって基礎的なものにするために州が採用することを推奨する10のポリシーについて詳しく学んでください。さらに、お住まいの州に変化をもたらす方法についても調べてください。
   hoc_live: アワー・オブ・コードライブ
   hoc_live_sign_up_title: アワー・オブ・コードライブにサインアップ
   hoc_live_learn_title: アワー・オブ・コードライブで学ぼう
@@ -9031,6 +9082,9 @@ ja:
   video_library_page_inspirational_video_title_10: オバマ大統領、コンピューターサイエンスについて語る (1 分)
   video_library_page_inspirational_video_title_11: 誰でも学べるプログラミング （１分）
   video_library_page_inspirational_video_title_12: ロ・ケ・ファルタ・エン・ヌエストラス・エスクエラス (2分)
+  video_library_page_inspirational_video_title_13: NASA、アワー・オブ・コードを祝う (2 分)
+  video_library_page_inspirational_video_title_14: イッツ・モア・ザン・ア・ゲーム (1分)
+  video_library_page_inspirational_video_title_15: コンピュータサイエンスで創造 (1 分)
   video_library_page_not_hacked_video_title_1: ハッキングされない方法:はじめに
   video_library_page_not_hacked_video_title_2: ハッキングされない方法:パスワード
   video_library_page_not_hacked_video_title_3: ハッキングされない方法:認証とデバイスロック
