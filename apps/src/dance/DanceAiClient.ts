@@ -5,7 +5,6 @@ import UntypedCachedForegrounds from '@cdo/static/dance/ai/model/cachedforegroun
 // Custom types for vector mapping JSONs to play nice with Typescript
 type EmojiAssociation = {
   association: number[];
-  explanation: string;
 };
 
 type CachedMapping = {
