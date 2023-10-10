@@ -74,13 +74,23 @@ export default function SectionsSetUpContainer({
   sectionToBeEdited,
 }) {
   const [sections, updateSection] = useSections(sectionToBeEdited);
+  const [isCoteacherOpen, setIsCoteacherOpen] = useState(false);
   const [advancedSettingsOpen, setAdvancedSettingsOpen] = useState(false);
   const [isSaveInProgress, setIsSaveInProgress] = useState(false);
 
   const isNewSection = !sectionToBeEdited;
   const initialSectionRef = useRef(sectionToBeEdited);
 
-  const caret = advancedSettingsOpen ? 'caret-down' : 'caret-right';
+  const caret = isOpen => (isOpen ? 'caret-down' : 'caret-right');
+
+  const toggleIsCoteacherOpen = useCallback(
+    e => {
+      e.preventDefault();
+
+      setIsCoteacherOpen(!isCoteacherOpen);
+    },
+    [isCoteacherOpen]
+  );
 
   const toggleAdvancedSettingsOpen = useCallback(
     e => {
@@ -231,6 +241,58 @@ export default function SectionsSetUpContainer({
     );
   };
 
+  const renderExpandableSection = (
+    sectionTitle,
+    sectionContent,
+    isOpen,
+    toggleIsOpen
+  ) => {
+    return (
+      <div className={moduleStyles.withBorderBottom}>
+        <Button
+          id="uitest-expandable-settings"
+          className={moduleStyles.advancedSettingsButton}
+          styleAsText
+          icon={caret(isOpen)}
+          onClick={toggleIsOpen}
+        >
+          <Heading3>{sectionTitle}</Heading3>
+        </Button>
+        <div>{isOpen && sectionContent}</div>
+      </div>
+    );
+  };
+
+  const renderAdvancedSettings = () => {
+    return renderExpandableSection(
+      i18n.advancedSettings(),
+      <AdvancedSettingToggles
+        updateSection={(key, val) => updateSection(0, key, val)}
+        section={sections[0]}
+        hasLessonExtras={sections[0].course.hasLessonExtras}
+        hasTextToSpeech={sections[0].course.hasTextToSpeech}
+        label={i18n.pairProgramming()}
+      />,
+      advancedSettingsOpen,
+      toggleAdvancedSettingsOpen
+    );
+  };
+
+  const renderCoteacherSection = () => {
+    return renderExpandableSection(
+      'Coteachers',
+      <AdvancedSettingToggles
+        updateSection={(key, val) => updateSection(0, key, val)}
+        section={sections[0]}
+        hasLessonExtras={sections[0].course.hasLessonExtras}
+        hasTextToSpeech={sections[0].course.hasTextToSpeech}
+        label={i18n.pairProgramming()}
+      />,
+      isCoteacherOpen,
+      toggleIsCoteacherOpen
+    );
+  };
+
   return (
     <form id={FORM_ID}>
       <div className={moduleStyles.containerWithMarginTop}>
@@ -267,33 +329,14 @@ export default function SectionsSetUpContainer({
         sectionCourse={sections[0].course}
         initialParticipantType={sections[0].participantType}
       />
-
       <div
         className={classnames(
           moduleStyles.containerWithMarginTop,
-          moduleStyles.withBorderTopAndBottom
+          moduleStyles.withBorderTop
         )}
       >
-        <Button
-          id="uitest-advanced-settings"
-          className={moduleStyles.advancedSettingsButton}
-          styleAsText
-          icon={caret}
-          onClick={toggleAdvancedSettingsOpen}
-        >
-          <Heading3>{i18n.advancedSettings()}</Heading3>
-        </Button>
-        <div>
-          {advancedSettingsOpen && (
-            <AdvancedSettingToggles
-              updateSection={(key, val) => updateSection(0, key, val)}
-              section={sections[0]}
-              hasLessonExtras={sections[0].course.hasLessonExtras}
-              hasTextToSpeech={sections[0].course.hasTextToSpeech}
-              label={i18n.pairProgramming()}
-            />
-          )}
-        </div>
+        {renderCoteacherSection()}
+        {renderAdvancedSettings()}
       </div>
       <div
         className={classnames(
