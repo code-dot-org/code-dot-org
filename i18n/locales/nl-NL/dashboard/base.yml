@@ -885,6 +885,7 @@ nl:
     download_in_Greek: 'Download in het Grieks:'
     windows: 'Windows (64-bit)'
     mac: 'Mac OS X'
+  hidden_stage: "Jouw leraar had jou hier niet verwacht. Vraag je leraar welke les je zou moeten doen."
   view_teacher_guide: 'Lerarenhandleiding bekijken'
   pd:
     form_labels:

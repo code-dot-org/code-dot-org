@@ -35,6 +35,10 @@ si:
   africa_campaign_date_full: ඔක්තෝම්බර් 1 - 31
   africa_campaign_date_year: '2016'
   africa_campaign_date_full_year: 2021 ඔක්තෝම්බර් 1 - 31
+  hoc2023_header: AI සමඟ නිර්මාණශීලීත්වය
+  hoc2023_social_creativity_with_ai_title: කේත පැය - ඔබ නිර්මාණය කරන්නේ කුමක්ද?
+  hoc2023_social_creativity_with_ai_desc: AI ගැන ගවේෂණය කිරීමට සහ ඉගෙන ගැනීමට පරිගණක
+    විද්යාව භාවිතා කරන්න!
   hoc2022_header: ගවේෂණය කරන්න, සෙල්ලම් කරන්න, සාදන්න!
   social_hoc2022_explore_play_create: ගවේෂණය කිරීමට, සෙල්ලම් කිරීමට සහ නිර්මාණය කිරීමට
     පරිගණක විද්යාව භාවිතා කරන්න!
@@ -172,6 +176,28 @@ si:
     පද්ධති, CSD, හා වඩා — ප්ලස් නව විෂයමාලා නාමාවලි එකක් සහ ප්රතිනිර්මාණය ඉගැන්වීම්
     පිටුව ඔබ ඒ සියල්ල සොයා ගැනීමට උදව් කිරීමට!
   in_partnership_with: සමඟ සහයෝගයෙන්
+  shop_code_dot_org_heading: සාප්පු කේත
+  shop_code_dot_org_desc: අපගේ කාර්යයට සහාය වීම සහ ව්යාපාරය ආඩම්බරයෙන් පැළඳීම. අපගේ
+    තොප්පි ජනාධිපති ඔබාමා සහ කීර්තිමත් පුද්ගලයින් ද පැළඳ සිටී.
+  spread_the_word_heading: අරාංචිය පතුරවන්න
+  spread_the_word_desc: Code.org ඔබේ ජාලය සමඟ බෙදා ගැනීමෙන් අපගේ බලපෑම වැඩි කරන්න.
+    සමාජ මාධ්යවල සිට විද්යුත් තැපැල් යාවත්කාලීන කිරීම් දක්වා, තවත් අධ්යාපන ators යින්,
+    සිසුන් සහ නීති oc යින් වෙත ළඟා වීමට ඔබට අපට උදව් කළ හැකි ආකාරය සොයා ගන්න.
+  follow_us_heading: සමාජ මාධ්යවල අපව අනුගමනය කරන්න
+  follow_us_desc: සමාජ මාධ්යවල අප සමඟ යාවත්කාලීනව සිටින්න. දැනුවත්ව සිටීමට සහ දැනුවත්භාවය
+    ඇති කිරීමට සහ දැනුවත්භාවය ඇති කිරීමට අපගේ සටහන් ඔබේ ජාලය සමඟ බෙදා ගන්න.
+  facebook: ෆේස්බුක්
+  twitter: ට්විටර්
+  linked_in: LinkedIn
+  instagram: Instagram
+  tik_tok: ටික්ටොක්
+  subscribe_to_emails_heading: ඊමේල් වලට දායක වන්න
+  subscribe_to_emails_desc: Code.org හි සහ පරිගණක විද්යා අධ්යාපනයේ සිදුවන්නේ කුමක්ද
+    යන්න ගැන කියවන්න අපගේ තැපැල් ලැයිස්තුව හරහා කාර්තුමය යාවත්කාලීන කිරීම් හරහා.
+  subscribe_to_emails_intl: ජාත්යන්තර යාවත්කාලීන කිරීම් සඳහා දායක වන්න
+  promote_code_dot_org_heading: Code.org ප්රවර්ධනය කරන්න
+  promote_code_dot_org_desc: සංඛ්යාන, උපුටා දැක්වීම් සහ වීඩියෝ ආධාරයෙන් ඔබේ ප්රදේශයේ
+    පරිගණක විද්යාව ප්රවර්ධනය කරන්න.
   afe_partnership_logo_alt: ඇමසන් අනාගත ඉංජිනේරු ලාංඡනය
   afe_partnership_thanks_desc: ඇමේසන් අනාගත ඉංජිනේරු ආස්වාදයක් පුළුල් ළමා-කිරීමට වෘත්තීය
     වැඩසටහන වේ, දැනුවත්, හා පරිගණක විද්යාව වෘත්තීමය ජීවිතය ඇරැඹීමට අඩු ආදායම් හා අනෙකුත්
@@ -190,6 +216,15 @@ si:
   curricula_title_high: උසස් පාසල් විෂය මාලාව
   curricula_desc_high: පරිගණක විද්යාවට ගැඹුරට හාරා බැලීමට ඔබට සහ ඔබේ උසස් පාසැල් සිසුන්ට
     ආරාධනා කරන බලගතු පා courses මාලා සහ ක්රියාකාරකම් පිරික්සන්න.
+  for_administrators_heading: පරිපාලකයින් සඳහා
+  for_administrators_desc: දැනටමත් පරිගණක විද්යාව ඔවුන්ගේ විෂය මාලාවට ඇතුළත් කර ඇති
+    පාසල් දහස් ගණනක් සමඟ සම්බන්ධ වන්න.
+  for_parents_heading: දෙමාපියන් හට
+  for_parents_desc: පරිගණක විද්යා අධ්යාපනය ලබා දීමට හෝ පුළුල් කිරීමට ඔබේ ශිෂ්යයාගේ
+    පාසල දිරිමත් කිරීමට ඔබට උදව් කළ හැකිය.
+  for_educators_heading: අධ්‍යාපකයින් හට
+  for_educators_desc: අද ඉගැන්වීම ආරම්භ කරන්න - අවශ්ය පරිගණක විද්යා අත්දැකීම් නොමැත
+    - අපගේ වෘත්තීය ඉගෙනුම් වැඩමුළු සමඟ.
   students_label: සිසුන්
   teachers_label: ගුරුවරුන්
   teacher_label_csf: CS ගුරු මූලධර්ම
@@ -199,10 +234,11 @@ si:
   teacher_label_csa: AP® Computer Science A Teacher
   required_materials: 'අවශ්ය ද්රව්ය:'
   optional_materials: 'විකල්ප ද්රව්ය:'
-  call_to_action_explore_roles: විවෘත භූමිකාවන් ගවේෂණය කරන්න
+  call_to_action_hold_an_event: සිදුවීමක් පැවැත්වීමට
   call_to_action_learn_more: තවත් ඉගෙන ගන්න
   call_to_action_watch_now: දැන් නරඹන්න
   call_to_action_try_activity: ක්රියාකාරකම් උත්සාහ කරන්න
+  call_to_action_try_activities: ක්රියාකාරකම් උත්සාහ කරන්න
   call_to_action_explore_unit: ඒකකය ගවේෂණය කරන්න
   call_to_action_explore_curriculum: විෂය මාලාව ගවේෂණය කරන්න
   call_to_action_explore_curriculum_options: විෂයමාලා විකල්ප ගවේෂණය කරන්න
@@ -271,11 +307,20 @@ si:
   call_to_action_notify_available: ලබා ගත හැකි විට මට දැනුම් දෙන්න
   call_to_action_register_early_access: මුල් ප්රවේශය සඳහා ලියාපදිංචි වන්න
   call_to_action_open_positions: විවෘත තනතුරු බලන්න
+  call_to_action_explore_roles: විවෘත භූමිකාවන් ගවේෂණය කරන්න
   call_to_action_get_guide: මාර්ගෝපදේශය ලබා ගන්න
   call_to_action_donate_to_cdo: Code.org වෙත පරිත්යාග කරන්න
   call_to_action_start_fundraiser: අරමුදල් සම්පාදකයෙකු ආරම්භ කරන්න
   call_to_action_view_donation_policy: පරිත්යාග ප්රතිපත්තිය බලන්න
   call_to_action_view_donate_bitpay: බිට්පේ සමඟ පරිත්යාග කරන්න
+  call_to_action_make_a_donation: පරිත්යාගයක් කරන්න
+  call_to_action_other_ways_to_give: දීමට වෙනත් ක්රම
+  call_to_action_become_partner_usa: එක්සත් ජනපද හවුල්කරුවෙකු වන්න
+  call_to_action_become_partner_intl: ජාත්යන්තර හවුල්කරුවෙකු වන්න
+  call_to_action_become_a_volunteer: ස්වේච්ඡා සේවකයෙකු වන්න
+  call_to_action_start_translating: පරිවර්තනය ආරම්භ කරන්න
+  call_to_action_learn_about_advocacy: අපගේ උපදේශකත්වය ගැන ඉගෙන ගන්න
+  call_to_action_visit_store: ගබඩාවට පිවිසෙන්න
   aria_label_call_to_action_afe: ඇමේසන් අනාගත ඉංජිනේරු ගැන තව දැනගන්න
   aria_label_call_to_action_teaching_csf: ඉගැන්වීමේ පරිගණක විද්යා මූලධර්ම වෘත්තීය
     ඉගෙනුම් වැඩසටහන ආරම්භ කරන්න
@@ -614,6 +659,7 @@ si:
   heading_explore_curriculum_catalog: විෂයමාලා නාමාවලිය අපගේ සියලු පා courses මාලා
     ගවේෂණය කරන්න
   heading_csa_ai: AP® විභාගයෙන් පසු කළ යුතු දේවල් සොයනවාද?
+  heading_bring_cs_to_students: සිසුන්ට පරිගණක විද්යාව ගෙන එන්න
   professional_learning_section_desc: ඔබ ඉගැන්වීමට සූදානම් වන විට ඔබට අවශ්ය සහාය ලබා
     ගන්න. ගුරුවරුන් එයට ආදරය කරන අතර 90% කට වඩා එය හොඳම වෘත්තීය සංවර්ධනය ලෙස ශ්රේණිගත
     කර ඇත!
@@ -884,6 +930,7 @@ si:
     ප්රායෝගික උදාහරණ සහ සම්පත් වල පොහොසත් සම්මිශ්රණයක් සහිතව, AI භූ දර්ශනය සැරිසැරීමට
     සහ ශිෂ්ය ඉගෙනුම් අත්දැකීම් වැඩි දියුණු කිරීමට අධ්යාපන ators යින් සවිබල ගැන්වීම
     අරමුණු කරයි.
+  ai_pl_101_resources_5: AI සඳහා වගකිවයුතු ප්රවේශයක් සහතික කිරීම සඳහා මාර්ගෝපදේශය
   ai_pl_101_video_desc_6: 'AI හි විශාල වෙනස්කම් ඇති කරන නව තාක්ෂණය ගැන තව දැනගන්න,
     විශාල භාෂා ආකෘති (ChatGPT වැනි) සහ උත්පාදක AI පිළිබඳ නව වීඩියෝ දෙකක් ඇතුළත් වේ.
     මෙම නව තාක්ෂණයන් විශේෂ experts යින්ගෙන් කෙලින්ම ක්රියා කරන්නේ කෙසේදැයි අසන්න:
@@ -895,6 +942,8 @@ si:
     විමසුම් ඇතුළත්, මෙන්ම ඔවුන්ගේ හැකියාවන් උපරිම අස්වැන්නක් ලබා ගැනීමට බලා අය සඳහා
     උසස් මෙවලම්.
   ai_pl_101_resources_3: ශිෂ්ය ඉගෙනීම පරිවර්තනය කිරීම සඳහා AI විමසයි
+  ai_pl_101_resources_section_title: AI ගැන ඉගෙන ගැනීමට තවත් ක්රම
+  ai_pl_101_resources_guide: 'සහායක මාර්ගෝපදේශය:'
   how_ai_works_hero_heading: AI ක්රියා කරන ආකාරය
   how_ai_works_hero_desc: අපගේ වීඩියෝ මාලාව සහ ඒ සමඟ ඇති පාඩම් “AI ක්රියා කරන ආකාරය”
     සමඟ AI ලෝකයට කිමිදෙන්න!
@@ -1726,6 +1775,30 @@ si:
   donate_tabs_bitpay_desc: Cryptocurrency සමඟ ලබා දීමේ අනාගතය වැලඳ ගන්න. BitPay හරහා,
     ඔබේ ඩිජිටල් මුදල් වලට පරිගණක විද්යා අධ්යාපනය පුළුල් කිරීමේ Code.org හි ප්රයත්නයන්
     සඳහා සෘජුවම සහාය විය හැකිය.
+  help_page_top_heading: ඔබට උදව් කළ හැකි ආකාරය
+  help_page_top_desc: සෑම දරුවෙකුටම පරිගණක විද්යාව සෑම තැනකම ප්රවේශ විය හැකි බවට පත්
+    කිරීමේ අපගේ මෙහෙවරට සහාය වන්න. ඔබගේ උත්සාහයන් අනාගත නවෝත්පාදකයින් දිරිගැන්වීමට
+    සහ තාක්ෂණික අධ්යාපන පරතරය පියවා ගැනීමට අපට උපකාරී වේ.
+  help_page_top_subhead: Code.org වෙත පරිත්යාගයක් කරන්න
+  help_page_top_desc_02: සෑම සිසුවෙකුටම පරිගණක විද්යාව ඉගෙන ගැනීමට අවස්ථාව ලබා දීමට
+    අපි කටයුතු කරමු - මාර්ගගතව සහ පාසල්වල, අපි ස්ථිර පා courses මාලා පිහිටුවා ගුරුවරුන්
+    පුහුණු කරමු. ඔබ පරිත්යාග කරන සෑම ඩොලරයක් සඳහාම, එක් දරුවෙකු පරිගණක විද්යාවට හඳුන්වා
+    දෙනු ලැබේ.
+  help_page_partners_heading: හවුල්කරුවෙකු වන්න
+  help_page_partners_desc: Code.org දේශීය, තිරසාර විලාසිතාවකින් පරිගණක විද්යාව ව්යාප්ත
+    කිරීමට උපකාර කිරීම සඳහා හවුල්කරුවන් ලෙස වෙනත් ලාභ නොලබන සංවිධාන සමඟ කටයුතු කරයි.
+    අපගේ වැඩසටහන ගැන තව දැනගන්න.
+  help_page_volunteer_heading: පන්ති කාමරයක ස්වේච්ඡාවෙන් ඉදිරිපත් වීම
+  help_page_volunteer_desc: පැය සංග්රහයේ ඉගැන්වීමට හෝ දේශීය පන්ති කාමරයක ආගන්තුක කථිකයෙකු
+    වීමට ස්වේච්ඡාවෙන් ඉදිරිපත් වන්න. ඔබ අසල ඇති අවස්ථා ගැන ඇසීමට ලියාපදිංචි වන්න.
+  help_page_translate_heading: පරිවර්තනය කිරීමට අපට උදව් කරන්න
+  help_page_translate_desc: ස්වේච්ඡා සේවකයන් අපගේ නිබන්ධන භාෂා 45 කට අධික සංඛ්යාවකින්
+    පරිවර්තනය කර ඇත. ලොව පුරා සිසුන් සඳහා අපගේ නිබන්ධන පුළුල් කිරීමට දිගටම අපට උදව්
+    කරන්න!
+  help_page_speak_for_cs_heading: පරිගණක විද්යා අධ්යාපනය සඳහා කතා කරන්න
+  help_page_speak_for_cs_desc: එක්සත් ජනපදය පුරා Code.org හි උපදේශන කටයුතු සහ සියලුම
+    සිසුන් සඳහා පරිගණක විද්යාව පදනම් කර ගැනීම සඳහා රාජ්යයන් විසින් නිර්දේශ කරන ප්රතිපත්ති
+    දහය ගැන තව දැනගන්න. ප්ලස්, ඔබේ ප්රාන්තයේ වෙනසක් ඇති කරන්නේ කෙසේදැයි සොයා බලන්න.
   hoc_live: සජීවී Hour of Code වැඩසටහන
   hoc_live_sign_up_title: සජීවී Hour of Code වැඩසටහන සඳහා ලියාපදිංචි වෙන්න
   hoc_live_learn_title: සජීවී කේත පැය සමඟ ඉගෙන ගන්න
@@ -13671,6 +13744,11 @@ si:
     1)
   video_library_page_inspirational_video_title_12: ලෝ ක්වා ෆෝල්ටා ඒන් නියුස්ට්රාස්
     එස්කියුලස් (මිනිත්තු 2)
+  video_library_page_inspirational_video_title_13: නාසා ආයතනය සංග්රහයේ පැය සමරයි (මිනිත්තු
+    2)
+  video_library_page_inspirational_video_title_14: එය ක්රීඩාවකට වඩා වැඩි ය (මිනිත්තු
+    1)
+  video_library_page_inspirational_video_title_15: පරිගණක විද්යා සමග නිර්මාණය (1 යි)
   video_library_page_not_hacked_video_title_1: 'කොහොමද කපා කොටා ඝාතනය ලබා ගැනීමට නොවේ:
     හැඳින්වීම'
   video_library_page_not_hacked_video_title_2: 'හැක් කර නොගන්නේ කෙසේද: මුරපද'

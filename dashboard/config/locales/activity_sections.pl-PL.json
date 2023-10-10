@@ -23510,7 +23510,22 @@
             null
           ]
         },
+        "8beb2941-dd64-44f4-9e99-6149c445067a": {
+          "tips": [
+            null
+          ]
+        },
         "500131a4-a22b-4a63-bc0a-d5d4a19c7169": {
+          "tips": [
+            null
+          ]
+        },
+        "a45155ff-19af-43ac-bf11-6ca4001816f4": {
+          "tips": [
+            null
+          ]
+        },
+        "a7d5069b-aa1c-4efa-a8d8-b58bd43a6c7b": {
           "tips": [
             null
           ]
@@ -23525,7 +23540,17 @@
             null
           ]
         },
-        "b2b4b9e6-fe3f-4d2d-a828-1402cc1572e8": {
+        "4ff33db6-6668-4423-8f1d-ad0b25f6da40": {
+          "tips": [
+            null
+          ]
+        },
+        "169c3eed-52d7-4a4b-b7c6-161cf287ed33": {
+          "tips": [
+            null
+          ]
+        },
+        "f1632666-ffc1-457a-832a-c2d3b2d1fc20": {
           "tips": [
             null
           ]
@@ -23536,13 +23561,33 @@
           ]
         },
         "41d1eda8-9490-4327-b931-c4760e5bebef": {
+          "name": "Gra oparta na współpracy",
           "tips": [
             null
           ]
         },
+        "b2777295-b74f-4240-bb3d-c76b79dde6a9": {
+          "tips": [
+            null
+          ]
+        },
+        "75c2be17-6096-46dd-8550-4ae4928da3b0": {
+          "description": "<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> \\*\\*Wykonaj to: \\*\\* Przeczytaj kartę indywidualnie. Karta ma również kilka pustych miejsc-możesz je wypełnić dodatkowymi informacjami o swojej fałszywej postaci, aby uczynić je własnymi!"
+        },
         "9bcab929-d773-4dab-bfb0-d09892056944": {
           "tips": [
             null
+          ]
+        },
+        "bedaca2d-4f48-45b4-b6e9-431f6a38cc13": {
+          "tips": [
+            "\\*\\*Poszerzanie wpływu: \\*\\* Uczniowie mogą z pasją odbierać zalety i wady generatywnej sztucznej inteligencji, a niektórzy mog być bardziej pod jej wpływem niż inni. Przypomnij uczniom, że są to _bieżące_ problemy, które muszą być jeszcze rozwiązane, i że ich opinie mają znaczenie. Możesz umożliwić uczniom napisanie do swoich ustawodawców o tym, czego się nauczyli."
+          ]
+        },
+        "221b5029-fcfd-4791-b951-852609cb0198": {
+          "description": "-   Jakie było największe wyzwanie, które pomyślnie rozwiązałeś?\n-   Czyje potrzeby były najłatwiejsze do spełnienia?\n-   Z jakiego kompromisu jesteś najbardziej dumny?\n-   Wymień to, co uważałeś za najważniejsze obawy/potrzeby, które trzeba było zaspokoić.\n-   Jakie są Twoje największe obawy związane z rozwojem generatywnej sztucznej inteligencji?\n-   Jaka jest Twoja najbardziej ekscytująca nadzieja na rozwój generatywnej sztucznej inteligencji?\n-   W liście napisz porady dla firm i organizacji, aby współpracowały w kwestiach AI. Skorzystaj z tego, czego się dzisiaj nauczyłeś, i dołącz jeden artykuł.",
+          "tips": [
+            "\\*\\*Przedłużanie lekcji: \\*\\* Uczniowie mogą wrócić do domu i zajmować się generatywnymi narzędziami sztucznej inteligencji, testować swoje teorie lub eksperymentować z tym, czego się nauczyli. Zachęcaj uczniów do rozmów z rodziną i przyjaciółmi z podejściem zorientowanym na rozwiązania. Możesz poprowadzić uczniów pasjonatów w kierunku wielu karier w technologii AI!"
           ]
         },
         "04e8f7f8-668f-4eba-865e-6fe94028acd0": {
@@ -34912,7 +34957,7 @@
           "description": "<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> \\*\\*Zrób to: \\*\\* Poleć uczniom wybrać wyrażenie, które chcą wyszkolić AI Bota, aby rozpoznawał, i zapisali te informacje w swoim Przewodniku po ćwiczeniach. Uczniowie powinni samodzielnie przechodzić przez poziom, rejestrując informacje w swoim przewodniku po aktywności. Na ostatnim ekranie poproś uczniów o naciśnięcie ikony informacji i zapisanie funkcji, których nauczył się AI Bot, były najważniejsze.\n\n<i class=\"fa fa-refresh\" aria-hidden=\"true\"></i> \\*\\*Krążyć: \\*\\* Sprawdź, czy uczniowie wypełniają swój przewodnik po ćwiczeniach, gdy kończą etapy. Zapytaj uczniów, na jakie funkcje patrzą, aby ustalić, czy ryba spełnia ich kryteria. Uczniowie prawdopodobnie powiedzą, że używają przede wszystkim oczu i ust do określenia ekspresji, ale kiedy klikną ikonę Informacje na ostatnim ekranie, AI Bot może używać dodatkowych funkcji, takich jak kolor i ciało, aby podjąć decyzję. Zachęcaj uczniów, aby zastanowili się, co o tym myślą i porównali to z ich osobistymi doświadczeniami - Na przykład, jeśli ktoś myślał, że jest „głupi” lub „zły” głównie na podstawie ich ubrania.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> \\*\\*Wyświetlanie: \\*\\* Pokaż slajd AI Bot ucząc się rozpoznawać ryby jako „Zły”. Poproś uczniów o omówienie monitu na ekranie: \\_Patrząc na ten ekran, jak myślisz, dlaczego kolor pojawił się jako druga najważniejsza funkcja? \\_\n\n<i class=\"fa fa-lightbulb-o\" aria-hidden=\"true\"></i> \\*\\*Cel dyskusji: \\*\\* Uczniowie powinni zauważyć, że chociaż oczy i usta wydają się „wściekłe” na każdej rybie, na ekranie pojawia się również dużo fioletowych ryb. W rezultacie AI Bot może zacząć myśleć, że kolor „fioletowy” to kolejny sposób na stwierdzenie, czy ryba jest zła, czy nie."
         },
         "5b8653c5-26ef-405b-a0ae-b8839027a4b8": {
-          "description": "<i class=\"fa fa-comments\" aria-hidden=\"true\"></i> \\*\\*Omów: \\*\\* \\_Czy uważasz, że można uznać rybę za „złą” ze względu na jej kolor? \\_"
+          "description": "<i class=\"fa fa-comments\" aria-hidden=\"true\"></i> **Przedyskutuj:** _Czy uważasz, że można uważać rybę za „złą” ze względu na jej kolor?_"
         },
         "a70f681d-ab68-4296-a56c-30117dbee4c3": {
           "description": "<i class=\"fa fa-lightbulb-o\" aria-hidden=\"true\"></i> \\*\\*Cel dyskusji: \\*\\* W pierwszej części pytania poproś uczniów, aby zauważyli, że na ekranie jest dużo fioletowych ryb, więc AI Bot może pomyśleć, że fioletowe ryby są bardziej narażone na gniew niż inne ryby.",
@@ -34935,11 +34980,11 @@
           "description": "Chcielibyśmy dowiedzieć się więcej o ludziach ucząc tych lekcji i doświadczeniach w klasie. Daj nam znać w tym [Jak działa AI Works Teacher Survey](https://docs.google.com/forms/d/e/1FAIpQLSd5Usml_xrjQQ8DdBmZjQc771LcB13FKukCYc3NGLKfVwIneg/viewform)."
         },
         "316385e5-2df8-4e34-b964-6ee28ecc3e7f": {
-          "name": "Lekcje dodatkowe",
+          "name": "Dodatkowe lekcje",
           "description": "Jeśli chcesz uczyć dodatkowych lekcji z serii filmów How AI Works, [kliknij tutaj, aby zapoznać się z dodatkowymi zasobami](https://code.org/ai/how-ai-works)"
         },
         "eb99e343-c072-48cd-84dd-49b6e56e8108": {
-          "name": "Sztuczna inteligencja i uczenie maszynowe",
+          "name": "Jednostka Sztuczna inteligencja i uczenie maszynowe",
           "description": "Jeśli chcesz jeszcze głębiej zagłębić się w sztuczną inteligencję i uczenie maszynowe, rozważ zapoznanie się z naszą 5-tygodniową jednostką na temat sztucznej inteligencji i uczenia maszynowego. [Kliknij tutaj, aby wyświetlić jednostkę i dowiedzieć się więcej](https://studio.code.org/s/aiml-2023?viewAs=Instructor)"
         },
         "a7c37a28-46be-4a1a-b767-99482e8cf353": {
@@ -35077,11 +35122,11 @@
           "description": "Chcielibyśmy dowiedzieć się więcej o ludziach ucząc tych lekcji i doświadczeniach w klasie. Daj nam znać w tym [Jak działa AI Works Teacher Survey](https://docs.google.com/forms/d/e/1FAIpQLSd5Usml_xrjQQ8DdBmZjQc771LcB13FKukCYc3NGLKfVwIneg/viewform)."
         },
         "17a1b7e1-7b2b-47ae-baa2-d3053ddea5dd": {
-          "name": "Lekcje dodatkowe",
+          "name": "Dodatkowe lekcje",
           "description": "Jeśli chcesz uczyć dodatkowych lekcji z serii filmów How AI Works, [kliknij tutaj, aby zapoznać się z dodatkowymi zasobami](https://code.org/ai/how-ai-works)"
         },
         "38017a5c-eb05-4397-b122-8711c1559789": {
-          "name": "Sztuczna inteligencja i uczenie maszynowe",
+          "name": "Jednostka Sztuczna inteligencja i uczenie maszynowe",
           "description": "Jeśli chcesz jeszcze głębiej zagłębić się w sztuczną inteligencję i uczenie maszynowe, rozważ zapoznanie się z naszą 5-tygodniową jednostką na temat sztucznej inteligencji i uczenia maszynowego. [Kliknij tutaj, aby wyświetlić jednostkę i dowiedzieć się więcej](https://studio.code.org/s/aiml-2023?viewAs=Instructor)"
         },
         "5a1c68ad-e858-4aa4-8a9d-b9edaef7dfde": {
@@ -35216,11 +35261,11 @@
           "description": "Chcielibyśmy dowiedzieć się więcej o ludziach ucząc tych lekcji i doświadczeniach w klasie. Daj nam znać w tym [Jak działa AI Works Teacher Survey](https://docs.google.com/forms/d/e/1FAIpQLSd5Usml_xrjQQ8DdBmZjQc771LcB13FKukCYc3NGLKfVwIneg/viewform)."
         },
         "96703b12-be00-4549-add6-28fffea6e76f": {
-          "name": "Lekcje dodatkowe",
+          "name": "Dodatkowe lekcje",
           "description": "Jeśli chcesz uczyć dodatkowych lekcji z serii filmów How AI Works, [kliknij tutaj, aby zapoznać się z dodatkowymi zasobami](https://code.org/ai/how-ai-works)"
         },
         "fde8393e-139e-40ef-b275-1d93b32daf61": {
-          "name": "Sztuczna inteligencja i uczenie maszynowe",
+          "name": "Jednostka Sztuczna inteligencja i uczenie maszynowe",
           "description": "Jeśli chcesz jeszcze głębiej zagłębić się w sztuczną inteligencję i uczenie maszynowe, rozważ zapoznanie się z naszą 5-tygodniową jednostką na temat sztucznej inteligencji i uczenia maszynowego. [Kliknij tutaj, aby wyświetlić jednostkę i dowiedzieć się więcej](https://studio.code.org/s/aiml-2023?viewAs=Instructor)"
         },
         "2913480b-0273-4c5a-95c8-23b002a842a0": {
@@ -35347,11 +35392,11 @@
           "description": "Chcielibyśmy dowiedzieć się więcej o ludziach ucząc tych lekcji i doświadczeniach w klasie. Daj nam znać w tym [Jak działa AI Works Teacher Survey](https://docs.google.com/forms/d/e/1FAIpQLSd5Usml_xrjQQ8DdBmZjQc771LcB13FKukCYc3NGLKfVwIneg/viewform)."
         },
         "e1924cec-7b85-408e-b577-211abaf1f02f": {
-          "name": "Lekcje dodatkowe",
+          "name": "Dodatkowe lekcje",
           "description": "Jeśli chcesz uczyć dodatkowych lekcji z serii filmów How AI Works, [kliknij tutaj, aby zapoznać się z dodatkowymi zasobami](https://code.org/ai/how-ai-works)"
         },
         "e22c70e5-cc6f-4d97-9eff-5736cbb0031a": {
-          "name": "Sztuczna inteligencja i uczenie maszynowe",
+          "name": "Jednostka Sztuczna inteligencja i uczenie maszynowe",
           "description": "Jeśli chcesz jeszcze głębiej zagłębić się w sztuczną inteligencję i uczenie maszynowe, rozważ zapoznanie się z naszą 5-tygodniową jednostką na temat sztucznej inteligencji i uczenia maszynowego. [Kliknij tutaj, aby wyświetlić jednostkę i dowiedzieć się więcej](https://studio.code.org/s/aiml-2023?viewAs=Instructor)"
         },
         "57b4147e-478a-451f-8931-a3b624c15095": {
@@ -35449,11 +35494,11 @@
           "description": "Chcielibyśmy dowiedzieć się więcej o ludziach ucząc tych lekcji i doświadczeniach w klasie. Daj nam znać w tym [Jak działa AI Works Teacher Survey](https://docs.google.com/forms/d/e/1FAIpQLSd5Usml_xrjQQ8DdBmZjQc771LcB13FKukCYc3NGLKfVwIneg/viewform)."
         },
         "5563b254-81f3-4d70-aa2a-c1551f9b8342": {
-          "name": "Lekcje dodatkowe",
+          "name": "Dodatkowe lekcje",
           "description": "Jeśli chcesz uczyć dodatkowych lekcji z serii filmów How AI Works, [kliknij tutaj, aby zapoznać się z dodatkowymi zasobami](https://code.org/ai/how-ai-works)"
         },
         "5da9894d-da25-4e52-9baa-3da9650a59b5": {
-          "name": "Sztuczna inteligencja i uczenie maszynowe",
+          "name": "Jednostka Sztuczna inteligencja i uczenie maszynowe",
           "description": "Jeśli chcesz jeszcze głębiej zagłębić się w sztuczną inteligencję i uczenie maszynowe, rozważ zapoznanie się z naszą 5-tygodniową jednostką na temat sztucznej inteligencji i uczenia maszynowego. [Kliknij tutaj, aby wyświetlić jednostkę i dowiedzieć się więcej](https://studio.code.org/s/aiml-2023?viewAs=Instructor)"
         },
         "b4aa3386-cb77-4253-89c8-2c255a7d620f": {
@@ -35566,11 +35611,11 @@
           "description": "Chcielibyśmy dowiedzieć się więcej o ludziach ucząc tych lekcji i doświadczeniach w klasie. Daj nam znać w tym [Jak działa AI Works Teacher Survey](https://docs.google.com/forms/d/e/1FAIpQLSd5Usml_xrjQQ8DdBmZjQc771LcB13FKukCYc3NGLKfVwIneg/viewform)."
         },
         "8eec1224-f52f-468c-95ef-a7bcb08099ca": {
-          "name": "Lekcje dodatkowe",
+          "name": "Dodatkowe lekcje",
           "description": "Jeśli chcesz uczyć dodatkowych lekcji z serii filmów How AI Works, [kliknij tutaj, aby zapoznać się z dodatkowymi zasobami](https://code.org/ai/how-ai-works)"
         },
         "3b11d58b-5f61-4c4e-8ba2-576cbf7d6c45": {
-          "name": "Sztuczna inteligencja i uczenie maszynowe",
+          "name": "Jednostka Sztuczna inteligencja i uczenie maszynowe",
           "description": "Jeśli chcesz jeszcze głębiej zagłębić się w sztuczną inteligencję i uczenie maszynowe, rozważ zapoznanie się z naszą 5-tygodniową jednostką na temat sztucznej inteligencji i uczenia maszynowego. [Kliknij tutaj, aby wyświetlić jednostkę i dowiedzieć się więcej](https://studio.code.org/s/aiml-2023?viewAs=Instructor)"
         },
         "17bd5635-8ba9-4318-96e4-d1e3bedf918b": {
@@ -35619,11 +35664,11 @@
           "description": "Chcielibyśmy dowiedzieć się więcej o ludziach ucząc tych lekcji i doświadczeniach w klasie. Daj nam znać w tym [Jak działa AI Works Teacher Survey](https://docs.google.com/forms/d/e/1FAIpQLSd5Usml_xrjQQ8DdBmZjQc771LcB13FKukCYc3NGLKfVwIneg/viewform)."
         },
         "086a57eb-d6b8-46d9-860c-cc3cd0dc9c52": {
-          "name": "Lekcje dodatkowe",
+          "name": "Dodatkowe lekcje",
           "description": "Jeśli chcesz uczyć dodatkowych lekcji z serii filmów How AI Works, [kliknij tutaj, aby zapoznać się z dodatkowymi zasobami](https://code.org/ai/how-ai-works)"
         },
         "8c9e0a32-aa02-41bc-b26d-131dea4ceac6": {
-          "name": "Sztuczna inteligencja i uczenie maszynowe",
+          "name": "Jednostka Sztuczna inteligencja i uczenie maszynowe",
           "description": "Jeśli chcesz jeszcze głębiej zagłębić się w sztuczną inteligencję i uczenie maszynowe, rozważ zapoznanie się z naszą 5-tygodniową jednostką na temat sztucznej inteligencji i uczenia maszynowego. [Kliknij tutaj, aby wyświetlić jednostkę i dowiedzieć się więcej](https://studio.code.org/s/aiml-2023?viewAs=Instructor)"
         },
         "1b97cdf1-c60b-4103-9144-5414aa7a2183": {
@@ -35691,11 +35736,11 @@
           "description": "Chcielibyśmy dowiedzieć się więcej o ludziach ucząc tych lekcji i doświadczeniach w klasie. Daj nam znać w tym [Jak działa AI Works Teacher Survey](https://docs.google.com/forms/d/e/1FAIpQLSd5Usml_xrjQQ8DdBmZjQc771LcB13FKukCYc3NGLKfVwIneg/viewform)."
         },
         "9f7f1bb2-91d4-4640-b226-7e511cd54e9b": {
-          "name": "Lekcje dodatkowe",
+          "name": "Dodatkowe lekcje",
           "description": "Jeśli chcesz uczyć dodatkowych lekcji z serii filmów How AI Works, [kliknij tutaj, aby zapoznać się z dodatkowymi zasobami](https://code.org/ai/how-ai-works)"
         },
         "6fcccbbf-5b1b-4d65-98bd-8c37c03da53b": {
-          "name": "Sztuczna inteligencja i uczenie maszynowe",
+          "name": "Jednostka Sztuczna inteligencja i uczenie maszynowe",
           "description": "Jeśli chcesz jeszcze głębiej zagłębić się w sztuczną inteligencję i uczenie maszynowe, rozważ zapoznanie się z naszą 5-tygodniową jednostką na temat sztucznej inteligencji i uczenia maszynowego. [Kliknij tutaj, aby wyświetlić jednostkę i dowiedzieć się więcej](https://studio.code.org/s/aiml-2023?viewAs=Instructor)"
         },
         "bdbf2184-a699-461e-b766-8b3e35e1a5e8": {

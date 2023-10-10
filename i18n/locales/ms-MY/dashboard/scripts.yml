@@ -118,7 +118,7 @@ ms:
           description_short: Pelajari mengatur cara droid dan cipta permainan Star Wars anda sendiri di galaksi yang amat jauh.
           student_description: Pelajari mengatur cara droid dan cipta permainan Star Wars anda sendiri di galaksi yang amat jauh.
         mc:
-          title: Jam Kod Minecraft
+          title: Pengembara Minecraft
           description: Gunakan blok kod untuk membawa Steve atau Alex mengembara melalui dunia Minecraft ini.
           description_short: Terokai dunia Minecraft melalui pengekodan.
           student_description: Gunakan blok kod untuk membawa Steve atau Alex mengembara melalui dunia Minecraft ini.
@@ -193,6 +193,7 @@ ms:
             required:
               display_name: Gambaran Keseluruhan
         minecraft:
+          title: Pereka Minecraft
           description_short: Program haiwan dan makhluk Minecraft lain dalam versi Minecraft anda sendiri.
           description: Program haiwan dan makhluk Minecraft lain dalam versi Minecraft anda sendiri.
           student_description: Program haiwan dan makhluk Minecraft lain dalam versi Minecraft anda sendiri.

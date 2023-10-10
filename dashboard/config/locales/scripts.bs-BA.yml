@@ -1014,6 +1014,8 @@ bs:
           student_description: Izađite iz okvira prvog sata sa proširenim idejama
             o projektu.
           title: Nastavite plesati
+        dance-unplugged:
+          title: Plesna zabava bez granica
         data-society-2023:
           description_short: Naučite kako ljudi koriste računala za rješavanje problema
             podataka.
@@ -1286,7 +1288,6 @@ bs:
           description_short: Istražite svijet Minecraft-a putem koda
           student_description: Koristi blokove koda da bi poveo Steve ili Alex u avanturu
             kroz Minecraft svijet
-          title: Sata Kodiranja Minecraft-a
         netsim:
           title: Internet Simulator
         nevada-standards-aligned-fifth-grade-2023:

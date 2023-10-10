@@ -11832,7 +11832,7 @@
           "name": "Penutupan"
         },
         "8e09a958-4202-48e1-bd2e-7d0afa3a0c6d": {
-          "name": "(Opsional) Aktivitas GAN"
+          "name": "(Opsional) Kegiatan GAN"
         },
         "f9582c25-a034-4e8d-b042-69dba2874ab3": {
           "name": "Pemanasan"
@@ -11862,10 +11862,10 @@
           "name": "Data Pelatihan dan Bias"
         },
         "792cc1d7-8c32-478d-ab2f-49ef09d3e832": {
-          "name": "Bagaimana Jaringan Neural Bekerja"
+          "name": "Cara Kerja Neural Networks"
         },
         "7ce479b3-0fe8-4697-8f6f-9ae87a524b37": {
-          "name": "Bagaimana Computer Vision Bekerja"
+          "name": "Cara Kerja Computer Vision"
         },
         "fbfdf89d-c6bb-464e-9a2a-246c34f33b55": {
           "name": "Apakah AI Memiliki Kreativitas Dan Imajinasi"

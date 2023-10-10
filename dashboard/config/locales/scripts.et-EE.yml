@@ -1568,6 +1568,8 @@ et:
           student_description: Mine põhjalikumate projjektiideedega esimesest tunnist
             edasi.
           title: Tantsi edasi
+        dance-unplugged:
+          title: Unplugged Tantsuõhtu
         dani-june-2020-test:
           lesson_groups:
             cspSurvey:
@@ -1894,7 +1896,7 @@ et:
           name: mc
           student_description: Kasuta koodi plokke, et viia Steve või Alex seiklusele
             läbi selle Minecrafti maailma.
-          title: Minecrafti KoodiTund
+          title: Minecraft Seikleja
         microbit-2023:
           lesson_groups:
             lessonGroup-5:

@@ -35,6 +35,10 @@ is:
   africa_campaign_date_full: 1. október - 18. desember
   africa_campaign_date_year: '2022'
   africa_campaign_date_full_year: 1. október 2022 - 18. desember 2022
+  hoc2023_header: Sköpun með AI
+  hoc2023_social_creativity_with_ai_title: Hour of Code - Hvað ætlar þú að búa til?
+  hoc2023_social_creativity_with_ai_desc: Notaðu tölvunarfræði til að kanna og læra
+    um AI!
   hoc2022_header: Kannaðu, spilaðu, búðu til!
   social_hoc2022_explore_play_create: Notaðu tölvunarfræði til að kanna, spila og
     búa til!
@@ -173,6 +177,28 @@ is:
   curriculum_launch_2023_desc: Uppfærslur á CSC, CSP, CSD og fleira - auk nýrrar Curriculum
     Catalog og endurhannað Kenna síðu til að hjálpa þér að finna það allt!
   in_partnership_with: Í samstarfi við
+  shop_code_dot_org_heading: Verslaðu Code.org
+  shop_code_dot_org_desc: Styðjið starf okkar og klæðið hreyfingunni með stolti. Húfur
+    okkar hafa verið borinn af forseta Obama og orðstír líka.
+  spread_the_word_heading: Láta þetta berast
+  spread_the_word_desc: Magnaðu áhrif okkar með því að deila Code.org með netkerfinu
+    þínu. Uppgötvaðu hvernig þú getur hjálpað okkur að ná til fleiri kennara, nemenda
+    og talsmanna, allt frá samfélagsmiðlum til tölvupóstuppfærslna.
+  follow_us_heading: Fylgdu okkur á samfélagsmiðlum
+  follow_us_desc: Fylgstu með okkur á samfélagsmiðlum og deildu færslunum okkar með
+    netkerfinu þínu til að vera upplýst og hjálpa til við að vekja athygli.
+  facebook: Facebook
+  twitter: Twitter
+  linked_in: LinkedIn
+  instagram: Instagram
+  tik_tok: TikTok
+  subscribe_to_emails_heading: Gerast áskrifandi að tölvupósti
+  subscribe_to_emails_desc: Lestu um hvað er að gerast á Code.org og í tölvunarfræðikennslu
+    með ársfjórðungslegum uppfærslum í gegnum póstlistann okkar.
+  subscribe_to_emails_intl: Gerast áskrifandi að alþjóðlegum uppfærslum
+  promote_code_dot_org_heading: Efla Code.org
+  promote_code_dot_org_desc: Efla tölvunarfræði á þínu svæði með hjálp tölfræði, vitna,
+    og myndbönd.
   afe_partnership_logo_alt: Amazon Future Engineer merki
   afe_partnership_thanks_desc: Amazon Future Engineer alhliða barna-til-starfsferill
     program til að hvetja, mennta, og þjálfa lág-tekjur og önnur illa börn og ungt
@@ -190,6 +216,15 @@ is:
   curricula_title_high: High School námskrár
   curricula_desc_high: Skoðaðu sannfærandi námskeið og athafnir sem bjóða þér og framhaldsskólanemum
     þínum að grafa dýpra í tölvunarfræði.
+  for_administrators_heading: Fyrir stjórnendur
+  for_administrators_desc: Vertu með í þúsundum skóla sem þegar hafa tekið tölvunarfræði
+    inn í námskrá sína.
+  for_parents_heading: Fyrir foreldra
+  for_parents_desc: Þú getur hjálpað til við að hvetja skóla nemandans þíns til að
+    bjóða upp á eða auka tölvunarfræðinám.
+  for_educators_heading: Fyrir fræðara
+  for_educators_desc: Byrjaðu að kenna í dag - engin tölvunarfræði reynsla nauðsynleg
+    - með faglegum námskeiðum okkar.
   students_label: Nemendur
   teachers_label: Kennarar
   teacher_label_csf: CS Undirstöðuatriði Kennari
@@ -199,10 +234,11 @@ is:
   teacher_label_csa: AP® Computer Science A Teacher
   required_materials: 'Nauðsynleg efni:'
   optional_materials: 'Valfrjálst efni:'
-  call_to_action_explore_roles: Kannaðu opin hlutverk
+  call_to_action_hold_an_event: Halda viðburð
   call_to_action_learn_more: Nánar
   call_to_action_watch_now: Fylgstu með núna
   call_to_action_try_activity: Prófaðu virkni
+  call_to_action_try_activities: Prófaðu athafnir
   call_to_action_explore_unit: Explore eining
   call_to_action_explore_curriculum: Skoða námskrá
   call_to_action_explore_curriculum_options: Kannaðu valkosti fyrir námskrá
@@ -271,11 +307,20 @@ is:
   call_to_action_notify_available: Láttu mig vita þegar það er í boði
   call_to_action_register_early_access: Skráðu þig fyrir snemma aðgang
   call_to_action_open_positions: Skoða opnar stöður
+  call_to_action_explore_roles: Kannaðu opin hlutverk
   call_to_action_get_guide: Fáðu leiðarvísinn
   call_to_action_donate_to_cdo: Gefa til Code.org
   call_to_action_start_fundraiser: Hefja fjáröflun
   call_to_action_view_donation_policy: Skoða stefnu um framlag
   call_to_action_view_donate_bitpay: Gefðu með BitPay
+  call_to_action_make_a_donation: Gerðu framlag
+  call_to_action_other_ways_to_give: Aðrar leiðir til að gefa
+  call_to_action_become_partner_usa: Gerast samstarfsaðili Bandaríkjanna
+  call_to_action_become_partner_intl: Gerast alþjóðlegur samstarfsaðili
+  call_to_action_become_a_volunteer: Gerast sjálfboðaliði
+  call_to_action_start_translating: Byrjaðu að þýða
+  call_to_action_learn_about_advocacy: Lærðu um málsvörn okkar
+  call_to_action_visit_store: Heimsæktu verslunina
   aria_label_call_to_action_afe: Lærðu meira um Amazon Future Engineer
   aria_label_call_to_action_teaching_csf: Byrjaðu Kennsla Tölvunarfræði Undirstöðuatriði
     faglega nám program
@@ -599,6 +644,7 @@ is:
   heading_these_lessons_will: 'Þessar kennslustundir munu:'
   heading_explore_curriculum_catalog: Skoða öll námskeið okkar í Curriculum Catalog
   heading_csa_ai: Ertu að leita að hlutum til að gera eftir AP® prófið?
+  heading_bring_cs_to_students: Koma tölvunarfræði til nemenda
   professional_learning_section_desc: Fáðu þann stuðning sem þú þarft þegar þú býrð
     þig undir að kenna. Kennarar elska það, með yfir 90% röðun það besta faglega þróun
     alltaf!
@@ -862,6 +908,7 @@ is:
     AI fræðslutæki og nýta AI til námsmats. Með ríkri blöndu af kenningum, hagnýtum
     dæmum og úrræðum miðar það að því að styrkja kennara til að vafra um AI landslagið
     og auka námsreynslu nemenda.
+  ai_pl_101_resources_5: Leiðbeiningar um að tryggja ábyrga nálgun við gervigreind
   ai_pl_101_video_desc_6: 'Lærðu meira um nýju tæknina sem knýr fram miklar breytingar
     á AI, með tveimur nýjum myndböndum á Large Language Models (eins og ChatGPT) og
     Generative AI. Heyrðu hvernig þessi nýja tækni virkar beint frá sérfræðingunum:
@@ -872,6 +919,8 @@ is:
     þá bara að dýfa tánum í, auk háþróaður verkfæri fyrir þá sem leita að hámarka
     möguleika þeirra.
   ai_pl_101_resources_3: AI hvetja til að umbreyta námi nemenda
+  ai_pl_101_resources_section_title: Fleiri leiðir til að læra um AI
+  ai_pl_101_resources_guide: 'Félagi fylgja:'
   how_ai_works_hero_heading: Hvernig AI virkar
   how_ai_works_hero_desc: Kafa inn í heim AI með “Hvernig AI virkar,” myndbandsseríurnar
     okkar og meðfylgjandi kennslustundir!
@@ -1697,6 +1746,30 @@ is:
   donate_tabs_bitpay_title: Gefðu með Crypto í gegnum BitPay
   donate_tabs_bitpay_desc: Faðma framtíð gefa með cryptocurrency. Með BitPay getur
     stafrænn gjaldmiðill þinn beint stutt viðleitni Code.org við að auka tölvunarfræðimenntun.
+  help_page_top_heading: Hvernig þú getur hjálpað
+  help_page_top_desc: Styðja verkefni okkar til að gera tölvunarfræði aðgengileg fyrir
+    hvert barn, alls staðar. Viðleitni þín hjálpar okkur að hvetja frumkvöðla framtíðarinnar
+    og brúa bilið á tæknimenntun.
+  help_page_top_subhead: Gerðu framlag til Code.org
+  help_page_top_desc_02: Við erum að vinna að því að gefa öllum nemendum tækifæri
+    til að læra tölvunarfræði - bæði á netinu OG í skólum, þar sem við stofnum fasta
+    námskeið og þjálfum kennara. Fyrir hverja dollara sem þú gefur er eitt barn kynnt
+    tölvunarfræði.
+  help_page_partners_heading: Gerast félagi
+  help_page_partners_desc: Code.org vinnur með öðrum góðgerðasamtökum sem samstarfsaðilum
+    til að hjálpa til við að dreifa tölvunarfræði á staðbundinn, sjálfbæran hátt.
+    Frekari upplýsingar um áætlun okkar.
+  help_page_volunteer_heading: Sjálfboðaliði í kennslustofu
+  help_page_volunteer_desc: Sjálfboðaliði til að kenna Hour of Code eða vera gestafyrirlesari
+    í staðbundinni kennslustofu. Skráðu þig til að heyra um tækifæri nálægt þér.
+  help_page_translate_heading: Hjálpaðu okkur að þýða
+  help_page_translate_desc: Sjálfboðaliðar hafa þýtt námskeiðin okkar á yfir 45 tungumálum.
+    Hjálpaðu okkur að halda áfram að auka námskeið okkar fyrir nemendur um allan heim!
+  help_page_speak_for_cs_heading: Tala upp fyrir tölvunarfræði menntun
+  help_page_speak_for_cs_desc: Lærðu meira um málsvörn Code.org í Bandaríkjunum og
+    tíu stefnur sem við mælum með að ríki taki upp til að gera tölvunarfræði grundvallaratriði
+    fyrir alla nemendur. Auk þess skaltu finna út hvernig þú getur keyrt breytingar
+    á ástandi þínu.
   hoc_live: Klukkutími lifandi kóða
   hoc_live_sign_up_title: Skráðu þig fyrir klukkustund af kóða Live
   hoc_live_learn_title: Lærðu með klukkustund af kóða Live
@@ -13455,6 +13528,10 @@ is:
   video_library_page_inspirational_video_title_11: Allir geta lært (1 mín.)
   video_library_page_inspirational_video_title_12: Lo Que Falta En Nuestras Escuelas
     (2 mín.)
+  video_library_page_inspirational_video_title_13: NASA fagnar klukkustund af kóða
+    (2 mín)
+  video_library_page_inspirational_video_title_14: Það er meira en leikur (1 mín)
+  video_library_page_inspirational_video_title_15: Búa með tölvunarfræði (1 mín)
   video_library_page_not_hacked_video_title_1: 'Hvernig ekki að fá tölvusnápur: Inngangur'
   video_library_page_not_hacked_video_title_2: 'Hvernig ekki að fá tölvusnápur: Lykilorð'
   video_library_page_not_hacked_video_title_3: 'Hvernig ekki að fá tölvusnápur: Auðkenning
