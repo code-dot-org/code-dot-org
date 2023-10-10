@@ -4,7 +4,6 @@ import Radium from 'radium'; // eslint-disable-line no-restricted-imports
 import React from 'react';
 import color from '../../../util/color';
 import i18n from '@cdo/locale';
-import fontConstants from '@cdo/apps/fontConstants';
 import {lessonOfBonusLevels} from './shapes';
 import SublevelCard from '../SublevelCard';
 
@@ -135,7 +134,7 @@ const styles = {
     color: color.white,
     fontSize: 20,
     lineHeight: '35px',
-    ...fontConstants['main-font-regular'],
+    fontFamily: '"Gotham 4r"',
     margin: 0,
   },
   arrow: {

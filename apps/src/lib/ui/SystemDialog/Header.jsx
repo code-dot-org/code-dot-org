@@ -1,7 +1,6 @@
 import PropTypes from 'prop-types';
 import React from 'react';
 import color from '@cdo/apps/util/color';
-import fontConstants from '@cdo/apps/fontConstants';
 
 /**
  * Header for a "System" dialog style used on account pages.
@@ -28,7 +27,7 @@ const style = {
   fontSize: 16,
   lineHeight: '20px',
   color: color.charcoal,
-  ...fontConstants['main-font-semi-bold'],
+  fontFamily: "'Gotham 5r', sans-serif",
   borderStyle: 'solid',
   borderColor: color.lighter_gray,
   borderTopWidth: 0,

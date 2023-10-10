@@ -7,7 +7,6 @@ import {connect} from 'react-redux';
 import i18n from '@cdo/locale';
 import {hideShareDialog, showLibraryCreationDialog} from './shareDialogRedux';
 import Button from '../../templates/Button';
-import fontConstants from '@cdo/apps/fontConstants';
 
 const style = {
   nav: {
@@ -22,8 +21,9 @@ const style = {
     li: {
       display: 'inline-block',
       color: color.neutral_dark90,
-      ...fontConstants['main-font-semi-bold'],
+      fontFamily: "'Gotham 5r', sans-serif",
       fontSize: 'larger',
+      fontWeight: 'bold',
       marginRight: 10,
       cursor: 'pointer',
     },
@@ -36,21 +36,22 @@ const style = {
     fontSize: 'inherit',
     lineHeight: 'inherit',
     color: color.neutral_dark,
-    ...fontConstants['main-font-semi-bold'],
+    fontFamily: "'Gotham 5r', sans-serif",
   },
   warningp: {
     color: color.red,
   },
   bold: {
-    ...fontConstants['main-font-bold'],
+    fontFamily: "'Gotham 7r', sans-serif",
   },
   root: {
     marginTop: 20,
   },
   expand: {
     color: color.brand_secondary_default,
-    ...fontConstants['main-font-semi-bold'],
+    fontFamily: "'Gotham 5r', sans-serif",
     cursor: 'pointer',
+    fontWeight: 'bold',
   },
   embedInput: {
     cursor: 'copy',

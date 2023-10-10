@@ -23,7 +23,6 @@ import copyToClipboard from '@cdo/apps/util/copyToClipboard';
 import FontAwesome from '@cdo/apps/templates/FontAwesome';
 import Button from '../../templates/Button';
 import defaultThumbnail from '@cdo/static/projects/project_default.png';
-import fontConstants from '@cdo/apps/fontConstants';
 
 function recordShare(type) {
   if (!window.dashboard) {
@@ -563,7 +562,7 @@ const styles = {
   },
   thumbnailWarning: {
     fontSize: 12,
-    ...fontConstants['main-font-bold'],
+    fontFamily: "'Gotham 7r', sans-serif",
   },
   sendToPhoneContainer: {
     width: '100%',

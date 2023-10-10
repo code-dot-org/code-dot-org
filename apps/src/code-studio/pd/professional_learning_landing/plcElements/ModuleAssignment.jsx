@@ -1,6 +1,5 @@
 import PropTypes from 'prop-types';
 import React from 'react';
-import fontConstants from '@cdo/apps/fontConstants';
 import color from '../../../../util/color';
 
 export default class ModuleAssignment extends React.Component {
@@ -38,7 +37,7 @@ const styles = {
     backgroundColor: color.cyan,
     color: 'white',
     position: 'relative',
-    ...fontConstants['main-font-regular'],
+    fontFamily: '"Gotham 4r"',
   },
   ribbonWrapper: {
     width: '90px',

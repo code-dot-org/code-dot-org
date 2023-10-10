@@ -2,7 +2,6 @@ import React, {Component} from 'react';
 import PropTypes from 'prop-types';
 import Radium from 'radium'; // eslint-disable-line no-restricted-imports
 import {connect} from 'react-redux';
-import fontConstants from '@cdo/apps/fontConstants';
 import i18n from '@cdo/locale';
 import color from '../../util/color';
 import styleConstants from '../../styleConstants';
@@ -78,7 +77,7 @@ const styles = {
     paddingRight: 25,
     marginTop: 15,
     fontSize: 30,
-    ...fontConstants['main-font-regular'],
+    fontFamily: '"Gotham 4r", sans-serif',
     color: color.neutral_white,
     width: styleConstants['content-width'] - 35,
     zIndex: 2,
@@ -96,7 +95,7 @@ const styles = {
     marginTop: 80,
     fontSize: 14,
     lineHeight: 1.5,
-    ...fontConstants['main-font-regular'],
+    fontFamily: '"Gotham 4r", sans-serif',
     color: color.neutral_dark,
     width: '65%',
     boxSizing: 'border-box',

@@ -1,6 +1,5 @@
 import PropTypes from 'prop-types';
 import React, {Component} from 'react';
-import fontConstants from '@cdo/apps/fontConstants';
 import loadable from '../util/loadable';
 const VirtualizedSelect = loadable(() => import('./VirtualizedSelect'));
 import i18n from '@cdo/locale';
@@ -13,7 +12,7 @@ const singleLineLayoutStyles = {
   verticalAlign: 'middle',
   minHeight: 42,
   fontSize: 13,
-  ...fontConstants['main-font-regular'],
+  fontFamily: '"Gotham 4r", sans-serif',
   color: '#333',
   padding: 0,
 };

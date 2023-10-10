@@ -6,7 +6,6 @@ import StudioAppWrapper from '../templates/StudioAppWrapper';
 import InstructionsWithWorkspace from '../templates/instructions/InstructionsWithWorkspace';
 import CodeWorkspaceContainer from '../templates/CodeWorkspaceContainer';
 import Overlay from '../templates/Overlay';
-import fontConstants from '@cdo/apps/fontConstants';
 
 /**
  * Top-level React wrapper for Ailab
@@ -59,7 +58,7 @@ const styles = {
     height: '100%',
     margin: '0 auto',
     userSelect: 'none',
-    ...fontConstants['main-font-regular'],
+    fontFamily: '"Gotham 4r", arial, sans-serif',
     color: 'rgb(30,30,30)',
     lineHeight: 1.3,
   },

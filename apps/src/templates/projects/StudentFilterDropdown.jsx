@@ -3,7 +3,6 @@ import PropTypes from 'prop-types';
 import Radium from 'radium'; // eslint-disable-line no-restricted-imports
 import color from '../../util/color';
 import commonMsg from '@cdo/locale';
-import fontConstants from '@cdo/apps/fontConstants';
 
 export const ALL_STUDENTS = '_all_students';
 
@@ -56,7 +55,7 @@ const styles = {
   },
   filterText: {
     color: color.charcoal,
-    ...fontConstants['main-font-semi-bold'],
+    fontFamily: '"Gotham 5r", sans-serif',
   },
 };
 

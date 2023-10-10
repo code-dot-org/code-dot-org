@@ -7,7 +7,6 @@ import Sounds from '../../Sounds';
 import SearchBar from '@cdo/apps/templates/SearchBar';
 import firehoseClient from '@cdo/apps/lib/util/firehose';
 import i18n from '@cdo/locale';
-import fontConstants from '@cdo/apps/fontConstants';
 
 const SOUND_CATEGORIES = {
   accent: 'Accent',
@@ -180,7 +179,7 @@ const styles = {
   allCategoriesText: {
     fontSize: 16,
     color: color.purple,
-    ...fontConstants['main-font-semi-bold'],
+    font: 'Gotham 5r',
     paddingRight: 5,
     cursor: 'pointer',
   },

@@ -10,7 +10,6 @@ import {EVENTS} from '@cdo/apps/lib/util/AnalyticsConstants';
 import i18n from '@cdo/locale';
 import PropTypes from 'prop-types';
 import queryString from 'query-string';
-import fontConstants from '@cdo/apps/fontConstants';
 
 /*
  * SignInOrAgeDialog uses 'anon_over13' as its session storage key.
@@ -131,7 +130,7 @@ const styles = {
   },
   dancePartyHeading: {
     fontSize: 32,
-    ...fontConstants['main-font-bold'],
+    fontFamily: "'Gotham 7r', sans-serif",
   },
   middle: {
     marginTop: 20,
