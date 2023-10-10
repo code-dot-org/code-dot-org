@@ -32,15 +32,11 @@ class EvaluateRubricJob < ApplicationJob
     user = User.find(user_id)
     script_level = ScriptLevel.find(script_level_id)
     lesson_s3_name = EvaluateRubricJob.get_lesson_s3_name(script_level)
-    if rack_env?(:development)
-      puts "Evaluating rubric for user #{user.id} on script level #{script_level.id} with lesson_s3_name: #{lesson_s3_name.inspect}"
-    end
 
     raise "lesson_s3_name not found for script_level_id: #{script_level.id}" if lesson_s3_name.blank?
 
     channel_id = get_channel_id(user, script_level)
-    code, project_version = read_user_code(channel_id)
-    puts "code: #{code.inspect}"
+    _code, project_version = read_user_code(channel_id)
 
     rubric = Rubric.find_by!(lesson_id: script_level.lesson.id, level_id: script_level.level.id)
 
