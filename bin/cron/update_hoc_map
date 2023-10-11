@@ -70,7 +70,7 @@ def main
       next
     end
 
-    if form[:id] == SPECIFIC_SCHOOL_ID || form[:id] == SPECIFIC_SCHOOL_ID_STR
+    if form[:id] == SPECIFIC_SCHOOL_ID
       puts 'NOT SKIPPED'
       puts data['organization_name_s']
       puts processed_data['location_p']
