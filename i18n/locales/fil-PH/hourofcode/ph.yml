@@ -5,36 +5,40 @@ ph:
   language: Ingles
   front_title: Sumali sa pinakamalaking kaganapan ng pag-aaral sa kasaysayan, %{campaign_date}
   coming_soon: Malapit na
-  campaign_date_start_short: Dis. 5
-  campaign_date_start_long: Disyembre 5
-  campaign_date_short: Dis. 5-11
-  campaign_date_full: Disyembre 5-11
-  campaign_date_year: '2022'
-  campaign_date_full_year: Disyembre 5-11, 2022
+  campaign_date_start_short: Dis. 4
+  campaign_date_start_long: Disyembre 4
+  campaign_date_short: Dis. 4-10
+  campaign_date_full: Disyembre 4-10
+  campaign_date_year: '2023'
+  campaign_date_full_year: Disyembre 4-10, 2023
   nonus_campaign_date_start_short: Sept. 5
   nonus_campaign_date_start_long: September 5
   nonus_campaign_date_short: Okt. 1 - Dis. 18
   nonus_campaign_date_full: Oktubre 1 - Disyembre 18
-  nonus_campaign_date_year: '2022'
+  nonus_campaign_date_year: '2023'
   nonus_campaign_date_full_year: Oktubre 1, 2022 - Disyembre 18, 2022
   latam_campaign_date_start_short: Sept. 5
   latam_campaign_date_start_long: September 5
   latam_campaign_date_short: Okt. 1 - Dis. 18
   latam_campaign_date_full: Oktubre 1 - Disyembre 18
-  latam_campaign_date_year: '2022'
+  latam_campaign_date_year: '2023'
   latam_campaign_date_full_year: Oktubre 1, 2022 - Disyembre 18, 2022
   europe_campaign_date_start_short: Sept. 5
   europe_campaign_date_start_long: September 5
   europe_campaign_date_short: Okt. 1 - Dis. 18
   europe_campaign_date_full: Oktubre 1 - Disyembre 18
-  europe_campaign_date_year: '2022'
+  europe_campaign_date_year: '2023'
   europe_campaign_date_full_year: Oktubre 1, 2022 - Disyembre 18, 2022
   africa_campaign_date_start_short: Sept. 5
   africa_campaign_date_start_long: September 5
   africa_campaign_date_short: Okt. 1 - Dis. 18
   africa_campaign_date_full: Oktubre 1 - Disyembre 18
-  africa_campaign_date_year: '2022'
+  africa_campaign_date_year: '2023'
   africa_campaign_date_full_year: Oktubre 1, 2022 - Disyembre 18, 2022
+  hoc2023_header: Creativity with AI
+  hoc2023_social_creativity_with_ai_title: Hour of Code - What will you create?
+  hoc2023_social_creativity_with_ai_desc: Use computer science to explore and learn
+    about AI!
   hoc2022_header: Tumuklas, Maglaro, Gumawa!
   social_hoc2022_explore_play_create: Gamitin ang computer science upang tumuklas,
     maglaro, at gumawa!
@@ -185,6 +189,28 @@ ph:
     bagong Katalogo ng Kurikulum at muling dinisenyong pahina ng Ituro upang matulungan
     kang mahanap ang lahat!
   in_partnership_with: Sa pakikipagtulungan sa
+  shop_code_dot_org_heading: Shop Code.org
+  shop_code_dot_org_desc: Support our work and wear the movement with pride. Our hats
+    have been worn by President Obama and celebrities too.
+  spread_the_word_heading: Ipamalita ito
+  spread_the_word_desc: Amplify our impact by sharing Code.org with your network.
+    From social media to email updates, discover how you can help us reach more educators,
+    students, and advocates.
+  follow_us_heading: Follow us on social media
+  follow_us_desc: Stay up to date with us on social media and share our posts with
+    your network to stay informed and help drive awareness.
+  facebook: Facebook
+  twitter: Twitter
+  linked_in: LinkedIn
+  instagram: Instagram
+  tik_tok: TikTok
+  subscribe_to_emails_heading: Subscribe to emails
+  subscribe_to_emails_desc: Read about what's happening at Code.org and in computer
+    science education through quarterly updates via our mailing list.
+  subscribe_to_emails_intl: Subscribe to international updates
+  promote_code_dot_org_heading: Promote Code.org
+  promote_code_dot_org_desc: Promote computer science in your area with the help of
+    stats, quotes, and videos.
   afe_partnership_logo_alt: Logo ng Amazon Future Engineer
   afe_partnership_thanks_desc: Ang Amazon Future Engineer ay komprehensibong programa
     mula pagkabata hanggang sa karera paglaki upang magbigay ng inspirasyon, edukasyon,
@@ -204,6 +230,15 @@ ph:
   curricula_title_high: High School Curricula
   curricula_desc_high: Browse the compelling courses and activities that invite you
     and your high school students to dig deeper into computer science.
+  for_administrators_heading: For administrators
+  for_administrators_desc: Join the thousands of schools who have already incorporated
+    computer science into their curriculum.
+  for_parents_heading: Para sa mga magulang
+  for_parents_desc: You can help encourage your student's school to offer or expand
+    computer science education.
+  for_educators_heading: Para sa mga tagapagturo
+  for_educators_desc: Start teaching today — no computer science experience necessary
+    — with our professional learning workshops.
   students_label: Studyante
   teachers_label: Guro
   teacher_label_csf: Guro sa CS Fundamentals
@@ -213,10 +248,11 @@ ph:
   teacher_label_csa: AP® Computer Science A Teacher
   required_materials: 'Kinakailangang Mga Materyales:'
   optional_materials: 'Opsyonal na Mga Materyales:'
-  call_to_action_explore_roles: Explore open roles
+  call_to_action_hold_an_event: Hold an event
   call_to_action_learn_more: Matuto ng higit pa
   call_to_action_watch_now: Watch now
   call_to_action_try_activity: Try activity
+  call_to_action_try_activities: Try activities
   call_to_action_explore_unit: Explore unit
   call_to_action_explore_curriculum: Explore curriculum
   call_to_action_explore_curriculum_options: Tuklasin ang mga opsyon sa kurikulum
@@ -285,11 +321,20 @@ ph:
   call_to_action_notify_available: Notify me when available
   call_to_action_register_early_access: Register for early access
   call_to_action_open_positions: View open positions
+  call_to_action_explore_roles: Explore open roles
   call_to_action_get_guide: Get the guide
   call_to_action_donate_to_cdo: Donate to Code.org
   call_to_action_start_fundraiser: Start a fundraiser
   call_to_action_view_donation_policy: View donation policy
   call_to_action_view_donate_bitpay: Donate with BitPay
+  call_to_action_make_a_donation: Make a donation
+  call_to_action_other_ways_to_give: Other ways to give
+  call_to_action_become_partner_usa: Become a United States partner
+  call_to_action_become_partner_intl: Become an international partner
+  call_to_action_become_a_volunteer: Become a volunteer
+  call_to_action_start_translating: Start translating
+  call_to_action_learn_about_advocacy: Learn about our advocacy
+  call_to_action_visit_store: Visit the store
   aria_label_call_to_action_afe: Learn more about Amazon Future Engineer
   aria_label_call_to_action_teaching_csf: Start the Teaching Computer Science Fundamentals
     professional learning program
@@ -647,6 +692,7 @@ ph:
   heading_explore_curriculum_catalog: Explore all of our courses in the Curriculum
     Catalog
   heading_csa_ai: Looking for things to do after the AP® exam?
+  heading_bring_cs_to_students: Bring computer science to students
   professional_learning_section_desc: Kumuha ng suportang kailangan mo habang naghahanda
     ka upang magturo. Gustung-gusto ito ng mga guro, na may mahigit na 90% na pagraranggong
     pinakamahusay na propesyonal na pag-unlad kailanman!
@@ -915,14 +961,15 @@ ph:
   ai_pl_101_video_title_4: Ensuring a Responsible Approach to AI
   ai_pl_101_video_desc_4: Explore the ethical considerations and best practices for
     incorporating artificial intelligence in educational environments. This session
-    will provide concrete strategies, resources, and real-world examples, all aimed
-    at understanding the potential biases of AI, and the ethical considerations that
+    provides concrete strategies, resources, and real-world examples, all aimed at
+    understanding the potential biases of AI, and the ethical considerations that
     come with it.
   ai_pl_101_video_title_5: Bringing AI to the Classroom
   ai_pl_101_video_desc_5: This session focuses on teaching about AI, evaluating and
     utilizing AI educational tools, and leveraging AI for student assessment. With
     a rich blend of theory, practical examples, and resources, it aims to empower
     educators to navigate the AI landscape and enhance student learning experiences.
+  ai_pl_101_resources_5: Guide to Ensuring a Responsible Approach to AI
   ai_pl_101_video_desc_6: 'Learn more about the new technology driving the large changes
     in AI, featuring two new videos on Large Language Models (like ChatGPT) and Generative
     AI. Hear how these new technologies work directly from the experts: Mira Murati,
@@ -933,6 +980,8 @@ ph:
     dipping their toes in, as well as advanced tools for those looking to maximize
     their potential.
   ai_pl_101_resources_3: AI Prompts for Transforming Student Learning
+  ai_pl_101_resources_section_title: More ways to learn about AI
+  ai_pl_101_resources_guide: 'Companion guide:'
   how_ai_works_hero_heading: Paano Gumagana ang AI
   how_ai_works_hero_desc: Dive into the world of AI with "How AI Works," our video
     series and accompanying lessons!
@@ -1821,6 +1870,29 @@ ph:
   donate_tabs_bitpay_desc: Embrace the future of giving with cryptocurrency. Through
     BitPay, your digital currency can directly support Code.org's endeavors in expanding
     computer science education.
+  help_page_top_heading: How you can help
+  help_page_top_desc: Support our mission to make computer science accessible for
+    every child, everywhere. Your efforts help us inspire future innovators and bridge
+    the tech education gap.
+  help_page_top_subhead: Make a donation to Code.org
+  help_page_top_desc_02: We're working to give every student the opportunity to learn
+    computer science — both online AND in schools, where we establish permanent courses
+    and train teachers. For every dollar you donate, one child is introduced to computer
+    science.
+  help_page_partners_heading: Become a partner
+  help_page_partners_desc: Code.org works with other nonprofit organizations as partners
+    to help spread computer science in a local, sustainable fashion. Learn more about
+    our program.
+  help_page_volunteer_heading: Volunteer in a classroom
+  help_page_volunteer_desc: Volunteer to teach the Hour of Code or be a guest speaker
+    in a local classroom. Sign up to hear about opportunities near you.
+  help_page_translate_heading: Help us translate
+  help_page_translate_desc: Volunteers have translated our tutorials in over 45 languages.
+    Help us continue to expand our tutorials for students around the world!
+  help_page_speak_for_cs_heading: Speak up for computer science education
+  help_page_speak_for_cs_desc: Learn more about Code.org's advocacy work across the
+    U.S. and the ten policies we recommend states adopt to make computer science foundational
+    for all students. Plus, find out how you can drive change in your state.
   hoc_live: Hour of Code Live
   hoc_live_sign_up_title: Sign up for Hour of Code Live
   hoc_live_learn_title: Learn with Hour of Code Live
@@ -11908,7 +11980,7 @@ ph:
   tutorial_milnefunctions_name: Dash Joins a Dance Circle (with Functions)
   tutorial_sasmap_name: 'Show With Code: Features on a Map'
   tutorial_firstrobotics_name: FIRST Tech Challenge Simulator
-  tutorial_sasdata_name: Building Data Fundamentals
+  tutorial_sasdata_name: SAS DataFly
   tutorial_carnegiesensabot_name: Sensabot Challenge
   tutorial_robotical4_name: Hour of Code Activity 4 - Getting Started with MartyBlocks
   tutorial_kinderadd_name: Adding and Subtracting with KIBO
@@ -14206,6 +14278,11 @@ ph:
   video_library_page_inspirational_video_title_11: Kahit sino pwede matuto (1 min)
   video_library_page_inspirational_video_title_12: Lo Que Falta En Nuestras Escuelas
     (2 min)
+  video_library_page_inspirational_video_title_13: NASA Celebrates Hour of Code (2
+    min)
+  video_library_page_inspirational_video_title_14: It's More Than A Game (1 min)
+  video_library_page_inspirational_video_title_15: Create With Computer Science (1
+    min)
   video_library_page_not_hacked_video_title_1: 'How Not To Get Hacked: Introduction'
   video_library_page_not_hacked_video_title_2: 'How Not To Get Hacked: Passwords'
   video_library_page_not_hacked_video_title_3: 'How Not To Get Hacked: Authentication

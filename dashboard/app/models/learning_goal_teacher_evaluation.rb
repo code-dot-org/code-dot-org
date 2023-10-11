@@ -20,4 +20,16 @@
 #  index_learning_goal_teacher_evaluations_on_user_and_teacher_id  (user_id,teacher_id)
 #
 class LearningGoalTeacherEvaluation < ApplicationRecord
+  belongs_to :learning_goal
+  belongs_to :user
+  belongs_to :teacher, class_name: 'User'
+
+  def summarize_for_participant
+    {
+      id: id,
+      learning_goal_id: learning_goal_id,
+      understanding: understanding,
+      feedback: feedback,
+    }
+  end
 end
