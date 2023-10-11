@@ -36,6 +36,7 @@ module Services
     # @return [String] the JSON representation
     def self.serialize_seeding_json(script)
       script = Unit.with_seed_models.find(script.id)
+      script.reload
 
       # We need to retrieve the Levels anyway, and doing it this way makes it fast to get the Level keys for each ScriptLevel.
       my_script_levels = ScriptLevel.includes(:levels).where(script_id: script.id)
@@ -75,7 +76,7 @@ module Services
 
       rubrics = script.lessons.filter_map(&:rubric).sort_by {|r| r.seeding_key(sort_context).to_json}
       learning_goals = rubrics.map(&:learning_goals).flatten.sort_by(&:key)
-      learning_goal_evidence_levels = learning_goals.map(&:learning_goal_evidence_levels).flatten.sort_by(&:understanding)
+      learning_goal_evidence_levels = learning_goals.map {|lg| lg.learning_goal_evidence_levels.sort_by(&:understanding)}.flatten
 
       seed_context = SeedContext.new(
         script: script,

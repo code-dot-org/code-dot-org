@@ -10,7 +10,7 @@
     },
     "new_name": null,
     "family_name": null,
-    "serialized_at": "2023-09-20 06:08:59 UTC",
+    "serialized_at": "2023-10-06 19:48:25 UTC",
     "published_state": null,
     "instruction_type": null,
     "instructor_audience": null,
@@ -5258,6 +5258,9 @@
       "activity_section_position": 3,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "allthethings HOC Dance AI"
+        ]
       },
       "bonus": false,
       "seeding_key": {
@@ -7725,7 +7728,7 @@
     },
     {
       "seeding_key": {
-        "level.key": "2-3 Maze 1",
+        "level.key": "2-3 Maze 4",
         "script_level.level_keys": [
           "2-3 Maze 1",
           "2-3 Maze 4"
@@ -7738,7 +7741,7 @@
     },
     {
       "seeding_key": {
-        "level.key": "2-3 Maze 4",
+        "level.key": "2-3 Maze 1",
         "script_level.level_keys": [
           "2-3 Maze 1",
           "2-3 Maze 4"
@@ -8733,7 +8736,7 @@
   "learning_goals": [
     {
       "key": "78189d6e-11b2-44a8-83c8-027de9bed803",
-      "position": 1,
+      "position": 2,
       "learning_goal": "Sprites",
       "ai_enabled": true,
       "tips": null,
@@ -8746,7 +8749,7 @@
     },
     {
       "key": "90b62345-5962-455e-9b6d-658886c9928f",
-      "position": 0,
+      "position": 1,
       "learning_goal": "Code Quality",
       "ai_enabled": false,
       "tips": null,
@@ -8759,7 +8762,7 @@
     },
     {
       "key": "a19cc1ca-a845-4dfa-85fc-b6fcebc3da83",
-      "position": 2,
+      "position": 3,
       "learning_goal": "Draw Loop",
       "ai_enabled": true,
       "tips": null,
@@ -8786,11 +8789,11 @@
     },
     {
       "understanding": 0,
-      "teacher_description": "Code is messy or non-existant",
+      "teacher_description": "Nothing drawn on canvas",
       "ai_prompt": null,
       "seeding_key": {
         "understanding": 0,
-        "learning_goal.key": "90b62345-5962-455e-9b6d-658886c9928f",
+        "learning_goal.key": "a19cc1ca-a845-4dfa-85fc-b6fcebc3da83",
         "lesson.key": "lesson-51",
         "lesson_group.key": "",
         "script.name": "allthethings"
@@ -8798,11 +8801,11 @@
     },
     {
       "understanding": 0,
-      "teacher_description": "Nothing drawn on canvas",
+      "teacher_description": "Code is messy or non-existant",
       "ai_prompt": null,
       "seeding_key": {
         "understanding": 0,
-        "learning_goal.key": "a19cc1ca-a845-4dfa-85fc-b6fcebc3da83",
+        "learning_goal.key": "90b62345-5962-455e-9b6d-658886c9928f",
         "lesson.key": "lesson-51",
         "lesson_group.key": "",
         "script.name": "allthethings"
@@ -8822,18 +8825,6 @@
     },
     {
       "understanding": 1,
-      "teacher_description": "Code is readable but disorganized",
-      "ai_prompt": null,
-      "seeding_key": {
-        "understanding": 1,
-        "learning_goal.key": "90b62345-5962-455e-9b6d-658886c9928f",
-        "lesson.key": "lesson-51",
-        "lesson_group.key": "",
-        "script.name": "allthethings"
-      }
-    },
-    {
-      "understanding": 1,
       "teacher_description": "Something drawn on canvas but multiple things not drawn",
       "ai_prompt": null,
       "seeding_key": {
@@ -8845,12 +8836,12 @@
       }
     },
     {
-      "understanding": 2,
-      "teacher_description": "Two or more sprites used but no properties changed",
+      "understanding": 1,
+      "teacher_description": "Code is readable but disorganized",
       "ai_prompt": null,
       "seeding_key": {
-        "understanding": 2,
-        "learning_goal.key": "78189d6e-11b2-44a8-83c8-027de9bed803",
+        "understanding": 1,
+        "learning_goal.key": "90b62345-5962-455e-9b6d-658886c9928f",
         "lesson.key": "lesson-51",
         "lesson_group.key": "",
         "script.name": "allthethings"
@@ -8870,7 +8861,19 @@
     },
     {
       "understanding": 2,
-      "teacher_description": "Most things drawn correctly, with one or two minor misses",
+      "teacher_description": "Two or more sprites used but no properties changed",
+      "ai_prompt": null,
+      "seeding_key": {
+        "understanding": 2,
+        "learning_goal.key": "78189d6e-11b2-44a8-83c8-027de9bed803",
+        "lesson.key": "lesson-51",
+        "lesson_group.key": "",
+        "script.name": "allthethings"
+      }
+    },
+    {
+      "understanding": 2,
+      "teacher_description": "Most things drawn correctly, with one or two minor mistakes",
       "ai_prompt": null,
       "seeding_key": {
         "understanding": 2,
@@ -8894,11 +8897,11 @@
     },
     {
       "understanding": 3,
-      "teacher_description": "Code is readable and well organized, with no quality issues",
+      "teacher_description": "Everything drawn correctly within the draw loop",
       "ai_prompt": null,
       "seeding_key": {
         "understanding": 3,
-        "learning_goal.key": "90b62345-5962-455e-9b6d-658886c9928f",
+        "learning_goal.key": "a19cc1ca-a845-4dfa-85fc-b6fcebc3da83",
         "lesson.key": "lesson-51",
         "lesson_group.key": "",
         "script.name": "allthethings"
@@ -8906,11 +8909,11 @@
     },
     {
       "understanding": 3,
-      "teacher_description": "Everything drawn correctly within the draw loop",
+      "teacher_description": "Code is readable and well organized, with no quality issues",
       "ai_prompt": null,
       "seeding_key": {
         "understanding": 3,
-        "learning_goal.key": "a19cc1ca-a845-4dfa-85fc-b6fcebc3da83",
+        "learning_goal.key": "90b62345-5962-455e-9b6d-658886c9928f",
         "lesson.key": "lesson-51",
         "lesson_group.key": "",
         "script.name": "allthethings"
