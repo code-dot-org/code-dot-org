@@ -6,11 +6,16 @@ import {createAndCenterDefinitionBlock} from './proceduresBlocks';
 import {convertXmlToJson} from '@cdo/apps/blockly/addons/cdoSerializationHelpers';
 import {behaviorDefMutator} from './mutators/behaviorDefMutator';
 import {behaviorGetMutator} from './mutators/behaviorGetMutator';
-import {
-  useModalFunctionEditor,
-  modalFunctionEditorExperimentEnabled,
-} from './helpers';
 import {BLOCK_TYPES} from '@cdo/apps/blockly/constants';
+import experiments from '@cdo/apps/util/experiments';
+
+// In Lab2, the level properties are in Redux, not appOptions. To make this work in Lab2,
+// we would need to send that property from the backend and save it in lab2Redux.
+export const useModalFunctionEditor =
+  window.appOptions?.level?.useModalFunctionEditor;
+export const modalFunctionEditorExperimentEnabled = experiments.isEnabled(
+  experiments.MODAL_FUNCTION_EDITOR
+);
 
 /**
  * A dictionary of our custom procedure block definitions, used across labs.

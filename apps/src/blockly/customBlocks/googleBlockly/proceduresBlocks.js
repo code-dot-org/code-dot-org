@@ -4,12 +4,15 @@ import {nameComparator} from '@cdo/apps/util/sort';
 import BlockSvgFrame from '@cdo/apps/blockly/addons/blockSvgFrame';
 import {procedureDefMutator} from './mutators/procedureDefMutator';
 import {BLOCK_TYPES} from '@cdo/apps/blockly/constants';
-import {
-  useModalFunctionEditor,
-  modalFunctionEditorExperimentEnabled,
-} from './helpers';
+import experiments from '@cdo/apps/util/experiments';
 
 const BLOCK_OFFSET = 16;
+// In Lab2, the level properties are in Redux, not appOptions. To make this work in Lab2,
+// we would need to send that property from the backend and save it in lab2Redux.
+const useModalFunctionEditor = window.appOptions?.level?.useModalFunctionEditor;
+const modalFunctionEditorExperimentEnabled = experiments.isEnabled(
+  experiments.MODAL_FUNCTION_EDITOR
+);
 
 /**
  * A dictionary of our custom procedure block definitions, used across labs.
