@@ -27,6 +27,8 @@ CURRENT_HOC_SIGNUP = "HocSignup#{DCDO.get('hoc_year', 2017)}".freeze
 def main
   geojson = JSON.parse('{ "type": "FeatureCollection", "features": [] }')
 
+  skipped = 0
+
   DB_READONLY[:forms].where(kind: CURRENT_HOC_SIGNUP).paged_each(rows_per_fetch: 10_000) do |form|
     data = JSON.parse(form[:data])
     processed_data = JSON.parse(form[:processed_data]) rescue {}
@@ -47,8 +49,14 @@ def main
         data['organization_name_s']
       end
 
-    next if organization_name.nil? || processed_data['location_p'].nil?
-    next if form[:review] != "approved" && processed_data['location_city_s'].nil?
+    if organization_name.nil? || processed_data['location_p'].nil?
+      skipped += 1
+      next
+    end
+    if form[:review] != "approved" && processed_data['location_city_s'].nil?
+      skipped += 1
+      next
+    end
 
     coordinates = processed_data['location_p'].split(',')
     long = coordinates[1].to_f
@@ -79,10 +87,13 @@ def main
     "tippecanoe -Z 1 -rg --cluster-distance=2 -o #{tiles.path} -l \"hoc\" --force #{file.path}"
   )
   upload_successful = false
+  puts "Num skipped: #{skipped}"
   if tippecanoe_status.success?
+    puts "SUCCESS"
     upload_successful = upload_maptiles(tiles.path, 'hoctiles')
   end
   unless tippecanoe_status.success? && upload_successful
+    puts "FAILURE"
     Honeybadger.notify(
       error_message: "Updating HOC map on Mapbox failed",
       error_class: "HOC Map Update Failure",
