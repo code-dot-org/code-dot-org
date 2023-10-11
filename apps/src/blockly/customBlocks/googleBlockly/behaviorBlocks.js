@@ -9,7 +9,6 @@ import {behaviorGetMutator} from './mutators/behaviorGetMutator';
 import {
   useModalFunctionEditor,
   modalFunctionEditorExperimentEnabled,
-  modalFunctionEditButton,
 } from './helpers';
 import {BLOCK_TYPES} from '@cdo/apps/blockly/constants';
 
@@ -91,7 +90,7 @@ export const blocks = GoogleBlockly.common.createBlockDefinitionsFromJsonArray([
     style: 'behavior_blocks',
     helpUrl: '%{BKY_PROCEDURES_CALLNORETURN_HELPURL}',
     extensions: [
-      'behaviors_edit_button',
+      'procedures_edit_button',
       'procedure_caller_get_def_mixin',
       'procedure_caller_var_mixin',
       'procedure_caller_update_shape_mixin',
@@ -127,16 +126,6 @@ GoogleBlockly.Extensions.registerMutator(
   behaviorDefMutator
 );
 
-GoogleBlockly.Extensions.registerMutator(
-  'behavior_get_mutator',
-  behaviorGetMutator
-);
-
-GoogleBlockly.Extensions.register('behaviors_edit_button', function () {
-  const createEditButton = modalFunctionEditButton.bind(this);
-  createEditButton(editButtonHandler);
-});
-
 // This extension adds an SVG frame around behavior definition blocks.
 // Not used when the modal function editor is enabled.
 GoogleBlockly.Extensions.register('behaviors_block_frame', function () {
@@ -155,28 +144,10 @@ GoogleBlockly.Extensions.register('behaviors_block_frame', function () {
   }
 });
 
-// Respond to the click of a call block's edit button
-// TODO: Can we move this into helpers? It is currently the same as procedureBlocks
-// but may need additional parameters to handle the "this sprite" parameter.
-// Therefore, for now it is duplicated.
-const editButtonHandler = function () {
-  if (modalFunctionEditorExperimentEnabled) {
-    const procedure = this.getSourceBlock().getProcedureModel();
-    if (procedure) {
-      Blockly.functionEditor.showForFunction(procedure);
-    }
-  } else {
-    // If we aren't using the new modal function editor yet, just center the block that
-    // was clicked.
-    const workspace = this.getSourceBlock().workspace;
-    const name = this.getSourceBlock().getFieldValue('NAME');
-    const definition = GoogleBlockly.Procedures.getDefinition(name, workspace);
-    if (definition) {
-      workspace.centerOnBlock(definition.id);
-      definition.select();
-    }
-  }
-};
+GoogleBlockly.Extensions.registerMutator(
+  'behavior_get_mutator',
+  behaviorGetMutator
+);
 
 /**
  * Constructs the blocks required by the flyout for the procedure category.

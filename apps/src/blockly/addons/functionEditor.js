@@ -131,7 +131,8 @@ export default class FunctionEditor {
    * Show the given procedure in the function editor. Either load from
    * the procedure workspace if it already exists, or create a new block.
    * @param {Procedure} procedure The procedure to show.
-   * @param {string} procedureType The type of procedure to show.
+   * @param {string} procedureType The type of procedure to show. Only used if the
+   * procedure does not already exist.
    */
   showForFunction(procedure, procedureType) {
     this.clearEditorWorkspace();

@@ -7,7 +7,6 @@ import {BLOCK_TYPES} from '@cdo/apps/blockly/constants';
 import {
   useModalFunctionEditor,
   modalFunctionEditorExperimentEnabled,
-  modalFunctionEditButton,
 } from './helpers';
 
 const BLOCK_OFFSET = 16;
@@ -121,10 +120,24 @@ export const editButtonHandler = function () {
   }
 };
 
-GoogleBlockly.Extensions.register('procedures_edit_button', function () {
-  const createEditButton = modalFunctionEditButton.bind(this);
-  createEditButton(editButtonHandler);
-});
+// This extension adds an edit button to the end of a procedure call block.
+const editButton = function () {
+  // Edit buttons are used to open the modal editor. The button is appended to the last input.
+  if (
+    useModalFunctionEditor &&
+    this.inputList.length &&
+    !this.workspace.isFlyout
+  ) {
+    const button = new Blockly.FieldButton({
+      value: msg.edit(),
+      onClick: editButtonHandler,
+      colorOverrides: {button: 'blue', text: 'white'},
+    });
+    this.inputList[this.inputList.length - 1].appendField(button, 'EDIT');
+  }
+};
+
+GoogleBlockly.Extensions.register('procedures_edit_button', editButton);
 
 // This extension adds an SVG frame around procedures definition blocks.
 // Not used in Music Lab or wherever the modal function is enabled.

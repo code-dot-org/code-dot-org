@@ -72,9 +72,9 @@ export function stringIsXml(str) {
 
 export const BLOCK_TYPES = {
   behaviorDefinition: 'behavior_definition',
+  danceWhenSetup: 'Dancelab_whenSetup',
   procedureDefinition: 'procedures_defnoreturn',
   whenRun: 'when_run',
-  danceWhenSetup: 'Dancelab_whenSetup',
   behaviorGet: 'gamelab_behavior_get',
   spriteParameterGet: 'sprite_parameter_get',
   procedureCall: 'procedures_callnoreturn',
