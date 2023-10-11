@@ -24,11 +24,11 @@
 
 %details
   %summary= hoc_s(:hoc_faq_host_q)
-  %p!= hoc_s(:hoc_faq_host_a_markdown, markdown: :inline, locals: {learn_url: learn_url, howto_url: resolve_url('/how-to')})
+  %p!= hoc_s(:hoc_faq_host_a_markdown, markdown: :inline, locals: {howto: resolve_url('/how-to'), codeorg_url: codeorg_url('/')})
 
 %details
   %summary= hoc_s(:hoc_faq_devices_q)
-  %p!= hoc_s(:hoc_faq_devices_a_markdown, markdown: :inline, locals: {it_url: codeorg_url('/educate/it'), learn_url: learn_url, unplugged_url: resolve_url('/learn?platform=no-computers')})
+  %p!= hoc_s(:hoc_faq_devices_a_markdown, markdown: :inline, locals: {codeorg_url: codeorg_url('/'), partner_url: 'code.org', unplugged_url: codeorg_url('/curriculum/unplugged')})
 
 %details
   %summary= hoc_s(:hoc_faq_need_computers_q)
@@ -50,15 +50,15 @@
 
 %details
   %summary= hoc_s(:hoc_faq_account_q)
-  %p!= hoc_s(:hoc_faq_account_a_markdown, markdown: :inline, locals: {beyond_url: resolve_url('/beyond'), section_instructions_url: "https://support.code.org/hc/en-us/articles/115000488132-Creating-a-classroom-section"})
+  %p!= hoc_s(:hoc_faq_account_a_markdown, markdown: :inline, locals: {codeorg_url: codeorg_url('/'), section_instructions_url: "https://support.code.org/hc/en-us/articles/115000488132-Creating-a-classroom-section"})
 
 %details
   %summary= hoc_s(:hoc_faq_certificates_q)
-  %p!= hoc_s(:hoc_faq_certificates_a_markdown, markdown: :inline, locals: {certificates_url: codeorg_url('/certificates')})
+  %p!= hoc_s(:hoc_faq_certificates_a_markdown, markdown: :inline, locals: {codeorg_url: codeorg_url('/')})
 
 %details
   %summary= hoc_s(:hoc_faq_high_school_q)
-  %p!= hoc_s(:hoc_faq_high_school_a_markdown, markdown: :inline, locals: {learn_url: learn_url})
+  %p!= hoc_s(:hoc_faq_high_school_a_markdown, markdown: :inline, locals: {codeorg_url: codeorg_url('/'), partner_url: 'code.org'})
 
 %details
   %summary= hoc_s(:hoc_faq_count_hoc_q)
