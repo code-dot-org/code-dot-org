@@ -205,7 +205,7 @@ id:
           description_short: Pelajari memprogram Droid, dan Buat permainan Star Wars Anda sendiri di sebuah di galaksi yang sangat jauh.
           student_description: Pelajari memprogram Droid, dan Buat permainan Star Wars Anda sendiri di sebuah di galaksi yang sangat jauh.
         mc:
-          title: Minecraft Hour of Code
+          title: Petualang Minecraft
           description: Gunakan blok dari Code untuk mendapatkan Steve atau Alex pada petualangan dengan dunia Minecraft ini.
           description_short: Jelajahi dunia Minecraft melalui kode
           student_description: Gunakan blok dari Code untuk mendapatkan Steve atau Alex pada petualangan dengan dunia Minecraft ini.
@@ -5472,3 +5472,7 @@ id:
           lessons:
             lesson-1:
               name: Kode Etik AI Kami
+        virtual-pl-csa-summer-2024-day1:
+          title: Hari 1
+        virtual-pl-csa-summer-day2:
+          title: Hari 2

@@ -10263,8 +10263,11 @@
             null
           ]
         },
+        "382c1a61-60c6-481f-962a-ececae1298de": {
+          "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Vídeo:** Assista ao vídeo IA: O que é Machine Learning? nos slides\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Vocabulário:** Exiba o seguinte vocabulário\n\n-   **Machine Learning:** Como os computadores reconhecem padrões e tomam decisões sem serem programados explicitamente"
+        },
         "42738b6d-fc16-4de9-b190-d6253f5e2c67": {
-          "progression_name": "Reconhecendo peixes"
+          "progression_name": "Reconhecendo Peixes"
         },
         "aa866b7f-747f-49e4-9578-f937dbef61e4": {
           "tips": [
@@ -10272,7 +10275,7 @@
           ]
         },
         "0cd5acdb-155e-4161-aba7-610f3869ec29": {
-          "progression_name": "Reconhecendo as características dos peixes"
+          "progression_name": "Reconhecendo as Características dos Peixes"
         },
         "8c5b9e26-3b22-4a68-a10d-2e8f3d24a9b0": {
           "tips": [
@@ -10280,7 +10283,7 @@
           ]
         },
         "1ce2130f-e735-4060-811f-b8c87e6f74b0": {
-          "progression_name": "Reconhecendo expressões"
+          "progression_name": "Reconhecendo Expressões"
         },
         "01e90cb3-4a6f-46ed-9a4e-4e7524589e47": {
           "tips": [
@@ -21023,8 +21026,11 @@
             null
           ]
         },
+        "b0efe0ca-2ddf-47cd-b5e4-c24fe1f96471": {
+          "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Vídeo:** Assista ao vídeo IA: O que é Machine Learning? nos slides\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Vocabulário:** Exiba o seguinte vocabulário\n\n-   **Machine Learning:** Como os computadores reconhecem padrões e tomam decisões sem serem programados explicitamente"
+        },
         "9ff3e329-8841-4909-813d-c4b83b4fa2d5": {
-          "progression_name": "Reconhecendo peixes"
+          "progression_name": "Reconhecendo Peixes"
         },
         "861ba0ea-3d12-44d8-8114-da49c3d65081": {
           "tips": [
@@ -21032,7 +21038,7 @@
           ]
         },
         "5471d717-ebc3-4f44-91b5-61c6cebe964d": {
-          "progression_name": "Reconhecendo as características dos peixes"
+          "progression_name": "Reconhecendo as Características dos Peixes"
         },
         "0fc5594e-5acc-46b7-b061-532e27fce958": {
           "tips": [
@@ -21040,7 +21046,7 @@
           ]
         },
         "514d167e-9739-4856-9308-39bce3beb983": {
-          "progression_name": "Reconhecendo expressões"
+          "progression_name": "Reconhecendo Expressões"
         },
         "a6f7adf9-fc91-4fb7-88c5-e87b81a0842e": {
           "tips": [
@@ -24537,6 +24543,9 @@
         "bcf8a087-827a-435a-9ea1-1b5708a800c2": {
           "name": "Promova o entusiasmo!"
         },
+        "883e5553-79b4-416f-9c8d-4e835e5c2503": {
+          "description": "#### Vocabulário\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Exibição:** Mostre o slide “Vocabulário” \n\n-   **Machine Learning** - Como os computadores reconhecem padrões e tomam decisões sem serem programados explicitamente."
+        },
         "9630adaa-f7c1-4efa-8f7e-5d3ceb155b0b": {
           "name": "IA para oceanos",
           "tips": [
@@ -24578,6 +24587,9 @@
           "tips": [
             null
           ]
+        },
+        "45b761d5-5401-47c9-b4b4-82d27e1e4255": {
+          "description": "Esta lição tem várias palavras novas e importantes:\n\n-   **Endereço IP** - Um número atribuído a qualquer item conectado à Internet \n\n-   **DNS (Serviço de Nomes de Domínio)** - O serviço que traduz URLs em Endereços IP \n\n-   **URL (Universal Resource Locator)** - Um endereço fácil de lembrar para chamar uma página da web (como www.code.org)\n\n-   **Internet** - Um grupo de computadores e servidores que estão conectados entre si\n\n-   **Servidores** - Computadores que existem apenas para fornecer coisas a outras pessoas\n\n-   **Cabo de Fibra Óptica** - Uma conexão que usa luz para transmitir informações \n\n-   **Wi-Fi** - Um método sem fio de enviar informações usando ondas de rádio\n\n-   **DSL/Cabo** - Um método de enviar informações usando cabos telefônicos ou de televisão\n\n-   **Pacotes** - Pequenos blocos de informações que foram cuidadosamente formados a partir de blocos maiores de informações"
         },
         "1b0d023d-bf54-4703-af7e-5d9fd45d755d": {
           "tips": [
@@ -25946,7 +25958,25 @@
             null
           ]
         },
+        "8beb2941-dd64-44f4-9e99-6149c445067a": {
+          "tips": [
+            null
+          ]
+        },
         "500131a4-a22b-4a63-bc0a-d5d4a19c7169": {
+          "tips": [
+            null
+          ]
+        },
+        "a867ec36-73ea-4ba9-b3ab-98c7e45f6619": {
+          "description": "<i class=\"fa fa-lightbulb-o\" aria-hidden=\"true\"></i> **Objetivo da Discussão:** As respostas podem incluir exemplos de filmes e televisão, como robôs como WALL-E ou R2D2. Eles também podem incluir exemplos pessoais, como a Siri em um telefone ou filtros do TikTok que podem detectar características faciais. Tente apresentar exemplos que podem não ser imediatamente aparentes, mas que ainda governam as formas como interagimos com o mundo, como algoritmos de recomendação em mídias sociais, reconhecimento facial ou momentos em que um computador toma uma decisão."
+        },
+        "a45155ff-19af-43ac-bf11-6ca4001816f4": {
+          "tips": [
+            null
+          ]
+        },
+        "a7d5069b-aa1c-4efa-a8d8-b58bd43a6c7b": {
           "tips": [
             null
           ]
@@ -25961,7 +25991,17 @@
             null
           ]
         },
-        "b2b4b9e6-fe3f-4d2d-a828-1402cc1572e8": {
+        "4ff33db6-6668-4423-8f1d-ad0b25f6da40": {
+          "tips": [
+            null
+          ]
+        },
+        "169c3eed-52d7-4a4b-b7c6-161cf287ed33": {
+          "tips": [
+            null
+          ]
+        },
+        "f1632666-ffc1-457a-832a-c2d3b2d1fc20": {
           "tips": [
             null
           ]
@@ -25976,7 +26016,22 @@
             null
           ]
         },
+        "b2777295-b74f-4240-bb3d-c76b79dde6a9": {
+          "tips": [
+            null
+          ]
+        },
         "9bcab929-d773-4dab-bfb0-d09892056944": {
+          "tips": [
+            null
+          ]
+        },
+        "bedaca2d-4f48-45b4-b6e9-431f6a38cc13": {
+          "tips": [
+            null
+          ]
+        },
+        "221b5029-fcfd-4791-b951-852609cb0198": {
           "tips": [
             null
           ]
@@ -33041,13 +33096,16 @@
             "Os vídeos são usados em todo o currículo para estimular discussões, complementar conceitos-chave com explicações e exemplos adicionais e expor os alunos às várias funções e experiências de indivíduos em ciência da computação.\n\nAo interagir com o vídeo, ative as legendas ocultas para que os alunos também possam ler enquanto assistem.\n\nPara incentivar o engajamento ativo e a reflexão, use uma ou mais das estratégias discutidas no \\*\\* [Guia de vídeos do currículo](https://docs.google.com/document/d/1c2hF3CaTJacvwDy4y_9-m1jSkSPmK__F6pDPetXVvy4/view)\\*\\*."
           ]
         },
+        "5eb7862c-6c7f-4adc-9962-75cffce63f79": {
+          "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Vocabulário:** Exiba o seguinte vocabulário\n\n-   **Machine Learning:** Como os computadores reconhecem padrões e tomam decisões sem serem programados explicitamente"
+        },
         "dc13d057-ef08-4f18-af39-32a4d669b0f6": {
           "tips": [
             null
           ]
         },
         "3bce0225-ae36-43d5-bb4f-b07f8cf488b9": {
-          "progression_name": "Reconhecendo peixes"
+          "progression_name": "Reconhecendo Peixes"
         },
         "b9550869-c938-4e46-aa10-d95a64a1fa8f": {
           "tips": [
@@ -33055,7 +33113,7 @@
           ]
         },
         "eb8e9aa4-a4de-4f36-8261-e00843ac6b71": {
-          "progression_name": "Reconhecendo as características dos peixes"
+          "progression_name": "Reconhecendo as Características dos Peixes"
         },
         "bdf9afd7-823c-407e-8e9f-eea74384188a": {
           "tips": [
@@ -33063,7 +33121,7 @@
           ]
         },
         "27899869-a1cb-4149-8f28-9c3ccd3cd804": {
-          "progression_name": "Reconhecendo expressões"
+          "progression_name": "Reconhecendo Expressões"
         },
         "ef83e957-038a-4d2c-8a3f-09b8e0e9db6b": {
           "tips": [
@@ -36630,6 +36688,9 @@
         "ad861756-6e6a-417d-919e-445bfcd55307": {
           "name": "Promova o entusiasmo!"
         },
+        "ba51dfa8-9abb-49bb-b6ea-f37499273bf1": {
+          "description": "#### Vocabulário\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Exibição:** Mostre o slide “Vocabulário” \n\n-   **Machine Learning** - Como os computadores reconhecem padrões e tomam decisões sem serem programados explicitamente."
+        },
         "528582d6-1f56-409d-ae46-e9d061d182f4": {
           "name": "IA para oceanos",
           "tips": [
@@ -36671,6 +36732,9 @@
           "tips": [
             null
           ]
+        },
+        "57e34c75-7b48-4470-9ad4-cf3a062ff95d": {
+          "description": "Esta lição tem várias palavras novas e importantes:\n\n-   **Endereço IP** - Um número atribuído a qualquer item conectado à Internet \n\n-   **DNS (Serviço de Nomes de Domínio)** - O serviço que traduz URLs em Endereços IP \n\n-   **URL (Universal Resource Locator)** - Um endereço fácil de lembrar para chamar uma página da web (como www.code.org)\n\n-   **Internet** - Um grupo de computadores e servidores que estão conectados entre si\n\n-   **Servidores** - Computadores que existem apenas para fornecer coisas a outras pessoas\n\n-   **Cabo de Fibra Óptica** - Uma conexão que usa luz para transmitir informações \n\n-   **Wi-Fi** - Um método sem fio de enviar informações usando ondas de rádio\n\n-   **DSL/Cabo** - Um método de enviar informações usando cabos telefônicos ou de televisão\n\n-   **Pacotes** - Pequenos blocos de informações que foram cuidadosamente formados a partir de blocos maiores de informações"
         },
         "9fe5f2c4-c9ca-4aeb-abba-e9b3fd1f18e9": {
           "tips": [
@@ -38054,7 +38118,7 @@
           ]
         },
         "0548094b-ad2c-41df-aa25-e4d93f4a97e6": {
-          "description": "<i class=\"fa fa-pencil\" aria-hidden=\"true\"></i> \\*\\*Vocabulário: \\*\\* Exiba o seguinte vocabulário\n\n-   \\*\\*Aprendizado de máquina: \\*\\* Como os computadores reconhecem padrões e tomam decisões sem serem programados explicitamente"
+          "description": "<i class=\"fa fa-pencil\" aria-hidden=\"true\"></i> **Vocabulário:** Exiba o seguinte vocabulário\n\n-   **Machine Learning:** Como os computadores reconhecem padrões e tomam decisões sem serem programados explicitamente"
         },
         "12d0f69c-7866-4c96-8184-c4594b4c43ae": {
           "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> \\*\\*Exibição: \\*\\* Mostre o slide com o processo de solução de problemas. Leia as linhas adicionais que representam como o processo se conecta ao Machine Learning."
@@ -38070,7 +38134,7 @@
         },
         "a581f885-a92d-41de-9374-13c535486b65": {
           "description": "<i class=\"fa fa-desktop\" aria-hidden=\"true\"></i> \\*\\*Code Studio: \\*\\* Em frente à sala de aula, navegue até o Nível 1 no Code Studio - Recognizing Fish.",
-          "progression_name": "Reconhecendo peixes"
+          "progression_name": "Reconhecendo Peixes"
         },
         "2b5a9d68-715b-4dbb-824a-be1ecb4e4f14": {
           "description": "<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> \\*\\*Faça isso: \\*\\* Como classe, passe por este nível que o orienta no processo de treinamento do A.I. Bot para reconhecer peixes. Ao fazer isso, preencha a primeira parte do guia de atividades em classe. Considere as seguintes estratégias em diferentes estágios do nível:",
@@ -38086,7 +38150,7 @@
         },
         "2fc00a32-32af-4ecf-85cf-73b7b2122249": {
           "description": "<i class=\"fa fa-desktop\" aria-hidden=\"true\"></i> \\*\\*Code Studio: \\*\\* Peça aos alunos que naveguem até o Code Studio Nível 2 - Reconhecendo as características dos peixes. Esse nível permite que os alunos treinem o A.I. Bot para reconhecer um peixe por sua cor ou tipo de corpo. ",
-          "progression_name": "Reconhecendo as características dos peixes"
+          "progression_name": "Reconhecendo as Características dos Peixes"
         },
         "1f9affc2-abd2-4fe6-b52e-8b76569169ad": {
           "description": "<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> \\*\\*Faça isso: \\*\\* Peça aos alunos que escolham uma palavra que queiram treinar o A.I. Bot para reconhecer e registrem essas informações no Guia de Atividades. Os alunos devem progredir no nível por conta própria, registrando as informações em seu guia de atividades.\n\n<i class=\"fa fa-refresh\" aria-hidden=\"true\"></i> \\*\\*Circule: \\*\\* Verifique se os alunos estão preenchendo o guia de atividades à medida que concluem as etapas. Depois de entrar em contato brevemente com cada aluno, conclua essa etapa você mesmo em frente à sala e faça uma pausa na última tela.",
@@ -38102,7 +38166,7 @@
         },
         "0f6e6799-38e4-4aa4-bd78-2952fb060a8c": {
           "description": "<i class=\"fa fa-desktop\" aria-hidden=\"true\"></i> \\*\\*Code Studio: \\*\\* Peça aos alunos que naveguem até o Code Studio Nível 3 - Reconhecendo expressões de peixes. Esse nível permite que os alunos treinem o A.I. Bot para reconhecer um peixe por sua expressão, como “tolo”, “sério” ou “zangado”.",
-          "progression_name": "Reconhecendo expressões"
+          "progression_name": "Reconhecendo Expressões"
         },
         "1c5c052b-a7af-4a05-9806-90b1df4a5a4f": {
           "description": "<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> \\*\\*Faça isso: \\*\\* Peça aos alunos que escolham uma expressão que queiram treinar o A.I. Bot para reconhecer e registrem essas informações no Guia de Atividades. Os alunos devem progredir no nível por conta própria, registrando as informações em seu guia de atividades. Na tela final, peça aos alunos que pressionem o ícone de informações e registrem os recursos que o A.I. Bot aprendeu serem os mais importantes.\n\n<i class=\"fa fa-refresh\" aria-hidden=\"true\"></i> \\*\\*Circule: \\*\\* Verifique se os alunos estão preenchendo o guia de atividades à medida que concluem as etapas. Pergunte aos alunos quais características eles estão analisando para determinar se um peixe atende aos critérios. Os alunos provavelmente dirão que usam principalmente os olhos e a boca para ajudar a determinar a expressão, mas quando clicam no ícone Informações na tela final, o A.I. Bot pode estar usando recursos adicionais, como cor e corpo, para tomar sua decisão. Peça aos alunos que pensem em como se sentem em relação a isso e comparem isso com sua experiência pessoal — por exemplo, se alguém achasse que estava “boba” ou “irritada” principalmente com base em suas roupas.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> \\*\\*Exibição: \\*\\* Mostre o slide do A.I. Bot aprendendo a identificar peixes como “irritados”. Peça aos alunos que discutam a pergunta na tela: \\_Olhando para esta tela, por que você acha que a cor apareceu como a segunda característica mais importante? \\_\n\n<i class=\"fa fa-lightbulb-o\" aria-hidden=\"true\"></i> \\*\\*Objetivo da discussão: \\*\\* Os alunos devem observar que, embora os olhos e a boca tendam a parecer “irritados” em todos os peixes, também parece haver muitos peixes roxos na tela. Como resultado, A.I. Bot pode começar a pensar que a cor “roxa” é outra forma de saber se um peixe está com raiva ou não."
@@ -38120,7 +38184,7 @@
           "description": "Mesmo com um pequeno exemplo como esse, vemos que o aprendizado de máquina pode ter problemas e aprender algo falso sobre um determinado tipo de peixe. Ter mais dados e garantir que eles representem todos os tipos de peixes pode ajudar a resolver esse problema. Esses tipos de exemplos também acontecem na vida real e podem ter consequências graves, como se você recebe ou não assistência médica ou recebe uma oferta de emprego. À medida que aprendemos a usar o aprendizado de máquina para resolver problemas, precisamos sempre pensar em: Qual é o impacto e quem está sendo incluído ou excluído?"
         },
         "9ba16cf2-8e9c-4d77-b668-6aa7ed4a5347": {
-          "description": "<i class=\"fa fa-video-camera\" aria-hidden=\"true\"></i> \\*\\*Vídeo: \\*\\* Mostre aos alunos o vídeo nos slides\n[r how_ai_works_-_training_data_and_bias/how-ai-works/2023]"
+          "description": "<i class=\"fa fa-video-camera\" aria-hidden=\"true\"></i> **Vídeo:** Mostre aos alunos o vídeo nos slides\n[r how_ai_works_-_training_data_and_bias/how-ai-works/2023]"
         },
         "e781b2a2-1f5f-4cf5-97de-6e064a67e7c2": {
           "name": "Diário",
@@ -38183,10 +38247,10 @@
           "description": "<i class=\"fa fa-pencil\" aria-hidden=\"true\"></i> \\*\\*Vocabulário: \\*\\* Mostre o slide com o vocabulário da lição de hoje"
         },
         "6b3d0a2a-474a-4205-bb58-ca2f818a023e": {
-          "description": "-   **Algoritmo** - uma série de etapas para resolver um problema ou tomar uma decisão\n-   **Rede** - Uma coleção de itens conectados entre si. Seguir essas conexões pode representar as etapas em um algoritmo, como um fluxograma."
+          "description": "-   **Algoritmo** - Uma série de etapas para resolver um problema ou tomar uma decisão\n-   **Rede** - Uma coleção de itens conectados entre si. Seguir essas conexões pode representar as etapas em um algoritmo, como um fluxograma."
         },
         "d2f9b793-92df-4ef6-9200-00a07d1c6e9f": {
-          "description": "Hoje vamos criar nosso próprio **algoritmo** de reconhecimento de imagem**. Um algoritmo é uma série de etapas para resolver um problema ou tomar uma decisão. Vamos criar um algoritmo que usa uma \\*\\*rede** para tomar uma decisão, assim como no vídeo"
+          "description": "Hoje vamos criar nosso próprio **algoritmo** de reconhecimento de imagem. Um algoritmo é uma série de etapas para resolver um problema ou tomar uma decisão. Vamos criar um algoritmo que usa uma **rede** para tomar uma decisão, assim como no vídeo"
         },
         "9b2135d2-d3ba-4513-9932-da5d72abf04e": {
           "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> \\*\\*Exibição: \\*\\* Mostre o slide com um placar de um jogo de beisebol"
@@ -38201,7 +38265,7 @@
           "description": "À medida que os alunos estão esboçando suas respostas, comece a distribuir o guia de atividades."
         },
         "9e2464a2-5662-4766-b1c2-2b986f03ba33": {
-          "description": "<i class=\"fa fa-file-text-o\" aria-hidden=\"true\"></i> \\*\\*Distribua: \\*\\* Distribua o guia de\natividades [r computer_vision_network/how-ai-works/2023]",
+          "description": "<i class=\"fa fa-file-text-o\" aria-hidden=\"true\"></i> **Distribua:** Distribua o guia de\natividades [r computer_vision_network/how-ai-works/2023]",
           "tips": [
             "\\*\\*Going Big: \\*\\* Considere imprimir cópias dos manipuladores de 7 segmentos e fazer com que os alunos trabalhem em quadros brancos, papel de pôster, rolos de papel de açougueiro ou até mesmo colocar itens individuais e conectá-los com barbante ou fio."
           ]
@@ -38265,7 +38329,7 @@
           ]
         },
         "f3bdd69c-6238-4198-8757-a8b099f873d1": {
-          "description": "\\*\\* Extensão (opcional): \\*\\* Considere assistir ao[0] vídeo [what\\ _a\\ _neural\\ _network\\ _sees] na página [Experiments with Google].[1] O pequeno vídeo dá um exemplo ao vivo de como a classificação de imagens funciona como uma rede neural, onde você pode ver as entradas e as camadas ocultas. "
+          "description": "\\*\\* Extensão (opcional):\\*\\* Considere assistir ao vídeo [r what_a_neural_network_sees/how-ai-works/2023] na página [Experiments with Google](https://experiments.withgoogle.com/what-neural-nets-see). O pequeno vídeo dá um exemplo ao vivo de como a classificação de imagens funciona como uma rede neural, onde você pode ver as entradas e as camadas ocultas. "
         },
         "b8fc8bcd-f477-431a-9586-9c2ad827f9da": {
           "description": "Adoraríamos aprender mais sobre as pessoas que ensinam essas aulas e a experiência em sala de aula. Informe-nos nesta [Pesquisa de professores sobre como a IA funciona](https://docs.google.com/forms/d/e/1FAIpQLSd5Usml_xrjQQ8DdBmZjQc771LcB13FKukCYc3NGLKfVwIneg/viewform)."
@@ -38722,7 +38786,7 @@
           ]
         },
         "37fb1603-43e5-4354-a5a8-853867267291": {
-          "description": "<i class=\"fa fa-comments\" aria-hidden=\"true\"></i> \\*\\*Discuta: \\*\\* Como o algoritmo de recorte do Twitter foi treinado? De acordo com o vídeo, onde está uma fonte potencial de preconceito ao treinar algoritmos de corte semelhantes?\n\n<i class=\"fa fa-lightbulb-o\" aria-hidden=\"true\"></i> \\*\\*Objetivo da discussão: \\*\\* A coisa mais importante para os alunos saírem dessa discussão é o fato de que a máquina não é “racista”, mas é tendenciosa para faces mais claras por causa dos conjuntos de dados usados para treiná-la. Use essa discussão para garantir que os alunos entendam como o modelo usou os conjuntos de dados de saliência discutidos no vídeo e como alguns desses conjuntos de dados foram treinados em bibliotecas de fotos contendo imagens que não representam a população como um todo."
+          "description": "<i class=\"fa fa-comments\" aria-hidden=\"true\"></i> **Discuta:** Como o algoritmo de recorte do Twitter foi treinado? De acordo com o vídeo, onde está uma fonte em potencial de viés ao treinar algoritmos de corte semelhantes?\n\n<i class=\"fa fa-lightbulb-o\" aria-hidden=\"true\"></i> **Objetivo da Discussão:** A coisa mais importante para os alunos tirarem dessa discussão é o fato de que a máquina não é “racista”, mas é tendenciosa para faces mais claras por causa dos conjuntos de dados usados para treiná-la. Use essa discussão para garantir que os alunos entendam como o modelo usou os conjuntos de dados de saliência discutidos no vídeo e como alguns desses conjuntos de dados foram treinados em bibliotecas de fotos contendo imagens que não representam a população como um todo."
         },
         "b2cf690a-2a3e-4980-85b7-2ce709725725": {
           "description": "<i class=\"fa fa-comments\" aria-hidden=\"true\"></i> \\*\\*Aviso: \\*\\* Se você fosse o CEO do Twitter e encontrasse evidências desse viés em seu algoritmo de recorte, como você reagiria? Quais medidas você tomaria?\n\nVocê pode optar por pedir aos alunos que compartilhem suas respostas se houver tempo, caso contrário, passe a ler o artigo."
@@ -38737,7 +38801,7 @@
           ]
         },
         "075092df-edb2-44a8-ae7e-37674d875fcc": {
-          "description": "<i class=\"fa fa-comments\" aria-hidden=\"true\"></i> \\*\\*Discuta: \\*\\* Peça aos alunos que discutam suas reações às citações de Rumman Chowdry, diretor de engenharia de software da equipe de ética, transparência e responsabilidade em aprendizado de máquina do Twitter. \n\n-   Você acha que a resposta do Twitter foi apropriada?\n-   Quais são os riscos e possíveis danos de sistemas, como plataformas de mídia social como o Twitter, se tornarem muito dependentes do aprendizado de máquina?"
+          "description": "<i class=\"fa fa-comments\" aria-hidden=\"true\"></i> **Discuta:** Peça aos alunos que discutam suas reações às citações de Rumman Chowdry, diretor de engenharia de software da equipe de ética, transparência e responsabilidade em machine learning do Twitter. \n\n-   Você acha que a resposta do Twitter foi apropriada?\n-   Quais são os riscos e possíveis danos de sistemas, como plataformas de mídia social como o Twitter, de se tornarem muito dependentes do machine learning?"
         },
         "47a7416a-0a6c-4dbf-b1f7-e2d1f6b724b4": {
           "description": "A história do Twitter e seu algoritmo de recorte de fotos mostra como algo criado com uma intenção, neste caso para destacar melhor as fotos, pode levar a efeitos não intencionais, neste caso, preconceito de rostos brancos sobre rostos negros, o que também pode ter impactos prejudiciais na sociedade ou na cultura. E esse caso fornece um exemplo de uma empresa de software que tomou medidas práticas para lidar com o viés algorítmico ao estabelecer essa equipe (equipe de ética, transparência e responsabilidade de aprendizado de máquina) liderada por Rumman Chowdry.",
@@ -38830,7 +38894,7 @@
           "description": "<i class=\"fa fa-comments\" aria-hidden=\"true\"></i> \\*\\*Aviso: \\*\\* Qual é um exemplo de IA em sua vida pessoal ou que você já viu em um filme ou livro?"
         },
         "a77cab4b-13d3-47d9-ac09-4afe2c6a58ab": {
-          "description": "<i class=\"fa fa-video-camera\" aria-hidden=\"true\"></i> \\*\\*Vídeo: \\*\\* Assista ao vídeo [how\\ _ai\\ _works\\ _training\\ _data\\ _and\\ _bias] em classe.[0] Os alunos devem ouvir os termos do vocabulário que correspondam em seu anotador."
+          "description": "<i class=\"fa fa-video-camera\" aria-hidden=\"true\"></i> **Vídeo:** Assista ao vídeo [how\\ _ai\\ _works\\ _training\\ _data\\ _and\\ _bias] em turma.[0] Os alunos devem ouvir os termos de vocabulário e correspondê-los aos termos em suas anotações."
         },
         "95e90c7d-c0d6-4b84-9de7-2cc6fa179ab9": {
           "description": "<i class=\"fa fa-comments\" aria-hidden=\"true\"></i> \\*\\*Aviso: \\*\\* Como aprender sobre o preconceito humano no aprendizado de máquina muda sua opinião sobre a IA?"

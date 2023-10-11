@@ -5,38 +5,42 @@ kn:
   language: ಆಂಗ್ಲ
   front_title: ಇತಿಹಾಸದಲ್ಲಿ ಅತಿದೊಡ್ಡ ಕಲಿಕೆಯ ಕಾರ್ಯಕ್ರಮಕ್ಕೆ ಸೇರಿ, %{campaign_date}
   coming_soon: ಶೀಘ್ರದಲ್ಲೇ ಬರಲಿದೆ
-  campaign_date_start_short: ಡಿ. 5
-  campaign_date_start_long: ಡಿಸೆಂಬರ್ 5
-  campaign_date_short: ಡಿ. 5-11
-  campaign_date_full: ಡಿಸೆಂಬರ್ 5-11
-  campaign_date_year: '2022'
-  campaign_date_full_year: 'ಡಿಸೆಂಬರ್ 5-11, 2022
+  campaign_date_start_short: ಡಿ. 4
+  campaign_date_start_long: ಡಿಸೆಂಬರ್ 4
+  campaign_date_short: ಡಿ. 4-10
+  campaign_date_full: ಡಿಸೆಂಬರ್ 4-10
+  campaign_date_year: '2023'
+  campaign_date_full_year: 'ಡಿಸೆಂಬರ್ 4-10, 2023
 
     '
   nonus_campaign_date_start_short: ಅಕ್ಟೋಬರ್ 1
   nonus_campaign_date_start_long: ಅಕ್ಟೋಬರ್ 1
   nonus_campaign_date_short: ಅಕ್ಟೋಬರ್ 1 - ಡಿಸೆಂಬರ್ 18
   nonus_campaign_date_full: ಅಕ್ಟೋಬರ್ 1 - ಡಿಸೆಂಬರ್ 18
-  nonus_campaign_date_year: '2022'
+  nonus_campaign_date_year: '2023'
   nonus_campaign_date_full_year: ಅಕ್ಟೋಬರ್ 1, 2022 - ಡಿಸೆಂಬರ್ 18, 2022
   latam_campaign_date_start_short: ಅಕ್ಟೋಬರ್ 1
   latam_campaign_date_start_long: ಅಕ್ಟೋಬರ್ 1
   latam_campaign_date_short: ಅಕ್ಟೋಬರ್ 1 - ಡಿಸೆಂಬರ್ 18
   latam_campaign_date_full: ಅಕ್ಟೋಬರ್ 1 - ಡಿಸೆಂಬರ್ 18
-  latam_campaign_date_year: '2022'
+  latam_campaign_date_year: '2023'
   latam_campaign_date_full_year: ಅಕ್ಟೋಬರ್ 1, 2022 - ಡಿಸೆಂಬರ್ 18, 2022
   europe_campaign_date_start_short: ಅಕ್ಟೋಬರ್ 1
   europe_campaign_date_start_long: ಅಕ್ಟೋಬರ್ 1
   europe_campaign_date_short: ಅಕ್ಟೋಬರ್ 1 - ಡಿಸೆಂಬರ್ 18
   europe_campaign_date_full: ಅಕ್ಟೋಬರ್ 1 - ಡಿಸೆಂಬರ್ 18
-  europe_campaign_date_year: '2022'
+  europe_campaign_date_year: '2023'
   europe_campaign_date_full_year: ಅಕ್ಟೋಬರ್ 1, 2022 - ಡಿಸೆಂಬರ್ 18, 2022
   africa_campaign_date_start_short: ಅಕ್ಟೋಬರ್ 1
   africa_campaign_date_start_long: ಅಕ್ಟೋಬರ್ 1
   africa_campaign_date_short: ಅಕ್ಟೋಬರ್ 1 - ಡಿಸೆಂಬರ್ 18
   africa_campaign_date_full: ಅಕ್ಟೋಬರ್ 1 - ಡಿಸೆಂಬರ್ 18
-  africa_campaign_date_year: '2022'
+  africa_campaign_date_year: '2023'
   africa_campaign_date_full_year: ಅಕ್ಟೋಬರ್ 1, 2022 - ಡಿಸೆಂಬರ್ 18, 2022
+  hoc2023_header: AI ಯೊಂದಿಗೆ ಸೃಜನಶೀಲತೆ
+  hoc2023_social_creativity_with_ai_title: ಅವರ್ ಆಫ್ ಕೋಡ್ - ನೀವು ಏನು ರಚಿಸುತ್ತೀರಿ?
+  hoc2023_social_creativity_with_ai_desc: AI ಬಗ್ಗೆ ಅನ್ವೇಷಿಸಲು ಮತ್ತು ಕಲಿಯಲು ಕಂಪ್ಯೂಟರ್
+    ವಿಜ್ಞಾನವನ್ನು ಬಳಸಿ!
   hoc2022_header: ಅನ್ವೇಷಿಸಿ, ಪ್ಲೇ ಮಾಡಿ, ರಚಿಸಿ!
   social_hoc2022_explore_play_create: ಅನ್ವೇಷಿಸಲು, ಪ್ಲೇ ಮಾಡಲು ಮತ್ತು ರಚಿಸಲು ಕಂಪ್ಯೂಟರ್
     ಸೈನ್ಸ್‌ ಬಳಸಿ!
@@ -180,6 +184,28 @@ kn:
     ಹೊಸ ಪಠ್ಯಕ್ರಮ ಕ್ಯಾಟಲಾಗ್ ಮತ್ತು ಮರುವಿನ್ಯಾಸಗೊಳಿಸಲಾದ ಟೀಚ್ ಪುಟವನ್ನು ನಿಮಗೆ ಹುಡುಕಲು ಸಹಾಯ
     ಮಾಡುತ್ತದೆ!
   in_partnership_with: ಸಹಭಾಗಿತ್ವದಲ್ಲಿ
+  shop_code_dot_org_heading: ಕೋಡ್. ಆರ್ಗ್ ಅನ್ನು ಶಾಪಿಂಗ್ ಮಾಡಿ
+  shop_code_dot_org_desc: ನಮ್ಮ ಕೆಲಸವನ್ನು ಬೆಂಬಲಿಸಿ ಮತ್ತು ಚಲನೆಯನ್ನು ಹೆಮ್ಮೆಯಿಂದ ಧರಿಸಿ.
+    ನಮ್ಮ ಟೋಪಿಗಳನ್ನು ಅಧ್ಯಕ್ಷ ಒಬಾಮಾ ಮತ್ತು ಸೆಲೆಬ್ರಿಟಿಗಳು ಧರಿಸಿದ್ದಾರೆ.
+  spread_the_word_heading: ಪದವನ್ನು ಹರಡಿ
+  spread_the_word_desc: ನಿಮ್ಮ ನೆಟ್ವರ್ಕ್ನೊಂದಿಗೆ Code.org ಅನ್ನು ಹಂಚಿಕೊಳ್ಳುವ ಮೂಲಕ ನಮ್ಮ
+    ಪ್ರಭಾವವನ್ನು ವರ್ಧಿಸಿ. ಸಾಮಾಜಿಕ ಮಾಧ್ಯಮದಿಂದ ಇಮೇಲ್ ನವೀಕರಣಗಳವರೆಗೆ, ಹೆಚ್ಚಿನ ಶಿಕ್ಷಣತಜ್ಞರು,
+    ವಿದ್ಯಾರ್ಥಿಗಳು ಮತ್ತು ವಕೀಲರನ್ನು ತಲುಪಲು ನೀವು ನಮಗೆ ಹೇಗೆ ಸಹಾಯ ಮಾಡಬಹುದು ಎಂಬುದನ್ನು ಕಂಡುಕೊಳ್ಳಿ.
+  follow_us_heading: ಸಾಮಾಜಿಕ ಮಾಧ್ಯಮದಲ್ಲಿ ನಮ್ಮನ್ನು ಅನುಸರಿಸಿ
+  follow_us_desc: ಸಾಮಾಜಿಕ ಮಾಧ್ಯಮದಲ್ಲಿ ನಮ್ಮೊಂದಿಗೆ ನವೀಕೃತವಾಗಿರಿ ಮತ್ತು ಮಾಹಿತಿ ನೀಡಲು ಮತ್ತು
+    ಜಾಗೃತಿಯನ್ನು ಹೆಚ್ಚಿಸಲು ನಮ್ಮ ಪೋಸ್ಟ್ಗಳನ್ನು ನಿಮ್ಮ ನೆಟ್ವರ್ಕ್ನೊಂದಿಗೆ ಹಂಚಿಕೊಳ್ಳಿ.
+  facebook: ಫೇಸ್ಬುಕ್
+  twitter: ಟ್ವಿಟರ್
+  linked_in: ಲಿಂಕ್ಡ್‌ಇನ್
+  instagram: Instagram
+  tik_tok: ಟಿಕ್ಟಾಕ್
+  subscribe_to_emails_heading: ಇಮೇಲ್ಗಳಿಗೆ ಚಂದಾದಾರರಾಗಿ
+  subscribe_to_emails_desc: ನಮ್ಮ ಮೇಲಿಂಗ್ ಪಟ್ಟಿಯ ಮೂಲಕ ತ್ರೈಮಾಸಿಕ ನವೀಕರಣಗಳ ಮೂಲಕ Code.org
+    ಮತ್ತು ಕಂಪ್ಯೂಟರ್ ವಿಜ್ಞಾನ ಶಿಕ್ಷಣದಲ್ಲಿ ಏನಾಗುತ್ತಿದೆ ಎಂಬುದರ ಕುರಿತು ಓದಿ.
+  subscribe_to_emails_intl: ಅಂತರರಾಷ್ಟ್ರೀಯ ನವೀಕರಣಗಳಿಗೆ ಚಂದಾದಾರರಾಗಿ
+  promote_code_dot_org_heading: ಕೋಡ್. ಆರ್ಗ್ ಅನ್ನು ಪ್ರಚಾರ ಮಾಡಿ
+  promote_code_dot_org_desc: ಅಂಕಿಅಂಶಗಳು, ಉಲ್ಲೇಖಗಳು ಮತ್ತು ವೀಡಿಯೊಗಳ ಸಹಾಯದಿಂದ ನಿಮ್ಮ ಪ್ರದೇಶದಲ್ಲಿ
+    ಕಂಪ್ಯೂಟರ್ ವಿಜ್ಞಾನವನ್ನು ಉತ್ತೇಜಿಸಿ.
   afe_partnership_logo_alt: ಅಮೆಜಾನ್ ಫ್ಯೂಚರ್ ಎಂಜಿನಿಯರ್ ಲೋಗೊ
   afe_partnership_thanks_desc: ಅಮೆಜಾನ್ ಫ್ಯೂಚರ್ ಎಂಜಿನಿಯರ್ ಕಂಪ್ಯೂಟರ್ ವಿಜ್ಞಾನದಲ್ಲಿ ವೃತ್ತಿಜೀವನವನ್ನು
     ಮುಂದುವರಿಸಲು ಕಡಿಮೆ-ಆದಾಯ ಮತ್ತು ಇತರ ಅನನುಕೂಲಕರ ಮಕ್ಕಳು ಮತ್ತು ಯುವಜನರನ್ನು ಪ್ರೇರೇಪಿಸಲು,
@@ -200,6 +226,15 @@ kn:
   curricula_desc_high: ಕಂಪ್ಯೂಟರ್ ವಿಜ್ಞಾನದಲ್ಲಿ ಆಳವಾಗಿ ಅಗೆಯಲು ನಿಮ್ಮನ್ನು ಮತ್ತು ನಿಮ್ಮ
     ಪ್ರೌ school ಶಾಲಾ ವಿದ್ಯಾರ್ಥಿಗಳನ್ನು ಆಹ್ವಾನಿಸುವ ಬಲವಾದ ಕೋರ್ಸ್ಗಳು ಮತ್ತು ಚಟುವಟಿಕೆಗಳನ್ನು
     ಬ್ರೌಸ್ ಮಾಡಿ.
+  for_administrators_heading: ನಿರ್ವಾಹಕರಿಗೆ
+  for_administrators_desc: ಈಗಾಗಲೇ ಕಂಪ್ಯೂಟರ್ ವಿಜ್ಞಾನವನ್ನು ತಮ್ಮ ಪಠ್ಯಕ್ರಮದಲ್ಲಿ ಅಳವಡಿಸಿದ
+    ಸಾವಿರಾರು ಶಾಲೆಗಳಿಗೆ ಸೇರಿ.
+  for_parents_heading: ಪೋಷಕರಿಗೆ
+  for_parents_desc: ಕಂಪ್ಯೂಟರ್ ವಿಜ್ಞಾನ ಶಿಕ್ಷಣವನ್ನು ನೀಡಲು ಅಥವಾ ವಿಸ್ತರಿಸಲು ನಿಮ್ಮ ವಿದ್ಯಾರ್ಥಿಯ
+    ಶಾಲೆಯನ್ನು ಪ್ರೋತ್ಸಾಹಿಸಲು ನೀವು ಸಹಾಯ ಮಾಡಬಹುದು.
+  for_educators_heading: ಶಿಕ್ಷಣತಜ್ಞರಿಗೆ
+  for_educators_desc: ಇಂದು ಕಲಿಸಲು ಪ್ರಾರಂಭಿಸಿ - ನಮ್ಮ ವೃತ್ತಿಪರ ಕಲಿಕಾ ಕಾರ್ಯಾಗಾರಗಳೊಂದಿಗೆ
+    ಕಂಪ್ಯೂಟರ್ ಸೈನ್ಸ್ ಅನುಭವದ ಅಗತ್ಯವಿಲ್ಲ.
   students_label: ವಿದ್ಯಾರ್ಥಿಗಳು
   teachers_label: ಶಿಕ್ಷಕರು
   teacher_label_csf: ಸಿಎಸ್ ಫಂಡಮೆಂಟಲ್ಸ್ ಟೀಚರ್
@@ -209,10 +244,11 @@ kn:
   teacher_label_csa: AP® Computer Science A Teacher
   required_materials: 'ಅಗತ್ಯವಿರುವ ಸಾಮಗ್ರಿಗಳು:'
   optional_materials: 'ಐಚ್ಛಿಕ ಸಾಮಗ್ರಿಗಳು:'
-  call_to_action_explore_roles: ಮುಕ್ತ ಪಾತ್ರಗಳನ್ನು ಅನ್ವೇಷಿಸಿ
+  call_to_action_hold_an_event: ಈವೆಂಟ್ ಅನ್ನು ಹಿಡಿದುಕೊಳ್ಳಿ
   call_to_action_learn_more: ಇನ್ನಷ್ಟು ತಿಳಿಯಿರಿ
   call_to_action_watch_now: ಈಗ ವೀಕ್ಷಿಸಿ
   call_to_action_try_activity: ಚಟುವಟಿಕೆಯನ್ನು ಪ್ರಯತ್ನಿಸಿ
+  call_to_action_try_activities: ಚಟುವಟಿಕೆಗಳನ್ನು ಪ್ರಯತ್ನಿಸಿ
   call_to_action_explore_unit: ಘಟಕವನ್ನು ಅನ್ವೇಷಿಸಿ
   call_to_action_explore_curriculum: ಪಠ್ಯಕ್ರಮವನ್ನು ಅನ್ವೇಷಿಸಿ
   call_to_action_explore_curriculum_options: ಪಠ್ಯಕ್ರಮದ ಆಯ್ಕೆಗಳನ್ನು ಅನ್ವೇಷಿಸಿ
@@ -281,11 +317,20 @@ kn:
   call_to_action_notify_available: ಲಭ್ಯವಿದ್ದಾಗ ನನಗೆ ಸೂಚಿಸಿ
   call_to_action_register_early_access: ಆರಂಭಿಕ ಪ್ರವೇಶಕ್ಕಾಗಿ ನೋಂದಾಯಿಸಿ
   call_to_action_open_positions: ತೆರೆದ ಸ್ಥಾನಗಳನ್ನು ವೀಕ್ಷಿಸಿ
+  call_to_action_explore_roles: ಮುಕ್ತ ಪಾತ್ರಗಳನ್ನು ಅನ್ವೇಷಿಸಿ
   call_to_action_get_guide: ಮಾರ್ಗದರ್ಶಿ ಪಡೆಯಿರಿ
   call_to_action_donate_to_cdo: Code.org ಗೆ ದಾನ ಮಾಡಿ
   call_to_action_start_fundraiser: ನಿಧಿಸಂಗ್ರಹವನ್ನು ಪ್ರಾರಂಭಿಸಿ
   call_to_action_view_donation_policy: ದೇಣಿಗೆ ನೀತಿಯನ್ನು ವೀಕ್ಷಿಸಿ
   call_to_action_view_donate_bitpay: ಬಿಟ್ಪೇ ಜೊತೆ ದಾನ ಮಾಡಿ
+  call_to_action_make_a_donation: ದೇಣಿಗೆ ನೀಡಿ
+  call_to_action_other_ways_to_give: ನೀಡಲು ಇತರ ಮಾರ್ಗಗಳು
+  call_to_action_become_partner_usa: ಯುನೈಟೆಡ್ ಸ್ಟೇಟ್ಸ್ ಪಾಲುದಾರರಾಗಿ
+  call_to_action_become_partner_intl: ಅಂತರರಾಷ್ಟ್ರೀಯ ಪಾಲುದಾರರಾಗಿ
+  call_to_action_become_a_volunteer: ಸ್ವಯಂಸೇವಕರಾಗಿ
+  call_to_action_start_translating: ಭಾಷಾಂತರಿಸಲು ಪ್ರಾರಂಭಿಸಿ
+  call_to_action_learn_about_advocacy: ನಮ್ಮ ವಕಾಲತ್ತು ಬಗ್ಗೆ ತಿಳಿಯಿರಿ
+  call_to_action_visit_store: ಅಂಗಡಿಗೆ ಭೇಟಿ ನೀಡಿ
   aria_label_call_to_action_afe: ಅಮೆಜಾನ್ ಫ್ಯೂಚರ್ ಎಂಜಿನಿಯರ್ ಬಗ್ಗೆ ಇನ್ನಷ್ಟು ತಿಳಿಯಿರಿ
   aria_label_call_to_action_teaching_csf: ಬೋಧನಾ ಕಂಪ್ಯೂಟರ್ ಸೈನ್ಸ್ ಫಂಡಮೆಂಟಲ್ಸ್ ವೃತ್ತಿಪರ
     ಕಲಿಕಾ ಕಾರ್ಯಕ್ರಮವನ್ನು ಪ್ರಾರಂಭಿಸಿ
@@ -635,6 +680,7 @@ kn:
   heading_explore_curriculum_catalog: ಪಠ್ಯಕ್ರಮ ಕ್ಯಾಟಲಾಗ್ನಲ್ಲಿ ನಮ್ಮ ಎಲ್ಲಾ ಕೋರ್ಸ್ಗಳನ್ನು
     ಅನ್ವೇಷಿಸಿ
   heading_csa_ai: ಎಪಿ® ಪರೀಕ್ಷೆಯಲ್ಲಿ ನಂತರ ಮಾಡಲು ವಿಷಯಗಳನ್ನು ಹುಡುಕುತ್ತಿರುವಿರಾ?
+  heading_bring_cs_to_students: ವಿದ್ಯಾರ್ಥಿಗಳಿಗೆ ಕಂಪ್ಯೂಟರ್ ವಿಜ್ಞಾನವನ್ನು ತನ್ನಿ
   professional_learning_section_desc: ನೀವು ಕಲಿಸಲು ತಯಾರಿ ನಡೆಸುವಾಗ ನಿಮಗೆ ಅಗತ್ಯವಿರುವ
     ಬೆಂಬಲವನ್ನು ಪಡೆಯಿರಿ. ಶಿಕ್ಷಕರು ಇದನ್ನು ಪ್ರೀತಿಸುತ್ತಾರೆ, 90% ಕ್ಕಿಂತ ಹೆಚ್ಚು ಶ್ರೇಯಾಂಕದೊಂದಿಗೆ
     ಇದು ಅತ್ಯುತ್ತಮ ವೃತ್ತಿಪರ ಅಭಿವೃದ್ಧಿಯಾಗಿದೆ!
@@ -904,6 +950,7 @@ kn:
     ಮೇಲೆ ಕೇಂದ್ರೀಕರಿಸುತ್ತದೆ. ಸಿದ್ಧಾಂತ, ಪ್ರಾಯೋಗಿಕ ಉದಾಹರಣೆಗಳು ಮತ್ತು ಸಂಪನ್ಮೂಲಗಳ ಸಮೃದ್ಧ
     ಮಿಶ್ರಣದೊಂದಿಗೆ, ಇದು AI ಭೂದೃಶ್ಯವನ್ನು ನ್ಯಾವಿಗೇಟ್ ಮಾಡಲು ಮತ್ತು ವಿದ್ಯಾರ್ಥಿಗಳ ಕಲಿಕೆಯ
     ಅನುಭವಗಳನ್ನು ಹೆಚ್ಚಿಸಲು ಶಿಕ್ಷಣತಜ್ಞರಿಗೆ ಅಧಿಕಾರ ನೀಡುವ ಗುರಿಯನ್ನು ಹೊಂದಿದೆ.
+  ai_pl_101_resources_5: AI ಗೆ ಜವಾಬ್ದಾರಿಯುತ ವಿಧಾನವನ್ನು ಖಚಿತಪಡಿಸಿಕೊಳ್ಳಲು ಮಾರ್ಗದರ್ಶಿ
   ai_pl_101_video_desc_6: 'AI ನಲ್ಲಿನ ದೊಡ್ಡ ಬದಲಾವಣೆಗಳನ್ನು ಚಾಲನೆ ಮಾಡುವ ಹೊಸ ತಂತ್ರಜ್ಞಾನದ
     ಬಗ್ಗೆ ಇನ್ನಷ್ಟು ತಿಳಿಯಿರಿ, ದೊಡ್ಡ ಭಾಷಾ ಮಾದರಿಗಳು (ಚಾಟ್ಜಿಪಿಟಿಯಂತೆ) ಮತ್ತು ಉತ್ಪಾದಕ AI
     ನಲ್ಲಿ ಎರಡು ಹೊಸ ವೀಡಿಯೊಗಳನ್ನು ಒಳಗೊಂಡಿದೆ. ಈ ಹೊಸ ತಂತ್ರಜ್ಞಾನಗಳು ತಜ್ಞರಿಂದ ನೇರವಾಗಿ ಹೇಗೆ
@@ -914,6 +961,8 @@ kn:
     ಉತ್ತಮ ಔಟ್ಪುಟ್ ಪಡೆಯುವ ಸಾಧನಗಳು. ತಮ್ಮ ಕಾಲ್ಬೆರಳುಗಳನ್ನು ಮುಳುಗಿಸುವವರಿಗೆ ಸ್ಟಾರ್ಟರ್ ಪ್ರಾಂಪ್ಟ್ಗಳನ್ನು
     ಒಳಗೊಂಡಿದೆ, ಜೊತೆಗೆ ಅವರ ಸಾಮರ್ಥ್ಯವನ್ನು ಹೆಚ್ಚಿಸಲು ಬಯಸುವವರಿಗೆ ಸುಧಾರಿತ ಸಾಧನಗಳನ್ನು ಒಳಗೊಂಡಿದೆ.
   ai_pl_101_resources_3: ವಿದ್ಯಾರ್ಥಿ ಕಲಿಕೆಯನ್ನು ಪರಿವರ್ತಿಸಲು AI ಅಪೇಕ್ಷಿಸುತ್ತದೆ
+  ai_pl_101_resources_section_title: AI ಬಗ್ಗೆ ತಿಳಿಯಲು ಹೆಚ್ಚಿನ ಮಾರ್ಗಗಳು
+  ai_pl_101_resources_guide: 'ಕಂಪ್ಯಾನಿಯನ್ ಗೈಡ್:'
   how_ai_works_hero_heading: AI ಹೇಗೆ ಕಾರ್ಯನಿರ್ವಹಿಸುತ್ತದೆ
   how_ai_works_hero_desc: "“ಹೌ ಎಐ ವರ್ಕ್ಸ್,” ನಮ್ಮ ವೀಡಿಯೊ ಸರಣಿ ಮತ್ತು ಅದರ ಜೊತೆಗಿನ ಪಾಠಗಳೊಂದಿಗೆ
     AI ಜಗತ್ತಿನಲ್ಲಿ ಧುಮುಕುವುದಿಲ್ಲ!"
@@ -1779,6 +1828,31 @@ kn:
   donate_tabs_bitpay_desc: ಕ್ರಿಪ್ಟೋಕರೆನ್ಸಿಯೊಂದಿಗೆ ನೀಡುವ ಭವಿಷ್ಯವನ್ನು ಸ್ವೀಕರಿಸಿ. BitPay
     ಮೂಲಕ, ನಿಮ್ಮ ಡಿಜಿಟಲ್ ಕರೆನ್ಸಿ ನೇರವಾಗಿ ಕಂಪ್ಯೂಟರ್ ವಿಜ್ಞಾನ ಶಿಕ್ಷಣವನ್ನು ವಿಸ್ತರಿಸುವಲ್ಲಿ
     Code.org ನ ಪ್ರಯತ್ನಗಳನ್ನು ಬೆಂಬಲಿಸುತ್ತದೆ.
+  help_page_top_heading: ನೀವು ಹೇಗೆ ಸಹಾಯ ಮಾಡಬಹುದು
+  help_page_top_desc: ಕಂಪ್ಯೂಟರ್ ವಿಜ್ಞಾನವನ್ನು ಪ್ರತಿ ಮಗುವಿಗೆ, ಎಲ್ಲೆಡೆ ಪ್ರವೇಶಿಸುವಂತೆ
+    ಮಾಡುವ ನಮ್ಮ ಧ್ಯೇಯವನ್ನು ಬೆಂಬಲಿಸಿ. ನಿಮ್ಮ ಪ್ರಯತ್ನಗಳು ಭವಿಷ್ಯದ ನಾವೀನ್ಯಕಾರರನ್ನು ಪ್ರೇರೇಪಿಸಲು
+    ಮತ್ತು ಟೆಕ್ ಶಿಕ್ಷಣದ ಅಂತರವನ್ನು ಕಡಿಮೆ ಮಾಡಲು ನಮಗೆ ಸಹಾಯ ಮಾಡುತ್ತದೆ.
+  help_page_top_subhead: Code.org ಗೆ ದೇಣಿಗೆ ನೀಡಿ
+  help_page_top_desc_02: ನಾವು ಪ್ರತಿ ವಿದ್ಯಾರ್ಥಿಗೆ ಕಂಪ್ಯೂಟರ್ ವಿಜ್ಞಾನವನ್ನು ಕಲಿಯಲು ಅವಕಾಶವನ್ನು
+    ನೀಡಲು ಕೆಲಸ ಮಾಡುತ್ತಿದ್ದೇವೆ - ಆನ್ಲೈನ್ ಮತ್ತು ಶಾಲೆಗಳಲ್ಲಿ, ಅಲ್ಲಿ ನಾವು ಶಾಶ್ವತ ಕೋರ್ಸ್ಗಳನ್ನು
+    ಸ್ಥಾಪಿಸುತ್ತೇವೆ ಮತ್ತು ಶಿಕ್ಷಕರಿಗೆ ತರಬೇತಿ ನೀಡುತ್ತೇವೆ. ನೀವು ದಾನ ಮಾಡುವ ಪ್ರತಿ ಡಾಲರ್ಗೆ,
+    ಒಂದು ಮಗುವನ್ನು ಕಂಪ್ಯೂಟರ್ ವಿಜ್ಞಾನಕ್ಕೆ ಪರಿಚಯಿಸಲಾಗುತ್ತದೆ.
+  help_page_partners_heading: ಪಾಲುದಾರರಾಗಿ
+  help_page_partners_desc: ಸ್ಥಳೀಯ, ಸುಸ್ಥಿರ ಶೈಲಿಯಲ್ಲಿ ಕಂಪ್ಯೂಟರ್ ವಿಜ್ಞಾನವನ್ನು ಹರಡಲು
+    ಸಹಾಯ ಮಾಡಲು Code.org ಇತರ ಲಾಭೋದ್ದೇಶವಿಲ್ಲದ ಸಂಸ್ಥೆಗಳೊಂದಿಗೆ ಪಾಲುದಾರರಾಗಿ ಕಾರ್ಯನಿರ್ವಹಿಸುತ್ತದೆ.
+    ನಮ್ಮ ಕಾರ್ಯಕ್ರಮದ ಬಗ್ಗೆ ಇನ್ನಷ್ಟು ತಿಳಿಯಿರಿ.
+  help_page_volunteer_heading: ತರಗತಿಯಲ್ಲಿ ಸ್ವಯಂಸೇವಕ
+  help_page_volunteer_desc: ಅವರ್ ಆಫ್ ಕೋಡ್ ಅನ್ನು ಕಲಿಸಲು ಸ್ವಯಂಸೇವಕ ಅಥವಾ ಸ್ಥಳೀಯ ತರಗತಿಯಲ್ಲಿ
+    ಅತಿಥಿ ಭಾಷಣಕಾರರಾಗಿ. ನಿಮ್ಮ ಬಳಿ ಇರುವ ಅವಕಾಶಗಳ ಬಗ್ಗೆ ಕೇಳಲು ಸೈನ್ ಅಪ್ ಮಾಡಿ.
+  help_page_translate_heading: ಭಾಷಾಂತರಿಸಲು ನಮಗೆ ಸಹಾಯ ಮಾಡಿ
+  help_page_translate_desc: ಸ್ವಯಂಸೇವಕರು ನಮ್ಮ ಟ್ಯುಟೋರಿಯಲ್ಗಳನ್ನು 45 ಕ್ಕೂ ಹೆಚ್ಚು ಭಾಷೆಗಳಲ್ಲಿ
+    ಅನುವಾದಿಸಿದ್ದಾರೆ. ಪ್ರಪಂಚದಾದ್ಯಂತದ ವಿದ್ಯಾರ್ಥಿಗಳಿಗೆ ನಮ್ಮ ಟ್ಯುಟೋರಿಯಲ್ ಅನ್ನು ವಿಸ್ತರಿಸುವುದನ್ನು
+    ಮುಂದುವರಿಸಲು ನಮಗೆ ಸಹಾಯ ಮಾಡಿ!
+  help_page_speak_for_cs_heading: ಕಂಪ್ಯೂಟರ್ ವಿಜ್ಞಾನ ಶಿಕ್ಷಣಕ್ಕಾಗಿ ಮಾತನಾಡಿ
+  help_page_speak_for_cs_desc: ಯುಎಸ್ನಾದ್ಯಂತ Code.org ನ ವಕಾಲತ್ತು ಕೆಲಸ ಮತ್ತು ಎಲ್ಲಾ ವಿದ್ಯಾರ್ಥಿಗಳಿಗೆ
+    ಕಂಪ್ಯೂಟರ್ ವಿಜ್ಞಾನವನ್ನು ಅಡಿಪಾಯವಾಗಿಸಲು ರಾಜ್ಯಗಳು ಅಳವಡಿಸಿಕೊಳ್ಳಲು ನಾವು ಶಿಫಾರಸು ಮಾಡುವ
+    ಹತ್ತು ನೀತಿಗಳ ಬಗ್ಗೆ ಇನ್ನಷ್ಟು ತಿಳಿಯಿರಿ. ಜೊತೆಗೆ, ನಿಮ್ಮ ರಾಜ್ಯದಲ್ಲಿ ನೀವು ಬದಲಾವಣೆಯನ್ನು
+    ಹೇಗೆ ಚಾಲನೆ ಮಾಡಬಹುದು ಎಂಬುದನ್ನು ಕಂಡುಕೊಳ್ಳಿ.
   hoc_live: ಅವರ್ ಆಫ್ ಕೋಡ್ ಲೈವ್
   hoc_live_sign_up_title: ಅವರ್ ಕೋಡ್ ಲೈವ್ಗಾಗಿ ಸೈನ್ ಅಪ್ ಮಾಡಿ
   hoc_live_learn_title: ಅವರ್ ಆಫ್ ಕೋಡ್ ಲೈವ್ನೊಂದಿಗೆ ಕಲಿಯಿರಿ
@@ -14108,6 +14182,11 @@ kn:
   video_library_page_inspirational_video_title_11: ಯಾರಾದರೂ ಕಲಿಯಬಹುದು (1 ನಿಮಿಷ)
   video_library_page_inspirational_video_title_12: ಲೋ ಕ್ವೆ ಫಾಲ್ಟಾ ಎನ್ ನ್ಯೂಸ್ಟ್ರಸ್
     ಎಸ್ಕುಯೆಲಾಸ್ (2 ನಿಮಿಷ)
+  video_library_page_inspirational_video_title_13: ನಾಸಾ ಅವರ್ ಆಫ್ ಕೋಡ್ ಅನ್ನು ಆಚರಿಸುತ್ತದೆ
+    (2 ನಿಮಿಷ)
+  video_library_page_inspirational_video_title_14: ಇದು ಆಟಕ್ಕಿಂತ ಹೆಚ್ಚು (1 ನಿಮಿಷ)
+  video_library_page_inspirational_video_title_15: ಕಂಪ್ಯೂಟರ್ ವಿಜ್ಞಾನದೊಂದಿಗೆ ರಚಿಸಿ
+    (1 ನಿಮಿಷ)
   video_library_page_not_hacked_video_title_1: 'ಹ್ಯಾಕ್ ಮಾಡುವುದು ಹೇಗೆ: ಪರಿಚಯ'
   video_library_page_not_hacked_video_title_2: 'ಹ್ಯಾಕ್ ಮಾಡುವುದು ಹೇಗೆ: ಪಾಸ್ವರ್ಡ್ಗಳು'
   video_library_page_not_hacked_video_title_3: 'ಹ್ಯಾಕ್ ಮಾಡುವುದು ಹೇಗೆ: ದೃ hentic ೀಕರಣ

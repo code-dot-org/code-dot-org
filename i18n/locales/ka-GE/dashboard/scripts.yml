@@ -472,7 +472,7 @@ ka:
           description_short: ისწავლეთ დროიდების დაპროგრამება და შექმენით საკუთარი ვარსკვლავური ომების თამაში.
           student_description: ისწავლეთ დროიდების დაპროგრამება და შექმენით საკუთარი ვარსკვლავური ომების თამაში.
         mc:
-          title: Minecraft-ის კოდის ერთი საათი
+          title: Minecraft თავგადასავალი
           description: გამოიყენეთ ბლოკები და დაეხმარეთ სტივსა ან ალექსს Minecraft-ის თავგადასავლებში.
           description_short: შეისწავლეთ Minecraft-ის სამყარო კოდით
           student_description: გამოიყენეთ ბლოკები და დაეხმარეთ სტივსა ან ალექსს Minecraft-ის თავგადასავლებში.
@@ -4051,6 +4051,8 @@ ka:
               display_name: შიგთავსი
             lessonGroup-2:
               display_name: შიგთავსი
+        dance-unplugged:
+          title: ცეკვის პარტია unplugged
         spelling-bee:
           title: შეჯიბრი დამარცვლაში
         csa5-exemplars:
