@@ -19,8 +19,6 @@
   --neutral_dark: #292F36;
   --orange: #ffa400; /* legacy color */
   /* Typography */
-  --barlowSemiCondensed-semibold: 'Barlow Semi Condensed Semibold', sans-serif;
-  --barlowSemiCondensed-medium: 'Barlow Semi Condensed Medium', sans-serif;
   --main-font: 'Metropolis', sans-serif;
   --thin-font-weight: 100;
   --extra-light-font-weight: 200;
@@ -39,7 +37,7 @@ html {
 
 
 body {
-  background-color: #fff;
+  background-color: var(--neutral_white);
   height: 100%;
   font-family: var(--main-font);
   font-size: 14px;
