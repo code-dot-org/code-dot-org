@@ -22,13 +22,14 @@
   width: 760px;
 }
 
+.hiddenRubricContainer {
+  display: none;
+}
+
 .settings {
-  display: flex;
   width: 724px;
   min-height: 298px;
   padding: 16px 16px 32px 16px;
-  flex-direction: column;
-  align-items: flex-start;
   gap: 16px;
 
   border-radius: 0 0 4px 4px;
@@ -41,6 +42,16 @@
   h2 {
     margin-bottom: 0;
   }
+}
+
+.settingsVisible {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+}
+
+.settingsHidden {
+  display: none;
 }
 
 .aiAssessmentOptions {
@@ -70,11 +81,18 @@
   overflow-x: hidden;
   overflow-y: auto;
 
-  display: flex;
   padding: 16px;
+}
+
+.visibleRubricContent {
+  display: flex;
   flex-direction: column;
   align-items: flex-start;
   gap: 24px;
+}
+
+.hiddenRubricContent {
+  display: none;
 }
 
 .rubricContainerFooter {
@@ -164,6 +182,7 @@
 
 .rubricHeaderLeftSide {
   display: flex;
+  gap: 4px;
   //height: 40px;
   align-items: center;
 }
@@ -214,7 +233,7 @@ button.rubricHeaderTab {
 }
 
 .unselectedTab {
-  background: $neutral_dark;
+  background: $neutral_dark70;
   h6 {
     color: $neutral_white;
     margin-bottom: 0;
@@ -356,7 +375,8 @@ h2.studentName {
     line-height: 154%;
   }
 
-  p, h6 {
+  p,
+  h6 {
     margin-bottom: 0;
   }
 }

@@ -24,6 +24,7 @@ describe('RubricContainer', () => {
         initialTeacherHasEnabledAi={true}
         currentLevelName={'test_level'}
         reportingData={{}}
+        open
       />
     );
     expect(wrapper.find('RubricContent')).to.have.lengthOf(1);
@@ -37,15 +38,16 @@ describe('RubricContainer', () => {
         initialTeacherHasEnabledAi={true}
         currentLevelName={'test_level'}
         reportingData={{}}
+        open
       />
     );
-    expect(wrapper.find('RubricContent')).to.have.lengthOf(1);
-    expect(wrapper.find('RubricSettings')).to.have.lengthOf(0);
+    expect(wrapper.find('RubricContent').props().visible).to.be.true;
+    expect(wrapper.find('RubricSettings').props().visible).to.be.false;
     wrapper.find('HeaderTab').at(1).simulate('click');
-    expect(wrapper.find('RubricContent')).to.have.lengthOf(0);
-    expect(wrapper.find('RubricSettings')).to.have.lengthOf(1);
+    expect(wrapper.find('RubricContent').props().visible).to.be.false;
+    expect(wrapper.find('RubricSettings').props().visible).to.be.true;
     wrapper.find('HeaderTab').at(0).simulate('click');
-    expect(wrapper.find('RubricContent')).to.have.lengthOf(1);
-    expect(wrapper.find('RubricSettings')).to.have.lengthOf(0);
+    expect(wrapper.find('RubricContent').props().visible).to.be.true;
+    expect(wrapper.find('RubricSettings').props().visible).to.be.false;
   });
 });

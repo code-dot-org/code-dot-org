@@ -24,6 +24,7 @@ export default function RubricContainer({
   initialTeacherHasEnabledAi,
   currentLevelName,
   reportingData,
+  open = true,
   closeRubric,
 }) {
   const onLevelForEvaluation = currentLevelName === rubric.level.name;
@@ -35,7 +36,11 @@ export default function RubricContainer({
   );
 
   return (
-    <div className={style.rubricContainer}>
+    <div
+      className={classnames(style.rubricContainer, {
+        [style.hiddenRubriContainer]: !open,
+      })}
+    >
       <div className={style.rubricHeader}>
         <div className={style.rubricHeaderLeftSide}>
           <HeaderTab
@@ -59,22 +64,21 @@ export default function RubricContainer({
           </button>
         </div>
       </div>
-      {selectedTab === TAB_NAMES.RUBRIC && (
-        <RubricContent
-          rubric={rubric}
-          studentLevelInfo={studentLevelInfo}
-          teacherHasEnabledAi={teacherHasEnabledAi}
-          canProvideFeedback={canProvideFeedback}
-          reportingData={reportingData}
-        />
-      )}
-      {selectedTab === TAB_NAMES.SETTINGS && (
-        <RubricSettings
-          canProvideFeedback={canProvideFeedback}
-          teacherHasEnabledAi={teacherHasEnabledAi}
-          updateTeacherAiSetting={setTeacherHasEnabledAi}
-        />
-      )}
+
+      <RubricContent
+        rubric={rubric}
+        studentLevelInfo={studentLevelInfo}
+        teacherHasEnabledAi={teacherHasEnabledAi}
+        canProvideFeedback={canProvideFeedback}
+        reportingData={reportingData}
+        visible={selectedTab === TAB_NAMES.RUBRIC}
+      />
+      <RubricSettings
+        canProvideFeedback={canProvideFeedback}
+        teacherHasEnabledAi={teacherHasEnabledAi}
+        updateTeacherAiSetting={setTeacherHasEnabledAi}
+        visible={selectedTab === TAB_NAMES.SETTINGS}
+      />
     </div>
   );
 }
@@ -86,6 +90,7 @@ RubricContainer.propTypes = {
   initialTeacherHasEnabledAi: PropTypes.bool,
   currentLevelName: PropTypes.string,
   closeRubric: PropTypes.func,
+  open: PropTypes.bool,
 };
 
 const HeaderTab = ({text, isSelected, onClick}) => {

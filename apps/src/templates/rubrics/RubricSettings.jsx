@@ -1,6 +1,7 @@
 import React, {useEffect, useState} from 'react';
 import PropTypes from 'prop-types';
 import style from './rubrics.module.scss';
+import classnames from 'classNames';
 import i18n from '@cdo/locale';
 import {
   BodyTwoText,
@@ -14,6 +15,7 @@ export default function RubricSettings({
   canProvideFeedback,
   teacherHasEnabledAi,
   updateTeacherAiSetting,
+  visible,
 }) {
   const [updatingAiFeaturesSetting, setUpdatingAiFeaturesSetting] =
     useState(false);
@@ -27,7 +29,12 @@ export default function RubricSettings({
   }, [updatingAiFeaturesSetting, teacherHasEnabledAi, updateTeacherAiSetting]);
 
   return (
-    <div className={style.settings}>
+    <div
+      className={classnames(style.settings, {
+        [style.settingsVisible]: visible,
+        [style.settingsHidden]: !visible,
+      })}
+    >
       <Heading2>{i18n.settings()}</Heading2>
       {canProvideFeedback && (
         <div className={style.aiAssessmentOptions}>
@@ -64,4 +71,5 @@ RubricSettings.propTypes = {
   canProvideFeedback: PropTypes.bool,
   teacherHasEnabledAi: PropTypes.bool,
   updateTeacherAiSetting: PropTypes.func,
+  visible: PropTypes.bool,
 };

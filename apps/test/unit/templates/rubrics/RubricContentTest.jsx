@@ -39,6 +39,7 @@ describe('RubricContent', () => {
     teacherHasEnabledAi: true,
     studentLevelInfo: {},
     canProvideFeedback: true,
+    visible: true,
   };
 
   const processEventLoop = () => new Promise(resolve => setTimeout(resolve, 0));

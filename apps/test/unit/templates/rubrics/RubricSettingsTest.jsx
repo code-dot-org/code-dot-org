@@ -11,6 +11,7 @@ describe('RubricSettings', () => {
         canProvideFeedback={true}
         teacherHasEnabledAi={true}
         updateTeacherAiSetting={() => {}}
+        visible
       />
     );
     expect(wrapper.find('Button')).to.have.lengthOf(1);
@@ -23,6 +24,7 @@ describe('RubricSettings', () => {
         canProvideFeedback={false}
         teacherHasEnabledAi={true}
         updateTeacherAiSetting={() => {}}
+        visible
       />
     );
     expect(wrapper.find('Button')).to.have.lengthOf(0);
@@ -36,6 +38,7 @@ describe('RubricSettings', () => {
         canProvideFeedback={true}
         teacherHasEnabledAi={true}
         updateTeacherAiSetting={updateTeacherAiSetting}
+        visible
       />
     );
     wrapper.find("input[type='checkbox']").simulate('change');
