@@ -24,7 +24,7 @@ export default function RubricContainer({
   initialTeacherHasEnabledAi,
   currentLevelName,
   reportingData,
-  open = true,
+  open,
   closeRubric,
 }) {
   const onLevelForEvaluation = currentLevelName === rubric.level.name;
@@ -38,7 +38,7 @@ export default function RubricContainer({
   return (
     <div
       className={classnames(style.rubricContainer, {
-        [style.hiddenRubriContainer]: !open,
+        [style.hiddenRubricContainer]: !open,
       })}
     >
       <div className={style.rubricHeader}>
@@ -60,7 +60,7 @@ export default function RubricContainer({
             onClick={closeRubric}
             className={classnames(style.buttonStyle, style.closeButton)}
           >
-            <FontAwesome icon="dash" />
+            <FontAwesome icon="xmark" />
           </button>
         </div>
       </div>

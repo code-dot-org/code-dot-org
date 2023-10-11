@@ -44,7 +44,7 @@ export default function RubricFloatingActionButton({
         currentLevelName={currentLevelName}
         initialTeacherHasEnabledAi
         open={isOpen}
-        closeRubric={() => setIsOpen(false)}
+        closeRubric={handleClick}
       />
     </div>
   );

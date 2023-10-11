@@ -1,7 +1,7 @@
 import React, {useEffect, useState} from 'react';
 import PropTypes from 'prop-types';
 import style from './rubrics.module.scss';
-import classnames from 'classNames';
+import classnames from 'classnames';
 import i18n from '@cdo/locale';
 import {
   BodyTwoText,
