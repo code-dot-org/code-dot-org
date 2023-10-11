@@ -74,7 +74,7 @@ export const BLOCK_TYPES = {
   behaviorDefinition: 'behavior_definition',
   procedureDefinition: 'procedures_defnoreturn',
   whenRun: 'when_run',
-  whenSetup: 'Dancelab_whenSetup',
+  danceWhenSetup: 'Dancelab_whenSetup',
   behaviorGet: 'gamelab_behavior_get',
   spriteParameterGet: 'sprite_parameter_get',
   procedureCall: 'procedures_callnoreturn',
@@ -89,4 +89,4 @@ export const PROCEDURE_DEFINITION_TYPES = [
 ];
 
 // A list of block types associated with the Run button.
-export const SETUP_TYPES = [BLOCK_TYPES.whenRun, BLOCK_TYPES.whenSetup];
+export const SETUP_TYPES = [BLOCK_TYPES.whenRun, BLOCK_TYPES.danceWhenSetup];

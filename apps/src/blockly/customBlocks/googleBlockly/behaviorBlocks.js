@@ -219,8 +219,6 @@ export function flyoutCategory(workspace, functionEditorOpen = false) {
   } else if (useModalFunctionEditor) {
     workspace.registerButtonCallback('createNewBehavior', createNewBehavior);
     blockList.push(newBehaviorButton);
-  } else {
-    blockList.push(behaviorDefinitionBlock);
   }
 
   blockList.push(...getCustomCategoryBlocksForFlyout('Behavior'));
