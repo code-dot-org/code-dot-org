@@ -40,10 +40,9 @@ class EvaluateRubricJob < ApplicationJob
     channel_id = get_channel_id(user, script_level)
     code, project_version = read_user_code(channel_id)
 
-    s3_client = AWS::S3.create_client
-    prompt = read_file_from_s3(s3_client, lesson_s3_name, 'system_prompt.txt')
-    ai_rubric = read_file_from_s3(s3_client, lesson_s3_name, 'standard_rubric.csv')
-    examples = read_examples(s3_client, lesson_s3_name)
+    prompt = read_file_from_s3(lesson_s3_name, 'system_prompt.txt')
+    ai_rubric = read_file_from_s3(lesson_s3_name, 'standard_rubric.csv')
+    examples = read_examples(lesson_s3_name)
 
     ai_evaluations =
       CDO.ai_proxy_url.present? ?
@@ -63,6 +62,10 @@ class EvaluateRubricJob < ApplicationJob
   # needed to evaluate the rubric for the given script level.
   def self.get_lesson_s3_name(script_level)
     UNIT_AND_LEVEL_TO_LESSON_S3_NAME[script_level&.script&.name].try(:[], script_level&.level&.name)
+  end
+
+  def s3_client
+    @s3_client ||= AWS::S3.create_client
   end
 
   # get the channel id of the project which stores the user's code on this script level.
@@ -89,13 +92,13 @@ class EvaluateRubricJob < ApplicationJob
     [code, version]
   end
 
-  private def read_file_from_s3(s3_client, lesson_s3_name, key_suffix)
+  private def read_file_from_s3(lesson_s3_name, key_suffix)
     bucket = 'cdo-ai'
     key = "teaching_assistant/lessons/#{lesson_s3_name}/#{key_suffix}"
     s3_client.get_object(bucket: bucket, key: key)[:body].read
   end
 
-  private def read_examples(s3_client, lesson_s3_name)
+  private def read_examples(lesson_s3_name)
     bucket = 'cdo-ai'
     prefix = "teaching_assistant/lessons/#{lesson_s3_name}/examples/"
     response = s3_client.list_objects_v2(bucket: bucket, prefix: prefix)

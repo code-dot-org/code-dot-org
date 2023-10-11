@@ -28,9 +28,22 @@ class EvaluateRubricJobTest < ActiveJob::TestCase
     stub_project_source_data(channel_id)
 
     # stub lesson S3 lookups
-    EvaluateRubricJob.any_instance.stubs(:read_file_from_s3).with(nil, 'fake-lesson-s3-name', 'system_prompt.txt').returns('fake-system-prompt')
-    EvaluateRubricJob.any_instance.stubs(:read_file_from_s3).with(nil, 'fake-lesson-s3-name', 'standard_rubric.csv').returns('fake-standard-rubric')
-    EvaluateRubricJob.any_instance.stubs(:read_examples).with(nil, 'fake-lesson-s3-name').returns([['fake-code-1', 'fake-response-1'], ['fake-code-2', 'fake-response-2']])
+    s3_client = Aws::S3::Client.new(stub_responses: true)
+    bucket = {
+      'teaching_assistant/lessons/fake-lesson-s3-name/system_prompt.txt' => 'fake-system-prompt',
+      'teaching_assistant/lessons/fake-lesson-s3-name/standard_rubric.csv' => 'fake-standard-rubric',
+    }
+    proc = ->(context) do
+      obj = bucket[context.params[:key]]
+      if obj
+        {body: StringIO.new(obj)}
+      else
+        raise "NoSuchKey: #{context.params[:key]}"
+      end
+    end
+    s3_client.stub_responses(:get_object, proc)
+    EvaluateRubricJob.any_instance.stubs(:s3_client).returns(s3_client)
+    EvaluateRubricJob.any_instance.stubs(:read_examples).returns([['fake-code-1', 'fake-response-1'], ['fake-code-2', 'fake-response-2']])
 
     # run the job
     perform_enqueued_jobs do
