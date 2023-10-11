@@ -75,12 +75,6 @@ class EvaluateRubricJobTest < ActiveJob::TestCase
     EvaluateRubricJob.stubs(:get_lesson_s3_name).with(@script_level).returns('fake-lesson-s3-name')
     @rubric.destroy
 
-    # create a project
-    channel_token = ChannelToken.find_or_create_channel_token(@script_level.level, @fake_ip, @storage_id, @script_level.script_id)
-    channel_id = channel_token.channel
-
-    stub_project_source_data(channel_id)
-
     exception = assert_raises ActiveRecord::RecordNotFound do
       EvaluateRubricJob.new.perform(user_id: @student.id, script_level_id: @script_level.id)
     end

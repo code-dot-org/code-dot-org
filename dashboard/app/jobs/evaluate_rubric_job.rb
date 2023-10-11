@@ -35,13 +35,13 @@ class EvaluateRubricJob < ApplicationJob
 
     raise "lesson_s3_name not found for script_level_id: #{script_level.id}" if lesson_s3_name.blank?
 
+    rubric = Rubric.find_by!(lesson_id: script_level.lesson.id, level_id: script_level.level.id)
+
     channel_id = get_channel_id(user, script_level)
     code, project_version = read_user_code(channel_id)
     prompt = read_file_from_s3(lesson_s3_name, 'system_prompt.txt')
     ai_rubric = read_file_from_s3(lesson_s3_name, 'standard_rubric.csv')
     examples = read_examples(lesson_s3_name)
-
-    rubric = Rubric.find_by!(lesson_id: script_level.lesson.id, level_id: script_level.level.id)
 
     ai_evaluations =
       CDO.ai_proxy_url.present? ?
