@@ -27,6 +27,11 @@ class EvaluateRubricJobTest < ActiveJob::TestCase
 
     stub_project_source_data(channel_id)
 
+    # stub lesson S3 lookups
+    EvaluateRubricJob.any_instance.stubs(:read_file_from_s3).with('fake-lesson-s3-name', 'system_prompt.txt').returns('fake-system-prompt')
+    EvaluateRubricJob.any_instance.stubs(:read_file_from_s3).with('fake-lesson-s3-name', 'standard_rubric.csv').returns('fake-standard-rubric')
+    EvaluateRubricJob.any_instance.stubs(:read_examples).with('fake-lesson-s3-name').returns([['fake-code-1', 'fake-response-1'], ['fake-code-2', 'fake-response-2']])
+
     # run the job
     perform_enqueued_jobs do
       EvaluateRubricJob.perform_later(user_id: @student.id, script_level_id: @script_level.id)
