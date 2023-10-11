@@ -10,6 +10,8 @@ export interface ChipProps {
   checked: boolean;
   required: boolean;
   onCheckedChange: (checked: boolean) => void;
+  // TODO:
+  invalidMessage?: string;
 }
 
 export const Chip: React.FunctionComponent<ChipProps> = ({
@@ -48,6 +50,8 @@ export const Chip: React.FunctionComponent<ChipProps> = ({
           e.target.setCustomValidity('');
         }}
         onInvalid={e => {
+          // TODO: Uncomment this
+          // props.invalidMessage
           // e.target.setCustomValidity(i18n.chooseAtLeastOne());
         }}
       />
@@ -70,6 +74,7 @@ export interface ChipsProps {
 // natively understands it as an array. Set `required` to `true` if you want
 // the user to have to select at least one of the options to proceed.
 // You probably want `values` to start out as an empty array.
+// TODO: add disabled, add different sizes
 /**
  * ### Production-ready Checklist:
  * * (?) implementation of component approved by design team;

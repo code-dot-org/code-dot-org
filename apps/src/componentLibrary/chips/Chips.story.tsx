@@ -22,6 +22,7 @@ export default {
   // eslint-disable-next-line @typescript-eslint/ban-ts-comment
   // @ts-ignore-next-line
   component: Chips.type,
+  argTypes: {setValues: {action: 'clicked'}},
 } as Meta;
 
 //
@@ -37,7 +38,7 @@ const SingleTemplate: Story<ChipsProps> = args => <Chips {...args} />;
 //   </>
 // );
 
-let values: string[] = [];
+let values: string[] = ['chip2'];
 export const DefaultChips = SingleTemplate.bind({});
 DefaultChips.args = {
   label: 'Chips label',
@@ -45,7 +46,10 @@ DefaultChips.args = {
   required: true,
   options: [
     {value: 'chip1', label: 'Chip1'},
-    {value: 'chip1', label: 'Chip1'},
+    {value: 'chip2', label: 'Chip2'},
+    {value: 'chip3', label: 'Chip3'},
+    {value: 'chip4', label: 'Chip4'},
+    {value: 'chip5', label: 'Chip5'},
   ],
   values: values,
   setValues: (newValues: string[]) => (values = newValues),
