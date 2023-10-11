@@ -23,8 +23,7 @@ require_relative 'upload_to_mapbox'
 
 DB_READONLY = Sequel.connect(CDO.pegasus_db_reader.sub('mysql:', 'mysql2:'))
 
-SPECIFIC_SCHOOL_ID = 7_067_343
-SPECIFIC_SCHOOL_ID_STR = '7067343'
+SPECIFIC_SCHOOL_ID = 7067343
 
 CURRENT_HOC_SIGNUP = "HocSignup#{DCDO.get('hoc_year', 2017)}".freeze
 def main
