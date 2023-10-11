@@ -542,7 +542,7 @@ roles.each do |name, config| %>
               - arn:aws:s3:::cdo-v3-assets/assets_development/*
               - arn:aws:s3:::cdo-v3-animations/animations_development/*
               - arn:aws:s3:::cdo-v3-files/files_development/*
-          - Sid: AllowListingToAnimationLibraryBucket
+          - Sid: AllowListingToLibraryBuckets
             Effect: Allow
             Action:
               - s3:ListBucket
