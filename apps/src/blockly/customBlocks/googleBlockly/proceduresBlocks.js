@@ -129,7 +129,8 @@ const editButton = function () {
   if (
     useModalFunctionEditor &&
     this.inputList.length &&
-    !this.workspace.isFlyout
+    !this.workspace.isFlyout &&
+    !Blockly.functionEditor.isOpen()
   ) {
     const button = new Blockly.FieldButton({
       value: msg.edit(),

@@ -122,6 +122,10 @@ export default class FunctionEditor {
     this.hide();
   }
 
+  isOpen() {
+    return this.dom.style.display === 'block';
+  }
+
   // TODO
   renameParameter(oldName, newName) {}
 
