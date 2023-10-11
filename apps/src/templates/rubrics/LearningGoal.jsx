@@ -36,7 +36,6 @@ export default function LearningGoal({
   const [learningGoalEval, setLearningGoalEval] = useState(null);
   const [displayFeedback, setDisplayFeedback] = useState('');
   const [displayUnderstanding, setDisplayUnderstanding] = useState(-1);
-  const understandingLevel = useRef(-1);
   const teacherFeedback = useRef('');
 
   const aiEnabled = learningGoal.aiEnabled && teacherHasEnabledAi;
@@ -79,7 +78,7 @@ export default function LearningGoal({
       studentId: studentLevelInfo.user_id,
       learningGoalId: learningGoal.id,
       feedback: teacherFeedback.current,
-      understanding: understandingLevel.current,
+      understanding: displayUnderstanding,
     });
     HttpClient.put(`${base_endpoint}/${learningGoalEval.id}`, bodyData, true, {
       'Content-Type': 'application/json',
@@ -113,12 +112,10 @@ export default function LearningGoal({
             setDisplayFeedback(teacherFeedback.current);
           }
           if (json.understanding >= 0 && json.understanding !== null) {
-            understandingLevel.current = json.understanding;
             setDisplayUnderstanding(json.understanding);
           } else {
             setDisplayUnderstanding(-1);
           }
-          console.log(understandingLevel.current);
         })
         .catch(error => console.log(error));
     }
@@ -126,7 +123,6 @@ export default function LearningGoal({
 
   // Callback to retrieve understanding data from EvidenceLevels
   const radioButtonCallback = radioButtonData => {
-    understandingLevel.current = radioButtonData;
     setDisplayUnderstanding(radioButtonData);
     if (!isAutosaving) {
       autosave();
@@ -157,17 +153,13 @@ export default function LearningGoal({
         <div className={style.learningGoalHeaderRightSide}>
           {aiEnabled && <AiToken />}
           {/*TODO: Display status of feedback*/}
-          {canProvideFeedback &&
-            aiEnabled &&
-            understandingLevel.current === -1 && (
-              <BodyThreeText>{i18n.approve()}</BodyThreeText>
-            )}
-          {canProvideFeedback &&
-            !aiEnabled &&
-            understandingLevel.current === -1 && (
-              <BodyThreeText>{i18n.evaluate()}</BodyThreeText>
-            )}
-          {understandingLevel.current >= 0 && (
+          {canProvideFeedback && aiEnabled && displayUnderstanding === -1 && (
+            <BodyThreeText>{i18n.approve()}</BodyThreeText>
+          )}
+          {canProvideFeedback && !aiEnabled && displayUnderstanding === -1 && (
+            <BodyThreeText>{i18n.evaluate()}</BodyThreeText>
+          )}
+          {displayUnderstanding >= 0 && (
             <BodyThreeText>
               {UNDERSTANDING_LEVEL_STRINGS[displayUnderstanding]}
             </BodyThreeText>
@@ -179,7 +171,7 @@ export default function LearningGoal({
           learningGoalKey={learningGoal.key}
           evidenceLevels={learningGoal.evidenceLevels}
           canProvideFeedback={canProvideFeedback}
-          understanding={understandingLevel.current}
+          understanding={displayUnderstanding}
           radioButtonCallback={radioButtonCallback}
         />
         {learningGoal.tips && (
