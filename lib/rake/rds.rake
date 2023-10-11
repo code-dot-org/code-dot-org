@@ -16,7 +16,7 @@ namespace :rds do
       clone_cluster_id: ENV['CLONE_CLUSTER_ID'],
       instance_type: ENV['INSTANCE_TYPE']
     }
-    Cdo::RDS.clone_cluster(options.compact)
+    Cdo::RDS.clone_cluster(**options.compact)
   end
 
   desc 'Delete CLUSTER_ID'
