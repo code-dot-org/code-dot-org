@@ -1,7 +1,7 @@
 // Custom styles for code.org/educate/csd
 // — supplemental to shared/css/design-system-pegasus.scss
 
-@import 'color', 'font', 'typography', 'breakpoints', 'barlow-semi-condensed-font';
+@import 'color', 'breakpoints';
 
 .hero-banner-basic {
 
@@ -75,7 +75,7 @@
   padding-bottom: 0;
 
   p {
-    font-family: $main-font !important;
+    font-family: var(--main-font) !important;
   }
 
   @media (max-width: 1279px) {

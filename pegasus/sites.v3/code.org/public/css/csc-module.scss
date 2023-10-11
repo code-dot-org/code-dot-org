@@ -10,8 +10,8 @@ $color-white: white;
   }
 
   a {
-    font-family: $main-font;
-    font-weight: $semi-bold-font-weight;
+    font-family: var(--main-font);
+    font-weight: var(--semi-bold-font-weight);
     color: $color-black;
     text-decoration: none;
   }
@@ -34,8 +34,8 @@ $color-white: white;
     background: #ffa400;
     color: $color-white !important;
     font-size: 1em;
-    font-family: $main-font;
-    font-weight: $semi-bold-font-weight;
+    font-family: var(--main-font);
+    font-weight: var(--semi-bold-font-weight);
     padding: 0.5em 1em;
   }
 

@@ -34,8 +34,8 @@ div[dir='rtl'] .img-dance-stars{
   background-color: white;
   border-color: white;
   color: #4d575f;
-  font-family: $main-font;
-  font-weight: $bold-font-weight;
+  font-family: var(--main-font);
+  font-weight: var(--bold-font-weight);
 
   &:hover {
     background-color: $neutral_light;
