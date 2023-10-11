@@ -346,6 +346,12 @@ Style/MutableConstant:
 Style/OpenStructUse:
   Enabled: false
 
+# Offense count: 99
+# Configuration parameters: AllowedMethods.
+# AllowedMethods: respond_to_missing?
+Style/OptionalBooleanParameter:
+  Enabled: false
+
 # Offense count: 14
 # This cop supports safe auto-correction (--auto-correct).
 Style/RedundantAssignment:
