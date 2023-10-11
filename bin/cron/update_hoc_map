@@ -45,7 +45,7 @@ def main
     # processed location, and city. With the exception that approved special events
     # don't need a city so we can show events like the Cocos Keeling Islands.
     if data['organization_name_s'].nil?
-      if form[:id] == SPECIFIC_SCHOOL_ID || form[:id] == SPECIFIC_SCHOOL_ID_STR
+      if form[:id] == SPECIFIC_SCHOOL_ID
         puts 'SKIPPED ON ORG NAME'
         puts JSON.parse(data)
       end
@@ -53,7 +53,7 @@ def main
       next
     end
     if processed_data['location_p'].nil?
-      if form[:id] == SPECIFIC_SCHOOL_ID || form[:id] == SPECIFIC_SCHOOL_ID_STR
+      if form[:id] == SPECIFIC_SCHOOL_ID
         puts 'SKIPPED ON LOCATION'
         puts JSON.parse(processed_data)
       end
@@ -61,7 +61,7 @@ def main
       next
     end
     if form[:review] != "approved" && processed_data['location_city_s'].nil?
-      if form[:id] == SPECIFIC_SCHOOL_ID || form[:id] == SPECIFIC_SCHOOL_ID_STR
+      if form[:id] == SPECIFIC_SCHOOL_ID
         puts 'SKIPPED ON CITY AND APPROVAL'
         puts JSON.parse(processed_data)
         puts form[:review]
