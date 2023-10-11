@@ -72,9 +72,9 @@ export function stringIsXml(str) {
 
 export const BLOCK_TYPES = {
   behaviorDefinition: 'behavior_definition',
+  danceWhenSetup: 'Dancelab_whenSetup',
   procedureDefinition: 'procedures_defnoreturn',
   whenRun: 'when_run',
-  whenSetup: 'Dancelab_whenSetup',
 };
 
 // A list of block types that are procedure definitions. These are sorted
@@ -86,4 +86,4 @@ export const PROCEDURE_DEFINITION_TYPES = [
 ];
 
 // A list of block types associated with the Run button.
-export const SETUP_TYPES = [BLOCK_TYPES.whenRun, BLOCK_TYPES.whenSetup];
+export const SETUP_TYPES = [BLOCK_TYPES.whenRun, BLOCK_TYPES.danceWhenSetup];
