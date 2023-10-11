@@ -35,6 +35,10 @@ nn:
   africa_campaign_date_full: 1. oktober - 18. desember
   africa_campaign_date_year: '2021'
   africa_campaign_date_full_year: 1. oktober 2022 - 18. desember 2022
+  hoc2023_header: Kreativitet med AI
+  hoc2023_social_creativity_with_ai_title: Kodetime - Hva vil du lage?
+  hoc2023_social_creativity_with_ai_desc: Bruk informatikk til å utforske og lære
+    om AI!
   hoc2022_header: Utforske, spille, skape!
   social_hoc2022_explore_play_create: Bruk informatikk til å utforske, spille og skape!
   codeorg_homepage_hoc2022_body: Utforsk universet, score et mål, kast et trekk -
@@ -175,6 +179,28 @@ nn:
   curriculum_launch_2023_desc: Oppdateringer til CSC, CSP, CSD, og mer - pluss en
     ny læreplankatalog og redesignet Teach-side for å hjelpe deg med å finne alt!
   in_partnership_with: I samarbeid med
+  shop_code_dot_org_heading: Handle Code.org
+  shop_code_dot_org_desc: Støtt vårt arbeid og bruk bevegelsen med stolthet. Hattene
+    våre har blitt brukt av president Obama og kjendiser også.
+  spread_the_word_heading: Sprei ordet
+  spread_the_word_desc: Forsterk vår innvirkning ved å dele Code.org med nettverket
+    ditt. Fra sosiale medier til e-postoppdateringer, oppdag hvordan du kan hjelpe
+    oss med å nå flere lærere, studenter, og talsmenn.
+  follow_us_heading: Følg oss på sosiale medier
+  follow_us_desc: Hold deg oppdatert med oss på sosiale medier og del innleggene våre
+    med nettverket ditt for å holde deg informert og bidra til å øke bevisstheten.
+  facebook: Facebook
+  twitter: Twitter
+  linked_in: Linkedin
+  instagram: Instagram
+  tik_tok: TikTok
+  subscribe_to_emails_heading: Abonner på e-post
+  subscribe_to_emails_desc: Les om hva som skjer på Code.org og i informatikkutdanning
+    gjennom kvartalsvise oppdateringer via vår adresseliste.
+  subscribe_to_emails_intl: Abonner på internasjonale oppdateringer
+  promote_code_dot_org_heading: Fremme Code.org
+  promote_code_dot_org_desc: Markedsfør informatikk i ditt område ved hjelp av statistikk,
+    sitater, og videoer.
   afe_partnership_logo_alt: Amazon Future Engineer-logo
   afe_partnership_thanks_desc: Amazon Future Engineer er et omfattende barndom-til-karriereprogram
     for å inspirere, utdanne, og trene lavinntekts- og andre vanskeligstilte barn
@@ -193,6 +219,15 @@ nn:
   curricula_title_high: Læreplaner for videregående skole
   curricula_desc_high: Bla gjennom de overbevisende kursene og aktivitetene som inviterer
     deg og dine videregående studenter til å grave dypere inn i informatikk.
+  for_administrators_heading: For administratorer
+  for_administrators_desc: Bli med på tusenvis av skoler som allerede har innlemmet
+    informatikk i læreplanen.
+  for_parents_heading: For foreldre
+  for_parents_desc: Du kan bidra til å oppmuntre studentens skole til å tilby eller
+    utvide informatikkutdanning.
+  for_educators_heading: For lærarar
+  for_educators_desc: Begynn å undervise i dag - ingen datavitenskapserfaring nødvendig
+    - med våre profesjonelle læringsverksteder.
   students_label: Elevar
   teachers_label: Lærarar
   teacher_label_csf: CS Fundamentals Lærer
@@ -202,10 +237,11 @@ nn:
   teacher_label_csa: AP® Computer Science A Teacher
   required_materials: 'Nødvendige materialer:'
   optional_materials: 'Valgfrie materialer:'
-  call_to_action_explore_roles: Utforsk åpne roller
+  call_to_action_hold_an_event: Hold et arrangement
   call_to_action_learn_more: Les meir
   call_to_action_watch_now: Se nå
   call_to_action_try_activity: Prøv aktivitet
+  call_to_action_try_activities: Prøv aktiviteter
   call_to_action_explore_unit: Utforsk enhet
   call_to_action_explore_curriculum: Utforsk læreplanen
   call_to_action_explore_curriculum_options: Utforsk læreplanalternativer
@@ -274,11 +310,20 @@ nn:
   call_to_action_notify_available: Gi meg beskjed når tilgjengelig
   call_to_action_register_early_access: Registrer deg for tidlig tilgang
   call_to_action_open_positions: Vis åpne stillinger
+  call_to_action_explore_roles: Utforsk åpne roller
   call_to_action_get_guide: Få guiden
   call_to_action_donate_to_cdo: Doner til Code.org
   call_to_action_start_fundraiser: Start en innsamlingsaksjon
   call_to_action_view_donation_policy: Se retningslinjer for donasjon
   call_to_action_view_donate_bitpay: Doner med BitPay
+  call_to_action_make_a_donation: Gi en donasjon
+  call_to_action_other_ways_to_give: Andre måter å gi
+  call_to_action_become_partner_usa: Bli en partner i USA
+  call_to_action_become_partner_intl: Bli en internasjonal partner
+  call_to_action_become_a_volunteer: Bli frivillig
+  call_to_action_start_translating: Begynn å oversette
+  call_to_action_learn_about_advocacy: Lær om vår advokatvirksomhet
+  call_to_action_visit_store: Besøk butikken
   aria_label_call_to_action_afe: Lær mer om Amazon Future Engineer
   aria_label_call_to_action_teaching_csf: Start Teaching Computer Science Fundamentals
     profesjonelle læringsprogram
@@ -604,6 +649,7 @@ nn:
   heading_these_lessons_will: 'Disse leksjonene vil:'
   heading_explore_curriculum_catalog: Utforsk alle kursene våre i læreplankatalogen
   heading_csa_ai: Leter du etter ting å gjøre etter AP® eksamen?
+  heading_bring_cs_to_students: Ta med informatikk til studenter
   professional_learning_section_desc: Få den støtten du trenger når du forbereder
     deg på å undervise. Lærere elsker det, med over 90% som rangerer det som den beste
     profesjonelle utviklingen noensinne!
@@ -870,6 +916,7 @@ nn:
     AI-pedagogiske verktøy, og utnytte AI for studentvurdering. Med en rik blanding
     av teori, praktiske eksempler og ressurser, tar den sikte på å gi lærere mulighet
     til å navigere i AI-landskapet og forbedre elevenes læringsopplevelser.
+  ai_pl_101_resources_5: Veiledning for å sikre en ansvarlig tilnærming til AI
   ai_pl_101_video_desc_6: 'Lær mer om den nye teknologien som driver de store endringene
     i AI, med to nye videoer på store språkmodeller (som ChatGPT) og Generative AI.
     Hør hvordan disse nye teknologiene fungerer direkte fra ekspertene: Mira Murati,
@@ -879,6 +926,8 @@ nn:
     fra nybegynner til avansert. Inkluderer startmeldinger for de som bare dypper
     tærne i, samt avanserte verktøy for de som ønsker å maksimere potensialet.
   ai_pl_101_resources_3: AI-spørsmål for å transformere studenters læring
+  ai_pl_101_resources_section_title: Flere måter å lære om AI
+  ai_pl_101_resources_guide: 'Ledsagerguide:'
   how_ai_works_hero_heading: Hvordan AI fungerer
   how_ai_works_hero_desc: Dykk ned i AI-verdenen med «How AI Works», vår videoserie
     og tilhørende leksjoner!
@@ -1705,6 +1754,30 @@ nn:
   donate_tabs_bitpay_title: Doner med Crypto via BitPay
   donate_tabs_bitpay_desc: Omfavne fremtiden for å gi med kryptovaluta. Gjennom BitPay
     kan din digitale valuta direkte støtte Code.orgs bestrebelser på å utvide informatikkutdanning.
+  help_page_top_heading: Hvordan du kan hjelpe
+  help_page_top_desc: Støtt vårt oppdrag å gjøre informatikk tilgjengelig for alle
+    barn, overalt. Din innsats hjelper oss med å inspirere fremtidige innovatører
+    og bygge bro over teknologiutdanningsgapet.
+  help_page_top_subhead: Gi en donasjon til Code.org
+  help_page_top_desc_02: Vi jobber for å gi hver elev muligheten til å lære informatikk
+    - både online OG på skoler, hvor vi etablerer faste kurs og trener lærere. For
+    hver dollar du donerer, blir ett barn introdusert for informatikk.
+  help_page_partners_heading: Bli en partner
+  help_page_partners_desc: Code.org samarbeider med andre ideelle organisasjoner som
+    partnere for å bidra til å spre informatikk på en lokal, bærekraftig måte. Lær
+    mer om programmet vårt.
+  help_page_volunteer_heading: Frivillig arbeid i klasserommet
+  help_page_volunteer_desc: Frivillig til å undervise i kodetimen eller være gjestetaler
+    i et lokalt klasserom. Registrer deg for å høre om muligheter i nærheten.
+  help_page_translate_heading: Hjelp oss å oversette
+  help_page_translate_desc: Frivillige har oversatt våre opplæringsprogrammer på over
+    45 språk. Hjelp oss å fortsette å utvide opplæringsprogrammene våre for studenter
+    over hele verden!
+  help_page_speak_for_cs_heading: Snakk opp for informatikkutdanning
+  help_page_speak_for_cs_desc: Lær mer om Code.orgs advokatarbeid over hele USA og
+    de ti retningslinjene vi anbefaler stater vedtar for å gjøre informatikk grunnleggende
+    for alle studenter. I tillegg til, finn ut hvordan du kan drive endring i staten
+    din.
   hoc_live: Time of Code Live
   hoc_live_sign_up_title: Registrer deg for Hour of Code Live
   hoc_live_learn_title: Lær med Hour of Code Live
@@ -13508,6 +13581,9 @@ nn:
   video_library_page_inspirational_video_title_11: Alle kan lære (1 min)
   video_library_page_inspirational_video_title_12: Lo Que Falta En Nuestras Escuelas
     (2 min)
+  video_library_page_inspirational_video_title_13: NASA feirer kodetimen (2 min)
+  video_library_page_inspirational_video_title_14: Det er mer enn et spill (1 min)
+  video_library_page_inspirational_video_title_15: Lag med informatikk (1 min)
   video_library_page_not_hacked_video_title_1: 'Hvordan ikke bli hacket: Introduksjon'
   video_library_page_not_hacked_video_title_2: 'Hvordan ikke bli hacket: Passord'
   video_library_page_not_hacked_video_title_3: 'Hvordan ikke bli hacket: Autentisering

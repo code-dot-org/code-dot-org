@@ -40,7 +40,7 @@ def main
     commit: 'origin/levelbuilder',
     base_branch: 'origin/staging'
   )
-  raise Exception.new('GitHub.create_and_merge_pull_request failed.') unless success
+  raise Exception.new('GitHub.create_branch_from_commit failed.') unless success
 
   # TODO(asher): Add a reviewer (namely the next DOTD), add appropriate tags
   # (particularly deploy).

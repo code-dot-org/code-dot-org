@@ -180,7 +180,7 @@ nn:
           description_short: Lær å programmere droner og skap ditt eige Star Wars-spel i ein galakse langt, langt borte.
           student_description: Lær å programmere droner og skap ditt eige Star Wars-spel i ein galakse langt, langt borte.
         mc:
-          title: Kodetimen med Minecraft
+          title: Minecraft-eventyrar
           description: Bruk kodeblokker for å ta Steve eller Alex med på eit eventyr gjennom denne Minecraft-verda
           description_short: Utforsk ei Minecraft-verd gjennom kode
           student_description: Bruk kodeblokker for å ta Steve eller Alex med på eit eventyr gjennom denne Minecraft-verda
@@ -2183,6 +2183,8 @@ nn:
               display_name: Innhald
             lessonGroup-2:
               display_name: Innhald
+        dance-unplugged:
+          title: Dansefest utan datamaskin
         spelling-bee:
           title: Stavekonkurranse
         csa5-exemplars:

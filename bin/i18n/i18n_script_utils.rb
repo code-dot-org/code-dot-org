@@ -386,6 +386,14 @@ class I18nScriptUtils
     File.write(file_path, content)
   end
 
+  # Writes json file
+  #
+  # @param file_path [String] path to the file
+  # @param data [Hash] the file content
+  def self.write_json_file(file_path, data)
+    write_file file_path, JSON.pretty_generate(data)
+  end
+
   # Copies file
   #
   # @param file_path [String] path to the file

@@ -470,7 +470,7 @@ tr:
           description_short: Droidleri programlamayı ve çok çok uzaklardaki bir galakside kendi Yıldız Savaşları oyununu yaratmayı öğren.
           student_description: Droidleri programlamayı ve çok çok uzaklardaki bir galakside kendi Yıldız Savaşları oyununu yaratmayı öğren.
         mc:
-          title: Minecraft Kod Saati
+          title: Minecraft Maceracısı
           description: Steve ya da Alex'i Minecraft dünyasında bir maceraya çıkarmak için kod blokları kullan.
           description_short: Minecraft dünyasını kodlamayla keşfet
           student_description: Steve ya da Alex'i Minecraft dünyasında bir maceraya çıkarmak için kod blokları kullan.
@@ -7244,3 +7244,7 @@ tr:
           lessons:
             lesson-1:
               name: Yapay Zeka Etik Kurallarımız
+        virtual-pl-csa-summer-2024-day1:
+          title: Gün 1
+        virtual-pl-csa-summer-day2:
+          title: Gün 2
