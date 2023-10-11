@@ -740,6 +740,7 @@ pt:
         csc_bookcovers_intro: Codificando Capas de Livros
         what-is-creativity: O que é criatividade?
         code-break: Faça uma quebra de código
+        se-cv-intro-to-lessons: 'Engenharia de Software e Visão Computacional: Introdução às Lições'
     callout:
       text:
         drag_blocks: Arraste um bloco "avance" e o encaixe embaixo do outro bloco

@@ -166,7 +166,7 @@ hu:
           description_short: Tanulj meg droidokat programozni és készítsd el a saját Star Wars játékodat egy messzi, messzi galaxisban.
           student_description: Tanulj meg droidokat programozni és készítsd el a saját Star Wars játékodat egy messzi, messzi galaxisban.
         mc:
-          title: Minecraft Kódolás Órája
+          title: Minecraft kaland
           description: Használj blokkokat a programozáshoz és kalandozz el Steve-vel vagy Alexszel a Minecraft világába
           description_short: Fedezd fel a Minecraft világát kódolással
           student_description: Használj blokkokat a programozáshoz és kalandozz el Steve-vel vagy Alexszel a Minecraft világába
@@ -2116,6 +2116,8 @@ hu:
               display_name: Tartalom
             lessonGroup-2:
               display_name: Tartalom
+        dance-unplugged:
+          title: Offline táncos buli
         csc-things:
           name: csc-things
           title: 'CSC információk tárháza '

@@ -36,6 +36,10 @@ hr:
   africa_campaign_date_full: Prosinac 6-12
   africa_campaign_date_year: '2021'
   africa_campaign_date_full_year: Prosinac 6-12, 2021
+  hoc2023_header: Kreativnost s AI
+  hoc2023_social_creativity_with_ai_title: Sat kodiranja - Što ćete stvoriti?
+  hoc2023_social_creativity_with_ai_desc: Upotrijebite informatiku za istraživanje
+    i učenje o umjetnoj inteligenciji!
   hoc2022_header: Istražite, igrajte se, stvarajte!
   social_hoc2022_explore_play_create: Koristite računalnu znanost za istraživanje,
     igranje i stvaranje!
@@ -172,6 +176,28 @@ hr:
     Računarska otkrića i još mnogo toga – plus novi katalog kurikuluma i redizajnirana
     stranica za podučavanje koja će vam pomoći pronaći sve!
   in_partnership_with: U partnerstvu s
+  shop_code_dot_org_heading: Trgovina Code.org
+  shop_code_dot_org_desc: Podržite naš rad i nosite pokret s ponosom. Naše kape su
+    nosili predsjednik Obama i slavne osobe.
+  spread_the_word_heading: Proširite vijest
+  spread_the_word_desc: Pojačajte naš utjecaj dijeljenjem Code.org s vašom mrežom.
+    Od društvenih medija do ažuriranja e-pošte otkrijte kako nam možete pomoći da
+    dosegnemo više nastavnika, učenika i zagovornika.
+  follow_us_heading: Pratite nas na društvenim mrežama
+  follow_us_desc: Budite u toku s nama na društvenim mrežama i podijelite naše postove
+    sa svojom mrežom kako biste bili informirani i pomogli u jačanju svijesti.
+  facebook: Facebook
+  twitter: Twitter
+  linked_in: LinkedIn
+  instagram: Instagram
+  tik_tok: TikTok
+  subscribe_to_emails_heading: Pretplatite se na e-poštu
+  subscribe_to_emails_desc: Pročitajte o tome što se događa na Code.org i u obrazovanju
+    informatike kroz tromjesečna ažuriranja putem naše mailing liste.
+  subscribe_to_emails_intl: Pretplatite se na međunarodna ažuriranja
+  promote_code_dot_org_heading: Promovirajte Code.org
+  promote_code_dot_org_desc: Promovirajte informatiku u svom području uz pomoć statistika,
+    citata i videozapisa.
   afe_partnership_logo_alt: Logotip Amazonovog "Budućeg inženjera"
   afe_partnership_thanks_desc: Amazonov "Budući inženjer" je sveobuhvatan program
     od djetinjstva do karijere za nadahnuće, obrazovanje i osposobljavanje djece i
@@ -190,6 +216,15 @@ hr:
   curricula_title_high: Srednjoškolski kurikulumi
   curricula_desc_high: Pregledajte uvjerljive tečajeve i aktivnosti koje pozivaju
     vas i vaše srednjoškolce da dublje istražite informatiku.
+  for_administrators_heading: Za administratore
+  for_administrators_desc: Pridružite se tisućama škola koje su već uključile informatiku
+    u svoj nastavni plan i program.
+  for_parents_heading: Za roditelje
+  for_parents_desc: Možete pomoći potaknuti školu vašeg učenika da ponudi ili proširi
+    obrazovanje informatike.
+  for_educators_heading: Za nastavnike
+  for_educators_desc: Započnite podučavati danas - nije potrebno iskustvo informatike
+    - s našim radionicama profesionalnog učenja.
   students_label: Učenici
   teachers_label: Učitelji
   teacher_label_csf: Nastavnik Osnova računarstva
@@ -199,10 +234,11 @@ hr:
   teacher_label_csa: AP® Computer Science A Teacher
   required_materials: 'Potrebni materijali:'
   optional_materials: 'Izborni materijali:'
-  call_to_action_explore_roles: Istražite otvorene uloge
+  call_to_action_hold_an_event: Održavanje događaja
   call_to_action_learn_more: Saznajte više
   call_to_action_watch_now: Gledajte sada
   call_to_action_try_activity: Isprobajte aktivnost
+  call_to_action_try_activities: Isprobajte aktivnosti
   call_to_action_explore_unit: Istražite jedinicu
   call_to_action_explore_curriculum: Istražite kurikulum
   call_to_action_explore_curriculum_options: Istražite opcije kurikuluma
@@ -272,11 +308,20 @@ hr:
   call_to_action_notify_available: Obavijesti me kada je dostupno
   call_to_action_register_early_access: Registrirajte se za rani pristup
   call_to_action_open_positions: Prikaz otvorenih pozicija
+  call_to_action_explore_roles: Istražite otvorene uloge
   call_to_action_get_guide: Nabavite vodič
   call_to_action_donate_to_cdo: Donirajte za Code.org
   call_to_action_start_fundraiser: Pokrenite prikupljanje sredstava
   call_to_action_view_donation_policy: Prikaz politike donacije
   call_to_action_view_donate_bitpay: Donirajte uz BitPay
+  call_to_action_make_a_donation: Napravite donaciju
+  call_to_action_other_ways_to_give: Drugi načini davanja
+  call_to_action_become_partner_usa: Postanite partner u Sjedinjenim Američkim Državama
+  call_to_action_become_partner_intl: Postanite međunarodni partner
+  call_to_action_become_a_volunteer: Postanite volonter
+  call_to_action_start_translating: Započnite s prevođenjem
+  call_to_action_learn_about_advocacy: Saznajte više o našem zagovaranju
+  call_to_action_visit_store: Posjetite trgovinu
   aria_label_call_to_action_afe: Saznajte više o Amazon Future Engineer
   aria_label_call_to_action_teaching_csf: Pokrenite program stručnog učenja Osnove
     računalnih znanosti
@@ -617,6 +662,7 @@ hr:
   heading_these_lessons_will: 'Ove lekcije će:'
   heading_explore_curriculum_catalog: Istražite sve naše tečajeve u katalogu kurikuluma
   heading_csa_ai: Tražite stvari koje treba učiniti nakon AP® ispita?
+  heading_bring_cs_to_students: Dovedite informatiku studentima
   professional_learning_section_desc: Dobijte podršku koja vam je potrebna dok se
     pripremate za podučavanje. Nastavnici je vole, a više od 90% je smatra najboljim
     profesionalnim razvojem ikad!
@@ -885,6 +931,7 @@ hr:
     i korištenje obrazovnih alata AI i iskorištavanje AI za procjenu učenika. Uz bogatu
     mješavinu teorije, praktičnih primjera i resursa, cilj je osnažiti nastavnike
     da se kreću kroz AI krajolik i poboljšaju iskustva učenja učenika.
+  ai_pl_101_resources_5: Vodič za osiguravanje odgovornog pristupa AI
   ai_pl_101_video_desc_6: 'Saznajte više o novoj tehnologiji koja pokreće velike promjene
     u AI, koja sadrži dva nova videozapisa na velikim jezičnim modelima (poput ChatGPT-a)
     i Generativnoj umjetnoj inteligenciji. Poslušajte kako ove nove tehnologije djeluju
@@ -896,6 +943,8 @@ hr:
     samo uranjaju prste, kao i napredne alate za one koji žele maksimizirati svoj
     potencijal.
   ai_pl_101_resources_3: AI traži transformaciju učenja učenika
+  ai_pl_101_resources_section_title: Više načina za učenje o AI
+  ai_pl_101_resources_guide: 'Vodič za pratnju:'
   how_ai_works_hero_heading: Kako funkcionira AI
   how_ai_works_hero_desc: Uronite u svijet umjetne inteligencije s "Kako AI funkcionira",
     našom video serijom i popratnim lekcijama!
@@ -1736,6 +1785,30 @@ hr:
   donate_tabs_bitpay_desc: Prigrlite budućnost davanja kriptovalutom. Kroz BitPay,
     vaša digitalna valuta može izravno podržati napore Code.org u širenju obrazovanja
     informatike.
+  help_page_top_heading: Kako možete pomoći
+  help_page_top_desc: Podržite našu misiju da informatiku učinimo dostupnom svakom
+    djetetu, svugdje. Vaši napori pomažu nam da inspiriramo buduće inovatore i premostimo
+    jaz u tehnološkom obrazovanju.
+  help_page_top_subhead: Napravite donaciju za Code.org
+  help_page_top_desc_02: Radimo na tome da svakom učeniku pružimo priliku da uči informatiku
+    - i online i u školama, gdje uspostavljamo stalne tečajeve i obučavamo nastavnike.
+    Za svaki dolar koji donirate, jedno dijete se upoznaje s računalnom znanošću.
+  help_page_partners_heading: Postanite partner
+  help_page_partners_desc: Code.org surađuje s drugim neprofitnim organizacijama kao
+    partnerima kako bi pomogli u širenju informatike na lokalni, održiv način. Saznajte
+    više o našem programu.
+  help_page_volunteer_heading: Volontiraj u učionici
+  help_page_volunteer_desc: Volontirajte se za podučavanje Sata kodiranja ili biti
+    gostujući govornik u lokalnoj učionici. Prijavite se da biste čuli o prilikama
+    u vašoj blizini.
+  help_page_translate_heading: Pomozite nam prevesti
+  help_page_translate_desc: Volonteri su preveli naše tutorijale na preko 45 jezika.
+    Pomozite nam da nastavimo širiti naše tutorijale za studente širom svijeta!
+  help_page_speak_for_cs_heading: Govorite za obrazovanje informatike
+  help_page_speak_for_cs_desc: Saznajte više o Code.org zagovaranju rada diljem SAD-a
+    i deset pravila koje preporučujemo da države usvoje kako bi računalna znanost
+    bila temeljna za sve studente. Osim toga, saznajte kako možete voziti promjene
+    u svom stanju.
   hoc_live: Sat kodiranja uživo
   hoc_live_sign_up_title: Prijavite se za Sat kodiranja uživo
   hoc_live_learn_title: Učite uz Sat koda uživo
@@ -13612,6 +13685,9 @@ hr:
   video_library_page_inspirational_video_title_11: Svatko može naučiti (1 min)
   video_library_page_inspirational_video_title_12: Lo Que Falta En Nuestras Escuelas
     (2 min)
+  video_library_page_inspirational_video_title_13: NASA slavi Sat kodiranja (2 min)
+  video_library_page_inspirational_video_title_14: To je više od igre (1 min)
+  video_library_page_inspirational_video_title_15: Stvorite S Računalom (1 min)
   video_library_page_not_hacked_video_title_1: 'Kako se ne hakirati: Uvod'
   video_library_page_not_hacked_video_title_2: 'Kako se ne hakirati: lozinke'
   video_library_page_not_hacked_video_title_3: 'Kako se ne hakirati: provjera autentičnosti
