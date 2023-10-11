@@ -164,7 +164,7 @@ ga:
           description_short: Foghlaim le dróidigh a chódáil, agus cruthaigh do chluiche Star Wars féin i réaltra i bhfad i bhfad ó bhaile.
           student_description: Foghlaim le dróidigh a chódáil, agus cruthaigh do chluiche Star Wars féin i réaltra i bhfad i bhfad ó bhaile.
         mc:
-          title: An Uair Chódála Minecraft
+          title: Eachtránaí Minecraft
           description: Úsáid blocanna cóid le dul ar eachtra le Steve nó Alex sa domhan Minecraft seo.
           description_short: Taiscéal domhan Minecraft le cód.
           student_description: Úsáid blocanna cóid le dul ar eachtra le Steve nó Alex sa domhan Minecraft seo.
@@ -2229,6 +2229,8 @@ ga:
               display_name: Ábhar
             lessonGroup-2:
               display_name: Ábhar
+        dance-unplugged:
+          title: Cóisir Dhamhsa Dhíphlugáilte
         spelling-bee:
           title: Comórtas Litrithe
         csa5-exemplars:

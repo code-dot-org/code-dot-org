@@ -36,6 +36,10 @@ de:
   africa_campaign_date_full: 1. - 31. Oktober
   africa_campaign_date_year: '2022'
   africa_campaign_date_full_year: 1. - 31. Oktober 2020
+  hoc2023_header: Kreativität mit KI
+  hoc2023_social_creativity_with_ai_title: Hour of Code — Was wirst du kreieren?
+  hoc2023_social_creativity_with_ai_desc: Nutze Informatik, um KI zu erforschen und
+    mehr über sie zu lernen!
   hoc2022_header: Entdecken, spielen und erschaffen!
   social_hoc2022_explore_play_create: Mit Informatik entdecken, spielen und erschaffen!
   codeorg_homepage_hoc2022_body: Das Universum erforschen, Tore erzielen und loslegen,
@@ -187,6 +191,29 @@ de:
     außerdem ein neuer Lehrplankatalog und eine neu gestaltete Seite für Lehrende,
     damit Sie alles finden!
   in_partnership_with: Mit Unterstützung unserer Partner
+  shop_code_dot_org_heading: Code.org kaufen
+  shop_code_dot_org_desc: Unterstützen Sie unsere Arbeit und tragen Sie die Bewegung
+    mit Stolz. Unsere Hüte wurden auch von Präsident Obama und Prominenten getragen.
+  spread_the_word_heading: Erzählen Sie es weiter
+  spread_the_word_desc: Verstärken Sie unsere Wirkung, indem Sie Code.org mit Ihrem
+    Netzwerk teilen. Entdecken Sie, wie Sie uns helfen können, mehr Pädagogen, Schüler
+    und Interessenvertreter zu erreichen, von sozialen Medien bis hin zu E-Mail-Updates.
+  follow_us_heading: Folge uns in den sozialen Netzwerken
+  follow_us_desc: Bleiben Sie mit uns in den sozialen Medien auf dem Laufenden und
+    teilen Sie unsere Beiträge mit Ihrem Netzwerk, um auf dem Laufenden zu bleiben
+    und die Bekanntheit zu steigern.
+  facebook: Facebook
+  twitter: Twitter
+  linked_in: LinkedIn
+  instagram: Instagram
+  tik_tok: TikTok
+  subscribe_to_emails_heading: E-Mails abonnieren
+  subscribe_to_emails_desc: Lesen Sie in vierteljährlichen Updates über unsere Mailingliste,
+    was bei Code.org und im Informatikunterricht passiert.
+  subscribe_to_emails_intl: Abonnieren Sie internationale Updates
+  promote_code_dot_org_heading: Bewerben Sie Code.org
+  promote_code_dot_org_desc: Fördern Sie die Informatik in Ihrer Nähe mit Hilfe von
+    Statistiken, Zitaten und Videos.
   afe_partnership_logo_alt: Logo Amazon Future Engineer
   afe_partnership_thanks_desc: Amazon Future Engineer ist ein umfassendes Programm,
     das Kinder und Jugendliche mit niedrigem Einkommen und andere benachteiligte Kinder
@@ -205,6 +232,15 @@ de:
   curricula_title_high: Lehrpläne für Gymnasien
   curricula_desc_high: Stöbern Sie in den spannenden Kursen und Aktivitäten, die Sie
     und Ihre Schüler dazu einladen, tiefer in die Informatik einzutauchen.
+  for_administrators_heading: Für Administratoren
+  for_administrators_desc: Schließen Sie sich den Tausenden von Schulen an, die Informatik
+    bereits in ihren Lehrplan aufgenommen haben.
+  for_parents_heading: Für Eltern
+  for_parents_desc: Sie können dazu beitragen, die Schule Ihres Schülers zu ermutigen,
+    Informatikunterricht anzubieten oder zu erweitern.
+  for_educators_heading: Für Lehrer
+  for_educators_desc: Beginnen Sie noch heute mit dem Unterrichten — keine Informatik-Erfahrung
+    erforderlich — mit unseren professionellen Lernworkshops.
   students_label: Schüler
   teachers_label: Lehrer
   teacher_label_csf: Lehrer für Grundlagen der Informatik
@@ -214,10 +250,11 @@ de:
   teacher_label_csa: AP® Computer Science A Teacher
   required_materials: 'Obligatorische Materialien:'
   optional_materials: 'Optionale Materialien:'
-  call_to_action_explore_roles: Erkunden Sie offene Stellen
+  call_to_action_hold_an_event: Halten Sie eine Veranstaltung ab
   call_to_action_learn_more: Erfahre mehr
   call_to_action_watch_now: Jetzt ansehen
   call_to_action_try_activity: Aktivität ausprobieren
+  call_to_action_try_activities: Aktivitäten ausprobieren
   call_to_action_explore_unit: Einheit erkunden
   call_to_action_explore_curriculum: Erkunden Sie den Lehrplan
   call_to_action_explore_curriculum_options: Erkunden Sie die Lehrplanoptionen
@@ -287,11 +324,20 @@ de:
   call_to_action_notify_available: Benachrichtige mich, wenn verfügbar
   call_to_action_register_early_access: Registrieren Sie sich für den Early-Access
   call_to_action_open_positions: Offene Stellen ansehen
+  call_to_action_explore_roles: Erkunden Sie offene Stellen
   call_to_action_get_guide: Holen Sie sich den Leitfaden
   call_to_action_donate_to_cdo: Spende an Code.org
   call_to_action_start_fundraiser: Starte eine Spendenaktion
   call_to_action_view_donation_policy: Spendenrichtlinie anzeigen
   call_to_action_view_donate_bitpay: Spenden Sie mit BitPay
+  call_to_action_make_a_donation: Machen Sie eine Spende
+  call_to_action_other_ways_to_give: Andere Möglichkeiten zu geben
+  call_to_action_become_partner_usa: Werden Sie ein Partner in den Vereinigten Staaten
+  call_to_action_become_partner_intl: Werden Sie ein internationaler Partner
+  call_to_action_become_a_volunteer: Werde ein Freiwilliger
+  call_to_action_start_translating: Fangen Sie an zu übersetzen
+  call_to_action_learn_about_advocacy: Erfahren Sie mehr über unsere Interessenvertretung
+  call_to_action_visit_store: Besuchen Sie den Laden
   aria_label_call_to_action_afe: Erfahren Sie mehr über Amazon Future Engineer
   aria_label_call_to_action_teaching_csf: Starten Sie das professionelle Lernprogramm
     Teaching Computer Science Fundamentals
@@ -641,6 +687,7 @@ de:
   heading_explore_curriculum_catalog: Entdecken Sie alle unsere Kurse im Curriculum-Katalog
   heading_csa_ai: Suchen Sie nach Dingen, die Sie nach der AP® -Prüfung erledigen
     können?
+  heading_bring_cs_to_students: Bringen Sie Informatik zu Schülern
   professional_learning_section_desc: Holen Sie sich Unterstützung bei der Vorbereitung
     des Unterrichts. Mehr als 90 % der Lehrenden bezeichnen unser Programm als die
     beste Weiterbildung überhaupt!
@@ -923,6 +970,8 @@ de:
     Bewertung der Schüler. Mit einer reichhaltigen Mischung aus Theorie, praktischen
     Beispielen und Ressourcen soll es Pädagogen ermöglichen, sich in der KI-Landschaft
     zurechtzufinden und die Lernerfahrungen der Schüler zu verbessern.
+  ai_pl_101_resources_5: Leitfaden zur Sicherstellung eines verantwortungsvollen Umgangs
+    mit KI
   ai_pl_101_video_desc_6: 'Erfahren Sie mehr über die neue Technologie, die die großen
     Veränderungen in der KI vorantreibt, und zeigen Sie zwei neue Videos zu Large
     Language Models (wie ChatGPT) und Generative KI. Erfahren Sie direkt von den Experten,
@@ -934,6 +983,8 @@ de:
     die gerade erst anfangen, sowie erweiterte Tools für diejenigen, die ihr Potenzial
     maximieren möchten.
   ai_pl_101_resources_3: KI fordert zur Transformation des Lernens der Schüler auf
+  ai_pl_101_resources_section_title: Weitere Möglichkeiten, mehr über KI zu erfahren
+  ai_pl_101_resources_guide: 'Leitfaden für Begleiter:'
   how_ai_works_hero_heading: So funktioniert KI
   how_ai_works_hero_desc: Tauchen Sie ein in die Welt der KI mit „How AI Works“, unserer
     Videoserie und den dazugehörigen Lektionen!
@@ -1823,6 +1874,32 @@ de:
   donate_tabs_bitpay_desc: Erleben Sie die Zukunft des Schenkens mit Kryptowährung.
     Durch BitPay kann Ihre digitale Währung die Bemühungen von Code.org zur Ausweitung
     der Informatikausbildung direkt unterstützen.
+  help_page_top_heading: Wie du helfen kannst
+  help_page_top_desc: Unterstützen Sie unsere Mission, Informatik für jedes Kind überall
+    zugänglich zu machen. Ihre Bemühungen helfen uns, zukünftige Innovatoren zu inspirieren
+    und die Lücke in der technischen Bildung zu schließen.
+  help_page_top_subhead: Spenden Sie an Code.org
+  help_page_top_desc_02: Wir arbeiten daran, jedem Schüler die Möglichkeit zu geben,
+    Informatik zu lernen — sowohl online ALS auch in Schulen, wo wir feste Kurse einrichten
+    und Lehrer ausbilden. Für jeden Dollar, den Sie spenden, wird ein Kind in die
+    Informatik eingeführt.
+  help_page_partners_heading: Werden Sie ein Partner
+  help_page_partners_desc: Code.org arbeitet mit anderen gemeinnützigen Organisationen
+    als Partner zusammen, um Informatik auf lokale und nachhaltige Weise zu verbreiten.
+    Erfahre mehr über unser Programm.
+  help_page_volunteer_heading: Freiwilligenarbeit in einem Klassenzimmer
+  help_page_volunteer_desc: Unterrichten Sie freiwillig die Hour of Code oder seien
+    Sie Gastredner in einem lokalen Klassenzimmer. Melden Sie sich an, um mehr über
+    Möglichkeiten in Ihrer Nähe zu erfahren.
+  help_page_translate_heading: Hilf uns zu übersetzen
+  help_page_translate_desc: Freiwillige haben unsere Tutorials in über 45 Sprachen
+    übersetzt. Helfen Sie uns, unsere Tutorials für Schüler auf der ganzen Welt weiter
+    auszubauen!
+  help_page_speak_for_cs_heading: Sprechen Sie für Informatikunterricht
+  help_page_speak_for_cs_desc: Erfahren Sie mehr über die Lobbyarbeit von Code.org
+    in den USA und die zehn Richtlinien, die wir den Bundesstaaten empfehlen, um Informatik
+    für alle Studierenden zur Grundlage zu machen. Finden Sie außerdem heraus, wie
+    Sie den Wandel in Ihrem Bundesstaat vorantreiben können.
   hoc_live: Hour of Code Live
   hoc_live_sign_up_title: Melde dich für Hour of Code Live an
   hoc_live_learn_title: Lernen Sie mit Hour of Code Live
@@ -14296,6 +14373,11 @@ de:
   video_library_page_inspirational_video_title_11: Jeder kann lernen (1 min)
   video_library_page_inspirational_video_title_12: Lo Que Falta En Nuestras Escuelas
     (2 Minuten)
+  video_library_page_inspirational_video_title_13: Die NASA feiert Hour of Code (2
+    Minuten)
+  video_library_page_inspirational_video_title_14: Es ist mehr als ein Spiel (1 min)
+  video_library_page_inspirational_video_title_15: Mit Informatik kreativ werden (1
+    min)
   video_library_page_not_hacked_video_title_1: 'Wie man nicht gehackt wird: Einführung'
   video_library_page_not_hacked_video_title_2: 'Wie man nicht gehackt wird: Passwörter'
   video_library_page_not_hacked_video_title_3: 'So werden Sie nicht gehackt: Authentifizierung

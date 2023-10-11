@@ -35,6 +35,10 @@ ar:
   africa_campaign_date_full: 1 أكتوبر - 18 ديسمبر
   africa_campaign_date_year: '2023'
   africa_campaign_date_full_year: 1 أكتوبر 2022 - 18 ديسمبر 2022
+  hoc2023_header: الإبداع باستخدام الذكاء الاصطناعي
+  hoc2023_social_creativity_with_ai_title: "«ساعة البرمجة» - ما الذي ستقوم بإنشائه؟"
+  hoc2023_social_creativity_with_ai_desc: استخدم علوم الكمبيوتر لاستكشاف الذكاء الاصطناعي
+    والتعرف عليه!
   hoc2022_header: استكشف، العب، ابتكِر!
   social_hoc2022_explore_play_create: استخدم علم الكمبيوتر للاستكشاف واللعب والابتكار!
   codeorg_homepage_hoc2022_body: استكشف الكون، وسجل هدفًا، وقم بإيقاف الحركة - هناك
@@ -169,6 +173,28 @@ ar:
   curriculum_launch_2023_desc: تحديثات لـ CSC و CSP و CSD والمزيد - بالإضافة إلى كتالوج
     المناهج الجديد وصفحة التدريس المعاد تصميمها لمساعدتك في العثور على كل شيء!
   in_partnership_with: بشراكة مع
+  shop_code_dot_org_heading: متجر Code.org
+  shop_code_dot_org_desc: ادعم عملنا وارتدي الحركة بفخر. لقد تم ارتداء قبعاتنا من
+    قبل الرئيس أوباما والمشاهير أيضًا.
+  spread_the_word_heading: نشر المبادرة
+  spread_the_word_desc: قم بتضخيم تأثيرنا من خلال مشاركة Code.org مع شبكتك. من وسائل
+    التواصل الاجتماعي إلى تحديثات البريد الإلكتروني، اكتشف كيف يمكنك مساعدتنا في الوصول
+    إلى المزيد من المعلمين والطلاب والمدافعين.
+  follow_us_heading: تابعنا على وسائل التواصل الاجتماعي
+  follow_us_desc: ابق على اطلاع معنا على وسائل التواصل الاجتماعي وشارك منشوراتنا مع
+    شبكتك للبقاء على اطلاع والمساعدة في زيادة الوعي.
+  facebook: Pseudoloc-بلؤثخخن
+  twitter: Pseudoloc-فصهفثق
+  linked_in: لينكد إن
+  instagram: إينستاجرام
+  tik_tok: تيك توك
+  subscribe_to_emails_heading: اشترك في رسائل البريد الإلكتروني
+  subscribe_to_emails_desc: اقرأ حول ما يحدث في Code.org وفي تعليم علوم الكمبيوتر
+    من خلال التحديثات الفصلية عبر قائمتنا البريدية.
+  subscribe_to_emails_intl: اشترك في التحديثات الدولية
+  promote_code_dot_org_heading: الترويج لموقع Code.org
+  promote_code_dot_org_desc: قم بترويج علوم الكمبيوتر في منطقتك بمساعدة الإحصائيات
+    والاقتباسات ومقاطع الفيديو.
   afe_partnership_logo_alt: شعار أمازون فيوتشر إنجنيير
   afe_partnership_thanks_desc: Amazon Future Engineer هو برنامج شامل من الطفولة إلى
     الحياة المهنية لإلهام وتعليم وتدريب الأطفال والشباب ذوي الدخل المنخفض وغيرهم من
@@ -186,6 +212,15 @@ ar:
   curricula_title_high: مناهج المدرسة الثانوية
   curricula_desc_high: استعرض الدورات والأنشطة الجذابة التي تدعوك وطلاب المدارس الثانوية
     للتعمق في علوم الكمبيوتر.
+  for_administrators_heading: بالنسبة للمسؤولين
+  for_administrators_desc: انضم إلى آلاف المدارس التي قامت بالفعل بدمج علوم الكمبيوتر
+    في مناهجها الدراسية.
+  for_parents_heading: لأولياء الأمور
+  for_parents_desc: يمكنك المساعدة في تشجيع مدرسة الطالب على تقديم تعليم علوم الكمبيوتر
+    أو توسيعه.
+  for_educators_heading: للمعلمين
+  for_educators_desc: ابدأ التدريس اليوم - لا حاجة لخبرة في علوم الكمبيوتر - من خلال
+    ورش العمل التعليمية المهنية لدينا.
   students_label: الطلاب
   teachers_label: المعلمون
   teacher_label_csf: مدرس أساسيات علوم الكمبيوتر
@@ -195,10 +230,11 @@ ar:
   teacher_label_csa: AP® Computer Science A Teacher
   required_materials: 'المواد المطلوبة:'
   optional_materials: 'مواد اختيارية:'
-  call_to_action_explore_roles: استكشف الأدوار المفتوحة
+  call_to_action_hold_an_event: عقد حدث
   call_to_action_learn_more: اعرف المزيد
   call_to_action_watch_now: شاهد الآن
   call_to_action_try_activity: جرب النشاط
+  call_to_action_try_activities: جرب الأنشطة
   call_to_action_explore_unit: وحدة المستكشف
   call_to_action_explore_curriculum: اكتشف المنهج
   call_to_action_explore_curriculum_options: استكشف خيارات المناهج
@@ -267,11 +303,20 @@ ar:
   call_to_action_notify_available: أعلمني عندما تكون متاحة
   call_to_action_register_early_access: سجل للوصول المبكر
   call_to_action_open_positions: عرض المراكز المفتوحة
+  call_to_action_explore_roles: استكشف الأدوار المفتوحة
   call_to_action_get_guide: احصل على الدليل
   call_to_action_donate_to_cdo: تبرع لموقع Code.org
   call_to_action_start_fundraiser: ابدأ حملة لجمع التبرعات
   call_to_action_view_donation_policy: عرض سياسة التبرع
   call_to_action_view_donate_bitpay: تبرع باستخدام BitPay
+  call_to_action_make_a_donation: قم بالتبرع
+  call_to_action_other_ways_to_give: طرق أخرى للعطاء
+  call_to_action_become_partner_usa: كن شريكًا للولايات المتحدة
+  call_to_action_become_partner_intl: كن شريكًا دوليًا
+  call_to_action_become_a_volunteer: كن متطوعًا
+  call_to_action_start_translating: ابدأ الترجمة
+  call_to_action_learn_about_advocacy: تعرف على المناصرة الخاصة بنا
+  call_to_action_visit_store: قم بزيارة المتجر
   aria_label_call_to_action_afe: تعرف على المزيد حول مهندس المستقبل في أمازون
   aria_label_call_to_action_teaching_csf: ابدأ برنامج التعلم المهني لتدريس أساسيات
     علوم الكمبيوتر
@@ -586,6 +631,7 @@ ar:
   heading_these_lessons_will: 'ستقوم هذه الدروس بما يلي:'
   heading_explore_curriculum_catalog: استكشف جميع دوراتنا في كتالوج المناهج
   heading_csa_ai: هل تبحث عن أشياء للقيام بها بعد اختبار AP®؟
+  heading_bring_cs_to_students: جلب علوم الكمبيوتر للطلاب
   professional_learning_section_desc: احصل على الدعم الذي تحتاجه أثناء الاستعداد للتدريس.
     يحبها المعلمون، حيث صنفها أكثر من 90٪ على أنها أفضل تطوير مهني على الإطلاق!
   professional_learning_section_desc_short: احصل على الدعم الذي تحتاجه أثناء الاستعداد
@@ -840,6 +886,7 @@ ar:
     واستخدام الأدوات التعليمية للذكاء الاصطناعي والاستفادة من الذكاء الاصطناعي لتقييم
     الطلاب. من خلال مزيج غني من النظرية والأمثلة العملية والموارد، تهدف إلى تمكين
     المعلمين من التنقل في مشهد الذكاء الاصطناعي وتعزيز تجارب تعلم الطلاب.
+  ai_pl_101_resources_5: دليل لضمان اتباع نهج مسؤول للذكاء الاصطناعي
   ai_pl_101_video_desc_6: 'تعرف على المزيد حول التكنولوجيا الجديدة التي تقود التغييرات
     الكبيرة في الذكاء الاصطناعي، والتي تضم مقطعي فيديو جديدين عن نماذج اللغات الكبيرة
     (مثل ChatGPT) والذكاء الاصطناعي التوليدي. استمع إلى كيفية عمل هذه التقنيات الجديدة
@@ -850,6 +897,8 @@ ar:
     من المبتدئين إلى المتقدمين. يتضمن تعليمات البدء لأولئك الذين يغمسون أصابع قدمهم
     فقط، بالإضافة إلى أدوات متقدمة لأولئك الذين يتطلعون إلى تعظيم إمكاناتهم.
   ai_pl_101_resources_3: موجهات الذكاء الاصطناعي لتحويل تعلم الطلاب
+  ai_pl_101_resources_section_title: المزيد من الطرق للتعرف على الذكاء الاصطناعي
+  ai_pl_101_resources_guide: 'دليل الرفيق:'
   how_ai_works_hero_heading: كيف يعمل الذكاء الاصطناعي
   how_ai_works_hero_desc: انغمس في عالم الذكاء الاصطناعي من خلال سلسلة مقاطع الفيديو
     «How AI Works» والدروس المصاحبة لها!
@@ -1638,6 +1687,27 @@ ar:
   donate_tabs_bitpay_title: تبرع بالعملات المشفرة عبر BitPay
   donate_tabs_bitpay_desc: احتضن مستقبل العطاء باستخدام العملة المشفرة. من خلال BitPay،
     يمكن لعملتك الرقمية أن تدعم بشكل مباشر مساعي Code.org في توسيع تعليم علوم الكمبيوتر.
+  help_page_top_heading: كيف يمكنك المساعدة
+  help_page_top_desc: ادعم مهمتنا لجعل علوم الكمبيوتر متاحة لكل طفل وفي كل مكان. تساعدنا
+    جهودك في إلهام مبتكري المستقبل وسد فجوة التعليم التكنولوجي.
+  help_page_top_subhead: قم بالتبرع إلى Code.org
+  help_page_top_desc_02: نحن نعمل على منح كل طالب الفرصة لتعلم علوم الكمبيوتر - سواء
+    عبر الإنترنت أو في المدارس، حيث ننشئ دورات دائمة وندرب المعلمين. مقابل كل دولار
+    تتبرع به، يتم تعريف طفل واحد بعلوم الكمبيوتر.
+  help_page_partners_heading: كن شريكًا
+  help_page_partners_desc: تعمل Code.org مع المنظمات غير الربحية الأخرى كشركاء للمساعدة
+    في نشر علوم الكمبيوتر بطريقة محلية ومستدامة. تعرف على المزيد حول برنامجنا.
+  help_page_volunteer_heading: تطوع في فصل دراسي
+  help_page_volunteer_desc: تطوع لتدريس ساعة البرمجة أو كن ضيفًا متحدثًا في فصل دراسي
+    محلي. قم بالتسجيل للاستماع إلى الفرص القريبة منك.
+  help_page_translate_heading: ساعدنا في الترجمة
+  help_page_translate_desc: قام المتطوعون بترجمة دروسنا التعليمية بأكثر من 45 لغة.
+    ساعدنا على الاستمرار في توسيع برامجنا التعليمية للطلاب في جميع أنحاء العالم!
+  help_page_speak_for_cs_heading: تحدث عن تعليم علوم الكمبيوتر
+  help_page_speak_for_cs_desc: تعرف على المزيد حول أعمال المناصرة التي تقوم بها Code.org
+    في جميع أنحاء الولايات المتحدة والسياسات العشر التي نوصي الولايات باعتمادها لجعل
+    علوم الكمبيوتر أساسية لجميع الطلاب. بالإضافة إلى ذلك، اكتشف كيف يمكنك قيادة التغيير
+    في ولايتك.
   hoc_live: أور أوف كود لايف
   hoc_live_sign_up_title: اشترك في برنامج «ساعة البرمجة» المباشر
   hoc_live_learn_title: تعلم مع برنامج «ساعة البرمجة» المباشر
@@ -13200,6 +13270,10 @@ ar:
     (دقيقة واحدة)
   video_library_page_inspirational_video_title_11: كل شخص يمكن أن يتعلم (دقيقة واحدة)
   video_library_page_inspirational_video_title_12: ما نفتقده في مدرسياتنا (دقيقتان)
+  video_library_page_inspirational_video_title_13: ناسا تحتفل بساعة البرمجة (دقيقتان)
+  video_library_page_inspirational_video_title_14: إنها أكثر من مجرد لعبة (دقيقة واحدة)
+  video_library_page_inspirational_video_title_15: ابتكر باستخدام علوم الكمبيوتر (دقيقة
+    واحدة)
   video_library_page_not_hacked_video_title_1: 'كيف لا تتعرض للاختراق: مقدمة'
   video_library_page_not_hacked_video_title_2: 'كيف لا تتعرض للاختراق: كلمات المرور'
   video_library_page_not_hacked_video_title_3: 'كيف لا تتعرض للاختراق: المصادقة وأقفال

@@ -2512,7 +2512,7 @@ bg:
           description_short: Изследвайте Minecraft света чрез код.
           student_description: Използвайте блокове с код, за да въведете Steve или
             Alex в приключението чрез този Minecraft свят.
-          title: Minecraft Hour of Code
+          title: Minecraft авантюрист
         microbit-2023:
           lesson_groups:
             lessonGroup-5:
