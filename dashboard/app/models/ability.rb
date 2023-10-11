@@ -197,6 +197,10 @@ class Ability
           # there's a SectionInstructor object for every section's creator/owner
           s.user_id == user.id || s.instructors.include?(user)
         end
+        can :destroy, SectionInstructor do |si|
+          can? :manage, si.section
+        end
+        can [:accept, :decline], SectionInstructor, instructor_id: user.id
         can :manage, :teacher
         can :manage, User do |u|
           user.students.include?(u)
