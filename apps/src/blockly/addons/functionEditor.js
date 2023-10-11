@@ -12,8 +12,7 @@ import {
   MODAL_EDITOR_DESCRIPTION_INPUT_ID,
 } from './functionEditorConstants';
 
-// This class is a work in progress. It is used for the modal function editor,
-// which is used by Sprite Lab and Artist.
+// This class creates the modal function editor, which is used by Sprite Lab and Artist.
 export default class FunctionEditor {
   constructor(
     opt_msgOverrides,
@@ -132,6 +131,7 @@ export default class FunctionEditor {
    * Show the given procedure in the function editor. Either load from
    * the procedure workspace if it already exists, or create a new block.
    * @param {Procedure} procedure The procedure to show.
+   * @param {string} procedureType The type of procedure to show.
    */
   showForFunction(procedure, procedureType) {
     this.clearEditorWorkspace();
