@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2023_09_27_182433) do
+ActiveRecord::Schema.define(version: 2023_10_09_175334) do
 
   create_table "activities", id: :integer, charset: "utf8", collation: "utf8_unicode_ci", force: :cascade do |t|
     t.integer "user_id"
@@ -647,22 +647,6 @@ ActiveRecord::Schema.define(version: 2023_09_27_182433) do
     t.datetime "updated_at", precision: 6, null: false
     t.index ["learning_goal_id"], name: "index_learning_goal_ai_evaluations_on_learning_goal_id"
     t.index ["user_id"], name: "index_learning_goal_ai_evaluations_on_user_id"
-  end
-
-  create_table "learning_goal_evaluations", charset: "utf8", collation: "utf8_unicode_ci", force: :cascade do |t|
-    t.integer "user_id"
-    t.integer "teacher_id"
-    t.integer "unit_id"
-    t.integer "level_id"
-    t.integer "learning_goal_id"
-    t.boolean "ai_sourced"
-    t.date "prompt_version"
-    t.integer "understanding"
-    t.text "feedback"
-    t.text "context"
-    t.datetime "created_at", precision: 6, null: false
-    t.datetime "updated_at", precision: 6, null: false
-    t.datetime "submitted_at"
   end
 
   create_table "learning_goal_evidence_levels", charset: "utf8", collation: "utf8_unicode_ci", force: :cascade do |t|
