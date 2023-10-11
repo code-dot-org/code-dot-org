@@ -69,6 +69,8 @@ def get_social_metadata_for_page(request)
   # Important:
   #   - image should always come before video
   #   - description should always come before description_twitter
+  #   - to apply an image that shows up only on Twitter,
+  #     use the "image_twitter" key after the "image" key
   social_tags = {
     "code.org" => {
       "default" => {
