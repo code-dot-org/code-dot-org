@@ -13101,6 +13101,16 @@ en:
           lessons:
             lesson-2:
               name: CSD Module 5 Synchronous
+            lesson-3:
+              name: 'Synchronous Session 2: Apps and Tools'
+            lesson-4:
+              name: 'Synchronous Session 3: Lesson Investigation'
+            lesson-5:
+              name: 'Synchronous Session 4: Lesson Reflection'
+            lesson-6:
+              name: 'Synchronous Session 5: Wrap Up'
+            lesson-7:
+              name: 'Synchronous Session 3B: Lesson Investigation (micro:bit)'
           lesson_groups: {}
           name: vpl-csd-2023-m5
           title: Module 5
@@ -13205,8 +13215,30 @@ en:
           description: ''
           student_description: ''
         virtual-pl-csp-summer-day2:
-          lessons: {}
-          lesson_groups: {}
+          lessons:
+            lesson-1:
+              name: 'TLO #1: U1L7 - Black and White Images'
+            lesson-2:
+              name: 'TLO #2: U1L9 - Lossless Compression'
+            lesson-3:
+              name: 'TLO #3: U1L10 - Lossy Compression'
+            lesson-4:
+              name: The Teacher's Role in Formative Assessment
+            lesson-5:
+              name: Introduction
+            lesson-6:
+              name: Welcome to the Course and Exam Description
+            lesson-7:
+              name: CED Scavenger Hunt Debrief
+          lesson_groups:
+            lessonGroup-2:
+              display_name: Synchronous Part 1
+            lessonGroup-3:
+              display_name: Asynchronous Part 1
+            lessonGroup-4:
+              display_name: Synchronous Part 2
+            lessonGroup-5:
+              display_name: Asynchronous Part 2
           name: virtual-pl-csp-summer-day2
           title: Day 2
           description_audience: ''
@@ -13214,8 +13246,30 @@ en:
           description: ''
           student_description: ''
         virtual-pl-csp-summer-day3:
-          lessons: {}
-          lesson_groups: {}
+          lessons:
+            lesson-1:
+              name: Understanding Ourselves and Our Position
+            lesson-2:
+              name: 'TLO #4: U2L2 - Building a Network'
+            lesson-3:
+              name: 'TLO #5: U2L3 - The Need for Addressing'
+            lesson-4:
+              name: Applying Our Knowledge of Identity and Bias
+            lesson-5:
+              name: 'TLO #6: U2L4 - Routers and Redundancy'
+            lesson-6:
+              name: Introduction to Module 3
+            lesson-7:
+              name: Unconscious Bias Debrief
+          lesson_groups:
+            lessonGroup-2:
+              display_name: Synchronous Part 1
+            lessonGroup-3:
+              display_name: Asynchronous Part 1
+            lessonGroup-4:
+              display_name: Synchronous Part 2
+            lessonGroup-5:
+              display_name: Asynchronous Part 2
           name: virtual-pl-csp-summer-day3
           title: Day 3
           description_audience: ''
@@ -13223,8 +13277,30 @@ en:
           description: ''
           student_description: ''
         virtual-pl-csp-summer-day4:
-          lessons: {}
-          lesson_groups: {}
+          lessons:
+            lesson-1:
+              name: 'TLO #7: U3L2 - Introduction to Design Mode'
+            lesson-2:
+              name: U3L3 — Developing Your Project Idea
+            lesson-3:
+              name: 'TLO #8: U3L5 - Intro to Programming'
+            lesson-4:
+              name: Applying Our Knowledge Debrief
+            lesson-5:
+              name: Recruiting and Retaining Students in CS Principles
+            lesson-6:
+              name: 'Lesson Exploration: U3L7 - Designing an App Part 2'
+            lesson-7:
+              name: Introduction to Module 4
+          lesson_groups:
+            lessonGroup-2:
+              display_name: Synchronous Part 1
+            lessonGroup-3:
+              display_name: Asynchronous Part 1
+            lessonGroup-4:
+              display_name: Synchronous Part 2
+            lessonGroup-5:
+              display_name: Asynchronous Part 2
           name: virtual-pl-csp-summer-day4
           title: Day 4
           description_audience: ''
@@ -13232,8 +13308,30 @@ en:
           description: ''
           student_description: ''
         virtual-pl-csp-summer-day5:
-          lessons: {}
-          lesson_groups: {}
+          lessons:
+            lesson-1:
+              name: Recruiting Students Recap
+            lesson-2:
+              name: Mapping our Equity Journey
+            lesson-3:
+              name: Connecting Values and Assessment in CSP
+            lesson-4:
+              name: Creating Your Assessment Approach for Units 1-3
+            lesson-5:
+              name: Planning Your Year
+            lesson-6:
+              name: Closing Ceremonies
+            lesson-7:
+              name: Introduction to Module 5
+            lesson-8:
+              name: AP Scavenger Hunt Debrief
+          lesson_groups:
+            lessonGroup-2:
+              display_name: Synchronous Part 1
+            lessonGroup-3:
+              display_name: Asynchronous Part 1
+            lessonGroup-4:
+              display_name: Synchronous Part 2
           name: virtual-pl-csp-summer-day5
           title: Day 5
           description_audience: ''
