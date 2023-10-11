@@ -123,13 +123,16 @@ Dance.prototype.init = function (config) {
     this.currentCode = this.studioApp_.getCode();
     if (this.usesPreview) {
       this.studioApp_.addChangeHandler(e => {
-        // We want to check if the workspace code changed only when a block has been moved or
-        // if a block has changed.
-        // A move event is fired when a block is dragged and then dropped.
+        // We want to check if the workspace code changed only when a block has been dragged or changed.
         if (
-          e.type !== Blockly.Events.BLOCK_MOVE &&
+          e.type !== Blockly.Events.BLOCK_DRAG &&
           e.type !== Blockly.Events.BLOCK_CHANGE
         ) {
+          return;
+        }
+
+        // Only preview once the drag has finished (performance consideration)
+        if (e.type === Blockly.Events.BLOCK_DRAG && e.isStart) {
           return;
         }
 
@@ -455,7 +458,6 @@ Dance.prototype.reset = function () {
  * image is displayed and sound is NOT played.
  */
 Dance.prototype.preview = async function () {
-  this.nativeAPI.setForegroundEffectsInPreviewMode(true);
   this.nativeAPI.reset();
   const api = new DanceAPI(this.nativeAPI);
   const studentCode = this.studioApp_.getCode();
@@ -471,11 +473,17 @@ Dance.prototype.preview = async function () {
     code
   ).hooks;
 
+  // background not showing up unless foreground block included?
+  // should check out preview on lower powered devices
   const charactersReferenced = utils.computeCharactersReferenced(studentCode);
   await this.nativeAPI.ensureSpritesAreLoaded(charactersReferenced);
   this.hooks.find(v => v.name === 'runUserSetup').func();
-  this.nativeAPI.p5_.draw();
-  this.nativeAPI.setForegroundEffectsInPreviewMode(false);
+  const previewStartTime = Date.now();
+  for (let i = 0; i < 200; i++) {
+    this.nativeAPI.p5_.draw();
+  }
+  const previewEndTime = Date.now();
+  console.log(`Preview time: ${previewEndTime - previewStartTime} ms`);
 };
 
 Dance.prototype.onPuzzleComplete = function (result, message) {
