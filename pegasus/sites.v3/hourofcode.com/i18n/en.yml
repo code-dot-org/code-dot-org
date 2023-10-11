@@ -290,6 +290,8 @@
   call_to_action_learn_about_advocacy: "Learn about our advocacy"
   call_to_action_visit_store: "Visit the store"
   call_to_action_view_faqs: "View more FAQs"
+  call_to_action_applications_open: "Applications now open"
+  call_to_action_apply_cs_ambassador: "Apply to be a CS Ambassador"
 
   aria_label_call_to_action_hoc_how_to_educators: "View how-to guide for Educators"
   aria_label_call_to_action_hoc_how_to_companies: "View how-to guide for Companies"
@@ -548,6 +550,36 @@
   heading_explore_curriculum_catalog: "Explore all of our courses in the Curriculum Catalog"
   heading_csa_ai: "Looking for things to do after the AP® exam?"
   heading_bring_cs_to_students: "Bring computer science to students"
+  heading_cs_ambassador_program: "CS Ambassador Program"
+
+  cs_ambassador_subhead: "If you're a high school student passionate about encouraging more young women to take computer science at your school, then we need you!"
+  cs_ambassador_desc: "Every field, including medicine, entertainment, sports, education, business, fashion, and entrepreneurship is touched by computer science. Yet only 5% of high school aged young women take computer science classes. Ambassadors can help close this gender gap by encouraging their peers to take a computer science class."
+  cs_ambassador_application_date: "Applications open until November 8th, 2023"
+  cs_ambassador_application_subhead: "Work with a teacher to submit your application today"
+  cs_ambassador_application_questions: "Questions? Please contact [youngwomen@code.org](%{email_url})"
+  cs_ambassador_do_heading: "What do CS Ambassadors do?"
+  cs_ambassador_do_desc: "CS Ambassadors encourage young women to explore the subject, and lift each other up as they reclaim their place in computer science. CS Ambassadors connect with their peers to share their excitement and love of computer science. They visit classrooms, host tables at lunch, and speak at assemblies and club meetings. CS Ambassadors work with teachers and school administrators to breakdown stereotypes that hold young women back."
+  cs_ambassador_steps_heading: "What do I need to become a CS Ambassador?"
+  cs_ambassador_steps_list_title_01: "Passion"
+  cs_ambassador_steps_list_title_02: "Experience in a CS Course"
+  cs_ambassador_steps_list_title_03: "School that offers CS"
+  cs_ambassador_steps_list_desc_01: "A passion for encouraging young women at your school to take computer science classes"
+  cs_ambassador_steps_list_desc_02: "Have taken a year-long computer science class in the 2022-23 school year or earlier (recommended: CS Principles or AP® CSA)"
+  cs_ambassador_steps_list_desc_03: "Attend a high school that regularly offers a year-long computer science course (recommended: CS Principles or AP® CSA)"
+
+  cs_ambassador_benefits_heading: "Program benefits"
+  cs_ambassador_benefits_list_title_01: "National community"
+  cs_ambassador_benefits_list_title_02: "Community service"
+  cs_ambassador_benefits_list_title_03: "Recognition"
+  cs_ambassador_benefits_list_title_04: "Swag"
+  cs_ambassador_benefits_list_title_05: "Certificate"
+  cs_ambassador_benefits_list_title_06: "Experiences"
+  cs_ambassador_benefits_list_desc_01: "Access to a national community of young leaders committed to closing the gender gap in computer science."
+  cs_ambassador_benefits_list_desc_02: "Community service hours and the opportunity to earn the [U.S. Presidential Volunteer Service Award](%{award_url})."
+  cs_ambassador_benefits_list_desc_03: "Recognition as a 2023-2024 Ambassador and eligible to be honored in the Code.org Ambassador Hall of Fame."
+  cs_ambassador_benefits_list_desc_04: "Be identified as a CS Ambassador through special Code.org branded apparel, stickers, and more!"
+  cs_ambassador_benefits_list_desc_05: "Official certificate of participation from Code.org."
+  cs_ambassador_benefits_list_desc_06: "Gain experiences and stories to share on your college application, resume and more!"
 
   professional_learning_section_desc: "Get the support you need as you prepare to teach. Teachers love it, with over 90% ranking it the best professional development ever!"
   professional_learning_section_desc_short: "Get the support you need as you prepare to teach."
@@ -1144,6 +1176,9 @@
   help_page_translate_desc: "Volunteers have translated our tutorials in over 45 languages. Help us continue to expand our tutorials for students around the world!"
   help_page_speak_for_cs_heading: "Speak up for computer science education"
   help_page_speak_for_cs_desc: "Learn more about Code.org's advocacy work across the U.S. and the ten policies we recommend states adopt to make computer science foundational for all students. Plus, find out how you can drive change in your state."
+
+  yw_page_top_heading: "Young Women in Computer Science"
+  yw_page_top_desc: "Become a CS Ambassador and be a part of closing the gender gap in computer science."
 
   hoc_live: 'Hour of Code Live'
   hoc_live_sign_up_title: 'Sign up for Hour of Code Live'
