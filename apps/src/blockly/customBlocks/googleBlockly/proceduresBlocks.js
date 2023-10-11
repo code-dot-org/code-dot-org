@@ -141,7 +141,7 @@ GoogleBlockly.Extensions.register('procedures_edit_button', function () {
 // The only toolbox blocks are a comment (for functions) or a comment + "this sprite" block (for behaviors)
 GoogleBlockly.Extensions.register('procedure_def_mini_toolbox', function () {
   const flyoutToggleButton =
-    Blockly.customBlocks.initializeMiniToolbox.bind(this)();
+    Blockly.customBlocks.initializeMiniToolbox.bind(this)(true);
 
   const miniToolboxBlocks = ['gamelab_comment'];
   if (this.type === 'behavior_definition') {

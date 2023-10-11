@@ -16,7 +16,7 @@ const INPUTS = {
 export const blocks = {
   // Creates and returns a toggle button field. This field should be
   // added to the block after other inputs have been created.
-  initializeMiniToolbox() {
+  initializeMiniToolbox(renderToolboxBeforeStack = false) {
     // Function to create the flyout
     const createFlyoutField = function (block) {
       const flyoutKey = CdoFieldFlyout.getFlyoutId(block);
@@ -28,7 +28,10 @@ export const blocks = {
       });
 
       block.appendDummyInput(INPUTS.FLYOUT).appendField(flyoutField, flyoutKey);
-      if (block.getInput(INPUTS.STACK)) {
+      // By default, the flyout is added after the stack input (at the bottom of the block).
+      // This flag is used by behavior and function definitions, mainly in the modal function editor,
+      // to add the flyout before the stack input (at the top of the block).
+      if (renderToolboxBeforeStack) {
         block.moveInputBefore(INPUTS.FLYOUT, INPUTS.STACK);
       }
       return flyoutField;
