@@ -43,5 +43,6 @@ describe('EvidenceLevels', () => {
     );
     wrapper.find('input').first().simulate('change');
     sinon.assert.calledOnce(callback);
+    wrapper.unmount();
   });
 });
