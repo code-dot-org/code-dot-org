@@ -52,9 +52,6 @@ html {
 body {
   background-color: var(--neutral_white);
   height: 100%;
-}
-
-body {
   font-family: var(--main-font);
   font-weight: var(--regular-font-weight);
   font-style: normal;

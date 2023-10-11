@@ -111,7 +111,8 @@
         padding: 0.625em 1em;
         margin: 0.5em 0;
         font-size: 1.15em;
-        font-family: 'Gotham 5r', sans-serif;
+        font-family: $main-font;
+        font-weight: $semi-bold-font-weight;
         line-height: 1.2;
         text-decoration: none;
         text-align: center;

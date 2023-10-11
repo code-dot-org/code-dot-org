@@ -75,7 +75,8 @@
         padding: 0.625em 1em;
         margin: 0.5em 0;
         font-size: 1.15em;
-        font-family: 'Gotham 5r', sans-serif;
+        font-family: $main-font;
+        font-weight: $semi-bold-font-weight;
         line-height: 1.2;
         text-decoration: none;
         text-align: center;
@@ -176,7 +177,8 @@
     }
 
     p {
-      font-family: $gotham-regular;
+      font-family: $main-font;
+      font-weight: $regular-font-weight;
       font-size: 1.15em;
       line-height: 1.3;
       margin-bottom: 0;
@@ -192,7 +194,8 @@
     background: $neutral-white;
     border-color: $neutral-white;
     color: $neutral_dark;
-    font-family: $gotham-bold;
+    font-family: $main-font;
+    font-weight: $semi-bold-font-weight;
     height: unset;
     padding: 0.625em 1.5em;
     margin: 0;

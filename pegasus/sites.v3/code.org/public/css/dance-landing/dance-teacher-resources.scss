@@ -38,7 +38,8 @@ div[dir='rtl'] .resource-text-box{
 .resource-title {
   font-size: 20px;
   color: $neutral_dark;
-  font-family: 'Gotham 7r', sans-serif;
+  font-family: var(--main-font);
+  font-weight: var(--semi-bold-font-weight);
   margin-bottom: 20px;
 }
 
