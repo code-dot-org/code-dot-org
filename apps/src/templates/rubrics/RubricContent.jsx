@@ -119,16 +119,16 @@ export default function RubricContent({
 
   return (
     <div className={style.rubricContent}>
+      {!!studentLevelInfo && <Heading2>{studentLevelInfo.name}</Heading2>}
+      <Heading5>
+        {i18n.lessonNumbered({
+          lessonNumber: lesson.position,
+          lessonName: lesson.name,
+        })}
+      </Heading5>
       {!!studentLevelInfo && (
         <div className={style.studentInfo}>
-          <Heading2>{studentLevelInfo.name}</Heading2>
           <div className={style.levelAndStudentDetails}>
-            <Heading5>
-              {i18n.lessonNumbered({
-                lessonNumber: lesson.position,
-                lessonName: lesson.name,
-              })}
-            </Heading5>
             {onLevelForEvaluation && (
               <div className={style.studentMetadata}>
                 {studentLevelInfo.timeSpent && (
@@ -163,14 +163,14 @@ export default function RubricContent({
           </div>
         </div>
       )}
-      {!studentLevelInfo && rubricLevel?.position && (
+      {/* {!studentLevelInfo && rubricLevel?.position && (
         <Heading5>
           {i18n.lessonNumbered({
             lessonNumber: lesson.position,
             lessonName: lesson.name,
           })}
         </Heading5>
-      )}
+      )} */}
       <div className={style.learningGoalContainer}>
         {rubric.learningGoals.map(lg => (
           <LearningGoal
