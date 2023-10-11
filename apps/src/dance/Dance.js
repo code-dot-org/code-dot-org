@@ -613,8 +613,8 @@ Dance.prototype.execute = async function () {
   const charactersReferenced = this.initInterpreter();
 
   await this.nativeAPI.ensureSpritesAreLoaded(charactersReferenced);
-  this.nativeAPI.getUserCode(this.studioApp_.getCode());
-  this.nativeAPI.getUserBlocks(Blockly.getMainWorkspace().getAllBlocks());
+  this.nativeAPI.setUserCode(this.studioApp_.getCode());
+  this.nativeAPI.setUserBlocks(Blockly.getMainWorkspace().getAllBlocks());
 
   this.hooks.find(v => v.name === 'runUserSetup').func();
   const timestamps = this.hooks.find(v => v.name === 'getCueList').func();
