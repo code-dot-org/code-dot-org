@@ -308,7 +308,6 @@ class Blockly < Level
   end
 
   def localized_blockly_level_options(script)
-    puts "I'm doing something in localized_blockly_level_options"
     options = Rails.cache.fetch("#{cache_key}/#{script.try(:cache_key)}/#{I18n.locale}/localized_blockly_level_options", force: !Unit.should_cache?) do
       level_options = blockly_level_options.dup
 
@@ -351,7 +350,6 @@ class Blockly < Level
 
       level_options
     end
-    puts options
     options.freeze
   end
 
@@ -396,13 +394,11 @@ class Blockly < Level
       end
 
       if is_a? Applab
-        puts "im doing something in Applab"
         level_prop['startHtml'] = try(:project_template_level).try(:start_html) || start_html
         level_prop['startLibraries'] = try(:project_template_level).try(:start_libraries) || start_libraries
         level_prop['dataTables'] = try(:project_template_level).try(:data_tables) || data_tables
         level_prop['dataProperties'] = try(:project_template_level).try(:data_properties) || data_properties
         level_prop['name'] = name
-        puts level_prop
       end
 
       if is_a? Gamelab
@@ -473,6 +469,7 @@ class Blockly < Level
   end
 
   def localized_start_libraries(start_libraries)
+    return unless start_libraries
     level_libraries = JSON.parse(start_libraries)
     level_libraries.each_with_index do |library, index|
       library_name = library["name"]

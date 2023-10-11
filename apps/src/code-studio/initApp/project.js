@@ -144,7 +144,7 @@ function unpackSources(data) {
     makerAPIsEnabled: data.makerAPIsEnabled,
     selectedSong: data.selectedSong,
     selectedPoem: data.selectedPoem,
-    libraries: data.libraries,
+    libraries: JSON.parse(appOptions.level.startLibraries),
     inRestrictedShareMode: data.inRestrictedShareMode,
     teacherHasConfirmedUploadWarning: data.teacherHasConfirmedUploadWarning,
     hiddenDefinitions: data.hiddenDefinitions,
