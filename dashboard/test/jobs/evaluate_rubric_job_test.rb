@@ -32,7 +32,12 @@ class EvaluateRubricJobTest < ActiveJob::TestCase
     bucket = {
       'teaching_assistant/lessons/fake-lesson-s3-name/system_prompt.txt' => 'fake-system-prompt',
       'teaching_assistant/lessons/fake-lesson-s3-name/standard_rubric.csv' => 'fake-standard-rubric',
+      'teaching_assistant/lessons/fake-lesson-s3-name/examples/1.json' => 'fake-example-1',
+      'teaching_assistant/lessons/fake-lesson-s3-name/examples/1.tsv' => 'fake-response-1',
+      'teaching_assistant/lessons/fake-lesson-s3-name/examples/2.json' => 'fake-example-2',
+      'teaching_assistant/lessons/fake-lesson-s3-name/examples/2.tsv' => 'fake-response-2',
     }
+
     proc = ->(context) do
       obj = bucket[context.params[:key]]
       if obj
@@ -42,8 +47,15 @@ class EvaluateRubricJobTest < ActiveJob::TestCase
       end
     end
     s3_client.stub_responses(:get_object, proc)
+
+    s3_client.stub_responses(
+      :list_objects_v2,
+      {
+        contents: bucket.keys.map {|key| {key: key}}
+      }
+    )
+
     EvaluateRubricJob.any_instance.stubs(:s3_client).returns(s3_client)
-    EvaluateRubricJob.any_instance.stubs(:read_examples).returns([['fake-code-1', 'fake-response-1'], ['fake-code-2', 'fake-response-2']])
 
     # run the job
     perform_enqueued_jobs do
