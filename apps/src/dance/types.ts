@@ -35,3 +35,9 @@ export interface DanceLevelProperties extends LevelProperties {
   defaultSong?: string;
   useRestrictedSongs?: boolean;
 }
+
+export enum AiOutput {
+  AI_BLOCK = 'ai_block',
+  GENERATED_BLOCKS = 'generated_blocks',
+  BOTH = 'both',
+}
