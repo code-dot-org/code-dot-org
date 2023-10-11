@@ -104,7 +104,7 @@
       -#
         Use Link rel=preload HTTP headers to preload as early as possible.
         Two headers with inverse media queries conditionally load the correctly-sized image.
-      - response.add_header 'Link', "<#{entry[:image]}>; rel=preload; as=image; media=\"#{css_retina?(false)}\";"
+      - response.add_header 'Link', "<#{entry[:image]}>; rel=preload; as=image; media=\"#{css_retina?(is_retina: false)}\";"
       - response.add_header 'Link', "<#{entry[:image].gsub('.jpg', '_2x.jpg')}>; rel=preload; as=image; media=\"#{css_retina?}\";"
       -# Temp: for ai2020, heroes will show/hide responsively, so use widehero_do_not_hide
       - if entry[:image_mobile]
