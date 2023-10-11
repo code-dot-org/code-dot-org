@@ -110,9 +110,8 @@ describe('RubricContent', () => {
     );
   });
 
-  it('shows level title', () => {
-    // mount is needed in order for text() to work
-    const wrapper = mount(
+  it('shows level title when teacher is viewing student work', () => {
+    const wrapper = shallow(
       <RubricContent
         {...defaultProps}
         studentLevelInfo={{
@@ -120,7 +119,16 @@ describe('RubricContent', () => {
         }}
       />
     );
-    expect(wrapper.text()).to.include('Lesson 3: Data Structures');
+    expect(wrapper.find('Heading5').at(0).props().children).to.equal(
+      'Lesson 3: Data Structures'
+    );
+  });
+
+  it('shows level title when teacher is not viewing student work', () => {
+    const wrapper = shallow(<RubricContent {...defaultProps} />);
+    expect(wrapper.find('Heading5').at(0).props().children).to.equal(
+      'Lesson 3: Data Structures'
+    );
   });
 
   it('shows student data if provided', () => {
